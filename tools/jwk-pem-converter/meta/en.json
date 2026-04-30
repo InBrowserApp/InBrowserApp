@@ -1,4 +1,4 @@
 {
   "name": "JWK ↔ PEM Converter",
-  "description": "Convert JWK and PEM keys locally. Supports RSA, EC, and OKP (Ed25519/X25519/Ed448/X448)."
+  "description": "Convert JWK and PEM keys locally. Supports RSA, EC, and OKP key formats."
 }

@@ -1,4 +1,4 @@
 {
   "name": "JWK ↔ PEM-converter",
-  "description": "Converteer JWK- en PEM-sleutels lokaal. Ondersteunt RSA, EC en OKP (Ed25519/X25519/Ed448/X448)."
+  "description": "Converteer JWK- en PEM-sleutels lokaal. Ondersteunt RSA-, EC- en OKP-sleutelformaten."
 }

@@ -1,5 +1,4 @@
 import {
-  startTransition,
   useDeferredValue,
   useEffect,
   useRef,
@@ -18,6 +17,7 @@ import {
   DEFAULT_JWK_INPUT,
   DEFAULT_PEM_INPUT,
   DEFAULT_MODE,
+  LEGACY_INPUT_STORAGE_KEYS,
   STORAGE_KEYS,
 } from "./client/constants"
 import {
@@ -63,8 +63,6 @@ function JwkPemConverterClient({
     if (typeof window === "undefined") return
 
     const storedMode = window.localStorage.getItem(STORAGE_KEYS.mode)
-    const storedJwkInput = window.localStorage.getItem(STORAGE_KEYS.jwkInput)
-    const storedPemInput = window.localStorage.getItem(STORAGE_KEYS.pemInput)
     const storedOutputType = window.localStorage.getItem(
       STORAGE_KEYS.outputType
     )
@@ -73,8 +71,9 @@ function JwkPemConverterClient({
     )
 
     if (storedMode === "jwk" || storedMode === "pem") setMode(storedMode)
-    if (storedJwkInput !== null) setJwkInput(storedJwkInput)
-    if (storedPemInput !== null) setPemInput(storedPemInput)
+    for (const key of LEGACY_INPUT_STORAGE_KEYS) {
+      window.localStorage.removeItem(key)
+    }
     if (storedOutputType === "public" || storedOutputType === "private") {
       setOutputType(storedOutputType)
     }
@@ -88,18 +87,6 @@ function JwkPemConverterClient({
     if (typeof window === "undefined") return
     window.localStorage.setItem(STORAGE_KEYS.mode, mode)
   }, [mode])
-
-  useEffect(() => {
-    /* v8 ignore next */
-    if (typeof window === "undefined") return
-    window.localStorage.setItem(STORAGE_KEYS.jwkInput, jwkInput)
-  }, [jwkInput])
-
-  useEffect(() => {
-    /* v8 ignore next */
-    if (typeof window === "undefined") return
-    window.localStorage.setItem(STORAGE_KEYS.pemInput, pemInput)
-  }, [pemInput])
 
   useEffect(() => {
     /* v8 ignore next */
@@ -236,11 +223,7 @@ function JwkPemConverterClient({
           outputType={outputType}
           parseState={jwkParseState}
           selectedJwkIndex={selectedJwkIndex}
-          setInput={(value) => {
-            startTransition(() => {
-              setJwkInput(value)
-            })
-          }}
+          setInput={setJwkInput}
           setOutputType={setOutputType}
           setSelectedJwkIndex={setSelectedJwkIndex}
           onFileChange={(event) => {
@@ -254,11 +237,7 @@ function JwkPemConverterClient({
           input={pemInput}
           messages={messages}
           prettyJson={prettyJson}
-          setInput={(value) => {
-            startTransition(() => {
-              setPemInput(value)
-            })
-          }}
+          setInput={setPemInput}
           setPrettyJson={setPrettyJson}
           onFileChange={(event) => {
             void handleFileChange(event, setPemInput)
@@ -298,10 +277,7 @@ async function handleFileChange(
   }
 
   const nextText = await file.text()
-
-  startTransition(() => {
-    setter(nextText)
-  })
+  setter(nextText)
 }
 
 export default JwkPemConverterClient

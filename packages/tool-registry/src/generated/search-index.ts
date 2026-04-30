@@ -7833,117 +7833,114 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "محول JWK ↔ PEM",
         description:
-          "حوّل مفاتيح JWK وPEM محليًا. يدعم RSA وEC وOKP ‏(Ed25519/X25519/Ed448/X448).",
+          "حوّل مفاتيح JWK وPEM محليًا. يدعم تنسيقات مفاتيح RSA وEC وOKP.",
       },
       de: {
         name: "JWK ↔ PEM Konverter",
         description:
-          "Konvertiert JWK- und PEM-Schlüssel lokal. Unterstützt RSA, EC und OKP (Ed25519/X25519/Ed448/X448).",
+          "Konvertiert JWK- und PEM-Schlüssel lokal. Unterstützt RSA-, EC- und OKP-Schlüsselformate.",
       },
       en: {
         name: "JWK ↔ PEM Converter",
         description:
-          "Convert JWK and PEM keys locally. Supports RSA, EC, and OKP (Ed25519/X25519/Ed448/X448).",
+          "Convert JWK and PEM keys locally. Supports RSA, EC, and OKP key formats.",
       },
       es: {
         name: "Conversor JWK ↔ PEM",
         description:
-          "Convierte claves JWK y PEM localmente. Compatible con RSA, EC y OKP (Ed25519/X25519/Ed448/X448).",
+          "Convierte claves JWK y PEM localmente. Compatible con formatos de clave RSA, EC y OKP.",
       },
       fr: {
         name: "Convertisseur JWK ↔ PEM",
         description:
-          "Convertit les clés JWK et PEM localement. Prend en charge RSA, EC et OKP (Ed25519/X25519/Ed448/X448).",
+          "Convertit les clés JWK et PEM localement. Prend en charge les formats de clés RSA, EC et OKP.",
       },
       he: {
         name: "ממיר JWK ↔ PEM",
         description:
-          "ממיר מפתחות JWK ו‑PEM מקומית. תומך ב‑RSA, EC ו‑OKP ‏(Ed25519/X25519/Ed448/X448).",
+          "ממיר מפתחות JWK ו‑PEM מקומית. תומך בפורמטי מפתחות RSA, EC ו‑OKP.",
       },
       hi: {
         name: "JWK ↔ PEM कन्वर्टर",
         description:
-          "JWK और PEM कुंजियों को लोकली कन्वर्ट करें। RSA, EC और OKP (Ed25519/X25519/Ed448/X448) समर्थित।",
+          "JWK और PEM कुंजियों को लोकली कन्वर्ट करें। RSA, EC और OKP कुंजी फ़ॉर्मैट समर्थित।",
       },
       id: {
         name: "Konverter JWK ↔ PEM",
         description:
-          "Konversi kunci JWK dan PEM secara lokal. Mendukung RSA, EC, dan OKP (Ed25519/X25519/Ed448/X448).",
+          "Konversi kunci JWK dan PEM secara lokal. Mendukung format kunci RSA, EC, dan OKP.",
       },
       it: {
         name: "Convertitore JWK ↔ PEM",
         description:
-          "Converte chiavi JWK e PEM in locale. Supporta RSA, EC e OKP (Ed25519/X25519/Ed448/X448).",
+          "Converte chiavi JWK e PEM in locale. Supporta i formati di chiave RSA, EC e OKP.",
       },
       ja: {
         name: "JWK ↔ PEM 変換",
         description:
-          "JWK と PEM の鍵をローカルで変換します。RSA、EC、OKP（Ed25519/X25519/Ed448/X448）に対応。",
+          "JWK と PEM の鍵をローカルで変換します。RSA、EC、OKP の鍵形式に対応。",
       },
       ko: {
         name: "JWK ↔ PEM 변환기",
         description:
-          "JWK와 PEM 키를 로컬에서 변환합니다. RSA, EC, OKP(Ed25519/X25519/Ed448/X448) 지원.",
+          "JWK와 PEM 키를 로컬에서 변환합니다. RSA, EC, OKP 키 형식을 지원합니다.",
       },
       ms: {
         name: "Penukar JWK ↔ PEM",
         description:
-          "Tukar kunci JWK dan PEM secara tempatan. Menyokong RSA, EC dan OKP (Ed25519/X25519/Ed448/X448).",
+          "Tukar kunci JWK dan PEM secara tempatan. Menyokong format kunci RSA, EC dan OKP.",
       },
       nl: {
         name: "JWK ↔ PEM-converter",
         description:
-          "Converteer JWK- en PEM-sleutels lokaal. Ondersteunt RSA, EC en OKP (Ed25519/X25519/Ed448/X448).",
+          "Converteer JWK- en PEM-sleutels lokaal. Ondersteunt RSA-, EC- en OKP-sleutelformaten.",
       },
       no: {
         name: "JWK ↔ PEM-konverter",
         description:
-          "Konverter JWK- og PEM-nøkler lokalt. Støtter RSA, EC og OKP (Ed25519/X25519/Ed448/X448).",
+          "Konverter JWK- og PEM-nøkler lokalt. Støtter RSA-, EC- og OKP-nøkkelformater.",
       },
       pl: {
         name: "Konwerter JWK ↔ PEM",
         description:
-          "Lokalna konwersja kluczy JWK i PEM. Obsługuje RSA, EC i OKP (Ed25519/X25519/Ed448/X448).",
+          "Lokalna konwersja kluczy JWK i PEM. Obsługuje formaty kluczy RSA, EC i OKP.",
       },
       pt: {
         name: "Conversor JWK ↔ PEM",
         description:
-          "Converta chaves JWK e PEM localmente. Suporta RSA, EC e OKP (Ed25519/X25519/Ed448/X448).",
+          "Converta chaves JWK e PEM localmente. Suporta formatos de chave RSA, EC e OKP.",
       },
       ru: {
         name: "Конвертер JWK ↔ PEM",
         description:
-          "Локально преобразует ключи JWK и PEM. Поддерживает RSA, EC и OKP (Ed25519/X25519/Ed448/X448).",
+          "Локально преобразует ключи JWK и PEM. Поддерживает форматы ключей RSA, EC и OKP.",
       },
       sv: {
         name: "JWK ↔ PEM-omvandlare",
         description:
-          "Konvertera JWK- och PEM-nycklar lokalt. Stöd för RSA, EC och OKP (Ed25519/X25519/Ed448/X448).",
+          "Konvertera JWK- och PEM-nycklar lokalt. Stöd för RSA-, EC- och OKP-nyckelformat.",
       },
       th: {
         name: "ตัวแปลง JWK ↔ PEM",
-        description:
-          "แปลงคีย์ JWK และ PEM แบบโลคัล รองรับ RSA, EC และ OKP (Ed25519/X25519/Ed448/X448).",
+        description: "แปลงคีย์ JWK และ PEM แบบโลคัล รองรับรูปแบบคีย์ RSA, EC และ OKP",
       },
       tr: {
         name: "JWK ↔ PEM Dönüştürücü",
         description:
-          "JWK ve PEM anahtarlarını yerelde dönüştürür. RSA, EC ve OKP (Ed25519/X25519/Ed448/X448) destekler.",
+          "JWK ve PEM anahtarlarını yerelde dönüştürür. RSA, EC ve OKP anahtar biçimlerini destekler.",
       },
       vi: {
         name: "Trình chuyển đổi JWK ↔ PEM",
         description:
-          "Chuyển đổi khóa JWK và PEM cục bộ. Hỗ trợ RSA, EC và OKP (Ed25519/X25519/Ed448/X448).",
+          "Chuyển đổi khóa JWK và PEM cục bộ. Hỗ trợ các định dạng khóa RSA, EC và OKP.",
       },
       "zh-CN": {
         name: "JWK ↔ PEM 转换器",
-        description:
-          "本地转换 JWK 与 PEM 密钥，支持 RSA、EC 与 OKP（Ed25519/X25519/Ed448/X448）",
+        description: "本地转换 JWK 与 PEM 密钥，支持 RSA、EC 与 OKP 密钥格式",
       },
       "zh-TW": {
         name: "JWK ↔ PEM 轉換器",
-        description:
-          "在本機轉換 JWK 與 PEM 金鑰，支援 RSA、EC 與 OKP（Ed25519/X25519/Ed448/X448）",
+        description: "在本機轉換 JWK 與 PEM 金鑰，支援 RSA、EC 與 OKP 金鑰格式",
       },
     },
   },

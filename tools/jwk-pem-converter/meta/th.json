@@ -1,4 +1,4 @@
 {
   "name": "ตัวแปลง JWK ↔ PEM",
-  "description": "แปลงคีย์ JWK และ PEM แบบโลคัล รองรับ RSA, EC และ OKP (Ed25519/X25519/Ed448/X448)."
+  "description": "แปลงคีย์ JWK และ PEM แบบโลคัล รองรับรูปแบบคีย์ RSA, EC และ OKP"
 }

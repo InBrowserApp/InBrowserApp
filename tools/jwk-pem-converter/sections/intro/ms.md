@@ -4,7 +4,7 @@ JWK (JSON Web Key) ialah format JSON untuk kunci kriptografi yang digunakan dala
 
 PEM ialah kunci ASN.1/DER yang dikod Base64 dengan baris pengepala seperti BEGIN PUBLIC KEY atau BEGIN PRIVATE KEY, lazim dalam TLS, OpenSSL dan banyak SDK.
 
-Alat ini menukar kunci dua hala, mengekalkan bahan kunci ketika memilih output awam (SPKI) atau peribadi (PKCS8). Menyokong RSA, EC (P-256/384/521) dan OKP (Ed25519/X25519/Ed448/X448), dan semuanya berjalan secara tempatan dalam pelayar.
+Alat ini menukar kunci dua hala, mengekalkan bahan kunci ketika memilih output awam (SPKI) atau peribadi (PKCS8). Format yang disokong termasuk RSA, EC (P-256/384/521) dan kontena kunci OKP, dan semuanya berjalan secara tempatan dalam pelayar.
 
 Pilih JWK → PEM apabila pustaka, gerbang atau CLI menjangkakan fail kunci gaya OpenSSL. Pilih PEM → JWK apabila anda perlu meletakkan kunci dalam JWKS, menghantarnya melalui konfigurasi berasaskan JSON atau menggunakannya dalam persekitaran pelayar atau serverless. Penukaran kunci peribadi mengekalkan bahan peribadi, jadi kongsi hanya output awam jika itu sahaja yang diperlukan.
 

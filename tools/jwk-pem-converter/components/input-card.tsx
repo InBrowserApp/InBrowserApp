@@ -61,13 +61,17 @@ function InputCard({
         <Textarea
           aria-label={ariaLabel}
           aria-invalid={invalid}
+          autoCapitalize="off"
+          autoCorrect="off"
+          dir="ltr"
           spellCheck={false}
+          translate="no"
           value={value}
           onChange={(event) => {
             onChange(event.target.value)
           }}
           placeholder={placeholder}
-          className="[field-sizing:fixed] min-h-72 resize-y font-mono text-sm"
+          className="[field-sizing:fixed] min-h-72 resize-y text-left font-mono text-sm"
         />
 
         {children}
@@ -96,8 +100,9 @@ function InputCard({
           ref={fileInputRef}
           type="file"
           accept={accept}
-          aria-label={importFromFileLabel}
+          aria-hidden="true"
           className="sr-only"
+          tabIndex={-1}
           onChange={onFileChange}
         />
       </ToolPanelCardFooter>

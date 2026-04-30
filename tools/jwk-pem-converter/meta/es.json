@@ -1,4 +1,4 @@
 {
   "name": "Conversor JWK ↔ PEM",
-  "description": "Convierte claves JWK y PEM localmente. Compatible con RSA, EC y OKP (Ed25519/X25519/Ed448/X448)."
+  "description": "Convierte claves JWK y PEM localmente. Compatible con formatos de clave RSA, EC y OKP."
 }

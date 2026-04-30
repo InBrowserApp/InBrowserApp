@@ -14,17 +14,20 @@ const JWK_FILE_ACCEPT = ".json,.jwk,.txt,application/json,text/plain"
 const PEM_FILE_ACCEPT = ".pem,.key,.pub,.txt,application/x-pem-file,text/plain"
 const STORAGE_KEYS = {
   mode: "tools:jwk-pem-converter:tab",
-  jwkInput: "tools:jwk-pem-converter:jwk-input",
-  pemInput: "tools:jwk-pem-converter:pem-input",
   outputType: "tools:jwk-pem-converter:output-type",
   prettyJson: "tools:jwk-pem-converter:pretty-json",
 } as const
+const LEGACY_INPUT_STORAGE_KEYS = [
+  "tools:jwk-pem-converter:jwk-input",
+  "tools:jwk-pem-converter:pem-input",
+] as const
 
 export {
   DEFAULT_JWK_INPUT,
   DEFAULT_MODE,
   DEFAULT_PEM_INPUT,
   JWK_FILE_ACCEPT,
+  LEGACY_INPUT_STORAGE_KEYS,
   PEM_FILE_ACCEPT,
   STORAGE_KEYS,
 }

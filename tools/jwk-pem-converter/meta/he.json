@@ -1,4 +1,4 @@
 {
   "name": "ממיר JWK ↔ PEM",
-  "description": "ממיר מפתחות JWK ו‑PEM מקומית. תומך ב‑RSA, EC ו‑OKP ‏(Ed25519/X25519/Ed448/X448)."
+  "description": "ממיר מפתחות JWK ו‑PEM מקומית. תומך בפורמטי מפתחות RSA, EC ו‑OKP."
 }

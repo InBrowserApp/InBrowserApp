@@ -8,7 +8,12 @@ import {
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import JwkPemConverterClient from "./client"
-import { DEFAULT_JWK_INPUT, DEFAULT_PEM_INPUT } from "./client/constants"
+import {
+  DEFAULT_JWK_INPUT,
+  DEFAULT_PEM_INPUT,
+  LEGACY_INPUT_STORAGE_KEYS,
+  STORAGE_KEYS,
+} from "./client/constants"
 import messagesCatalog from "./messages/en.json"
 import meta from "./meta/en.json"
 
@@ -54,6 +59,9 @@ describe("JwkPemConverterClient", () => {
       (screen.getByLabelText(messages.jwkInputTitle) as HTMLTextAreaElement)
         .value
     ).toBe(DEFAULT_JWK_INPUT)
+    expect(
+      screen.getByLabelText(messages.jwkInputTitle).getAttribute("dir")
+    ).toBe("ltr")
 
     await waitForOutputToContain("BEGIN PRIVATE KEY")
 
@@ -73,6 +81,11 @@ describe("JwkPemConverterClient", () => {
   test("shows invalid JWK errors and can import a replacement file", async () => {
     render(<JwkPemConverterClient messages={messages} />)
 
+    const importButtons = screen.getAllByRole("button", {
+      name: messages.importFromFileLabel,
+    })
+    expect(importButtons).toHaveLength(1)
+
     fireEvent.change(screen.getByLabelText(messages.jwkInputTitle), {
       target: { value: "{" },
     })
@@ -87,11 +100,39 @@ describe("JwkPemConverterClient", () => {
       type: "application/json",
     })
 
-    fireEvent.change(screen.getByLabelText(messages.importFromFileLabel), {
+    fireEvent.change(document.querySelector("input[type='file']")!, {
       target: { files: [file] },
     })
 
     await waitForOutputToContain("BEGIN PRIVATE KEY")
+  })
+
+  test("persists preferences but not key material", async () => {
+    for (const key of LEGACY_INPUT_STORAGE_KEYS) {
+      window.localStorage.setItem(key, "stale private key")
+    }
+    window.localStorage.setItem(STORAGE_KEYS.mode, "pem")
+    window.localStorage.setItem(STORAGE_KEYS.prettyJson, "false")
+
+    render(<JwkPemConverterClient messages={messages} />)
+
+    expect(
+      screen
+        .getByRole("radio", { name: messages.tabPemToJwk })
+        .getAttribute("aria-checked")
+    ).toBe("true")
+
+    fireEvent.change(screen.getByLabelText(messages.pemInputTitle), {
+      target: { value: "new private key material" },
+    })
+
+    await waitFor(() => {
+      for (const key of LEGACY_INPUT_STORAGE_KEYS) {
+        expect(window.localStorage.getItem(key)).toBeNull()
+      }
+    })
+    expect(window.localStorage.getItem(STORAGE_KEYS.mode)).toBe("pem")
+    expect(window.localStorage.getItem(STORAGE_KEYS.prettyJson)).toBe("false")
   })
 
   test("shows JWKS key selection controls and can switch to public output", async () => {
@@ -144,6 +185,9 @@ describe("JwkPemConverterClient", () => {
     ).toBe(DEFAULT_PEM_INPUT)
 
     await waitForOutputToContain('"kty": "OKP"')
+    expect(
+      screen.getByLabelText(messages.outputTitle).getAttribute("dir")
+    ).toBe("ltr")
 
     fireEvent.click(screen.getByRole("switch", { name: messages.prettyJson }))
 

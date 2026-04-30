@@ -4,7 +4,7 @@ JWK (JSON Web Key) là định dạng JSON cho khóa mật mã dùng trong hệ 
 
 PEM là khóa ASN.1/DER được mã hóa Base64 với các dòng tiêu đề như BEGIN PUBLIC KEY hoặc BEGIN PRIVATE KEY, phổ biến trong TLS, OpenSSL và nhiều SDK.
 
-Công cụ này chuyển đổi khóa theo cả hai chiều, giữ nguyên vật liệu khóa khi chọn đầu ra công khai (SPKI) hoặc riêng tư (PKCS8). Hỗ trợ RSA, EC (P-256/384/521) và OKP (Ed25519/X25519/Ed448/X448), và mọi thứ chạy cục bộ trong trình duyệt.
+Công cụ này chuyển đổi khóa theo cả hai chiều, giữ nguyên vật liệu khóa khi chọn đầu ra công khai (SPKI) hoặc riêng tư (PKCS8). Các định dạng được hỗ trợ gồm RSA, EC (P-256/384/521) và bộ chứa khóa OKP, và mọi thứ chạy cục bộ trong trình duyệt.
 
 Chọn JWK → PEM khi thư viện, gateway hoặc CLI cần tệp khóa theo kiểu OpenSSL. Chọn PEM → JWK khi bạn cần đưa khóa vào JWKS, truyền qua cấu hình dựa trên JSON, hoặc dùng trong môi trường trình duyệt hay serverless. Việc chuyển đổi khóa riêng tư vẫn giữ nguyên dữ liệu riêng, vì vậy hãy chỉ chia sẻ đầu ra công khai nếu như vậy là đủ.
 

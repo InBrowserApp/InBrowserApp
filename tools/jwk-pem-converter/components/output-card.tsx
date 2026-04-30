@@ -40,9 +40,11 @@ function OutputCard({
       <ToolPanelCardContent>
         <Textarea
           aria-label={title}
+          dir="ltr"
           readOnly
+          translate="no"
           value={value}
-          className="[field-sizing:fixed] min-h-72 resize-y font-mono text-sm"
+          className="[field-sizing:fixed] min-h-72 resize-y text-left font-mono text-sm"
         />
       </ToolPanelCardContent>
       <ToolPanelCardFooter className="flex flex-wrap justify-end gap-3 border-t">

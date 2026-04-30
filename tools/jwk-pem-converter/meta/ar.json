@@ -1,4 +1,4 @@
 {
   "name": "محول JWK ↔ PEM",
-  "description": "حوّل مفاتيح JWK وPEM محليًا. يدعم RSA وEC وOKP ‏(Ed25519/X25519/Ed448/X448)."
+  "description": "حوّل مفاتيح JWK وPEM محليًا. يدعم تنسيقات مفاتيح RSA وEC وOKP."
 }
