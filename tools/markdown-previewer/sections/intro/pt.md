@@ -8,4 +8,4 @@ Use para READMEs, notas de versão, documentação interna, runbooks, rascunhos 
 
 ## Dicas De Fluxo De Trabalho
 
-Comece na vista dividida enquanto edita e mude para somente prévia quando quiser focar em ritmo, espaçamento e hierarquia de títulos. Importe arquivos `.md` existentes, carregue o documento de exemplo para testar tabelas e blocos de código cercados, e exporte HTML apenas quando o sumário e os títulos finais estiverem corretos.
+Edite no painel de fonte enquanto a prévia ao vivo acompanha o resultado renderizado, e use o sumário para revisar ritmo, espaçamento e hierarquia de títulos. Importe arquivos `.md` existentes, carregue o documento de exemplo para testar tabelas e blocos de código cercados, e exporte HTML apenas quando o sumário e os títulos finais estiverem corretos.

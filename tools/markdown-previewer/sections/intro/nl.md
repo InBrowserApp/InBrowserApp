@@ -8,4 +8,4 @@ Gebruik het voor README-werk, release notes, interne docs, runbooks, blogconcept
 
 ## Tips Voor Je Workflow
 
-Begin tijdens het bewerken in gesplitste weergave en schakel daarna naar alleen preview wanneer je wilt focussen op ritme, spacing en koppenhiërarchie. Importeer bestaande `.md`-bestanden, laad het voorbeelddocument om tabellen en fenced code blocks te testen, en exporteer HTML pas wanneer de inhoudsopgave en definitieve koppen kloppen.
+Bewerk in het bronpaneel terwijl de live preview het gerenderde resultaat volgt, en gebruik de inhoudsopgave om ritme, spacing en koppenhiërarchie te controleren. Importeer bestaande `.md`-bestanden, laad het voorbeelddocument om tabellen en fenced code blocks te testen, en exporteer HTML pas wanneer de inhoudsopgave en definitieve koppen kloppen.

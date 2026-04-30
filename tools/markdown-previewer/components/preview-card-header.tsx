@@ -9,30 +9,26 @@ import {
   ToggleGroup,
   ToggleGroupItem,
 } from "@workspace/ui/components/ui/toggle-group"
-import { Eye, EyeOff, Moon, Sun } from "@workspace/ui/icons"
+import { Moon, Sun } from "@workspace/ui/icons"
 
 import type { MarkdownPreviewerMessages } from "../types"
-import type { PreviewBadge, PreviewMode, PreviewTheme } from "../types"
+import type { PreviewBadge, PreviewTheme } from "../types"
 
 type PreviewCardHeaderProps = Readonly<{
   messages: Pick<
     MarkdownPreviewerMessages,
     | "cleanThemeLabel"
     | "previewDescription"
-    | "previewOnlyLabel"
     | "previewTitle"
     | "sanitizeHtmlLabel"
     | "showOutlineLabel"
     | "slateThemeLabel"
-    | "splitViewLabel"
     | "themeLabel"
   >
   badges: readonly PreviewBadge[]
-  previewMode: PreviewMode
   previewTheme: PreviewTheme
   sanitizeHtml: boolean
   showOutline: boolean
-  onPreviewModeChange: (value: PreviewMode) => void
   onPreviewThemeChange: (value: PreviewTheme) => void
   onSanitizeHtmlChange: (value: boolean) => void
   onShowOutlineChange: (value: boolean) => void
@@ -41,21 +37,13 @@ type PreviewCardHeaderProps = Readonly<{
 function PreviewCardHeader({
   messages,
   badges,
-  previewMode,
   previewTheme,
   sanitizeHtml,
   showOutline,
-  onPreviewModeChange,
   onPreviewThemeChange,
   onSanitizeHtmlChange,
   onShowOutlineChange,
 }: PreviewCardHeaderProps) {
-  function handlePreviewModeChange(value: string) {
-    if (value === "split" || value === "preview") {
-      onPreviewModeChange(value)
-    }
-  }
-
   function handlePreviewThemeChange(value: string) {
     if (value === "clean" || value === "slate") {
       onPreviewThemeChange(value)
@@ -74,29 +62,6 @@ function PreviewCardHeader({
 
         <div className="flex min-w-0 flex-col gap-3 lg:items-end">
           <div className="flex flex-wrap gap-2">
-            <ToggleGroup
-              type="single"
-              value={previewMode}
-              variant="outline"
-              size="sm"
-              aria-label={messages.previewTitle}
-              className="w-full max-w-full sm:w-fit"
-              onValueChange={handlePreviewModeChange}
-            >
-              <ToggleGroupItem value="split" className="flex-1 justify-center">
-                <Eye data-icon="inline-start" />
-                {messages.splitViewLabel}
-              </ToggleGroupItem>
-
-              <ToggleGroupItem
-                value="preview"
-                className="flex-1 justify-center"
-              >
-                <EyeOff data-icon="inline-start" />
-                {messages.previewOnlyLabel}
-              </ToggleGroupItem>
-            </ToggleGroup>
-
             <ToggleGroup
               type="single"
               value={previewTheme}

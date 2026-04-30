@@ -8,4 +8,4 @@ Dùng cho README, ghi chú phát hành, tài liệu nội bộ, runbook, bản n
 
 ## Mẹo Quy Trình
 
-Bắt đầu ở chế độ chia đôi khi chỉnh sửa, rồi chuyển sang chế độ chỉ xem trước khi muốn tập trung vào nhịp đọc, khoảng cách và thứ bậc tiêu đề. Nhập các tệp `.md` hiện có, tải tài liệu mẫu để thử bảng và fenced code blocks, và chỉ xuất HTML sau khi dàn ý cùng các tiêu đề cuối cùng đã đúng.
+Chỉnh sửa trong bảng nguồn trong khi bản xem trước trực tiếp theo sát kết quả đã render, rồi dùng dàn ý để kiểm tra nhịp đọc, khoảng cách và thứ bậc tiêu đề. Nhập các tệp `.md` hiện có, tải tài liệu mẫu để thử bảng và fenced code blocks, và chỉ xuất HTML sau khi dàn ý cùng các tiêu đề cuối cùng đã đúng.

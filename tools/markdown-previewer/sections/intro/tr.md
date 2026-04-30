@@ -8,4 +8,4 @@ README çalışmaları, sürüm notları, iç dokümanlar, runbook’lar, blog t
 
 ## İş Akışı İpuçları
 
-Düzenlerken bölünmüş görünümde başlayın, ardından ritme, boşluklara ve başlık hiyerarşisine odaklanmak istediğinizde yalnızca önizleme moduna geçin. Mevcut `.md` dosyalarını içe aktarın, tabloları ve fenced code block’ları test etmek için örnek belgeyi yükleyin ve HTML’yi yalnızca ana hat ile son başlıklar doğru göründüğünde dışa aktarın.
+Kaynak panelinde düzenleme yaparken canlı önizleme render edilen sonucu izler; ritmi, boşlukları ve başlık hiyerarşisini kontrol etmek için ana hattı kullanın. Mevcut `.md` dosyalarını içe aktarın, tabloları ve fenced code block’ları test etmek için örnek belgeyi yükleyin ve HTML’yi yalnızca ana hat ile son başlıklar doğru göründüğünde dışa aktarın.

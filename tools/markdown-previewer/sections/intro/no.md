@@ -8,4 +8,4 @@ Bruk det til README-arbeid, versjonsnotater, intern dokumentasjon, runbooks, blo
 
 ## Tips Til Arbeidsflyt
 
-Start i delt visning mens du redigerer, og bytt deretter til kun forhåndsvisning når du vil fokusere på rytme, avstand og overskriftshierarki. Importer eksisterende `.md`-filer, last inn eksempeldokumentet for å teste tabeller og inngjerdede kodeblokker, og eksporter HTML først når disposisjonen og de endelige overskriftene ser riktige ut.
+Rediger i kildepanelet mens den direkte forhåndsvisningen følger det renderte resultatet, og bruk disposisjonen til å kontrollere rytme, avstand og overskriftshierarki. Importer eksisterende `.md`-filer, last inn eksempeldokumentet for å teste tabeller og inngjerdede kodeblokker, og eksporter HTML først når disposisjonen og de endelige overskriftene ser riktige ut.

@@ -8,4 +8,4 @@ Utilise-le pour les README, notes de version, docs internes, runbooks, brouillon
 
 ## Conseils De Flux De Travail
 
-Commence en vue fractionnée pendant l’édition, puis passe en mode aperçu seul lorsque tu veux te concentrer sur le rythme, l’espacement et la hiérarchie des titres. Importe des fichiers `.md` existants, charge l’exemple pour tester tableaux et blocs de code clôturés, puis exporte le HTML seulement quand le plan et les titres finaux sont corrects.
+Écris dans le panneau source pendant que l’aperçu en direct suit le rendu, puis utilise le plan pour vérifier le rythme, l’espacement et la hiérarchie des titres. Importe des fichiers `.md` existants, charge l’exemple pour tester tableaux et blocs de code clôturés, puis exporte le HTML seulement quand le plan et les titres finaux sont corrects.

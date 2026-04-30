@@ -29,8 +29,6 @@ const messages = {
   previewTitle: "Live preview",
   previewDescription:
     "Review the rendered document, tune the presentation, and export HTML.",
-  splitViewLabel: "Split view",
-  previewOnlyLabel: "Preview only",
   themeLabel: "Theme",
   cleanThemeLabel: "Clean",
   slateThemeLabel: "Slate",
@@ -46,7 +44,8 @@ const messages = {
   outlineEmptyTitle: "No headings yet",
   outlineEmptyDescription: "Add Markdown headings to build an outline.",
   previewEmptyTitle: "Nothing to preview yet",
-  previewEmptyDescription: "Switch back to split view and start typing.",
+  previewEmptyDescription:
+    "Start typing in the editor or import a Markdown file to render a preview.",
   copyHtmlLabel: "Copy HTML",
   copiedLabel: "Copied",
   downloadHtmlLabel: "Download HTML",
@@ -82,6 +81,20 @@ function getMarkdownInput() {
   }) as HTMLTextAreaElement
 }
 
+function makeRect(top: number, height: number): DOMRect {
+  return {
+    bottom: top + height,
+    height,
+    left: 0,
+    right: 640,
+    top,
+    width: 640,
+    x: 0,
+    y: top,
+    toJSON: () => ({}),
+  } as DOMRect
+}
+
 describe("MarkdownPreviewerClient", () => {
   test("renders the default sample, preview metrics, and a download link", () => {
     render(
@@ -102,7 +115,7 @@ describe("MarkdownPreviewerClient", () => {
     expect(URL.createObjectURL).toHaveBeenCalled()
   })
 
-  test("switches to preview-only mode, toggles theme and outline, and restores split view", async () => {
+  test("toggles theme and outline without hiding the editor", async () => {
     render(
       <MarkdownPreviewerClient
         messages={messages}
@@ -111,15 +124,9 @@ describe("MarkdownPreviewerClient", () => {
       />
     )
 
-    fireEvent.click(
-      screen.getByRole("radio", { name: messages.previewOnlyLabel })
-    )
-
-    await waitFor(() => {
-      expect(
-        screen.queryByRole("textbox", { name: messages.sourceLabel })
-      ).toBeNull()
-    })
+    expect(
+      screen.getAllByRole("radio").map((radio) => radio.textContent)
+    ).toEqual([messages.cleanThemeLabel, messages.slateThemeLabel])
 
     fireEvent.click(
       screen.getByRole("radio", { name: messages.slateThemeLabel })
@@ -130,13 +137,77 @@ describe("MarkdownPreviewerClient", () => {
       expect(screen.queryByText(messages.outlineTitle)).toBeNull()
     })
 
-    fireEvent.click(
-      screen.getByRole("radio", { name: messages.splitViewLabel })
-    )
+    expect(getMarkdownInput()).toBeTruthy()
+  })
 
-    await waitFor(() => {
-      expect(getMarkdownInput()).toBeTruthy()
+  test("scrolls the preview region instead of the page from outline clicks", () => {
+    const scrollToDescriptor = Object.getOwnPropertyDescriptor(
+      HTMLElement.prototype,
+      "scrollTo"
+    )
+    const previewScrollTo = vi.fn()
+    const pageScrollTo = vi
+      .spyOn(window, "scrollTo")
+      .mockImplementation(() => undefined)
+
+    Object.defineProperty(HTMLElement.prototype, "scrollTo", {
+      configurable: true,
+      value: previewScrollTo,
     })
+
+    try {
+      render(
+        <MarkdownPreviewerClient
+          messages={messages}
+          language="en"
+          direction="ltr"
+        />
+      )
+
+      const previewRegion = screen.getByRole("region", {
+        name: messages.previewTitle,
+      })
+
+      Object.defineProperty(previewRegion, "scrollTop", {
+        configurable: true,
+        value: 24,
+        writable: true,
+      })
+
+      vi.spyOn(
+        HTMLElement.prototype,
+        "getBoundingClientRect"
+      ).mockImplementation(function getBoundingClientRect(this: HTMLElement) {
+        if (this === previewRegion) {
+          return makeRect(100, 480)
+        }
+
+        if (this.id === "release-plan") {
+          return makeRect(360, 32)
+        }
+
+        return makeRect(0, 0)
+      })
+
+      fireEvent.click(screen.getByRole("button", { name: "Release plan" }))
+
+      expect(previewScrollTo).toHaveBeenCalledWith(
+        expect.objectContaining({
+          top: 284,
+        })
+      )
+      expect(pageScrollTo).not.toHaveBeenCalled()
+    } finally {
+      if (scrollToDescriptor) {
+        Object.defineProperty(
+          HTMLElement.prototype,
+          "scrollTo",
+          scrollToDescriptor
+        )
+      } else {
+        Reflect.deleteProperty(HTMLElement.prototype, "scrollTo")
+      }
+    }
   })
 
   test("imports markdown from a selected file", async () => {
@@ -241,7 +312,6 @@ describe("MarkdownPreviewerClient", () => {
 
   test("restores persisted markdown and settings from local storage", async () => {
     window.localStorage.setItem(STORAGE_KEYS.markdown, "# Saved")
-    window.localStorage.setItem(STORAGE_KEYS.previewMode, "preview")
     window.localStorage.setItem(STORAGE_KEYS.previewTheme, "slate")
     window.localStorage.setItem(STORAGE_KEYS.sanitizeHtml, "false")
     window.localStorage.setItem(STORAGE_KEYS.showOutline, "false")
@@ -252,16 +322,6 @@ describe("MarkdownPreviewerClient", () => {
         language="en"
         direction="ltr"
       />
-    )
-
-    await waitFor(() => {
-      expect(
-        screen.queryByRole("textbox", { name: messages.sourceLabel })
-      ).toBeNull()
-    })
-
-    fireEvent.click(
-      screen.getByRole("radio", { name: messages.splitViewLabel })
     )
 
     await waitFor(() => {

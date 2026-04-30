@@ -8,4 +8,4 @@ Używaj go do README, notatek wydania, dokumentacji wewnętrznej, runbooków, sz
 
 ## Wskazówki Dotyczące Pracy
 
-Zacznij w widoku dzielonym podczas edycji, a potem przełącz się na sam podgląd, gdy chcesz skupić się na rytmie, odstępach i hierarchii nagłówków. Importuj istniejące pliki `.md`, wczytaj dokument przykładowy, aby przetestować tabele i ogrodzone bloki kodu, a HTML eksportuj dopiero wtedy, gdy konspekt i końcowe nagłówki wyglądają poprawnie.
+Edytuj w panelu źródłowym, gdy podgląd na żywo śledzi wyrenderowany wynik, i używaj konspektu do sprawdzania rytmu, odstępów oraz hierarchii nagłówków. Importuj istniejące pliki `.md`, wczytaj dokument przykładowy, aby przetestować tabele i ogrodzone bloki kodu, a HTML eksportuj dopiero wtedy, gdy konspekt i końcowe nagłówki wyglądają poprawnie.

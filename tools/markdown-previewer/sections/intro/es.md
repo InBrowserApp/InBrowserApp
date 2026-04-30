@@ -8,4 +8,4 @@ Markdown Previewer renderiza Markdown localmente en tu navegador para que puedas
 
 ## Consejos De Flujo De Trabajo
 
-Empieza en vista dividida mientras editas y cambia al modo de solo vista previa cuando quieras centrarte en ritmo, espaciado y jerarquía de encabezados. Importa archivos `.md` existentes, carga el documento de ejemplo para probar tablas y bloques de código, y exporta HTML solo cuando el esquema y los encabezados finales se vean correctos.
+Edita en el panel de fuente mientras la vista previa en vivo sigue el resultado renderizado, y usa el esquema para revisar ritmo, espaciado y jerarquía de encabezados. Importa archivos `.md` existentes, carga el documento de ejemplo para probar tablas y bloques de código, y exporta HTML solo cuando el esquema y los encabezados finales se vean correctos.

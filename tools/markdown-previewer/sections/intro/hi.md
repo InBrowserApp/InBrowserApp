@@ -8,4 +8,4 @@ README, release notes, internal docs, runbooks, blog drafts और ऐसे क
 
 ## Workflow सुझाव
 
-संपादन करते समय split view से शुरुआत करें, फिर rhythm, spacing और heading hierarchy पर ध्यान देना हो तो preview-only mode पर जाएँ। मौजूदा `.md` फ़ाइलें import करें, tables और fenced code blocks जाँचने के लिए sample document load करें, और outline तथा अंतिम headings सही दिखने के बाद ही HTML export करें।
+source panel में संपादन करें जबकि live preview rendered result के साथ चलता रहे, और rhythm, spacing तथा heading hierarchy जाँचने के लिए outline का उपयोग करें। मौजूदा `.md` फ़ाइलें import करें, tables और fenced code blocks जाँचने के लिए sample document load करें, और outline तथा अंतिम headings सही दिखने के बाद ही HTML export करें।

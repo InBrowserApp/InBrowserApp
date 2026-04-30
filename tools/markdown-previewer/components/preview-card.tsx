@@ -19,10 +19,10 @@ import { cn } from "@workspace/ui/lib/utils"
 
 import { PreviewCardHeader } from "./preview-card-header"
 import { PreviewOutline } from "./preview-outline"
-import { getArticleClassName, getSurfaceClassName } from "./preview-styles"
+import { getArticleClassName, getScrollerClassName } from "./preview-styles"
 
 import type { MarkdownPreviewerMessages } from "../types"
-import type { PreviewBadge, PreviewMode, PreviewTheme, TocItem } from "../types"
+import type { PreviewBadge, PreviewTheme, TocItem } from "../types"
 
 type PreviewCardProps = Readonly<{
   messages: Pick<
@@ -38,17 +38,14 @@ type PreviewCardProps = Readonly<{
     | "previewDescription"
     | "previewEmptyDescription"
     | "previewEmptyTitle"
-    | "previewOnlyLabel"
     | "previewTitle"
     | "printLabel"
     | "sanitizeHtmlLabel"
     | "showOutlineLabel"
     | "slateThemeLabel"
-    | "splitViewLabel"
     | "themeLabel"
   >
   hasMarkdown: boolean
-  previewMode: PreviewMode
   previewTheme: PreviewTheme
   sanitizeHtml: boolean
   showOutline: boolean
@@ -58,7 +55,6 @@ type PreviewCardProps = Readonly<{
   tocItems: readonly TocItem[]
   downloadUrl: string | null
   downloadFileName: string
-  onPreviewModeChange: (value: PreviewMode) => void
   onPreviewThemeChange: (value: PreviewTheme) => void
   onSanitizeHtmlChange: (value: boolean) => void
   onShowOutlineChange: (value: boolean) => void
@@ -78,7 +74,6 @@ function getScrollBehavior(): ScrollBehavior {
 function PreviewCard({
   messages,
   hasMarkdown,
-  previewMode,
   previewTheme,
   sanitizeHtml,
   showOutline,
@@ -88,20 +83,29 @@ function PreviewCard({
   tocItems,
   downloadUrl,
   downloadFileName,
-  onPreviewModeChange,
   onPreviewThemeChange,
   onSanitizeHtmlChange,
   onShowOutlineChange,
   onPrint,
 }: PreviewCardProps) {
+  const scrollerRef = useRef<HTMLDivElement | null>(null)
   const previewRef = useRef<HTMLDivElement | null>(null)
 
   function scrollToHeading(id: string) {
     const selector = `[id="${id.replace(/"/g, '\\"')}"]`
+    const scroller = scrollerRef.current
     const heading = previewRef.current?.querySelector<HTMLElement>(selector)
 
-    heading?.scrollIntoView({
-      block: "start",
+    if (!scroller || !heading) {
+      return
+    }
+
+    const scrollerRect = scroller.getBoundingClientRect()
+    const headingRect = heading.getBoundingClientRect()
+    const targetTop = headingRect.top - scrollerRect.top + scroller.scrollTop
+
+    scroller.scrollTo({
+      top: Math.max(targetTop, 0),
       behavior: getScrollBehavior(),
     })
   }
@@ -111,32 +115,33 @@ function PreviewCard({
       <PreviewCardHeader
         messages={messages}
         badges={badges}
-        previewMode={previewMode}
         previewTheme={previewTheme}
         sanitizeHtml={sanitizeHtml}
         showOutline={showOutline}
-        onPreviewModeChange={onPreviewModeChange}
         onPreviewThemeChange={onPreviewThemeChange}
         onSanitizeHtmlChange={onSanitizeHtmlChange}
         onShowOutlineChange={onShowOutlineChange}
       />
 
-      <ToolPanelCardContent className="p-4 sm:p-5">
+      <ToolPanelCardContent className="p-0">
         {hasMarkdown ? (
           <div
             className={cn(
-              "grid min-w-0 gap-4",
+              "grid min-w-0",
               showOutline ? "xl:grid-cols-[minmax(0,1fr)_16rem]" : "grid-cols-1"
             )}
           >
-            <div className={getSurfaceClassName(previewTheme)}>
-              <div className="h-[30rem] max-w-full overflow-x-hidden overflow-y-auto sm:h-[34rem]">
-                <div ref={previewRef} className="max-w-full min-w-0">
-                  <article
-                    className={getArticleClassName(previewTheme)}
-                    dangerouslySetInnerHTML={{ __html: renderedHtml }}
-                  />
-                </div>
+            <div
+              ref={scrollerRef}
+              role="region"
+              aria-label={messages.previewTitle}
+              className={getScrollerClassName(previewTheme)}
+            >
+              <div ref={previewRef} className="max-w-full min-w-0">
+                <article
+                  className={getArticleClassName(previewTheme)}
+                  dangerouslySetInnerHTML={{ __html: renderedHtml }}
+                />
               </div>
             </div>
 
@@ -149,7 +154,7 @@ function PreviewCard({
             ) : null}
           </div>
         ) : (
-          <Empty className="border-border/70 bg-muted/20">
+          <Empty className="m-4 border-border/70 bg-muted/20 sm:m-5">
             <EmptyHeader>
               <EmptyMedia variant="icon">
                 <FileText />

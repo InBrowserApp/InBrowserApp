@@ -8,4 +8,4 @@ Usalo per README, note di rilascio, documentazione interna, runbook, bozze di bl
 
 ## Suggerimenti Di Flusso
 
-Inizia in vista divisa mentre modifichi, poi passa alla sola anteprima quando vuoi concentrarti su ritmo, spaziatura e gerarchia dei titoli. Importa file `.md` esistenti, carica il documento di esempio per testare tabelle e blocchi di codice recintati, ed esporta HTML solo quando struttura e titoli finali sono a posto.
+Modifica nel pannello sorgente mentre l’anteprima live segue il risultato renderizzato, poi usa la struttura per controllare ritmo, spaziatura e gerarchia dei titoli. Importa file `.md` esistenti, carica il documento di esempio per testare tabelle e blocchi di codice recintati, ed esporta HTML solo quando struttura e titoli finali sono a posto.

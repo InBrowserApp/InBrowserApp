@@ -8,4 +8,4 @@ Nutze es für README-Arbeiten, Release Notes, interne Dokumentation, Runbooks, B
 
 ## Tipps Für Den Workflow
 
-Beginne beim Bearbeiten in der geteilten Ansicht und wechsle zur reinen Vorschau, wenn du Rhythmus, Abstände und Überschriftenhierarchie beurteilen möchtest. Importiere vorhandene `.md`-Dateien, lade das Beispieldokument zum Testen von Tabellen und Codeblöcken, und exportiere HTML erst, wenn Gliederung und finale Überschriften stimmen.
+Bearbeite den Text im Quellbereich, während die Live-Vorschau das gerenderte Ergebnis mitführt, und nutze die Gliederung, um Rhythmus, Abstände und Überschriftenhierarchie zu prüfen. Importiere vorhandene `.md`-Dateien, lade das Beispieldokument zum Testen von Tabellen und Codeblöcken, und exportiere HTML erst, wenn Gliederung und finale Überschriften stimmen.

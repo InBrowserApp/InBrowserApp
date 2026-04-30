@@ -8,4 +8,4 @@ Gunakan untuk README, catatan rilis, dokumentasi internal, runbook, draf blog, d
 
 ## Tips Alur Kerja
 
-Mulailah dalam tampilan terbagi saat mengedit, lalu beralih ke mode pratinjau saja ketika ingin fokus pada ritme, spasi, dan hierarki judul. Impor file `.md` yang sudah ada, muat dokumen contoh untuk menguji tabel dan blok kode berpagar, lalu ekspor HTML hanya setelah kerangka dan judul akhir terlihat benar.
+Edit di panel sumber sementara pratinjau langsung mengikuti hasil render, lalu gunakan kerangka untuk memeriksa ritme, spasi, dan hierarki judul. Impor file `.md` yang sudah ada, muat dokumen contoh untuk menguji tabel dan blok kode berpagar, lalu ekspor HTML hanya setelah kerangka dan judul akhir terlihat benar.

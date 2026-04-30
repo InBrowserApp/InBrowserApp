@@ -1,6 +1,5 @@
-import type { PreviewMode, PreviewTheme } from "./core/preview-options"
+import type { PreviewTheme } from "./core/preview-options"
 
-const DEFAULT_PREVIEW_MODE: PreviewMode = "split"
 const DEFAULT_PREVIEW_THEME: PreviewTheme = "clean"
 
 const DEFAULT_MARKDOWN = `# Product launch checklist
@@ -38,7 +37,6 @@ export function greet(name: string) {
 
 const STORAGE_KEYS = {
   markdown: "tools:markdown-previewer:markdown",
-  previewMode: "tools:markdown-previewer:preview-mode",
   previewTheme: "tools:markdown-previewer:preview-theme",
   sanitizeHtml: "tools:markdown-previewer:sanitize-html",
   showOutline: "tools:markdown-previewer:show-outline",
@@ -46,10 +44,4 @@ const STORAGE_KEYS = {
 
 const IMPORT_ACCEPT = ".md,.markdown,.mdown,.txt,text/markdown,text/plain"
 
-export {
-  DEFAULT_MARKDOWN,
-  DEFAULT_PREVIEW_MODE,
-  DEFAULT_PREVIEW_THEME,
-  IMPORT_ACCEPT,
-  STORAGE_KEYS,
-}
+export { DEFAULT_MARKDOWN, DEFAULT_PREVIEW_THEME, IMPORT_ACCEPT, STORAGE_KEYS }

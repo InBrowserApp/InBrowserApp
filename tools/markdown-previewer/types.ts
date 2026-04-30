@@ -1,5 +1,5 @@
 import type { PreviewStats, TocItem } from "./core/markdown-preview"
-import type { PreviewMode, PreviewTheme } from "./core/preview-options"
+import type { PreviewTheme } from "./core/preview-options"
 
 type MarkdownPreviewerLocalizedCatalog = Readonly<{
   editorTitle: string
@@ -13,8 +13,6 @@ type MarkdownPreviewerLocalizedCatalog = Readonly<{
   clearConfirmMessage: string
   previewTitle: string
   previewDescription: string
-  splitViewLabel: string
-  previewOnlyLabel: string
   themeLabel: string
   cleanThemeLabel: string
   slateThemeLabel: string
@@ -56,7 +54,6 @@ export type {
   MarkdownPreviewerLocalizedCatalog,
   MarkdownPreviewerMessages,
   PreviewBadge,
-  PreviewMode,
   PreviewTheme,
   TocItem,
 }

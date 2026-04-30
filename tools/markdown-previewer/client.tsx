@@ -11,7 +11,6 @@ import {
 
 import {
   DEFAULT_MARKDOWN,
-  DEFAULT_PREVIEW_MODE,
   DEFAULT_PREVIEW_THEME,
   IMPORT_ACCEPT,
   STORAGE_KEYS,
@@ -21,7 +20,7 @@ import {
   createExportHtmlDocument,
   slugifyHeading,
 } from "./core/markdown-preview"
-import type { PreviewMode, PreviewTheme } from "./core/preview-options"
+import type { PreviewTheme } from "./core/preview-options"
 import { EditorCard } from "./components/editor-card"
 import { PreviewCard } from "./components/preview-card"
 
@@ -32,10 +31,6 @@ type MarkdownPreviewerClientProps = Readonly<{
   language: string
   direction: "ltr" | "rtl"
 }>
-
-function normalizePreviewMode(value: string | null): PreviewMode {
-  return value === "preview" ? "preview" : DEFAULT_PREVIEW_MODE
-}
 
 function normalizePreviewTheme(value: string | null): PreviewTheme {
   return value === "slate" ? "slate" : DEFAULT_PREVIEW_THEME
@@ -71,8 +66,6 @@ function MarkdownPreviewerClient({
   const downloadUrlRef = useRef<string | null>(null)
 
   const [markdown, setMarkdown] = useState(DEFAULT_MARKDOWN)
-  const [previewMode, setPreviewMode] =
-    useState<PreviewMode>(DEFAULT_PREVIEW_MODE)
   const [previewTheme, setPreviewTheme] = useState<PreviewTheme>(
     DEFAULT_PREVIEW_THEME
   )
@@ -131,9 +124,6 @@ function MarkdownPreviewerClient({
     if (typeof window === "undefined") return
 
     const storedMarkdown = window.localStorage.getItem(STORAGE_KEYS.markdown)
-    const storedPreviewMode = window.localStorage.getItem(
-      STORAGE_KEYS.previewMode
-    )
     const storedPreviewTheme = window.localStorage.getItem(
       STORAGE_KEYS.previewTheme
     )
@@ -148,7 +138,6 @@ function MarkdownPreviewerClient({
       setMarkdown(storedMarkdown)
     }
 
-    setPreviewMode(normalizePreviewMode(storedPreviewMode))
     setPreviewTheme(normalizePreviewTheme(storedPreviewTheme))
     setSanitizeHtml(normalizeBoolean(storedSanitizeHtml, true))
     setShowOutline(normalizeBoolean(storedShowOutline, true))
@@ -159,12 +148,6 @@ function MarkdownPreviewerClient({
     if (typeof window === "undefined") return
     window.localStorage.setItem(STORAGE_KEYS.markdown, markdown)
   }, [markdown])
-
-  useEffect(() => {
-    /* v8 ignore next */
-    if (typeof window === "undefined") return
-    window.localStorage.setItem(STORAGE_KEYS.previewMode, previewMode)
-  }, [previewMode])
 
   useEffect(() => {
     /* v8 ignore next */
@@ -225,7 +208,6 @@ function MarkdownPreviewerClient({
 
     startTransition(() => {
       setMarkdown(nextMarkdown)
-      setPreviewMode("split")
     })
   }
 
@@ -288,22 +270,19 @@ function MarkdownPreviewerClient({
 
   return (
     <div className="grid gap-6">
-      {previewMode === "split" ? (
-        <EditorCard
-          messages={messages}
-          markdown={markdown}
-          textareaId={textareaId}
-          onMarkdownChange={setMarkdown}
-          onImportClick={openImportDialog}
-          onLoadSample={handleLoadSample}
-          onClear={handleClear}
-        />
-      ) : null}
+      <EditorCard
+        messages={messages}
+        markdown={markdown}
+        textareaId={textareaId}
+        onMarkdownChange={setMarkdown}
+        onImportClick={openImportDialog}
+        onLoadSample={handleLoadSample}
+        onClear={handleClear}
+      />
 
       <PreviewCard
         messages={messages}
         hasMarkdown={hasMarkdown}
-        previewMode={previewMode}
         previewTheme={previewTheme}
         sanitizeHtml={sanitizeHtml}
         showOutline={showOutline}
@@ -313,7 +292,6 @@ function MarkdownPreviewerClient({
         tocItems={preview.toc}
         downloadUrl={downloadUrl}
         downloadFileName={downloadFileName}
-        onPreviewModeChange={setPreviewMode}
         onPreviewThemeChange={setPreviewTheme}
         onSanitizeHtmlChange={setSanitizeHtml}
         onShowOutlineChange={setShowOutline}

@@ -8,4 +8,4 @@ Gunakannya untuk README, nota keluaran, dokumentasi dalaman, runbook, draf blog 
 
 ## Tip Aliran Kerja
 
-Mulakan dalam paparan terbahagi semasa menyunting, kemudian tukar kepada mod pratonton sahaja apabila anda mahu menumpukan pada rentak, jarak dan hierarki tajuk. Import fail `.md` sedia ada, muatkan dokumen contoh untuk menguji jadual dan blok kod berpagar, dan eksport HTML hanya selepas rangka serta tajuk akhir kelihatan betul.
+Sunting dalam panel sumber sementara pratonton langsung mengikuti hasil render, kemudian gunakan rangka untuk menyemak rentak, jarak dan hierarki tajuk. Import fail `.md` sedia ada, muatkan dokumen contoh untuk menguji jadual dan blok kod berpagar, dan eksport HTML hanya selepas rangka serta tajuk akhir kelihatan betul.

@@ -8,4 +8,4 @@ Använd det för README-arbete, versionsnoteringar, intern dokumentation, runboo
 
 ## Tips För Arbetsflödet
 
-Börja i delad vy medan du redigerar och växla sedan till endast förhandsvisning när du vill fokusera på rytm, avstånd och rubrikhierarki. Importera befintliga `.md`-filer, ladda exempeldokumentet för att testa tabeller och inhägnade kodblock, och exportera HTML först när dispositionen och de slutliga rubrikerna ser rätt ut.
+Redigera i källpanelen medan liveförhandsvisningen följer det renderade resultatet, och använd dispositionen för att kontrollera rytm, avstånd och rubrikhierarki. Importera befintliga `.md`-filer, ladda exempeldokumentet för att testa tabeller och inhägnade kodblock, och exportera HTML först när dispositionen och de slutliga rubrikerna ser rätt ut.

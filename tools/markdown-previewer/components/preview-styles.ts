@@ -2,18 +2,39 @@ import { cn } from "@workspace/ui/lib/utils"
 
 import type { PreviewTheme } from "../core/preview-options"
 
-const previewShellClassName = "overflow-hidden rounded-lg"
-
-function getSurfaceClassName(theme: PreviewTheme) {
+function getScrollerClassName(theme: PreviewTheme) {
   return cn(
-    previewShellClassName,
-    theme === "clean" ? "bg-muted/30" : "bg-slate-950 ring-1 ring-slate-800"
+    "h-[30rem] max-w-full overflow-x-hidden overflow-y-auto overscroll-contain sm:h-[34rem]",
+    "[scrollbar-gutter:stable] [scrollbar-width:thin]",
+    theme === "clean"
+      ? [
+          "[scrollbar-color:rgb(100_116_139/0.48)_transparent]",
+          "[&::-webkit-scrollbar]:w-2",
+          "[&::-webkit-scrollbar-track]:bg-transparent",
+          "[&::-webkit-scrollbar-thumb]:rounded-full",
+          "[&::-webkit-scrollbar-thumb]:border-2",
+          "[&::-webkit-scrollbar-thumb]:border-transparent",
+          "[&::-webkit-scrollbar-thumb]:bg-muted-foreground/35",
+          "[&::-webkit-scrollbar-thumb]:bg-clip-padding",
+          "[&::-webkit-scrollbar-thumb:hover]:bg-muted-foreground/55",
+        ]
+      : [
+          "[scrollbar-color:rgb(148_163_184/0.55)_transparent]",
+          "[&::-webkit-scrollbar]:w-2",
+          "[&::-webkit-scrollbar-track]:bg-transparent",
+          "[&::-webkit-scrollbar-thumb]:rounded-full",
+          "[&::-webkit-scrollbar-thumb]:border-2",
+          "[&::-webkit-scrollbar-thumb]:border-transparent",
+          "[&::-webkit-scrollbar-thumb]:bg-slate-500/55",
+          "[&::-webkit-scrollbar-thumb]:bg-clip-padding",
+          "[&::-webkit-scrollbar-thumb:hover]:bg-slate-400/75",
+        ]
   )
 }
 
 function getArticleClassName(theme: PreviewTheme) {
   return cn(
-    "w-full max-w-full min-w-0 px-4 py-4 text-sm leading-7 sm:px-6 sm:py-5",
+    "min-h-full w-full max-w-full min-w-0 px-4 py-4 text-sm leading-7 sm:px-6 sm:py-5",
     "[&_a]:break-words [&_h1]:break-words [&_h2]:break-words",
     "[&_h3]:break-words [&_h4]:break-words [&_li]:break-words",
     "[&_p]:break-words",
@@ -36,6 +57,7 @@ function getArticleClassName(theme: PreviewTheme) {
     "[&_img]:max-w-full [&_img]:rounded-lg",
     theme === "clean"
       ? [
+          "bg-transparent",
           "text-foreground",
           "[&_a]:text-primary",
           "[&_blockquote]:border-border [&_blockquote]:text-muted-foreground",
@@ -44,6 +66,7 @@ function getArticleClassName(theme: PreviewTheme) {
           "[&_td]:border-border [&_th]:border-border",
         ]
       : [
+          "bg-slate-950",
           "text-slate-100",
           "[&_h1]:text-white [&_h2]:text-white [&_h3]:text-white [&_h4]:text-white",
           "[&_a]:text-sky-300",
@@ -55,4 +78,4 @@ function getArticleClassName(theme: PreviewTheme) {
   )
 }
 
-export { getArticleClassName, getSurfaceClassName }
+export { getArticleClassName, getScrollerClassName }
