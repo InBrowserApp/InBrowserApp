@@ -19,6 +19,7 @@ import {
   SelectValue,
 } from "@workspace/ui/components/ui/select"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
+import { Plus, Search, Sparkles, Trash2 } from "@workspace/ui/icons"
 
 import type {
   RobotsGroupDraft,
@@ -105,6 +106,7 @@ function GroupsCard({
                     onRemoveGroup(group.id)
                   }}
                 >
+                  <Trash2 data-icon="inline-start" />
                   {messages.removeGroup}
                 </Button>
               </div>
@@ -135,6 +137,7 @@ function GroupsCard({
                       onAddUserAgentPreset(group.id, "search")
                     }}
                   >
+                    <Search data-icon="inline-start" />
                     {messages.presetSearchEngines}
                   </Button>
                   <Button
@@ -145,6 +148,7 @@ function GroupsCard({
                       onAddUserAgentPreset(group.id, "ai")
                     }}
                   >
+                    <Sparkles data-icon="inline-start" />
                     {messages.presetAiCrawlers}
                   </Button>
                 </div>
@@ -164,6 +168,7 @@ function GroupsCard({
                       onAddRule(group.id)
                     }}
                   >
+                    <Plus data-icon="inline-start" />
                     {messages.addRule}
                   </Button>
                 </div>
@@ -227,6 +232,7 @@ function GroupsCard({
                           onRemoveRule(group.id, ruleIndex)
                         }}
                       >
+                        <Trash2 data-icon="inline-start" />
                         {messages.removeRule}
                       </Button>
                     </div>
@@ -279,6 +285,7 @@ function GroupsCard({
             size="sm"
             onClick={onAddGroup}
           >
+            <Plus data-icon="inline-start" />
             {messages.addGroup}
           </Button>
         </div>
