@@ -88,7 +88,7 @@ function FontDetailsPanel({
             dir="ltr"
             translate="no"
             data-testid="css-snippet"
-            className="mt-3 max-w-full overflow-x-auto rounded-lg border bg-background px-4 py-3 text-left text-sm leading-6 break-all whitespace-pre-wrap"
+            className="mt-3 max-w-full overflow-x-auto rounded-lg border bg-background px-4 py-3 text-left text-sm leading-6 break-words whitespace-pre-wrap"
           >
             {cssSnippet}
           </pre>

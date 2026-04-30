@@ -80,6 +80,7 @@ function FontPreviewPanel({
           </FieldLabel>
           <Textarea
             dir="auto"
+            name="font-preview-text"
             value={sampleText}
             onChange={(event) => {
               onSampleTextChange(event.target.value)
@@ -100,18 +101,22 @@ function FontPreviewPanel({
               className="flex min-h-[15rem] flex-col gap-8 sm:min-h-[18rem] sm:gap-10"
               style={descriptor}
             >
-              <div className="flex flex-wrap gap-2">
+              <div className="flex min-w-0 flex-wrap gap-2">
                 <Badge
                   variant={darkBackground ? "secondary" : "outline"}
-                  className="rounded-full"
+                  className="max-w-full min-w-0 rounded-full"
                 >
-                  {activeFont.displayFamily}
+                  <span className="block max-w-full min-w-0 truncate">
+                    {activeFont.displayFamily}
+                  </span>
                 </Badge>
                 <Badge
                   variant={darkBackground ? "secondary" : "outline"}
-                  className="rounded-full"
+                  className="max-w-full rounded-full"
                 >
-                  {activeFont.displayStyle}
+                  <span className="block max-w-full min-w-0 truncate">
+                    {activeFont.displayStyle}
+                  </span>
                 </Badge>
               </div>
 

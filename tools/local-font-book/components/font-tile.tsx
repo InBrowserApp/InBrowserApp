@@ -21,7 +21,7 @@ function FontTile({ font, active, onSelect }: FontTileProps) {
       onClick={() => {
         onSelect(font.id)
       }}
-      className="flex min-w-0 flex-col gap-2.5 rounded-xl border border-border/80 bg-background px-4 py-3.5 text-left transition-colors outline-none hover:border-foreground/20 hover:bg-muted/20 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 data-[active=true]:border-foreground/20 data-[active=true]:bg-muted/30"
+      className="flex min-w-0 flex-col gap-2.5 rounded-xl border border-border/80 bg-background px-4 py-3.5 text-left transition-colors outline-none hover:border-foreground/20 hover:bg-muted/20 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 data-[active=true]:border-foreground/35 data-[active=true]:bg-muted/40 data-[active=true]:shadow-xs"
     >
       <div
         className="line-clamp-2 text-[1.05rem] leading-tight font-medium break-words"

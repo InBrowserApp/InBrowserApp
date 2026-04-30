@@ -57,6 +57,15 @@ function LocalFontBookClient({ messages }: LocalFontBookClientProps) {
   const deferredSearchQuery = useDeferredValue(searchQuery)
   const isSupported =
     typeof window !== "undefined" && "queryLocalFonts" in window
+  const visibleFonts = filterAndSortFonts(fonts, {
+    query: deferredSearchQuery,
+    filterStyle,
+    sortBy,
+  })
+  const firstVisibleFontId = visibleFonts[0]?.id ?? ""
+  const activeFontIsVisible = visibleFonts.some(
+    (font) => font.id === activeFontId
+  )
 
   useEffect(() => {
     /* v8 ignore next */
@@ -152,18 +161,28 @@ function LocalFontBookClient({ messages }: LocalFontBookClientProps) {
       return
     }
 
-    if (!fonts.some((font) => font.id === activeFontId)) {
-      setActiveFontId(fonts[0]?.id ?? "")
-    }
-  }, [activeFontId, fonts])
+    if (visibleFonts.length === 0) {
+      if (activeFontId) {
+        setActiveFontId("")
+      }
 
-  const visibleFonts = filterAndSortFonts(fonts, {
-    query: deferredSearchQuery,
-    filterStyle,
-    sortBy,
-  })
+      return
+    }
+
+    if (!activeFontIsVisible) {
+      setActiveFontId(firstVisibleFontId)
+    }
+  }, [
+    activeFontId,
+    activeFontIsVisible,
+    firstVisibleFontId,
+    fonts.length,
+    visibleFonts.length,
+  ])
+
   const displayGroups = groupFonts(visibleFonts, groupByFamily)
-  const activeFont = fonts.find((font) => font.id === activeFontId) ?? null
+  const activeFont =
+    visibleFonts.find((font) => font.id === activeFontId) ?? null
   const cssSnippet = buildCssSnippet(activeFont)
   const fontCountLabel =
     fonts.length > 0
@@ -203,15 +222,20 @@ function LocalFontBookClient({ messages }: LocalFontBookClientProps) {
     try {
       const availableFonts = await queryLocalFonts()
       const normalizedFonts = normalizeFonts(availableFonts)
+      const sortedVisibleFonts = filterAndSortFonts(normalizedFonts, {
+        query: deferredSearchQuery,
+        filterStyle,
+        sortBy,
+      })
 
       startTransition(() => {
         setFonts(normalizedFonts)
         setActiveFontId((currentId) => {
-          if (normalizedFonts.some((font) => font.id === currentId)) {
+          if (sortedVisibleFonts.some((font) => font.id === currentId)) {
             return currentId
           }
 
-          return normalizedFonts[0]?.id ?? ""
+          return sortedVisibleFonts[0]?.id ?? ""
         })
       })
     } catch (error) {

@@ -130,7 +130,7 @@ describe("LocalFontBookClient", () => {
     })
 
     await waitFor(() => {
-      expect(screen.getByText("Roboto Bold")).toBeTruthy()
+      expect(screen.getAllByText("Roboto Bold").length).toBeGreaterThan(0)
       expect(screen.queryByTestId("font-Inter-Regular")).toBeNull()
     })
 
@@ -147,6 +147,42 @@ describe("LocalFontBookClient", () => {
     expect(screen.getByTestId("css-snippet").textContent).toContain(
       "font-style: italic;"
     )
+  })
+
+  test("keeps the selected preview aligned to visible sorted results", async () => {
+    setQueryLocalFonts(
+      vi
+        .fn()
+        .mockResolvedValue([fontFixtures[2], fontFixtures[0], fontFixtures[1]])
+    )
+
+    render(<LocalFontBookClient messages={messages} />)
+
+    fireEvent.click(screen.getByRole("button", { name: messages.loadButton }))
+
+    await waitFor(() => {
+      expect(screen.getByTestId("css-snippet").textContent).toContain(
+        'font-family: "Inter";'
+      )
+    })
+
+    fireEvent.change(screen.getByLabelText(messages.searchPlaceholder), {
+      target: { value: "Roboto" },
+    })
+
+    await waitFor(() => {
+      expect(screen.getByTestId("css-snippet").textContent).toContain(
+        'font-family: "Roboto";'
+      )
+    })
+
+    fireEvent.change(screen.getByLabelText(messages.searchPlaceholder), {
+      target: { value: "Missing" },
+    })
+
+    await waitFor(() => {
+      expect(screen.queryByTestId("css-snippet")).toBeNull()
+    })
   })
 
   test("shows a denied status when the API rejects the permission request", async () => {

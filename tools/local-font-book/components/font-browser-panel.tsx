@@ -91,7 +91,9 @@ function FontBrowserPanel({
   const searchInputId = useId()
   const groupSwitchId = useId()
   const hasVisibleFonts = displayGroups.length > 0
-  const listViewportClassName = hasVisibleFonts ? "h-[30rem]" : "h-auto"
+  const listViewportClassName = hasVisibleFonts
+    ? "h-[30rem] xl:h-[44rem] 2xl:h-[48rem]"
+    : "h-auto"
 
   return (
     <ToolPanelCard className="h-auto min-w-0 overflow-hidden">
@@ -121,6 +123,7 @@ function FontBrowserPanel({
               <Search className="pointer-events-none absolute start-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
               <Input
                 id={searchInputId}
+                name="font-search"
                 autoComplete="off"
                 value={searchQuery}
                 onChange={(event) => {
@@ -221,7 +224,7 @@ function FontBrowserPanel({
                 {displayGroups.map((group) => (
                   <section key={group.id} className="flex flex-col gap-3">
                     {group.label ? (
-                      <div className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
+                      <div className="text-xs leading-5 font-medium break-words text-muted-foreground">
                         {group.label}
                       </div>
                     ) : null}
