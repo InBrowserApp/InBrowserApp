@@ -3,7 +3,7 @@ import { JsonCard } from "./client/json-card"
 import { LayerEditorCard } from "./client/layer-editor-card"
 import { LayersCard } from "./client/layers-card"
 import { OutputCard } from "./client/output-card"
-import { PreviewCard } from "./client/preview-card"
+import { PresetsCard, PreviewCard } from "./client/preview-card"
 import { StopsCard } from "./client/stops-card"
 import { useGradientEditor } from "./client/use-gradient-editor"
 
@@ -19,79 +19,67 @@ function CssGradientGeneratorClient({
   const editor = useGradientEditor()
 
   return (
-    <div className="grid gap-6">
-      <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-        <div className="grid content-start gap-6">
-          <PreviewCard
-            backgroundImage={editor.previewBackgroundImage}
-            blendMode={editor.previewBlendMode}
-            messages={messages}
-            onApplyPreset={editor.applyPreset}
-            onRandomizeAll={editor.randomizeAll}
-            onRandomizeLayer={editor.randomizeLayer}
-            presetId={editor.presetId}
-            presets={editor.presets}
-          />
-          <StopsCard
-            activeLayer={editor.activeLayer}
-            activeStopId={editor.activeStop.id}
-            messages={messages}
-            onAddStop={() => {
-              editor.addStop()
-            }}
-            onAddStopAtPosition={editor.addStop}
-            onRemoveStop={editor.removeStop}
-            onSelectStop={editor.setActiveStop}
-            onStopColorChange={editor.updateStopColor}
-            onStopPositionChange={editor.updateStopPosition}
-            showError={editor.showStopError}
-          />
-        </div>
-
-        <div className="grid content-start gap-6">
-          <LayersCard
-            activeLayerId={editor.activeLayer.id}
-            layers={editor.layers}
-            messages={messages}
-            onAddLayer={editor.addLayer}
-            onDuplicateLayer={editor.duplicateLayer}
-            onMoveLayer={editor.moveLayer}
-            onRemoveLayer={editor.removeLayer}
-            onSetActive={editor.setActiveLayer}
-            showError={editor.showLayerError}
-          />
-          <LayerEditorCard
-            layer={editor.activeLayer}
-            messages={messages}
-            onAngleChange={(value) => {
-              editor.updateActiveLayer({ angle: value })
-            }}
-            onBlendModeChange={(value) => {
-              editor.updateActiveLayer({ blendMode: value })
-            }}
-            onCenterXChange={(value) => {
-              editor.updateActiveLayer({ centerX: value })
-            }}
-            onCenterYChange={(value) => {
-              editor.updateActiveLayer({ centerY: value })
-            }}
-            onColorSpaceChange={(value) => {
-              editor.updateActiveLayer({ colorSpace: value })
-            }}
-            onRadialShapeChange={(value) => {
-              editor.updateActiveLayer({ radialShape: value })
-            }}
-            onRadialSizeChange={(value) => {
-              editor.updateActiveLayer({ radialSize: value })
-            }}
-            onTypeChange={(value) => {
-              editor.updateActiveLayer({ type: value })
-            }}
-          />
-        </div>
-      </div>
-
-      <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1.28fr)_minmax(20rem,0.72fr)]">
+    <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(22rem,0.64fr)]">
+      <div className="order-2 grid content-start gap-6 xl:order-none">
+        <PresetsCard
+          messages={messages}
+          onApplyPreset={editor.applyPreset}
+          presetId={editor.presetId}
+          presets={editor.presets}
+        />
+        <LayersCard
+          activeLayerId={editor.activeLayer.id}
+          layers={editor.layers}
+          messages={messages}
+          onAddLayer={editor.addLayer}
+          onDuplicateLayer={editor.duplicateLayer}
+          onMoveLayer={editor.moveLayer}
+          onRemoveLayer={editor.removeLayer}
+          onSetActive={editor.setActiveLayer}
+          showError={editor.showLayerError}
+        />
+        <LayerEditorCard
+          layer={editor.activeLayer}
+          messages={messages}
+          onAngleChange={(value) => {
+            editor.updateActiveLayer({ angle: value })
+          }}
+          onBlendModeChange={(value) => {
+            editor.updateActiveLayer({ blendMode: value })
+          }}
+          onCenterXChange={(value) => {
+            editor.updateActiveLayer({ centerX: value })
+          }}
+          onCenterYChange={(value) => {
+            editor.updateActiveLayer({ centerY: value })
+          }}
+          onColorSpaceChange={(value) => {
+            editor.updateActiveLayer({ colorSpace: value })
+          }}
+          onRadialShapeChange={(value) => {
+            editor.updateActiveLayer({ radialShape: value })
+          }}
+          onRadialSizeChange={(value) => {
+            editor.updateActiveLayer({ radialSize: value })
+          }}
+          onTypeChange={(value) => {
+            editor.updateActiveLayer({ type: value })
+          }}
+        />
+        <StopsCard
+          activeLayer={editor.activeLayer}
+          activeStopId={editor.activeStop.id}
+          messages={messages}
+          onAddStop={() => {
+            editor.addStop()
+          }}
+          onAddStopAtPosition={editor.addStop}
+          onRemoveStop={editor.removeStop}
+          onSelectStop={editor.setActiveStop}
+          onStopColorChange={editor.updateStopColor}
+          onStopPositionChange={editor.updateStopPosition}
+          showError={editor.showStopError}
+        />
         <OutputCard
           backgroundBlendDeclaration={editor.backgroundBlendDeclaration}
           backgroundDeclaration={editor.backgroundDeclaration}
@@ -103,7 +91,28 @@ function CssGradientGeneratorClient({
           onOutputFormatChange={editor.setOutputFormat}
           outputFormat={editor.outputFormat}
         />
-        <div className="grid content-start gap-6">
+        <JsonCard
+          jsonDownloadUrl={editor.jsonDownloadUrl}
+          jsonInput={editor.jsonInput}
+          messages={messages}
+          onJsonInputChange={editor.setJsonInput}
+          onLoadJson={editor.loadJson}
+          serializedConfig={editor.serializedConfig}
+          showError={editor.showJsonError}
+        />
+      </div>
+
+      <aside className="contents xl:sticky xl:top-6 xl:grid xl:content-start xl:gap-6">
+        <div className="order-1 xl:order-none">
+          <PreviewCard
+            backgroundImage={editor.previewBackgroundImage}
+            blendMode={editor.previewBlendMode}
+            messages={messages}
+            onRandomizeAll={editor.randomizeAll}
+            onRandomizeLayer={editor.randomizeLayer}
+          />
+        </div>
+        <div className="order-3 xl:order-none">
           <ExportCard
             exportHeight={editor.exportHeight}
             exportWidth={editor.exportWidth}
@@ -114,17 +123,8 @@ function CssGradientGeneratorClient({
             showError={editor.showExportError}
             svgDownloadUrl={editor.svgDownloadUrl}
           />
-          <JsonCard
-            jsonDownloadUrl={editor.jsonDownloadUrl}
-            jsonInput={editor.jsonInput}
-            messages={messages}
-            onJsonInputChange={editor.setJsonInput}
-            onLoadJson={editor.loadJson}
-            serializedConfig={editor.serializedConfig}
-            showError={editor.showJsonError}
-          />
         </div>
-      </div>
+      </aside>
     </div>
   )
 }

@@ -19,9 +19,13 @@ type PreviewCardProps = Readonly<{
   backgroundImage: string
   blendMode: string
   messages: CssGradientGeneratorMessages
-  onApplyPreset: (presetId: GradientPreset["id"]) => void
   onRandomizeAll: () => void
   onRandomizeLayer: () => void
+}>
+
+type PresetsCardProps = Readonly<{
+  messages: CssGradientGeneratorMessages
+  onApplyPreset: (presetId: GradientPreset["id"]) => void
   presetId: GradientPreset["id"] | null
   presets: readonly GradientPreset[]
 }>
@@ -41,11 +45,8 @@ function PreviewCard({
   backgroundImage,
   blendMode,
   messages,
-  onApplyPreset,
   onRandomizeAll,
   onRandomizeLayer,
-  presetId,
-  presets,
 }: PreviewCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -85,55 +86,64 @@ function PreviewCard({
             }}
           />
         </div>
+      </CardContent>
+    </Card>
+  )
+}
 
-        <div className="grid gap-3">
-          <div className="space-y-1">
-            <h3 className="text-sm font-semibold">{messages.presetsTitle}</h3>
-            <p className="text-sm text-muted-foreground">
-              {messages.presetsSubtitle}
-            </p>
-          </div>
+function PresetsCard({
+  messages,
+  onApplyPreset,
+  presetId,
+  presets,
+}: PresetsCardProps) {
+  return (
+    <Card className="overflow-hidden">
+      <CardHeader className="border-b">
+        <CardTitle>{messages.presetsTitle}</CardTitle>
+        <CardDescription>{messages.presetsSubtitle}</CardDescription>
+      </CardHeader>
 
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            {presets.map((preset) => {
-              const previewLayers = toPreviewLayers(preset)
+      <CardContent>
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          {presets.map((preset) => {
+            const previewLayers = toPreviewLayers(preset)
 
-              return (
-                <button
-                  className={cn(
-                    "group rounded-xl border p-3 text-left transition-colors",
-                    presetId === preset.id
-                      ? "border-primary bg-primary/5 shadow-sm"
-                      : "border-border bg-card hover:border-primary/40 hover:bg-muted/40"
-                  )}
-                  key={preset.id}
-                  onClick={() => {
-                    onApplyPreset(preset.id)
+            return (
+              <button
+                className={cn(
+                  "group rounded-xl border p-3 text-left transition-colors",
+                  presetId === preset.id
+                    ? "border-primary bg-primary/5 shadow-sm"
+                    : "border-border bg-card hover:border-primary/40 hover:bg-muted/40"
+                )}
+                key={preset.id}
+                onClick={() => {
+                  onApplyPreset(preset.id)
+                }}
+                type="button"
+              >
+                <div
+                  className="mb-3 h-16 rounded-lg border border-black/5 bg-slate-100 shadow-sm"
+                  style={{
+                    backgroundBlendMode:
+                      createBlendModeCss(previewLayers) || undefined,
+                    backgroundImage: createBackgroundImage(
+                      previewLayers,
+                      "hex"
+                    ),
                   }}
-                  type="button"
-                >
-                  <div
-                    className="mb-3 h-16 rounded-lg border border-black/5 bg-slate-100 shadow-sm"
-                    style={{
-                      backgroundBlendMode:
-                        createBlendModeCss(previewLayers) || undefined,
-                      backgroundImage: createBackgroundImage(
-                        previewLayers,
-                        "hex"
-                      ),
-                    }}
-                  />
-                  <div className="text-sm font-medium">
-                    {messages.preset[preset.id]}
-                  </div>
-                </button>
-              )
-            })}
-          </div>
+                />
+                <div className="text-sm font-medium">
+                  {messages.preset[preset.id]}
+                </div>
+              </button>
+            )
+          })}
         </div>
       </CardContent>
     </Card>
   )
 }
 
-export { PreviewCard }
+export { PresetsCard, PreviewCard }
