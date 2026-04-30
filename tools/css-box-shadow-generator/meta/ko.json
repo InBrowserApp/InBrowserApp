@@ -1,0 +1,4 @@
+{
+  "name": "CSS 박스 섀도 생성기",
+  "description": "라이브 미리보기, inset 토글, 정밀 컨트롤로 다중 레이어 CSS box-shadow 값을 생성합니다."
+}
