@@ -96,6 +96,14 @@ function FontBrowserPanel({
     0
   )
   const shouldConstrainListHeight = visibleFontCount > 8
+  // Keep large font catalogs scrollable without letting the list set the
+  // desktop grid row height.
+  const listShellClassName = [
+    "min-h-0 overflow-hidden rounded-2xl border bg-muted/15 xl:flex-1",
+    hasVisibleFonts && shouldConstrainListHeight ? "xl:[contain:size]" : "",
+  ]
+    .filter(Boolean)
+    .join(" ")
   const listViewportClassName =
     hasVisibleFonts && shouldConstrainListHeight
       ? "h-[30rem] xl:h-full"
@@ -223,7 +231,7 @@ function FontBrowserPanel({
           </Field>
         </FieldGroup>
 
-        <div className="min-h-0 overflow-hidden rounded-2xl border bg-muted/15 xl:flex-1">
+        <div className={listShellClassName}>
           <ScrollArea className={listViewportClassName}>
             {hasVisibleFonts ? (
               <div className="flex flex-col gap-4 p-4">
