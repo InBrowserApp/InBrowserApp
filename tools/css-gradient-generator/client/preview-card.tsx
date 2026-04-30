@@ -75,17 +75,15 @@ function PreviewCard({
       </CardHeader>
 
       <CardContent className="grid gap-6">
-        <div className="rounded-xl border bg-[linear-gradient(135deg,rgba(15,23,42,0.06),rgba(255,255,255,0.85))] p-4 shadow-sm">
-          <div className="rounded-lg border border-white/70 bg-white/60 p-3 backdrop-blur-sm">
-            <div
-              aria-label={messages.previewTitle}
-              className="min-h-80 rounded-lg border border-black/5 bg-slate-100 shadow-inner"
-              style={{
-                backgroundBlendMode: blendMode || undefined,
-                backgroundImage,
-              }}
-            />
-          </div>
+        <div className="rounded-xl border bg-muted/35 p-3 shadow-sm sm:p-4">
+          <div
+            aria-label={messages.previewTitle}
+            className="min-h-72 rounded-lg border border-black/5 bg-slate-100 shadow-inner sm:min-h-80"
+            style={{
+              backgroundBlendMode: blendMode || undefined,
+              backgroundImage,
+            }}
+          />
         </div>
 
         <div className="grid gap-3">

@@ -66,6 +66,7 @@ function ExportCard({
           <div className="grid gap-2">
             <div className="text-sm font-medium">{messages.exportWidth}</div>
             <Input
+              aria-label={messages.exportWidth}
               min={64}
               onChange={(event) => {
                 onExportWidthChange(Number(event.target.value))
@@ -78,6 +79,7 @@ function ExportCard({
           <div className="grid gap-2">
             <div className="text-sm font-medium">{messages.exportHeight}</div>
             <Input
+              aria-label={messages.exportHeight}
               min={64}
               onChange={(event) => {
                 onExportHeightChange(Number(event.target.value))

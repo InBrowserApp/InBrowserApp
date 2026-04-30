@@ -20,8 +20,8 @@ function CssGradientGeneratorClient({
 
   return (
     <div className="grid gap-6">
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-        <div className="grid gap-6">
+      <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+        <div className="grid content-start gap-6">
           <PreviewCard
             backgroundImage={editor.previewBackgroundImage}
             blendMode={editor.previewBlendMode}
@@ -48,7 +48,7 @@ function CssGradientGeneratorClient({
           />
         </div>
 
-        <div className="grid gap-6">
+        <div className="grid content-start gap-6">
           <LayersCard
             activeLayerId={editor.activeLayer.id}
             layers={editor.layers}
@@ -91,7 +91,7 @@ function CssGradientGeneratorClient({
         </div>
       </div>
 
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1.28fr)_minmax(20rem,0.72fr)]">
+      <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1.28fr)_minmax(20rem,0.72fr)]">
         <OutputCard
           backgroundBlendDeclaration={editor.backgroundBlendDeclaration}
           backgroundDeclaration={editor.backgroundDeclaration}
