@@ -1,0 +1,4 @@
+{
+  "name": "Analizador y Constructor de URL",
+  "description": "Analiza URL en componentes y vuelve a construirlas desde protocolo, credenciales, host, ruta, parámetros de consulta y fragmento en un editor estructurado."
+}

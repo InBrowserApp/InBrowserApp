@@ -2444,6 +2444,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "business-days-calculator",
+    category: "time",
+    icon: "clock3",
+    tags: ["time", "date", "business-day", "calculator", "holiday", "schedule"],
+    locales: {
+      ar: {
+        name: "حاسبة أيام العمل",
+        description:
+          "احسب أيام العمل بين التواريخ وأضف أو اطرح أيام عمل مع عطلات نهاية الأسبوع والعطلات المخصصة.",
+      },
+      de: {
+        name: "Arbeitstage-Rechner",
+        description:
+          "Zählt Arbeitstage zwischen Daten und addiert oder subtrahiert Arbeitstage mit benutzerdefinierten Wochenenden und Feiertagen.",
+      },
+      en: {
+        name: "Business Days Calculator",
+        description:
+          "Count business days between dates, and add or subtract business days with custom weekends and holidays.",
+      },
+      es: {
+        name: "Calculadora de días hábiles",
+        description:
+          "Cuenta los días hábiles entre fechas y suma o resta días hábiles con fines de semana y festivos personalizados.",
+      },
+      fr: {
+        name: "Calculateur de jours ouvrés",
+        description:
+          "Compte les jours ouvrés entre deux dates et ajoute ou soustrait des jours ouvrés avec des week-ends et jours fériés personnalisés.",
+      },
+      he: {
+        name: "מחשבון ימי עבודה",
+        description:
+          "סופר ימי עבודה בין תאריכים ומוסיף או מחסיר ימי עבודה עם סופי שבוע וחגים מותאמים.",
+      },
+      hi: {
+        name: "कार्यदिवस कैलकुलेटर",
+        description:
+          "तिथियों के बीच कार्यदिवस गिनें और कस्टम सप्ताहांत व छुट्टियों के साथ कार्यदिवस जोड़ें या घटाएं।",
+      },
+      id: {
+        name: "Kalkulator hari kerja",
+        description:
+          "Menghitung hari kerja antara tanggal serta menambah atau mengurangi hari kerja dengan akhir pekan dan hari libur khusus.",
+      },
+      it: {
+        name: "Calcolatore di giorni lavorativi",
+        description:
+          "Conta i giorni lavorativi tra date e aggiunge o sottrae giorni lavorativi con weekend e festività personalizzati.",
+      },
+      ja: {
+        name: "営業日計算ツール",
+        description:
+          "日付間の営業日を数え、カスタム週末と祝日で営業日を加減します。",
+      },
+      ko: {
+        name: "영업일 계산기",
+        description:
+          "날짜 사이의 영업일을 계산하고 사용자 지정 주말과 휴일로 영업일을 더하거나 뺍니다.",
+      },
+      ms: {
+        name: "Pengira hari bekerja",
+        description:
+          "Kira hari bekerja antara tarikh dan tambah atau tolak hari bekerja dengan hujung minggu dan cuti yang disesuaikan.",
+      },
+      nl: {
+        name: "Werkdagen-rekenmachine",
+        description:
+          "Tel werkdagen tussen datums en tel werkdagen op of trek ze af met aangepaste weekenden en feestdagen.",
+      },
+      no: {
+        name: "Kalkulator for arbeidsdager",
+        description:
+          "Tell arbeidsdager mellom datoer og legg til eller trekk fra arbeidsdager med egendefinerte helger og fridager.",
+      },
+      pl: {
+        name: "Kalkulator dni roboczych",
+        description:
+          "Zlicza dni robocze między datami oraz dodaje lub odejmuje dni robocze z niestandardowymi weekendami i świętami.",
+      },
+      pt: {
+        name: "Calculadora de dias úteis",
+        description:
+          "Conta dias úteis entre datas e adiciona ou subtrai dias úteis com fins de semana e feriados personalizados.",
+      },
+      ru: {
+        name: "Калькулятор рабочих дней",
+        description:
+          "Подсчитывает рабочие дни между датами и добавляет или вычитает рабочие дни с настраиваемыми выходными и праздниками.",
+      },
+      sv: {
+        name: "Arbetsdagskalkylator",
+        description:
+          "Räkna arbetsdagar mellan datum och lägg till eller dra ifrån arbetsdagar med anpassade helger och helgdagar.",
+      },
+      th: {
+        name: "เครื่องคำนวณวันทำงาน",
+        description:
+          "นับวันทำงานระหว่างวันที่ และบวกหรือลบวันทำงานด้วยวันหยุดสุดสัปดาห์และวันหยุดที่กำหนดเอง",
+      },
+      tr: {
+        name: "İş Günü Hesaplayıcı",
+        description:
+          "Tarihler arasındaki iş günlerini sayar ve özel hafta sonları ile tatillerle iş günlerini ekler veya çıkarır.",
+      },
+      vi: {
+        name: "Máy tính ngày làm việc",
+        description:
+          "Đếm ngày làm việc giữa các ngày và cộng hoặc trừ ngày làm việc với cuối tuần và ngày lễ tùy chỉnh.",
+      },
+      "zh-CN": {
+        name: "工作日计算器",
+        description:
+          "统计日期之间的工作日，并按自定义周末和节假日进行工作日加减。",
+      },
+      "zh-TW": {
+        name: "工作日計算器",
+        description:
+          "統計日期之間的工作日，並依自訂週末與節假日進行工作日加減。",
+      },
+    },
+  },
+  {
     slug: "case-converter",
     category: "text",
     icon: "case-sensitive",
@@ -3839,6 +3962,123 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "curl-converter",
+    category: "developer",
+    icon: "braces",
+    tags: ["code", "curl", "http", "converter", "api"],
+    locales: {
+      ar: {
+        name: "محول cURL",
+        description: "حوّل أوامر cURL إلى كود لعدة لغات وعملاء HTTP.",
+      },
+      de: {
+        name: "cURL-Konverter",
+        description:
+          "Konvertiert cURL-Befehle in Code für viele Sprachen und HTTP-Clients.",
+      },
+      en: {
+        name: "cURL Converter",
+        description:
+          "Convert cURL commands into code for many languages and HTTP clients.",
+      },
+      es: {
+        name: "Conversor de cURL",
+        description:
+          "Convierte comandos cURL en código para muchos lenguajes y clientes HTTP.",
+      },
+      fr: {
+        name: "Convertisseur cURL",
+        description:
+          "Convertit des commandes cURL en code pour de nombreux langages et clients HTTP.",
+      },
+      he: {
+        name: "ממיר cURL",
+        description: "ממיר פקודות cURL לקוד עבור שפות רבות ולקוחות HTTP.",
+      },
+      hi: {
+        name: "cURL कन्वर्टर",
+        description: "cURL कमांड को कई भाषाओं और HTTP क्लाइंट कोड में बदलें।",
+      },
+      id: {
+        name: "Pengonversi cURL",
+        description:
+          "Mengonversi perintah cURL menjadi kode untuk banyak bahasa dan klien HTTP.",
+      },
+      it: {
+        name: "Convertitore cURL",
+        description:
+          "Converte comandi cURL in codice per molti linguaggi e client HTTP.",
+      },
+      ja: {
+        name: "cURL 変換",
+        description:
+          "cURL コマンドを多言語・多様な HTTP クライアント向けのコードに変換します。",
+      },
+      ko: {
+        name: "cURL 변환기",
+        description:
+          "cURL 명령을 다양한 언어와 HTTP 클라이언트 코드로 변환합니다.",
+      },
+      ms: {
+        name: "Penukar cURL",
+        description:
+          "Menukar arahan cURL kepada kod untuk banyak bahasa dan klien HTTP.",
+      },
+      nl: {
+        name: "cURL-converter",
+        description:
+          "Zet cURL-opdrachten om naar code voor veel talen en HTTP-clients.",
+      },
+      no: {
+        name: "cURL-omformer",
+        description:
+          "Konverterer cURL-kommandoer til kode for mange språk og HTTP-klienter.",
+      },
+      pl: {
+        name: "Konwerter cURL",
+        description:
+          "Konwertuje polecenia cURL na kod dla wielu języków i klientów HTTP.",
+      },
+      pt: {
+        name: "Conversor de cURL",
+        description:
+          "Converte comandos cURL em código para muitas linguagens e clientes HTTP.",
+      },
+      ru: {
+        name: "Конвертер cURL",
+        description:
+          "Преобразует команды cURL в код для многих языков и HTTP-клиентов.",
+      },
+      sv: {
+        name: "cURL-omvandlare",
+        description:
+          "Konverterar cURL-kommandon till kod för många språk och HTTP-klienter.",
+      },
+      th: {
+        name: "ตัวแปลง cURL",
+        description: "แปลงคำสั่ง cURL เป็นโค้ดสำหรับหลายภาษาและไคลเอนต์ HTTP",
+      },
+      tr: {
+        name: "cURL Dönüştürücü",
+        description:
+          "cURL komutlarını birçok dil ve HTTP istemcisi için koda dönüştürür.",
+      },
+      vi: {
+        name: "Trình chuyển đổi cURL",
+        description:
+          "Chuyển đổi lệnh cURL thành mã cho nhiều ngôn ngữ và client HTTP.",
+      },
+      "zh-CN": {
+        name: "cURL 转换器",
+        description: "将 cURL 命令转换为多种语言与 HTTP 客户端代码。",
+      },
+      "zh-TW": {
+        name: "cURL 轉換器",
+        description: "將 cURL 命令轉換為多種語言與 HTTP 客戶端程式碼。",
+      },
+    },
+  },
+  {
     slug: "current-network-time",
     category: "network",
     icon: "network",
@@ -4449,6 +4689,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "電子郵件驗證器",
         description: "驗證電子郵件地址，檢查語法、長度與網域。",
+      },
+    },
+  },
+  {
+    slug: "eu-vat-number-validator",
+    category: "text",
+    icon: "file-text",
+    tags: ["vat", "tax", "validator", "business", "finance", "eu"],
+    locales: {
+      ar: {
+        name: "مُحقِّق أرقام ضريبة القيمة المضافة للاتحاد الأوروبي",
+        description:
+          "تحقَّق من أرقام ضريبة القيمة المضافة للاتحاد الأوروبي عبر رمز الدولة والتنسيق والمجموع الاختباري — بالكامل داخل متصفحك، دون رفع أي شيء.",
+      },
+      de: {
+        name: "EU-USt-IdNr.-Validator",
+        description:
+          "Validieren Sie EU-Umsatzsteuer-Identifikationsnummern nach Ländercode, Format und Prüfsumme – vollständig in Ihrem Browser, nichts wird hochgeladen.",
+      },
+      en: {
+        name: "EU VAT Number Validator",
+        description:
+          "Validate EU VAT numbers by country code, format, and checksum — fully in your browser, nothing uploaded.",
+      },
+      es: {
+        name: "Validador de números de IVA de la UE",
+        description:
+          "Valida números de IVA de la UE por código de país, formato y suma de verificación — todo en tu navegador, sin subir nada.",
+      },
+      fr: {
+        name: "Validateur de numéro de TVA intracommunautaire",
+        description:
+          "Validez les numéros de TVA de l'UE par code pays, format et somme de contrôle — entièrement dans votre navigateur, rien n'est envoyé.",
+      },
+      he: {
+        name: 'מאמת מספרי מע"מ של האיחוד האירופי',
+        description:
+          'אמתו מספרי מע"מ של האיחוד האירופי לפי קוד מדינה, פורמט וסכום ביקורת — הכול בדפדפן שלכם, שום דבר לא מועלה.',
+      },
+      hi: {
+        name: "EU VAT नंबर सत्यापनकर्ता",
+        description:
+          "EU VAT नंबरों को देश कोड, प्रारूप और चेकसम के आधार पर सत्यापित करें — पूरी तरह आपके ब्राउज़र में, कुछ भी अपलोड नहीं होता।",
+      },
+      id: {
+        name: "Validator Nomor PPN Uni Eropa",
+        description:
+          "Validasi nomor PPN Uni Eropa berdasarkan kode negara, format, dan checksum — sepenuhnya di browser Anda, tidak ada yang diunggah.",
+      },
+      it: {
+        name: "Validatore di partite IVA UE",
+        description:
+          "Valida le partite IVA dell'UE per codice paese, formato e checksum — interamente nel tuo browser, nulla viene caricato.",
+      },
+      ja: {
+        name: "EU VAT番号バリデーター",
+        description:
+          "EUのVAT番号を国コード、フォーマット、チェックサムで検証します。すべてブラウザ内で動作し、データはアップロードされません。",
+      },
+      ko: {
+        name: "EU 부가가치세 번호 검증기",
+        description:
+          "국가 코드, 형식, 체크섬을 기준으로 EU VAT 번호를 검증합니다 — 브라우저 내에서 완전히 처리되며 아무것도 업로드되지 않습니다.",
+      },
+      ms: {
+        name: "Pengesah Nombor VAT EU",
+        description:
+          "Sahkan nombor VAT EU mengikut kod negara, format, dan checksum — sepenuhnya dalam pelayar anda, tiada apa yang dimuat naik.",
+      },
+      nl: {
+        name: "EU-btw-nummer-validator",
+        description:
+          "Valideer EU-btw-nummers op landcode, formaat en controlegetal — volledig in je browser, er wordt niets geüpload.",
+      },
+      no: {
+        name: "EU MVA-nummervalidator",
+        description:
+          "Valider EU-MVA-nummer etter landkode, format og kontrollsiffer — fullstendig i nettleseren din, ingenting lastes opp.",
+      },
+      pl: {
+        name: "Walidator numerów VAT UE",
+        description:
+          "Sprawdzaj numery VAT UE pod kątem kodu kraju, formatu i sumy kontrolnej — w całości w przeglądarce, nic nie jest wysyłane.",
+      },
+      pt: {
+        name: "Validador de Número de IVA da UE",
+        description:
+          "Valide números de IVA da UE por código de país, formato e checksum — totalmente no seu navegador, nada é enviado.",
+      },
+      ru: {
+        name: "Валидатор НДС-номеров ЕС",
+        description:
+          "Проверяйте НДС-номера ЕС по коду страны, формату и контрольной сумме — полностью в браузере, без загрузки данных.",
+      },
+      sv: {
+        name: "EU-momsnummervalidator",
+        description:
+          "Validera EU-momsnummer efter landskod, format och kontrollsumma — helt i din webbläsare, inget laddas upp.",
+      },
+      th: {
+        name: "ตัวตรวจสอบหมายเลข VAT ของสหภาพยุโรป",
+        description:
+          "ตรวจสอบหมายเลข VAT ของสหภาพยุโรปตามรหัสประเทศ รูปแบบ และ checksum ทำงานในเบราว์เซอร์ของคุณทั้งหมด ไม่มีการอัปโหลดข้อมูล",
+      },
+      tr: {
+        name: "AB KDV Numarası Doğrulayıcı",
+        description:
+          "AB KDV numaralarını ülke kodu, biçim ve sağlama toplamına göre doğrulayın — tamamen tarayıcınızda, hiçbir şey yüklenmez.",
+      },
+      vi: {
+        name: "Trình xác thực mã số thuế VAT EU",
+        description:
+          "Xác thực mã số VAT của EU theo mã quốc gia, định dạng và checksum — hoàn toàn trong trình duyệt của bạn, không tải lên bất cứ đâu.",
+      },
+      "zh-CN": {
+        name: "欧盟 VAT 号码校验器",
+        description:
+          "按国家代码、格式和校验位验证欧盟 VAT 号码 —— 完全在浏览器中运行，不上传任何数据。",
+      },
+      "zh-TW": {
+        name: "歐盟 VAT 號碼驗證器",
+        description:
+          "依國家代碼、格式與校驗碼驗證歐盟 VAT 號碼——完全在瀏覽器中執行，不上傳任何資料。",
       },
     },
   },
@@ -5064,6 +5427,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "HTML 實體編碼 & 解碼",
         description:
           "編碼和解碼 HTML 實體。將特殊字元轉換為命名、十進制或十六進制 HTML 實體，或將實體解碼為原始字元",
+      },
+    },
+  },
+  {
+    slug: "html-to-markdown-converter",
+    category: "text",
+    icon: "file-text",
+    tags: ["document", "html", "markdown", "converter"],
+    locales: {
+      ar: {
+        name: "محول HTML إلى Markdown",
+        description:
+          "حوّل HTML الخام إلى Markdown مع أنماط قابلة للتعديل للعناوين والقوائم وكتل الشيفرة. الصق الوسوم أو استورد ملفًا، ثم انسخ النتيجة أو نزّلها.",
+      },
+      de: {
+        name: "HTML-zu-Markdown-Konverter",
+        description:
+          "Wandle rohes HTML mit anpassbaren Stilen für Überschriften, Listen und Codeblöcke in Markdown um. Füge Markup ein oder importiere eine Datei und kopiere oder lade das Ergebnis herunter.",
+      },
+      en: {
+        name: "HTML to Markdown Converter",
+        description:
+          "Convert raw HTML into Markdown with adjustable heading, list, and code block styles. Paste markup or import a file, then copy or download the result.",
+      },
+      es: {
+        name: "Conversor de HTML a Markdown",
+        description:
+          "Convierte HTML sin procesar en Markdown con estilos ajustables de encabezados, listas y bloques de código. Pega el marcado o importa un archivo, y luego copia o descarga el resultado.",
+      },
+      fr: {
+        name: "Convertisseur HTML vers Markdown",
+        description:
+          "Convertissez du HTML brut en Markdown avec des styles ajustables pour les titres, les listes et les blocs de code. Collez le balisage ou importez un fichier, puis copiez ou téléchargez le résultat.",
+      },
+      he: {
+        name: "ממיר HTML ל-Markdown",
+        description:
+          "המר HTML גולמי ל-Markdown עם סגנונות הניתנים להתאמה לכותרות, רשימות ובלוקי קוד. הדביקו סימון או ייבאו קובץ, ואז העתיקו או הורידו את התוצאה.",
+      },
+      hi: {
+        name: "HTML से Markdown कन्वर्टर",
+        description:
+          "समायोज्य हेडिंग, सूची और कोड ब्लॉक शैलियों के साथ कच्चे HTML को Markdown में बदलें। मार्कअप पेस्ट करें या फ़ाइल आयात करें, फिर परिणाम कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter HTML ke Markdown",
+        description:
+          "Ubah HTML mentah menjadi Markdown dengan gaya judul, daftar, dan blok kode yang dapat disesuaikan. Tempel markup atau impor berkas, lalu salin atau unduh hasilnya.",
+      },
+      it: {
+        name: "Convertitore da HTML a Markdown",
+        description:
+          "Converti HTML grezzo in Markdown con stili regolabili per titoli, elenchi e blocchi di codice. Incolla il markup o importa un file, poi copia o scarica il risultato.",
+      },
+      ja: {
+        name: "HTML から Markdown への変換",
+        description:
+          "見出し、リスト、コードブロックの形式を調整しながら、生の HTML を Markdown に変換します。マークアップを貼り付けるかファイルを読み込み、結果をコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "HTML to Markdown 변환기",
+        description:
+          "제목, 목록, 코드 블록 스타일을 조정하면서 원시 HTML을 Markdown으로 변환합니다. 마크업을 붙여넣거나 파일을 가져온 뒤 결과를 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar HTML ke Markdown",
+        description:
+          "Tukar HTML mentah kepada Markdown dengan gaya tajuk, senarai dan blok kod yang boleh dilaraskan. Tampal markup atau import fail, kemudian salin atau muat turun hasilnya.",
+      },
+      nl: {
+        name: "HTML-naar-Markdown-converter",
+        description:
+          "Zet ruwe HTML om naar Markdown met instelbare stijlen voor koppen, lijsten en codeblokken. Plak de markup of importeer een bestand en kopieer of download daarna het resultaat.",
+      },
+      no: {
+        name: "HTML til Markdown-konverter",
+        description:
+          "Konverter rå HTML til Markdown med justerbare stiler for overskrifter, lister og kodeblokker. Lim inn markup eller importer en fil, og kopier eller last ned resultatet.",
+      },
+      pl: {
+        name: "Konwerter HTML do Markdown",
+        description:
+          "Konwertuj surowy HTML do Markdown z regulowanymi stylami nagłówków, list i bloków kodu. Wklej znacznik lub zaimportuj plik, a następnie skopiuj albo pobierz wynik.",
+      },
+      pt: {
+        name: "Conversor de HTML para Markdown",
+        description:
+          "Converta HTML bruto em Markdown com estilos ajustáveis para títulos, listas e blocos de código. Cole a marcação ou importe um arquivo e depois copie ou baixe o resultado.",
+      },
+      ru: {
+        name: "Конвертер HTML в Markdown",
+        description:
+          "Преобразуйте исходный HTML в Markdown с настраиваемыми стилями заголовков, списков и блоков кода. Вставьте разметку или импортируйте файл, затем скопируйте или скачайте результат.",
+      },
+      sv: {
+        name: "HTML till Markdown-konverterare",
+        description:
+          "Konvertera rå HTML till Markdown med justerbara stilar för rubriker, listor och kodblock. Klistra in markeringen eller importera en fil och kopiera eller ladda sedan ner resultatet.",
+      },
+      th: {
+        name: "ตัวแปลง HTML เป็น Markdown",
+        description:
+          "แปลง HTML แบบดิบเป็น Markdown พร้อมปรับรูปแบบหัวข้อ รายการ และบล็อกโค้ดได้ วางมาร์กอัปหรือนำเข้าไฟล์ แล้วคัดลอกหรือดาวน์โหลดผลลัพธ์",
+      },
+      tr: {
+        name: "HTML'den Markdown'a Dönüştürücü",
+        description:
+          "Ham HTML'yi ayarlanabilir başlık, liste ve kod bloğu stilleriyle Markdown'a dönüştürün. İşaretlemeyi yapıştırın veya bir dosya içe aktarın, ardından sonucu kopyalayın ya da indirin.",
+      },
+      vi: {
+        name: "Trình chuyển HTML sang Markdown",
+        description:
+          "Chuyển HTML thô sang Markdown với kiểu tiêu đề, danh sách và khối mã có thể điều chỉnh. Dán mã đánh dấu hoặc nhập tệp, rồi sao chép hoặc tải xuống kết quả.",
+      },
+      "zh-CN": {
+        name: "HTML 转 Markdown 转换器",
+        description:
+          "使用可调的标题、列表和代码块样式，将原始 HTML 转为 Markdown。粘贴标记或导入文件，然后复制或下载结果。",
+      },
+      "zh-TW": {
+        name: "HTML 轉 Markdown 轉換器",
+        description:
+          "使用可調整的標題、清單與程式碼區塊樣式，將原始 HTML 轉成 Markdown。貼上標記或匯入檔案，然後複製或下載結果。",
       },
     },
   },
@@ -8090,6 +8576,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "MAC 位址轉 IPv6 鏈路本地位址轉換器",
         description:
           "將 MAC 位址轉換為 IPv6 鏈路本地位址。輸入任何 MAC 位址，立即獲得對應的 IPv6 鏈路本地位址。",
+      },
+    },
+  },
+  {
+    slug: "markdown-to-html-converter",
+    category: "developer",
+    icon: "file-text",
+    tags: ["markdown", "html", "converter", "preview", "sanitize", "docs"],
+    locales: {
+      ar: {
+        name: "محول Markdown → HTML",
+        description:
+          "حوّل Markdown إلى HTML باستخدام marked، مع خيار التنقية عبر DOMPurify. معاينة ونسخ وتنزيل.",
+      },
+      de: {
+        name: "Markdown → HTML Konverter",
+        description:
+          "Wandelt Markdown mit marked in HTML um, optional mit DOMPurify säubern. Vorschau, kopieren und herunterladen.",
+      },
+      en: {
+        name: "Markdown to HTML Converter",
+        description:
+          "Convert Markdown to HTML using marked, optionally sanitize with DOMPurify. Preview, copy, and download.",
+      },
+      es: {
+        name: "Convertidor Markdown → HTML",
+        description:
+          "Convierte Markdown a HTML con marked y, opcionalmente, sanea con DOMPurify. Previsualiza, copia y descarga.",
+      },
+      fr: {
+        name: "Convertisseur Markdown → HTML",
+        description:
+          "Convertissez Markdown en HTML avec marked, avec nettoyage DOMPurify en option. Aperçu, copie et téléchargement.",
+      },
+      he: {
+        name: "ממיר Markdown → HTML",
+        description:
+          "המר Markdown ל־HTML בעזרת marked, עם סינון אופציונלי ב־DOMPurify. תצוגה מקדימה, העתקה והורדה.",
+      },
+      hi: {
+        name: "Markdown → HTML परिवर्तक",
+        description:
+          "marked से Markdown को HTML में बदलें, वैकल्पिक रूप से DOMPurify से स्वच्छ करें। पूर्वावलोकन, कॉपी और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi Markdown → HTML",
+        description:
+          "Konversi Markdown ke HTML dengan marked dan opsional bersihkan dengan DOMPurify. Pratinjau, salin, dan unduh.",
+      },
+      it: {
+        name: "Convertitore Markdown → HTML",
+        description:
+          "Converti Markdown in HTML con marked e, opzionalmente, sanifica con DOMPurify. Anteprima, copia e download.",
+      },
+      ja: {
+        name: "Markdown → HTML 変換",
+        description:
+          "marked で Markdown を HTML に変換し、必要に応じて DOMPurify でサニタイズ。プレビュー、コピー、ダウンロード。",
+      },
+      ko: {
+        name: "Markdown → HTML 변환기",
+        description:
+          "marked로 Markdown을 HTML로 변환하고 필요 시 DOMPurify로 정화합니다. 미리보기, 복사, 다운로드.",
+      },
+      ms: {
+        name: "Penukar Markdown → HTML",
+        description:
+          "Tukar Markdown kepada HTML dengan marked dan pilihan pembersihan DOMPurify. Pratonton, salin dan muat turun.",
+      },
+      nl: {
+        name: "Markdown → HTML-converter",
+        description:
+          "Zet Markdown om naar HTML met marked, optioneel schoonmaken met DOMPurify. Voorbeeld, kopiëren en downloaden.",
+      },
+      no: {
+        name: "Markdown → HTML-omformer",
+        description:
+          "Konverter Markdown til HTML med marked, valgfritt rense med DOMPurify. Forhåndsvis, kopier og last ned.",
+      },
+      pl: {
+        name: "Konwerter Markdown → HTML",
+        description:
+          "Konwertuj Markdown do HTML używając marked, opcjonalnie oczyszczaj DOMPurify. Podgląd, kopiuj i pobieraj.",
+      },
+      pt: {
+        name: "Conversor Markdown → HTML",
+        description:
+          "Converta Markdown em HTML com marked e, opcionalmente, higienize com DOMPurify. Pré-visualize, copie e baixe.",
+      },
+      ru: {
+        name: "Конвертер Markdown → HTML",
+        description:
+          "Преобразуйте Markdown в HTML с помощью marked и при необходимости очищайте DOMPurify. Предпросмотр, копирование и загрузка.",
+      },
+      sv: {
+        name: "Markdown → HTML-omvandlare",
+        description:
+          "Konvertera Markdown till HTML med marked, valfritt sanera med DOMPurify. Förhandsvisa, kopiera och ladda ner.",
+      },
+      th: {
+        name: "ตัวแปลง Markdown → HTML",
+        description:
+          "แปลง Markdown เป็น HTML ด้วย marked และเลือกทำความสะอาดด้วย DOMPurify แสดงตัวอย่าง คัดลอก และดาวน์โหลด",
+      },
+      tr: {
+        name: "Markdown → HTML Dönüştürücü",
+        description:
+          "Markdown’u marked ile HTML’e dönüştür, isteğe bağlı DOMPurify ile temizle. Önizleme, kopyalama ve indirme.",
+      },
+      vi: {
+        name: "Trình chuyển Markdown → HTML",
+        description:
+          "Chuyển Markdown sang HTML bằng marked, tùy chọn làm sạch với DOMPurify. Xem trước, sao chép và tải xuống.",
+      },
+      "zh-CN": {
+        name: "Markdown 转 HTML 转换器",
+        description:
+          "使用 marked 将 Markdown 转为 HTML，可选 DOMPurify 清理。预览、复制并下载。",
+      },
+      "zh-TW": {
+        name: "Markdown 轉 HTML 轉換器",
+        description:
+          "使用 marked 將 Markdown 轉為 HTML，可選 DOMPurify 清理。預覽、複製並下載。",
       },
     },
   },
@@ -13212,6 +13821,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "text-diff",
+    category: "text",
+    icon: "file-text",
+    tags: ["text", "diff", "compare", "document", "code", "review"],
+    locales: {
+      ar: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      de: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      en: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      es: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      fr: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      he: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      hi: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      id: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      it: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      ja: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      ko: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      ms: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      nl: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      no: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      pl: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      pt: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      ru: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      sv: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      th: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      tr: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      vi: {
+        name: "Text Diff",
+        description:
+          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+      },
+      "zh-CN": {
+        name: "文本对比",
+        description:
+          "在浏览器中并排比较两份文本、查看逐行改动，并导出干净的统一 diff。",
+      },
+      "zh-TW": {
+        name: "文字比對",
+        description:
+          "在瀏覽器中並排比較兩份文本、查看逐行變更，並匯出乾淨的統一 diff。",
+      },
+    },
+  },
+  {
     slug: "text-statistics",
     category: "text",
     icon: "file-text",
@@ -14569,6 +15301,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "URL 組件編碼器/解碼器",
         description:
           "使用百分號編碼對 URL 組件進行編碼和解碼。將特殊字元轉換為 URL 安全格式，反之亦然，用於 Web 開發和 API 使用",
+      },
+    },
+  },
+  {
+    slug: "url-parser-builder",
+    category: "web",
+    icon: "globe",
+    tags: ["url", "parser", "builder", "uri", "query", "protocol", "hostname"],
+    locales: {
+      ar: {
+        name: "محلل ومنشئ URL",
+        description:
+          "يحلل عناوين URL إلى مكونات ويعيد بناءها من البروتوكول وبيانات الاعتماد والمضيف والمسار ومعلمات الاستعلام والجزء داخل محرر منظم واحد.",
+      },
+      de: {
+        name: "URL-Parser und -Builder",
+        description:
+          "Zerlegt URLs in ihre Bestandteile und setzt sie in einem strukturierten Editor aus Protokoll, Zugangsdaten, Host, Pfad, Query-Parametern und Fragment wieder zusammen.",
+      },
+      en: {
+        name: "URL Parser and Builder",
+        description:
+          "Parse URLs into components and rebuild them from protocol, credentials, host, path, query parameters, and fragment in one structured editor.",
+      },
+      es: {
+        name: "Analizador y Constructor de URL",
+        description:
+          "Analiza URL en componentes y vuelve a construirlas desde protocolo, credenciales, host, ruta, parámetros de consulta y fragmento en un editor estructurado.",
+      },
+      fr: {
+        name: "Analyseur et Constructeur d'URL",
+        description:
+          "Analyse les URL en composants et les reconstruit à partir du protocole, des identifiants, de l'hôte, du chemin, des paramètres de requête et du fragment dans un éditeur structuré.",
+      },
+      he: {
+        name: "מנתח ובונה URL",
+        description:
+          "מפרק כתובות URL לרכיבים ובונה אותן מחדש מתוך הפרוטוקול, פרטי ההתחברות, המארח, הנתיב, פרמטרי השאילתה והקטע בעורך מובנה אחד.",
+      },
+      hi: {
+        name: "URL पार्सर और बिल्डर",
+        description:
+          "URL को उसके घटकों में विभाजित करें और प्रोटोकॉल, क्रेडेंशियल, होस्ट, पथ, क्वेरी पैरामीटर और फ़्रैगमेंट से एक संरचित एडिटर में फिर से बनाएँ।",
+      },
+      id: {
+        name: "Parser dan Builder URL",
+        description:
+          "Mengurai URL menjadi komponen lalu menyusunnya kembali dari protokol, kredensial, host, jalur, parameter kueri, dan fragmen dalam satu editor terstruktur.",
+      },
+      it: {
+        name: "Parser e Builder URL",
+        description:
+          "Analizza gli URL nei loro componenti e li ricostruisce da protocollo, credenziali, host, percorso, parametri di query e frammento in un editor strutturato.",
+      },
+      ja: {
+        name: "URL パーサー/ビルダー",
+        description:
+          "URL を各コンポーネントに分解し、プロトコル、認証情報、ホスト、パス、クエリパラメータ、フラグメントから 1 つの構造化エディタで再構築します。",
+      },
+      ko: {
+        name: "URL 파서/빌더",
+        description:
+          "URL을 각 구성 요소로 분해하고 프로토콜, 자격 증명, 호스트, 경로, 쿼리 매개변수, 프래그먼트에서 하나의 구조화된 편집기로 다시 구성합니다.",
+      },
+      ms: {
+        name: "Penghurai dan Pembina URL",
+        description:
+          "Menghuraikan URL kepada komponen dan membinanya semula daripada protokol, kelayakan, hos, laluan, parameter pertanyaan dan serpihan dalam satu editor berstruktur.",
+      },
+      nl: {
+        name: "URL Parser en Builder",
+        description:
+          "Ontleedt URL's in onderdelen en bouwt ze opnieuw op uit protocol, inloggegevens, host, pad, queryparameters en fragment in één gestructureerde editor.",
+      },
+      no: {
+        name: "URL-parser og bygger",
+        description:
+          "Parser URL-er i komponenter og bygger dem opp igjen fra protokoll, legitimasjon, vert, sti, spørringsparametere og fragment i én strukturert editor.",
+      },
+      pl: {
+        name: "Parser i konstruktor URL",
+        description:
+          "Rozbija adresy URL na składniki i składa je ponownie z protokołu, poświadczeń, hosta, ścieżki, parametrów zapytania i fragmentu w jednym uporządkowanym edytorze.",
+      },
+      pt: {
+        name: "Analisador e Construtor de URL",
+        description:
+          "Analisa URLs em componentes e os reconstrói a partir de protocolo, credenciais, host, caminho, parâmetros de consulta e fragmento em um editor estruturado.",
+      },
+      ru: {
+        name: "Парсер и конструктор URL",
+        description:
+          "Разбирает URL на компоненты и собирает их обратно из протокола, учетных данных, хоста, пути, параметров запроса и фрагмента в одном структурированном редакторе.",
+      },
+      sv: {
+        name: "URL-parser och byggare",
+        description:
+          "Delar upp URL:er i komponenter och bygger ihop dem igen från protokoll, inloggningsuppgifter, värd, sökväg, frågeparametrar och fragment i en strukturerad editor.",
+      },
+      th: {
+        name: "ตัวแยกวิเคราะห์และสร้าง URL",
+        description:
+          "แยก URL ออกเป็นส่วนประกอบ และสร้างกลับจากโปรโตคอล ข้อมูลรับรอง โฮสต์ เส้นทาง พารามิเตอร์คิวรี และส่วนท้ายภายในตัวแก้ไขแบบมีโครงสร้างเดียว",
+      },
+      tr: {
+        name: "URL Ayrıştırıcı ve Oluşturucu",
+        description:
+          "URL'leri bileşenlerine ayırır ve protokol, kimlik bilgileri, ana makine, yol, sorgu parametreleri ve parça üzerinden tek bir yapılandırılmış düzenleyicide yeniden oluşturur.",
+      },
+      vi: {
+        name: "Bộ phân tích và tạo URL",
+        description:
+          "Phân tích URL thành các thành phần và xây dựng lại từ giao thức, thông tin xác thực, máy chủ, đường dẫn, tham số truy vấn và phân đoạn trong một trình chỉnh sửa có cấu trúc.",
+      },
+      "zh-CN": {
+        name: "URL 解析器/构建器",
+        description:
+          "将 URL 拆解为各个组成部分，并在同一个结构化编辑器中从协议、凭据、主机、路径、查询参数和片段重新构建 URL。",
+      },
+      "zh-TW": {
+        name: "URL 解析器/建構器",
+        description:
+          "將 URL 拆解為各個組成部分，並在同一個結構化編輯器中從協定、憑證、主機、路徑、查詢參數與片段重新建構 URL。",
       },
     },
   },

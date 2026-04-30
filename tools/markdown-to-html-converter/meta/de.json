@@ -1,0 +1,4 @@
+{
+  "name": "Markdown → HTML Konverter",
+  "description": "Wandelt Markdown mit marked in HTML um, optional mit DOMPurify säubern. Vorschau, kopieren und herunterladen."
+}

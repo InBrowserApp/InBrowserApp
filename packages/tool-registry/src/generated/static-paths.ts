@@ -1750,6 +1750,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "business-days-calculator",
+    language: "ar",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "de",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "en",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "es",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "fr",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "he",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "hi",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "id",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "it",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "ja",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "ko",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "ms",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "nl",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "no",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "pl",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "pt",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "ru",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "sv",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "th",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "tr",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "vi",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "business-days-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "case-converter",
     language: "ar",
   },
@@ -2762,6 +2854,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "curl-converter",
+    language: "ar",
+  },
+  {
+    slug: "curl-converter",
+    language: "de",
+  },
+  {
+    slug: "curl-converter",
+    language: "en",
+  },
+  {
+    slug: "curl-converter",
+    language: "es",
+  },
+  {
+    slug: "curl-converter",
+    language: "fr",
+  },
+  {
+    slug: "curl-converter",
+    language: "he",
+  },
+  {
+    slug: "curl-converter",
+    language: "hi",
+  },
+  {
+    slug: "curl-converter",
+    language: "id",
+  },
+  {
+    slug: "curl-converter",
+    language: "it",
+  },
+  {
+    slug: "curl-converter",
+    language: "ja",
+  },
+  {
+    slug: "curl-converter",
+    language: "ko",
+  },
+  {
+    slug: "curl-converter",
+    language: "ms",
+  },
+  {
+    slug: "curl-converter",
+    language: "nl",
+  },
+  {
+    slug: "curl-converter",
+    language: "no",
+  },
+  {
+    slug: "curl-converter",
+    language: "pl",
+  },
+  {
+    slug: "curl-converter",
+    language: "pt",
+  },
+  {
+    slug: "curl-converter",
+    language: "ru",
+  },
+  {
+    slug: "curl-converter",
+    language: "sv",
+  },
+  {
+    slug: "curl-converter",
+    language: "th",
+  },
+  {
+    slug: "curl-converter",
+    language: "tr",
+  },
+  {
+    slug: "curl-converter",
+    language: "vi",
+  },
+  {
+    slug: "curl-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "curl-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "current-network-time",
     language: "ar",
   },
@@ -3222,6 +3406,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "eu-vat-number-validator",
+    language: "ar",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "de",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "en",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "es",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "fr",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "he",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "hi",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "id",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "it",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "ja",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "ko",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "ms",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "nl",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "no",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "pl",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "pt",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "ru",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "sv",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "th",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "tr",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "vi",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "eu-vat-number-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "file-to-data-uri-converter",
     language: "ar",
   },
@@ -3679,6 +3955,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "html-entity-encoder-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "ar",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "de",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "en",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "es",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "fr",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "he",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "hi",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "id",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "it",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "ja",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "ko",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "ms",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "nl",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "no",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "pl",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "pt",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "ru",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "sv",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "th",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "tr",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "vi",
+  },
+  {
+    slug: "html-to-markdown-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "html-to-markdown-converter",
     language: "zh-TW",
   },
   {
@@ -5979,6 +6347,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "ar",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "de",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "en",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "es",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "fr",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "he",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "hi",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "id",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "it",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "ja",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "ko",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "ms",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "nl",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "no",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "pl",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "pt",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "ru",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "sv",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "th",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "tr",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "vi",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "markdown-to-html-converter",
     language: "zh-TW",
   },
   {
@@ -9754,6 +10214,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "text-diff",
+    language: "ar",
+  },
+  {
+    slug: "text-diff",
+    language: "de",
+  },
+  {
+    slug: "text-diff",
+    language: "en",
+  },
+  {
+    slug: "text-diff",
+    language: "es",
+  },
+  {
+    slug: "text-diff",
+    language: "fr",
+  },
+  {
+    slug: "text-diff",
+    language: "he",
+  },
+  {
+    slug: "text-diff",
+    language: "hi",
+  },
+  {
+    slug: "text-diff",
+    language: "id",
+  },
+  {
+    slug: "text-diff",
+    language: "it",
+  },
+  {
+    slug: "text-diff",
+    language: "ja",
+  },
+  {
+    slug: "text-diff",
+    language: "ko",
+  },
+  {
+    slug: "text-diff",
+    language: "ms",
+  },
+  {
+    slug: "text-diff",
+    language: "nl",
+  },
+  {
+    slug: "text-diff",
+    language: "no",
+  },
+  {
+    slug: "text-diff",
+    language: "pl",
+  },
+  {
+    slug: "text-diff",
+    language: "pt",
+  },
+  {
+    slug: "text-diff",
+    language: "ru",
+  },
+  {
+    slug: "text-diff",
+    language: "sv",
+  },
+  {
+    slug: "text-diff",
+    language: "th",
+  },
+  {
+    slug: "text-diff",
+    language: "tr",
+  },
+  {
+    slug: "text-diff",
+    language: "vi",
+  },
+  {
+    slug: "text-diff",
+    language: "zh-CN",
+  },
+  {
+    slug: "text-diff",
+    language: "zh-TW",
+  },
+  {
     slug: "text-statistics",
     language: "ar",
   },
@@ -10763,6 +11315,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "url-component-encoder-decoder",
+    language: "zh-TW",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "ar",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "de",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "en",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "es",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "fr",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "he",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "hi",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "id",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "it",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "ja",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "ko",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "ms",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "nl",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "no",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "pl",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "pt",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "ru",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "sv",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "th",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "tr",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "vi",
+  },
+  {
+    slug: "url-parser-builder",
+    language: "zh-CN",
+  },
+  {
+    slug: "url-parser-builder",
     language: "zh-TW",
   },
   {

@@ -1,0 +1,4 @@
+{
+  "name": "Business Days Calculator",
+  "description": "Count business days between dates, and add or subtract business days with custom weekends and holidays."
+}

@@ -32,6 +32,7 @@ export {
   Pause,
   Play,
   Plus,
+  Printer,
   RefreshCcw,
   Search,
   Sparkles,

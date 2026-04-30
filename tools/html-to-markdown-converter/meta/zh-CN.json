@@ -1,0 +1,4 @@
+{
+  "name": "HTML 转 Markdown 转换器",
+  "description": "使用可调的标题、列表和代码块样式，将原始 HTML 转为 Markdown。粘贴标记或导入文件，然后复制或下载结果。"
+}

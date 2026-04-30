@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "出力言語",
+  "languagePlaceholder": "言語を選択",
+  "inputCurlLabel": "cURL コマンド",
+  "outputCodeLabel": "変換後のコード",
+  "curlPlaceholder": "ここに cURL コマンドを貼り付け...",
+  "useSampleLabel": "サンプルを使用",
+  "clearLabel": "クリア",
+  "downloadCodeLabel": "ダウンロード",
+  "warningsTitle": "警告",
+  "errorsTitle": "エラー",
+  "importFromFileLabel": "ファイルから読み込み",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました"
+}

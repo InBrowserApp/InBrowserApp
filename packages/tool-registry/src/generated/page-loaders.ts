@@ -28,6 +28,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/blake2s-hash-text-or-file/page"),
   "blake3-hash-text-or-file": () =>
     import("@tool/blake3-hash-text-or-file/page"),
+  "business-days-calculator": () =>
+    import("@tool/business-days-calculator/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "chinese-uppercase-number-converter": () =>
     import("@tool/chinese-uppercase-number-converter/page"),
@@ -40,6 +42,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "css-gradient-generator": () => import("@tool/css-gradient-generator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "cuid2-generator": () => import("@tool/cuid2-generator/page"),
+  "curl-converter": () => import("@tool/curl-converter/page"),
   "current-network-time": () => import("@tool/current-network-time/page"),
   "data-uri-to-file-converter": () =>
     import("@tool/data-uri-to-file-converter/page"),
@@ -47,6 +50,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/docker-run-to-compose-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
   "email-validator": () => import("@tool/email-validator/page"),
+  "eu-vat-number-validator": () => import("@tool/eu-vat-number-validator/page"),
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
@@ -54,6 +58,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "html-color-names": () => import("@tool/html-color-names/page"),
   "html-entity-encoder-decoder": () =>
     import("@tool/html-entity-encoder-decoder/page"),
+  "html-to-markdown-converter": () =>
+    import("@tool/html-to-markdown-converter/page"),
   "http-status-code-lookup": () => import("@tool/http-status-code-lookup/page"),
   "iban-validator": () => import("@tool/iban-validator/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
@@ -83,6 +89,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),
   "mac-address-to-ipv6-link-local-address-converter": () =>
     import("@tool/mac-address-to-ipv6-link-local-address-converter/page"),
+  "markdown-to-html-converter": () =>
+    import("@tool/markdown-to-html-converter/page"),
   "md4-hash-text-or-file": () => import("@tool/md4-hash-text-or-file/page"),
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "mime-type-lookup": () => import("@tool/mime-type-lookup/page"),
@@ -144,6 +152,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
   "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
+  "text-diff": () => import("@tool/text-diff/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),
   "time-diff-calculator": () => import("@tool/time-diff-calculator/page"),
   "time-zone-converter": () => import("@tool/time-zone-converter/page"),
@@ -159,6 +168,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/unix-timestamp-converter/page"),
   "url-component-encoder-decoder": () =>
     import("@tool/url-component-encoder-decoder/page"),
+  "url-parser-builder": () => import("@tool/url-parser-builder/page"),
   "user-agent-parser": () => import("@tool/user-agent-parser/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
   "whirlpool-hash-text-or-file": () =>

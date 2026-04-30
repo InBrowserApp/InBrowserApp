@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "Язык вывода",
+  "languagePlaceholder": "Выберите язык",
+  "inputCurlLabel": "Команда cURL",
+  "outputCodeLabel": "Преобразованный код",
+  "curlPlaceholder": "Вставьте команду cURL здесь...",
+  "useSampleLabel": "Использовать пример",
+  "clearLabel": "Очистить",
+  "downloadCodeLabel": "Скачать",
+  "warningsTitle": "Предупреждения",
+  "errorsTitle": "Ошибки",
+  "importFromFileLabel": "Импорт из файла",
+  "copyResultLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано"
+}

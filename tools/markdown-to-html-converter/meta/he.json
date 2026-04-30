@@ -1,0 +1,4 @@
+{
+  "name": "ממיר Markdown → HTML",
+  "description": "המר Markdown ל־HTML בעזרת marked, עם סינון אופציונלי ב־DOMPurify. תצוגה מקדימה, העתקה והורדה."
+}

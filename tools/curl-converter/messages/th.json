@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "ภาษาเอาต์พุต",
+  "languagePlaceholder": "เลือกภาษา",
+  "inputCurlLabel": "คำสั่ง cURL",
+  "outputCodeLabel": "โค้ดที่แปลงแล้ว",
+  "curlPlaceholder": "วางคำสั่ง cURL ที่นี่...",
+  "useSampleLabel": "ใช้ตัวอย่าง",
+  "clearLabel": "ล้าง",
+  "downloadCodeLabel": "ดาวน์โหลด",
+  "warningsTitle": "คำเตือน",
+  "errorsTitle": "ข้อผิดพลาด",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว"
+}

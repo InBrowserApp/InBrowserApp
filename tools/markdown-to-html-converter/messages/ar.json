@@ -1,0 +1,23 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownDescription": "اكتب Markdown مباشرة أو استورد ملفًا نصيًا ثم حسّن الناتج من مساحة عمل واحدة.",
+  "markdownPlaceholder": "أدخل Markdown هنا...",
+  "importFromFileLabel": "استيراد من ملف",
+  "loadSampleLabel": "تحميل مثال",
+  "sampleMarkdown": "# ملاحظات الإطلاق\n\nيبقى Markdown سهلا في الكتابة، ويمنحك HTML الترميز النهائي الجاهز للنشر.\n\n## يتضمن هذا المثال\n\n- عناوين\n- تأكيدا و **نصا غامقا**\n- قوائم وروابط\n\n> بدّل التنظيف عندما تحتاج إلى فحص المقطع الخام.\n\n[اقرأ الدليل](https://www.markdownguide.org/)",
+  "resetLabel": "إعادة ضبط",
+  "outputLabel": "HTML الناتج",
+  "outputDescription": "راجع معاينة منسقة والجزء الدقيق من HTML الذي ينتجه المحول.",
+  "sanitizeLabel": "تنقية الناتج",
+  "sanitizeDescription": "أزل الوسوم والسمات غير الآمنة قبل المعاينة أو النسخ أو التنزيل أو الطباعة.",
+  "previewLabel": "المعاينة",
+  "previewDescription": "عرض معزول للجزء الحالي من HTML مع تنسيق مستند خفيف.",
+  "emptyTitle": "لا يوجد HTML بعد",
+  "emptyDescription": "اكتب أو استورد Markdown لإنشاء معاينة مباشرة وHTML قابل للتصدير.",
+  "charactersLabel": "أحرف",
+  "linesLabel": "أسطر",
+  "copyHtmlLabel": "نسخ HTML",
+  "copiedLabel": "تم النسخ",
+  "downloadHtmlLabel": "تنزيل HTML",
+  "printHtmlLabel": "طباعة HTML"
+}

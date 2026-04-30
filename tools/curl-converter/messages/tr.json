@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "Çıkış dili",
+  "languagePlaceholder": "Dil seçin",
+  "inputCurlLabel": "cURL komutu",
+  "outputCodeLabel": "Dönüştürülen kod",
+  "curlPlaceholder": "Buraya bir cURL komutu yapıştırın...",
+  "useSampleLabel": "Örnek kullan",
+  "clearLabel": "Temizle",
+  "downloadCodeLabel": "İndir",
+  "warningsTitle": "Uyarılar",
+  "errorsTitle": "Hatalar",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı"
+}
