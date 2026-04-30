@@ -34,7 +34,7 @@ function EditorCard({
   onClear,
 }: EditorCardProps) {
   return (
-    <ToolPanelCard className="min-w-0">
+    <ToolPanelCard className="min-w-0 !gap-0 !py-0">
       <CardHeader className="gap-1.5 border-b px-5 py-5 sm:px-6">
         <CardTitle className="text-pretty">{messages.editorTitle}</CardTitle>
         <CardDescription className="max-w-2xl text-pretty">
@@ -58,7 +58,7 @@ function EditorCard({
           }}
           placeholder={messages.sourcePlaceholder}
           spellCheck={false}
-          className="[field-sizing:fixed] min-h-[22rem] min-w-0 flex-1 resize-y font-mono text-sm leading-6 sm:min-h-[24rem]"
+          className="![field-sizing:fixed] h-[22rem] min-w-0 resize-y overflow-y-auto font-mono text-sm leading-6 sm:h-[24rem]"
         />
       </ToolPanelCardContent>
 

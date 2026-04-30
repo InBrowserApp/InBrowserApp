@@ -97,7 +97,7 @@ function PreviewCard({
   }
 
   return (
-    <ToolPanelCard className="min-w-0">
+    <ToolPanelCard className="min-w-0 !gap-0 !py-0">
       <PreviewCardHeader
         messages={messages}
         badges={badges}
