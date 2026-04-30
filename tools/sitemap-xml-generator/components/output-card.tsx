@@ -5,11 +5,10 @@ import {
   ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
 import {
-  Field,
-  FieldContent,
-  FieldDescription,
-  FieldLabel,
-} from "@workspace/ui/components/ui/field"
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Download } from "@workspace/ui/icons"
 
@@ -59,14 +58,12 @@ function OutputCard({
 
   return (
     <ToolPanelCard>
-      <ToolPanelCardContent className="gap-6 p-5">
-        <Field>
-          <FieldContent>
-            <FieldLabel>{messages.outputLabel}</FieldLabel>
-            <FieldDescription>{countLabel}</FieldDescription>
-          </FieldContent>
-        </Field>
+      <CardHeader className="border-b">
+        <CardTitle>{messages.outputLabel}</CardTitle>
+        <CardDescription>{countLabel}</CardDescription>
+      </CardHeader>
 
+      <ToolPanelCardContent className="gap-4">
         <HighlightedXml
           ariaLabel={messages.outputLabel}
           emptyDescription={messages.outputEmptyDescription}
@@ -77,7 +74,7 @@ function OutputCard({
         />
       </ToolPanelCardContent>
 
-      <ToolPanelCardFooter className="flex-wrap justify-start gap-3 border-t px-5 py-4 sm:justify-end">
+      <ToolPanelCardFooter className="flex-wrap justify-start gap-3 border-t sm:justify-end">
         <ToolCopyButton
           value={value}
           copyLabel={messages.copyXmlLabel}

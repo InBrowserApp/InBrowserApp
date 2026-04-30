@@ -3,6 +3,11 @@ import {
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
 import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
+import {
   Field,
   FieldContent,
   FieldDescription,
@@ -44,16 +49,17 @@ function SettingsCard({
 }: SettingsCardProps) {
   return (
     <ToolPanelCard>
-      <ToolPanelCardContent className="gap-6 p-5">
-        <FieldGroup className="gap-6">
-          <Field>
-            <FieldContent>
-              <FieldLabel>{messages.modeLabel}</FieldLabel>
-              <FieldDescription>{messages.modeDescription}</FieldDescription>
-            </FieldContent>
+      <CardHeader className="border-b">
+        <CardTitle>{messages.modeLabel}</CardTitle>
+        <CardDescription>{messages.modeDescription}</CardDescription>
+      </CardHeader>
 
+      <ToolPanelCardContent className="gap-6">
+        <FieldGroup className="gap-6">
+          <Field className="gap-3">
             <ToggleGroup
               type="single"
+              aria-label={messages.modeLabel}
               value={mode}
               onValueChange={(value) => {
                 if (value === "urlset" || value === "sitemapindex") {

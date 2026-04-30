@@ -4,9 +4,12 @@ import {
   ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
 import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
+import {
   Field,
-  FieldContent,
-  FieldDescription,
   FieldGroup,
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
@@ -50,17 +53,13 @@ function UrlsetEntriesCard({
 }: UrlsetEntriesCardProps) {
   return (
     <ToolPanelCard>
-      <ToolPanelCardContent className="gap-6 p-5">
-        <FieldGroup className="gap-6">
-          <Field>
-            <FieldContent>
-              <FieldLabel>{messages.urlEntriesLabel}</FieldLabel>
-              <FieldDescription>
-                {messages.urlEntriesDescription}
-              </FieldDescription>
-            </FieldContent>
-          </Field>
+      <CardHeader className="border-b">
+        <CardTitle>{messages.urlEntriesLabel}</CardTitle>
+        <CardDescription>{messages.urlEntriesDescription}</CardDescription>
+      </CardHeader>
 
+      <ToolPanelCardContent className="gap-4">
+        <FieldGroup className="gap-4">
           <div className="grid gap-4">
             {entries.map((entry, index) => {
               const entryLabel = messages.urlEntryLabel.replace(
@@ -203,7 +202,7 @@ function UrlsetEntriesCard({
         </FieldGroup>
       </ToolPanelCardContent>
 
-      <ToolPanelCardFooter className="justify-start border-t px-5 py-4">
+      <ToolPanelCardFooter className="justify-start border-t">
         <Button type="button" variant="outline" size="sm" onClick={onEntryAdd}>
           {messages.addUrlEntryLabel}
         </Button>
