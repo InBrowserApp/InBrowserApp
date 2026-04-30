@@ -76,6 +76,7 @@
     "@tool/keccak-hash-text-or-file": "workspace:*",
     "@tool/ksuid-generator": "workspace:*",
     "@tool/list-comparer": "workspace:*",
+    "@tool/local-font-book": "workspace:*",
     "@tool/lorem-ipsum-generator": "workspace:*",
     "@tool/mac-address-to-ipv6-link-local-address-converter": "workspace:*",
     "@tool/markdown-to-html-converter": "workspace:*",
