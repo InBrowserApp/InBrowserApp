@@ -8374,6 +8374,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "robots-txt-generator",
+    language: "ar",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "de",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "en",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "es",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "fr",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "he",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "hi",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "id",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "it",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "ja",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "ko",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "ms",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "nl",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "no",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "pl",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "pt",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "ru",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "sv",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "th",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "tr",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "vi",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "roman-numeral-converter",
     language: "ar",
   },

@@ -1,0 +1,4 @@
+{
+  "name": "ตัวสร้าง robots.txt",
+  "description": "สร้างไฟล์ robots.txt พร้อมกฎ user-agent เส้นทาง allow/disallow และลิงก์ sitemap"
+}
