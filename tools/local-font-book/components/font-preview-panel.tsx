@@ -73,7 +73,7 @@ function FontPreviewPanel({
         </CardAction>
       </CardHeader>
 
-      <CardContent className="flex flex-col gap-4 pt-4">
+      <CardContent className="flex flex-col gap-4">
         <Field>
           <FieldLabel className="sr-only">
             {messages.previewFallback}
@@ -137,10 +137,10 @@ function FontPreviewPanel({
             </div>
           ) : (
             <Empty
-              className="min-h-[14rem] border-none text-left sm:min-h-[16rem]"
+              className="min-h-[14rem] border-none sm:min-h-[16rem]"
               data-dark={darkBackground}
             >
-              <EmptyHeader className="items-start text-left">
+              <EmptyHeader>
                 <EmptyMedia variant="icon">
                   <Eye />
                 </EmptyMedia>

@@ -119,7 +119,7 @@ function FontBrowserPanel({
         </CardAction>
       </CardHeader>
 
-      <ToolPanelCardContent className="gap-4 pt-4">
+      <ToolPanelCardContent className="gap-4">
         <FieldGroup className="gap-4">
           <Field>
             <FieldLabel htmlFor={searchInputId} className="sr-only">

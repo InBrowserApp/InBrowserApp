@@ -37,7 +37,7 @@ function FontDetailsPanel({
           <CardTitle>{messages.detailsTitle}</CardTitle>
           <CardDescription>{messages.detailsDescription}</CardDescription>
         </CardHeader>
-        <CardContent className="pt-4">
+        <CardContent>
           <Empty className="min-h-40 sm:min-h-48">
             <EmptyHeader>
               <EmptyMedia variant="icon">
@@ -59,7 +59,7 @@ function FontDetailsPanel({
         <CardDescription>{messages.detailsDescription}</CardDescription>
       </CardHeader>
 
-      <CardContent className="flex flex-col gap-4 pt-4">
+      <CardContent className="flex flex-col gap-4">
         <dl className="grid gap-2.5">
           <DetailRow label={messages.detailsFamily} value={activeFont.family} />
           <DetailRow
