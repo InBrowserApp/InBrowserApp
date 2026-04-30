@@ -1,0 +1,4 @@
+{
+  "name": "JWK ↔ PEM 変換",
+  "description": "JWK と PEM の鍵をローカルで変換します。RSA、EC、OKP の鍵形式に対応。"
+}

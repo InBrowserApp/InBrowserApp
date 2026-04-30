@@ -1,0 +1,4 @@
+{
+  "name": "ตัวแปลง JWK ↔ PEM",
+  "description": "แปลงคีย์ JWK และ PEM แบบโลคัล รองรับรูปแบบคีย์ RSA, EC และ OKP"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "JWK ↔ PEM-omvandlare",
+  "description": "Konvertera JWK- och PEM-nycklar lokalt. Stöd för RSA-, EC- och OKP-nyckelformat."
+}

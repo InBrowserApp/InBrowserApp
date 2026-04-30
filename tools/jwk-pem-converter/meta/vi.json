@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi JWK ↔ PEM",
+  "description": "Chuyển đổi khóa JWK và PEM cục bộ. Hỗ trợ các định dạng khóa RSA, EC và OKP."
+}

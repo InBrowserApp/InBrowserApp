@@ -1,0 +1,4 @@
+{
+  "name": "JWK ↔ PEM-converter",
+  "description": "Converteer JWK- en PEM-sleutels lokaal. Ondersteunt RSA-, EC- en OKP-sleutelformaten."
+}

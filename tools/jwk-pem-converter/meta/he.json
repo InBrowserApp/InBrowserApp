@@ -1,0 +1,4 @@
+{
+  "name": "ממיר JWK ↔ PEM",
+  "description": "ממיר מפתחות JWK ו‑PEM מקומית. תומך בפורמטי מפתחות RSA, EC ו‑OKP."
+}
