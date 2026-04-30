@@ -96,8 +96,10 @@ describe("SitemapXmlGeneratorClient", () => {
     })
 
     expect(
-      screen.getByRole("link", { name: messages.downloadXmlLabel })
-    ).toBeTruthy()
+      screen
+        .getByRole("link", { name: messages.downloadXmlLabel })
+        .getAttribute("download")
+    ).toBe("sitemap.xml")
   })
 
   test("switches to sitemap index mode", async () => {
@@ -117,6 +119,12 @@ describe("SitemapXmlGeneratorClient", () => {
     await waitFor(() => {
       expect(outputRegion.textContent).toContain("<sitemapindex")
     })
+
+    expect(
+      screen
+        .getByRole("link", { name: messages.downloadXmlLabel })
+        .getAttribute("download")
+    ).toBe("sitemap-index.xml")
   })
 
   test("shows a validation error when priority is invalid", async () => {

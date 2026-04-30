@@ -54,6 +54,8 @@ function OutputCard({
           )
 
   const value = result.state === "success" ? result.xml : ""
+  const downloadFilename =
+    mode === "sitemapindex" ? "sitemap-index.xml" : "sitemap.xml"
 
   return (
     <ToolPanelCard>
@@ -75,7 +77,7 @@ function OutputCard({
         />
       </ToolPanelCardContent>
 
-      <ToolPanelCardFooter className="justify-end gap-3 border-t px-5 py-4">
+      <ToolPanelCardFooter className="flex-wrap justify-start gap-3 border-t px-5 py-4 sm:justify-end">
         <ToolCopyButton
           value={value}
           copyLabel={messages.copyXmlLabel}
@@ -85,7 +87,7 @@ function OutputCard({
 
         {downloadUrl ? (
           <Button asChild size="sm">
-            <a href={downloadUrl} download="sitemap.xml">
+            <a href={downloadUrl} download={downloadFilename}>
               <Download data-icon="inline-start" />
               {messages.downloadXmlLabel}
             </a>

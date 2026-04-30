@@ -15,6 +15,7 @@ import { Input } from "@workspace/ui/components/ui/input"
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
@@ -73,8 +74,8 @@ function UrlsetEntriesCard({
                   key={entry.id}
                   className="rounded-lg border border-border/70 bg-muted/20 p-4"
                 >
-                  <div className="mb-4 flex items-center justify-between gap-3">
-                    <p className="font-medium">{entryLabel}</p>
+                  <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                    <p className="min-w-0 font-medium">{entryLabel}</p>
                     <Button
                       type="button"
                       variant="ghost"
@@ -154,14 +155,16 @@ function UrlsetEntriesCard({
                           />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="__empty__">
-                            {messages.changeFrequencyPlaceholder}
-                          </SelectItem>
-                          {CHANGE_FREQUENCIES.map((value) => (
-                            <SelectItem key={value} value={value}>
-                              {value}
+                          <SelectGroup>
+                            <SelectItem value="__empty__">
+                              {messages.changeFrequencyPlaceholder}
                             </SelectItem>
-                          ))}
+                            {CHANGE_FREQUENCIES.map((value) => (
+                              <SelectItem key={value} value={value}>
+                                {value}
+                              </SelectItem>
+                            ))}
+                          </SelectGroup>
                         </SelectContent>
                       </Select>
                     </Field>

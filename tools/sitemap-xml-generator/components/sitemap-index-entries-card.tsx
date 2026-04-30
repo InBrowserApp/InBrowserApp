@@ -61,8 +61,8 @@ function SitemapIndexEntriesCard({
                   key={entry.id}
                   className="rounded-lg border border-border/70 bg-muted/20 p-4"
                 >
-                  <div className="mb-4 flex items-center justify-between gap-3">
-                    <p className="font-medium">{entryLabel}</p>
+                  <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                    <p className="min-w-0 font-medium">{entryLabel}</p>
                     <Button
                       type="button"
                       variant="ghost"
