@@ -47,7 +47,7 @@ function ExportCard({
 
   return (
     <Card className="overflow-hidden">
-      <CardHeader className="gap-4 border-b bg-[linear-gradient(135deg,rgba(14,165,233,0.07),rgba(255,255,255,0.96))]">
+      <CardHeader className="gap-4 border-b">
         <div className="space-y-1">
           <CardTitle>{messages.exportTitle}</CardTitle>
           <CardDescription>{messages.exportSubtitle}</CardDescription>
