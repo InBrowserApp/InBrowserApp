@@ -1,0 +1,4 @@
+{
+  "name": "CIDR-parser",
+  "description": "Parseer CIDR-notatie om gedetailleerde informatie over IP-adressen en netwerken te krijgen, ondersteunt IPv4- en IPv6-formaten. Verkrijg direct netwerkadres, broadcast-adres en bereik van bruikbare IPs"
+}

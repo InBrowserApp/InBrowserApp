@@ -1,0 +1,4 @@
+{
+  "name": "CIDR Ayrıştırıcı",
+  "description": "IP adresleri ve ağlar hakkında ayrıntılı bilgi almak için CIDR notasyonunu ayrıştırın, IPv4 ve IPv6 formatlarını destekler. Ağ adresi, yayın adresi ve kullanılabilir IP aralığını anında alın"
+}

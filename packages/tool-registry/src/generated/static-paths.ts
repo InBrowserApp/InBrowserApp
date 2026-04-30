@@ -2118,6 +2118,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cidr-parser",
+    language: "ar",
+  },
+  {
+    slug: "cidr-parser",
+    language: "de",
+  },
+  {
+    slug: "cidr-parser",
+    language: "en",
+  },
+  {
+    slug: "cidr-parser",
+    language: "es",
+  },
+  {
+    slug: "cidr-parser",
+    language: "fr",
+  },
+  {
+    slug: "cidr-parser",
+    language: "he",
+  },
+  {
+    slug: "cidr-parser",
+    language: "hi",
+  },
+  {
+    slug: "cidr-parser",
+    language: "id",
+  },
+  {
+    slug: "cidr-parser",
+    language: "it",
+  },
+  {
+    slug: "cidr-parser",
+    language: "ja",
+  },
+  {
+    slug: "cidr-parser",
+    language: "ko",
+  },
+  {
+    slug: "cidr-parser",
+    language: "ms",
+  },
+  {
+    slug: "cidr-parser",
+    language: "nl",
+  },
+  {
+    slug: "cidr-parser",
+    language: "no",
+  },
+  {
+    slug: "cidr-parser",
+    language: "pl",
+  },
+  {
+    slug: "cidr-parser",
+    language: "pt",
+  },
+  {
+    slug: "cidr-parser",
+    language: "ru",
+  },
+  {
+    slug: "cidr-parser",
+    language: "sv",
+  },
+  {
+    slug: "cidr-parser",
+    language: "th",
+  },
+  {
+    slug: "cidr-parser",
+    language: "tr",
+  },
+  {
+    slug: "cidr-parser",
+    language: "vi",
+  },
+  {
+    slug: "cidr-parser",
+    language: "zh-CN",
+  },
+  {
+    slug: "cidr-parser",
+    language: "zh-TW",
+  },
+  {
     slug: "color-contrast-checker",
     language: "ar",
   },

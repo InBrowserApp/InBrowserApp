@@ -1,0 +1,4 @@
+{
+  "name": "Analyseur CIDR",
+  "description": "Analysez la notation CIDR pour obtenir des informations détaillées sur les adresses IP et les réseaux, prenant en charge les formats IPv4 et IPv6. Obtenez l'adresse réseau, l'adresse de diffusion et la plage d'IP utilisables instantanément"
+}
