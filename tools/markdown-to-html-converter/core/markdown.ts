@@ -13,6 +13,11 @@ type TextMetrics = Readonly<{
   nonEmptyLines: number
 }>
 
+type PreviewDocumentOptions = Readonly<{
+  dir: "ltr" | "rtl"
+  lang: string
+}>
+
 function renderMarkdownToHtml(
   markdown: string,
   options: RenderMarkdownOptions = {}
@@ -50,11 +55,17 @@ function getTextMetrics(text: string): TextMetrics {
   }
 }
 
-function buildPreviewDocument(renderedHtml: string, title: string) {
+function buildPreviewDocument(
+  renderedHtml: string,
+  title: string,
+  options: PreviewDocumentOptions = { dir: "ltr", lang: "en" }
+) {
   const escapedTitle = escapeHtml(title)
+  const escapedLang = escapeHtml(options.lang)
+  const dir = options.dir === "rtl" ? "rtl" : "ltr"
 
   return `<!doctype html>
-<html lang="en">
+<html lang="${escapedLang}" dir="${dir}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

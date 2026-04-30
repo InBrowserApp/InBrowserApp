@@ -1,5 +1,3 @@
-import type { TextMetrics } from "../core/markdown"
-
 type MarkdownToHtmlMessages = Readonly<{
   meta: {
     name: string
@@ -10,6 +8,7 @@ type MarkdownToHtmlMessages = Readonly<{
   markdownPlaceholder: string
   importFromFileLabel: string
   loadSampleLabel: string
+  sampleMarkdown: string
   resetLabel: string
   outputLabel: string
   outputDescription: string
@@ -17,8 +16,6 @@ type MarkdownToHtmlMessages = Readonly<{
   sanitizeDescription: string
   previewLabel: string
   previewDescription: string
-  sourceLabel: string
-  sourceDescription: string
   emptyTitle: string
   emptyDescription: string
   charactersLabel: string
@@ -29,9 +26,15 @@ type MarkdownToHtmlMessages = Readonly<{
   printHtmlLabel: string
 }>
 
-type MetricsProps = Readonly<{
-  messages: MarkdownToHtmlMessages
-  metrics: TextMetrics
+type MetricLabels = Readonly<{
+  characters: string
+  lines: string
+  nonEmptyLines: string
 }>
 
-export type { MarkdownToHtmlMessages, MetricsProps }
+type MetricsProps = Readonly<{
+  messages: MarkdownToHtmlMessages
+  metrics: MetricLabels
+}>
+
+export type { MarkdownToHtmlMessages, MetricLabels, MetricsProps }

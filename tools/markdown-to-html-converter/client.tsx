@@ -8,8 +8,8 @@ import {
   type ChangeEvent,
 } from "react"
 
-import { DEFAULT_SAMPLE_MARKDOWN, STORAGE_KEYS } from "./client/constants"
-import type { MarkdownToHtmlMessages } from "./client/types"
+import { STORAGE_KEYS } from "./client/constants"
+import type { MarkdownToHtmlMessages, MetricLabels } from "./client/types"
 import { HtmlOutputCard } from "./components/html-output-card"
 import { MarkdownInputCard } from "./components/markdown-input-card"
 import { PreviewCard } from "./components/preview-card"
@@ -18,16 +18,20 @@ import {
   getTextMetrics,
   renderMarkdownToHtml,
 } from "./core/markdown"
+import type { TextMetrics } from "./core/markdown"
 
 type MarkdownToHtmlConverterClientProps = Readonly<{
+  lang: string
   messages: MarkdownToHtmlMessages
 }>
 
 function MarkdownToHtmlConverterClient({
+  lang,
   messages,
 }: MarkdownToHtmlConverterClientProps) {
   const textareaId = useId()
   const fileInputRef = useRef<HTMLInputElement | null>(null)
+  const printFrameRef = useRef<HTMLIFrameElement | null>(null)
   const downloadUrlRef = useRef<string | null>(null)
 
   const [markdown, setMarkdown] = useState("")
@@ -36,9 +40,12 @@ function MarkdownToHtmlConverterClient({
 
   const deferredMarkdown = useDeferredValue(markdown)
   const html = renderMarkdownToHtml(deferredMarkdown, { sanitize })
-  const previewDocument = buildPreviewDocument(html, messages.meta.name)
-  const inputMetrics = getTextMetrics(markdown)
-  const outputMetrics = getTextMetrics(html)
+  const previewDocument = buildPreviewDocument(html, messages.meta.name, {
+    dir: getTextDirection(lang),
+    lang,
+  })
+  const inputMetrics = formatMetrics(getTextMetrics(markdown), lang)
+  const outputMetrics = formatMetrics(getTextMetrics(html), lang)
 
   useEffect(() => {
     /* v8 ignore next */
@@ -116,27 +123,19 @@ function MarkdownToHtmlConverterClient({
       return
     }
 
-    const printWindow = window.open("", "_blank", "noopener,noreferrer")
+    const printWindow = printFrameRef.current?.contentWindow
 
     if (!printWindow) {
       return
     }
 
-    printWindow.document.open()
-    printWindow.document.write(previewDocument)
-    printWindow.document.close()
     printWindow.focus()
-    printWindow.onafterprint = () => {
-      printWindow.close()
-    }
-    printWindow.addEventListener("load", () => {
-      printWindow.print()
-    })
+    printWindow.print()
   }
 
   function handleLoadSample() {
     startTransition(() => {
-      setMarkdown(DEFAULT_SAMPLE_MARKDOWN)
+      setMarkdown(messages.sampleMarkdown)
     })
   }
 
@@ -178,8 +177,32 @@ function MarkdownToHtmlConverterClient({
         previewDocument={previewDocument}
         onPrint={handlePrint}
       />
+
+      <iframe
+        ref={printFrameRef}
+        title={messages.printHtmlLabel}
+        sandbox="allow-modals allow-same-origin"
+        srcDoc={previewDocument}
+        aria-hidden="true"
+        tabIndex={-1}
+        className="pointer-events-none fixed top-0 left-[-100vw] h-px w-px opacity-0"
+      />
     </div>
   )
+}
+
+function formatMetrics(metrics: TextMetrics, lang: string): MetricLabels {
+  const formatter = new Intl.NumberFormat(lang)
+
+  return {
+    characters: formatter.format(metrics.characters),
+    lines: formatter.format(metrics.lines),
+    nonEmptyLines: formatter.format(metrics.nonEmptyLines),
+  }
+}
+
+function getTextDirection(lang: string) {
+  return ["ar", "he"].includes(lang.split("-")[0] ?? "") ? "rtl" : "ltr"
 }
 
 export default MarkdownToHtmlConverterClient

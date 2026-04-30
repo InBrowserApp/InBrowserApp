@@ -30,7 +30,7 @@ const messages = { meta, ...localizedMessages }
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <MarkdownToHtmlConverterClient client:load messages={messages} />
+  <MarkdownToHtmlConverterClient client:load lang={lang} messages={messages} />
 
   {
     IntroSection ? (

@@ -56,8 +56,19 @@ describe("buildPreviewDocument", () => {
     )
 
     expect(document).toContain("<!doctype html>")
+    expect(document).toContain('<html lang="en" dir="ltr">')
     expect(document).toContain("<article><h1>Ready</h1></article>")
     expect(document).toContain("&lt;title&gt; &quot;x&quot;")
     expect(document).toContain("IBM Plex Sans")
+  })
+
+  test("uses localized document metadata for preview content", () => {
+    const document = buildPreviewDocument("<p>שלום</p>", "כותרת", {
+      dir: "rtl",
+      lang: "he",
+    })
+
+    expect(document).toContain('<html lang="he" dir="rtl">')
+    expect(document).toContain("<title>כותרת</title>")
   })
 })

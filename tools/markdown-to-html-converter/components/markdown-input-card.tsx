@@ -99,8 +99,7 @@ function MarkdownInputCard({
           ref={fileInputRef}
           type="file"
           accept=".md,.markdown,.txt,text/markdown,text/plain"
-          aria-label={messages.importFromFileLabel}
-          className="sr-only"
+          className="hidden"
           onChange={onFileChange}
         />
       </ToolPanelCardFooter>
