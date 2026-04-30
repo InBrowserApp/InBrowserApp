@@ -79,7 +79,7 @@ function createDefaultState(): RobotsState {
         rules: [{ type: "disallow", path: "/admin/" }],
       }),
     ],
-    sitemaps: ["https://example.com/sitemap.xml"],
+    sitemaps: [],
     host: "",
     advanced: false,
   }

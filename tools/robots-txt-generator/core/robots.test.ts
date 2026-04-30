@@ -18,7 +18,7 @@ describe("robots core helpers", () => {
 
     expect(state.advanced).toBe(false)
     expect(state.host).toBe("")
-    expect(state.sitemaps).toEqual(["https://example.com/sitemap.xml"])
+    expect(state.sitemaps).toEqual([])
     expect(state.groups).toHaveLength(1)
     expect(state.groups[0]?.userAgents).toEqual(["*"])
     expect(state.groups[0]?.rules).toEqual([
@@ -115,12 +115,7 @@ describe("robots core helpers", () => {
 
   test("builds robots.txt from the default state", () => {
     expect(buildRobotsTxt(createDefaultState())).toBe(
-      [
-        "User-agent: *",
-        "Disallow: /admin/",
-        "",
-        "Sitemap: https://example.com/sitemap.xml",
-      ].join("\n")
+      ["User-agent: *", "Disallow: /admin/"].join("\n")
     )
   })
 

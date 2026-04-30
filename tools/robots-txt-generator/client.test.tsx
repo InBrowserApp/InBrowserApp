@@ -15,10 +15,14 @@ const messages = {
     description: "Generate robots.txt files.",
   },
   presets: "Presets",
+  presetsDescription:
+    "Start from a common policy. Applying a preset replaces the current user-agent groups.",
   presetAllowAll: "Allow all",
   presetDisallowAll: "Disallow all",
   presetBlockAdmin: "Block /admin/",
   siteSettings: "Site settings",
+  siteSettingsDescription:
+    "Add sitemap URLs and optional Host/Crawl-delay directives for crawlers that support them.",
   sitemaps: "Sitemaps",
   sitemapPlaceholder: "https://example.com/sitemap.xml",
   addSitemap: "Add sitemap",
@@ -26,6 +30,8 @@ const messages = {
   host: "Host (non-standard)",
   hostPlaceholder: "example.com",
   groups: "User-agent groups",
+  groupsDescription:
+    "Define which crawlers each group targets and which paths they may crawl.",
   groupTitle: "Group {index}",
   removeGroup: "Remove group",
   addGroup: "Add group",
@@ -38,14 +44,21 @@ const messages = {
   addUserAgent: "Add user-agent",
   rules: "Rules",
   ruleHint: "No rules means allow all.",
+  ruleType: "Rule type",
   ruleAllow: "Allow",
   ruleDisallow: "Disallow",
+  rulePath: "Rule path",
   pathPlaceholder: "/path/",
   addRule: "Add rule",
   removeRule: "Remove rule",
   crawlDelay: "Crawl-delay (seconds)",
   crawlDelayPlaceholder: "e.g. 10",
+  crawlDelayInvalid: "Enter a non-negative number, or leave it empty.",
   output: "Output",
+  outputDescription:
+    "Review the generated robots.txt, then copy or download it.",
+  copyOutput: "Copy robots.txt",
+  copiedOutput: "Copied",
   download: "Download robots.txt",
   emptyOutput: "No content to export yet.",
 } as const
@@ -78,7 +91,16 @@ describe("RobotsTxtGeneratorClient", () => {
     const output = screen.getByLabelText("Output") as HTMLTextAreaElement
     expect(output.value).toContain("User-agent: *")
     expect(output.value).toContain("Disallow: /admin/")
-    expect(output.value).toContain("Sitemap: https://example.com/sitemap.xml")
+    expect(output.value).not.toContain(
+      "Sitemap: https://example.com/sitemap.xml"
+    )
+    expect(screen.getByText(messages.presetsDescription)).toBeTruthy()
+    expect(screen.getByText(messages.siteSettingsDescription)).toBeTruthy()
+    expect(screen.getByText(messages.groupsDescription)).toBeTruthy()
+    expect(screen.getByText(messages.outputDescription)).toBeTruthy()
+    expect(screen.getByRole("button", { name: "Copy robots.txt" })).toBeTruthy()
+    expect(screen.getByRole("combobox", { name: "Rule type" })).toBeTruthy()
+    expect(screen.getByLabelText("Rule path")).toBeTruthy()
 
     const downloadLink = await screen.findByRole("link", {
       name: "Download robots.txt",
@@ -106,7 +128,7 @@ describe("RobotsTxtGeneratorClient", () => {
 
     fireEvent.click(screen.getByRole("radio", { name: "Allow all" }))
     fireEvent.click(screen.getByRole("button", { name: "Add rule" }))
-    fireEvent.change(screen.getByPlaceholderText("/path/"), {
+    fireEvent.change(screen.getByLabelText("Rule path"), {
       target: { value: "/private/" },
     })
 
@@ -133,6 +155,25 @@ describe("RobotsTxtGeneratorClient", () => {
       expect(output.value).toContain("Host: example.com")
       expect(output.value).toContain("Crawl-delay: 5")
     })
+  })
+
+  test("marks invalid crawl delay values without exporting them", () => {
+    render(<RobotsTxtGeneratorClient messages={messages} />)
+
+    fireEvent.click(screen.getByRole("switch", { name: "Advanced settings" }))
+    fireEvent.change(screen.getByLabelText("Crawl-delay (seconds)"), {
+      target: { value: "-1" },
+    })
+
+    expect(
+      screen
+        .getByLabelText("Crawl-delay (seconds)")
+        .getAttribute("aria-invalid")
+    ).toBe("true")
+    expect(screen.getByText(messages.crawlDelayInvalid)).toBeTruthy()
+
+    const output = screen.getByLabelText("Output") as HTMLTextAreaElement
+    expect(output.value).not.toContain("Crawl-delay")
   })
 
   test("adds user-agent presets without duplicates", () => {

@@ -2,7 +2,11 @@ import {
   ToolPanelCard,
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
+import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
 import { Input } from "@workspace/ui/components/ui/input"
 import { Label } from "@workspace/ui/components/ui/label"
 import { Switch } from "@workspace/ui/components/ui/switch"
@@ -33,6 +37,7 @@ function SiteSettingsCard({
     <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.siteSettings}</CardTitle>
+        <CardDescription>{messages.siteSettingsDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent className="gap-4">
         <div className="grid gap-2">

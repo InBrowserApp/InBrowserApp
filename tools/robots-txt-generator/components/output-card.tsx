@@ -1,10 +1,15 @@
+import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import {
   ToolPanelCard,
   ToolPanelCardContent,
   ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
-import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
+import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Download } from "@workspace/ui/icons"
 
@@ -23,6 +28,7 @@ function OutputCard({ messages, robotsContent, downloadUrl }: OutputCardProps) {
     <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.output}</CardTitle>
+        <CardDescription>{messages.outputDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent className="gap-4">
         {hasOutput ? (
@@ -41,7 +47,13 @@ function OutputCard({ messages, robotsContent, downloadUrl }: OutputCardProps) {
           </div>
         )}
       </ToolPanelCardContent>
-      <ToolPanelCardFooter className="justify-end border-t">
+      <ToolPanelCardFooter className="flex-wrap justify-end gap-3 border-t">
+        <ToolCopyButton
+          value={robotsContent}
+          copyLabel={messages.copyOutput}
+          copiedLabel={messages.copiedOutput}
+          disabled={!hasOutput}
+        />
         {downloadUrl === null ? (
           <Button type="button" variant="ghost" size="sm" disabled>
             <Download data-icon="inline-start" />

@@ -4,10 +4,12 @@ import type { RobotsRule } from "../core/robots"
 
 type RobotsTxtMessageCatalog = Readonly<{
   presets: string
+  presetsDescription: string
   presetAllowAll: string
   presetDisallowAll: string
   presetBlockAdmin: string
   siteSettings: string
+  siteSettingsDescription: string
   sitemaps: string
   sitemapPlaceholder: string
   addSitemap: string
@@ -15,6 +17,7 @@ type RobotsTxtMessageCatalog = Readonly<{
   host: string
   hostPlaceholder: string
   groups: string
+  groupsDescription: string
   groupTitle: string
   removeGroup: string
   addGroup: string
@@ -27,14 +30,20 @@ type RobotsTxtMessageCatalog = Readonly<{
   addUserAgent: string
   rules: string
   ruleHint: string
+  ruleType: string
   ruleAllow: string
   ruleDisallow: string
+  rulePath: string
   pathPlaceholder: string
   addRule: string
   removeRule: string
   crawlDelay: string
   crawlDelayPlaceholder: string
+  crawlDelayInvalid: string
   output: string
+  outputDescription: string
+  copyOutput: string
+  copiedOutput: string
   download: string
   emptyOutput: string
 }>

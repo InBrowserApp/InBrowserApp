@@ -2,7 +2,11 @@ import {
   ToolPanelCard,
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
-import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
+import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
 import {
   ToggleGroup,
   ToggleGroupItem,
@@ -26,6 +30,7 @@ function PresetsCard({
     <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.presets}</CardTitle>
+        <CardDescription>{messages.presetsDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent className="gap-4">
         <ToggleGroup
@@ -33,7 +38,8 @@ function PresetsCard({
           value={activePreset ?? ""}
           variant="outline"
           size="sm"
-          className="flex w-full flex-wrap"
+          spacing={8}
+          className="w-full flex-col items-stretch sm:flex-row"
           onValueChange={(value) => {
             if (
               value === "allowAll" ||
@@ -44,13 +50,13 @@ function PresetsCard({
             }
           }}
         >
-          <ToggleGroupItem value="allowAll" className="min-w-40 flex-1">
+          <ToggleGroupItem value="allowAll" className="w-full sm:flex-1">
             {messages.presetAllowAll}
           </ToggleGroupItem>
-          <ToggleGroupItem value="disallowAll" className="min-w-40 flex-1">
+          <ToggleGroupItem value="disallowAll" className="w-full sm:flex-1">
             {messages.presetDisallowAll}
           </ToggleGroupItem>
-          <ToggleGroupItem value="blockAdmin" className="min-w-40 flex-1">
+          <ToggleGroupItem value="blockAdmin" className="w-full sm:flex-1">
             {messages.presetBlockAdmin}
           </ToggleGroupItem>
         </ToggleGroup>
