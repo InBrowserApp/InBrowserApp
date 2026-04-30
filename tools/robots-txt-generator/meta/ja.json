@@ -1,0 +1,4 @@
+{
+  "name": "robots.txt ジェネレーター",
+  "description": "User-agent ルール、Allow/Disallow のパス、Sitemap リンクを含む robots.txt を生成します。"
+}

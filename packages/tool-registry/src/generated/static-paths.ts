@@ -2118,6 +2118,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cidr-parser",
+    language: "ar",
+  },
+  {
+    slug: "cidr-parser",
+    language: "de",
+  },
+  {
+    slug: "cidr-parser",
+    language: "en",
+  },
+  {
+    slug: "cidr-parser",
+    language: "es",
+  },
+  {
+    slug: "cidr-parser",
+    language: "fr",
+  },
+  {
+    slug: "cidr-parser",
+    language: "he",
+  },
+  {
+    slug: "cidr-parser",
+    language: "hi",
+  },
+  {
+    slug: "cidr-parser",
+    language: "id",
+  },
+  {
+    slug: "cidr-parser",
+    language: "it",
+  },
+  {
+    slug: "cidr-parser",
+    language: "ja",
+  },
+  {
+    slug: "cidr-parser",
+    language: "ko",
+  },
+  {
+    slug: "cidr-parser",
+    language: "ms",
+  },
+  {
+    slug: "cidr-parser",
+    language: "nl",
+  },
+  {
+    slug: "cidr-parser",
+    language: "no",
+  },
+  {
+    slug: "cidr-parser",
+    language: "pl",
+  },
+  {
+    slug: "cidr-parser",
+    language: "pt",
+  },
+  {
+    slug: "cidr-parser",
+    language: "ru",
+  },
+  {
+    slug: "cidr-parser",
+    language: "sv",
+  },
+  {
+    slug: "cidr-parser",
+    language: "th",
+  },
+  {
+    slug: "cidr-parser",
+    language: "tr",
+  },
+  {
+    slug: "cidr-parser",
+    language: "vi",
+  },
+  {
+    slug: "cidr-parser",
+    language: "zh-CN",
+  },
+  {
+    slug: "cidr-parser",
+    language: "zh-TW",
+  },
+  {
     slug: "color-contrast-checker",
     language: "ar",
   },
@@ -2575,6 +2667,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "credit-card-validator",
+    language: "zh-TW",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "ar",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "de",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "en",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "es",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "fr",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "he",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "hi",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "id",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "it",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "ja",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "ko",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "ms",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "nl",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "no",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "pl",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "pt",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "ru",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "sv",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "th",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "tr",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "vi",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "css-box-shadow-generator",
     language: "zh-TW",
   },
   {
@@ -5798,6 +5982,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "jwk-pem-converter",
+    language: "ar",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "de",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "en",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "es",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "fr",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "he",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "hi",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "id",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "it",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "ja",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "ko",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "ms",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "nl",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "no",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "pl",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "pt",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "ru",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "sv",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "th",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "tr",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "vi",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "jwk-pem-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "keccak-hash-text-or-file",
     language: "ar",
   },
@@ -6347,6 +6623,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "ar",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "de",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "en",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "es",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "fr",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "he",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "hi",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "id",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "it",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "ja",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "ko",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "ms",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "nl",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "no",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "pl",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "pt",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "ru",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "sv",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "th",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "tr",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "vi",
+  },
+  {
+    slug: "markdown-to-html-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "markdown-to-html-converter",
     language: "zh-TW",
   },
   {
@@ -8187,6 +8555,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "ripemd256-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "ar",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "de",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "en",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "es",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "fr",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "he",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "hi",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "id",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "it",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "ja",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "ko",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "ms",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "nl",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "no",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "pl",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "pt",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "ru",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "sv",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "th",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "tr",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "vi",
+  },
+  {
+    slug: "robots-txt-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "robots-txt-generator",
     language: "zh-TW",
   },
   {

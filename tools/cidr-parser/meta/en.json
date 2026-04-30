@@ -1,0 +1,4 @@
+{
+  "name": "CIDR Parser",
+  "description": "Parse CIDR notation to inspect IPv4 or IPv6 network ranges, masks, and integer boundaries directly in the browser."
+}

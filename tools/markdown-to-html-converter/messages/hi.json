@@ -1,0 +1,23 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownDescription": "सीधे Markdown लिखें या टेक्स्ट फ़ाइल आयात करें, फिर एक ही कार्यक्षेत्र में आउटपुट को सँवारें।",
+  "markdownPlaceholder": "यहाँ Markdown दर्ज करें...",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "loadSampleLabel": "उदाहरण लोड करें",
+  "sampleMarkdown": "# रिलीज नोट्स\n\nMarkdown लिखना आसान रहता है, और HTML आपको प्रकाशित करने योग्य अंतिम मार्कअप देता है।\n\n## इस नमूने में शामिल है\n\n- शीर्षक\n- जोर और **मजबूत पाठ**\n- सूचियां और लिंक\n\n> जब आपको कच्चे खंड की जांच करनी हो, तब सफाई बदलें।\n\n[दस्तावेज पढ़ें](https://www.markdownguide.org/)",
+  "resetLabel": "रीसेट करें",
+  "outputLabel": "रेंडर किया गया HTML",
+  "outputDescription": "सजाया गया पूर्वावलोकन और कन्वर्टर द्वारा बनाया गया सटीक HTML अंश देखें।",
+  "sanitizeLabel": "आउटपुट सैनिटाइज़ करें",
+  "sanitizeDescription": "पूर्वावलोकन, कॉपी, डाउनलोड या प्रिंट से पहले असुरक्षित टैग और एट्रिब्यूट हटाएँ।",
+  "previewLabel": "पूर्वावलोकन",
+  "previewDescription": "हल्की दस्तावेज़ शैली के साथ वर्तमान HTML अंश का सैंडबॉक्स रेंडर।",
+  "emptyTitle": "अभी कोई HTML नहीं",
+  "emptyDescription": "लाइव पूर्वावलोकन और निर्यात योग्य HTML बनाने के लिए Markdown लिखें या आयात करें।",
+  "charactersLabel": "अक्षर",
+  "linesLabel": "पंक्तियाँ",
+  "copyHtmlLabel": "HTML कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "downloadHtmlLabel": "HTML डाउनलोड करें",
+  "printHtmlLabel": "HTML प्रिंट करें"
+}

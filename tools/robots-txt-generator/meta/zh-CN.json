@@ -1,0 +1,4 @@
+{
+  "name": "robots.txt 生成器",
+  "description": "生成 robots.txt 文件，包含 User-agent 规则、Allow/Disallow 路径和 Sitemap 链接。"
+}

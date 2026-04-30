@@ -1,0 +1,23 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownDescription": "Pisz Markdown bezpośrednio lub zaimportuj plik tekstowy, a następnie dopracuj wynik w jednym obszarze roboczym.",
+  "markdownPlaceholder": "Wpisz tutaj Markdown...",
+  "importFromFileLabel": "Importuj z pliku",
+  "loadSampleLabel": "Załaduj przykład",
+  "sampleMarkdown": "# Notatki wydania\n\nMarkdown nadal łatwo się pisze, a HTML daje końcowy znacznik gotowy do publikacji.\n\n## Ten przykład zawiera\n\n- nagłówki\n- wyróżnienie i **pogrubiony tekst**\n- listy i linki\n\n> Przełącz oczyszczanie, gdy musisz sprawdzić surowy fragment.\n\n[Przeczytaj dokumentację](https://www.markdownguide.org/)",
+  "resetLabel": "Resetuj",
+  "outputLabel": "Wygenerowany HTML",
+  "outputDescription": "Sprawdź stylizowany podgląd i dokładny fragment HTML wygenerowany przez konwerter.",
+  "sanitizeLabel": "Oczyść wynik",
+  "sanitizeDescription": "Usuwa niebezpieczne tagi i atrybuty przed podglądem, kopiowaniem, pobieraniem lub drukiem.",
+  "previewLabel": "Podgląd",
+  "previewDescription": "Izolowane renderowanie bieżącego fragmentu HTML z lekkim stylem dokumentu.",
+  "emptyTitle": "Jeszcze nie ma HTML",
+  "emptyDescription": "Wpisz lub zaimportuj Markdown, aby wygenerować podgląd na żywo i eksportowalny HTML.",
+  "charactersLabel": "Znaki",
+  "linesLabel": "Wiersze",
+  "copyHtmlLabel": "Kopiuj HTML",
+  "copiedLabel": "Skopiowano",
+  "downloadHtmlLabel": "Pobierz HTML",
+  "printHtmlLabel": "Drukuj HTML"
+}

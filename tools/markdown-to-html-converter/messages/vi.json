@@ -1,0 +1,23 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownDescription": "Soạn Markdown trực tiếp hoặc nhập tệp văn bản, rồi tinh chỉnh đầu ra trong cùng một không gian làm việc.",
+  "markdownPlaceholder": "Nhập Markdown tại đây...",
+  "importFromFileLabel": "Nhập từ tệp",
+  "loadSampleLabel": "Tải ví dụ",
+  "sampleMarkdown": "# Ghi chú phát hành\n\nMarkdown vẫn dễ viết, còn HTML cung cấp phần đánh dấu cuối cùng sẵn sàng xuất bản.\n\n## Mẫu này bao gồm\n\n- tiêu đề\n- nhấn mạnh và **văn bản đậm**\n- danh sách và liên kết\n\n> Bật tắt làm sạch khi bạn cần kiểm tra đoạn thô.\n\n[Đọc tài liệu](https://www.markdownguide.org/)",
+  "resetLabel": "Đặt lại",
+  "outputLabel": "HTML đã tạo",
+  "outputDescription": "Xem bản xem trước có định dạng và đoạn HTML chính xác do công cụ tạo ra.",
+  "sanitizeLabel": "Làm sạch đầu ra",
+  "sanitizeDescription": "Loại bỏ thẻ và thuộc tính không an toàn trước khi xem trước, sao chép, tải xuống hoặc in.",
+  "previewLabel": "Xem trước",
+  "previewDescription": "Kết xuất trong sandbox của đoạn HTML hiện tại với kiểu tài liệu nhẹ.",
+  "emptyTitle": "Chưa có HTML",
+  "emptyDescription": "Nhập hoặc dán Markdown để tạo bản xem trước trực tiếp và HTML có thể xuất ra.",
+  "charactersLabel": "Ký tự",
+  "linesLabel": "Dòng",
+  "copyHtmlLabel": "Sao chép HTML",
+  "copiedLabel": "Đã sao chép",
+  "downloadHtmlLabel": "Tải HTML",
+  "printHtmlLabel": "In HTML"
+}

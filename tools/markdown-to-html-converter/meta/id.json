@@ -1,0 +1,4 @@
+{
+  "name": "Pengonversi Markdown → HTML",
+  "description": "Konversi Markdown ke HTML dengan marked dan opsional bersihkan dengan DOMPurify. Pratinjau, salin, dan unduh."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Trình phân tích CIDR",
+  "description": "Phân tích ký hiệu CIDR để có thông tin chi tiết về địa chỉ IP và mạng, hỗ trợ định dạng IPv4 và IPv6. Nhận ngay địa chỉ mạng, địa chỉ broadcast và dải IP có thể sử dụng"
+}

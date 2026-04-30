@@ -1,0 +1,4 @@
+{
+  "name": "Generatore robots.txt",
+  "description": "Genera file robots.txt con regole user-agent, percorsi allow/disallow e link alla sitemap."
+}

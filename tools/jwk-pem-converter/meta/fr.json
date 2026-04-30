@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur JWK ↔ PEM",
+  "description": "Convertit les clés JWK et PEM localement. Prend en charge les formats de clés RSA, EC et OKP."
+}

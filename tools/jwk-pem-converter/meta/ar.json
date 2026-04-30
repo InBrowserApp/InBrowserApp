@@ -1,0 +1,4 @@
+{
+  "name": "محول JWK ↔ PEM",
+  "description": "حوّل مفاتيح JWK وPEM محليًا. يدعم تنسيقات مفاتيح RSA وEC وOKP."
+}

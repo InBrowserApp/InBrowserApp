@@ -1,5 +1,7 @@
 export {
+  ArrowDown,
   AtSign,
+  ArrowUp,
   ArrowLeftRight,
   ArrowRight,
   BadgeCheck,
@@ -29,6 +31,8 @@ export {
   Network,
   Pause,
   Play,
+  Plus,
+  Printer,
   RefreshCcw,
   Search,
   Sparkles,

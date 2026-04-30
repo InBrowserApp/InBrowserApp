@@ -2946,6 +2946,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "cidr-parser",
+    category: "network",
+    icon: "network",
+    tags: ["cidr", "ip", "network", "subnet", "ipv4", "ipv6", "parser"],
+    locales: {
+      ar: {
+        name: "محلل CIDR",
+        description:
+          "تحليل تدوين CIDR للحصول على معلومات مفصلة حول عناوين IP والشبكات، يدعم تنسيقات IPv4 و IPv6. احصل فوراً على عنوان الشبكة وعنوان البث ونطاق عناوين IP القابلة للاستخدام",
+      },
+      de: {
+        name: "CIDR-Parser",
+        description:
+          "Analysieren Sie CIDR-Notation, um detaillierte Informationen über IP-Adressen und Netzwerke zu erhalten, unterstützt IPv4- und IPv6-Formate. Erhalten Sie sofort Netzwerkadresse, Broadcast-Adresse und Bereich nutzbarer IPs",
+      },
+      en: {
+        name: "CIDR Parser",
+        description:
+          "Parse CIDR notation to inspect IPv4 or IPv6 network ranges, masks, and integer boundaries directly in the browser.",
+      },
+      es: {
+        name: "Analizador CIDR",
+        description:
+          "Analiza la notación CIDR para obtener información detallada sobre direcciones IP y redes, compatible con formatos IPv4 e IPv6. Obtén la dirección de red, dirección de difusión y rango de IPs utilizables instantáneamente",
+      },
+      fr: {
+        name: "Analyseur CIDR",
+        description:
+          "Analysez la notation CIDR pour obtenir des informations détaillées sur les adresses IP et les réseaux, prenant en charge les formats IPv4 et IPv6. Obtenez l'adresse réseau, l'adresse de diffusion et la plage d'IP utilisables instantanément",
+      },
+      he: {
+        name: "מנתח CIDR",
+        description:
+          "נתח סימון CIDR כדי לקבל מידע מפורט על כתובות IP ורשתות, תומך בפורמטים IPv4 ו-IPv6. קבל מיידית כתובת רשת, כתובת שידור וטווח של IPs שמישים",
+      },
+      hi: {
+        name: "CIDR पार्सर",
+        description:
+          "IP पतों और नेटवर्क के बारे में विस्तृत जानकारी प्राप्त करने के लिए CIDR नोटेशन को पार्स करें, IPv4 और IPv6 प्रारूपों का समर्थन करता है। तुरंत नेटवर्क पता, ब्रॉडकास्ट पता और उपयोग योग्य IP की रेंज प्राप्त करें",
+      },
+      id: {
+        name: "Parser CIDR",
+        description:
+          "Parse notasi CIDR untuk mendapatkan informasi detail tentang alamat IP dan jaringan, mendukung format IPv4 dan IPv6. Dapatkan alamat jaringan, alamat broadcast, dan rentang IP yang dapat digunakan secara instan",
+      },
+      it: {
+        name: "Parser CIDR",
+        description:
+          "Analizza la notazione CIDR per ottenere informazioni dettagliate su indirizzi IP e reti, supportando formati IPv4 e IPv6. Ottieni istantaneamente indirizzo di rete, indirizzo broadcast e range di IP utilizzabili",
+      },
+      ja: {
+        name: "CIDR パーサー",
+        description:
+          "CIDR 記法を解析して IP アドレスとネットワークの詳細情報を取得します。IPv4 と IPv6 形式をサポート。ネットワークアドレス、ブロードキャストアドレス、使用可能な IP 範囲を即座に取得",
+      },
+      ko: {
+        name: "CIDR 파서",
+        description:
+          "CIDR 표기법을 분석하여 IP 주소와 네트워크의 자세한 정보를 얻습니다. IPv4 및 IPv6 형식을 지원합니다. 네트워크 주소, 브로드캐스트 주소 및 사용 가능한 IP 범위를 즉시 확인하세요",
+      },
+      ms: {
+        name: "Parser CIDR",
+        description:
+          "Hurai notasi CIDR untuk mendapatkan maklumat terperinci tentang alamat IP dan rangkaian, menyokong format IPv4 dan IPv6. Dapatkan alamat rangkaian, alamat siaran dan julat IP yang boleh digunakan dengan serta-merta",
+      },
+      nl: {
+        name: "CIDR-parser",
+        description:
+          "Parseer CIDR-notatie om gedetailleerde informatie over IP-adressen en netwerken te krijgen, ondersteunt IPv4- en IPv6-formaten. Verkrijg direct netwerkadres, broadcast-adres en bereik van bruikbare IPs",
+      },
+      no: {
+        name: "CIDR-parser",
+        description:
+          "Parse CIDR-notasjon for å få detaljert informasjon om IP-adresser og nettverk, støtter IPv4- og IPv6-formater. Få nettverksadresse, kringkastingsadresse og område med brukbare IPer øyeblikkelig",
+      },
+      pl: {
+        name: "Parser CIDR",
+        description:
+          "Analizuj notację CIDR, aby uzyskać szczegółowe informacje o adresach IP i sieciach, obsługuje formaty IPv4 i IPv6. Natychmiast uzyskaj adres sieci, adres rozgłoszeniowy i zakres użytecznych IP",
+      },
+      pt: {
+        name: "Parser CIDR",
+        description:
+          "Analise a notação CIDR para obter informações detalhadas sobre endereços IP e redes, suportando formatos IPv4 e IPv6. Obtenha instantaneamente endereço de rede, endereço de broadcast e faixa de IPs utilizáveis",
+      },
+      ru: {
+        name: "CIDR-парсер",
+        description:
+          "Анализируйте CIDR-нотацию для получения детальной информации об IP-адресах и сетях, поддерживает форматы IPv4 и IPv6. Мгновенно получайте сетевой адрес, широковещательный адрес и диапазон используемых IP",
+      },
+      sv: {
+        name: "CIDR-parser",
+        description:
+          "Analysera CIDR-notation för att få detaljerad information om IP-adresser och nätverk, stöder IPv4- och IPv6-format. Få omedelbart nätverksadress, broadcast-adress och intervall av användbara IPs",
+      },
+      th: {
+        name: "ตัวแยกวิเคราะห์ CIDR",
+        description:
+          "แยกวิเคราะห์รูปแบบ CIDR เพื่อรับข้อมูลโดยละเอียดเกี่ยวกับที่อยู่ IP และเครือข่าย รองรับรูปแบบ IPv4 และ IPv6 รับที่อยู่เครือข่าย ที่อยู่ broadcast และช่วง IP ที่ใช้ได้ทันที",
+      },
+      tr: {
+        name: "CIDR Ayrıştırıcı",
+        description:
+          "IP adresleri ve ağlar hakkında ayrıntılı bilgi almak için CIDR notasyonunu ayrıştırın, IPv4 ve IPv6 formatlarını destekler. Ağ adresi, yayın adresi ve kullanılabilir IP aralığını anında alın",
+      },
+      vi: {
+        name: "Trình phân tích CIDR",
+        description:
+          "Phân tích ký hiệu CIDR để có thông tin chi tiết về địa chỉ IP và mạng, hỗ trợ định dạng IPv4 và IPv6. Nhận ngay địa chỉ mạng, địa chỉ broadcast và dải IP có thể sử dụng",
+      },
+      "zh-CN": {
+        name: "CIDR 解析器",
+        description:
+          "解析 CIDR 记号以获取 IP 地址和网络的详细信息，支持 IPv4 和 IPv6 格式。立即获取网络地址、广播地址和可用 IP 范围",
+      },
+      "zh-TW": {
+        name: "CIDR 解析器",
+        description:
+          "解析 CIDR 記號以獲取 IP 位址和網路的詳細資訊，支援 IPv4 和 IPv6 格式。立即獲取網路位址、廣播位址和可用 IP 範圍",
+      },
+    },
+  },
+  {
     slug: "color-contrast-checker",
     category: "web",
     icon: "image",
@@ -3579,6 +3702,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "信用卡號驗證器",
         description: "使用 Luhn 演算法驗證信用卡號並識別卡品牌",
+      },
+    },
+  },
+  {
+    slug: "css-box-shadow-generator",
+    category: "web",
+    icon: "image",
+    tags: ["css", "box-shadow", "shadow", "design", "generator"],
+    locales: {
+      ar: {
+        name: "مولد ظل الصندوق CSS",
+        description:
+          "أنشئ قيم CSS box-shadow متعددة الطبقات مع معاينة مباشرة وخيار inset وعناصر تحكم دقيقة.",
+      },
+      de: {
+        name: "CSS-Box-Shadow-Generator",
+        description:
+          "Erstelle mehrschichtige CSS-Box-Shadow-Werte mit Live-Vorschau, Inset-Option und präziser Steuerung.",
+      },
+      en: {
+        name: "CSS Box Shadow Generator",
+        description:
+          "Create multi-layer CSS box-shadow values with live preview, inset toggles, and precise controls.",
+      },
+      es: {
+        name: "Generador de Sombras CSS",
+        description:
+          "Crea valores CSS box-shadow de múltiples capas con vista previa en vivo, opción inset y controles precisos.",
+      },
+      fr: {
+        name: "Générateur d'ombres CSS",
+        description:
+          "Créez des box-shadow CSS multicouches avec aperçu en direct, option inset et contrôles précis.",
+      },
+      he: {
+        name: "מחולל Box Shadow של CSS",
+        description:
+          "צור ערכי CSS box-shadow מרובי שכבות עם תצוגה חיה, אפשרות inset ובקרות מדויקות.",
+      },
+      hi: {
+        name: "CSS बॉक्स शैडो जनरेटर",
+        description:
+          "लाइव प्रीव्यू, inset टॉगल और सटीक नियंत्रणों के साथ मल्टी-लेयर CSS box-shadow मान बनाएं।",
+      },
+      id: {
+        name: "Generator Box Shadow CSS",
+        description:
+          "Buat nilai CSS box-shadow berlapis dengan pratinjau langsung, opsi inset, dan kontrol yang presisi.",
+      },
+      it: {
+        name: "Generatore di Ombre CSS",
+        description:
+          "Crea valori CSS box-shadow multilivello con anteprima live, opzione inset e controlli precisi.",
+      },
+      ja: {
+        name: "CSS ボックスシャドウ生成器",
+        description:
+          "複数レイヤーの CSS box-shadow をライブプレビュー、inset 切替、精密コントロールで作成。",
+      },
+      ko: {
+        name: "CSS 박스 섀도 생성기",
+        description:
+          "라이브 미리보기, inset 토글, 정밀 컨트롤로 다중 레이어 CSS box-shadow 값을 생성합니다.",
+      },
+      ms: {
+        name: "Penjana Box Shadow CSS",
+        description:
+          "Cipta nilai CSS box-shadow berbilang lapisan dengan pratonton langsung, pilihan inset dan kawalan tepat.",
+      },
+      nl: {
+        name: "CSS Box Shadow-generator",
+        description:
+          "Maak meerlagige CSS box-shadow-waarden met live preview, inset-optie en nauwkeurige bediening.",
+      },
+      no: {
+        name: "CSS Box Shadow-generator",
+        description:
+          "Lag flerlagede CSS box-shadow-verdier med live forhåndsvisning, inset-alternativ og presise kontroller.",
+      },
+      pl: {
+        name: "Generator CSS Box Shadow",
+        description:
+          "Twórz wielowarstwowe wartości CSS box-shadow z podglądem na żywo, opcją inset i precyzyjną kontrolą.",
+      },
+      pt: {
+        name: "Gerador de Box Shadow CSS",
+        description:
+          "Crie valores CSS box-shadow em múltiplas camadas com pré-visualização ao vivo, opção inset e controles precisos.",
+      },
+      ru: {
+        name: "Генератор CSS Box Shadow",
+        description:
+          "Создавайте многослойные значения CSS box-shadow с живым превью, inset-переключателем и точными настройками.",
+      },
+      sv: {
+        name: "CSS Box Shadow-generator",
+        description:
+          "Skapa flerskiktade CSS box-shadow-värden med liveförhandsvisning, inset-alternativ och exakta kontroller.",
+      },
+      th: {
+        name: "เครื่องมือสร้างเงากล่อง CSS",
+        description:
+          "สร้างค่า CSS box-shadow หลายชั้น พร้อมพรีวิวแบบเรียลไทม์ ตัวเลือก inset และการควบคุมที่ละเอียด.",
+      },
+      tr: {
+        name: "CSS Box Shadow Oluşturucu",
+        description:
+          "Canlı önizleme, inset seçeneği ve hassas kontrollerle çok katmanlı CSS box-shadow değerleri oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo Box Shadow CSS",
+        description:
+          "Tạo giá trị CSS box-shadow nhiều lớp với xem trước trực tiếp, tùy chọn inset và điều khiển chi tiết.",
+      },
+      "zh-CN": {
+        name: "CSS 阴影生成器",
+        description:
+          "生成多层 CSS box-shadow，提供实时预览、内阴影开关与精细参数控制。",
+      },
+      "zh-TW": {
+        name: "CSS 陰影產生器",
+        description:
+          "產生多層 CSS box-shadow，提供即時預覽、內陰影切換與精細參數控制。",
       },
     },
   },
@@ -7813,6 +8059,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "jwk-pem-converter",
+    category: "web",
+    icon: "lock",
+    tags: [
+      "jwk",
+      "pem",
+      "key",
+      "rsa",
+      "ec",
+      "okp",
+      "ed25519",
+      "x25519",
+      "crypto",
+      "convert",
+      "security",
+    ],
+    locales: {
+      ar: {
+        name: "محول JWK ↔ PEM",
+        description:
+          "حوّل مفاتيح JWK وPEM محليًا. يدعم تنسيقات مفاتيح RSA وEC وOKP.",
+      },
+      de: {
+        name: "JWK ↔ PEM Konverter",
+        description:
+          "Konvertiert JWK- und PEM-Schlüssel lokal. Unterstützt RSA-, EC- und OKP-Schlüsselformate.",
+      },
+      en: {
+        name: "JWK ↔ PEM Converter",
+        description:
+          "Convert JWK and PEM keys locally. Supports RSA, EC, and OKP key formats.",
+      },
+      es: {
+        name: "Conversor JWK ↔ PEM",
+        description:
+          "Convierte claves JWK y PEM localmente. Compatible con formatos de clave RSA, EC y OKP.",
+      },
+      fr: {
+        name: "Convertisseur JWK ↔ PEM",
+        description:
+          "Convertit les clés JWK et PEM localement. Prend en charge les formats de clés RSA, EC et OKP.",
+      },
+      he: {
+        name: "ממיר JWK ↔ PEM",
+        description:
+          "ממיר מפתחות JWK ו‑PEM מקומית. תומך בפורמטי מפתחות RSA, EC ו‑OKP.",
+      },
+      hi: {
+        name: "JWK ↔ PEM कन्वर्टर",
+        description:
+          "JWK और PEM कुंजियों को लोकली कन्वर्ट करें। RSA, EC और OKP कुंजी फ़ॉर्मैट समर्थित।",
+      },
+      id: {
+        name: "Konverter JWK ↔ PEM",
+        description:
+          "Konversi kunci JWK dan PEM secara lokal. Mendukung format kunci RSA, EC, dan OKP.",
+      },
+      it: {
+        name: "Convertitore JWK ↔ PEM",
+        description:
+          "Converte chiavi JWK e PEM in locale. Supporta i formati di chiave RSA, EC e OKP.",
+      },
+      ja: {
+        name: "JWK ↔ PEM 変換",
+        description:
+          "JWK と PEM の鍵をローカルで変換します。RSA、EC、OKP の鍵形式に対応。",
+      },
+      ko: {
+        name: "JWK ↔ PEM 변환기",
+        description:
+          "JWK와 PEM 키를 로컬에서 변환합니다. RSA, EC, OKP 키 형식을 지원합니다.",
+      },
+      ms: {
+        name: "Penukar JWK ↔ PEM",
+        description:
+          "Tukar kunci JWK dan PEM secara tempatan. Menyokong format kunci RSA, EC dan OKP.",
+      },
+      nl: {
+        name: "JWK ↔ PEM-converter",
+        description:
+          "Converteer JWK- en PEM-sleutels lokaal. Ondersteunt RSA-, EC- en OKP-sleutelformaten.",
+      },
+      no: {
+        name: "JWK ↔ PEM-konverter",
+        description:
+          "Konverter JWK- og PEM-nøkler lokalt. Støtter RSA-, EC- og OKP-nøkkelformater.",
+      },
+      pl: {
+        name: "Konwerter JWK ↔ PEM",
+        description:
+          "Lokalna konwersja kluczy JWK i PEM. Obsługuje formaty kluczy RSA, EC i OKP.",
+      },
+      pt: {
+        name: "Conversor JWK ↔ PEM",
+        description:
+          "Converta chaves JWK e PEM localmente. Suporta formatos de chave RSA, EC e OKP.",
+      },
+      ru: {
+        name: "Конвертер JWK ↔ PEM",
+        description:
+          "Локально преобразует ключи JWK и PEM. Поддерживает форматы ключей RSA, EC и OKP.",
+      },
+      sv: {
+        name: "JWK ↔ PEM-omvandlare",
+        description:
+          "Konvertera JWK- och PEM-nycklar lokalt. Stöd för RSA-, EC- och OKP-nyckelformat.",
+      },
+      th: {
+        name: "ตัวแปลง JWK ↔ PEM",
+        description: "แปลงคีย์ JWK และ PEM แบบโลคัล รองรับรูปแบบคีย์ RSA, EC และ OKP",
+      },
+      tr: {
+        name: "JWK ↔ PEM Dönüştürücü",
+        description:
+          "JWK ve PEM anahtarlarını yerelde dönüştürür. RSA, EC ve OKP anahtar biçimlerini destekler.",
+      },
+      vi: {
+        name: "Trình chuyển đổi JWK ↔ PEM",
+        description:
+          "Chuyển đổi khóa JWK và PEM cục bộ. Hỗ trợ các định dạng khóa RSA, EC và OKP.",
+      },
+      "zh-CN": {
+        name: "JWK ↔ PEM 转换器",
+        description: "本地转换 JWK 与 PEM 密钥，支持 RSA、EC 与 OKP 密钥格式",
+      },
+      "zh-TW": {
+        name: "JWK ↔ PEM 轉換器",
+        description: "在本機轉換 JWK 與 PEM 金鑰，支援 RSA、EC 與 OKP 金鑰格式",
+      },
+    },
+  },
+  {
     slug: "keccak-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -8573,6 +8951,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "MAC 位址轉 IPv6 鏈路本地位址轉換器",
         description:
           "將 MAC 位址轉換為 IPv6 鏈路本地位址。輸入任何 MAC 位址，立即獲得對應的 IPv6 鏈路本地位址。",
+      },
+    },
+  },
+  {
+    slug: "markdown-to-html-converter",
+    category: "developer",
+    icon: "file-text",
+    tags: ["markdown", "html", "converter", "preview", "sanitize", "docs"],
+    locales: {
+      ar: {
+        name: "محول Markdown → HTML",
+        description:
+          "حوّل Markdown إلى HTML باستخدام marked، مع خيار التنقية عبر DOMPurify. معاينة ونسخ وتنزيل.",
+      },
+      de: {
+        name: "Markdown → HTML Konverter",
+        description:
+          "Wandelt Markdown mit marked in HTML um, optional mit DOMPurify säubern. Vorschau, kopieren und herunterladen.",
+      },
+      en: {
+        name: "Markdown to HTML Converter",
+        description:
+          "Convert Markdown to HTML using marked, optionally sanitize with DOMPurify. Preview, copy, and download.",
+      },
+      es: {
+        name: "Convertidor Markdown → HTML",
+        description:
+          "Convierte Markdown a HTML con marked y, opcionalmente, sanea con DOMPurify. Previsualiza, copia y descarga.",
+      },
+      fr: {
+        name: "Convertisseur Markdown → HTML",
+        description:
+          "Convertissez Markdown en HTML avec marked, avec nettoyage DOMPurify en option. Aperçu, copie et téléchargement.",
+      },
+      he: {
+        name: "ממיר Markdown → HTML",
+        description:
+          "המר Markdown ל־HTML בעזרת marked, עם סינון אופציונלי ב־DOMPurify. תצוגה מקדימה, העתקה והורדה.",
+      },
+      hi: {
+        name: "Markdown → HTML परिवर्तक",
+        description:
+          "marked से Markdown को HTML में बदलें, वैकल्पिक रूप से DOMPurify से स्वच्छ करें। पूर्वावलोकन, कॉपी और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengonversi Markdown → HTML",
+        description:
+          "Konversi Markdown ke HTML dengan marked dan opsional bersihkan dengan DOMPurify. Pratinjau, salin, dan unduh.",
+      },
+      it: {
+        name: "Convertitore Markdown → HTML",
+        description:
+          "Converti Markdown in HTML con marked e, opzionalmente, sanifica con DOMPurify. Anteprima, copia e download.",
+      },
+      ja: {
+        name: "Markdown → HTML 変換",
+        description:
+          "marked で Markdown を HTML に変換し、必要に応じて DOMPurify でサニタイズ。プレビュー、コピー、ダウンロード。",
+      },
+      ko: {
+        name: "Markdown → HTML 변환기",
+        description:
+          "marked로 Markdown을 HTML로 변환하고 필요 시 DOMPurify로 정화합니다. 미리보기, 복사, 다운로드.",
+      },
+      ms: {
+        name: "Penukar Markdown → HTML",
+        description:
+          "Tukar Markdown kepada HTML dengan marked dan pilihan pembersihan DOMPurify. Pratonton, salin dan muat turun.",
+      },
+      nl: {
+        name: "Markdown → HTML-converter",
+        description:
+          "Zet Markdown om naar HTML met marked, optioneel schoonmaken met DOMPurify. Voorbeeld, kopiëren en downloaden.",
+      },
+      no: {
+        name: "Markdown → HTML-omformer",
+        description:
+          "Konverter Markdown til HTML med marked, valgfritt rense med DOMPurify. Forhåndsvis, kopier og last ned.",
+      },
+      pl: {
+        name: "Konwerter Markdown → HTML",
+        description:
+          "Konwertuj Markdown do HTML używając marked, opcjonalnie oczyszczaj DOMPurify. Podgląd, kopiuj i pobieraj.",
+      },
+      pt: {
+        name: "Conversor Markdown → HTML",
+        description:
+          "Converta Markdown em HTML com marked e, opcionalmente, higienize com DOMPurify. Pré-visualize, copie e baixe.",
+      },
+      ru: {
+        name: "Конвертер Markdown → HTML",
+        description:
+          "Преобразуйте Markdown в HTML с помощью marked и при необходимости очищайте DOMPurify. Предпросмотр, копирование и загрузка.",
+      },
+      sv: {
+        name: "Markdown → HTML-omvandlare",
+        description:
+          "Konvertera Markdown till HTML med marked, valfritt sanera med DOMPurify. Förhandsvisa, kopiera och ladda ner.",
+      },
+      th: {
+        name: "ตัวแปลง Markdown → HTML",
+        description:
+          "แปลง Markdown เป็น HTML ด้วย marked และเลือกทำความสะอาดด้วย DOMPurify แสดงตัวอย่าง คัดลอก และดาวน์โหลด",
+      },
+      tr: {
+        name: "Markdown → HTML Dönüştürücü",
+        description:
+          "Markdown’u marked ile HTML’e dönüştür, isteğe bağlı DOMPurify ile temizle. Önizleme, kopyalama ve indirme.",
+      },
+      vi: {
+        name: "Trình chuyển Markdown → HTML",
+        description:
+          "Chuyển Markdown sang HTML bằng marked, tùy chọn làm sạch với DOMPurify. Xem trước, sao chép và tải xuống.",
+      },
+      "zh-CN": {
+        name: "Markdown 转 HTML 转换器",
+        description:
+          "使用 marked 将 Markdown 转为 HTML，可选 DOMPurify 清理。预览、复制并下载。",
+      },
+      "zh-TW": {
+        name: "Markdown 轉 HTML 轉換器",
+        description:
+          "使用 marked 將 Markdown 轉為 HTML，可選 DOMPurify 清理。預覽、複製並下載。",
       },
     },
   },
@@ -11049,6 +11550,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "RIPEMD-256 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 RIPEMD-256 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  {
+    slug: "robots-txt-generator",
+    category: "web",
+    icon: "globe",
+    tags: [
+      "robots",
+      "robots-txt",
+      "seo",
+      "crawler",
+      "sitemap",
+      "generator",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "مولد robots.txt",
+        description:
+          "أنشئ ملفات robots.txt مع قواعد user-agent ومسارات السماح/المنع وروابط sitemap.",
+      },
+      de: {
+        name: "robots.txt-Generator",
+        description:
+          "Erstellen Sie robots.txt-Dateien mit User-Agent-Regeln, Allow/Disallow-Pfaden und Sitemap-Links.",
+      },
+      en: {
+        name: "robots.txt Generator",
+        description:
+          "Generate robots.txt files with user-agent rules, allow/disallow paths, and sitemap links.",
+      },
+      es: {
+        name: "Generador de robots.txt",
+        description:
+          "Genera archivos robots.txt con reglas de user-agent, rutas allow/disallow y enlaces de sitemap.",
+      },
+      fr: {
+        name: "Générateur robots.txt",
+        description:
+          "Générez des fichiers robots.txt avec des règles user-agent, des chemins allow/disallow et des liens de sitemap.",
+      },
+      he: {
+        name: "מחולל robots.txt",
+        description:
+          "צור קובצי robots.txt עם כללי User-agent, נתיבי Allow/Disallow וקישורי Sitemap.",
+      },
+      hi: {
+        name: "robots.txt जनरेटर",
+        description:
+          "User-agent नियमों, Allow/Disallow पाथ और Sitemap लिंक के साथ robots.txt फ़ाइलें बनाएं।",
+      },
+      id: {
+        name: "Generator robots.txt",
+        description:
+          "Buat file robots.txt dengan aturan user-agent, jalur allow/disallow, dan tautan sitemap.",
+      },
+      it: {
+        name: "Generatore robots.txt",
+        description:
+          "Genera file robots.txt con regole user-agent, percorsi allow/disallow e link alla sitemap.",
+      },
+      ja: {
+        name: "robots.txt ジェネレーター",
+        description:
+          "User-agent ルール、Allow/Disallow のパス、Sitemap リンクを含む robots.txt を生成します。",
+      },
+      ko: {
+        name: "robots.txt 생성기",
+        description:
+          "User-agent 규칙, Allow/Disallow 경로, Sitemap 링크가 포함된 robots.txt를 생성합니다.",
+      },
+      ms: {
+        name: "Penjana robots.txt",
+        description:
+          "Jana fail robots.txt dengan peraturan user-agent, laluan allow/disallow, dan pautan sitemap.",
+      },
+      nl: {
+        name: "robots.txt Generator",
+        description:
+          "Genereer robots.txt-bestanden met user-agentregels, allow/disallow-paden en sitemap-links.",
+      },
+      no: {
+        name: "robots.txt-generator",
+        description:
+          "Generer robots.txt-filer med user-agent-regler, allow/disallow-stier og sitemap-lenker.",
+      },
+      pl: {
+        name: "Generator robots.txt",
+        description:
+          "Generuj pliki robots.txt z regułami User-agent, ścieżkami Allow/Disallow i linkami do sitemap.",
+      },
+      pt: {
+        name: "Gerador de robots.txt",
+        description:
+          "Gere arquivos robots.txt com regras de user-agent, caminhos allow/disallow e links de sitemap.",
+      },
+      ru: {
+        name: "Генератор robots.txt",
+        description:
+          "Создавайте файлы robots.txt с правилами User-agent, путями Allow/Disallow и ссылками Sitemap.",
+      },
+      sv: {
+        name: "robots.txt-generator",
+        description:
+          "Generera robots.txt-filer med user-agent-regler, allow/disallow-sökvägar och sitemap-länkar.",
+      },
+      th: {
+        name: "ตัวสร้าง robots.txt",
+        description:
+          "สร้างไฟล์ robots.txt พร้อมกฎ user-agent เส้นทาง allow/disallow และลิงก์ sitemap",
+      },
+      tr: {
+        name: "robots.txt Oluşturucu",
+        description:
+          "User-agent kuralları, Allow/Disallow yolları ve Sitemap bağlantılarıyla robots.txt dosyaları oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo robots.txt",
+        description:
+          "Tạo tệp robots.txt với quy tắc user-agent, đường dẫn allow/disallow và liên kết sitemap.",
+      },
+      "zh-CN": {
+        name: "robots.txt 生成器",
+        description:
+          "生成 robots.txt 文件，包含 User-agent 规则、Allow/Disallow 路径和 Sitemap 链接。",
+      },
+      "zh-TW": {
+        name: "robots.txt 產生器",
+        description:
+          "產生 robots.txt 檔案，包含 User-agent 規則、Allow/Disallow 路徑與 Sitemap 連結。",
       },
     },
   },

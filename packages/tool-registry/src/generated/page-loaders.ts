@@ -34,11 +34,14 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "chinese-uppercase-number-converter": () =>
     import("@tool/chinese-uppercase-number-converter/page"),
   "chmod-calculator": () => import("@tool/chmod-calculator/page"),
+  "cidr-parser": () => import("@tool/cidr-parser/page"),
   "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
   "color-converter": () => import("@tool/color-converter/page"),
   "color-picker": () => import("@tool/color-picker/page"),
   "cookie-parser": () => import("@tool/cookie-parser/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
+  "css-box-shadow-generator": () =>
+    import("@tool/css-box-shadow-generator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "cuid2-generator": () => import("@tool/cuid2-generator/page"),
   "curl-converter": () => import("@tool/curl-converter/page"),
@@ -81,6 +84,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "json-to-xml-converter": () => import("@tool/json-to-xml-converter/page"),
   "json-to-yaml-converter": () => import("@tool/json-to-yaml-converter/page"),
   "jsonpath-tester": () => import("@tool/jsonpath-tester/page"),
+  "jwk-pem-converter": () => import("@tool/jwk-pem-converter/page"),
   "keccak-hash-text-or-file": () =>
     import("@tool/keccak-hash-text-or-file/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
@@ -89,6 +93,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),
   "mac-address-to-ipv6-link-local-address-converter": () =>
     import("@tool/mac-address-to-ipv6-link-local-address-converter/page"),
+  "markdown-to-html-converter": () =>
+    import("@tool/markdown-to-html-converter/page"),
   "md4-hash-text-or-file": () => import("@tool/md4-hash-text-or-file/page"),
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "mime-type-lookup": () => import("@tool/mime-type-lookup/page"),
@@ -116,6 +122,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/ripemd160-hash-text-or-file/page"),
   "ripemd256-hash-text-or-file": () =>
     import("@tool/ripemd256-hash-text-or-file/page"),
+  "robots-txt-generator": () => import("@tool/robots-txt-generator/page"),
   "roman-numeral-converter": () => import("@tool/roman-numeral-converter/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),

@@ -1,0 +1,23 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownDescription": "Пишите Markdown напрямую или импортируйте текстовый файл и дорабатывайте результат в одном рабочем пространстве.",
+  "markdownPlaceholder": "Введите Markdown...",
+  "importFromFileLabel": "Импорт из файла",
+  "loadSampleLabel": "Загрузить пример",
+  "sampleMarkdown": "# Примечания к выпуску\n\nMarkdown по-прежнему легко писать, а HTML дает готовую разметку для публикации.\n\n## Этот пример включает\n\n- заголовки\n- выделение и **жирный текст**\n- списки и ссылки\n\n> Переключайте очистку, когда нужно проверить исходный фрагмент.\n\n[Читать документацию](https://www.markdownguide.org/)",
+  "resetLabel": "Сбросить",
+  "outputLabel": "Сгенерированный HTML",
+  "outputDescription": "Просматривайте оформленный предпросмотр и точный HTML-фрагмент, созданный конвертером.",
+  "sanitizeLabel": "Очистить вывод",
+  "sanitizeDescription": "Удаляет небезопасные теги и атрибуты перед предпросмотром, копированием, загрузкой или печатью.",
+  "previewLabel": "Предпросмотр",
+  "previewDescription": "Изолированный рендер текущего HTML-фрагмента с легким документным оформлением.",
+  "emptyTitle": "HTML пока нет",
+  "emptyDescription": "Введите или импортируйте Markdown, чтобы получить живой предпросмотр и HTML для экспорта.",
+  "charactersLabel": "Символы",
+  "linesLabel": "Строки",
+  "copyHtmlLabel": "Копировать HTML",
+  "copiedLabel": "Скопировано",
+  "downloadHtmlLabel": "Скачать HTML",
+  "printHtmlLabel": "Печать HTML"
+}

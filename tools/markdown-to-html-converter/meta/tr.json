@@ -1,0 +1,4 @@
+{
+  "name": "Markdown → HTML Dönüştürücü",
+  "description": "Markdown’u marked ile HTML’e dönüştür, isteğe bağlı DOMPurify ile temizle. Önizleme, kopyalama ve indirme."
+}
