@@ -102,15 +102,18 @@ afterEach(() => {
 })
 
 describe("LocalFontBookClient", () => {
-  test("shows the unsupported message when Local Font Access is unavailable", () => {
+  test("shows the unsupported message when Local Font Access is unavailable", async () => {
     Reflect.deleteProperty(window, "queryLocalFonts")
 
     render(<LocalFontBookClient messages={messages} />)
 
-    expect(screen.getByText(messages.statusUnsupported)).toBeTruthy()
     expect(
       screen.getByRole("button", { name: messages.loadButton })
     ).toHaveProperty("disabled", true)
+
+    await waitFor(() => {
+      expect(screen.getByText(messages.statusUnsupported)).toBeTruthy()
+    })
   })
 
   test("loads fonts, filters them, and updates the CSS snippet", async () => {
@@ -118,7 +121,7 @@ describe("LocalFontBookClient", () => {
 
     render(<LocalFontBookClient messages={messages} />)
 
-    fireEvent.click(screen.getByRole("button", { name: messages.loadButton }))
+    await clickLoadFonts()
 
     await waitFor(() => {
       expect(screen.getByText("3 fonts available")).toBeTruthy()
@@ -158,7 +161,7 @@ describe("LocalFontBookClient", () => {
 
     render(<LocalFontBookClient messages={messages} />)
 
-    fireEvent.click(screen.getByRole("button", { name: messages.loadButton }))
+    await clickLoadFonts()
 
     await waitFor(() => {
       expect(screen.getByTestId("css-snippet").textContent).toContain(
@@ -194,7 +197,7 @@ describe("LocalFontBookClient", () => {
 
     render(<LocalFontBookClient messages={messages} />)
 
-    fireEvent.click(screen.getByRole("button", { name: messages.loadButton }))
+    await clickLoadFonts()
 
     await waitFor(() => {
       expect(screen.getByText(messages.statusDenied)).toBeTruthy()
@@ -218,7 +221,7 @@ describe("LocalFontBookClient", () => {
         .value
     ).toBe("Stored specimen")
 
-    fireEvent.click(screen.getByRole("button", { name: messages.loadButton }))
+    await clickLoadFonts()
 
     await waitFor(() => {
       expect(screen.getByTestId("font-Inter-Regular")).toBeTruthy()
@@ -255,6 +258,16 @@ function setQueryLocalFonts(value: unknown) {
     writable: true,
     value,
   })
+}
+
+async function clickLoadFonts() {
+  const loadButton = screen.getByRole("button", { name: messages.loadButton })
+
+  await waitFor(() => {
+    expect(loadButton).toHaveProperty("disabled", false)
+  })
+
+  fireEvent.click(loadButton)
 }
 
 const STORAGE_KEYS = {

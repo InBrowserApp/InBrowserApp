@@ -26,6 +26,7 @@ type LocalFontBookClientProps = Readonly<{
 }>
 
 type QueryLocalFonts = () => Promise<RawLocalFontData[]>
+type SupportState = "checking" | "supported" | "unsupported"
 
 const STORAGE_KEYS = {
   searchQuery: "tools:local-font-book:search",
@@ -53,10 +54,11 @@ function LocalFontBookClient({ messages }: LocalFontBookClientProps) {
   const [sampleText, setSampleText] = useState(DEFAULT_SAMPLE_TEXT)
   const [darkBackground, setDarkBackground] = useState(false)
   const [activeFontId, setActiveFontId] = useState("")
+  const [supportState, setSupportState] = useState<SupportState>("checking")
 
   const deferredSearchQuery = useDeferredValue(searchQuery)
-  const isSupported =
-    typeof window !== "undefined" && "queryLocalFonts" in window
+  const isSupportKnown = supportState !== "checking"
+  const isSupported = supportState === "supported"
   const visibleFonts = filterAndSortFonts(fonts, {
     query: deferredSearchQuery,
     filterStyle,
@@ -100,6 +102,13 @@ function LocalFontBookClient({ messages }: LocalFontBookClientProps) {
     setActiveFontId(
       window.localStorage.getItem(STORAGE_KEYS.activeFontId) ?? ""
     )
+  }, [])
+
+  useEffect(() => {
+    /* v8 ignore next */
+    if (typeof window === "undefined") return
+
+    setSupportState("queryLocalFonts" in window ? "supported" : "unsupported")
   }, [])
 
   useEffect(() => {
@@ -193,6 +202,7 @@ function LocalFontBookClient({ messages }: LocalFontBookClientProps) {
       : ""
 
   const statusMessage = resolveStatusMessage({
+    isSupportKnown,
     isSupported,
     loadError,
     permissionState,
@@ -292,16 +302,22 @@ function LocalFontBookClient({ messages }: LocalFontBookClientProps) {
 }
 
 function resolveStatusMessage({
+  isSupportKnown,
   isSupported,
   loadError,
   permissionState,
   messages,
 }: Readonly<{
+  isSupportKnown: boolean
   isSupported: boolean
   loadError: LocalFontLoadError
   permissionState: PermissionStateLike
   messages: LocalFontBookMessages
 }>) {
+  if (!isSupportKnown) {
+    return ""
+  }
+
   if (!isSupported) {
     return messages.statusUnsupported
   }
