@@ -46,7 +46,7 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
 
   if (result.status !== "success") {
     return (
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] xl:items-start">
+      <div className="grid gap-6">
         <InputCard
           inputId={inputId}
           value={value}
@@ -158,7 +158,7 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
   ]
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] xl:items-start">
+    <div className="grid gap-6">
       <InputCard
         inputId={inputId}
         value={value}
@@ -166,83 +166,81 @@ function CidrParserClient({ language, messages }: CidrParserClientProps) {
         onChange={setValue}
       />
 
-      <div className="grid gap-6">
-        <Card className="overflow-hidden border-border/70 shadow-sm">
-          <CardHeader className="border-b">
-            <div className="grid gap-1">
-              <CardTitle>{messages.resultTitle}</CardTitle>
-              <CardDescription>{messages.resultDescription}</CardDescription>
-            </div>
-            <CardAction>
-              <ToolCopyButton
-                value={details.canonicalCidr}
-                copyLabel={messages.copyLabel}
-                copiedLabel={messages.copiedLabel}
-              />
-            </CardAction>
-          </CardHeader>
-          <CardContent className="grid gap-5 py-5">
-            <div className="flex flex-wrap gap-2">
-              <Badge>{familyLabel}</Badge>
-              <Badge variant="secondary" dir="ltr">
-                {`/${details.prefix}`}
-              </Badge>
-              <Badge variant="outline">
-                <span>{`${messages.rangeStartLabel}:`}</span>
-                <span dir="ltr" className="font-mono [unicode-bidi:isolate]">
-                  {details.rangeStart}
-                </span>
-              </Badge>
-            </div>
+      <Card className="overflow-hidden border-border/70 shadow-sm">
+        <CardHeader className="border-b">
+          <div className="grid gap-1">
+            <CardTitle>{messages.resultTitle}</CardTitle>
+            <CardDescription>{messages.resultDescription}</CardDescription>
+          </div>
+          <CardAction>
+            <ToolCopyButton
+              value={details.canonicalCidr}
+              copyLabel={messages.copyLabel}
+              copiedLabel={messages.copiedLabel}
+            />
+          </CardAction>
+        </CardHeader>
+        <CardContent className="grid gap-5 py-5">
+          <div className="flex flex-wrap gap-2">
+            <Badge>{familyLabel}</Badge>
+            <Badge variant="secondary" dir="ltr">
+              {`/${details.prefix}`}
+            </Badge>
+            <Badge variant="outline">
+              <span>{`${messages.rangeStartLabel}:`}</span>
+              <span dir="ltr" className="font-mono [unicode-bidi:isolate]">
+                {details.rangeStart}
+              </span>
+            </Badge>
+          </div>
 
-            <div className="grid gap-2">
-              <p className="text-xs font-medium tracking-[0.16em] text-muted-foreground/80 uppercase">
-                {messages.overviewTitle}
-              </p>
-              <p
-                dir="ltr"
-                className="font-mono text-2xl leading-tight font-semibold tracking-tight break-all text-foreground [unicode-bidi:isolate] sm:text-3xl"
+          <div className="grid gap-2">
+            <p className="text-xs font-medium tracking-[0.16em] text-muted-foreground/80 uppercase">
+              {messages.overviewTitle}
+            </p>
+            <p
+              dir="ltr"
+              className="font-mono text-2xl leading-tight font-semibold tracking-tight break-all text-foreground [unicode-bidi:isolate] sm:text-3xl"
+            >
+              {details.canonicalCidr}
+            </p>
+            <p className="text-sm text-muted-foreground">
+              {messages.overviewDescription}
+            </p>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+            {overviewItems.map((item) => (
+              <div
+                key={item.label}
+                className="min-w-0 rounded-xl border border-border/70 bg-card p-4 shadow-xs"
               >
-                {details.canonicalCidr}
-              </p>
-              <p className="text-sm text-muted-foreground">
-                {messages.overviewDescription}
-              </p>
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-2 2xl:grid-cols-3">
-              {overviewItems.map((item) => (
-                <div
-                  key={item.label}
-                  className="min-w-0 rounded-xl border border-border/70 bg-card p-4 shadow-xs"
+                <p className="text-sm text-muted-foreground">{item.label}</p>
+                <p
+                  dir={item.direction}
+                  className="mt-2 font-mono text-sm leading-relaxed break-words text-foreground [unicode-bidi:isolate]"
                 >
-                  <p className="text-sm text-muted-foreground">{item.label}</p>
-                  <p
-                    dir={item.direction}
-                    className="mt-2 font-mono text-sm leading-relaxed break-words text-foreground [unicode-bidi:isolate]"
-                  >
-                    {item.value}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+                  {item.value}
+                </p>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
 
-        <div className="grid gap-6 lg:grid-cols-2">
-          <DetailsCard
-            title={messages.rangeTitle}
-            description={messages.rangeDescription}
-            items={rangeItems}
-            messages={messages}
-          />
-          <DetailsCard
-            title={messages.routingTitle}
-            description={messages.routingDescription}
-            items={routingItems}
-            messages={messages}
-          />
-        </div>
+      <div className="grid gap-6 xl:grid-cols-2">
+        <DetailsCard
+          title={messages.rangeTitle}
+          description={messages.rangeDescription}
+          items={rangeItems}
+          messages={messages}
+        />
+        <DetailsCard
+          title={messages.routingTitle}
+          description={messages.routingDescription}
+          items={routingItems}
+          messages={messages}
+        />
       </div>
     </div>
   )

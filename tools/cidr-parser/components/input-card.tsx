@@ -28,7 +28,7 @@ function InputCard({ inputId, value, messages, onChange }: InputCardProps) {
         <CardTitle>{messages.inputTitle}</CardTitle>
         <CardDescription>{messages.inputDescription}</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col gap-4 py-4">
+      <CardContent className="grid gap-4 py-4 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,24rem)] lg:items-start">
         <Field>
           <FieldContent>
             <FieldLabel htmlFor={inputId}>{messages.inputLabel}</FieldLabel>
