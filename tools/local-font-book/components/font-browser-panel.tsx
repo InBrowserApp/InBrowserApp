@@ -91,9 +91,15 @@ function FontBrowserPanel({
   const searchInputId = useId()
   const groupSwitchId = useId()
   const hasVisibleFonts = displayGroups.length > 0
-  const listViewportClassName = hasVisibleFonts
-    ? "h-[30rem] xl:h-[44rem] 2xl:h-[48rem]"
-    : "h-auto"
+  const visibleFontCount = displayGroups.reduce(
+    (count, group) => count + group.items.length,
+    0
+  )
+  const shouldConstrainListHeight = visibleFontCount > 8
+  const listViewportClassName =
+    hasVisibleFonts && shouldConstrainListHeight
+      ? "h-[30rem] xl:h-[44rem] 2xl:h-[48rem]"
+      : "h-auto"
 
   return (
     <ToolPanelCard className="h-auto min-w-0 overflow-hidden">
