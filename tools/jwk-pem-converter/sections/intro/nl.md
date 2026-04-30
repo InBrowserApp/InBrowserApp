@@ -1,13 +1,13 @@
 ## Wat is JWK ↔ PEM-conversie?
 
-JWK (JSON Web Key) is een JSON-formaat voor cryptografische sleutels dat wordt gebruikt in JOSE/JWT-systemen. Het kan RSA-, EC- of OKP-sleutels representeren en kan voorkomen in een JWK Set (JWKS).
+JWK (JSON Web Key) is sleutelmaterial in JSON-vorm dat wordt gebruikt door JOSE/JWT, JWKS-endpoints en serverless- of browserconfiguratie. Software kan het makkelijk lezen, maar CLI’s en infrastructuur die sleutelbestanden verwachten accepteren het minder vaak.
 
-PEM is een Base64-gecodeerde ASN.1/DER-sleutel met kopregels zoals BEGIN PUBLIC KEY of BEGIN PRIVATE KEY, en is gebruikelijk in TLS, OpenSSL en veel SDK's.
+PEM verpakt DER-sleuteldata met BEGIN/END-labels. Dat is het formaat waar OpenSSL, TLS-tools, API-gateways en veel SDKs meestal om vragen.
 
-Deze tool converteert sleutels in beide richtingen en behoudt het sleutelmateriaal wanneer je publieke (SPKI) of private (PKCS8) output kiest. Ondersteunde formaten zijn RSA, EC (P-256/384/521) en OKP-sleutelcontainers, en alles draait lokaal in je browser.
+Deze converter verbindt die formaten lokaal in je browser. Hij verwerkt RSA-, EC- (P-256/384/521) en OKP-sleutelcontainers, laat je vanuit JWK kiezen tussen publieke SPKI- of private PKCS8-PEM, en kan ondersteunde PEM-blokken terugzetten naar nette of compacte JWK JSON.
 
-Kies JWK → PEM wanneer een bibliotheek, gateway of CLI OpenSSL-achtige sleutelbestanden verwacht. Kies PEM → JWK wanneer je een sleutel in een JWKS moet opnemen, via JSON-configuratie moet doorgeven of in browser- of serverless-omgevingen wilt gebruiken. Bij het converteren van een private sleutel blijft het private materiaal behouden, dus deel alleen de publieke uitvoer als dat voldoende is.
+Gebruik publieke uitvoer wanneer je alleen verificatie of distributie nodig hebt. Private conversies tonen private sleuteldata op het scherm en in downloads, dus behandel het resultaat als een geheim en sluit het tabblad wanneer je klaar bent.
 
-- Gebruik een JWK/JWKS-sleutel met systemen die alleen PEM accepteren.
-- Exporteer PEM-sleutels voor JWT-bibliotheken, API-gateways of sleutel-distributie.
-- Deel publieke sleutels veilig zonder private-sleuteldata bloot te leggen.
+- Verplaats sleutels tussen JWKS/JSON-configuratie en OpenSSL-achtige PEM-bestanden.
+- Extraheer een publieke sleutel voordat je die deelt met JWT-verifiers, gateways of clients.
+- Converteer lokaal zonder sleutelmaterial naar een server te uploaden.

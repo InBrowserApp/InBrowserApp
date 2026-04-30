@@ -30,6 +30,7 @@
   "pemInputHint": "समर्थित: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "सजाया हुआ JSON",
   "outputTitle": "आउटपुट",
+  "outputDescription": "रूपांतरण इस ब्राउज़र में स्थानीय रूप से चलता है; कॉपी या डाउनलोड करने से पहले कुंजी की समीक्षा करें।",
   "downloadButton": "डाउनलोड",
   "useSampleLabel": "नमूना उपयोग करें",
   "clearLabel": "साफ़ करें",

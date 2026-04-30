@@ -30,6 +30,7 @@
   "pemInputHint": "Ondersteund: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "Opmaak JSON",
   "outputTitle": "Uitvoer",
+  "outputDescription": "De conversie wordt lokaal in deze browser uitgevoerd; controleer de sleutel voordat je die kopieert of downloadt.",
   "downloadButton": "Downloaden",
   "useSampleLabel": "Voorbeeld gebruiken",
   "clearLabel": "Wissen",

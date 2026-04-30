@@ -30,6 +30,7 @@
   "pemInputHint": "נתמך: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "JSON מעוצב",
   "outputTitle": "פלט",
+  "outputDescription": "ההמרה פועלת מקומית בדפדפן הזה; בדוק את המפתח לפני העתקה או הורדה.",
   "downloadButton": "הורדה",
   "useSampleLabel": "השתמשו בדוגמה",
   "clearLabel": "נקה",

@@ -30,6 +30,7 @@
   "pemInputHint": "지원: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "예쁜 JSON",
   "outputTitle": "출력",
+  "outputDescription": "변환은 이 브라우저에서 로컬로 실행됩니다. 복사하거나 다운로드하기 전에 키를 확인하세요.",
   "downloadButton": "다운로드",
   "useSampleLabel": "샘플 사용",
   "clearLabel": "지우기",

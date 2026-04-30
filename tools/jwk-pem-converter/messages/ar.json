@@ -30,6 +30,7 @@
   "pemInputHint": "المدعوم: PUBLIC KEY وPRIVATE KEY وRSA PUBLIC KEY وRSA PRIVATE KEY وEC PRIVATE KEY.",
   "prettyJson": "JSON منسق",
   "outputTitle": "الإخراج",
+  "outputDescription": "يتم التحويل محليًا في هذا المتصفح؛ راجع المفتاح قبل نسخه أو تنزيله.",
   "downloadButton": "تنزيل",
   "useSampleLabel": "استخدم المثال",
   "clearLabel": "مسح",

@@ -30,6 +30,7 @@
   "pemInputHint": "Disokong: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "JSON cantik",
   "outputTitle": "Output",
+  "outputDescription": "Penukaran berjalan secara setempat dalam pelayar ini; semak kunci sebelum menyalin atau memuat turunnya.",
   "downloadButton": "Muat turun",
   "useSampleLabel": "Guna sampel",
   "clearLabel": "Kosongkan",

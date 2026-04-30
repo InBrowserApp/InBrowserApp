@@ -32,6 +32,7 @@ type JwkPemConverterLocaleMessages = Readonly<{
   pemInputHint: string
   prettyJson: string
   outputTitle: string
+  outputDescription: string
   downloadButton: string
   useSampleLabel: string
   clearLabel: string

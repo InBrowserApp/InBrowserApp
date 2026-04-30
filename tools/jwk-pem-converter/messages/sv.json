@@ -30,6 +30,7 @@
   "pemInputHint": "Stöds: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "Formaterad JSON",
   "outputTitle": "Utdata",
+  "outputDescription": "Konverteringen körs lokalt i den här webbläsaren; granska nyckeln innan du kopierar eller laddar ner den.",
   "downloadButton": "Ladda ner",
   "useSampleLabel": "Använd exempel",
   "clearLabel": "Rensa",

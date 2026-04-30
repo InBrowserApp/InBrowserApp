@@ -64,6 +64,7 @@ describe("JwkPemConverterClient", () => {
     ).toBe("ltr")
 
     await waitForOutputToContain("BEGIN PRIVATE KEY")
+    expect(screen.getByText(messages.outputDescription)).toBeTruthy()
 
     fireEvent.click(screen.getByRole("button", { name: messages.clearLabel }))
 

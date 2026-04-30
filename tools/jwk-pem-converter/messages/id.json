@@ -30,6 +30,7 @@
   "pemInputHint": "Didukung: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "JSON rapi",
   "outputTitle": "Output",
+  "outputDescription": "Konversi berjalan secara lokal di browser ini; tinjau kunci sebelum menyalin atau mengunduhnya.",
   "downloadButton": "Unduh",
   "useSampleLabel": "Gunakan contoh",
   "clearLabel": "Bersihkan",

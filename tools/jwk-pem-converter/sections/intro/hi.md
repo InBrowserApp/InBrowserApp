@@ -1,13 +1,13 @@
 ## JWK ↔ PEM रूपांतरण क्या है?
 
-JWK (JSON Web Key) एक JSON आधारित क्रिप्टोग्राफ़िक कुंजी प्रारूप है, जो JOSE/JWT सिस्टम में उपयोग होता है। यह RSA, EC या OKP कुंजियों का प्रतिनिधित्व कर सकता है और JWK Set (JWKS) में भी आ सकता है।
+JWK (JSON Web Key) JSON आकार का key material है जिसका उपयोग JOSE/JWT, JWKS endpoints और serverless या browser configuration में होता है। Software इसे आसानी से पढ़ता है, लेकिन CLI और ऐसी infrastructure में यह कम स्वीकार्य होता है जो key files की अपेक्षा करती है।
 
-PEM एक Base64-एन्कोडेड ASN.1/DER कुंजी है, जिसमें BEGIN PUBLIC KEY या BEGIN PRIVATE KEY जैसी हेडर पंक्तियाँ होती हैं, और यह TLS, OpenSSL तथा कई SDK में सामान्य है।
+PEM DER key data को BEGIN/END labels के साथ wrap करता है; OpenSSL, TLS tooling, API gateways और कई SDKs आम तौर पर यही format मांगते हैं।
 
-यह टूल दोनों दिशाओं में कुंजियाँ बदलता है और सार्वजनिक (SPKI) या निजी (PKCS8) आउटपुट चुनते समय कुंजी सामग्री को सुरक्षित रखता है। समर्थित फ़ॉर्मैट में RSA, EC (P-256/384/521) और OKP कुंजी कंटेनर शामिल हैं, और सब कुछ आपके ब्राउज़र में लोकल रूप से चलता है।
+यह converter इन formats को आपके browser में locally bridge करता है। यह RSA, EC (P-256/384/521) और OKP key containers संभालता है, JWK से शुरू करने पर public SPKI या private PKCS8 PEM चुनने देता है, और supported PEM blocks को pretty या compact JWK JSON में बदल सकता है।
 
-जब किसी library, gateway या CLI को OpenSSL-style key files चाहिए हों, तब JWK → PEM चुनें। जब आपको किसी key को JWKS में रखना हो, JSON-based configuration से भेजना हो, या browser/serverless environment में इस्तेमाल करना हो, तब PEM → JWK चुनें। Private key conversion private material को बनाए रखता है, इसलिए अगर सामने वाले को सिर्फ public key चाहिए तो केवल public output ही साझा करें।
+जब आपको केवल verification या distribution चाहिए, public output का उपयोग करें। Private conversions screen और downloads में private key material दिखाते हैं, इसलिए result को secret की तरह संभालें और काम खत्म होने पर tab बंद करें।
 
-- JWK/JWKS कुंजी को उन सिस्टमों में उपयोग करें जो केवल PEM स्वीकार करते हैं।
-- JWT लाइब्रेरी, API गेटवे या कुंजी वितरण के लिए PEM कुंजियाँ एक्सपोर्ट करें।
-- निजी कुंजी डेटा उजागर किए बिना सार्वजनिक कुंजियाँ सुरक्षित रूप से साझा करें।
+- JWKS/JSON config और OpenSSL-style PEM files के बीच keys ले जाएँ।
+- JWT verifiers, gateways या clients के साथ साझा करने से पहले public key निकालें।
+- Key material को server पर upload किए बिना locally convert करें।

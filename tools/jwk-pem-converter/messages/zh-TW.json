@@ -30,6 +30,7 @@
   "pemInputHint": "支援：PUBLIC KEY、PRIVATE KEY、RSA PUBLIC KEY、RSA PRIVATE KEY、EC PRIVATE KEY。",
   "prettyJson": "美化 JSON",
   "outputTitle": "輸出",
+  "outputDescription": "轉換會在此瀏覽器本機執行；複製或下載前請先檢查金鑰。",
   "downloadButton": "下載",
   "useSampleLabel": "使用範例",
   "clearLabel": "清除",

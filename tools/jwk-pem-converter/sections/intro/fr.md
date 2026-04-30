@@ -1,13 +1,13 @@
 ## Qu'est-ce que la conversion JWK ↔ PEM ?
 
-JWK (JSON Web Key) est un format JSON pour les clés cryptographiques utilisé dans les systèmes JOSE/JWT. Il peut représenter des clés RSA, EC ou OKP et peut apparaître dans un JWK Set (JWKS).
+JWK (JSON Web Key) est du matériel de clé au format JSON utilisé par JOSE/JWT, les points de terminaison JWKS et les configurations serverless ou navigateur. Il est facile à lire pour les logiciels, mais moins accepté par les CLI et les infrastructures qui attendent des fichiers de clés.
 
-PEM est une clé ASN.1/DER encodée en Base64 avec des en-têtes tels que BEGIN PUBLIC KEY ou BEGIN PRIVATE KEY, courante dans TLS, OpenSSL et de nombreux SDK.
+PEM encapsule les données de clé DER avec des lignes BEGIN/END, le format généralement demandé par OpenSSL, les outils TLS, les passerelles API et de nombreux SDKs.
 
-Cet outil convertit les clés dans les deux sens, en préservant le matériau de clé lors du choix d'une sortie publique (SPKI) ou privée (PKCS8). Les formats pris en charge incluent RSA, EC (P-256/384/521) et les conteneurs de clés OKP, et tout fonctionne localement dans votre navigateur.
+Ce convertisseur relie ces formats localement dans votre navigateur. Il gère les conteneurs de clés RSA, EC (P-256/384/521) et OKP, permet de choisir une sortie PEM publique SPKI ou privée PKCS8 depuis un JWK, et peut reconvertir les blocs PEM pris en charge en JSON JWK lisible ou compact.
 
-Choisissez JWK → PEM lorsqu'une bibliothèque, une passerelle ou une CLI attend des fichiers de clés au format OpenSSL. Choisissez PEM → JWK lorsque vous devez intégrer une clé dans un JWKS, la transmettre via une configuration JSON ou l'utiliser dans un environnement navigateur ou serverless. La conversion d'une clé privée conserve le secret, donc ne partagez que la sortie publique lorsque cela suffit.
+Utilisez la sortie publique lorsque vous avez seulement besoin de vérification ou de distribution. Les conversions privées exposent le matériel de clé privée à l’écran et dans les téléchargements ; traitez donc le résultat comme un secret et fermez l’onglet ensuite.
 
-- Utilisez une clé JWK/JWKS avec des systèmes qui n'acceptent que le PEM.
-- Exportez des clés PEM pour des bibliothèques JWT, des passerelles API ou la distribution de clés.
-- Partagez des clés publiques en toute sécurité sans exposer les données de clé privée.
+- Déplacez des clés entre une configuration JWKS/JSON et des fichiers PEM de style OpenSSL.
+- Extrayez une clé publique avant de la partager avec des vérificateurs JWT, des passerelles ou des clients.
+- Convertissez localement sans envoyer le matériel de clé à un serveur.

@@ -30,6 +30,7 @@
   "pemInputHint": "Desteklenen: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "Biçimli JSON",
   "outputTitle": "Çıktı",
+  "outputDescription": "Dönüştürme bu tarayıcıda yerel olarak çalışır; anahtarı kopyalamadan veya indirmeden önce kontrol edin.",
   "downloadButton": "İndir",
   "useSampleLabel": "Örneği kullan",
   "clearLabel": "Temizle",

@@ -1,13 +1,13 @@
 ## Chuyển đổi JWK ↔ PEM là gì?
 
-JWK (JSON Web Key) là định dạng JSON cho khóa mật mã dùng trong hệ thống JOSE/JWT. Nó có thể biểu diễn khóa RSA, EC hoặc OKP và có thể nằm trong JWK Set (JWKS).
+JWK (JSON Web Key) là dữ liệu khóa ở dạng JSON được dùng bởi JOSE/JWT, endpoint JWKS và cấu hình serverless hoặc trình duyệt. Phần mềm đọc định dạng này dễ dàng, nhưng CLI và hạ tầng mong đợi tệp khóa thường ít chấp nhận hơn.
 
-PEM là khóa ASN.1/DER được mã hóa Base64 với các dòng tiêu đề như BEGIN PUBLIC KEY hoặc BEGIN PRIVATE KEY, phổ biến trong TLS, OpenSSL và nhiều SDK.
+PEM bọc dữ liệu khóa DER bằng nhãn BEGIN/END, đây là định dạng mà OpenSSL, công cụ TLS, API gateway và nhiều SDK thường yêu cầu.
 
-Công cụ này chuyển đổi khóa theo cả hai chiều, giữ nguyên vật liệu khóa khi chọn đầu ra công khai (SPKI) hoặc riêng tư (PKCS8). Các định dạng được hỗ trợ gồm RSA, EC (P-256/384/521) và bộ chứa khóa OKP, và mọi thứ chạy cục bộ trong trình duyệt.
+Trình chuyển đổi này nối hai định dạng ngay trong trình duyệt của bạn. Nó xử lý các container khóa RSA, EC (P-256/384/521) và OKP, cho phép chọn PEM công khai SPKI hoặc PEM riêng tư PKCS8 khi bắt đầu từ JWK, và có thể đổi các khối PEM được hỗ trợ trở lại JWK JSON đẹp hoặc gọn.
 
-Chọn JWK → PEM khi thư viện, gateway hoặc CLI cần tệp khóa theo kiểu OpenSSL. Chọn PEM → JWK khi bạn cần đưa khóa vào JWKS, truyền qua cấu hình dựa trên JSON, hoặc dùng trong môi trường trình duyệt hay serverless. Việc chuyển đổi khóa riêng tư vẫn giữ nguyên dữ liệu riêng, vì vậy hãy chỉ chia sẻ đầu ra công khai nếu như vậy là đủ.
+Dùng đầu ra công khai khi bạn chỉ cần xác minh hoặc phân phối. Chuyển đổi riêng tư hiển thị dữ liệu khóa riêng trên màn hình và trong tệp tải xuống, vì vậy hãy coi kết quả như bí mật và đóng tab khi hoàn tất.
 
-- Dùng khóa JWK/JWKS với các hệ thống chỉ chấp nhận PEM.
-- Xuất khóa PEM cho thư viện JWT, cổng API hoặc phân phối khóa.
-- Chia sẻ khóa công khai an toàn mà không lộ dữ liệu khóa riêng.
+- Di chuyển khóa giữa cấu hình JWKS/JSON và tệp PEM kiểu OpenSSL.
+- Trích xuất khóa công khai trước khi chia sẻ với bộ xác minh JWT, gateway hoặc client.
+- Chuyển đổi cục bộ mà không tải dữ liệu khóa lên máy chủ.

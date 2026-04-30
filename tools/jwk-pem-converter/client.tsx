@@ -255,6 +255,7 @@ function JwkPemConverterClient({
       <OutputCard
         copiedLabel={messages.copiedLabel}
         copyLabel={messages.copyResultLabel}
+        description={messages.outputDescription}
         downloadLabel={messages.downloadButton}
         downloadName={downloadName}
         downloadUrl={downloadUrl}

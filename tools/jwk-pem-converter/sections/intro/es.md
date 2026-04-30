@@ -1,13 +1,13 @@
 ## ¿Qué es la conversión JWK ↔ PEM?
 
-JWK (JSON Web Key) es un formato JSON para claves criptográficas usado en sistemas JOSE/JWT. Puede representar claves RSA, EC u OKP y puede aparecer dentro de un JWK Set (JWKS).
+JWK (JSON Web Key) es material de clave en formato JSON usado por JOSE/JWT, endpoints JWKS y configuración serverless o de navegador. Es fácil de leer para el software, pero menos aceptado por CLIs e infraestructura que esperan archivos de clave.
 
-PEM es una clave ASN.1/DER codificada en Base64 con encabezados como BEGIN PUBLIC KEY o BEGIN PRIVATE KEY, común en TLS, OpenSSL y muchas SDK.
+PEM envuelve datos de clave DER con etiquetas BEGIN/END, que es lo que suelen pedir OpenSSL, herramientas TLS, gateways de API y muchos SDKs.
 
-Esta herramienta convierte claves en ambos sentidos, preservando el material de clave al elegir salida pública (SPKI) o privada (PKCS8). Los formatos compatibles incluyen RSA, EC (P-256/384/521) y contenedores de clave OKP, y todo se ejecuta localmente en tu navegador.
+Este conversor une ambos formatos localmente en tu navegador. Maneja contenedores de claves RSA, EC (P-256/384/521) y OKP, permite elegir PEM público SPKI o privado PKCS8 al partir de JWK, y puede convertir bloques PEM compatibles de vuelta a JWK JSON bonito o compacto.
 
-Elige JWK → PEM cuando una biblioteca, pasarela o CLI espere archivos de clave al estilo OpenSSL. Elige PEM → JWK cuando necesites incluir una clave en un JWKS, pasarla mediante configuración basada en JSON o usarla en entornos de navegador o serverless. La conversión de claves privadas conserva el material privado, así que comparte solo la salida pública cuando sea suficiente.
+Usa salida pública cuando solo necesites verificación o distribución. Las conversiones privadas muestran material de clave privada en pantalla y en descargas, así que trata el resultado como un secreto y cierra la pestaña al terminar.
 
-- Usa una clave JWK/JWKS en sistemas que solo aceptan PEM.
-- Exporta claves PEM para bibliotecas JWT, pasarelas de API o distribución de claves.
-- Comparte claves públicas de forma segura sin exponer datos de la clave privada.
+- Mueve claves entre configuración JWKS/JSON y archivos PEM estilo OpenSSL.
+- Extrae una clave pública antes de compartirla con verificadores JWT, gateways o clientes.
+- Convierte localmente sin subir material de clave a un servidor.

@@ -1,13 +1,13 @@
 ## Apakah penukaran JWK ↔ PEM?
 
-JWK (JSON Web Key) ialah format JSON untuk kunci kriptografi yang digunakan dalam sistem JOSE/JWT. Ia boleh mewakili kunci RSA, EC atau OKP dan boleh berada dalam JWK Set (JWKS).
+JWK (JSON Web Key) ialah bahan kunci berbentuk JSON yang digunakan oleh JOSE/JWT, endpoint JWKS, serta konfigurasi serverless atau pelayar. Ia mudah dibaca oleh perisian, tetapi kurang diterima oleh CLI dan infrastruktur yang mengharapkan fail kunci.
 
-PEM ialah kunci ASN.1/DER yang dikod Base64 dengan baris pengepala seperti BEGIN PUBLIC KEY atau BEGIN PRIVATE KEY, lazim dalam TLS, OpenSSL dan banyak SDK.
+PEM membalut data kunci DER dengan label BEGIN/END, iaitu format yang biasanya diminta oleh OpenSSL, alat TLS, gateway API dan banyak SDK.
 
-Alat ini menukar kunci dua hala, mengekalkan bahan kunci ketika memilih output awam (SPKI) atau peribadi (PKCS8). Format yang disokong termasuk RSA, EC (P-256/384/521) dan kontena kunci OKP, dan semuanya berjalan secara tempatan dalam pelayar.
+Penukar ini menghubungkan kedua-dua format secara setempat dalam pelayar anda. Ia mengendalikan bekas kunci RSA, EC (P-256/384/521) dan OKP, membolehkan anda memilih PEM awam SPKI atau peribadi PKCS8 apabila bermula daripada JWK, dan boleh menukar blok PEM yang disokong kembali kepada JWK JSON yang kemas atau padat.
 
-Pilih JWK → PEM apabila pustaka, gerbang atau CLI menjangkakan fail kunci gaya OpenSSL. Pilih PEM → JWK apabila anda perlu meletakkan kunci dalam JWKS, menghantarnya melalui konfigurasi berasaskan JSON atau menggunakannya dalam persekitaran pelayar atau serverless. Penukaran kunci peribadi mengekalkan bahan peribadi, jadi kongsi hanya output awam jika itu sahaja yang diperlukan.
+Gunakan output awam apabila anda hanya memerlukan pengesahan atau pengedaran. Penukaran peribadi memaparkan bahan kunci peribadi pada skrin dan dalam muat turun, jadi anggap hasilnya sebagai rahsia dan tutup tab selepas selesai.
 
-- Gunakan kunci JWK/JWKS dalam sistem yang hanya menerima PEM.
-- Eksport kunci PEM untuk pustaka JWT, gerbang API atau pengedaran kunci.
-- Kongsi kunci awam dengan selamat tanpa mendedahkan data kunci peribadi.
+- Pindahkan kunci antara konfigurasi JWKS/JSON dan fail PEM gaya OpenSSL.
+- Ekstrak kunci awam sebelum berkongsi dengan pengesah JWT, gateway atau klien.
+- Tukar secara setempat tanpa memuat naik bahan kunci ke pelayan.

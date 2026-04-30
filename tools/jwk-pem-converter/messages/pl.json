@@ -30,6 +30,7 @@
   "pemInputHint": "Obsługiwane: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "Sformatowany JSON",
   "outputTitle": "Wyjście",
+  "outputDescription": "Konwersja działa lokalnie w tej przeglądarce; sprawdź klucz przed skopiowaniem lub pobraniem.",
   "downloadButton": "Pobierz",
   "useSampleLabel": "Użyj przykładu",
   "clearLabel": "Wyczyść",

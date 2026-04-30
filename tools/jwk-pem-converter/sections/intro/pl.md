@@ -1,13 +1,13 @@
 ## Czym jest konwersja JWK ↔ PEM?
 
-JWK (JSON Web Key) to format JSON dla kluczy kryptograficznych używany w systemach JOSE/JWT. Może reprezentować klucze RSA, EC lub OKP i może występować w JWK Set (JWKS).
+JWK (JSON Web Key) to materiał klucza w formacie JSON używany przez JOSE/JWT, endpointy JWKS oraz konfiguracje serverless lub przeglądarkowe. Jest łatwy do odczytania przez oprogramowanie, ale rzadziej akceptowany przez CLI i infrastrukturę oczekującą plików kluczy.
 
-PEM to klucz ASN.1/DER zakodowany w Base64 z nagłówkami takimi jak BEGIN PUBLIC KEY lub BEGIN PRIVATE KEY, powszechny w TLS, OpenSSL i wielu SDK.
+PEM opakowuje dane klucza DER etykietami BEGIN/END. Tego formatu zwykle wymagają OpenSSL, narzędzia TLS, bramy API i wiele SDK.
 
-Narzędzie konwertuje klucze w obu kierunkach, zachowując materiał klucza przy wyborze wyjścia publicznego (SPKI) lub prywatnego (PKCS8). Obsługiwane formaty obejmują RSA, EC (P-256/384/521) i kontenery kluczy OKP, a wszystko działa lokalnie w przeglądarce.
+Ten konwerter łączy te formaty lokalnie w przeglądarce. Obsługuje kontenery kluczy RSA, EC (P-256/384/521) i OKP, pozwala wybrać publiczny PEM SPKI lub prywatny PEM PKCS8 przy starcie z JWK, a obsługiwane bloki PEM może zamienić z powrotem na ładny lub kompaktowy JWK JSON.
 
-Wybierz JWK → PEM, gdy biblioteka, brama lub CLI oczekuje plików kluczy w stylu OpenSSL. Wybierz PEM → JWK, gdy musisz umieścić klucz w JWKS, przekazać go przez konfigurację opartą na JSON albo użyć go w przeglądarce lub środowisku serverless. Konwersja klucza prywatnego zachowuje materiał prywatny, więc udostępniaj tylko wynik publiczny, jeśli to wystarcza.
+Używaj wyjścia publicznego, gdy potrzebujesz tylko weryfikacji lub dystrybucji. Konwersje prywatne pokazują materiał klucza prywatnego na ekranie i w pobranych plikach, więc traktuj wynik jak sekret i zamknij kartę po zakończeniu.
 
-- Użyj klucza JWK/JWKS w systemach, które akceptują tylko PEM.
-- Eksportuj klucze PEM dla bibliotek JWT, bramek API lub dystrybucji kluczy.
-- Udostępniaj klucze publiczne bezpiecznie, nie ujawniając danych klucza prywatnego.
+- Przenoś klucze między konfiguracją JWKS/JSON a plikami PEM w stylu OpenSSL.
+- Wyodrębnij klucz publiczny przed udostępnieniem go weryfikatorom JWT, bramom lub klientom.
+- Konwertuj lokalnie bez wysyłania materiału klucza na serwer.

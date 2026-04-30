@@ -30,6 +30,7 @@
   "pemInputHint": "รองรับ: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "JSON จัดรูปแบบ",
   "outputTitle": "ผลลัพธ์",
+  "outputDescription": "การแปลงทำงานในเบราว์เซอร์นี้โดยตรง โปรดตรวจสอบคีย์ก่อนคัดลอกหรือดาวน์โหลด",
   "downloadButton": "ดาวน์โหลด",
   "useSampleLabel": "ใช้ตัวอย่าง",
   "clearLabel": "ล้าง",

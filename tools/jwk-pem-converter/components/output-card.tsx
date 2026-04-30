@@ -5,13 +5,18 @@ import {
   ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
-import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
+import {
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Download } from "@workspace/ui/icons"
 
 type OutputCardProps = Readonly<{
   copiedLabel: string
   copyLabel: string
+  description: string
   downloadLabel: string
   downloadName: string
   downloadUrl: string | null
@@ -22,6 +27,7 @@ type OutputCardProps = Readonly<{
 function OutputCard({
   copiedLabel,
   copyLabel,
+  description,
   downloadLabel,
   downloadName,
   downloadUrl,
@@ -36,6 +42,7 @@ function OutputCard({
     <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent>
         <Textarea

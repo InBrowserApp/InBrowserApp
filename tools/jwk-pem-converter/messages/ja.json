@@ -30,6 +30,7 @@
   "pemInputHint": "対応形式: PUBLIC KEY、PRIVATE KEY、RSA PUBLIC KEY、RSA PRIVATE KEY、EC PRIVATE KEY。",
   "prettyJson": "整形 JSON",
   "outputTitle": "出力",
+  "outputDescription": "変換はこのブラウザー内でローカルに実行されます。コピーまたはダウンロードする前にキーを確認してください。",
   "downloadButton": "ダウンロード",
   "useSampleLabel": "サンプルを使う",
   "clearLabel": "クリア",

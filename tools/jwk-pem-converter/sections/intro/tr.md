@@ -1,13 +1,13 @@
 ## JWK ↔ PEM dönüştürme nedir?
 
-JWK (JSON Web Key), JOSE/JWT sistemlerinde kullanılan JSON tabanlı bir kriptografik anahtar biçimidir. RSA, EC veya OKP anahtarlarını temsil edebilir ve bir JWK Set (JWKS) içinde yer alabilir.
+JWK (JSON Web Key), JOSE/JWT, JWKS uç noktaları ve serverless ya da tarayıcı yapılandırmalarında kullanılan JSON biçimli anahtar materyalidir. Yazılım için okunması kolaydır, ancak anahtar dosyası bekleyen CLI’lar ve altyapılar tarafından daha az kabul edilir.
 
-PEM, BEGIN PUBLIC KEY veya BEGIN PRIVATE KEY gibi başlık satırlarına sahip Base64 kodlu ASN.1/DER anahtardır; TLS, OpenSSL ve birçok SDK'da yaygındır.
+PEM, DER anahtar verisini BEGIN/END etiketleriyle sarar; OpenSSL, TLS araçları, API gateway’leri ve birçok SDK genellikle bu biçimi ister.
 
-Bu araç anahtarları iki yönde de dönüştürür; açık (SPKI) veya gizli (PKCS8) çıktı seçilirken anahtar materyalini korur. Desteklenen biçimler RSA, EC (P-256/384/521) ve OKP anahtar kapsayıcılarını içerir; her şey tarayıcıda yerel olarak çalışır.
+Bu dönüştürücü bu biçimler arasında tarayıcınızda yerel olarak köprü kurar. RSA, EC (P-256/384/521) ve OKP anahtar kapsayıcılarını işler, JWK’den başlarken genel SPKI veya özel PKCS8 PEM seçmenizi sağlar ve desteklenen PEM bloklarını güzel biçimli veya kompakt JWK JSON’a geri dönüştürebilir.
 
-Bir kütüphane, geçit veya CLI OpenSSL tarzı anahtar dosyaları bekliyorsa JWK → PEM seçin. Bir anahtarı JWKS içine koymanız, JSON tabanlı yapılandırma ile aktarmanız veya tarayıcı ya da serverless ortamlarda kullanmanız gerekiyorsa PEM → JWK seçin. Özel anahtar dönüşümü özel materyali korur; bu nedenle karşı tarafın ihtiyacı buysa yalnızca açık çıktıyı paylaşın.
+Yalnızca doğrulama veya dağıtım gerekiyorsa genel çıktıyı kullanın. Özel dönüştürmeler özel anahtar materyalini ekranda ve indirmelerde gösterir; bu yüzden sonucu gizli bilgi gibi ele alın ve işiniz bitince sekmeyi kapatın.
 
-- Yalnızca PEM kabul eden sistemlerde JWK/JWKS anahtarlarını kullanın.
-- JWT kütüphaneleri, API ağ geçitleri veya anahtar dağıtımı için PEM anahtarlarını dışa aktarın.
-- Özel anahtar verilerini açığa çıkarmadan açık anahtarları güvenle paylaşın.
+- Anahtarları JWKS/JSON yapılandırması ile OpenSSL tarzı PEM dosyaları arasında taşıyın.
+- JWT doğrulayıcıları, gateway’ler veya istemcilerle paylaşmadan önce genel anahtarı çıkarın.
+- Anahtar materyalini bir sunucuya yüklemeden yerel olarak dönüştürün.

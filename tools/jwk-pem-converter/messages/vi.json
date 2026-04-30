@@ -30,6 +30,7 @@
   "pemInputHint": "Hỗ trợ: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "JSON đẹp",
   "outputTitle": "Kết quả",
+  "outputDescription": "Quá trình chuyển đổi chạy cục bộ trong trình duyệt này; hãy kiểm tra khóa trước khi sao chép hoặc tải xuống.",
   "downloadButton": "Tải xuống",
   "useSampleLabel": "Dùng mẫu",
   "clearLabel": "Xóa",

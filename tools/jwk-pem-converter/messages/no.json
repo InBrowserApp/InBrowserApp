@@ -30,6 +30,7 @@
   "pemInputHint": "Støttet: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "Formatert JSON",
   "outputTitle": "Utdata",
+  "outputDescription": "Konverteringen kjører lokalt i denne nettleseren; kontroller nøkkelen før du kopierer eller laster den ned.",
   "downloadButton": "Last ned",
   "useSampleLabel": "Bruk eksempel",
   "clearLabel": "Tøm",

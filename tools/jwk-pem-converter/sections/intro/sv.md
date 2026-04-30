@@ -1,13 +1,13 @@
 ## Vad är JWK ↔ PEM-konvertering?
 
-JWK (JSON Web Key) är ett JSON-baserat format för kryptografiska nycklar som används i JOSE/JWT-system. Det kan representera RSA-, EC- eller OKP-nycklar och kan förekomma i en JWK Set (JWKS).
+JWK (JSON Web Key) är nyckelmaterial i JSON-form som används av JOSE/JWT, JWKS-endpoints och serverless- eller webbläsarkonfiguration. Det är lätt för programvara att läsa, men mindre accepterat av CLI:er och infrastruktur som förväntar sig nyckelfiler.
 
-PEM är en Base64-kodad ASN.1/DER-nyckel med rubriker som BEGIN PUBLIC KEY eller BEGIN PRIVATE KEY och är vanlig i TLS, OpenSSL och många SDK:er.
+PEM kapslar in DER-nyckeldata med BEGIN/END-etiketter, formatet som OpenSSL, TLS-verktyg, API-gateways och många SDK:er vanligtvis efterfrågar.
 
-Det här verktyget konverterar nycklar åt båda håll och bevarar nyckelmaterialet när du väljer offentlig (SPKI) eller privat (PKCS8) utdata. Format som stöds inkluderar RSA, EC (P-256/384/521) och OKP-nyckelcontainrar, och allt körs lokalt i webbläsaren.
+Den här konverteraren kopplar ihop formaten lokalt i webbläsaren. Den hanterar RSA-, EC- (P-256/384/521) och OKP-nyckelcontainrar, låter dig välja publik SPKI- eller privat PKCS8-PEM när du startar från JWK, och kan omvandla stödda PEM-block tillbaka till snygg eller kompakt JWK JSON.
 
-Välj JWK → PEM när ett bibliotek, en gateway eller ett CLI-verktyg förväntar sig nyckelfiler i OpenSSL-stil. Välj PEM → JWK när du behöver lägga in en nyckel i en JWKS, skicka den via JSON-baserad konfiguration eller använda den i webbläsar- eller serverless-miljöer. Konvertering av privata nycklar bevarar det privata materialet, så dela bara den publika utdata om det räcker.
+Använd publik utdata när du bara behöver verifiering eller distribution. Privata konverteringar visar privat nyckelmaterial på skärmen och i nedladdningar, så behandla resultatet som en hemlighet och stäng fliken när du är klar.
 
-- Använd en JWK/JWKS-nyckel i system som bara accepterar PEM.
-- Exportera PEM-nycklar för JWT-bibliotek, API-gateways eller nyckeldistribution.
-- Dela offentliga nycklar säkert utan att exponera privata nyckeldata.
+- Flytta nycklar mellan JWKS/JSON-konfiguration och OpenSSL-liknande PEM-filer.
+- Extrahera en publik nyckel innan du delar den med JWT-verifierare, gateways eller klienter.
+- Konvertera lokalt utan att ladda upp nyckelmaterial till en server.

@@ -30,6 +30,7 @@
   "pemInputHint": "Поддерживается: PUBLIC KEY, PRIVATE KEY, RSA PUBLIC KEY, RSA PRIVATE KEY, EC PRIVATE KEY.",
   "prettyJson": "Форматированный JSON",
   "outputTitle": "Вывод",
+  "outputDescription": "Преобразование выполняется локально в этом браузере; проверьте ключ перед копированием или скачиванием.",
   "downloadButton": "Скачать",
   "useSampleLabel": "Использовать пример",
   "clearLabel": "Очистить",

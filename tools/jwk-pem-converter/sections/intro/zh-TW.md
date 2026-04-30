@@ -1,13 +1,13 @@
 ## 什麼是 JWK ↔ PEM 轉換？
 
-JWK（JSON Web Key）是用於 JOSE/JWT 系統的 JSON 金鑰格式。它可以表示 RSA、EC 或 OKP 金鑰，也可能出現在 JWK Set（JWKS）中。
+JWK（JSON Web Key）是 JSON 形式的金鑰材料，常用於 JOSE/JWT、JWKS 端點，以及 serverless 或瀏覽器設定。它便於軟體讀取，但許多 CLI 和基礎設施仍較常要求金鑰檔案。
 
-PEM 是以 Base64 編碼的 ASN.1/DER 金鑰，帶有像 BEGIN PUBLIC KEY 或 BEGIN PRIVATE KEY 的標頭行，常見於 TLS、OpenSSL 與許多 SDK。
+PEM 會用 BEGIN/END 標記包住 DER 金鑰資料，這是 OpenSSL、TLS 工具、API 閘道和許多 SDK 通常要求的格式。
 
-此工具可雙向轉換金鑰，在選擇公鑰（SPKI）或私鑰（PKCS8）輸出時保留金鑰材料。支援格式包含 RSA、EC（P-256/384/521）與 OKP 金鑰容器，並全程在瀏覽器本機完成。
+此轉換器會在你的瀏覽器本機橋接這兩種格式。它支援 RSA、EC（P-256/384/521）和 OKP 金鑰容器；從 JWK 轉出時可選擇 public SPKI PEM 或 private PKCS8 PEM；也能把支援的 PEM 區塊轉回格式化或精簡的 JWK JSON。
 
-當程式庫、閘道或 CLI 需要 OpenSSL 風格的金鑰檔時，選擇 JWK → PEM。當你需要把金鑰放進 JWKS、透過 JSON 設定傳遞，或在瀏覽器與 serverless 執行環境中使用時，選擇 PEM → JWK。私鑰轉換會保留私鑰材料，因此如果下游只需要公鑰，請只分享公鑰輸出。
+如果只需要驗證或分發，請使用 public 輸出。private 轉換會在畫面和下載檔案中暴露私鑰材料，因此請把結果當作秘密處理，並在完成後關閉分頁。
 
-- 讓 JWK/JWKS 金鑰可用於只接受 PEM 的系統。
-- 匯出 PEM 供 JWT 函式庫、API 閘道或金鑰發佈使用。
-- 安全分享公鑰而不暴露私鑰資料。
+- 在 JWKS/JSON 設定與 OpenSSL 風格 PEM 檔案之間移動金鑰。
+- 分享給 JWT 驗證器、閘道或用戶端之前先擷取公鑰。
+- 在本機完成轉換，不把金鑰材料上傳到伺服器。
