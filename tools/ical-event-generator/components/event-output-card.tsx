@@ -14,7 +14,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import { Download, FileText, TriangleAlert } from "@workspace/ui/icons"
+import { Download, TriangleAlert } from "@workspace/ui/icons"
 
 import type {
   BuildIcalEventResult,
@@ -65,7 +65,7 @@ function renderIcsLine(line: string) {
   const colonIndex = line.indexOf(":")
 
   if (colonIndex <= 0 || line.startsWith(" ")) {
-    return <span className="text-slate-300">{line || " "}</span>
+    return <span className="text-muted-foreground">{line || " "}</span>
   }
 
   const propertyName = line.slice(0, colonIndex)
@@ -73,9 +73,9 @@ function renderIcsLine(line: string) {
 
   return (
     <>
-      <span className="text-sky-300">{propertyName}</span>
-      <span className="text-slate-500">:</span>
-      <span className="text-emerald-100">{propertyValue || " "}</span>
+      <span className="text-primary">{propertyName}</span>
+      <span className="text-muted-foreground">:</span>
+      <span className="text-foreground">{propertyValue || " "}</span>
     </>
   )
 }
@@ -109,27 +109,21 @@ function EventOutputCard({
 
   return (
     <>
-      <CardHeader className="relative overflow-hidden border-b bg-linear-to-br from-primary/10 via-background to-sky-500/10">
-        <div className="absolute -top-20 right-6 h-44 w-44 rounded-full bg-primary/15 blur-3xl" />
-        <div className="relative flex flex-wrap items-start justify-between gap-4">
-          <div className="flex min-w-0 gap-3">
-            <div className="flex size-11 shrink-0 items-center justify-center rounded-2xl border bg-background/80 text-primary shadow-xs backdrop-blur">
-              <FileText className="size-5" />
-            </div>
-            <div className="min-w-0 space-y-1">
-              <CardTitle>{messages.output.title}</CardTitle>
-              <CardDescription>{messages.output.description}</CardDescription>
-              <p className="truncate text-xs font-medium" translate="no">
-                {output.fileName}
-              </p>
-            </div>
+      <CardHeader className="border-b">
+        <div className="flex flex-wrap items-start justify-between gap-4">
+          <div className="min-w-0 space-y-1">
+            <CardTitle>{messages.output.title}</CardTitle>
+            <CardDescription>{messages.output.description}</CardDescription>
+            <p className="truncate font-mono text-xs text-muted-foreground">
+              {output.fileName}
+            </p>
           </div>
 
           <div className="grid w-full gap-2 sm:w-auto sm:grid-cols-3">
             {summaryItems.map((item) => (
               <div
                 key={item.label}
-                className="min-w-0 rounded-xl border bg-background/75 px-3 py-2 shadow-xs backdrop-blur"
+                className="min-w-0 rounded-lg border bg-muted/20 px-3 py-2"
               >
                 <p className="text-[0.65rem] font-medium tracking-[0.16em] text-muted-foreground uppercase">
                   {item.label}
@@ -147,21 +141,7 @@ function EventOutputCard({
         </div>
       </CardHeader>
       <ToolPanelCardContent className="gap-4 p-4 sm:p-5">
-        <div className="overflow-hidden rounded-[1.35rem] border bg-slate-950 shadow-sm">
-          <div className="flex min-w-0 items-center gap-3 border-b border-white/10 bg-white/5 px-4 py-3">
-            <div className="flex gap-1.5" aria-hidden="true">
-              <span className="size-2.5 rounded-full bg-rose-400" />
-              <span className="size-2.5 rounded-full bg-amber-300" />
-              <span className="size-2.5 rounded-full bg-emerald-400" />
-            </div>
-            <p
-              className="min-w-0 flex-1 truncate font-mono text-xs text-slate-300"
-              translate="no"
-            >
-              {output.fileName}
-            </p>
-          </div>
-
+        <div className="overflow-hidden rounded-xl border bg-muted/20">
           {output.state === "error" ? (
             <div className="grid min-h-[24rem] place-items-center bg-background p-4">
               <Alert variant="destructive" className="max-w-md">
@@ -199,7 +179,7 @@ function EventOutputCard({
                           className="grid grid-cols-[2.75rem_minmax(0,1fr)] gap-4"
                         >
                           <span
-                            className="text-right text-slate-600 select-none"
+                            className="text-right text-muted-foreground/70 select-none"
                             aria-hidden="true"
                           >
                             {lineNumber}

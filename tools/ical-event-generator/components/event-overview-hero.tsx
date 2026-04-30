@@ -99,138 +99,133 @@ function EventOverviewHero({
   ] as const
 
   return (
-    <section className="relative min-w-0 overflow-hidden rounded-[2rem] border bg-background p-4 shadow-sm sm:p-5">
-      <div className="absolute inset-0 bg-linear-to-br from-primary/12 via-sky-500/6 to-background" />
-      <div className="absolute -top-20 right-6 h-60 w-60 rounded-full bg-primary/12 blur-3xl" />
-      <div className="absolute -bottom-24 left-0 h-56 w-56 rounded-full bg-sky-500/12 blur-3xl" />
-      <div className="relative grid gap-4 lg:grid-cols-[minmax(13rem,16rem)_minmax(0,1fr)]">
-        <div className="rounded-[1.5rem] border bg-card/90 p-4 shadow-xs backdrop-blur">
-          <p className="text-[0.7rem] font-medium tracking-[0.2em] text-muted-foreground uppercase">
-            {messages.schedule.startDateLabel}
-          </p>
-          <div className="mt-4 flex items-end justify-between gap-4">
-            <div className="min-w-0">
-              <p className="truncate text-sm font-semibold text-primary uppercase">
-                {dateParts.month}
-              </p>
-              <p className="font-heading text-6xl leading-none tracking-tight">
-                {dateParts.day}
-              </p>
-            </div>
-            <div className="text-right text-sm text-muted-foreground">
-              <p>{dateParts.weekday}</p>
-              <p>{dateParts.year}</p>
-            </div>
+    <section className="grid min-w-0 gap-4 lg:grid-cols-[minmax(13rem,16rem)_minmax(0,1fr)]">
+      <div className="rounded-[1.5rem] border bg-card p-4 shadow-xs">
+        <p className="text-[0.7rem] font-medium tracking-[0.2em] text-muted-foreground uppercase">
+          {messages.schedule.startDateLabel}
+        </p>
+        <div className="mt-4 flex items-end justify-between gap-4">
+          <div className="min-w-0">
+            <p className="truncate text-sm font-semibold text-primary uppercase">
+              {dateParts.month}
+            </p>
+            <p className="font-heading text-6xl leading-none tracking-tight">
+              {dateParts.day}
+            </p>
           </div>
-
-          <div className="mt-5 space-y-2 rounded-[1.15rem] border bg-muted/25 p-3">
-            <div className="flex gap-3">
-              <div className="flex flex-col items-center pt-1">
-                <span className="size-2 rounded-full bg-primary" />
-                <span className="h-10 w-px bg-border" />
-              </div>
-              <div className="min-w-0 flex-1">
-                <p className="text-[0.68rem] font-medium tracking-[0.18em] text-muted-foreground uppercase">
-                  {messages.schedule.startTimeLabel}
-                </p>
-                <p className="mt-1 text-sm font-medium">{startTime}</p>
-                <p className="truncate text-xs text-muted-foreground">
-                  {startDate}
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <div className="flex justify-center pt-1">
-                <span className="size-2 rounded-full bg-sky-500" />
-              </div>
-              <div className="min-w-0 flex-1">
-                <p className="text-[0.68rem] font-medium tracking-[0.18em] text-muted-foreground uppercase">
-                  {messages.schedule.endTimeLabel}
-                </p>
-                <p className="mt-1 text-sm font-medium">{endTime}</p>
-                <p className="truncate text-xs text-muted-foreground">
-                  {endDate}
-                </p>
-              </div>
-            </div>
+          <div className="text-right text-sm text-muted-foreground">
+            <p>{dateParts.weekday}</p>
+            <p>{dateParts.year}</p>
           </div>
         </div>
 
-        <div className="flex min-w-0 flex-col justify-between gap-5 rounded-[1.5rem] border bg-background/85 p-4 shadow-xs backdrop-blur sm:p-5">
-          <div className="flex flex-wrap items-start justify-between gap-4">
-            <div className="min-w-0 space-y-3">
-              <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
-                {messages.meta.name}
-              </p>
-              <h2
-                className={cn(
-                  "font-heading text-2xl tracking-[var(--tracking-display)] text-balance sm:text-3xl",
-                  "[overflow-wrap:anywhere] break-words",
-                  !title && "text-muted-foreground"
-                )}
-              >
-                {title || messages.details.summaryPlaceholder}
-              </h2>
-              <p className="max-w-3xl text-sm leading-6 text-muted-foreground sm:text-base">
-                {description || messages.meta.description}
-              </p>
+        <div className="mt-5 space-y-2 rounded-[1.15rem] border bg-muted/20 p-3">
+          <div className="flex gap-3">
+            <div className="flex flex-col items-center pt-1">
+              <span className="size-2 rounded-full bg-primary" />
+              <span className="h-10 w-px bg-border" />
             </div>
-
-            <div className="flex shrink-0 flex-wrap gap-3">
-              <Button type="button" variant="secondary" onClick={onUseSample}>
-                <Sparkles data-icon="inline-start" />
-                {messages.actions.useSample}
-              </Button>
-              <Button type="button" variant="ghost" onClick={onReset}>
-                <RefreshCcw data-icon="inline-start" />
-                {messages.actions.reset}
-              </Button>
+            <div className="min-w-0 flex-1">
+              <p className="text-[0.68rem] font-medium tracking-[0.18em] text-muted-foreground uppercase">
+                {messages.schedule.startTimeLabel}
+              </p>
+              <p className="mt-1 text-sm font-medium">{startTime}</p>
+              <p className="truncate text-xs text-muted-foreground">
+                {startDate}
+              </p>
             </div>
           </div>
-
-          {location || displayUrl ? (
-            <div className="flex flex-wrap gap-2">
-              {location ? (
-                <div className="inline-flex max-w-full min-w-0 items-center gap-2 rounded-full border bg-muted/25 px-3 py-1.5 text-sm">
-                  <span className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
-                    {messages.details.locationLabel}
-                  </span>
-                  <span className="truncate">{location}</span>
-                </div>
-              ) : null}
-              {displayUrl ? (
-                <div className="inline-flex max-w-full min-w-0 items-center gap-2 rounded-full border bg-muted/25 px-3 py-1.5 text-sm">
-                  <span className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
-                    {messages.details.urlLabel}
-                  </span>
-                  <span className="truncate">{displayUrl}</span>
-                </div>
-              ) : null}
+          <div className="flex gap-3">
+            <div className="flex justify-center pt-1">
+              <span className="size-2 rounded-full bg-sky-500" />
             </div>
-          ) : null}
+            <div className="min-w-0 flex-1">
+              <p className="text-[0.68rem] font-medium tracking-[0.18em] text-muted-foreground uppercase">
+                {messages.schedule.endTimeLabel}
+              </p>
+              <p className="mt-1 text-sm font-medium">{endTime}</p>
+              <p className="truncate text-xs text-muted-foreground">
+                {endDate}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-          <div className="grid gap-2 sm:grid-cols-3">
-            {metaItems.map((item) => (
-              <div
-                key={item.label}
-                className="min-w-0 rounded-[1rem] border bg-muted/20 p-3"
-              >
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <item.Icon className="size-3.5" />
-                  <p className="truncate text-[0.68rem] font-medium tracking-[0.18em] uppercase">
-                    {item.label}
-                  </p>
-                </div>
-                <p
-                  className="mt-2 truncate text-sm font-medium"
-                  title={item.value}
-                  translate={item.shouldTranslate ? undefined : "no"}
-                >
-                  {item.value}
+      <div className="flex min-w-0 flex-col justify-between gap-5 rounded-[1.5rem] border bg-card p-4 shadow-xs sm:p-5">
+        <div className="flex flex-wrap items-start justify-between gap-4">
+          <div className="min-w-0 space-y-3">
+            <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
+              {messages.meta.name}
+            </p>
+            <h2
+              className={cn(
+                "font-heading text-2xl tracking-[var(--tracking-display)] text-balance sm:text-3xl",
+                "[overflow-wrap:anywhere] break-words",
+                !title && "text-muted-foreground"
+              )}
+            >
+              {title || messages.details.summaryPlaceholder}
+            </h2>
+            <p className="max-w-3xl text-sm leading-6 text-muted-foreground sm:text-base">
+              {description || messages.meta.description}
+            </p>
+          </div>
+
+          <div className="flex shrink-0 flex-wrap gap-3">
+            <Button type="button" variant="secondary" onClick={onUseSample}>
+              <Sparkles data-icon="inline-start" />
+              {messages.actions.useSample}
+            </Button>
+            <Button type="button" variant="ghost" onClick={onReset}>
+              <RefreshCcw data-icon="inline-start" />
+              {messages.actions.reset}
+            </Button>
+          </div>
+        </div>
+
+        {location || displayUrl ? (
+          <div className="flex flex-wrap gap-2">
+            {location ? (
+              <div className="inline-flex max-w-full min-w-0 items-center gap-2 rounded-full border bg-muted/25 px-3 py-1.5 text-sm">
+                <span className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
+                  {messages.details.locationLabel}
+                </span>
+                <span className="truncate">{location}</span>
+              </div>
+            ) : null}
+            {displayUrl ? (
+              <div className="inline-flex max-w-full min-w-0 items-center gap-2 rounded-full border bg-muted/25 px-3 py-1.5 text-sm">
+                <span className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
+                  {messages.details.urlLabel}
+                </span>
+                <span className="truncate">{displayUrl}</span>
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+
+        <div className="grid gap-2 sm:grid-cols-3">
+          {metaItems.map((item) => (
+            <div
+              key={item.label}
+              className="min-w-0 rounded-[1rem] border bg-muted/20 p-3"
+            >
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <item.Icon className="size-3.5" />
+                <p className="truncate text-[0.68rem] font-medium tracking-[0.18em] uppercase">
+                  {item.label}
                 </p>
               </div>
-            ))}
-          </div>
+              <p
+                className="mt-2 truncate text-sm font-medium"
+                title={item.value}
+                translate={item.shouldTranslate ? undefined : "no"}
+              >
+                {item.value}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
