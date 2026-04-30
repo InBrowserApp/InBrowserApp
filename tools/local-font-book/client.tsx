@@ -256,7 +256,7 @@ function LocalFontBookClient({ messages }: LocalFontBookClientProps) {
   }
 
   return (
-    <div className="grid min-w-0 gap-5 xl:grid-cols-[minmax(0,1.15fr)_minmax(21rem,0.92fr)] xl:items-start xl:gap-6">
+    <div className="grid min-w-0 gap-5 xl:grid-cols-[minmax(0,1.15fr)_minmax(21rem,0.92fr)] xl:items-stretch xl:gap-6">
       <FontBrowserPanel
         messages={messages}
         isSupported={isSupported}

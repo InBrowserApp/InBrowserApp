@@ -98,11 +98,11 @@ function FontBrowserPanel({
   const shouldConstrainListHeight = visibleFontCount > 8
   const listViewportClassName =
     hasVisibleFonts && shouldConstrainListHeight
-      ? "h-[30rem] xl:h-[44rem] 2xl:h-[48rem]"
-      : "h-auto"
+      ? "h-[30rem] xl:h-full"
+      : "h-auto xl:h-full"
 
   return (
-    <ToolPanelCard className="h-auto min-w-0 overflow-hidden">
+    <ToolPanelCard className="min-w-0 overflow-hidden xl:h-auto">
       <CardHeader className="gap-2 border-b">
         <CardTitle>{messages.libraryTitle}</CardTitle>
         <CardDescription>{messages.meta.description}</CardDescription>
@@ -223,7 +223,7 @@ function FontBrowserPanel({
           </Field>
         </FieldGroup>
 
-        <div className="overflow-hidden rounded-2xl border bg-muted/15">
+        <div className="min-h-0 overflow-hidden rounded-2xl border bg-muted/15 xl:flex-1">
           <ScrollArea className={listViewportClassName}>
             {hasVisibleFonts ? (
               <div className="flex flex-col gap-4 p-4">
