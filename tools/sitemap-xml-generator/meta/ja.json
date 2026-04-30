@@ -1,4 +1,4 @@
 {
-  "name": "Sitemap XML Generator",
-  "description": "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser."
+  "name": "サイトマップ XML ジェネレーター",
+  "description": "ブラウザー内で、整理された URL リストから sitemap.xml ファイルまたはサイトマップインデックスを生成します。"
 }

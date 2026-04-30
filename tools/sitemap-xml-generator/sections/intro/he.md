@@ -1,15 +1,15 @@
-## Why this tool is useful
+## למה הכלי הזה שימושי
 
-Search engines do not need a massive sitemap system to understand most sites. They need a valid XML document with stable URLs, sensible update hints, and no accidental formatting mistakes. This tool focuses on that core job.
+רוב האתרים לא צריכים מערכת sitemap ענקית. מנועי חיפוש צריכים מסמך XML תקין עם כתובות URL יציבות, רמזי עדכון סבירים וללא טעויות פורמט מקריות. הכלי הזה מתמקד במשימה המרכזית הזאת.
 
-## What it covers
+## מה הוא מכסה
 
-- Build a standard `urlset` sitemap for pages on one site.
-- Build a `sitemapindex` document when you already split large sites into multiple sitemap files.
-- Work with either absolute URLs or clean relative paths joined against one base URL.
+- יצירת sitemap רגיל מסוג `urlset` לדפים באתר אחד.
+- יצירת מסמך `sitemapindex` כאשר אתר גדול כבר מחולק לכמה קובצי sitemap.
+- עבודה עם כתובות URL מוחלטות או נתיבים יחסיים נקיים שמחוברים ל-URL בסיסי אחד.
 
-## What to watch for
+## למה לשים לב
 
-- Sitemap locations should resolve to final canonical URLs, not temporary redirects.
-- `lastmod`, `changefreq`, and `priority` are hints, not guarantees about crawling behavior.
-- If every row is already a full URL, turn off automatic base URL joining and keep the XML explicit.
+- מיקומי sitemap צריכים להיפתר לכתובות URL קנוניות סופיות, לא להפניות זמניות.
+- `lastmod`, `changefreq` ו-`priority` הם רמזים, לא הבטחות לגבי התנהגות סריקה.
+- אם כל שורה כבר היא URL מלא, כבו את החיבור האוטומטי ל-URL הבסיסי ושמרו על XML מפורש.

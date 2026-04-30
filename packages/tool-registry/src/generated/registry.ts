@@ -12376,14 +12376,14 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     tags: ["sitemap", "xml", "seo", "crawler", "generator", "website"],
     locales: {
       ar: {
-        name: "Sitemap XML Generator",
+        name: "منشئ Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "أنشئ ملفات sitemap.xml أو فهارس sitemap من قوائم URL مرتبة دون مغادرة المتصفح.",
       },
       de: {
-        name: "Sitemap XML Generator",
+        name: "Sitemap-XML-Generator",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Erstelle sitemap.xml-Dateien oder Sitemap-Indizes aus sauberen URL-Listen direkt im Browser.",
       },
       en: {
         name: "Sitemap XML Generator",
@@ -12391,94 +12391,94 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
           "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
       },
       es: {
-        name: "Sitemap XML Generator",
+        name: "Generador XML de sitemaps",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Genera archivos sitemap.xml o índices de sitemap desde listas limpias de URL sin salir del navegador.",
       },
       fr: {
-        name: "Sitemap XML Generator",
+        name: "Générateur XML de sitemap",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Créez des fichiers sitemap.xml ou des index de sitemaps à partir de listes d’URL propres, directement dans le navigateur.",
       },
       he: {
-        name: "Sitemap XML Generator",
+        name: "מחולל Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "צרו קובצי sitemap.xml או אינדקסים של sitemap מרשימות URL נקיות בלי לצאת מהדפדפן.",
       },
       hi: {
-        name: "Sitemap XML Generator",
+        name: "Sitemap XML जेनरेटर",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "ब्राउज़र छोड़े बिना साफ URL सूचियों से sitemap.xml फ़ाइलें या sitemap index बनाएं।",
       },
       id: {
-        name: "Sitemap XML Generator",
+        name: "Pembuat Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Buat berkas sitemap.xml atau indeks sitemap dari daftar URL yang rapi tanpa meninggalkan browser.",
       },
       it: {
-        name: "Sitemap XML Generator",
+        name: "Generatore XML di sitemap",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Genera file sitemap.xml o indici sitemap da liste di URL pulite senza lasciare il browser.",
       },
       ja: {
-        name: "Sitemap XML Generator",
+        name: "サイトマップ XML ジェネレーター",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "ブラウザー内で、整理された URL リストから sitemap.xml ファイルまたはサイトマップインデックスを生成します。",
       },
       ko: {
-        name: "Sitemap XML Generator",
+        name: "사이트맵 XML 생성기",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "브라우저를 떠나지 않고 정리된 URL 목록에서 sitemap.xml 파일이나 사이트맵 인덱스를 생성합니다.",
       },
       ms: {
-        name: "Sitemap XML Generator",
+        name: "Penjana Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Jana fail sitemap.xml atau indeks sitemap daripada senarai URL yang kemas tanpa meninggalkan pelayar.",
       },
       nl: {
-        name: "Sitemap XML Generator",
+        name: "Sitemap XML-generator",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Genereer sitemap.xml-bestanden of sitemapindexen vanuit nette URL-lijsten zonder de browser te verlaten.",
       },
       no: {
-        name: "Sitemap XML Generator",
+        name: "Sitemap XML-generator",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Generer sitemap.xml-filer eller sitemapindekser fra ryddige URL-lister uten å forlate nettleseren.",
       },
       pl: {
-        name: "Sitemap XML Generator",
+        name: "Generator Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Generuj pliki sitemap.xml albo indeksy sitemap z uporządkowanych list URL bez opuszczania przeglądarki.",
       },
       pt: {
-        name: "Sitemap XML Generator",
+        name: "Gerador de XML de Sitemap",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Gere arquivos sitemap.xml ou índices de sitemap a partir de listas limpas de URL sem sair do navegador.",
       },
       ru: {
-        name: "Sitemap XML Generator",
+        name: "Генератор Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Создавайте файлы sitemap.xml или индексы sitemap из чистых списков URL прямо в браузере.",
       },
       sv: {
-        name: "Sitemap XML Generator",
+        name: "Sitemap XML-generator",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Generera sitemap.xml-filer eller sitemapindex från rena URL-listor direkt i webbläsaren.",
       },
       th: {
-        name: "Sitemap XML Generator",
+        name: "ตัวสร้าง Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "สร้างไฟล์ sitemap.xml หรือดัชนี sitemap จากรายการ URL ที่สะอาดโดยไม่ต้องออกจากเบราว์เซอร์",
       },
       tr: {
-        name: "Sitemap XML Generator",
+        name: "Sitemap XML Oluşturucu",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Tarayıcıdan ayrılmadan temiz URL listelerinden sitemap.xml dosyaları veya sitemap indeksleri oluşturun.",
       },
       vi: {
-        name: "Sitemap XML Generator",
+        name: "Trình tạo Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Tạo tệp sitemap.xml hoặc chỉ mục sitemap từ danh sách URL gọn gàng ngay trong trình duyệt.",
       },
       "zh-CN": {
         name: "Sitemap XML 生成器",
@@ -28227,14 +28227,14 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
     tags: ["sitemap", "xml", "seo", "crawler", "generator", "website"],
     locales: {
       ar: {
-        name: "Sitemap XML Generator",
+        name: "منشئ Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "أنشئ ملفات sitemap.xml أو فهارس sitemap من قوائم URL مرتبة دون مغادرة المتصفح.",
       },
       de: {
-        name: "Sitemap XML Generator",
+        name: "Sitemap-XML-Generator",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Erstelle sitemap.xml-Dateien oder Sitemap-Indizes aus sauberen URL-Listen direkt im Browser.",
       },
       en: {
         name: "Sitemap XML Generator",
@@ -28242,94 +28242,94 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
           "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
       },
       es: {
-        name: "Sitemap XML Generator",
+        name: "Generador XML de sitemaps",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Genera archivos sitemap.xml o índices de sitemap desde listas limpias de URL sin salir del navegador.",
       },
       fr: {
-        name: "Sitemap XML Generator",
+        name: "Générateur XML de sitemap",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Créez des fichiers sitemap.xml ou des index de sitemaps à partir de listes d’URL propres, directement dans le navigateur.",
       },
       he: {
-        name: "Sitemap XML Generator",
+        name: "מחולל Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "צרו קובצי sitemap.xml או אינדקסים של sitemap מרשימות URL נקיות בלי לצאת מהדפדפן.",
       },
       hi: {
-        name: "Sitemap XML Generator",
+        name: "Sitemap XML जेनरेटर",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "ब्राउज़र छोड़े बिना साफ URL सूचियों से sitemap.xml फ़ाइलें या sitemap index बनाएं।",
       },
       id: {
-        name: "Sitemap XML Generator",
+        name: "Pembuat Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Buat berkas sitemap.xml atau indeks sitemap dari daftar URL yang rapi tanpa meninggalkan browser.",
       },
       it: {
-        name: "Sitemap XML Generator",
+        name: "Generatore XML di sitemap",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Genera file sitemap.xml o indici sitemap da liste di URL pulite senza lasciare il browser.",
       },
       ja: {
-        name: "Sitemap XML Generator",
+        name: "サイトマップ XML ジェネレーター",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "ブラウザー内で、整理された URL リストから sitemap.xml ファイルまたはサイトマップインデックスを生成します。",
       },
       ko: {
-        name: "Sitemap XML Generator",
+        name: "사이트맵 XML 생성기",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "브라우저를 떠나지 않고 정리된 URL 목록에서 sitemap.xml 파일이나 사이트맵 인덱스를 생성합니다.",
       },
       ms: {
-        name: "Sitemap XML Generator",
+        name: "Penjana Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Jana fail sitemap.xml atau indeks sitemap daripada senarai URL yang kemas tanpa meninggalkan pelayar.",
       },
       nl: {
-        name: "Sitemap XML Generator",
+        name: "Sitemap XML-generator",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Genereer sitemap.xml-bestanden of sitemapindexen vanuit nette URL-lijsten zonder de browser te verlaten.",
       },
       no: {
-        name: "Sitemap XML Generator",
+        name: "Sitemap XML-generator",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Generer sitemap.xml-filer eller sitemapindekser fra ryddige URL-lister uten å forlate nettleseren.",
       },
       pl: {
-        name: "Sitemap XML Generator",
+        name: "Generator Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Generuj pliki sitemap.xml albo indeksy sitemap z uporządkowanych list URL bez opuszczania przeglądarki.",
       },
       pt: {
-        name: "Sitemap XML Generator",
+        name: "Gerador de XML de Sitemap",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Gere arquivos sitemap.xml ou índices de sitemap a partir de listas limpas de URL sem sair do navegador.",
       },
       ru: {
-        name: "Sitemap XML Generator",
+        name: "Генератор Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Создавайте файлы sitemap.xml или индексы sitemap из чистых списков URL прямо в браузере.",
       },
       sv: {
-        name: "Sitemap XML Generator",
+        name: "Sitemap XML-generator",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Generera sitemap.xml-filer eller sitemapindex från rena URL-listor direkt i webbläsaren.",
       },
       th: {
-        name: "Sitemap XML Generator",
+        name: "ตัวสร้าง Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "สร้างไฟล์ sitemap.xml หรือดัชนี sitemap จากรายการ URL ที่สะอาดโดยไม่ต้องออกจากเบราว์เซอร์",
       },
       tr: {
-        name: "Sitemap XML Generator",
+        name: "Sitemap XML Oluşturucu",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Tarayıcıdan ayrılmadan temiz URL listelerinden sitemap.xml dosyaları veya sitemap indeksleri oluşturun.",
       },
       vi: {
-        name: "Sitemap XML Generator",
+        name: "Trình tạo Sitemap XML",
         description:
-          "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser.",
+          "Tạo tệp sitemap.xml hoặc chỉ mục sitemap từ danh sách URL gọn gàng ngay trong trình duyệt.",
       },
       "zh-CN": {
         name: "Sitemap XML 生成器",

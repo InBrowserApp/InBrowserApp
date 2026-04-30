@@ -89,8 +89,12 @@ function SettingsCard({
             </FieldContent>
             <Input
               id="sitemap-base-url"
+              name="baseUrl"
               type="url"
+              autoComplete="off"
+              dir="ltr"
               spellCheck={false}
+              className="text-left"
               value={baseUrl}
               placeholder={messages.baseUrlPlaceholder}
               onChange={(event) => {

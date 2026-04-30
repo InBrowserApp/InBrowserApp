@@ -50,7 +50,7 @@ describe("buildSitemapXml", () => {
       urlEntries: [
         createUrlEntryInput({
           loc: "https://example.com/search?q=tea&sort=<new>",
-          lastmod: '2026-04-20T08:30:00+00:00 "quoted"',
+          lastmod: "2026-04-20T08:30:00+00:00",
         }),
       ],
     })
@@ -60,9 +60,27 @@ describe("buildSitemapXml", () => {
     }
 
     expect(result.xml).toContain(
-      "https://example.com/search?q=tea&amp;sort=&lt;new&gt;"
+      "https://example.com/search?q=tea&amp;sort=%3Cnew%3E"
     )
-    expect(result.xml).toContain("&quot;quoted&quot;")
+    expect(result.xml).toContain("<lastmod>2026-04-20T08:30:00+00:00</lastmod>")
+  })
+
+  test("accepts ISO datetime values with a UTC timezone marker", () => {
+    const result = buildSitemapXml({
+      ...DEFAULT_SITEMAP_GENERATOR_STATE,
+      urlEntries: [
+        createUrlEntryInput({
+          loc: "/",
+          lastmod: "2026-04-20T10:30:00Z",
+        }),
+      ],
+    })
+
+    if (result.state !== "success") {
+      throw new Error("expected sitemap xml")
+    }
+
+    expect(result.xml).toContain("<lastmod>2026-04-20T10:30:00Z</lastmod>")
   })
 
   test("returns an empty result when every row is blank", () => {
@@ -111,6 +129,147 @@ describe("buildSitemapXml", () => {
     ).toEqual({
       state: "error",
       errorCode: "invalid-url-location",
+      index: 0,
+    })
+  })
+
+  test("reports an invalid location for non-http URL protocols", () => {
+    expect(
+      buildSitemapXml({
+        ...DEFAULT_SITEMAP_GENERATOR_STATE,
+        urlEntries: [
+          createUrlEntryInput({ loc: "ftp://example.com/file.xml" }),
+        ],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-url-location",
+      index: 0,
+    })
+  })
+
+  test("reports a non-http absolute URL before validating the base URL", () => {
+    expect(
+      buildSitemapXml({
+        ...DEFAULT_SITEMAP_GENERATOR_STATE,
+        baseUrl: "",
+        urlEntries: [createUrlEntryInput({ loc: "mailto:hello@example.com" })],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-url-location",
+      index: 0,
+    })
+  })
+
+  test("reports an invalid base URL for non-http bases", () => {
+    expect(
+      buildSitemapXml({
+        ...DEFAULT_SITEMAP_GENERATOR_STATE,
+        baseUrl: "ftp://example.com",
+        urlEntries: [createUrlEntryInput({ loc: "/pricing" })],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-base-url",
+      index: 0,
+    })
+  })
+
+  test("reports invalid lastmod values", () => {
+    expect(
+      buildSitemapXml({
+        ...DEFAULT_SITEMAP_GENERATOR_STATE,
+        urlEntries: [createUrlEntryInput({ loc: "/", lastmod: "April 20" })],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-lastmod",
+      index: 0,
+    })
+  })
+
+  test("reports invalid calendar dates", () => {
+    expect(
+      buildSitemapXml({
+        ...DEFAULT_SITEMAP_GENERATOR_STATE,
+        urlEntries: [createUrlEntryInput({ loc: "/", lastmod: "2026-02-31" })],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-lastmod",
+      index: 0,
+    })
+  })
+
+  test("reports invalid calendar dates in full ISO datetimes", () => {
+    expect(
+      buildSitemapXml({
+        ...DEFAULT_SITEMAP_GENERATOR_STATE,
+        urlEntries: [
+          createUrlEntryInput({
+            loc: "/",
+            lastmod: "2026-02-31T10:30:00+00:00",
+          }),
+        ],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-lastmod",
+      index: 0,
+    })
+  })
+
+  test("reports invalid timezones in full ISO datetimes", () => {
+    expect(
+      buildSitemapXml({
+        ...DEFAULT_SITEMAP_GENERATOR_STATE,
+        urlEntries: [
+          createUrlEntryInput({
+            loc: "/",
+            lastmod: "2026-04-20T10:30:00+14:30",
+          }),
+        ],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-lastmod",
+      index: 0,
+    })
+  })
+
+  test("reports invalid clock values in full ISO datetimes", () => {
+    expect(
+      buildSitemapXml({
+        ...DEFAULT_SITEMAP_GENERATOR_STATE,
+        urlEntries: [
+          createUrlEntryInput({
+            loc: "/",
+            lastmod: "2026-04-20T24:30:00Z",
+          }),
+        ],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-lastmod",
+      index: 0,
+    })
+  })
+
+  test("reports timezone offsets beyond the ISO range", () => {
+    expect(
+      buildSitemapXml({
+        ...DEFAULT_SITEMAP_GENERATOR_STATE,
+        urlEntries: [
+          createUrlEntryInput({
+            loc: "/",
+            lastmod: "2026-04-20T10:30:00+15:00",
+          }),
+        ],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-lastmod",
       index: 0,
     })
   })
@@ -183,6 +342,24 @@ describe("buildSitemapXml", () => {
     }
 
     expect(result.xml).toContain("<lastmod>2026-04-20</lastmod>")
+  })
+
+  test("reports invalid sitemap index lastmod values", () => {
+    expect(
+      buildSitemapXml({
+        ...createPresetState("index"),
+        sitemapEntries: [
+          createSitemapEntryInput({
+            loc: "/sitemap.xml",
+            lastmod: "2026-13-01",
+          }),
+        ],
+      })
+    ).toEqual({
+      state: "error",
+      errorCode: "invalid-lastmod",
+      index: 0,
+    })
   })
 
   test("reports invalid sitemap index locations", () => {

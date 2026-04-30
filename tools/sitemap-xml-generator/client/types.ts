@@ -41,6 +41,7 @@ export type SitemapXmlGeneratorMessages = Readonly<{
   invalidBaseUrlMessage: string
   invalidUrlLocationMessage: string
   invalidSitemapLocationMessage: string
+  invalidLastmodMessage: string
   invalidPriorityMessage: string
   generatedUrlCountLabel: string
   generatedSitemapCountLabel: string

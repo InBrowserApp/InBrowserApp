@@ -1,15 +1,15 @@
-## Why this tool is useful
+## ทำไมเครื่องมือนี้จึงมีประโยชน์
 
-Search engines do not need a massive sitemap system to understand most sites. They need a valid XML document with stable URLs, sensible update hints, and no accidental formatting mistakes. This tool focuses on that core job.
+เว็บไซต์ส่วนใหญ่ไม่จำเป็นต้องมีระบบ sitemap ขนาดใหญ่ สิ่งที่เครื่องมือค้นหาต้องการคือเอกสาร XML ที่ถูกต้อง มี URL ที่เสถียร มีคำใบ้การอัปเดตที่เหมาะสม และไม่มีข้อผิดพลาดจากการจัดรูปแบบโดยไม่ตั้งใจ เครื่องมือนี้จึงเน้นงานหลักนั้น
 
-## What it covers
+## เครื่องมือนี้ครอบคลุมอะไร
 
-- Build a standard `urlset` sitemap for pages on one site.
-- Build a `sitemapindex` document when you already split large sites into multiple sitemap files.
-- Work with either absolute URLs or clean relative paths joined against one base URL.
+- สร้าง sitemap แบบ `urlset` มาตรฐานสำหรับหน้าต่าง ๆ ในเว็บไซต์เดียว
+- สร้างเอกสาร `sitemapindex` เมื่อเว็บไซต์ขนาดใหญ่ถูกแยกเป็นหลายไฟล์ sitemap อยู่แล้ว
+- ใช้ได้ทั้ง URL แบบเต็มหรือพาธสัมพัทธ์ที่สะอาดซึ่งรวมกับ URL ฐานเดียว
 
-## What to watch for
+## สิ่งที่ควรระวัง
 
-- Sitemap locations should resolve to final canonical URLs, not temporary redirects.
-- `lastmod`, `changefreq`, and `priority` are hints, not guarantees about crawling behavior.
-- If every row is already a full URL, turn off automatic base URL joining and keep the XML explicit.
+- ตำแหน่งใน sitemap ควรชี้ไปยัง URL canonical สุดท้าย ไม่ใช่ redirect ชั่วคราว
+- `lastmod`, `changefreq` และ `priority` เป็นเพียงคำใบ้ ไม่ใช่การรับประกันพฤติกรรมการ crawl
+- หากทุกแถวเป็น URL เต็มอยู่แล้ว ให้ปิดการรวม URL ฐานอัตโนมัติและทำให้ XML ชัดเจน

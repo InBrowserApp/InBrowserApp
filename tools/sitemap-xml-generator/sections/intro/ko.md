@@ -1,15 +1,15 @@
-## Why this tool is useful
+## 이 도구가 유용한 이유
 
-Search engines do not need a massive sitemap system to understand most sites. They need a valid XML document with stable URLs, sensible update hints, and no accidental formatting mistakes. This tool focuses on that core job.
+대부분의 사이트에는 거대한 사이트맵 시스템이 필요하지 않습니다. 검색 엔진에 필요한 것은 안정적인 URL, 합리적인 업데이트 힌트, 실수로 생긴 형식 오류가 없는 유효한 XML 문서입니다. 이 도구는 그 핵심 작업에 집중합니다.
 
-## What it covers
+## 지원하는 작업
 
-- Build a standard `urlset` sitemap for pages on one site.
-- Build a `sitemapindex` document when you already split large sites into multiple sitemap files.
-- Work with either absolute URLs or clean relative paths joined against one base URL.
+- 한 사이트의 페이지를 위한 표준 `urlset` 사이트맵을 만들 수 있습니다.
+- 큰 사이트를 여러 사이트맵 파일로 이미 나눠 둔 경우 `sitemapindex` 문서를 만들 수 있습니다.
+- 절대 URL 또는 하나의 기준 URL에 결합되는 깔끔한 상대 경로를 사용할 수 있습니다.
 
-## What to watch for
+## 주의할 점
 
-- Sitemap locations should resolve to final canonical URLs, not temporary redirects.
-- `lastmod`, `changefreq`, and `priority` are hints, not guarantees about crawling behavior.
-- If every row is already a full URL, turn off automatic base URL joining and keep the XML explicit.
+- 사이트맵 위치는 임시 리디렉션이 아니라 최종 canonical URL로 해석되어야 합니다.
+- `lastmod`, `changefreq`, `priority`는 힌트일 뿐이며 크롤링 동작을 보장하지 않습니다.
+- 모든 행이 이미 전체 URL이면 자동 기준 URL 결합을 끄고 XML을 명확하게 유지하세요.

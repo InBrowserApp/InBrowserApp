@@ -1,15 +1,15 @@
-## Why this tool is useful
+## Waarom dit hulpmiddel nuttig is
 
-Search engines do not need a massive sitemap system to understand most sites. They need a valid XML document with stable URLs, sensible update hints, and no accidental formatting mistakes. This tool focuses on that core job.
+De meeste sites hebben geen groot sitemapsysteem nodig. Zoekmachines hebben een geldig XML-document nodig met stabiele URL’s, zinvolle update-hints en geen toevallige opmaakfouten. Dit hulpmiddel richt zich op dat kernwerk.
 
-## What it covers
+## Wat het dekt
 
-- Build a standard `urlset` sitemap for pages on one site.
-- Build a `sitemapindex` document when you already split large sites into multiple sitemap files.
-- Work with either absolute URLs or clean relative paths joined against one base URL.
+- Bouw een standaard `urlset`-sitemap voor pagina’s op één site.
+- Bouw een `sitemapindex`-document wanneer je grote sites al in meerdere sitemapbestanden splitst.
+- Werk met absolute URL’s of nette relatieve paden die aan één basis-URL worden gekoppeld.
 
-## What to watch for
+## Waarop letten
 
-- Sitemap locations should resolve to final canonical URLs, not temporary redirects.
-- `lastmod`, `changefreq`, and `priority` are hints, not guarantees about crawling behavior.
-- If every row is already a full URL, turn off automatic base URL joining and keep the XML explicit.
+- Sitemaplocaties moeten naar de uiteindelijke canonieke URL’s leiden, niet naar tijdelijke redirects.
+- `lastmod`, `changefreq` en `priority` zijn hints, geen garanties voor crawlers.
+- Als elke rij al een volledige URL is, schakel automatisch koppelen aan de basis-URL uit en houd de XML expliciet.

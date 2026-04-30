@@ -1,4 +1,4 @@
 {
-  "name": "Sitemap XML Generator",
-  "description": "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser."
+  "name": "사이트맵 XML 생성기",
+  "description": "브라우저를 떠나지 않고 정리된 URL 목록에서 sitemap.xml 파일이나 사이트맵 인덱스를 생성합니다."
 }

@@ -3,18 +3,24 @@
 }
 
 .sitemap-xml-highlight {
+  direction: ltr;
   min-height: 20rem;
   margin: 0;
   font-family: var(--font-mono);
   font-size: 0.875rem;
   line-height: 1.5;
   color: var(--foreground);
+  text-align: left;
+  unicode-bidi: isolate;
   white-space: pre;
 }
 
 .sitemap-xml-highlight code {
+  direction: ltr;
   display: block;
   min-width: fit-content;
+  text-align: left;
+  unicode-bidi: isolate;
 }
 
 .sitemap-xml-highlight-empty {

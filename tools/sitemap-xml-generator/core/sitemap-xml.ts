@@ -1,4 +1,10 @@
 import type { SitemapGeneratorState } from "./sitemap-state"
+import {
+  escapeXml,
+  formatLastmod,
+  formatPriority,
+  normalizeLocation,
+} from "./sitemap-format"
 
 type BuildSitemapResult =
   | Readonly<{
@@ -13,101 +19,12 @@ type BuildSitemapResult =
       state: "error"
       errorCode:
         | "invalid-base-url"
+        | "invalid-lastmod"
         | "invalid-priority"
         | "invalid-sitemap-location"
         | "invalid-url-location"
       index?: number
     }>
-
-function escapeXml(value: string) {
-  return value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&apos;")
-}
-
-function isAbsoluteUrl(value: string) {
-  try {
-    const url = new URL(value)
-    return url.protocol.length > 0
-  } catch {
-    return false
-  }
-}
-
-function normalizeBaseUrl(baseUrl: string) {
-  const trimmed = baseUrl.trim()
-
-  if (trimmed.length === 0) {
-    return null
-  }
-
-  try {
-    return new URL(trimmed)
-  } catch {
-    return null
-  }
-}
-
-function normalizeLocation(
-  location: string,
-  baseUrl: string,
-  autoJoin: boolean
-) {
-  const trimmed = location.trim()
-
-  if (trimmed.length === 0) {
-    return { state: "empty" } as const
-  }
-
-  if (isAbsoluteUrl(trimmed)) {
-    return { state: "success", location: trimmed } as const
-  }
-
-  if (!autoJoin) {
-    return { state: "error", errorCode: "invalid-location" } as const
-  }
-
-  const normalizedBaseUrl = normalizeBaseUrl(baseUrl)
-
-  if (!normalizedBaseUrl) {
-    return { state: "error", errorCode: "invalid-base-url" } as const
-  }
-
-  try {
-    return {
-      state: "success",
-      location: new URL(trimmed, normalizedBaseUrl).toString(),
-    } as const
-  } catch {
-    return { state: "error", errorCode: "invalid-location" } as const
-  }
-}
-
-function formatPriority(priority: string) {
-  const trimmed = priority.trim()
-
-  if (trimmed.length === 0) {
-    return { state: "empty" } as const
-  }
-
-  const numericPriority = Number(trimmed)
-
-  if (!Number.isFinite(numericPriority)) {
-    return { state: "error" } as const
-  }
-
-  if (numericPriority < 0 || numericPriority > 1) {
-    return { state: "error" } as const
-  }
-
-  return {
-    state: "success",
-    priority: numericPriority.toFixed(1),
-  } as const
-}
 
 function buildUrlsetXml(input: SitemapGeneratorState): BuildSitemapResult {
   const lines = ['<?xml version="1.0" encoding="UTF-8"?>']
@@ -146,12 +63,22 @@ function buildUrlsetXml(input: SitemapGeneratorState): BuildSitemapResult {
       }
     }
 
+    const normalizedLastmod = formatLastmod(entry.lastmod)
+
+    if (normalizedLastmod.state === "error") {
+      return {
+        state: "error",
+        errorCode: "invalid-lastmod",
+        index,
+      }
+    }
+
     entryLines.push("  <url>")
     entryLines.push(`    <loc>${escapeXml(normalizedLocation.location)}</loc>`)
 
-    if (entry.lastmod.trim().length > 0) {
+    if (normalizedLastmod.state === "success") {
       entryLines.push(
-        `    <lastmod>${escapeXml(entry.lastmod.trim())}</lastmod>`
+        `    <lastmod>${escapeXml(normalizedLastmod.lastmod)}</lastmod>`
       )
     }
 
@@ -211,12 +138,22 @@ function buildSitemapIndexXml(
       }
     }
 
+    const normalizedLastmod = formatLastmod(entry.lastmod)
+
+    if (normalizedLastmod.state === "error") {
+      return {
+        state: "error",
+        errorCode: "invalid-lastmod",
+        index,
+      }
+    }
+
     entryLines.push("  <sitemap>")
     entryLines.push(`    <loc>${escapeXml(normalizedLocation.location)}</loc>`)
 
-    if (entry.lastmod.trim().length > 0) {
+    if (normalizedLastmod.state === "success") {
       entryLines.push(
-        `    <lastmod>${escapeXml(entry.lastmod.trim())}</lastmod>`
+        `    <lastmod>${escapeXml(normalizedLastmod.lastmod)}</lastmod>`
       )
     }
 

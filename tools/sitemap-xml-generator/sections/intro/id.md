@@ -1,15 +1,15 @@
-## Why this tool is useful
+## Mengapa alat ini berguna
 
-Search engines do not need a massive sitemap system to understand most sites. They need a valid XML document with stable URLs, sensible update hints, and no accidental formatting mistakes. This tool focuses on that core job.
+Sebagian besar situs tidak memerlukan sistem sitemap yang besar. Mesin pencari membutuhkan dokumen XML yang valid dengan URL stabil, petunjuk pembaruan yang wajar, dan tanpa kesalahan format yang tidak disengaja. Alat ini berfokus pada tugas inti itu.
 
-## What it covers
+## Yang dicakup
 
-- Build a standard `urlset` sitemap for pages on one site.
-- Build a `sitemapindex` document when you already split large sites into multiple sitemap files.
-- Work with either absolute URLs or clean relative paths joined against one base URL.
+- Membuat sitemap `urlset` standar untuk halaman di satu situs.
+- Membuat dokumen `sitemapindex` ketika situs besar sudah dibagi menjadi beberapa berkas sitemap.
+- Bekerja dengan URL absolut atau path relatif rapi yang digabungkan dengan satu URL dasar.
 
-## What to watch for
+## Yang perlu diperhatikan
 
-- Sitemap locations should resolve to final canonical URLs, not temporary redirects.
-- `lastmod`, `changefreq`, and `priority` are hints, not guarantees about crawling behavior.
-- If every row is already a full URL, turn off automatic base URL joining and keep the XML explicit.
+- Lokasi sitemap sebaiknya mengarah ke URL canonical final, bukan redirect sementara.
+- `lastmod`, `changefreq`, dan `priority` adalah petunjuk, bukan jaminan perilaku crawling.
+- Jika setiap baris sudah berupa URL lengkap, matikan penggabungan URL dasar otomatis agar XML tetap eksplisit.

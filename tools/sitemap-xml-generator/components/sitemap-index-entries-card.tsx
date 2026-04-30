@@ -50,64 +50,75 @@ function SitemapIndexEntriesCard({
           </Field>
 
           <div className="grid gap-4">
-            {entries.map((entry, index) => (
-              <div
-                key={entry.id}
-                className="rounded-2xl border border-border/70 bg-muted/20 p-4"
-              >
-                <div className="mb-4 flex items-center justify-between gap-3">
-                  <p className="font-medium">
-                    {messages.sitemapEntryLabel.replace(
-                      "{index}",
-                      String(index + 1)
-                    )}
-                  </p>
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => {
-                      onEntryRemove(entry.id)
-                    }}
-                  >
-                    <Trash2 data-icon="inline-start" />
-                    {messages.removeEntryLabel}
-                  </Button>
-                </div>
+            {entries.map((entry, index) => {
+              const entryLabel = messages.sitemapEntryLabel.replace(
+                "{index}",
+                String(index + 1)
+              )
 
-                <div className="grid gap-4 md:grid-cols-2">
-                  <Field>
-                    <FieldLabel htmlFor={`${entry.id}-loc`}>
-                      {messages.locationLabel}
-                    </FieldLabel>
-                    <Input
-                      id={`${entry.id}-loc`}
-                      spellCheck={false}
-                      value={entry.loc}
-                      placeholder={messages.pathPlaceholder}
-                      onChange={(event) => {
-                        onEntryChange(entry.id, "loc", event.target.value)
+              return (
+                <div
+                  key={entry.id}
+                  className="rounded-lg border border-border/70 bg-muted/20 p-4"
+                >
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <p className="font-medium">{entryLabel}</p>
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      aria-label={`${messages.removeEntryLabel} ${entryLabel}`}
+                      onClick={() => {
+                        onEntryRemove(entry.id)
                       }}
-                    />
-                  </Field>
+                    >
+                      <Trash2 data-icon="inline-start" />
+                      {messages.removeEntryLabel}
+                    </Button>
+                  </div>
 
-                  <Field>
-                    <FieldLabel htmlFor={`${entry.id}-lastmod`}>
-                      {messages.lastModifiedLabel}
-                    </FieldLabel>
-                    <Input
-                      id={`${entry.id}-lastmod`}
-                      spellCheck={false}
-                      value={entry.lastmod}
-                      placeholder={messages.lastModifiedPlaceholder}
-                      onChange={(event) => {
-                        onEntryChange(entry.id, "lastmod", event.target.value)
-                      }}
-                    />
-                  </Field>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <Field>
+                      <FieldLabel htmlFor={`${entry.id}-loc`}>
+                        {messages.locationLabel}
+                      </FieldLabel>
+                      <Input
+                        id={`${entry.id}-loc`}
+                        name={`${entry.id}-loc`}
+                        autoComplete="off"
+                        dir="ltr"
+                        spellCheck={false}
+                        className="text-left"
+                        value={entry.loc}
+                        placeholder={messages.pathPlaceholder}
+                        onChange={(event) => {
+                          onEntryChange(entry.id, "loc", event.target.value)
+                        }}
+                      />
+                    </Field>
+
+                    <Field>
+                      <FieldLabel htmlFor={`${entry.id}-lastmod`}>
+                        {messages.lastModifiedLabel}
+                      </FieldLabel>
+                      <Input
+                        id={`${entry.id}-lastmod`}
+                        name={`${entry.id}-lastmod`}
+                        autoComplete="off"
+                        dir="ltr"
+                        spellCheck={false}
+                        className="text-left"
+                        value={entry.lastmod}
+                        placeholder={messages.lastModifiedPlaceholder}
+                        onChange={(event) => {
+                          onEntryChange(entry.id, "lastmod", event.target.value)
+                        }}
+                      />
+                    </Field>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </FieldGroup>
       </ToolPanelCardContent>

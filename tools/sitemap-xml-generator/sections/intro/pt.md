@@ -1,15 +1,15 @@
-## Why this tool is useful
+## Por que esta ferramenta é útil
 
-Search engines do not need a massive sitemap system to understand most sites. They need a valid XML document with stable URLs, sensible update hints, and no accidental formatting mistakes. This tool focuses on that core job.
+A maioria dos sites não precisa de um sistema enorme de sitemap. Motores de busca precisam de um documento XML válido com URLs estáveis, sinais de atualização sensatos e sem erros acidentais de formatação. Esta ferramenta foca nesse trabalho central.
 
-## What it covers
+## O que ela cobre
 
-- Build a standard `urlset` sitemap for pages on one site.
-- Build a `sitemapindex` document when you already split large sites into multiple sitemap files.
-- Work with either absolute URLs or clean relative paths joined against one base URL.
+- Criar um sitemap `urlset` padrão para páginas de um site.
+- Criar um documento `sitemapindex` quando você já divide sites grandes em vários arquivos sitemap.
+- Trabalhar com URLs absolutas ou caminhos relativos limpos unidos a uma URL base.
 
-## What to watch for
+## O que observar
 
-- Sitemap locations should resolve to final canonical URLs, not temporary redirects.
-- `lastmod`, `changefreq`, and `priority` are hints, not guarantees about crawling behavior.
-- If every row is already a full URL, turn off automatic base URL joining and keep the XML explicit.
+- Os locais do sitemap devem resolver para URLs canônicas finais, não para redirecionamentos temporários.
+- `lastmod`, `changefreq` e `priority` são dicas, não garantias de comportamento de rastreamento.
+- Se cada linha já for uma URL completa, desative a união automática com a URL base para manter o XML explícito.

@@ -77,6 +77,8 @@ function HighlightedXml({
     <div
       role="region"
       aria-label={ariaLabel}
+      dir="ltr"
+      translate="no"
       className="sitemap-xml-highlight-surface min-h-80 w-full rounded-lg border border-input bg-transparent px-2.5 py-2"
     >
       <pre className="sitemap-xml-highlight hljs">

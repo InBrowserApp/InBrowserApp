@@ -1,15 +1,15 @@
-## Why this tool is useful
+## Varför verktyget är användbart
 
-Search engines do not need a massive sitemap system to understand most sites. They need a valid XML document with stable URLs, sensible update hints, and no accidental formatting mistakes. This tool focuses on that core job.
+De flesta webbplatser behöver inget stort sitemap-system. Sökmotorer behöver ett giltigt XML-dokument med stabila URL:er, rimliga uppdateringssignaler och inga oavsiktliga formateringsfel. Det här verktyget fokuserar på den kärnuppgiften.
 
-## What it covers
+## Vad det täcker
 
-- Build a standard `urlset` sitemap for pages on one site.
-- Build a `sitemapindex` document when you already split large sites into multiple sitemap files.
-- Work with either absolute URLs or clean relative paths joined against one base URL.
+- Skapa en standard-`urlset`-sitemap för sidor på en webbplats.
+- Skapa ett `sitemapindex`-dokument när stora webbplatser redan är uppdelade i flera sitemapfiler.
+- Arbeta med absoluta URL:er eller rena relativa sökvägar som slås ihop med en bas-URL.
 
-## What to watch for
+## Att tänka på
 
-- Sitemap locations should resolve to final canonical URLs, not temporary redirects.
-- `lastmod`, `changefreq`, and `priority` are hints, not guarantees about crawling behavior.
-- If every row is already a full URL, turn off automatic base URL joining and keep the XML explicit.
+- Sitemap-platser bör leda till slutliga kanoniska URL:er, inte till temporära omdirigeringar.
+- `lastmod`, `changefreq` och `priority` är signaler, inte garantier för crawlning.
+- Om varje rad redan är en fullständig URL, stäng av automatisk sammanslagning med bas-URL och håll XML:en explicit.

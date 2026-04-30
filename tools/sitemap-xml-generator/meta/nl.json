@@ -1,4 +1,4 @@
 {
-  "name": "Sitemap XML Generator",
-  "description": "Generate sitemap.xml files or sitemap indexes from clean URL lists without leaving the browser."
+  "name": "Sitemap XML-generator",
+  "description": "Genereer sitemap.xml-bestanden of sitemapindexen vanuit nette URL-lijsten zonder de browser te verlaten."
 }

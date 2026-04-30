@@ -1,15 +1,15 @@
-## Why this tool is useful
+## यह टूल क्यों उपयोगी है
 
-Search engines do not need a massive sitemap system to understand most sites. They need a valid XML document with stable URLs, sensible update hints, and no accidental formatting mistakes. This tool focuses on that core job.
+अधिकांश साइटों को बहुत बड़े sitemap सिस्टम की ज़रूरत नहीं होती। सर्च इंजन को स्थिर URL, सही अपडेट संकेत और बिना आकस्मिक फ़ॉर्मेटिंग गलती वाला मान्य XML दस्तावेज़ चाहिए। यह टूल उसी मुख्य काम पर केंद्रित है।
 
-## What it covers
+## यह क्या कवर करता है
 
-- Build a standard `urlset` sitemap for pages on one site.
-- Build a `sitemapindex` document when you already split large sites into multiple sitemap files.
-- Work with either absolute URLs or clean relative paths joined against one base URL.
+- एक साइट के पेजों के लिए मानक `urlset` sitemap बनाएं।
+- जब बड़ी साइट पहले से कई sitemap फ़ाइलों में बांटी गई हो, तब `sitemapindex` दस्तावेज़ बनाएं।
+- पूर्ण URL या एक बेस URL से जुड़े साफ़ रिलेटिव पाथ के साथ काम करें।
 
-## What to watch for
+## किन बातों का ध्यान रखें
 
-- Sitemap locations should resolve to final canonical URLs, not temporary redirects.
-- `lastmod`, `changefreq`, and `priority` are hints, not guarantees about crawling behavior.
-- If every row is already a full URL, turn off automatic base URL joining and keep the XML explicit.
+- Sitemap स्थान अस्थायी redirect नहीं, बल्कि अंतिम canonical URL पर resolve होने चाहिए।
+- `lastmod`, `changefreq` और `priority` संकेत हैं, crawling व्यवहार की गारंटी नहीं।
+- यदि हर पंक्ति पहले से पूर्ण URL है, तो automatic base URL joining बंद करें और XML को स्पष्ट रखें।

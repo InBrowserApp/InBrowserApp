@@ -55,11 +55,13 @@ const messages = {
     "Add at least one URL or sitemap file to generate XML.",
   outputErrorTitle: "Cannot generate XML yet",
   invalidBaseUrlMessage:
-    "Base URL must be a valid absolute URL when auto join is enabled.",
+    "Base URL must be a valid http or https URL when auto join is enabled.",
   invalidUrlLocationMessage:
-    "Row {index} needs an absolute URL or a path that can be joined to the base URL.",
+    "Row {index} needs an http/https URL or a path that can be joined to the base URL.",
   invalidSitemapLocationMessage:
-    "Sitemap {index} needs an absolute URL or a path that can be joined to the base URL.",
+    "Sitemap {index} needs an http/https URL or a path that can be joined to the base URL.",
+  invalidLastmodMessage:
+    "Row {index} last modified must use YYYY-MM-DD or a full ISO datetime with timezone.",
   invalidPriorityMessage:
     "Row {index} priority must be a number between 0.0 and 1.0.",
   generatedUrlCountLabel: "{count} URL entries included",
@@ -128,6 +130,72 @@ describe("SitemapXmlGeneratorClient", () => {
     await waitFor(() => {
       expect(screen.getByRole("alert").textContent).toContain(
         "priority must be a number between 0.0 and 1.0."
+      )
+    })
+  })
+
+  test("shows a validation error when the base URL is invalid", async () => {
+    render(<SitemapXmlGeneratorClient messages={messages} />)
+
+    fireEvent.change(screen.getByLabelText(messages.baseUrlLabel), {
+      target: { value: "not-a-url" },
+    })
+
+    await waitFor(() => {
+      expect(screen.getByRole("alert").textContent).toContain(
+        "Base URL must be a valid http or https URL"
+      )
+    })
+  })
+
+  test("shows a validation error when a URL location is invalid", async () => {
+    render(<SitemapXmlGeneratorClient messages={messages} />)
+
+    const locationInputs = screen.getAllByLabelText(messages.locationLabel)
+    fireEvent.change(locationInputs[0] as HTMLInputElement, {
+      target: { value: "ftp://example.com/page.xml" },
+    })
+
+    await waitFor(() => {
+      expect(screen.getByRole("alert").textContent).toContain(
+        "Row 1 needs an http/https URL"
+      )
+    })
+  })
+
+  test("shows a validation error when lastmod is invalid", async () => {
+    render(<SitemapXmlGeneratorClient messages={messages} />)
+
+    const lastmodInputs = screen.getAllByLabelText(messages.lastModifiedLabel)
+    fireEvent.change(lastmodInputs[0] as HTMLInputElement, {
+      target: { value: "April 20" },
+    })
+
+    await waitFor(() => {
+      expect(screen.getByRole("alert").textContent).toContain(
+        "last modified must use YYYY-MM-DD"
+      )
+    })
+  })
+
+  test("shows a validation error when a sitemap location is invalid", async () => {
+    render(<SitemapXmlGeneratorClient messages={messages} />)
+
+    fireEvent.click(
+      screen.getByRole("button", { name: messages.sitemapIndexModeLabel })
+    )
+    fireEvent.click(
+      screen.getByRole("button", { name: messages.indexPresetLabel })
+    )
+
+    const locationInputs = screen.getAllByLabelText(messages.locationLabel)
+    fireEvent.change(locationInputs[0] as HTMLInputElement, {
+      target: { value: "ftp://example.com/sitemap.xml" },
+    })
+
+    await waitFor(() => {
+      expect(screen.getByRole("alert").textContent).toContain(
+        "Sitemap 1 needs an http/https URL"
       )
     })
   })

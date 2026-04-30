@@ -21,7 +21,7 @@ import {
   type SitemapPresetKey,
   type UrlEntryInput,
 } from "./core/sitemap-state"
-import { buildSitemapXml } from "./core/sitemap-xml"
+import { buildSitemapXml, type BuildSitemapResult } from "./core/sitemap-xml"
 import { OutputCard } from "./components/output-card"
 import { SettingsCard } from "./components/settings-card"
 import { SitemapIndexEntriesCard } from "./components/sitemap-index-entries-card"
@@ -30,6 +30,39 @@ import { UrlsetEntriesCard } from "./components/urlset-entries-card"
 type SitemapXmlGeneratorClientProps = Readonly<{
   messages: SitemapXmlGeneratorMessages
 }>
+
+type SitemapXmlGeneratorError = Extract<BuildSitemapResult, { state: "error" }>
+
+function formatIndexedMessage(message: string, index: number | undefined) {
+  return message.replace("{index}", String((index ?? 0) + 1))
+}
+
+function getErrorDescription(
+  result: SitemapXmlGeneratorError,
+  messages: SitemapXmlGeneratorMessages
+) {
+  switch (result.errorCode) {
+    case "invalid-base-url":
+      return messages.invalidBaseUrlMessage
+    case "invalid-lastmod":
+      return formatIndexedMessage(messages.invalidLastmodMessage, result.index)
+    case "invalid-priority":
+      return formatIndexedMessage(messages.invalidPriorityMessage, result.index)
+    case "invalid-sitemap-location":
+      return formatIndexedMessage(
+        messages.invalidSitemapLocationMessage,
+        result.index
+      )
+    case "invalid-url-location":
+      return formatIndexedMessage(
+        messages.invalidUrlLocationMessage,
+        result.index
+      )
+  }
+
+  const unreachableErrorCode: never = result.errorCode
+  return unreachableErrorCode
+}
 
 function SitemapXmlGeneratorClient({
   messages,
@@ -126,24 +159,7 @@ function SitemapXmlGeneratorClient({
   }
 
   const errorDescription =
-    result.state !== "error"
-      ? ""
-      : result.errorCode === "invalid-base-url"
-        ? messages.invalidBaseUrlMessage
-        : result.errorCode === "invalid-priority"
-          ? messages.invalidPriorityMessage.replace(
-              "{index}",
-              String((result.index ?? 0) + 1)
-            )
-          : result.errorCode === "invalid-sitemap-location"
-            ? messages.invalidSitemapLocationMessage.replace(
-                "{index}",
-                String((result.index ?? 0) + 1)
-              )
-            : messages.invalidUrlLocationMessage.replace(
-                "{index}",
-                String((result.index ?? 0) + 1)
-              )
+    result.state !== "error" ? "" : getErrorDescription(result, messages)
 
   return (
     <div className="grid gap-6">

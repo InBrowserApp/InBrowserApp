@@ -61,115 +61,141 @@ function UrlsetEntriesCard({
           </Field>
 
           <div className="grid gap-4">
-            {entries.map((entry, index) => (
-              <div
-                key={entry.id}
-                className="rounded-2xl border border-border/70 bg-muted/20 p-4"
-              >
-                <div className="mb-4 flex items-center justify-between gap-3">
-                  <p className="font-medium">
-                    {messages.urlEntryLabel.replace(
-                      "{index}",
-                      String(index + 1)
-                    )}
-                  </p>
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => {
-                      onEntryRemove(entry.id)
-                    }}
-                  >
-                    <Trash2 data-icon="inline-start" />
-                    {messages.removeEntryLabel}
-                  </Button>
-                </div>
+            {entries.map((entry, index) => {
+              const entryLabel = messages.urlEntryLabel.replace(
+                "{index}",
+                String(index + 1)
+              )
+              const changeFrequencyLabelId = `${entry.id}-changefreq-label`
 
-                <div className="grid gap-4 md:grid-cols-2">
-                  <Field>
-                    <FieldLabel htmlFor={`${entry.id}-loc`}>
-                      {messages.locationLabel}
-                    </FieldLabel>
-                    <Input
-                      id={`${entry.id}-loc`}
-                      spellCheck={false}
-                      value={entry.loc}
-                      placeholder={messages.pathPlaceholder}
-                      onChange={(event) => {
-                        onEntryChange(entry.id, "loc", event.target.value)
-                      }}
-                    />
-                  </Field>
-
-                  <Field>
-                    <FieldLabel htmlFor={`${entry.id}-lastmod`}>
-                      {messages.lastModifiedLabel}
-                    </FieldLabel>
-                    <Input
-                      id={`${entry.id}-lastmod`}
-                      spellCheck={false}
-                      value={entry.lastmod}
-                      placeholder={messages.lastModifiedPlaceholder}
-                      onChange={(event) => {
-                        onEntryChange(entry.id, "lastmod", event.target.value)
-                      }}
-                    />
-                  </Field>
-
-                  <Field>
-                    <FieldLabel>{messages.changeFrequencyLabel}</FieldLabel>
-                    <Select
-                      value={entry.changefreq || "__empty__"}
-                      onValueChange={(value) => {
-                        onEntryChange(
-                          entry.id,
-                          "changefreq",
-                          value === "__empty__"
-                            ? ""
-                            : (value as ChangeFrequency)
-                        )
+              return (
+                <div
+                  key={entry.id}
+                  className="rounded-lg border border-border/70 bg-muted/20 p-4"
+                >
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <p className="font-medium">{entryLabel}</p>
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      aria-label={`${messages.removeEntryLabel} ${entryLabel}`}
+                      onClick={() => {
+                        onEntryRemove(entry.id)
                       }}
                     >
-                      <SelectTrigger className="w-full">
-                        <SelectValue
-                          placeholder={messages.changeFrequencyPlaceholder}
-                        />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="__empty__">
-                          {messages.changeFrequencyPlaceholder}
-                        </SelectItem>
-                        {CHANGE_FREQUENCIES.map((value) => (
-                          <SelectItem key={value} value={value}>
-                            {value}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </Field>
+                      <Trash2 data-icon="inline-start" />
+                      {messages.removeEntryLabel}
+                    </Button>
+                  </div>
 
-                  <Field>
-                    <FieldLabel htmlFor={`${entry.id}-priority`}>
-                      {messages.priorityLabel}
-                    </FieldLabel>
-                    <Input
-                      id={`${entry.id}-priority`}
-                      type="number"
-                      inputMode="decimal"
-                      min="0"
-                      max="1"
-                      step="0.1"
-                      value={entry.priority}
-                      placeholder={messages.priorityPlaceholder}
-                      onChange={(event) => {
-                        onEntryChange(entry.id, "priority", event.target.value)
-                      }}
-                    />
-                  </Field>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <Field>
+                      <FieldLabel htmlFor={`${entry.id}-loc`}>
+                        {messages.locationLabel}
+                      </FieldLabel>
+                      <Input
+                        id={`${entry.id}-loc`}
+                        name={`${entry.id}-loc`}
+                        autoComplete="off"
+                        dir="ltr"
+                        spellCheck={false}
+                        className="text-left"
+                        value={entry.loc}
+                        placeholder={messages.pathPlaceholder}
+                        onChange={(event) => {
+                          onEntryChange(entry.id, "loc", event.target.value)
+                        }}
+                      />
+                    </Field>
+
+                    <Field>
+                      <FieldLabel htmlFor={`${entry.id}-lastmod`}>
+                        {messages.lastModifiedLabel}
+                      </FieldLabel>
+                      <Input
+                        id={`${entry.id}-lastmod`}
+                        name={`${entry.id}-lastmod`}
+                        autoComplete="off"
+                        dir="ltr"
+                        spellCheck={false}
+                        className="text-left"
+                        value={entry.lastmod}
+                        placeholder={messages.lastModifiedPlaceholder}
+                        onChange={(event) => {
+                          onEntryChange(entry.id, "lastmod", event.target.value)
+                        }}
+                      />
+                    </Field>
+
+                    <Field>
+                      <FieldLabel id={changeFrequencyLabelId}>
+                        {messages.changeFrequencyLabel}
+                      </FieldLabel>
+                      <Select
+                        value={entry.changefreq || "__empty__"}
+                        onValueChange={(value) => {
+                          onEntryChange(
+                            entry.id,
+                            "changefreq",
+                            value === "__empty__"
+                              ? ""
+                              : (value as ChangeFrequency)
+                          )
+                        }}
+                      >
+                        <SelectTrigger
+                          aria-labelledby={changeFrequencyLabelId}
+                          className="w-full text-left"
+                          dir="ltr"
+                        >
+                          <SelectValue
+                            placeholder={messages.changeFrequencyPlaceholder}
+                          />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="__empty__">
+                            {messages.changeFrequencyPlaceholder}
+                          </SelectItem>
+                          {CHANGE_FREQUENCIES.map((value) => (
+                            <SelectItem key={value} value={value}>
+                              {value}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </Field>
+
+                    <Field>
+                      <FieldLabel htmlFor={`${entry.id}-priority`}>
+                        {messages.priorityLabel}
+                      </FieldLabel>
+                      <Input
+                        id={`${entry.id}-priority`}
+                        name={`${entry.id}-priority`}
+                        type="number"
+                        inputMode="decimal"
+                        autoComplete="off"
+                        dir="ltr"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        className="text-left"
+                        value={entry.priority}
+                        placeholder={messages.priorityPlaceholder}
+                        onChange={(event) => {
+                          onEntryChange(
+                            entry.id,
+                            "priority",
+                            event.target.value
+                          )
+                        }}
+                      />
+                    </Field>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </FieldGroup>
       </ToolPanelCardContent>

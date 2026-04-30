@@ -1,15 +1,15 @@
-## Why this tool is useful
+## Bu araç neden kullanışlıdır
 
-Search engines do not need a massive sitemap system to understand most sites. They need a valid XML document with stable URLs, sensible update hints, and no accidental formatting mistakes. This tool focuses on that core job.
+Çoğu site büyük bir sitemap sistemine ihtiyaç duymaz. Arama motorlarının ihtiyacı olan şey; kararlı URL’ler, mantıklı güncelleme ipuçları ve kazara biçimlendirme hatası olmayan geçerli bir XML belgesidir. Bu araç bu temel işe odaklanır.
 
-## What it covers
+## Neleri kapsar
 
-- Build a standard `urlset` sitemap for pages on one site.
-- Build a `sitemapindex` document when you already split large sites into multiple sitemap files.
-- Work with either absolute URLs or clean relative paths joined against one base URL.
+- Bir sitedeki sayfalar için standart bir `urlset` sitemap oluşturur.
+- Büyük siteleri zaten birden çok sitemap dosyasına ayırdıysanız `sitemapindex` belgesi oluşturur.
+- Mutlak URL’lerle veya tek bir temel URL’ye bağlanan temiz göreli yollarla çalışır.
 
-## What to watch for
+## Nelere dikkat edilmeli
 
-- Sitemap locations should resolve to final canonical URLs, not temporary redirects.
-- `lastmod`, `changefreq`, and `priority` are hints, not guarantees about crawling behavior.
-- If every row is already a full URL, turn off automatic base URL joining and keep the XML explicit.
+- Sitemap konumları geçici yönlendirmelere değil, nihai canonical URL’lere çözülmelidir.
+- `lastmod`, `changefreq` ve `priority` yalnızca ipucudur; tarama davranışını garanti etmez.
+- Her satır zaten tam URL ise otomatik temel URL birleştirmeyi kapatın ve XML’i açık tutun.

@@ -1,15 +1,15 @@
-## Why this tool is useful
+## このツールが役立つ理由
 
-Search engines do not need a massive sitemap system to understand most sites. They need a valid XML document with stable URLs, sensible update hints, and no accidental formatting mistakes. This tool focuses on that core job.
+多くのサイトでは、大規模なサイトマップ管理システムは必要ありません。検索エンジンが必要とするのは、安定した URL、妥当な更新ヒント、そして偶発的な形式ミスのない有効な XML 文書です。このツールはその中核作業に集中しています。
 
-## What it covers
+## 対応していること
 
-- Build a standard `urlset` sitemap for pages on one site.
-- Build a `sitemapindex` document when you already split large sites into multiple sitemap files.
-- Work with either absolute URLs or clean relative paths joined against one base URL.
+- 1 つのサイトのページ向けに標準の `urlset` サイトマップを作成できます。
+- 大きなサイトを複数のサイトマップファイルに分割している場合、`sitemapindex` 文書を作成できます。
+- 絶対 URL と、1 つのベース URL に結合する整理された相対パスのどちらにも対応します。
 
-## What to watch for
+## 注意すること
 
-- Sitemap locations should resolve to final canonical URLs, not temporary redirects.
-- `lastmod`, `changefreq`, and `priority` are hints, not guarantees about crawling behavior.
-- If every row is already a full URL, turn off automatic base URL joining and keep the XML explicit.
+- サイトマップ内の場所は、一時リダイレクトではなく最終的な正規 URL に解決されるべきです。
+- `lastmod`、`changefreq`、`priority` はヒントであり、クロール動作を保証するものではありません。
+- 各行がすでに完全な URL の場合は、自動ベース URL 結合をオフにして XML を明示的に保ちます。
