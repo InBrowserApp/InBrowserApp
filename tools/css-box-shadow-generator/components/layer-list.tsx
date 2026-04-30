@@ -1,7 +1,7 @@
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import { ScrollArea, ScrollBar } from "@workspace/ui/components/ui/scroll-area"
-import { ArrowDown, ArrowUp, Plus, Trash2 } from "@workspace/ui/icons"
+import { ArrowDown, ArrowUp, Trash2 } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
 import { formatShadowLayer } from "../core/shadow"
@@ -12,7 +12,6 @@ type LayerListProps = Readonly<{
   activeLayerId: string
   layers: readonly ShadowLayer[]
   messages: CssBoxShadowMessages
-  onAddLayer: () => void
   onMoveLayer: (id: string, direction: -1 | 1) => void
   onRemoveLayer: (id: string) => void
   onSelectLayer: (id: string) => void
@@ -26,36 +25,12 @@ function LayerList({
   activeLayerId,
   layers,
   messages,
-  onAddLayer,
   onMoveLayer,
   onRemoveLayer,
   onSelectLayer,
 }: LayerListProps) {
   return (
-    <section className="grid min-w-0 gap-3">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <div className="flex min-w-0 items-center gap-2">
-          <h2 className="truncate text-sm font-medium">
-            {messages.layersTitle}
-          </h2>
-          <Badge className="h-5 px-1.5 text-[11px]" variant="secondary">
-            {layers.length}
-          </Badge>
-        </div>
-
-        <Button
-          data-testid="add-layer"
-          onClick={onAddLayer}
-          className="shrink-0"
-          size="sm"
-          type="button"
-          variant="outline"
-        >
-          <Plus data-icon="inline-start" />
-          {messages.addLayerLabel}
-        </Button>
-      </div>
-
+    <section aria-label={messages.layersTitle} className="grid min-w-0">
       <ScrollArea className="min-w-0">
         <div className="flex w-max gap-2 pb-3">
           {layers.map((layer, index) => {

@@ -99,8 +99,8 @@ describe("CssBoxShadowGeneratorClient", () => {
       "box-shadow: 4px 12px 30px 3px rgba(255, 0, 0, 0.502);"
     )
     expect(
-      screen.getByTestId("dark-background-switch").getAttribute("data-state")
-    ).toBe("checked")
+      screen.getByTestId("dark-background-switch").getAttribute("aria-pressed")
+    ).toBe("true")
   })
 
   it("copies the generated css output", async () => {

@@ -3,12 +3,13 @@ import {
   ToolPanelCard,
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
+import { Button } from "@workspace/ui/components/ui/button"
 import {
   CardAction,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import { Switch } from "@workspace/ui/components/ui/switch"
 import { Moon } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
@@ -35,20 +36,30 @@ function PreviewCard({
     <ToolPanelCard className="min-w-0" size="sm">
       <CardHeader className="border-b">
         <CardTitle>{messages.previewTitle}</CardTitle>
+        <CardDescription className="text-pretty">
+          {messages.outputHint}
+        </CardDescription>
         <CardAction>
-          <div className="flex max-w-full items-center gap-2 rounded-lg border bg-muted/20 px-2.5 py-1.5 text-sm">
-            <Moon aria-hidden="true" className="size-4 text-muted-foreground" />
-            <span className="hidden sm:inline">
-              {messages.darkBackgroundLabel}
-            </span>
-            <Switch
-              aria-label={messages.darkBackgroundLabel}
-              checked={darkBackground}
-              data-testid="dark-background-switch"
-              onCheckedChange={onDarkBackgroundChange}
-              size="sm"
-            />
-          </div>
+          <Button
+            aria-label={messages.darkBackgroundLabel}
+            aria-pressed={darkBackground}
+            className={cn(
+              "border border-border/70 bg-background",
+              darkBackground
+                ? "bg-muted text-foreground"
+                : "text-muted-foreground"
+            )}
+            data-testid="dark-background-switch"
+            onClick={() => {
+              onDarkBackgroundChange(!darkBackground)
+            }}
+            size="icon-sm"
+            title={messages.darkBackgroundLabel}
+            type="button"
+            variant="ghost"
+          >
+            <Moon aria-hidden="true" />
+          </Button>
         </CardAction>
       </CardHeader>
       <ToolPanelCardContent className="min-w-0 gap-3">

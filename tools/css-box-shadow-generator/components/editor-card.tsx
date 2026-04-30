@@ -2,6 +2,15 @@ import {
   ToolPanelCard,
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
+import { Badge } from "@workspace/ui/components/ui/badge"
+import { Button } from "@workspace/ui/components/ui/button"
+import {
+  CardAction,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
+import { Plus } from "@workspace/ui/icons"
 
 import { LayerList } from "./layer-list"
 import { LayerSettings } from "./layer-settings"
@@ -46,12 +55,35 @@ function EditorCard({
 }: EditorCardProps) {
   return (
     <ToolPanelCard className="min-w-0" size="sm">
+      <CardHeader className="border-b">
+        <CardTitle className="flex min-w-0 items-center gap-2">
+          <span className="truncate">{messages.layersTitle}</span>
+          <Badge className="h-5 px-1.5 text-[11px]" variant="secondary">
+            {layers.length}
+          </Badge>
+        </CardTitle>
+        <CardDescription className="line-clamp-2 max-w-xl text-pretty sm:line-clamp-none">
+          {messages.meta.description}
+        </CardDescription>
+        <CardAction>
+          <Button
+            className="shrink-0"
+            data-testid="add-layer"
+            onClick={onAddLayer}
+            size="sm"
+            type="button"
+            variant="outline"
+          >
+            <Plus data-icon="inline-start" />
+            {messages.addLayerLabel}
+          </Button>
+        </CardAction>
+      </CardHeader>
       <ToolPanelCardContent className="min-w-0 gap-4">
         <LayerList
           activeLayerId={activeLayer.id}
           layers={layers}
           messages={messages}
-          onAddLayer={onAddLayer}
           onMoveLayer={onMoveLayer}
           onRemoveLayer={onRemoveLayer}
           onSelectLayer={onSelectLayer}
