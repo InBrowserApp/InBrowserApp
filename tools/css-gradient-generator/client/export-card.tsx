@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@workspace/ui/components/ui/card"
 import { Input } from "@workspace/ui/components/ui/input"
-import { Download, ImageIcon, TriangleAlert } from "@workspace/ui/icons"
+import { Download, TriangleAlert } from "@workspace/ui/icons"
 
 import type { CssGradientGeneratorMessages } from "../types"
 
@@ -51,11 +51,6 @@ function ExportCard({
         <div className="space-y-1">
           <CardTitle>{messages.exportTitle}</CardTitle>
           <CardDescription>{messages.exportSubtitle}</CardDescription>
-        </div>
-
-        <div className="inline-flex w-fit items-center gap-2 rounded-full border bg-background/80 px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm">
-          <ImageIcon className="size-3.5" />
-          {exportWidth} x {exportHeight}
         </div>
       </CardHeader>
 
