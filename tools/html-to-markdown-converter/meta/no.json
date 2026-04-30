@@ -1,0 +1,4 @@
+{
+  "name": "HTML til Markdown-konverter",
+  "description": "Konverter rå HTML til Markdown med justerbare stiler for overskrifter, lister og kodeblokker. Lim inn markup eller importer en fil, og kopier eller last ned resultatet."
+}

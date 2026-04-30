@@ -1,0 +1,4 @@
+{
+  "name": "URL-Parser und -Builder",
+  "description": "Zerlegt URLs in ihre Bestandteile und setzt sie in einem strukturierten Editor aus Protokoll, Zugangsdaten, Host, Pfad, Query-Parametern und Fragment wieder zusammen."
+}

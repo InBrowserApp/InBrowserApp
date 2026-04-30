@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "Ngôn ngữ đầu ra",
+  "languagePlaceholder": "Chọn ngôn ngữ",
+  "inputCurlLabel": "Lệnh cURL",
+  "outputCodeLabel": "Mã đã chuyển đổi",
+  "curlPlaceholder": "Dán lệnh cURL vào đây...",
+  "useSampleLabel": "Dùng mẫu",
+  "clearLabel": "Xóa",
+  "downloadCodeLabel": "Tải xuống",
+  "warningsTitle": "Cảnh báo",
+  "errorsTitle": "Lỗi",
+  "importFromFileLabel": "Nhập từ tệp",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép"
+}

@@ -1,0 +1,15 @@
+{
+  "targetLanguageLabel": "لغة الإخراج",
+  "languagePlaceholder": "اختر لغة",
+  "inputCurlLabel": "أمر cURL",
+  "outputCodeLabel": "الكود المحول",
+  "curlPlaceholder": "الصق أمر cURL هنا...",
+  "useSampleLabel": "استخدم مثالاً",
+  "clearLabel": "مسح",
+  "downloadCodeLabel": "تنزيل",
+  "warningsTitle": "تحذيرات",
+  "errorsTitle": "أخطاء",
+  "importFromFileLabel": "استيراد من ملف",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ"
+}

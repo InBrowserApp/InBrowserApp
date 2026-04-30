@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de HTML a Markdown",
+  "description": "Convierte HTML sin procesar en Markdown con estilos ajustables de encabezados, listas y bloques de código. Pega el marcado o importa un archivo, y luego copia o descarga el resultado."
+}

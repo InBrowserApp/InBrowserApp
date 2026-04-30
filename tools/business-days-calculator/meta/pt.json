@@ -1,0 +1,4 @@
+{
+  "name": "Calculadora de dias úteis",
+  "description": "Conta dias úteis entre datas e adiciona ou subtrai dias úteis com fins de semana e feriados personalizados."
+}

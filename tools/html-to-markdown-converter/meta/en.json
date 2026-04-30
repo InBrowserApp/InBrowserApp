@@ -1,0 +1,4 @@
+{
+  "name": "HTML to Markdown Converter",
+  "description": "Convert raw HTML into Markdown with adjustable heading, list, and code block styles. Paste markup or import a file, then copy or download the result."
+}
