@@ -1,9 +1,9 @@
 export {
-  AtSign,
-  ArrowLeftRight,
   ArrowDown,
-  ArrowRight,
+  AtSign,
   ArrowUp,
+  ArrowLeftRight,
+  ArrowRight,
   BadgeCheck,
   Binary,
   Braces,

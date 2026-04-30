@@ -35,6 +35,7 @@
     "@tool/color-picker": "workspace:*",
     "@tool/cookie-parser": "workspace:*",
     "@tool/credit-card-validator": "workspace:*",
+    "@tool/css-box-shadow-generator": "workspace:*",
     "@tool/css-gradient-generator": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",
     "@tool/cuid2-generator": "workspace:*",

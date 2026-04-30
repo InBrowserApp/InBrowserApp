@@ -2578,6 +2578,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "css-box-shadow-generator",
+    language: "ar",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "de",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "en",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "es",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "fr",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "he",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "hi",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "id",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "it",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "ja",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "ko",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "ms",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "nl",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "no",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "pl",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "pt",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "ru",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "sv",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "th",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "tr",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "vi",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "css-box-shadow-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "css-gradient-generator",
     language: "ar",
   },
