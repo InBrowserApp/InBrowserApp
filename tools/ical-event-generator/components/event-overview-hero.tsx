@@ -212,7 +212,7 @@ function EventOverviewHero({
               className="min-w-0 rounded-[1rem] border bg-muted/20 p-3"
             >
               <div className="flex items-center gap-2 text-muted-foreground">
-                <item.Icon className="size-3.5" />
+                <item.Icon className="size-3.5" aria-hidden="true" />
                 <p className="truncate text-[0.68rem] font-medium tracking-[0.18em] uppercase">
                   {item.label}
                 </p>

@@ -114,7 +114,10 @@ function EventOutputCard({
           <div className="min-w-0 space-y-1">
             <CardTitle>{messages.output.title}</CardTitle>
             <CardDescription>{messages.output.description}</CardDescription>
-            <p className="truncate font-mono text-xs text-muted-foreground">
+            <p
+              className="truncate font-mono text-xs text-muted-foreground"
+              translate="no"
+            >
               {output.fileName}
             </p>
           </div>
@@ -140,10 +143,10 @@ function EventOutputCard({
           </div>
         </div>
       </CardHeader>
-      <ToolPanelCardContent className="gap-4 p-4 sm:p-5">
-        <div className="overflow-hidden rounded-xl border bg-muted/20">
+      <ToolPanelCardContent className="gap-4 p-3 sm:p-4">
+        <div className="overflow-hidden rounded-xl border bg-background">
           {output.state === "error" ? (
-            <div className="grid min-h-[24rem] place-items-center bg-background p-4">
+            <div className="grid min-h-[18rem] place-items-center p-4 sm:min-h-[24rem]">
               <Alert variant="destructive" className="max-w-md">
                 <TriangleAlert />
                 <AlertTitle>{messages.output.title}</AlertTitle>
@@ -165,26 +168,15 @@ function EventOutputCard({
               <div
                 role="region"
                 aria-label={messages.output.title}
-                className="max-h-[36rem] min-h-[24rem] overflow-auto"
+                className="max-h-[32rem] min-h-[18rem] overflow-auto sm:min-h-[24rem]"
                 translate="no"
               >
-                <pre className="min-w-max p-4 font-mono text-xs leading-5">
+                <pre className="min-w-max p-3 font-mono text-xs leading-5">
                   <code>
                     {outputLines.map((line, index) => {
-                      const lineNumber = index + 1
-
                       return (
-                        <span
-                          key={`${lineNumber}:${line}`}
-                          className="grid grid-cols-[2.75rem_minmax(0,1fr)] gap-4"
-                        >
-                          <span
-                            className="text-right text-muted-foreground/70 select-none"
-                            aria-hidden="true"
-                          >
-                            {lineNumber}
-                          </span>
-                          <span>{renderIcsLine(line)}</span>
+                        <span key={`${index}:${line}`} className="block">
+                          {renderIcsLine(line)}
                         </span>
                       )
                     })}
@@ -195,12 +187,8 @@ function EventOutputCard({
           )}
         </div>
       </ToolPanelCardContent>
-      <ToolPanelCardFooter className="flex flex-wrap items-center justify-between gap-3 border-t bg-muted/20">
-        <p className="min-w-0 truncate text-xs text-muted-foreground">
-          {messages.output.description}
-        </p>
-
-        <div className="flex shrink-0 flex-wrap gap-3">
+      <ToolPanelCardFooter className="flex flex-wrap justify-end gap-3 border-t">
+        <div className="flex w-full flex-wrap justify-end gap-3 sm:w-auto">
           <ToolCopyButton
             value={output.state === "ready" ? output.icsContent : ""}
             copyLabel={messages.actions.copy}
