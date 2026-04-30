@@ -1,0 +1,23 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownDescription": "Markdown을 직접 작성하거나 텍스트 파일을 가져온 뒤 하나의 작업 공간에서 결과를 다듬을 수 있습니다.",
+  "markdownPlaceholder": "여기에 Markdown 입력...",
+  "importFromFileLabel": "파일에서 가져오기",
+  "loadSampleLabel": "예시 불러오기",
+  "sampleMarkdown": "# 릴리스 노트\n\nMarkdown은 계속 쓰기 쉽고, HTML은 게시할 수 있는 최종 마크업을 제공합니다.\n\n## 이 샘플에 포함된 항목\n\n- 제목\n- 강조와 **굵은 텍스트**\n- 목록과 링크\n\n> 원시 조각을 확인해야 할 때 정화를 전환하세요.\n\n[문서 읽기](https://www.markdownguide.org/)",
+  "resetLabel": "초기화",
+  "outputLabel": "생성된 HTML",
+  "outputDescription": "스타일이 적용된 미리보기와 변환기가 만든 정확한 HTML 조각을 확인하세요.",
+  "sanitizeLabel": "출력 정화",
+  "sanitizeDescription": "미리보기, 복사, 다운로드, 인쇄 전에 안전하지 않은 태그와 속성을 제거합니다.",
+  "previewLabel": "미리보기",
+  "previewDescription": "현재 HTML 조각을 가벼운 문서 스타일과 함께 샌드박스에서 렌더링합니다.",
+  "emptyTitle": "아직 HTML이 없습니다",
+  "emptyDescription": "Markdown을 입력하거나 가져오면 실시간 미리보기와 내보낼 HTML이 생성됩니다.",
+  "charactersLabel": "문자",
+  "linesLabel": "줄",
+  "copyHtmlLabel": "HTML 복사",
+  "copiedLabel": "복사됨",
+  "downloadHtmlLabel": "HTML 다운로드",
+  "printHtmlLabel": "HTML 인쇄"
+}

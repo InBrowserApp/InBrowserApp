@@ -1,0 +1,23 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownDescription": "Escreva Markdown diretamente ou importe um arquivo de texto e refine a saída em um único espaço de trabalho.",
+  "markdownPlaceholder": "Insira Markdown aqui...",
+  "importFromFileLabel": "Importar de arquivo",
+  "loadSampleLabel": "Carregar exemplo",
+  "sampleMarkdown": "# Notas de lançamento\n\nMarkdown continua fácil de escrever, e HTML fornece a marcação final pronta para publicar.\n\n## Este exemplo inclui\n\n- títulos\n- ênfase e **texto forte**\n- listas e links\n\n> Alterne a limpeza quando precisar inspecionar o fragmento bruto.\n\n[Leia a documentação](https://www.markdownguide.org/)",
+  "resetLabel": "Redefinir",
+  "outputLabel": "HTML gerado",
+  "outputDescription": "Inspecione uma prévia estilizada e o fragmento HTML exato gerado pelo conversor.",
+  "sanitizeLabel": "Sanitizar saída",
+  "sanitizeDescription": "Remove tags e atributos inseguros antes de visualizar, copiar, baixar ou imprimir.",
+  "previewLabel": "Pré-visualização",
+  "previewDescription": "Renderização em sandbox do fragmento HTML atual com uma estilização leve de documento.",
+  "emptyTitle": "Ainda não há HTML",
+  "emptyDescription": "Digite ou importe Markdown para gerar uma pré-visualização ao vivo e HTML exportável.",
+  "charactersLabel": "Caracteres",
+  "linesLabel": "Linhas",
+  "copyHtmlLabel": "Copiar HTML",
+  "copiedLabel": "Copiado",
+  "downloadHtmlLabel": "Baixar HTML",
+  "printHtmlLabel": "Imprimir HTML"
+}

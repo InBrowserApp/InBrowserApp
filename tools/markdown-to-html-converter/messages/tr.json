@@ -1,0 +1,23 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownDescription": "Markdown’u doğrudan yazın veya bir metin dosyası içe aktarın, ardından çıktıyı tek bir çalışma alanında düzenleyin.",
+  "markdownPlaceholder": "Buraya Markdown girin...",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "loadSampleLabel": "Örnek yükle",
+  "sampleMarkdown": "# Sürüm notları\n\nMarkdown yazması kolay kalır, HTML ise yayınlayabileceğiniz son işaretlemeyi verir.\n\n## Bu örnek şunları içerir\n\n- başlıklar\n- vurgu ve **kalın metin**\n- listeler ve bağlantılar\n\n> Ham parçayı incelemeniz gerektiğinde temizlemeyi değiştirin.\n\n[Belgeleri oku](https://www.markdownguide.org/)",
+  "resetLabel": "Sıfırla",
+  "outputLabel": "Oluşturulan HTML",
+  "outputDescription": "Dönüştürücünün ürettiği stil verilmiş önizlemeyi ve tam HTML parçasını inceleyin.",
+  "sanitizeLabel": "Çıktıyı temizle",
+  "sanitizeDescription": "Önizleme, kopyalama, indirme veya yazdırmadan önce güvenli olmayan etiketleri ve öznitelikleri kaldırır.",
+  "previewLabel": "Önizleme",
+  "previewDescription": "Geçerli HTML parçasının hafif belge stiliyle yalıtılmış gösterimi.",
+  "emptyTitle": "Henüz HTML yok",
+  "emptyDescription": "Canlı önizleme ve dışa aktarılabilir HTML oluşturmak için Markdown yazın veya içe aktarın.",
+  "charactersLabel": "Karakter",
+  "linesLabel": "Satır",
+  "copyHtmlLabel": "HTML kopyala",
+  "copiedLabel": "Kopyalandı",
+  "downloadHtmlLabel": "HTML indir",
+  "printHtmlLabel": "HTML yazdır"
+}

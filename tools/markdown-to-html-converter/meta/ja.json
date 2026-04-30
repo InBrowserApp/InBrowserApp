@@ -1,0 +1,4 @@
+{
+  "name": "Markdown → HTML 変換",
+  "description": "marked で Markdown を HTML に変換し、必要に応じて DOMPurify でサニタイズ。プレビュー、コピー、ダウンロード。"
+}

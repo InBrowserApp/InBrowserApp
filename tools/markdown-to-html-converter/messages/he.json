@@ -1,0 +1,23 @@
+{
+  "markdownLabel": "Markdown",
+  "markdownDescription": "כתבו Markdown ישירות או ייבאו קובץ טקסט, ואז שפרו את הפלט מתוך סביבת עבודה אחת.",
+  "markdownPlaceholder": "הקלידו Markdown כאן...",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "loadSampleLabel": "טען דוגמה",
+  "sampleMarkdown": "# הערות השקה\n\nMarkdown נשאר קל לכתיבה, ו-HTML נותן לך את הסימון הסופי שאפשר לפרסם.\n\n## הדוגמה הזו כוללת\n\n- כותרות\n- הדגשה ו**טקסט מודגש**\n- רשימות וקישורים\n\n> החלף את הניקוי כשצריך לבדוק את המקטע הגולמי.\n\n[קרא את התיעוד](https://www.markdownguide.org/)",
+  "resetLabel": "איפוס",
+  "outputLabel": "HTML שנוצר",
+  "outputDescription": "בדקו תצוגה מקדימה מעוצבת ואת מקטע ה-HTML המדויק שהממיר יצר.",
+  "sanitizeLabel": "סנן פלט",
+  "sanitizeDescription": "מסיר תגיות ומאפיינים לא בטוחים לפני תצוגה מקדימה, העתקה, הורדה או הדפסה.",
+  "previewLabel": "תצוגה מקדימה",
+  "previewDescription": "רינדור מבודד של מקטע ה-HTML הנוכחי עם עיצוב מסמך קליל.",
+  "emptyTitle": "עדיין אין HTML",
+  "emptyDescription": "הקלידו או ייבאו Markdown כדי ליצור תצוגה חיה ו-HTML שניתן לייצא.",
+  "charactersLabel": "תווים",
+  "linesLabel": "שורות",
+  "copyHtmlLabel": "העתק HTML",
+  "copiedLabel": "הועתק",
+  "downloadHtmlLabel": "הורד HTML",
+  "printHtmlLabel": "הדפס HTML"
+}

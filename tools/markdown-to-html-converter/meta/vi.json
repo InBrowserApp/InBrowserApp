@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển Markdown → HTML",
+  "description": "Chuyển Markdown sang HTML bằng marked, tùy chọn làm sạch với DOMPurify. Xem trước, sao chép và tải xuống."
+}
