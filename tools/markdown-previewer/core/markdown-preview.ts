@@ -30,6 +30,8 @@ type ExportHtmlOptions = Readonly<{
   title: string
   html: string
   theme: PreviewTheme
+  language: string
+  direction: "ltr" | "rtl"
 }>
 
 const FALLBACK_SECTION_ID = "section"
@@ -59,6 +61,10 @@ function escapeHtml(value: string) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;")
+}
+
+function escapeHtmlAttribute(value: string) {
+  return escapeHtml(value)
 }
 
 function slugifyHeading(value: string) {
@@ -189,9 +195,15 @@ function buildMarkdownPreview(
   }
 }
 
-function createExportHtmlDocument({ title, html, theme }: ExportHtmlOptions) {
+function createExportHtmlDocument({
+  title,
+  html,
+  theme,
+  language,
+  direction,
+}: ExportHtmlOptions) {
   return `<!doctype html>
-<html lang="en">
+<html lang="${escapeHtmlAttribute(language)}" dir="${direction}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

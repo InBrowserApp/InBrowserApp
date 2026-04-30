@@ -1,11 +1,11 @@
-## What This Tool Does
+## Wat Deze Tool Doet
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer rendert Markdown lokaal in je browser, zodat je koppen, lijsten, tabellen, codeblokken, links en inline HTML vóór publicatie kunt controleren. Deze rewrite brengt bewerken en review dichter bij elkaar, voegt een live inhoudsopgave toe en laat je een zelfstandige HTML-kopie exporteren om te delen of af te drukken zonder concepten naar een server te sturen.
 
-## When To Use It
+## Wanneer Je Het Gebruikt
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+Gebruik het voor README-werk, release notes, interne docs, runbooks, blogconcepten en alle Markdown die een snelle presentatiecheck nodig heeft. De opschoontoggle helpt je een veiligere browserpreview te vergelijken met ruwe HTML, terwijl de schone en slate-thema’s het makkelijker maken om lichte en donkere leescontexten te beoordelen.
 
-## Workflow Tips
+## Tips Voor Je Workflow
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+Begin tijdens het bewerken in gesplitste weergave en schakel daarna naar alleen preview wanneer je wilt focussen op ritme, spacing en koppenhiërarchie. Importeer bestaande `.md`-bestanden, laad het voorbeelddocument om tabellen en fenced code blocks te testen, en exporteer HTML pas wanneer de inhoudsopgave en definitieve koppen kloppen.

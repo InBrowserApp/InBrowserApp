@@ -1,11 +1,11 @@
-## What This Tool Does
+## Perkara Yang Dilakukan Alat Ini
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer merender Markdown secara setempat dalam pelayar anda supaya anda boleh menyemak tajuk, senarai, jadual, blok kod, pautan dan HTML sebaris sebelum diterbitkan. Penulisan semula ini merapatkan proses penyuntingan dan semakan, menambah rangka langsung serta membolehkan eksport salinan HTML kendiri untuk perkongsian atau cetakan tanpa menghantar draf ke pelayan.
 
-## When To Use It
+## Bila Menggunakannya
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+Gunakannya untuk README, nota keluaran, dokumentasi dalaman, runbook, draf blog dan apa-apa Markdown yang memerlukan semakan persembahan pantas. Togol sanitasi membantu membandingkan pratonton pelayar yang lebih selamat dengan HTML mentah, manakala tema bersih dan slate memudahkan semakan dalam konteks bacaan terang dan gelap.
 
-## Workflow Tips
+## Tip Aliran Kerja
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+Mulakan dalam paparan terbahagi semasa menyunting, kemudian tukar kepada mod pratonton sahaja apabila anda mahu menumpukan pada rentak, jarak dan hierarki tajuk. Import fail `.md` sedia ada, muatkan dokumen contoh untuk menguji jadual dan blok kod berpagar, dan eksport HTML hanya selepas rangka serta tajuk akhir kelihatan betul.

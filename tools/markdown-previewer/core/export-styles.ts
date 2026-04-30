@@ -82,7 +82,7 @@ const EXPORT_BASE_STYLES = `
 
   ul,
   ol {
-    padding-left: 1.5rem;
+    padding-inline-start: 1.5rem;
   }
 
   li + li {
@@ -94,10 +94,10 @@ const EXPORT_BASE_STYLES = `
   }
 
   blockquote {
-    border-left: 4px solid var(--surface-border);
+    border-inline-start: 4px solid var(--surface-border);
     color: var(--muted-color);
-    margin-left: 0;
-    padding-left: 1rem;
+    margin-inline-start: 0;
+    padding-inline-start: 1rem;
   }
 
   code {
@@ -123,6 +123,9 @@ const EXPORT_BASE_STYLES = `
   }
 
   table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
     width: 100%;
     border-collapse: collapse;
   }
@@ -131,7 +134,7 @@ const EXPORT_BASE_STYLES = `
   td {
     border-bottom: 1px solid var(--surface-border);
     padding: 0.7rem 0.85rem;
-    text-align: left;
+    text-align: start;
     vertical-align: top;
   }
 

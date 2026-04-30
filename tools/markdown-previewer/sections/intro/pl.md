@@ -1,11 +1,11 @@
-## What This Tool Does
+## Co Robi To Narzędzie
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer renderuje Markdown lokalnie w przeglądarce, aby przed publikacją można było sprawdzić nagłówki, listy, tabele, bloki kodu, linki i HTML inline. Ta wersja po przepisaniu przybliża edycję do przeglądu, dodaje konspekt na żywo i pozwala wyeksportować samodzielną kopię HTML do udostępniania lub druku bez wysyłania szkiców na serwer.
 
-## When To Use It
+## Kiedy Go Używać
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+Używaj go do README, notatek wydania, dokumentacji wewnętrznej, runbooków, szkiców bloga i każdego Markdown, który wymaga szybkiego sprawdzenia prezentacji. Przełącznik sanityzacji pomaga porównać bezpieczniejszy podgląd w przeglądarce z surowym HTML, a motywy czysty i łupkowy ułatwiają ocenę jasnych oraz ciemnych kontekstów czytania.
 
-## Workflow Tips
+## Wskazówki Dotyczące Pracy
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+Zacznij w widoku dzielonym podczas edycji, a potem przełącz się na sam podgląd, gdy chcesz skupić się na rytmie, odstępach i hierarchii nagłówków. Importuj istniejące pliki `.md`, wczytaj dokument przykładowy, aby przetestować tabele i ogrodzone bloki kodu, a HTML eksportuj dopiero wtedy, gdy konspekt i końcowe nagłówki wyglądają poprawnie.

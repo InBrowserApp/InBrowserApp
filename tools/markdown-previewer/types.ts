@@ -8,7 +8,9 @@ type MarkdownPreviewerLocalizedCatalog = Readonly<{
   sourcePlaceholder: string
   importLabel: string
   loadSampleLabel: string
+  loadSampleConfirmMessage: string
   clearLabel: string
+  clearConfirmMessage: string
   previewTitle: string
   previewDescription: string
   splitViewLabel: string

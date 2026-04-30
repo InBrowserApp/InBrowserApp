@@ -23,7 +23,9 @@ const messages = {
   sourcePlaceholder: "Write Markdown here…",
   importLabel: "Import file",
   loadSampleLabel: "Load sample",
+  loadSampleConfirmMessage: "Replace draft?",
   clearLabel: "Clear",
+  clearConfirmMessage: "Clear draft?",
   previewTitle: "Live preview",
   previewDescription:
     "Review the rendered document, tune the presentation, and export HTML.",
@@ -60,12 +62,18 @@ beforeEach(() => {
       revokeObjectURL: vi.fn(),
     })
   )
+  vi.stubGlobal(
+    "confirm",
+    vi.fn(() => true)
+  )
 
   window.localStorage.clear()
 })
 
 afterEach(() => {
   cleanup()
+  vi.restoreAllMocks()
+  vi.unstubAllGlobals()
 })
 
 function getMarkdownInput() {
@@ -76,7 +84,13 @@ function getMarkdownInput() {
 
 describe("MarkdownPreviewerClient", () => {
   test("renders the default sample, preview metrics, and a download link", () => {
-    render(<MarkdownPreviewerClient messages={messages} />)
+    render(
+      <MarkdownPreviewerClient
+        messages={messages}
+        language="en"
+        direction="ltr"
+      />
+    )
 
     expect(screen.getByText(messages.editorDescription)).toBeTruthy()
     expect(getMarkdownInput().value).toContain("# Product launch checklist")
@@ -89,7 +103,13 @@ describe("MarkdownPreviewerClient", () => {
   })
 
   test("switches to preview-only mode, toggles theme and outline, and restores split view", async () => {
-    render(<MarkdownPreviewerClient messages={messages} />)
+    render(
+      <MarkdownPreviewerClient
+        messages={messages}
+        language="en"
+        direction="ltr"
+      />
+    )
 
     fireEvent.click(
       screen.getByRole("radio", { name: messages.previewOnlyLabel })
@@ -120,7 +140,13 @@ describe("MarkdownPreviewerClient", () => {
   })
 
   test("imports markdown from a selected file", async () => {
-    render(<MarkdownPreviewerClient messages={messages} />)
+    render(
+      <MarkdownPreviewerClient
+        messages={messages}
+        language="en"
+        direction="ltr"
+      />
+    )
 
     const file = new File(["# Imported"], "draft.md", {
       type: "text/markdown",
@@ -135,8 +161,52 @@ describe("MarkdownPreviewerClient", () => {
     })
   })
 
+  test("keeps imported markdown when loading the sample is canceled", async () => {
+    vi.spyOn(window, "confirm").mockReturnValue(false)
+
+    render(
+      <MarkdownPreviewerClient
+        messages={messages}
+        language="en"
+        direction="ltr"
+      />
+    )
+
+    const file = new File(["# Imported"], "draft.md", {
+      type: "text/markdown",
+    })
+
+    fireEvent.change(screen.getByLabelText(messages.importLabel), {
+      target: { files: [file] },
+    })
+
+    await waitFor(() => {
+      expect(getMarkdownInput().value).toBe("# Imported")
+    })
+
+    fireEvent.click(
+      screen.getByRole("button", { name: messages.loadSampleLabel })
+    )
+
+    await waitFor(() => {
+      expect(getMarkdownInput().value).toBe("# Imported")
+    })
+
+    expect(window.confirm).toHaveBeenCalledWith(
+      messages.loadSampleConfirmMessage
+    )
+  })
+
   test("clears the editor and shows an empty preview state", async () => {
-    render(<MarkdownPreviewerClient messages={messages} />)
+    const confirmSpy = vi.spyOn(window, "confirm").mockReturnValue(true)
+
+    render(
+      <MarkdownPreviewerClient
+        messages={messages}
+        language="en"
+        direction="ltr"
+      />
+    )
 
     fireEvent.click(screen.getByRole("button", { name: messages.clearLabel }))
 
@@ -148,6 +218,25 @@ describe("MarkdownPreviewerClient", () => {
     expect(
       screen.getByRole("button", { name: messages.downloadHtmlLabel })
     ).toHaveProperty("disabled", true)
+    expect(confirmSpy).toHaveBeenCalledWith(messages.clearConfirmMessage)
+  })
+
+  test("keeps the draft when clear is canceled", async () => {
+    vi.spyOn(window, "confirm").mockReturnValue(false)
+
+    render(
+      <MarkdownPreviewerClient
+        messages={messages}
+        language="en"
+        direction="ltr"
+      />
+    )
+
+    fireEvent.click(screen.getByRole("button", { name: messages.clearLabel }))
+
+    await waitFor(() => {
+      expect(getMarkdownInput().value).toContain("# Product launch checklist")
+    })
   })
 
   test("restores persisted markdown and settings from local storage", async () => {
@@ -157,7 +246,13 @@ describe("MarkdownPreviewerClient", () => {
     window.localStorage.setItem(STORAGE_KEYS.sanitizeHtml, "false")
     window.localStorage.setItem(STORAGE_KEYS.showOutline, "false")
 
-    render(<MarkdownPreviewerClient messages={messages} />)
+    render(
+      <MarkdownPreviewerClient
+        messages={messages}
+        language="en"
+        direction="ltr"
+      />
+    )
 
     await waitFor(() => {
       expect(
@@ -179,7 +274,13 @@ describe("MarkdownPreviewerClient", () => {
   })
 
   test("prints the exported HTML when a popup window is available", () => {
-    render(<MarkdownPreviewerClient messages={messages} />)
+    render(
+      <MarkdownPreviewerClient
+        messages={messages}
+        language="en"
+        direction="ltr"
+      />
+    )
 
     const writeSpy = vi.fn()
     const openDocumentSpy = vi.fn()
@@ -214,6 +315,7 @@ describe("MarkdownPreviewerClient", () => {
 
     expect(openDocumentSpy).toHaveBeenCalled()
     expect(writeSpy.mock.calls[0]?.[0]).toContain("<!doctype html>")
+    expect(writeSpy.mock.calls[0]?.[0]).toContain('<html lang="en" dir="ltr">')
     expect(focusSpy).toHaveBeenCalled()
 
     printWindow.onafterprint?.()

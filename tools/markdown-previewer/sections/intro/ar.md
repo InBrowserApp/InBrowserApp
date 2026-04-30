@@ -1,11 +1,11 @@
-## What This Tool Does
+## ما الذي تفعله هذه الأداة
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+يعرض Markdown Previewer ملفات Markdown محلياً داخل متصفحك حتى تتمكن من فحص العناوين والقوائم والجداول وكتل التعليمات البرمجية والروابط وHTML المضمن قبل النشر. يقرّب هذا الإصدار المعاد كتابته بين التحرير والمراجعة، ويضيف مخططاً مباشراً، ويتيح تصدير نسخة HTML مستقلة للمشاركة أو الطباعة من دون إرسال المسودات إلى خادم.
 
-## When To Use It
+## متى تستخدمها
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+استخدمها للعمل على ملفات README وملاحظات الإصدارات والوثائق الداخلية وكتيبات التشغيل ومسودات المدونات وأي Markdown يحتاج إلى فحص عرض سريع. يساعدك مفتاح تنقية HTML على مقارنة معاينة أكثر أماناً في المتصفح مع HTML الخام، بينما تسهّل سمتا النظيف والداكن مراجعة سياقات القراءة الفاتحة والداكنة.
 
-## Workflow Tips
+## نصائح لسير العمل
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+ابدأ بالعرض المقسّم أثناء التحرير، ثم انتقل إلى وضع المعاينة فقط عندما تريد التركيز على الإيقاع والمسافات وتسلسل العناوين. استورد ملفات `.md` الموجودة، وحمّل المستند النموذجي لاختبار الجداول وكتل التعليمات البرمجية المسيّجة، وصدّر HTML فقط بعد أن يبدو المخطط والعناوين النهائية صحيحين.

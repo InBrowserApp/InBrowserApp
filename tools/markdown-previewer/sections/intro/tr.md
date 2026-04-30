@@ -1,11 +1,11 @@
-## What This Tool Does
+## Bu Araç Ne Yapar
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer, Markdown’ı tarayıcınızda yerel olarak render eder; böylece yayımlamadan önce başlıkları, listeleri, tabloları, kod bloklarını, bağlantıları ve satır içi HTML’yi inceleyebilirsiniz. Bu yeniden yazım düzenleme ile incelemeyi birbirine yaklaştırır, canlı bir ana hat ekler ve taslakları sunucuya göndermeden paylaşmak veya yazdırmak için bağımsız bir HTML kopyası dışa aktarmanızı sağlar.
 
-## When To Use It
+## Ne Zaman Kullanılır
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+README çalışmaları, sürüm notları, iç dokümanlar, runbook’lar, blog taslakları ve hızlı sunum kontrolü gerektiren her Markdown için kullanın. Temizleme anahtarı, daha güvenli bir tarayıcı önizlemesini ham HTML ile karşılaştırmanıza yardımcı olur; temiz ve arduvaz temaları ise açık ve koyu okuma bağlamlarını incelemeyi kolaylaştırır.
 
-## Workflow Tips
+## İş Akışı İpuçları
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+Düzenlerken bölünmüş görünümde başlayın, ardından ritme, boşluklara ve başlık hiyerarşisine odaklanmak istediğinizde yalnızca önizleme moduna geçin. Mevcut `.md` dosyalarını içe aktarın, tabloları ve fenced code block’ları test etmek için örnek belgeyi yükleyin ve HTML’yi yalnızca ana hat ile son başlıklar doğru göründüğünde dışa aktarın.

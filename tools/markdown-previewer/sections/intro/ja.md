@@ -1,11 +1,11 @@
-## What This Tool Does
+## このツールでできること
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer は Markdown をブラウザー内でローカルにレンダリングし、公開前に見出し、リスト、表、コードブロック、リンク、インライン HTML を確認できます。この rewrite では編集とレビューを近づけ、ライブアウトラインを追加し、下書きをサーバーに送らずに共有や印刷用の単独 HTML コピーを書き出せます。
 
-## When To Use It
+## 使う場面
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+README、リリースノート、社内ドキュメント、runbook、ブログの下書きなど、表示をすばやく確認したい Markdown に使います。サニタイズ切り替えは、より安全なブラウザープレビューと生の HTML を比較するのに役立ち、クリーンとスレートのテーマで明るい面と暗い面の読み心地を確認できます。
 
-## Workflow Tips
+## ワークフローのヒント
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+編集中は分割表示で始め、リズム、余白、見出し階層に集中したいときはプレビューのみのモードに切り替えます。既存の `.md` ファイルをインポートし、サンプル文書で表やフェンス付きコードブロックをテストして、アウトラインと最終見出しが整ってから HTML を書き出してください。

@@ -1,11 +1,11 @@
-## What This Tool Does
+## Cosa Fa Questo Strumento
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer renderizza Markdown localmente nel browser, così puoi controllare titoli, elenchi, tabelle, blocchi di codice, link e HTML inline prima della pubblicazione. Questa riscrittura tiene editing e revisione vicini, aggiunge una struttura live e permette di esportare una copia HTML autonoma per condivisione o stampa senza inviare bozze a un server.
 
-## When To Use It
+## Quando Usarlo
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+Usalo per README, note di rilascio, documentazione interna, runbook, bozze di blog e qualsiasi Markdown che richieda un rapido controllo di presentazione. L’opzione di sanificazione aiuta a confrontare un’anteprima del browser più sicura con HTML grezzo, mentre i temi pulito e ardesia rendono più semplice valutare contesti di lettura chiari e scuri.
 
-## Workflow Tips
+## Suggerimenti Di Flusso
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+Inizia in vista divisa mentre modifichi, poi passa alla sola anteprima quando vuoi concentrarti su ritmo, spaziatura e gerarchia dei titoli. Importa file `.md` esistenti, carica il documento di esempio per testare tabelle e blocchi di codice recintati, ed esporta HTML solo quando struttura e titoli finali sono a posto.

@@ -1,11 +1,11 @@
-## What This Tool Does
+## Yang Dilakukan Alat Ini
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer merender Markdown secara lokal di browser Anda sehingga Anda dapat memeriksa judul, daftar, tabel, blok kode, tautan, dan HTML inline sebelum menerbitkan. Penulisan ulang ini membuat proses edit dan tinjau tetap berdekatan, menambahkan kerangka langsung, dan memungkinkan ekspor salinan HTML mandiri untuk dibagikan atau dicetak tanpa mengirim draf ke server.
 
-## When To Use It
+## Kapan Menggunakannya
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+Gunakan untuk README, catatan rilis, dokumentasi internal, runbook, draf blog, dan Markdown lain yang perlu pemeriksaan presentasi cepat. Toggle sanitasi membantu membandingkan pratinjau browser yang lebih aman dengan HTML mentah, sementara tema bersih dan slate memudahkan peninjauan dalam konteks baca terang maupun gelap.
 
-## Workflow Tips
+## Tips Alur Kerja
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+Mulailah dalam tampilan terbagi saat mengedit, lalu beralih ke mode pratinjau saja ketika ingin fokus pada ritme, spasi, dan hierarki judul. Impor file `.md` yang sudah ada, muat dokumen contoh untuk menguji tabel dan blok kode berpagar, lalu ekspor HTML hanya setelah kerangka dan judul akhir terlihat benar.

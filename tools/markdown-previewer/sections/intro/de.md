@@ -1,11 +1,11 @@
-## What This Tool Does
+## Was Dieses Tool Leistet
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer rendert Markdown lokal in deinem Browser, damit du Überschriften, Listen, Tabellen, Codeblöcke, Links und Inline-HTML vor der Veröffentlichung prüfen kannst. Diese Rewrite-Version rückt Schreiben und Review näher zusammen, ergänzt eine Live-Gliederung und exportiert eine eigenständige HTML-Kopie zum Teilen oder Drucken, ohne Entwürfe an einen Server zu senden.
 
-## When To Use It
+## Wann Du Es Verwenden Solltest
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+Nutze es für README-Arbeiten, Release Notes, interne Dokumentation, Runbooks, Blogentwürfe und jedes andere Markdown, das schnell auf seine Darstellung geprüft werden muss. Der Bereinigungsschalter hilft dir, eine sicherere Browser-Vorschau mit rohem HTML zu vergleichen, während die Themes „Klar“ und „Schiefer“ helle und dunkle Lesekontexte abdecken.
 
-## Workflow Tips
+## Tipps Für Den Workflow
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+Beginne beim Bearbeiten in der geteilten Ansicht und wechsle zur reinen Vorschau, wenn du Rhythmus, Abstände und Überschriftenhierarchie beurteilen möchtest. Importiere vorhandene `.md`-Dateien, lade das Beispieldokument zum Testen von Tabellen und Codeblöcken, und exportiere HTML erst, wenn Gliederung und finale Überschriften stimmen.

@@ -1,11 +1,11 @@
-## What This Tool Does
+## Hva Dette Verktøyet Gjør
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer renderer Markdown lokalt i nettleseren din, slik at du kan kontrollere overskrifter, lister, tabeller, kodeblokker, lenker og inline HTML før publisering. Denne omskrivingen holder redigering og gjennomgang tett sammen, legger til en direkte disposisjon og lar deg eksportere en frittstående HTML-kopi for deling eller utskrift uten å sende utkast til en server.
 
-## When To Use It
+## Når Du Bør Bruke Det
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+Bruk det til README-arbeid, versjonsnotater, intern dokumentasjon, runbooks, bloggutkast og all annen Markdown som trenger en rask presentasjonssjekk. Sanitiseringsbryteren hjelper deg å sammenligne en tryggere nettleserforhåndsvisning med rå HTML, mens temaene ren og skifer gjør det enklere å vurdere både lyse og mørke lesekontekster.
 
-## Workflow Tips
+## Tips Til Arbeidsflyt
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+Start i delt visning mens du redigerer, og bytt deretter til kun forhåndsvisning når du vil fokusere på rytme, avstand og overskriftshierarki. Importer eksisterende `.md`-filer, last inn eksempeldokumentet for å teste tabeller og inngjerdede kodeblokker, og eksporter HTML først når disposisjonen og de endelige overskriftene ser riktige ut.

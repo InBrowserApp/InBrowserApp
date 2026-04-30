@@ -1,11 +1,11 @@
-## What This Tool Does
+## O Que Esta Ferramenta Faz
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer renderiza Markdown localmente no seu navegador para que você possa inspecionar títulos, listas, tabelas, blocos de código, links e HTML inline antes de publicar. Esta reescrita aproxima edição e revisão, adiciona um sumário ao vivo e permite exportar uma cópia HTML independente para compartilhar ou imprimir sem enviar rascunhos a um servidor.
 
-## When To Use It
+## Quando Usar
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+Use para READMEs, notas de versão, documentação interna, runbooks, rascunhos de blog e qualquer Markdown que precise de uma checagem rápida de apresentação. O alternador de sanitização ajuda a comparar uma prévia mais segura no navegador com HTML bruto, enquanto os temas limpo e ardósia facilitam revisar contextos de leitura claros e escuros.
 
-## Workflow Tips
+## Dicas De Fluxo De Trabalho
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+Comece na vista dividida enquanto edita e mude para somente prévia quando quiser focar em ritmo, espaçamento e hierarquia de títulos. Importe arquivos `.md` existentes, carregue o documento de exemplo para testar tabelas e blocos de código cercados, e exporte HTML apenas quando o sumário e os títulos finais estiverem corretos.

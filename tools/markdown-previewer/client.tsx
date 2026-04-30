@@ -29,6 +29,8 @@ import type { MarkdownPreviewerMessages, PreviewBadge } from "./types"
 
 type MarkdownPreviewerClientProps = Readonly<{
   messages: MarkdownPreviewerMessages
+  language: string
+  direction: "ltr" | "rtl"
 }>
 
 function normalizePreviewMode(value: string | null): PreviewMode {
@@ -59,7 +61,11 @@ function sanitizePreviewHtml(html: string) {
   return DOMPurify(window).sanitize(html)
 }
 
-function MarkdownPreviewerClient({ messages }: MarkdownPreviewerClientProps) {
+function MarkdownPreviewerClient({
+  messages,
+  language,
+  direction,
+}: MarkdownPreviewerClientProps) {
   const textareaId = useId()
   const fileInputRef = useRef<HTMLInputElement | null>(null)
   const downloadUrlRef = useRef<string | null>(null)
@@ -86,6 +92,8 @@ function MarkdownPreviewerClient({ messages }: MarkdownPreviewerClientProps) {
     title: preview.documentTitle || messages.meta.name,
     html: renderedHtml,
     theme: previewTheme,
+    language,
+    direction,
   })
   const hasMarkdown = markdown.trim().length > 0
   const downloadFileName = `${slugifyHeading(preview.documentTitle)}.html`
@@ -225,6 +233,36 @@ function MarkdownPreviewerClient({ messages }: MarkdownPreviewerClientProps) {
     fileInputRef.current?.click()
   }
 
+  function handleLoadSample() {
+    if (markdown !== DEFAULT_MARKDOWN) {
+      const shouldReplace = window.confirm(messages.loadSampleConfirmMessage)
+
+      if (!shouldReplace) {
+        return
+      }
+    }
+
+    startTransition(() => {
+      setMarkdown(DEFAULT_MARKDOWN)
+    })
+  }
+
+  function handleClear() {
+    if (!hasMarkdown) {
+      return
+    }
+
+    const shouldClear = window.confirm(messages.clearConfirmMessage)
+
+    if (!shouldClear) {
+      return
+    }
+
+    startTransition(() => {
+      setMarkdown("")
+    })
+  }
+
   function handlePrint() {
     if (!hasMarkdown) {
       return
@@ -257,16 +295,8 @@ function MarkdownPreviewerClient({ messages }: MarkdownPreviewerClientProps) {
           textareaId={textareaId}
           onMarkdownChange={setMarkdown}
           onImportClick={openImportDialog}
-          onLoadSample={() => {
-            startTransition(() => {
-              setMarkdown(DEFAULT_MARKDOWN)
-            })
-          }}
-          onClear={() => {
-            startTransition(() => {
-              setMarkdown("")
-            })
-          }}
+          onLoadSample={handleLoadSample}
+          onClear={handleClear}
         />
       ) : null}
 

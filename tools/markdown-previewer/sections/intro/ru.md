@@ -1,11 +1,11 @@
-## What This Tool Does
+## Что Делает Этот Инструмент
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer рендерит Markdown локально в вашем браузере, чтобы перед публикацией можно было проверить заголовки, списки, таблицы, блоки кода, ссылки и встроенный HTML. Эта переработанная версия держит редактирование и проверку рядом, добавляет живое оглавление и позволяет экспортировать автономную HTML-копию для отправки или печати без передачи черновиков на сервер.
 
-## When To Use It
+## Когда Его Использовать
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+Используйте его для README, заметок к релизам, внутренней документации, runbook, черновиков блогов и любого Markdown, которому нужна быстрая проверка представления. Переключатель очистки помогает сравнить более безопасный предпросмотр в браузере с сырым HTML, а темы «Чистая» и «Сланец» упрощают проверку светлых и тёмных сценариев чтения.
 
-## Workflow Tips
+## Советы По Рабочему Процессу
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+Начинайте в разделённом виде во время редактирования, затем переключайтесь в режим только предпросмотра, когда нужно сосредоточиться на ритме, отступах и иерархии заголовков. Импортируйте существующие файлы `.md`, загружайте пример для проверки таблиц и fenced code blocks, а HTML экспортируйте только после того, как оглавление и финальные заголовки выглядят правильно.

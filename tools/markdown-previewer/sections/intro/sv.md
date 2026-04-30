@@ -1,11 +1,11 @@
-## What This Tool Does
+## Vad Verktyget Gör
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer renderar Markdown lokalt i din webbläsare så att du kan granska rubriker, listor, tabeller, kodblock, länkar och inline-HTML före publicering. Den här omskrivningen håller redigering och granskning nära varandra, lägger till en live-disposition och låter dig exportera en fristående HTML-kopia för delning eller utskrift utan att skicka utkast till en server.
 
-## When To Use It
+## När Du Bör Använda Det
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+Använd det för README-arbete, versionsnoteringar, intern dokumentation, runbooks, bloggutkast och all Markdown som behöver en snabb presentationskontroll. Sanitiseringsreglaget hjälper dig att jämföra en säkrare webbläsarförhandsvisning med rå HTML, medan de rena och skifferfärgade temana gör det enklare att granska både ljusa och mörka läskontexter.
 
-## Workflow Tips
+## Tips För Arbetsflödet
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+Börja i delad vy medan du redigerar och växla sedan till endast förhandsvisning när du vill fokusera på rytm, avstånd och rubrikhierarki. Importera befintliga `.md`-filer, ladda exempeldokumentet för att testa tabeller och inhägnade kodblock, och exportera HTML först när dispositionen och de slutliga rubrikerna ser rätt ut.

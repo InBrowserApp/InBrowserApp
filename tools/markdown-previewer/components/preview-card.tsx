@@ -65,6 +65,16 @@ type PreviewCardProps = Readonly<{
   onPrint: () => void
 }>
 
+function getScrollBehavior(): ScrollBehavior {
+  if (typeof window.matchMedia !== "function") {
+    return "smooth"
+  }
+
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ? "auto"
+    : "smooth"
+}
+
 function PreviewCard({
   messages,
   hasMarkdown,
@@ -92,7 +102,7 @@ function PreviewCard({
 
     heading?.scrollIntoView({
       block: "start",
-      behavior: "smooth",
+      behavior: getScrollBehavior(),
     })
   }
 

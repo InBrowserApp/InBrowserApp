@@ -1,11 +1,11 @@
-## What This Tool Does
+## เครื่องมือนี้ทำอะไร
 
-Markdown Previewer renders Markdown locally in your browser so you can inspect headings, lists, tables, code blocks, links, and inline HTML before publishing. This rewrite keeps editing and review close together, adds a live outline, and lets you export a standalone HTML copy for sharing or printing without sending drafts to a server.
+Markdown Previewer เรนเดอร์ Markdown ภายในเบราว์เซอร์ของคุณแบบ local เพื่อให้ตรวจหัวข้อ รายการ ตาราง บล็อกโค้ด ลิงก์ และ HTML แบบ inline ก่อนเผยแพร่ได้ rewrite นี้ทำให้การแก้ไขและการตรวจทานอยู่ใกล้กัน เพิ่มโครงร่างแบบสด และให้คุณส่งออกสำเนา HTML แบบสแตนด์อโลนสำหรับแชร์หรือพิมพ์โดยไม่ต้องส่งร่างไปยังเซิร์ฟเวอร์
 
-## When To Use It
+## ควรใช้เมื่อใด
 
-Use it for README work, release notes, internal docs, runbooks, blog drafts, and any other Markdown that needs a quick presentation check. The sanitize toggle helps you compare a safer browser preview against raw HTML, while the clean and slate themes make it easier to review both clean and dark-surface reading contexts.
+ใช้สำหรับ README, release notes, เอกสารภายใน, runbook, ร่างบล็อก และ Markdown ใด ๆ ที่ต้องตรวจรูปแบบการนำเสนออย่างรวดเร็ว สวิตช์ทำความสะอาดช่วยเปรียบเทียบตัวอย่างในเบราว์เซอร์ที่ปลอดภัยขึ้นกับ HTML ดิบ ส่วนธีมสะอาดและสเลตช่วยให้ตรวจบริบทการอ่านทั้งพื้นสว่างและพื้นมืดได้ง่ายขึ้น
 
-## Workflow Tips
+## เคล็ดลับเวิร์กโฟลว์
 
-Start in split view while editing, then switch to preview-only mode when you want to focus on rhythm, spacing, and heading hierarchy. Import existing `.md` files, load the sample document to test tables and fenced code blocks, and export HTML only after the outline and final headings look right.
+เริ่มในมุมมองแยกระหว่างแก้ไข แล้วเปลี่ยนเป็นโหมดตัวอย่างเท่านั้นเมื่ออยากโฟกัสที่จังหวะ ระยะห่าง และลำดับชั้นของหัวข้อ นำเข้าไฟล์ `.md` ที่มีอยู่ โหลดเอกสารตัวอย่างเพื่อทดสอบตารางและ fenced code blocks และส่งออก HTML เฉพาะเมื่อโครงร่างกับหัวข้อสุดท้ายดูถูกต้องแล้ว

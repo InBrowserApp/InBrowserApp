@@ -102,9 +102,12 @@ describe("createExportHtmlDocument", () => {
       title: `Roadmap "v2"`,
       html: "<h1>Roadmap</h1><p>Ready.</p>",
       theme: "slate",
+      language: "en",
+      direction: "ltr",
     })
 
     expect(document).toContain("<!doctype html>")
+    expect(document).toContain('<html lang="en" dir="ltr">')
     expect(document).toContain("<title>Roadmap &quot;v2&quot;</title>")
     expect(document).toContain("color-scheme: dark;")
     expect(document).toContain(
