@@ -4,6 +4,7 @@ import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
@@ -211,18 +212,15 @@ function StopsCard({
 
   return (
     <Card className="overflow-hidden">
-      <CardHeader className="gap-4 border-b">
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <div className="space-y-1">
-            <CardTitle>{messages.stopsTitle}</CardTitle>
-            <CardDescription>{messages.trackHint}</CardDescription>
-          </div>
-
+      <CardHeader className="border-b">
+        <CardTitle>{messages.stopsTitle}</CardTitle>
+        <CardDescription>{messages.trackHint}</CardDescription>
+        <CardAction>
           <Button onClick={onAddStop} size="sm" type="button">
             <Plus data-icon="inline-start" />
             {messages.addStop}
           </Button>
-        </div>
+        </CardAction>
       </CardHeader>
 
       <CardContent className="grid gap-4">

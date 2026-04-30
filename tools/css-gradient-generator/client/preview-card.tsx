@@ -50,32 +50,12 @@ function PreviewCard({
 }: PreviewCardProps) {
   return (
     <Card className="overflow-hidden">
-      <CardHeader className="gap-4 border-b">
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <div className="space-y-1">
-            <CardTitle>{messages.previewTitle}</CardTitle>
-            <CardDescription>{messages.previewHint}</CardDescription>
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            <Button
-              onClick={onRandomizeLayer}
-              size="sm"
-              type="button"
-              variant="outline"
-            >
-              <Sparkles data-icon="inline-start" />
-              {messages.randomizeLayer}
-            </Button>
-            <Button onClick={onRandomizeAll} size="sm" type="button">
-              <RefreshCcw data-icon="inline-start" />
-              {messages.randomizeAll}
-            </Button>
-          </div>
-        </div>
+      <CardHeader className="border-b">
+        <CardTitle>{messages.previewTitle}</CardTitle>
+        <CardDescription>{messages.previewHint}</CardDescription>
       </CardHeader>
 
-      <CardContent className="grid gap-6">
+      <CardContent className="grid gap-3">
         <div className="rounded-xl border bg-muted/35 p-3 shadow-sm sm:p-4">
           <div
             aria-label={messages.previewTitle}
@@ -85,6 +65,22 @@ function PreviewCard({
               backgroundImage,
             }}
           />
+        </div>
+
+        <div className="flex flex-wrap gap-2">
+          <Button
+            onClick={onRandomizeLayer}
+            size="sm"
+            type="button"
+            variant="outline"
+          >
+            <Sparkles data-icon="inline-start" />
+            {messages.randomizeLayer}
+          </Button>
+          <Button onClick={onRandomizeAll} size="sm" type="button">
+            <RefreshCcw data-icon="inline-start" />
+            {messages.randomizeAll}
+          </Button>
         </div>
       </CardContent>
     </Card>

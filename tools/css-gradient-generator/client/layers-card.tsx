@@ -3,6 +3,7 @@ import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
@@ -46,18 +47,15 @@ function LayersCard({
 }: LayersCardProps) {
   return (
     <Card className="overflow-hidden">
-      <CardHeader className="gap-4 border-b">
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <div className="space-y-1">
-            <CardTitle>{messages.layersTitle}</CardTitle>
-            <CardDescription>{messages.layersSubtitle}</CardDescription>
-          </div>
-
+      <CardHeader className="border-b">
+        <CardTitle>{messages.layersTitle}</CardTitle>
+        <CardDescription>{messages.layersSubtitle}</CardDescription>
+        <CardAction>
           <Button onClick={onAddLayer} size="sm" type="button">
             <Plus data-icon="inline-start" />
             {messages.addLayer}
           </Button>
-        </div>
+        </CardAction>
       </CardHeader>
 
       <CardContent className="grid gap-4">

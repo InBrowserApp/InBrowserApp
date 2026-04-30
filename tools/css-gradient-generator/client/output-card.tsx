@@ -42,12 +42,12 @@ function OutputCard({
 }: OutputCardProps) {
   return (
     <Card>
-      <CardHeader className="gap-4 border-b">
-        <div className="space-y-1">
-          <CardTitle>{messages.outputTitle}</CardTitle>
-          <CardDescription>{messages.outputSubtitle}</CardDescription>
-        </div>
+      <CardHeader className="border-b">
+        <CardTitle>{messages.outputTitle}</CardTitle>
+        <CardDescription>{messages.outputSubtitle}</CardDescription>
+      </CardHeader>
 
+      <CardContent className="grid gap-4">
         <div className="grid gap-2">
           <div className="text-sm font-medium">{messages.outputFormat}</div>
           <ToggleGroup
@@ -67,9 +67,6 @@ function OutputCard({
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
-      </CardHeader>
-
-      <CardContent className="grid gap-4">
         <Textarea
           aria-label={messages.outputTitle}
           readOnly
