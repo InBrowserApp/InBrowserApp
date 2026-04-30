@@ -1,11 +1,14 @@
-import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import { cn } from "@workspace/ui/lib/utils"
-import { RefreshCcw, Sparkles } from "@workspace/ui/icons"
+import { FileText, Globe, RefreshCcw, Sparkles } from "@workspace/ui/icons"
 
 import type { IcalEventGeneratorMessages } from "../types"
 import type { IcalEventFormState } from "../core/form-state"
-import { parseDateInput, parseTimeInput } from "../core/time-zone"
+import {
+  formatDateLabel,
+  formatDateParts,
+  formatTimeLabel,
+} from "./event-date-format"
 
 type EventOverviewHeroProps = Readonly<{
   language: string
@@ -54,44 +57,6 @@ function getDisplayUrl(url: string) {
   }
 }
 
-function formatDateLabel(value: string, language: string) {
-  const parts = parseDateInput(value)
-
-  if (!parts) {
-    return value
-  }
-
-  try {
-    return new Intl.DateTimeFormat(language, {
-      day: "numeric",
-      month: "short",
-      timeZone: "UTC",
-      year: "numeric",
-    }).format(new Date(Date.UTC(parts.year, parts.month - 1, parts.day)))
-  } catch {
-    return value
-  }
-}
-
-function formatTimeLabel(value: string, language: string) {
-  const parts = parseTimeInput(value)
-
-  if (!parts) {
-    return value
-  }
-
-  try {
-    return new Intl.DateTimeFormat(language, {
-      hour: "2-digit",
-      hourCycle: "h23",
-      minute: "2-digit",
-      timeZone: "UTC",
-    }).format(new Date(Date.UTC(2026, 0, 1, parts.hour, parts.minute)))
-  } catch {
-    return value
-  }
-}
-
 function EventOverviewHero({
   language,
   messages,
@@ -103,52 +68,97 @@ function EventOverviewHero({
   const description = formState.description.trim()
   const location = formState.location.trim()
   const displayUrl = getDisplayUrl(formState.url)
-  const summaryItems = [
+  const startDate = formatDateLabel(formState.startDate, language)
+  const endDate = formatDateLabel(formState.endDate, language)
+  const startTime = formState.isAllDay
+    ? messages.schedule.allDayLabel
+    : formatTimeLabel(formState.startTime, language)
+  const endTime = formState.isAllDay
+    ? messages.schedule.allDayLabel
+    : formatTimeLabel(formState.endTime, language)
+  const dateParts = formatDateParts(formState.startDate, language)
+  const metaItems = [
     {
-      label: messages.schedule.startDateLabel,
-      value: formatDateLabel(formState.startDate, language),
-      detail: formState.isAllDay
-        ? messages.schedule.allDayLabel
-        : formatTimeLabel(formState.startTime, language),
-    },
-    {
-      label: messages.schedule.endDateLabel,
-      value: formatDateLabel(formState.endDate, language),
-      detail: formState.isAllDay
-        ? messages.schedule.allDayLabel
-        : formatTimeLabel(formState.endTime, language),
-    },
-    {
-      label: messages.schedule.timeZoneLabel,
-      value: formState.timeZone,
-      detail: messages.schedule.title,
-    },
-    {
+      Icon: FileText,
       label: messages.schedule.outputModeLabel,
+      shouldTranslate: true,
       value: getOutputModeLabel(messages, formState),
-      detail: messages.output.title,
+    },
+    {
+      Icon: RefreshCcw,
+      label: messages.recurrence.frequencyLabel,
+      shouldTranslate: true,
+      value: getFrequencyBadgeLabel(messages, formState),
+    },
+    {
+      Icon: Globe,
+      label: messages.schedule.timeZoneLabel,
+      shouldTranslate: false,
+      value: formState.timeZone,
     },
   ] as const
 
   return (
-    <section className="relative min-w-0 overflow-hidden rounded-[1.75rem] border bg-linear-to-br from-primary/12 via-background via-55% to-sky-500/12 p-5 sm:p-6">
-      <div className="absolute -top-16 right-0 h-56 w-56 rounded-full bg-primary/10 blur-3xl" />
-      <div className="absolute bottom-0 left-[-4rem] h-40 w-40 rounded-full bg-sky-500/10 blur-3xl" />
-      <div className="relative grid gap-6 xl:grid-cols-[minmax(0,1.2fr)_minmax(18rem,0.8fr)] xl:items-end">
-        <div className="flex flex-col gap-6">
-          <div className="space-y-4">
-            <div className="flex flex-wrap gap-2">
-              <Badge variant="secondary">
-                {formState.isAllDay
-                  ? messages.schedule.allDayLabel
-                  : getOutputModeLabel(messages, formState)}
-              </Badge>
-              <Badge variant="outline">
-                {getFrequencyBadgeLabel(messages, formState)}
-              </Badge>
-              <Badge variant="outline">{formState.timeZone}</Badge>
+    <section className="relative min-w-0 overflow-hidden rounded-[2rem] border bg-background p-4 shadow-sm sm:p-5">
+      <div className="absolute inset-0 bg-linear-to-br from-primary/12 via-sky-500/6 to-background" />
+      <div className="absolute -top-20 right-6 h-60 w-60 rounded-full bg-primary/12 blur-3xl" />
+      <div className="absolute -bottom-24 left-0 h-56 w-56 rounded-full bg-sky-500/12 blur-3xl" />
+      <div className="relative grid gap-4 lg:grid-cols-[minmax(13rem,16rem)_minmax(0,1fr)]">
+        <div className="rounded-[1.5rem] border bg-card/90 p-4 shadow-xs backdrop-blur">
+          <p className="text-[0.7rem] font-medium tracking-[0.2em] text-muted-foreground uppercase">
+            {messages.schedule.startDateLabel}
+          </p>
+          <div className="mt-4 flex items-end justify-between gap-4">
+            <div className="min-w-0">
+              <p className="truncate text-sm font-semibold text-primary uppercase">
+                {dateParts.month}
+              </p>
+              <p className="font-heading text-6xl leading-none tracking-tight">
+                {dateParts.day}
+              </p>
             </div>
-            <div className="space-y-3">
+            <div className="text-right text-sm text-muted-foreground">
+              <p>{dateParts.weekday}</p>
+              <p>{dateParts.year}</p>
+            </div>
+          </div>
+
+          <div className="mt-5 space-y-2 rounded-[1.15rem] border bg-muted/25 p-3">
+            <div className="flex gap-3">
+              <div className="flex flex-col items-center pt-1">
+                <span className="size-2 rounded-full bg-primary" />
+                <span className="h-10 w-px bg-border" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="text-[0.68rem] font-medium tracking-[0.18em] text-muted-foreground uppercase">
+                  {messages.schedule.startTimeLabel}
+                </p>
+                <p className="mt-1 text-sm font-medium">{startTime}</p>
+                <p className="truncate text-xs text-muted-foreground">
+                  {startDate}
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <div className="flex justify-center pt-1">
+                <span className="size-2 rounded-full bg-sky-500" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="text-[0.68rem] font-medium tracking-[0.18em] text-muted-foreground uppercase">
+                  {messages.schedule.endTimeLabel}
+                </p>
+                <p className="mt-1 text-sm font-medium">{endTime}</p>
+                <p className="truncate text-xs text-muted-foreground">
+                  {endDate}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex min-w-0 flex-col justify-between gap-5 rounded-[1.5rem] border bg-background/85 p-4 shadow-xs backdrop-blur sm:p-5">
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div className="min-w-0 space-y-3">
               <p className="text-xs font-medium tracking-[0.24em] text-muted-foreground uppercase">
                 {messages.meta.name}
               </p>
@@ -166,57 +176,61 @@ function EventOverviewHero({
               </p>
             </div>
 
-            {location || displayUrl ? (
-              <div className="flex flex-wrap gap-2">
-                {location ? (
-                  <div className="inline-flex max-w-full min-w-0 items-center gap-2 rounded-full border bg-background/80 px-3 py-1 text-sm shadow-xs backdrop-blur">
-                    <span className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
-                      {messages.details.locationLabel}
-                    </span>
-                    <span className="truncate">{location}</span>
-                  </div>
-                ) : null}
-                {displayUrl ? (
-                  <div className="inline-flex max-w-full min-w-0 items-center gap-2 rounded-full border bg-background/80 px-3 py-1 text-sm shadow-xs backdrop-blur">
-                    <span className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
-                      {messages.details.urlLabel}
-                    </span>
-                    <span className="truncate">{displayUrl}</span>
-                  </div>
-                ) : null}
-              </div>
-            ) : null}
-          </div>
-
-          <div className="flex flex-wrap gap-3">
-            <Button type="button" variant="secondary" onClick={onUseSample}>
-              <Sparkles data-icon="inline-start" />
-              {messages.actions.useSample}
-            </Button>
-            <Button type="button" variant="ghost" onClick={onReset}>
-              <RefreshCcw data-icon="inline-start" />
-              {messages.actions.reset}
-            </Button>
-          </div>
-        </div>
-
-        <div className="grid gap-3 rounded-[1.35rem] border bg-background/80 p-3 shadow-sm backdrop-blur sm:grid-cols-2">
-          {summaryItems.map((item) => (
-            <div
-              key={item.label}
-              className="rounded-[1.05rem] border bg-linear-to-br from-background to-muted/30 p-4"
-            >
-              <p className="text-[0.7rem] font-medium tracking-[0.2em] text-muted-foreground uppercase">
-                {item.label}
-              </p>
-              <p className="mt-3 text-sm font-medium [overflow-wrap:anywhere] break-words sm:text-base">
-                {item.value}
-              </p>
-              <p className="mt-1 text-xs text-muted-foreground">
-                {item.detail}
-              </p>
+            <div className="flex shrink-0 flex-wrap gap-3">
+              <Button type="button" variant="secondary" onClick={onUseSample}>
+                <Sparkles data-icon="inline-start" />
+                {messages.actions.useSample}
+              </Button>
+              <Button type="button" variant="ghost" onClick={onReset}>
+                <RefreshCcw data-icon="inline-start" />
+                {messages.actions.reset}
+              </Button>
             </div>
-          ))}
+          </div>
+
+          {location || displayUrl ? (
+            <div className="flex flex-wrap gap-2">
+              {location ? (
+                <div className="inline-flex max-w-full min-w-0 items-center gap-2 rounded-full border bg-muted/25 px-3 py-1.5 text-sm">
+                  <span className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
+                    {messages.details.locationLabel}
+                  </span>
+                  <span className="truncate">{location}</span>
+                </div>
+              ) : null}
+              {displayUrl ? (
+                <div className="inline-flex max-w-full min-w-0 items-center gap-2 rounded-full border bg-muted/25 px-3 py-1.5 text-sm">
+                  <span className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
+                    {messages.details.urlLabel}
+                  </span>
+                  <span className="truncate">{displayUrl}</span>
+                </div>
+              ) : null}
+            </div>
+          ) : null}
+
+          <div className="grid gap-2 sm:grid-cols-3">
+            {metaItems.map((item) => (
+              <div
+                key={item.label}
+                className="min-w-0 rounded-[1rem] border bg-muted/20 p-3"
+              >
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <item.Icon className="size-3.5" />
+                  <p className="truncate text-[0.68rem] font-medium tracking-[0.18em] uppercase">
+                    {item.label}
+                  </p>
+                </div>
+                <p
+                  className="mt-2 truncate text-sm font-medium"
+                  title={item.value}
+                  translate={item.shouldTranslate ? undefined : "no"}
+                >
+                  {item.value}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
