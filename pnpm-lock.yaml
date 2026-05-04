@@ -421,8 +421,8 @@ catalogs:
       specifier: ^2.1.0
       version: 2.1.0
     uuid:
-      specifier: ^13.0.0
-      version: 13.0.0
+      specifier: ^14.0.0
+      version: 14.0.0
     validator:
       specifier: ^13.15.26
       version: 13.15.26
@@ -1388,7 +1388,7 @@ importers:
         version: 2.43.2(vue@3.5.29(typescript@5.9.3))
       uuid:
         specifier: 'catalog:'
-        version: 13.0.0
+        version: 14.0.0
       validator:
         specifier: 'catalog:'
         version: 13.15.26
@@ -1601,7 +1601,7 @@ importers:
         version: 14.2.1(vue@3.5.29(typescript@5.9.3))
       gitignore:
         specifier: 'catalog:'
-        version: https://codeload.github.com/github/gitignore/tar.gz/b4105e73e493bb7a20b5d7ea35efd5780ca44938
+        version: https://codeload.github.com/github/gitignore/tar.gz/1046d8fba6b42d367da6314c934cddb6bfe5662e
       naive-ui:
         specifier: 'catalog:'
         version: 2.43.2(vue@3.5.29(typescript@5.9.3))
@@ -6432,7 +6432,7 @@ importers:
         version: 3.0.2
       uuid:
         specifier: 'catalog:'
-        version: 13.0.0
+        version: 14.0.0
       vue:
         specifier: 'catalog:'
         version: 3.5.29(typescript@5.9.3)
@@ -7881,7 +7881,7 @@ importers:
     dependencies:
       uuid:
         specifier: 'catalog:'
-        version: 13.0.0
+        version: 14.0.0
 
 packages:
 
@@ -11170,14 +11170,15 @@ packages:
   git-raw-commits@4.0.0:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
     engines: {node: '>=16'}
+    deprecated: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
     hasBin: true
 
   github-markdown-css@5.9.0:
     resolution: {integrity: sha512-tmT5sY+zvg2302XLYEfH2mtkViIM1SWf2nvYoF5N1ZsO0V6B2qZTiw3GOzw4vpjLygK/KG35qRlPFweHqfzz5w==}
     engines: {node: '>=10'}
 
-  gitignore@https://codeload.github.com/github/gitignore/tar.gz/b4105e73e493bb7a20b5d7ea35efd5780ca44938:
-    resolution: {tarball: https://codeload.github.com/github/gitignore/tar.gz/b4105e73e493bb7a20b5d7ea35efd5780ca44938}
+  gitignore@https://codeload.github.com/github/gitignore/tar.gz/1046d8fba6b42d367da6314c934cddb6bfe5662e:
+    resolution: {tarball: https://codeload.github.com/github/gitignore/tar.gz/1046d8fba6b42d367da6314c934cddb6bfe5662e}
     version: 0.0.0
 
   glob-parent@5.1.2:
@@ -12867,8 +12868,8 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  uuid@13.0.0:
-    resolution: {integrity: sha512-XQegIaBTVUjSHliKqcnFqYypAd4S+WCYt5NIeRs6w/UAry7z8Y9j5ZwRRL4kzq9U3sD6v+85er9FvkEaBpji2w==}
+  uuid@14.0.0:
+    resolution: {integrity: sha512-Qo+uWgilfSmAhXCMav1uYFynlQO7fMFiMVZsQqZRMIXp0O7rR7qjkj+cPvBHLgBqi960QCoo/PH2/6ZtVqKvrg==}
     hasBin: true
 
   validator@13.15.26:
@@ -16733,7 +16734,7 @@ snapshots:
 
   github-markdown-css@5.9.0: {}
 
-  gitignore@https://codeload.github.com/github/gitignore/tar.gz/b4105e73e493bb7a20b5d7ea35efd5780ca44938: {}
+  gitignore@https://codeload.github.com/github/gitignore/tar.gz/1046d8fba6b42d367da6314c934cddb6bfe5662e: {}
 
   glob-parent@5.1.2:
     dependencies:
@@ -18447,7 +18448,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  uuid@13.0.0: {}
+  uuid@14.0.0: {}
 
   validator@13.15.26: {}
 
