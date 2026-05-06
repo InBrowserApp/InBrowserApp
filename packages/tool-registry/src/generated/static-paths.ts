@@ -2670,6 +2670,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cron-expression-parser",
+    language: "ar",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "de",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "en",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "es",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "fr",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "he",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "hi",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "id",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "it",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "ja",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "ko",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "ms",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "nl",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "no",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "pl",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "pt",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "ru",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "sv",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "th",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "tr",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "vi",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "zh-CN",
+  },
+  {
+    slug: "cron-expression-parser",
+    language: "zh-TW",
+  },
+  {
     slug: "css-box-shadow-generator",
     language: "ar",
   },

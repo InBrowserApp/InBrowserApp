@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron Expression Parser",
+    "description": "Uraikan, validasi, dan jelaskan jadwal cron dengan detail field dan waktu eksekusi berikutnya."
+  },
+  "input": {
+    "title": "Ekspresi cron",
+    "description": "Masukkan ekspresi cron Unix lima field, atau sertakan field detik opsional jika penjadwal Anda mendukungnya.",
+    "label": "Ekspresi",
+    "placeholder": "*/5 * * * *",
+    "valid": "Ekspresi valid",
+    "empty": "Masukkan ekspresi cron untuk memulai.",
+    "invalid": "Ekspresi tidak valid",
+    "timezoneNote": "Waktu eksekusi berikutnya menggunakan {timeZone} dari browser ini.",
+    "copy": "Salin ekspresi",
+    "copied": "Tersalin",
+    "reset": "Atur ulang"
+  },
+  "presets": {
+    "title": "Preset cepat",
+    "description": "Mulai dari jadwal umum, lalu sesuaikan field secara langsung.",
+    "items": {
+      "everyMinute": "Setiap menit",
+      "everyFiveMinutes": "Setiap 5 menit",
+      "everyFifteenMinutes": "Setiap 15 menit",
+      "everyThirtyMinutes": "Setiap 30 menit",
+      "hourly": "Setiap jam",
+      "dailyMidnight": "Setiap hari pada tengah malam",
+      "dailyNoon": "Setiap hari pada tengah hari",
+      "weeklySunday": "Setiap hari Minggu",
+      "weeklyMondayMorning": "Setiap hari Senin pukul 09.00",
+      "monthlyFirstDay": "Hari pertama setiap bulan",
+      "weekdaysMorning": "Hari kerja pukul 09.00"
+    }
+  },
+  "breakdown": {
+    "title": "Rincian field",
+    "description": "Baca setiap field dari kiri ke kanan untuk melihat bagian jadwal yang dikendalikannya.",
+    "field": "Field",
+    "value": "Nilai",
+    "allowedRange": "Rentang yang diizinkan",
+    "fields": {
+      "second": "Detik",
+      "minute": "Menit",
+      "hour": "Jam",
+      "dayOfMonth": "Hari dalam bulan",
+      "month": "Bulan",
+      "dayOfWeek": "Hari dalam minggu"
+    }
+  },
+  "schedule": {
+    "title": "Eksekusi berikutnya",
+    "description": "Pratinjau 10 waktu eksekusi berikutnya yang cocok dari waktu browser saat ini.",
+    "summaryLabel": "Ringkasan",
+    "dateTimeLabel": "Tanggal dan waktu",
+    "relativeLabel": "Relatif",
+    "emptyTitle": "Belum ada ekspresi",
+    "emptyDescription": "Masukkan ekspresi cron untuk melihat penjelasan, field, dan waktu eksekusi berikutnya."
+  },
+  "relative": {
+    "now": "sekarang",
+    "inSeconds": "dalam {count} detik",
+    "inMinutes": "dalam {count} menit",
+    "inHours": "dalam {count} jam",
+    "inDays": "dalam {count} hari"
+  }
+}

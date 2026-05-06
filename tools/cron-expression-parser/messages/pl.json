@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Parser wyrażeń cron",
+    "description": "Analizuj, waliduj i objaśniaj harmonogramy cron ze szczegółami pól oraz nadchodzącymi czasami uruchomień."
+  },
+  "input": {
+    "title": "Wyrażenie cron",
+    "description": "Wpisz pięciopolowe uniksowe wyrażenie cron albo dodaj opcjonalne pole sekund, jeśli obsługuje je Twój system planowania zadań.",
+    "label": "Wyrażenie",
+    "placeholder": "*/5 * * * *",
+    "valid": "Prawidłowe wyrażenie",
+    "empty": "Wpisz wyrażenie cron, aby rozpocząć.",
+    "invalid": "Nieprawidłowe wyrażenie",
+    "timezoneNote": "Następne czasy uruchomień używają strefy {timeZone} z tej przeglądarki.",
+    "copy": "Kopiuj wyrażenie",
+    "copied": "Skopiowano",
+    "reset": "Resetuj"
+  },
+  "presets": {
+    "title": "Gotowe harmonogramy",
+    "description": "Zacznij od typowego harmonogramu, a potem dostosuj pola bezpośrednio.",
+    "items": {
+      "everyMinute": "Co minutę",
+      "everyFiveMinutes": "Co 5 minut",
+      "everyFifteenMinutes": "Co 15 minut",
+      "everyThirtyMinutes": "Co 30 minut",
+      "hourly": "Co godzinę",
+      "dailyMidnight": "Codziennie o północy",
+      "dailyNoon": "Codziennie w południe",
+      "weeklySunday": "W każdą niedzielę",
+      "weeklyMondayMorning": "W każdy poniedziałek o 9:00",
+      "monthlyFirstDay": "Pierwszego dnia miesiąca",
+      "weekdaysMorning": "W dni robocze o 9:00"
+    }
+  },
+  "breakdown": {
+    "title": "Podział pól",
+    "description": "Czytaj każde pole od lewej do prawej, aby zobaczyć, którą częścią harmonogramu steruje.",
+    "field": "Pole",
+    "value": "Wartość",
+    "allowedRange": "Dozwolony zakres",
+    "fields": {
+      "second": "Sekunda",
+      "minute": "Minuta",
+      "hour": "Godzina",
+      "dayOfMonth": "Dzień miesiąca",
+      "month": "Miesiąc",
+      "dayOfWeek": "Dzień tygodnia"
+    }
+  },
+  "schedule": {
+    "title": "Następne wykonania",
+    "description": "Podejrzyj 10 najbliższych pasujących czasów uruchomienia od aktualnego czasu przeglądarki.",
+    "summaryLabel": "Podsumowanie",
+    "dateTimeLabel": "Data i godzina",
+    "relativeLabel": "Względnie",
+    "emptyTitle": "Nie ma jeszcze wyrażenia",
+    "emptyDescription": "Wpisz wyrażenie cron, aby zobaczyć jego objaśnienie, pola i następne czasy uruchomień."
+  },
+  "relative": {
+    "now": "teraz",
+    "inSeconds": "za {count} s",
+    "inMinutes": "za {count} min",
+    "inHours": "za {count} godz.",
+    "inDays": "za {count} dni"
+  }
+}

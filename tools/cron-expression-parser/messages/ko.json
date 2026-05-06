@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron 표현식 파서",
+    "description": "필드 세부 정보와 예정된 실행 시간을 통해 cron 일정을 파싱, 검증하고 설명합니다."
+  },
+  "input": {
+    "title": "Cron 표현식",
+    "description": "5개 필드로 된 Unix cron 표현식을 입력하거나, 스케줄러가 지원하는 경우 선택적인 초 필드를 포함하세요.",
+    "label": "표현식",
+    "placeholder": "*/5 * * * *",
+    "valid": "유효한 표현식",
+    "empty": "시작하려면 cron 표현식을 입력하세요.",
+    "invalid": "유효하지 않은 표현식",
+    "timezoneNote": "다음 실행 시간은 이 브라우저의 {timeZone}을 사용합니다.",
+    "copy": "표현식 복사",
+    "copied": "복사됨",
+    "reset": "재설정"
+  },
+  "presets": {
+    "title": "빠른 프리셋",
+    "description": "일반적인 일정에서 시작한 뒤 필드를 직접 조정하세요.",
+    "items": {
+      "everyMinute": "매분",
+      "everyFiveMinutes": "5분마다",
+      "everyFifteenMinutes": "15분마다",
+      "everyThirtyMinutes": "30분마다",
+      "hourly": "매시간",
+      "dailyMidnight": "매일 자정",
+      "dailyNoon": "매일 정오",
+      "weeklySunday": "매주 일요일",
+      "weeklyMondayMorning": "매주 월요일 오전 9시",
+      "monthlyFirstDay": "매월 1일",
+      "weekdaysMorning": "평일 오전 9시"
+    }
+  },
+  "breakdown": {
+    "title": "필드 분석",
+    "description": "각 필드를 왼쪽에서 오른쪽으로 읽으며 일정의 어느 부분을 제어하는지 확인하세요.",
+    "field": "필드",
+    "value": "값",
+    "allowedRange": "허용 범위",
+    "fields": {
+      "second": "초",
+      "minute": "분",
+      "hour": "시",
+      "dayOfMonth": "일자",
+      "month": "월",
+      "dayOfWeek": "요일"
+    }
+  },
+  "schedule": {
+    "title": "다음 실행",
+    "description": "현재 브라우저 시간을 기준으로 다음 10개의 일치하는 실행 시간을 미리 봅니다.",
+    "summaryLabel": "요약",
+    "dateTimeLabel": "날짜 및 시간",
+    "relativeLabel": "상대 시간",
+    "emptyTitle": "아직 표현식이 없습니다",
+    "emptyDescription": "cron 표현식을 입력하면 설명, 필드, 다음 실행 시간이 표시됩니다."
+  },
+  "relative": {
+    "now": "지금",
+    "inSeconds": "{count}초 후",
+    "inMinutes": "{count}분 후",
+    "inHours": "{count}시간 후",
+    "inDays": "{count}일 후"
+  }
+}

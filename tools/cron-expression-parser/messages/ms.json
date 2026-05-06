@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Penghurai Ungkapan Cron",
+    "description": "Huraikan, sahkan dan jelaskan jadual cron dengan butiran medan dan masa pelaksanaan akan datang."
+  },
+  "input": {
+    "title": "Ungkapan cron",
+    "description": "Masukkan ungkapan cron Unix lima medan, atau sertakan medan saat pilihan apabila penjadual anda menyokongnya.",
+    "label": "Ungkapan",
+    "placeholder": "*/5 * * * *",
+    "valid": "Ungkapan sah",
+    "empty": "Masukkan ungkapan cron untuk bermula.",
+    "invalid": "Ungkapan tidak sah",
+    "timezoneNote": "Masa pelaksanaan seterusnya menggunakan {timeZone} daripada pelayar ini.",
+    "copy": "Salin ungkapan",
+    "copied": "Disalin",
+    "reset": "Tetapkan semula"
+  },
+  "presets": {
+    "title": "Pratetap pantas",
+    "description": "Mulakan daripada jadual lazim, kemudian laraskan medan secara langsung.",
+    "items": {
+      "everyMinute": "Setiap minit",
+      "everyFiveMinutes": "Setiap 5 minit",
+      "everyFifteenMinutes": "Setiap 15 minit",
+      "everyThirtyMinutes": "Setiap 30 minit",
+      "hourly": "Setiap jam",
+      "dailyMidnight": "Setiap hari pada tengah malam",
+      "dailyNoon": "Setiap hari pada tengah hari",
+      "weeklySunday": "Setiap Ahad",
+      "weeklyMondayMorning": "Setiap Isnin pada 9 pagi",
+      "monthlyFirstDay": "Hari pertama setiap bulan",
+      "weekdaysMorning": "Hari bekerja pada 9 pagi"
+    }
+  },
+  "breakdown": {
+    "title": "Pecahan medan",
+    "description": "Baca setiap medan dari kiri ke kanan untuk melihat bahagian jadual yang dikawalnya.",
+    "field": "Medan",
+    "value": "Nilai",
+    "allowedRange": "Julat dibenarkan",
+    "fields": {
+      "second": "Saat",
+      "minute": "Minit",
+      "hour": "Jam",
+      "dayOfMonth": "Hari dalam bulan",
+      "month": "Bulan",
+      "dayOfWeek": "Hari dalam minggu"
+    }
+  },
+  "schedule": {
+    "title": "Pelaksanaan seterusnya",
+    "description": "Pratonton 10 masa pelaksanaan sepadan seterusnya berdasarkan masa pelayar semasa.",
+    "summaryLabel": "Ringkasan",
+    "dateTimeLabel": "Tarikh dan masa",
+    "relativeLabel": "Relatif",
+    "emptyTitle": "Belum ada ungkapan",
+    "emptyDescription": "Masukkan ungkapan cron untuk melihat penjelasan, medan dan masa pelaksanaan seterusnya."
+  },
+  "relative": {
+    "now": "sekarang",
+    "inSeconds": "dalam {count} saat",
+    "inMinutes": "dalam {count} minit",
+    "inHours": "dalam {count} jam",
+    "inDays": "dalam {count} hari"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "محلل تعبيرات Cron",
+    "description": "حلّل جداول Cron وتحقق منها واشرحها مع تفاصيل الحقول وأوقات التشغيل القادمة."
+  },
+  "input": {
+    "title": "تعبير Cron",
+    "description": "أدخل تعبير Unix cron مكوّنًا من خمسة حقول، أو ضمّن حقل الثواني الاختياري عندما يدعمه المجدول لديك.",
+    "label": "التعبير",
+    "placeholder": "*/5 * * * *",
+    "valid": "تعبير صالح",
+    "empty": "أدخل تعبير Cron للبدء.",
+    "invalid": "تعبير غير صالح",
+    "timezoneNote": "تستخدم أوقات التشغيل التالية {timeZone} كما يحدده هذا المتصفح.",
+    "copy": "نسخ التعبير",
+    "copied": "تم النسخ",
+    "reset": "إعادة تعيين"
+  },
+  "presets": {
+    "title": "إعدادات مسبقة سريعة",
+    "description": "ابدأ من جدول شائع، ثم عدّل الحقول مباشرة.",
+    "items": {
+      "everyMinute": "كل دقيقة",
+      "everyFiveMinutes": "كل 5 دقائق",
+      "everyFifteenMinutes": "كل 15 دقيقة",
+      "everyThirtyMinutes": "كل 30 دقيقة",
+      "hourly": "كل ساعة",
+      "dailyMidnight": "يوميًا عند منتصف الليل",
+      "dailyNoon": "يوميًا عند الظهر",
+      "weeklySunday": "كل يوم أحد",
+      "weeklyMondayMorning": "كل يوم اثنين الساعة 9 صباحًا",
+      "monthlyFirstDay": "اليوم الأول من الشهر",
+      "weekdaysMorning": "أيام العمل الساعة 9 صباحًا"
+    }
+  },
+  "breakdown": {
+    "title": "تفصيل الحقول",
+    "description": "اقرأ كل حقل من اليسار إلى اليمين لمعرفة الجزء الذي يتحكم فيه من الجدول.",
+    "field": "الحقل",
+    "value": "القيمة",
+    "allowedRange": "النطاق المسموح",
+    "fields": {
+      "second": "الثانية",
+      "minute": "الدقيقة",
+      "hour": "الساعة",
+      "dayOfMonth": "يوم الشهر",
+      "month": "الشهر",
+      "dayOfWeek": "يوم الأسبوع"
+    }
+  },
+  "schedule": {
+    "title": "التنفيذات التالية",
+    "description": "اعرض معاينة لأوقات التشغيل العشرة التالية المطابقة من وقت المتصفح الحالي.",
+    "summaryLabel": "الملخص",
+    "dateTimeLabel": "التاريخ والوقت",
+    "relativeLabel": "نسبي",
+    "emptyTitle": "لا يوجد تعبير بعد",
+    "emptyDescription": "أدخل تعبير Cron لرؤية شرحه وحقوله وأوقات تشغيله التالية."
+  },
+  "relative": {
+    "now": "الآن",
+    "inSeconds": "بعد {count} ثانية",
+    "inMinutes": "بعد {count} دقيقة",
+    "inHours": "بعد {count} ساعة",
+    "inDays": "بعد {count} يومًا"
+  }
+}

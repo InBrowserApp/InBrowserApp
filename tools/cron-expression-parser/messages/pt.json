@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron Expression Parser",
+    "description": "Analise, valide e explique agendamentos cron com detalhes dos campos e próximos horários de execução."
+  },
+  "input": {
+    "title": "Expressão cron",
+    "description": "Insira uma expressão cron Unix de cinco campos ou inclua um campo opcional de segundos quando seu agendador oferecer suporte a isso.",
+    "label": "Expressão",
+    "placeholder": "*/5 * * * *",
+    "valid": "Expressão válida",
+    "empty": "Insira uma expressão cron para começar.",
+    "invalid": "Expressão inválida",
+    "timezoneNote": "Os próximos horários de execução usam {timeZone} deste navegador.",
+    "copy": "Copiar expressão",
+    "copied": "Copiada",
+    "reset": "Redefinir"
+  },
+  "presets": {
+    "title": "Predefinições rápidas",
+    "description": "Comece com um agendamento comum e ajuste os campos diretamente.",
+    "items": {
+      "everyMinute": "A cada minuto",
+      "everyFiveMinutes": "A cada 5 minutos",
+      "everyFifteenMinutes": "A cada 15 minutos",
+      "everyThirtyMinutes": "A cada 30 minutos",
+      "hourly": "A cada hora",
+      "dailyMidnight": "Diariamente à meia-noite",
+      "dailyNoon": "Diariamente ao meio-dia",
+      "weeklySunday": "Todos os domingos",
+      "weeklyMondayMorning": "Todas as segundas-feiras às 9h",
+      "monthlyFirstDay": "Primeiro dia do mês",
+      "weekdaysMorning": "Dias úteis às 9h"
+    }
+  },
+  "breakdown": {
+    "title": "Detalhamento dos campos",
+    "description": "Leia cada campo da esquerda para a direita para ver qual parte do agendamento ele controla.",
+    "field": "Campo",
+    "value": "Valor",
+    "allowedRange": "Intervalo permitido",
+    "fields": {
+      "second": "Segundo",
+      "minute": "Minuto",
+      "hour": "Hora",
+      "dayOfMonth": "Dia do mês",
+      "month": "Mês",
+      "dayOfWeek": "Dia da semana"
+    }
+  },
+  "schedule": {
+    "title": "Próximas execuções",
+    "description": "Visualize os próximos 10 horários de execução correspondentes a partir do horário atual do navegador.",
+    "summaryLabel": "Resumo",
+    "dateTimeLabel": "Data e hora",
+    "relativeLabel": "Relativo",
+    "emptyTitle": "Nenhuma expressão ainda",
+    "emptyDescription": "Insira uma expressão cron para ver sua explicação, campos e próximos horários de execução."
+  },
+  "relative": {
+    "now": "agora",
+    "inSeconds": "em {count} segundos",
+    "inMinutes": "em {count} minutos",
+    "inHours": "em {count} horas",
+    "inDays": "em {count} dias"
+  }
+}

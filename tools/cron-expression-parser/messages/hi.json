@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron Expression Parser",
+    "description": "फ़ील्ड विवरण और आगामी रन समयों के साथ cron शेड्यूल को पार्स, मान्य और समझाएँ।"
+  },
+  "input": {
+    "title": "Cron अभिव्यक्ति",
+    "description": "पाँच-फ़ील्ड वाली Unix cron अभिव्यक्ति दर्ज करें, या जब आपका शेड्यूलर इसका समर्थन करता हो तो वैकल्पिक सेकंड फ़ील्ड शामिल करें।",
+    "label": "अभिव्यक्ति",
+    "placeholder": "*/5 * * * *",
+    "valid": "मान्य अभिव्यक्ति",
+    "empty": "शुरू करने के लिए cron अभिव्यक्ति दर्ज करें।",
+    "invalid": "अमान्य अभिव्यक्ति",
+    "timezoneNote": "अगले रन समय इस ब्राउज़र के {timeZone} का उपयोग करते हैं।",
+    "copy": "अभिव्यक्ति कॉपी करें",
+    "copied": "कॉपी हो गया",
+    "reset": "रीसेट करें"
+  },
+  "presets": {
+    "title": "त्वरित प्रीसेट",
+    "description": "किसी सामान्य शेड्यूल से शुरू करें, फिर फ़ील्ड सीधे समायोजित करें।",
+    "items": {
+      "everyMinute": "हर मिनट",
+      "everyFiveMinutes": "हर 5 मिनट",
+      "everyFifteenMinutes": "हर 15 मिनट",
+      "everyThirtyMinutes": "हर 30 मिनट",
+      "hourly": "हर घंटे",
+      "dailyMidnight": "हर दिन मध्यरात्रि में",
+      "dailyNoon": "हर दिन दोपहर में",
+      "weeklySunday": "हर रविवार",
+      "weeklyMondayMorning": "हर सोमवार सुबह 9 बजे",
+      "monthlyFirstDay": "महीने का पहला दिन",
+      "weekdaysMorning": "कार्यदिवसों में सुबह 9 बजे"
+    }
+  },
+  "breakdown": {
+    "title": "फ़ील्ड विवरण",
+    "description": "प्रत्येक फ़ील्ड को बाएँ से दाएँ पढ़ें ताकि दिखे कि वह शेड्यूल के किस भाग को नियंत्रित करता है।",
+    "field": "फ़ील्ड",
+    "value": "मान",
+    "allowedRange": "अनुमत सीमा",
+    "fields": {
+      "second": "सेकंड",
+      "minute": "मिनट",
+      "hour": "घंटा",
+      "dayOfMonth": "महीने का दिन",
+      "month": "महीना",
+      "dayOfWeek": "सप्ताह का दिन"
+    }
+  },
+  "schedule": {
+    "title": "अगले निष्पादन",
+    "description": "मौजूदा ब्राउज़र समय से अगले 10 मेल खाने वाले रन समयों का पूर्वावलोकन करें।",
+    "summaryLabel": "सारांश",
+    "dateTimeLabel": "तारीख और समय",
+    "relativeLabel": "सापेक्ष",
+    "emptyTitle": "अभी कोई अभिव्यक्ति नहीं",
+    "emptyDescription": "इसकी व्याख्या, फ़ील्ड और अगले रन समय देखने के लिए cron अभिव्यक्ति दर्ज करें।"
+  },
+  "relative": {
+    "now": "अभी",
+    "inSeconds": "{count} सेकंड में",
+    "inMinutes": "{count} मिनट में",
+    "inHours": "{count} घंटे में",
+    "inDays": "{count} दिन में"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron Expression Parser",
+    "description": "Tolka, validera och förklara cron-scheman med fältdetaljer och kommande körningstider."
+  },
+  "input": {
+    "title": "Cron-uttryck",
+    "description": "Ange ett Unix-cron-uttryck med fem fält, eller inkludera ett valfritt sekundfält när din schemaläggare stöder det.",
+    "label": "Uttryck",
+    "placeholder": "*/5 * * * *",
+    "valid": "Giltigt uttryck",
+    "empty": "Ange ett cron-uttryck för att börja.",
+    "invalid": "Ogiltigt uttryck",
+    "timezoneNote": "Nästa körningstider använder {timeZone} från den här webbläsaren.",
+    "copy": "Kopiera uttryck",
+    "copied": "Kopierat",
+    "reset": "Återställ"
+  },
+  "presets": {
+    "title": "Snabbval",
+    "description": "Börja med ett vanligt schema och justera sedan fälten direkt.",
+    "items": {
+      "everyMinute": "Varje minut",
+      "everyFiveMinutes": "Var 5:e minut",
+      "everyFifteenMinutes": "Var 15:e minut",
+      "everyThirtyMinutes": "Var 30:e minut",
+      "hourly": "Varje timme",
+      "dailyMidnight": "Dagligen vid midnatt",
+      "dailyNoon": "Dagligen vid middagstid",
+      "weeklySunday": "Varje söndag",
+      "weeklyMondayMorning": "Varje måndag kl. 09",
+      "monthlyFirstDay": "Första dagen i månaden",
+      "weekdaysMorning": "Vardagar kl. 09"
+    }
+  },
+  "breakdown": {
+    "title": "Fältuppdelning",
+    "description": "Läs varje fält från vänster till höger för att se vilken del av schemat det styr.",
+    "field": "Fält",
+    "value": "Värde",
+    "allowedRange": "Tillåtet intervall",
+    "fields": {
+      "second": "Sekund",
+      "minute": "Minut",
+      "hour": "Timme",
+      "dayOfMonth": "Dag i månaden",
+      "month": "Månad",
+      "dayOfWeek": "Veckodag"
+    }
+  },
+  "schedule": {
+    "title": "Nästa körningar",
+    "description": "Förhandsgranska de nästa 10 matchande körningstiderna från webbläsarens aktuella tid.",
+    "summaryLabel": "Sammanfattning",
+    "dateTimeLabel": "Datum och tid",
+    "relativeLabel": "Relativt",
+    "emptyTitle": "Inget uttryck ännu",
+    "emptyDescription": "Ange ett cron-uttryck för att se dess förklaring, fält och nästa körningstider."
+  },
+  "relative": {
+    "now": "nu",
+    "inSeconds": "om {count} sekunder",
+    "inMinutes": "om {count} minuter",
+    "inHours": "om {count} timmar",
+    "inDays": "om {count} dagar"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Cron Expression Parser",
+  "description": "Analiza, valida y explica programaciones cron con detalles de campos y próximas ejecuciones."
+}

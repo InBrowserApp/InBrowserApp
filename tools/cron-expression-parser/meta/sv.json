@@ -1,0 +1,4 @@
+{
+  "name": "Cron Expression Parser",
+  "description": "Tolka, validera och förklara cron-scheman med fältdetaljer och kommande körningstider."
+}

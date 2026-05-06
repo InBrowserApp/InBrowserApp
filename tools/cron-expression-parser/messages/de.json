@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron Expression Parser",
+    "description": "Analysieren, validieren und erklären Sie Cron-Zeitpläne mit Felddetails und kommenden Ausführungszeiten."
+  },
+  "input": {
+    "title": "Cron-Ausdruck",
+    "description": "Geben Sie einen Unix-Cron-Ausdruck mit fünf Feldern ein oder fügen Sie ein optionales Sekundenfeld hinzu, wenn Ihr Scheduler es unterstützt.",
+    "label": "Ausdruck",
+    "placeholder": "*/5 * * * *",
+    "valid": "Gültiger Ausdruck",
+    "empty": "Geben Sie einen Cron-Ausdruck ein, um zu beginnen.",
+    "invalid": "Ungültiger Ausdruck",
+    "timezoneNote": "Die nächsten Ausführungszeiten verwenden {timeZone} aus diesem Browser.",
+    "copy": "Ausdruck kopieren",
+    "copied": "Kopiert",
+    "reset": "Zurücksetzen"
+  },
+  "presets": {
+    "title": "Schnellvorlagen",
+    "description": "Beginnen Sie mit einem gängigen Zeitplan und passen Sie dann die Felder direkt an.",
+    "items": {
+      "everyMinute": "Jede Minute",
+      "everyFiveMinutes": "Alle 5 Minuten",
+      "everyFifteenMinutes": "Alle 15 Minuten",
+      "everyThirtyMinutes": "Alle 30 Minuten",
+      "hourly": "Stündlich",
+      "dailyMidnight": "Täglich um Mitternacht",
+      "dailyNoon": "Täglich um 12 Uhr",
+      "weeklySunday": "Jeden Sonntag",
+      "weeklyMondayMorning": "Jeden Montag um 9 Uhr",
+      "monthlyFirstDay": "Erster Tag des Monats",
+      "weekdaysMorning": "Wochentags um 9 Uhr"
+    }
+  },
+  "breakdown": {
+    "title": "Feldaufschlüsselung",
+    "description": "Lesen Sie jedes Feld von links nach rechts, um zu sehen, welchen Teil des Zeitplans es steuert.",
+    "field": "Feld",
+    "value": "Wert",
+    "allowedRange": "Zulässiger Bereich",
+    "fields": {
+      "second": "Sekunde",
+      "minute": "Minute",
+      "hour": "Stunde",
+      "dayOfMonth": "Tag des Monats",
+      "month": "Monat",
+      "dayOfWeek": "Wochentag"
+    }
+  },
+  "schedule": {
+    "title": "Nächste Ausführungen",
+    "description": "Zeigen Sie eine Vorschau der nächsten 10 passenden Ausführungszeiten ab der aktuellen Browserzeit an.",
+    "summaryLabel": "Zusammenfassung",
+    "dateTimeLabel": "Datum und Uhrzeit",
+    "relativeLabel": "Relativ",
+    "emptyTitle": "Noch kein Ausdruck",
+    "emptyDescription": "Geben Sie einen Cron-Ausdruck ein, um Erklärung, Felder und nächste Ausführungszeiten zu sehen."
+  },
+  "relative": {
+    "now": "jetzt",
+    "inSeconds": "in {count} Sekunden",
+    "inMinutes": "in {count} Minuten",
+    "inHours": "in {count} Stunden",
+    "inDays": "in {count} Tagen"
+  }
+}

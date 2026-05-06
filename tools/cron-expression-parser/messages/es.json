@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron Expression Parser",
+    "description": "Analiza, valida y explica programaciones cron con detalles de campos y próximas ejecuciones."
+  },
+  "input": {
+    "title": "Expresión cron",
+    "description": "Ingresa una expresión cron Unix de cinco campos, o incluye un campo opcional de segundos cuando tu programador lo admita.",
+    "label": "Expresión",
+    "placeholder": "*/5 * * * *",
+    "valid": "Expresión válida",
+    "empty": "Ingresa una expresión cron para comenzar.",
+    "invalid": "Expresión no válida",
+    "timezoneNote": "Las próximas ejecuciones usan {timeZone} de este navegador.",
+    "copy": "Copiar expresión",
+    "copied": "Copiado",
+    "reset": "Restablecer"
+  },
+  "presets": {
+    "title": "Preajustes rápidos",
+    "description": "Empieza con una programación común y luego ajusta los campos directamente.",
+    "items": {
+      "everyMinute": "Cada minuto",
+      "everyFiveMinutes": "Cada 5 minutos",
+      "everyFifteenMinutes": "Cada 15 minutos",
+      "everyThirtyMinutes": "Cada 30 minutos",
+      "hourly": "Cada hora",
+      "dailyMidnight": "Diariamente a medianoche",
+      "dailyNoon": "Diariamente al mediodía",
+      "weeklySunday": "Cada domingo",
+      "weeklyMondayMorning": "Cada lunes a las 9 a. m.",
+      "monthlyFirstDay": "Primer día del mes",
+      "weekdaysMorning": "Días laborables a las 9 a. m."
+    }
+  },
+  "breakdown": {
+    "title": "Desglose de campos",
+    "description": "Lee cada campo de izquierda a derecha para ver qué parte de la programación controla.",
+    "field": "Campo",
+    "value": "Valor",
+    "allowedRange": "Rango permitido",
+    "fields": {
+      "second": "Segundo",
+      "minute": "Minuto",
+      "hour": "Hora",
+      "dayOfMonth": "Día del mes",
+      "month": "Mes",
+      "dayOfWeek": "Día de la semana"
+    }
+  },
+  "schedule": {
+    "title": "Próximas ejecuciones",
+    "description": "Previsualiza las próximas 10 ejecuciones coincidentes desde la hora actual del navegador.",
+    "summaryLabel": "Resumen",
+    "dateTimeLabel": "Fecha y hora",
+    "relativeLabel": "Relativo",
+    "emptyTitle": "Aún no hay expresión",
+    "emptyDescription": "Ingresa una expresión cron para ver su explicación, campos y próximas ejecuciones."
+  },
+  "relative": {
+    "now": "ahora",
+    "inSeconds": "en {count} segundos",
+    "inMinutes": "en {count} minutos",
+    "inHours": "en {count} horas",
+    "inDays": "en {count} días"
+  }
+}

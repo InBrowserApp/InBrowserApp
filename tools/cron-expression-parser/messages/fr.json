@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Analyseur d’expressions cron",
+    "description": "Analysez, validez et expliquez les planifications cron avec le détail des champs et les prochaines heures d’exécution."
+  },
+  "input": {
+    "title": "Expression cron",
+    "description": "Saisissez une expression cron Unix à cinq champs, ou ajoutez un champ optionnel pour les secondes si votre planificateur le prend en charge.",
+    "label": "Expression",
+    "placeholder": "*/5 * * * *",
+    "valid": "Expression valide",
+    "empty": "Saisissez une expression cron pour commencer.",
+    "invalid": "Expression invalide",
+    "timezoneNote": "Les prochaines exécutions utilisent {timeZone}, fourni par ce navigateur.",
+    "copy": "Copier l’expression",
+    "copied": "Copié",
+    "reset": "Réinitialiser"
+  },
+  "presets": {
+    "title": "Préréglages rapides",
+    "description": "Partez d’une planification courante, puis ajustez directement les champs.",
+    "items": {
+      "everyMinute": "Toutes les minutes",
+      "everyFiveMinutes": "Toutes les 5 minutes",
+      "everyFifteenMinutes": "Toutes les 15 minutes",
+      "everyThirtyMinutes": "Toutes les 30 minutes",
+      "hourly": "Toutes les heures",
+      "dailyMidnight": "Tous les jours à minuit",
+      "dailyNoon": "Tous les jours à midi",
+      "weeklySunday": "Chaque dimanche",
+      "weeklyMondayMorning": "Chaque lundi à 9 h",
+      "monthlyFirstDay": "Premier jour du mois",
+      "weekdaysMorning": "En semaine à 9 h"
+    }
+  },
+  "breakdown": {
+    "title": "Détail des champs",
+    "description": "Lisez chaque champ de gauche à droite pour voir quelle partie de la planification il contrôle.",
+    "field": "Champ",
+    "value": "Valeur",
+    "allowedRange": "Plage autorisée",
+    "fields": {
+      "second": "Seconde",
+      "minute": "Minute",
+      "hour": "Heure",
+      "dayOfMonth": "Jour du mois",
+      "month": "Mois",
+      "dayOfWeek": "Jour de la semaine"
+    }
+  },
+  "schedule": {
+    "title": "Prochaines exécutions",
+    "description": "Prévisualisez les 10 prochaines heures d’exécution correspondant à l’expression à partir de l’heure actuelle du navigateur.",
+    "summaryLabel": "Résumé",
+    "dateTimeLabel": "Date et heure",
+    "relativeLabel": "Relatif",
+    "emptyTitle": "Aucune expression pour l’instant",
+    "emptyDescription": "Saisissez une expression cron pour voir son explication, ses champs et ses prochaines heures d’exécution."
+  },
+  "relative": {
+    "now": "maintenant",
+    "inSeconds": "dans {count} secondes",
+    "inMinutes": "dans {count} minutes",
+    "inHours": "dans {count} heures",
+    "inDays": "dans {count} jours"
+  }
+}
