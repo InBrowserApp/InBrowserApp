@@ -1,0 +1,4 @@
+{
+  "name": "CIDR Birleştirici ve Hariç Tutucu",
+  "description": "IPv4 ve IPv6 CIDR bloklarını birleştirin, hariç tutulan ağları çıkarın ve ortaya çıkan en küçük CIDR listesini kopyalayın."
+}

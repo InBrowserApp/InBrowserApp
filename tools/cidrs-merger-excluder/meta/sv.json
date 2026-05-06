@@ -1,0 +1,4 @@
+{
+  "name": "CIDR-sammanslagare och exkluderare",
+  "description": "Slå samman IPv4- och IPv6-CIDR-block, dra bort exkluderade nätverk och kopiera den minimala resulterande CIDR-listan."
+}

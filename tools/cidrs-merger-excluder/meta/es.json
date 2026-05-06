@@ -1,0 +1,4 @@
+{
+  "name": "Fusionador y excluidor de CIDR",
+  "description": "Fusiona bloques CIDR IPv4 e IPv6, resta las redes excluidas y copia la lista CIDR resultante mínima."
+}

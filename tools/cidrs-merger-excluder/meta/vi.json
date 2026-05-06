@@ -1,0 +1,4 @@
+{
+  "name": "Công cụ gộp và loại trừ CIDR",
+  "description": "Gộp các khối CIDR IPv4 và IPv6, trừ các mạng bị loại trừ, rồi sao chép danh sách CIDR kết quả tối giản."
+}

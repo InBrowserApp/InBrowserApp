@@ -3069,6 +3069,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "cidrs-merger-excluder",
+    category: "network",
+    icon: "network",
+    tags: ["cidr", "ip", "network", "merge", "exclude", "ipv4", "ipv6"],
+    locales: {
+      ar: {
+        name: "أداة دمج واستبعاد CIDR",
+        description:
+          "ادمج كتل CIDR لعناوين IPv4 وIPv6، واطرح الشبكات المستبعدة، وانسخ قائمة CIDR الناتجة بأقل عدد ممكن.",
+      },
+      de: {
+        name: "CIDRs zusammenführen & ausschließen",
+        description:
+          "Führe IPv4- und IPv6-CIDR-Blöcke zusammen, ziehe ausgeschlossene Netzwerke ab und kopiere die minimale resultierende CIDR-Liste.",
+      },
+      en: {
+        name: "CIDRs Merger & Excluder",
+        description:
+          "Merge IPv4 and IPv6 CIDR blocks, subtract excluded networks, and copy the minimal resulting CIDR list.",
+      },
+      es: {
+        name: "Fusionador y excluidor de CIDR",
+        description:
+          "Fusiona bloques CIDR IPv4 e IPv6, resta las redes excluidas y copia la lista CIDR resultante mínima.",
+      },
+      fr: {
+        name: "Fusion et exclusion de CIDR",
+        description:
+          "Fusionnez des blocs CIDR IPv4 et IPv6, soustrayez les réseaux exclus, puis copiez la liste CIDR minimale obtenue.",
+      },
+      he: {
+        name: "ממזג ומחריג CIDR",
+        description:
+          "מזגו בלוקי CIDR של IPv4 ו-IPv6, החסירו רשתות מוחרגות, והעתיקו את רשימת ה-CIDR המינימלית שמתקבלת.",
+      },
+      hi: {
+        name: "CIDRs मर्जर और एक्सक्लूडर",
+        description:
+          "IPv4 और IPv6 CIDR ब्लॉकों को मर्ज करें, बाहर रखे गए नेटवर्क घटाएं, और न्यूनतम परिणामी CIDR सूची कॉपी करें।",
+      },
+      id: {
+        name: "Penggabung & Pengecuali CIDR",
+        description:
+          "Gabungkan blok CIDR IPv4 dan IPv6, kurangi jaringan yang dikecualikan, lalu salin daftar CIDR hasil minimal.",
+      },
+      it: {
+        name: "Unificatore ed esclusore di CIDR",
+        description:
+          "Unisci blocchi CIDR IPv4 e IPv6, sottrai le reti escluse e copia l'elenco CIDR risultante minimo.",
+      },
+      ja: {
+        name: "CIDR 結合・除外ツール",
+        description:
+          "IPv4 と IPv6 の CIDR ブロックを結合し、除外ネットワークを差し引いて、最小の結果 CIDR リストをコピーできます。",
+      },
+      ko: {
+        name: "CIDR 병합 및 제외 도구",
+        description:
+          "IPv4 및 IPv6 CIDR 블록을 병합하고, 제외할 네트워크를 빼낸 뒤, 최소 결과 CIDR 목록을 복사합니다.",
+      },
+      ms: {
+        name: "Penggabung & Pengecuali CIDR",
+        description:
+          "Gabungkan blok CIDR IPv4 dan IPv6, tolak rangkaian yang dikecualikan, dan salin senarai CIDR hasil yang minimum.",
+      },
+      nl: {
+        name: "CIDR's samenvoegen en uitsluiten",
+        description:
+          "Voeg IPv4- en IPv6-CIDR-blokken samen, trek uitgesloten netwerken af en kopieer de minimale resulterende CIDR-lijst.",
+      },
+      no: {
+        name: "CIDR-fletting og -utelukking",
+        description:
+          "Flett IPv4- og IPv6-CIDR-blokker, trekk fra utelukkede nettverk, og kopier den minimale resulterende CIDR-listen.",
+      },
+      pl: {
+        name: "Scalanie i wykluczanie CIDR",
+        description:
+          "Scalaj bloki CIDR IPv4 i IPv6, odejmuj wykluczone sieci i kopiuj minimalną wynikową listę CIDR.",
+      },
+      pt: {
+        name: "Mesclador e Excludor de CIDRs",
+        description:
+          "Mescle blocos CIDR IPv4 e IPv6, subtraia redes excluídas e copie a lista CIDR resultante mínima.",
+      },
+      ru: {
+        name: "Объединение и исключение CIDR",
+        description:
+          "Объединяйте CIDR-блоки IPv4 и IPv6, вычитайте исключенные сети и копируйте минимальный итоговый список CIDR.",
+      },
+      sv: {
+        name: "CIDR-sammanslagare och exkluderare",
+        description:
+          "Slå samman IPv4- och IPv6-CIDR-block, dra bort exkluderade nätverk och kopiera den minimala resulterande CIDR-listan.",
+      },
+      th: {
+        name: "ตัวรวมและตัด CIDR",
+        description:
+          "รวมบล็อก CIDR ของ IPv4 และ IPv6, ลบเครือข่ายที่ยกเว้น และคัดลอกรายการ CIDR ผลลัพธ์ที่สั้นที่สุด",
+      },
+      tr: {
+        name: "CIDR Birleştirici ve Hariç Tutucu",
+        description:
+          "IPv4 ve IPv6 CIDR bloklarını birleştirin, hariç tutulan ağları çıkarın ve ortaya çıkan en küçük CIDR listesini kopyalayın.",
+      },
+      vi: {
+        name: "Công cụ gộp và loại trừ CIDR",
+        description:
+          "Gộp các khối CIDR IPv4 và IPv6, trừ các mạng bị loại trừ, rồi sao chép danh sách CIDR kết quả tối giản.",
+      },
+      "zh-CN": {
+        name: "CIDR 合并与排除工具",
+        description:
+          "合并 IPv4 和 IPv6 CIDR 块，扣除排除的网络，并复制最小化后的结果 CIDR 列表。",
+      },
+      "zh-TW": {
+        name: "CIDR 合併與排除工具",
+        description:
+          "合併 IPv4 與 IPv6 CIDR 區塊、扣除要排除的網路，並複製最精簡的結果 CIDR 清單。",
+      },
+    },
+  },
+  {
     slug: "color-contrast-checker",
     category: "web",
     icon: "image",

@@ -2210,6 +2210,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cidrs-merger-excluder",
+    language: "ar",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "de",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "en",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "es",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "fr",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "he",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "hi",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "id",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "it",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "ja",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "ko",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "ms",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "nl",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "no",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "pl",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "pt",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "ru",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "sv",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "th",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "tr",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "vi",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "zh-CN",
+  },
+  {
+    slug: "cidrs-merger-excluder",
+    language: "zh-TW",
+  },
+  {
     slug: "color-contrast-checker",
     language: "ar",
   },

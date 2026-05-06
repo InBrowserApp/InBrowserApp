@@ -1,0 +1,4 @@
+{
+  "name": "CIDR 合併與排除工具",
+  "description": "合併 IPv4 與 IPv6 CIDR 區塊、扣除要排除的網路，並複製最精簡的結果 CIDR 清單。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "CIDR 合并与排除工具",
+  "description": "合并 IPv4 和 IPv6 CIDR 块，扣除排除的网络，并复制最小化后的结果 CIDR 列表。"
+}
