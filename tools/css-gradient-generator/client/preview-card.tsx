@@ -49,25 +49,23 @@ function PreviewCard({
   onRandomizeLayer,
 }: PreviewCardProps) {
   return (
-    <Card className="overflow-hidden">
+    <Card className="gap-0 overflow-hidden">
       <CardHeader className="border-b">
         <CardTitle>{messages.previewTitle}</CardTitle>
         <CardDescription>{messages.previewHint}</CardDescription>
       </CardHeader>
 
-      <CardContent className="grid gap-3">
-        <div className="rounded-xl border bg-muted/35 p-3 shadow-sm sm:p-4">
-          <div
-            aria-label={messages.previewTitle}
-            className="min-h-72 rounded-lg border border-black/5 bg-slate-100 shadow-inner sm:min-h-80"
-            style={{
-              backgroundBlendMode: blendMode || undefined,
-              backgroundImage,
-            }}
-          />
-        </div>
+      <CardContent className="grid gap-3 px-0">
+        <div
+          aria-label={messages.previewTitle}
+          className="min-h-72 border-b border-black/5 bg-slate-100 shadow-inner sm:min-h-80"
+          style={{
+            backgroundBlendMode: blendMode || undefined,
+            backgroundImage,
+          }}
+        />
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 px-4">
           <Button
             onClick={onRandomizeLayer}
             size="sm"
@@ -108,7 +106,7 @@ function PresetsCard({
             return (
               <button
                 className={cn(
-                  "group rounded-xl border p-3 text-left transition-colors",
+                  "group overflow-hidden rounded-xl border p-0 text-left transition-colors",
                   presetId === preset.id
                     ? "border-primary bg-primary/5 shadow-sm"
                     : "border-border bg-card hover:border-primary/40 hover:bg-muted/40"
@@ -120,7 +118,7 @@ function PresetsCard({
                 type="button"
               >
                 <div
-                  className="mb-3 h-16 rounded-lg border border-black/5 bg-slate-100 shadow-sm"
+                  className="h-20 border-b border-black/5 bg-slate-100 shadow-sm sm:h-16 xl:h-20"
                   style={{
                     backgroundBlendMode:
                       createBlendModeCss(previewLayers) || undefined,
@@ -130,7 +128,7 @@ function PresetsCard({
                     ),
                   }}
                 />
-                <div className="text-sm font-medium">
+                <div className="px-3 py-2.5 text-sm font-medium">
                   {messages.preset[preset.id]}
                 </div>
               </button>
