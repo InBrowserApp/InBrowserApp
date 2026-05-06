@@ -1,0 +1,4 @@
+{
+  "name": "Sincronizzazione del codice orario radio",
+  "description": "Genera localmente audio con codice orario radio JJY, BPC, DCF77, MSF o WWVB per aiutare a sincronizzare orologi radiocontrollati compatibili."
+}

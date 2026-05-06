@@ -1,0 +1,4 @@
+{
+  "name": "Radiotijdcode-synchronisatie",
+  "description": "Genereer lokaal JJY-, BPC-, DCF77-, MSF- of WWVB-radiotijdcode-audio om compatibele radiogestuurde klokken te helpen synchroniseren."
+}

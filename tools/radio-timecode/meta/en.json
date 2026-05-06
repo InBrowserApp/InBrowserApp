@@ -1,0 +1,4 @@
+{
+  "name": "Radio Timecode Sync",
+  "description": "Generate JJY, BPC, DCF77, MSF, or WWVB radio timecode audio locally to help sync compatible radio-controlled clocks."
+}
