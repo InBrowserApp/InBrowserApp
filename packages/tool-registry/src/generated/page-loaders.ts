@@ -150,6 +150,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/shake128-hash-text-or-file/page"),
   "shake256-hash-text-or-file": () =>
     import("@tool/shake256-hash-text-or-file/page"),
+  "sitemap-xml-generator": () => import("@tool/sitemap-xml-generator/page"),
   "slug-generator": () => import("@tool/slug-generator/page"),
   "sm3-hash-text-or-file": () => import("@tool/sm3-hash-text-or-file/page"),
   "sql-formatter-and-linter": () =>

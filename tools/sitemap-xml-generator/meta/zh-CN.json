@@ -1,0 +1,4 @@
+{
+  "name": "Sitemap XML 生成器",
+  "description": "直接在浏览器里根据 URL 清单生成 sitemap.xml 或 sitemap index，无需切换到其他工具。"
+}
