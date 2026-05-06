@@ -71,6 +71,21 @@ describe("CronExpressionGeneratorClient", () => {
     expect(screen.getAllByRole("row").length).toBeGreaterThan(1)
   })
 
+  test("renders mode choices as a connected segmented control", () => {
+    renderClient()
+
+    const minuteCard = getCard(messages.fields.labels.minute)
+    const everyMode = minuteCard.getByRole("radio", {
+      name: messages.fields.every,
+    })
+    const modeGroup = everyMode.parentElement
+
+    expect(modeGroup?.className).not.toContain("gap-2")
+    expect(modeGroup?.className).not.toContain("flex-wrap")
+    expect(everyMode.className).toContain("basis-0")
+    expect(everyMode.querySelector("span")?.className).toContain("truncate")
+  })
+
   test("copies the generated expression", async () => {
     renderClient()
 
