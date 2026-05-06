@@ -100,6 +100,7 @@
     "@tool/random-number-generator": "workspace:*",
     "@tool/random-password-generator": "workspace:*",
     "@tool/regex-tester-replacer": "workspace:*",
+    "@tool/ripemd128-hash-text-or-file": "workspace:*",
     "@tool/ripemd160-hash-text-or-file": "workspace:*",
     "@tool/ripemd256-hash-text-or-file": "workspace:*",
     "@tool/robots-txt-generator": "workspace:*",

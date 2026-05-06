@@ -1,0 +1,16 @@
+{
+  "inputLabel": "קלט",
+  "plainTextLabel": "טקסט רגיל",
+  "plainTextDescription": "הדביקו או הקלידו כל טקסט בקידוד UTF-8, כולל אמוג'י ותווים שאינם לטיניים.",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "hashResultLabel": "תוצאת Hash",
+  "hashResultDescription": "תוצאת הגיבוב עבור קלט הטקסט הנוכחי.",
+  "hexLabel": "הקסדצימלי",
+  "base64Label": "Base64",
+  "decimalLabel": "עשרוני",
+  "binaryLabel": "בינארי",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק",
+  "hashTextError": "לא ניתן לחשב את הגיבוב של הטקסט.",
+  "hashFileError": "לא ניתן לחשב את הגיבוב של הקובץ."
+}

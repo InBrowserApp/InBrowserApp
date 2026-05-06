@@ -1,0 +1,4 @@
+{
+  "name": "RIPEMD-128-hash text eller fil",
+  "description": "Generera RIPEMD-128-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål"
+}

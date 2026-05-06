@@ -8558,6 +8558,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ripemd128-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "ripemd128-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "ripemd160-hash-text-or-file",
     language: "ar",
   },
