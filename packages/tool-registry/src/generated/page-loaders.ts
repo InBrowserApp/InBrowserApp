@@ -37,6 +37,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "chmod-calculator": () => import("@tool/chmod-calculator/page"),
   "cidr-parser": () => import("@tool/cidr-parser/page"),
   "cidrs-merger-excluder": () => import("@tool/cidrs-merger-excluder/page"),
+  "code-screenshot-generator": () =>
+    import("@tool/code-screenshot-generator/page"),
   "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
   "color-converter": () => import("@tool/color-converter/page"),
   "color-picker": () => import("@tool/color-picker/page"),

@@ -1,0 +1,4 @@
+{
+  "name": "Code Screenshot Generator",
+  "description": "구문 강조가 적용된 코드 스크린샷을 생성하고 SVG, PNG, JPEG, WebP 또는 HTML로 내보내세요."
+}

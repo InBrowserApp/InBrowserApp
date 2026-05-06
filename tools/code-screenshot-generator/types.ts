@@ -1,0 +1,72 @@
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+type CodeScreenshotGeneratorMessages = Readonly<{
+  meta: ToolMeta
+  codeTitle: string
+  codeDescription: string
+  codeInputLabel: string
+  codePlaceholder: string
+  importTextLabel: string
+  syntaxTitle: string
+  syntaxDescription: string
+  languageLabel: string
+  renderModeLabel: string
+  renderHighlight: string
+  renderPlain: string
+  themeLabel: string
+  themeNebula: string
+  themeSunrise: string
+  themePaper: string
+  themeTerminal: string
+  backgroundTitle: string
+  backgroundDescription: string
+  backgroundModeLabel: string
+  backgroundModePreset: string
+  backgroundModeSolid: string
+  backgroundModeTransparent: string
+  backgroundModeNone: string
+  backgroundPresetLabel: string
+  backgroundPresetAurora: string
+  backgroundPresetSunset: string
+  backgroundPresetOcean: string
+  backgroundPresetEmber: string
+  backgroundPresetNoir: string
+  backgroundColorLabel: string
+  windowTitle: string
+  windowDescription: string
+  windowStyleLabel: string
+  windowMac: string
+  windowWindows: string
+  windowNone: string
+  lineNumbersLabel: string
+  layoutTitle: string
+  layoutDescription: string
+  fontSizeLabel: string
+  lineHeightLabel: string
+  cardPaddingLabel: string
+  framePaddingLabel: string
+  cornerRadiusLabel: string
+  tabSizeLabel: string
+  shadowLabel: string
+  previewTitle: string
+  previewDescription: string
+  emptyPreviewTitle: string
+  emptyPreviewDescription: string
+  dimensionsLabel: string
+  exportTitle: string
+  exportDescription: string
+  fileNameLabel: string
+  scaleLabel: string
+  downloadPngLabel: string
+  downloadJpegLabel: string
+  downloadWebpLabel: string
+  downloadSvgLabel: string
+  downloadHtmlLabel: string
+  copySvgLabel: string
+  copyHtmlLabel: string
+  copiedLabel: string
+  exportErrorTitle: string
+  exportErrorDescription: string
+}>
+
+export type { CodeScreenshotGeneratorMessages }

@@ -33,6 +33,7 @@
     "@tool/chmod-calculator": "workspace:*",
     "@tool/cidr-parser": "workspace:*",
     "@tool/cidrs-merger-excluder": "workspace:*",
+    "@tool/code-screenshot-generator": "workspace:*",
     "@tool/color-contrast-checker": "workspace:*",
     "@tool/color-converter": "workspace:*",
     "@tool/color-picker": "workspace:*",
