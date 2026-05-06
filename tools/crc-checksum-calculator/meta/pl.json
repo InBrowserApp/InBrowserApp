@@ -1,0 +1,4 @@
+{
+  "name": "Kalkulator sum kontrolnych CRC",
+  "description": "Generuj sumy kontrolne CRC dla wprowadzonego tekstu lub przesłanego pliku. Porównuj popularne warianty CRC-8, CRC-16, CRC-24, CRC-32 i CRC-64 do kontroli integralności danych"
+}

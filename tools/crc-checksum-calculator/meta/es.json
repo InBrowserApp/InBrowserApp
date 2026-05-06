@@ -1,0 +1,4 @@
+{
+  "name": "Calculadora de suma de verificación CRC",
+  "description": "Genera sumas de verificación CRC para entrada de texto o carga de archivos. Compara variantes comunes de CRC-8, CRC-16, CRC-24, CRC-32 y CRC-64 para comprobaciones de integridad de datos"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Calculateur de sommes de contrôle CRC",
+  "description": "Générez des sommes de contrôle CRC pour une saisie de texte ou un fichier importé. Comparez les variantes courantes CRC-8, CRC-16, CRC-24, CRC-32 et CRC-64 pour les contrôles d’intégrité des données"
+}

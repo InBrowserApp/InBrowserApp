@@ -36,6 +36,7 @@
     "@tool/color-converter": "workspace:*",
     "@tool/color-picker": "workspace:*",
     "@tool/cookie-parser": "workspace:*",
+    "@tool/crc-checksum-calculator": "workspace:*",
     "@tool/credit-card-validator": "workspace:*",
     "@tool/cron-expression-parser": "workspace:*",
     "@tool/css-box-shadow-generator": "workspace:*",

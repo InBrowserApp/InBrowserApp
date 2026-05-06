@@ -1,0 +1,4 @@
+{
+  "name": "CRC-kontrollsummekalkylator",
+  "description": "Generera CRC-kontrollsummor för textinmatning eller filuppladdning. Jämför vanliga CRC-8-, CRC-16-, CRC-24-, CRC-32- och CRC-64-varianter för kontroller av dataintegritet"
+}

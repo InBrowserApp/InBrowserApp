@@ -1,0 +1,4 @@
+{
+  "name": "Trình tính checksum CRC",
+  "description": "Tạo checksum CRC cho đầu vào văn bản hoặc tệp tải lên. So sánh các biến thể CRC-8, CRC-16, CRC-24, CRC-32 và CRC-64 phổ biến để kiểm tra tính toàn vẹn dữ liệu"
+}

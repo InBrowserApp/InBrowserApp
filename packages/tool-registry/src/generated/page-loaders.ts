@@ -40,6 +40,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "color-converter": () => import("@tool/color-converter/page"),
   "color-picker": () => import("@tool/color-picker/page"),
   "cookie-parser": () => import("@tool/cookie-parser/page"),
+  "crc-checksum-calculator": () => import("@tool/crc-checksum-calculator/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "cron-expression-parser": () => import("@tool/cron-expression-parser/page"),
   "css-box-shadow-generator": () =>
