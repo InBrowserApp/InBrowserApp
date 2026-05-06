@@ -40,6 +40,26 @@ describe("CIDR merge and exclude core", () => {
     })
   })
 
+  test("normalizes duplicate and default IPv4 ranges", () => {
+    expect(
+      mergeAndExcludeCidrs("10.0.0.0/25\n10.0.0.0/24\n10.0.0.0/24", "")
+    ).toEqual({
+      status: "success",
+      cidrs: ["10.0.0.0/24"],
+      mergeInputCount: 3,
+      excludeInputCount: 0,
+      familyLabels: ["IPv4"],
+    })
+
+    expect(mergeAndExcludeCidrs("0.0.0.0/0", "")).toEqual({
+      status: "success",
+      cidrs: ["0.0.0.0/0"],
+      mergeInputCount: 1,
+      excludeInputCount: 0,
+      familyLabels: ["IPv4"],
+    })
+  })
+
   test("excludes IPv4 ranges and emits a minimal covering list", () => {
     expect(mergeAndExcludeCidrs("10.0.0.0/24", "10.0.0.64/26")).toEqual({
       status: "success",
