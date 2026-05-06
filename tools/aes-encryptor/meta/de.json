@@ -1,0 +1,4 @@
+{
+  "name": "AES Encryptor",
+  "description": "Verschluesseln Sie Text oder Dateien in Ihrem Browser mit AES-GCM, AES-CBC oder AES-CTR und einem aus einem Passwort abgeleiteten Schluessel oder einem rohen hexadezimalen Schluessel."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "AES Encryptor",
+  "description": "パスワードから導出したキー、または未加工の16進数キーを使って、AES-GCM、AES-CBC、AES-CTRでブラウザー内のテキストやファイルを暗号化します。"
+}

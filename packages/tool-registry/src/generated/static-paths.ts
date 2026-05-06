@@ -94,6 +94,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "aes-encryptor",
+    language: "ar",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "de",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "en",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "es",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "fr",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "he",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "hi",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "id",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "it",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "ja",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "ko",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "ms",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "nl",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "no",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "pl",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "pt",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "ru",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "sv",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "th",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "tr",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "vi",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "zh-CN",
+  },
+  {
+    slug: "aes-encryptor",
+    language: "zh-TW",
+  },
+  {
     slug: "ascii-art-generator",
     language: "ar",
   },

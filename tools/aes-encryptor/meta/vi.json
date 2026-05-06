@@ -1,0 +1,4 @@
+{
+  "name": "Trình mã hóa AES",
+  "description": "Mã hóa văn bản hoặc tệp ngay trong trình duyệt bằng AES-GCM, AES-CBC hoặc AES-CTR với khóa dẫn xuất từ mật khẩu hoặc khóa thô dạng thập lục phân."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "AES Encryptor",
+  "description": "Versleutel tekst of bestanden in je browser met AES-GCM, AES-CBC of AES-CTR met een uit een wachtwoord afgeleide sleutel of een ruwe hexadecimale sleutel."
+}

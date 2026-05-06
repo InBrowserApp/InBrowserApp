@@ -1,0 +1,4 @@
+{
+  "name": "AES-krypterare",
+  "description": "Kryptera text eller filer i webbläsaren med AES-GCM, AES-CBC eller AES-CTR med en lösenordsbaserad nyckel eller en rå hexadecimal nyckel."
+}

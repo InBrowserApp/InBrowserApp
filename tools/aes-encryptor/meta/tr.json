@@ -1,0 +1,4 @@
+{
+  "name": "AES Şifreleyici",
+  "description": "Parola türetilmiş bir anahtar veya ham onaltılık anahtar kullanarak tarayıcınızda metinleri ya da dosyaları AES-GCM, AES-CBC veya AES-CTR ile şifreleyin."
+}

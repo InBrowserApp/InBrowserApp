@@ -1,0 +1,4 @@
+{
+  "name": "AES 加密器",
+  "description": "在浏览器中使用 AES-GCM、AES-CBC 或 AES-CTR 加密文本或文件，可使用由密码派生的密钥或原始十六进制密钥。"
+}

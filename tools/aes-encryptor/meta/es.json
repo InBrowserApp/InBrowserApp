@@ -1,0 +1,4 @@
+{
+  "name": "Cifrador AES",
+  "description": "Cifra texto o archivos en tu navegador con AES-GCM, AES-CBC o AES-CTR usando una clave derivada de una contraseña o una clave hexadecimal sin procesar."
+}
