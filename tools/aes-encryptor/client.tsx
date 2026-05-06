@@ -213,13 +213,15 @@ function AesEncryptorClient({ messages }: AesEncryptorClientProps) {
           onReset={handleReset}
         />
       </div>
-      <ResultCard
-        downloadFileName={downloadFileName}
-        downloadUrl={downloadUrl}
-        error={error}
-        messages={messages}
-        resultJson={resultJson}
-      />
+      <div className="min-w-0 self-start xl:sticky xl:top-6">
+        <ResultCard
+          downloadFileName={downloadFileName}
+          downloadUrl={downloadUrl}
+          error={error}
+          messages={messages}
+          resultJson={resultJson}
+        />
+      </div>
     </div>
   )
 }
