@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Generator wyrażeń cron",
+    "description": "Twórz pięciopolowe wyrażenia cron za pomocą kontrolek wizualnych, presetów i podglądu nadchodzących uruchomień."
+  },
+  "actions": {
+    "copy": "Kopiuj wyrażenie",
+    "copied": "Skopiowano",
+    "reset": "Resetuj"
+  },
+  "output": {
+    "title": "Wyrażenie cron",
+    "description": "Skopiuj wygenerowane pięciopolowe wyrażenie do harmonogramu zadań, który używa standardowej składni: minuta, godzina, dzień, miesiąc i dzień tygodnia.",
+    "expressionLabel": "Wygenerowane wyrażenie",
+    "summaryLabel": "Proste podsumowanie",
+    "noteTitle": "Dopasowanie dni",
+    "noteDescription": "Gdy ograniczone są jednocześnie dzień miesiąca i dzień tygodnia, wiele implementacji cron uruchamia zadanie, gdy pasuje dowolne z tych pól. Zanim oprzesz się na takiej kombinacji, sprawdź dokumentację używanego harmonogramu zadań."
+  },
+  "presets": {
+    "title": "Szybkie presety",
+    "description": "Zacznij od typowych harmonogramów, a potem dostosuj dowolne pole poniżej.",
+    "items": {
+      "everyMinute": "Co minutę",
+      "everyFiveMinutes": "Co 5 minut",
+      "everyFifteenMinutes": "Co 15 minut",
+      "hourly": "Co godzinę",
+      "dailyMidnight": "Codziennie o północy",
+      "dailyNoon": "Codziennie w południe",
+      "weekdayMorning": "W dni powszednie o 9:00",
+      "weeklySunday": "Co tydzień w niedzielę",
+      "monthlyFirstDay": "Co miesiąc pierwszego dnia"
+    }
+  },
+  "fields": {
+    "title": "Konfiguracja pól",
+    "description": "Każdy wiersz kontroluje jedno pole cron. Wybierz każdą wartość, interwał, konkretne wartości albo zakres domknięty.",
+    "modeLabel": "Tryb",
+    "every": "Wszystkie",
+    "interval": "Interwał",
+    "specific": "Konkretne",
+    "range": "Zakres",
+    "intervalPrefix": "Co",
+    "rangeStartLabel": "Od",
+    "rangeEndLabel": "Do",
+    "specificEmpty": "Nie wybrano wartości; to pole domyślnie obejmuje wszystkie wartości.",
+    "everySummary": "Wszystkie wartości: {field}",
+    "intervalSummary": "Co {interval} {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: od {start} do {end}",
+    "labels": {
+      "minute": "Minuta",
+      "hour": "Godzina",
+      "dayOfMonth": "Dzień miesiąca",
+      "month": "Miesiąc",
+      "dayOfWeek": "Dzień tygodnia"
+    },
+    "descriptions": {
+      "minute": "Wybierz, w których minutach każdej pasującej godziny zadanie może się uruchomić.",
+      "hour": "Wybierz, w których godzinach każdego pasującego dnia zadanie może się uruchomić.",
+      "dayOfMonth": "Wybierz pasujące dni kalendarzowe od 1 do 31.",
+      "month": "Wybierz pasujące miesiące.",
+      "dayOfWeek": "Wybierz pasujące dni tygodnia; niedziela jest oznaczona jako 0."
+    },
+    "units": {
+      "minute": "minut(y)",
+      "hour": "godzin(y)",
+      "day": "dzień/dni",
+      "month": "miesiąc(e)",
+      "weekday": "dzień/dni tygodnia"
+    }
+  },
+  "nextRuns": {
+    "title": "Następne uruchomienia",
+    "description": "Podejrzyj najbliższe pasujące czasy lokalne dla wygenerowanego wyrażenia.",
+    "emptyTitle": "Nie znaleziono pasujących uruchomień",
+    "emptyDescription": "Może się tak zdarzyć przy niemożliwych kombinacjach, takich jak dzień 31 w lutym. Dostosuj pole dnia lub miesiąca.",
+    "indexHeader": "#",
+    "dateHeader": "Lokalna data i godzina",
+    "relativeHeader": "Względnie",
+    "inMinutes": "za {count} min.",
+    "inHours": "za {count} godz.",
+    "inDays": "za {count} dni",
+    "soon": "wkrótce"
+  },
+  "values": {
+    "months": [
+      "sty",
+      "lut",
+      "mar",
+      "kwi",
+      "maj",
+      "cze",
+      "lip",
+      "sie",
+      "wrz",
+      "paź",
+      "lis",
+      "gru"
+    ],
+    "weekdays": ["niedz.", "pon.", "wt.", "śr.", "czw.", "pt.", "sob."]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Cron Expression Generator",
+    "description": "दृश्य नियंत्रणों, प्रीसेट और आगामी रन पूर्वावलोकन के साथ पांच-फ़ील्ड cron expressions बनाएं।"
+  },
+  "actions": {
+    "copy": "expression कॉपी करें",
+    "copied": "कॉपी हो गया",
+    "reset": "रीसेट करें"
+  },
+  "output": {
+    "title": "Cron expression",
+    "description": "जनरेट की गई पांच-फ़ील्ड expression को ऐसे शेड्यूलर में कॉपी करें जो मानक minute hour day month weekday सिंटैक्स का उपयोग करता हो।",
+    "expressionLabel": "जनरेट की गई expression",
+    "summaryLabel": "सरल सारांश",
+    "noteTitle": "दिन मिलान",
+    "noteDescription": "जब day of month और day of week दोनों सीमित हों, तो कई cron implementations तब रन करते हैं जब कोई भी फ़ील्ड मेल खाती है। इस संयोजन पर निर्भर होने से पहले अपने शेड्यूलर का दस्तावेज़ीकरण देखें।"
+  },
+  "presets": {
+    "title": "त्वरित प्रीसेट",
+    "description": "सामान्य शेड्यूल से शुरू करें, फिर नीचे किसी भी फ़ील्ड को समायोजित करें।",
+    "items": {
+      "everyMinute": "हर मिनट",
+      "everyFiveMinutes": "हर 5 मिनट",
+      "everyFifteenMinutes": "हर 15 मिनट",
+      "hourly": "हर घंटे",
+      "dailyMidnight": "रोज़ आधी रात को",
+      "dailyNoon": "रोज़ दोपहर को",
+      "weekdayMorning": "सप्ताह के दिनों में सुबह 9 बजे",
+      "weeklySunday": "हर रविवार",
+      "monthlyFirstDay": "हर महीने दिन 1 पर"
+    }
+  },
+  "fields": {
+    "title": "फ़ील्ड कॉन्फ़िगर करें",
+    "description": "हर पंक्ति एक cron फ़ील्ड नियंत्रित करती है। हर मान, अंतराल, विशिष्ट मान या समावेशी रेंज चुनें।",
+    "modeLabel": "मोड",
+    "every": "हर",
+    "interval": "अंतराल",
+    "specific": "विशिष्ट",
+    "range": "रेंज",
+    "intervalPrefix": "हर",
+    "rangeStartLabel": "से",
+    "rangeEndLabel": "तक",
+    "specificEmpty": "कोई मान चयनित नहीं है; यह फ़ील्ड हर मान का उपयोग करेगी।",
+    "everySummary": "हर {field}",
+    "intervalSummary": "हर {interval} {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: {start} से {end} तक",
+    "labels": {
+      "minute": "मिनट",
+      "hour": "घंटा",
+      "dayOfMonth": "महीने का दिन",
+      "month": "महीना",
+      "dayOfWeek": "सप्ताह का दिन"
+    },
+    "descriptions": {
+      "minute": "चुनें कि हर मेल खाने वाले घंटे में कौन से मिनट रन कर सकते हैं।",
+      "hour": "चुनें कि हर मेल खाने वाले दिन में कौन से घंटे रन कर सकते हैं।",
+      "dayOfMonth": "1 से 31 तक मेल खाने वाले कैलेंडर दिन चुनें।",
+      "month": "मेल खाने वाले महीने चुनें।",
+      "dayOfWeek": "मेल खाने वाले सप्ताह के दिन चुनें, जहां रविवार को 0 से दिखाया जाता है।"
+    },
+    "units": {
+      "minute": "मिनट",
+      "hour": "घंटे",
+      "day": "दिन",
+      "month": "महीने",
+      "weekday": "सप्ताह के दिन"
+    }
+  },
+  "nextRuns": {
+    "title": "अगले रन",
+    "description": "जनरेट की गई expression के लिए अगले मेल खाने वाले स्थानीय समयों का पूर्वावलोकन करें।",
+    "emptyTitle": "कोई मेल खाने वाला रन नहीं मिला",
+    "emptyDescription": "ऐसा असंभव संयोजनों में हो सकता है, जैसे फरवरी में दिन 31। दिन या महीने का फ़ील्ड समायोजित करें।",
+    "indexHeader": "#",
+    "dateHeader": "स्थानीय तिथि और समय",
+    "relativeHeader": "सापेक्ष",
+    "inMinutes": "{count} मिनट में",
+    "inHours": "{count} घंटे में",
+    "inDays": "{count} दिन में",
+    "soon": "जल्द"
+  },
+  "values": {
+    "months": [
+      "जन",
+      "फ़र",
+      "मार्च",
+      "अप्रै",
+      "मई",
+      "जून",
+      "जुल",
+      "अग",
+      "सित",
+      "अक्टू",
+      "नवं",
+      "दिसं"
+    ],
+    "weekdays": ["रवि", "सोम", "मंगल", "बुध", "गुरु", "शुक्र", "शनि"]
+  }
+}

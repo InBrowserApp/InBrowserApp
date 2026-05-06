@@ -1,0 +1,4 @@
+{
+  "name": "Generator för cron-uttryck",
+  "description": "Skapa cron-uttryck med fem fält med visuella kontroller, förinställningar och förhandsvisningar av kommande körningar."
+}

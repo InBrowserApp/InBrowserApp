@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Cron İfadesi Oluşturucu",
+    "description": "Görsel kontroller, ön ayarlar ve yaklaşan çalıştırma önizlemeleriyle beş alanlı cron ifadeleri oluşturun."
+  },
+  "actions": {
+    "copy": "İfadeyi kopyala",
+    "copied": "Kopyalandı",
+    "reset": "Sıfırla"
+  },
+  "output": {
+    "title": "Cron ifadesi",
+    "description": "Oluşturulan beş alanlı ifadeyi standart dakika saat gün ay haftanın günü söz dizimini kullanan bir zamanlayıcıya kopyalayın.",
+    "expressionLabel": "Oluşturulan ifade",
+    "summaryLabel": "Sade özet",
+    "noteTitle": "Gün eşleştirme",
+    "noteDescription": "Hem ayın günü hem de haftanın günü sınırlandırıldığında birçok cron uygulaması alanlardan biri eşleştiğinde çalışır. Bu birleşime güvenmeden önce zamanlayıcınızın belgelerini kontrol edin."
+  },
+  "presets": {
+    "title": "Hızlı ön ayarlar",
+    "description": "Yaygın zamanlamalardan başlayın, sonra aşağıdaki herhangi bir alanı ayarlayın.",
+    "items": {
+      "everyMinute": "Her dakika",
+      "everyFiveMinutes": "Her 5 dakikada bir",
+      "everyFifteenMinutes": "Her 15 dakikada bir",
+      "hourly": "Her saat",
+      "dailyMidnight": "Her gün gece yarısı",
+      "dailyNoon": "Her gün öğlen",
+      "weekdayMorning": "Hafta içi 09:00'da",
+      "weeklySunday": "Her hafta Pazar günü",
+      "monthlyFirstDay": "Her ay 1. gün"
+    }
+  },
+  "fields": {
+    "title": "Alanları yapılandır",
+    "description": "Her satır bir cron alanını kontrol eder. Her değeri, belirli aralıklarla çalışmayı, belirli değerleri veya kapsayıcı bir aralığı seçin.",
+    "modeLabel": "Mod",
+    "every": "Her",
+    "interval": "Periyot",
+    "specific": "Belirli",
+    "range": "Aralık",
+    "intervalPrefix": "Her",
+    "rangeStartLabel": "Başlangıç",
+    "rangeEndLabel": "Bitiş",
+    "specificEmpty": "Hiç değer seçilmedi; bu alanda her değer kullanılır.",
+    "everySummary": "Her {field}",
+    "intervalSummary": "Her {interval} {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: {start} ile {end} arası",
+    "labels": {
+      "minute": "Dakika",
+      "hour": "Saat",
+      "dayOfMonth": "Ayın günü",
+      "month": "Ay",
+      "dayOfWeek": "Haftanın günü"
+    },
+    "descriptions": {
+      "minute": "Eşleşen her saatte hangi dakikalarda çalışabileceğini seçin.",
+      "hour": "Eşleşen her günde hangi saatlerde çalışabileceğini seçin.",
+      "dayOfMonth": "1 ile 31 arasındaki eşleşen takvim günlerini seçin.",
+      "month": "Eşleşen ayları seçin.",
+      "dayOfWeek": "Pazar 0 olarak gösterilecek şekilde eşleşen hafta günlerini seçin."
+    },
+    "units": {
+      "minute": "dakika",
+      "hour": "saat",
+      "day": "gün",
+      "month": "ay",
+      "weekday": "hafta günü"
+    }
+  },
+  "nextRuns": {
+    "title": "Sonraki çalıştırmalar",
+    "description": "Oluşturulan ifade için bir sonraki eşleşen yerel saatleri önizleyin.",
+    "emptyTitle": "Eşleşen çalıştırma bulunamadı",
+    "emptyDescription": "Bu, Şubat ayında 31. gün gibi olanaksız birleşimlerde olabilir. Gün veya ay alanını ayarlayın.",
+    "indexHeader": "#",
+    "dateHeader": "Yerel tarih ve saat",
+    "relativeHeader": "Göreli",
+    "inMinutes": "{count} dakika içinde",
+    "inHours": "{count} saat içinde",
+    "inDays": "{count} gün içinde",
+    "soon": "yakında"
+  },
+  "values": {
+    "months": [
+      "Oca",
+      "Şub",
+      "Mar",
+      "Nis",
+      "May",
+      "Haz",
+      "Tem",
+      "Ağu",
+      "Eyl",
+      "Eki",
+      "Kas",
+      "Ara"
+    ],
+    "weekdays": ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"]
+  }
+}

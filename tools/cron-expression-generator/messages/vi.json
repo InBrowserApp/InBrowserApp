@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Cron Expression Generator",
+    "description": "Tạo biểu thức cron năm trường bằng điều khiển trực quan, mẫu có sẵn và bản xem trước các lần chạy sắp tới."
+  },
+  "actions": {
+    "copy": "Sao chép biểu thức",
+    "copied": "Đã sao chép",
+    "reset": "Đặt lại"
+  },
+  "output": {
+    "title": "Biểu thức cron",
+    "description": "Sao chép biểu thức năm trường đã tạo vào bộ lập lịch sử dụng cú pháp chuẩn phút giờ ngày tháng ngày trong tuần.",
+    "expressionLabel": "Biểu thức đã tạo",
+    "summaryLabel": "Tóm tắt văn bản",
+    "noteTitle": "Khớp ngày",
+    "noteDescription": "Khi cả ngày trong tháng và ngày trong tuần đều bị giới hạn, nhiều bản triển khai cron sẽ chạy khi một trong hai trường khớp. Hãy kiểm tra tài liệu của bộ lập lịch trước khi phụ thuộc vào tổ hợp đó."
+  },
+  "presets": {
+    "title": "Mẫu nhanh",
+    "description": "Bắt đầu từ các lịch phổ biến, rồi điều chỉnh bất kỳ trường nào bên dưới.",
+    "items": {
+      "everyMinute": "Mỗi phút",
+      "everyFiveMinutes": "Mỗi 5 phút",
+      "everyFifteenMinutes": "Mỗi 15 phút",
+      "hourly": "Hằng giờ",
+      "dailyMidnight": "Hằng ngày lúc nửa đêm",
+      "dailyNoon": "Hằng ngày lúc trưa",
+      "weekdayMorning": "Ngày trong tuần lúc 9 giờ sáng",
+      "weeklySunday": "Hằng tuần vào Chủ nhật",
+      "monthlyFirstDay": "Hằng tháng vào ngày 1"
+    }
+  },
+  "fields": {
+    "title": "Cấu hình trường",
+    "description": "Mỗi hàng điều khiển một trường cron. Chọn mọi giá trị, một khoảng lặp, các giá trị cụ thể hoặc một phạm vi bao gồm cả hai đầu.",
+    "modeLabel": "Chế độ",
+    "every": "Mọi giá trị",
+    "interval": "Khoảng lặp",
+    "specific": "Cụ thể",
+    "range": "Phạm vi",
+    "intervalPrefix": "Mỗi",
+    "rangeStartLabel": "Từ",
+    "rangeEndLabel": "Đến",
+    "specificEmpty": "Chưa chọn giá trị; trường này quay về mọi giá trị.",
+    "everySummary": "Mỗi {field}",
+    "intervalSummary": "Mỗi {interval} {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: từ {start} đến {end}",
+    "labels": {
+      "minute": "Phút",
+      "hour": "Giờ",
+      "dayOfMonth": "Ngày trong tháng",
+      "month": "Tháng",
+      "dayOfWeek": "Ngày trong tuần"
+    },
+    "descriptions": {
+      "minute": "Chọn những phút trong mỗi giờ khớp có thể chạy.",
+      "hour": "Chọn những giờ trong mỗi ngày khớp có thể chạy.",
+      "dayOfMonth": "Chọn các ngày lịch khớp từ 1 đến 31.",
+      "month": "Chọn các tháng khớp.",
+      "dayOfWeek": "Chọn các ngày trong tuần khớp, với Chủ nhật được biểu diễn là 0."
+    },
+    "units": {
+      "minute": "phút",
+      "hour": "giờ",
+      "day": "ngày",
+      "month": "tháng",
+      "weekday": "ngày trong tuần"
+    }
+  },
+  "nextRuns": {
+    "title": "Lần chạy tiếp theo",
+    "description": "Xem trước các thời điểm địa phương khớp tiếp theo cho biểu thức đã tạo.",
+    "emptyTitle": "Không tìm thấy lần chạy khớp",
+    "emptyDescription": "Điều này có thể xảy ra với các tổ hợp không thể có, chẳng hạn ngày 31 trong tháng Hai. Hãy điều chỉnh trường ngày hoặc tháng.",
+    "indexHeader": "#",
+    "dateHeader": "Ngày và giờ địa phương",
+    "relativeHeader": "Tương đối",
+    "inMinutes": "trong {count} phút",
+    "inHours": "trong {count} giờ",
+    "inDays": "trong {count} ngày",
+    "soon": "sắp tới"
+  },
+  "values": {
+    "months": [
+      "Thg 1",
+      "Thg 2",
+      "Thg 3",
+      "Thg 4",
+      "Thg 5",
+      "Thg 6",
+      "Thg 7",
+      "Thg 8",
+      "Thg 9",
+      "Thg 10",
+      "Thg 11",
+      "Thg 12"
+    ],
+    "weekdays": ["CN", "T2", "T3", "T4", "T5", "T6", "T7"]
+  }
+}

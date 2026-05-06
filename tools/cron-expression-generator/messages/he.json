@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "מחולל ביטויי Cron",
+    "description": "בנה ביטויי cron בני חמישה שדות עם פקדים חזותיים, הגדרות מוכנות ותצוגות מקדימות של ההרצות הבאות."
+  },
+  "actions": {
+    "copy": "העתק ביטוי",
+    "copied": "הועתק",
+    "reset": "איפוס"
+  },
+  "output": {
+    "title": "ביטוי Cron",
+    "description": "העתק את הביטוי המחולל בן חמשת השדות למתזמן שמשתמש בתחביר הסטנדרטי של דקה, שעה, יום, חודש ויום בשבוע.",
+    "expressionLabel": "ביטוי שנוצר",
+    "summaryLabel": "סיכום פשוט",
+    "noteTitle": "התאמת ימים",
+    "noteDescription": "כאשר גם יום החודש וגם יום השבוע מוגבלים, מימושי cron רבים פועלים כאשר אחד מהשדות תואם. בדוק את תיעוד המתזמן שלך לפני הסתמכות על שילוב כזה."
+  },
+  "presets": {
+    "title": "הגדרות מוכנות מהירות",
+    "description": "התחל מלוחות זמנים נפוצים, ואז כוונן כל שדה למטה.",
+    "items": {
+      "everyMinute": "כל דקה",
+      "everyFiveMinutes": "כל 5 דקות",
+      "everyFifteenMinutes": "כל 15 דקות",
+      "hourly": "כל שעה",
+      "dailyMidnight": "כל יום בחצות",
+      "dailyNoon": "כל יום בצהריים",
+      "weekdayMorning": "ימי חול ב-9 בבוקר",
+      "weeklySunday": "כל שבוע ביום ראשון",
+      "monthlyFirstDay": "כל חודש ביום 1"
+    }
+  },
+  "fields": {
+    "title": "הגדרת שדות",
+    "description": "כל שורה שולטת בשדה cron אחד. בחר כל ערך, מרווח, ערכים מסוימים או טווח כולל.",
+    "modeLabel": "מצב",
+    "every": "כל",
+    "interval": "מרווח",
+    "specific": "מסוימים",
+    "range": "טווח",
+    "intervalPrefix": "כל",
+    "rangeStartLabel": "מ",
+    "rangeEndLabel": "עד",
+    "specificEmpty": "לא נבחרו ערכים; שדה זה יחזור לברירת המחדל: כל ערך.",
+    "everySummary": "כל {field}",
+    "intervalSummary": "כל {interval} {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: {start} עד {end}",
+    "labels": {
+      "minute": "דקה",
+      "hour": "שעה",
+      "dayOfMonth": "יום בחודש",
+      "month": "חודש",
+      "dayOfWeek": "יום בשבוע"
+    },
+    "descriptions": {
+      "minute": "בחר באילו דקות בכל שעה תואמת ניתן להריץ.",
+      "hour": "בחר באילו שעות בכל יום תואם ניתן להריץ.",
+      "dayOfMonth": "בחר ימי חודש תואמים מ-1 עד 31.",
+      "month": "בחר חודשים תואמים.",
+      "dayOfWeek": "בחר ימים תואמים בשבוע, כאשר יום ראשון מיוצג כ-0."
+    },
+    "units": {
+      "minute": "דקות",
+      "hour": "שעות",
+      "day": "ימים",
+      "month": "חודשים",
+      "weekday": "ימי שבוע"
+    }
+  },
+  "nextRuns": {
+    "title": "הרצות הבאות",
+    "description": "צפה בזמני הריצה המקומיים הבאים התואמים לביטוי שנוצר.",
+    "emptyTitle": "לא נמצאו הרצות תואמות",
+    "emptyDescription": "זה יכול לקרות עם שילובים בלתי אפשריים, כמו יום 31 בפברואר. כוונן את שדה היום או החודש.",
+    "indexHeader": "#",
+    "dateHeader": "תאריך ושעה מקומיים",
+    "relativeHeader": "יחסי",
+    "inMinutes": "בעוד {count} דקות",
+    "inHours": "בעוד {count} שעות",
+    "inDays": "בעוד {count} ימים",
+    "soon": "בקרוב"
+  },
+  "values": {
+    "months": [
+      "ינו",
+      "פבר",
+      "מרץ",
+      "אפר",
+      "מאי",
+      "יוני",
+      "יולי",
+      "אוג",
+      "ספט",
+      "אוק",
+      "נוב",
+      "דצמ"
+    ],
+    "weekdays": ["א׳", "ב׳", "ג׳", "ד׳", "ה׳", "ו׳", "ש׳"]
+  }
+}

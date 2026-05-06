@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Gerador de Expressões Cron",
+    "description": "Crie expressões cron de cinco campos com controles visuais, predefinições e prévias das próximas execuções."
+  },
+  "actions": {
+    "copy": "Copiar expressão",
+    "copied": "Copiado",
+    "reset": "Redefinir"
+  },
+  "output": {
+    "title": "Expressão cron",
+    "description": "Copie a expressão gerada de cinco campos para um agendador que use a sintaxe padrão de minuto, hora, dia, mês e dia da semana.",
+    "expressionLabel": "Expressão gerada",
+    "summaryLabel": "Resumo em texto",
+    "noteTitle": "Correspondência de dias",
+    "noteDescription": "Quando tanto o dia do mês quanto o dia da semana estão restritos, muitas implementações de cron executam quando qualquer um dos campos corresponde. Consulte a documentação do seu agendador antes de depender dessa combinação."
+  },
+  "presets": {
+    "title": "Predefinições rápidas",
+    "description": "Comece com agendas comuns e depois ajuste qualquer campo abaixo.",
+    "items": {
+      "everyMinute": "A cada minuto",
+      "everyFiveMinutes": "A cada 5 minutos",
+      "everyFifteenMinutes": "A cada 15 minutos",
+      "hourly": "De hora em hora",
+      "dailyMidnight": "Diariamente à meia-noite",
+      "dailyNoon": "Diariamente ao meio-dia",
+      "weekdayMorning": "Dias úteis às 9h",
+      "weeklySunday": "Semanalmente no domingo",
+      "monthlyFirstDay": "Mensalmente no dia 1"
+    }
+  },
+  "fields": {
+    "title": "Configurar campos",
+    "description": "Cada linha controla um campo cron. Escolha todos os valores, uma periodicidade, valores específicos ou uma faixa inclusiva.",
+    "modeLabel": "Modo",
+    "every": "Todos",
+    "interval": "Intervalo",
+    "specific": "Específico",
+    "range": "Faixa",
+    "intervalPrefix": "A cada",
+    "rangeStartLabel": "De",
+    "rangeEndLabel": "Até",
+    "specificEmpty": "Nenhum valor selecionado; este campo volta para todos os valores.",
+    "everySummary": "A cada {field}",
+    "intervalSummary": "A cada {interval} {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: de {start} a {end}",
+    "labels": {
+      "minute": "Minuto",
+      "hour": "Hora",
+      "dayOfMonth": "Dia do mês",
+      "month": "Mês",
+      "dayOfWeek": "Dia da semana"
+    },
+    "descriptions": {
+      "minute": "Escolha em quais minutos de cada hora correspondente a tarefa pode ser executada.",
+      "hour": "Escolha em quais horas de cada dia correspondente a tarefa pode ser executada.",
+      "dayOfMonth": "Escolha os dias do calendário correspondentes de 1 a 31.",
+      "month": "Escolha os meses correspondentes.",
+      "dayOfWeek": "Escolha os dias da semana correspondentes, com domingo representado como 0."
+    },
+    "units": {
+      "minute": "minuto(s)",
+      "hour": "hora(s)",
+      "day": "dia(s)",
+      "month": "mês(es)",
+      "weekday": "dia(s) da semana"
+    }
+  },
+  "nextRuns": {
+    "title": "Próximas execuções",
+    "description": "Pré-visualize os próximos horários locais correspondentes para a expressão gerada.",
+    "emptyTitle": "Nenhuma execução correspondente encontrada",
+    "emptyDescription": "Isso pode acontecer com combinações impossíveis, como dia 31 em fevereiro. Ajuste o campo de dia ou mês.",
+    "indexHeader": "#",
+    "dateHeader": "Data e hora locais",
+    "relativeHeader": "Relativo",
+    "inMinutes": "em {count} minuto(s)",
+    "inHours": "em {count} hora(s)",
+    "inDays": "em {count} dia(s)",
+    "soon": "em breve"
+  },
+  "values": {
+    "months": [
+      "Jan",
+      "Fev",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Out",
+      "Nov",
+      "Dez"
+    ],
+    "weekdays": ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
+  }
+}

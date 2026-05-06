@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Cron Expression Generator",
+    "description": "Build five-field cron expressions with visual controls, presets, and upcoming run previews."
+  },
+  "actions": {
+    "copy": "Copy expression",
+    "copied": "Copied",
+    "reset": "Reset"
+  },
+  "output": {
+    "title": "Cron expression",
+    "description": "Copy the generated five-field expression into a scheduler that uses standard minute hour day month weekday syntax.",
+    "expressionLabel": "Generated expression",
+    "summaryLabel": "Plain summary",
+    "noteTitle": "Day matching",
+    "noteDescription": "When both day of month and day of week are restricted, many cron implementations run when either field matches. Check your scheduler's documentation before relying on that combination."
+  },
+  "presets": {
+    "title": "Quick presets",
+    "description": "Start from common schedules, then adjust any field below.",
+    "items": {
+      "everyMinute": "Every minute",
+      "everyFiveMinutes": "Every 5 minutes",
+      "everyFifteenMinutes": "Every 15 minutes",
+      "hourly": "Hourly",
+      "dailyMidnight": "Daily at midnight",
+      "dailyNoon": "Daily at noon",
+      "weekdayMorning": "Weekdays at 9 AM",
+      "weeklySunday": "Weekly on Sunday",
+      "monthlyFirstDay": "Monthly on day 1"
+    }
+  },
+  "fields": {
+    "title": "Configure fields",
+    "description": "Each row controls one cron field. Choose every value, an interval, specific values, or an inclusive range.",
+    "modeLabel": "Mode",
+    "every": "Every",
+    "interval": "Interval",
+    "specific": "Specific",
+    "range": "Range",
+    "intervalPrefix": "Every",
+    "rangeStartLabel": "From",
+    "rangeEndLabel": "To",
+    "specificEmpty": "No values selected; this field falls back to every value.",
+    "everySummary": "Every {field}",
+    "intervalSummary": "Every {interval} {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: {start} through {end}",
+    "labels": {
+      "minute": "Minute",
+      "hour": "Hour",
+      "dayOfMonth": "Day of month",
+      "month": "Month",
+      "dayOfWeek": "Day of week"
+    },
+    "descriptions": {
+      "minute": "Choose which minutes in each matching hour may run.",
+      "hour": "Choose which hours in each matching day may run.",
+      "dayOfMonth": "Choose matching calendar days from 1 through 31.",
+      "month": "Choose matching months.",
+      "dayOfWeek": "Choose matching weekdays, with Sunday represented as 0."
+    },
+    "units": {
+      "minute": "minute(s)",
+      "hour": "hour(s)",
+      "day": "day(s)",
+      "month": "month(s)",
+      "weekday": "weekday(s)"
+    }
+  },
+  "nextRuns": {
+    "title": "Next runs",
+    "description": "Preview the next matching local times for the generated expression.",
+    "emptyTitle": "No matching runs found",
+    "emptyDescription": "This can happen with impossible combinations such as day 31 in February. Adjust the day or month field.",
+    "indexHeader": "#",
+    "dateHeader": "Local date and time",
+    "relativeHeader": "Relative",
+    "inMinutes": "in {count} minute(s)",
+    "inHours": "in {count} hour(s)",
+    "inDays": "in {count} day(s)",
+    "soon": "soon"
+  },
+  "values": {
+    "months": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "weekdays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+  }
+}

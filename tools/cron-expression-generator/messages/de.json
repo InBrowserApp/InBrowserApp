@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Cron-Ausdrucksgenerator",
+    "description": "Erstellen Sie Cron-Ausdrücke mit fünf Feldern über visuelle Steuerelemente, Voreinstellungen und Vorschauen der nächsten Ausführungen."
+  },
+  "actions": {
+    "copy": "Ausdruck kopieren",
+    "copied": "Kopiert",
+    "reset": "Zurücksetzen"
+  },
+  "output": {
+    "title": "Cron-Ausdruck",
+    "description": "Kopieren Sie den generierten Ausdruck mit fünf Feldern in einen Scheduler, der die standardmäßige Cron-Syntax für Minute, Stunde, Tag, Monat und Wochentag verwendet.",
+    "expressionLabel": "Generierter Ausdruck",
+    "summaryLabel": "Einfache Zusammenfassung",
+    "noteTitle": "Tagesabgleich",
+    "noteDescription": "Wenn sowohl Tag des Monats als auch Wochentag eingeschränkt sind, führen viele Cron-Implementierungen die Aufgabe aus, sobald eines der Felder übereinstimmt. Prüfen Sie die Dokumentation Ihres Schedulers, bevor Sie sich auf diese Kombination verlassen."
+  },
+  "presets": {
+    "title": "Schnelle Voreinstellungen",
+    "description": "Beginnen Sie mit gängigen Zeitplänen und passen Sie danach unten jedes Feld an.",
+    "items": {
+      "everyMinute": "Jede Minute",
+      "everyFiveMinutes": "Alle 5 Minuten",
+      "everyFifteenMinutes": "Alle 15 Minuten",
+      "hourly": "Stündlich",
+      "dailyMidnight": "Täglich um Mitternacht",
+      "dailyNoon": "Täglich um Mittag",
+      "weekdayMorning": "Wochentags um 9 Uhr",
+      "weeklySunday": "Wöchentlich am Sonntag",
+      "monthlyFirstDay": "Monatlich am 1. Tag"
+    }
+  },
+  "fields": {
+    "title": "Felder konfigurieren",
+    "description": "Jede Zeile steuert ein Cron-Feld. Wählen Sie jeden Wert, ein Intervall, bestimmte Werte oder einen einschließenden Bereich.",
+    "modeLabel": "Modus",
+    "every": "Jeder Wert",
+    "interval": "Intervall",
+    "specific": "Bestimmte Werte",
+    "range": "Bereich",
+    "intervalPrefix": "Alle",
+    "rangeStartLabel": "Von",
+    "rangeEndLabel": "Bis",
+    "specificEmpty": "Keine Werte ausgewählt; dieses Feld fällt auf jeden Wert zurück.",
+    "everySummary": "Jeder {field}",
+    "intervalSummary": "Alle {interval} {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: {start} bis {end}",
+    "labels": {
+      "minute": "Minute",
+      "hour": "Stunde",
+      "dayOfMonth": "Tag des Monats",
+      "month": "Monat",
+      "dayOfWeek": "Wochentag"
+    },
+    "descriptions": {
+      "minute": "Wählen Sie, welche Minuten in jeder passenden Stunde ausgeführt werden dürfen.",
+      "hour": "Wählen Sie, welche Stunden an jedem passenden Tag ausgeführt werden dürfen.",
+      "dayOfMonth": "Wählen Sie passende Kalendertage von 1 bis 31.",
+      "month": "Wählen Sie passende Monate.",
+      "dayOfWeek": "Wählen Sie passende Wochentage, wobei Sonntag als 0 dargestellt wird."
+    },
+    "units": {
+      "minute": "Minute(n)",
+      "hour": "Stunde(n)",
+      "day": "Tag(e)",
+      "month": "Monat(e)",
+      "weekday": "Wochentag(e)"
+    }
+  },
+  "nextRuns": {
+    "title": "Nächste Ausführungen",
+    "description": "Zeigen Sie eine Vorschau der nächsten passenden lokalen Zeiten für den generierten Ausdruck an.",
+    "emptyTitle": "Keine passenden Ausführungen gefunden",
+    "emptyDescription": "Das kann bei unmöglichen Kombinationen wie dem 31. Tag im Februar passieren. Passen Sie das Tages- oder Monatsfeld an.",
+    "indexHeader": "#",
+    "dateHeader": "Lokales Datum und Uhrzeit",
+    "relativeHeader": "Relativ",
+    "inMinutes": "in {count} Minute(n)",
+    "inHours": "in {count} Stunde(n)",
+    "inDays": "in {count} Tag(en)",
+    "soon": "bald"
+  },
+  "values": {
+    "months": [
+      "Jan",
+      "Feb",
+      "Mär",
+      "Apr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Okt",
+      "Nov",
+      "Dez"
+    ],
+    "weekdays": ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"]
+  }
+}
