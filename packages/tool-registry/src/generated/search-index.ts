@@ -133,6 +133,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "aes-encryptor",
+    category: "web",
+    icon: "lock",
+    tags: [
+      "aes",
+      "encrypt",
+      "encryption",
+      "crypto",
+      "cipher",
+      "password",
+      "pbkdf2",
+      "gcm",
+      "file",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "مشفر AES",
+        description:
+          "شفّر النصوص أو الملفات في متصفحك باستخدام AES-GCM أو AES-CBC أو AES-CTR مع مفتاح مشتق من كلمة مرور أو مفتاح خام بالنظام الست عشري.",
+      },
+      de: {
+        name: "AES Encryptor",
+        description:
+          "Verschluesseln Sie Text oder Dateien in Ihrem Browser mit AES-GCM, AES-CBC oder AES-CTR und einem aus einem Passwort abgeleiteten Schluessel oder einem rohen hexadezimalen Schluessel.",
+      },
+      en: {
+        name: "AES Encryptor",
+        description:
+          "Encrypt text or files in your browser with AES-GCM, AES-CBC, or AES-CTR using a password-derived key or a raw hexadecimal key.",
+      },
+      es: {
+        name: "Cifrador AES",
+        description:
+          "Cifra texto o archivos en tu navegador con AES-GCM, AES-CBC o AES-CTR usando una clave derivada de una contraseña o una clave hexadecimal sin procesar.",
+      },
+      fr: {
+        name: "Chiffreur AES",
+        description:
+          "Chiffrez du texte ou des fichiers dans votre navigateur avec AES-GCM, AES-CBC ou AES-CTR en utilisant une clé dérivée d’un mot de passe ou une clé hexadécimale brute.",
+      },
+      he: {
+        name: "מצפין AES",
+        description:
+          "הצפינו טקסט או קבצים בדפדפן שלכם עם AES-GCM, AES-CBC, או AES-CTR באמצעות מפתח שנגזר מסיסמה או מפתח הקסדצימלי גולמי.",
+      },
+      hi: {
+        name: "AES Encryptor",
+        description:
+          "पासवर्ड से निकाली गई कुंजी या कच्ची हेक्साडेसिमल कुंजी का उपयोग करके अपने ब्राउज़र में AES-GCM, AES-CBC, या AES-CTR से टेक्स्ट या फ़ाइलें एन्क्रिप्ट करें।",
+      },
+      id: {
+        name: "AES Encryptor",
+        description:
+          "Enkripsi teks atau file di browser Anda dengan AES-GCM, AES-CBC, atau AES-CTR menggunakan kunci turunan kata sandi atau kunci heksadesimal mentah.",
+      },
+      it: {
+        name: "Cifratore AES",
+        description:
+          "Cifra testo o file nel tuo browser con AES-GCM, AES-CBC o AES-CTR usando una chiave derivata da password o una chiave esadecimale grezza.",
+      },
+      ja: {
+        name: "AES Encryptor",
+        description:
+          "パスワードから導出したキー、または未加工の16進数キーを使って、AES-GCM、AES-CBC、AES-CTRでブラウザー内のテキストやファイルを暗号化します。",
+      },
+      ko: {
+        name: "AES 암호화 도구",
+        description:
+          "브라우저에서 비밀번호로 파생한 키 또는 원시 16진수 키를 사용해 AES-GCM, AES-CBC, AES-CTR로 텍스트나 파일을 암호화합니다.",
+      },
+      ms: {
+        name: "Penyulit AES",
+        description:
+          "Sulitkan teks atau fail dalam pelayar anda dengan AES-GCM, AES-CBC, atau AES-CTR menggunakan kunci yang diterbitkan daripada kata laluan atau kunci heksadesimal mentah.",
+      },
+      nl: {
+        name: "AES Encryptor",
+        description:
+          "Versleutel tekst of bestanden in je browser met AES-GCM, AES-CBC of AES-CTR met een uit een wachtwoord afgeleide sleutel of een ruwe hexadecimale sleutel.",
+      },
+      no: {
+        name: "AES-kryptering",
+        description:
+          "Krypter tekst eller filer i nettleseren med AES-GCM, AES-CBC eller AES-CTR ved hjelp av en passordavledet nøkkel eller en rå heksadesimal nøkkel.",
+      },
+      pl: {
+        name: "Szyfrator AES",
+        description:
+          "Szyfruj tekst lub pliki w przeglądarce za pomocą AES-GCM, AES-CBC albo AES-CTR, używając klucza wyprowadzonego z hasła lub surowego klucza szesnastkowego.",
+      },
+      pt: {
+        name: "Criptografador AES",
+        description:
+          "Criptografe texto ou arquivos no navegador com AES-GCM, AES-CBC ou AES-CTR usando uma chave derivada de senha ou uma chave hexadecimal bruta.",
+      },
+      ru: {
+        name: "AES Encryptor",
+        description:
+          "Шифруйте текст или файлы в браузере с помощью AES-GCM, AES-CBC или AES-CTR, используя ключ, полученный из пароля, или необработанный шестнадцатеричный ключ.",
+      },
+      sv: {
+        name: "AES-krypterare",
+        description:
+          "Kryptera text eller filer i webbläsaren med AES-GCM, AES-CBC eller AES-CTR med en lösenordsbaserad nyckel eller en rå hexadecimal nyckel.",
+      },
+      th: {
+        name: "เครื่องมือเข้ารหัส AES",
+        description:
+          "เข้ารหัสข้อความหรือไฟล์ในเบราว์เซอร์ด้วย AES-GCM, AES-CBC หรือ AES-CTR โดยใช้คีย์ที่ได้จากรหัสผ่านหรือคีย์เลขฐานสิบหกแบบดิบ",
+      },
+      tr: {
+        name: "AES Şifreleyici",
+        description:
+          "Parola türetilmiş bir anahtar veya ham onaltılık anahtar kullanarak tarayıcınızda metinleri ya da dosyaları AES-GCM, AES-CBC veya AES-CTR ile şifreleyin.",
+      },
+      vi: {
+        name: "Trình mã hóa AES",
+        description:
+          "Mã hóa văn bản hoặc tệp ngay trong trình duyệt bằng AES-GCM, AES-CBC hoặc AES-CTR với khóa dẫn xuất từ mật khẩu hoặc khóa thô dạng thập lục phân.",
+      },
+      "zh-CN": {
+        name: "AES 加密器",
+        description:
+          "在浏览器中使用 AES-GCM、AES-CBC 或 AES-CTR 加密文本或文件，可使用由密码派生的密钥或原始十六进制密钥。",
+      },
+      "zh-TW": {
+        name: "AES 加密器",
+        description:
+          "使用由密碼衍生的金鑰或原始十六進位金鑰，在瀏覽器中以 AES-GCM、AES-CBC 或 AES-CTR 加密文字或檔案。",
+      },
+    },
+  },
+  {
     slug: "ascii-art-generator",
     category: "text",
     icon: "binary",

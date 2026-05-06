@@ -1,0 +1,4 @@
+{
+  "name": "Chiffreur AES",
+  "description": "Chiffrez du texte ou des fichiers dans votre navigateur avec AES-GCM, AES-CBC ou AES-CTR en utilisant une clé dérivée d’un mot de passe ou une clé hexadécimale brute."
+}

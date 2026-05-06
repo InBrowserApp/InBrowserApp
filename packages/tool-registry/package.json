@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@tool/adler32-hash-text-or-file": "workspace:*",
+    "@tool/aes-encryptor": "workspace:*",
     "@tool/ascii-art-generator": "workspace:*",
     "@tool/barcode-generator": "workspace:*",
     "@tool/base16-decoder": "workspace:*",

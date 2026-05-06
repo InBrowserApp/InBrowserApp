@@ -1,0 +1,4 @@
+{
+  "name": "AES 加密器",
+  "description": "使用由密碼衍生的金鑰或原始十六進位金鑰，在瀏覽器中以 AES-GCM、AES-CBC 或 AES-CTR 加密文字或檔案。"
+}

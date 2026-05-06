@@ -1,0 +1,4 @@
+{
+  "name": "Szyfrator AES",
+  "description": "Szyfruj tekst lub pliki w przeglądarce za pomocą AES-GCM, AES-CBC albo AES-CTR, używając klucza wyprowadzonego z hasła lub surowego klucza szesnastkowego."
+}

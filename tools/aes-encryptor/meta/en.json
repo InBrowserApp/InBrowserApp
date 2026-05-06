@@ -1,0 +1,4 @@
+{
+  "name": "AES Encryptor",
+  "description": "Encrypt text or files in your browser with AES-GCM, AES-CBC, or AES-CTR using a password-derived key or a raw hexadecimal key."
+}

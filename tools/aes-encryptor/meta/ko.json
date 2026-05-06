@@ -1,0 +1,4 @@
+{
+  "name": "AES 암호화 도구",
+  "description": "브라우저에서 비밀번호로 파생한 키 또는 원시 16진수 키를 사용해 AES-GCM, AES-CBC, AES-CTR로 텍스트나 파일을 암호화합니다."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Criptografador AES",
+  "description": "Criptografe texto ou arquivos no navegador com AES-GCM, AES-CBC ou AES-CTR usando uma chave derivada de senha ou uma chave hexadecimal bruta."
+}
