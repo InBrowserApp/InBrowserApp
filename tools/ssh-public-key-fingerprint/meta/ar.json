@@ -1,0 +1,4 @@
+{
+  "name": "بصمة مفتاح SSH العام",
+  "description": "أنشئ بصمات SHA-256 وMD5 لمفاتيح OpenSSH العامة، وأسطر authorized_keys، وكتل مفاتيح SSH2 العامة."
+}

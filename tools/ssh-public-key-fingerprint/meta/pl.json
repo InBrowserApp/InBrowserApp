@@ -1,0 +1,4 @@
+{
+  "name": "Odcisk klucza publicznego SSH",
+  "description": "Generuj odciski SHA-256 i MD5 dla kluczy publicznych OpenSSH, wierszy authorized_keys oraz bloków kluczy publicznych SSH2."
+}

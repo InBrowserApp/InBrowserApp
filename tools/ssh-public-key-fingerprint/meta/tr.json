@@ -1,0 +1,4 @@
+{
+  "name": "SSH Ortak Anahtar Parmak İzi",
+  "description": "OpenSSH ortak anahtarları, authorized_keys satırları ve SSH2 ortak anahtar blokları için SHA-256 ve MD5 parmak izleri oluşturun."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Impressão digital de chave pública SSH",
+  "description": "Gere impressões digitais SHA-256 e MD5 para chaves públicas OpenSSH, linhas de authorized_keys e blocos de chave pública SSH2."
+}

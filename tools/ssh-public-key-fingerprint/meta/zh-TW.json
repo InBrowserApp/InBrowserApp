@@ -1,0 +1,4 @@
+{
+  "name": "SSH 公開金鑰指紋",
+  "description": "為 OpenSSH 公開金鑰、authorized_keys 行與 SSH2 公開金鑰區塊產生 SHA-256 和 MD5 指紋。"
+}

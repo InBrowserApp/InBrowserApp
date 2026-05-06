@@ -1,0 +1,4 @@
+{
+  "name": "Cap Jari Kunci Awam SSH",
+  "description": "Jana cap jari SHA-256 dan MD5 untuk kunci awam OpenSSH, baris authorized_keys, dan blok kunci awam SSH2."
+}
