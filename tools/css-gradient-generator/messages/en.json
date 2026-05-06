@@ -30,7 +30,7 @@
   "jsonSubtitle": "Export or paste a gradient setup.",
   "copyJson": "Copy JSON",
   "downloadJson": "Download JSON",
-  "jsonPlaceholder": "Paste JSON to load a gradient...",
+  "jsonPlaceholder": "Paste JSON to load a gradient…",
   "loadJson": "Load JSON",
   "invalidJson": "Invalid gradient JSON.",
   "blendMode": "Blend mode",

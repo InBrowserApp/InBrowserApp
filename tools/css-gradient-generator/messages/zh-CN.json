@@ -30,7 +30,7 @@
   "jsonSubtitle": "导出或粘贴渐变配置。",
   "copyJson": "复制 JSON",
   "downloadJson": "下载 JSON",
-  "jsonPlaceholder": "粘贴 JSON 以加载渐变...",
+  "jsonPlaceholder": "粘贴 JSON 以加载渐变…",
   "loadJson": "加载 JSON",
   "invalidJson": "无效的渐变 JSON。",
   "blendMode": "混合模式",

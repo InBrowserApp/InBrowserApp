@@ -30,7 +30,7 @@
   "jsonSubtitle": "Eksportuj lub wklej konfigurację.",
   "copyJson": "Kopiuj JSON",
   "downloadJson": "Pobierz JSON",
-  "jsonPlaceholder": "Wklej JSON, aby wczytać gradient...",
+  "jsonPlaceholder": "Wklej JSON, aby wczytać gradient…",
   "loadJson": "Wczytaj JSON",
   "invalidJson": "Nieprawidłowy JSON gradientu.",
   "blendMode": "Tryb mieszania",

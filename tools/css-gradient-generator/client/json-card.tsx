@@ -27,7 +27,7 @@ function JsonCard({
 }: JsonCardProps) {
   return (
     <details className="group rounded-xl border bg-card text-sm text-card-foreground">
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 [&::-webkit-details-marker]:hidden">
+      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none [&::-webkit-details-marker]:hidden">
         <div className="grid gap-1">
           <div className="font-heading text-base leading-snug font-medium">
             {messages.jsonTitle}

@@ -59,6 +59,7 @@ function PreviewCard({
         <div
           aria-label={messages.previewTitle}
           className="min-h-72 border-b border-black/5 bg-slate-100 shadow-inner sm:min-h-80"
+          role="img"
           style={{
             backgroundBlendMode: blendMode || undefined,
             backgroundImage,
@@ -106,7 +107,7 @@ function PresetsCard({
             return (
               <button
                 className={cn(
-                  "group overflow-hidden rounded-xl border p-0 text-left transition-colors",
+                  "group overflow-hidden rounded-xl border p-0 text-left transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
                   presetId === preset.id
                     ? "border-primary bg-primary/5 shadow-sm"
                     : "border-border bg-card hover:border-primary/40 hover:bg-muted/40"

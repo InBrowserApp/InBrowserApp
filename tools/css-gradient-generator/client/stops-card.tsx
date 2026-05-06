@@ -258,7 +258,7 @@ function StopsCard({
                 messages.stopPosition + " " + Math.round(stop.position)
               }
               className={cn(
-                "absolute top-1/2 z-10 size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white shadow-sm transition-transform hover:scale-110",
+                "absolute top-1/2 z-10 size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white shadow-sm transition-transform hover:scale-110 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
                 stop.id === activeStopId ? "ring-2 ring-primary" : ""
               )}
               key={stop.id}

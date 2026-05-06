@@ -30,7 +30,7 @@
   "jsonSubtitle": "Exportieren oder einfügen, um ein Setup zu laden.",
   "copyJson": "JSON kopieren",
   "downloadJson": "JSON herunterladen",
-  "jsonPlaceholder": "JSON einfügen, um einen Verlauf zu laden...",
+  "jsonPlaceholder": "JSON einfügen, um einen Verlauf zu laden…",
   "loadJson": "JSON laden",
   "invalidJson": "Ungültiges Verlaufs-JSON.",
   "blendMode": "Mischmodus",
