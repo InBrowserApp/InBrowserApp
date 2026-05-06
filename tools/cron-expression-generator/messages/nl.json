@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Cron-expressiegenerator",
+    "description": "Maak cron-expressies met vijf velden via visuele bediening, presets en previews van komende uitvoeringen."
+  },
+  "actions": {
+    "copy": "Expressie kopiëren",
+    "copied": "Gekopieerd",
+    "reset": "Resetten"
+  },
+  "output": {
+    "title": "Cron-expressie",
+    "description": "Kopieer de gegenereerde expressie met vijf velden naar een scheduler die de standaard minute hour day month weekday-syntax gebruikt.",
+    "expressionLabel": "Gegenereerde expressie",
+    "summaryLabel": "Samenvatting in gewone taal",
+    "noteTitle": "Dagmatching",
+    "noteDescription": "Wanneer zowel dag van de maand als dag van de week beperkt zijn, voeren veel cron-implementaties uit wanneer een van beide velden overeenkomt. Controleer de documentatie van je scheduler voordat je op die combinatie vertrouwt."
+  },
+  "presets": {
+    "title": "Snelle presets",
+    "description": "Begin met gangbare schema's en pas daarna elk veld hieronder aan.",
+    "items": {
+      "everyMinute": "Elke minuut",
+      "everyFiveMinutes": "Elke 5 minuten",
+      "everyFifteenMinutes": "Elke 15 minuten",
+      "hourly": "Elk uur",
+      "dailyMidnight": "Dagelijks om middernacht",
+      "dailyNoon": "Dagelijks om 12:00",
+      "weekdayMorning": "Werkdagen om 09:00",
+      "weeklySunday": "Wekelijks op zondag",
+      "monthlyFirstDay": "Maandelijks op dag 1"
+    }
+  },
+  "fields": {
+    "title": "Velden configureren",
+    "description": "Elke rij bestuurt een cron-veld. Kies elke waarde, een interval, specifieke waarden of een inclusief bereik.",
+    "modeLabel": "Modus",
+    "every": "Elke",
+    "interval": "Interval",
+    "specific": "Specifiek",
+    "range": "Bereik",
+    "intervalPrefix": "Elke",
+    "rangeStartLabel": "Van",
+    "rangeEndLabel": "Tot",
+    "specificEmpty": "Geen waarden geselecteerd; dit veld valt terug op elke waarde.",
+    "everySummary": "Elke {field}",
+    "intervalSummary": "Elke {interval} {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: {start} t/m {end}",
+    "labels": {
+      "minute": "Minuut",
+      "hour": "Uur",
+      "dayOfMonth": "Dag van de maand",
+      "month": "Maand",
+      "dayOfWeek": "Dag van de week"
+    },
+    "descriptions": {
+      "minute": "Kies welke minuten binnen elk overeenkomend uur mogen worden uitgevoerd.",
+      "hour": "Kies welke uren binnen elke overeenkomende dag mogen worden uitgevoerd.",
+      "dayOfMonth": "Kies overeenkomende kalenderdagen van 1 tot en met 31.",
+      "month": "Kies overeenkomende maanden.",
+      "dayOfWeek": "Kies overeenkomende weekdagen, waarbij zondag als 0 wordt weergegeven."
+    },
+    "units": {
+      "minute": "minuut(en)",
+      "hour": "uur",
+      "day": "dag(en)",
+      "month": "maand(en)",
+      "weekday": "weekdag(en)"
+    }
+  },
+  "nextRuns": {
+    "title": "Volgende uitvoeringen",
+    "description": "Bekijk een preview van de volgende overeenkomende lokale tijden voor de gegenereerde expressie.",
+    "emptyTitle": "Geen overeenkomende uitvoeringen gevonden",
+    "emptyDescription": "Dit kan gebeuren bij onmogelijke combinaties, zoals dag 31 in februari. Pas het dag- of maandveld aan.",
+    "indexHeader": "#",
+    "dateHeader": "Lokale datum en tijd",
+    "relativeHeader": "Relatief",
+    "inMinutes": "over {count} minuut(en)",
+    "inHours": "over {count} uur",
+    "inDays": "over {count} dag(en)",
+    "soon": "zo meteen"
+  },
+  "values": {
+    "months": [
+      "jan",
+      "feb",
+      "mrt",
+      "apr",
+      "mei",
+      "jun",
+      "jul",
+      "aug",
+      "sep",
+      "okt",
+      "nov",
+      "dec"
+    ],
+    "weekdays": ["zo", "ma", "di", "wo", "do", "vr", "za"]
+  }
+}

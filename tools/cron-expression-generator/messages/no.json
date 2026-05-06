@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Generator for cron-uttrykk",
+    "description": "Lag cron-uttrykk med fem felt ved hjelp av visuelle kontroller, forhåndsvalg og forhåndsvisning av kommende kjøringer."
+  },
+  "actions": {
+    "copy": "Kopier uttrykk",
+    "copied": "Kopiert",
+    "reset": "Tilbakestill"
+  },
+  "output": {
+    "title": "Cron-uttrykk",
+    "description": "Kopier det genererte uttrykket med fem felt til en planlegger som bruker standard syntaks for minutt, time, dag, måned og ukedag.",
+    "expressionLabel": "Generert uttrykk",
+    "summaryLabel": "Oppsummering i klartekst",
+    "noteTitle": "Dagmatching",
+    "noteDescription": "Når både dag i måneden og ukedag er begrenset, kjører mange cron-implementasjoner når ett av feltene samsvarer. Sjekk dokumentasjonen for planleggeren din før du stoler på den kombinasjonen."
+  },
+  "presets": {
+    "title": "Hurtigvalg",
+    "description": "Start med vanlige tidsplaner, og juster deretter valgfritt felt nedenfor.",
+    "items": {
+      "everyMinute": "Hvert minutt",
+      "everyFiveMinutes": "Hvert 5. minutt",
+      "everyFifteenMinutes": "Hvert 15. minutt",
+      "hourly": "Hver time",
+      "dailyMidnight": "Daglig ved midnatt",
+      "dailyNoon": "Daglig kl. 12",
+      "weekdayMorning": "Ukedager kl. 09",
+      "weeklySunday": "Ukentlig på søndag",
+      "monthlyFirstDay": "Månedlig på dag 1"
+    }
+  },
+  "fields": {
+    "title": "Konfigurer felt",
+    "description": "Hver rad kontrollerer ett cron-felt. Velg alle verdier, et intervall, bestemte verdier eller et inkluderende område.",
+    "modeLabel": "Modus",
+    "every": "Alle",
+    "interval": "Intervall",
+    "specific": "Bestemte",
+    "range": "Område",
+    "intervalPrefix": "Hver",
+    "rangeStartLabel": "Fra",
+    "rangeEndLabel": "Til",
+    "specificEmpty": "Ingen verdier er valgt; dette feltet går tilbake til alle verdier.",
+    "everySummary": "Alle verdier for {field}",
+    "intervalSummary": "Hver {interval}. {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: {start} til {end}",
+    "labels": {
+      "minute": "Minutt",
+      "hour": "Time",
+      "dayOfMonth": "Dag i måneden",
+      "month": "Måned",
+      "dayOfWeek": "Ukedag"
+    },
+    "descriptions": {
+      "minute": "Velg hvilke minutter i hver matchende time som kan kjøres.",
+      "hour": "Velg hvilke timer i hver matchende dag som kan kjøres.",
+      "dayOfMonth": "Velg matchende kalenderdager fra 1 til 31.",
+      "month": "Velg matchende måneder.",
+      "dayOfWeek": "Velg matchende ukedager, der søndag representeres som 0."
+    },
+    "units": {
+      "minute": "minutt(er)",
+      "hour": "time(r)",
+      "day": "dag(er)",
+      "month": "måned(er)",
+      "weekday": "ukedag(er)"
+    }
+  },
+  "nextRuns": {
+    "title": "Neste kjøringer",
+    "description": "Forhåndsvis de neste matchende lokale tidene for det genererte uttrykket.",
+    "emptyTitle": "Ingen matchende kjøringer funnet",
+    "emptyDescription": "Dette kan skje med umulige kombinasjoner, for eksempel dag 31 i februar. Juster dag- eller månedsfeltet.",
+    "indexHeader": "#",
+    "dateHeader": "Lokal dato og tid",
+    "relativeHeader": "Relativt",
+    "inMinutes": "om {count} minutt(er)",
+    "inHours": "om {count} time(r)",
+    "inDays": "om {count} dag(er)",
+    "soon": "snart"
+  },
+  "values": {
+    "months": [
+      "jan.",
+      "feb.",
+      "mars",
+      "apr.",
+      "mai",
+      "juni",
+      "juli",
+      "aug.",
+      "sep.",
+      "okt.",
+      "nov.",
+      "des."
+    ],
+    "weekdays": ["søn.", "man.", "tir.", "ons.", "tor.", "fre.", "lør."]
+  }
+}

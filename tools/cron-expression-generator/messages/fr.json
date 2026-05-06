@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Cron Expression Generator",
+    "description": "Créez des expressions cron à cinq champs avec des contrôles visuels, des préréglages et des aperçus des prochaines exécutions."
+  },
+  "actions": {
+    "copy": "Copier l'expression",
+    "copied": "Copié",
+    "reset": "Réinitialiser"
+  },
+  "output": {
+    "title": "Expression cron",
+    "description": "Copiez l'expression générée à cinq champs dans un planificateur qui utilise la syntaxe standard minute heure jour mois jour de semaine.",
+    "expressionLabel": "Expression générée",
+    "summaryLabel": "Résumé en clair",
+    "noteTitle": "Correspondance des jours",
+    "noteDescription": "Lorsque le jour du mois et le jour de la semaine sont tous deux restreints, de nombreuses implémentations de cron exécutent la tâche lorsque l'un ou l'autre champ correspond. Consultez la documentation de votre planificateur avant de vous appuyer sur cette combinaison."
+  },
+  "presets": {
+    "title": "Préréglages rapides",
+    "description": "Commencez avec des planifications courantes, puis ajustez n'importe quel champ ci-dessous.",
+    "items": {
+      "everyMinute": "Toutes les minutes",
+      "everyFiveMinutes": "Toutes les 5 minutes",
+      "everyFifteenMinutes": "Toutes les 15 minutes",
+      "hourly": "Toutes les heures",
+      "dailyMidnight": "Chaque jour à minuit",
+      "dailyNoon": "Chaque jour à midi",
+      "weekdayMorning": "En semaine à 9 h",
+      "weeklySunday": "Chaque semaine le dimanche",
+      "monthlyFirstDay": "Le 1er jour de chaque mois"
+    }
+  },
+  "fields": {
+    "title": "Configurer les champs",
+    "description": "Chaque ligne contrôle un champ cron. Choisissez toutes les valeurs, un intervalle, des valeurs spécifiques ou une plage inclusive.",
+    "modeLabel": "Mode",
+    "every": "Chaque",
+    "interval": "Intervalle",
+    "specific": "Spécifique",
+    "range": "Plage",
+    "intervalPrefix": "Tous les",
+    "rangeStartLabel": "De",
+    "rangeEndLabel": "À",
+    "specificEmpty": "Aucune valeur sélectionnée ; ce champ revient à toutes les valeurs.",
+    "everySummary": "Toutes les valeurs pour {field}",
+    "intervalSummary": "Intervalle : {interval} {unit}",
+    "specificSummary": "{field} : {values}",
+    "rangeSummary": "{field} : de {start} à {end}",
+    "labels": {
+      "minute": "Minute",
+      "hour": "Heure",
+      "dayOfMonth": "Jour du mois",
+      "month": "Mois",
+      "dayOfWeek": "Jour de la semaine"
+    },
+    "descriptions": {
+      "minute": "Choisissez les minutes de chaque heure correspondante où l'exécution est possible.",
+      "hour": "Choisissez les heures de chaque jour correspondant où l'exécution est possible.",
+      "dayOfMonth": "Choisissez les jours du calendrier correspondants, de 1 à 31.",
+      "month": "Choisissez les mois correspondants.",
+      "dayOfWeek": "Choisissez les jours de semaine correspondants, avec le dimanche représenté par 0."
+    },
+    "units": {
+      "minute": "minute(s)",
+      "hour": "heure(s)",
+      "day": "jour(s)",
+      "month": "mois",
+      "weekday": "jour(s) de semaine"
+    }
+  },
+  "nextRuns": {
+    "title": "Prochaines exécutions",
+    "description": "Prévisualisez les prochaines dates et heures locales correspondant à l'expression générée.",
+    "emptyTitle": "Aucune exécution correspondante trouvée",
+    "emptyDescription": "Cela peut arriver avec des combinaisons impossibles, comme le jour 31 en février. Ajustez le champ du jour ou du mois.",
+    "indexHeader": "#",
+    "dateHeader": "Date et heure locales",
+    "relativeHeader": "Relatif",
+    "inMinutes": "dans {count} minute(s)",
+    "inHours": "dans {count} heure(s)",
+    "inDays": "dans {count} jour(s)",
+    "soon": "bientôt"
+  },
+  "values": {
+    "months": [
+      "Janv",
+      "Févr",
+      "Mars",
+      "Avr",
+      "Mai",
+      "Juin",
+      "Juil",
+      "Août",
+      "Sept",
+      "Oct",
+      "Nov",
+      "Déc"
+    ],
+    "weekdays": ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"]
+  }
+}

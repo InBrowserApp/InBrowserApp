@@ -42,6 +42,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "cookie-parser": () => import("@tool/cookie-parser/page"),
   "crc-checksum-calculator": () => import("@tool/crc-checksum-calculator/page"),
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
+  "cron-expression-generator": () =>
+    import("@tool/cron-expression-generator/page"),
   "cron-expression-parser": () => import("@tool/cron-expression-parser/page"),
   "css-box-shadow-generator": () =>
     import("@tool/css-box-shadow-generator/page"),

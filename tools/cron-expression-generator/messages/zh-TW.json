@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Cron 表達式產生器",
+    "description": "使用視覺化控制項、預設與後續執行預覽，建立五欄位 cron 表達式。"
+  },
+  "actions": {
+    "copy": "複製表達式",
+    "copied": "已複製",
+    "reset": "重設"
+  },
+  "output": {
+    "title": "Cron 表達式",
+    "description": "將產生的五欄位表達式複製到使用標準 minute hour day month weekday 語法的排程器中。",
+    "expressionLabel": "產生的表達式",
+    "summaryLabel": "白話摘要",
+    "noteTitle": "日期比對",
+    "noteDescription": "當日期與星期都受到限制時，許多 cron 實作會在任一欄位符合時執行。在依賴這種組合之前，請先查看你的排程器文件。"
+  },
+  "presets": {
+    "title": "快速預設",
+    "description": "從常見排程開始，然後調整下方任何欄位。",
+    "items": {
+      "everyMinute": "每分鐘",
+      "everyFiveMinutes": "每 5 分鐘",
+      "everyFifteenMinutes": "每 15 分鐘",
+      "hourly": "每小時",
+      "dailyMidnight": "每天午夜",
+      "dailyNoon": "每天中午",
+      "weekdayMorning": "平日上午 9 點",
+      "weeklySunday": "每週日",
+      "monthlyFirstDay": "每月 1 日"
+    }
+  },
+  "fields": {
+    "title": "設定欄位",
+    "description": "每一列控制一個 cron 欄位。選擇每個值、間隔、指定值或包含端點的範圍。",
+    "modeLabel": "模式",
+    "every": "全部",
+    "interval": "間隔",
+    "specific": "指定值",
+    "range": "範圍",
+    "intervalPrefix": "每",
+    "rangeStartLabel": "從",
+    "rangeEndLabel": "到",
+    "specificEmpty": "未選取任何值；此欄位會退回為所有值。",
+    "everySummary": "所有{field}",
+    "intervalSummary": "每 {interval} {unit}",
+    "specificSummary": "{field}：{values}",
+    "rangeSummary": "{field}：{start} 到 {end}",
+    "labels": {
+      "minute": "分鐘",
+      "hour": "小時",
+      "dayOfMonth": "日期",
+      "month": "月份",
+      "dayOfWeek": "星期"
+    },
+    "descriptions": {
+      "minute": "選擇在每個符合條件的小時內哪些分鐘可以執行。",
+      "hour": "選擇在每個符合條件的日期內哪些小時可以執行。",
+      "dayOfMonth": "選擇 1 到 31 之間符合的日曆日期。",
+      "month": "選擇符合的月份。",
+      "dayOfWeek": "選擇符合的星期幾，星期日以 0 表示。"
+    },
+    "units": {
+      "minute": "分鐘",
+      "hour": "小時",
+      "day": "天",
+      "month": "個月",
+      "weekday": "個星期值"
+    }
+  },
+  "nextRuns": {
+    "title": "後續執行",
+    "description": "預覽產生的表達式接下來符合的本地時間。",
+    "emptyTitle": "找不到符合的執行時間",
+    "emptyDescription": "這可能發生在不可能的組合，例如 2 月 31 日。請調整日期或月份欄位。",
+    "indexHeader": "#",
+    "dateHeader": "本地日期與時間",
+    "relativeHeader": "相對時間",
+    "inMinutes": "於 {count} 分鐘後",
+    "inHours": "於 {count} 小時後",
+    "inDays": "於 {count} 天後",
+    "soon": "即將"
+  },
+  "values": {
+    "months": [
+      "1月",
+      "2月",
+      "3月",
+      "4月",
+      "5月",
+      "6月",
+      "7月",
+      "8月",
+      "9月",
+      "10月",
+      "11月",
+      "12月"
+    ],
+    "weekdays": ["週日", "週一", "週二", "週三", "週四", "週五", "週六"]
+  }
+}

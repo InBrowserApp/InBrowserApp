@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Cron Expression Generator",
+    "description": "Bina ungkapan cron lima medan dengan kawalan visual, pratetap, dan pratonton larian akan datang."
+  },
+  "actions": {
+    "copy": "Salin ungkapan",
+    "copied": "Disalin",
+    "reset": "Tetapkan semula"
+  },
+  "output": {
+    "title": "Ungkapan cron",
+    "description": "Salin ungkapan lima medan yang dijana ke dalam penjadual yang menggunakan sintaks standard minit jam hari bulan hari minggu.",
+    "expressionLabel": "Ungkapan yang dijana",
+    "summaryLabel": "Ringkasan biasa",
+    "noteTitle": "Padanan hari",
+    "noteDescription": "Apabila hari dalam bulan dan hari dalam minggu kedua-duanya dihadkan, banyak pelaksanaan cron berjalan apabila salah satu medan sepadan. Semak dokumentasi penjadual anda sebelum bergantung pada gabungan itu."
+  },
+  "presets": {
+    "title": "Pratetap pantas",
+    "description": "Mulakan daripada jadual biasa, kemudian laraskan mana-mana medan di bawah.",
+    "items": {
+      "everyMinute": "Setiap minit",
+      "everyFiveMinutes": "Setiap 5 minit",
+      "everyFifteenMinutes": "Setiap 15 minit",
+      "hourly": "Setiap jam",
+      "dailyMidnight": "Setiap hari pada tengah malam",
+      "dailyNoon": "Setiap hari pada tengah hari",
+      "weekdayMorning": "Hari bekerja pada 9 pagi",
+      "weeklySunday": "Setiap minggu pada hari Ahad",
+      "monthlyFirstDay": "Setiap bulan pada hari 1"
+    }
+  },
+  "fields": {
+    "title": "Konfigurasikan medan",
+    "description": "Setiap baris mengawal satu medan cron. Pilih setiap nilai, selang, nilai tertentu, atau julat inklusif.",
+    "modeLabel": "Mod",
+    "every": "Setiap",
+    "interval": "Selang",
+    "specific": "Tertentu",
+    "range": "Julat",
+    "intervalPrefix": "Setiap",
+    "rangeStartLabel": "Dari",
+    "rangeEndLabel": "Ke",
+    "specificEmpty": "Tiada nilai dipilih; medan ini kembali kepada setiap nilai.",
+    "everySummary": "Setiap {field}",
+    "intervalSummary": "Setiap {interval} {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: {start} hingga {end}",
+    "labels": {
+      "minute": "Minit",
+      "hour": "Jam",
+      "dayOfMonth": "Hari dalam bulan",
+      "month": "Bulan",
+      "dayOfWeek": "Hari dalam minggu"
+    },
+    "descriptions": {
+      "minute": "Pilih minit dalam setiap jam yang sepadan yang boleh berjalan.",
+      "hour": "Pilih jam dalam setiap hari yang sepadan yang boleh berjalan.",
+      "dayOfMonth": "Pilih hari kalendar yang sepadan dari 1 hingga 31.",
+      "month": "Pilih bulan yang sepadan.",
+      "dayOfWeek": "Pilih hari minggu yang sepadan, dengan hari Ahad diwakili sebagai 0."
+    },
+    "units": {
+      "minute": "minit",
+      "hour": "jam",
+      "day": "hari",
+      "month": "bulan",
+      "weekday": "hari minggu"
+    }
+  },
+  "nextRuns": {
+    "title": "Larian seterusnya",
+    "description": "Pratonton masa setempat seterusnya yang sepadan untuk ungkapan yang dijana.",
+    "emptyTitle": "Tiada larian sepadan ditemui",
+    "emptyDescription": "Ini boleh berlaku dengan gabungan mustahil seperti hari 31 dalam Februari. Laraskan medan hari atau bulan.",
+    "indexHeader": "#",
+    "dateHeader": "Tarikh dan masa setempat",
+    "relativeHeader": "Relatif",
+    "inMinutes": "dalam {count} minit",
+    "inHours": "dalam {count} jam",
+    "inDays": "dalam {count} hari",
+    "soon": "sebentar lagi"
+  },
+  "values": {
+    "months": [
+      "Jan",
+      "Feb",
+      "Mac",
+      "Apr",
+      "Mei",
+      "Jun",
+      "Jul",
+      "Ogos",
+      "Sep",
+      "Okt",
+      "Nov",
+      "Dis"
+    ],
+    "weekdays": ["Ahd", "Isn", "Sel", "Rab", "Kha", "Jum", "Sab"]
+  }
+}

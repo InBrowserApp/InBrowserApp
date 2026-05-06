@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Generator för cron-uttryck",
+    "description": "Skapa cron-uttryck med fem fält med visuella kontroller, förinställningar och förhandsvisningar av kommande körningar."
+  },
+  "actions": {
+    "copy": "Kopiera uttryck",
+    "copied": "Kopierat",
+    "reset": "Återställ"
+  },
+  "output": {
+    "title": "Cron-uttryck",
+    "description": "Kopiera det genererade uttrycket med fem fält till en schemaläggare som använder standardsyntaxen minut timme dag månad veckodag.",
+    "expressionLabel": "Genererat uttryck",
+    "summaryLabel": "Sammanfattning i klartext",
+    "noteTitle": "Dagmatchning",
+    "noteDescription": "När både dag i månaden och veckodag är begränsade kör många cron-implementationer när något av fälten matchar. Kontrollera dokumentationen för din schemaläggare innan du förlitar dig på den kombinationen."
+  },
+  "presets": {
+    "title": "Snabba förinställningar",
+    "description": "Börja med vanliga scheman och justera sedan valfritt fält nedan.",
+    "items": {
+      "everyMinute": "Varje minut",
+      "everyFiveMinutes": "Var 5:e minut",
+      "everyFifteenMinutes": "Var 15:e minut",
+      "hourly": "Varje timme",
+      "dailyMidnight": "Dagligen vid midnatt",
+      "dailyNoon": "Dagligen vid middagstid",
+      "weekdayMorning": "Vardagar kl. 09",
+      "weeklySunday": "Varje vecka på söndag",
+      "monthlyFirstDay": "Varje månad dag 1"
+    }
+  },
+  "fields": {
+    "title": "Konfigurera fält",
+    "description": "Varje rad styr ett cron-fält. Välj varje värde, ett intervall, specifika värden eller ett inkluderande spann.",
+    "modeLabel": "Läge",
+    "every": "Varje",
+    "interval": "Intervall",
+    "specific": "Specifika",
+    "range": "Spann",
+    "intervalPrefix": "Var",
+    "rangeStartLabel": "Från",
+    "rangeEndLabel": "Till",
+    "specificEmpty": "Inga värden valda; fältet går tillbaka till alla värden.",
+    "everySummary": "Varje {field}",
+    "intervalSummary": "Var {interval} {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: {start} till {end}",
+    "labels": {
+      "minute": "Minut",
+      "hour": "Timme",
+      "dayOfMonth": "Dag i månaden",
+      "month": "Månad",
+      "dayOfWeek": "Veckodag"
+    },
+    "descriptions": {
+      "minute": "Välj vilka minuter under varje matchande timme som körning kan ske.",
+      "hour": "Välj vilka timmar under varje matchande dag som körning kan ske.",
+      "dayOfMonth": "Välj matchande kalenderdagar från 1 till 31.",
+      "month": "Välj matchande månader.",
+      "dayOfWeek": "Välj matchande veckodagar, där söndag anges som 0."
+    },
+    "units": {
+      "minute": "minut(er)",
+      "hour": "timme/timmar",
+      "day": "dag(ar)",
+      "month": "månad(er)",
+      "weekday": "veckodag(ar)"
+    }
+  },
+  "nextRuns": {
+    "title": "Nästa körningar",
+    "description": "Förhandsvisa de nästa matchande lokala tiderna för det genererade uttrycket.",
+    "emptyTitle": "Inga matchande körningar hittades",
+    "emptyDescription": "Det kan hända med omöjliga kombinationer, till exempel dag 31 i februari. Justera fältet för dag eller månad.",
+    "indexHeader": "#",
+    "dateHeader": "Lokalt datum och tid",
+    "relativeHeader": "Relativt",
+    "inMinutes": "om {count} minut(er)",
+    "inHours": "om {count} timme/timmar",
+    "inDays": "om {count} dag(ar)",
+    "soon": "snart"
+  },
+  "values": {
+    "months": [
+      "jan.",
+      "feb.",
+      "mars",
+      "apr.",
+      "maj",
+      "juni",
+      "juli",
+      "aug.",
+      "sep.",
+      "okt.",
+      "nov.",
+      "dec."
+    ],
+    "weekdays": ["sön", "mån", "tis", "ons", "tors", "fre", "lör"]
+  }
+}

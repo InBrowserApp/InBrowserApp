@@ -3960,6 +3960,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cron-expression-generator",
+    category: "time",
+    icon: "clock3",
+    tags: ["cron", "generator", "schedule", "time", "unix"],
+    locales: {
+      ar: {
+        name: "مولد تعبيرات Cron",
+        description:
+          "أنشئ تعبيرات Cron خماسية الحقول باستخدام عناصر تحكم مرئية وإعدادات مسبقة ومعاينات لمرات التشغيل القادمة.",
+      },
+      de: {
+        name: "Cron-Ausdrucksgenerator",
+        description:
+          "Erstellen Sie Cron-Ausdrücke mit fünf Feldern über visuelle Steuerelemente, Voreinstellungen und Vorschauen der nächsten Ausführungen.",
+      },
+      en: {
+        name: "Cron Expression Generator",
+        description:
+          "Build five-field cron expressions with visual controls, presets, and upcoming run previews.",
+      },
+      es: {
+        name: "Generador de expresiones cron",
+        description:
+          "Crea expresiones cron de cinco campos con controles visuales, preajustes y vistas previas de próximas ejecuciones.",
+      },
+      fr: {
+        name: "Cron Expression Generator",
+        description:
+          "Créez des expressions cron à cinq champs avec des contrôles visuels, des préréglages et des aperçus des prochaines exécutions.",
+      },
+      he: {
+        name: "מחולל ביטויי Cron",
+        description:
+          "בנה ביטויי cron בני חמישה שדות עם פקדים חזותיים, הגדרות מוכנות ותצוגות מקדימות של ההרצות הבאות.",
+      },
+      hi: {
+        name: "Cron Expression Generator",
+        description:
+          "दृश्य नियंत्रणों, प्रीसेट और आगामी रन पूर्वावलोकन के साथ पांच-फ़ील्ड cron expressions बनाएं।",
+      },
+      id: {
+        name: "Generator Ekspresi Cron",
+        description:
+          "Buat ekspresi cron lima bidang dengan kontrol visual, preset, dan pratinjau eksekusi mendatang.",
+      },
+      it: {
+        name: "Cron Expression Generator",
+        description:
+          "Crea espressioni cron a cinque campi con controlli visuali, preset e anteprime delle prossime esecuzioni.",
+      },
+      ja: {
+        name: "Cron Expression Generator",
+        description:
+          "視覚的なコントロール、プリセット、今後の実行プレビューを使って、5 フィールドの cron 式を作成します。",
+      },
+      ko: {
+        name: "Cron 표현식 생성기",
+        description:
+          "시각적 컨트롤, 프리셋, 다음 실행 미리보기로 5개 필드 cron 표현식을 만드세요.",
+      },
+      ms: {
+        name: "Cron Expression Generator",
+        description:
+          "Bina ungkapan cron lima medan dengan kawalan visual, pratetap, dan pratonton larian akan datang.",
+      },
+      nl: {
+        name: "Cron-expressiegenerator",
+        description:
+          "Maak cron-expressies met vijf velden via visuele bediening, presets en previews van komende uitvoeringen.",
+      },
+      no: {
+        name: "Generator for cron-uttrykk",
+        description:
+          "Lag cron-uttrykk med fem felt ved hjelp av visuelle kontroller, forhåndsvalg og forhåndsvisning av kommende kjøringer.",
+      },
+      pl: {
+        name: "Generator wyrażeń cron",
+        description:
+          "Twórz pięciopolowe wyrażenia cron za pomocą kontrolek wizualnych, presetów i podglądu nadchodzących uruchomień.",
+      },
+      pt: {
+        name: "Gerador de Expressões Cron",
+        description:
+          "Crie expressões cron de cinco campos com controles visuais, predefinições e prévias das próximas execuções.",
+      },
+      ru: {
+        name: "Генератор cron-выражений",
+        description:
+          "Создавайте пятикомпонентные cron-выражения с визуальными элементами управления, пресетами и предварительным просмотром предстоящих запусков.",
+      },
+      sv: {
+        name: "Generator för cron-uttryck",
+        description:
+          "Skapa cron-uttryck med fem fält med visuella kontroller, förinställningar och förhandsvisningar av kommande körningar.",
+      },
+      th: {
+        name: "Cron Expression Generator",
+        description:
+          "สร้างนิพจน์ cron แบบห้าฟิลด์ด้วยตัวควบคุมแบบภาพ พรีเซ็ต และตัวอย่างการรันที่จะเกิดขึ้น",
+      },
+      tr: {
+        name: "Cron İfadesi Oluşturucu",
+        description:
+          "Görsel kontroller, ön ayarlar ve yaklaşan çalıştırma önizlemeleriyle beş alanlı cron ifadeleri oluşturun.",
+      },
+      vi: {
+        name: "Cron Expression Generator",
+        description:
+          "Tạo biểu thức cron năm trường bằng điều khiển trực quan, mẫu có sẵn và bản xem trước các lần chạy sắp tới.",
+      },
+      "zh-CN": {
+        name: "Cron 表达式生成器",
+        description:
+          "使用可视化控件、预设和即将运行预览来构建五字段 cron 表达式。",
+      },
+      "zh-TW": {
+        name: "Cron 表達式產生器",
+        description:
+          "使用視覺化控制項、預設與後續執行預覽，建立五欄位 cron 表達式。",
+      },
+    },
+  },
+  {
     slug: "cron-expression-parser",
     category: "time",
     icon: "clock3",
@@ -22298,6 +22421,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "信用卡號驗證器",
         description: "使用 Luhn 演算法驗證信用卡號並識別卡品牌",
+      },
+    },
+  },
+  "cron-expression-generator": {
+    slug: "cron-expression-generator",
+    category: "time",
+    icon: "clock3",
+    tags: ["cron", "generator", "schedule", "time", "unix"],
+    locales: {
+      ar: {
+        name: "مولد تعبيرات Cron",
+        description:
+          "أنشئ تعبيرات Cron خماسية الحقول باستخدام عناصر تحكم مرئية وإعدادات مسبقة ومعاينات لمرات التشغيل القادمة.",
+      },
+      de: {
+        name: "Cron-Ausdrucksgenerator",
+        description:
+          "Erstellen Sie Cron-Ausdrücke mit fünf Feldern über visuelle Steuerelemente, Voreinstellungen und Vorschauen der nächsten Ausführungen.",
+      },
+      en: {
+        name: "Cron Expression Generator",
+        description:
+          "Build five-field cron expressions with visual controls, presets, and upcoming run previews.",
+      },
+      es: {
+        name: "Generador de expresiones cron",
+        description:
+          "Crea expresiones cron de cinco campos con controles visuales, preajustes y vistas previas de próximas ejecuciones.",
+      },
+      fr: {
+        name: "Cron Expression Generator",
+        description:
+          "Créez des expressions cron à cinq champs avec des contrôles visuels, des préréglages et des aperçus des prochaines exécutions.",
+      },
+      he: {
+        name: "מחולל ביטויי Cron",
+        description:
+          "בנה ביטויי cron בני חמישה שדות עם פקדים חזותיים, הגדרות מוכנות ותצוגות מקדימות של ההרצות הבאות.",
+      },
+      hi: {
+        name: "Cron Expression Generator",
+        description:
+          "दृश्य नियंत्रणों, प्रीसेट और आगामी रन पूर्वावलोकन के साथ पांच-फ़ील्ड cron expressions बनाएं।",
+      },
+      id: {
+        name: "Generator Ekspresi Cron",
+        description:
+          "Buat ekspresi cron lima bidang dengan kontrol visual, preset, dan pratinjau eksekusi mendatang.",
+      },
+      it: {
+        name: "Cron Expression Generator",
+        description:
+          "Crea espressioni cron a cinque campi con controlli visuali, preset e anteprime delle prossime esecuzioni.",
+      },
+      ja: {
+        name: "Cron Expression Generator",
+        description:
+          "視覚的なコントロール、プリセット、今後の実行プレビューを使って、5 フィールドの cron 式を作成します。",
+      },
+      ko: {
+        name: "Cron 표현식 생성기",
+        description:
+          "시각적 컨트롤, 프리셋, 다음 실행 미리보기로 5개 필드 cron 표현식을 만드세요.",
+      },
+      ms: {
+        name: "Cron Expression Generator",
+        description:
+          "Bina ungkapan cron lima medan dengan kawalan visual, pratetap, dan pratonton larian akan datang.",
+      },
+      nl: {
+        name: "Cron-expressiegenerator",
+        description:
+          "Maak cron-expressies met vijf velden via visuele bediening, presets en previews van komende uitvoeringen.",
+      },
+      no: {
+        name: "Generator for cron-uttrykk",
+        description:
+          "Lag cron-uttrykk med fem felt ved hjelp av visuelle kontroller, forhåndsvalg og forhåndsvisning av kommende kjøringer.",
+      },
+      pl: {
+        name: "Generator wyrażeń cron",
+        description:
+          "Twórz pięciopolowe wyrażenia cron za pomocą kontrolek wizualnych, presetów i podglądu nadchodzących uruchomień.",
+      },
+      pt: {
+        name: "Gerador de Expressões Cron",
+        description:
+          "Crie expressões cron de cinco campos com controles visuais, predefinições e prévias das próximas execuções.",
+      },
+      ru: {
+        name: "Генератор cron-выражений",
+        description:
+          "Создавайте пятикомпонентные cron-выражения с визуальными элементами управления, пресетами и предварительным просмотром предстоящих запусков.",
+      },
+      sv: {
+        name: "Generator för cron-uttryck",
+        description:
+          "Skapa cron-uttryck med fem fält med visuella kontroller, förinställningar och förhandsvisningar av kommande körningar.",
+      },
+      th: {
+        name: "Cron Expression Generator",
+        description:
+          "สร้างนิพจน์ cron แบบห้าฟิลด์ด้วยตัวควบคุมแบบภาพ พรีเซ็ต และตัวอย่างการรันที่จะเกิดขึ้น",
+      },
+      tr: {
+        name: "Cron İfadesi Oluşturucu",
+        description:
+          "Görsel kontroller, ön ayarlar ve yaklaşan çalıştırma önizlemeleriyle beş alanlı cron ifadeleri oluşturun.",
+      },
+      vi: {
+        name: "Cron Expression Generator",
+        description:
+          "Tạo biểu thức cron năm trường bằng điều khiển trực quan, mẫu có sẵn và bản xem trước các lần chạy sắp tới.",
+      },
+      "zh-CN": {
+        name: "Cron 表达式生成器",
+        description:
+          "使用可视化控件、预设和即将运行预览来构建五字段 cron 表达式。",
+      },
+      "zh-TW": {
+        name: "Cron 表達式產生器",
+        description:
+          "使用視覺化控制項、預設與後續執行預覽，建立五欄位 cron 表達式。",
       },
     },
   },

@@ -1,0 +1,4 @@
+{
+  "name": "Cron Expression Generator",
+  "description": "視覚的なコントロール、プリセット、今後の実行プレビューを使って、5 フィールドの cron 式を作成します。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Generador de expresiones cron",
+  "description": "Crea expresiones cron de cinco campos con controles visuales, preajustes y vistas previas de próximas ejecuciones."
+}

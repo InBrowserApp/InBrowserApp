@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Cron Expression Generator",
+    "description": "視覚的なコントロール、プリセット、今後の実行プレビューを使って、5 フィールドの cron 式を作成します。"
+  },
+  "actions": {
+    "copy": "式をコピー",
+    "copied": "コピーしました",
+    "reset": "リセット"
+  },
+  "output": {
+    "title": "cron 式",
+    "description": "標準の minute hour day month weekday 構文を使うスケジューラーに、生成された 5 フィールドの式をコピーします。",
+    "expressionLabel": "生成された式",
+    "summaryLabel": "わかりやすい概要",
+    "noteTitle": "日フィールドの一致",
+    "noteDescription": "日付と曜日の両方が制限されている場合、多くの cron 実装ではどちらか一方のフィールドが一致すると実行されます。この組み合わせに依存する前に、使用するスケジューラーのドキュメントを確認してください。"
+  },
+  "presets": {
+    "title": "クイックプリセット",
+    "description": "一般的なスケジュールから始めて、下の任意のフィールドを調整できます。",
+    "items": {
+      "everyMinute": "毎分",
+      "everyFiveMinutes": "5 分ごと",
+      "everyFifteenMinutes": "15 分ごと",
+      "hourly": "毎時",
+      "dailyMidnight": "毎日午前 0 時",
+      "dailyNoon": "毎日正午",
+      "weekdayMorning": "平日の午前 9 時",
+      "weeklySunday": "毎週日曜日",
+      "monthlyFirstDay": "毎月 1 日"
+    }
+  },
+  "fields": {
+    "title": "フィールドを設定",
+    "description": "各行で 1 つの cron フィールドを制御します。すべての値、間隔、特定の値、または両端を含む範囲を選択します。",
+    "modeLabel": "モード",
+    "every": "すべて",
+    "interval": "間隔",
+    "specific": "指定",
+    "range": "範囲",
+    "intervalPrefix": "実行間隔",
+    "rangeStartLabel": "開始",
+    "rangeEndLabel": "終了",
+    "specificEmpty": "値が選択されていません。このフィールドはすべての値として扱われます。",
+    "everySummary": "すべての{field}",
+    "intervalSummary": "{interval} {unit}ごと",
+    "specificSummary": "{field}：{values}",
+    "rangeSummary": "{field}：{start} から {end} まで",
+    "labels": {
+      "minute": "分",
+      "hour": "時",
+      "dayOfMonth": "日付",
+      "month": "月",
+      "dayOfWeek": "曜日"
+    },
+    "descriptions": {
+      "minute": "一致する各時間の中で実行できる分を選択します。",
+      "hour": "一致する各日の中で実行できる時を選択します。",
+      "dayOfMonth": "1 から 31 までの一致する暦日を選択します。",
+      "month": "一致する月を選択します。",
+      "dayOfWeek": "一致する曜日を選択します。日曜日は 0 で表されます。"
+    },
+    "units": {
+      "minute": "分",
+      "hour": "時間",
+      "day": "日",
+      "month": "か月",
+      "weekday": "曜日"
+    }
+  },
+  "nextRuns": {
+    "title": "次回の実行",
+    "description": "生成された式に一致する次のローカル時刻をプレビューします。",
+    "emptyTitle": "一致する実行が見つかりません",
+    "emptyDescription": "2 月 31 日のような不可能な組み合わせで発生することがあります。日付または月のフィールドを調整してください。",
+    "indexHeader": "#",
+    "dateHeader": "ローカル日時",
+    "relativeHeader": "相対",
+    "inMinutes": "{count} 分後",
+    "inHours": "{count} 時間後",
+    "inDays": "{count} 日後",
+    "soon": "まもなく"
+  },
+  "values": {
+    "months": [
+      "1月",
+      "2月",
+      "3月",
+      "4月",
+      "5月",
+      "6月",
+      "7月",
+      "8月",
+      "9月",
+      "10月",
+      "11月",
+      "12月"
+    ],
+    "weekdays": ["日", "月", "火", "水", "木", "金", "土"]
+  }
+}

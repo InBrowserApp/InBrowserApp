@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Cron 표현식 생성기",
+    "description": "시각적 컨트롤, 프리셋, 다음 실행 미리보기로 5개 필드 cron 표현식을 만드세요."
+  },
+  "actions": {
+    "copy": "표현식 복사",
+    "copied": "복사됨",
+    "reset": "초기화"
+  },
+  "output": {
+    "title": "Cron 표현식",
+    "description": "생성된 5개 필드 표현식을 표준 minute hour day month weekday 구문을 사용하는 스케줄러에 복사하세요.",
+    "expressionLabel": "생성된 표현식",
+    "summaryLabel": "간단 요약",
+    "noteTitle": "날짜 매칭",
+    "noteDescription": "월중 날짜와 요일이 모두 제한된 경우, 많은 cron 구현은 둘 중 하나의 필드가 일치할 때 실행됩니다. 이 조합에 의존하기 전에 사용하는 스케줄러의 문서를 확인하세요."
+  },
+  "presets": {
+    "title": "빠른 프리셋",
+    "description": "자주 쓰는 일정에서 시작한 다음 아래에서 원하는 필드를 조정하세요.",
+    "items": {
+      "everyMinute": "매분",
+      "everyFiveMinutes": "5분마다",
+      "everyFifteenMinutes": "15분마다",
+      "hourly": "매시간",
+      "dailyMidnight": "매일 자정",
+      "dailyNoon": "매일 정오",
+      "weekdayMorning": "평일 오전 9시",
+      "weeklySunday": "매주 일요일",
+      "monthlyFirstDay": "매월 1일"
+    }
+  },
+  "fields": {
+    "title": "필드 구성",
+    "description": "각 행은 하나의 cron 필드를 제어합니다. 모든 값, 간격, 특정 값 또는 포함 범위를 선택하세요.",
+    "modeLabel": "모드",
+    "every": "모든 값",
+    "interval": "간격",
+    "specific": "특정 값",
+    "range": "범위",
+    "intervalPrefix": "매",
+    "rangeStartLabel": "시작",
+    "rangeEndLabel": "끝",
+    "specificEmpty": "선택된 값이 없습니다. 이 필드는 모든 값으로 돌아갑니다.",
+    "everySummary": "모든 {field}",
+    "intervalSummary": "{interval}{unit}마다",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: {start}부터 {end}까지",
+    "labels": {
+      "minute": "분",
+      "hour": "시",
+      "dayOfMonth": "월중 날짜",
+      "month": "월",
+      "dayOfWeek": "요일"
+    },
+    "descriptions": {
+      "minute": "일치하는 각 시간에서 실행될 수 있는 분을 선택하세요.",
+      "hour": "일치하는 각 날짜에서 실행될 수 있는 시간을 선택하세요.",
+      "dayOfMonth": "1일부터 31일까지 일치하는 달력 날짜를 선택하세요.",
+      "month": "일치하는 월을 선택하세요.",
+      "dayOfWeek": "일치하는 요일을 선택하세요. 일요일은 0으로 표시됩니다."
+    },
+    "units": {
+      "minute": "분",
+      "hour": "시간",
+      "day": "일",
+      "month": "개월",
+      "weekday": "요일"
+    }
+  },
+  "nextRuns": {
+    "title": "다음 실행",
+    "description": "생성된 표현식과 일치하는 다음 로컬 시간을 미리 봅니다.",
+    "emptyTitle": "일치하는 실행을 찾을 수 없음",
+    "emptyDescription": "2월 31일처럼 불가능한 조합에서 발생할 수 있습니다. 일 또는 월 필드를 조정하세요.",
+    "indexHeader": "#",
+    "dateHeader": "로컬 날짜 및 시간",
+    "relativeHeader": "상대 시간",
+    "inMinutes": "{count}분 후",
+    "inHours": "{count}시간 후",
+    "inDays": "{count}일 후",
+    "soon": "곧"
+  },
+  "values": {
+    "months": [
+      "1월",
+      "2월",
+      "3월",
+      "4월",
+      "5월",
+      "6월",
+      "7월",
+      "8월",
+      "9월",
+      "10월",
+      "11월",
+      "12월"
+    ],
+    "weekdays": ["일", "월", "화", "수", "목", "금", "토"]
+  }
+}

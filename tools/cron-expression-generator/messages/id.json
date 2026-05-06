@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Generator Ekspresi Cron",
+    "description": "Buat ekspresi cron lima bidang dengan kontrol visual, preset, dan pratinjau eksekusi mendatang."
+  },
+  "actions": {
+    "copy": "Salin ekspresi",
+    "copied": "Disalin",
+    "reset": "Atur ulang"
+  },
+  "output": {
+    "title": "Ekspresi cron",
+    "description": "Salin ekspresi lima bidang yang dihasilkan ke penjadwal yang menggunakan sintaks standar menit, jam, hari, bulan, dan hari dalam minggu.",
+    "expressionLabel": "Ekspresi yang dihasilkan",
+    "summaryLabel": "Ringkasan sederhana",
+    "noteTitle": "Pencocokan hari",
+    "noteDescription": "Ketika hari dalam bulan dan hari dalam minggu sama-sama dibatasi, banyak implementasi cron berjalan saat salah satu bidang cocok. Periksa dokumentasi penjadwal Anda sebelum mengandalkan kombinasi tersebut."
+  },
+  "presets": {
+    "title": "Preset cepat",
+    "description": "Mulai dari jadwal umum, lalu sesuaikan bidang apa pun di bawah.",
+    "items": {
+      "everyMinute": "Setiap menit",
+      "everyFiveMinutes": "Setiap 5 menit",
+      "everyFifteenMinutes": "Setiap 15 menit",
+      "hourly": "Setiap jam",
+      "dailyMidnight": "Setiap hari pada tengah malam",
+      "dailyNoon": "Setiap hari pada tengah hari",
+      "weekdayMorning": "Hari kerja pukul 09.00",
+      "weeklySunday": "Mingguan pada hari Minggu",
+      "monthlyFirstDay": "Bulanan pada hari ke-1"
+    }
+  },
+  "fields": {
+    "title": "Konfigurasikan bidang",
+    "description": "Setiap baris mengontrol satu bidang cron. Pilih setiap nilai, interval, nilai tertentu, atau rentang inklusif.",
+    "modeLabel": "Mode",
+    "every": "Setiap",
+    "interval": "Interval",
+    "specific": "Tertentu",
+    "range": "Rentang",
+    "intervalPrefix": "Setiap",
+    "rangeStartLabel": "Dari",
+    "rangeEndLabel": "Hingga",
+    "specificEmpty": "Tidak ada nilai yang dipilih; bidang ini kembali ke setiap nilai.",
+    "everySummary": "Setiap {field}",
+    "intervalSummary": "Setiap {interval} {unit}",
+    "specificSummary": "{field}: {values}",
+    "rangeSummary": "{field}: {start} hingga {end}",
+    "labels": {
+      "minute": "Menit",
+      "hour": "Jam",
+      "dayOfMonth": "Hari dalam bulan",
+      "month": "Bulan",
+      "dayOfWeek": "Hari dalam minggu"
+    },
+    "descriptions": {
+      "minute": "Pilih menit mana dalam setiap jam yang cocok saat tugas dapat berjalan.",
+      "hour": "Pilih jam mana dalam setiap hari yang cocok saat tugas dapat berjalan.",
+      "dayOfMonth": "Pilih tanggal kalender yang cocok dari 1 hingga 31.",
+      "month": "Pilih bulan yang cocok.",
+      "dayOfWeek": "Pilih hari dalam minggu yang cocok, dengan Minggu direpresentasikan sebagai 0."
+    },
+    "units": {
+      "minute": "menit",
+      "hour": "jam",
+      "day": "hari",
+      "month": "bulan",
+      "weekday": "hari dalam minggu"
+    }
+  },
+  "nextRuns": {
+    "title": "Eksekusi berikutnya",
+    "description": "Pratinjau waktu lokal berikutnya yang cocok untuk ekspresi yang dihasilkan.",
+    "emptyTitle": "Tidak ada eksekusi yang cocok ditemukan",
+    "emptyDescription": "Ini dapat terjadi dengan kombinasi yang mustahil seperti hari ke-31 pada Februari. Sesuaikan bidang hari atau bulan.",
+    "indexHeader": "#",
+    "dateHeader": "Tanggal dan waktu lokal",
+    "relativeHeader": "Relatif",
+    "inMinutes": "dalam {count} menit",
+    "inHours": "dalam {count} jam",
+    "inDays": "dalam {count} hari",
+    "soon": "segera"
+  },
+  "values": {
+    "months": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "Mei",
+      "Jun",
+      "Jul",
+      "Agu",
+      "Sep",
+      "Okt",
+      "Nov",
+      "Des"
+    ],
+    "weekdays": ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"]
+  }
+}
