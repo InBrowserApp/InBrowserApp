@@ -3590,6 +3590,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "device-information",
+    language: "ar",
+  },
+  {
+    slug: "device-information",
+    language: "de",
+  },
+  {
+    slug: "device-information",
+    language: "en",
+  },
+  {
+    slug: "device-information",
+    language: "es",
+  },
+  {
+    slug: "device-information",
+    language: "fr",
+  },
+  {
+    slug: "device-information",
+    language: "he",
+  },
+  {
+    slug: "device-information",
+    language: "hi",
+  },
+  {
+    slug: "device-information",
+    language: "id",
+  },
+  {
+    slug: "device-information",
+    language: "it",
+  },
+  {
+    slug: "device-information",
+    language: "ja",
+  },
+  {
+    slug: "device-information",
+    language: "ko",
+  },
+  {
+    slug: "device-information",
+    language: "ms",
+  },
+  {
+    slug: "device-information",
+    language: "nl",
+  },
+  {
+    slug: "device-information",
+    language: "no",
+  },
+  {
+    slug: "device-information",
+    language: "pl",
+  },
+  {
+    slug: "device-information",
+    language: "pt",
+  },
+  {
+    slug: "device-information",
+    language: "ru",
+  },
+  {
+    slug: "device-information",
+    language: "sv",
+  },
+  {
+    slug: "device-information",
+    language: "th",
+  },
+  {
+    slug: "device-information",
+    language: "tr",
+  },
+  {
+    slug: "device-information",
+    language: "vi",
+  },
+  {
+    slug: "device-information",
+    language: "zh-CN",
+  },
+  {
+    slug: "device-information",
+    language: "zh-TW",
+  },
+  {
     slug: "docker-run-to-compose-converter",
     language: "ar",
   },
