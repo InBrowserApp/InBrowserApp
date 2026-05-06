@@ -9,6 +9,9 @@ import { FileText } from "@workspace/ui/icons"
 
 import type { MarkdownPreviewerMessages, TocItem } from "../types"
 
+const OUTLINE_BASE_INDENT_REM = 0.25
+const OUTLINE_DEPTH_INDENT_REM = 0.85
+
 type PreviewOutlineProps = Readonly<{
   messages: Pick<
     MarkdownPreviewerMessages,
@@ -27,7 +30,7 @@ function PreviewOutline({
   onHeadingClick,
 }: PreviewOutlineProps) {
   return (
-    <aside className="min-w-0 border-t px-4 py-4 sm:px-6 xl:border-s xl:border-t-0 xl:px-0 xl:py-0 xl:ps-4">
+    <aside className="min-w-0 border-t px-4 py-4 sm:px-6 xl:border-s xl:border-t-0 xl:px-0 xl:py-0 xl:ps-6">
       <div className="flex flex-col gap-1">
         <h2 className="font-heading text-base font-semibold">
           {messages.outlineTitle}
@@ -46,7 +49,10 @@ function PreviewOutline({
                 type="button"
                 className="w-full rounded-md px-2.5 py-2 text-start text-sm break-words whitespace-normal text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:outline-none"
                 style={{
-                  paddingInlineStart: `${item.level * 0.8}rem`,
+                  paddingInlineStart: `${
+                    OUTLINE_BASE_INDENT_REM +
+                    Math.max(item.level - 1, 0) * OUTLINE_DEPTH_INDENT_REM
+                  }rem`,
                 }}
                 onClick={() => {
                   onHeadingClick(item.id)
