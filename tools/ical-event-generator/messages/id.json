@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "Generator acara iCal",
+    "description": "Buat acara kalender .ics dengan zona waktu, aturan pengulangan, dan pengingat."
+  },
+  "actions": {
+    "useSample": "Gunakan contoh",
+    "reset": "Atur ulang",
+    "copy": "Salin .ics",
+    "copied": "Disalin",
+    "download": "Unduh .ics",
+    "regenerateUid": "Buat ulang UID",
+    "addReminder": "Tambah pengingat",
+    "removeReminder": "Hapus"
+  },
+  "sample": {
+    "title": "Tinjauan peluncuran",
+    "location": "Studio A",
+    "description": "Periksa waktu, penanggung jawab, dan tugas tindak lanjut."
+  },
+  "details": {
+    "title": "Detail acara",
+    "description": "Isi ringkasan, catatan, dan referensi yang akan ditampilkan aplikasi kalender.",
+    "summaryLabel": "Ringkasan",
+    "summaryPlaceholder": "Sesi perencanaan kuartalan",
+    "locationLabel": "Lokasi",
+    "urlLabel": "URL referensi",
+    "notesLabel": "Catatan",
+    "notesPlaceholder": "Agenda, detail panggilan, atau instruksi",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "Jadwal",
+    "description": "Pilih rentang acara, zona waktu, dan mode ekspor.",
+    "allDayLabel": "Sepanjang hari",
+    "timeZoneLabel": "Zona waktu",
+    "outputModeLabel": "Mode output",
+    "outputUtcLabel": "Tanggal-waktu UTC",
+    "outputTzidLabel": "Tanggal-waktu TZID",
+    "startDateLabel": "Tanggal mulai",
+    "startTimeLabel": "Waktu mulai",
+    "endDateLabel": "Tanggal selesai",
+    "endTimeLabel": "Waktu selesai",
+    "allDayHint": "Tanggal selesai acara sepanjang hari tetap inklusif di formulir dan diekspor sebagai tanggal selesai eksklusif di ICS."
+  },
+  "recurrence": {
+    "title": "Pengulangan",
+    "description": "Ulangi acara setiap hari, minggu, bulan, atau tahun.",
+    "frequencyLabel": "Frekuensi",
+    "noneLabel": "Tidak berulang",
+    "dailyLabel": "Harian",
+    "weeklyLabel": "Mingguan",
+    "monthlyLabel": "Bulanan",
+    "yearlyLabel": "Tahunan",
+    "intervalLabel": "Ulangi setiap",
+    "weekdaysLabel": "Hari kerja",
+    "monthDayLabel": "Hari dalam bulan",
+    "monthLabel": "Bulan",
+    "endsLabel": "Berakhir",
+    "neverLabel": "Tidak pernah",
+    "afterCountLabel": "Setelah jumlah",
+    "onDateLabel": "Pada tanggal",
+    "countLabel": "Kemunculan",
+    "untilDateLabel": "Sampai tanggal",
+    "untilTimeLabel": "Sampai waktu"
+  },
+  "reminders": {
+    "title": "Pengingat",
+    "description": "Tambahkan satu atau beberapa peringatan sebelum acara dimulai.",
+    "enabledLabel": "Aktifkan pengingat",
+    "leadTimeLabel": "Waktu sebelum acara",
+    "unitLabel": "Satuan",
+    "minutesLabel": "Menit",
+    "hoursLabel": "Jam",
+    "daysLabel": "Hari",
+    "weeksLabel": "Minggu"
+  },
+  "output": {
+    "title": "Output ICS",
+    "description": "Pratinjau file kalender persis seperti yang akan diunduh.",
+    "validation": {
+      "invalidStartDate": "Masukkan tanggal mulai yang valid.",
+      "invalidEndDate": "Masukkan tanggal selesai yang valid.",
+      "invalidStartTime": "Masukkan waktu mulai yang valid.",
+      "invalidEndTime": "Masukkan waktu selesai yang valid.",
+      "endBeforeStart": "Waktu selesai harus setelah waktu mulai.",
+      "invalidUntilDate": "Masukkan tanggal akhir pengulangan yang valid.",
+      "invalidUntilTime": "Masukkan waktu akhir pengulangan yang valid."
+    }
+  }
+}

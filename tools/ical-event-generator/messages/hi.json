@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "iCal इवेंट जेनरेटर",
+    "description": "समय क्षेत्र, पुनरावृत्ति नियम और रिमाइंडर के साथ .ics कैलेंडर इवेंट बनाएं।"
+  },
+  "actions": {
+    "useSample": "नमूना इस्तेमाल करें",
+    "reset": "रीसेट करें",
+    "copy": ".ics कॉपी करें",
+    "copied": "कॉपी किया गया",
+    "download": ".ics डाउनलोड करें",
+    "regenerateUid": "UID फिर से बनाएँ",
+    "addReminder": "रिमाइंडर जोड़ें",
+    "removeReminder": "हटाएँ"
+  },
+  "sample": {
+    "title": "लॉन्च समीक्षा",
+    "location": "स्टूडियो A",
+    "description": "समय, मालिकों और फ़ॉलो-अप कार्यों की जाँच करें।"
+  },
+  "details": {
+    "title": "इवेंट विवरण",
+    "description": "वह सारांश, नोट्स और संदर्भ भरें जो कैलेंडर ऐप्स दिखाएँगे।",
+    "summaryLabel": "सारांश",
+    "summaryPlaceholder": "तिमाही योजना सत्र",
+    "locationLabel": "स्थान",
+    "urlLabel": "संदर्भ URL",
+    "notesLabel": "नोट्स",
+    "notesPlaceholder": "एजेंडा, डायल-इन विवरण या निर्देश",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "शेड्यूल",
+    "description": "इवेंट की सीमा, समय क्षेत्र और निर्यात मोड चुनें।",
+    "allDayLabel": "पूरा दिन",
+    "timeZoneLabel": "समय क्षेत्र",
+    "outputModeLabel": "आउटपुट मोड",
+    "outputUtcLabel": "UTC दिनांक-समय",
+    "outputTzidLabel": "TZID दिनांक-समय",
+    "startDateLabel": "आरंभ तारीख",
+    "startTimeLabel": "आरंभ समय",
+    "endDateLabel": "समाप्ति तारीख",
+    "endTimeLabel": "समाप्ति समय",
+    "allDayHint": "पूरे दिन वाले इवेंट की समाप्ति तारीखें फ़ॉर्म में शामिल रहती हैं और ICS में अनन्य समाप्ति तारीखों के रूप में निर्यात होती हैं।"
+  },
+  "recurrence": {
+    "title": "पुनरावृत्ति",
+    "description": "इवेंट को दैनिक, साप्ताहिक, मासिक या वार्षिक रूप से दोहराएँ।",
+    "frequencyLabel": "आवृत्ति",
+    "noneLabel": "दोहराया नहीं जाता",
+    "dailyLabel": "दैनिक",
+    "weeklyLabel": "साप्ताहिक",
+    "monthlyLabel": "मासिक",
+    "yearlyLabel": "वार्षिक",
+    "intervalLabel": "हर इतने पर दोहराएँ",
+    "weekdaysLabel": "सप्ताह के दिन",
+    "monthDayLabel": "महीने का दिन",
+    "monthLabel": "महीना",
+    "endsLabel": "समाप्त होता है",
+    "neverLabel": "कभी नहीं",
+    "afterCountLabel": "गिनती के बाद",
+    "onDateLabel": "इस तारीख को",
+    "countLabel": "घटनाएँ",
+    "untilDateLabel": "इस तारीख तक",
+    "untilTimeLabel": "इस समय तक"
+  },
+  "reminders": {
+    "title": "रिमाइंडर",
+    "description": "इवेंट शुरू होने से पहले एक या अधिक डिस्प्ले अलर्ट जोड़ें।",
+    "enabledLabel": "रिमाइंडर चालू करें",
+    "leadTimeLabel": "पहले से समय",
+    "unitLabel": "इकाई",
+    "minutesLabel": "मिनट",
+    "hoursLabel": "घंटे",
+    "daysLabel": "दिन",
+    "weeksLabel": "सप्ताह"
+  },
+  "output": {
+    "title": "ICS आउटपुट",
+    "description": "कैलेंडर फ़ाइल को ठीक उसी रूप में देखें जैसे वह डाउनलोड होगी।",
+    "validation": {
+      "invalidStartDate": "मान्य आरंभ तारीख दर्ज करें।",
+      "invalidEndDate": "मान्य समाप्ति तारीख दर्ज करें।",
+      "invalidStartTime": "मान्य आरंभ समय दर्ज करें।",
+      "invalidEndTime": "मान्य समाप्ति समय दर्ज करें।",
+      "endBeforeStart": "समाप्ति आरंभ के बाद होनी चाहिए।",
+      "invalidUntilDate": "मान्य पुनरावृत्ति समाप्ति तारीख दर्ज करें।",
+      "invalidUntilTime": "मान्य पुनरावृत्ति समाप्ति समय दर्ज करें।"
+    }
+  }
+}

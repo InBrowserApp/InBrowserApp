@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "ตัวสร้างอีเวนต์ iCal",
+    "description": "สร้างอีเวนต์ปฏิทิน .ics พร้อมเขตเวลา กฎการทำซ้ำ และการเตือน"
+  },
+  "actions": {
+    "useSample": "ใช้ตัวอย่าง",
+    "reset": "รีเซ็ต",
+    "copy": "คัดลอก .ics",
+    "copied": "คัดลอกแล้ว",
+    "download": "ดาวน์โหลด .ics",
+    "regenerateUid": "สร้าง UID ใหม่",
+    "addReminder": "เพิ่มการเตือน",
+    "removeReminder": "ลบ"
+  },
+  "sample": {
+    "title": "รีวิวการเปิดตัว",
+    "location": "สตูดิโอ A",
+    "description": "ตรวจสอบเวลา ผู้รับผิดชอบ และงานติดตามผล"
+  },
+  "details": {
+    "title": "รายละเอียดอีเวนต์",
+    "description": "กรอกสรุป โน้ต และข้อมูลอ้างอิงที่แอปปฏิทินจะแสดง",
+    "summaryLabel": "สรุป",
+    "summaryPlaceholder": "เซสชันวางแผนรายไตรมาส",
+    "locationLabel": "สถานที่",
+    "urlLabel": "URL อ้างอิง",
+    "notesLabel": "โน้ต",
+    "notesPlaceholder": "วาระ รายละเอียดการเข้าร่วม หรือคำแนะนำ",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "กำหนดเวลา",
+    "description": "เลือกช่วงอีเวนต์ เขตเวลา และโหมดส่งออก",
+    "allDayLabel": "ทั้งวัน",
+    "timeZoneLabel": "เขตเวลา",
+    "outputModeLabel": "โหมดเอาต์พุต",
+    "outputUtcLabel": "วันที่และเวลา UTC",
+    "outputTzidLabel": "วันที่และเวลา TZID",
+    "startDateLabel": "วันที่เริ่ม",
+    "startTimeLabel": "เวลาเริ่ม",
+    "endDateLabel": "วันที่สิ้นสุด",
+    "endTimeLabel": "เวลาสิ้นสุด",
+    "allDayHint": "วันที่สิ้นสุดของอีเวนต์ทั้งวันจะยังรวมอยู่ในฟอร์ม และส่งออกใน ICS เป็นวันที่สิ้นสุดแบบไม่รวมวันนั้น"
+  },
+  "recurrence": {
+    "title": "การทำซ้ำ",
+    "description": "ทำซ้ำอีเวนต์เป็นรายวัน รายสัปดาห์ รายเดือน หรือรายปี",
+    "frequencyLabel": "ความถี่",
+    "noneLabel": "ไม่ทำซ้ำ",
+    "dailyLabel": "รายวัน",
+    "weeklyLabel": "รายสัปดาห์",
+    "monthlyLabel": "รายเดือน",
+    "yearlyLabel": "รายปี",
+    "intervalLabel": "ทำซ้ำทุก",
+    "weekdaysLabel": "วันในสัปดาห์",
+    "monthDayLabel": "วันที่ของเดือน",
+    "monthLabel": "เดือน",
+    "endsLabel": "สิ้นสุด",
+    "neverLabel": "ไม่สิ้นสุด",
+    "afterCountLabel": "หลังจำนวนครั้ง",
+    "onDateLabel": "ในวันที่",
+    "countLabel": "จำนวนครั้ง",
+    "untilDateLabel": "จนถึงวันที่",
+    "untilTimeLabel": "จนถึงเวลา"
+  },
+  "reminders": {
+    "title": "การเตือน",
+    "description": "แนบการแจ้งเตือนหนึ่งรายการหรือมากกว่าก่อนอีเวนต์เริ่ม",
+    "enabledLabel": "เปิดใช้การเตือน",
+    "leadTimeLabel": "แจ้งล่วงหน้า",
+    "unitLabel": "หน่วย",
+    "minutesLabel": "นาที",
+    "hoursLabel": "ชั่วโมง",
+    "daysLabel": "วัน",
+    "weeksLabel": "สัปดาห์"
+  },
+  "output": {
+    "title": "เอาต์พุต ICS",
+    "description": "ดูตัวอย่างไฟล์ปฏิทินตามที่จะดาวน์โหลดจริง",
+    "validation": {
+      "invalidStartDate": "ป้อนวันที่เริ่มต้นที่ถูกต้อง",
+      "invalidEndDate": "ป้อนวันที่สิ้นสุดที่ถูกต้อง",
+      "invalidStartTime": "ป้อนเวลาเริ่มต้นที่ถูกต้อง",
+      "invalidEndTime": "ป้อนเวลาสิ้นสุดที่ถูกต้อง",
+      "endBeforeStart": "เวลาสิ้นสุดต้องอยู่หลังเวลาเริ่มต้น",
+      "invalidUntilDate": "ป้อนวันที่สิ้นสุดการทำซ้ำที่ถูกต้อง",
+      "invalidUntilTime": "ป้อนเวลาสิ้นสุดการทำซ้ำที่ถูกต้อง"
+    }
+  }
+}

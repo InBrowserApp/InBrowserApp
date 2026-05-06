@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "iCal Etkinlik Oluşturucu",
+    "description": "Saat dilimleri, yineleme kuralları ve hatırlatıcılarla .ics takvim etkinlikleri oluşturun."
+  },
+  "actions": {
+    "useSample": "Örneği kullan",
+    "reset": "Sıfırla",
+    "copy": ".ics kopyala",
+    "copied": "Kopyalandı",
+    "download": ".ics indir",
+    "regenerateUid": "UID’yi yeniden oluştur",
+    "addReminder": "Hatırlatıcı ekle",
+    "removeReminder": "Kaldır"
+  },
+  "sample": {
+    "title": "Lansman incelemesi",
+    "location": "Stüdyo A",
+    "description": "Zamanlamayı, sorumluları ve takip görevlerini kontrol edin."
+  },
+  "details": {
+    "title": "Etkinlik ayrıntıları",
+    "description": "Takvim uygulamalarının göstereceği özet, notlar ve referansları doldurun.",
+    "summaryLabel": "Özet",
+    "summaryPlaceholder": "Üç aylık planlama oturumu",
+    "locationLabel": "Konum",
+    "urlLabel": "Referans URL’si",
+    "notesLabel": "Notlar",
+    "notesPlaceholder": "Gündem, bağlantı bilgileri veya talimatlar",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "Zamanlama",
+    "description": "Etkinlik aralığını, saat dilimini ve dışa aktarma modunu seçin.",
+    "allDayLabel": "Tüm gün",
+    "timeZoneLabel": "Saat dilimi",
+    "outputModeLabel": "Çıktı modu",
+    "outputUtcLabel": "UTC tarih-saat",
+    "outputTzidLabel": "TZID tarih-saat",
+    "startDateLabel": "Başlangıç tarihi",
+    "startTimeLabel": "Başlangıç saati",
+    "endDateLabel": "Bitiş tarihi",
+    "endTimeLabel": "Bitiş saati",
+    "allDayHint": "Tüm gün etkinliklerinde bitiş tarihleri formda dahil kalır ve ICS içinde hariç bitiş tarihi olarak dışa aktarılır."
+  },
+  "recurrence": {
+    "title": "Yineleme",
+    "description": "Etkinliği günlük, haftalık, aylık veya yıllık olarak tekrarlayın.",
+    "frequencyLabel": "Sıklık",
+    "noneLabel": "Tekrarlanmaz",
+    "dailyLabel": "Günlük",
+    "weeklyLabel": "Haftalık",
+    "monthlyLabel": "Aylık",
+    "yearlyLabel": "Yıllık",
+    "intervalLabel": "Her şu aralıkta tekrarla",
+    "weekdaysLabel": "Hafta içi günleri",
+    "monthDayLabel": "Ayın günü",
+    "monthLabel": "Ay",
+    "endsLabel": "Biter",
+    "neverLabel": "Asla",
+    "afterCountLabel": "Sayıdan sonra",
+    "onDateLabel": "Tarihte",
+    "countLabel": "Tekrar sayısı",
+    "untilDateLabel": "Şu tarihe kadar",
+    "untilTimeLabel": "Şu saate kadar"
+  },
+  "reminders": {
+    "title": "Hatırlatıcılar",
+    "description": "Etkinlik başlamadan önce bir veya daha fazla uyarı ekleyin.",
+    "enabledLabel": "Hatırlatıcıları etkinleştir",
+    "leadTimeLabel": "Önceden bildirim",
+    "unitLabel": "Birim",
+    "minutesLabel": "Dakika",
+    "hoursLabel": "Saat",
+    "daysLabel": "Gün",
+    "weeksLabel": "Hafta"
+  },
+  "output": {
+    "title": "ICS çıktısı",
+    "description": "Takvim dosyasını indirileceği haliyle önizleyin.",
+    "validation": {
+      "invalidStartDate": "Geçerli bir başlangıç tarihi girin.",
+      "invalidEndDate": "Geçerli bir bitiş tarihi girin.",
+      "invalidStartTime": "Geçerli bir başlangıç saati girin.",
+      "invalidEndTime": "Geçerli bir bitiş saati girin.",
+      "endBeforeStart": "Bitiş, başlangıçtan sonra olmalıdır.",
+      "invalidUntilDate": "Geçerli bir yineleme bitiş tarihi girin.",
+      "invalidUntilTime": "Geçerli bir yineleme bitiş saati girin."
+    }
+  }
+}

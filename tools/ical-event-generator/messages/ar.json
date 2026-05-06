@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "مولد أحداث iCal",
+    "description": "أنشئ أحداث تقويم .ics مع المناطق الزمنية وقواعد التكرار والتنبيهات."
+  },
+  "actions": {
+    "useSample": "استخدم نموذجًا",
+    "reset": "إعادة ضبط",
+    "copy": "نسخ .ics",
+    "copied": "تم النسخ",
+    "download": "تنزيل .ics",
+    "regenerateUid": "إعادة إنشاء UID",
+    "addReminder": "إضافة تذكير",
+    "removeReminder": "إزالة"
+  },
+  "sample": {
+    "title": "مراجعة الإطلاق",
+    "location": "الاستوديو A",
+    "description": "تحقق من التوقيت والمسؤولين ومهام المتابعة."
+  },
+  "details": {
+    "title": "تفاصيل الحدث",
+    "description": "املأ الملخص والملاحظات والمراجع التي ستعرضها تطبيقات التقويم.",
+    "summaryLabel": "الملخص",
+    "summaryPlaceholder": "جلسة التخطيط الفصلية",
+    "locationLabel": "الموقع",
+    "urlLabel": "رابط المرجع",
+    "notesLabel": "ملاحظات",
+    "notesPlaceholder": "جدول الأعمال أو تفاصيل الاتصال أو التعليمات",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "الجدول",
+    "description": "اختر نطاق الحدث والمنطقة الزمنية وطريقة التصدير.",
+    "allDayLabel": "طوال اليوم",
+    "timeZoneLabel": "المنطقة الزمنية",
+    "outputModeLabel": "وضع الإخراج",
+    "outputUtcLabel": "تاريخ ووقت UTC",
+    "outputTzidLabel": "تاريخ ووقت TZID",
+    "startDateLabel": "تاريخ البدء",
+    "startTimeLabel": "وقت البدء",
+    "endDateLabel": "تاريخ الانتهاء",
+    "endTimeLabel": "وقت الانتهاء",
+    "allDayHint": "تبقى تواريخ انتهاء أحداث اليوم الكامل شاملة في النموذج وتُصدَّر كتواريخ انتهاء حصرية في ICS."
+  },
+  "recurrence": {
+    "title": "التكرار",
+    "description": "كرر الحدث يوميًا أو أسبوعيًا أو شهريًا أو سنويًا.",
+    "frequencyLabel": "التكرار",
+    "noneLabel": "لا يتكرر",
+    "dailyLabel": "يوميًا",
+    "weeklyLabel": "أسبوعيًا",
+    "monthlyLabel": "شهريًا",
+    "yearlyLabel": "سنويًا",
+    "intervalLabel": "التكرار كل",
+    "weekdaysLabel": "أيام الأسبوع",
+    "monthDayLabel": "يوم الشهر",
+    "monthLabel": "الشهر",
+    "endsLabel": "ينتهي",
+    "neverLabel": "أبدًا",
+    "afterCountLabel": "بعد عدد",
+    "onDateLabel": "في تاريخ",
+    "countLabel": "عدد المرات",
+    "untilDateLabel": "حتى تاريخ",
+    "untilTimeLabel": "حتى وقت"
+  },
+  "reminders": {
+    "title": "التذكيرات",
+    "description": "أرفق تنبيهًا أو أكثر قبل بدء الحدث.",
+    "enabledLabel": "تفعيل التذكيرات",
+    "leadTimeLabel": "مهلة التذكير",
+    "unitLabel": "الوحدة",
+    "minutesLabel": "دقائق",
+    "hoursLabel": "ساعات",
+    "daysLabel": "أيام",
+    "weeksLabel": "أسابيع"
+  },
+  "output": {
+    "title": "إخراج ICS",
+    "description": "عاين ملف التقويم كما سيتم تنزيله تمامًا.",
+    "validation": {
+      "invalidStartDate": "أدخل تاريخ بدء صالحًا.",
+      "invalidEndDate": "أدخل تاريخ انتهاء صالحًا.",
+      "invalidStartTime": "أدخل وقت بدء صالحًا.",
+      "invalidEndTime": "أدخل وقت انتهاء صالحًا.",
+      "endBeforeStart": "يجب أن يكون الانتهاء بعد البدء.",
+      "invalidUntilDate": "أدخل تاريخ انتهاء تكرار صالحًا.",
+      "invalidUntilTime": "أدخل وقت انتهاء تكرار صالحًا."
+    }
+  }
+}

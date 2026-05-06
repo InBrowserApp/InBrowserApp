@@ -1,0 +1,4 @@
+{
+  "name": "Generatore di eventi iCal",
+  "description": "Crea eventi calendario .ics con fusi orari, regole di ricorrenza e promemoria."
+}

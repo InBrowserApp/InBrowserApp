@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "Generator wydarzeń iCal",
+    "description": "Twórz wydarzenia kalendarza .ics ze strefami czasowymi, regułami cykliczności i przypomnieniami."
+  },
+  "actions": {
+    "useSample": "Użyj przykładu",
+    "reset": "Resetuj",
+    "copy": "Kopiuj .ics",
+    "copied": "Skopiowano",
+    "download": "Pobierz .ics",
+    "regenerateUid": "Wygeneruj UID ponownie",
+    "addReminder": "Dodaj przypomnienie",
+    "removeReminder": "Usuń"
+  },
+  "sample": {
+    "title": "Przegląd startu",
+    "location": "Studio A",
+    "description": "Sprawdź terminy, osoby odpowiedzialne i zadania następcze."
+  },
+  "details": {
+    "title": "Szczegóły wydarzenia",
+    "description": "Uzupełnij podsumowanie, notatki i odnośniki widoczne w aplikacjach kalendarza.",
+    "summaryLabel": "Podsumowanie",
+    "summaryPlaceholder": "Kwartalna sesja planowania",
+    "locationLabel": "Lokalizacja",
+    "urlLabel": "Adres URL odniesienia",
+    "notesLabel": "Notatki",
+    "notesPlaceholder": "Agenda, dane połączenia lub instrukcje",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "Harmonogram",
+    "description": "Wybierz zakres wydarzenia, strefę czasową i tryb eksportu.",
+    "allDayLabel": "Cały dzień",
+    "timeZoneLabel": "Strefa czasowa",
+    "outputModeLabel": "Tryb wyjścia",
+    "outputUtcLabel": "Data i godzina UTC",
+    "outputTzidLabel": "Data i godzina TZID",
+    "startDateLabel": "Data rozpoczęcia",
+    "startTimeLabel": "Godzina rozpoczęcia",
+    "endDateLabel": "Data zakończenia",
+    "endTimeLabel": "Godzina zakończenia",
+    "allDayHint": "Daty końcowe wydarzeń całodniowych pozostają w formularzu włączne i są eksportowane w ICS jako koniec wyłączny."
+  },
+  "recurrence": {
+    "title": "Cykliczność",
+    "description": "Powtarzaj wydarzenie codziennie, co tydzień, co miesiąc lub co rok.",
+    "frequencyLabel": "Częstotliwość",
+    "noneLabel": "Nie powtarza się",
+    "dailyLabel": "Codziennie",
+    "weeklyLabel": "Co tydzień",
+    "monthlyLabel": "Co miesiąc",
+    "yearlyLabel": "Co rok",
+    "intervalLabel": "Powtarzaj co",
+    "weekdaysLabel": "Dni tygodnia",
+    "monthDayLabel": "Dzień miesiąca",
+    "monthLabel": "Miesiąc",
+    "endsLabel": "Kończy się",
+    "neverLabel": "Nigdy",
+    "afterCountLabel": "Po liczbie",
+    "onDateLabel": "W dniu",
+    "countLabel": "Wystąpienia",
+    "untilDateLabel": "Do daty",
+    "untilTimeLabel": "Do godziny"
+  },
+  "reminders": {
+    "title": "Przypomnienia",
+    "description": "Dodaj jedno lub więcej powiadomień przed rozpoczęciem wydarzenia.",
+    "enabledLabel": "Włącz przypomnienia",
+    "leadTimeLabel": "Wyprzedzenie",
+    "unitLabel": "Jednostka",
+    "minutesLabel": "Minuty",
+    "hoursLabel": "Godziny",
+    "daysLabel": "Dni",
+    "weeksLabel": "Tygodnie"
+  },
+  "output": {
+    "title": "Wyjście ICS",
+    "description": "Podejrzyj plik kalendarza dokładnie tak, jak zostanie pobrany.",
+    "validation": {
+      "invalidStartDate": "Podaj prawidłową datę rozpoczęcia.",
+      "invalidEndDate": "Podaj prawidłową datę zakończenia.",
+      "invalidStartTime": "Podaj prawidłową godzinę rozpoczęcia.",
+      "invalidEndTime": "Podaj prawidłową godzinę zakończenia.",
+      "endBeforeStart": "Zakończenie musi być po rozpoczęciu.",
+      "invalidUntilDate": "Podaj prawidłową datę zakończenia cyklu.",
+      "invalidUntilTime": "Podaj prawidłową godzinę zakończenia cyklu."
+    }
+  }
+}

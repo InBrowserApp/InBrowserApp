@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "iCal-händelsegenerator",
+    "description": "Skapa .ics-kalenderhändelser med tidszoner, upprepningsregler och påminnelser."
+  },
+  "actions": {
+    "useSample": "Använd exempel",
+    "reset": "Återställ",
+    "copy": "Kopiera .ics",
+    "copied": "Kopierat",
+    "download": "Ladda ner .ics",
+    "regenerateUid": "Generera UID igen",
+    "addReminder": "Lägg till påminnelse",
+    "removeReminder": "Ta bort"
+  },
+  "sample": {
+    "title": "Lanseringsgranskning",
+    "location": "Studio A",
+    "description": "Kontrollera tider, ägare och uppföljningsuppgifter."
+  },
+  "details": {
+    "title": "Händelsedetaljer",
+    "description": "Fyll i sammanfattning, anteckningar och referenser som kalenderappar visar.",
+    "summaryLabel": "Sammanfattning",
+    "summaryPlaceholder": "Kvartalsvis planeringssession",
+    "locationLabel": "Plats",
+    "urlLabel": "Referens-URL",
+    "notesLabel": "Anteckningar",
+    "notesPlaceholder": "Agenda, inringningsuppgifter eller instruktioner",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "Schema",
+    "description": "Välj händelsens tidsintervall, tidszon och exportläge.",
+    "allDayLabel": "Hela dagen",
+    "timeZoneLabel": "Tidszon",
+    "outputModeLabel": "Utmatningsläge",
+    "outputUtcLabel": "UTC-datum och -tid",
+    "outputTzidLabel": "TZID-datum och -tid",
+    "startDateLabel": "Startdatum",
+    "startTimeLabel": "Starttid",
+    "endDateLabel": "Slutdatum",
+    "endTimeLabel": "Sluttid",
+    "allDayHint": "Slutdatum för heldagshändelser är inkluderande i formuläret och exporteras som exklusivt slutdatum i ICS."
+  },
+  "recurrence": {
+    "title": "Upprepning",
+    "description": "Upprepa händelsen dagligen, veckovis, månadsvis eller årsvis.",
+    "frequencyLabel": "Frekvens",
+    "noneLabel": "Upprepas inte",
+    "dailyLabel": "Dagligen",
+    "weeklyLabel": "Veckovis",
+    "monthlyLabel": "Månadsvis",
+    "yearlyLabel": "Årsvis",
+    "intervalLabel": "Upprepa var",
+    "weekdaysLabel": "Veckodagar",
+    "monthDayLabel": "Dag i månaden",
+    "monthLabel": "Månad",
+    "endsLabel": "Slutar",
+    "neverLabel": "Aldrig",
+    "afterCountLabel": "Efter antal",
+    "onDateLabel": "På datum",
+    "countLabel": "Förekomster",
+    "untilDateLabel": "Till datum",
+    "untilTimeLabel": "Till tid"
+  },
+  "reminders": {
+    "title": "Påminnelser",
+    "description": "Lägg till en eller flera aviseringar före händelsens start.",
+    "enabledLabel": "Aktivera påminnelser",
+    "leadTimeLabel": "Förvarning",
+    "unitLabel": "Enhet",
+    "minutesLabel": "Minuter",
+    "hoursLabel": "Timmar",
+    "daysLabel": "Dagar",
+    "weeksLabel": "Veckor"
+  },
+  "output": {
+    "title": "ICS-utdata",
+    "description": "Förhandsgranska kalenderfilen exakt som den kommer att laddas ner.",
+    "validation": {
+      "invalidStartDate": "Ange ett giltigt startdatum.",
+      "invalidEndDate": "Ange ett giltigt slutdatum.",
+      "invalidStartTime": "Ange en giltig starttid.",
+      "invalidEndTime": "Ange en giltig sluttid.",
+      "endBeforeStart": "Slutet måste vara efter starten.",
+      "invalidUntilDate": "Ange ett giltigt slutdatum för upprepningen.",
+      "invalidUntilTime": "Ange en giltig sluttid för upprepningen."
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "מחולל אירועי iCal",
+    "description": "צרו אירועי יומן .ics עם אזורי זמן, כללי חזרתיות ותזכורות."
+  },
+  "actions": {
+    "useSample": "השתמשו בדוגמה",
+    "reset": "איפוס",
+    "copy": "העתקת .ics",
+    "copied": "הועתק",
+    "download": "הורדת .ics",
+    "regenerateUid": "יצירת UID מחדש",
+    "addReminder": "הוספת תזכורת",
+    "removeReminder": "הסרה"
+  },
+  "sample": {
+    "title": "סקירת השקה",
+    "location": "סטודיו A",
+    "description": "בדקו תזמון, אחראים ומשימות המשך."
+  },
+  "details": {
+    "title": "פרטי האירוע",
+    "description": "מלאו את הסיכום, ההערות וההפניות שיוצגו באפליקציות היומן.",
+    "summaryLabel": "סיכום",
+    "summaryPlaceholder": "ישיבת תכנון רבעונית",
+    "locationLabel": "מיקום",
+    "urlLabel": "כתובת URL להפניה",
+    "notesLabel": "הערות",
+    "notesPlaceholder": "סדר יום, פרטי התחברות או הוראות",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "לוח זמנים",
+    "description": "בחרו את טווח האירוע, אזור הזמן ומצב הייצוא.",
+    "allDayLabel": "כל היום",
+    "timeZoneLabel": "אזור זמן",
+    "outputModeLabel": "מצב פלט",
+    "outputUtcLabel": "תאריך ושעה UTC",
+    "outputTzidLabel": "תאריך ושעה TZID",
+    "startDateLabel": "תאריך התחלה",
+    "startTimeLabel": "שעת התחלה",
+    "endDateLabel": "תאריך סיום",
+    "endTimeLabel": "שעת סיום",
+    "allDayHint": "תאריכי הסיום של אירועים לכל היום נשארים כוללים בטופס ומיוצאים ב-ICS כתאריך סיום שאינו כולל."
+  },
+  "recurrence": {
+    "title": "חזרתיות",
+    "description": "חזרו על האירוע מדי יום, שבוע, חודש או שנה.",
+    "frequencyLabel": "תדירות",
+    "noneLabel": "לא חוזר",
+    "dailyLabel": "יומי",
+    "weeklyLabel": "שבועי",
+    "monthlyLabel": "חודשי",
+    "yearlyLabel": "שנתי",
+    "intervalLabel": "חזרה כל",
+    "weekdaysLabel": "ימי השבוע",
+    "monthDayLabel": "יום בחודש",
+    "monthLabel": "חודש",
+    "endsLabel": "מסתיים",
+    "neverLabel": "לעולם לא",
+    "afterCountLabel": "לאחר מספר",
+    "onDateLabel": "בתאריך",
+    "countLabel": "מופעים",
+    "untilDateLabel": "עד תאריך",
+    "untilTimeLabel": "עד שעה"
+  },
+  "reminders": {
+    "title": "תזכורות",
+    "description": "צרפו התראה אחת או יותר לפני תחילת האירוע.",
+    "enabledLabel": "הפעלת תזכורות",
+    "leadTimeLabel": "זמן מראש",
+    "unitLabel": "יחידה",
+    "minutesLabel": "דקות",
+    "hoursLabel": "שעות",
+    "daysLabel": "ימים",
+    "weeksLabel": "שבועות"
+  },
+  "output": {
+    "title": "פלט ICS",
+    "description": "הציגו תצוגה מקדימה של קובץ היומן בדיוק כפי שיורד.",
+    "validation": {
+      "invalidStartDate": "הזינו תאריך התחלה תקין.",
+      "invalidEndDate": "הזינו תאריך סיום תקין.",
+      "invalidStartTime": "הזינו שעת התחלה תקינה.",
+      "invalidEndTime": "הזינו שעת סיום תקינה.",
+      "endBeforeStart": "הסיום חייב להיות אחרי ההתחלה.",
+      "invalidUntilDate": "הזינו תאריך סיום חזרתיות תקין.",
+      "invalidUntilTime": "הזינו שעת סיום חזרתיות תקינה."
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "Trình tạo sự kiện iCal",
+    "description": "Tạo sự kiện lịch .ics với múi giờ, quy tắc lặp lại và nhắc nhở."
+  },
+  "actions": {
+    "useSample": "Dùng mẫu",
+    "reset": "Đặt lại",
+    "copy": "Sao chép .ics",
+    "copied": "Đã sao chép",
+    "download": "Tải xuống .ics",
+    "regenerateUid": "Tạo lại UID",
+    "addReminder": "Thêm nhắc nhở",
+    "removeReminder": "Xóa"
+  },
+  "sample": {
+    "title": "Đánh giá ra mắt",
+    "location": "Studio A",
+    "description": "Kiểm tra thời gian, người phụ trách và các việc cần theo dõi."
+  },
+  "details": {
+    "title": "Chi tiết sự kiện",
+    "description": "Điền tóm tắt, ghi chú và tham chiếu mà ứng dụng lịch sẽ hiển thị.",
+    "summaryLabel": "Tóm tắt",
+    "summaryPlaceholder": "Phiên lập kế hoạch theo quý",
+    "locationLabel": "Địa điểm",
+    "urlLabel": "URL tham chiếu",
+    "notesLabel": "Ghi chú",
+    "notesPlaceholder": "Chương trình, chi tiết tham gia hoặc hướng dẫn",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "Lịch trình",
+    "description": "Chọn khoảng thời gian sự kiện, múi giờ và chế độ xuất.",
+    "allDayLabel": "Cả ngày",
+    "timeZoneLabel": "Múi giờ",
+    "outputModeLabel": "Chế độ đầu ra",
+    "outputUtcLabel": "Ngày giờ UTC",
+    "outputTzidLabel": "Ngày giờ TZID",
+    "startDateLabel": "Ngày bắt đầu",
+    "startTimeLabel": "Giờ bắt đầu",
+    "endDateLabel": "Ngày kết thúc",
+    "endTimeLabel": "Giờ kết thúc",
+    "allDayHint": "Ngày kết thúc của sự kiện cả ngày vẫn được tính bao gồm trong biểu mẫu và được xuất trong ICS dưới dạng ngày kết thúc không bao gồm."
+  },
+  "recurrence": {
+    "title": "Lặp lại",
+    "description": "Lặp sự kiện hằng ngày, hằng tuần, hằng tháng hoặc hằng năm.",
+    "frequencyLabel": "Tần suất",
+    "noneLabel": "Không lặp lại",
+    "dailyLabel": "Hằng ngày",
+    "weeklyLabel": "Hằng tuần",
+    "monthlyLabel": "Hằng tháng",
+    "yearlyLabel": "Hằng năm",
+    "intervalLabel": "Lặp mỗi",
+    "weekdaysLabel": "Ngày trong tuần",
+    "monthDayLabel": "Ngày trong tháng",
+    "monthLabel": "Tháng",
+    "endsLabel": "Kết thúc",
+    "neverLabel": "Không bao giờ",
+    "afterCountLabel": "Sau số lần",
+    "onDateLabel": "Vào ngày",
+    "countLabel": "Số lần xuất hiện",
+    "untilDateLabel": "Đến ngày",
+    "untilTimeLabel": "Đến giờ"
+  },
+  "reminders": {
+    "title": "Nhắc nhở",
+    "description": "Gắn một hoặc nhiều cảnh báo hiển thị trước khi sự kiện bắt đầu.",
+    "enabledLabel": "Bật nhắc nhở",
+    "leadTimeLabel": "Báo trước",
+    "unitLabel": "Đơn vị",
+    "minutesLabel": "Phút",
+    "hoursLabel": "Giờ",
+    "daysLabel": "Ngày",
+    "weeksLabel": "Tuần"
+  },
+  "output": {
+    "title": "Đầu ra ICS",
+    "description": "Xem trước tệp lịch đúng như khi được tải xuống.",
+    "validation": {
+      "invalidStartDate": "Nhập ngày bắt đầu hợp lệ.",
+      "invalidEndDate": "Nhập ngày kết thúc hợp lệ.",
+      "invalidStartTime": "Nhập giờ bắt đầu hợp lệ.",
+      "invalidEndTime": "Nhập giờ kết thúc hợp lệ.",
+      "endBeforeStart": "Thời điểm kết thúc phải sau thời điểm bắt đầu.",
+      "invalidUntilDate": "Nhập ngày kết thúc lặp lại hợp lệ.",
+      "invalidUntilTime": "Nhập giờ kết thúc lặp lại hợp lệ."
+    }
+  }
+}

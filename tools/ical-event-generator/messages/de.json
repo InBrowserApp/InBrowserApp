@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "iCal-Ereignisgenerator",
+    "description": "Erstellen Sie .ics-Kalendereignisse mit Zeitzonen, Wiederholungsregeln und Erinnerungen."
+  },
+  "actions": {
+    "useSample": "Beispiel verwenden",
+    "reset": "Zurücksetzen",
+    "copy": ".ics kopieren",
+    "copied": "Kopiert",
+    "download": ".ics herunterladen",
+    "regenerateUid": "UID neu erzeugen",
+    "addReminder": "Erinnerung hinzufügen",
+    "removeReminder": "Entfernen"
+  },
+  "sample": {
+    "title": "Launch-Review",
+    "location": "Studio A",
+    "description": "Timing, Verantwortliche und Folgeaufgaben prüfen."
+  },
+  "details": {
+    "title": "Ereignisdetails",
+    "description": "Füllen Sie Zusammenfassung, Notizen und Verweise aus, die Kalender-Apps anzeigen.",
+    "summaryLabel": "Zusammenfassung",
+    "summaryPlaceholder": "Quartalsplanung",
+    "locationLabel": "Ort",
+    "urlLabel": "Referenz-URL",
+    "notesLabel": "Notizen",
+    "notesPlaceholder": "Agenda, Einwahldaten oder Anweisungen",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "Zeitplan",
+    "description": "Wählen Sie Zeitraum, Zeitzone und Exportmodus des Ereignisses.",
+    "allDayLabel": "Ganztägig",
+    "timeZoneLabel": "Zeitzone",
+    "outputModeLabel": "Ausgabemodus",
+    "outputUtcLabel": "UTC-Datum/Uhrzeit",
+    "outputTzidLabel": "TZID-Datum/Uhrzeit",
+    "startDateLabel": "Startdatum",
+    "startTimeLabel": "Startzeit",
+    "endDateLabel": "Enddatum",
+    "endTimeLabel": "Endzeit",
+    "allDayHint": "Enddaten ganztägiger Ereignisse bleiben im Formular inklusive und werden in ICS als exklusives Enddatum exportiert."
+  },
+  "recurrence": {
+    "title": "Wiederholung",
+    "description": "Wiederholen Sie das Ereignis täglich, wöchentlich, monatlich oder jährlich.",
+    "frequencyLabel": "Häufigkeit",
+    "noneLabel": "Wiederholt sich nicht",
+    "dailyLabel": "Täglich",
+    "weeklyLabel": "Wöchentlich",
+    "monthlyLabel": "Monatlich",
+    "yearlyLabel": "Jährlich",
+    "intervalLabel": "Wiederholen alle",
+    "weekdaysLabel": "Wochentage",
+    "monthDayLabel": "Tag des Monats",
+    "monthLabel": "Monat",
+    "endsLabel": "Endet",
+    "neverLabel": "Nie",
+    "afterCountLabel": "Nach Anzahl",
+    "onDateLabel": "An Datum",
+    "countLabel": "Vorkommen",
+    "untilDateLabel": "Bis Datum",
+    "untilTimeLabel": "Bis Uhrzeit"
+  },
+  "reminders": {
+    "title": "Erinnerungen",
+    "description": "Fügen Sie eine oder mehrere Anzeigeerinnerungen vor Beginn des Ereignisses hinzu.",
+    "enabledLabel": "Erinnerungen aktivieren",
+    "leadTimeLabel": "Vorlaufzeit",
+    "unitLabel": "Einheit",
+    "minutesLabel": "Minuten",
+    "hoursLabel": "Stunden",
+    "daysLabel": "Tage",
+    "weeksLabel": "Wochen"
+  },
+  "output": {
+    "title": "ICS-Ausgabe",
+    "description": "Zeigen Sie die Kalenderdatei genau so an, wie sie heruntergeladen wird.",
+    "validation": {
+      "invalidStartDate": "Geben Sie ein gültiges Startdatum ein.",
+      "invalidEndDate": "Geben Sie ein gültiges Enddatum ein.",
+      "invalidStartTime": "Geben Sie eine gültige Startzeit ein.",
+      "invalidEndTime": "Geben Sie eine gültige Endzeit ein.",
+      "endBeforeStart": "Das Ende muss nach dem Start liegen.",
+      "invalidUntilDate": "Geben Sie ein gültiges Enddatum für die Wiederholung ein.",
+      "invalidUntilTime": "Geben Sie eine gültige Endzeit für die Wiederholung ein."
+    }
+  }
+}

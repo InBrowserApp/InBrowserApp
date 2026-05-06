@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "Генератор событий iCal",
+    "description": "Создавайте события календаря .ics с часовыми поясами, правилами повторения и напоминаниями."
+  },
+  "actions": {
+    "useSample": "Использовать пример",
+    "reset": "Сбросить",
+    "copy": "Копировать .ics",
+    "copied": "Скопировано",
+    "download": "Скачать .ics",
+    "regenerateUid": "Создать UID заново",
+    "addReminder": "Добавить напоминание",
+    "removeReminder": "Удалить"
+  },
+  "sample": {
+    "title": "Обзор запуска",
+    "location": "Студия A",
+    "description": "Проверьте сроки, ответственных и последующие задачи."
+  },
+  "details": {
+    "title": "Сведения о событии",
+    "description": "Заполните сводку, заметки и ссылки, которые покажут календарные приложения.",
+    "summaryLabel": "Сводка",
+    "summaryPlaceholder": "Квартальная сессия планирования",
+    "locationLabel": "Место",
+    "urlLabel": "Справочный URL",
+    "notesLabel": "Заметки",
+    "notesPlaceholder": "Повестка, данные подключения или инструкции",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "Расписание",
+    "description": "Выберите интервал события, часовой пояс и режим экспорта.",
+    "allDayLabel": "Весь день",
+    "timeZoneLabel": "Часовой пояс",
+    "outputModeLabel": "Режим вывода",
+    "outputUtcLabel": "Дата и время UTC",
+    "outputTzidLabel": "Дата и время TZID",
+    "startDateLabel": "Дата начала",
+    "startTimeLabel": "Время начала",
+    "endDateLabel": "Дата окончания",
+    "endTimeLabel": "Время окончания",
+    "allDayHint": "Даты окончания событий на весь день остаются включительными в форме и экспортируются в ICS как исключительная дата окончания."
+  },
+  "recurrence": {
+    "title": "Повторение",
+    "description": "Повторяйте событие ежедневно, еженедельно, ежемесячно или ежегодно.",
+    "frequencyLabel": "Частота",
+    "noneLabel": "Не повторяется",
+    "dailyLabel": "Ежедневно",
+    "weeklyLabel": "Еженедельно",
+    "monthlyLabel": "Ежемесячно",
+    "yearlyLabel": "Ежегодно",
+    "intervalLabel": "Повторять каждые",
+    "weekdaysLabel": "Дни недели",
+    "monthDayLabel": "День месяца",
+    "monthLabel": "Месяц",
+    "endsLabel": "Завершается",
+    "neverLabel": "Никогда",
+    "afterCountLabel": "После количества",
+    "onDateLabel": "В дату",
+    "countLabel": "Повторения",
+    "untilDateLabel": "До даты",
+    "untilTimeLabel": "До времени"
+  },
+  "reminders": {
+    "title": "Напоминания",
+    "description": "Добавьте одно или несколько уведомлений до начала события.",
+    "enabledLabel": "Включить напоминания",
+    "leadTimeLabel": "Заранее",
+    "unitLabel": "Единица",
+    "minutesLabel": "Минуты",
+    "hoursLabel": "Часы",
+    "daysLabel": "Дни",
+    "weeksLabel": "Недели"
+  },
+  "output": {
+    "title": "Вывод ICS",
+    "description": "Предпросмотрите файл календаря ровно таким, каким он будет скачан.",
+    "validation": {
+      "invalidStartDate": "Введите корректную дату начала.",
+      "invalidEndDate": "Введите корректную дату окончания.",
+      "invalidStartTime": "Введите корректное время начала.",
+      "invalidEndTime": "Введите корректное время окончания.",
+      "endBeforeStart": "Окончание должно быть позже начала.",
+      "invalidUntilDate": "Введите корректную дату окончания повторения.",
+      "invalidUntilTime": "Введите корректное время окончания повторения."
+    }
+  }
+}

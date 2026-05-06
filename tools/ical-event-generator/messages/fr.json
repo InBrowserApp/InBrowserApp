@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "Générateur d'événements iCal",
+    "description": "Créez des événements de calendrier .ics avec fuseaux horaires, règles de récurrence et rappels."
+  },
+  "actions": {
+    "useSample": "Utiliser l’exemple",
+    "reset": "Réinitialiser",
+    "copy": "Copier .ics",
+    "copied": "Copié",
+    "download": "Télécharger .ics",
+    "regenerateUid": "Régénérer l’UID",
+    "addReminder": "Ajouter un rappel",
+    "removeReminder": "Supprimer"
+  },
+  "sample": {
+    "title": "Revue de lancement",
+    "location": "Studio A",
+    "description": "Vérifiez le calendrier, les responsables et les tâches de suivi."
+  },
+  "details": {
+    "title": "Détails de l’événement",
+    "description": "Renseignez le résumé, les notes et les références que les applications de calendrier afficheront.",
+    "summaryLabel": "Résumé",
+    "summaryPlaceholder": "Session de planification trimestrielle",
+    "locationLabel": "Lieu",
+    "urlLabel": "URL de référence",
+    "notesLabel": "Notes",
+    "notesPlaceholder": "Ordre du jour, informations d’appel ou consignes",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "Planification",
+    "description": "Choisissez la plage de l’événement, le fuseau horaire et le mode d’export.",
+    "allDayLabel": "Toute la journée",
+    "timeZoneLabel": "Fuseau horaire",
+    "outputModeLabel": "Mode de sortie",
+    "outputUtcLabel": "Date et heure UTC",
+    "outputTzidLabel": "Date et heure TZID",
+    "startDateLabel": "Date de début",
+    "startTimeLabel": "Heure de début",
+    "endDateLabel": "Date de fin",
+    "endTimeLabel": "Heure de fin",
+    "allDayHint": "Les dates de fin des événements sur toute la journée restent inclusives dans le formulaire et sont exportées comme fin exclusive dans ICS."
+  },
+  "recurrence": {
+    "title": "Récurrence",
+    "description": "Répétez l’événement chaque jour, semaine, mois ou année.",
+    "frequencyLabel": "Fréquence",
+    "noneLabel": "Ne se répète pas",
+    "dailyLabel": "Chaque jour",
+    "weeklyLabel": "Chaque semaine",
+    "monthlyLabel": "Chaque mois",
+    "yearlyLabel": "Chaque année",
+    "intervalLabel": "Répéter tous les",
+    "weekdaysLabel": "Jours de la semaine",
+    "monthDayLabel": "Jour du mois",
+    "monthLabel": "Mois",
+    "endsLabel": "Se termine",
+    "neverLabel": "Jamais",
+    "afterCountLabel": "Après un nombre",
+    "onDateLabel": "À une date",
+    "countLabel": "Occurrences",
+    "untilDateLabel": "Jusqu’à la date",
+    "untilTimeLabel": "Jusqu’à l’heure"
+  },
+  "reminders": {
+    "title": "Rappels",
+    "description": "Ajoutez une ou plusieurs alertes avant le début de l’événement.",
+    "enabledLabel": "Activer les rappels",
+    "leadTimeLabel": "Délai avant l’événement",
+    "unitLabel": "Unité",
+    "minutesLabel": "Minutes",
+    "hoursLabel": "Heures",
+    "daysLabel": "Jours",
+    "weeksLabel": "Semaines"
+  },
+  "output": {
+    "title": "Sortie ICS",
+    "description": "Prévisualisez le fichier de calendrier exactement comme il sera téléchargé.",
+    "validation": {
+      "invalidStartDate": "Saisissez une date de début valide.",
+      "invalidEndDate": "Saisissez une date de fin valide.",
+      "invalidStartTime": "Saisissez une heure de début valide.",
+      "invalidEndTime": "Saisissez une heure de fin valide.",
+      "endBeforeStart": "La fin doit être postérieure au début.",
+      "invalidUntilDate": "Saisissez une date de fin de récurrence valide.",
+      "invalidUntilTime": "Saisissez une heure de fin de récurrence valide."
+    }
+  }
+}

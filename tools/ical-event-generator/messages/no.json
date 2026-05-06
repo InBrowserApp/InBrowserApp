@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "name": "iCal-hendelsesgenerator",
+    "description": "Lag .ics-kalenderhendelser med tidssoner, gjentakelsesregler og påminnelser."
+  },
+  "actions": {
+    "useSample": "Bruk eksempel",
+    "reset": "Tilbakestill",
+    "copy": "Kopier .ics",
+    "copied": "Kopiert",
+    "download": "Last ned .ics",
+    "regenerateUid": "Generer UID på nytt",
+    "addReminder": "Legg til påminnelse",
+    "removeReminder": "Fjern"
+  },
+  "sample": {
+    "title": "Lanseringsgjennomgang",
+    "location": "Studio A",
+    "description": "Sjekk tidspunkt, eiere og oppfølgingsoppgaver."
+  },
+  "details": {
+    "title": "Hendelsesdetaljer",
+    "description": "Fyll inn sammendrag, notater og referanser som kalenderapper viser.",
+    "summaryLabel": "Sammendrag",
+    "summaryPlaceholder": "Kvartalsvis planleggingsøkt",
+    "locationLabel": "Sted",
+    "urlLabel": "Referanse-URL",
+    "notesLabel": "Notater",
+    "notesPlaceholder": "Agenda, innringingsdetaljer eller instruksjoner",
+    "uidLabel": "UID"
+  },
+  "schedule": {
+    "title": "Tidsplan",
+    "description": "Velg hendelsesområdet, tidssonen og eksportmodusen.",
+    "allDayLabel": "Hele dagen",
+    "timeZoneLabel": "Tidssone",
+    "outputModeLabel": "Utgangsmodus",
+    "outputUtcLabel": "UTC-dato og -tid",
+    "outputTzidLabel": "TZID-dato og -tid",
+    "startDateLabel": "Startdato",
+    "startTimeLabel": "Starttid",
+    "endDateLabel": "Sluttdato",
+    "endTimeLabel": "Sluttid",
+    "allDayHint": "Sluttdatoer for heldagshendelser forblir inklusive i skjemaet og eksporteres som eksklusiv sluttdato i ICS."
+  },
+  "recurrence": {
+    "title": "Gjentakelse",
+    "description": "Gjenta hendelsen daglig, ukentlig, månedlig eller årlig.",
+    "frequencyLabel": "Frekvens",
+    "noneLabel": "Gjentas ikke",
+    "dailyLabel": "Daglig",
+    "weeklyLabel": "Ukentlig",
+    "monthlyLabel": "Månedlig",
+    "yearlyLabel": "Årlig",
+    "intervalLabel": "Gjenta hver",
+    "weekdaysLabel": "Ukedager",
+    "monthDayLabel": "Dag i måneden",
+    "monthLabel": "Måned",
+    "endsLabel": "Slutter",
+    "neverLabel": "Aldri",
+    "afterCountLabel": "Etter antall",
+    "onDateLabel": "På dato",
+    "countLabel": "Forekomster",
+    "untilDateLabel": "Til dato",
+    "untilTimeLabel": "Til tidspunkt"
+  },
+  "reminders": {
+    "title": "Påminnelser",
+    "description": "Legg til ett eller flere varsler før hendelsen starter.",
+    "enabledLabel": "Aktiver påminnelser",
+    "leadTimeLabel": "Forhåndstid",
+    "unitLabel": "Enhet",
+    "minutesLabel": "Minutter",
+    "hoursLabel": "Timer",
+    "daysLabel": "Dager",
+    "weeksLabel": "Uker"
+  },
+  "output": {
+    "title": "ICS-utdata",
+    "description": "Forhåndsvis kalenderfilen akkurat slik den blir lastet ned.",
+    "validation": {
+      "invalidStartDate": "Angi en gyldig startdato.",
+      "invalidEndDate": "Angi en gyldig sluttdato.",
+      "invalidStartTime": "Angi en gyldig starttid.",
+      "invalidEndTime": "Angi en gyldig sluttid.",
+      "endBeforeStart": "Slutten må være etter starten.",
+      "invalidUntilDate": "Angi en gyldig sluttdato for gjentakelsen.",
+      "invalidUntilTime": "Angi en gyldig sluttid for gjentakelsen."
+    }
+  }
+}
