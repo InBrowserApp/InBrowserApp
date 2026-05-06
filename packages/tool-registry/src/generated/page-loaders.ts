@@ -42,6 +42,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "credit-card-validator": () => import("@tool/credit-card-validator/page"),
   "css-box-shadow-generator": () =>
     import("@tool/css-box-shadow-generator/page"),
+  "css-gradient-generator": () => import("@tool/css-gradient-generator/page"),
   "csv-to-json-converter": () => import("@tool/csv-to-json-converter/page"),
   "cuid2-generator": () => import("@tool/cuid2-generator/page"),
   "curl-converter": () => import("@tool/curl-converter/page"),

@@ -2762,6 +2762,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "css-gradient-generator",
+    language: "ar",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "de",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "en",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "es",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "fr",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "he",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "hi",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "id",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "it",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "ja",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "ko",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "ms",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "nl",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "no",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "pl",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "pt",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "ru",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "sv",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "th",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "tr",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "vi",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "css-gradient-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "csv-to-json-converter",
     language: "ar",
   },
