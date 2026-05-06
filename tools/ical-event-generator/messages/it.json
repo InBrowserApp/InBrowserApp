@@ -69,6 +69,7 @@
     "description": "Aggiungi uno o più avvisi prima dell’inizio dell’evento.",
     "enabledLabel": "Attiva promemoria",
     "leadTimeLabel": "Anticipo",
+    "unitLabel": "Unità",
     "minutesLabel": "Minuti",
     "hoursLabel": "Ore",
     "daysLabel": "Giorni",

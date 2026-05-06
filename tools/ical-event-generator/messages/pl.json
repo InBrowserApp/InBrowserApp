@@ -69,6 +69,7 @@
     "description": "Dodaj jedno lub więcej powiadomień przed rozpoczęciem wydarzenia.",
     "enabledLabel": "Włącz przypomnienia",
     "leadTimeLabel": "Wyprzedzenie",
+    "unitLabel": "Jednostka",
     "minutesLabel": "Minuty",
     "hoursLabel": "Godziny",
     "daysLabel": "Dni",

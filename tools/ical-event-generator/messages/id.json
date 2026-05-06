@@ -69,6 +69,7 @@
     "description": "Tambahkan satu atau beberapa peringatan sebelum acara dimulai.",
     "enabledLabel": "Aktifkan pengingat",
     "leadTimeLabel": "Waktu sebelum acara",
+    "unitLabel": "Satuan",
     "minutesLabel": "Menit",
     "hoursLabel": "Jam",
     "daysLabel": "Hari",

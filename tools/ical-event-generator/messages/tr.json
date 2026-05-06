@@ -69,6 +69,7 @@
     "description": "Etkinlik başlamadan önce bir veya daha fazla uyarı ekleyin.",
     "enabledLabel": "Hatırlatıcıları etkinleştir",
     "leadTimeLabel": "Önceden bildirim",
+    "unitLabel": "Birim",
     "minutesLabel": "Dakika",
     "hoursLabel": "Saat",
     "daysLabel": "Gün",

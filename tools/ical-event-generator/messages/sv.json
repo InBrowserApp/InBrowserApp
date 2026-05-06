@@ -69,6 +69,7 @@
     "description": "Lägg till en eller flera aviseringar före händelsens start.",
     "enabledLabel": "Aktivera påminnelser",
     "leadTimeLabel": "Förvarning",
+    "unitLabel": "Enhet",
     "minutesLabel": "Minuter",
     "hoursLabel": "Timmar",
     "daysLabel": "Dagar",

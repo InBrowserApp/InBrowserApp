@@ -69,6 +69,7 @@
     "description": "Ajoutez une ou plusieurs alertes avant le début de l’événement.",
     "enabledLabel": "Activer les rappels",
     "leadTimeLabel": "Délai avant l’événement",
+    "unitLabel": "Unité",
     "minutesLabel": "Minutes",
     "hoursLabel": "Heures",
     "daysLabel": "Jours",

@@ -69,6 +69,7 @@
     "description": "Добавьте одно или несколько уведомлений до начала события.",
     "enabledLabel": "Включить напоминания",
     "leadTimeLabel": "Заранее",
+    "unitLabel": "Единица",
     "minutesLabel": "Минуты",
     "hoursLabel": "Часы",
     "daysLabel": "Дни",

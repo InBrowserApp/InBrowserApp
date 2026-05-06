@@ -69,6 +69,7 @@
     "description": "צרפו התראה אחת או יותר לפני תחילת האירוע.",
     "enabledLabel": "הפעלת תזכורות",
     "leadTimeLabel": "זמן מראש",
+    "unitLabel": "יחידה",
     "minutesLabel": "דקות",
     "hoursLabel": "שעות",
     "daysLabel": "ימים",

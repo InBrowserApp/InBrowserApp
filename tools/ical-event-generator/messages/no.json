@@ -69,6 +69,7 @@
     "description": "Legg til ett eller flere varsler før hendelsen starter.",
     "enabledLabel": "Aktiver påminnelser",
     "leadTimeLabel": "Forhåndstid",
+    "unitLabel": "Enhet",
     "minutesLabel": "Minutter",
     "hoursLabel": "Timer",
     "daysLabel": "Dager",

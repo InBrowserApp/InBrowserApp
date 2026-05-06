@@ -69,6 +69,7 @@
     "description": "Fügen Sie eine oder mehrere Anzeigeerinnerungen vor Beginn des Ereignisses hinzu.",
     "enabledLabel": "Erinnerungen aktivieren",
     "leadTimeLabel": "Vorlaufzeit",
+    "unitLabel": "Einheit",
     "minutesLabel": "Minuten",
     "hoursLabel": "Stunden",
     "daysLabel": "Tage",

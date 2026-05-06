@@ -69,6 +69,7 @@
     "description": "แนบการแจ้งเตือนหนึ่งรายการหรือมากกว่าก่อนอีเวนต์เริ่ม",
     "enabledLabel": "เปิดใช้การเตือน",
     "leadTimeLabel": "แจ้งล่วงหน้า",
+    "unitLabel": "หน่วย",
     "minutesLabel": "นาที",
     "hoursLabel": "ชั่วโมง",
     "daysLabel": "วัน",

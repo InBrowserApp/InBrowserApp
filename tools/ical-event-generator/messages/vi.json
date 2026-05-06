@@ -69,6 +69,7 @@
     "description": "Gắn một hoặc nhiều cảnh báo hiển thị trước khi sự kiện bắt đầu.",
     "enabledLabel": "Bật nhắc nhở",
     "leadTimeLabel": "Báo trước",
+    "unitLabel": "Đơn vị",
     "minutesLabel": "Phút",
     "hoursLabel": "Giờ",
     "daysLabel": "Ngày",

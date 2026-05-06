@@ -69,6 +69,7 @@
     "description": "इवेंट शुरू होने से पहले एक या अधिक डिस्प्ले अलर्ट जोड़ें।",
     "enabledLabel": "रिमाइंडर चालू करें",
     "leadTimeLabel": "पहले से समय",
+    "unitLabel": "इकाई",
     "minutesLabel": "मिनट",
     "hoursLabel": "घंटे",
     "daysLabel": "दिन",

@@ -69,6 +69,7 @@
     "description": "이벤트 시작 전에 하나 이상의 표시 알림을 추가하세요.",
     "enabledLabel": "알림 활성화",
     "leadTimeLabel": "사전 알림 시간",
+    "unitLabel": "단위",
     "minutesLabel": "분",
     "hoursLabel": "시간",
     "daysLabel": "일",

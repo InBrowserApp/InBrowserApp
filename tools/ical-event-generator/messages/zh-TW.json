@@ -69,6 +69,7 @@
     "description": "在事件開始前新增一個或多個顯示提醒。",
     "enabledLabel": "啟用提醒",
     "leadTimeLabel": "提前時間",
+    "unitLabel": "單位",
     "minutesLabel": "分鐘",
     "hoursLabel": "小時",
     "daysLabel": "天",

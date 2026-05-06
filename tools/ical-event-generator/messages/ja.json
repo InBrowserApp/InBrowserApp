@@ -69,6 +69,7 @@
     "description": "イベント開始前に 1 件以上の通知を追加します。",
     "enabledLabel": "リマインダーを有効化",
     "leadTimeLabel": "事前通知",
+    "unitLabel": "単位",
     "minutesLabel": "分",
     "hoursLabel": "時間",
     "daysLabel": "日",

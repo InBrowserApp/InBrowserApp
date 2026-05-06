@@ -69,6 +69,7 @@
     "description": "أرفق تنبيهًا أو أكثر قبل بدء الحدث.",
     "enabledLabel": "تفعيل التذكيرات",
     "leadTimeLabel": "مهلة التذكير",
+    "unitLabel": "الوحدة",
     "minutesLabel": "دقائق",
     "hoursLabel": "ساعات",
     "daysLabel": "أيام",

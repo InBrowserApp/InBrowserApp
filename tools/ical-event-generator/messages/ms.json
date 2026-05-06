@@ -69,6 +69,7 @@
     "description": "Lampirkan satu atau lebih amaran sebelum acara bermula.",
     "enabledLabel": "Aktifkan peringatan",
     "leadTimeLabel": "Masa awal",
+    "unitLabel": "Unit",
     "minutesLabel": "Minit",
     "hoursLabel": "Jam",
     "daysLabel": "Hari",

@@ -118,7 +118,7 @@ function EventRemindersCard({
 
                     <Field>
                       <FieldLabel htmlFor={unitId}>
-                        {messages.reminders.title}
+                        {messages.reminders.unitLabel}
                       </FieldLabel>
                       <Select
                         name="ical-reminder-unit"

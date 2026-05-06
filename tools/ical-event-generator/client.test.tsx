@@ -80,6 +80,7 @@ const messages = {
     description: "Attach one or more display alerts before the event starts.",
     enabledLabel: "Enable reminders",
     leadTimeLabel: "Lead time",
+    unitLabel: "Unit",
     minutesLabel: "Minutes",
     hoursLabel: "Hours",
     daysLabel: "Days",

@@ -69,6 +69,7 @@ export type IcalEventGeneratorMessages = Readonly<{
     description: string
     enabledLabel: string
     leadTimeLabel: string
+    unitLabel: string
     minutesLabel: string
     hoursLabel: string
     daysLabel: string

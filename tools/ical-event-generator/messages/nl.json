@@ -69,6 +69,7 @@
     "description": "Voeg één of meer meldingen toe vóór het evenement begint.",
     "enabledLabel": "Herinneringen inschakelen",
     "leadTimeLabel": "Voorlooptijd",
+    "unitLabel": "Eenheid",
     "minutesLabel": "Minuten",
     "hoursLabel": "Uren",
     "daysLabel": "Dagen",

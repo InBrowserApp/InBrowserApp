@@ -69,6 +69,7 @@
     "description": "Adicione um ou mais alertas antes do início do evento.",
     "enabledLabel": "Ativar lembretes",
     "leadTimeLabel": "Antecedência",
+    "unitLabel": "Unidade",
     "minutesLabel": "Minutos",
     "hoursLabel": "Horas",
     "daysLabel": "Dias",
