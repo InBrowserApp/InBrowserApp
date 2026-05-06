@@ -1,0 +1,4 @@
+{
+  "name": "Code Screenshot Generator",
+  "description": "シンタックスハイライト付きのコードスクリーンショットを生成し、SVG、PNG、JPEG、WebP、HTML として書き出します。"
+}

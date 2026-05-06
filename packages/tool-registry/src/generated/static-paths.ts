@@ -2302,6 +2302,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "code-screenshot-generator",
+    language: "ar",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "de",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "en",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "es",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "fr",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "he",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "hi",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "id",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "it",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "ja",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "ko",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "ms",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "nl",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "no",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "pl",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "pt",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "ru",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "sv",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "th",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "tr",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "vi",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "code-screenshot-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "color-contrast-checker",
     language: "ar",
   },

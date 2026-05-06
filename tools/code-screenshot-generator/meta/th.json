@@ -1,0 +1,4 @@
+{
+  "name": "Code Screenshot Generator",
+  "description": "สร้างภาพหน้าจอโค้ดพร้อมไฮไลต์ไวยากรณ์ และส่งออกเป็น SVG, PNG, JPEG, WebP หรือ HTML"
+}
