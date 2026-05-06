@@ -11791,6 +11791,142 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "radio-timecode",
+    category: "time",
+    icon: "clock3",
+    tags: [
+      "time",
+      "clock",
+      "radio",
+      "timecode",
+      "sync",
+      "jjy",
+      "bpc",
+      "dcf77",
+      "msf",
+      "wwvb",
+      "signal",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "مزامنة رموز التوقيت الراديوية",
+        description:
+          "ولّد محليًا صوت رموز توقيت راديوية وفق JJY أو BPC أو DCF77 أو MSF أو WWVB للمساعدة في مزامنة الساعات المتوافقة التي تُضبط بالراديو.",
+      },
+      de: {
+        name: "Funkzeitcode-Synchronisierung",
+        description:
+          "Erzeuge JJY-, BPC-, DCF77-, MSF- oder WWVB-Funkzeitcode-Audio lokal, um kompatible Funkuhren beim Synchronisieren zu unterstützen.",
+      },
+      en: {
+        name: "Radio Timecode Sync",
+        description:
+          "Generate JJY, BPC, DCF77, MSF, or WWVB radio timecode audio locally to help sync compatible radio-controlled clocks.",
+      },
+      es: {
+        name: "Sincronización de códigos horarios de radio",
+        description:
+          "Genera audio de códigos horarios de radio JJY, BPC, DCF77, MSF o WWVB localmente para ayudar a sincronizar relojes radiocontrolados compatibles.",
+      },
+      fr: {
+        name: "Synchronisation de code horaire radio",
+        description:
+          "Générez localement un signal audio de code horaire radio JJY, BPC, DCF77, MSF ou WWVB pour aider à synchroniser les horloges radio-pilotées compatibles.",
+      },
+      he: {
+        name: "סנכרון קוד זמן רדיו",
+        description:
+          "צרו באופן מקומי שמע של קוד זמן רדיו JJY, BPC, DCF77, MSF או WWVB כדי לעזור בסנכרון שעונים מבוקרי-רדיו תואמים.",
+      },
+      hi: {
+        name: "रेडियो टाइमकोड सिंक",
+        description:
+          "संगत रेडियो-नियंत्रित घड़ियों को सिंक करने में मदद के लिए JJY, BPC, DCF77, MSF या WWVB रेडियो टाइमकोड ऑडियो स्थानीय रूप से जनरेट करें।",
+      },
+      id: {
+        name: "Sinkronisasi kode waktu radio",
+        description:
+          "Buat audio kode waktu radio JJY, BPC, DCF77, MSF, atau WWVB secara lokal untuk membantu menyinkronkan jam yang dikendalikan radio dan kompatibel.",
+      },
+      it: {
+        name: "Sincronizzazione del codice orario radio",
+        description:
+          "Genera localmente audio con codice orario radio JJY, BPC, DCF77, MSF o WWVB per aiutare a sincronizzare orologi radiocontrollati compatibili.",
+      },
+      ja: {
+        name: "電波タイムコード同期",
+        description:
+          "JJY、BPC、DCF77、MSF、WWVB の電波タイムコード音声をローカルで生成し、対応する電波時計の同期を支援します。",
+      },
+      ko: {
+        name: "라디오 타임코드 동기화",
+        description:
+          "호환되는 전파 시계 동기화를 돕기 위해 JJY, BPC, DCF77, MSF 또는 WWVB 라디오 타임코드 오디오를 로컬에서 생성합니다.",
+      },
+      ms: {
+        name: "Penyegerakan kod masa radio",
+        description:
+          "Jana audio kod masa radio JJY, BPC, DCF77, MSF, atau WWVB secara setempat untuk membantu menyegerakkan jam kawalan radio yang serasi.",
+      },
+      nl: {
+        name: "Radiotijdcode-synchronisatie",
+        description:
+          "Genereer lokaal JJY-, BPC-, DCF77-, MSF- of WWVB-radiotijdcode-audio om compatibele radiogestuurde klokken te helpen synchroniseren.",
+      },
+      no: {
+        name: "Synkronisering av radiotidskode",
+        description:
+          "Generer JJY-, BPC-, DCF77-, MSF- eller WWVB-radiotidskode-lyd lokalt for å hjelpe med å synkronisere kompatible radiostyrte klokker.",
+      },
+      pl: {
+        name: "Synchronizacja radiowego kodu czasu",
+        description:
+          "Generuj lokalnie dźwiękowe kody czasu radiowego JJY, BPC, DCF77, MSF lub WWVB, aby pomóc synchronizować zgodne zegary sterowane radiowo.",
+      },
+      pt: {
+        name: "Sincronização de código horário por rádio",
+        description:
+          "Gere localmente áudio de código horário de rádio JJY, BPC, DCF77, MSF ou WWVB para ajudar a sincronizar relógios radiocontrolados compatíveis.",
+      },
+      ru: {
+        name: "Синхронизация радиокода времени",
+        description:
+          "Локально генерируйте аудиосигнал радиокода времени JJY, BPC, DCF77, MSF или WWVB, чтобы синхронизировать совместимые часы с радиосинхронизацией.",
+      },
+      sv: {
+        name: "Radiotidskodssynkronisering",
+        description:
+          "Generera radiotidskodsljud för JJY, BPC, DCF77, MSF eller WWVB lokalt för att hjälpa till att synkronisera kompatibla radiostyrda klockor.",
+      },
+      th: {
+        name: "ซิงก์ไทม์โค้ดวิทยุ",
+        description:
+          "สร้างเสียงไทม์โค้ดวิทยุ JJY, BPC, DCF77, MSF หรือ WWVB ภายในเครื่อง เพื่อช่วยซิงก์นาฬิกาที่ควบคุมด้วยวิทยุซึ่งรองรับ",
+      },
+      tr: {
+        name: "Radyo Zaman Kodu Eşitleme",
+        description:
+          "Uyumlu radyo kontrollü saatleri eşitlemeye yardımcı olmak için JJY, BPC, DCF77, MSF veya WWVB radyo zaman kodu sesini yerel olarak oluşturun.",
+      },
+      vi: {
+        name: "Đồng bộ mã thời gian vô tuyến",
+        description:
+          "Tạo âm thanh mã thời gian vô tuyến JJY, BPC, DCF77, MSF hoặc WWVB ngay trên thiết bị để giúp đồng bộ các đồng hồ điều khiển bằng sóng vô tuyến tương thích.",
+      },
+      "zh-CN": {
+        name: "无线电时间码同步",
+        description:
+          "在本地生成 JJY、BPC、DCF77、MSF 或 WWVB 无线电时间码音频，帮助同步兼容的电波钟。",
+      },
+      "zh-TW": {
+        name: "無線電時碼同步",
+        description:
+          "在本機產生 JJY、BPC、DCF77、MSF 或 WWVB 無線電時碼音訊，協助同步相容的電波鐘。",
+      },
+    },
+  },
+  {
     slug: "random-number-generator",
     category: "random",
     icon: "binary",
@@ -30252,6 +30388,142 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Prettier 程式碼格式化工具",
         description:
           "直接在瀏覽器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
+      },
+    },
+  },
+  "radio-timecode": {
+    slug: "radio-timecode",
+    category: "time",
+    icon: "clock3",
+    tags: [
+      "time",
+      "clock",
+      "radio",
+      "timecode",
+      "sync",
+      "jjy",
+      "bpc",
+      "dcf77",
+      "msf",
+      "wwvb",
+      "signal",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "مزامنة رموز التوقيت الراديوية",
+        description:
+          "ولّد محليًا صوت رموز توقيت راديوية وفق JJY أو BPC أو DCF77 أو MSF أو WWVB للمساعدة في مزامنة الساعات المتوافقة التي تُضبط بالراديو.",
+      },
+      de: {
+        name: "Funkzeitcode-Synchronisierung",
+        description:
+          "Erzeuge JJY-, BPC-, DCF77-, MSF- oder WWVB-Funkzeitcode-Audio lokal, um kompatible Funkuhren beim Synchronisieren zu unterstützen.",
+      },
+      en: {
+        name: "Radio Timecode Sync",
+        description:
+          "Generate JJY, BPC, DCF77, MSF, or WWVB radio timecode audio locally to help sync compatible radio-controlled clocks.",
+      },
+      es: {
+        name: "Sincronización de códigos horarios de radio",
+        description:
+          "Genera audio de códigos horarios de radio JJY, BPC, DCF77, MSF o WWVB localmente para ayudar a sincronizar relojes radiocontrolados compatibles.",
+      },
+      fr: {
+        name: "Synchronisation de code horaire radio",
+        description:
+          "Générez localement un signal audio de code horaire radio JJY, BPC, DCF77, MSF ou WWVB pour aider à synchroniser les horloges radio-pilotées compatibles.",
+      },
+      he: {
+        name: "סנכרון קוד זמן רדיו",
+        description:
+          "צרו באופן מקומי שמע של קוד זמן רדיו JJY, BPC, DCF77, MSF או WWVB כדי לעזור בסנכרון שעונים מבוקרי-רדיו תואמים.",
+      },
+      hi: {
+        name: "रेडियो टाइमकोड सिंक",
+        description:
+          "संगत रेडियो-नियंत्रित घड़ियों को सिंक करने में मदद के लिए JJY, BPC, DCF77, MSF या WWVB रेडियो टाइमकोड ऑडियो स्थानीय रूप से जनरेट करें।",
+      },
+      id: {
+        name: "Sinkronisasi kode waktu radio",
+        description:
+          "Buat audio kode waktu radio JJY, BPC, DCF77, MSF, atau WWVB secara lokal untuk membantu menyinkronkan jam yang dikendalikan radio dan kompatibel.",
+      },
+      it: {
+        name: "Sincronizzazione del codice orario radio",
+        description:
+          "Genera localmente audio con codice orario radio JJY, BPC, DCF77, MSF o WWVB per aiutare a sincronizzare orologi radiocontrollati compatibili.",
+      },
+      ja: {
+        name: "電波タイムコード同期",
+        description:
+          "JJY、BPC、DCF77、MSF、WWVB の電波タイムコード音声をローカルで生成し、対応する電波時計の同期を支援します。",
+      },
+      ko: {
+        name: "라디오 타임코드 동기화",
+        description:
+          "호환되는 전파 시계 동기화를 돕기 위해 JJY, BPC, DCF77, MSF 또는 WWVB 라디오 타임코드 오디오를 로컬에서 생성합니다.",
+      },
+      ms: {
+        name: "Penyegerakan kod masa radio",
+        description:
+          "Jana audio kod masa radio JJY, BPC, DCF77, MSF, atau WWVB secara setempat untuk membantu menyegerakkan jam kawalan radio yang serasi.",
+      },
+      nl: {
+        name: "Radiotijdcode-synchronisatie",
+        description:
+          "Genereer lokaal JJY-, BPC-, DCF77-, MSF- of WWVB-radiotijdcode-audio om compatibele radiogestuurde klokken te helpen synchroniseren.",
+      },
+      no: {
+        name: "Synkronisering av radiotidskode",
+        description:
+          "Generer JJY-, BPC-, DCF77-, MSF- eller WWVB-radiotidskode-lyd lokalt for å hjelpe med å synkronisere kompatible radiostyrte klokker.",
+      },
+      pl: {
+        name: "Synchronizacja radiowego kodu czasu",
+        description:
+          "Generuj lokalnie dźwiękowe kody czasu radiowego JJY, BPC, DCF77, MSF lub WWVB, aby pomóc synchronizować zgodne zegary sterowane radiowo.",
+      },
+      pt: {
+        name: "Sincronização de código horário por rádio",
+        description:
+          "Gere localmente áudio de código horário de rádio JJY, BPC, DCF77, MSF ou WWVB para ajudar a sincronizar relógios radiocontrolados compatíveis.",
+      },
+      ru: {
+        name: "Синхронизация радиокода времени",
+        description:
+          "Локально генерируйте аудиосигнал радиокода времени JJY, BPC, DCF77, MSF или WWVB, чтобы синхронизировать совместимые часы с радиосинхронизацией.",
+      },
+      sv: {
+        name: "Radiotidskodssynkronisering",
+        description:
+          "Generera radiotidskodsljud för JJY, BPC, DCF77, MSF eller WWVB lokalt för att hjälpa till att synkronisera kompatibla radiostyrda klockor.",
+      },
+      th: {
+        name: "ซิงก์ไทม์โค้ดวิทยุ",
+        description:
+          "สร้างเสียงไทม์โค้ดวิทยุ JJY, BPC, DCF77, MSF หรือ WWVB ภายในเครื่อง เพื่อช่วยซิงก์นาฬิกาที่ควบคุมด้วยวิทยุซึ่งรองรับ",
+      },
+      tr: {
+        name: "Radyo Zaman Kodu Eşitleme",
+        description:
+          "Uyumlu radyo kontrollü saatleri eşitlemeye yardımcı olmak için JJY, BPC, DCF77, MSF veya WWVB radyo zaman kodu sesini yerel olarak oluşturun.",
+      },
+      vi: {
+        name: "Đồng bộ mã thời gian vô tuyến",
+        description:
+          "Tạo âm thanh mã thời gian vô tuyến JJY, BPC, DCF77, MSF hoặc WWVB ngay trên thiết bị để giúp đồng bộ các đồng hồ điều khiển bằng sóng vô tuyến tương thích.",
+      },
+      "zh-CN": {
+        name: "无线电时间码同步",
+        description:
+          "在本地生成 JJY、BPC、DCF77、MSF 或 WWVB 无线电时间码音频，帮助同步兼容的电波钟。",
+      },
+      "zh-TW": {
+        name: "無線電時碼同步",
+        description:
+          "在本機產生 JJY、BPC、DCF77、MSF 或 WWVB 無線電時碼音訊，協助同步相容的電波鐘。",
       },
     },
   },

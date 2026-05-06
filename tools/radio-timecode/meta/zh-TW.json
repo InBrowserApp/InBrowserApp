@@ -1,0 +1,4 @@
+{
+  "name": "無線電時碼同步",
+  "description": "在本機產生 JJY、BPC、DCF77、MSF 或 WWVB 無線電時碼音訊，協助同步相容的電波鐘。"
+}

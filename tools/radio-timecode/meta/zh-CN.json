@@ -1,0 +1,4 @@
+{
+  "name": "无线电时间码同步",
+  "description": "在本地生成 JJY、BPC、DCF77、MSF 或 WWVB 无线电时间码音频，帮助同步兼容的电波钟。"
+}

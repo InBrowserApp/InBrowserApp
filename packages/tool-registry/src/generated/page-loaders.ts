@@ -122,6 +122,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
   "prc-id-validator": () => import("@tool/prc-id-validator/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
+  "radio-timecode": () => import("@tool/radio-timecode/page"),
   "random-number-generator": () => import("@tool/random-number-generator/page"),
   "random-password-generator": () =>
     import("@tool/random-password-generator/page"),

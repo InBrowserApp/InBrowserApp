@@ -1,0 +1,4 @@
+{
+  "name": "Radiotidskodssynkronisering",
+  "description": "Generera radiotidskodsljud för JJY, BPC, DCF77, MSF eller WWVB lokalt för att hjälpa till att synkronisera kompatibla radiostyrda klockor."
+}

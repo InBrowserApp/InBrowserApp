@@ -8742,6 +8742,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "radio-timecode",
+    language: "ar",
+  },
+  {
+    slug: "radio-timecode",
+    language: "de",
+  },
+  {
+    slug: "radio-timecode",
+    language: "en",
+  },
+  {
+    slug: "radio-timecode",
+    language: "es",
+  },
+  {
+    slug: "radio-timecode",
+    language: "fr",
+  },
+  {
+    slug: "radio-timecode",
+    language: "he",
+  },
+  {
+    slug: "radio-timecode",
+    language: "hi",
+  },
+  {
+    slug: "radio-timecode",
+    language: "id",
+  },
+  {
+    slug: "radio-timecode",
+    language: "it",
+  },
+  {
+    slug: "radio-timecode",
+    language: "ja",
+  },
+  {
+    slug: "radio-timecode",
+    language: "ko",
+  },
+  {
+    slug: "radio-timecode",
+    language: "ms",
+  },
+  {
+    slug: "radio-timecode",
+    language: "nl",
+  },
+  {
+    slug: "radio-timecode",
+    language: "no",
+  },
+  {
+    slug: "radio-timecode",
+    language: "pl",
+  },
+  {
+    slug: "radio-timecode",
+    language: "pt",
+  },
+  {
+    slug: "radio-timecode",
+    language: "ru",
+  },
+  {
+    slug: "radio-timecode",
+    language: "sv",
+  },
+  {
+    slug: "radio-timecode",
+    language: "th",
+  },
+  {
+    slug: "radio-timecode",
+    language: "tr",
+  },
+  {
+    slug: "radio-timecode",
+    language: "vi",
+  },
+  {
+    slug: "radio-timecode",
+    language: "zh-CN",
+  },
+  {
+    slug: "radio-timecode",
+    language: "zh-TW",
+  },
+  {
     slug: "random-number-generator",
     language: "ar",
   },

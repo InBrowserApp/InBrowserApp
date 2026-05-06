@@ -1,0 +1,4 @@
+{
+  "name": "Sinkronisasi kode waktu radio",
+  "description": "Buat audio kode waktu radio JJY, BPC, DCF77, MSF, atau WWVB secara lokal untuk membantu menyinkronkan jam yang dikendalikan radio dan kompatibel."
+}

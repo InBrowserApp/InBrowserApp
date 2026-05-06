@@ -1,0 +1,4 @@
+{
+  "name": "Synchronizacja radiowego kodu czasu",
+  "description": "Generuj lokalnie dźwiękowe kody czasu radiowego JJY, BPC, DCF77, MSF lub WWVB, aby pomóc synchronizować zgodne zegary sterowane radiowo."
+}
