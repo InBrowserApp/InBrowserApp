@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Trình phân tích biểu thức cron",
+    "description": "Phân tích cú pháp, xác thực và giải thích lịch cron với chi tiết từng trường và các thời điểm chạy sắp tới."
+  },
+  "input": {
+    "title": "Biểu thức cron",
+    "description": "Nhập biểu thức cron Unix gồm năm trường, hoặc thêm trường giây tùy chọn khi bộ lập lịch của bạn hỗ trợ.",
+    "label": "Biểu thức",
+    "placeholder": "*/5 * * * *",
+    "valid": "Biểu thức hợp lệ",
+    "empty": "Nhập biểu thức cron để bắt đầu.",
+    "invalid": "Biểu thức không hợp lệ",
+    "timezoneNote": "Các thời điểm chạy tiếp theo dùng {timeZone} lấy từ trình duyệt này.",
+    "copy": "Sao chép biểu thức",
+    "copied": "Đã sao chép",
+    "reset": "Đặt lại"
+  },
+  "presets": {
+    "title": "Mẫu nhanh",
+    "description": "Bắt đầu từ một lịch phổ biến, rồi điều chỉnh trực tiếp các trường.",
+    "items": {
+      "everyMinute": "Mỗi phút",
+      "everyFiveMinutes": "Mỗi 5 phút",
+      "everyFifteenMinutes": "Mỗi 15 phút",
+      "everyThirtyMinutes": "Mỗi 30 phút",
+      "hourly": "Mỗi giờ",
+      "dailyMidnight": "Hằng ngày lúc nửa đêm",
+      "dailyNoon": "Hằng ngày lúc giữa trưa",
+      "weeklySunday": "Mỗi Chủ nhật",
+      "weeklyMondayMorning": "Mỗi Thứ Hai lúc 9 giờ sáng",
+      "monthlyFirstDay": "Ngày đầu tiên của tháng",
+      "weekdaysMorning": "Các ngày trong tuần lúc 9 giờ sáng"
+    }
+  },
+  "breakdown": {
+    "title": "Chi tiết các trường",
+    "description": "Đọc từng trường từ trái sang phải để xem trường đó điều khiển phần nào của lịch.",
+    "field": "Trường",
+    "value": "Giá trị",
+    "allowedRange": "Phạm vi cho phép",
+    "fields": {
+      "second": "Giây",
+      "minute": "Phút",
+      "hour": "Giờ",
+      "dayOfMonth": "Ngày trong tháng",
+      "month": "Tháng",
+      "dayOfWeek": "Ngày trong tuần"
+    }
+  },
+  "schedule": {
+    "title": "Các lần chạy tiếp theo",
+    "description": "Xem trước 10 thời điểm chạy khớp tiếp theo từ thời gian hiện tại của trình duyệt.",
+    "summaryLabel": "Tóm tắt",
+    "dateTimeLabel": "Ngày và giờ",
+    "relativeLabel": "Tương đối",
+    "emptyTitle": "Chưa có biểu thức",
+    "emptyDescription": "Nhập biểu thức cron để xem phần giải thích, các trường và các thời điểm chạy tiếp theo."
+  },
+  "relative": {
+    "now": "bây giờ",
+    "inSeconds": "trong {count} giây",
+    "inMinutes": "trong {count} phút",
+    "inHours": "trong {count} giờ",
+    "inDays": "trong {count} ngày"
+  }
+}

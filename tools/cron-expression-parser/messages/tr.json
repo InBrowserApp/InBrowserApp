@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron İfadesi Ayrıştırıcı",
+    "description": "Cron zamanlamalarını alan ayrıntıları ve yaklaşan çalıştırma zamanlarıyla ayrıştırın, doğrulayın ve açıklayın."
+  },
+  "input": {
+    "title": "Cron ifadesi",
+    "description": "Beş alanlı bir Unix cron ifadesi girin veya zamanlayıcınız destekliyorsa isteğe bağlı saniye alanını ekleyin.",
+    "label": "İfade",
+    "placeholder": "*/5 * * * *",
+    "valid": "Geçerli ifade",
+    "empty": "Başlamak için bir cron ifadesi girin.",
+    "invalid": "Geçersiz ifade",
+    "timezoneNote": "Sonraki çalıştırma zamanları bu tarayıcıdaki {timeZone} saat dilimini kullanır.",
+    "copy": "İfadeyi kopyala",
+    "copied": "Kopyalandı",
+    "reset": "Sıfırla"
+  },
+  "presets": {
+    "title": "Hızlı hazır ayarlar",
+    "description": "Yaygın bir zamanlamadan başlayın, ardından alanları doğrudan ayarlayın.",
+    "items": {
+      "everyMinute": "Her dakika",
+      "everyFiveMinutes": "Her 5 dakikada bir",
+      "everyFifteenMinutes": "Her 15 dakikada bir",
+      "everyThirtyMinutes": "Her 30 dakikada bir",
+      "hourly": "Saatlik",
+      "dailyMidnight": "Her gün gece yarısı",
+      "dailyNoon": "Her gün öğlen",
+      "weeklySunday": "Her Pazar",
+      "weeklyMondayMorning": "Her Pazartesi 09:00'da",
+      "monthlyFirstDay": "Ayın ilk günü",
+      "weekdaysMorning": "Hafta içi 09:00'da"
+    }
+  },
+  "breakdown": {
+    "title": "Alan dökümü",
+    "description": "Zamanlamanın hangi bölümünü kontrol ettiğini görmek için her alanı soldan sağa okuyun.",
+    "field": "Alan",
+    "value": "Değer",
+    "allowedRange": "İzin verilen aralık",
+    "fields": {
+      "second": "Saniye",
+      "minute": "Dakika",
+      "hour": "Saat",
+      "dayOfMonth": "Ayın günü",
+      "month": "Ay",
+      "dayOfWeek": "Haftanın günü"
+    }
+  },
+  "schedule": {
+    "title": "Sonraki çalıştırmalar",
+    "description": "Geçerli tarayıcı saatinden itibaren eşleşen sonraki 10 çalıştırma zamanını önizleyin.",
+    "summaryLabel": "Özet",
+    "dateTimeLabel": "Tarih ve saat",
+    "relativeLabel": "Göreli",
+    "emptyTitle": "Henüz ifade yok",
+    "emptyDescription": "Açıklamasını, alanlarını ve sonraki çalıştırma zamanlarını görmek için bir cron ifadesi girin."
+  },
+  "relative": {
+    "now": "şimdi",
+    "inSeconds": "{count} saniye içinde",
+    "inMinutes": "{count} dakika içinde",
+    "inHours": "{count} saat içinde",
+    "inDays": "{count} gün içinde"
+  }
+}

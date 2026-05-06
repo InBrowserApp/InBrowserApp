@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron Expression Parser",
+    "description": "Tolk, valider og forklar cron-planer med feltdetaljer og kommende kjøretidspunkter."
+  },
+  "input": {
+    "title": "Cron-uttrykk",
+    "description": "Skriv inn et Unix-cron-uttrykk med fem felt, eller inkluder et valgfritt sekundfelt når planleggeren din støtter det.",
+    "label": "Uttrykk",
+    "placeholder": "*/5 * * * *",
+    "valid": "Gyldig uttrykk",
+    "empty": "Skriv inn et cron-uttrykk for å starte.",
+    "invalid": "Ugyldig uttrykk",
+    "timezoneNote": "Neste kjøretidspunkter bruker {timeZone} fra denne nettleseren.",
+    "copy": "Kopier uttrykk",
+    "copied": "Kopiert",
+    "reset": "Tilbakestill"
+  },
+  "presets": {
+    "title": "Raske forhåndsvalg",
+    "description": "Start med en vanlig tidsplan, og juster deretter feltene direkte.",
+    "items": {
+      "everyMinute": "Hvert minutt",
+      "everyFiveMinutes": "Hvert 5. minutt",
+      "everyFifteenMinutes": "Hvert 15. minutt",
+      "everyThirtyMinutes": "Hvert 30. minutt",
+      "hourly": "Hver time",
+      "dailyMidnight": "Daglig ved midnatt",
+      "dailyNoon": "Daglig kl. 12",
+      "weeklySunday": "Hver søndag",
+      "weeklyMondayMorning": "Hver mandag kl. 09",
+      "monthlyFirstDay": "Første dag i måneden",
+      "weekdaysMorning": "Ukedager kl. 09"
+    }
+  },
+  "breakdown": {
+    "title": "Feltoversikt",
+    "description": "Les hvert felt fra venstre mot høyre for å se hvilken del av tidsplanen det styrer.",
+    "field": "Felt",
+    "value": "Verdi",
+    "allowedRange": "Tillatt område",
+    "fields": {
+      "second": "Sekund",
+      "minute": "Minutt",
+      "hour": "Time",
+      "dayOfMonth": "Dag i måneden",
+      "month": "Måned",
+      "dayOfWeek": "Ukedag"
+    }
+  },
+  "schedule": {
+    "title": "Neste kjøringer",
+    "description": "Forhåndsvis de neste 10 matchende kjøretidspunktene fra gjeldende nettlesertid.",
+    "summaryLabel": "Sammendrag",
+    "dateTimeLabel": "Dato og klokkeslett",
+    "relativeLabel": "Relativt",
+    "emptyTitle": "Ingen uttrykk ennå",
+    "emptyDescription": "Skriv inn et cron-uttrykk for å se forklaringen, feltene og de neste kjøretidspunktene."
+  },
+  "relative": {
+    "now": "nå",
+    "inSeconds": "om {count} sekunder",
+    "inMinutes": "om {count} minutter",
+    "inHours": "om {count} timer",
+    "inDays": "om {count} dager"
+  }
+}

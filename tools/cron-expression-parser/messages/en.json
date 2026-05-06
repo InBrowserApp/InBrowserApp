@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron Expression Parser",
+    "description": "Parse, validate, and explain cron schedules with field details and upcoming run times."
+  },
+  "input": {
+    "title": "Cron expression",
+    "description": "Enter a five-field Unix cron expression, or include an optional seconds field when your scheduler supports it.",
+    "label": "Expression",
+    "placeholder": "*/5 * * * *",
+    "valid": "Valid expression",
+    "empty": "Enter a cron expression to start.",
+    "invalid": "Invalid expression",
+    "timezoneNote": "Next run times use {timeZone} from this browser.",
+    "copy": "Copy expression",
+    "copied": "Copied",
+    "reset": "Reset"
+  },
+  "presets": {
+    "title": "Quick presets",
+    "description": "Start from a common schedule, then adjust the fields directly.",
+    "items": {
+      "everyMinute": "Every minute",
+      "everyFiveMinutes": "Every 5 minutes",
+      "everyFifteenMinutes": "Every 15 minutes",
+      "everyThirtyMinutes": "Every 30 minutes",
+      "hourly": "Hourly",
+      "dailyMidnight": "Daily at midnight",
+      "dailyNoon": "Daily at noon",
+      "weeklySunday": "Every Sunday",
+      "weeklyMondayMorning": "Every Monday at 9 AM",
+      "monthlyFirstDay": "First day of month",
+      "weekdaysMorning": "Weekdays at 9 AM"
+    }
+  },
+  "breakdown": {
+    "title": "Field breakdown",
+    "description": "Read each field from left to right to see what part of the schedule it controls.",
+    "field": "Field",
+    "value": "Value",
+    "allowedRange": "Allowed range",
+    "fields": {
+      "second": "Second",
+      "minute": "Minute",
+      "hour": "Hour",
+      "dayOfMonth": "Day of month",
+      "month": "Month",
+      "dayOfWeek": "Day of week"
+    }
+  },
+  "schedule": {
+    "title": "Next executions",
+    "description": "Preview the next 10 matching run times from the current browser time.",
+    "summaryLabel": "Summary",
+    "dateTimeLabel": "Date and time",
+    "relativeLabel": "Relative",
+    "emptyTitle": "No expression yet",
+    "emptyDescription": "Enter a cron expression to see its explanation, fields, and next run times."
+  },
+  "relative": {
+    "now": "now",
+    "inSeconds": "in {count} seconds",
+    "inMinutes": "in {count} minutes",
+    "inHours": "in {count} hours",
+    "inDays": "in {count} days"
+  }
+}

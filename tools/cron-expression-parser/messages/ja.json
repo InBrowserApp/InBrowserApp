@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron Expression Parser",
+    "description": "cron スケジュールを解析、検証、説明し、フィールドの詳細と今後の実行時刻を確認できます。"
+  },
+  "input": {
+    "title": "cron 式",
+    "description": "5 フィールドの Unix cron 式を入力します。スケジューラーが対応している場合は、任意の秒フィールドも含められます。",
+    "label": "式",
+    "placeholder": "*/5 * * * *",
+    "valid": "有効な式",
+    "empty": "開始するには cron 式を入力してください。",
+    "invalid": "無効な式",
+    "timezoneNote": "次回の実行時刻には、このブラウザーの {timeZone} を使用します。",
+    "copy": "式をコピー",
+    "copied": "コピーしました",
+    "reset": "リセット"
+  },
+  "presets": {
+    "title": "クイックプリセット",
+    "description": "一般的なスケジュールから始めて、各フィールドを直接調整できます。",
+    "items": {
+      "everyMinute": "毎分",
+      "everyFiveMinutes": "5 分ごと",
+      "everyFifteenMinutes": "15 分ごと",
+      "everyThirtyMinutes": "30 分ごと",
+      "hourly": "毎時",
+      "dailyMidnight": "毎日 0 時",
+      "dailyNoon": "毎日正午",
+      "weeklySunday": "毎週日曜日",
+      "weeklyMondayMorning": "毎週月曜日の午前 9 時",
+      "monthlyFirstDay": "毎月 1 日",
+      "weekdaysMorning": "平日の午前 9 時"
+    }
+  },
+  "breakdown": {
+    "title": "フィールド内訳",
+    "description": "各フィールドを左から右へ読み、スケジュールのどの部分を制御しているかを確認します。",
+    "field": "フィールド",
+    "value": "値",
+    "allowedRange": "許可範囲",
+    "fields": {
+      "second": "秒",
+      "minute": "分",
+      "hour": "時",
+      "dayOfMonth": "月の日",
+      "month": "月",
+      "dayOfWeek": "曜日"
+    }
+  },
+  "schedule": {
+    "title": "次回の実行",
+    "description": "現在のブラウザー時刻から、次に一致する 10 件の実行時刻をプレビューします。",
+    "summaryLabel": "要約",
+    "dateTimeLabel": "日時",
+    "relativeLabel": "相対時間",
+    "emptyTitle": "まだ式がありません",
+    "emptyDescription": "cron 式を入力すると、説明、フィールド、次回の実行時刻が表示されます。"
+  },
+  "relative": {
+    "now": "今",
+    "inSeconds": "{count} 秒後",
+    "inMinutes": "{count} 分後",
+    "inHours": "{count} 時間後",
+    "inDays": "{count} 日後"
+  }
+}

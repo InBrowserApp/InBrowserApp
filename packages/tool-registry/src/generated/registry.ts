@@ -3706,6 +3706,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cron-expression-parser",
+    category: "time",
+    icon: "clock3",
+    tags: ["cron", "schedule", "parser", "unix", "time", "automation"],
+    locales: {
+      ar: {
+        name: "محلل تعبيرات Cron",
+        description:
+          "حلّل جداول Cron وتحقق منها واشرحها مع تفاصيل الحقول وأوقات التشغيل القادمة.",
+      },
+      de: {
+        name: "Cron Expression Parser",
+        description:
+          "Analysieren, validieren und erklären Sie Cron-Zeitpläne mit Felddetails und kommenden Ausführungszeiten.",
+      },
+      en: {
+        name: "Cron Expression Parser",
+        description:
+          "Parse, validate, and explain cron schedules with field details and upcoming run times.",
+      },
+      es: {
+        name: "Cron Expression Parser",
+        description:
+          "Analiza, valida y explica programaciones cron con detalles de campos y próximas ejecuciones.",
+      },
+      fr: {
+        name: "Analyseur d’expressions cron",
+        description:
+          "Analysez, validez et expliquez les planifications cron avec le détail des champs et les prochaines heures d’exécution.",
+      },
+      he: {
+        name: "מנתח ביטויי Cron",
+        description:
+          "נתח, אמת והסבר לוחות זמנים של Cron עם פרטי שדות וזמני הרצה קרובים.",
+      },
+      hi: {
+        name: "Cron Expression Parser",
+        description:
+          "फ़ील्ड विवरण और आगामी रन समयों के साथ cron शेड्यूल को पार्स, मान्य और समझाएँ।",
+      },
+      id: {
+        name: "Cron Expression Parser",
+        description:
+          "Uraikan, validasi, dan jelaskan jadwal cron dengan detail field dan waktu eksekusi berikutnya.",
+      },
+      it: {
+        name: "Cron Expression Parser",
+        description:
+          "Analizza, convalida e spiega le pianificazioni cron con dettagli sui campi e prossimi orari di esecuzione.",
+      },
+      ja: {
+        name: "Cron Expression Parser",
+        description:
+          "cron スケジュールを解析、検証、説明し、フィールドの詳細と今後の実行時刻を確認できます。",
+      },
+      ko: {
+        name: "Cron 표현식 파서",
+        description:
+          "필드 세부 정보와 예정된 실행 시간을 통해 cron 일정을 파싱, 검증하고 설명합니다.",
+      },
+      ms: {
+        name: "Penghurai Ungkapan Cron",
+        description:
+          "Huraikan, sahkan dan jelaskan jadual cron dengan butiran medan dan masa pelaksanaan akan datang.",
+      },
+      nl: {
+        name: "Cron Expression Parser",
+        description:
+          "Ontleed, valideer en verklaar cron-schema's met velddetails en aankomende uitvoeringstijden.",
+      },
+      no: {
+        name: "Cron Expression Parser",
+        description:
+          "Tolk, valider og forklar cron-planer med feltdetaljer og kommende kjøretidspunkter.",
+      },
+      pl: {
+        name: "Parser wyrażeń cron",
+        description:
+          "Analizuj, waliduj i objaśniaj harmonogramy cron ze szczegółami pól oraz nadchodzącymi czasami uruchomień.",
+      },
+      pt: {
+        name: "Cron Expression Parser",
+        description:
+          "Analise, valide e explique agendamentos cron com detalhes dos campos e próximos horários de execução.",
+      },
+      ru: {
+        name: "Парсер cron-выражений",
+        description:
+          "Разбирайте, проверяйте и объясняйте расписания cron с деталями полей и ближайшими запусками.",
+      },
+      sv: {
+        name: "Cron Expression Parser",
+        description:
+          "Tolka, validera och förklara cron-scheman med fältdetaljer och kommande körningstider.",
+      },
+      th: {
+        name: "ตัวแยกวิเคราะห์นิพจน์ cron",
+        description:
+          "แยกวิเคราะห์ ตรวจสอบความถูกต้อง และอธิบายกำหนดการ cron พร้อมรายละเอียดของแต่ละฟิลด์และเวลารันถัดไป",
+      },
+      tr: {
+        name: "Cron İfadesi Ayrıştırıcı",
+        description:
+          "Cron zamanlamalarını alan ayrıntıları ve yaklaşan çalıştırma zamanlarıyla ayrıştırın, doğrulayın ve açıklayın.",
+      },
+      vi: {
+        name: "Trình phân tích biểu thức cron",
+        description:
+          "Phân tích cú pháp, xác thực và giải thích lịch cron với chi tiết từng trường và các thời điểm chạy sắp tới.",
+      },
+      "zh-CN": {
+        name: "Cron 表达式解析器",
+        description:
+          "解析、验证并解释 Cron 调度，并显示字段详情和后续运行时间。",
+      },
+      "zh-TW": {
+        name: "Cron 表達式解析器",
+        description:
+          "解析、驗證並說明 cron 排程，包含欄位細節與即將執行的時間。",
+      },
+    },
+  },
+  {
     slug: "css-box-shadow-generator",
     category: "web",
     icon: "image",
@@ -21667,6 +21790,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "信用卡號驗證器",
         description: "使用 Luhn 演算法驗證信用卡號並識別卡品牌",
+      },
+    },
+  },
+  "cron-expression-parser": {
+    slug: "cron-expression-parser",
+    category: "time",
+    icon: "clock3",
+    tags: ["cron", "schedule", "parser", "unix", "time", "automation"],
+    locales: {
+      ar: {
+        name: "محلل تعبيرات Cron",
+        description:
+          "حلّل جداول Cron وتحقق منها واشرحها مع تفاصيل الحقول وأوقات التشغيل القادمة.",
+      },
+      de: {
+        name: "Cron Expression Parser",
+        description:
+          "Analysieren, validieren und erklären Sie Cron-Zeitpläne mit Felddetails und kommenden Ausführungszeiten.",
+      },
+      en: {
+        name: "Cron Expression Parser",
+        description:
+          "Parse, validate, and explain cron schedules with field details and upcoming run times.",
+      },
+      es: {
+        name: "Cron Expression Parser",
+        description:
+          "Analiza, valida y explica programaciones cron con detalles de campos y próximas ejecuciones.",
+      },
+      fr: {
+        name: "Analyseur d’expressions cron",
+        description:
+          "Analysez, validez et expliquez les planifications cron avec le détail des champs et les prochaines heures d’exécution.",
+      },
+      he: {
+        name: "מנתח ביטויי Cron",
+        description:
+          "נתח, אמת והסבר לוחות זמנים של Cron עם פרטי שדות וזמני הרצה קרובים.",
+      },
+      hi: {
+        name: "Cron Expression Parser",
+        description:
+          "फ़ील्ड विवरण और आगामी रन समयों के साथ cron शेड्यूल को पार्स, मान्य और समझाएँ।",
+      },
+      id: {
+        name: "Cron Expression Parser",
+        description:
+          "Uraikan, validasi, dan jelaskan jadwal cron dengan detail field dan waktu eksekusi berikutnya.",
+      },
+      it: {
+        name: "Cron Expression Parser",
+        description:
+          "Analizza, convalida e spiega le pianificazioni cron con dettagli sui campi e prossimi orari di esecuzione.",
+      },
+      ja: {
+        name: "Cron Expression Parser",
+        description:
+          "cron スケジュールを解析、検証、説明し、フィールドの詳細と今後の実行時刻を確認できます。",
+      },
+      ko: {
+        name: "Cron 표현식 파서",
+        description:
+          "필드 세부 정보와 예정된 실행 시간을 통해 cron 일정을 파싱, 검증하고 설명합니다.",
+      },
+      ms: {
+        name: "Penghurai Ungkapan Cron",
+        description:
+          "Huraikan, sahkan dan jelaskan jadual cron dengan butiran medan dan masa pelaksanaan akan datang.",
+      },
+      nl: {
+        name: "Cron Expression Parser",
+        description:
+          "Ontleed, valideer en verklaar cron-schema's met velddetails en aankomende uitvoeringstijden.",
+      },
+      no: {
+        name: "Cron Expression Parser",
+        description:
+          "Tolk, valider og forklar cron-planer med feltdetaljer og kommende kjøretidspunkter.",
+      },
+      pl: {
+        name: "Parser wyrażeń cron",
+        description:
+          "Analizuj, waliduj i objaśniaj harmonogramy cron ze szczegółami pól oraz nadchodzącymi czasami uruchomień.",
+      },
+      pt: {
+        name: "Cron Expression Parser",
+        description:
+          "Analise, valide e explique agendamentos cron com detalhes dos campos e próximos horários de execução.",
+      },
+      ru: {
+        name: "Парсер cron-выражений",
+        description:
+          "Разбирайте, проверяйте и объясняйте расписания cron с деталями полей и ближайшими запусками.",
+      },
+      sv: {
+        name: "Cron Expression Parser",
+        description:
+          "Tolka, validera och förklara cron-scheman med fältdetaljer och kommande körningstider.",
+      },
+      th: {
+        name: "ตัวแยกวิเคราะห์นิพจน์ cron",
+        description:
+          "แยกวิเคราะห์ ตรวจสอบความถูกต้อง และอธิบายกำหนดการ cron พร้อมรายละเอียดของแต่ละฟิลด์และเวลารันถัดไป",
+      },
+      tr: {
+        name: "Cron İfadesi Ayrıştırıcı",
+        description:
+          "Cron zamanlamalarını alan ayrıntıları ve yaklaşan çalıştırma zamanlarıyla ayrıştırın, doğrulayın ve açıklayın.",
+      },
+      vi: {
+        name: "Trình phân tích biểu thức cron",
+        description:
+          "Phân tích cú pháp, xác thực và giải thích lịch cron với chi tiết từng trường và các thời điểm chạy sắp tới.",
+      },
+      "zh-CN": {
+        name: "Cron 表达式解析器",
+        description:
+          "解析、验证并解释 Cron 调度，并显示字段详情和后续运行时间。",
+      },
+      "zh-TW": {
+        name: "Cron 表達式解析器",
+        description:
+          "解析、驗證並說明 cron 排程，包含欄位細節與即將執行的時間。",
       },
     },
   },

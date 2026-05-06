@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron Expression Parser",
+    "description": "Analizza, convalida e spiega le pianificazioni cron con dettagli sui campi e prossimi orari di esecuzione."
+  },
+  "input": {
+    "title": "Espressione cron",
+    "description": "Inserisci un'espressione cron Unix a cinque campi oppure includi un campo dei secondi opzionale quando il sistema di pianificazione lo supporta.",
+    "label": "Espressione",
+    "placeholder": "*/5 * * * *",
+    "valid": "Espressione valida",
+    "empty": "Inserisci un'espressione cron per iniziare.",
+    "invalid": "Espressione non valida",
+    "timezoneNote": "I prossimi orari di esecuzione usano {timeZone} di questo browser.",
+    "copy": "Copia espressione",
+    "copied": "Copiata",
+    "reset": "Reimposta"
+  },
+  "presets": {
+    "title": "Preimpostazioni rapide",
+    "description": "Parti da una pianificazione comune, poi modifica direttamente i campi.",
+    "items": {
+      "everyMinute": "Ogni minuto",
+      "everyFiveMinutes": "Ogni 5 minuti",
+      "everyFifteenMinutes": "Ogni 15 minuti",
+      "everyThirtyMinutes": "Ogni 30 minuti",
+      "hourly": "Ogni ora",
+      "dailyMidnight": "Ogni giorno a mezzanotte",
+      "dailyNoon": "Ogni giorno a mezzogiorno",
+      "weeklySunday": "Ogni domenica",
+      "weeklyMondayMorning": "Ogni lunedì alle 09:00",
+      "monthlyFirstDay": "Primo giorno del mese",
+      "weekdaysMorning": "Giorni feriali alle 09:00"
+    }
+  },
+  "breakdown": {
+    "title": "Dettaglio dei campi",
+    "description": "Leggi ogni campo da sinistra a destra per vedere quale parte della pianificazione controlla.",
+    "field": "Campo",
+    "value": "Valore",
+    "allowedRange": "Intervallo consentito",
+    "fields": {
+      "second": "Secondo",
+      "minute": "Minuto",
+      "hour": "Ora",
+      "dayOfMonth": "Giorno del mese",
+      "month": "Mese",
+      "dayOfWeek": "Giorno della settimana"
+    }
+  },
+  "schedule": {
+    "title": "Prossime esecuzioni",
+    "description": "Visualizza in anteprima le prossime 10 esecuzioni corrispondenti a partire dall'ora corrente del browser.",
+    "summaryLabel": "Riepilogo",
+    "dateTimeLabel": "Data e ora",
+    "relativeLabel": "Relativo",
+    "emptyTitle": "Nessuna espressione ancora",
+    "emptyDescription": "Inserisci un'espressione cron per vederne spiegazione, campi e prossimi orari di esecuzione."
+  },
+  "relative": {
+    "now": "ora",
+    "inSeconds": "tra {count} secondi",
+    "inMinutes": "tra {count} minuti",
+    "inHours": "tra {count} ore",
+    "inDays": "tra {count} giorni"
+  }
+}

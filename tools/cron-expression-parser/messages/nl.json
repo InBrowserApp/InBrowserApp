@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron Expression Parser",
+    "description": "Ontleed, valideer en verklaar cron-schema's met velddetails en aankomende uitvoeringstijden."
+  },
+  "input": {
+    "title": "Cron-expressie",
+    "description": "Voer een Unix-cron-expressie met vijf velden in, of voeg een optioneel secondenveld toe wanneer je scheduler dat ondersteunt.",
+    "label": "Expressie",
+    "placeholder": "*/5 * * * *",
+    "valid": "Geldige expressie",
+    "empty": "Voer een cron-expressie in om te beginnen.",
+    "invalid": "Ongeldige expressie",
+    "timezoneNote": "Volgende uitvoeringstijden gebruiken {timeZone} van deze browser.",
+    "copy": "Expressie kopiëren",
+    "copied": "Gekopieerd",
+    "reset": "Resetten"
+  },
+  "presets": {
+    "title": "Snelkeuzes",
+    "description": "Begin met een gangbaar schema en pas de velden daarna direct aan.",
+    "items": {
+      "everyMinute": "Elke minuut",
+      "everyFiveMinutes": "Elke 5 minuten",
+      "everyFifteenMinutes": "Elke 15 minuten",
+      "everyThirtyMinutes": "Elke 30 minuten",
+      "hourly": "Elk uur",
+      "dailyMidnight": "Dagelijks om middernacht",
+      "dailyNoon": "Dagelijks om 12:00",
+      "weeklySunday": "Elke zondag",
+      "weeklyMondayMorning": "Elke maandag om 09:00",
+      "monthlyFirstDay": "Eerste dag van de maand",
+      "weekdaysMorning": "Werkdagen om 09:00"
+    }
+  },
+  "breakdown": {
+    "title": "Veldanalyse",
+    "description": "Lees elk veld van links naar rechts om te zien welk deel van het schema het aanstuurt.",
+    "field": "Veld",
+    "value": "Waarde",
+    "allowedRange": "Toegestaan bereik",
+    "fields": {
+      "second": "Seconde",
+      "minute": "Minuut",
+      "hour": "Uur",
+      "dayOfMonth": "Dag van de maand",
+      "month": "Maand",
+      "dayOfWeek": "Dag van de week"
+    }
+  },
+  "schedule": {
+    "title": "Volgende uitvoeringen",
+    "description": "Bekijk een voorbeeld van de volgende 10 overeenkomende uitvoeringstijden vanaf de huidige browsertijd.",
+    "summaryLabel": "Samenvatting",
+    "dateTimeLabel": "Datum en tijd",
+    "relativeLabel": "Relatief",
+    "emptyTitle": "Nog geen expressie",
+    "emptyDescription": "Voer een cron-expressie in om de uitleg, velden en volgende uitvoeringstijden te zien."
+  },
+  "relative": {
+    "now": "nu",
+    "inSeconds": "over {count} seconden",
+    "inMinutes": "over {count} minuten",
+    "inHours": "over {count} uur",
+    "inDays": "over {count} dagen"
+  }
+}

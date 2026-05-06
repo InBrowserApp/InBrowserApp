@@ -1,0 +1,4 @@
+{
+  "name": "Trình phân tích biểu thức cron",
+  "description": "Phân tích cú pháp, xác thực và giải thích lịch cron với chi tiết từng trường và các thời điểm chạy sắp tới."
+}

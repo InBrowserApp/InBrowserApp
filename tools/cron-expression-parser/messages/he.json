@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "מנתח ביטויי Cron",
+    "description": "נתח, אמת והסבר לוחות זמנים של Cron עם פרטי שדות וזמני הרצה קרובים."
+  },
+  "input": {
+    "title": "ביטוי Cron",
+    "description": "הזינו ביטוי Cron של Unix בן חמישה שדות, או כללו שדה שניות אופציונלי כשהמתזמן שלכם תומך בכך.",
+    "label": "ביטוי",
+    "placeholder": "*/5 * * * *",
+    "valid": "ביטוי תקין",
+    "empty": "הזינו ביטוי Cron כדי להתחיל.",
+    "invalid": "ביטוי לא תקין",
+    "timezoneNote": "זמני ההרצה הבאים משתמשים ב-{timeZone} מהדפדפן הזה.",
+    "copy": "העתקת ביטוי",
+    "copied": "הועתק",
+    "reset": "איפוס"
+  },
+  "presets": {
+    "title": "הגדרות מהירות",
+    "description": "התחילו מלוח זמנים נפוץ, ואז התאימו את השדות ישירות.",
+    "items": {
+      "everyMinute": "כל דקה",
+      "everyFiveMinutes": "כל 5 דקות",
+      "everyFifteenMinutes": "כל 15 דקות",
+      "everyThirtyMinutes": "כל 30 דקות",
+      "hourly": "כל שעה",
+      "dailyMidnight": "כל יום בחצות",
+      "dailyNoon": "כל יום בצהריים",
+      "weeklySunday": "כל יום ראשון",
+      "weeklyMondayMorning": "כל יום שני ב-9 בבוקר",
+      "monthlyFirstDay": "ביום הראשון של החודש",
+      "weekdaysMorning": "בימי חול ב-9 בבוקר"
+    }
+  },
+  "breakdown": {
+    "title": "פירוט השדות",
+    "description": "קראו כל שדה משמאל לימין כדי לראות על איזה חלק בלוח הזמנים הוא שולט.",
+    "field": "שדה",
+    "value": "ערך",
+    "allowedRange": "טווח מותר",
+    "fields": {
+      "second": "שנייה",
+      "minute": "דקה",
+      "hour": "שעה",
+      "dayOfMonth": "יום בחודש",
+      "month": "חודש",
+      "dayOfWeek": "יום בשבוע"
+    }
+  },
+  "schedule": {
+    "title": "ההרצות הבאות",
+    "description": "תצוגה מקדימה של 10 זמני ההרצה התואמים הבאים לפי זמן הדפדפן הנוכחי.",
+    "summaryLabel": "סיכום",
+    "dateTimeLabel": "תאריך ושעה",
+    "relativeLabel": "יחסי",
+    "emptyTitle": "אין עדיין ביטוי",
+    "emptyDescription": "הזינו ביטוי Cron כדי לראות את ההסבר שלו, השדות וזמני ההרצה הבאים."
+  },
+  "relative": {
+    "now": "עכשיו",
+    "inSeconds": "בעוד {count} שניות",
+    "inMinutes": "בעוד {count} דקות",
+    "inHours": "בעוד {count} שעות",
+    "inDays": "בעוד {count} ימים"
+  }
+}

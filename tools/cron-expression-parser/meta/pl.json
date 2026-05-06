@@ -1,0 +1,4 @@
+{
+  "name": "Parser wyrażeń cron",
+  "description": "Analizuj, waliduj i objaśniaj harmonogramy cron ze szczegółami pól oraz nadchodzącymi czasami uruchomień."
+}

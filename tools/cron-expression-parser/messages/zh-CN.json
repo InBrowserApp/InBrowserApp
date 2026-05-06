@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron 表达式解析器",
+    "description": "解析、验证并解释 Cron 调度，并显示字段详情和后续运行时间。"
+  },
+  "input": {
+    "title": "Cron 表达式",
+    "description": "输入五字段 Unix cron 表达式；如果你的调度器支持，也可以包含可选的秒字段。",
+    "label": "表达式",
+    "placeholder": "*/5 * * * *",
+    "valid": "表达式有效",
+    "empty": "输入 Cron 表达式即可开始。",
+    "invalid": "表达式无效",
+    "timezoneNote": "后续运行时间使用此浏览器的 {timeZone}。",
+    "copy": "复制表达式",
+    "copied": "已复制",
+    "reset": "重置"
+  },
+  "presets": {
+    "title": "快速预设",
+    "description": "从常见调度开始，然后直接调整各字段。",
+    "items": {
+      "everyMinute": "每分钟",
+      "everyFiveMinutes": "每 5 分钟",
+      "everyFifteenMinutes": "每 15 分钟",
+      "everyThirtyMinutes": "每 30 分钟",
+      "hourly": "每小时",
+      "dailyMidnight": "每天午夜",
+      "dailyNoon": "每天中午",
+      "weeklySunday": "每周日",
+      "weeklyMondayMorning": "每周一上午 9 点",
+      "monthlyFirstDay": "每月第一天",
+      "weekdaysMorning": "工作日上午 9 点"
+    }
+  },
+  "breakdown": {
+    "title": "字段分解",
+    "description": "从左到右阅读每个字段，查看它控制调度的哪一部分。",
+    "field": "字段",
+    "value": "值",
+    "allowedRange": "允许范围",
+    "fields": {
+      "second": "秒",
+      "minute": "分钟",
+      "hour": "小时",
+      "dayOfMonth": "月中的日期",
+      "month": "月份",
+      "dayOfWeek": "星期"
+    }
+  },
+  "schedule": {
+    "title": "后续执行",
+    "description": "从当前浏览器时间开始，预览接下来 10 次匹配的运行时间。",
+    "summaryLabel": "摘要",
+    "dateTimeLabel": "日期和时间",
+    "relativeLabel": "相对时间",
+    "emptyTitle": "尚无表达式",
+    "emptyDescription": "输入 Cron 表达式即可查看说明、字段和后续运行时间。"
+  },
+  "relative": {
+    "now": "现在",
+    "inSeconds": "在 {count} 秒后",
+    "inMinutes": "在 {count} 分钟后",
+    "inHours": "在 {count} 小时后",
+    "inDays": "在 {count} 天后"
+  }
+}

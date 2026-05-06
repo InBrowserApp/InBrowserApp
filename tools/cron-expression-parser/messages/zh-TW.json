@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "name": "Cron 表達式解析器",
+    "description": "解析、驗證並說明 cron 排程，包含欄位細節與即將執行的時間。"
+  },
+  "input": {
+    "title": "Cron 表達式",
+    "description": "輸入五欄位 Unix cron 表達式；如果你的排程器支援，也可以包含選用的秒數欄位。",
+    "label": "表達式",
+    "placeholder": "*/5 * * * *",
+    "valid": "有效表達式",
+    "empty": "輸入 cron 表達式即可開始。",
+    "invalid": "無效表達式",
+    "timezoneNote": "下次執行時間會使用此瀏覽器的 {timeZone}。",
+    "copy": "複製表達式",
+    "copied": "已複製",
+    "reset": "重設"
+  },
+  "presets": {
+    "title": "快速預設",
+    "description": "從常見排程開始，再直接調整各個欄位。",
+    "items": {
+      "everyMinute": "每分鐘",
+      "everyFiveMinutes": "每 5 分鐘",
+      "everyFifteenMinutes": "每 15 分鐘",
+      "everyThirtyMinutes": "每 30 分鐘",
+      "hourly": "每小時",
+      "dailyMidnight": "每天午夜",
+      "dailyNoon": "每天中午",
+      "weeklySunday": "每週日",
+      "weeklyMondayMorning": "每週一上午 9 點",
+      "monthlyFirstDay": "每月第一天",
+      "weekdaysMorning": "平日上午 9 點"
+    }
+  },
+  "breakdown": {
+    "title": "欄位分解",
+    "description": "由左至右閱讀每個欄位，查看它控制排程的哪個部分。",
+    "field": "欄位",
+    "value": "值",
+    "allowedRange": "允許範圍",
+    "fields": {
+      "second": "秒",
+      "minute": "分鐘",
+      "hour": "小時",
+      "dayOfMonth": "每月日期",
+      "month": "月份",
+      "dayOfWeek": "星期幾"
+    }
+  },
+  "schedule": {
+    "title": "接下來的執行時間",
+    "description": "從目前瀏覽器時間預覽接下來 10 個符合條件的執行時間。",
+    "summaryLabel": "摘要",
+    "dateTimeLabel": "日期與時間",
+    "relativeLabel": "相對時間",
+    "emptyTitle": "尚未輸入表達式",
+    "emptyDescription": "輸入 cron 表達式即可查看說明、欄位與接下來的執行時間。"
+  },
+  "relative": {
+    "now": "現在",
+    "inSeconds": "在 {count} 秒後",
+    "inMinutes": "在 {count} 分鐘後",
+    "inHours": "在 {count} 小時後",
+    "inDays": "在 {count} 天後"
+  }
+}

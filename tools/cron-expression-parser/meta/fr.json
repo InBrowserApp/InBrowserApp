@@ -1,0 +1,4 @@
+{
+  "name": "Analyseur d’expressions cron",
+  "description": "Analysez, validez et expliquez les planifications cron avec le détail des champs et les prochaines heures d’exécution."
+}
