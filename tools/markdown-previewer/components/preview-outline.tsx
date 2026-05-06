@@ -30,7 +30,7 @@ function PreviewOutline({
   onHeadingClick,
 }: PreviewOutlineProps) {
   return (
-    <aside className="min-w-0 border-t px-4 py-4 sm:px-6 xl:border-s xl:border-t-0 xl:px-0 xl:py-0 xl:ps-6">
+    <aside className="min-w-0 border-t px-4 py-4 sm:px-6 xl:flex xl:h-[34rem] xl:flex-col xl:border-s xl:border-t-0 xl:px-0 xl:py-5 xl:ps-6">
       <div className="flex flex-col gap-1">
         <h2 className="font-heading text-base font-semibold">
           {messages.outlineTitle}
@@ -41,7 +41,7 @@ function PreviewOutline({
       </div>
 
       {tocItems.length > 0 ? (
-        <div className="mt-3 max-h-72 overflow-x-hidden overflow-y-auto pe-2 [scrollbar-color:rgb(100_116_139/0.45)_transparent] [scrollbar-width:thin] xl:h-[34rem] xl:max-h-none">
+        <div className="mt-3 max-h-72 overflow-x-hidden overflow-y-auto pe-2 [scrollbar-color:rgb(100_116_139/0.45)_transparent] [scrollbar-width:thin] xl:max-h-none xl:min-h-0 xl:flex-1">
           <div className="flex flex-col gap-1">
             {tocItems.map((item) => (
               <button
