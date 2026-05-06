@@ -5080,6 +5080,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "device-information",
+    category: "misc",
+    icon: "wrench",
+    tags: ["device", "browser", "hardware", "screen", "system", "diagnostics"],
+    locales: {
+      ar: {
+        name: "معلومات الجهاز",
+        description:
+          "افحص تفاصيل المتصفح والشاشة والعتاد والشبكة والتخزين والإمكانات من جهازك الحالي دون رفع أي شيء.",
+      },
+      de: {
+        name: "Geräteinformationen",
+        description:
+          "Prüfen Sie Browser-, Anzeige-, Hardware-, Netzwerk-, Speicher- und Funktionsdetails Ihres aktuellen Geräts, ohne etwas hochzuladen.",
+      },
+      en: {
+        name: "Device Information",
+        description:
+          "Inspect browser, display, hardware, network, storage, and capability details from your current device without uploading anything.",
+      },
+      es: {
+        name: "Información del dispositivo",
+        description:
+          "Inspecciona detalles del navegador, pantalla, hardware, red, almacenamiento y capacidades de tu dispositivo actual sin subir nada.",
+      },
+      fr: {
+        name: "Informations sur l'appareil",
+        description:
+          "Inspectez les détails du navigateur, de l'affichage, du matériel, du réseau, du stockage et des capacités de votre appareil actuel sans rien envoyer.",
+      },
+      he: {
+        name: "מידע על המכשיר",
+        description:
+          "בדקו פרטי דפדפן, תצוגה, חומרה, רשת, אחסון ויכולות מהמכשיר הנוכחי שלכם, בלי להעלות שום דבר.",
+      },
+      hi: {
+        name: "डिवाइस की जानकारी",
+        description:
+          "अपने मौजूदा डिवाइस से ब्राउज़र, डिस्प्ले, हार्डवेयर, नेटवर्क, स्टोरेज और क्षमता विवरण देखें, बिना कुछ अपलोड किए।",
+      },
+      id: {
+        name: "Informasi Perangkat",
+        description:
+          "Periksa detail browser, layar, perangkat keras, jaringan, penyimpanan, dan kapabilitas dari perangkat Anda saat ini tanpa mengunggah apa pun.",
+      },
+      it: {
+        name: "Device Information",
+        description:
+          "Ispeziona dettagli su browser, display, hardware, rete, archiviazione e funzionalità del dispositivo corrente senza caricare nulla.",
+      },
+      ja: {
+        name: "デバイス情報",
+        description:
+          "現在のデバイスから、ブラウザ、ディスプレイ、ハードウェア、ネットワーク、ストレージ、機能の詳細をアップロードなしで確認します。",
+      },
+      ko: {
+        name: "기기 정보",
+        description:
+          "아무것도 업로드하지 않고 현재 기기에서 브라우저, 디스플레이, 하드웨어, 네트워크, 저장소 및 기능 세부 정보를 확인합니다.",
+      },
+      ms: {
+        name: "Maklumat Peranti",
+        description:
+          "Periksa butiran pelayar, paparan, perkakasan, rangkaian, storan dan keupayaan daripada peranti semasa anda tanpa memuat naik apa-apa.",
+      },
+      nl: {
+        name: "Apparaatinformatie",
+        description:
+          "Inspecteer gegevens over browser, scherm, hardware, netwerk, opslag en mogelijkheden van je huidige apparaat zonder iets te uploaden.",
+      },
+      no: {
+        name: "Enhetsinformasjon",
+        description:
+          "Inspiser detaljer om nettleser, skjerm, maskinvare, nettverk, lagring og funksjoner fra den nåværende enheten din uten å laste opp noe.",
+      },
+      pl: {
+        name: "Informacje o urządzeniu",
+        description:
+          "Sprawdź informacje o przeglądarce, ekranie, sprzęcie, sieci, pamięci i obsługiwanych funkcjach bieżącego urządzenia bez przesyłania czegokolwiek.",
+      },
+      pt: {
+        name: "Informações do Dispositivo",
+        description:
+          "Inspecione detalhes de navegador, tela, hardware, rede, armazenamento e capacidades do seu dispositivo atual sem enviar nada.",
+      },
+      ru: {
+        name: "Информация об устройстве",
+        description:
+          "Проверьте сведения о браузере, дисплее, оборудовании, сети, хранилище и возможностях текущего устройства без отправки данных.",
+      },
+      sv: {
+        name: "Enhetsinformation",
+        description:
+          "Inspektera uppgifter om webbläsare, skärm, hårdvara, nätverk, lagring och funktionsstöd från din nuvarande enhet utan att ladda upp något.",
+      },
+      th: {
+        name: "ข้อมูลอุปกรณ์",
+        description:
+          "ตรวจสอบรายละเอียดเบราว์เซอร์ จอแสดงผล ฮาร์ดแวร์ เครือข่าย พื้นที่เก็บข้อมูล และความสามารถของอุปกรณ์ปัจจุบันโดยไม่อัปโหลดสิ่งใด",
+      },
+      tr: {
+        name: "Cihaz Bilgileri",
+        description:
+          "Geçerli cihazınızdan tarayıcı, ekran, donanım, ağ, depolama ve yetenek ayrıntılarını hiçbir şey yüklemeden inceleyin.",
+      },
+      vi: {
+        name: "Thông tin thiết bị",
+        description:
+          "Kiểm tra thông tin chi tiết về trình duyệt, màn hình, phần cứng, mạng, lưu trữ và khả năng hỗ trợ từ thiết bị hiện tại của bạn mà không tải lên bất cứ thứ gì.",
+      },
+      "zh-CN": {
+        name: "设备信息",
+        description:
+          "检查当前设备在浏览器中可见的浏览器、显示、硬件、网络、存储和功能详情，无需上传任何内容。",
+      },
+      "zh-TW": {
+        name: "裝置資訊",
+        description:
+          "從目前裝置檢視瀏覽器、顯示器、硬體、網路、儲存空間與功能支援詳細資料，不需上傳任何內容。",
+      },
+    },
+  },
+  {
     slug: "docker-run-to-compose-converter",
     category: "developer",
     icon: "network",
@@ -23677,6 +23800,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Data URI 轉檔案轉換器",
         description:
           "將 Data URI 字串解碼為檔案，查看 MIME 類型與編碼並下載，離線可用。",
+      },
+    },
+  },
+  "device-information": {
+    slug: "device-information",
+    category: "misc",
+    icon: "wrench",
+    tags: ["device", "browser", "hardware", "screen", "system", "diagnostics"],
+    locales: {
+      ar: {
+        name: "معلومات الجهاز",
+        description:
+          "افحص تفاصيل المتصفح والشاشة والعتاد والشبكة والتخزين والإمكانات من جهازك الحالي دون رفع أي شيء.",
+      },
+      de: {
+        name: "Geräteinformationen",
+        description:
+          "Prüfen Sie Browser-, Anzeige-, Hardware-, Netzwerk-, Speicher- und Funktionsdetails Ihres aktuellen Geräts, ohne etwas hochzuladen.",
+      },
+      en: {
+        name: "Device Information",
+        description:
+          "Inspect browser, display, hardware, network, storage, and capability details from your current device without uploading anything.",
+      },
+      es: {
+        name: "Información del dispositivo",
+        description:
+          "Inspecciona detalles del navegador, pantalla, hardware, red, almacenamiento y capacidades de tu dispositivo actual sin subir nada.",
+      },
+      fr: {
+        name: "Informations sur l'appareil",
+        description:
+          "Inspectez les détails du navigateur, de l'affichage, du matériel, du réseau, du stockage et des capacités de votre appareil actuel sans rien envoyer.",
+      },
+      he: {
+        name: "מידע על המכשיר",
+        description:
+          "בדקו פרטי דפדפן, תצוגה, חומרה, רשת, אחסון ויכולות מהמכשיר הנוכחי שלכם, בלי להעלות שום דבר.",
+      },
+      hi: {
+        name: "डिवाइस की जानकारी",
+        description:
+          "अपने मौजूदा डिवाइस से ब्राउज़र, डिस्प्ले, हार्डवेयर, नेटवर्क, स्टोरेज और क्षमता विवरण देखें, बिना कुछ अपलोड किए।",
+      },
+      id: {
+        name: "Informasi Perangkat",
+        description:
+          "Periksa detail browser, layar, perangkat keras, jaringan, penyimpanan, dan kapabilitas dari perangkat Anda saat ini tanpa mengunggah apa pun.",
+      },
+      it: {
+        name: "Device Information",
+        description:
+          "Ispeziona dettagli su browser, display, hardware, rete, archiviazione e funzionalità del dispositivo corrente senza caricare nulla.",
+      },
+      ja: {
+        name: "デバイス情報",
+        description:
+          "現在のデバイスから、ブラウザ、ディスプレイ、ハードウェア、ネットワーク、ストレージ、機能の詳細をアップロードなしで確認します。",
+      },
+      ko: {
+        name: "기기 정보",
+        description:
+          "아무것도 업로드하지 않고 현재 기기에서 브라우저, 디스플레이, 하드웨어, 네트워크, 저장소 및 기능 세부 정보를 확인합니다.",
+      },
+      ms: {
+        name: "Maklumat Peranti",
+        description:
+          "Periksa butiran pelayar, paparan, perkakasan, rangkaian, storan dan keupayaan daripada peranti semasa anda tanpa memuat naik apa-apa.",
+      },
+      nl: {
+        name: "Apparaatinformatie",
+        description:
+          "Inspecteer gegevens over browser, scherm, hardware, netwerk, opslag en mogelijkheden van je huidige apparaat zonder iets te uploaden.",
+      },
+      no: {
+        name: "Enhetsinformasjon",
+        description:
+          "Inspiser detaljer om nettleser, skjerm, maskinvare, nettverk, lagring og funksjoner fra den nåværende enheten din uten å laste opp noe.",
+      },
+      pl: {
+        name: "Informacje o urządzeniu",
+        description:
+          "Sprawdź informacje o przeglądarce, ekranie, sprzęcie, sieci, pamięci i obsługiwanych funkcjach bieżącego urządzenia bez przesyłania czegokolwiek.",
+      },
+      pt: {
+        name: "Informações do Dispositivo",
+        description:
+          "Inspecione detalhes de navegador, tela, hardware, rede, armazenamento e capacidades do seu dispositivo atual sem enviar nada.",
+      },
+      ru: {
+        name: "Информация об устройстве",
+        description:
+          "Проверьте сведения о браузере, дисплее, оборудовании, сети, хранилище и возможностях текущего устройства без отправки данных.",
+      },
+      sv: {
+        name: "Enhetsinformation",
+        description:
+          "Inspektera uppgifter om webbläsare, skärm, hårdvara, nätverk, lagring och funktionsstöd från din nuvarande enhet utan att ladda upp något.",
+      },
+      th: {
+        name: "ข้อมูลอุปกรณ์",
+        description:
+          "ตรวจสอบรายละเอียดเบราว์เซอร์ จอแสดงผล ฮาร์ดแวร์ เครือข่าย พื้นที่เก็บข้อมูล และความสามารถของอุปกรณ์ปัจจุบันโดยไม่อัปโหลดสิ่งใด",
+      },
+      tr: {
+        name: "Cihaz Bilgileri",
+        description:
+          "Geçerli cihazınızdan tarayıcı, ekran, donanım, ağ, depolama ve yetenek ayrıntılarını hiçbir şey yüklemeden inceleyin.",
+      },
+      vi: {
+        name: "Thông tin thiết bị",
+        description:
+          "Kiểm tra thông tin chi tiết về trình duyệt, màn hình, phần cứng, mạng, lưu trữ và khả năng hỗ trợ từ thiết bị hiện tại của bạn mà không tải lên bất cứ thứ gì.",
+      },
+      "zh-CN": {
+        name: "设备信息",
+        description:
+          "检查当前设备在浏览器中可见的浏览器、显示、硬件、网络、存储和功能详情，无需上传任何内容。",
+      },
+      "zh-TW": {
+        name: "裝置資訊",
+        description:
+          "從目前裝置檢視瀏覽器、顯示器、硬體、網路、儲存空間與功能支援詳細資料，不需上傳任何內容。",
       },
     },
   },

@@ -54,6 +54,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "current-network-time": () => import("@tool/current-network-time/page"),
   "data-uri-to-file-converter": () =>
     import("@tool/data-uri-to-file-converter/page"),
+  "device-information": () => import("@tool/device-information/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
