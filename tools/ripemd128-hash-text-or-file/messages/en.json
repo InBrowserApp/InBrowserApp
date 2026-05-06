@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Plain text",
+  "plainTextDescription": "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
+  "importFromFileLabel": "Import from file",
+  "hashResultLabel": "Hash Result",
+  "hashResultDescription": "Hash result for the current text input.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binary",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "hashTextError": "Failed to hash text.",
+  "hashFileError": "Failed to hash file."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Hash RIPEMD-128 de Texto o Archivo",
+  "description": "Genera hash RIPEMD-128 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad"
+}
