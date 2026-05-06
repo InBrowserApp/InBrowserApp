@@ -1,0 +1,4 @@
+{
+  "name": "CRC Sağlama Toplamı Hesaplayıcısı",
+  "description": "Metin girişi veya dosya yüklemesi için CRC sağlama toplamları oluşturun. Veri bütünlüğü kontrolleri için yaygın CRC-8, CRC-16, CRC-24, CRC-32 ve CRC-64 varyantlarını karşılaştırın"
+}

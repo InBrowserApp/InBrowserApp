@@ -2578,6 +2578,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "crc-checksum-calculator",
+    language: "ar",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "de",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "en",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "es",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "fr",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "he",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "hi",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "id",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "it",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "ja",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "ko",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "ms",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "nl",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "no",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "pl",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "pt",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "ru",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "sv",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "th",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "tr",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "vi",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "crc-checksum-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "credit-card-validator",
     language: "ar",
   },

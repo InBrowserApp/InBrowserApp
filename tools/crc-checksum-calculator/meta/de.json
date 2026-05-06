@@ -1,0 +1,4 @@
+{
+  "name": "CRC-Prüfsummenrechner",
+  "description": "Erzeuge CRC-Prüfsummen für Texteingaben oder Datei-Uploads. Vergleiche gängige CRC-8-, CRC-16-, CRC-24-, CRC-32- und CRC-64-Varianten für Datenintegritätsprüfungen"
+}

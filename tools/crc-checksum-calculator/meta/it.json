@@ -1,0 +1,4 @@
+{
+  "name": "Calcolatore di checksum CRC",
+  "description": "Genera checksum CRC per input di testo o caricamenti di file. Confronta le varianti comuni CRC-8, CRC-16, CRC-24, CRC-32 e CRC-64 per controlli di integrità dei dati"
+}

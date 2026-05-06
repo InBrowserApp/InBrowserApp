@@ -1,0 +1,4 @@
+{
+  "name": "CRC-checksumcalculator",
+  "description": "Genereer CRC-checksums voor tekstinvoer of bestandsupload. Vergelijk gangbare CRC-8-, CRC-16-, CRC-24-, CRC-32- en CRC-64-varianten voor controles op gegevensintegriteit"
+}

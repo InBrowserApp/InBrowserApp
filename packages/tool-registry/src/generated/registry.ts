@@ -3586,6 +3586,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "crc-checksum-calculator",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "crc",
+      "checksum",
+      "integrity",
+      "file",
+      "text",
+      "error-detection",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة المجموع الاختباري CRC",
+        description:
+          "أنشئ مجاميع CRC الاختبارية لإدخال نصي أو ملف مرفوع. قارن متغيرات CRC-8 وCRC-16 وCRC-24 وCRC-32 وCRC-64 الشائعة لفحوصات سلامة البيانات",
+      },
+      de: {
+        name: "CRC-Prüfsummenrechner",
+        description:
+          "Erzeuge CRC-Prüfsummen für Texteingaben oder Datei-Uploads. Vergleiche gängige CRC-8-, CRC-16-, CRC-24-, CRC-32- und CRC-64-Varianten für Datenintegritätsprüfungen",
+      },
+      en: {
+        name: "CRC Checksum Calculator",
+        description:
+          "Generate CRC checksums for text input or file upload. Compare common CRC-8, CRC-16, CRC-24, CRC-32, and CRC-64 variants for data integrity checks",
+      },
+      es: {
+        name: "Calculadora de suma de verificación CRC",
+        description:
+          "Genera sumas de verificación CRC para entrada de texto o carga de archivos. Compara variantes comunes de CRC-8, CRC-16, CRC-24, CRC-32 y CRC-64 para comprobaciones de integridad de datos",
+      },
+      fr: {
+        name: "Calculateur de sommes de contrôle CRC",
+        description:
+          "Générez des sommes de contrôle CRC pour une saisie de texte ou un fichier importé. Comparez les variantes courantes CRC-8, CRC-16, CRC-24, CRC-32 et CRC-64 pour les contrôles d’intégrité des données",
+      },
+      he: {
+        name: "מחשבון סכומי ביקורת CRC",
+        description:
+          "צור סכומי ביקורת CRC עבור קלט טקסט או העלאת קובץ. השווה בין וריאנטים נפוצים של CRC-8, CRC-16, CRC-24, CRC-32 ו-CRC-64 לבדיקות שלמות נתונים",
+      },
+      hi: {
+        name: "CRC चेकसम कैलकुलेटर",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए CRC चेकसम जेनरेट करें। डेटा अखंडता जाँचों के लिए सामान्य CRC-8, CRC-16, CRC-24, CRC-32 और CRC-64 वेरिएंट की तुलना करें",
+      },
+      id: {
+        name: "Kalkulator Checksum CRC",
+        description:
+          "Buat checksum CRC untuk input teks atau upload file. Bandingkan varian umum CRC-8, CRC-16, CRC-24, CRC-32, dan CRC-64 untuk pemeriksaan integritas data",
+      },
+      it: {
+        name: "Calcolatore di checksum CRC",
+        description:
+          "Genera checksum CRC per input di testo o caricamenti di file. Confronta le varianti comuni CRC-8, CRC-16, CRC-24, CRC-32 e CRC-64 per controlli di integrità dei dati",
+      },
+      ja: {
+        name: "CRC チェックサム計算機",
+        description:
+          "テキスト入力またはファイルアップロードから CRC チェックサムを生成します。データ整合性チェック向けに、一般的な CRC-8、CRC-16、CRC-24、CRC-32、CRC-64 バリアントを比較できます",
+      },
+      ko: {
+        name: "CRC 체크섬 계산기",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 CRC 체크섬을 생성합니다. 데이터 무결성 검사를 위해 일반적인 CRC-8, CRC-16, CRC-24, CRC-32, CRC-64 변형을 비교하세요",
+      },
+      ms: {
+        name: "Kalkulator Checksum CRC",
+        description:
+          "Jana checksum CRC untuk input teks atau muat naik fail. Bandingkan varian CRC-8, CRC-16, CRC-24, CRC-32 dan CRC-64 yang biasa digunakan untuk semakan integriti data",
+      },
+      nl: {
+        name: "CRC-checksumcalculator",
+        description:
+          "Genereer CRC-checksums voor tekstinvoer of bestandsupload. Vergelijk gangbare CRC-8-, CRC-16-, CRC-24-, CRC-32- en CRC-64-varianten voor controles op gegevensintegriteit",
+      },
+      no: {
+        name: "CRC-kontrollsumkalkulator",
+        description:
+          "Generer CRC-kontrollsummer for tekstinndata eller filopplasting. Sammenlign vanlige CRC-8-, CRC-16-, CRC-24-, CRC-32- og CRC-64-varianter for dataintegritetskontroller",
+      },
+      pl: {
+        name: "Kalkulator sum kontrolnych CRC",
+        description:
+          "Generuj sumy kontrolne CRC dla wprowadzonego tekstu lub przesłanego pliku. Porównuj popularne warianty CRC-8, CRC-16, CRC-24, CRC-32 i CRC-64 do kontroli integralności danych",
+      },
+      pt: {
+        name: "Calculadora de Checksum CRC",
+        description:
+          "Gere checksums CRC para entrada de texto ou upload de arquivo. Compare variantes comuns de CRC-8, CRC-16, CRC-24, CRC-32 e CRC-64 para verificações de integridade de dados",
+      },
+      ru: {
+        name: "Калькулятор контрольных сумм CRC",
+        description:
+          "Создавайте контрольные суммы CRC для текстового ввода или импортированного файла. Сравнивайте распространенные варианты CRC-8, CRC-16, CRC-24, CRC-32 и CRC-64 для проверок целостности данных",
+      },
+      sv: {
+        name: "CRC-kontrollsummekalkylator",
+        description:
+          "Generera CRC-kontrollsummor för textinmatning eller filuppladdning. Jämför vanliga CRC-8-, CRC-16-, CRC-24-, CRC-32- och CRC-64-varianter för kontroller av dataintegritet",
+      },
+      th: {
+        name: "เครื่องคำนวณเช็กซัม CRC",
+        description:
+          "สร้างเช็กซัม CRC สำหรับข้อความที่ป้อนหรือไฟล์ที่อัปโหลด เปรียบเทียบตัวแปร CRC-8, CRC-16, CRC-24, CRC-32 และ CRC-64 ที่ใช้กันทั่วไปสำหรับการตรวจสอบความสมบูรณ์ของข้อมูล",
+      },
+      tr: {
+        name: "CRC Sağlama Toplamı Hesaplayıcısı",
+        description:
+          "Metin girişi veya dosya yüklemesi için CRC sağlama toplamları oluşturun. Veri bütünlüğü kontrolleri için yaygın CRC-8, CRC-16, CRC-24, CRC-32 ve CRC-64 varyantlarını karşılaştırın",
+      },
+      vi: {
+        name: "Trình tính checksum CRC",
+        description:
+          "Tạo checksum CRC cho đầu vào văn bản hoặc tệp tải lên. So sánh các biến thể CRC-8, CRC-16, CRC-24, CRC-32 và CRC-64 phổ biến để kiểm tra tính toàn vẹn dữ liệu",
+      },
+      "zh-CN": {
+        name: "CRC 校验和计算器",
+        description:
+          "为文本输入或文件上传生成 CRC 校验和。比较常见的 CRC-8、CRC-16、CRC-24、CRC-32 和 CRC-64 变体，用于数据完整性检查",
+      },
+      "zh-TW": {
+        name: "CRC 校驗和計算器",
+        description:
+          "為文字輸入或檔案上傳產生 CRC 校驗和。比較常見的 CRC-8、CRC-16、CRC-24、CRC-32 和 CRC-64 變體，用於資料完整性檢查",
+      },
+    },
+  },
+  {
     slug: "credit-card-validator",
     category: "text",
     icon: "credit-card",
@@ -21670,6 +21801,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "Cookie 解析器",
         description: "解析 Cookie 與 Set-Cookie 標頭為結構化 JSON，方便檢視。",
+      },
+    },
+  },
+  "crc-checksum-calculator": {
+    slug: "crc-checksum-calculator",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "crc",
+      "checksum",
+      "integrity",
+      "file",
+      "text",
+      "error-detection",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة المجموع الاختباري CRC",
+        description:
+          "أنشئ مجاميع CRC الاختبارية لإدخال نصي أو ملف مرفوع. قارن متغيرات CRC-8 وCRC-16 وCRC-24 وCRC-32 وCRC-64 الشائعة لفحوصات سلامة البيانات",
+      },
+      de: {
+        name: "CRC-Prüfsummenrechner",
+        description:
+          "Erzeuge CRC-Prüfsummen für Texteingaben oder Datei-Uploads. Vergleiche gängige CRC-8-, CRC-16-, CRC-24-, CRC-32- und CRC-64-Varianten für Datenintegritätsprüfungen",
+      },
+      en: {
+        name: "CRC Checksum Calculator",
+        description:
+          "Generate CRC checksums for text input or file upload. Compare common CRC-8, CRC-16, CRC-24, CRC-32, and CRC-64 variants for data integrity checks",
+      },
+      es: {
+        name: "Calculadora de suma de verificación CRC",
+        description:
+          "Genera sumas de verificación CRC para entrada de texto o carga de archivos. Compara variantes comunes de CRC-8, CRC-16, CRC-24, CRC-32 y CRC-64 para comprobaciones de integridad de datos",
+      },
+      fr: {
+        name: "Calculateur de sommes de contrôle CRC",
+        description:
+          "Générez des sommes de contrôle CRC pour une saisie de texte ou un fichier importé. Comparez les variantes courantes CRC-8, CRC-16, CRC-24, CRC-32 et CRC-64 pour les contrôles d’intégrité des données",
+      },
+      he: {
+        name: "מחשבון סכומי ביקורת CRC",
+        description:
+          "צור סכומי ביקורת CRC עבור קלט טקסט או העלאת קובץ. השווה בין וריאנטים נפוצים של CRC-8, CRC-16, CRC-24, CRC-32 ו-CRC-64 לבדיקות שלמות נתונים",
+      },
+      hi: {
+        name: "CRC चेकसम कैलकुलेटर",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए CRC चेकसम जेनरेट करें। डेटा अखंडता जाँचों के लिए सामान्य CRC-8, CRC-16, CRC-24, CRC-32 और CRC-64 वेरिएंट की तुलना करें",
+      },
+      id: {
+        name: "Kalkulator Checksum CRC",
+        description:
+          "Buat checksum CRC untuk input teks atau upload file. Bandingkan varian umum CRC-8, CRC-16, CRC-24, CRC-32, dan CRC-64 untuk pemeriksaan integritas data",
+      },
+      it: {
+        name: "Calcolatore di checksum CRC",
+        description:
+          "Genera checksum CRC per input di testo o caricamenti di file. Confronta le varianti comuni CRC-8, CRC-16, CRC-24, CRC-32 e CRC-64 per controlli di integrità dei dati",
+      },
+      ja: {
+        name: "CRC チェックサム計算機",
+        description:
+          "テキスト入力またはファイルアップロードから CRC チェックサムを生成します。データ整合性チェック向けに、一般的な CRC-8、CRC-16、CRC-24、CRC-32、CRC-64 バリアントを比較できます",
+      },
+      ko: {
+        name: "CRC 체크섬 계산기",
+        description:
+          "텍스트 입력 또는 파일 업로드에 대한 CRC 체크섬을 생성합니다. 데이터 무결성 검사를 위해 일반적인 CRC-8, CRC-16, CRC-24, CRC-32, CRC-64 변형을 비교하세요",
+      },
+      ms: {
+        name: "Kalkulator Checksum CRC",
+        description:
+          "Jana checksum CRC untuk input teks atau muat naik fail. Bandingkan varian CRC-8, CRC-16, CRC-24, CRC-32 dan CRC-64 yang biasa digunakan untuk semakan integriti data",
+      },
+      nl: {
+        name: "CRC-checksumcalculator",
+        description:
+          "Genereer CRC-checksums voor tekstinvoer of bestandsupload. Vergelijk gangbare CRC-8-, CRC-16-, CRC-24-, CRC-32- en CRC-64-varianten voor controles op gegevensintegriteit",
+      },
+      no: {
+        name: "CRC-kontrollsumkalkulator",
+        description:
+          "Generer CRC-kontrollsummer for tekstinndata eller filopplasting. Sammenlign vanlige CRC-8-, CRC-16-, CRC-24-, CRC-32- og CRC-64-varianter for dataintegritetskontroller",
+      },
+      pl: {
+        name: "Kalkulator sum kontrolnych CRC",
+        description:
+          "Generuj sumy kontrolne CRC dla wprowadzonego tekstu lub przesłanego pliku. Porównuj popularne warianty CRC-8, CRC-16, CRC-24, CRC-32 i CRC-64 do kontroli integralności danych",
+      },
+      pt: {
+        name: "Calculadora de Checksum CRC",
+        description:
+          "Gere checksums CRC para entrada de texto ou upload de arquivo. Compare variantes comuns de CRC-8, CRC-16, CRC-24, CRC-32 e CRC-64 para verificações de integridade de dados",
+      },
+      ru: {
+        name: "Калькулятор контрольных сумм CRC",
+        description:
+          "Создавайте контрольные суммы CRC для текстового ввода или импортированного файла. Сравнивайте распространенные варианты CRC-8, CRC-16, CRC-24, CRC-32 и CRC-64 для проверок целостности данных",
+      },
+      sv: {
+        name: "CRC-kontrollsummekalkylator",
+        description:
+          "Generera CRC-kontrollsummor för textinmatning eller filuppladdning. Jämför vanliga CRC-8-, CRC-16-, CRC-24-, CRC-32- och CRC-64-varianter för kontroller av dataintegritet",
+      },
+      th: {
+        name: "เครื่องคำนวณเช็กซัม CRC",
+        description:
+          "สร้างเช็กซัม CRC สำหรับข้อความที่ป้อนหรือไฟล์ที่อัปโหลด เปรียบเทียบตัวแปร CRC-8, CRC-16, CRC-24, CRC-32 และ CRC-64 ที่ใช้กันทั่วไปสำหรับการตรวจสอบความสมบูรณ์ของข้อมูล",
+      },
+      tr: {
+        name: "CRC Sağlama Toplamı Hesaplayıcısı",
+        description:
+          "Metin girişi veya dosya yüklemesi için CRC sağlama toplamları oluşturun. Veri bütünlüğü kontrolleri için yaygın CRC-8, CRC-16, CRC-24, CRC-32 ve CRC-64 varyantlarını karşılaştırın",
+      },
+      vi: {
+        name: "Trình tính checksum CRC",
+        description:
+          "Tạo checksum CRC cho đầu vào văn bản hoặc tệp tải lên. So sánh các biến thể CRC-8, CRC-16, CRC-24, CRC-32 và CRC-64 phổ biến để kiểm tra tính toàn vẹn dữ liệu",
+      },
+      "zh-CN": {
+        name: "CRC 校验和计算器",
+        description:
+          "为文本输入或文件上传生成 CRC 校验和。比较常见的 CRC-8、CRC-16、CRC-24、CRC-32 和 CRC-64 变体，用于数据完整性检查",
+      },
+      "zh-TW": {
+        name: "CRC 校驗和計算器",
+        description:
+          "為文字輸入或檔案上傳產生 CRC 校驗和。比較常見的 CRC-8、CRC-16、CRC-24、CRC-32 和 CRC-64 變體，用於資料完整性檢查",
       },
     },
   },
