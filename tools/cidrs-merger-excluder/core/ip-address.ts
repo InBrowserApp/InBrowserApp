@@ -235,4 +235,3 @@ function findLongestZeroRun(segments: readonly number[]) {
 }
 
 export { createIpAddress, parseIpAddress, stringifyIpAddress }
-export type { ParsedIpAddress }
