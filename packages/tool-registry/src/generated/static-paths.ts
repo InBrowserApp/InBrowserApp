@@ -10674,6 +10674,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ssh-public-key-fingerprint",
+    language: "ar",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "de",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "en",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "es",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "fr",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "he",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "hi",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "id",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "it",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "ja",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "ko",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "ms",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "nl",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "no",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "pl",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "pt",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "ru",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "sv",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "th",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "tr",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "vi",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "zh-CN",
+  },
+  {
+    slug: "ssh-public-key-fingerprint",
+    language: "zh-TW",
+  },
+  {
     slug: "stopwatch",
     language: "ar",
   },

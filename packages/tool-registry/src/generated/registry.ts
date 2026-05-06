@@ -14473,6 +14473,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "ssh-public-key-fingerprint",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "ssh",
+      "public-key",
+      "fingerprint",
+      "sha256",
+      "md5",
+      "authorized-keys",
+      "openssh",
+      "security",
+      "network",
+    ],
+    locales: {
+      ar: {
+        name: "بصمة مفتاح SSH العام",
+        description:
+          "أنشئ بصمات SHA-256 وMD5 لمفاتيح OpenSSH العامة، وأسطر authorized_keys، وكتل مفاتيح SSH2 العامة.",
+      },
+      de: {
+        name: "SSH-Public-Key-Fingerprint",
+        description:
+          "Erzeugen Sie SHA-256- und MD5-Fingerprints für OpenSSH-Public-Keys, authorized_keys-Zeilen und SSH2-Public-Key-Blöcke.",
+      },
+      en: {
+        name: "SSH Public Key Fingerprint",
+        description:
+          "Generate SHA-256 and MD5 fingerprints for OpenSSH public keys, authorized_keys lines, and SSH2 public key blocks.",
+      },
+      es: {
+        name: "Huella de clave pública SSH",
+        description:
+          "Genera huellas SHA-256 y MD5 para claves públicas OpenSSH, líneas authorized_keys y bloques de clave pública SSH2.",
+      },
+      fr: {
+        name: "Empreinte de clé publique SSH",
+        description:
+          "Générez des empreintes SHA-256 et MD5 pour les clés publiques OpenSSH, les lignes authorized_keys et les blocs de clés publiques SSH2.",
+      },
+      he: {
+        name: "טביעת אצבע של מפתח ציבורי SSH",
+        description:
+          "יצירת טביעות אצבע SHA-256 ו-MD5 עבור מפתחות ציבוריים של OpenSSH, שורות authorized_keys ובלוקי מפתח ציבורי SSH2.",
+      },
+      hi: {
+        name: "SSH सार्वजनिक कुंजी फिंगरप्रिंट",
+        description:
+          "OpenSSH सार्वजनिक कुंजियों, authorized_keys पंक्तियों और SSH2 सार्वजनिक कुंजी ब्लॉकों के लिए SHA-256 और MD5 फिंगरप्रिंट जेनरेट करें।",
+      },
+      id: {
+        name: "Sidik Jari Kunci Publik SSH",
+        description:
+          "Buat sidik jari SHA-256 dan MD5 untuk kunci publik OpenSSH, baris authorized_keys, dan blok kunci publik SSH2.",
+      },
+      it: {
+        name: "Fingerprint della chiave pubblica SSH",
+        description:
+          "Genera fingerprint SHA-256 e MD5 per chiavi pubbliche OpenSSH, righe authorized_keys e blocchi di chiavi pubbliche SSH2.",
+      },
+      ja: {
+        name: "SSH 公開鍵フィンガープリント",
+        description:
+          "OpenSSH 公開鍵、authorized_keys の行、SSH2 公開鍵ブロックから SHA-256 と MD5 のフィンガープリントを生成します。",
+      },
+      ko: {
+        name: "SSH 공개 키 지문",
+        description:
+          "OpenSSH 공개 키, authorized_keys 줄, SSH2 공개 키 블록의 SHA-256 및 MD5 지문을 생성합니다.",
+      },
+      ms: {
+        name: "Cap Jari Kunci Awam SSH",
+        description:
+          "Jana cap jari SHA-256 dan MD5 untuk kunci awam OpenSSH, baris authorized_keys, dan blok kunci awam SSH2.",
+      },
+      nl: {
+        name: "SSH Public Key Fingerprint",
+        description:
+          "Genereer SHA-256- en MD5-fingerprints voor OpenSSH-public keys, authorized_keys-regels en SSH2-public-key-blokken.",
+      },
+      no: {
+        name: "SSH offentlig nøkkelfingeravtrykk",
+        description:
+          "Generer SHA-256- og MD5-fingeravtrykk for offentlige OpenSSH-nøkler, authorized_keys-linjer og SSH2-blokker med offentlige nøkler.",
+      },
+      pl: {
+        name: "Odcisk klucza publicznego SSH",
+        description:
+          "Generuj odciski SHA-256 i MD5 dla kluczy publicznych OpenSSH, wierszy authorized_keys oraz bloków kluczy publicznych SSH2.",
+      },
+      pt: {
+        name: "Impressão digital de chave pública SSH",
+        description:
+          "Gere impressões digitais SHA-256 e MD5 para chaves públicas OpenSSH, linhas de authorized_keys e blocos de chave pública SSH2.",
+      },
+      ru: {
+        name: "Отпечаток открытого ключа SSH",
+        description:
+          "Создавайте отпечатки SHA-256 и MD5 для открытых ключей OpenSSH, строк authorized_keys и блоков открытых ключей SSH2.",
+      },
+      sv: {
+        name: "SSH Public Key Fingerprint",
+        description:
+          "Generera SHA-256- och MD5-fingeravtryck för publika OpenSSH-nycklar, authorized_keys-rader och SSH2-block med publika nycklar.",
+      },
+      th: {
+        name: "ลายนิ้วมือคีย์สาธารณะ SSH",
+        description:
+          "สร้างลายนิ้วมือ SHA-256 และ MD5 สำหรับคีย์สาธารณะ OpenSSH, บรรทัด authorized_keys และบล็อกคีย์สาธารณะ SSH2",
+      },
+      tr: {
+        name: "SSH Ortak Anahtar Parmak İzi",
+        description:
+          "OpenSSH ortak anahtarları, authorized_keys satırları ve SSH2 ortak anahtar blokları için SHA-256 ve MD5 parmak izleri oluşturun.",
+      },
+      vi: {
+        name: "Vân tay khóa công khai SSH",
+        description:
+          "Tạo vân tay SHA-256 và MD5 cho khóa công khai OpenSSH, dòng authorized_keys và khối khóa công khai SSH2.",
+      },
+      "zh-CN": {
+        name: "SSH 公钥指纹",
+        description:
+          "为 OpenSSH 公钥、authorized_keys 行和 SSH2 公钥块生成 SHA-256 与 MD5 指纹。",
+      },
+      "zh-TW": {
+        name: "SSH 公開金鑰指紋",
+        description:
+          "為 OpenSSH 公開金鑰、authorized_keys 行與 SSH2 公開金鑰區塊產生 SHA-256 和 MD5 指紋。",
+      },
+    },
+  },
+  {
     slug: "stopwatch",
     category: "developer",
     icon: "wrench",
@@ -32047,6 +32180,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SRI 雜湊產生器",
         description:
           "為網頁資源產生子資源完整性（SRI）雜湊值。建立 SHA-256、SHA-384 或 SHA-512 雜湊值以確保外部腳本、樣式表和其他資源的完整性",
+      },
+    },
+  },
+  "ssh-public-key-fingerprint": {
+    slug: "ssh-public-key-fingerprint",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "ssh",
+      "public-key",
+      "fingerprint",
+      "sha256",
+      "md5",
+      "authorized-keys",
+      "openssh",
+      "security",
+      "network",
+    ],
+    locales: {
+      ar: {
+        name: "بصمة مفتاح SSH العام",
+        description:
+          "أنشئ بصمات SHA-256 وMD5 لمفاتيح OpenSSH العامة، وأسطر authorized_keys، وكتل مفاتيح SSH2 العامة.",
+      },
+      de: {
+        name: "SSH-Public-Key-Fingerprint",
+        description:
+          "Erzeugen Sie SHA-256- und MD5-Fingerprints für OpenSSH-Public-Keys, authorized_keys-Zeilen und SSH2-Public-Key-Blöcke.",
+      },
+      en: {
+        name: "SSH Public Key Fingerprint",
+        description:
+          "Generate SHA-256 and MD5 fingerprints for OpenSSH public keys, authorized_keys lines, and SSH2 public key blocks.",
+      },
+      es: {
+        name: "Huella de clave pública SSH",
+        description:
+          "Genera huellas SHA-256 y MD5 para claves públicas OpenSSH, líneas authorized_keys y bloques de clave pública SSH2.",
+      },
+      fr: {
+        name: "Empreinte de clé publique SSH",
+        description:
+          "Générez des empreintes SHA-256 et MD5 pour les clés publiques OpenSSH, les lignes authorized_keys et les blocs de clés publiques SSH2.",
+      },
+      he: {
+        name: "טביעת אצבע של מפתח ציבורי SSH",
+        description:
+          "יצירת טביעות אצבע SHA-256 ו-MD5 עבור מפתחות ציבוריים של OpenSSH, שורות authorized_keys ובלוקי מפתח ציבורי SSH2.",
+      },
+      hi: {
+        name: "SSH सार्वजनिक कुंजी फिंगरप्रिंट",
+        description:
+          "OpenSSH सार्वजनिक कुंजियों, authorized_keys पंक्तियों और SSH2 सार्वजनिक कुंजी ब्लॉकों के लिए SHA-256 और MD5 फिंगरप्रिंट जेनरेट करें।",
+      },
+      id: {
+        name: "Sidik Jari Kunci Publik SSH",
+        description:
+          "Buat sidik jari SHA-256 dan MD5 untuk kunci publik OpenSSH, baris authorized_keys, dan blok kunci publik SSH2.",
+      },
+      it: {
+        name: "Fingerprint della chiave pubblica SSH",
+        description:
+          "Genera fingerprint SHA-256 e MD5 per chiavi pubbliche OpenSSH, righe authorized_keys e blocchi di chiavi pubbliche SSH2.",
+      },
+      ja: {
+        name: "SSH 公開鍵フィンガープリント",
+        description:
+          "OpenSSH 公開鍵、authorized_keys の行、SSH2 公開鍵ブロックから SHA-256 と MD5 のフィンガープリントを生成します。",
+      },
+      ko: {
+        name: "SSH 공개 키 지문",
+        description:
+          "OpenSSH 공개 키, authorized_keys 줄, SSH2 공개 키 블록의 SHA-256 및 MD5 지문을 생성합니다.",
+      },
+      ms: {
+        name: "Cap Jari Kunci Awam SSH",
+        description:
+          "Jana cap jari SHA-256 dan MD5 untuk kunci awam OpenSSH, baris authorized_keys, dan blok kunci awam SSH2.",
+      },
+      nl: {
+        name: "SSH Public Key Fingerprint",
+        description:
+          "Genereer SHA-256- en MD5-fingerprints voor OpenSSH-public keys, authorized_keys-regels en SSH2-public-key-blokken.",
+      },
+      no: {
+        name: "SSH offentlig nøkkelfingeravtrykk",
+        description:
+          "Generer SHA-256- og MD5-fingeravtrykk for offentlige OpenSSH-nøkler, authorized_keys-linjer og SSH2-blokker med offentlige nøkler.",
+      },
+      pl: {
+        name: "Odcisk klucza publicznego SSH",
+        description:
+          "Generuj odciski SHA-256 i MD5 dla kluczy publicznych OpenSSH, wierszy authorized_keys oraz bloków kluczy publicznych SSH2.",
+      },
+      pt: {
+        name: "Impressão digital de chave pública SSH",
+        description:
+          "Gere impressões digitais SHA-256 e MD5 para chaves públicas OpenSSH, linhas de authorized_keys e blocos de chave pública SSH2.",
+      },
+      ru: {
+        name: "Отпечаток открытого ключа SSH",
+        description:
+          "Создавайте отпечатки SHA-256 и MD5 для открытых ключей OpenSSH, строк authorized_keys и блоков открытых ключей SSH2.",
+      },
+      sv: {
+        name: "SSH Public Key Fingerprint",
+        description:
+          "Generera SHA-256- och MD5-fingeravtryck för publika OpenSSH-nycklar, authorized_keys-rader och SSH2-block med publika nycklar.",
+      },
+      th: {
+        name: "ลายนิ้วมือคีย์สาธารณะ SSH",
+        description:
+          "สร้างลายนิ้วมือ SHA-256 และ MD5 สำหรับคีย์สาธารณะ OpenSSH, บรรทัด authorized_keys และบล็อกคีย์สาธารณะ SSH2",
+      },
+      tr: {
+        name: "SSH Ortak Anahtar Parmak İzi",
+        description:
+          "OpenSSH ortak anahtarları, authorized_keys satırları ve SSH2 ortak anahtar blokları için SHA-256 ve MD5 parmak izleri oluşturun.",
+      },
+      vi: {
+        name: "Vân tay khóa công khai SSH",
+        description:
+          "Tạo vân tay SHA-256 và MD5 cho khóa công khai OpenSSH, dòng authorized_keys và khối khóa công khai SSH2.",
+      },
+      "zh-CN": {
+        name: "SSH 公钥指纹",
+        description:
+          "为 OpenSSH 公钥、authorized_keys 行和 SSH2 公钥块生成 SHA-256 与 MD5 指纹。",
+      },
+      "zh-TW": {
+        name: "SSH 公開金鑰指紋",
+        description:
+          "為 OpenSSH 公開金鑰、authorized_keys 行與 SSH2 公開金鑰區塊產生 SHA-256 和 MD5 指紋。",
       },
     },
   },

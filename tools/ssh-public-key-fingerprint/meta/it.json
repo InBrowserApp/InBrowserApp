@@ -1,0 +1,4 @@
+{
+  "name": "Fingerprint della chiave pubblica SSH",
+  "description": "Genera fingerprint SHA-256 e MD5 per chiavi pubbliche OpenSSH, righe authorized_keys e blocchi di chiavi pubbliche SSH2."
+}

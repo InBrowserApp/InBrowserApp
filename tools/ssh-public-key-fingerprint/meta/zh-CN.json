@@ -1,0 +1,4 @@
+{
+  "name": "SSH 公钥指纹",
+  "description": "为 OpenSSH 公钥、authorized_keys 行和 SSH2 公钥块生成 SHA-256 与 MD5 指纹。"
+}

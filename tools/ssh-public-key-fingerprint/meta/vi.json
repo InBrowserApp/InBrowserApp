@@ -1,0 +1,4 @@
+{
+  "name": "Vân tay khóa công khai SSH",
+  "description": "Tạo vân tay SHA-256 và MD5 cho khóa công khai OpenSSH, dòng authorized_keys và khối khóa công khai SSH2."
+}

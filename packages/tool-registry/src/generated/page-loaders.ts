@@ -158,6 +158,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),
+  "ssh-public-key-fingerprint": () =>
+    import("@tool/ssh-public-key-fingerprint/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
   "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
   "text-diff": () => import("@tool/text-diff/page"),

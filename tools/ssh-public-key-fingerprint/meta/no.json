@@ -1,0 +1,4 @@
+{
+  "name": "SSH offentlig nøkkelfingeravtrykk",
+  "description": "Generer SHA-256- og MD5-fingeravtrykk for offentlige OpenSSH-nøkler, authorized_keys-linjer og SSH2-blokker med offentlige nøkler."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "SSH 公開鍵フィンガープリント",
+  "description": "OpenSSH 公開鍵、authorized_keys の行、SSH2 公開鍵ブロックから SHA-256 と MD5 のフィンガープリントを生成します。"
+}

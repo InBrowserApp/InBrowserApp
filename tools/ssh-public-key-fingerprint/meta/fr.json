@@ -1,0 +1,4 @@
+{
+  "name": "Empreinte de clé publique SSH",
+  "description": "Générez des empreintes SHA-256 et MD5 pour les clés publiques OpenSSH, les lignes authorized_keys et les blocs de clés publiques SSH2."
+}

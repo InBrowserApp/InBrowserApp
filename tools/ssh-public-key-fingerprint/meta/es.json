@@ -1,0 +1,4 @@
+{
+  "name": "Huella de clave pública SSH",
+  "description": "Genera huellas SHA-256 y MD5 para claves públicas OpenSSH, líneas authorized_keys y bloques de clave pública SSH2."
+}

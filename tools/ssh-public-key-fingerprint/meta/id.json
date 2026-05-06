@@ -1,0 +1,4 @@
+{
+  "name": "Sidik Jari Kunci Publik SSH",
+  "description": "Buat sidik jari SHA-256 dan MD5 untuk kunci publik OpenSSH, baris authorized_keys, dan blok kunci publik SSH2."
+}

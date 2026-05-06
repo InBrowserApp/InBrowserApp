@@ -1,0 +1,4 @@
+{
+  "name": "SSH 공개 키 지문",
+  "description": "OpenSSH 공개 키, authorized_keys 줄, SSH2 공개 키 블록의 SHA-256 및 MD5 지문을 생성합니다."
+}

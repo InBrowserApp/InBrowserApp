@@ -1,0 +1,4 @@
+{
+  "name": "SSH-Public-Key-Fingerprint",
+  "description": "Erzeugen Sie SHA-256- und MD5-Fingerprints für OpenSSH-Public-Keys, authorized_keys-Zeilen und SSH2-Public-Key-Blöcke."
+}
