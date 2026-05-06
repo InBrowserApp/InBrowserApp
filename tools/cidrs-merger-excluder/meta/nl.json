@@ -1,0 +1,4 @@
+{
+  "name": "CIDR's samenvoegen en uitsluiten",
+  "description": "Voeg IPv4- en IPv6-CIDR-blokken samen, trek uitgesloten netwerken af en kopieer de minimale resulterende CIDR-lijst."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "CIDRs Merger & Excluder",
+  "description": "Merge IPv4 and IPv6 CIDR blocks, subtract excluded networks, and copy the minimal resulting CIDR list."
+}

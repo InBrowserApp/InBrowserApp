@@ -1,0 +1,4 @@
+{
+  "name": "Fusion et exclusion de CIDR",
+  "description": "Fusionnez des blocs CIDR IPv4 et IPv6, soustrayez les réseaux exclus, puis copiez la liste CIDR minimale obtenue."
+}

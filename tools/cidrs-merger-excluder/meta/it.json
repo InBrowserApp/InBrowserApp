@@ -1,0 +1,4 @@
+{
+  "name": "Unificatore ed esclusore di CIDR",
+  "description": "Unisci blocchi CIDR IPv4 e IPv6, sottrai le reti escluse e copia l'elenco CIDR risultante minimo."
+}

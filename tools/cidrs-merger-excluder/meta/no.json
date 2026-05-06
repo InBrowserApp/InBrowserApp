@@ -1,0 +1,4 @@
+{
+  "name": "CIDR-fletting og -utelukking",
+  "description": "Flett IPv4- og IPv6-CIDR-blokker, trekk fra utelukkede nettverk, og kopier den minimale resulterende CIDR-listen."
+}

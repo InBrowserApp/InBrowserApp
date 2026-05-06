@@ -1,0 +1,4 @@
+{
+  "name": "Penggabung & Pengecuali CIDR",
+  "description": "Gabungkan blok CIDR IPv4 dan IPv6, kurangi jaringan yang dikecualikan, lalu salin daftar CIDR hasil minimal."
+}

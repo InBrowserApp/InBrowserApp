@@ -1,0 +1,4 @@
+{
+  "name": "Mesclador e Excludor de CIDRs",
+  "description": "Mescle blocos CIDR IPv4 e IPv6, subtraia redes excluídas e copie a lista CIDR resultante mínima."
+}

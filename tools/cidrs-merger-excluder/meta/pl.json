@@ -1,0 +1,4 @@
+{
+  "name": "Scalanie i wykluczanie CIDR",
+  "description": "Scalaj bloki CIDR IPv4 i IPv6, odejmuj wykluczone sieci i kopiuj minimalną wynikową listę CIDR."
+}

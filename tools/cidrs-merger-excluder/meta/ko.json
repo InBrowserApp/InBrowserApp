@@ -1,0 +1,4 @@
+{
+  "name": "CIDR 병합 및 제외 도구",
+  "description": "IPv4 및 IPv6 CIDR 블록을 병합하고, 제외할 네트워크를 빼낸 뒤, 최소 결과 CIDR 목록을 복사합니다."
+}

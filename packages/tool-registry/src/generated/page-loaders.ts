@@ -35,6 +35,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/chinese-uppercase-number-converter/page"),
   "chmod-calculator": () => import("@tool/chmod-calculator/page"),
   "cidr-parser": () => import("@tool/cidr-parser/page"),
+  "cidrs-merger-excluder": () => import("@tool/cidrs-merger-excluder/page"),
   "color-contrast-checker": () => import("@tool/color-contrast-checker/page"),
   "color-converter": () => import("@tool/color-converter/page"),
   "color-picker": () => import("@tool/color-picker/page"),
