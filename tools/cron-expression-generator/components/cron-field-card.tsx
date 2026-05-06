@@ -115,7 +115,7 @@ function CronFieldCard({
               type="single"
               variant="outline"
               value={normalized.mode}
-              className="flex w-full flex-wrap gap-2"
+              className="w-full"
               onValueChange={(value) => {
                 if (MODE_VALUES.includes(value as CronFieldMode)) {
                   updateField({ mode: value as CronFieldMode })
@@ -127,9 +127,11 @@ function CronFieldCard({
                   key={mode}
                   value={mode}
                   aria-label={messages.fields[mode]}
-                  className="flex-1 sm:flex-none"
+                  className="min-w-0 flex-1 basis-0 overflow-hidden"
                 >
-                  {messages.fields[mode]}
+                  <span className="min-w-0 truncate">
+                    {messages.fields[mode]}
+                  </span>
                 </ToggleGroupItem>
               ))}
             </ToggleGroup>
