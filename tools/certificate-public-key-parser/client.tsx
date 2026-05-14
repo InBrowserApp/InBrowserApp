@@ -141,8 +141,8 @@ function CertificatePublicKeyParserClient({
       : formatMessage(messages.selectedFileHint, { name: input.name })
 
   return (
-    <div className="mx-auto grid w-full max-w-6xl gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-      <ToolPanelCard className="min-w-0 lg:sticky lg:top-6 lg:self-start">
+    <div className="mx-auto grid w-full max-w-5xl gap-6">
+      <ToolPanelCard className="min-w-0">
         <CardHeader className="border-b">
           <CardTitle>{messages.inputTitle}</CardTitle>
           <CardDescription>{messages.inputDescription}</CardDescription>
@@ -213,7 +213,7 @@ function CertificatePublicKeyParserClient({
         </ToolPanelCardFooter>
       </ToolPanelCard>
 
-      <ToolPanelCard className="min-w-0 lg:sticky lg:top-6 lg:self-start">
+      <ToolPanelCard className="min-w-0">
         <CardHeader className="border-b">
           <CardTitle>{messages.resultsTitle}</CardTitle>
           <CardDescription>{messages.resultsDescription}</CardDescription>
