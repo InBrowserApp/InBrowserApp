@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Entrada",
+  "plainTextLabel": "Texto simples",
+  "plainTextDescription": "Cole ou digite qualquer texto UTF-8, incluindo emojis e caracteres n\u00e3o latinos.",
+  "importFromFileLabel": "Importar de arquivo",
+  "hashResultLabel": "Resultado do hash",
+  "hashResultDescription": "Resultado do hash para a entrada de texto atual.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Bin\u00e1rio",
+  "copyResultLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "seedSectionLabel": "Semente",
+  "seedLabel": "Semente (opcional)",
+  "seedPlaceholder": "0 ou 0x...",
+  "seedInvalid": "Digite um n\u00famero decimal ou um valor hexadecimal 0x."
+}

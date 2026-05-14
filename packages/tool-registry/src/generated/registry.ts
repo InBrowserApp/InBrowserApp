@@ -11326,6 +11326,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "murmurhash3-x86-128-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "murmurhash3",
+      "murmur",
+      "x86-128",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة النص أو الملف باستخدام MurmurHash3 (x86 128-bit)",
+        description:
+          "أنشئ تجزئات MurmurHash3 x86 128-bit لإدخال النصوص أو الملفات المرفوعة. احسب مجاميع تحقق سريعة غير تشفيرية للتوزيع على حاويات، وإزالة التكرار، ومفاتيح التخزين المؤقت، وفحوصات السلامة.",
+      },
+      de: {
+        name: "MurmurHash3 (x86 128-bit)-Hash für Text oder Datei",
+        description:
+          "Erzeugen Sie MurmurHash3 x86 128-bit-Hashes für Texteingaben oder Datei-Uploads. Berechnen Sie schnelle nicht-kryptografische Prüfsummen für Bucketing, Deduplizierung, Cache-Schlüssel und Integritätsprüfungen.",
+      },
+      en: {
+        name: "MurmurHash3 (x86 128-bit) Hash Text or File",
+        description:
+          "Generate MurmurHash3 x86 128-bit hashes for text input or file uploads. Calculate fast non-cryptographic checksums for bucketing, deduplication, cache keys, and integrity checks.",
+      },
+      es: {
+        name: "Hash MurmurHash3 (x86 128-bit) de texto o archivo",
+        description:
+          "Genera hashes MurmurHash3 x86 128-bit para entradas de texto o archivos cargados. Calcula sumas de comprobación no criptográficas rápidas para agrupación, deduplicación, claves de caché y comprobaciones de integridad.",
+      },
+      fr: {
+        name: "Hacher du texte ou un fichier avec MurmurHash3 (x86 128-bit)",
+        description:
+          "Générez des hachages MurmurHash3 x86 128-bit pour du texte saisi ou des fichiers importés. Calculez rapidement des sommes de contrôle non cryptographiques pour la répartition en compartiments, la déduplication, les clés de cache et les contrôles d'intégrité.",
+      },
+      he: {
+        name: "גיבוב טקסט או קובץ באמצעות MurmurHash3 (x86 128-bit)",
+        description:
+          "צרו ערכי גיבוב MurmurHash3 x86 128-bit עבור קלט טקסט או העלאות קבצים. חשבו סכומי בדיקה לא-קריפטוגרפיים מהירים לחלוקה לדליים, הסרת כפילויות, מפתחות מטמון ובדיקות תקינות.",
+      },
+      hi: {
+        name: "MurmurHash3 (x86 128-bit) टेक्स्ट या फ़ाइल हैश करें",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए MurmurHash3 x86 128-bit हैश जनरेट करें। बकेटिंग, डुप्लिकेट हटाने, कैश कुंजियों और अखंडता जांचों के लिए तेज़ गैर-क्रिप्टोग्राफिक चेकसम की गणना करें।",
+      },
+      id: {
+        name: "Hash MurmurHash3 (x86 128-bit) Teks atau File",
+        description:
+          "Buat hash MurmurHash3 x86 128-bit untuk masukan teks atau unggahan file. Hitung checksum non-kriptografi yang cepat untuk bucket, deduplikasi, kunci cache, dan pemeriksaan integritas.",
+      },
+      it: {
+        name: "Hash MurmurHash3 (x86 128-bit) di testo o file",
+        description:
+          "Genera hash MurmurHash3 x86 128-bit per input di testo o caricamenti di file. Calcola checksum non crittografici veloci per bucketing, deduplicazione, chiavi di cache e controlli di integrità.",
+      },
+      ja: {
+        name: "MurmurHash3 (x86 128-bit) テキストまたはファイルのハッシュ",
+        description:
+          "テキスト入力またはファイルアップロードから MurmurHash3 x86 128-bit ハッシュを生成します。バケット分け、重複排除、キャッシュキー、整合性チェックに使える高速な非暗号学的チェックサムを計算します。",
+      },
+      ko: {
+        name: "MurmurHash3 (x86 128-bit) 텍스트 또는 파일 해시",
+        description:
+          "텍스트 입력 또는 파일 업로드의 MurmurHash3 x86 128-bit 해시를 생성합니다. 버킷팅, 중복 제거, 캐시 키, 무결성 검사를 위한 빠른 비암호학적 체크섬을 계산하세요.",
+      },
+      ms: {
+        name: "Hash MurmurHash3 (x86 128-bit) Teks atau Fail",
+        description:
+          "Jana hash MurmurHash3 x86 128-bit untuk input teks atau muat naik fail. Kira checksum bukan kriptografi yang pantas untuk pengelompokan, penyahgandaan, kunci cache, dan semakan integriti.",
+      },
+      nl: {
+        name: "MurmurHash3 (x86 128-bit)-hash voor tekst of bestand",
+        description:
+          "Genereer MurmurHash3 x86 128-bit-hashes voor tekstinvoer of bestandsuploads. Bereken snelle, niet-cryptografische checksums voor bucketing, deduplicatie, cachesleutels en integriteitscontroles.",
+      },
+      no: {
+        name: "MurmurHash3 (x86 128-bit): hash tekst eller fil",
+        description:
+          "Generer MurmurHash3 x86 128-bit-hasher for tekstinndata eller filopplastinger. Beregn raske ikke-kryptografiske sjekksummer for bucket-inndeling, deduplisering, cache-nøkler og integritetssjekker.",
+      },
+      pl: {
+        name: "Skrót MurmurHash3 (x86 128-bit) dla tekstu lub pliku",
+        description:
+          "Generuj skróty MurmurHash3 x86 128-bit dla tekstu lub przesyłanych plików. Obliczaj szybkie, niekryptograficzne sumy kontrolne do przypisywania do bucketów, deduplikacji, kluczy cache i kontroli integralności.",
+      },
+      pt: {
+        name: "Hash MurmurHash3 (x86 128-bit) de texto ou arquivo",
+        description:
+          "Gere hashes MurmurHash3 x86 128-bit para entradas de texto ou arquivos enviados. Calcule somas de verificação não criptográficas rápidas para agrupamento em buckets, deduplicação, chaves de cache e verificações de integridade.",
+      },
+      ru: {
+        name: "Хеширование текста или файла MurmurHash3 (x86 128-bit)",
+        description:
+          "Создавайте хеши MurmurHash3 x86 128-bit для текстового ввода или загружаемых файлов. Вычисляйте быстрые некриптографические контрольные суммы для распределения по бакетам, дедупликации, ключей кеша и проверок целостности.",
+      },
+      sv: {
+        name: "MurmurHash3 (x86 128-bit): hasha text eller fil",
+        description:
+          "Generera MurmurHash3 x86 128-bit-hashvärden för textinmatning eller filuppladdningar. Beräkna snabba icke-kryptografiska kontrollsummor för bucketindelning, deduplicering, cachenycklar och integritetskontroller.",
+      },
+      th: {
+        name: "สร้างแฮชข้อความหรือไฟล์ด้วย MurmurHash3 (x86 128-bit)",
+        description:
+          "สร้างแฮช MurmurHash3 x86 128-bit สำหรับข้อความที่ป้อนหรือไฟล์ที่อัปโหลด คำนวณเช็คซัมแบบไม่ใช่การเข้ารหัสได้อย่างรวดเร็ว สำหรับการจัดกลุ่ม การลบข้อมูลซ้ำ คีย์แคช และการตรวจสอบความสมบูรณ์ของข้อมูล",
+      },
+      tr: {
+        name: "MurmurHash3 (x86 128-bit) Metin veya Dosya Hash'i",
+        description:
+          "Metin girişi veya dosya yüklemeleri için MurmurHash3 x86 128-bit hash'leri oluşturun. Kovalara ayırma, tekilleştirme, önbellek anahtarları ve bütünlük kontrolleri için hızlı, kriptografik olmayan sağlama toplamları hesaplayın.",
+      },
+      vi: {
+        name: "Băm văn bản hoặc tệp bằng MurmurHash3 (x86 128-bit)",
+        description:
+          "Tạo giá trị băm MurmurHash3 x86 128-bit cho đầu vào văn bản hoặc tệp tải lên. Tính mã kiểm tra phi mật mã tốc độ cao cho việc phân nhóm, khử trùng lặp, khóa bộ nhớ đệm và kiểm tra tính toàn vẹn.",
+      },
+      "zh-CN": {
+        name: "MurmurHash3 (x86 128-bit) 文本或文件哈希",
+        description:
+          "为文本输入或上传的文件生成 MurmurHash3 x86 128-bit 哈希值。计算快速的非加密校验和，可用于分桶、去重、缓存键和完整性检查。",
+      },
+      "zh-TW": {
+        name: "MurmurHash3 (x86 128-bit) 文字或檔案雜湊",
+        description:
+          "為文字輸入或檔案上傳產生 MurmurHash3 x86 128-bit 雜湊值。計算快速的非加密檢查碼，適用於分桶、去除重複、快取鍵與完整性檢查。",
+      },
+    },
+  },
+  {
     slug: "murmurhash3-x86-32-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -31219,6 +31352,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "MurmurHash3 (x64 128-bit) 文字或檔案雜湊",
         description:
           "為文字輸入或檔案上傳產生 MurmurHash3 x64 128-bit 雜湊值。計算快速的非加密校驗和，可用於分桶、去重、快取鍵與完整性檢查。",
+      },
+    },
+  },
+  "murmurhash3-x86-128-hash-text-or-file": {
+    slug: "murmurhash3-x86-128-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "murmurhash3",
+      "murmur",
+      "x86-128",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة النص أو الملف باستخدام MurmurHash3 (x86 128-bit)",
+        description:
+          "أنشئ تجزئات MurmurHash3 x86 128-bit لإدخال النصوص أو الملفات المرفوعة. احسب مجاميع تحقق سريعة غير تشفيرية للتوزيع على حاويات، وإزالة التكرار، ومفاتيح التخزين المؤقت، وفحوصات السلامة.",
+      },
+      de: {
+        name: "MurmurHash3 (x86 128-bit)-Hash für Text oder Datei",
+        description:
+          "Erzeugen Sie MurmurHash3 x86 128-bit-Hashes für Texteingaben oder Datei-Uploads. Berechnen Sie schnelle nicht-kryptografische Prüfsummen für Bucketing, Deduplizierung, Cache-Schlüssel und Integritätsprüfungen.",
+      },
+      en: {
+        name: "MurmurHash3 (x86 128-bit) Hash Text or File",
+        description:
+          "Generate MurmurHash3 x86 128-bit hashes for text input or file uploads. Calculate fast non-cryptographic checksums for bucketing, deduplication, cache keys, and integrity checks.",
+      },
+      es: {
+        name: "Hash MurmurHash3 (x86 128-bit) de texto o archivo",
+        description:
+          "Genera hashes MurmurHash3 x86 128-bit para entradas de texto o archivos cargados. Calcula sumas de comprobación no criptográficas rápidas para agrupación, deduplicación, claves de caché y comprobaciones de integridad.",
+      },
+      fr: {
+        name: "Hacher du texte ou un fichier avec MurmurHash3 (x86 128-bit)",
+        description:
+          "Générez des hachages MurmurHash3 x86 128-bit pour du texte saisi ou des fichiers importés. Calculez rapidement des sommes de contrôle non cryptographiques pour la répartition en compartiments, la déduplication, les clés de cache et les contrôles d'intégrité.",
+      },
+      he: {
+        name: "גיבוב טקסט או קובץ באמצעות MurmurHash3 (x86 128-bit)",
+        description:
+          "צרו ערכי גיבוב MurmurHash3 x86 128-bit עבור קלט טקסט או העלאות קבצים. חשבו סכומי בדיקה לא-קריפטוגרפיים מהירים לחלוקה לדליים, הסרת כפילויות, מפתחות מטמון ובדיקות תקינות.",
+      },
+      hi: {
+        name: "MurmurHash3 (x86 128-bit) टेक्स्ट या फ़ाइल हैश करें",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए MurmurHash3 x86 128-bit हैश जनरेट करें। बकेटिंग, डुप्लिकेट हटाने, कैश कुंजियों और अखंडता जांचों के लिए तेज़ गैर-क्रिप्टोग्राफिक चेकसम की गणना करें।",
+      },
+      id: {
+        name: "Hash MurmurHash3 (x86 128-bit) Teks atau File",
+        description:
+          "Buat hash MurmurHash3 x86 128-bit untuk masukan teks atau unggahan file. Hitung checksum non-kriptografi yang cepat untuk bucket, deduplikasi, kunci cache, dan pemeriksaan integritas.",
+      },
+      it: {
+        name: "Hash MurmurHash3 (x86 128-bit) di testo o file",
+        description:
+          "Genera hash MurmurHash3 x86 128-bit per input di testo o caricamenti di file. Calcola checksum non crittografici veloci per bucketing, deduplicazione, chiavi di cache e controlli di integrità.",
+      },
+      ja: {
+        name: "MurmurHash3 (x86 128-bit) テキストまたはファイルのハッシュ",
+        description:
+          "テキスト入力またはファイルアップロードから MurmurHash3 x86 128-bit ハッシュを生成します。バケット分け、重複排除、キャッシュキー、整合性チェックに使える高速な非暗号学的チェックサムを計算します。",
+      },
+      ko: {
+        name: "MurmurHash3 (x86 128-bit) 텍스트 또는 파일 해시",
+        description:
+          "텍스트 입력 또는 파일 업로드의 MurmurHash3 x86 128-bit 해시를 생성합니다. 버킷팅, 중복 제거, 캐시 키, 무결성 검사를 위한 빠른 비암호학적 체크섬을 계산하세요.",
+      },
+      ms: {
+        name: "Hash MurmurHash3 (x86 128-bit) Teks atau Fail",
+        description:
+          "Jana hash MurmurHash3 x86 128-bit untuk input teks atau muat naik fail. Kira checksum bukan kriptografi yang pantas untuk pengelompokan, penyahgandaan, kunci cache, dan semakan integriti.",
+      },
+      nl: {
+        name: "MurmurHash3 (x86 128-bit)-hash voor tekst of bestand",
+        description:
+          "Genereer MurmurHash3 x86 128-bit-hashes voor tekstinvoer of bestandsuploads. Bereken snelle, niet-cryptografische checksums voor bucketing, deduplicatie, cachesleutels en integriteitscontroles.",
+      },
+      no: {
+        name: "MurmurHash3 (x86 128-bit): hash tekst eller fil",
+        description:
+          "Generer MurmurHash3 x86 128-bit-hasher for tekstinndata eller filopplastinger. Beregn raske ikke-kryptografiske sjekksummer for bucket-inndeling, deduplisering, cache-nøkler og integritetssjekker.",
+      },
+      pl: {
+        name: "Skrót MurmurHash3 (x86 128-bit) dla tekstu lub pliku",
+        description:
+          "Generuj skróty MurmurHash3 x86 128-bit dla tekstu lub przesyłanych plików. Obliczaj szybkie, niekryptograficzne sumy kontrolne do przypisywania do bucketów, deduplikacji, kluczy cache i kontroli integralności.",
+      },
+      pt: {
+        name: "Hash MurmurHash3 (x86 128-bit) de texto ou arquivo",
+        description:
+          "Gere hashes MurmurHash3 x86 128-bit para entradas de texto ou arquivos enviados. Calcule somas de verificação não criptográficas rápidas para agrupamento em buckets, deduplicação, chaves de cache e verificações de integridade.",
+      },
+      ru: {
+        name: "Хеширование текста или файла MurmurHash3 (x86 128-bit)",
+        description:
+          "Создавайте хеши MurmurHash3 x86 128-bit для текстового ввода или загружаемых файлов. Вычисляйте быстрые некриптографические контрольные суммы для распределения по бакетам, дедупликации, ключей кеша и проверок целостности.",
+      },
+      sv: {
+        name: "MurmurHash3 (x86 128-bit): hasha text eller fil",
+        description:
+          "Generera MurmurHash3 x86 128-bit-hashvärden för textinmatning eller filuppladdningar. Beräkna snabba icke-kryptografiska kontrollsummor för bucketindelning, deduplicering, cachenycklar och integritetskontroller.",
+      },
+      th: {
+        name: "สร้างแฮชข้อความหรือไฟล์ด้วย MurmurHash3 (x86 128-bit)",
+        description:
+          "สร้างแฮช MurmurHash3 x86 128-bit สำหรับข้อความที่ป้อนหรือไฟล์ที่อัปโหลด คำนวณเช็คซัมแบบไม่ใช่การเข้ารหัสได้อย่างรวดเร็ว สำหรับการจัดกลุ่ม การลบข้อมูลซ้ำ คีย์แคช และการตรวจสอบความสมบูรณ์ของข้อมูล",
+      },
+      tr: {
+        name: "MurmurHash3 (x86 128-bit) Metin veya Dosya Hash'i",
+        description:
+          "Metin girişi veya dosya yüklemeleri için MurmurHash3 x86 128-bit hash'leri oluşturun. Kovalara ayırma, tekilleştirme, önbellek anahtarları ve bütünlük kontrolleri için hızlı, kriptografik olmayan sağlama toplamları hesaplayın.",
+      },
+      vi: {
+        name: "Băm văn bản hoặc tệp bằng MurmurHash3 (x86 128-bit)",
+        description:
+          "Tạo giá trị băm MurmurHash3 x86 128-bit cho đầu vào văn bản hoặc tệp tải lên. Tính mã kiểm tra phi mật mã tốc độ cao cho việc phân nhóm, khử trùng lặp, khóa bộ nhớ đệm và kiểm tra tính toàn vẹn.",
+      },
+      "zh-CN": {
+        name: "MurmurHash3 (x86 128-bit) 文本或文件哈希",
+        description:
+          "为文本输入或上传的文件生成 MurmurHash3 x86 128-bit 哈希值。计算快速的非加密校验和，可用于分桶、去重、缓存键和完整性检查。",
+      },
+      "zh-TW": {
+        name: "MurmurHash3 (x86 128-bit) 文字或檔案雜湊",
+        description:
+          "為文字輸入或檔案上傳產生 MurmurHash3 x86 128-bit 雜湊值。計算快速的非加密檢查碼，適用於分桶、去除重複、快取鍵與完整性檢查。",
       },
     },
   },

@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Đầu vào",
+  "plainTextLabel": "Văn bản thuần",
+  "plainTextDescription": "Dán hoặc nhập bất kỳ văn bản UTF-8 nào, bao gồm cả biểu tượng cảm xúc và ký tự không thuộc hệ Latinh.",
+  "importFromFileLabel": "Nhập từ tệp",
+  "hashResultLabel": "Kết quả băm",
+  "hashResultDescription": "Kết quả băm cho đầu vào văn bản hiện tại.",
+  "hexLabel": "Thập lục phân",
+  "base64Label": "Base64",
+  "decimalLabel": "Thập phân",
+  "binaryLabel": "Nhị phân",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (không bắt buộc)",
+  "seedPlaceholder": "0 hoặc 0x...",
+  "seedInvalid": "Nhập số thập phân hoặc giá trị thập lục phân có tiền tố 0x."
+}

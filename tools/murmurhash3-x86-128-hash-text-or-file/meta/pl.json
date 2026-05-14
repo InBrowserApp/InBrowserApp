@@ -1,0 +1,4 @@
+{
+  "name": "Skrót MurmurHash3 (x86 128-bit) dla tekstu lub pliku",
+  "description": "Generuj skróty MurmurHash3 x86 128-bit dla tekstu lub przesyłanych plików. Obliczaj szybkie, niekryptograficzne sumy kontrolne do przypisywania do bucketów, deduplikacji, kluczy cache i kontroli integralności."
+}

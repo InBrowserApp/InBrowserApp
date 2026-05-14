@@ -1,0 +1,4 @@
+{
+  "name": "Hash MurmurHash3 (x86 128-bit) de texto o archivo",
+  "description": "Genera hashes MurmurHash3 x86 128-bit para entradas de texto o archivos cargados. Calcula sumas de comprobación no criptográficas rápidas para agrupación, deduplicación, claves de caché y comprobaciones de integridad."
+}

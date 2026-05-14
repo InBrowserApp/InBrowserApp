@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Entrada",
+  "plainTextLabel": "Texto sin formato",
+  "plainTextDescription": "Pega o escribe cualquier texto UTF-8, incluidos emojis y caracteres no latinos.",
+  "importFromFileLabel": "Importar desde archivo",
+  "hashResultLabel": "Resultado del hash",
+  "hashResultDescription": "Resultado del hash para la entrada de texto actual.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binario",
+  "copyResultLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "seedSectionLabel": "Semilla",
+  "seedLabel": "Semilla (opcional)",
+  "seedPlaceholder": "0 o 0x...",
+  "seedInvalid": "Introduce un número decimal o un valor hexadecimal con prefijo 0x."
+}

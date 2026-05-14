@@ -1,0 +1,4 @@
+{
+  "name": "MurmurHash3 (x86 128-bit): hasha text eller fil",
+  "description": "Generera MurmurHash3 x86 128-bit-hashv\u00e4rden f\u00f6r textinmatning eller filuppladdningar. Ber\u00e4kna snabba icke-kryptografiska kontrollsummor f\u00f6r bucketindelning, deduplicering, cachenycklar och integritetskontroller."
+}

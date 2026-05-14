@@ -1,0 +1,4 @@
+{
+  "name": "Hash MurmurHash3 (x86 128-bit) Teks atau File",
+  "description": "Buat hash MurmurHash3 x86 128-bit untuk masukan teks atau unggahan file. Hitung checksum non-kriptografi yang cepat untuk bucket, deduplikasi, kunci cache, dan pemeriksaan integritas."
+}

@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Eingabe",
+  "plainTextLabel": "Klartext",
+  "plainTextDescription": "Fügen Sie beliebigen UTF-8-Text ein oder geben Sie ihn ein, einschließlich Emojis und nicht-lateinischer Zeichen.",
+  "importFromFileLabel": "Aus Datei importieren",
+  "hashResultLabel": "Hash-Ergebnis",
+  "hashResultDescription": "Hash-Ergebnis für die aktuelle Texteingabe.",
+  "hexLabel": "Hexadezimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Dezimal",
+  "binaryLabel": "Binär",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (optional)",
+  "seedPlaceholder": "0 oder 0x...",
+  "seedInvalid": "Geben Sie eine Dezimalzahl oder einen 0x-Hexwert ein."
+}

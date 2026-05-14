@@ -1,0 +1,18 @@
+{
+  "inputLabel": "ข้อมูลเข้า",
+  "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextDescription": "วางหรือพิมพ์ข้อความ UTF-8 ใดก็ได้ รวมถึงอีโมจิและอักขระที่ไม่ใช่ละติน",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "hashResultLabel": "ผลลัพธ์แฮช",
+  "hashResultDescription": "ผลลัพธ์แฮชสำหรับข้อความที่ป้อนในขณะนี้",
+  "hexLabel": "เลขฐานสิบหก",
+  "base64Label": "Base64",
+  "decimalLabel": "เลขฐานสิบ",
+  "binaryLabel": "เลขฐานสอง",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (ไม่บังคับ)",
+  "seedPlaceholder": "0 หรือ 0x...",
+  "seedInvalid": "ป้อนเลขฐานสิบหรือค่าเลขฐานสิบหกที่ขึ้นต้นด้วย 0x"
+}
