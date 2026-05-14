@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "設定",
+  "configurationDescription": "現在の SipHash-128-2-4 結果に使用する 128 ビットキーを指定します。",
+  "keyLabel": "キー（16 進、16 バイト）",
+  "keyDescription": "ちょうど 32 個の 16 進文字を使用してください。0x プレフィックス、スペース、コロン、ハイフン、アンダースコアを使用できます。",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "16 バイトのキーを 32 個の 16 進文字で入力してください。0x プレフィックスは省略できます。",
+  "inputLabel": "入力",
+  "plainTextLabel": "プレーンテキスト",
+  "plainTextDescription": "キャッシュキーやリクエストペイロードを含む任意の UTF-8 テキストを貼り付けるか、入力してください。",
+  "importFromFileLabel": "ファイルからインポート",
+  "hashResultLabel": "ハッシュ結果",
+  "hashResultDescription": "現在のテキスト入力とキーに対する SipHash-128-2-4 出力です。",
+  "emptyStateDescription": "有効な 16 バイトキーを入力し、テキストを指定するかファイルをインポートして、SipHash-128-2-4 の結果を生成してください。",
+  "fileHashErrorLabel": "ファイルのハッシュ計算に失敗しました。",
+  "textHashErrorLabel": "テキストのハッシュ計算に失敗しました。",
+  "hexLabel": "16 進数",
+  "base64Label": "Base64",
+  "decimalLabel": "10 進数",
+  "binaryLabel": "2 進数",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました"
+}

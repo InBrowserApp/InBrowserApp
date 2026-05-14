@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "Konfigurasjon",
+  "configurationDescription": "Angi 128-bitersnøkkelen som brukes til gjeldende SipHash-128-2-4-resultat.",
+  "keyLabel": "Nøkkel (heksadesimal, 16 byte)",
+  "keyDescription": "Bruk nøyaktig 32 heksadesimale tegn. Et 0x-prefiks, mellomrom, kolon, bindestreker og understreker godtas.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "Skriv inn en 16-byte-nøkkel som 32 heksadesimale tegn. 0x-prefikset er valgfritt.",
+  "inputLabel": "Inndata",
+  "plainTextLabel": "Vanlig tekst",
+  "plainTextDescription": "Lim inn eller skriv inn hvilken som helst UTF-8-tekst, inkludert cache-nøkler eller forespørselsinnhold.",
+  "importFromFileLabel": "Importer fra fil",
+  "hashResultLabel": "Hash-resultat",
+  "hashResultDescription": "SipHash-128-2-4-utdata for gjeldende tekstinndata og nøkkel.",
+  "emptyStateDescription": "Angi en gyldig 16-byte-nøkkel og oppgi tekst eller importer en fil for å generere et SipHash-128-2-4-resultat.",
+  "fileHashErrorLabel": "Klarte ikke å hashe filen.",
+  "textHashErrorLabel": "Klarte ikke å hashe teksten.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Desimal",
+  "binaryLabel": "Binær",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert"
+}

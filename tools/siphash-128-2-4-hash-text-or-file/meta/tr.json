@@ -1,0 +1,4 @@
+{
+  "name": "SipHash-128-2-4 Metin veya Dosya Karması",
+  "description": "Metin girişi veya dosya yüklemesi için SipHash-128-2-4 anahtarlı karmaları oluşturun. Karma tablosu, önbellek anahtarı ve sağlama toplamı iş akışları için hızlı 128 bitlik kriptografik olmayan karmaları hesaplamak üzere 128 bitlik bir onaltılık anahtar kullanın."
+}

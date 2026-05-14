@@ -1,0 +1,4 @@
+{
+  "name": "Băm văn bản hoặc tệp bằng SipHash-128-2-4",
+  "description": "Tạo mã băm có khóa SipHash-128-2-4 cho đầu vào văn bản hoặc tệp tải lên. Dùng khóa hex 128 bit để tính nhanh mã băm 128 bit không dùng cho mật mã trong quy trình bảng băm, cache key và checksum."
+}

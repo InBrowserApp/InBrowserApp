@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "Konfiguracja",
+  "configurationDescription": "Ustaw 128-bitowy klucz używany do bieżącego wyniku SipHash-128-2-4.",
+  "keyLabel": "Klucz (Hex, 16 bajtów)",
+  "keyDescription": "Użyj dokładnie 32 znaków szesnastkowych. Akceptowane są prefiks 0x, spacje, dwukropki, łączniki i podkreślenia.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "Wprowadź 16-bajtowy klucz jako 32 znaki szesnastkowe. Prefiks 0x jest opcjonalny.",
+  "inputLabel": "Dane wejściowe",
+  "plainTextLabel": "Zwykły tekst",
+  "plainTextDescription": "Wklej lub wpisz dowolny tekst UTF-8, w tym klucze pamięci podręcznej lub treści żądań.",
+  "importFromFileLabel": "Importuj z pliku",
+  "hashResultLabel": "Wynik haszowania",
+  "hashResultDescription": "Wynik SipHash-128-2-4 dla bieżącego tekstu wejściowego i klucza.",
+  "emptyStateDescription": "Wprowadź prawidłowy 16-bajtowy klucz i podaj tekst albo zaimportuj plik, aby wygenerować wynik SipHash-128-2-4.",
+  "fileHashErrorLabel": "Nie udało się obliczyć hasza pliku.",
+  "textHashErrorLabel": "Nie udało się obliczyć hasza tekstu.",
+  "hexLabel": "Szesnastkowy",
+  "base64Label": "Base64",
+  "decimalLabel": "Dziesiętnie",
+  "binaryLabel": "Binarnie",
+  "copyResultLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano"
+}

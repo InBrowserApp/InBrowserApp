@@ -1,0 +1,4 @@
+{
+  "name": "Gerar Hash SipHash-128-2-4 de Texto ou Arquivo",
+  "description": "Gere hashes com chave SipHash-128-2-4 para entrada de texto ou upload de arquivo. Use uma chave hexadecimal de 128 bits para calcular hashes não criptográficos rápidos de 128 bits para fluxos de trabalho de tabelas de hash, chaves de cache e somas de verificação."
+}

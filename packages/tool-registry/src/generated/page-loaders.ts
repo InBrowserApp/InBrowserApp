@@ -188,6 +188,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/shake128-hash-text-or-file/page"),
   "shake256-hash-text-or-file": () =>
     import("@tool/shake256-hash-text-or-file/page"),
+  "siphash-128-2-4-hash-text-or-file": () =>
+    import("@tool/siphash-128-2-4-hash-text-or-file/page"),
   "siphash-2-4-hash-text-or-file": () =>
     import("@tool/siphash-2-4-hash-text-or-file/page"),
   "sitemap-xml-generator": () => import("@tool/sitemap-xml-generator/page"),

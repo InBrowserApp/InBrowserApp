@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "Konfiguration",
+  "configurationDescription": "Lege den 128-Bit-Schlüssel fest, der für das aktuelle SipHash-128-2-4-Ergebnis verwendet wird.",
+  "keyLabel": "Schlüssel (Hex, 16 Byte)",
+  "keyDescription": "Verwende genau 32 hexadezimale Zeichen. Ein 0x-Präfix, Leerzeichen, Doppelpunkte, Bindestriche und Unterstriche werden akzeptiert.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "Gib einen 16-Byte-Schlüssel als 32 hexadezimale Zeichen ein. Das 0x-Präfix ist optional.",
+  "inputLabel": "Eingabe",
+  "plainTextLabel": "Klartext",
+  "plainTextDescription": "Füge beliebigen UTF-8-Text ein oder tippe ihn ein, einschließlich Cache-Schlüsseln oder Anfrage-Nutzdaten.",
+  "importFromFileLabel": "Aus Datei importieren",
+  "hashResultLabel": "Hash-Ergebnis",
+  "hashResultDescription": "SipHash-128-2-4-Ausgabe für die aktuelle Texteingabe und den Schlüssel.",
+  "emptyStateDescription": "Gib einen gültigen 16-Byte-Schlüssel ein und stelle Text bereit oder importiere eine Datei, um ein SipHash-128-2-4-Ergebnis zu erzeugen.",
+  "fileHashErrorLabel": "Datei konnte nicht gehasht werden.",
+  "textHashErrorLabel": "Text konnte nicht gehasht werden.",
+  "hexLabel": "Hexadezimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Dezimal",
+  "binaryLabel": "Binär",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert"
+}
