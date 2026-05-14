@@ -1,0 +1,4 @@
+{
+  "name": "Băm văn bản hoặc tệp bằng MurmurHash3 (x64 128-bit)",
+  "description": "Tạo giá trị băm MurmurHash3 x64 128-bit cho đầu vào văn bản hoặc tệp tải lên. Tính checksum phi mật mã nhanh cho việc phân nhóm, khử trùng lặp, khóa cache và kiểm tra tính toàn vẹn."
+}

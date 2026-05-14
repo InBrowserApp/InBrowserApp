@@ -1,0 +1,18 @@
+{
+  "inputLabel": "الإدخال",
+  "plainTextLabel": "نص عادي",
+  "plainTextDescription": "الصق أو اكتب أي نص بترميز UTF-8، بما في ذلك الرموز التعبيرية والمحارف غير اللاتينية.",
+  "importFromFileLabel": "استيراد من ملف",
+  "hashResultLabel": "نتيجة التجزئة",
+  "hashResultDescription": "نتيجة التجزئة لإدخال النص الحالي.",
+  "hexLabel": "سداسي عشري",
+  "base64Label": "Base64",
+  "decimalLabel": "عشري",
+  "binaryLabel": "ثنائي",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "seedSectionLabel": "البذرة",
+  "seedLabel": "البذرة (اختياري)",
+  "seedPlaceholder": "0 أو 0x...",
+  "seedInvalid": "أدخل رقمًا عشريًا أو قيمة سداسية عشرية تبدأ بـ 0x."
+}

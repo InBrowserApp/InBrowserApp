@@ -1,0 +1,4 @@
+{
+  "name": "MurmurHash3 (x64 128-bit) 哈希文本或文件",
+  "description": "为文本输入或文件上传生成 MurmurHash3 x64 128-bit 哈希值。计算快速的非加密校验和，用于分桶、去重、缓存键和完整性检查。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Hash MurmurHash3 (x64 128-bit) tekstu lub pliku",
+  "description": "Generuj hashe MurmurHash3 x64 128-bit dla tekstu lub przesyłanych plików. Obliczaj szybkie, niekryptograficzne sumy kontrolne do przypisywania do bucketów, deduplikacji, kluczy cache i sprawdzania integralności."
+}

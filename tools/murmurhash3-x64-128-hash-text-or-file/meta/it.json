@@ -1,0 +1,4 @@
+{
+  "name": "Hash MurmurHash3 (x64 128-bit) di testo o file",
+  "description": "Genera hash MurmurHash3 x64 a 128 bit per input di testo o caricamenti di file. Calcola checksum non crittografici veloci per bucketing, deduplicazione, chiavi di cache e controlli di integrit\u00e0."
+}
