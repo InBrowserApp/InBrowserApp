@@ -5246,6 +5246,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-palette-extractor",
+    language: "ar",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "de",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "en",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "es",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "fr",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "he",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "hi",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "id",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "it",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "ja",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "ko",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "ms",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "nl",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "no",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "pl",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "pt",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "ru",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "sv",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "th",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "tr",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "vi",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-palette-extractor",
+    language: "zh-TW",
+  },
+  {
     slug: "image-resizer",
     language: "ar",
   },

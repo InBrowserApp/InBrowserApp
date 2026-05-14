@@ -1,0 +1,4 @@
+{
+  "name": "Image Palette Extractor",
+  "description": "इमेज से प्रमुख रंग निकालें और पैलेट को HEX, CSS variables या JSON के रूप में निर्यात करें।"
+}

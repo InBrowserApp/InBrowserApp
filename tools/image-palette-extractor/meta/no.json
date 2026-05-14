@@ -1,0 +1,4 @@
+{
+  "name": "Bildepalett-uttrekker",
+  "description": "Hent dominerende farger fra bilder og eksporter paletter som HEX, CSS-variabler eller JSON."
+}
