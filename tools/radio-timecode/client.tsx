@@ -32,6 +32,8 @@ type RadioTimecodeClientProps = Readonly<{
   messages: RadioTimecodeMessages
 }>
 
+const INITIAL_PREVIEW_TIME_MS = Date.UTC(2000, 0, 1, 0, 0, 0)
+
 function RadioTimecodeClient({ language, messages }: RadioTimecodeClientProps) {
   const engineRef = useRef<SignalEngine | null>(null)
   const pendingRestartRef = useRef(false)
@@ -49,7 +51,7 @@ function RadioTimecodeClient({ language, messages }: RadioTimecodeClientProps) {
   const [playing, setPlaying] = useState(false)
   const [starting, setStarting] = useState(false)
   const [startFailed, setStartFailed] = useState(false)
-  const [nowMs, setNowMs] = useState(() => Date.now())
+  const [nowMs, setNowMs] = useState(INITIAL_PREVIEW_TIME_MS)
 
   const station = resolveStation(stationId)
   const signalDate = useMemo(
@@ -169,6 +171,8 @@ function RadioTimecodeClient({ language, messages }: RadioTimecodeClientProps) {
   }, [])
 
   useEffect(() => {
+    setNowMs(Date.now())
+
     const intervalId = window.setInterval(() => {
       setNowMs(Date.now())
     }, TICK_INTERVAL_MS)
@@ -228,8 +232,8 @@ function RadioTimecodeClient({ language, messages }: RadioTimecodeClientProps) {
   }
 
   return (
-    <div className="grid min-w-0 gap-6 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
-      <div className="grid min-w-0 gap-6">
+    <div className="grid min-w-0 items-start gap-6 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
+      <div className="grid min-w-0 content-start gap-6">
         <SignalCard
           messages={messages}
           station={station}
@@ -261,7 +265,7 @@ function RadioTimecodeClient({ language, messages }: RadioTimecodeClientProps) {
         />
       </div>
 
-      <div className="grid min-w-0 gap-6">
+      <div className="grid min-w-0 content-start gap-6">
         <PreviewCard
           messages={messages}
           station={station}

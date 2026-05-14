@@ -36,9 +36,9 @@
   "previewDescription": "Preview follows the selected station and local system clock.",
   "notesTitle": "Operating notes",
   "notes": [
-    "Keep speaker volume low; high-frequency square-wave audio can be uncomfortable.",
+    "Keep output volume low and do not wear headphones while transmitting; high-frequency square-wave audio can be uncomfortable.",
     "The signal is generated offline from this device's system clock.",
-    "The browser emits a lower-frequency harmonic approximation, so results depend on speaker, clock model, and placement.",
+    "The browser emits a lower-frequency harmonic approximation, so results depend on the speaker or wired headphone driver, clock model, antenna alignment, and placement.",
     "JJY voice call sign minutes are not simulated."
   ],
   "hzUnit": "Hz",

@@ -36,9 +36,9 @@
   "previewDescription": "Önizleme seçili istasyonu ve yerel sistem saatini izler.",
   "notesTitle": "Kullanım notları",
   "notes": [
-    "Hoparlör sesini düşük tutun; yüksek frekanslı kare dalga sesi rahatsız edici olabilir.",
+    "Çıkış sesini düşük tutun ve aktarım sırasında kulaklık takmayın; yüksek frekanslı kare dalga sesi rahatsız edici olabilir.",
     "Sinyal, bu cihazın sistem saatinden çevrimdışı olarak oluşturulur.",
-    "Tarayıcı daha düşük frekanslı harmonik bir yaklaşım yayar; bu nedenle sonuçlar hoparlöre, saat modeline ve yerleştirmeye bağlıdır.",
+    "Tarayıcı daha düşük frekanslı harmonik bir yaklaşım yayar; bu nedenle sonuçlar hoparlöre veya kablolu kulaklık sürücüsüne, saat modeline, anten hizalamasına ve yerleştirmeye bağlıdır.",
     "JJY sesli çağrı işareti dakikaları simüle edilmez."
   ],
   "hzUnit": "Hz",

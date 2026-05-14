@@ -4,8 +4,8 @@ Radio Timecode Sync tạo âm thanh trong trình duyệt theo các định dạn
 
 ## Cách sử dụng
 
-Chọn trạm khớp với đồng hồ, đặt loa của thiết bị gần khu vực ăng-ten của đồng hồ, bắt đầu tín hiệu và cho đồng hồ đủ thời gian để nghe qua ít nhất một khung một phút đầy đủ. Ban đầu hãy giữ âm lượng thấp, rồi chỉ tăng lên nếu đồng hồ không phát hiện tín hiệu.
+Chọn trạm khớp với đồng hồ, rồi đặt khu vực ăng-ten của đồng hồ gần loa của thiết bị hoặc driver tai nghe có dây. Bắt đầu bằng loa tích hợp; nếu đồng hồ không phát hiện tín hiệu, hãy thử tai nghe over-ear và xoay đồng hồ để cải thiện ghép nối. Giữ âm lượng thấp và không đeo tai nghe khi đang phát.
 
 ## Độ chính xác và giới hạn
 
-Thời gian được tạo lấy từ đồng hồ hệ thống của thiết bị này cộng với độ lệch tùy chọn, vì vậy hãy đồng bộ đồng hồ thiết bị trước khi dùng công cụ. Trình duyệt không thể phát trực tiếp sóng mang sóng dài thật; công cụ này dùng một phép xấp xỉ sóng vuông ở tần số thấp hơn, có thể hoạt động qua các hài trên một số thiết bị. Phần cứng, vị trí đặt loa và firmware của đồng hồ đều ảnh hưởng đến kết quả, và âm thanh hiệu gọi JJY được cố ý bỏ qua.
+Thời gian được tạo lấy từ đồng hồ hệ thống của thiết bị này cộng với độ lệch tùy chọn, vì vậy hãy đồng bộ đồng hồ thiết bị trước khi dùng công cụ. Trình duyệt không thể phát trực tiếp sóng mang sóng dài thật; công cụ này dùng một phép xấp xỉ sóng vuông ở tần số thấp hơn, có thể hoạt động qua các hài trên một số thiết bị. Phần cứng, vị trí đặt loa hoặc driver tai nghe, hướng ăng-ten và firmware của đồng hồ đều ảnh hưởng đến kết quả, và âm thanh hiệu gọi JJY được cố ý bỏ qua.

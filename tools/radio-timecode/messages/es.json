@@ -36,9 +36,9 @@
   "previewDescription": "La vista previa sigue la estación seleccionada y el reloj local del sistema.",
   "notesTitle": "Notas de uso",
   "notes": [
-    "Mantén bajo el volumen del altavoz; el audio de onda cuadrada de alta frecuencia puede resultar incómodo.",
+    "Mantén bajo el volumen de salida y no uses auriculares puestos mientras transmites; el audio de onda cuadrada de alta frecuencia puede resultar incómodo.",
     "La señal se genera sin conexión a partir del reloj del sistema de este dispositivo.",
-    "El navegador emite una aproximación armónica de menor frecuencia, por lo que los resultados dependen del altavoz, el modelo de reloj y la colocación.",
+    "El navegador emite una aproximación armónica de menor frecuencia, por lo que los resultados dependen del altavoz o del transductor de auriculares con cable, del modelo de reloj, de la alineación de la antena y de la colocación.",
     "No se simulan los minutos de indicativo de voz de JJY."
   ],
   "hzUnit": "Hz",

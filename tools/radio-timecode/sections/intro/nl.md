@@ -4,8 +4,8 @@ Radio Timecode Sync genereert browseraudio die gangbare formaten voor langegolf-
 
 ## Hoe je het gebruikt
 
-Selecteer het station dat bij de klok past, plaats de luidspreker van het apparaat dicht bij het antennegebied van de klok, start het signaal en geef de klok genoeg tijd om minstens een volledig minuutframe te beluisteren. Houd het volume eerst laag en verhoog het alleen als de klok het signaal niet detecteert.
+Selecteer het station dat bij de klok past en plaats het antennegebied van de klok dicht bij de luidspreker van het apparaat of een bedrade koptelefoondriver. Begin met de ingebouwde luidspreker; als de klok het signaal niet detecteert, probeer dan een over-earkoptelefoon en draai de klok om de koppeling te verbeteren. Houd het volume laag en draag geen koptelefoon tijdens het uitzenden.
 
 ## Nauwkeurigheid en beperkingen
 
-De gegenereerde tijd komt van de systeemklok van dit apparaat plus de optionele correctie, dus synchroniseer de apparaatklok voordat je het hulpmiddel gebruikt. Browsers kunnen de echte langegolfdraaggolf niet rechtstreeks uitzenden; dit hulpmiddel gebruikt een blokgolfbenadering op lagere frequentie die op sommige apparaten via harmonischen kan werken. Hardware, plaatsing van de luidspreker en klokfirmware hebben allemaal invloed op de resultaten, en JJY-audio met gesproken roepnaam wordt bewust weggelaten.
+De gegenereerde tijd komt van de systeemklok van dit apparaat plus de optionele correctie, dus synchroniseer de apparaatklok voordat je het hulpmiddel gebruikt. Browsers kunnen de echte langegolfdraaggolf niet rechtstreeks uitzenden; dit hulpmiddel gebruikt een blokgolfbenadering op lagere frequentie die op sommige apparaten via harmonischen kan werken. Hardware, plaatsing van de luidspreker of koptelefoondriver, antenne-uitlijning en klokfirmware hebben allemaal invloed op de resultaten, en JJY-audio met gesproken roepnaam wordt bewust weggelaten.

@@ -36,9 +36,9 @@
   "previewDescription": "Pratonton mengikut stesen yang dipilih dan jam sistem setempat.",
   "notesTitle": "Nota pengendalian",
   "notes": [
-    "Pastikan kelantangan pembesar suara rendah; audio gelombang segi empat berfrekuensi tinggi boleh menyebabkan ketidakselesaan.",
+    "Pastikan kelantangan output rendah dan jangan pakai fon kepala semasa memancarkan isyarat; audio gelombang segi empat berfrekuensi tinggi boleh menyebabkan ketidakselesaan.",
     "Isyarat dijana luar talian daripada jam sistem peranti ini.",
-    "Pelayar memancarkan anggaran harmonik berfrekuensi lebih rendah, jadi hasil bergantung pada pembesar suara, model jam, dan peletakan.",
+    "Pelayar memancarkan anggaran harmonik berfrekuensi lebih rendah, jadi hasil bergantung pada pembesar suara atau pemacu fon kepala berwayar, model jam, penjajaran antena, dan peletakan.",
     "Minit tanda panggilan suara JJY tidak disimulasikan."
   ],
   "hzUnit": "Hz",

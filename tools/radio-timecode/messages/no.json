@@ -36,9 +36,9 @@
   "previewDescription": "Forhåndsvisningen følger valgt stasjon og lokal systemklokke.",
   "notesTitle": "Driftsmerknader",
   "notes": [
-    "Hold høyttalervolumet lavt; høyfrekvent firkantbølgelyd kan være ubehagelig.",
+    "Hold utgangsvolumet lavt, og ikke bruk hodetelefoner mens du sender; høyfrekvent firkantbølgelyd kan være ubehagelig.",
     "Signalet genereres frakoblet fra denne enhetens systemklokke.",
-    "Nettleseren sender ut en harmonisk tilnærming med lavere frekvens, så resultatene avhenger av høyttaler, klokkemodell og plassering.",
+    "Nettleseren sender ut en harmonisk tilnærming med lavere frekvens, så resultatene avhenger av høyttaleren eller den kablede hodetelefondriveren, klokkemodellen, antennejusteringen og plasseringen.",
     "JJY-talekallesignaler for minutter simuleres ikke."
   ],
   "hzUnit": "Hz",

@@ -36,9 +36,9 @@
   "previewDescription": "Het voorbeeld volgt het geselecteerde station en de lokale systeemklok.",
   "notesTitle": "Gebruiksnotities",
   "notes": [
-    "Houd het luidsprekervolume laag; hoogfrequente blokgolfaudio kan onaangenaam zijn.",
+    "Houd het uitgangsvolume laag en draag geen koptelefoon tijdens het uitzenden; hoogfrequente blokgolfaudio kan onaangenaam zijn.",
     "Het signaal wordt offline gegenereerd op basis van de systeemklok van dit apparaat.",
-    "De browser zendt een harmonische benadering op lagere frequentie uit, dus de resultaten hangen af van luidspreker, klokmodel en plaatsing.",
+    "De browser zendt een harmonische benadering op lagere frequentie uit, dus de resultaten hangen af van de luidspreker of bedrade koptelefoondriver, het klokmodel, de antenne-uitlijning en de plaatsing.",
     "JJY-minuten met gesproken roepnaam worden niet gesimuleerd."
   ],
   "hzUnit": "Hz",

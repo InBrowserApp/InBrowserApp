@@ -4,8 +4,8 @@ A Sincronização de código horário por rádio gera áudio no navegador que se
 
 ## Como usar
 
-Selecione a estação que corresponde ao relógio, coloque o alto-falante do dispositivo perto da área da antena do relógio, inicie o sinal e dê ao relógio tempo suficiente para captar pelo menos um quadro completo de um minuto. Mantenha o volume baixo no início e aumente-o apenas se o relógio não detectar o sinal.
+Selecione a estação que corresponde ao relógio e coloque a área da antena do relógio perto do alto-falante do dispositivo ou de um driver de fone com fio. Comece com o alto-falante integrado; se o relógio não detectar o sinal, tente fones over-ear e gire o relógio para melhorar o acoplamento. Mantenha o volume baixo e não use fones de ouvido enquanto transmite.
 
 ## Precisão e limitações
 
-A hora gerada vem do relógio do sistema deste dispositivo mais o deslocamento opcional, portanto sincronize o relógio do dispositivo antes de usar a ferramenta. Navegadores não conseguem emitir diretamente a portadora real de ondas longas; esta ferramenta usa uma aproximação de onda quadrada de frequência mais baixa que pode funcionar por meio de harmônicos em alguns dispositivos. Hardware, posicionamento do alto-falante e firmware do relógio afetam os resultados, e o áudio de indicativo de chamada JJY é omitido intencionalmente.
+A hora gerada vem do relógio do sistema deste dispositivo mais o deslocamento opcional, portanto sincronize o relógio do dispositivo antes de usar a ferramenta. Navegadores não conseguem emitir diretamente a portadora real de ondas longas; esta ferramenta usa uma aproximação de onda quadrada de frequência mais baixa que pode funcionar por meio de harmônicos em alguns dispositivos. Hardware, posicionamento do alto-falante ou do driver do fone, alinhamento da antena e firmware do relógio afetam os resultados, e o áudio de indicativo de chamada JJY é omitido intencionalmente.
