@@ -1,0 +1,4 @@
+{
+  "name": "Image Palette Extractor",
+  "description": "画像から主要な色を抽出し、パレットをHEX、CSS変数、JSONとしてエクスポートします。"
+}

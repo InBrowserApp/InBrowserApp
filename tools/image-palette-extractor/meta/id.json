@@ -1,0 +1,4 @@
+{
+  "name": "Ekstraktor Palet Gambar",
+  "description": "Ekstrak warna dominan dari gambar dan ekspor palet sebagai HEX, variabel CSS, atau JSON."
+}

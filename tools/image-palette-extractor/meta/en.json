@@ -1,0 +1,4 @@
+{
+  "name": "Image Palette Extractor",
+  "description": "Extract dominant colors from images and export palettes as HEX, CSS variables, or JSON."
+}

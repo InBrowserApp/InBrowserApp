@@ -1,0 +1,4 @@
+{
+  "name": "Pengekstrak Palet Imej",
+  "description": "Ekstrak warna dominan daripada imej dan eksport palet sebagai HEX, pemboleh ubah CSS, atau JSON."
+}

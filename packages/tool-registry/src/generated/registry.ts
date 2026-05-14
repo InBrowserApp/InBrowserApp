@@ -7151,6 +7151,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "image-palette-extractor",
+    category: "image",
+    icon: "image",
+    tags: [
+      "image",
+      "palette",
+      "color",
+      "extractor",
+      "dominant",
+      "css",
+      "design",
+    ],
+    locales: {
+      ar: {
+        name: "مستخرج لوحات ألوان الصور",
+        description:
+          "استخرج الألوان السائدة من الصور وصدّر اللوحات كقوائم HEX أو متغيرات CSS أو JSON.",
+      },
+      de: {
+        name: "Bildpaletten-Extraktor",
+        description:
+          "Extrahiere dominante Farben aus Bildern und exportiere Paletten als HEX, CSS-Variablen oder JSON.",
+      },
+      en: {
+        name: "Image Palette Extractor",
+        description:
+          "Extract dominant colors from images and export palettes as HEX, CSS variables, or JSON.",
+      },
+      es: {
+        name: "Extractor de paletas de imágenes",
+        description:
+          "Extrae colores dominantes de imágenes y exporta paletas como HEX, variables CSS o JSON.",
+      },
+      fr: {
+        name: "Image Palette Extractor",
+        description:
+          "Extrayez les couleurs dominantes d'images et exportez les palettes au format HEX, variables CSS ou JSON.",
+      },
+      he: {
+        name: "מחלץ פלטות מתמונות",
+        description:
+          "חלץ צבעים דומיננטיים מתמונות וייצא פלטות כ‑HEX, כמשתני CSS או כ‑JSON.",
+      },
+      hi: {
+        name: "Image Palette Extractor",
+        description:
+          "इमेज से प्रमुख रंग निकालें और पैलेट को HEX, CSS variables या JSON के रूप में निर्यात करें।",
+      },
+      id: {
+        name: "Ekstraktor Palet Gambar",
+        description:
+          "Ekstrak warna dominan dari gambar dan ekspor palet sebagai HEX, variabel CSS, atau JSON.",
+      },
+      it: {
+        name: "Estrattore di palette da immagini",
+        description:
+          "Estrai i colori dominanti dalle immagini ed esporta le palette come HEX, variabili CSS o JSON.",
+      },
+      ja: {
+        name: "Image Palette Extractor",
+        description:
+          "画像から主要な色を抽出し、パレットをHEX、CSS変数、JSONとしてエクスポートします。",
+      },
+      ko: {
+        name: "이미지 팔레트 추출기",
+        description:
+          "이미지에서 주요 색상을 추출하고 팔레트를 HEX, CSS 변수 또는 JSON으로 내보내세요.",
+      },
+      ms: {
+        name: "Pengekstrak Palet Imej",
+        description:
+          "Ekstrak warna dominan daripada imej dan eksport palet sebagai HEX, pemboleh ubah CSS, atau JSON.",
+      },
+      nl: {
+        name: "Image Palette Extractor",
+        description:
+          "Haal dominante kleuren uit afbeeldingen en exporteer paletten als HEX, CSS-variabelen of JSON.",
+      },
+      no: {
+        name: "Bildepalett-uttrekker",
+        description:
+          "Hent dominerende farger fra bilder og eksporter paletter som HEX, CSS-variabler eller JSON.",
+      },
+      pl: {
+        name: "Image Palette Extractor",
+        description:
+          "Wyodrębniaj dominujące kolory z obrazów i eksportuj palety jako HEX, zmienne CSS lub JSON.",
+      },
+      pt: {
+        name: "Extrator de paleta de imagens",
+        description:
+          "Extraia cores dominantes de imagens e exporte paletas como HEX, variáveis CSS ou JSON.",
+      },
+      ru: {
+        name: "Извлечение палитры из изображения",
+        description:
+          "Извлекайте доминирующие цвета из изображений и экспортируйте палитры как HEX, переменные CSS или JSON.",
+      },
+      sv: {
+        name: "Image Palette Extractor",
+        description:
+          "Extrahera dominerande färger från bilder och exportera paletter som HEX, CSS-variabler eller JSON.",
+      },
+      th: {
+        name: "ตัวดึงพาเล็ตสีจากรูปภาพ",
+        description: "ดึงสีหลักจากรูปภาพและส่งออกพาเล็ตเป็น HEX, ตัวแปร CSS หรือ JSON",
+      },
+      tr: {
+        name: "Image Palette Extractor",
+        description:
+          "Görsellerden baskın renkleri çıkarın ve paletleri HEX, CSS değişkenleri veya JSON olarak dışa aktarın.",
+      },
+      vi: {
+        name: "Image Palette Extractor",
+        description:
+          "Trích xuất các màu chủ đạo từ hình ảnh và xuất bảng màu dưới dạng HEX, biến CSS hoặc JSON.",
+      },
+      "zh-CN": {
+        name: "图像调色板提取器",
+        description:
+          "从图像中提取主色，并将调色板导出为 HEX、CSS 变量或 JSON。",
+      },
+      "zh-TW": {
+        name: "圖片調色盤擷取器",
+        description:
+          "從圖片擷取主要色彩，並將調色盤匯出為 HEX、CSS 變數或 JSON。",
+      },
+    },
+  },
+  {
     slug: "image-resizer",
     category: "image",
     icon: "image",
@@ -26251,6 +26381,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "圖片元資料清理器（EXIF）",
         description:
           "無需重新編碼，移除圖片中的 EXIF/XMP/IPTC/ICC 等元資料，保留原始格式並離線運行。",
+      },
+    },
+  },
+  "image-palette-extractor": {
+    slug: "image-palette-extractor",
+    category: "image",
+    icon: "image",
+    tags: [
+      "image",
+      "palette",
+      "color",
+      "extractor",
+      "dominant",
+      "css",
+      "design",
+    ],
+    locales: {
+      ar: {
+        name: "مستخرج لوحات ألوان الصور",
+        description:
+          "استخرج الألوان السائدة من الصور وصدّر اللوحات كقوائم HEX أو متغيرات CSS أو JSON.",
+      },
+      de: {
+        name: "Bildpaletten-Extraktor",
+        description:
+          "Extrahiere dominante Farben aus Bildern und exportiere Paletten als HEX, CSS-Variablen oder JSON.",
+      },
+      en: {
+        name: "Image Palette Extractor",
+        description:
+          "Extract dominant colors from images and export palettes as HEX, CSS variables, or JSON.",
+      },
+      es: {
+        name: "Extractor de paletas de imágenes",
+        description:
+          "Extrae colores dominantes de imágenes y exporta paletas como HEX, variables CSS o JSON.",
+      },
+      fr: {
+        name: "Image Palette Extractor",
+        description:
+          "Extrayez les couleurs dominantes d'images et exportez les palettes au format HEX, variables CSS ou JSON.",
+      },
+      he: {
+        name: "מחלץ פלטות מתמונות",
+        description:
+          "חלץ צבעים דומיננטיים מתמונות וייצא פלטות כ‑HEX, כמשתני CSS או כ‑JSON.",
+      },
+      hi: {
+        name: "Image Palette Extractor",
+        description:
+          "इमेज से प्रमुख रंग निकालें और पैलेट को HEX, CSS variables या JSON के रूप में निर्यात करें।",
+      },
+      id: {
+        name: "Ekstraktor Palet Gambar",
+        description:
+          "Ekstrak warna dominan dari gambar dan ekspor palet sebagai HEX, variabel CSS, atau JSON.",
+      },
+      it: {
+        name: "Estrattore di palette da immagini",
+        description:
+          "Estrai i colori dominanti dalle immagini ed esporta le palette come HEX, variabili CSS o JSON.",
+      },
+      ja: {
+        name: "Image Palette Extractor",
+        description:
+          "画像から主要な色を抽出し、パレットをHEX、CSS変数、JSONとしてエクスポートします。",
+      },
+      ko: {
+        name: "이미지 팔레트 추출기",
+        description:
+          "이미지에서 주요 색상을 추출하고 팔레트를 HEX, CSS 변수 또는 JSON으로 내보내세요.",
+      },
+      ms: {
+        name: "Pengekstrak Palet Imej",
+        description:
+          "Ekstrak warna dominan daripada imej dan eksport palet sebagai HEX, pemboleh ubah CSS, atau JSON.",
+      },
+      nl: {
+        name: "Image Palette Extractor",
+        description:
+          "Haal dominante kleuren uit afbeeldingen en exporteer paletten als HEX, CSS-variabelen of JSON.",
+      },
+      no: {
+        name: "Bildepalett-uttrekker",
+        description:
+          "Hent dominerende farger fra bilder og eksporter paletter som HEX, CSS-variabler eller JSON.",
+      },
+      pl: {
+        name: "Image Palette Extractor",
+        description:
+          "Wyodrębniaj dominujące kolory z obrazów i eksportuj palety jako HEX, zmienne CSS lub JSON.",
+      },
+      pt: {
+        name: "Extrator de paleta de imagens",
+        description:
+          "Extraia cores dominantes de imagens e exporte paletas como HEX, variáveis CSS ou JSON.",
+      },
+      ru: {
+        name: "Извлечение палитры из изображения",
+        description:
+          "Извлекайте доминирующие цвета из изображений и экспортируйте палитры как HEX, переменные CSS или JSON.",
+      },
+      sv: {
+        name: "Image Palette Extractor",
+        description:
+          "Extrahera dominerande färger från bilder och exportera paletter som HEX, CSS-variabler eller JSON.",
+      },
+      th: {
+        name: "ตัวดึงพาเล็ตสีจากรูปภาพ",
+        description: "ดึงสีหลักจากรูปภาพและส่งออกพาเล็ตเป็น HEX, ตัวแปร CSS หรือ JSON",
+      },
+      tr: {
+        name: "Image Palette Extractor",
+        description:
+          "Görsellerden baskın renkleri çıkarın ve paletleri HEX, CSS değişkenleri veya JSON olarak dışa aktarın.",
+      },
+      vi: {
+        name: "Image Palette Extractor",
+        description:
+          "Trích xuất các màu chủ đạo từ hình ảnh và xuất bảng màu dưới dạng HEX, biến CSS hoặc JSON.",
+      },
+      "zh-CN": {
+        name: "图像调色板提取器",
+        description:
+          "从图像中提取主色，并将调色板导出为 HEX、CSS 变量或 JSON。",
+      },
+      "zh-TW": {
+        name: "圖片調色盤擷取器",
+        description:
+          "從圖片擷取主要色彩，並將調色盤匯出為 HEX、CSS 變數或 JSON。",
       },
     },
   },
