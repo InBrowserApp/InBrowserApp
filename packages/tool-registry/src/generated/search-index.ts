@@ -901,6 +901,125 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "audio-recorder",
+    category: "misc",
+    icon: "mic",
+    tags: ["audio", "recorder", "microphone", "voice", "recording", "sound"],
+    locales: {
+      ar: {
+        name: "مسجل الصوت",
+        description: "سجل صوت الميكروفون محليا، وعاين التسجيل، ونزل الملف.",
+      },
+      de: {
+        name: "Audiorecorder",
+        description:
+          "Nimm Mikrofon-Audio lokal auf, prüfe die Aufnahme und lade die Datei herunter.",
+      },
+      en: {
+        name: "Audio Recorder",
+        description:
+          "Record microphone audio locally, preview the take, and download the file.",
+      },
+      es: {
+        name: "Grabadora de audio",
+        description:
+          "Graba audio del micrófono localmente, previsualiza la toma y descarga el archivo.",
+      },
+      fr: {
+        name: "Enregistreur audio",
+        description:
+          "Enregistrez l'audio du microphone localement, prévisualisez la prise et téléchargez le fichier.",
+      },
+      he: {
+        name: "מקליט שמע",
+        description:
+          "הקליטו שמע מהמיקרופון באופן מקומי, האזינו להקלטה והורידו את הקובץ.",
+      },
+      hi: {
+        name: "ऑडियो रिकॉर्डर",
+        description:
+          "माइक्रोफ़ोन ऑडियो को स्थानीय रूप से रिकॉर्ड करें, टेक का पूर्वावलोकन करें और फ़ाइल डाउनलोड करें।",
+      },
+      id: {
+        name: "Perekam Audio",
+        description:
+          "Rekam audio mikrofon secara lokal, pratinjau rekaman, lalu unduh file.",
+      },
+      it: {
+        name: "Registratore audio",
+        description:
+          "Registra l'audio del microfono in locale, ascolta l'anteprima e scarica il file.",
+      },
+      ja: {
+        name: "音声レコーダー",
+        description:
+          "マイク音声をローカルで録音し、録音内容をプレビューしてファイルをダウンロードできます。",
+      },
+      ko: {
+        name: "오디오 녹음기",
+        description:
+          "마이크 오디오를 로컬에서 녹음하고, 녹음본을 미리 들은 뒤 파일로 다운로드하세요.",
+      },
+      ms: {
+        name: "Perakam Audio",
+        description:
+          "Rakam audio mikrofon secara setempat, pratonton rakaman, dan muat turun fail.",
+      },
+      nl: {
+        name: "Audiorecorder",
+        description:
+          "Neem microfoonaudio lokaal op, beluister de opname en download het bestand.",
+      },
+      no: {
+        name: "Lydopptaker",
+        description:
+          "Ta opp mikrofonlyd lokalt, forhåndsvis opptaket og last ned filen.",
+      },
+      pl: {
+        name: "Rejestrator audio",
+        description:
+          "Nagrywaj lokalnie dźwięk z mikrofonu, odsłuchuj nagranie i pobieraj plik.",
+      },
+      pt: {
+        name: "Gravador de áudio",
+        description:
+          "Grave áudio do microfone localmente, pré-visualize a gravação e transfira o ficheiro.",
+      },
+      ru: {
+        name: "Аудиорекордер",
+        description:
+          "Записывайте звук с микрофона локально, прослушивайте запись и скачивайте файл.",
+      },
+      sv: {
+        name: "Ljudinspelare",
+        description:
+          "Spela in mikrofonljud lokalt, förhandsgranska inspelningen och ladda ner filen.",
+      },
+      th: {
+        name: "เครื่องบันทึกเสียง",
+        description: "บันทึกเสียงจากไมโครโฟนไว้ในเครื่อง ฟังตัวอย่าง และดาวน์โหลดไฟล์",
+      },
+      tr: {
+        name: "Ses Kaydedici",
+        description:
+          "Mikrofon sesini yerel olarak kaydedin, kaydı önizleyin ve dosyayı indirin.",
+      },
+      vi: {
+        name: "Trình ghi âm",
+        description:
+          "Ghi âm từ micro cục bộ, xem trước bản ghi và tải tệp xuống.",
+      },
+      "zh-CN": {
+        name: "音频录音器",
+        description: "在本地录制麦克风音频，预览录音并下载文件。",
+      },
+      "zh-TW": {
+        name: "音訊錄音機",
+        description: "在本機錄製麥克風音訊、預覽錄音，並下載檔案。",
+      },
+    },
+  },
+  {
     slug: "barcode-generator",
     category: "image",
     icon: "image",

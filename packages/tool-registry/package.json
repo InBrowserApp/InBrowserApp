@@ -14,6 +14,7 @@
     "@tool/argon2-hash-password": "workspace:*",
     "@tool/argon2-hash-password-verifier": "workspace:*",
     "@tool/ascii-art-generator": "workspace:*",
+    "@tool/audio-recorder": "workspace:*",
     "@tool/barcode-generator": "workspace:*",
     "@tool/barcode-reader": "workspace:*",
     "@tool/base16-decoder": "workspace:*",

@@ -1,0 +1,4 @@
+{
+  "name": "Registratore audio",
+  "description": "Registra l'audio del microfono in locale, ascolta l'anteprima e scarica il file."
+}

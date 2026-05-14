@@ -13,6 +13,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "argon2-hash-password-verifier": () =>
     import("@tool/argon2-hash-password-verifier/page"),
   "ascii-art-generator": () => import("@tool/ascii-art-generator/page"),
+  "audio-recorder": () => import("@tool/audio-recorder/page"),
   "barcode-generator": () => import("@tool/barcode-generator/page"),
   "barcode-reader": () => import("@tool/barcode-reader/page"),
   "base16-decoder": () => import("@tool/base16-decoder/page"),
