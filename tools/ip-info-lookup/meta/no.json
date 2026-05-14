@@ -1,0 +1,4 @@
+{
+  "name": "IP-infooppslag",
+  "description": "Slå opp geolokasjon, ISP, ASN, reverse DNS og nettverksdetaljer for en IP-adresse, et domene eller en URL"
+}

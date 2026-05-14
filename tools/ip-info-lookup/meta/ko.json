@@ -1,0 +1,4 @@
+{
+  "name": "IP 정보 조회",
+  "description": "IP 주소, 도메인 또는 URL의 위치 정보, ISP, ASN, 역방향 DNS, 네트워크 세부 정보를 조회합니다"
+}

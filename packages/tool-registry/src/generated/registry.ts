@@ -8147,6 +8147,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "ip-info-lookup",
+    category: "network",
+    icon: "network",
+    tags: ["ip", "dns", "domain", "geolocation", "isp", "asn"],
+    locales: {
+      ar: {
+        name: "البحث عن معلومات IP",
+        description:
+          "ابحث عن الموقع الجغرافي، ومزود خدمة الإنترنت، وASN، وDNS العكسي، وتفاصيل الشبكة لعنوان IP أو نطاق أو URL",
+      },
+      de: {
+        name: "IP Info Lookup",
+        description:
+          "Geolokalisierung, ISP, ASN, Reverse DNS und Netzwerkdetails für eine IP-Adresse, Domain oder URL nachschlagen",
+      },
+      en: {
+        name: "IP Info Lookup",
+        description:
+          "Look up geolocation, ISP, ASN, reverse DNS, and network details for an IP address, domain, or URL",
+      },
+      es: {
+        name: "IP Info Lookup",
+        description:
+          "Consulta geolocalización, ISP, ASN, DNS inverso y detalles de red para una dirección IP, dominio o URL",
+      },
+      fr: {
+        name: "IP Info Lookup",
+        description:
+          "Consultez la géolocalisation, le FAI, l'ASN, le DNS inverse et les détails réseau d'une adresse IP, d'un domaine ou d'une URL",
+      },
+      he: {
+        name: "IP Info Lookup",
+        description:
+          "חפשו מיקום גאוגרפי, ספק אינטרנט, ASN, DNS הפוך ופרטי רשת עבור כתובת IP, דומיין או URL",
+      },
+      hi: {
+        name: "IP जानकारी खोज",
+        description:
+          "किसी IP पते, डोमेन या URL के लिए भौगोलिक स्थान, ISP, ASN, reverse DNS और नेटवर्क विवरण देखें",
+      },
+      id: {
+        name: "IP Info Lookup",
+        description:
+          "Cari geolokasi, ISP, ASN, reverse DNS, dan detail jaringan untuk alamat IP, domain, atau URL",
+      },
+      it: {
+        name: "Ricerca informazioni IP",
+        description:
+          "Consulta geolocalizzazione, ISP, ASN, DNS inverso e dettagli di rete per un indirizzo IP, un dominio o un URL",
+      },
+      ja: {
+        name: "IP情報検索",
+        description:
+          "IPアドレス、ドメイン、URLの位置情報、ISP、ASN、逆引きDNS、ネットワークの詳細を調べます",
+      },
+      ko: {
+        name: "IP 정보 조회",
+        description:
+          "IP 주소, 도메인 또는 URL의 위치 정보, ISP, ASN, 역방향 DNS, 네트워크 세부 정보를 조회합니다",
+      },
+      ms: {
+        name: "Carian Maklumat IP",
+        description:
+          "Cari geolokasi, ISP, ASN, DNS songsang, dan butiran rangkaian untuk alamat IP, domain, atau URL",
+      },
+      nl: {
+        name: "IP Info Lookup",
+        description:
+          "Zoek geolocatie, ISP, ASN, reverse DNS en netwerkgegevens op voor een IP-adres, domein of URL",
+      },
+      no: {
+        name: "IP-infooppslag",
+        description:
+          "Slå opp geolokasjon, ISP, ASN, reverse DNS og nettverksdetaljer for en IP-adresse, et domene eller en URL",
+      },
+      pl: {
+        name: "Wyszukiwanie informacji o IP",
+        description:
+          "Sprawdzaj geolokalizację, ISP, ASN, odwrotny DNS i szczegóły sieci dla adresu IP, domeny lub adresu URL",
+      },
+      pt: {
+        name: "Consulta de informações de IP",
+        description:
+          "Consulte geolocalização, ISP, ASN, DNS reverso e detalhes de rede de um endereço IP, domínio ou URL",
+      },
+      ru: {
+        name: "Поиск информации об IP",
+        description:
+          "Узнайте геолокацию, ISP, ASN, обратный DNS и сетевые данные для IP-адреса, домена или URL",
+      },
+      sv: {
+        name: "IP Info Lookup",
+        description:
+          "Slå upp geolokalisering, ISP, ASN, omvänd DNS och nätverksinformation för en IP-adress, domän eller URL",
+      },
+      th: {
+        name: "ค้นหาข้อมูล IP",
+        description:
+          "ค้นหาตำแหน่งทางภูมิศาสตร์, ISP, ASN, reverse DNS และรายละเอียดเครือข่ายสำหรับที่อยู่ IP, โดเมน หรือ URL",
+      },
+      tr: {
+        name: "IP Bilgisi Sorgulama",
+        description:
+          "Bir IP adresi, alan adı veya URL için coğrafi konum, ISP, ASN, ters DNS ve ağ ayrıntılarını sorgulayın",
+      },
+      vi: {
+        name: "Tra cứu thông tin IP",
+        description:
+          "Tra cứu vị trí địa lý, ISP, ASN, DNS ngược và thông tin mạng cho địa chỉ IP, tên miền hoặc URL",
+      },
+      "zh-CN": {
+        name: "IP 信息查询",
+        description:
+          "查询 IP 地址、域名或 URL 的地理位置、ISP、ASN、反向 DNS 和网络详细信息",
+      },
+      "zh-TW": {
+        name: "IP Info Lookup",
+        description:
+          "查詢 IP 位址、網域或 URL 的地理位置、ISP、ASN、反向 DNS 與網路詳細資訊",
+      },
+    },
+  },
+  {
     slug: "ip-range-to-cidr-converter",
     category: "network",
     icon: "network",
@@ -28419,6 +28542,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "IP/CIDR 標準化工具",
         description:
           "標準化 IP 位址和 CIDR 表示法，支援 IPv4 和 IPv6 格式。輸入任何 IP 或 CIDR 範圍，立即獲得標準化格式。",
+      },
+    },
+  },
+  "ip-info-lookup": {
+    slug: "ip-info-lookup",
+    category: "network",
+    icon: "network",
+    tags: ["ip", "dns", "domain", "geolocation", "isp", "asn"],
+    locales: {
+      ar: {
+        name: "البحث عن معلومات IP",
+        description:
+          "ابحث عن الموقع الجغرافي، ومزود خدمة الإنترنت، وASN، وDNS العكسي، وتفاصيل الشبكة لعنوان IP أو نطاق أو URL",
+      },
+      de: {
+        name: "IP Info Lookup",
+        description:
+          "Geolokalisierung, ISP, ASN, Reverse DNS und Netzwerkdetails für eine IP-Adresse, Domain oder URL nachschlagen",
+      },
+      en: {
+        name: "IP Info Lookup",
+        description:
+          "Look up geolocation, ISP, ASN, reverse DNS, and network details for an IP address, domain, or URL",
+      },
+      es: {
+        name: "IP Info Lookup",
+        description:
+          "Consulta geolocalización, ISP, ASN, DNS inverso y detalles de red para una dirección IP, dominio o URL",
+      },
+      fr: {
+        name: "IP Info Lookup",
+        description:
+          "Consultez la géolocalisation, le FAI, l'ASN, le DNS inverse et les détails réseau d'une adresse IP, d'un domaine ou d'une URL",
+      },
+      he: {
+        name: "IP Info Lookup",
+        description:
+          "חפשו מיקום גאוגרפי, ספק אינטרנט, ASN, DNS הפוך ופרטי רשת עבור כתובת IP, דומיין או URL",
+      },
+      hi: {
+        name: "IP जानकारी खोज",
+        description:
+          "किसी IP पते, डोमेन या URL के लिए भौगोलिक स्थान, ISP, ASN, reverse DNS और नेटवर्क विवरण देखें",
+      },
+      id: {
+        name: "IP Info Lookup",
+        description:
+          "Cari geolokasi, ISP, ASN, reverse DNS, dan detail jaringan untuk alamat IP, domain, atau URL",
+      },
+      it: {
+        name: "Ricerca informazioni IP",
+        description:
+          "Consulta geolocalizzazione, ISP, ASN, DNS inverso e dettagli di rete per un indirizzo IP, un dominio o un URL",
+      },
+      ja: {
+        name: "IP情報検索",
+        description:
+          "IPアドレス、ドメイン、URLの位置情報、ISP、ASN、逆引きDNS、ネットワークの詳細を調べます",
+      },
+      ko: {
+        name: "IP 정보 조회",
+        description:
+          "IP 주소, 도메인 또는 URL의 위치 정보, ISP, ASN, 역방향 DNS, 네트워크 세부 정보를 조회합니다",
+      },
+      ms: {
+        name: "Carian Maklumat IP",
+        description:
+          "Cari geolokasi, ISP, ASN, DNS songsang, dan butiran rangkaian untuk alamat IP, domain, atau URL",
+      },
+      nl: {
+        name: "IP Info Lookup",
+        description:
+          "Zoek geolocatie, ISP, ASN, reverse DNS en netwerkgegevens op voor een IP-adres, domein of URL",
+      },
+      no: {
+        name: "IP-infooppslag",
+        description:
+          "Slå opp geolokasjon, ISP, ASN, reverse DNS og nettverksdetaljer for en IP-adresse, et domene eller en URL",
+      },
+      pl: {
+        name: "Wyszukiwanie informacji o IP",
+        description:
+          "Sprawdzaj geolokalizację, ISP, ASN, odwrotny DNS i szczegóły sieci dla adresu IP, domeny lub adresu URL",
+      },
+      pt: {
+        name: "Consulta de informações de IP",
+        description:
+          "Consulte geolocalização, ISP, ASN, DNS reverso e detalhes de rede de um endereço IP, domínio ou URL",
+      },
+      ru: {
+        name: "Поиск информации об IP",
+        description:
+          "Узнайте геолокацию, ISP, ASN, обратный DNS и сетевые данные для IP-адреса, домена или URL",
+      },
+      sv: {
+        name: "IP Info Lookup",
+        description:
+          "Slå upp geolokalisering, ISP, ASN, omvänd DNS och nätverksinformation för en IP-adress, domän eller URL",
+      },
+      th: {
+        name: "ค้นหาข้อมูล IP",
+        description:
+          "ค้นหาตำแหน่งทางภูมิศาสตร์, ISP, ASN, reverse DNS และรายละเอียดเครือข่ายสำหรับที่อยู่ IP, โดเมน หรือ URL",
+      },
+      tr: {
+        name: "IP Bilgisi Sorgulama",
+        description:
+          "Bir IP adresi, alan adı veya URL için coğrafi konum, ISP, ASN, ters DNS ve ağ ayrıntılarını sorgulayın",
+      },
+      vi: {
+        name: "Tra cứu thông tin IP",
+        description:
+          "Tra cứu vị trí địa lý, ISP, ASN, DNS ngược và thông tin mạng cho địa chỉ IP, tên miền hoặc URL",
+      },
+      "zh-CN": {
+        name: "IP 信息查询",
+        description:
+          "查询 IP 地址、域名或 URL 的地理位置、ISP、ASN、反向 DNS 和网络详细信息",
+      },
+      "zh-TW": {
+        name: "IP Info Lookup",
+        description:
+          "查詢 IP 位址、網域或 URL 的地理位置、ISP、ASN、反向 DNS 與網路詳細資訊",
       },
     },
   },
