@@ -4970,6 +4970,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "exif-viewer",
+    language: "ar",
+  },
+  {
+    slug: "exif-viewer",
+    language: "de",
+  },
+  {
+    slug: "exif-viewer",
+    language: "en",
+  },
+  {
+    slug: "exif-viewer",
+    language: "es",
+  },
+  {
+    slug: "exif-viewer",
+    language: "fr",
+  },
+  {
+    slug: "exif-viewer",
+    language: "he",
+  },
+  {
+    slug: "exif-viewer",
+    language: "hi",
+  },
+  {
+    slug: "exif-viewer",
+    language: "id",
+  },
+  {
+    slug: "exif-viewer",
+    language: "it",
+  },
+  {
+    slug: "exif-viewer",
+    language: "ja",
+  },
+  {
+    slug: "exif-viewer",
+    language: "ko",
+  },
+  {
+    slug: "exif-viewer",
+    language: "ms",
+  },
+  {
+    slug: "exif-viewer",
+    language: "nl",
+  },
+  {
+    slug: "exif-viewer",
+    language: "no",
+  },
+  {
+    slug: "exif-viewer",
+    language: "pl",
+  },
+  {
+    slug: "exif-viewer",
+    language: "pt",
+  },
+  {
+    slug: "exif-viewer",
+    language: "ru",
+  },
+  {
+    slug: "exif-viewer",
+    language: "sv",
+  },
+  {
+    slug: "exif-viewer",
+    language: "th",
+  },
+  {
+    slug: "exif-viewer",
+    language: "tr",
+  },
+  {
+    slug: "exif-viewer",
+    language: "vi",
+  },
+  {
+    slug: "exif-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "exif-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "file-to-data-uri-converter",
     language: "ar",
   },

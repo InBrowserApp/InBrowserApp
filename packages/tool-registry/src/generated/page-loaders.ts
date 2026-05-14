@@ -73,6 +73,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "duration-calculator": () => import("@tool/duration-calculator/page"),
   "email-validator": () => import("@tool/email-validator/page"),
   "eu-vat-number-validator": () => import("@tool/eu-vat-number-validator/page"),
+  "exif-viewer": () => import("@tool/exif-viewer/page"),
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),

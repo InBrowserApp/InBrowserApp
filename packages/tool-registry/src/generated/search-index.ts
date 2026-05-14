@@ -6846,6 +6846,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "exif-viewer",
+    category: "image",
+    icon: "image",
+    tags: ["image", "exif", "metadata", "photo", "camera", "gps", "privacy"],
+    locales: {
+      ar: {
+        name: "عارض EXIF",
+        description:
+          "اعرض بيانات الصور الوصفية، وإعدادات الكاميرا، وإحداثيات GPS، وحقول EXIF/IPTC/XMP المضمنة محليًا في متصفحك.",
+      },
+      de: {
+        name: "EXIF-Viewer",
+        description:
+          "Zeigen Sie Bildmetadaten, Kameraeinstellungen, GPS-Koordinaten und eingebettete EXIF/IPTC/XMP-Felder lokal in Ihrem Browser an.",
+      },
+      en: {
+        name: "EXIF Viewer",
+        description:
+          "View image metadata, camera settings, GPS coordinates, and embedded EXIF/IPTC/XMP fields locally in your browser.",
+      },
+      es: {
+        name: "Visor EXIF",
+        description:
+          "Consulta metadatos de imágenes, ajustes de cámara, coordenadas GPS y campos EXIF/IPTC/XMP incrustados localmente en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse EXIF",
+        description:
+          "Consultez localement dans votre navigateur les métadonnées d'image, les réglages de l'appareil, les coordonnées GPS et les champs EXIF/IPTC/XMP intégrés.",
+      },
+      he: {
+        name: "מציג EXIF",
+        description:
+          "הציגו מטא-נתונים של תמונות, הגדרות מצלמה, קואורדינטות GPS ושדות EXIF/IPTC/XMP מוטמעים באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "EXIF व्यूअर",
+        description:
+          "अपने ब्राउज़र में स्थानीय रूप से छवि मेटाडेटा, कैमरा सेटिंग, GPS निर्देशांक और एम्बेडेड EXIF/IPTC/XMP फ़ील्ड देखें.",
+      },
+      id: {
+        name: "Penampil EXIF",
+        description:
+          "Lihat metadata gambar, pengaturan kamera, koordinat GPS, dan bidang EXIF/IPTC/XMP tertanam secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Visualizzatore EXIF",
+        description:
+          "Visualizza metadati dell'immagine, impostazioni della fotocamera, coordinate GPS e campi EXIF/IPTC/XMP incorporati localmente nel browser.",
+      },
+      ja: {
+        name: "EXIF ビューアー",
+        description:
+          "画像メタデータ、カメラ設定、GPS 座標、埋め込み EXIF/IPTC/XMP フィールドをブラウザ内だけで表示します。",
+      },
+      ko: {
+        name: "EXIF 뷰어",
+        description:
+          "브라우저에서 로컬로 이미지 메타데이터, 카메라 설정, GPS 좌표, 내장 EXIF/IPTC/XMP 필드를 확인하세요.",
+      },
+      ms: {
+        name: "Pemapar EXIF",
+        description:
+          "Paparkan metadata imej, tetapan kamera, koordinat GPS, dan medan EXIF/IPTC/XMP terbenam secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "EXIF Viewer",
+        description:
+          "Bekijk afbeeldingsmetadata, camera-instellingen, GPS-coördinaten en ingesloten EXIF/IPTC/XMP-velden lokaal in je browser.",
+      },
+      no: {
+        name: "EXIF Viewer",
+        description:
+          "Vis bildemetadata, kamerainnstillinger, GPS-koordinater og innebygde EXIF/IPTC/XMP-felt lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka EXIF",
+        description:
+          "Wyświetlaj metadane obrazów, ustawienia aparatu, współrzędne GPS oraz osadzone pola EXIF/IPTC/XMP lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de EXIF",
+        description:
+          "Veja metadados da imagem, configurações da câmera, coordenadas GPS e campos EXIF/IPTC/XMP incorporados localmente no seu navegador.",
+      },
+      ru: {
+        name: "Просмотр EXIF",
+        description:
+          "Просматривайте метаданные изображений, настройки камеры, GPS-координаты и встроенные поля EXIF/IPTC/XMP локально в браузере.",
+      },
+      sv: {
+        name: "EXIF-visare",
+        description:
+          "Visa bildmetadata, kamerainställningar, GPS-koordinater och inbäddade EXIF-/IPTC-/XMP-fält lokalt i din webbläsare.",
+      },
+      th: {
+        name: "ตัวดู EXIF",
+        description:
+          "ดูเมตาดาต้าของรูปภาพ การตั้งค่ากล้อง พิกัด GPS และฟิลด์ EXIF/IPTC/XMP ที่ฝังอยู่ได้ในเบราว์เซอร์ของคุณแบบโลคัล.",
+      },
+      tr: {
+        name: "EXIF Görüntüleyici",
+        description:
+          "Görsel meta verilerini, kamera ayarlarını, GPS koordinatlarını ve gömülü EXIF/IPTC/XMP alanlarını tarayıcınızda yerel olarak görüntüleyin.",
+      },
+      vi: {
+        name: "EXIF Viewer",
+        description:
+          "Xem siêu dữ liệu ảnh, cài đặt máy ảnh, tọa độ GPS và các trường EXIF/IPTC/XMP được nhúng cục bộ trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "EXIF 查看器",
+        description:
+          "在浏览器本地查看图片元数据、相机设置、GPS 坐标以及嵌入的 EXIF/IPTC/XMP 字段。",
+      },
+      "zh-TW": {
+        name: "EXIF 檢視器",
+        description:
+          "在瀏覽器本機檢視圖片元資料、相機設定、GPS 座標，以及嵌入的 EXIF/IPTC/XMP 欄位。",
+      },
+    },
+  },
+  {
     slug: "file-to-data-uri-converter",
     category: "web",
     icon: "file-text",
