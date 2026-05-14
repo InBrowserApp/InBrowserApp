@@ -1,0 +1,4 @@
+{
+  "name": "HighwayHash-Hash für Text oder Datei",
+  "description": "Erzeuge HighwayHash-Digests für Texteingaben oder Datei-Uploads. Berechne schnelle schlüsselbasierte 64-Bit-, 128-Bit- oder 256-Bit-Hashes für Datenintegrität und Nachschlage-Workflows"
+}

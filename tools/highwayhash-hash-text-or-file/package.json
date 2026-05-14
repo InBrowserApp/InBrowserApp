@@ -1,0 +1,24 @@
+{
+  "name": "@tool/highwayhash-hash-text-or-file",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "highwayhasher": "catalog:",
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:"
+  }
+}

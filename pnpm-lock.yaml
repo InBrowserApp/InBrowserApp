@@ -156,6 +156,9 @@ catalogs:
     highlight.js:
       specifier: ^11.11.1
       version: 11.11.1
+    highwayhasher:
+      specifier: ^0.4.4
+      version: 0.4.4
     husky:
       specifier: ^9.1.7
       version: 9.1.7
@@ -542,6 +545,9 @@ importers:
       '@tool/gitignore-generator':
         specifier: workspace:*
         version: link:../../tools/gitignore-generator
+      '@tool/highwayhash-hash-text-or-file':
+        specifier: workspace:*
+        version: link:../../tools/highwayhash-hash-text-or-file
       '@tool/hmac-generator':
         specifier: workspace:*
         version: link:../../tools/hmac-generator
@@ -2365,6 +2371,34 @@ importers:
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
+      react:
+        specifier: 'catalog:'
+        version: 19.2.4
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      vitest:
+        specifier: 'catalog:'
+        version: 4.1.2(@types/node@25.5.2)(happy-dom@20.8.9)(msw@2.12.14(@types/node@25.5.2)(typescript@5.9.3))(vite@6.4.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3))
+
+  tools/highwayhash-hash-text-or-file:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 5.18.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
+      highwayhasher:
+        specifier: 'catalog:'
+        version: 0.4.4
       react:
         specifier: 'catalog:'
         version: 19.2.4
@@ -9428,6 +9462,9 @@ packages:
     resolution: {integrity: sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==}
     engines: {node: '>=12.0.0'}
 
+  highwayhasher@0.4.4:
+    resolution: {integrity: sha512-57bU4Fw2baN6j5Ej7w4TVM7hKbsGZf9YrMFlO5joz7Y49Y/jurVYfGcH8WCfmT935IcH92TYt+Eo4Gjw04Iq+w==}
+
   hono@4.12.10:
     resolution: {integrity: sha512-mx/p18PLy5og9ufies2GOSUqep98Td9q4i/EF6X7yJgAiIopxqdfIO3jbqsi3jRgTgw88jMDEzVKi+V2EF+27w==}
     engines: {node: '>=16.9.0'}
@@ -15563,6 +15600,8 @@ snapshots:
   headers-polyfill@4.0.3: {}
 
   highlight.js@11.11.1: {}
+
+  highwayhasher@0.4.4: {}
 
   hono@4.12.10: {}
 

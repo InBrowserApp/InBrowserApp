@@ -1,0 +1,4 @@
+{
+  "name": "HighwayHash - haszowanie tekstu lub pliku",
+  "description": "Generuj skróty HighwayHash dla tekstu lub przesłanego pliku. Obliczaj szybkie 64-, 128- lub 256-bitowe hasze z kluczem na potrzeby integralności danych i wyszukiwania."
+}

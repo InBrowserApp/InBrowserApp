@@ -6823,6 +6823,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "highwayhash-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "highwayhash",
+      "keyed",
+      "checksum",
+      "integrity",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "حساب تجزئة HighwayHash للنص أو الملف",
+        description:
+          "ولّد ملخصات HighwayHash لإدخال نصي أو ملف مرفوع. احسب تجزئات مفتاحية سريعة بطول 64 بت أو 128 بت أو 256 بت لسلامة البيانات وعمليات البحث",
+      },
+      de: {
+        name: "HighwayHash-Hash für Text oder Datei",
+        description:
+          "Erzeuge HighwayHash-Digests für Texteingaben oder Datei-Uploads. Berechne schnelle schlüsselbasierte 64-Bit-, 128-Bit- oder 256-Bit-Hashes für Datenintegrität und Nachschlage-Workflows",
+      },
+      en: {
+        name: "HighwayHash Hash Text or File",
+        description:
+          "Generate HighwayHash digests for text input or file upload. Compute fast keyed 64-bit, 128-bit, or 256-bit hashes for data integrity and lookup workflows",
+      },
+      es: {
+        name: "Hash HighwayHash de texto o archivo",
+        description:
+          "Genera resúmenes HighwayHash para entradas de texto o archivos cargados. Calcula hashes rápidos con clave de 64, 128 o 256 bits para flujos de integridad de datos y búsqueda",
+      },
+      fr: {
+        name: "Hachage HighwayHash de texte ou de fichier",
+        description:
+          "Générez des condensés HighwayHash pour une saisie de texte ou un fichier importé. Calculez rapidement des hachages à clé de 64 bits, 128 bits ou 256 bits pour les flux d'intégrité des données et de recherche.",
+      },
+      he: {
+        name: "גיבוב טקסט או קובץ עם HighwayHash",
+        description:
+          "צרו ערכי גיבוב HighwayHash עבור קלט טקסט או העלאת קובץ. חשבו במהירות גיבובים עם מפתח באורך 64 ביט, 128 ביט או 256 ביט עבור שלמות נתונים ותהליכי חיפוש",
+      },
+      hi: {
+        name: "HighwayHash टेक्स्ट या फ़ाइल हैश करें",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए HighwayHash डाइजेस्ट जेनरेट करें। डेटा अखंडता और लुकअप वर्कफ़्लो के लिए तेज़ कुंजी-आधारित 64-बिट, 128-बिट, या 256-बिट हैश की गणना करें",
+      },
+      id: {
+        name: "Hash Teks atau File HighwayHash",
+        description:
+          "Buat digest HighwayHash untuk input teks atau unggahan file. Hitung hash berkunci 64-bit, 128-bit, atau 256-bit yang cepat untuk alur kerja integritas data dan pencarian",
+      },
+      it: {
+        name: "Hash HighwayHash di testo o file",
+        description:
+          "Genera digest HighwayHash per input di testo o caricamento di file. Calcola hash con chiave rapidi a 64 bit, 128 bit o 256 bit per integrità dei dati e flussi di lavoro di ricerca",
+      },
+      ja: {
+        name: "HighwayHash テキストまたはファイルのハッシュ",
+        description:
+          "テキスト入力またはファイルアップロードに対して HighwayHash ダイジェストを生成します。データ整合性や検索ワークフロー向けに、高速なキー付き 64 ビット、128 ビット、256 ビットハッシュを計算します。",
+      },
+      ko: {
+        name: "HighwayHash 텍스트 또는 파일 해시",
+        description:
+          "텍스트 입력 또는 파일 업로드의 HighwayHash 다이제스트를 생성합니다. 데이터 무결성과 조회 워크플로에 사용할 빠른 키 기반 64비트, 128비트 또는 256비트 해시를 계산하세요",
+      },
+      ms: {
+        name: "Hash HighwayHash Teks atau Fail",
+        description:
+          "Jana digest HighwayHash untuk input teks atau muat naik fail. Kira hash berkunci 64-bit, 128-bit, atau 256-bit yang pantas untuk aliran kerja integriti data dan carian",
+      },
+      nl: {
+        name: "HighwayHash-hash van tekst of bestand",
+        description:
+          "Genereer HighwayHash-digests voor tekstinvoer of bestandsupload. Bereken snelle 64-bits, 128-bits of 256-bits hashes met sleutel voor gegevensintegriteit en opzoekworkflows",
+      },
+      no: {
+        name: "HighwayHash-hash tekst eller fil",
+        description:
+          "Generer HighwayHash-sammendrag for tekstinndata eller filopplasting. Beregn raske nøkkelbaserte 64-biters, 128-biters eller 256-biters hasher for dataintegritet og oppslagsarbeidsflyter",
+      },
+      pl: {
+        name: "HighwayHash - haszowanie tekstu lub pliku",
+        description:
+          "Generuj skróty HighwayHash dla tekstu lub przesłanego pliku. Obliczaj szybkie 64-, 128- lub 256-bitowe hasze z kluczem na potrzeby integralności danych i wyszukiwania.",
+      },
+      pt: {
+        name: "Hash HighwayHash de Texto ou Arquivo",
+        description:
+          "Gere resumos HighwayHash para entrada de texto ou envio de arquivo. Calcule hashes rápidos com chave de 64 bits, 128 bits ou 256 bits para fluxos de trabalho de integridade de dados e consulta.",
+      },
+      ru: {
+        name: "Хеш HighwayHash для текста или файла",
+        description:
+          "Создавайте дайджесты HighwayHash для текстового ввода или загруженного файла. Вычисляйте быстрые 64-битные, 128-битные или 256-битные хеши с ключом для проверки целостности данных и сценариев поиска",
+      },
+      sv: {
+        name: "HighwayHash-hasha text eller fil",
+        description:
+          "Generera HighwayHash-sammandrag för textinmatning eller filuppladdning. Beräkna snabba nycklade 64-bitars-, 128-bitars- eller 256-bitars-hashar för arbetsflöden med dataintegritet och uppslag.",
+      },
+      th: {
+        name: "แฮช HighwayHash ข้อความหรือไฟล์",
+        description:
+          "สร้างไดเจสต์ HighwayHash สำหรับข้อความที่ป้อนหรือไฟล์ที่อัปโหลด คำนวณแฮชแบบมีคีย์ขนาด 64 บิต, 128 บิต หรือ 256 บิตได้อย่างรวดเร็ว สำหรับเวิร์กโฟลว์ตรวจสอบความถูกต้องของข้อมูลและการค้นหา",
+      },
+      tr: {
+        name: "HighwayHash Metin veya Dosya Karması",
+        description:
+          "Metin girişi veya dosya yüklemesi için HighwayHash özetleri oluşturun. Veri bütünlüğü ve arama iş akışları için hızlı anahtarlı 64 bit, 128 bit veya 256 bit karmalar hesaplayın",
+      },
+      vi: {
+        name: "Băm văn bản hoặc tệp bằng HighwayHash",
+        description:
+          "Tạo giá trị băm HighwayHash cho đầu vào văn bản hoặc tệp tải lên. Tính nhanh giá trị băm có khóa 64-bit, 128-bit hoặc 256-bit cho quy trình toàn vẹn dữ liệu và tra cứu",
+      },
+      "zh-CN": {
+        name: "HighwayHash 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 HighwayHash 摘要。计算快速的带密钥 64 位、128 位或 256 位哈希，用于数据完整性和查找工作流",
+      },
+      "zh-TW": {
+        name: "HighwayHash 文字或檔案雜湊",
+        description:
+          "為文字輸入或上傳的檔案產生 HighwayHash 摘要。計算快速的金鑰式 64 位元、128 位元或 256 位元雜湊，用於資料完整性與查詢工作流程",
+      },
+    },
+  },
+  {
     slug: "hmac-generator",
     category: "crypto",
     icon: "lock",
@@ -27727,6 +27859,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: ".gitignore 產生器",
         description: "透過選擇模板為您的專案產生 .gitignore 檔案",
+      },
+    },
+  },
+  "highwayhash-hash-text-or-file": {
+    slug: "highwayhash-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "highwayhash",
+      "keyed",
+      "checksum",
+      "integrity",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "حساب تجزئة HighwayHash للنص أو الملف",
+        description:
+          "ولّد ملخصات HighwayHash لإدخال نصي أو ملف مرفوع. احسب تجزئات مفتاحية سريعة بطول 64 بت أو 128 بت أو 256 بت لسلامة البيانات وعمليات البحث",
+      },
+      de: {
+        name: "HighwayHash-Hash für Text oder Datei",
+        description:
+          "Erzeuge HighwayHash-Digests für Texteingaben oder Datei-Uploads. Berechne schnelle schlüsselbasierte 64-Bit-, 128-Bit- oder 256-Bit-Hashes für Datenintegrität und Nachschlage-Workflows",
+      },
+      en: {
+        name: "HighwayHash Hash Text or File",
+        description:
+          "Generate HighwayHash digests for text input or file upload. Compute fast keyed 64-bit, 128-bit, or 256-bit hashes for data integrity and lookup workflows",
+      },
+      es: {
+        name: "Hash HighwayHash de texto o archivo",
+        description:
+          "Genera resúmenes HighwayHash para entradas de texto o archivos cargados. Calcula hashes rápidos con clave de 64, 128 o 256 bits para flujos de integridad de datos y búsqueda",
+      },
+      fr: {
+        name: "Hachage HighwayHash de texte ou de fichier",
+        description:
+          "Générez des condensés HighwayHash pour une saisie de texte ou un fichier importé. Calculez rapidement des hachages à clé de 64 bits, 128 bits ou 256 bits pour les flux d'intégrité des données et de recherche.",
+      },
+      he: {
+        name: "גיבוב טקסט או קובץ עם HighwayHash",
+        description:
+          "צרו ערכי גיבוב HighwayHash עבור קלט טקסט או העלאת קובץ. חשבו במהירות גיבובים עם מפתח באורך 64 ביט, 128 ביט או 256 ביט עבור שלמות נתונים ותהליכי חיפוש",
+      },
+      hi: {
+        name: "HighwayHash टेक्स्ट या फ़ाइल हैश करें",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए HighwayHash डाइजेस्ट जेनरेट करें। डेटा अखंडता और लुकअप वर्कफ़्लो के लिए तेज़ कुंजी-आधारित 64-बिट, 128-बिट, या 256-बिट हैश की गणना करें",
+      },
+      id: {
+        name: "Hash Teks atau File HighwayHash",
+        description:
+          "Buat digest HighwayHash untuk input teks atau unggahan file. Hitung hash berkunci 64-bit, 128-bit, atau 256-bit yang cepat untuk alur kerja integritas data dan pencarian",
+      },
+      it: {
+        name: "Hash HighwayHash di testo o file",
+        description:
+          "Genera digest HighwayHash per input di testo o caricamento di file. Calcola hash con chiave rapidi a 64 bit, 128 bit o 256 bit per integrità dei dati e flussi di lavoro di ricerca",
+      },
+      ja: {
+        name: "HighwayHash テキストまたはファイルのハッシュ",
+        description:
+          "テキスト入力またはファイルアップロードに対して HighwayHash ダイジェストを生成します。データ整合性や検索ワークフロー向けに、高速なキー付き 64 ビット、128 ビット、256 ビットハッシュを計算します。",
+      },
+      ko: {
+        name: "HighwayHash 텍스트 또는 파일 해시",
+        description:
+          "텍스트 입력 또는 파일 업로드의 HighwayHash 다이제스트를 생성합니다. 데이터 무결성과 조회 워크플로에 사용할 빠른 키 기반 64비트, 128비트 또는 256비트 해시를 계산하세요",
+      },
+      ms: {
+        name: "Hash HighwayHash Teks atau Fail",
+        description:
+          "Jana digest HighwayHash untuk input teks atau muat naik fail. Kira hash berkunci 64-bit, 128-bit, atau 256-bit yang pantas untuk aliran kerja integriti data dan carian",
+      },
+      nl: {
+        name: "HighwayHash-hash van tekst of bestand",
+        description:
+          "Genereer HighwayHash-digests voor tekstinvoer of bestandsupload. Bereken snelle 64-bits, 128-bits of 256-bits hashes met sleutel voor gegevensintegriteit en opzoekworkflows",
+      },
+      no: {
+        name: "HighwayHash-hash tekst eller fil",
+        description:
+          "Generer HighwayHash-sammendrag for tekstinndata eller filopplasting. Beregn raske nøkkelbaserte 64-biters, 128-biters eller 256-biters hasher for dataintegritet og oppslagsarbeidsflyter",
+      },
+      pl: {
+        name: "HighwayHash - haszowanie tekstu lub pliku",
+        description:
+          "Generuj skróty HighwayHash dla tekstu lub przesłanego pliku. Obliczaj szybkie 64-, 128- lub 256-bitowe hasze z kluczem na potrzeby integralności danych i wyszukiwania.",
+      },
+      pt: {
+        name: "Hash HighwayHash de Texto ou Arquivo",
+        description:
+          "Gere resumos HighwayHash para entrada de texto ou envio de arquivo. Calcule hashes rápidos com chave de 64 bits, 128 bits ou 256 bits para fluxos de trabalho de integridade de dados e consulta.",
+      },
+      ru: {
+        name: "Хеш HighwayHash для текста или файла",
+        description:
+          "Создавайте дайджесты HighwayHash для текстового ввода или загруженного файла. Вычисляйте быстрые 64-битные, 128-битные или 256-битные хеши с ключом для проверки целостности данных и сценариев поиска",
+      },
+      sv: {
+        name: "HighwayHash-hasha text eller fil",
+        description:
+          "Generera HighwayHash-sammandrag för textinmatning eller filuppladdning. Beräkna snabba nycklade 64-bitars-, 128-bitars- eller 256-bitars-hashar för arbetsflöden med dataintegritet och uppslag.",
+      },
+      th: {
+        name: "แฮช HighwayHash ข้อความหรือไฟล์",
+        description:
+          "สร้างไดเจสต์ HighwayHash สำหรับข้อความที่ป้อนหรือไฟล์ที่อัปโหลด คำนวณแฮชแบบมีคีย์ขนาด 64 บิต, 128 บิต หรือ 256 บิตได้อย่างรวดเร็ว สำหรับเวิร์กโฟลว์ตรวจสอบความถูกต้องของข้อมูลและการค้นหา",
+      },
+      tr: {
+        name: "HighwayHash Metin veya Dosya Karması",
+        description:
+          "Metin girişi veya dosya yüklemesi için HighwayHash özetleri oluşturun. Veri bütünlüğü ve arama iş akışları için hızlı anahtarlı 64 bit, 128 bit veya 256 bit karmalar hesaplayın",
+      },
+      vi: {
+        name: "Băm văn bản hoặc tệp bằng HighwayHash",
+        description:
+          "Tạo giá trị băm HighwayHash cho đầu vào văn bản hoặc tệp tải lên. Tính nhanh giá trị băm có khóa 64-bit, 128-bit hoặc 256-bit cho quy trình toàn vẹn dữ liệu và tra cứu",
+      },
+      "zh-CN": {
+        name: "HighwayHash 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 HighwayHash 摘要。计算快速的带密钥 64 位、128 位或 256 位哈希，用于数据完整性和查找工作流",
+      },
+      "zh-TW": {
+        name: "HighwayHash 文字或檔案雜湊",
+        description:
+          "為文字輸入或上傳的檔案產生 HighwayHash 摘要。計算快速的金鑰式 64 位元、128 位元或 256 位元雜湊，用於資料完整性與查詢工作流程",
       },
     },
   },

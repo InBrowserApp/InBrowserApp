@@ -4970,6 +4970,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "highwayhash-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "highwayhash-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "hmac-generator",
     language: "ar",
   },
