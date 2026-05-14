@@ -75,7 +75,7 @@ function FingerprintResults({ messages, state }: FingerprintResultsProps) {
   }
 
   return (
-    <div className="grid gap-4 md:grid-cols-2">
+    <div className="grid gap-4">
       {state.entries.map((entry, index) => (
         <KeyFingerprintSection
           key={`${entry.fingerprints.sha256}-${index}`}
