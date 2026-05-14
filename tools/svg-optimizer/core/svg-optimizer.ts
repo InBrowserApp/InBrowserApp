@@ -162,4 +162,4 @@ export {
   isLikelySvgMarkup,
   normalizeSvgText,
 }
-export type { SvgOptimizationMetrics, SvgOptimizerOptions, SvgoConfig }
+export type { SvgOptimizationMetrics, SvgOptimizerOptions }
