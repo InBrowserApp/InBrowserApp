@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "設定",
+  "configurationDescription": "設定目前 SipHash-2-4 結果使用的 128 位元金鑰。",
+  "keyLabel": "金鑰（十六進位，16 位元組）",
+  "keyDescription": "請使用恰好 32 個十六進位字元。接受 0x 前綴、空格、冒號、連字號與底線。",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "請輸入 16 位元組金鑰，也就是 32 個十六進位字元。0x 前綴可省略。",
+  "inputLabel": "輸入",
+  "plainTextLabel": "純文字",
+  "plainTextDescription": "貼上或輸入任何 UTF-8 文字，包括快取鍵或請求承載資料。",
+  "importFromFileLabel": "從檔案匯入",
+  "hashResultLabel": "雜湊結果",
+  "hashResultDescription": "目前文字輸入與金鑰的 SipHash-2-4 輸出。",
+  "emptyStateDescription": "輸入有效的 16 位元組金鑰，並提供文字或匯入檔案，以產生 SipHash-2-4 結果。",
+  "fileHashErrorLabel": "檔案雜湊失敗。",
+  "textHashErrorLabel": "文字雜湊失敗。",
+  "hexLabel": "十六進位",
+  "base64Label": "Base64",
+  "decimalLabel": "十進位",
+  "binaryLabel": "二進位",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製"
+}

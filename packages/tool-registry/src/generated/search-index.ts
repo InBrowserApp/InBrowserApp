@@ -15121,6 +15121,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "siphash-2-4-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "siphash",
+      "siphash-2-4",
+      "checksum",
+      "keyed",
+      "file",
+      "text",
+      "fast",
+      "hash-flooding",
+    ],
+    locales: {
+      ar: {
+        name: "حساب تجزئة SipHash-2-4 للنص أو الملف",
+        description:
+          "ولّد تجزئات مفتاحية باستخدام SipHash-2-4 لإدخال نصي أو ملف مرفوع. استخدم مفتاحا سداسيا عشريا بطول 128 بت لحساب تجزئات غير تعمية سريعة بطول 64 بت لعمليات جداول التجزئة ومفاتيح التخزين المؤقت والمجاميع الاختبارية.",
+      },
+      de: {
+        name: "SipHash-2-4-Hash für Text oder Datei",
+        description:
+          "Erzeuge schlüsselbasierte SipHash-2-4-Hashes für Texteingaben oder Datei-Uploads. Verwende einen 128-Bit-Hex-Schlüssel, um schnelle, nicht kryptografische 64-Bit-Hashes für Hash-Tabellen, Cache-Schlüssel und Prüfsummen-Workflows zu berechnen.",
+      },
+      en: {
+        name: "SipHash-2-4 Hash Text or File",
+        description:
+          "Generate SipHash-2-4 keyed hashes for text input or file upload. Use a 128-bit hex key to compute fast 64-bit non-cryptographic hashes for hash-table, cache-key, and checksum workflows.",
+      },
+      es: {
+        name: "Hash SipHash-2-4 de texto o archivo",
+        description:
+          "Genera hashes con clave SipHash-2-4 para entradas de texto o archivos cargados. Usa una clave hexadecimal de 128 bits para calcular hashes no criptográficos rápidos de 64 bits en flujos de tablas hash, claves de caché y sumas de comprobación.",
+      },
+      fr: {
+        name: "Hachage SipHash-2-4 de texte ou de fichier",
+        description:
+          "Générez des hachages à clé SipHash-2-4 pour une saisie de texte ou un fichier importé. Utilisez une clé hexadécimale de 128 bits pour calculer rapidement des hachages non cryptographiques de 64 bits destinés aux tables de hachage, aux clés de cache et aux flux de sommes de contrôle.",
+      },
+      he: {
+        name: "גיבוב טקסט או קובץ עם SipHash-2-4",
+        description:
+          "צרו ערכי גיבוב SipHash-2-4 עם מפתח עבור קלט טקסט או העלאת קובץ. השתמשו במפתח הקסדצימלי של 128 ביט כדי לחשב במהירות ערכי גיבוב לא קריפטוגרפיים באורך 64 ביט עבור תהליכי עבודה של טבלאות גיבוב, מפתחות מטמון וסכומי ביקורת.",
+      },
+      hi: {
+        name: "SipHash-2-4 टेक्स्ट या फ़ाइल हैश करें",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SipHash-2-4 कुंजी-आधारित हैश जेनरेट करें। हैश-टेबल, कैश-कुंजी, और चेकसम वर्कफ़्लो के लिए तेज़ 64-बिट गैर-क्रिप्टोग्राफ़िक हैश की गणना करने हेतु 128-बिट हेक्स कुंजी का उपयोग करें।",
+      },
+      id: {
+        name: "Hash Teks atau File SipHash-2-4",
+        description:
+          "Buat hash berkunci SipHash-2-4 untuk input teks atau unggahan file. Gunakan kunci hex 128-bit untuk menghitung hash non-kriptografis 64-bit yang cepat bagi alur kerja tabel hash, kunci cache, dan checksum.",
+      },
+      it: {
+        name: "Hash SipHash-2-4 di testo o file",
+        description:
+          "Genera hash con chiave SipHash-2-4 per input di testo o caricamento di file. Usa una chiave esadecimale a 128 bit per calcolare hash non crittografici rapidi a 64 bit per flussi di lavoro con tabelle hash, chiavi cache e checksum.",
+      },
+      ja: {
+        name: "SipHash-2-4 テキストまたはファイルのハッシュ",
+        description:
+          "テキスト入力またはファイルアップロードに対して、SipHash-2-4 のキー付きハッシュを生成します。128 ビットの 16 進キーを使って、ハッシュテーブル、キャッシュキー、チェックサムのワークフロー向けに高速な 64 ビット非暗号学的ハッシュを計算します。",
+      },
+      ko: {
+        name: "SipHash-2-4 텍스트 또는 파일 해시",
+        description:
+          "텍스트 입력 또는 파일 업로드용 SipHash-2-4 키 기반 해시를 생성합니다. 128비트 16진수 키로 해시 테이블, 캐시 키, 체크섬 워크플로에 사용할 빠른 64비트 비암호학적 해시를 계산하세요.",
+      },
+      ms: {
+        name: "Hash SipHash-2-4 Teks atau Fail",
+        description:
+          "Jana hash berkunci SipHash-2-4 untuk input teks atau muat naik fail. Gunakan kunci heksadesimal 128-bit untuk mengira hash 64-bit bukan kriptografi yang pantas bagi aliran kerja jadual hash, kunci cache, dan checksum.",
+      },
+      nl: {
+        name: "SipHash-2-4-hash van tekst of bestand",
+        description:
+          "Genereer SipHash-2-4-hashes met sleutel voor tekstinvoer of bestandsupload. Gebruik een 128-bits hex-sleutel om snelle 64-bits niet-cryptografische hashes te berekenen voor workflows met hashtabellen, cache-sleutels en checksums.",
+      },
+      no: {
+        name: "SipHash-2-4-hash tekst eller fil",
+        description:
+          "Generer nøkkelbaserte SipHash-2-4-hasher for tekstinndata eller filopplasting. Bruk en 128-bits heksadesimal nøkkel til å beregne raske 64-bits ikke-kryptografiske hasher for hash-tabell-, cache-nøkkel- og sjekksumarbeidsflyter.",
+      },
+      pl: {
+        name: "SipHash-2-4 - haszowanie tekstu lub pliku",
+        description:
+          "Generuj hasze z kluczem SipHash-2-4 dla danych tekstowych lub przesłanego pliku. Użyj 128-bitowego klucza szesnastkowego, aby obliczać szybkie 64-bitowe niekryptograficzne hasze na potrzeby tablic haszujących, kluczy pamięci podręcznej i sum kontrolnych.",
+      },
+      pt: {
+        name: "Hash SipHash-2-4 de Texto ou Arquivo",
+        description:
+          "Gere valores de hash com chave SipHash-2-4 para entrada de texto ou envio de arquivo. Use uma chave hexadecimal de 128 bits para calcular valores de hash não criptográficos rápidos de 64 bits para fluxos de trabalho de tabelas de hash, chaves de cache e somas de verificação.",
+      },
+      ru: {
+        name: "Хеш SipHash-2-4 для текста или файла",
+        description:
+          "Создавайте хеши с ключом SipHash-2-4 для текстового ввода или загруженного файла. Используйте 128-битный шестнадцатеричный ключ, чтобы вычислять быстрые 64-битные некриптографические хеши для сценариев с хеш-таблицами, ключами кэша и контрольными суммами.",
+      },
+      sv: {
+        name: "Hasha text eller fil med SipHash-2-4",
+        description:
+          "Generera nycklade SipHash-2-4-hashar för textinmatning eller filuppladdning. Använd en 128-bitars hexnyckel för att beräkna snabba 64-bitars icke-kryptografiska hashar för arbetsflöden med hashtabeller, cachenycklar och kontrollsummor.",
+      },
+      th: {
+        name: "แฮช SipHash-2-4 ข้อความหรือไฟล์",
+        description:
+          "สร้างแฮชแบบมีคีย์ SipHash-2-4 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ ใช้คีย์เลขฐานสิบหก 128 บิตเพื่อคำนวณแฮช 64 บิตแบบไม่เข้ารหัสที่รวดเร็ว สำหรับเวิร์กโฟลว์ตารางแฮช คีย์แคช และเช็คซัม",
+      },
+      tr: {
+        name: "SipHash-2-4 Metin veya Dosya Karması",
+        description:
+          "Metin girişi veya dosya yüklemesi için SipHash-2-4 anahtarlı karma değerleri oluşturun. Karma tablosu, önbellek anahtarı ve sağlama toplamı iş akışlarında hızlı 64 bitlik kriptografik olmayan karma değerleri hesaplamak için 128 bitlik bir onaltılık anahtar kullanın.",
+      },
+      vi: {
+        name: "Băm văn bản hoặc tệp bằng SipHash-2-4",
+        description:
+          "Tạo giá trị băm có khóa SipHash-2-4 cho đầu vào văn bản hoặc tệp tải lên. Dùng khóa hex 128-bit để tính nhanh giá trị băm 64-bit phi mật mã cho quy trình bảng băm, khóa cache và checksum.",
+      },
+      "zh-CN": {
+        name: "SipHash-2-4 哈希文本或文件",
+        description:
+          "为文本输入或文件上传生成 SipHash-2-4 带密钥哈希值。使用 128 位十六进制密钥计算快速的 64 位非加密哈希，用于哈希表、缓存键和校验和工作流。",
+      },
+      "zh-TW": {
+        name: "SipHash-2-4 文字或檔案雜湊",
+        description:
+          "為文字輸入或上傳的檔案產生 SipHash-2-4 金鑰雜湊。使用 128 位元十六進位金鑰，計算快速的 64 位元非密碼學雜湊，用於雜湊表、快取鍵與校驗和工作流程。",
+      },
+    },
+  },
+  {
     slug: "sitemap-xml-generator",
     category: "web",
     icon: "globe",

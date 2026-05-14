@@ -1,0 +1,4 @@
+{
+  "name": "SipHash-2-4-hash tekst eller fil",
+  "description": "Generer nøkkelbaserte SipHash-2-4-hasher for tekstinndata eller filopplasting. Bruk en 128-bits heksadesimal nøkkel til å beregne raske 64-bits ikke-kryptografiske hasher for hash-tabell-, cache-nøkkel- og sjekksumarbeidsflyter."
+}

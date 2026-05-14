@@ -1,0 +1,4 @@
+{
+  "name": "Hash SipHash-2-4 de Texto ou Arquivo",
+  "description": "Gere valores de hash com chave SipHash-2-4 para entrada de texto ou envio de arquivo. Use uma chave hexadecimal de 128 bits para calcular valores de hash não criptográficos rápidos de 64 bits para fluxos de trabalho de tabelas de hash, chaves de cache e somas de verificação."
+}

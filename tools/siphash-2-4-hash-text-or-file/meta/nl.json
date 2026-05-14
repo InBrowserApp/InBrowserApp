@@ -1,0 +1,4 @@
+{
+  "name": "SipHash-2-4-hash van tekst of bestand",
+  "description": "Genereer SipHash-2-4-hashes met sleutel voor tekstinvoer of bestandsupload. Gebruik een 128-bits hex-sleutel om snelle 64-bits niet-cryptografische hashes te berekenen voor workflows met hashtabellen, cache-sleutels en checksums."
+}

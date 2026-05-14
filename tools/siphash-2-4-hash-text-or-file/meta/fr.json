@@ -1,0 +1,4 @@
+{
+  "name": "Hachage SipHash-2-4 de texte ou de fichier",
+  "description": "Générez des hachages à clé SipHash-2-4 pour une saisie de texte ou un fichier importé. Utilisez une clé hexadécimale de 128 bits pour calculer rapidement des hachages non cryptographiques de 64 bits destinés aux tables de hachage, aux clés de cache et aux flux de sommes de contrôle."
+}

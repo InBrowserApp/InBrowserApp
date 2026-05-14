@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "설정",
+  "configurationDescription": "현재 SipHash-2-4 결과에 사용할 128비트 키를 설정합니다.",
+  "keyLabel": "키 (16진수, 16바이트)",
+  "keyDescription": "정확히 32자의 16진수 문자를 사용하세요. 0x 접두사, 공백, 콜론, 하이픈, 밑줄을 사용할 수 있습니다.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "16바이트 키를 32자의 16진수 문자로 입력하세요. 0x 접두사는 선택 사항입니다.",
+  "inputLabel": "입력",
+  "plainTextLabel": "일반 텍스트",
+  "plainTextDescription": "캐시 키나 요청 페이로드를 포함해 모든 UTF-8 텍스트를 붙여넣거나 입력하세요.",
+  "importFromFileLabel": "파일에서 가져오기",
+  "hashResultLabel": "해시 결과",
+  "hashResultDescription": "현재 텍스트 입력과 키에 대한 SipHash-2-4 출력입니다.",
+  "emptyStateDescription": "SipHash-2-4 결과를 생성하려면 유효한 16바이트 키를 입력하고 텍스트를 제공하거나 파일을 가져오세요.",
+  "fileHashErrorLabel": "파일을 해시하지 못했습니다.",
+  "textHashErrorLabel": "텍스트를 해시하지 못했습니다.",
+  "hexLabel": "16진수",
+  "base64Label": "Base64",
+  "decimalLabel": "10진수",
+  "binaryLabel": "2진수",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨"
+}

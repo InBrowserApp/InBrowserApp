@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "कॉन्फ़िगरेशन",
+  "configurationDescription": "मौजूदा SipHash-2-4 परिणाम के लिए उपयोग की जाने वाली 128-बिट कुंजी सेट करें।",
+  "keyLabel": "कुंजी (हेक्स, 16 बाइट)",
+  "keyDescription": "ठीक 32 हेक्साडेसिमल वर्णों का उपयोग करें। 0x उपसर्ग, स्पेस, कोलन, हाइफ़न, और अंडरस्कोर स्वीकार किए जाते हैं।",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "16-बाइट कुंजी को 32 हेक्साडेसिमल वर्णों के रूप में दर्ज करें। 0x उपसर्ग वैकल्पिक है।",
+  "inputLabel": "इनपुट",
+  "plainTextLabel": "सादा टेक्स्ट",
+  "plainTextDescription": "कैश कुंजियों या अनुरोध पेलोड सहित कोई भी UTF-8 टेक्स्ट पेस्ट करें या टाइप करें।",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "hashResultLabel": "हैश परिणाम",
+  "hashResultDescription": "मौजूदा टेक्स्ट इनपुट और कुंजी के लिए SipHash-2-4 आउटपुट।",
+  "emptyStateDescription": "SipHash-2-4 परिणाम जेनरेट करने के लिए मान्य 16-बाइट कुंजी दर्ज करें और टेक्स्ट दें या फ़ाइल आयात करें।",
+  "fileHashErrorLabel": "फ़ाइल हैश करने में विफल।",
+  "textHashErrorLabel": "टेक्स्ट हैश करने में विफल।",
+  "hexLabel": "हेक्साडेसिमल",
+  "base64Label": "Base64",
+  "decimalLabel": "दशमलव",
+  "binaryLabel": "बाइनरी",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}

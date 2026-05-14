@@ -1,0 +1,4 @@
+{
+  "name": "Hash SipHash-2-4 di testo o file",
+  "description": "Genera hash con chiave SipHash-2-4 per input di testo o caricamento di file. Usa una chiave esadecimale a 128 bit per calcolare hash non crittografici rapidi a 64 bit per flussi di lavoro con tabelle hash, chiavi cache e checksum."
+}

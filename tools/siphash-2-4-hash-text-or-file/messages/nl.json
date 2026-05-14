@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "Configuratie",
+  "configurationDescription": "Stel de 128-bits sleutel in die wordt gebruikt voor het huidige SipHash-2-4-resultaat.",
+  "keyLabel": "Sleutel (hex, 16 bytes)",
+  "keyDescription": "Gebruik precies 32 hexadecimale tekens. Een 0x-prefix, spaties, dubbelepunten, koppeltekens en onderstrepingstekens worden geaccepteerd.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "Voer een sleutel van 16 bytes in als 32 hexadecimale tekens. De 0x-prefix is optioneel.",
+  "inputLabel": "Invoer",
+  "plainTextLabel": "Platte tekst",
+  "plainTextDescription": "Plak of typ willekeurige UTF-8-tekst, inclusief cache-sleutels of verzoekpayloads.",
+  "importFromFileLabel": "Uit bestand importeren",
+  "hashResultLabel": "Hashresultaat",
+  "hashResultDescription": "SipHash-2-4-uitvoer voor de huidige tekstinvoer en sleutel.",
+  "emptyStateDescription": "Voer een geldige sleutel van 16 bytes in en geef tekst op of importeer een bestand om een SipHash-2-4-resultaat te genereren.",
+  "fileHashErrorLabel": "Bestand hashen is mislukt.",
+  "textHashErrorLabel": "Tekst hashen is mislukt.",
+  "hexLabel": "Hexadecimaal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimaal",
+  "binaryLabel": "Binair",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd"
+}
