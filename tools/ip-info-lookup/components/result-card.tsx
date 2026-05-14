@@ -25,7 +25,10 @@ type ResultCardProps = Readonly<{
 }>
 
 function ResultCard({ inputState, lookupState, messages }: ResultCardProps) {
-  const result = lookupState.status === "success" ? lookupState.result : null
+  const result =
+    lookupState.status === "success" && inputState.status !== "invalid"
+      ? lookupState.result
+      : null
   const visibleTarget =
     result?.target ?? (inputState.status === "valid" ? inputState.target : null)
   const copyValue = result?.addresses.map((entry) => entry.address).join("\n")

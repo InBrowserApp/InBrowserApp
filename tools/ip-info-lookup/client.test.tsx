@@ -255,6 +255,32 @@ describe("IpInfoLookupClient", () => {
     expect(lookupIpInfoTargetMock).not.toHaveBeenCalled()
   })
 
+  test("hides the previous result actions when the current target is invalid", async () => {
+    lookupIpInfoTargetMock.mockResolvedValue(makeResult())
+
+    render(<IpInfoLookupClient messages={messages} />)
+
+    fireEvent.click(screen.getByRole("button", { name: messages.lookupButton }))
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(`${messages.normalizedTarget}: example.com`)
+      ).toBeTruthy()
+    })
+
+    fireEvent.change(screen.getByLabelText(messages.targetLabel), {
+      target: { value: "localhost" },
+    })
+
+    expect(screen.getByText(messages.invalidTargetTitle)).toBeTruthy()
+    expect(
+      screen.queryByText(`${messages.normalizedTarget}: example.com`)
+    ).toBeNull()
+    expect(
+      screen.queryByRole("button", { name: messages.copyAllAddresses })
+    ).toBeNull()
+  })
+
   test("hides resolver controls and address count summary for direct IP lookups", async () => {
     lookupIpInfoTargetMock.mockResolvedValue(makeIpResult())
 
