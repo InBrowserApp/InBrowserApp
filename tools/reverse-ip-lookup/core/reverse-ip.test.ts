@@ -41,6 +41,9 @@ describe("reverse IP lookup core", () => {
     expect(expandIpv6Hextets("::")).toHaveLength(8)
     expect(() => expandIpv6Hextets("1:2:3")).toThrow("Invalid IPv6 address.")
     expect(() => expandIpv6Hextets("1::2::3")).toThrow("Invalid IPv6 address.")
+    expect(() => expandIpv6Hextets("1:2:3:4:5:6:7:8::")).toThrow(
+      "Invalid IPv6 address."
+    )
     expect(() => expandIpv6Hextets("1:2:3:4:5:6:7:8:9")).toThrow(
       "Invalid IPv6 address."
     )
@@ -56,6 +59,9 @@ describe("reverse IP lookup core", () => {
     expect(toIpv6ReverseDomain("::ffff:192.0.2.128")).toBe(
       "0.8.2.0.0.0.0.c.f.f.f.f.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa"
     )
+    expect(() => toIpv6ReverseDomain("::ffff:999.0.2.128")).toThrow(
+      "Invalid IPv4-embedded IPv6 address."
+    )
   })
 
   test("parses valid, empty, and invalid input", () => {
@@ -63,12 +69,21 @@ describe("reverse IP lookup core", () => {
     expect(parseReverseIpInput("example.com").status).toBe("invalid")
 
     const result = parseReverseIpInput("8.8.4.4")
+    const ipv6Result = parseReverseIpInput("[2001:db8::1]")
 
     expect(result.status).toBe("valid")
+    expect(ipv6Result.status).toBe("valid")
 
     if (result.status === "valid") {
       expect(result.target.version).toBe("ipv4")
       expect(result.target.reverseDomain).toBe("4.4.8.8.in-addr.arpa")
+    }
+
+    if (ipv6Result.status === "valid") {
+      expect(ipv6Result.target.version).toBe("ipv6")
+      expect(ipv6Result.target.reverseDomain).toBe(
+        "1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.b.d.0.1.0.0.2.ip6.arpa"
+      )
     }
 
     expect(() => createReverseLookupTarget("not an ip")).toThrow(
@@ -89,6 +104,7 @@ describe("reverse IP lookup core", () => {
     expect(getDnsRcodeLabel(0)).toBe("NOERROR")
     expect(getDnsRcodeLabel(3)).toBe("NXDOMAIN")
     expect(getDnsRcodeLabel(99)).toBe("RCODE 99")
+    expect(extractPtrAnswers({ Status: 3 })).toEqual([])
 
     expect(
       extractPtrAnswers({
