@@ -1,0 +1,4 @@
+{
+  "name": "Generator Hash Password Bcrypt",
+  "description": "Buat hash password bcrypt secara lokal dengan cost yang dapat dikonfigurasi, salt baru, dan output siap disalin untuk sistem autentikasi."
+}

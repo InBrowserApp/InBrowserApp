@@ -1,0 +1,4 @@
+{
+  "name": "Générateur de hash de mot de passe bcrypt",
+  "description": "Générez localement des hash de mot de passe bcrypt avec un coût configurable, des sels neufs et une sortie prête à copier pour les systèmes d'authentification."
+}

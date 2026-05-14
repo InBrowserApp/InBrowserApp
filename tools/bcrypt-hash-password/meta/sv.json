@@ -1,0 +1,4 @@
+{
+  "name": "Bcrypt-generator för lösenordshashar",
+  "description": "Generera bcrypt-lösenordshashar lokalt med konfigurerbar kostnad, nya salter och kopieringsklar utdata för autentiseringssystem."
+}

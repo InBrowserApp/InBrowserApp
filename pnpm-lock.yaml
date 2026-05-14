@@ -96,6 +96,9 @@ catalogs:
     astro:
       specifier: ^5.17.1
       version: 5.18.1
+    bcrypt-ts:
+      specifier: ^8.0.1
+      version: 8.0.1
     bip39:
       specifier: ^3.1.0
       version: 3.1.0
@@ -425,6 +428,9 @@ importers:
       '@tool/basic-auth-generator':
         specifier: workspace:*
         version: link:../../tools/basic-auth-generator
+      '@tool/bcrypt-hash-password':
+        specifier: workspace:*
+        version: link:../../tools/bcrypt-hash-password
       '@tool/bic-swift-validator':
         specifier: workspace:*
         version: link:../../tools/bic-swift-validator
@@ -1328,6 +1334,34 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 5.18.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
+      react:
+        specifier: 'catalog:'
+        version: 19.2.4
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      vitest:
+        specifier: 'catalog:'
+        version: 4.1.2(@types/node@25.5.2)(happy-dom@20.8.9)(msw@2.12.14(@types/node@25.5.2)(typescript@5.9.3))(vite@6.4.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3))
+
+  tools/bcrypt-hash-password:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 5.18.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
+      bcrypt-ts:
+        specifier: 'catalog:'
+        version: 8.0.1
       react:
         specifier: 'catalog:'
         version: 19.2.4
@@ -8413,6 +8447,10 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
+  bcrypt-ts@8.0.1:
+    resolution: {integrity: sha512-ILrO7U7YieyG+71KVIVVuPCmjN8N9DY3gYs4OiEoJvW8A5HOe4eerRhLD0Rgo2CAyANRKssFGXmLF74zJz094g==}
+    engines: {node: '>=20'}
+
   bignumber.js@9.3.1:
     resolution: {integrity: sha512-Ko0uX15oIUS7wJ3Rb30Fs6SkVbLmPBAKdlm7q9+ak9bbIeFf0MwuBsQV6z7+X768/cHsfg+WlysDWJcmthjsjQ==}
 
@@ -14261,6 +14299,8 @@ snapshots:
   base64-js@1.5.1: {}
 
   baseline-browser-mapping@2.10.14: {}
+
+  bcrypt-ts@8.0.1: {}
 
   bignumber.js@9.3.1: {}
 

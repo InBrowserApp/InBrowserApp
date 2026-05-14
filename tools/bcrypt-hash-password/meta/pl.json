@@ -1,0 +1,4 @@
+{
+  "name": "Generator hashów haseł bcrypt",
+  "description": "Generuj lokalnie hashe haseł bcrypt z konfigurowalnym kosztem, nowymi solami i wynikiem gotowym do skopiowania dla systemów uwierzytelniania."
+}

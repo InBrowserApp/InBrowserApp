@@ -1,0 +1,4 @@
+{
+  "name": "Bcrypt Hash 密碼產生器",
+  "description": "在本機產生 bcrypt 密碼 hash，可設定 cost、每次使用新的 salt，並輸出可直接複製到驗證系統的結果。"
+}

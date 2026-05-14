@@ -1,0 +1,4 @@
+{
+  "name": "Bcrypt-wachtwoordhashgenerator",
+  "description": "Genereer lokaal bcrypt-wachtwoordhashes met een configureerbare costfactor, nieuwe salt-waarden en kopieerklare uitvoer voor authenticatiesystemen."
+}

@@ -2079,6 +2079,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "bcrypt-hash-password",
+    category: "hash",
+    icon: "lock",
+    tags: [
+      "bcrypt",
+      "password",
+      "hash",
+      "security",
+      "authentication",
+      "salt",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "مولد تجزئة bcrypt لكلمات المرور",
+        description:
+          "أنشئ تجزئات كلمات مرور bcrypt محليًا مع تكلفة قابلة للضبط، وأملاح جديدة، وإخراج جاهز للنسخ لأنظمة المصادقة.",
+      },
+      de: {
+        name: "bcrypt-Passwort-Hash-Generator",
+        description:
+          "Generieren Sie bcrypt-Passwort-Hashes lokal mit konfigurierbarem Kostenfaktor, frischem Salt und kopierfertiger Ausgabe für Authentifizierungssysteme.",
+      },
+      en: {
+        name: "Bcrypt Hash Password Generator",
+        description:
+          "Generate bcrypt password hashes locally with configurable cost, fresh salts, and copy-ready output for authentication systems.",
+      },
+      es: {
+        name: "Generador de hash bcrypt para contraseñas",
+        description:
+          "Genera hashes bcrypt de contraseñas localmente con coste configurable, sales nuevas y una salida lista para copiar para sistemas de autenticación.",
+      },
+      fr: {
+        name: "Générateur de hash de mot de passe bcrypt",
+        description:
+          "Générez localement des hash de mot de passe bcrypt avec un coût configurable, des sels neufs et une sortie prête à copier pour les systèmes d'authentification.",
+      },
+      he: {
+        name: "מחולל גיבוב bcrypt לסיסמאות",
+        description:
+          "צרו גיבובי סיסמאות מסוג bcrypt באופן מקומי עם עלות ניתנת להגדרה, מלחים אקראיים חדשים ופלט מוכן להעתקה למערכות אימות.",
+      },
+      hi: {
+        name: "Bcrypt Hash Password Generator",
+        description:
+          "कॉन्फ़िगर करने योग्य cost, नए salts, और authentication systems के लिए copy-ready output के साथ bcrypt password hashes स्थानीय रूप से जनरेट करें.",
+      },
+      id: {
+        name: "Generator Hash Password Bcrypt",
+        description:
+          "Buat hash password bcrypt secara lokal dengan cost yang dapat dikonfigurasi, salt baru, dan output siap disalin untuk sistem autentikasi.",
+      },
+      it: {
+        name: "Generatore di hash bcrypt per password",
+        description:
+          "Genera hash bcrypt delle password localmente con costo configurabile, salt nuovi e output pronto da copiare per sistemi di autenticazione.",
+      },
+      ja: {
+        name: "bcrypt パスワードハッシュ生成ツール",
+        description:
+          "設定可能なコスト、新しいソルト、認証システムですぐコピーして使える出力を使って、bcrypt パスワードハッシュをローカルで生成します。",
+      },
+      ko: {
+        name: "Bcrypt 비밀번호 해시 생성기",
+        description:
+          "구성 가능한 cost, 새로운 salt, 인증 시스템에 바로 복사할 수 있는 출력으로 bcrypt 비밀번호 해시를 로컬에서 생성합니다.",
+      },
+      ms: {
+        name: "Penjana Hash Kata Laluan bcrypt",
+        description:
+          "Jana hash kata laluan bcrypt secara setempat dengan kos boleh dikonfigurasi, salt baharu, dan output sedia disalin untuk sistem pengesahan.",
+      },
+      nl: {
+        name: "Bcrypt-wachtwoordhashgenerator",
+        description:
+          "Genereer lokaal bcrypt-wachtwoordhashes met een configureerbare costfactor, nieuwe salt-waarden en kopieerklare uitvoer voor authenticatiesystemen.",
+      },
+      no: {
+        name: "Bcrypt-hashgenerator for passord",
+        description:
+          "Generer bcrypt-passordhasher lokalt med konfigurerbar kostnad, nye salter og kopieringsklar utdata for autentiseringssystemer.",
+      },
+      pl: {
+        name: "Generator hashów haseł bcrypt",
+        description:
+          "Generuj lokalnie hashe haseł bcrypt z konfigurowalnym kosztem, nowymi solami i wynikiem gotowym do skopiowania dla systemów uwierzytelniania.",
+      },
+      pt: {
+        name: "Gerador de Hash bcrypt de Senha",
+        description:
+          "Gere hashes bcrypt de senha localmente com custo configurável, salts novos e saída pronta para copiar para sistemas de autenticação.",
+      },
+      ru: {
+        name: "Генератор bcrypt-хеша пароля",
+        description:
+          "Генерируйте bcrypt-хеши паролей локально с настраиваемым коэффициентом cost, новой случайной солью и готовым к копированию результатом для систем аутентификации.",
+      },
+      sv: {
+        name: "Bcrypt-generator för lösenordshashar",
+        description:
+          "Generera bcrypt-lösenordshashar lokalt med konfigurerbar kostnad, nya salter och kopieringsklar utdata för autentiseringssystem.",
+      },
+      th: {
+        name: "ตัวสร้าง bcrypt hash สำหรับรหัสผ่าน",
+        description:
+          "สร้าง bcrypt password hash ในเครื่อง พร้อมปรับ cost, ใช้ salt ใหม่ทุกครั้ง และเอาต์พุตพร้อมคัดลอกสำหรับระบบยืนยันตัวตน",
+      },
+      tr: {
+        name: "Bcrypt Hash Parola Oluşturucu",
+        description:
+          "Yapılandırılabilir maliyet, yeni salt değerleri ve kimlik doğrulama sistemleri için kopyalamaya hazır çıktı ile bcrypt parola hash'lerini yerel olarak oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo hash mật khẩu bcrypt",
+        description:
+          "Tạo hash mật khẩu bcrypt cục bộ với cost có thể cấu hình, salt mới và đầu ra sẵn sàng sao chép cho các hệ thống xác thực.",
+      },
+      "zh-CN": {
+        name: "Bcrypt 密码哈希生成器",
+        description:
+          "在本地生成 bcrypt 密码哈希，可配置成本因子、使用新盐，并输出适合复制到身份验证系统的结果。",
+      },
+      "zh-TW": {
+        name: "Bcrypt Hash 密碼產生器",
+        description:
+          "在本機產生 bcrypt 密碼 hash，可設定 cost、每次使用新的 salt，並輸出可直接複製到驗證系統的結果。",
+      },
+    },
+  },
+  {
     slug: "bic-swift-validator",
     category: "text",
     icon: "file-text",

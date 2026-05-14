@@ -1,0 +1,4 @@
+{
+  "name": "Bcrypt Hash Password Generator",
+  "description": "कॉन्फ़िगर करने योग्य cost, नए salts, और authentication systems के लिए copy-ready output के साथ bcrypt password hashes स्थानीय रूप से जनरेट करें."
+}

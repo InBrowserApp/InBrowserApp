@@ -1474,6 +1474,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bcrypt-hash-password",
+    language: "ar",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "de",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "en",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "es",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "fr",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "he",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "hi",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "id",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "it",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "ja",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "ko",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "ms",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "nl",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "no",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "pl",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "pt",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "ru",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "sv",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "th",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "tr",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "vi",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "zh-CN",
+  },
+  {
+    slug: "bcrypt-hash-password",
+    language: "zh-TW",
+  },
+  {
     slug: "bic-swift-validator",
     language: "ar",
   },
