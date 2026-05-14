@@ -12790,6 +12790,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "svg-optimizer",
+    language: "ar",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "de",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "en",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "es",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "fr",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "he",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "hi",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "id",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "it",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "ja",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "ko",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "ms",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "nl",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "no",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "pl",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "pt",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "ru",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "sv",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "th",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "tr",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "vi",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "zh-CN",
+  },
+  {
+    slug: "svg-optimizer",
+    language: "zh-TW",
+  },
+  {
     slug: "svg-to-image-converter",
     language: "ar",
   },

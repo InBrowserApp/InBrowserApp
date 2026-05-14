@@ -190,6 +190,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ssh-public-key-fingerprint": () =>
     import("@tool/ssh-public-key-fingerprint/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
+  "svg-optimizer": () => import("@tool/svg-optimizer/page"),
   "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
   "text-diff": () => import("@tool/text-diff/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),
