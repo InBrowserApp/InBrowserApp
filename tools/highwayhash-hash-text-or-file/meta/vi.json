@@ -1,0 +1,4 @@
+{
+  "name": "Băm văn bản hoặc tệp bằng HighwayHash",
+  "description": "Tạo giá trị băm HighwayHash cho đầu vào văn bản hoặc tệp tải lên. Tính nhanh giá trị băm có khóa 64-bit, 128-bit hoặc 256-bit cho quy trình toàn vẹn dữ liệu và tra cứu"
+}

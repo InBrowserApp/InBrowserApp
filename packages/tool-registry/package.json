@@ -62,6 +62,7 @@
     "@tool/eu-vat-number-validator": "workspace:*",
     "@tool/file-to-data-uri-converter": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
+    "@tool/highwayhash-hash-text-or-file": "workspace:*",
     "@tool/hmac-generator": "workspace:*",
     "@tool/html-color-names": "workspace:*",
     "@tool/html-entity-encoder-decoder": "workspace:*",

@@ -68,6 +68,7 @@ catalog:
   happy-dom: ^20.8.9
   hash-wasm: ^4.12.0
   highlight.js: ^11.11.1
+  highwayhasher: ^0.4.4
   husky: ^9.1.7
   "@types/js-yaml": ^4.0.9
   "@types/mime-db": ^1.43.6

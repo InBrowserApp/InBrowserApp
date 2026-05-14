@@ -1,0 +1,4 @@
+{
+  "name": "Hash HighwayHash de Texto ou Arquivo",
+  "description": "Gere resumos HighwayHash para entrada de texto ou envio de arquivo. Calcule hashes rápidos com chave de 64 bits, 128 bits ou 256 bits para fluxos de trabalho de integridade de dados e consulta."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Hash Teks atau File HighwayHash",
+  "description": "Buat digest HighwayHash untuk input teks atau unggahan file. Hitung hash berkunci 64-bit, 128-bit, atau 256-bit yang cepat untuk alur kerja integritas data dan pencarian"
+}

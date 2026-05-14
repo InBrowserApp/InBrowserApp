@@ -1,0 +1,4 @@
+{
+  "name": "Hachage HighwayHash de texte ou de fichier",
+  "description": "Générez des condensés HighwayHash pour une saisie de texte ou un fichier importé. Calculez rapidement des hachages à clé de 64 bits, 128 bits ou 256 bits pour les flux d'intégrité des données et de recherche."
+}

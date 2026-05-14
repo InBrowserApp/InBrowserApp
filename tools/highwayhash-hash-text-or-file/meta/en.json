@@ -1,0 +1,4 @@
+{
+  "name": "HighwayHash Hash Text or File",
+  "description": "Generate HighwayHash digests for text input or file upload. Compute fast keyed 64-bit, 128-bit, or 256-bit hashes for data integrity and lookup workflows"
+}

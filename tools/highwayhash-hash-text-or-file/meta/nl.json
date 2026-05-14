@@ -1,0 +1,4 @@
+{
+  "name": "HighwayHash-hash van tekst of bestand",
+  "description": "Genereer HighwayHash-digests voor tekstinvoer of bestandsupload. Bereken snelle 64-bits, 128-bits of 256-bits hashes met sleutel voor gegevensintegriteit en opzoekworkflows"
+}
