@@ -1,0 +1,100 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import AesDecryptorClient from "./client"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+type AesDecryptorMessagesCatalog = Readonly<{
+  inputCardTitle: string
+  inputCardDescription: string
+  jsonInputLabel: string
+  jsonInputPlaceholder: string
+  fileInputLabel: string
+  fileInputDescription: string
+  chooseFileLabel: string
+  selectedFileLabel: string
+  clearFileLabel: string
+  keyCardTitle: string
+  keyCardDescription: string
+  envelopeKeySourceLabel: string
+  passwordSourceLabel: string
+  rawKeySourceLabel: string
+  passwordLabel: string
+  passwordPlaceholder: string
+  rawKeyLabel: string
+  rawKeyPlaceholder: string
+  envelopeCardTitle: string
+  envelopeCardDescription: string
+  emptyEnvelopeTitle: string
+  emptyEnvelopeDescription: string
+  invalidEnvelopeTitle: string
+  modeLabel: string
+  keyLengthLabel: string
+  keySourceLabel: string
+  pbkdf2HashLabel: string
+  pbkdf2IterationsLabel: string
+  plaintextTypeLabel: string
+  fileNameLabel: string
+  fileSizeLabel: string
+  decryptLabel: string
+  resetLabel: string
+  resultCardTitle: string
+  resultCardDescription: string
+  emptyResultTitle: string
+  emptyResultDescription: string
+  plaintextResultLabel: string
+  fileResultTitle: string
+  fileResultDescription: string
+  copyPlaintextLabel: string
+  copiedLabel: string
+  downloadPlaintextLabel: string
+  downloadFileLabel: string
+  errorTitle: string
+  validationInputRequired: string
+  validationEnvelopeInvalid: string
+  validationPasswordRequired: string
+  validationRawKeyRequired: string
+  validationRawKeyInvalid: string
+  errorDecryptFailed: string
+  textPlaintextLabel: string
+  filePlaintextLabel: string
+}>
+
+interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const localizedMessages = resolveLocale<AesDecryptorMessagesCatalog>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+)
+const messages = { meta, ...localizedMessages }
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <AesDecryptorClient client:load messages={messages} />
+
+  {
+    IntroSection ? (
+      <ToolArticle>
+        <IntroSection />
+      </ToolArticle>
+    ) : null
+  }
+</ToolPageShell>

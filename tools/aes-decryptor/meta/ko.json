@@ -1,0 +1,4 @@
+{
+  "name": "AES 복호화 도구",
+  "description": "원래 비밀번호 또는 원시 16진수 키로 InBrowser.App의 AES JSON 엔벌로프를 복호화합니다."
+}

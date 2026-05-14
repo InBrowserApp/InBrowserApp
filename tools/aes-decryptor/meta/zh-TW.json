@@ -1,0 +1,4 @@
+{
+  "name": "AES 解密器",
+  "description": "使用原始密碼或原始十六進位金鑰，解密來自 InBrowser.App 的 AES JSON 封套。"
+}

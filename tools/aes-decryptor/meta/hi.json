@@ -1,0 +1,4 @@
+{
+  "name": "AES Decryptor",
+  "description": "InBrowser.App से मिले AES JSON envelopes को मूल पासवर्ड या कच्ची हेक्साडेसिमल कुंजी से डिक्रिप्ट करें।"
+}

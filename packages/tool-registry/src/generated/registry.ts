@@ -133,6 +133,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "aes-decryptor",
+    category: "web",
+    icon: "lock",
+    tags: [
+      "aes",
+      "decrypt",
+      "decryption",
+      "crypto",
+      "cipher",
+      "password",
+      "pbkdf2",
+      "gcm",
+      "file",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "مُفكِّك تشفير AES",
+        description:
+          "فكّ تشفير أغلفة JSON الخاصة بـ AES من InBrowser.App باستخدام كلمة المرور الأصلية أو مفتاح سداسي عشري خام.",
+      },
+      de: {
+        name: "AES Decryptor",
+        description:
+          "Entschlüsseln Sie AES-JSON-Hüllen von InBrowser.App mit dem ursprünglichen Passwort oder einem rohen hexadezimalen Schlüssel.",
+      },
+      en: {
+        name: "AES Decryptor",
+        description:
+          "Decrypt AES JSON envelopes from InBrowser.App with the original password or raw hexadecimal key.",
+      },
+      es: {
+        name: "Descifrador AES",
+        description:
+          "Descifra contenedores JSON de AES de InBrowser.App con la contraseña original o una clave hexadecimal sin procesar.",
+      },
+      fr: {
+        name: "Déchiffreur AES",
+        description:
+          "Déchiffrez les enveloppes JSON AES d’InBrowser.App avec le mot de passe d’origine ou la clé hexadécimale brute.",
+      },
+      he: {
+        name: "מפענח AES",
+        description:
+          "פענחו מעטפות JSON של AES מ-InBrowser.App באמצעות הסיסמה המקורית או מפתח הקסדצימלי גולמי.",
+      },
+      hi: {
+        name: "AES Decryptor",
+        description:
+          "InBrowser.App से मिले AES JSON envelopes को मूल पासवर्ड या कच्ची हेक्साडेसिमल कुंजी से डिक्रिप्ट करें।",
+      },
+      id: {
+        name: "AES Decryptor",
+        description:
+          "Dekripsi envelope JSON AES dari InBrowser.App dengan kata sandi asli atau kunci heksadesimal mentah.",
+      },
+      it: {
+        name: "AES Decryptor",
+        description:
+          "Decifra envelope JSON AES da InBrowser.App con la password originale o una chiave esadecimale grezza.",
+      },
+      ja: {
+        name: "AES Decryptor",
+        description:
+          "InBrowser.App の AES JSON エンベロープを、元のパスワードまたは未加工の16進数キーで復号します。",
+      },
+      ko: {
+        name: "AES 복호화 도구",
+        description:
+          "원래 비밀번호 또는 원시 16진수 키로 InBrowser.App의 AES JSON 엔벌로프를 복호화합니다.",
+      },
+      ms: {
+        name: "Penyahsulit AES",
+        description:
+          "Nyahsulitkan sampul JSON AES daripada InBrowser.App dengan kata laluan asal atau kunci heksadesimal mentah.",
+      },
+      nl: {
+        name: "AES Decryptor",
+        description:
+          "Ontsleutel AES-JSON-enveloppen van InBrowser.App met het oorspronkelijke wachtwoord of een ruwe hexadecimale sleutel.",
+      },
+      no: {
+        name: "AES-dekryptering",
+        description:
+          "Dekrypter AES-JSON-konvolutter fra InBrowser.App med det opprinnelige passordet eller en rå heksadesimal nøkkel.",
+      },
+      pl: {
+        name: "Deszyfrator AES",
+        description:
+          "Odszyfruj koperty JSON AES z InBrowser.App za pomocą oryginalnego hasła lub surowego klucza szesnastkowego.",
+      },
+      pt: {
+        name: "Descriptografador AES",
+        description:
+          "Descriptografe envelopes JSON AES do InBrowser.App com a senha original ou uma chave hexadecimal bruta.",
+      },
+      ru: {
+        name: "AES Decryptor",
+        description:
+          "Расшифровывайте AES JSON-конверты из InBrowser.App с исходным паролем или необработанным шестнадцатеричным ключом.",
+      },
+      sv: {
+        name: "AES-dekrypterare",
+        description:
+          "Dekryptera AES JSON-omslag från InBrowser.App med det ursprungliga lösenordet eller en rå hexadecimal nyckel.",
+      },
+      th: {
+        name: "เครื่องมือถอดรหัส AES",
+        description:
+          "ถอดรหัสซอง JSON ของ AES จาก InBrowser.App ด้วยรหัสผ่านเดิมหรือคีย์เลขฐานสิบหกแบบดิบ",
+      },
+      tr: {
+        name: "AES Şifre Çözücü",
+        description:
+          "InBrowser.App AES JSON zarflarının şifresini özgün parola veya ham onaltılık anahtarla çözün.",
+      },
+      vi: {
+        name: "Trình giải mã AES",
+        description:
+          "Giải mã các phong bì JSON AES từ InBrowser.App bằng mật khẩu gốc hoặc khóa thô dạng thập lục phân.",
+      },
+      "zh-CN": {
+        name: "AES 解密器",
+        description:
+          "使用原始密码或原始十六进制密钥解密来自 InBrowser.App 的 AES JSON 信封。",
+      },
+      "zh-TW": {
+        name: "AES 解密器",
+        description:
+          "使用原始密碼或原始十六進位金鑰，解密來自 InBrowser.App 的 AES JSON 封套。",
+      },
+    },
+  },
+  {
     slug: "aes-encryptor",
     category: "web",
     icon: "lock",
@@ -19892,6 +20026,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Adler-32 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 Adler-32 校驗和。計算快速校驗值，用於資料完整性驗證與錯誤偵測",
+      },
+    },
+  },
+  "aes-decryptor": {
+    slug: "aes-decryptor",
+    category: "web",
+    icon: "lock",
+    tags: [
+      "aes",
+      "decrypt",
+      "decryption",
+      "crypto",
+      "cipher",
+      "password",
+      "pbkdf2",
+      "gcm",
+      "file",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "مُفكِّك تشفير AES",
+        description:
+          "فكّ تشفير أغلفة JSON الخاصة بـ AES من InBrowser.App باستخدام كلمة المرور الأصلية أو مفتاح سداسي عشري خام.",
+      },
+      de: {
+        name: "AES Decryptor",
+        description:
+          "Entschlüsseln Sie AES-JSON-Hüllen von InBrowser.App mit dem ursprünglichen Passwort oder einem rohen hexadezimalen Schlüssel.",
+      },
+      en: {
+        name: "AES Decryptor",
+        description:
+          "Decrypt AES JSON envelopes from InBrowser.App with the original password or raw hexadecimal key.",
+      },
+      es: {
+        name: "Descifrador AES",
+        description:
+          "Descifra contenedores JSON de AES de InBrowser.App con la contraseña original o una clave hexadecimal sin procesar.",
+      },
+      fr: {
+        name: "Déchiffreur AES",
+        description:
+          "Déchiffrez les enveloppes JSON AES d’InBrowser.App avec le mot de passe d’origine ou la clé hexadécimale brute.",
+      },
+      he: {
+        name: "מפענח AES",
+        description:
+          "פענחו מעטפות JSON של AES מ-InBrowser.App באמצעות הסיסמה המקורית או מפתח הקסדצימלי גולמי.",
+      },
+      hi: {
+        name: "AES Decryptor",
+        description:
+          "InBrowser.App से मिले AES JSON envelopes को मूल पासवर्ड या कच्ची हेक्साडेसिमल कुंजी से डिक्रिप्ट करें।",
+      },
+      id: {
+        name: "AES Decryptor",
+        description:
+          "Dekripsi envelope JSON AES dari InBrowser.App dengan kata sandi asli atau kunci heksadesimal mentah.",
+      },
+      it: {
+        name: "AES Decryptor",
+        description:
+          "Decifra envelope JSON AES da InBrowser.App con la password originale o una chiave esadecimale grezza.",
+      },
+      ja: {
+        name: "AES Decryptor",
+        description:
+          "InBrowser.App の AES JSON エンベロープを、元のパスワードまたは未加工の16進数キーで復号します。",
+      },
+      ko: {
+        name: "AES 복호화 도구",
+        description:
+          "원래 비밀번호 또는 원시 16진수 키로 InBrowser.App의 AES JSON 엔벌로프를 복호화합니다.",
+      },
+      ms: {
+        name: "Penyahsulit AES",
+        description:
+          "Nyahsulitkan sampul JSON AES daripada InBrowser.App dengan kata laluan asal atau kunci heksadesimal mentah.",
+      },
+      nl: {
+        name: "AES Decryptor",
+        description:
+          "Ontsleutel AES-JSON-enveloppen van InBrowser.App met het oorspronkelijke wachtwoord of een ruwe hexadecimale sleutel.",
+      },
+      no: {
+        name: "AES-dekryptering",
+        description:
+          "Dekrypter AES-JSON-konvolutter fra InBrowser.App med det opprinnelige passordet eller en rå heksadesimal nøkkel.",
+      },
+      pl: {
+        name: "Deszyfrator AES",
+        description:
+          "Odszyfruj koperty JSON AES z InBrowser.App za pomocą oryginalnego hasła lub surowego klucza szesnastkowego.",
+      },
+      pt: {
+        name: "Descriptografador AES",
+        description:
+          "Descriptografe envelopes JSON AES do InBrowser.App com a senha original ou uma chave hexadecimal bruta.",
+      },
+      ru: {
+        name: "AES Decryptor",
+        description:
+          "Расшифровывайте AES JSON-конверты из InBrowser.App с исходным паролем или необработанным шестнадцатеричным ключом.",
+      },
+      sv: {
+        name: "AES-dekrypterare",
+        description:
+          "Dekryptera AES JSON-omslag från InBrowser.App med det ursprungliga lösenordet eller en rå hexadecimal nyckel.",
+      },
+      th: {
+        name: "เครื่องมือถอดรหัส AES",
+        description:
+          "ถอดรหัสซอง JSON ของ AES จาก InBrowser.App ด้วยรหัสผ่านเดิมหรือคีย์เลขฐานสิบหกแบบดิบ",
+      },
+      tr: {
+        name: "AES Şifre Çözücü",
+        description:
+          "InBrowser.App AES JSON zarflarının şifresini özgün parola veya ham onaltılık anahtarla çözün.",
+      },
+      vi: {
+        name: "Trình giải mã AES",
+        description:
+          "Giải mã các phong bì JSON AES từ InBrowser.App bằng mật khẩu gốc hoặc khóa thô dạng thập lục phân.",
+      },
+      "zh-CN": {
+        name: "AES 解密器",
+        description:
+          "使用原始密码或原始十六进制密钥解密来自 InBrowser.App 的 AES JSON 信封。",
+      },
+      "zh-TW": {
+        name: "AES 解密器",
+        description:
+          "使用原始密碼或原始十六進位金鑰，解密來自 InBrowser.App 的 AES JSON 封套。",
       },
     },
   },

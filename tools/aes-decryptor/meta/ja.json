@@ -1,0 +1,4 @@
+{
+  "name": "AES Decryptor",
+  "description": "InBrowser.App の AES JSON エンベロープを、元のパスワードまたは未加工の16進数キーで復号します。"
+}

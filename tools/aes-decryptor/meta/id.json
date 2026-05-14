@@ -1,0 +1,4 @@
+{
+  "name": "AES Decryptor",
+  "description": "Dekripsi envelope JSON AES dari InBrowser.App dengan kata sandi asli atau kunci heksadesimal mentah."
+}
