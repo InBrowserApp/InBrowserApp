@@ -2118,6 +2118,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "certificate-public-key-parser",
+    language: "ar",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "de",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "en",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "es",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "fr",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "he",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "hi",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "id",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "it",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "ja",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "ko",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "ms",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "nl",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "no",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "pl",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "pt",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "ru",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "sv",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "th",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "tr",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "vi",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "zh-CN",
+  },
+  {
+    slug: "certificate-public-key-parser",
+    language: "zh-TW",
+  },
+  {
     slug: "chinese-uppercase-number-converter",
     language: "ar",
   },

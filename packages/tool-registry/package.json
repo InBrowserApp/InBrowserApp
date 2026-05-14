@@ -30,6 +30,7 @@
     "@tool/blake3-hash-text-or-file": "workspace:*",
     "@tool/business-days-calculator": "workspace:*",
     "@tool/case-converter": "workspace:*",
+    "@tool/certificate-public-key-parser": "workspace:*",
     "@tool/chinese-uppercase-number-converter": "workspace:*",
     "@tool/chmod-calculator": "workspace:*",
     "@tool/cidr-parser": "workspace:*",

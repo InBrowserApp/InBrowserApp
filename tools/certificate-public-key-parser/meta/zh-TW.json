@@ -1,0 +1,4 @@
+{
+  "name": "X.509 Certificate 與 Public Key Parser",
+  "description": "解析 PEM、DER 或 base64 DER 形式的 X.509 certificates 與 public keys。直接在瀏覽器本機檢視 subjects、issuers、有效日期、fingerprints、extensions 與 key details。"
+}

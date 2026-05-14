@@ -1,0 +1,4 @@
+{
+  "name": "X.509 Certificate & Public Key Parser",
+  "description": "Analysiere X.509 Zertifikate und Public Keys im Format PEM, DER oder base64 DER. Prüfe Subjects, Issuers, Gültigkeitsdaten, Fingerprints, Erweiterungen und Schlüsseldetails lokal in deinem Browser."
+}

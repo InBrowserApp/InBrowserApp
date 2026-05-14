@@ -2968,6 +2968,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "certificate-public-key-parser",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "x509",
+      "certificate",
+      "public-key",
+      "pem",
+      "der",
+      "tls",
+      "fingerprint",
+      "security",
+    ],
+    locales: {
+      ar: {
+        name: "محلل شهادات X.509 والمفاتيح العامة",
+        description:
+          "حلل شهادات X.509 والمفاتيح العامة بصيغ PEM أو DER أو base64 DER. راجع الموضوعات، والجهات المصدرة، وتواريخ الصلاحية، والبصمات، والامتدادات، وتفاصيل المفاتيح محليا في متصفحك.",
+      },
+      de: {
+        name: "X.509 Certificate & Public Key Parser",
+        description:
+          "Analysiere X.509 Zertifikate und Public Keys im Format PEM, DER oder base64 DER. Prüfe Subjects, Issuers, Gültigkeitsdaten, Fingerprints, Erweiterungen und Schlüsseldetails lokal in deinem Browser.",
+      },
+      en: {
+        name: "X.509 Certificate & Public Key Parser",
+        description:
+          "Parse X.509 certificates and public keys in PEM, DER, or base64 DER form. Review subjects, issuers, validity dates, fingerprints, extensions, and key details locally in your browser.",
+      },
+      es: {
+        name: "Analizador de certificados X.509 y claves públicas",
+        description:
+          "Analiza certificados X.509 y claves públicas en formato PEM, DER o DER en base64. Revisa sujetos, emisores, fechas de validez, huellas digitales, extensiones y detalles de claves localmente en tu navegador.",
+      },
+      fr: {
+        name: "Analyseur de certificats X.509 et de clés publiques",
+        description:
+          "Analysez des certificats X.509 et des clés publiques au format PEM, DER ou DER base64. Consultez localement dans votre navigateur les sujets, émetteurs, dates de validité, empreintes, extensions et détails des clés.",
+      },
+      he: {
+        name: "מנתח אישורי X.509 ומפתחות ציבוריים",
+        description:
+          "נתחו אישורי X.509 ומפתחות ציבוריים בפורמט PEM, DER או base64 DER. סקרו נושאים, מנפיקים, תאריכי תוקף, טביעות אצבע, הרחבות ופרטי מפתח מקומית בדפדפן שלכם.",
+      },
+      hi: {
+        name: "X.509 Certificate और Public Key Parser",
+        description:
+          "PEM, DER, या base64 DER रूप में X.509 certificates और public keys को parse करें। Subjects, issuers, validity dates, fingerprints, extensions, और key details को अपने browser में local रूप से देखें।",
+      },
+      id: {
+        name: "Parser Sertifikat X.509 & Kunci Publik",
+        description:
+          "Parse sertifikat X.509 dan kunci publik dalam bentuk PEM, DER, atau base64 DER. Tinjau subject, issuer, tanggal validitas, fingerprint, ekstensi, dan detail kunci secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Parser di certificati X.509 e chiavi pubbliche",
+        description:
+          "Analizza certificati X.509 e chiavi pubbliche in formato PEM, DER o base64 DER. Esamina soggetti, emittenti, date di validita, fingerprint, estensioni e dettagli della chiave localmente nel browser.",
+      },
+      ja: {
+        name: "X.509 Certificate & Public Key Parser",
+        description:
+          "PEM、DER、base64 DER 形式の X.509 証明書と公開鍵を解析します。サブジェクト、発行者、有効期間、フィンガープリント、拡張、鍵の詳細をブラウザー内でローカルに確認できます。",
+      },
+      ko: {
+        name: "X.509 Certificate & Public Key Parser",
+        description:
+          "PEM, DER 또는 base64 DER 형식의 X.509 인증서와 공개 키를 파싱합니다. 주체, 발급자, 유효 기간, 지문, 확장 필드, 키 세부 정보를 브라우저에서 로컬로 확인하세요.",
+      },
+      ms: {
+        name: "Penghurai Sijil X.509 & Kunci Awam",
+        description:
+          "Hurai sijil X.509 dan kunci awam dalam bentuk PEM, DER, atau DER base64. Semak subjek, pengeluar, tarikh kesahan, cap jari, sambungan, dan butiran kunci secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "X.509 Certificate & Public Key Parser",
+        description:
+          "Parseer X.509-certificaten en openbare sleutels in PEM-, DER- of base64 DER-vorm. Bekijk onderwerpen, uitgevers, geldigheidsdatums, fingerprints, extensies en sleutelgegevens lokaal in je browser.",
+      },
+      no: {
+        name: "X.509 Certificate & Public Key Parser",
+        description:
+          "Parse X.509-sertifikater og offentlige nøkler i PEM-, DER- eller base64 DER-form. Se gjennom subject, issuer, gyldighetsdatoer, fingerprints, extensions og nøkkeldetaljer lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Parser certyfikatów X.509 i kluczy publicznych",
+        description:
+          "Analizuj certyfikaty X.509 i klucze publiczne w formacie PEM, DER lub base64 DER. Przeglądaj podmioty, wystawców, daty ważności, odciski palca, rozszerzenia i szczegóły klucza lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Analisador de certificados X.509 e chaves públicas",
+        description:
+          "Analise certificados X.509 e chaves públicas em formato PEM, DER ou DER em base64. Revise sujeitos, emissores, datas de validade, fingerprints, extensões e detalhes da chave localmente no seu navegador.",
+      },
+      ru: {
+        name: "Парсер X.509 сертификатов и открытых ключей",
+        description:
+          "Разбирайте X.509 сертификаты и открытые ключи в формате PEM, DER или base64 DER. Просматривайте субъекты, издателей, сроки действия, отпечатки, расширения и сведения о ключах локально в браузере.",
+      },
+      sv: {
+        name: "X.509 Certificate & Public Key Parser",
+        description:
+          "Parsa X.509-certifikat och publika nycklar i PEM-, DER- eller base64 DER-format. Granska ämnen, utfärdare, giltighetsdatum, fingeravtryck, tillägg och nyckeldetaljer lokalt i din webbläsare.",
+      },
+      th: {
+        name: "ตัวแยกวิเคราะห์ใบรับรอง X.509 และกุญแจสาธารณะ",
+        description:
+          "แยกวิเคราะห์ใบรับรอง X.509 และกุญแจสาธารณะในรูปแบบ PEM, DER หรือ base64 DER ตรวจสอบ subject, issuer, วันที่มีผล, fingerprints, extensions และรายละเอียดกุญแจได้ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "X.509 Certificate & Public Key Parser",
+        description:
+          "PEM, DER veya base64 DER biçimindeki X.509 sertifikalarını ve genel anahtarları ayrıştırın. Konuları, verenleri, geçerlilik tarihlerini, parmak izlerini, uzantıları ve anahtar ayrıntılarını tarayıcınızda yerel olarak inceleyin.",
+      },
+      vi: {
+        name: "Trình phân tích chứng chỉ X.509 & khóa công khai",
+        description:
+          "Phân tích chứng chỉ X.509 và khóa công khai ở dạng PEM, DER hoặc base64 DER. Xem lại subject, issuer, ngày hiệu lực, fingerprint, extension và chi tiết khóa ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "X.509 证书和公钥解析器",
+        description:
+          "解析 PEM、DER 或 base64 DER 形式的 X.509 证书和公钥。在浏览器中本地查看主体、颁发者、有效期、指纹、扩展和密钥详情。",
+      },
+      "zh-TW": {
+        name: "X.509 Certificate 與 Public Key Parser",
+        description:
+          "解析 PEM、DER 或 base64 DER 形式的 X.509 certificates 與 public keys。直接在瀏覽器本機檢視 subjects、issuers、有效日期、fingerprints、extensions 與 key details。",
+      },
+    },
+  },
+  {
     slug: "chinese-uppercase-number-converter",
     category: "misc",
     icon: "binary",
