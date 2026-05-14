@@ -1,0 +1,4 @@
+{
+  "name": "Derivasi Kunci scrypt",
+  "description": "Turunkan kunci dari kata sandi dan salt dengan scrypt. Atur N, r, p, dan panjang output dengan hasil hex atau Base64."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Derivación de claves scrypt",
+  "description": "Deriva claves a partir de una contraseña y una sal con scrypt. Configura N, r, p y la longitud de salida con resultados en hex o Base64."
+}

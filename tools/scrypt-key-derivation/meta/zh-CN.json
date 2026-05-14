@@ -1,0 +1,4 @@
+{
+  "name": "scrypt 密钥派生",
+  "description": "使用 scrypt 从密码和盐派生密钥。配置 N、r、p 和输出长度，并以 hex 或 Base64 输出。"
+}

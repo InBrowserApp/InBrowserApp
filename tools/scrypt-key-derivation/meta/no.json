@@ -1,0 +1,4 @@
+{
+  "name": "scrypt-nøkkelavledning",
+  "description": "Avled nøkler fra passord og salt med scrypt. Konfigurer N, r, p og utdatalengde med hex- eller Base64-utdata."
+}

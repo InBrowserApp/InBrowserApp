@@ -1,0 +1,4 @@
+{
+  "name": "scrypt 키 파생",
+  "description": "scrypt로 비밀번호와 솔트에서 키를 파생합니다. N, r, p 및 출력 길이를 설정하고 hex 또는 Base64로 출력합니다."
+}
