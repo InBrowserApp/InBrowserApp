@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Plain text",
+  "plainTextDescription": "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
+  "importFromFileLabel": "Import from file",
+  "hashResultLabel": "Hash Result",
+  "hashResultDescription": "Hash result for the current text input.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binary",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (Optional)",
+  "seedPlaceholder": "0 or 0x...",
+  "seedInvalid": "Enter a decimal number or a 0x hex value."
+}

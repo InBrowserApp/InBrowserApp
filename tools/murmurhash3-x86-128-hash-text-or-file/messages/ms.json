@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Teks biasa",
+  "plainTextDescription": "Tampal atau taip sebarang teks UTF-8, termasuk emoji dan aksara bukan Latin.",
+  "importFromFileLabel": "Import daripada fail",
+  "hashResultLabel": "Hasil hash",
+  "hashResultDescription": "Hasil hash untuk input teks semasa.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Perpuluhan",
+  "binaryLabel": "Binari",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (pilihan)",
+  "seedPlaceholder": "0 atau 0x...",
+  "seedInvalid": "Masukkan nombor perpuluhan atau nilai heks 0x."
+}

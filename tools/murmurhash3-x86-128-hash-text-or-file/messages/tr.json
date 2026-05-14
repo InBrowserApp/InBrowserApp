@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Giriş",
+  "plainTextLabel": "Düz metin",
+  "plainTextDescription": "Emoji ve Latin alfabesi dışı karakterler dahil olmak üzere herhangi bir UTF-8 metni yapıştırın veya yazın.",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "hashResultLabel": "Hash sonucu",
+  "hashResultDescription": "Geçerli metin girdisinin hash sonucu.",
+  "hexLabel": "Onaltılık",
+  "base64Label": "Base64",
+  "decimalLabel": "Ondalık",
+  "binaryLabel": "İkili",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (isteğe bağlı)",
+  "seedPlaceholder": "0 veya 0x...",
+  "seedInvalid": "Ondalık bir sayı veya 0x onaltılık bir değer girin."
+}

@@ -98,6 +98,7 @@
     "@tool/mime-type-lookup": "workspace:*",
     "@tool/morse-code-converter": "workspace:*",
     "@tool/murmurhash3-x64-128-hash-text-or-file": "workspace:*",
+    "@tool/murmurhash3-x86-128-hash-text-or-file": "workspace:*",
     "@tool/murmurhash3-x86-32-hash-text-or-file": "workspace:*",
     "@tool/my-ip-address": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",

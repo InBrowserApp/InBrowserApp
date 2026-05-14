@@ -1,0 +1,18 @@
+{
+  "inputLabel": "輸入",
+  "plainTextLabel": "純文字",
+  "plainTextDescription": "貼上或輸入任何 UTF-8 文字，包含 emoji 與非拉丁字元。",
+  "importFromFileLabel": "從檔案匯入",
+  "hashResultLabel": "雜湊結果",
+  "hashResultDescription": "目前文字輸入的雜湊結果。",
+  "hexLabel": "十六進位",
+  "base64Label": "Base64",
+  "decimalLabel": "十進位",
+  "binaryLabel": "二進位",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製",
+  "seedSectionLabel": "種子",
+  "seedLabel": "種子（選填）",
+  "seedPlaceholder": "0 或 0x...",
+  "seedInvalid": "請輸入十進位數字或 0x 十六進位值。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "MurmurHash3 (x86 128-bit)-Hash für Text oder Datei",
+  "description": "Erzeugen Sie MurmurHash3 x86 128-bit-Hashes für Texteingaben oder Datei-Uploads. Berechnen Sie schnelle nicht-kryptografische Prüfsummen für Bucketing, Deduplizierung, Cache-Schlüssel und Integritätsprüfungen."
+}

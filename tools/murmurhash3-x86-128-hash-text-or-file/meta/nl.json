@@ -1,0 +1,4 @@
+{
+  "name": "MurmurHash3 (x86 128-bit)-hash voor tekst of bestand",
+  "description": "Genereer MurmurHash3 x86 128-bit-hashes voor tekstinvoer of bestandsuploads. Bereken snelle, niet-cryptografische checksums voor bucketing, deduplicatie, cachesleutels en integriteitscontroles."
+}

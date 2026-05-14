@@ -1,0 +1,4 @@
+{
+  "name": "Hacher du texte ou un fichier avec MurmurHash3 (x86 128-bit)",
+  "description": "Générez des hachages MurmurHash3 x86 128-bit pour du texte saisi ou des fichiers importés. Calculez rapidement des sommes de contrôle non cryptographiques pour la répartition en compartiments, la déduplication, les clés de cache et les contrôles d'intégrité."
+}
