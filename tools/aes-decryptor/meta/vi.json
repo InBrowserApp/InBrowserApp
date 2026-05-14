@@ -1,0 +1,4 @@
+{
+  "name": "Trình giải mã AES",
+  "description": "Giải mã các phong bì JSON AES từ InBrowser.App bằng mật khẩu gốc hoặc khóa thô dạng thập lục phân."
+}

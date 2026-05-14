@@ -94,6 +94,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "aes-decryptor",
+    language: "ar",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "de",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "en",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "es",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "fr",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "he",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "hi",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "id",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "it",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "ja",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "ko",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "ms",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "nl",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "no",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "pl",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "pt",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "ru",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "sv",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "th",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "tr",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "vi",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "zh-CN",
+  },
+  {
+    slug: "aes-decryptor",
+    language: "zh-TW",
+  },
+  {
     slug: "aes-encryptor",
     language: "ar",
   },

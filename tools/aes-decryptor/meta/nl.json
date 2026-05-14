@@ -1,0 +1,4 @@
+{
+  "name": "AES Decryptor",
+  "description": "Ontsleutel AES-JSON-enveloppen van InBrowser.App met het oorspronkelijke wachtwoord of een ruwe hexadecimale sleutel."
+}

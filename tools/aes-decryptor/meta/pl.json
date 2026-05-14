@@ -1,0 +1,4 @@
+{
+  "name": "Deszyfrator AES",
+  "description": "Odszyfruj koperty JSON AES z InBrowser.App za pomocą oryginalnego hasła lub surowego klucza szesnastkowego."
+}

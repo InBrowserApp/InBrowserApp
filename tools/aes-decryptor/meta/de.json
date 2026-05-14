@@ -1,0 +1,4 @@
+{
+  "name": "AES Decryptor",
+  "description": "Entschlüsseln Sie AES-JSON-Hüllen von InBrowser.App mit dem ursprünglichen Passwort oder einem rohen hexadezimalen Schlüssel."
+}

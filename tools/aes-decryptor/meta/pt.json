@@ -1,0 +1,4 @@
+{
+  "name": "Descriptografador AES",
+  "description": "Descriptografe envelopes JSON AES do InBrowser.App com a senha original ou uma chave hexadecimal bruta."
+}

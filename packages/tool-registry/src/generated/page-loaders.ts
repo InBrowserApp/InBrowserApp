@@ -6,6 +6,7 @@ type ToolPageLoader = () => Promise<ToolPageModule>
 export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "adler32-hash-text-or-file": () =>
     import("@tool/adler32-hash-text-or-file/page"),
+  "aes-decryptor": () => import("@tool/aes-decryptor/page"),
   "aes-encryptor": () => import("@tool/aes-encryptor/page"),
   "ascii-art-generator": () => import("@tool/ascii-art-generator/page"),
   "barcode-generator": () => import("@tool/barcode-generator/page"),

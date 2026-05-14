@@ -1,0 +1,4 @@
+{
+  "name": "AES-dekrypterare",
+  "description": "Dekryptera AES JSON-omslag från InBrowser.App med det ursprungliga lösenordet eller en rå hexadecimal nyckel."
+}

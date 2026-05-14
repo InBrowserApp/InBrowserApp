@@ -1,0 +1,4 @@
+{
+  "name": "AES Decryptor",
+  "description": "Decrypt AES JSON envelopes from InBrowser.App with the original password or raw hexadecimal key."
+}

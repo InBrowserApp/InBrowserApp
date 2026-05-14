@@ -1,0 +1,4 @@
+{
+  "name": "Déchiffreur AES",
+  "description": "Déchiffrez les enveloppes JSON AES d’InBrowser.App avec le mot de passe d’origine ou la clé hexadécimale brute."
+}
