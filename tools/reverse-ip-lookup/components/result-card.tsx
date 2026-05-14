@@ -36,7 +36,7 @@ import { Network, TriangleAlert } from "@workspace/ui/icons"
 
 import { parseReverseIpInput } from "../core/reverse-ip"
 
-import type { ReverseLookupResult } from "../core/reverse-ip"
+import type { ReverseLookupResult } from "../core/types"
 import type { LookupState, ReverseIpLookupMessages } from "../types"
 
 type ResultCardProps = Readonly<{

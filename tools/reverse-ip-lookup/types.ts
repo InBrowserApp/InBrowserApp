@@ -1,4 +1,4 @@
-import type { ReverseLookupResult } from "./core/reverse-ip"
+import type { ReverseLookupResult } from "./core/types"
 
 type ReverseIpLookupMessages = Readonly<{
   meta: {

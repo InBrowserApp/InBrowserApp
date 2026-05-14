@@ -201,4 +201,3 @@ function isKnownResolver(value: string | null): value is string {
 }
 
 export default ReverseIpLookupClient
-export type { ReverseIpLookupMessages }

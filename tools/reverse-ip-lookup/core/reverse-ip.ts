@@ -234,13 +234,3 @@ export {
   toIpv4ReverseDomain,
   toIpv6ReverseDomain,
 }
-export type {
-  DnsJsonAnswer,
-  DnsJsonResponse,
-  DohServer,
-  IpVersion,
-  ReverseInputState,
-  ReverseLookupResult,
-  ReverseLookupTarget,
-  ReversePtrAnswer,
-} from "./types"

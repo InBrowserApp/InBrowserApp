@@ -66,11 +66,9 @@ type ReverseLookupResult = Readonly<{
 }>
 
 export type {
-  DnsJsonAnswer,
   DnsJsonResponse,
   DohServer,
   FetchLike,
-  IpVersion,
   ReverseInputState,
   ReverseLookupResult,
   ReverseLookupTarget,
