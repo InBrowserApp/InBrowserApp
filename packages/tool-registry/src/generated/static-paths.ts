@@ -10858,6 +10858,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "qr-code-generator",
+    language: "ar",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "de",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "en",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "es",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "fr",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "he",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "hi",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "id",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "it",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "ja",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "ko",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "ms",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "nl",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "no",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "pl",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "pt",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "ru",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "sv",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "th",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "tr",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "vi",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "qr-code-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "qr-code-reader",
     language: "ar",
   },
