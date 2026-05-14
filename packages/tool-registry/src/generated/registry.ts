@@ -2701,6 +2701,127 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "camera",
+    category: "misc",
+    icon: "camera",
+    tags: ["camera", "photo", "video", "record", "capture", "selfie"],
+    locales: {
+      ar: {
+        name: "الكاميرا",
+        description:
+          "استخدم كاميرا جهازك محليًا لالتقاط الصور وتسجيل مقاطع فيديو قصيرة وتنزيل النتيجة.",
+      },
+      de: {
+        name: "Kamera",
+        description:
+          "Nutzen Sie die Kamera Ihres Geräts lokal, um Fotos aufzunehmen, kurze Videos aufzuzeichnen und das Ergebnis herunterzuladen.",
+      },
+      en: {
+        name: "Camera",
+        description:
+          "Use your device camera locally to take photos, record short videos, and download the result.",
+      },
+      es: {
+        name: "Cámara",
+        description:
+          "Usa la cámara de tu dispositivo de forma local para tomar fotos, grabar videos cortos y descargar el resultado.",
+      },
+      fr: {
+        name: "Caméra",
+        description:
+          "Utilisez localement la caméra de votre appareil pour prendre des photos, enregistrer de courtes vidéos et télécharger le résultat.",
+      },
+      he: {
+        name: "מצלמה",
+        description:
+          "השתמשו במצלמת המכשיר שלכם באופן מקומי כדי לצלם תמונות, להקליט סרטונים קצרים ולהוריד את התוצאה.",
+      },
+      hi: {
+        name: "कैमरा",
+        description:
+          "अपने डिवाइस के कैमरे का स्थानीय रूप से उपयोग करके फ़ोटो लें, छोटे वीडियो रिकॉर्ड करें और परिणाम डाउनलोड करें।",
+      },
+      id: {
+        name: "Kamera",
+        description:
+          "Gunakan kamera perangkat Anda secara lokal untuk mengambil foto, merekam video pendek, dan mengunduh hasilnya.",
+      },
+      it: {
+        name: "Fotocamera",
+        description:
+          "Usa la fotocamera del tuo dispositivo in locale per scattare foto, registrare brevi video e scaricare il risultato.",
+      },
+      ja: {
+        name: "カメラ",
+        description:
+          "デバイスのカメラをローカルで使い、写真の撮影、短い動画の録画、結果のダウンロードができます。",
+      },
+      ko: {
+        name: "카메라",
+        description:
+          "기기 카메라를 로컬로 사용하여 사진을 찍고, 짧은 동영상을 녹화하고, 결과를 다운로드합니다.",
+      },
+      ms: {
+        name: "Kamera",
+        description:
+          "Gunakan kamera peranti anda secara setempat untuk mengambil foto, merakam video pendek, dan memuat turun hasilnya.",
+      },
+      nl: {
+        name: "Camera",
+        description:
+          "Gebruik de camera van je apparaat lokaal om foto's te maken, korte video's op te nemen en het resultaat te downloaden.",
+      },
+      no: {
+        name: "Kamera",
+        description:
+          "Bruk enhetskameraet lokalt til å ta bilder, ta opp korte videoer og laste ned resultatet.",
+      },
+      pl: {
+        name: "Kamera",
+        description:
+          "Korzystaj lokalnie z kamery swojego urządzenia, aby robić zdjęcia, nagrywać krótkie filmy i pobierać wynik.",
+      },
+      pt: {
+        name: "Câmera",
+        description:
+          "Use a câmera do seu dispositivo no próprio navegador para tirar fotos, gravar vídeos curtos e baixar o resultado.",
+      },
+      ru: {
+        name: "Камера",
+        description:
+          "Используйте камеру устройства локально, чтобы делать фото, записывать короткие видео и скачивать результат.",
+      },
+      sv: {
+        name: "Kamera",
+        description:
+          "Använd enhetens kamera lokalt för att ta foton, spela in korta videor och ladda ner resultatet.",
+      },
+      th: {
+        name: "กล้อง",
+        description:
+          "ใช้กล้องของอุปกรณ์แบบภายในเครื่องเพื่อถ่ายรูป บันทึกวิดีโอสั้น ๆ และดาวน์โหลดผลลัพธ์",
+      },
+      tr: {
+        name: "Kamera",
+        description:
+          "Fotoğraf çekmek, kısa videolar kaydetmek ve sonucu indirmek için cihazınızın kamerasını yerel olarak kullanın.",
+      },
+      vi: {
+        name: "Máy ảnh",
+        description:
+          "Sử dụng camera của thiết bị ngay trong trình duyệt để chụp ảnh, quay video ngắn và tải kết quả xuống.",
+      },
+      "zh-CN": {
+        name: "摄像头",
+        description: "使用设备摄像头在本地拍照、录制短视频，并下载结果。",
+      },
+      "zh-TW": {
+        name: "相機",
+        description: "使用裝置相機在本機拍照、錄製短片，並下載結果。",
+      },
+    },
+  },
+  {
     slug: "case-converter",
     category: "text",
     icon: "case-sensitive",
@@ -21678,6 +21799,127 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "工作日計算器",
         description:
           "統計日期之間的工作日，並依自訂週末與節假日進行工作日加減。",
+      },
+    },
+  },
+  camera: {
+    slug: "camera",
+    category: "misc",
+    icon: "camera",
+    tags: ["camera", "photo", "video", "record", "capture", "selfie"],
+    locales: {
+      ar: {
+        name: "الكاميرا",
+        description:
+          "استخدم كاميرا جهازك محليًا لالتقاط الصور وتسجيل مقاطع فيديو قصيرة وتنزيل النتيجة.",
+      },
+      de: {
+        name: "Kamera",
+        description:
+          "Nutzen Sie die Kamera Ihres Geräts lokal, um Fotos aufzunehmen, kurze Videos aufzuzeichnen und das Ergebnis herunterzuladen.",
+      },
+      en: {
+        name: "Camera",
+        description:
+          "Use your device camera locally to take photos, record short videos, and download the result.",
+      },
+      es: {
+        name: "Cámara",
+        description:
+          "Usa la cámara de tu dispositivo de forma local para tomar fotos, grabar videos cortos y descargar el resultado.",
+      },
+      fr: {
+        name: "Caméra",
+        description:
+          "Utilisez localement la caméra de votre appareil pour prendre des photos, enregistrer de courtes vidéos et télécharger le résultat.",
+      },
+      he: {
+        name: "מצלמה",
+        description:
+          "השתמשו במצלמת המכשיר שלכם באופן מקומי כדי לצלם תמונות, להקליט סרטונים קצרים ולהוריד את התוצאה.",
+      },
+      hi: {
+        name: "कैमरा",
+        description:
+          "अपने डिवाइस के कैमरे का स्थानीय रूप से उपयोग करके फ़ोटो लें, छोटे वीडियो रिकॉर्ड करें और परिणाम डाउनलोड करें।",
+      },
+      id: {
+        name: "Kamera",
+        description:
+          "Gunakan kamera perangkat Anda secara lokal untuk mengambil foto, merekam video pendek, dan mengunduh hasilnya.",
+      },
+      it: {
+        name: "Fotocamera",
+        description:
+          "Usa la fotocamera del tuo dispositivo in locale per scattare foto, registrare brevi video e scaricare il risultato.",
+      },
+      ja: {
+        name: "カメラ",
+        description:
+          "デバイスのカメラをローカルで使い、写真の撮影、短い動画の録画、結果のダウンロードができます。",
+      },
+      ko: {
+        name: "카메라",
+        description:
+          "기기 카메라를 로컬로 사용하여 사진을 찍고, 짧은 동영상을 녹화하고, 결과를 다운로드합니다.",
+      },
+      ms: {
+        name: "Kamera",
+        description:
+          "Gunakan kamera peranti anda secara setempat untuk mengambil foto, merakam video pendek, dan memuat turun hasilnya.",
+      },
+      nl: {
+        name: "Camera",
+        description:
+          "Gebruik de camera van je apparaat lokaal om foto's te maken, korte video's op te nemen en het resultaat te downloaden.",
+      },
+      no: {
+        name: "Kamera",
+        description:
+          "Bruk enhetskameraet lokalt til å ta bilder, ta opp korte videoer og laste ned resultatet.",
+      },
+      pl: {
+        name: "Kamera",
+        description:
+          "Korzystaj lokalnie z kamery swojego urządzenia, aby robić zdjęcia, nagrywać krótkie filmy i pobierać wynik.",
+      },
+      pt: {
+        name: "Câmera",
+        description:
+          "Use a câmera do seu dispositivo no próprio navegador para tirar fotos, gravar vídeos curtos e baixar o resultado.",
+      },
+      ru: {
+        name: "Камера",
+        description:
+          "Используйте камеру устройства локально, чтобы делать фото, записывать короткие видео и скачивать результат.",
+      },
+      sv: {
+        name: "Kamera",
+        description:
+          "Använd enhetens kamera lokalt för att ta foton, spela in korta videor och ladda ner resultatet.",
+      },
+      th: {
+        name: "กล้อง",
+        description:
+          "ใช้กล้องของอุปกรณ์แบบภายในเครื่องเพื่อถ่ายรูป บันทึกวิดีโอสั้น ๆ และดาวน์โหลดผลลัพธ์",
+      },
+      tr: {
+        name: "Kamera",
+        description:
+          "Fotoğraf çekmek, kısa videolar kaydetmek ve sonucu indirmek için cihazınızın kamerasını yerel olarak kullanın.",
+      },
+      vi: {
+        name: "Máy ảnh",
+        description:
+          "Sử dụng camera của thiết bị ngay trong trình duyệt để chụp ảnh, quay video ngắn và tải kết quả xuống.",
+      },
+      "zh-CN": {
+        name: "摄像头",
+        description: "使用设备摄像头在本地拍照、录制短视频，并下载结果。",
+      },
+      "zh-TW": {
+        name: "相機",
+        description: "使用裝置相機在本機拍照、錄製短片，並下載結果。",
       },
     },
   },
