@@ -176,8 +176,24 @@ function SvgOptimizerClient({ messages }: SvgOptimizerClientProps) {
   }
 
   return (
-    <div className="flex flex-col gap-6">
-      <div className="grid items-stretch gap-6 xl:grid-cols-[minmax(0,1fr)_26rem]">
+    <div className="grid gap-6 xl:sticky xl:top-6 xl:max-h-[calc(100vh-3rem)] xl:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] xl:items-start">
+      <aside className="min-w-0 xl:max-h-[calc(100vh-3rem)] xl:overflow-y-auto">
+        <OptionsCard
+          canOptimize={isLikelySvgMarkup(sourceText)}
+          isOptimizing={isOptimizing}
+          messages={messages}
+          onChange={(nextOptions) => {
+            setOptions(nextOptions)
+            clearResult()
+          }}
+          onOptimize={() => {
+            void handleOptimize()
+          }}
+          options={options}
+        />
+      </aside>
+
+      <div className="flex min-w-0 flex-col gap-6 xl:max-h-[calc(100vh-3rem)] xl:overflow-y-auto">
         <InputCard
           fileName={fileName || "pasted.svg"}
           inputId={inputId}
@@ -195,37 +211,23 @@ function SvgOptimizerClient({ messages }: SvgOptimizerClientProps) {
           sourceText={sourceText}
         />
 
-        <OptionsCard
-          canOptimize={isLikelySvgMarkup(sourceText)}
-          isOptimizing={isOptimizing}
+        {error ? (
+          <Alert variant="destructive">
+            <TriangleAlert />
+            <AlertTitle>{messages.errorTitle}</AlertTitle>
+            <AlertDescription>{error}</AlertDescription>
+          </Alert>
+        ) : null}
+
+        <ResultCard
+          downloadUrl={optimizedPreviewUrl}
+          key={result ? resultVersion : "empty"}
           messages={messages}
-          onChange={(nextOptions) => {
-            setOptions(nextOptions)
-            clearResult()
-          }}
-          onOptimize={() => {
-            void handleOptimize()
-          }}
-          options={options}
+          optimizedPreviewUrl={optimizedPreviewUrl}
+          result={result}
+          sourcePreviewUrl={sourcePreviewUrl}
         />
       </div>
-
-      {error ? (
-        <Alert variant="destructive">
-          <TriangleAlert />
-          <AlertTitle>{messages.errorTitle}</AlertTitle>
-          <AlertDescription>{error}</AlertDescription>
-        </Alert>
-      ) : null}
-
-      <ResultCard
-        downloadUrl={optimizedPreviewUrl}
-        key={result ? resultVersion : "empty"}
-        messages={messages}
-        optimizedPreviewUrl={optimizedPreviewUrl}
-        result={result}
-        sourcePreviewUrl={sourcePreviewUrl}
-      />
     </div>
   )
 }
