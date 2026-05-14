@@ -1,0 +1,4 @@
+{
+  "name": "JSON Web Token (JWT) İmzalama Aracı",
+  "description": "API testi ve kimlik doğrulama hata ayıklaması için JWT'leri HMAC sırları veya PEM/JWK özel anahtarlarıyla yerel olarak imzalayın."
+}

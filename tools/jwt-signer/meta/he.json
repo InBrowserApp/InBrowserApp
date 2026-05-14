@@ -1,0 +1,4 @@
+{
+  "name": "חותם JSON Web Token (JWT)",
+  "description": "חתמו על JWT באופן מקומי עם סודות HMAC או מפתחות פרטיים PEM/JWK לבדיקות API ולאיתור בעיות אימות."
+}

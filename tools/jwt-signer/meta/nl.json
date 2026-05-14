@@ -1,0 +1,4 @@
+{
+  "name": "JSON Web Token (JWT)-ondertekenaar",
+  "description": "Onderteken JWT-tokens lokaal met HMAC-geheimen of PEM/JWK-privésleutels voor API-tests en authenticatiedebugging."
+}

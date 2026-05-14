@@ -91,6 +91,7 @@
     "@tool/jsonpath-tester": "workspace:*",
     "@tool/jwk-pem-converter": "workspace:*",
     "@tool/jwt-decoder-verifier": "workspace:*",
+    "@tool/jwt-signer": "workspace:*",
     "@tool/keccak-hash-text-or-file": "workspace:*",
     "@tool/ksuid-generator": "workspace:*",
     "@tool/list-comparer": "workspace:*",

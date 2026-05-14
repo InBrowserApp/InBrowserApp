@@ -1,0 +1,4 @@
+{
+  "name": "JSON Web Token (JWT) साइनर",
+  "description": "API परीक्षण और प्रमाणीकरण डिबगिंग के लिए HMAC secrets या PEM/JWK private keys के साथ JWTs को लोकली साइन करें।"
+}

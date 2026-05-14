@@ -1,0 +1,4 @@
+{
+  "name": "JSON Web Token (JWT) Signer",
+  "description": "Sign JWTs locally with HMAC secrets or PEM/JWK private keys for API testing and authentication debugging."
+}

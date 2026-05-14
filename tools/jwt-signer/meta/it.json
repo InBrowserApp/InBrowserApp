@@ -1,0 +1,4 @@
+{
+  "name": "Firmatore JSON Web Token (JWT)",
+  "description": "Firma JWT localmente con segreti HMAC o chiavi private PEM/JWK per test API e debug dell'autenticazione."
+}
