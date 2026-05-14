@@ -1,0 +1,4 @@
+{
+  "name": "RIPEMD-320-Hash für Text oder Datei",
+  "description": "Erzeugen Sie einen RIPEMD-320-Hash für Texteingaben oder Datei-Uploads. Berechnen Sie sichere kryptografische Prüfsummen zur Prüfung der Datenintegrität und für Sicherheitszwecke"
+}

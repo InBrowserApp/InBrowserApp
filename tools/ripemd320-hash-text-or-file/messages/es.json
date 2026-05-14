@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Entrada",
+  "plainTextLabel": "Texto plano",
+  "plainTextDescription": "Pega o escribe cualquier texto UTF-8, incluyendo emojis y caracteres no latinos.",
+  "importFromFileLabel": "Importar desde archivo",
+  "hashResultLabel": "Resultado del hash",
+  "hashResultDescription": "Resultado hash de la entrada de texto actual.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binario",
+  "copyResultLabel": "Copiar resultado",
+  "copiedLabel": "Copiado",
+  "hashTextError": "No se pudo calcular el hash del texto.",
+  "hashFileError": "No se pudo calcular el hash del archivo."
+}

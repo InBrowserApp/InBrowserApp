@@ -9662,6 +9662,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ripemd320-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "ripemd320-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "robots-txt-generator",
     language: "ar",
   },

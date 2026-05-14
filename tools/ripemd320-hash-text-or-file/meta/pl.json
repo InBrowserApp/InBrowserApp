@@ -1,0 +1,4 @@
+{
+  "name": "Skrót RIPEMD-320 tekstu lub pliku",
+  "description": "Generuj skrót RIPEMD-320 dla wprowadzonego tekstu lub przesłanego pliku. Obliczaj bezpieczne kryptograficzne sumy kontrolne do weryfikacji integralności danych i celów bezpieczeństwa"
+}

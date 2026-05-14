@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Dane wejściowe",
+  "plainTextLabel": "Zwykły tekst",
+  "plainTextDescription": "Wklej lub wpisz dowolny tekst UTF-8, w tym emoji i znaki niełacińskie.",
+  "importFromFileLabel": "Importuj z pliku",
+  "hashResultLabel": "Wynik skrótu",
+  "hashResultDescription": "Wynik skrótu dla bieżącego tekstu wejściowego.",
+  "hexLabel": "Szesnastkowy",
+  "base64Label": "Base64",
+  "decimalLabel": "Dziesiętny",
+  "binaryLabel": "Binarny",
+  "copyResultLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "hashTextError": "Nie udało się obliczyć skrótu dla tekstu.",
+  "hashFileError": "Nie udało się obliczyć skrótu dla pliku."
+}

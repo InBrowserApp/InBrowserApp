@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Entrée",
+  "plainTextLabel": "Texte brut",
+  "plainTextDescription": "Collez ou saisissez n'importe quel texte UTF-8, y compris des emojis et des caractères non latins.",
+  "importFromFileLabel": "Importer depuis un fichier",
+  "hashResultLabel": "Résultat du hachage",
+  "hashResultDescription": "Résultat du hachage pour le texte saisi actuellement.",
+  "hexLabel": "Hexadécimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Décimal",
+  "binaryLabel": "Binaire",
+  "copyResultLabel": "Copier le résultat",
+  "copiedLabel": "Copié",
+  "hashTextError": "Échec du calcul du hachage du texte.",
+  "hashFileError": "Échec du calcul du hachage du fichier."
+}

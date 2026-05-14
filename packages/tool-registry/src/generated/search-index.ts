@@ -13067,6 +13067,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ripemd320-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "ripemd320",
+      "checksum",
+      "security",
+      "file",
+      "text",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة RIPEMD-320 للنص أو الملف",
+        description:
+          "أنشئ تجزئة RIPEMD-320 من إدخال نصي أو ملف مرفوع. احسب مجاميع تحقق تشفيرية آمنة للتحقق من سلامة البيانات ولأغراض الأمان",
+      },
+      de: {
+        name: "RIPEMD-320-Hash für Text oder Datei",
+        description:
+          "Erzeugen Sie einen RIPEMD-320-Hash für Texteingaben oder Datei-Uploads. Berechnen Sie sichere kryptografische Prüfsummen zur Prüfung der Datenintegrität und für Sicherheitszwecke",
+      },
+      en: {
+        name: "RIPEMD-320 Hash Text or File",
+        description:
+          "Generate RIPEMD-320 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+      },
+      es: {
+        name: "Hash RIPEMD-320 de texto o archivo",
+        description:
+          "Genera un hash RIPEMD-320 a partir de texto o de un archivo cargado. Calcula sumas de verificación criptográficas seguras para verificar la integridad de los datos y con fines de seguridad",
+      },
+      fr: {
+        name: "Hachage RIPEMD-320 de texte ou de fichier",
+        description:
+          "Générez un hachage RIPEMD-320 pour une saisie de texte ou un fichier importé. Calculez des sommes de contrôle cryptographiques sécurisées pour vérifier l'intégrité des données et à des fins de sécurité",
+      },
+      he: {
+        name: "גיבוב RIPEMD-320 לטקסט או לקובץ",
+        description:
+          "צרו גיבוב RIPEMD-320 לקלט טקסט או להעלאת קובץ. חשבו סכומי בדיקה קריפטוגרפיים מאובטחים לאימות שלמות נתונים ולצורכי אבטחה",
+      },
+      hi: {
+        name: "टेक्स्ट या फ़ाइल का RIPEMD-320 हैश",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए RIPEMD-320 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+      },
+      id: {
+        name: "Hash RIPEMD-320 Teks atau File",
+        description:
+          "Buat hash RIPEMD-320 untuk input teks atau unggahan file. Hitung checksum kriptografis yang aman untuk verifikasi integritas data dan tujuan keamanan",
+      },
+      it: {
+        name: "Hash RIPEMD-320 di testo o file",
+        description:
+          "Genera hash RIPEMD-320 da testo inserito o da un file caricato. Calcola checksum crittografici sicuri per verificare l'integrità dei dati e per scopi di sicurezza",
+      },
+      ja: {
+        name: "RIPEMD-320 テキストまたはファイルのハッシュ",
+        description:
+          "テキスト入力またはファイルアップロードから RIPEMD-320 ハッシュを生成します。データの整合性検証やセキュリティ目的で、安全な暗号学的チェックサムを計算できます",
+      },
+      ko: {
+        name: "텍스트 또는 파일의 RIPEMD-320 해시",
+        description:
+          "텍스트 입력 또는 파일 업로드의 RIPEMD-320 해시를 생성합니다. 데이터 무결성 검증과 보안 용도를 위한 안전한 암호화 체크섬을 계산하세요",
+      },
+      ms: {
+        name: "Hash RIPEMD-320 untuk Teks atau Fail",
+        description:
+          "Jana hash RIPEMD-320 untuk input teks atau muat naik fail. Kira jumlah semak kriptografi yang selamat untuk pengesahan integriti data dan tujuan keselamatan",
+      },
+      nl: {
+        name: "RIPEMD-320-hash voor tekst of bestand",
+        description:
+          "Genereer een RIPEMD-320-hash voor tekstinvoer of een bestandsupload. Bereken cryptografische checksums voor controle van gegevensintegriteit en beveiligingsdoeleinden",
+      },
+      no: {
+        name: "RIPEMD-320-hash for tekst eller fil",
+        description:
+          "Generer RIPEMD-320-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for verifisering av dataintegritet og sikkerhetsformål",
+      },
+      pl: {
+        name: "Skrót RIPEMD-320 tekstu lub pliku",
+        description:
+          "Generuj skrót RIPEMD-320 dla wprowadzonego tekstu lub przesłanego pliku. Obliczaj bezpieczne kryptograficzne sumy kontrolne do weryfikacji integralności danych i celów bezpieczeństwa",
+      },
+      pt: {
+        name: "Hash RIPEMD-320 de texto ou arquivo",
+        description:
+          "Gere um hash RIPEMD-320 para texto inserido ou arquivo enviado. Calcule somas de verificação criptográficas seguras para verificar a integridade dos dados e para fins de segurança",
+      },
+      ru: {
+        name: "RIPEMD-320-хеш для текста или файла",
+        description:
+          "Генерируйте RIPEMD-320-хеш для введенного текста или загруженного файла. Вычисляйте надежные криптографические контрольные суммы для проверки целостности данных и задач безопасности",
+      },
+      sv: {
+        name: "RIPEMD-320-hash för text eller fil",
+        description:
+          "Generera RIPEMD-320-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för verifiering av dataintegritet och säkerhetsändamål",
+      },
+      th: {
+        name: "แฮช RIPEMD-320 สำหรับข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช RIPEMD-320 สำหรับข้อความที่ป้อนหรือไฟล์ที่อัปโหลด คำนวณเช็คซัมเชิงเข้ารหัสที่ปลอดภัยเพื่อยืนยันความสมบูรณ์ของข้อมูลและใช้ในงานด้านความปลอดภัย",
+      },
+      tr: {
+        name: "RIPEMD-320 Metin veya Dosya Hash Oluşturucu",
+        description:
+          "Metin girişi veya dosya yüklemesi için RIPEMD-320 hash değeri oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+      },
+      vi: {
+        name: "Băm văn bản hoặc tệp bằng RIPEMD-320",
+        description:
+          "Tạo giá trị băm RIPEMD-320 cho văn bản nhập vào hoặc tệp tải lên. Tính checksum mật mã an toàn để xác minh tính toàn vẹn dữ liệu và phục vụ mục đích bảo mật",
+      },
+      "zh-CN": {
+        name: "RIPEMD-320 文本或文件哈希",
+        description:
+          "为文本输入或上传的文件生成 RIPEMD-320 哈希值。计算安全的加密校验和，用于数据完整性验证和安全用途",
+      },
+      "zh-TW": {
+        name: "RIPEMD-320 雜湊文字或檔案",
+        description:
+          "為文字輸入或上傳檔案產生 RIPEMD-320 雜湊值。計算安全的密碼學校驗和，用於資料完整性驗證與安全用途",
+      },
+    },
+  },
+  {
     slug: "robots-txt-generator",
     category: "web",
     icon: "globe",
