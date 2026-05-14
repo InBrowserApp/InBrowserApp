@@ -1,0 +1,4 @@
+{
+  "name": "Omvänd IP-sökning",
+  "description": "Slå upp omvända DNS PTR-poster för IPv4- eller IPv6-adresser via offentliga DNS-over-HTTPS-resolvers direkt i webbläsaren."
+}

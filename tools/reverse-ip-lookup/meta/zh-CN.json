@@ -1,0 +1,4 @@
+{
+  "name": "反向 IP 查询",
+  "description": "直接在浏览器中通过公共 DNS-over-HTTPS 解析器查询 IPv4 或 IPv6 地址的反向 DNS PTR 记录。"
+}

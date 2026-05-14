@@ -1,0 +1,4 @@
+{
+  "name": "Odwrotne wyszukiwanie IP",
+  "description": "Sprawdzaj odwrotne rekordy DNS PTR dla adresów IPv4 lub IPv6 przez publiczne resolvery DNS-over-HTTPS bezpośrednio w przeglądarce."
+}

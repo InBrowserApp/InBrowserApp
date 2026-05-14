@@ -1,0 +1,4 @@
+{
+  "name": "Reverse IP Lookup",
+  "description": "Look up reverse DNS PTR records for IPv4 or IPv6 addresses through public DNS-over-HTTPS resolvers directly in the browser."
+}

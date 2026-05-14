@@ -1,0 +1,4 @@
+{
+  "name": "Omvendt IP-oppslag",
+  "description": "Slå opp omvendte DNS PTR-poster for IPv4- eller IPv6-adresser via offentlige DNS-over-HTTPS-oppløsere direkte i nettleseren."
+}

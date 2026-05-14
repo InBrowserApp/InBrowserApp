@@ -1,0 +1,4 @@
+{
+  "name": "Pencarian IP Terbalik",
+  "description": "Cari record PTR DNS terbalik untuk alamat IPv4 atau IPv6 melalui resolver DNS-over-HTTPS publik langsung di browser."
+}
