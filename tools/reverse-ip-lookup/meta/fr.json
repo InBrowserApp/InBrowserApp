@@ -1,0 +1,4 @@
+{
+  "name": "Recherche IP inversée",
+  "description": "Recherchez les enregistrements PTR de DNS inverse pour des adresses IPv4 ou IPv6 via des résolveurs publics DNS-over-HTTPS, directement dans le navigateur."
+}

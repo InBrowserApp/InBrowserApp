@@ -1,0 +1,4 @@
+{
+  "name": "Reverse IP-lookup",
+  "description": "Zoek reverse DNS PTR-records op voor IPv4- of IPv6-adressen via openbare DNS-over-HTTPS-resolvers, rechtstreeks in de browser."
+}

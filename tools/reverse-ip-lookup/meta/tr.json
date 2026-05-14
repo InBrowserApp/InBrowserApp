@@ -1,0 +1,4 @@
+{
+  "name": "Ters IP Sorgulama",
+  "description": "IPv4 veya IPv6 adresleri için ters DNS PTR kayıtlarını, doğrudan tarayıcıda genel DNS-over-HTTPS çözümleyicileri üzerinden sorgulayın."
+}

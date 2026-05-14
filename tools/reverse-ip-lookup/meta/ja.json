@@ -1,0 +1,4 @@
+{
+  "name": "IP 逆引きルックアップ",
+  "description": "IPv4 または IPv6 アドレスの逆引き DNS PTR レコードを、ブラウザ内で直接パブリック DNS-over-HTTPS リゾルバから検索します。"
+}

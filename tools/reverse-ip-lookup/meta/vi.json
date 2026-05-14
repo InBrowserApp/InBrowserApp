@@ -1,0 +1,4 @@
+{
+  "name": "Tra cứu IP ngược",
+  "description": "Tra cứu bản ghi PTR của DNS ngược cho địa chỉ IPv4 hoặc IPv6 thông qua các trình phân giải DNS-over-HTTPS công cộng trực tiếp trong trình duyệt."
+}

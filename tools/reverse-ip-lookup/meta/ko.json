@@ -1,0 +1,4 @@
+{
+  "name": "역방향 IP 조회",
+  "description": "브라우저에서 직접 공용 DNS-over-HTTPS 리졸버를 통해 IPv4 또는 IPv6 주소의 역방향 DNS PTR 레코드를 조회합니다."
+}

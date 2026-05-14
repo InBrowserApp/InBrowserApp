@@ -131,6 +131,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "random-password-generator": () =>
     import("@tool/random-password-generator/page"),
   "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
+  "reverse-ip-lookup": () => import("@tool/reverse-ip-lookup/page"),
   "ripemd128-hash-text-or-file": () =>
     import("@tool/ripemd128-hash-text-or-file/page"),
   "ripemd160-hash-text-or-file": () =>

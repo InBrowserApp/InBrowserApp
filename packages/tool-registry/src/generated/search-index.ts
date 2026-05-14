@@ -12674,6 +12674,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "reverse-ip-lookup",
+    category: "network",
+    icon: "network",
+    tags: ["ip", "dns", "ptr", "reverse-dns", "hostname", "network"],
+    locales: {
+      ar: {
+        name: "البحث العكسي عن IP",
+        description:
+          "ابحث عن سجلات PTR لنظام DNS العكسي لعناوين IPv4 أو IPv6 عبر محللات DNS-over-HTTPS العامة مباشرة داخل المتصفح.",
+      },
+      de: {
+        name: "Reverse-IP-Lookup",
+        description:
+          "Schlage Reverse-DNS-PTR-Einträge für IPv4- oder IPv6-Adressen direkt im Browser über öffentliche DNS-over-HTTPS-Resolver nach.",
+      },
+      en: {
+        name: "Reverse IP Lookup",
+        description:
+          "Look up reverse DNS PTR records for IPv4 or IPv6 addresses through public DNS-over-HTTPS resolvers directly in the browser.",
+      },
+      es: {
+        name: "Búsqueda inversa de IP",
+        description:
+          "Consulta registros PTR de DNS inverso para direcciones IPv4 o IPv6 mediante resolutores públicos DNS-over-HTTPS directamente en el navegador.",
+      },
+      fr: {
+        name: "Recherche IP inversée",
+        description:
+          "Recherchez les enregistrements PTR de DNS inverse pour des adresses IPv4 ou IPv6 via des résolveurs publics DNS-over-HTTPS, directement dans le navigateur.",
+      },
+      he: {
+        name: "חיפוש IP הפוך",
+        description:
+          "חפשו רשומות PTR של DNS הפוך עבור כתובות IPv4 או IPv6 דרך פותרי DNS-over-HTTPS ציבוריים, ישירות בדפדפן.",
+      },
+      hi: {
+        name: "रिवर्स IP लुकअप",
+        description:
+          "IPv4 या IPv6 पतों के reverse DNS PTR records को सार्वजनिक DNS-over-HTTPS रिज़ॉल्वर के ज़रिए सीधे ब्राउज़र में देखें।",
+      },
+      id: {
+        name: "Pencarian IP Terbalik",
+        description:
+          "Cari record PTR DNS terbalik untuk alamat IPv4 atau IPv6 melalui resolver DNS-over-HTTPS publik langsung di browser.",
+      },
+      it: {
+        name: "Ricerca IP inversa",
+        description:
+          "Cerca i record PTR del DNS inverso per indirizzi IPv4 o IPv6 tramite resolver pubblici DNS-over-HTTPS direttamente nel browser.",
+      },
+      ja: {
+        name: "IP 逆引きルックアップ",
+        description:
+          "IPv4 または IPv6 アドレスの逆引き DNS PTR レコードを、ブラウザ内で直接パブリック DNS-over-HTTPS リゾルバから検索します。",
+      },
+      ko: {
+        name: "역방향 IP 조회",
+        description:
+          "브라우저에서 직접 공용 DNS-over-HTTPS 리졸버를 통해 IPv4 또는 IPv6 주소의 역방향 DNS PTR 레코드를 조회합니다.",
+      },
+      ms: {
+        name: "Carian IP Songsang",
+        description:
+          "Cari rekod PTR DNS songsang untuk alamat IPv4 atau IPv6 melalui penyelesai DNS-over-HTTPS awam terus dalam penyemak imbas.",
+      },
+      nl: {
+        name: "Reverse IP-lookup",
+        description:
+          "Zoek reverse DNS PTR-records op voor IPv4- of IPv6-adressen via openbare DNS-over-HTTPS-resolvers, rechtstreeks in de browser.",
+      },
+      no: {
+        name: "Omvendt IP-oppslag",
+        description:
+          "Slå opp omvendte DNS PTR-poster for IPv4- eller IPv6-adresser via offentlige DNS-over-HTTPS-oppløsere direkte i nettleseren.",
+      },
+      pl: {
+        name: "Odwrotne wyszukiwanie IP",
+        description:
+          "Sprawdzaj odwrotne rekordy DNS PTR dla adresów IPv4 lub IPv6 przez publiczne resolvery DNS-over-HTTPS bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Consulta reversa de IP",
+        description:
+          "Consulte registros PTR de DNS reverso para endereços IPv4 ou IPv6 por meio de resolvedores públicos DNS-over-HTTPS diretamente no navegador.",
+      },
+      ru: {
+        name: "Обратный поиск IP",
+        description:
+          "Ищите обратные DNS-записи PTR для IPv4- или IPv6-адресов через публичные резолверы DNS-over-HTTPS прямо в браузере.",
+      },
+      sv: {
+        name: "Omvänd IP-sökning",
+        description:
+          "Slå upp omvända DNS PTR-poster för IPv4- eller IPv6-adresser via offentliga DNS-over-HTTPS-resolvers direkt i webbläsaren.",
+      },
+      th: {
+        name: "ค้นหา Reverse IP",
+        description:
+          "ค้นหาระเบียน PTR ของ reverse DNS สำหรับที่อยู่ IPv4 หรือ IPv6 ผ่าน DNS-over-HTTPS resolver สาธารณะโดยตรงในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Ters IP Sorgulama",
+        description:
+          "IPv4 veya IPv6 adresleri için ters DNS PTR kayıtlarını, doğrudan tarayıcıda genel DNS-over-HTTPS çözümleyicileri üzerinden sorgulayın.",
+      },
+      vi: {
+        name: "Tra cứu IP ngược",
+        description:
+          "Tra cứu bản ghi PTR của DNS ngược cho địa chỉ IPv4 hoặc IPv6 thông qua các trình phân giải DNS-over-HTTPS công cộng trực tiếp trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "反向 IP 查询",
+        description:
+          "直接在浏览器中通过公共 DNS-over-HTTPS 解析器查询 IPv4 或 IPv6 地址的反向 DNS PTR 记录。",
+      },
+      "zh-TW": {
+        name: "反向 IP 查詢",
+        description:
+          "直接在瀏覽器中透過公開 DNS-over-HTTPS 解析器查詢 IPv4 或 IPv6 位址的反向 DNS PTR 記錄。",
+      },
+    },
+  },
+  {
     slug: "ripemd128-hash-text-or-file",
     category: "crypto",
     icon: "lock",

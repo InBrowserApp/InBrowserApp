@@ -1,0 +1,4 @@
+{
+  "name": "ค้นหา Reverse IP",
+  "description": "ค้นหาระเบียน PTR ของ reverse DNS สำหรับที่อยู่ IPv4 หรือ IPv6 ผ่าน DNS-over-HTTPS resolver สาธารณะโดยตรงในเบราว์เซอร์"
+}

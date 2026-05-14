@@ -1,0 +1,4 @@
+{
+  "name": "रिवर्स IP लुकअप",
+  "description": "IPv4 या IPv6 पतों के reverse DNS PTR records को सार्वजनिक DNS-over-HTTPS रिज़ॉल्वर के ज़रिए सीधे ब्राउज़र में देखें।"
+}
