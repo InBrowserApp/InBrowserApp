@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "貼上緊湊格式的 JWT。標頭與酬載會先在本機解碼，之後才執行任何簽章檢查。",
+    "label": "JWT token",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "使用範例",
+    "clear": "清除"
+  },
+  "decoded": {
+    "title": "已解碼的 token",
+    "description": "從 token 片段解碼出的格式化 JSON。",
+    "headerTitle": "標頭",
+    "payloadTitle": "酬載",
+    "copyJson": "複製 JSON",
+    "copied": "已複製",
+    "emptyTitle": "貼上 JWT 以進行解碼",
+    "emptyDescription": "此工具預期使用緊湊的三段式 JWT 格式：header.payload.signature。"
+  },
+  "verification": {
+    "title": "簽章驗證",
+    "description": "使用共用密鑰、PEM 公開金鑰、JWK 或 JWKS 驗證 JWS 簽章。",
+    "algorithmLabel": "演算法",
+    "algorithmDescription": "自動模式會使用 JWT 標頭中的 alg 值。手動選擇仍必須與標頭相符。",
+    "autoAlgorithm": "依標頭自動判斷",
+    "keyLabel": "密鑰或公開金鑰",
+    "keyDescription": "HS 演算法請使用純文字。RS、PS 和 ES 演算法請使用 PEM 公開金鑰、JWK 或 JWKS。數值不會被儲存。",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "準備驗證",
+    "waitingDescription": "輸入有效的 token 與驗證材料以檢查簽章。",
+    "pendingTitle": "正在驗證簽章",
+    "verifiedTitle": "簽章已驗證",
+    "verifiedDescription": "簽章與 token 標頭、酬載、演算法及提供的金鑰相符。",
+    "failedTitle": "驗證失敗",
+    "failedDescription": "簽章與提供的金鑰和演算法不相符。"
+  },
+  "claims": {
+    "title": "註冊宣告",
+    "description": "快速檢查常見的時間型 JWT 宣告。",
+    "emptyTitle": "沒有可檢查的時間宣告",
+    "emptyDescription": "此酬載不包含 exp、nbf 或 iat 宣告。",
+    "severities": {
+      "danger": "問題",
+      "warning": "警告",
+      "success": "有效",
+      "neutral": "資訊"
+    },
+    "messages": {
+      "payload-not-object": "酬載不是 JSON 物件，因此無法檢查註冊宣告。",
+      "invalid-exp": "exp 宣告存在，但不是數值日期。",
+      "invalid-nbf": "nbf 宣告存在，但不是數值日期。",
+      "invalid-iat": "iat 宣告存在，但不是數值日期。",
+      "expired": "已於 {date} 過期。",
+      "not-yet-valid": "在 {date} 之前尚未有效。",
+      "issued-in-future": "簽發時間在未來的 {date}。",
+      "expires-at": "將於 {date} 過期。",
+      "valid-after": "{date} 之後有效。",
+      "issued-at": "簽發於 {date}。"
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "貼上 JWT 以進行解碼。",
+    "invalid-segment-count": "JWT 必須剛好有三個以句點分隔的片段。",
+    "empty-header-or-payload": "JWT 標頭與酬載片段不可為空。",
+    "invalid-header-base64": "標頭片段不是有效的 base64url。",
+    "invalid-payload-base64": "酬載片段不是有效的 base64url。",
+    "invalid-signature-base64": "簽章片段不是有效的 base64url。",
+    "invalid-header-json": "標頭片段不是有效的 JSON。",
+    "invalid-payload-json": "酬載片段不是有效的 JSON。",
+    "header-not-object": "JWT 標頭必須解碼為 JSON 物件。"
+  },
+  "verifyErrors": {
+    "key-required": "請先輸入密鑰或公開金鑰再驗證。",
+    "missing-algorithm": "JWT 標頭未包含 alg 值。",
+    "unsupported-algorithm": "此驗證器支援 HS256/384/512、RS256/384/512、PS256/384/512 和 ES256/384/512。",
+    "algorithm-mismatch": "選取的演算法與 JWT 標頭的 alg 值不相符。",
+    "invalid-key-json": "JWK 或 JWKS 輸入不是有效的 JSON。",
+    "invalid-jwk": "金鑰 JSON 必須是 JWK 物件，或是包含 keys 陣列的 JWKS 物件。",
+    "empty-jwks": "JWKS keys 陣列是空的。",
+    "jwk-kid-not-found": "JWKS 中沒有任何金鑰符合 JWT 標頭的 kid 值。",
+    "unsupported-key-format": "HS 演算法請使用純文字，非對稱演算法請使用 PEM 公開金鑰、JWK 或 JWKS。",
+    "unsupported-pem-label": "驗證僅支援帶有 BEGIN PUBLIC KEY 的 PEM 公開金鑰。",
+    "key-import-failed": "無法為選取的演算法匯入金鑰。",
+    "webcrypto-unavailable": "此瀏覽器環境無法使用 WebCrypto。"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "토큰",
+    "description": "압축 형식 JWT를 붙여넣으세요. 서명 검사가 실행되기 전에 헤더와 페이로드가 로컬에서 디코딩됩니다.",
+    "label": "JWT 토큰",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "샘플 사용",
+    "clear": "지우기"
+  },
+  "decoded": {
+    "title": "디코딩된 토큰",
+    "description": "토큰 세그먼트에서 디코딩된 보기 좋게 정리된 JSON입니다.",
+    "headerTitle": "헤더",
+    "payloadTitle": "페이로드",
+    "copyJson": "JSON 복사",
+    "copied": "복사됨",
+    "emptyTitle": "디코딩할 JWT를 붙여넣으세요",
+    "emptyDescription": "이 도구는 header.payload.signature 형식의 압축 3부분 JWT를 사용합니다."
+  },
+  "verification": {
+    "title": "서명 검증",
+    "description": "공유 비밀값, PEM 공개 키, JWK 또는 JWKS로 JWS 서명을 검증합니다.",
+    "algorithmLabel": "알고리즘",
+    "algorithmDescription": "자동은 JWT 헤더의 alg 값을 사용합니다. 수동 선택도 헤더와 일치해야 합니다.",
+    "autoAlgorithm": "헤더에서 자동",
+    "keyLabel": "비밀값 또는 공개 키",
+    "keyDescription": "HS 알고리즘에는 일반 텍스트를 사용하세요. RS, PS, ES 알고리즘에는 PEM 공개 키, JWK 또는 JWKS를 사용하세요. 값은 저장되지 않습니다.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "검증 준비 완료",
+    "waitingDescription": "서명을 확인하려면 유효한 토큰과 검증 자료를 입력하세요.",
+    "pendingTitle": "서명 검증 중",
+    "verifiedTitle": "서명이 검증됨",
+    "verifiedDescription": "서명이 토큰 헤더, 페이로드, 알고리즘 및 제공된 키와 일치합니다.",
+    "failedTitle": "검증 실패",
+    "failedDescription": "서명이 제공된 키 및 알고리즘과 일치하지 않습니다."
+  },
+  "claims": {
+    "title": "등록된 클레임",
+    "description": "일반적인 시간 기반 JWT 클레임을 빠르게 확인합니다.",
+    "emptyTitle": "검사할 시간 클레임 없음",
+    "emptyDescription": "이 페이로드에는 exp, nbf 또는 iat 클레임이 포함되어 있지 않습니다.",
+    "severities": {
+      "danger": "문제",
+      "warning": "경고",
+      "success": "유효",
+      "neutral": "정보"
+    },
+    "messages": {
+      "payload-not-object": "페이로드가 JSON 객체가 아니므로 등록된 클레임을 검사할 수 없습니다.",
+      "invalid-exp": "exp 클레임이 있지만 숫자 날짜가 아닙니다.",
+      "invalid-nbf": "nbf 클레임이 있지만 숫자 날짜가 아닙니다.",
+      "invalid-iat": "iat 클레임이 있지만 숫자 날짜가 아닙니다.",
+      "expired": "{date}에 만료되었습니다.",
+      "not-yet-valid": "{date} 전에는 유효하지 않습니다.",
+      "issued-in-future": "{date}에 미래 시점으로 발급되었습니다.",
+      "expires-at": "{date}에 만료됩니다.",
+      "valid-after": "{date} 이후 유효합니다.",
+      "issued-at": "{date}에 발급되었습니다."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "디코딩할 JWT를 붙여넣으세요.",
+    "invalid-segment-count": "JWT는 점으로 구분된 정확히 세 개의 세그먼트가 있어야 합니다.",
+    "empty-header-or-payload": "JWT 헤더와 페이로드 세그먼트는 비워 둘 수 없습니다.",
+    "invalid-header-base64": "헤더 세그먼트가 유효한 base64url이 아닙니다.",
+    "invalid-payload-base64": "페이로드 세그먼트가 유효한 base64url이 아닙니다.",
+    "invalid-signature-base64": "서명 세그먼트가 유효한 base64url이 아닙니다.",
+    "invalid-header-json": "헤더 세그먼트가 유효한 JSON이 아닙니다.",
+    "invalid-payload-json": "페이로드 세그먼트가 유효한 JSON이 아닙니다.",
+    "header-not-object": "JWT 헤더는 JSON 객체로 디코딩되어야 합니다."
+  },
+  "verifyErrors": {
+    "key-required": "검증하기 전에 비밀값 또는 공개 키를 입력하세요.",
+    "missing-algorithm": "JWT 헤더에 alg 값이 포함되어 있지 않습니다.",
+    "unsupported-algorithm": "이 검증기는 HS256/384/512, RS256/384/512, PS256/384/512 및 ES256/384/512를 지원합니다.",
+    "algorithm-mismatch": "선택한 알고리즘이 JWT 헤더의 alg 값과 일치하지 않습니다.",
+    "invalid-key-json": "JWK 또는 JWKS 입력이 유효한 JSON이 아닙니다.",
+    "invalid-jwk": "키 JSON은 JWK 객체이거나 keys 배열이 있는 JWKS 객체여야 합니다.",
+    "empty-jwks": "JWKS keys 배열이 비어 있습니다.",
+    "jwk-kid-not-found": "JWKS의 어떤 키도 JWT 헤더의 kid 값과 일치하지 않습니다.",
+    "unsupported-key-format": "HS 알고리즘에는 일반 텍스트를 사용하고, 비대칭 알고리즘에는 PEM 공개 키, JWK 또는 JWKS를 사용하세요.",
+    "unsupported-pem-label": "검증에는 BEGIN PUBLIC KEY가 있는 PEM 공개 키만 지원됩니다.",
+    "key-import-failed": "선택한 알고리즘에 사용할 키를 가져올 수 없습니다.",
+    "webcrypto-unavailable": "이 브라우저 컨텍스트에서는 WebCrypto를 사용할 수 없습니다."
+  }
+}

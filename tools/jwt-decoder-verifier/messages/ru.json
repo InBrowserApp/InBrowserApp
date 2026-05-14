@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Токен",
+    "description": "Вставьте компактный JWT. Заголовок и полезная нагрузка декодируются локально до запуска любой проверки подписи.",
+    "label": "JWT токен",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Использовать пример",
+    "clear": "Очистить"
+  },
+  "decoded": {
+    "title": "Декодированный токен",
+    "description": "Отформатированный JSON, декодированный из сегмента токена.",
+    "headerTitle": "Заголовок",
+    "payloadTitle": "Полезная нагрузка",
+    "copyJson": "Копировать JSON",
+    "copied": "Скопировано",
+    "emptyTitle": "Вставьте JWT, чтобы декодировать его",
+    "emptyDescription": "Инструмент ожидает компактный трехчастный формат JWT: header.payload.signature."
+  },
+  "verification": {
+    "title": "Проверка подписи",
+    "description": "Проверьте подпись JWS с помощью общего секрета, открытого ключа PEM, JWK или JWKS.",
+    "algorithmLabel": "Алгоритм",
+    "algorithmDescription": "Авто использует значение alg из заголовка JWT. Ручной выбор все равно должен совпадать с заголовком.",
+    "autoAlgorithm": "Авто из заголовка",
+    "keyLabel": "Секрет или открытый ключ",
+    "keyDescription": "Используйте обычный текст для алгоритмов HS. Используйте открытый ключ PEM, JWK или JWKS для алгоритмов RS, PS и ES. Значения не сохраняются.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Готово к проверке",
+    "waitingDescription": "Введите допустимый токен и материал для проверки, чтобы проверить подпись.",
+    "pendingTitle": "Проверка подписи",
+    "verifiedTitle": "Подпись проверена",
+    "verifiedDescription": "Подпись соответствует заголовку, полезной нагрузке, алгоритму и предоставленному ключу токена.",
+    "failedTitle": "Проверка не удалась",
+    "failedDescription": "Подпись не соответствует предоставленному ключу и алгоритму."
+  },
+  "claims": {
+    "title": "Зарегистрированные claims",
+    "description": "Быстрые проверки распространенных claims JWT, связанных со временем.",
+    "emptyTitle": "Нет временных claims для проверки",
+    "emptyDescription": "Эта полезная нагрузка не содержит claims exp, nbf или iat.",
+    "severities": {
+      "danger": "Проблема",
+      "warning": "Предупреждение",
+      "success": "Действительно",
+      "neutral": "Информация"
+    },
+    "messages": {
+      "payload-not-object": "Полезная нагрузка не является объектом JSON, поэтому зарегистрированные claims нельзя проверить.",
+      "invalid-exp": "Claim exp присутствует, но не является числовой датой.",
+      "invalid-nbf": "Claim nbf присутствует, но не является числовой датой.",
+      "invalid-iat": "Claim iat присутствует, но не является числовой датой.",
+      "expired": "Истекло {date}.",
+      "not-yet-valid": "Недействительно до {date}.",
+      "issued-in-future": "Выпущено в будущем: {date}.",
+      "expires-at": "Истекает {date}.",
+      "valid-after": "Действительно после {date}.",
+      "issued-at": "Выпущено {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Вставьте JWT, чтобы декодировать его.",
+    "invalid-segment-count": "JWT должны содержать ровно три сегмента, разделенных точками.",
+    "empty-header-or-payload": "Сегменты заголовка и полезной нагрузки JWT не могут быть пустыми.",
+    "invalid-header-base64": "Сегмент заголовка не является допустимым base64url.",
+    "invalid-payload-base64": "Сегмент полезной нагрузки не является допустимым base64url.",
+    "invalid-signature-base64": "Сегмент подписи не является допустимым base64url.",
+    "invalid-header-json": "Сегмент заголовка не является допустимым JSON.",
+    "invalid-payload-json": "Сегмент полезной нагрузки не является допустимым JSON.",
+    "header-not-object": "Заголовок JWT должен декодироваться в объект JSON."
+  },
+  "verifyErrors": {
+    "key-required": "Введите секрет или открытый ключ перед проверкой.",
+    "missing-algorithm": "Заголовок JWT не содержит значение alg.",
+    "unsupported-algorithm": "Этот верификатор поддерживает HS256/384/512, RS256/384/512, PS256/384/512 и ES256/384/512.",
+    "algorithm-mismatch": "Выбранный алгоритм не совпадает со значением alg в заголовке JWT.",
+    "invalid-key-json": "Ввод JWK или JWKS не является допустимым JSON.",
+    "invalid-jwk": "JSON ключа должен быть объектом JWK или объектом JWKS с массивом keys.",
+    "empty-jwks": "Массив keys в JWKS пуст.",
+    "jwk-kid-not-found": "Ни один ключ в JWKS не соответствует значению kid в заголовке JWT.",
+    "unsupported-key-format": "Используйте обычный текст для алгоритмов HS или открытый ключ PEM, JWK или JWKS для асимметричных алгоритмов.",
+    "unsupported-pem-label": "Для проверки поддерживаются только открытые ключи PEM с BEGIN PUBLIC KEY.",
+    "key-import-failed": "Не удалось импортировать ключ для выбранного алгоритма.",
+    "webcrypto-unavailable": "WebCrypto недоступен в этом контексте браузера."
+  }
+}

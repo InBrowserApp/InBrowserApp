@@ -1,0 +1,4 @@
+{
+  "name": "Decodificador e verificador de JWT",
+  "description": "Decodifique cabeçalhos e payloads de JSON Web Token localmente, inspecione claims registradas e verifique assinaturas HS, RS, PS e ES com um segredo, chave pública PEM, JWK ou JWKS."
+}

@@ -10088,6 +10088,142 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "jwt-decoder-verifier",
+    category: "web",
+    icon: "lock",
+    tags: [
+      "jwt",
+      "json web token",
+      "jws",
+      "decode",
+      "decoder",
+      "verify",
+      "verifier",
+      "signature",
+      "claims",
+      "auth",
+      "security",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "فك ترميز JWT والتحقق منه",
+        description:
+          "فك ترميز رؤوس وحمولات JSON Web Token محليا، وافحص المطالبات المسجلة، وتحقق من تواقيع HS وRS وPS وES باستخدام سر أو مفتاح PEM عام أو JWK أو JWKS.",
+      },
+      de: {
+        name: "JWT Decoder und Verifier",
+        description:
+          "Decodiere JSON-Web-Token-Header und -Payloads lokal, pruefe registrierte Claims und verifiziere HS-, RS-, PS- und ES-Signaturen mit einem Secret, einem oeffentlichen PEM-Schluessel, JWK oder JWKS.",
+      },
+      en: {
+        name: "JWT Decoder and Verifier",
+        description:
+          "Decode JSON Web Token headers and payloads locally, inspect registered claims, and verify HS, RS, PS, and ES signatures with a secret, PEM public key, JWK, or JWKS.",
+      },
+      es: {
+        name: "Decodificador y verificador de JWT",
+        description:
+          "Decodifica localmente encabezados y cargas de JSON Web Token, inspecciona claims registrados y verifica firmas HS, RS, PS y ES con un secreto, una clave pública PEM, JWK o JWKS.",
+      },
+      fr: {
+        name: "Décodeur et vérificateur de JWT",
+        description:
+          "Décodez localement les en-têtes et charges utiles des JSON Web Token, inspectez les claims enregistrés et vérifiez les signatures HS, RS, PS et ES avec un secret, une clé publique PEM, un JWK ou un JWKS.",
+      },
+      he: {
+        name: "מפענח ומאמת JWT",
+        description:
+          "פענחו כותרות ומטענים של JSON Web Token באופן מקומי, בדקו claims רשומים, ואמתו חתימות HS, RS, PS ו-ES בעזרת סוד, מפתח ציבורי PEM,‏ JWK או JWKS.",
+      },
+      hi: {
+        name: "JWT Decoder and Verifier",
+        description:
+          "JSON Web Token हेडर और पेलोड को स्थानीय रूप से डिकोड करें, registered claims की जांच करें, और secret, PEM public key, JWK, या JWKS से HS, RS, PS, और ES signatures सत्यापित करें।",
+      },
+      id: {
+        name: "Decoder dan Verifier JWT",
+        description:
+          "Dekode header dan payload JSON Web Token secara lokal, periksa registered claims, dan verifikasi tanda tangan HS, RS, PS, dan ES dengan secret, public key PEM, JWK, atau JWKS.",
+      },
+      it: {
+        name: "Decoder e verificatore JWT",
+        description:
+          "Decodifica localmente header e payload dei JSON Web Token, esamina le claim registrate e verifica le firme HS, RS, PS ed ES con un segreto, una chiave pubblica PEM, JWK o JWKS.",
+      },
+      ja: {
+        name: "JWT デコーダーと検証ツール",
+        description:
+          "JSON Web Token のヘッダーとペイロードをローカルでデコードし、登録済みクレームを確認し、シークレット、PEM 公開鍵、JWK、または JWKS を使って HS、RS、PS、ES 署名を検証します。",
+      },
+      ko: {
+        name: "JWT 디코더 및 검증기",
+        description:
+          "JSON Web Token 헤더와 페이로드를 로컬에서 디코딩하고, 등록된 클레임을 검사하며, 비밀값, PEM 공개 키, JWK 또는 JWKS로 HS, RS, PS, ES 서명을 검증합니다.",
+      },
+      ms: {
+        name: "Penyahkod dan Pengesah JWT",
+        description:
+          "Nyahkod pengepala dan muatan JSON Web Token secara setempat, semak tuntutan berdaftar, dan sahkan tandatangan HS, RS, PS, dan ES dengan rahsia, kunci awam PEM, JWK, atau JWKS.",
+      },
+      nl: {
+        name: "JWT-decoder en -verifier",
+        description:
+          "Decodeer JSON Web Token-headers en payloads lokaal, inspecteer geregistreerde claims en verifieer HS-, RS-, PS- en ES-handtekeningen met een secret, PEM-public key, JWK of JWKS.",
+      },
+      no: {
+        name: "JWT-dekoder og verifikator",
+        description:
+          "Dekod JSON Web Token-headere og nyttelaster lokalt, inspiser registrerte claims, og verifiser HS-, RS-, PS- og ES-signaturer med en hemmelighet, offentlig PEM-nokkel, JWK eller JWKS.",
+      },
+      pl: {
+        name: "Dekoder i weryfikator JWT",
+        description:
+          "Dekoduj lokalnie nagłówki i treść JSON Web Token, sprawdzaj zarejestrowane roszczenia oraz weryfikuj podpisy HS, RS, PS i ES za pomocą sekretu, klucza publicznego PEM, JWK lub JWKS.",
+      },
+      pt: {
+        name: "Decodificador e verificador de JWT",
+        description:
+          "Decodifique cabeçalhos e payloads de JSON Web Token localmente, inspecione claims registradas e verifique assinaturas HS, RS, PS e ES com um segredo, chave pública PEM, JWK ou JWKS.",
+      },
+      ru: {
+        name: "Декодер и верификатор JWT",
+        description:
+          "Декодируйте заголовки и полезные нагрузки JSON Web Token локально, проверяйте зарегистрированные claims и верифицируйте подписи HS, RS, PS и ES с помощью секрета, открытого ключа PEM, JWK или JWKS.",
+      },
+      sv: {
+        name: "JWT-avkodare och verifierare",
+        description:
+          "Avkoda JSON Web Token-huvuden och nyttolaster lokalt, granska registrerade claims och verifiera HS-, RS-, PS- och ES-signaturer med en hemlighet, PEM-offentlig nyckel, JWK eller JWKS.",
+      },
+      th: {
+        name: "ตัวถอดรหัสและตรวจสอบ JWT",
+        description:
+          "ถอดรหัสส่วนหัวและเพย์โหลดของ JSON Web Token ในเครื่อง ตรวจดู registered claims และตรวจสอบลายเซ็น HS, RS, PS และ ES ด้วย secret, PEM public key, JWK หรือ JWKS",
+      },
+      tr: {
+        name: "JWT Çözücü ve Doğrulayıcı",
+        description:
+          "JSON Web Token başlıklarını ve payload'larını yerel olarak çözün, registered claim'leri inceleyin ve HS, RS, PS ve ES imzalarını bir secret, PEM public key, JWK veya JWKS ile doğrulayın.",
+      },
+      vi: {
+        name: "Bộ giải mã và xác minh JWT",
+        description:
+          "Giải mã cục bộ header và payload của JSON Web Token, kiểm tra các claim đã đăng ký, và xác minh chữ ký HS, RS, PS, và ES bằng secret, khóa công khai PEM, JWK, hoặc JWKS.",
+      },
+      "zh-CN": {
+        name: "JWT 解码器和验证器",
+        description:
+          "在本地解码 JSON Web Token 标头和载荷，检查注册声明，并使用密钥、PEM 公钥、JWK 或 JWKS 验证 HS、RS、PS 和 ES 签名。",
+      },
+      "zh-TW": {
+        name: "JWT 解碼與驗證器",
+        description:
+          "在本機解碼 JSON Web Token 標頭與酬載，檢查註冊宣告，並使用密鑰、PEM 公開金鑰、JWK 或 JWKS 驗證 HS、RS、PS 和 ES 簽章。",
+      },
+    },
+  },
+  {
     slug: "keccak-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -30615,6 +30751,142 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "JWK ↔ PEM 轉換器",
         description: "在本機轉換 JWK 與 PEM 金鑰，支援 RSA、EC 與 OKP 金鑰格式",
+      },
+    },
+  },
+  "jwt-decoder-verifier": {
+    slug: "jwt-decoder-verifier",
+    category: "web",
+    icon: "lock",
+    tags: [
+      "jwt",
+      "json web token",
+      "jws",
+      "decode",
+      "decoder",
+      "verify",
+      "verifier",
+      "signature",
+      "claims",
+      "auth",
+      "security",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "فك ترميز JWT والتحقق منه",
+        description:
+          "فك ترميز رؤوس وحمولات JSON Web Token محليا، وافحص المطالبات المسجلة، وتحقق من تواقيع HS وRS وPS وES باستخدام سر أو مفتاح PEM عام أو JWK أو JWKS.",
+      },
+      de: {
+        name: "JWT Decoder und Verifier",
+        description:
+          "Decodiere JSON-Web-Token-Header und -Payloads lokal, pruefe registrierte Claims und verifiziere HS-, RS-, PS- und ES-Signaturen mit einem Secret, einem oeffentlichen PEM-Schluessel, JWK oder JWKS.",
+      },
+      en: {
+        name: "JWT Decoder and Verifier",
+        description:
+          "Decode JSON Web Token headers and payloads locally, inspect registered claims, and verify HS, RS, PS, and ES signatures with a secret, PEM public key, JWK, or JWKS.",
+      },
+      es: {
+        name: "Decodificador y verificador de JWT",
+        description:
+          "Decodifica localmente encabezados y cargas de JSON Web Token, inspecciona claims registrados y verifica firmas HS, RS, PS y ES con un secreto, una clave pública PEM, JWK o JWKS.",
+      },
+      fr: {
+        name: "Décodeur et vérificateur de JWT",
+        description:
+          "Décodez localement les en-têtes et charges utiles des JSON Web Token, inspectez les claims enregistrés et vérifiez les signatures HS, RS, PS et ES avec un secret, une clé publique PEM, un JWK ou un JWKS.",
+      },
+      he: {
+        name: "מפענח ומאמת JWT",
+        description:
+          "פענחו כותרות ומטענים של JSON Web Token באופן מקומי, בדקו claims רשומים, ואמתו חתימות HS, RS, PS ו-ES בעזרת סוד, מפתח ציבורי PEM,‏ JWK או JWKS.",
+      },
+      hi: {
+        name: "JWT Decoder and Verifier",
+        description:
+          "JSON Web Token हेडर और पेलोड को स्थानीय रूप से डिकोड करें, registered claims की जांच करें, और secret, PEM public key, JWK, या JWKS से HS, RS, PS, और ES signatures सत्यापित करें।",
+      },
+      id: {
+        name: "Decoder dan Verifier JWT",
+        description:
+          "Dekode header dan payload JSON Web Token secara lokal, periksa registered claims, dan verifikasi tanda tangan HS, RS, PS, dan ES dengan secret, public key PEM, JWK, atau JWKS.",
+      },
+      it: {
+        name: "Decoder e verificatore JWT",
+        description:
+          "Decodifica localmente header e payload dei JSON Web Token, esamina le claim registrate e verifica le firme HS, RS, PS ed ES con un segreto, una chiave pubblica PEM, JWK o JWKS.",
+      },
+      ja: {
+        name: "JWT デコーダーと検証ツール",
+        description:
+          "JSON Web Token のヘッダーとペイロードをローカルでデコードし、登録済みクレームを確認し、シークレット、PEM 公開鍵、JWK、または JWKS を使って HS、RS、PS、ES 署名を検証します。",
+      },
+      ko: {
+        name: "JWT 디코더 및 검증기",
+        description:
+          "JSON Web Token 헤더와 페이로드를 로컬에서 디코딩하고, 등록된 클레임을 검사하며, 비밀값, PEM 공개 키, JWK 또는 JWKS로 HS, RS, PS, ES 서명을 검증합니다.",
+      },
+      ms: {
+        name: "Penyahkod dan Pengesah JWT",
+        description:
+          "Nyahkod pengepala dan muatan JSON Web Token secara setempat, semak tuntutan berdaftar, dan sahkan tandatangan HS, RS, PS, dan ES dengan rahsia, kunci awam PEM, JWK, atau JWKS.",
+      },
+      nl: {
+        name: "JWT-decoder en -verifier",
+        description:
+          "Decodeer JSON Web Token-headers en payloads lokaal, inspecteer geregistreerde claims en verifieer HS-, RS-, PS- en ES-handtekeningen met een secret, PEM-public key, JWK of JWKS.",
+      },
+      no: {
+        name: "JWT-dekoder og verifikator",
+        description:
+          "Dekod JSON Web Token-headere og nyttelaster lokalt, inspiser registrerte claims, og verifiser HS-, RS-, PS- og ES-signaturer med en hemmelighet, offentlig PEM-nokkel, JWK eller JWKS.",
+      },
+      pl: {
+        name: "Dekoder i weryfikator JWT",
+        description:
+          "Dekoduj lokalnie nagłówki i treść JSON Web Token, sprawdzaj zarejestrowane roszczenia oraz weryfikuj podpisy HS, RS, PS i ES za pomocą sekretu, klucza publicznego PEM, JWK lub JWKS.",
+      },
+      pt: {
+        name: "Decodificador e verificador de JWT",
+        description:
+          "Decodifique cabeçalhos e payloads de JSON Web Token localmente, inspecione claims registradas e verifique assinaturas HS, RS, PS e ES com um segredo, chave pública PEM, JWK ou JWKS.",
+      },
+      ru: {
+        name: "Декодер и верификатор JWT",
+        description:
+          "Декодируйте заголовки и полезные нагрузки JSON Web Token локально, проверяйте зарегистрированные claims и верифицируйте подписи HS, RS, PS и ES с помощью секрета, открытого ключа PEM, JWK или JWKS.",
+      },
+      sv: {
+        name: "JWT-avkodare och verifierare",
+        description:
+          "Avkoda JSON Web Token-huvuden och nyttolaster lokalt, granska registrerade claims och verifiera HS-, RS-, PS- och ES-signaturer med en hemlighet, PEM-offentlig nyckel, JWK eller JWKS.",
+      },
+      th: {
+        name: "ตัวถอดรหัสและตรวจสอบ JWT",
+        description:
+          "ถอดรหัสส่วนหัวและเพย์โหลดของ JSON Web Token ในเครื่อง ตรวจดู registered claims และตรวจสอบลายเซ็น HS, RS, PS และ ES ด้วย secret, PEM public key, JWK หรือ JWKS",
+      },
+      tr: {
+        name: "JWT Çözücü ve Doğrulayıcı",
+        description:
+          "JSON Web Token başlıklarını ve payload'larını yerel olarak çözün, registered claim'leri inceleyin ve HS, RS, PS ve ES imzalarını bir secret, PEM public key, JWK veya JWKS ile doğrulayın.",
+      },
+      vi: {
+        name: "Bộ giải mã và xác minh JWT",
+        description:
+          "Giải mã cục bộ header và payload của JSON Web Token, kiểm tra các claim đã đăng ký, và xác minh chữ ký HS, RS, PS, và ES bằng secret, khóa công khai PEM, JWK, hoặc JWKS.",
+      },
+      "zh-CN": {
+        name: "JWT 解码器和验证器",
+        description:
+          "在本地解码 JSON Web Token 标头和载荷，检查注册声明，并使用密钥、PEM 公钥、JWK 或 JWKS 验证 HS、RS、PS 和 ES 签名。",
+      },
+      "zh-TW": {
+        name: "JWT 解碼與驗證器",
+        description:
+          "在本機解碼 JSON Web Token 標頭與酬載，檢查註冊宣告，並使用密鑰、PEM 公開金鑰、JWK 或 JWKS 驗證 HS、RS、PS 和 ES 簽章。",
       },
     },
   },

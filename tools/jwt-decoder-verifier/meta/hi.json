@@ -1,0 +1,4 @@
+{
+  "name": "JWT Decoder and Verifier",
+  "description": "JSON Web Token हेडर और पेलोड को स्थानीय रूप से डिकोड करें, registered claims की जांच करें, और secret, PEM public key, JWK, या JWKS से HS, RS, PS, और ES signatures सत्यापित करें।"
+}

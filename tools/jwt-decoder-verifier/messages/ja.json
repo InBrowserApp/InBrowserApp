@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "トークン",
+    "description": "コンパクト形式の JWT を貼り付けます。署名チェックを実行する前に、ヘッダーとペイロードはローカルでデコードされます。",
+    "label": "JWT トークン",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "サンプルを使用",
+    "clear": "クリア"
+  },
+  "decoded": {
+    "title": "デコード済みトークン",
+    "description": "トークンセグメントからデコードされた、整形済みの JSON です。",
+    "headerTitle": "ヘッダー",
+    "payloadTitle": "ペイロード",
+    "copyJson": "JSON をコピー",
+    "copied": "コピーしました",
+    "emptyTitle": "JWT を貼り付けてデコード",
+    "emptyDescription": "このツールは、header.payload.signature というコンパクトな 3 部構成の JWT 形式を想定しています。"
+  },
+  "verification": {
+    "title": "署名検証",
+    "description": "共有シークレット、PEM 公開鍵、JWK、または JWKS を使って JWS 署名を検証します。",
+    "algorithmLabel": "アルゴリズム",
+    "algorithmDescription": "自動では JWT ヘッダーの alg 値を使用します。手動選択でもヘッダーと一致している必要があります。",
+    "autoAlgorithm": "ヘッダーから自動",
+    "keyLabel": "シークレットまたは公開鍵",
+    "keyDescription": "HS アルゴリズムにはプレーンテキストを使用します。RS、PS、ES アルゴリズムには PEM 公開鍵、JWK、または JWKS を使用します。値は保存されません。",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "検証の準備完了",
+    "waitingDescription": "有効なトークンと検証材料を入力して署名を確認します。",
+    "pendingTitle": "署名を検証中",
+    "verifiedTitle": "署名を検証しました",
+    "verifiedDescription": "署名は、トークンのヘッダー、ペイロード、アルゴリズム、指定された鍵と一致しています。",
+    "failedTitle": "検証に失敗しました",
+    "failedDescription": "署名は、指定された鍵とアルゴリズムに一致しません。"
+  },
+  "claims": {
+    "title": "登録済みクレーム",
+    "description": "一般的な時刻ベースの JWT クレームをすばやくチェックします。",
+    "emptyTitle": "確認する時刻クレームはありません",
+    "emptyDescription": "このペイロードには exp、nbf、iat クレームが含まれていません。",
+    "severities": {
+      "danger": "問題",
+      "warning": "警告",
+      "success": "有効",
+      "neutral": "情報"
+    },
+    "messages": {
+      "payload-not-object": "ペイロードが JSON オブジェクトではないため、登録済みクレームを確認できません。",
+      "invalid-exp": "exp クレームは存在しますが、NumericDate ではありません。",
+      "invalid-nbf": "nbf クレームは存在しますが、NumericDate ではありません。",
+      "invalid-iat": "iat クレームは存在しますが、NumericDate ではありません。",
+      "expired": "{date} に期限切れです。",
+      "not-yet-valid": "{date} より前は有効ではありません。",
+      "issued-in-future": "{date} に未来の時刻で発行されています。",
+      "expires-at": "{date} に期限切れになります。",
+      "valid-after": "{date} 以降有効です。",
+      "issued-at": "{date} に発行されました。"
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "JWT を貼り付けてデコードしてください。",
+    "invalid-segment-count": "JWT はドットで区切られた 3 つのセグメントで構成されている必要があります。",
+    "empty-header-or-payload": "JWT のヘッダーセグメントとペイロードセグメントは空にできません。",
+    "invalid-header-base64": "ヘッダーセグメントは有効な base64url ではありません。",
+    "invalid-payload-base64": "ペイロードセグメントは有効な base64url ではありません。",
+    "invalid-signature-base64": "署名セグメントは有効な base64url ではありません。",
+    "invalid-header-json": "ヘッダーセグメントは有効な JSON ではありません。",
+    "invalid-payload-json": "ペイロードセグメントは有効な JSON ではありません。",
+    "header-not-object": "JWT ヘッダーは JSON オブジェクトとしてデコードされる必要があります。"
+  },
+  "verifyErrors": {
+    "key-required": "検証する前にシークレットまたは公開鍵を入力してください。",
+    "missing-algorithm": "JWT ヘッダーに alg 値が含まれていません。",
+    "unsupported-algorithm": "この検証ツールは HS256/384/512、RS256/384/512、PS256/384/512、ES256/384/512 をサポートしています。",
+    "algorithm-mismatch": "選択したアルゴリズムは JWT ヘッダーの alg 値と一致しません。",
+    "invalid-key-json": "JWK または JWKS の入力は有効な JSON ではありません。",
+    "invalid-jwk": "鍵 JSON は、JWK オブジェクト、または keys 配列を持つ JWKS オブジェクトである必要があります。",
+    "empty-jwks": "JWKS の keys 配列が空です。",
+    "jwk-kid-not-found": "JWKS 内に JWT ヘッダーの kid 値と一致する鍵がありません。",
+    "unsupported-key-format": "HS アルゴリズムにはプレーンテキストを、非対称アルゴリズムには PEM 公開鍵、JWK、または JWKS を使用してください。",
+    "unsupported-pem-label": "検証では、BEGIN PUBLIC KEY を持つ PEM 公開鍵のみがサポートされています。",
+    "key-import-failed": "選択したアルゴリズム用に鍵をインポートできませんでした。",
+    "webcrypto-unavailable": "このブラウザーコンテキストでは WebCrypto を利用できません。"
+  }
+}

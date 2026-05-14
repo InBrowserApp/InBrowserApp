@@ -1,0 +1,4 @@
+{
+  "name": "JWT Decoder und Verifier",
+  "description": "Decodiere JSON-Web-Token-Header und -Payloads lokal, pruefe registrierte Claims und verifiziere HS-, RS-, PS- und ES-Signaturen mit einem Secret, einem oeffentlichen PEM-Schluessel, JWK oder JWKS."
+}

@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "Paste a compact JWT. The header and payload are decoded locally before any signature check runs.",
+    "label": "JWT token",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Use sample",
+    "clear": "Clear"
+  },
+  "decoded": {
+    "title": "Decoded token",
+    "description": "Pretty-printed JSON decoded from the token segment.",
+    "headerTitle": "Header",
+    "payloadTitle": "Payload",
+    "copyJson": "Copy JSON",
+    "copied": "Copied",
+    "emptyTitle": "Paste a JWT to decode it",
+    "emptyDescription": "The tool expects the compact three-part JWT format: header.payload.signature."
+  },
+  "verification": {
+    "title": "Signature verification",
+    "description": "Verify the JWS signature with a shared secret, PEM public key, JWK, or JWKS.",
+    "algorithmLabel": "Algorithm",
+    "algorithmDescription": "Auto uses the alg value from the JWT header. Manual selection must still match the header.",
+    "autoAlgorithm": "Auto from header",
+    "keyLabel": "Secret or public key",
+    "keyDescription": "Use plain text for HS algorithms. Use a PEM public key, JWK, or JWKS for RS, PS, and ES algorithms. Values are not saved.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Ready to verify",
+    "waitingDescription": "Enter a valid token and verification material to check the signature.",
+    "pendingTitle": "Verifying signature",
+    "verifiedTitle": "Signature verified",
+    "verifiedDescription": "The signature matches the token header, payload, algorithm, and supplied key.",
+    "failedTitle": "Verification failed",
+    "failedDescription": "The signature does not match the supplied key and algorithm."
+  },
+  "claims": {
+    "title": "Registered claims",
+    "description": "Quick checks for common time-based JWT claims.",
+    "emptyTitle": "No time claims to inspect",
+    "emptyDescription": "This payload does not include exp, nbf, or iat claims.",
+    "severities": {
+      "danger": "Problem",
+      "warning": "Warning",
+      "success": "Valid",
+      "neutral": "Info"
+    },
+    "messages": {
+      "payload-not-object": "The payload is not a JSON object, so registered claims cannot be inspected.",
+      "invalid-exp": "The exp claim is present but is not a numeric date.",
+      "invalid-nbf": "The nbf claim is present but is not a numeric date.",
+      "invalid-iat": "The iat claim is present but is not a numeric date.",
+      "expired": "Expired at {date}.",
+      "not-yet-valid": "Not valid before {date}.",
+      "issued-in-future": "Issued in the future at {date}.",
+      "expires-at": "Expires at {date}.",
+      "valid-after": "Valid after {date}.",
+      "issued-at": "Issued at {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Paste a JWT to decode it.",
+    "invalid-segment-count": "JWTs must have exactly three dot-separated segments.",
+    "empty-header-or-payload": "The JWT header and payload segments cannot be empty.",
+    "invalid-header-base64": "The header segment is not valid base64url.",
+    "invalid-payload-base64": "The payload segment is not valid base64url.",
+    "invalid-signature-base64": "The signature segment is not valid base64url.",
+    "invalid-header-json": "The header segment is not valid JSON.",
+    "invalid-payload-json": "The payload segment is not valid JSON.",
+    "header-not-object": "The JWT header must decode to a JSON object."
+  },
+  "verifyErrors": {
+    "key-required": "Enter a secret or public key before verifying.",
+    "missing-algorithm": "The JWT header does not include an alg value.",
+    "unsupported-algorithm": "This verifier supports HS256/384/512, RS256/384/512, PS256/384/512, and ES256/384/512.",
+    "algorithm-mismatch": "The selected algorithm does not match the JWT header alg value.",
+    "invalid-key-json": "The JWK or JWKS input is not valid JSON.",
+    "invalid-jwk": "The key JSON must be a JWK object or a JWKS object with a keys array.",
+    "empty-jwks": "The JWKS keys array is empty.",
+    "jwk-kid-not-found": "No key in the JWKS matches the JWT header kid value.",
+    "unsupported-key-format": "Use plain text for HS algorithms, or a PEM public key, JWK, or JWKS for asymmetric algorithms.",
+    "unsupported-pem-label": "Only PEM public keys with BEGIN PUBLIC KEY are supported for verification.",
+    "key-import-failed": "The key could not be imported for the selected algorithm.",
+    "webcrypto-unavailable": "WebCrypto is not available in this browser context."
+  }
+}

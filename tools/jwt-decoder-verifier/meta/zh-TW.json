@@ -1,0 +1,4 @@
+{
+  "name": "JWT 解碼與驗證器",
+  "description": "在本機解碼 JSON Web Token 標頭與酬載，檢查註冊宣告，並使用密鑰、PEM 公開金鑰、JWK 或 JWKS 驗證 HS、RS、PS 和 ES 簽章。"
+}

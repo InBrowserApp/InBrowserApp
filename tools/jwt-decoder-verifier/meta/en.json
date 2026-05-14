@@ -1,0 +1,4 @@
+{
+  "name": "JWT Decoder and Verifier",
+  "description": "Decode JSON Web Token headers and payloads locally, inspect registered claims, and verify HS, RS, PS, and ES signatures with a secret, PEM public key, JWK, or JWKS."
+}

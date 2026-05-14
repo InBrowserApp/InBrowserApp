@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "الرمز",
+    "description": "الصق JWT مضغوطا. يتم فك ترميز الرأس والحمولة محليا قبل تشغيل أي فحص للتوقيع.",
+    "label": "رمز JWT",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "استخدام العينة",
+    "clear": "مسح"
+  },
+  "decoded": {
+    "title": "الرمز المفكك",
+    "description": "JSON منسق تم فك ترميزه من مقطع الرمز.",
+    "headerTitle": "الرأس",
+    "payloadTitle": "الحمولة",
+    "copyJson": "نسخ JSON",
+    "copied": "تم النسخ",
+    "emptyTitle": "الصق JWT لفك ترميزه",
+    "emptyDescription": "تتوقع الأداة صيغة JWT المضغوطة ذات الأجزاء الثلاثة: header.payload.signature."
+  },
+  "verification": {
+    "title": "التحقق من التوقيع",
+    "description": "تحقق من توقيع JWS باستخدام سر مشترك أو مفتاح PEM عام أو JWK أو JWKS.",
+    "algorithmLabel": "الخوارزمية",
+    "algorithmDescription": "يستخدم الوضع التلقائي قيمة alg من رأس JWT. يجب أن يطابق الاختيار اليدوي الرأس أيضا.",
+    "autoAlgorithm": "تلقائي من الرأس",
+    "keyLabel": "السر أو المفتاح العام",
+    "keyDescription": "استخدم نصا عاديا لخوارزميات HS. استخدم مفتاح PEM عام أو JWK أو JWKS لخوارزميات RS وPS وES. لا يتم حفظ القيم.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "جاهز للتحقق",
+    "waitingDescription": "أدخل رمزا صالحا ومادة تحقق لفحص التوقيع.",
+    "pendingTitle": "جار التحقق من التوقيع",
+    "verifiedTitle": "تم التحقق من التوقيع",
+    "verifiedDescription": "يطابق التوقيع رأس الرمز وحمولته وخوارزميته والمفتاح المقدم.",
+    "failedTitle": "فشل التحقق",
+    "failedDescription": "لا يطابق التوقيع المفتاح والخوارزمية المقدمين."
+  },
+  "claims": {
+    "title": "المطالبات المسجلة",
+    "description": "فحوصات سريعة لمطالبات JWT الشائعة المستندة إلى الوقت.",
+    "emptyTitle": "لا توجد مطالبات زمنية لفحصها",
+    "emptyDescription": "لا تتضمن هذه الحمولة مطالبات exp أو nbf أو iat.",
+    "severities": {
+      "danger": "مشكلة",
+      "warning": "تحذير",
+      "success": "صالح",
+      "neutral": "معلومة"
+    },
+    "messages": {
+      "payload-not-object": "الحمولة ليست كائن JSON، لذلك لا يمكن فحص المطالبات المسجلة.",
+      "invalid-exp": "مطالبة exp موجودة لكنها ليست تاريخا رقميا.",
+      "invalid-nbf": "مطالبة nbf موجودة لكنها ليست تاريخا رقميا.",
+      "invalid-iat": "مطالبة iat موجودة لكنها ليست تاريخا رقميا.",
+      "expired": "انتهت الصلاحية في {date}.",
+      "not-yet-valid": "غير صالح قبل {date}.",
+      "issued-in-future": "صدر في المستقبل عند {date}.",
+      "expires-at": "تنتهي الصلاحية في {date}.",
+      "valid-after": "صالح بعد {date}.",
+      "issued-at": "صدر في {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "الصق JWT لفك ترميزه.",
+    "invalid-segment-count": "يجب أن تحتوي JWTs على ثلاثة مقاطع مفصولة بنقاط بالضبط.",
+    "empty-header-or-payload": "لا يمكن أن يكون مقطعا رأس JWT وحمولته فارغين.",
+    "invalid-header-base64": "مقطع الرأس ليس base64url صالحا.",
+    "invalid-payload-base64": "مقطع الحمولة ليس base64url صالحا.",
+    "invalid-signature-base64": "مقطع التوقيع ليس base64url صالحا.",
+    "invalid-header-json": "مقطع الرأس ليس JSON صالحا.",
+    "invalid-payload-json": "مقطع الحمولة ليس JSON صالحا.",
+    "header-not-object": "يجب أن يفك رأس JWT إلى كائن JSON."
+  },
+  "verifyErrors": {
+    "key-required": "أدخل سرا أو مفتاحا عاما قبل التحقق.",
+    "missing-algorithm": "لا يتضمن رأس JWT قيمة alg.",
+    "unsupported-algorithm": "يدعم هذا المتحقق HS256/384/512 وRS256/384/512 وPS256/384/512 وES256/384/512.",
+    "algorithm-mismatch": "لا تطابق الخوارزمية المحددة قيمة alg في رأس JWT.",
+    "invalid-key-json": "إدخال JWK أو JWKS ليس JSON صالحا.",
+    "invalid-jwk": "يجب أن يكون JSON المفتاح كائن JWK أو كائن JWKS يحتوي على مصفوفة keys.",
+    "empty-jwks": "مصفوفة مفاتيح JWKS فارغة.",
+    "jwk-kid-not-found": "لا يوجد مفتاح في JWKS يطابق قيمة kid في رأس JWT.",
+    "unsupported-key-format": "استخدم نصا عاديا لخوارزميات HS، أو مفتاح PEM عام أو JWK أو JWKS للخوارزميات غير المتماثلة.",
+    "unsupported-pem-label": "لا تدعم عملية التحقق إلا مفاتيح PEM العامة التي تحتوي على BEGIN PUBLIC KEY.",
+    "key-import-failed": "تعذر استيراد المفتاح للخوارزمية المحددة.",
+    "webcrypto-unavailable": "WebCrypto غير متاح في سياق هذا المتصفح."
+  }
+}

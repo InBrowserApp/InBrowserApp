@@ -1,0 +1,4 @@
+{
+  "name": "JWT 디코더 및 검증기",
+  "description": "JSON Web Token 헤더와 페이로드를 로컬에서 디코딩하고, 등록된 클레임을 검사하며, 비밀값, PEM 공개 키, JWK 또는 JWKS로 HS, RS, PS, ES 서명을 검증합니다."
+}

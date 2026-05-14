@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "Compact bir JWT yapıştırın. Başlık ve payload, herhangi bir imza kontrolü çalışmadan önce yerel olarak çözülür.",
+    "label": "JWT token",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Örneği kullan",
+    "clear": "Temizle"
+  },
+  "decoded": {
+    "title": "Çözülmüş token",
+    "description": "Token segmentinden çözülmüş, okunabilir biçimde yazdırılmış JSON.",
+    "headerTitle": "Başlık",
+    "payloadTitle": "Payload",
+    "copyJson": "JSON'u kopyala",
+    "copied": "Kopyalandı",
+    "emptyTitle": "Çözmek için bir JWT yapıştırın",
+    "emptyDescription": "Araç compact üç parçalı JWT biçimini bekler: header.payload.signature."
+  },
+  "verification": {
+    "title": "İmza doğrulama",
+    "description": "JWS imzasını paylaşılan bir secret, PEM public key, JWK veya JWKS ile doğrulayın.",
+    "algorithmLabel": "Algoritma",
+    "algorithmDescription": "Otomatik seçim, JWT başlığındaki alg değerini kullanır. Elle seçim yine de başlıkla eşleşmelidir.",
+    "autoAlgorithm": "Başlıktan otomatik",
+    "keyLabel": "Secret veya public key",
+    "keyDescription": "HS algoritmaları için düz metin kullanın. RS, PS ve ES algoritmaları için PEM public key, JWK veya JWKS kullanın. Değerler kaydedilmez.",
+    "keyPlaceholder": "secret\n\nveya\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nveya\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Doğrulamaya hazır",
+    "waitingDescription": "İmzayı kontrol etmek için geçerli bir token ve doğrulama materyali girin.",
+    "pendingTitle": "İmza doğrulanıyor",
+    "verifiedTitle": "İmza doğrulandı",
+    "verifiedDescription": "İmza; token başlığı, payload, algoritma ve sağlanan anahtarla eşleşiyor.",
+    "failedTitle": "Doğrulama başarısız",
+    "failedDescription": "İmza, sağlanan anahtar ve algoritmayla eşleşmiyor."
+  },
+  "claims": {
+    "title": "Registered claim'ler",
+    "description": "Yaygın zamana dayalı JWT claim'leri için hızlı kontroller.",
+    "emptyTitle": "İncelenecek zaman claim'i yok",
+    "emptyDescription": "Bu payload exp, nbf veya iat claim'leri içermiyor.",
+    "severities": {
+      "danger": "Sorun",
+      "warning": "Uyarı",
+      "success": "Geçerli",
+      "neutral": "Bilgi"
+    },
+    "messages": {
+      "payload-not-object": "Payload bir JSON nesnesi değil, bu yüzden registered claim'ler incelenemez.",
+      "invalid-exp": "exp claim'i var ancak numeric date değil.",
+      "invalid-nbf": "nbf claim'i var ancak numeric date değil.",
+      "invalid-iat": "iat claim'i var ancak numeric date değil.",
+      "expired": "{date} tarihinde süresi doldu.",
+      "not-yet-valid": "{date} tarihinden önce geçerli değil.",
+      "issued-in-future": "Gelecekte, {date} tarihinde verilmiş.",
+      "expires-at": "{date} tarihinde süresi dolar.",
+      "valid-after": "{date} tarihinden sonra geçerli.",
+      "issued-at": "{date} tarihinde verildi."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Çözmek için bir JWT yapıştırın.",
+    "invalid-segment-count": "JWT'ler tam olarak noktayla ayrılmış üç segmente sahip olmalıdır.",
+    "empty-header-or-payload": "JWT başlığı ve payload segmentleri boş olamaz.",
+    "invalid-header-base64": "Başlık segmenti geçerli base64url değil.",
+    "invalid-payload-base64": "Payload segmenti geçerli base64url değil.",
+    "invalid-signature-base64": "İmza segmenti geçerli base64url değil.",
+    "invalid-header-json": "Başlık segmenti geçerli JSON değil.",
+    "invalid-payload-json": "Payload segmenti geçerli JSON değil.",
+    "header-not-object": "JWT başlığı bir JSON nesnesine çözümlenmelidir."
+  },
+  "verifyErrors": {
+    "key-required": "Doğrulamadan önce bir secret veya public key girin.",
+    "missing-algorithm": "JWT başlığı bir alg değeri içermiyor.",
+    "unsupported-algorithm": "Bu doğrulayıcı HS256/384/512, RS256/384/512, PS256/384/512 ve ES256/384/512 destekler.",
+    "algorithm-mismatch": "Seçilen algoritma JWT başlığındaki alg değeriyle eşleşmiyor.",
+    "invalid-key-json": "JWK veya JWKS girdisi geçerli JSON değil.",
+    "invalid-jwk": "Anahtar JSON'u bir JWK nesnesi veya keys dizisi olan bir JWKS nesnesi olmalıdır.",
+    "empty-jwks": "JWKS keys dizisi boş.",
+    "jwk-kid-not-found": "JWKS içindeki hiçbir anahtar JWT başlığındaki kid değeriyle eşleşmiyor.",
+    "unsupported-key-format": "HS algoritmaları için düz metin, asimetrik algoritmalar için PEM public key, JWK veya JWKS kullanın.",
+    "unsupported-pem-label": "Doğrulama için yalnızca BEGIN PUBLIC KEY içeren PEM public key'ler desteklenir.",
+    "key-import-failed": "Anahtar, seçilen algoritma için içe aktarılamadı.",
+    "webcrypto-unavailable": "WebCrypto bu tarayıcı bağlamında kullanılamıyor."
+  }
+}

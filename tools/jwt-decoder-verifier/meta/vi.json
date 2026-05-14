@@ -1,0 +1,4 @@
+{
+  "name": "Bộ giải mã và xác minh JWT",
+  "description": "Giải mã cục bộ header và payload của JSON Web Token, kiểm tra các claim đã đăng ký, và xác minh chữ ký HS, RS, PS, và ES bằng secret, khóa công khai PEM, JWK, hoặc JWKS."
+}

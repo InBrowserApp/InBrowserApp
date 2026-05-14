@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "Dán một JWT dạng compact. Header và payload được giải mã cục bộ trước khi chạy bất kỳ bước kiểm tra chữ ký nào.",
+    "label": "JWT token",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Dùng mẫu",
+    "clear": "Xóa"
+  },
+  "decoded": {
+    "title": "Token đã giải mã",
+    "description": "JSON đã định dạng đẹp được giải mã từ phân đoạn token.",
+    "headerTitle": "Header",
+    "payloadTitle": "Payload",
+    "copyJson": "Sao chép JSON",
+    "copied": "Đã sao chép",
+    "emptyTitle": "Dán một JWT để giải mã",
+    "emptyDescription": "Công cụ yêu cầu định dạng JWT compact gồm ba phần: header.payload.signature."
+  },
+  "verification": {
+    "title": "Xác minh chữ ký",
+    "description": "Xác minh chữ ký JWS bằng shared secret, khóa công khai PEM, JWK, hoặc JWKS.",
+    "algorithmLabel": "Thuật toán",
+    "algorithmDescription": "Tự động dùng giá trị alg từ JWT header. Lựa chọn thủ công vẫn phải khớp với header.",
+    "autoAlgorithm": "Tự động từ header",
+    "keyLabel": "Secret hoặc khóa công khai",
+    "keyDescription": "Dùng văn bản thuần cho thuật toán HS. Dùng khóa công khai PEM, JWK, hoặc JWKS cho thuật toán RS, PS, và ES. Các giá trị không được lưu.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Sẵn sàng xác minh",
+    "waitingDescription": "Nhập token hợp lệ và vật liệu xác minh để kiểm tra chữ ký.",
+    "pendingTitle": "Đang xác minh chữ ký",
+    "verifiedTitle": "Chữ ký đã xác minh",
+    "verifiedDescription": "Chữ ký khớp với header, payload, thuật toán và khóa đã cung cấp của token.",
+    "failedTitle": "Xác minh thất bại",
+    "failedDescription": "Chữ ký không khớp với khóa và thuật toán đã cung cấp."
+  },
+  "claims": {
+    "title": "Claim đã đăng ký",
+    "description": "Kiểm tra nhanh các claim JWT phổ biến dựa trên thời gian.",
+    "emptyTitle": "Không có claim thời gian để kiểm tra",
+    "emptyDescription": "Payload này không bao gồm claim exp, nbf, hoặc iat.",
+    "severities": {
+      "danger": "Vấn đề",
+      "warning": "Cảnh báo",
+      "success": "Hợp lệ",
+      "neutral": "Thông tin"
+    },
+    "messages": {
+      "payload-not-object": "Payload không phải là đối tượng JSON, nên không thể kiểm tra các claim đã đăng ký.",
+      "invalid-exp": "Claim exp có mặt nhưng không phải là ngày dạng số.",
+      "invalid-nbf": "Claim nbf có mặt nhưng không phải là ngày dạng số.",
+      "invalid-iat": "Claim iat có mặt nhưng không phải là ngày dạng số.",
+      "expired": "Đã hết hạn lúc {date}.",
+      "not-yet-valid": "Chưa hợp lệ trước {date}.",
+      "issued-in-future": "Được phát hành trong tương lai lúc {date}.",
+      "expires-at": "Hết hạn lúc {date}.",
+      "valid-after": "Hợp lệ sau {date}.",
+      "issued-at": "Được phát hành lúc {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Dán một JWT để giải mã.",
+    "invalid-segment-count": "JWT phải có đúng ba phân đoạn được phân tách bằng dấu chấm.",
+    "empty-header-or-payload": "Các phân đoạn header và payload của JWT không được để trống.",
+    "invalid-header-base64": "Phân đoạn header không phải là base64url hợp lệ.",
+    "invalid-payload-base64": "Phân đoạn payload không phải là base64url hợp lệ.",
+    "invalid-signature-base64": "Phân đoạn chữ ký không phải là base64url hợp lệ.",
+    "invalid-header-json": "Phân đoạn header không phải là JSON hợp lệ.",
+    "invalid-payload-json": "Phân đoạn payload không phải là JSON hợp lệ.",
+    "header-not-object": "JWT header phải giải mã thành một đối tượng JSON."
+  },
+  "verifyErrors": {
+    "key-required": "Nhập secret hoặc khóa công khai trước khi xác minh.",
+    "missing-algorithm": "JWT header không bao gồm giá trị alg.",
+    "unsupported-algorithm": "Bộ xác minh này hỗ trợ HS256/384/512, RS256/384/512, PS256/384/512, và ES256/384/512.",
+    "algorithm-mismatch": "Thuật toán đã chọn không khớp với giá trị alg trong JWT header.",
+    "invalid-key-json": "Đầu vào JWK hoặc JWKS không phải là JSON hợp lệ.",
+    "invalid-jwk": "JSON khóa phải là một đối tượng JWK hoặc một đối tượng JWKS có mảng keys.",
+    "empty-jwks": "Mảng keys của JWKS đang trống.",
+    "jwk-kid-not-found": "Không có khóa nào trong JWKS khớp với giá trị kid trong JWT header.",
+    "unsupported-key-format": "Dùng văn bản thuần cho thuật toán HS, hoặc khóa công khai PEM, JWK, hoặc JWKS cho thuật toán bất đối xứng.",
+    "unsupported-pem-label": "Chỉ hỗ trợ khóa công khai PEM có BEGIN PUBLIC KEY để xác minh.",
+    "key-import-failed": "Không thể nhập khóa cho thuật toán đã chọn.",
+    "webcrypto-unavailable": "WebCrypto không khả dụng trong ngữ cảnh trình duyệt này."
+  }
+}

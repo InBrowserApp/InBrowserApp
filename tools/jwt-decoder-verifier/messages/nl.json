@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "Plak een compacte JWT. De header en payload worden lokaal gedecodeerd voordat er een handtekeningcontrole wordt uitgevoerd.",
+    "label": "JWT-token",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Voorbeeld gebruiken",
+    "clear": "Wissen"
+  },
+  "decoded": {
+    "title": "Gedecodeerde token",
+    "description": "Netjes opgemaakte JSON die uit het tokensegment is gedecodeerd.",
+    "headerTitle": "Header",
+    "payloadTitle": "Payload",
+    "copyJson": "JSON kopieren",
+    "copied": "Gekopieerd",
+    "emptyTitle": "Plak een JWT om deze te decoderen",
+    "emptyDescription": "De tool verwacht de compacte JWT-indeling met drie delen: header.payload.signature."
+  },
+  "verification": {
+    "title": "Handtekeningverificatie",
+    "description": "Verifieer de JWS-handtekening met een gedeeld secret, PEM-public key, JWK of JWKS.",
+    "algorithmLabel": "Algoritme",
+    "algorithmDescription": "Auto gebruikt de alg-waarde uit de JWT-header. Handmatige selectie moet nog steeds overeenkomen met de header.",
+    "autoAlgorithm": "Auto uit header",
+    "keyLabel": "Secret of public key",
+    "keyDescription": "Gebruik platte tekst voor HS-algoritmen. Gebruik een PEM-public key, JWK of JWKS voor RS-, PS- en ES-algoritmen. Waarden worden niet opgeslagen.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Klaar om te verifiëren",
+    "waitingDescription": "Voer een geldige token en verificatiemateriaal in om de handtekening te controleren.",
+    "pendingTitle": "Handtekening verifiëren",
+    "verifiedTitle": "Handtekening geverifieerd",
+    "verifiedDescription": "De handtekening komt overeen met de tokenheader, payload, het algoritme en de opgegeven key.",
+    "failedTitle": "Verificatie mislukt",
+    "failedDescription": "De handtekening komt niet overeen met de opgegeven key en het algoritme."
+  },
+  "claims": {
+    "title": "Geregistreerde claims",
+    "description": "Snelle controles voor veelvoorkomende tijdgebaseerde JWT-claims.",
+    "emptyTitle": "Geen tijdclaims om te inspecteren",
+    "emptyDescription": "Deze payload bevat geen exp-, nbf- of iat-claims.",
+    "severities": {
+      "danger": "Probleem",
+      "warning": "Waarschuwing",
+      "success": "Geldig",
+      "neutral": "Info"
+    },
+    "messages": {
+      "payload-not-object": "De payload is geen JSON-object, dus geregistreerde claims kunnen niet worden geinspecteerd.",
+      "invalid-exp": "De exp-claim is aanwezig, maar is geen numerieke datum.",
+      "invalid-nbf": "De nbf-claim is aanwezig, maar is geen numerieke datum.",
+      "invalid-iat": "De iat-claim is aanwezig, maar is geen numerieke datum.",
+      "expired": "Verlopen op {date}.",
+      "not-yet-valid": "Niet geldig voor {date}.",
+      "issued-in-future": "Uitgegeven in de toekomst op {date}.",
+      "expires-at": "Verloopt op {date}.",
+      "valid-after": "Geldig na {date}.",
+      "issued-at": "Uitgegeven op {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Plak een JWT om deze te decoderen.",
+    "invalid-segment-count": "JWT's moeten exact drie door punten gescheiden segmenten hebben.",
+    "empty-header-or-payload": "De JWT-header- en payloadsegmenten mogen niet leeg zijn.",
+    "invalid-header-base64": "Het headersegment is geen geldige base64url.",
+    "invalid-payload-base64": "Het payloadsegment is geen geldige base64url.",
+    "invalid-signature-base64": "Het signaturesegment is geen geldige base64url.",
+    "invalid-header-json": "Het headersegment is geen geldige JSON.",
+    "invalid-payload-json": "Het payloadsegment is geen geldige JSON.",
+    "header-not-object": "De JWT-header moet decoderen naar een JSON-object."
+  },
+  "verifyErrors": {
+    "key-required": "Voer een secret of public key in voordat je verifieert.",
+    "missing-algorithm": "De JWT-header bevat geen alg-waarde.",
+    "unsupported-algorithm": "Deze verifier ondersteunt HS256/384/512, RS256/384/512, PS256/384/512 en ES256/384/512.",
+    "algorithm-mismatch": "Het geselecteerde algoritme komt niet overeen met de alg-waarde in de JWT-header.",
+    "invalid-key-json": "De JWK- of JWKS-invoer is geen geldige JSON.",
+    "invalid-jwk": "De key-JSON moet een JWK-object zijn of een JWKS-object met een keys-array.",
+    "empty-jwks": "De JWKS-keys-array is leeg.",
+    "jwk-kid-not-found": "Geen key in de JWKS komt overeen met de kid-waarde in de JWT-header.",
+    "unsupported-key-format": "Gebruik platte tekst voor HS-algoritmen, of een PEM-public key, JWK of JWKS voor asymmetrische algoritmen.",
+    "unsupported-pem-label": "Alleen PEM-public keys met BEGIN PUBLIC KEY worden ondersteund voor verificatie.",
+    "key-import-failed": "De key kon niet worden geimporteerd voor het geselecteerde algoritme.",
+    "webcrypto-unavailable": "WebCrypto is niet beschikbaar in deze browsercontext."
+  }
+}

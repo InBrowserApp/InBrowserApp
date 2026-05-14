@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "粘贴一个紧凑格式的 JWT。在执行任何签名检查之前，会先在本地解码标头和载荷。",
+    "label": "JWT token",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "使用示例",
+    "clear": "清除"
+  },
+  "decoded": {
+    "title": "已解码的 token",
+    "description": "从 token 片段解码出的格式化 JSON。",
+    "headerTitle": "标头",
+    "payloadTitle": "载荷",
+    "copyJson": "复制 JSON",
+    "copied": "已复制",
+    "emptyTitle": "粘贴 JWT 以解码",
+    "emptyDescription": "该工具需要紧凑的三段式 JWT 格式：header.payload.signature。"
+  },
+  "verification": {
+    "title": "签名验证",
+    "description": "使用共享密钥、PEM 公钥、JWK 或 JWKS 验证 JWS 签名。",
+    "algorithmLabel": "算法",
+    "algorithmDescription": "自动模式使用 JWT 标头中的 alg 值。手动选择仍必须与标头匹配。",
+    "autoAlgorithm": "从标头自动选择",
+    "keyLabel": "密钥或公钥",
+    "keyDescription": "HS 算法使用纯文本。RS、PS 和 ES 算法使用 PEM 公钥、JWK 或 JWKS。值不会被保存。",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "准备验证",
+    "waitingDescription": "输入有效 token 和验证材料以检查签名。",
+    "pendingTitle": "正在验证签名",
+    "verifiedTitle": "签名已验证",
+    "verifiedDescription": "签名与 token 标头、载荷、算法和提供的密钥匹配。",
+    "failedTitle": "验证失败",
+    "failedDescription": "签名与提供的密钥和算法不匹配。"
+  },
+  "claims": {
+    "title": "注册声明",
+    "description": "快速检查常见的基于时间的 JWT 声明。",
+    "emptyTitle": "没有可检查的时间声明",
+    "emptyDescription": "此载荷不包含 exp、nbf 或 iat 声明。",
+    "severities": {
+      "danger": "问题",
+      "warning": "警告",
+      "success": "有效",
+      "neutral": "信息"
+    },
+    "messages": {
+      "payload-not-object": "载荷不是 JSON 对象，因此无法检查注册声明。",
+      "invalid-exp": "存在 exp 声明，但它不是数值日期。",
+      "invalid-nbf": "存在 nbf 声明，但它不是数值日期。",
+      "invalid-iat": "存在 iat 声明，但它不是数值日期。",
+      "expired": "已于 {date} 过期。",
+      "not-yet-valid": "在 {date} 之前无效。",
+      "issued-in-future": "签发时间在未来：{date}。",
+      "expires-at": "将于 {date} 过期。",
+      "valid-after": "{date} 后有效。",
+      "issued-at": "签发于 {date}。"
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "粘贴 JWT 以解码。",
+    "invalid-segment-count": "JWT 必须正好包含三个以点分隔的片段。",
+    "empty-header-or-payload": "JWT 标头和载荷片段不能为空。",
+    "invalid-header-base64": "标头片段不是有效的 base64url。",
+    "invalid-payload-base64": "载荷片段不是有效的 base64url。",
+    "invalid-signature-base64": "签名片段不是有效的 base64url。",
+    "invalid-header-json": "标头片段不是有效的 JSON。",
+    "invalid-payload-json": "载荷片段不是有效的 JSON。",
+    "header-not-object": "JWT 标头必须解码为 JSON 对象。"
+  },
+  "verifyErrors": {
+    "key-required": "验证前请输入密钥或公钥。",
+    "missing-algorithm": "JWT 标头不包含 alg 值。",
+    "unsupported-algorithm": "此验证器支持 HS256/384/512、RS256/384/512、PS256/384/512 和 ES256/384/512。",
+    "algorithm-mismatch": "所选算法与 JWT 标头 alg 值不匹配。",
+    "invalid-key-json": "JWK 或 JWKS 输入不是有效的 JSON。",
+    "invalid-jwk": "密钥 JSON 必须是 JWK 对象，或带有 keys 数组的 JWKS 对象。",
+    "empty-jwks": "JWKS keys 数组为空。",
+    "jwk-kid-not-found": "JWKS 中没有密钥与 JWT 标头 kid 值匹配。",
+    "unsupported-key-format": "HS 算法使用纯文本，非对称算法使用 PEM 公钥、JWK 或 JWKS。",
+    "unsupported-pem-label": "仅支持带有 BEGIN PUBLIC KEY 的 PEM 公钥用于验证。",
+    "key-import-failed": "无法为所选算法导入密钥。",
+    "webcrypto-unavailable": "当前浏览器环境中 WebCrypto 不可用。"
+  }
+}

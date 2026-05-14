@@ -1,0 +1,4 @@
+{
+  "name": "JWT Çözücü ve Doğrulayıcı",
+  "description": "JSON Web Token başlıklarını ve payload'larını yerel olarak çözün, registered claim'leri inceleyin ve HS, RS, PS ve ES imzalarını bir secret, PEM public key, JWK veya JWKS ile doğrulayın."
+}

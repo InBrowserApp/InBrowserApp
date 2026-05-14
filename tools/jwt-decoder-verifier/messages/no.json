@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "Lim inn en kompakt JWT. Headeren og nyttelasten dekodes lokalt før noen signaturkontroll kjøres.",
+    "label": "JWT-token",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Bruk eksempel",
+    "clear": "Tøm"
+  },
+  "decoded": {
+    "title": "Dekodet token",
+    "description": "Pent formatert JSON dekodet fra tokensegmentet.",
+    "headerTitle": "Header",
+    "payloadTitle": "Nyttelast",
+    "copyJson": "Kopier JSON",
+    "copied": "Kopiert",
+    "emptyTitle": "Lim inn en JWT for å dekode den",
+    "emptyDescription": "Verktøyet forventer det kompakte tredelte JWT-formatet: header.payload.signature."
+  },
+  "verification": {
+    "title": "Signaturverifisering",
+    "description": "Verifiser JWS-signaturen med en delt hemmelighet, offentlig PEM-nøkkel, JWK eller JWKS.",
+    "algorithmLabel": "Algoritme",
+    "algorithmDescription": "Auto bruker alg-verdien fra JWT-headeren. Manuelt valg må fortsatt samsvare med headeren.",
+    "autoAlgorithm": "Auto fra header",
+    "keyLabel": "Hemmelighet eller offentlig nøkkel",
+    "keyDescription": "Bruk ren tekst for HS-algoritmer. Bruk en offentlig PEM-nøkkel, JWK eller JWKS for RS-, PS- og ES-algoritmer. Verdier lagres ikke.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Klar til å verifisere",
+    "waitingDescription": "Skriv inn et gyldig token og verifiseringsmateriale for å kontrollere signaturen.",
+    "pendingTitle": "Verifiserer signatur",
+    "verifiedTitle": "Signatur verifisert",
+    "verifiedDescription": "Signaturen samsvarer med tokenets header, nyttelast, algoritme og oppgitte nøkkel.",
+    "failedTitle": "Verifisering mislyktes",
+    "failedDescription": "Signaturen samsvarer ikke med den oppgitte nøkkelen og algoritmen."
+  },
+  "claims": {
+    "title": "Registrerte claims",
+    "description": "Raske kontroller for vanlige tidsbaserte JWT-claims.",
+    "emptyTitle": "Ingen tidsclaims å inspisere",
+    "emptyDescription": "Denne nyttelasten inneholder ikke exp-, nbf- eller iat-claims.",
+    "severities": {
+      "danger": "Problem",
+      "warning": "Advarsel",
+      "success": "Gyldig",
+      "neutral": "Info"
+    },
+    "messages": {
+      "payload-not-object": "Nyttelasten er ikke et JSON-objekt, så registrerte claims kan ikke inspiseres.",
+      "invalid-exp": "exp-claimet finnes, men er ikke en numerisk dato.",
+      "invalid-nbf": "nbf-claimet finnes, men er ikke en numerisk dato.",
+      "invalid-iat": "iat-claimet finnes, men er ikke en numerisk dato.",
+      "expired": "Utløp {date}.",
+      "not-yet-valid": "Ikke gyldig før {date}.",
+      "issued-in-future": "Utstedt i fremtiden {date}.",
+      "expires-at": "Utløper {date}.",
+      "valid-after": "Gyldig etter {date}.",
+      "issued-at": "Utstedt {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Lim inn en JWT for å dekode den.",
+    "invalid-segment-count": "JWT-er må ha nøyaktig tre segmenter atskilt med punktum.",
+    "empty-header-or-payload": "JWT-headeren og nyttelastsegmentene kan ikke være tomme.",
+    "invalid-header-base64": "Headersegmentet er ikke gyldig base64url.",
+    "invalid-payload-base64": "Nyttelastsegmentet er ikke gyldig base64url.",
+    "invalid-signature-base64": "Signatursegmentet er ikke gyldig base64url.",
+    "invalid-header-json": "Headersegmentet er ikke gyldig JSON.",
+    "invalid-payload-json": "Nyttelastsegmentet er ikke gyldig JSON.",
+    "header-not-object": "JWT-headeren må dekodes til et JSON-objekt."
+  },
+  "verifyErrors": {
+    "key-required": "Skriv inn en hemmelighet eller offentlig nøkkel før verifisering.",
+    "missing-algorithm": "JWT-headeren inneholder ikke en alg-verdi.",
+    "unsupported-algorithm": "Denne verifikatoren støtter HS256/384/512, RS256/384/512, PS256/384/512 og ES256/384/512.",
+    "algorithm-mismatch": "Den valgte algoritmen samsvarer ikke med alg-verdien i JWT-headeren.",
+    "invalid-key-json": "JWK- eller JWKS-inndataene er ikke gyldig JSON.",
+    "invalid-jwk": "Nøkkel-JSON må være et JWK-objekt eller et JWKS-objekt med en keys-array.",
+    "empty-jwks": "JWKS keys-arrayen er tom.",
+    "jwk-kid-not-found": "Ingen nøkkel i JWKS samsvarer med kid-verdien i JWT-headeren.",
+    "unsupported-key-format": "Bruk ren tekst for HS-algoritmer, eller en offentlig PEM-nøkkel, JWK eller JWKS for asymmetriske algoritmer.",
+    "unsupported-pem-label": "Bare offentlige PEM-nøkler med BEGIN PUBLIC KEY støttes for verifisering.",
+    "key-import-failed": "Nøkkelen kunne ikke importeres for den valgte algoritmen.",
+    "webcrypto-unavailable": "WebCrypto er ikke tilgjengelig i denne nettleserkonteksten."
+  }
+}

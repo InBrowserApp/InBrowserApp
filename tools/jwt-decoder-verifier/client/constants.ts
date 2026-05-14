@@ -1,0 +1,7 @@
+const SAMPLE_TOKEN =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9." +
+  "eyJzdWIiOiJ1c2VyXzEyMyIsIm5hbWUiOiJBZGEgTG92ZWxhY2UiLCJyb2xlIjoiYWRtaW4iLCJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tIiwiZXhwIjoxODkzNDU2MDAwfQ." +
+  "NCOUWxMCGt2j3YuIY1QpWI7kdGAfeVlwe6mcXjhsmpw"
+const SAMPLE_SECRET = "secret"
+
+export { SAMPLE_SECRET, SAMPLE_TOKEN }

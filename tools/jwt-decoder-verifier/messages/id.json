@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "Tempel JWT ringkas. Header dan payload didekode secara lokal sebelum pemeriksaan tanda tangan berjalan.",
+    "label": "Token JWT",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Gunakan contoh",
+    "clear": "Hapus"
+  },
+  "decoded": {
+    "title": "Token yang didekode",
+    "description": "JSON berformat rapi yang didekode dari segmen token.",
+    "headerTitle": "Header",
+    "payloadTitle": "Payload",
+    "copyJson": "Salin JSON",
+    "copied": "Disalin",
+    "emptyTitle": "Tempel JWT untuk mendekodenya",
+    "emptyDescription": "Alat ini mengharapkan format JWT ringkas tiga bagian: header.payload.signature."
+  },
+  "verification": {
+    "title": "Verifikasi tanda tangan",
+    "description": "Verifikasi tanda tangan JWS dengan shared secret, public key PEM, JWK, atau JWKS.",
+    "algorithmLabel": "Algoritma",
+    "algorithmDescription": "Otomatis menggunakan nilai alg dari header JWT. Pilihan manual tetap harus cocok dengan header.",
+    "autoAlgorithm": "Otomatis dari header",
+    "keyLabel": "Secret atau public key",
+    "keyDescription": "Gunakan teks biasa untuk algoritma HS. Gunakan public key PEM, JWK, atau JWKS untuk algoritma RS, PS, dan ES. Nilai tidak disimpan.",
+    "keyPlaceholder": "secret\n\natau\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\natau\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Siap memverifikasi",
+    "waitingDescription": "Masukkan token yang valid dan materi verifikasi untuk memeriksa tanda tangan.",
+    "pendingTitle": "Memverifikasi tanda tangan",
+    "verifiedTitle": "Tanda tangan terverifikasi",
+    "verifiedDescription": "Tanda tangan cocok dengan header token, payload, algoritma, dan kunci yang diberikan.",
+    "failedTitle": "Verifikasi gagal",
+    "failedDescription": "Tanda tangan tidak cocok dengan kunci dan algoritma yang diberikan."
+  },
+  "claims": {
+    "title": "Registered claims",
+    "description": "Pemeriksaan cepat untuk klaim JWT umum berbasis waktu.",
+    "emptyTitle": "Tidak ada klaim waktu untuk diperiksa",
+    "emptyDescription": "Payload ini tidak menyertakan klaim exp, nbf, atau iat.",
+    "severities": {
+      "danger": "Masalah",
+      "warning": "Peringatan",
+      "success": "Valid",
+      "neutral": "Info"
+    },
+    "messages": {
+      "payload-not-object": "Payload bukan objek JSON, sehingga registered claims tidak dapat diperiksa.",
+      "invalid-exp": "Klaim exp ada tetapi bukan tanggal numerik.",
+      "invalid-nbf": "Klaim nbf ada tetapi bukan tanggal numerik.",
+      "invalid-iat": "Klaim iat ada tetapi bukan tanggal numerik.",
+      "expired": "Kedaluwarsa pada {date}.",
+      "not-yet-valid": "Belum valid sebelum {date}.",
+      "issued-in-future": "Diterbitkan di masa depan pada {date}.",
+      "expires-at": "Kedaluwarsa pada {date}.",
+      "valid-after": "Valid setelah {date}.",
+      "issued-at": "Diterbitkan pada {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Tempel JWT untuk mendekodenya.",
+    "invalid-segment-count": "JWT harus memiliki tepat tiga segmen yang dipisahkan titik.",
+    "empty-header-or-payload": "Segmen header dan payload JWT tidak boleh kosong.",
+    "invalid-header-base64": "Segmen header bukan base64url yang valid.",
+    "invalid-payload-base64": "Segmen payload bukan base64url yang valid.",
+    "invalid-signature-base64": "Segmen tanda tangan bukan base64url yang valid.",
+    "invalid-header-json": "Segmen header bukan JSON yang valid.",
+    "invalid-payload-json": "Segmen payload bukan JSON yang valid.",
+    "header-not-object": "Header JWT harus didekode menjadi objek JSON."
+  },
+  "verifyErrors": {
+    "key-required": "Masukkan secret atau public key sebelum memverifikasi.",
+    "missing-algorithm": "Header JWT tidak menyertakan nilai alg.",
+    "unsupported-algorithm": "Verifier ini mendukung HS256/384/512, RS256/384/512, PS256/384/512, dan ES256/384/512.",
+    "algorithm-mismatch": "Algoritma yang dipilih tidak cocok dengan nilai alg header JWT.",
+    "invalid-key-json": "Input JWK atau JWKS bukan JSON yang valid.",
+    "invalid-jwk": "JSON kunci harus berupa objek JWK atau objek JWKS dengan array keys.",
+    "empty-jwks": "Array keys JWKS kosong.",
+    "jwk-kid-not-found": "Tidak ada kunci dalam JWKS yang cocok dengan nilai kid header JWT.",
+    "unsupported-key-format": "Gunakan teks biasa untuk algoritma HS, atau public key PEM, JWK, atau JWKS untuk algoritma asimetris.",
+    "unsupported-pem-label": "Hanya public key PEM dengan BEGIN PUBLIC KEY yang didukung untuk verifikasi.",
+    "key-import-failed": "Kunci tidak dapat diimpor untuk algoritma yang dipilih.",
+    "webcrypto-unavailable": "WebCrypto tidak tersedia dalam konteks browser ini."
+  }
+}

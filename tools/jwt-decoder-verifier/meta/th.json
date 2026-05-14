@@ -1,0 +1,4 @@
+{
+  "name": "ตัวถอดรหัสและตรวจสอบ JWT",
+  "description": "ถอดรหัสส่วนหัวและเพย์โหลดของ JSON Web Token ในเครื่อง ตรวจดู registered claims และตรวจสอบลายเซ็น HS, RS, PS และ ES ด้วย secret, PEM public key, JWK หรือ JWKS"
+}

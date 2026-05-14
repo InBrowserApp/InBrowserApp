@@ -1,0 +1,4 @@
+{
+  "name": "Penyahkod dan Pengesah JWT",
+  "description": "Nyahkod pengepala dan muatan JSON Web Token secara setempat, semak tuntutan berdaftar, dan sahkan tandatangan HS, RS, PS, dan ES dengan rahsia, kunci awam PEM, JWK, atau JWKS."
+}
