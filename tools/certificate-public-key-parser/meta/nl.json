@@ -1,0 +1,4 @@
+{
+  "name": "X.509 Certificate & Public Key Parser",
+  "description": "Parseer X.509-certificaten en openbare sleutels in PEM-, DER- of base64 DER-vorm. Bekijk onderwerpen, uitgevers, geldigheidsdatums, fingerprints, extensies en sleutelgegevens lokaal in je browser."
+}

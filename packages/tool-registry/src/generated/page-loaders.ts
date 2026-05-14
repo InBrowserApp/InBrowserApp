@@ -33,6 +33,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "business-days-calculator": () =>
     import("@tool/business-days-calculator/page"),
   "case-converter": () => import("@tool/case-converter/page"),
+  "certificate-public-key-parser": () =>
+    import("@tool/certificate-public-key-parser/page"),
   "chinese-uppercase-number-converter": () =>
     import("@tool/chinese-uppercase-number-converter/page"),
   "chmod-calculator": () => import("@tool/chmod-calculator/page"),

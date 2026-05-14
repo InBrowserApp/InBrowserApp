@@ -1,0 +1,4 @@
+{
+  "name": "Trình phân tích chứng chỉ X.509 & khóa công khai",
+  "description": "Phân tích chứng chỉ X.509 và khóa công khai ở dạng PEM, DER hoặc base64 DER. Xem lại subject, issuer, ngày hiệu lực, fingerprint, extension và chi tiết khóa ngay trong trình duyệt của bạn."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Analyseur de certificats X.509 et de clés publiques",
+  "description": "Analysez des certificats X.509 et des clés publiques au format PEM, DER ou DER base64. Consultez localement dans votre navigateur les sujets, émetteurs, dates de validité, empreintes, extensions et détails des clés."
+}

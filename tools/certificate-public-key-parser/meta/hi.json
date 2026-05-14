@@ -1,0 +1,4 @@
+{
+  "name": "X.509 Certificate और Public Key Parser",
+  "description": "PEM, DER, या base64 DER रूप में X.509 certificates और public keys को parse करें। Subjects, issuers, validity dates, fingerprints, extensions, और key details को अपने browser में local रूप से देखें।"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Parser Sertifikat X.509 & Kunci Publik",
+  "description": "Parse sertifikat X.509 dan kunci publik dalam bentuk PEM, DER, atau base64 DER. Tinjau subject, issuer, tanggal validitas, fingerprint, ekstensi, dan detail kunci secara lokal di browser Anda."
+}

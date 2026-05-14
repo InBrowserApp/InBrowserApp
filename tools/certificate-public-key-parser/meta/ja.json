@@ -1,0 +1,4 @@
+{
+  "name": "X.509 Certificate & Public Key Parser",
+  "description": "PEM、DER、base64 DER 形式の X.509 証明書と公開鍵を解析します。サブジェクト、発行者、有効期間、フィンガープリント、拡張、鍵の詳細をブラウザー内でローカルに確認できます。"
+}

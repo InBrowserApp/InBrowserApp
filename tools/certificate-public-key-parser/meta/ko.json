@@ -1,0 +1,4 @@
+{
+  "name": "X.509 Certificate & Public Key Parser",
+  "description": "PEM, DER 또는 base64 DER 형식의 X.509 인증서와 공개 키를 파싱합니다. 주체, 발급자, 유효 기간, 지문, 확장 필드, 키 세부 정보를 브라우저에서 로컬로 확인하세요."
+}
