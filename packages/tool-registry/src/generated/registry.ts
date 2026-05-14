@@ -8162,6 +8162,126 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "image-to-webp-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "webp", "converter", "compress", "resize", "batch"],
+    locales: {
+      ar: {
+        name: "محول الصور إلى WebP",
+        description:
+          "حوّل الصور إلى WebP مع تغيير الحجم اختيارياً وتصدير الدفعة بصيغة ZIP.",
+      },
+      de: {
+        name: "Bild-zu-WebP-Konverter",
+        description:
+          "Konvertiere Bilder in WebP mit optionaler Größenänderung und Batch-Export als ZIP.",
+      },
+      en: {
+        name: "Image to WebP Converter",
+        description:
+          "Convert images to WebP with optional resizing and batch ZIP export.",
+      },
+      es: {
+        name: "Convertidor de imágenes a WebP",
+        description:
+          "Convierte imágenes a WebP con cambio de tamaño opcional y exportación ZIP por lotes.",
+      },
+      fr: {
+        name: "Convertisseur d’images en WebP",
+        description:
+          "Convertissez des images en WebP avec redimensionnement facultatif et export ZIP par lot.",
+      },
+      he: {
+        name: "ממיר תמונות ל-WebP",
+        description:
+          "המר תמונות ל-WebP עם שינוי גודל אופציונלי וייצוא ZIP באצווה.",
+      },
+      hi: {
+        name: "इमेज से WebP कन्वर्टर",
+        description:
+          "वैकल्पिक आकार बदलने और बैच ZIP एक्सपोर्ट के साथ इमेज को WebP में बदलें।",
+      },
+      id: {
+        name: "Konverter Gambar ke WebP",
+        description:
+          "Konversi gambar ke WebP dengan opsi ubah ukuran dan ekspor batch ZIP.",
+      },
+      it: {
+        name: "Convertitore di immagini in WebP",
+        description:
+          "Converti immagini in WebP con ridimensionamento opzionale ed esportazione ZIP in batch.",
+      },
+      ja: {
+        name: "画像から WebP へのコンバーター",
+        description:
+          "画像を WebP に変換し、必要に応じてリサイズや一括 ZIP エクスポートを行えます。",
+      },
+      ko: {
+        name: "이미지 WebP 변환기",
+        description:
+          "선택적 크기 조정과 일괄 ZIP 내보내기로 이미지를 WebP로 변환합니다.",
+      },
+      ms: {
+        name: "Penukar Imej kepada WebP",
+        description:
+          "Tukar imej kepada WebP dengan pilihan saiz semula dan eksport ZIP kelompok.",
+      },
+      nl: {
+        name: "Afbeelding naar WebP-converter",
+        description:
+          "Converteer afbeeldingen naar WebP met optioneel formaat aanpassen en batch-ZIP-export.",
+      },
+      no: {
+        name: "Bilde til WebP-konverterer",
+        description:
+          "Konverter bilder til WebP med valgfri skalering og ZIP-eksport for flere filer.",
+      },
+      pl: {
+        name: "Konwerter obrazów do WebP",
+        description:
+          "Konwertuj obrazy do WebP z opcjonalną zmianą rozmiaru i zbiorczym eksportem ZIP.",
+      },
+      pt: {
+        name: "Conversor de Imagens para WebP",
+        description:
+          "Converta imagens para WebP com redimensionamento opcional e exportação em lote para ZIP.",
+      },
+      ru: {
+        name: "Конвертер изображений в WebP",
+        description:
+          "Конвертируйте изображения в WebP с настройкой размера и пакетным экспортом в ZIP.",
+      },
+      sv: {
+        name: "Bild till WebP-konverterare",
+        description:
+          "Konvertera bilder till WebP med valfri storleksändring och batchexport som ZIP.",
+      },
+      th: {
+        name: "ตัวแปลงรูปภาพเป็น WebP",
+        description: "แปลงรูปภาพเป็น WebP พร้อมตัวเลือกปรับขนาดและส่งออกเป็น ZIP แบบชุด",
+      },
+      tr: {
+        name: "Görselden WebP'ye Dönüştürücü",
+        description:
+          "Görselleri isteğe bağlı yeniden boyutlandırma ve toplu ZIP dışa aktarma ile WebP'ye dönüştürün.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi ảnh sang WebP",
+        description:
+          "Chuyển đổi ảnh sang WebP với tùy chọn đổi kích thước và xuất hàng loạt thành ZIP.",
+      },
+      "zh-CN": {
+        name: "图片转 WebP 转换器",
+        description: "将图片转换为 WebP，可选择调整尺寸并批量导出 ZIP。",
+      },
+      "zh-TW": {
+        name: "圖片轉 WebP 轉換器",
+        description: "將圖片轉換為 WebP，可選擇調整尺寸並批次匯出 ZIP。",
+      },
+    },
+  },
+  {
     slug: "imei-validator",
     category: "text",
     icon: "binary",
@@ -28946,6 +29066,126 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "圖片轉 ICO 轉換器",
         description: "將圖片轉換為用於網站圖示與應用圖示的 ICO 檔案。",
+      },
+    },
+  },
+  "image-to-webp-converter": {
+    slug: "image-to-webp-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "webp", "converter", "compress", "resize", "batch"],
+    locales: {
+      ar: {
+        name: "محول الصور إلى WebP",
+        description:
+          "حوّل الصور إلى WebP مع تغيير الحجم اختيارياً وتصدير الدفعة بصيغة ZIP.",
+      },
+      de: {
+        name: "Bild-zu-WebP-Konverter",
+        description:
+          "Konvertiere Bilder in WebP mit optionaler Größenänderung und Batch-Export als ZIP.",
+      },
+      en: {
+        name: "Image to WebP Converter",
+        description:
+          "Convert images to WebP with optional resizing and batch ZIP export.",
+      },
+      es: {
+        name: "Convertidor de imágenes a WebP",
+        description:
+          "Convierte imágenes a WebP con cambio de tamaño opcional y exportación ZIP por lotes.",
+      },
+      fr: {
+        name: "Convertisseur d’images en WebP",
+        description:
+          "Convertissez des images en WebP avec redimensionnement facultatif et export ZIP par lot.",
+      },
+      he: {
+        name: "ממיר תמונות ל-WebP",
+        description:
+          "המר תמונות ל-WebP עם שינוי גודל אופציונלי וייצוא ZIP באצווה.",
+      },
+      hi: {
+        name: "इमेज से WebP कन्वर्टर",
+        description:
+          "वैकल्पिक आकार बदलने और बैच ZIP एक्सपोर्ट के साथ इमेज को WebP में बदलें।",
+      },
+      id: {
+        name: "Konverter Gambar ke WebP",
+        description:
+          "Konversi gambar ke WebP dengan opsi ubah ukuran dan ekspor batch ZIP.",
+      },
+      it: {
+        name: "Convertitore di immagini in WebP",
+        description:
+          "Converti immagini in WebP con ridimensionamento opzionale ed esportazione ZIP in batch.",
+      },
+      ja: {
+        name: "画像から WebP へのコンバーター",
+        description:
+          "画像を WebP に変換し、必要に応じてリサイズや一括 ZIP エクスポートを行えます。",
+      },
+      ko: {
+        name: "이미지 WebP 변환기",
+        description:
+          "선택적 크기 조정과 일괄 ZIP 내보내기로 이미지를 WebP로 변환합니다.",
+      },
+      ms: {
+        name: "Penukar Imej kepada WebP",
+        description:
+          "Tukar imej kepada WebP dengan pilihan saiz semula dan eksport ZIP kelompok.",
+      },
+      nl: {
+        name: "Afbeelding naar WebP-converter",
+        description:
+          "Converteer afbeeldingen naar WebP met optioneel formaat aanpassen en batch-ZIP-export.",
+      },
+      no: {
+        name: "Bilde til WebP-konverterer",
+        description:
+          "Konverter bilder til WebP med valgfri skalering og ZIP-eksport for flere filer.",
+      },
+      pl: {
+        name: "Konwerter obrazów do WebP",
+        description:
+          "Konwertuj obrazy do WebP z opcjonalną zmianą rozmiaru i zbiorczym eksportem ZIP.",
+      },
+      pt: {
+        name: "Conversor de Imagens para WebP",
+        description:
+          "Converta imagens para WebP com redimensionamento opcional e exportação em lote para ZIP.",
+      },
+      ru: {
+        name: "Конвертер изображений в WebP",
+        description:
+          "Конвертируйте изображения в WebP с настройкой размера и пакетным экспортом в ZIP.",
+      },
+      sv: {
+        name: "Bild till WebP-konverterare",
+        description:
+          "Konvertera bilder till WebP med valfri storleksändring och batchexport som ZIP.",
+      },
+      th: {
+        name: "ตัวแปลงรูปภาพเป็น WebP",
+        description: "แปลงรูปภาพเป็น WebP พร้อมตัวเลือกปรับขนาดและส่งออกเป็น ZIP แบบชุด",
+      },
+      tr: {
+        name: "Görselden WebP'ye Dönüştürücü",
+        description:
+          "Görselleri isteğe bağlı yeniden boyutlandırma ve toplu ZIP dışa aktarma ile WebP'ye dönüştürün.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi ảnh sang WebP",
+        description:
+          "Chuyển đổi ảnh sang WebP với tùy chọn đổi kích thước và xuất hàng loạt thành ZIP.",
+      },
+      "zh-CN": {
+        name: "图片转 WebP 转换器",
+        description: "将图片转换为 WebP，可选择调整尺寸并批量导出 ZIP。",
+      },
+      "zh-TW": {
+        name: "圖片轉 WebP 轉換器",
+        description: "將圖片轉換為 WebP，可選擇調整尺寸並批次匯出 ZIP。",
       },
     },
   },

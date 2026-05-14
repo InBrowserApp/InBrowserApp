@@ -86,6 +86,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-palette-extractor": () => import("@tool/image-palette-extractor/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),
+  "image-to-webp-converter": () => import("@tool/image-to-webp-converter/page"),
   "imei-validator": () => import("@tool/imei-validator/page"),
   "ip-cidr-normalizer": () => import("@tool/ip-cidr-normalizer/page"),
   "ip-info-lookup": () => import("@tool/ip-info-lookup/page"),
