@@ -5706,6 +5706,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-to-webp-converter",
+    language: "ar",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "de",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "en",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "es",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "fr",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "he",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "hi",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "id",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "it",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "ja",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "ko",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "ms",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "nl",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "no",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "pl",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "pt",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "ru",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "sv",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "th",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "tr",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "vi",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-to-webp-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "imei-validator",
     language: "ar",
   },

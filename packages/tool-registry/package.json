@@ -69,6 +69,7 @@
     "@tool/image-palette-extractor": "workspace:*",
     "@tool/image-resizer": "workspace:*",
     "@tool/image-to-ico": "workspace:*",
+    "@tool/image-to-webp-converter": "workspace:*",
     "@tool/imei-validator": "workspace:*",
     "@tool/ip-cidr-normalizer": "workspace:*",
     "@tool/ip-range-to-cidr-converter": "workspace:*",
