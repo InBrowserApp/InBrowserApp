@@ -152,7 +152,9 @@ function CertificatePublicKeyParserClient({
             <FieldLabel htmlFor={inputId}>{messages.inputLabel}</FieldLabel>
             <Textarea
               id={inputId}
+              name="certificate-input"
               aria-label={messages.inputLabel}
+              autoComplete="off"
               dir="ltr"
               spellCheck={false}
               translate="no"
@@ -218,7 +220,7 @@ function CertificatePublicKeyParserClient({
           <CardTitle>{messages.resultsTitle}</CardTitle>
           <CardDescription>{messages.resultsDescription}</CardDescription>
         </CardHeader>
-        <ToolPanelCardContent>
+        <ToolPanelCardContent aria-live="polite">
           <ParserResults messages={messages} state={parseState} />
         </ToolPanelCardContent>
       </ToolPanelCard>

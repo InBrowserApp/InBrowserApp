@@ -46,7 +46,7 @@ function ParserResults({ messages, state }: ParserResultsProps) {
       <Empty className="min-h-72 border bg-muted/20">
         <EmptyHeader>
           <EmptyMedia variant="icon">
-            <LoaderCircle className="animate-spin" />
+            <LoaderCircle className="animate-spin motion-reduce:animate-none" />
           </EmptyMedia>
           <EmptyTitle>{messages.loadingTitle}</EmptyTitle>
           <EmptyDescription>{messages.loadingDescription}</EmptyDescription>
