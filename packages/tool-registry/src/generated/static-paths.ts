@@ -2026,6 +2026,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "camera",
+    language: "ar",
+  },
+  {
+    slug: "camera",
+    language: "de",
+  },
+  {
+    slug: "camera",
+    language: "en",
+  },
+  {
+    slug: "camera",
+    language: "es",
+  },
+  {
+    slug: "camera",
+    language: "fr",
+  },
+  {
+    slug: "camera",
+    language: "he",
+  },
+  {
+    slug: "camera",
+    language: "hi",
+  },
+  {
+    slug: "camera",
+    language: "id",
+  },
+  {
+    slug: "camera",
+    language: "it",
+  },
+  {
+    slug: "camera",
+    language: "ja",
+  },
+  {
+    slug: "camera",
+    language: "ko",
+  },
+  {
+    slug: "camera",
+    language: "ms",
+  },
+  {
+    slug: "camera",
+    language: "nl",
+  },
+  {
+    slug: "camera",
+    language: "no",
+  },
+  {
+    slug: "camera",
+    language: "pl",
+  },
+  {
+    slug: "camera",
+    language: "pt",
+  },
+  {
+    slug: "camera",
+    language: "ru",
+  },
+  {
+    slug: "camera",
+    language: "sv",
+  },
+  {
+    slug: "camera",
+    language: "th",
+  },
+  {
+    slug: "camera",
+    language: "tr",
+  },
+  {
+    slug: "camera",
+    language: "vi",
+  },
+  {
+    slug: "camera",
+    language: "zh-CN",
+  },
+  {
+    slug: "camera",
+    language: "zh-TW",
+  },
+  {
     slug: "case-converter",
     language: "ar",
   },

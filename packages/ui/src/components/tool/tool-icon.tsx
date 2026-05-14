@@ -3,6 +3,7 @@ import type { LucideProps } from "lucide-react"
 import {
   Binary,
   Braces,
+  Camera,
   CaseSensitive,
   Clock3,
   CreditCard,
@@ -18,6 +19,7 @@ import {
 const iconMap: Record<string, React.ComponentType<LucideProps>> = {
   binary: Binary,
   braces: Braces,
+  camera: Camera,
   "case-sensitive": CaseSensitive,
   clock3: Clock3,
   "credit-card": CreditCard,
