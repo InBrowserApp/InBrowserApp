@@ -1,0 +1,4 @@
+{
+  "name": "CityHash64-hash text eller fil",
+  "description": "Generera CityHash64-hashar för textinmatning eller filuppladdningar, med ett valfritt seed för prestandaorienterade kontrollsummor och cachenycklar."
+}

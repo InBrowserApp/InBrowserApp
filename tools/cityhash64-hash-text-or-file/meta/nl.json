@@ -1,0 +1,4 @@
+{
+  "name": "CityHash64-hash van tekst of bestand",
+  "description": "Genereer CityHash64-hashes voor tekstinvoer of geuploade bestanden, met een optionele seed voor prestatiegerichte checksums en cachesleutels."
+}

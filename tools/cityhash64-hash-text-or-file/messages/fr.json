@@ -1,0 +1,19 @@
+{
+  "inputLabel": "Entrée",
+  "plainTextLabel": "Texte brut",
+  "plainTextDescription": "Collez ou saisissez n'importe quel texte UTF-8, y compris des emoji et des caractères non latins.",
+  "importFromFileLabel": "Importer depuis un fichier",
+  "hashResultLabel": "Résultat du hachage",
+  "hashResultDescription": "Résultat du hachage pour la saisie de texte actuelle.",
+  "hexLabel": "Hexadécimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Décimal",
+  "binaryLabel": "Binaire",
+  "copyResultLabel": "Copier le résultat",
+  "copiedLabel": "Copié",
+  "seedSectionLabel": "Graine",
+  "seedLabel": "Graine (facultative)",
+  "seedDescription": "Laissez vide pour le CityHash64 standard. Saisissez une graine décimale ou hexadécimale 0x pour calculer la variante avec graine.",
+  "seedPlaceholder": "Graine décimale ou hex 0x facultative",
+  "seedInvalid": "Saisissez un nombre décimal ou une valeur hexadécimale 0x."
+}

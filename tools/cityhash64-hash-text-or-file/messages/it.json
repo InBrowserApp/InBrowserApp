@@ -1,0 +1,19 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Testo semplice",
+  "plainTextDescription": "Incolla o digita qualsiasi testo UTF-8, inclusi emoji e caratteri non latini.",
+  "importFromFileLabel": "Importa da file",
+  "hashResultLabel": "Risultato hash",
+  "hashResultDescription": "Risultato hash per l'input di testo corrente.",
+  "hexLabel": "Esadecimale",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimale",
+  "binaryLabel": "Binario",
+  "copyResultLabel": "Copia risultato",
+  "copiedLabel": "Copiato",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (opzionale)",
+  "seedDescription": "Lascia vuoto per CityHash64 standard. Inserisci un seed decimale o esadecimale 0x per calcolare la variante con seed.",
+  "seedPlaceholder": "Seed decimale o esadecimale 0x opzionale",
+  "seedInvalid": "Inserisci un numero decimale o un valore esadecimale 0x."
+}

@@ -2394,6 +2394,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cityhash64-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "cityhash64-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "code-screenshot-generator",
     language: "ar",
   },

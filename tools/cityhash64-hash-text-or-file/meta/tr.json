@@ -1,0 +1,4 @@
+{
+  "name": "CityHash64 Metin veya Dosya Hash'i",
+  "description": "Performans odakli saglama toplamlari ve onbellek anahtarlari icin istege bagli seed ile metin girisi veya dosya yuklemeleri icin CityHash64 hash'leri olusturun."
+}

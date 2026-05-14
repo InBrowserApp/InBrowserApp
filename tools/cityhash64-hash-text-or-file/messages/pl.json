@@ -1,0 +1,19 @@
+{
+  "inputLabel": "Dane wejściowe",
+  "plainTextLabel": "Zwykły tekst",
+  "plainTextDescription": "Wklej lub wpisz dowolny tekst UTF-8, w tym emoji i znaki spoza alfabetu łacińskiego.",
+  "importFromFileLabel": "Importuj z pliku",
+  "hashResultLabel": "Wynik hasha",
+  "hashResultDescription": "Wynik hashowania dla bieżących danych tekstowych.",
+  "hexLabel": "Szesnastkowo",
+  "base64Label": "Base64",
+  "decimalLabel": "Dziesiętnie",
+  "binaryLabel": "Binarnie",
+  "copyResultLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (opcjonalnie)",
+  "seedDescription": "Pozostaw puste dla standardowego CityHash64. Wpisz seed dziesiętny lub szesnastkowy z prefiksem 0x, aby obliczyć wariant z seedem.",
+  "seedPlaceholder": "Opcjonalny seed dziesiętny lub hex 0x",
+  "seedInvalid": "Wpisz liczbę dziesiętną albo wartość szesnastkową z prefiksem 0x."
+}

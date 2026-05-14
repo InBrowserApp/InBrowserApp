@@ -1,0 +1,4 @@
+{
+  "name": "Hash CityHash64 tekstu lub pliku",
+  "description": "Generuj hashe CityHash64 dla tekstu lub przesłanych plików, z opcjonalnym seedem do sum kontrolnych i kluczy cache nastawionych na wydajność."
+}

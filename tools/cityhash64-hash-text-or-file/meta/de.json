@@ -1,0 +1,4 @@
+{
+  "name": "CityHash64-Hash fuer Text oder Datei",
+  "description": "Generieren Sie CityHash64-Hashes fuer Texteingaben oder Datei-Uploads, mit optionalem Seed fuer leistungsorientierte Pruefsummen und Cache-Schluessel."
+}
