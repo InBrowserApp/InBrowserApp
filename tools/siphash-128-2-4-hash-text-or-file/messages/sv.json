@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "Konfiguration",
+  "configurationDescription": "Ange den 128-bitars nyckel som används för det aktuella SipHash-128-2-4-resultatet.",
+  "keyLabel": "Nyckel (hex, 16 byte)",
+  "keyDescription": "Använd exakt 32 hexadecimala tecken. Ett 0x-prefix, mellanslag, kolon, bindestreck och understreck accepteras.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "Ange en 16-byte nyckel som 32 hexadecimala tecken. 0x-prefixet är valfritt.",
+  "inputLabel": "Indata",
+  "plainTextLabel": "Vanlig text",
+  "plainTextDescription": "Klistra in eller skriv valfri UTF-8-text, inklusive cachenycklar eller begärandenyttolaster.",
+  "importFromFileLabel": "Importera från fil",
+  "hashResultLabel": "Hashresultat",
+  "hashResultDescription": "SipHash-128-2-4-utdata för aktuell textinmatning och nyckel.",
+  "emptyStateDescription": "Ange en giltig 16-byte nyckel och skriv text eller importera en fil för att generera ett SipHash-128-2-4-resultat.",
+  "fileHashErrorLabel": "Det gick inte att hasha filen.",
+  "textHashErrorLabel": "Det gick inte att hasha texten.",
+  "hexLabel": "Hexadecimalt",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimalt",
+  "binaryLabel": "Binärt",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierat"
+}

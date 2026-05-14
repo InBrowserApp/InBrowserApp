@@ -138,6 +138,7 @@
     "@tool/sha512-hash-text-or-file": "workspace:*",
     "@tool/shake128-hash-text-or-file": "workspace:*",
     "@tool/shake256-hash-text-or-file": "workspace:*",
+    "@tool/siphash-128-2-4-hash-text-or-file": "workspace:*",
     "@tool/siphash-2-4-hash-text-or-file": "workspace:*",
     "@tool/sitemap-xml-generator": "workspace:*",
     "@tool/slug-generator": "workspace:*",

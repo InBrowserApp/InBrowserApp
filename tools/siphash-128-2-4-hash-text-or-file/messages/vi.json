@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "Cấu hình",
+  "configurationDescription": "Đặt khóa 128-bit dùng cho kết quả SipHash-128-2-4 hiện tại.",
+  "keyLabel": "Khóa (Hex, 16 byte)",
+  "keyDescription": "Dùng đúng 32 ký tự thập lục phân. Có thể dùng tiền tố 0x, dấu cách, dấu hai chấm, dấu gạch nối và dấu gạch dưới.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "Nhập khóa 16 byte dưới dạng 32 ký tự thập lục phân. Tiền tố 0x là tùy chọn.",
+  "inputLabel": "Đầu vào",
+  "plainTextLabel": "Văn bản thuần",
+  "plainTextDescription": "Dán hoặc nhập bất kỳ văn bản UTF-8 nào, bao gồm cache key hoặc payload của yêu cầu.",
+  "importFromFileLabel": "Nhập từ tệp",
+  "hashResultLabel": "Kết quả băm",
+  "hashResultDescription": "Đầu ra SipHash-128-2-4 cho đầu vào văn bản và khóa hiện tại.",
+  "emptyStateDescription": "Nhập khóa 16 byte hợp lệ và cung cấp văn bản hoặc nhập một tệp để tạo kết quả SipHash-128-2-4.",
+  "fileHashErrorLabel": "Không thể băm tệp.",
+  "textHashErrorLabel": "Không thể băm văn bản.",
+  "hexLabel": "Thập lục phân",
+  "base64Label": "Base64",
+  "decimalLabel": "Thập phân",
+  "binaryLabel": "Nhị phân",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép"
+}

@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "Yapılandırma",
+  "configurationDescription": "Geçerli SipHash-128-2-4 sonucu için kullanılan 128 bitlik anahtarı ayarlayın.",
+  "keyLabel": "Anahtar (Onaltılık, 16 bayt)",
+  "keyDescription": "Tam olarak 32 onaltılık karakter kullanın. 0x öneki, boşluklar, iki nokta üst üste işaretleri, kısa çizgiler ve alt çizgiler kabul edilir.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "16 baytlık anahtarı 32 onaltılık karakter şeklinde girin. 0x öneki isteğe bağlıdır.",
+  "inputLabel": "Girdi",
+  "plainTextLabel": "Düz metin",
+  "plainTextDescription": "Önbellek anahtarları veya istek yükleri dahil herhangi bir UTF-8 metni yapıştırın ya da yazın.",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "hashResultLabel": "Karma sonucu",
+  "hashResultDescription": "Geçerli metin girdisi ve anahtar için SipHash-128-2-4 çıktısı.",
+  "emptyStateDescription": "SipHash-128-2-4 sonucu oluşturmak için 16 baytlık geçerli bir anahtar girin ve metin sağlayın veya bir dosya içe aktarın.",
+  "fileHashErrorLabel": "Dosya karması oluşturulamadı.",
+  "textHashErrorLabel": "Metin karması oluşturulamadı.",
+  "hexLabel": "Onaltılık",
+  "base64Label": "Base64",
+  "decimalLabel": "Ondalık",
+  "binaryLabel": "İkili",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı"
+}

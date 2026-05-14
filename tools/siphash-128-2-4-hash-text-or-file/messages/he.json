@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "תצורה",
+  "configurationDescription": "הגדירו את מפתח 128 הביט המשמש לתוצאה הנוכחית של SipHash-128-2-4.",
+  "keyLabel": "מפתח (Hex, 16 בתים)",
+  "keyDescription": "השתמשו בדיוק ב-32 תווים הקסדצימליים. התחילית 0x, רווחים, נקודתיים, מקפים וקווים תחתונים מתקבלים.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "הזינו מפתח של 16 בתים בתור 32 תווים הקסדצימליים. התחילית 0x אופציונלית.",
+  "inputLabel": "קלט",
+  "plainTextLabel": "טקסט רגיל",
+  "plainTextDescription": "הדביקו או הקלידו כל טקסט בקידוד UTF-8, כולל מפתחות מטמון או מטעני בקשות.",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "hashResultLabel": "תוצאת גיבוב",
+  "hashResultDescription": "פלט SipHash-128-2-4 עבור קלט הטקסט והמפתח הנוכחיים.",
+  "emptyStateDescription": "הזינו מפתח תקין של 16 בתים וספקו טקסט או ייבאו קובץ כדי ליצור תוצאת SipHash-128-2-4.",
+  "fileHashErrorLabel": "חישוב הגיבוב של הקובץ נכשל.",
+  "textHashErrorLabel": "חישוב הגיבוב של הטקסט נכשל.",
+  "hexLabel": "הקסדצימלי",
+  "base64Label": "Base64",
+  "decimalLabel": "עשרוני",
+  "binaryLabel": "בינארי",
+  "copyResultLabel": "העתק תוצאה",
+  "copiedLabel": "הועתק"
+}

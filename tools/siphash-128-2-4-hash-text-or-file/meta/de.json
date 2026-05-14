@@ -1,0 +1,4 @@
+{
+  "name": "SipHash-128-2-4-Hash für Text oder Datei",
+  "description": "Erzeuge schlüsselbasierte SipHash-128-2-4-Hashes für Texteingaben oder Datei-Uploads. Verwende einen 128-Bit-Hex-Schlüssel, um schnelle, nicht kryptografische 128-Bit-Hashes für Hash-Tabellen, Cache-Schlüssel und Prüfsummen-Workflows zu berechnen."
+}
