@@ -5726,6 +5726,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "dns-lookup",
+    category: "network",
+    icon: "globe",
+    tags: ["dns", "domain", "lookup", "doh", "network", "records"],
+    locales: {
+      ar: {
+        name: "استعلام DNS",
+        description:
+          "استعلم عن سجلات DNS من الأنواع A وAAAA وCNAME وMX وTXT وNS وSOA وCAA وSRV وHTTPS وSVCB عبر محللات DNS over HTTPS.",
+      },
+      de: {
+        name: "DNS-Abfrage",
+        description:
+          "Frage A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS und SVCB DNS-Einträge über DNS over HTTPS Resolver ab.",
+      },
+      en: {
+        name: "DNS Lookup",
+        description:
+          "Query A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, and SVCB DNS records through DNS over HTTPS resolvers.",
+      },
+      es: {
+        name: "Búsqueda DNS",
+        description:
+          "Consulta registros DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS y SVCB mediante resolvedores DNS sobre HTTPS.",
+      },
+      fr: {
+        name: "Recherche DNS",
+        description:
+          "Interrogez les enregistrements DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS et SVCB via des résolveurs DNS over HTTPS.",
+      },
+      he: {
+        name: "בדיקת DNS",
+        description:
+          "שאילתת רשומות DNS מסוג A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS ו-SVCB דרך פותרי DNS over HTTPS.",
+      },
+      hi: {
+        name: "DNS Lookup",
+        description:
+          "DNS over HTTPS resolver के ज़रिए A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, और SVCB DNS रिकॉर्ड क्वेरी करें।",
+      },
+      id: {
+        name: "DNS Lookup",
+        description:
+          "Lakukan kueri record DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, dan SVCB melalui resolver DNS over HTTPS.",
+      },
+      it: {
+        name: "Ricerca DNS",
+        description:
+          "Interroga i record DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS e SVCB tramite resolver DNS over HTTPS.",
+      },
+      ja: {
+        name: "DNS ルックアップ",
+        description:
+          "DNS over HTTPS リゾルバーを通じて、A、AAAA、CNAME、MX、TXT、NS、SOA、CAA、SRV、HTTPS、SVCB の DNS レコードを照会します。",
+      },
+      ko: {
+        name: "DNS 조회",
+        description:
+          "DNS over HTTPS 리졸버를 통해 A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, SVCB DNS 레코드를 조회합니다.",
+      },
+      ms: {
+        name: "DNS Lookup",
+        description:
+          "Kueri rekod DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, dan SVCB melalui penyelesai DNS over HTTPS.",
+      },
+      nl: {
+        name: "DNS Lookup",
+        description:
+          "Vraag A-, AAAA-, CNAME-, MX-, TXT-, NS-, SOA-, CAA-, SRV-, HTTPS- en SVCB-DNS-records op via DNS over HTTPS-resolvers.",
+      },
+      no: {
+        name: "DNS-oppslag",
+        description:
+          "Slå opp DNS-postene A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS og SVCB via DNS over HTTPS-resolvere.",
+      },
+      pl: {
+        name: "Wyszukiwanie DNS",
+        description:
+          "Odpytuj rekordy DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS i SVCB przez resolwery DNS over HTTPS.",
+      },
+      pt: {
+        name: "Consulta DNS",
+        description:
+          "Consulte registros DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS e SVCB por meio de resolvedores DNS over HTTPS.",
+      },
+      ru: {
+        name: "DNS Lookup",
+        description:
+          "Запрашивайте DNS-записи A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS и SVCB через резолверы DNS over HTTPS.",
+      },
+      sv: {
+        name: "DNS Lookup",
+        description:
+          "Fråga A-, AAAA-, CNAME-, MX-, TXT-, NS-, SOA-, CAA-, SRV-, HTTPS- och SVCB-DNS-poster via DNS over HTTPS-resolvers.",
+      },
+      th: {
+        name: "ค้นหา DNS",
+        description:
+          "ค้นหา DNS record ประเภท A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS และ SVCB ผ่านรีโซลเวอร์ DNS over HTTPS",
+      },
+      tr: {
+        name: "DNS Sorgulama",
+        description:
+          "DNS over HTTPS çözümleyicileri üzerinden A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS ve SVCB DNS kayıtlarını sorgulayın.",
+      },
+      vi: {
+        name: "Tra cứu DNS",
+        description:
+          "Truy vấn bản ghi DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS và SVCB thông qua các bộ phân giải DNS over HTTPS.",
+      },
+      "zh-CN": {
+        name: "DNS 查询",
+        description:
+          "通过 DNS over HTTPS 解析器查询 A、AAAA、CNAME、MX、TXT、NS、SOA、CAA、SRV、HTTPS 和 SVCB DNS 记录。",
+      },
+      "zh-TW": {
+        name: "DNS 查詢",
+        description:
+          "透過 DNS over HTTPS 解析器查詢 A、AAAA、CNAME、MX、TXT、NS、SOA、CAA、SRV、HTTPS 和 SVCB DNS 記錄。",
+      },
+    },
+  },
+  {
     slug: "docker-run-to-compose-converter",
     category: "developer",
     icon: "network",

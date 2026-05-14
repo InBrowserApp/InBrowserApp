@@ -1,0 +1,4 @@
+{
+  "name": "DNS Lookup",
+  "description": "Query A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, and SVCB DNS records through DNS over HTTPS resolvers."
+}

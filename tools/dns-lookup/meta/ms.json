@@ -1,0 +1,4 @@
+{
+  "name": "DNS Lookup",
+  "description": "Kueri rekod DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, dan SVCB melalui penyelesai DNS over HTTPS."
+}

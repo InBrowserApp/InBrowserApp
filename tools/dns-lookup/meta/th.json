@@ -1,0 +1,4 @@
+{
+  "name": "ค้นหา DNS",
+  "description": "ค้นหา DNS record ประเภท A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS และ SVCB ผ่านรีโซลเวอร์ DNS over HTTPS"
+}

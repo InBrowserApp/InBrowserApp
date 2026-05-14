@@ -1,0 +1,4 @@
+{
+  "name": "DNS 查询",
+  "description": "通过 DNS over HTTPS 解析器查询 A、AAAA、CNAME、MX、TXT、NS、SOA、CAA、SRV、HTTPS 和 SVCB DNS 记录。"
+}

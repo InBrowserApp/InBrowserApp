@@ -4142,6 +4142,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "dns-lookup",
+    language: "ar",
+  },
+  {
+    slug: "dns-lookup",
+    language: "de",
+  },
+  {
+    slug: "dns-lookup",
+    language: "en",
+  },
+  {
+    slug: "dns-lookup",
+    language: "es",
+  },
+  {
+    slug: "dns-lookup",
+    language: "fr",
+  },
+  {
+    slug: "dns-lookup",
+    language: "he",
+  },
+  {
+    slug: "dns-lookup",
+    language: "hi",
+  },
+  {
+    slug: "dns-lookup",
+    language: "id",
+  },
+  {
+    slug: "dns-lookup",
+    language: "it",
+  },
+  {
+    slug: "dns-lookup",
+    language: "ja",
+  },
+  {
+    slug: "dns-lookup",
+    language: "ko",
+  },
+  {
+    slug: "dns-lookup",
+    language: "ms",
+  },
+  {
+    slug: "dns-lookup",
+    language: "nl",
+  },
+  {
+    slug: "dns-lookup",
+    language: "no",
+  },
+  {
+    slug: "dns-lookup",
+    language: "pl",
+  },
+  {
+    slug: "dns-lookup",
+    language: "pt",
+  },
+  {
+    slug: "dns-lookup",
+    language: "ru",
+  },
+  {
+    slug: "dns-lookup",
+    language: "sv",
+  },
+  {
+    slug: "dns-lookup",
+    language: "th",
+  },
+  {
+    slug: "dns-lookup",
+    language: "tr",
+  },
+  {
+    slug: "dns-lookup",
+    language: "vi",
+  },
+  {
+    slug: "dns-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "dns-lookup",
+    language: "zh-TW",
+  },
+  {
     slug: "docker-run-to-compose-converter",
     language: "ar",
   },

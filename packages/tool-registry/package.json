@@ -52,6 +52,7 @@
     "@tool/current-network-time": "workspace:*",
     "@tool/data-uri-to-file-converter": "workspace:*",
     "@tool/device-information": "workspace:*",
+    "@tool/dns-lookup": "workspace:*",
     "@tool/docker-run-to-compose-converter": "workspace:*",
     "@tool/duration-calculator": "workspace:*",
     "@tool/email-validator": "workspace:*",

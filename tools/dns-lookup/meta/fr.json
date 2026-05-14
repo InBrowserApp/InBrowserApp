@@ -1,0 +1,4 @@
+{
+  "name": "Recherche DNS",
+  "description": "Interrogez les enregistrements DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS et SVCB via des résolveurs DNS over HTTPS."
+}

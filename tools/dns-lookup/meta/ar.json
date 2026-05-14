@@ -1,0 +1,4 @@
+{
+  "name": "استعلام DNS",
+  "description": "استعلم عن سجلات DNS من الأنواع A وAAAA وCNAME وMX وTXT وNS وSOA وCAA وSRV وHTTPS وSVCB عبر محللات DNS over HTTPS."
+}

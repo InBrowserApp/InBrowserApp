@@ -1,0 +1,4 @@
+{
+  "name": "DNS Sorgulama",
+  "description": "DNS over HTTPS çözümleyicileri üzerinden A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS ve SVCB DNS kayıtlarını sorgulayın."
+}

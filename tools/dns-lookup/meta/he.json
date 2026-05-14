@@ -1,0 +1,4 @@
+{
+  "name": "בדיקת DNS",
+  "description": "שאילתת רשומות DNS מסוג A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS ו-SVCB דרך פותרי DNS over HTTPS."
+}

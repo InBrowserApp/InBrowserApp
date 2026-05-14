@@ -1,0 +1,4 @@
+{
+  "name": "DNS-Abfrage",
+  "description": "Frage A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS und SVCB DNS-Einträge über DNS over HTTPS Resolver ab."
+}

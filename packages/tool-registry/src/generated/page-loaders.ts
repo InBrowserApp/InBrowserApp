@@ -61,6 +61,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "data-uri-to-file-converter": () =>
     import("@tool/data-uri-to-file-converter/page"),
   "device-information": () => import("@tool/device-information/page"),
+  "dns-lookup": () => import("@tool/dns-lookup/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
