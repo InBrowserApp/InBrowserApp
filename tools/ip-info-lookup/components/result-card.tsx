@@ -26,7 +26,8 @@ type ResultCardProps = Readonly<{
 
 function ResultCard({ inputState, lookupState, messages }: ResultCardProps) {
   const result = lookupState.status === "success" ? lookupState.result : null
-  const target = inputState.status === "valid" ? inputState.target : null
+  const visibleTarget =
+    result?.target ?? (inputState.status === "valid" ? inputState.target : null)
   const copyValue = result?.addresses.map((entry) => entry.address).join("\n")
 
   return (
@@ -48,9 +49,9 @@ function ResultCard({ inputState, lookupState, messages }: ResultCardProps) {
       </CardHeader>
       <CardContent className="p-0">
         {renderCardBody(inputState, lookupState, messages)}
-        {target ? (
+        {visibleTarget ? (
           <p className="border-t px-4 py-3 text-xs break-all text-muted-foreground">
-            {messages.normalizedTarget}: {target.normalized}
+            {messages.normalizedTarget}: {visibleTarget.normalized}
           </p>
         ) : null}
       </CardContent>

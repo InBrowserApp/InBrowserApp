@@ -152,6 +152,31 @@ function makeResult() {
   } as const
 }
 
+function makeIpResult() {
+  return {
+    target: {
+      kind: "ip",
+      input: "8.8.8.8",
+      normalized: "8.8.8.8",
+      address: "8.8.8.8",
+      version: "ipv4",
+    },
+    resolverUrl: "https://cloudflare-dns.com/dns-query",
+    records: [],
+    addresses: [
+      {
+        address: "8.8.8.8",
+        version: "ipv4",
+        info: {
+          ...emptyInfo,
+          isp: "Google",
+          country: "United States",
+        },
+      },
+    ],
+  } as const
+}
+
 beforeEach(() => {
   Object.defineProperty(globalThis.navigator, "clipboard", {
     configurable: true,
@@ -189,6 +214,17 @@ describe("IpInfoLookupClient", () => {
     expect(screen.getByText("edge.example.test")).toBeTruthy()
     expect(screen.getByText("Exampleland (EX)")).toBeTruthy()
     expect(screen.getByRole("link", { name: messages.openMap })).toBeTruthy()
+    expect(
+      screen.getByText(`${messages.normalizedTarget}: example.com`)
+    ).toBeTruthy()
+
+    fireEvent.change(screen.getByLabelText(messages.targetLabel), {
+      target: { value: "8.8.8.8" },
+    })
+
+    expect(
+      screen.getByText(`${messages.normalizedTarget}: example.com`)
+    ).toBeTruthy()
 
     fireEvent.click(
       screen.getByRole("button", { name: messages.copyAllAddresses })
@@ -217,6 +253,28 @@ describe("IpInfoLookupClient", () => {
       }).disabled
     ).toBe(true)
     expect(lookupIpInfoTargetMock).not.toHaveBeenCalled()
+  })
+
+  test("hides resolver controls and address count summary for direct IP lookups", async () => {
+    lookupIpInfoTargetMock.mockResolvedValue(makeIpResult())
+
+    render(<IpInfoLookupClient messages={messages} />)
+
+    fireEvent.change(screen.getByLabelText(messages.targetLabel), {
+      target: { value: "8.8.8.8" },
+    })
+
+    expect(screen.queryByLabelText(messages.resolverLabel)).toBeNull()
+
+    fireEvent.click(screen.getByRole("button", { name: messages.lookupButton }))
+
+    await waitFor(() => {
+      expect(screen.getByText(messages.ipTarget)).toBeTruthy()
+      expect(screen.getByText("Google")).toBeTruthy()
+    })
+
+    expect(screen.queryByText(messages.resolver)).toBeNull()
+    expect(screen.queryByText(messages.addressCount)).toBeNull()
   })
 
   test("shows loading, request error, and empty-domain states", async () => {

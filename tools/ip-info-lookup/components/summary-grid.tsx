@@ -10,6 +10,11 @@ function SummaryGrid({
   result: LookupResult
   messages: IpInfoLookupMessages
 }>) {
+  const isDomainResult = result.target.kind === "domain"
+  const formattedAddressCount = new Intl.NumberFormat().format(
+    result.addresses.length
+  )
+
   return (
     <div className="grid gap-4">
       <div className="flex flex-wrap gap-2">
@@ -18,9 +23,11 @@ function SummaryGrid({
             ? messages.ipTarget
             : messages.domainTarget}
         </Badge>
-        <Badge variant="secondary">
-          {new Intl.NumberFormat().format(result.addresses.length)}
-        </Badge>
+        {isDomainResult ? (
+          <Badge variant="secondary">
+            {messages.addressCount}: {formattedAddressCount}
+          </Badge>
+        ) : null}
       </div>
       <dl className="grid gap-3 sm:grid-cols-2">
         <SummaryItem label={messages.target} value={result.target.input} />
@@ -28,11 +35,15 @@ function SummaryGrid({
           label={messages.normalizedTarget}
           value={result.target.normalized}
         />
-        <SummaryItem label={messages.resolver} value={result.resolverUrl} />
-        <SummaryItem
-          label={messages.addressCount}
-          value={String(result.addresses.length)}
-        />
+        {isDomainResult ? (
+          <>
+            <SummaryItem label={messages.resolver} value={result.resolverUrl} />
+            <SummaryItem
+              label={messages.addressCount}
+              value={formattedAddressCount}
+            />
+          </>
+        ) : null}
       </dl>
     </div>
   )

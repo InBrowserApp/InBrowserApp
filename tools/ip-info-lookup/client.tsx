@@ -81,6 +81,8 @@ function IpInfoLookupClient({ messages }: IpInfoLookupClientProps) {
   const inputState = useMemo(() => parseLookupInput(targetInput), [targetInput])
   const isInvalid = inputState.status === "invalid"
   const isLoading = lookupState.status === "loading"
+  const shouldShowResolver =
+    inputState.status !== "valid" || inputState.target.kind === "domain"
 
   async function handleLookup(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -104,7 +106,7 @@ function IpInfoLookupClient({ messages }: IpInfoLookupClientProps) {
 
   return (
     <div className="grid gap-6 xl:grid-cols-[minmax(0,25rem)_minmax(0,1fr)]">
-      <Card className="gap-0 border-border/70 py-0 shadow-sm">
+      <Card className="min-w-0 gap-0 border-border/70 py-0 shadow-sm xl:sticky xl:top-6 xl:self-start">
         <CardHeader className="border-b py-4">
           <CardTitle>{messages.inputTitle}</CardTitle>
           <CardDescription>{messages.inputDescription}</CardDescription>
@@ -141,31 +143,35 @@ function IpInfoLookupClient({ messages }: IpInfoLookupClientProps) {
                 </FieldContent>
               </Field>
 
-              <Field>
-                <FieldContent>
-                  <FieldLabel htmlFor={resolverId}>
-                    {messages.resolverLabel}
-                  </FieldLabel>
-                  <Select value={resolverUrl} onValueChange={setResolverUrl}>
-                    <SelectTrigger id={resolverId} className="h-11 w-full">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectGroup>
-                        <SelectLabel>{messages.resolverGroupLabel}</SelectLabel>
-                        {BUILTIN_DOH_SERVERS.map((server) => (
-                          <SelectItem key={server.url} value={server.url}>
-                            {server.label}
-                          </SelectItem>
-                        ))}
-                      </SelectGroup>
-                    </SelectContent>
-                  </Select>
-                  <FieldDescription>
-                    {messages.resolverDescription}
-                  </FieldDescription>
-                </FieldContent>
-              </Field>
+              {shouldShowResolver ? (
+                <Field>
+                  <FieldContent>
+                    <FieldLabel htmlFor={resolverId}>
+                      {messages.resolverLabel}
+                    </FieldLabel>
+                    <Select value={resolverUrl} onValueChange={setResolverUrl}>
+                      <SelectTrigger id={resolverId} className="h-11 w-full">
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectGroup>
+                          <SelectLabel>
+                            {messages.resolverGroupLabel}
+                          </SelectLabel>
+                          {BUILTIN_DOH_SERVERS.map((server) => (
+                            <SelectItem key={server.url} value={server.url}>
+                              {server.label}
+                            </SelectItem>
+                          ))}
+                        </SelectGroup>
+                      </SelectContent>
+                    </Select>
+                    <FieldDescription>
+                      {messages.resolverDescription}
+                    </FieldDescription>
+                  </FieldContent>
+                </Field>
+              ) : null}
             </FieldGroup>
 
             <Button
