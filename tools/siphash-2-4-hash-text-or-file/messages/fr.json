@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "Configuration",
+  "configurationDescription": "Définissez la clé de 128 bits utilisée pour le résultat SipHash-2-4 actuel.",
+  "keyLabel": "Clé (hexadécimal, 16 octets)",
+  "keyDescription": "Utilisez exactement 32 caractères hexadécimaux. Un préfixe 0x, les espaces, les deux-points, les traits d'union et les traits de soulignement sont acceptés.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "Saisissez une clé de 16 octets sous forme de 32 caractères hexadécimaux. Le préfixe 0x est facultatif.",
+  "inputLabel": "Entrée",
+  "plainTextLabel": "Texte brut",
+  "plainTextDescription": "Collez ou saisissez n'importe quel texte UTF-8, y compris des clés de cache ou des charges utiles de requête.",
+  "importFromFileLabel": "Importer depuis un fichier",
+  "hashResultLabel": "Résultat du hachage",
+  "hashResultDescription": "Sortie SipHash-2-4 pour la saisie de texte et la clé actuelles.",
+  "emptyStateDescription": "Saisissez une clé valide de 16 octets et fournissez du texte ou importez un fichier pour générer un résultat SipHash-2-4.",
+  "fileHashErrorLabel": "Impossible de hacher le fichier.",
+  "textHashErrorLabel": "Impossible de hacher le texte.",
+  "hexLabel": "Hexadécimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Décimal",
+  "binaryLabel": "Binaire",
+  "copyResultLabel": "Copier le résultat",
+  "copiedLabel": "Copié"
+}

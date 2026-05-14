@@ -1,0 +1,4 @@
+{
+  "name": "Hash Teks atau File SipHash-2-4",
+  "description": "Buat hash berkunci SipHash-2-4 untuk input teks atau unggahan file. Gunakan kunci hex 128-bit untuk menghitung hash non-kriptografis 64-bit yang cepat bagi alur kerja tabel hash, kunci cache, dan checksum."
+}

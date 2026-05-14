@@ -11410,6 +11410,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "siphash-2-4-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "sitemap-xml-generator",
     language: "ar",
   },

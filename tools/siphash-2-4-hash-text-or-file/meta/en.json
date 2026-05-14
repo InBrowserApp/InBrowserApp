@@ -1,0 +1,4 @@
+{
+  "name": "SipHash-2-4 Hash Text or File",
+  "description": "Generate SipHash-2-4 keyed hashes for text input or file upload. Use a 128-bit hex key to compute fast 64-bit non-cryptographic hashes for hash-table, cache-key, and checksum workflows."
+}

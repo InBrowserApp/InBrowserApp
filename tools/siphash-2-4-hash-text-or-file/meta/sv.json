@@ -1,0 +1,4 @@
+{
+  "name": "Hasha text eller fil med SipHash-2-4",
+  "description": "Generera nycklade SipHash-2-4-hashar för textinmatning eller filuppladdning. Använd en 128-bitars hexnyckel för att beräkna snabba 64-bitars icke-kryptografiska hashar för arbetsflöden med hashtabeller, cachenycklar och kontrollsummor."
+}

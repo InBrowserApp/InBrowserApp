@@ -1,0 +1,4 @@
+{
+  "name": "SipHash-2-4 - haszowanie tekstu lub pliku",
+  "description": "Generuj hasze z kluczem SipHash-2-4 dla danych tekstowych lub przesłanego pliku. Użyj 128-bitowego klucza szesnastkowego, aby obliczać szybkie 64-bitowe niekryptograficzne hasze na potrzeby tablic haszujących, kluczy pamięci podręcznej i sum kontrolnych."
+}

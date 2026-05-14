@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "Konfigurasi",
+  "configurationDescription": "Atur kunci 128-bit yang digunakan untuk hasil SipHash-2-4 saat ini.",
+  "keyLabel": "Kunci (Hex, 16 byte)",
+  "keyDescription": "Gunakan tepat 32 karakter heksadesimal. Prefiks 0x, spasi, titik dua, tanda hubung, dan garis bawah diterima.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "Masukkan kunci 16 byte sebagai 32 karakter heksadesimal. Prefiks 0x bersifat opsional.",
+  "inputLabel": "Input",
+  "plainTextLabel": "Teks biasa",
+  "plainTextDescription": "Tempel atau ketik teks UTF-8 apa pun, termasuk kunci cache atau payload permintaan.",
+  "importFromFileLabel": "Impor dari file",
+  "hashResultLabel": "Hasil Hash",
+  "hashResultDescription": "Output SipHash-2-4 untuk input teks dan kunci saat ini.",
+  "emptyStateDescription": "Masukkan kunci 16 byte yang valid dan berikan teks atau impor file untuk membuat hasil SipHash-2-4.",
+  "fileHashErrorLabel": "Gagal membuat hash file.",
+  "textHashErrorLabel": "Gagal membuat hash teks.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Desimal",
+  "binaryLabel": "Biner",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin"
+}

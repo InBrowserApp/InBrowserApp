@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "配置",
+  "configurationDescription": "设置用于当前 SipHash-2-4 结果的 128 位密钥。",
+  "keyLabel": "密钥（十六进制，16 字节）",
+  "keyDescription": "使用正好 32 个十六进制字符。可接受 0x 前缀、空格、冒号、连字符和下划线。",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "请输入一个 16 字节密钥，即 32 个十六进制字符。0x 前缀可选。",
+  "inputLabel": "输入",
+  "plainTextLabel": "纯文本",
+  "plainTextDescription": "粘贴或输入任意 UTF-8 文本，包括缓存键或请求负载。",
+  "importFromFileLabel": "从文件导入",
+  "hashResultLabel": "哈希结果",
+  "hashResultDescription": "当前文本输入和密钥的 SipHash-2-4 输出。",
+  "emptyStateDescription": "输入有效的 16 字节密钥，并提供文本或导入文件以生成 SipHash-2-4 结果。",
+  "fileHashErrorLabel": "文件哈希失败。",
+  "textHashErrorLabel": "文本哈希失败。",
+  "hexLabel": "十六进制",
+  "base64Label": "Base64",
+  "decimalLabel": "十进制",
+  "binaryLabel": "二进制",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制"
+}

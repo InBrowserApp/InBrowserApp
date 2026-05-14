@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "การกำหนดค่า",
+  "configurationDescription": "ตั้งค่าคีย์ 128 บิตที่ใช้สำหรับผลลัพธ์ SipHash-2-4 ปัจจุบัน",
+  "keyLabel": "คีย์ (เลขฐานสิบหก, 16 ไบต์)",
+  "keyDescription": "ใช้อักขระเลขฐานสิบหกให้ครบ 32 ตัว ยอมรับคำนำหน้า 0x รวมถึงช่องว่าง ทวิภาค ยัติภังค์ และขีดล่าง",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "กรอกคีย์ 16 ไบต์เป็นอักขระเลขฐานสิบหก 32 ตัว คำนำหน้า 0x ระบุหรือไม่ก็ได้",
+  "inputLabel": "ข้อมูลเข้า",
+  "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextDescription": "วางหรือพิมพ์ข้อความ UTF-8 ใดก็ได้ รวมถึงคีย์แคชหรือเพย์โหลดคำขอ",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "hashResultLabel": "ผลลัพธ์แฮช",
+  "hashResultDescription": "เอาต์พุต SipHash-2-4 สำหรับข้อความที่ป้อนและคีย์ปัจจุบัน",
+  "emptyStateDescription": "กรอกคีย์ 16 ไบต์ที่ถูกต้อง แล้วป้อนข้อความหรือนำเข้าไฟล์เพื่อสร้างผลลัพธ์ SipHash-2-4",
+  "fileHashErrorLabel": "แฮชไฟล์ไม่สำเร็จ",
+  "textHashErrorLabel": "แฮชข้อความไม่สำเร็จ",
+  "hexLabel": "เลขฐานสิบหก",
+  "base64Label": "Base64",
+  "decimalLabel": "เลขฐานสิบ",
+  "binaryLabel": "เลขฐานสอง",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว"
+}

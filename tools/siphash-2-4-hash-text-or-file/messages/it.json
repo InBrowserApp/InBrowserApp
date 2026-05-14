@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "Configurazione",
+  "configurationDescription": "Imposta la chiave a 128 bit usata per il risultato SipHash-2-4 corrente.",
+  "keyLabel": "Chiave (esadecimale, 16 byte)",
+  "keyDescription": "Usa esattamente 32 caratteri esadecimali. Sono accettati prefisso 0x, spazi, due punti, trattini e trattini bassi.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "Inserisci una chiave di 16 byte come 32 caratteri esadecimali. Il prefisso 0x è facoltativo.",
+  "inputLabel": "Input",
+  "plainTextLabel": "Testo semplice",
+  "plainTextDescription": "Incolla o digita qualsiasi testo UTF-8, incluse chiavi cache o payload di richiesta.",
+  "importFromFileLabel": "Importa da file",
+  "hashResultLabel": "Risultato hash",
+  "hashResultDescription": "Output SipHash-2-4 per l'input di testo e la chiave correnti.",
+  "emptyStateDescription": "Inserisci una chiave valida di 16 byte e fornisci testo o importa un file per generare un risultato SipHash-2-4.",
+  "fileHashErrorLabel": "Impossibile calcolare l'hash del file.",
+  "textHashErrorLabel": "Impossibile calcolare l'hash del testo.",
+  "hexLabel": "Esadecimale",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimale",
+  "binaryLabel": "Binario",
+  "copyResultLabel": "Copia risultato",
+  "copiedLabel": "Copiato"
+}

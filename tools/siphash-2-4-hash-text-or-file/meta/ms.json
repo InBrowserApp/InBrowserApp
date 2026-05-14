@@ -1,0 +1,4 @@
+{
+  "name": "Hash SipHash-2-4 Teks atau Fail",
+  "description": "Jana hash berkunci SipHash-2-4 untuk input teks atau muat naik fail. Gunakan kunci heksadesimal 128-bit untuk mengira hash 64-bit bukan kriptografi yang pantas bagi aliran kerja jadual hash, kunci cache, dan checksum."
+}

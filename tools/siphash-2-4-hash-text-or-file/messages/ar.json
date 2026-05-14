@@ -1,0 +1,23 @@
+{
+  "configurationLabel": "الإعدادات",
+  "configurationDescription": "اضبط المفتاح بطول 128 بت المستخدم لنتيجة SipHash-2-4 الحالية.",
+  "keyLabel": "المفتاح (سداسي عشري، 16 بايت)",
+  "keyDescription": "استخدم 32 محرفا سداسيا عشريا بالضبط. تقبل البادئة 0x والمسافات والنقطتان والواصلات والشرطات السفلية.",
+  "keyPlaceholder": "0x000102030405060708090a0b0c0d0e0f",
+  "keyInvalidLabel": "أدخل مفتاحا بطول 16 بايت على هيئة 32 محرفا سداسيا عشريا. بادئة 0x اختيارية.",
+  "inputLabel": "الإدخال",
+  "plainTextLabel": "نص عادي",
+  "plainTextDescription": "الصق أو اكتب أي نص UTF-8، بما في ذلك مفاتيح التخزين المؤقت أو حمولات الطلبات.",
+  "importFromFileLabel": "استيراد من ملف",
+  "hashResultLabel": "نتيجة التجزئة",
+  "hashResultDescription": "خرج SipHash-2-4 للإدخال النصي والمفتاح الحاليين.",
+  "emptyStateDescription": "أدخل مفتاحا صالحا بطول 16 بايت ووفّر نصا أو استورد ملفا لتوليد نتيجة SipHash-2-4.",
+  "fileHashErrorLabel": "فشل حساب تجزئة الملف.",
+  "textHashErrorLabel": "فشل حساب تجزئة النص.",
+  "hexLabel": "سداسي عشري",
+  "base64Label": "Base64",
+  "decimalLabel": "عشري",
+  "binaryLabel": "ثنائي",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ"
+}
