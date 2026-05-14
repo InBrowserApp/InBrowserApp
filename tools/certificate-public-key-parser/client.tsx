@@ -142,7 +142,7 @@ function CertificatePublicKeyParserClient({
 
   return (
     <div className="mx-auto grid w-full max-w-6xl gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-      <ToolPanelCard className="min-w-0">
+      <ToolPanelCard className="min-w-0 lg:sticky lg:top-6 lg:self-start">
         <CardHeader className="border-b">
           <CardTitle>{messages.inputTitle}</CardTitle>
           <CardDescription>{messages.inputDescription}</CardDescription>
