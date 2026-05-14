@@ -1,0 +1,4 @@
+{
+  "name": "Dérivation de clé scrypt",
+  "description": "Dérivez des clés à partir d’un mot de passe et d’un sel avec scrypt. Configurez N, r, p et la longueur de sortie avec une sortie hex ou Base64."
+}

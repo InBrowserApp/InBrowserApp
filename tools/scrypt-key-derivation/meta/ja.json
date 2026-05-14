@@ -1,0 +1,4 @@
+{
+  "name": "scrypt 鍵導出",
+  "description": "scrypt を使ってパスワードとソルトから鍵を導出します。N、r、p、出力長を設定し、hex または Base64 で出力します。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "scrypt-Schlüsselableitung",
+  "description": "Leiten Sie mit scrypt Schlüssel aus einem Passwort und Salt ab. Konfigurieren Sie N, r, p und die Ausgabelänge mit Ausgabe als hex oder Base64."
+}

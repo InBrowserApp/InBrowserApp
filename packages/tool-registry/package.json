@@ -122,6 +122,7 @@
     "@tool/robots-txt-generator": "workspace:*",
     "@tool/roman-numeral-converter": "workspace:*",
     "@tool/rot-cipher": "workspace:*",
+    "@tool/scrypt-key-derivation": "workspace:*",
     "@tool/sha1-hash-text-or-file": "workspace:*",
     "@tool/sha224-hash-text-or-file": "workspace:*",
     "@tool/sha256-hash-text-or-file": "workspace:*",

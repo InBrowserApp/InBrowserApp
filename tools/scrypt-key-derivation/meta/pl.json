@@ -1,0 +1,4 @@
+{
+  "name": "Wyprowadzanie klucza scrypt",
+  "description": "Wyprowadzaj klucze z hasła i soli za pomocą scrypt. Skonfiguruj N, r, p i długość wyjścia z wynikiem w hex lub Base64."
+}

@@ -151,6 +151,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "robots-txt-generator": () => import("@tool/robots-txt-generator/page"),
   "roman-numeral-converter": () => import("@tool/roman-numeral-converter/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
+  "scrypt-key-derivation": () => import("@tool/scrypt-key-derivation/page"),
   "sha1-hash-text-or-file": () => import("@tool/sha1-hash-text-or-file/page"),
   "sha224-hash-text-or-file": () =>
     import("@tool/sha224-hash-text-or-file/page"),

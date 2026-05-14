@@ -1,0 +1,4 @@
+{
+  "name": "scrypt Anahtar Türetme",
+  "description": "scrypt ile parola ve tuzdan anahtar türetin. N, r, p ve çıktı uzunluğunu yapılandırın; hex veya Base64 çıktı alın."
+}

@@ -14366,6 +14366,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "scrypt-key-derivation",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "kdf", "scrypt", "password", "key", "crypto", "security"],
+    locales: {
+      ar: {
+        name: "اشتقاق مفاتيح scrypt",
+        description:
+          "اشتق المفاتيح من كلمة مرور وملح باستخدام scrypt. اضبط N و r و p وطول الإخراج مع إخراج بصيغة hex أو Base64.",
+      },
+      de: {
+        name: "scrypt-Schlüsselableitung",
+        description:
+          "Leiten Sie mit scrypt Schlüssel aus einem Passwort und Salt ab. Konfigurieren Sie N, r, p und die Ausgabelänge mit Ausgabe als hex oder Base64.",
+      },
+      en: {
+        name: "scrypt Key Derivation",
+        description:
+          "Derive keys from a password and salt with scrypt. Configure N, r, p, and output length with hex or base64 output.",
+      },
+      es: {
+        name: "Derivación de claves scrypt",
+        description:
+          "Deriva claves a partir de una contraseña y una sal con scrypt. Configura N, r, p y la longitud de salida con resultados en hex o Base64.",
+      },
+      fr: {
+        name: "Dérivation de clé scrypt",
+        description:
+          "Dérivez des clés à partir d’un mot de passe et d’un sel avec scrypt. Configurez N, r, p et la longueur de sortie avec une sortie hex ou Base64.",
+      },
+      he: {
+        name: "גזירת מפתח scrypt",
+        description:
+          "גזרו מפתחות מסיסמה וממלח באמצעות scrypt. הגדירו N, r, p ואורך פלט עם פלט hex או Base64.",
+      },
+      hi: {
+        name: "scrypt कुंजी व्युत्पत्ति",
+        description:
+          "scrypt के साथ पासवर्ड और सॉल्ट से कुंजियां व्युत्पन्न करें। N, r, p और आउटपुट लंबाई कॉन्फ़िगर करें, आउटपुट hex या Base64 में।",
+      },
+      id: {
+        name: "Derivasi Kunci scrypt",
+        description:
+          "Turunkan kunci dari kata sandi dan salt dengan scrypt. Atur N, r, p, dan panjang output dengan hasil hex atau Base64.",
+      },
+      it: {
+        name: "Derivazione chiave scrypt",
+        description:
+          "Deriva chiavi da una password e un salt con scrypt. Configura N, r, p e la lunghezza dell'output con output hex o base64.",
+      },
+      ja: {
+        name: "scrypt 鍵導出",
+        description:
+          "scrypt を使ってパスワードとソルトから鍵を導出します。N、r、p、出力長を設定し、hex または Base64 で出力します。",
+      },
+      ko: {
+        name: "scrypt 키 파생",
+        description:
+          "scrypt로 비밀번호와 솔트에서 키를 파생합니다. N, r, p 및 출력 길이를 설정하고 hex 또는 Base64로 출력합니다.",
+      },
+      ms: {
+        name: "Derivasi Kunci scrypt",
+        description:
+          "Terbitkan kunci daripada kata laluan dan salt dengan scrypt. Konfigurasikan N, r, p dan panjang output dengan output hex atau base64.",
+      },
+      nl: {
+        name: "scrypt-sleutelafleiding",
+        description:
+          "Leid sleutels af uit een wachtwoord en salt met scrypt. Stel N, r, p en de uitvoerlengte in met hex- of Base64-uitvoer.",
+      },
+      no: {
+        name: "scrypt-nøkkelavledning",
+        description:
+          "Avled nøkler fra passord og salt med scrypt. Konfigurer N, r, p og utdatalengde med hex- eller Base64-utdata.",
+      },
+      pl: {
+        name: "Wyprowadzanie klucza scrypt",
+        description:
+          "Wyprowadzaj klucze z hasła i soli za pomocą scrypt. Skonfiguruj N, r, p i długość wyjścia z wynikiem w hex lub Base64.",
+      },
+      pt: {
+        name: "Derivação de chaves scrypt",
+        description:
+          "Derive chaves a partir de uma senha e salt com scrypt. Configure N, r, p e o comprimento de saída com resultado em hex ou Base64.",
+      },
+      ru: {
+        name: "Вывод ключей scrypt",
+        description:
+          "Выводите ключи из пароля и соли с помощью scrypt. Настраивайте N, r, p и длину вывода с результатом в hex или Base64.",
+      },
+      sv: {
+        name: "scrypt-nyckelhärledning",
+        description:
+          "Härled nycklar från ett lösenord och salt med scrypt. Konfigurera N, r, p och utmatningslängd med hex- eller Base64-utdata.",
+      },
+      th: {
+        name: "การสร้างคีย์ scrypt",
+        description:
+          "สร้างคีย์จากรหัสผ่านและซอลต์ด้วย scrypt กำหนดค่า N, r, p และความยาวเอาต์พุต พร้อมเอาต์พุตแบบ hex หรือ base64",
+      },
+      tr: {
+        name: "scrypt Anahtar Türetme",
+        description:
+          "scrypt ile parola ve tuzdan anahtar türetin. N, r, p ve çıktı uzunluğunu yapılandırın; hex veya Base64 çıktı alın.",
+      },
+      vi: {
+        name: "Suy xuất khóa scrypt",
+        description:
+          "Suy xuất khóa từ mật khẩu và muối bằng scrypt. Cấu hình N, r, p và độ dài đầu ra với kết quả hex hoặc Base64.",
+      },
+      "zh-CN": {
+        name: "scrypt 密钥派生",
+        description:
+          "使用 scrypt 从密码和盐派生密钥。配置 N、r、p 和输出长度，并以 hex 或 Base64 输出。",
+      },
+      "zh-TW": {
+        name: "scrypt 金鑰派生",
+        description:
+          "使用 scrypt 從密碼和鹽派生金鑰。可設定 N、r、p 與輸出長度，支援 hex 或 Base64 輸出。",
+      },
+    },
+  },
+  {
     slug: "sha1-hash-text-or-file",
     category: "crypto",
     icon: "lock",

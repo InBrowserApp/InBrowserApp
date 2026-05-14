@@ -1,0 +1,4 @@
+{
+  "name": "scrypt-nyckelhärledning",
+  "description": "Härled nycklar från ett lösenord och salt med scrypt. Konfigurera N, r, p och utmatningslängd med hex- eller Base64-utdata."
+}

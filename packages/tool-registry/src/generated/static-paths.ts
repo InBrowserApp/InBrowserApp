@@ -10582,6 +10582,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "scrypt-key-derivation",
+    language: "ar",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "de",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "en",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "es",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "fr",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "he",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "hi",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "id",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "it",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "ja",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "ko",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "ms",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "nl",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "no",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "pl",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "pt",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "ru",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "sv",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "th",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "tr",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "vi",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "zh-CN",
+  },
+  {
+    slug: "scrypt-key-derivation",
+    language: "zh-TW",
+  },
+  {
     slug: "sha1-hash-text-or-file",
     language: "ar",
   },

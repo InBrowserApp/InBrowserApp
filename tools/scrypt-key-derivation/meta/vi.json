@@ -1,0 +1,4 @@
+{
+  "name": "Suy xuất khóa scrypt",
+  "description": "Suy xuất khóa từ mật khẩu và muối bằng scrypt. Cấu hình N, r, p và độ dài đầu ra với kết quả hex hoặc Base64."
+}
