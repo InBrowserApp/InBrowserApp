@@ -1,0 +1,4 @@
+{
+  "name": "DNS Lookup",
+  "description": "DNS over HTTPS resolver के ज़रिए A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, और SVCB DNS रिकॉर्ड क्वेरी करें।"
+}

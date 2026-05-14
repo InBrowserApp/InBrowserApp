@@ -1,0 +1,4 @@
+{
+  "name": "DNS ルックアップ",
+  "description": "DNS over HTTPS リゾルバーを通じて、A、AAAA、CNAME、MX、TXT、NS、SOA、CAA、SRV、HTTPS、SVCB の DNS レコードを照会します。"
+}

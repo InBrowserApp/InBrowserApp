@@ -9,6 +9,7 @@ export {
   Braces,
   CaseSensitive,
   Check,
+  ChevronDown,
   Clock3,
   CreditCard,
   Copy,

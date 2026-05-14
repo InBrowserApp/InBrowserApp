@@ -1,0 +1,4 @@
+{
+  "name": "DNS 조회",
+  "description": "DNS over HTTPS 리졸버를 통해 A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, SVCB DNS 레코드를 조회합니다."
+}

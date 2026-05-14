@@ -1,0 +1,4 @@
+{
+  "name": "Tra cứu DNS",
+  "description": "Truy vấn bản ghi DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS và SVCB thông qua các bộ phân giải DNS over HTTPS."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "DNS Lookup",
+  "description": "Запрашивайте DNS-записи A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS и SVCB через резолверы DNS over HTTPS."
+}

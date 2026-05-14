@@ -1,0 +1,4 @@
+{
+  "name": "Consulta DNS",
+  "description": "Consulte registros DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS e SVCB por meio de resolvedores DNS over HTTPS."
+}

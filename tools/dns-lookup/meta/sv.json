@@ -1,0 +1,4 @@
+{
+  "name": "DNS Lookup",
+  "description": "Fråga A-, AAAA-, CNAME-, MX-, TXT-, NS-, SOA-, CAA-, SRV-, HTTPS- och SVCB-DNS-poster via DNS over HTTPS-resolvers."
+}

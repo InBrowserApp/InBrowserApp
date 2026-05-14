@@ -1,0 +1,4 @@
+{
+  "name": "DNS-oppslag",
+  "description": "Slå opp DNS-postene A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS og SVCB via DNS over HTTPS-resolvere."
+}
