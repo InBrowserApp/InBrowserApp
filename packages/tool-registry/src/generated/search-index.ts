@@ -10465,6 +10465,142 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "jwt-signer",
+    category: "web",
+    icon: "lock",
+    tags: [
+      "jwt",
+      "json web token",
+      "jws",
+      "token",
+      "sign",
+      "signature",
+      "hmac",
+      "rsa",
+      "ecdsa",
+      "security",
+      "auth",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "موقّع JSON Web Token (JWT)",
+        description:
+          "وقّع JWT محليًا باستخدام أسرار HMAC أو مفاتيح PEM/JWK الخاصة لاختبار API وتصحيح أخطاء المصادقة.",
+      },
+      de: {
+        name: "JSON Web Token (JWT)-Signer",
+        description:
+          "Signieren Sie JWTs lokal mit HMAC-Secrets oder privaten PEM/JWK-Schlüsseln für API-Tests und Authentifizierungs-Debugging.",
+      },
+      en: {
+        name: "JSON Web Token (JWT) Signer",
+        description:
+          "Sign JWTs locally with HMAC secrets or PEM/JWK private keys for API testing and authentication debugging.",
+      },
+      es: {
+        name: "Firmador de JSON Web Token (JWT)",
+        description:
+          "Firma tokens JWT localmente con secretos HMAC o claves privadas PEM/JWK para pruebas de API y depuración de autenticación.",
+      },
+      fr: {
+        name: "Signature de JSON Web Token (JWT)",
+        description:
+          "Signez des JWT localement avec des secrets HMAC ou des clés privées PEM/JWK pour les tests d'API et le débogage de l'authentification.",
+      },
+      he: {
+        name: "חותם JSON Web Token (JWT)",
+        description:
+          "חתמו על JWT באופן מקומי עם סודות HMAC או מפתחות פרטיים PEM/JWK לבדיקות API ולאיתור בעיות אימות.",
+      },
+      hi: {
+        name: "JSON Web Token (JWT) साइनर",
+        description:
+          "API परीक्षण और प्रमाणीकरण डिबगिंग के लिए HMAC secrets या PEM/JWK private keys के साथ JWTs को लोकली साइन करें।",
+      },
+      id: {
+        name: "Penandatangan JSON Web Token (JWT)",
+        description:
+          "Tandatangani JWT secara lokal dengan secret HMAC atau kunci privat PEM/JWK untuk pengujian API dan debugging autentikasi.",
+      },
+      it: {
+        name: "Firmatore JSON Web Token (JWT)",
+        description:
+          "Firma JWT localmente con segreti HMAC o chiavi private PEM/JWK per test API e debug dell'autenticazione.",
+      },
+      ja: {
+        name: "JSON Web Token (JWT) 署名ツール",
+        description:
+          "API テストと認証デバッグのために、HMAC シークレットまたは PEM/JWK 秘密鍵を使って JWT にローカルで署名します。",
+      },
+      ko: {
+        name: "JSON Web Token (JWT) 서명 도구",
+        description:
+          "API 테스트와 인증 디버깅을 위해 HMAC 비밀값 또는 PEM/JWK 개인 키로 JWT를 로컬에서 서명하세요.",
+      },
+      ms: {
+        name: "Penandatangan JSON Web Token (JWT)",
+        description:
+          "Tandatangani JWT secara setempat dengan rahsia HMAC atau kunci peribadi PEM/JWK untuk pengujian API dan penyahpepijatan pengesahan.",
+      },
+      nl: {
+        name: "JSON Web Token (JWT)-ondertekenaar",
+        description:
+          "Onderteken JWT-tokens lokaal met HMAC-geheimen of PEM/JWK-privésleutels voor API-tests en authenticatiedebugging.",
+      },
+      no: {
+        name: "JSON Web Token (JWT)-signeringsverktøy",
+        description:
+          "Signer JWT-er lokalt med HMAC-hemmeligheter eller private PEM/JWK-nøkler for API-testing og feilsøking av autentisering.",
+      },
+      pl: {
+        name: "Narzędzie do podpisywania JSON Web Token (JWT)",
+        description:
+          "Podpisuj JWT lokalnie za pomocą sekretów HMAC albo kluczy prywatnych PEM/JWK do testowania API i debugowania uwierzytelniania.",
+      },
+      pt: {
+        name: "Assinador de JSON Web Token (JWT)",
+        description:
+          "Assine JWTs localmente com segredos HMAC ou chaves privadas PEM/JWK para testes de API e depuração de autenticação.",
+      },
+      ru: {
+        name: "Подписание JSON Web Token (JWT)",
+        description:
+          "Подписывайте JWT локально с секретами HMAC или закрытыми ключами PEM/JWK для тестирования API и отладки аутентификации.",
+      },
+      sv: {
+        name: "JSON Web Token (JWT)-signer",
+        description:
+          "Signera JWT:er lokalt med HMAC-hemligheter eller privata PEM-/JWK-nycklar för API-testning och felsökning av autentisering.",
+      },
+      th: {
+        name: "ตัวลงนาม JSON Web Token (JWT)",
+        description:
+          "ลงนาม JWT ในเครื่องด้วยความลับ HMAC หรือคีย์ส่วนตัว PEM/JWK สำหรับการทดสอบ API และการดีบักการยืนยันตัวตน",
+      },
+      tr: {
+        name: "JSON Web Token (JWT) İmzalama Aracı",
+        description:
+          "API testi ve kimlik doğrulama hata ayıklaması için JWT'leri HMAC sırları veya PEM/JWK özel anahtarlarıyla yerel olarak imzalayın.",
+      },
+      vi: {
+        name: "Công cụ ký JSON Web Token (JWT)",
+        description:
+          "Ký JWT cục bộ bằng HMAC secrets hoặc khóa riêng PEM/JWK để kiểm thử API và gỡ lỗi xác thực.",
+      },
+      "zh-CN": {
+        name: "JSON Web Token (JWT) 签名器",
+        description:
+          "使用 HMAC 密钥或 PEM/JWK 私钥在本地签名 JWT，用于 API 测试和身份验证调试。",
+      },
+      "zh-TW": {
+        name: "JSON Web Token (JWT) 簽署器",
+        description:
+          "使用 HMAC 秘密或 PEM/JWK 私密金鑰在本機簽署 JWT，方便進行 API 測試與驗證偵錯。",
+      },
+    },
+  },
+  {
     slug: "keccak-hash-text-or-file",
     category: "crypto",
     icon: "lock",

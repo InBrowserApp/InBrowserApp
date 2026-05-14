@@ -1,0 +1,4 @@
+{
+  "name": "Assinador de JSON Web Token (JWT)",
+  "description": "Assine JWTs localmente com segredos HMAC ou chaves privadas PEM/JWK para testes de API e depuração de autenticação."
+}

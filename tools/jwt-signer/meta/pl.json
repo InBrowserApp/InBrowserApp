@@ -1,0 +1,4 @@
+{
+  "name": "Narzędzie do podpisywania JSON Web Token (JWT)",
+  "description": "Podpisuj JWT lokalnie za pomocą sekretów HMAC albo kluczy prywatnych PEM/JWK do testowania API i debugowania uwierzytelniania."
+}

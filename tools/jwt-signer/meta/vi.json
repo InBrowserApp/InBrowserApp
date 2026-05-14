@@ -1,0 +1,4 @@
+{
+  "name": "Công cụ ký JSON Web Token (JWT)",
+  "description": "Ký JWT cục bộ bằng HMAC secrets hoặc khóa riêng PEM/JWK để kiểm thử API và gỡ lỗi xác thực."
+}

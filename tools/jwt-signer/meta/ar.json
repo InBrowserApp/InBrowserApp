@@ -1,0 +1,4 @@
+{
+  "name": "موقّع JSON Web Token (JWT)",
+  "description": "وقّع JWT محليًا باستخدام أسرار HMAC أو مفاتيح PEM/JWK الخاصة لاختبار API وتصحيح أخطاء المصادقة."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "JSON Web Token (JWT) 签名器",
+  "description": "使用 HMAC 密钥或 PEM/JWK 私钥在本地签名 JWT，用于 API 测试和身份验证调试。"
+}

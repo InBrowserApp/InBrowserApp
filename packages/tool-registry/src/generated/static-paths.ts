@@ -7730,6 +7730,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "jwt-signer",
+    language: "ar",
+  },
+  {
+    slug: "jwt-signer",
+    language: "de",
+  },
+  {
+    slug: "jwt-signer",
+    language: "en",
+  },
+  {
+    slug: "jwt-signer",
+    language: "es",
+  },
+  {
+    slug: "jwt-signer",
+    language: "fr",
+  },
+  {
+    slug: "jwt-signer",
+    language: "he",
+  },
+  {
+    slug: "jwt-signer",
+    language: "hi",
+  },
+  {
+    slug: "jwt-signer",
+    language: "id",
+  },
+  {
+    slug: "jwt-signer",
+    language: "it",
+  },
+  {
+    slug: "jwt-signer",
+    language: "ja",
+  },
+  {
+    slug: "jwt-signer",
+    language: "ko",
+  },
+  {
+    slug: "jwt-signer",
+    language: "ms",
+  },
+  {
+    slug: "jwt-signer",
+    language: "nl",
+  },
+  {
+    slug: "jwt-signer",
+    language: "no",
+  },
+  {
+    slug: "jwt-signer",
+    language: "pl",
+  },
+  {
+    slug: "jwt-signer",
+    language: "pt",
+  },
+  {
+    slug: "jwt-signer",
+    language: "ru",
+  },
+  {
+    slug: "jwt-signer",
+    language: "sv",
+  },
+  {
+    slug: "jwt-signer",
+    language: "th",
+  },
+  {
+    slug: "jwt-signer",
+    language: "tr",
+  },
+  {
+    slug: "jwt-signer",
+    language: "vi",
+  },
+  {
+    slug: "jwt-signer",
+    language: "zh-CN",
+  },
+  {
+    slug: "jwt-signer",
+    language: "zh-TW",
+  },
+  {
     slug: "keccak-hash-text-or-file",
     language: "ar",
   },

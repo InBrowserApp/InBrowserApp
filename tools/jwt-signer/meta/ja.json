@@ -1,0 +1,4 @@
+{
+  "name": "JSON Web Token (JWT) 署名ツール",
+  "description": "API テストと認証デバッグのために、HMAC シークレットまたは PEM/JWK 秘密鍵を使って JWT にローカルで署名します。"
+}

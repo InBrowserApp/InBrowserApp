@@ -1,0 +1,4 @@
+{
+  "name": "Penandatangan JSON Web Token (JWT)",
+  "description": "Tandatangani JWT secara setempat dengan rahsia HMAC atau kunci peribadi PEM/JWK untuk pengujian API dan penyahpepijatan pengesahan."
+}
