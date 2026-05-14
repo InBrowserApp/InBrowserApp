@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Ввод",
+  "plainTextLabel": "Обычный текст",
+  "plainTextDescription": "Вставьте или введите любой текст в UTF-8, включая эмодзи и нелатинские символы.",
+  "importFromFileLabel": "Импорт из файла",
+  "hashResultLabel": "Результат хеширования",
+  "hashResultDescription": "Результат хеша для текущего текстового ввода.",
+  "hexLabel": "Шестнадцатеричный",
+  "base64Label": "Base64",
+  "decimalLabel": "Десятичный",
+  "binaryLabel": "Двоичный",
+  "copyResultLabel": "Скопировать результат",
+  "copiedLabel": "Скопировано",
+  "seedSectionLabel": "Сид",
+  "seedLabel": "Сид (необязательно)",
+  "seedPlaceholder": "0 или 0x...",
+  "seedInvalid": "Введите десятичное число или шестнадцатеричное значение с 0x."
+}

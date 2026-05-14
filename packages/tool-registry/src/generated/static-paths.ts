@@ -8098,6 +8098,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "ar",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "de",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "en",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "es",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "fr",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "he",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "hi",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "id",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "it",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "ja",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "ko",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "ms",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "nl",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "no",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "pl",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "pt",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "ru",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "sv",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "th",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "tr",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "vi",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "zh-CN",
+  },
+  {
+    slug: "murmurhash3-x64-128-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
     slug: "murmurhash3-x86-32-hash-text-or-file",
     language: "ar",
   },

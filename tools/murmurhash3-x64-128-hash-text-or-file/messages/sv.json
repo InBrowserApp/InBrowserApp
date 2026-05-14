@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Inmatning",
+  "plainTextLabel": "Vanlig text",
+  "plainTextDescription": "Klistra in eller skriv valfri UTF-8-text, inklusive emoji och icke-latinska tecken.",
+  "importFromFileLabel": "Importera fr\u00e5n fil",
+  "hashResultLabel": "Hashresultat",
+  "hashResultDescription": "Hashresultat f\u00f6r den aktuella textinmatningen.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Bin\u00e4r",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierat",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (valfritt)",
+  "seedPlaceholder": "0 eller 0x...",
+  "seedInvalid": "Ange ett decimaltal eller ett hexv\u00e4rde med 0x."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "MurmurHash3 (x64 128-bit) Metin veya Dosya Hash'i",
+  "description": "Metin girişi veya dosya yüklemeleri için MurmurHash3 x64 128-bit hash'leri oluşturun. Gruplama, tekilleştirme, önbellek anahtarları ve bütünlük kontrolleri için hızlı, kriptografik olmayan sağlama toplamları hesaplayın."
+}
