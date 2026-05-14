@@ -1,0 +1,21 @@
+{
+  "inputLabel": "입력",
+  "plainTextLabel": "일반 텍스트",
+  "plainTextDescription": "이모지와 비라틴 문자를 포함한 모든 UTF-8 텍스트를 붙여넣거나 입력하세요.",
+  "importFromFileLabel": "파일에서 가져오기",
+  "hashResultLabel": "해시 결과",
+  "hashResultDescription": "현재 텍스트 입력에 대한 해시 결과입니다.",
+  "hexLabel": "16진수",
+  "base64Label": "Base64",
+  "decimalLabel": "10진수",
+  "binaryLabel": "2진수",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "seedSectionLabel": "시드",
+  "seedLabel": "시드(선택 사항)",
+  "seedDescription": "표준 CityHash64를 사용하려면 비워 두세요. 시드가 적용된 변형을 계산하려면 10진수 또는 0x 16진수 시드를 입력하세요.",
+  "seedPlaceholder": "선택적 10진수 또는 0x 16진수 시드",
+  "seedInvalid": "10진수 숫자 또는 0x 16진수 값을 입력하세요.",
+  "fileHashError": "선택한 파일의 해시를 계산하지 못했습니다.",
+  "textHashError": "현재 텍스트의 해시를 계산하지 못했습니다."
+}

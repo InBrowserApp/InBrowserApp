@@ -1,0 +1,4 @@
+{
+  "name": "Hash CityHash64 de texto o archivo",
+  "description": "Genera hashes CityHash64 para entrada de texto o archivos cargados, con una semilla opcional para sumas de comprobación orientadas al rendimiento y claves de caché."
+}

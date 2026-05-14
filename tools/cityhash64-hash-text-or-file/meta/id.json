@@ -1,0 +1,4 @@
+{
+  "name": "Hash CityHash64 Teks atau File",
+  "description": "Buat hash CityHash64 untuk input teks atau unggahan file, dengan seed opsional untuk checksum dan kunci cache yang berorientasi kinerja."
+}

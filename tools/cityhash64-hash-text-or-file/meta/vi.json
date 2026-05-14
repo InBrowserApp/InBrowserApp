@@ -1,0 +1,4 @@
+{
+  "name": "Băm văn bản hoặc tệp bằng CityHash64",
+  "description": "Tạo hàm băm CityHash64 cho đầu vào văn bản hoặc tệp tải lên, với seed tùy chọn cho checksum và khóa cache thiên về hiệu năng."
+}

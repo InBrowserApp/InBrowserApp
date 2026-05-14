@@ -1,0 +1,21 @@
+{
+  "inputLabel": "Input",
+  "plainTextLabel": "Teks biasa",
+  "plainTextDescription": "Tempel atau ketik teks UTF-8 apa pun, termasuk emoji dan karakter non-Latin.",
+  "importFromFileLabel": "Impor dari file",
+  "hashResultLabel": "Hasil Hash",
+  "hashResultDescription": "Hasil hash untuk input teks saat ini.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Desimal",
+  "binaryLabel": "Biner",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (opsional)",
+  "seedDescription": "Biarkan kosong untuk CityHash64 standar. Masukkan seed desimal atau heksadesimal 0x untuk menghitung varian dengan seed.",
+  "seedPlaceholder": "Seed desimal atau hex 0x opsional",
+  "seedInvalid": "Masukkan angka desimal atau nilai hex 0x.",
+  "fileHashError": "Gagal membuat hash file yang dipilih.",
+  "textHashError": "Gagal membuat hash teks saat ini."
+}

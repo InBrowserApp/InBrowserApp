@@ -1,0 +1,21 @@
+{
+  "inputLabel": "入力",
+  "plainTextLabel": "プレーンテキスト",
+  "plainTextDescription": "絵文字や非ラテン文字を含む、任意の UTF-8 テキストを貼り付けるか入力します。",
+  "importFromFileLabel": "ファイルから読み込み",
+  "hashResultLabel": "ハッシュ結果",
+  "hashResultDescription": "現在のテキスト入力のハッシュ結果です。",
+  "hexLabel": "十六進数",
+  "base64Label": "Base64",
+  "decimalLabel": "十進数",
+  "binaryLabel": "二進数",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "seedSectionLabel": "シード",
+  "seedLabel": "シード（任意）",
+  "seedDescription": "標準の CityHash64 を使う場合は空欄のままにします。シード付きのバリアントを計算する場合は、十進数または `0x` 十六進数のシードを入力します。",
+  "seedPlaceholder": "任意の十進数または 0x 十六進数シード",
+  "seedInvalid": "十進数または 0x 十六進数の値を入力してください。",
+  "fileHashError": "選択したファイルのハッシュ化に失敗しました。",
+  "textHashError": "現在のテキストのハッシュ化に失敗しました。"
+}

@@ -3326,6 +3326,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cityhash64-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "cityhash",
+      "cityhash64",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة النص أو الملف باستخدام CityHash64",
+        description:
+          "أنشئ تجزئات CityHash64 لإدخال نصي أو ملفات مرفوعة، مع بذرة اختيارية للمجاميع الاختبارية ومفاتيح التخزين المؤقت التي تركز على الأداء.",
+      },
+      de: {
+        name: "CityHash64-Hash fuer Text oder Datei",
+        description:
+          "Generieren Sie CityHash64-Hashes fuer Texteingaben oder Datei-Uploads, mit optionalem Seed fuer leistungsorientierte Pruefsummen und Cache-Schluessel.",
+      },
+      en: {
+        name: "CityHash64 Hash Text or File",
+        description:
+          "Generate CityHash64 hashes for text input or file uploads, with an optional seed for performance-oriented checksums and cache keys.",
+      },
+      es: {
+        name: "Hash CityHash64 de texto o archivo",
+        description:
+          "Genera hashes CityHash64 para entrada de texto o archivos cargados, con una semilla opcional para sumas de comprobación orientadas al rendimiento y claves de caché.",
+      },
+      fr: {
+        name: "Hacher du texte ou un fichier avec CityHash64",
+        description:
+          "Générez des hachages CityHash64 pour une saisie de texte ou des fichiers importés, avec une graine facultative pour les sommes de contrôle et les clés de cache axées sur les performances.",
+      },
+      he: {
+        name: "CityHash64 האש לטקסט או קובץ",
+        description:
+          "צור גיבובי CityHash64 עבור קלט טקסט או העלאות קבצים, עם seed אופציונלי עבור סכומי בדיקה ומפתחות מטמון מוכווני ביצועים.",
+      },
+      hi: {
+        name: "CityHash64 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए CityHash64 हैश जनरेट करें, प्रदर्शन-उन्मुख चेकसम और कैश कुंजियों के लिए वैकल्पिक सीड के साथ।",
+      },
+      id: {
+        name: "Hash CityHash64 Teks atau File",
+        description:
+          "Buat hash CityHash64 untuk input teks atau unggahan file, dengan seed opsional untuk checksum dan kunci cache yang berorientasi kinerja.",
+      },
+      it: {
+        name: "Hash CityHash64 di Testo o File",
+        description:
+          "Genera hash CityHash64 per input di testo o caricamenti di file, con un seed opzionale per checksum orientati alle prestazioni e chiavi cache.",
+      },
+      ja: {
+        name: "CityHash64 テキストまたはファイルのハッシュ",
+        description:
+          "テキスト入力またはファイルアップロードから CityHash64 ハッシュを生成します。パフォーマンス重視のチェックサムやキャッシュキー向けに、任意のシードも指定できます。",
+      },
+      ko: {
+        name: "CityHash64 텍스트 또는 파일 해시",
+        description:
+          "성능 중심 체크섬과 캐시 키를 위해 선택적 시드와 함께 텍스트 입력 또는 파일 업로드의 CityHash64 해시를 생성합니다.",
+      },
+      ms: {
+        name: "Hash CityHash64 Teks atau Fail",
+        description:
+          "Jana hash CityHash64 untuk input teks atau muat naik fail, dengan seed pilihan untuk checksum berorientasikan prestasi dan kunci cache.",
+      },
+      nl: {
+        name: "CityHash64-hash van tekst of bestand",
+        description:
+          "Genereer CityHash64-hashes voor tekstinvoer of geuploade bestanden, met een optionele seed voor prestatiegerichte checksums en cachesleutels.",
+      },
+      no: {
+        name: "CityHash64-hash tekst eller fil",
+        description:
+          "Generer CityHash64-hasher for tekstinndata eller filopplastinger, med valgfri seed for ytelsesorienterte sjekksummer og cache-nøkler.",
+      },
+      pl: {
+        name: "Hash CityHash64 tekstu lub pliku",
+        description:
+          "Generuj hashe CityHash64 dla tekstu lub przesłanych plików, z opcjonalnym seedem do sum kontrolnych i kluczy cache nastawionych na wydajność.",
+      },
+      pt: {
+        name: "Gerar Hash CityHash64 de Texto ou Arquivo",
+        description:
+          "Gere hashes CityHash64 para entrada de texto ou uploads de arquivos, com uma seed opcional para checksums e chaves de cache voltados ao desempenho.",
+      },
+      ru: {
+        name: "CityHash64-хеш текста или файла",
+        description:
+          "Генерируйте хеши CityHash64 для текстового ввода или загруженных файлов с необязательным сидом для быстрых контрольных сумм и ключей кеша.",
+      },
+      sv: {
+        name: "CityHash64-hash text eller fil",
+        description:
+          "Generera CityHash64-hashar för textinmatning eller filuppladdningar, med ett valfritt seed för prestandaorienterade kontrollsummor och cachenycklar.",
+      },
+      th: {
+        name: "แฮช CityHash64 สำหรับข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช CityHash64 สำหรับข้อความที่ป้อนหรือไฟล์ที่อัปโหลด พร้อม seed แบบไม่บังคับสำหรับเช็คซัมและคีย์แคชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "CityHash64 Metin veya Dosya Hash'i",
+        description:
+          "Performans odakli saglama toplamlari ve onbellek anahtarlari icin istege bagli seed ile metin girisi veya dosya yuklemeleri icin CityHash64 hash'leri olusturun.",
+      },
+      vi: {
+        name: "Băm văn bản hoặc tệp bằng CityHash64",
+        description:
+          "Tạo hàm băm CityHash64 cho đầu vào văn bản hoặc tệp tải lên, với seed tùy chọn cho checksum và khóa cache thiên về hiệu năng.",
+      },
+      "zh-CN": {
+        name: "CityHash64 文本或文件哈希",
+        description:
+          "为文本输入或上传的文件生成 CityHash64 哈希，可选择使用种子，适合注重性能的校验和与缓存键。",
+      },
+      "zh-TW": {
+        name: "CityHash64 雜湊文字或檔案",
+        description:
+          "為文字輸入或上傳檔案產生 CityHash64 雜湊值，可選擇加入種子，用於重視效能的校驗和與快取鍵。",
+      },
+    },
+  },
+  {
     slug: "code-screenshot-generator",
     category: "developer",
     icon: "braces",
@@ -22822,6 +22954,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "CIDR 合併與排除工具",
         description:
           "合併 IPv4 與 IPv6 CIDR 區塊、扣除要排除的網路，並複製最精簡的結果 CIDR 清單。",
+      },
+    },
+  },
+  "cityhash64-hash-text-or-file": {
+    slug: "cityhash64-hash-text-or-file",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "cityhash",
+      "cityhash64",
+      "checksum",
+      "performance",
+      "file",
+      "text",
+      "fast",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة النص أو الملف باستخدام CityHash64",
+        description:
+          "أنشئ تجزئات CityHash64 لإدخال نصي أو ملفات مرفوعة، مع بذرة اختيارية للمجاميع الاختبارية ومفاتيح التخزين المؤقت التي تركز على الأداء.",
+      },
+      de: {
+        name: "CityHash64-Hash fuer Text oder Datei",
+        description:
+          "Generieren Sie CityHash64-Hashes fuer Texteingaben oder Datei-Uploads, mit optionalem Seed fuer leistungsorientierte Pruefsummen und Cache-Schluessel.",
+      },
+      en: {
+        name: "CityHash64 Hash Text or File",
+        description:
+          "Generate CityHash64 hashes for text input or file uploads, with an optional seed for performance-oriented checksums and cache keys.",
+      },
+      es: {
+        name: "Hash CityHash64 de texto o archivo",
+        description:
+          "Genera hashes CityHash64 para entrada de texto o archivos cargados, con una semilla opcional para sumas de comprobación orientadas al rendimiento y claves de caché.",
+      },
+      fr: {
+        name: "Hacher du texte ou un fichier avec CityHash64",
+        description:
+          "Générez des hachages CityHash64 pour une saisie de texte ou des fichiers importés, avec une graine facultative pour les sommes de contrôle et les clés de cache axées sur les performances.",
+      },
+      he: {
+        name: "CityHash64 האש לטקסט או קובץ",
+        description:
+          "צור גיבובי CityHash64 עבור קלט טקסט או העלאות קבצים, עם seed אופציונלי עבור סכומי בדיקה ומפתחות מטמון מוכווני ביצועים.",
+      },
+      hi: {
+        name: "CityHash64 हैश टेक्स्ट या फ़ाइल",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए CityHash64 हैश जनरेट करें, प्रदर्शन-उन्मुख चेकसम और कैश कुंजियों के लिए वैकल्पिक सीड के साथ।",
+      },
+      id: {
+        name: "Hash CityHash64 Teks atau File",
+        description:
+          "Buat hash CityHash64 untuk input teks atau unggahan file, dengan seed opsional untuk checksum dan kunci cache yang berorientasi kinerja.",
+      },
+      it: {
+        name: "Hash CityHash64 di Testo o File",
+        description:
+          "Genera hash CityHash64 per input di testo o caricamenti di file, con un seed opzionale per checksum orientati alle prestazioni e chiavi cache.",
+      },
+      ja: {
+        name: "CityHash64 テキストまたはファイルのハッシュ",
+        description:
+          "テキスト入力またはファイルアップロードから CityHash64 ハッシュを生成します。パフォーマンス重視のチェックサムやキャッシュキー向けに、任意のシードも指定できます。",
+      },
+      ko: {
+        name: "CityHash64 텍스트 또는 파일 해시",
+        description:
+          "성능 중심 체크섬과 캐시 키를 위해 선택적 시드와 함께 텍스트 입력 또는 파일 업로드의 CityHash64 해시를 생성합니다.",
+      },
+      ms: {
+        name: "Hash CityHash64 Teks atau Fail",
+        description:
+          "Jana hash CityHash64 untuk input teks atau muat naik fail, dengan seed pilihan untuk checksum berorientasikan prestasi dan kunci cache.",
+      },
+      nl: {
+        name: "CityHash64-hash van tekst of bestand",
+        description:
+          "Genereer CityHash64-hashes voor tekstinvoer of geuploade bestanden, met een optionele seed voor prestatiegerichte checksums en cachesleutels.",
+      },
+      no: {
+        name: "CityHash64-hash tekst eller fil",
+        description:
+          "Generer CityHash64-hasher for tekstinndata eller filopplastinger, med valgfri seed for ytelsesorienterte sjekksummer og cache-nøkler.",
+      },
+      pl: {
+        name: "Hash CityHash64 tekstu lub pliku",
+        description:
+          "Generuj hashe CityHash64 dla tekstu lub przesłanych plików, z opcjonalnym seedem do sum kontrolnych i kluczy cache nastawionych na wydajność.",
+      },
+      pt: {
+        name: "Gerar Hash CityHash64 de Texto ou Arquivo",
+        description:
+          "Gere hashes CityHash64 para entrada de texto ou uploads de arquivos, com uma seed opcional para checksums e chaves de cache voltados ao desempenho.",
+      },
+      ru: {
+        name: "CityHash64-хеш текста или файла",
+        description:
+          "Генерируйте хеши CityHash64 для текстового ввода или загруженных файлов с необязательным сидом для быстрых контрольных сумм и ключей кеша.",
+      },
+      sv: {
+        name: "CityHash64-hash text eller fil",
+        description:
+          "Generera CityHash64-hashar för textinmatning eller filuppladdningar, med ett valfritt seed för prestandaorienterade kontrollsummor och cachenycklar.",
+      },
+      th: {
+        name: "แฮช CityHash64 สำหรับข้อความหรือไฟล์",
+        description:
+          "สร้างแฮช CityHash64 สำหรับข้อความที่ป้อนหรือไฟล์ที่อัปโหลด พร้อม seed แบบไม่บังคับสำหรับเช็คซัมและคีย์แคชที่เน้นประสิทธิภาพ",
+      },
+      tr: {
+        name: "CityHash64 Metin veya Dosya Hash'i",
+        description:
+          "Performans odakli saglama toplamlari ve onbellek anahtarlari icin istege bagli seed ile metin girisi veya dosya yuklemeleri icin CityHash64 hash'leri olusturun.",
+      },
+      vi: {
+        name: "Băm văn bản hoặc tệp bằng CityHash64",
+        description:
+          "Tạo hàm băm CityHash64 cho đầu vào văn bản hoặc tệp tải lên, với seed tùy chọn cho checksum và khóa cache thiên về hiệu năng.",
+      },
+      "zh-CN": {
+        name: "CityHash64 文本或文件哈希",
+        description:
+          "为文本输入或上传的文件生成 CityHash64 哈希，可选择使用种子，适合注重性能的校验和与缓存键。",
+      },
+      "zh-TW": {
+        name: "CityHash64 雜湊文字或檔案",
+        description:
+          "為文字輸入或上傳檔案產生 CityHash64 雜湊值，可選擇加入種子，用於重視效能的校驗和與快取鍵。",
       },
     },
   },

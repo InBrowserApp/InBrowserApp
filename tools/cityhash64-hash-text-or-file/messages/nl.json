@@ -1,0 +1,21 @@
+{
+  "inputLabel": "Invoer",
+  "plainTextLabel": "Platte tekst",
+  "plainTextDescription": "Plak of typ willekeurige UTF-8-tekst, inclusief emoji en niet-Latijnse tekens.",
+  "importFromFileLabel": "Importeren uit bestand",
+  "hashResultLabel": "Hashresultaat",
+  "hashResultDescription": "Hashresultaat voor de huidige tekstinvoer.",
+  "hexLabel": "Hexadecimaal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimaal",
+  "binaryLabel": "Binair",
+  "copyResultLabel": "Resultaat kopieren",
+  "copiedLabel": "Gekopieerd",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (optioneel)",
+  "seedDescription": "Laat leeg voor standaard CityHash64. Voer een decimale seed of een hexadecimale seed met 0x in om de seeded variant te berekenen.",
+  "seedPlaceholder": "Optionele decimale seed of hex-seed met 0x",
+  "seedInvalid": "Voer een decimaal getal of een hexwaarde met 0x in.",
+  "fileHashError": "Het hashen van het geselecteerde bestand is mislukt.",
+  "textHashError": "Het hashen van de huidige tekst is mislukt."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Hacher du texte ou un fichier avec CityHash64",
+  "description": "Générez des hachages CityHash64 pour une saisie de texte ou des fichiers importés, avec une graine facultative pour les sommes de contrôle et les clés de cache axées sur les performances."
+}

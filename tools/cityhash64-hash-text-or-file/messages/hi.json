@@ -1,0 +1,21 @@
+{
+  "inputLabel": "इनपुट",
+  "plainTextLabel": "सादा टेक्स्ट",
+  "plainTextDescription": "इमोजी और गैर-लैटिन वर्णों सहित कोई भी UTF-8 टेक्स्ट पेस्ट करें या टाइप करें।",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "hashResultLabel": "हैश परिणाम",
+  "hashResultDescription": "मौजूदा टेक्स्ट इनपुट का हैश परिणाम।",
+  "hexLabel": "हेक्साडेसिमल",
+  "base64Label": "Base64",
+  "decimalLabel": "दशमलव",
+  "binaryLabel": "बाइनरी",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी किया गया",
+  "seedSectionLabel": "सीड",
+  "seedLabel": "सीड (वैकल्पिक)",
+  "seedDescription": "मानक CityHash64 के लिए खाली छोड़ें। सीडेड वैरिएंट की गणना करने के लिए दशमलव या 0x हेक्साडेसिमल सीड दर्ज करें।",
+  "seedPlaceholder": "वैकल्पिक दशमलव या 0x हेक्स सीड",
+  "seedInvalid": "दशमलव संख्या या 0x हेक्स मान दर्ज करें।",
+  "fileHashError": "चयनित फ़ाइल को हैश नहीं किया जा सका।",
+  "textHashError": "मौजूदा टेक्स्ट को हैश नहीं किया जा सका।"
+}

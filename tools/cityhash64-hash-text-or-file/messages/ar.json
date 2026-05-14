@@ -1,0 +1,21 @@
+{
+  "inputLabel": "الإدخال",
+  "plainTextLabel": "نص عادي",
+  "plainTextDescription": "الصق أو اكتب أي نص UTF-8، بما في ذلك الرموز التعبيرية والمحارف غير اللاتينية.",
+  "importFromFileLabel": "استيراد من ملف",
+  "hashResultLabel": "نتيجة التجزئة",
+  "hashResultDescription": "نتيجة التجزئة للإدخال النصي الحالي.",
+  "hexLabel": "ست عشري",
+  "base64Label": "Base64",
+  "decimalLabel": "عشري",
+  "binaryLabel": "ثنائي",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ",
+  "seedSectionLabel": "البذرة",
+  "seedLabel": "البذرة (اختيارية)",
+  "seedDescription": "اتركها فارغة لاستخدام CityHash64 القياسي. أدخل بذرة عشرية أو ست عشرية بصيغة 0x لحساب النسخة ذات البذرة.",
+  "seedPlaceholder": "بذرة اختيارية عشرية أو ست عشرية بصيغة 0x",
+  "seedInvalid": "أدخل رقما عشريا أو قيمة ست عشرية بصيغة 0x.",
+  "fileHashError": "فشل حساب تجزئة الملف المحدد.",
+  "textHashError": "فشل حساب تجزئة النص الحالي."
+}

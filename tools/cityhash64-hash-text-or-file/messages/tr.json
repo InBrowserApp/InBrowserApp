@@ -1,0 +1,21 @@
+{
+  "inputLabel": "Girdi",
+  "plainTextLabel": "Duz metin",
+  "plainTextDescription": "Emoji ve Latin disi karakterler dahil olmak uzere herhangi bir UTF-8 metni yapistirin veya yazin.",
+  "importFromFileLabel": "Dosyadan ice aktar",
+  "hashResultLabel": "Hash Sonucu",
+  "hashResultDescription": "Gecerli metin girdisi icin hash sonucu.",
+  "hexLabel": "Onaltilik",
+  "base64Label": "Base64",
+  "decimalLabel": "Ondalik",
+  "binaryLabel": "Ikili",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandi",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (istege bagli)",
+  "seedDescription": "Standart CityHash64 icin bos birakin. Seed'li varyanti hesaplamak icin ondalik veya 0x onaltilik seed girin.",
+  "seedPlaceholder": "Istege bagli ondalik veya 0x hex seed",
+  "seedInvalid": "Ondalik bir sayi veya 0x hex degeri girin.",
+  "fileHashError": "Secilen dosya hash'lenemedi.",
+  "textHashError": "Gecerli metin hash'lenemedi."
+}

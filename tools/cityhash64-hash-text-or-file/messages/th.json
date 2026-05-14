@@ -1,0 +1,21 @@
+{
+  "inputLabel": "ข้อมูลเข้า",
+  "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextDescription": "วางหรือพิมพ์ข้อความ UTF-8 ใดก็ได้ รวมถึงอีโมจิและอักขระที่ไม่ใช่ภาษาละติน",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "hashResultLabel": "ผลลัพธ์แฮช",
+  "hashResultDescription": "ผลลัพธ์แฮชสำหรับข้อความที่ป้อนอยู่ในขณะนี้",
+  "hexLabel": "เลขฐานสิบหก",
+  "base64Label": "Base64",
+  "decimalLabel": "เลขฐานสิบ",
+  "binaryLabel": "เลขฐานสอง",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว",
+  "seedSectionLabel": "Seed",
+  "seedLabel": "Seed (ไม่บังคับ)",
+  "seedDescription": "เว้นว่างไว้สำหรับ CityHash64 มาตรฐาน ป้อน seed เป็นเลขฐานสิบหรือเลขฐานสิบหก 0x เพื่อคำนวณตัวแปรแบบมี seed",
+  "seedPlaceholder": "seed แบบเลขฐานสิบหรือ hex 0x ไม่บังคับ",
+  "seedInvalid": "ป้อนตัวเลขฐานสิบหรือค่าเลขฐานสิบหก 0x",
+  "fileHashError": "ไม่สามารถแฮชไฟล์ที่เลือกได้",
+  "textHashError": "ไม่สามารถแฮชข้อความปัจจุบันได้"
+}
