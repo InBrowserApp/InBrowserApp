@@ -36,9 +36,9 @@
   "previewDescription": "Podgląd podąża za wybraną stacją i lokalnym zegarem systemowym.",
   "notesTitle": "Uwagi dotyczące użycia",
   "notes": [
-    "Utrzymuj głośność głośnika na niskim poziomie; dźwięk prostokątny o wysokiej częstotliwości może być niekomfortowy.",
+    "Utrzymuj niski poziom głośności wyjścia i nie zakładaj słuchawek podczas nadawania; dźwięk prostokątny o wysokiej częstotliwości może być niekomfortowy.",
     "Sygnał jest generowany offline na podstawie zegara systemowego tego urządzenia.",
-    "Przeglądarka emituje niższoczęstotliwościowe przybliżenie harmoniczne, więc wyniki zależą od głośnika, modelu zegara i ustawienia.",
+    "Przeglądarka emituje niższoczęstotliwościowe przybliżenie harmoniczne, więc wyniki zależą od głośnika lub przetwornika słuchawek przewodowych, modelu zegara, ustawienia anteny i położenia.",
     "Głosowe minuty znaku wywoławczego JJY nie są symulowane."
   ],
   "hzUnit": "Hz",

@@ -4,8 +4,8 @@ Radio Timecode Sync genererer nettleserlyd som følger vanlige langbølgeradiofo
 
 ## Slik bruker du det
 
-Velg stasjonen som passer til klokken, plasser enhetens høyttaler nær klokkens antenneområde, start signalet, og gi klokken nok tid til å lytte gjennom minst én full minuttramme. Hold volumet lavt først, og øk det bare hvis klokken ikke oppdager signalet.
+Velg stasjonen som passer til klokken, og plasser klokkens antenneområde nær enhetens høyttaler eller en kablet hodetelefondriver. Start med den innebygde høyttaleren; hvis klokken ikke oppdager signalet, kan du prøve over-ear-hodetelefoner og rotere klokken for å forbedre koblingen. Hold volumet lavt, og ikke bruk hodetelefoner mens du sender.
 
 ## Nøyaktighet og begrensninger
 
-Den genererte tiden kommer fra denne enhetens systemklokke pluss den valgfrie forskyvningen, så synkroniser enhetsklokken før du bruker verktøyet. Nettlesere kan ikke sende ut den ekte langbølgebærebølgen direkte; dette verktøyet bruker en firkantbølgetilnærming med lavere frekvens som kan fungere via harmoniske på enkelte enheter. Maskinvare, høyttalerplassering og klokkefastvare påvirker alle resultatene, og JJY-kallesignallyd er med vilje utelatt.
+Den genererte tiden kommer fra denne enhetens systemklokke pluss den valgfrie forskyvningen, så synkroniser enhetsklokken før du bruker verktøyet. Nettlesere kan ikke sende ut den ekte langbølgebærebølgen direkte; dette verktøyet bruker en firkantbølgetilnærming med lavere frekvens som kan fungere via harmoniske på enkelte enheter. Maskinvare, plassering av høyttaler eller hodetelefondriver, antennejustering og klokkefastvare påvirker alle resultatene, og JJY-kallesignallyd er med vilje utelatt.

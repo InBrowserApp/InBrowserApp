@@ -36,9 +36,9 @@
   "previewDescription": "A pré-visualização acompanha a estação selecionada e o relógio local do sistema.",
   "notesTitle": "Notas de operação",
   "notes": [
-    "Mantenha o volume do alto-falante baixo; áudio de onda quadrada de alta frequência pode ser desconfortável.",
+    "Mantenha o volume de saída baixo e não use fones de ouvido enquanto transmite; áudio de onda quadrada de alta frequência pode ser desconfortável.",
     "O sinal é gerado localmente a partir do relógio do sistema deste dispositivo.",
-    "O navegador emite uma aproximação em frequência mais baixa baseada em harmônicos, portanto os resultados dependem do alto-falante, do modelo do relógio e do posicionamento.",
+    "O navegador emite uma aproximação em frequência mais baixa baseada em harmônicos, portanto os resultados dependem do alto-falante ou do driver de fone com fio, do modelo do relógio, do alinhamento da antena e do posicionamento.",
     "Os minutos com indicativo de chamada por voz da JJY não são simulados."
   ],
   "hzUnit": "Hz",

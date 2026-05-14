@@ -36,9 +36,9 @@
   "previewDescription": "L'anteprima segue la stazione selezionata e l'orologio di sistema locale.",
   "notesTitle": "Note operative",
   "notes": [
-    "Mantieni basso il volume dell'altoparlante; l'audio a onda quadra ad alta frequenza può risultare fastidioso.",
+    "Mantieni basso il volume di uscita e non indossare le cuffie durante la trasmissione; l'audio a onda quadra ad alta frequenza può risultare fastidioso.",
     "Il segnale viene generato offline a partire dall'orologio di sistema di questo dispositivo.",
-    "Il browser emette un'approssimazione a frequenza più bassa tramite armoniche, quindi i risultati dipendono dall'altoparlante, dal modello dell'orologio e dal posizionamento.",
+    "Il browser emette un'approssimazione a frequenza più bassa tramite armoniche, quindi i risultati dipendono dall'altoparlante o dal driver di cuffie cablate, dal modello dell'orologio, dall'allineamento dell'antenna e dal posizionamento.",
     "I minuti con nominativo vocale JJY non sono simulati."
   ],
   "hzUnit": "Hz",

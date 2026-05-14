@@ -36,9 +36,9 @@
   "previewDescription": "L'aperçu suit la station sélectionnée et l'horloge système locale.",
   "notesTitle": "Notes d'utilisation",
   "notes": [
-    "Gardez le volume du haut-parleur bas ; l'audio en onde carrée à haute fréquence peut être inconfortable.",
+    "Gardez le volume de sortie bas et ne portez pas de casque pendant l'émission ; l'audio en onde carrée à haute fréquence peut être inconfortable.",
     "Le signal est généré hors ligne à partir de l'horloge système de cet appareil.",
-    "Le navigateur émet une approximation harmonique de fréquence plus basse ; les résultats dépendent donc du haut-parleur, du modèle d'horloge et du placement.",
+    "Le navigateur émet une approximation harmonique de fréquence plus basse ; les résultats dépendent donc du haut-parleur ou du transducteur de casque filaire, du modèle d'horloge, de l'alignement de l'antenne et du placement.",
     "Les minutes d'indicatif vocal JJY ne sont pas simulées."
   ],
   "hzUnit": "Hz",

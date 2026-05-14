@@ -4,8 +4,8 @@ Radio Timecode Sync genera audio nel browser seguendo formati comuni di segnali 
 
 ## Come usarlo
 
-Seleziona la stazione corrispondente all'orologio, posiziona l'altoparlante del dispositivo vicino all'area dell'antenna dell'orologio, avvia il segnale e lascia all'orologio abbastanza tempo per ascoltare almeno una trama completa di un minuto. Tieni inizialmente basso il volume, poi aumentalo solo se l'orologio non rileva il segnale.
+Seleziona la stazione corrispondente all'orologio, quindi posiziona l'area dell'antenna dell'orologio vicino all'altoparlante del dispositivo o a un driver di cuffie cablate. Inizia con l'altoparlante integrato; se l'orologio non rileva il segnale, prova cuffie over-ear e ruota l'orologio per migliorare l'accoppiamento. Mantieni basso il volume e non indossare le cuffie durante la trasmissione.
 
 ## Precisione e limitazioni
 
-L'ora generata proviene dall'orologio di sistema di questo dispositivo più l'offset opzionale, quindi sincronizza l'orologio del dispositivo prima di usare lo strumento. I browser non possono emettere direttamente la vera portante a onde lunghe; questo strumento usa un'approssimazione a onda quadra a frequenza più bassa che su alcuni dispositivi può funzionare tramite armoniche. Hardware, posizionamento dell'altoparlante e firmware dell'orologio influenzano tutti i risultati, e l'audio del nominativo JJY è omesso intenzionalmente.
+L'ora generata proviene dall'orologio di sistema di questo dispositivo più l'offset opzionale, quindi sincronizza l'orologio del dispositivo prima di usare lo strumento. I browser non possono emettere direttamente la vera portante a onde lunghe; questo strumento usa un'approssimazione a onda quadra a frequenza più bassa che su alcuni dispositivi può funzionare tramite armoniche. Hardware, posizionamento dell'altoparlante o del driver delle cuffie, allineamento dell'antenna e firmware dell'orologio influenzano tutti i risultati, e l'audio del nominativo JJY è omesso intenzionalmente.

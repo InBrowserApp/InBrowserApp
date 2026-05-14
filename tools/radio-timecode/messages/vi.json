@@ -36,9 +36,9 @@
   "previewDescription": "Bản xem trước bám theo trạm đã chọn và đồng hồ hệ thống cục bộ.",
   "notesTitle": "Ghi chú vận hành",
   "notes": [
-    "Giữ âm lượng loa thấp; âm thanh sóng vuông tần số cao có thể gây khó chịu.",
+    "Giữ âm lượng đầu ra thấp và không đeo tai nghe khi đang phát; âm thanh sóng vuông tần số cao có thể gây khó chịu.",
     "Tín hiệu được tạo ngoại tuyến từ đồng hồ hệ thống của thiết bị này.",
-    "Trình duyệt phát ra một phép xấp xỉ hài ở tần số thấp hơn, nên kết quả phụ thuộc vào loa, mẫu đồng hồ và vị trí đặt.",
+    "Trình duyệt phát ra một phép xấp xỉ hài ở tần số thấp hơn, nên kết quả phụ thuộc vào loa hoặc driver tai nghe có dây, mẫu đồng hồ, hướng ăng-ten và vị trí đặt.",
     "Các phút phát âm hiệu gọi bằng giọng nói của JJY không được mô phỏng."
   ],
   "hzUnit": "Hz",

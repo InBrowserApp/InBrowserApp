@@ -36,9 +36,9 @@
   "previewDescription": "Die Vorschau folgt dem ausgewählten Sender und der lokalen Systemuhr.",
   "notesTitle": "Betriebshinweise",
   "notes": [
-    "Halte die Lautsprecherlautstärke niedrig; hochfrequentes Rechteckwellen-Audio kann unangenehm sein.",
+    "Halte die Ausgabelautstärke niedrig und trage während der Übertragung keine Kopfhörer; hochfrequentes Rechteckwellen-Audio kann unangenehm sein.",
     "Das Signal wird offline aus der Systemuhr dieses Geräts erzeugt.",
-    "Der Browser gibt eine niederfrequente Näherung über Oberwellen aus, daher hängen die Ergebnisse von Lautsprecher, Uhrenmodell und Platzierung ab.",
+    "Der Browser gibt eine niederfrequente Näherung über Oberwellen aus, daher hängen die Ergebnisse vom Lautsprecher oder kabelgebundenen Kopfhörertreiber, vom Uhrenmodell, von der Antennenausrichtung und von der Platzierung ab.",
     "JJY-Sprachansagen in den Rufzeichenminuten werden nicht simuliert."
   ],
   "hzUnit": "Hz",

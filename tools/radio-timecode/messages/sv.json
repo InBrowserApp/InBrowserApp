@@ -36,9 +36,9 @@
   "previewDescription": "Förhandsvisningen följer vald station och lokal systemklocka.",
   "notesTitle": "Användningsanmärkningar",
   "notes": [
-    "Håll högtalarvolymen låg; högfrekvent fyrkantsvågsljud kan vara obehagligt.",
+    "Håll utgångsvolymen låg och använd inte hörlurar under sändning; högfrekvent fyrkantsvågsljud kan vara obehagligt.",
     "Signalen genereras lokalt från den här enhetens systemklocka.",
-    "Webbläsaren avger en övertonsbaserad approximation med lägre frekvens, så resultatet beror på högtalare, klockmodell och placering.",
+    "Webbläsaren avger en övertonsbaserad approximation med lägre frekvens, så resultatet beror på högtalaren eller den trådbundna hörlursdrivern, klockmodellen, antennens riktning och placeringen.",
     "JJY-minuter med talad anropssignal simuleras inte."
   ],
   "hzUnit": "Hz",

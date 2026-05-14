@@ -4,8 +4,8 @@ Radio Timecode Sync menjana audio pelayar yang mengikut format isyarat masa radi
 
 ## Cara Menggunakannya
 
-Pilih stesen yang sepadan dengan jam, letakkan pembesar suara peranti berhampiran kawasan antena jam, mulakan isyarat, dan beri jam masa yang cukup untuk mendengar sekurang-kurangnya satu bingkai minit penuh. Pastikan kelantangan rendah pada mulanya, kemudian naikkan hanya jika jam tidak mengesan isyarat.
+Pilih stesen yang sepadan dengan jam, kemudian letakkan kawasan antena jam berhampiran pembesar suara peranti atau pemacu fon kepala berwayar. Mulakan dengan pembesar suara terbina dalam; jika jam tidak mengesan isyarat, cuba fon kepala over-ear dan putarkan jam untuk memperbaik gandingan. Pastikan kelantangan rendah dan jangan pakai fon kepala semasa memancarkan isyarat.
 
 ## Ketepatan dan Batasan
 
-Masa yang dijana datang daripada jam sistem peranti ini ditambah ofset pilihan, jadi segerakkan jam peranti sebelum menggunakan alat ini. Pelayar tidak dapat memancarkan pembawa gelombang panjang sebenar secara langsung; alat ini menggunakan anggaran gelombang segi empat berfrekuensi lebih rendah yang mungkin berfungsi melalui harmonik pada sesetengah peranti. Perkakasan, peletakan pembesar suara, dan perisian tegar jam semuanya mempengaruhi hasil, dan audio tanda panggilan JJY sengaja ditinggalkan.
+Masa yang dijana datang daripada jam sistem peranti ini ditambah ofset pilihan, jadi segerakkan jam peranti sebelum menggunakan alat ini. Pelayar tidak dapat memancarkan pembawa gelombang panjang sebenar secara langsung; alat ini menggunakan anggaran gelombang segi empat berfrekuensi lebih rendah yang mungkin berfungsi melalui harmonik pada sesetengah peranti. Perkakasan, peletakan pembesar suara atau pemacu fon kepala, penjajaran antena, dan perisian tegar jam semuanya mempengaruhi hasil, dan audio tanda panggilan JJY sengaja ditinggalkan.

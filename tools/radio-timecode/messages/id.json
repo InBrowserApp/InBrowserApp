@@ -36,9 +36,9 @@
   "previewDescription": "Pratinjau mengikuti stasiun yang dipilih dan jam sistem lokal.",
   "notesTitle": "Catatan pengoperasian",
   "notes": [
-    "Jaga volume speaker tetap rendah; audio gelombang persegi frekuensi tinggi bisa terasa tidak nyaman.",
+    "Jaga volume keluaran tetap rendah dan jangan memakai headphone saat memancarkan sinyal; audio gelombang persegi frekuensi tinggi bisa terasa tidak nyaman.",
     "Sinyal dibuat secara luring dari jam sistem perangkat ini.",
-    "Browser memancarkan perkiraan harmonik berfrekuensi lebih rendah, sehingga hasil bergantung pada speaker, model jam, dan penempatan.",
+    "Browser memancarkan perkiraan harmonik berfrekuensi lebih rendah, sehingga hasil bergantung pada speaker atau driver headphone berkabel, model jam, penyelarasan antena, dan penempatan.",
     "Menit tanda panggil suara JJY tidak disimulasikan."
   ],
   "hzUnit": "Hz",

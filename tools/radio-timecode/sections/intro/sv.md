@@ -4,8 +4,8 @@ Radiotidskodssynkronisering genererar webbläsarljud som följer vanliga format 
 
 ## Så använder du det
 
-Välj den station som matchar klockan, placera enhetens högtalare nära klockans antennområde, starta signalen och ge klockan tillräckligt med tid att lyssna igenom minst en hel minutram. Börja med låg volym och höj den bara om klockan inte upptäcker signalen.
+Välj den station som matchar klockan och placera klockans antennområde nära enhetens högtalare eller en trådbunden hörlursdriver. Börja med den inbyggda högtalaren; om klockan inte upptäcker signalen, prova over-ear-hörlurar och vrid klockan för att förbättra kopplingen. Håll volymen låg och använd inte hörlurar under sändning.
 
 ## Noggrannhet och begränsningar
 
-Den genererade tiden kommer från den här enhetens systemklocka plus den valfria förskjutningen, så synkronisera enhetens klocka innan du använder verktyget. Webbläsare kan inte avge den verkliga långvågsbärvågen direkt; det här verktyget använder en fyrkantsvågsapproximation med lägre frekvens som kan fungera via övertoner på vissa enheter. Maskinvara, högtalarplacering och klockans fasta programvara påverkar resultatet, och JJY-ljud med talad anropssignal utelämnas avsiktligt.
+Den genererade tiden kommer från den här enhetens systemklocka plus den valfria förskjutningen, så synkronisera enhetens klocka innan du använder verktyget. Webbläsare kan inte avge den verkliga långvågsbärvågen direkt; det här verktyget använder en fyrkantsvågsapproximation med lägre frekvens som kan fungera via övertoner på vissa enheter. Maskinvara, placering av högtalare eller hörlursdriver, antennens riktning och klockans fasta programvara påverkar resultatet, och JJY-ljud med talad anropssignal utelämnas avsiktligt.

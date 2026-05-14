@@ -4,8 +4,8 @@ Radio Timecode Sync generuje w przeglądarce dźwięk zgodny z popularnymi dług
 
 ## Jak go używać
 
-Wybierz stację pasującą do zegara, umieść głośnik urządzenia blisko obszaru anteny zegara, uruchom sygnał i daj zegarowi wystarczająco dużo czasu, aby nasłuchiwał przez co najmniej jedną pełną ramkę minutową. Na początku utrzymuj niską głośność, a zwiększaj ją tylko wtedy, gdy zegar nie wykrywa sygnału.
+Wybierz stację pasującą do zegara, a następnie umieść obszar anteny zegara blisko głośnika urządzenia albo przetwornika słuchawek przewodowych. Zacznij od wbudowanego głośnika; jeśli zegar nie wykrywa sygnału, wypróbuj słuchawki wokółuszne i obracaj zegar, aby poprawić sprzężenie. Utrzymuj niską głośność i nie zakładaj słuchawek podczas nadawania.
 
 ## Dokładność i ograniczenia
 
-Generowany czas pochodzi z zegara systemowego tego urządzenia oraz opcjonalnego przesunięcia, dlatego przed użyciem narzędzia zsynchronizuj zegar urządzenia. Przeglądarki nie mogą bezpośrednio emitować prawdziwej nośnej długofalowej; to narzędzie używa niższoczęstotliwościowego przybliżenia fali prostokątnej, które na niektórych urządzeniach może działać przez harmoniczne. Sprzęt, położenie głośnika i oprogramowanie zegara wpływają na wyniki, a dźwięk znaku wywoławczego JJY jest celowo pominięty.
+Generowany czas pochodzi z zegara systemowego tego urządzenia oraz opcjonalnego przesunięcia, dlatego przed użyciem narzędzia zsynchronizuj zegar urządzenia. Przeglądarki nie mogą bezpośrednio emitować prawdziwej nośnej długofalowej; to narzędzie używa niższoczęstotliwościowego przybliżenia fali prostokątnej, które na niektórych urządzeniach może działać przez harmoniczne. Sprzęt, położenie głośnika lub przetwornika słuchawek, ustawienie anteny i oprogramowanie zegara wpływają na wyniki, a dźwięk znaku wywoławczego JJY jest celowo pominięty.
