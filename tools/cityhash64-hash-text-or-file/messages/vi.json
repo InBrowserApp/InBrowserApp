@@ -15,5 +15,7 @@
   "seedLabel": "Seed (tùy chọn)",
   "seedDescription": "Để trống để dùng CityHash64 tiêu chuẩn. Nhập seed dạng thập phân hoặc thập lục phân có tiền tố 0x để tính biến thể có seed.",
   "seedPlaceholder": "Seed thập phân hoặc hex 0x tùy chọn",
-  "seedInvalid": "Nhập một số thập phân hoặc giá trị hex có tiền tố 0x."
+  "seedInvalid": "Nhập một số thập phân hoặc giá trị hex có tiền tố 0x.",
+  "fileHashError": "Không thể băm tệp đã chọn.",
+  "textHashError": "Không thể băm văn bản hiện tại."
 }

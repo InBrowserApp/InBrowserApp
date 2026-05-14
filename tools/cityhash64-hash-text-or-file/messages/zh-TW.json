@@ -15,5 +15,7 @@
   "seedLabel": "種子（選填）",
   "seedDescription": "留空即可使用標準 CityHash64。輸入十進位或 0x 十六進位種子，可計算帶種子的變體。",
   "seedPlaceholder": "選填的十進位或 0x 十六進位種子",
-  "seedInvalid": "請輸入十進位數字或 0x 十六進位值。"
+  "seedInvalid": "請輸入十進位數字或 0x 十六進位值。",
+  "fileHashError": "無法雜湊所選檔案。",
+  "textHashError": "無法雜湊目前文字。"
 }

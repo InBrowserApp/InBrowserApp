@@ -15,5 +15,7 @@
   "seedLabel": "Seed (valfritt)",
   "seedDescription": "Lämna tomt för standard-CityHash64. Ange ett decimalt seed eller ett hexadecimalt seed med 0x för att beräkna den seedade varianten.",
   "seedPlaceholder": "Valfritt decimalt seed eller hexseed med 0x",
-  "seedInvalid": "Ange ett decimaltal eller ett hexvärde med 0x."
+  "seedInvalid": "Ange ett decimaltal eller ett hexvärde med 0x.",
+  "fileHashError": "Kunde inte hasha den valda filen.",
+  "textHashError": "Kunde inte hasha den aktuella texten."
 }

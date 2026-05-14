@@ -15,5 +15,7 @@
   "seedLabel": "Seed (optioneel)",
   "seedDescription": "Laat leeg voor standaard CityHash64. Voer een decimale seed of een hexadecimale seed met 0x in om de seeded variant te berekenen.",
   "seedPlaceholder": "Optionele decimale seed of hex-seed met 0x",
-  "seedInvalid": "Voer een decimaal getal of een hexwaarde met 0x in."
+  "seedInvalid": "Voer een decimaal getal of een hexwaarde met 0x in.",
+  "fileHashError": "Het hashen van het geselecteerde bestand is mislukt.",
+  "textHashError": "Het hashen van de huidige tekst is mislukt."
 }

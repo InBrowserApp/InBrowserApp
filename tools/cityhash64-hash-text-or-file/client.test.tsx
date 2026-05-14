@@ -25,6 +25,8 @@ const messages = {
     "Leave blank for standard CityHash64. Enter a decimal or 0x hexadecimal seed to calculate the seeded variant.",
   seedPlaceholder: "Optional decimal or 0x hex seed",
   seedInvalid: "Enter a decimal number or a 0x hex value.",
+  fileHashError: "Failed to hash the selected file.",
+  textHashError: "Failed to hash the current text.",
   hashResultLabel: "Hash Result",
   hashResultDescription: "Hash result for the current text input.",
   hexLabel: "Hexadecimal",

@@ -15,5 +15,7 @@
   "seedLabel": "Seed (אופציונלי)",
   "seedDescription": "השאר ריק עבור CityHash64 סטנדרטי. הזן seed עשרוני או הקסדצימלי עם 0x כדי לחשב את הווריאנט עם seed.",
   "seedPlaceholder": "seed עשרוני אופציונלי או hex עם 0x",
-  "seedInvalid": "הזן מספר עשרוני או ערך הקסדצימלי עם 0x."
+  "seedInvalid": "הזן מספר עשרוני או ערך הקסדצימלי עם 0x.",
+  "fileHashError": "נכשלה ההאש של הקובץ שנבחר.",
+  "textHashError": "נכשלה ההאש של הטקסט הנוכחי."
 }

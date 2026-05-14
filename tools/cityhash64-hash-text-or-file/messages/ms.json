@@ -15,5 +15,7 @@
   "seedLabel": "Seed (pilihan)",
   "seedDescription": "Biarkan kosong untuk CityHash64 standard. Masukkan seed perpuluhan atau heksadesimal 0x untuk mengira varian berseed.",
   "seedPlaceholder": "Seed perpuluhan atau heks 0x pilihan",
-  "seedInvalid": "Masukkan nombor perpuluhan atau nilai heks 0x."
+  "seedInvalid": "Masukkan nombor perpuluhan atau nilai heks 0x.",
+  "fileHashError": "Gagal mengira hash untuk fail yang dipilih.",
+  "textHashError": "Gagal mengira hash untuk teks semasa."
 }

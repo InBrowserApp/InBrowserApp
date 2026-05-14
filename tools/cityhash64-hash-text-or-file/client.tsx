@@ -89,16 +89,13 @@ function CityHash64HashTextOrFileClient({
           setDigestState({ status: "ready", digest })
         }
       })
-      .catch((error: unknown) => {
+      .catch(() => {
         if (!cancelled) {
           setDigestState({
             status: "error",
-            message:
-              error instanceof Error
-                ? error.message
-                : selectedFile
-                  ? "Failed to hash file."
-                  : "Failed to hash text.",
+            message: selectedFile
+              ? messages.fileHashError
+              : messages.textHashError,
           })
         }
       })
@@ -109,6 +106,8 @@ function CityHash64HashTextOrFileClient({
   }, [
     deferredPlainText,
     messages.seedInvalid,
+    messages.fileHashError,
+    messages.textHashError,
     seedState.isValid,
     seedState.value,
     selectedFile,

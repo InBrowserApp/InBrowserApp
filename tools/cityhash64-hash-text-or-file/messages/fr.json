@@ -15,5 +15,7 @@
   "seedLabel": "Graine (facultative)",
   "seedDescription": "Laissez vide pour le CityHash64 standard. Saisissez une graine décimale ou hexadécimale 0x pour calculer la variante avec graine.",
   "seedPlaceholder": "Graine décimale ou hex 0x facultative",
-  "seedInvalid": "Saisissez un nombre décimal ou une valeur hexadécimale 0x."
+  "seedInvalid": "Saisissez un nombre décimal ou une valeur hexadécimale 0x.",
+  "fileHashError": "Échec du hachage du fichier sélectionné.",
+  "textHashError": "Échec du hachage du texte actuel."
 }

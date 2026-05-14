@@ -15,5 +15,7 @@
   "seedLabel": "Seed (opcional)",
   "seedDescription": "Deixe em branco para CityHash64 padrão. Insira uma seed decimal ou hexadecimal 0x para calcular a variante com seed.",
   "seedPlaceholder": "Seed decimal ou hex 0x opcional",
-  "seedInvalid": "Insira um número decimal ou um valor hex 0x."
+  "seedInvalid": "Insira um número decimal ou um valor hex 0x.",
+  "fileHashError": "Não foi possível calcular o hash do arquivo selecionado.",
+  "textHashError": "Não foi possível calcular o hash do texto atual."
 }

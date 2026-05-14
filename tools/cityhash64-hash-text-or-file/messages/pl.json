@@ -15,5 +15,7 @@
   "seedLabel": "Seed (opcjonalnie)",
   "seedDescription": "Pozostaw puste dla standardowego CityHash64. Wpisz seed dziesiętny lub szesnastkowy z prefiksem 0x, aby obliczyć wariant z seedem.",
   "seedPlaceholder": "Opcjonalny seed dziesiętny lub hex 0x",
-  "seedInvalid": "Wpisz liczbę dziesiętną albo wartość szesnastkową z prefiksem 0x."
+  "seedInvalid": "Wpisz liczbę dziesiętną albo wartość szesnastkową z prefiksem 0x.",
+  "fileHashError": "Nie udało się obliczyć hasha wybranego pliku.",
+  "textHashError": "Nie udało się obliczyć hasha bieżącego tekstu."
 }

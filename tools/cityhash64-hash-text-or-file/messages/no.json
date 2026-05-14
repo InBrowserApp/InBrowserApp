@@ -15,5 +15,7 @@
   "seedLabel": "Seed (valgfritt)",
   "seedDescription": "La feltet st\u00e5 tomt for standard CityHash64. Skriv inn en desimal seed eller en heksadesimal seed med 0x for \u00e5 beregne varianten med seed.",
   "seedPlaceholder": "Valgfri desimal seed eller 0x-hex-seed",
-  "seedInvalid": "Skriv inn et desimaltall eller en 0x-hexverdi."
+  "seedInvalid": "Skriv inn et desimaltall eller en 0x-hexverdi.",
+  "fileHashError": "Kunne ikke hashe den valgte filen.",
+  "textHashError": "Kunne ikke hashe gjeldende tekst."
 }

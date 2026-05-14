@@ -8,6 +8,8 @@ type CityHash64HashTextOrFileMessages = Readonly<{
   seedDescription: string
   seedPlaceholder: string
   seedInvalid: string
+  fileHashError: string
+  textHashError: string
   hashResultLabel: string
   hashResultDescription: string
   hexLabel: string
