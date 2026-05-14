@@ -1,0 +1,4 @@
+{
+  "name": "RIPEMD-320 Metin veya Dosya Hash Oluşturucu",
+  "description": "Metin girişi veya dosya yüklemesi için RIPEMD-320 hash değeri oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın"
+}

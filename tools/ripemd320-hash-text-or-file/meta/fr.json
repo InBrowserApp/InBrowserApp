@@ -1,0 +1,4 @@
+{
+  "name": "Hachage RIPEMD-320 de texte ou de fichier",
+  "description": "Générez un hachage RIPEMD-320 pour une saisie de texte ou un fichier importé. Calculez des sommes de contrôle cryptographiques sécurisées pour vérifier l'intégrité des données et à des fins de sécurité"
+}

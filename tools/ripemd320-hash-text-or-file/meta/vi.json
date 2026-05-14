@@ -1,0 +1,4 @@
+{
+  "name": "Băm văn bản hoặc tệp bằng RIPEMD-320",
+  "description": "Tạo giá trị băm RIPEMD-320 cho văn bản nhập vào hoặc tệp tải lên. Tính checksum mật mã an toàn để xác minh tính toàn vẹn dữ liệu và phục vụ mục đích bảo mật"
+}

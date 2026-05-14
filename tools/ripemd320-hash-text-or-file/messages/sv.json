@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Indata",
+  "plainTextLabel": "Oformaterad text",
+  "plainTextDescription": "Klistra in eller skriv valfri UTF-8-text, inklusive emoji och icke-latinska tecken.",
+  "importFromFileLabel": "Importera från fil",
+  "hashResultLabel": "Hashresultat",
+  "hashResultDescription": "Hashresultat för den aktuella textinmatningen.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binärt",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierat",
+  "hashTextError": "Det gick inte att beräkna hash för texten.",
+  "hashFileError": "Det gick inte att beräkna hash för filen."
+}

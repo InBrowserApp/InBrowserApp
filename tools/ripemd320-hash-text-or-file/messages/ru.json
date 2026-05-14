@@ -1,0 +1,16 @@
+{
+  "inputLabel": "Входные данные",
+  "plainTextLabel": "Обычный текст",
+  "plainTextDescription": "Вставьте или введите любой текст UTF-8, включая эмодзи и нелатинские символы.",
+  "importFromFileLabel": "Импортировать из файла",
+  "hashResultLabel": "Результат хеширования",
+  "hashResultDescription": "Результат хеширования для текущего текстового ввода.",
+  "hexLabel": "Шестнадцатеричный",
+  "base64Label": "Base64",
+  "decimalLabel": "Десятичный",
+  "binaryLabel": "Двоичный",
+  "copyResultLabel": "Копировать результат",
+  "copiedLabel": "Скопировано",
+  "hashTextError": "Не удалось вычислить хеш текста.",
+  "hashFileError": "Не удалось вычислить хеш файла."
+}

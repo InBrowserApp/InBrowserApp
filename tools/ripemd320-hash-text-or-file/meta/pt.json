@@ -1,0 +1,4 @@
+{
+  "name": "Hash RIPEMD-320 de texto ou arquivo",
+  "description": "Gere um hash RIPEMD-320 para texto inserido ou arquivo enviado. Calcule somas de verificação criptográficas seguras para verificar a integridade dos dados e para fins de segurança"
+}

@@ -1,0 +1,16 @@
+{
+  "inputLabel": "入力",
+  "plainTextLabel": "プレーンテキスト",
+  "plainTextDescription": "絵文字や非ラテン文字を含む任意の UTF-8 テキストを貼り付けるか入力できます。",
+  "importFromFileLabel": "ファイルから読み込み",
+  "hashResultLabel": "ハッシュ結果",
+  "hashResultDescription": "現在のテキスト入力に対するハッシュ結果です。",
+  "hexLabel": "16進数",
+  "base64Label": "Base64",
+  "decimalLabel": "10進数",
+  "binaryLabel": "2進数",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました",
+  "hashTextError": "テキストのハッシュを計算できませんでした。",
+  "hashFileError": "ファイルのハッシュを計算できませんでした。"
+}

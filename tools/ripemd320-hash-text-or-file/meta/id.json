@@ -1,0 +1,4 @@
+{
+  "name": "Hash RIPEMD-320 Teks atau File",
+  "description": "Buat hash RIPEMD-320 untuk input teks atau unggahan file. Hitung checksum kriptografis yang aman untuk verifikasi integritas data dan tujuan keamanan"
+}

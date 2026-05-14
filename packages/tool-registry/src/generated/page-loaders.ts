@@ -143,6 +143,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/ripemd160-hash-text-or-file/page"),
   "ripemd256-hash-text-or-file": () =>
     import("@tool/ripemd256-hash-text-or-file/page"),
+  "ripemd320-hash-text-or-file": () =>
+    import("@tool/ripemd320-hash-text-or-file/page"),
   "robots-txt-generator": () => import("@tool/robots-txt-generator/page"),
   "roman-numeral-converter": () => import("@tool/roman-numeral-converter/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),

@@ -1,0 +1,16 @@
+{
+  "inputLabel": "입력",
+  "plainTextLabel": "일반 텍스트",
+  "plainTextDescription": "이모지와 비라틴 문자 등 모든 UTF-8 텍스트를 붙여넣거나 입력하세요.",
+  "importFromFileLabel": "파일에서 가져오기",
+  "hashResultLabel": "해시 결과",
+  "hashResultDescription": "현재 텍스트 입력의 해시 결과입니다.",
+  "hexLabel": "16진수",
+  "base64Label": "Base64",
+  "decimalLabel": "10진수",
+  "binaryLabel": "2진수",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨",
+  "hashTextError": "텍스트 해시를 계산하지 못했습니다.",
+  "hashFileError": "파일 해시를 계산하지 못했습니다."
+}
