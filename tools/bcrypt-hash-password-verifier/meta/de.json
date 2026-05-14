@@ -1,0 +1,4 @@
+{
+  "name": "Bcrypt-Hash-Passwortprüfer",
+  "description": "Prüfen Sie lokal in Ihrem Browser, ob ein Klartextpasswort zu einem bcrypt-Hash passt. Nützlich zum Debuggen von Authentifizierungsabläufen und zum Prüfen von Passwortmigrationen"
+}

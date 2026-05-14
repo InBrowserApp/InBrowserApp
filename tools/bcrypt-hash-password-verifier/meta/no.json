@@ -1,0 +1,4 @@
+{
+  "name": "Bcrypt-hash-verifiserer for passord",
+  "description": "Verifiser et passord i klartekst mot en bcrypt-hash lokalt i nettleseren. Nyttig for feilsøking av autentiseringsflyter og kontroll av passordmigreringer"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Trình xác minh mã băm mật khẩu Bcrypt",
+  "description": "Xác minh cục bộ trong trình duyệt xem mật khẩu văn bản thuần có khớp với mã băm bcrypt hay không. Hữu ích khi gỡ lỗi luồng xác thực và kiểm tra quá trình di chuyển mật khẩu"
+}

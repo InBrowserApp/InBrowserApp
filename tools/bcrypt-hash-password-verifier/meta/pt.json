@@ -1,0 +1,4 @@
+{
+  "name": "Verificador de senha com hash bcrypt",
+  "description": "Verifique localmente no navegador uma senha em texto simples contra um hash bcrypt. Útil para depurar fluxos de autenticação e conferir migrações de senhas"
+}

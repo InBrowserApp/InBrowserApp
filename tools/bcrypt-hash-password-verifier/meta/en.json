@@ -1,0 +1,4 @@
+{
+  "name": "Bcrypt Hash Password Verifier",
+  "description": "Verify a plain text password against a bcrypt hash locally in your browser. Useful for debugging authentication flows and checking password migrations"
+}
