@@ -1,0 +1,4 @@
+{
+  "name": "Bcrypt Hash Parola Oluşturucu",
+  "description": "Yapılandırılabilir maliyet, yeni salt değerleri ve kimlik doğrulama sistemleri için kopyalamaya hazır çıktı ile bcrypt parola hash'lerini yerel olarak oluşturun."
+}

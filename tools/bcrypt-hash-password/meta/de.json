@@ -1,0 +1,4 @@
+{
+  "name": "bcrypt-Passwort-Hash-Generator",
+  "description": "Generieren Sie bcrypt-Passwort-Hashes lokal mit konfigurierbarem Kostenfaktor, frischem Salt und kopierfertiger Ausgabe für Authentifizierungssysteme."
+}

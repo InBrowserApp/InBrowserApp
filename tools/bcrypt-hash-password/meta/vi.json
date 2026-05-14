@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo hash mật khẩu bcrypt",
+  "description": "Tạo hash mật khẩu bcrypt cục bộ với cost có thể cấu hình, salt mới và đầu ra sẵn sàng sao chép cho các hệ thống xác thực."
+}

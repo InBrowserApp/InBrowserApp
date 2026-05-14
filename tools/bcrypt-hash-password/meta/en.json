@@ -1,0 +1,4 @@
+{
+  "name": "Bcrypt Hash Password Generator",
+  "description": "Generate bcrypt password hashes locally with configurable cost, fresh salts, and copy-ready output for authentication systems."
+}

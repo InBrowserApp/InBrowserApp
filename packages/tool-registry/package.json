@@ -23,6 +23,7 @@
     "@tool/base85-encoder": "workspace:*",
     "@tool/basic-auth-decoder": "workspace:*",
     "@tool/basic-auth-generator": "workspace:*",
+    "@tool/bcrypt-hash-password": "workspace:*",
     "@tool/bic-swift-validator": "workspace:*",
     "@tool/bip39-mnemonic-generator": "workspace:*",
     "@tool/blake2b-hash-text-or-file": "workspace:*",

@@ -1,0 +1,4 @@
+{
+  "name": "Gerador de Hash bcrypt de Senha",
+  "description": "Gere hashes bcrypt de senha localmente com custo configurável, salts novos e saída pronta para copiar para sistemas de autenticação."
+}

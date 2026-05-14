@@ -1,0 +1,5 @@
+const DEFAULT_COST = 12
+const MIN_COST = 4
+const MAX_COST = 15
+
+export { DEFAULT_COST, MAX_COST, MIN_COST }
