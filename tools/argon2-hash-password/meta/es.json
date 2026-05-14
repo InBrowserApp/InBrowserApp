@@ -1,0 +1,4 @@
+{
+  "name": "Generador de hashes Argon2 para contraseñas",
+  "description": "Genera hashes Argon2 de contraseñas codificados en el navegador con algoritmo, memoria, iteraciones, paralelismo, sal y secreto opcional configurables"
+}

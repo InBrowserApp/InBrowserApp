@@ -401,6 +401,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "argon2-hash-password",
+    category: "crypto",
+    icon: "lock",
+    tags: ["hash", "argon2", "password", "kdf", "key", "crypto", "security"],
+    locales: {
+      ar: {
+        name: "تجزئة كلمة مرور Argon2",
+        description:
+          "أنشئ تجزئات كلمات مرور Argon2 مرمّزة في المتصفح مع خوارزمية وذاكرة وتكرارات وتوازٍ وملح وسر اختياري قابلة للضبط",
+      },
+      de: {
+        name: "Argon2-Passwort-Hash-Generator",
+        description:
+          "Generieren Sie kodierte Argon2-Passwort-Hashes im Browser mit konfigurierbarem Algorithmus, Speicher, Iterationen, Parallelität, Salt und optionalem Secret",
+      },
+      en: {
+        name: "Argon2 Hash Password",
+        description:
+          "Generate encoded Argon2 password hashes in the browser with configurable algorithm, memory, iterations, parallelism, salt, and optional secret",
+      },
+      es: {
+        name: "Generador de hashes Argon2 para contraseñas",
+        description:
+          "Genera hashes Argon2 de contraseñas codificados en el navegador con algoritmo, memoria, iteraciones, paralelismo, sal y secreto opcional configurables",
+      },
+      fr: {
+        name: "Hacher un mot de passe avec Argon2",
+        description:
+          "Générez dans le navigateur des hachages de mot de passe Argon2 encodés avec algorithme, mémoire, itérations, parallélisme, sel et secret facultatif configurables",
+      },
+      he: {
+        name: "גיבוב סיסמה עם Argon2",
+        description:
+          "יצירת גיבובי סיסמה מקודדים של Argon2 בדפדפן, עם אלגוריתם, זיכרון, איטרציות, מקביליות, מלח וסוד אופציונלי הניתנים להגדרה",
+      },
+      hi: {
+        name: "Argon2 पासवर्ड हैश जनरेटर",
+        description:
+          "कॉन्फ़िगर करने योग्य एल्गोरिदम, मेमोरी, इटरेशन, पैरेललिज्म, सॉल्ट और वैकल्पिक Secret के साथ ब्राउज़र में एन्कोडेड Argon2 पासवर्ड हैश बनाएं।",
+      },
+      id: {
+        name: "Hash Kata Sandi Argon2",
+        description:
+          "Buat hash kata sandi Argon2 terenkode di browser dengan algoritma, memori, iterasi, paralelisme, salt, dan secret opsional yang dapat dikonfigurasi",
+      },
+      it: {
+        name: "Generatore di hash Argon2 per password",
+        description:
+          "Genera nel browser hash Argon2 codificati per password con algoritmo, memoria, iterazioni, parallelismo, salt e segreto opzionale configurabili",
+      },
+      ja: {
+        name: "Argon2 パスワードハッシュ生成",
+        description:
+          "アルゴリズム、メモリ、反復回数、並列度、ソルト、任意のシークレットを設定して、ブラウザー内でエンコード済み Argon2 パスワードハッシュを生成します",
+      },
+      ko: {
+        name: "Argon2 비밀번호 해시",
+        description:
+          "구성 가능한 알고리즘, 메모리, 반복 횟수, 병렬도, 솔트, 선택적 시크릿으로 브라우저에서 인코딩된 Argon2 비밀번호 해시를 생성합니다",
+      },
+      ms: {
+        name: "Hash Kata Laluan Argon2",
+        description:
+          "Jana hash kata laluan Argon2 yang dikodkan dalam pelayar dengan algoritma, memori, iterasi, paralelisme, salt, dan rahsia pilihan yang boleh dikonfigurasi",
+      },
+      nl: {
+        name: "Argon2 Wachtwoordhash",
+        description:
+          "Genereer gecodeerde Argon2-wachtwoordhashes in de browser met configureerbaar algoritme, geheugen, iteraties, paralleliteit, salt en optioneel geheim",
+      },
+      no: {
+        name: "Hash passord med Argon2",
+        description:
+          "Generer kodede Argon2-passordhasher i nettleseren med konfigurerbar algoritme, minne, iterasjoner, parallellitet, salt og valgfri hemmelighet",
+      },
+      pl: {
+        name: "Generator hashy haseł Argon2",
+        description:
+          "Generuj zakodowane hashe haseł Argon2 w przeglądarce z konfigurowalnym algorytmem, pamięcią, iteracjami, równoległością, solą i opcjonalnym sekretem",
+      },
+      pt: {
+        name: "Hash Argon2 de Palavra-passe",
+        description:
+          "Gere hashes de palavras-passe Argon2 codificados no navegador com algoritmo, memória, iterações, paralelismo, salt e segredo opcional configuráveis",
+      },
+      ru: {
+        name: "Хеширование пароля Argon2",
+        description:
+          "Генерируйте закодированные хеши паролей Argon2 в браузере с настраиваемыми алгоритмом, памятью, итерациями, параллелизмом, солью и необязательным секретом",
+      },
+      sv: {
+        name: "Hasha lösenord med Argon2",
+        description:
+          "Generera kodade Argon2-lösenordshashar i webbläsaren med konfigurerbar algoritm, minne, iterationer, parallellism, salt och valfri hemlighet",
+      },
+      th: {
+        name: "แฮชรหัสผ่านด้วย Argon2",
+        description:
+          "สร้างแฮชรหัสผ่าน Argon2 แบบเข้ารหัสในเบราว์เซอร์ พร้อมกำหนดอัลกอริทึม หน่วยความจำ จำนวนรอบ การประมวลผลขนาน ซอลต์ และความลับเสริมได้",
+      },
+      tr: {
+        name: "Argon2 Parola Hash Oluşturucu",
+        description:
+          "Yapılandırılabilir algoritma, bellek, yineleme, paralellik, tuz ve isteğe bağlı gizli değer ile tarayıcıda kodlanmış Argon2 parola hash değerleri oluşturun",
+      },
+      vi: {
+        name: "Băm mật khẩu Argon2",
+        description:
+          "Tạo các mã băm mật khẩu Argon2 đã mã hóa ngay trong trình duyệt với thuật toán, bộ nhớ, số vòng lặp, mức song song, salt và secret tùy chọn có thể cấu hình",
+      },
+      "zh-CN": {
+        name: "Argon2 密码哈希生成器",
+        description:
+          "直接在浏览器中生成编码后的 Argon2 密码哈希，可配置算法、内存、迭代次数、并行度、盐和可选 secret。",
+      },
+      "zh-TW": {
+        name: "Argon2 密碼雜湊產生器",
+        description:
+          "在瀏覽器中產生編碼後的 Argon2 密碼雜湊，可設定演算法、記憶體、迭代次數、平行度、鹽值，以及選用的秘密值",
+      },
+    },
+  },
+  {
     slug: "ascii-art-generator",
     category: "text",
     icon: "binary",

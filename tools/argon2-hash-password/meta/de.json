@@ -1,0 +1,4 @@
+{
+  "name": "Argon2-Passwort-Hash-Generator",
+  "description": "Generieren Sie kodierte Argon2-Passwort-Hashes im Browser mit konfigurierbarem Algorithmus, Speicher, Iterationen, Parallelität, Salt und optionalem Secret"
+}

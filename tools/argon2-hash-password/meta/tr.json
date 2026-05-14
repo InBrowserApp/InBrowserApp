@@ -1,0 +1,4 @@
+{
+  "name": "Argon2 Parola Hash Oluşturucu",
+  "description": "Yapılandırılabilir algoritma, bellek, yineleme, paralellik, tuz ve isteğe bağlı gizli değer ile tarayıcıda kodlanmış Argon2 parola hash değerleri oluşturun"
+}

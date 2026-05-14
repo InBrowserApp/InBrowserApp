@@ -1,0 +1,4 @@
+{
+  "name": "Argon2 Hash Password",
+  "description": "Generate encoded Argon2 password hashes in the browser with configurable algorithm, memory, iterations, parallelism, salt, and optional secret"
+}

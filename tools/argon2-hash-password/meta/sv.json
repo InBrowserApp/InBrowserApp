@@ -1,0 +1,4 @@
+{
+  "name": "Hasha lösenord med Argon2",
+  "description": "Generera kodade Argon2-lösenordshashar i webbläsaren med konfigurerbar algoritm, minne, iterationer, parallellism, salt och valfri hemlighet"
+}

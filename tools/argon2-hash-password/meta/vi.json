@@ -1,0 +1,4 @@
+{
+  "name": "Băm mật khẩu Argon2",
+  "description": "Tạo các mã băm mật khẩu Argon2 đã mã hóa ngay trong trình duyệt với thuật toán, bộ nhớ, số vòng lặp, mức song song, salt và secret tùy chọn có thể cấu hình"
+}
