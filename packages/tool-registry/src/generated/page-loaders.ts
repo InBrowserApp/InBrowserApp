@@ -84,6 +84,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-to-ico": () => import("@tool/image-to-ico/page"),
   "imei-validator": () => import("@tool/imei-validator/page"),
   "ip-cidr-normalizer": () => import("@tool/ip-cidr-normalizer/page"),
+  "ip-info-lookup": () => import("@tool/ip-info-lookup/page"),
   "ip-range-to-cidr-converter": () =>
     import("@tool/ip-range-to-cidr-converter/page"),
   "ipv6-address-to-mac-address-converter": () =>

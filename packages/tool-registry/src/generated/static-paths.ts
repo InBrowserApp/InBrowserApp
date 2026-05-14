@@ -5890,6 +5890,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ip-info-lookup",
+    language: "ar",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "de",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "en",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "es",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "fr",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "he",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "hi",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "id",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "it",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "ja",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "ko",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "ms",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "nl",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "no",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "pl",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "pt",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "ru",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "sv",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "th",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "tr",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "vi",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "ip-info-lookup",
+    language: "zh-TW",
+  },
+  {
     slug: "ip-range-to-cidr-converter",
     language: "ar",
   },
