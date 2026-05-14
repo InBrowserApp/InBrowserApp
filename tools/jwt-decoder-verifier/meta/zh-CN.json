@@ -1,0 +1,4 @@
+{
+  "name": "JWT 解码器和验证器",
+  "description": "在本地解码 JSON Web Token 标头和载荷，检查注册声明，并使用密钥、PEM 公钥、JWK 或 JWKS 验证 HS、RS、PS 和 ES 签名。"
+}

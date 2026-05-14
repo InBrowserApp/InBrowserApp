@@ -1,0 +1,4 @@
+{
+  "name": "מפענח ומאמת JWT",
+  "description": "פענחו כותרות ומטענים של JSON Web Token באופן מקומי, בדקו claims רשומים, ואמתו חתימות HS, RS, PS ו-ES בעזרת סוד, מפתח ציבורי PEM,‏ JWK או JWKS."
+}

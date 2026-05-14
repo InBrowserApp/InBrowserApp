@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "Tampal JWT padat. Pengepala dan muatan dinyahkod secara setempat sebelum sebarang semakan tandatangan dijalankan.",
+    "label": "Token JWT",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Guna contoh",
+    "clear": "Kosongkan"
+  },
+  "decoded": {
+    "title": "Token dinyahkod",
+    "description": "JSON berformat cantik yang dinyahkod daripada segmen token.",
+    "headerTitle": "Pengepala",
+    "payloadTitle": "Muatan",
+    "copyJson": "Salin JSON",
+    "copied": "Disalin",
+    "emptyTitle": "Tampal JWT untuk menyahkodnya",
+    "emptyDescription": "Alat ini menjangkakan format JWT padat tiga bahagian: header.payload.signature."
+  },
+  "verification": {
+    "title": "Pengesahan tandatangan",
+    "description": "Sahkan tandatangan JWS dengan rahsia berkongsi, kunci awam PEM, JWK, atau JWKS.",
+    "algorithmLabel": "Algoritma",
+    "algorithmDescription": "Auto menggunakan nilai alg daripada pengepala JWT. Pemilihan manual masih mesti sepadan dengan pengepala.",
+    "autoAlgorithm": "Auto daripada pengepala",
+    "keyLabel": "Rahsia atau kunci awam",
+    "keyDescription": "Gunakan teks biasa untuk algoritma HS. Gunakan kunci awam PEM, JWK, atau JWKS untuk algoritma RS, PS, dan ES. Nilai tidak disimpan.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Sedia untuk mengesahkan",
+    "waitingDescription": "Masukkan token yang sah dan bahan pengesahan untuk menyemak tandatangan.",
+    "pendingTitle": "Mengesahkan tandatangan",
+    "verifiedTitle": "Tandatangan disahkan",
+    "verifiedDescription": "Tandatangan sepadan dengan pengepala token, muatan, algoritma, dan kunci yang dibekalkan.",
+    "failedTitle": "Pengesahan gagal",
+    "failedDescription": "Tandatangan tidak sepadan dengan kunci dan algoritma yang dibekalkan."
+  },
+  "claims": {
+    "title": "Tuntutan berdaftar",
+    "description": "Semakan pantas untuk tuntutan JWT berasaskan masa yang lazim.",
+    "emptyTitle": "Tiada tuntutan masa untuk disemak",
+    "emptyDescription": "Muatan ini tidak menyertakan tuntutan exp, nbf, atau iat.",
+    "severities": {
+      "danger": "Masalah",
+      "warning": "Amaran",
+      "success": "Sah",
+      "neutral": "Maklumat"
+    },
+    "messages": {
+      "payload-not-object": "Muatan bukan objek JSON, jadi tuntutan berdaftar tidak boleh disemak.",
+      "invalid-exp": "Tuntutan exp wujud tetapi bukan tarikh berangka.",
+      "invalid-nbf": "Tuntutan nbf wujud tetapi bukan tarikh berangka.",
+      "invalid-iat": "Tuntutan iat wujud tetapi bukan tarikh berangka.",
+      "expired": "Tamat tempoh pada {date}.",
+      "not-yet-valid": "Belum sah sebelum {date}.",
+      "issued-in-future": "Dikeluarkan pada masa hadapan pada {date}.",
+      "expires-at": "Tamat tempoh pada {date}.",
+      "valid-after": "Sah selepas {date}.",
+      "issued-at": "Dikeluarkan pada {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Tampal JWT untuk menyahkodnya.",
+    "invalid-segment-count": "JWT mesti mempunyai tepat tiga segmen yang dipisahkan titik.",
+    "empty-header-or-payload": "Segmen pengepala dan muatan JWT tidak boleh kosong.",
+    "invalid-header-base64": "Segmen pengepala bukan base64url yang sah.",
+    "invalid-payload-base64": "Segmen muatan bukan base64url yang sah.",
+    "invalid-signature-base64": "Segmen tandatangan bukan base64url yang sah.",
+    "invalid-header-json": "Segmen pengepala bukan JSON yang sah.",
+    "invalid-payload-json": "Segmen muatan bukan JSON yang sah.",
+    "header-not-object": "Pengepala JWT mesti dinyahkod kepada objek JSON."
+  },
+  "verifyErrors": {
+    "key-required": "Masukkan rahsia atau kunci awam sebelum mengesahkan.",
+    "missing-algorithm": "Pengepala JWT tidak menyertakan nilai alg.",
+    "unsupported-algorithm": "Pengesah ini menyokong HS256/384/512, RS256/384/512, PS256/384/512, dan ES256/384/512.",
+    "algorithm-mismatch": "Algoritma yang dipilih tidak sepadan dengan nilai alg pengepala JWT.",
+    "invalid-key-json": "Input JWK atau JWKS bukan JSON yang sah.",
+    "invalid-jwk": "JSON kunci mesti berupa objek JWK atau objek JWKS dengan tatasusunan keys.",
+    "empty-jwks": "Tatasusunan keys JWKS kosong.",
+    "jwk-kid-not-found": "Tiada kunci dalam JWKS yang sepadan dengan nilai kid pengepala JWT.",
+    "unsupported-key-format": "Gunakan teks biasa untuk algoritma HS, atau kunci awam PEM, JWK, atau JWKS untuk algoritma asimetri.",
+    "unsupported-pem-label": "Hanya kunci awam PEM dengan BEGIN PUBLIC KEY disokong untuk pengesahan.",
+    "key-import-failed": "Kunci tidak dapat diimport untuk algoritma yang dipilih.",
+    "webcrypto-unavailable": "WebCrypto tidak tersedia dalam konteks pelayar ini."
+  }
+}

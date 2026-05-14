@@ -1,0 +1,4 @@
+{
+  "name": "JWT-dekoder og verifikator",
+  "description": "Dekod JSON Web Token-headere og nyttelaster lokalt, inspiser registrerte claims, og verifiser HS-, RS-, PS- og ES-signaturer med en hemmelighet, offentlig PEM-nokkel, JWK eller JWKS."
+}

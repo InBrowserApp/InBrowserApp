@@ -1,0 +1,4 @@
+{
+  "name": "JWT-decoder en -verifier",
+  "description": "Decodeer JSON Web Token-headers en payloads lokaal, inspecteer geregistreerde claims en verifieer HS-, RS-, PS- en ES-handtekeningen met een secret, PEM-public key, JWK of JWKS."
+}

@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "Wklej kompaktowy JWT. Nagłówek i treść są dekodowane lokalnie przed uruchomieniem jakiejkolwiek kontroli podpisu.",
+    "label": "Token JWT",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Użyj przykładu",
+    "clear": "Wyczyść"
+  },
+  "decoded": {
+    "title": "Zdekodowany token",
+    "description": "Sformatowany JSON zdekodowany z segmentu tokenu.",
+    "headerTitle": "Nagłówek",
+    "payloadTitle": "Treść",
+    "copyJson": "Kopiuj JSON",
+    "copied": "Skopiowano",
+    "emptyTitle": "Wklej JWT, aby go zdekodować",
+    "emptyDescription": "Narzędzie oczekuje kompaktowego, trzyczęściowego formatu JWT: header.payload.signature."
+  },
+  "verification": {
+    "title": "Weryfikacja podpisu",
+    "description": "Zweryfikuj podpis JWS za pomocą współdzielonego sekretu, klucza publicznego PEM, JWK lub JWKS.",
+    "algorithmLabel": "Algorytm",
+    "algorithmDescription": "Tryb automatyczny używa wartości alg z nagłówka JWT. Wybór ręczny nadal musi pasować do nagłówka.",
+    "autoAlgorithm": "Automatycznie z nagłówka",
+    "keyLabel": "Sekret lub klucz publiczny",
+    "keyDescription": "Użyj zwykłego tekstu dla algorytmów HS. Użyj klucza publicznego PEM, JWK lub JWKS dla algorytmów RS, PS i ES. Wartości nie są zapisywane.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Gotowe do weryfikacji",
+    "waitingDescription": "Wprowadź prawidłowy token i materiał weryfikacyjny, aby sprawdzić podpis.",
+    "pendingTitle": "Weryfikowanie podpisu",
+    "verifiedTitle": "Podpis zweryfikowany",
+    "verifiedDescription": "Podpis pasuje do nagłówka tokenu, treści, algorytmu i podanego klucza.",
+    "failedTitle": "Weryfikacja nie powiodła się",
+    "failedDescription": "Podpis nie pasuje do podanego klucza i algorytmu."
+  },
+  "claims": {
+    "title": "Zarejestrowane roszczenia",
+    "description": "Szybkie kontrole typowych roszczeń JWT opartych na czasie.",
+    "emptyTitle": "Brak roszczeń czasowych do sprawdzenia",
+    "emptyDescription": "Ta treść nie zawiera roszczeń exp, nbf ani iat.",
+    "severities": {
+      "danger": "Problem",
+      "warning": "Ostrzeżenie",
+      "success": "Prawidłowe",
+      "neutral": "Informacja"
+    },
+    "messages": {
+      "payload-not-object": "Treść nie jest obiektem JSON, więc nie można sprawdzić zarejestrowanych roszczeń.",
+      "invalid-exp": "Roszczenie exp jest obecne, ale nie jest datą numeryczną.",
+      "invalid-nbf": "Roszczenie nbf jest obecne, ale nie jest datą numeryczną.",
+      "invalid-iat": "Roszczenie iat jest obecne, ale nie jest datą numeryczną.",
+      "expired": "Wygasł o {date}.",
+      "not-yet-valid": "Nie jest ważny przed {date}.",
+      "issued-in-future": "Wydany w przyszłości o {date}.",
+      "expires-at": "Wygasa o {date}.",
+      "valid-after": "Ważny po {date}.",
+      "issued-at": "Wydany o {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Wklej JWT, aby go zdekodować.",
+    "invalid-segment-count": "JWT musi mieć dokładnie trzy segmenty oddzielone kropkami.",
+    "empty-header-or-payload": "Segmenty nagłówka i treści JWT nie mogą być puste.",
+    "invalid-header-base64": "Segment nagłówka nie jest prawidłowym base64url.",
+    "invalid-payload-base64": "Segment treści nie jest prawidłowym base64url.",
+    "invalid-signature-base64": "Segment podpisu nie jest prawidłowym base64url.",
+    "invalid-header-json": "Segment nagłówka nie jest prawidłowym JSON.",
+    "invalid-payload-json": "Segment treści nie jest prawidłowym JSON.",
+    "header-not-object": "Nagłówek JWT musi dekodować się do obiektu JSON."
+  },
+  "verifyErrors": {
+    "key-required": "Wprowadź sekret lub klucz publiczny przed weryfikacją.",
+    "missing-algorithm": "Nagłówek JWT nie zawiera wartości alg.",
+    "unsupported-algorithm": "Ten weryfikator obsługuje HS256/384/512, RS256/384/512, PS256/384/512 i ES256/384/512.",
+    "algorithm-mismatch": "Wybrany algorytm nie pasuje do wartości alg w nagłówku JWT.",
+    "invalid-key-json": "Dane wejściowe JWK lub JWKS nie są prawidłowym JSON.",
+    "invalid-jwk": "JSON klucza musi być obiektem JWK albo obiektem JWKS z tablicą keys.",
+    "empty-jwks": "Tablica keys w JWKS jest pusta.",
+    "jwk-kid-not-found": "Żaden klucz w JWKS nie pasuje do wartości kid z nagłówka JWT.",
+    "unsupported-key-format": "Użyj zwykłego tekstu dla algorytmów HS albo klucza publicznego PEM, JWK lub JWKS dla algorytmów asymetrycznych.",
+    "unsupported-pem-label": "Do weryfikacji obsługiwane są tylko klucze publiczne PEM z BEGIN PUBLIC KEY.",
+    "key-import-failed": "Nie można zaimportować klucza dla wybranego algorytmu.",
+    "webcrypto-unavailable": "WebCrypto nie jest dostępne w tym kontekście przeglądarki."
+  }
+}

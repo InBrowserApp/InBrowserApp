@@ -96,6 +96,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "json-to-yaml-converter": () => import("@tool/json-to-yaml-converter/page"),
   "jsonpath-tester": () => import("@tool/jsonpath-tester/page"),
   "jwk-pem-converter": () => import("@tool/jwk-pem-converter/page"),
+  "jwt-decoder-verifier": () => import("@tool/jwt-decoder-verifier/page"),
   "keccak-hash-text-or-file": () =>
     import("@tool/keccak-hash-text-or-file/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),

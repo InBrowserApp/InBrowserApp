@@ -1,0 +1,4 @@
+{
+  "name": "Decoder dan Verifier JWT",
+  "description": "Dekode header dan payload JSON Web Token secara lokal, periksa registered claims, dan verifikasi tanda tangan HS, RS, PS, dan ES dengan secret, public key PEM, JWK, atau JWKS."
+}

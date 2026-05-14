@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "Pega un JWT compacto. El encabezado y la carga se decodifican localmente antes de ejecutar cualquier comprobación de firma.",
+    "label": "Token JWT",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Usar muestra",
+    "clear": "Borrar"
+  },
+  "decoded": {
+    "title": "Token decodificado",
+    "description": "JSON con formato decodificado desde el segmento del token.",
+    "headerTitle": "Encabezado",
+    "payloadTitle": "Carga",
+    "copyJson": "Copiar JSON",
+    "copied": "Copiado",
+    "emptyTitle": "Pega un JWT para decodificarlo",
+    "emptyDescription": "La herramienta espera el formato JWT compacto de tres partes: header.payload.signature."
+  },
+  "verification": {
+    "title": "Verificación de firma",
+    "description": "Verifica la firma JWS con un secreto compartido, una clave pública PEM, JWK o JWKS.",
+    "algorithmLabel": "Algoritmo",
+    "algorithmDescription": "Auto usa el valor alg del encabezado JWT. La selección manual debe coincidir igualmente con el encabezado.",
+    "autoAlgorithm": "Auto desde encabezado",
+    "keyLabel": "Secreto o clave pública",
+    "keyDescription": "Usa texto sin formato para algoritmos HS. Usa una clave pública PEM, JWK o JWKS para algoritmos RS, PS y ES. Los valores no se guardan.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Listo para verificar",
+    "waitingDescription": "Introduce un token válido y material de verificación para comprobar la firma.",
+    "pendingTitle": "Verificando firma",
+    "verifiedTitle": "Firma verificada",
+    "verifiedDescription": "La firma coincide con el encabezado, la carga, el algoritmo y la clave proporcionada del token.",
+    "failedTitle": "Error de verificación",
+    "failedDescription": "La firma no coincide con la clave y el algoritmo proporcionados."
+  },
+  "claims": {
+    "title": "Claims registrados",
+    "description": "Comprobaciones rápidas para claims JWT comunes basados en tiempo.",
+    "emptyTitle": "No hay claims de tiempo para inspeccionar",
+    "emptyDescription": "Esta carga no incluye claims exp, nbf ni iat.",
+    "severities": {
+      "danger": "Problema",
+      "warning": "Advertencia",
+      "success": "Válido",
+      "neutral": "Información"
+    },
+    "messages": {
+      "payload-not-object": "La carga no es un objeto JSON, por lo que no se pueden inspeccionar los claims registrados.",
+      "invalid-exp": "El claim exp está presente, pero no es una fecha numérica.",
+      "invalid-nbf": "El claim nbf está presente, pero no es una fecha numérica.",
+      "invalid-iat": "El claim iat está presente, pero no es una fecha numérica.",
+      "expired": "Expiró el {date}.",
+      "not-yet-valid": "No es válido antes del {date}.",
+      "issued-in-future": "Emitido en el futuro el {date}.",
+      "expires-at": "Expira el {date}.",
+      "valid-after": "Válido después del {date}.",
+      "issued-at": "Emitido el {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Pega un JWT para decodificarlo.",
+    "invalid-segment-count": "Los JWT deben tener exactamente tres segmentos separados por puntos.",
+    "empty-header-or-payload": "Los segmentos de encabezado y carga del JWT no pueden estar vacíos.",
+    "invalid-header-base64": "El segmento de encabezado no es base64url válido.",
+    "invalid-payload-base64": "El segmento de carga no es base64url válido.",
+    "invalid-signature-base64": "El segmento de firma no es base64url válido.",
+    "invalid-header-json": "El segmento de encabezado no es JSON válido.",
+    "invalid-payload-json": "El segmento de carga no es JSON válido.",
+    "header-not-object": "El encabezado JWT debe decodificarse como un objeto JSON."
+  },
+  "verifyErrors": {
+    "key-required": "Introduce un secreto o una clave pública antes de verificar.",
+    "missing-algorithm": "El encabezado JWT no incluye un valor alg.",
+    "unsupported-algorithm": "Este verificador admite HS256/384/512, RS256/384/512, PS256/384/512 y ES256/384/512.",
+    "algorithm-mismatch": "El algoritmo seleccionado no coincide con el valor alg del encabezado JWT.",
+    "invalid-key-json": "La entrada JWK o JWKS no es JSON válido.",
+    "invalid-jwk": "El JSON de la clave debe ser un objeto JWK o un objeto JWKS con un array keys.",
+    "empty-jwks": "El array keys de JWKS está vacío.",
+    "jwk-kid-not-found": "Ninguna clave del JWKS coincide con el valor kid del encabezado JWT.",
+    "unsupported-key-format": "Usa texto sin formato para algoritmos HS, o una clave pública PEM, JWK o JWKS para algoritmos asimétricos.",
+    "unsupported-pem-label": "Solo se admiten claves públicas PEM con BEGIN PUBLIC KEY para la verificación.",
+    "key-import-failed": "No se pudo importar la clave para el algoritmo seleccionado.",
+    "webcrypto-unavailable": "WebCrypto no está disponible en este contexto del navegador."
+  }
+}

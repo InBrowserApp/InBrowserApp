@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "Klistra in en kompakt JWT. Huvudet och nyttolasten avkodas lokalt innan någon signaturkontroll körs.",
+    "label": "JWT-token",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Använd exempel",
+    "clear": "Rensa"
+  },
+  "decoded": {
+    "title": "Avkodad token",
+    "description": "Snyggt formaterad JSON avkodad från tokensegmentet.",
+    "headerTitle": "Huvud",
+    "payloadTitle": "Nyttolast",
+    "copyJson": "Kopiera JSON",
+    "copied": "Kopierat",
+    "emptyTitle": "Klistra in en JWT för att avkoda den",
+    "emptyDescription": "Verktyget förväntar sig det kompakta JWT-formatet med tre delar: header.payload.signature."
+  },
+  "verification": {
+    "title": "Signaturverifiering",
+    "description": "Verifiera JWS-signaturen med en delad hemlighet, PEM-offentlig nyckel, JWK eller JWKS.",
+    "algorithmLabel": "Algoritm",
+    "algorithmDescription": "Auto använder alg-värdet från JWT-huvudet. Manuellt val måste fortfarande matcha huvudet.",
+    "autoAlgorithm": "Auto från huvud",
+    "keyLabel": "Hemlighet eller offentlig nyckel",
+    "keyDescription": "Använd vanlig text för HS-algoritmer. Använd en PEM-offentlig nyckel, JWK eller JWKS för RS-, PS- och ES-algoritmer. Värden sparas inte.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Redo att verifiera",
+    "waitingDescription": "Ange en giltig token och verifieringsmaterial för att kontrollera signaturen.",
+    "pendingTitle": "Verifierar signatur",
+    "verifiedTitle": "Signaturen verifierad",
+    "verifiedDescription": "Signaturen matchar tokenens huvud, nyttolast, algoritm och den angivna nyckeln.",
+    "failedTitle": "Verifieringen misslyckades",
+    "failedDescription": "Signaturen matchar inte den angivna nyckeln och algoritmen."
+  },
+  "claims": {
+    "title": "Registrerade claims",
+    "description": "Snabba kontroller för vanliga tidsbaserade JWT-claims.",
+    "emptyTitle": "Inga tidsclaims att granska",
+    "emptyDescription": "Den här nyttolasten innehåller inte exp-, nbf- eller iat-claims.",
+    "severities": {
+      "danger": "Problem",
+      "warning": "Varning",
+      "success": "Giltig",
+      "neutral": "Info"
+    },
+    "messages": {
+      "payload-not-object": "Nyttolasten är inte ett JSON-objekt, så registrerade claims kan inte granskas.",
+      "invalid-exp": "exp-claimet finns men är inte ett numeriskt datum.",
+      "invalid-nbf": "nbf-claimet finns men är inte ett numeriskt datum.",
+      "invalid-iat": "iat-claimet finns men är inte ett numeriskt datum.",
+      "expired": "Upphörde att gälla {date}.",
+      "not-yet-valid": "Inte giltig före {date}.",
+      "issued-in-future": "Utfärdad i framtiden vid {date}.",
+      "expires-at": "Upphör att gälla {date}.",
+      "valid-after": "Giltig efter {date}.",
+      "issued-at": "Utfärdad {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Klistra in en JWT för att avkoda den.",
+    "invalid-segment-count": "JWT:er måste ha exakt tre punktseparerade segment.",
+    "empty-header-or-payload": "JWT-huvudets och nyttolastens segment får inte vara tomma.",
+    "invalid-header-base64": "Huvudsegmentet är inte giltig base64url.",
+    "invalid-payload-base64": "Nyttolastsegmentet är inte giltig base64url.",
+    "invalid-signature-base64": "Signatursegmentet är inte giltig base64url.",
+    "invalid-header-json": "Huvudsegmentet är inte giltig JSON.",
+    "invalid-payload-json": "Nyttolastsegmentet är inte giltig JSON.",
+    "header-not-object": "JWT-huvudet måste avkodas till ett JSON-objekt."
+  },
+  "verifyErrors": {
+    "key-required": "Ange en hemlighet eller offentlig nyckel innan verifiering.",
+    "missing-algorithm": "JWT-huvudet innehåller inget alg-värde.",
+    "unsupported-algorithm": "Den här verifieraren stöder HS256/384/512, RS256/384/512, PS256/384/512 och ES256/384/512.",
+    "algorithm-mismatch": "Den valda algoritmen matchar inte JWT-huvudets alg-värde.",
+    "invalid-key-json": "JWK- eller JWKS-indata är inte giltig JSON.",
+    "invalid-jwk": "Nyckel-JSON måste vara ett JWK-objekt eller ett JWKS-objekt med en keys-array.",
+    "empty-jwks": "JWKS-nyckelarrayen är tom.",
+    "jwk-kid-not-found": "Ingen nyckel i JWKS matchar JWT-huvudets kid-värde.",
+    "unsupported-key-format": "Använd vanlig text för HS-algoritmer eller en PEM-offentlig nyckel, JWK eller JWKS för asymmetriska algoritmer.",
+    "unsupported-pem-label": "Endast PEM-offentliga nycklar med BEGIN PUBLIC KEY stöds för verifiering.",
+    "key-import-failed": "Nyckeln kunde inte importeras för den valda algoritmen.",
+    "webcrypto-unavailable": "WebCrypto är inte tillgängligt i den här webbläsarkontexten."
+  }
+}

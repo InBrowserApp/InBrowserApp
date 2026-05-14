@@ -1,0 +1,4 @@
+{
+  "name": "JWT デコーダーと検証ツール",
+  "description": "JSON Web Token のヘッダーとペイロードをローカルでデコードし、登録済みクレームを確認し、シークレット、PEM 公開鍵、JWK、または JWKS を使って HS、RS、PS、ES 署名を検証します。"
+}

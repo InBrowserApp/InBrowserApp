@@ -1,0 +1,4 @@
+{
+  "name": "Dekoder i weryfikator JWT",
+  "description": "Dekoduj lokalnie nagłówki i treść JSON Web Token, sprawdzaj zarejestrowane roszczenia oraz weryfikuj podpisy HS, RS, PS i ES za pomocą sekretu, klucza publicznego PEM, JWK lub JWKS."
+}

@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "एक compact JWT पेस्ट करें। किसी भी signature check के चलने से पहले header और payload स्थानीय रूप से डिकोड किए जाते हैं।",
+    "label": "JWT token",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Sample उपयोग करें",
+    "clear": "साफ करें"
+  },
+  "decoded": {
+    "title": "Decoded token",
+    "description": "Token segment से डिकोड किया गया pretty-printed JSON।",
+    "headerTitle": "Header",
+    "payloadTitle": "Payload",
+    "copyJson": "JSON कॉपी करें",
+    "copied": "कॉपी हो गया",
+    "emptyTitle": "इसे डिकोड करने के लिए JWT पेस्ट करें",
+    "emptyDescription": "यह टूल compact three-part JWT format अपेक्षित करता है: header.payload.signature."
+  },
+  "verification": {
+    "title": "Signature verification",
+    "description": "Shared secret, PEM public key, JWK, या JWKS से JWS signature सत्यापित करें।",
+    "algorithmLabel": "Algorithm",
+    "algorithmDescription": "Auto JWT header से alg value का उपयोग करता है। Manual selection को फिर भी header से match करना चाहिए।",
+    "autoAlgorithm": "Header से auto",
+    "keyLabel": "Secret या public key",
+    "keyDescription": "HS algorithms के लिए plain text उपयोग करें। RS, PS, और ES algorithms के लिए PEM public key, JWK, या JWKS उपयोग करें। Values saved नहीं होतीं।",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Verify करने के लिए ready",
+    "waitingDescription": "Signature check करने के लिए valid token और verification material दर्ज करें।",
+    "pendingTitle": "Signature verify हो रहा है",
+    "verifiedTitle": "Signature verified",
+    "verifiedDescription": "Signature token header, payload, algorithm, और supplied key से match करता है।",
+    "failedTitle": "Verification failed",
+    "failedDescription": "Signature supplied key और algorithm से match नहीं करता।"
+  },
+  "claims": {
+    "title": "Registered claims",
+    "description": "सामान्य time-based JWT claims के लिए quick checks।",
+    "emptyTitle": "जांचने के लिए कोई time claims नहीं",
+    "emptyDescription": "इस payload में exp, nbf, या iat claims शामिल नहीं हैं।",
+    "severities": {
+      "danger": "समस्या",
+      "warning": "चेतावनी",
+      "success": "Valid",
+      "neutral": "Info"
+    },
+    "messages": {
+      "payload-not-object": "Payload JSON object नहीं है, इसलिए registered claims की जांच नहीं की जा सकती।",
+      "invalid-exp": "exp claim मौजूद है, लेकिन numeric date नहीं है।",
+      "invalid-nbf": "nbf claim मौजूद है, लेकिन numeric date नहीं है।",
+      "invalid-iat": "iat claim मौजूद है, लेकिन numeric date नहीं है।",
+      "expired": "{date} पर expired।",
+      "not-yet-valid": "{date} से पहले valid नहीं।",
+      "issued-in-future": "{date} पर future में issued।",
+      "expires-at": "{date} पर expires।",
+      "valid-after": "{date} के बाद valid।",
+      "issued-at": "{date} पर issued।"
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "इसे डिकोड करने के लिए JWT पेस्ट करें।",
+    "invalid-segment-count": "JWTs में exactly three dot-separated segments होने चाहिए।",
+    "empty-header-or-payload": "JWT header और payload segments खाली नहीं हो सकते।",
+    "invalid-header-base64": "Header segment valid base64url नहीं है।",
+    "invalid-payload-base64": "Payload segment valid base64url नहीं है।",
+    "invalid-signature-base64": "Signature segment valid base64url नहीं है।",
+    "invalid-header-json": "Header segment valid JSON नहीं है।",
+    "invalid-payload-json": "Payload segment valid JSON नहीं है।",
+    "header-not-object": "JWT header को JSON object में decode होना चाहिए।"
+  },
+  "verifyErrors": {
+    "key-required": "Verify करने से पहले secret या public key दर्ज करें।",
+    "missing-algorithm": "JWT header में alg value शामिल नहीं है।",
+    "unsupported-algorithm": "यह verifier HS256/384/512, RS256/384/512, PS256/384/512, और ES256/384/512 support करता है।",
+    "algorithm-mismatch": "Selected algorithm JWT header alg value से match नहीं करता।",
+    "invalid-key-json": "JWK या JWKS input valid JSON नहीं है।",
+    "invalid-jwk": "Key JSON एक JWK object या keys array वाला JWKS object होना चाहिए।",
+    "empty-jwks": "JWKS keys array खाली है।",
+    "jwk-kid-not-found": "JWKS में कोई key JWT header kid value से match नहीं करती।",
+    "unsupported-key-format": "HS algorithms के लिए plain text, या asymmetric algorithms के लिए PEM public key, JWK, या JWKS उपयोग करें।",
+    "unsupported-pem-label": "Verification के लिए केवल BEGIN PUBLIC KEY वाली PEM public keys supported हैं।",
+    "key-import-failed": "Selected algorithm के लिए key import नहीं की जा सकी।",
+    "webcrypto-unavailable": "WebCrypto इस browser context में available नहीं है।"
+  }
+}

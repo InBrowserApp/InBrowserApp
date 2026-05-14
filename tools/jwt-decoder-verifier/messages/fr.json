@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "Collez un JWT compact. L'en-tête et la charge utile sont décodés localement avant toute vérification de signature.",
+    "label": "Token JWT",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Utiliser l'exemple",
+    "clear": "Effacer"
+  },
+  "decoded": {
+    "title": "Token décodé",
+    "description": "JSON mis en forme et décodé depuis le segment du token.",
+    "headerTitle": "En-tête",
+    "payloadTitle": "Charge utile",
+    "copyJson": "Copier le JSON",
+    "copied": "Copié",
+    "emptyTitle": "Collez un JWT pour le décoder",
+    "emptyDescription": "L'outil attend le format JWT compact en trois parties : header.payload.signature."
+  },
+  "verification": {
+    "title": "Vérification de signature",
+    "description": "Vérifiez la signature JWS avec un secret partagé, une clé publique PEM, un JWK ou un JWKS.",
+    "algorithmLabel": "Algorithme",
+    "algorithmDescription": "Auto utilise la valeur alg de l'en-tête JWT. La sélection manuelle doit tout de même correspondre à l'en-tête.",
+    "autoAlgorithm": "Auto depuis l'en-tête",
+    "keyLabel": "Secret ou clé publique",
+    "keyDescription": "Utilisez du texte brut pour les algorithmes HS. Utilisez une clé publique PEM, un JWK ou un JWKS pour les algorithmes RS, PS et ES. Les valeurs ne sont pas enregistrées.",
+    "keyPlaceholder": "secret\n\nou\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nou\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Prêt à vérifier",
+    "waitingDescription": "Saisissez un token valide et les éléments de vérification pour contrôler la signature.",
+    "pendingTitle": "Vérification de la signature",
+    "verifiedTitle": "Signature vérifiée",
+    "verifiedDescription": "La signature correspond à l'en-tête, à la charge utile, à l'algorithme et à la clé fournie.",
+    "failedTitle": "Échec de la vérification",
+    "failedDescription": "La signature ne correspond pas à la clé et à l'algorithme fournis."
+  },
+  "claims": {
+    "title": "Claims enregistrés",
+    "description": "Contrôles rapides des claims JWT courants basés sur le temps.",
+    "emptyTitle": "Aucun claim temporel à inspecter",
+    "emptyDescription": "Cette charge utile n'inclut pas de claims exp, nbf ou iat.",
+    "severities": {
+      "danger": "Problème",
+      "warning": "Avertissement",
+      "success": "Valide",
+      "neutral": "Info"
+    },
+    "messages": {
+      "payload-not-object": "La charge utile n'est pas un objet JSON ; les claims enregistrés ne peuvent donc pas être inspectés.",
+      "invalid-exp": "Le claim exp est présent, mais ce n'est pas une date numérique.",
+      "invalid-nbf": "Le claim nbf est présent, mais ce n'est pas une date numérique.",
+      "invalid-iat": "Le claim iat est présent, mais ce n'est pas une date numérique.",
+      "expired": "Expiré le {date}.",
+      "not-yet-valid": "Non valide avant le {date}.",
+      "issued-in-future": "Émis dans le futur le {date}.",
+      "expires-at": "Expire le {date}.",
+      "valid-after": "Valide après le {date}.",
+      "issued-at": "Émis le {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Collez un JWT pour le décoder.",
+    "invalid-segment-count": "Les JWT doivent comporter exactement trois segments séparés par des points.",
+    "empty-header-or-payload": "Les segments d'en-tête et de charge utile du JWT ne peuvent pas être vides.",
+    "invalid-header-base64": "Le segment d'en-tête n'est pas un base64url valide.",
+    "invalid-payload-base64": "Le segment de charge utile n'est pas un base64url valide.",
+    "invalid-signature-base64": "Le segment de signature n'est pas un base64url valide.",
+    "invalid-header-json": "Le segment d'en-tête n'est pas un JSON valide.",
+    "invalid-payload-json": "Le segment de charge utile n'est pas un JSON valide.",
+    "header-not-object": "L'en-tête JWT doit se décoder en objet JSON."
+  },
+  "verifyErrors": {
+    "key-required": "Saisissez un secret ou une clé publique avant de vérifier.",
+    "missing-algorithm": "L'en-tête JWT n'inclut pas de valeur alg.",
+    "unsupported-algorithm": "Ce vérificateur prend en charge HS256/384/512, RS256/384/512, PS256/384/512 et ES256/384/512.",
+    "algorithm-mismatch": "L'algorithme sélectionné ne correspond pas à la valeur alg de l'en-tête JWT.",
+    "invalid-key-json": "L'entrée JWK ou JWKS n'est pas un JSON valide.",
+    "invalid-jwk": "Le JSON de clé doit être un objet JWK ou un objet JWKS avec un tableau keys.",
+    "empty-jwks": "Le tableau de clés JWKS est vide.",
+    "jwk-kid-not-found": "Aucune clé du JWKS ne correspond à la valeur kid de l'en-tête JWT.",
+    "unsupported-key-format": "Utilisez du texte brut pour les algorithmes HS, ou une clé publique PEM, un JWK ou un JWKS pour les algorithmes asymétriques.",
+    "unsupported-pem-label": "Seules les clés publiques PEM avec BEGIN PUBLIC KEY sont prises en charge pour la vérification.",
+    "key-import-failed": "La clé n'a pas pu être importée pour l'algorithme sélectionné.",
+    "webcrypto-unavailable": "WebCrypto n'est pas disponible dans ce contexte de navigateur."
+  }
+}

@@ -6902,6 +6902,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "jwt-decoder-verifier",
+    language: "ar",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "de",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "en",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "es",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "fr",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "he",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "hi",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "id",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "it",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "ja",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "ko",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "ms",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "nl",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "no",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "pl",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "pt",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "ru",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "sv",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "th",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "tr",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "vi",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "zh-CN",
+  },
+  {
+    slug: "jwt-decoder-verifier",
+    language: "zh-TW",
+  },
+  {
     slug: "keccak-hash-text-or-file",
     language: "ar",
   },

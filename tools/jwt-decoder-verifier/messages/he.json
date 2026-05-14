@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "הדביקו JWT קומפקטי. הכותרת והמטען מפוענחים מקומית לפני שמתבצעת בדיקת חתימה כלשהי.",
+    "label": "JWT token",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "השתמש בדוגמה",
+    "clear": "נקה"
+  },
+  "decoded": {
+    "title": "Token מפוענח",
+    "description": "JSON מעוצב שפוענח ממקטע ה-token.",
+    "headerTitle": "Header",
+    "payloadTitle": "Payload",
+    "copyJson": "העתק JSON",
+    "copied": "הועתק",
+    "emptyTitle": "הדביקו JWT כדי לפענח אותו",
+    "emptyDescription": "הכלי מצפה למבנה JWT קומפקטי בן שלושה חלקים: header.payload.signature."
+  },
+  "verification": {
+    "title": "אימות חתימה",
+    "description": "אמתו את חתימת JWS בעזרת סוד משותף, מפתח ציבורי PEM,‏ JWK או JWKS.",
+    "algorithmLabel": "אלגוריתם",
+    "algorithmDescription": "Auto משתמש בערך alg מכותרת ה-JWT. בחירה ידנית עדיין חייבת להתאים לכותרת.",
+    "autoAlgorithm": "Auto מהכותרת",
+    "keyLabel": "סוד או מפתח ציבורי",
+    "keyDescription": "השתמשו בטקסט רגיל עבור אלגוריתמי HS. השתמשו במפתח ציבורי PEM,‏ JWK או JWKS עבור אלגוריתמי RS, PS ו-ES. הערכים אינם נשמרים.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "מוכן לאימות",
+    "waitingDescription": "הזינו token תקף וחומר אימות כדי לבדוק את החתימה.",
+    "pendingTitle": "מאמת חתימה",
+    "verifiedTitle": "החתימה אומתה",
+    "verifiedDescription": "החתימה תואמת לכותרת ה-token, למטען, לאלגוריתם ולמפתח שסופק.",
+    "failedTitle": "האימות נכשל",
+    "failedDescription": "החתימה אינה תואמת למפתח ולאלגוריתם שסופקו."
+  },
+  "claims": {
+    "title": "Claims רשומים",
+    "description": "בדיקות מהירות ל-claims נפוצים מבוססי זמן ב-JWT.",
+    "emptyTitle": "אין claims של זמן לבדיקה",
+    "emptyDescription": "המטען הזה אינו כולל claims מסוג exp, nbf או iat.",
+    "severities": {
+      "danger": "בעיה",
+      "warning": "אזהרה",
+      "success": "תקין",
+      "neutral": "מידע"
+    },
+    "messages": {
+      "payload-not-object": "המטען אינו אובייקט JSON, ולכן אי אפשר לבדוק claims רשומים.",
+      "invalid-exp": "ה-claim‏ exp קיים אך אינו תאריך מספרי.",
+      "invalid-nbf": "ה-claim‏ nbf קיים אך אינו תאריך מספרי.",
+      "invalid-iat": "ה-claim‏ iat קיים אך אינו תאריך מספרי.",
+      "expired": "פג בתאריך {date}.",
+      "not-yet-valid": "לא תקף לפני {date}.",
+      "issued-in-future": "הונפק בעתיד בתאריך {date}.",
+      "expires-at": "יפוג בתאריך {date}.",
+      "valid-after": "תקף אחרי {date}.",
+      "issued-at": "הונפק בתאריך {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "הדביקו JWT כדי לפענח אותו.",
+    "invalid-segment-count": "JWT חייבים לכלול בדיוק שלושה מקטעים המופרדים בנקודות.",
+    "empty-header-or-payload": "מקטעי הכותרת והמטען של ה-JWT אינם יכולים להיות ריקים.",
+    "invalid-header-base64": "מקטע הכותרת אינו base64url תקין.",
+    "invalid-payload-base64": "מקטע המטען אינו base64url תקין.",
+    "invalid-signature-base64": "מקטע החתימה אינו base64url תקין.",
+    "invalid-header-json": "מקטע הכותרת אינו JSON תקין.",
+    "invalid-payload-json": "מקטע המטען אינו JSON תקין.",
+    "header-not-object": "כותרת ה-JWT חייבת להתפענח לאובייקט JSON."
+  },
+  "verifyErrors": {
+    "key-required": "הזינו סוד או מפתח ציבורי לפני האימות.",
+    "missing-algorithm": "כותרת ה-JWT אינה כוללת ערך alg.",
+    "unsupported-algorithm": "המאמת הזה תומך ב-HS256/384/512, RS256/384/512, PS256/384/512 ו-ES256/384/512.",
+    "algorithm-mismatch": "האלגוריתם שנבחר אינו תואם לערך alg בכותרת ה-JWT.",
+    "invalid-key-json": "קלט ה-JWK או ה-JWKS אינו JSON תקין.",
+    "invalid-jwk": "ה-JSON של המפתח חייב להיות אובייקט JWK או אובייקט JWKS עם מערך keys.",
+    "empty-jwks": "מערך המפתחות של JWKS ריק.",
+    "jwk-kid-not-found": "אף מפתח ב-JWKS אינו תואם לערך kid בכותרת ה-JWT.",
+    "unsupported-key-format": "השתמשו בטקסט רגיל עבור אלגוריתמי HS, או במפתח ציבורי PEM,‏ JWK או JWKS עבור אלגוריתמים אסימטריים.",
+    "unsupported-pem-label": "לאימות נתמכים רק מפתחות ציבוריים מסוג PEM עם BEGIN PUBLIC KEY.",
+    "key-import-failed": "לא ניתן היה לייבא את המפתח עבור האלגוריתם שנבחר.",
+    "webcrypto-unavailable": "WebCrypto אינו זמין בהקשר הדפדפן הזה."
+  }
+}

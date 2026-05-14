@@ -1,0 +1,4 @@
+{
+  "name": "JWT-avkodare och verifierare",
+  "description": "Avkoda JSON Web Token-huvuden och nyttolaster lokalt, granska registrerade claims och verifiera HS-, RS-, PS- och ES-signaturer med en hemlighet, PEM-offentlig nyckel, JWK eller JWKS."
+}

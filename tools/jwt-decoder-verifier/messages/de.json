@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "Token",
+    "description": "Fuege ein kompaktes JWT ein. Header und Payload werden lokal decodiert, bevor eine Signaturpruefung ausgefuehrt wird.",
+    "label": "JWT-Token",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "Beispiel verwenden",
+    "clear": "Leeren"
+  },
+  "decoded": {
+    "title": "Decodiertes Token",
+    "description": "Formatiertes JSON, das aus dem Token-Segment decodiert wurde.",
+    "headerTitle": "Header",
+    "payloadTitle": "Payload",
+    "copyJson": "JSON kopieren",
+    "copied": "Kopiert",
+    "emptyTitle": "Fuege ein JWT ein, um es zu decodieren",
+    "emptyDescription": "Das Tool erwartet das kompakte dreiteilige JWT-Format: header.payload.signature."
+  },
+  "verification": {
+    "title": "Signaturverifizierung",
+    "description": "Verifiziere die JWS-Signatur mit einem gemeinsamen Secret, einem oeffentlichen PEM-Schluessel, JWK oder JWKS.",
+    "algorithmLabel": "Algorithmus",
+    "algorithmDescription": "Automatisch verwendet den alg-Wert aus dem JWT-Header. Die manuelle Auswahl muss weiterhin zum Header passen.",
+    "autoAlgorithm": "Automatisch aus Header",
+    "keyLabel": "Secret oder oeffentlicher Schluessel",
+    "keyDescription": "Verwende Klartext fuer HS-Algorithmen. Verwende einen oeffentlichen PEM-Schluessel, JWK oder JWKS fuer RS-, PS- und ES-Algorithmen. Werte werden nicht gespeichert.",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "Bereit zur Verifizierung",
+    "waitingDescription": "Gib ein gueltiges Token und Verifizierungsmaterial ein, um die Signatur zu pruefen.",
+    "pendingTitle": "Signatur wird verifiziert",
+    "verifiedTitle": "Signatur verifiziert",
+    "verifiedDescription": "Die Signatur passt zu Token-Header, Payload, Algorithmus und bereitgestelltem Schluessel.",
+    "failedTitle": "Verifizierung fehlgeschlagen",
+    "failedDescription": "Die Signatur passt nicht zum bereitgestellten Schluessel und Algorithmus."
+  },
+  "claims": {
+    "title": "Registrierte Claims",
+    "description": "Schnelle Pruefungen fuer haeufige zeitbasierte JWT-Claims.",
+    "emptyTitle": "Keine Zeit-Claims zum Pruefen",
+    "emptyDescription": "Diese Payload enthaelt keine exp-, nbf- oder iat-Claims.",
+    "severities": {
+      "danger": "Problem",
+      "warning": "Warnung",
+      "success": "Gueltig",
+      "neutral": "Info"
+    },
+    "messages": {
+      "payload-not-object": "Die Payload ist kein JSON-Objekt, daher koennen registrierte Claims nicht geprueft werden.",
+      "invalid-exp": "Der exp-Claim ist vorhanden, aber kein numerisches Datum.",
+      "invalid-nbf": "Der nbf-Claim ist vorhanden, aber kein numerisches Datum.",
+      "invalid-iat": "Der iat-Claim ist vorhanden, aber kein numerisches Datum.",
+      "expired": "Abgelaufen am {date}.",
+      "not-yet-valid": "Nicht gueltig vor {date}.",
+      "issued-in-future": "In der Zukunft ausgestellt am {date}.",
+      "expires-at": "Laeuft ab am {date}.",
+      "valid-after": "Gueltig nach {date}.",
+      "issued-at": "Ausgestellt am {date}."
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "Fuege ein JWT ein, um es zu decodieren.",
+    "invalid-segment-count": "JWTs muessen genau drei durch Punkte getrennte Segmente haben.",
+    "empty-header-or-payload": "Die JWT-Header- und Payload-Segmente duerfen nicht leer sein.",
+    "invalid-header-base64": "Das Header-Segment ist kein gueltiges base64url.",
+    "invalid-payload-base64": "Das Payload-Segment ist kein gueltiges base64url.",
+    "invalid-signature-base64": "Das Signatursegment ist kein gueltiges base64url.",
+    "invalid-header-json": "Das Header-Segment ist kein gueltiges JSON.",
+    "invalid-payload-json": "Das Payload-Segment ist kein gueltiges JSON.",
+    "header-not-object": "Der JWT-Header muss zu einem JSON-Objekt decodiert werden."
+  },
+  "verifyErrors": {
+    "key-required": "Gib vor der Verifizierung ein Secret oder einen oeffentlichen Schluessel ein.",
+    "missing-algorithm": "Der JWT-Header enthaelt keinen alg-Wert.",
+    "unsupported-algorithm": "Dieser Verifier unterstuetzt HS256/384/512, RS256/384/512, PS256/384/512 und ES256/384/512.",
+    "algorithm-mismatch": "Der ausgewaehlte Algorithmus stimmt nicht mit dem alg-Wert im JWT-Header ueberein.",
+    "invalid-key-json": "Die JWK- oder JWKS-Eingabe ist kein gueltiges JSON.",
+    "invalid-jwk": "Das Schluessel-JSON muss ein JWK-Objekt oder ein JWKS-Objekt mit einem keys-Array sein.",
+    "empty-jwks": "Das JWKS-keys-Array ist leer.",
+    "jwk-kid-not-found": "Kein Schluessel im JWKS passt zum kid-Wert im JWT-Header.",
+    "unsupported-key-format": "Verwende Klartext fuer HS-Algorithmen oder einen oeffentlichen PEM-Schluessel, JWK oder JWKS fuer asymmetrische Algorithmen.",
+    "unsupported-pem-label": "Fuer die Verifizierung werden nur oeffentliche PEM-Schluessel mit BEGIN PUBLIC KEY unterstuetzt.",
+    "key-import-failed": "Der Schluessel konnte fuer den ausgewaehlten Algorithmus nicht importiert werden.",
+    "webcrypto-unavailable": "WebCrypto ist in diesem Browserkontext nicht verfuegbar."
+  }
+}

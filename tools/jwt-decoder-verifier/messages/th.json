@@ -1,0 +1,86 @@
+{
+  "token": {
+    "title": "โทเค็น",
+    "description": "วาง JWT แบบ compact ส่วนหัวและเพย์โหลดจะถูกถอดรหัสในเครื่องก่อนเริ่มตรวจสอบลายเซ็น",
+    "label": "โทเค็น JWT",
+    "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "useSample": "ใช้ตัวอย่าง",
+    "clear": "ล้าง"
+  },
+  "decoded": {
+    "title": "โทเค็นที่ถอดรหัสแล้ว",
+    "description": "JSON แบบจัดรูปแบบสวยงามที่ถอดรหัสจากส่วนของโทเค็น",
+    "headerTitle": "ส่วนหัว",
+    "payloadTitle": "เพย์โหลด",
+    "copyJson": "คัดลอก JSON",
+    "copied": "คัดลอกแล้ว",
+    "emptyTitle": "วาง JWT เพื่อถอดรหัส",
+    "emptyDescription": "เครื่องมือนี้ต้องการรูปแบบ JWT แบบ compact ที่มีสามส่วน: header.payload.signature"
+  },
+  "verification": {
+    "title": "การตรวจสอบลายเซ็น",
+    "description": "ตรวจสอบลายเซ็น JWS ด้วย shared secret, PEM public key, JWK หรือ JWKS",
+    "algorithmLabel": "อัลกอริทึม",
+    "algorithmDescription": "อัตโนมัติจะใช้ค่า alg จากส่วนหัว JWT การเลือกด้วยตนเองยังต้องตรงกับส่วนหัว",
+    "autoAlgorithm": "อัตโนมัติจากส่วนหัว",
+    "keyLabel": "Secret หรือ public key",
+    "keyDescription": "ใช้ข้อความธรรมดาสำหรับอัลกอริทึม HS ใช้ PEM public key, JWK หรือ JWKS สำหรับอัลกอริทึม RS, PS และ ES ค่าจะไม่ถูกบันทึก",
+    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "waitingTitle": "พร้อมตรวจสอบ",
+    "waitingDescription": "ป้อนโทเค็นที่ถูกต้องและข้อมูลสำหรับตรวจสอบเพื่อตรวจลายเซ็น",
+    "pendingTitle": "กำลังตรวจสอบลายเซ็น",
+    "verifiedTitle": "ตรวจสอบลายเซ็นแล้ว",
+    "verifiedDescription": "ลายเซ็นตรงกับส่วนหัว เพย์โหลด อัลกอริทึม และคีย์ที่ให้มา",
+    "failedTitle": "การตรวจสอบล้มเหลว",
+    "failedDescription": "ลายเซ็นไม่ตรงกับคีย์และอัลกอริทึมที่ให้มา"
+  },
+  "claims": {
+    "title": "Registered claims",
+    "description": "ตรวจสอบ JWT claims ตามเวลาที่พบบ่อยอย่างรวดเร็ว",
+    "emptyTitle": "ไม่มี time claims ให้ตรวจดู",
+    "emptyDescription": "เพย์โหลดนี้ไม่มี claims exp, nbf หรือ iat",
+    "severities": {
+      "danger": "ปัญหา",
+      "warning": "คำเตือน",
+      "success": "ถูกต้อง",
+      "neutral": "ข้อมูล"
+    },
+    "messages": {
+      "payload-not-object": "เพย์โหลดไม่ใช่ออบเจ็กต์ JSON จึงไม่สามารถตรวจดู registered claims ได้",
+      "invalid-exp": "มี claim exp แต่ไม่ใช่ numeric date",
+      "invalid-nbf": "มี claim nbf แต่ไม่ใช่ numeric date",
+      "invalid-iat": "มี claim iat แต่ไม่ใช่ numeric date",
+      "expired": "หมดอายุเมื่อ {date}",
+      "not-yet-valid": "ยังไม่ถูกต้องก่อน {date}",
+      "issued-in-future": "ออกในอนาคตเมื่อ {date}",
+      "expires-at": "หมดอายุเมื่อ {date}",
+      "valid-after": "ใช้ได้หลัง {date}",
+      "issued-at": "ออกเมื่อ {date}"
+    }
+  },
+  "decodeErrors": {
+    "empty-token": "วาง JWT เพื่อถอดรหัส",
+    "invalid-segment-count": "JWT ต้องมีสามส่วนที่คั่นด้วยจุดพอดี",
+    "empty-header-or-payload": "ส่วนหัวและเพย์โหลดของ JWT ต้องไม่ว่างเปล่า",
+    "invalid-header-base64": "ส่วนหัวไม่ใช่ base64url ที่ถูกต้อง",
+    "invalid-payload-base64": "ส่วนเพย์โหลดไม่ใช่ base64url ที่ถูกต้อง",
+    "invalid-signature-base64": "ส่วนลายเซ็นไม่ใช่ base64url ที่ถูกต้อง",
+    "invalid-header-json": "ส่วนหัวไม่ใช่ JSON ที่ถูกต้อง",
+    "invalid-payload-json": "ส่วนเพย์โหลดไม่ใช่ JSON ที่ถูกต้อง",
+    "header-not-object": "ส่วนหัว JWT ต้องถอดรหัสออกมาเป็นออบเจ็กต์ JSON"
+  },
+  "verifyErrors": {
+    "key-required": "ป้อน secret หรือ public key ก่อนตรวจสอบ",
+    "missing-algorithm": "ส่วนหัว JWT ไม่มีค่า alg",
+    "unsupported-algorithm": "ตัวตรวจสอบนี้รองรับ HS256/384/512, RS256/384/512, PS256/384/512 และ ES256/384/512",
+    "algorithm-mismatch": "อัลกอริทึมที่เลือกไม่ตรงกับค่า alg ในส่วนหัว JWT",
+    "invalid-key-json": "อินพุต JWK หรือ JWKS ไม่ใช่ JSON ที่ถูกต้อง",
+    "invalid-jwk": "JSON ของคีย์ต้องเป็นออบเจ็กต์ JWK หรือออบเจ็กต์ JWKS ที่มีอาร์เรย์ keys",
+    "empty-jwks": "อาร์เรย์ keys ของ JWKS ว่างเปล่า",
+    "jwk-kid-not-found": "ไม่มีคีย์ใน JWKS ที่ตรงกับค่า kid ในส่วนหัว JWT",
+    "unsupported-key-format": "ใช้ข้อความธรรมดาสำหรับอัลกอริทึม HS หรือใช้ PEM public key, JWK หรือ JWKS สำหรับอัลกอริทึมแบบ asymmetric",
+    "unsupported-pem-label": "รองรับเฉพาะ PEM public keys ที่มี BEGIN PUBLIC KEY สำหรับการตรวจสอบ",
+    "key-import-failed": "ไม่สามารถนำเข้าคีย์สำหรับอัลกอริทึมที่เลือกได้",
+    "webcrypto-unavailable": "WebCrypto ไม่พร้อมใช้งานในบริบทของเบราว์เซอร์นี้"
+  }
+}
