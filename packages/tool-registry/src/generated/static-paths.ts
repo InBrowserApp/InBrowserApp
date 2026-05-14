@@ -278,6 +278,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "archive-viewer",
+    language: "ar",
+  },
+  {
+    slug: "archive-viewer",
+    language: "de",
+  },
+  {
+    slug: "archive-viewer",
+    language: "en",
+  },
+  {
+    slug: "archive-viewer",
+    language: "es",
+  },
+  {
+    slug: "archive-viewer",
+    language: "fr",
+  },
+  {
+    slug: "archive-viewer",
+    language: "he",
+  },
+  {
+    slug: "archive-viewer",
+    language: "hi",
+  },
+  {
+    slug: "archive-viewer",
+    language: "id",
+  },
+  {
+    slug: "archive-viewer",
+    language: "it",
+  },
+  {
+    slug: "archive-viewer",
+    language: "ja",
+  },
+  {
+    slug: "archive-viewer",
+    language: "ko",
+  },
+  {
+    slug: "archive-viewer",
+    language: "ms",
+  },
+  {
+    slug: "archive-viewer",
+    language: "nl",
+  },
+  {
+    slug: "archive-viewer",
+    language: "no",
+  },
+  {
+    slug: "archive-viewer",
+    language: "pl",
+  },
+  {
+    slug: "archive-viewer",
+    language: "pt",
+  },
+  {
+    slug: "archive-viewer",
+    language: "ru",
+  },
+  {
+    slug: "archive-viewer",
+    language: "sv",
+  },
+  {
+    slug: "archive-viewer",
+    language: "th",
+  },
+  {
+    slug: "archive-viewer",
+    language: "tr",
+  },
+  {
+    slug: "archive-viewer",
+    language: "vi",
+  },
+  {
+    slug: "archive-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "archive-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "argon2-hash-password",
     language: "ar",
   },

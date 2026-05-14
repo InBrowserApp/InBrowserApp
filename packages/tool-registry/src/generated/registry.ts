@@ -401,6 +401,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "archive-viewer",
+    category: "code",
+    icon: "archive",
+    tags: ["archive", "zip", "tar", "gzip", "viewer", "offline"],
+    locales: {
+      ar: {
+        name: "عارض الأرشيفات",
+        description:
+          "افتح ملفات ZIP وTAR وGZ وTGZ محليًا في متصفحك، وتصفّح شجرة المجلدات، وعاين العناصر القابلة للقراءة، ونزّل الملفات الفردية.",
+      },
+      de: {
+        name: "Archivbetrachter",
+        description:
+          "Öffne ZIP-, TAR-, GZ- und TGZ-Dateien lokal in deinem Browser, durchsuche ihren Ordnerbaum, zeige lesbare Einträge in der Vorschau an und lade einzelne Dateien herunter.",
+      },
+      en: {
+        name: "Archive Viewer",
+        description:
+          "Open ZIP, TAR, GZ, and TGZ files locally in your browser, browse their folder tree, preview readable entries, and download individual files.",
+      },
+      es: {
+        name: "Visor de archivos comprimidos",
+        description:
+          "Abre archivos ZIP, TAR, GZ y TGZ localmente en tu navegador, explora su árbol de carpetas, previsualiza entradas legibles y descarga archivos individuales.",
+      },
+      fr: {
+        name: "Visionneuse d'archives",
+        description:
+          "Ouvrez des fichiers ZIP, TAR, GZ et TGZ localement dans votre navigateur, parcourez leur arborescence, prévisualisez les entrées lisibles et téléchargez des fichiers individuels.",
+      },
+      he: {
+        name: "מציג ארכיונים",
+        description:
+          "פתחו קובצי ZIP, TAR, GZ ו-TGZ באופן מקומי בדפדפן, עיינו בעץ התיקיות שלהם, צפו בתצוגה מקדימה של פריטים קריאים והורידו קבצים בודדים.",
+      },
+      hi: {
+        name: "आर्काइव व्यूअर",
+        description:
+          "अपने ब्राउज़र में ZIP, TAR, GZ और TGZ फ़ाइलें स्थानीय रूप से खोलें, उनका फ़ोल्डर ट्री ब्राउज़ करें, पढ़ी जा सकने वाली प्रविष्टियों का पूर्वावलोकन करें और अलग-अलग फ़ाइलें डाउनलोड करें।",
+      },
+      id: {
+        name: "Penampil Arsip",
+        description:
+          "Buka file ZIP, TAR, GZ, dan TGZ secara lokal di browser Anda, jelajahi struktur foldernya, pratinjau entri yang dapat dibaca, dan unduh file tertentu.",
+      },
+      it: {
+        name: "Visualizzatore di archivi",
+        description:
+          "Apri file ZIP, TAR, GZ e TGZ localmente nel browser, esplora l'albero delle cartelle, visualizza in anteprima gli elementi leggibili e scarica singoli file.",
+      },
+      ja: {
+        name: "アーカイブビューアー",
+        description:
+          "ZIP、TAR、GZ、TGZ ファイルをブラウザー内でローカルに開き、フォルダーツリーを確認し、読める項目をプレビューして、個別のファイルをダウンロードできます。",
+      },
+      ko: {
+        name: "아카이브 뷰어",
+        description:
+          "브라우저에서 ZIP, TAR, GZ, TGZ 파일을 로컬로 열어 폴더 트리를 탐색하고, 읽을 수 있는 항목을 미리 보며, 개별 파일을 다운로드하세요.",
+      },
+      ms: {
+        name: "Pemapar Arkib",
+        description:
+          "Buka fail ZIP, TAR, GZ dan TGZ secara setempat dalam penyemak imbas anda, semak imbas pepohon foldernya, pratonton entri yang boleh dibaca dan muat turun fail individu.",
+      },
+      nl: {
+        name: "Archiefviewer",
+        description:
+          "Open ZIP-, TAR-, GZ- en TGZ-bestanden lokaal in je browser, blader door hun mappenstructuur, bekijk leesbare items vooraf en download afzonderlijke bestanden.",
+      },
+      no: {
+        name: "Arkivviser",
+        description:
+          "Åpne ZIP-, TAR-, GZ- og TGZ-filer lokalt i nettleseren, bla gjennom mappetreet, forhåndsvis lesbare oppføringer og last ned enkeltfiler.",
+      },
+      pl: {
+        name: "Przeglądarka archiwów",
+        description:
+          "Otwieraj pliki ZIP, TAR, GZ i TGZ lokalnie w przeglądarce, przeglądaj drzewo folderów, podglądaj czytelne wpisy i pobieraj pojedyncze pliki.",
+      },
+      pt: {
+        name: "Visualizador de arquivos compactados",
+        description:
+          "Abra arquivos ZIP, TAR, GZ e TGZ localmente no navegador, navegue pela árvore de pastas, pré-visualize entradas legíveis e baixe arquivos individuais.",
+      },
+      ru: {
+        name: "Просмотр архивов",
+        description:
+          "Открывайте файлы ZIP, TAR, GZ и TGZ локально в браузере, просматривайте дерево папок, проверяйте читаемые элементы и скачивайте отдельные файлы.",
+      },
+      sv: {
+        name: "Arkivvisare",
+        description:
+          "Öppna ZIP, TAR, GZ och TGZ-filer lokalt i webbläsaren, bläddra i deras mappträd, förhandsgranska läsbara poster och ladda ner enskilda filer.",
+      },
+      th: {
+        name: "ตัวดูไฟล์อาร์ไคฟ์",
+        description:
+          "เปิดไฟล์ ZIP, TAR, GZ และ TGZ ภายในเบราว์เซอร์ของคุณ เลือกดูโครงสร้างโฟลเดอร์ แสดงตัวอย่างรายการที่อ่านได้ และดาวน์โหลดไฟล์แต่ละรายการได้โดยตรง",
+      },
+      tr: {
+        name: "Arşiv Görüntüleyici",
+        description:
+          "ZIP, TAR, GZ ve TGZ dosyalarını tarayıcınızda yerel olarak açın, klasör ağacında gezinin, okunabilir girdileri önizleyin ve tek tek dosyaları indirin.",
+      },
+      vi: {
+        name: "Trình xem tệp nén",
+        description:
+          "Mở các tệp ZIP, TAR, GZ và TGZ cục bộ trong trình duyệt của bạn, duyệt cây thư mục, xem trước các mục có thể đọc được và tải xuống từng tệp riêng lẻ.",
+      },
+      "zh-CN": {
+        name: "压缩包查看器",
+        description:
+          "在浏览器中本地打开 ZIP、TAR、GZ 和 TGZ 文件，浏览文件夹树，预览可读条目，并下载单个文件。",
+      },
+      "zh-TW": {
+        name: "壓縮檔檢視器",
+        description:
+          "在瀏覽器中本機開啟 ZIP、TAR、GZ 和 TGZ 檔案，瀏覽資料夾樹狀結構、預覽可讀項目，並下載個別檔案。",
+      },
+    },
+  },
+  {
     slug: "argon2-hash-password",
     category: "crypto",
     icon: "lock",
@@ -23509,6 +23632,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "AES 加密器",
         description:
           "使用由密碼衍生的金鑰或原始十六進位金鑰，在瀏覽器中以 AES-GCM、AES-CBC 或 AES-CTR 加密文字或檔案。",
+      },
+    },
+  },
+  "archive-viewer": {
+    slug: "archive-viewer",
+    category: "code",
+    icon: "archive",
+    tags: ["archive", "zip", "tar", "gzip", "viewer", "offline"],
+    locales: {
+      ar: {
+        name: "عارض الأرشيفات",
+        description:
+          "افتح ملفات ZIP وTAR وGZ وTGZ محليًا في متصفحك، وتصفّح شجرة المجلدات، وعاين العناصر القابلة للقراءة، ونزّل الملفات الفردية.",
+      },
+      de: {
+        name: "Archivbetrachter",
+        description:
+          "Öffne ZIP-, TAR-, GZ- und TGZ-Dateien lokal in deinem Browser, durchsuche ihren Ordnerbaum, zeige lesbare Einträge in der Vorschau an und lade einzelne Dateien herunter.",
+      },
+      en: {
+        name: "Archive Viewer",
+        description:
+          "Open ZIP, TAR, GZ, and TGZ files locally in your browser, browse their folder tree, preview readable entries, and download individual files.",
+      },
+      es: {
+        name: "Visor de archivos comprimidos",
+        description:
+          "Abre archivos ZIP, TAR, GZ y TGZ localmente en tu navegador, explora su árbol de carpetas, previsualiza entradas legibles y descarga archivos individuales.",
+      },
+      fr: {
+        name: "Visionneuse d'archives",
+        description:
+          "Ouvrez des fichiers ZIP, TAR, GZ et TGZ localement dans votre navigateur, parcourez leur arborescence, prévisualisez les entrées lisibles et téléchargez des fichiers individuels.",
+      },
+      he: {
+        name: "מציג ארכיונים",
+        description:
+          "פתחו קובצי ZIP, TAR, GZ ו-TGZ באופן מקומי בדפדפן, עיינו בעץ התיקיות שלהם, צפו בתצוגה מקדימה של פריטים קריאים והורידו קבצים בודדים.",
+      },
+      hi: {
+        name: "आर्काइव व्यूअर",
+        description:
+          "अपने ब्राउज़र में ZIP, TAR, GZ और TGZ फ़ाइलें स्थानीय रूप से खोलें, उनका फ़ोल्डर ट्री ब्राउज़ करें, पढ़ी जा सकने वाली प्रविष्टियों का पूर्वावलोकन करें और अलग-अलग फ़ाइलें डाउनलोड करें।",
+      },
+      id: {
+        name: "Penampil Arsip",
+        description:
+          "Buka file ZIP, TAR, GZ, dan TGZ secara lokal di browser Anda, jelajahi struktur foldernya, pratinjau entri yang dapat dibaca, dan unduh file tertentu.",
+      },
+      it: {
+        name: "Visualizzatore di archivi",
+        description:
+          "Apri file ZIP, TAR, GZ e TGZ localmente nel browser, esplora l'albero delle cartelle, visualizza in anteprima gli elementi leggibili e scarica singoli file.",
+      },
+      ja: {
+        name: "アーカイブビューアー",
+        description:
+          "ZIP、TAR、GZ、TGZ ファイルをブラウザー内でローカルに開き、フォルダーツリーを確認し、読める項目をプレビューして、個別のファイルをダウンロードできます。",
+      },
+      ko: {
+        name: "아카이브 뷰어",
+        description:
+          "브라우저에서 ZIP, TAR, GZ, TGZ 파일을 로컬로 열어 폴더 트리를 탐색하고, 읽을 수 있는 항목을 미리 보며, 개별 파일을 다운로드하세요.",
+      },
+      ms: {
+        name: "Pemapar Arkib",
+        description:
+          "Buka fail ZIP, TAR, GZ dan TGZ secara setempat dalam penyemak imbas anda, semak imbas pepohon foldernya, pratonton entri yang boleh dibaca dan muat turun fail individu.",
+      },
+      nl: {
+        name: "Archiefviewer",
+        description:
+          "Open ZIP-, TAR-, GZ- en TGZ-bestanden lokaal in je browser, blader door hun mappenstructuur, bekijk leesbare items vooraf en download afzonderlijke bestanden.",
+      },
+      no: {
+        name: "Arkivviser",
+        description:
+          "Åpne ZIP-, TAR-, GZ- og TGZ-filer lokalt i nettleseren, bla gjennom mappetreet, forhåndsvis lesbare oppføringer og last ned enkeltfiler.",
+      },
+      pl: {
+        name: "Przeglądarka archiwów",
+        description:
+          "Otwieraj pliki ZIP, TAR, GZ i TGZ lokalnie w przeglądarce, przeglądaj drzewo folderów, podglądaj czytelne wpisy i pobieraj pojedyncze pliki.",
+      },
+      pt: {
+        name: "Visualizador de arquivos compactados",
+        description:
+          "Abra arquivos ZIP, TAR, GZ e TGZ localmente no navegador, navegue pela árvore de pastas, pré-visualize entradas legíveis e baixe arquivos individuais.",
+      },
+      ru: {
+        name: "Просмотр архивов",
+        description:
+          "Открывайте файлы ZIP, TAR, GZ и TGZ локально в браузере, просматривайте дерево папок, проверяйте читаемые элементы и скачивайте отдельные файлы.",
+      },
+      sv: {
+        name: "Arkivvisare",
+        description:
+          "Öppna ZIP, TAR, GZ och TGZ-filer lokalt i webbläsaren, bläddra i deras mappträd, förhandsgranska läsbara poster och ladda ner enskilda filer.",
+      },
+      th: {
+        name: "ตัวดูไฟล์อาร์ไคฟ์",
+        description:
+          "เปิดไฟล์ ZIP, TAR, GZ และ TGZ ภายในเบราว์เซอร์ของคุณ เลือกดูโครงสร้างโฟลเดอร์ แสดงตัวอย่างรายการที่อ่านได้ และดาวน์โหลดไฟล์แต่ละรายการได้โดยตรง",
+      },
+      tr: {
+        name: "Arşiv Görüntüleyici",
+        description:
+          "ZIP, TAR, GZ ve TGZ dosyalarını tarayıcınızda yerel olarak açın, klasör ağacında gezinin, okunabilir girdileri önizleyin ve tek tek dosyaları indirin.",
+      },
+      vi: {
+        name: "Trình xem tệp nén",
+        description:
+          "Mở các tệp ZIP, TAR, GZ và TGZ cục bộ trong trình duyệt của bạn, duyệt cây thư mục, xem trước các mục có thể đọc được và tải xuống từng tệp riêng lẻ.",
+      },
+      "zh-CN": {
+        name: "压缩包查看器",
+        description:
+          "在浏览器中本地打开 ZIP、TAR、GZ 和 TGZ 文件，浏览文件夹树，预览可读条目，并下载单个文件。",
+      },
+      "zh-TW": {
+        name: "壓縮檔檢視器",
+        description:
+          "在瀏覽器中本機開啟 ZIP、TAR、GZ 和 TGZ 檔案，瀏覽資料夾樹狀結構、預覽可讀項目，並下載個別檔案。",
       },
     },
   },

@@ -1,4 +1,5 @@
 import type { LucideProps } from "lucide-react"
+import type { ComponentType } from "react"
 
 import {
   Binary,
@@ -7,6 +8,7 @@ import {
   CaseSensitive,
   Clock3,
   CreditCard,
+  FileArchive,
   FileJson2,
   FileText,
   Globe,
@@ -16,7 +18,8 @@ import {
   Wrench,
 } from "@workspace/ui/icons"
 
-const iconMap: Record<string, React.ComponentType<LucideProps>> = {
+const iconMap: Record<string, ComponentType<LucideProps>> = {
+  archive: FileArchive,
   binary: Binary,
   braces: Braces,
   camera: Camera,
