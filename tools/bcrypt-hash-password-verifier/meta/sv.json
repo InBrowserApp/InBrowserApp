@@ -1,0 +1,4 @@
+{
+  "name": "Bcrypt-hashverifierare för lösenord",
+  "description": "Verifiera ett lösenord i klartext mot en bcrypt-hash lokalt i webbläsaren. Användbart för att felsöka autentiseringsflöden och kontrollera lösenordsmigreringar"
+}

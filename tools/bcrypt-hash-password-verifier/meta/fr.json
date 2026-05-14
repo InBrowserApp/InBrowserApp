@@ -1,0 +1,4 @@
+{
+  "name": "Vérificateur de hachage bcrypt pour mot de passe",
+  "description": "Vérifiez localement dans votre navigateur qu’un mot de passe en clair correspond à un hachage bcrypt. Utile pour déboguer les flux d’authentification et contrôler les migrations de mots de passe"
+}

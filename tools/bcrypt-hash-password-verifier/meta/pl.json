@@ -1,0 +1,4 @@
+{
+  "name": "Weryfikator hasła z hashem bcrypt",
+  "description": "Zweryfikuj hasło w postaci zwykłego tekstu względem hasha bcrypt lokalnie w przeglądarce. Przydatne podczas debugowania przepływów uwierzytelniania i sprawdzania migracji haseł"
+}

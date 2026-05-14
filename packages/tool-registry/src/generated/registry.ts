@@ -2210,6 +2210,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "bcrypt-hash-password-verifier",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "bcrypt",
+      "hash",
+      "password",
+      "verify",
+      "authentication",
+      "security",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "متحقق كلمة المرور من تجزئة Bcrypt",
+        description:
+          "تحقق محليًا في متصفحك من مطابقة كلمة مرور بنص عادي لتجزئة bcrypt. مفيد لتصحيح تدفقات المصادقة والتحقق من عمليات ترحيل كلمات المرور",
+      },
+      de: {
+        name: "Bcrypt-Hash-Passwortprüfer",
+        description:
+          "Prüfen Sie lokal in Ihrem Browser, ob ein Klartextpasswort zu einem bcrypt-Hash passt. Nützlich zum Debuggen von Authentifizierungsabläufen und zum Prüfen von Passwortmigrationen",
+      },
+      en: {
+        name: "Bcrypt Hash Password Verifier",
+        description:
+          "Verify a plain text password against a bcrypt hash locally in your browser. Useful for debugging authentication flows and checking password migrations",
+      },
+      es: {
+        name: "Verificador de contraseñas con hash bcrypt",
+        description:
+          "Verifica localmente en tu navegador una contraseña en texto plano contra un hash bcrypt. Útil para depurar flujos de autenticación y revisar migraciones de contraseñas",
+      },
+      fr: {
+        name: "Vérificateur de hachage bcrypt pour mot de passe",
+        description:
+          "Vérifiez localement dans votre navigateur qu’un mot de passe en clair correspond à un hachage bcrypt. Utile pour déboguer les flux d’authentification et contrôler les migrations de mots de passe",
+      },
+      he: {
+        name: "מאמת גיבובי סיסמאות bcrypt",
+        description:
+          "אמת סיסמה בטקסט גלוי מול גיבוב bcrypt באופן מקומי בדפדפן. שימושי לניפוי באגים בתהליכי אימות ולבדיקת העברות סיסמאות",
+      },
+      hi: {
+        name: "Bcrypt हैश पासवर्ड सत्यापक",
+        description:
+          "अपने ब्राउज़र में स्थानीय रूप से bcrypt हैश के विरुद्ध सादा टेक्स्ट पासवर्ड सत्यापित करें। प्रमाणीकरण प्रवाह डीबग करने और पासवर्ड माइग्रेशन जांचने के लिए उपयोगी",
+      },
+      id: {
+        name: "Pemverifikasi Hash Kata Sandi Bcrypt",
+        description:
+          "Verifikasi kata sandi teks biasa terhadap hash bcrypt secara lokal di browser Anda. Berguna untuk men-debug alur autentikasi dan memeriksa migrasi kata sandi",
+      },
+      it: {
+        name: "Verificatore di password per hash bcrypt",
+        description:
+          "Verifica localmente nel browser una password in chiaro rispetto a un hash bcrypt. Utile per eseguire il debug dei flussi di autenticazione e controllare le migrazioni delle password",
+      },
+      ja: {
+        name: "Bcrypt ハッシュパスワード検証ツール",
+        description:
+          "平文パスワードを bcrypt ハッシュと照合し、ブラウザー内でローカルに検証します。認証フローのデバッグやパスワード移行の確認に便利です",
+      },
+      ko: {
+        name: "Bcrypt 해시 비밀번호 검증기",
+        description:
+          "브라우저에서 로컬로 평문 비밀번호를 bcrypt 해시와 대조해 검증합니다. 인증 흐름을 디버깅하거나 비밀번호 마이그레이션을 확인할 때 유용합니다",
+      },
+      ms: {
+        name: "Pengesah Hash Kata Laluan Bcrypt",
+        description:
+          "Sahkan kata laluan teks biasa terhadap hash bcrypt secara setempat dalam pelayar anda. Berguna untuk menyahpepijat aliran autentikasi dan menyemak migrasi kata laluan",
+      },
+      nl: {
+        name: "Bcrypt-hash wachtwoordverifier",
+        description:
+          "Verifieer lokaal in je browser een wachtwoord in platte tekst tegen een bcrypt-hash. Handig voor het debuggen van authenticatiestromen en het controleren van wachtwoordmigraties",
+      },
+      no: {
+        name: "Bcrypt-hash-verifiserer for passord",
+        description:
+          "Verifiser et passord i klartekst mot en bcrypt-hash lokalt i nettleseren. Nyttig for feilsøking av autentiseringsflyter og kontroll av passordmigreringer",
+      },
+      pl: {
+        name: "Weryfikator hasła z hashem bcrypt",
+        description:
+          "Zweryfikuj hasło w postaci zwykłego tekstu względem hasha bcrypt lokalnie w przeglądarce. Przydatne podczas debugowania przepływów uwierzytelniania i sprawdzania migracji haseł",
+      },
+      pt: {
+        name: "Verificador de senha com hash bcrypt",
+        description:
+          "Verifique localmente no navegador uma senha em texto simples contra um hash bcrypt. Útil para depurar fluxos de autenticação e conferir migrações de senhas",
+      },
+      ru: {
+        name: "Проверка пароля по bcrypt-хешу",
+        description:
+          "Проверяйте пароль в открытом виде по bcrypt-хешу локально в браузере. Полезно для отладки потоков аутентификации и проверки миграций паролей",
+      },
+      sv: {
+        name: "Bcrypt-hashverifierare för lösenord",
+        description:
+          "Verifiera ett lösenord i klartext mot en bcrypt-hash lokalt i webbläsaren. Användbart för att felsöka autentiseringsflöden och kontrollera lösenordsmigreringar",
+      },
+      th: {
+        name: "ตัวตรวจสอบรหัสผ่านกับแฮช Bcrypt",
+        description:
+          "ตรวจสอบรหัสผ่านแบบข้อความธรรมดากับแฮช bcrypt ภายในเบราว์เซอร์ของคุณ เหมาะสำหรับดีบักโฟลว์การยืนยันตัวตนและตรวจสอบการย้ายรหัสผ่าน",
+      },
+      tr: {
+        name: "Bcrypt Hash Parola Doğrulayıcı",
+        description:
+          "Düz metin bir parolayı bir bcrypt hash'ine karşı tarayıcınızda yerel olarak doğrulayın. Kimlik doğrulama akışlarında hata ayıklamak ve parola geçişlerini kontrol etmek için kullanışlıdır",
+      },
+      vi: {
+        name: "Trình xác minh mã băm mật khẩu Bcrypt",
+        description:
+          "Xác minh cục bộ trong trình duyệt xem mật khẩu văn bản thuần có khớp với mã băm bcrypt hay không. Hữu ích khi gỡ lỗi luồng xác thực và kiểm tra quá trình di chuyển mật khẩu",
+      },
+      "zh-CN": {
+        name: "Bcrypt 哈希密码验证器",
+        description:
+          "在浏览器中本地验证明文密码是否与 bcrypt 哈希匹配。适用于调试身份验证流程和检查密码迁移",
+      },
+      "zh-TW": {
+        name: "Bcrypt 密碼雜湊驗證器",
+        description:
+          "在瀏覽器中本機驗證純文字密碼是否符合 bcrypt 雜湊。適合用來偵錯驗證流程並檢查密碼遷移",
+      },
+    },
+  },
+  {
     slug: "bic-swift-validator",
     category: "text",
     icon: "file-text",
@@ -23647,6 +23778,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Bcrypt Hash 密碼產生器",
         description:
           "在本機產生 bcrypt 密碼 hash，可設定 cost、每次使用新的 salt，並輸出可直接複製到驗證系統的結果。",
+      },
+    },
+  },
+  "bcrypt-hash-password-verifier": {
+    slug: "bcrypt-hash-password-verifier",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "bcrypt",
+      "hash",
+      "password",
+      "verify",
+      "authentication",
+      "security",
+      "crypto",
+    ],
+    locales: {
+      ar: {
+        name: "متحقق كلمة المرور من تجزئة Bcrypt",
+        description:
+          "تحقق محليًا في متصفحك من مطابقة كلمة مرور بنص عادي لتجزئة bcrypt. مفيد لتصحيح تدفقات المصادقة والتحقق من عمليات ترحيل كلمات المرور",
+      },
+      de: {
+        name: "Bcrypt-Hash-Passwortprüfer",
+        description:
+          "Prüfen Sie lokal in Ihrem Browser, ob ein Klartextpasswort zu einem bcrypt-Hash passt. Nützlich zum Debuggen von Authentifizierungsabläufen und zum Prüfen von Passwortmigrationen",
+      },
+      en: {
+        name: "Bcrypt Hash Password Verifier",
+        description:
+          "Verify a plain text password against a bcrypt hash locally in your browser. Useful for debugging authentication flows and checking password migrations",
+      },
+      es: {
+        name: "Verificador de contraseñas con hash bcrypt",
+        description:
+          "Verifica localmente en tu navegador una contraseña en texto plano contra un hash bcrypt. Útil para depurar flujos de autenticación y revisar migraciones de contraseñas",
+      },
+      fr: {
+        name: "Vérificateur de hachage bcrypt pour mot de passe",
+        description:
+          "Vérifiez localement dans votre navigateur qu’un mot de passe en clair correspond à un hachage bcrypt. Utile pour déboguer les flux d’authentification et contrôler les migrations de mots de passe",
+      },
+      he: {
+        name: "מאמת גיבובי סיסמאות bcrypt",
+        description:
+          "אמת סיסמה בטקסט גלוי מול גיבוב bcrypt באופן מקומי בדפדפן. שימושי לניפוי באגים בתהליכי אימות ולבדיקת העברות סיסמאות",
+      },
+      hi: {
+        name: "Bcrypt हैश पासवर्ड सत्यापक",
+        description:
+          "अपने ब्राउज़र में स्थानीय रूप से bcrypt हैश के विरुद्ध सादा टेक्स्ट पासवर्ड सत्यापित करें। प्रमाणीकरण प्रवाह डीबग करने और पासवर्ड माइग्रेशन जांचने के लिए उपयोगी",
+      },
+      id: {
+        name: "Pemverifikasi Hash Kata Sandi Bcrypt",
+        description:
+          "Verifikasi kata sandi teks biasa terhadap hash bcrypt secara lokal di browser Anda. Berguna untuk men-debug alur autentikasi dan memeriksa migrasi kata sandi",
+      },
+      it: {
+        name: "Verificatore di password per hash bcrypt",
+        description:
+          "Verifica localmente nel browser una password in chiaro rispetto a un hash bcrypt. Utile per eseguire il debug dei flussi di autenticazione e controllare le migrazioni delle password",
+      },
+      ja: {
+        name: "Bcrypt ハッシュパスワード検証ツール",
+        description:
+          "平文パスワードを bcrypt ハッシュと照合し、ブラウザー内でローカルに検証します。認証フローのデバッグやパスワード移行の確認に便利です",
+      },
+      ko: {
+        name: "Bcrypt 해시 비밀번호 검증기",
+        description:
+          "브라우저에서 로컬로 평문 비밀번호를 bcrypt 해시와 대조해 검증합니다. 인증 흐름을 디버깅하거나 비밀번호 마이그레이션을 확인할 때 유용합니다",
+      },
+      ms: {
+        name: "Pengesah Hash Kata Laluan Bcrypt",
+        description:
+          "Sahkan kata laluan teks biasa terhadap hash bcrypt secara setempat dalam pelayar anda. Berguna untuk menyahpepijat aliran autentikasi dan menyemak migrasi kata laluan",
+      },
+      nl: {
+        name: "Bcrypt-hash wachtwoordverifier",
+        description:
+          "Verifieer lokaal in je browser een wachtwoord in platte tekst tegen een bcrypt-hash. Handig voor het debuggen van authenticatiestromen en het controleren van wachtwoordmigraties",
+      },
+      no: {
+        name: "Bcrypt-hash-verifiserer for passord",
+        description:
+          "Verifiser et passord i klartekst mot en bcrypt-hash lokalt i nettleseren. Nyttig for feilsøking av autentiseringsflyter og kontroll av passordmigreringer",
+      },
+      pl: {
+        name: "Weryfikator hasła z hashem bcrypt",
+        description:
+          "Zweryfikuj hasło w postaci zwykłego tekstu względem hasha bcrypt lokalnie w przeglądarce. Przydatne podczas debugowania przepływów uwierzytelniania i sprawdzania migracji haseł",
+      },
+      pt: {
+        name: "Verificador de senha com hash bcrypt",
+        description:
+          "Verifique localmente no navegador uma senha em texto simples contra um hash bcrypt. Útil para depurar fluxos de autenticação e conferir migrações de senhas",
+      },
+      ru: {
+        name: "Проверка пароля по bcrypt-хешу",
+        description:
+          "Проверяйте пароль в открытом виде по bcrypt-хешу локально в браузере. Полезно для отладки потоков аутентификации и проверки миграций паролей",
+      },
+      sv: {
+        name: "Bcrypt-hashverifierare för lösenord",
+        description:
+          "Verifiera ett lösenord i klartext mot en bcrypt-hash lokalt i webbläsaren. Användbart för att felsöka autentiseringsflöden och kontrollera lösenordsmigreringar",
+      },
+      th: {
+        name: "ตัวตรวจสอบรหัสผ่านกับแฮช Bcrypt",
+        description:
+          "ตรวจสอบรหัสผ่านแบบข้อความธรรมดากับแฮช bcrypt ภายในเบราว์เซอร์ของคุณ เหมาะสำหรับดีบักโฟลว์การยืนยันตัวตนและตรวจสอบการย้ายรหัสผ่าน",
+      },
+      tr: {
+        name: "Bcrypt Hash Parola Doğrulayıcı",
+        description:
+          "Düz metin bir parolayı bir bcrypt hash'ine karşı tarayıcınızda yerel olarak doğrulayın. Kimlik doğrulama akışlarında hata ayıklamak ve parola geçişlerini kontrol etmek için kullanışlıdır",
+      },
+      vi: {
+        name: "Trình xác minh mã băm mật khẩu Bcrypt",
+        description:
+          "Xác minh cục bộ trong trình duyệt xem mật khẩu văn bản thuần có khớp với mã băm bcrypt hay không. Hữu ích khi gỡ lỗi luồng xác thực và kiểm tra quá trình di chuyển mật khẩu",
+      },
+      "zh-CN": {
+        name: "Bcrypt 哈希密码验证器",
+        description:
+          "在浏览器中本地验证明文密码是否与 bcrypt 哈希匹配。适用于调试身份验证流程和检查密码迁移",
+      },
+      "zh-TW": {
+        name: "Bcrypt 密碼雜湊驗證器",
+        description:
+          "在瀏覽器中本機驗證純文字密碼是否符合 bcrypt 雜湊。適合用來偵錯驗證流程並檢查密碼遷移",
       },
     },
   },

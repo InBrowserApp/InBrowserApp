@@ -1566,6 +1566,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bcrypt-hash-password-verifier",
+    language: "ar",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "de",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "en",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "es",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "fr",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "he",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "hi",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "id",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "it",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "ja",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "ko",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "ms",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "nl",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "no",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "pl",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "pt",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "ru",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "sv",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "th",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "tr",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "vi",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "zh-CN",
+  },
+  {
+    slug: "bcrypt-hash-password-verifier",
+    language: "zh-TW",
+  },
+  {
     slug: "bic-swift-validator",
     language: "ar",
   },

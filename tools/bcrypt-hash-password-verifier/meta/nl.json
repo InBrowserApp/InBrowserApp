@@ -1,0 +1,4 @@
+{
+  "name": "Bcrypt-hash wachtwoordverifier",
+  "description": "Verifieer lokaal in je browser een wachtwoord in platte tekst tegen een bcrypt-hash. Handig voor het debuggen van authenticatiestromen en het controleren van wachtwoordmigraties"
+}

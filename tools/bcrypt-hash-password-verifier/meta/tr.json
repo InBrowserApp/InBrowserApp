@@ -1,0 +1,4 @@
+{
+  "name": "Bcrypt Hash Parola Doğrulayıcı",
+  "description": "Düz metin bir parolayı bir bcrypt hash'ine karşı tarayıcınızda yerel olarak doğrulayın. Kimlik doğrulama akışlarında hata ayıklamak ve parola geçişlerini kontrol etmek için kullanışlıdır"
+}

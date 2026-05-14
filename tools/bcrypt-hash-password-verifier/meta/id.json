@@ -1,0 +1,4 @@
+{
+  "name": "Pemverifikasi Hash Kata Sandi Bcrypt",
+  "description": "Verifikasi kata sandi teks biasa terhadap hash bcrypt secara lokal di browser Anda. Berguna untuk men-debug alur autentikasi dan memeriksa migrasi kata sandi"
+}
