@@ -15734,6 +15734,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "uuid-validator",
+    language: "ar",
+  },
+  {
+    slug: "uuid-validator",
+    language: "de",
+  },
+  {
+    slug: "uuid-validator",
+    language: "en",
+  },
+  {
+    slug: "uuid-validator",
+    language: "es",
+  },
+  {
+    slug: "uuid-validator",
+    language: "fr",
+  },
+  {
+    slug: "uuid-validator",
+    language: "he",
+  },
+  {
+    slug: "uuid-validator",
+    language: "hi",
+  },
+  {
+    slug: "uuid-validator",
+    language: "id",
+  },
+  {
+    slug: "uuid-validator",
+    language: "it",
+  },
+  {
+    slug: "uuid-validator",
+    language: "ja",
+  },
+  {
+    slug: "uuid-validator",
+    language: "ko",
+  },
+  {
+    slug: "uuid-validator",
+    language: "ms",
+  },
+  {
+    slug: "uuid-validator",
+    language: "nl",
+  },
+  {
+    slug: "uuid-validator",
+    language: "no",
+  },
+  {
+    slug: "uuid-validator",
+    language: "pl",
+  },
+  {
+    slug: "uuid-validator",
+    language: "pt",
+  },
+  {
+    slug: "uuid-validator",
+    language: "ru",
+  },
+  {
+    slug: "uuid-validator",
+    language: "sv",
+  },
+  {
+    slug: "uuid-validator",
+    language: "th",
+  },
+  {
+    slug: "uuid-validator",
+    language: "tr",
+  },
+  {
+    slug: "uuid-validator",
+    language: "vi",
+  },
+  {
+    slug: "uuid-validator",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-validator",
+    language: "zh-TW",
+  },
+  {
     slug: "vin-validator",
     language: "ar",
   },

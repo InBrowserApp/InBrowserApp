@@ -1,0 +1,4 @@
+{
+  "name": "UUID-validator",
+  "description": "Valideer UUID-tekenreeksen, bekijk hun versie en variant en controleer of identifiers de canonieke RFC-compatibele opmaak gebruiken."
+}

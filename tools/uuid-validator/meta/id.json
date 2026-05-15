@@ -1,0 +1,4 @@
+{
+  "name": "Validator UUID",
+  "description": "Validasi string UUID, periksa versi dan variannya, serta pastikan pengenal memakai format kanonis yang kompatibel dengan RFC."
+}

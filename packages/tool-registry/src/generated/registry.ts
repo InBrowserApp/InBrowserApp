@@ -21443,6 +21443,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "uuid-validator",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "uuid",
+      "validator",
+      "identifier",
+      "rfc4122",
+      "rfc9562",
+      "guid",
+      "developer",
+    ],
+    locales: {
+      ar: {
+        name: "مدقق UUID",
+        description:
+          "تحقق من سلاسل UUID، وافحص إصدارها ومتغيرها، وتأكد من أن المعرفات تستخدم تنسيقًا قياسيًا متوافقًا مع RFC.",
+      },
+      de: {
+        name: "UUID-Validator",
+        description:
+          "Validiere UUID-Zeichenfolgen, prüfe ihre Version und Variante und bestätige, dass Kennungen die kanonische RFC-kompatible Formatierung verwenden.",
+      },
+      en: {
+        name: "UUID Validator",
+        description:
+          "Validate UUID strings, inspect their version and variant, and confirm that identifiers use canonical RFC-compatible formatting.",
+      },
+      es: {
+        name: "Validador de UUID",
+        description:
+          "Valida cadenas UUID, inspecciona su versión y variante, y confirma que los identificadores usen formato canónico compatible con RFC.",
+      },
+      fr: {
+        name: "Validateur d'UUID",
+        description:
+          "Validez des chaînes UUID, inspectez leur version et leur variante, et confirmez que les identifiants utilisent une mise en forme canonique compatible avec les RFC.",
+      },
+      he: {
+        name: "מאמת UUID",
+        description:
+          "אמת מחרוזות UUID, בדוק את הגרסה והווריאנט שלהן, וודא שהמזהים משתמשים בפורמט קנוני התואם ל-RFC.",
+      },
+      hi: {
+        name: "UUID वैलिडेटर",
+        description:
+          "UUID स्ट्रिंग्स को वैलिडेट करें, उनका वर्जन और वैरिएंट देखें, और पुष्टि करें कि आइडेंटिफायर कैननिकल RFC-संगत फॉर्मैटिंग का उपयोग करते हैं।",
+      },
+      id: {
+        name: "Validator UUID",
+        description:
+          "Validasi string UUID, periksa versi dan variannya, serta pastikan pengenal memakai format kanonis yang kompatibel dengan RFC.",
+      },
+      it: {
+        name: "Validatore UUID",
+        description:
+          "Convalida stringhe UUID, esaminane versione e variante e verifica che gli identificatori usino una formattazione canonica compatibile con RFC.",
+      },
+      ja: {
+        name: "UUID バリデーター",
+        description:
+          "UUID 文字列を検証し、バージョンとバリアントを調べ、識別子が正規の RFC 互換形式かどうかを確認します。",
+      },
+      ko: {
+        name: "UUID 검증기",
+        description:
+          "UUID 문자열을 검증하고, 버전과 변형을 확인하며, 식별자가 표준 RFC 호환 형식을 사용하는지 확인합니다.",
+      },
+      ms: {
+        name: "Pengesah UUID",
+        description:
+          "Sahkan rentetan UUID, periksa versi dan variannya, serta pastikan pengecam menggunakan pemformatan kanonik yang serasi dengan RFC.",
+      },
+      nl: {
+        name: "UUID-validator",
+        description:
+          "Valideer UUID-tekenreeksen, bekijk hun versie en variant en controleer of identifiers de canonieke RFC-compatibele opmaak gebruiken.",
+      },
+      no: {
+        name: "UUID-validator",
+        description:
+          "Valider UUID-strenger, undersøk versjon og variant, og bekreft at identifikatorer bruker kanonisk RFC-kompatibel formatering.",
+      },
+      pl: {
+        name: "Walidator UUID",
+        description:
+          "Sprawdzaj poprawność ciągów UUID, analizuj ich wersję i wariant oraz potwierdzaj, że identyfikatory używają kanonicznego formatowania zgodnego z RFC.",
+      },
+      pt: {
+        name: "Validador de UUID",
+        description:
+          "Valide strings UUID, inspecione sua versão e variante, e confirme se os identificadores usam formatação canônica compatível com RFC.",
+      },
+      ru: {
+        name: "Валидатор UUID",
+        description:
+          "Проверяйте строки UUID, смотрите их версию и вариант, а также убеждайтесь, что идентификаторы используют канонический формат, совместимый с RFC.",
+      },
+      sv: {
+        name: "UUID-validator",
+        description:
+          "Validera UUID-strängar, granska deras version och variant och kontrollera att identifierare använder kanonisk RFC-kompatibel formatering.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ UUID",
+        description:
+          "ตรวจสอบความถูกต้องของสตริง UUID ดูเวอร์ชันและ variant และยืนยันว่าตัวระบุใช้รูปแบบตามมาตรฐานที่เข้ากันได้กับ RFC",
+      },
+      tr: {
+        name: "UUID Doğrulayıcı",
+        description:
+          "UUID dizelerini doğrulayın, sürümünü ve varyantını inceleyin ve tanımlayıcıların kanonik RFC uyumlu biçimlendirme kullandığını onaylayın.",
+      },
+      vi: {
+        name: "Trình xác thực UUID",
+        description:
+          "Xác thực chuỗi UUID, kiểm tra phiên bản và biến thể, đồng thời xác nhận rằng mã định danh dùng định dạng tương thích RFC chuẩn.",
+      },
+      "zh-CN": {
+        name: "UUID 验证器",
+        description:
+          "验证 UUID 字符串，检查其版本和变体，并确认标识符使用兼容 RFC 的规范格式。",
+      },
+      "zh-TW": {
+        name: "UUID 驗證器",
+        description:
+          "驗證 UUID 字串、檢查其版本與變體，並確認識別碼使用符合 RFC 的標準格式。",
+      },
+    },
+  },
+  {
     slug: "vin-validator",
     category: "text",
     icon: "car",
@@ -44028,6 +44159,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "使用者代理（User-Agent）解析器",
         description:
           "解析 User-Agent 字串，識別瀏覽器、作業系統、裝置、引擎與 CPU 資訊。全程離線。",
+      },
+    },
+  },
+  "uuid-validator": {
+    slug: "uuid-validator",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "uuid",
+      "validator",
+      "identifier",
+      "rfc4122",
+      "rfc9562",
+      "guid",
+      "developer",
+    ],
+    locales: {
+      ar: {
+        name: "مدقق UUID",
+        description:
+          "تحقق من سلاسل UUID، وافحص إصدارها ومتغيرها، وتأكد من أن المعرفات تستخدم تنسيقًا قياسيًا متوافقًا مع RFC.",
+      },
+      de: {
+        name: "UUID-Validator",
+        description:
+          "Validiere UUID-Zeichenfolgen, prüfe ihre Version und Variante und bestätige, dass Kennungen die kanonische RFC-kompatible Formatierung verwenden.",
+      },
+      en: {
+        name: "UUID Validator",
+        description:
+          "Validate UUID strings, inspect their version and variant, and confirm that identifiers use canonical RFC-compatible formatting.",
+      },
+      es: {
+        name: "Validador de UUID",
+        description:
+          "Valida cadenas UUID, inspecciona su versión y variante, y confirma que los identificadores usen formato canónico compatible con RFC.",
+      },
+      fr: {
+        name: "Validateur d'UUID",
+        description:
+          "Validez des chaînes UUID, inspectez leur version et leur variante, et confirmez que les identifiants utilisent une mise en forme canonique compatible avec les RFC.",
+      },
+      he: {
+        name: "מאמת UUID",
+        description:
+          "אמת מחרוזות UUID, בדוק את הגרסה והווריאנט שלהן, וודא שהמזהים משתמשים בפורמט קנוני התואם ל-RFC.",
+      },
+      hi: {
+        name: "UUID वैलिडेटर",
+        description:
+          "UUID स्ट्रिंग्स को वैलिडेट करें, उनका वर्जन और वैरिएंट देखें, और पुष्टि करें कि आइडेंटिफायर कैननिकल RFC-संगत फॉर्मैटिंग का उपयोग करते हैं।",
+      },
+      id: {
+        name: "Validator UUID",
+        description:
+          "Validasi string UUID, periksa versi dan variannya, serta pastikan pengenal memakai format kanonis yang kompatibel dengan RFC.",
+      },
+      it: {
+        name: "Validatore UUID",
+        description:
+          "Convalida stringhe UUID, esaminane versione e variante e verifica che gli identificatori usino una formattazione canonica compatibile con RFC.",
+      },
+      ja: {
+        name: "UUID バリデーター",
+        description:
+          "UUID 文字列を検証し、バージョンとバリアントを調べ、識別子が正規の RFC 互換形式かどうかを確認します。",
+      },
+      ko: {
+        name: "UUID 검증기",
+        description:
+          "UUID 문자열을 검증하고, 버전과 변형을 확인하며, 식별자가 표준 RFC 호환 형식을 사용하는지 확인합니다.",
+      },
+      ms: {
+        name: "Pengesah UUID",
+        description:
+          "Sahkan rentetan UUID, periksa versi dan variannya, serta pastikan pengecam menggunakan pemformatan kanonik yang serasi dengan RFC.",
+      },
+      nl: {
+        name: "UUID-validator",
+        description:
+          "Valideer UUID-tekenreeksen, bekijk hun versie en variant en controleer of identifiers de canonieke RFC-compatibele opmaak gebruiken.",
+      },
+      no: {
+        name: "UUID-validator",
+        description:
+          "Valider UUID-strenger, undersøk versjon og variant, og bekreft at identifikatorer bruker kanonisk RFC-kompatibel formatering.",
+      },
+      pl: {
+        name: "Walidator UUID",
+        description:
+          "Sprawdzaj poprawność ciągów UUID, analizuj ich wersję i wariant oraz potwierdzaj, że identyfikatory używają kanonicznego formatowania zgodnego z RFC.",
+      },
+      pt: {
+        name: "Validador de UUID",
+        description:
+          "Valide strings UUID, inspecione sua versão e variante, e confirme se os identificadores usam formatação canônica compatível com RFC.",
+      },
+      ru: {
+        name: "Валидатор UUID",
+        description:
+          "Проверяйте строки UUID, смотрите их версию и вариант, а также убеждайтесь, что идентификаторы используют канонический формат, совместимый с RFC.",
+      },
+      sv: {
+        name: "UUID-validator",
+        description:
+          "Validera UUID-strängar, granska deras version och variant och kontrollera att identifierare använder kanonisk RFC-kompatibel formatering.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ UUID",
+        description:
+          "ตรวจสอบความถูกต้องของสตริง UUID ดูเวอร์ชันและ variant และยืนยันว่าตัวระบุใช้รูปแบบตามมาตรฐานที่เข้ากันได้กับ RFC",
+      },
+      tr: {
+        name: "UUID Doğrulayıcı",
+        description:
+          "UUID dizelerini doğrulayın, sürümünü ve varyantını inceleyin ve tanımlayıcıların kanonik RFC uyumlu biçimlendirme kullandığını onaylayın.",
+      },
+      vi: {
+        name: "Trình xác thực UUID",
+        description:
+          "Xác thực chuỗi UUID, kiểm tra phiên bản và biến thể, đồng thời xác nhận rằng mã định danh dùng định dạng tương thích RFC chuẩn.",
+      },
+      "zh-CN": {
+        name: "UUID 验证器",
+        description:
+          "验证 UUID 字符串，检查其版本和变体，并确认标识符使用兼容 RFC 的规范格式。",
+      },
+      "zh-TW": {
+        name: "UUID 驗證器",
+        description:
+          "驗證 UUID 字串、檢查其版本與變體，並確認識別碼使用符合 RFC 的標準格式。",
       },
     },
   },

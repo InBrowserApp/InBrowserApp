@@ -1,0 +1,4 @@
+{
+  "name": "UUID-Validator",
+  "description": "Validiere UUID-Zeichenfolgen, prüfe ihre Version und Variante und bestätige, dass Kennungen die kanonische RFC-kompatible Formatierung verwenden."
+}
