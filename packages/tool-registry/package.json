@@ -121,6 +121,7 @@
     "@tool/pbkdf2-key-derivation": "workspace:*",
     "@tool/pgp-key-generator": "workspace:*",
     "@tool/placeholder-image-generator": "workspace:*",
+    "@tool/png-optimizer": "workspace:*",
     "@tool/port-number-lookup": "workspace:*",
     "@tool/prc-id-validator": "workspace:*",
     "@tool/prettier-code-formatter": "workspace:*",

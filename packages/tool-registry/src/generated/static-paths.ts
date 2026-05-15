@@ -10490,6 +10490,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "png-optimizer",
+    language: "ar",
+  },
+  {
+    slug: "png-optimizer",
+    language: "de",
+  },
+  {
+    slug: "png-optimizer",
+    language: "en",
+  },
+  {
+    slug: "png-optimizer",
+    language: "es",
+  },
+  {
+    slug: "png-optimizer",
+    language: "fr",
+  },
+  {
+    slug: "png-optimizer",
+    language: "he",
+  },
+  {
+    slug: "png-optimizer",
+    language: "hi",
+  },
+  {
+    slug: "png-optimizer",
+    language: "id",
+  },
+  {
+    slug: "png-optimizer",
+    language: "it",
+  },
+  {
+    slug: "png-optimizer",
+    language: "ja",
+  },
+  {
+    slug: "png-optimizer",
+    language: "ko",
+  },
+  {
+    slug: "png-optimizer",
+    language: "ms",
+  },
+  {
+    slug: "png-optimizer",
+    language: "nl",
+  },
+  {
+    slug: "png-optimizer",
+    language: "no",
+  },
+  {
+    slug: "png-optimizer",
+    language: "pl",
+  },
+  {
+    slug: "png-optimizer",
+    language: "pt",
+  },
+  {
+    slug: "png-optimizer",
+    language: "ru",
+  },
+  {
+    slug: "png-optimizer",
+    language: "sv",
+  },
+  {
+    slug: "png-optimizer",
+    language: "th",
+  },
+  {
+    slug: "png-optimizer",
+    language: "tr",
+  },
+  {
+    slug: "png-optimizer",
+    language: "vi",
+  },
+  {
+    slug: "png-optimizer",
+    language: "zh-CN",
+  },
+  {
+    slug: "png-optimizer",
+    language: "zh-TW",
+  },
+  {
     slug: "port-number-lookup",
     language: "ar",
   },

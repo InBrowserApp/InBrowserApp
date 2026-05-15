@@ -149,6 +149,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "pgp-key-generator": () => import("@tool/pgp-key-generator/page"),
   "placeholder-image-generator": () =>
     import("@tool/placeholder-image-generator/page"),
+  "png-optimizer": () => import("@tool/png-optimizer/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
   "prc-id-validator": () => import("@tool/prc-id-validator/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),

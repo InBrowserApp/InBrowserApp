@@ -31,6 +31,9 @@ export default defineConfig({
         ),
       },
     },
+    worker: {
+      format: "es",
+    },
     plugins: [tailwindcss()],
   },
   integrations: [

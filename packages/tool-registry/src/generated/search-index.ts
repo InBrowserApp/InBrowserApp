@@ -14275,6 +14275,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "png-optimizer",
+    category: "image",
+    icon: "image",
+    tags: ["image", "png", "optimizer", "compression", "lossless", "oxipng"],
+    locales: {
+      ar: {
+        name: "PNG Optimizer",
+        description:
+          "اضغط صور PNG في متصفحك باستخدام تحسين Oxipng بلا فقدان مع الحفاظ على الجودة المرئية.",
+      },
+      de: {
+        name: "PNG Optimizer",
+        description:
+          "Komprimiere PNG-Bilder in deinem Browser mit verlustfreier Oxipng-Optimierung und erhaltener Bildqualität.",
+      },
+      en: {
+        name: "PNG Optimizer",
+        description:
+          "Compress PNG images in your browser with lossless Oxipng optimization while preserving visual quality.",
+      },
+      es: {
+        name: "Optimizador de PNG",
+        description:
+          "Comprime imágenes PNG en tu navegador con optimización sin pérdida de Oxipng, preservando la calidad visual.",
+      },
+      fr: {
+        name: "PNG Optimizer",
+        description:
+          "Compressez des images PNG dans votre navigateur avec l'optimisation sans perte d'Oxipng, tout en préservant la qualité visuelle.",
+      },
+      he: {
+        name: "PNG Optimizer",
+        description:
+          "דחסו תמונות PNG בדפדפן עם אופטימיזציה ללא אובדן של Oxipng, תוך שמירה על האיכות החזותית.",
+      },
+      hi: {
+        name: "PNG Optimizer",
+        description:
+          "दृश्य गुणवत्ता बनाए रखते हुए lossless Oxipng optimization के साथ अपने browser में PNG images compress करें।",
+      },
+      id: {
+        name: "PNG Optimizer",
+        description:
+          "Kompres gambar PNG di browser Anda dengan optimasi Oxipng lossless sambil mempertahankan kualitas visual.",
+      },
+      it: {
+        name: "PNG Optimizer",
+        description:
+          "Comprimi immagini PNG nel browser con l'ottimizzazione lossless di Oxipng, preservando la qualità visiva.",
+      },
+      ja: {
+        name: "PNG Optimizer",
+        description:
+          "視覚品質を保ったまま、ロスレスな Oxipng 最適化でブラウザー内の PNG 画像を圧縮します。",
+      },
+      ko: {
+        name: "PNG Optimizer",
+        description:
+          "시각 품질은 유지하면서 무손실 Oxipng 최적화로 브라우저에서 PNG 이미지를 압축합니다.",
+      },
+      ms: {
+        name: "PNG Optimizer",
+        description:
+          "Mampatkan imej PNG dalam pelayar anda dengan pengoptimuman Oxipng tanpa hilang kualiti sambil mengekalkan kualiti visual.",
+      },
+      nl: {
+        name: "PNG Optimizer",
+        description:
+          "Comprimeer PNG-afbeeldingen in je browser met verliesloze Oxipng-optimalisatie, zonder zichtbare kwaliteit te verliezen.",
+      },
+      no: {
+        name: "PNG Optimizer",
+        description:
+          "Komprimer PNG-bilder i nettleseren med tapsfri Oxipng-optimalisering, samtidig som visuell kvalitet bevares.",
+      },
+      pl: {
+        name: "PNG Optimizer",
+        description:
+          "Kompresuj obrazy PNG w przeglądarce dzięki bezstratnej optymalizacji Oxipng, zachowując jakość wizualną.",
+      },
+      pt: {
+        name: "PNG Optimizer",
+        description:
+          "Comprima imagens PNG no navegador com a otimização sem perdas do Oxipng, preservando a qualidade visual.",
+      },
+      ru: {
+        name: "PNG Optimizer",
+        description:
+          "Сжимайте PNG-изображения в браузере с помощью lossless-оптимизации Oxipng, сохраняя визуальное качество.",
+      },
+      sv: {
+        name: "PNG Optimizer",
+        description:
+          "Komprimera PNG-bilder i webbläsaren med förlustfri Oxipng-optimering utan att ändra den visuella kvaliteten.",
+      },
+      th: {
+        name: "PNG Optimizer",
+        description:
+          "บีบอัดรูปภาพ PNG ในเบราว์เซอร์ของคุณด้วยการปรับแต่งแบบไม่สูญเสียข้อมูลของ Oxipng พร้อมรักษาคุณภาพภาพไว้",
+      },
+      tr: {
+        name: "PNG Optimizer",
+        description:
+          "Görsel kaliteyi koruyarak, kayıpsız Oxipng optimizasyonuyla PNG görsellerini tarayıcınızda sıkıştırın.",
+      },
+      vi: {
+        name: "PNG Optimizer",
+        description:
+          "Nén ảnh PNG trong trình duyệt bằng tối ưu hóa Oxipng không mất dữ liệu, đồng thời giữ nguyên chất lượng hiển thị.",
+      },
+      "zh-CN": {
+        name: "PNG Optimizer",
+        description:
+          "在浏览器中使用无损 Oxipng 优化压缩 PNG 图像，同时保持视觉质量。",
+      },
+      "zh-TW": {
+        name: "PNG Optimizer",
+        description:
+          "在瀏覽器中使用無損 Oxipng 最佳化壓縮 PNG 圖片，同時保留視覺品質。",
+      },
+    },
+  },
+  {
     slug: "port-number-lookup",
     category: "network",
     icon: "network",
