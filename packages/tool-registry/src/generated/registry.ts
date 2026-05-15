@@ -20704,6 +20704,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "ulid-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "ulid",
+      "uuid",
+      "id",
+      "identifier",
+      "unique",
+      "sortable",
+      "timestamp",
+      "random",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولد ULID",
+        description:
+          "أنشئ معرفات Universally Unique Lexicographically Sortable داخل المتصفح مع طوابع زمنية مخصصة اختيارية.",
+      },
+      de: {
+        name: "ULID-Generator",
+        description:
+          "Erzeuge universell eindeutige, lexikografisch sortierbare Identifikatoren im Browser mit optionalen benutzerdefinierten Zeitstempeln.",
+      },
+      en: {
+        name: "ULID Generator",
+        description:
+          "Generate Universally Unique Lexicographically Sortable Identifiers in-browser with optional custom timestamps.",
+      },
+      es: {
+        name: "Generador de ULID",
+        description:
+          "Genera identificadores Universally Unique Lexicographically Sortable en el navegador con marcas de tiempo personalizadas opcionales.",
+      },
+      fr: {
+        name: "Générateur ULID",
+        description:
+          "Générez dans le navigateur des identifiants universellement uniques, triables lexicographiquement, avec horodatages personnalisés facultatifs.",
+      },
+      he: {
+        name: "מחולל ULID",
+        description:
+          "צרו בדפדפן מזהים ייחודיים אוניברסלית הניתנים למיון לקסיקוגרפי, עם חותמות זמן מותאמות אישית כאפשרות.",
+      },
+      hi: {
+        name: "ULID जेनरेटर",
+        description:
+          "वैकल्पिक कस्टम टाइमस्टैम्प के साथ ब्राउज़र में Universally Unique Lexicographically Sortable Identifiers जनरेट करें।",
+      },
+      id: {
+        name: "Generator ULID",
+        description:
+          "Buat Universally Unique Lexicographically Sortable Identifier di browser dengan stempel waktu kustom opsional.",
+      },
+      it: {
+        name: "Generatore ULID",
+        description:
+          "Genera nel browser Universally Unique Lexicographically Sortable Identifiers con timestamp personalizzati opzionali.",
+      },
+      ja: {
+        name: "ULID Generator",
+        description:
+          "任意のカスタムタイムスタンプにも対応した、辞書順にソート可能な汎用一意識別子をブラウザー内で生成します。",
+      },
+      ko: {
+        name: "ULID 생성기",
+        description:
+          "선택적으로 사용자 지정 타임스탬프를 사용해 브라우저 안에서 Universally Unique Lexicographically Sortable Identifier를 생성합니다.",
+      },
+      ms: {
+        name: "Penjana ULID",
+        description:
+          "Jana Pengecam Boleh Isih Secara Leksikografi yang Unik Secara Universal dalam pelayar dengan cap masa tersuai pilihan.",
+      },
+      nl: {
+        name: "ULID Generator",
+        description:
+          "Genereer Universally Unique Lexicographically Sortable Identifiers in de browser met optionele aangepaste tijdstempels.",
+      },
+      no: {
+        name: "ULID-generator",
+        description:
+          "Generer Universally Unique Lexicographically Sortable Identifiers i nettleseren med valgfrie egendefinerte tidsstempler.",
+      },
+      pl: {
+        name: "Generator ULID",
+        description:
+          "Generuj w przeglądarce uniwersalnie unikalne identyfikatory sortowalne leksykograficznie z opcjonalnymi niestandardowymi znacznikami czasu.",
+      },
+      pt: {
+        name: "Gerador de ULID",
+        description:
+          "Gere Identificadores Universalmente Únicos e Lexicograficamente Ordenáveis no navegador, com timestamps personalizados opcionais.",
+      },
+      ru: {
+        name: "Генератор ULID",
+        description:
+          "Генерируйте универсально уникальные лексикографически сортируемые идентификаторы прямо в браузере с необязательными пользовательскими временными метками.",
+      },
+      sv: {
+        name: "ULID-generator",
+        description:
+          "Generera Universally Unique Lexicographically Sortable Identifiers i webbläsaren med valfria anpassade tidsstämplar.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง ULID",
+        description:
+          "สร้าง Universally Unique Lexicographically Sortable Identifiers ในเบราว์เซอร์ พร้อมกำหนดเวลาที่กำหนดเองได้",
+      },
+      tr: {
+        name: "ULID Oluşturucu",
+        description:
+          "İsteğe bağlı özel zaman damgalarıyla tarayıcı içinde Evrensel Olarak Benzersiz, Sözlük Sırasına Göre Sıralanabilir Tanımlayıcılar oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo ULID",
+        description:
+          "Tạo Universally Unique Lexicographically Sortable Identifiers ngay trong trình duyệt, với tùy chọn mốc thời gian tùy chỉnh.",
+      },
+      "zh-CN": {
+        name: "ULID 生成器",
+        description:
+          "在浏览器内生成按字典序可排序的通用唯一标识符，并可选择自定义时间戳。",
+      },
+      "zh-TW": {
+        name: "ULID 產生器",
+        description:
+          "在瀏覽器中產生 Universally Unique Lexicographically Sortable Identifiers，並可選擇自訂時間戳記。",
+      },
+    },
+  },
+  {
     slug: "unicode-escape-unescape",
     category: "web",
     icon: "globe",
@@ -43423,6 +43556,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "TOML 轉 YAML 轉換器",
         description:
           "將 TOML 轉為 YAML。貼上 TOML 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  "ulid-generator": {
+    slug: "ulid-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "ulid",
+      "uuid",
+      "id",
+      "identifier",
+      "unique",
+      "sortable",
+      "timestamp",
+      "random",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولد ULID",
+        description:
+          "أنشئ معرفات Universally Unique Lexicographically Sortable داخل المتصفح مع طوابع زمنية مخصصة اختيارية.",
+      },
+      de: {
+        name: "ULID-Generator",
+        description:
+          "Erzeuge universell eindeutige, lexikografisch sortierbare Identifikatoren im Browser mit optionalen benutzerdefinierten Zeitstempeln.",
+      },
+      en: {
+        name: "ULID Generator",
+        description:
+          "Generate Universally Unique Lexicographically Sortable Identifiers in-browser with optional custom timestamps.",
+      },
+      es: {
+        name: "Generador de ULID",
+        description:
+          "Genera identificadores Universally Unique Lexicographically Sortable en el navegador con marcas de tiempo personalizadas opcionales.",
+      },
+      fr: {
+        name: "Générateur ULID",
+        description:
+          "Générez dans le navigateur des identifiants universellement uniques, triables lexicographiquement, avec horodatages personnalisés facultatifs.",
+      },
+      he: {
+        name: "מחולל ULID",
+        description:
+          "צרו בדפדפן מזהים ייחודיים אוניברסלית הניתנים למיון לקסיקוגרפי, עם חותמות זמן מותאמות אישית כאפשרות.",
+      },
+      hi: {
+        name: "ULID जेनरेटर",
+        description:
+          "वैकल्पिक कस्टम टाइमस्टैम्प के साथ ब्राउज़र में Universally Unique Lexicographically Sortable Identifiers जनरेट करें।",
+      },
+      id: {
+        name: "Generator ULID",
+        description:
+          "Buat Universally Unique Lexicographically Sortable Identifier di browser dengan stempel waktu kustom opsional.",
+      },
+      it: {
+        name: "Generatore ULID",
+        description:
+          "Genera nel browser Universally Unique Lexicographically Sortable Identifiers con timestamp personalizzati opzionali.",
+      },
+      ja: {
+        name: "ULID Generator",
+        description:
+          "任意のカスタムタイムスタンプにも対応した、辞書順にソート可能な汎用一意識別子をブラウザー内で生成します。",
+      },
+      ko: {
+        name: "ULID 생성기",
+        description:
+          "선택적으로 사용자 지정 타임스탬프를 사용해 브라우저 안에서 Universally Unique Lexicographically Sortable Identifier를 생성합니다.",
+      },
+      ms: {
+        name: "Penjana ULID",
+        description:
+          "Jana Pengecam Boleh Isih Secara Leksikografi yang Unik Secara Universal dalam pelayar dengan cap masa tersuai pilihan.",
+      },
+      nl: {
+        name: "ULID Generator",
+        description:
+          "Genereer Universally Unique Lexicographically Sortable Identifiers in de browser met optionele aangepaste tijdstempels.",
+      },
+      no: {
+        name: "ULID-generator",
+        description:
+          "Generer Universally Unique Lexicographically Sortable Identifiers i nettleseren med valgfrie egendefinerte tidsstempler.",
+      },
+      pl: {
+        name: "Generator ULID",
+        description:
+          "Generuj w przeglądarce uniwersalnie unikalne identyfikatory sortowalne leksykograficznie z opcjonalnymi niestandardowymi znacznikami czasu.",
+      },
+      pt: {
+        name: "Gerador de ULID",
+        description:
+          "Gere Identificadores Universalmente Únicos e Lexicograficamente Ordenáveis no navegador, com timestamps personalizados opcionais.",
+      },
+      ru: {
+        name: "Генератор ULID",
+        description:
+          "Генерируйте универсально уникальные лексикографически сортируемые идентификаторы прямо в браузере с необязательными пользовательскими временными метками.",
+      },
+      sv: {
+        name: "ULID-generator",
+        description:
+          "Generera Universally Unique Lexicographically Sortable Identifiers i webbläsaren med valfria anpassade tidsstämplar.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง ULID",
+        description:
+          "สร้าง Universally Unique Lexicographically Sortable Identifiers ในเบราว์เซอร์ พร้อมกำหนดเวลาที่กำหนดเองได้",
+      },
+      tr: {
+        name: "ULID Oluşturucu",
+        description:
+          "İsteğe bağlı özel zaman damgalarıyla tarayıcı içinde Evrensel Olarak Benzersiz, Sözlük Sırasına Göre Sıralanabilir Tanımlayıcılar oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo ULID",
+        description:
+          "Tạo Universally Unique Lexicographically Sortable Identifiers ngay trong trình duyệt, với tùy chọn mốc thời gian tùy chỉnh.",
+      },
+      "zh-CN": {
+        name: "ULID 生成器",
+        description:
+          "在浏览器内生成按字典序可排序的通用唯一标识符，并可选择自定义时间戳。",
+      },
+      "zh-TW": {
+        name: "ULID 產生器",
+        description:
+          "在瀏覽器中產生 Universally Unique Lexicographically Sortable Identifiers，並可選擇自訂時間戳記。",
       },
     },
   },

@@ -1,0 +1,4 @@
+{
+  "name": "ULID-generator",
+  "description": "Generera Universally Unique Lexicographically Sortable Identifiers i webbläsaren med valfria anpassade tidsstämplar."
+}

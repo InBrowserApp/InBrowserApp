@@ -1,0 +1,4 @@
+{
+  "name": "ULID 產生器",
+  "description": "在瀏覽器中產生 Universally Unique Lexicographically Sortable Identifiers，並可選擇自訂時間戳記。"
+}

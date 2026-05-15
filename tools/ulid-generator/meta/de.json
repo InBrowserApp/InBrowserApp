@@ -1,0 +1,4 @@
+{
+  "name": "ULID-Generator",
+  "description": "Erzeuge universell eindeutige, lexikografisch sortierbare Identifikatoren im Browser mit optionalen benutzerdefinierten Zeitstempeln."
+}

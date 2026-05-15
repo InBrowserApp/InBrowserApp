@@ -1,0 +1,4 @@
+{
+  "name": "Générateur ULID",
+  "description": "Générez dans le navigateur des identifiants universellement uniques, triables lexicographiquement, avec horodatages personnalisés facultatifs."
+}
