@@ -34,12 +34,13 @@
   "columnKind": "Loại",
   "columnSize": "Kích thước",
   "columnModified": "Đã sửa đổi",
+  "columnAction": "Hành động",
   "kindFile": "Tệp",
   "kindDirectory": "Thư mục",
   "kindSymlink": "Liên kết tượng trưng",
   "kindOther": "Khác",
   "previewTitle": "Xem trước",
-  "previewDescription": "Có thể kiểm tra các mục văn bản và hình ảnh trước khi tải xuống.",
+  "previewDescription": "Có thể kiểm tra các mục văn bản, hình ảnh và PDF trước khi tải xuống.",
   "previewPlaceholderTitle": "Chọn một tệp",
   "previewPlaceholderDescription": "Chọn một mục tệp từ trình duyệt tệp nén để xem bản xem trước và thao tác tải xuống.",
   "loadingPreview": "Đang tải bản xem trước...",
@@ -49,6 +50,7 @@
   "downloadEntry": "Tải xuống",
   "textPreviewLabel": "Bản xem trước văn bản",
   "imagePreviewLabel": "Bản xem trước hình ảnh",
+  "pdfPreviewLabel": "Bản xem trước PDF",
   "openFolder": "Mở thư mục",
   "previewFile": "Xem trước tệp"
 }

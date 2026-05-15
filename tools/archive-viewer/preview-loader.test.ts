@@ -86,6 +86,20 @@ describe("preview loader", () => {
     expect(revokeObjectUrlMock).toHaveBeenCalledWith("blob:preview")
   })
 
+  test("loads PDF previews with the PDF object URL", async () => {
+    const loaded = await loadEntryPreview(
+      handleWith(new Blob(["%PDF-1.4"], { type: "application/pdf" })),
+      entry("report.pdf", "pdf"),
+      messages
+    )
+
+    expect(loaded.preview.status).toBe("pdf")
+    expect(loaded.textDownloadUrl).toBeNull()
+
+    cleanupPreview(loaded.preview)
+    expect(revokeObjectUrlMock).toHaveBeenCalledWith("blob:preview")
+  })
+
   test("keeps large and binary entries downloadable without text rendering", async () => {
     const large = await loadEntryPreview(
       handleWith(new Blob([new Uint8Array(1024 * 1024 + 1)])),

@@ -34,12 +34,13 @@
   "columnKind": "Typ",
   "columnSize": "Storlek",
   "columnModified": "Ändrad",
+  "columnAction": "Åtgärd",
   "kindFile": "Fil",
   "kindDirectory": "Mapp",
   "kindSymlink": "Symbolisk länk",
   "kindOther": "Annat",
   "previewTitle": "Förhandsvisning",
-  "previewDescription": "Text- och bildposter kan granskas innan de laddas ner.",
+  "previewDescription": "Text-, bild- och PDF-poster kan granskas innan de laddas ner.",
   "previewPlaceholderTitle": "Välj en fil",
   "previewPlaceholderDescription": "Välj en filpost i arkivutforskaren för att se en förhandsvisning och kunna ladda ner den.",
   "loadingPreview": "Läser in förhandsvisning...",
@@ -49,6 +50,7 @@
   "downloadEntry": "Ladda ner",
   "textPreviewLabel": "Textförhandsvisning",
   "imagePreviewLabel": "Bildförhandsvisning",
+  "pdfPreviewLabel": "PDF-förhandsvisning",
   "openFolder": "Öppna mapp",
   "previewFile": "Förhandsgranska fil"
 }

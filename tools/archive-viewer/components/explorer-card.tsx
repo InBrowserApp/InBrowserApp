@@ -14,14 +14,7 @@ import {
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
 import { Input } from "@workspace/ui/components/ui/input"
-import {
-  Download,
-  ChevronRight,
-  ChevronUp,
-  Eye,
-  Folder,
-  Search,
-} from "@workspace/ui/icons"
+import { ChevronRight, ChevronUp, Folder, Search } from "@workspace/ui/icons"
 
 import { splitPathSegments, toDirectoryPath } from "../core/path"
 import { ExplorerTableRow } from "./explorer-table-row"
@@ -120,7 +113,7 @@ function ExplorerCard({
         <div className="relative">
           <Search
             aria-hidden="true"
-            className="pointer-events-none absolute top-1/2 left-2.5 -translate-y-1/2 text-muted-foreground"
+            className="pointer-events-none absolute start-2.5 top-1/2 -translate-y-1/2 text-muted-foreground"
           />
           <Input
             id="archive-viewer-search"
@@ -129,7 +122,7 @@ function ExplorerCard({
             value={search}
             onChange={(event) => onSearchChange(event.target.value)}
             placeholder={messages.searchPlaceholder}
-            className="pl-8"
+            className="ps-8"
           />
         </div>
 
@@ -139,48 +132,41 @@ function ExplorerCard({
             aria-label={messages.explorerTitle}
             className="min-h-0 overflow-x-auto rounded-lg border"
           >
-            <div className="min-w-[51rem]">
+            <div className="min-w-[52rem]">
               <div>
                 <div
                   role="row"
-                  className="grid grid-cols-[minmax(16rem,1fr)_8rem_8rem_12rem_6rem] border-b text-sm"
+                  className="grid grid-cols-[minmax(16rem,1fr)_8rem_8rem_12rem_7rem] border-b text-sm"
                 >
                   <div
                     role="columnheader"
-                    className="px-2 py-2.5 text-left font-medium whitespace-nowrap"
+                    className="px-2 py-2.5 text-start font-medium whitespace-nowrap"
                   >
                     {messages.columnName}
                   </div>
                   <div
                     role="columnheader"
-                    className="px-2 py-2.5 text-left font-medium whitespace-nowrap"
+                    className="px-2 py-2.5 text-start font-medium whitespace-nowrap"
                   >
                     {messages.columnKind}
                   </div>
                   <div
                     role="columnheader"
-                    className="px-2 py-2.5 text-left font-medium whitespace-nowrap"
+                    className="px-2 py-2.5 text-start font-medium whitespace-nowrap"
                   >
                     {messages.columnSize}
                   </div>
                   <div
                     role="columnheader"
-                    className="px-2 py-2.5 text-left font-medium whitespace-nowrap"
+                    className="px-2 py-2.5 text-start font-medium whitespace-nowrap"
                   >
                     {messages.columnModified}
                   </div>
                   <div
                     role="columnheader"
-                    className="sticky right-0 flex items-center justify-end border-l bg-card px-2 py-2.5"
-                    title={`${messages.previewFile} / ${messages.downloadEntry}`}
+                    className="sticky end-0 border-s bg-card px-2 py-2.5 text-end font-medium whitespace-nowrap"
                   >
-                    <span className="flex items-center gap-1 text-muted-foreground">
-                      <Eye aria-hidden="true" />
-                      <Download aria-hidden="true" />
-                    </span>
-                    <span className="sr-only">
-                      {messages.previewFile} / {messages.downloadEntry}
-                    </span>
+                    {messages.columnAction}
                   </div>
                 </div>
               </div>

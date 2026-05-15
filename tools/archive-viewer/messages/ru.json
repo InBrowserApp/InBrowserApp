@@ -34,12 +34,13 @@
   "columnKind": "Тип",
   "columnSize": "Размер",
   "columnModified": "Изменено",
+  "columnAction": "Действие",
   "kindFile": "Файл",
   "kindDirectory": "Папка",
   "kindSymlink": "Симлинк",
   "kindOther": "Другое",
   "previewTitle": "Предпросмотр",
-  "previewDescription": "Текстовые и графические элементы можно проверить перед скачиванием.",
+  "previewDescription": "Текстовые, графические и PDF-элементы можно проверить перед скачиванием.",
   "previewPlaceholderTitle": "Выберите файл",
   "previewPlaceholderDescription": "Выберите файл в проводнике архива, чтобы увидеть предпросмотр и действие скачивания.",
   "loadingPreview": "Загрузка предпросмотра...",
@@ -49,6 +50,7 @@
   "downloadEntry": "Скачать",
   "textPreviewLabel": "Предпросмотр текста",
   "imagePreviewLabel": "Предпросмотр изображения",
+  "pdfPreviewLabel": "Предпросмотр PDF",
   "openFolder": "Открыть папку",
   "previewFile": "Предпросмотр файла"
 }

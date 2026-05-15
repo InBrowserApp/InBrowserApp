@@ -34,12 +34,13 @@
   "columnKind": "סוג",
   "columnSize": "גודל",
   "columnModified": "שונה",
+  "columnAction": "פעולה",
   "kindFile": "קובץ",
   "kindDirectory": "תיקייה",
   "kindSymlink": "קישור סמלי",
   "kindOther": "אחר",
   "previewTitle": "תצוגה מקדימה",
-  "previewDescription": "ניתן לבדוק פריטי טקסט ותמונה לפני ההורדה.",
+  "previewDescription": "ניתן לבדוק פריטי טקסט, תמונה ו-PDF לפני ההורדה.",
   "previewPlaceholderTitle": "בחרו קובץ",
   "previewPlaceholderDescription": "בחרו פריט קובץ בסייר הארכיון כדי לראות תצוגה מקדימה ואפשרות הורדה.",
   "loadingPreview": "טוען תצוגה מקדימה...",
@@ -49,6 +50,7 @@
   "downloadEntry": "הורדה",
   "textPreviewLabel": "תצוגה מקדימה של טקסט",
   "imagePreviewLabel": "תצוגה מקדימה של תמונה",
+  "pdfPreviewLabel": "תצוגה מקדימה של PDF",
   "openFolder": "פתיחת תיקייה",
   "previewFile": "תצוגה מקדימה של קובץ"
 }

@@ -34,12 +34,13 @@
   "columnKind": "Tür",
   "columnSize": "Boyut",
   "columnModified": "Değiştirildi",
+  "columnAction": "İşlem",
   "kindFile": "Dosya",
   "kindDirectory": "Klasör",
   "kindSymlink": "Sembolik bağlantı",
   "kindOther": "Diğer",
   "previewTitle": "Önizleme",
-  "previewDescription": "Metin ve görüntü girdileri indirmeden önce incelenebilir.",
+  "previewDescription": "Metin, görüntü ve PDF girdileri indirmeden önce incelenebilir.",
   "previewPlaceholderTitle": "Bir dosya seçin",
   "previewPlaceholderDescription": "Önizlemeyi ve indirme seçeneğini görmek için arşiv gezgininden bir dosya girdisi seçin.",
   "loadingPreview": "Önizleme yükleniyor...",
@@ -49,6 +50,7 @@
   "downloadEntry": "İndir",
   "textPreviewLabel": "Metin önizlemesi",
   "imagePreviewLabel": "Görüntü önizlemesi",
+  "pdfPreviewLabel": "PDF önizlemesi",
   "openFolder": "Klasörü aç",
   "previewFile": "Dosyayı önizle"
 }

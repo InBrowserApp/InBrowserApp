@@ -34,12 +34,13 @@
   "columnKind": "Jenis",
   "columnSize": "Saiz",
   "columnModified": "Diubah suai",
+  "columnAction": "Tindakan",
   "kindFile": "Fail",
   "kindDirectory": "Folder",
   "kindSymlink": "Symlink",
   "kindOther": "Lain",
   "previewTitle": "Pratonton",
-  "previewDescription": "Entri teks dan imej boleh diperiksa sebelum dimuat turun.",
+  "previewDescription": "Entri teks, imej dan PDF boleh diperiksa sebelum dimuat turun.",
   "previewPlaceholderTitle": "Pilih fail",
   "previewPlaceholderDescription": "Pilih entri fail daripada penjelajah arkib untuk melihat pratonton dan tindakan muat turun.",
   "loadingPreview": "Memuatkan pratonton...",
@@ -49,6 +50,7 @@
   "downloadEntry": "Muat turun",
   "textPreviewLabel": "Pratonton teks",
   "imagePreviewLabel": "Pratonton imej",
+  "pdfPreviewLabel": "Pratonton PDF",
   "openFolder": "Buka folder",
   "previewFile": "Pratonton fail"
 }

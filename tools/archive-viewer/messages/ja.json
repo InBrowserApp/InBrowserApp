@@ -34,12 +34,13 @@
   "columnKind": "種類",
   "columnSize": "サイズ",
   "columnModified": "更新日時",
+  "columnAction": "操作",
   "kindFile": "ファイル",
   "kindDirectory": "フォルダー",
   "kindSymlink": "シンボリックリンク",
   "kindOther": "その他",
   "previewTitle": "プレビュー",
-  "previewDescription": "テキストと画像の項目は、ダウンロード前に確認できます。",
+  "previewDescription": "テキスト、画像、PDF の項目は、ダウンロード前に確認できます。",
   "previewPlaceholderTitle": "ファイルを選択",
   "previewPlaceholderDescription": "アーカイブエクスプローラーからファイル項目を選択すると、プレビューとダウンロード操作が表示されます。",
   "loadingPreview": "プレビューを読み込み中...",
@@ -49,6 +50,7 @@
   "downloadEntry": "ダウンロード",
   "textPreviewLabel": "テキストプレビュー",
   "imagePreviewLabel": "画像プレビュー",
+  "pdfPreviewLabel": "PDF プレビュー",
   "openFolder": "フォルダーを開く",
   "previewFile": "ファイルをプレビュー"
 }

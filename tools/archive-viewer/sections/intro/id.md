@@ -14,4 +14,4 @@ Penampil ini mendukung arsip ZIP standar, file TAR tidak terkompresi, file tungg
 
 ## Perilaku pratinjau
 
-File mirip teks seperti JSON, Markdown, log, kode sumber, CSV, XML, YAML, dan TOML dapat dipratinjau dengan penyorotan sintaks saat bahasa yang cocok tersedia. File gambar umum dapat dipratinjau secara visual. File biner lainnya tetap dapat diunduh, tetapi alat ini tidak akan mencoba merendernya.
+File mirip teks seperti JSON, Markdown, log, kode sumber, CSV, XML, YAML, dan TOML dapat dipratinjau dengan penyorotan sintaks saat bahasa yang cocok tersedia. File gambar umum dapat dipratinjau secara visual, dan dokumen PDF dibuka di penampil PDF bawaan browser saat tersedia. File biner lainnya tetap dapat diunduh, tetapi alat ini tidak akan mencoba merendernya.

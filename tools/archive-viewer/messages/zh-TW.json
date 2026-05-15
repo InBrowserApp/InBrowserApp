@@ -34,12 +34,13 @@
   "columnKind": "類型",
   "columnSize": "大小",
   "columnModified": "修改時間",
+  "columnAction": "操作",
   "kindFile": "檔案",
   "kindDirectory": "資料夾",
   "kindSymlink": "符號連結",
   "kindOther": "其他",
   "previewTitle": "預覽",
-  "previewDescription": "文字和圖片項目可在下載前檢查。",
+  "previewDescription": "文字、圖片和 PDF 項目可在下載前檢查。",
   "previewPlaceholderTitle": "選擇檔案",
   "previewPlaceholderDescription": "從壓縮檔瀏覽器選擇檔案項目，即可查看預覽和下載操作。",
   "loadingPreview": "正在載入預覽...",
@@ -49,6 +50,7 @@
   "downloadEntry": "下載",
   "textPreviewLabel": "文字預覽",
   "imagePreviewLabel": "圖片預覽",
+  "pdfPreviewLabel": "PDF 預覽",
   "openFolder": "開啟資料夾",
   "previewFile": "預覽檔案"
 }

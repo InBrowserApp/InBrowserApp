@@ -14,4 +14,4 @@ El visor admite archivos ZIP estándar, archivos TAR sin comprimir, archivos ún
 
 ## Comportamiento de la vista previa
 
-Los archivos similares a texto, como JSON, Markdown, registros, código fuente, CSV, XML, YAML y TOML, se pueden previsualizar con resaltado de sintaxis cuando haya un lenguaje coincidente disponible. Los archivos de imagen comunes se pueden previsualizar visualmente. Otros archivos binarios permanecen disponibles para descargar, pero la herramienta no intentará renderizarlos.
+Los archivos similares a texto, como JSON, Markdown, registros, código fuente, CSV, XML, YAML y TOML, se pueden previsualizar con resaltado de sintaxis cuando haya un lenguaje coincidente disponible. Los archivos de imagen comunes se pueden previsualizar visualmente, y los documentos PDF se abren en el visor PDF integrado del navegador cuando está disponible. Otros archivos binarios permanecen disponibles para descargar, pero la herramienta no intentará renderizarlos.

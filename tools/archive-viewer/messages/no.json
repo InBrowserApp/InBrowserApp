@@ -34,12 +34,13 @@
   "columnKind": "Type",
   "columnSize": "Størrelse",
   "columnModified": "Endret",
+  "columnAction": "Handling",
   "kindFile": "Fil",
   "kindDirectory": "Mappe",
   "kindSymlink": "Symbolsk lenke",
   "kindOther": "Annet",
   "previewTitle": "Forhåndsvisning",
-  "previewDescription": "Tekst- og bildeoppføringer kan inspiseres før nedlasting.",
+  "previewDescription": "Tekst-, bilde- og PDF-oppføringer kan inspiseres før nedlasting.",
   "previewPlaceholderTitle": "Velg en fil",
   "previewPlaceholderDescription": "Velg en filoppføring fra arkivutforskeren for å se en forhåndsvisning og nedlastingshandling.",
   "loadingPreview": "Laster forhåndsvisning...",
@@ -49,6 +50,7 @@
   "downloadEntry": "Last ned",
   "textPreviewLabel": "Tekstforhåndsvisning",
   "imagePreviewLabel": "Bildeforhåndsvisning",
+  "pdfPreviewLabel": "PDF-forhåndsvisning",
   "openFolder": "Åpne mappe",
   "previewFile": "Forhåndsvis fil"
 }

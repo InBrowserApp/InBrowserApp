@@ -34,12 +34,13 @@
   "columnKind": "Type",
   "columnSize": "Grootte",
   "columnModified": "Gewijzigd",
+  "columnAction": "Actie",
   "kindFile": "Bestand",
   "kindDirectory": "Map",
   "kindSymlink": "Symlink",
   "kindOther": "Overig",
   "previewTitle": "Voorbeeld",
-  "previewDescription": "Tekst- en afbeeldingsitems kun je inspecteren voordat je ze downloadt.",
+  "previewDescription": "Tekst-, afbeeldings- en PDF-items kun je inspecteren voordat je ze downloadt.",
   "previewPlaceholderTitle": "Selecteer een bestand",
   "previewPlaceholderDescription": "Kies een bestandsitem uit de archiefverkenner om een voorbeeld en downloadactie te zien.",
   "loadingPreview": "Voorbeeld laden...",
@@ -49,6 +50,7 @@
   "downloadEntry": "Downloaden",
   "textPreviewLabel": "Tekstvoorbeeld",
   "imagePreviewLabel": "Afbeeldingsvoorbeeld",
+  "pdfPreviewLabel": "PDF-voorbeeld",
   "openFolder": "Map openen",
   "previewFile": "Bestand bekijken"
 }

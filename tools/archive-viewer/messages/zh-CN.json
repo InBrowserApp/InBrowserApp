@@ -34,12 +34,13 @@
   "columnKind": "类型",
   "columnSize": "大小",
   "columnModified": "修改时间",
+  "columnAction": "操作",
   "kindFile": "文件",
   "kindDirectory": "文件夹",
   "kindSymlink": "符号链接",
   "kindOther": "其他",
   "previewTitle": "预览",
-  "previewDescription": "文本和图片条目可在下载前检查。",
+  "previewDescription": "文本、图片和 PDF 条目可在下载前检查。",
   "previewPlaceholderTitle": "选择文件",
   "previewPlaceholderDescription": "从压缩包浏览器中选择文件条目，即可查看预览和下载操作。",
   "loadingPreview": "正在加载预览...",
@@ -49,6 +50,7 @@
   "downloadEntry": "下载",
   "textPreviewLabel": "文本预览",
   "imagePreviewLabel": "图片预览",
+  "pdfPreviewLabel": "PDF 预览",
   "openFolder": "打开文件夹",
   "previewFile": "预览文件"
 }

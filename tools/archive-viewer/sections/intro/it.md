@@ -14,4 +14,4 @@ Il visualizzatore supporta archivi ZIP standard, file TAR non compressi, singoli
 
 ## Comportamento dell'anteprima
 
-I file simili a testo, come JSON, Markdown, log, codice sorgente, CSV, XML, YAML e TOML, possono essere visualizzati in anteprima con evidenziazione della sintassi quando è disponibile un linguaggio corrispondente. I file immagine comuni possono essere visualizzati graficamente. Gli altri file binari restano scaricabili, ma lo strumento non tenterà di renderizzarli.
+I file simili a testo, come JSON, Markdown, log, codice sorgente, CSV, XML, YAML e TOML, possono essere visualizzati in anteprima con evidenziazione della sintassi quando è disponibile un linguaggio corrispondente. I file immagine comuni possono essere visualizzati graficamente e i documenti PDF si aprono nel visualizzatore PDF integrato del browser quando disponibile. Gli altri file binari restano scaricabili, ma lo strumento non tenterà di renderizzarli.

@@ -34,12 +34,13 @@
   "columnKind": "Typ",
   "columnSize": "Rozmiar",
   "columnModified": "Zmodyfikowano",
+  "columnAction": "Akcja",
   "kindFile": "Plik",
   "kindDirectory": "Folder",
   "kindSymlink": "Dowiązanie symboliczne",
   "kindOther": "Inne",
   "previewTitle": "Podgląd",
-  "previewDescription": "Wpisy tekstowe i obrazy można sprawdzić przed pobraniem.",
+  "previewDescription": "Wpisy tekstowe, obrazy i PDF można sprawdzić przed pobraniem.",
   "previewPlaceholderTitle": "Wybierz plik",
   "previewPlaceholderDescription": "Wybierz wpis pliku w eksploratorze archiwum, aby zobaczyć podgląd i opcję pobrania.",
   "loadingPreview": "Wczytywanie podglądu...",
@@ -49,6 +50,7 @@
   "downloadEntry": "Pobierz",
   "textPreviewLabel": "Podgląd tekstu",
   "imagePreviewLabel": "Podgląd obrazu",
+  "pdfPreviewLabel": "Podgląd PDF",
   "openFolder": "Otwórz folder",
   "previewFile": "Podejrzyj plik"
 }

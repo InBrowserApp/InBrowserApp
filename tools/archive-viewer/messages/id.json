@@ -34,12 +34,13 @@
   "columnKind": "Jenis",
   "columnSize": "Ukuran",
   "columnModified": "Dimodifikasi",
+  "columnAction": "Tindakan",
   "kindFile": "File",
   "kindDirectory": "Folder",
   "kindSymlink": "Symlink",
   "kindOther": "Lainnya",
   "previewTitle": "Pratinjau",
-  "previewDescription": "Entri teks dan gambar dapat diperiksa sebelum diunduh.",
+  "previewDescription": "Entri teks, gambar, dan PDF dapat diperiksa sebelum diunduh.",
   "previewPlaceholderTitle": "Pilih file",
   "previewPlaceholderDescription": "Pilih entri file dari penjelajah arsip untuk melihat pratinjau dan opsi unduh.",
   "loadingPreview": "Memuat pratinjau...",
@@ -49,6 +50,7 @@
   "downloadEntry": "Unduh",
   "textPreviewLabel": "Pratinjau teks",
   "imagePreviewLabel": "Pratinjau gambar",
+  "pdfPreviewLabel": "Pratinjau PDF",
   "openFolder": "Buka folder",
   "previewFile": "Pratinjau file"
 }

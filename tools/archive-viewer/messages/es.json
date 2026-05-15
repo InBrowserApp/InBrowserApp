@@ -34,12 +34,13 @@
   "columnKind": "Tipo",
   "columnSize": "Tamaño",
   "columnModified": "Modificado",
+  "columnAction": "Acción",
   "kindFile": "Archivo",
   "kindDirectory": "Carpeta",
   "kindSymlink": "Enlace simbólico",
   "kindOther": "Otro",
   "previewTitle": "Vista previa",
-  "previewDescription": "Las entradas de texto e imagen se pueden inspeccionar antes de descargarlas.",
+  "previewDescription": "Las entradas de texto, imagen y PDF se pueden inspeccionar antes de descargarlas.",
   "previewPlaceholderTitle": "Selecciona un archivo",
   "previewPlaceholderDescription": "Elige una entrada del explorador del archivo para ver una vista previa y la acción de descarga.",
   "loadingPreview": "Cargando vista previa...",
@@ -49,6 +50,7 @@
   "downloadEntry": "Descargar",
   "textPreviewLabel": "Vista previa de texto",
   "imagePreviewLabel": "Vista previa de imagen",
+  "pdfPreviewLabel": "Vista previa de PDF",
   "openFolder": "Abrir carpeta",
   "previewFile": "Previsualizar archivo"
 }

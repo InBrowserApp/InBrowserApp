@@ -38,6 +38,7 @@ type ArchiveViewerMessagesCatalog = Readonly<{
   columnKind: string
   columnSize: string
   columnModified: string
+  columnAction: string
   kindFile: string
   kindDirectory: string
   kindSymlink: string
@@ -53,6 +54,7 @@ type ArchiveViewerMessagesCatalog = Readonly<{
   downloadEntry: string
   textPreviewLabel: string
   imagePreviewLabel: string
+  pdfPreviewLabel: string
   openFolder: string
   previewFile: string
 }>

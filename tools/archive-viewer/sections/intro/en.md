@@ -14,4 +14,4 @@ The viewer supports standard ZIP archives, uncompressed TAR files, GZIP-compress
 
 ## Preview behavior
 
-Text-like files such as JSON, Markdown, logs, source code, CSV, XML, YAML, and TOML can be previewed with syntax highlighting when a matching language is available. Common image files can be previewed visually. Other binary files remain downloadable, but the tool will not try to render them.
+Text-like files such as JSON, Markdown, logs, source code, CSV, XML, YAML, and TOML can be previewed with syntax highlighting when a matching language is available. Common image files can be previewed visually, and PDF documents open in the browser's built-in PDF viewer when available. Other binary files remain downloadable, but the tool will not try to render them.

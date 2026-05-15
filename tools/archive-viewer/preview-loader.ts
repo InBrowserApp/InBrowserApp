@@ -1,6 +1,7 @@
 import {
   MAX_TEXT_PREVIEW_BYTES,
   isImageEntry,
+  isPdfEntry,
   isTextEntry,
   resolveTextPreviewLanguage,
 } from "./core/preview"
@@ -25,6 +26,13 @@ async function loadEntryPreview(
   if (isImageEntry(entry, blob)) {
     return {
       preview: { status: "image", blob, objectUrl: downloadUrl },
+      textDownloadUrl: null,
+    }
+  }
+
+  if (isPdfEntry(entry, blob)) {
+    return {
+      preview: { status: "pdf", blob, objectUrl: downloadUrl },
       textDownloadUrl: null,
     }
   }
@@ -66,7 +74,9 @@ function cleanupLoadedPreview(loadedPreview: LoadedPreview) {
 }
 
 function cleanupPreview(preview: PreviewState) {
-  if (preview.status === "image") URL.revokeObjectURL(preview.objectUrl)
+  if (preview.status === "image" || preview.status === "pdf") {
+    URL.revokeObjectURL(preview.objectUrl)
+  }
 }
 
 export { cleanupLoadedPreview, cleanupPreview, loadEntryPreview }

@@ -14,4 +14,4 @@ O visualizador oferece suporte a arquivos ZIP padrão, arquivos TAR não compact
 
 ## Comportamento da pré-visualização
 
-Arquivos semelhantes a texto, como JSON, Markdown, registros, código-fonte, CSV, XML, YAML e TOML, podem ser pré-visualizados com destaque de sintaxe quando houver uma linguagem correspondente disponível. Arquivos de imagem comuns podem ser pré-visualizados visualmente. Outros arquivos binários continuam disponíveis para baixar, mas a ferramenta não tentará renderizá-los.
+Arquivos semelhantes a texto, como JSON, Markdown, registros, código-fonte, CSV, XML, YAML e TOML, podem ser pré-visualizados com destaque de sintaxe quando houver uma linguagem correspondente disponível. Arquivos de imagem comuns podem ser pré-visualizados visualmente, e documentos PDF abrem no visualizador de PDF integrado do navegador quando disponível. Outros arquivos binários continuam disponíveis para baixar, mas a ferramenta não tentará renderizá-los.

@@ -14,4 +14,4 @@ Visaren stöder standard ZIP-arkiv, okomprimerade TAR-filer, GZIP-komprimerade e
 
 ## Förhandsvisningens beteende
 
-Textliknande filer som JSON, Markdown, loggar, källkod, CSV, XML, YAML och TOML kan förhandsgranskas med syntaxmarkering när ett matchande språk är tillgängligt. Vanliga bildfiler kan förhandsgranskas visuellt. Andra binära filer går fortfarande att ladda ner, men verktyget försöker inte rendera dem.
+Textliknande filer som JSON, Markdown, loggar, källkod, CSV, XML, YAML och TOML kan förhandsgranskas med syntaxmarkering när ett matchande språk är tillgängligt. Vanliga bildfiler kan förhandsgranskas visuellt, och PDF-dokument öppnas i webbläsarens inbyggda PDF-visare när den är tillgänglig. Andra binära filer går fortfarande att ladda ner, men verktyget försöker inte rendera dem.

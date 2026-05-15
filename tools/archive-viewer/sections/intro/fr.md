@@ -14,4 +14,4 @@ La visionneuse prend en charge les archives ZIP standard, les fichiers TAR non c
 
 ## Comportement de la prévisualisation
 
-Les fichiers de type texte tels que JSON, Markdown, les journaux, le code source, CSV, XML, YAML et TOML peuvent être prévisualisés avec une coloration syntaxique lorsqu'un langage correspondant est disponible. Les fichiers image courants peuvent être affichés en aperçu. Les autres fichiers binaires restent téléchargeables, mais l'outil n'essaiera pas de les afficher.
+Les fichiers de type texte tels que JSON, Markdown, les journaux, le code source, CSV, XML, YAML et TOML peuvent être prévisualisés avec une coloration syntaxique lorsqu'un langage correspondant est disponible. Les fichiers image courants peuvent être affichés en aperçu, et les documents PDF s'ouvrent dans le lecteur PDF intégré du navigateur lorsqu'il est disponible. Les autres fichiers binaires restent téléchargeables, mais l'outil n'essaiera pas de les afficher.

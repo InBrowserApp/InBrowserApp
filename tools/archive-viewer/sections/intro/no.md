@@ -14,4 +14,4 @@ Viseren støtter standard ZIP-arkiver, ukomprimerte TAR-filer, GZIP-komprimerte 
 
 ## Forhåndsvisningsatferd
 
-Tekstlignende filer som JSON, Markdown, logger, kildekode, CSV, XML, YAML og TOML kan forhåndsvises med syntaksutheving når et passende språk er tilgjengelig. Vanlige bildefiler kan forhåndsvises visuelt. Andre binærfiler kan fortsatt lastes ned, men verktøyet prøver ikke å rendere dem.
+Tekstlignende filer som JSON, Markdown, logger, kildekode, CSV, XML, YAML og TOML kan forhåndsvises med syntaksutheving når et passende språk er tilgjengelig. Vanlige bildefiler kan forhåndsvises visuelt, og PDF-dokumenter åpnes i nettleserens innebygde PDF-visning når den er tilgjengelig. Andre binærfiler kan fortsatt lastes ned, men verktøyet prøver ikke å rendere dem.

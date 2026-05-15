@@ -34,12 +34,13 @@
   "columnKind": "Kind",
   "columnSize": "Size",
   "columnModified": "Modified",
+  "columnAction": "Action",
   "kindFile": "File",
   "kindDirectory": "Folder",
   "kindSymlink": "Symlink",
   "kindOther": "Other",
   "previewTitle": "Preview",
-  "previewDescription": "Text and image entries can be inspected before downloading.",
+  "previewDescription": "Text, image, and PDF entries can be inspected before downloading.",
   "previewPlaceholderTitle": "Select a file",
   "previewPlaceholderDescription": "Choose a file entry from the archive explorer to see a preview and download action.",
   "loadingPreview": "Loading preview...",
@@ -49,6 +50,7 @@
   "downloadEntry": "Download",
   "textPreviewLabel": "Text preview",
   "imagePreviewLabel": "Image preview",
+  "pdfPreviewLabel": "PDF preview",
   "openFolder": "Open folder",
   "previewFile": "Preview file"
 }

@@ -14,4 +14,4 @@ De viewer ondersteunt standaard ZIP-archieven, niet-gecomprimeerde TAR-bestanden
 
 ## Voorbeeldgedrag
 
-Tekstachtige bestanden zoals JSON, Markdown, logs, broncode, CSV, XML, YAML en TOML kunnen worden bekeken met syntaxmarkering wanneer een passende taal beschikbaar is. Veelgebruikte afbeeldingsbestanden kunnen visueel worden bekeken. Andere binaire bestanden blijven downloadbaar, maar de tool probeert ze niet weer te geven.
+Tekstachtige bestanden zoals JSON, Markdown, logs, broncode, CSV, XML, YAML en TOML kunnen worden bekeken met syntaxmarkering wanneer een passende taal beschikbaar is. Veelgebruikte afbeeldingsbestanden kunnen visueel worden bekeken, en PDF-documenten worden geopend in de ingebouwde PDF-viewer van de browser wanneer die beschikbaar is. Andere binaire bestanden blijven downloadbaar, maar de tool probeert ze niet weer te geven.

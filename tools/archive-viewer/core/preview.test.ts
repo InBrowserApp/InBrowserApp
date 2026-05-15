@@ -2,6 +2,7 @@ import { describe, expect, test } from "vitest"
 
 import {
   isImageEntry,
+  isPdfEntry,
   isTextEntry,
   resolveTextPreviewLanguage,
 } from "./preview"
@@ -62,6 +63,21 @@ describe("archive preview helpers", () => {
     ).toBe(true)
     expect(
       isImageEntry(
+        entry("bin"),
+        new Blob(["x"], { type: "application/octet-stream" })
+      )
+    ).toBe(false)
+    expect(
+      isPdfEntry(
+        entry("pdf"),
+        new Blob(["%PDF"], { type: "application/octet-stream" })
+      )
+    ).toBe(true)
+    expect(
+      isPdfEntry(entry("bin"), new Blob(["%PDF"], { type: "application/pdf" }))
+    ).toBe(true)
+    expect(
+      isPdfEntry(
         entry("bin"),
         new Blob(["x"], { type: "application/octet-stream" })
       )

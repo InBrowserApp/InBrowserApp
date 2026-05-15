@@ -77,6 +77,23 @@ function makeHandle(): ArchiveHandle & {
   }
 }
 
+function makePdfHandle(): ArchiveHandle & {
+  readEntry: ReturnType<typeof vi.fn>
+  dispose: ReturnType<typeof vi.fn>
+} {
+  const pdfBlob = new Blob(["%PDF-1.4"], { type: "application/pdf" })
+
+  return {
+    format: "zip",
+    entries: [
+      archiveEntry("docs/", "directory"),
+      archiveEntry("docs/report.pdf", "file", pdfBlob.size),
+    ],
+    readEntry: vi.fn(async () => pdfBlob),
+    dispose: vi.fn(async () => {}),
+  }
+}
+
 beforeEach(() => {
   let objectUrlIndex = 0
   createObjectUrlMock.mockImplementation(() => {
@@ -138,6 +155,9 @@ describe("ArchiveViewerClient", () => {
     expect(screen.getByText("3")).toBeTruthy()
     expect(screen.getByText("2")).toBeTruthy()
     expect(screen.getByText("1")).toBeTruthy()
+    expect(
+      screen.getByRole("columnheader", { name: messages.columnAction })
+    ).toBeTruthy()
     expect(handle.readEntry).not.toHaveBeenCalled()
 
     fireEvent.click(
@@ -280,6 +300,45 @@ describe("ArchiveViewerClient", () => {
     await waitFor(() => {
       expect(handle.readEntry).toHaveBeenCalledWith("docs/readme.txt")
       expect(anchorClickMock).toHaveBeenCalled()
+    })
+  })
+
+  test("renders PDF previews in the dialog", async () => {
+    const handle = makePdfHandle()
+    createObjectUrlMock.mockReturnValueOnce("about:blank#pdf-preview")
+    openArchiveMock.mockResolvedValue(handle)
+
+    render(<ArchiveViewerClient messages={messages} />)
+
+    fireEvent.change(screen.getByLabelText(messages.uploadAction), {
+      target: {
+        files: [new File(["zip"], "sample.zip", { type: "application/zip" })],
+      },
+    })
+
+    await waitFor(() => {
+      expect(openArchiveMock).toHaveBeenCalled()
+    })
+
+    fireEvent.click(
+      screen.getByRole("button", { name: `${messages.openFolder}: docs` })
+    )
+    fireEvent.click(
+      screen.getByRole("button", {
+        name: `${messages.previewFile}: report.pdf`,
+      })
+    )
+
+    await waitFor(() => {
+      expect(handle.readEntry).toHaveBeenCalledWith("docs/report.pdf")
+      expect(
+        screen.getByRole("region", { name: messages.pdfPreviewLabel })
+      ).toBeTruthy()
+      expect(
+        screen
+          .getByTitle(`${messages.pdfPreviewLabel}: docs/report.pdf`)
+          .getAttribute("src")
+      ).toBe("about:blank#pdf-preview")
     })
   })
 

@@ -63,7 +63,7 @@ function ExplorerTableRow({
         </div>
         <div
           role="cell"
-          className="sticky right-0 border-l bg-card px-2 py-1.5 group-hover/archive-row:bg-muted/50 group-data-[selected=true]/archive-row:bg-muted"
+          className="sticky end-0 border-s bg-card px-2 py-1.5 group-hover/archive-row:bg-muted/50 group-data-[selected=true]/archive-row:bg-muted"
         />
       </ExplorerRowShell>
     )
@@ -98,7 +98,7 @@ function ExplorerTableRow({
           </div>
           <div
             role="cell"
-            className="sticky right-0 flex items-center justify-end border-l bg-card px-2 py-1.5 group-hover/archive-row:bg-muted/50 group-data-[selected=true]/archive-row:bg-muted"
+            className="sticky end-0 flex items-center justify-end border-s bg-card px-2 py-1.5 group-hover/archive-row:bg-muted/50 group-data-[selected=true]/archive-row:bg-muted"
           >
             <div className="flex items-center gap-0.5 rounded-md border border-transparent bg-background/70 p-0.5 transition-colors group-focus-within/archive-row:border-ring/60 group-hover/archive-row:border-border/80 group-data-[selected=true]/archive-row:border-border/80">
               <Button
@@ -165,7 +165,7 @@ const ExplorerRowShell = forwardRef<HTMLDivElement, ExplorerRowShellProps>(
         role="row"
         data-selected={selected ? "true" : undefined}
         className={cn(
-          "group/archive-row grid grid-cols-[minmax(16rem,1fr)_8rem_8rem_12rem_6rem] border-b text-sm transition-colors hover:bg-muted/50 data-[selected=true]:bg-muted",
+          "group/archive-row grid grid-cols-[minmax(16rem,1fr)_8rem_8rem_12rem_7rem] border-b text-sm transition-colors hover:bg-muted/50 data-[selected=true]:bg-muted",
           className
         )}
         {...props}
@@ -197,7 +197,7 @@ function EntryButton({
     <button
       type="button"
       className={cn(
-        "flex max-w-full items-center gap-2 rounded-md text-left outline-none hover:text-primary focus-visible:ring-3 focus-visible:ring-ring/50",
+        "flex max-w-full items-center gap-2 rounded-md text-start outline-none hover:text-primary focus-visible:ring-3 focus-visible:ring-ring/50",
         row.kind === "file" && "font-medium"
       )}
       onClick={() => {

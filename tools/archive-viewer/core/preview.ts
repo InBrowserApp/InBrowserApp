@@ -42,6 +42,8 @@ const IMAGE_EXTENSIONS = new Set([
   "webp",
 ])
 
+const PDF_MIME_TYPE = "application/pdf"
+
 const PREVIEW_LANGUAGE_BY_EXTENSION: Record<string, string> = {
   bash: "bash",
   conf: "ini",
@@ -85,6 +87,13 @@ function isImageEntry(entry: ArchiveEntry, blob: Blob): boolean {
   return IMAGE_EXTENSIONS.has(entry.extension.toLowerCase())
 }
 
+function isPdfEntry(entry: ArchiveEntry, blob: Blob): boolean {
+  return (
+    blob.type.toLowerCase() === PDF_MIME_TYPE ||
+    entry.extension.toLowerCase() === "pdf"
+  )
+}
+
 function resolveTextPreviewLanguage(entry: ArchiveEntry, blob: Blob): string {
   const fromExtension =
     PREVIEW_LANGUAGE_BY_EXTENSION[entry.extension.toLowerCase()]
@@ -103,6 +112,7 @@ function resolveTextPreviewLanguage(entry: ArchiveEntry, blob: Blob): string {
 export {
   MAX_TEXT_PREVIEW_BYTES,
   isImageEntry,
+  isPdfEntry,
   isTextEntry,
   resolveTextPreviewLanguage,
 }

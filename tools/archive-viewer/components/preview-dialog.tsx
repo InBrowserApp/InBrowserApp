@@ -24,6 +24,7 @@ type PreviewState =
   | Readonly<{ status: "loading" }>
   | Readonly<{ status: "text"; blob: Blob; language: string; text: string }>
   | Readonly<{ status: "image"; blob: Blob; objectUrl: string }>
+  | Readonly<{ status: "pdf"; blob: Blob; objectUrl: string }>
   | Readonly<{ status: "unavailable"; message: string; blob: Blob | null }>
 
 type PreviewDialogProps = Readonly<{
@@ -44,18 +45,20 @@ function PreviewDialog({
   onOpenChange,
 }: PreviewDialogProps) {
   const downloadUrl =
-    preview.status === "image" ? preview.objectUrl : textDownloadUrl
+    preview.status === "image" || preview.status === "pdf"
+      ? preview.objectUrl
+      : textDownloadUrl
   const downloadableBlob =
     preview.status === "text" || preview.status === "unavailable"
       ? preview.blob
-      : preview.status === "image"
+      : preview.status === "image" || preview.status === "pdf"
         ? preview.blob
         : null
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="flex max-h-[min(90vh,56rem)] flex-col gap-0 p-0 sm:max-w-5xl">
-        <DialogHeader className="border-b px-4 py-4 pr-12">
+        <DialogHeader className="border-b px-4 py-4 pe-12">
           <DialogTitle className="break-words">
             {entry?.path ?? messages.previewTitle}
           </DialogTitle>
@@ -140,6 +143,22 @@ function renderPreviewBody(params: {
           src={preview.objectUrl}
           alt={entry.path}
           className="max-h-[70vh] max-w-full object-contain"
+        />
+      </div>
+    )
+  }
+
+  if (preview.status === "pdf") {
+    return (
+      <div
+        role="region"
+        aria-label={messages.pdfPreviewLabel}
+        className="min-h-80 overflow-hidden rounded-lg border bg-background"
+      >
+        <iframe
+          src={preview.objectUrl}
+          title={`${messages.pdfPreviewLabel}: ${entry.path}`}
+          className="h-[70vh] min-h-80 w-full border-0"
         />
       </div>
     )

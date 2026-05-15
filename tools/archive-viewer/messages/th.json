@@ -34,12 +34,13 @@
   "columnKind": "ชนิด",
   "columnSize": "ขนาด",
   "columnModified": "แก้ไขเมื่อ",
+  "columnAction": "การดำเนินการ",
   "kindFile": "ไฟล์",
   "kindDirectory": "โฟลเดอร์",
   "kindSymlink": "Symlink",
   "kindOther": "อื่น ๆ",
   "previewTitle": "ตัวอย่าง",
-  "previewDescription": "ตรวจดูรายการข้อความและรูปภาพได้ก่อนดาวน์โหลด",
+  "previewDescription": "ตรวจดูรายการข้อความ รูปภาพ และ PDF ได้ก่อนดาวน์โหลด",
   "previewPlaceholderTitle": "เลือกไฟล์",
   "previewPlaceholderDescription": "เลือกรายการไฟล์จากตัวสำรวจไฟล์อาร์ไคฟ์เพื่อดูตัวอย่างและการดาวน์โหลด",
   "loadingPreview": "กำลังโหลดตัวอย่าง...",
@@ -49,6 +50,7 @@
   "downloadEntry": "ดาวน์โหลด",
   "textPreviewLabel": "ตัวอย่างข้อความ",
   "imagePreviewLabel": "ตัวอย่างรูปภาพ",
+  "pdfPreviewLabel": "ตัวอย่าง PDF",
   "openFolder": "เปิดโฟลเดอร์",
   "previewFile": "แสดงตัวอย่างไฟล์"
 }

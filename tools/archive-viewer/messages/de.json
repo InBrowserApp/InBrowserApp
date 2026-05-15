@@ -34,12 +34,13 @@
   "columnKind": "Art",
   "columnSize": "Größe",
   "columnModified": "Geändert",
+  "columnAction": "Aktion",
   "kindFile": "Datei",
   "kindDirectory": "Ordner",
   "kindSymlink": "Symlink",
   "kindOther": "Sonstige",
   "previewTitle": "Vorschau",
-  "previewDescription": "Text- und Bildeinträge können vor dem Herunterladen geprüft werden.",
+  "previewDescription": "Text-, Bild- und PDF-Einträge können vor dem Herunterladen geprüft werden.",
   "previewPlaceholderTitle": "Datei auswählen",
   "previewPlaceholderDescription": "Wähle einen Dateieintrag in der Archivübersicht aus, um Vorschau und Aktion zum Herunterladen zu sehen.",
   "loadingPreview": "Vorschau wird geladen...",
@@ -49,6 +50,7 @@
   "downloadEntry": "Herunterladen",
   "textPreviewLabel": "Textvorschau",
   "imagePreviewLabel": "Bildvorschau",
+  "pdfPreviewLabel": "PDF-Vorschau",
   "openFolder": "Ordner öffnen",
   "previewFile": "Dateivorschau"
 }

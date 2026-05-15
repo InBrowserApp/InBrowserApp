@@ -14,4 +14,4 @@ Pemapar ini menyokong arkib ZIP standard, fail TAR tidak dimampatkan, fail tungg
 
 ## Tingkah laku pratonton
 
-Fail seperti teks seperti JSON, Markdown, log, kod sumber, CSV, XML, YAML dan TOML boleh dipratonton dengan penyerlahan sintaks apabila bahasa yang sepadan tersedia. Fail imej biasa boleh dipratonton secara visual. Fail binari lain kekal boleh dimuat turun, tetapi alat ini tidak akan cuba memaparkannya.
+Fail seperti teks seperti JSON, Markdown, log, kod sumber, CSV, XML, YAML dan TOML boleh dipratonton dengan penyerlahan sintaks apabila bahasa yang sepadan tersedia. Fail imej biasa boleh dipratonton secara visual, dan dokumen PDF dibuka dalam pemapar PDF terbina dalam pelayar apabila tersedia. Fail binari lain kekal boleh dimuat turun, tetapi alat ini tidak akan cuba memaparkannya.

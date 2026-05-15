@@ -34,12 +34,13 @@
   "columnKind": "النوع",
   "columnSize": "الحجم",
   "columnModified": "آخر تعديل",
+  "columnAction": "إجراء",
   "kindFile": "ملف",
   "kindDirectory": "مجلد",
   "kindSymlink": "رابط رمزي",
   "kindOther": "أخرى",
   "previewTitle": "المعاينة",
-  "previewDescription": "يمكن فحص عناصر النصوص والصور قبل تنزيلها.",
+  "previewDescription": "يمكن فحص عناصر النصوص والصور وملفات PDF قبل تنزيلها.",
   "previewPlaceholderTitle": "اختر ملفًا",
   "previewPlaceholderDescription": "اختر عنصر ملف من مستكشف الأرشيف لرؤية معاينة وإجراء التنزيل.",
   "loadingPreview": "جارٍ تحميل المعاينة...",
@@ -49,6 +50,7 @@
   "downloadEntry": "تنزيل",
   "textPreviewLabel": "معاينة النص",
   "imagePreviewLabel": "معاينة الصورة",
+  "pdfPreviewLabel": "معاينة PDF",
   "openFolder": "فتح المجلد",
   "previewFile": "معاينة الملف"
 }

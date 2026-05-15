@@ -34,12 +34,13 @@
   "columnKind": "Type",
   "columnSize": "Taille",
   "columnModified": "Modifié",
+  "columnAction": "Action",
   "kindFile": "Fichier",
   "kindDirectory": "Dossier",
   "kindSymlink": "Lien symbolique",
   "kindOther": "Autre",
   "previewTitle": "Aperçu",
-  "previewDescription": "Les entrées texte et image peuvent être inspectées avant le téléchargement.",
+  "previewDescription": "Les entrées texte, image et PDF peuvent être inspectées avant le téléchargement.",
   "previewPlaceholderTitle": "Sélectionnez un fichier",
   "previewPlaceholderDescription": "Choisissez une entrée de fichier dans l'explorateur d'archive pour afficher un aperçu et l'option de téléchargement.",
   "loadingPreview": "Chargement de l'aperçu...",
@@ -49,6 +50,7 @@
   "downloadEntry": "Télécharger",
   "textPreviewLabel": "Aperçu du texte",
   "imagePreviewLabel": "Aperçu de l'image",
+  "pdfPreviewLabel": "Aperçu PDF",
   "openFolder": "Ouvrir le dossier",
   "previewFile": "Prévisualiser le fichier"
 }

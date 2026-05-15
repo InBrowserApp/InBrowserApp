@@ -14,4 +14,4 @@ Der Betrachter unterstützt standardmäßige ZIP-Archive, unkomprimierte TAR-Dat
 
 ## Vorschauverhalten
 
-Textähnliche Dateien wie JSON, Markdown, Logs, Quellcode, CSV, XML, YAML und TOML können mit Syntaxhervorhebung in der Vorschau angezeigt werden, wenn eine passende Sprache verfügbar ist. Gängige Bilddateien können visuell in der Vorschau angezeigt werden. Andere Binärdateien bleiben herunterladbar, aber das Tool versucht nicht, sie darzustellen.
+Textähnliche Dateien wie JSON, Markdown, Logs, Quellcode, CSV, XML, YAML und TOML können mit Syntaxhervorhebung in der Vorschau angezeigt werden, wenn eine passende Sprache verfügbar ist. Gängige Bilddateien können visuell in der Vorschau angezeigt werden, und PDF-Dokumente werden im integrierten PDF-Betrachter des Browsers geöffnet, wenn er verfügbar ist. Andere Binärdateien bleiben herunterladbar, aber das Tool versucht nicht, sie darzustellen.

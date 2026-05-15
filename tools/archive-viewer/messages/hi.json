@@ -34,12 +34,13 @@
   "columnKind": "प्रकार",
   "columnSize": "आकार",
   "columnModified": "संशोधित",
+  "columnAction": "कार्रवाई",
   "kindFile": "फ़ाइल",
   "kindDirectory": "फ़ोल्डर",
   "kindSymlink": "सिमलिंक",
   "kindOther": "अन्य",
   "previewTitle": "पूर्वावलोकन",
-  "previewDescription": "डाउनलोड करने से पहले टेक्स्ट और छवि प्रविष्टियाँ देखी जा सकती हैं।",
+  "previewDescription": "डाउनलोड करने से पहले टेक्स्ट, छवि और PDF प्रविष्टियाँ देखी जा सकती हैं।",
   "previewPlaceholderTitle": "फ़ाइल चुनें",
   "previewPlaceholderDescription": "पूर्वावलोकन और डाउनलोड विकल्प देखने के लिए आर्काइव एक्सप्लोरर से फ़ाइल प्रविष्टि चुनें।",
   "loadingPreview": "पूर्वावलोकन लोड हो रहा है...",
@@ -49,6 +50,7 @@
   "downloadEntry": "डाउनलोड करें",
   "textPreviewLabel": "टेक्स्ट पूर्वावलोकन",
   "imagePreviewLabel": "छवि पूर्वावलोकन",
+  "pdfPreviewLabel": "PDF पूर्वावलोकन",
   "openFolder": "फ़ोल्डर खोलें",
   "previewFile": "फ़ाइल का पूर्वावलोकन"
 }

@@ -27,5 +27,7 @@ pierwszym etapie przepisywania.
 
 Pliki tekstowe, takie jak JSON, Markdown, logi, kod źródłowy, CSV, XML, YAML i
 TOML, można podglądać z podświetlaniem składni, gdy dostępny jest pasujący
-język. Popularne pliki obrazów można podejrzeć wizualnie. Pozostałe pliki
-binarne można nadal pobrać, ale narzędzie nie będzie próbowało ich renderować.
+język. Popularne pliki obrazów można podejrzeć wizualnie, a dokumenty PDF
+otwierają się we wbudowanym podglądzie PDF przeglądarki, gdy jest dostępny.
+Pozostałe pliki binarne można nadal pobrać, ale narzędzie nie będzie próbowało
+ich renderować.

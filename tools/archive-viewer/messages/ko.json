@@ -34,12 +34,13 @@
   "columnKind": "종류",
   "columnSize": "크기",
   "columnModified": "수정됨",
+  "columnAction": "작업",
   "kindFile": "파일",
   "kindDirectory": "폴더",
   "kindSymlink": "심볼릭 링크",
   "kindOther": "기타",
   "previewTitle": "미리보기",
-  "previewDescription": "텍스트와 이미지 항목은 다운로드 전에 확인할 수 있습니다.",
+  "previewDescription": "텍스트, 이미지, PDF 항목은 다운로드 전에 확인할 수 있습니다.",
   "previewPlaceholderTitle": "파일 선택",
   "previewPlaceholderDescription": "아카이브 탐색기에서 파일 항목을 선택하면 미리보기와 다운로드 작업이 표시됩니다.",
   "loadingPreview": "미리보기를 불러오는 중...",
@@ -49,6 +50,7 @@
   "downloadEntry": "다운로드",
   "textPreviewLabel": "텍스트 미리보기",
   "imagePreviewLabel": "이미지 미리보기",
+  "pdfPreviewLabel": "PDF 미리보기",
   "openFolder": "폴더 열기",
   "previewFile": "파일 미리보기"
 }

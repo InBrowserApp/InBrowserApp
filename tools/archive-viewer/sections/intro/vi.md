@@ -14,4 +14,4 @@ Trình xem hỗ trợ các tệp ZIP tiêu chuẩn, tệp TAR chưa nén, tệp 
 
 ## Cách hoạt động của bản xem trước
 
-Các tệp dạng văn bản như JSON, Markdown, nhật ký, mã nguồn, CSV, XML, YAML và TOML có thể được xem trước với tô sáng cú pháp khi có ngôn ngữ phù hợp. Các tệp hình ảnh phổ biến có thể được xem trước trực quan. Những tệp nhị phân khác vẫn có thể tải xuống, nhưng công cụ sẽ không cố hiển thị chúng.
+Các tệp dạng văn bản như JSON, Markdown, nhật ký, mã nguồn, CSV, XML, YAML và TOML có thể được xem trước với tô sáng cú pháp khi có ngôn ngữ phù hợp. Các tệp hình ảnh phổ biến có thể được xem trước trực quan, và tài liệu PDF sẽ mở trong trình xem PDF tích hợp của trình duyệt khi có sẵn. Những tệp nhị phân khác vẫn có thể tải xuống, nhưng công cụ sẽ không cố hiển thị chúng.
