@@ -1,0 +1,4 @@
+{
+  "name": "UUID v3 Oluşturucu",
+  "description": "Bir ad alanı UUID'si ve ad kullanarak deterministik, ada dayalı UUID v3 tanımlayıcıları oluşturun."
+}

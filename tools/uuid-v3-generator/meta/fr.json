@@ -1,0 +1,4 @@
+{
+  "name": "Générateur d'UUID v3",
+  "description": "Générez des identifiants UUID v3 déterministes basés sur un nom à partir d'un UUID d'espace de noms et d'un nom."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "UUID v3 Generator",
+  "description": "Generera deterministiska namnbaserade UUID v3-identifierare från ett namnrymds-UUID och ett namn."
+}

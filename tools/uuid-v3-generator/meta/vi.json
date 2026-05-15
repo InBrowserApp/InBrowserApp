@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo UUID v3",
+  "description": "Tạo các định danh UUID v3 dựa trên tên, có tính xác định, từ namespace UUID và tên."
+}

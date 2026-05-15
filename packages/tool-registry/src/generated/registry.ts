@@ -22089,6 +22089,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "uuid-v3-generator",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "uuid",
+      "v3",
+      "md5",
+      "namespace",
+      "deterministic",
+      "identifier",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولد UUID v3",
+        description:
+          "أنشئ معرّفات UUID v3 حتمية مستندة إلى الاسم من UUID مساحة أسماء واسم.",
+      },
+      de: {
+        name: "UUID v3 Generator",
+        description:
+          "Generieren Sie deterministische, namensbasierte UUID v3-Kennungen aus einer Namespace-UUID und einem Namen.",
+      },
+      en: {
+        name: "UUID v3 Generator",
+        description:
+          "Generate deterministic name-based UUID v3 identifiers from a namespace UUID and name.",
+      },
+      es: {
+        name: "Generador de UUID v3",
+        description:
+          "Genera identificadores UUID v3 deterministas basados en nombre a partir de un UUID de espacio de nombres y un nombre.",
+      },
+      fr: {
+        name: "Générateur d'UUID v3",
+        description:
+          "Générez des identifiants UUID v3 déterministes basés sur un nom à partir d'un UUID d'espace de noms et d'un nom.",
+      },
+      he: {
+        name: "מחולל UUID v3",
+        description:
+          "צור מזהי UUID v3 דטרמיניסטיים מבוססי שם מתוך UUID של מרחב שמות ושם.",
+      },
+      hi: {
+        name: "UUID v3 Generator",
+        description:
+          "नेमस्पेस UUID और नाम से नियतात्मक नाम-आधारित UUID v3 पहचानकर्ता जेनरेट करें।",
+      },
+      id: {
+        name: "Generator UUID v3",
+        description:
+          "Buat pengenal UUID v3 deterministik berbasis nama dari UUID namespace dan nama.",
+      },
+      it: {
+        name: "Generatore UUID v3",
+        description:
+          "Genera identificatori UUID v3 deterministici basati sul nome da un UUID di namespace e da un nome.",
+      },
+      ja: {
+        name: "UUID v3ジェネレーター",
+        description:
+          "名前空間UUIDと名前から、決定論的な名前ベースのUUID v3識別子を生成します。",
+      },
+      ko: {
+        name: "UUID v3 Generator",
+        description:
+          "네임스페이스 UUID와 이름에서 결정론적인 이름 기반 UUID v3 식별자를 생성합니다.",
+      },
+      ms: {
+        name: "UUID v3 Generator",
+        description:
+          "Jana pengecam UUID v3 berasaskan nama yang deterministik daripada UUID ruang nama dan nama.",
+      },
+      nl: {
+        name: "UUID v3 Generator",
+        description:
+          "Genereer deterministische op namen gebaseerde UUID v3-ID's op basis van een naamruimte-UUID en naam.",
+      },
+      no: {
+        name: "UUID v3-generator",
+        description:
+          "Generer deterministiske navnebaserte UUID v3-identifikatorer fra en namespace-UUID og et navn.",
+      },
+      pl: {
+        name: "Generator UUID v3",
+        description:
+          "Generuj deterministyczne identyfikatory UUID v3 oparte na nazwie z UUID przestrzeni nazw i nazwy.",
+      },
+      pt: {
+        name: "Gerador de UUID v3",
+        description:
+          "Gere identificadores UUID v3 determinísticos baseados em nome a partir de um UUID de namespace e de um nome.",
+      },
+      ru: {
+        name: "Генератор UUID v3",
+        description:
+          "Создавайте детерминированные UUID v3 на основе UUID пространства имен и имени.",
+      },
+      sv: {
+        name: "UUID v3 Generator",
+        description:
+          "Generera deterministiska namnbaserade UUID v3-identifierare från ett namnrymds-UUID och ett namn.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง UUID v3",
+        description:
+          "สร้างตัวระบุ UUID v3 แบบอิงตามชื่อที่ให้ผลซ้ำได้ จาก namespace UUID และชื่อ",
+      },
+      tr: {
+        name: "UUID v3 Oluşturucu",
+        description:
+          "Bir ad alanı UUID'si ve ad kullanarak deterministik, ada dayalı UUID v3 tanımlayıcıları oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo UUID v3",
+        description:
+          "Tạo các định danh UUID v3 dựa trên tên, có tính xác định, từ namespace UUID và tên.",
+      },
+      "zh-CN": {
+        name: "UUID v3 生成器",
+        description:
+          "根据命名空间 UUID 和名称生成确定性的基于名称的 UUID v3 标识符。",
+      },
+      "zh-TW": {
+        name: "UUID v3 產生器",
+        description:
+          "從命名空間 UUID 和名稱產生確定性的命名式 UUID v3 識別碼。",
+      },
+    },
+  },
+  {
     slug: "uuid-validator",
     category: "developer",
     icon: "binary",
@@ -45451,6 +45582,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "使用者代理（User-Agent）解析器",
         description:
           "解析 User-Agent 字串，識別瀏覽器、作業系統、裝置、引擎與 CPU 資訊。全程離線。",
+      },
+    },
+  },
+  "uuid-v3-generator": {
+    slug: "uuid-v3-generator",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "uuid",
+      "v3",
+      "md5",
+      "namespace",
+      "deterministic",
+      "identifier",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولد UUID v3",
+        description:
+          "أنشئ معرّفات UUID v3 حتمية مستندة إلى الاسم من UUID مساحة أسماء واسم.",
+      },
+      de: {
+        name: "UUID v3 Generator",
+        description:
+          "Generieren Sie deterministische, namensbasierte UUID v3-Kennungen aus einer Namespace-UUID und einem Namen.",
+      },
+      en: {
+        name: "UUID v3 Generator",
+        description:
+          "Generate deterministic name-based UUID v3 identifiers from a namespace UUID and name.",
+      },
+      es: {
+        name: "Generador de UUID v3",
+        description:
+          "Genera identificadores UUID v3 deterministas basados en nombre a partir de un UUID de espacio de nombres y un nombre.",
+      },
+      fr: {
+        name: "Générateur d'UUID v3",
+        description:
+          "Générez des identifiants UUID v3 déterministes basés sur un nom à partir d'un UUID d'espace de noms et d'un nom.",
+      },
+      he: {
+        name: "מחולל UUID v3",
+        description:
+          "צור מזהי UUID v3 דטרמיניסטיים מבוססי שם מתוך UUID של מרחב שמות ושם.",
+      },
+      hi: {
+        name: "UUID v3 Generator",
+        description:
+          "नेमस्पेस UUID और नाम से नियतात्मक नाम-आधारित UUID v3 पहचानकर्ता जेनरेट करें।",
+      },
+      id: {
+        name: "Generator UUID v3",
+        description:
+          "Buat pengenal UUID v3 deterministik berbasis nama dari UUID namespace dan nama.",
+      },
+      it: {
+        name: "Generatore UUID v3",
+        description:
+          "Genera identificatori UUID v3 deterministici basati sul nome da un UUID di namespace e da un nome.",
+      },
+      ja: {
+        name: "UUID v3ジェネレーター",
+        description:
+          "名前空間UUIDと名前から、決定論的な名前ベースのUUID v3識別子を生成します。",
+      },
+      ko: {
+        name: "UUID v3 Generator",
+        description:
+          "네임스페이스 UUID와 이름에서 결정론적인 이름 기반 UUID v3 식별자를 생성합니다.",
+      },
+      ms: {
+        name: "UUID v3 Generator",
+        description:
+          "Jana pengecam UUID v3 berasaskan nama yang deterministik daripada UUID ruang nama dan nama.",
+      },
+      nl: {
+        name: "UUID v3 Generator",
+        description:
+          "Genereer deterministische op namen gebaseerde UUID v3-ID's op basis van een naamruimte-UUID en naam.",
+      },
+      no: {
+        name: "UUID v3-generator",
+        description:
+          "Generer deterministiske navnebaserte UUID v3-identifikatorer fra en namespace-UUID og et navn.",
+      },
+      pl: {
+        name: "Generator UUID v3",
+        description:
+          "Generuj deterministyczne identyfikatory UUID v3 oparte na nazwie z UUID przestrzeni nazw i nazwy.",
+      },
+      pt: {
+        name: "Gerador de UUID v3",
+        description:
+          "Gere identificadores UUID v3 determinísticos baseados em nome a partir de um UUID de namespace e de um nome.",
+      },
+      ru: {
+        name: "Генератор UUID v3",
+        description:
+          "Создавайте детерминированные UUID v3 на основе UUID пространства имен и имени.",
+      },
+      sv: {
+        name: "UUID v3 Generator",
+        description:
+          "Generera deterministiska namnbaserade UUID v3-identifierare från ett namnrymds-UUID och ett namn.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง UUID v3",
+        description:
+          "สร้างตัวระบุ UUID v3 แบบอิงตามชื่อที่ให้ผลซ้ำได้ จาก namespace UUID และชื่อ",
+      },
+      tr: {
+        name: "UUID v3 Oluşturucu",
+        description:
+          "Bir ad alanı UUID'si ve ad kullanarak deterministik, ada dayalı UUID v3 tanımlayıcıları oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo UUID v3",
+        description:
+          "Tạo các định danh UUID v3 dựa trên tên, có tính xác định, từ namespace UUID và tên.",
+      },
+      "zh-CN": {
+        name: "UUID v3 生成器",
+        description:
+          "根据命名空间 UUID 和名称生成确定性的基于名称的 UUID v3 标识符。",
+      },
+      "zh-TW": {
+        name: "UUID v3 產生器",
+        description:
+          "從命名空間 UUID 和名稱產生確定性的命名式 UUID v3 識別碼。",
       },
     },
   },

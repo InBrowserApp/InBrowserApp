@@ -1,0 +1,4 @@
+{
+  "name": "UUID v3 Generator",
+  "description": "네임스페이스 UUID와 이름에서 결정론적인 이름 기반 UUID v3 식별자를 생성합니다."
+}
