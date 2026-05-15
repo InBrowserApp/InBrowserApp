@@ -1,0 +1,4 @@
+{
+  "name": "Lecteur de codes-barres",
+  "description": "Décodez des codes-barres et QR Code à partir de fichiers image ou d'un flux de caméra en direct, entièrement dans votre navigateur."
+}

@@ -901,6 +901,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "barcode-reader",
+    category: "image",
+    icon: "image",
+    tags: [
+      "barcode",
+      "qr",
+      "qrcode",
+      "reader",
+      "scanner",
+      "decoder",
+      "image",
+      "camera",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "قارئ الباركود",
+        description:
+          "فك ترميز الباركود ورموز QR Code من ملفات الصور أو بث كاميرا مباشر، بالكامل داخل متصفحك.",
+      },
+      de: {
+        name: "Barcode-Reader",
+        description:
+          "Dekodiere Barcodes und QR-Codes aus Bilddateien oder einem Live-Kamerabild vollständig in deinem Browser.",
+      },
+      en: {
+        name: "Barcode Reader",
+        description:
+          "Decode barcodes and QR codes from image files or a live camera feed, entirely in your browser.",
+      },
+      es: {
+        name: "Lector de códigos de barras",
+        description:
+          "Decodifica códigos de barras y códigos QR desde archivos de imagen o una señal de cámara en vivo, completamente en tu navegador.",
+      },
+      fr: {
+        name: "Lecteur de codes-barres",
+        description:
+          "Décodez des codes-barres et QR Code à partir de fichiers image ou d'un flux de caméra en direct, entièrement dans votre navigateur.",
+      },
+      he: {
+        name: "קורא ברקודים",
+        description:
+          "פענוח ברקודים וקודי QR מקובצי תמונה או מהזנת מצלמה חיה, כולו בתוך הדפדפן שלכם.",
+      },
+      hi: {
+        name: "बारकोड रीडर",
+        description:
+          "छवि फ़ाइलों या लाइव कैमरा फ़ीड से बारकोड और QR कोड पूरी तरह आपके ब्राउज़र में डिकोड करें।",
+      },
+      id: {
+        name: "Pembaca Barcode",
+        description:
+          "Dekode barcode dan QR Code dari file gambar atau umpan kamera langsung, sepenuhnya di browser Anda.",
+      },
+      it: {
+        name: "Lettore di codici a barre",
+        description:
+          "Decodifica codici a barre e QR Code da file immagine o dalla fotocamera in tempo reale, interamente nel browser.",
+      },
+      ja: {
+        name: "バーコードリーダー",
+        description:
+          "画像ファイルまたはライブカメラ映像からバーコードと QR Code を、すべてブラウザー内でデコードします。",
+      },
+      ko: {
+        name: "바코드 리더",
+        description:
+          "이미지 파일이나 실시간 카메라 화면에서 바코드와 QR Code를 해독하며, 모든 작업은 브라우저 안에서 이루어집니다.",
+      },
+      ms: {
+        name: "Pembaca Kod Bar",
+        description:
+          "Nyahkod kod bar dan QR Code daripada fail imej atau suapan kamera langsung, sepenuhnya dalam pelayar anda.",
+      },
+      nl: {
+        name: "Barcode Reader",
+        description:
+          "Decodeer barcodes en QR Codes uit afbeeldingsbestanden of een live camerabeeld, volledig in je browser.",
+      },
+      no: {
+        name: "Strekkodeleser",
+        description:
+          "Dekod strekkoder og QR-koder fra bildefiler eller direkte fra kameraet, helt i nettleseren.",
+      },
+      pl: {
+        name: "Czytnik kodów kreskowych",
+        description:
+          "Dekoduj kody kreskowe i kody QR z plików obrazów albo obrazu z kamery na żywo, całkowicie w przeglądarce.",
+      },
+      pt: {
+        name: "Leitor de Códigos de Barras",
+        description:
+          "Decodifique códigos de barras e QR Codes de arquivos de imagem ou da câmera em tempo real, inteiramente no seu navegador.",
+      },
+      ru: {
+        name: "Сканер штрихкодов",
+        description:
+          "Декодируйте штрихкоды и QR Code из файлов изображений или прямой трансляции с камеры полностью в браузере.",
+      },
+      sv: {
+        name: "Streckkodsläsare",
+        description:
+          "Avkoda streckkoder och QR-koder från bildfiler eller kamerans liveflöde, helt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องอ่านบาร์โค้ด",
+        description:
+          "ถอดรหัสบาร์โค้ดและ QR Code จากไฟล์รูปภาพหรือภาพจากกล้องแบบสด ทั้งหมดทำงานในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Barkod Okuyucu",
+        description:
+          "Görsel dosyalardan veya canlı kamera akışından barkodları ve QR Code'ları tamamen tarayıcınızda çözün.",
+      },
+      vi: {
+        name: "Barcode Reader",
+        description:
+          "Giải mã mã vạch và QR Code từ tệp hình ảnh hoặc luồng camera trực tiếp, hoàn toàn trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "条形码读取器",
+        description:
+          "从图片文件或实时摄像头画面中解码条形码和 QR Code，全程在浏览器中完成。",
+      },
+      "zh-TW": {
+        name: "條碼讀取器",
+        description:
+          "從圖片檔或即時相機畫面解碼條碼與 QR Code，全程在瀏覽器中完成。",
+      },
+    },
+  },
+  {
     slug: "base16-decoder",
     category: "web",
     icon: "binary",
@@ -23876,6 +24009,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "條碼產生器",
         description:
           "在瀏覽器內產生條碼（CODE128、EAN、UPC 等），可下載為 PNG / SVG / JPEG / WebP。",
+      },
+    },
+  },
+  "barcode-reader": {
+    slug: "barcode-reader",
+    category: "image",
+    icon: "image",
+    tags: [
+      "barcode",
+      "qr",
+      "qrcode",
+      "reader",
+      "scanner",
+      "decoder",
+      "image",
+      "camera",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "قارئ الباركود",
+        description:
+          "فك ترميز الباركود ورموز QR Code من ملفات الصور أو بث كاميرا مباشر، بالكامل داخل متصفحك.",
+      },
+      de: {
+        name: "Barcode-Reader",
+        description:
+          "Dekodiere Barcodes und QR-Codes aus Bilddateien oder einem Live-Kamerabild vollständig in deinem Browser.",
+      },
+      en: {
+        name: "Barcode Reader",
+        description:
+          "Decode barcodes and QR codes from image files or a live camera feed, entirely in your browser.",
+      },
+      es: {
+        name: "Lector de códigos de barras",
+        description:
+          "Decodifica códigos de barras y códigos QR desde archivos de imagen o una señal de cámara en vivo, completamente en tu navegador.",
+      },
+      fr: {
+        name: "Lecteur de codes-barres",
+        description:
+          "Décodez des codes-barres et QR Code à partir de fichiers image ou d'un flux de caméra en direct, entièrement dans votre navigateur.",
+      },
+      he: {
+        name: "קורא ברקודים",
+        description:
+          "פענוח ברקודים וקודי QR מקובצי תמונה או מהזנת מצלמה חיה, כולו בתוך הדפדפן שלכם.",
+      },
+      hi: {
+        name: "बारकोड रीडर",
+        description:
+          "छवि फ़ाइलों या लाइव कैमरा फ़ीड से बारकोड और QR कोड पूरी तरह आपके ब्राउज़र में डिकोड करें।",
+      },
+      id: {
+        name: "Pembaca Barcode",
+        description:
+          "Dekode barcode dan QR Code dari file gambar atau umpan kamera langsung, sepenuhnya di browser Anda.",
+      },
+      it: {
+        name: "Lettore di codici a barre",
+        description:
+          "Decodifica codici a barre e QR Code da file immagine o dalla fotocamera in tempo reale, interamente nel browser.",
+      },
+      ja: {
+        name: "バーコードリーダー",
+        description:
+          "画像ファイルまたはライブカメラ映像からバーコードと QR Code を、すべてブラウザー内でデコードします。",
+      },
+      ko: {
+        name: "바코드 리더",
+        description:
+          "이미지 파일이나 실시간 카메라 화면에서 바코드와 QR Code를 해독하며, 모든 작업은 브라우저 안에서 이루어집니다.",
+      },
+      ms: {
+        name: "Pembaca Kod Bar",
+        description:
+          "Nyahkod kod bar dan QR Code daripada fail imej atau suapan kamera langsung, sepenuhnya dalam pelayar anda.",
+      },
+      nl: {
+        name: "Barcode Reader",
+        description:
+          "Decodeer barcodes en QR Codes uit afbeeldingsbestanden of een live camerabeeld, volledig in je browser.",
+      },
+      no: {
+        name: "Strekkodeleser",
+        description:
+          "Dekod strekkoder og QR-koder fra bildefiler eller direkte fra kameraet, helt i nettleseren.",
+      },
+      pl: {
+        name: "Czytnik kodów kreskowych",
+        description:
+          "Dekoduj kody kreskowe i kody QR z plików obrazów albo obrazu z kamery na żywo, całkowicie w przeglądarce.",
+      },
+      pt: {
+        name: "Leitor de Códigos de Barras",
+        description:
+          "Decodifique códigos de barras e QR Codes de arquivos de imagem ou da câmera em tempo real, inteiramente no seu navegador.",
+      },
+      ru: {
+        name: "Сканер штрихкодов",
+        description:
+          "Декодируйте штрихкоды и QR Code из файлов изображений или прямой трансляции с камеры полностью в браузере.",
+      },
+      sv: {
+        name: "Streckkodsläsare",
+        description:
+          "Avkoda streckkoder och QR-koder från bildfiler eller kamerans liveflöde, helt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องอ่านบาร์โค้ด",
+        description:
+          "ถอดรหัสบาร์โค้ดและ QR Code จากไฟล์รูปภาพหรือภาพจากกล้องแบบสด ทั้งหมดทำงานในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Barkod Okuyucu",
+        description:
+          "Görsel dosyalardan veya canlı kamera akışından barkodları ve QR Code'ları tamamen tarayıcınızda çözün.",
+      },
+      vi: {
+        name: "Barcode Reader",
+        description:
+          "Giải mã mã vạch và QR Code từ tệp hình ảnh hoặc luồng camera trực tiếp, hoàn toàn trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "条形码读取器",
+        description:
+          "从图片文件或实时摄像头画面中解码条形码和 QR Code，全程在浏览器中完成。",
+      },
+      "zh-TW": {
+        name: "條碼讀取器",
+        description:
+          "從圖片檔或即時相機畫面解碼條碼與 QR Code，全程在瀏覽器中完成。",
       },
     },
   },
