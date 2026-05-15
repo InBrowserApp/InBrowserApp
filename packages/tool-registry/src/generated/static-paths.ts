@@ -10398,6 +10398,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-info-viewer",
+    language: "ar",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "de",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "en",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "es",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "fr",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "he",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "hi",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "id",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "it",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "ja",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "ko",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "ms",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "nl",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "no",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "pl",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "pt",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "ru",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "sv",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "th",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "tr",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "vi",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-info-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "pgp-key-generator",
     language: "ar",
   },
