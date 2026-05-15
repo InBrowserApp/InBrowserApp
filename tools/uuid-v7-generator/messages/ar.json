@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "الخيارات",
+  "optionsDescription": "اختر عدد معرّفات UUID v7 التي تريد إنشاءها في دفعة محلية واحدة.",
+  "countLabel": "العدد",
+  "countDescription": "أنشئ ما بين 1 و100 معرّف UUID دفعة واحدة.",
+  "resultsTitle": "معرّفات UUID المنشأة",
+  "resultsDescription": "تُنشأ قيم UUID v7 محلياً باستخدام طابع زمني بنظام Unix بالمللي ثانية وبتّات عشوائية.",
+  "resultsPlaceholder": "ستظهر قيم UUID v7 المنشأة هنا...",
+  "batchSummaryLabel": "ملخص الدفعة",
+  "versionLabel": "الإصدار",
+  "timestampLabel": "الطابع الزمني",
+  "timestampMillisecondsLabel": "مللي ثانية Unix",
+  "generatedCountLabel": "المُنشأة",
+  "unavailableLabel": "غير متاح",
+  "copyResultsLabel": "نسخ معرّفات UUID",
+  "copiedLabel": "تم النسخ",
+  "downloadResultsLabel": "تنزيل النتيجة",
+  "regenerateLabel": "إعادة الإنشاء"
+}

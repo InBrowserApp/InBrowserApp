@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Opsi",
+  "optionsDescription": "Pilih berapa banyak pengenal UUID v7 yang akan dibuat dalam satu batch lokal.",
+  "countLabel": "Jumlah",
+  "countDescription": "Buat antara 1 dan 100 UUID sekaligus.",
+  "resultsTitle": "UUID yang Dihasilkan",
+  "resultsDescription": "Nilai UUID v7 dibuat secara lokal dengan stempel waktu Unix dalam milidetik dan bit acak.",
+  "resultsPlaceholder": "Nilai UUID v7 yang dibuat akan muncul di sini...",
+  "batchSummaryLabel": "Ringkasan batch",
+  "versionLabel": "Versi",
+  "timestampLabel": "Stempel waktu",
+  "timestampMillisecondsLabel": "Milidetik Unix",
+  "generatedCountLabel": "Dihasilkan",
+  "unavailableLabel": "Tidak tersedia",
+  "copyResultsLabel": "Salin UUID",
+  "copiedLabel": "Tersalin",
+  "downloadResultsLabel": "Unduh hasil",
+  "regenerateLabel": "Buat ulang"
+}

@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "옵션",
+  "optionsDescription": "하나의 로컬 배치에서 생성할 UUID v7 식별자 수를 선택하세요.",
+  "countLabel": "개수",
+  "countDescription": "한 번에 1개에서 100개까지 UUID를 생성합니다.",
+  "resultsTitle": "생성된 UUID",
+  "resultsDescription": "UUID v7 값은 Unix 밀리초 타임스탬프와 임의 비트로 로컬에서 생성됩니다.",
+  "resultsPlaceholder": "생성된 UUID v7 값이 여기에 표시됩니다...",
+  "batchSummaryLabel": "배치 요약",
+  "versionLabel": "버전",
+  "timestampLabel": "타임스탬프",
+  "timestampMillisecondsLabel": "Unix 밀리초",
+  "generatedCountLabel": "생성됨",
+  "unavailableLabel": "사용할 수 없음",
+  "copyResultsLabel": "UUID 복사",
+  "copiedLabel": "복사됨",
+  "downloadResultsLabel": "결과 다운로드",
+  "regenerateLabel": "다시 생성"
+}

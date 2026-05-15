@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Seçenekler",
+  "optionsDescription": "Tek bir yerel toplu işlemde kaç UUID v7 tanımlayıcısı oluşturulacağını seçin.",
+  "countLabel": "Adet",
+  "countDescription": "Tek seferde 1 ile 100 arasında UUID oluşturun.",
+  "resultsTitle": "Üretilen UUID'ler",
+  "resultsDescription": "UUID v7 değerleri, Unix milisaniye zaman damgası ve rastgele bitlerle yerel olarak oluşturulur.",
+  "resultsPlaceholder": "Üretilen UUID v7 değerleri burada görünecek...",
+  "batchSummaryLabel": "Toplu işlem özeti",
+  "versionLabel": "Sürüm",
+  "timestampLabel": "Zaman damgası",
+  "timestampMillisecondsLabel": "Unix milisaniyesi",
+  "generatedCountLabel": "Üretilen",
+  "unavailableLabel": "Kullanılamıyor",
+  "copyResultsLabel": "UUID'leri kopyala",
+  "copiedLabel": "Kopyalandı",
+  "downloadResultsLabel": "Sonucu indir",
+  "regenerateLabel": "Yeniden oluştur"
+}

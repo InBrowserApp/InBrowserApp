@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Options",
+  "optionsDescription": "Choose how many UUID v7 identifiers to generate in one local batch.",
+  "countLabel": "Count",
+  "countDescription": "Generate between 1 and 100 UUIDs at once.",
+  "resultsTitle": "Generated UUIDs",
+  "resultsDescription": "UUID v7 values are generated locally with a Unix millisecond timestamp and random bits.",
+  "resultsPlaceholder": "Generated UUID v7 values will appear here...",
+  "batchSummaryLabel": "Batch summary",
+  "versionLabel": "Version",
+  "timestampLabel": "Timestamp",
+  "timestampMillisecondsLabel": "Unix milliseconds",
+  "generatedCountLabel": "Generated",
+  "unavailableLabel": "Unavailable",
+  "copyResultsLabel": "Copy UUIDs",
+  "copiedLabel": "Copied",
+  "downloadResultsLabel": "Download result",
+  "regenerateLabel": "Regenerate"
+}

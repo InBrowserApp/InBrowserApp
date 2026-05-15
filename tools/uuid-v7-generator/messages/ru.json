@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Параметры",
+  "optionsDescription": "Выберите, сколько идентификаторов UUID v7 сгенерировать в одном локальном пакете.",
+  "countLabel": "Количество",
+  "countDescription": "Генерируйте от 1 до 100 UUID за раз.",
+  "resultsTitle": "Сгенерированные UUID",
+  "resultsDescription": "Значения UUID v7 генерируются локально с миллисекундной временной меткой Unix и случайными битами.",
+  "resultsPlaceholder": "Сгенерированные значения UUID v7 появятся здесь...",
+  "batchSummaryLabel": "Сводка пакета",
+  "versionLabel": "Версия",
+  "timestampLabel": "Временная метка",
+  "timestampMillisecondsLabel": "Миллисекунды Unix",
+  "generatedCountLabel": "Сгенерировано",
+  "unavailableLabel": "Недоступно",
+  "copyResultsLabel": "Копировать UUID",
+  "copiedLabel": "Скопировано",
+  "downloadResultsLabel": "Скачать результат",
+  "regenerateLabel": "Сгенерировать заново"
+}

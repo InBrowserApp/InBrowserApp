@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "选项",
+  "optionsDescription": "选择一次本地批量生成多少个 UUID v7 标识符。",
+  "countLabel": "数量",
+  "countDescription": "一次生成 1 到 100 个 UUID。",
+  "resultsTitle": "已生成的 UUID",
+  "resultsDescription": "UUID v7 值会在本地生成，并包含 Unix 毫秒时间戳和随机位。",
+  "resultsPlaceholder": "生成的 UUID v7 值会显示在这里…",
+  "batchSummaryLabel": "批次摘要",
+  "versionLabel": "版本",
+  "timestampLabel": "时间戳",
+  "timestampMillisecondsLabel": "Unix 毫秒",
+  "generatedCountLabel": "已生成",
+  "unavailableLabel": "不可用",
+  "copyResultsLabel": "复制 UUID",
+  "copiedLabel": "已复制",
+  "downloadResultsLabel": "下载结果",
+  "regenerateLabel": "重新生成"
+}

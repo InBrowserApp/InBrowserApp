@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Opcje",
+  "optionsDescription": "Wybierz, ile identyfikatorów UUID v7 wygenerować w jednej lokalnej partii.",
+  "countLabel": "Liczba",
+  "countDescription": "Generuj od 1 do 100 identyfikatorów UUID naraz.",
+  "resultsTitle": "Wygenerowane identyfikatory UUID",
+  "resultsDescription": "Wartości UUID v7 są generowane lokalnie ze znacznikiem czasu Unix w milisekundach i losowymi bitami.",
+  "resultsPlaceholder": "Wygenerowane wartości UUID v7 pojawią się tutaj...",
+  "batchSummaryLabel": "Podsumowanie partii",
+  "versionLabel": "Wersja",
+  "timestampLabel": "Znacznik czasu",
+  "timestampMillisecondsLabel": "Znacznik czasu Unix (ms)",
+  "generatedCountLabel": "Wygenerowano",
+  "unavailableLabel": "Niedostępne",
+  "copyResultsLabel": "Kopiuj UUID",
+  "copiedLabel": "Skopiowano",
+  "downloadResultsLabel": "Pobierz wynik",
+  "regenerateLabel": "Wygeneruj ponownie"
+}

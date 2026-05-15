@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Opties",
+  "optionsDescription": "Kies hoeveel UUID v7-identifiers je in een lokale batch wilt genereren.",
+  "countLabel": "Aantal",
+  "countDescription": "Genereer tussen 1 en 100 UUID's tegelijk.",
+  "resultsTitle": "Gegenereerde UUID's",
+  "resultsDescription": "UUID v7-waarden worden lokaal gegenereerd met een Unix-tijdstempel in milliseconden en willekeurige bits.",
+  "resultsPlaceholder": "Gegenereerde UUID v7-waarden verschijnen hier...",
+  "batchSummaryLabel": "Batchoverzicht",
+  "versionLabel": "Versie",
+  "timestampLabel": "Tijdstempel",
+  "timestampMillisecondsLabel": "Unix-milliseconden",
+  "generatedCountLabel": "Gegenereerd",
+  "unavailableLabel": "Niet beschikbaar",
+  "copyResultsLabel": "UUID's kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "downloadResultsLabel": "Resultaat downloaden",
+  "regenerateLabel": "Opnieuw genereren"
+}

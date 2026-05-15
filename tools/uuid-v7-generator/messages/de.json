@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Optionen",
+  "optionsDescription": "Wähle aus, wie viele UUID v7-Kennungen in einem lokalen Stapel erzeugt werden.",
+  "countLabel": "Anzahl",
+  "countDescription": "Erzeuge 1 bis 100 UUIDs auf einmal.",
+  "resultsTitle": "Erzeugte UUIDs",
+  "resultsDescription": "UUID v7-Werte werden lokal mit einem Unix-Zeitstempel in Millisekunden und Zufallsbits erzeugt.",
+  "resultsPlaceholder": "Erzeugte UUID v7-Werte erscheinen hier...",
+  "batchSummaryLabel": "Stapelübersicht",
+  "versionLabel": "Version",
+  "timestampLabel": "Zeitstempel",
+  "timestampMillisecondsLabel": "Unix-Millisekunden",
+  "generatedCountLabel": "Erzeugt",
+  "unavailableLabel": "Nicht verfügbar",
+  "copyResultsLabel": "UUIDs kopieren",
+  "copiedLabel": "Kopiert",
+  "downloadResultsLabel": "Ergebnis herunterladen",
+  "regenerateLabel": "Neu generieren"
+}

@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Alternativ",
+  "optionsDescription": "Välj hur många UUID v7-identifierare som ska genereras i en lokal omgång.",
+  "countLabel": "Antal",
+  "countDescription": "Generera mellan 1 och 100 UUID:er åt gången.",
+  "resultsTitle": "Genererade UUID:er",
+  "resultsDescription": "UUID v7-värden genereras lokalt med en Unix-tidsstämpel i millisekunder och slumpmässiga bitar.",
+  "resultsPlaceholder": "Genererade UUID v7-värden visas här...",
+  "batchSummaryLabel": "Omgångssammanfattning",
+  "versionLabel": "Version",
+  "timestampLabel": "Tidsstämpel",
+  "timestampMillisecondsLabel": "Unix-millisekunder",
+  "generatedCountLabel": "Genererade",
+  "unavailableLabel": "Inte tillgänglig",
+  "copyResultsLabel": "Kopiera UUID:er",
+  "copiedLabel": "Kopierat",
+  "downloadResultsLabel": "Ladda ner resultat",
+  "regenerateLabel": "Generera igen"
+}

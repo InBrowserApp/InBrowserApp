@@ -1,0 +1,4 @@
+{
+  "name": "Gerador de UUID v7",
+  "description": "Gere identificadores UUID v7 ordenáveis por timestamp no navegador para bancos de dados, eventos e sistemas distribuídos."
+}

@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "विकल्प",
+  "optionsDescription": "चुनें कि एक स्थानीय बैच में कितने UUID v7 पहचानकर्ता जनरेट करने हैं।",
+  "countLabel": "संख्या",
+  "countDescription": "एक बार में 1 से 100 UUIDs तक जनरेट करें।",
+  "resultsTitle": "जनरेट किए गए UUIDs",
+  "resultsDescription": "UUID v7 मान स्थानीय रूप से Unix मिलीसेकंड टाइमस्टैम्प और रैंडम बिट्स के साथ जनरेट किए जाते हैं।",
+  "resultsPlaceholder": "जनरेट किए गए UUID v7 मान यहाँ दिखाई देंगे...",
+  "batchSummaryLabel": "बैच सारांश",
+  "versionLabel": "वर्शन",
+  "timestampLabel": "टाइमस्टैम्प",
+  "timestampMillisecondsLabel": "Unix मिलीसेकंड",
+  "generatedCountLabel": "जनरेट किए गए",
+  "unavailableLabel": "उपलब्ध नहीं",
+  "copyResultsLabel": "UUIDs कॉपी करें",
+  "copiedLabel": "कॉपी किया गया",
+  "downloadResultsLabel": "परिणाम डाउनलोड करें",
+  "regenerateLabel": "फिर से जनरेट करें"
+}

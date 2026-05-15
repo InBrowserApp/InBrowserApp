@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo UUID v7",
+  "description": "Tạo các mã định danh UUID v7 có thể sắp xếp theo dấu thời gian ngay trong trình duyệt cho cơ sở dữ liệu, sự kiện và hệ thống phân tán."
+}

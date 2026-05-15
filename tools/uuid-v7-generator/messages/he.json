@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "אפשרויות",
+  "optionsDescription": "בחרו כמה מזהי UUID v7 ליצור באצווה מקומית אחת.",
+  "countLabel": "כמות",
+  "countDescription": "צרו בין מזהה UUID אחד ל-100 בבת אחת.",
+  "resultsTitle": "מזהי UUID שנוצרו",
+  "resultsDescription": "ערכי UUID v7 נוצרים מקומית עם חותמת זמן במילישניות Unix וביטים אקראיים.",
+  "resultsPlaceholder": "ערכי UUID v7 שנוצרו יופיעו כאן...",
+  "batchSummaryLabel": "סיכום אצווה",
+  "versionLabel": "גרסה",
+  "timestampLabel": "חותמת זמן",
+  "timestampMillisecondsLabel": "מילישניות Unix",
+  "generatedCountLabel": "נוצרו",
+  "unavailableLabel": "לא זמין",
+  "copyResultsLabel": "העתקת מזהי UUID",
+  "copiedLabel": "הועתק",
+  "downloadResultsLabel": "הורדת התוצאה",
+  "regenerateLabel": "יצירה מחדש"
+}

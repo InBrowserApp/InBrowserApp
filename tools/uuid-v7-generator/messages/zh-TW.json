@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "選項",
+  "optionsDescription": "選擇要在單一本機批次中產生多少個 UUID v7 識別碼。",
+  "countLabel": "數量",
+  "countDescription": "一次產生 1 到 100 個 UUID。",
+  "resultsTitle": "已產生的 UUID",
+  "resultsDescription": "UUID v7 值會在本機產生，並包含 Unix 毫秒時間戳記與隨機位元。",
+  "resultsPlaceholder": "產生的 UUID v7 值會顯示在這裡...",
+  "batchSummaryLabel": "批次摘要",
+  "versionLabel": "版本",
+  "timestampLabel": "時間戳記",
+  "timestampMillisecondsLabel": "Unix 毫秒",
+  "generatedCountLabel": "已產生",
+  "unavailableLabel": "無法使用",
+  "copyResultsLabel": "複製 UUID",
+  "copiedLabel": "已複製",
+  "downloadResultsLabel": "下載結果",
+  "regenerateLabel": "重新產生"
+}

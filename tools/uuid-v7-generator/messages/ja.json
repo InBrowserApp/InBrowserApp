@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "オプション",
+  "optionsDescription": "1回のローカルバッチで生成するUUID v7識別子の数を選択します。",
+  "countLabel": "数",
+  "countDescription": "一度に1から100個のUUIDを生成します。",
+  "resultsTitle": "生成されたUUID",
+  "resultsDescription": "UUID v7の値は、Unixミリ秒タイムスタンプとランダムビットを使ってローカルで生成されます。",
+  "resultsPlaceholder": "生成されたUUID v7値がここに表示されます...",
+  "batchSummaryLabel": "バッチ概要",
+  "versionLabel": "バージョン",
+  "timestampLabel": "タイムスタンプ",
+  "timestampMillisecondsLabel": "Unixミリ秒",
+  "generatedCountLabel": "生成数",
+  "unavailableLabel": "利用不可",
+  "copyResultsLabel": "UUIDをコピー",
+  "copiedLabel": "コピーしました",
+  "downloadResultsLabel": "結果をダウンロード",
+  "regenerateLabel": "再生成"
+}

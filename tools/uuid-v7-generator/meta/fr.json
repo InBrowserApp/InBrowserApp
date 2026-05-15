@@ -1,0 +1,4 @@
+{
+  "name": "Générateur d'UUID v7",
+  "description": "Générez dans votre navigateur des identifiants UUID v7 triables par horodatage pour les bases de données, les événements et les systèmes distribués."
+}

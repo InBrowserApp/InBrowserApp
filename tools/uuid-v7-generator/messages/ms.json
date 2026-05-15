@@ -1,0 +1,19 @@
+{
+  "optionsTitle": "Pilihan",
+  "optionsDescription": "Pilih bilangan pengecam UUID v7 untuk dijana dalam satu kelompok tempatan.",
+  "countLabel": "Bilangan",
+  "countDescription": "Jana antara 1 hingga 100 UUID serentak.",
+  "resultsTitle": "UUID yang Dijana",
+  "resultsDescription": "Nilai UUID v7 dijana secara tempatan dengan cap masa milisaat Unix dan bit rawak.",
+  "resultsPlaceholder": "Nilai UUID v7 yang dijana akan muncul di sini...",
+  "batchSummaryLabel": "Ringkasan kelompok",
+  "versionLabel": "Versi",
+  "timestampLabel": "Cap masa",
+  "timestampMillisecondsLabel": "Milisaat Unix",
+  "generatedCountLabel": "Dijana",
+  "unavailableLabel": "Tidak tersedia",
+  "copyResultsLabel": "Salin UUID",
+  "copiedLabel": "Disalin",
+  "downloadResultsLabel": "Muat turun hasil",
+  "regenerateLabel": "Jana semula"
+}
