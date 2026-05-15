@@ -17,11 +17,11 @@ import {
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
 import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
-import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Copy, Download, TriangleAlert } from "@workspace/ui/icons"
 
 import { formatByteSize } from "../core/svg-optimizer"
 
+import { HighlightedSvgMarkup } from "./highlighted-svg-markup"
 import type { SvgOptimizationResult, SvgOptimizerMessages } from "./types"
 
 type ResultCardProps = Readonly<{
@@ -146,13 +146,9 @@ export function ResultCard({
               />
             </div>
             <Field>
-              <FieldLabel htmlFor="svg-optimizer-output">
-                {messages.outputCodeLabel}
-              </FieldLabel>
-              <Textarea
-                className="min-h-56 font-mono text-sm"
-                id="svg-optimizer-output"
-                readOnly
+              <FieldLabel>{messages.outputCodeLabel}</FieldLabel>
+              <HighlightedSvgMarkup
+                ariaLabel={messages.outputCodeLabel}
                 value={result.optimizedSvg}
               />
             </Field>

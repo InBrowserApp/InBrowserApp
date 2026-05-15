@@ -106,6 +106,11 @@ describe("SvgOptimizerClient", () => {
     })
 
     expect(screen.getByText(messages.outputCodeLabel)).toBeTruthy()
+    expect(
+      screen
+        .getByRole("region", { name: messages.outputCodeLabel })
+        .querySelector(".hljs")
+    ).toBeTruthy()
     await waitFor(() => {
       expect(
         screen
