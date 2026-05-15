@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Rejestrator",
+    "description": "Rozpocznij lokalną sesję przechwytywania ekranu i zapisz gotowe wideo.",
+    "startLabel": "Rozpocznij nagrywanie",
+    "preparingLabel": "Przygotowywanie...",
+    "pauseLabel": "Wstrzymaj",
+    "resumeLabel": "Wznów",
+    "stopLabel": "Zatrzymaj",
+    "retryLabel": "Spróbuj ponownie",
+    "statusLabel": "Status",
+    "durationLabel": "Czas trwania",
+    "statusChecking": "Sprawdzanie",
+    "statusReady": "Gotowe",
+    "statusRecording": "Nagrywanie",
+    "statusPaused": "Wstrzymano"
+  },
+  "settings": {
+    "title": "Ustawienia przechwytywania",
+    "description": "Wybierz źródła dźwięku przed rozpoczęciem nagrywania.",
+    "systemAudioLabel": "Dźwięk systemowy",
+    "systemAudioDescription": "Poproś przeglądarkę o dołączenie dostępnego dźwięku z karty lub systemu.",
+    "microphoneLabel": "Mikrofon",
+    "microphoneDescription": "Dodaj dźwięk z mikrofonu do nagrania, jeśli jest dozwolony.",
+    "microphoneUnsupported": "Przechwytywanie dźwięku z mikrofonu nie jest dostępne w tej przeglądarce."
+  },
+  "output": {
+    "title": "Wynik nagrania",
+    "description": "Wyświetl podgląd najnowszego nagrania i pobierz je jako lokalny plik wideo.",
+    "emptyTitle": "Brak nagrania",
+    "emptyDescription": "Zakończ nagrywanie, aby tutaj wyświetlić podgląd i pobrać wideo.",
+    "formatLabel": "Format",
+    "fileSizeLabel": "Rozmiar pliku",
+    "fileNameLabel": "Nazwa pliku",
+    "fileNamePlaceholder": "nagranie-ekranu",
+    "downloadLabel": "Pobierz nagranie",
+    "clearLabel": "Wyczyść",
+    "formatUnknown": "Nieznany"
+  },
+  "alerts": {
+    "unsupportedTitle": "Nagrywanie ekranu nie jest obsługiwane",
+    "unsupportedDescription": "Użyj przeglądarki obsługującej Screen Capture i MediaRecorder, zwykle przez HTTPS lub localhost.",
+    "screenPermissionTitle": "Udostępnianie ekranu nie zostało dozwolone",
+    "screenPermissionDescription": "Rozpocznij ponownie i wybierz ekran, okno lub kartę w monicie przeglądarki.",
+    "microphonePermissionTitle": "Dostęp do mikrofonu nie został dozwolony",
+    "microphonePermissionDescription": "Wyłącz przechwytywanie mikrofonu lub zezwól na dostęp do mikrofonu po wyświetleniu monitu.",
+    "microphoneUnsupportedTitle": "Przechwytywanie mikrofonu jest niedostępne",
+    "genericErrorTitle": "Nie udało się rozpocząć nagrywania",
+    "genericErrorDescription": "Sprawdź uprawnienia przeglądarki, zamknij inne sesje przechwytywania i spróbuj ponownie."
+  }
+}

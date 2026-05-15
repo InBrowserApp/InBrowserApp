@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Registratore",
+    "description": "Avvia una sessione locale di acquisizione dello schermo e salva il video finale.",
+    "startLabel": "Avvia registrazione",
+    "preparingLabel": "Preparazione...",
+    "pauseLabel": "Pausa",
+    "resumeLabel": "Riprendi",
+    "stopLabel": "Interrompi",
+    "retryLabel": "Riprova",
+    "statusLabel": "Stato",
+    "durationLabel": "Durata",
+    "statusChecking": "Verifica",
+    "statusReady": "Pronto",
+    "statusRecording": "Registrazione",
+    "statusPaused": "In pausa"
+  },
+  "settings": {
+    "title": "Impostazioni di acquisizione",
+    "description": "Scegli le sorgenti audio prima di avviare la registrazione.",
+    "systemAudioLabel": "Audio di sistema",
+    "systemAudioDescription": "Chiedi al browser di includere l'audio disponibile della scheda o del sistema.",
+    "microphoneLabel": "Microfono",
+    "microphoneDescription": "Aggiungi l'audio del microfono alla registrazione quando consentito.",
+    "microphoneUnsupported": "L'acquisizione dal microfono non è disponibile in questo browser."
+  },
+  "output": {
+    "title": "Output della registrazione",
+    "description": "Visualizza l'anteprima dell'ultima registrazione e scaricala come file video locale.",
+    "emptyTitle": "Nessuna registrazione",
+    "emptyDescription": "Completa una registrazione per visualizzare qui l'anteprima e scaricare il video.",
+    "formatLabel": "Formato",
+    "fileSizeLabel": "Dimensione file",
+    "fileNameLabel": "Nome file",
+    "fileNamePlaceholder": "registrazione-schermo",
+    "downloadLabel": "Scarica registrazione",
+    "clearLabel": "Cancella",
+    "formatUnknown": "Sconosciuto"
+  },
+  "alerts": {
+    "unsupportedTitle": "La registrazione dello schermo non è supportata",
+    "unsupportedDescription": "Usa un browser con supporto per Screen Capture e MediaRecorder, di solito tramite HTTPS o localhost.",
+    "screenPermissionTitle": "La condivisione dello schermo non è stata consentita",
+    "screenPermissionDescription": "Ricomincia e scegli uno schermo, una finestra o una scheda nel prompt del browser.",
+    "microphonePermissionTitle": "L'accesso al microfono non è stato consentito",
+    "microphonePermissionDescription": "Disattiva l'acquisizione dal microfono o consenti l'accesso al microfono quando richiesto.",
+    "microphoneUnsupportedTitle": "L'acquisizione dal microfono non è disponibile",
+    "genericErrorTitle": "Impossibile avviare la registrazione",
+    "genericErrorDescription": "Controlla le autorizzazioni del browser, chiudi le altre sessioni di acquisizione e riprova."
+  }
+}

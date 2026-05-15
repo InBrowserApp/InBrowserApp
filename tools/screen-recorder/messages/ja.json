@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "録画",
+    "description": "ローカルの画面キャプチャセッションを開始し、完了した動画を保存します。",
+    "startLabel": "録画を開始",
+    "preparingLabel": "準備中...",
+    "pauseLabel": "一時停止",
+    "resumeLabel": "再開",
+    "stopLabel": "停止",
+    "retryLabel": "再試行",
+    "statusLabel": "状態",
+    "durationLabel": "録画時間",
+    "statusChecking": "確認中",
+    "statusReady": "準備完了",
+    "statusRecording": "録画中",
+    "statusPaused": "一時停止中"
+  },
+  "settings": {
+    "title": "キャプチャ設定",
+    "description": "録画を開始する前に音声ソースを選択します。",
+    "systemAudioLabel": "システム音声",
+    "systemAudioDescription": "利用可能なタブ音声またはシステム音声を含めるようブラウザーに要求します。",
+    "microphoneLabel": "マイク",
+    "microphoneDescription": "許可されている場合、録画にマイク音声を追加します。",
+    "microphoneUnsupported": "このブラウザーではマイク録音を利用できません。"
+  },
+  "output": {
+    "title": "録画出力",
+    "description": "最新の録画をプレビューし、ローカルの動画ファイルとしてダウンロードします。",
+    "emptyTitle": "録画はまだありません",
+    "emptyDescription": "録画を完了すると、ここで動画のプレビューとダウンロードができます。",
+    "formatLabel": "形式",
+    "fileSizeLabel": "ファイルサイズ",
+    "fileNameLabel": "ファイル名",
+    "fileNamePlaceholder": "screen-recording",
+    "downloadLabel": "録画をダウンロード",
+    "clearLabel": "クリア",
+    "formatUnknown": "不明"
+  },
+  "alerts": {
+    "unsupportedTitle": "画面録画はサポートされていません",
+    "unsupportedDescription": "Screen Capture と MediaRecorder に対応したブラウザーを使用してください。通常は HTTPS または localhost が必要です。",
+    "screenPermissionTitle": "画面共有が許可されませんでした",
+    "screenPermissionDescription": "もう一度開始し、ブラウザーの確認画面で画面、ウィンドウ、またはタブを選択してください。",
+    "microphonePermissionTitle": "マイクへのアクセスが許可されませんでした",
+    "microphonePermissionDescription": "マイク録音を無効にするか、確認画面でマイクへのアクセスを許可してください。",
+    "microphoneUnsupportedTitle": "マイク録音を利用できません",
+    "genericErrorTitle": "録画を開始できませんでした",
+    "genericErrorDescription": "ブラウザーの権限を確認し、他のキャプチャセッションを閉じてから、もう一度お試しください。"
+  }
+}

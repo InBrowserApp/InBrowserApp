@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Rekorder",
+    "description": "Starte eine lokale Bildschirmaufnahme und speichere das fertige Video.",
+    "startLabel": "Aufnahme starten",
+    "preparingLabel": "Wird vorbereitet...",
+    "pauseLabel": "Pausieren",
+    "resumeLabel": "Fortsetzen",
+    "stopLabel": "Stoppen",
+    "retryLabel": "Erneut versuchen",
+    "statusLabel": "Status",
+    "durationLabel": "Dauer",
+    "statusChecking": "Wird geprüft",
+    "statusReady": "Bereit",
+    "statusRecording": "Aufnahme läuft",
+    "statusPaused": "Pausiert"
+  },
+  "settings": {
+    "title": "Aufnahmeeinstellungen",
+    "description": "Wähle vor dem Start der Aufnahme die Audioquellen aus.",
+    "systemAudioLabel": "Systemaudio",
+    "systemAudioDescription": "Fordere den Browser auf, verfügbares Tab- oder Systemaudio einzuschließen.",
+    "microphoneLabel": "Mikrofon",
+    "microphoneDescription": "Füge der Aufnahme Mikrofonton hinzu, wenn dies erlaubt ist.",
+    "microphoneUnsupported": "Mikrofonaufnahme ist in diesem Browser nicht verfügbar."
+  },
+  "output": {
+    "title": "Aufnahmeausgabe",
+    "description": "Sieh dir die neueste Aufnahme in der Vorschau an und lade sie als lokale Videodatei herunter.",
+    "emptyTitle": "Noch keine Aufnahme",
+    "emptyDescription": "Beende eine Aufnahme, um das Video hier in der Vorschau anzusehen und herunterzuladen.",
+    "formatLabel": "Format",
+    "fileSizeLabel": "Dateigröße",
+    "fileNameLabel": "Dateiname",
+    "fileNamePlaceholder": "bildschirmaufnahme",
+    "downloadLabel": "Aufnahme herunterladen",
+    "clearLabel": "Löschen",
+    "formatUnknown": "Unbekannt"
+  },
+  "alerts": {
+    "unsupportedTitle": "Bildschirmaufnahme wird nicht unterstützt",
+    "unsupportedDescription": "Verwende einen Browser mit Unterstützung für Screen Capture und MediaRecorder, üblicherweise über HTTPS oder localhost.",
+    "screenPermissionTitle": "Bildschirmfreigabe wurde nicht erlaubt",
+    "screenPermissionDescription": "Starte erneut und wähle in der Browser-Abfrage einen Bildschirm, ein Fenster oder einen Tab aus.",
+    "microphonePermissionTitle": "Mikrofonzugriff wurde nicht erlaubt",
+    "microphonePermissionDescription": "Deaktiviere die Mikrofonaufnahme oder erlaube den Mikrofonzugriff, wenn du dazu aufgefordert wirst.",
+    "microphoneUnsupportedTitle": "Mikrofonaufnahme ist nicht verfügbar",
+    "genericErrorTitle": "Aufnahme konnte nicht gestartet werden",
+    "genericErrorDescription": "Prüfe die Browserberechtigungen, schließe andere Aufnahmesitzungen und versuche es erneut."
+  }
+}

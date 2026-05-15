@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Recorder",
+    "description": "Start een lokale schermopnamesessie en sla de voltooide video op.",
+    "startLabel": "Opname starten",
+    "preparingLabel": "Voorbereiden...",
+    "pauseLabel": "Pauzeren",
+    "resumeLabel": "Hervatten",
+    "stopLabel": "Stoppen",
+    "retryLabel": "Opnieuw proberen",
+    "statusLabel": "Status",
+    "durationLabel": "Duur",
+    "statusChecking": "Controleren",
+    "statusReady": "Gereed",
+    "statusRecording": "Opnemen",
+    "statusPaused": "Gepauzeerd"
+  },
+  "settings": {
+    "title": "Opname-instellingen",
+    "description": "Kies audiobronnen voordat je de opname start.",
+    "systemAudioLabel": "Systeemaudio",
+    "systemAudioDescription": "Vraag de browser om beschikbare tabblad- of systeemaudio op te nemen.",
+    "microphoneLabel": "Microfoon",
+    "microphoneDescription": "Voeg microfoonaudio toe aan de opname wanneer dit is toegestaan.",
+    "microphoneUnsupported": "Microfoonopname is niet beschikbaar in deze browser."
+  },
+  "output": {
+    "title": "Opname-uitvoer",
+    "description": "Bekijk een voorbeeld van de nieuwste opname en download deze als lokaal videobestand.",
+    "emptyTitle": "Nog geen opname",
+    "emptyDescription": "Voltooi een opname om de video hier te bekijken en te downloaden.",
+    "formatLabel": "Indeling",
+    "fileSizeLabel": "Bestandsgrootte",
+    "fileNameLabel": "Bestandsnaam",
+    "fileNamePlaceholder": "schermopname",
+    "downloadLabel": "Opname downloaden",
+    "clearLabel": "Wissen",
+    "formatUnknown": "Onbekend"
+  },
+  "alerts": {
+    "unsupportedTitle": "Schermopname wordt niet ondersteund",
+    "unsupportedDescription": "Gebruik een browser met ondersteuning voor Screen Capture en MediaRecorder, meestal via HTTPS of localhost.",
+    "screenPermissionTitle": "Scherm delen was niet toegestaan",
+    "screenPermissionDescription": "Start opnieuw en kies een scherm, venster of tabblad in de browsermelding.",
+    "microphonePermissionTitle": "Microfoontoegang was niet toegestaan",
+    "microphonePermissionDescription": "Schakel microfoonopname uit of sta microfoontoegang toe wanneer daarom wordt gevraagd.",
+    "microphoneUnsupportedTitle": "Microfoonopname is niet beschikbaar",
+    "genericErrorTitle": "Opname kon niet starten",
+    "genericErrorDescription": "Controleer browsermachtigingen, sluit andere opnamesessies en probeer het opnieuw."
+  }
+}

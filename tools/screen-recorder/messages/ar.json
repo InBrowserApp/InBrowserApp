@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "المسجل",
+    "description": "ابدأ جلسة التقاط شاشة محلية واحفظ الفيديو بعد الانتهاء.",
+    "startLabel": "بدء التسجيل",
+    "preparingLabel": "جار التحضير...",
+    "pauseLabel": "إيقاف مؤقت",
+    "resumeLabel": "استئناف",
+    "stopLabel": "إيقاف",
+    "retryLabel": "إعادة المحاولة",
+    "statusLabel": "الحالة",
+    "durationLabel": "المدة",
+    "statusChecking": "جار الفحص",
+    "statusReady": "جاهز",
+    "statusRecording": "جار التسجيل",
+    "statusPaused": "متوقف مؤقتا"
+  },
+  "settings": {
+    "title": "إعدادات الالتقاط",
+    "description": "اختر مصادر الصوت قبل بدء التسجيل.",
+    "systemAudioLabel": "صوت النظام",
+    "systemAudioDescription": "اطلب من المتصفح تضمين صوت علامة التبويب أو صوت النظام المتاح.",
+    "microphoneLabel": "الميكروفون",
+    "microphoneDescription": "أضف صوت الميكروفون إلى التسجيل عند السماح بذلك.",
+    "microphoneUnsupported": "التقاط صوت الميكروفون غير متاح في هذا المتصفح."
+  },
+  "output": {
+    "title": "مخرجات التسجيل",
+    "description": "عاين أحدث تسجيل ونزله كملف فيديو محلي.",
+    "emptyTitle": "لا يوجد تسجيل بعد",
+    "emptyDescription": "أنه تسجيلا لمعاينة الفيديو وتنزيله هنا.",
+    "formatLabel": "التنسيق",
+    "fileSizeLabel": "حجم الملف",
+    "fileNameLabel": "اسم الملف",
+    "fileNamePlaceholder": "screen-recording",
+    "downloadLabel": "تنزيل التسجيل",
+    "clearLabel": "مسح",
+    "formatUnknown": "غير معروف"
+  },
+  "alerts": {
+    "unsupportedTitle": "تسجيل الشاشة غير مدعوم",
+    "unsupportedDescription": "استخدم متصفحا يدعم Screen Capture وMediaRecorder، وعادة ما يكون ذلك عبر HTTPS أو localhost.",
+    "screenPermissionTitle": "لم يتم السماح بمشاركة الشاشة",
+    "screenPermissionDescription": "ابدأ من جديد واختر شاشة أو نافذة أو علامة تبويب من مطالبة المتصفح.",
+    "microphonePermissionTitle": "لم يتم السماح بالوصول إلى الميكروفون",
+    "microphonePermissionDescription": "عطل التقاط الميكروفون أو اسمح بالوصول إلى الميكروفون عند مطالبتك بذلك.",
+    "microphoneUnsupportedTitle": "التقاط صوت الميكروفون غير متاح",
+    "genericErrorTitle": "تعذر بدء التسجيل",
+    "genericErrorDescription": "تحقق من أذونات المتصفح، وأغلق جلسات الالتقاط الأخرى، ثم حاول مرة أخرى."
+  }
+}

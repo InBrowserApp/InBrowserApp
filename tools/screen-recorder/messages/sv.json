@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Inspelare",
+    "description": "Starta en lokal skärminspelning och spara den färdiga videon.",
+    "startLabel": "Starta inspelning",
+    "preparingLabel": "Förbereder...",
+    "pauseLabel": "Pausa",
+    "resumeLabel": "Fortsätt",
+    "stopLabel": "Stoppa",
+    "retryLabel": "Försök igen",
+    "statusLabel": "Status",
+    "durationLabel": "Längd",
+    "statusChecking": "Kontrollerar",
+    "statusReady": "Klar",
+    "statusRecording": "Spelar in",
+    "statusPaused": "Pausad"
+  },
+  "settings": {
+    "title": "Inspelningsinställningar",
+    "description": "Välj ljudkällor innan du startar inspelningen.",
+    "systemAudioLabel": "Systemljud",
+    "systemAudioDescription": "Be webbläsaren att ta med tillgängligt flik- eller systemljud.",
+    "microphoneLabel": "Mikrofon",
+    "microphoneDescription": "Lägg till mikrofonljud i inspelningen när det tillåts.",
+    "microphoneUnsupported": "Mikrofoninspelning är inte tillgänglig i den här webbläsaren."
+  },
+  "output": {
+    "title": "Inspelningsresultat",
+    "description": "Förhandsgranska den senaste inspelningen och ladda ner den som en lokal videofil.",
+    "emptyTitle": "Ingen inspelning än",
+    "emptyDescription": "Slutför en inspelning för att förhandsgranska och ladda ner videon här.",
+    "formatLabel": "Format",
+    "fileSizeLabel": "Filstorlek",
+    "fileNameLabel": "Filnamn",
+    "fileNamePlaceholder": "skärminspelning",
+    "downloadLabel": "Ladda ner inspelning",
+    "clearLabel": "Rensa",
+    "formatUnknown": "Okänt"
+  },
+  "alerts": {
+    "unsupportedTitle": "Skärminspelning stöds inte",
+    "unsupportedDescription": "Använd en webbläsare med stöd för Screen Capture och MediaRecorder, vanligtvis via HTTPS eller localhost.",
+    "screenPermissionTitle": "Skärmdelning tilläts inte",
+    "screenPermissionDescription": "Starta igen och välj en skärm, ett fönster eller en flik i webbläsarens fråga.",
+    "microphonePermissionTitle": "Mikrofonåtkomst tilläts inte",
+    "microphonePermissionDescription": "Stäng av mikrofoninspelning eller tillåt mikrofonåtkomst när du blir tillfrågad.",
+    "microphoneUnsupportedTitle": "Mikrofoninspelning är inte tillgänglig",
+    "genericErrorTitle": "Inspelningen kunde inte startas",
+    "genericErrorDescription": "Kontrollera webbläsarbehörigheter, stäng andra inspelningssessioner och försök igen."
+  }
+}

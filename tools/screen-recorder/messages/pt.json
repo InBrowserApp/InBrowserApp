@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Gravador",
+    "description": "Inicie uma sessão local de captura de tela e salve o vídeo final.",
+    "startLabel": "Iniciar gravação",
+    "preparingLabel": "Preparando...",
+    "pauseLabel": "Pausar",
+    "resumeLabel": "Retomar",
+    "stopLabel": "Parar",
+    "retryLabel": "Tentar novamente",
+    "statusLabel": "Status",
+    "durationLabel": "Duração",
+    "statusChecking": "Verificando",
+    "statusReady": "Pronto",
+    "statusRecording": "Gravando",
+    "statusPaused": "Pausado"
+  },
+  "settings": {
+    "title": "Configurações de captura",
+    "description": "Escolha as fontes de áudio antes de iniciar a gravação.",
+    "systemAudioLabel": "Áudio do sistema",
+    "systemAudioDescription": "Peça ao navegador para incluir o áudio disponível da aba ou do sistema.",
+    "microphoneLabel": "Microfone",
+    "microphoneDescription": "Adicione o áudio do microfone à gravação quando permitido.",
+    "microphoneUnsupported": "A captura do microfone não está disponível neste navegador."
+  },
+  "output": {
+    "title": "Saída da gravação",
+    "description": "Pré-visualize a gravação mais recente e baixe-a como um arquivo de vídeo local.",
+    "emptyTitle": "Ainda não há gravação",
+    "emptyDescription": "Conclua uma gravação para pré-visualizar e baixar o vídeo aqui.",
+    "formatLabel": "Formato",
+    "fileSizeLabel": "Tamanho do arquivo",
+    "fileNameLabel": "Nome do arquivo",
+    "fileNamePlaceholder": "gravacao-de-tela",
+    "downloadLabel": "Baixar gravação",
+    "clearLabel": "Limpar",
+    "formatUnknown": "Desconhecido"
+  },
+  "alerts": {
+    "unsupportedTitle": "A gravação de tela não é compatível",
+    "unsupportedDescription": "Use um navegador com suporte a captura de tela e MediaRecorder, geralmente por HTTPS ou localhost.",
+    "screenPermissionTitle": "O compartilhamento de tela não foi permitido",
+    "screenPermissionDescription": "Comece novamente e escolha uma tela, janela ou aba no aviso do navegador.",
+    "microphonePermissionTitle": "O acesso ao microfone não foi permitido",
+    "microphonePermissionDescription": "Desative a captura do microfone ou permita o acesso ao microfone quando solicitado.",
+    "microphoneUnsupportedTitle": "A captura do microfone não está disponível",
+    "genericErrorTitle": "Não foi possível iniciar a gravação",
+    "genericErrorDescription": "Verifique as permissões do navegador, feche outras sessões de captura e tente novamente."
+  }
+}

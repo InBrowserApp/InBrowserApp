@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Perekam",
+    "description": "Mulai sesi perekaman layar lokal dan simpan video yang selesai direkam.",
+    "startLabel": "Mulai merekam",
+    "preparingLabel": "Menyiapkan...",
+    "pauseLabel": "Jeda",
+    "resumeLabel": "Lanjutkan",
+    "stopLabel": "Hentikan",
+    "retryLabel": "Coba lagi",
+    "statusLabel": "Status",
+    "durationLabel": "Durasi",
+    "statusChecking": "Memeriksa",
+    "statusReady": "Siap",
+    "statusRecording": "Merekam",
+    "statusPaused": "Dijeda"
+  },
+  "settings": {
+    "title": "Pengaturan perekaman",
+    "description": "Pilih sumber audio sebelum mulai merekam.",
+    "systemAudioLabel": "Audio sistem",
+    "systemAudioDescription": "Minta browser menyertakan audio tab atau audio sistem yang tersedia.",
+    "microphoneLabel": "Mikrofon",
+    "microphoneDescription": "Tambahkan audio mikrofon ke rekaman jika diizinkan.",
+    "microphoneUnsupported": "Perekaman mikrofon tidak tersedia di browser ini."
+  },
+  "output": {
+    "title": "Hasil rekaman",
+    "description": "Pratinjau rekaman terbaru dan unduh sebagai file video lokal.",
+    "emptyTitle": "Belum ada rekaman",
+    "emptyDescription": "Selesaikan rekaman untuk melihat pratinjau dan mengunduh videonya di sini.",
+    "formatLabel": "Format",
+    "fileSizeLabel": "Ukuran file",
+    "fileNameLabel": "Nama file",
+    "fileNamePlaceholder": "screen-recording",
+    "downloadLabel": "Unduh rekaman",
+    "clearLabel": "Bersihkan",
+    "formatUnknown": "Tidak diketahui"
+  },
+  "alerts": {
+    "unsupportedTitle": "Perekaman layar tidak didukung",
+    "unsupportedDescription": "Gunakan browser dengan dukungan Screen Capture dan MediaRecorder, biasanya melalui HTTPS atau localhost.",
+    "screenPermissionTitle": "Berbagi layar tidak diizinkan",
+    "screenPermissionDescription": "Mulai lagi dan pilih layar, jendela, atau tab di prompt browser.",
+    "microphonePermissionTitle": "Akses mikrofon tidak diizinkan",
+    "microphonePermissionDescription": "Nonaktifkan perekaman mikrofon atau izinkan akses mikrofon saat diminta.",
+    "microphoneUnsupportedTitle": "Perekaman mikrofon tidak tersedia",
+    "genericErrorTitle": "Perekaman tidak dapat dimulai",
+    "genericErrorDescription": "Periksa izin browser, tutup sesi perekaman lain, lalu coba lagi."
+  }
+}

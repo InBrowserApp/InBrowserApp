@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Kaydedici",
+    "description": "Yerel bir ekran yakalama oturumu başlatın ve tamamlanan videoyu kaydedin.",
+    "startLabel": "Kaydı başlat",
+    "preparingLabel": "Hazırlanıyor...",
+    "pauseLabel": "Duraklat",
+    "resumeLabel": "Sürdür",
+    "stopLabel": "Durdur",
+    "retryLabel": "Yeniden dene",
+    "statusLabel": "Durum",
+    "durationLabel": "Süre",
+    "statusChecking": "Denetleniyor",
+    "statusReady": "Hazır",
+    "statusRecording": "Kaydediliyor",
+    "statusPaused": "Duraklatıldı"
+  },
+  "settings": {
+    "title": "Yakalama ayarları",
+    "description": "Kaydı başlatmadan önce ses kaynaklarını seçin.",
+    "systemAudioLabel": "Sistem sesi",
+    "systemAudioDescription": "Tarayıcıdan kullanılabilir sekme veya sistem sesini dahil etmesini isteyin.",
+    "microphoneLabel": "Mikrofon",
+    "microphoneDescription": "İzin verildiğinde kayda mikrofon sesini ekleyin.",
+    "microphoneUnsupported": "Bu tarayıcıda mikrofon yakalama kullanılamıyor."
+  },
+  "output": {
+    "title": "Kayıt çıktısı",
+    "description": "Son kaydı önizleyin ve yerel bir video dosyası olarak indirin.",
+    "emptyTitle": "Henüz kayıt yok",
+    "emptyDescription": "Videoyu burada önizlemek ve indirmek için bir kaydı tamamlayın.",
+    "formatLabel": "Biçim",
+    "fileSizeLabel": "Dosya boyutu",
+    "fileNameLabel": "Dosya adı",
+    "fileNamePlaceholder": "ekran-kaydi",
+    "downloadLabel": "Kaydı indir",
+    "clearLabel": "Temizle",
+    "formatUnknown": "Bilinmiyor"
+  },
+  "alerts": {
+    "unsupportedTitle": "Ekran kaydı desteklenmiyor",
+    "unsupportedDescription": "Genellikle HTTPS veya localhost üzerinden Screen Capture ve MediaRecorder desteği olan bir tarayıcı kullanın.",
+    "screenPermissionTitle": "Ekran paylaşımına izin verilmedi",
+    "screenPermissionDescription": "Yeniden başlayın ve tarayıcı isteminde bir ekran, pencere veya sekme seçin.",
+    "microphonePermissionTitle": "Mikrofon erişimine izin verilmedi",
+    "microphonePermissionDescription": "Mikrofon yakalamayı devre dışı bırakın veya istendiğinde mikrofon erişimine izin verin.",
+    "microphoneUnsupportedTitle": "Mikrofon yakalama kullanılamıyor",
+    "genericErrorTitle": "Kayıt başlatılamadı",
+    "genericErrorDescription": "Tarayıcı izinlerini kontrol edin, diğer yakalama oturumlarını kapatın ve yeniden deneyin."
+  }
+}

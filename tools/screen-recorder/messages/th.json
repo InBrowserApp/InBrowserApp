@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "เครื่องบันทึก",
+    "description": "เริ่มเซสชันบันทึกหน้าจอในเครื่องและบันทึกวิดีโอเมื่อเสร็จสิ้น",
+    "startLabel": "เริ่มบันทึก",
+    "preparingLabel": "กำลังเตรียม...",
+    "pauseLabel": "หยุดชั่วคราว",
+    "resumeLabel": "บันทึกต่อ",
+    "stopLabel": "หยุด",
+    "retryLabel": "ลองอีกครั้ง",
+    "statusLabel": "สถานะ",
+    "durationLabel": "ระยะเวลา",
+    "statusChecking": "กำลังตรวจสอบ",
+    "statusReady": "พร้อม",
+    "statusRecording": "กำลังบันทึก",
+    "statusPaused": "หยุดชั่วคราว"
+  },
+  "settings": {
+    "title": "การตั้งค่าการจับภาพ",
+    "description": "เลือกแหล่งเสียงก่อนเริ่มการบันทึก",
+    "systemAudioLabel": "เสียงระบบ",
+    "systemAudioDescription": "ขอให้เบราว์เซอร์รวมเสียงจากแท็บหรือเสียงระบบที่พร้อมใช้งาน",
+    "microphoneLabel": "ไมโครโฟน",
+    "microphoneDescription": "เพิ่มเสียงไมโครโฟนในการบันทึกเมื่อได้รับอนุญาต",
+    "microphoneUnsupported": "เบราว์เซอร์นี้ไม่รองรับการบันทึกเสียงจากไมโครโฟน"
+  },
+  "output": {
+    "title": "ผลลัพธ์การบันทึก",
+    "description": "ดูตัวอย่างการบันทึกล่าสุดและดาวน์โหลดเป็นไฟล์วิดีโอในเครื่อง",
+    "emptyTitle": "ยังไม่มีการบันทึก",
+    "emptyDescription": "บันทึกให้เสร็จเพื่อดูตัวอย่างและดาวน์โหลดวิดีโอที่นี่",
+    "formatLabel": "รูปแบบ",
+    "fileSizeLabel": "ขนาดไฟล์",
+    "fileNameLabel": "ชื่อไฟล์",
+    "fileNamePlaceholder": "screen-recording",
+    "downloadLabel": "ดาวน์โหลดการบันทึก",
+    "clearLabel": "ล้าง",
+    "formatUnknown": "ไม่ทราบ"
+  },
+  "alerts": {
+    "unsupportedTitle": "ไม่รองรับการบันทึกหน้าจอ",
+    "unsupportedDescription": "ใช้เบราว์เซอร์ที่รองรับ Screen Capture และ MediaRecorder โดยปกติต้องใช้งานผ่าน HTTPS หรือ localhost",
+    "screenPermissionTitle": "ไม่อนุญาตให้แชร์หน้าจอ",
+    "screenPermissionDescription": "เริ่มใหม่อีกครั้งแล้วเลือกหน้าจอ หน้าต่าง หรือแท็บในพรอมป์ของเบราว์เซอร์",
+    "microphonePermissionTitle": "ไม่อนุญาตให้เข้าถึงไมโครโฟน",
+    "microphonePermissionDescription": "ปิดการบันทึกเสียงไมโครโฟน หรืออนุญาตให้เข้าถึงไมโครโฟนเมื่อมีการแจ้งเตือน",
+    "microphoneUnsupportedTitle": "ไม่สามารถใช้การบันทึกเสียงจากไมโครโฟนได้",
+    "genericErrorTitle": "ไม่สามารถเริ่มการบันทึกได้",
+    "genericErrorDescription": "ตรวจสอบสิทธิ์ของเบราว์เซอร์ ปิดเซสชันการจับภาพอื่น แล้วลองอีกครั้ง"
+  }
+}

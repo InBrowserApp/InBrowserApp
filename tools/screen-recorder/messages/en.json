@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Recorder",
+    "description": "Start a local screen capture session and save the finished video.",
+    "startLabel": "Start recording",
+    "preparingLabel": "Preparing...",
+    "pauseLabel": "Pause",
+    "resumeLabel": "Resume",
+    "stopLabel": "Stop",
+    "retryLabel": "Retry",
+    "statusLabel": "Status",
+    "durationLabel": "Duration",
+    "statusChecking": "Checking",
+    "statusReady": "Ready",
+    "statusRecording": "Recording",
+    "statusPaused": "Paused"
+  },
+  "settings": {
+    "title": "Capture settings",
+    "description": "Choose audio sources before starting the recording.",
+    "systemAudioLabel": "System audio",
+    "systemAudioDescription": "Ask the browser to include available tab or system audio.",
+    "microphoneLabel": "Microphone",
+    "microphoneDescription": "Add microphone audio to the recording when allowed.",
+    "microphoneUnsupported": "Microphone capture is not available in this browser."
+  },
+  "output": {
+    "title": "Recording output",
+    "description": "Preview the latest recording and download it as a local video file.",
+    "emptyTitle": "No recording yet",
+    "emptyDescription": "Finish a recording to preview and download the video here.",
+    "formatLabel": "Format",
+    "fileSizeLabel": "File size",
+    "fileNameLabel": "File name",
+    "fileNamePlaceholder": "screen-recording",
+    "downloadLabel": "Download recording",
+    "clearLabel": "Clear",
+    "formatUnknown": "Unknown"
+  },
+  "alerts": {
+    "unsupportedTitle": "Screen recording is not supported",
+    "unsupportedDescription": "Use a browser with Screen Capture and MediaRecorder support, usually over HTTPS or localhost.",
+    "screenPermissionTitle": "Screen sharing was not allowed",
+    "screenPermissionDescription": "Start again and choose a screen, window, or tab in the browser prompt.",
+    "microphonePermissionTitle": "Microphone access was not allowed",
+    "microphonePermissionDescription": "Disable microphone capture or allow microphone access when prompted.",
+    "microphoneUnsupportedTitle": "Microphone capture is unavailable",
+    "genericErrorTitle": "Recording could not start",
+    "genericErrorDescription": "Check browser permissions, close other capture sessions, and try again."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "रिकॉर्डर",
+    "description": "स्थानीय स्क्रीन कैप्चर सत्र शुरू करें और पूरी हुई वीडियो को सहेजें।",
+    "startLabel": "रिकॉर्डिंग शुरू करें",
+    "preparingLabel": "तैयार किया जा रहा है...",
+    "pauseLabel": "रोकें",
+    "resumeLabel": "फिर शुरू करें",
+    "stopLabel": "बंद करें",
+    "retryLabel": "फिर कोशिश करें",
+    "statusLabel": "स्थिति",
+    "durationLabel": "अवधि",
+    "statusChecking": "जांच हो रही है",
+    "statusReady": "तैयार",
+    "statusRecording": "रिकॉर्डिंग हो रही है",
+    "statusPaused": "रोकी गई"
+  },
+  "settings": {
+    "title": "कैप्चर सेटिंग्स",
+    "description": "रिकॉर्डिंग शुरू करने से पहले ऑडियो स्रोत चुनें।",
+    "systemAudioLabel": "सिस्टम ऑडियो",
+    "systemAudioDescription": "ब्राउज़र से उपलब्ध टैब या सिस्टम ऑडियो शामिल करने के लिए कहें।",
+    "microphoneLabel": "माइक्रोफोन",
+    "microphoneDescription": "अनुमति मिलने पर रिकॉर्डिंग में माइक्रोफोन ऑडियो जोड़ें।",
+    "microphoneUnsupported": "इस ब्राउज़र में माइक्रोफोन कैप्चर उपलब्ध नहीं है।"
+  },
+  "output": {
+    "title": "रिकॉर्डिंग आउटपुट",
+    "description": "नवीनतम रिकॉर्डिंग का पूर्वावलोकन करें और उसे स्थानीय वीडियो फ़ाइल के रूप में डाउनलोड करें।",
+    "emptyTitle": "अभी कोई रिकॉर्डिंग नहीं",
+    "emptyDescription": "वीडियो का पूर्वावलोकन और डाउनलोड यहां करने के लिए रिकॉर्डिंग पूरी करें।",
+    "formatLabel": "फ़ॉर्मैट",
+    "fileSizeLabel": "फ़ाइल आकार",
+    "fileNameLabel": "फ़ाइल नाम",
+    "fileNamePlaceholder": "screen-recording",
+    "downloadLabel": "रिकॉर्डिंग डाउनलोड करें",
+    "clearLabel": "साफ़ करें",
+    "formatUnknown": "अज्ञात"
+  },
+  "alerts": {
+    "unsupportedTitle": "स्क्रीन रिकॉर्डिंग समर्थित नहीं है",
+    "unsupportedDescription": "Screen Capture और MediaRecorder समर्थन वाला ब्राउज़र इस्तेमाल करें, आमतौर पर HTTPS या localhost पर।",
+    "screenPermissionTitle": "स्क्रीन शेयरिंग की अनुमति नहीं मिली",
+    "screenPermissionDescription": "फिर शुरू करें और ब्राउज़र संकेत में कोई स्क्रीन, विंडो या टैब चुनें।",
+    "microphonePermissionTitle": "माइक्रोफोन एक्सेस की अनुमति नहीं मिली",
+    "microphonePermissionDescription": "माइक्रोफोन कैप्चर बंद करें या संकेत मिलने पर माइक्रोफोन एक्सेस की अनुमति दें।",
+    "microphoneUnsupportedTitle": "माइक्रोफोन कैप्चर उपलब्ध नहीं है",
+    "genericErrorTitle": "रिकॉर्डिंग शुरू नहीं हो सकी",
+    "genericErrorDescription": "ब्राउज़र अनुमतियां जांचें, दूसरे कैप्चर सत्र बंद करें और फिर कोशिश करें।"
+  }
+}

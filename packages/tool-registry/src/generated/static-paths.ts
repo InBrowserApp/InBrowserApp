@@ -12146,6 +12146,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "screen-recorder",
+    language: "ar",
+  },
+  {
+    slug: "screen-recorder",
+    language: "de",
+  },
+  {
+    slug: "screen-recorder",
+    language: "en",
+  },
+  {
+    slug: "screen-recorder",
+    language: "es",
+  },
+  {
+    slug: "screen-recorder",
+    language: "fr",
+  },
+  {
+    slug: "screen-recorder",
+    language: "he",
+  },
+  {
+    slug: "screen-recorder",
+    language: "hi",
+  },
+  {
+    slug: "screen-recorder",
+    language: "id",
+  },
+  {
+    slug: "screen-recorder",
+    language: "it",
+  },
+  {
+    slug: "screen-recorder",
+    language: "ja",
+  },
+  {
+    slug: "screen-recorder",
+    language: "ko",
+  },
+  {
+    slug: "screen-recorder",
+    language: "ms",
+  },
+  {
+    slug: "screen-recorder",
+    language: "nl",
+  },
+  {
+    slug: "screen-recorder",
+    language: "no",
+  },
+  {
+    slug: "screen-recorder",
+    language: "pl",
+  },
+  {
+    slug: "screen-recorder",
+    language: "pt",
+  },
+  {
+    slug: "screen-recorder",
+    language: "ru",
+  },
+  {
+    slug: "screen-recorder",
+    language: "sv",
+  },
+  {
+    slug: "screen-recorder",
+    language: "th",
+  },
+  {
+    slug: "screen-recorder",
+    language: "tr",
+  },
+  {
+    slug: "screen-recorder",
+    language: "vi",
+  },
+  {
+    slug: "screen-recorder",
+    language: "zh-CN",
+  },
+  {
+    slug: "screen-recorder",
+    language: "zh-TW",
+  },
+  {
     slug: "scrypt-key-derivation",
     language: "ar",
   },
