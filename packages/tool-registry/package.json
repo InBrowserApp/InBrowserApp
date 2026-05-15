@@ -167,6 +167,7 @@
     "@tool/ssh-key-generator": "workspace:*",
     "@tool/ssh-public-key-fingerprint": "workspace:*",
     "@tool/stopwatch": "workspace:*",
+    "@tool/svg-optimizer": "workspace:*",
     "@tool/svg-to-image-converter": "workspace:*",
     "@tool/text-diff": "workspace:*",
     "@tool/text-statistics": "workspace:*",

@@ -1,0 +1,4 @@
+{
+  "name": "SVG Optimizer",
+  "description": "Optimize SVG files with configurable SVGO cleanup, compression, preview, copy, and download"
+}

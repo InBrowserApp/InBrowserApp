@@ -1,0 +1,42 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import SvgOptimizerClient from "./client"
+import type { SvgOptimizerMessages } from "./client/types"
+import "./highlight.css"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+const { lang } = Astro.props
+
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const localizedMessages = resolveLocale<Omit<SvgOptimizerMessages, "meta">>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+)
+const messages = { meta, ...localizedMessages }
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <SvgOptimizerClient client:load messages={messages} />
+
+  {
+    IntroSection ? (
+      <ToolArticle>
+        <IntroSection />
+      </ToolArticle>
+    ) : null
+  }
+</ToolPageShell>

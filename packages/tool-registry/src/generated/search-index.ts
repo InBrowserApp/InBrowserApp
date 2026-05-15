@@ -20123,6 +20123,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "svg-optimizer",
+    category: "image",
+    icon: "image",
+    tags: ["image", "svg", "optimizer", "compression", "svgo"],
+    locales: {
+      ar: {
+        name: "SVG Optimizer",
+        description:
+          "حسّن ملفات SVG باستخدام تنظيف SVGO قابل للتكوين، والضغط، والمعاينة، والنسخ، والتنزيل",
+      },
+      de: {
+        name: "SVG Optimizer",
+        description:
+          "Optimiere SVG-Dateien mit konfigurierbarer SVGO-Bereinigung, Komprimierung, Vorschau, Kopieren und Download",
+      },
+      en: {
+        name: "SVG Optimizer",
+        description:
+          "Optimize SVG files with configurable SVGO cleanup, compression, preview, copy, and download",
+      },
+      es: {
+        name: "SVG Optimizer",
+        description:
+          "Optimiza archivos SVG con limpieza configurable de SVGO, compresión, vista previa, copia y descarga",
+      },
+      fr: {
+        name: "SVG Optimizer",
+        description:
+          "Optimisez les fichiers SVG avec un nettoyage SVGO configurable, compression, aperçu, copie et téléchargement",
+      },
+      he: {
+        name: "SVG Optimizer",
+        description:
+          "בצעו אופטימיזציה לקובצי SVG עם ניקוי SVGO ניתן להגדרה, דחיסה, תצוגה מקדימה, העתקה והורדה",
+      },
+      hi: {
+        name: "SVG Optimizer",
+        description:
+          "कॉन्फ़िगर करने योग्य SVGO cleanup, compression, preview, copy, और download के साथ SVG फ़ाइलों को optimize करें",
+      },
+      id: {
+        name: "SVG Optimizer",
+        description:
+          "Optimalkan file SVG dengan pembersihan SVGO yang dapat dikonfigurasi, kompresi, pratinjau, salin, dan unduh",
+      },
+      it: {
+        name: "SVG Optimizer",
+        description:
+          "Ottimizza file SVG con pulizia SVGO configurabile, compressione, anteprima, copia e download",
+      },
+      ja: {
+        name: "SVG Optimizer",
+        description:
+          "設定可能な SVGO クリーンアップ、圧縮、プレビュー、コピー、ダウンロードで SVG ファイルを最適化します",
+      },
+      ko: {
+        name: "SVG Optimizer",
+        description:
+          "설정 가능한 SVGO 정리, 압축, 미리보기, 복사, 다운로드 기능으로 SVG 파일 최적화",
+      },
+      ms: {
+        name: "SVG Optimizer",
+        description:
+          "Optimumkan fail SVG dengan pembersihan SVGO yang boleh dikonfigurasi, pemampatan, pratonton, salin, dan muat turun",
+      },
+      nl: {
+        name: "SVG Optimizer",
+        description:
+          "Optimaliseer SVG-bestanden met configureerbare SVGO-opschoning, compressie, voorbeeldweergave, kopiëren en downloaden",
+      },
+      no: {
+        name: "SVG Optimizer",
+        description:
+          "Optimaliser SVG-filer med konfigurerbar SVGO-opprydding, komprimering, forhåndsvisning, kopiering og nedlasting",
+      },
+      pl: {
+        name: "SVG Optimizer",
+        description:
+          "Optymalizuj pliki SVG z konfigurowalnym czyszczeniem SVGO, kompresją, podglądem, kopiowaniem i pobieraniem",
+      },
+      pt: {
+        name: "SVG Optimizer",
+        description:
+          "Otimize arquivos SVG com limpeza SVGO configurável, compactação, pré-visualização, cópia e download",
+      },
+      ru: {
+        name: "SVG Optimizer",
+        description:
+          "Оптимизируйте SVG-файлы с настраиваемой очисткой SVGO, сжатием, предпросмотром, копированием и скачиванием",
+      },
+      sv: {
+        name: "SVG Optimizer",
+        description:
+          "Optimera SVG-filer med konfigurerbar SVGO-rensning, komprimering, förhandsvisning, kopiering och nedladdning",
+      },
+      th: {
+        name: "SVG Optimizer",
+        description:
+          "ปรับแต่งไฟล์ SVG ให้เหมาะสมด้วยการล้างข้อมูลผ่าน SVGO ที่กำหนดค่าได้ การบีบอัด การแสดงตัวอย่าง การคัดลอก และการดาวน์โหลด",
+      },
+      tr: {
+        name: "SVG Optimizer",
+        description:
+          "SVG dosyalarını yapılandırılabilir SVGO temizleme, sıkıştırma, önizleme, kopyalama ve indirme ile optimize edin",
+      },
+      vi: {
+        name: "SVG Optimizer",
+        description:
+          "Tối ưu hóa tệp SVG bằng SVGO cleanup có thể cấu hình, nén, xem trước, sao chép và tải xuống",
+      },
+      "zh-CN": {
+        name: "SVG 优化器",
+        description:
+          "使用可配置的 SVGO 清理、压缩、预览、复制和下载功能优化 SVG 文件",
+      },
+      "zh-TW": {
+        name: "SVG 優化器",
+        description:
+          "使用可設定的 SVGO 清理、壓縮、預覽、複製和下載功能來優化 SVG 檔案",
+      },
+    },
+  },
+  {
     slug: "svg-to-image-converter",
     category: "image",
     icon: "image",

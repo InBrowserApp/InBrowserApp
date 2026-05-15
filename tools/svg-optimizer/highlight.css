@@ -1,0 +1,43 @@
+.svg-markup-highlight-surface {
+  max-height: 28rem;
+  overflow: auto;
+}
+
+.svg-markup-highlight {
+  min-height: 14rem;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.svg-markup-highlight code {
+  display: block;
+}
+
+.svg-markup-highlight .hljs-comment,
+.svg-markup-highlight .hljs-punctuation {
+  color: color-mix(in oklab, var(--foreground) 52%, transparent);
+}
+
+.svg-markup-highlight .hljs-tag,
+.svg-markup-highlight .hljs-name,
+.svg-markup-highlight .hljs-attr {
+  color: color-mix(in oklab, var(--destructive) 62%, var(--foreground));
+}
+
+.svg-markup-highlight .hljs-string {
+  color: color-mix(in oklab, var(--primary) 74%, var(--foreground));
+}
+
+.svg-markup-highlight .hljs-symbol,
+.svg-markup-highlight .hljs-meta {
+  color: color-mix(in oklab, var(--accent-foreground) 72%, var(--foreground));
+}
+
+.svg-markup-highlight .hljs-number {
+  color: color-mix(in oklab, var(--chart-3) 80%, var(--foreground));
+}
