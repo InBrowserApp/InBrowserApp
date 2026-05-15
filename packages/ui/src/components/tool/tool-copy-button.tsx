@@ -9,11 +9,13 @@ type ToolCopyButtonProps = Readonly<{
   value: string
   copyLabel: string
   copiedLabel: string
+  className?: string
   disabled?: boolean
   variant?: "default" | "outline" | "secondary" | "ghost"
 }>
 
 function ToolCopyButton({
+  className,
   value,
   copyLabel,
   copiedLabel,
@@ -50,6 +52,7 @@ function ToolCopyButton({
       type="button"
       variant={variant}
       size="sm"
+      className={className}
       disabled={disabled || value.length === 0}
       onClick={() => {
         void handleCopy()

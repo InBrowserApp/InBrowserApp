@@ -14130,6 +14130,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-info-viewer",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "metadata", "document", "viewer", "offline"],
+    locales: {
+      ar: {
+        name: "PDF Info Viewer",
+        description:
+          "اعرض بيانات PDF الوصفية، وعدد الصفحات، والإصدار، وتفاصيل الملف، وخصائص المستند محليًا في متصفحك.",
+      },
+      de: {
+        name: "PDF Info Viewer",
+        description:
+          "PDF-Metadaten, Seitenanzahl, Version, Dateidetails und Dokumenteigenschaften lokal in deinem Browser anzeigen.",
+      },
+      en: {
+        name: "PDF Info Viewer",
+        description:
+          "View PDF metadata, page count, version, file details, and document properties locally in your browser.",
+      },
+      es: {
+        name: "PDF Info Viewer",
+        description:
+          "Consulta metadatos de PDF, recuento de páginas, versión, detalles del archivo y propiedades del documento localmente en tu navegador.",
+      },
+      fr: {
+        name: "PDF Info Viewer",
+        description:
+          "Consultez les métadonnées PDF, le nombre de pages, la version, les détails du fichier et les propriétés du document localement dans votre navigateur.",
+      },
+      he: {
+        name: "PDF Info Viewer",
+        description:
+          "הצג מטא-נתונים של PDF, מספר עמודים, גרסה, פרטי קובץ ומאפייני מסמך באופן מקומי בדפדפן שלך.",
+      },
+      hi: {
+        name: "PDF Info Viewer",
+        description:
+          "अपने ब्राउज़र में ही PDF मेटाडेटा, पृष्ठ संख्या, संस्करण, फ़ाइल विवरण और दस्तावेज़ गुण देखें.",
+      },
+      id: {
+        name: "PDF Info Viewer",
+        description:
+          "Lihat metadata PDF, jumlah halaman, versi, detail file, dan properti dokumen secara lokal di browser Anda.",
+      },
+      it: {
+        name: "PDF Info Viewer",
+        description:
+          "Visualizza metadati PDF, numero di pagine, versione, dettagli del file e proprietà del documento localmente nel tuo browser.",
+      },
+      ja: {
+        name: "PDF Info Viewer",
+        description:
+          "PDF のメタデータ、ページ数、バージョン、ファイル詳細、ドキュメントプロパティをブラウザ内でローカルに表示します。",
+      },
+      ko: {
+        name: "PDF Info Viewer",
+        description:
+          "브라우저에서 로컬로 PDF 메타데이터, 페이지 수, 버전, 파일 세부 정보, 문서 속성을 확인하세요.",
+      },
+      ms: {
+        name: "PDF Info Viewer",
+        description:
+          "Lihat metadata PDF, bilangan halaman, versi, butiran fail dan sifat dokumen secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF Info Viewer",
+        description:
+          "Bekijk PDF-metadata, aantal pagina's, versie, bestandsdetails en documenteigenschappen lokaal in je browser.",
+      },
+      no: {
+        name: "PDF Info Viewer",
+        description:
+          "Vis PDF-metadata, sidetall, versjon, fildetaljer og dokumentegenskaper lokalt i nettleseren.",
+      },
+      pl: {
+        name: "PDF Info Viewer",
+        description:
+          "Wyświetlaj metadane PDF, liczbę stron, wersję, szczegóły pliku i właściwości dokumentu lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "PDF Info Viewer",
+        description:
+          "Veja metadados de PDF, contagem de páginas, versão, detalhes do arquivo e propriedades do documento localmente no seu navegador.",
+      },
+      ru: {
+        name: "PDF Info Viewer",
+        description:
+          "Просматривайте метаданные PDF, количество страниц, версию, сведения о файле и свойства документа локально в браузере.",
+      },
+      sv: {
+        name: "PDF Info Viewer",
+        description:
+          "Visa PDF-metadata, sidantal, version, filinformation och dokumentegenskaper lokalt i din webbläsare.",
+      },
+      th: {
+        name: "PDF Info Viewer",
+        description:
+          "ดู metadata ของ PDF, จำนวนหน้า, เวอร์ชัน, รายละเอียดไฟล์ และคุณสมบัติเอกสารภายในเบราว์เซอร์ของคุณโดยตรง",
+      },
+      tr: {
+        name: "PDF Info Viewer",
+        description:
+          "PDF meta verilerini, sayfa sayısını, sürümü, dosya ayrıntılarını ve belge özelliklerini tarayıcınızda yerel olarak görüntüleyin.",
+      },
+      vi: {
+        name: "PDF Info Viewer",
+        description:
+          "Xem siêu dữ liệu PDF, số trang, phiên bản, chi tiết tệp và thuộc tính tài liệu ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "PDF Info Viewer",
+        description:
+          "在浏览器本地查看 PDF 元数据、页数、版本、文件详情和文档属性。",
+      },
+      "zh-TW": {
+        name: "PDF Info Viewer",
+        description:
+          "在瀏覽器本機查看 PDF 中繼資料、頁數、版本、檔案詳細資訊與文件屬性。",
+      },
+    },
+  },
+  {
     slug: "pgp-key-generator",
     category: "network",
     icon: "lock",
@@ -36849,6 +36972,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PBKDF2 金鑰派生",
         description:
           "使用 PBKDF2 從密碼和鹽派生金鑰。可設定迭代次數、雜湊演算法與輸出長度，支援十六進位或 Base64 輸出。",
+      },
+    },
+  },
+  "pdf-info-viewer": {
+    slug: "pdf-info-viewer",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "metadata", "document", "viewer", "offline"],
+    locales: {
+      ar: {
+        name: "PDF Info Viewer",
+        description:
+          "اعرض بيانات PDF الوصفية، وعدد الصفحات، والإصدار، وتفاصيل الملف، وخصائص المستند محليًا في متصفحك.",
+      },
+      de: {
+        name: "PDF Info Viewer",
+        description:
+          "PDF-Metadaten, Seitenanzahl, Version, Dateidetails und Dokumenteigenschaften lokal in deinem Browser anzeigen.",
+      },
+      en: {
+        name: "PDF Info Viewer",
+        description:
+          "View PDF metadata, page count, version, file details, and document properties locally in your browser.",
+      },
+      es: {
+        name: "PDF Info Viewer",
+        description:
+          "Consulta metadatos de PDF, recuento de páginas, versión, detalles del archivo y propiedades del documento localmente en tu navegador.",
+      },
+      fr: {
+        name: "PDF Info Viewer",
+        description:
+          "Consultez les métadonnées PDF, le nombre de pages, la version, les détails du fichier et les propriétés du document localement dans votre navigateur.",
+      },
+      he: {
+        name: "PDF Info Viewer",
+        description:
+          "הצג מטא-נתונים של PDF, מספר עמודים, גרסה, פרטי קובץ ומאפייני מסמך באופן מקומי בדפדפן שלך.",
+      },
+      hi: {
+        name: "PDF Info Viewer",
+        description:
+          "अपने ब्राउज़र में ही PDF मेटाडेटा, पृष्ठ संख्या, संस्करण, फ़ाइल विवरण और दस्तावेज़ गुण देखें.",
+      },
+      id: {
+        name: "PDF Info Viewer",
+        description:
+          "Lihat metadata PDF, jumlah halaman, versi, detail file, dan properti dokumen secara lokal di browser Anda.",
+      },
+      it: {
+        name: "PDF Info Viewer",
+        description:
+          "Visualizza metadati PDF, numero di pagine, versione, dettagli del file e proprietà del documento localmente nel tuo browser.",
+      },
+      ja: {
+        name: "PDF Info Viewer",
+        description:
+          "PDF のメタデータ、ページ数、バージョン、ファイル詳細、ドキュメントプロパティをブラウザ内でローカルに表示します。",
+      },
+      ko: {
+        name: "PDF Info Viewer",
+        description:
+          "브라우저에서 로컬로 PDF 메타데이터, 페이지 수, 버전, 파일 세부 정보, 문서 속성을 확인하세요.",
+      },
+      ms: {
+        name: "PDF Info Viewer",
+        description:
+          "Lihat metadata PDF, bilangan halaman, versi, butiran fail dan sifat dokumen secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF Info Viewer",
+        description:
+          "Bekijk PDF-metadata, aantal pagina's, versie, bestandsdetails en documenteigenschappen lokaal in je browser.",
+      },
+      no: {
+        name: "PDF Info Viewer",
+        description:
+          "Vis PDF-metadata, sidetall, versjon, fildetaljer og dokumentegenskaper lokalt i nettleseren.",
+      },
+      pl: {
+        name: "PDF Info Viewer",
+        description:
+          "Wyświetlaj metadane PDF, liczbę stron, wersję, szczegóły pliku i właściwości dokumentu lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "PDF Info Viewer",
+        description:
+          "Veja metadados de PDF, contagem de páginas, versão, detalhes do arquivo e propriedades do documento localmente no seu navegador.",
+      },
+      ru: {
+        name: "PDF Info Viewer",
+        description:
+          "Просматривайте метаданные PDF, количество страниц, версию, сведения о файле и свойства документа локально в браузере.",
+      },
+      sv: {
+        name: "PDF Info Viewer",
+        description:
+          "Visa PDF-metadata, sidantal, version, filinformation och dokumentegenskaper lokalt i din webbläsare.",
+      },
+      th: {
+        name: "PDF Info Viewer",
+        description:
+          "ดู metadata ของ PDF, จำนวนหน้า, เวอร์ชัน, รายละเอียดไฟล์ และคุณสมบัติเอกสารภายในเบราว์เซอร์ของคุณโดยตรง",
+      },
+      tr: {
+        name: "PDF Info Viewer",
+        description:
+          "PDF meta verilerini, sayfa sayısını, sürümü, dosya ayrıntılarını ve belge özelliklerini tarayıcınızda yerel olarak görüntüleyin.",
+      },
+      vi: {
+        name: "PDF Info Viewer",
+        description:
+          "Xem siêu dữ liệu PDF, số trang, phiên bản, chi tiết tệp và thuộc tính tài liệu ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "PDF Info Viewer",
+        description:
+          "在浏览器本地查看 PDF 元数据、页数、版本、文件详情和文档属性。",
+      },
+      "zh-TW": {
+        name: "PDF Info Viewer",
+        description:
+          "在瀏覽器本機查看 PDF 中繼資料、頁數、版本、檔案詳細資訊與文件屬性。",
       },
     },
   },
