@@ -22460,6 +22460,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "uuid-v1-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid-v1",
+      "id",
+      "identifier",
+      "unique",
+      "time-based",
+      "timestamp",
+      "mac-address",
+      "generator",
+      "bulk",
+    ],
+    locales: {
+      ar: {
+        name: "مولد UUID v1",
+        description:
+          "أنشئ معرف UUID v1 واحدًا أو عدة معرفات زمنية داخل المتصفح مع قيم عنوان MAC وتسلسل الساعة القابلة للضبط.",
+      },
+      de: {
+        name: "UUID v1 Generator",
+        description:
+          "Erzeuge einen oder viele zeitbasierte UUID-v1-Bezeichner im Browser mit konfigurierbarer MAC-Adresse und Clock Sequence.",
+      },
+      en: {
+        name: "UUID v1 Generator",
+        description:
+          "Generate one or many time-based UUID v1 identifiers in-browser with configurable MAC address and clock sequence values.",
+      },
+      es: {
+        name: "Generador de UUID v1",
+        description:
+          "Genera uno o muchos identificadores UUID v1 basados en tiempo en el navegador con dirección MAC y secuencia de reloj configurables.",
+      },
+      fr: {
+        name: "Générateur d'UUID v1",
+        description:
+          "Générez un ou plusieurs identifiants UUID v1 horodatés dans le navigateur avec une adresse MAC et une séquence d’horloge configurables.",
+      },
+      he: {
+        name: "מחולל UUID v1",
+        description:
+          "צור מזהה UUID v1 אחד או רבים מבוססי זמן בדפדפן עם כתובת MAC ורצף שעון ניתנים להגדרה.",
+      },
+      hi: {
+        name: "UUID v1 Generator",
+        description:
+          "कॉन्फ़िगर करने योग्य MAC पते और clock sequence मानों के साथ ब्राउज़र में एक या कई समय-आधारित UUID v1 पहचानकर्ता बनाएँ।",
+      },
+      id: {
+        name: "Generator UUID v1",
+        description:
+          "Buat satu atau banyak identifier UUID v1 berbasis waktu di browser dengan alamat MAC dan clock sequence yang dapat dikonfigurasi.",
+      },
+      it: {
+        name: "Generatore di UUID v1",
+        description:
+          "Genera uno o molti identificatori UUID v1 basati sul tempo nel browser con indirizzo MAC e sequenza di clock configurabili.",
+      },
+      ja: {
+        name: "UUID v1 Generator",
+        description:
+          "設定可能な MAC アドレスとクロックシーケンスで、時間ベースの UUID v1 識別子をブラウザー内で 1 件または複数件生成します。",
+      },
+      ko: {
+        name: "UUID v1 생성기",
+        description:
+          "설정 가능한 MAC 주소와 클록 시퀀스로 브라우저에서 시간 기반 UUID v1 식별자를 하나 또는 여러 개 생성합니다.",
+      },
+      ms: {
+        name: "Penjana UUID v1",
+        description:
+          "Jana satu atau banyak pengecam UUID v1 berasaskan masa dalam pelayar dengan alamat MAC dan clock sequence boleh dikonfigurasi.",
+      },
+      nl: {
+        name: "UUID v1 Generator",
+        description:
+          "Genereer één of meerdere tijdgebaseerde UUID v1-identifiers in de browser met configureerbaar MAC-adres en clock sequence.",
+      },
+      no: {
+        name: "UUID v1 Generator",
+        description:
+          "Generer én eller mange tidsbaserte UUID v1-identifikatorer i nettleseren med konfigurerbar MAC-adresse og clock sequence.",
+      },
+      pl: {
+        name: "Generator UUID v1",
+        description:
+          "Generuj jeden lub wiele czasowych identyfikatorów UUID v1 w przeglądarce z konfigurowalnym adresem MAC i sekwencją zegara.",
+      },
+      pt: {
+        name: "Gerador de UUID v1",
+        description:
+          "Gere um ou vários identificadores UUID v1 baseados em tempo no navegador com endereço MAC e sequência de relógio configuráveis.",
+      },
+      ru: {
+        name: "Генератор UUID v1",
+        description:
+          "Создавайте один или несколько временных идентификаторов UUID v1 в браузере с настраиваемым MAC-адресом и clock sequence.",
+      },
+      sv: {
+        name: "UUID v1-generator",
+        description:
+          "Generera en eller många tidsbaserade UUID v1-identifierare i webbläsaren med konfigurerbar MAC-adress och clock sequence.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง UUID v1",
+        description:
+          "สร้างตัวระบุ UUID v1 แบบอิงเวลาได้หนึ่งรายการหรือหลายรายการในเบราว์เซอร์ พร้อมค่า MAC address และ clock sequence ที่กำหนดได้",
+      },
+      tr: {
+        name: "UUID v1 Oluşturucu",
+        description:
+          "Yapılandırılabilir MAC adresi ve saat dizisi değerleriyle tarayıcıda bir veya çok sayıda zaman tabanlı UUID v1 tanımlayıcısı üretin.",
+      },
+      vi: {
+        name: "Trình tạo UUID v1",
+        description:
+          "Tạo một hoặc nhiều mã định danh UUID v1 dựa trên thời gian trong trình duyệt với địa chỉ MAC và clock sequence có thể cấu hình.",
+      },
+      "zh-CN": {
+        name: "UUID v1 生成器",
+        description:
+          "在浏览器中生成一个或多个基于时间的 UUID v1 标识符，可配置 MAC 地址和时钟序列。",
+      },
+      "zh-TW": {
+        name: "UUID v1 產生器",
+        description:
+          "在瀏覽器中產生一個或多個以時間為基礎的 UUID v1 識別碼，可設定 MAC 位址與時鐘序列。",
+      },
+    },
+  },
+  {
     slug: "uuid-v3-generator",
     category: "developer",
     icon: "binary",
@@ -46585,6 +46719,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "UUID 解碼器",
         description: "將 UUID 解碼為其版本、變體、時間戳欄位與數值表示法。",
+      },
+    },
+  },
+  "uuid-v1-generator": {
+    slug: "uuid-v1-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid-v1",
+      "id",
+      "identifier",
+      "unique",
+      "time-based",
+      "timestamp",
+      "mac-address",
+      "generator",
+      "bulk",
+    ],
+    locales: {
+      ar: {
+        name: "مولد UUID v1",
+        description:
+          "أنشئ معرف UUID v1 واحدًا أو عدة معرفات زمنية داخل المتصفح مع قيم عنوان MAC وتسلسل الساعة القابلة للضبط.",
+      },
+      de: {
+        name: "UUID v1 Generator",
+        description:
+          "Erzeuge einen oder viele zeitbasierte UUID-v1-Bezeichner im Browser mit konfigurierbarer MAC-Adresse und Clock Sequence.",
+      },
+      en: {
+        name: "UUID v1 Generator",
+        description:
+          "Generate one or many time-based UUID v1 identifiers in-browser with configurable MAC address and clock sequence values.",
+      },
+      es: {
+        name: "Generador de UUID v1",
+        description:
+          "Genera uno o muchos identificadores UUID v1 basados en tiempo en el navegador con dirección MAC y secuencia de reloj configurables.",
+      },
+      fr: {
+        name: "Générateur d'UUID v1",
+        description:
+          "Générez un ou plusieurs identifiants UUID v1 horodatés dans le navigateur avec une adresse MAC et une séquence d’horloge configurables.",
+      },
+      he: {
+        name: "מחולל UUID v1",
+        description:
+          "צור מזהה UUID v1 אחד או רבים מבוססי זמן בדפדפן עם כתובת MAC ורצף שעון ניתנים להגדרה.",
+      },
+      hi: {
+        name: "UUID v1 Generator",
+        description:
+          "कॉन्फ़िगर करने योग्य MAC पते और clock sequence मानों के साथ ब्राउज़र में एक या कई समय-आधारित UUID v1 पहचानकर्ता बनाएँ।",
+      },
+      id: {
+        name: "Generator UUID v1",
+        description:
+          "Buat satu atau banyak identifier UUID v1 berbasis waktu di browser dengan alamat MAC dan clock sequence yang dapat dikonfigurasi.",
+      },
+      it: {
+        name: "Generatore di UUID v1",
+        description:
+          "Genera uno o molti identificatori UUID v1 basati sul tempo nel browser con indirizzo MAC e sequenza di clock configurabili.",
+      },
+      ja: {
+        name: "UUID v1 Generator",
+        description:
+          "設定可能な MAC アドレスとクロックシーケンスで、時間ベースの UUID v1 識別子をブラウザー内で 1 件または複数件生成します。",
+      },
+      ko: {
+        name: "UUID v1 생성기",
+        description:
+          "설정 가능한 MAC 주소와 클록 시퀀스로 브라우저에서 시간 기반 UUID v1 식별자를 하나 또는 여러 개 생성합니다.",
+      },
+      ms: {
+        name: "Penjana UUID v1",
+        description:
+          "Jana satu atau banyak pengecam UUID v1 berasaskan masa dalam pelayar dengan alamat MAC dan clock sequence boleh dikonfigurasi.",
+      },
+      nl: {
+        name: "UUID v1 Generator",
+        description:
+          "Genereer één of meerdere tijdgebaseerde UUID v1-identifiers in de browser met configureerbaar MAC-adres en clock sequence.",
+      },
+      no: {
+        name: "UUID v1 Generator",
+        description:
+          "Generer én eller mange tidsbaserte UUID v1-identifikatorer i nettleseren med konfigurerbar MAC-adresse og clock sequence.",
+      },
+      pl: {
+        name: "Generator UUID v1",
+        description:
+          "Generuj jeden lub wiele czasowych identyfikatorów UUID v1 w przeglądarce z konfigurowalnym adresem MAC i sekwencją zegara.",
+      },
+      pt: {
+        name: "Gerador de UUID v1",
+        description:
+          "Gere um ou vários identificadores UUID v1 baseados em tempo no navegador com endereço MAC e sequência de relógio configuráveis.",
+      },
+      ru: {
+        name: "Генератор UUID v1",
+        description:
+          "Создавайте один или несколько временных идентификаторов UUID v1 в браузере с настраиваемым MAC-адресом и clock sequence.",
+      },
+      sv: {
+        name: "UUID v1-generator",
+        description:
+          "Generera en eller många tidsbaserade UUID v1-identifierare i webbläsaren med konfigurerbar MAC-adress och clock sequence.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง UUID v1",
+        description:
+          "สร้างตัวระบุ UUID v1 แบบอิงเวลาได้หนึ่งรายการหรือหลายรายการในเบราว์เซอร์ พร้อมค่า MAC address และ clock sequence ที่กำหนดได้",
+      },
+      tr: {
+        name: "UUID v1 Oluşturucu",
+        description:
+          "Yapılandırılabilir MAC adresi ve saat dizisi değerleriyle tarayıcıda bir veya çok sayıda zaman tabanlı UUID v1 tanımlayıcısı üretin.",
+      },
+      vi: {
+        name: "Trình tạo UUID v1",
+        description:
+          "Tạo một hoặc nhiều mã định danh UUID v1 dựa trên thời gian trong trình duyệt với địa chỉ MAC và clock sequence có thể cấu hình.",
+      },
+      "zh-CN": {
+        name: "UUID v1 生成器",
+        description:
+          "在浏览器中生成一个或多个基于时间的 UUID v1 标识符，可配置 MAC 地址和时钟序列。",
+      },
+      "zh-TW": {
+        name: "UUID v1 產生器",
+        description:
+          "在瀏覽器中產生一個或多個以時間為基礎的 UUID v1 識別碼，可設定 MAC 位址與時鐘序列。",
       },
     },
   },

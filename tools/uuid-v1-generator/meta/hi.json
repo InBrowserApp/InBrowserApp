@@ -1,0 +1,4 @@
+{
+  "name": "UUID v1 Generator",
+  "description": "कॉन्फ़िगर करने योग्य MAC पते और clock sequence मानों के साथ ब्राउज़र में एक या कई समय-आधारित UUID v1 पहचानकर्ता बनाएँ।"
+}

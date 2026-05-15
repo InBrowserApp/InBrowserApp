@@ -1,0 +1,4 @@
+{
+  "name": "UUID v1-generator",
+  "description": "Generera en eller många tidsbaserade UUID v1-identifierare i webbläsaren med konfigurerbar MAC-adress och clock sequence."
+}
