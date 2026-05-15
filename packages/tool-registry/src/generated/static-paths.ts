@@ -6442,6 +6442,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-to-avif-converter",
+    language: "ar",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "de",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "en",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "es",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "fr",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "he",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "hi",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "id",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "it",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "ja",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "ko",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "ms",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "nl",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "no",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "pl",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "pt",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "ru",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "sv",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "th",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "tr",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "vi",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-to-avif-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "image-to-ico",
     language: "ar",
   },

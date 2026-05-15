@@ -8816,6 +8816,128 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "image-to-avif-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "avif", "converter", "compress", "resize", "batch"],
+    locales: {
+      ar: {
+        name: "محول الصور إلى AVIF",
+        description:
+          "حوّل الصور إلى AVIF مع الجودة والسرعة وتغيير الحجم ووضع دون فقدان وتصدير الدفعات بصيغة ZIP.",
+      },
+      de: {
+        name: "Bild-zu-AVIF-Konverter",
+        description:
+          "Konvertiere Bilder in AVIF mit optionaler Größenänderung und Batch-ZIP-Export.",
+      },
+      en: {
+        name: "Image to AVIF Converter",
+        description:
+          "Convert images to AVIF with quality, speed, resizing, lossless mode, and batch ZIP export.",
+      },
+      es: {
+        name: "Convertidor de imágenes a AVIF",
+        description:
+          "Convierte imágenes a AVIF con calidad, velocidad, cambio de tamaño, modo sin pérdida y exportación ZIP por lotes.",
+      },
+      fr: {
+        name: "Convertisseur d’images en AVIF",
+        description:
+          "Convertissez des images en AVIF avec redimensionnement facultatif et export ZIP par lot.",
+      },
+      he: {
+        name: "ממיר תמונות ל-AVIF",
+        description:
+          "המר תמונות ל-AVIF עם איכות, מהירות, שינוי גודל, מצב ללא אובדן וייצוא ZIP באצווה.",
+      },
+      hi: {
+        name: "इमेज से AVIF कन्वर्टर",
+        description:
+          "गुणवत्ता, गति, रीसाइजिंग, लॉसलेस मोड और बैच ZIP एक्सपोर्ट के साथ इमेज को AVIF में बदलें।",
+      },
+      id: {
+        name: "Konverter Gambar ke AVIF",
+        description:
+          "Konversi gambar ke AVIF dengan kualitas, kecepatan, ubah ukuran, mode lossless, dan ekspor ZIP batch.",
+      },
+      it: {
+        name: "Convertitore di immagini in AVIF",
+        description:
+          "Converti immagini in AVIF con ridimensionamento facoltativo ed esportazione ZIP in batch.",
+      },
+      ja: {
+        name: "画像から AVIF へのコンバーター",
+        description:
+          "品質、速度、リサイズ、ロスレスモード、一括 ZIP エクスポートを指定して、画像を AVIF に変換します。",
+      },
+      ko: {
+        name: "이미지 AVIF 변환기",
+        description:
+          "품질, 속도, 크기 조정, 무손실 모드, 일괄 ZIP 내보내기 설정으로 이미지를 AVIF로 변환합니다.",
+      },
+      ms: {
+        name: "Penukar Imej kepada AVIF",
+        description:
+          "Tukar imej kepada AVIF dengan kualiti, kelajuan, penskalaan, mod tanpa kehilangan, dan eksport ZIP kelompok.",
+      },
+      nl: {
+        name: "Afbeelding naar AVIF-converter",
+        description:
+          "Converteer afbeeldingen naar AVIF met kwaliteit, snelheid, formaat wijzigen, lossless-modus en batch-ZIP-export.",
+      },
+      no: {
+        name: "Bilde til AVIF-konverterer",
+        description:
+          "Konverter bilder til AVIF med innstillinger for kvalitet, hastighet, skalering, tapsfri modus og ZIP-eksport for flere filer.",
+      },
+      pl: {
+        name: "Konwerter obrazów do AVIF",
+        description:
+          "Konwertuj obrazy do AVIF z ustawieniami jakości, szybkości, zmiany rozmiaru, trybu bezstratnego i zbiorczym eksportem ZIP.",
+      },
+      pt: {
+        name: "Conversor de Imagens para AVIF",
+        description:
+          "Converta imagens para AVIF com qualidade, velocidade, redimensionamento, modo sem perdas e exportação em lote para ZIP.",
+      },
+      ru: {
+        name: "Конвертер изображений в AVIF",
+        description:
+          "Конвертируйте изображения в AVIF с настройками качества, скорости, изменения размера, режима без потерь и пакетным экспортом в ZIP.",
+      },
+      sv: {
+        name: "Bild till AVIF-konverterare",
+        description:
+          "Konvertera bilder till AVIF med kvalitet, hastighet, storleksändring, förlustfritt läge och batchexport som ZIP.",
+      },
+      th: {
+        name: "ตัวแปลงรูปภาพเป็น AVIF",
+        description:
+          "แปลงรูปภาพเป็น AVIF พร้อมคุณภาพ ความเร็ว การปรับขนาด โหมดไม่สูญเสียข้อมูล และการส่งออก ZIP แบบชุด",
+      },
+      tr: {
+        name: "Görselden AVIF'ye Dönüştürücü",
+        description:
+          "Görselleri kalite, hız, yeniden boyutlandırma, kayıpsız mod ve toplu ZIP dışa aktarma seçenekleriyle AVIF'ye dönüştürün.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi ảnh sang AVIF",
+        description:
+          "Chuyển đổi ảnh sang AVIF với chất lượng, tốc độ, đổi kích thước, chế độ lossless và xuất hàng loạt thành ZIP.",
+      },
+      "zh-CN": {
+        name: "图片转 AVIF 转换器",
+        description: "将图片转换为 AVIF，支持可选调整尺寸和批量 ZIP 导出。",
+      },
+      "zh-TW": {
+        name: "圖片轉 AVIF 轉換器",
+        description:
+          "將圖片轉換為 AVIF，可調整品質、速度、尺寸、無損模式，並批次匯出 ZIP。",
+      },
+    },
+  },
+  {
     slug: "image-to-ico",
     category: "image",
     icon: "image",
