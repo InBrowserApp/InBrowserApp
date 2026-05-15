@@ -1,0 +1,4 @@
+{
+  "name": "SSH-nøkkelgenerator",
+  "description": "Generer OpenSSH Ed25519- eller RSA-nøkkelpar lokalt med kopiklare offentlige nøkler, private nøkler og SHA-256-fingeravtrykk."
+}

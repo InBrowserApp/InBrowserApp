@@ -1,0 +1,4 @@
+{
+  "name": "SSH Anahtar Oluşturucu",
+  "description": "OpenSSH Ed25519 veya RSA anahtar çiftlerini, kopyalamaya hazır açık anahtarlar, özel anahtarlar ve SHA-256 parmak izleriyle yerel olarak oluşturun."
+}

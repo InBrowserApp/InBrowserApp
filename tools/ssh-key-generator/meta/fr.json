@@ -1,0 +1,4 @@
+{
+  "name": "Générateur de clés SSH",
+  "description": "Générez localement des paires de clés OpenSSH Ed25519 ou RSA avec clés publiques, clés privées et empreintes SHA-256 prêtes à copier."
+}

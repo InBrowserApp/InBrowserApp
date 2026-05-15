@@ -13618,6 +13618,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ssh-key-generator",
+    language: "ar",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "de",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "en",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "es",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "fr",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "he",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "hi",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "id",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "it",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "ja",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "ko",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "ms",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "nl",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "no",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "pl",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "pt",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "ru",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "sv",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "th",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "tr",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "vi",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "ssh-key-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "ssh-public-key-fingerprint",
     language: "ar",
   },

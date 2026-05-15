@@ -155,6 +155,7 @@
     "@tool/sm3-hash-text-or-file": "workspace:*",
     "@tool/sql-formatter-and-linter": "workspace:*",
     "@tool/sri-hash-generator": "workspace:*",
+    "@tool/ssh-key-generator": "workspace:*",
     "@tool/ssh-public-key-fingerprint": "workspace:*",
     "@tool/stopwatch": "workspace:*",
     "@tool/svg-to-image-converter": "workspace:*",

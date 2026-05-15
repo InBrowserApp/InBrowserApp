@@ -1,0 +1,4 @@
+{
+  "name": "Gerador de chaves SSH",
+  "description": "Gere pares de chaves OpenSSH Ed25519 ou RSA localmente, com chaves públicas, chaves privadas e impressões digitais SHA-256 prontas para copiar."
+}

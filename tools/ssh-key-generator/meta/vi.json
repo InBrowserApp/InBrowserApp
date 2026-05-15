@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo khóa SSH",
+  "description": "Tạo cục bộ cặp khóa OpenSSH Ed25519 hoặc RSA với khóa công khai, khóa riêng tư và dấu vân tay SHA-256 sẵn sàng để sao chép."
+}
