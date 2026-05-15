@@ -71,10 +71,15 @@ function BarcodeReaderClient({
     []
   )
 
-  const { cameraStatus, startCamera, stopCamera, videoRef } = useBarcodeCamera({
+  const {
+    cameraErrorMessage,
+    cameraStatus,
+    startCamera,
+    stopCamera,
+    videoRef,
+  } = useBarcodeCamera({
     messages,
     onDecoded: handleDecoded,
-    onError: setError,
   })
 
   async function handleFileSelected(file: File) {
@@ -202,6 +207,7 @@ function BarcodeReaderClient({
           />
         ) : (
           <CameraCard
+            errorMessage={cameraErrorMessage}
             messages={messages}
             onStartCamera={() => {
               void startCamera()

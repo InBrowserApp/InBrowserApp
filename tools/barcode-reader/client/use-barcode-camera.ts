@@ -20,7 +20,6 @@ type UseBarcodeCameraOptions = Readonly<{
     decoded: Omit<BarcodeReaderResult, "source">,
     source: BarcodeReaderResult["source"]
   ) => void
-  onError: (message: string) => void
 }>
 
 function isPermissionError(error: unknown) {
@@ -42,12 +41,9 @@ function stopVideoStream(video: HTMLVideoElement | null) {
   }
 }
 
-function useBarcodeCamera({
-  messages,
-  onDecoded,
-  onError,
-}: UseBarcodeCameraOptions) {
+function useBarcodeCamera({ messages, onDecoded }: UseBarcodeCameraOptions) {
   const [cameraStatus, setCameraStatus] = useState<CameraStatus>("idle")
+  const [cameraErrorMessage, setCameraErrorMessage] = useState("")
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const controlsRef = useRef<IScannerControls | null>(null)
   const isScanningRef = useRef(false)
@@ -80,13 +76,13 @@ function useBarcodeCamera({
 
     if (!video) {
       setCameraStatus("error")
-      onError(messages.cameraErrorDescription)
+      setCameraErrorMessage(messages.cameraErrorDescription)
       return
     }
 
     releaseCamera()
     setCameraStatus("starting")
-    onError("")
+    setCameraErrorMessage("")
     isScanningRef.current = true
 
     try {
@@ -104,7 +100,7 @@ function useBarcodeCamera({
           if (error && !isIgnorableDecodeError(error)) {
             releaseCamera()
             setCameraStatus("error")
-            onError(messages.cameraFrameError)
+            setCameraErrorMessage(messages.cameraFrameError)
           }
         }
       )
@@ -118,11 +114,11 @@ function useBarcodeCamera({
       setCameraStatus("scanning")
     } catch (cameraError) {
       releaseCamera()
-      setCameraStatus(
-        isPermissionError(cameraError) ? "permission-denied" : "error"
-      )
-      onError(
-        isPermissionError(cameraError)
+      const permissionError = isPermissionError(cameraError)
+
+      setCameraStatus(permissionError ? "permission-denied" : "error")
+      setCameraErrorMessage(
+        permissionError
           ? messages.cameraPermissionDescription
           : messages.cameraErrorDescription
       )
@@ -133,7 +129,6 @@ function useBarcodeCamera({
     messages.cameraFrameError,
     messages.cameraPermissionDescription,
     onDecoded,
-    onError,
     releaseCamera,
     stopCamera,
   ])
@@ -146,7 +141,7 @@ function useBarcodeCamera({
 
   useEffect(() => releaseCamera, [releaseCamera])
 
-  return { cameraStatus, startCamera, stopCamera, videoRef }
+  return { cameraErrorMessage, cameraStatus, startCamera, stopCamera, videoRef }
 }
 
 export { useBarcodeCamera }

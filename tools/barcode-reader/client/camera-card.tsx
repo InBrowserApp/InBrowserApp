@@ -37,6 +37,7 @@ import { cn } from "@workspace/ui/lib/utils"
 import type { BarcodeReaderMessages, CameraStatus } from "./types"
 
 type CameraCardProps = Readonly<{
+  errorMessage: string
   messages: BarcodeReaderMessages
   onStartCamera: () => void
   onStopCamera: () => void
@@ -45,9 +46,10 @@ type CameraCardProps = Readonly<{
 }>
 
 function CameraStatusAlert({
+  errorMessage,
   messages,
   status,
-}: Pick<CameraCardProps, "messages" | "status">) {
+}: Pick<CameraCardProps, "errorMessage" | "messages" | "status">) {
   if (status === "unsupported") {
     return (
       <Alert>
@@ -66,7 +68,7 @@ function CameraStatusAlert({
         <TriangleAlert />
         <AlertTitle>{messages.cameraPermissionTitle}</AlertTitle>
         <AlertDescription>
-          {messages.cameraPermissionDescription}
+          {errorMessage || messages.cameraPermissionDescription}
         </AlertDescription>
       </Alert>
     )
@@ -77,7 +79,9 @@ function CameraStatusAlert({
       <Alert variant="destructive">
         <TriangleAlert />
         <AlertTitle>{messages.cameraErrorTitle}</AlertTitle>
-        <AlertDescription>{messages.cameraErrorDescription}</AlertDescription>
+        <AlertDescription>
+          {errorMessage || messages.cameraErrorDescription}
+        </AlertDescription>
       </Alert>
     )
   }
@@ -86,6 +90,7 @@ function CameraStatusAlert({
 }
 
 function CameraCard({
+  errorMessage,
   messages,
   onStartCamera,
   onStopCamera,
@@ -94,7 +99,8 @@ function CameraCard({
 }: CameraCardProps) {
   const isStarting = status === "starting"
   const isScanning = status === "scanning"
-  const canStart = status === "idle" || status === "permission-denied"
+  const canStart =
+    status === "idle" || status === "permission-denied" || status === "error"
 
   return (
     <ToolPanelCard>
@@ -155,7 +161,11 @@ function CameraCard({
           </Alert>
         ) : null}
 
-        <CameraStatusAlert messages={messages} status={status} />
+        <CameraStatusAlert
+          errorMessage={errorMessage}
+          messages={messages}
+          status={status}
+        />
       </ToolPanelCardContent>
       <ToolPanelCardFooter className="flex flex-wrap justify-end gap-3 border-t">
         {isScanning ? (

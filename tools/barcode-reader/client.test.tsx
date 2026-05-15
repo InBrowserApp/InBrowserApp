@@ -331,6 +331,7 @@ describe("BarcodeReaderClient", () => {
     )
 
     await screen.findByText(messages.cameraPermissionTitle)
+    expect(screen.queryByText(messages.errorTitle)).toBeNull()
 
     cleanup()
     mockedCreateReader.mockReset()
@@ -355,6 +356,14 @@ describe("BarcodeReaderClient", () => {
     )
 
     await screen.findByText(messages.cameraFrameError)
+    expect(
+      (
+        screen.getByRole("button", {
+          name: messages.startCameraLabel,
+        }) as HTMLButtonElement
+      ).disabled
+    ).toBe(false)
+    expect(screen.queryByText(messages.errorTitle)).toBeNull()
     expect(stopScanner).toHaveBeenCalled()
   })
 
