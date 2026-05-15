@@ -146,6 +146,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "pbkdf2-key-derivation": () => import("@tool/pbkdf2-key-derivation/page"),
   "placeholder-image-generator": () =>
     import("@tool/placeholder-image-generator/page"),
+  "png-optimizer": () => import("@tool/png-optimizer/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
   "prc-id-validator": () => import("@tool/prc-id-validator/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
