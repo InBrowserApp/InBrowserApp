@@ -1,0 +1,4 @@
+{
+  "name": "图片转 AVIF 转换器",
+  "description": "将图片转换为 AVIF，支持可选调整尺寸和批量 ZIP 导出。"
+}

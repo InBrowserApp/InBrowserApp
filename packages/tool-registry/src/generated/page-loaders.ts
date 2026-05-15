@@ -94,6 +94,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-palette-extractor": () => import("@tool/image-palette-extractor/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
+  "image-to-avif-converter": () => import("@tool/image-to-avif-converter/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),
   "image-to-webp-converter": () => import("@tool/image-to-webp-converter/page"),
   "imei-validator": () => import("@tool/imei-validator/page"),
