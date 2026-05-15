@@ -524,6 +524,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "argon2-hash-password-verifier",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "argon2",
+      "password",
+      "verification",
+      "security",
+      "crypto",
+      "authentication",
+    ],
+    locales: {
+      ar: {
+        name: "مدقق hash كلمات مرور Argon2",
+        description:
+          "تحقق مما إذا كانت كلمة مرور تطابق سلسلة hash Argon2 مرمزة. يعمل محليًا في متصفحك ويدعم التحقق الاختياري باستخدام secret/pepper.",
+      },
+      de: {
+        name: "Argon2-Passwort-Hash-Verifizierer",
+        description:
+          "Prüfe, ob ein Passwort zu einem kodierten Argon2-Hash-String passt. Läuft lokal in deinem Browser und unterstützt die optionale Verifizierung mit pepper/secret.",
+      },
+      en: {
+        name: "Argon2 Password Hash Verifier",
+        description:
+          "Verify whether a password matches an encoded Argon2 hash string. Runs locally in your browser and supports optional pepper/secret verification.",
+      },
+      es: {
+        name: "Verificador de Hash de Contraseñas Argon2",
+        description:
+          "Verifica si una contraseña coincide con una cadena de hash Argon2 codificada. Se ejecuta localmente en tu navegador y admite verificación opcional con pepper/secreto.",
+      },
+      fr: {
+        name: "Vérificateur de hash de mot de passe Argon2",
+        description:
+          "Vérifiez si un mot de passe correspond à une chaîne de hash Argon2 encodée. S’exécute localement dans votre navigateur et prend en charge la vérification optionnelle avec pepper/secret.",
+      },
+      he: {
+        name: "מאמת hash סיסמה ב-Argon2",
+        description:
+          "אמתו אם סיסמה תואמת למחרוזת hash מקודדת של Argon2. פועל מקומית בדפדפן ותומך באימות secret / pepper אופציונלי.",
+      },
+      hi: {
+        name: "Argon2 पासवर्ड hash सत्यापक",
+        description:
+          "जांचें कि कोई पासवर्ड एन्कोड की गई Argon2 hash स्ट्रिंग से मेल खाता है या नहीं। यह आपके ब्राउजर में स्थानीय रूप से चलता है और वैकल्पिक pepper/secret सत्यापन का समर्थन करता है।",
+      },
+      id: {
+        name: "Verifier Hash Password Argon2",
+        description:
+          "Verifikasi apakah sebuah password cocok dengan string hash Argon2 yang dienkode. Berjalan secara lokal di browser Anda dan mendukung verifikasi pepper/secret opsional.",
+      },
+      it: {
+        name: "Verificatore di hash Argon2 per password",
+        description:
+          "Verifica se una password corrisponde a una stringa hash Argon2 codificata. Esegue tutto localmente nel browser e supporta la verifica opzionale con pepper/secret.",
+      },
+      ja: {
+        name: "Argon2 パスワード hash 検証ツール",
+        description:
+          "パスワードがエンコード済み Argon2 hash 文字列と一致するかどうかを検証します。ブラウザー内でローカルに実行され、任意の pepper/secret 検証に対応します。",
+      },
+      ko: {
+        name: "Argon2 비밀번호 hash 검증기",
+        description:
+          "비밀번호가 인코딩된 Argon2 hash 문자열과 일치하는지 확인하세요. 브라우저에서 로컬로 실행되며 선택적 pepper/secret 검증을 지원합니다.",
+      },
+      ms: {
+        name: "Pengesah Hash Kata Laluan Argon2",
+        description:
+          "Sahkan sama ada kata laluan sepadan dengan rentetan hash Argon2 berkod. Berjalan secara setempat dalam pelayar anda dan menyokong pengesahan pepper/secret pilihan.",
+      },
+      nl: {
+        name: "Argon2-wachtwoordhashverificatie",
+        description:
+          "Controleer of een wachtwoord overeenkomt met een gecodeerde Argon2-hashtekenreeks. Draait lokaal in je browser en ondersteunt optionele verificatie met pepper/secret.",
+      },
+      no: {
+        name: "Argon2-verifikator for passordhash",
+        description:
+          "Kontroller om et passord samsvarer med en kodet Argon2 hash-streng. Kjører lokalt i nettleseren din og støtter valgfri verifisering med pepper/hemmelighet.",
+      },
+      pl: {
+        name: "Weryfikator hashy haseł Argon2",
+        description:
+          "Sprawdź, czy hasło pasuje do zakodowanego ciągu hasha Argon2. Działa lokalnie w przeglądarce i obsługuje opcjonalną weryfikację z pepper/sekretem.",
+      },
+      pt: {
+        name: "Verificador de Hash de Senha Argon2",
+        description:
+          "Verifique se uma senha corresponde a uma string de hash Argon2 codificada. Executa localmente no seu navegador e oferece suporte à verificação opcional com pepper/segredo.",
+      },
+      ru: {
+        name: "Проверка Argon2 hash пароля",
+        description:
+          "Проверьте, соответствует ли пароль закодированной строке Argon2 hash. Работает локально в браузере и поддерживает проверку с необязательным pepper/секретом.",
+      },
+      sv: {
+        name: "Argon2-lösenordshashverifierare",
+        description:
+          "Verifiera om ett lösenord matchar en kodad Argon2-hashsträng. Körs lokalt i webbläsaren och stöder valfri verifiering med pepper/hemlighet.",
+      },
+      th: {
+        name: "ตัวตรวจสอบ hash รหัสผ่าน Argon2",
+        description:
+          "ตรวจสอบว่ารหัสผ่านตรงกับสตริง hash Argon2 แบบ encoded หรือไม่ ทำงานภายในเบราว์เซอร์ของคุณ และรองรับการตรวจสอบ pepper/secret ที่เป็นทางเลือก",
+      },
+      tr: {
+        name: "Argon2 Parola Hash Doğrulayıcı",
+        description:
+          "Bir parolanın kodlanmış Argon2 hash dizesiyle eşleşip eşleşmediğini doğrulayın. Tarayıcınızda yerel olarak çalışır ve isteğe bağlı pepper/secret doğrulamayı destekler.",
+      },
+      vi: {
+        name: "Trình xác minh hash mật khẩu Argon2",
+        description:
+          "Xác minh xem một mật khẩu có khớp với chuỗi hash Argon2 đã mã hóa hay không. Chạy cục bộ trong trình duyệt của bạn và hỗ trợ xác minh pepper/secret tùy chọn.",
+      },
+      "zh-CN": {
+        name: "Argon2 密码 Hash 验证器",
+        description:
+          "验证密码是否匹配已编码的 Argon2 hash 字符串。所有验证都在你的浏览器本地运行，并支持可选的 pepper/secret 验证。",
+      },
+      "zh-TW": {
+        name: "Argon2 密碼雜湊驗證器",
+        description:
+          "驗證密碼是否符合已編碼的 Argon2 雜湊字串。會在你的瀏覽器本機執行，並支援選用的 pepper/secret 驗證。",
+      },
+    },
+  },
+  {
     slug: "ascii-art-generator",
     category: "text",
     icon: "binary",

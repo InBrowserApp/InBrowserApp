@@ -1,0 +1,4 @@
+{
+  "name": "Weryfikator hashy haseł Argon2",
+  "description": "Sprawdź, czy hasło pasuje do zakodowanego ciągu hasha Argon2. Działa lokalnie w przeglądarce i obsługuje opcjonalną weryfikację z pepper/sekretem."
+}

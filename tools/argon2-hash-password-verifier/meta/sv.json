@@ -1,0 +1,4 @@
+{
+  "name": "Argon2-lösenordshashverifierare",
+  "description": "Verifiera om ett lösenord matchar en kodad Argon2-hashsträng. Körs lokalt i webbläsaren och stöder valfri verifiering med pepper/hemlighet."
+}

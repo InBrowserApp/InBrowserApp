@@ -1,0 +1,4 @@
+{
+  "name": "Verificatore di hash Argon2 per password",
+  "description": "Verifica se una password corrisponde a una stringa hash Argon2 codificata. Esegue tutto localmente nel browser e supporta la verifica opzionale con pepper/secret."
+}

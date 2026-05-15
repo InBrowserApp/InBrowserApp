@@ -1,0 +1,4 @@
+{
+  "name": "Argon2-verifikator for passordhash",
+  "description": "Kontroller om et passord samsvarer med en kodet Argon2 hash-streng. Kjører lokalt i nettleseren din og støtter valgfri verifisering med pepper/hemmelighet."
+}

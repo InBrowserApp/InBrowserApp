@@ -1,0 +1,4 @@
+{
+  "name": "Argon2 密碼雜湊驗證器",
+  "description": "驗證密碼是否符合已編碼的 Argon2 雜湊字串。會在你的瀏覽器本機執行，並支援選用的 pepper/secret 驗證。"
+}
