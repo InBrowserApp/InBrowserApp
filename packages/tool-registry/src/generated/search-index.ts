@@ -14364,6 +14364,131 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "qr-code-reader",
+    category: "image",
+    icon: "image",
+    tags: [
+      "qr",
+      "qrcode",
+      "reader",
+      "scanner",
+      "decoder",
+      "image",
+      "camera",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "قارئ رموز QR",
+        description: "اقرأ رموز QR من الصور أو الكاميرا محليًا في المتصفح.",
+      },
+      de: {
+        name: "QR-Code-Reader",
+        description:
+          "Dekodiere QR-Codes aus Bilddateien oder einem Live-Kamerabild vollständig im Browser.",
+      },
+      en: {
+        name: "QR Code Reader",
+        description:
+          "Decode QR codes from image files or a live camera feed, entirely in your browser.",
+      },
+      es: {
+        name: "Lector de códigos QR",
+        description:
+          "Decodifica códigos QR desde archivos de imagen o una cámara en vivo, directamente en tu navegador.",
+      },
+      fr: {
+        name: "Lecteur de QR code",
+        description:
+          "Décodez des QR codes depuis des images ou un flux caméra, entièrement dans votre navigateur.",
+      },
+      he: {
+        name: "קורא קודי QR",
+        description: "קרא קודי QR מתמונות או מהמצלמה באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "QR कोड रीडर",
+        description: "ब्राउज़र में स्थानीय रूप से छवियों या कैमरे से QR कोड पढ़ें।",
+      },
+      id: {
+        name: "Pembaca Kode QR",
+        description:
+          "Baca kode QR dari gambar atau kamera secara lokal di browser.",
+      },
+      it: {
+        name: "Lettore di codici QR",
+        description:
+          "Decodifica codici QR da file immagine o da una fotocamera live, interamente nel browser.",
+      },
+      ja: {
+        name: "QR コードリーダー",
+        description:
+          "画像ファイルやライブカメラ映像から、ブラウザ内だけで QR コードをデコードします。",
+      },
+      ko: {
+        name: "QR 코드 리더",
+        description:
+          "이미지 파일이나 실시간 카메라 화면에서 QR 코드를 브라우저 안에서만 디코딩합니다.",
+      },
+      ms: {
+        name: "Pembaca Kod QR",
+        description:
+          "Baca kod QR daripada imej atau kamera secara setempat dalam pelayar.",
+      },
+      nl: {
+        name: "QR-codelezer",
+        description:
+          "Lees QR-codes uit afbeeldingen of met de camera, lokaal in de browser.",
+      },
+      no: {
+        name: "QR-kodeleser",
+        description:
+          "Les QR-koder fra bilder eller kameraet lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Czytnik kodów QR",
+        description:
+          "Odczytuj kody QR z obrazów lub kamery lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Leitor de QR Code",
+        description:
+          "Leia QR Codes de imagens ou da câmera localmente no navegador.",
+      },
+      ru: {
+        name: "Сканер QR-кодов",
+        description:
+          "Читайте QR-коды из изображений или с камеры локально в браузере.",
+      },
+      sv: {
+        name: "QR-kodläsare",
+        description:
+          "Läs QR-koder från bilder eller kameran lokalt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวอ่าน QR Code",
+        description: "อ่าน QR Code จากรูปภาพหรือกล้องภายในเบราว์เซอร์",
+      },
+      tr: {
+        name: "QR Kod Okuyucu",
+        description:
+          "QR kodlarını görsellerden veya kameradan tarayıcıda yerel olarak okuyun.",
+      },
+      vi: {
+        name: "Trình đọc mã QR",
+        description: "Đọc mã QR từ ảnh hoặc camera ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "QR 码读取器",
+        description: "完全在浏览器中从图片文件或实时摄像头画面解码 QR 码。",
+      },
+      "zh-TW": {
+        name: "QR Code 讀取器",
+        description: "完全在瀏覽器中從圖片檔案或即時攝影機畫面解碼 QR Code。",
+      },
+    },
+  },
+  {
     slug: "radio-timecode",
     category: "time",
     icon: "clock3",
