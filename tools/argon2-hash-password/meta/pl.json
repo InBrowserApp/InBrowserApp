@@ -1,0 +1,4 @@
+{
+  "name": "Generator hashy haseł Argon2",
+  "description": "Generuj zakodowane hashe haseł Argon2 w przeglądarce z konfigurowalnym algorytmem, pamięcią, iteracjami, równoległością, solą i opcjonalnym sekretem"
+}

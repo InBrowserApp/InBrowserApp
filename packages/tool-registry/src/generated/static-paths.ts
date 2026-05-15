@@ -278,6 +278,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "argon2-hash-password",
+    language: "ar",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "de",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "en",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "es",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "fr",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "he",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "hi",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "id",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "it",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "ja",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "ko",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "ms",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "nl",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "no",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "pl",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "pt",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "ru",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "sv",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "th",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "tr",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "vi",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "zh-CN",
+  },
+  {
+    slug: "argon2-hash-password",
+    language: "zh-TW",
+  },
+  {
     slug: "ascii-art-generator",
     language: "ar",
   },

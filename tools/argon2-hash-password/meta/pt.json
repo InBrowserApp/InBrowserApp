@@ -1,0 +1,4 @@
+{
+  "name": "Hash Argon2 de Palavra-passe",
+  "description": "Gere hashes de palavras-passe Argon2 codificados no navegador com algoritmo, memória, iterações, paralelismo, salt e segredo opcional configuráveis"
+}

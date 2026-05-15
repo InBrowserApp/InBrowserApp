@@ -1,0 +1,4 @@
+{
+  "name": "Hacher un mot de passe avec Argon2",
+  "description": "Générez dans le navigateur des hachages de mot de passe Argon2 encodés avec algorithme, mémoire, itérations, parallélisme, sel et secret facultatif configurables"
+}

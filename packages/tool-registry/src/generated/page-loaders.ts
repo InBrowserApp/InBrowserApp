@@ -8,6 +8,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/adler32-hash-text-or-file/page"),
   "aes-decryptor": () => import("@tool/aes-decryptor/page"),
   "aes-encryptor": () => import("@tool/aes-encryptor/page"),
+  "argon2-hash-password": () => import("@tool/argon2-hash-password/page"),
   "ascii-art-generator": () => import("@tool/ascii-art-generator/page"),
   "barcode-generator": () => import("@tool/barcode-generator/page"),
   "base16-decoder": () => import("@tool/base16-decoder/page"),

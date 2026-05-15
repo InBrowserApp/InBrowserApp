@@ -10,6 +10,7 @@
     "@tool/adler32-hash-text-or-file": "workspace:*",
     "@tool/aes-decryptor": "workspace:*",
     "@tool/aes-encryptor": "workspace:*",
+    "@tool/argon2-hash-password": "workspace:*",
     "@tool/ascii-art-generator": "workspace:*",
     "@tool/barcode-generator": "workspace:*",
     "@tool/base16-decoder": "workspace:*",

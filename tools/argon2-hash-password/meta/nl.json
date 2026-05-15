@@ -1,0 +1,4 @@
+{
+  "name": "Argon2 Wachtwoordhash",
+  "description": "Genereer gecodeerde Argon2-wachtwoordhashes in de browser met configureerbaar algoritme, geheugen, iteraties, paralleliteit, salt en optioneel geheim"
+}
