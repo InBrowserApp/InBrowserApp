@@ -3,7 +3,7 @@
     "title": "녹화기",
     "description": "로컬 화면 캡처 세션을 시작하고 완료된 동영상을 저장합니다.",
     "startLabel": "녹화 시작",
-    "preparingLabel": "준비 중...",
+    "preparingLabel": "준비 중…",
     "pauseLabel": "일시 중지",
     "resumeLabel": "다시 시작",
     "stopLabel": "중지",

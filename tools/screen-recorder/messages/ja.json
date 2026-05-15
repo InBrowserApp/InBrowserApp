@@ -3,7 +3,7 @@
     "title": "録画",
     "description": "ローカルの画面キャプチャセッションを開始し、完了した動画を保存します。",
     "startLabel": "録画を開始",
-    "preparingLabel": "準備中...",
+    "preparingLabel": "準備中…",
     "pauseLabel": "一時停止",
     "resumeLabel": "再開",
     "stopLabel": "停止",

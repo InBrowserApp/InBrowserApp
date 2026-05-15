@@ -20,7 +20,7 @@ const messages: ScreenRecorderMessages = {
     title: "Recorder",
     description: "Start a local screen capture session.",
     startLabel: "Start recording",
-    preparingLabel: "Preparing...",
+    preparingLabel: "Preparing…",
     pauseLabel: "Pause",
     resumeLabel: "Resume",
     stopLabel: "Stop",

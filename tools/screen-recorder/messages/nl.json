@@ -3,7 +3,7 @@
     "title": "Recorder",
     "description": "Start een lokale schermopnamesessie en sla de voltooide video op.",
     "startLabel": "Opname starten",
-    "preparingLabel": "Voorbereiden...",
+    "preparingLabel": "Voorbereiden…",
     "pauseLabel": "Pauzeren",
     "resumeLabel": "Hervatten",
     "stopLabel": "Stoppen",

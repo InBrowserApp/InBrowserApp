@@ -3,7 +3,7 @@
     "title": "Rekorder",
     "description": "Starte eine lokale Bildschirmaufnahme und speichere das fertige Video.",
     "startLabel": "Aufnahme starten",
-    "preparingLabel": "Wird vorbereitet...",
+    "preparingLabel": "Wird vorbereitet…",
     "pauseLabel": "Pausieren",
     "resumeLabel": "Fortsetzen",
     "stopLabel": "Stoppen",

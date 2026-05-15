@@ -3,7 +3,7 @@
     "title": "Рекордер",
     "description": "Запустите локальный сеанс записи экрана и сохраните готовое видео.",
     "startLabel": "Начать запись",
-    "preparingLabel": "Подготовка...",
+    "preparingLabel": "Подготовка…",
     "pauseLabel": "Пауза",
     "resumeLabel": "Продолжить",
     "stopLabel": "Остановить",

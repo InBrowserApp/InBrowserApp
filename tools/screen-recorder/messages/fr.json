@@ -3,7 +3,7 @@
     "title": "Enregistreur",
     "description": "Lancez une session de capture d'écran locale et enregistrez la vidéo terminée.",
     "startLabel": "Démarrer l'enregistrement",
-    "preparingLabel": "Préparation...",
+    "preparingLabel": "Préparation…",
     "pauseLabel": "Pause",
     "resumeLabel": "Reprendre",
     "stopLabel": "Arrêter",

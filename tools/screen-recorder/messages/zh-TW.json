@@ -3,7 +3,7 @@
     "title": "錄影器",
     "description": "開始本機螢幕擷取工作階段，並儲存完成的影片。",
     "startLabel": "開始錄影",
-    "preparingLabel": "準備中...",
+    "preparingLabel": "準備中…",
     "pauseLabel": "暫停",
     "resumeLabel": "繼續",
     "stopLabel": "停止",

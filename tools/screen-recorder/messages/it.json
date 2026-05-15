@@ -3,7 +3,7 @@
     "title": "Registratore",
     "description": "Avvia una sessione locale di acquisizione dello schermo e salva il video finale.",
     "startLabel": "Avvia registrazione",
-    "preparingLabel": "Preparazione...",
+    "preparingLabel": "Preparazione…",
     "pauseLabel": "Pausa",
     "resumeLabel": "Riprendi",
     "stopLabel": "Interrompi",

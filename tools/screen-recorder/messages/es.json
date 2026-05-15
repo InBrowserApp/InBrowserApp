@@ -3,7 +3,7 @@
     "title": "Grabador",
     "description": "Inicia una sesión local de captura de pantalla y guarda el video terminado.",
     "startLabel": "Iniciar grabación",
-    "preparingLabel": "Preparando...",
+    "preparingLabel": "Preparando…",
     "pauseLabel": "Pausar",
     "resumeLabel": "Reanudar",
     "stopLabel": "Detener",

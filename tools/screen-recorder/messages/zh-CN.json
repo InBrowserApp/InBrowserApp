@@ -3,7 +3,7 @@
     "title": "录制器",
     "description": "启动本地屏幕捕获会话，并保存完成后的视频。",
     "startLabel": "开始录制",
-    "preparingLabel": "正在准备...",
+    "preparingLabel": "正在准备…",
     "pauseLabel": "暂停",
     "resumeLabel": "继续",
     "stopLabel": "停止",
