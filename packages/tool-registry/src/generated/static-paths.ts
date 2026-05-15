@@ -646,6 +646,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "barcode-reader",
+    language: "ar",
+  },
+  {
+    slug: "barcode-reader",
+    language: "de",
+  },
+  {
+    slug: "barcode-reader",
+    language: "en",
+  },
+  {
+    slug: "barcode-reader",
+    language: "es",
+  },
+  {
+    slug: "barcode-reader",
+    language: "fr",
+  },
+  {
+    slug: "barcode-reader",
+    language: "he",
+  },
+  {
+    slug: "barcode-reader",
+    language: "hi",
+  },
+  {
+    slug: "barcode-reader",
+    language: "id",
+  },
+  {
+    slug: "barcode-reader",
+    language: "it",
+  },
+  {
+    slug: "barcode-reader",
+    language: "ja",
+  },
+  {
+    slug: "barcode-reader",
+    language: "ko",
+  },
+  {
+    slug: "barcode-reader",
+    language: "ms",
+  },
+  {
+    slug: "barcode-reader",
+    language: "nl",
+  },
+  {
+    slug: "barcode-reader",
+    language: "no",
+  },
+  {
+    slug: "barcode-reader",
+    language: "pl",
+  },
+  {
+    slug: "barcode-reader",
+    language: "pt",
+  },
+  {
+    slug: "barcode-reader",
+    language: "ru",
+  },
+  {
+    slug: "barcode-reader",
+    language: "sv",
+  },
+  {
+    slug: "barcode-reader",
+    language: "th",
+  },
+  {
+    slug: "barcode-reader",
+    language: "tr",
+  },
+  {
+    slug: "barcode-reader",
+    language: "vi",
+  },
+  {
+    slug: "barcode-reader",
+    language: "zh-CN",
+  },
+  {
+    slug: "barcode-reader",
+    language: "zh-TW",
+  },
+  {
     slug: "base16-decoder",
     language: "ar",
   },

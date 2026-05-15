@@ -1,0 +1,4 @@
+{
+  "name": "Lettore di codici a barre",
+  "description": "Decodifica codici a barre e QR Code da file immagine o dalla fotocamera in tempo reale, interamente nel browser."
+}

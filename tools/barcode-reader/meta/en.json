@@ -1,0 +1,4 @@
+{
+  "name": "Barcode Reader",
+  "description": "Decode barcodes and QR codes from image files or a live camera feed, entirely in your browser."
+}
