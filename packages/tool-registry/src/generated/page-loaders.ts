@@ -60,6 +60,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "cron-expression-generator": () =>
     import("@tool/cron-expression-generator/page"),
   "cron-expression-parser": () => import("@tool/cron-expression-parser/page"),
+  "csr-generator": () => import("@tool/csr-generator/page"),
   "css-box-shadow-generator": () =>
     import("@tool/css-box-shadow-generator/page"),
   "css-gradient-generator": () => import("@tool/css-gradient-generator/page"),

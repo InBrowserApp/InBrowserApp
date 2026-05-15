@@ -1,0 +1,4 @@
+{
+  "name": "CSR Generator",
+  "description": "PKCS#10 証明書署名要求をローカルで生成します。新しい RSA または ECDSA 鍵の作成、PEM 秘密鍵のインポート、Subject と SAN フィールドの追加、PEM のエクスポートができます。"
+}

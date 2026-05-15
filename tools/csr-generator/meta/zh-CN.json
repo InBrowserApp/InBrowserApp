@@ -1,0 +1,4 @@
+{
+  "name": "CSR 生成器",
+  "description": "在本地生成 PKCS#10 证书签名请求。创建新的 RSA 或 ECDSA 密钥，导入 PEM 私钥，添加 Subject 和 SAN 字段，并导出 PEM。"
+}

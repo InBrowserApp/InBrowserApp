@@ -1,0 +1,4 @@
+{
+  "name": "CSR Oluşturucu",
+  "description": "PKCS#10 sertifika imzalama isteklerini yerel olarak oluşturun. Yeni RSA veya ECDSA anahtarları oluşturun, PEM özel anahtarlarını içe aktarın, Subject ve SAN alanları ekleyin ve PEM olarak dışa aktarın."
+}

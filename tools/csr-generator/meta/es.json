@@ -1,0 +1,4 @@
+{
+  "name": "Generador de CSR",
+  "description": "Genera solicitudes de firma de certificado PKCS#10 localmente. Crea nuevas claves RSA o ECDSA, importa claves privadas PEM, agrega campos de Subject y SAN, y exporta PEM."
+}

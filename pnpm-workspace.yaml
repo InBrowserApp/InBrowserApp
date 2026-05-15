@@ -29,6 +29,11 @@ catalog:
   "@astrojs/mdx": ^4.3.14
   "@astrojs/react": ^4.4.2
   "@peculiar/x509": ^1.14.3
+  "@peculiar/asn1-ecc": ^2.7.0
+  "@peculiar/asn1-pkcs8": ^2.7.0
+  "@peculiar/asn1-rsa": ^2.7.0
+  "@peculiar/asn1-schema": ^2.7.0
+  "@peculiar/asn1-x509": ^2.7.0
   "@astrojs/sitemap": ^3.7.2
   "@commitlint/cli": ^20.5.0
   "@commitlint/config-conventional": ^20.5.0

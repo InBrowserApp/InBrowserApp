@@ -1,0 +1,4 @@
+{
+  "name": "CSR Generator",
+  "description": "Buat certificate signing request PKCS#10 secara lokal. Buat kunci RSA atau ECDSA baru, impor kunci privat PEM, tambahkan bidang Subject dan SAN, lalu ekspor PEM."
+}

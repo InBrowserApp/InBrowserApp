@@ -1,0 +1,4 @@
+{
+  "name": "CSR 생성기",
+  "description": "PKCS#10 인증서 서명 요청을 로컬에서 생성합니다. 새 RSA 또는 ECDSA 키를 만들고, PEM 개인 키를 가져오며, Subject 및 SAN 필드를 추가하고 PEM으로 내보내세요."
+}

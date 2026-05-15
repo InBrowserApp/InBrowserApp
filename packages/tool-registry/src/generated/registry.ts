@@ -5498,6 +5498,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "csr-generator",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "csr",
+      "pkcs10",
+      "x509",
+      "certificate",
+      "tls",
+      "private-key",
+      "san",
+      "pem",
+      "security",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "مولد CSR",
+        description:
+          "أنشئ طلبات توقيع شهادات PKCS#10 محليا. أنشئ مفاتيح RSA أو ECDSA جديدة، واستورد مفاتيح PEM خاصة، وأضف حقول Subject وSAN، وصدّر PEM.",
+      },
+      de: {
+        name: "CSR-Generator",
+        description:
+          "Erzeuge PKCS#10-Zertifikatsignierungsanforderungen lokal. Erstelle neue RSA- oder ECDSA-Schluessel, importiere private PEM-Schluessel, fuege Subject- und SAN-Felder hinzu und exportiere PEM.",
+      },
+      en: {
+        name: "CSR Generator",
+        description:
+          "Generate PKCS#10 certificate signing requests locally. Create new RSA or ECDSA keys, import PEM private keys, add Subject and SAN fields, and export PEM.",
+      },
+      es: {
+        name: "Generador de CSR",
+        description:
+          "Genera solicitudes de firma de certificado PKCS#10 localmente. Crea nuevas claves RSA o ECDSA, importa claves privadas PEM, agrega campos de Subject y SAN, y exporta PEM.",
+      },
+      fr: {
+        name: "CSR Generator",
+        description:
+          "Générez localement des demandes de signature de certificat PKCS#10. Créez de nouvelles clés RSA ou ECDSA, importez des clés privées PEM, ajoutez des champs Subject et SAN, puis exportez en PEM.",
+      },
+      he: {
+        name: "CSR Generator",
+        description:
+          "צרו בקשות חתימה לאישורים בתקן PKCS#10 באופן מקומי. צרו מפתחות RSA או ECDSA חדשים, יבאו מפתחות פרטיים בפורמט PEM, הוסיפו שדות Subject ו-SAN, ויצאו PEM.",
+      },
+      hi: {
+        name: "CSR Generator",
+        description:
+          "PKCS#10 प्रमाणपत्र हस्ताक्षर अनुरोध स्थानीय रूप से जनरेट करें। नई RSA या ECDSA कुंजियां बनाएं, PEM निजी कुंजियां आयात करें, Subject और SAN फ़ील्ड जोड़ें, और PEM निर्यात करें।",
+      },
+      id: {
+        name: "CSR Generator",
+        description:
+          "Buat certificate signing request PKCS#10 secara lokal. Buat kunci RSA atau ECDSA baru, impor kunci privat PEM, tambahkan bidang Subject dan SAN, lalu ekspor PEM.",
+      },
+      it: {
+        name: "Generatore CSR",
+        description:
+          "Genera richieste di firma del certificato PKCS#10 localmente. Crea nuove chiavi RSA o ECDSA, importa chiavi private PEM, aggiungi campi Subject e SAN ed esporta in PEM.",
+      },
+      ja: {
+        name: "CSR Generator",
+        description:
+          "PKCS#10 証明書署名要求をローカルで生成します。新しい RSA または ECDSA 鍵の作成、PEM 秘密鍵のインポート、Subject と SAN フィールドの追加、PEM のエクスポートができます。",
+      },
+      ko: {
+        name: "CSR 생성기",
+        description:
+          "PKCS#10 인증서 서명 요청을 로컬에서 생성합니다. 새 RSA 또는 ECDSA 키를 만들고, PEM 개인 키를 가져오며, Subject 및 SAN 필드를 추가하고 PEM으로 내보내세요.",
+      },
+      ms: {
+        name: "Penjana CSR",
+        description:
+          "Jana permintaan penandatanganan sijil PKCS#10 secara setempat. Cipta kunci RSA atau ECDSA baharu, import kunci peribadi PEM, tambah medan Subject dan SAN, dan eksport PEM.",
+      },
+      nl: {
+        name: "CSR-generator",
+        description:
+          "Genereer lokaal PKCS#10-certificaataanvragen. Maak nieuwe RSA- of ECDSA-sleutels, importeer PEM-privesleutels, voeg Subject- en SAN-velden toe en exporteer PEM.",
+      },
+      no: {
+        name: "CSR-generator",
+        description:
+          "Generer PKCS#10-sertifikatsigneringsforespørsler lokalt. Opprett nye RSA- eller ECDSA-nøkler, importer private PEM-nøkler, legg til Subject- og SAN-felt, og eksporter PEM.",
+      },
+      pl: {
+        name: "Generator CSR",
+        description:
+          "Generuj lokalnie żądania podpisania certyfikatu PKCS#10. Twórz nowe klucze RSA lub ECDSA, importuj prywatne klucze PEM, dodawaj pola Subject i SAN oraz eksportuj PEM.",
+      },
+      pt: {
+        name: "Gerador de CSR",
+        description:
+          "Gere solicitações de assinatura de certificado PKCS#10 localmente. Crie novas chaves RSA ou ECDSA, importe chaves privadas PEM, adicione campos de Subject e SAN e exporte em PEM.",
+      },
+      ru: {
+        name: "Генератор CSR",
+        description:
+          "Создавайте запросы на подпись сертификата PKCS#10 локально. Генерируйте новые ключи RSA или ECDSA, импортируйте закрытые ключи PEM, добавляйте поля Subject и SAN и экспортируйте PEM.",
+      },
+      sv: {
+        name: "CSR-generator",
+        description:
+          "Generera PKCS#10-certifikatbegäranden lokalt. Skapa nya RSA- eller ECDSA-nycklar, importera privata PEM-nycklar, lägg till Subject- och SAN-fält och exportera PEM.",
+      },
+      th: {
+        name: "ตัวสร้าง CSR",
+        description:
+          "สร้างคำขอลงนามใบรับรอง PKCS#10 ภายในเครื่อง สร้างคีย์ RSA หรือ ECDSA ใหม่ นำเข้าคีย์ส่วนตัว PEM เพิ่มฟิลด์ Subject และ SAN แล้วส่งออกเป็น PEM",
+      },
+      tr: {
+        name: "CSR Oluşturucu",
+        description:
+          "PKCS#10 sertifika imzalama isteklerini yerel olarak oluşturun. Yeni RSA veya ECDSA anahtarları oluşturun, PEM özel anahtarlarını içe aktarın, Subject ve SAN alanları ekleyin ve PEM olarak dışa aktarın.",
+      },
+      vi: {
+        name: "Trình tạo CSR",
+        description:
+          "Tạo yêu cầu ký chứng chỉ PKCS#10 ngay trên máy. Tạo khóa RSA hoặc ECDSA mới, nhập khóa riêng PEM, thêm các trường Subject và SAN, rồi xuất PEM.",
+      },
+      "zh-CN": {
+        name: "CSR 生成器",
+        description:
+          "在本地生成 PKCS#10 证书签名请求。创建新的 RSA 或 ECDSA 密钥，导入 PEM 私钥，添加 Subject 和 SAN 字段，并导出 PEM。",
+      },
+      "zh-TW": {
+        name: "CSR 產生器",
+        description:
+          "在本機產生 PKCS#10 憑證簽署要求。建立新的 RSA 或 ECDSA 金鑰、匯入 PEM 私密金鑰、新增 Subject 與 SAN 欄位，並匯出 PEM。",
+      },
+    },
+  },
+  {
     slug: "css-box-shadow-generator",
     category: "web",
     icon: "image",
@@ -28217,6 +28351,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Cron 表達式解析器",
         description:
           "解析、驗證並說明 cron 排程，包含欄位細節與即將執行的時間。",
+      },
+    },
+  },
+  "csr-generator": {
+    slug: "csr-generator",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "csr",
+      "pkcs10",
+      "x509",
+      "certificate",
+      "tls",
+      "private-key",
+      "san",
+      "pem",
+      "security",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "مولد CSR",
+        description:
+          "أنشئ طلبات توقيع شهادات PKCS#10 محليا. أنشئ مفاتيح RSA أو ECDSA جديدة، واستورد مفاتيح PEM خاصة، وأضف حقول Subject وSAN، وصدّر PEM.",
+      },
+      de: {
+        name: "CSR-Generator",
+        description:
+          "Erzeuge PKCS#10-Zertifikatsignierungsanforderungen lokal. Erstelle neue RSA- oder ECDSA-Schluessel, importiere private PEM-Schluessel, fuege Subject- und SAN-Felder hinzu und exportiere PEM.",
+      },
+      en: {
+        name: "CSR Generator",
+        description:
+          "Generate PKCS#10 certificate signing requests locally. Create new RSA or ECDSA keys, import PEM private keys, add Subject and SAN fields, and export PEM.",
+      },
+      es: {
+        name: "Generador de CSR",
+        description:
+          "Genera solicitudes de firma de certificado PKCS#10 localmente. Crea nuevas claves RSA o ECDSA, importa claves privadas PEM, agrega campos de Subject y SAN, y exporta PEM.",
+      },
+      fr: {
+        name: "CSR Generator",
+        description:
+          "Générez localement des demandes de signature de certificat PKCS#10. Créez de nouvelles clés RSA ou ECDSA, importez des clés privées PEM, ajoutez des champs Subject et SAN, puis exportez en PEM.",
+      },
+      he: {
+        name: "CSR Generator",
+        description:
+          "צרו בקשות חתימה לאישורים בתקן PKCS#10 באופן מקומי. צרו מפתחות RSA או ECDSA חדשים, יבאו מפתחות פרטיים בפורמט PEM, הוסיפו שדות Subject ו-SAN, ויצאו PEM.",
+      },
+      hi: {
+        name: "CSR Generator",
+        description:
+          "PKCS#10 प्रमाणपत्र हस्ताक्षर अनुरोध स्थानीय रूप से जनरेट करें। नई RSA या ECDSA कुंजियां बनाएं, PEM निजी कुंजियां आयात करें, Subject और SAN फ़ील्ड जोड़ें, और PEM निर्यात करें।",
+      },
+      id: {
+        name: "CSR Generator",
+        description:
+          "Buat certificate signing request PKCS#10 secara lokal. Buat kunci RSA atau ECDSA baru, impor kunci privat PEM, tambahkan bidang Subject dan SAN, lalu ekspor PEM.",
+      },
+      it: {
+        name: "Generatore CSR",
+        description:
+          "Genera richieste di firma del certificato PKCS#10 localmente. Crea nuove chiavi RSA o ECDSA, importa chiavi private PEM, aggiungi campi Subject e SAN ed esporta in PEM.",
+      },
+      ja: {
+        name: "CSR Generator",
+        description:
+          "PKCS#10 証明書署名要求をローカルで生成します。新しい RSA または ECDSA 鍵の作成、PEM 秘密鍵のインポート、Subject と SAN フィールドの追加、PEM のエクスポートができます。",
+      },
+      ko: {
+        name: "CSR 생성기",
+        description:
+          "PKCS#10 인증서 서명 요청을 로컬에서 생성합니다. 새 RSA 또는 ECDSA 키를 만들고, PEM 개인 키를 가져오며, Subject 및 SAN 필드를 추가하고 PEM으로 내보내세요.",
+      },
+      ms: {
+        name: "Penjana CSR",
+        description:
+          "Jana permintaan penandatanganan sijil PKCS#10 secara setempat. Cipta kunci RSA atau ECDSA baharu, import kunci peribadi PEM, tambah medan Subject dan SAN, dan eksport PEM.",
+      },
+      nl: {
+        name: "CSR-generator",
+        description:
+          "Genereer lokaal PKCS#10-certificaataanvragen. Maak nieuwe RSA- of ECDSA-sleutels, importeer PEM-privesleutels, voeg Subject- en SAN-velden toe en exporteer PEM.",
+      },
+      no: {
+        name: "CSR-generator",
+        description:
+          "Generer PKCS#10-sertifikatsigneringsforespørsler lokalt. Opprett nye RSA- eller ECDSA-nøkler, importer private PEM-nøkler, legg til Subject- og SAN-felt, og eksporter PEM.",
+      },
+      pl: {
+        name: "Generator CSR",
+        description:
+          "Generuj lokalnie żądania podpisania certyfikatu PKCS#10. Twórz nowe klucze RSA lub ECDSA, importuj prywatne klucze PEM, dodawaj pola Subject i SAN oraz eksportuj PEM.",
+      },
+      pt: {
+        name: "Gerador de CSR",
+        description:
+          "Gere solicitações de assinatura de certificado PKCS#10 localmente. Crie novas chaves RSA ou ECDSA, importe chaves privadas PEM, adicione campos de Subject e SAN e exporte em PEM.",
+      },
+      ru: {
+        name: "Генератор CSR",
+        description:
+          "Создавайте запросы на подпись сертификата PKCS#10 локально. Генерируйте новые ключи RSA или ECDSA, импортируйте закрытые ключи PEM, добавляйте поля Subject и SAN и экспортируйте PEM.",
+      },
+      sv: {
+        name: "CSR-generator",
+        description:
+          "Generera PKCS#10-certifikatbegäranden lokalt. Skapa nya RSA- eller ECDSA-nycklar, importera privata PEM-nycklar, lägg till Subject- och SAN-fält och exportera PEM.",
+      },
+      th: {
+        name: "ตัวสร้าง CSR",
+        description:
+          "สร้างคำขอลงนามใบรับรอง PKCS#10 ภายในเครื่อง สร้างคีย์ RSA หรือ ECDSA ใหม่ นำเข้าคีย์ส่วนตัว PEM เพิ่มฟิลด์ Subject และ SAN แล้วส่งออกเป็น PEM",
+      },
+      tr: {
+        name: "CSR Oluşturucu",
+        description:
+          "PKCS#10 sertifika imzalama isteklerini yerel olarak oluşturun. Yeni RSA veya ECDSA anahtarları oluşturun, PEM özel anahtarlarını içe aktarın, Subject ve SAN alanları ekleyin ve PEM olarak dışa aktarın.",
+      },
+      vi: {
+        name: "Trình tạo CSR",
+        description:
+          "Tạo yêu cầu ký chứng chỉ PKCS#10 ngay trên máy. Tạo khóa RSA hoặc ECDSA mới, nhập khóa riêng PEM, thêm các trường Subject và SAN, rồi xuất PEM.",
+      },
+      "zh-CN": {
+        name: "CSR 生成器",
+        description:
+          "在本地生成 PKCS#10 证书签名请求。创建新的 RSA 或 ECDSA 密钥，导入 PEM 私钥，添加 Subject 和 SAN 字段，并导出 PEM。",
+      },
+      "zh-TW": {
+        name: "CSR 產生器",
+        description:
+          "在本機產生 PKCS#10 憑證簽署要求。建立新的 RSA 或 ECDSA 金鑰、匯入 PEM 私密金鑰、新增 Subject 與 SAN 欄位，並匯出 PEM。",
       },
     },
   },

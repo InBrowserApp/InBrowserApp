@@ -1,0 +1,4 @@
+{
+  "name": "CSR 產生器",
+  "description": "在本機產生 PKCS#10 憑證簽署要求。建立新的 RSA 或 ECDSA 金鑰、匯入 PEM 私密金鑰、新增 Subject 與 SAN 欄位，並匯出 PEM。"
+}

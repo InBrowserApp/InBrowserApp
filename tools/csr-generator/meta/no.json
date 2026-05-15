@@ -1,0 +1,4 @@
+{
+  "name": "CSR-generator",
+  "description": "Generer PKCS#10-sertifikatsigneringsforespørsler lokalt. Opprett nye RSA- eller ECDSA-nøkler, importer private PEM-nøkler, legg til Subject- og SAN-felt, og eksporter PEM."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "CSR Generator",
+  "description": "Générez localement des demandes de signature de certificat PKCS#10. Créez de nouvelles clés RSA ou ECDSA, importez des clés privées PEM, ajoutez des champs Subject et SAN, puis exportez en PEM."
+}

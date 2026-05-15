@@ -1,0 +1,4 @@
+{
+  "name": "CSR Generator",
+  "description": "צרו בקשות חתימה לאישורים בתקן PKCS#10 באופן מקומי. צרו מפתחות RSA או ECDSA חדשים, יבאו מפתחות פרטיים בפורמט PEM, הוסיפו שדות Subject ו-SAN, ויצאו PEM."
+}

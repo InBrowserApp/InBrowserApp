@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo CSR",
+  "description": "Tạo yêu cầu ký chứng chỉ PKCS#10 ngay trên máy. Tạo khóa RSA hoặc ECDSA mới, nhập khóa riêng PEM, thêm các trường Subject và SAN, rồi xuất PEM."
+}

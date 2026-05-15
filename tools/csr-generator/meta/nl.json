@@ -1,0 +1,4 @@
+{
+  "name": "CSR-generator",
+  "description": "Genereer lokaal PKCS#10-certificaataanvragen. Maak nieuwe RSA- of ECDSA-sleutels, importeer PEM-privesleutels, voeg Subject- en SAN-velden toe en exporteer PEM."
+}

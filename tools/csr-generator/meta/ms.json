@@ -1,0 +1,4 @@
+{
+  "name": "Penjana CSR",
+  "description": "Jana permintaan penandatanganan sijil PKCS#10 secara setempat. Cipta kunci RSA atau ECDSA baharu, import kunci peribadi PEM, tambah medan Subject dan SAN, dan eksport PEM."
+}
