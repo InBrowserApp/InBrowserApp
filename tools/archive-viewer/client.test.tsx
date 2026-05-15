@@ -131,7 +131,6 @@ describe("ArchiveViewerClient", () => {
 
     await waitFor(() => {
       expect(openArchiveMock).toHaveBeenCalled()
-      expect(handle.readEntry).toHaveBeenCalledWith("docs/readme.txt")
     })
 
     expect(screen.getByText("sample.zip")).toBeTruthy()
@@ -139,19 +138,22 @@ describe("ArchiveViewerClient", () => {
     expect(screen.getByText("3")).toBeTruthy()
     expect(screen.getByText("2")).toBeTruthy()
     expect(screen.getByText("1")).toBeTruthy()
-    expect(screen.getByText("docs/readme.txt")).toBeTruthy()
-
-    await waitFor(() => {
-      expect(
-        screen.getByRole("region", { name: messages.textPreviewLabel })
-          .textContent
-      ).toContain("hello archive")
-    })
+    expect(screen.getByText(messages.previewPlaceholderTitle)).toBeTruthy()
+    expect(handle.readEntry).not.toHaveBeenCalled()
 
     fireEvent.click(
       screen.getByRole("button", { name: `${messages.openFolder}: docs` })
     )
     expect(screen.getByText("readme.txt")).toBeTruthy()
+    expect(screen.getByText("docs/readme.txt")).toBeTruthy()
+
+    await waitFor(() => {
+      expect(handle.readEntry).toHaveBeenCalledWith("docs/readme.txt")
+      expect(
+        screen.getByRole("region", { name: messages.textPreviewLabel })
+          .textContent
+      ).toContain("hello archive")
+    })
 
     fireEvent.change(screen.getByLabelText(messages.searchLabel), {
       target: { value: "script" },
@@ -200,12 +202,16 @@ describe("ArchiveViewerClient", () => {
     })
 
     await waitFor(() => {
-      expect(handle.readEntry).toHaveBeenCalledWith("docs/readme.txt")
+      expect(openArchiveMock).toHaveBeenCalled()
     })
 
     fireEvent.click(
       screen.getByRole("button", { name: `${messages.openFolder}: docs` })
     )
+
+    await waitFor(() => {
+      expect(handle.readEntry).toHaveBeenCalledWith("docs/readme.txt")
+    })
 
     handle.readEntry.mockClear()
     createObjectUrlMock.mockClear()
