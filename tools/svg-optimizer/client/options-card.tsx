@@ -142,18 +142,15 @@ export function OptionsCard({
   }
 
   return (
-    <Card size="sm">
+    <Card>
       <CardHeader>
         <CardTitle>{messages.optionsTitle}</CardTitle>
-        <CardDescription className="text-xs leading-5">
-          {messages.optionsDescription}
-        </CardDescription>
+        <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col gap-4">
-        <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-1">
+      <CardContent className="flex flex-col gap-5">
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
           <Button
             onClick={() => onChange(DEFAULT_OPTIONS)}
-            size="sm"
             type="button"
             variant="outline"
           >
@@ -161,7 +158,6 @@ export function OptionsCard({
           </Button>
           <Button
             onClick={() => onChange(AGGRESSIVE_OPTIONS)}
-            size="sm"
             type="button"
             variant="outline"
           >
@@ -169,11 +165,9 @@ export function OptionsCard({
           </Button>
         </div>
 
-        <FieldSet className="gap-2">
-          <FieldLegend className="text-sm">
-            {messages.optimizationOptionsLabel}
-          </FieldLegend>
-          <FieldGroup className="grid gap-2 xl:grid-cols-2">
+        <FieldSet>
+          <FieldLegend>{messages.optimizationOptionsLabel}</FieldLegend>
+          <FieldGroup className="grid gap-3 sm:grid-cols-2">
             {OPTION_DEFINITIONS.map((definition) => (
               <OptionField
                 definition={definition}
@@ -186,10 +180,9 @@ export function OptionsCard({
           </FieldGroup>
         </FieldSet>
       </CardContent>
-      <CardFooter className="grid grid-cols-1 gap-2 border-t bg-muted/30 sm:grid-cols-2 xl:grid-cols-1">
+      <CardFooter className="flex flex-col-reverse items-stretch gap-3 border-t sm:flex-row sm:items-center sm:justify-end">
         <Button
           onClick={() => onChange(DEFAULT_OPTIONS)}
-          size="sm"
           type="button"
           variant="outline"
         >
@@ -199,7 +192,6 @@ export function OptionsCard({
         <Button
           disabled={!canOptimize || isOptimizing}
           onClick={onOptimize}
-          size="sm"
           type="button"
         >
           {isOptimizing ? (

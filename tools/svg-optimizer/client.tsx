@@ -176,23 +176,21 @@ function SvgOptimizerClient({ messages }: SvgOptimizerClientProps) {
   }
 
   return (
-    <div className="grid gap-6 xl:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] xl:items-start">
-      <aside className="order-3 min-w-0 xl:order-1 xl:row-span-3">
-        <div className="xl:sticky xl:top-6 xl:self-start">
-          <OptionsCard
-            canOptimize={isLikelySvgMarkup(sourceText)}
-            isOptimizing={isOptimizing}
-            messages={messages}
-            onChange={(nextOptions) => {
-              setOptions(nextOptions)
-              clearResult()
-            }}
-            onOptimize={() => {
-              void handleOptimize()
-            }}
-            options={options}
-          />
-        </div>
+    <div className="grid gap-6 xl:grid-cols-[minmax(0,26rem)_minmax(0,1fr)] xl:items-start">
+      <aside className="order-3 min-w-0 xl:sticky xl:top-6 xl:order-1 xl:row-span-3 xl:self-start">
+        <OptionsCard
+          canOptimize={isLikelySvgMarkup(sourceText)}
+          isOptimizing={isOptimizing}
+          messages={messages}
+          onChange={(nextOptions) => {
+            setOptions(nextOptions)
+            clearResult()
+          }}
+          onOptimize={() => {
+            void handleOptimize()
+          }}
+          options={options}
+        />
       </aside>
 
       <div className="order-1 min-w-0 xl:order-2 xl:col-start-2">
