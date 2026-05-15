@@ -161,10 +161,11 @@ function PdfInfoViewerClient({ language, messages }: PdfInfoViewerClientProps) {
       <input
         ref={inputRef}
         accept={ACCEPTED_PDF_TYPES}
-        aria-label={messages.dragDropOrClick}
+        aria-hidden="true"
         className="sr-only"
         data-testid="pdf-input"
         onChange={handleFileChange}
+        tabIndex={-1}
         type="file"
       />
 
