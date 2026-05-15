@@ -1,0 +1,20 @@
+{
+  "resultTitle": "Oluşturulan UUID",
+  "resultDescription": "Tek bir kanonik küçük harfli UUID v4 oluşturun ve hazır olduğunda kopyalayın.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "Yeniden oluştur",
+  "copyLabel": "UUID'yi kopyala",
+  "copiedLabel": "Kopyalandı",
+  "detailsTitle": "Biçim ayrıntıları",
+  "detailsDescription": "UUID v4 değerleri rastgele baytlar ile sabit sürüm ve varyant bitlerini kullanır.",
+  "versionLabel": "Sürüm",
+  "versionValue": "4, rastgele",
+  "variantLabel": "Varyant",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "Rastgele bitler",
+  "entropyValue": "122 bit",
+  "privacyTitle": "Yerel oluşturma",
+  "privacyDescription": "UUID, bu tarayıcı sekmesinde Web Crypto ile oluşturulur ve bir sunucuya gönderilmez.",
+  "errorTitle": "UUID oluşturulamıyor",
+  "cryptoUnavailableMessage": "Web Crypto rastgele değerleri bu tarayıcıda kullanılamıyor."
+}

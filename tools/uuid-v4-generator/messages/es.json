@@ -1,0 +1,20 @@
+{
+  "resultTitle": "UUID generado",
+  "resultDescription": "Genera un UUID v4 canónico en minúsculas y cópialo cuando esté listo.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "Regenerar",
+  "copyLabel": "Copiar UUID",
+  "copiedLabel": "Copiado",
+  "detailsTitle": "Detalles del formato",
+  "detailsDescription": "Los valores UUID v4 usan bytes aleatorios más bits fijos de versión y variante.",
+  "versionLabel": "Versión",
+  "versionValue": "4, aleatoria",
+  "variantLabel": "Variante",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "Bits aleatorios",
+  "entropyValue": "122 bits",
+  "privacyTitle": "Generación local",
+  "privacyDescription": "El UUID se genera con Web Crypto en esta pestaña del navegador y no se envía a un servidor.",
+  "errorTitle": "No se puede generar el UUID",
+  "cryptoUnavailableMessage": "Los valores aleatorios de Web Crypto no están disponibles en este navegador."
+}

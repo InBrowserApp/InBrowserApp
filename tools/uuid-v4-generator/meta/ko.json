@@ -1,0 +1,4 @@
+{
+  "name": "UUID v4 Generator",
+  "description": "브라우저에서 로컬로 임의의 RFC 4122/RFC 9562 UUID v4를 생성합니다."
+}

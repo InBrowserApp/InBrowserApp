@@ -1,0 +1,20 @@
+{
+  "resultTitle": "生成された UUID",
+  "resultDescription": "標準形式の小文字の UUID v4 を 1 件生成し、準備できたらコピーします。",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "再生成",
+  "copyLabel": "UUID をコピー",
+  "copiedLabel": "コピーしました",
+  "detailsTitle": "形式の詳細",
+  "detailsDescription": "UUID v4 の値は、ランダムバイトに固定のバージョンビットとバリアントビットを組み合わせて使用します。",
+  "versionLabel": "バージョン",
+  "versionValue": "4、ランダム",
+  "variantLabel": "バリアント",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "ランダムビット",
+  "entropyValue": "122 ビット",
+  "privacyTitle": "ローカル生成",
+  "privacyDescription": "UUID はこのブラウザータブ内で Web Crypto により生成され、サーバーには送信されません。",
+  "errorTitle": "UUID を生成できません",
+  "cryptoUnavailableMessage": "このブラウザーでは Web Crypto の乱数値を利用できません。"
+}

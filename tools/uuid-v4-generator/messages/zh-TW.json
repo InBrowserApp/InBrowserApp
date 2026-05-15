@@ -1,0 +1,20 @@
+{
+  "resultTitle": "已產生的 UUID",
+  "resultDescription": "產生一個標準小寫 UUID v4，並在準備好後複製。",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "重新產生",
+  "copyLabel": "複製 UUID",
+  "copiedLabel": "已複製",
+  "detailsTitle": "格式詳細資訊",
+  "detailsDescription": "UUID v4 值使用隨機位元組，加上固定的版本與變體位元。",
+  "versionLabel": "版本",
+  "versionValue": "4，隨機",
+  "variantLabel": "變體",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "隨機位元",
+  "entropyValue": "122 位元",
+  "privacyTitle": "本機產生",
+  "privacyDescription": "UUID 會在這個瀏覽器分頁中使用 Web Crypto 產生，不會傳送到伺服器。",
+  "errorTitle": "無法產生 UUID",
+  "cryptoUnavailableMessage": "此瀏覽器無法使用 Web Crypto 隨機值。"
+}

@@ -1,0 +1,20 @@
+{
+  "resultTitle": "UUID yang Dihasilkan",
+  "resultDescription": "Buat satu UUID v4 kanonis huruf kecil dan salin saat sudah siap.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "Buat Ulang",
+  "copyLabel": "Salin UUID",
+  "copiedLabel": "Disalin",
+  "detailsTitle": "Detail format",
+  "detailsDescription": "Nilai UUID v4 menggunakan byte acak beserta bit versi dan varian yang tetap.",
+  "versionLabel": "Versi",
+  "versionValue": "4, acak",
+  "variantLabel": "Varian",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "Bit acak",
+  "entropyValue": "122 bit",
+  "privacyTitle": "Pembuatan lokal",
+  "privacyDescription": "UUID dibuat dengan Web Crypto di tab browser ini dan tidak dikirim ke server.",
+  "errorTitle": "Tidak dapat membuat UUID",
+  "cryptoUnavailableMessage": "Nilai acak Web Crypto tidak tersedia di browser ini."
+}

@@ -1,0 +1,20 @@
+{
+  "resultTitle": "UUID đã tạo",
+  "resultDescription": "Tạo một UUID v4 chuẩn dạng chữ thường và sao chép khi sẵn sàng.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "Tạo lại",
+  "copyLabel": "Sao chép UUID",
+  "copiedLabel": "Đã sao chép",
+  "detailsTitle": "Chi tiết định dạng",
+  "detailsDescription": "Giá trị UUID v4 dùng byte ngẫu nhiên cùng với các bit phiên bản và biến thể cố định.",
+  "versionLabel": "Phiên bản",
+  "versionValue": "4, ngẫu nhiên",
+  "variantLabel": "Biến thể",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "Bit ngẫu nhiên",
+  "entropyValue": "122 bit",
+  "privacyTitle": "Tạo cục bộ",
+  "privacyDescription": "UUID được tạo bằng Web Crypto trong tab trình duyệt này và không được gửi tới máy chủ.",
+  "errorTitle": "Không thể tạo UUID",
+  "cryptoUnavailableMessage": "Giá trị ngẫu nhiên của Web Crypto không khả dụng trong trình duyệt này."
+}

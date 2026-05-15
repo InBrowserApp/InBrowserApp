@@ -1,0 +1,20 @@
+{
+  "resultTitle": "생성된 UUID",
+  "resultDescription": "표준 형식의 소문자 UUID v4 하나를 생성하고 준비되면 복사하세요.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "다시 생성",
+  "copyLabel": "UUID 복사",
+  "copiedLabel": "복사됨",
+  "detailsTitle": "형식 세부 정보",
+  "detailsDescription": "UUID v4 값은 임의 바이트와 고정된 버전 및 변형 비트를 사용합니다.",
+  "versionLabel": "버전",
+  "versionValue": "4, 임의",
+  "variantLabel": "변형",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "임의 비트",
+  "entropyValue": "122비트",
+  "privacyTitle": "로컬 생성",
+  "privacyDescription": "UUID는 이 브라우저 탭에서 Web Crypto로 생성되며 서버로 전송되지 않습니다.",
+  "errorTitle": "UUID를 생성할 수 없음",
+  "cryptoUnavailableMessage": "이 브라우저에서는 Web Crypto 임의 값을 사용할 수 없습니다."
+}

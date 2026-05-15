@@ -1,0 +1,4 @@
+{
+  "name": "מחולל UUID v4",
+  "description": "צרו UUID v4 אקראי לפי RFC 4122/RFC 9562 מקומית בדפדפן."
+}

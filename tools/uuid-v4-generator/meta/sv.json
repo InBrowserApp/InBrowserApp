@@ -1,0 +1,4 @@
+{
+  "name": "UUID v4-generator",
+  "description": "Generera ett slumpmässigt UUID v4 enligt RFC 4122/RFC 9562 lokalt i webbläsaren."
+}

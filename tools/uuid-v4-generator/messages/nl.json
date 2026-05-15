@@ -1,0 +1,20 @@
+{
+  "resultTitle": "Gegenereerde UUID",
+  "resultDescription": "Genereer één canonieke UUID v4 in kleine letters en kopieer die zodra hij klaar is.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "Opnieuw genereren",
+  "copyLabel": "UUID kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "detailsTitle": "Formaatdetails",
+  "detailsDescription": "UUID v4-waarden gebruiken willekeurige bytes plus vaste versie- en variantbits.",
+  "versionLabel": "Versie",
+  "versionValue": "4, willekeurig",
+  "variantLabel": "Variant",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "Willekeurige bits",
+  "entropyValue": "122 bits",
+  "privacyTitle": "Lokale generatie",
+  "privacyDescription": "De UUID wordt met Web Crypto in dit browsertabblad gegenereerd en wordt niet naar een server verzonden.",
+  "errorTitle": "Kan UUID niet genereren",
+  "cryptoUnavailableMessage": "Willekeurige waarden van Web Crypto zijn niet beschikbaar in deze browser."
+}

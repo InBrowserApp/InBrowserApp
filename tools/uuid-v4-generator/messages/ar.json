@@ -1,0 +1,20 @@
+{
+  "resultTitle": "UUID المولد",
+  "resultDescription": "أنشئ UUID v4 واحدا بصيغته القياسية وبأحرف صغيرة، ثم انسخه عندما يصبح جاهزا.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "توليد من جديد",
+  "copyLabel": "نسخ UUID",
+  "copiedLabel": "تم النسخ",
+  "detailsTitle": "تفاصيل التنسيق",
+  "detailsDescription": "تستخدم قيم UUID v4 بايتات عشوائية مع بتات ثابتة للإصدار والمتغير.",
+  "versionLabel": "الإصدار",
+  "versionValue": "4، عشوائي",
+  "variantLabel": "المتغير",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "البتات العشوائية",
+  "entropyValue": "122 بت",
+  "privacyTitle": "التوليد المحلي",
+  "privacyDescription": "يتم توليد UUID باستخدام Web Crypto في علامة تبويب المتصفح هذه ولا يرسل إلى خادم.",
+  "errorTitle": "تعذر توليد UUID",
+  "cryptoUnavailableMessage": "قيم Web Crypto العشوائية غير متاحة في هذا المتصفح."
+}

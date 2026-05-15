@@ -16286,6 +16286,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "uuid-v4-generator",
+    language: "ar",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "de",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "en",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "es",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "fr",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "he",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "hi",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "id",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "it",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "ja",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "ko",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "ms",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "nl",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "no",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "pl",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "pt",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "ru",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "sv",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "th",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "tr",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "vi",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-v4-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "uuid-validator",
     language: "ar",
   },

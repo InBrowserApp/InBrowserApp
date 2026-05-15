@@ -1,0 +1,20 @@
+{
+  "resultTitle": "生成的 UUID",
+  "resultDescription": "生成一个规范的小写 UUID v4，并在准备好后复制它。",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "重新生成",
+  "copyLabel": "复制 UUID",
+  "copiedLabel": "已复制",
+  "detailsTitle": "格式详情",
+  "detailsDescription": "UUID v4 值使用随机字节以及固定的版本位和变体位。",
+  "versionLabel": "版本",
+  "versionValue": "4，随机",
+  "variantLabel": "变体",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "随机位",
+  "entropyValue": "122 位",
+  "privacyTitle": "本地生成",
+  "privacyDescription": "UUID 在此浏览器标签页中使用 Web Crypto 生成，不会发送到服务器。",
+  "errorTitle": "无法生成 UUID",
+  "cryptoUnavailableMessage": "此浏览器中没有可用的 Web Crypto 随机值。"
+}
