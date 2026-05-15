@@ -16378,6 +16378,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "uuid-decoder",
+    language: "ar",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "de",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "en",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "es",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "fr",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "he",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "hi",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "id",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "it",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "ja",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "ko",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "ms",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "nl",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "no",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "pl",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "pt",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "ru",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "sv",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "th",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "tr",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "vi",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-decoder",
+    language: "zh-TW",
+  },
+  {
     slug: "uuid-v3-generator",
     language: "ar",
   },

@@ -22331,6 +22331,135 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "uuid-decoder",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "uuid",
+      "decoder",
+      "identifier",
+      "guid",
+      "version",
+      "variant",
+      "timestamp",
+    ],
+    locales: {
+      ar: {
+        name: "مفكك ترميز UUID",
+        description:
+          "فك ترميز UUID إلى إصداره ومتغيره وحقول الطابع الزمني وتمثيلاته الرقمية.",
+      },
+      de: {
+        name: "UUID Decoder",
+        description:
+          "Dekodiere eine UUID in Version, Variante, Zeitstempelfelder und numerische Darstellungen.",
+      },
+      en: {
+        name: "UUID Decoder",
+        description:
+          "Decode a UUID into its version, variant, timestamp fields, and numeric representations.",
+      },
+      es: {
+        name: "UUID Decoder",
+        description:
+          "Decodifica un UUID en su versión, variante, campos de marca temporal y representaciones numéricas.",
+      },
+      fr: {
+        name: "Décodeur UUID",
+        description:
+          "Décodez un UUID pour afficher sa version, sa variante, ses champs d’horodatage et ses représentations numériques.",
+      },
+      he: {
+        name: "מפענח UUID",
+        description:
+          "פענחו UUID לגרסה, לווריאנט, לשדות חותמת הזמן ולייצוגים מספריים.",
+      },
+      hi: {
+        name: "UUID डिकोडर",
+        description:
+          "UUID को उसके वर्ज़न, वैरिएंट, टाइमस्टैम्प फ़ील्ड और संख्यात्मक रूपों में डिकोड करें।",
+      },
+      id: {
+        name: "Dekoder UUID",
+        description:
+          "Dekode UUID menjadi versi, varian, bidang stempel waktu, dan representasi numeriknya.",
+      },
+      it: {
+        name: "Decodificatore UUID",
+        description:
+          "Decodifica un UUID nella sua versione, variante, campi temporali e rappresentazioni numeriche.",
+      },
+      ja: {
+        name: "UUID デコーダー",
+        description:
+          "UUID をデコードし、バージョン、バリアント、タイムスタンプフィールド、数値表現を確認します。",
+      },
+      ko: {
+        name: "UUID 디코더",
+        description:
+          "UUID를 버전, 변형, 타임스탬프 필드, 숫자 표현으로 디코딩합니다.",
+      },
+      ms: {
+        name: "Penyahkod UUID",
+        description:
+          "Nyahkod UUID kepada versi, varian, medan cap masa, dan perwakilan angkanya.",
+      },
+      nl: {
+        name: "UUID-decoder",
+        description:
+          "Decodeer een UUID naar de versie, variant, tijdstempelvelden en numerieke representaties.",
+      },
+      no: {
+        name: "UUID-dekoder",
+        description:
+          "Dekoder en UUID til versjon, variant, tidsstempelfelt og numeriske representasjoner.",
+      },
+      pl: {
+        name: "Dekoder UUID",
+        description:
+          "Dekoduj UUID, aby poznać jego wersję, wariant, pola znacznika czasu i reprezentacje liczbowe.",
+      },
+      pt: {
+        name: "Decodificador de UUID",
+        description:
+          "Decodifique um UUID em sua versão, variante, campos de data/hora e representações numéricas.",
+      },
+      ru: {
+        name: "Декодер UUID",
+        description:
+          "Декодируйте UUID, чтобы увидеть его версию, вариант, поля времени и числовые представления.",
+      },
+      sv: {
+        name: "UUID-avkodare",
+        description:
+          "Avkoda ett UUID till dess version, variant, tidsstämpelfält och numeriska representationer.",
+      },
+      th: {
+        name: "UUID Decoder",
+        description:
+          "ถอดรหัส UUID เพื่อดูเวอร์ชัน แวเรียนต์ ฟิลด์เวลา และรูปแบบตัวเลขต่าง ๆ",
+      },
+      tr: {
+        name: "UUID Çözücü",
+        description:
+          "Bir UUID'nin sürümünü, varyantını, zaman damgası alanlarını ve sayısal gösterimlerini çözümleyin.",
+      },
+      vi: {
+        name: "Trình giải mã UUID",
+        description:
+          "Giải mã UUID để xem phiên bản, biến thể, các trường dấu thời gian và các dạng biểu diễn số.",
+      },
+      "zh-CN": {
+        name: "UUID 解码器",
+        description: "将 UUID 解码为其版本、变体、时间戳字段和数字表示形式。",
+      },
+      "zh-TW": {
+        name: "UUID 解碼器",
+        description: "將 UUID 解碼為其版本、變體、時間戳欄位與數值表示法。",
+      },
+    },
+  },
+  {
     slug: "uuid-v3-generator",
     category: "developer",
     icon: "binary",

@@ -1,0 +1,4 @@
+{
+  "name": "UUID Decoder",
+  "description": "Decodifica un UUID en su versión, variante, campos de marca temporal y representaciones numéricas."
+}

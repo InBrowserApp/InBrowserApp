@@ -1,0 +1,4 @@
+{
+  "name": "UUID-dekoder",
+  "description": "Dekoder en UUID til versjon, variant, tidsstempelfelt og numeriske representasjoner."
+}
