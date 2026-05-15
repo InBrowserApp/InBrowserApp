@@ -87,6 +87,8 @@ jobs:
           run_install: true
 
       - name: Build
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
         run: pnpm build
 
       - name: Check internal links in built HTML

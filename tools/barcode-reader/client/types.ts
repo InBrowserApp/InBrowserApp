@@ -81,7 +81,6 @@ type ContentTypeLabelMap = Readonly<Record<BarcodeContentKind, string>>
 export type {
   BarcodeReaderMessages,
   BarcodeReaderResult,
-  BarcodeScanSource,
   CameraStatus,
   ContentTypeLabelMap,
   ScanMode,

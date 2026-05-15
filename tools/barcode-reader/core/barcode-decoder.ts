@@ -129,4 +129,4 @@ export {
   isSupportedImageFile,
   toBarcodeResult,
 }
-export type { BarcodeScanResult, ZxingResult }
+export type { BarcodeScanResult }
