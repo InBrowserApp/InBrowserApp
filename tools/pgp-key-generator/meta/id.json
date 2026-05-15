@@ -1,0 +1,4 @@
+{
+  "name": "Pembuat Kunci PGP",
+  "description": "Buat pasangan kunci OpenPGP di browser Anda dengan ECC atau RSA, perlindungan frasa sandi opsional, sidik jari, dan sertifikat pencabutan."
+}

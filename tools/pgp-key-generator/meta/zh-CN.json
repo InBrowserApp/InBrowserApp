@@ -1,0 +1,4 @@
+{
+  "name": "PGP 密钥生成器",
+  "description": "在浏览器中生成 OpenPGP 密钥对，支持 ECC 或 RSA、可选密码短语保护、指纹和吊销证书。"
+}

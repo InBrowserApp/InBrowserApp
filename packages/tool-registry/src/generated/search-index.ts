@@ -13877,6 +13877,141 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "pgp-key-generator",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "pgp",
+      "openpgp",
+      "gpg",
+      "key",
+      "keypair",
+      "generator",
+      "security",
+      "crypto",
+      "encryption",
+      "signing",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "مولد مفاتيح PGP",
+        description:
+          "ولّد أزواج مفاتيح OpenPGP في متصفحك باستخدام ECC أو RSA، مع حماية اختيارية بعبارة مرور، وبصمات، وشهادة إبطال.",
+      },
+      de: {
+        name: "PGP-Schlüsselgenerator",
+        description:
+          "Erzeuge OpenPGP-Schlüsselpaare in deinem Browser mit ECC oder RSA, optionalem Passphrase-Schutz, Fingerprints und einem Widerrufszertifikat.",
+      },
+      en: {
+        name: "PGP Key Generator",
+        description:
+          "Generate OpenPGP key pairs in your browser with ECC or RSA, optional passphrase protection, fingerprints, and a revocation certificate.",
+      },
+      es: {
+        name: "Generador de claves PGP",
+        description:
+          "Genera pares de claves OpenPGP en tu navegador con ECC o RSA, protección opcional con frase de contraseña, huellas digitales y un certificado de revocación.",
+      },
+      fr: {
+        name: "Générateur de clés PGP",
+        description:
+          "Générez des paires de clés OpenPGP dans votre navigateur avec ECC ou RSA, une protection optionnelle par phrase de passe, des empreintes et un certificat de révocation.",
+      },
+      he: {
+        name: "מחולל מפתחות PGP",
+        description:
+          "צרו זוגות מפתחות OpenPGP בדפדפן שלכם עם ECC או RSA, הגנה אופציונלית בביטוי סיסמה, טביעות אצבע ותעודת ביטול.",
+      },
+      hi: {
+        name: "PGP कुंजी जनरेटर",
+        description:
+          "अपने ब्राउज़र में ECC या RSA, वैकल्पिक पासफ्रेज़ सुरक्षा, फिंगरप्रिंट और निरस्तीकरण प्रमाणपत्र के साथ OpenPGP कुंजी युग्म जनरेट करें।",
+      },
+      id: {
+        name: "Pembuat Kunci PGP",
+        description:
+          "Buat pasangan kunci OpenPGP di browser Anda dengan ECC atau RSA, perlindungan frasa sandi opsional, sidik jari, dan sertifikat pencabutan.",
+      },
+      it: {
+        name: "Generatore di chiavi PGP",
+        description:
+          "Genera coppie di chiavi OpenPGP nel browser con ECC o RSA, protezione opzionale tramite passphrase, impronte digitali e un certificato di revoca.",
+      },
+      ja: {
+        name: "PGP 鍵生成ツール",
+        description:
+          "ブラウザー内で OpenPGP 鍵ペアを生成します。ECC または RSA、任意のパスフレーズ保護、フィンガープリント、失効証明書に対応しています。",
+      },
+      ko: {
+        name: "PGP 키 생성기",
+        description:
+          "브라우저에서 ECC 또는 RSA, 선택적 암호구 보호, 지문, 해지 인증서를 포함한 OpenPGP 키 쌍을 생성하세요.",
+      },
+      ms: {
+        name: "Penjana Kunci PGP",
+        description:
+          "Jana pasangan kunci OpenPGP dalam pelayar anda dengan ECC atau RSA, perlindungan frasa laluan pilihan, cap jari, dan sijil pembatalan.",
+      },
+      nl: {
+        name: "PGP-sleutelgenerator",
+        description:
+          "Genereer OpenPGP-sleutelparen in je browser met ECC of RSA, optionele bescherming met een wachtwoordzin, vingerafdrukken en een intrekkingscertificaat.",
+      },
+      no: {
+        name: "PGP-nøkkelgenerator",
+        description:
+          "Generer OpenPGP-nøkkelpar i nettleseren din med ECC eller RSA, valgfri passfrasebeskyttelse, fingeravtrykk og et tilbakekallingssertifikat.",
+      },
+      pl: {
+        name: "Generator kluczy PGP",
+        description:
+          "Generuj pary kluczy OpenPGP w przeglądarce z ECC lub RSA, opcjonalną ochroną frazą hasła, odciskami palca i certyfikatem odwołania.",
+      },
+      pt: {
+        name: "Gerador de chaves PGP",
+        description:
+          "Gere pares de chaves OpenPGP no seu navegador com ECC ou RSA, proteção opcional por frase de senha, impressões digitais e um certificado de revogação.",
+      },
+      ru: {
+        name: "Генератор ключей PGP",
+        description:
+          "Создавайте пары ключей OpenPGP в браузере с ECC или RSA, необязательной защитой парольной фразой, отпечатками и сертификатом отзыва.",
+      },
+      sv: {
+        name: "PGP-nyckelgenerator",
+        description:
+          "Generera OpenPGP-nyckelpar i din webbläsare med ECC eller RSA, valfritt skydd med lösenfras, fingeravtryck och ett återkallelsecertifikat.",
+      },
+      th: {
+        name: "ตัวสร้างคีย์ PGP",
+        description:
+          "สร้างคู่คีย์ OpenPGP ในเบราว์เซอร์ของคุณด้วย ECC หรือ RSA พร้อมการป้องกันด้วย passphrase แบบเลือกได้ fingerprint และใบรับรองการเพิกถอน",
+      },
+      tr: {
+        name: "PGP Anahtar Oluşturucu",
+        description:
+          "Tarayıcınızda ECC veya RSA ile OpenPGP anahtar çiftleri oluşturun; isteğe bağlı parola cümlesi koruması, parmak izleri ve iptal sertifikası dahildir.",
+      },
+      vi: {
+        name: "Trình tạo khóa PGP",
+        description:
+          "Tạo cặp khóa OpenPGP trong trình duyệt của bạn với ECC hoặc RSA, bảo vệ tùy chọn bằng cụm mật khẩu, dấu vân tay và chứng chỉ thu hồi.",
+      },
+      "zh-CN": {
+        name: "PGP 密钥生成器",
+        description:
+          "在浏览器中生成 OpenPGP 密钥对，支持 ECC 或 RSA、可选密码短语保护、指纹和吊销证书。",
+      },
+      "zh-TW": {
+        name: "PGP 金鑰產生器",
+        description:
+          "在瀏覽器中產生 OpenPGP 金鑰對，可選擇 ECC 或 RSA、選用密碼片語保護、取得指紋，以及產生撤銷憑證。",
+      },
+    },
+  },
+  {
     slug: "placeholder-image-generator",
     category: "image",
     icon: "image",

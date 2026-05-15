@@ -118,6 +118,7 @@
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",
     "@tool/pbkdf2-key-derivation": "workspace:*",
+    "@tool/pgp-key-generator": "workspace:*",
     "@tool/placeholder-image-generator": "workspace:*",
     "@tool/port-number-lookup": "workspace:*",
     "@tool/prc-id-validator": "workspace:*",

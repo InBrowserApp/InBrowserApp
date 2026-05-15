@@ -1,0 +1,4 @@
+{
+  "name": "PGP Key Generator",
+  "description": "Generate OpenPGP key pairs in your browser with ECC or RSA, optional passphrase protection, fingerprints, and a revocation certificate."
+}

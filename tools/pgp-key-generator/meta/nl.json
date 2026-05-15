@@ -1,0 +1,4 @@
+{
+  "name": "PGP-sleutelgenerator",
+  "description": "Genereer OpenPGP-sleutelparen in je browser met ECC of RSA, optionele bescherming met een wachtwoordzin, vingerafdrukken en een intrekkingscertificaat."
+}

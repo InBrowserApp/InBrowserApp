@@ -1,0 +1,4 @@
+{
+  "name": "PGP-Schlüsselgenerator",
+  "description": "Erzeuge OpenPGP-Schlüsselpaare in deinem Browser mit ECC oder RSA, optionalem Passphrase-Schutz, Fingerprints und einem Widerrufszertifikat."
+}

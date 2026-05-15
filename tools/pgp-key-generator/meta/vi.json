@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo khóa PGP",
+  "description": "Tạo cặp khóa OpenPGP trong trình duyệt của bạn với ECC hoặc RSA, bảo vệ tùy chọn bằng cụm mật khẩu, dấu vân tay và chứng chỉ thu hồi."
+}

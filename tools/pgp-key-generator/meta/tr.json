@@ -1,0 +1,4 @@
+{
+  "name": "PGP Anahtar Oluşturucu",
+  "description": "Tarayıcınızda ECC veya RSA ile OpenPGP anahtar çiftleri oluşturun; isteğe bağlı parola cümlesi koruması, parmak izleri ve iptal sertifikası dahildir."
+}

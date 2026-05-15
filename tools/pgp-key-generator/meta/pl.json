@@ -1,0 +1,4 @@
+{
+  "name": "Generator kluczy PGP",
+  "description": "Generuj pary kluczy OpenPGP w przeglądarce z ECC lub RSA, opcjonalną ochroną frazą hasła, odciskami palca i certyfikatem odwołania."
+}
