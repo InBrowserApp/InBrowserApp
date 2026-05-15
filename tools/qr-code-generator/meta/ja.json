@@ -1,0 +1,4 @@
+{
+  "name": "QR Code Generator",
+  "description": "テキスト、リンク、Wi-Fi認証情報、連絡先、電話操作、位置情報、カレンダーイベント用のQRコードを生成します。結果はPNG、JPG、WebP、SVGとしてダウンロードできます。"
+}

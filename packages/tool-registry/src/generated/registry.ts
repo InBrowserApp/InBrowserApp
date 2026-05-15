@@ -14753,6 +14753,141 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "qr-code-generator",
+    category: "image",
+    icon: "image",
+    tags: [
+      "qr",
+      "qrcode",
+      "barcode",
+      "generator",
+      "wifi",
+      "vcard",
+      "sms",
+      "email",
+      "calendar",
+      "svg",
+      "png",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد رموز QR",
+        description:
+          "أنشئ رموز QR للنصوص والروابط وبيانات اعتماد Wi-Fi وجهات الاتصال وإجراءات الهاتف والمواقع وأحداث التقويم. نزّل النتيجة بتنسيق PNG أو JPG أو WebP أو SVG.",
+      },
+      de: {
+        name: "QR-Code-Generator",
+        description:
+          "Erstelle QR-Codes für Text, Links, WLAN-Zugangsdaten, Kontakte, Telefonaktionen, Standorte und Kalenderereignisse. Lade das Ergebnis als PNG, JPG, WebP oder SVG herunter.",
+      },
+      en: {
+        name: "QR Code Generator",
+        description:
+          "Generate QR codes for text, links, Wi-Fi credentials, contacts, phone actions, locations, and calendar events. Download the result as PNG, JPG, WebP, or SVG.",
+      },
+      es: {
+        name: "Generador de códigos QR",
+        description:
+          "Genera códigos QR para texto, enlaces, credenciales de Wi-Fi, contactos, acciones telefónicas, ubicaciones y eventos de calendario. Descarga el resultado como PNG, JPG, WebP o SVG.",
+      },
+      fr: {
+        name: "Générateur de codes QR",
+        description:
+          "Générez des codes QR pour du texte, des liens, des identifiants Wi-Fi, des contacts, des actions téléphoniques, des lieux et des événements de calendrier. Téléchargez le résultat en PNG, JPG, WebP ou SVG.",
+      },
+      he: {
+        name: "מחולל קודי QR",
+        description:
+          "צרו קודי QR לטקסט, קישורים, פרטי Wi-Fi, אנשי קשר, פעולות טלפון, מיקומים ואירועי לוח שנה. הורידו את התוצאה כ-PNG, JPG, WebP או SVG.",
+      },
+      hi: {
+        name: "QR कोड जेनरेटर",
+        description:
+          "टेक्स्ट, लिंक, Wi-Fi क्रेडेंशियल, संपर्क, फ़ोन कार्रवाइयों, स्थानों और कैलेंडर ईवेंट के लिए QR कोड जनरेट करें। परिणाम को PNG, JPG, WebP या SVG के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator Kode QR",
+        description:
+          "Buat kode QR untuk teks, tautan, kredensial Wi-Fi, kontak, tindakan telepon, lokasi, dan acara kalender. Unduh hasilnya sebagai PNG, JPG, WebP, atau SVG.",
+      },
+      it: {
+        name: "Generatore di codici QR",
+        description:
+          "Genera codici QR per testo, link, credenziali Wi-Fi, contatti, azioni telefoniche, posizioni ed eventi di calendario. Scarica il risultato come PNG, JPG, WebP o SVG.",
+      },
+      ja: {
+        name: "QR Code Generator",
+        description:
+          "テキスト、リンク、Wi-Fi認証情報、連絡先、電話操作、位置情報、カレンダーイベント用のQRコードを生成します。結果はPNG、JPG、WebP、SVGとしてダウンロードできます。",
+      },
+      ko: {
+        name: "QR 코드 생성기",
+        description:
+          "텍스트, 링크, Wi-Fi 접속 정보, 연락처, 전화 동작, 위치, 캘린더 이벤트용 QR 코드를 생성하세요. 결과를 PNG, JPG, WebP 또는 SVG로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana Kod QR",
+        description:
+          "Jana kod QR untuk teks, pautan, kelayakan Wi-Fi, kenalan, tindakan telefon, lokasi dan acara kalendar. Muat turun hasil sebagai PNG, JPG, WebP atau SVG.",
+      },
+      nl: {
+        name: "QR-codegenerator",
+        description:
+          "Genereer QR-codes voor tekst, links, Wi-Fi-inloggegevens, contacten, telefoonacties, locaties en agenda-afspraken. Download het resultaat als PNG, JPG, WebP of SVG.",
+      },
+      no: {
+        name: "QR-kodegenerator",
+        description:
+          "Generer QR-koder for tekst, lenker, Wi-Fi-påloggingsinformasjon, kontakter, telefonhandlinger, steder og kalenderhendelser. Last ned resultatet som PNG, JPG, WebP eller SVG.",
+      },
+      pl: {
+        name: "Generator kodów QR",
+        description:
+          "Generuj kody QR dla tekstu, linków, danych logowania Wi-Fi, kontaktów, akcji telefonicznych, lokalizacji i wydarzeń w kalendarzu. Pobierz wynik jako PNG, JPG, WebP lub SVG.",
+      },
+      pt: {
+        name: "Gerador de QR Code",
+        description:
+          "Gere QR codes para texto, links, credenciais de Wi-Fi, contatos, ações telefônicas, localizações e eventos de calendário. Baixe o resultado como PNG, JPG, WebP ou SVG.",
+      },
+      ru: {
+        name: "Генератор QR-кодов",
+        description:
+          "Создавайте QR-коды для текста, ссылок, данных Wi-Fi, контактов, звонков, местоположений и событий календаря. Скачивайте результат в PNG, JPG, WebP или SVG.",
+      },
+      sv: {
+        name: "QR-kodgenerator",
+        description:
+          "Generera QR-koder för text, länkar, Wi-Fi-uppgifter, kontakter, telefonåtgärder, platser och kalenderhändelser. Ladda ner resultatet som PNG, JPG, WebP eller SVG.",
+      },
+      th: {
+        name: "ตัวสร้าง QR Code",
+        description:
+          "สร้าง QR code สำหรับข้อความ ลิงก์ ข้อมูลรับรอง Wi-Fi รายชื่อติดต่อ การทำงานทางโทรศัพท์ ตำแหน่งที่ตั้ง และกิจกรรมปฏิทิน ดาวน์โหลดผลลัพธ์เป็น PNG, JPG, WebP หรือ SVG",
+      },
+      tr: {
+        name: "QR Kod Oluşturucu",
+        description:
+          "Metin, bağlantılar, Wi-Fi bilgileri, kişiler, telefon eylemleri, konumlar ve takvim etkinlikleri için QR kodları oluşturun. Sonucu PNG, JPG, WebP veya SVG olarak indirin.",
+      },
+      vi: {
+        name: "Trình tạo mã QR",
+        description:
+          "Tạo mã QR cho văn bản, liên kết, thông tin truy cập Wi-Fi, danh bạ, thao tác điện thoại, vị trí và sự kiện lịch. Tải kết quả xuống dưới dạng PNG, JPG, WebP hoặc SVG.",
+      },
+      "zh-CN": {
+        name: "二维码生成器",
+        description:
+          "生成用于文本、链接、Wi-Fi 凭据、联系人、电话操作、位置和日历事件的二维码。可将结果下载为 PNG、JPG、WebP 或 SVG。",
+      },
+      "zh-TW": {
+        name: "QR Code 產生器",
+        description:
+          "為文字、連結、Wi-Fi 認證資料、聯絡人、電話操作、位置和行事曆活動產生 QR Code。可將結果下載為 PNG、JPG、WebP 或 SVG。",
+      },
+    },
+  },
+  {
     slug: "qr-code-reader",
     category: "image",
     icon: "image",
@@ -37081,6 +37216,141 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Prettier 程式碼格式化工具",
         description:
           "直接在瀏覽器中用 Prettier 格式化 JavaScript、TypeScript、JSON、HTML、CSS、Markdown、YAML、GraphQL 與相關檔案。",
+      },
+    },
+  },
+  "qr-code-generator": {
+    slug: "qr-code-generator",
+    category: "image",
+    icon: "image",
+    tags: [
+      "qr",
+      "qrcode",
+      "barcode",
+      "generator",
+      "wifi",
+      "vcard",
+      "sms",
+      "email",
+      "calendar",
+      "svg",
+      "png",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد رموز QR",
+        description:
+          "أنشئ رموز QR للنصوص والروابط وبيانات اعتماد Wi-Fi وجهات الاتصال وإجراءات الهاتف والمواقع وأحداث التقويم. نزّل النتيجة بتنسيق PNG أو JPG أو WebP أو SVG.",
+      },
+      de: {
+        name: "QR-Code-Generator",
+        description:
+          "Erstelle QR-Codes für Text, Links, WLAN-Zugangsdaten, Kontakte, Telefonaktionen, Standorte und Kalenderereignisse. Lade das Ergebnis als PNG, JPG, WebP oder SVG herunter.",
+      },
+      en: {
+        name: "QR Code Generator",
+        description:
+          "Generate QR codes for text, links, Wi-Fi credentials, contacts, phone actions, locations, and calendar events. Download the result as PNG, JPG, WebP, or SVG.",
+      },
+      es: {
+        name: "Generador de códigos QR",
+        description:
+          "Genera códigos QR para texto, enlaces, credenciales de Wi-Fi, contactos, acciones telefónicas, ubicaciones y eventos de calendario. Descarga el resultado como PNG, JPG, WebP o SVG.",
+      },
+      fr: {
+        name: "Générateur de codes QR",
+        description:
+          "Générez des codes QR pour du texte, des liens, des identifiants Wi-Fi, des contacts, des actions téléphoniques, des lieux et des événements de calendrier. Téléchargez le résultat en PNG, JPG, WebP ou SVG.",
+      },
+      he: {
+        name: "מחולל קודי QR",
+        description:
+          "צרו קודי QR לטקסט, קישורים, פרטי Wi-Fi, אנשי קשר, פעולות טלפון, מיקומים ואירועי לוח שנה. הורידו את התוצאה כ-PNG, JPG, WebP או SVG.",
+      },
+      hi: {
+        name: "QR कोड जेनरेटर",
+        description:
+          "टेक्स्ट, लिंक, Wi-Fi क्रेडेंशियल, संपर्क, फ़ोन कार्रवाइयों, स्थानों और कैलेंडर ईवेंट के लिए QR कोड जनरेट करें। परिणाम को PNG, JPG, WebP या SVG के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator Kode QR",
+        description:
+          "Buat kode QR untuk teks, tautan, kredensial Wi-Fi, kontak, tindakan telepon, lokasi, dan acara kalender. Unduh hasilnya sebagai PNG, JPG, WebP, atau SVG.",
+      },
+      it: {
+        name: "Generatore di codici QR",
+        description:
+          "Genera codici QR per testo, link, credenziali Wi-Fi, contatti, azioni telefoniche, posizioni ed eventi di calendario. Scarica il risultato come PNG, JPG, WebP o SVG.",
+      },
+      ja: {
+        name: "QR Code Generator",
+        description:
+          "テキスト、リンク、Wi-Fi認証情報、連絡先、電話操作、位置情報、カレンダーイベント用のQRコードを生成します。結果はPNG、JPG、WebP、SVGとしてダウンロードできます。",
+      },
+      ko: {
+        name: "QR 코드 생성기",
+        description:
+          "텍스트, 링크, Wi-Fi 접속 정보, 연락처, 전화 동작, 위치, 캘린더 이벤트용 QR 코드를 생성하세요. 결과를 PNG, JPG, WebP 또는 SVG로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana Kod QR",
+        description:
+          "Jana kod QR untuk teks, pautan, kelayakan Wi-Fi, kenalan, tindakan telefon, lokasi dan acara kalendar. Muat turun hasil sebagai PNG, JPG, WebP atau SVG.",
+      },
+      nl: {
+        name: "QR-codegenerator",
+        description:
+          "Genereer QR-codes voor tekst, links, Wi-Fi-inloggegevens, contacten, telefoonacties, locaties en agenda-afspraken. Download het resultaat als PNG, JPG, WebP of SVG.",
+      },
+      no: {
+        name: "QR-kodegenerator",
+        description:
+          "Generer QR-koder for tekst, lenker, Wi-Fi-påloggingsinformasjon, kontakter, telefonhandlinger, steder og kalenderhendelser. Last ned resultatet som PNG, JPG, WebP eller SVG.",
+      },
+      pl: {
+        name: "Generator kodów QR",
+        description:
+          "Generuj kody QR dla tekstu, linków, danych logowania Wi-Fi, kontaktów, akcji telefonicznych, lokalizacji i wydarzeń w kalendarzu. Pobierz wynik jako PNG, JPG, WebP lub SVG.",
+      },
+      pt: {
+        name: "Gerador de QR Code",
+        description:
+          "Gere QR codes para texto, links, credenciais de Wi-Fi, contatos, ações telefônicas, localizações e eventos de calendário. Baixe o resultado como PNG, JPG, WebP ou SVG.",
+      },
+      ru: {
+        name: "Генератор QR-кодов",
+        description:
+          "Создавайте QR-коды для текста, ссылок, данных Wi-Fi, контактов, звонков, местоположений и событий календаря. Скачивайте результат в PNG, JPG, WebP или SVG.",
+      },
+      sv: {
+        name: "QR-kodgenerator",
+        description:
+          "Generera QR-koder för text, länkar, Wi-Fi-uppgifter, kontakter, telefonåtgärder, platser och kalenderhändelser. Ladda ner resultatet som PNG, JPG, WebP eller SVG.",
+      },
+      th: {
+        name: "ตัวสร้าง QR Code",
+        description:
+          "สร้าง QR code สำหรับข้อความ ลิงก์ ข้อมูลรับรอง Wi-Fi รายชื่อติดต่อ การทำงานทางโทรศัพท์ ตำแหน่งที่ตั้ง และกิจกรรมปฏิทิน ดาวน์โหลดผลลัพธ์เป็น PNG, JPG, WebP หรือ SVG",
+      },
+      tr: {
+        name: "QR Kod Oluşturucu",
+        description:
+          "Metin, bağlantılar, Wi-Fi bilgileri, kişiler, telefon eylemleri, konumlar ve takvim etkinlikleri için QR kodları oluşturun. Sonucu PNG, JPG, WebP veya SVG olarak indirin.",
+      },
+      vi: {
+        name: "Trình tạo mã QR",
+        description:
+          "Tạo mã QR cho văn bản, liên kết, thông tin truy cập Wi-Fi, danh bạ, thao tác điện thoại, vị trí và sự kiện lịch. Tải kết quả xuống dưới dạng PNG, JPG, WebP hoặc SVG.",
+      },
+      "zh-CN": {
+        name: "二维码生成器",
+        description:
+          "生成用于文本、链接、Wi-Fi 凭据、联系人、电话操作、位置和日历事件的二维码。可将结果下载为 PNG、JPG、WebP 或 SVG。",
+      },
+      "zh-TW": {
+        name: "QR Code 產生器",
+        description:
+          "為文字、連結、Wi-Fi 認證資料、聯絡人、電話操作、位置和行事曆活動產生 QR Code。可將結果下載為 PNG、JPG、WebP 或 SVG。",
       },
     },
   },
