@@ -1,0 +1,4 @@
+{
+  "name": "Lettore di codici QR",
+  "description": "Decodifica codici QR da file immagine o da una fotocamera live, interamente nel browser."
+}

@@ -125,6 +125,7 @@
     "@tool/port-number-lookup": "workspace:*",
     "@tool/prc-id-validator": "workspace:*",
     "@tool/prettier-code-formatter": "workspace:*",
+    "@tool/qr-code-reader": "workspace:*",
     "@tool/radio-timecode": "workspace:*",
     "@tool/random-number-generator": "workspace:*",
     "@tool/random-password-generator": "workspace:*",

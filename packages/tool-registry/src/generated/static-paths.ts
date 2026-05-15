@@ -10858,6 +10858,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "qr-code-reader",
+    language: "ar",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "de",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "en",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "es",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "fr",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "he",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "hi",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "id",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "it",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "ja",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "ko",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "ms",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "nl",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "no",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "pl",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "pt",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "ru",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "sv",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "th",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "tr",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "vi",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "zh-CN",
+  },
+  {
+    slug: "qr-code-reader",
+    language: "zh-TW",
+  },
+  {
     slug: "radio-timecode",
     language: "ar",
   },

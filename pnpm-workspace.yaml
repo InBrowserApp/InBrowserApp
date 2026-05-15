@@ -76,6 +76,7 @@ catalog:
   "@types/mime-db": ^1.43.6
   "@types/murmurhash3js-revisited": ^3.0.3
   jsbarcode: ^3.12.3
+  jsqr: ^1.4.0
   js-yaml: ^4.1.1
   jmespath: ^0.16.0
   is-ip: ^5.0.1
