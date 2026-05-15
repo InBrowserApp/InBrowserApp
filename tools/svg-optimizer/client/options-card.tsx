@@ -97,23 +97,28 @@ function OptionField({
   options: SvgOptimizerOptions
 }>) {
   const fieldId = `svg-optimizer-${definition.key}`
+  const descriptionId = `${fieldId}-description`
 
   return (
-    <Field orientation="horizontal">
+    <Field
+      className="min-w-0 rounded-md border border-border/70 bg-muted/20 px-2.5 py-2"
+      orientation="horizontal"
+    >
       <Checkbox
+        aria-describedby={descriptionId}
         checked={options[definition.key]}
         id={fieldId}
         onCheckedChange={(value) => {
           onCheckedChange(definition.key, value === true)
         }}
       />
-      <FieldContent>
-        <FieldTitle>
-          <label htmlFor={fieldId}>
+      <FieldContent className="min-w-0">
+        <FieldTitle className="w-full">
+          <label className="min-w-0 break-words" htmlFor={fieldId}>
             {String(messages[definition.labelKey])}
           </label>
         </FieldTitle>
-        <FieldDescription>
+        <FieldDescription className="sr-only" id={descriptionId}>
           {String(messages[definition.descriptionKey])}
         </FieldDescription>
       </FieldContent>
@@ -137,15 +142,18 @@ export function OptionsCard({
   }
 
   return (
-    <Card className="h-full">
+    <Card size="sm">
       <CardHeader>
         <CardTitle>{messages.optionsTitle}</CardTitle>
-        <CardDescription>{messages.optionsDescription}</CardDescription>
+        <CardDescription className="text-xs leading-5">
+          {messages.optionsDescription}
+        </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col gap-6">
-        <div className="grid gap-3 sm:grid-cols-2">
+      <CardContent className="flex flex-col gap-4">
+        <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-1">
           <Button
             onClick={() => onChange(DEFAULT_OPTIONS)}
+            size="sm"
             type="button"
             variant="outline"
           >
@@ -153,6 +161,7 @@ export function OptionsCard({
           </Button>
           <Button
             onClick={() => onChange(AGGRESSIVE_OPTIONS)}
+            size="sm"
             type="button"
             variant="outline"
           >
@@ -160,9 +169,11 @@ export function OptionsCard({
           </Button>
         </div>
 
-        <FieldSet>
-          <FieldLegend>{messages.optimizationOptionsLabel}</FieldLegend>
-          <FieldGroup>
+        <FieldSet className="gap-2">
+          <FieldLegend className="text-sm">
+            {messages.optimizationOptionsLabel}
+          </FieldLegend>
+          <FieldGroup className="grid gap-2 xl:grid-cols-2">
             {OPTION_DEFINITIONS.map((definition) => (
               <OptionField
                 definition={definition}
@@ -175,9 +186,10 @@ export function OptionsCard({
           </FieldGroup>
         </FieldSet>
       </CardContent>
-      <CardFooter className="flex flex-col-reverse gap-3 border-t sm:flex-row sm:justify-end">
+      <CardFooter className="grid grid-cols-1 gap-2 border-t bg-muted/30 sm:grid-cols-2 xl:grid-cols-1">
         <Button
           onClick={() => onChange(DEFAULT_OPTIONS)}
+          size="sm"
           type="button"
           variant="outline"
         >
@@ -187,6 +199,7 @@ export function OptionsCard({
         <Button
           disabled={!canOptimize || isOptimizing}
           onClick={onOptimize}
+          size="sm"
           type="button"
         >
           {isOptimizing ? (

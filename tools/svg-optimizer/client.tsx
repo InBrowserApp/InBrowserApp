@@ -176,24 +176,26 @@ function SvgOptimizerClient({ messages }: SvgOptimizerClientProps) {
   }
 
   return (
-    <div className="grid gap-6 xl:sticky xl:top-6 xl:max-h-[calc(100vh-3rem)] xl:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] xl:items-start">
-      <aside className="min-w-0 xl:max-h-[calc(100vh-3rem)] xl:overflow-y-auto">
-        <OptionsCard
-          canOptimize={isLikelySvgMarkup(sourceText)}
-          isOptimizing={isOptimizing}
-          messages={messages}
-          onChange={(nextOptions) => {
-            setOptions(nextOptions)
-            clearResult()
-          }}
-          onOptimize={() => {
-            void handleOptimize()
-          }}
-          options={options}
-        />
+    <div className="grid gap-6 xl:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] xl:items-start">
+      <aside className="order-3 min-w-0 xl:order-1 xl:row-span-3">
+        <div className="xl:sticky xl:top-6 xl:self-start">
+          <OptionsCard
+            canOptimize={isLikelySvgMarkup(sourceText)}
+            isOptimizing={isOptimizing}
+            messages={messages}
+            onChange={(nextOptions) => {
+              setOptions(nextOptions)
+              clearResult()
+            }}
+            onOptimize={() => {
+              void handleOptimize()
+            }}
+            options={options}
+          />
+        </div>
       </aside>
 
-      <div className="flex min-w-0 flex-col gap-6 xl:max-h-[calc(100vh-3rem)] xl:overflow-y-auto">
+      <div className="order-1 min-w-0 xl:order-2 xl:col-start-2">
         <InputCard
           fileName={fileName || "pasted.svg"}
           inputId={inputId}
@@ -210,15 +212,19 @@ function SvgOptimizerClient({ messages }: SvgOptimizerClientProps) {
           selectedFile={selectedFile}
           sourceText={sourceText}
         />
+      </div>
 
-        {error ? (
+      {error ? (
+        <div className="order-2 xl:col-start-2">
           <Alert variant="destructive">
             <TriangleAlert />
             <AlertTitle>{messages.errorTitle}</AlertTitle>
             <AlertDescription>{error}</AlertDescription>
           </Alert>
-        ) : null}
+        </div>
+      ) : null}
 
+      <div className="order-4 min-w-0 xl:col-start-2">
         <ResultCard
           downloadUrl={optimizedPreviewUrl}
           key={result ? resultVersion : "empty"}
