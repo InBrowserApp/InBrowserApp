@@ -10,7 +10,6 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "highlight.js": "catalog:",
     "svgo": "catalog:"
   },
   "peerDependencies": {
