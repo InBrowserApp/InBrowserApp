@@ -5,7 +5,7 @@
   "countDescription": "Generuj od 1 do 100 identyfikatorów UUID naraz.",
   "resultsTitle": "Wygenerowane identyfikatory UUID",
   "resultsDescription": "Wartości UUID v7 są generowane lokalnie ze znacznikiem czasu Unix w milisekundach i losowymi bitami.",
-  "resultsPlaceholder": "Wygenerowane wartości UUID v7 pojawią się tutaj...",
+  "resultsPlaceholder": "Wygenerowane wartości UUID v7 pojawią się tutaj…",
   "batchSummaryLabel": "Podsumowanie partii",
   "versionLabel": "Wersja",
   "timestampLabel": "Znacznik czasu",

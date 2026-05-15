@@ -5,7 +5,7 @@
   "countDescription": "एक बार में 1 से 100 UUIDs तक जनरेट करें।",
   "resultsTitle": "जनरेट किए गए UUIDs",
   "resultsDescription": "UUID v7 मान स्थानीय रूप से Unix मिलीसेकंड टाइमस्टैम्प और रैंडम बिट्स के साथ जनरेट किए जाते हैं।",
-  "resultsPlaceholder": "जनरेट किए गए UUID v7 मान यहाँ दिखाई देंगे...",
+  "resultsPlaceholder": "जनरेट किए गए UUID v7 मान यहाँ दिखाई देंगे…",
   "batchSummaryLabel": "बैच सारांश",
   "versionLabel": "वर्शन",
   "timestampLabel": "टाइमस्टैम्प",

@@ -5,7 +5,7 @@
   "countDescription": "Jana antara 1 hingga 100 UUID serentak.",
   "resultsTitle": "UUID yang Dijana",
   "resultsDescription": "Nilai UUID v7 dijana secara tempatan dengan cap masa milisaat Unix dan bit rawak.",
-  "resultsPlaceholder": "Nilai UUID v7 yang dijana akan muncul di sini...",
+  "resultsPlaceholder": "Nilai UUID v7 yang dijana akan muncul di sini…",
   "batchSummaryLabel": "Ringkasan kelompok",
   "versionLabel": "Versi",
   "timestampLabel": "Cap masa",

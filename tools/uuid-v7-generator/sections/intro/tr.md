@@ -1,5 +1,3 @@
-# UUID v7 Generator
-
 UUID v7, tanımlayıcının başına Unix milisaniye zaman damgası yerleştiren ve kalan bitleri rastgelelikle dolduran modern bir UUID biçimidir. Bu, değerleri pratikte küresel olarak benzersiz kılarken oluşturulma zamanına göre doğal biçimde sıralanabilir tutar.
 
 ## Bu Araç Ne Yapar?

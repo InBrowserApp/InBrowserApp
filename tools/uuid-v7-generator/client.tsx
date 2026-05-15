@@ -103,14 +103,16 @@ function UuidV7GeneratorClient({ messages }: UuidV7GeneratorClientProps) {
 
   return (
     <div className="grid gap-6 xl:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
-      <UuidV7OptionsCard
-        messages={messages}
-        countId={countId}
-        count={count}
-        onCountChange={(value) => {
-          setCount(normalizeUuidV7Count(Number(value)))
-        }}
-      />
+      <div className="min-w-0 xl:sticky xl:top-6 xl:self-start">
+        <UuidV7OptionsCard
+          messages={messages}
+          countId={countId}
+          count={count}
+          onCountChange={(value) => {
+            setCount(normalizeUuidV7Count(Number(value)))
+          }}
+        />
+      </div>
 
       <UuidV7ResultsCard
         downloadFilename={downloadFilename}

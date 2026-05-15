@@ -5,7 +5,7 @@
   "countDescription": "Tạo từ 1 đến 100 UUID cùng lúc.",
   "resultsTitle": "UUID đã tạo",
   "resultsDescription": "Các giá trị UUID v7 được tạo cục bộ với dấu thời gian Unix tính bằng mili giây và các bit ngẫu nhiên.",
-  "resultsPlaceholder": "Các giá trị UUID v7 đã tạo sẽ xuất hiện tại đây...",
+  "resultsPlaceholder": "Các giá trị UUID v7 đã tạo sẽ xuất hiện tại đây…",
   "batchSummaryLabel": "Tóm tắt lô",
   "versionLabel": "Phiên bản",
   "timestampLabel": "Dấu thời gian",

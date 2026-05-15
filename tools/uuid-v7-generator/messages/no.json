@@ -5,7 +5,7 @@
   "countDescription": "Generer mellom 1 og 100 UUID-er om gangen.",
   "resultsTitle": "Genererte UUID-er",
   "resultsDescription": "UUID v7-verdier genereres lokalt med et Unix-tidsstempel i millisekunder og tilfeldige biter.",
-  "resultsPlaceholder": "Genererte UUID v7-verdier vises her...",
+  "resultsPlaceholder": "Genererte UUID v7-verdier vises her…",
   "batchSummaryLabel": "Gruppesammendrag",
   "versionLabel": "Versjon",
   "timestampLabel": "Tidsstempel",

@@ -5,7 +5,7 @@
   "countDescription": "Genereer tussen 1 en 100 UUID's tegelijk.",
   "resultsTitle": "Gegenereerde UUID's",
   "resultsDescription": "UUID v7-waarden worden lokaal gegenereerd met een Unix-tijdstempel in milliseconden en willekeurige bits.",
-  "resultsPlaceholder": "Gegenereerde UUID v7-waarden verschijnen hier...",
+  "resultsPlaceholder": "Gegenereerde UUID v7-waarden verschijnen hier…",
   "batchSummaryLabel": "Batchoverzicht",
   "versionLabel": "Versie",
   "timestampLabel": "Tijdstempel",

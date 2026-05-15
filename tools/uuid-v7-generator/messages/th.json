@@ -5,7 +5,7 @@
   "countDescription": "สร้าง UUID ได้ครั้งละ 1 ถึง 100 รายการ",
   "resultsTitle": "UUID ที่สร้างแล้ว",
   "resultsDescription": "ค่า UUID v7 ถูกสร้างในเครื่อง พร้อมเวลาประทับแบบ Unix หน่วยมิลลิวินาทีและบิตแบบสุ่ม",
-  "resultsPlaceholder": "ค่า UUID v7 ที่สร้างแล้วจะแสดงที่นี่...",
+  "resultsPlaceholder": "ค่า UUID v7 ที่สร้างแล้วจะแสดงที่นี่…",
   "batchSummaryLabel": "สรุปชุด",
   "versionLabel": "เวอร์ชัน",
   "timestampLabel": "เวลาประทับ",

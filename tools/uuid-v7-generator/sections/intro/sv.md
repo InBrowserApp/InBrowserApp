@@ -1,5 +1,3 @@
-# UUID v7 Generator
-
 UUID v7 är ett modernt UUID-format som placerar en Unix-tidsstämpel i millisekunder först i identifieraren och fyller återstående bitar med slumpmässighet. Det gör värdena globalt unika i praktiken, samtidigt som de naturligt kan sorteras efter skapandetid.
 
 ## Vad det här verktyget gör

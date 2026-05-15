@@ -5,7 +5,7 @@
   "countDescription": "Genera entre 1 y 100 UUID a la vez.",
   "resultsTitle": "UUID generados",
   "resultsDescription": "Los valores UUID v7 se generan localmente con una marca de tiempo Unix en milisegundos y bits aleatorios.",
-  "resultsPlaceholder": "Los valores UUID v7 generados aparecerán aquí...",
+  "resultsPlaceholder": "Los valores UUID v7 generados aparecerán aquí…",
   "batchSummaryLabel": "Resumen del lote",
   "versionLabel": "Versión",
   "timestampLabel": "Marca de tiempo",

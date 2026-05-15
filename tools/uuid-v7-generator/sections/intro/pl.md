@@ -1,5 +1,3 @@
-# Generator UUID v7
-
 UUID v7 to nowoczesny format UUID, który umieszcza znacznik czasu Unix w milisekundach na początku identyfikatora, a pozostałe bity wypełnia losowością. Dzięki temu wartości są w praktyce globalnie unikatowe, a jednocześnie naturalnie sortowalne według czasu utworzenia.
 
 ## Co robi to narzędzie

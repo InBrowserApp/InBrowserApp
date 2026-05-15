@@ -1,4 +1,4 @@
 {
-  "name": "UUID v7 Generator",
+  "name": "UUID v7 생성기",
   "description": "데이터베이스, 이벤트, 분산 시스템에 사용할 수 있는 타임스탬프 정렬 가능 UUID v7 식별자를 브라우저에서 생성합니다."
 }

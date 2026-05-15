@@ -5,7 +5,7 @@
   "countDescription": "Tek seferde 1 ile 100 arasında UUID oluşturun.",
   "resultsTitle": "Üretilen UUID'ler",
   "resultsDescription": "UUID v7 değerleri, Unix milisaniye zaman damgası ve rastgele bitlerle yerel olarak oluşturulur.",
-  "resultsPlaceholder": "Üretilen UUID v7 değerleri burada görünecek...",
+  "resultsPlaceholder": "Üretilen UUID v7 değerleri burada görünecek…",
   "batchSummaryLabel": "Toplu işlem özeti",
   "versionLabel": "Sürüm",
   "timestampLabel": "Zaman damgası",

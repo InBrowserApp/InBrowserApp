@@ -1,5 +1,3 @@
-# Penjana UUID v7
-
 UUID v7 ialah format UUID moden yang meletakkan cap masa milisaat Unix di bahagian hadapan pengecam dan mengisi bit selebihnya dengan nilai rawak. Ini menjadikan nilai tersebut unik secara global dalam amalan, sambil mengekalkannya boleh diisih secara semula jadi mengikut masa penciptaan.
 
 ## Fungsi Alat Ini

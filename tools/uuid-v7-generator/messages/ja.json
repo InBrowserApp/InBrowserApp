@@ -5,7 +5,7 @@
   "countDescription": "一度に1から100個のUUIDを生成します。",
   "resultsTitle": "生成されたUUID",
   "resultsDescription": "UUID v7の値は、Unixミリ秒タイムスタンプとランダムビットを使ってローカルで生成されます。",
-  "resultsPlaceholder": "生成されたUUID v7値がここに表示されます...",
+  "resultsPlaceholder": "生成されたUUID v7値がここに表示されます…",
   "batchSummaryLabel": "バッチ概要",
   "versionLabel": "バージョン",
   "timestampLabel": "タイムスタンプ",

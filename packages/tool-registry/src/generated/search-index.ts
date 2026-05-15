@@ -24403,7 +24403,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     ],
     locales: {
       ar: {
-        name: "UUID v7 Generator",
+        name: "مولّد UUID v7",
         description:
           "أنشئ معرّفات UUID v7 قابلة للفرز حسب الطابع الزمني داخل متصفحك لقواعد البيانات والأحداث والأنظمة الموزعة.",
       },
@@ -24453,7 +24453,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "データベース、イベント、分散システム向けに、タイムスタンプ順にソートできるUUID v7識別子をブラウザー内で生成します。",
       },
       ko: {
-        name: "UUID v7 Generator",
+        name: "UUID v7 생성기",
         description:
           "데이터베이스, 이벤트, 분산 시스템에 사용할 수 있는 타임스탬프 정렬 가능 UUID v7 식별자를 브라우저에서 생성합니다.",
       },
@@ -24488,7 +24488,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Генерируйте сортируемые по времени идентификаторы UUID v7 прямо в браузере для баз данных, событий и распределенных систем.",
       },
       sv: {
-        name: "UUID v7 Generator",
+        name: "UUID v7-generator",
         description:
           "Generera tidsstämpelsorterbara UUID v7-identifierare i din webbläsare för databaser, händelser och distribuerade system.",
       },
@@ -24498,7 +24498,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "สร้างตัวระบุ UUID v7 ที่เรียงตามเวลาได้ในเบราว์เซอร์ของคุณ สำหรับฐานข้อมูล เหตุการณ์ และระบบแบบกระจาย",
       },
       tr: {
-        name: "UUID v7 Generator",
+        name: "UUID v7 Oluşturucu",
         description:
           "Veritabanları, etkinlikler ve dağıtık sistemler için tarayıcınızda zaman damgasına göre sıralanabilir UUID v7 tanımlayıcıları oluşturun.",
       },
@@ -24513,7 +24513,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "在浏览器中生成可按时间戳排序的 UUID v7 标识符，适用于数据库、事件和分布式系统。",
       },
       "zh-TW": {
-        name: "UUID v7 Generator",
+        name: "UUID v7 產生器",
         description:
           "在瀏覽器中產生可依時間戳記排序的 UUID v7 識別碼，適用於資料庫、事件與分散式系統。",
       },

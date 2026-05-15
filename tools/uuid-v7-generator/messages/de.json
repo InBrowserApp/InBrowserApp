@@ -5,7 +5,7 @@
   "countDescription": "Erzeuge 1 bis 100 UUIDs auf einmal.",
   "resultsTitle": "Erzeugte UUIDs",
   "resultsDescription": "UUID v7-Werte werden lokal mit einem Unix-Zeitstempel in Millisekunden und Zufallsbits erzeugt.",
-  "resultsPlaceholder": "Erzeugte UUID v7-Werte erscheinen hier...",
+  "resultsPlaceholder": "Erzeugte UUID v7-Werte erscheinen hier…",
   "batchSummaryLabel": "Stapelübersicht",
   "versionLabel": "Version",
   "timestampLabel": "Zeitstempel",

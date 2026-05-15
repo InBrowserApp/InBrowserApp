@@ -1,5 +1,3 @@
-# Trình tạo UUID v7
-
 UUID v7 là một định dạng UUID hiện đại đặt dấu thời gian Unix tính bằng mili giây ở đầu mã định danh và lấp đầy các bit còn lại bằng dữ liệu ngẫu nhiên. Nhờ vậy, trên thực tế các giá trị có tính duy nhất toàn cục, đồng thời vẫn có thể sắp xếp tự nhiên theo thời điểm tạo.
 
 ## Công Cụ Này Dùng Để Làm Gì

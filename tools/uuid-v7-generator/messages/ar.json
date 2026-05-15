@@ -5,7 +5,7 @@
   "countDescription": "أنشئ ما بين 1 و100 معرّف UUID دفعة واحدة.",
   "resultsTitle": "معرّفات UUID المنشأة",
   "resultsDescription": "تُنشأ قيم UUID v7 محلياً باستخدام طابع زمني بنظام Unix بالمللي ثانية وبتّات عشوائية.",
-  "resultsPlaceholder": "ستظهر قيم UUID v7 المنشأة هنا...",
+  "resultsPlaceholder": "ستظهر قيم UUID v7 المنشأة هنا…",
   "batchSummaryLabel": "ملخص الدفعة",
   "versionLabel": "الإصدار",
   "timestampLabel": "الطابع الزمني",
