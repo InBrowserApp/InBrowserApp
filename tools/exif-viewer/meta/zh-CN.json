@@ -1,0 +1,4 @@
+{
+  "name": "EXIF 查看器",
+  "description": "在浏览器本地查看图片元数据、相机设置、GPS 坐标以及嵌入的 EXIF/IPTC/XMP 字段。"
+}

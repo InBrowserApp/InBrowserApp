@@ -1,0 +1,39 @@
+export type ExifViewerMessages = Readonly<{
+  meta: {
+    name: string
+    description: string
+  }
+  dragDropOrClick: string
+  supportedFormats: string
+  uploadHint: string
+  changeImage: string
+  removeImage: string
+  selectedImage: string
+  fileSize: string
+  metadataResults: string
+  resultsDescription: string
+  fieldsFound: string
+  categoriesFound: string
+  copyAsJson: string
+  copiedJson: string
+  emptyTitle: string
+  emptyDescription: string
+  readingMetadata: string
+  readingDescription: string
+  noExifTitle: string
+  noExifDescription: string
+  errorTitle: string
+  parseError: string
+  unsupportedFile: string
+  gpsStatus: string
+  gpsAvailable: string
+  gpsUnavailable: string
+  openInGoogleMaps: string
+  openInAmap: string
+  categoryBasic: string
+  categoryCamera: string
+  categoryGps: string
+  categoryAdvanced: string
+  fieldName: string
+  fieldValue: string
+}>
