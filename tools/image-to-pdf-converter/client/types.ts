@@ -1,8 +1,4 @@
-import type {
-  ConverterOptions,
-  PdfGenerationProgress,
-  Rotation,
-} from "../core/options"
+import type { Rotation } from "../core/options"
 
 const IMAGE_TO_PDF_TOOL_ID = "image-to-pdf-converter"
 
@@ -87,13 +83,5 @@ type ImageToPdfMessages = Readonly<{
   uploadTitle: string
 }>
 
-type ClientState = Readonly<{
-  generationProgress: PdfGenerationProgress | null
-  isAddingImages: boolean
-  isGenerating: boolean
-  options: ConverterOptions
-  result: PdfResult | null
-}>
-
 export { IMAGE_TO_PDF_TOOL_ID }
-export type { ClientState, ImageQueueItem, ImageToPdfMessages, PdfResult }
+export type { ImageQueueItem, ImageToPdfMessages, PdfResult }

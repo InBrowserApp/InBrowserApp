@@ -40,19 +40,6 @@ const PAGE_SIZE_PRESETS = [
   "tabloid",
 ] as const satisfies readonly PageSizePreset[]
 
-const PAGE_ORIENTATIONS = [
-  "auto",
-  "portrait",
-  "landscape",
-] as const satisfies readonly PageOrientation[]
-
-const FIT_MODES = ["contain", "cover"] as const satisfies readonly FitMode[]
-const QUALITY_PRESETS = [
-  "best",
-  "balanced",
-  "small",
-] as const satisfies readonly QualityPreset[]
-
 const DEFAULT_CONVERTER_OPTIONS: ConverterOptions = {
   pageSize: "a4",
   pageOrientation: "auto",
@@ -100,12 +87,9 @@ function normalizeRotation(rotation: number): Rotation {
 
 export {
   DEFAULT_CONVERTER_OPTIONS,
-  FIT_MODES,
   MAX_MARGIN_MM,
   MIN_MARGIN_MM,
-  PAGE_ORIENTATIONS,
   PAGE_SIZE_PRESETS,
-  QUALITY_PRESETS,
   clampMarginMm,
   getJpegQuality,
   normalizeRotation,

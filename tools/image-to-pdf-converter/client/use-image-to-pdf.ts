@@ -292,4 +292,4 @@ function moveItem(
   return nextItems
 }
 
-export { normalizeOptions, useImageToPdf }
+export { useImageToPdf }

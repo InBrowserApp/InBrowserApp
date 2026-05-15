@@ -90,6 +90,8 @@ jobs:
         env:
           NODE_OPTIONS: --max-old-space-size=6144
         run: pnpm build
+        env:
+          NODE_OPTIONS: --max-old-space-size=5120
 
       - name: Check internal links in built HTML
         uses: wjdp/htmltest-action@master

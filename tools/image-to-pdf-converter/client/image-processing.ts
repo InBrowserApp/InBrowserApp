@@ -281,4 +281,4 @@ export {
   readImageDimensions,
   renderImageToJpeg,
 }
-export type { ImageProcessingEnvironment, RenderedImage }
+export type { ImageProcessingEnvironment }
