@@ -30,6 +30,7 @@ type UploadCardProps = Readonly<{
   fileInputRef: React.RefObject<HTMLInputElement | null>
   isDecoding: boolean
   isDraggingOver: boolean
+  language: string
   messages: BarcodeReaderMessages
   onClear: () => void
   onDragEnter: (event: React.DragEvent<HTMLButtonElement>) => void
@@ -42,16 +43,28 @@ type UploadCardProps = Readonly<{
   selectedFile: File | null
 }>
 
-function formatFileSize(bytes: number) {
-  if (bytes < 1024) return `${bytes} B`
-  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`
-  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`
+function formatFileSize(bytes: number, language: string) {
+  const size =
+    bytes < 1024
+      ? { unit: "byte", value: bytes }
+      : bytes < 1024 * 1024
+        ? { unit: "kilobyte", value: bytes / 1024 }
+        : { unit: "megabyte", value: bytes / (1024 * 1024) }
+
+  return new Intl.NumberFormat(language, {
+    maximumFractionDigits: size.unit === "byte" ? 0 : 1,
+    minimumFractionDigits: size.unit === "byte" ? 0 : 1,
+    style: "unit",
+    unit: size.unit,
+    unitDisplay: "short",
+  }).format(size.value)
 }
 
 function UploadCard({
   fileInputRef,
   isDecoding,
   isDraggingOver,
+  language,
   messages,
   onClear,
   onDragEnter,
@@ -114,7 +127,7 @@ function UploadCard({
                 {selectedFile.name}
               </span>
               <Badge variant="outline">
-                {formatFileSize(selectedFile.size)}
+                {formatFileSize(selectedFile.size, language)}
               </Badge>
               {isDecoding ? (
                 <Badge variant="secondary" className="gap-1">

@@ -27,6 +27,7 @@ import type {
 } from "./client/types"
 
 type BarcodeReaderClientProps = Readonly<{
+  language?: string
   messages: BarcodeReaderMessages
 }>
 
@@ -45,7 +46,10 @@ function resolveDecodeError(error: unknown, messages: BarcodeReaderMessages) {
   }
 }
 
-function BarcodeReaderClient({ messages }: BarcodeReaderClientProps) {
+function BarcodeReaderClient({
+  language = "en",
+  messages,
+}: BarcodeReaderClientProps) {
   const [mode, setMode] = useState<ScanMode>("upload")
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
   const [result, setResult] = useState<BarcodeReaderResult | null>(null)
@@ -181,6 +185,7 @@ function BarcodeReaderClient({ messages }: BarcodeReaderClientProps) {
             fileInputRef={fileInputRef}
             isDecoding={isDecoding}
             isDraggingOver={isDraggingOver}
+            language={language}
             messages={messages}
             onClear={handleClearImage}
             onDragEnter={handleDragEnter}

@@ -235,7 +235,7 @@ describe("BarcodeReaderClient", () => {
       },
     })
 
-    await screen.findByText("2.0 KB")
+    await screen.findByText("2.0 kB")
 
     fireEvent.change(getImageInput(), {
       target: {
@@ -248,6 +248,31 @@ describe("BarcodeReaderClient", () => {
     })
 
     await screen.findByText("1.5 MB")
+  })
+
+  it("localizes selected image sizes", async () => {
+    mockedDecodeImage.mockResolvedValue({
+      format: "CODE_39",
+      text: "localized",
+    })
+
+    render(<BarcodeReaderClient language="fr" messages={messages} />)
+
+    fireEvent.change(getImageInput(), {
+      target: {
+        files: [
+          new File([new Uint8Array(2048)], "medium.png", {
+            type: "image/png",
+          }),
+        ],
+      },
+    })
+
+    await screen.findByText((content) => {
+      const normalized = content.replace(/\s|\u202f/g, "")
+
+      return normalized === "2,0ko"
+    })
   })
 
   it("decodes a camera result and stops scanning controls", async () => {

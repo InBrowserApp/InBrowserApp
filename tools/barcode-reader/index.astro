@@ -38,7 +38,7 @@ const messages: BarcodeReaderMessages = {
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <BarcodeReaderClient client:load messages={messages} />
+  <BarcodeReaderClient client:load language={lang} messages={messages} />
 
   {
     IntroSection ? (
