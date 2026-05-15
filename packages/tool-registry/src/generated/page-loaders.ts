@@ -97,6 +97,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-resizer": () => import("@tool/image-resizer/page"),
   "image-to-avif-converter": () => import("@tool/image-to-avif-converter/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),
+  "image-to-pdf-converter": () => import("@tool/image-to-pdf-converter/page"),
   "image-to-webp-converter": () => import("@tool/image-to-webp-converter/page"),
   "imei-validator": () => import("@tool/imei-validator/page"),
   "ip-cidr-normalizer": () => import("@tool/ip-cidr-normalizer/page"),

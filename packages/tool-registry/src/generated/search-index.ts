@@ -9188,6 +9188,116 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "image-to-pdf-converter",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "image", "converter", "document", "offline"],
+    locales: {
+      ar: {
+        name: "محول الصور إلى PDF",
+        description: "اجمع الصور في ملف PDF واحد محليًا في متصفحك.",
+      },
+      de: {
+        name: "Bild-zu-PDF-Konverter",
+        description:
+          "Führe Bilder lokal in deinem Browser zu einer einzigen PDF zusammen.",
+      },
+      en: {
+        name: "Image to PDF Converter",
+        description:
+          "Combine images into a single PDF locally in your browser.",
+      },
+      es: {
+        name: "Convertidor de imagen a PDF",
+        description:
+          "Combina imágenes en un único PDF localmente en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur d'images en PDF",
+        description:
+          "Combinez des images en un seul PDF localement dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר תמונות ל-PDF",
+        description: "חברו תמונות לקובץ PDF יחיד באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "इमेज से PDF कन्वर्टर",
+        description: "अपने ब्राउज़र में स्थानीय रूप से इमेजों को एक PDF में जोड़ें.",
+      },
+      id: {
+        name: "Konverter Gambar ke PDF",
+        description:
+          "Gabungkan gambar menjadi satu PDF secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Convertitore immagini in PDF",
+        description:
+          "Combina immagini in un unico PDF localmente nel tuo browser.",
+      },
+      ja: {
+        name: "画像をPDFに変換",
+        description: "ブラウザー内で画像を1つのPDFにまとめます。",
+      },
+      ko: {
+        name: "이미지 PDF 변환기",
+        description: "브라우저에서 이미지를 하나의 PDF로 로컬에서 합치세요.",
+      },
+      ms: {
+        name: "Penukar Imej kepada PDF",
+        description:
+          "Gabungkan imej menjadi satu PDF secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeeldingen naar PDF-converter",
+        description:
+          "Combineer afbeeldingen lokaal in je browser tot een enkele PDF.",
+      },
+      no: {
+        name: "Bilde-til-PDF-konverterer",
+        description: "Kombiner bilder til én PDF lokalt i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter obrazów do PDF",
+        description: "Łącz obrazy w jeden PDF lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de imagens para PDF",
+        description:
+          "Combine imagens em um único PDF localmente no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер изображений в PDF",
+        description: "Объединяйте изображения в один PDF локально в браузере.",
+      },
+      sv: {
+        name: "Bild till PDF-konverterare",
+        description: "Slå ihop bilder till en enda PDF lokalt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลงรูปภาพเป็น PDF",
+        description: "รวมรูปภาพเป็น PDF ไฟล์เดียวในเครื่องภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Görselden PDF Dönüştürücü",
+        description:
+          "Görselleri tarayıcınızda yerel olarak tek bir PDF halinde birleştirin.",
+      },
+      vi: {
+        name: "Trình chuyển ảnh sang PDF",
+        description: "Gộp ảnh thành một PDF ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "图片转 PDF 转换器",
+        description: "在浏览器中本地将图片合并为一个 PDF。",
+      },
+      "zh-TW": {
+        name: "圖片轉 PDF 轉換器",
+        description: "在瀏覽器中本機將圖片合併成單一 PDF。",
+      },
+    },
+  },
+  {
     slug: "image-to-webp-converter",
     category: "image",
     icon: "image",

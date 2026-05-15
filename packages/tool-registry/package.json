@@ -80,6 +80,7 @@
     "@tool/image-resizer": "workspace:*",
     "@tool/image-to-avif-converter": "workspace:*",
     "@tool/image-to-ico": "workspace:*",
+    "@tool/image-to-pdf-converter": "workspace:*",
     "@tool/image-to-webp-converter": "workspace:*",
     "@tool/imei-validator": "workspace:*",
     "@tool/ip-cidr-normalizer": "workspace:*",

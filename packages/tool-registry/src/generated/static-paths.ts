@@ -6718,6 +6718,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "image-to-webp-converter",
     language: "ar",
   },
