@@ -114,6 +114,7 @@
     "@tool/murmurhash3-x86-32-hash-text-or-file": "workspace:*",
     "@tool/my-ip-address": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
+    "@tool/network-tools": "workspace:*",
     "@tool/number-base-converter": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",

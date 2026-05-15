@@ -138,6 +138,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/murmurhash3-x86-32-hash-text-or-file/page"),
   "my-ip-address": () => import("@tool/my-ip-address/page"),
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
+  "network-tools": () => import("@tool/network-tools/page"),
   "number-base-converter": () => import("@tool/number-base-converter/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),

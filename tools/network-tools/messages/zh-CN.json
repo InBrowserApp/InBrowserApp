@@ -1,0 +1,98 @@
+{
+  "searchLabel": "搜索网络工具",
+  "searchPlaceholder": "按 IP、DNS、CIDR、HTTP、TLS、SSH 或端口搜索",
+  "clearSearchLabel": "清除",
+  "allGroupsLabel": "全部",
+  "resultCountTemplate": "显示的工具：{count}",
+  "emptyTitle": "没有匹配的工具",
+  "emptyDescription": "尝试使用更宽泛的术语，例如 IP、DNS、CIDR、端口、HTTP、TLS 或 SSH。",
+  "openToolLabel": "打开 {name}",
+  "groups": {
+    "ip": {
+      "label": "IP 和 CIDR",
+      "description": "检查公网地址、规范化范围，并在 CIDR、IPv4、IPv6 和 MAC 派生格式之间转换。"
+    },
+    "dns": {
+      "label": "DNS 和域名",
+      "description": "查询 DNS 记录、反向解析 IP 地址，并转换国际化域名。"
+    },
+    "reference": {
+      "label": "协议参考",
+      "description": "查找 HTTP 状态码、MIME 类型、端口号和网络时钟信息。"
+    },
+    "security": {
+      "label": "密钥和证书",
+      "description": "检查 TLS 证书详情，并为 SSH 公钥生成指纹。"
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "X.509 证书和公钥解析器",
+      "description": "解析 PEM、DER 或 base64 DER 形式的 X.509 证书和公钥。在浏览器中本地查看主体、颁发者、有效期、指纹、扩展和密钥详情。"
+    },
+    "cidr-parser": {
+      "name": "CIDR 解析器",
+      "description": "解析 CIDR 表示法，直接在浏览器中检查 IPv4 或 IPv6 网络范围、掩码和整数边界。"
+    },
+    "cidrs-merger-excluder": {
+      "name": "CIDR 合并与排除工具",
+      "description": "合并 IPv4 和 IPv6 CIDR 块，减去排除的网络，并复制生成的最小 CIDR 列表。"
+    },
+    "current-network-time": {
+      "name": "当前网络时间",
+      "description": "获取当前网络时间并与本地系统时间比较。查看准确的网络时间并检测任何时间差异。"
+    },
+    "dns-lookup": {
+      "name": "DNS 查询",
+      "description": "通过 DNS over HTTPS 解析器查询 A、AAAA、CNAME、MX、TXT、NS、SOA、CAA、SRV、HTTPS 和 SVCB DNS 记录。"
+    },
+    "http-status-code-lookup": {
+      "name": "HTTP 状态码查询",
+      "description": "搜索和浏览 HTTP 状态码及其含义。"
+    },
+    "ip-cidr-normalizer": {
+      "name": "IP/CIDR 规范化工具",
+      "description": "规范化 IP 地址和 CIDR 表示法，支持 IPv4 和 IPv6 格式。输入任何 IP 或 CIDR 范围，立即获得标准化格式。"
+    },
+    "ip-info-lookup": {
+      "name": "IP 信息查询",
+      "description": "查询 IP 地址、域名或 URL 的地理位置、ISP、ASN、反向 DNS 和网络详情。"
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "IP 范围到 CIDR 转换器",
+      "description": "将 IPv4 或 IPv6 起始地址和结束地址转换为精确覆盖该范围的最小 CIDR 块集。"
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "IPv6 地址转 MAC 地址转换器",
+      "description": "将 IPv6 地址转换为 MAC 地址。输入任何 IPv6 地址，立即提取对应的 MAC 地址。"
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "MAC 地址转 IPv6 链路本地地址转换器",
+      "description": "将 MAC 地址转换为 IPv6 链路本地地址。输入任何 MAC 地址，并可选择添加接口名称，立即生成带作用域的结果。"
+    },
+    "mime-type-lookup": {
+      "name": "MIME 类型查询",
+      "description": "搜索和浏览 MIME 类型及其文件扩展名。"
+    },
+    "my-ip-address": {
+      "name": "我的 IP 地址",
+      "description": "发现您的公网 IP 地址，并获取有关互联网连接的详细信息，包括地理位置、ISP 详情和网络信息。"
+    },
+    "port-number-lookup": {
+      "name": "端口号查询",
+      "description": "搜索和浏览常见网络端口号。"
+    },
+    "reverse-ip-lookup": {
+      "name": "反向 IP 查询",
+      "description": "直接在浏览器中通过公共 DNS-over-HTTPS 解析器查询 IPv4 或 IPv6 地址的反向 DNS PTR 记录。"
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "SSH 公钥指纹",
+      "description": "为 OpenSSH 公钥、authorized_keys 行和 SSH2 公钥块生成 SHA-256 与 MD5 指纹。"
+    },
+    "unicode-punycode-converter": {
+      "name": "Unicode ↔ Punycode 转换器",
+      "description": "双向转换 Unicode（IDN）和 ASCII（Punycode）域名。"
+    }
+  }
+}

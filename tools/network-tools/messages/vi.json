@@ -1,0 +1,98 @@
+{
+  "searchLabel": "Tìm kiếm công cụ mạng",
+  "searchPlaceholder": "Tìm theo IP, DNS, CIDR, HTTP, TLS, SSH hoặc cổng",
+  "clearSearchLabel": "Xóa",
+  "allGroupsLabel": "Tất cả",
+  "resultCountTemplate": "Công cụ hiển thị: {count}",
+  "emptyTitle": "Không có công cụ phù hợp",
+  "emptyDescription": "Thử một thuật ngữ rộng hơn như IP, DNS, CIDR, cổng, HTTP, TLS hoặc SSH.",
+  "openToolLabel": "Mở {name}",
+  "groups": {
+    "ip": {
+      "label": "IP và CIDR",
+      "description": "Kiểm tra địa chỉ công khai, chuẩn hóa dải địa chỉ và chuyển đổi giữa CIDR, IPv4, IPv6 cùng các định dạng dẫn xuất từ MAC."
+    },
+    "dns": {
+      "label": "DNS và miền",
+      "description": "Truy vấn bản ghi DNS, phân giải ngược địa chỉ IP và chuyển đổi tên miền quốc tế hóa."
+    },
+    "reference": {
+      "label": "Tham chiếu giao thức",
+      "description": "Tra cứu mã trạng thái HTTP, MIME type, số cổng và thông tin đồng hồ mạng."
+    },
+    "security": {
+      "label": "Khóa và chứng chỉ",
+      "description": "Kiểm tra chi tiết chứng chỉ TLS và tạo fingerprint cho khóa công khai SSH."
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "Trình phân tích chứng chỉ X.509 và khóa công khai",
+      "description": "Phân tích chứng chỉ X.509 và khóa công khai ở dạng PEM, DER hoặc base64 DER. Xem chủ thể, bên phát hành, ngày hiệu lực, fingerprint, phần mở rộng và chi tiết khóa ngay trong trình duyệt của bạn."
+    },
+    "cidr-parser": {
+      "name": "Trình phân tích CIDR",
+      "description": "Phân tích ký hiệu CIDR để kiểm tra dải mạng IPv4 hoặc IPv6, mặt nạ và ranh giới số nguyên trực tiếp trong trình duyệt."
+    },
+    "cidrs-merger-excluder": {
+      "name": "Bộ gộp và loại trừ CIDR",
+      "description": "Gộp các khối CIDR IPv4 và IPv6, trừ các mạng bị loại trừ và sao chép danh sách CIDR kết quả tối thiểu."
+    },
+    "current-network-time": {
+      "name": "Thời gian mạng hiện tại",
+      "description": "Lấy thời gian mạng hiện tại và so sánh với thời gian hệ thống cục bộ của bạn. Xem thời gian mạng chính xác và phát hiện mọi chênh lệch thời gian."
+    },
+    "dns-lookup": {
+      "name": "Tra cứu DNS",
+      "description": "Truy vấn các bản ghi DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS và SVCB thông qua các trình phân giải DNS over HTTPS."
+    },
+    "http-status-code-lookup": {
+      "name": "Tra cứu mã trạng thái HTTP",
+      "description": "Tìm kiếm và duyệt các mã trạng thái HTTP cùng ý nghĩa của chúng."
+    },
+    "ip-cidr-normalizer": {
+      "name": "Bộ chuẩn hóa IP/CIDR",
+      "description": "Chuẩn hóa địa chỉ IP và ký hiệu CIDR cho cả định dạng IPv4 và IPv6. Nhập bất kỳ IP hoặc dải CIDR nào để nhận ngay định dạng tiêu chuẩn."
+    },
+    "ip-info-lookup": {
+      "name": "Tra cứu thông tin IP",
+      "description": "Tra cứu vị trí địa lý, ISP, ASN, DNS ngược và chi tiết mạng cho một địa chỉ IP, miền hoặc URL."
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "Bộ chuyển đổi dải IP sang CIDR",
+      "description": "Chuyển đổi địa chỉ bắt đầu và kết thúc IPv4 hoặc IPv6 thành tập khối CIDR tối thiểu bao phủ chính xác dải đó."
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "Bộ chuyển đổi địa chỉ IPv6 sang địa chỉ MAC",
+      "description": "Chuyển đổi địa chỉ IPv6 sang địa chỉ MAC. Nhập bất kỳ địa chỉ IPv6 nào để trích xuất ngay địa chỉ MAC tương ứng."
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "Bộ chuyển đổi địa chỉ MAC sang địa chỉ IPv6 link-local",
+      "description": "Chuyển đổi địa chỉ MAC sang địa chỉ IPv6 link-local. Nhập bất kỳ địa chỉ MAC nào và tùy chọn thêm tên interface để tạo ngay kết quả có phạm vi."
+    },
+    "mime-type-lookup": {
+      "name": "Tra cứu MIME type",
+      "description": "Tìm kiếm và duyệt các MIME type cùng phần mở rộng tệp của chúng."
+    },
+    "my-ip-address": {
+      "name": "Địa chỉ IP của tôi",
+      "description": "Khám phá địa chỉ IP công khai của bạn và nhận thông tin chi tiết về kết nối internet, bao gồm vị trí địa lý, chi tiết ISP và thông tin mạng."
+    },
+    "port-number-lookup": {
+      "name": "Tra cứu số cổng",
+      "description": "Tìm kiếm và duyệt các số cổng mạng phổ biến."
+    },
+    "reverse-ip-lookup": {
+      "name": "Tra cứu IP ngược",
+      "description": "Tra cứu bản ghi PTR DNS ngược cho địa chỉ IPv4 hoặc IPv6 thông qua các trình phân giải DNS-over-HTTPS công khai trực tiếp trong trình duyệt."
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "Fingerprint khóa công khai SSH",
+      "description": "Tạo fingerprint SHA-256 và MD5 cho khóa công khai OpenSSH, dòng authorized_keys và khối khóa công khai SSH2."
+    },
+    "unicode-punycode-converter": {
+      "name": "Bộ chuyển đổi Unicode ↔ Punycode",
+      "description": "Chuyển đổi miền Unicode (IDN) và ASCII (Punycode) theo cả hai chiều."
+    }
+  }
+}

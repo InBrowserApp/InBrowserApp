@@ -1,0 +1,98 @@
+{
+  "searchLabel": "Netwerktools zoeken",
+  "searchPlaceholder": "Zoek op IP, DNS, CIDR, HTTP, TLS, SSH of poort",
+  "clearSearchLabel": "Wissen",
+  "allGroupsLabel": "Alle",
+  "resultCountTemplate": "Getoonde tools: {count}",
+  "emptyTitle": "Geen overeenkomende tools",
+  "emptyDescription": "Probeer een bredere term zoals IP, DNS, CIDR, poort, HTTP, TLS of SSH.",
+  "openToolLabel": "{name} openen",
+  "groups": {
+    "ip": {
+      "label": "IP en CIDR",
+      "description": "Inspecteer openbare adressen, normaliseer bereiken en converteer tussen CIDR-, IPv4-, IPv6- en van MAC afgeleide formaten."
+    },
+    "dns": {
+      "label": "DNS en domeinen",
+      "description": "Vraag DNS-records op, los IP-adressen omgekeerd op en converteer geïnternationaliseerde domeinnamen."
+    },
+    "reference": {
+      "label": "Protocolreferenties",
+      "description": "Zoek HTTP-statuscodes, MIME-types, poortnummers en netwerktijdinformatie op."
+    },
+    "security": {
+      "label": "Sleutels en certificaten",
+      "description": "Inspecteer TLS-certificaatdetails en genereer fingerprints voor SSH-public keys."
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "X.509 Certificate & Public Key Parser",
+      "description": "Parseer X.509-certificaten en openbare sleutels in PEM-, DER- of base64 DER-vorm. Bekijk onderwerpen, uitgevers, geldigheidsdatums, fingerprints, extensies en sleutelgegevens lokaal in je browser."
+    },
+    "cidr-parser": {
+      "name": "CIDR-parser",
+      "description": "Parseer CIDR-notatie om IPv4- of IPv6-netwerkbereiken, maskers en integergrenzen rechtstreeks in de browser te inspecteren."
+    },
+    "cidrs-merger-excluder": {
+      "name": "CIDR's samenvoegen en uitsluiten",
+      "description": "Voeg IPv4- en IPv6-CIDR-blokken samen, trek uitgesloten netwerken af en kopieer de minimale resulterende CIDR-lijst."
+    },
+    "current-network-time": {
+      "name": "Huidige Netwerktijd",
+      "description": "Verkrijg de huidige netwerktijd en vergelijk deze met je lokale systeemtijd. Bekijk nauwkeurige netwerktijd en detecteer eventuele tijdverschillen."
+    },
+    "dns-lookup": {
+      "name": "DNS Lookup",
+      "description": "Vraag A-, AAAA-, CNAME-, MX-, TXT-, NS-, SOA-, CAA-, SRV-, HTTPS- en SVCB-DNS-records op via DNS over HTTPS-resolvers."
+    },
+    "http-status-code-lookup": {
+      "name": "HTTP Statuscode Opzoeken",
+      "description": "Zoek en blader door HTTP-statuscodes en hun betekenissen."
+    },
+    "ip-cidr-normalizer": {
+      "name": "IP/CIDR Normalizer",
+      "description": "Normaliseer IP-adressen en CIDR-notatie voor zowel IPv4- als IPv6-formaten. Voer een IP of CIDR-bereik in om direct het gestandaardiseerde formaat te krijgen."
+    },
+    "ip-info-lookup": {
+      "name": "IP Info Lookup",
+      "description": "Zoek geolocatie, ISP, ASN, reverse DNS en netwerkgegevens op voor een IP-adres, domein of URL."
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "IP-bereik naar CIDR-converter",
+      "description": "Converteer IPv4- of IPv6-start- en eindadressen naar de minimale set CIDR-blokken die het bereik precies dekt."
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "IPv6-adres naar MAC-adres-converter",
+      "description": "Converteer IPv6-adressen naar MAC-adressen. Voer een IPv6-adres in om direct het bijbehorende MAC-adres te extraheren."
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "MAC-adres naar IPv6 link-local-adres-converter",
+      "description": "Converteer MAC-adressen naar IPv6 link-local-adressen. Voer een MAC-adres in en voeg optioneel een interfacenaam toe om direct het scoped resultaat te genereren."
+    },
+    "mime-type-lookup": {
+      "name": "MIME Type Opzoeken",
+      "description": "Zoek en blader door MIME-types en hun bestandsextensies."
+    },
+    "my-ip-address": {
+      "name": "Mijn IP-adres",
+      "description": "Ontdek je openbare IP-adres en krijg gedetailleerde informatie over je internetverbinding, inclusief geolocatie, ISP-details en netwerkinformatie."
+    },
+    "port-number-lookup": {
+      "name": "Poortnummer Opzoeken",
+      "description": "Zoek en blader door veelvoorkomende netwerkpoortnummers."
+    },
+    "reverse-ip-lookup": {
+      "name": "Reverse IP-lookup",
+      "description": "Zoek reverse DNS PTR-records op voor IPv4- of IPv6-adressen via openbare DNS-over-HTTPS-resolvers, rechtstreeks in de browser."
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "SSH Public Key Fingerprint",
+      "description": "Genereer SHA-256- en MD5-fingerprints voor OpenSSH-public keys, authorized_keys-regels en SSH2-public-key-blokken."
+    },
+    "unicode-punycode-converter": {
+      "name": "Unicode ↔ Punycode Converter",
+      "description": "Zet Unicode (IDN)- en ASCII (Punycode)-domeinen in beide richtingen om."
+    }
+  }
+}

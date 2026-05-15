@@ -1,0 +1,98 @@
+{
+  "searchLabel": "חיפוש כלי רשת",
+  "searchPlaceholder": "חפשו לפי IP, DNS, CIDR, HTTP, TLS, SSH או פורט",
+  "clearSearchLabel": "נקה",
+  "allGroupsLabel": "הכול",
+  "resultCountTemplate": "כלים מוצגים: {count}",
+  "emptyTitle": "לא נמצאו כלים תואמים",
+  "emptyDescription": "נסו מונח רחב יותר כמו IP, DNS, CIDR, פורט, HTTP, TLS או SSH.",
+  "openToolLabel": "פתח את {name}",
+  "groups": {
+    "ip": {
+      "label": "IP ו-CIDR",
+      "description": "בדקו כתובות ציבוריות, נרמלו טווחים והמירו בין CIDR, IPv4, IPv6 ופורמטים שמקורם ב-MAC."
+    },
+    "dns": {
+      "label": "DNS ודומיינים",
+      "description": "בצעו שאילתות לרשומות DNS, פתרו כתובות IP לאחור והמירו שמות דומיין בינלאומיים."
+    },
+    "reference": {
+      "label": "עזרי פרוטוקולים",
+      "description": "חפשו במהירות קודי סטטוס HTTP, סוגי MIME, מספרי פורטים ומידע על שעון רשת."
+    },
+    "security": {
+      "label": "מפתחות ואישורים",
+      "description": "בדקו פרטי אישורי TLS וצרו טביעות אצבע עבור מפתחות ציבוריים SSH."
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "מנתח אישורי X.509 ומפתחות ציבוריים",
+      "description": "נתחו אישורי X.509 ומפתחות ציבוריים בפורמט PEM, DER או base64 DER. סקרו נושאים, מנפיקים, תאריכי תוקף, טביעות אצבע, הרחבות ופרטי מפתח מקומית בדפדפן שלכם."
+    },
+    "cidr-parser": {
+      "name": "מנתח CIDR",
+      "description": "נתחו סימון CIDR כדי לבדוק טווחי רשת, מסכות וגבולות מספריים של IPv4 או IPv6 ישירות בדפדפן."
+    },
+    "cidrs-merger-excluder": {
+      "name": "ממזג ומחריג CIDR",
+      "description": "מזגו בלוקי CIDR של IPv4 ו-IPv6, החסירו רשתות מוחרגות והעתיקו את רשימת ה-CIDR המינימלית שמתקבלת."
+    },
+    "current-network-time": {
+      "name": "זמן הרשת הנוכחי",
+      "description": "קבלו את זמן הרשת הנוכחי והשוו אותו לזמן המערכת המקומי שלכם. הציגו זמן רשת מדויק וזהו הבדלי זמן."
+    },
+    "dns-lookup": {
+      "name": "בדיקת DNS",
+      "description": "בצעו שאילתות לרשומות DNS מסוג A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS ו-SVCB דרך פותרי DNS over HTTPS."
+    },
+    "http-status-code-lookup": {
+      "name": "חיפוש קוד סטטוס HTTP",
+      "description": "חפשו ועיינו בקודי סטטוס HTTP ובמשמעויות שלהם."
+    },
+    "ip-cidr-normalizer": {
+      "name": "מנרמל IP/CIDR",
+      "description": "נרמלו כתובות IP וסימון CIDR עבור פורמטים IPv4 ו-IPv6. הזינו כל IP או טווח CIDR כדי לקבל מיד את הפורמט התקני."
+    },
+    "ip-info-lookup": {
+      "name": "חיפוש מידע IP",
+      "description": "חפשו מיקום גאוגרפי, ספק אינטרנט, ASN, DNS הפוך ופרטי רשת עבור כתובת IP, דומיין או URL."
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "ממיר טווח IP ל-CIDR",
+      "description": "המירו כתובות התחלה וסיום של IPv4 או IPv6 לקבוצה המינימלית של בלוקי CIDR שמכסה בדיוק את הטווח."
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "ממיר כתובת IPv6 לכתובת MAC",
+      "description": "המירו כתובות IPv6 לכתובות MAC. הזינו כל כתובת IPv6 כדי לחלץ מיד את כתובת ה-MAC המתאימה."
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "ממיר כתובת MAC לכתובת IPv6 מקומית לקישור",
+      "description": "המירו כתובות MAC לכתובות IPv6 link-local. הזינו כל כתובת MAC ואפשר להוסיף שם ממשק כדי ליצור מיד את התוצאה עם ה-scope."
+    },
+    "mime-type-lookup": {
+      "name": "חיפוש סוג MIME",
+      "description": "חפשו ועיינו בסוגי MIME ובהרחבות הקבצים שלהם."
+    },
+    "my-ip-address": {
+      "name": "כתובת ה-IP שלי",
+      "description": "גלו את כתובת ה-IP הציבורית שלכם וקבלו מידע מפורט על חיבור האינטרנט שלכם, כולל מיקום גאוגרפי, פרטי ספק אינטרנט ומידע רשת."
+    },
+    "port-number-lookup": {
+      "name": "חיפוש מספרי פורט",
+      "description": "חפשו ועיינו במספרי פורטים נפוצים ברשת."
+    },
+    "reverse-ip-lookup": {
+      "name": "חיפוש IP הפוך",
+      "description": "חפשו רשומות PTR של DNS הפוך עבור כתובות IPv4 או IPv6 דרך פותרי DNS-over-HTTPS ציבוריים, ישירות בדפדפן."
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "טביעת אצבע של מפתח ציבורי SSH",
+      "description": "צרו טביעות אצבע SHA-256 ו-MD5 עבור מפתחות ציבוריים של OpenSSH, שורות authorized_keys ובלוקי מפתח ציבורי SSH2."
+    },
+    "unicode-punycode-converter": {
+      "name": "ממיר Unicode ↔ Punycode",
+      "description": "המירו דומיינים של Unicode (IDN) ו-ASCII (Punycode) בשני הכיוונים."
+    }
+  }
+}

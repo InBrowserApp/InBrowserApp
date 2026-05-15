@@ -1,0 +1,98 @@
+{
+  "searchLabel": "Pesquisar ferramentas de rede",
+  "searchPlaceholder": "Pesquise por IP, DNS, CIDR, HTTP, TLS, SSH ou porta",
+  "clearSearchLabel": "Limpar",
+  "allGroupsLabel": "Todos",
+  "resultCountTemplate": "Ferramentas exibidas: {count}",
+  "emptyTitle": "Nenhuma ferramenta correspondente",
+  "emptyDescription": "Tente um termo mais amplo, como IP, DNS, CIDR, porta, HTTP, TLS ou SSH.",
+  "openToolLabel": "Abrir {name}",
+  "groups": {
+    "ip": {
+      "label": "IP e CIDR",
+      "description": "Inspecione endereços públicos, normalize intervalos e converta entre CIDR, IPv4, IPv6 e formatos derivados de MAC."
+    },
+    "dns": {
+      "label": "DNS e domínios",
+      "description": "Consulte registros DNS, faça resolução reversa de endereços IP e converta nomes de domínio internacionalizados."
+    },
+    "reference": {
+      "label": "Referências de protocolos",
+      "description": "Consulte códigos de status HTTP, tipos MIME, números de porta e informações de hora de rede."
+    },
+    "security": {
+      "label": "Chaves e certificados",
+      "description": "Inspecione detalhes de certificados TLS e gere impressões digitais para chaves públicas SSH."
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "Analisador de certificados X.509 e chaves públicas",
+      "description": "Analise certificados X.509 e chaves públicas em formato PEM, DER ou base64 DER. Revise titulares, emissores, datas de validade, impressões digitais, extensões e detalhes das chaves localmente no seu navegador."
+    },
+    "cidr-parser": {
+      "name": "Analisador CIDR",
+      "description": "Analise a notação CIDR para inspecionar intervalos de rede IPv4 ou IPv6, máscaras e limites inteiros diretamente no navegador."
+    },
+    "cidrs-merger-excluder": {
+      "name": "Mesclador e excluidor de CIDR",
+      "description": "Mescle blocos CIDR IPv4 e IPv6, subtraia redes excluídas e copie a lista CIDR mínima resultante."
+    },
+    "current-network-time": {
+      "name": "Hora de rede atual",
+      "description": "Obtenha a hora de rede atual e compare-a com a hora local do seu sistema. Veja a hora de rede precisa e detecte quaisquer diferenças de horário."
+    },
+    "dns-lookup": {
+      "name": "Consulta DNS",
+      "description": "Consulte registros DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS e SVCB por meio de resolvedores DNS sobre HTTPS."
+    },
+    "http-status-code-lookup": {
+      "name": "Consulta de códigos de status HTTP",
+      "description": "Pesquise e navegue por códigos de status HTTP e seus significados."
+    },
+    "ip-cidr-normalizer": {
+      "name": "Normalizador IP/CIDR",
+      "description": "Normalize endereços IP e a notação CIDR para formatos IPv4 e IPv6. Insira qualquer IP ou intervalo CIDR para obter o formato padronizado instantaneamente."
+    },
+    "ip-info-lookup": {
+      "name": "Consulta de informações de IP",
+      "description": "Consulte geolocalização, ISP, ASN, DNS reverso e detalhes de rede para um endereço IP, domínio ou URL."
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "Conversor de intervalo IP para CIDR",
+      "description": "Converta os endereços IPv4 ou IPv6 inicial e final no conjunto mínimo de blocos CIDR que cobre exatamente o intervalo."
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "Conversor de endereço IPv6 para endereço MAC",
+      "description": "Converta endereços IPv6 em endereços MAC. Insira qualquer endereço IPv6 para extrair instantaneamente o endereço MAC correspondente."
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "Conversor de endereço MAC para endereço IPv6 link-local",
+      "description": "Converta endereços MAC em endereços IPv6 link-local. Insira qualquer endereço MAC e, opcionalmente, adicione um nome de interface para gerar instantaneamente o resultado com escopo."
+    },
+    "mime-type-lookup": {
+      "name": "Consulta de tipos MIME",
+      "description": "Pesquise e navegue por tipos MIME e suas extensões de arquivo."
+    },
+    "my-ip-address": {
+      "name": "Meu endereço IP",
+      "description": "Descubra seu endereço IP público e obtenha informações detalhadas sobre sua conexão com a internet, incluindo geolocalização, detalhes do ISP e informações de rede."
+    },
+    "port-number-lookup": {
+      "name": "Consulta de números de porta",
+      "description": "Pesquise e navegue por números de porta de rede comuns."
+    },
+    "reverse-ip-lookup": {
+      "name": "Consulta reversa de IP",
+      "description": "Consulte registros PTR de DNS reverso para endereços IPv4 ou IPv6 por meio de resolvedores públicos de DNS sobre HTTPS diretamente no navegador."
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "Impressão digital de chave pública SSH",
+      "description": "Gere impressões digitais SHA-256 e MD5 para chaves públicas OpenSSH, linhas authorized_keys e blocos de chave pública SSH2."
+    },
+    "unicode-punycode-converter": {
+      "name": "Conversor Unicode ↔ Punycode",
+      "description": "Converta domínios Unicode (IDN) e ASCII (Punycode) nos dois sentidos."
+    }
+  }
+}

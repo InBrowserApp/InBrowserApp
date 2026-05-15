@@ -1,0 +1,98 @@
+{
+  "searchLabel": "Search network tools",
+  "searchPlaceholder": "Search by IP, DNS, CIDR, HTTP, TLS, SSH, or port",
+  "clearSearchLabel": "Clear",
+  "allGroupsLabel": "All",
+  "resultCountTemplate": "Tools shown: {count}",
+  "emptyTitle": "No matching tools",
+  "emptyDescription": "Try a broader term such as IP, DNS, CIDR, port, HTTP, TLS, or SSH.",
+  "openToolLabel": "Open {name}",
+  "groups": {
+    "ip": {
+      "label": "IP and CIDR",
+      "description": "Inspect public addresses, normalize ranges, and convert between CIDR, IPv4, IPv6, and MAC-derived formats."
+    },
+    "dns": {
+      "label": "DNS and Domains",
+      "description": "Query DNS records, reverse-resolve IP addresses, and convert internationalized domain names."
+    },
+    "reference": {
+      "label": "Protocol References",
+      "description": "Look up HTTP status codes, MIME types, port numbers, and network clock information."
+    },
+    "security": {
+      "label": "Keys and Certificates",
+      "description": "Inspect TLS certificate details and generate fingerprints for SSH public keys."
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "X.509 Certificate & Public Key Parser",
+      "description": "Parse X.509 certificates and public keys in PEM, DER, or base64 DER form. Review subjects, issuers, validity dates, fingerprints, extensions, and key details locally in your browser."
+    },
+    "cidr-parser": {
+      "name": "CIDR Parser",
+      "description": "Parse CIDR notation to inspect IPv4 or IPv6 network ranges, masks, and integer boundaries directly in the browser."
+    },
+    "cidrs-merger-excluder": {
+      "name": "CIDRs Merger & Excluder",
+      "description": "Merge IPv4 and IPv6 CIDR blocks, subtract excluded networks, and copy the minimal resulting CIDR list."
+    },
+    "current-network-time": {
+      "name": "Current Network Time",
+      "description": "Get the current network time and compare it with your local system time. View accurate network time and detect any time differences."
+    },
+    "dns-lookup": {
+      "name": "DNS Lookup",
+      "description": "Query A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, and SVCB DNS records through DNS over HTTPS resolvers."
+    },
+    "http-status-code-lookup": {
+      "name": "HTTP Status Code Lookup",
+      "description": "Search and browse HTTP status codes and their meanings."
+    },
+    "ip-cidr-normalizer": {
+      "name": "IP/CIDR Normalizer",
+      "description": "Normalize IP addresses and CIDR notation for both IPv4 and IPv6 formats. Enter any IP or CIDR range to get the standardized format instantly."
+    },
+    "ip-info-lookup": {
+      "name": "IP Info Lookup",
+      "description": "Look up geolocation, ISP, ASN, reverse DNS, and network details for an IP address, domain, or URL."
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "IP Range to CIDR Converter",
+      "description": "Convert IPv4 or IPv6 start and end addresses into the minimal set of CIDR blocks that exactly covers the range."
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "IPv6 Address to MAC Address Converter",
+      "description": "Convert IPv6 addresses to MAC addresses. Enter any IPv6 address to extract the corresponding MAC address instantly."
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "MAC Address to IPv6 Link-Local Address Converter",
+      "description": "Convert MAC addresses to IPv6 link-local addresses. Enter any MAC address and optionally add an interface name to generate the scoped result instantly."
+    },
+    "mime-type-lookup": {
+      "name": "MIME Type Lookup",
+      "description": "Search and browse MIME types and their file extensions."
+    },
+    "my-ip-address": {
+      "name": "My IP Address",
+      "description": "Discover your public IP address and get detailed information about your internet connection including geolocation, ISP details, and network information."
+    },
+    "port-number-lookup": {
+      "name": "Port Number Lookup",
+      "description": "Search and browse common network port numbers."
+    },
+    "reverse-ip-lookup": {
+      "name": "Reverse IP Lookup",
+      "description": "Look up reverse DNS PTR records for IPv4 or IPv6 addresses through public DNS-over-HTTPS resolvers directly in the browser."
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "SSH Public Key Fingerprint",
+      "description": "Generate SHA-256 and MD5 fingerprints for OpenSSH public keys, authorized_keys lines, and SSH2 public key blocks."
+    },
+    "unicode-punycode-converter": {
+      "name": "Unicode ↔ Punycode Converter",
+      "description": "Convert Unicode (IDN) and ASCII (Punycode) domains both ways."
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "searchLabel": "ネットワークツールを検索",
+  "searchPlaceholder": "IP、DNS、CIDR、HTTP、TLS、SSH、またはポートで検索",
+  "clearSearchLabel": "クリア",
+  "allGroupsLabel": "すべて",
+  "resultCountTemplate": "表示中のツール：{count}",
+  "emptyTitle": "一致するツールがありません",
+  "emptyDescription": "IP、DNS、CIDR、ポート、HTTP、TLS、SSH など、より広い語句を試してください。",
+  "openToolLabel": "{name}を開く",
+  "groups": {
+    "ip": {
+      "label": "IP と CIDR",
+      "description": "公開アドレスを調べ、範囲を正規化し、CIDR、IPv4、IPv6、MAC 由来形式の間で変換します。"
+    },
+    "dns": {
+      "label": "DNS とドメイン",
+      "description": "DNS レコードを照会し、IP アドレスを逆引きし、国際化ドメイン名を変換します。"
+    },
+    "reference": {
+      "label": "プロトコルリファレンス",
+      "description": "HTTP ステータスコード、MIME タイプ、ポート番号、ネットワーク時刻情報を調べます。"
+    },
+    "security": {
+      "label": "鍵と証明書",
+      "description": "TLS 証明書の詳細を確認し、SSH 公開鍵のフィンガープリントを生成します。"
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "X.509 証明書・公開鍵パーサー",
+      "description": "PEM、DER、または base64 DER 形式の X.509 証明書と公開鍵を解析します。サブジェクト、発行者、有効期間、フィンガープリント、拡張、鍵の詳細をブラウザー内でローカルに確認できます。"
+    },
+    "cidr-parser": {
+      "name": "CIDR パーサー",
+      "description": "CIDR 表記を解析し、IPv4 または IPv6 のネットワーク範囲、マスク、整数境界をブラウザー内で直接確認します。"
+    },
+    "cidrs-merger-excluder": {
+      "name": "CIDR のマージと除外",
+      "description": "IPv4 と IPv6 の CIDR ブロックをマージし、除外ネットワークを差し引いて、最小限の結果 CIDR リストをコピーします。"
+    },
+    "current-network-time": {
+      "name": "現在のネットワーク時刻",
+      "description": "現在のネットワーク時刻を取得し、ローカルシステム時刻と比較します。正確なネットワーク時刻を表示し、時刻差を検出できます。"
+    },
+    "dns-lookup": {
+      "name": "DNS ルックアップ",
+      "description": "DNS over HTTPS リゾルバーを通じて、A、AAAA、CNAME、MX、TXT、NS、SOA、CAA、SRV、HTTPS、SVCB の DNS レコードを照会します。"
+    },
+    "http-status-code-lookup": {
+      "name": "HTTP ステータスコード検索",
+      "description": "HTTP ステータスコードとその意味を検索・参照します。"
+    },
+    "ip-cidr-normalizer": {
+      "name": "IP/CIDR 正規化",
+      "description": "IPv4 と IPv6 の両形式で IP アドレスと CIDR 表記を正規化します。任意の IP または CIDR 範囲を入力すると、標準化された形式をすぐに取得できます。"
+    },
+    "ip-info-lookup": {
+      "name": "IP 情報検索",
+      "description": "IP アドレス、ドメイン、または URL の位置情報、ISP、ASN、逆引き DNS、ネットワーク詳細を調べます。"
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "IP 範囲から CIDR への変換",
+      "description": "IPv4 または IPv6 の開始アドレスと終了アドレスを、その範囲を正確にカバーする最小限の CIDR ブロック集合に変換します。"
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "IPv6 アドレスから MAC アドレスへの変換",
+      "description": "IPv6 アドレスを MAC アドレスに変換します。任意の IPv6 アドレスを入力すると、対応する MAC アドレスをすぐに抽出できます。"
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "MAC アドレスから IPv6 リンクローカルアドレスへの変換",
+      "description": "MAC アドレスを IPv6 リンクローカルアドレスに変換します。任意の MAC アドレスを入力し、必要に応じてインターフェイス名を追加すると、スコープ付きの結果をすぐに生成できます。"
+    },
+    "mime-type-lookup": {
+      "name": "MIME タイプ検索",
+      "description": "MIME タイプとそのファイル拡張子を検索・参照します。"
+    },
+    "my-ip-address": {
+      "name": "自分の IP アドレス",
+      "description": "公開 IP アドレスを確認し、位置情報、ISP の詳細、ネットワーク情報を含むインターネット接続の詳細情報を取得します。"
+    },
+    "port-number-lookup": {
+      "name": "ポート番号検索",
+      "description": "一般的なネットワークポート番号を検索・参照します。"
+    },
+    "reverse-ip-lookup": {
+      "name": "逆引き IP ルックアップ",
+      "description": "公開 DNS-over-HTTPS リゾルバーを通じて、IPv4 または IPv6 アドレスの逆引き DNS PTR レコードをブラウザー内で直接調べます。"
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "SSH 公開鍵フィンガープリント",
+      "description": "OpenSSH 公開鍵、authorized_keys 行、SSH2 公開鍵ブロックの SHA-256 および MD5 フィンガープリントを生成します。"
+    },
+    "unicode-punycode-converter": {
+      "name": "Unicode ↔ Punycode コンバーター",
+      "description": "Unicode (IDN) と ASCII (Punycode) のドメインを双方向に変換します。"
+    }
+  }
+}

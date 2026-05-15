@@ -1,0 +1,98 @@
+{
+  "searchLabel": "Cari alat jaringan",
+  "searchPlaceholder": "Cari berdasarkan IP, DNS, CIDR, HTTP, TLS, SSH, atau port",
+  "clearSearchLabel": "Bersihkan",
+  "allGroupsLabel": "Semua",
+  "resultCountTemplate": "Alat ditampilkan: {count}",
+  "emptyTitle": "Tidak ada alat yang cocok",
+  "emptyDescription": "Coba istilah yang lebih luas seperti IP, DNS, CIDR, port, HTTP, TLS, atau SSH.",
+  "openToolLabel": "Buka {name}",
+  "groups": {
+    "ip": {
+      "label": "IP dan CIDR",
+      "description": "Periksa alamat publik, normalkan rentang, dan konversi antara CIDR, IPv4, IPv6, serta format turunan MAC."
+    },
+    "dns": {
+      "label": "DNS dan Domain",
+      "description": "Kueri catatan DNS, lakukan resolusi balik alamat IP, dan konversi nama domain terinternasionalisasi."
+    },
+    "reference": {
+      "label": "Referensi Protokol",
+      "description": "Cari kode status HTTP, tipe MIME, nomor port, dan informasi waktu jaringan."
+    },
+    "security": {
+      "label": "Kunci dan Sertifikat",
+      "description": "Periksa detail sertifikat TLS dan buat fingerprint untuk kunci publik SSH."
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "Parser Sertifikat X.509 & Kunci Publik",
+      "description": "Parse sertifikat X.509 dan kunci publik dalam bentuk PEM, DER, atau base64 DER. Tinjau subjek, penerbit, tanggal validitas, fingerprint, ekstensi, dan detail kunci secara lokal di browser Anda."
+    },
+    "cidr-parser": {
+      "name": "Parser CIDR",
+      "description": "Parse notasi CIDR untuk memeriksa rentang jaringan IPv4 atau IPv6, mask, dan batas integer langsung di browser."
+    },
+    "cidrs-merger-excluder": {
+      "name": "Penggabung & Pengecualian CIDR",
+      "description": "Gabungkan blok CIDR IPv4 dan IPv6, kurangi jaringan yang dikecualikan, dan salin daftar CIDR hasil minimal."
+    },
+    "current-network-time": {
+      "name": "Waktu Jaringan Saat Ini",
+      "description": "Dapatkan waktu jaringan saat ini dan bandingkan dengan waktu sistem lokal Anda. Lihat waktu jaringan yang akurat dan deteksi perbedaan waktu apa pun."
+    },
+    "dns-lookup": {
+      "name": "Pencarian DNS",
+      "description": "Kueri catatan DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, dan SVCB melalui resolver DNS over HTTPS."
+    },
+    "http-status-code-lookup": {
+      "name": "Pencarian Kode Status HTTP",
+      "description": "Cari dan telusuri kode status HTTP beserta artinya."
+    },
+    "ip-cidr-normalizer": {
+      "name": "Penormalisasi IP/CIDR",
+      "description": "Normalkan alamat IP dan notasi CIDR untuk format IPv4 dan IPv6. Masukkan IP atau rentang CIDR apa pun untuk mendapatkan format standar secara instan."
+    },
+    "ip-info-lookup": {
+      "name": "Pencarian Info IP",
+      "description": "Cari geolokasi, ISP, ASN, reverse DNS, dan detail jaringan untuk alamat IP, domain, atau URL."
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "Konverter Rentang IP ke CIDR",
+      "description": "Konversi alamat awal dan akhir IPv4 atau IPv6 menjadi kumpulan minimal blok CIDR yang tepat mencakup rentang tersebut."
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "Konverter Alamat IPv6 ke Alamat MAC",
+      "description": "Konversi alamat IPv6 ke alamat MAC. Masukkan alamat IPv6 apa pun untuk mengekstrak alamat MAC yang sesuai secara instan."
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "Konverter Alamat MAC ke Alamat Link-Local IPv6",
+      "description": "Konversi alamat MAC ke alamat link-local IPv6. Masukkan alamat MAC apa pun dan tambahkan nama antarmuka secara opsional untuk menghasilkan hasil dengan cakupan secara instan."
+    },
+    "mime-type-lookup": {
+      "name": "Pencarian Tipe MIME",
+      "description": "Cari dan telusuri tipe MIME dan ekstensi filenya."
+    },
+    "my-ip-address": {
+      "name": "Alamat IP Saya",
+      "description": "Temukan alamat IP publik Anda dan dapatkan informasi mendetail tentang koneksi internet Anda termasuk geolokasi, detail ISP, dan informasi jaringan."
+    },
+    "port-number-lookup": {
+      "name": "Pencarian Nomor Port",
+      "description": "Cari dan telusuri nomor port jaringan umum."
+    },
+    "reverse-ip-lookup": {
+      "name": "Pencarian IP Balik",
+      "description": "Cari catatan PTR DNS balik untuk alamat IPv4 atau IPv6 melalui resolver DNS-over-HTTPS publik langsung di browser."
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "Fingerprint Kunci Publik SSH",
+      "description": "Buat fingerprint SHA-256 dan MD5 untuk kunci publik OpenSSH, baris authorized_keys, dan blok kunci publik SSH2."
+    },
+    "unicode-punycode-converter": {
+      "name": "Konverter Unicode ↔ Punycode",
+      "description": "Konversi domain Unicode (IDN) dan ASCII (Punycode) dua arah."
+    }
+  }
+}

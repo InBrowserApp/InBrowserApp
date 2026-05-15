@@ -1,0 +1,98 @@
+{
+  "searchLabel": "네트워크 도구 검색",
+  "searchPlaceholder": "IP, DNS, CIDR, HTTP, TLS, SSH 또는 포트로 검색",
+  "clearSearchLabel": "지우기",
+  "allGroupsLabel": "전체",
+  "resultCountTemplate": "표시된 도구: {count}",
+  "emptyTitle": "일치하는 도구가 없습니다",
+  "emptyDescription": "IP, DNS, CIDR, 포트, HTTP, TLS, SSH 같은 더 넓은 용어를 시도해 보세요.",
+  "openToolLabel": "{name} 열기",
+  "groups": {
+    "ip": {
+      "label": "IP 및 CIDR",
+      "description": "공용 주소를 검사하고 범위를 정규화하며 CIDR, IPv4, IPv6, MAC 파생 형식 간에 변환합니다."
+    },
+    "dns": {
+      "label": "DNS 및 도메인",
+      "description": "DNS 레코드를 조회하고, IP 주소를 역방향 확인하며, 국제화 도메인 이름을 변환합니다."
+    },
+    "reference": {
+      "label": "프로토콜 참조",
+      "description": "HTTP 상태 코드, MIME 타입, 포트 번호, 네트워크 시간 정보를 조회합니다."
+    },
+    "security": {
+      "label": "키 및 인증서",
+      "description": "TLS 인증서 세부 정보를 검사하고 SSH 공개 키의 지문을 생성합니다."
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "X.509 Certificate & Public Key Parser",
+      "description": "PEM, DER 또는 base64 DER 형식의 X.509 인증서와 공개 키를 파싱합니다. 주체, 발급자, 유효 기간, 지문, 확장 필드, 키 세부 정보를 브라우저에서 로컬로 확인하세요."
+    },
+    "cidr-parser": {
+      "name": "CIDR 파서",
+      "description": "브라우저에서 직접 CIDR 표기법을 파싱하여 IPv4 또는 IPv6 네트워크 범위, 마스크, 정수 경계를 검사합니다."
+    },
+    "cidrs-merger-excluder": {
+      "name": "CIDR 병합 및 제외 도구",
+      "description": "IPv4 및 IPv6 CIDR 블록을 병합하고, 제외할 네트워크를 뺀 뒤, 최소 결과 CIDR 목록을 복사합니다."
+    },
+    "current-network-time": {
+      "name": "현재 네트워크 시간",
+      "description": "현재 네트워크 시간을 가져와 로컬 시스템 시간과 비교합니다. 정확한 네트워크 시간을 확인하고 시간 차이를 감지하세요."
+    },
+    "dns-lookup": {
+      "name": "DNS 조회",
+      "description": "DNS over HTTPS 리졸버를 통해 A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, SVCB DNS 레코드를 조회합니다."
+    },
+    "http-status-code-lookup": {
+      "name": "HTTP 상태 코드 조회",
+      "description": "HTTP 상태 코드와 그 의미를 검색하고 탐색합니다."
+    },
+    "ip-cidr-normalizer": {
+      "name": "IP/CIDR 정규화 도구",
+      "description": "IPv4 및 IPv6 형식 모두에서 IP 주소와 CIDR 표기법을 정규화합니다. 임의의 IP 또는 CIDR 범위를 입력하여 표준화된 형식을 즉시 얻으세요."
+    },
+    "ip-info-lookup": {
+      "name": "IP 정보 조회",
+      "description": "IP 주소, 도메인 또는 URL의 위치 정보, ISP, ASN, 역방향 DNS, 네트워크 세부 정보를 조회합니다."
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "IP 범위-CIDR 변환기",
+      "description": "IPv4 또는 IPv6 시작 및 끝 주소를 해당 범위를 정확히 포함하는 최소 CIDR 블록 세트로 변환합니다."
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "IPv6 주소를 MAC 주소로 변환",
+      "description": "IPv6 주소를 MAC 주소로 변환합니다. 임의의 IPv6 주소를 입력하여 해당하는 MAC 주소를 즉시 추출하세요."
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "MAC 주소를 IPv6 링크 로컬 주소로 변환",
+      "description": "MAC 주소를 IPv6 링크 로컬 주소로 변환합니다. 임의의 MAC 주소를 입력하고 선택적으로 인터페이스 이름을 추가하여 scoped 결과를 즉시 생성하세요."
+    },
+    "mime-type-lookup": {
+      "name": "MIME 타입 조회",
+      "description": "MIME 타입과 해당 파일 확장자를 검색하고 탐색합니다."
+    },
+    "my-ip-address": {
+      "name": "내 IP 주소",
+      "description": "공용 IP 주소를 확인하고 위치 정보, ISP 세부 정보, 네트워크 정보를 포함한 인터넷 연결 세부 정보를 얻으세요."
+    },
+    "port-number-lookup": {
+      "name": "포트 번호 조회",
+      "description": "일반적인 네트워크 포트 번호를 검색하고 탐색합니다."
+    },
+    "reverse-ip-lookup": {
+      "name": "역방향 IP 조회",
+      "description": "브라우저에서 직접 공용 DNS-over-HTTPS 리졸버를 통해 IPv4 또는 IPv6 주소의 역방향 DNS PTR 레코드를 조회합니다."
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "SSH 공개 키 지문",
+      "description": "OpenSSH 공개 키, authorized_keys 줄, SSH2 공개 키 블록의 SHA-256 및 MD5 지문을 생성합니다."
+    },
+    "unicode-punycode-converter": {
+      "name": "Unicode ↔ Punycode 변환기",
+      "description": "Unicode(IDN)와 ASCII(Punycode) 도메인을 양방향으로 변환합니다."
+    }
+  }
+}

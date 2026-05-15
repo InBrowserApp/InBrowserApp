@@ -1,0 +1,98 @@
+{
+  "searchLabel": "Ağ araçlarında ara",
+  "searchPlaceholder": "IP, DNS, CIDR, HTTP, TLS, SSH veya porta göre ara",
+  "clearSearchLabel": "Temizle",
+  "allGroupsLabel": "Tümü",
+  "resultCountTemplate": "Gösterilen araçlar: {count}",
+  "emptyTitle": "Eşleşen araç yok",
+  "emptyDescription": "IP, DNS, CIDR, port, HTTP, TLS veya SSH gibi daha genel bir terim deneyin.",
+  "openToolLabel": "{name} aracını aç",
+  "groups": {
+    "ip": {
+      "label": "IP ve CIDR",
+      "description": "Genel adresleri inceleyin, aralıkları normalleştirin ve CIDR, IPv4, IPv6 ile MAC'ten türetilen formatlar arasında dönüştürün."
+    },
+    "dns": {
+      "label": "DNS ve Alan Adları",
+      "description": "DNS kayıtlarını sorgulayın, IP adreslerini ters çözümleyin ve uluslararasılaştırılmış alan adlarını dönüştürün."
+    },
+    "reference": {
+      "label": "Protokol Referansları",
+      "description": "HTTP durum kodlarını, MIME türlerini, port numaralarını ve ağ saati bilgilerini arayın."
+    },
+    "security": {
+      "label": "Anahtarlar ve Sertifikalar",
+      "description": "TLS sertifika ayrıntılarını inceleyin ve SSH ortak anahtarları için parmak izleri oluşturun."
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "X.509 Certificate & Public Key Parser",
+      "description": "PEM, DER veya base64 DER biçimindeki X.509 sertifikalarını ve genel anahtarları ayrıştırın. Konuları, verenleri, geçerlilik tarihlerini, parmak izlerini, uzantıları ve anahtar ayrıntılarını tarayıcınızda yerel olarak inceleyin."
+    },
+    "cidr-parser": {
+      "name": "CIDR Ayrıştırıcı",
+      "description": "CIDR notasyonunu ayrıştırarak IPv4 veya IPv6 ağ aralıklarını, maskeleri ve tamsayı sınırlarını doğrudan tarayıcıda inceleyin."
+    },
+    "cidrs-merger-excluder": {
+      "name": "CIDR Birleştirici ve Hariç Tutucu",
+      "description": "IPv4 ve IPv6 CIDR bloklarını birleştirin, hariç tutulan ağları çıkarın ve ortaya çıkan en küçük CIDR listesini kopyalayın."
+    },
+    "current-network-time": {
+      "name": "Mevcut Ağ Saati",
+      "description": "Mevcut ağ saatini alın ve yerel sistem saatinizle karşılaştırın. Doğru ağ saatini görüntüleyin ve herhangi bir zaman farkını tespit edin."
+    },
+    "dns-lookup": {
+      "name": "DNS Sorgulama",
+      "description": "DNS over HTTPS çözümleyicileri üzerinden A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS ve SVCB DNS kayıtlarını sorgulayın."
+    },
+    "http-status-code-lookup": {
+      "name": "HTTP Durum Kodu Arama",
+      "description": "HTTP durum kodlarını ve anlamlarını arayın ve göz atın."
+    },
+    "ip-cidr-normalizer": {
+      "name": "IP/CIDR Normalleştirici",
+      "description": "IPv4 ve IPv6 formatları için IP adreslerini ve CIDR notasyonunu normalleştirin. Herhangi bir IP veya CIDR aralığı girin ve standartlaştırılmış formatı anında alın."
+    },
+    "ip-info-lookup": {
+      "name": "IP Bilgisi Sorgulama",
+      "description": "Bir IP adresi, alan adı veya URL için coğrafi konum, ISP, ASN, ters DNS ve ağ ayrıntılarını sorgulayın."
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "IP Aralığından CIDR'ye Dönüştürücü",
+      "description": "IPv4 veya IPv6 başlangıç ve bitiş adreslerini, aralığı tam olarak kapsayan minimum CIDR blokları kümesine dönüştürün."
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "IPv6 Adresinden MAC Adresine Dönüştürücü",
+      "description": "IPv6 adreslerini MAC adreslerine dönüştürün. Herhangi bir IPv6 adresi girin ve karşılık gelen MAC adresini anında çıkarın."
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "MAC Adresinden IPv6 Link-Local Adresine Dönüştürücü",
+      "description": "MAC adreslerini IPv6 link-local adreslerine dönüştürün. Herhangi bir MAC adresi girin ve kapsamı belirtilmiş sonucu anında oluşturmak için isteğe bağlı olarak bir arabirim adı ekleyin."
+    },
+    "mime-type-lookup": {
+      "name": "MIME Türü Arama",
+      "description": "MIME türlerini ve dosya uzantılarını arayın ve göz atın."
+    },
+    "my-ip-address": {
+      "name": "IP Adresim",
+      "description": "Genel IP adresinizi keşfedin ve coğrafi konum, ISP ayrıntıları ve ağ bilgileri dahil olmak üzere internet bağlantınız hakkında ayrıntılı bilgi alın."
+    },
+    "port-number-lookup": {
+      "name": "Port Numarası Arama",
+      "description": "Yaygın ağ port numaralarını arayın ve göz atın."
+    },
+    "reverse-ip-lookup": {
+      "name": "Ters IP Sorgulama",
+      "description": "IPv4 veya IPv6 adresleri için ters DNS PTR kayıtlarını, doğrudan tarayıcıda genel DNS-over-HTTPS çözümleyicileri üzerinden sorgulayın."
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "SSH Ortak Anahtar Parmak İzi",
+      "description": "OpenSSH ortak anahtarları, authorized_keys satırları ve SSH2 ortak anahtar blokları için SHA-256 ve MD5 parmak izleri oluşturun."
+    },
+    "unicode-punycode-converter": {
+      "name": "Unicode ↔ Punycode Dönüştürücü",
+      "description": "Unicode (IDN) ve ASCII (Punycode) alan adlarını çift yönlü dönüştürün."
+    }
+  }
+}

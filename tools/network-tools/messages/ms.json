@@ -1,0 +1,98 @@
+{
+  "searchLabel": "Cari alat rangkaian",
+  "searchPlaceholder": "Cari mengikut IP, DNS, CIDR, HTTP, TLS, SSH, atau port",
+  "clearSearchLabel": "Kosongkan",
+  "allGroupsLabel": "Semua",
+  "resultCountTemplate": "Alat dipaparkan: {count}",
+  "emptyTitle": "Tiada alat sepadan",
+  "emptyDescription": "Cuba istilah yang lebih umum seperti IP, DNS, CIDR, port, HTTP, TLS, atau SSH.",
+  "openToolLabel": "Buka {name}",
+  "groups": {
+    "ip": {
+      "label": "IP dan CIDR",
+      "description": "Periksa alamat awam, normalkan julat, dan tukar antara CIDR, IPv4, IPv6, serta format terbitan MAC."
+    },
+    "dns": {
+      "label": "DNS dan Domain",
+      "description": "Kueri rekod DNS, lakukan penyelesaian songsang untuk alamat IP, dan tukar nama domain terantarabangsa."
+    },
+    "reference": {
+      "label": "Rujukan Protokol",
+      "description": "Cari kod status HTTP, jenis MIME, nombor port, dan maklumat masa rangkaian."
+    },
+    "security": {
+      "label": "Kunci dan Sijil",
+      "description": "Periksa butiran sijil TLS dan jana cap jari untuk kunci awam SSH."
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "Penghurai Sijil X.509 & Kunci Awam",
+      "description": "Hurai sijil X.509 dan kunci awam dalam bentuk PEM, DER, atau base64 DER. Semak subjek, pengeluar, tarikh kesahan, cap jari, sambungan, dan butiran kunci secara setempat dalam pelayar anda."
+    },
+    "cidr-parser": {
+      "name": "Parser CIDR",
+      "description": "Hurai notasi CIDR untuk memeriksa julat rangkaian IPv4 atau IPv6, topeng, dan sempadan integer terus dalam pelayar."
+    },
+    "cidrs-merger-excluder": {
+      "name": "Penggabung & Pengecuali CIDR",
+      "description": "Gabungkan blok CIDR IPv4 dan IPv6, tolak rangkaian yang dikecualikan, dan salin senarai CIDR hasil yang minimum."
+    },
+    "current-network-time": {
+      "name": "Masa Rangkaian Semasa",
+      "description": "Dapatkan masa rangkaian semasa dan bandingkan dengan masa sistem tempatan anda. Lihat masa rangkaian yang tepat dan kesan sebarang perbezaan masa."
+    },
+    "dns-lookup": {
+      "name": "DNS Lookup",
+      "description": "Kueri rekod DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, dan SVCB melalui penyelesai DNS over HTTPS."
+    },
+    "http-status-code-lookup": {
+      "name": "Carian Kod Status HTTP",
+      "description": "Cari dan layari kod status HTTP serta maksudnya."
+    },
+    "ip-cidr-normalizer": {
+      "name": "Penormal IP/CIDR",
+      "description": "Normalkan alamat IP dan notasi CIDR untuk format IPv4 dan IPv6. Masukkan mana-mana IP atau julat CIDR untuk mendapatkan format piawai dengan serta-merta."
+    },
+    "ip-info-lookup": {
+      "name": "Carian Maklumat IP",
+      "description": "Cari geolokasi, ISP, ASN, DNS songsang, dan butiran rangkaian untuk alamat IP, domain, atau URL."
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "Julat IP kepada Penukar CIDR",
+      "description": "Tukar alamat mula dan tamat IPv4 atau IPv6 kepada set minimum blok CIDR yang betul-betul meliputi julat."
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "Penukar alamat IPv6 kepada alamat MAC",
+      "description": "Tukar alamat IPv6 kepada alamat MAC. Masukkan mana-mana alamat IPv6 untuk mengekstrak alamat MAC yang berkaitan dengan serta-merta."
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "Penukar alamat MAC kepada alamat IPv6 link-local",
+      "description": "Tukar alamat MAC kepada alamat IPv6 link-local. Masukkan mana-mana alamat MAC dan tambah nama antara muka secara pilihan untuk menjana hasil berskop dengan serta-merta."
+    },
+    "mime-type-lookup": {
+      "name": "Carian Jenis MIME",
+      "description": "Cari dan layari jenis MIME serta sambungan failnya."
+    },
+    "my-ip-address": {
+      "name": "Alamat IP Saya",
+      "description": "Temui alamat IP awam anda dan dapatkan maklumat terperinci tentang sambungan internet anda termasuk geolokasi, butiran ISP, dan maklumat rangkaian."
+    },
+    "port-number-lookup": {
+      "name": "Carian Nombor Port",
+      "description": "Cari dan layari nombor port rangkaian biasa."
+    },
+    "reverse-ip-lookup": {
+      "name": "Carian IP Songsang",
+      "description": "Cari rekod PTR DNS songsang untuk alamat IPv4 atau IPv6 melalui penyelesai DNS-over-HTTPS awam terus dalam pelayar."
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "Cap Jari Kunci Awam SSH",
+      "description": "Jana cap jari SHA-256 dan MD5 untuk kunci awam OpenSSH, baris authorized_keys, dan blok kunci awam SSH2."
+    },
+    "unicode-punycode-converter": {
+      "name": "Penukar Unicode ↔ Punycode",
+      "description": "Tukar domain Unicode (IDN) dan ASCII (Punycode) dua hala."
+    }
+  }
+}

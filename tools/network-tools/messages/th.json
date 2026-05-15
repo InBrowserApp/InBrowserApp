@@ -1,0 +1,98 @@
+{
+  "searchLabel": "ค้นหาเครื่องมือเครือข่าย",
+  "searchPlaceholder": "ค้นหาจาก IP, DNS, CIDR, HTTP, TLS, SSH หรือพอร์ต",
+  "clearSearchLabel": "ล้าง",
+  "allGroupsLabel": "ทั้งหมด",
+  "resultCountTemplate": "เครื่องมือที่แสดง: {count}",
+  "emptyTitle": "ไม่พบเครื่องมือที่ตรงกัน",
+  "emptyDescription": "ลองใช้คำที่กว้างขึ้น เช่น IP, DNS, CIDR, พอร์ต, HTTP, TLS หรือ SSH",
+  "openToolLabel": "เปิด {name}",
+  "groups": {
+    "ip": {
+      "label": "IP และ CIDR",
+      "description": "ตรวจสอบที่อยู่สาธารณะ ปรับช่วงให้เป็นมาตรฐาน และแปลงระหว่าง CIDR, IPv4, IPv6 และรูปแบบที่ได้จาก MAC"
+    },
+    "dns": {
+      "label": "DNS และโดเมน",
+      "description": "สอบถาม DNS record, reverse-resolve ที่อยู่ IP และแปลงชื่อโดเมนแบบ IDN"
+    },
+    "reference": {
+      "label": "ข้อมูลอ้างอิงโปรโตคอล",
+      "description": "ค้นหารหัสสถานะ HTTP, ประเภท MIME, หมายเลขพอร์ต และข้อมูลนาฬิกาเครือข่าย"
+    },
+    "security": {
+      "label": "กุญแจและใบรับรอง",
+      "description": "ตรวจสอบรายละเอียดใบรับรอง TLS และสร้างลายนิ้วมือสำหรับคีย์สาธารณะ SSH"
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "ตัวแยกวิเคราะห์ใบรับรอง X.509 และกุญแจสาธารณะ",
+      "description": "แยกวิเคราะห์ใบรับรอง X.509 และกุญแจสาธารณะในรูปแบบ PEM, DER หรือ base64 DER ตรวจสอบ subject, issuer, วันที่มีผล, fingerprints, extensions และรายละเอียดกุญแจได้ภายในเบราว์เซอร์ของคุณ"
+    },
+    "cidr-parser": {
+      "name": "ตัวแยกวิเคราะห์ CIDR",
+      "description": "แยกวิเคราะห์รูปแบบ CIDR เพื่อตรวจสอบช่วงเครือข่าย IPv4 หรือ IPv6, มาสก์ และขอบเขตจำนวนเต็มโดยตรงในเบราว์เซอร์"
+    },
+    "cidrs-merger-excluder": {
+      "name": "ตัวรวมและตัด CIDR",
+      "description": "รวมบล็อก CIDR ของ IPv4 และ IPv6, ลบเครือข่ายที่ยกเว้น และคัดลอกรายการ CIDR ผลลัพธ์ที่สั้นที่สุด"
+    },
+    "current-network-time": {
+      "name": "เวลาเครือข่ายปัจจุบัน",
+      "description": "รับเวลาเครือข่ายปัจจุบันและเปรียบเทียบกับเวลาระบบในเครื่องของคุณ ดูเวลาเครือข่ายที่แม่นยำและตรวจจับความแตกต่างของเวลา"
+    },
+    "dns-lookup": {
+      "name": "ค้นหา DNS",
+      "description": "ค้นหา DNS record ประเภท A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS และ SVCB ผ่าน DNS over HTTPS resolver"
+    },
+    "http-status-code-lookup": {
+      "name": "ค้นหารหัสสถานะ HTTP",
+      "description": "ค้นหาและเรียกดูรหัสสถานะ HTTP และความหมาย"
+    },
+    "ip-cidr-normalizer": {
+      "name": "เครื่องมือปรับมาตรฐาน IP/CIDR",
+      "description": "ปรับมาตรฐานที่อยู่ IP และรูปแบบ CIDR สำหรับรูปแบบ IPv4 และ IPv6 ป้อน IP หรือช่วง CIDR ใดก็ได้เพื่อรับรูปแบบมาตรฐานทันที"
+    },
+    "ip-info-lookup": {
+      "name": "ค้นหาข้อมูล IP",
+      "description": "ค้นหาตำแหน่งทางภูมิศาสตร์, ISP, ASN, reverse DNS และรายละเอียดเครือข่ายสำหรับที่อยู่ IP, โดเมน หรือ URL"
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "ช่วง IP เป็น CIDR Converter",
+      "description": "แปลงที่อยู่เริ่มต้นและสิ้นสุดของ IPv4 หรือ IPv6 ให้เป็นชุดบล็อก CIDR ขั้นต่ำที่ครอบคลุมช่วงดังกล่าวทุกประการ"
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "เครื่องมือแปลงที่อยู่ IPv6 เป็นที่อยู่ MAC",
+      "description": "แปลงที่อยู่ IPv6 เป็นที่อยู่ MAC ป้อนที่อยู่ IPv6 ใดก็ได้เพื่อสกัดที่อยู่ MAC ที่สอดคล้องกันทันที"
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "เครื่องมือแปลงที่อยู่ MAC เป็นที่อยู่ IPv6 Link-Local",
+      "description": "แปลงที่อยู่ MAC เป็นที่อยู่ IPv6 link-local ป้อนที่อยู่ MAC ใดก็ได้และเพิ่มชื่ออินเทอร์เฟซได้ตามต้องการเพื่อสร้างผลลัพธ์แบบมี scope ทันที"
+    },
+    "mime-type-lookup": {
+      "name": "ค้นหาประเภท MIME",
+      "description": "ค้นหาและเรียกดูประเภท MIME และนามสกุลไฟล์"
+    },
+    "my-ip-address": {
+      "name": "IP Address ของฉัน",
+      "description": "ค้นพบ IP address สาธารณะของคุณและรับข้อมูลรายละเอียดเกี่ยวกับการเชื่อมต่ออินเทอร์เน็ตของคุณ รวมถึงตำแหน่งทางภูมิศาสตร์ รายละเอียด ISP และข้อมูลเครือข่าย"
+    },
+    "port-number-lookup": {
+      "name": "ค้นหาหมายเลขพอร์ต",
+      "description": "ค้นหาและเรียกดูหมายเลขพอร์ตเครือข่ายทั่วไป"
+    },
+    "reverse-ip-lookup": {
+      "name": "ค้นหา Reverse IP",
+      "description": "ค้นหาระเบียน PTR ของ reverse DNS สำหรับที่อยู่ IPv4 หรือ IPv6 ผ่าน DNS-over-HTTPS resolver สาธารณะโดยตรงในเบราว์เซอร์"
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "ลายนิ้วมือคีย์สาธารณะ SSH",
+      "description": "สร้างลายนิ้วมือ SHA-256 และ MD5 สำหรับคีย์สาธารณะ OpenSSH, บรรทัด authorized_keys และบล็อกคีย์สาธารณะ SSH2"
+    },
+    "unicode-punycode-converter": {
+      "name": "ตัวแปลง Unicode ↔ Punycode",
+      "description": "แปลงโดเมน Unicode (IDN) และ ASCII (Punycode) ได้สองทิศทาง"
+    }
+  }
+}

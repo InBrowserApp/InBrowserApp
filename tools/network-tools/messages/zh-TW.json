@@ -1,0 +1,98 @@
+{
+  "searchLabel": "搜尋網路工具",
+  "searchPlaceholder": "依 IP、DNS、CIDR、HTTP、TLS、SSH 或連接埠搜尋",
+  "clearSearchLabel": "清除",
+  "allGroupsLabel": "全部",
+  "resultCountTemplate": "顯示工具：{count}",
+  "emptyTitle": "沒有相符工具",
+  "emptyDescription": "試試更廣泛的詞，例如 IP、DNS、CIDR、連接埠、HTTP、TLS 或 SSH。",
+  "openToolLabel": "開啟 {name}",
+  "groups": {
+    "ip": {
+      "label": "IP 與 CIDR",
+      "description": "檢查公用位址、標準化範圍，並在 CIDR、IPv4、IPv6 與 MAC 衍生格式之間轉換。"
+    },
+    "dns": {
+      "label": "DNS 與網域",
+      "description": "查詢 DNS 記錄、反向解析 IP 位址，並轉換國際化網域名稱。"
+    },
+    "reference": {
+      "label": "通訊協定參考",
+      "description": "查詢 HTTP 狀態碼、MIME 類型、連接埠號碼與網路時鐘資訊。"
+    },
+    "security": {
+      "label": "金鑰與憑證",
+      "description": "檢查 TLS 憑證詳細資料，並為 SSH 公開金鑰產生指紋。"
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "X.509 憑證與公開金鑰剖析器",
+      "description": "剖析 PEM、DER 或 base64 DER 形式的 X.509 憑證與公開金鑰。直接在瀏覽器本機檢視 subject、issuer、有效日期、指紋、extension 與金鑰詳細資料。"
+    },
+    "cidr-parser": {
+      "name": "CIDR 解析器",
+      "description": "直接在瀏覽器中剖析 CIDR 表示法，以檢查 IPv4 或 IPv6 網路範圍、遮罩與整數邊界。"
+    },
+    "cidrs-merger-excluder": {
+      "name": "CIDR 合併與排除工具",
+      "description": "合併 IPv4 與 IPv6 CIDR 區塊、扣除要排除的網路，並複製最精簡的結果 CIDR 清單。"
+    },
+    "current-network-time": {
+      "name": "目前網路時間",
+      "description": "取得目前網路時間，並與你的本機系統時間比較。檢視準確的網路時間並偵測任何時間差異。"
+    },
+    "dns-lookup": {
+      "name": "DNS 查詢",
+      "description": "透過 DNS over HTTPS 解析器查詢 A、AAAA、CNAME、MX、TXT、NS、SOA、CAA、SRV、HTTPS 與 SVCB DNS 記錄。"
+    },
+    "http-status-code-lookup": {
+      "name": "HTTP 狀態碼查詢",
+      "description": "搜尋並瀏覽 HTTP 狀態碼及其含義。"
+    },
+    "ip-cidr-normalizer": {
+      "name": "IP/CIDR 標準化工具",
+      "description": "標準化 IP 位址與 CIDR 表示法，支援 IPv4 和 IPv6 格式。輸入任何 IP 或 CIDR 範圍，立即取得標準化格式。"
+    },
+    "ip-info-lookup": {
+      "name": "IP 資訊查詢",
+      "description": "查詢 IP 位址、網域或 URL 的地理位置、ISP、ASN、反向 DNS 與網路詳細資訊。"
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "IP 範圍轉 CIDR 轉換器",
+      "description": "將 IPv4 或 IPv6 起始與結束位址轉換成可精確涵蓋該範圍的最小 CIDR 區塊集合。"
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "IPv6 位址轉 MAC 位址轉換器",
+      "description": "將 IPv6 位址轉換為 MAC 位址。輸入任何 IPv6 位址，立即提取對應的 MAC 位址。"
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "MAC 位址轉 IPv6 鏈路本地位址轉換器",
+      "description": "將 MAC 位址轉換為 IPv6 鏈路本地位址。輸入任何 MAC 位址，並可選擇加入介面名稱，立即產生帶有 scope 的結果。"
+    },
+    "mime-type-lookup": {
+      "name": "MIME 類型查詢",
+      "description": "搜尋並瀏覽 MIME 類型及其檔案副檔名。"
+    },
+    "my-ip-address": {
+      "name": "我的 IP 位址",
+      "description": "找出你的公用 IP 位址，並取得網際網路連線的詳細資訊，包括地理位置、ISP 詳細資料與網路資訊。"
+    },
+    "port-number-lookup": {
+      "name": "連接埠號碼查詢",
+      "description": "搜尋並瀏覽常見網路連接埠號碼。"
+    },
+    "reverse-ip-lookup": {
+      "name": "反向 IP 查詢",
+      "description": "直接在瀏覽器中透過公開 DNS-over-HTTPS 解析器查詢 IPv4 或 IPv6 位址的反向 DNS PTR 記錄。"
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "SSH 公開金鑰指紋",
+      "description": "為 OpenSSH 公開金鑰、authorized_keys 行與 SSH2 公開金鑰區塊產生 SHA-256 和 MD5 指紋。"
+    },
+    "unicode-punycode-converter": {
+      "name": "Unicode ↔ Punycode 轉換器",
+      "description": "雙向轉換 Unicode（IDN）與 ASCII（Punycode）網域。"
+    }
+  }
+}

@@ -9846,6 +9846,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "network-tools",
+    language: "ar",
+  },
+  {
+    slug: "network-tools",
+    language: "de",
+  },
+  {
+    slug: "network-tools",
+    language: "en",
+  },
+  {
+    slug: "network-tools",
+    language: "es",
+  },
+  {
+    slug: "network-tools",
+    language: "fr",
+  },
+  {
+    slug: "network-tools",
+    language: "he",
+  },
+  {
+    slug: "network-tools",
+    language: "hi",
+  },
+  {
+    slug: "network-tools",
+    language: "id",
+  },
+  {
+    slug: "network-tools",
+    language: "it",
+  },
+  {
+    slug: "network-tools",
+    language: "ja",
+  },
+  {
+    slug: "network-tools",
+    language: "ko",
+  },
+  {
+    slug: "network-tools",
+    language: "ms",
+  },
+  {
+    slug: "network-tools",
+    language: "nl",
+  },
+  {
+    slug: "network-tools",
+    language: "no",
+  },
+  {
+    slug: "network-tools",
+    language: "pl",
+  },
+  {
+    slug: "network-tools",
+    language: "pt",
+  },
+  {
+    slug: "network-tools",
+    language: "ru",
+  },
+  {
+    slug: "network-tools",
+    language: "sv",
+  },
+  {
+    slug: "network-tools",
+    language: "th",
+  },
+  {
+    slug: "network-tools",
+    language: "tr",
+  },
+  {
+    slug: "network-tools",
+    language: "vi",
+  },
+  {
+    slug: "network-tools",
+    language: "zh-CN",
+  },
+  {
+    slug: "network-tools",
+    language: "zh-TW",
+  },
+  {
     slug: "number-base-converter",
     language: "ar",
   },

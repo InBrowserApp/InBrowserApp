@@ -1,0 +1,98 @@
+{
+  "searchLabel": "नेटवर्क टूल्स खोजें",
+  "searchPlaceholder": "IP, DNS, CIDR, HTTP, TLS, SSH, या पोर्ट से खोजें",
+  "clearSearchLabel": "साफ़ करें",
+  "allGroupsLabel": "सभी",
+  "resultCountTemplate": "दिखाए गए टूल्स: {count}",
+  "emptyTitle": "कोई मिलते-जुलते टूल्स नहीं",
+  "emptyDescription": "IP, DNS, CIDR, पोर्ट, HTTP, TLS, या SSH जैसे व्यापक शब्द आज़माएँ।",
+  "openToolLabel": "{name} खोलें",
+  "groups": {
+    "ip": {
+      "label": "IP और CIDR",
+      "description": "सार्वजनिक पतों की जाँच करें, रेंज सामान्यीकृत करें, और CIDR, IPv4, IPv6, और MAC-व्युत्पन्न फ़ॉर्मेट के बीच कन्वर्ट करें।"
+    },
+    "dns": {
+      "label": "DNS और डोमेन",
+      "description": "DNS रिकॉर्ड क्वेरी करें, IP पतों को reverse-resolve करें, और अंतरराष्ट्रीयकृत डोमेन नामों को कन्वर्ट करें।"
+    },
+    "reference": {
+      "label": "प्रोटोकॉल संदर्भ",
+      "description": "HTTP status codes, MIME types, पोर्ट नंबर, और नेटवर्क क्लॉक जानकारी देखें।"
+    },
+    "security": {
+      "label": "कुंजियाँ और प्रमाणपत्र",
+      "description": "TLS प्रमाणपत्र विवरणों की जाँच करें और SSH सार्वजनिक कुंजियों के लिए fingerprints जनरेट करें।"
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "X.509 प्रमाणपत्र और सार्वजनिक कुंजी पार्सर",
+      "description": "PEM, DER, या base64 DER रूप में X.509 प्रमाणपत्रों और सार्वजनिक कुंजियों को पार्स करें। विषय, जारीकर्ता, वैधता तिथियाँ, fingerprints, एक्सटेंशन, और कुंजी विवरण अपने ब्राउज़र में स्थानीय रूप से देखें।"
+    },
+    "cidr-parser": {
+      "name": "CIDR पार्सर",
+      "description": "IPv4 या IPv6 नेटवर्क रेंज, मास्क, और integer boundaries की जाँच करने के लिए CIDR notation को सीधे ब्राउज़र में पार्स करें।"
+    },
+    "cidrs-merger-excluder": {
+      "name": "CIDRs Merger और Excluder",
+      "description": "IPv4 और IPv6 CIDR ब्लॉक मर्ज करें, बाहर किए गए नेटवर्क घटाएँ, और न्यूनतम परिणामी CIDR सूची कॉपी करें।"
+    },
+    "current-network-time": {
+      "name": "वर्तमान नेटवर्क समय",
+      "description": "वर्तमान नेटवर्क समय पाएँ और उसकी तुलना अपने स्थानीय सिस्टम समय से करें। सटीक नेटवर्क समय देखें और समय के किसी भी अंतर का पता लगाएँ।"
+    },
+    "dns-lookup": {
+      "name": "DNS लुकअप",
+      "description": "DNS over HTTPS resolvers के ज़रिए A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, और SVCB DNS रिकॉर्ड क्वेरी करें।"
+    },
+    "http-status-code-lookup": {
+      "name": "HTTP Status Code Lookup",
+      "description": "HTTP status codes और उनके अर्थ खोजें और ब्राउज़ करें।"
+    },
+    "ip-cidr-normalizer": {
+      "name": "IP/CIDR नॉर्मलाइज़र",
+      "description": "IPv4 और IPv6 दोनों फ़ॉर्मेट के लिए IP पतों और CIDR notation को सामान्यीकृत करें। मानकीकृत फ़ॉर्मेट तुरंत पाने के लिए कोई भी IP या CIDR रेंज दर्ज करें।"
+    },
+    "ip-info-lookup": {
+      "name": "IP जानकारी लुकअप",
+      "description": "किसी IP पते, डोमेन, या URL के लिए geolocation, ISP, ASN, reverse DNS, और नेटवर्क विवरण देखें।"
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "IP रेंज से CIDR कन्वर्टर",
+      "description": "IPv4 या IPv6 आरंभ और अंत पतों को CIDR ब्लॉकों के उस न्यूनतम सेट में कन्वर्ट करें जो रेंज को ठीक-ठीक कवर करता है।"
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "IPv6 Address से MAC Address कन्वर्टर",
+      "description": "IPv6 पतों को MAC पतों में कन्वर्ट करें। संबंधित MAC पता तुरंत निकालने के लिए कोई भी IPv6 पता दर्ज करें।"
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "MAC Address से IPv6 Link-Local Address कन्वर्टर",
+      "description": "MAC पतों को IPv6 link-local पतों में कन्वर्ट करें। scoped परिणाम तुरंत जनरेट करने के लिए कोई भी MAC पता दर्ज करें और वैकल्पिक रूप से interface name जोड़ें।"
+    },
+    "mime-type-lookup": {
+      "name": "MIME Type Lookup",
+      "description": "MIME types और उनके फ़ाइल एक्सटेंशन खोजें और ब्राउज़ करें।"
+    },
+    "my-ip-address": {
+      "name": "मेरा IP पता",
+      "description": "अपना सार्वजनिक IP पता जानें और geolocation, ISP विवरण, और नेटवर्क जानकारी सहित अपने इंटरनेट कनेक्शन की विस्तृत जानकारी पाएँ।"
+    },
+    "port-number-lookup": {
+      "name": "पोर्ट नंबर लुकअप",
+      "description": "सामान्य नेटवर्क पोर्ट नंबर खोजें और ब्राउज़ करें।"
+    },
+    "reverse-ip-lookup": {
+      "name": "Reverse IP Lookup",
+      "description": "सार्वजनिक DNS-over-HTTPS resolvers के ज़रिए IPv4 या IPv6 पतों के लिए reverse DNS PTR रिकॉर्ड सीधे ब्राउज़र में देखें।"
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "SSH सार्वजनिक कुंजी Fingerprint",
+      "description": "OpenSSH सार्वजनिक कुंजियों, authorized_keys लाइनों, और SSH2 सार्वजनिक कुंजी ब्लॉकों के लिए SHA-256 और MD5 fingerprints जनरेट करें।"
+    },
+    "unicode-punycode-converter": {
+      "name": "Unicode ↔ Punycode Converter",
+      "description": "Unicode (IDN) और ASCII (Punycode) डोमेन को दोनों दिशाओं में कन्वर्ट करें।"
+    }
+  }
+}

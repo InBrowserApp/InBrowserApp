@@ -13378,6 +13378,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "network-tools",
+    category: "network",
+    icon: "network",
+    tags: [
+      "network",
+      "ip",
+      "dns",
+      "cidr",
+      "http",
+      "port",
+      "tls",
+      "ssh",
+      "tools",
+    ],
+    locales: {
+      ar: {
+        name: "أدوات الشبكة",
+        description:
+          "تصفّح أدوات IP وCIDR وDNS وHTTP والمنافذ وشهادات TLS وSSH التي تعمل داخل المتصفح. اعثر بسرعة على أداة الشبكة المناسبة دون رفع البيانات إلى خادم.",
+      },
+      de: {
+        name: "Netzwerktools",
+        description:
+          "Durchsuche browserbasierte Dienstprogramme für IP, CIDR, DNS, HTTP, Ports, Zertifikate und SSH. Finde schnell das passende Netzwerktool, ohne Daten auf einen Server hochzuladen.",
+      },
+      en: {
+        name: "Network Tools",
+        description:
+          "Browse browser-based IP, CIDR, DNS, HTTP, port, certificate, and SSH utilities. Find the right network tool quickly without uploading data to a server.",
+      },
+      es: {
+        name: "Herramientas de red",
+        description:
+          "Explora utilidades de IP, CIDR, DNS, HTTP, puertos, certificados y SSH basadas en navegador. Encuentra rápidamente la herramienta de red adecuada sin subir datos a un servidor.",
+      },
+      fr: {
+        name: "Outils réseau",
+        description:
+          "Parcourez des utilitaires IP, CIDR, DNS, HTTP, de ports, de certificats et SSH fonctionnant dans le navigateur. Trouvez rapidement le bon outil réseau sans téléverser de données vers un serveur.",
+      },
+      he: {
+        name: "כלי רשת",
+        description:
+          "עיינו בכלי IP, CIDR, DNS, HTTP, פורטים, אישורים ו-SSH שפועלים בדפדפן. מצאו במהירות את כלי הרשת המתאים בלי להעלות נתונים לשרת.",
+      },
+      hi: {
+        name: "नेटवर्क टूल्स",
+        description:
+          "ब्राउज़र-आधारित IP, CIDR, DNS, HTTP, पोर्ट, प्रमाणपत्र, और SSH यूटिलिटी ब्राउज़ करें। डेटा को सर्वर पर अपलोड किए बिना सही नेटवर्क टूल जल्दी खोजें।",
+      },
+      id: {
+        name: "Alat Jaringan",
+        description:
+          "Jelajahi utilitas IP, CIDR, DNS, HTTP, port, sertifikat, dan SSH berbasis browser. Temukan alat jaringan yang tepat dengan cepat tanpa mengunggah data ke server.",
+      },
+      it: {
+        name: "Strumenti di rete",
+        description:
+          "Sfoglia utilità basate sul browser per IP, CIDR, DNS, HTTP, porte, certificati e SSH. Trova rapidamente lo strumento di rete giusto senza caricare dati su un server.",
+      },
+      ja: {
+        name: "ネットワークツール",
+        description:
+          "ブラウザー上で使える IP、CIDR、DNS、HTTP、ポート、証明書、SSH ユーティリティを参照できます。データをサーバーにアップロードせずに、必要なネットワークツールをすばやく見つけられます。",
+      },
+      ko: {
+        name: "네트워크 도구",
+        description:
+          "브라우저 기반 IP, CIDR, DNS, HTTP, 포트, 인증서, SSH 유틸리티를 탐색하세요. 데이터를 서버에 업로드하지 않고도 적합한 네트워크 도구를 빠르게 찾을 수 있습니다.",
+      },
+      ms: {
+        name: "Alat Rangkaian",
+        description:
+          "Layari utiliti IP, CIDR, DNS, HTTP, port, sijil dan SSH berasaskan pelayar. Cari alat rangkaian yang tepat dengan cepat tanpa memuat naik data ke pelayan.",
+      },
+      nl: {
+        name: "Netwerktools",
+        description:
+          "Blader door browsergebaseerde IP-, CIDR-, DNS-, HTTP-, poort-, certificaat- en SSH-tools. Vind snel de juiste netwerktool zonder gegevens naar een server te uploaden.",
+      },
+      no: {
+        name: "Nettverksverktøy",
+        description:
+          "Bla gjennom nettleserbaserte verktøy for IP, CIDR, DNS, HTTP, porter, sertifikater og SSH. Finn riktig nettverksverktøy raskt uten å laste opp data til en server.",
+      },
+      pl: {
+        name: "Narzędzia sieciowe",
+        description:
+          "Przeglądaj działające w przeglądarce narzędzia do IP, CIDR, DNS, HTTP, portów, certyfikatów i SSH. Szybko znajdź właściwe narzędzie sieciowe bez przesyłania danych na serwer.",
+      },
+      pt: {
+        name: "Ferramentas de rede",
+        description:
+          "Explore utilitários baseados no navegador para IP, CIDR, DNS, HTTP, portas, certificados e SSH. Encontre rapidamente a ferramenta de rede certa sem enviar dados para um servidor.",
+      },
+      ru: {
+        name: "Сетевые инструменты",
+        description:
+          "Просматривайте браузерные утилиты для IP, CIDR, DNS, HTTP, портов, сертификатов и SSH. Быстро находите нужный сетевой инструмент без загрузки данных на сервер.",
+      },
+      sv: {
+        name: "Nätverksverktyg",
+        description:
+          "Bläddra bland webbläsarbaserade verktyg för IP, CIDR, DNS, HTTP, portar, certifikat och SSH. Hitta rätt nätverksverktyg snabbt utan att ladda upp data till en server.",
+      },
+      th: {
+        name: "เครื่องมือเครือข่าย",
+        description:
+          "เรียกดูยูทิลิตี้ IP, CIDR, DNS, HTTP, พอร์ต, ใบรับรอง และ SSH ที่ทำงานในเบราว์เซอร์ ค้นหาเครื่องมือเครือข่ายที่เหมาะสมได้อย่างรวดเร็วโดยไม่ต้องอัปโหลดข้อมูลไปยังเซิร์ฟเวอร์",
+      },
+      tr: {
+        name: "Ağ Araçları",
+        description:
+          "Tarayıcı tabanlı IP, CIDR, DNS, HTTP, port, sertifika ve SSH yardımcı araçlarına göz atın. Verileri bir sunucuya yüklemeden doğru ağ aracını hızla bulun.",
+      },
+      vi: {
+        name: "Công cụ mạng",
+        description:
+          "Duyệt các tiện ích IP, CIDR, DNS, HTTP, cổng, chứng chỉ và SSH chạy trong trình duyệt. Tìm nhanh công cụ mạng phù hợp mà không cần tải dữ liệu lên máy chủ.",
+      },
+      "zh-CN": {
+        name: "网络工具",
+        description:
+          "浏览可在浏览器中使用的 IP、CIDR、DNS、HTTP、端口、证书和 SSH 实用工具。无需将数据上传到服务器，即可快速找到合适的网络工具。",
+      },
+      "zh-TW": {
+        name: "網路工具",
+        description:
+          "瀏覽以瀏覽器為基礎的 IP、CIDR、DNS、HTTP、連接埠、憑證與 SSH 工具。不用將資料上傳到伺服器，就能快速找到合適的網路工具。",
+      },
+    },
+  },
+  {
     slug: "number-base-converter",
     category: "web",
     icon: "binary",
@@ -35192,6 +35325,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "NanoID 產生器",
         description:
           "在瀏覽器內產生 URL 安全的 NanoID，支援自訂長度與字元集預設。",
+      },
+    },
+  },
+  "network-tools": {
+    slug: "network-tools",
+    category: "network",
+    icon: "network",
+    tags: [
+      "network",
+      "ip",
+      "dns",
+      "cidr",
+      "http",
+      "port",
+      "tls",
+      "ssh",
+      "tools",
+    ],
+    locales: {
+      ar: {
+        name: "أدوات الشبكة",
+        description:
+          "تصفّح أدوات IP وCIDR وDNS وHTTP والمنافذ وشهادات TLS وSSH التي تعمل داخل المتصفح. اعثر بسرعة على أداة الشبكة المناسبة دون رفع البيانات إلى خادم.",
+      },
+      de: {
+        name: "Netzwerktools",
+        description:
+          "Durchsuche browserbasierte Dienstprogramme für IP, CIDR, DNS, HTTP, Ports, Zertifikate und SSH. Finde schnell das passende Netzwerktool, ohne Daten auf einen Server hochzuladen.",
+      },
+      en: {
+        name: "Network Tools",
+        description:
+          "Browse browser-based IP, CIDR, DNS, HTTP, port, certificate, and SSH utilities. Find the right network tool quickly without uploading data to a server.",
+      },
+      es: {
+        name: "Herramientas de red",
+        description:
+          "Explora utilidades de IP, CIDR, DNS, HTTP, puertos, certificados y SSH basadas en navegador. Encuentra rápidamente la herramienta de red adecuada sin subir datos a un servidor.",
+      },
+      fr: {
+        name: "Outils réseau",
+        description:
+          "Parcourez des utilitaires IP, CIDR, DNS, HTTP, de ports, de certificats et SSH fonctionnant dans le navigateur. Trouvez rapidement le bon outil réseau sans téléverser de données vers un serveur.",
+      },
+      he: {
+        name: "כלי רשת",
+        description:
+          "עיינו בכלי IP, CIDR, DNS, HTTP, פורטים, אישורים ו-SSH שפועלים בדפדפן. מצאו במהירות את כלי הרשת המתאים בלי להעלות נתונים לשרת.",
+      },
+      hi: {
+        name: "नेटवर्क टूल्स",
+        description:
+          "ब्राउज़र-आधारित IP, CIDR, DNS, HTTP, पोर्ट, प्रमाणपत्र, और SSH यूटिलिटी ब्राउज़ करें। डेटा को सर्वर पर अपलोड किए बिना सही नेटवर्क टूल जल्दी खोजें।",
+      },
+      id: {
+        name: "Alat Jaringan",
+        description:
+          "Jelajahi utilitas IP, CIDR, DNS, HTTP, port, sertifikat, dan SSH berbasis browser. Temukan alat jaringan yang tepat dengan cepat tanpa mengunggah data ke server.",
+      },
+      it: {
+        name: "Strumenti di rete",
+        description:
+          "Sfoglia utilità basate sul browser per IP, CIDR, DNS, HTTP, porte, certificati e SSH. Trova rapidamente lo strumento di rete giusto senza caricare dati su un server.",
+      },
+      ja: {
+        name: "ネットワークツール",
+        description:
+          "ブラウザー上で使える IP、CIDR、DNS、HTTP、ポート、証明書、SSH ユーティリティを参照できます。データをサーバーにアップロードせずに、必要なネットワークツールをすばやく見つけられます。",
+      },
+      ko: {
+        name: "네트워크 도구",
+        description:
+          "브라우저 기반 IP, CIDR, DNS, HTTP, 포트, 인증서, SSH 유틸리티를 탐색하세요. 데이터를 서버에 업로드하지 않고도 적합한 네트워크 도구를 빠르게 찾을 수 있습니다.",
+      },
+      ms: {
+        name: "Alat Rangkaian",
+        description:
+          "Layari utiliti IP, CIDR, DNS, HTTP, port, sijil dan SSH berasaskan pelayar. Cari alat rangkaian yang tepat dengan cepat tanpa memuat naik data ke pelayan.",
+      },
+      nl: {
+        name: "Netwerktools",
+        description:
+          "Blader door browsergebaseerde IP-, CIDR-, DNS-, HTTP-, poort-, certificaat- en SSH-tools. Vind snel de juiste netwerktool zonder gegevens naar een server te uploaden.",
+      },
+      no: {
+        name: "Nettverksverktøy",
+        description:
+          "Bla gjennom nettleserbaserte verktøy for IP, CIDR, DNS, HTTP, porter, sertifikater og SSH. Finn riktig nettverksverktøy raskt uten å laste opp data til en server.",
+      },
+      pl: {
+        name: "Narzędzia sieciowe",
+        description:
+          "Przeglądaj działające w przeglądarce narzędzia do IP, CIDR, DNS, HTTP, portów, certyfikatów i SSH. Szybko znajdź właściwe narzędzie sieciowe bez przesyłania danych na serwer.",
+      },
+      pt: {
+        name: "Ferramentas de rede",
+        description:
+          "Explore utilitários baseados no navegador para IP, CIDR, DNS, HTTP, portas, certificados e SSH. Encontre rapidamente a ferramenta de rede certa sem enviar dados para um servidor.",
+      },
+      ru: {
+        name: "Сетевые инструменты",
+        description:
+          "Просматривайте браузерные утилиты для IP, CIDR, DNS, HTTP, портов, сертификатов и SSH. Быстро находите нужный сетевой инструмент без загрузки данных на сервер.",
+      },
+      sv: {
+        name: "Nätverksverktyg",
+        description:
+          "Bläddra bland webbläsarbaserade verktyg för IP, CIDR, DNS, HTTP, portar, certifikat och SSH. Hitta rätt nätverksverktyg snabbt utan att ladda upp data till en server.",
+      },
+      th: {
+        name: "เครื่องมือเครือข่าย",
+        description:
+          "เรียกดูยูทิลิตี้ IP, CIDR, DNS, HTTP, พอร์ต, ใบรับรอง และ SSH ที่ทำงานในเบราว์เซอร์ ค้นหาเครื่องมือเครือข่ายที่เหมาะสมได้อย่างรวดเร็วโดยไม่ต้องอัปโหลดข้อมูลไปยังเซิร์ฟเวอร์",
+      },
+      tr: {
+        name: "Ağ Araçları",
+        description:
+          "Tarayıcı tabanlı IP, CIDR, DNS, HTTP, port, sertifika ve SSH yardımcı araçlarına göz atın. Verileri bir sunucuya yüklemeden doğru ağ aracını hızla bulun.",
+      },
+      vi: {
+        name: "Công cụ mạng",
+        description:
+          "Duyệt các tiện ích IP, CIDR, DNS, HTTP, cổng, chứng chỉ và SSH chạy trong trình duyệt. Tìm nhanh công cụ mạng phù hợp mà không cần tải dữ liệu lên máy chủ.",
+      },
+      "zh-CN": {
+        name: "网络工具",
+        description:
+          "浏览可在浏览器中使用的 IP、CIDR、DNS、HTTP、端口、证书和 SSH 实用工具。无需将数据上传到服务器，即可快速找到合适的网络工具。",
+      },
+      "zh-TW": {
+        name: "網路工具",
+        description:
+          "瀏覽以瀏覽器為基礎的 IP、CIDR、DNS、HTTP、連接埠、憑證與 SSH 工具。不用將資料上傳到伺服器，就能快速找到合適的網路工具。",
       },
     },
   },

@@ -1,0 +1,98 @@
+{
+  "searchLabel": "Sök nätverksverktyg",
+  "searchPlaceholder": "Sök efter IP, DNS, CIDR, HTTP, TLS, SSH eller port",
+  "clearSearchLabel": "Rensa",
+  "allGroupsLabel": "Alla",
+  "resultCountTemplate": "Visade verktyg: {count}",
+  "emptyTitle": "Inga matchande verktyg",
+  "emptyDescription": "Prova en bredare term som IP, DNS, CIDR, port, HTTP, TLS eller SSH.",
+  "openToolLabel": "Öppna {name}",
+  "groups": {
+    "ip": {
+      "label": "IP och CIDR",
+      "description": "Granska publika adresser, normalisera intervall och konvertera mellan CIDR, IPv4, IPv6 och format härledda från MAC."
+    },
+    "dns": {
+      "label": "DNS och domäner",
+      "description": "Fråga DNS-poster, gör omvänd uppslagning av IP-adresser och konvertera internationaliserade domännamn."
+    },
+    "reference": {
+      "label": "Protokollreferenser",
+      "description": "Slå upp HTTP-statuskoder, MIME-typer, portnummer och information om nätverkstid."
+    },
+    "security": {
+      "label": "Nycklar och certifikat",
+      "description": "Granska detaljer i TLS-certifikat och generera fingeravtryck för publika SSH-nycklar."
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "Tolk för X.509-certifikat och publika nycklar",
+      "description": "Tolka X.509-certifikat och publika nycklar i PEM, DER eller base64 DER-format. Granska subjekt, utfärdare, giltighetsdatum, fingeravtryck, tillägg och nyckeldetaljer lokalt i webbläsaren."
+    },
+    "cidr-parser": {
+      "name": "CIDR-tolk",
+      "description": "Tolka CIDR-notation för att granska IPv4- eller IPv6-nätverksintervall, masker och heltalsgränser direkt i webbläsaren."
+    },
+    "cidrs-merger-excluder": {
+      "name": "Sammanfogning och exkludering av CIDR",
+      "description": "Sammanfoga IPv4- och IPv6-CIDR-block, dra bort exkluderade nätverk och kopiera den minimala resulterande CIDR-listan."
+    },
+    "current-network-time": {
+      "name": "Aktuell nätverkstid",
+      "description": "Hämta aktuell nätverkstid och jämför den med din lokala systemtid. Visa korrekt nätverkstid och upptäck eventuella tidsskillnader."
+    },
+    "dns-lookup": {
+      "name": "DNS-uppslagning",
+      "description": "Fråga DNS-poster för A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS och SVCB via DNS-over-HTTPS-resolvers."
+    },
+    "http-status-code-lookup": {
+      "name": "Uppslagning av HTTP-statuskoder",
+      "description": "Sök och bläddra bland HTTP-statuskoder och deras betydelser."
+    },
+    "ip-cidr-normalizer": {
+      "name": "IP/CIDR-normaliserare",
+      "description": "Normalisera IP-adresser och CIDR-notation för både IPv4- och IPv6-format. Ange valfri IP eller valfritt CIDR-intervall för att få det standardiserade formatet direkt."
+    },
+    "ip-info-lookup": {
+      "name": "IP-info-uppslagning",
+      "description": "Slå upp geolokalisering, ISP, ASN, omvänd DNS och nätverksdetaljer för en IP-adress, domän eller URL."
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "Konverterare från IP-intervall till CIDR",
+      "description": "Konvertera start- och slutadresser för IPv4 eller IPv6 till den minsta uppsättningen CIDR-block som exakt täcker intervallet."
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "Konverterare från IPv6-adress till MAC-adress",
+      "description": "Konvertera IPv6-adresser till MAC-adresser. Ange valfri IPv6-adress för att extrahera motsvarande MAC-adress direkt."
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "Konverterare från MAC-adress till IPv6 link-local-adress",
+      "description": "Konvertera MAC-adresser till IPv6 link-local-adresser. Ange valfri MAC-adress och lägg eventuellt till ett gränssnittsnamn för att generera det scopade resultatet direkt."
+    },
+    "mime-type-lookup": {
+      "name": "Uppslagning av MIME-typer",
+      "description": "Sök och bläddra bland MIME-typer och deras filändelser."
+    },
+    "my-ip-address": {
+      "name": "Min IP-adress",
+      "description": "Upptäck din publika IP-adress och få detaljerad information om din internetanslutning, inklusive geolokalisering, ISP-detaljer och nätverksinformation."
+    },
+    "port-number-lookup": {
+      "name": "Uppslagning av portnummer",
+      "description": "Sök och bläddra bland vanliga nätverksportnummer."
+    },
+    "reverse-ip-lookup": {
+      "name": "Omvänd IP-uppslagning",
+      "description": "Slå upp omvända DNS PTR-poster för IPv4- eller IPv6-adresser via publika DNS-over-HTTPS-resolvers direkt i webbläsaren."
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "Fingeravtryck för publik SSH-nyckel",
+      "description": "Generera SHA-256- och MD5-fingeravtryck för publika OpenSSH-nycklar, authorized_keys-rader och SSH2-block med publika nycklar."
+    },
+    "unicode-punycode-converter": {
+      "name": "Unicode ↔ Punycode-konverterare",
+      "description": "Konvertera Unicode-domäner (IDN) och ASCII-domäner (Punycode) åt båda håll."
+    }
+  }
+}

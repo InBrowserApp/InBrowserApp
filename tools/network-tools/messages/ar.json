@@ -1,0 +1,98 @@
+{
+  "searchLabel": "البحث في أدوات الشبكة",
+  "searchPlaceholder": "ابحث حسب IP أو DNS أو CIDR أو HTTP أو TLS أو SSH أو المنفذ",
+  "clearSearchLabel": "مسح",
+  "allGroupsLabel": "الكل",
+  "resultCountTemplate": "الأدوات المعروضة: {count}",
+  "emptyTitle": "لا توجد أدوات مطابقة",
+  "emptyDescription": "جرّب مصطلحًا أوسع مثل IP أو DNS أو CIDR أو المنفذ أو HTTP أو TLS أو SSH.",
+  "openToolLabel": "فتح {name}",
+  "groups": {
+    "ip": {
+      "label": "IP وCIDR",
+      "description": "افحص العناوين العامة، ووحّد النطاقات، وحوّل بين CIDR وIPv4 وIPv6 والتنسيقات المشتقة من MAC."
+    },
+    "dns": {
+      "label": "DNS والنطاقات",
+      "description": "استعلم عن سجلات DNS، ونفّذ الحل العكسي لعناوين IP، وحوّل أسماء النطاقات الدولية."
+    },
+    "reference": {
+      "label": "مراجع البروتوكولات",
+      "description": "ابحث عن رموز حالة HTTP وأنواع MIME وأرقام المنافذ ومعلومات ساعة الشبكة."
+    },
+    "security": {
+      "label": "المفاتيح والشهادات",
+      "description": "افحص تفاصيل شهادات TLS وأنشئ بصمات لمفاتيح SSH العامة."
+    }
+  },
+  "tools": {
+    "certificate-public-key-parser": {
+      "name": "محلل شهادات X.509 والمفاتيح العامة",
+      "description": "حلّل شهادات X.509 والمفاتيح العامة بصيغ PEM أو DER أو base64 DER. راجع الموضوعات والجهات المصدرة وتواريخ الصلاحية والبصمات والامتدادات وتفاصيل المفاتيح محليًا في متصفحك."
+    },
+    "cidr-parser": {
+      "name": "محلل CIDR",
+      "description": "حلّل تدوين CIDR لفحص نطاقات شبكات IPv4 أو IPv6 والأقنعة وحدود الأعداد الصحيحة مباشرة في المتصفح."
+    },
+    "cidrs-merger-excluder": {
+      "name": "أداة دمج واستبعاد CIDR",
+      "description": "ادمج كتل CIDR في IPv4 وIPv6، واطرح الشبكات المستبعدة، وانسخ قائمة CIDR الناتجة بأقل عدد ممكن."
+    },
+    "current-network-time": {
+      "name": "الوقت الشبكي الحالي",
+      "description": "احصل على الوقت الشبكي الحالي وقارنه مع وقت النظام المحلي. اعرض الوقت الشبكي الدقيق واكتشف أي اختلافات زمنية."
+    },
+    "dns-lookup": {
+      "name": "استعلام DNS",
+      "description": "استعلم عن سجلات DNS من الأنواع A وAAAA وCNAME وMX وTXT وNS وSOA وCAA وSRV وHTTPS وSVCB عبر محللات DNS over HTTPS."
+    },
+    "http-status-code-lookup": {
+      "name": "البحث عن رموز حالة HTTP",
+      "description": "ابحث وتصفح رموز حالة HTTP ومعانيها."
+    },
+    "ip-cidr-normalizer": {
+      "name": "معايير IP/CIDR",
+      "description": "وحّد عناوين IP وتدوين CIDR لتنسيقات IPv4 وIPv6. أدخل أي عنوان IP أو نطاق CIDR للحصول على التنسيق الموحّد فورًا."
+    },
+    "ip-info-lookup": {
+      "name": "البحث عن معلومات IP",
+      "description": "ابحث عن الموقع الجغرافي، ومزود خدمة الإنترنت، وASN، وDNS العكسي، وتفاصيل الشبكة لعنوان IP أو نطاق أو URL."
+    },
+    "ip-range-to-cidr-converter": {
+      "name": "نطاق IP لتحويل CIDR",
+      "description": "حوّل عناوين البداية والنهاية IPv4 أو IPv6 إلى الحد الأدنى من كتل CIDR التي تغطي النطاق بدقة."
+    },
+    "ipv6-address-to-mac-address-converter": {
+      "name": "محول عنوان IPv6 إلى عنوان MAC",
+      "description": "حوّل عناوين IPv6 إلى عناوين MAC. أدخل أي عنوان IPv6 لاستخراج عنوان MAC المقابل فورًا."
+    },
+    "mac-address-to-ipv6-link-local-address-converter": {
+      "name": "محول عنوان MAC إلى عنوان IPv6 المحلي للرابط",
+      "description": "حوّل عناوين MAC إلى عناوين IPv6 link-local. أدخل أي عنوان MAC وأضف اسم واجهة اختياريًا لإنشاء النتيجة محددة النطاق فورًا."
+    },
+    "mime-type-lookup": {
+      "name": "البحث عن أنواع MIME",
+      "description": "ابحث وتصفح أنواع MIME وامتدادات الملفات الخاصة بها."
+    },
+    "my-ip-address": {
+      "name": "عنوان IP الخاص بي",
+      "description": "اكتشف عنوان IP العام الخاص بك واحصل على معلومات مفصلة حول اتصالك بالإنترنت، بما في ذلك الموقع الجغرافي وتفاصيل مزود خدمة الإنترنت ومعلومات الشبكة."
+    },
+    "port-number-lookup": {
+      "name": "البحث عن أرقام المنافذ",
+      "description": "ابحث وتصفح أرقام منافذ الشبكة الشائعة."
+    },
+    "reverse-ip-lookup": {
+      "name": "البحث العكسي عن IP",
+      "description": "ابحث عن سجلات PTR لنظام DNS العكسي لعناوين IPv4 أو IPv6 عبر محللات DNS-over-HTTPS العامة مباشرة داخل المتصفح."
+    },
+    "ssh-public-key-fingerprint": {
+      "name": "بصمة مفتاح SSH العام",
+      "description": "أنشئ بصمات SHA-256 وMD5 لمفاتيح OpenSSH العامة، وأسطر authorized_keys، وكتل مفاتيح SSH2 العامة."
+    },
+    "unicode-punycode-converter": {
+      "name": "محول Unicode ↔ Punycode",
+      "description": "حوّل نطاقات Unicode (IDN) وASCII (Punycode) في كلا الاتجاهين."
+    }
+  }
+}
