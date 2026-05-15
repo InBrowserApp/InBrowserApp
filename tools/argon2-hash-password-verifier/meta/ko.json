@@ -1,0 +1,4 @@
+{
+  "name": "Argon2 비밀번호 hash 검증기",
+  "description": "비밀번호가 인코딩된 Argon2 hash 문자열과 일치하는지 확인하세요. 브라우저에서 로컬로 실행되며 선택적 pepper/secret 검증을 지원합니다."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Pengesah Hash Kata Laluan Argon2",
+  "description": "Sahkan sama ada kata laluan sepadan dengan rentetan hash Argon2 berkod. Berjalan secara setempat dalam pelayar anda dan menyokong pengesahan pepper/secret pilihan."
+}

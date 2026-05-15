@@ -1,0 +1,4 @@
+{
+  "name": "Argon2-wachtwoordhashverificatie",
+  "description": "Controleer of een wachtwoord overeenkomt met een gecodeerde Argon2-hashtekenreeks. Draait lokaal in je browser en ondersteunt optionele verificatie met pepper/secret."
+}

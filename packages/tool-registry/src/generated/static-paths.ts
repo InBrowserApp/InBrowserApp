@@ -370,6 +370,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "argon2-hash-password-verifier",
+    language: "ar",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "de",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "en",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "es",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "fr",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "he",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "hi",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "id",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "it",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "ja",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "ko",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "ms",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "nl",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "no",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "pl",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "pt",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "ru",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "sv",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "th",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "tr",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "vi",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "zh-CN",
+  },
+  {
+    slug: "argon2-hash-password-verifier",
+    language: "zh-TW",
+  },
+  {
     slug: "ascii-art-generator",
     language: "ar",
   },

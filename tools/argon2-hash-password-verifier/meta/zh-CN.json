@@ -1,0 +1,4 @@
+{
+  "name": "Argon2 密码 Hash 验证器",
+  "description": "验证密码是否匹配已编码的 Argon2 hash 字符串。所有验证都在你的浏览器本地运行，并支持可选的 pepper/secret 验证。"
+}

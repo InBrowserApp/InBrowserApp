@@ -1,0 +1,4 @@
+{
+  "name": "Trình xác minh hash mật khẩu Argon2",
+  "description": "Xác minh xem một mật khẩu có khớp với chuỗi hash Argon2 đã mã hóa hay không. Chạy cục bộ trong trình duyệt của bạn và hỗ trợ xác minh pepper/secret tùy chọn."
+}

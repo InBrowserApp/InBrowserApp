@@ -1,0 +1,4 @@
+{
+  "name": "Argon2 パスワード hash 検証ツール",
+  "description": "パスワードがエンコード済み Argon2 hash 文字列と一致するかどうかを検証します。ブラウザー内でローカルに実行され、任意の pepper/secret 検証に対応します。"
+}

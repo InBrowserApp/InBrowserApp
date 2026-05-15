@@ -1,0 +1,4 @@
+{
+  "name": "Argon2 Parola Hash Doğrulayıcı",
+  "description": "Bir parolanın kodlanmış Argon2 hash dizesiyle eşleşip eşleşmediğini doğrulayın. Tarayıcınızda yerel olarak çalışır ve isteğe bağlı pepper/secret doğrulamayı destekler."
+}
