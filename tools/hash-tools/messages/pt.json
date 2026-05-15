@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Encontrar uma ferramenta de hash",
+    "placeholder": "Pesquise por algoritmo, caso de uso ou tamanho da saída",
+    "description": "Experimente SHA-256, bcrypt, checksum, HMAC, RIPEMD ou 128-bit.",
+    "clear": "Limpar pesquisa"
+  },
+  "filters": {
+    "label": "Filtrar por família de ferramentas",
+    "all": "Todas",
+    "resultCount": "{count} ferramentas",
+    "emptyTitle": "Nenhuma ferramenta de hash correspondente",
+    "emptyDescription": "Experimente um nome de algoritmo mais amplo, remova um tamanho ou volte para todas as famílias.",
+    "showAll": "Mostrar todas as ferramentas"
+  },
+  "stats": {
+    "toolCount": "{count} ferramentas locais",
+    "groupCount": "{count} famílias",
+    "privacy": "Executa no seu navegador"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Hashes criptográficos",
+      "description": "Gere hashes MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak e Whirlpool para texto ou arquivos."
+    },
+    "password": {
+      "name": "Hashing de senhas e KDFs",
+      "description": "Crie ou verifique hashes de senha e derive chaves com ferramentas Argon2, bcrypt, PBKDF2 e scrypt locais no navegador."
+    },
+    "keyed": {
+      "name": "Hashes com chave e integridade",
+      "description": "Crie valores HMAC, atributos SRI e hashes com chave para autenticação ou verificações de adulteração."
+    },
+    "checksum": {
+      "name": "Checksums e hashes rápidos",
+      "description": "Use CRC, Adler-32, MurmurHash, CityHash e xxHash para compatibilidade, agrupamento e verificações não relacionadas à segurança."
+    }
+  },
+  "kinds": {
+    "textFile": "Texto ou arquivo",
+    "passwordHash": "Hash de senha",
+    "passwordVerify": "Verificador",
+    "keyDerivation": "Derivação de chaves",
+    "keyedHash": "Hash com chave",
+    "integrity": "Integridade",
+    "checksum": "Checksum"
+  },
+  "actions": {
+    "openTool": "Abrir ferramenta"
+  },
+  "notes": {
+    "title": "Escolha o hash certo",
+    "body": "Use SHA-256 ou SHA-512 para integridade geral, HMAC para autenticidade com chave, Argon2 ou bcrypt para senhas e checksums rápidos apenas quando segurança não for o objetivo."
+  }
+}

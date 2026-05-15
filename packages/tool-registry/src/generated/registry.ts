@@ -7462,6 +7462,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "hash-tools",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "crypto",
+      "checksum",
+      "password",
+      "hmac",
+      "integrity",
+      "collection",
+    ],
+    locales: {
+      ar: {
+        name: "أدوات التجزئة",
+        description:
+          "تصفّح أدوات التجزئة والمجاميع الاختبارية وHMAC وتجزئة كلمات المرور واشتقاق المفاتيح في مجموعة واحدة تعمل محليًا أولًا.",
+      },
+      de: {
+        name: "Hash-Tools",
+        description:
+          "Durchsuche Hash-, Prüfsummen-, HMAC-, Passwort-Hashing- und Schlüsselableitungs-Tools in einer auf lokale Verarbeitung ausgelegten Sammlung.",
+      },
+      en: {
+        name: "Hash Tools",
+        description:
+          "Browse hash, checksum, HMAC, password hashing, and key derivation tools in one local-first collection.",
+      },
+      es: {
+        name: "Herramientas hash",
+        description:
+          "Explora herramientas de hash, suma de comprobación, HMAC, hash de contraseñas y derivación de claves en una sola colección local-first.",
+      },
+      fr: {
+        name: "Outils de hachage",
+        description:
+          "Parcourez les outils de hachage, de somme de contrôle, HMAC, de hachage de mots de passe et de dérivation de clés dans une collection qui fonctionne d'abord en local.",
+      },
+      he: {
+        name: "כלי גיבוב",
+        description:
+          "עיינו בכלי גיבוב, checksum, HMAC, גיבוב סיסמאות וגזירת מפתחות באוסף אחד שפועל מקומית תחילה.",
+      },
+      hi: {
+        name: "हैश टूल्स",
+        description:
+          "हैश, चेकसम, HMAC, पासवर्ड हैशिंग और key derivation टूल्स को एक local-first संग्रह में ब्राउज करें।",
+      },
+      id: {
+        name: "Alat Hash",
+        description:
+          "Jelajahi alat hash, checksum, HMAC, hashing kata sandi, dan derivasi kunci dalam satu koleksi yang mengutamakan pemrosesan lokal.",
+      },
+      it: {
+        name: "Strumenti hash",
+        description:
+          "Sfoglia strumenti per hash, checksum, HMAC, hashing delle password e derivazione di chiavi in un'unica raccolta local-first.",
+      },
+      ja: {
+        name: "ハッシュツール",
+        description:
+          "ハッシュ、チェックサム、HMAC、パスワードハッシュ、鍵導出ツールを、ローカルファーストのコレクションでまとめて探せます。",
+      },
+      ko: {
+        name: "해시 도구",
+        description:
+          "해시, 체크섬, HMAC, 비밀번호 해싱, 키 파생 도구를 로컬 우선 컬렉션 하나에서 둘러보세요.",
+      },
+      ms: {
+        name: "Alat Hash",
+        description:
+          "Layari alat hash, checksum, HMAC, hashing kata laluan, dan derivasi kunci dalam satu koleksi yang mengutamakan setempat.",
+      },
+      nl: {
+        name: "Hash-tools",
+        description:
+          "Blader door tools voor hashes, checksums, HMAC, wachtwoord-hashing en sleutelafleiding in een local-first collectie.",
+      },
+      no: {
+        name: "Hash-verktøy",
+        description:
+          "Bla gjennom hash-, kontrollsum-, HMAC-, passordhashing- og nøkkelavledningsverktøy i én samling som prioriterer lokal kjøring.",
+      },
+      pl: {
+        name: "Narzędzia hashujące",
+        description:
+          "Przeglądaj narzędzia do hashy, sum kontrolnych, HMAC, haszowania haseł i wyprowadzania kluczy w jednej kolekcji nastawionej na pracę lokalną.",
+      },
+      pt: {
+        name: "Ferramentas de Hash",
+        description:
+          "Navegue por ferramentas de hash, checksum, HMAC, hashing de senhas e derivação de chaves em uma coleção que prioriza o processamento local.",
+      },
+      ru: {
+        name: "Инструменты хеширования",
+        description:
+          "Просматривайте инструменты для хешей, контрольных сумм, HMAC, хеширования паролей и деривации ключей в одной коллекции с локальной обработкой.",
+      },
+      sv: {
+        name: "Hashverktyg",
+        description:
+          "Bläddra bland verktyg för hashning, kontrollsummor, HMAC, lösenordshashning och nyckelhärledning i en samling som prioriterar lokal körning.",
+      },
+      th: {
+        name: "เครื่องมือแฮช",
+        description:
+          "เรียกดูเครื่องมือแฮช เช็คซัม HMAC การแฮชรหัสผ่าน และการอนุพันธ์กุญแจในชุดเครื่องมือที่เน้นทำงานในเครื่องก่อนชุดเดียว",
+      },
+      tr: {
+        name: "Hash Araçları",
+        description:
+          "Hash, checksum, HMAC, parola hashleme ve anahtar türetme araçlarını yerel öncelikli tek bir koleksiyonda inceleyin.",
+      },
+      vi: {
+        name: "Công cụ hash",
+        description:
+          "Duyệt các công cụ hash, checksum, HMAC, hash mật khẩu và dẫn xuất khóa trong một bộ sưu tập ưu tiên chạy cục bộ.",
+      },
+      "zh-CN": {
+        name: "哈希工具",
+        description:
+          "在一个本地优先的集合中浏览哈希、校验和、HMAC、密码哈希和密钥派生工具。",
+      },
+      "zh-TW": {
+        name: "雜湊工具",
+        description:
+          "在一個本機優先的集合中瀏覽雜湊、校驗和、HMAC、密碼雜湊和金鑰衍生工具。",
+      },
+    },
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -30181,6 +30312,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: ".gitignore 產生器",
         description: "透過選擇模板為您的專案產生 .gitignore 檔案",
+      },
+    },
+  },
+  "hash-tools": {
+    slug: "hash-tools",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "crypto",
+      "checksum",
+      "password",
+      "hmac",
+      "integrity",
+      "collection",
+    ],
+    locales: {
+      ar: {
+        name: "أدوات التجزئة",
+        description:
+          "تصفّح أدوات التجزئة والمجاميع الاختبارية وHMAC وتجزئة كلمات المرور واشتقاق المفاتيح في مجموعة واحدة تعمل محليًا أولًا.",
+      },
+      de: {
+        name: "Hash-Tools",
+        description:
+          "Durchsuche Hash-, Prüfsummen-, HMAC-, Passwort-Hashing- und Schlüsselableitungs-Tools in einer auf lokale Verarbeitung ausgelegten Sammlung.",
+      },
+      en: {
+        name: "Hash Tools",
+        description:
+          "Browse hash, checksum, HMAC, password hashing, and key derivation tools in one local-first collection.",
+      },
+      es: {
+        name: "Herramientas hash",
+        description:
+          "Explora herramientas de hash, suma de comprobación, HMAC, hash de contraseñas y derivación de claves en una sola colección local-first.",
+      },
+      fr: {
+        name: "Outils de hachage",
+        description:
+          "Parcourez les outils de hachage, de somme de contrôle, HMAC, de hachage de mots de passe et de dérivation de clés dans une collection qui fonctionne d'abord en local.",
+      },
+      he: {
+        name: "כלי גיבוב",
+        description:
+          "עיינו בכלי גיבוב, checksum, HMAC, גיבוב סיסמאות וגזירת מפתחות באוסף אחד שפועל מקומית תחילה.",
+      },
+      hi: {
+        name: "हैश टूल्स",
+        description:
+          "हैश, चेकसम, HMAC, पासवर्ड हैशिंग और key derivation टूल्स को एक local-first संग्रह में ब्राउज करें।",
+      },
+      id: {
+        name: "Alat Hash",
+        description:
+          "Jelajahi alat hash, checksum, HMAC, hashing kata sandi, dan derivasi kunci dalam satu koleksi yang mengutamakan pemrosesan lokal.",
+      },
+      it: {
+        name: "Strumenti hash",
+        description:
+          "Sfoglia strumenti per hash, checksum, HMAC, hashing delle password e derivazione di chiavi in un'unica raccolta local-first.",
+      },
+      ja: {
+        name: "ハッシュツール",
+        description:
+          "ハッシュ、チェックサム、HMAC、パスワードハッシュ、鍵導出ツールを、ローカルファーストのコレクションでまとめて探せます。",
+      },
+      ko: {
+        name: "해시 도구",
+        description:
+          "해시, 체크섬, HMAC, 비밀번호 해싱, 키 파생 도구를 로컬 우선 컬렉션 하나에서 둘러보세요.",
+      },
+      ms: {
+        name: "Alat Hash",
+        description:
+          "Layari alat hash, checksum, HMAC, hashing kata laluan, dan derivasi kunci dalam satu koleksi yang mengutamakan setempat.",
+      },
+      nl: {
+        name: "Hash-tools",
+        description:
+          "Blader door tools voor hashes, checksums, HMAC, wachtwoord-hashing en sleutelafleiding in een local-first collectie.",
+      },
+      no: {
+        name: "Hash-verktøy",
+        description:
+          "Bla gjennom hash-, kontrollsum-, HMAC-, passordhashing- og nøkkelavledningsverktøy i én samling som prioriterer lokal kjøring.",
+      },
+      pl: {
+        name: "Narzędzia hashujące",
+        description:
+          "Przeglądaj narzędzia do hashy, sum kontrolnych, HMAC, haszowania haseł i wyprowadzania kluczy w jednej kolekcji nastawionej na pracę lokalną.",
+      },
+      pt: {
+        name: "Ferramentas de Hash",
+        description:
+          "Navegue por ferramentas de hash, checksum, HMAC, hashing de senhas e derivação de chaves em uma coleção que prioriza o processamento local.",
+      },
+      ru: {
+        name: "Инструменты хеширования",
+        description:
+          "Просматривайте инструменты для хешей, контрольных сумм, HMAC, хеширования паролей и деривации ключей в одной коллекции с локальной обработкой.",
+      },
+      sv: {
+        name: "Hashverktyg",
+        description:
+          "Bläddra bland verktyg för hashning, kontrollsummor, HMAC, lösenordshashning och nyckelhärledning i en samling som prioriterar lokal körning.",
+      },
+      th: {
+        name: "เครื่องมือแฮช",
+        description:
+          "เรียกดูเครื่องมือแฮช เช็คซัม HMAC การแฮชรหัสผ่าน และการอนุพันธ์กุญแจในชุดเครื่องมือที่เน้นทำงานในเครื่องก่อนชุดเดียว",
+      },
+      tr: {
+        name: "Hash Araçları",
+        description:
+          "Hash, checksum, HMAC, parola hashleme ve anahtar türetme araçlarını yerel öncelikli tek bir koleksiyonda inceleyin.",
+      },
+      vi: {
+        name: "Công cụ hash",
+        description:
+          "Duyệt các công cụ hash, checksum, HMAC, hash mật khẩu và dẫn xuất khóa trong một bộ sưu tập ưu tiên chạy cục bộ.",
+      },
+      "zh-CN": {
+        name: "哈希工具",
+        description:
+          "在一个本地优先的集合中浏览哈希、校验和、HMAC、密码哈希和密钥派生工具。",
+      },
+      "zh-TW": {
+        name: "雜湊工具",
+        description:
+          "在一個本機優先的集合中瀏覽雜湊、校驗和、HMAC、密碼雜湊和金鑰衍生工具。",
       },
     },
   },

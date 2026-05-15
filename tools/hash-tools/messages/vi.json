@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Tìm công cụ hash",
+    "placeholder": "Tìm theo thuật toán, trường hợp sử dụng hoặc kích thước đầu ra",
+    "description": "Thử SHA-256, bcrypt, checksum, HMAC, RIPEMD hoặc 128-bit.",
+    "clear": "Xóa tìm kiếm"
+  },
+  "filters": {
+    "label": "Lọc theo nhóm công cụ",
+    "all": "Tất cả",
+    "resultCount": "{count} công cụ",
+    "emptyTitle": "Không có công cụ hash phù hợp",
+    "emptyDescription": "Hãy thử tên thuật toán rộng hơn, bỏ kích thước hoặc chuyển lại về tất cả nhóm.",
+    "showAll": "Hiển thị tất cả công cụ"
+  },
+  "stats": {
+    "toolCount": "{count} công cụ cục bộ",
+    "groupCount": "{count} nhóm",
+    "privacy": "Chạy trong trình duyệt của bạn"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Digest mật mã",
+      "description": "Tạo digest MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak và Whirlpool cho văn bản hoặc tệp."
+    },
+    "password": {
+      "name": "Hash mật khẩu và KDF",
+      "description": "Tạo hoặc xác minh hash mật khẩu và dẫn xuất khóa bằng các công cụ Argon2, bcrypt, PBKDF2 và scrypt chạy cục bộ trong trình duyệt."
+    },
+    "keyed": {
+      "name": "Hash có khóa và tính toàn vẹn",
+      "description": "Tạo giá trị HMAC, thuộc tính SRI và hash có khóa để xác thực hoặc kiểm tra chống sửa đổi."
+    },
+    "checksum": {
+      "name": "Checksum và hash nhanh",
+      "description": "Dùng CRC, Adler-32, MurmurHash, CityHash và xxHash cho khả năng tương thích, phân nhóm và các kiểm tra không nhằm mục tiêu bảo mật."
+    }
+  },
+  "kinds": {
+    "textFile": "Văn bản hoặc tệp",
+    "passwordHash": "Hash mật khẩu",
+    "passwordVerify": "Bộ xác minh",
+    "keyDerivation": "Dẫn xuất khóa",
+    "keyedHash": "Hash có khóa",
+    "integrity": "Tính toàn vẹn",
+    "checksum": "Checksum"
+  },
+  "actions": {
+    "openTool": "Mở công cụ"
+  },
+  "notes": {
+    "title": "Chọn đúng loại hash",
+    "body": "Dùng SHA-256 hoặc SHA-512 cho tính toàn vẹn thông thường, HMAC cho tính xác thực có khóa, Argon2 hoặc bcrypt cho mật khẩu, và chỉ dùng checksum nhanh khi bảo mật không phải là mục tiêu."
+  }
+}

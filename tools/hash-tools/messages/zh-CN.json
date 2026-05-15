@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "查找哈希工具",
+    "placeholder": "按算法、用途或输出大小搜索",
+    "description": "试试 SHA-256、bcrypt、checksum、HMAC、RIPEMD 或 128-bit。",
+    "clear": "清除搜索"
+  },
+  "filters": {
+    "label": "按工具类别筛选",
+    "all": "全部",
+    "resultCount": "{count} 个工具",
+    "emptyTitle": "没有匹配的哈希工具",
+    "emptyDescription": "试试更宽泛的算法名称、移除大小条件，或切回全部类别。",
+    "showAll": "显示所有工具"
+  },
+  "stats": {
+    "toolCount": "{count} 个本地工具",
+    "groupCount": "{count} 个类别",
+    "privacy": "在你的浏览器中运行"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "密码学摘要",
+      "description": "为文本或文件生成 MD、SHA、SHA-3、BLAKE、RIPEMD、SM3、Keccak 和 Whirlpool 摘要。"
+    },
+    "password": {
+      "name": "密码哈希和 KDF",
+      "description": "使用浏览器本地的 Argon2、bcrypt、PBKDF2 和 scrypt 工具创建或验证密码哈希，并派生密钥。"
+    },
+    "keyed": {
+      "name": "带密钥哈希和完整性",
+      "description": "为身份验证或防篡改检查生成 HMAC 值、SRI 属性和带密钥哈希。"
+    },
+    "checksum": {
+      "name": "校验和与快速哈希",
+      "description": "使用 CRC、Adler-32、MurmurHash、CityHash 和 xxHash 进行兼容性检查、分桶和非安全校验。"
+    }
+  },
+  "kinds": {
+    "textFile": "文本或文件",
+    "passwordHash": "密码哈希",
+    "passwordVerify": "验证器",
+    "keyDerivation": "密钥派生",
+    "keyedHash": "带密钥哈希",
+    "integrity": "完整性",
+    "checksum": "校验和"
+  },
+  "actions": {
+    "openTool": "打开工具"
+  },
+  "notes": {
+    "title": "选择合适的哈希",
+    "body": "通用完整性检查使用 SHA-256 或 SHA-512；需要带密钥的真实性时使用 HMAC；密码使用 Argon2 或 bcrypt；只有在安全性不是目标时才使用快速校验和。"
+  }
+}

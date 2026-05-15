@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Znajdź narzędzie hashujące",
+    "placeholder": "Szukaj według algorytmu, zastosowania albo rozmiaru wyniku",
+    "description": "Wypróbuj SHA-256, bcrypt, sumę kontrolną, HMAC, RIPEMD albo 128-bit.",
+    "clear": "Wyczyść wyszukiwanie"
+  },
+  "filters": {
+    "label": "Filtruj według rodziny narzędzi",
+    "all": "Wszystkie",
+    "resultCount": "{count} narzędzi",
+    "emptyTitle": "Brak pasujących narzędzi hashujących",
+    "emptyDescription": "Spróbuj szerszej nazwy algorytmu, usuń rozmiar albo wróć do wszystkich rodzin.",
+    "showAll": "Pokaż wszystkie narzędzia"
+  },
+  "stats": {
+    "toolCount": "{count} narzędzi lokalnych",
+    "groupCount": "{count} rodzin",
+    "privacy": "Działa w Twojej przeglądarce"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Skróty kryptograficzne",
+      "description": "Generuj skróty MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak i Whirlpool dla tekstu lub plików."
+    },
+    "password": {
+      "name": "Haszowanie haseł i KDF",
+      "description": "Twórz lub weryfikuj hashe haseł oraz wyprowadzaj klucze przy użyciu działających lokalnie w przeglądarce narzędzi Argon2, bcrypt, PBKDF2 i scrypt."
+    },
+    "keyed": {
+      "name": "Hashe z kluczem i integralność",
+      "description": "Twórz wartości HMAC, atrybuty SRI i hashe z kluczem do uwierzytelniania albo kontroli manipulacji."
+    },
+    "checksum": {
+      "name": "Sumy kontrolne i szybkie hashe",
+      "description": "Używaj CRC, Adler-32, MurmurHash, CityHash i xxHash do zgodności, przypisywania do kubełków i kontroli niewymagających bezpieczeństwa."
+    }
+  },
+  "kinds": {
+    "textFile": "Tekst lub plik",
+    "passwordHash": "Hash hasła",
+    "passwordVerify": "Weryfikator",
+    "keyDerivation": "Wyprowadzanie klucza",
+    "keyedHash": "Hash z kluczem",
+    "integrity": "Integralność",
+    "checksum": "Suma kontrolna"
+  },
+  "actions": {
+    "openTool": "Otwórz narzędzie"
+  },
+  "notes": {
+    "title": "Wybierz właściwy hash",
+    "body": "Do ogólnej kontroli integralności używaj SHA-256 lub SHA-512, do autentyczności z kluczem HMAC, do haseł Argon2 lub bcrypt, a szybkich sum kontrolnych tylko wtedy, gdy bezpieczeństwo nie jest celem."
+  }
+}

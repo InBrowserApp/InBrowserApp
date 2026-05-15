@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Cari alat hash",
+    "placeholder": "Cari mengikut algoritma, kes penggunaan, atau saiz output",
+    "description": "Cuba SHA-256, bcrypt, checksum, HMAC, RIPEMD, atau 128-bit.",
+    "clear": "Kosongkan carian"
+  },
+  "filters": {
+    "label": "Tapis mengikut keluarga alat",
+    "all": "Semua",
+    "resultCount": "{count} alat",
+    "emptyTitle": "Tiada alat hash yang sepadan",
+    "emptyDescription": "Cuba nama algoritma yang lebih luas, alih keluar saiz, atau kembali kepada semua keluarga.",
+    "showAll": "Tunjukkan semua alat"
+  },
+  "stats": {
+    "toolCount": "{count} alat setempat",
+    "groupCount": "{count} keluarga",
+    "privacy": "Berjalan dalam pelayar anda"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Digest kriptografi",
+      "description": "Jana digest MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak, dan Whirlpool untuk teks atau fail."
+    },
+    "password": {
+      "name": "Hashing kata laluan dan KDF",
+      "description": "Cipta atau sahkan hash kata laluan dan terbitkan kunci dengan alat Argon2, bcrypt, PBKDF2, dan scrypt yang berjalan setempat dalam pelayar."
+    },
+    "keyed": {
+      "name": "Hash berkunci dan integriti",
+      "description": "Bina nilai HMAC, atribut SRI, dan hash berkunci untuk pengesahan atau semakan usikan."
+    },
+    "checksum": {
+      "name": "Checksum dan hash pantas",
+      "description": "Gunakan CRC, Adler-32, MurmurHash, CityHash, dan xxHash untuk keserasian, pengelompokan, dan semakan bukan keselamatan."
+    }
+  },
+  "kinds": {
+    "textFile": "Teks atau fail",
+    "passwordHash": "Hash kata laluan",
+    "passwordVerify": "Pengesah",
+    "keyDerivation": "Derivasi kunci",
+    "keyedHash": "Hash berkunci",
+    "integrity": "Integriti",
+    "checksum": "Checksum"
+  },
+  "actions": {
+    "openTool": "Buka alat"
+  },
+  "notes": {
+    "title": "Pilih hash yang betul",
+    "body": "Gunakan SHA-256 atau SHA-512 untuk integriti umum, HMAC untuk ketulenan berkunci, Argon2 atau bcrypt untuk kata laluan, dan checksum pantas hanya apabila keselamatan bukan matlamatnya."
+  }
+}

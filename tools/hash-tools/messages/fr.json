@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Trouver un outil de hachage",
+    "placeholder": "Recherchez par algorithme, cas d'utilisation ou taille de sortie",
+    "description": "Essayez SHA-256, bcrypt, somme de contrôle, HMAC, RIPEMD ou 128 bits.",
+    "clear": "Effacer la recherche"
+  },
+  "filters": {
+    "label": "Filtrer par famille d'outils",
+    "all": "Tous",
+    "resultCount": "{count} outils",
+    "emptyTitle": "Aucun outil de hachage correspondant",
+    "emptyDescription": "Essayez un nom d'algorithme plus général, supprimez une taille ou revenez à toutes les familles.",
+    "showAll": "Afficher tous les outils"
+  },
+  "stats": {
+    "toolCount": "{count} outils locaux",
+    "groupCount": "{count} familles",
+    "privacy": "S'exécute dans votre navigateur"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Empreintes cryptographiques",
+      "description": "Générez des empreintes MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak et Whirlpool pour du texte ou des fichiers."
+    },
+    "password": {
+      "name": "Hachage de mots de passe et dérivation de clés",
+      "description": "Créez ou vérifiez des hachages de mots de passe et dérivez des clés avec les outils Argon2, bcrypt, PBKDF2 et scrypt qui s'exécutent localement dans le navigateur."
+    },
+    "keyed": {
+      "name": "Hachages à clé et intégrité",
+      "description": "Créez des valeurs HMAC, des attributs SRI et des hachages à clé pour l'authentification ou la détection de falsification."
+    },
+    "checksum": {
+      "name": "Sommes de contrôle et hachages rapides",
+      "description": "Utilisez CRC, Adler-32, MurmurHash, CityHash et xxHash pour la compatibilité, le partitionnement et les contrôles non liés à la sécurité."
+    }
+  },
+  "kinds": {
+    "textFile": "Texte ou fichier",
+    "passwordHash": "Hachage de mot de passe",
+    "passwordVerify": "Vérificateur",
+    "keyDerivation": "Dérivation de clé",
+    "keyedHash": "Hachage à clé",
+    "integrity": "Intégrité",
+    "checksum": "Somme de contrôle"
+  },
+  "actions": {
+    "openTool": "Ouvrir l'outil"
+  },
+  "notes": {
+    "title": "Choisir le bon hachage",
+    "body": "Utilisez SHA-256 ou SHA-512 pour l'intégrité générale, HMAC pour l'authenticité avec clé, Argon2 ou bcrypt pour les mots de passe, et les sommes de contrôle rapides uniquement lorsque la sécurité n'est pas l'objectif."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Finn et hash-verktøy",
+    "placeholder": "Søk etter algoritme, bruksområde eller utdatastørrelse",
+    "description": "Prøv SHA-256, bcrypt, kontrollsum, HMAC, RIPEMD eller 128-bit.",
+    "clear": "Tøm søk"
+  },
+  "filters": {
+    "label": "Filtrer etter verktøyfamilie",
+    "all": "Alle",
+    "resultCount": "{count} verktøy",
+    "emptyTitle": "Ingen samsvarende hash-verktøy",
+    "emptyDescription": "Prøv et bredere algoritmenavn, fjern en størrelse, eller bytt tilbake til alle familier.",
+    "showAll": "Vis alle verktøy"
+  },
+  "stats": {
+    "toolCount": "{count} lokale verktøy",
+    "groupCount": "{count} familier",
+    "privacy": "Kjører i nettleseren din"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Kryptografiske hashverdier",
+      "description": "Generer digester med MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak og Whirlpool for tekst eller filer."
+    },
+    "password": {
+      "name": "Passordhashing og KDF-er",
+      "description": "Opprett eller verifiser passordhasher og avled nøkler med verktøy for Argon2, bcrypt, PBKDF2 og scrypt som kjører lokalt i nettleseren."
+    },
+    "keyed": {
+      "name": "Nøkkelbaserte hasher og integritet",
+      "description": "Bygg HMAC-verdier, SRI-attributter og nøkkelbaserte hasher for autentisering eller tuklingskontroller."
+    },
+    "checksum": {
+      "name": "Kontrollsummer og raske hasher",
+      "description": "Bruk CRC, Adler-32, MurmurHash, CityHash og xxHash for kompatibilitet, inndeling i grupper og kontroller som ikke handler om sikkerhet."
+    }
+  },
+  "kinds": {
+    "textFile": "Tekst eller fil",
+    "passwordHash": "Passordhash",
+    "passwordVerify": "Verifikator",
+    "keyDerivation": "Nøkkelavledning",
+    "keyedHash": "Nøkkelbasert hash",
+    "integrity": "Integritet",
+    "checksum": "Kontrollsum"
+  },
+  "actions": {
+    "openTool": "Åpne verktøy"
+  },
+  "notes": {
+    "title": "Velg riktig hash",
+    "body": "Bruk SHA-256 eller SHA-512 for generell integritet, HMAC for nøkkelbasert autentisitet, Argon2 eller bcrypt for passord, og raske kontrollsummer bare når sikkerhet ikke er målet."
+  }
+}

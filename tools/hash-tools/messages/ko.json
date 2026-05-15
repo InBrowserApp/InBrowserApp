@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "해시 도구 찾기",
+    "placeholder": "알고리즘, 사용 사례 또는 출력 크기로 검색",
+    "description": "SHA-256, bcrypt, checksum, HMAC, RIPEMD 또는 128-bit를 사용해 보세요.",
+    "clear": "검색 지우기"
+  },
+  "filters": {
+    "label": "도구 패밀리로 필터링",
+    "all": "전체",
+    "resultCount": "{count}개 도구",
+    "emptyTitle": "일치하는 해시 도구가 없습니다",
+    "emptyDescription": "더 넓은 알고리즘 이름을 시도하거나, 크기를 제거하거나, 모든 패밀리로 다시 전환해 보세요.",
+    "showAll": "모든 도구 보기"
+  },
+  "stats": {
+    "toolCount": "{count}개 로컬 도구",
+    "groupCount": "{count}개 패밀리",
+    "privacy": "브라우저에서 실행"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "암호화 다이제스트",
+      "description": "텍스트 또는 파일에 대해 MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak, Whirlpool 다이제스트를 생성합니다."
+    },
+    "password": {
+      "name": "비밀번호 해싱 및 KDF",
+      "description": "브라우저 로컬 Argon2, bcrypt, PBKDF2, scrypt 도구로 비밀번호 해시를 만들거나 검증하고 키를 파생합니다."
+    },
+    "keyed": {
+      "name": "키 기반 해시 및 무결성",
+      "description": "인증 또는 변조 확인을 위한 HMAC 값, SRI 속성, 키 기반 해시를 만듭니다."
+    },
+    "checksum": {
+      "name": "체크섬 및 빠른 해시",
+      "description": "호환성, 버킷팅, 비보안 검사를 위해 CRC, Adler-32, MurmurHash, CityHash, xxHash를 사용합니다."
+    }
+  },
+  "kinds": {
+    "textFile": "텍스트 또는 파일",
+    "passwordHash": "비밀번호 해시",
+    "passwordVerify": "검증기",
+    "keyDerivation": "키 파생",
+    "keyedHash": "키 기반 해시",
+    "integrity": "무결성",
+    "checksum": "체크섬"
+  },
+  "actions": {
+    "openTool": "도구 열기"
+  },
+  "notes": {
+    "title": "올바른 해시 선택",
+    "body": "일반적인 무결성에는 SHA-256 또는 SHA-512를, 키 기반 진위 확인에는 HMAC을, 비밀번호에는 Argon2 또는 bcrypt를 사용하고, 보안이 목적이 아닐 때만 빠른 체크섬을 사용하세요."
+  }
+}

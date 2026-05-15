@@ -66,6 +66,7 @@
     "@tool/exif-viewer": "workspace:*",
     "@tool/file-to-data-uri-converter": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
+    "@tool/hash-tools": "workspace:*",
     "@tool/highwayhash-hash-text-or-file": "workspace:*",
     "@tool/hmac-generator": "workspace:*",
     "@tool/html-color-names": "workspace:*",

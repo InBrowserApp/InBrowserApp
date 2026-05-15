@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Temukan alat hash",
+    "placeholder": "Cari berdasarkan algoritma, kasus penggunaan, atau ukuran output",
+    "description": "Coba SHA-256, bcrypt, checksum, HMAC, RIPEMD, atau 128-bit.",
+    "clear": "Hapus pencarian"
+  },
+  "filters": {
+    "label": "Filter berdasarkan keluarga alat",
+    "all": "Semua",
+    "resultCount": "{count} alat",
+    "emptyTitle": "Tidak ada alat hash yang cocok",
+    "emptyDescription": "Coba nama algoritma yang lebih umum, hapus ukuran, atau kembali ke semua keluarga.",
+    "showAll": "Tampilkan semua alat"
+  },
+  "stats": {
+    "toolCount": "{count} alat lokal",
+    "groupCount": "{count} keluarga",
+    "privacy": "Berjalan di browser Anda"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Digest kriptografis",
+      "description": "Buat digest MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak, dan Whirlpool untuk teks atau file."
+    },
+    "password": {
+      "name": "Hashing kata sandi dan KDF",
+      "description": "Buat atau verifikasi hash kata sandi dan turunkan kunci dengan alat Argon2, bcrypt, PBKDF2, dan scrypt yang berjalan lokal di browser."
+    },
+    "keyed": {
+      "name": "Hash berkunci dan integritas",
+      "description": "Buat nilai HMAC, atribut SRI, dan hash berkunci untuk autentikasi atau pemeriksaan manipulasi."
+    },
+    "checksum": {
+      "name": "Checksum dan hash cepat",
+      "description": "Gunakan CRC, Adler-32, MurmurHash, CityHash, dan xxHash untuk kompatibilitas, pengelompokan, dan pemeriksaan non-keamanan."
+    }
+  },
+  "kinds": {
+    "textFile": "Teks atau file",
+    "passwordHash": "Hash kata sandi",
+    "passwordVerify": "Pemverifikasi",
+    "keyDerivation": "Derivasi kunci",
+    "keyedHash": "Hash berkunci",
+    "integrity": "Integritas",
+    "checksum": "Checksum"
+  },
+  "actions": {
+    "openTool": "Buka alat"
+  },
+  "notes": {
+    "title": "Pilih hash yang tepat",
+    "body": "Gunakan SHA-256 atau SHA-512 untuk integritas umum, HMAC untuk autentisitas berkunci, Argon2 atau bcrypt untuk kata sandi, dan checksum cepat hanya saat keamanan bukan tujuannya."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Hitta ett hashverktyg",
+    "placeholder": "Sök efter algoritm, användningsfall eller utdatalängd",
+    "description": "Prova SHA-256, bcrypt, kontrollsumma, HMAC, RIPEMD eller 128-bit.",
+    "clear": "Rensa sökning"
+  },
+  "filters": {
+    "label": "Filtrera efter verktygsfamilj",
+    "all": "Alla",
+    "resultCount": "{count} verktyg",
+    "emptyTitle": "Inga matchande hashverktyg",
+    "emptyDescription": "Prova ett bredare algoritmnamn, ta bort en storlek eller växla tillbaka till alla familjer.",
+    "showAll": "Visa alla verktyg"
+  },
+  "stats": {
+    "toolCount": "{count} lokala verktyg",
+    "groupCount": "{count} familjer",
+    "privacy": "Körs i din webbläsare"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Kryptografiska hashvärden",
+      "description": "Generera hashvärden med MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak och Whirlpool för text eller filer."
+    },
+    "password": {
+      "name": "Lösenordshashning och KDF:er",
+      "description": "Skapa eller verifiera lösenordshashar och härled nycklar med webbläsarlokala verktyg för Argon2, bcrypt, PBKDF2 och scrypt."
+    },
+    "keyed": {
+      "name": "Nycklade hashvärden och integritet",
+      "description": "Skapa värden med HMAC, SRI-attribut och nycklade hashvärden för autentisering eller manipulationskontroller."
+    },
+    "checksum": {
+      "name": "Kontrollsummor och snabba hashar",
+      "description": "Använd CRC, Adler-32, MurmurHash, CityHash och xxHash för kompatibilitet, kategorisering och kontroller som inte gäller säkerhet."
+    }
+  },
+  "kinds": {
+    "textFile": "Text eller fil",
+    "passwordHash": "Lösenordshash",
+    "passwordVerify": "Verifierare",
+    "keyDerivation": "Nyckelhärledning",
+    "keyedHash": "Nycklad hash",
+    "integrity": "Integritet",
+    "checksum": "Kontrollsumma"
+  },
+  "actions": {
+    "openTool": "Öppna verktyg"
+  },
+  "notes": {
+    "title": "Välj rätt hash",
+    "body": "Använd SHA-256 eller SHA-512 för allmän integritet, HMAC för nycklad äkthet, Argon2 eller bcrypt för lösenord och snabba kontrollsummor endast när säkerhet inte är målet."
+  }
+}

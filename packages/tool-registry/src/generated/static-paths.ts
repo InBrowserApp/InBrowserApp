@@ -5430,6 +5430,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "hash-tools",
+    language: "ar",
+  },
+  {
+    slug: "hash-tools",
+    language: "de",
+  },
+  {
+    slug: "hash-tools",
+    language: "en",
+  },
+  {
+    slug: "hash-tools",
+    language: "es",
+  },
+  {
+    slug: "hash-tools",
+    language: "fr",
+  },
+  {
+    slug: "hash-tools",
+    language: "he",
+  },
+  {
+    slug: "hash-tools",
+    language: "hi",
+  },
+  {
+    slug: "hash-tools",
+    language: "id",
+  },
+  {
+    slug: "hash-tools",
+    language: "it",
+  },
+  {
+    slug: "hash-tools",
+    language: "ja",
+  },
+  {
+    slug: "hash-tools",
+    language: "ko",
+  },
+  {
+    slug: "hash-tools",
+    language: "ms",
+  },
+  {
+    slug: "hash-tools",
+    language: "nl",
+  },
+  {
+    slug: "hash-tools",
+    language: "no",
+  },
+  {
+    slug: "hash-tools",
+    language: "pl",
+  },
+  {
+    slug: "hash-tools",
+    language: "pt",
+  },
+  {
+    slug: "hash-tools",
+    language: "ru",
+  },
+  {
+    slug: "hash-tools",
+    language: "sv",
+  },
+  {
+    slug: "hash-tools",
+    language: "th",
+  },
+  {
+    slug: "hash-tools",
+    language: "tr",
+  },
+  {
+    slug: "hash-tools",
+    language: "vi",
+  },
+  {
+    slug: "hash-tools",
+    language: "zh-CN",
+  },
+  {
+    slug: "hash-tools",
+    language: "zh-TW",
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     language: "ar",
   },

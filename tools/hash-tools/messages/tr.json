@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Bir hash aracı bul",
+    "placeholder": "Algoritma, kullanım amacı veya çıktı boyutuna göre ara",
+    "description": "SHA-256, bcrypt, checksum, HMAC, RIPEMD veya 128-bit deneyin.",
+    "clear": "Aramayı temizle"
+  },
+  "filters": {
+    "label": "Araç ailesine göre filtrele",
+    "all": "Tümü",
+    "resultCount": "{count} araç",
+    "emptyTitle": "Eşleşen hash aracı yok",
+    "emptyDescription": "Daha geniş bir algoritma adı deneyin, boyutu kaldırın veya tüm ailelere geri dönün.",
+    "showAll": "Tüm araçları göster"
+  },
+  "stats": {
+    "toolCount": "{count} yerel araç",
+    "groupCount": "{count} aile",
+    "privacy": "Tarayıcınızda çalışır"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Kriptografik özetler",
+      "description": "Metin veya dosyalar için MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak ve Whirlpool özetleri üretin."
+    },
+    "password": {
+      "name": "Parola hashleme ve KDF'ler",
+      "description": "Tarayıcıda yerel çalışan Argon2, bcrypt, PBKDF2 ve scrypt araçlarıyla parola hashleri oluşturun veya doğrulayın ve anahtarlar türetin."
+    },
+    "keyed": {
+      "name": "Anahtarlı hashler ve bütünlük",
+      "description": "Kimlik doğrulama veya kurcalama kontrolleri için HMAC değerleri, SRI öznitelikleri ve anahtarlı hashler oluşturun."
+    },
+    "checksum": {
+      "name": "Checksum'lar ve hızlı hashler",
+      "description": "Uyumluluk, gruplama ve güvenlik dışı kontroller için CRC, Adler-32, MurmurHash, CityHash ve xxHash kullanın."
+    }
+  },
+  "kinds": {
+    "textFile": "Metin veya dosya",
+    "passwordHash": "Parola hashi",
+    "passwordVerify": "Doğrulayıcı",
+    "keyDerivation": "Anahtar türetme",
+    "keyedHash": "Anahtarlı hash",
+    "integrity": "Bütünlük",
+    "checksum": "Checksum"
+  },
+  "actions": {
+    "openTool": "Aracı aç"
+  },
+  "notes": {
+    "title": "Doğru hashi seçin",
+    "body": "Genel bütünlük için SHA-256 veya SHA-512, anahtarlı özgünlük için HMAC, parolalar için Argon2 veya bcrypt kullanın; hızlı checksum'ları ise yalnızca güvenlik amaç olmadığında tercih edin."
+  }
+}

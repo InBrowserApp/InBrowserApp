@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "尋找雜湊工具",
+    "placeholder": "依演算法、使用情境或輸出大小搜尋",
+    "description": "試試 SHA-256、bcrypt、校驗和、HMAC、RIPEMD 或 128-bit。",
+    "clear": "清除搜尋"
+  },
+  "filters": {
+    "label": "依工具家族篩選",
+    "all": "全部",
+    "resultCount": "{count} 個工具",
+    "emptyTitle": "沒有符合的雜湊工具",
+    "emptyDescription": "試試較廣泛的演算法名稱、移除大小條件，或切回所有家族。",
+    "showAll": "顯示所有工具"
+  },
+  "stats": {
+    "toolCount": "{count} 個本機工具",
+    "groupCount": "{count} 個家族",
+    "privacy": "在你的瀏覽器中執行"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "密碼學摘要",
+      "description": "為文字或檔案產生 MD、SHA、SHA-3、BLAKE、RIPEMD、SM3、Keccak 和 Whirlpool 摘要。"
+    },
+    "password": {
+      "name": "密碼雜湊與 KDF",
+      "description": "使用瀏覽器本機的 Argon2、bcrypt、PBKDF2 和 scrypt 工具建立或驗證密碼雜湊並衍生金鑰。"
+    },
+    "keyed": {
+      "name": "帶金鑰雜湊與完整性",
+      "description": "建立 HMAC 值、SRI 屬性和帶金鑰雜湊，用於真實性驗證或竄改檢查。"
+    },
+    "checksum": {
+      "name": "校驗和與快速雜湊",
+      "description": "使用 CRC、Adler-32、MurmurHash、CityHash 和 xxHash 進行相容性、分桶與非安全性檢查。"
+    }
+  },
+  "kinds": {
+    "textFile": "文字或檔案",
+    "passwordHash": "密碼雜湊",
+    "passwordVerify": "驗證器",
+    "keyDerivation": "金鑰衍生",
+    "keyedHash": "帶金鑰雜湊",
+    "integrity": "完整性",
+    "checksum": "校驗和"
+  },
+  "actions": {
+    "openTool": "開啟工具"
+  },
+  "notes": {
+    "title": "選擇合適的雜湊",
+    "body": "一般完整性使用 SHA-256 或 SHA-512，帶金鑰真實性使用 HMAC，密碼使用 Argon2 或 bcrypt；只有在安全性不是目標時才使用快速校驗和。"
+  }
+}

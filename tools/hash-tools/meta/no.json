@@ -1,0 +1,4 @@
+{
+  "name": "Hash-verktøy",
+  "description": "Bla gjennom hash-, kontrollsum-, HMAC-, passordhashing- og nøkkelavledningsverktøy i én samling som prioriterer lokal kjøring."
+}

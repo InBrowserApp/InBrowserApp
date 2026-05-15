@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Een hash-tool vinden",
+    "placeholder": "Zoek op algoritme, gebruikssituatie of uitvoergrootte",
+    "description": "Probeer SHA-256, bcrypt, checksum, HMAC, RIPEMD of 128-bit.",
+    "clear": "Zoekopdracht wissen"
+  },
+  "filters": {
+    "label": "Filteren op toolfamilie",
+    "all": "Alle",
+    "resultCount": "{count} tools",
+    "emptyTitle": "Geen overeenkomende hash-tools",
+    "emptyDescription": "Probeer een bredere algoritmenaam, verwijder een grootte of schakel terug naar alle families.",
+    "showAll": "Alle tools tonen"
+  },
+  "stats": {
+    "toolCount": "{count} lokale tools",
+    "groupCount": "{count} families",
+    "privacy": "Draait in je browser"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Cryptografische digests",
+      "description": "Genereer digests van MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak en Whirlpool voor tekst of bestanden."
+    },
+    "password": {
+      "name": "Wachtwoord-hashing en KDF's",
+      "description": "Maak of verifieer wachtwoordhashes en leid sleutels af met browserlokale tools voor Argon2, bcrypt, PBKDF2 en scrypt."
+    },
+    "keyed": {
+      "name": "Keyed hashes en integriteit",
+      "description": "Bouw waarden voor HMAC, attributen voor SRI en keyed hashes voor authenticatie of controles op manipulatie."
+    },
+    "checksum": {
+      "name": "Checksums en snelle hashes",
+      "description": "Gebruik CRC, Adler-32, MurmurHash, CityHash en xxHash voor compatibiliteit, bucketing en niet-beveiligingscontroles."
+    }
+  },
+  "kinds": {
+    "textFile": "Tekst of bestand",
+    "passwordHash": "Wachtwoordhash",
+    "passwordVerify": "Verifier",
+    "keyDerivation": "Sleutelafleiding",
+    "keyedHash": "Keyed hash",
+    "integrity": "Integriteit",
+    "checksum": "Checksum"
+  },
+  "actions": {
+    "openTool": "Tool openen"
+  },
+  "notes": {
+    "title": "Kies de juiste hash",
+    "body": "Gebruik SHA-256 of SHA-512 voor algemene integriteit, HMAC voor authenticiteit met sleutel, Argon2 of bcrypt voor wachtwoorden en snelle checksums alleen wanneer beveiliging niet het doel is."
+  }
+}

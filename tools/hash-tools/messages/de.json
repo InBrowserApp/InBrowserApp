@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Hash-Tool finden",
+    "placeholder": "Nach Algorithmus, Anwendungsfall oder Ausgabelänge suchen",
+    "description": "Probiere SHA-256, bcrypt, Prüfsumme, HMAC, RIPEMD oder 128-bit.",
+    "clear": "Suche löschen"
+  },
+  "filters": {
+    "label": "Nach Tool-Familie filtern",
+    "all": "Alle",
+    "resultCount": "{count} Tools",
+    "emptyTitle": "Keine passenden Hash-Tools",
+    "emptyDescription": "Probiere einen allgemeineren Algorithmusnamen, entferne eine Größe oder wechsle zurück zu allen Familien.",
+    "showAll": "Alle Tools anzeigen"
+  },
+  "stats": {
+    "toolCount": "{count} lokale Tools",
+    "groupCount": "{count} Familien",
+    "privacy": "Läuft in deinem Browser"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Kryptografische Digests",
+      "description": "Erzeuge MD-, SHA-, SHA-3-, BLAKE-, RIPEMD-, SM3-, Keccak- und Whirlpool-Digests für Text oder Dateien."
+    },
+    "password": {
+      "name": "Passwort-Hashing und KDFs",
+      "description": "Erstelle oder verifiziere Passwort-Hashes und leite Schlüssel mit browserlokalen Argon2-, bcrypt-, PBKDF2- und scrypt-Tools ab."
+    },
+    "keyed": {
+      "name": "Schlüsselbasierte Hashes und Integrität",
+      "description": "Erstelle HMAC-Werte, SRI-Attribute und schlüsselbasierte Hashes für Authentifizierung oder Manipulationsprüfungen."
+    },
+    "checksum": {
+      "name": "Prüfsummen und schnelle Hashes",
+      "description": "Nutze CRC, Adler-32, MurmurHash, CityHash und xxHash für Kompatibilität, Bucketing und Prüfungen ohne Sicherheitsanspruch."
+    }
+  },
+  "kinds": {
+    "textFile": "Text oder Datei",
+    "passwordHash": "Passwort-Hash",
+    "passwordVerify": "Verifier",
+    "keyDerivation": "Schlüsselableitung",
+    "keyedHash": "Schlüsselbasierter Hash",
+    "integrity": "Integrität",
+    "checksum": "Prüfsumme"
+  },
+  "actions": {
+    "openTool": "Tool öffnen"
+  },
+  "notes": {
+    "title": "Den richtigen Hash wählen",
+    "body": "Verwende SHA-256 oder SHA-512 für allgemeine Integrität, HMAC für schlüsselbasierte Authentizität, Argon2 oder bcrypt für Passwörter und schnelle Prüfsummen nur, wenn Sicherheit nicht das Ziel ist."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "מצאו כלי גיבוב",
+    "placeholder": "חפשו לפי אלגוריתם, שימוש או גודל פלט",
+    "description": "נסו SHA-256, bcrypt, checksum, HMAC, RIPEMD או 128-bit.",
+    "clear": "ניקוי החיפוש"
+  },
+  "filters": {
+    "label": "סינון לפי משפחת כלים",
+    "all": "הכול",
+    "resultCount": "{count} כלים",
+    "emptyTitle": "לא נמצאו כלי גיבוב תואמים",
+    "emptyDescription": "נסו שם אלגוריתם רחב יותר, הסירו גודל, או חזרו לכל המשפחות.",
+    "showAll": "הצגת כל הכלים"
+  },
+  "stats": {
+    "toolCount": "{count} כלים מקומיים",
+    "groupCount": "{count} משפחות",
+    "privacy": "פועל בדפדפן שלכם"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "תקצירים קריפטוגרפיים",
+      "description": "צרו תקצירי MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak ו-Whirlpool לטקסט או לקבצים."
+    },
+    "password": {
+      "name": "גיבוב סיסמאות ו-KDFs",
+      "description": "צרו או אמתו גיבובי סיסמאות וגזרו מפתחות עם כלי Argon2, bcrypt, PBKDF2 ו-scrypt שפועלים מקומית בדפדפן."
+    },
+    "keyed": {
+      "name": "גיבובים עם מפתח ושלמות",
+      "description": "בנו ערכי HMAC, מאפייני SRI וגיבובים עם מפתח לאימות או לבדיקות חבלה."
+    },
+    "checksum": {
+      "name": "Checksums וגיבובים מהירים",
+      "description": "השתמשו ב-CRC, Adler-32, MurmurHash, CityHash ו-xxHash לתאימות, חלוקה לדליים ובדיקות שאינן למטרות אבטחה."
+    }
+  },
+  "kinds": {
+    "textFile": "טקסט או קובץ",
+    "passwordHash": "גיבוב סיסמה",
+    "passwordVerify": "מאמת",
+    "keyDerivation": "גזירת מפתח",
+    "keyedHash": "גיבוב עם מפתח",
+    "integrity": "שלמות",
+    "checksum": "Checksum"
+  },
+  "actions": {
+    "openTool": "פתיחת הכלי"
+  },
+  "notes": {
+    "title": "בחרו את הגיבוב הנכון",
+    "body": "השתמשו ב-SHA-256 או SHA-512 לשלמות כללית, ב-HMAC לאותנטיות עם מפתח, ב-Argon2 או bcrypt לסיסמאות, וב-checksums מהירים רק כאשר אבטחה אינה המטרה."
+  }
+}

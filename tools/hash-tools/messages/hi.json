@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "हैश टूल खोजें",
+    "placeholder": "एल्गोरिदम, उपयोग के मामले या आउटपुट आकार से खोजें",
+    "description": "SHA-256, bcrypt, checksum, HMAC, RIPEMD या 128-bit आजमाएं।",
+    "clear": "खोज साफ करें"
+  },
+  "filters": {
+    "label": "टूल परिवार के अनुसार फिल्टर करें",
+    "all": "सभी",
+    "resultCount": "{count} टूल्स",
+    "emptyTitle": "कोई मिलता-जुलता हैश टूल नहीं",
+    "emptyDescription": "किसी व्यापक एल्गोरिदम नाम को आजमाएं, कोई आकार हटाएं या वापस सभी परिवारों पर जाएं।",
+    "showAll": "सभी टूल्स दिखाएं"
+  },
+  "stats": {
+    "toolCount": "{count} लोकल टूल्स",
+    "groupCount": "{count} परिवार",
+    "privacy": "आपके ब्राउज़र में चलता है"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "क्रिप्टोग्राफिक डाइजेस्ट",
+      "description": "टेक्स्ट या फाइलों के लिए MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak और Whirlpool डाइजेस्ट जनरेट करें।"
+    },
+    "password": {
+      "name": "पासवर्ड हैशिंग और KDFs",
+      "description": "ब्राउज़र-लोकल Argon2, bcrypt, PBKDF2 और scrypt टूल्स से पासवर्ड हैश बनाएं या सत्यापित करें और keys derive करें।"
+    },
+    "keyed": {
+      "name": "Keyed hashes और integrity",
+      "description": "Authentication या छेड़छाड़ जांचों के लिए HMAC values, SRI attributes और keyed hashes बनाएं।"
+    },
+    "checksum": {
+      "name": "Checksums और fast hashes",
+      "description": "Compatibility, bucketing और non-security checks के लिए CRC, Adler-32, MurmurHash, CityHash और xxHash का उपयोग करें।"
+    }
+  },
+  "kinds": {
+    "textFile": "टेक्स्ट या फाइल",
+    "passwordHash": "पासवर्ड हैश",
+    "passwordVerify": "Verifier",
+    "keyDerivation": "Key derivation",
+    "keyedHash": "Keyed hash",
+    "integrity": "Integrity",
+    "checksum": "Checksum"
+  },
+  "actions": {
+    "openTool": "टूल खोलें"
+  },
+  "notes": {
+    "title": "सही हैश चुनें",
+    "body": "सामान्य integrity के लिए SHA-256 या SHA-512, keyed authenticity के लिए HMAC, पासवर्ड के लिए Argon2 या bcrypt, और तेज checksums का उपयोग केवल तब करें जब सुरक्षा लक्ष्य न हो।"
+  }
+}

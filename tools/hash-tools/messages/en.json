@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Find a hash tool",
+    "placeholder": "Search by algorithm, use case, or output size",
+    "description": "Try SHA-256, bcrypt, checksum, HMAC, RIPEMD, or 128-bit.",
+    "clear": "Clear search"
+  },
+  "filters": {
+    "label": "Filter by tool family",
+    "all": "All",
+    "resultCount": "{count} tools",
+    "emptyTitle": "No matching hash tools",
+    "emptyDescription": "Try a broader algorithm name, remove a size, or switch back to all families.",
+    "showAll": "Show all tools"
+  },
+  "stats": {
+    "toolCount": "{count} local tools",
+    "groupCount": "{count} families",
+    "privacy": "Runs in your browser"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Cryptographic digests",
+      "description": "Generate MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak, and Whirlpool digests for text or files."
+    },
+    "password": {
+      "name": "Password hashing and KDFs",
+      "description": "Create or verify password hashes and derive keys with browser-local Argon2, bcrypt, PBKDF2, and scrypt tools."
+    },
+    "keyed": {
+      "name": "Keyed hashes and integrity",
+      "description": "Build HMAC values, SRI attributes, and keyed hashes for authentication or tamper checks."
+    },
+    "checksum": {
+      "name": "Checksums and fast hashes",
+      "description": "Use CRC, Adler-32, MurmurHash, CityHash, and xxHash for compatibility, bucketing, and non-security checks."
+    }
+  },
+  "kinds": {
+    "textFile": "Text or file",
+    "passwordHash": "Password hash",
+    "passwordVerify": "Verifier",
+    "keyDerivation": "Key derivation",
+    "keyedHash": "Keyed hash",
+    "integrity": "Integrity",
+    "checksum": "Checksum"
+  },
+  "actions": {
+    "openTool": "Open tool"
+  },
+  "notes": {
+    "title": "Choose the right hash",
+    "body": "Use SHA-256 or SHA-512 for general integrity, HMAC for keyed authenticity, Argon2 or bcrypt for passwords, and fast checksums only when security is not the goal."
+  }
+}

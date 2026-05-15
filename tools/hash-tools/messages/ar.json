@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "ابحث عن أداة تجزئة",
+    "placeholder": "ابحث حسب الخوارزمية أو حالة الاستخدام أو حجم الناتج",
+    "description": "جرّب SHA-256 أو bcrypt أو checksum أو HMAC أو RIPEMD أو 128-bit.",
+    "clear": "مسح البحث"
+  },
+  "filters": {
+    "label": "التصفية حسب عائلة الأداة",
+    "all": "الكل",
+    "resultCount": "{count} أدوات",
+    "emptyTitle": "لا توجد أدوات تجزئة مطابقة",
+    "emptyDescription": "جرّب اسم خوارزمية أوسع، أو أزل حجمًا، أو عُد إلى كل العائلات.",
+    "showAll": "إظهار كل الأدوات"
+  },
+  "stats": {
+    "toolCount": "{count} أدوات محلية",
+    "groupCount": "{count} عائلات",
+    "privacy": "تعمل في متصفحك"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "ملخصات تشفيرية",
+      "description": "أنشئ ملخصات MD وSHA وSHA-3 وBLAKE وRIPEMD وSM3 وKeccak وWhirlpool للنصوص أو الملفات."
+    },
+    "password": {
+      "name": "تجزئة كلمات المرور وKDFs",
+      "description": "أنشئ تجزئات كلمات المرور أو تحقق منها واشتق المفاتيح باستخدام أدوات Argon2 وbcrypt وPBKDF2 وscrypt التي تعمل محليًا في المتصفح."
+    },
+    "keyed": {
+      "name": "التجزئات ذات المفاتيح والسلامة",
+      "description": "أنشئ قيم HMAC وسمات SRI وتجزئات ذات مفاتيح للمصادقة أو فحوص مقاومة العبث."
+    },
+    "checksum": {
+      "name": "المجاميع الاختبارية والتجزئات السريعة",
+      "description": "استخدم CRC وAdler-32 وMurmurHash وCityHash وxxHash للتوافق والتجميع وفحوص غير أمنية."
+    }
+  },
+  "kinds": {
+    "textFile": "نص أو ملف",
+    "passwordHash": "تجزئة كلمة مرور",
+    "passwordVerify": "متحقق",
+    "keyDerivation": "اشتقاق مفتاح",
+    "keyedHash": "تجزئة ذات مفتاح",
+    "integrity": "السلامة",
+    "checksum": "مجموع اختباري"
+  },
+  "actions": {
+    "openTool": "فتح الأداة"
+  },
+  "notes": {
+    "title": "اختر التجزئة المناسبة",
+    "body": "استخدم SHA-256 أو SHA-512 للسلامة العامة، وHMAC للأصالة ذات المفتاح، وArgon2 أو bcrypt لكلمات المرور، والمجاميع الاختبارية السريعة فقط عندما لا يكون الأمان هو الهدف."
+  }
+}

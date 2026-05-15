@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "Trova uno strumento hash",
+    "placeholder": "Cerca per algoritmo, caso d'uso o dimensione dell'output",
+    "description": "Prova SHA-256, bcrypt, checksum, HMAC, RIPEMD o 128-bit.",
+    "clear": "Cancella la ricerca"
+  },
+  "filters": {
+    "label": "Filtra per famiglia di strumenti",
+    "all": "Tutti",
+    "resultCount": "{count} strumenti",
+    "emptyTitle": "Nessuno strumento hash corrispondente",
+    "emptyDescription": "Prova un nome di algoritmo più generico, rimuovi una dimensione o torna a tutte le famiglie.",
+    "showAll": "Mostra tutti gli strumenti"
+  },
+  "stats": {
+    "toolCount": "{count} strumenti locali",
+    "groupCount": "{count} famiglie",
+    "privacy": "Funziona nel tuo browser"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "Digest crittografici",
+      "description": "Genera digest MD, SHA, SHA-3, BLAKE, RIPEMD, SM3, Keccak e Whirlpool per testo o file."
+    },
+    "password": {
+      "name": "Hashing delle password e KDF",
+      "description": "Crea o verifica hash di password e deriva chiavi con strumenti Argon2, bcrypt, PBKDF2 e scrypt eseguiti localmente nel browser."
+    },
+    "keyed": {
+      "name": "Hash con chiave e integrità",
+      "description": "Crea valori HMAC, attributi SRI e hash con chiave per autenticazione o controlli anti-manomissione."
+    },
+    "checksum": {
+      "name": "Checksum e hash rapidi",
+      "description": "Usa CRC, Adler-32, MurmurHash, CityHash e xxHash per compatibilità, bucket e controlli non di sicurezza."
+    }
+  },
+  "kinds": {
+    "textFile": "Testo o file",
+    "passwordHash": "Hash di password",
+    "passwordVerify": "Verificatore",
+    "keyDerivation": "Derivazione di chiavi",
+    "keyedHash": "Hash con chiave",
+    "integrity": "Integrità",
+    "checksum": "Checksum"
+  },
+  "actions": {
+    "openTool": "Apri strumento"
+  },
+  "notes": {
+    "title": "Scegli l'hash giusto",
+    "body": "Usa SHA-256 o SHA-512 per l'integrità generale, HMAC per l'autenticità con chiave, Argon2 o bcrypt per le password e checksum rapidi solo quando la sicurezza non è l'obiettivo."
+  }
+}

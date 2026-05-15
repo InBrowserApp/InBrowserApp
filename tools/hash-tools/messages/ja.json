@@ -1,0 +1,55 @@
+{
+  "search": {
+    "label": "ハッシュツールを探す",
+    "placeholder": "アルゴリズム、用途、出力サイズで検索",
+    "description": "SHA-256、bcrypt、チェックサム、HMAC、RIPEMD、128-bit などを試せます。",
+    "clear": "検索をクリア"
+  },
+  "filters": {
+    "label": "ツールファミリーで絞り込み",
+    "all": "すべて",
+    "resultCount": "{count} 個のツール",
+    "emptyTitle": "一致するハッシュツールがありません",
+    "emptyDescription": "より広いアルゴリズム名で試す、サイズ指定を外す、またはすべてのファミリーに戻してください。",
+    "showAll": "すべてのツールを表示"
+  },
+  "stats": {
+    "toolCount": "{count} 個のローカルツール",
+    "groupCount": "{count} 個のファミリー",
+    "privacy": "ブラウザー内で実行"
+  },
+  "groups": {
+    "cryptographic": {
+      "name": "暗号学的ダイジェスト",
+      "description": "テキストやファイルに対して、MD、SHA、SHA-3、BLAKE、RIPEMD、SM3、Keccak、Whirlpool のダイジェストを生成します。"
+    },
+    "password": {
+      "name": "パスワードハッシュと KDF",
+      "description": "ブラウザー内で動作する Argon2、bcrypt、PBKDF2、scrypt ツールで、パスワードハッシュの作成や検証、鍵導出を行います。"
+    },
+    "keyed": {
+      "name": "鍵付きハッシュと整合性",
+      "description": "認証や改ざんチェックのために、HMAC 値、SRI 属性、鍵付きハッシュを作成します。"
+    },
+    "checksum": {
+      "name": "チェックサムと高速ハッシュ",
+      "description": "互換性確認、バケット分け、セキュリティ目的ではないチェックに、CRC、Adler-32、MurmurHash、CityHash、xxHash を使用します。"
+    }
+  },
+  "kinds": {
+    "textFile": "テキストまたはファイル",
+    "passwordHash": "パスワードハッシュ",
+    "passwordVerify": "検証ツール",
+    "keyDerivation": "鍵導出",
+    "keyedHash": "鍵付きハッシュ",
+    "integrity": "整合性",
+    "checksum": "チェックサム"
+  },
+  "actions": {
+    "openTool": "ツールを開く"
+  },
+  "notes": {
+    "title": "適切なハッシュを選ぶ",
+    "body": "一般的な整合性確認には SHA-256 または SHA-512、鍵付きの真正性確認には HMAC、パスワードには Argon2 または bcrypt を使用し、高速チェックサムはセキュリティが目的ではない場合だけ使用してください。"
+  }
+}
