@@ -19351,6 +19351,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ssh-key-generator",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "ssh",
+      "key-generator",
+      "openssh",
+      "ed25519",
+      "rsa",
+      "public-key",
+      "private-key",
+      "fingerprint",
+      "security",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "مولد مفاتيح SSH",
+        description:
+          "أنشئ أزواج مفاتيح OpenSSH من نوع Ed25519 أو RSA محليا، مع مفاتيح عامة وخاصة جاهزة للنسخ وبصمات SHA-256.",
+      },
+      de: {
+        name: "SSH-Schlüsselgenerator",
+        description:
+          "Erstelle OpenSSH-Ed25519- oder RSA-Schlüsselpaare lokal mit kopierbereiten öffentlichen Schlüsseln, privaten Schlüsseln und SHA-256-Fingerabdrücken.",
+      },
+      en: {
+        name: "SSH Key Generator",
+        description:
+          "Generate OpenSSH Ed25519 or RSA key pairs locally with copy-ready public keys, private keys, and SHA-256 fingerprints.",
+      },
+      es: {
+        name: "Generador de claves SSH",
+        description:
+          "Genera pares de claves OpenSSH Ed25519 o RSA localmente, con claves públicas, claves privadas y huellas SHA-256 listas para copiar.",
+      },
+      fr: {
+        name: "Générateur de clés SSH",
+        description:
+          "Générez localement des paires de clés OpenSSH Ed25519 ou RSA avec clés publiques, clés privées et empreintes SHA-256 prêtes à copier.",
+      },
+      he: {
+        name: "מחולל מפתחות SSH",
+        description:
+          "צרו זוגות מפתחות OpenSSH מסוג Ed25519 או RSA באופן מקומי, עם מפתחות ציבוריים, מפתחות פרטיים וטביעות אצבע SHA-256 המוכנים להעתקה.",
+      },
+      hi: {
+        name: "SSH कुंजी जनरेटर",
+        description:
+          "कॉपी के लिए तैयार सार्वजनिक कुंजियों, निजी कुंजियों और SHA-256 फिंगरप्रिंट के साथ OpenSSH Ed25519 या RSA कुंजी युग्म स्थानीय रूप से जनरेट करें.",
+      },
+      id: {
+        name: "Pembuat Kunci SSH",
+        description:
+          "Buat pasangan kunci OpenSSH Ed25519 atau RSA secara lokal dengan kunci publik, kunci privat, dan sidik jari SHA-256 yang siap disalin.",
+      },
+      it: {
+        name: "Generatore di chiavi SSH",
+        description:
+          "Genera localmente coppie di chiavi OpenSSH Ed25519 o RSA con chiavi pubbliche, chiavi private e impronte SHA-256 pronte da copiare.",
+      },
+      ja: {
+        name: "SSHキー生成ツール",
+        description:
+          "OpenSSH Ed25519 または RSA の鍵ペアをローカルで生成し、コピーしやすい公開鍵、秘密鍵、SHA-256フィンガープリントを作成します。",
+      },
+      ko: {
+        name: "SSH 키 생성기",
+        description:
+          "복사하기 쉬운 공개 키, 개인 키, SHA-256 지문과 함께 OpenSSH Ed25519 또는 RSA 키 쌍을 로컬에서 생성합니다.",
+      },
+      ms: {
+        name: "Penjana Kunci SSH",
+        description:
+          "Jana pasangan kunci OpenSSH Ed25519 atau RSA secara setempat dengan kunci awam, kunci peribadi dan cap jari SHA-256 yang sedia disalin.",
+      },
+      nl: {
+        name: "SSH-sleutelgenerator",
+        description:
+          "Genereer lokaal OpenSSH-sleutelparen met Ed25519 of RSA, met kopieerklare openbare sleutels, privésleutels en SHA-256-vingerafdrukken.",
+      },
+      no: {
+        name: "SSH-nøkkelgenerator",
+        description:
+          "Generer OpenSSH Ed25519- eller RSA-nøkkelpar lokalt med kopiklare offentlige nøkler, private nøkler og SHA-256-fingeravtrykk.",
+      },
+      pl: {
+        name: "Generator kluczy SSH",
+        description:
+          "Generuj lokalnie pary kluczy OpenSSH Ed25519 lub RSA z gotowymi do skopiowania kluczami publicznymi, kluczami prywatnymi i odciskami SHA-256.",
+      },
+      pt: {
+        name: "Gerador de chaves SSH",
+        description:
+          "Gere pares de chaves OpenSSH Ed25519 ou RSA localmente, com chaves públicas, chaves privadas e impressões digitais SHA-256 prontas para copiar.",
+      },
+      ru: {
+        name: "Генератор SSH-ключей",
+        description:
+          "Создавайте пары ключей OpenSSH Ed25519 или RSA локально: открытые ключи, закрытые ключи и отпечатки SHA-256 сразу готовы к копированию.",
+      },
+      sv: {
+        name: "SSH-nyckelgenerator",
+        description:
+          "Generera OpenSSH Ed25519- eller RSA-nyckelpar lokalt med kopieringsklara publika nycklar, privata nycklar och SHA-256-fingeravtryck.",
+      },
+      th: {
+        name: "เครื่องมือสร้างคีย์ SSH",
+        description:
+          "สร้างคู่คีย์ OpenSSH Ed25519 หรือ RSA ภายในเครื่อง พร้อมคีย์สาธารณะ คีย์ส่วนตัว และลายนิ้วมือ SHA-256 ที่พร้อมคัดลอก",
+      },
+      tr: {
+        name: "SSH Anahtar Oluşturucu",
+        description:
+          "OpenSSH Ed25519 veya RSA anahtar çiftlerini, kopyalamaya hazır açık anahtarlar, özel anahtarlar ve SHA-256 parmak izleriyle yerel olarak oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo khóa SSH",
+        description:
+          "Tạo cục bộ cặp khóa OpenSSH Ed25519 hoặc RSA với khóa công khai, khóa riêng tư và dấu vân tay SHA-256 sẵn sàng để sao chép.",
+      },
+      "zh-CN": {
+        name: "SSH 密钥生成器",
+        description:
+          "在本地生成 OpenSSH Ed25519 或 RSA 密钥对，并提供可直接复制的公钥、私钥和 SHA-256 指纹。",
+      },
+      "zh-TW": {
+        name: "SSH 金鑰產生器",
+        description:
+          "在本機產生 OpenSSH Ed25519 或 RSA 金鑰對，並提供可直接複製的公鑰、私鑰和 SHA-256 指紋。",
+      },
+    },
+  },
+  {
     slug: "ssh-public-key-fingerprint",
     category: "network",
     icon: "lock",

@@ -1,0 +1,4 @@
+{
+  "name": "SSH Key Generator",
+  "description": "Generate OpenSSH Ed25519 or RSA key pairs locally with copy-ready public keys, private keys, and SHA-256 fingerprints."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "SSH 密钥生成器",
+  "description": "在本地生成 OpenSSH Ed25519 或 RSA 密钥对，并提供可直接复制的公钥、私钥和 SHA-256 指纹。"
+}

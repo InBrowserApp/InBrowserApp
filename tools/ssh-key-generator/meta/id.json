@@ -1,0 +1,4 @@
+{
+  "name": "Pembuat Kunci SSH",
+  "description": "Buat pasangan kunci OpenSSH Ed25519 atau RSA secara lokal dengan kunci publik, kunci privat, dan sidik jari SHA-256 yang siap disalin."
+}

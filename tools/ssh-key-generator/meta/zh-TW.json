@@ -1,0 +1,4 @@
+{
+  "name": "SSH 金鑰產生器",
+  "description": "在本機產生 OpenSSH Ed25519 或 RSA 金鑰對，並提供可直接複製的公鑰、私鑰和 SHA-256 指紋。"
+}

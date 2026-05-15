@@ -1,0 +1,4 @@
+{
+  "name": "Penjana Kunci SSH",
+  "description": "Jana pasangan kunci OpenSSH Ed25519 atau RSA secara setempat dengan kunci awam, kunci peribadi dan cap jari SHA-256 yang sedia disalin."
+}

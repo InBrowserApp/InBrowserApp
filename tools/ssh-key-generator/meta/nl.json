@@ -1,0 +1,4 @@
+{
+  "name": "SSH-sleutelgenerator",
+  "description": "Genereer lokaal OpenSSH-sleutelparen met Ed25519 of RSA, met kopieerklare openbare sleutels, privésleutels en SHA-256-vingerafdrukken."
+}
