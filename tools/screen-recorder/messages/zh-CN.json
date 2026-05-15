@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "录制器",
+    "description": "启动本地屏幕捕获会话，并保存完成后的视频。",
+    "startLabel": "开始录制",
+    "preparingLabel": "正在准备…",
+    "pauseLabel": "暂停",
+    "resumeLabel": "继续",
+    "stopLabel": "停止",
+    "retryLabel": "重试",
+    "statusLabel": "状态",
+    "durationLabel": "时长",
+    "statusChecking": "正在检查",
+    "statusReady": "就绪",
+    "statusRecording": "正在录制",
+    "statusPaused": "已暂停"
+  },
+  "settings": {
+    "title": "捕获设置",
+    "description": "开始录制前选择音频来源。",
+    "systemAudioLabel": "系统音频",
+    "systemAudioDescription": "请求浏览器包含可用的标签页音频或系统音频。",
+    "microphoneLabel": "麦克风",
+    "microphoneDescription": "在允许时将麦克风音频加入录制。",
+    "microphoneUnsupported": "此浏览器不支持麦克风捕获。"
+  },
+  "output": {
+    "title": "录制输出",
+    "description": "预览最新录制，并将其下载为本地视频文件。",
+    "emptyTitle": "还没有录制内容",
+    "emptyDescription": "完成录制后，可在此处预览并下载视频。",
+    "formatLabel": "格式",
+    "fileSizeLabel": "文件大小",
+    "fileNameLabel": "文件名",
+    "fileNamePlaceholder": "screen-recording",
+    "downloadLabel": "下载录制",
+    "clearLabel": "清除",
+    "formatUnknown": "未知"
+  },
+  "alerts": {
+    "unsupportedTitle": "不支持屏幕录制",
+    "unsupportedDescription": "请使用支持屏幕捕获和 MediaRecorder 的浏览器，通常需要通过 HTTPS 或 localhost 访问。",
+    "screenPermissionTitle": "未允许屏幕共享",
+    "screenPermissionDescription": "请重新开始，并在浏览器提示中选择屏幕、窗口或标签页。",
+    "microphonePermissionTitle": "未允许麦克风访问",
+    "microphonePermissionDescription": "请关闭麦克风捕获，或在提示时允许麦克风访问。",
+    "microphoneUnsupportedTitle": "麦克风捕获不可用",
+    "genericErrorTitle": "无法开始录制",
+    "genericErrorDescription": "请检查浏览器权限，关闭其他捕获会话，然后重试。"
+  }
+}

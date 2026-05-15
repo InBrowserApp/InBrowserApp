@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Trình ghi",
+    "description": "Bắt đầu phiên ghi màn hình cục bộ và lưu video sau khi hoàn tất.",
+    "startLabel": "Bắt đầu ghi",
+    "preparingLabel": "Đang chuẩn bị…",
+    "pauseLabel": "Tạm dừng",
+    "resumeLabel": "Tiếp tục",
+    "stopLabel": "Dừng",
+    "retryLabel": "Thử lại",
+    "statusLabel": "Trạng thái",
+    "durationLabel": "Thời lượng",
+    "statusChecking": "Đang kiểm tra",
+    "statusReady": "Sẵn sàng",
+    "statusRecording": "Đang ghi",
+    "statusPaused": "Đã tạm dừng"
+  },
+  "settings": {
+    "title": "Cài đặt ghi",
+    "description": "Chọn nguồn âm thanh trước khi bắt đầu ghi.",
+    "systemAudioLabel": "Âm thanh hệ thống",
+    "systemAudioDescription": "Yêu cầu trình duyệt đưa âm thanh thẻ hoặc âm thanh hệ thống hiện có vào bản ghi.",
+    "microphoneLabel": "Micrô",
+    "microphoneDescription": "Thêm âm thanh micrô vào bản ghi khi được cho phép.",
+    "microphoneUnsupported": "Trình duyệt này không hỗ trợ thu âm từ micrô."
+  },
+  "output": {
+    "title": "Kết quả ghi",
+    "description": "Xem trước bản ghi mới nhất và tải xuống dưới dạng tệp video cục bộ.",
+    "emptyTitle": "Chưa có bản ghi",
+    "emptyDescription": "Hoàn tất một bản ghi để xem trước và tải video xuống tại đây.",
+    "formatLabel": "Định dạng",
+    "fileSizeLabel": "Kích thước tệp",
+    "fileNameLabel": "Tên tệp",
+    "fileNamePlaceholder": "screen-recording",
+    "downloadLabel": "Tải bản ghi xuống",
+    "clearLabel": "Xóa",
+    "formatUnknown": "Không xác định"
+  },
+  "alerts": {
+    "unsupportedTitle": "Không hỗ trợ ghi màn hình",
+    "unsupportedDescription": "Hãy dùng trình duyệt hỗ trợ Screen Capture và MediaRecorder, thường là qua HTTPS hoặc localhost.",
+    "screenPermissionTitle": "Chưa cho phép chia sẻ màn hình",
+    "screenPermissionDescription": "Bắt đầu lại và chọn màn hình, cửa sổ hoặc thẻ trong lời nhắc của trình duyệt.",
+    "microphonePermissionTitle": "Chưa cho phép truy cập micrô",
+    "microphonePermissionDescription": "Tắt tính năng thu micrô hoặc cho phép truy cập micrô khi được nhắc.",
+    "microphoneUnsupportedTitle": "Không thể thu âm từ micrô",
+    "genericErrorTitle": "Không thể bắt đầu ghi",
+    "genericErrorDescription": "Kiểm tra quyền của trình duyệt, đóng các phiên ghi khác rồi thử lại."
+  }
+}

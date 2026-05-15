@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Рекордер",
+    "description": "Запустите локальный сеанс записи экрана и сохраните готовое видео.",
+    "startLabel": "Начать запись",
+    "preparingLabel": "Подготовка…",
+    "pauseLabel": "Пауза",
+    "resumeLabel": "Продолжить",
+    "stopLabel": "Остановить",
+    "retryLabel": "Повторить",
+    "statusLabel": "Статус",
+    "durationLabel": "Длительность",
+    "statusChecking": "Проверка",
+    "statusReady": "Готово",
+    "statusRecording": "Запись",
+    "statusPaused": "На паузе"
+  },
+  "settings": {
+    "title": "Настройки захвата",
+    "description": "Выберите источники звука перед началом записи.",
+    "systemAudioLabel": "Системный звук",
+    "systemAudioDescription": "Попросить браузер включить доступный звук вкладки или системы.",
+    "microphoneLabel": "Микрофон",
+    "microphoneDescription": "Добавить звук с микрофона в запись, если это разрешено.",
+    "microphoneUnsupported": "Захват микрофона недоступен в этом браузере."
+  },
+  "output": {
+    "title": "Результат записи",
+    "description": "Просмотрите последнюю запись и скачайте ее как локальный видеофайл.",
+    "emptyTitle": "Записей пока нет",
+    "emptyDescription": "Завершите запись, чтобы просмотреть и скачать видео здесь.",
+    "formatLabel": "Формат",
+    "fileSizeLabel": "Размер файла",
+    "fileNameLabel": "Имя файла",
+    "fileNamePlaceholder": "screen-recording",
+    "downloadLabel": "Скачать запись",
+    "clearLabel": "Очистить",
+    "formatUnknown": "Неизвестно"
+  },
+  "alerts": {
+    "unsupportedTitle": "Запись экрана не поддерживается",
+    "unsupportedDescription": "Используйте браузер с поддержкой Screen Capture и MediaRecorder, обычно через HTTPS или localhost.",
+    "screenPermissionTitle": "Доступ к демонстрации экрана не разрешен",
+    "screenPermissionDescription": "Запустите снова и выберите экран, окно или вкладку в запросе браузера.",
+    "microphonePermissionTitle": "Доступ к микрофону не разрешен",
+    "microphonePermissionDescription": "Отключите захват микрофона или разрешите доступ к микрофону при запросе.",
+    "microphoneUnsupportedTitle": "Захват микрофона недоступен",
+    "genericErrorTitle": "Не удалось начать запись",
+    "genericErrorDescription": "Проверьте разрешения браузера, закройте другие сеансы захвата и повторите попытку."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Enregistreur",
+    "description": "Lancez une session de capture d'écran locale et enregistrez la vidéo terminée.",
+    "startLabel": "Démarrer l'enregistrement",
+    "preparingLabel": "Préparation…",
+    "pauseLabel": "Pause",
+    "resumeLabel": "Reprendre",
+    "stopLabel": "Arrêter",
+    "retryLabel": "Réessayer",
+    "statusLabel": "État",
+    "durationLabel": "Durée",
+    "statusChecking": "Vérification",
+    "statusReady": "Prêt",
+    "statusRecording": "Enregistrement",
+    "statusPaused": "En pause"
+  },
+  "settings": {
+    "title": "Paramètres de capture",
+    "description": "Choisissez les sources audio avant de démarrer l'enregistrement.",
+    "systemAudioLabel": "Son système",
+    "systemAudioDescription": "Demandez au navigateur d'inclure le son disponible de l'onglet ou du système.",
+    "microphoneLabel": "Microphone",
+    "microphoneDescription": "Ajoutez le son du microphone à l'enregistrement lorsque c'est autorisé.",
+    "microphoneUnsupported": "La capture du microphone n'est pas disponible dans ce navigateur."
+  },
+  "output": {
+    "title": "Sortie de l'enregistrement",
+    "description": "Prévisualisez le dernier enregistrement et téléchargez-le comme fichier vidéo local.",
+    "emptyTitle": "Aucun enregistrement pour le moment",
+    "emptyDescription": "Terminez un enregistrement pour prévisualiser et télécharger la vidéo ici.",
+    "formatLabel": "Format",
+    "fileSizeLabel": "Taille du fichier",
+    "fileNameLabel": "Nom du fichier",
+    "fileNamePlaceholder": "enregistrement-ecran",
+    "downloadLabel": "Télécharger l'enregistrement",
+    "clearLabel": "Effacer",
+    "formatUnknown": "Inconnu"
+  },
+  "alerts": {
+    "unsupportedTitle": "L'enregistrement d'écran n'est pas pris en charge",
+    "unsupportedDescription": "Utilisez un navigateur compatible avec Screen Capture et MediaRecorder, généralement via HTTPS ou localhost.",
+    "screenPermissionTitle": "Le partage d'écran n'a pas été autorisé",
+    "screenPermissionDescription": "Recommencez et choisissez un écran, une fenêtre ou un onglet dans l'invite du navigateur.",
+    "microphonePermissionTitle": "L'accès au microphone n'a pas été autorisé",
+    "microphonePermissionDescription": "Désactivez la capture du microphone ou autorisez l'accès au microphone lorsque cela vous est demandé.",
+    "microphoneUnsupportedTitle": "La capture du microphone est indisponible",
+    "genericErrorTitle": "L'enregistrement n'a pas pu démarrer",
+    "genericErrorDescription": "Vérifiez les autorisations du navigateur, fermez les autres sessions de capture, puis réessayez."
+  }
+}

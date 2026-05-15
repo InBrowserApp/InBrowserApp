@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "מקליט",
+    "description": "התחילו סשן לכידת מסך מקומי ושמרו את הווידאו המוגמר.",
+    "startLabel": "התחלת הקלטה",
+    "preparingLabel": "מתכונן…",
+    "pauseLabel": "השהיה",
+    "resumeLabel": "המשך",
+    "stopLabel": "עצירה",
+    "retryLabel": "ניסיון חוזר",
+    "statusLabel": "סטטוס",
+    "durationLabel": "משך",
+    "statusChecking": "בודק",
+    "statusReady": "מוכן",
+    "statusRecording": "מקליט",
+    "statusPaused": "מושהה"
+  },
+  "settings": {
+    "title": "הגדרות לכידה",
+    "description": "בחרו מקורות שמע לפני תחילת ההקלטה.",
+    "systemAudioLabel": "שמע מערכת",
+    "systemAudioDescription": "בקשו מהדפדפן לכלול שמע זמין מהכרטיסייה או מהמערכת.",
+    "microphoneLabel": "מיקרופון",
+    "microphoneDescription": "הוסיפו שמע מהמיקרופון להקלטה כאשר ההרשאה ניתנת.",
+    "microphoneUnsupported": "לכידת מיקרופון אינה זמינה בדפדפן הזה."
+  },
+  "output": {
+    "title": "פלט ההקלטה",
+    "description": "הציגו תצוגה מקדימה של ההקלטה האחרונה והורידו אותה כקובץ וידאו מקומי.",
+    "emptyTitle": "עדיין אין הקלטה",
+    "emptyDescription": "סיימו הקלטה כדי להציג כאן תצוגה מקדימה ולהוריד את הווידאו.",
+    "formatLabel": "פורמט",
+    "fileSizeLabel": "גודל קובץ",
+    "fileNameLabel": "שם קובץ",
+    "fileNamePlaceholder": "screen-recording",
+    "downloadLabel": "הורדת ההקלטה",
+    "clearLabel": "ניקוי",
+    "formatUnknown": "לא ידוע"
+  },
+  "alerts": {
+    "unsupportedTitle": "הקלטת מסך אינה נתמכת",
+    "unsupportedDescription": "השתמשו בדפדפן שתומך ב-Screen Capture וב-MediaRecorder, בדרך כלל דרך HTTPS או localhost.",
+    "screenPermissionTitle": "שיתוף המסך לא אושר",
+    "screenPermissionDescription": "התחילו שוב ובחרו מסך, חלון או כרטיסייה בהודעת הדפדפן.",
+    "microphonePermissionTitle": "גישה למיקרופון לא אושרה",
+    "microphonePermissionDescription": "השביתו לכידת מיקרופון או אשרו גישה למיקרופון כאשר תתבקשו.",
+    "microphoneUnsupportedTitle": "לכידת מיקרופון אינה זמינה",
+    "genericErrorTitle": "לא ניתן היה להתחיל את ההקלטה",
+    "genericErrorDescription": "בדקו את הרשאות הדפדפן, סגרו סשני לכידה אחרים ונסו שוב."
+  }
+}

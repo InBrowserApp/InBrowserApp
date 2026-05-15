@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Opptaker",
+    "description": "Start et lokalt skjermopptak og lagre den ferdige videoen.",
+    "startLabel": "Start opptak",
+    "preparingLabel": "Klargjør…",
+    "pauseLabel": "Pause",
+    "resumeLabel": "Fortsett",
+    "stopLabel": "Stopp",
+    "retryLabel": "Prøv igjen",
+    "statusLabel": "Status",
+    "durationLabel": "Varighet",
+    "statusChecking": "Kontrollerer",
+    "statusReady": "Klar",
+    "statusRecording": "Tar opp",
+    "statusPaused": "Pauset"
+  },
+  "settings": {
+    "title": "Opptaksinnstillinger",
+    "description": "Velg lydkilder før du starter opptaket.",
+    "systemAudioLabel": "Systemlyd",
+    "systemAudioDescription": "Be nettleseren ta med tilgjengelig fane- eller systemlyd.",
+    "microphoneLabel": "Mikrofon",
+    "microphoneDescription": "Legg til mikrofonlyd i opptaket når det er tillatt.",
+    "microphoneUnsupported": "Mikrofonopptak er ikke tilgjengelig i denne nettleseren."
+  },
+  "output": {
+    "title": "Opptaksresultat",
+    "description": "Forhåndsvis det nyeste opptaket og last det ned som en lokal videofil.",
+    "emptyTitle": "Ingen opptak ennå",
+    "emptyDescription": "Fullfør et opptak for å forhåndsvise og laste ned videoen her.",
+    "formatLabel": "Format",
+    "fileSizeLabel": "Filstørrelse",
+    "fileNameLabel": "Filnavn",
+    "fileNamePlaceholder": "skjermopptak",
+    "downloadLabel": "Last ned opptak",
+    "clearLabel": "Tom",
+    "formatUnknown": "Ukjent"
+  },
+  "alerts": {
+    "unsupportedTitle": "Skjermopptak støttes ikke",
+    "unsupportedDescription": "Bruk en nettleser med støtte for Screen Capture og MediaRecorder, vanligvis over HTTPS eller localhost.",
+    "screenPermissionTitle": "Skjermdeling ble ikke tillatt",
+    "screenPermissionDescription": "Start på nytt og velg en skjerm, et vindu eller en fane i nettleserens dialog.",
+    "microphonePermissionTitle": "Mikrofontilgang ble ikke tillatt",
+    "microphonePermissionDescription": "Slå av mikrofonopptak eller tillat mikrofontilgang når du blir spurt.",
+    "microphoneUnsupportedTitle": "Mikrofonopptak er utilgjengelig",
+    "genericErrorTitle": "Opptaket kunne ikke starte",
+    "genericErrorDescription": "Kontroller nettlesertillatelser, lukk andre opptaksøkter og prøv igjen."
+  }
+}

@@ -16791,6 +16791,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "screen-recorder",
+    category: "misc",
+    icon: "video",
+    tags: [
+      "screen",
+      "record",
+      "recorder",
+      "video",
+      "capture",
+      "screen-share",
+      "microphone",
+      "webm",
+      "mp4",
+    ],
+    locales: {
+      ar: {
+        name: "مسجل الشاشة",
+        description:
+          "سجل شاشتك أو نافذة أو علامة تبويب في المتصفح مع إمكانية التقاط صوت النظام والميكروفون.",
+      },
+      de: {
+        name: "Bildschirmrekorder",
+        description:
+          "Nimm deinen Bildschirm, ein Fenster oder einen Browser-Tab mit optionaler Systemaudio- und Mikrofonaufnahme auf.",
+      },
+      en: {
+        name: "Screen Recorder",
+        description:
+          "Record your screen, a window, or a browser tab with optional system audio and microphone capture.",
+      },
+      es: {
+        name: "Grabador de pantalla",
+        description:
+          "Graba tu pantalla, una ventana o una pestaña del navegador con captura opcional de audio del sistema y micrófono.",
+      },
+      fr: {
+        name: "Enregistreur d'écran",
+        description:
+          "Enregistrez votre écran, une fenêtre ou un onglet de navigateur avec capture facultative du son système et du microphone.",
+      },
+      he: {
+        name: "מקליט מסך",
+        description:
+          "הקליטו את המסך, חלון או כרטיסיית דפדפן עם אפשרות ללכידת שמע מערכת ומיקרופון.",
+      },
+      hi: {
+        name: "स्क्रीन रिकॉर्डर",
+        description:
+          "वैकल्पिक सिस्टम ऑडियो और माइक्रोफोन कैप्चर के साथ अपनी स्क्रीन, कोई विंडो या ब्राउज़र टैब रिकॉर्ड करें।",
+      },
+      id: {
+        name: "Perekam Layar",
+        description:
+          "Rekam layar, jendela, atau tab browser dengan opsi perekaman audio sistem dan mikrofon.",
+      },
+      it: {
+        name: "Registratore schermo",
+        description:
+          "Registra lo schermo, una finestra o una scheda del browser con acquisizione opzionale dell'audio di sistema e del microfono.",
+      },
+      ja: {
+        name: "画面録画",
+        description:
+          "画面、ウィンドウ、またはブラウザータブを、任意のシステム音声とマイク入力付きで録画します。",
+      },
+      ko: {
+        name: "화면 녹화기",
+        description:
+          "선택적으로 시스템 오디오와 마이크를 함께 캡처하면서 화면, 창 또는 브라우저 탭을 녹화합니다.",
+      },
+      ms: {
+        name: "Perakam Skrin",
+        description:
+          "Rakam skrin, tetingkap, atau tab pelayar anda dengan pilihan tangkapan audio sistem dan mikrofon.",
+      },
+      nl: {
+        name: "Schermrecorder",
+        description:
+          "Neem je scherm, een venster of een browsertabblad op met optionele systeemaudio en microfoonopname.",
+      },
+      no: {
+        name: "Skjermopptaker",
+        description:
+          "Ta opp skjermen, et vindu eller en nettleserfane med valgfri systemlyd og mikrofonopptak.",
+      },
+      pl: {
+        name: "Rejestrator ekranu",
+        description:
+          "Nagrywaj ekran, okno lub kartę przeglądarki z opcjonalnym dźwiękiem systemowym i mikrofonem.",
+      },
+      pt: {
+        name: "Gravador de tela",
+        description:
+          "Grave sua tela, uma janela ou uma aba do navegador com captura opcional de áudio do sistema e microfone.",
+      },
+      ru: {
+        name: "Запись экрана",
+        description:
+          "Записывайте экран, окно или вкладку браузера с дополнительным захватом системного звука и микрофона.",
+      },
+      sv: {
+        name: "Skärminspelare",
+        description:
+          "Spela in din skärm, ett fönster eller en webbläsarflik med valfri systemljud- och mikrofoninspelning.",
+      },
+      th: {
+        name: "เครื่องบันทึกหน้าจอ",
+        description:
+          "บันทึกหน้าจอ หน้าต่าง หรือแท็บเบราว์เซอร์ พร้อมตัวเลือกบันทึกเสียงระบบและไมโครโฟน",
+      },
+      tr: {
+        name: "Ekran Kaydedici",
+        description:
+          "İsteğe bağlı sistem sesi ve mikrofon yakalama ile ekranınızı, bir pencereyi veya bir tarayıcı sekmesini kaydedin.",
+      },
+      vi: {
+        name: "Trình ghi màn hình",
+        description:
+          "Ghi lại màn hình, cửa sổ hoặc thẻ trình duyệt với tùy chọn thu âm thanh hệ thống và micrô.",
+      },
+      "zh-CN": {
+        name: "屏幕录制器",
+        description:
+          "录制屏幕、窗口或浏览器标签页，并可选择捕获系统音频和麦克风。",
+      },
+      "zh-TW": {
+        name: "螢幕錄影器",
+        description:
+          "錄製你的螢幕、視窗或瀏覽器分頁，並可選擇擷取系統音訊與麥克風。",
+      },
+    },
+  },
+  {
     slug: "scrypt-key-derivation",
     category: "crypto",
     icon: "lock",

@@ -1,0 +1,51 @@
+{
+  "recorder": {
+    "title": "Perakam",
+    "description": "Mulakan sesi tangkapan skrin setempat dan simpan video yang siap dirakam.",
+    "startLabel": "Mula merakam",
+    "preparingLabel": "Menyediakan…",
+    "pauseLabel": "Jeda",
+    "resumeLabel": "Sambung semula",
+    "stopLabel": "Henti",
+    "retryLabel": "Cuba lagi",
+    "statusLabel": "Status",
+    "durationLabel": "Tempoh",
+    "statusChecking": "Menyemak",
+    "statusReady": "Sedia",
+    "statusRecording": "Sedang merakam",
+    "statusPaused": "Dijeda"
+  },
+  "settings": {
+    "title": "Tetapan tangkapan",
+    "description": "Pilih sumber audio sebelum memulakan rakaman.",
+    "systemAudioLabel": "Audio sistem",
+    "systemAudioDescription": "Minta pelayar menyertakan audio tab atau sistem yang tersedia.",
+    "microphoneLabel": "Mikrofon",
+    "microphoneDescription": "Tambahkan audio mikrofon pada rakaman apabila dibenarkan.",
+    "microphoneUnsupported": "Tangkapan mikrofon tidak tersedia dalam pelayar ini."
+  },
+  "output": {
+    "title": "Output rakaman",
+    "description": "Pratonton rakaman terkini dan muat turunnya sebagai fail video setempat.",
+    "emptyTitle": "Belum ada rakaman",
+    "emptyDescription": "Selesaikan rakaman untuk pratonton dan muat turun video di sini.",
+    "formatLabel": "Format",
+    "fileSizeLabel": "Saiz fail",
+    "fileNameLabel": "Nama fail",
+    "fileNamePlaceholder": "rakaman-skrin",
+    "downloadLabel": "Muat turun rakaman",
+    "clearLabel": "Kosongkan",
+    "formatUnknown": "Tidak diketahui"
+  },
+  "alerts": {
+    "unsupportedTitle": "Rakaman skrin tidak disokong",
+    "unsupportedDescription": "Gunakan pelayar dengan sokongan Screen Capture dan MediaRecorder, biasanya melalui HTTPS atau localhost.",
+    "screenPermissionTitle": "Perkongsian skrin tidak dibenarkan",
+    "screenPermissionDescription": "Mula semula dan pilih skrin, tetingkap, atau tab dalam gesaan pelayar.",
+    "microphonePermissionTitle": "Akses mikrofon tidak dibenarkan",
+    "microphonePermissionDescription": "Lumpuhkan tangkapan mikrofon atau benarkan akses mikrofon apabila digesa.",
+    "microphoneUnsupportedTitle": "Tangkapan mikrofon tidak tersedia",
+    "genericErrorTitle": "Rakaman tidak dapat dimulakan",
+    "genericErrorDescription": "Semak kebenaran pelayar, tutup sesi tangkapan lain, dan cuba lagi."
+  }
+}
