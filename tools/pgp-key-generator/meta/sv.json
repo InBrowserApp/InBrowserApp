@@ -1,0 +1,4 @@
+{
+  "name": "PGP-nyckelgenerator",
+  "description": "Generera OpenPGP-nyckelpar i din webbläsare med ECC eller RSA, valfritt skydd med lösenfras, fingeravtryck och ett återkallelsecertifikat."
+}

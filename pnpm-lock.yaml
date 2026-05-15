@@ -204,6 +204,9 @@ catalogs:
     openapi-typescript:
       specifier: ^7.13.0
       version: 7.13.0
+    openpgp:
+      specifier: ^6.3.0
+      version: 6.3.0
     oxfmt:
       specifier: ^0.43.0
       version: 0.43.0
@@ -725,6 +728,9 @@ importers:
       '@tool/pbkdf2-key-derivation':
         specifier: workspace:*
         version: link:../../tools/pbkdf2-key-derivation
+      '@tool/pgp-key-generator':
+        specifier: workspace:*
+        version: link:../../tools/pgp-key-generator
       '@tool/placeholder-image-generator':
         specifier: workspace:*
         version: link:../../tools/placeholder-image-generator
@@ -4013,6 +4019,34 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 5.18.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
+      react:
+        specifier: 'catalog:'
+        version: 19.2.4
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      vitest:
+        specifier: 'catalog:'
+        version: 4.1.2(@types/node@25.5.2)(happy-dom@20.8.9)(msw@2.12.14(@types/node@25.5.2)(typescript@5.9.3))(vite@6.4.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.8.3))
+
+  tools/pgp-key-generator:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 5.18.1(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.3)
+      openpgp:
+        specifier: 'catalog:'
+        version: 6.3.0
       react:
         specifier: 'catalog:'
         version: 19.2.4
@@ -10533,6 +10567,10 @@ packages:
     peerDependencies:
       typescript: ^5.x
 
+  openpgp@6.3.0:
+    resolution: {integrity: sha512-pLzCU8IgyKXPSO11eeharQkQ4GzOKNWhXq79pQarIRZEMt1/ssyr+MIuWBv1mNoenJLg04gvPx+fi4gcKZ4bag==}
+    engines: {node: '>= 18.0.0'}
+
   ora@8.2.0:
     resolution: {integrity: sha512-weP+BZ8MVNnlCm8c0Qdc1WSWq4Qn7I+9CJGm7Qali6g44e/PUzbjNqJX5NJ9ljlNMosfJvg1fKEGILklK9cwnw==}
     engines: {node: '>=18'}
@@ -16844,6 +16882,8 @@ snapshots:
       supports-color: 10.2.2
       typescript: 5.9.3
       yargs-parser: 21.1.1
+
+  openpgp@6.3.0: {}
 
   ora@8.2.0:
     dependencies:

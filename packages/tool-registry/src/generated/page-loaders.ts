@@ -146,6 +146,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "password-strength-checker": () =>
     import("@tool/password-strength-checker/page"),
   "pbkdf2-key-derivation": () => import("@tool/pbkdf2-key-derivation/page"),
+  "pgp-key-generator": () => import("@tool/pgp-key-generator/page"),
   "placeholder-image-generator": () =>
     import("@tool/placeholder-image-generator/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),

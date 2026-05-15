@@ -10306,6 +10306,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pgp-key-generator",
+    language: "ar",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "de",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "en",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "es",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "fr",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "he",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "hi",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "id",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "it",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "ja",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "ko",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "ms",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "nl",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "no",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "pl",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "pt",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "ru",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "sv",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "th",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "tr",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "vi",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "pgp-key-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "placeholder-image-generator",
     language: "ar",
   },

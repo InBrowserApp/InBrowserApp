@@ -1,0 +1,4 @@
+{
+  "name": "Generador de claves PGP",
+  "description": "Genera pares de claves OpenPGP en tu navegador con ECC o RSA, protección opcional con frase de contraseña, huellas digitales y un certificado de revocación."
+}
