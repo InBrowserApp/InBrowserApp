@@ -121,7 +121,7 @@ describe("ArchiveViewerClient", () => {
     render(<ArchiveViewerClient messages={messages} />)
 
     expect(screen.getByText(messages.noArchiveTitle)).toBeTruthy()
-    expect(screen.getByText(messages.previewPlaceholderTitle)).toBeTruthy()
+    expect(screen.queryByRole("dialog")).toBeNull()
 
     fireEvent.change(screen.getByLabelText(messages.uploadAction), {
       target: {
@@ -138,13 +138,19 @@ describe("ArchiveViewerClient", () => {
     expect(screen.getByText("3")).toBeTruthy()
     expect(screen.getByText("2")).toBeTruthy()
     expect(screen.getByText("1")).toBeTruthy()
-    expect(screen.getByText(messages.previewPlaceholderTitle)).toBeTruthy()
     expect(handle.readEntry).not.toHaveBeenCalled()
 
     fireEvent.click(
       screen.getByRole("button", { name: `${messages.openFolder}: docs` })
     )
     expect(screen.getByText("readme.txt")).toBeTruthy()
+    expect(handle.readEntry).not.toHaveBeenCalled()
+
+    fireEvent.click(
+      screen.getByRole("button", {
+        name: `${messages.previewFile}: readme.txt`,
+      })
+    )
     expect(screen.getByText("docs/readme.txt")).toBeTruthy()
 
     await waitFor(() => {
@@ -153,6 +159,11 @@ describe("ArchiveViewerClient", () => {
         screen.getByRole("region", { name: messages.textPreviewLabel })
           .textContent
       ).toContain("hello archive")
+    })
+
+    fireEvent.click(screen.getByRole("button", { name: "Close" }))
+    await waitFor(() => {
+      expect(screen.queryByRole("dialog")).toBeNull()
     })
 
     fireEvent.change(screen.getByLabelText(messages.searchLabel), {
@@ -164,6 +175,8 @@ describe("ArchiveViewerClient", () => {
     fireEvent.click(
       screen.getByRole("button", { name: `${messages.openFolder}: src` })
     )
+    expect(handle.readEntry).toHaveBeenCalledTimes(1)
+
     fireEvent.click(
       screen.getByRole("button", { name: `${messages.previewFile}: script.sh` })
     )
@@ -179,6 +192,11 @@ describe("ArchiveViewerClient", () => {
 
     await waitFor(() => {
       expect(clipboardWriteTextMock).toHaveBeenCalledWith("echo ok")
+    })
+
+    fireEvent.click(screen.getByRole("button", { name: "Close" }))
+    await waitFor(() => {
+      expect(screen.queryByRole("dialog")).toBeNull()
     })
 
     fireEvent.click(screen.getByRole("button", { name: messages.clearArchive }))
@@ -208,10 +226,7 @@ describe("ArchiveViewerClient", () => {
     fireEvent.click(
       screen.getByRole("button", { name: `${messages.openFolder}: docs` })
     )
-
-    await waitFor(() => {
-      expect(handle.readEntry).toHaveBeenCalledWith("docs/readme.txt")
-    })
+    expect(handle.readEntry).not.toHaveBeenCalled()
 
     handle.readEntry.mockClear()
     createObjectUrlMock.mockClear()
@@ -226,6 +241,28 @@ describe("ArchiveViewerClient", () => {
       expect(handle.readEntry).toHaveBeenCalledWith("docs/readme.txt")
       expect(anchorClickMock).toHaveBeenCalled()
       expect(createObjectUrlMock).toHaveBeenCalled()
+    })
+
+    handle.readEntry.mockClear()
+    anchorClickMock.mockClear()
+
+    fireEvent.contextMenu(
+      screen.getByRole("row", {
+        name: /readme\.txt.*File/,
+      })
+    )
+    fireEvent.click(
+      await screen.findByRole("menuitem", { name: messages.previewTitle })
+    )
+
+    await waitFor(() => {
+      expect(handle.readEntry).toHaveBeenCalledWith("docs/readme.txt")
+      expect(screen.getByText("docs/readme.txt")).toBeTruthy()
+    })
+
+    fireEvent.click(screen.getByRole("button", { name: "Close" }))
+    await waitFor(() => {
+      expect(screen.queryByRole("dialog")).toBeNull()
     })
 
     handle.readEntry.mockClear()

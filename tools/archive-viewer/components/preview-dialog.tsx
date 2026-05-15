@@ -1,23 +1,16 @@
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/ui/card"
-import {
-  Empty,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@workspace/ui/components/ui/empty"
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@workspace/ui/components/ui/dialog"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
-import { Download, Eye, FileText, ImageIcon } from "@workspace/ui/icons"
+import { Download, FileText, ImageIcon } from "@workspace/ui/icons"
 
 import { formatBytes } from "../core/format"
 import { safeDownloadName } from "../core/path"
@@ -33,19 +26,23 @@ type PreviewState =
   | Readonly<{ status: "image"; blob: Blob; objectUrl: string }>
   | Readonly<{ status: "unavailable"; message: string; blob: Blob | null }>
 
-type PreviewCardProps = Readonly<{
+type PreviewDialogProps = Readonly<{
   entry: ArchiveEntry | null
   messages: ArchiveViewerMessages
+  open: boolean
   preview: PreviewState
   textDownloadUrl: string | null
+  onOpenChange: (open: boolean) => void
 }>
 
-function PreviewCard({
+function PreviewDialog({
   entry,
   messages,
+  open,
   preview,
   textDownloadUrl,
-}: PreviewCardProps) {
+  onOpenChange,
+}: PreviewDialogProps) {
   const downloadUrl =
     preview.status === "image" ? preview.objectUrl : textDownloadUrl
   const downloadableBlob =
@@ -56,50 +53,44 @@ function PreviewCard({
         : null
 
   return (
-    <Card className="min-h-[32rem] xl:sticky xl:top-24 xl:self-start">
-      <CardHeader className="border-b">
-        <CardTitle>{messages.previewTitle}</CardTitle>
-        <CardDescription>{messages.previewDescription}</CardDescription>
-      </CardHeader>
-      <CardContent className="flex min-h-0 flex-1 flex-col gap-4">
-        {entry ? (
-          <div className="rounded-lg border border-border/70 bg-background/60 p-3">
-            <p className="text-xs font-medium text-muted-foreground uppercase">
-              {messages.selectedFile}
-            </p>
-            <p className="mt-1 font-medium break-words">{entry.path}</p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              {formatBytes(entry.size)}
-            </p>
-          </div>
-        ) : null}
-
-        {renderPreviewBody({ entry, messages, preview })}
-      </CardContent>
-      <CardFooter className="flex flex-wrap justify-start gap-2">
-        {preview.status === "text" ? (
-          <ToolCopyButton
-            value={preview.text}
-            copyLabel={messages.copyPreview}
-            copiedLabel={messages.copiedPreview}
-            variant="ghost"
-          />
-        ) : null}
-        {entry && downloadUrl && downloadableBlob ? (
-          <Button asChild variant="outline" size="sm">
-            <a href={downloadUrl} download={safeDownloadName(entry.path)}>
-              <Download data-icon="inline-start" />
-              {messages.downloadEntry}
-            </a>
-          </Button>
-        ) : (
-          <Button type="button" variant="outline" size="sm" disabled>
-            <Download data-icon="inline-start" />
-            {messages.downloadEntry}
-          </Button>
-        )}
-      </CardFooter>
-    </Card>
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="flex max-h-[min(90vh,56rem)] flex-col gap-0 p-0 sm:max-w-5xl">
+        <DialogHeader className="border-b px-4 py-4 pr-12">
+          <DialogTitle className="break-words">
+            {entry?.path ?? messages.previewTitle}
+          </DialogTitle>
+          <DialogDescription className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span>{messages.previewDescription}</span>
+            {entry ? (
+              <>
+                <span aria-hidden="true">·</span>
+                <span>{formatBytes(entry.size)}</span>
+              </>
+            ) : null}
+          </DialogDescription>
+        </DialogHeader>
+        <div className="min-h-0 flex-1 overflow-y-auto p-4">
+          {renderPreviewBody({ entry, messages, preview })}
+        </div>
+        <DialogFooter className="border-t bg-muted/50 p-4">
+          {preview.status === "text" ? (
+            <ToolCopyButton
+              value={preview.text}
+              copyLabel={messages.copyPreview}
+              copiedLabel={messages.copiedPreview}
+            />
+          ) : null}
+          {entry && downloadUrl && downloadableBlob ? (
+            <Button asChild variant="outline" size="sm">
+              <a href={downloadUrl} download={safeDownloadName(entry.path)}>
+                <Download data-icon="inline-start" />
+                {messages.downloadEntry}
+              </a>
+            </Button>
+          ) : null}
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   )
 }
 
@@ -110,20 +101,8 @@ function renderPreviewBody(params: {
 }) {
   const { entry, messages, preview } = params
 
-  if (!entry) {
-    return (
-      <Empty className="min-h-80 border">
-        <EmptyHeader>
-          <EmptyMedia variant="icon">
-            <Eye aria-hidden="true" />
-          </EmptyMedia>
-          <EmptyTitle>{messages.previewPlaceholderTitle}</EmptyTitle>
-          <EmptyDescription>
-            {messages.previewPlaceholderDescription}
-          </EmptyDescription>
-        </EmptyHeader>
-      </Empty>
-    )
+  if (!entry || preview.status === "idle") {
+    return null
   }
 
   if (preview.status === "loading") {
@@ -160,7 +139,7 @@ function renderPreviewBody(params: {
         <img
           src={preview.objectUrl}
           alt={entry.path}
-          className="max-h-[26rem] max-w-full object-contain"
+          className="max-h-[70vh] max-w-full object-contain"
         />
       </div>
     )
@@ -182,5 +161,5 @@ function renderPreviewBody(params: {
   return null
 }
 
-export { PreviewCard }
+export { PreviewDialog }
 export type { PreviewState }

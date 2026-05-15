@@ -21,7 +21,7 @@ import {
   loadEntryPreview,
 } from "./preview-loader"
 
-import type { PreviewState } from "./components/preview-card"
+import type { PreviewState } from "./components/preview-dialog"
 import type { ArchiveViewerMessages } from "./types"
 
 const ACCEPTED_ARCHIVE_TYPES = ".zip,.tar,.gz,.tgz,.tar.gz"
@@ -43,6 +43,7 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
   const [selectedPath, setSelectedPath] = useState("")
   const [preview, setPreview] = useState<PreviewState>({ status: "idle" })
   const [textDownloadUrl, setTextDownloadUrl] = useState<string | null>(null)
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false)
   const [isDragging, setIsDragging] = useState(false)
   const [isParsing, setIsParsing] = useState(false)
   const [errorMessage, setErrorMessage] = useState("")
@@ -98,16 +99,6 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
 
       setArchiveHandle(nextHandle)
       setEntries(nextHandle.entries)
-
-      const firstFile = getFirstVisibleFileEntry(
-        nextHandle.entries,
-        buildRowIndex(nextHandle.entries),
-        ""
-      )
-      if (firstFile) {
-        setSelectedPath(firstFile.path)
-        await loadPreview(nextHandle, firstFile, requestId)
-      }
     } catch (error) {
       if (requestIdRef.current === requestId) {
         setErrorMessage(resolveArchiveError(error, messages))
@@ -177,19 +168,13 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
 
   function handleDirectoryChange(path: string) {
     const nextDirectory = normalizeDirectoryPath(path)
-    const firstFile = getFirstVisibleFileEntry(entries, rowIndex, nextDirectory)
 
     startTransition(() => {
       setCurrentDirectory(nextDirectory)
       setSearch("")
     })
 
-    if (firstFile && archiveHandle) {
-      setSelectedPath(firstFile.path)
-      void loadPreview(archiveHandle, firstFile)
-    } else {
-      resetPreviewSelection()
-    }
+    resetPreviewSelection()
   }
 
   function handleFileSelect(path: string) {
@@ -197,7 +182,17 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
     if (!entry || !archiveHandle || entry.kind !== "file") return
 
     setSelectedPath(path)
+    setIsPreviewOpen(true)
     void loadPreview(archiveHandle, entry)
+  }
+
+  function handlePreviewOpenChange(open: boolean) {
+    if (open) {
+      setIsPreviewOpen(true)
+      return
+    }
+
+    resetPreviewSelection()
   }
 
   async function handleEntryDownload(path: string) {
@@ -225,6 +220,7 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
     setSearch("")
     setSelectedPath("")
     setPreview({ status: "idle" })
+    setIsPreviewOpen(false)
     setErrorMessage("")
     setIsParsing(false)
   }
@@ -237,6 +233,7 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
     setSearch("")
     setSelectedPath("")
     setPreview({ status: "idle" })
+    setIsPreviewOpen(false)
     setErrorMessage("")
     setIsParsing(true)
   }
@@ -247,6 +244,7 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
     cleanupPreview(previewRef.current)
     setSelectedPath("")
     setPreview({ status: "idle" })
+    setIsPreviewOpen(false)
   }
 
   function cleanupTextDownloadUrl() {
@@ -278,7 +276,9 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
     handleDrop,
     handleEntryDownload,
     handleFileSelect,
+    handlePreviewOpenChange,
     handleInputChange: onInputChange,
+    isPreviewOpen,
     isDragging,
     isParsing,
     preview,
@@ -296,23 +296,6 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
 
 function handleDragOver(event: DragEvent<HTMLButtonElement>) {
   event.preventDefault()
-}
-
-function getFirstVisibleFileEntry(
-  entries: readonly ArchiveEntry[],
-  rowIndex: ReturnType<typeof buildRowIndex>,
-  directory: string
-): ArchiveEntry | null {
-  const firstVisibleFile = getRowsForDirectory(rowIndex, directory).find(
-    (row) => row.kind === "file"
-  )
-  if (!firstVisibleFile) return null
-
-  return (
-    entries.find(
-      (entry) => entry.kind === "file" && entry.path === firstVisibleFile.path
-    ) ?? null
-  )
 }
 
 export { useArchiveViewer }

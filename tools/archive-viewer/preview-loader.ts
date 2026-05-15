@@ -5,7 +5,7 @@ import {
   resolveTextPreviewLanguage,
 } from "./core/preview"
 
-import type { PreviewState } from "./components/preview-card"
+import type { PreviewState } from "./components/preview-dialog"
 import type { ArchiveEntry, ArchiveHandle } from "./core/types"
 import type { ArchiveViewerMessages } from "./types"
 

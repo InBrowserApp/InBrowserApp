@@ -18,6 +18,7 @@ import {
   Download,
   ChevronRight,
   ChevronUp,
+  Eye,
   Folder,
   Search,
 } from "@workspace/ui/icons"
@@ -138,11 +139,11 @@ function ExplorerCard({
             aria-label={messages.explorerTitle}
             className="min-h-0 overflow-x-auto rounded-lg border"
           >
-            <div className="min-w-[44rem]">
+            <div className="min-w-[51rem]">
               <div>
                 <div
                   role="row"
-                  className="grid grid-cols-[minmax(13rem,1fr)_7rem_7rem_11rem_4rem] border-b text-sm"
+                  className="grid grid-cols-[minmax(16rem,1fr)_8rem_8rem_12rem_6rem] border-b text-sm"
                 >
                   <div
                     role="columnheader"
@@ -170,11 +171,16 @@ function ExplorerCard({
                   </div>
                   <div
                     role="columnheader"
-                    className="sticky right-0 flex items-center justify-center border-l bg-background px-2 py-2.5"
-                    title={messages.downloadEntry}
+                    className="sticky right-0 flex items-center justify-end border-l bg-card px-2 py-2.5"
+                    title={`${messages.previewFile} / ${messages.downloadEntry}`}
                   >
-                    <Download aria-hidden="true" />
-                    <span className="sr-only">{messages.downloadEntry}</span>
+                    <span className="flex items-center gap-1 text-muted-foreground">
+                      <Eye aria-hidden="true" />
+                      <Download aria-hidden="true" />
+                    </span>
+                    <span className="sr-only">
+                      {messages.previewFile} / {messages.downloadEntry}
+                    </span>
                   </div>
                 </div>
               </div>

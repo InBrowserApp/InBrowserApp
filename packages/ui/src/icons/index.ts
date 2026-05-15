@@ -56,4 +56,5 @@ export {
   Video,
   Wrench,
   Upload,
+  X,
 } from "lucide-react"

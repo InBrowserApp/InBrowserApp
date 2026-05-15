@@ -6,7 +6,7 @@ import {
   ContextMenuItem,
   ContextMenuTrigger,
 } from "@workspace/ui/components/ui/context-menu"
-import { Download, File, Folder } from "@workspace/ui/icons"
+import { Download, Eye, File, Folder } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
 import { formatBytes, formatDate, getKindLabel } from "../core/format"
@@ -37,7 +37,13 @@ function ExplorerTableRow({
 }: ExplorerTableRowProps) {
   if (row.kind !== "file") {
     return (
-      <ExplorerRowShell selected={selectedPath === row.path}>
+      <ExplorerRowShell
+        selected={selectedPath === row.path}
+        onClick={(event) => {
+          if (isInteractiveClick(event.target)) return
+          onDirectoryChange(row.path)
+        }}
+      >
         <div role="cell" className="min-w-0 px-2 py-2">
           <EntryButton
             messages={messages}
@@ -57,7 +63,7 @@ function ExplorerTableRow({
         </div>
         <div
           role="cell"
-          className="sticky right-0 border-l bg-background px-2 py-1.5"
+          className="sticky right-0 border-l bg-card px-2 py-1.5 group-hover/archive-row:bg-muted/50 group-data-[selected=true]/archive-row:bg-muted"
         />
       </ExplorerRowShell>
     )
@@ -68,7 +74,10 @@ function ExplorerTableRow({
       <ContextMenuTrigger asChild>
         <ExplorerRowShell
           selected={selectedPath === row.path}
-          onContextMenu={() => onFileSelect(row.path)}
+          onClick={(event) => {
+            if (isInteractiveClick(event.target)) return
+            onFileSelect(row.path)
+          }}
         >
           <div role="cell" className="min-w-0 px-2 py-2">
             <EntryButton
@@ -89,26 +98,51 @@ function ExplorerTableRow({
           </div>
           <div
             role="cell"
-            className="sticky right-0 flex justify-center border-l bg-background px-2 py-1.5"
+            className="sticky right-0 flex items-center justify-end border-l bg-card px-2 py-1.5 group-hover/archive-row:bg-muted/50 group-data-[selected=true]/archive-row:bg-muted"
           >
-            <Button
-              type="button"
-              variant="outline"
-              size="icon-sm"
-              aria-label={`${messages.downloadEntry}: ${row.name}`}
-              title={`${messages.downloadEntry}: ${row.name}`}
-              onClick={(event) => {
-                event.stopPropagation()
-                onFileDownload(row.path)
-              }}
-            >
-              <Download aria-hidden="true" />
-            </Button>
+            <div className="flex items-center gap-0.5 rounded-md border border-transparent bg-background/70 p-0.5 transition-colors group-focus-within/archive-row:border-ring/60 group-hover/archive-row:border-border/80 group-data-[selected=true]/archive-row:border-border/80">
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon-sm"
+                className="text-muted-foreground hover:text-foreground focus-visible:text-foreground"
+                aria-label={`${messages.previewTitle}: ${row.name}`}
+                title={`${messages.previewTitle}: ${row.name}`}
+                onClick={(event) => {
+                  event.stopPropagation()
+                  onFileSelect(row.path)
+                }}
+              >
+                <Eye aria-hidden="true" />
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon-sm"
+                className="text-muted-foreground hover:text-foreground focus-visible:text-foreground"
+                aria-label={`${messages.downloadEntry}: ${row.name}`}
+                title={`${messages.downloadEntry}: ${row.name}`}
+                onClick={(event) => {
+                  event.stopPropagation()
+                  onFileDownload(row.path)
+                }}
+              >
+                <Download aria-hidden="true" />
+              </Button>
+            </div>
           </div>
         </ExplorerRowShell>
       </ContextMenuTrigger>
       <ContextMenuContent>
         <ContextMenuGroup>
+          <ContextMenuItem
+            onSelect={() => {
+              onFileSelect(row.path)
+            }}
+          >
+            <Eye aria-hidden="true" />
+            {messages.previewTitle}
+          </ContextMenuItem>
           <ContextMenuItem
             onSelect={() => {
               onFileDownload(row.path)
@@ -129,9 +163,9 @@ const ExplorerRowShell = forwardRef<HTMLDivElement, ExplorerRowShellProps>(
       <div
         ref={ref}
         role="row"
+        data-selected={selected ? "true" : undefined}
         className={cn(
-          "grid grid-cols-[minmax(13rem,1fr)_7rem_7rem_11rem_4rem] border-b text-sm transition-colors hover:bg-muted/50",
-          selected && "bg-muted",
+          "group/archive-row grid grid-cols-[minmax(16rem,1fr)_8rem_8rem_12rem_6rem] border-b text-sm transition-colors hover:bg-muted/50 data-[selected=true]:bg-muted",
           className
         )}
         {...props}
@@ -187,6 +221,12 @@ function EntryButton({
       <span className="truncate">{row.name}</span>
     </button>
   )
+}
+
+function isInteractiveClick(target: EventTarget | null) {
+  return target instanceof HTMLElement
+    ? Boolean(target.closest("button,a"))
+    : false
 }
 
 export { ExplorerTableRow }

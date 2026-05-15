@@ -7,7 +7,7 @@ import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { TriangleAlert } from "@workspace/ui/icons"
 
 import { ExplorerCard } from "./components/explorer-card"
-import { PreviewCard } from "./components/preview-card"
+import { PreviewDialog } from "./components/preview-dialog"
 import { SummaryStrip } from "./components/summary-strip"
 import { UploadCard } from "./components/upload-card"
 import { formatBytes } from "./core/format"
@@ -70,27 +70,28 @@ function ArchiveViewerClient({ messages }: ArchiveViewerClientProps) {
         uncompressedSize={formatBytes(viewer.summary.uncompressedSize)}
       />
 
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1.25fr)_minmax(22rem,0.75fr)]">
-        <ExplorerCard
-          currentDirectory={viewer.currentDirectory}
-          hasArchive={Boolean(viewer.archiveHandle)}
-          isParsing={viewer.isParsing}
-          messages={messages}
-          rows={viewer.visibleRows}
-          search={viewer.search}
-          selectedPath={viewer.selectedPath}
-          onDirectoryChange={viewer.handleDirectoryChange}
-          onFileDownload={viewer.handleEntryDownload}
-          onFileSelect={viewer.handleFileSelect}
-          onSearchChange={viewer.setSearch}
-        />
-        <PreviewCard
-          entry={viewer.selectedEntry}
-          messages={messages}
-          preview={viewer.preview}
-          textDownloadUrl={viewer.textDownloadUrl}
-        />
-      </div>
+      <ExplorerCard
+        currentDirectory={viewer.currentDirectory}
+        hasArchive={Boolean(viewer.archiveHandle)}
+        isParsing={viewer.isParsing}
+        messages={messages}
+        rows={viewer.visibleRows}
+        search={viewer.search}
+        selectedPath={viewer.selectedPath}
+        onDirectoryChange={viewer.handleDirectoryChange}
+        onFileDownload={viewer.handleEntryDownload}
+        onFileSelect={viewer.handleFileSelect}
+        onSearchChange={viewer.setSearch}
+      />
+
+      <PreviewDialog
+        entry={viewer.selectedEntry}
+        messages={messages}
+        open={viewer.isPreviewOpen}
+        preview={viewer.preview}
+        textDownloadUrl={viewer.textDownloadUrl}
+        onOpenChange={viewer.handlePreviewOpenChange}
+      />
     </div>
   )
 }
