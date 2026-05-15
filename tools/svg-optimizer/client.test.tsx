@@ -108,9 +108,14 @@ describe("SvgOptimizerClient", () => {
     expect(screen.getByText(messages.outputCodeLabel)).toBeTruthy()
     expect(
       screen
-        .getByRole("region", { name: messages.outputCodeLabel })
+        .getByRole("textbox", { name: messages.outputCodeLabel })
         .querySelector(".hljs-name")
     ).toBeTruthy()
+    expect(
+      screen
+        .getByRole("textbox", { name: messages.outputCodeLabel })
+        .getAttribute("tabindex")
+    ).toBe("0")
     await waitFor(() => {
       expect(
         screen

@@ -195,7 +195,10 @@ export function OptionsCard({
           type="button"
         >
           {isOptimizing ? (
-            <LoaderCircle className="animate-spin" data-icon="inline-start" />
+            <LoaderCircle
+              className="animate-spin motion-reduce:animate-none"
+              data-icon="inline-start"
+            />
           ) : (
             <Sparkles data-icon="inline-start" />
           )}

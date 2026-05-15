@@ -85,8 +85,11 @@ function HighlightedSvgMarkup({ ariaLabel, value }: HighlightedSvgMarkupProps) {
   return (
     <div
       aria-label={ariaLabel}
-      className="svg-markup-highlight-surface rounded-lg border border-input bg-transparent px-2.5 py-2"
-      role="region"
+      aria-multiline="true"
+      aria-readonly="true"
+      className="svg-markup-highlight-surface rounded-lg border border-input bg-transparent px-2.5 py-2 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none"
+      role="textbox"
+      tabIndex={0}
     >
       <pre className="svg-markup-highlight hljs">
         <code>{renderHighlightedSvg(value)}</code>
