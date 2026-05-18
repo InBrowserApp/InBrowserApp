@@ -1,0 +1,4 @@
+{
+  "name": "UUID Base64 Hex Decimal Octal Binary Converter",
+  "description": "ブラウザー内で UUID を Base64、16 進数、10 進数、8 進数、128 ビット 2 進数の値に相互変換します。"
+}

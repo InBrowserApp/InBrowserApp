@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "Konverteringshandlinger",
+  "generateUuidLabel": "Generer UUID",
+  "loadSampleLabel": "Last inn eksempel",
+  "clearAllLabel": "Tøm alt",
+  "copiedLabel": "Kopiert",
+  "invalidValueTitle": "Ugyldig verdi",
+  "invalidValueDescription": "Rett det uthevede feltet før du kopierer konverterte verdier.",
+  "cryptoUnavailableTitle": "Sikker tilfeldig UUID er utilgjengelig",
+  "cryptoUnavailableDescription": "Denne nettleseren eksponerer ikke tilfeldige verdier fra Web Crypto. Last inn eksempelet eller lim inn en UUID i stedet.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "Kanonisk UUID-tekst. Klammer, URN-prefikser, store bokstaver og kompakt inndata med 32 heksadesimale tegn godtas.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "Kopier UUID",
+      "invalidMessage": "Skriv inn en UUID som 32 heksadesimale sifre, eventuelt med standard bindestreksgrupper."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Standard utfylt Base64 for UUID-ens 16 rå byte. URL-sikker inndata godtas.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Kopier Base64",
+      "invalidMessage": "Skriv inn Base64 som dekodes til nøyaktig 16 byte."
+    },
+    "hex": {
+      "label": "Heksadesimal",
+      "description": "UUID-en som 32 heksadesimale sifre med små bokstaver uten bindestreker.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "Kopier heksadesimal",
+      "invalidMessage": "Skriv inn nøyaktig 32 heksadesimale sifre."
+    },
+    "decimal": {
+      "label": "Desimal",
+      "description": "UUID-en tolket som ett usignert 128-biters heltall i grunntall 10.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "Kopier desimal",
+      "invalidMessage": "Skriv inn et heltall fra 0 til 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "Oktal",
+      "description": "Den samme usignerte 128-biters verdien skrevet med sifre i grunntall 8.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "Kopier oktal",
+      "invalidMessage": "Skriv inn oktale sifre fra 0 til 7 innenfor UUID-ens 128-biters område."
+    },
+    "binary": {
+      "label": "Binær",
+      "description": "En binær visning med fast bredde på 128 biter av UUID-verdien.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "Kopier binær",
+      "invalidMessage": "Skriv inn opptil 128 binære sifre med bare 0 og 1."
+    }
+  }
+}

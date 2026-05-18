@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "Tindakan konverter",
+  "generateUuidLabel": "Buat UUID",
+  "loadSampleLabel": "Muat contoh",
+  "clearAllLabel": "Hapus semua",
+  "copiedLabel": "Disalin",
+  "invalidValueTitle": "Nilai tidak valid",
+  "invalidValueDescription": "Perbaiki bidang yang disorot sebelum menyalin nilai hasil konversi.",
+  "cryptoUnavailableTitle": "UUID acak aman tidak tersedia",
+  "cryptoUnavailableDescription": "Browser ini tidak menyediakan nilai acak Web Crypto. Muat contoh atau tempel UUID sebagai gantinya.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "Teks UUID kanonis. Kurung kurawal, prefiks URN, huruf besar, dan input 32-hex ringkas diterima.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "Salin UUID",
+      "invalidMessage": "Masukkan UUID sebagai 32 digit heksadesimal, opsional dengan grup tanda hubung standar."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Base64 standar dengan padding untuk 16 byte mentah UUID. Input URL-safe diterima.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Salin Base64",
+      "invalidMessage": "Masukkan Base64 yang didekode menjadi tepat 16 byte."
+    },
+    "hex": {
+      "label": "Heksadesimal",
+      "description": "UUID sebagai 32 digit heksadesimal huruf kecil tanpa tanda hubung.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "Salin hex",
+      "invalidMessage": "Masukkan tepat 32 digit heksadesimal."
+    },
+    "decimal": {
+      "label": "Desimal",
+      "description": "UUID ditafsirkan sebagai satu bilangan bulat 128-bit tak bertanda dalam basis 10.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "Salin desimal",
+      "invalidMessage": "Masukkan bilangan bulat dari 0 hingga 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "Oktal",
+      "description": "Nilai 128-bit tak bertanda yang sama ditulis dengan digit basis-8.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "Salin oktal",
+      "invalidMessage": "Masukkan digit oktal dari 0 sampai 7 dalam rentang UUID 128-bit."
+    },
+    "binary": {
+      "label": "Biner",
+      "description": "Tampilan biner 128-bit dengan lebar tetap untuk nilai UUID.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "Salin biner",
+      "invalidMessage": "Masukkan hingga 128 digit biner hanya menggunakan 0 dan 1."
+    }
+  }
+}

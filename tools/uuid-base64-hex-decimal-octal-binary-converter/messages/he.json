@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "פעולות הממיר",
+  "generateUuidLabel": "צור UUID",
+  "loadSampleLabel": "טען דוגמה",
+  "clearAllLabel": "נקה הכל",
+  "copiedLabel": "הועתק",
+  "invalidValueTitle": "ערך לא תקין",
+  "invalidValueDescription": "תקן את השדה המסומן לפני העתקת הערכים המומרים.",
+  "cryptoUnavailableTitle": "UUID אקראי מאובטח אינו זמין",
+  "cryptoUnavailableDescription": "דפדפן זה אינו חושף ערכים אקראיים של Web Crypto. טען את הדוגמה או הדבק UUID במקום זאת.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "טקסט UUID קנוני. מתקבלים סוגריים מסולסלים, קידומות URN, אותיות רישיות וקלט קומפקטי של 32 ספרות hex.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "העתק UUID",
+      "invalidMessage": "הזן UUID כ-32 ספרות הקסדצימליות, עם קבוצות המקפים התקניות כאפשרות."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Base64 תקני עם ריפוד עבור 16 הבתים הגולמיים של ה-UUID. מתקבל קלט בטוח ל-URL.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "העתק Base64",
+      "invalidMessage": "הזן Base64 שמתפענח בדיוק ל-16 בתים."
+    },
+    "hex": {
+      "label": "הקסדצימלי",
+      "description": "ה-UUID כ-32 ספרות הקסדצימליות באותיות קטנות, ללא מקפים.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "העתק hex",
+      "invalidMessage": "הזן בדיוק 32 ספרות הקסדצימליות."
+    },
+    "decimal": {
+      "label": "עשרוני",
+      "description": "ה-UUID מפורש כמספר שלם אחד ללא סימן, בגודל 128 סיביות ובבסיס 10.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "העתק עשרוני",
+      "invalidMessage": "הזן מספר שלם מ-0 עד 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "אוקטלי",
+      "description": "אותו ערך 128 סיביות ללא סימן, כתוב בספרות בסיס 8.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "העתק אוקטלי",
+      "invalidMessage": "הזן ספרות אוקטליות מ-0 עד 7 בטווח 128 הסיביות של UUID."
+    },
+    "binary": {
+      "label": "בינארי",
+      "description": "תצוגה בינארית ברוחב קבוע של 128 סיביות לערך ה-UUID.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "העתק בינארי",
+      "invalidMessage": "הזן עד 128 ספרות בינאריות באמצעות 0 ו-1 בלבד."
+    }
+  }
+}

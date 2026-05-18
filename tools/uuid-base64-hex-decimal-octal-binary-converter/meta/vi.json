@@ -1,0 +1,4 @@
+{
+  "name": "Bộ chuyển đổi UUID Base64 Hex Decimal Octal Binary",
+  "description": "Chuyển đổi UUID sang và từ Base64, hệ thập lục phân, thập phân, bát phân và giá trị nhị phân 128-bit ngay trong trình duyệt."
+}

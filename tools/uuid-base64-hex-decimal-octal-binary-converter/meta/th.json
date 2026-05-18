@@ -1,0 +1,4 @@
+{
+  "name": "ตัวแปลง UUID Base64 Hex Decimal Octal Binary",
+  "description": "แปลง UUID ไปและกลับจากค่า Base64, เลขฐานสิบหก, ฐานสิบ, ฐานแปด และไบนารี 128-bit ในเบราว์เซอร์ของคุณ"
+}

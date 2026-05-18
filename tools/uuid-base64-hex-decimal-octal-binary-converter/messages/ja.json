@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "変換操作",
+  "generateUuidLabel": "UUID を生成",
+  "loadSampleLabel": "サンプルを読み込み",
+  "clearAllLabel": "すべてクリア",
+  "copiedLabel": "コピーしました",
+  "invalidValueTitle": "無効な値",
+  "invalidValueDescription": "変換後の値をコピーする前に、強調表示されたフィールドを修正してください。",
+  "cryptoUnavailableTitle": "安全なランダム UUID を利用できません",
+  "cryptoUnavailableDescription": "このブラウザーは Web Crypto のランダム値を公開していません。代わりにサンプルを読み込むか、UUID を貼り付けてください。",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "標準形式の UUID テキストです。波かっこ、URN プレフィックス、大文字、32 桁のコンパクトな 16 進入力を使用できます。",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "UUID をコピー",
+      "invalidMessage": "32 桁の 16 進数字で UUID を入力してください。標準のハイフングループは任意です。"
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "UUID の 16 個の生バイトを表す、標準のパディング付き Base64 です。URL セーフな入力も使用できます。",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Base64 をコピー",
+      "invalidMessage": "正確に 16 バイトへデコードされる Base64 を入力してください。"
+    },
+    "hex": {
+      "label": "16 進数",
+      "description": "UUID をハイフンなしの 32 桁の小文字 16 進数字で表します。",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "16 進数をコピー",
+      "invalidMessage": "正確に 32 桁の 16 進数字を入力してください。"
+    },
+    "decimal": {
+      "label": "10 進数",
+      "description": "UUID を 10 進法の 1 つの符号なし 128 ビット整数として解釈します。",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "10 進数をコピー",
+      "invalidMessage": "0 から 340282366920938463463374607431768211455 までの整数を入力してください。"
+    },
+    "octal": {
+      "label": "8 進数",
+      "description": "同じ符号なし 128 ビット値を基数 8 の数字で表します。",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "8 進数をコピー",
+      "invalidMessage": "UUID の 128 ビット範囲内で、0 から 7 までの 8 進数字を入力してください。"
+    },
+    "binary": {
+      "label": "2 進数",
+      "description": "UUID 値を固定幅の 128 ビット 2 進数で表示します。",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "2 進数をコピー",
+      "invalidMessage": "0 と 1 のみを使い、最大 128 桁の 2 進数字を入力してください。"
+    }
+  }
+}

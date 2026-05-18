@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "إجراءات المحول",
+  "generateUuidLabel": "إنشاء UUID",
+  "loadSampleLabel": "تحميل عينة",
+  "clearAllLabel": "مسح الكل",
+  "copiedLabel": "تم النسخ",
+  "invalidValueTitle": "قيمة غير صالحة",
+  "invalidValueDescription": "أصلح الحقل المميز قبل نسخ القيم المحولة.",
+  "cryptoUnavailableTitle": "UUID عشوائي آمن غير متاح",
+  "cryptoUnavailableDescription": "هذا المتصفح لا يتيح قيم Web Crypto العشوائية. حمّل العينة أو الصق UUID بدلا من ذلك.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "نص UUID بالصيغة القياسية. تُقبل الأقواس، وبادئات URN، والأحرف الكبيرة، والإدخال المضغوط المكون من 32 رقما سداسيا.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "نسخ UUID",
+      "invalidMessage": "أدخل UUID على هيئة 32 رقما سداسيا، مع مجموعات الشرطات القياسية اختياريا."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Base64 قياسي مع حشو للبايتات الخام الـ 16 في UUID. يُقبل الإدخال الآمن لعناوين URL.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "نسخ Base64",
+      "invalidMessage": "أدخل Base64 يفك ترميزه إلى 16 بايت بالضبط."
+    },
+    "hex": {
+      "label": "سداسي",
+      "description": "UUID على هيئة 32 رقما سداسيا بأحرف صغيرة ومن دون شرطات.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "نسخ السداسي",
+      "invalidMessage": "أدخل 32 رقما سداسيا بالضبط."
+    },
+    "decimal": {
+      "label": "عشري",
+      "description": "UUID مفسر كعدد صحيح واحد غير موقّع من 128 بت بالأساس 10.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "نسخ العشري",
+      "invalidMessage": "أدخل عددا صحيحا من 0 إلى 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "ثماني",
+      "description": "القيمة نفسها غير الموقعة ذات 128 بت مكتوبة بأرقام الأساس 8.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "نسخ الثماني",
+      "invalidMessage": "أدخل أرقاما ثمانية من 0 إلى 7 ضمن نطاق UUID ذي 128 بت."
+    },
+    "binary": {
+      "label": "ثنائي",
+      "description": "عرض ثنائي بعرض ثابت 128 بت لقيمة UUID.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "نسخ الثنائي",
+      "invalidMessage": "أدخل ما يصل إلى 128 رقما ثنائيا باستخدام 0 و1 فقط."
+    }
+  }
+}
