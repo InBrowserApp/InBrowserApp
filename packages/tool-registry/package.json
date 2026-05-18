@@ -67,6 +67,7 @@
     "@tool/eu-vat-number-validator": "workspace:*",
     "@tool/exif-viewer": "workspace:*",
     "@tool/file-to-data-uri-converter": "workspace:*",
+    "@tool/gif-to-animated-webp-converter": "workspace:*",
     "@tool/gif-to-apng-converter": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
     "@tool/highwayhash-hash-text-or-file": "workspace:*",

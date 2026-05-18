@@ -1,0 +1,4 @@
+{
+  "name": "GIFからAnimated WebPへの変換ツール",
+  "description": "スケール変更、再生速度、ループ制御、プレビュー、バッチZIPエクスポートに対応し、アニメーションGIFをAnimated WebPに変換します。"
+}
