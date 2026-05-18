@@ -1,0 +1,4 @@
+{
+  "name": "UUID-avkodare",
+  "description": "Avkoda ett UUID till dess version, variant, tidsstämpelfält och numeriska representationer."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Décodeur UUID",
+  "description": "Décodez un UUID pour afficher sa version, sa variante, ses champs d’horodatage et ses représentations numériques."
+}
