@@ -1,0 +1,4 @@
+{
+  "name": "Nil UUID Generator",
+  "description": "Generate and copy the standardized all-zero nil UUID for placeholders, defaults, and sentinel values."
+}

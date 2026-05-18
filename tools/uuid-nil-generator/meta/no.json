@@ -1,0 +1,4 @@
+{
+  "name": "Nil UUID Generator",
+  "description": "Generer og kopier den standardiserte nil-UUID-en med bare nuller for plassholdere, standardverdier og sentinel-verdier."
+}

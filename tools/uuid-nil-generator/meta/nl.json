@@ -1,0 +1,4 @@
+{
+  "name": "Nil UUID-generator",
+  "description": "Genereer en kopieer de gestandaardiseerde nil UUID met alleen nullen voor placeholders, standaardwaarden en sentinelwaarden."
+}

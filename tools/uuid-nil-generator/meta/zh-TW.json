@@ -1,0 +1,4 @@
+{
+  "name": "Nil UUID 產生器",
+  "description": "產生並複製標準化的全零 nil UUID，可用於預留位置、預設值與哨兵值。"
+}

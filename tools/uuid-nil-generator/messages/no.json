@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Nil UUID",
+  "valueDescription": "Kopier den standardiserte UUID-en med bare nuller i representasjonen systemet ditt forventer.",
+  "canonicalLabel": "Kanonisk UUID",
+  "rawHexLabel": "32-sifret heks",
+  "urnLabel": "UUID-URN",
+  "copyUuidLabel": "Kopier UUID",
+  "copyHexLabel": "Kopier heks",
+  "copyUrnLabel": "Kopier URN",
+  "copiedLabel": "Kopiert",
+  "detailsTitle": "Referanse",
+  "detailsDescription": "Nil-UUID-en er en fast sentinel-verdi, ikke en tilfeldig identifikator.",
+  "allBitsLabel": "Biter",
+  "allBitsValue": "128 nullbiter",
+  "versionLabel": "Versjon",
+  "versionValue": "Ingen",
+  "variantLabel": "Variant",
+  "variantValue": "Ingen",
+  "stableLabel": "Regenerering",
+  "stableValue": "Returnerer alltid samme verdi"
+}

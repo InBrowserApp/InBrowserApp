@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Nil UUID",
+  "valueDescription": "Скопируйте стандартизированный UUID из одних нулей в представлении, которое ожидает ваша система.",
+  "canonicalLabel": "Канонический UUID",
+  "rawHexLabel": "32-значное hex",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "Копировать UUID",
+  "copyHexLabel": "Копировать hex",
+  "copyUrnLabel": "Копировать URN",
+  "copiedLabel": "Скопировано",
+  "detailsTitle": "Справка",
+  "detailsDescription": "Nil UUID — это фиксированное сигнальное значение, а не случайный идентификатор.",
+  "allBitsLabel": "Биты",
+  "allBitsValue": "128 нулевых битов",
+  "versionLabel": "Версия",
+  "versionValue": "Нет",
+  "variantLabel": "Вариант",
+  "variantValue": "Нет",
+  "stableLabel": "Повторная генерация",
+  "stableValue": "Всегда возвращает одно и то же значение"
+}

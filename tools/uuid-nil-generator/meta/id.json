@@ -1,0 +1,4 @@
+{
+  "name": "Generator UUID Nil",
+  "description": "Buat dan salin UUID nil standar yang seluruhnya nol untuk placeholder, nilai default, dan nilai sentinel."
+}

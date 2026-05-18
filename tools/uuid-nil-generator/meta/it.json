@@ -1,0 +1,4 @@
+{
+  "name": "Generatore di UUID nil",
+  "description": "Genera e copia l'UUID nil standardizzato composto solo da zeri per segnaposto, valori predefiniti e valori sentinella."
+}
