@@ -19,6 +19,8 @@ describe("ToolPanelCard", () => {
 
     const card = screen.getByText("body").closest("[data-slot='card']")
     expect(card?.className).toContain("h-full")
+    expect(card?.className).toContain("gap-0")
+    expect(card?.className).toContain("py-0")
   })
 
   test("adds flex content defaults", () => {
