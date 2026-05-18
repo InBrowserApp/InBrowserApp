@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "Dönüştürücü eylemleri",
+  "generateUuidLabel": "UUID oluştur",
+  "loadSampleLabel": "Örneği yükle",
+  "clearAllLabel": "Tümünü temizle",
+  "copiedLabel": "Kopyalandı",
+  "invalidValueTitle": "Geçersiz değer",
+  "invalidValueDescription": "Dönüştürülen değerleri kopyalamadan önce vurgulanan alanı düzeltin.",
+  "cryptoUnavailableTitle": "Güvenli rastgele UUID kullanılamıyor",
+  "cryptoUnavailableDescription": "Bu tarayıcı Web Crypto rastgele değerlerini sunmuyor. Bunun yerine örneği yükleyin veya bir UUID yapıştırın.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "Kanonik UUID metni. Süslü parantezler, URN önekleri, büyük harf ve kompakt 32 onaltılık giriş kabul edilir.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "UUID kopyala",
+      "invalidMessage": "İsteğe bağlı standart tire gruplarıyla 32 onaltılık basamak olarak bir UUID girin."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "UUID'nin 16 ham baytı için standart dolgulu Base64. URL güvenli giriş kabul edilir.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Base64 kopyala",
+      "invalidMessage": "Tam olarak 16 bayta çözülen Base64 girin."
+    },
+    "hex": {
+      "label": "Onaltılık",
+      "description": "UUID'nin tiresiz 32 küçük harfli onaltılık basamak olarak gösterimi.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "Onaltılığı kopyala",
+      "invalidMessage": "Tam olarak 32 onaltılık basamak girin."
+    },
+    "decimal": {
+      "label": "Ondalık",
+      "description": "UUID'nin 10 tabanında işaretsiz tek bir 128 bit tam sayı olarak yorumlanması.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "Ondalığı kopyala",
+      "invalidMessage": "0 ile 340282366920938463463374607431768211455 arasında bir tam sayı girin."
+    },
+    "octal": {
+      "label": "Sekizlik",
+      "description": "Aynı işaretsiz 128 bit değerin 8 tabanlı basamaklarla yazımı.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "Sekizliği kopyala",
+      "invalidMessage": "UUID 128 bit aralığında, 0 ile 7 arasında sekizlik basamaklar girin."
+    },
+    "binary": {
+      "label": "İkilik",
+      "description": "UUID değerinin sabit genişlikli 128 bit ikilik görünümü.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "İkiliği kopyala",
+      "invalidMessage": "Yalnızca 0 ve 1 kullanarak en fazla 128 ikilik basamak girin."
+    }
+  }
+}

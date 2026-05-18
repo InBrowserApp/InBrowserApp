@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "转换器操作",
+  "generateUuidLabel": "生成 UUID",
+  "loadSampleLabel": "加载示例",
+  "clearAllLabel": "全部清除",
+  "copiedLabel": "已复制",
+  "invalidValueTitle": "值无效",
+  "invalidValueDescription": "复制转换后的值之前，请先修正高亮字段。",
+  "cryptoUnavailableTitle": "安全随机 UUID 不可用",
+  "cryptoUnavailableDescription": "此浏览器未提供 Web Crypto 随机值。请加载示例，或改为粘贴 UUID。",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "规范 UUID 文本。支持花括号、URN 前缀、大写以及紧凑的 32 位十六进制输入。",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "复制 UUID",
+      "invalidMessage": "请输入由 32 个十六进制数字组成的 UUID，可选择使用标准连字符分组。"
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "UUID 的 16 个原始字节对应的标准补位 Base64。支持 URL 安全输入。",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "复制 Base64",
+      "invalidMessage": "请输入可解码为恰好 16 字节的 Base64。"
+    },
+    "hex": {
+      "label": "十六进制",
+      "description": "UUID 表示为不带连字符的 32 个小写十六进制数字。",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "复制十六进制",
+      "invalidMessage": "请输入恰好 32 个十六进制数字。"
+    },
+    "decimal": {
+      "label": "十进制",
+      "description": "将 UUID 解释为一个以 10 为基数的无符号 128 位整数。",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "复制十进制",
+      "invalidMessage": "请输入 0 到 340282366920938463463374607431768211455 之间的整数。"
+    },
+    "octal": {
+      "label": "八进制",
+      "description": "同一个无符号 128 位值，用八进制数字表示。",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "复制八进制",
+      "invalidMessage": "请输入 0 到 7 的八进制数字，并保持在 UUID 128 位范围内。"
+    },
+    "binary": {
+      "label": "二进制",
+      "description": "UUID 值的固定宽度 128 位二进制视图。",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "复制二进制",
+      "invalidMessage": "请输入最多 128 个二进制数字，且只能使用 0 和 1。"
+    }
+  }
+}

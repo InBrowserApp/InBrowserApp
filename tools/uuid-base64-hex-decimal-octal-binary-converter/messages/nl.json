@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "Converteracties",
+  "generateUuidLabel": "UUID genereren",
+  "loadSampleLabel": "Voorbeeld laden",
+  "clearAllLabel": "Alles wissen",
+  "copiedLabel": "Gekopieerd",
+  "invalidValueTitle": "Ongeldige waarde",
+  "invalidValueDescription": "Corrigeer het gemarkeerde veld voordat je geconverteerde waarden kopieert.",
+  "cryptoUnavailableTitle": "Veilige willekeurige UUID niet beschikbaar",
+  "cryptoUnavailableDescription": "Deze browser stelt geen willekeurige Web Crypto-waarden beschikbaar. Laad het voorbeeld of plak in plaats daarvan een UUID.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "Canonieke UUID-tekst. Accolades, URN-prefixen, hoofdletters en compacte invoer met 32 hex-tekens worden geaccepteerd.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "UUID kopiëren",
+      "invalidMessage": "Voer een UUID in als 32 hexadecimale cijfers, eventueel met de standaardgroepen met koppeltekens."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Standaard gepadde Base64 voor de 16 ruwe bytes van de UUID. URL-veilige invoer wordt geaccepteerd.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Base64 kopiëren",
+      "invalidMessage": "Voer Base64 in die decodeert naar exact 16 bytes."
+    },
+    "hex": {
+      "label": "Hexadecimaal",
+      "description": "De UUID als 32 kleine hexadecimale cijfers zonder koppeltekens.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "Hex kopiëren",
+      "invalidMessage": "Voer exact 32 hexadecimale cijfers in."
+    },
+    "decimal": {
+      "label": "Decimaal",
+      "description": "De UUID geïnterpreteerd als één unsigned 128-bit integer in grondtal 10.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "Decimaal kopiëren",
+      "invalidMessage": "Voer een integer in van 0 tot en met 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "Octaal",
+      "description": "Dezelfde unsigned 128-bit waarde geschreven met cijfers in grondtal 8.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "Octaal kopiëren",
+      "invalidMessage": "Voer octale cijfers van 0 tot 7 in binnen het 128-bit bereik van UUID."
+    },
+    "binary": {
+      "label": "Binair",
+      "description": "Een binaire weergave met vaste breedte van 128 bits van de UUID-waarde.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "Binair kopiëren",
+      "invalidMessage": "Voer maximaal 128 binaire cijfers in en gebruik alleen 0 en 1."
+    }
+  }
+}

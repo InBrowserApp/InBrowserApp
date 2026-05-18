@@ -184,6 +184,7 @@
     "@tool/url-component-encoder-decoder": "workspace:*",
     "@tool/url-parser-builder": "workspace:*",
     "@tool/user-agent-parser": "workspace:*",
+    "@tool/uuid-base64-hex-decimal-octal-binary-converter": "workspace:*",
     "@tool/uuid-v3-generator": "workspace:*",
     "@tool/uuid-v4-generator": "workspace:*",
     "@tool/uuid-validator": "workspace:*",

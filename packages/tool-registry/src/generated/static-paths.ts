@@ -16286,6 +16286,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "ar",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "de",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "en",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "es",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "fr",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "he",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "hi",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "id",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "it",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "ja",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "ko",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "ms",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "nl",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "no",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "pl",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "pt",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "ru",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "sv",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "th",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "tr",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "vi",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "uuid-v3-generator",
     language: "ar",
   },

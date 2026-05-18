@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "Azioni del convertitore",
+  "generateUuidLabel": "Genera UUID",
+  "loadSampleLabel": "Carica esempio",
+  "clearAllLabel": "Cancella tutto",
+  "copiedLabel": "Copiato",
+  "invalidValueTitle": "Valore non valido",
+  "invalidValueDescription": "Correggi il campo evidenziato prima di copiare i valori convertiti.",
+  "cryptoUnavailableTitle": "UUID casuale sicuro non disponibile",
+  "cryptoUnavailableDescription": "Questo browser non espone i valori casuali di Web Crypto. Carica l'esempio o incolla invece un UUID.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "Testo UUID canonico. Sono accettati parentesi graffe, prefissi URN, maiuscole e input compatto a 32 cifre esadecimali.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "Copia UUID",
+      "invalidMessage": "Inserisci un UUID come 32 cifre esadecimali, facoltativamente con i gruppi standard separati da trattini."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Base64 standard con padding per i 16 byte grezzi dell'UUID. L'input URL-safe è accettato.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Copia Base64",
+      "invalidMessage": "Inserisci Base64 che decodifichi esattamente in 16 byte."
+    },
+    "hex": {
+      "label": "Esadecimale",
+      "description": "L'UUID come 32 cifre esadecimali minuscole senza trattini.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "Copia esadecimale",
+      "invalidMessage": "Inserisci esattamente 32 cifre esadecimali."
+    },
+    "decimal": {
+      "label": "Decimale",
+      "description": "L'UUID interpretato come un singolo intero senza segno a 128 bit in base 10.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "Copia decimale",
+      "invalidMessage": "Inserisci un intero da 0 a 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "Ottale",
+      "description": "Lo stesso valore senza segno a 128 bit scritto con cifre in base 8.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "Copia ottale",
+      "invalidMessage": "Inserisci cifre ottali da 0 a 7 entro l'intervallo UUID a 128 bit."
+    },
+    "binary": {
+      "label": "Binario",
+      "description": "Una vista binaria a larghezza fissa di 128 bit del valore UUID.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "Copia binario",
+      "invalidMessage": "Inserisci fino a 128 cifre binarie usando solo 0 e 1."
+    }
+  }
+}

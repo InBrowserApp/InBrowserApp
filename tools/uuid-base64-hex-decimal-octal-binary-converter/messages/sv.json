@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "Konverteraråtgärder",
+  "generateUuidLabel": "Generera UUID",
+  "loadSampleLabel": "Läs in exempel",
+  "clearAllLabel": "Rensa allt",
+  "copiedLabel": "Kopierat",
+  "invalidValueTitle": "Ogiltigt värde",
+  "invalidValueDescription": "Åtgärda det markerade fältet innan du kopierar konverterade värden.",
+  "cryptoUnavailableTitle": "Säkert slumpmässigt UUID är inte tillgängligt",
+  "cryptoUnavailableDescription": "Den här webbläsaren exponerar inte slumpvärden från Web Crypto. Läs in exemplet eller klistra in ett UUID i stället.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "Kanonisk UUID-text. Klamrar, URN-prefix, versaler och kompakt inmatning med 32 hextecken accepteras.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "Kopiera UUID",
+      "invalidMessage": "Ange ett UUID som 32 hexadecimala siffror, eventuellt med de vanliga bindestrecksgrupperna."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Standardutfyllt Base64 för UUID:ets 16 råa byte. URL-säker inmatning accepteras.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Kopiera Base64",
+      "invalidMessage": "Ange Base64 som avkodas till exakt 16 byte."
+    },
+    "hex": {
+      "label": "Hexadecimal",
+      "description": "UUID:et som 32 hexadecimala siffror med gemener utan bindestreck.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "Kopiera hex",
+      "invalidMessage": "Ange exakt 32 hexadecimala siffror."
+    },
+    "decimal": {
+      "label": "Decimal",
+      "description": "UUID:et tolkat som ett osignerat 128-bitars heltal i bas 10.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "Kopiera decimal",
+      "invalidMessage": "Ange ett heltal från 0 till 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "Oktal",
+      "description": "Samma osignerade 128-bitarsvärde skrivet med siffror i bas 8.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "Kopiera oktal",
+      "invalidMessage": "Ange oktala siffror från 0 till 7 inom UUID:ets 128-bitarsintervall."
+    },
+    "binary": {
+      "label": "Binär",
+      "description": "En binär vy med fast bredd på 128 bitar av UUID-värdet.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "Kopiera binärt",
+      "invalidMessage": "Ange upp till 128 binära siffror med endast 0 och 1."
+    }
+  }
+}

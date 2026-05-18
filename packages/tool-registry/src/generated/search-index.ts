@@ -22199,6 +22199,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "uuid-base64-hex-decimal-octal-binary-converter",
+    category: "web",
+    icon: "binary",
+    tags: [
+      "uuid",
+      "base64",
+      "hex",
+      "decimal",
+      "octal",
+      "binary",
+      "converter",
+      "identifier",
+    ],
+    locales: {
+      ar: {
+        name: "محول UUID Base64 والسداسي والعشري والثماني والثنائي",
+        description:
+          "حوّل قيم UUID من وإلى Base64 والسداسي والعشري والثماني والقيم الثنائية ذات 128 بت داخل متصفحك.",
+      },
+      de: {
+        name: "UUID Base64 Hex Dezimal Oktal Binär Konverter",
+        description:
+          "Konvertieren Sie UUIDs in Ihrem Browser nach und von Base64, hexadezimalen, dezimalen, oktalen und 128-Bit-Binärwerten.",
+      },
+      en: {
+        name: "UUID Base64 Hex Decimal Octal Binary Converter",
+        description:
+          "Convert UUIDs to and from Base64, hexadecimal, decimal, octal, and 128-bit binary values in your browser.",
+      },
+      es: {
+        name: "Conversor de UUID Base64 Hexadecimal Decimal Octal Binario",
+        description:
+          "Convierte UUID a y desde valores Base64, hexadecimales, decimales, octales y binarios de 128 bits en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur UUID Base64 Hex Décimal Octal Binaire",
+        description:
+          "Convertissez des UUID vers et depuis Base64, l’hexadécimal, le décimal, l’octal et des valeurs binaires 128 bits dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר UUID Base64 Hex Decimal Octal Binary",
+        description:
+          "המר UUID-ים אל Base64, הקסדצימלי, עשרוני, אוקטלי וערכים בינאריים של 128 סיביות, ומהם, בדפדפן שלך.",
+      },
+      hi: {
+        name: "UUID Base64 Hex Decimal Octal Binary Converter",
+        description:
+          "अपने ब्राउज़र में UUID को Base64, hexadecimal, decimal, octal, और 128-bit binary मानों में बदलें और वापस परिवर्तित करें.",
+      },
+      id: {
+        name: "Konverter UUID Base64 Hex Desimal Oktal Biner",
+        description:
+          "Konversi UUID ke dan dari nilai Base64, heksadesimal, desimal, oktal, dan biner 128-bit di browser Anda.",
+      },
+      it: {
+        name: "Convertitore UUID Base64 esadecimale decimale ottale binario",
+        description:
+          "Converti UUID da e verso valori Base64, esadecimali, decimali, ottali e binari a 128 bit nel browser.",
+      },
+      ja: {
+        name: "UUID Base64 Hex Decimal Octal Binary Converter",
+        description:
+          "ブラウザー内で UUID を Base64、16 進数、10 進数、8 進数、128 ビット 2 進数の値に相互変換します。",
+      },
+      ko: {
+        name: "UUID Base64 Hex Decimal Octal Binary Converter",
+        description:
+          "브라우저에서 UUID를 Base64, 16진수, 10진수, 8진수, 128비트 이진 값으로 변환하거나 되돌립니다.",
+      },
+      ms: {
+        name: "Penukar UUID Base64 Heksadesimal Perpuluhan Perlapanan Perduaan",
+        description:
+          "Tukar UUID kepada dan daripada nilai Base64, heksadesimal, perpuluhan, perlapanan, dan perduaan 128-bit dalam pelayar anda.",
+      },
+      nl: {
+        name: "UUID Base64 Hex Decimaal Octaal Binair Converter",
+        description:
+          "Converteer UUID's van en naar Base64, hexadecimale, decimale, octale en 128-bit binaire waarden in je browser.",
+      },
+      no: {
+        name: "UUID Base64 Hex Desimal Oktal Binær-konverterer",
+        description:
+          "Konverter UUID-er til og fra Base64, heksadesimal, desimal, oktal og 128-biters binære verdier i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter UUID Base64 Hex Decimal Octal Binary",
+        description:
+          "Konwertuj UUID do i z wartości Base64, szesnastkowych, dziesiętnych, ósemkowych i 128-bitowych binarnych w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de UUID Base64 Hexadecimal Decimal Octal Binário",
+        description:
+          "Converta UUIDs de e para Base64, hexadecimal, decimal, octal e valores binários de 128 bits no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер UUID Base64 Hex Decimal Octal Binary",
+        description:
+          "Преобразуйте UUID в Base64, шестнадцатеричные, десятичные, восьмеричные и 128-битные двоичные значения и обратно прямо в браузере.",
+      },
+      sv: {
+        name: "UUID Base64 Hex Decimal Oktal Binär Konverterare",
+        description:
+          "Konvertera UUID:er till och från Base64, hexadecimal, decimal, oktal och 128-bitars binära värden i din webbläsare.",
+      },
+      th: {
+        name: "ตัวแปลง UUID Base64 Hex Decimal Octal Binary",
+        description:
+          "แปลง UUID ไปและกลับจากค่า Base64, เลขฐานสิบหก, ฐานสิบ, ฐานแปด และไบนารี 128-bit ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "UUID Base64 Onaltılık Ondalık Sekizlik İkilik Dönüştürücü",
+        description:
+          "UUID'leri tarayıcınızda Base64, onaltılık, ondalık, sekizlik ve 128 bit ikilik değerlere dönüştürün.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi UUID Base64 Hex Decimal Octal Binary",
+        description:
+          "Chuyển đổi UUID sang và từ Base64, hệ thập lục phân, thập phân, bát phân và giá trị nhị phân 128-bit ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "UUID Base64 十六进制十进制八进制二进制转换器",
+        description:
+          "在浏览器中将 UUID 与 Base64、十六进制、十进制、八进制和 128 位二进制值相互转换。",
+      },
+      "zh-TW": {
+        name: "UUID Base64 十六進位十進位八進位二進位轉換器",
+        description:
+          "在瀏覽器中將 UUID 轉換為 Base64、十六進位、十進位、八進位和 128-bit 二進位值，或從這些格式轉回 UUID。",
+      },
+    },
+  },
+  {
     slug: "uuid-v3-generator",
     category: "developer",
     icon: "binary",

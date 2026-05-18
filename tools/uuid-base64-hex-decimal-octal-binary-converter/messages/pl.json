@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "Akcje konwertera",
+  "generateUuidLabel": "Wygeneruj UUID",
+  "loadSampleLabel": "Wczytaj przykład",
+  "clearAllLabel": "Wyczyść wszystko",
+  "copiedLabel": "Skopiowano",
+  "invalidValueTitle": "Nieprawidłowa wartość",
+  "invalidValueDescription": "Popraw wyróżnione pole przed skopiowaniem przekonwertowanych wartości.",
+  "cryptoUnavailableTitle": "Bezpieczny losowy UUID niedostępny",
+  "cryptoUnavailableDescription": "Ta przeglądarka nie udostępnia losowych wartości Web Crypto. Wczytaj przykład albo wklej UUID.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "Kanoniczny tekst UUID. Akceptowane są nawiasy klamrowe, prefiksy URN, wielkie litery i zwarty zapis 32-hex.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "Kopiuj UUID",
+      "invalidMessage": "Wpisz UUID jako 32 cyfry szesnastkowe, opcjonalnie ze standardowymi grupami rozdzielonymi myślnikami."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Standardowy Base64 z dopełnieniem dla 16 surowych bajtów UUID. Akceptowane jest wejście bezpieczne dla URL.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Kopiuj Base64",
+      "invalidMessage": "Wpisz Base64, który dekoduje się dokładnie do 16 bajtów."
+    },
+    "hex": {
+      "label": "Szesnastkowy",
+      "description": "UUID jako 32 małe cyfry szesnastkowe bez myślników.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "Kopiuj hex",
+      "invalidMessage": "Wpisz dokładnie 32 cyfry szesnastkowe."
+    },
+    "decimal": {
+      "label": "Dziesiętny",
+      "description": "UUID zinterpretowany jako jedna nieujemna 128-bitowa liczba całkowita w systemie dziesiętnym.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "Kopiuj dziesiętny",
+      "invalidMessage": "Wpisz liczbę całkowitą od 0 do 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "Ósemkowy",
+      "description": "Ta sama nieujemna wartość 128-bitowa zapisana cyframi systemu ósemkowego.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "Kopiuj ósemkowy",
+      "invalidMessage": "Wpisz cyfry ósemkowe od 0 do 7 mieszczące się w 128-bitowym zakresie UUID."
+    },
+    "binary": {
+      "label": "Binarny",
+      "description": "Stałej szerokości 128-bitowy widok binarny wartości UUID.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "Kopiuj binarny",
+      "invalidMessage": "Wpisz maksymalnie 128 cyfr binarnych, używając tylko 0 i 1."
+    }
+  }
+}

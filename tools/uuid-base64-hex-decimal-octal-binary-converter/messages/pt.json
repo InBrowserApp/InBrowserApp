@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "Ações do conversor",
+  "generateUuidLabel": "Gerar UUID",
+  "loadSampleLabel": "Carregar exemplo",
+  "clearAllLabel": "Limpar tudo",
+  "copiedLabel": "Copiado",
+  "invalidValueTitle": "Valor inválido",
+  "invalidValueDescription": "Corrija o campo destacado antes de copiar os valores convertidos.",
+  "cryptoUnavailableTitle": "UUID aleatório seguro indisponível",
+  "cryptoUnavailableDescription": "Este navegador não expõe valores aleatórios do Web Crypto. Carregue o exemplo ou cole um UUID.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "Texto UUID canônico. Chaves, prefixos URN, maiúsculas e entrada compacta de 32 hexadecimais são aceitos.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "Copiar UUID",
+      "invalidMessage": "Insira um UUID como 32 dígitos hexadecimais, opcionalmente com os grupos de hifens padrão."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Base64 padrão com preenchimento para os 16 bytes brutos do UUID. Entrada segura para URL é aceita.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Copiar Base64",
+      "invalidMessage": "Insira Base64 que decodifique para exatamente 16 bytes."
+    },
+    "hex": {
+      "label": "Hexadecimal",
+      "description": "O UUID como 32 dígitos hexadecimais minúsculos sem hifens.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "Copiar hex",
+      "invalidMessage": "Insira exatamente 32 dígitos hexadecimais."
+    },
+    "decimal": {
+      "label": "Decimal",
+      "description": "O UUID interpretado como um inteiro sem sinal de 128 bits em base 10.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "Copiar decimal",
+      "invalidMessage": "Insira um inteiro de 0 ate 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "Octal",
+      "description": "O mesmo valor sem sinal de 128 bits escrito com dígitos de base 8.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "Copiar octal",
+      "invalidMessage": "Insira dígitos octais de 0 a 7 dentro do intervalo UUID de 128 bits."
+    },
+    "binary": {
+      "label": "Binário",
+      "description": "Uma visualização binária de largura fixa de 128 bits do valor do UUID.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "Copiar binário",
+      "invalidMessage": "Insira até 128 dígitos binários usando apenas 0 e 1."
+    }
+  }
+}

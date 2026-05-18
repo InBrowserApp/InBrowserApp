@@ -237,6 +237,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/url-component-encoder-decoder/page"),
   "url-parser-builder": () => import("@tool/url-parser-builder/page"),
   "user-agent-parser": () => import("@tool/user-agent-parser/page"),
+  "uuid-base64-hex-decimal-octal-binary-converter": () =>
+    import("@tool/uuid-base64-hex-decimal-octal-binary-converter/page"),
   "uuid-v3-generator": () => import("@tool/uuid-v3-generator/page"),
   "uuid-v4-generator": () => import("@tool/uuid-v4-generator/page"),
   "uuid-validator": () => import("@tool/uuid-validator/page"),
