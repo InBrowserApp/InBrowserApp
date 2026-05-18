@@ -1,0 +1,4 @@
+{
+  "name": "UUID v4 批量生成器",
+  "description": "在浏览器中本地生成多条随机 RFC 4122 UUID v4 标识符。"
+}

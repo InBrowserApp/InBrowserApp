@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "אפשרויות",
+  "optionsDescription": "בחרו כמה מזהי UUID v4 ליצור באצווה הנוכחית.",
+  "countLabel": "כמות",
+  "countHelp": "צרו בין 1 ל-1000 UUIDs באצווה אחת.",
+  "resultsTitle": "תוצאות",
+  "resultsDescription": "כל אצווה נוצרת מקומית באמצעות אקראיות מאובטחת של הדפדפן, מוכנה להעתקה או להורדה.",
+  "resultsPlaceholder": "ערכי UUID v4 שנוצרו יופיעו כאן...",
+  "copyResultsLabel": "העתקת UUIDs",
+  "copiedLabel": "הועתק",
+  "downloadResultsLabel": "הורדת התוצאה",
+  "regenerateLabel": "יצירה מחדש",
+  "generationError": "יצירת UUID אקראי מאובטח אינה זמינה בדפדפן הזה."
+}

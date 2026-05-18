@@ -1,0 +1,4 @@
+{
+  "name": "UUID v4-massegenerator",
+  "description": "Generer grupper med tilfeldige RFC 4122 UUID v4-identifikatorer lokalt i nettleseren."
+}

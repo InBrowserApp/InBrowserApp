@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Alternativ",
+  "optionsDescription": "Välj hur många UUID v4-identifierare som ska genereras i den aktuella satsen.",
+  "countLabel": "Antal",
+  "countHelp": "Generera mellan 1 och 1000 UUID:er i en enda sats.",
+  "resultsTitle": "Resultat",
+  "resultsDescription": "Varje sats genereras lokalt med säker slumpgenerering i webbläsaren, redo att kopieras eller laddas ned.",
+  "resultsPlaceholder": "Genererade UUID v4-värden visas här...",
+  "copyResultsLabel": "Kopiera UUID:er",
+  "copiedLabel": "Kopierat",
+  "downloadResultsLabel": "Ladda ned resultat",
+  "regenerateLabel": "Generera igen",
+  "generationError": "Säker slumpbaserad UUID-generering är inte tillgänglig i den här webbläsaren."
+}

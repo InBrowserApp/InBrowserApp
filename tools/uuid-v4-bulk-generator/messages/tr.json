@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Seçenekler",
+  "optionsDescription": "Geçerli toplu işlemde kaç UUID v4 tanımlayıcısı oluşturulacağını seçin.",
+  "countLabel": "Adet",
+  "countHelp": "Tek bir toplu işlemde 1 ile 1000 arasında UUID oluşturun.",
+  "resultsTitle": "Sonuçlar",
+  "resultsDescription": "Her toplu işlem, kopyalamaya veya indirmeye hazır şekilde güvenli tarayıcı rastgeleliğiyle yerel olarak oluşturulur.",
+  "resultsPlaceholder": "Oluşturulan UUID v4 değerleri burada görünecek...",
+  "copyResultsLabel": "UUID'leri kopyala",
+  "copiedLabel": "Kopyalandı",
+  "downloadResultsLabel": "Sonucu indir",
+  "regenerateLabel": "Yeniden oluştur",
+  "generationError": "Bu tarayıcıda güvenli rastgele UUID oluşturma kullanılamıyor."
+}

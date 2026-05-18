@@ -1,0 +1,4 @@
+{
+  "name": "Gerador em massa de UUID v4",
+  "description": "Gere lotes de identificadores UUID v4 aleatórios RFC 4122 localmente no seu navegador."
+}

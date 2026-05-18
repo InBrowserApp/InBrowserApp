@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Pilihan",
+  "optionsDescription": "Pilih bilangan pengecam UUID v4 untuk dijana dalam kelompok semasa.",
+  "countLabel": "Bilangan",
+  "countHelp": "Jana antara 1 hingga 1000 UUID dalam satu kelompok.",
+  "resultsTitle": "Keputusan",
+  "resultsDescription": "Setiap kelompok dijana secara setempat dengan kerawakan pelayar yang selamat, sedia untuk disalin atau dimuat turun.",
+  "resultsPlaceholder": "Nilai UUID v4 yang dijana akan muncul di sini...",
+  "copyResultsLabel": "Salin UUID",
+  "copiedLabel": "Disalin",
+  "downloadResultsLabel": "Muat turun keputusan",
+  "regenerateLabel": "Jana semula",
+  "generationError": "Penjanaan UUID rawak yang selamat tidak tersedia dalam pelayar ini."
+}

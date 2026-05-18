@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Opsi",
+  "optionsDescription": "Pilih jumlah pengenal UUID v4 yang akan dibuat dalam kumpulan saat ini.",
+  "countLabel": "Jumlah",
+  "countHelp": "Buat antara 1 dan 1000 UUID dalam satu kumpulan.",
+  "resultsTitle": "Hasil",
+  "resultsDescription": "Setiap kumpulan dibuat secara lokal dengan keacakan browser yang aman, siap disalin atau diunduh.",
+  "resultsPlaceholder": "Nilai UUID v4 yang dibuat akan muncul di sini...",
+  "copyResultsLabel": "Salin UUID",
+  "copiedLabel": "Disalin",
+  "downloadResultsLabel": "Unduh hasil",
+  "regenerateLabel": "Buat ulang",
+  "generationError": "Pembuatan UUID acak yang aman tidak tersedia di browser ini."
+}

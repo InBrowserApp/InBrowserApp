@@ -1,0 +1,4 @@
+{
+  "name": "UUID v4 Bulk Generator",
+  "description": "Generate batches of random RFC 4122 UUID v4 identifiers locally in your browser."
+}
