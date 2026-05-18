@@ -74,25 +74,17 @@ function ImageToPdfClient({ messages }: ImageToPdfClientProps) {
           />
         </div>
 
-        <div className="flex min-w-0 flex-col gap-6">
-          <SettingsCard
-            canGenerate={state.canGenerate}
-            disabled={state.isGenerating || state.isAddingImages}
-            isGenerating={state.isGenerating}
-            messages={messages}
-            onGenerate={() => {
-              void state.generatePdf()
-            }}
-            onOptionsChange={state.setOptions}
-            options={state.options}
-          />
-          <ResultCard
-            isGenerating={state.isGenerating}
-            messages={messages}
-            progress={state.generationProgress}
-            result={state.result}
-          />
-        </div>
+        <SettingsCard
+          canGenerate={state.canGenerate}
+          disabled={state.isGenerating || state.isAddingImages}
+          isGenerating={state.isGenerating}
+          messages={messages}
+          onGenerate={() => {
+            void state.generatePdf()
+          }}
+          onOptionsChange={state.setOptions}
+          options={state.options}
+        />
       </div>
 
       {state.error ? (
@@ -102,6 +94,13 @@ function ImageToPdfClient({ messages }: ImageToPdfClientProps) {
           <AlertDescription>{state.error}</AlertDescription>
         </Alert>
       ) : null}
+
+      <ResultCard
+        isGenerating={state.isGenerating}
+        messages={messages}
+        progress={state.generationProgress}
+        result={state.result}
+      />
     </div>
   )
 }

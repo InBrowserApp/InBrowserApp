@@ -74,7 +74,7 @@ function SettingsCard({
   }
 
   return (
-    <Card className="xl:sticky xl:top-24">
+    <Card className="self-start">
       <CardHeader>
         <CardTitle>{messages.settingsTitle}</CardTitle>
         <CardDescription>{messages.settingsDescription}</CardDescription>
