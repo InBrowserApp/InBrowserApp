@@ -1,0 +1,4 @@
+{
+  "name": "Validateur d'UUID",
+  "description": "Validez des chaînes UUID, inspectez leur version et leur variante, et confirmez que les identifiants utilisent une mise en forme canonique compatible avec les RFC."
+}

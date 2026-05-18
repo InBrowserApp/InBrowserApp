@@ -236,6 +236,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/url-component-encoder-decoder/page"),
   "url-parser-builder": () => import("@tool/url-parser-builder/page"),
   "user-agent-parser": () => import("@tool/user-agent-parser/page"),
+  "uuid-validator": () => import("@tool/uuid-validator/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),

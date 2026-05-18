@@ -1,0 +1,4 @@
+{
+  "name": "Trình xác thực UUID",
+  "description": "Xác thực chuỗi UUID, kiểm tra phiên bản và biến thể, đồng thời xác nhận rằng mã định danh dùng định dạng tương thích RFC chuẩn."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Walidator UUID",
+  "description": "Sprawdzaj poprawność ciągów UUID, analizuj ich wersję i wariant oraz potwierdzaj, że identyfikatory używają kanonicznego formatowania zgodnego z RFC."
+}

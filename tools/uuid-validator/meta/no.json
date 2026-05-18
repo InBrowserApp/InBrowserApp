@@ -1,0 +1,4 @@
+{
+  "name": "UUID-validator",
+  "description": "Valider UUID-strenger, undersøk versjon og variant, og bekreft at identifikatorer bruker kanonisk RFC-kompatibel formatering."
+}

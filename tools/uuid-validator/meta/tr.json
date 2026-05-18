@@ -1,0 +1,4 @@
+{
+  "name": "UUID Doğrulayıcı",
+  "description": "UUID dizelerini doğrulayın, sürümünü ve varyantını inceleyin ve tanımlayıcıların kanonik RFC uyumlu biçimlendirme kullandığını onaylayın."
+}

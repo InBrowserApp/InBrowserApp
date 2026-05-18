@@ -1,0 +1,4 @@
+{
+  "name": "UUID Validator",
+  "description": "Validate UUID strings, inspect their version and variant, and confirm that identifiers use canonical RFC-compatible formatting."
+}
