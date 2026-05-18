@@ -74,6 +74,9 @@ describe("uuid converter core", () => {
         ${SAMPLE_VALUES.binary.slice(64)} `
       ).values.uuid
     ).toBe(SAMPLE_UUID)
+    expect(
+      convertUuidValue("decimal", ` ${SAMPLE_VALUES.decimal} `).values.uuid
+    ).toBe(SAMPLE_UUID)
   })
 
   test("keeps nil and max UUID values inside the 128-bit range", () => {
