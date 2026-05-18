@@ -14619,6 +14619,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "pdf-page-organizer",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "organize", "reorder", "rotate", "delete", "offline"],
+    locales: {
+      ar: {
+        name: "منظم صفحات PDF",
+        description:
+          "أعد ترتيب صفحات PDF ودوّرها واحذفها محليًا في متصفحك قبل تصدير ملف PDF جديد.",
+      },
+      de: {
+        name: "PDF Page Organizer",
+        description:
+          "Ordne PDF-Seiten lokal in deinem Browser neu an, drehe oder entferne sie, bevor du eine neue PDF exportierst.",
+      },
+      en: {
+        name: "PDF Page Organizer",
+        description:
+          "Reorder, rotate, and remove PDF pages locally in your browser before exporting a new PDF.",
+      },
+      es: {
+        name: "PDF Page Organizer",
+        description:
+          "Reordena, gira y elimina páginas de un PDF localmente en tu navegador antes de exportar un PDF nuevo.",
+      },
+      fr: {
+        name: "Organiseur de pages PDF",
+        description:
+          "Réorganisez, faites pivoter et supprimez des pages PDF localement dans votre navigateur avant d’exporter un nouveau PDF.",
+      },
+      he: {
+        name: "PDF Page Organizer",
+        description:
+          "סדר מחדש, סובב והסר עמודים מ-PDF באופן מקומי בדפדפן שלך לפני ייצוא PDF חדש.",
+      },
+      hi: {
+        name: "PDF पेज ऑर्गनाइज़र",
+        description:
+          "नया PDF निर्यात करने से पहले अपने ब्राउज़र में ही PDF पेजों का क्रम बदलें, घुमाएँ और हटाएँ।",
+      },
+      id: {
+        name: "Pengatur Halaman PDF",
+        description:
+          "Susun ulang, putar, dan hapus halaman PDF secara lokal di browser Anda sebelum mengekspor PDF baru.",
+      },
+      it: {
+        name: "PDF Page Organizer",
+        description:
+          "Riordina, ruota e rimuovi le pagine di un PDF localmente nel browser prima di esportare un nuovo PDF.",
+      },
+      ja: {
+        name: "PDF Page Organizer",
+        description:
+          "新しい PDF として書き出す前に、PDF のページをブラウザ内でローカルに並べ替え、回転、削除できます。",
+      },
+      ko: {
+        name: "PDF Page Organizer",
+        description:
+          "브라우저에서 로컬로 새 PDF를 내보내기 전에 PDF 페이지 순서를 바꾸고, 회전하고, 제거하세요.",
+      },
+      ms: {
+        name: "Penyusun Halaman PDF",
+        description:
+          "Susun semula, putar dan alih keluar halaman PDF secara setempat dalam pelayar anda sebelum mengeksport PDF baharu.",
+      },
+      nl: {
+        name: "PDF-pagina-organizer",
+        description:
+          "Herschik, draai en verwijder PDF-pagina's lokaal in je browser voordat je een nieuwe PDF exporteert.",
+      },
+      no: {
+        name: "PDF Page Organizer",
+        description:
+          "Endre rekkefølge på, roter og fjern PDF-sider lokalt i nettleseren før du eksporterer en ny PDF.",
+      },
+      pl: {
+        name: "PDF Page Organizer",
+        description:
+          "Zmieniaj kolejność, obracaj i usuwaj strony PDF lokalnie w przeglądarce przed wyeksportowaniem nowego PDF.",
+      },
+      pt: {
+        name: "Organizador de páginas PDF",
+        description:
+          "Reordene, gire e remova páginas de um PDF localmente no seu navegador antes de exportar um novo PDF.",
+      },
+      ru: {
+        name: "Организатор страниц PDF",
+        description:
+          "Меняйте порядок, поворачивайте и удаляйте страницы PDF локально в браузере перед экспортом нового PDF.",
+      },
+      sv: {
+        name: "PDF Page Organizer",
+        description:
+          "Ordna om, rotera och ta bort PDF-sidor lokalt i webbläsaren innan du exporterar en ny PDF.",
+      },
+      th: {
+        name: "PDF Page Organizer",
+        description:
+          "จัดเรียง หมุน และลบหน้าของ PDF ภายในเบราว์เซอร์ของคุณก่อนส่งออกเป็น PDF ใหม่",
+      },
+      tr: {
+        name: "PDF Page Organizer",
+        description:
+          "Yeni bir PDF dışa aktarmadan önce PDF sayfalarını tarayıcınızda yerel olarak yeniden sıralayın, döndürün ve kaldırın.",
+      },
+      vi: {
+        name: "Trình sắp xếp trang PDF",
+        description:
+          "Sắp xếp lại, xoay và xóa các trang PDF ngay trong trình duyệt của bạn trước khi xuất một PDF mới.",
+      },
+      "zh-CN": {
+        name: "PDF Page Organizer",
+        description:
+          "在浏览器本地重新排序、旋转和移除 PDF 页面，然后导出新的 PDF。",
+      },
+      "zh-TW": {
+        name: "PDF 頁面整理器",
+        description:
+          "在瀏覽器本機重新排序、旋轉和移除 PDF 頁面，再匯出新的 PDF。",
+      },
+    },
+  },
+  {
     slug: "pdf-text-extractor",
     category: "pdf",
     icon: "file-text",
