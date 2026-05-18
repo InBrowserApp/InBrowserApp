@@ -1,0 +1,4 @@
+{
+  "name": "Generatore in blocco di UUID v4",
+  "description": "Genera batch di identificatori UUID v4 RFC 4122 casuali localmente nel tuo browser."
+}

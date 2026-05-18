@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Tùy chọn",
+  "optionsDescription": "Chọn số lượng định danh UUID v4 cần tạo trong lô hiện tại.",
+  "countLabel": "Số lượng",
+  "countHelp": "Tạo từ 1 đến 1000 UUID trong một lô.",
+  "resultsTitle": "Kết quả",
+  "resultsDescription": "Mỗi lô được tạo cục bộ bằng nguồn ngẫu nhiên bảo mật của trình duyệt, sẵn sàng để sao chép hoặc tải xuống.",
+  "resultsPlaceholder": "Các giá trị UUID v4 đã tạo sẽ xuất hiện ở đây…",
+  "copyResultsLabel": "Sao chép UUID",
+  "copiedLabel": "Đã sao chép",
+  "downloadResultsLabel": "Tải kết quả xuống",
+  "regenerateLabel": "Tạo lại",
+  "generationError": "Trình duyệt này không hỗ trợ tạo UUID ngẫu nhiên bảo mật."
+}

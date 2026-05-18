@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Opties",
+  "optionsDescription": "Kies hoeveel UUID v4-identificatoren je in de huidige batch wilt genereren.",
+  "countLabel": "Aantal",
+  "countHelp": "Genereer tussen 1 en 1000 UUID's in een enkele batch.",
+  "resultsTitle": "Resultaten",
+  "resultsDescription": "Elke batch wordt lokaal gegenereerd met veilige browser-randomness, klaar om te kopieren of te downloaden.",
+  "resultsPlaceholder": "Gegenereerde UUID v4-waarden verschijnen hier…",
+  "copyResultsLabel": "UUID's kopieren",
+  "copiedLabel": "Gekopieerd",
+  "downloadResultsLabel": "Resultaat downloaden",
+  "regenerateLabel": "Opnieuw genereren",
+  "generationError": "Veilige willekeurige UUID-generatie is niet beschikbaar in deze browser."
+}

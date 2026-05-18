@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "ตัวเลือก",
+  "optionsDescription": "เลือกจำนวนตัวระบุ UUID v4 ที่ต้องการสร้างในชุดปัจจุบัน",
+  "countLabel": "จำนวน",
+  "countHelp": "สร้าง UUID ได้ตั้งแต่ 1 ถึง 1000 รายการในชุดเดียว",
+  "resultsTitle": "ผลลัพธ์",
+  "resultsDescription": "แต่ละชุดถูกสร้างภายในเครื่องด้วยการสุ่มที่ปลอดภัยจากเบราว์เซอร์ พร้อมสำหรับคัดลอกหรือดาวน์โหลด",
+  "resultsPlaceholder": "ค่า UUID v4 ที่สร้างแล้วจะแสดงที่นี่…",
+  "copyResultsLabel": "คัดลอก UUID",
+  "copiedLabel": "คัดลอกแล้ว",
+  "downloadResultsLabel": "ดาวน์โหลดผลลัพธ์",
+  "regenerateLabel": "สร้างใหม่",
+  "generationError": "เบราว์เซอร์นี้ไม่รองรับการสร้าง UUID แบบสุ่มที่ปลอดภัย"
+}

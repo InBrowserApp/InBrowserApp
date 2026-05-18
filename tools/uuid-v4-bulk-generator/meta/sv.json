@@ -1,0 +1,4 @@
+{
+  "name": "UUID v4 Bulk Generator",
+  "description": "Generera satser med slumpmässiga RFC 4122 UUID v4-identifierare lokalt i din webbläsare."
+}

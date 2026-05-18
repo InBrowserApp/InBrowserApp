@@ -22462,6 +22462,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "uuid-v4-bulk-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid-v4",
+      "id",
+      "identifier",
+      "unique",
+      "random",
+      "generator",
+      "bulk",
+      "token",
+    ],
+    locales: {
+      ar: {
+        name: "مولد UUID v4 بالجملة",
+        description:
+          "أنشئ دفعات من معرفات UUID v4 العشوائية المتوافقة مع RFC 4122 محليًا في متصفحك.",
+      },
+      de: {
+        name: "UUID v4 Bulk-Generator",
+        description:
+          "Erzeuge Stapel zufälliger RFC 4122 UUID v4-Kennungen lokal in deinem Browser.",
+      },
+      en: {
+        name: "UUID v4 Bulk Generator",
+        description:
+          "Generate batches of random RFC 4122 UUID v4 identifiers locally in your browser.",
+      },
+      es: {
+        name: "Generador masivo de UUID v4",
+        description:
+          "Genera lotes de identificadores UUID v4 aleatorios RFC 4122 localmente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur d'UUID v4 en masse",
+        description:
+          "Générez localement dans votre navigateur des lots d'UUID v4 aléatoires conformes aux RFC 4122/RFC 9562.",
+      },
+      he: {
+        name: "מחולל UUID v4 בכמויות",
+        description:
+          "צרו אצוות של מזהי UUID v4 אקראיים לפי RFC 4122 באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "UUID v4 बल्क जेनरेटर",
+        description:
+          "अपने ब्राउजर में स्थानीय रूप से यादृच्छिक RFC 4122 UUID v4 पहचानकर्ताओं के बैच जनरेट करें.",
+      },
+      id: {
+        name: "Generator Massal UUID v4",
+        description:
+          "Buat kumpulan pengenal UUID v4 acak RFC 4122 secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Generatore in blocco di UUID v4",
+        description:
+          "Genera batch di identificatori UUID v4 RFC 4122 casuali localmente nel tuo browser.",
+      },
+      ja: {
+        name: "UUID v4 一括生成ツール",
+        description:
+          "ランダムな RFC 4122 UUID v4 識別子のバッチを、ブラウザー内でローカルに生成します。",
+      },
+      ko: {
+        name: "UUID v4 대량 생성기",
+        description:
+          "브라우저에서 로컬로 임의의 RFC 4122 UUID v4 식별자를 일괄 생성하세요.",
+      },
+      ms: {
+        name: "Penjana Pukal UUID v4",
+        description:
+          "Jana kelompok pengecam UUID v4 RFC 4122 rawak secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "UUID v4-bulkgenerator",
+        description:
+          "Genereer batches willekeurige RFC 4122 UUID v4-identificatoren lokaal in je browser.",
+      },
+      no: {
+        name: "UUID v4-massegenerator",
+        description:
+          "Generer grupper med tilfeldige RFC 4122 UUID v4-identifikatorer lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Generator masowy UUID v4",
+        description:
+          "Generuj lokalnie w przegladarce partie losowych identyfikatorow RFC 4122 UUID v4.",
+      },
+      pt: {
+        name: "Gerador em massa de UUID v4",
+        description:
+          "Gere lotes de identificadores UUID v4 aleatórios RFC 4122 localmente no seu navegador.",
+      },
+      ru: {
+        name: "Массовый генератор UUID v4",
+        description:
+          "Создавайте пакеты случайных идентификаторов RFC 4122 UUID v4 локально в браузере.",
+      },
+      sv: {
+        name: "UUID v4 Bulk Generator",
+        description:
+          "Generera satser med slumpmässiga RFC 4122 UUID v4-identifierare lokalt i din webbläsare.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง UUID v4 แบบเป็นชุด",
+        description:
+          "สร้างชุดตัวระบุ UUID v4 แบบสุ่มตาม RFC 4122 ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "UUID v4 Toplu Oluşturucu",
+        description:
+          "Rastgele RFC 4122 UUID v4 tanımlayıcılarını tarayıcınızda yerel olarak toplu şekilde oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo hàng loạt UUID v4",
+        description:
+          "Tạo hàng loạt định danh UUID v4 ngẫu nhiên theo RFC 4122 cục bộ trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "UUID v4 批量生成器",
+        description: "在浏览器中本地生成多条随机 RFC 4122 UUID v4 标识符。",
+      },
+      "zh-TW": {
+        name: "UUID v4 批次產生器",
+        description: "在瀏覽器中本機產生多筆隨機 RFC 4122 UUID v4 識別碼。",
+      },
+    },
+  },
+  {
     slug: "uuid-v4-generator",
     category: "developer",
     icon: "lock",
@@ -46327,6 +46458,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "UUID v3 產生器",
         description:
           "從命名空間 UUID 和名稱產生確定性的命名式 UUID v3 識別碼。",
+      },
+    },
+  },
+  "uuid-v4-bulk-generator": {
+    slug: "uuid-v4-bulk-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid-v4",
+      "id",
+      "identifier",
+      "unique",
+      "random",
+      "generator",
+      "bulk",
+      "token",
+    ],
+    locales: {
+      ar: {
+        name: "مولد UUID v4 بالجملة",
+        description:
+          "أنشئ دفعات من معرفات UUID v4 العشوائية المتوافقة مع RFC 4122 محليًا في متصفحك.",
+      },
+      de: {
+        name: "UUID v4 Bulk-Generator",
+        description:
+          "Erzeuge Stapel zufälliger RFC 4122 UUID v4-Kennungen lokal in deinem Browser.",
+      },
+      en: {
+        name: "UUID v4 Bulk Generator",
+        description:
+          "Generate batches of random RFC 4122 UUID v4 identifiers locally in your browser.",
+      },
+      es: {
+        name: "Generador masivo de UUID v4",
+        description:
+          "Genera lotes de identificadores UUID v4 aleatorios RFC 4122 localmente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur d'UUID v4 en masse",
+        description:
+          "Générez localement dans votre navigateur des lots d'UUID v4 aléatoires conformes aux RFC 4122/RFC 9562.",
+      },
+      he: {
+        name: "מחולל UUID v4 בכמויות",
+        description:
+          "צרו אצוות של מזהי UUID v4 אקראיים לפי RFC 4122 באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "UUID v4 बल्क जेनरेटर",
+        description:
+          "अपने ब्राउजर में स्थानीय रूप से यादृच्छिक RFC 4122 UUID v4 पहचानकर्ताओं के बैच जनरेट करें.",
+      },
+      id: {
+        name: "Generator Massal UUID v4",
+        description:
+          "Buat kumpulan pengenal UUID v4 acak RFC 4122 secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Generatore in blocco di UUID v4",
+        description:
+          "Genera batch di identificatori UUID v4 RFC 4122 casuali localmente nel tuo browser.",
+      },
+      ja: {
+        name: "UUID v4 一括生成ツール",
+        description:
+          "ランダムな RFC 4122 UUID v4 識別子のバッチを、ブラウザー内でローカルに生成します。",
+      },
+      ko: {
+        name: "UUID v4 대량 생성기",
+        description:
+          "브라우저에서 로컬로 임의의 RFC 4122 UUID v4 식별자를 일괄 생성하세요.",
+      },
+      ms: {
+        name: "Penjana Pukal UUID v4",
+        description:
+          "Jana kelompok pengecam UUID v4 RFC 4122 rawak secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "UUID v4-bulkgenerator",
+        description:
+          "Genereer batches willekeurige RFC 4122 UUID v4-identificatoren lokaal in je browser.",
+      },
+      no: {
+        name: "UUID v4-massegenerator",
+        description:
+          "Generer grupper med tilfeldige RFC 4122 UUID v4-identifikatorer lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Generator masowy UUID v4",
+        description:
+          "Generuj lokalnie w przegladarce partie losowych identyfikatorow RFC 4122 UUID v4.",
+      },
+      pt: {
+        name: "Gerador em massa de UUID v4",
+        description:
+          "Gere lotes de identificadores UUID v4 aleatórios RFC 4122 localmente no seu navegador.",
+      },
+      ru: {
+        name: "Массовый генератор UUID v4",
+        description:
+          "Создавайте пакеты случайных идентификаторов RFC 4122 UUID v4 локально в браузере.",
+      },
+      sv: {
+        name: "UUID v4 Bulk Generator",
+        description:
+          "Generera satser med slumpmässiga RFC 4122 UUID v4-identifierare lokalt i din webbläsare.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง UUID v4 แบบเป็นชุด",
+        description:
+          "สร้างชุดตัวระบุ UUID v4 แบบสุ่มตาม RFC 4122 ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "UUID v4 Toplu Oluşturucu",
+        description:
+          "Rastgele RFC 4122 UUID v4 tanımlayıcılarını tarayıcınızda yerel olarak toplu şekilde oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo hàng loạt UUID v4",
+        description:
+          "Tạo hàng loạt định danh UUID v4 ngẫu nhiên theo RFC 4122 cục bộ trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "UUID v4 批量生成器",
+        description: "在浏览器中本地生成多条随机 RFC 4122 UUID v4 标识符。",
+      },
+      "zh-TW": {
+        name: "UUID v4 批次產生器",
+        description: "在瀏覽器中本機產生多筆隨機 RFC 4122 UUID v4 識別碼。",
       },
     },
   },

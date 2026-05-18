@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "الخيارات",
+  "optionsDescription": "اختر عدد معرفات UUID v4 التي تريد إنشاءها في الدفعة الحالية.",
+  "countLabel": "العدد",
+  "countHelp": "أنشئ من 1 إلى 1000 UUID في دفعة واحدة.",
+  "resultsTitle": "النتائج",
+  "resultsDescription": "تُنشأ كل دفعة محليًا باستخدام عشوائية آمنة من المتصفح، وتكون جاهزة للنسخ أو التنزيل.",
+  "resultsPlaceholder": "ستظهر قيم UUID v4 المُنشأة هنا…",
+  "copyResultsLabel": "نسخ UUIDs",
+  "copiedLabel": "تم النسخ",
+  "downloadResultsLabel": "تنزيل النتيجة",
+  "regenerateLabel": "إعادة الإنشاء",
+  "generationError": "إنشاء UUID العشوائي الآمن غير متاح في هذا المتصفح."
+}

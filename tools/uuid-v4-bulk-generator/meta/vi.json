@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo hàng loạt UUID v4",
+  "description": "Tạo hàng loạt định danh UUID v4 ngẫu nhiên theo RFC 4122 cục bộ trong trình duyệt của bạn."
+}

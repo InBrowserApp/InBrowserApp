@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Alternativer",
+  "optionsDescription": "Velg hvor mange UUID v4-identifikatorer som skal genereres i den gjeldende gruppen.",
+  "countLabel": "Antall",
+  "countHelp": "Generer mellom 1 og 1000 UUID-er i én gruppe.",
+  "resultsTitle": "Resultater",
+  "resultsDescription": "Hver gruppe genereres lokalt med sikker nettlesertilfeldighet, klar til å kopieres eller lastes ned.",
+  "resultsPlaceholder": "Genererte UUID v4-verdier vises her …",
+  "copyResultsLabel": "Kopier UUID-er",
+  "copiedLabel": "Kopiert",
+  "downloadResultsLabel": "Last ned resultat",
+  "regenerateLabel": "Generer på nytt",
+  "generationError": "Sikker generering av tilfeldige UUID-er er ikke tilgjengelig i denne nettleseren."
+}

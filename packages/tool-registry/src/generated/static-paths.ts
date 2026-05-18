@@ -16470,6 +16470,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "uuid-v4-bulk-generator",
+    language: "ar",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "de",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "en",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "es",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "fr",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "he",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "hi",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "id",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "it",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "ja",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "ko",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "ms",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "nl",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "no",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "pl",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "pt",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "ru",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "sv",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "th",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "tr",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "vi",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-v4-bulk-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "uuid-v4-generator",
     language: "ar",
   },

@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Opciones",
+  "optionsDescription": "Elige cuántos identificadores UUID v4 generar en el lote actual.",
+  "countLabel": "Cantidad",
+  "countHelp": "Genera entre 1 y 1000 UUID en un solo lote.",
+  "resultsTitle": "Resultados",
+  "resultsDescription": "Cada lote se genera localmente con aleatoriedad segura del navegador, listo para copiar o descargar.",
+  "resultsPlaceholder": "Los valores UUID v4 generados aparecerán aquí…",
+  "copyResultsLabel": "Copiar UUID",
+  "copiedLabel": "Copiado",
+  "downloadResultsLabel": "Descargar resultado",
+  "regenerateLabel": "Regenerar",
+  "generationError": "La generación segura de UUID aleatorios no está disponible en este navegador."
+}

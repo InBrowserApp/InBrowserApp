@@ -1,0 +1,4 @@
+{
+  "name": "UUID v4 대량 생성기",
+  "description": "브라우저에서 로컬로 임의의 RFC 4122 UUID v4 식별자를 일괄 생성하세요."
+}

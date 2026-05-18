@@ -1,0 +1,14 @@
+{
+  "optionsTitle": "Options",
+  "optionsDescription": "Choose how many UUID v4 identifiers to generate in the current batch.",
+  "countLabel": "Count",
+  "countHelp": "Generate between 1 and 1000 UUIDs in a single batch.",
+  "resultsTitle": "Results",
+  "resultsDescription": "Each batch is generated locally with secure browser randomness, ready to copy or download.",
+  "resultsPlaceholder": "Generated UUID v4 values will appear here…",
+  "copyResultsLabel": "Copy UUIDs",
+  "copiedLabel": "Copied",
+  "downloadResultsLabel": "Download result",
+  "regenerateLabel": "Regenerate",
+  "generationError": "Secure random UUID generation is unavailable in this browser."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "UUID v4 批次產生器",
+  "description": "在瀏覽器中本機產生多筆隨機 RFC 4122 UUID v4 識別碼。"
+}
