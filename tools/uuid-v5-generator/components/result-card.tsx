@@ -47,6 +47,8 @@ function UuidV5ResultCard({
             autoComplete="off"
             value={uuid}
             readOnly
+            spellCheck={false}
+            dir="ltr"
             placeholder={
               hasNamespaceError
                 ? messages.resultInvalidPlaceholder

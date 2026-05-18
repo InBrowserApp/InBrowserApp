@@ -77,6 +77,9 @@ describe("UuidV5GeneratorClient", () => {
       "value",
       "6ba7b810-9dad-11d1-80b4-00c04fd430c8"
     )
+    expect(
+      screen.getByLabelText(messages.namespaceLabel).getAttribute("dir")
+    ).toBe("ltr")
     expect(screen.getByLabelText(messages.nameLabel)).toHaveProperty(
       "value",
       "example.com"
@@ -87,6 +90,7 @@ describe("UuidV5GeneratorClient", () => {
         "value",
         "cfbff0d1-9375-5685-968c-48ce8b15ae17"
       )
+      expect(getResultInput().getAttribute("dir")).toBe("ltr")
     })
   })
 

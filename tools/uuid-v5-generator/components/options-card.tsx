@@ -85,6 +85,7 @@ function UuidV5OptionsCard({
               autoComplete="off"
               spellCheck={false}
               aria-invalid={namespaceError ? true : undefined}
+              dir="ltr"
               className="font-mono text-sm"
               onChange={(event) => {
                 onNamespaceChange(event.target.value)
