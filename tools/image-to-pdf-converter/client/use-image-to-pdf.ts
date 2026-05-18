@@ -91,7 +91,7 @@ function useImageToPdf(messages: ImageToPdfMessages) {
   )
 
   async function addFiles(files: readonly File[]) {
-    if (!files.length || isGenerating) {
+    if (!files.length || isGenerating || isAddingImages) {
       return
     }
 

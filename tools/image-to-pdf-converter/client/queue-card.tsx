@@ -2,6 +2,7 @@ import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
@@ -49,21 +50,24 @@ function QueueCard({
 }: QueueCardProps) {
   return (
     <Card>
-      <CardHeader className="flex-row items-start justify-between gap-4">
+      <CardHeader>
         <div className="min-w-0">
           <CardTitle>{messages.queueTitle}</CardTitle>
           <CardDescription>{messages.queueDescription}</CardDescription>
         </div>
-        <Button
-          disabled={disabled || items.length === 0}
-          onClick={onClear}
-          size="sm"
-          type="button"
-          variant="outline"
-        >
-          <Trash2 data-icon="inline-start" />
-          {messages.clearAllLabel}
-        </Button>
+        <CardAction>
+          <Button
+            className="max-w-full text-center whitespace-normal"
+            disabled={disabled || items.length === 0}
+            onClick={onClear}
+            size="sm"
+            type="button"
+            variant="outline"
+          >
+            <Trash2 data-icon="inline-start" />
+            {messages.clearAllLabel}
+          </Button>
+        </CardAction>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         {items.length ? (

@@ -112,6 +112,7 @@ function UploadCard({
           disabled={disabled}
           id={inputId}
           multiple
+          name="image-to-pdf-images"
           onChange={(event) => {
             onFilesSelected(Array.from(event.target.files ?? []))
             event.target.value = ""
@@ -124,6 +125,7 @@ function UploadCard({
           {messages.localOnlyNote}
         </p>
         <Button
+          className="max-w-full text-center whitespace-normal"
           disabled={disabled}
           onClick={() => {
             document.getElementById(inputId)?.click()

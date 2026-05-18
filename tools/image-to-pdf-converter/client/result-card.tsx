@@ -47,7 +47,7 @@ function ResultCard({
         <CardTitle>{messages.resultTitle}</CardTitle>
         <CardDescription>{messages.resultDescription}</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col gap-4">
+      <CardContent aria-live="polite" className="flex flex-col gap-4">
         {result ? (
           <div className="flex flex-col gap-4 rounded-lg border bg-background p-4">
             <div>
@@ -105,7 +105,7 @@ function ResultCard({
             role="progressbar"
           >
             <div
-              className="h-full rounded-full bg-primary transition-all"
+              className="h-full rounded-full bg-primary transition-[width] motion-reduce:transition-none"
               style={{ width: `${progressValue}%` }}
             />
           </div>
@@ -113,7 +113,7 @@ function ResultCard({
       </CardContent>
       {resultUrl && result ? (
         <CardFooter className="justify-end">
-          <Button asChild>
+          <Button asChild className="max-w-full text-center whitespace-normal">
             <a download={result.fileName} href={resultUrl}>
               <Download data-icon="inline-start" />
               {messages.downloadPdfLabel}

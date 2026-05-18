@@ -111,6 +111,7 @@ function SettingsCard({
           <Field>
             <FieldLabel>{messages.orientationLabel}</FieldLabel>
             <ToggleGroup
+              aria-label={messages.orientationLabel}
               className="grid w-full grid-cols-1 sm:grid-cols-3"
               disabled={disabled}
               onValueChange={(value) => {
@@ -141,6 +142,7 @@ function SettingsCard({
             <FieldLabel>{messages.fitModeLabel}</FieldLabel>
             <FieldDescription>{messages.fitModeDescription}</FieldDescription>
             <ToggleGroup
+              aria-label={messages.fitModeLabel}
               className="grid w-full grid-cols-1 sm:grid-cols-2"
               disabled={disabled}
               onValueChange={(value) => {
@@ -165,6 +167,7 @@ function SettingsCard({
             <FieldLabel>{messages.qualityLabel}</FieldLabel>
             <FieldDescription>{messages.qualityDescription}</FieldDescription>
             <ToggleGroup
+              aria-label={messages.qualityLabel}
               className="grid w-full grid-cols-1 sm:grid-cols-3"
               disabled={disabled}
               onValueChange={(value) => {
@@ -211,11 +214,13 @@ function SettingsCard({
                 value={[options.marginMm]}
               />
               <Input
+                autoComplete="off"
                 disabled={disabled}
                 id="image-to-pdf-margin"
                 inputMode="numeric"
                 max={MAX_MARGIN_MM}
                 min={MIN_MARGIN_MM}
+                name="image-to-pdf-margin"
                 onChange={(event) => {
                   updateOption(
                     "marginMm",
@@ -230,9 +235,17 @@ function SettingsCard({
         </FieldGroup>
       </CardContent>
       <CardFooter className="justify-end">
-        <Button disabled={!canGenerate} onClick={onGenerate} type="button">
+        <Button
+          className="max-w-full text-center whitespace-normal"
+          disabled={!canGenerate}
+          onClick={onGenerate}
+          type="button"
+        >
           {isGenerating ? (
-            <LoaderCircle className="animate-spin" data-icon="inline-start" />
+            <LoaderCircle
+              className="motion-safe:animate-spin"
+              data-icon="inline-start"
+            />
           ) : (
             <FileText data-icon="inline-start" />
           )}
