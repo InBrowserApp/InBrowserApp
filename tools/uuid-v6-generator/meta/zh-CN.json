@@ -1,0 +1,4 @@
+{
+  "name": "UUID v6 生成器",
+  "description": "在浏览器本地生成可排序、基于时间的 UUID v6 标识符。"
+}

@@ -23502,6 +23502,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "uuid-v6-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuidv6",
+      "id",
+      "identifier",
+      "unique",
+      "sortable",
+      "timestamp",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولد UUID v6",
+        description: "أنشئ معرفات UUID v6 زمنية وقابلة للفرز محليًا في متصفحك.",
+      },
+      de: {
+        name: "UUID-v6-Generator",
+        description:
+          "Erzeuge sortierbare, zeitbasierte UUID-v6-Kennungen lokal in deinem Browser.",
+      },
+      en: {
+        name: "UUID v6 Generator",
+        description:
+          "Generate sortable, time-based UUID v6 identifiers locally in your browser.",
+      },
+      es: {
+        name: "Generador de UUID v6",
+        description:
+          "Genera identificadores UUID v6 ordenables y basados en tiempo localmente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur d'UUID v6",
+        description:
+          "Générez localement dans votre navigateur des identifiants UUID v6 triables et basés sur le temps.",
+      },
+      he: {
+        name: "מחולל UUID v6",
+        description:
+          "צרו מזהי UUID v6 מבוססי זמן וניתנים למיון באופן מקומי בדפדפן שלכם.",
+      },
+      hi: {
+        name: "UUID v6 जनरेटर",
+        description:
+          "अपने ब्राउज़र में स्थानीय रूप से सॉर्ट किए जा सकने वाले, समय-आधारित UUID v6 पहचानकर्ता जनरेट करें.",
+      },
+      id: {
+        name: "Generator UUID v6",
+        description:
+          "Buat pengenal UUID v6 berbasis waktu yang dapat diurutkan secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Generatore UUID v6",
+        description:
+          "Genera localmente nel browser identificatori UUID v6 ordinabili e basati sul tempo.",
+      },
+      ja: {
+        name: "UUID v6 生成ツール",
+        description:
+          "ソート可能な時刻ベースの UUID v6 識別子を、ブラウザー内でローカルに生成します。",
+      },
+      ko: {
+        name: "UUID v6 생성기",
+        description:
+          "정렬 가능한 시간 기반 UUID v6 식별자를 브라우저에서 로컬로 생성합니다.",
+      },
+      ms: {
+        name: "Penjana UUID v6",
+        description:
+          "Jana pengecam UUID v6 berasaskan masa yang boleh diisih secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "UUID v6-generator",
+        description:
+          "Genereer lokaal in je browser sorteerbare, tijdgebaseerde UUID v6-identificatiecodes.",
+      },
+      no: {
+        name: "UUID v6-generator",
+        description:
+          "Generer sorterbare, tidsbaserte UUID v6-identifikatorer lokalt i nettleseren din.",
+      },
+      pl: {
+        name: "Generator UUID v6",
+        description:
+          "Generuj sortowalne, oparte na czasie identyfikatory UUID v6 lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de UUID v6",
+        description:
+          "Gere identificadores UUID v6 ordenáveis e baseados em tempo localmente no seu navegador.",
+      },
+      ru: {
+        name: "Генератор UUID v6",
+        description:
+          "Генерируйте сортируемые идентификаторы UUID v6 на основе времени локально в браузере.",
+      },
+      sv: {
+        name: "UUID v6-generator",
+        description:
+          "Generera sorterbara, tidsbaserade UUID v6-identifierare lokalt i din webbläsare.",
+      },
+      th: {
+        name: "ตัวสร้าง UUID v6",
+        description:
+          "สร้างตัวระบุ UUID v6 แบบอิงเวลาและเรียงลำดับได้ภายในเบราว์เซอร์ของคุณ.",
+      },
+      tr: {
+        name: "UUID v6 Oluşturucu",
+        description:
+          "Sıralanabilir, zaman tabanlı UUID v6 tanımlayıcılarını tarayıcınızda yerel olarak oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo UUID v6",
+        description:
+          "Tạo mã định danh UUID v6 dựa trên thời gian, có thể sắp xếp, ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "UUID v6 生成器",
+        description: "在浏览器本地生成可排序、基于时间的 UUID v6 标识符。",
+      },
+      "zh-TW": {
+        name: "UUID v6 產生器",
+        description:
+          "在瀏覽器中於本機產生可排序、以時間為基礎的 UUID v6 識別碼。",
+      },
+    },
+  },
+  {
     slug: "uuid-validator",
     category: "developer",
     icon: "binary",
