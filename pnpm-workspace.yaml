@@ -40,6 +40,7 @@ catalog:
   "@tailwindcss/vite": ^4.1.18
   "@testing-library/react": ^16.3.2
   "@types/node": ^25.1.0
+  "@zip.js/zip.js": ^2.8.21
   "@types/papaparse": ^5.5.2
   "@types/qrcode": ^1.5.6
   "@types/figlet": ^1.7.0

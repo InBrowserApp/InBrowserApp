@@ -34,6 +34,7 @@ describe("ToolIcon", () => {
 
   test("renders all known icon types", () => {
     const icons = [
+      "archive",
       "binary",
       "braces",
       "credit-card",
