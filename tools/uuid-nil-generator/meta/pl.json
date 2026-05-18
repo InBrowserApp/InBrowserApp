@@ -1,0 +1,4 @@
+{
+  "name": "Generator Nil UUID",
+  "description": "Wygeneruj i skopiuj znormalizowany, złożony z samych zer nil UUID do symboli zastępczych, wartości domyślnych i wartości sentinel."
+}

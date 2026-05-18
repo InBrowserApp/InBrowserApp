@@ -1,0 +1,4 @@
+{
+  "name": "Generateur d'UUID nil",
+  "description": "Generez et copiez l'UUID nil standardise compose uniquement de zeros pour les espaces reserves, les valeurs par defaut et les valeurs sentinelles."
+}

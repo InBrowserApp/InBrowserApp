@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Nil UUID",
+  "valueDescription": "Standartlaştırılmış tamamı sıfır UUID'yi sisteminizin beklediği gösterimde kopyalayın.",
+  "canonicalLabel": "Kanonik UUID",
+  "rawHexLabel": "32 haneli hex",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "UUID'yi kopyala",
+  "copyHexLabel": "Hex'i kopyala",
+  "copyUrnLabel": "URN'yi kopyala",
+  "copiedLabel": "Kopyalandı",
+  "detailsTitle": "Referans",
+  "detailsDescription": "Nil UUID, rastgele bir tanımlayıcı değil, sabit bir sentinel değerdir.",
+  "allBitsLabel": "Bitler",
+  "allBitsValue": "128 sıfır bit",
+  "versionLabel": "Sürüm",
+  "versionValue": "Yok",
+  "variantLabel": "Varyant",
+  "variantValue": "Yok",
+  "stableLabel": "Yeniden oluşturma",
+  "stableValue": "Her zaman aynı değeri döndürür"
+}

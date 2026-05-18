@@ -1,0 +1,21 @@
+{
+  "valueTitle": "UUID nil",
+  "valueDescription": "Sao chép UUID toàn số không theo tiêu chuẩn ở dạng biểu diễn mà hệ thống của bạn cần.",
+  "canonicalLabel": "UUID chuẩn tắc",
+  "rawHexLabel": "Hex 32 chữ số",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "Sao chép UUID",
+  "copyHexLabel": "Sao chép hex",
+  "copyUrnLabel": "Sao chép URN",
+  "copiedLabel": "Đã sao chép",
+  "detailsTitle": "Tham chiếu",
+  "detailsDescription": "UUID nil là một giá trị sentinel cố định, không phải mã định danh ngẫu nhiên.",
+  "allBitsLabel": "Bit",
+  "allBitsValue": "128 bit không",
+  "versionLabel": "Phiên bản",
+  "versionValue": "Không có",
+  "variantLabel": "Biến thể",
+  "variantValue": "Không có",
+  "stableLabel": "Tạo lại",
+  "stableValue": "Luôn trả về cùng một giá trị"
+}

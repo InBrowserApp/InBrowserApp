@@ -1,0 +1,21 @@
+{
+  "valueTitle": "UUID Nil",
+  "valueDescription": "Salin UUID standar yang seluruhnya nol dalam representasi yang diharapkan sistem Anda.",
+  "canonicalLabel": "UUID Kanonis",
+  "rawHexLabel": "Hex 32 digit",
+  "urnLabel": "URN UUID",
+  "copyUuidLabel": "Salin UUID",
+  "copyHexLabel": "Salin hex",
+  "copyUrnLabel": "Salin URN",
+  "copiedLabel": "Disalin",
+  "detailsTitle": "Referensi",
+  "detailsDescription": "UUID nil adalah nilai sentinel tetap, bukan pengidentifikasi acak.",
+  "allBitsLabel": "Bit",
+  "allBitsValue": "128 bit nol",
+  "versionLabel": "Versi",
+  "versionValue": "Tidak ada",
+  "variantLabel": "Varian",
+  "variantValue": "Tidak ada",
+  "stableLabel": "Regenerasi",
+  "stableValue": "Selalu mengembalikan nilai yang sama"
+}
