@@ -10950,6 +10950,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-page-number-adder",
+    language: "ar",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "de",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "en",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "es",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "fr",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "he",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "hi",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "id",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "it",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "ja",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "ko",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "ms",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "nl",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "no",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "pl",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "pt",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "ru",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "sv",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "th",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "tr",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "vi",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-page-organizer",
     language: "ar",
   },
