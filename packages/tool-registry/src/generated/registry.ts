@@ -14619,6 +14619,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-merger",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "merge", "document", "offline"],
+    locales: {
+      ar: {
+        name: "دمج ملفات PDF",
+        description:
+          "ادمج عدة ملفات PDF في مستند واحد يعمل داخل المتصفح فقط، مع معاينات، وعناصر تحكم في الترتيب، واسم ملف مخصص.",
+      },
+      de: {
+        name: "PDF Merger",
+        description:
+          "Führen Sie mehrere PDF-Dateien browserbasiert zu einem Dokument zusammen, mit Vorschau, Sortiersteuerung und eigenem Dateinamen.",
+      },
+      en: {
+        name: "PDF Merger",
+        description:
+          "Merge multiple PDF files into one browser-only document with previews, ordering controls, and a custom filename.",
+      },
+      es: {
+        name: "Fusionador de PDF",
+        description:
+          "Fusiona varios archivos PDF en un solo documento solo en el navegador, con vistas previas, controles de orden y un nombre de archivo personalizado.",
+      },
+      fr: {
+        name: "Fusionneur de PDF",
+        description:
+          "Fusionnez plusieurs fichiers PDF en un seul document dans le navigateur, avec aperçus, contrôles d'ordre et nom de fichier personnalisé.",
+      },
+      he: {
+        name: "מיזוג PDF",
+        description:
+          "מזגו כמה קובצי PDF למסמך אחד בדפדפן בלבד, עם תצוגות מקדימות, בקרות סדר ושם קובץ מותאם אישית.",
+      },
+      hi: {
+        name: "PDF मर्जर",
+        description:
+          "पूर्वावलोकन, क्रम नियंत्रण और कस्टम फ़ाइल नाम के साथ कई PDF फ़ाइलों को ब्राउज़र में ही एक दस्तावेज़ में मर्ज करें।",
+      },
+      id: {
+        name: "Penggabung PDF",
+        description:
+          "Gabungkan beberapa file PDF menjadi satu dokumen langsung di browser dengan pratinjau, kontrol urutan, dan nama file khusus.",
+      },
+      it: {
+        name: "Unisci PDF",
+        description:
+          "Unisci più file PDF in un unico documento solo nel browser, con anteprime, controlli di ordinamento e un nome file personalizzato.",
+      },
+      ja: {
+        name: "PDF Merger",
+        description:
+          "プレビュー、並べ替えコントロール、カスタムファイル名を使って、複数のPDFファイルをブラウザー内だけで1つの文書に結合します。",
+      },
+      ko: {
+        name: "PDF 병합",
+        description:
+          "미리보기, 순서 조정, 사용자 지정 파일 이름을 지원하여 여러 PDF 파일을 브라우저 안에서만 하나의 문서로 병합합니다.",
+      },
+      ms: {
+        name: "Penggabung PDF",
+        description:
+          "Gabungkan beberapa fail PDF menjadi satu dokumen dalam pelayar sahaja dengan pratonton, kawalan susunan, dan nama fail tersuai.",
+      },
+      nl: {
+        name: "PDF Merger",
+        description:
+          "Voeg meerdere PDF-bestanden samen tot een browser-only document met voorbeelden, sorteeropties en een aangepaste bestandsnaam.",
+      },
+      no: {
+        name: "PDF-sammenslåing",
+        description:
+          "Slå sammen flere PDF-filer til ett dokument direkte i nettleseren, med forhåndsvisninger, kontroller for rekkefølge og egendefinert filnavn.",
+      },
+      pl: {
+        name: "Scalanie PDF",
+        description:
+          "Scal wiele plików PDF w jeden dokument wyłącznie w przeglądarce, z podglądami, kontrolą kolejności i własną nazwą pliku.",
+      },
+      pt: {
+        name: "Combinador de PDF",
+        description:
+          "Combine vários arquivos PDF em um único documento somente no navegador, com prévias, controles de ordenação e um nome de arquivo personalizado.",
+      },
+      ru: {
+        name: "Объединение PDF",
+        description:
+          "Объединяйте несколько PDF-файлов в один документ только в браузере: с предпросмотром, управлением порядком и собственным именем файла.",
+      },
+      sv: {
+        name: "PDF-sammanslagning",
+        description:
+          "Slå ihop flera PDF-filer till ett webbläsarbaserat dokument med förhandsvisningar, ordningskontroller och ett eget filnamn.",
+      },
+      th: {
+        name: "รวมไฟล์ PDF",
+        description:
+          "รวมไฟล์ PDF หลายไฟล์เป็นเอกสารเดียวในเบราว์เซอร์เท่านั้น พร้อมตัวอย่าง ควบคุมลำดับ และตั้งชื่อไฟล์เองได้",
+      },
+      tr: {
+        name: "PDF Birleştirici",
+        description:
+          "Birden fazla PDF dosyasını önizlemeler, sıralama kontrolleri ve özel dosya adıyla yalnızca tarayıcıda çalışan tek bir belgede birleştirin.",
+      },
+      vi: {
+        name: "Ghép PDF",
+        description:
+          "Ghép nhiều tệp PDF thành một tài liệu chỉ trong trình duyệt với bản xem trước, điều khiển thứ tự và tên tệp tùy chỉnh.",
+      },
+      "zh-CN": {
+        name: "PDF 合并器",
+        description:
+          "在浏览器中将多个 PDF 文件合并为一个文档，支持预览、排序控制和自定义文件名。",
+      },
+      "zh-TW": {
+        name: "PDF 合併器",
+        description:
+          "在瀏覽器中將多個 PDF 檔案合併成一份文件，並提供預覽、排序控制和自訂檔名。",
+      },
+    },
+  },
+  {
     slug: "pgp-key-generator",
     category: "network",
     icon: "lock",
@@ -39132,6 +39255,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PDF Info Viewer",
         description:
           "在瀏覽器本機查看 PDF 中繼資料、頁數、版本、檔案詳細資訊與文件屬性。",
+      },
+    },
+  },
+  "pdf-merger": {
+    slug: "pdf-merger",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "merge", "document", "offline"],
+    locales: {
+      ar: {
+        name: "دمج ملفات PDF",
+        description:
+          "ادمج عدة ملفات PDF في مستند واحد يعمل داخل المتصفح فقط، مع معاينات، وعناصر تحكم في الترتيب، واسم ملف مخصص.",
+      },
+      de: {
+        name: "PDF Merger",
+        description:
+          "Führen Sie mehrere PDF-Dateien browserbasiert zu einem Dokument zusammen, mit Vorschau, Sortiersteuerung und eigenem Dateinamen.",
+      },
+      en: {
+        name: "PDF Merger",
+        description:
+          "Merge multiple PDF files into one browser-only document with previews, ordering controls, and a custom filename.",
+      },
+      es: {
+        name: "Fusionador de PDF",
+        description:
+          "Fusiona varios archivos PDF en un solo documento solo en el navegador, con vistas previas, controles de orden y un nombre de archivo personalizado.",
+      },
+      fr: {
+        name: "Fusionneur de PDF",
+        description:
+          "Fusionnez plusieurs fichiers PDF en un seul document dans le navigateur, avec aperçus, contrôles d'ordre et nom de fichier personnalisé.",
+      },
+      he: {
+        name: "מיזוג PDF",
+        description:
+          "מזגו כמה קובצי PDF למסמך אחד בדפדפן בלבד, עם תצוגות מקדימות, בקרות סדר ושם קובץ מותאם אישית.",
+      },
+      hi: {
+        name: "PDF मर्जर",
+        description:
+          "पूर्वावलोकन, क्रम नियंत्रण और कस्टम फ़ाइल नाम के साथ कई PDF फ़ाइलों को ब्राउज़र में ही एक दस्तावेज़ में मर्ज करें।",
+      },
+      id: {
+        name: "Penggabung PDF",
+        description:
+          "Gabungkan beberapa file PDF menjadi satu dokumen langsung di browser dengan pratinjau, kontrol urutan, dan nama file khusus.",
+      },
+      it: {
+        name: "Unisci PDF",
+        description:
+          "Unisci più file PDF in un unico documento solo nel browser, con anteprime, controlli di ordinamento e un nome file personalizzato.",
+      },
+      ja: {
+        name: "PDF Merger",
+        description:
+          "プレビュー、並べ替えコントロール、カスタムファイル名を使って、複数のPDFファイルをブラウザー内だけで1つの文書に結合します。",
+      },
+      ko: {
+        name: "PDF 병합",
+        description:
+          "미리보기, 순서 조정, 사용자 지정 파일 이름을 지원하여 여러 PDF 파일을 브라우저 안에서만 하나의 문서로 병합합니다.",
+      },
+      ms: {
+        name: "Penggabung PDF",
+        description:
+          "Gabungkan beberapa fail PDF menjadi satu dokumen dalam pelayar sahaja dengan pratonton, kawalan susunan, dan nama fail tersuai.",
+      },
+      nl: {
+        name: "PDF Merger",
+        description:
+          "Voeg meerdere PDF-bestanden samen tot een browser-only document met voorbeelden, sorteeropties en een aangepaste bestandsnaam.",
+      },
+      no: {
+        name: "PDF-sammenslåing",
+        description:
+          "Slå sammen flere PDF-filer til ett dokument direkte i nettleseren, med forhåndsvisninger, kontroller for rekkefølge og egendefinert filnavn.",
+      },
+      pl: {
+        name: "Scalanie PDF",
+        description:
+          "Scal wiele plików PDF w jeden dokument wyłącznie w przeglądarce, z podglądami, kontrolą kolejności i własną nazwą pliku.",
+      },
+      pt: {
+        name: "Combinador de PDF",
+        description:
+          "Combine vários arquivos PDF em um único documento somente no navegador, com prévias, controles de ordenação e um nome de arquivo personalizado.",
+      },
+      ru: {
+        name: "Объединение PDF",
+        description:
+          "Объединяйте несколько PDF-файлов в один документ только в браузере: с предпросмотром, управлением порядком и собственным именем файла.",
+      },
+      sv: {
+        name: "PDF-sammanslagning",
+        description:
+          "Slå ihop flera PDF-filer till ett webbläsarbaserat dokument med förhandsvisningar, ordningskontroller och ett eget filnamn.",
+      },
+      th: {
+        name: "รวมไฟล์ PDF",
+        description:
+          "รวมไฟล์ PDF หลายไฟล์เป็นเอกสารเดียวในเบราว์เซอร์เท่านั้น พร้อมตัวอย่าง ควบคุมลำดับ และตั้งชื่อไฟล์เองได้",
+      },
+      tr: {
+        name: "PDF Birleştirici",
+        description:
+          "Birden fazla PDF dosyasını önizlemeler, sıralama kontrolleri ve özel dosya adıyla yalnızca tarayıcıda çalışan tek bir belgede birleştirin.",
+      },
+      vi: {
+        name: "Ghép PDF",
+        description:
+          "Ghép nhiều tệp PDF thành một tài liệu chỉ trong trình duyệt với bản xem trước, điều khiển thứ tự và tên tệp tùy chỉnh.",
+      },
+      "zh-CN": {
+        name: "PDF 合并器",
+        description:
+          "在浏览器中将多个 PDF 文件合并为一个文档，支持预览、排序控制和自定义文件名。",
+      },
+      "zh-TW": {
+        name: "PDF 合併器",
+        description:
+          "在瀏覽器中將多個 PDF 檔案合併成一份文件，並提供預覽、排序控制和自訂檔名。",
       },
     },
   },
