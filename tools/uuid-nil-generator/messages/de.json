@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Nil-UUID",
+  "valueDescription": "Kopiere die standardisierte Null-UUID in der Darstellung, die dein System erwartet.",
+  "canonicalLabel": "Kanonische UUID",
+  "rawHexLabel": "32-stelliges hex",
+  "urnLabel": "UUID-URN",
+  "copyUuidLabel": "UUID kopieren",
+  "copyHexLabel": "hex kopieren",
+  "copyUrnLabel": "URN kopieren",
+  "copiedLabel": "Kopiert",
+  "detailsTitle": "Referenz",
+  "detailsDescription": "Die Nil-UUID ist ein fester Sentinel-Wert, kein zufälliger Bezeichner.",
+  "allBitsLabel": "Bits",
+  "allBitsValue": "128 Null-Bits",
+  "versionLabel": "Version",
+  "versionValue": "Keine",
+  "variantLabel": "Variante",
+  "variantValue": "Keine",
+  "stableLabel": "Neuerzeugung",
+  "stableValue": "Gibt immer denselben Wert zurück"
+}

@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Nil UUID",
+  "valueDescription": "मानकीकृत सभी-शून्य UUID को उस रूप में कॉपी करें जिसकी आपके सिस्टम को अपेक्षा है.",
+  "canonicalLabel": "Canonical UUID",
+  "rawHexLabel": "32-अंकीय hex",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "UUID कॉपी करें",
+  "copyHexLabel": "hex कॉपी करें",
+  "copyUrnLabel": "URN कॉपी करें",
+  "copiedLabel": "कॉपी किया गया",
+  "detailsTitle": "संदर्भ",
+  "detailsDescription": "nil UUID एक निश्चित सेंटिनल मान है, यादृच्छिक पहचानकर्ता नहीं.",
+  "allBitsLabel": "बिट्स",
+  "allBitsValue": "128 शून्य बिट्स",
+  "versionLabel": "संस्करण",
+  "versionValue": "कोई नहीं",
+  "variantLabel": "वैरिएंट",
+  "variantValue": "कोई नहीं",
+  "stableLabel": "रीजनरेशन",
+  "stableValue": "हमेशा वही मान लौटाता है"
+}

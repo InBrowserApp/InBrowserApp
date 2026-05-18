@@ -1,0 +1,4 @@
+{
+  "name": "Nil-UUID-Generator",
+  "description": "Erzeuge und kopiere die standardisierte Null-UUID mit lauter Nullen für Platzhalter, Standardwerte und Sentinel-Werte."
+}

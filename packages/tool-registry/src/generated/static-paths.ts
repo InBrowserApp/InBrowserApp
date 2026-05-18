@@ -16194,6 +16194,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "uuid-nil-generator",
+    language: "ar",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "de",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "en",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "es",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "fr",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "he",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "hi",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "id",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "it",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "ja",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "ko",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "ms",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "nl",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "no",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "pl",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "pt",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "ru",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "sv",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "th",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "tr",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "vi",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "uuid-validator",
     language: "ar",
   },

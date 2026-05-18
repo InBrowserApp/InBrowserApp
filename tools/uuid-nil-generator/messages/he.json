@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Nil UUID",
+  "valueDescription": "העתיקו את ה-UUID התקני שכולו אפסים בייצוג שהמערכת שלכם מצפה לו.",
+  "canonicalLabel": "UUID קנוני",
+  "rawHexLabel": "hex בן 32 ספרות",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "העתקת UUID",
+  "copyHexLabel": "העתקת hex",
+  "copyUrnLabel": "העתקת URN",
+  "copiedLabel": "הועתק",
+  "detailsTitle": "הפניה",
+  "detailsDescription": "ה-nil UUID הוא ערך sentinel קבוע, לא מזהה אקראי.",
+  "allBitsLabel": "ביטים",
+  "allBitsValue": "128 ביטים אפסיים",
+  "versionLabel": "גרסה",
+  "versionValue": "ללא",
+  "variantLabel": "וריאנט",
+  "variantValue": "ללא",
+  "stableLabel": "יצירה מחדש",
+  "stableValue": "מחזיר תמיד את אותו ערך"
+}
