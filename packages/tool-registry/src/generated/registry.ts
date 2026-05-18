@@ -14619,6 +14619,128 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-text-extractor",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "text", "extractor", "document", "offline"],
+    locales: {
+      ar: {
+        name: "PDF Text Extractor",
+        description:
+          "استخرج النص القابل للتحديد من ملفات PDF محليا في متصفحك وصدّره كنص عادي.",
+      },
+      de: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrahiere auswählbaren Text aus PDF-Dateien lokal in deinem Browser und exportiere ihn als reinen Text.",
+      },
+      en: {
+        name: "PDF Text Extractor",
+        description:
+          "Extract selectable text from PDF files locally in your browser and export it as plain text.",
+      },
+      es: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrae texto seleccionable de archivos PDF localmente en tu navegador y expórtalo como texto sin formato.",
+      },
+      fr: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrayez localement le texte sélectionnable de fichiers PDF dans votre navigateur et exportez-le en texte brut.",
+      },
+      he: {
+        name: "PDF Text Extractor",
+        description:
+          "חלצו טקסט ניתן לבחירה מקובצי PDF באופן מקומי בדפדפן ויצאו אותו כטקסט רגיל.",
+      },
+      hi: {
+        name: "PDF Text Extractor",
+        description:
+          "PDF फाइलों से चुनने योग्य टेक्स्ट को अपने ब्राउजर में स्थानीय रूप से निकालें और उसे plain text के रूप में export करें।",
+      },
+      id: {
+        name: "PDF Text Extractor",
+        description:
+          "Ekstrak teks yang dapat dipilih dari file PDF secara lokal di browser Anda dan ekspor sebagai teks biasa.",
+      },
+      it: {
+        name: "PDF Text Extractor",
+        description:
+          "Estrai testo selezionabile dai file PDF localmente nel browser ed esportalo come testo normale.",
+      },
+      ja: {
+        name: "PDF Text Extractor",
+        description:
+          "PDFファイルから選択可能なテキストをブラウザ内でローカルに抽出し、プレーンテキストとしてエクスポートします。",
+      },
+      ko: {
+        name: "PDF Text Extractor",
+        description:
+          "브라우저에서 PDF 파일의 선택 가능한 텍스트를 로컬로 추출하고 일반 텍스트로 내보냅니다.",
+      },
+      ms: {
+        name: "PDF Text Extractor",
+        description:
+          "Ekstrak teks boleh dipilih daripada fail PDF secara setempat dalam pelayar anda dan eksportkannya sebagai teks biasa.",
+      },
+      nl: {
+        name: "PDF Text Extractor",
+        description:
+          "Haal selecteerbare tekst lokaal in je browser uit PDF-bestanden en exporteer die als platte tekst.",
+      },
+      no: {
+        name: "PDF Text Extractor",
+        description:
+          "Trekk ut markerbar tekst fra PDF-filer lokalt i nettleseren din, og eksporter den som ren tekst.",
+      },
+      pl: {
+        name: "PDF Text Extractor",
+        description:
+          "Wyodrębniaj zaznaczalny tekst z plików PDF lokalnie w przeglądarce i eksportuj go jako zwykły tekst.",
+      },
+      pt: {
+        name: "PDF Text Extractor",
+        description:
+          "Extraia texto selecionável de arquivos PDF localmente no seu navegador e exporte como texto simples.",
+      },
+      ru: {
+        name: "PDF Text Extractor",
+        description:
+          "Извлекайте выделяемый текст из PDF-файлов локально в браузере и экспортируйте его как обычный текст.",
+      },
+      sv: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrahera markerbar text från PDF-filer lokalt i din webbläsare och exportera den som oformaterad text.",
+      },
+      th: {
+        name: "PDF Text Extractor",
+        description:
+          "ดึงข้อความที่เลือกได้จากไฟล์ PDF ภายในเบราว์เซอร์ของคุณ และส่งออกเป็นข้อความล้วน",
+      },
+      tr: {
+        name: "PDF Text Extractor",
+        description:
+          "PDF dosyalarından seçilebilir metni tarayıcınızda yerel olarak çıkarın ve düz metin olarak dışa aktarın.",
+      },
+      vi: {
+        name: "PDF Text Extractor",
+        description:
+          "Trích xuất văn bản có thể chọn từ tệp PDF ngay trong trình duyệt của bạn và xuất dưới dạng văn bản thuần túy.",
+      },
+      "zh-CN": {
+        name: "PDF 文本提取器",
+        description:
+          "在浏览器中本地提取 PDF 文件中的可选择文本，并导出为纯文本。",
+      },
+      "zh-TW": {
+        name: "PDF 文字擷取工具",
+        description: "在瀏覽器本機從 PDF 檔案擷取可選取文字，並匯出為純文字。",
+      },
+    },
+  },
+  {
     slug: "pgp-key-generator",
     category: "network",
     icon: "lock",
@@ -39132,6 +39254,128 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PDF Info Viewer",
         description:
           "在瀏覽器本機查看 PDF 中繼資料、頁數、版本、檔案詳細資訊與文件屬性。",
+      },
+    },
+  },
+  "pdf-text-extractor": {
+    slug: "pdf-text-extractor",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "text", "extractor", "document", "offline"],
+    locales: {
+      ar: {
+        name: "PDF Text Extractor",
+        description:
+          "استخرج النص القابل للتحديد من ملفات PDF محليا في متصفحك وصدّره كنص عادي.",
+      },
+      de: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrahiere auswählbaren Text aus PDF-Dateien lokal in deinem Browser und exportiere ihn als reinen Text.",
+      },
+      en: {
+        name: "PDF Text Extractor",
+        description:
+          "Extract selectable text from PDF files locally in your browser and export it as plain text.",
+      },
+      es: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrae texto seleccionable de archivos PDF localmente en tu navegador y expórtalo como texto sin formato.",
+      },
+      fr: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrayez localement le texte sélectionnable de fichiers PDF dans votre navigateur et exportez-le en texte brut.",
+      },
+      he: {
+        name: "PDF Text Extractor",
+        description:
+          "חלצו טקסט ניתן לבחירה מקובצי PDF באופן מקומי בדפדפן ויצאו אותו כטקסט רגיל.",
+      },
+      hi: {
+        name: "PDF Text Extractor",
+        description:
+          "PDF फाइलों से चुनने योग्य टेक्स्ट को अपने ब्राउजर में स्थानीय रूप से निकालें और उसे plain text के रूप में export करें।",
+      },
+      id: {
+        name: "PDF Text Extractor",
+        description:
+          "Ekstrak teks yang dapat dipilih dari file PDF secara lokal di browser Anda dan ekspor sebagai teks biasa.",
+      },
+      it: {
+        name: "PDF Text Extractor",
+        description:
+          "Estrai testo selezionabile dai file PDF localmente nel browser ed esportalo come testo normale.",
+      },
+      ja: {
+        name: "PDF Text Extractor",
+        description:
+          "PDFファイルから選択可能なテキストをブラウザ内でローカルに抽出し、プレーンテキストとしてエクスポートします。",
+      },
+      ko: {
+        name: "PDF Text Extractor",
+        description:
+          "브라우저에서 PDF 파일의 선택 가능한 텍스트를 로컬로 추출하고 일반 텍스트로 내보냅니다.",
+      },
+      ms: {
+        name: "PDF Text Extractor",
+        description:
+          "Ekstrak teks boleh dipilih daripada fail PDF secara setempat dalam pelayar anda dan eksportkannya sebagai teks biasa.",
+      },
+      nl: {
+        name: "PDF Text Extractor",
+        description:
+          "Haal selecteerbare tekst lokaal in je browser uit PDF-bestanden en exporteer die als platte tekst.",
+      },
+      no: {
+        name: "PDF Text Extractor",
+        description:
+          "Trekk ut markerbar tekst fra PDF-filer lokalt i nettleseren din, og eksporter den som ren tekst.",
+      },
+      pl: {
+        name: "PDF Text Extractor",
+        description:
+          "Wyodrębniaj zaznaczalny tekst z plików PDF lokalnie w przeglądarce i eksportuj go jako zwykły tekst.",
+      },
+      pt: {
+        name: "PDF Text Extractor",
+        description:
+          "Extraia texto selecionável de arquivos PDF localmente no seu navegador e exporte como texto simples.",
+      },
+      ru: {
+        name: "PDF Text Extractor",
+        description:
+          "Извлекайте выделяемый текст из PDF-файлов локально в браузере и экспортируйте его как обычный текст.",
+      },
+      sv: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrahera markerbar text från PDF-filer lokalt i din webbläsare och exportera den som oformaterad text.",
+      },
+      th: {
+        name: "PDF Text Extractor",
+        description:
+          "ดึงข้อความที่เลือกได้จากไฟล์ PDF ภายในเบราว์เซอร์ของคุณ และส่งออกเป็นข้อความล้วน",
+      },
+      tr: {
+        name: "PDF Text Extractor",
+        description:
+          "PDF dosyalarından seçilebilir metni tarayıcınızda yerel olarak çıkarın ve düz metin olarak dışa aktarın.",
+      },
+      vi: {
+        name: "PDF Text Extractor",
+        description:
+          "Trích xuất văn bản có thể chọn từ tệp PDF ngay trong trình duyệt của bạn và xuất dưới dạng văn bản thuần túy.",
+      },
+      "zh-CN": {
+        name: "PDF 文本提取器",
+        description:
+          "在浏览器中本地提取 PDF 文件中的可选择文本，并导出为纯文本。",
+      },
+      "zh-TW": {
+        name: "PDF 文字擷取工具",
+        description: "在瀏覽器本機從 PDF 檔案擷取可選取文字，並匯出為純文字。",
       },
     },
   },
