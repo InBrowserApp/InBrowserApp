@@ -1,0 +1,300 @@
+import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
+import { Button } from "@workspace/ui/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
+import {
+  Field,
+  FieldDescription,
+  FieldError,
+  FieldGroup,
+  FieldLabel,
+} from "@workspace/ui/components/ui/field"
+import { Input } from "@workspace/ui/components/ui/input"
+import {
+  ToggleGroup,
+  ToggleGroupItem,
+} from "@workspace/ui/components/ui/toggle-group"
+import { Clock3, TriangleAlert } from "@workspace/ui/icons"
+
+import { UUID_CLOCK_SEQUENCE_MAX, UUID_V6_MAX_COUNT } from "../core/uuid-v6"
+import type { UuidV6Messages } from "../types"
+
+type TimestampMode = "now" | "custom"
+type RandomOrCustomMode = "random" | "custom"
+
+const toggleItemClassName = "h-auto min-h-9 w-full"
+
+type UuidV6OptionsCardProps = Readonly<{
+  messages: UuidV6Messages
+  countId: string
+  customDateTimeId: string
+  customUnixMillisecondsId: string
+  customNodeId: string
+  customClockSequenceId: string
+  count: number
+  timestampMode: TimestampMode
+  customDateTimeInput: string
+  customUnixMillisecondsInput: string
+  nodeMode: RandomOrCustomMode
+  customNodeInput: string
+  clockSequenceMode: RandomOrCustomMode
+  customClockSequenceInput: string
+  timestampError: string
+  nodeError: string
+  clockSequenceError: string
+  onCountChange: (value: string) => void
+  onTimestampModeChange: (value: TimestampMode) => void
+  onCustomDateTimeChange: (value: string) => void
+  onCustomUnixMillisecondsChange: (value: string) => void
+  onSetNow: () => void
+  onNodeModeChange: (value: RandomOrCustomMode) => void
+  onCustomNodeChange: (value: string) => void
+  onClockSequenceModeChange: (value: RandomOrCustomMode) => void
+  onCustomClockSequenceChange: (value: string) => void
+}>
+
+function UuidV6OptionsCard({
+  messages,
+  countId,
+  customDateTimeId,
+  customUnixMillisecondsId,
+  customNodeId,
+  customClockSequenceId,
+  count,
+  timestampMode,
+  customDateTimeInput,
+  customUnixMillisecondsInput,
+  nodeMode,
+  customNodeInput,
+  clockSequenceMode,
+  customClockSequenceInput,
+  timestampError,
+  nodeError,
+  clockSequenceError,
+  onCountChange,
+  onTimestampModeChange,
+  onCustomDateTimeChange,
+  onCustomUnixMillisecondsChange,
+  onSetNow,
+  onNodeModeChange,
+  onCustomNodeChange,
+  onClockSequenceModeChange,
+  onCustomClockSequenceChange,
+}: UuidV6OptionsCardProps) {
+  const hasError = Boolean(timestampError || nodeError || clockSequenceError)
+
+  return (
+    <Card>
+      <CardHeader className="border-b">
+        <CardTitle>{messages.optionsTitle}</CardTitle>
+        <CardDescription>{messages.optionsDescription}</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <FieldGroup>
+          <div className="grid gap-4 sm:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)]">
+            <Field>
+              <FieldLabel htmlFor={countId}>{messages.countLabel}</FieldLabel>
+              <Input
+                id={countId}
+                type="number"
+                inputMode="numeric"
+                min={1}
+                max={UUID_V6_MAX_COUNT}
+                value={count}
+                onChange={(event) => {
+                  onCountChange(event.target.value)
+                }}
+              />
+            </Field>
+
+            <Field>
+              <FieldLabel>{messages.timestampModeLabel}</FieldLabel>
+              <ToggleGroup
+                type="single"
+                value={timestampMode}
+                spacing={0}
+                orientation="vertical"
+                variant="outline"
+                className="w-full"
+                onValueChange={(value) => {
+                  if (value === "now" || value === "custom") {
+                    onTimestampModeChange(value)
+                  }
+                }}
+              >
+                <ToggleGroupItem value="now" className={toggleItemClassName}>
+                  {messages.timestampNowLabel}
+                </ToggleGroupItem>
+                <ToggleGroupItem value="custom" className={toggleItemClassName}>
+                  {messages.timestampCustomLabel}
+                </ToggleGroupItem>
+              </ToggleGroup>
+            </Field>
+          </div>
+
+          {timestampMode === "custom" ? (
+            <FieldGroup>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Field data-invalid={Boolean(timestampError)}>
+                  <FieldLabel htmlFor={customDateTimeId}>
+                    {messages.customDateTimeLabel}
+                  </FieldLabel>
+                  <Input
+                    id={customDateTimeId}
+                    type="datetime-local"
+                    step="1"
+                    value={customDateTimeInput}
+                    aria-invalid={Boolean(timestampError)}
+                    onChange={(event) => {
+                      onCustomDateTimeChange(event.target.value)
+                    }}
+                  />
+                </Field>
+
+                <Field data-invalid={Boolean(timestampError)}>
+                  <FieldLabel htmlFor={customUnixMillisecondsId}>
+                    {messages.customUnixMillisecondsLabel}
+                  </FieldLabel>
+                  <Input
+                    id={customUnixMillisecondsId}
+                    type="number"
+                    inputMode="numeric"
+                    step="1"
+                    value={customUnixMillisecondsInput}
+                    aria-invalid={Boolean(timestampError)}
+                    onChange={(event) => {
+                      onCustomUnixMillisecondsChange(event.target.value)
+                    }}
+                  />
+                </Field>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3">
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={onSetNow}
+                >
+                  <Clock3 data-icon="inline-start" />
+                  {messages.setNowLabel}
+                </Button>
+                <FieldError>{timestampError}</FieldError>
+              </div>
+            </FieldGroup>
+          ) : null}
+
+          <div className="grid gap-4 lg:grid-cols-2">
+            <Field data-invalid={Boolean(nodeError)}>
+              <FieldLabel>{messages.nodeModeLabel}</FieldLabel>
+              <ToggleGroup
+                type="single"
+                value={nodeMode}
+                spacing={0}
+                orientation="vertical"
+                variant="outline"
+                className="w-full"
+                onValueChange={(value) => {
+                  if (value === "random" || value === "custom") {
+                    onNodeModeChange(value)
+                  }
+                }}
+              >
+                <ToggleGroupItem value="random" className={toggleItemClassName}>
+                  {messages.nodeRandomLabel}
+                </ToggleGroupItem>
+                <ToggleGroupItem value="custom" className={toggleItemClassName}>
+                  {messages.nodeCustomLabel}
+                </ToggleGroupItem>
+              </ToggleGroup>
+              {nodeMode === "custom" ? (
+                <>
+                  <FieldLabel htmlFor={customNodeId}>
+                    {messages.customNodeLabel}
+                  </FieldLabel>
+                  <Input
+                    id={customNodeId}
+                    value={customNodeInput}
+                    aria-invalid={Boolean(nodeError)}
+                    placeholder="02:00:00:00:00:01"
+                    onChange={(event) => {
+                      onCustomNodeChange(event.target.value)
+                    }}
+                  />
+                  <FieldDescription>
+                    {messages.customNodeDescription}
+                  </FieldDescription>
+                  <FieldError>{nodeError}</FieldError>
+                </>
+              ) : null}
+            </Field>
+
+            <Field data-invalid={Boolean(clockSequenceError)}>
+              <FieldLabel>{messages.clockSequenceModeLabel}</FieldLabel>
+              <ToggleGroup
+                type="single"
+                value={clockSequenceMode}
+                spacing={0}
+                orientation="vertical"
+                variant="outline"
+                className="w-full"
+                onValueChange={(value) => {
+                  if (value === "random" || value === "custom") {
+                    onClockSequenceModeChange(value)
+                  }
+                }}
+              >
+                <ToggleGroupItem value="random" className={toggleItemClassName}>
+                  {messages.clockSequenceRandomLabel}
+                </ToggleGroupItem>
+                <ToggleGroupItem value="custom" className={toggleItemClassName}>
+                  {messages.clockSequenceCustomLabel}
+                </ToggleGroupItem>
+              </ToggleGroup>
+              {clockSequenceMode === "custom" ? (
+                <>
+                  <FieldLabel htmlFor={customClockSequenceId}>
+                    {messages.customClockSequenceLabel}
+                  </FieldLabel>
+                  <Input
+                    id={customClockSequenceId}
+                    type="number"
+                    inputMode="numeric"
+                    min={0}
+                    max={UUID_CLOCK_SEQUENCE_MAX}
+                    step="1"
+                    value={customClockSequenceInput}
+                    aria-invalid={Boolean(clockSequenceError)}
+                    onChange={(event) => {
+                      onCustomClockSequenceChange(event.target.value)
+                    }}
+                  />
+                  <FieldDescription>
+                    {messages.customClockSequenceDescription}
+                  </FieldDescription>
+                  <FieldError>{clockSequenceError}</FieldError>
+                </>
+              ) : null}
+            </Field>
+          </div>
+
+          {hasError ? (
+            <Alert variant="destructive">
+              <TriangleAlert />
+              <AlertDescription>
+                {timestampError || nodeError || clockSequenceError}
+              </AlertDescription>
+            </Alert>
+          ) : null}
+        </FieldGroup>
+      </CardContent>
+    </Card>
+  )
+}
+
+export { UuidV6OptionsCard }
