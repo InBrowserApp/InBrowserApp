@@ -1,0 +1,4 @@
+{
+  "name": "UUID v5 Generator",
+  "description": "Buat identifier UUID v5 deterministik berbasis nama dari UUID namespace dan nama, sepenuhnya di browser Anda."
+}

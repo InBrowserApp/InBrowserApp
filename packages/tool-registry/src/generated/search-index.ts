@@ -23109,6 +23109,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "uuid-v5-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid-v5",
+      "identifier",
+      "deterministic",
+      "namespace",
+      "sha1",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "UUID v5 Generator",
+        description:
+          "أنشئ معرفات UUID v5 حتمية قائمة على الاسم من UUID لمساحة أسماء واسم، بالكامل داخل متصفحك.",
+      },
+      de: {
+        name: "UUID v5 Generator",
+        description:
+          "Erzeuge deterministische namensbasierte UUID-v5-Kennungen aus einer Namespace-UUID und einem Namen, vollständig in deinem Browser.",
+      },
+      en: {
+        name: "UUID v5 Generator",
+        description:
+          "Generate deterministic name-based UUID v5 identifiers from a namespace UUID and name, entirely in your browser.",
+      },
+      es: {
+        name: "Generador de UUID v5",
+        description:
+          "Genera identificadores UUID v5 deterministas basados en nombres a partir de un UUID de espacio de nombres y un nombre, íntegramente en tu navegador.",
+      },
+      fr: {
+        name: "UUID v5 Generator",
+        description:
+          "Générez des identifiants UUID v5 déterministes basés sur un nom à partir d'un UUID d'espace de noms et d'un nom, entièrement dans votre navigateur.",
+      },
+      he: {
+        name: "UUID v5 Generator",
+        description:
+          "צרו מזהי UUID v5 דטרמיניסטיים מבוססי שם מ-UUID מרחב שמות ומשם, כולו בדפדפן שלכם.",
+      },
+      hi: {
+        name: "UUID v5 Generator",
+        description:
+          "नेमस्पेस UUID और नाम से नियतात्मक नाम-आधारित UUID v5 पहचानकर्ता पूरी तरह अपने ब्राउज़र में बनाएं।",
+      },
+      id: {
+        name: "UUID v5 Generator",
+        description:
+          "Buat identifier UUID v5 deterministik berbasis nama dari UUID namespace dan nama, sepenuhnya di browser Anda.",
+      },
+      it: {
+        name: "UUID v5 Generator",
+        description:
+          "Genera identificatori UUID v5 deterministici basati sul nome da un UUID di namespace e da un nome, interamente nel browser.",
+      },
+      ja: {
+        name: "UUID v5 Generator",
+        description:
+          "名前空間 UUID と名前から、決定的な名前ベースの UUID v5 識別子を完全にブラウザー内で生成します。",
+      },
+      ko: {
+        name: "UUID v5 Generator",
+        description:
+          "네임스페이스 UUID와 이름으로 결정적 이름 기반 UUID v5 식별자를 브라우저에서만 생성합니다.",
+      },
+      ms: {
+        name: "UUID v5 Generator",
+        description:
+          "Jana pengecam UUID v5 berasaskan nama yang deterministik daripada UUID ruang nama dan nama, sepenuhnya dalam pelayar anda.",
+      },
+      nl: {
+        name: "UUID v5 Generator",
+        description:
+          "Genereer deterministische naamgebaseerde UUID v5-identificaties op basis van een namespace-UUID en naam, volledig in je browser.",
+      },
+      no: {
+        name: "UUID v5 Generator",
+        description:
+          "Generer deterministiske navnebaserte UUID v5-identifikatorer fra en namespace-UUID og et navn, helt i nettleseren din.",
+      },
+      pl: {
+        name: "UUID v5 Generator",
+        description:
+          "Generuj deterministyczne identyfikatory UUID v5 oparte na nazwie z UUID przestrzeni nazw i nazwy, całkowicie w przeglądarce.",
+      },
+      pt: {
+        name: "UUID v5 Generator",
+        description:
+          "Gere identificadores UUID v5 determinísticos baseados em nome a partir de um UUID de namespace e um nome, inteiramente no seu navegador.",
+      },
+      ru: {
+        name: "UUID v5 Generator",
+        description:
+          "Генерируйте детерминированные идентификаторы UUID v5 на основе имени из UUID пространства имен и имени полностью в браузере.",
+      },
+      sv: {
+        name: "UUID v5 Generator",
+        description:
+          "Generera deterministiska namnbaserade UUID v5-identifierare från ett namnrymds-UUID och ett namn, helt i din webbläsare.",
+      },
+      th: {
+        name: "UUID v5 Generator",
+        description:
+          "สร้างตัวระบุ UUID v5 แบบอิงชื่อที่ให้ผลคงเดิมจาก namespace UUID และชื่อ ทั้งหมดภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "UUID v5 Generator",
+        description:
+          "Bir ad alanı UUID'si ve addan, tamamen tarayıcınızda, deterministik ada dayalı UUID v5 tanımlayıcıları oluşturun.",
+      },
+      vi: {
+        name: "UUID v5 Generator",
+        description:
+          "Tạo mã định danh UUID v5 dựa trên tên, có tính xác định, từ UUID không gian tên và tên, hoàn toàn trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "UUID v5 Generator",
+        description:
+          "完全在浏览器中，根据命名空间 UUID 和名称生成确定性的基于名称的 UUID v5 标识符。",
+      },
+      "zh-TW": {
+        name: "UUID v5 Generator",
+        description:
+          "完全在瀏覽器中，從命名空間 UUID 和名稱產生確定性的名稱型 UUID v5 識別碼。",
+      },
+    },
+  },
+  {
     slug: "uuid-validator",
     category: "developer",
     icon: "binary",
