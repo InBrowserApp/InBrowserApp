@@ -1,0 +1,20 @@
+{
+  "resultTitle": "Generated UUID",
+  "resultDescription": "Generate one canonical lowercase UUID v4 and copy it when it is ready.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "Regenerate",
+  "copyLabel": "Copy UUID",
+  "copiedLabel": "Copied",
+  "detailsTitle": "Format details",
+  "detailsDescription": "UUID v4 values use random bytes plus fixed version and variant bits.",
+  "versionLabel": "Version",
+  "versionValue": "4, random",
+  "variantLabel": "Variant",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "Random bits",
+  "entropyValue": "122 bits",
+  "privacyTitle": "Local generation",
+  "privacyDescription": "The UUID is generated with Web Crypto in this browser tab and is not sent to a server.",
+  "errorTitle": "Cannot generate UUID",
+  "cryptoUnavailableMessage": "Web Crypto random values are not available in this browser."
+}

@@ -1,0 +1,20 @@
+{
+  "resultTitle": "Сгенерированный UUID",
+  "resultDescription": "Сгенерируйте один канонический UUID v4 в нижнем регистре и скопируйте его, когда он будет готов.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "Сгенерировать заново",
+  "copyLabel": "Скопировать UUID",
+  "copiedLabel": "Скопировано",
+  "detailsTitle": "Сведения о формате",
+  "detailsDescription": "Значения UUID v4 используют случайные байты, а также фиксированные биты версии и варианта.",
+  "versionLabel": "Версия",
+  "versionValue": "4, случайная",
+  "variantLabel": "Вариант",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "Случайные биты",
+  "entropyValue": "122 бита",
+  "privacyTitle": "Локальная генерация",
+  "privacyDescription": "UUID генерируется с помощью Web Crypto в этой вкладке браузера и не отправляется на сервер.",
+  "errorTitle": "Не удалось сгенерировать UUID",
+  "cryptoUnavailableMessage": "Случайные значения Web Crypto недоступны в этом браузере."
+}

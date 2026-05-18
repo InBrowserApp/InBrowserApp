@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo UUID v4",
+  "description": "Tạo UUID v4 ngẫu nhiên theo RFC 4122/RFC 9562 ngay trong trình duyệt."
+}

@@ -1,0 +1,20 @@
+{
+  "resultTitle": "Genererat UUID",
+  "resultDescription": "Generera ett kanoniskt UUID v4 med gemener och kopiera det när det är klart.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "Generera igen",
+  "copyLabel": "Kopiera UUID",
+  "copiedLabel": "Kopierat",
+  "detailsTitle": "Formatdetaljer",
+  "detailsDescription": "UUID v4-värden använder slumpmässiga byte samt fasta versions- och variantbitar.",
+  "versionLabel": "Version",
+  "versionValue": "4, slumpmässig",
+  "variantLabel": "Variant",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "Slumpbitar",
+  "entropyValue": "122 bitar",
+  "privacyTitle": "Lokal generering",
+  "privacyDescription": "UUID:t genereras med Web Crypto i den här webbläsarfliken och skickas inte till någon server.",
+  "errorTitle": "Kan inte generera UUID",
+  "cryptoUnavailableMessage": "Slumpvärden från Web Crypto är inte tillgängliga i den här webbläsaren."
+}

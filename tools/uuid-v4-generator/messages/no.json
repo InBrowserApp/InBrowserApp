@@ -1,0 +1,20 @@
+{
+  "resultTitle": "Generert UUID",
+  "resultDescription": "Generer én kanonisk UUID v4 med små bokstaver og kopier den når den er klar.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "Generer på nytt",
+  "copyLabel": "Kopier UUID",
+  "copiedLabel": "Kopiert",
+  "detailsTitle": "Formatdetaljer",
+  "detailsDescription": "UUID v4-verdier bruker tilfeldige byteverdier pluss faste versjons- og variantbiter.",
+  "versionLabel": "Versjon",
+  "versionValue": "4, tilfeldig",
+  "variantLabel": "Variant",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "Tilfeldige biter",
+  "entropyValue": "122 biter",
+  "privacyTitle": "Lokal generering",
+  "privacyDescription": "UUID-en genereres med Web Crypto i denne nettleserfanen og sendes ikke til en server.",
+  "errorTitle": "Kan ikke generere UUID",
+  "cryptoUnavailableMessage": "Tilfeldige verdier fra Web Crypto er ikke tilgjengelige i denne nettleseren."
+}

@@ -1,0 +1,20 @@
+{
+  "resultTitle": "UUID ที่สร้างแล้ว",
+  "resultDescription": "สร้าง UUID v4 รูปแบบมาตรฐานตัวพิมพ์เล็กหนึ่งค่า และคัดลอกเมื่อพร้อมใช้งาน",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "สร้างใหม่",
+  "copyLabel": "คัดลอก UUID",
+  "copiedLabel": "คัดลอกแล้ว",
+  "detailsTitle": "รายละเอียดรูปแบบ",
+  "detailsDescription": "ค่า UUID v4 ใช้ไบต์แบบสุ่มร่วมกับบิตเวอร์ชันและบิตแวเรียนต์ที่กำหนดไว้ตายตัว",
+  "versionLabel": "เวอร์ชัน",
+  "versionValue": "4, แบบสุ่ม",
+  "variantLabel": "แวเรียนต์",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "บิตสุ่ม",
+  "entropyValue": "122 บิต",
+  "privacyTitle": "การสร้างในเครื่อง",
+  "privacyDescription": "UUID ถูกสร้างด้วย Web Crypto ในแท็บเบราว์เซอร์นี้ และจะไม่ถูกส่งไปยังเซิร์ฟเวอร์",
+  "errorTitle": "ไม่สามารถสร้าง UUID ได้",
+  "cryptoUnavailableMessage": "ค่าแบบสุ่มของ Web Crypto ไม่พร้อมใช้งานในเบราว์เซอร์นี้"
+}

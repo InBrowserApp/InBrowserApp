@@ -22220,6 +22220,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "uuid-v4-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid-v4",
+      "guid",
+      "id",
+      "identifier",
+      "unique",
+      "random",
+      "generator",
+      "token",
+    ],
+    locales: {
+      ar: {
+        name: "مولد UUID v4",
+        description:
+          "أنشئ UUID v4 عشوائيا وفق RFC 4122/RFC 9562 محليا في متصفحك.",
+      },
+      de: {
+        name: "UUID v4 Generator",
+        description:
+          "Generieren Sie lokal in Ihrem Browser eine zufällige RFC 4122/RFC 9562 UUID v4.",
+      },
+      en: {
+        name: "UUID v4 Generator",
+        description:
+          "Generate a random RFC 4122/RFC 9562 UUID v4 locally in your browser.",
+      },
+      es: {
+        name: "Generador de UUID v4",
+        description:
+          "Genera un UUID v4 aleatorio RFC 4122/RFC 9562 localmente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur d'UUID v4",
+        description:
+          "Générez localement dans votre navigateur un UUID v4 aléatoire conforme aux RFC 4122/RFC 9562.",
+      },
+      he: {
+        name: "מחולל UUID v4",
+        description: "צרו UUID v4 אקראי לפי RFC 4122/RFC 9562 מקומית בדפדפן.",
+      },
+      hi: {
+        name: "UUID v4 जनरेटर",
+        description:
+          "अपने ब्राउज़र में स्थानीय रूप से एक रैंडम RFC 4122/RFC 9562 UUID v4 जनरेट करें।",
+      },
+      id: {
+        name: "Generator UUID v4",
+        description:
+          "Buat UUID v4 RFC 4122/RFC 9562 acak secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Generatore di UUID v4",
+        description:
+          "Genera localmente nel tuo browser un UUID v4 casuale RFC 4122/RFC 9562.",
+      },
+      ja: {
+        name: "UUID v4 ジェネレーター",
+        description:
+          "ブラウザー内でランダムな RFC 4122/RFC 9562 UUID v4 をローカル生成します。",
+      },
+      ko: {
+        name: "UUID v4 Generator",
+        description:
+          "브라우저에서 로컬로 임의의 RFC 4122/RFC 9562 UUID v4를 생성합니다.",
+      },
+      ms: {
+        name: "Penjana UUID v4",
+        description:
+          "Jana UUID v4 rawak RFC 4122/RFC 9562 secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "UUID v4-generator",
+        description:
+          "Genereer lokaal in je browser een willekeurige RFC 4122/RFC 9562 UUID v4.",
+      },
+      no: {
+        name: "UUID v4-generator",
+        description:
+          "Generer en tilfeldig UUID v4 etter RFC 4122/RFC 9562 lokalt i nettleseren din.",
+      },
+      pl: {
+        name: "Generator UUID v4",
+        description:
+          "Wygeneruj losowy identyfikator UUID v4 zgodny z RFC 4122/RFC 9562 lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de UUID v4",
+        description:
+          "Gere um UUID v4 aleatório RFC 4122/RFC 9562 localmente no navegador.",
+      },
+      ru: {
+        name: "Генератор UUID v4",
+        description:
+          "Генерируйте случайный UUID v4 RFC 4122/RFC 9562 локально в браузере.",
+      },
+      sv: {
+        name: "UUID v4-generator",
+        description:
+          "Generera ett slumpmässigt UUID v4 enligt RFC 4122/RFC 9562 lokalt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวสร้าง UUID v4",
+        description:
+          "สร้าง UUID v4 แบบสุ่มตาม RFC 4122/RFC 9562 ได้ในเครื่องบนเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "UUID v4 Oluşturucu",
+        description:
+          "Tarayıcınızda yerel olarak rastgele bir RFC 4122/RFC 9562 UUID v4 oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo UUID v4",
+        description:
+          "Tạo UUID v4 ngẫu nhiên theo RFC 4122/RFC 9562 ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "UUID v4 生成器",
+        description: "在浏览器本地生成随机 RFC 4122/RFC 9562 UUID v4。",
+      },
+      "zh-TW": {
+        name: "UUID v4 產生器",
+        description: "直接在你的瀏覽器本機產生隨機 RFC 4122/RFC 9562 UUID v4。",
+      },
+    },
+  },
+  {
     slug: "uuid-validator",
     category: "developer",
     icon: "binary",
@@ -45713,6 +45843,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "UUID v3 產生器",
         description:
           "從命名空間 UUID 和名稱產生確定性的命名式 UUID v3 識別碼。",
+      },
+    },
+  },
+  "uuid-v4-generator": {
+    slug: "uuid-v4-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid-v4",
+      "guid",
+      "id",
+      "identifier",
+      "unique",
+      "random",
+      "generator",
+      "token",
+    ],
+    locales: {
+      ar: {
+        name: "مولد UUID v4",
+        description:
+          "أنشئ UUID v4 عشوائيا وفق RFC 4122/RFC 9562 محليا في متصفحك.",
+      },
+      de: {
+        name: "UUID v4 Generator",
+        description:
+          "Generieren Sie lokal in Ihrem Browser eine zufällige RFC 4122/RFC 9562 UUID v4.",
+      },
+      en: {
+        name: "UUID v4 Generator",
+        description:
+          "Generate a random RFC 4122/RFC 9562 UUID v4 locally in your browser.",
+      },
+      es: {
+        name: "Generador de UUID v4",
+        description:
+          "Genera un UUID v4 aleatorio RFC 4122/RFC 9562 localmente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur d'UUID v4",
+        description:
+          "Générez localement dans votre navigateur un UUID v4 aléatoire conforme aux RFC 4122/RFC 9562.",
+      },
+      he: {
+        name: "מחולל UUID v4",
+        description: "צרו UUID v4 אקראי לפי RFC 4122/RFC 9562 מקומית בדפדפן.",
+      },
+      hi: {
+        name: "UUID v4 जनरेटर",
+        description:
+          "अपने ब्राउज़र में स्थानीय रूप से एक रैंडम RFC 4122/RFC 9562 UUID v4 जनरेट करें।",
+      },
+      id: {
+        name: "Generator UUID v4",
+        description:
+          "Buat UUID v4 RFC 4122/RFC 9562 acak secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Generatore di UUID v4",
+        description:
+          "Genera localmente nel tuo browser un UUID v4 casuale RFC 4122/RFC 9562.",
+      },
+      ja: {
+        name: "UUID v4 ジェネレーター",
+        description:
+          "ブラウザー内でランダムな RFC 4122/RFC 9562 UUID v4 をローカル生成します。",
+      },
+      ko: {
+        name: "UUID v4 Generator",
+        description:
+          "브라우저에서 로컬로 임의의 RFC 4122/RFC 9562 UUID v4를 생성합니다.",
+      },
+      ms: {
+        name: "Penjana UUID v4",
+        description:
+          "Jana UUID v4 rawak RFC 4122/RFC 9562 secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "UUID v4-generator",
+        description:
+          "Genereer lokaal in je browser een willekeurige RFC 4122/RFC 9562 UUID v4.",
+      },
+      no: {
+        name: "UUID v4-generator",
+        description:
+          "Generer en tilfeldig UUID v4 etter RFC 4122/RFC 9562 lokalt i nettleseren din.",
+      },
+      pl: {
+        name: "Generator UUID v4",
+        description:
+          "Wygeneruj losowy identyfikator UUID v4 zgodny z RFC 4122/RFC 9562 lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de UUID v4",
+        description:
+          "Gere um UUID v4 aleatório RFC 4122/RFC 9562 localmente no navegador.",
+      },
+      ru: {
+        name: "Генератор UUID v4",
+        description:
+          "Генерируйте случайный UUID v4 RFC 4122/RFC 9562 локально в браузере.",
+      },
+      sv: {
+        name: "UUID v4-generator",
+        description:
+          "Generera ett slumpmässigt UUID v4 enligt RFC 4122/RFC 9562 lokalt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวสร้าง UUID v4",
+        description:
+          "สร้าง UUID v4 แบบสุ่มตาม RFC 4122/RFC 9562 ได้ในเครื่องบนเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "UUID v4 Oluşturucu",
+        description:
+          "Tarayıcınızda yerel olarak rastgele bir RFC 4122/RFC 9562 UUID v4 oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo UUID v4",
+        description:
+          "Tạo UUID v4 ngẫu nhiên theo RFC 4122/RFC 9562 ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "UUID v4 生成器",
+        description: "在浏览器本地生成随机 RFC 4122/RFC 9562 UUID v4。",
+      },
+      "zh-TW": {
+        name: "UUID v4 產生器",
+        description: "直接在你的瀏覽器本機產生隨機 RFC 4122/RFC 9562 UUID v4。",
       },
     },
   },

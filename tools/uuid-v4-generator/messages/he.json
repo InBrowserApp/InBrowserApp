@@ -1,0 +1,20 @@
+{
+  "resultTitle": "UUID שנוצר",
+  "resultDescription": "צרו UUID v4 קנוני אחד באותיות קטנות, והעתיקו אותו כשהוא מוכן.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "צור מחדש",
+  "copyLabel": "העתק UUID",
+  "copiedLabel": "הועתק",
+  "detailsTitle": "פרטי הפורמט",
+  "detailsDescription": "ערכי UUID v4 משתמשים בבתים אקראיים לצד ביטי גרסה ווריאנט קבועים.",
+  "versionLabel": "גרסה",
+  "versionValue": "4, אקראית",
+  "variantLabel": "וריאנט",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "ביטים אקראיים",
+  "entropyValue": "122 ביטים",
+  "privacyTitle": "יצירה מקומית",
+  "privacyDescription": "ה-UUID נוצר באמצעות Web Crypto בלשונית הדפדפן הזו ואינו נשלח לשרת.",
+  "errorTitle": "לא ניתן ליצור UUID",
+  "cryptoUnavailableMessage": "ערכים אקראיים של Web Crypto אינם זמינים בדפדפן הזה."
+}

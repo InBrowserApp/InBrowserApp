@@ -1,0 +1,4 @@
+{
+  "name": "Generator UUID v4",
+  "description": "Wygeneruj losowy identyfikator UUID v4 zgodny z RFC 4122/RFC 9562 lokalnie w przeglądarce."
+}

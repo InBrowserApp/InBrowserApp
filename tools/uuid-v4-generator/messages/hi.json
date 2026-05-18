@@ -1,0 +1,20 @@
+{
+  "resultTitle": "जनरेट किया गया UUID",
+  "resultDescription": "एक canonical lowercase UUID v4 जनरेट करें और तैयार होने पर उसे कॉपी करें।",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "फिर से जनरेट करें",
+  "copyLabel": "UUID कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "detailsTitle": "फ़ॉर्मैट विवरण",
+  "detailsDescription": "UUID v4 मान रैंडम bytes के साथ तय version और variant bits का उपयोग करते हैं।",
+  "versionLabel": "Version",
+  "versionValue": "4, रैंडम",
+  "variantLabel": "Variant",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "रैंडम bits",
+  "entropyValue": "122 bits",
+  "privacyTitle": "स्थानीय जनरेशन",
+  "privacyDescription": "UUID इस ब्राउज़र टैब में Web Crypto से जनरेट होता है और सर्वर पर नहीं भेजा जाता।",
+  "errorTitle": "UUID जनरेट नहीं हो सकता",
+  "cryptoUnavailableMessage": "इस ब्राउज़र में Web Crypto random values उपलब्ध नहीं हैं।"
+}

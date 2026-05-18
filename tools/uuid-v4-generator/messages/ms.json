@@ -1,0 +1,20 @@
+{
+  "resultTitle": "UUID yang dijana",
+  "resultDescription": "Jana satu UUID v4 kanonik berhuruf kecil dan salin apabila sudah sedia.",
+  "uuidLabel": "UUID v4",
+  "regenerateLabel": "Jana semula",
+  "copyLabel": "Salin UUID",
+  "copiedLabel": "Disalin",
+  "detailsTitle": "Butiran format",
+  "detailsDescription": "Nilai UUID v4 menggunakan bait rawak bersama bit versi dan varian tetap.",
+  "versionLabel": "Versi",
+  "versionValue": "4, rawak",
+  "variantLabel": "Varian",
+  "variantValue": "RFC 4122 / RFC 9562",
+  "entropyLabel": "Bit rawak",
+  "entropyValue": "122 bit",
+  "privacyTitle": "Penjanaan setempat",
+  "privacyDescription": "UUID dijana dengan Web Crypto dalam tab pelayar ini dan tidak dihantar ke pelayan.",
+  "errorTitle": "Tidak dapat menjana UUID",
+  "cryptoUnavailableMessage": "Nilai rawak Web Crypto tidak tersedia dalam pelayar ini."
+}

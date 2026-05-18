@@ -1,0 +1,4 @@
+{
+  "name": "UUID v4 ジェネレーター",
+  "description": "ブラウザー内でランダムな RFC 4122/RFC 9562 UUID v4 をローカル生成します。"
+}
