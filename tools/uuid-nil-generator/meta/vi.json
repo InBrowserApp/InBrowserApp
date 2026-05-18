@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo UUID nil",
+  "description": "Tạo và sao chép UUID nil toàn số không theo tiêu chuẩn để dùng làm phần giữ chỗ, giá trị mặc định và giá trị sentinel."
+}

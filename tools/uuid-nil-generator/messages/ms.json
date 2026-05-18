@@ -1,0 +1,21 @@
+{
+  "valueTitle": "UUID Nil",
+  "valueDescription": "Salin UUID semua sifar yang distandardkan dalam perwakilan yang dijangka oleh sistem anda.",
+  "canonicalLabel": "UUID Kanonik",
+  "rawHexLabel": "Hex 32 digit",
+  "urnLabel": "URN UUID",
+  "copyUuidLabel": "Salin UUID",
+  "copyHexLabel": "Salin hex",
+  "copyUrnLabel": "Salin URN",
+  "copiedLabel": "Disalin",
+  "detailsTitle": "Rujukan",
+  "detailsDescription": "UUID nil ialah nilai sentinel tetap, bukan pengecam rawak.",
+  "allBitsLabel": "Bit",
+  "allBitsValue": "128 bit sifar",
+  "versionLabel": "Versi",
+  "versionValue": "Tiada",
+  "variantLabel": "Varian",
+  "variantValue": "Tiada",
+  "stableLabel": "Penjanaan semula",
+  "stableValue": "Sentiasa mengembalikan nilai yang sama"
+}

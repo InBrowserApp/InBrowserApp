@@ -22583,6 +22583,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "uuid-nil-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "nil",
+      "null",
+      "identifier",
+      "placeholder",
+      "generator",
+      "rfc",
+    ],
+    locales: {
+      ar: {
+        name: "مولد Nil UUID",
+        description:
+          "أنشئ وانسخ Nil UUID القياسي المكون بالكامل من أصفار لاستخدامه في العناصر النائبة والقيم الافتراضية وقيم الحارس.",
+      },
+      de: {
+        name: "Nil-UUID-Generator",
+        description:
+          "Erzeuge und kopiere die standardisierte Null-UUID mit lauter Nullen für Platzhalter, Standardwerte und Sentinel-Werte.",
+      },
+      en: {
+        name: "Nil UUID Generator",
+        description:
+          "Generate and copy the standardized all-zero nil UUID for placeholders, defaults, and sentinel values.",
+      },
+      es: {
+        name: "Generador de UUID nil",
+        description:
+          "Genera y copia el UUID nil estandarizado compuesto solo por ceros para marcadores de posición, valores predeterminados y valores centinela.",
+      },
+      fr: {
+        name: "Generateur d'UUID nil",
+        description:
+          "Generez et copiez l'UUID nil standardise compose uniquement de zeros pour les espaces reserves, les valeurs par defaut et les valeurs sentinelles.",
+      },
+      he: {
+        name: "מחולל Nil UUID",
+        description:
+          "צרו והעתיקו את ה-nil UUID התקני שכולו אפסים עבור מצייני מקום, ערכי ברירת מחדל וערכי sentinel.",
+      },
+      hi: {
+        name: "Nil UUID Generator",
+        description:
+          "प्लेसहोल्डर, डिफॉल्ट और सेंटिनल मानों के लिए मानकीकृत सभी-शून्य nil UUID बनाएं और कॉपी करें.",
+      },
+      id: {
+        name: "Generator UUID Nil",
+        description:
+          "Buat dan salin UUID nil standar yang seluruhnya nol untuk placeholder, nilai default, dan nilai sentinel.",
+      },
+      it: {
+        name: "Generatore di UUID nil",
+        description:
+          "Genera e copia l'UUID nil standardizzato composto solo da zeri per segnaposto, valori predefiniti e valori sentinella.",
+      },
+      ja: {
+        name: "Nil UUID Generator",
+        description:
+          "プレースホルダー、デフォルト値、センチネル値に使う、標準化された全ゼロの nil UUID を生成してコピーします。",
+      },
+      ko: {
+        name: "Nil UUID 생성기",
+        description:
+          "자리 표시자, 기본값, 센티널 값에 사용할 표준화된 모든 값이 0인 nil UUID를 생성하고 복사합니다.",
+      },
+      ms: {
+        name: "Penjana UUID Nil",
+        description:
+          "Jana dan salin UUID nil semua sifar yang distandardkan untuk pemegang tempat, lalai, dan nilai sentinel.",
+      },
+      nl: {
+        name: "Nil UUID-generator",
+        description:
+          "Genereer en kopieer de gestandaardiseerde nil UUID met alleen nullen voor placeholders, standaardwaarden en sentinelwaarden.",
+      },
+      no: {
+        name: "Nil UUID Generator",
+        description:
+          "Generer og kopier den standardiserte nil-UUID-en med bare nuller for plassholdere, standardverdier og sentinel-verdier.",
+      },
+      pl: {
+        name: "Generator Nil UUID",
+        description:
+          "Wygeneruj i skopiuj znormalizowany, złożony z samych zer nil UUID do symboli zastępczych, wartości domyślnych i wartości sentinel.",
+      },
+      pt: {
+        name: "Gerador de UUID Nil",
+        description:
+          "Gere e copie o UUID nil padronizado com todos os zeros para placeholders, padrões e valores sentinela.",
+      },
+      ru: {
+        name: "Генератор nil UUID",
+        description:
+          "Создавайте и копируйте стандартизированный nil UUID из одних нулей для заполнителей, значений по умолчанию и сигнальных значений.",
+      },
+      sv: {
+        name: "Nil UUID-generator",
+        description:
+          "Generera och kopiera den standardiserade nil-UUID:n med bara nollor för platshållare, standardvärden och sentinel-värden.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง Nil UUID",
+        description:
+          "สร้างและคัดลอก nil UUID มาตรฐานที่เป็นศูนย์ทั้งหมด สำหรับ placeholder, ค่าเริ่มต้น และค่า sentinel",
+      },
+      tr: {
+        name: "Nil UUID Oluşturucu",
+        description:
+          "Yer tutucular, varsayılanlar ve sentinel değerler için standartlaştırılmış tamamı sıfır nil UUID'yi oluşturup kopyalayın.",
+      },
+      vi: {
+        name: "Trình tạo UUID nil",
+        description:
+          "Tạo và sao chép UUID nil toàn số không theo tiêu chuẩn để dùng làm phần giữ chỗ, giá trị mặc định và giá trị sentinel.",
+      },
+      "zh-CN": {
+        name: "Nil UUID 生成器",
+        description:
+          "生成并复制标准化的全零 nil UUID，用于占位符、默认值和哨兵值。",
+      },
+      "zh-TW": {
+        name: "Nil UUID 產生器",
+        description:
+          "產生並複製標準化的全零 nil UUID，可用於預留位置、預設值與哨兵值。",
+      },
+    },
+  },
+  {
     slug: "uuid-v1-generator",
     category: "developer",
     icon: "lock",
@@ -46965,6 +47096,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "UUID 解碼器",
         description: "將 UUID 解碼為其版本、變體、時間戳欄位與數值表示法。",
+      },
+    },
+  },
+  "uuid-nil-generator": {
+    slug: "uuid-nil-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "nil",
+      "null",
+      "identifier",
+      "placeholder",
+      "generator",
+      "rfc",
+    ],
+    locales: {
+      ar: {
+        name: "مولد Nil UUID",
+        description:
+          "أنشئ وانسخ Nil UUID القياسي المكون بالكامل من أصفار لاستخدامه في العناصر النائبة والقيم الافتراضية وقيم الحارس.",
+      },
+      de: {
+        name: "Nil-UUID-Generator",
+        description:
+          "Erzeuge und kopiere die standardisierte Null-UUID mit lauter Nullen für Platzhalter, Standardwerte und Sentinel-Werte.",
+      },
+      en: {
+        name: "Nil UUID Generator",
+        description:
+          "Generate and copy the standardized all-zero nil UUID for placeholders, defaults, and sentinel values.",
+      },
+      es: {
+        name: "Generador de UUID nil",
+        description:
+          "Genera y copia el UUID nil estandarizado compuesto solo por ceros para marcadores de posición, valores predeterminados y valores centinela.",
+      },
+      fr: {
+        name: "Generateur d'UUID nil",
+        description:
+          "Generez et copiez l'UUID nil standardise compose uniquement de zeros pour les espaces reserves, les valeurs par defaut et les valeurs sentinelles.",
+      },
+      he: {
+        name: "מחולל Nil UUID",
+        description:
+          "צרו והעתיקו את ה-nil UUID התקני שכולו אפסים עבור מצייני מקום, ערכי ברירת מחדל וערכי sentinel.",
+      },
+      hi: {
+        name: "Nil UUID Generator",
+        description:
+          "प्लेसहोल्डर, डिफॉल्ट और सेंटिनल मानों के लिए मानकीकृत सभी-शून्य nil UUID बनाएं और कॉपी करें.",
+      },
+      id: {
+        name: "Generator UUID Nil",
+        description:
+          "Buat dan salin UUID nil standar yang seluruhnya nol untuk placeholder, nilai default, dan nilai sentinel.",
+      },
+      it: {
+        name: "Generatore di UUID nil",
+        description:
+          "Genera e copia l'UUID nil standardizzato composto solo da zeri per segnaposto, valori predefiniti e valori sentinella.",
+      },
+      ja: {
+        name: "Nil UUID Generator",
+        description:
+          "プレースホルダー、デフォルト値、センチネル値に使う、標準化された全ゼロの nil UUID を生成してコピーします。",
+      },
+      ko: {
+        name: "Nil UUID 생성기",
+        description:
+          "자리 표시자, 기본값, 센티널 값에 사용할 표준화된 모든 값이 0인 nil UUID를 생성하고 복사합니다.",
+      },
+      ms: {
+        name: "Penjana UUID Nil",
+        description:
+          "Jana dan salin UUID nil semua sifar yang distandardkan untuk pemegang tempat, lalai, dan nilai sentinel.",
+      },
+      nl: {
+        name: "Nil UUID-generator",
+        description:
+          "Genereer en kopieer de gestandaardiseerde nil UUID met alleen nullen voor placeholders, standaardwaarden en sentinelwaarden.",
+      },
+      no: {
+        name: "Nil UUID Generator",
+        description:
+          "Generer og kopier den standardiserte nil-UUID-en med bare nuller for plassholdere, standardverdier og sentinel-verdier.",
+      },
+      pl: {
+        name: "Generator Nil UUID",
+        description:
+          "Wygeneruj i skopiuj znormalizowany, złożony z samych zer nil UUID do symboli zastępczych, wartości domyślnych i wartości sentinel.",
+      },
+      pt: {
+        name: "Gerador de UUID Nil",
+        description:
+          "Gere e copie o UUID nil padronizado com todos os zeros para placeholders, padrões e valores sentinela.",
+      },
+      ru: {
+        name: "Генератор nil UUID",
+        description:
+          "Создавайте и копируйте стандартизированный nil UUID из одних нулей для заполнителей, значений по умолчанию и сигнальных значений.",
+      },
+      sv: {
+        name: "Nil UUID-generator",
+        description:
+          "Generera och kopiera den standardiserade nil-UUID:n med bara nollor för platshållare, standardvärden och sentinel-värden.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง Nil UUID",
+        description:
+          "สร้างและคัดลอก nil UUID มาตรฐานที่เป็นศูนย์ทั้งหมด สำหรับ placeholder, ค่าเริ่มต้น และค่า sentinel",
+      },
+      tr: {
+        name: "Nil UUID Oluşturucu",
+        description:
+          "Yer tutucular, varsayılanlar ve sentinel değerler için standartlaştırılmış tamamı sıfır nil UUID'yi oluşturup kopyalayın.",
+      },
+      vi: {
+        name: "Trình tạo UUID nil",
+        description:
+          "Tạo và sao chép UUID nil toàn số không theo tiêu chuẩn để dùng làm phần giữ chỗ, giá trị mặc định và giá trị sentinel.",
+      },
+      "zh-CN": {
+        name: "Nil UUID 生成器",
+        description:
+          "生成并复制标准化的全零 nil UUID，用于占位符、默认值和哨兵值。",
+      },
+      "zh-TW": {
+        name: "Nil UUID 產生器",
+        description:
+          "產生並複製標準化的全零 nil UUID，可用於預留位置、預設值與哨兵值。",
       },
     },
   },

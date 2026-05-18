@@ -1,0 +1,4 @@
+{
+  "name": "เครื่องมือสร้าง Nil UUID",
+  "description": "สร้างและคัดลอก nil UUID มาตรฐานที่เป็นศูนย์ทั้งหมด สำหรับ placeholder, ค่าเริ่มต้น และค่า sentinel"
+}

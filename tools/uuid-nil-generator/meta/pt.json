@@ -1,0 +1,4 @@
+{
+  "name": "Gerador de UUID Nil",
+  "description": "Gere e copie o UUID nil padronizado com todos os zeros para placeholders, padrões e valores sentinela."
+}
