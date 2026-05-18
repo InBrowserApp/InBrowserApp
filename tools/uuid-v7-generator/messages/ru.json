@@ -5,7 +5,7 @@
   "singleModeLabel": "Один",
   "batchModeLabel": "Пакет",
   "countLabel": "Количество",
-  "countDescription": "Генерируйте от 1 до 100 UUID за раз.",
+  "countDescription": "Пакетный режим может создать от 2 до 100 UUID за раз.",
   "resultsTitle": "Сгенерированные UUID",
   "resultsDescription": "Значения UUID v7 генерируются локально с миллисекундной временной меткой Unix и случайными битами.",
   "resultsPlaceholder": "Сгенерированные значения UUID v7 появятся здесь…",

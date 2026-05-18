@@ -12,6 +12,7 @@ import {
   CardTitle,
 } from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
+import { cn } from "@workspace/ui/lib/utils"
 import { Download, RefreshCcw } from "@workspace/ui/icons"
 
 import type { UuidV7Messages } from "../types"
@@ -24,6 +25,7 @@ type UuidV7ResultsCardProps = Readonly<{
   messages: UuidV7Messages
   output: string
   count: number
+  isBatchMode: boolean
   onRegenerate: () => void
 }>
 
@@ -35,6 +37,7 @@ function UuidV7ResultsCard({
   messages,
   output,
   count,
+  isBatchMode,
   onRegenerate,
 }: UuidV7ResultsCardProps) {
   return (
@@ -45,7 +48,10 @@ function UuidV7ResultsCard({
       </CardHeader>
       <ToolPanelCardContent className="gap-4">
         <div
-          aria-label={messages.batchSummaryLabel}
+          aria-label={
+            isBatchMode ? messages.batchSummaryLabel : messages.resultsTitle
+          }
+          role="group"
           className="grid gap-3 rounded-md border bg-muted/30 p-3 sm:grid-cols-3"
         >
           <div className="flex min-w-0 flex-col gap-1">
@@ -81,10 +87,13 @@ function UuidV7ResultsCard({
           aria-label={messages.resultsTitle}
           value={output}
           readOnly
-          rows={14}
+          rows={isBatchMode ? 12 : 5}
           placeholder={messages.resultsPlaceholder}
           spellCheck={false}
-          className="max-h-[min(32rem,60vh)] min-h-80 resize-y overflow-y-auto font-mono text-sm"
+          className={cn(
+            "max-h-[min(32rem,60vh)] resize-y overflow-y-auto font-mono text-sm",
+            isBatchMode ? "min-h-80" : "min-h-36"
+          )}
         />
       </ToolPanelCardContent>
       <ToolPanelCardFooter className="justify-between gap-3 border-t">

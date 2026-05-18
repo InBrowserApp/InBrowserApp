@@ -5,7 +5,7 @@
   "singleModeLabel": "Tunggal",
   "batchModeLabel": "Batch",
   "countLabel": "Jumlah",
-  "countDescription": "Buat antara 1 dan 100 UUID sekaligus.",
+  "countDescription": "Mode batch dapat membuat 2 hingga 100 UUID sekaligus.",
   "resultsTitle": "UUID yang Dihasilkan",
   "resultsDescription": "Nilai UUID v7 dibuat secara lokal dengan stempel waktu Unix dalam milidetik dan bit acak.",
   "resultsPlaceholder": "Nilai UUID v7 yang dibuat akan muncul di sini…",

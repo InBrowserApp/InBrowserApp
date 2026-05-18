@@ -5,7 +5,7 @@
   "singleModeLabel": "فردي",
   "batchModeLabel": "دفعة",
   "countLabel": "العدد",
-  "countDescription": "أنشئ ما بين 1 و100 معرّف UUID دفعة واحدة.",
+  "countDescription": "يمكن لوضع الدفعات إنشاء من 2 إلى 100 UUID في المرة الواحدة.",
   "resultsTitle": "معرّفات UUID المنشأة",
   "resultsDescription": "تُنشأ قيم UUID v7 محلياً باستخدام طابع زمني بنظام Unix بالمللي ثانية وبتّات عشوائية.",
   "resultsPlaceholder": "ستظهر قيم UUID v7 المنشأة هنا…",

@@ -5,7 +5,7 @@
   "singleModeLabel": "Individuel",
   "batchModeLabel": "Lot",
   "countLabel": "Nombre",
-  "countDescription": "Générez entre 1 et 100 UUID à la fois.",
+  "countDescription": "Le mode lot peut générer de 2 à 100 UUID à la fois.",
   "resultsTitle": "UUID générés",
   "resultsDescription": "Les valeurs UUID v7 sont générées localement avec un horodatage Unix en millisecondes et des bits aléatoires.",
   "resultsPlaceholder": "Les valeurs UUID v7 générées apparaîtront ici…",

@@ -5,7 +5,7 @@
   "singleModeLabel": "Tunggal",
   "batchModeLabel": "Kelompok",
   "countLabel": "Bilangan",
-  "countDescription": "Jana antara 1 hingga 100 UUID serentak.",
+  "countDescription": "Mod kelompok boleh menjana 2 hingga 100 UUID sekali gus.",
   "resultsTitle": "UUID yang Dijana",
   "resultsDescription": "Nilai UUID v7 dijana secara tempatan dengan cap masa milisaat Unix dan bit rawak.",
   "resultsPlaceholder": "Nilai UUID v7 yang dijana akan muncul di sini…",

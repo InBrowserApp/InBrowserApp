@@ -5,7 +5,7 @@
   "singleModeLabel": "單一",
   "batchModeLabel": "批次",
   "countLabel": "數量",
-  "countDescription": "一次產生 1 到 100 個 UUID。",
+  "countDescription": "批次模式每次可產生 2 到 100 個 UUID。",
   "resultsTitle": "已產生的 UUID",
   "resultsDescription": "UUID v7 值會在本機產生，並包含 Unix 毫秒時間戳記與隨機位元。",
   "resultsPlaceholder": "產生的 UUID v7 值會顯示在這裡…",

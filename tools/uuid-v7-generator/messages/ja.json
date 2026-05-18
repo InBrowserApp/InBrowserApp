@@ -5,7 +5,7 @@
   "singleModeLabel": "単一",
   "batchModeLabel": "一括",
   "countLabel": "数",
-  "countDescription": "一度に1から100個のUUIDを生成します。",
+  "countDescription": "バッチモードでは一度に 2 から 100 件の UUID を生成できます。",
   "resultsTitle": "生成されたUUID",
   "resultsDescription": "UUID v7の値は、Unixミリ秒タイムスタンプとランダムビットを使ってローカルで生成されます。",
   "resultsPlaceholder": "生成されたUUID v7値がここに表示されます…",

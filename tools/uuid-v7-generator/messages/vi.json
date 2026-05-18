@@ -5,7 +5,7 @@
   "singleModeLabel": "Đơn lẻ",
   "batchModeLabel": "Theo lô",
   "countLabel": "Số lượng",
-  "countDescription": "Tạo từ 1 đến 100 UUID cùng lúc.",
+  "countDescription": "Chế độ hàng loạt có thể tạo từ 2 đến 100 UUID mỗi lần.",
   "resultsTitle": "UUID đã tạo",
   "resultsDescription": "Các giá trị UUID v7 được tạo cục bộ với dấu thời gian Unix tính bằng mili giây và các bit ngẫu nhiên.",
   "resultsPlaceholder": "Các giá trị UUID v7 đã tạo sẽ xuất hiện tại đây…",

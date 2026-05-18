@@ -1,4 +1,5 @@
 const UUID_V7_MIN_COUNT = 1
+const UUID_V7_MIN_BATCH_COUNT = 2
 const UUID_V7_DEFAULT_COUNT = 10
 const UUID_V7_MAX_COUNT = 100
 const UUID_V7_MAX_TIMESTAMP_MS = 0xffffffffffff
@@ -165,6 +166,7 @@ export {
   UUID_V7_DEFAULT_COUNT,
   UUID_V7_MAX_COUNT,
   UUID_V7_MAX_TIMESTAMP_MS,
+  UUID_V7_MIN_BATCH_COUNT,
   UUID_V7_MIN_COUNT,
   createUuidV7Generator,
   generateUuidV7Ids,

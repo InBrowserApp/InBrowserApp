@@ -5,7 +5,7 @@
   "singleModeLabel": "Pojedynczy",
   "batchModeLabel": "Partia",
   "countLabel": "Liczba",
-  "countDescription": "Generuj od 1 do 100 identyfikatorów UUID naraz.",
+  "countDescription": "Tryb wsadowy może wygenerować od 2 do 100 UUID naraz.",
   "resultsTitle": "Wygenerowane identyfikatory UUID",
   "resultsDescription": "Wartości UUID v7 są generowane lokalnie ze znacznikiem czasu Unix w milisekundach i losowymi bitami.",
   "resultsPlaceholder": "Wygenerowane wartości UUID v7 pojawią się tutaj…",

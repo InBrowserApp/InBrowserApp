@@ -5,7 +5,7 @@
   "singleModeLabel": "Tekli",
   "batchModeLabel": "Toplu",
   "countLabel": "Adet",
-  "countDescription": "Tek seferde 1 ile 100 arasında UUID oluşturun.",
+  "countDescription": "Toplu mod tek seferde 2 ile 100 UUID üretebilir.",
   "resultsTitle": "Üretilen UUID'ler",
   "resultsDescription": "UUID v7 değerleri, Unix milisaniye zaman damgası ve rastgele bitlerle yerel olarak oluşturulur.",
   "resultsPlaceholder": "Üretilen UUID v7 değerleri burada görünecek…",

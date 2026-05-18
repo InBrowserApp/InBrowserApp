@@ -5,7 +5,7 @@
   "singleModeLabel": "एकल",
   "batchModeLabel": "बैच",
   "countLabel": "संख्या",
-  "countDescription": "एक बार में 1 से 100 UUIDs तक जनरेट करें।",
+  "countDescription": "Batch mode एक बार में 2 से 100 UUID बना सकता है।",
   "resultsTitle": "जनरेट किए गए UUIDs",
   "resultsDescription": "UUID v7 मान स्थानीय रूप से Unix मिलीसेकंड टाइमस्टैम्प और रैंडम बिट्स के साथ जनरेट किए जाते हैं।",
   "resultsPlaceholder": "जनरेट किए गए UUID v7 मान यहाँ दिखाई देंगे…",

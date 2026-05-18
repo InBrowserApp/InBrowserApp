@@ -5,7 +5,7 @@
   "singleModeLabel": "Enskild",
   "batchModeLabel": "Omgång",
   "countLabel": "Antal",
-  "countDescription": "Generera mellan 1 och 100 UUID:er åt gången.",
+  "countDescription": "Batchläge kan generera 2 till 100 UUID:er åt gången.",
   "resultsTitle": "Genererade UUID:er",
   "resultsDescription": "UUID v7-värden genereras lokalt med en Unix-tidsstämpel i millisekunder och slumpmässiga bitar.",
   "resultsPlaceholder": "Genererade UUID v7-värden visas här…",

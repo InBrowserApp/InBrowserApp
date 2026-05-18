@@ -17,7 +17,7 @@ import {
   ToggleGroupItem,
 } from "@workspace/ui/components/ui/toggle-group"
 
-import { UUID_V7_MAX_COUNT, UUID_V7_MIN_COUNT } from "../core/uuid-v7"
+import { UUID_V7_MAX_COUNT, UUID_V7_MIN_BATCH_COUNT } from "../core/uuid-v7"
 import type { UuidV7GenerationMode, UuidV7Messages } from "../types"
 
 type UuidV7OptionsCardProps = Readonly<{
@@ -85,7 +85,7 @@ function UuidV7OptionsCard({
               inputMode="numeric"
               name="uuid-v7-count"
               autoComplete="off"
-              min={UUID_V7_MIN_COUNT}
+              min={UUID_V7_MIN_BATCH_COUNT}
               max={UUID_V7_MAX_COUNT}
               value={count}
               aria-describedby={countDescriptionId}

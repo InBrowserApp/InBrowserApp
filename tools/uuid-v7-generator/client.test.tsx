@@ -20,7 +20,7 @@ const messages = {
   singleModeLabel: "Single",
   batchModeLabel: "Batch",
   countLabel: "Count",
-  countDescription: "Generate between 1 and 100 UUIDs in one batch.",
+  countDescription: "Batch mode can generate 2 to 100 UUIDs at a time.",
   resultsTitle: "Generated UUIDs",
   resultsDescription: "UUID v7 values are generated locally in your browser.",
   resultsPlaceholder: "Generated UUID v7 values will appear here...",
@@ -74,7 +74,9 @@ afterEach(() => {
 })
 
 function getResultsTextarea() {
-  return screen.getByLabelText(messages.resultsTitle) as HTMLTextAreaElement
+  return screen.getByRole("textbox", {
+    name: messages.resultsTitle,
+  }) as HTMLTextAreaElement
 }
 
 function getModeOption(name: string) {
@@ -89,6 +91,7 @@ describe("UuidV7GeneratorClient", () => {
       getModeOption(messages.singleModeLabel).getAttribute("data-state")
     ).toBe("on")
     expect(screen.queryByLabelText(messages.countLabel)).toBeNull()
+    expect(getResultsTextarea().getAttribute("rows")).toBe("5")
 
     await waitFor(() => {
       const lines = getResultsTextarea().value.trim().split("\n")
@@ -101,7 +104,9 @@ describe("UuidV7GeneratorClient", () => {
       ).toBe(true)
     })
 
-    expect(screen.getByLabelText(messages.batchSummaryLabel)).toBeTruthy()
+    expect(
+      screen.getByRole("group", { name: messages.resultsTitle })
+    ).toBeTruthy()
     expect(screen.getByText("UUID v7")).toBeTruthy()
     expect(screen.getByText("1700000000000")).toBeTruthy()
     expect(URL.createObjectURL).toHaveBeenCalled()
@@ -118,6 +123,13 @@ describe("UuidV7GeneratorClient", () => {
         "10"
       )
     )
+    expect(
+      (screen.getByLabelText(messages.countLabel) as HTMLInputElement).min
+    ).toBe("2")
+    expect(getResultsTextarea().getAttribute("rows")).toBe("12")
+    expect(
+      screen.getByRole("group", { name: messages.batchSummaryLabel })
+    ).toBeTruthy()
 
     await waitFor(() => {
       const lines = getResultsTextarea().value.trim().split("\n")
@@ -158,6 +170,40 @@ describe("UuidV7GeneratorClient", () => {
     window.localStorage.setItem("tools:uuid-v7-generator:mode", "batch")
 
     render(<UuidV7GeneratorClient messages={messages} />)
+
+    await waitFor(() => {
+      expect(screen.getByLabelText(messages.countLabel)).toHaveProperty(
+        "value",
+        "2"
+      )
+      expect(getResultsTextarea().value.trim().split("\n")).toHaveLength(2)
+    })
+  })
+
+  test("treats a legacy saved count above one as batch mode", async () => {
+    window.localStorage.setItem("tools:uuid-v7-generator:count", "3")
+
+    render(<UuidV7GeneratorClient messages={messages} />)
+
+    await waitFor(() => {
+      expect(screen.getByLabelText(messages.countLabel)).toHaveProperty(
+        "value",
+        "3"
+      )
+      expect(getResultsTextarea().value.trim().split("\n")).toHaveLength(3)
+      expect(window.localStorage.getItem("tools:uuid-v7-generator:mode")).toBe(
+        "batch"
+      )
+    })
+  })
+
+  test("keeps batch count at two or more", async () => {
+    render(<UuidV7GeneratorClient messages={messages} />)
+
+    fireEvent.click(getModeOption(messages.batchModeLabel))
+    fireEvent.change(screen.getByLabelText(messages.countLabel), {
+      target: { value: "1" },
+    })
 
     await waitFor(() => {
       expect(screen.getByLabelText(messages.countLabel)).toHaveProperty(

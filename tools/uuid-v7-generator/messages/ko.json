@@ -5,7 +5,7 @@
   "singleModeLabel": "단일",
   "batchModeLabel": "배치",
   "countLabel": "개수",
-  "countDescription": "한 번에 1개에서 100개까지 UUID를 생성합니다.",
+  "countDescription": "배치 모드는 한 번에 2~100개의 UUID를 생성할 수 있습니다.",
   "resultsTitle": "생성된 UUID",
   "resultsDescription": "UUID v7 값은 Unix 밀리초 타임스탬프와 임의 비트로 로컬에서 생성됩니다.",
   "resultsPlaceholder": "생성된 UUID v7 값이 여기에 표시됩니다…",

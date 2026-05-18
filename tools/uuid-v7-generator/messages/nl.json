@@ -5,7 +5,7 @@
   "singleModeLabel": "Enkel",
   "batchModeLabel": "Batch",
   "countLabel": "Aantal",
-  "countDescription": "Genereer tussen 1 en 100 UUID's tegelijk.",
+  "countDescription": "Batchmodus kan 2 tot 100 UUID’s tegelijk genereren.",
   "resultsTitle": "Gegenereerde UUID's",
   "resultsDescription": "UUID v7-waarden worden lokaal gegenereerd met een Unix-tijdstempel in milliseconden en willekeurige bits.",
   "resultsPlaceholder": "Gegenereerde UUID v7-waarden verschijnen hier…",

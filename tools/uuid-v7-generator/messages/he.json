@@ -5,7 +5,7 @@
   "singleModeLabel": "יחיד",
   "batchModeLabel": "אצווה",
   "countLabel": "כמות",
-  "countDescription": "צרו בין מזהה UUID אחד ל-100 בבת אחת.",
+  "countDescription": "מצב אצווה יכול ליצור 2 עד 100 UUID בכל פעם.",
   "resultsTitle": "מזהי UUID שנוצרו",
   "resultsDescription": "ערכי UUID v7 נוצרים מקומית עם חותמת זמן במילישניות Unix וביטים אקראיים.",
   "resultsPlaceholder": "ערכי UUID v7 שנוצרו יופיעו כאן…",

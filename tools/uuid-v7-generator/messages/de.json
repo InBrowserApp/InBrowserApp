@@ -5,7 +5,7 @@
   "singleModeLabel": "Einzeln",
   "batchModeLabel": "Stapel",
   "countLabel": "Anzahl",
-  "countDescription": "Erzeuge 1 bis 100 UUIDs auf einmal.",
+  "countDescription": "Der Batch-Modus kann 2 bis 100 UUIDs auf einmal erzeugen.",
   "resultsTitle": "Erzeugte UUIDs",
   "resultsDescription": "UUID v7-Werte werden lokal mit einem Unix-Zeitstempel in Millisekunden und Zufallsbits erzeugt.",
   "resultsPlaceholder": "Erzeugte UUID v7-Werte erscheinen hier…",
