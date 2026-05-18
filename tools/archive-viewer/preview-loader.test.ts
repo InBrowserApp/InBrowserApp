@@ -88,13 +88,17 @@ describe("preview loader", () => {
 
   test("loads PDF previews with the PDF object URL", async () => {
     const loaded = await loadEntryPreview(
-      handleWith(new Blob(["%PDF-1.4"], { type: "application/pdf" })),
+      handleWith(new Blob(["%PDF-1.4"], { type: "application/octet-stream" })),
       entry("report.pdf", "pdf"),
       messages
     )
 
     expect(loaded.preview.status).toBe("pdf")
+    if (loaded.preview.status !== "pdf") throw new Error("Expected PDF preview")
+
+    expect(loaded.preview.blob.type).toBe("application/pdf")
     expect(loaded.textDownloadUrl).toBeNull()
+    expect(createObjectUrlMock).toHaveBeenCalledWith(loaded.preview.blob)
 
     cleanupPreview(loaded.preview)
     expect(revokeObjectUrlMock).toHaveBeenCalledWith("blob:preview")

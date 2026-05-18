@@ -117,6 +117,7 @@ describe("archive path helpers", () => {
 describe("archive mime helpers", () => {
   test("guesses mime types and preserves already specific blob types", async () => {
     expect(guessMimeType("photo.png")).toBe("image/png")
+    expect(guessMimeType("report.pdf")).toBe("application/pdf")
     expect(guessMimeType("unknown.bin")).toBe("application/octet-stream")
 
     const textBlob = new Blob(["x"], { type: "text/plain" })
@@ -124,5 +125,11 @@ describe("archive mime helpers", () => {
     expect(withGuessedMimeType(new Blob(["{}"]), "data.json").type).toBe(
       "application/json"
     )
+    expect(
+      withGuessedMimeType(
+        new Blob(["%PDF"], { type: "application/octet-stream" }),
+        "report.pdf"
+      ).type
+    ).toBe("application/pdf")
   })
 })

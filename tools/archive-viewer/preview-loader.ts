@@ -5,6 +5,7 @@ import {
   isTextEntry,
   resolveTextPreviewLanguage,
 } from "./core/preview"
+import { withGuessedMimeType } from "./core/mime"
 
 import type { PreviewState } from "./components/preview-dialog"
 import type { ArchiveEntry, ArchiveHandle } from "./core/types"
@@ -20,7 +21,10 @@ async function loadEntryPreview(
   entry: ArchiveEntry,
   messages: ArchiveViewerMessages
 ): Promise<LoadedPreview> {
-  const blob = await handle.readEntry(entry.path)
+  const blob = withGuessedMimeType(
+    await handle.readEntry(entry.path),
+    entry.path
+  )
   const downloadUrl = URL.createObjectURL(blob)
 
   if (isImageEntry(entry, blob)) {

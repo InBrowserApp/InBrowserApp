@@ -149,6 +149,15 @@ function renderPreviewBody(params: {
   }
 
   if (preview.status === "pdf") {
+    if (!canUseInlinePdfPreview()) {
+      return (
+        <Alert>
+          <FileText aria-hidden="true" />
+          <AlertDescription>{messages.noPreview}</AlertDescription>
+        </Alert>
+      )
+    }
+
     return (
       <div
         role="region"
@@ -178,6 +187,15 @@ function renderPreviewBody(params: {
   }
 
   return null
+}
+
+function canUseInlinePdfPreview(): boolean {
+  if (typeof navigator === "undefined") return true
+
+  const pdfNavigator = navigator as Navigator & {
+    pdfViewerEnabled?: boolean
+  }
+  return pdfNavigator.pdfViewerEnabled !== false
 }
 
 export { PreviewDialog }

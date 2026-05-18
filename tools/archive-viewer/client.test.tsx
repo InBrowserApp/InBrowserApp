@@ -81,7 +81,7 @@ function makePdfHandle(): ArchiveHandle & {
   readEntry: ReturnType<typeof vi.fn>
   dispose: ReturnType<typeof vi.fn>
 } {
-  const pdfBlob = new Blob(["%PDF-1.4"], { type: "application/pdf" })
+  const pdfBlob = new Blob(["%PDF-1.4"], { type: "application/octet-stream" })
 
   return {
     format: "zip",
@@ -122,6 +122,7 @@ beforeEach(() => {
 
 afterEach(() => {
   cleanup()
+  Reflect.deleteProperty(globalThis.navigator, "pdfViewerEnabled")
   openArchiveMock.mockReset()
   clipboardWriteTextMock.mockReset()
   createObjectUrlMock.mockReset()
@@ -306,6 +307,10 @@ describe("ArchiveViewerClient", () => {
   test("renders PDF previews in the dialog", async () => {
     const handle = makePdfHandle()
     createObjectUrlMock.mockReturnValueOnce("about:blank#pdf-preview")
+    Object.defineProperty(globalThis.navigator, "pdfViewerEnabled", {
+      configurable: true,
+      value: true,
+    })
     openArchiveMock.mockResolvedValue(handle)
 
     render(<ArchiveViewerClient messages={messages} />)
@@ -331,6 +336,9 @@ describe("ArchiveViewerClient", () => {
 
     await waitFor(() => {
       expect(handle.readEntry).toHaveBeenCalledWith("docs/report.pdf")
+      expect((createObjectUrlMock.mock.calls[0]![0] as Blob).type).toBe(
+        "application/pdf"
+      )
       expect(
         screen.getByRole("region", { name: messages.pdfPreviewLabel })
       ).toBeTruthy()
@@ -339,6 +347,44 @@ describe("ArchiveViewerClient", () => {
           .getByTitle(`${messages.pdfPreviewLabel}: docs/report.pdf`)
           .getAttribute("src")
       ).toBe("about:blank#pdf-preview")
+    })
+  })
+
+  test("keeps PDF preview from auto-loading when inline PDF viewing is disabled", async () => {
+    const handle = makePdfHandle()
+    Object.defineProperty(globalThis.navigator, "pdfViewerEnabled", {
+      configurable: true,
+      value: false,
+    })
+    openArchiveMock.mockResolvedValue(handle)
+
+    render(<ArchiveViewerClient messages={messages} />)
+
+    fireEvent.change(screen.getByLabelText(messages.uploadAction), {
+      target: {
+        files: [new File(["zip"], "sample.zip", { type: "application/zip" })],
+      },
+    })
+
+    await waitFor(() => {
+      expect(openArchiveMock).toHaveBeenCalled()
+    })
+
+    fireEvent.click(
+      screen.getByRole("button", { name: `${messages.openFolder}: docs` })
+    )
+    fireEvent.click(
+      screen.getByRole("button", {
+        name: `${messages.previewFile}: report.pdf`,
+      })
+    )
+
+    await waitFor(() => {
+      expect(handle.readEntry).toHaveBeenCalledWith("docs/report.pdf")
+      expect(screen.getByText(messages.noPreview)).toBeTruthy()
+      expect(
+        screen.queryByTitle(`${messages.pdfPreviewLabel}: docs/report.pdf`)
+      ).toBeNull()
     })
   })
 

@@ -19,6 +19,7 @@ const MIME_BY_EXTENSION: Record<string, string> = {
   md: "text/markdown",
   mjs: "text/javascript",
   php: "text/x-php",
+  pdf: "application/pdf",
   plist: "application/xml",
   png: "image/png",
   py: "text/x-python",
