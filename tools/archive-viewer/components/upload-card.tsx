@@ -68,7 +68,7 @@ function UploadCard({
           <div className="flex flex-col gap-4 rounded-lg border border-input bg-background/60 p-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex min-w-0 items-center gap-3">
               <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-muted">
-                <FileArchive aria-hidden="true" />
+                <FileArchive aria-hidden="true" className="size-5" />
               </div>
               <div className="min-w-0">
                 <p className="truncate font-medium">{archiveName}</p>
@@ -115,7 +115,7 @@ function UploadCard({
             <Empty className="min-h-56 border-0">
               <EmptyHeader>
                 <EmptyMedia variant="icon" className="size-12">
-                  <FileArchive aria-hidden="true" />
+                  <FileArchive aria-hidden="true" className="size-5" />
                 </EmptyMedia>
                 <EmptyTitle>{messages.uploadHint}</EmptyTitle>
                 <EmptyDescription>{messages.localOnlyNote}</EmptyDescription>

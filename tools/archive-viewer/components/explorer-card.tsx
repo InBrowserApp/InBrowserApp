@@ -78,7 +78,7 @@ function ExplorerCard({
                 {index > 0 ? (
                   <ChevronRight
                     aria-hidden="true"
-                    className="text-muted-foreground"
+                    className="size-3.5 shrink-0 text-muted-foreground"
                   />
                 ) : null}
                 <Button
@@ -113,7 +113,7 @@ function ExplorerCard({
         <div className="relative">
           <Search
             aria-hidden="true"
-            className="pointer-events-none absolute start-2.5 top-1/2 -translate-y-1/2 text-muted-foreground"
+            className="pointer-events-none absolute start-2.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
           />
           <Input
             id="archive-viewer-search"
@@ -190,7 +190,7 @@ function ExplorerCard({
           <Empty className="min-h-64 border">
             <EmptyHeader>
               <EmptyMedia variant="icon">
-                <Folder aria-hidden="true" />
+                <Folder aria-hidden="true" className="size-4" />
               </EmptyMedia>
               <EmptyTitle>
                 {hasArchive

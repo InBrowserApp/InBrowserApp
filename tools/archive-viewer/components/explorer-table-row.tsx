@@ -214,9 +214,9 @@ function EntryButton({
       }
     >
       {row.kind === "directory" ? (
-        <Folder aria-hidden="true" />
+        <Folder aria-hidden="true" className="size-4 shrink-0" />
       ) : (
-        <File aria-hidden="true" />
+        <File aria-hidden="true" className="size-4 shrink-0" />
       )}
       <span className="truncate">{row.name}</span>
     </button>
