@@ -272,7 +272,6 @@ function createRandomUuidValues(cryptoApi?: Crypto) {
 }
 
 export {
-  EMPTY_VALUES,
   MAX_UUID_VALUE,
   SAMPLE_UUID,
   UUID_FORMATS,
@@ -280,7 +279,6 @@ export {
   createRandomUuidBytes,
   createRandomUuidValues,
   createSampleUuidValues,
-  formatUuidBytes,
   parseUuidValue,
 }
-export type { ConvertUuidResult, ParseUuidResult, UuidFormat, UuidFormatValues }
+export type { UuidFormat, UuidFormatValues }
