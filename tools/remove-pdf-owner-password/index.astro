@@ -1,0 +1,78 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import RemovePdfOwnerPasswordClient from "./client"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+type RemovePdfOwnerPasswordMessagesCatalog = Readonly<{
+  actionDescription: string
+  actionLabel: string
+  changeFile: string
+  downloadPdfLabel: string
+  dragDropOrClick: string
+  emptyFileError: string
+  errorTitle: string
+  fileNameLabel: string
+  fileSizeLabel: string
+  genericError: string
+  localOnlyNote: string
+  noFileDescription: string
+  noFileTitle: string
+  openPasswordNote: string
+  outputSizeLabel: string
+  processingDescription: string
+  processingLabel: string
+  qpdfFailedError: string
+  readyDescription: string
+  readyTitle: string
+  removeFile: string
+  resultDescription: string
+  resultTitle: string
+  selectedPdfTitle: string
+  successDescription: string
+  successTitle: string
+  supportedFormats: string
+  unsupportedFile: string
+  uploadDescription: string
+  uploadTitle: string
+  workerUnsupportedError: string
+}>
+
+interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const localizedMessages = resolveLocale<RemovePdfOwnerPasswordMessagesCatalog>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+)
+const messages = { meta, ...localizedMessages }
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <RemovePdfOwnerPasswordClient client:load messages={messages} />
+
+  {
+    IntroSection ? (
+      <ToolArticle>
+        <IntroSection />
+      </ToolArticle>
+    ) : null
+  }
+</ToolPageShell>

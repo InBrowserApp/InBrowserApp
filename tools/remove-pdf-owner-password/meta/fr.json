@@ -1,0 +1,4 @@
+{
+  "name": "Supprimer le mot de passe propriétaire d'un PDF",
+  "description": "Supprimez localement les restrictions liées au mot de passe propriétaire d'un PDF afin de débloquer les autorisations de modification, d'impression et de copie."
+}
