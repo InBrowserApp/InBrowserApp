@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "Jujukan jam mesti integer dari 0 hingga {max}.",
   "resultsTitle": "Keputusan",
   "resultsDescription": "UUID dijana dalam pelayar dan disusun mengikut cap masa yang terbenam di dalamnya.",
-  "resultsPlaceholder": "Nilai UUID v6 yang dijana akan dipaparkan di sini...",
+  "resultsPlaceholder": "Nilai UUID v6 yang dijana akan dipaparkan di sini…",
   "generatedAtLabel": "Dijana dengan masa Unix: {milliseconds}",
   "copyResultsLabel": "Salin hasil",
   "copiedLabel": "Disalin",

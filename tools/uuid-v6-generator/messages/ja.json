@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "クロックシーケンスは 0 から {max} までの整数にしてください。",
   "resultsTitle": "結果",
   "resultsDescription": "UUID はブラウザー内で生成され、埋め込まれたタイムスタンプ順に並びます。",
-  "resultsPlaceholder": "生成された UUID v6 値がここに表示されます...",
+  "resultsPlaceholder": "生成された UUID v6 値がここに表示されます…",
   "generatedAtLabel": "Unix 時刻で生成: {milliseconds}",
   "copyResultsLabel": "結果をコピー",
   "copiedLabel": "コピー済み",

@@ -135,7 +135,7 @@ function createUuidV6Bytes({
   node,
 }: GenerateUuidV6Options) {
   if (!Number.isInteger(subMillisecondTick) || subMillisecondTick < 0) {
-    throw new RangeError("UUID v6 sub-millisecond tick must be positive.")
+    throw new RangeError("UUID v6 sub-millisecond tick must be non-negative.")
   }
 
   if (!isValidUuidClockSequence(clockSequence)) {

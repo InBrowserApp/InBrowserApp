@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "Sekwencja zegara musi być liczbą całkowitą od 0 do {max}.",
   "resultsTitle": "Wyniki",
   "resultsDescription": "Identyfikatory UUID są generowane w przeglądarce i porządkowane według osadzonego znacznika czasu.",
-  "resultsPlaceholder": "Wygenerowane wartości UUID v6 pojawią się tutaj...",
+  "resultsPlaceholder": "Wygenerowane wartości UUID v6 pojawią się tutaj…",
   "generatedAtLabel": "Wygenerowano z czasem Unix: {milliseconds}",
   "copyResultsLabel": "Kopiuj wynik",
   "copiedLabel": "Skopiowano",

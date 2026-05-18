@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "De kloksequentie moet een geheel getal van 0 tot {max} zijn.",
   "resultsTitle": "Resultaten",
   "resultsDescription": "UUID's worden in de browser gegenereerd en geordend op hun ingesloten tijdstempel.",
-  "resultsPlaceholder": "Gegenereerde UUID v6-waarden verschijnen hier...",
+  "resultsPlaceholder": "Gegenereerde UUID v6-waarden verschijnen hier…",
   "generatedAtLabel": "Gegenereerd met Unix-tijd: {milliseconds}",
   "copyResultsLabel": "Kopieer resultaat",
   "copiedLabel": "Gekopieerd",

@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "क्लॉक सीक्वेंस 0 से {max} तक का पूर्णांक होना चाहिए.",
   "resultsTitle": "परिणाम",
   "resultsDescription": "UUID ब्राउज़र में ही जनरेट होते हैं और अपने अंतर्निहित टाइमस्टैम्प के अनुसार क्रमबद्ध होते हैं.",
-  "resultsPlaceholder": "जनरेट किए गए UUID v6 मान यहां दिखाई देंगे...",
+  "resultsPlaceholder": "जनरेट किए गए UUID v6 मान यहां दिखाई देंगे…",
   "generatedAtLabel": "Unix समय के साथ जनरेट किया गया: {milliseconds}",
   "copyResultsLabel": "परिणाम कॉपी करें",
   "copiedLabel": "कॉपी किया गया",

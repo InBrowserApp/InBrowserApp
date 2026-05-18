@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "La séquence d'horloge doit être un entier de 0 à {max}.",
   "resultsTitle": "Résultats",
   "resultsDescription": "Les UUID sont générés dans le navigateur et ordonnés selon leur horodatage intégré.",
-  "resultsPlaceholder": "Les valeurs UUID v6 générées apparaîtront ici...",
+  "resultsPlaceholder": "Les valeurs UUID v6 générées apparaîtront ici…",
   "generatedAtLabel": "Généré avec le temps Unix : {milliseconds}",
   "copyResultsLabel": "Copier le résultat",
   "copiedLabel": "Copié",

@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "La sequenza di clock deve essere un intero da 0 a {max}.",
   "resultsTitle": "Risultati",
   "resultsDescription": "Gli UUID vengono generati nel browser e ordinati in base al timestamp incorporato.",
-  "resultsPlaceholder": "I valori UUID v6 generati appariranno qui...",
+  "resultsPlaceholder": "I valori UUID v6 generati appariranno qui…",
   "generatedAtLabel": "Generato con tempo Unix: {milliseconds}",
   "copyResultsLabel": "Copia risultato",
   "copiedLabel": "Copiato",

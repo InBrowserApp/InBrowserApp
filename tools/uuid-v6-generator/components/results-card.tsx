@@ -44,11 +44,15 @@ function UuidV6ResultsCard({
           value={output}
           readOnly
           rows={14}
+          spellCheck={false}
           placeholder={messages.resultsPlaceholder}
           className="max-h-[min(32rem,60vh)] min-h-80 resize-y overflow-y-auto font-mono text-sm"
         />
 
-        <p className="flex min-h-5 items-center gap-2 text-sm text-muted-foreground">
+        <p
+          className="flex min-h-5 items-center gap-2 text-sm text-muted-foreground"
+          aria-live="polite"
+        >
           <Clock3 className="size-4 shrink-0" aria-hidden="true" />
           {generatedAtText ?? "-"}
         </p>

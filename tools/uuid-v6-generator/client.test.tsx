@@ -44,7 +44,7 @@ const messages = {
   clockSequenceInvalid: "Clock sequence must be an integer from 0 to {max}.",
   resultsTitle: "Results",
   resultsDescription: "UUIDs are generated in-browser.",
-  resultsPlaceholder: "Generated UUID v6 values will appear here...",
+  resultsPlaceholder: "Generated UUID v6 values will appear here…",
   generatedAtLabel: "Generated with Unix time: {milliseconds}",
   copyResultsLabel: "Copy result",
   copiedLabel: "Copied",

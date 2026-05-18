@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "Klokkesekvensen må være et heltall fra 0 til {max}.",
   "resultsTitle": "Resultater",
   "resultsDescription": "UUID-er genereres i nettleseren og sorteres etter det innebygde tidsstempelet.",
-  "resultsPlaceholder": "Genererte UUID v6-verdier vises her...",
+  "resultsPlaceholder": "Genererte UUID v6-verdier vises her…",
   "generatedAtLabel": "Generert med Unix-tid: {milliseconds}",
   "copyResultsLabel": "Kopier resultat",
   "copiedLabel": "Kopiert",

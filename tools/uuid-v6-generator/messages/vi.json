@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "Chuỗi đồng hồ phải là một số nguyên từ 0 đến {max}.",
   "resultsTitle": "Kết quả",
   "resultsDescription": "UUID được tạo trong trình duyệt và được sắp xếp theo dấu thời gian được nhúng bên trong.",
-  "resultsPlaceholder": "Các giá trị UUID v6 được tạo sẽ xuất hiện ở đây...",
+  "resultsPlaceholder": "Các giá trị UUID v6 được tạo sẽ xuất hiện ở đây…",
   "generatedAtLabel": "Được tạo bằng thời gian Unix: {milliseconds}",
   "copyResultsLabel": "Sao chép kết quả",
   "copiedLabel": "Đã sao chép",

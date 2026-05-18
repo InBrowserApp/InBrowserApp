@@ -15,19 +15,15 @@ import {
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@workspace/ui/components/ui/toggle-group"
 import { Clock3, TriangleAlert } from "@workspace/ui/icons"
 
 import { UUID_CLOCK_SEQUENCE_MAX, UUID_V6_MAX_COUNT } from "../core/uuid-v6"
+import { ModeToggleGroup } from "./mode-toggle-group"
 import type { UuidV6Messages } from "../types"
+import type { ModeToggleOption } from "./mode-toggle-group"
 
 type TimestampMode = "now" | "custom"
 type RandomOrCustomMode = "random" | "custom"
-
-const toggleItemClassName = "h-auto min-h-9 w-full"
 
 type UuidV6OptionsCardProps = Readonly<{
   messages: UuidV6Messages
@@ -87,6 +83,18 @@ function UuidV6OptionsCard({
   onCustomClockSequenceChange,
 }: UuidV6OptionsCardProps) {
   const hasError = Boolean(timestampError || nodeError || clockSequenceError)
+  const timestampOptions = [
+    { value: "now", label: messages.timestampNowLabel },
+    { value: "custom", label: messages.timestampCustomLabel },
+  ] satisfies readonly ModeToggleOption<TimestampMode>[]
+  const randomOrCustomNodeOptions = [
+    { value: "random", label: messages.nodeRandomLabel },
+    { value: "custom", label: messages.nodeCustomLabel },
+  ] satisfies readonly ModeToggleOption<RandomOrCustomMode>[]
+  const randomOrCustomClockOptions = [
+    { value: "random", label: messages.clockSequenceRandomLabel },
+    { value: "custom", label: messages.clockSequenceCustomLabel },
+  ] satisfies readonly ModeToggleOption<RandomOrCustomMode>[]
 
   return (
     <Card>
@@ -103,6 +111,8 @@ function UuidV6OptionsCard({
                 id={countId}
                 type="number"
                 inputMode="numeric"
+                name="uuid-v6-count"
+                autoComplete="off"
                 min={1}
                 max={UUID_V6_MAX_COUNT}
                 value={count}
@@ -114,26 +124,12 @@ function UuidV6OptionsCard({
 
             <Field>
               <FieldLabel>{messages.timestampModeLabel}</FieldLabel>
-              <ToggleGroup
-                type="single"
+              <ModeToggleGroup
+                aria-label={messages.timestampModeLabel}
                 value={timestampMode}
-                spacing={0}
-                orientation="vertical"
-                variant="outline"
-                className="w-full"
-                onValueChange={(value) => {
-                  if (value === "now" || value === "custom") {
-                    onTimestampModeChange(value)
-                  }
-                }}
-              >
-                <ToggleGroupItem value="now" className={toggleItemClassName}>
-                  {messages.timestampNowLabel}
-                </ToggleGroupItem>
-                <ToggleGroupItem value="custom" className={toggleItemClassName}>
-                  {messages.timestampCustomLabel}
-                </ToggleGroupItem>
-              </ToggleGroup>
+                options={timestampOptions}
+                onValueChange={onTimestampModeChange}
+              />
             </Field>
           </div>
 
@@ -148,6 +144,8 @@ function UuidV6OptionsCard({
                     id={customDateTimeId}
                     type="datetime-local"
                     step="1"
+                    name="uuid-v6-custom-date-time"
+                    autoComplete="off"
                     value={customDateTimeInput}
                     aria-invalid={Boolean(timestampError)}
                     onChange={(event) => {
@@ -165,6 +163,8 @@ function UuidV6OptionsCard({
                     type="number"
                     inputMode="numeric"
                     step="1"
+                    name="uuid-v6-custom-unix-milliseconds"
+                    autoComplete="off"
                     value={customUnixMillisecondsInput}
                     aria-invalid={Boolean(timestampError)}
                     onChange={(event) => {
@@ -192,26 +192,12 @@ function UuidV6OptionsCard({
           <div className="grid gap-4 lg:grid-cols-2">
             <Field data-invalid={Boolean(nodeError)}>
               <FieldLabel>{messages.nodeModeLabel}</FieldLabel>
-              <ToggleGroup
-                type="single"
+              <ModeToggleGroup
+                aria-label={messages.nodeModeLabel}
                 value={nodeMode}
-                spacing={0}
-                orientation="vertical"
-                variant="outline"
-                className="w-full"
-                onValueChange={(value) => {
-                  if (value === "random" || value === "custom") {
-                    onNodeModeChange(value)
-                  }
-                }}
-              >
-                <ToggleGroupItem value="random" className={toggleItemClassName}>
-                  {messages.nodeRandomLabel}
-                </ToggleGroupItem>
-                <ToggleGroupItem value="custom" className={toggleItemClassName}>
-                  {messages.nodeCustomLabel}
-                </ToggleGroupItem>
-              </ToggleGroup>
+                options={randomOrCustomNodeOptions}
+                onValueChange={onNodeModeChange}
+              />
               {nodeMode === "custom" ? (
                 <>
                   <FieldLabel htmlFor={customNodeId}>
@@ -219,6 +205,9 @@ function UuidV6OptionsCard({
                   </FieldLabel>
                   <Input
                     id={customNodeId}
+                    name="uuid-v6-custom-node"
+                    autoComplete="off"
+                    spellCheck={false}
                     value={customNodeInput}
                     aria-invalid={Boolean(nodeError)}
                     placeholder="02:00:00:00:00:01"
@@ -236,26 +225,12 @@ function UuidV6OptionsCard({
 
             <Field data-invalid={Boolean(clockSequenceError)}>
               <FieldLabel>{messages.clockSequenceModeLabel}</FieldLabel>
-              <ToggleGroup
-                type="single"
+              <ModeToggleGroup
+                aria-label={messages.clockSequenceModeLabel}
                 value={clockSequenceMode}
-                spacing={0}
-                orientation="vertical"
-                variant="outline"
-                className="w-full"
-                onValueChange={(value) => {
-                  if (value === "random" || value === "custom") {
-                    onClockSequenceModeChange(value)
-                  }
-                }}
-              >
-                <ToggleGroupItem value="random" className={toggleItemClassName}>
-                  {messages.clockSequenceRandomLabel}
-                </ToggleGroupItem>
-                <ToggleGroupItem value="custom" className={toggleItemClassName}>
-                  {messages.clockSequenceCustomLabel}
-                </ToggleGroupItem>
-              </ToggleGroup>
+                options={randomOrCustomClockOptions}
+                onValueChange={onClockSequenceModeChange}
+              />
               {clockSequenceMode === "custom" ? (
                 <>
                   <FieldLabel htmlFor={customClockSequenceId}>
@@ -268,6 +243,8 @@ function UuidV6OptionsCard({
                     min={0}
                     max={UUID_CLOCK_SEQUENCE_MAX}
                     step="1"
+                    name="uuid-v6-custom-clock-sequence"
+                    autoComplete="off"
                     value={customClockSequenceInput}
                     aria-invalid={Boolean(clockSequenceError)}
                     onChange={(event) => {

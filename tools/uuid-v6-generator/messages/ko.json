@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "클록 시퀀스는 0부터 {max}까지의 정수여야 합니다.",
   "resultsTitle": "결과",
   "resultsDescription": "UUID는 브라우저 안에서 생성되며 내장된 타임스탬프 순서대로 정렬됩니다.",
-  "resultsPlaceholder": "생성된 UUID v6 값이 여기에 표시됩니다...",
+  "resultsPlaceholder": "생성된 UUID v6 값이 여기에 표시됩니다…",
   "generatedAtLabel": "Unix 시간으로 생성됨: {milliseconds}",
   "copyResultsLabel": "결과 복사",
   "copiedLabel": "복사됨",

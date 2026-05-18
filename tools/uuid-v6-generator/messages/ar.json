@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "يجب أن يكون تسلسل الساعة عددًا صحيحًا من 0 إلى {max}.",
   "resultsTitle": "النتائج",
   "resultsDescription": "تُنشأ قيم UUID داخل المتصفح وتُرتب حسب الطابع الزمني المضمن فيها.",
-  "resultsPlaceholder": "ستظهر قيم UUID v6 المنشأة هنا...",
+  "resultsPlaceholder": "ستظهر قيم UUID v6 المنشأة هنا…",
   "generatedAtLabel": "تم الإنشاء بوقت Unix: {milliseconds}",
   "copyResultsLabel": "نسخ النتيجة",
   "copiedLabel": "تم النسخ",

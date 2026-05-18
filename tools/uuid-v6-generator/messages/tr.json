@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "Saat sırası 0 ile {max} arasında bir tam sayı olmalıdır.",
   "resultsTitle": "Sonuçlar",
   "resultsDescription": "UUID'ler tarayıcı içinde oluşturulur ve gömülü zaman damgalarına göre sıralanır.",
-  "resultsPlaceholder": "Oluşturulan UUID v6 değerleri burada görünecek...",
+  "resultsPlaceholder": "Oluşturulan UUID v6 değerleri burada görünecek…",
   "generatedAtLabel": "Unix zamanı ile oluşturuldu: {milliseconds}",
   "copyResultsLabel": "Sonucu kopyala",
   "copiedLabel": "Kopyalandı",

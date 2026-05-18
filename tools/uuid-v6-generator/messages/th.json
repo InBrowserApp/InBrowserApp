@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "ลำดับนาฬิกาต้องเป็นจำนวนเต็มตั้งแต่ 0 ถึง {max}.",
   "resultsTitle": "ผลลัพธ์",
   "resultsDescription": "UUID จะถูกสร้างในเบราว์เซอร์และเรียงตามเวลาประทับที่ฝังอยู่.",
-  "resultsPlaceholder": "ค่า UUID v6 ที่สร้างจะปรากฏที่นี่...",
+  "resultsPlaceholder": "ค่า UUID v6 ที่สร้างจะปรากฏที่นี่…",
   "generatedAtLabel": "สร้างด้วยเวลา Unix: {milliseconds}",
   "copyResultsLabel": "คัดลอกผลลัพธ์",
   "copiedLabel": "คัดลอกแล้ว",

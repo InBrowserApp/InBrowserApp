@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "רצף השעון חייב להיות מספר שלם מ-0 עד {max}.",
   "resultsTitle": "תוצאות",
   "resultsDescription": "ערכי UUID נוצרים בדפדפן ומסודרים לפי חותמת הזמן המוטמעת בהם.",
-  "resultsPlaceholder": "ערכי UUID v6 שייווצרו יופיעו כאן...",
+  "resultsPlaceholder": "ערכי UUID v6 שייווצרו יופיעו כאן…",
   "generatedAtLabel": "נוצר בזמן Unix: {milliseconds}",
   "copyResultsLabel": "העתק תוצאה",
   "copiedLabel": "הועתק",

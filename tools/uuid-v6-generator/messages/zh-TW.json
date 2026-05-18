@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "時鐘序列必須是 0 到 {max} 之間的整數。",
   "resultsTitle": "結果",
   "resultsDescription": "UUID 會在瀏覽器內產生，並依其內嵌時間戳記排序。",
-  "resultsPlaceholder": "產生的 UUID v6 值會顯示在這裡...",
+  "resultsPlaceholder": "產生的 UUID v6 值會顯示在這裡…",
   "generatedAtLabel": "使用 Unix 時間產生：{milliseconds}",
   "copyResultsLabel": "複製結果",
   "copiedLabel": "已複製",

@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "Последовательность часов должна быть целым числом от 0 до {max}.",
   "resultsTitle": "Результаты",
   "resultsDescription": "UUID генерируются в браузере и упорядочиваются по встроенной временной метке.",
-  "resultsPlaceholder": "Сгенерированные значения UUID v6 появятся здесь...",
+  "resultsPlaceholder": "Сгенерированные значения UUID v6 появятся здесь…",
   "generatedAtLabel": "Сгенерировано с Unix-временем: {milliseconds}",
   "copyResultsLabel": "Копировать результат",
   "copiedLabel": "Скопировано",

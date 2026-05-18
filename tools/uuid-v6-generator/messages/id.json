@@ -24,7 +24,7 @@
   "clockSequenceInvalid": "Urutan jam harus berupa bilangan bulat dari 0 hingga {max}.",
   "resultsTitle": "Hasil",
   "resultsDescription": "UUID dibuat di dalam browser dan diurutkan berdasarkan stempel waktu yang tertanam.",
-  "resultsPlaceholder": "Nilai UUID v6 yang dibuat akan muncul di sini...",
+  "resultsPlaceholder": "Nilai UUID v6 yang dibuat akan muncul di sini…",
   "generatedAtLabel": "Dibuat dengan waktu Unix: {milliseconds}",
   "copyResultsLabel": "Salin hasil",
   "copiedLabel": "Disalin",
