@@ -5,7 +5,7 @@
   "countHelp": "Erzeuge zwischen 1 und 1000 UUIDs in einem einzelnen Stapel.",
   "resultsTitle": "Ergebnisse",
   "resultsDescription": "Jeder Stapel wird lokal mit sicherem Browser-Zufall erzeugt und ist bereit zum Kopieren oder Herunterladen.",
-  "resultsPlaceholder": "Erzeugte UUID v4-Werte werden hier angezeigt...",
+  "resultsPlaceholder": "Erzeugte UUID v4-Werte werden hier angezeigt…",
   "copyResultsLabel": "UUIDs kopieren",
   "copiedLabel": "Kopiert",
   "downloadResultsLabel": "Ergebnis herunterladen",

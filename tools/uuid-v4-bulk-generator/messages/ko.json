@@ -5,7 +5,7 @@
   "countHelp": "한 번에 1개에서 1000개까지 UUID를 생성합니다.",
   "resultsTitle": "결과",
   "resultsDescription": "각 배치는 안전한 브라우저 난수로 로컬에서 생성되며, 바로 복사하거나 다운로드할 수 있습니다.",
-  "resultsPlaceholder": "생성된 UUID v4 값이 여기에 표시됩니다...",
+  "resultsPlaceholder": "생성된 UUID v4 값이 여기에 표시됩니다…",
   "copyResultsLabel": "UUID 복사",
   "copiedLabel": "복사됨",
   "downloadResultsLabel": "결과 다운로드",

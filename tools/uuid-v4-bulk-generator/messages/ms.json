@@ -5,7 +5,7 @@
   "countHelp": "Jana antara 1 hingga 1000 UUID dalam satu kelompok.",
   "resultsTitle": "Keputusan",
   "resultsDescription": "Setiap kelompok dijana secara setempat dengan kerawakan pelayar yang selamat, sedia untuk disalin atau dimuat turun.",
-  "resultsPlaceholder": "Nilai UUID v4 yang dijana akan muncul di sini...",
+  "resultsPlaceholder": "Nilai UUID v4 yang dijana akan muncul di sini…",
   "copyResultsLabel": "Salin UUID",
   "copiedLabel": "Disalin",
   "downloadResultsLabel": "Muat turun keputusan",

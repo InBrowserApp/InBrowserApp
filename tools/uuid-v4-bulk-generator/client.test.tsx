@@ -21,7 +21,7 @@ const messages = {
   countHelp: "Generate between 1 and 1000 UUIDs in a single batch.",
   resultsTitle: "Results",
   resultsDescription: "Generated UUIDs stay local to your browser.",
-  resultsPlaceholder: "Generated UUID v4 values will appear here...",
+  resultsPlaceholder: "Generated UUID v4 values will appear here…",
   copyResultsLabel: "Copy UUIDs",
   copiedLabel: "Copied",
   downloadResultsLabel: "Download result",
@@ -66,10 +66,14 @@ describe("UuidV4BulkGeneratorClient", () => {
   test("renders the default batch and download link", async () => {
     render(<UuidV4BulkGeneratorClient messages={messages} />)
 
-    expect(screen.getByLabelText(messages.countLabel)).toHaveProperty(
+    const countInput = screen.getByLabelText(messages.countLabel)
+
+    expect(countInput).toHaveProperty(
       "value",
       String(UUID_V4_BULK_DEFAULT_COUNT)
     )
+    expect(countInput).toHaveProperty("name", "uuid-count")
+    expect(countInput.getAttribute("autocomplete")).toBe("off")
 
     await waitFor(() => {
       const lines = getResultsTextarea().value.trim().split("\n")
@@ -148,6 +152,7 @@ describe("UuidV4BulkGeneratorClient", () => {
       expect(getResultsTextarea().value).toBe("")
     })
 
+    expect(screen.getByRole("alert").getAttribute("aria-live")).toBe("polite")
     expect(
       screen.getByRole("button", { name: messages.downloadResultsLabel })
     ).toHaveProperty("disabled", true)

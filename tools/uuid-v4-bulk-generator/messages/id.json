@@ -5,7 +5,7 @@
   "countHelp": "Buat antara 1 dan 1000 UUID dalam satu kumpulan.",
   "resultsTitle": "Hasil",
   "resultsDescription": "Setiap kumpulan dibuat secara lokal dengan keacakan browser yang aman, siap disalin atau diunduh.",
-  "resultsPlaceholder": "Nilai UUID v4 yang dibuat akan muncul di sini...",
+  "resultsPlaceholder": "Nilai UUID v4 yang dibuat akan muncul di sini…",
   "copyResultsLabel": "Salin UUID",
   "copiedLabel": "Disalin",
   "downloadResultsLabel": "Unduh hasil",

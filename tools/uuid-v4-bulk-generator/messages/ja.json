@@ -5,7 +5,7 @@
   "countHelp": "1 回のバッチで 1 から 1000 個までの UUID を生成します。",
   "resultsTitle": "結果",
   "resultsDescription": "各バッチは安全なブラウザー乱数を使ってローカルに生成され、コピーまたはダウンロードできます。",
-  "resultsPlaceholder": "生成された UUID v4 の値がここに表示されます...",
+  "resultsPlaceholder": "生成された UUID v4 の値がここに表示されます…",
   "copyResultsLabel": "UUID をコピー",
   "copiedLabel": "コピー済み",
   "downloadResultsLabel": "結果をダウンロード",

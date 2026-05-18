@@ -41,7 +41,7 @@ function UuidV4BulkResultsCard({
       </CardHeader>
       <ToolPanelCardContent className="gap-3">
         {generationError ? (
-          <Alert variant="destructive">
+          <Alert variant="destructive" aria-live="polite">
             <TriangleAlert />
             <AlertDescription>{generationError}</AlertDescription>
           </Alert>
@@ -57,7 +57,7 @@ function UuidV4BulkResultsCard({
           className="max-h-[min(34rem,62vh)] min-h-96 resize-y overflow-y-auto font-mono text-sm"
         />
       </ToolPanelCardContent>
-      <ToolPanelCardFooter className="justify-between gap-3 border-t">
+      <ToolPanelCardFooter className="flex-col items-stretch justify-between gap-3 border-t sm:flex-row sm:items-center">
         <div className="flex flex-wrap items-center gap-2">
           <ToolCopyButton
             value={output}
@@ -82,7 +82,13 @@ function UuidV4BulkResultsCard({
           )}
         </div>
 
-        <Button type="button" variant="ghost" size="sm" onClick={onRegenerate}>
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          className="sm:shrink-0"
+          onClick={onRegenerate}
+        >
           <RefreshCcw data-icon="inline-start" />
           {messages.regenerateLabel}
         </Button>

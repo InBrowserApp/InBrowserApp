@@ -44,8 +44,10 @@ function UuidV4BulkOptionsCard({
             <FieldLabel htmlFor={countId}>{messages.countLabel}</FieldLabel>
             <Input
               id={countId}
+              name="uuid-count"
               type="number"
               inputMode="numeric"
+              autoComplete="off"
               min={UUID_V4_BULK_MIN_COUNT}
               max={UUID_V4_BULK_MAX_COUNT}
               value={count}

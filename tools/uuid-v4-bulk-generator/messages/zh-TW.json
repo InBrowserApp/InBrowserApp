@@ -5,7 +5,7 @@
   "countHelp": "單一批次可產生 1 到 1000 個 UUID。",
   "resultsTitle": "結果",
   "resultsDescription": "每個批次都會使用瀏覽器的安全隨機性在本機產生，可立即複製或下載。",
-  "resultsPlaceholder": "產生的 UUID v4 值會顯示在這裡...",
+  "resultsPlaceholder": "產生的 UUID v4 值會顯示在這裡…",
   "copyResultsLabel": "複製 UUID",
   "copiedLabel": "已複製",
   "downloadResultsLabel": "下載結果",

@@ -5,7 +5,7 @@
   "countHelp": "Générez entre 1 et 1000 UUID en un seul lot.",
   "resultsTitle": "Résultats",
   "resultsDescription": "Chaque lot est généré localement avec l'aléa sécurisé du navigateur, prêt à être copié ou téléchargé.",
-  "resultsPlaceholder": "Les valeurs UUID v4 générées apparaîtront ici...",
+  "resultsPlaceholder": "Les valeurs UUID v4 générées apparaîtront ici…",
   "copyResultsLabel": "Copier les UUID",
   "copiedLabel": "Copié",
   "downloadResultsLabel": "Télécharger le résultat",

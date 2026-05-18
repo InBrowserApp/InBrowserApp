@@ -5,7 +5,7 @@
   "countHelp": "एक ही बैच में 1 से 1000 UUID जनरेट करें.",
   "resultsTitle": "परिणाम",
   "resultsDescription": "हर बैच सुरक्षित ब्राउजर रैंडमनेस के साथ स्थानीय रूप से जनरेट होता है, कॉपी या डाउनलोड के लिए तैयार.",
-  "resultsPlaceholder": "जनरेट किए गए UUID v4 मान यहां दिखाई देंगे...",
+  "resultsPlaceholder": "जनरेट किए गए UUID v4 मान यहां दिखाई देंगे…",
   "copyResultsLabel": "UUID कॉपी करें",
   "copiedLabel": "कॉपी किया गया",
   "downloadResultsLabel": "परिणाम डाउनलोड करें",

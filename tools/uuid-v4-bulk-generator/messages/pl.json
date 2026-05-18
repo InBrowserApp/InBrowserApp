@@ -5,7 +5,7 @@
   "countHelp": "Generuj od 1 do 1000 identyfikatorow UUID w jednej partii.",
   "resultsTitle": "Wyniki",
   "resultsDescription": "Kazda partia jest generowana lokalnie z uzyciem bezpiecznej losowosci przegladarki, gotowa do skopiowania lub pobrania.",
-  "resultsPlaceholder": "Wygenerowane wartosci UUID v4 pojawia sie tutaj...",
+  "resultsPlaceholder": "Wygenerowane wartosci UUID v4 pojawia sie tutaj…",
   "copyResultsLabel": "Kopiuj UUID",
   "copiedLabel": "Skopiowano",
   "downloadResultsLabel": "Pobierz wynik",

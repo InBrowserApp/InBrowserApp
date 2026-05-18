@@ -5,7 +5,7 @@
   "countHelp": "Создавайте от 1 до 1000 UUID в одном пакете.",
   "resultsTitle": "Результаты",
   "resultsDescription": "Каждый пакет создается локально с использованием защищенной случайности браузера и готов к копированию или скачиванию.",
-  "resultsPlaceholder": "Сгенерированные значения UUID v4 появятся здесь...",
+  "resultsPlaceholder": "Сгенерированные значения UUID v4 появятся здесь…",
   "copyResultsLabel": "Копировать UUID",
   "copiedLabel": "Скопировано",
   "downloadResultsLabel": "Скачать результат",

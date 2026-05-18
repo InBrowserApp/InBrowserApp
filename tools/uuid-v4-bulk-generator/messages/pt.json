@@ -5,7 +5,7 @@
   "countHelp": "Gere entre 1 e 1000 UUIDs em um único lote.",
   "resultsTitle": "Resultados",
   "resultsDescription": "Cada lote é gerado localmente com aleatoriedade segura do navegador, pronto para copiar ou baixar.",
-  "resultsPlaceholder": "Os valores UUID v4 gerados aparecerão aqui...",
+  "resultsPlaceholder": "Os valores UUID v4 gerados aparecerão aqui…",
   "copyResultsLabel": "Copiar UUIDs",
   "copiedLabel": "Copiado",
   "downloadResultsLabel": "Baixar resultado",
