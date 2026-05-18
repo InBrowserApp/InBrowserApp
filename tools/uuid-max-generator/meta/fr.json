@@ -1,0 +1,4 @@
+{
+  "name": "Générateur de Max UUID",
+  "description": "Générez et copiez le Max UUID standardisé composé uniquement de uns pour les bornes supérieures, les sentinelles et les tests de plage."
+}

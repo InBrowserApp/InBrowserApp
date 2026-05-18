@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "העתיקו את ה-UUID התקני שמורכב כולו מאחדות בייצוג שהמערכת שלכם מצפה לו.",
+  "canonicalLabel": "UUID קנוני",
+  "rawHexLabel": "hex בן 32 ספרות",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "העתקת UUID",
+  "copyHexLabel": "העתקת hex",
+  "copyUrnLabel": "העתקת URN",
+  "copiedLabel": "הועתק",
+  "detailsTitle": "מידע לעיון",
+  "detailsDescription": "ה-Max UUID הוא ערך sentinel קבוע, לא מזהה אקראי.",
+  "allBitsLabel": "סיביות",
+  "allBitsValue": "128 סיביות מוגדרות לאחד",
+  "versionLabel": "גרסה",
+  "versionValue": "צורה מיוחדת",
+  "variantLabel": "וריאנט",
+  "variantValue": "כל הסיביות מוגדרות",
+  "stableLabel": "יצירה מחדש",
+  "stableValue": "תמיד מחזיר את אותו ערך"
+}

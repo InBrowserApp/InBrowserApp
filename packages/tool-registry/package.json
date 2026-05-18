@@ -187,6 +187,7 @@
     "@tool/user-agent-parser": "workspace:*",
     "@tool/uuid-base64-hex-decimal-octal-binary-converter": "workspace:*",
     "@tool/uuid-decoder": "workspace:*",
+    "@tool/uuid-max-generator": "workspace:*",
     "@tool/uuid-nil-generator": "workspace:*",
     "@tool/uuid-v1-generator": "workspace:*",
     "@tool/uuid-v1-v6-converter": "workspace:*",

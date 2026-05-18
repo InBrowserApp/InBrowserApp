@@ -22583,6 +22583,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "uuid-max-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "max uuid",
+      "identifier",
+      "sentinel",
+      "upper bound",
+      "rfc 9562",
+    ],
+    locales: {
+      ar: {
+        name: "مولد Max UUID",
+        description:
+          "أنشئ وانسخ قيمة Max UUID القياسية المكوّنة كلها من آحاد لاستخدامها في الحدود العليا، والقيم الحارسة، واختبارات النطاق.",
+      },
+      de: {
+        name: "Max UUID Generator",
+        description:
+          "Erzeuge und kopiere die standardisierte Max UUID mit lauter Einsen für obere Grenzen, Sentinel-Werte und Bereichstests.",
+      },
+      en: {
+        name: "Max UUID Generator",
+        description:
+          "Generate and copy the standardized all-one max UUID for upper bounds, sentinels, and range tests.",
+      },
+      es: {
+        name: "Generador de Max UUID",
+        description:
+          "Genera y copia el UUID máximo estandarizado, compuesto solo por unos, para límites superiores, centinelas y pruebas de rangos.",
+      },
+      fr: {
+        name: "Générateur de Max UUID",
+        description:
+          "Générez et copiez le Max UUID standardisé composé uniquement de uns pour les bornes supérieures, les sentinelles et les tests de plage.",
+      },
+      he: {
+        name: "מחולל Max UUID",
+        description:
+          "צרו והעתיקו את ה-Max UUID התקני שמורכב כולו מאחדות, עבור גבולות עליונים, ערכי sentinel ובדיקות טווח.",
+      },
+      hi: {
+        name: "Max UUID Generator",
+        description:
+          "ऊपरी सीमाओं, sentinel values, और range tests के लिए मानकीकृत all-one max UUID जनरेट और कॉपी करें।",
+      },
+      id: {
+        name: "Generator Max UUID",
+        description:
+          "Buat dan salin max UUID semua-satu standar untuk batas atas, sentinel, dan pengujian rentang.",
+      },
+      it: {
+        name: "Generatore di Max UUID",
+        description:
+          "Genera e copia il max UUID standardizzato composto solo da uno per limiti superiori, sentinelle e test di intervallo.",
+      },
+      ja: {
+        name: "Max UUID Generator",
+        description:
+          "上限値、センチネル、範囲テスト向けに、標準化された全ビット 1 の max UUID を生成してコピーします。",
+      },
+      ko: {
+        name: "Max UUID Generator",
+        description:
+          "상한, 센티널, 범위 테스트에 사용할 표준 all-one max UUID를 생성하고 복사합니다.",
+      },
+      ms: {
+        name: "Penjana Max UUID",
+        description:
+          "Jana dan salin max UUID semua-satu yang diseragamkan untuk batas atas, sentinel, dan ujian julat.",
+      },
+      nl: {
+        name: "Max UUID Generator",
+        description:
+          "Genereer en kopieer de gestandaardiseerde max UUID met alleen enen voor bovengrenzen, sentinels en bereiktests.",
+      },
+      no: {
+        name: "Max UUID Generator",
+        description:
+          "Generer og kopier den standardiserte max UUID-en med bare ettall for øvre grenser, sentinelverdier og områdetester.",
+      },
+      pl: {
+        name: "Generator Max UUID",
+        description:
+          "Generuj i kopiuj standaryzowany max UUID z samych jedynek do górnych granic, wartowników i testów zakresów.",
+      },
+      pt: {
+        name: "Max UUID Generator",
+        description:
+          "Gere e copie o max UUID padronizado composto só por uns para limites superiores, sentinelas e testes de intervalo.",
+      },
+      ru: {
+        name: "Генератор Max UUID",
+        description:
+          "Создавайте и копируйте стандартизированный max UUID из одних единиц для верхних границ, специальных значений и тестов диапазонов.",
+      },
+      sv: {
+        name: "Max UUID Generator",
+        description:
+          "Generera och kopiera den standardiserade max-UUID:n med enbart ettor för övre gränser, sentinlar och intervalltester.",
+      },
+      th: {
+        name: "ตัวสร้าง Max UUID",
+        description:
+          "สร้างและคัดลอก max UUID มาตรฐานที่เป็นค่า all-one สำหรับขอบเขตบน ค่า sentinel และการทดสอบช่วง",
+      },
+      tr: {
+        name: "Max UUID Generator",
+        description:
+          "Üst sınırlar, sentinel değerler ve aralık testleri için standartlaştırılmış tüm bitleri bir olan max UUID değerini üretin ve kopyalayın.",
+      },
+      vi: {
+        name: "Trình tạo Max UUID",
+        description:
+          "Tạo và sao chép max UUID toàn bit một theo chuẩn cho giới hạn trên, sentinel và kiểm thử phạm vi.",
+      },
+      "zh-CN": {
+        name: "Max UUID 生成器",
+        description:
+          "生成并复制标准化的全 1 max UUID，用于上限、哨兵值和范围测试。",
+      },
+      "zh-TW": {
+        name: "Max UUID 產生器",
+        description:
+          "產生並複製標準化的全 1 max UUID，可用於上限、哨兵值和範圍測試。",
+      },
+    },
+  },
+  {
     slug: "uuid-nil-generator",
     category: "developer",
     icon: "lock",

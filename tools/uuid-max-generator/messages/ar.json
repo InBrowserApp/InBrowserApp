@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "انسخ UUID القياسي المكوّن كله من آحاد بالتمثيل الذي يتوقعه نظامك.",
+  "canonicalLabel": "UUID القياسي",
+  "rawHexLabel": "Hex من 32 خانة",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "نسخ UUID",
+  "copyHexLabel": "نسخ Hex",
+  "copyUrnLabel": "نسخ URN",
+  "copiedLabel": "تم النسخ",
+  "detailsTitle": "المرجع",
+  "detailsDescription": "Max UUID قيمة حارسة ثابتة، وليست معرّفا عشوائيا.",
+  "allBitsLabel": "البتات",
+  "allBitsValue": "128 بت مضبوطة على واحد",
+  "versionLabel": "الإصدار",
+  "versionValue": "صيغة خاصة",
+  "variantLabel": "المتغير",
+  "variantValue": "كل البتات مضبوطة",
+  "stableLabel": "إعادة التوليد",
+  "stableValue": "يعيد دائما القيمة نفسها"
+}

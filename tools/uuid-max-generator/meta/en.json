@@ -1,0 +1,4 @@
+{
+  "name": "Max UUID Generator",
+  "description": "Generate and copy the standardized all-one max UUID for upper bounds, sentinels, and range tests."
+}

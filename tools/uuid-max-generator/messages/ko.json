@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "시스템에서 요구하는 표현 형식으로 표준 all-one UUID를 복사합니다.",
+  "canonicalLabel": "표준 UUID",
+  "rawHexLabel": "32자리 16진수",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "UUID 복사",
+  "copyHexLabel": "16진수 복사",
+  "copyUrnLabel": "URN 복사",
+  "copiedLabel": "복사됨",
+  "detailsTitle": "참조",
+  "detailsDescription": "max UUID는 임의 식별자가 아니라 고정된 센티널 값입니다.",
+  "allBitsLabel": "비트",
+  "allBitsValue": "128비트가 모두 1로 설정됨",
+  "versionLabel": "버전",
+  "versionValue": "특수 형식",
+  "variantLabel": "변형",
+  "variantValue": "모든 비트 설정됨",
+  "stableLabel": "재생성",
+  "stableValue": "항상 같은 값을 반환함"
+}
