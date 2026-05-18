@@ -17,7 +17,7 @@
   "macAddressInvalid": "Dùng 12 chữ số thập lục phân, có thể kèm dấu phân tách.",
   "resultsTitle": "Kết quả",
   "resultsDescription": "Các giá trị UUID v1 được tạo cục bộ cho chế độ và thiết lập nút đã chọn.",
-  "resultsPlaceholder": "Các giá trị UUID v1 được tạo sẽ xuất hiện ở đây...",
+  "resultsPlaceholder": "Các giá trị UUID v1 được tạo sẽ xuất hiện ở đây…",
   "generatedAtLabel": "Được tạo lúc: {time}",
   "copyResultsLabel": "Sao chép UUID",
   "copiedLabel": "Đã sao chép",

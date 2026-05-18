@@ -100,8 +100,10 @@ function UuidV1OptionsCard({
               <FieldLabel htmlFor={countId}>{messages.countLabel}</FieldLabel>
               <Input
                 id={countId}
+                name="uuid-v1-count"
                 type="number"
                 inputMode="numeric"
+                autoComplete="off"
                 min={2}
                 max={UUID_V1_MAX_COUNT}
                 value={count}
@@ -120,8 +122,10 @@ function UuidV1OptionsCard({
             <div className="flex gap-2">
               <Input
                 id={clockSequenceId}
+                name="uuid-v1-clock-sequence"
                 type="number"
                 inputMode="numeric"
+                autoComplete="off"
                 min={0}
                 max={UUID_V1_MAX_CLOCK_SEQUENCE}
                 value={clockSequence}
@@ -152,8 +156,10 @@ function UuidV1OptionsCard({
             <div className="flex gap-2">
               <Input
                 id={macAddressId}
+                name="uuid-v1-mac-address"
                 value={macAddress}
                 placeholder="02:00:00:00:00:00"
+                autoComplete="off"
                 spellCheck={false}
                 aria-invalid={Boolean(macAddressError)}
                 onChange={(event) => {

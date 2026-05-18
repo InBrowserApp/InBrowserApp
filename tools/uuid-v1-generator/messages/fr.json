@@ -17,7 +17,7 @@
   "macAddressInvalid": "Utilisez 12 chiffres hexadécimaux, avec des séparateurs facultatifs.",
   "resultsTitle": "Résultats",
   "resultsDescription": "Valeurs UUID v1 générées localement pour le mode et les paramètres de nœud sélectionnés.",
-  "resultsPlaceholder": "Les valeurs UUID v1 générées apparaîtront ici...",
+  "resultsPlaceholder": "Les valeurs UUID v1 générées apparaîtront ici…",
   "generatedAtLabel": "Généré à : {time}",
   "copyResultsLabel": "Copier les UUID",
   "copiedLabel": "Copié",

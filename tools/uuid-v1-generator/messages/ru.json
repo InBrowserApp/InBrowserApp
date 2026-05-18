@@ -17,7 +17,7 @@
   "macAddressInvalid": "Используйте 12 шестнадцатеричных цифр, разделители необязательны.",
   "resultsTitle": "Результаты",
   "resultsDescription": "Значения UUID v1, созданные локально для выбранного режима и настроек узла.",
-  "resultsPlaceholder": "Созданные значения UUID v1 появятся здесь...",
+  "resultsPlaceholder": "Созданные значения UUID v1 появятся здесь…",
   "generatedAtLabel": "Создано: {time}",
   "copyResultsLabel": "Копировать UUID",
   "copiedLabel": "Скопировано",

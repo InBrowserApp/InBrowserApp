@@ -38,7 +38,7 @@ const messages = {
   resultsTitle: "Results",
   resultsDescription:
     "UUID v1 values generated locally for the selected mode and node settings.",
-  resultsPlaceholder: "Generated UUID v1 values will appear here...",
+  resultsPlaceholder: "Generated UUID v1 values will appear here…",
   generatedAtLabel: "Generated at: {time}",
   copyResultsLabel: "Copy UUIDs",
   copiedLabel: "Copied",

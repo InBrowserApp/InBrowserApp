@@ -17,7 +17,7 @@
   "macAddressInvalid": "İsteğe bağlı ayırıcılarla birlikte 12 onaltılık basamak kullanın.",
   "resultsTitle": "Sonuçlar",
   "resultsDescription": "Seçilen mod ve düğüm ayarları için yerel olarak üretilen UUID v1 değerleri.",
-  "resultsPlaceholder": "Oluşturulan UUID v1 değerleri burada görünecek...",
+  "resultsPlaceholder": "Oluşturulan UUID v1 değerleri burada görünecek…",
   "generatedAtLabel": "Oluşturulma zamanı: {time}",
   "copyResultsLabel": "UUID’leri kopyala",
   "copiedLabel": "Kopyalandı",

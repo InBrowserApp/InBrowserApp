@@ -17,7 +17,7 @@
   "macAddressInvalid": "Usa 12 dígitos hexadecimales, con separadores opcionales.",
   "resultsTitle": "Resultados",
   "resultsDescription": "Valores UUID v1 generados localmente para el modo y la configuración de nodo seleccionados.",
-  "resultsPlaceholder": "Los valores UUID v1 generados aparecerán aquí...",
+  "resultsPlaceholder": "Los valores UUID v1 generados aparecerán aquí…",
   "generatedAtLabel": "Generado a las: {time}",
   "copyResultsLabel": "Copiar UUID",
   "copiedLabel": "Copiado",

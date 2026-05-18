@@ -17,7 +17,7 @@
   "macAddressInvalid": "वैकल्पिक separators के साथ 12 hexadecimal digits उपयोग करें।",
   "resultsTitle": "परिणाम",
   "resultsDescription": "चुने गए mode और node settings के लिए स्थानीय रूप से बनाए गए UUID v1 मान।",
-  "resultsPlaceholder": "Generated UUID v1 values यहां दिखाई देंगे...",
+  "resultsPlaceholder": "Generated UUID v1 values यहां दिखाई देंगे…",
   "generatedAtLabel": "जनरेट किया गया: {time}",
   "copyResultsLabel": "UUID कॉपी करें",
   "copiedLabel": "कॉपी हो गया",

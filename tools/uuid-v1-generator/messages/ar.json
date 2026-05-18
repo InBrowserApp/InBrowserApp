@@ -17,7 +17,7 @@
   "macAddressInvalid": "استخدم 12 رقما سداسيا عشريا، مع فواصل اختيارية.",
   "resultsTitle": "النتائج",
   "resultsDescription": "قيم UUID v1 مُنشأة محليًا للوضع المحدد وإعدادات العقدة.",
-  "resultsPlaceholder": "ستظهر قيم UUID v1 التي تم إنشاؤها هنا...",
+  "resultsPlaceholder": "ستظهر قيم UUID v1 التي تم إنشاؤها هنا…",
   "generatedAtLabel": "أُنشئ في: {time}",
   "copyResultsLabel": "نسخ UUIDs",
   "copiedLabel": "تم النسخ",

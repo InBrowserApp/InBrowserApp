@@ -17,7 +17,7 @@
   "macAddressInvalid": "任意の区切り文字を含めて、12 桁の 16 進数字を使用してください。",
   "resultsTitle": "結果",
   "resultsDescription": "選択したモードとノード設定でローカル生成された UUID v1 値です。",
-  "resultsPlaceholder": "生成された UUID v1 値がここに表示されます...",
+  "resultsPlaceholder": "生成された UUID v1 値がここに表示されます…",
   "generatedAtLabel": "生成日時: {time}",
   "copyResultsLabel": "UUID をコピー",
   "copiedLabel": "コピー済み",

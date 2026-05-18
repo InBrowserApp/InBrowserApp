@@ -17,7 +17,7 @@
   "macAddressInvalid": "Użyj 12 cyfr szesnastkowych, opcjonalnie z separatorami.",
   "resultsTitle": "Wyniki",
   "resultsDescription": "Wartości UUID v1 wygenerowane lokalnie dla wybranego trybu i ustawień węzła.",
-  "resultsPlaceholder": "Wygenerowane wartości UUID v1 pojawią się tutaj...",
+  "resultsPlaceholder": "Wygenerowane wartości UUID v1 pojawią się tutaj…",
   "generatedAtLabel": "Wygenerowano: {time}",
   "copyResultsLabel": "Kopiuj UUID",
   "copiedLabel": "Skopiowano",

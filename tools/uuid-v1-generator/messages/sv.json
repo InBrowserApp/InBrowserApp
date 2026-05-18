@@ -17,7 +17,7 @@
   "macAddressInvalid": "Använd 12 hexadecimala siffror, med valfria avgränsare.",
   "resultsTitle": "Resultat",
   "resultsDescription": "UUID v1-värden som genererats lokalt för valt läge och nodinställningar.",
-  "resultsPlaceholder": "Genererade UUID v1-värden visas här...",
+  "resultsPlaceholder": "Genererade UUID v1-värden visas här…",
   "generatedAtLabel": "Genererades: {time}",
   "copyResultsLabel": "Kopiera UUID:er",
   "copiedLabel": "Kopierat",

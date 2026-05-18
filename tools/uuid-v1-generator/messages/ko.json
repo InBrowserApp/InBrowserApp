@@ -17,7 +17,7 @@
   "macAddressInvalid": "선택적 구분 기호와 함께 12자리 16진수를 사용하세요.",
   "resultsTitle": "결과",
   "resultsDescription": "선택한 모드와 노드 설정으로 로컬에서 생성된 UUID v1 값입니다.",
-  "resultsPlaceholder": "생성된 UUID v1 값이 여기에 표시됩니다...",
+  "resultsPlaceholder": "생성된 UUID v1 값이 여기에 표시됩니다…",
   "generatedAtLabel": "생성 시각: {time}",
   "copyResultsLabel": "UUID 복사",
   "copiedLabel": "복사됨",

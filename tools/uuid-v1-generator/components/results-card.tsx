@@ -55,7 +55,7 @@ function UuidV1ResultsCard({
         />
 
         <p className="flex min-h-5 items-center gap-2 text-sm text-muted-foreground">
-          <Clock3 className="size-4 shrink-0" />
+          <Clock3 aria-hidden="true" className="size-4 shrink-0" />
           {generatedAtText ?? "-"}
         </p>
       </ToolPanelCardContent>

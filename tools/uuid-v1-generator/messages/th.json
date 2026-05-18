@@ -17,7 +17,7 @@
   "macAddressInvalid": "ใช้เลขฐานสิบหก 12 หลัก พร้อมตัวคั่นหรือไม่มีก็ได้",
   "resultsTitle": "ผลลัพธ์",
   "resultsDescription": "ค่า UUID v1 ที่สร้างในเครื่องสำหรับโหมดและการตั้งค่าโหนดที่เลือก",
-  "resultsPlaceholder": "ค่า UUID v1 ที่สร้างแล้วจะแสดงที่นี่...",
+  "resultsPlaceholder": "ค่า UUID v1 ที่สร้างแล้วจะแสดงที่นี่…",
   "generatedAtLabel": "สร้างเมื่อ: {time}",
   "copyResultsLabel": "คัดลอก UUID",
   "copiedLabel": "คัดลอกแล้ว",

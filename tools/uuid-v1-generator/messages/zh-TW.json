@@ -17,7 +17,7 @@
   "macAddressInvalid": "請使用 12 個十六進位數字，可選擇加入分隔符號。",
   "resultsTitle": "結果",
   "resultsDescription": "依照所選模式與節點設定在本機產生的 UUID v1 值。",
-  "resultsPlaceholder": "產生的 UUID v1 值會顯示在這裡...",
+  "resultsPlaceholder": "產生的 UUID v1 值會顯示在這裡…",
   "generatedAtLabel": "產生時間：{time}",
   "copyResultsLabel": "複製 UUID",
   "copiedLabel": "已複製",

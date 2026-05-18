@@ -17,7 +17,7 @@
   "macAddressInvalid": "השתמשו ב-12 ספרות הקסדצימליות, עם מפרידים אופציונליים.",
   "resultsTitle": "תוצאות",
   "resultsDescription": "ערכי UUID v1 שנוצרו מקומית עבור המצב והגדרות הצומת שנבחרו.",
-  "resultsPlaceholder": "ערכי UUID v1 שנוצרו יופיעו כאן...",
+  "resultsPlaceholder": "ערכי UUID v1 שנוצרו יופיעו כאן…",
   "generatedAtLabel": "נוצר ב: {time}",
   "copyResultsLabel": "העתק UUIDs",
   "copiedLabel": "הועתק",

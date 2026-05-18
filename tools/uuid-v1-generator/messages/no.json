@@ -17,7 +17,7 @@
   "macAddressInvalid": "Bruk 12 heksadesimale sifre, med valgfrie skilletegn.",
   "resultsTitle": "Resultater",
   "resultsDescription": "UUID v1-verdier generert lokalt for valgt modus og nodeinnstillinger.",
-  "resultsPlaceholder": "Genererte UUID v1-verdier vises her...",
+  "resultsPlaceholder": "Genererte UUID v1-verdier vises her…",
   "generatedAtLabel": "Generert: {time}",
   "copyResultsLabel": "Kopier UUID-er",
   "copiedLabel": "Kopiert",

@@ -17,7 +17,7 @@
   "macAddressInvalid": "Gebruik 12 hexadecimale cijfers, met optionele scheidingstekens.",
   "resultsTitle": "Resultaten",
   "resultsDescription": "UUID v1-waarden die lokaal zijn gegenereerd voor de gekozen modus en node-instellingen.",
-  "resultsPlaceholder": "Gegenereerde UUID v1-waarden verschijnen hier...",
+  "resultsPlaceholder": "Gegenereerde UUID v1-waarden verschijnen hier…",
   "generatedAtLabel": "Gegenereerd om: {time}",
   "copyResultsLabel": "UUID’s kopiëren",
   "copiedLabel": "Gekopieerd",

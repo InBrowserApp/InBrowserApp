@@ -17,7 +17,7 @@
   "macAddressInvalid": "Gunakan 12 digit perenambelasan, dengan pemisah pilihan.",
   "resultsTitle": "Keputusan",
   "resultsDescription": "Nilai UUID v1 yang dijana secara setempat untuk mod dan tetapan nod yang dipilih.",
-  "resultsPlaceholder": "Nilai UUID v1 yang dijana akan muncul di sini...",
+  "resultsPlaceholder": "Nilai UUID v1 yang dijana akan muncul di sini…",
   "generatedAtLabel": "Dijana pada: {time}",
   "copyResultsLabel": "Salin UUID",
   "copiedLabel": "Disalin",
