@@ -1,0 +1,4 @@
+{
+  "name": "UUID v3 產生器",
+  "description": "從命名空間 UUID 和名稱產生確定性的命名式 UUID v3 識別碼。"
+}

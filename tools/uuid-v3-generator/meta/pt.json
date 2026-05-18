@@ -1,0 +1,4 @@
+{
+  "name": "Gerador de UUID v3",
+  "description": "Gere identificadores UUID v3 determinísticos baseados em nome a partir de um UUID de namespace e de um nome."
+}
