@@ -11042,6 +11042,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-splitter",
+    language: "ar",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "de",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "en",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "es",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "fr",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "he",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "hi",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "id",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "it",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "ja",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "ko",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "ms",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "nl",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "no",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "pl",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "pt",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "ru",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "sv",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "th",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "tr",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "vi",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-text-extractor",
     language: "ar",
   },
