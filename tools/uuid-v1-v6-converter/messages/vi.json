@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "Dán UUID v1 dựa trên thời gian để nhận ngay UUID v6 tương đương.",
+  "v1Label": "Đầu vào UUID v1",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "Dán UUID v6 đã được sắp xếp lại để khôi phục bố cục UUID v1 ban đầu.",
+  "v6Label": "Đầu vào UUID v6",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "Sao chép UUID v1",
+  "copyV6Label": "Sao chép UUID v6",
+  "copiedLabel": "Đã sao chép",
+  "loadSampleLabel": "Tải mẫu",
+  "clearLabel": "Xóa",
+  "emptyHint": "Đầu vào vẫn ở trong trình duyệt của bạn. UUID dạng rút gọn, chữ hoa, URN và có dấu ngoặc nhọn sẽ được chuẩn hóa trước khi chuyển đổi.",
+  "invalidV1Format": "Nhập giá trị UUID v1 gồm 32 ký tự hoặc ở dạng chuẩn.",
+  "invalidV1Version": "UUID này không có nửa byte phiên bản v1.",
+  "invalidV1Variant": "UUID này không phải là UUID biến thể RFC 4122.",
+  "invalidV6Format": "Nhập giá trị UUID v6 gồm 32 ký tự hoặc ở dạng chuẩn.",
+  "invalidV6Version": "UUID này không có nửa byte phiên bản v6.",
+  "invalidV6Variant": "UUID này không phải là UUID biến thể RFC 4122."
+}

@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "Lim inn en tidsbasert UUID v1 og få tilsvarende UUID v6 umiddelbart.",
+  "v1Label": "UUID v1-inndata",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "Lim inn en omordnet UUID v6 og gjenopprett den opprinnelige UUID v1-strukturen.",
+  "v6Label": "UUID v6-inndata",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "Kopier UUID v1",
+  "copyV6Label": "Kopier UUID v6",
+  "copiedLabel": "Kopiert",
+  "loadSampleLabel": "Last inn eksempel",
+  "clearLabel": "Tøm",
+  "emptyHint": "Inndata blir værende i nettleseren din. Kompakte UUID-er, UUID-er med store bokstaver, URN-er og UUID-er i klammeparenteser normaliseres før konvertering.",
+  "invalidV1Format": "Skriv inn en UUID v1-verdi med 32 tegn eller i kanonisk form.",
+  "invalidV1Version": "Denne UUID-en har ikke v1 som versjonsnibble.",
+  "invalidV1Variant": "Denne UUID-en er ikke en UUID med RFC 4122-variant.",
+  "invalidV6Format": "Skriv inn en UUID v6-verdi med 32 tegn eller i kanonisk form.",
+  "invalidV6Version": "Denne UUID-en har ikke v6 som versjonsnibble.",
+  "invalidV6Variant": "Denne UUID-en er ikke en UUID med RFC 4122-variant."
+}

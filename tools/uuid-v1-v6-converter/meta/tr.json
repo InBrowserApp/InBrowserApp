@@ -1,0 +1,4 @@
+{
+  "name": "UUID v1 ↔ v6 Dönüştürücü",
+  "description": "UUID v1 değerlerini sıralanabilir UUID v6 değerlerine dönüştürün veya UUID v6 değerlerini tekrar UUID v1 değerlerine çevirin; işlemlerin tamamı tarayıcınızda yapılır."
+}

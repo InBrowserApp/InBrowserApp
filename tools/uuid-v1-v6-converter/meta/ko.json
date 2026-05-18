@@ -1,0 +1,4 @@
+{
+  "name": "UUID v1 ↔ v6 변환기",
+  "description": "UUID v1 값을 정렬 가능한 UUID v6 값으로 변환하거나 UUID v6 값을 다시 UUID v1로 변환합니다. 모든 작업은 브라우저에서만 이루어집니다."
+}

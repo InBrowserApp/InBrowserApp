@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "Zamana dayalı bir UUID v1 yapıştırın ve eşdeğer UUID v6 değerini hemen alın.",
+  "v1Label": "UUID v1 girdisi",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "Yeniden sıralanmış bir UUID v6 yapıştırın ve özgün UUID v1 düzenini geri elde edin.",
+  "v6Label": "UUID v6 girdisi",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "UUID v1'i kopyala",
+  "copyV6Label": "UUID v6'yı kopyala",
+  "copiedLabel": "Kopyalandı",
+  "loadSampleLabel": "Örneği yükle",
+  "clearLabel": "Temizle",
+  "emptyHint": "Girdi tarayıcınızda kalır. Kompakt, büyük harfli, URN ve süslü parantezli UUID'ler dönüşümden önce normalleştirilir.",
+  "invalidV1Format": "32 karakterlik veya kanonik bir UUID v1 değeri girin.",
+  "invalidV1Version": "Bu UUID, v1 sürüm nibble'ına sahip değil.",
+  "invalidV1Variant": "Bu UUID, RFC 4122 varyantı bir UUID değil.",
+  "invalidV6Format": "32 karakterlik veya kanonik bir UUID v6 değeri girin.",
+  "invalidV6Version": "Bu UUID, v6 sürüm nibble'ına sahip değil.",
+  "invalidV6Variant": "Bu UUID, RFC 4122 varyantı bir UUID değil."
+}

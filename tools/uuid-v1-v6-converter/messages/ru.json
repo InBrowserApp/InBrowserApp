@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "Вставьте временной UUID v1 и сразу получите эквивалентный UUID v6.",
+  "v1Label": "Ввод UUID v1",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "Вставьте переупорядоченный UUID v6 и восстановите исходное представление UUID v1.",
+  "v6Label": "Ввод UUID v6",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "Копировать UUID v1",
+  "copyV6Label": "Копировать UUID v6",
+  "copiedLabel": "Скопировано",
+  "loadSampleLabel": "Загрузить пример",
+  "clearLabel": "Очистить",
+  "emptyHint": "Ввод остаётся в вашем браузере. Компактные UUID, UUID в верхнем регистре, URN и UUID в фигурных скобках нормализуются перед преобразованием.",
+  "invalidV1Format": "Введите 32-символьное или каноническое значение UUID v1.",
+  "invalidV1Version": "В этом UUID полубайт версии не равен v1.",
+  "invalidV1Variant": "Этот UUID не является UUID варианта RFC 4122.",
+  "invalidV6Format": "Введите 32-символьное или каноническое значение UUID v6.",
+  "invalidV6Version": "В этом UUID полубайт версии не равен v6.",
+  "invalidV6Variant": "Этот UUID не является UUID варианта RFC 4122."
+}

@@ -188,6 +188,7 @@
     "@tool/uuid-base64-hex-decimal-octal-binary-converter": "workspace:*",
     "@tool/uuid-decoder": "workspace:*",
     "@tool/uuid-v1-generator": "workspace:*",
+    "@tool/uuid-v1-v6-converter": "workspace:*",
     "@tool/uuid-v3-generator": "workspace:*",
     "@tool/uuid-v4-bulk-generator": "workspace:*",
     "@tool/uuid-v4-generator": "workspace:*",

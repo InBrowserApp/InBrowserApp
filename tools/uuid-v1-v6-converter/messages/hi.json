@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "समय-आधारित UUID v1 पेस्ट करें और तुरंत समतुल्य UUID v6 पाएं।",
+  "v1Label": "UUID v1 इनपुट",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "पुनर्क्रमित UUID v6 पेस्ट करें और मूल UUID v1 लेआउट वापस पाएं।",
+  "v6Label": "UUID v6 इनपुट",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "UUID v1 कॉपी करें",
+  "copyV6Label": "UUID v6 कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "loadSampleLabel": "नमूना लोड करें",
+  "clearLabel": "साफ़ करें",
+  "emptyHint": "इनपुट आपके ब्राउज़र में ही रहता है। कॉम्पैक्ट, बड़े अक्षरों वाले, URN और घुंघराले कोष्ठकों में बंद UUID को रूपांतरण से पहले सामान्यीकृत किया जाता है।",
+  "invalidV1Format": "32-अक्षर वाला या कैननिकल UUID v1 मान दर्ज करें।",
+  "invalidV1Version": "इस UUID में v1 संस्करण निबल नहीं है।",
+  "invalidV1Variant": "यह UUID RFC 4122 वैरिएंट UUID नहीं है।",
+  "invalidV6Format": "32-अक्षर वाला या कैननिकल UUID v6 मान दर्ज करें।",
+  "invalidV6Version": "इस UUID में v6 संस्करण निबल नहीं है।",
+  "invalidV6Variant": "यह UUID RFC 4122 वैरिएंट UUID नहीं है।"
+}

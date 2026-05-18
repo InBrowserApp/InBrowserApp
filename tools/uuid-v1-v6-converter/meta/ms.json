@@ -1,0 +1,4 @@
+{
+  "name": "Penukar UUID v1 ↔ v6",
+  "description": "Tukar nilai UUID v1 kepada nilai UUID v6 yang boleh diisih, atau tukar nilai UUID v6 kembali kepada UUID v1, sepenuhnya dalam penyemak imbas anda."
+}

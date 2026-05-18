@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "粘贴一个基于时间的 UUID v1，立即获得等效的 UUID v6。",
+  "v1Label": "UUID v1 输入",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "粘贴一个重新排序的 UUID v6，恢复原始的 UUID v1 布局。",
+  "v6Label": "UUID v6 输入",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "复制 UUID v1",
+  "copyV6Label": "复制 UUID v6",
+  "copiedLabel": "已复制",
+  "loadSampleLabel": "载入示例",
+  "clearLabel": "清空",
+  "emptyHint": "输入会保留在你的浏览器中。紧凑格式、大写、URN 和带花括号的 UUID 会在转换前规范化。",
+  "invalidV1Format": "请输入 32 字符或规范格式的 UUID v1 值。",
+  "invalidV1Version": "此 UUID 的版本半字节不是 v1。",
+  "invalidV1Variant": "此 UUID 不是 RFC 4122 变体 UUID。",
+  "invalidV6Format": "请输入 32 字符或规范格式的 UUID v6 值。",
+  "invalidV6Version": "此 UUID 的版本半字节不是 v6。",
+  "invalidV6Variant": "此 UUID 不是 RFC 4122 变体 UUID。"
+}

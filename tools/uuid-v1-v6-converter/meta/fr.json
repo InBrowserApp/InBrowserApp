@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur UUID v1 ↔ v6",
+  "description": "Convertissez des valeurs UUID v1 en valeurs UUID v6 triables, ou reconvertissez des valeurs UUID v6 en UUID v1, entièrement dans votre navigateur."
+}

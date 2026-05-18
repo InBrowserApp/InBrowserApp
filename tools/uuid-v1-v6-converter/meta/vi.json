@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi UUID v1 ↔ v6",
+  "description": "Chuyển đổi giá trị UUID v1 thành giá trị UUID v6 có thể sắp xếp, hoặc chuyển UUID v6 trở lại UUID v1, hoàn toàn trong trình duyệt của bạn."
+}

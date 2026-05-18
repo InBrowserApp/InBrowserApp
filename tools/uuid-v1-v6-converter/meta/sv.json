@@ -1,0 +1,4 @@
+{
+  "name": "UUID v1 ↔ v6-konverterare",
+  "description": "Konvertera UUID v1-värden till sorterbara UUID v6-värden, eller konvertera UUID v6-värden tillbaka till UUID v1, helt i din webbläsare."
+}
