@@ -125,6 +125,7 @@
     "@tool/pbkdf2-key-derivation": "workspace:*",
     "@tool/pdf-info-viewer": "workspace:*",
     "@tool/pdf-text-extractor": "workspace:*",
+    "@tool/pdf-to-image-converter": "workspace:*",
     "@tool/pgp-key-generator": "workspace:*",
     "@tool/placeholder-image-generator": "workspace:*",
     "@tool/png-optimizer": "workspace:*",

@@ -1,0 +1,4 @@
+{
+  "name": "PDF から画像への変換",
+  "description": "DPI 調整、ページプレビュー、ZIP エクスポートを使って、PDF ページを PNG、JPG、WebP 画像に変換します。"
+}

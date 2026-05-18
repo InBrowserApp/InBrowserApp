@@ -14741,6 +14741,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-to-image-converter",
+    category: "pdf",
+    icon: "image",
+    tags: ["pdf", "image", "converter", "export", "offline"],
+    locales: {
+      ar: {
+        name: "محول PDF إلى صور",
+        description:
+          "حوّل صفحات PDF إلى صور PNG أو JPG أو WebP مع عناصر تحكم في DPI، ومعاينة الصفحات، والتصدير بصيغة ZIP.",
+      },
+      de: {
+        name: "PDF-zu-Bild-Konverter",
+        description:
+          "Konvertiere PDF-Seiten in PNG-, JPG- oder WebP-Bilder mit DPI-Steuerung, Seitenvorschau und ZIP-Export.",
+      },
+      en: {
+        name: "PDF to Image Converter",
+        description:
+          "Convert PDF pages to PNG, JPG, or WebP images with DPI controls, page preview, and ZIP export.",
+      },
+      es: {
+        name: "Convertidor de PDF a imagen",
+        description:
+          "Convierte páginas de PDF en imágenes PNG, JPG o WebP con controles de DPI, vista previa de páginas y exportación ZIP.",
+      },
+      fr: {
+        name: "Convertisseur PDF en images",
+        description:
+          "Convertissez les pages PDF en images PNG, JPG ou WebP avec contrôle du DPI, aperçu des pages et export ZIP.",
+      },
+      he: {
+        name: "ממיר PDF לתמונות",
+        description:
+          "המרת עמודי PDF לתמונות PNG, JPG או WebP עם בקרות DPI, תצוגה מקדימה לעמוד וייצוא ZIP.",
+      },
+      hi: {
+        name: "PDF से इमेज कनवर्टर",
+        description:
+          "DPI नियंत्रणों, पेज पूर्वावलोकन और ZIP निर्यात के साथ PDF पेजों को PNG, JPG या WebP इमेज में बदलें।",
+      },
+      id: {
+        name: "Konverter PDF ke Gambar",
+        description:
+          "Konversi halaman PDF menjadi gambar PNG, JPG, atau WebP dengan kontrol DPI, pratinjau halaman, dan ekspor ZIP.",
+      },
+      it: {
+        name: "Convertitore da PDF a immagini",
+        description:
+          "Converti pagine PDF in immagini PNG, JPG o WebP con controlli DPI, anteprima delle pagine ed esportazione ZIP.",
+      },
+      ja: {
+        name: "PDF から画像への変換",
+        description:
+          "DPI 調整、ページプレビュー、ZIP エクスポートを使って、PDF ページを PNG、JPG、WebP 画像に変換します。",
+      },
+      ko: {
+        name: "PDF 이미지 변환기",
+        description:
+          "DPI 제어, 페이지 미리보기, ZIP 내보내기를 사용해 PDF 페이지를 PNG, JPG 또는 WebP 이미지로 변환하세요.",
+      },
+      ms: {
+        name: "Penukar PDF kepada Imej",
+        description:
+          "Tukar halaman PDF menjadi imej PNG, JPG atau WebP dengan kawalan DPI, pratonton halaman dan eksport ZIP.",
+      },
+      nl: {
+        name: "PDF-naar-afbeelding-converter",
+        description:
+          "Zet PDF-pagina's om naar PNG-, JPG- of WebP-afbeeldingen met DPI-instellingen, paginavoorbeeld en ZIP-export.",
+      },
+      no: {
+        name: "PDF-til-bilde-konverter",
+        description:
+          "Konverter PDF-sider til PNG-, JPG- eller WebP-bilder med DPI-innstillinger, sideforhåndsvisning og ZIP-eksport.",
+      },
+      pl: {
+        name: "Konwerter PDF na obrazy",
+        description:
+          "Konwertuj strony PDF na obrazy PNG, JPG lub WebP z kontrolą DPI, podglądem stron i eksportem ZIP.",
+      },
+      pt: {
+        name: "Conversor de PDF para imagens",
+        description:
+          "Converta páginas de PDF em imagens PNG, JPG ou WebP com controles de DPI, pré-visualização de páginas e exportação em ZIP.",
+      },
+      ru: {
+        name: "Конвертер PDF в изображения",
+        description:
+          "Преобразуйте страницы PDF в изображения PNG, JPG или WebP с настройками DPI, предварительным просмотром страниц и экспортом в ZIP.",
+      },
+      sv: {
+        name: "PDF-till-bild-konverterare",
+        description:
+          "Konvertera PDF-sidor till PNG-, JPG- eller WebP-bilder med DPI-kontroller, sidförhandsvisning och ZIP-export.",
+      },
+      th: {
+        name: "ตัวแปลง PDF เป็นรูปภาพ",
+        description:
+          "แปลงหน้า PDF เป็นรูปภาพ PNG, JPG หรือ WebP พร้อมการควบคุม DPI การดูตัวอย่างหน้า และการส่งออกเป็น ZIP",
+      },
+      tr: {
+        name: "PDF'den Görüntüye Dönüştürücü",
+        description:
+          "PDF sayfalarını DPI denetimleri, sayfa önizlemesi ve ZIP dışa aktarımıyla PNG, JPG veya WebP görüntülerine dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi PDF sang hình ảnh",
+        description:
+          "Chuyển đổi các trang PDF thành hình ảnh PNG, JPG hoặc WebP với tùy chọn DPI, xem trước trang và xuất ZIP.",
+      },
+      "zh-CN": {
+        name: "PDF 转图片转换器",
+        description:
+          "在浏览器本地将 PDF 页面转换为 PNG、JPG 或 WebP 图片，并支持 DPI 控制、页面预览和 ZIP 导出。",
+      },
+      "zh-TW": {
+        name: "PDF 轉圖片轉換器",
+        description:
+          "使用 DPI 控制、頁面預覽和 ZIP 匯出，將 PDF 頁面轉換成 PNG、JPG 或 WebP 圖片。",
+      },
+    },
+  },
+  {
     slug: "pgp-key-generator",
     category: "network",
     icon: "lock",
@@ -40154,6 +40277,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "PDF 文字擷取工具",
         description: "在瀏覽器本機從 PDF 檔案擷取可選取文字，並匯出為純文字。",
+      },
+    },
+  },
+  "pdf-to-image-converter": {
+    slug: "pdf-to-image-converter",
+    category: "pdf",
+    icon: "image",
+    tags: ["pdf", "image", "converter", "export", "offline"],
+    locales: {
+      ar: {
+        name: "محول PDF إلى صور",
+        description:
+          "حوّل صفحات PDF إلى صور PNG أو JPG أو WebP مع عناصر تحكم في DPI، ومعاينة الصفحات، والتصدير بصيغة ZIP.",
+      },
+      de: {
+        name: "PDF-zu-Bild-Konverter",
+        description:
+          "Konvertiere PDF-Seiten in PNG-, JPG- oder WebP-Bilder mit DPI-Steuerung, Seitenvorschau und ZIP-Export.",
+      },
+      en: {
+        name: "PDF to Image Converter",
+        description:
+          "Convert PDF pages to PNG, JPG, or WebP images with DPI controls, page preview, and ZIP export.",
+      },
+      es: {
+        name: "Convertidor de PDF a imagen",
+        description:
+          "Convierte páginas de PDF en imágenes PNG, JPG o WebP con controles de DPI, vista previa de páginas y exportación ZIP.",
+      },
+      fr: {
+        name: "Convertisseur PDF en images",
+        description:
+          "Convertissez les pages PDF en images PNG, JPG ou WebP avec contrôle du DPI, aperçu des pages et export ZIP.",
+      },
+      he: {
+        name: "ממיר PDF לתמונות",
+        description:
+          "המרת עמודי PDF לתמונות PNG, JPG או WebP עם בקרות DPI, תצוגה מקדימה לעמוד וייצוא ZIP.",
+      },
+      hi: {
+        name: "PDF से इमेज कनवर्टर",
+        description:
+          "DPI नियंत्रणों, पेज पूर्वावलोकन और ZIP निर्यात के साथ PDF पेजों को PNG, JPG या WebP इमेज में बदलें।",
+      },
+      id: {
+        name: "Konverter PDF ke Gambar",
+        description:
+          "Konversi halaman PDF menjadi gambar PNG, JPG, atau WebP dengan kontrol DPI, pratinjau halaman, dan ekspor ZIP.",
+      },
+      it: {
+        name: "Convertitore da PDF a immagini",
+        description:
+          "Converti pagine PDF in immagini PNG, JPG o WebP con controlli DPI, anteprima delle pagine ed esportazione ZIP.",
+      },
+      ja: {
+        name: "PDF から画像への変換",
+        description:
+          "DPI 調整、ページプレビュー、ZIP エクスポートを使って、PDF ページを PNG、JPG、WebP 画像に変換します。",
+      },
+      ko: {
+        name: "PDF 이미지 변환기",
+        description:
+          "DPI 제어, 페이지 미리보기, ZIP 내보내기를 사용해 PDF 페이지를 PNG, JPG 또는 WebP 이미지로 변환하세요.",
+      },
+      ms: {
+        name: "Penukar PDF kepada Imej",
+        description:
+          "Tukar halaman PDF menjadi imej PNG, JPG atau WebP dengan kawalan DPI, pratonton halaman dan eksport ZIP.",
+      },
+      nl: {
+        name: "PDF-naar-afbeelding-converter",
+        description:
+          "Zet PDF-pagina's om naar PNG-, JPG- of WebP-afbeeldingen met DPI-instellingen, paginavoorbeeld en ZIP-export.",
+      },
+      no: {
+        name: "PDF-til-bilde-konverter",
+        description:
+          "Konverter PDF-sider til PNG-, JPG- eller WebP-bilder med DPI-innstillinger, sideforhåndsvisning og ZIP-eksport.",
+      },
+      pl: {
+        name: "Konwerter PDF na obrazy",
+        description:
+          "Konwertuj strony PDF na obrazy PNG, JPG lub WebP z kontrolą DPI, podglądem stron i eksportem ZIP.",
+      },
+      pt: {
+        name: "Conversor de PDF para imagens",
+        description:
+          "Converta páginas de PDF em imagens PNG, JPG ou WebP com controles de DPI, pré-visualização de páginas e exportação em ZIP.",
+      },
+      ru: {
+        name: "Конвертер PDF в изображения",
+        description:
+          "Преобразуйте страницы PDF в изображения PNG, JPG или WebP с настройками DPI, предварительным просмотром страниц и экспортом в ZIP.",
+      },
+      sv: {
+        name: "PDF-till-bild-konverterare",
+        description:
+          "Konvertera PDF-sidor till PNG-, JPG- eller WebP-bilder med DPI-kontroller, sidförhandsvisning och ZIP-export.",
+      },
+      th: {
+        name: "ตัวแปลง PDF เป็นรูปภาพ",
+        description:
+          "แปลงหน้า PDF เป็นรูปภาพ PNG, JPG หรือ WebP พร้อมการควบคุม DPI การดูตัวอย่างหน้า และการส่งออกเป็น ZIP",
+      },
+      tr: {
+        name: "PDF'den Görüntüye Dönüştürücü",
+        description:
+          "PDF sayfalarını DPI denetimleri, sayfa önizlemesi ve ZIP dışa aktarımıyla PNG, JPG veya WebP görüntülerine dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi PDF sang hình ảnh",
+        description:
+          "Chuyển đổi các trang PDF thành hình ảnh PNG, JPG hoặc WebP với tùy chọn DPI, xem trước trang và xuất ZIP.",
+      },
+      "zh-CN": {
+        name: "PDF 转图片转换器",
+        description:
+          "在浏览器本地将 PDF 页面转换为 PNG、JPG 或 WebP 图片，并支持 DPI 控制、页面预览和 ZIP 导出。",
+      },
+      "zh-TW": {
+        name: "PDF 轉圖片轉換器",
+        description:
+          "使用 DPI 控制、頁面預覽和 ZIP 匯出，將 PDF 頁面轉換成 PNG、JPG 或 WebP 圖片。",
       },
     },
   },
