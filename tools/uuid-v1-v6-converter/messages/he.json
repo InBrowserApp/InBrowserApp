@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "הדביקו UUID v1 מבוסס זמן וקבלו מיד את UUID v6 המקביל.",
+  "v1Label": "קלט UUID v1",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "הדביקו UUID v6 מסודר מחדש ושחזרו את פריסת UUID v1 המקורית.",
+  "v6Label": "קלט UUID v6",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "העתק UUID v1",
+  "copyV6Label": "העתק UUID v6",
+  "copiedLabel": "הועתק",
+  "loadSampleLabel": "טען דוגמה",
+  "clearLabel": "נקה",
+  "emptyHint": "הקלט נשאר בדפדפן שלכם. ערכי UUID קומפקטיים, באותיות גדולות, בפורמט URN או עטופים בסוגריים מסולסלים מנורמלים לפני ההמרה.",
+  "invalidV1Format": "הזינו ערך UUID v1 באורך 32 תווים או בפורמט קנוני.",
+  "invalidV1Version": "ב-UUID הזה ספרת הגרסה אינה v1.",
+  "invalidV1Variant": "ה-UUID הזה אינו UUID בווריאנט RFC 4122.",
+  "invalidV6Format": "הזינו ערך UUID v6 באורך 32 תווים או בפורמט קנוני.",
+  "invalidV6Version": "ב-UUID הזה ספרת הגרסה אינה v6.",
+  "invalidV6Variant": "ה-UUID הזה אינו UUID בווריאנט RFC 4122."
+}

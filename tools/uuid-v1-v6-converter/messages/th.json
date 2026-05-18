@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "วาง UUID v1 แบบอิงเวลา แล้วรับ UUID v6 ที่เทียบเท่าทันที",
+  "v1Label": "อินพุต UUID v1",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "วาง UUID v6 ที่จัดลำดับใหม่ แล้วกู้คืนโครงสร้าง UUID v1 เดิม",
+  "v6Label": "อินพุต UUID v6",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "คัดลอก UUID v1",
+  "copyV6Label": "คัดลอก UUID v6",
+  "copiedLabel": "คัดลอกแล้ว",
+  "loadSampleLabel": "โหลดตัวอย่าง",
+  "clearLabel": "ล้าง",
+  "emptyHint": "ข้อมูลที่ป้อนจะอยู่ในเบราว์เซอร์ของคุณ UUID แบบไม่มีขีด แบบตัวพิมพ์ใหญ่ แบบ URN และแบบครอบด้วยวงเล็บปีกกาจะถูกปรับให้อยู่ในรูปมาตรฐานก่อนแปลง",
+  "invalidV1Format": "ป้อนค่า UUID v1 แบบ 32 อักขระหรือแบบมาตรฐาน",
+  "invalidV1Version": "UUID นี้ไม่มีเลขเวอร์ชัน v1 ในตำแหน่งที่กำหนด",
+  "invalidV1Variant": "UUID นี้ไม่ใช่ UUID variant ตาม RFC 4122",
+  "invalidV6Format": "ป้อนค่า UUID v6 แบบ 32 อักขระหรือแบบมาตรฐาน",
+  "invalidV6Version": "UUID นี้ไม่มีเลขเวอร์ชัน v6 ในตำแหน่งที่กำหนด",
+  "invalidV6Variant": "UUID นี้ไม่ใช่ UUID variant ตาม RFC 4122"
+}

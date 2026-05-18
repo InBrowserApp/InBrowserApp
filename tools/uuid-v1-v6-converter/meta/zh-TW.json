@@ -1,0 +1,4 @@
+{
+  "name": "UUID v1 ↔ v6 轉換器",
+  "description": "在瀏覽器中將 UUID v1 值轉換為可排序的 UUID v6 值，或將 UUID v6 值轉回 UUID v1。"
+}

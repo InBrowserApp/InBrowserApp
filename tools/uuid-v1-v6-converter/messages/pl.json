@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "Wklej oparty na czasie UUID v1 i od razu otrzymaj równoważny UUID v6.",
+  "v1Label": "Dane wejściowe UUID v1",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "Wklej przestawiony UUID v6 i odzyskaj oryginalny układ UUID v1.",
+  "v6Label": "Dane wejściowe UUID v6",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "Kopiuj UUID v1",
+  "copyV6Label": "Kopiuj UUID v6",
+  "copiedLabel": "Skopiowano",
+  "loadSampleLabel": "Wczytaj przykład",
+  "clearLabel": "Wyczyść",
+  "emptyHint": "Dane wejściowe pozostają w przeglądarce. Przed konwersją normalizowane są kompaktowe UUID, UUID zapisane wielkimi literami, URN oraz UUID w nawiasach klamrowych.",
+  "invalidV1Format": "Wprowadź 32-znakową albo kanoniczną wartość UUID v1.",
+  "invalidV1Version": "Ten UUID nie ma znacznika wersji v1.",
+  "invalidV1Variant": "Ten UUID nie jest UUID wariantu RFC 4122.",
+  "invalidV6Format": "Wprowadź 32-znakową albo kanoniczną wartość UUID v6.",
+  "invalidV6Version": "Ten UUID nie ma znacznika wersji v6.",
+  "invalidV6Variant": "Ten UUID nie jest UUID wariantu RFC 4122."
+}

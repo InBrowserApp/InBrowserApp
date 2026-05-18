@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "Pega un UUID v1 basado en tiempo y obtén al instante el UUID v6 equivalente.",
+  "v1Label": "Entrada de UUID v1",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "Pega un UUID v6 reordenado y recupera la estructura original de UUID v1.",
+  "v6Label": "Entrada de UUID v6",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "Copiar UUID v1",
+  "copyV6Label": "Copiar UUID v6",
+  "copiedLabel": "Copiado",
+  "loadSampleLabel": "Cargar ejemplo",
+  "clearLabel": "Borrar",
+  "emptyHint": "La entrada permanece en tu navegador. Los UUID compactos, en mayúsculas, URN y entre llaves se normalizan antes de la conversión.",
+  "invalidV1Format": "Introduce un valor UUID v1 canónico o de 32 caracteres.",
+  "invalidV1Version": "Este UUID no tiene el nibble de versión v1.",
+  "invalidV1Variant": "Este UUID no es un UUID de variante RFC 4122.",
+  "invalidV6Format": "Introduce un valor UUID v6 canónico o de 32 caracteres.",
+  "invalidV6Version": "Este UUID no tiene el nibble de versión v6.",
+  "invalidV6Variant": "Este UUID no es un UUID de variante RFC 4122."
+}

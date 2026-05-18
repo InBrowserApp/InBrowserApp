@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "Collez un UUID v1 basé sur le temps et obtenez immédiatement l'UUID v6 équivalent.",
+  "v1Label": "Entrée UUID v1",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "Collez un UUID v6 réordonné et récupérez la disposition UUID v1 d'origine.",
+  "v6Label": "Entrée UUID v6",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "Copier l'UUID v1",
+  "copyV6Label": "Copier l'UUID v6",
+  "copiedLabel": "Copié",
+  "loadSampleLabel": "Charger un exemple",
+  "clearLabel": "Effacer",
+  "emptyHint": "La saisie reste dans votre navigateur. Les UUID compacts, en majuscules, au format URN et entre accolades sont normalisés avant la conversion.",
+  "invalidV1Format": "Saisissez un UUID v1 de 32 caractères ou au format canonique.",
+  "invalidV1Version": "Cet UUID ne possède pas le demi-octet de version v1.",
+  "invalidV1Variant": "Cet UUID n'est pas un UUID de variante RFC 4122.",
+  "invalidV6Format": "Saisissez un UUID v6 de 32 caractères ou au format canonique.",
+  "invalidV6Version": "Cet UUID ne possède pas le demi-octet de version v6.",
+  "invalidV6Variant": "Cet UUID n'est pas un UUID de variante RFC 4122."
+}

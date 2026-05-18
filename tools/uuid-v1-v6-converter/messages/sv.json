@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "Klistra in ett tidsbaserat UUID v1 och få motsvarande UUID v6 direkt.",
+  "v1Label": "UUID v1-indata",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "Klistra in ett omordnat UUID v6 och återskapa den ursprungliga UUID v1-layouten.",
+  "v6Label": "UUID v6-indata",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "Kopiera UUID v1",
+  "copyV6Label": "Kopiera UUID v6",
+  "copiedLabel": "Kopierat",
+  "loadSampleLabel": "Läs in exempel",
+  "clearLabel": "Rensa",
+  "emptyHint": "Indata stannar i din webbläsare. Kompakta UUID-värden, UUID-värden med versaler, URN-värden och UUID-värden inom klamrar normaliseras före konvertering.",
+  "invalidV1Format": "Ange ett UUID v1-värde med 32 tecken eller i kanoniskt format.",
+  "invalidV1Version": "Det här UUID:t saknar v1-versionsnibblen.",
+  "invalidV1Variant": "Det här UUID:t är inte ett UUID med RFC 4122-variant.",
+  "invalidV6Format": "Ange ett UUID v6-värde med 32 tecken eller i kanoniskt format.",
+  "invalidV6Version": "Det här UUID:t saknar v6-versionsnibblen.",
+  "invalidV6Variant": "Det här UUID:t är inte ett UUID med RFC 4122-variant."
+}

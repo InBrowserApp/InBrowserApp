@@ -1,0 +1,4 @@
+{
+  "name": "Konverter UUID v1 ↔ v6",
+  "description": "Konversi nilai UUID v1 menjadi nilai UUID v6 yang dapat diurutkan, atau konversi nilai UUID v6 kembali menjadi UUID v1, sepenuhnya di browser Anda."
+}

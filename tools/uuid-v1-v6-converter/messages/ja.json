@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "時間ベースの UUID v1 を貼り付けると、対応する UUID v6 をすぐに取得できます。",
+  "v1Label": "UUID v1 入力",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "並べ替え済みの UUID v6 を貼り付けると、元の UUID v1 レイアウトを復元できます。",
+  "v6Label": "UUID v6 入力",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "UUID v1 をコピー",
+  "copyV6Label": "UUID v6 をコピー",
+  "copiedLabel": "コピーしました",
+  "loadSampleLabel": "サンプルを読み込む",
+  "clearLabel": "クリア",
+  "emptyHint": "入力はブラウザー内に留まります。コンパクト形式、大文字、URN、波かっこ付きの UUID は、変換前に正規化されます。",
+  "invalidV1Format": "32 文字形式または標準形式の UUID v1 値を入力してください。",
+  "invalidV1Version": "この UUID には v1 のバージョンニブルがありません。",
+  "invalidV1Variant": "この UUID は RFC 4122 バリアントの UUID ではありません。",
+  "invalidV6Format": "32 文字形式または標準形式の UUID v6 値を入力してください。",
+  "invalidV6Version": "この UUID には v6 のバージョンニブルがありません。",
+  "invalidV6Variant": "この UUID は RFC 4122 バリアントの UUID ではありません。"
+}

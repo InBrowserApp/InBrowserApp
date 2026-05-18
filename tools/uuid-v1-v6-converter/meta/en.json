@@ -1,0 +1,4 @@
+{
+  "name": "UUID v1 ↔ v6 Converter",
+  "description": "Convert UUID v1 values to sortable UUID v6 values, or convert UUID v6 values back to UUID v1, entirely in your browser."
+}

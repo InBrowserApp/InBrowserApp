@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "Tempel UUID v1 berbasis waktu dan langsung dapatkan padanan UUID v6.",
+  "v1Label": "Input UUID v1",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "Tempel UUID v6 yang sudah disusun ulang dan pulihkan tata letak UUID v1 aslinya.",
+  "v6Label": "Input UUID v6",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "Salin UUID v1",
+  "copyV6Label": "Salin UUID v6",
+  "copiedLabel": "Disalin",
+  "loadSampleLabel": "Muat contoh",
+  "clearLabel": "Hapus",
+  "emptyHint": "Input tetap berada di browser Anda. UUID ringkas, huruf besar, URN, dan bertanda kurung kurawal dinormalisasi sebelum konversi.",
+  "invalidV1Format": "Masukkan nilai UUID v1 32 karakter atau kanonis.",
+  "invalidV1Version": "UUID ini tidak memiliki nibble versi v1.",
+  "invalidV1Variant": "UUID ini bukan UUID varian RFC 4122.",
+  "invalidV6Format": "Masukkan nilai UUID v6 32 karakter atau kanonis.",
+  "invalidV6Version": "UUID ini tidak memiliki nibble versi v6.",
+  "invalidV6Variant": "UUID ini bukan UUID varian RFC 4122."
+}

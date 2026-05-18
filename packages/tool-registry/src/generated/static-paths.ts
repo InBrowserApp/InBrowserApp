@@ -16654,6 +16654,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "uuid-v1-v6-converter",
+    language: "ar",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "de",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "en",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "es",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "fr",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "he",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "hi",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "id",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "it",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "ja",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "ko",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "ms",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "nl",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "no",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "pl",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "pt",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "ru",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "sv",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "th",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "tr",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "vi",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-v1-v6-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "uuid-v3-generator",
     language: "ar",
   },

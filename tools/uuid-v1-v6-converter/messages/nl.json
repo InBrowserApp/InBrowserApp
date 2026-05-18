@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "Plak een tijdgebaseerde UUID v1 en krijg direct de equivalente UUID v6.",
+  "v1Label": "Invoer voor UUID v1",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "Plak een opnieuw geordende UUID v6 en herstel de oorspronkelijke UUID v1-indeling.",
+  "v6Label": "Invoer voor UUID v6",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "UUID v1 kopiëren",
+  "copyV6Label": "UUID v6 kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "loadSampleLabel": "Voorbeeld laden",
+  "clearLabel": "Wissen",
+  "emptyHint": "Invoer blijft in je browser. Compacte UUID's, hoofdletters, URN-waarden en UUID's tussen accolades worden vóór conversie genormaliseerd.",
+  "invalidV1Format": "Voer een UUID v1-waarde van 32 tekens of in canonieke vorm in.",
+  "invalidV1Version": "Deze UUID heeft niet de versienibble voor v1.",
+  "invalidV1Variant": "Deze UUID is geen UUID van de RFC 4122-variant.",
+  "invalidV6Format": "Voer een UUID v6-waarde van 32 tekens of in canonieke vorm in.",
+  "invalidV6Version": "Deze UUID heeft niet de versienibble voor v6.",
+  "invalidV6Variant": "Deze UUID is geen UUID van de RFC 4122-variant."
+}

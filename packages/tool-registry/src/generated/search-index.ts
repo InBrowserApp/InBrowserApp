@@ -22717,6 +22717,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "uuid-v1-v6-converter",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid v1",
+      "uuid v6",
+      "identifier",
+      "converter",
+      "time ordered",
+      "developer tools",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل UUID v1 ↔ v6",
+        description:
+          "حوّل قيم UUID v1 إلى قيم UUID v6 قابلة للفرز، أو حوّل قيم UUID v6 مرة أخرى إلى UUID v1، بالكامل داخل متصفحك.",
+      },
+      de: {
+        name: "UUID v1 ↔ v6-Konverter",
+        description:
+          "Konvertiere UUID-v1-Werte in sortierbare UUID-v6-Werte oder konvertiere UUID-v6-Werte zurück in UUID v1, vollständig in deinem Browser.",
+      },
+      en: {
+        name: "UUID v1 ↔ v6 Converter",
+        description:
+          "Convert UUID v1 values to sortable UUID v6 values, or convert UUID v6 values back to UUID v1, entirely in your browser.",
+      },
+      es: {
+        name: "Conversor de UUID v1 ↔ v6",
+        description:
+          "Convierte valores UUID v1 en valores UUID v6 ordenables, o convierte valores UUID v6 de vuelta a UUID v1, completamente en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur UUID v1 ↔ v6",
+        description:
+          "Convertissez des valeurs UUID v1 en valeurs UUID v6 triables, ou reconvertissez des valeurs UUID v6 en UUID v1, entièrement dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר UUID v1 ↔ v6",
+        description:
+          "המירו ערכי UUID v1 לערכי UUID v6 ניתנים למיון, או המירו ערכי UUID v6 בחזרה ל-UUID v1, כולו בדפדפן שלכם.",
+      },
+      hi: {
+        name: "UUID v1 ↔ v6 कन्वर्टर",
+        description:
+          "UUID v1 मानों को क्रमबद्ध किए जा सकने वाले UUID v6 मानों में बदलें, या UUID v6 मानों को वापस UUID v1 में बदलें, पूरी तरह आपके ब्राउज़र में।",
+      },
+      id: {
+        name: "Konverter UUID v1 ↔ v6",
+        description:
+          "Konversi nilai UUID v1 menjadi nilai UUID v6 yang dapat diurutkan, atau konversi nilai UUID v6 kembali menjadi UUID v1, sepenuhnya di browser Anda.",
+      },
+      it: {
+        name: "Convertitore UUID v1 ↔ v6",
+        description:
+          "Converti valori UUID v1 in valori UUID v6 ordinabili, oppure converti valori UUID v6 di nuovo in UUID v1, interamente nel tuo browser.",
+      },
+      ja: {
+        name: "UUID v1 ↔ v6 コンバーター",
+        description:
+          "UUID v1 の値をソート可能な UUID v6 の値へ変換したり、UUID v6 の値を UUID v1 に戻したりできます。すべてブラウザー内で完結します。",
+      },
+      ko: {
+        name: "UUID v1 ↔ v6 변환기",
+        description:
+          "UUID v1 값을 정렬 가능한 UUID v6 값으로 변환하거나 UUID v6 값을 다시 UUID v1로 변환합니다. 모든 작업은 브라우저에서만 이루어집니다.",
+      },
+      ms: {
+        name: "Penukar UUID v1 ↔ v6",
+        description:
+          "Tukar nilai UUID v1 kepada nilai UUID v6 yang boleh diisih, atau tukar nilai UUID v6 kembali kepada UUID v1, sepenuhnya dalam penyemak imbas anda.",
+      },
+      nl: {
+        name: "UUID v1 ↔ v6-converter",
+        description:
+          "Converteer UUID v1-waarden naar sorteerbare UUID v6-waarden, of converteer UUID v6-waarden terug naar UUID v1, volledig in je browser.",
+      },
+      no: {
+        name: "UUID v1 ↔ v6-konverterer",
+        description:
+          "Konverter UUID v1-verdier til sorterbare UUID v6-verdier, eller konverter UUID v6-verdier tilbake til UUID v1, helt i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter UUID v1 ↔ v6",
+        description:
+          "Konwertuj wartości UUID v1 na sortowalne wartości UUID v6 albo konwertuj wartości UUID v6 z powrotem na UUID v1, w całości w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de UUID v1 ↔ v6",
+        description:
+          "Converta valores UUID v1 em valores UUID v6 ordenáveis, ou converta valores UUID v6 de volta para UUID v1, inteiramente no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер UUID v1 ↔ v6",
+        description:
+          "Преобразуйте значения UUID v1 в сортируемые значения UUID v6 или преобразуйте UUID v6 обратно в UUID v1 целиком в вашем браузере.",
+      },
+      sv: {
+        name: "UUID v1 ↔ v6-konverterare",
+        description:
+          "Konvertera UUID v1-värden till sorterbara UUID v6-värden, eller konvertera UUID v6-värden tillbaka till UUID v1, helt i din webbläsare.",
+      },
+      th: {
+        name: "ตัวแปลง UUID v1 ↔ v6",
+        description:
+          "แปลงค่า UUID v1 เป็นค่า UUID v6 ที่เรียงลำดับได้ หรือแปลงค่า UUID v6 กลับเป็น UUID v1 ได้ทั้งหมดในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "UUID v1 ↔ v6 Dönüştürücü",
+        description:
+          "UUID v1 değerlerini sıralanabilir UUID v6 değerlerine dönüştürün veya UUID v6 değerlerini tekrar UUID v1 değerlerine çevirin; işlemlerin tamamı tarayıcınızda yapılır.",
+      },
+      vi: {
+        name: "Trình chuyển đổi UUID v1 ↔ v6",
+        description:
+          "Chuyển đổi giá trị UUID v1 thành giá trị UUID v6 có thể sắp xếp, hoặc chuyển UUID v6 trở lại UUID v1, hoàn toàn trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "UUID v1 ↔ v6 转换器",
+        description:
+          "在浏览器中将 UUID v1 值转换为可排序的 UUID v6 值，或将 UUID v6 值转换回 UUID v1。",
+      },
+      "zh-TW": {
+        name: "UUID v1 ↔ v6 轉換器",
+        description:
+          "在瀏覽器中將 UUID v1 值轉換為可排序的 UUID v6 值，或將 UUID v6 值轉回 UUID v1。",
+      },
+    },
+  },
+  {
     slug: "uuid-v3-generator",
     category: "developer",
     icon: "binary",

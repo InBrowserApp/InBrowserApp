@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "Tampal UUID v1 berasaskan masa dan dapatkan UUID v6 yang setara dengan serta-merta.",
+  "v1Label": "Masukan UUID v1",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "Tampal UUID v6 yang disusun semula dan pulihkan susun atur UUID v1 asal.",
+  "v6Label": "Masukan UUID v6",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "Salin UUID v1",
+  "copyV6Label": "Salin UUID v6",
+  "copiedLabel": "Disalin",
+  "loadSampleLabel": "Muatkan sampel",
+  "clearLabel": "Kosongkan",
+  "emptyHint": "Data yang dimasukkan kekal dalam penyemak imbas anda. UUID padat, UUID huruf besar, nilai URN dan UUID yang diapit tanda kurung kurawal dinormalkan sebelum penukaran.",
+  "invalidV1Format": "Masukkan nilai UUID v1 sepanjang 32 aksara atau dalam bentuk kanonik.",
+  "invalidV1Version": "UUID ini tidak mempunyai nibble versi v1.",
+  "invalidV1Variant": "UUID ini bukan UUID varian RFC 4122.",
+  "invalidV6Format": "Masukkan nilai UUID v6 sepanjang 32 aksara atau dalam bentuk kanonik.",
+  "invalidV6Version": "UUID ini tidak mempunyai nibble versi v6.",
+  "invalidV6Variant": "UUID ini bukan UUID varian RFC 4122."
+}

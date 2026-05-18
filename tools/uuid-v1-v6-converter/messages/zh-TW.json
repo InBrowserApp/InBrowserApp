@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "貼上以時間為基礎的 UUID v1，立即取得對應的 UUID v6。",
+  "v1Label": "UUID v1 輸入",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "貼上重新排序的 UUID v6，還原原始的 UUID v1 欄位配置。",
+  "v6Label": "UUID v6 輸入",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "複製 UUID v1",
+  "copyV6Label": "複製 UUID v6",
+  "copiedLabel": "已複製",
+  "loadSampleLabel": "載入範例",
+  "clearLabel": "清除",
+  "emptyHint": "輸入內容會留在你的瀏覽器中。轉換前會先將緊湊格式、大寫、URN 與以大括號包住的 UUID 正規化。",
+  "invalidV1Format": "請輸入 32 個字元或標準格式的 UUID v1 值。",
+  "invalidV1Version": "這個 UUID 的版本半位元組不是 v1。",
+  "invalidV1Variant": "這個 UUID 不是 RFC 4122 變體 UUID。",
+  "invalidV6Format": "請輸入 32 個字元或標準格式的 UUID v6 值。",
+  "invalidV6Version": "這個 UUID 的版本半位元組不是 v6。",
+  "invalidV6Variant": "這個 UUID 不是 RFC 4122 變體 UUID。"
+}

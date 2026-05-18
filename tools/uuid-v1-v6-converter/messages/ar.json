@@ -1,0 +1,22 @@
+{
+  "v1Title": "UUID v1",
+  "v1Description": "الصق UUID v1 مستندًا إلى الوقت واحصل فورًا على UUID v6 المكافئ له.",
+  "v1Label": "إدخال UUID v1",
+  "v1Placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+  "v6Title": "UUID v6",
+  "v6Description": "الصق UUID v6 مُعاد الترتيب واستعد تخطيط UUID v1 الأصلي.",
+  "v6Label": "إدخال UUID v6",
+  "v6Placeholder": "1f034bdc-1ed6-67f0-b3fe-02d71e841f4f",
+  "copyV1Label": "نسخ UUID v1",
+  "copyV6Label": "نسخ UUID v6",
+  "copiedLabel": "تم النسخ",
+  "loadSampleLabel": "تحميل عينة",
+  "clearLabel": "مسح",
+  "emptyHint": "يبقى الإدخال في متصفحك. يتم توحيد UUIDs المضغوطة والمكتوبة بأحرف كبيرة وقيم URN وUUIDs المحاطة بأقواس قبل التحويل.",
+  "invalidV1Format": "أدخل قيمة UUID v1 مكوّنة من 32 حرفًا أو بالصيغة القياسية.",
+  "invalidV1Version": "لا يحتوي هذا UUID على خانة إصدار v1.",
+  "invalidV1Variant": "هذا UUID ليس UUID من متغيّر RFC 4122.",
+  "invalidV6Format": "أدخل قيمة UUID v6 مكوّنة من 32 حرفًا أو بالصيغة القياسية.",
+  "invalidV6Version": "لا يحتوي هذا UUID على خانة إصدار v6.",
+  "invalidV6Variant": "هذا UUID ليس UUID من متغيّر RFC 4122."
+}
