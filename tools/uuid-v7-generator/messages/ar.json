@@ -1,6 +1,9 @@
 {
   "optionsTitle": "الخيارات",
-  "optionsDescription": "اختر عدد معرّفات UUID v7 التي تريد إنشاءها في دفعة محلية واحدة.",
+  "optionsDescription": "أنشئ معرّف UUID v7 واحداً أو دفعة محلية.",
+  "modeLabel": "الوضع",
+  "singleModeLabel": "فردي",
+  "batchModeLabel": "دفعة",
   "countLabel": "العدد",
   "countDescription": "أنشئ ما بين 1 و100 معرّف UUID دفعة واحدة.",
   "resultsTitle": "معرّفات UUID المنشأة",

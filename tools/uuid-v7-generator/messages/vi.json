@@ -1,6 +1,9 @@
 {
   "optionsTitle": "Tùy chọn",
-  "optionsDescription": "Chọn số lượng mã định danh UUID v7 cần tạo trong một lô cục bộ.",
+  "optionsDescription": "Tạo một mã định danh UUID v7 hoặc một lô cục bộ.",
+  "modeLabel": "Chế độ",
+  "singleModeLabel": "Đơn lẻ",
+  "batchModeLabel": "Theo lô",
   "countLabel": "Số lượng",
   "countDescription": "Tạo từ 1 đến 100 UUID cùng lúc.",
   "resultsTitle": "UUID đã tạo",

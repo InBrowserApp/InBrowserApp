@@ -1,6 +1,9 @@
 {
   "optionsTitle": "Pilihan",
-  "optionsDescription": "Pilih bilangan pengecam UUID v7 untuk dijana dalam satu kelompok tempatan.",
+  "optionsDescription": "Jana satu pengecam UUID v7 atau satu kelompok tempatan.",
+  "modeLabel": "Mod",
+  "singleModeLabel": "Tunggal",
+  "batchModeLabel": "Kelompok",
   "countLabel": "Bilangan",
   "countDescription": "Jana antara 1 hingga 100 UUID serentak.",
   "resultsTitle": "UUID yang Dijana",

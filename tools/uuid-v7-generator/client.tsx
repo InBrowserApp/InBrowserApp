@@ -9,7 +9,7 @@ import {
 import { UuidV7OptionsCard } from "./components/options-card"
 import { UuidV7ResultsCard } from "./components/results-card"
 
-import type { UuidV7Messages } from "./types"
+import type { UuidV7GenerationMode, UuidV7Messages } from "./types"
 
 type UuidV7GeneratorClientProps = Readonly<{
   messages: UuidV7Messages
@@ -17,12 +17,22 @@ type UuidV7GeneratorClientProps = Readonly<{
 
 const STORAGE_KEYS = {
   count: "tools:uuid-v7-generator:count",
+  mode: "tools:uuid-v7-generator:mode",
 } as const
+
+const UUID_V7_DEFAULT_MODE: UuidV7GenerationMode = "single"
+
+function isUuidV7GenerationMode(
+  value: string | null
+): value is UuidV7GenerationMode {
+  return value === "single" || value === "batch"
+}
 
 function UuidV7GeneratorClient({ messages }: UuidV7GeneratorClientProps) {
   const countId = useId()
 
   const [count, setCount] = useState(UUID_V7_DEFAULT_COUNT)
+  const [mode, setMode] = useState<UuidV7GenerationMode>(UUID_V7_DEFAULT_MODE)
   const [generationVersion, setGenerationVersion] = useState(0)
   const [generatedIds, setGeneratedIds] = useState<string[]>([])
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
@@ -34,6 +44,7 @@ function UuidV7GeneratorClient({ messages }: UuidV7GeneratorClientProps) {
     }
 
     const storedCount = window.localStorage.getItem(STORAGE_KEYS.count)
+    const storedMode = window.localStorage.getItem(STORAGE_KEYS.mode)
 
     if (storedCount !== null) {
       const parsedCount = Number(storedCount)
@@ -41,6 +52,10 @@ function UuidV7GeneratorClient({ messages }: UuidV7GeneratorClientProps) {
       if (Number.isFinite(parsedCount)) {
         setCount(normalizeUuidV7Count(parsedCount))
       }
+    }
+
+    if (isUuidV7GenerationMode(storedMode)) {
+      setMode(storedMode)
     }
   }, [])
 
@@ -54,6 +69,15 @@ function UuidV7GeneratorClient({ messages }: UuidV7GeneratorClientProps) {
   }, [count])
 
   useEffect(() => {
+    /* v8 ignore next */
+    if (typeof window === "undefined") {
+      return
+    }
+
+    window.localStorage.setItem(STORAGE_KEYS.mode, mode)
+  }, [mode])
+
+  useEffect(() => {
     const normalizedCount = normalizeUuidV7Count(count)
 
     if (count !== normalizedCount) {
@@ -62,9 +86,11 @@ function UuidV7GeneratorClient({ messages }: UuidV7GeneratorClientProps) {
     }
 
     startTransition(() => {
-      setGeneratedIds(generateUuidV7Ids(normalizedCount))
+      setGeneratedIds(
+        generateUuidV7Ids(mode === "single" ? 1 : normalizedCount)
+      )
     })
-  }, [count, generationVersion])
+  }, [count, generationVersion, mode])
 
   const output = generatedIds.join("\n")
   const generatedAtMs = generatedIds[0]
@@ -80,7 +106,8 @@ function UuidV7GeneratorClient({ messages }: UuidV7GeneratorClientProps) {
       timeStyle: "medium",
     }).format(new Date(generatedAtMs))
   }, [generatedAtMs, messages.unavailableLabel])
-  const downloadFilename = `uuid-v7-${count}.txt`
+  const downloadFilename =
+    mode === "single" ? "uuid-v7.txt" : `uuid-v7-${count}.txt`
 
   useEffect(() => {
     if (output.length === 0) {
@@ -103,16 +130,17 @@ function UuidV7GeneratorClient({ messages }: UuidV7GeneratorClientProps) {
 
   return (
     <div className="grid gap-6 xl:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
-      <div className="min-w-0 xl:sticky xl:top-6 xl:self-start">
-        <UuidV7OptionsCard
-          messages={messages}
-          countId={countId}
-          count={count}
-          onCountChange={(value) => {
-            setCount(normalizeUuidV7Count(Number(value)))
-          }}
-        />
-      </div>
+      <UuidV7OptionsCard
+        className="min-w-0 xl:sticky xl:top-6 xl:self-start"
+        messages={messages}
+        countId={countId}
+        mode={mode}
+        count={count}
+        onModeChange={setMode}
+        onCountChange={(value) => {
+          setCount(normalizeUuidV7Count(Number(value)))
+        }}
+      />
 
       <UuidV7ResultsCard
         downloadFilename={downloadFilename}

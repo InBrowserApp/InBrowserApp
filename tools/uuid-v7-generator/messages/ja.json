@@ -1,6 +1,9 @@
 {
   "optionsTitle": "オプション",
-  "optionsDescription": "1回のローカルバッチで生成するUUID v7識別子の数を選択します。",
+  "optionsDescription": "UUID v7識別子を1件、またはローカルでまとめて生成します。",
+  "modeLabel": "モード",
+  "singleModeLabel": "単一",
+  "batchModeLabel": "一括",
   "countLabel": "数",
   "countDescription": "一度に1から100個のUUIDを生成します。",
   "resultsTitle": "生成されたUUID",

@@ -1,6 +1,9 @@
 {
   "optionsTitle": "אפשרויות",
-  "optionsDescription": "בחרו כמה מזהי UUID v7 ליצור באצווה מקומית אחת.",
+  "optionsDescription": "צרו מזהה UUID v7 יחיד או אצווה מקומית.",
+  "modeLabel": "מצב",
+  "singleModeLabel": "יחיד",
+  "batchModeLabel": "אצווה",
   "countLabel": "כמות",
   "countDescription": "צרו בין מזהה UUID אחד ל-100 בבת אחת.",
   "resultsTitle": "מזהי UUID שנוצרו",

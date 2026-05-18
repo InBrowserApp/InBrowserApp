@@ -1,6 +1,9 @@
 {
   "optionsTitle": "Seçenekler",
-  "optionsDescription": "Tek bir yerel toplu işlemde kaç UUID v7 tanımlayıcısı oluşturulacağını seçin.",
+  "optionsDescription": "Tek bir UUID v7 tanımlayıcısı veya yerel bir toplu işlem oluşturun.",
+  "modeLabel": "Mod",
+  "singleModeLabel": "Tekli",
+  "batchModeLabel": "Toplu",
   "countLabel": "Adet",
   "countDescription": "Tek seferde 1 ile 100 arasında UUID oluşturun.",
   "resultsTitle": "Üretilen UUID'ler",

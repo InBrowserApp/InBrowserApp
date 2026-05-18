@@ -1,6 +1,9 @@
 {
   "optionsTitle": "選項",
-  "optionsDescription": "選擇要在單一本機批次中產生多少個 UUID v7 識別碼。",
+  "optionsDescription": "產生單一 UUID v7 識別碼，或在本機產生一批。",
+  "modeLabel": "模式",
+  "singleModeLabel": "單一",
+  "batchModeLabel": "批次",
   "countLabel": "數量",
   "countDescription": "一次產生 1 到 100 個 UUID。",
   "resultsTitle": "已產生的 UUID",

@@ -1,6 +1,9 @@
 {
   "optionsTitle": "Параметры",
-  "optionsDescription": "Выберите, сколько идентификаторов UUID v7 сгенерировать в одном локальном пакете.",
+  "optionsDescription": "Сгенерируйте один UUID v7 или локальный пакет.",
+  "modeLabel": "Режим",
+  "singleModeLabel": "Один",
+  "batchModeLabel": "Пакет",
   "countLabel": "Количество",
   "countDescription": "Генерируйте от 1 до 100 UUID за раз.",
   "resultsTitle": "Сгенерированные UUID",

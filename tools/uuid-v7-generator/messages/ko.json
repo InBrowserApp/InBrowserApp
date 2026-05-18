@@ -1,6 +1,9 @@
 {
   "optionsTitle": "옵션",
-  "optionsDescription": "하나의 로컬 배치에서 생성할 UUID v7 식별자 수를 선택하세요.",
+  "optionsDescription": "UUID v7 식별자 하나 또는 로컬 배치를 생성합니다.",
+  "modeLabel": "모드",
+  "singleModeLabel": "단일",
+  "batchModeLabel": "배치",
   "countLabel": "개수",
   "countDescription": "한 번에 1개에서 100개까지 UUID를 생성합니다.",
   "resultsTitle": "생성된 UUID",

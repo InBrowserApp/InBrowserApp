@@ -1,6 +1,9 @@
 {
   "optionsTitle": "Options",
-  "optionsDescription": "Choisissez le nombre d'identifiants UUID v7 à générer dans un lot local.",
+  "optionsDescription": "Générez un seul identifiant UUID v7 ou un lot local.",
+  "modeLabel": "Mode",
+  "singleModeLabel": "Individuel",
+  "batchModeLabel": "Lot",
   "countLabel": "Nombre",
   "countDescription": "Générez entre 1 et 100 UUID à la fois.",
   "resultsTitle": "UUID générés",

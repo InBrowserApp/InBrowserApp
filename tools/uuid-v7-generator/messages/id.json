@@ -1,6 +1,9 @@
 {
   "optionsTitle": "Opsi",
-  "optionsDescription": "Pilih berapa banyak pengenal UUID v7 yang akan dibuat dalam satu batch lokal.",
+  "optionsDescription": "Buat satu pengenal UUID v7 atau batch lokal.",
+  "modeLabel": "Mode",
+  "singleModeLabel": "Tunggal",
+  "batchModeLabel": "Batch",
   "countLabel": "Jumlah",
   "countDescription": "Buat antara 1 dan 100 UUID sekaligus.",
   "resultsTitle": "UUID yang Dihasilkan",

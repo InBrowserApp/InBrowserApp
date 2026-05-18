@@ -1,6 +1,9 @@
 {
   "optionsTitle": "Alternativer",
-  "optionsDescription": "Velg hvor mange UUID v7-identifikatorer som skal genereres i én lokal gruppe.",
+  "optionsDescription": "Generer én UUID v7-identifikator eller en lokal gruppe.",
+  "modeLabel": "Modus",
+  "singleModeLabel": "Én",
+  "batchModeLabel": "Gruppe",
   "countLabel": "Antall",
   "countDescription": "Generer mellom 1 og 100 UUID-er om gangen.",
   "resultsTitle": "Genererte UUID-er",

@@ -1,6 +1,9 @@
 {
   "optionsTitle": "Opcje",
-  "optionsDescription": "Wybierz, ile identyfikatorów UUID v7 wygenerować w jednej lokalnej partii.",
+  "optionsDescription": "Wygeneruj jeden identyfikator UUID v7 albo lokalną partię.",
+  "modeLabel": "Tryb",
+  "singleModeLabel": "Pojedynczy",
+  "batchModeLabel": "Partia",
   "countLabel": "Liczba",
   "countDescription": "Generuj od 1 do 100 identyfikatorów UUID naraz.",
   "resultsTitle": "Wygenerowane identyfikatory UUID",

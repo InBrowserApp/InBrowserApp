@@ -1,6 +1,9 @@
 {
   "optionsTitle": "Opties",
-  "optionsDescription": "Kies hoeveel UUID v7-identifiers je in een lokale batch wilt genereren.",
+  "optionsDescription": "Genereer één UUID v7-identifier of een lokale batch.",
+  "modeLabel": "Modus",
+  "singleModeLabel": "Enkel",
+  "batchModeLabel": "Batch",
   "countLabel": "Aantal",
   "countDescription": "Genereer tussen 1 en 100 UUID's tegelijk.",
   "resultsTitle": "Gegenereerde UUID's",

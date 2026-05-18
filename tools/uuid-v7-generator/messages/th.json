@@ -1,6 +1,9 @@
 {
   "optionsTitle": "ตัวเลือก",
-  "optionsDescription": "เลือกจำนวนตัวระบุ UUID v7 ที่จะสร้างในชุดภายในเครื่องหนึ่งครั้ง",
+  "optionsDescription": "สร้างตัวระบุ UUID v7 หนึ่งรายการหรือสร้างเป็นชุดในเครื่อง",
+  "modeLabel": "โหมด",
+  "singleModeLabel": "รายการเดียว",
+  "batchModeLabel": "ชุด",
   "countLabel": "จำนวน",
   "countDescription": "สร้าง UUID ได้ครั้งละ 1 ถึง 100 รายการ",
   "resultsTitle": "UUID ที่สร้างแล้ว",

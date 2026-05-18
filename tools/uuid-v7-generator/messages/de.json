@@ -1,6 +1,9 @@
 {
   "optionsTitle": "Optionen",
-  "optionsDescription": "Wähle aus, wie viele UUID v7-Kennungen in einem lokalen Stapel erzeugt werden.",
+  "optionsDescription": "Erzeuge eine einzelne UUID v7-Kennung oder einen lokalen Stapel.",
+  "modeLabel": "Modus",
+  "singleModeLabel": "Einzeln",
+  "batchModeLabel": "Stapel",
   "countLabel": "Anzahl",
   "countDescription": "Erzeuge 1 bis 100 UUIDs auf einmal.",
   "resultsTitle": "Erzeugte UUIDs",

@@ -1,6 +1,9 @@
 {
   "optionsTitle": "Options",
-  "optionsDescription": "Choose how many UUID v7 identifiers to generate in one local batch.",
+  "optionsDescription": "Generate one UUID v7 identifier or a local batch.",
+  "modeLabel": "Mode",
+  "singleModeLabel": "Single",
+  "batchModeLabel": "Batch",
   "countLabel": "Count",
   "countDescription": "Generate between 1 and 100 UUIDs at once.",
   "resultsTitle": "Generated UUIDs",

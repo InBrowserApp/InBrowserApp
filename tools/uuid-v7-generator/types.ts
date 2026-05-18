@@ -1,6 +1,9 @@
 type UuidV7MessagesCatalog = Readonly<{
   optionsTitle: string
   optionsDescription: string
+  modeLabel: string
+  singleModeLabel: string
+  batchModeLabel: string
   countLabel: string
   countDescription: string
   resultsTitle: string
@@ -25,4 +28,6 @@ type UuidV7Messages = UuidV7MessagesCatalog & {
   }
 }
 
-export type { UuidV7Messages, UuidV7MessagesCatalog }
+type UuidV7GenerationMode = "single" | "batch"
+
+export type { UuidV7GenerationMode, UuidV7Messages, UuidV7MessagesCatalog }

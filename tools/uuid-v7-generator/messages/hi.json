@@ -1,6 +1,9 @@
 {
   "optionsTitle": "विकल्प",
-  "optionsDescription": "चुनें कि एक स्थानीय बैच में कितने UUID v7 पहचानकर्ता जनरेट करने हैं।",
+  "optionsDescription": "एक UUID v7 पहचानकर्ता या स्थानीय बैच जनरेट करें।",
+  "modeLabel": "मोड",
+  "singleModeLabel": "एकल",
+  "batchModeLabel": "बैच",
   "countLabel": "संख्या",
   "countDescription": "एक बार में 1 से 100 UUIDs तक जनरेट करें।",
   "resultsTitle": "जनरेट किए गए UUIDs",
