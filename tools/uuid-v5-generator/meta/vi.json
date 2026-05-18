@@ -1,0 +1,4 @@
+{
+  "name": "UUID v5 Generator",
+  "description": "Tạo mã định danh UUID v5 dựa trên tên, có tính xác định, từ UUID không gian tên và tên, hoàn toàn trong trình duyệt của bạn."
+}

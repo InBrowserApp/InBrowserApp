@@ -1,0 +1,4 @@
+{
+  "name": "Generador de UUID v5",
+  "description": "Genera identificadores UUID v5 deterministas basados en nombres a partir de un UUID de espacio de nombres y un nombre, íntegramente en tu navegador."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "UUID v5 Generator",
+  "description": "네임스페이스 UUID와 이름으로 결정적 이름 기반 UUID v5 식별자를 브라우저에서만 생성합니다."
+}

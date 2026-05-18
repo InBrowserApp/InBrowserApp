@@ -1,0 +1,4 @@
+{
+  "name": "UUID v5 Generator",
+  "description": "完全在瀏覽器中，從命名空間 UUID 和名稱產生確定性的名稱型 UUID v5 識別碼。"
+}

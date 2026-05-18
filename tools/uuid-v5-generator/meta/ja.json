@@ -1,0 +1,4 @@
+{
+  "name": "UUID v5 Generator",
+  "description": "名前空間 UUID と名前から、決定的な名前ベースの UUID v5 識別子を完全にブラウザー内で生成します。"
+}
