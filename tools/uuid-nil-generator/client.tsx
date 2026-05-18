@@ -53,7 +53,11 @@ function RepresentationRow({
           variant="ghost"
         />
       </div>
-      <code className="overflow-x-auto rounded bg-background px-2.5 py-2 font-mono text-sm">
+      <code
+        className="block overflow-x-auto rounded bg-background px-2.5 py-2 text-left font-mono text-sm whitespace-nowrap [unicode-bidi:isolate]"
+        dir="ltr"
+        translate="no"
+      >
         {value}
       </code>
     </div>
@@ -62,9 +66,9 @@ function RepresentationRow({
 
 function DetailRow({ label, value }: DetailRowProps) {
   return (
-    <div className="flex items-center justify-between gap-4">
-      <dt className="text-sm text-muted-foreground">{label}</dt>
-      <dd className="text-right text-sm font-medium">{value}</dd>
+    <div className="flex items-start justify-between gap-4">
+      <dt className="shrink-0 text-sm text-muted-foreground">{label}</dt>
+      <dd className="min-w-0 text-end text-sm font-medium">{value}</dd>
     </div>
   )
 }
@@ -87,7 +91,11 @@ function UuidNilGeneratorClient({ messages }: UuidNilGeneratorClientProps) {
             <div className="mb-2 text-sm font-medium">
               {messages.canonicalLabel}
             </div>
-            <code className="block overflow-x-auto font-mono text-lg font-semibold sm:text-2xl">
+            <code
+              className="block overflow-x-auto text-left font-mono text-lg font-semibold whitespace-nowrap [unicode-bidi:isolate] sm:text-2xl"
+              dir="ltr"
+              translate="no"
+            >
               {REPRESENTATIONS.canonical}
             </code>
           </div>

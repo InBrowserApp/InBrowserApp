@@ -61,6 +61,13 @@ describe("UuidNilGeneratorClient", () => {
     expect(screen.getByText(messages.allBitsValue)).toBeTruthy()
     expect(screen.getAllByText(messages.versionValue)).toHaveLength(2)
     expect(screen.getAllByText(messages.stableValue)).toHaveLength(2)
+
+    for (const value of [NIL_UUID, NIL_UUID_HEX, NIL_UUID_URN]) {
+      const code = screen.getByText(value)
+
+      expect(code.getAttribute("dir")).toBe("ltr")
+      expect(code.getAttribute("translate")).toBe("no")
+    }
   })
 
   test("copies each representation", async () => {
