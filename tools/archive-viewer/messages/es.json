@@ -40,6 +40,7 @@
   "kindSymlink": "Enlace simbólico",
   "kindOther": "Otro",
   "previewTitle": "Vista previa",
+  "closePreview": "Cerrar vista previa",
   "previewDescription": "Las entradas de texto, imagen y PDF se pueden inspeccionar antes de descargarlas.",
   "previewPlaceholderTitle": "Selecciona un archivo",
   "previewPlaceholderDescription": "Elige una entrada del explorador del archivo para ver una vista previa y la acción de descarga.",

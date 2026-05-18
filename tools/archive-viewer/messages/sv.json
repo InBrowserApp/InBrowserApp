@@ -40,6 +40,7 @@
   "kindSymlink": "Symbolisk länk",
   "kindOther": "Annat",
   "previewTitle": "Förhandsvisning",
+  "closePreview": "Stäng förhandsvisning",
   "previewDescription": "Text-, bild- och PDF-poster kan granskas innan de laddas ner.",
   "previewPlaceholderTitle": "Välj en fil",
   "previewPlaceholderDescription": "Välj en filpost i arkivutforskaren för att se en förhandsvisning och kunna ladda ner den.",

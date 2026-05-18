@@ -40,6 +40,7 @@
   "kindSymlink": "符号链接",
   "kindOther": "其他",
   "previewTitle": "预览",
+  "closePreview": "关闭预览",
   "previewDescription": "文本、图片和 PDF 条目可在下载前检查。",
   "previewPlaceholderTitle": "选择文件",
   "previewPlaceholderDescription": "从压缩包浏览器中选择文件条目，即可查看预览和下载操作。",

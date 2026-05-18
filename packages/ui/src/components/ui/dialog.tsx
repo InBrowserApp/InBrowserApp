@@ -48,9 +48,11 @@ function DialogOverlay({
 function DialogContent({
   className,
   children,
+  closeLabel = "Close",
   showCloseButton = true,
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Content> & {
+  closeLabel?: string
   showCloseButton?: boolean
 }) {
   return (
@@ -71,7 +73,7 @@ function DialogContent({
             className="absolute top-4 right-4 rounded-xs opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
           >
             <X aria-hidden="true" />
-            <span className="sr-only">Close</span>
+            <span className="sr-only">{closeLabel}</span>
           </DialogPrimitive.Close>
         ) : null}
       </DialogPrimitive.Content>
@@ -91,10 +93,12 @@ function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
 
 function DialogFooter({
   className,
+  closeLabel = "Close",
   showCloseButton = false,
   children,
   ...props
 }: React.ComponentProps<"div"> & {
+  closeLabel?: string
   showCloseButton?: boolean
 }) {
   return (
@@ -109,7 +113,7 @@ function DialogFooter({
       {children}
       {showCloseButton ? (
         <DialogPrimitive.Close asChild>
-          <Button variant="outline">Close</Button>
+          <Button variant="outline">{closeLabel}</Button>
         </DialogPrimitive.Close>
       ) : null}
     </div>

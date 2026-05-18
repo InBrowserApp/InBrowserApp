@@ -57,7 +57,10 @@ function PreviewDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="flex max-h-[min(90vh,56rem)] flex-col gap-0 p-0 sm:max-w-5xl">
+      <DialogContent
+        closeLabel={messages.closePreview}
+        className="flex max-h-[min(90vh,56rem)] flex-col gap-0 p-0 sm:max-w-5xl"
+      >
         <DialogHeader className="border-b px-4 py-4 pe-12">
           <DialogTitle className="break-words">
             {entry?.path ?? messages.previewTitle}

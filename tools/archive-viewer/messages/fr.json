@@ -40,6 +40,7 @@
   "kindSymlink": "Lien symbolique",
   "kindOther": "Autre",
   "previewTitle": "Aperçu",
+  "closePreview": "Fermer l’aperçu",
   "previewDescription": "Les entrées texte, image et PDF peuvent être inspectées avant le téléchargement.",
   "previewPlaceholderTitle": "Sélectionnez un fichier",
   "previewPlaceholderDescription": "Choisissez une entrée de fichier dans l'explorateur d'archive pour afficher un aperçu et l'option de téléchargement.",

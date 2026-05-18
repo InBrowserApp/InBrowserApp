@@ -40,6 +40,7 @@
   "kindSymlink": "Симлинк",
   "kindOther": "Другое",
   "previewTitle": "Предпросмотр",
+  "closePreview": "Закрыть предпросмотр",
   "previewDescription": "Текстовые, графические и PDF-элементы можно проверить перед скачиванием.",
   "previewPlaceholderTitle": "Выберите файл",
   "previewPlaceholderDescription": "Выберите файл в проводнике архива, чтобы увидеть предпросмотр и действие скачивания.",

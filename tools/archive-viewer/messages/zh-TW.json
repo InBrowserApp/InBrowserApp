@@ -40,6 +40,7 @@
   "kindSymlink": "符號連結",
   "kindOther": "其他",
   "previewTitle": "預覽",
+  "closePreview": "關閉預覽",
   "previewDescription": "文字、圖片和 PDF 項目可在下載前檢查。",
   "previewPlaceholderTitle": "選擇檔案",
   "previewPlaceholderDescription": "從壓縮檔瀏覽器選擇檔案項目，即可查看預覽和下載操作。",

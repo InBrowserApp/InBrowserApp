@@ -40,6 +40,7 @@
   "kindSymlink": "Liên kết tượng trưng",
   "kindOther": "Khác",
   "previewTitle": "Xem trước",
+  "closePreview": "Đóng bản xem trước",
   "previewDescription": "Có thể kiểm tra các mục văn bản, hình ảnh và PDF trước khi tải xuống.",
   "previewPlaceholderTitle": "Chọn một tệp",
   "previewPlaceholderDescription": "Chọn một mục tệp từ trình duyệt tệp nén để xem bản xem trước và thao tác tải xuống.",

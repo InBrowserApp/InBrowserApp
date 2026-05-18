@@ -40,6 +40,7 @@
   "kindSymlink": "Symlink",
   "kindOther": "อื่น ๆ",
   "previewTitle": "ตัวอย่าง",
+  "closePreview": "ปิดตัวอย่าง",
   "previewDescription": "ตรวจดูรายการข้อความ รูปภาพ และ PDF ได้ก่อนดาวน์โหลด",
   "previewPlaceholderTitle": "เลือกไฟล์",
   "previewPlaceholderDescription": "เลือกรายการไฟล์จากตัวสำรวจไฟล์อาร์ไคฟ์เพื่อดูตัวอย่างและการดาวน์โหลด",

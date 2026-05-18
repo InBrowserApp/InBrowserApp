@@ -40,6 +40,7 @@
   "kindSymlink": "シンボリックリンク",
   "kindOther": "その他",
   "previewTitle": "プレビュー",
+  "closePreview": "プレビューを閉じる",
   "previewDescription": "テキスト、画像、PDF の項目は、ダウンロード前に確認できます。",
   "previewPlaceholderTitle": "ファイルを選択",
   "previewPlaceholderDescription": "アーカイブエクスプローラーからファイル項目を選択すると、プレビューとダウンロード操作が表示されます。",

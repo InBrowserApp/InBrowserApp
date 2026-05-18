@@ -40,6 +40,7 @@
   "kindSymlink": "सिमलिंक",
   "kindOther": "अन्य",
   "previewTitle": "पूर्वावलोकन",
+  "closePreview": "पूर्वावलोकन बंद करें",
   "previewDescription": "डाउनलोड करने से पहले टेक्स्ट, छवि और PDF प्रविष्टियाँ देखी जा सकती हैं।",
   "previewPlaceholderTitle": "फ़ाइल चुनें",
   "previewPlaceholderDescription": "पूर्वावलोकन और डाउनलोड विकल्प देखने के लिए आर्काइव एक्सप्लोरर से फ़ाइल प्रविष्टि चुनें।",

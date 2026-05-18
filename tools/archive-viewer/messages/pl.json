@@ -40,6 +40,7 @@
   "kindSymlink": "Dowiązanie symboliczne",
   "kindOther": "Inne",
   "previewTitle": "Podgląd",
+  "closePreview": "Zamknij podgląd",
   "previewDescription": "Wpisy tekstowe, obrazy i PDF można sprawdzić przed pobraniem.",
   "previewPlaceholderTitle": "Wybierz plik",
   "previewPlaceholderDescription": "Wybierz wpis pliku w eksploratorze archiwum, aby zobaczyć podgląd i opcję pobrania.",

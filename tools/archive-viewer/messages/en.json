@@ -40,6 +40,7 @@
   "kindSymlink": "Symlink",
   "kindOther": "Other",
   "previewTitle": "Preview",
+  "closePreview": "Close preview",
   "previewDescription": "Text, image, and PDF entries can be inspected before downloading.",
   "previewPlaceholderTitle": "Select a file",
   "previewPlaceholderDescription": "Choose a file entry from the archive explorer to see a preview and download action.",

@@ -182,7 +182,7 @@ describe("ArchiveViewerClient", () => {
       ).toContain("hello archive")
     })
 
-    fireEvent.click(screen.getByRole("button", { name: "Close" }))
+    fireEvent.click(screen.getByRole("button", { name: messages.closePreview }))
     await waitFor(() => {
       expect(screen.queryByRole("dialog")).toBeNull()
     })
@@ -215,7 +215,7 @@ describe("ArchiveViewerClient", () => {
       expect(clipboardWriteTextMock).toHaveBeenCalledWith("echo ok")
     })
 
-    fireEvent.click(screen.getByRole("button", { name: "Close" }))
+    fireEvent.click(screen.getByRole("button", { name: messages.closePreview }))
     await waitFor(() => {
       expect(screen.queryByRole("dialog")).toBeNull()
     })
@@ -281,7 +281,7 @@ describe("ArchiveViewerClient", () => {
       expect(screen.getByText("docs/readme.txt")).toBeTruthy()
     })
 
-    fireEvent.click(screen.getByRole("button", { name: "Close" }))
+    fireEvent.click(screen.getByRole("button", { name: messages.closePreview }))
     await waitFor(() => {
       expect(screen.queryByRole("dialog")).toBeNull()
     })

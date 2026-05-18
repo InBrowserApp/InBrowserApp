@@ -40,6 +40,7 @@
   "kindSymlink": "رابط رمزي",
   "kindOther": "أخرى",
   "previewTitle": "المعاينة",
+  "closePreview": "إغلاق المعاينة",
   "previewDescription": "يمكن فحص عناصر النصوص والصور وملفات PDF قبل تنزيلها.",
   "previewPlaceholderTitle": "اختر ملفًا",
   "previewPlaceholderDescription": "اختر عنصر ملف من مستكشف الأرشيف لرؤية معاينة وإجراء التنزيل.",

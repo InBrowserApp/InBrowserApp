@@ -40,6 +40,7 @@
   "kindSymlink": "Link simbolico",
   "kindOther": "Altro",
   "previewTitle": "Anteprima",
+  "closePreview": "Chiudi anteprima",
   "previewDescription": "Gli elementi di testo, immagine e PDF possono essere ispezionati prima di scaricarli.",
   "previewPlaceholderTitle": "Seleziona un file",
   "previewPlaceholderDescription": "Scegli un file da Esplora archivio per vedere un'anteprima e scaricarlo.",

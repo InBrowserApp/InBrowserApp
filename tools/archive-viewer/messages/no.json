@@ -40,6 +40,7 @@
   "kindSymlink": "Symbolsk lenke",
   "kindOther": "Annet",
   "previewTitle": "Forhåndsvisning",
+  "closePreview": "Lukk forhåndsvisning",
   "previewDescription": "Tekst-, bilde- og PDF-oppføringer kan inspiseres før nedlasting.",
   "previewPlaceholderTitle": "Velg en fil",
   "previewPlaceholderDescription": "Velg en filoppføring fra arkivutforskeren for å se en forhåndsvisning og nedlastingshandling.",

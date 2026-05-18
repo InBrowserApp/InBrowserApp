@@ -44,6 +44,7 @@ type ArchiveViewerMessagesCatalog = Readonly<{
   kindSymlink: string
   kindOther: string
   previewTitle: string
+  closePreview: string
   previewDescription: string
   previewPlaceholderTitle: string
   previewPlaceholderDescription: string

@@ -40,6 +40,7 @@
   "kindSymlink": "Symlink",
   "kindOther": "Sonstige",
   "previewTitle": "Vorschau",
+  "closePreview": "Vorschau schließen",
   "previewDescription": "Text-, Bild- und PDF-Einträge können vor dem Herunterladen geprüft werden.",
   "previewPlaceholderTitle": "Datei auswählen",
   "previewPlaceholderDescription": "Wähle einen Dateieintrag in der Archivübersicht aus, um Vorschau und Aktion zum Herunterladen zu sehen.",

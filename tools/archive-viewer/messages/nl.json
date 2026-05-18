@@ -40,6 +40,7 @@
   "kindSymlink": "Symlink",
   "kindOther": "Overig",
   "previewTitle": "Voorbeeld",
+  "closePreview": "Voorbeeld sluiten",
   "previewDescription": "Tekst-, afbeeldings- en PDF-items kun je inspecteren voordat je ze downloadt.",
   "previewPlaceholderTitle": "Selecteer een bestand",
   "previewPlaceholderDescription": "Kies een bestandsitem uit de archiefverkenner om een voorbeeld en downloadactie te zien.",
