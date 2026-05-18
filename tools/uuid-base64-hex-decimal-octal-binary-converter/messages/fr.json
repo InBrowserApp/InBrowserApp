@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "Actions du convertisseur",
+  "generateUuidLabel": "Générer un UUID",
+  "loadSampleLabel": "Charger l’exemple",
+  "clearAllLabel": "Tout effacer",
+  "copiedLabel": "Copié",
+  "invalidValueTitle": "Valeur non valide",
+  "invalidValueDescription": "Corrigez le champ surligné avant de copier les valeurs converties.",
+  "cryptoUnavailableTitle": "UUID aléatoire sécurisé indisponible",
+  "cryptoUnavailableDescription": "Ce navigateur n’expose pas les valeurs aléatoires Web Crypto. Chargez l’exemple ou collez plutôt un UUID.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "Texte UUID canonique. Les accolades, les préfixes URN, les majuscules et l’entrée compacte de 32 caractères hexadécimaux sont acceptés.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "Copier l’UUID",
+      "invalidMessage": "Saisissez un UUID sous forme de 32 chiffres hexadécimaux, avec les groupes de tirets standard facultatifs."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Base64 standard avec remplissage pour les 16 octets bruts de l’UUID. L’entrée compatible URL est acceptée.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Copier le Base64",
+      "invalidMessage": "Saisissez du Base64 qui se décode en exactement 16 octets."
+    },
+    "hex": {
+      "label": "Hexadécimal",
+      "description": "L’UUID sous forme de 32 chiffres hexadécimaux minuscules, sans tirets.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "Copier l’hex",
+      "invalidMessage": "Saisissez exactement 32 chiffres hexadécimaux."
+    },
+    "decimal": {
+      "label": "Décimal",
+      "description": "L’UUID interprété comme un entier non signé 128 bits en base 10.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "Copier le décimal",
+      "invalidMessage": "Saisissez un entier compris entre 0 et 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "Octal",
+      "description": "La même valeur non signée 128 bits écrite avec des chiffres en base 8.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "Copier l’octal",
+      "invalidMessage": "Saisissez des chiffres octaux de 0 à 7 dans la plage 128 bits de l’UUID."
+    },
+    "binary": {
+      "label": "Binaire",
+      "description": "Une vue binaire de largeur fixe 128 bits de la valeur UUID.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "Copier le binaire",
+      "invalidMessage": "Saisissez jusqu’à 128 chiffres binaires en utilisant uniquement 0 et 1."
+    }
+  }
+}

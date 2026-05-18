@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "轉換器動作",
+  "generateUuidLabel": "產生 UUID",
+  "loadSampleLabel": "載入範例",
+  "clearAllLabel": "全部清除",
+  "copiedLabel": "已複製",
+  "invalidValueTitle": "值無效",
+  "invalidValueDescription": "複製轉換值之前，請先修正標示的欄位。",
+  "cryptoUnavailableTitle": "無法使用安全隨機 UUID",
+  "cryptoUnavailableDescription": "此瀏覽器未提供 Web Crypto 隨機值。請改為載入範例或貼上 UUID。",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "標準 UUID 文字。接受大括號、URN 前綴、大寫字母，以及緊湊的 32 位十六進位輸入。",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "複製 UUID",
+      "invalidMessage": "請輸入 32 位十六進位數字形式的 UUID，可選用標準連字號分組。"
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "UUID 16 個原始位元組的標準補齊 Base64。接受 URL-safe 輸入。",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "複製 Base64",
+      "invalidMessage": "請輸入可解碼為正好 16 個位元組的 Base64。"
+    },
+    "hex": {
+      "label": "十六進位",
+      "description": "UUID 以 32 位小寫十六進位數字表示，不含連字號。",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "複製十六進位",
+      "invalidMessage": "請輸入正好 32 位十六進位數字。"
+    },
+    "decimal": {
+      "label": "十進位",
+      "description": "將 UUID 解讀為一個 base 10 的無號 128-bit 整數。",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "複製十進位",
+      "invalidMessage": "請輸入 0 到 340282366920938463463374607431768211455 之間的整數。"
+    },
+    "octal": {
+      "label": "八進位",
+      "description": "同一個無號 128-bit 值，以 base-8 數字寫成。",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "複製八進位",
+      "invalidMessage": "請輸入 UUID 128-bit 範圍內、由 0 到 7 組成的八進位數字。"
+    },
+    "binary": {
+      "label": "二進位",
+      "description": "UUID 值的固定寬度 128-bit 二進位檢視。",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "複製二進位",
+      "invalidMessage": "請輸入最多 128 位二進位數字，且只能使用 0 和 1。"
+    }
+  }
+}

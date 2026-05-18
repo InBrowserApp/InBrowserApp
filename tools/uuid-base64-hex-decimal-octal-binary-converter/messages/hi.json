@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "कन्वर्टर क्रियाएं",
+  "generateUuidLabel": "UUID जनरेट करें",
+  "loadSampleLabel": "नमूना लोड करें",
+  "clearAllLabel": "सभी साफ करें",
+  "copiedLabel": "कॉपी हो गया",
+  "invalidValueTitle": "अमान्य मान",
+  "invalidValueDescription": "बदले हुए मान कॉपी करने से पहले हाइलाइट किया गया फ़ील्ड ठीक करें.",
+  "cryptoUnavailableTitle": "सुरक्षित random UUID उपलब्ध नहीं है",
+  "cryptoUnavailableDescription": "यह ब्राउज़र Web Crypto random values उपलब्ध नहीं कराता. इसके बजाय नमूना लोड करें या UUID पेस्ट करें.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "कैननिकल UUID टेक्स्ट. Braces, URN prefixes, uppercase, और compact 32-hex input स्वीकार किए जाते हैं.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "UUID कॉपी करें",
+      "invalidMessage": "UUID को 32 hexadecimal अंकों के रूप में दर्ज करें, वैकल्पिक रूप से मानक hyphen groups के साथ."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "UUID के 16 raw bytes के लिए standard padded Base64. URL-safe input स्वीकार किया जाता है.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Base64 कॉपी करें",
+      "invalidMessage": "ऐसा Base64 दर्ज करें जो ठीक 16 bytes में decode हो."
+    },
+    "hex": {
+      "label": "Hexadecimal",
+      "description": "Hyphens के बिना UUID को 32 lowercase hexadecimal अंकों के रूप में दिखाता है.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "hex कॉपी करें",
+      "invalidMessage": "ठीक 32 hexadecimal अंक दर्ज करें."
+    },
+    "decimal": {
+      "label": "Decimal",
+      "description": "UUID को base 10 में एक unsigned 128-bit integer के रूप में समझता है.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "decimal कॉपी करें",
+      "invalidMessage": "0 से 340282366920938463463374607431768211455 तक का integer दर्ज करें."
+    },
+    "octal": {
+      "label": "Octal",
+      "description": "उसी unsigned 128-bit value को base-8 अंकों में लिखा गया.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "octal कॉपी करें",
+      "invalidMessage": "UUID 128-bit range के भीतर 0 से 7 तक के octal अंक दर्ज करें."
+    },
+    "binary": {
+      "label": "Binary",
+      "description": "UUID value का fixed-width 128-bit binary view.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "binary कॉपी करें",
+      "invalidMessage": "केवल 0 और 1 का उपयोग करते हुए अधिकतम 128 binary अंक दर्ज करें."
+    }
+  }
+}

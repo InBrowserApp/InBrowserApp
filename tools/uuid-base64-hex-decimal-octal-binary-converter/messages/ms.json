@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "Tindakan penukar",
+  "generateUuidLabel": "Jana UUID",
+  "loadSampleLabel": "Muatkan sampel",
+  "clearAllLabel": "Kosongkan semua",
+  "copiedLabel": "Disalin",
+  "invalidValueTitle": "Nilai tidak sah",
+  "invalidValueDescription": "Betulkan medan yang diserlahkan sebelum menyalin nilai yang ditukar.",
+  "cryptoUnavailableTitle": "UUID rawak selamat tidak tersedia",
+  "cryptoUnavailableDescription": "Pelayar ini tidak mendedahkan nilai rawak Web Crypto. Muatkan sampel atau tampal UUID sebaliknya.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "Teks UUID kanonik. Kurungan kurawal, awalan URN, huruf besar, dan input 32-heks padat diterima.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "Salin UUID",
+      "invalidMessage": "Masukkan UUID sebagai 32 digit heksadesimal, dengan kumpulan sempang standard jika mahu."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Base64 berpad standard untuk 16 bait mentah UUID. Input selamat URL diterima.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Salin Base64",
+      "invalidMessage": "Masukkan Base64 yang menyahkod kepada tepat 16 bait."
+    },
+    "hex": {
+      "label": "Heksadesimal",
+      "description": "UUID sebagai 32 digit heksadesimal huruf kecil tanpa sempang.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "Salin heks",
+      "invalidMessage": "Masukkan tepat 32 digit heksadesimal."
+    },
+    "decimal": {
+      "label": "Perpuluhan",
+      "description": "UUID ditafsirkan sebagai satu integer 128-bit tidak bertanda dalam asas 10.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "Salin perpuluhan",
+      "invalidMessage": "Masukkan integer dari 0 hingga 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "Perlapanan",
+      "description": "Nilai 128-bit tidak bertanda yang sama ditulis dengan digit asas-8.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "Salin perlapanan",
+      "invalidMessage": "Masukkan digit perlapanan dari 0 hingga 7 dalam julat 128-bit UUID."
+    },
+    "binary": {
+      "label": "Perduaan",
+      "description": "Paparan perduaan 128-bit berlebar tetap bagi nilai UUID.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "Salin perduaan",
+      "invalidMessage": "Masukkan sehingga 128 digit perduaan menggunakan hanya 0 dan 1."
+    }
+  }
+}

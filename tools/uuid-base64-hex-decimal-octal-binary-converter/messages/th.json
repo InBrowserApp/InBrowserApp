@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "การทำงานของตัวแปลง",
+  "generateUuidLabel": "สร้าง UUID",
+  "loadSampleLabel": "โหลดตัวอย่าง",
+  "clearAllLabel": "ล้างทั้งหมด",
+  "copiedLabel": "คัดลอกแล้ว",
+  "invalidValueTitle": "ค่าไม่ถูกต้อง",
+  "invalidValueDescription": "แก้ไขช่องที่ไฮไลต์ก่อนคัดลอกค่าที่แปลงแล้ว",
+  "cryptoUnavailableTitle": "ไม่สามารถใช้ UUID แบบสุ่มที่ปลอดภัยได้",
+  "cryptoUnavailableDescription": "เบราว์เซอร์นี้ไม่เปิดเผยค่าสุ่มของ Web Crypto ให้ใช้งาน โหลดตัวอย่างหรือวาง UUID แทน",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "ข้อความ UUID แบบมาตรฐาน ยอมรับวงเล็บปีกกา คำนำหน้า URN ตัวพิมพ์ใหญ่ และอินพุต 32-hex แบบกะทัดรัด",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "คัดลอก UUID",
+      "invalidMessage": "ป้อน UUID เป็นเลขฐานสิบหก 32 หลัก โดยจะมีกลุ่มยัติภังค์มาตรฐานหรือไม่ก็ได้"
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Base64 มาตรฐานแบบมี padding สำหรับไบต์ดิบ 16 ไบต์ของ UUID ยอมรับอินพุตแบบ URL-safe",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "คัดลอก Base64",
+      "invalidMessage": "ป้อน Base64 ที่ถอดรหัสแล้วได้ 16 ไบต์พอดี"
+    },
+    "hex": {
+      "label": "Hexadecimal",
+      "description": "UUID ในรูปเลขฐานสิบหกตัวพิมพ์เล็ก 32 หลักโดยไม่มียัติภังค์",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "คัดลอก hex",
+      "invalidMessage": "ป้อนเลขฐานสิบหกให้ครบ 32 หลักพอดี"
+    },
+    "decimal": {
+      "label": "Decimal",
+      "description": "UUID ที่ตีความเป็นจำนวนเต็ม 128-bit แบบไม่มีเครื่องหมายหนึ่งค่าในฐาน 10",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "คัดลอก decimal",
+      "invalidMessage": "ป้อนจำนวนเต็มตั้งแต่ 0 ถึง 340282366920938463463374607431768211455"
+    },
+    "octal": {
+      "label": "Octal",
+      "description": "ค่า 128-bit แบบไม่มีเครื่องหมายเดียวกันที่เขียนด้วยเลขฐาน 8",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "คัดลอก octal",
+      "invalidMessage": "ป้อนเลขฐานแปดตั้งแต่ 0 ถึง 7 ภายในช่วง UUID 128-bit"
+    },
+    "binary": {
+      "label": "Binary",
+      "description": "มุมมองไบนารี 128-bit ความกว้างคงที่ของค่า UUID",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "คัดลอก binary",
+      "invalidMessage": "ป้อนเลขไบนารีได้สูงสุด 128 หลัก โดยใช้เฉพาะ 0 และ 1"
+    }
+  }
+}

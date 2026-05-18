@@ -1,0 +1,4 @@
+{
+  "name": "UUID Base64 Hex Decimal Octal Binary Converter",
+  "description": "브라우저에서 UUID를 Base64, 16진수, 10진수, 8진수, 128비트 이진 값으로 변환하거나 되돌립니다."
+}

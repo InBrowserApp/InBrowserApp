@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "변환기 작업",
+  "generateUuidLabel": "UUID 생성",
+  "loadSampleLabel": "샘플 불러오기",
+  "clearAllLabel": "모두 지우기",
+  "copiedLabel": "복사됨",
+  "invalidValueTitle": "잘못된 값",
+  "invalidValueDescription": "변환된 값을 복사하기 전에 강조된 필드를 수정하세요.",
+  "cryptoUnavailableTitle": "보안 난수 UUID를 사용할 수 없음",
+  "cryptoUnavailableDescription": "이 브라우저는 Web Crypto 난수 값을 제공하지 않습니다. 대신 샘플을 불러오거나 UUID를 붙여넣으세요.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "표준 UUID 텍스트입니다. 중괄호, URN 접두사, 대문자, 공백 없는 32자리 16진수 입력을 허용합니다.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "UUID 복사",
+      "invalidMessage": "UUID를 32자리 16진수로 입력하세요. 표준 하이픈 그룹은 선택 사항입니다."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "UUID의 원시 16바이트에 대한 표준 패딩 Base64입니다. URL 안전 입력도 허용합니다.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Base64 복사",
+      "invalidMessage": "정확히 16바이트로 디코딩되는 Base64를 입력하세요."
+    },
+    "hex": {
+      "label": "Hexadecimal",
+      "description": "UUID를 하이픈 없이 32자리 소문자 16진수로 표시합니다.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "hex 복사",
+      "invalidMessage": "정확히 32자리 16진수를 입력하세요."
+    },
+    "decimal": {
+      "label": "Decimal",
+      "description": "UUID를 10진법의 부호 없는 128비트 정수 하나로 해석합니다.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "decimal 복사",
+      "invalidMessage": "0부터 340282366920938463463374607431768211455까지의 정수를 입력하세요."
+    },
+    "octal": {
+      "label": "Octal",
+      "description": "같은 부호 없는 128비트 값을 8진수 숫자로 표시합니다.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "octal 복사",
+      "invalidMessage": "UUID 128비트 범위 안에서 0부터 7까지의 8진수 숫자를 입력하세요."
+    },
+    "binary": {
+      "label": "Binary",
+      "description": "UUID 값의 고정 너비 128비트 이진 보기입니다.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "binary 복사",
+      "invalidMessage": "0과 1만 사용하여 최대 128자리 이진수를 입력하세요."
+    }
+  }
+}

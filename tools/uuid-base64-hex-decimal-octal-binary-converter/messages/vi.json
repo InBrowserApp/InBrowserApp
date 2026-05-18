@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "Hành động chuyển đổi",
+  "generateUuidLabel": "Tạo UUID",
+  "loadSampleLabel": "Tải mẫu",
+  "clearAllLabel": "Xóa tất cả",
+  "copiedLabel": "Đã sao chép",
+  "invalidValueTitle": "Giá trị không hợp lệ",
+  "invalidValueDescription": "Sửa trường được tô sáng trước khi sao chép các giá trị đã chuyển đổi.",
+  "cryptoUnavailableTitle": "Không có UUID ngẫu nhiên bảo mật",
+  "cryptoUnavailableDescription": "Trình duyệt này không cung cấp giá trị ngẫu nhiên Web Crypto. Hãy tải mẫu hoặc dán một UUID.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "Văn bản UUID chuẩn. Chấp nhận dấu ngoặc nhọn, tiền tố URN, chữ hoa và đầu vào 32 ký tự hex rút gọn.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "Sao chép UUID",
+      "invalidMessage": "Nhập UUID gồm 32 chữ số thập lục phân, có thể kèm các nhóm dấu gạch nối chuẩn."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Base64 chuẩn có đệm cho 16 byte thô của UUID. Chấp nhận đầu vào an toàn cho URL.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Sao chép Base64",
+      "invalidMessage": "Nhập Base64 giải mã được đúng 16 byte."
+    },
+    "hex": {
+      "label": "Thập lục phân",
+      "description": "UUID dưới dạng 32 chữ số thập lục phân chữ thường, không có dấu gạch nối.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "Sao chép hex",
+      "invalidMessage": "Nhập đúng 32 chữ số thập lục phân."
+    },
+    "decimal": {
+      "label": "Thập phân",
+      "description": "UUID được diễn giải là một số nguyên 128-bit không dấu ở cơ số 10.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "Sao chép số thập phân",
+      "invalidMessage": "Nhập một số nguyên từ 0 đến 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "Bát phân",
+      "description": "Cùng giá trị 128-bit không dấu đó được viết bằng các chữ số cơ số 8.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "Sao chép số bát phân",
+      "invalidMessage": "Nhập các chữ số bát phân từ 0 đến 7 trong phạm vi 128-bit của UUID."
+    },
+    "binary": {
+      "label": "Nhị phân",
+      "description": "Dạng xem nhị phân 128-bit có độ rộng cố định của giá trị UUID.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "Sao chép số nhị phân",
+      "invalidMessage": "Nhập tối đa 128 chữ số nhị phân, chỉ dùng 0 và 1."
+    }
+  }
+}

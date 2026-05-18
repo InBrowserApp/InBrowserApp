@@ -1,0 +1,55 @@
+{
+  "actionsLabel": "Converter actions",
+  "generateUuidLabel": "Generate UUID",
+  "loadSampleLabel": "Load sample",
+  "clearAllLabel": "Clear all",
+  "copiedLabel": "Copied",
+  "invalidValueTitle": "Invalid value",
+  "invalidValueDescription": "Fix the highlighted field before copying converted values.",
+  "cryptoUnavailableTitle": "Secure random UUID unavailable",
+  "cryptoUnavailableDescription": "This browser does not expose Web Crypto random values. Load the sample or paste a UUID instead.",
+  "formats": {
+    "uuid": {
+      "label": "UUID",
+      "description": "Canonical UUID text. Braces, URN prefixes, uppercase, and compact 32-hex input are accepted.",
+      "placeholder": "c1ed67f0-34bd-11f0-b3fe-02d71e841f4f",
+      "copyLabel": "Copy UUID",
+      "invalidMessage": "Enter a UUID as 32 hexadecimal digits, optionally with the standard hyphen groups."
+    },
+    "base64": {
+      "label": "Base64",
+      "description": "Standard padded Base64 for the UUID's 16 raw bytes. URL-safe input is accepted.",
+      "placeholder": "we1n8DS9EfCz/gLXHoQfTw==",
+      "copyLabel": "Copy Base64",
+      "invalidMessage": "Enter Base64 that decodes to exactly 16 bytes."
+    },
+    "hex": {
+      "label": "Hexadecimal",
+      "description": "The UUID as 32 lowercase hexadecimal digits without hyphens.",
+      "placeholder": "c1ed67f034bd11f0b3fe02d71e841f4f",
+      "copyLabel": "Copy hex",
+      "invalidMessage": "Enter exactly 32 hexadecimal digits."
+    },
+    "decimal": {
+      "label": "Decimal",
+      "description": "The UUID interpreted as one unsigned 128-bit integer in base 10.",
+      "placeholder": "257773685661231489374926881343358115663",
+      "copyLabel": "Copy decimal",
+      "invalidMessage": "Enter an integer from 0 through 340282366920938463463374607431768211455."
+    },
+    "octal": {
+      "label": "Octal",
+      "description": "The same unsigned 128-bit value written with base-8 digits.",
+      "placeholder": "3017326376015136421741317760055343641017517",
+      "copyLabel": "Copy octal",
+      "invalidMessage": "Enter octal digits from 0 to 7 within the UUID 128-bit range."
+    },
+    "binary": {
+      "label": "Binary",
+      "description": "A fixed-width 128-bit binary view of the UUID value.",
+      "placeholder": "11000001111011010110011111110000001101001011110100010001111100001011001111111110000000101101011100011110100001000001111101001111",
+      "copyLabel": "Copy binary",
+      "invalidMessage": "Enter up to 128 binary digits using only 0 and 1."
+    }
+  }
+}
