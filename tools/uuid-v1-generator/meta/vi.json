@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo UUID v1",
+  "description": "Tạo một hoặc nhiều mã định danh UUID v1 dựa trên thời gian trong trình duyệt với địa chỉ MAC và clock sequence có thể cấu hình."
+}

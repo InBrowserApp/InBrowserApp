@@ -241,6 +241,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "uuid-base64-hex-decimal-octal-binary-converter": () =>
     import("@tool/uuid-base64-hex-decimal-octal-binary-converter/page"),
   "uuid-decoder": () => import("@tool/uuid-decoder/page"),
+  "uuid-v1-generator": () => import("@tool/uuid-v1-generator/page"),
   "uuid-v3-generator": () => import("@tool/uuid-v3-generator/page"),
   "uuid-v4-bulk-generator": () => import("@tool/uuid-v4-bulk-generator/page"),
   "uuid-v4-generator": () => import("@tool/uuid-v4-generator/page"),
