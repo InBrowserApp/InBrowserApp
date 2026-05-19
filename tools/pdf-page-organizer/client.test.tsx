@@ -271,7 +271,7 @@ describe("PdfPageOrganizerClient", () => {
     ])
   })
 
-  test("reorders pages by dragging previews", async () => {
+  test("reorders pages by dragging the page handle", async () => {
     const file = createPdfFile()
     render(<PdfPageOrganizerClient messages={messages} />)
 
@@ -279,33 +279,40 @@ describe("PdfPageOrganizerClient", () => {
       target: { files: [file] },
     })
 
-    const pageOne = await screen.findByLabelText(
-      `${messages.sourcePageLabel} 1`
+    const pageOneHandle = await screen.findByRole("button", {
+      name: `${messages.dragPageLabel}: ${messages.sourcePageLabel} 1`,
+    })
+    const pageThree = screen.getByLabelText(
+      `${messages.outputPagesLabel} 3. ${messages.sourcePageLabel} 3`
     )
-    const pageThree = screen.getByLabelText(`${messages.sourcePageLabel} 3`)
 
     Object.defineProperty(document, "elementFromPoint", {
       configurable: true,
       value: vi.fn(() => pageThree),
     })
 
-    fireEvent.pointerDown(pageOne, {
+    fireEvent.pointerDown(pageOneHandle, {
       buttons: 1,
       clientX: 10,
       clientY: 10,
       pointerId: 1,
     })
-    fireEvent.pointerMove(pageOne, {
+    fireEvent.pointerMove(pageOneHandle, {
       buttons: 1,
       clientX: 20,
       clientY: 20,
       pointerId: 1,
     })
-    fireEvent.pointerUp(pageOne, {
+    fireEvent.pointerUp(pageOneHandle, {
       clientX: 20,
       clientY: 20,
       pointerId: 1,
     })
+    expect(
+      screen.getByText(
+        `${messages.sourcePageLabel} 1. ${messages.outputPagesLabel} 3/3.`
+      )
+    ).toBeTruthy()
     fireEvent.click(await getEnabledGenerateButton())
 
     await waitFor(() => {

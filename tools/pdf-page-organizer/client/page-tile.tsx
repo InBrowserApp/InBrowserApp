@@ -18,16 +18,22 @@ import type {
   PdfPageOrganizerMessages,
   PdfPagePreview,
 } from "./types"
-import type { PointerEvent as ReactPointerEvent } from "react"
+import type {
+  KeyboardEvent as ReactKeyboardEvent,
+  PointerEvent as ReactPointerEvent,
+} from "react"
 
 type PageTileProps = Readonly<{
   disabled: boolean
-  dragOverIndex: number | null
+  dragHintId: string
+  dropPlacement: "before" | "after" | null
   index: number
+  isDragSource: boolean
   isRenderingPreviews: boolean
   messages: PdfPageOrganizerMessages
   onMoveDown: (index: number) => void
   onMoveUp: (index: number) => void
+  onPointerDragCancel: () => void
   onPointerDragEnd: (event: ReactPointerEvent) => void
   onPointerDragMove: (event: ReactPointerEvent) => void
   onPointerDragStart: (index: number, event: ReactPointerEvent) => void
@@ -38,14 +44,6 @@ type PageTileProps = Readonly<{
   preview: PdfPagePreview | undefined
   previewError: string
 }>
-
-const INTERACTIVE_SELECTOR = "a,button,input,select,textarea,[role='button']"
-
-function isInteractiveTarget(target: EventTarget | null) {
-  return (
-    target instanceof Element && Boolean(target.closest(INTERACTIVE_SELECTOR))
-  )
-}
 
 function PagePreview({
   isRenderingPreviews,
@@ -96,12 +94,15 @@ function PagePreview({
 
 function PageTile({
   disabled,
-  dragOverIndex,
+  dragHintId,
+  dropPlacement,
   index,
+  isDragSource,
   isRenderingPreviews,
   messages,
   onMoveDown,
   onMoveUp,
+  onPointerDragCancel,
   onPointerDragEnd,
   onPointerDragMove,
   onPointerDragStart,
@@ -112,45 +113,78 @@ function PageTile({
   preview,
   previewError,
 }: PageTileProps) {
+  const pageLabel = `${messages.sourcePageLabel} ${page.sourcePageNumber}`
+  const dragLabel = `${messages.dragPageLabel}: ${pageLabel}`
+  const positionLabel = `${messages.outputPagesLabel} ${index + 1}`
+
+  function handleDragHandlePointerDown(event: ReactPointerEvent) {
+    if (disabled) {
+      return
+    }
+
+    event.preventDefault()
+    event.currentTarget.setPointerCapture?.(event.pointerId)
+    onPointerDragStart(index, event)
+  }
+
+  function releasePointerCapture(event: ReactPointerEvent) {
+    if (event.currentTarget.hasPointerCapture?.(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId)
+    }
+  }
+
+  function handleDragHandlePointerUp(event: ReactPointerEvent) {
+    releasePointerCapture(event)
+
+    if (disabled) {
+      return
+    }
+
+    onPointerDragEnd(event)
+  }
+
+  function handleDragHandlePointerCancel(event: ReactPointerEvent) {
+    releasePointerCapture(event)
+    onPointerDragCancel()
+  }
+
+  function handleDragHandleKeyDown(event: ReactKeyboardEvent) {
+    if (disabled) {
+      return
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault()
+      onMoveUp(index)
+      return
+    }
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault()
+      onMoveDown(index)
+    }
+  }
+
   return (
     <li
-      aria-label={`${messages.sourcePageLabel} ${page.sourcePageNumber}`}
+      aria-label={`${positionLabel}. ${pageLabel}`}
       className={cn(
-        "group flex min-w-0 touch-none flex-col gap-3 rounded-lg border bg-background p-3 transition",
-        !disabled && "cursor-grab select-none hover:border-foreground/20",
-        dragOverIndex === index && "ring-2 ring-primary ring-offset-2",
+        "group relative flex min-w-0 flex-col gap-2 rounded-md p-2 transition-colors",
+        !disabled && "hover:bg-muted/40",
+        isDragSource && "bg-muted/50 opacity-70",
         disabled && "opacity-75"
       )}
       data-page-index={index}
-      onPointerCancel={onPointerDragEnd}
-      onPointerDown={(event) => {
-        if (disabled || isInteractiveTarget(event.target)) {
-          return
-        }
-
-        event.preventDefault()
-        event.currentTarget.setPointerCapture?.(event.pointerId)
-        onPointerDragStart(index, event)
-      }}
-      onPointerMove={(event) => {
-        if (disabled) {
-          return
-        }
-
-        onPointerDragMove(event)
-      }}
-      onPointerUp={(event) => {
-        if (disabled) {
-          return
-        }
-
-        if (event.currentTarget.hasPointerCapture?.(event.pointerId)) {
-          event.currentTarget.releasePointerCapture(event.pointerId)
-        }
-
-        onPointerDragEnd(event)
-      }}
     >
+      {dropPlacement ? (
+        <span
+          aria-hidden="true"
+          className={cn(
+            "pointer-events-none absolute start-2 end-2 z-10 h-0.5 rounded-full bg-primary",
+            dropPlacement === "before" ? "-top-1" : "-bottom-1"
+          )}
+        />
+      ) : null}
       <div className="relative aspect-[3/4] min-h-44">
         <PagePreview
           isRenderingPreviews={isRenderingPreviews}
@@ -159,79 +193,104 @@ function PageTile({
           preview={preview}
           previewError={previewError}
         />
-        <Badge className="absolute top-2 left-2" variant="secondary">
+        <Badge className="absolute start-2 top-2" variant="secondary">
           {index + 1}
         </Badge>
-        <span
-          aria-label={`${messages.dragPageLabel}: ${messages.sourcePageLabel} ${page.sourcePageNumber}`}
-          className="absolute top-2 right-2 rounded-md border bg-background/90 p-1 text-muted-foreground shadow-sm"
-          role="img"
+        <button
+          aria-describedby={dragHintId}
+          aria-label={dragLabel}
+          className={cn(
+            "absolute end-2 top-2 inline-flex size-8 touch-none items-center justify-center rounded-md border bg-background/95 text-muted-foreground shadow-sm transition",
+            !disabled &&
+              "cursor-grab hover:border-foreground/30 hover:text-foreground active:cursor-grabbing",
+            disabled && "cursor-not-allowed"
+          )}
+          disabled={disabled}
+          onKeyDown={handleDragHandleKeyDown}
+          onPointerCancel={handleDragHandlePointerCancel}
+          onPointerDown={handleDragHandlePointerDown}
+          onPointerMove={(event) => {
+            if (!disabled) {
+              onPointerDragMove(event)
+            }
+          }}
+          onPointerUp={handleDragHandlePointerUp}
+          title={dragLabel}
+          type="button"
         >
           <GripVertical />
-        </span>
+        </button>
       </div>
 
-      <div className="min-w-0">
-        <p className="truncate text-sm font-medium">
-          {messages.sourcePageLabel} {page.sourcePageNumber}
-        </p>
-        <p className="mt-1 text-xs text-muted-foreground">
-          {messages.pageSizeLabel}: {formatPageSize(page.width, page.height)}
-        </p>
-        <p className="text-xs text-muted-foreground">
-          {messages.rotationLabel}: {page.rotation} deg
-        </p>
-      </div>
+      <div className="flex min-w-0 items-start justify-between gap-2">
+        <div className="min-w-0">
+          <p className="truncate text-sm font-medium">{pageLabel}</p>
+          <p className="mt-1 text-xs text-muted-foreground">
+            {messages.pageSizeLabel}: {formatPageSize(page.width, page.height)}
+          </p>
+          <p className="text-xs text-muted-foreground">
+            {messages.rotationLabel}: {page.rotation} deg
+          </p>
+        </div>
 
-      <div className="grid grid-cols-4 gap-1">
-        <Button
-          aria-label={`${messages.moveUpLabel}: ${messages.sourcePageLabel} ${page.sourcePageNumber}`}
-          disabled={disabled || index === 0}
-          onClick={() => {
-            onMoveUp(index)
-          }}
-          size="icon"
-          type="button"
-          variant="ghost"
-        >
-          <ArrowUp />
-        </Button>
-        <Button
-          aria-label={`${messages.moveDownLabel}: ${messages.sourcePageLabel} ${page.sourcePageNumber}`}
-          disabled={disabled || index === pageCount - 1}
-          onClick={() => {
-            onMoveDown(index)
-          }}
-          size="icon"
-          type="button"
-          variant="ghost"
-        >
-          <ArrowDown />
-        </Button>
-        <Button
-          aria-label={`${messages.rotateClockwiseLabel}: ${messages.sourcePageLabel} ${page.sourcePageNumber}`}
-          disabled={disabled}
-          onClick={() => {
-            onRotateClockwise(page.id)
-          }}
-          size="icon"
-          type="button"
-          variant="ghost"
-        >
-          <RefreshCcw />
-        </Button>
-        <Button
-          aria-label={`${messages.removePageLabel}: ${messages.sourcePageLabel} ${page.sourcePageNumber}`}
-          disabled={disabled}
-          onClick={() => {
-            onRemove(page.id)
-          }}
-          size="icon"
-          type="button"
-          variant="ghost"
-        >
-          <Trash2 />
-        </Button>
+        <div className="flex shrink-0 items-center gap-1">
+          <Button
+            aria-label={`${messages.moveUpLabel}: ${pageLabel}`}
+            className="size-8"
+            disabled={disabled || index === 0}
+            onClick={() => {
+              onMoveUp(index)
+            }}
+            size="icon"
+            title={`${messages.moveUpLabel}: ${pageLabel}`}
+            type="button"
+            variant="ghost"
+          >
+            <ArrowUp />
+          </Button>
+          <Button
+            aria-label={`${messages.moveDownLabel}: ${pageLabel}`}
+            className="size-8"
+            disabled={disabled || index === pageCount - 1}
+            onClick={() => {
+              onMoveDown(index)
+            }}
+            size="icon"
+            title={`${messages.moveDownLabel}: ${pageLabel}`}
+            type="button"
+            variant="ghost"
+          >
+            <ArrowDown />
+          </Button>
+          <Button
+            aria-label={`${messages.rotateClockwiseLabel}: ${pageLabel}`}
+            className="size-8"
+            disabled={disabled}
+            onClick={() => {
+              onRotateClockwise(page.id)
+            }}
+            size="icon"
+            title={`${messages.rotateClockwiseLabel}: ${pageLabel}`}
+            type="button"
+            variant="ghost"
+          >
+            <RefreshCcw />
+          </Button>
+          <Button
+            aria-label={`${messages.removePageLabel}: ${pageLabel}`}
+            className="size-8"
+            disabled={disabled}
+            onClick={() => {
+              onRemove(page.id)
+            }}
+            size="icon"
+            title={`${messages.removePageLabel}: ${pageLabel}`}
+            type="button"
+            variant="ghost"
+          >
+            <Trash2 />
+          </Button>
+        </div>
       </div>
     </li>
   )

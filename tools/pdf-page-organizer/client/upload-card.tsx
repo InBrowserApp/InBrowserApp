@@ -77,7 +77,7 @@ function UploadCard({
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         {file ? (
-          <div className="flex flex-col gap-3 rounded-lg border bg-background p-4">
+          <div className="flex flex-col gap-3 border-y border-border/70 py-3">
             <div className="flex items-start gap-3">
               <div className="flex size-10 shrink-0 items-center justify-center rounded-md bg-muted text-muted-foreground">
                 <FileText />

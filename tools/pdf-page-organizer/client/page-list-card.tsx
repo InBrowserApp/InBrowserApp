@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useId, useState } from "react"
 
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
@@ -48,6 +48,8 @@ type PointerDragState = Readonly<{
   pointerId: number
 }>
 
+type DropPlacement = "before" | "after"
+
 function getPageIndexFromPoint(clientX: number, clientY: number) {
   const element = document
     .elementFromPoint(clientX, clientY)
@@ -74,7 +76,9 @@ function PageListCard({
   previewError,
   previews,
 }: PageListCardProps) {
+  const dragHintId = useId()
   const [dragOverIndex, setDragOverIndex] = useState<number | null>(null)
+  const [announcement, setAnnouncement] = useState("")
   const [pointerDrag, setPointerDrag] = useState<PointerDragState | null>(null)
 
   function clearDragState() {
@@ -108,10 +112,54 @@ function PageListCard({
       getPageIndexFromPoint(event.clientX, event.clientY) ?? dragOverIndex
 
     if (toIndex !== null && pointerDrag.fromIndex !== toIndex) {
+      announceMove(pointerDrag.fromIndex, toIndex)
       onMovePage(pointerDrag.fromIndex, toIndex)
     }
 
     clearDragState()
+  }
+
+  function getDropPlacement(index: number): DropPlacement | null {
+    if (
+      !pointerDrag ||
+      dragOverIndex !== index ||
+      dragOverIndex === pointerDrag.fromIndex
+    ) {
+      return null
+    }
+
+    return dragOverIndex < pointerDrag.fromIndex ? "before" : "after"
+  }
+
+  function announceMove(fromIndex: number, toIndex: number) {
+    const page = pages[fromIndex]
+
+    if (!page) {
+      return
+    }
+
+    setAnnouncement(
+      `${messages.sourcePageLabel} ${page.sourcePageNumber}. ` +
+        `${messages.outputPagesLabel} ${toIndex + 1}/${pages.length}.`
+    )
+  }
+
+  function handleMoveDown(index: number) {
+    if (index >= pages.length - 1) {
+      return
+    }
+
+    announceMove(index, index + 1)
+    onMoveDown(index)
+  }
+
+  function handleMoveUp(index: number) {
+    if (index <= 0) {
+      return
+    }
+
+    announceMove(index, index - 1)
+    onMoveUp(index)
   }
 
   return (
@@ -152,21 +200,31 @@ function PageListCard({
               ) : null}
             </div>
 
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground" id={dragHintId}>
               {messages.dragPagesHint}
             </p>
 
-            <ol className="grid gap-3 sm:grid-cols-2 2xl:grid-cols-3">
+            <div aria-atomic="true" aria-live="polite" className="sr-only">
+              {announcement}
+            </div>
+
+            <ol
+              aria-describedby={dragHintId}
+              className="grid gap-3 sm:grid-cols-2 2xl:grid-cols-3"
+            >
               {pages.map((page, index) => (
                 <PageTile
                   disabled={disabled}
-                  dragOverIndex={dragOverIndex}
+                  dragHintId={dragHintId}
+                  dropPlacement={getDropPlacement(index)}
                   index={index}
+                  isDragSource={pointerDrag?.fromIndex === index}
                   isRenderingPreviews={isRenderingPreviews}
                   key={page.id}
                   messages={messages}
-                  onMoveDown={onMoveDown}
-                  onMoveUp={onMoveUp}
+                  onMoveDown={handleMoveDown}
+                  onMoveUp={handleMoveUp}
+                  onPointerDragCancel={clearDragState}
                   onPointerDragEnd={handlePointerDragEnd}
                   onPointerDragMove={handlePointerDragMove}
                   onPointerDragStart={handlePointerDragStart}
