@@ -83,7 +83,7 @@ function SettingsCard({
   }
 
   return (
-    <Card className="self-start">
+    <Card className="w-full">
       <CardHeader>
         <CardTitle>{messages.settingsTitle}</CardTitle>
         <CardDescription>{messages.settingsDescription}</CardDescription>
