@@ -1,0 +1,4 @@
+{
+  "name": "PDF 转图片转换器",
+  "description": "在浏览器本地将 PDF 页面转换为 PNG、JPG 或 WebP 图片，并支持 DPI 控制、页面预览和 ZIP 导出。"
+}

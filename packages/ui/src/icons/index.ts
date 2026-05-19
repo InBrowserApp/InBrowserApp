@@ -12,6 +12,7 @@ export {
   CaseSensitive,
   Check,
   ChevronDown,
+  ChevronLeft,
   ChevronRight,
   ChevronUp,
   Clock3,
