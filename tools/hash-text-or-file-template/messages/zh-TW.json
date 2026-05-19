@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "演算法",
+  "algorithmDescription": "選擇瀏覽器原生 SHA 演算法。新的完整性檢查請使用 SHA-256 或更強的演算法。",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "輸入",
+  "plainTextLabel": "純文字",
+  "plainTextDescription": "貼上或輸入 UTF-8 文字，或匯入檔案來雜湊其位元組。",
+  "importFromFileLabel": "從檔案匯入",
+  "hashResultLabel": "雜湊結果",
+  "hashResultDescription": "目前輸入和演算法的摘要。",
+  "emptyResultLabel": "輸入文字或匯入檔案以產生摘要。",
+  "hashErrorMessage": "無法雜湊目前的輸入。",
+  "hexLabel": "十六進位",
+  "base64Label": "Base64",
+  "decimalLabel": "十進位",
+  "binaryLabel": "二進位",
+  "copyResultLabel": "複製結果",
+  "copiedLabel": "已複製"
+}

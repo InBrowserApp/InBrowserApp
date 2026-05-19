@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "อัลกอริทึม",
+  "algorithmDescription": "เลือกอัลกอริทึม SHA แบบเนทีฟของเบราว์เซอร์ ใช้ SHA-256 หรือที่แข็งแกร่งกว่าสำหรับงานตรวจสอบความสมบูรณ์ใหม่ ๆ",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "ข้อมูลเข้า",
+  "plainTextLabel": "ข้อความธรรมดา",
+  "plainTextDescription": "วางหรือพิมพ์ข้อความ UTF-8 หรือนำเข้าไฟล์เพื่อแฮชไบต์ของไฟล์นั้น",
+  "importFromFileLabel": "นำเข้าจากไฟล์",
+  "hashResultLabel": "ผลลัพธ์แฮช",
+  "hashResultDescription": "ไดเจสต์สำหรับข้อมูลเข้าและอัลกอริทึมที่ใช้อยู่",
+  "emptyResultLabel": "ป้อนข้อความหรือนำเข้าไฟล์เพื่อสร้างไดเจสต์",
+  "hashErrorMessage": "ไม่สามารถแฮชข้อมูลเข้าปัจจุบันได้",
+  "hexLabel": "เลขฐานสิบหก",
+  "base64Label": "Base64",
+  "decimalLabel": "เลขฐานสิบ",
+  "binaryLabel": "เลขฐานสอง",
+  "copyResultLabel": "คัดลอกผลลัพธ์",
+  "copiedLabel": "คัดลอกแล้ว"
+}

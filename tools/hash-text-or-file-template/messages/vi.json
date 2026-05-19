@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "Thuật toán",
+  "algorithmDescription": "Chọn thuật toán SHA chạy sẵn trong trình duyệt. Hãy dùng SHA-256 hoặc mạnh hơn cho các phép kiểm tra tính toàn vẹn mới.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "Đầu vào",
+  "plainTextLabel": "Văn bản thuần",
+  "plainTextDescription": "Dán hoặc nhập văn bản UTF-8, hoặc nhập một tệp để băm trực tiếp các byte của tệp.",
+  "importFromFileLabel": "Nhập từ tệp",
+  "hashResultLabel": "Kết quả băm",
+  "hashResultDescription": "Giá trị băm cho đầu vào và thuật toán hiện tại.",
+  "emptyResultLabel": "Nhập văn bản hoặc nhập tệp để tạo giá trị băm.",
+  "hashErrorMessage": "Không thể băm đầu vào hiện tại.",
+  "hexLabel": "Hệ thập lục phân",
+  "base64Label": "Base64",
+  "decimalLabel": "Thập phân",
+  "binaryLabel": "Nhị phân",
+  "copyResultLabel": "Sao chép kết quả",
+  "copiedLabel": "Đã sao chép"
+}

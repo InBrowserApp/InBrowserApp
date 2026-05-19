@@ -1,0 +1,4 @@
+{
+  "name": "Hash de texto o archivo",
+  "description": "Genera resúmenes SHA para entrada de texto o carga de archivos. Compara salidas SHA-1, SHA-256, SHA-384 y SHA-512 en el navegador sin enviar los datos"
+}

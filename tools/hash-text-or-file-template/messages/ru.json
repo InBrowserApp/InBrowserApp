@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "Алгоритм",
+  "algorithmDescription": "Выберите встроенный в браузер алгоритм SHA. Для новых проверок целостности используйте SHA-256 или более стойкий вариант.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "Ввод",
+  "plainTextLabel": "Обычный текст",
+  "plainTextDescription": "Вставьте или введите текст в UTF-8 либо импортируйте файл, чтобы вычислить хеш его байтов.",
+  "importFromFileLabel": "Импорт из файла",
+  "hashResultLabel": "Результат хеширования",
+  "hashResultDescription": "Дайджест для текущего ввода и алгоритма.",
+  "emptyResultLabel": "Введите текст или импортируйте файл, чтобы сгенерировать дайджест.",
+  "hashErrorMessage": "Не удалось вычислить хеш текущего ввода.",
+  "hexLabel": "Шестнадцатеричный",
+  "base64Label": "Base64",
+  "decimalLabel": "Десятичный",
+  "binaryLabel": "Двоичный",
+  "copyResultLabel": "Копировать результат",
+  "copiedLabel": "Скопировано"
+}

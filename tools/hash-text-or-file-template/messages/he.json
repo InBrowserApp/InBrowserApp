@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "אלגוריתם",
+  "algorithmDescription": "בחרו אלגוריתם SHA שנתמך ישירות בדפדפן. השתמשו ב-SHA-256 או באלגוריתם חזק יותר לבדיקות שלמות חדשות.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "קלט",
+  "plainTextLabel": "טקסט רגיל",
+  "plainTextDescription": "הדביקו או הקלידו טקסט UTF-8, או ייבאו קובץ כדי לגבב את הבייטים שבו.",
+  "importFromFileLabel": "ייבוא מקובץ",
+  "hashResultLabel": "תוצאת גיבוב",
+  "hashResultDescription": "התקציר של הקלט והאלגוריתם הנוכחיים.",
+  "emptyResultLabel": "הזינו טקסט או ייבאו קובץ כדי ליצור תקציר.",
+  "hashErrorMessage": "לא ניתן היה לגבב את הקלט הנוכחי.",
+  "hexLabel": "הקסדצימלי",
+  "base64Label": "Base64",
+  "decimalLabel": "עשרוני",
+  "binaryLabel": "בינארי",
+  "copyResultLabel": "העתקת התוצאה",
+  "copiedLabel": "הועתק"
+}

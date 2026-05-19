@@ -7718,6 +7718,142 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "hash-text-or-file-template",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "digest",
+      "sha",
+      "sha-1",
+      "sha-256",
+      "sha-384",
+      "sha-512",
+      "checksum",
+      "integrity",
+      "file",
+      "text",
+      "web-crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة النص أو الملف",
+        description:
+          "أنشئ بصمات SHA لإدخال نصي أو ملف مرفوع. قارن مخرجات SHA-1 وSHA-256 وSHA-384 وSHA-512 داخل المتصفح من دون إرسال البيانات إلى الخارج",
+      },
+      de: {
+        name: "Text oder Datei hashen",
+        description:
+          "Erzeugen Sie SHA-Hashwerte für Texteingaben oder Dateiuploads. Vergleichen Sie SHA-1-, SHA-256-, SHA-384- und SHA-512-Ausgaben im Browser, ohne Daten zu übertragen",
+      },
+      en: {
+        name: "Hash Text or File",
+        description:
+          "Generate SHA digests for text input or file upload. Compare browser-side SHA-1, SHA-256, SHA-384, and SHA-512 outputs without sending data away",
+      },
+      es: {
+        name: "Hash de texto o archivo",
+        description:
+          "Genera resúmenes SHA para entrada de texto o carga de archivos. Compara salidas SHA-1, SHA-256, SHA-384 y SHA-512 en el navegador sin enviar los datos",
+      },
+      fr: {
+        name: "Hachage de texte ou fichier",
+        description:
+          "Générez des empreintes SHA pour une saisie de texte ou un fichier importé. Comparez les sorties SHA-1, SHA-256, SHA-384 et SHA-512 côté navigateur sans envoyer les données ailleurs",
+      },
+      he: {
+        name: "גיבוב טקסט או קובץ",
+        description:
+          "צרו תקצירי SHA מקלט טקסט או מקובץ מיובא. השוו פלטי SHA-1, SHA-256, SHA-384 ו-SHA-512 בדפדפן בלי לשלוח את הנתונים החוצה",
+      },
+      hi: {
+        name: "टेक्स्ट या फ़ाइल हैश",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA डाइजेस्ट बनाएं। डेटा कहीं भेजे बिना ब्राउज़र में SHA-1, SHA-256, SHA-384 और SHA-512 आउटपुट की तुलना करें",
+      },
+      id: {
+        name: "Hash Teks atau File",
+        description:
+          "Buat digest SHA dari input teks atau unggahan file. Bandingkan output SHA-1, SHA-256, SHA-384, dan SHA-512 langsung di browser tanpa mengirim data ke luar",
+      },
+      it: {
+        name: "Hash di testo o file",
+        description:
+          "Genera digest SHA da testo o file caricati. Confronta gli output SHA-1, SHA-256, SHA-384 e SHA-512 nel browser senza inviare i dati altrove",
+      },
+      ja: {
+        name: "テキストまたはファイルのハッシュ",
+        description:
+          "テキスト入力またはファイルアップロードから SHA ダイジェストを生成します。データを外部に送信せずに、ブラウザー内で SHA-1、SHA-256、SHA-384、SHA-512 の出力を比較できます",
+      },
+      ko: {
+        name: "텍스트 또는 파일 해시",
+        description:
+          "텍스트 입력이나 파일 업로드에서 SHA 다이제스트를 생성합니다. 데이터를 외부로 보내지 않고 브라우저 안에서 SHA-1, SHA-256, SHA-384, SHA-512 출력을 비교하세요",
+      },
+      ms: {
+        name: "Hash Teks atau Fail",
+        description:
+          "Jana nilai hash SHA untuk input teks atau fail yang dimuat naik. Bandingkan output SHA-1, SHA-256, SHA-384 dan SHA-512 di sisi pelayar tanpa menghantar data keluar",
+      },
+      nl: {
+        name: "Hash tekst of bestand",
+        description:
+          "Genereer SHA-digests voor tekstinvoer of bestandsupload. Vergelijk SHA-1-, SHA-256-, SHA-384- en SHA-512-uitvoer in de browser zonder gegevens te verzenden",
+      },
+      no: {
+        name: "Hash tekst eller en fil",
+        description:
+          "Generer SHA-hashverdier for tekstinndata eller opplastede filer. Sammenlign SHA-1-, SHA-256-, SHA-384- og SHA-512-resultater i nettleseren uten å sende data videre",
+      },
+      pl: {
+        name: "Skrót tekstu lub pliku",
+        description:
+          "Generuj skróty SHA dla tekstu lub zaimportowanego pliku. Porównuj wyniki SHA-1, SHA-256, SHA-384 i SHA-512 po stronie przeglądarki bez wysyłania danych",
+      },
+      pt: {
+        name: "Hash de Texto ou Arquivo",
+        description:
+          "Gere resumos SHA para entrada de texto ou envio de arquivo. Compare saídas SHA-1, SHA-256, SHA-384 e SHA-512 no navegador sem enviar os dados para fora",
+      },
+      ru: {
+        name: "Хеш текста или файла",
+        description:
+          "Генерируйте SHA-хеши для текстового ввода или загруженного файла. Сравнивайте результаты SHA-1, SHA-256, SHA-384 и SHA-512 прямо в браузере, не отправляя данные наружу",
+      },
+      sv: {
+        name: "Hasha text eller fil",
+        description:
+          "Generera SHA-hashar för textinmatning eller filuppladdning. Jämför SHA-1-, SHA-256-, SHA-384- och SHA-512-resultat direkt i webbläsaren utan att skicka iväg data",
+      },
+      th: {
+        name: "แฮชข้อความหรือไฟล์",
+        description:
+          "สร้างไดเจสต์ SHA จากข้อความที่ป้อนหรือไฟล์ที่อัปโหลด เปรียบเทียบผลลัพธ์ SHA-1, SHA-256, SHA-384 และ SHA-512 ฝั่งเบราว์เซอร์โดยไม่ส่งข้อมูลออกไป",
+      },
+      tr: {
+        name: "Metin veya Dosya Hash'i",
+        description:
+          "Metin girişi veya dosya yükleme için SHA özetleri oluşturun. Verileri dışarı göndermeden tarayıcıda SHA-1, SHA-256, SHA-384 ve SHA-512 çıktılarını karşılaştırın",
+      },
+      vi: {
+        name: "Băm văn bản hoặc tệp",
+        description:
+          "Tạo giá trị băm SHA cho văn bản nhập vào hoặc tệp tải lên. So sánh các kết quả SHA-1, SHA-256, SHA-384 và SHA-512 ngay trong trình duyệt mà không gửi dữ liệu ra ngoài",
+      },
+      "zh-CN": {
+        name: "文本或文件哈希计算",
+        description:
+          "为文本输入或文件上传生成 SHA 摘要。在浏览器端比较 SHA-1、SHA-256、SHA-384 和 SHA-512 输出，数据无需发送出去",
+      },
+      "zh-TW": {
+        name: "雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA 摘要。比較瀏覽器端的 SHA-1、SHA-256、SHA-384 和 SHA-512 輸出，不會將資料送出",
+      },
+    },
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -32623,6 +32759,142 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: ".gitignore 產生器",
         description: "透過選擇模板為您的專案產生 .gitignore 檔案",
+      },
+    },
+  },
+  "hash-text-or-file-template": {
+    slug: "hash-text-or-file-template",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "hash",
+      "digest",
+      "sha",
+      "sha-1",
+      "sha-256",
+      "sha-384",
+      "sha-512",
+      "checksum",
+      "integrity",
+      "file",
+      "text",
+      "web-crypto",
+    ],
+    locales: {
+      ar: {
+        name: "تجزئة النص أو الملف",
+        description:
+          "أنشئ بصمات SHA لإدخال نصي أو ملف مرفوع. قارن مخرجات SHA-1 وSHA-256 وSHA-384 وSHA-512 داخل المتصفح من دون إرسال البيانات إلى الخارج",
+      },
+      de: {
+        name: "Text oder Datei hashen",
+        description:
+          "Erzeugen Sie SHA-Hashwerte für Texteingaben oder Dateiuploads. Vergleichen Sie SHA-1-, SHA-256-, SHA-384- und SHA-512-Ausgaben im Browser, ohne Daten zu übertragen",
+      },
+      en: {
+        name: "Hash Text or File",
+        description:
+          "Generate SHA digests for text input or file upload. Compare browser-side SHA-1, SHA-256, SHA-384, and SHA-512 outputs without sending data away",
+      },
+      es: {
+        name: "Hash de texto o archivo",
+        description:
+          "Genera resúmenes SHA para entrada de texto o carga de archivos. Compara salidas SHA-1, SHA-256, SHA-384 y SHA-512 en el navegador sin enviar los datos",
+      },
+      fr: {
+        name: "Hachage de texte ou fichier",
+        description:
+          "Générez des empreintes SHA pour une saisie de texte ou un fichier importé. Comparez les sorties SHA-1, SHA-256, SHA-384 et SHA-512 côté navigateur sans envoyer les données ailleurs",
+      },
+      he: {
+        name: "גיבוב טקסט או קובץ",
+        description:
+          "צרו תקצירי SHA מקלט טקסט או מקובץ מיובא. השוו פלטי SHA-1, SHA-256, SHA-384 ו-SHA-512 בדפדפן בלי לשלוח את הנתונים החוצה",
+      },
+      hi: {
+        name: "टेक्स्ट या फ़ाइल हैश",
+        description:
+          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA डाइजेस्ट बनाएं। डेटा कहीं भेजे बिना ब्राउज़र में SHA-1, SHA-256, SHA-384 और SHA-512 आउटपुट की तुलना करें",
+      },
+      id: {
+        name: "Hash Teks atau File",
+        description:
+          "Buat digest SHA dari input teks atau unggahan file. Bandingkan output SHA-1, SHA-256, SHA-384, dan SHA-512 langsung di browser tanpa mengirim data ke luar",
+      },
+      it: {
+        name: "Hash di testo o file",
+        description:
+          "Genera digest SHA da testo o file caricati. Confronta gli output SHA-1, SHA-256, SHA-384 e SHA-512 nel browser senza inviare i dati altrove",
+      },
+      ja: {
+        name: "テキストまたはファイルのハッシュ",
+        description:
+          "テキスト入力またはファイルアップロードから SHA ダイジェストを生成します。データを外部に送信せずに、ブラウザー内で SHA-1、SHA-256、SHA-384、SHA-512 の出力を比較できます",
+      },
+      ko: {
+        name: "텍스트 또는 파일 해시",
+        description:
+          "텍스트 입력이나 파일 업로드에서 SHA 다이제스트를 생성합니다. 데이터를 외부로 보내지 않고 브라우저 안에서 SHA-1, SHA-256, SHA-384, SHA-512 출력을 비교하세요",
+      },
+      ms: {
+        name: "Hash Teks atau Fail",
+        description:
+          "Jana nilai hash SHA untuk input teks atau fail yang dimuat naik. Bandingkan output SHA-1, SHA-256, SHA-384 dan SHA-512 di sisi pelayar tanpa menghantar data keluar",
+      },
+      nl: {
+        name: "Hash tekst of bestand",
+        description:
+          "Genereer SHA-digests voor tekstinvoer of bestandsupload. Vergelijk SHA-1-, SHA-256-, SHA-384- en SHA-512-uitvoer in de browser zonder gegevens te verzenden",
+      },
+      no: {
+        name: "Hash tekst eller en fil",
+        description:
+          "Generer SHA-hashverdier for tekstinndata eller opplastede filer. Sammenlign SHA-1-, SHA-256-, SHA-384- og SHA-512-resultater i nettleseren uten å sende data videre",
+      },
+      pl: {
+        name: "Skrót tekstu lub pliku",
+        description:
+          "Generuj skróty SHA dla tekstu lub zaimportowanego pliku. Porównuj wyniki SHA-1, SHA-256, SHA-384 i SHA-512 po stronie przeglądarki bez wysyłania danych",
+      },
+      pt: {
+        name: "Hash de Texto ou Arquivo",
+        description:
+          "Gere resumos SHA para entrada de texto ou envio de arquivo. Compare saídas SHA-1, SHA-256, SHA-384 e SHA-512 no navegador sem enviar os dados para fora",
+      },
+      ru: {
+        name: "Хеш текста или файла",
+        description:
+          "Генерируйте SHA-хеши для текстового ввода или загруженного файла. Сравнивайте результаты SHA-1, SHA-256, SHA-384 и SHA-512 прямо в браузере, не отправляя данные наружу",
+      },
+      sv: {
+        name: "Hasha text eller fil",
+        description:
+          "Generera SHA-hashar för textinmatning eller filuppladdning. Jämför SHA-1-, SHA-256-, SHA-384- och SHA-512-resultat direkt i webbläsaren utan att skicka iväg data",
+      },
+      th: {
+        name: "แฮชข้อความหรือไฟล์",
+        description:
+          "สร้างไดเจสต์ SHA จากข้อความที่ป้อนหรือไฟล์ที่อัปโหลด เปรียบเทียบผลลัพธ์ SHA-1, SHA-256, SHA-384 และ SHA-512 ฝั่งเบราว์เซอร์โดยไม่ส่งข้อมูลออกไป",
+      },
+      tr: {
+        name: "Metin veya Dosya Hash'i",
+        description:
+          "Metin girişi veya dosya yükleme için SHA özetleri oluşturun. Verileri dışarı göndermeden tarayıcıda SHA-1, SHA-256, SHA-384 ve SHA-512 çıktılarını karşılaştırın",
+      },
+      vi: {
+        name: "Băm văn bản hoặc tệp",
+        description:
+          "Tạo giá trị băm SHA cho văn bản nhập vào hoặc tệp tải lên. So sánh các kết quả SHA-1, SHA-256, SHA-384 và SHA-512 ngay trong trình duyệt mà không gửi dữ liệu ra ngoài",
+      },
+      "zh-CN": {
+        name: "文本或文件哈希计算",
+        description:
+          "为文本输入或文件上传生成 SHA 摘要。在浏览器端比较 SHA-1、SHA-256、SHA-384 和 SHA-512 输出，数据无需发送出去",
+      },
+      "zh-TW": {
+        name: "雜湊文字或檔案",
+        description:
+          "為文字輸入或檔案上傳產生 SHA 摘要。比較瀏覽器端的 SHA-1、SHA-256、SHA-384 和 SHA-512 輸出，不會將資料送出",
       },
     },
   },

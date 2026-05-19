@@ -1,0 +1,4 @@
+{
+  "name": "Skrót tekstu lub pliku",
+  "description": "Generuj skróty SHA dla tekstu lub zaimportowanego pliku. Porównuj wyniki SHA-1, SHA-256, SHA-384 i SHA-512 po stronie przeglądarki bez wysyłania danych"
+}

@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "算法",
+  "algorithmDescription": "选择浏览器原生的 SHA 算法。新的完整性校验建议使用 SHA-256 或更强算法。",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "输入",
+  "plainTextLabel": "纯文本",
+  "plainTextDescription": "粘贴或输入 UTF-8 文本，或导入文件以对其字节进行哈希。",
+  "importFromFileLabel": "从文件导入",
+  "hashResultLabel": "哈希结果",
+  "hashResultDescription": "当前输入和算法的摘要。",
+  "emptyResultLabel": "输入文本或导入文件以生成摘要。",
+  "hashErrorMessage": "无法对当前输入进行哈希。",
+  "hexLabel": "十六进制",
+  "base64Label": "Base64",
+  "decimalLabel": "十进制",
+  "binaryLabel": "二进制",
+  "copyResultLabel": "复制结果",
+  "copiedLabel": "已复制"
+}

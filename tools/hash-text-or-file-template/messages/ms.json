@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "Algoritma",
+  "algorithmDescription": "Pilih algoritma SHA natif pelayar. Gunakan SHA-256 atau yang lebih kukuh untuk semakan integriti baharu.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "Input",
+  "plainTextLabel": "Teks biasa",
+  "plainTextDescription": "Tampal atau taip teks UTF-8, atau import fail untuk menjana hash daripada baitnya.",
+  "importFromFileLabel": "Import daripada fail",
+  "hashResultLabel": "Keputusan Hash",
+  "hashResultDescription": "Nilai hash untuk input dan algoritma semasa.",
+  "emptyResultLabel": "Masukkan teks atau import fail untuk menjana nilai hash.",
+  "hashErrorMessage": "Gagal menjana hash untuk input semasa.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Perpuluhan",
+  "binaryLabel": "Binari",
+  "copyResultLabel": "Salin hasil",
+  "copiedLabel": "Disalin"
+}

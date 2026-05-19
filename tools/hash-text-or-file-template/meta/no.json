@@ -1,0 +1,4 @@
+{
+  "name": "Hash tekst eller en fil",
+  "description": "Generer SHA-hashverdier for tekstinndata eller opplastede filer. Sammenlign SHA-1-, SHA-256-, SHA-384- og SHA-512-resultater i nettleseren uten å sende data videre"
+}

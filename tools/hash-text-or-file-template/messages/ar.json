@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "الخوارزمية",
+  "algorithmDescription": "اختر خوارزمية SHA يدعمها المتصفح محليا. استخدم SHA-256 أو ما هو أقوى لفحوصات السلامة الجديدة.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "الإدخال",
+  "plainTextLabel": "نص عادي",
+  "plainTextDescription": "الصق أو اكتب نصا بترميز UTF-8، أو استورد ملفا لحساب تجزئة بايتاته.",
+  "importFromFileLabel": "استيراد من ملف",
+  "hashResultLabel": "نتيجة التجزئة",
+  "hashResultDescription": "البصمة الخاصة بالإدخال والخوارزمية الحاليين.",
+  "emptyResultLabel": "أدخل نصا أو استورد ملفا لإنشاء بصمة.",
+  "hashErrorMessage": "تعذر حساب تجزئة الإدخال الحالي.",
+  "hexLabel": "سداسي عشري",
+  "base64Label": "Base64",
+  "decimalLabel": "عشري",
+  "binaryLabel": "ثنائي",
+  "copyResultLabel": "نسخ النتيجة",
+  "copiedLabel": "تم النسخ"
+}

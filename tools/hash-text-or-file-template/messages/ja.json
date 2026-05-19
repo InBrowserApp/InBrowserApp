@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "アルゴリズム",
+  "algorithmDescription": "ブラウザー標準の SHA アルゴリズムを選択します。新しい整合性チェックには SHA-256 以上を使用してください。",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "入力",
+  "plainTextLabel": "プレーンテキスト",
+  "plainTextDescription": "UTF-8 テキストを貼り付けるか入力するか、ファイルを読み込んでそのバイト列をハッシュ化します。",
+  "importFromFileLabel": "ファイルから読み込む",
+  "hashResultLabel": "ハッシュ結果",
+  "hashResultDescription": "現在の入力とアルゴリズムに対するダイジェストです。",
+  "emptyResultLabel": "テキストを入力するかファイルを読み込むと、ダイジェストを生成できます。",
+  "hashErrorMessage": "現在の入力をハッシュ化できませんでした。",
+  "hexLabel": "16進数",
+  "base64Label": "Base64",
+  "decimalLabel": "10進数",
+  "binaryLabel": "2進数",
+  "copyResultLabel": "結果をコピー",
+  "copiedLabel": "コピーしました"
+}

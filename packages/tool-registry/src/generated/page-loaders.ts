@@ -82,6 +82,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
+  "hash-text-or-file-template": () =>
+    import("@tool/hash-text-or-file-template/page"),
   "highwayhash-hash-text-or-file": () =>
     import("@tool/highwayhash-hash-text-or-file/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),

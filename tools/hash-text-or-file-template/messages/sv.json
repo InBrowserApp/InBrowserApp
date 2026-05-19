@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "Algoritm",
+  "algorithmDescription": "Välj en SHA-algoritm som körs direkt i webbläsaren. Använd SHA-256 eller starkare för nya integritetskontroller.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "Indata",
+  "plainTextLabel": "Oformaterad text",
+  "plainTextDescription": "Klistra in eller skriv UTF-8-text, eller importera en fil för att hasha filens byte.",
+  "importFromFileLabel": "Importera från fil",
+  "hashResultLabel": "Hashresultat",
+  "hashResultDescription": "Hashvärde för aktuella indata och vald algoritm.",
+  "emptyResultLabel": "Ange text eller importera en fil för att generera ett hashvärde.",
+  "hashErrorMessage": "Det gick inte att hasha aktuella indata.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binär",
+  "copyResultLabel": "Kopiera resultat",
+  "copiedLabel": "Kopierat"
+}

@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "Algorytm",
+  "algorithmDescription": "Wybierz algorytm SHA obsługiwany natywnie przez przeglądarkę. Do nowych sprawdzeń integralności używaj SHA-256 lub silniejszego.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "Wejście",
+  "plainTextLabel": "Zwykły tekst",
+  "plainTextDescription": "Wklej lub wpisz tekst UTF-8 albo zaimportuj plik, aby obliczyć skrót z jego bajtów.",
+  "importFromFileLabel": "Importuj z pliku",
+  "hashResultLabel": "Wynik skrótu",
+  "hashResultDescription": "Skrót dla bieżących danych wejściowych i algorytmu.",
+  "emptyResultLabel": "Wpisz tekst lub zaimportuj plik, aby wygenerować skrót.",
+  "hashErrorMessage": "Nie udało się obliczyć skrótu bieżących danych wejściowych.",
+  "hexLabel": "Szesnastkowy",
+  "base64Label": "Base64",
+  "decimalLabel": "Dziesiętny",
+  "binaryLabel": "Binarny",
+  "copyResultLabel": "Kopiuj wynik",
+  "copiedLabel": "Skopiowano"
+}

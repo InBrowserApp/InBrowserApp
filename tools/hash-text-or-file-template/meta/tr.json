@@ -1,0 +1,4 @@
+{
+  "name": "Metin veya Dosya Hash'i",
+  "description": "Metin girişi veya dosya yükleme için SHA özetleri oluşturun. Verileri dışarı göndermeden tarayıcıda SHA-1, SHA-256, SHA-384 ve SHA-512 çıktılarını karşılaştırın"
+}

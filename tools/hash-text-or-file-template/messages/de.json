@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "Algorithmus",
+  "algorithmDescription": "Wählen Sie einen browsernativen SHA-Algorithmus. Verwenden Sie SHA-256 oder stärker für neue Integritätsprüfungen.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "Eingabe",
+  "plainTextLabel": "Klartext",
+  "plainTextDescription": "Fügen Sie UTF-8-Text ein oder geben Sie ihn ein, oder importieren Sie eine Datei, um deren Bytes zu hashen.",
+  "importFromFileLabel": "Aus Datei importieren",
+  "hashResultLabel": "Hash-Ergebnis",
+  "hashResultDescription": "Hashwert für die aktuelle Eingabe und den gewählten Algorithmus.",
+  "emptyResultLabel": "Geben Sie Text ein oder importieren Sie eine Datei, um einen Hashwert zu erzeugen.",
+  "hashErrorMessage": "Die aktuelle Eingabe konnte nicht gehasht werden.",
+  "hexLabel": "Hexadezimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Dezimal",
+  "binaryLabel": "Binär",
+  "copyResultLabel": "Ergebnis kopieren",
+  "copiedLabel": "Kopiert"
+}

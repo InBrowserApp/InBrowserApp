@@ -1,0 +1,4 @@
+{
+  "name": "Hash de Texto ou Arquivo",
+  "description": "Gere resumos SHA para entrada de texto ou envio de arquivo. Compare saídas SHA-1, SHA-256, SHA-384 e SHA-512 no navegador sem enviar os dados para fora"
+}

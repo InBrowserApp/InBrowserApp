@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "알고리즘",
+  "algorithmDescription": "브라우저 내장 SHA 알고리즘을 선택하세요. 새 무결성 검사에는 SHA-256 이상을 사용하세요.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "입력",
+  "plainTextLabel": "일반 텍스트",
+  "plainTextDescription": "UTF-8 텍스트를 붙여넣거나 입력하거나, 파일을 가져와 바이트를 해시하세요.",
+  "importFromFileLabel": "파일에서 가져오기",
+  "hashResultLabel": "해시 결과",
+  "hashResultDescription": "현재 입력과 선택한 알고리즘의 다이제스트입니다.",
+  "emptyResultLabel": "다이제스트를 생성하려면 텍스트를 입력하거나 파일을 가져오세요.",
+  "hashErrorMessage": "현재 입력을 해시하지 못했습니다.",
+  "hexLabel": "16진수",
+  "base64Label": "Base64",
+  "decimalLabel": "10진수",
+  "binaryLabel": "2진수",
+  "copyResultLabel": "결과 복사",
+  "copiedLabel": "복사됨"
+}

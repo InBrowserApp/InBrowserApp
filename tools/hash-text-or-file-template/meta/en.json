@@ -1,0 +1,4 @@
+{
+  "name": "Hash Text or File",
+  "description": "Generate SHA digests for text input or file upload. Compare browser-side SHA-1, SHA-256, SHA-384, and SHA-512 outputs without sending data away"
+}

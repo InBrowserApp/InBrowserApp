@@ -1,0 +1,4 @@
+{
+  "name": "Hash tekst of bestand",
+  "description": "Genereer SHA-digests voor tekstinvoer of bestandsupload. Vergelijk SHA-1-, SHA-256-, SHA-384- en SHA-512-uitvoer in de browser zonder gegevens te verzenden"
+}

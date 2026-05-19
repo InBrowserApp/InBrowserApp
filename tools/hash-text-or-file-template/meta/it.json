@@ -1,0 +1,4 @@
+{
+  "name": "Hash di testo o file",
+  "description": "Genera digest SHA da testo o file caricati. Confronta gli output SHA-1, SHA-256, SHA-384 e SHA-512 nel browser senza inviare i dati altrove"
+}

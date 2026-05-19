@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "Algoritme",
+  "algorithmDescription": "Kies een browser-native SHA-algoritme. Gebruik SHA-256 of sterker voor nieuwe integriteitscontroles.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "Invoer",
+  "plainTextLabel": "Platte tekst",
+  "plainTextDescription": "Plak of typ UTF-8-tekst, of importeer een bestand om de bytes ervan te hashen.",
+  "importFromFileLabel": "Importeren uit bestand",
+  "hashResultLabel": "Hashresultaat",
+  "hashResultDescription": "Digest voor de huidige invoer en het huidige algoritme.",
+  "emptyResultLabel": "Voer tekst in of importeer een bestand om een digest te genereren.",
+  "hashErrorMessage": "Hashen van de huidige invoer is mislukt.",
+  "hexLabel": "Hexadecimaal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimaal",
+  "binaryLabel": "Binair",
+  "copyResultLabel": "Resultaat kopiëren",
+  "copiedLabel": "Gekopieerd"
+}

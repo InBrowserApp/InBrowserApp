@@ -1,0 +1,4 @@
+{
+  "name": "Băm văn bản hoặc tệp",
+  "description": "Tạo giá trị băm SHA cho văn bản nhập vào hoặc tệp tải lên. So sánh các kết quả SHA-1, SHA-256, SHA-384 và SHA-512 ngay trong trình duyệt mà không gửi dữ liệu ra ngoài"
+}

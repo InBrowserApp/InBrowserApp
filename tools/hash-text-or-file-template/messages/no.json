@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "Algoritme",
+  "algorithmDescription": "Velg en SHA-algoritme som støttes direkte av nettleseren. Bruk SHA-256 eller sterkere for nye integritetskontroller.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "Inndata",
+  "plainTextLabel": "Ren tekst",
+  "plainTextDescription": "Lim inn eller skriv inn UTF-8-tekst, eller importer en fil for å hashe byteinnholdet.",
+  "importFromFileLabel": "Importer fra fil",
+  "hashResultLabel": "Hashresultat",
+  "hashResultDescription": "Hashverdi for gjeldende inndata og algoritme.",
+  "emptyResultLabel": "Skriv inn tekst eller importer en fil for å generere en hashverdi.",
+  "hashErrorMessage": "Klarte ikke å hashe gjeldende inndata.",
+  "hexLabel": "Heksadesimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Desimal",
+  "binaryLabel": "Binær",
+  "copyResultLabel": "Kopier resultat",
+  "copiedLabel": "Kopiert"
+}

@@ -5614,6 +5614,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "hash-text-or-file-template",
+    language: "ar",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "de",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "en",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "es",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "fr",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "he",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "hi",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "id",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "it",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "ja",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "ko",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "ms",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "nl",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "no",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "pl",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "pt",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "ru",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "sv",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "th",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "tr",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "vi",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "zh-CN",
+  },
+  {
+    slug: "hash-text-or-file-template",
+    language: "zh-TW",
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     language: "ar",
   },

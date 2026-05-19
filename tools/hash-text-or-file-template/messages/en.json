@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "Algorithm",
+  "algorithmDescription": "Choose a browser-native SHA algorithm. Use SHA-256 or stronger for new integrity checks.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "Input",
+  "plainTextLabel": "Plain text",
+  "plainTextDescription": "Paste or type UTF-8 text, or import a file to hash its bytes.",
+  "importFromFileLabel": "Import from file",
+  "hashResultLabel": "Hash Result",
+  "hashResultDescription": "Digest for the current input and algorithm.",
+  "emptyResultLabel": "Enter text or import a file to generate a digest.",
+  "hashErrorMessage": "Failed to hash the current input.",
+  "hexLabel": "Hexadecimal",
+  "base64Label": "Base64",
+  "decimalLabel": "Decimal",
+  "binaryLabel": "Binary",
+  "copyResultLabel": "Copy result",
+  "copiedLabel": "Copied"
+}

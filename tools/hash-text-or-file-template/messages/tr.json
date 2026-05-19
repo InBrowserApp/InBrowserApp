@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "Algoritma",
+  "algorithmDescription": "Tarayıcı tarafından yerel olarak desteklenen bir SHA algoritması seçin. Yeni bütünlük kontrolleri için SHA-256 veya daha güçlüsünü kullanın.",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "Giriş",
+  "plainTextLabel": "Düz metin",
+  "plainTextDescription": "UTF-8 metni yapıştırın ya da yazın veya baytlarını hash'lemek için bir dosya içe aktarın.",
+  "importFromFileLabel": "Dosyadan içe aktar",
+  "hashResultLabel": "Hash sonucu",
+  "hashResultDescription": "Geçerli giriş ve algoritma için özet.",
+  "emptyResultLabel": "Özet oluşturmak için metin girin veya bir dosya içe aktarın.",
+  "hashErrorMessage": "Geçerli giriş hash'lenemedi.",
+  "hexLabel": "Onaltılık",
+  "base64Label": "Base64",
+  "decimalLabel": "Ondalık",
+  "binaryLabel": "İkili",
+  "copyResultLabel": "Sonucu kopyala",
+  "copiedLabel": "Kopyalandı"
+}

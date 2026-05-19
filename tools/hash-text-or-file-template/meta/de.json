@@ -1,0 +1,4 @@
+{
+  "name": "Text oder Datei hashen",
+  "description": "Erzeugen Sie SHA-Hashwerte für Texteingaben oder Dateiuploads. Vergleichen Sie SHA-1-, SHA-256-, SHA-384- und SHA-512-Ausgaben im Browser, ohne Daten zu übertragen"
+}

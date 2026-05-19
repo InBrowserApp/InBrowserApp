@@ -1,0 +1,24 @@
+{
+  "algorithmLabel": "एल्गोरिदम",
+  "algorithmDescription": "ब्राउज़र-नेटिव SHA एल्गोरिदम चुनें। नई अखंडता जांचों के लिए SHA-256 या उससे मजबूत विकल्प का उपयोग करें।",
+  "algorithmLabels": {
+    "SHA-1": "SHA-1",
+    "SHA-256": "SHA-256",
+    "SHA-384": "SHA-384",
+    "SHA-512": "SHA-512"
+  },
+  "inputLabel": "इनपुट",
+  "plainTextLabel": "सादा टेक्स्ट",
+  "plainTextDescription": "UTF-8 टेक्स्ट पेस्ट या टाइप करें, या उसके बाइट्स का हैश बनाने के लिए फ़ाइल आयात करें।",
+  "importFromFileLabel": "फ़ाइल से आयात करें",
+  "hashResultLabel": "हैश परिणाम",
+  "hashResultDescription": "मौजूदा इनपुट और एल्गोरिदम के लिए डाइजेस्ट।",
+  "emptyResultLabel": "डाइजेस्ट बनाने के लिए टेक्स्ट दर्ज करें या फ़ाइल आयात करें।",
+  "hashErrorMessage": "मौजूदा इनपुट का हैश बनाने में विफल।",
+  "hexLabel": "हेक्साडेसिमल",
+  "base64Label": "Base64",
+  "decimalLabel": "दशमलव",
+  "binaryLabel": "बाइनरी",
+  "copyResultLabel": "परिणाम कॉपी करें",
+  "copiedLabel": "कॉपी हो गया"
+}

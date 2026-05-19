@@ -1,0 +1,4 @@
+{
+  "name": "Hachage de texte ou fichier",
+  "description": "Générez des empreintes SHA pour une saisie de texte ou un fichier importé. Comparez les sorties SHA-1, SHA-256, SHA-384 et SHA-512 côté navigateur sans envoyer les données ailleurs"
+}

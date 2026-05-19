@@ -1,0 +1,4 @@
+{
+  "name": "Hasha text eller fil",
+  "description": "Generera SHA-hashar för textinmatning eller filuppladdning. Jämför SHA-1-, SHA-256-, SHA-384- och SHA-512-resultat direkt i webbläsaren utan att skicka iväg data"
+}
