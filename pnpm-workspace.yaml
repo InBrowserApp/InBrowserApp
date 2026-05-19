@@ -98,6 +98,7 @@ catalog:
   oxlint: ^1.58.0
   papaparse: ^5.5.3
   pdf-lib: ^1.17.1
+  pdfjs-dist: ^5.4.624
   prettier: ^3.8.2
   prettier-plugin-svelte: ^3.5.1
   "@prettier/plugin-xml": ^3.4.2

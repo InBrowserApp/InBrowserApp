@@ -1,0 +1,4 @@
+{
+  "name": "PDF Text Extractor",
+  "description": "브라우저에서 PDF 파일의 선택 가능한 텍스트를 로컬로 추출하고 일반 텍스트로 내보냅니다."
+}

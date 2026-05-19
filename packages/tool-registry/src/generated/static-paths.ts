@@ -10766,6 +10766,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-text-extractor",
+    language: "ar",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "de",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "en",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "es",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "fr",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "he",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "hi",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "id",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "it",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "ja",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "ko",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "ms",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "nl",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "no",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "pl",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "pt",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "ru",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "sv",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "th",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "tr",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "vi",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "zh-TW",
+  },
+  {
     slug: "pgp-key-generator",
     language: "ar",
   },
