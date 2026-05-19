@@ -73,12 +73,12 @@ function SelectionCard({
 
   return (
     <Card className="gap-0 py-0">
-      <CardHeader className="border-b py-4">
+      <CardHeader className="border-b px-5 py-4">
         <CardTitle>{messages.selectionTitle}</CardTitle>
         <CardDescription>{messages.selectionDescription}</CardDescription>
       </CardHeader>
 
-      <CardContent className="flex flex-col gap-5 p-4">
+      <CardContent className="flex flex-col gap-5 p-5">
         <FieldGroup>
           <Field data-invalid={Boolean(rangeError)}>
             <FieldLabel htmlFor="pdf-splitter-ranges">
@@ -142,10 +142,16 @@ function SelectionCard({
               value={outputMode}
               variant="outline"
             >
-              <ToggleGroupItem value="single">
+              <ToggleGroupItem
+                className="h-auto min-h-8 min-w-0 px-2 py-1.5 text-center leading-tight whitespace-normal"
+                value="single"
+              >
                 {messages.modeSingle}
               </ToggleGroupItem>
-              <ToggleGroupItem value="multiple">
+              <ToggleGroupItem
+                className="h-auto min-h-8 min-w-0 px-2 py-1.5 text-center leading-tight whitespace-normal"
+                value="multiple"
+              >
                 {messages.modeMultiple}
               </ToggleGroupItem>
             </ToggleGroup>
@@ -165,10 +171,16 @@ function SelectionCard({
                 value={multipleMode}
                 variant="outline"
               >
-                <ToggleGroupItem value="ranges">
+                <ToggleGroupItem
+                  className="h-auto min-h-8 min-w-0 px-2 py-1.5 text-center leading-tight whitespace-normal"
+                  value="ranges"
+                >
                   {messages.strategyRanges}
                 </ToggleGroupItem>
-                <ToggleGroupItem value="pages">
+                <ToggleGroupItem
+                  className="h-auto min-h-8 min-w-0 px-2 py-1.5 text-center leading-tight whitespace-normal"
+                  value="pages"
+                >
                   {messages.strategyPages}
                 </ToggleGroupItem>
               </ToggleGroup>

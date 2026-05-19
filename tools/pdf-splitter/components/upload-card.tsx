@@ -86,7 +86,7 @@ function PdfSummary({
 }: PdfSummaryProps) {
   return (
     <Card className="min-h-[18rem] justify-between gap-0 py-0">
-      <CardContent className="flex min-w-0 flex-1 flex-col gap-4 p-4">
+      <CardContent className="flex min-w-0 flex-1 flex-col gap-4 p-5">
         <div className="flex items-start gap-3">
           <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
             <FileText />
@@ -111,7 +111,7 @@ function PdfSummary({
         </dl>
       </CardContent>
 
-      <CardFooter className="grid gap-2 bg-transparent sm:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2">
+      <CardFooter className="grid gap-2 bg-transparent p-5 sm:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2">
         <Button
           className="w-full"
           onClick={onChangeFile}

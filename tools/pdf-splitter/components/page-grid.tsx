@@ -3,7 +3,6 @@ import { useMemo } from "react"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
@@ -41,20 +40,22 @@ function PageGrid({
 
   return (
     <Card className="gap-0 bg-muted/15 py-0">
-      <CardHeader className="border-b py-4">
-        <CardTitle>{messages.pageGridTitle}</CardTitle>
-        <CardDescription>{messages.pageGridDescription}</CardDescription>
-        <CardAction>
+      <CardHeader className="border-b px-5 py-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div className="min-w-0 space-y-1">
+            <CardTitle>{messages.pageGridTitle}</CardTitle>
+            <CardDescription>{messages.pageGridDescription}</CardDescription>
+          </div>
           <Badge variant="secondary">
             {formatTemplate(messages.selectedSummary, {
               pageCount,
               selectedCount: selectedPages.length,
             })}
           </Badge>
-        </CardAction>
+        </div>
       </CardHeader>
 
-      <CardContent className="p-4">
+      <CardContent className="p-5">
         <div className="grid max-h-none grid-cols-[repeat(auto-fill,minmax(7.5rem,1fr))] gap-3 overflow-visible pe-0 sm:max-h-[42rem] sm:overflow-auto sm:pe-1">
           {pages.map((page) => {
             const selected = selectedPageSet.has(page)

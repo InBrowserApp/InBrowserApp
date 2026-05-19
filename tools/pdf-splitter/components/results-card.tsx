@@ -2,7 +2,6 @@ import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
@@ -43,21 +42,23 @@ function ResultsCard({
 }: ResultsCardProps) {
   return (
     <Card className="gap-0 bg-muted/15 py-0">
-      <CardHeader className="border-b py-4">
-        <CardTitle>{messages.resultsTitle}</CardTitle>
-        <CardDescription>{messages.resultsDescription}</CardDescription>
-        {result ? (
-          <CardAction>
+      <CardHeader className="border-b px-5 py-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div className="min-w-0 space-y-1">
+            <CardTitle>{messages.resultsTitle}</CardTitle>
+            <CardDescription>{messages.resultsDescription}</CardDescription>
+          </div>
+          {result ? (
             <Badge variant="secondary">
               {formatTemplate(messages.resultFileCount, {
                 count: result.fileCount,
               })}
             </Badge>
-          </CardAction>
-        ) : null}
+          ) : null}
+        </div>
       </CardHeader>
 
-      <CardContent aria-live="polite" className="p-4">
+      <CardContent aria-live="polite" className="p-5">
         {result && resultUrl ? (
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex min-w-0 items-start gap-3">
@@ -82,7 +83,7 @@ function ResultsCard({
             </Button>
           </div>
         ) : (
-          <Empty className="min-h-48">
+          <Empty className="min-h-44 rounded-none p-4">
             <EmptyHeader>
               <EmptyMedia variant="icon">
                 {isGenerating ? (

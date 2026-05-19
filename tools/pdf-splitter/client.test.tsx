@@ -58,11 +58,11 @@ afterEach(() => {
 })
 
 describe("PdfSplitterClient", () => {
-  it("renders upload and empty states", () => {
+  it("renders the upload state before file selection", () => {
     renderClient()
 
     expect(screen.getByText(messages.dragDropOrClick)).toBeTruthy()
-    expect(screen.getByText(messages.noFileTitle)).toBeTruthy()
+    expect(screen.queryByText(messages.noFileTitle)).toBeNull()
   })
 
   it("rejects unsupported files before inspection", () => {
