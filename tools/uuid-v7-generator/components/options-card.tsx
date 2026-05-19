@@ -35,6 +35,7 @@ type UuidV7OptionsCardProps = Readonly<{
   countId: string
   customDateTimeId: string
   customUnixMillisecondsId: string
+  timestampErrorId: string
   className?: string
   mode: UuidV7GenerationMode
   count: number
@@ -55,6 +56,7 @@ function UuidV7OptionsCard({
   countId,
   customDateTimeId,
   customUnixMillisecondsId,
+  timestampErrorId,
   className,
   mode,
   count,
@@ -165,7 +167,7 @@ function UuidV7OptionsCard({
         {timestampMode === "custom" ? (
           <>
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field>
+              <Field data-invalid={Boolean(timestampError)}>
                 <FieldLabel htmlFor={customDateTimeId}>
                   {messages.customDateTimeLabel}
                 </FieldLabel>
@@ -176,6 +178,10 @@ function UuidV7OptionsCard({
                   step="0.001"
                   autoComplete="off"
                   value={customDateTimeInput}
+                  aria-invalid={Boolean(timestampError)}
+                  aria-describedby={
+                    timestampError ? timestampErrorId : undefined
+                  }
                   onChange={(event) => {
                     onCustomDateTimeChange(event.target.value)
                   }}
@@ -197,6 +203,9 @@ function UuidV7OptionsCard({
                   step="1"
                   value={customUnixMillisecondsInput}
                   aria-invalid={Boolean(timestampError)}
+                  aria-describedby={
+                    timestampError ? timestampErrorId : undefined
+                  }
                   onChange={(event) => {
                     onCustomUnixMillisecondsChange(event.target.value)
                   }}

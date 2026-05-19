@@ -23,6 +23,7 @@ function UuidV7GeneratorClient({
         countId={state.countId}
         customDateTimeId={state.customDateTimeId}
         customUnixMillisecondsId={state.customUnixMillisecondsId}
+        timestampErrorId={state.timestampErrorId}
         mode={state.mode}
         count={state.count}
         timestampMode={state.timestampMode}
@@ -46,6 +47,7 @@ function UuidV7GeneratorClient({
         output={state.output}
         count={state.generatedCount}
         isBatchMode={state.mode === "batch"}
+        timestampErrorId={state.timestampErrorId}
         timestampError={state.timestampError}
         onRegenerate={state.regenerate}
       />

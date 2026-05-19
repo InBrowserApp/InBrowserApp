@@ -31,6 +31,7 @@ function useUuidV7Generator(messages: UuidV7Messages, language: string) {
   const countId = useId()
   const customDateTimeId = useId()
   const customUnixMillisecondsId = useId()
+  const timestampErrorId = useId()
 
   const [count, setCount] = useState(UUID_V7_DEFAULT_COUNT)
   const [mode, setMode] = useState<UuidV7GenerationMode>(UUID_V7_DEFAULT_MODE)
@@ -163,6 +164,7 @@ function useUuidV7Generator(messages: UuidV7Messages, language: string) {
     countId,
     customDateTimeId,
     customUnixMillisecondsId,
+    timestampErrorId,
     mode,
     count,
     timestampMode,
@@ -187,6 +189,8 @@ function useUuidV7Generator(messages: UuidV7Messages, language: string) {
 
       if (parsedMs !== null) {
         setCustomUnixMillisecondsInput(String(parsedMs))
+      } else {
+        setCustomUnixMillisecondsInput("")
       }
     },
     setCustomUnixMillisecondsInput: (value: string) => {

@@ -342,6 +342,36 @@ describe("UuidV7GeneratorClient", () => {
     })
   })
 
+  test("clears custom timestamp output when datetime input is invalid", async () => {
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
+
+    fireEvent.click(getModeOption(messages.timestampCustomLabel))
+    fireEvent.change(screen.getByLabelText(messages.customDateTimeLabel), {
+      target: { value: "" },
+    })
+
+    await waitFor(() => {
+      expect(screen.getByText(messages.timestampInvalid)).toBeTruthy()
+      expect(getResultsTextarea().value).toBe("")
+    })
+
+    const dateTimeInput = screen.getByLabelText(messages.customDateTimeLabel)
+    const unixMillisecondsInput = screen.getByLabelText(
+      messages.customUnixMillisecondsLabel
+    )
+    const alertDescription = screen.getByText(messages.timestampInvalid)
+
+    expect(unixMillisecondsInput).toHaveProperty("value", "")
+    expect(dateTimeInput.getAttribute("aria-invalid")).toBe("true")
+    expect(unixMillisecondsInput.getAttribute("aria-invalid")).toBe("true")
+    expect(dateTimeInput.getAttribute("aria-describedby")).toBe(
+      alertDescription.id
+    )
+    expect(unixMillisecondsInput.getAttribute("aria-describedby")).toBe(
+      alertDescription.id
+    )
+  })
+
   test("shows an error and clears output for invalid custom timestamps", async () => {
     render(<UuidV7GeneratorClient messages={messages} language="en" />)
 

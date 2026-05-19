@@ -27,6 +27,7 @@ type UuidV7ResultsCardProps = Readonly<{
   output: string
   count: number
   isBatchMode: boolean
+  timestampErrorId: string
   timestampError: string
   onRegenerate: () => void
 }>
@@ -40,6 +41,7 @@ function UuidV7ResultsCard({
   output,
   count,
   isBatchMode,
+  timestampErrorId,
   timestampError,
   onRegenerate,
 }: UuidV7ResultsCardProps) {
@@ -53,7 +55,9 @@ function UuidV7ResultsCard({
         {timestampError ? (
           <Alert variant="destructive">
             <TriangleAlert />
-            <AlertDescription>{timestampError}</AlertDescription>
+            <AlertDescription id={timestampErrorId}>
+              {timestampError}
+            </AlertDescription>
           </Alert>
         ) : null}
 
