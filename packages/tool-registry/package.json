@@ -202,6 +202,7 @@
     "@tool/uuid-v4-generator": "workspace:*",
     "@tool/uuid-v5-generator": "workspace:*",
     "@tool/uuid-v6-generator": "workspace:*",
+    "@tool/uuid-v7-generator": "workspace:*",
     "@tool/uuid-validator": "workspace:*",
     "@tool/vin-validator": "workspace:*",
     "@tool/whirlpool-hash-text-or-file": "workspace:*",

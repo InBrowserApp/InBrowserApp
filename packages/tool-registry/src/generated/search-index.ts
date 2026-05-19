@@ -24509,6 +24509,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "uuid-v7-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid-v7",
+      "id",
+      "identifier",
+      "unique",
+      "sortable",
+      "timestamp",
+      "random",
+      "generator",
+      "database",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد UUID v7",
+        description:
+          "أنشئ معرّفات UUID v7 قابلة للفرز حسب الطابع الزمني داخل متصفحك لقواعد البيانات والأحداث والأنظمة الموزعة.",
+      },
+      de: {
+        name: "UUID v7-Generator",
+        description:
+          "Erzeuge nach Zeitstempel sortierbare UUID v7-Kennungen im Browser für Datenbanken, Ereignisse und verteilte Systeme.",
+      },
+      en: {
+        name: "UUID v7 Generator",
+        description:
+          "Generate timestamp-sortable UUID v7 identifiers in your browser for databases, events, and distributed systems.",
+      },
+      es: {
+        name: "Generador de UUID v7",
+        description:
+          "Genera identificadores UUID v7 ordenables por marca de tiempo en tu navegador para bases de datos, eventos y sistemas distribuidos.",
+      },
+      fr: {
+        name: "Générateur d'UUID v7",
+        description:
+          "Générez dans votre navigateur des identifiants UUID v7 triables par horodatage pour les bases de données, les événements et les systèmes distribués.",
+      },
+      he: {
+        name: "מחולל UUID v7",
+        description:
+          "צרו מזהי UUID v7 הניתנים למיון לפי חותמת זמן ישירות בדפדפן, עבור מסדי נתונים, אירועים ומערכות מבוזרות.",
+      },
+      hi: {
+        name: "UUID v7 जनरेटर",
+        description:
+          "डेटाबेस, ईवेंट और वितरित सिस्टम के लिए अपने ब्राउज़र में टाइमस्टैम्प के आधार पर क्रमबद्ध होने योग्य UUID v7 पहचानकर्ता जनरेट करें।",
+      },
+      id: {
+        name: "Generator UUID v7",
+        description:
+          "Buat pengenal UUID v7 yang dapat diurutkan berdasarkan stempel waktu di browser Anda untuk basis data, peristiwa, dan sistem terdistribusi.",
+      },
+      it: {
+        name: "Generatore di UUID v7",
+        description:
+          "Genera identificatori UUID v7 ordinabili per timestamp nel browser per database, eventi e sistemi distribuiti.",
+      },
+      ja: {
+        name: "UUID v7 ジェネレーター",
+        description:
+          "データベース、イベント、分散システム向けに、タイムスタンプ順にソートできるUUID v7識別子をブラウザー内で生成します。",
+      },
+      ko: {
+        name: "UUID v7 생성기",
+        description:
+          "데이터베이스, 이벤트, 분산 시스템에 사용할 수 있는 타임스탬프 정렬 가능 UUID v7 식별자를 브라우저에서 생성합니다.",
+      },
+      ms: {
+        name: "Penjana UUID v7",
+        description:
+          "Jana pengecam UUID v7 yang boleh diisih mengikut cap masa dalam pelayar anda untuk pangkalan data, peristiwa dan sistem teragih.",
+      },
+      nl: {
+        name: "UUID v7-generator",
+        description:
+          "Genereer in je browser UUID v7-identifiers die op tijdstempel sorteerbaar zijn, voor databases, gebeurtenissen en gedistribueerde systemen.",
+      },
+      no: {
+        name: "UUID v7-generator",
+        description:
+          "Generer tidsstempelsorterbare UUID v7-identifikatorer i nettleseren for databaser, hendelser og distribuerte systemer.",
+      },
+      pl: {
+        name: "Generator UUID v7",
+        description:
+          "Generuj w przeglądarce identyfikatory UUID v7 sortowalne według czasu dla baz danych, zdarzeń i systemów rozproszonych.",
+      },
+      pt: {
+        name: "Gerador de UUID v7",
+        description:
+          "Gere identificadores UUID v7 ordenáveis por timestamp no navegador para bancos de dados, eventos e sistemas distribuídos.",
+      },
+      ru: {
+        name: "Генератор UUID v7",
+        description:
+          "Генерируйте сортируемые по времени идентификаторы UUID v7 прямо в браузере для баз данных, событий и распределенных систем.",
+      },
+      sv: {
+        name: "UUID v7-generator",
+        description:
+          "Generera tidsstämpelsorterbara UUID v7-identifierare i din webbläsare för databaser, händelser och distribuerade system.",
+      },
+      th: {
+        name: "ตัวสร้าง UUID v7",
+        description:
+          "สร้างตัวระบุ UUID v7 ที่เรียงตามเวลาได้ในเบราว์เซอร์ของคุณ สำหรับฐานข้อมูล เหตุการณ์ และระบบแบบกระจาย",
+      },
+      tr: {
+        name: "UUID v7 Oluşturucu",
+        description:
+          "Veritabanları, etkinlikler ve dağıtık sistemler için tarayıcınızda zaman damgasına göre sıralanabilir UUID v7 tanımlayıcıları oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo UUID v7",
+        description:
+          "Tạo các mã định danh UUID v7 có thể sắp xếp theo dấu thời gian ngay trong trình duyệt cho cơ sở dữ liệu, sự kiện và hệ thống phân tán.",
+      },
+      "zh-CN": {
+        name: "UUID v7 生成器",
+        description:
+          "在浏览器中生成可按时间戳排序的 UUID v7 标识符，适用于数据库、事件和分布式系统。",
+      },
+      "zh-TW": {
+        name: "UUID v7 產生器",
+        description:
+          "在瀏覽器中產生可依時間戳記排序的 UUID v7 識別碼，適用於資料庫、事件與分散式系統。",
+      },
+    },
+  },
+  {
     slug: "uuid-validator",
     category: "developer",
     icon: "binary",
