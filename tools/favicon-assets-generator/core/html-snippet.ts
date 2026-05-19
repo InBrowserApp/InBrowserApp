@@ -59,5 +59,4 @@ function buildHeadHtml({
   ].join("\n")
 }
 
-export type { HtmlSnippetInput }
 export { buildDesktopIconMarkup, buildHeadHtml, buildThemeColorMarkup }

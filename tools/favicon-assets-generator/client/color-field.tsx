@@ -67,4 +67,4 @@ function ColorField({
   )
 }
 
-export { ColorField, isValidHex, normalizeHexInput }
+export { ColorField }

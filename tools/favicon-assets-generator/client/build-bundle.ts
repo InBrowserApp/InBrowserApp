@@ -152,5 +152,4 @@ async function renderIco(
 }
 /* v8 ignore stop */
 
-export type { AssembleInput }
 export { assembleBundle }

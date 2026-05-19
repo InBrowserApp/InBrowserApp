@@ -42,5 +42,4 @@ function computeSquareDrawLayout({
   return { x, y, width, height }
 }
 
-export type { SquareDrawLayout, SquareDrawLayoutInput }
 export { clampMarginPercent, computeSquareDrawLayout }

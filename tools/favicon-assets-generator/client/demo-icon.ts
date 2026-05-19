@@ -20,4 +20,4 @@ function createDemoIconFile(filename: string): File {
   return new File([blob], filename, { type: DEMO_ICON_MIME })
 }
 
-export { DEMO_ICON_MIME, DEMO_ICON_SVG, createDemoIconFile }
+export { createDemoIconFile }

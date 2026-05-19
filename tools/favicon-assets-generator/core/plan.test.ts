@@ -15,15 +15,16 @@ import {
   resolveSourceKey,
   shouldEmitVectorDesktopIcon,
 } from "./plan"
+import type { PlanInput } from "./plan"
 import type { AssetSpec } from "./plan"
 
-const baseInput = {
+const baseInput: PlanInput = {
   desktopSourceIsSvg: false,
   site: DEFAULT_SITE_CONFIG,
   desktop: DEFAULT_DESKTOP_ICON_CONFIG,
   ios: DEFAULT_IOS_ICON_CONFIG,
   pwa: DEFAULT_PWA_ICON_CONFIG,
-} as const
+}
 
 function filenamesOf(plan: readonly AssetSpec[]): readonly string[] {
   return plan.map((asset) => asset.filename)

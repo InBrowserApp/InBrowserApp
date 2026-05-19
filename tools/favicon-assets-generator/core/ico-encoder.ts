@@ -96,5 +96,4 @@ function encodeIco(images: readonly IcoImageInput[]): Uint8Array {
   return output
 }
 
-export type { IcoImageInput }
 export { encodeIco, readPngDimensions }

@@ -86,5 +86,4 @@ function manifestToJsonString(manifest: Manifest): string {
   return `${JSON.stringify(manifest, null, 2)}\n`
 }
 
-export type { Manifest, ManifestIcon, ManifestInput }
 export { buildManifest, buildManifestIcons, manifestToJsonString }

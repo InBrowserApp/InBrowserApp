@@ -1,8 +1,4 @@
-import type {
-  DedicatedSourceKey,
-  RasterPlatform,
-  SourceKey,
-} from "../core/plan"
+import type { RasterPlatform } from "../core/plan"
 
 type ImageSource = Readonly<{
   file: File
@@ -152,13 +148,9 @@ type FaviconMessages = Readonly<{
 }>
 
 export type {
-  DedicatedSourceKey,
   FaviconMessages,
   GeneratedAsset,
   GeneratedBundle,
   GenerationError,
-  GenerationErrorCode,
   ImageSource,
-  RasterPlatform,
-  SourceKey,
 }
