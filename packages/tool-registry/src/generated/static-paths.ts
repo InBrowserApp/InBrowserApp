@@ -5522,6 +5522,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "gif-to-apng-converter",
+    language: "ar",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "de",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "en",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "es",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "fr",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "he",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "hi",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "id",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "it",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "ja",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "ko",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "ms",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "nl",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "no",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "pl",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "pt",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "ru",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "sv",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "th",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "tr",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "vi",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "gitignore-generator",
     language: "ar",
   },

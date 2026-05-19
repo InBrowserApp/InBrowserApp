@@ -7602,6 +7602,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "gif-to-apng-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "gif", "apng", "animation", "converter", "offline"],
+    locales: {
+      ar: {
+        name: "محول GIF إلى APNG",
+        description:
+          "حوّل ملفات GIF المتحركة إلى رسوم APNG PNG متحركة مع تصدير دفعات محلي، والتحجيم، وسرعة التشغيل، وعناصر التحكم في التكرار.",
+      },
+      de: {
+        name: "GIF zu APNG Converter",
+        description:
+          "Konvertiere animierte GIF-Dateien zu APNG PNG-Animationen mit lokalem Batchexport, Skalierung, Wiedergabegeschwindigkeit und Schleifensteuerung.",
+      },
+      en: {
+        name: "GIF to APNG Converter",
+        description:
+          "Convert animated GIF files to APNG PNG animations with local batch export, scaling, playback speed, and loop controls.",
+      },
+      es: {
+        name: "Convertidor de GIF a APNG",
+        description:
+          "Convierte archivos GIF animados a animaciones APNG PNG con exportación local por lotes, escalado, velocidad de reproducción y controles de bucle.",
+      },
+      fr: {
+        name: "Convertisseur GIF en APNG",
+        description:
+          "Convertissez des fichiers GIF animés en animations APNG PNG avec export local par lot, mise à l'échelle, vitesse de lecture et contrôles de boucle.",
+      },
+      he: {
+        name: "ממיר GIF ל-APNG",
+        description:
+          "המר קובצי GIF מונפשים לאנימציות APNG PNG עם ייצוא אצווה מקומי, שינוי גודל, מהירות הפעלה ובקרות לולאה.",
+      },
+      hi: {
+        name: "GIF से APNG कन्वर्टर",
+        description:
+          "लोकल बैच एक्सपोर्ट, स्केलिंग, प्लेबैक स्पीड और लूप नियंत्रणों के साथ animated GIF फाइलों को APNG PNG animations में बदलें।",
+      },
+      id: {
+        name: "Konverter GIF ke APNG",
+        description:
+          "Konversi file GIF animasi ke animasi APNG PNG dengan ekspor batch lokal, penskalaan, kecepatan pemutaran, dan kontrol pengulangan.",
+      },
+      it: {
+        name: "Convertitore da GIF ad APNG",
+        description:
+          "Converti file GIF animati in animazioni APNG PNG con esportazione batch locale, ridimensionamento, velocita di riproduzione e controlli di ripetizione.",
+      },
+      ja: {
+        name: "GIF から APNG へのコンバーター",
+        description:
+          "アニメーション GIF ファイルを APNG PNG アニメーションに変換し、ローカルでの一括書き出し、拡大縮小、再生速度、ループを制御できます。",
+      },
+      ko: {
+        name: "GIF to APNG 변환기",
+        description:
+          "애니메이션 GIF 파일을 로컬 일괄 내보내기, 크기 조절, 재생 속도, 반복 제어 기능을 갖춘 APNG PNG 애니메이션으로 변환하세요.",
+      },
+      ms: {
+        name: "Penukar GIF kepada APNG",
+        description:
+          "Tukar fail GIF animasi kepada animasi APNG PNG dengan eksport kelompok setempat, penskalaan, kelajuan main balik, dan kawalan gelung.",
+      },
+      nl: {
+        name: "GIF naar APNG converter",
+        description:
+          "Zet geanimeerde GIF-bestanden om naar APNG PNG-animaties met lokale batchexport, schalen, afspeelsnelheid en lusinstellingen.",
+      },
+      no: {
+        name: "GIF til APNG-konverterer",
+        description:
+          "Konverter animerte GIF-filer til APNG PNG-animasjoner med lokal gruppeeksport, skalering, avspillingshastighet og løkkekontroller.",
+      },
+      pl: {
+        name: "Konwerter GIF na APNG",
+        description:
+          "Konwertuj animowane pliki GIF na animacje APNG PNG z lokalnym eksportem wsadowym, skalowaniem, kontrolą prędkości odtwarzania i pętli.",
+      },
+      pt: {
+        name: "Conversor de GIF para APNG",
+        description:
+          "Converta arquivos GIF animados em animações APNG PNG com exportação local em lote, escala, velocidade de reprodução e controles de loop.",
+      },
+      ru: {
+        name: "Конвертер GIF в APNG",
+        description:
+          "Конвертируйте анимированные GIF-файлы в APNG-анимации PNG с локальным пакетным экспортом, масштабированием, настройкой скорости воспроизведения и параметрами повтора.",
+      },
+      sv: {
+        name: "GIF till APNG-konverterare",
+        description:
+          "Konvertera animerade GIF-filer till APNG PNG-animationer med lokal batchexport, skalning, uppspelningshastighet och loopkontroller.",
+      },
+      th: {
+        name: "ตัวแปลง GIF เป็น APNG",
+        description:
+          "แปลงไฟล์ GIF แบบเคลื่อนไหวเป็นภาพเคลื่อนไหว APNG PNG พร้อมการส่งออกแบบชุดในเครื่อง การปรับขนาด ความเร็วในการเล่น และการควบคุมการวนซ้ำ",
+      },
+      tr: {
+        name: "GIF'ten APNG'ye Dönüştürücü",
+        description:
+          "Animasyonlu GIF dosyalarını yerel toplu dışa aktarma, ölçekleme, oynatma hızı ve döngü kontrolleriyle APNG PNG animasyonlarına dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi GIF sang APNG",
+        description:
+          "Chuyển đổi tệp GIF động thành ảnh động APNG PNG với xuất hàng loạt cục bộ, cùng các tùy chọn tỷ lệ, tốc độ phát và vòng lặp.",
+      },
+      "zh-CN": {
+        name: "GIF 转 APNG 转换器",
+        description:
+          "将动画 GIF 文件转换为 APNG PNG 动画，支持本地批量导出、缩放、播放速度和循环控制。",
+      },
+      "zh-TW": {
+        name: "GIF 轉 APNG 轉換器",
+        description:
+          "將動畫 GIF 檔轉換為 APNG PNG 動畫，支援本機批次匯出、縮放、播放速度與循環控制。",
+      },
+    },
+  },
+  {
     slug: "gitignore-generator",
     category: "developer",
     icon: "file-text",
@@ -33138,6 +33261,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "檔案轉 Data URI 轉換器",
         description:
           "將檔案轉換為 Data URI 字串，方便嵌入 HTML、CSS 或 JSON，完全離線。",
+      },
+    },
+  },
+  "gif-to-apng-converter": {
+    slug: "gif-to-apng-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "gif", "apng", "animation", "converter", "offline"],
+    locales: {
+      ar: {
+        name: "محول GIF إلى APNG",
+        description:
+          "حوّل ملفات GIF المتحركة إلى رسوم APNG PNG متحركة مع تصدير دفعات محلي، والتحجيم، وسرعة التشغيل، وعناصر التحكم في التكرار.",
+      },
+      de: {
+        name: "GIF zu APNG Converter",
+        description:
+          "Konvertiere animierte GIF-Dateien zu APNG PNG-Animationen mit lokalem Batchexport, Skalierung, Wiedergabegeschwindigkeit und Schleifensteuerung.",
+      },
+      en: {
+        name: "GIF to APNG Converter",
+        description:
+          "Convert animated GIF files to APNG PNG animations with local batch export, scaling, playback speed, and loop controls.",
+      },
+      es: {
+        name: "Convertidor de GIF a APNG",
+        description:
+          "Convierte archivos GIF animados a animaciones APNG PNG con exportación local por lotes, escalado, velocidad de reproducción y controles de bucle.",
+      },
+      fr: {
+        name: "Convertisseur GIF en APNG",
+        description:
+          "Convertissez des fichiers GIF animés en animations APNG PNG avec export local par lot, mise à l'échelle, vitesse de lecture et contrôles de boucle.",
+      },
+      he: {
+        name: "ממיר GIF ל-APNG",
+        description:
+          "המר קובצי GIF מונפשים לאנימציות APNG PNG עם ייצוא אצווה מקומי, שינוי גודל, מהירות הפעלה ובקרות לולאה.",
+      },
+      hi: {
+        name: "GIF से APNG कन्वर्टर",
+        description:
+          "लोकल बैच एक्सपोर्ट, स्केलिंग, प्लेबैक स्पीड और लूप नियंत्रणों के साथ animated GIF फाइलों को APNG PNG animations में बदलें।",
+      },
+      id: {
+        name: "Konverter GIF ke APNG",
+        description:
+          "Konversi file GIF animasi ke animasi APNG PNG dengan ekspor batch lokal, penskalaan, kecepatan pemutaran, dan kontrol pengulangan.",
+      },
+      it: {
+        name: "Convertitore da GIF ad APNG",
+        description:
+          "Converti file GIF animati in animazioni APNG PNG con esportazione batch locale, ridimensionamento, velocita di riproduzione e controlli di ripetizione.",
+      },
+      ja: {
+        name: "GIF から APNG へのコンバーター",
+        description:
+          "アニメーション GIF ファイルを APNG PNG アニメーションに変換し、ローカルでの一括書き出し、拡大縮小、再生速度、ループを制御できます。",
+      },
+      ko: {
+        name: "GIF to APNG 변환기",
+        description:
+          "애니메이션 GIF 파일을 로컬 일괄 내보내기, 크기 조절, 재생 속도, 반복 제어 기능을 갖춘 APNG PNG 애니메이션으로 변환하세요.",
+      },
+      ms: {
+        name: "Penukar GIF kepada APNG",
+        description:
+          "Tukar fail GIF animasi kepada animasi APNG PNG dengan eksport kelompok setempat, penskalaan, kelajuan main balik, dan kawalan gelung.",
+      },
+      nl: {
+        name: "GIF naar APNG converter",
+        description:
+          "Zet geanimeerde GIF-bestanden om naar APNG PNG-animaties met lokale batchexport, schalen, afspeelsnelheid en lusinstellingen.",
+      },
+      no: {
+        name: "GIF til APNG-konverterer",
+        description:
+          "Konverter animerte GIF-filer til APNG PNG-animasjoner med lokal gruppeeksport, skalering, avspillingshastighet og løkkekontroller.",
+      },
+      pl: {
+        name: "Konwerter GIF na APNG",
+        description:
+          "Konwertuj animowane pliki GIF na animacje APNG PNG z lokalnym eksportem wsadowym, skalowaniem, kontrolą prędkości odtwarzania i pętli.",
+      },
+      pt: {
+        name: "Conversor de GIF para APNG",
+        description:
+          "Converta arquivos GIF animados em animações APNG PNG com exportação local em lote, escala, velocidade de reprodução e controles de loop.",
+      },
+      ru: {
+        name: "Конвертер GIF в APNG",
+        description:
+          "Конвертируйте анимированные GIF-файлы в APNG-анимации PNG с локальным пакетным экспортом, масштабированием, настройкой скорости воспроизведения и параметрами повтора.",
+      },
+      sv: {
+        name: "GIF till APNG-konverterare",
+        description:
+          "Konvertera animerade GIF-filer till APNG PNG-animationer med lokal batchexport, skalning, uppspelningshastighet och loopkontroller.",
+      },
+      th: {
+        name: "ตัวแปลง GIF เป็น APNG",
+        description:
+          "แปลงไฟล์ GIF แบบเคลื่อนไหวเป็นภาพเคลื่อนไหว APNG PNG พร้อมการส่งออกแบบชุดในเครื่อง การปรับขนาด ความเร็วในการเล่น และการควบคุมการวนซ้ำ",
+      },
+      tr: {
+        name: "GIF'ten APNG'ye Dönüştürücü",
+        description:
+          "Animasyonlu GIF dosyalarını yerel toplu dışa aktarma, ölçekleme, oynatma hızı ve döngü kontrolleriyle APNG PNG animasyonlarına dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi GIF sang APNG",
+        description:
+          "Chuyển đổi tệp GIF động thành ảnh động APNG PNG với xuất hàng loạt cục bộ, cùng các tùy chọn tỷ lệ, tốc độ phát và vòng lặp.",
+      },
+      "zh-CN": {
+        name: "GIF 转 APNG 转换器",
+        description:
+          "将动画 GIF 文件转换为 APNG PNG 动画，支持本地批量导出、缩放、播放速度和循环控制。",
+      },
+      "zh-TW": {
+        name: "GIF 轉 APNG 轉換器",
+        description:
+          "將動畫 GIF 檔轉換為 APNG PNG 動畫，支援本機批次匯出、縮放、播放速度與循環控制。",
       },
     },
   },

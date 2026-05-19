@@ -1,0 +1,4 @@
+{
+  "name": "GIF 转 APNG 转换器",
+  "description": "将动画 GIF 文件转换为 APNG PNG 动画，支持本地批量导出、缩放、播放速度和循环控制。"
+}

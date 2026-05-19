@@ -7,7 +7,9 @@ function ToolPanelCard({
   className,
   ...props
 }: React.ComponentProps<typeof Card>) {
-  return <Card className={cn("h-full min-h-0", className)} {...props} />
+  return (
+    <Card className={cn("h-full min-h-0 gap-0 py-0", className)} {...props} />
+  )
 }
 
 function ToolPanelCardContent({

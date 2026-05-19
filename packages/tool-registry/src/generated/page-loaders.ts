@@ -81,6 +81,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "exif-viewer": () => import("@tool/exif-viewer/page"),
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
+  "gif-to-apng-converter": () => import("@tool/gif-to-apng-converter/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "highwayhash-hash-text-or-file": () =>
     import("@tool/highwayhash-hash-text-or-file/page"),
