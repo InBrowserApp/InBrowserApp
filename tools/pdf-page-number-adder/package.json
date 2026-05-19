@@ -10,6 +10,7 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
+    "pdfjs-dist": "catalog:",
     "pdf-lib": "catalog:"
   },
   "peerDependencies": {

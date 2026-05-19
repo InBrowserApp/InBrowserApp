@@ -20,7 +20,6 @@ import {
   isPdfFile,
 } from "./core/pdf-page-numbers"
 import { PreviewCard } from "./client/preview-card"
-import { ResultCard } from "./client/result-card"
 import { SettingsCard } from "./client/settings-card"
 import { UploadCard } from "./client/upload-card"
 import { getRangeErrorMessage, resolvePdfErrorMessage } from "./client/utils"
@@ -201,10 +200,14 @@ function PdfPageNumberAdderClient({ messages }: PdfPageNumberAdderClientProps) {
             onRemoveFile={removeFile}
             pageCount={pageCount}
           />
-          <ResultCard
+          <PreviewCard
+            file={fileState?.file ?? null}
             isGenerating={isGenerating}
             messages={messages}
+            options={formOptions}
+            pageCount={pageCount}
             result={result}
+            selectedPageCount={rangeValidation.pages.length}
           />
         </div>
 
@@ -229,12 +232,6 @@ function PdfPageNumberAdderClient({ messages }: PdfPageNumberAdderClientProps) {
             options={formOptions}
             rangeError={rangeError}
             rangeInput={rangeInput}
-          />
-          <PreviewCard
-            messages={messages}
-            options={formOptions}
-            pageCount={pageCount}
-            selectedPageCount={rangeValidation.pages.length}
           />
         </div>
       </div>
