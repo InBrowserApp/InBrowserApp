@@ -53,6 +53,7 @@ const messages: PdfPageNumberAdderMessages = {
     description: "Add page numbers to PDF files.",
     name: "PDF Page Number Adder",
   },
+  nextPreviewPageLabel: "Next preview page",
   noFileError: "Upload a PDF first.",
   numberOnlyFormat: "Number only",
   numberTotalFormat: "Number / total",
@@ -62,9 +63,11 @@ const messages: PdfPageNumberAdderMessages = {
   pageRangeLabel: "Pages to number",
   pageRangePlaceholder: "All pages",
   positionLabel: "Position",
-  previewDescription: "A simplified page preview.",
+  previewDescription: "Preview any selected page.",
+  previewPageStatus: "Previewing page {page} of {total}",
   previewSamplePage: "Sample page",
   previewTitle: "Placement preview",
+  previousPreviewPageLabel: "Previous preview page",
   rangeDescending: "Descending range.",
   rangeDuplicate: "Duplicate page.",
   rangeInvalidToken: "Invalid page range.",
@@ -139,6 +142,18 @@ describe("PdfPageNumberAdderClient", () => {
     expect(screen.getByText(messages.settingsTitle)).toBeTruthy()
     expect(screen.getByText(messages.previewTitle)).toBeTruthy()
     expect(screen.getByText(messages.emptyResultTitle)).toBeTruthy()
+    expect(
+      screen
+        .getByText(messages.uploadTitle)
+        .compareDocumentPosition(screen.getByText(messages.settingsTitle)) &
+        Node.DOCUMENT_POSITION_FOLLOWING
+    ).toBeTruthy()
+    expect(
+      screen
+        .getByText(messages.settingsTitle)
+        .compareDocumentPosition(screen.getByText(messages.previewTitle)) &
+        Node.DOCUMENT_POSITION_FOLLOWING
+    ).toBeTruthy()
     expect(
       screen.getByRole("button", { name: messages.generateLabel })
     ).toHaveProperty("disabled", true)
@@ -222,6 +237,33 @@ describe("PdfPageNumberAdderClient", () => {
       startNumber: 7,
     })
     expect(screen.getByText("2 pages selected")).toBeTruthy()
+  })
+
+  test("previews selected pages with lightweight page controls", async () => {
+    render(<PdfPageNumberAdderClient messages={messages} />)
+    await uploadPdf("preview.pdf", 5)
+
+    expect(screen.getByText("Previewing page 1 of 5")).toBeTruthy()
+    fireEvent.change(screen.getByLabelText(messages.pageRangeLabel), {
+      target: { value: "2-3" },
+    })
+    expect(screen.getByText("Previewing page 2 of 5")).toBeTruthy()
+
+    const previousButton = screen.getByRole("button", {
+      name: messages.previousPreviewPageLabel,
+    })
+    const nextButton = screen.getByRole("button", {
+      name: messages.nextPreviewPageLabel,
+    })
+    expect(previousButton).toHaveProperty("disabled", true)
+
+    await waitFor(() => {
+      expect(nextButton).toHaveProperty("disabled", false)
+    })
+    fireEvent.click(nextButton)
+
+    expect(screen.getByText("Previewing page 3 of 5")).toBeTruthy()
+    expect(nextButton).toHaveProperty("disabled", true)
   })
 
   test("shows range, unsupported file, read, and generation errors", async () => {

@@ -1,8 +1,11 @@
+import { useEffect, useMemo, useState } from "react"
+
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
   CardContent,
+  CardDescription,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -13,12 +16,14 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
-import { Download, FileText } from "@workspace/ui/icons"
-
 import {
-  buildPageNumberLabel,
-  resolvePageNumberCoordinates,
-} from "../core/page-number-layout"
+  ChevronLeft,
+  ChevronRight,
+  Download,
+  FileText,
+} from "@workspace/ui/icons"
+
+import { PreviewPage } from "./preview-page"
 import { useObjectUrl } from "./use-object-url"
 import { usePdfPagePreview } from "./use-pdf-page-preview"
 import { formatBytes, formatMessage } from "./utils"
@@ -28,7 +33,6 @@ import type {
   PdfPageNumberAdderMessages,
   PdfPageNumberResult,
 } from "./types"
-import type { PdfPagePreview } from "./use-pdf-page-preview"
 
 type PreviewCardProps = Readonly<{
   file: File | null
@@ -37,11 +41,8 @@ type PreviewCardProps = Readonly<{
   options: PageNumberFormOptions
   pageCount: number
   result: PdfPageNumberResult | null
-  selectedPageCount: number
+  selectedPages: readonly number[]
 }>
-
-const FALLBACK_PAGE_HEIGHT = 792
-const FALLBACK_PAGE_WIDTH = 612
 
 function PreviewCard({
   file,
@@ -50,21 +51,29 @@ function PreviewCard({
   options,
   pageCount,
   result,
-  selectedPageCount,
+  selectedPages,
 }: PreviewCardProps) {
+  const [currentPreviewIndex, setCurrentPreviewIndex] = useState(0)
   const resultUrl = useObjectUrl(result?.blob ?? null)
-  const { isRenderingPreview, preview } = usePdfPagePreview(file)
-  const sampleTotal = pageCount || 12
-  const label = buildPageNumberLabel(
-    0,
-    sampleTotal,
-    options.startNumber,
-    options.format
+  const previewPageNumbers = useMemo(
+    () => (selectedPages.length ? selectedPages : pageCount ? [1] : []),
+    [pageCount, selectedPages]
+  )
+  const previewPageKey = previewPageNumbers.join(",")
+  const previewIndex = Math.min(
+    currentPreviewIndex,
+    Math.max(0, previewPageNumbers.length - 1)
+  )
+  const previewPageNumber = previewPageNumbers[previewIndex] ?? 1
+  const { isRenderingPreview, preview } = usePdfPagePreview(
+    file,
+    previewPageNumber
   )
   const fontFamily =
     options.fontFamily === "serif"
       ? '"Times New Roman", Times, serif'
       : "Helvetica, Arial, sans-serif"
+  const selectedPageCount = selectedPages.length
   const selectedPagesLabel = pageCount
     ? selectedPageCount === pageCount
       ? messages.allPagesSelected
@@ -72,21 +81,48 @@ function PreviewCard({
           count: selectedPageCount,
         })
     : messages.previewSamplePage
+  const previewPageStatus = pageCount
+    ? formatMessage(messages.previewPageStatus, {
+        page: previewPageNumber,
+        total: pageCount,
+      })
+    : messages.previewSamplePage
+
+  useEffect(() => {
+    setCurrentPreviewIndex(0)
+  }, [file, previewPageKey])
 
   return (
     <Card>
       <CardHeader>
         <CardTitle>{messages.previewTitle}</CardTitle>
+        <CardDescription>{messages.previewDescription}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_18rem]">
         <div className="flex min-w-0 flex-col gap-3">
-          <PagePreview
+          <PreviewPage
             fontFamily={fontFamily}
             isRenderingPreview={isRenderingPreview}
-            label={label}
             messages={messages}
             options={options}
+            pageCount={pageCount}
             preview={preview}
+            selectedPageIndex={previewIndex}
+          />
+          <PreviewNavigation
+            canGoNext={previewIndex < previewPageNumbers.length - 1}
+            canGoPrevious={previewIndex > 0}
+            disabled={isRenderingPreview}
+            messages={messages}
+            onNext={() => {
+              setCurrentPreviewIndex((index) =>
+                Math.min(previewPageNumbers.length - 1, index + 1)
+              )
+            }}
+            onPrevious={() => {
+              setCurrentPreviewIndex((index) => Math.max(0, index - 1))
+            }}
+            status={previewPageStatus}
           />
           <p className="text-center text-sm text-muted-foreground">
             {selectedPagesLabel}
@@ -103,93 +139,52 @@ function PreviewCard({
   )
 }
 
-function PagePreview({
-  fontFamily,
-  isRenderingPreview,
-  label,
+function PreviewNavigation({
+  canGoNext,
+  canGoPrevious,
+  disabled,
   messages,
-  options,
-  preview,
+  onNext,
+  onPrevious,
+  status,
 }: Readonly<{
-  fontFamily: string
-  isRenderingPreview: boolean
-  label: string
+  canGoNext: boolean
+  canGoPrevious: boolean
+  disabled: boolean
   messages: PdfPageNumberAdderMessages
-  options: PageNumberFormOptions
-  preview: PdfPagePreview | null
+  onNext: () => void
+  onPrevious: () => void
+  status: string
 }>) {
-  const pageHeight = preview?.pageHeight ?? FALLBACK_PAGE_HEIGHT
-  const pageWidth = preview?.pageWidth ?? FALLBACK_PAGE_WIDTH
-  const textWidth = estimateTextWidth(label, options.fontSize, fontFamily)
-  const coordinates = resolvePageNumberCoordinates({
-    fontSize: options.fontSize,
-    marginX: options.marginX,
-    marginY: options.marginY,
-    pageHeight,
-    pageWidth,
-    position: options.position,
-    textWidth,
-  })
-  const textY = pageHeight - coordinates.y
-
   return (
-    <div className="mx-auto w-full max-w-md rounded-lg bg-muted/30 p-3">
-      <div
-        className="relative overflow-hidden rounded-sm border border-border bg-white text-black shadow-lg"
-        style={{ aspectRatio: `${pageWidth} / ${pageHeight}` }}
+    <div className="flex flex-wrap items-center justify-center gap-2">
+      <Button
+        aria-label={messages.previousPreviewPageLabel}
+        disabled={disabled || !canGoPrevious}
+        onClick={onPrevious}
+        size="icon-sm"
+        type="button"
+        variant="outline"
       >
-        {preview ? (
-          <img
-            alt=""
-            className="size-full object-cover"
-            height={preview.height}
-            src={preview.imageUrl}
-            width={preview.width}
-          />
-        ) : (
-          <FallbackPage
-            isRenderingPreview={isRenderingPreview}
-            messages={messages}
-          />
-        )}
-        <svg
-          aria-hidden="true"
-          className="absolute inset-0 size-full"
-          preserveAspectRatio="none"
-          viewBox={`0 0 ${pageWidth} ${pageHeight}`}
-        >
-          <text
-            fill="currentColor"
-            fontFamily={fontFamily}
-            fontSize={options.fontSize}
-            x={coordinates.x}
-            y={textY}
-          >
-            {label}
-          </text>
-        </svg>
-      </div>
+        <ChevronLeft />
+      </Button>
+      <span
+        aria-live="polite"
+        className="min-w-0 rounded-full border bg-background px-3 py-1 text-center text-sm text-muted-foreground"
+      >
+        {status}
+      </span>
+      <Button
+        aria-label={messages.nextPreviewPageLabel}
+        disabled={disabled || !canGoNext}
+        onClick={onNext}
+        size="icon-sm"
+        type="button"
+        variant="outline"
+      >
+        <ChevronRight />
+      </Button>
     </div>
-  )
-}
-
-function FallbackPage({
-  isRenderingPreview,
-  messages,
-}: Readonly<{
-  isRenderingPreview: boolean
-  messages: PdfPageNumberAdderMessages
-}>) {
-  return (
-    <>
-      <div className="absolute inset-x-0 top-1/2 border-t border-dashed border-slate-200" />
-      <div className="absolute inset-y-0 left-1/2 border-l border-dashed border-slate-200" />
-      {isRenderingPreview ? (
-        <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">
-          {messages.readingPdfTitle}
-        </div>
-      ) : null}
-    </>
   )
 }
 
@@ -261,16 +256,6 @@ function ResultPanel({
       )}
     </div>
   )
-}
-
-function estimateTextWidth(
-  label: string,
-  fontSize: number,
-  fontFamily: string
-) {
-  const averageGlyphWidth = fontFamily.includes("Times") ? 0.5 : 0.56
-
-  return label.length * fontSize * averageGlyphWidth
 }
 
 export { PreviewCard }

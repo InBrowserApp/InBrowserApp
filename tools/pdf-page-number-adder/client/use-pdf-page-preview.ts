@@ -15,7 +15,7 @@ const pdfWorkerUrl = new URL(
   import.meta.url
 ).toString()
 
-function usePdfPagePreview(file: File | null) {
+function usePdfPagePreview(file: File | null, pageNumber: number) {
   const [preview, setPreview] = useState<PdfPagePreview | null>(null)
   const [isRenderingPreview, setIsRenderingPreview] = useState(false)
 
@@ -28,9 +28,10 @@ function usePdfPagePreview(file: File | null) {
       return
     }
 
+    setPreview(null)
     setIsRenderingPreview(true)
 
-    renderFirstPagePreview(file)
+    renderPagePreview(file, pageNumber)
       .then((nextPreview) => {
         if (!canceled) {
           setPreview(nextPreview)
@@ -50,12 +51,15 @@ function usePdfPagePreview(file: File | null) {
     return () => {
       canceled = true
     }
-  }, [file])
+  }, [file, pageNumber])
 
   return { isRenderingPreview, preview }
 }
 
-async function renderFirstPagePreview(file: File): Promise<PdfPagePreview> {
+async function renderPagePreview(
+  file: File,
+  pageNumber: number
+): Promise<PdfPagePreview> {
   const pdfjs = await import("pdfjs-dist")
   pdfjs.GlobalWorkerOptions.workerSrc = pdfWorkerUrl
 
@@ -65,7 +69,7 @@ async function renderFirstPagePreview(file: File): Promise<PdfPagePreview> {
   const pdfDocument = await loadingTask.promise
 
   try {
-    const page = await pdfDocument.getPage(1)
+    const page = await pdfDocument.getPage(Math.max(1, pageNumber))
     const baseViewport = page.getViewport({ scale: 1 })
     const scale = Math.min(
       MAX_PREVIEW_SCALE,

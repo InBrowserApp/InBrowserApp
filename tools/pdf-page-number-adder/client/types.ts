@@ -30,6 +30,7 @@ type PdfPageNumberAdderMessages = Readonly<{
   marginDescription: string
   meta: ToolMeta
   noFileError: string
+  nextPreviewPageLabel: string
   numberOnlyFormat: string
   numberTotalFormat: string
   outputSizeLabel: string
@@ -39,8 +40,10 @@ type PdfPageNumberAdderMessages = Readonly<{
   pageRangePlaceholder: string
   positionLabel: string
   previewDescription: string
+  previewPageStatus: string
   previewSamplePage: string
   previewTitle: string
+  previousPreviewPageLabel: string
   rangeDescending: string
   rangeDuplicate: string
   rangeInvalidToken: string

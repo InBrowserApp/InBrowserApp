@@ -71,6 +71,7 @@ function PdfPageNumberAdderClient({ messages }: PdfPageNumberAdderClientProps) {
   const rangeError = rangeValidation.error
     ? getRangeErrorMessage(rangeValidation.error, messages)
     : ""
+  const selectedPages = rangeValidation.pages
   const canGenerate =
     Boolean(fileState) && !isReading && !isGenerating && !rangeError
 
@@ -187,7 +188,7 @@ function PdfPageNumberAdderClient({ messages }: PdfPageNumberAdderClientProps) {
   return (
     <div className="flex flex-col gap-6">
       <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
-        <div className="flex min-w-0 flex-col gap-6">
+        <div className="min-w-0 xl:col-start-1 xl:row-start-1">
           <UploadCard
             disabled={isReading || isGenerating}
             file={fileState?.file ?? null}
@@ -200,18 +201,9 @@ function PdfPageNumberAdderClient({ messages }: PdfPageNumberAdderClientProps) {
             onRemoveFile={removeFile}
             pageCount={pageCount}
           />
-          <PreviewCard
-            file={fileState?.file ?? null}
-            isGenerating={isGenerating}
-            messages={messages}
-            options={formOptions}
-            pageCount={pageCount}
-            result={result}
-            selectedPageCount={rangeValidation.pages.length}
-          />
         </div>
 
-        <div className="flex min-w-0 flex-col gap-6 xl:sticky xl:top-6">
+        <div className="min-w-0 xl:sticky xl:top-6 xl:col-start-2 xl:row-span-2 xl:row-start-1">
           <SettingsCard
             canGenerate={canGenerate}
             disabled={isReading || isGenerating || !fileState}
@@ -232,6 +224,18 @@ function PdfPageNumberAdderClient({ messages }: PdfPageNumberAdderClientProps) {
             options={formOptions}
             rangeError={rangeError}
             rangeInput={rangeInput}
+          />
+        </div>
+
+        <div className="min-w-0 xl:col-start-1 xl:row-start-2">
+          <PreviewCard
+            file={fileState?.file ?? null}
+            isGenerating={isGenerating}
+            messages={messages}
+            options={formOptions}
+            pageCount={pageCount}
+            result={result}
+            selectedPages={selectedPages}
           />
         </div>
       </div>
