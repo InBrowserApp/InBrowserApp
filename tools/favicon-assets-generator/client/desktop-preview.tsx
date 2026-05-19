@@ -59,7 +59,7 @@ function DesktopPreview({
           />
         ) : null}
         <div
-          className="absolute select-none truncate text-[10px] font-medium text-neutral-900"
+          className="absolute truncate text-[10px] font-medium text-neutral-900 select-none"
           style={{
             top: `${(28 / 86) * 100}%`,
             left: `${(86 / 524) * 100}%`,
@@ -88,7 +88,7 @@ function DesktopPreview({
           />
         ) : null}
         <div
-          className="absolute select-none truncate text-[10px] font-medium text-white"
+          className="absolute truncate text-[10px] font-medium text-white select-none"
           style={{
             top: `${(28 / 86) * 100}%`,
             left: `${(86 / 524) * 100}%`,
@@ -121,7 +121,7 @@ function DesktopPreview({
                 </span>
               </div>
             </div>
-            <span className="mt-1 text-base font-medium leading-tight text-[#1a0dab]">
+            <span className="mt-1 text-base leading-tight font-medium text-[#1a0dab]">
               {appName} — site title
             </span>
             <span className="mt-0.5 text-[11px] text-neutral-600">

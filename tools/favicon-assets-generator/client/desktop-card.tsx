@@ -124,9 +124,7 @@ function DesktopCard({
                 max={50}
                 step={1}
                 value={[cfg.margin]}
-                onValueChange={(values) =>
-                  onPatch({ margin: values[0] ?? 0 })
-                }
+                onValueChange={(values) => onPatch({ margin: values[0] ?? 0 })}
               />
               <FieldDescription>{messages.marginDescription}</FieldDescription>
             </Field>

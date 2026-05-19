@@ -22,11 +22,7 @@ import type { PWAIconConfig } from "../core/config"
 import { ColorField } from "./color-field"
 import { PlatformSourceToggle } from "./platform-source-toggle"
 import { PwaPreview } from "./pwa-preview"
-import type {
-  FaviconMessages,
-  GeneratedBundle,
-  ImageSource,
-} from "./types"
+import type { FaviconMessages, GeneratedBundle, ImageSource } from "./types"
 
 type PwaCardProps = Readonly<{
   messages: FaviconMessages
@@ -112,18 +108,13 @@ function PwaCard({
                 max={50}
                 step={1}
                 value={[cfg.margin]}
-                onValueChange={(values) =>
-                  onPatch({ margin: values[0] ?? 0 })
-                }
+                onValueChange={(values) => onPatch({ margin: values[0] ?? 0 })}
               />
               <FieldDescription>{messages.marginDescription}</FieldDescription>
             </Field>
 
             <Field orientation="horizontal">
-              <FieldLabel
-                htmlFor={`${idPrefix}-maskable`}
-                className="flex-1"
-              >
+              <FieldLabel htmlFor={`${idPrefix}-maskable`} className="flex-1">
                 {messages.includeMaskableLabel}
                 <FieldDescription className="font-normal">
                   {messages.includeMaskableDescription}

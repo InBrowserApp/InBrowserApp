@@ -56,11 +56,7 @@ function FaviconAssetsGeneratorClient({
         onUseDemo={useDemo}
       />
 
-      <SiteInfoCard
-        messages={messages}
-        siteCfg={siteCfg}
-        onPatch={patchSite}
-      />
+      <SiteInfoCard messages={messages} siteCfg={siteCfg} onPatch={patchSite} />
 
       <DesktopCard
         messages={messages}

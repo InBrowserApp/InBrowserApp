@@ -7,7 +7,6 @@ import { cn } from "@workspace/ui/lib/utils"
 type PreviewTileProps = Readonly<{
   label: string
   chromeSrc?: string
-  chromeAlt?: string
   aspectRatio: string
   className?: string
   chromeClassName?: string
@@ -18,7 +17,6 @@ type PreviewTileProps = Readonly<{
 function PreviewTile({
   label,
   chromeSrc,
-  chromeAlt,
   aspectRatio,
   className,
   chromeClassName,
@@ -39,16 +37,17 @@ function PreviewTile({
       <div
         className="relative w-full overflow-hidden rounded-lg bg-muted/50"
         style={containerStyle}
+        role="img"
+        aria-label={label}
       >
         {chromeSrc ? (
-          <img
-            src={chromeSrc}
-            alt={chromeAlt ?? ""}
+          <div
             aria-hidden="true"
             className={cn(
-              "pointer-events-none absolute inset-0 h-full w-full object-cover",
+              "pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat",
               chromeClassName
             )}
+            style={{ backgroundImage: `url(${chromeSrc})` }}
           />
         ) : null}
         {surface ?? null}
