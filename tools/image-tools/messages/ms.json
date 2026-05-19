@@ -1,0 +1,18 @@
+{
+  "searchLabel": "Cari alat imej",
+  "searchPlaceholder": "Cari mengikut tugas, format atau nama alat",
+  "clearSearchLabel": "Kosongkan carian",
+  "resultCountTemplate": "{count} alat imej",
+  "allToolsLabel": "Semua",
+  "convertGroupLabel": "Tukar",
+  "optimizeGroupLabel": "Optimumkan",
+  "inspectGroupLabel": "Periksa",
+  "createGroupLabel": "Cipta",
+  "scanGroupLabel": "Imbas",
+  "filterDescription": "Tapis mengikut aliran kerja",
+  "openToolLabel": "Buka alat",
+  "noToolsTitle": "Tiada alat imej tersedia",
+  "noToolsDescription": "Utiliti imej akan muncul di sini apabila ditambahkan pada registri alat Astro.",
+  "emptySearchTitle": "Tiada alat imej yang sepadan",
+  "emptySearchDescription": "Cuba format, aliran kerja atau nama alat lain."
+}

@@ -1,0 +1,18 @@
+{
+  "searchLabel": "搜尋圖片工具",
+  "searchPlaceholder": "依任務、格式或工具名稱搜尋",
+  "clearSearchLabel": "清除搜尋",
+  "resultCountTemplate": "{count} 個圖片工具",
+  "allToolsLabel": "全部",
+  "convertGroupLabel": "轉換",
+  "optimizeGroupLabel": "最佳化",
+  "inspectGroupLabel": "檢查",
+  "createGroupLabel": "建立",
+  "scanGroupLabel": "掃描",
+  "filterDescription": "依工作流程篩選",
+  "openToolLabel": "開啟工具",
+  "noToolsTitle": "目前沒有可用的圖片工具",
+  "noToolsDescription": "圖片工具加入 Astro 工具登錄後，會顯示在這裡。",
+  "emptySearchTitle": "沒有符合條件的圖片工具",
+  "emptySearchDescription": "請嘗試其他格式、工作流程或工具名稱。"
+}

@@ -1,0 +1,18 @@
+{
+  "searchLabel": "Görüntü araçlarında ara",
+  "searchPlaceholder": "Göreve, formata veya araç adına göre ara",
+  "clearSearchLabel": "Aramayı temizle",
+  "resultCountTemplate": "{count} görüntü aracı",
+  "allToolsLabel": "Tümü",
+  "convertGroupLabel": "Dönüştür",
+  "optimizeGroupLabel": "Optimize et",
+  "inspectGroupLabel": "İncele",
+  "createGroupLabel": "Oluştur",
+  "scanGroupLabel": "Tara",
+  "filterDescription": "İş akışına göre filtrele",
+  "openToolLabel": "Aracı aç",
+  "noToolsTitle": "Kullanılabilir görüntü aracı yok",
+  "noToolsDescription": "Görüntü yardımcıları Astro araç kayıt defterine eklendikçe burada görünecek.",
+  "emptySearchTitle": "Eşleşen görüntü aracı yok",
+  "emptySearchDescription": "Başka bir format, iş akışı veya araç adı deneyin."
+}

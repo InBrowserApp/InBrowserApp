@@ -6994,6 +6994,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-tools",
+    language: "ar",
+  },
+  {
+    slug: "image-tools",
+    language: "de",
+  },
+  {
+    slug: "image-tools",
+    language: "en",
+  },
+  {
+    slug: "image-tools",
+    language: "es",
+  },
+  {
+    slug: "image-tools",
+    language: "fr",
+  },
+  {
+    slug: "image-tools",
+    language: "he",
+  },
+  {
+    slug: "image-tools",
+    language: "hi",
+  },
+  {
+    slug: "image-tools",
+    language: "id",
+  },
+  {
+    slug: "image-tools",
+    language: "it",
+  },
+  {
+    slug: "image-tools",
+    language: "ja",
+  },
+  {
+    slug: "image-tools",
+    language: "ko",
+  },
+  {
+    slug: "image-tools",
+    language: "ms",
+  },
+  {
+    slug: "image-tools",
+    language: "nl",
+  },
+  {
+    slug: "image-tools",
+    language: "no",
+  },
+  {
+    slug: "image-tools",
+    language: "pl",
+  },
+  {
+    slug: "image-tools",
+    language: "pt",
+  },
+  {
+    slug: "image-tools",
+    language: "ru",
+  },
+  {
+    slug: "image-tools",
+    language: "sv",
+  },
+  {
+    slug: "image-tools",
+    language: "th",
+  },
+  {
+    slug: "image-tools",
+    language: "tr",
+  },
+  {
+    slug: "image-tools",
+    language: "vi",
+  },
+  {
+    slug: "image-tools",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-tools",
+    language: "zh-TW",
+  },
+  {
     slug: "imei-validator",
     language: "ar",
   },

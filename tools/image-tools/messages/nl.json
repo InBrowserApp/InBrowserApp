@@ -1,0 +1,18 @@
+{
+  "searchLabel": "Afbeeldingstools zoeken",
+  "searchPlaceholder": "Zoek op taak, formaat of toolnaam",
+  "clearSearchLabel": "Zoekopdracht wissen",
+  "resultCountTemplate": "{count} afbeeldingstools",
+  "allToolsLabel": "Alle",
+  "convertGroupLabel": "Converteren",
+  "optimizeGroupLabel": "Optimaliseren",
+  "inspectGroupLabel": "Inspecteren",
+  "createGroupLabel": "Maken",
+  "scanGroupLabel": "Scannen",
+  "filterDescription": "Filteren op workflow",
+  "openToolLabel": "Tool openen",
+  "noToolsTitle": "Geen afbeeldingstools beschikbaar",
+  "noToolsDescription": "Afbeeldingstools verschijnen hier zodra ze aan de Astro-toolregistry worden toegevoegd.",
+  "emptySearchTitle": "Geen overeenkomende afbeeldingstools",
+  "emptySearchDescription": "Probeer een ander formaat, een andere workflow of toolnaam."
+}

@@ -1,0 +1,18 @@
+{
+  "searchLabel": "Cari alat gambar",
+  "searchPlaceholder": "Cari berdasarkan tugas, format, atau nama alat",
+  "clearSearchLabel": "Hapus pencarian",
+  "resultCountTemplate": "{count} alat gambar",
+  "allToolsLabel": "Semua",
+  "convertGroupLabel": "Konversi",
+  "optimizeGroupLabel": "Optimalkan",
+  "inspectGroupLabel": "Periksa",
+  "createGroupLabel": "Buat",
+  "scanGroupLabel": "Pindai",
+  "filterDescription": "Saring berdasarkan alur kerja",
+  "openToolLabel": "Buka alat",
+  "noToolsTitle": "Belum ada alat gambar yang tersedia",
+  "noToolsDescription": "Utilitas gambar akan muncul di sini setelah ditambahkan ke registri alat Astro.",
+  "emptySearchTitle": "Tidak ada alat gambar yang cocok",
+  "emptySearchDescription": "Coba format, alur kerja, atau nama alat lain."
+}

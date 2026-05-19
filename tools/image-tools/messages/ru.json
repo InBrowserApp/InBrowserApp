@@ -1,0 +1,18 @@
+{
+  "searchLabel": "Поиск инструментов для изображений",
+  "searchPlaceholder": "Поиск по задаче, формату или названию инструмента",
+  "clearSearchLabel": "Очистить поиск",
+  "resultCountTemplate": "{count} инструментов для изображений",
+  "allToolsLabel": "Все",
+  "convertGroupLabel": "Конвертация",
+  "optimizeGroupLabel": "Оптимизация",
+  "inspectGroupLabel": "Проверка",
+  "createGroupLabel": "Создание",
+  "scanGroupLabel": "Сканирование",
+  "filterDescription": "Фильтр по рабочему процессу",
+  "openToolLabel": "Открыть инструмент",
+  "noToolsTitle": "Инструменты для изображений недоступны",
+  "noToolsDescription": "Утилиты для изображений появятся здесь по мере добавления в реестр инструментов Astro.",
+  "emptySearchTitle": "Нет подходящих инструментов для изображений",
+  "emptySearchDescription": "Попробуйте другой формат, рабочий процесс или название инструмента."
+}

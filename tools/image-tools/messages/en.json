@@ -1,0 +1,18 @@
+{
+  "searchLabel": "Search image tools",
+  "searchPlaceholder": "Search by task, format, or tool name",
+  "clearSearchLabel": "Clear search",
+  "resultCountTemplate": "{count} image tools",
+  "allToolsLabel": "All",
+  "convertGroupLabel": "Convert",
+  "optimizeGroupLabel": "Optimize",
+  "inspectGroupLabel": "Inspect",
+  "createGroupLabel": "Create",
+  "scanGroupLabel": "Scan",
+  "filterDescription": "Filter by workflow",
+  "openToolLabel": "Open tool",
+  "noToolsTitle": "No image tools are available",
+  "noToolsDescription": "Image utilities will appear here as they are added to the Astro tool registry.",
+  "emptySearchTitle": "No image tools match",
+  "emptySearchDescription": "Try another format, workflow, or tool name."
+}

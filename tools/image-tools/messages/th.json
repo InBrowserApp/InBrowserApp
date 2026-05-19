@@ -1,0 +1,18 @@
+{
+  "searchLabel": "ค้นหาเครื่องมือรูปภาพ",
+  "searchPlaceholder": "ค้นหาตามงาน รูปแบบ หรือชื่อเครื่องมือ",
+  "clearSearchLabel": "ล้างการค้นหา",
+  "resultCountTemplate": "{count} เครื่องมือรูปภาพ",
+  "allToolsLabel": "ทั้งหมด",
+  "convertGroupLabel": "แปลง",
+  "optimizeGroupLabel": "ปรับให้เหมาะสม",
+  "inspectGroupLabel": "ตรวจสอบ",
+  "createGroupLabel": "สร้าง",
+  "scanGroupLabel": "สแกน",
+  "filterDescription": "กรองตามเวิร์กโฟลว์",
+  "openToolLabel": "เปิดเครื่องมือ",
+  "noToolsTitle": "ไม่มีเครื่องมือรูปภาพที่พร้อมใช้งาน",
+  "noToolsDescription": "เครื่องมือรูปภาพจะปรากฏที่นี่เมื่อเพิ่มเข้าไปในรีจิสทรีเครื่องมือ Astro",
+  "emptySearchTitle": "ไม่พบเครื่องมือรูปภาพที่ตรงกัน",
+  "emptySearchDescription": "ลองใช้รูปแบบ เวิร์กโฟลว์ หรือชื่อเครื่องมืออื่น"
+}

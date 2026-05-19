@@ -1,0 +1,56 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import ImageToolsClient from "./client"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type {
+  ImageToolsMessages,
+  ImageToolsRelatedTool,
+} from "./client"
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+type ImageToolsMessagesCatalog = Omit<ImageToolsMessages, "meta">
+
+interface Props {
+  lang: string
+  relatedTools?: readonly ImageToolsRelatedTool[]
+}
+
+const { lang, relatedTools = [] } = Astro.props
+
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const localizedMessages = resolveLocale<ImageToolsMessagesCatalog>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+)
+const messages = { meta, ...localizedMessages }
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <ImageToolsClient
+    client:load
+    lang={lang}
+    messages={messages}
+    relatedTools={relatedTools}
+  />
+
+  {
+    IntroSection ? (
+      <ToolArticle>
+        <IntroSection />
+      </ToolArticle>
+    ) : null
+  }
+</ToolPageShell>

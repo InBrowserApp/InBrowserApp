@@ -1,0 +1,18 @@
+{
+  "searchLabel": "Bild-Tools suchen",
+  "searchPlaceholder": "Nach Aufgabe, Format oder Toolname suchen",
+  "clearSearchLabel": "Suche löschen",
+  "resultCountTemplate": "{count} Bild-Tools",
+  "allToolsLabel": "Alle",
+  "convertGroupLabel": "Konvertieren",
+  "optimizeGroupLabel": "Optimieren",
+  "inspectGroupLabel": "Prüfen",
+  "createGroupLabel": "Erstellen",
+  "scanGroupLabel": "Scannen",
+  "filterDescription": "Nach Workflow filtern",
+  "openToolLabel": "Tool öffnen",
+  "noToolsTitle": "Keine Bild-Tools verfügbar",
+  "noToolsDescription": "Bild-Tools erscheinen hier, sobald sie zur Astro-Tool-Registry hinzugefügt werden.",
+  "emptySearchTitle": "Keine passenden Bild-Tools",
+  "emptySearchDescription": "Versuchen Sie ein anderes Format, einen anderen Workflow oder Toolnamen."
+}

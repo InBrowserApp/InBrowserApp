@@ -1,0 +1,18 @@
+{
+  "searchLabel": "इमेज टूल खोजें",
+  "searchPlaceholder": "काम, फॉर्मेट या टूल नाम से खोजें",
+  "clearSearchLabel": "खोज साफ करें",
+  "resultCountTemplate": "{count} इमेज टूल",
+  "allToolsLabel": "सभी",
+  "convertGroupLabel": "कन्वर्ट",
+  "optimizeGroupLabel": "ऑप्टिमाइज़",
+  "inspectGroupLabel": "निरीक्षण",
+  "createGroupLabel": "बनाएं",
+  "scanGroupLabel": "स्कैन",
+  "filterDescription": "वर्कफ़्लो से फ़िल्टर करें",
+  "openToolLabel": "टूल खोलें",
+  "noToolsTitle": "कोई इमेज टूल उपलब्ध नहीं है",
+  "noToolsDescription": "इमेज यूटिलिटीज़ Astro tool registry में जोड़े जाने पर यहां दिखाई देंगी।",
+  "emptySearchTitle": "कोई इमेज टूल मेल नहीं खाता",
+  "emptySearchDescription": "कोई दूसरा फॉर्मेट, वर्कफ़्लो या टूल नाम आजमाएं।"
+}

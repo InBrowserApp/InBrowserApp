@@ -1,0 +1,18 @@
+{
+  "searchLabel": "画像ツールを検索",
+  "searchPlaceholder": "タスク、形式、またはツール名で検索",
+  "clearSearchLabel": "検索をクリア",
+  "resultCountTemplate": "{count} 個の画像ツール",
+  "allToolsLabel": "すべて",
+  "convertGroupLabel": "変換",
+  "optimizeGroupLabel": "最適化",
+  "inspectGroupLabel": "検査",
+  "createGroupLabel": "作成",
+  "scanGroupLabel": "スキャン",
+  "filterDescription": "ワークフローで絞り込み",
+  "openToolLabel": "ツールを開く",
+  "noToolsTitle": "利用できる画像ツールはありません",
+  "noToolsDescription": "画像ユーティリティは、Astro ツールレジストリに追加されるとここに表示されます。",
+  "emptySearchTitle": "一致する画像ツールはありません",
+  "emptySearchDescription": "別の形式、ワークフロー、またはツール名を試してください。"
+}

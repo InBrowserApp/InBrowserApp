@@ -1,0 +1,18 @@
+{
+  "searchLabel": "이미지 도구 검색",
+  "searchPlaceholder": "작업, 형식 또는 도구 이름으로 검색",
+  "clearSearchLabel": "검색 지우기",
+  "resultCountTemplate": "{count}개의 이미지 도구",
+  "allToolsLabel": "전체",
+  "convertGroupLabel": "변환",
+  "optimizeGroupLabel": "최적화",
+  "inspectGroupLabel": "검사",
+  "createGroupLabel": "생성",
+  "scanGroupLabel": "스캔",
+  "filterDescription": "워크플로별 필터링",
+  "openToolLabel": "도구 열기",
+  "noToolsTitle": "사용 가능한 이미지 도구가 없습니다",
+  "noToolsDescription": "이미지 유틸리티는 Astro 도구 레지스트리에 추가되는 대로 여기에 표시됩니다.",
+  "emptySearchTitle": "일치하는 이미지 도구가 없습니다",
+  "emptySearchDescription": "다른 형식, 워크플로 또는 도구 이름을 입력해 보세요."
+}

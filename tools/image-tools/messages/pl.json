@@ -1,0 +1,18 @@
+{
+  "searchLabel": "Szukaj narzędzi do obrazów",
+  "searchPlaceholder": "Szukaj według zadania, formatu lub nazwy narzędzia",
+  "clearSearchLabel": "Wyczyść wyszukiwanie",
+  "resultCountTemplate": "{count} narzędzi do obrazów",
+  "allToolsLabel": "Wszystkie",
+  "convertGroupLabel": "Konwersja",
+  "optimizeGroupLabel": "Optymalizacja",
+  "inspectGroupLabel": "Analiza",
+  "createGroupLabel": "Tworzenie",
+  "scanGroupLabel": "Skanowanie",
+  "filterDescription": "Filtruj według przepływu pracy",
+  "openToolLabel": "Otwórz narzędzie",
+  "noToolsTitle": "Brak dostępnych narzędzi do obrazów",
+  "noToolsDescription": "Narzędzia do obrazów pojawią się tutaj, gdy zostaną dodane do rejestru narzędzi Astro.",
+  "emptySearchTitle": "Brak pasujących narzędzi do obrazów",
+  "emptySearchDescription": "Spróbuj innego formatu, przepływu pracy lub nazwy narzędzia."
+}

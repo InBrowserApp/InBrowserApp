@@ -1,4 +1,8 @@
-import { toolPageLoaders, toolRegistryBySlug } from "@workspace/tool-registry"
+import {
+  toolPageLoaders,
+  toolRegistry,
+  toolRegistryBySlug,
+} from "@workspace/tool-registry"
 
 import {
   DEFAULT_SITE_LANGUAGE,
@@ -16,7 +20,16 @@ type LoadedToolPageData = Readonly<{
   meta: ToolMeta
   metaLanguage: string
   Page: AstroComponentFactory | null
+  relatedTools: readonly ToolPageRelatedTool[]
   tool: ToolRegistryEntry
+}>
+
+type ToolPageRelatedTool = Readonly<{
+  slug: string
+  category: string
+  icon: string
+  tags: readonly string[]
+  meta: ToolMeta
 }>
 
 function getToolBySlug(slug: string) {
@@ -54,6 +67,24 @@ function loadToolMeta(tool: ToolRegistryEntry, language: SiteLanguage) {
   }
 }
 
+function getRelatedTools(tool: ToolRegistryEntry, language: SiteLanguage) {
+  return toolRegistry
+    .filter(
+      (candidate) =>
+        candidate.category === tool.category && candidate.slug !== tool.slug
+    )
+    .map((candidate) => ({
+      category: candidate.category,
+      icon: candidate.icon,
+      meta: loadToolMeta(candidate, language).meta,
+      slug: candidate.slug,
+      tags: candidate.tags,
+    }))
+    .sort((left, right) =>
+      left.meta.name.localeCompare(right.meta.name, language)
+    )
+}
+
 async function loadToolPage(slug: string) {
   const loader = toolPageLoaders[slug]
 
@@ -84,6 +115,7 @@ async function loadToolPageData(
     meta,
     metaLanguage,
     Page,
+    relatedTools: getRelatedTools(tool, language),
     tool,
   }
 }

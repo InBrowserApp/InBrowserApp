@@ -1,0 +1,18 @@
+{
+  "searchLabel": "Sök bildverktyg",
+  "searchPlaceholder": "Sök efter uppgift, format eller verktygsnamn",
+  "clearSearchLabel": "Rensa sökning",
+  "resultCountTemplate": "{count} bildverktyg",
+  "allToolsLabel": "Alla",
+  "convertGroupLabel": "Konvertera",
+  "optimizeGroupLabel": "Optimera",
+  "inspectGroupLabel": "Inspektera",
+  "createGroupLabel": "Skapa",
+  "scanGroupLabel": "Skanna",
+  "filterDescription": "Filtrera efter arbetsflöde",
+  "openToolLabel": "Öppna verktyg",
+  "noToolsTitle": "Inga bildverktyg är tillgängliga",
+  "noToolsDescription": "Bildverktyg visas här när de läggs till i Astros verktygsregister.",
+  "emptySearchTitle": "Inga bildverktyg matchar",
+  "emptySearchDescription": "Prova ett annat format, arbetsflöde eller verktygsnamn."
+}

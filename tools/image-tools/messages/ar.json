@@ -1,0 +1,18 @@
+{
+  "searchLabel": "البحث في أدوات الصور",
+  "searchPlaceholder": "ابحث حسب المهمة أو التنسيق أو اسم الأداة",
+  "clearSearchLabel": "مسح البحث",
+  "resultCountTemplate": "{count} من أدوات الصور",
+  "allToolsLabel": "الكل",
+  "convertGroupLabel": "تحويل",
+  "optimizeGroupLabel": "تحسين",
+  "inspectGroupLabel": "فحص",
+  "createGroupLabel": "إنشاء",
+  "scanGroupLabel": "مسح",
+  "filterDescription": "تصفية حسب سير العمل",
+  "openToolLabel": "فتح الأداة",
+  "noToolsTitle": "لا توجد أدوات صور متاحة",
+  "noToolsDescription": "ستظهر أدوات الصور هنا عند إضافتها إلى سجل أدوات Astro.",
+  "emptySearchTitle": "لا توجد أدوات صور مطابقة",
+  "emptySearchDescription": "جرّب تنسيقًا أو سير عمل أو اسم أداة آخر."
+}

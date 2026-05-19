@@ -83,6 +83,7 @@
     "@tool/image-to-ico": "workspace:*",
     "@tool/image-to-pdf-converter": "workspace:*",
     "@tool/image-to-webp-converter": "workspace:*",
+    "@tool/image-tools": "workspace:*",
     "@tool/imei-validator": "workspace:*",
     "@tool/ip-cidr-normalizer": "workspace:*",
     "@tool/ip-info-lookup": "workspace:*",

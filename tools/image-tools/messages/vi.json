@@ -1,0 +1,18 @@
+{
+  "searchLabel": "Tìm kiếm công cụ hình ảnh",
+  "searchPlaceholder": "Tìm theo tác vụ, định dạng hoặc tên công cụ",
+  "clearSearchLabel": "Xóa tìm kiếm",
+  "resultCountTemplate": "{count} công cụ hình ảnh",
+  "allToolsLabel": "Tất cả",
+  "convertGroupLabel": "Chuyển đổi",
+  "optimizeGroupLabel": "Tối ưu hóa",
+  "inspectGroupLabel": "Kiểm tra",
+  "createGroupLabel": "Tạo",
+  "scanGroupLabel": "Quét",
+  "filterDescription": "Lọc theo quy trình làm việc",
+  "openToolLabel": "Mở công cụ",
+  "noToolsTitle": "Chưa có công cụ hình ảnh nào khả dụng",
+  "noToolsDescription": "Các tiện ích hình ảnh sẽ xuất hiện ở đây khi được thêm vào registry công cụ Astro.",
+  "emptySearchTitle": "Không có công cụ hình ảnh nào phù hợp",
+  "emptySearchDescription": "Thử định dạng, quy trình làm việc hoặc tên công cụ khác."
+}

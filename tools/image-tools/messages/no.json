@@ -1,0 +1,18 @@
+{
+  "searchLabel": "Søk i bildeverktøy",
+  "searchPlaceholder": "Søk etter oppgave, format eller verktøynavn",
+  "clearSearchLabel": "Tøm søk",
+  "resultCountTemplate": "{count} bildeverktøy",
+  "allToolsLabel": "Alle",
+  "convertGroupLabel": "Konverter",
+  "optimizeGroupLabel": "Optimaliser",
+  "inspectGroupLabel": "Inspiser",
+  "createGroupLabel": "Opprett",
+  "scanGroupLabel": "Skann",
+  "filterDescription": "Filtrer etter arbeidsflyt",
+  "openToolLabel": "Åpne verktøy",
+  "noToolsTitle": "Ingen bildeverktøy er tilgjengelige",
+  "noToolsDescription": "Bildeverktøy vises her etter hvert som de legges til i Astro-verktøyregisteret.",
+  "emptySearchTitle": "Ingen bildeverktøy samsvarer",
+  "emptySearchDescription": "Prøv et annet format, en annen arbeidsflyt eller et annet verktøynavn."
+}

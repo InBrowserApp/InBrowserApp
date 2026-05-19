@@ -1,0 +1,18 @@
+{
+  "searchLabel": "搜索图像工具",
+  "searchPlaceholder": "按任务、格式或工具名称搜索",
+  "clearSearchLabel": "清除搜索",
+  "resultCountTemplate": "{count} 个图像工具",
+  "allToolsLabel": "全部",
+  "convertGroupLabel": "转换",
+  "optimizeGroupLabel": "优化",
+  "inspectGroupLabel": "检查",
+  "createGroupLabel": "创建",
+  "scanGroupLabel": "扫描",
+  "filterDescription": "按工作流筛选",
+  "openToolLabel": "打开工具",
+  "noToolsTitle": "暂无可用图像工具",
+  "noToolsDescription": "图像实用工具添加到 Astro 工具注册表后会显示在这里。",
+  "emptySearchTitle": "没有匹配的图像工具",
+  "emptySearchDescription": "试试其他格式、工作流或工具名称。"
+}

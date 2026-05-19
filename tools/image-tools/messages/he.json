@@ -1,0 +1,18 @@
+{
+  "searchLabel": "חיפוש בכלי תמונות",
+  "searchPlaceholder": "חיפוש לפי משימה, פורמט או שם כלי",
+  "clearSearchLabel": "ניקוי החיפוש",
+  "resultCountTemplate": "{count} כלי תמונות",
+  "allToolsLabel": "הכול",
+  "convertGroupLabel": "המרה",
+  "optimizeGroupLabel": "אופטימיזציה",
+  "inspectGroupLabel": "בדיקה",
+  "createGroupLabel": "יצירה",
+  "scanGroupLabel": "סריקה",
+  "filterDescription": "סינון לפי תהליך עבודה",
+  "openToolLabel": "פתיחת הכלי",
+  "noToolsTitle": "אין כלי תמונות זמינים",
+  "noToolsDescription": "כלי תמונות יופיעו כאן כשהם יתווספו לרישום הכלים של Astro.",
+  "emptySearchTitle": "אין כלי תמונות תואמים",
+  "emptySearchDescription": "נסו פורמט, תהליך עבודה או שם כלי אחר."
+}

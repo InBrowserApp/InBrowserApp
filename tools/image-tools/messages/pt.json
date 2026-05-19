@@ -1,0 +1,18 @@
+{
+  "searchLabel": "Pesquisar ferramentas de imagem",
+  "searchPlaceholder": "Pesquise por tarefa, formato ou nome da ferramenta",
+  "clearSearchLabel": "Limpar pesquisa",
+  "resultCountTemplate": "{count} ferramentas de imagem",
+  "allToolsLabel": "Todas",
+  "convertGroupLabel": "Converter",
+  "optimizeGroupLabel": "Otimizar",
+  "inspectGroupLabel": "Inspecionar",
+  "createGroupLabel": "Criar",
+  "scanGroupLabel": "Escanear",
+  "filterDescription": "Filtrar por fluxo de trabalho",
+  "openToolLabel": "Abrir ferramenta",
+  "noToolsTitle": "Nenhuma ferramenta de imagem está disponível",
+  "noToolsDescription": "Os utilitários de imagem aparecerão aqui conforme forem adicionados ao registro de ferramentas do Astro.",
+  "emptySearchTitle": "Nenhuma ferramenta de imagem corresponde",
+  "emptySearchDescription": "Tente outro formato, fluxo de trabalho ou nome de ferramenta."
+}

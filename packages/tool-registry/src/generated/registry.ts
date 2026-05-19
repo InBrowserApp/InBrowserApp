@@ -9541,6 +9541,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "image-tools",
+    category: "image",
+    icon: "image",
+    tags: ["image", "graphics", "photo", "directory", "collection"],
+    locales: {
+      ar: {
+        name: "أدوات الصور",
+        description:
+          "تصفّح أدوات الصور المعتمدة على المتصفح لتغيير الحجم، والتحويل، والتحسين، والفحص، والإنشاء، وقراءة ملفات الصور دون رفعها.",
+      },
+      de: {
+        name: "Bild-Tools",
+        description:
+          "Durchsuchen Sie browserbasierte Bild-Tools zum Skalieren, Konvertieren, Optimieren, Prüfen, Generieren und Auslesen von Bilddateien, ohne sie hochzuladen.",
+      },
+      en: {
+        name: "Image Tools",
+        description:
+          "Browse browser-based image utilities for resizing, converting, optimizing, inspecting, generating, and reading image files without uploading them.",
+      },
+      es: {
+        name: "Herramientas de imagen",
+        description:
+          "Explora utilidades de imagen basadas en el navegador para redimensionar, convertir, optimizar, inspeccionar, generar y leer archivos de imagen sin subirlos.",
+      },
+      fr: {
+        name: "Outils pour images",
+        description:
+          "Parcourez des utilitaires d'image dans le navigateur pour redimensionner, convertir, optimiser, inspecter, générer et lire des fichiers image sans les envoyer.",
+      },
+      he: {
+        name: "כלי תמונות",
+        description:
+          "עיינו בכלי תמונות מבוססי דפדפן לשינוי גודל, המרה, אופטימיזציה, בדיקה, יצירה וקריאה של קובצי תמונה בלי להעלות אותם.",
+      },
+      hi: {
+        name: "इमेज टूल्स",
+        description:
+          "इमेज फाइलों को अपलोड किए बिना उनका आकार बदलने, कन्वर्ट करने, ऑप्टिमाइज़ करने, निरीक्षण करने, जनरेट करने और पढ़ने के लिए browser-आधारित इमेज यूटिलिटीज़ ब्राउज़ करें।",
+      },
+      id: {
+        name: "Alat Gambar",
+        description:
+          "Jelajahi utilitas gambar berbasis browser untuk mengubah ukuran, mengonversi, mengoptimalkan, memeriksa, membuat, dan membaca file gambar tanpa mengunggahnya.",
+      },
+      it: {
+        name: "Strumenti per immagini",
+        description:
+          "Esplora utility per immagini nel browser per ridimensionare, convertire, ottimizzare, ispezionare, generare e leggere file immagine senza caricarli.",
+      },
+      ja: {
+        name: "画像ツール",
+        description:
+          "画像ファイルをアップロードせずに、ブラウザー上でサイズ変更、変換、最適化、検査、生成、読み取りを行える画像ユーティリティを探せます。",
+      },
+      ko: {
+        name: "이미지 도구",
+        description:
+          "이미지 파일을 업로드하지 않고도 브라우저에서 크기 조정, 변환, 최적화, 검사, 생성, 읽기를 수행하는 이미지 유틸리티를 찾아보세요.",
+      },
+      ms: {
+        name: "Alat Imej",
+        description:
+          "Semak imbas utiliti imej berasaskan pelayar untuk mengubah saiz, menukar format, mengoptimumkan, memeriksa, menjana dan membaca fail imej tanpa memuat naiknya.",
+      },
+      nl: {
+        name: "Afbeeldingstools",
+        description:
+          "Blader door browsergebaseerde afbeeldingstools om afbeeldingsbestanden te schalen, converteren, optimaliseren, inspecteren, genereren en lezen zonder ze te uploaden.",
+      },
+      no: {
+        name: "Bildeverktøy",
+        description:
+          "Bla gjennom nettleserbaserte bildeverktøy for å endre størrelse, konvertere, optimalisere, inspisere, generere og lese bildefiler uten å laste dem opp.",
+      },
+      pl: {
+        name: "Narzędzia do obrazów",
+        description:
+          "Przeglądaj działające w przeglądarce narzędzia do obrazów, które pozwalają zmieniać rozmiar, konwertować, optymalizować, analizować, generować i odczytywać pliki graficzne bez ich przesyłania.",
+      },
+      pt: {
+        name: "Ferramentas de imagem",
+        description:
+          "Explore utilitários de imagem baseados no navegador para redimensionar, converter, otimizar, inspecionar, gerar e ler arquivos de imagem sem enviá-los.",
+      },
+      ru: {
+        name: "Инструменты для изображений",
+        description:
+          "Просматривайте браузерные утилиты для изменения размера, конвертации, оптимизации, проверки, генерации и считывания файлов изображений без их загрузки на сервер.",
+      },
+      sv: {
+        name: "Image Tools",
+        description:
+          "Bläddra bland webbläsarbaserade bildverktyg för att ändra storlek, konvertera, optimera, inspektera, generera och läsa bildfiler utan att ladda upp dem.",
+      },
+      th: {
+        name: "เครื่องมือรูปภาพ",
+        description:
+          "เรียกดูเครื่องมือรูปภาพที่ทำงานบนเบราว์เซอร์สำหรับปรับขนาด แปลง ปรับให้เหมาะสม ตรวจสอบ สร้าง และอ่านไฟล์รูปภาพโดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "Görüntü Araçları",
+        description:
+          "Görüntü dosyalarını yüklemeden yeniden boyutlandırma, dönüştürme, optimize etme, inceleme, oluşturma ve okuma için tarayıcı tabanlı görüntü yardımcılarına göz atın.",
+      },
+      vi: {
+        name: "Công cụ hình ảnh",
+        description:
+          "Duyệt các tiện ích hình ảnh chạy trong trình duyệt để đổi kích thước, chuyển đổi, tối ưu hóa, kiểm tra, tạo và đọc tệp hình ảnh mà không cần tải chúng lên.",
+      },
+      "zh-CN": {
+        name: "图像工具",
+        description:
+          "浏览基于浏览器的图像实用工具，用于调整大小、转换、优化、检查、生成和读取图像文件，无需上传。",
+      },
+      "zh-TW": {
+        name: "圖片工具",
+        description:
+          "瀏覽以瀏覽器為基礎的圖片工具，不必上傳檔案即可調整大小、轉換、最佳化、檢查、生成及讀取圖片檔案。",
+      },
+    },
+  },
+  {
     slug: "imei-validator",
     category: "text",
     icon: "binary",
@@ -34446,6 +34569,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "圖片轉 WebP 轉換器",
         description: "將圖片轉換為 WebP，可選擇調整尺寸並批次匯出 ZIP。",
+      },
+    },
+  },
+  "image-tools": {
+    slug: "image-tools",
+    category: "image",
+    icon: "image",
+    tags: ["image", "graphics", "photo", "directory", "collection"],
+    locales: {
+      ar: {
+        name: "أدوات الصور",
+        description:
+          "تصفّح أدوات الصور المعتمدة على المتصفح لتغيير الحجم، والتحويل، والتحسين، والفحص، والإنشاء، وقراءة ملفات الصور دون رفعها.",
+      },
+      de: {
+        name: "Bild-Tools",
+        description:
+          "Durchsuchen Sie browserbasierte Bild-Tools zum Skalieren, Konvertieren, Optimieren, Prüfen, Generieren und Auslesen von Bilddateien, ohne sie hochzuladen.",
+      },
+      en: {
+        name: "Image Tools",
+        description:
+          "Browse browser-based image utilities for resizing, converting, optimizing, inspecting, generating, and reading image files without uploading them.",
+      },
+      es: {
+        name: "Herramientas de imagen",
+        description:
+          "Explora utilidades de imagen basadas en el navegador para redimensionar, convertir, optimizar, inspeccionar, generar y leer archivos de imagen sin subirlos.",
+      },
+      fr: {
+        name: "Outils pour images",
+        description:
+          "Parcourez des utilitaires d'image dans le navigateur pour redimensionner, convertir, optimiser, inspecter, générer et lire des fichiers image sans les envoyer.",
+      },
+      he: {
+        name: "כלי תמונות",
+        description:
+          "עיינו בכלי תמונות מבוססי דפדפן לשינוי גודל, המרה, אופטימיזציה, בדיקה, יצירה וקריאה של קובצי תמונה בלי להעלות אותם.",
+      },
+      hi: {
+        name: "इमेज टूल्स",
+        description:
+          "इमेज फाइलों को अपलोड किए बिना उनका आकार बदलने, कन्वर्ट करने, ऑप्टिमाइज़ करने, निरीक्षण करने, जनरेट करने और पढ़ने के लिए browser-आधारित इमेज यूटिलिटीज़ ब्राउज़ करें।",
+      },
+      id: {
+        name: "Alat Gambar",
+        description:
+          "Jelajahi utilitas gambar berbasis browser untuk mengubah ukuran, mengonversi, mengoptimalkan, memeriksa, membuat, dan membaca file gambar tanpa mengunggahnya.",
+      },
+      it: {
+        name: "Strumenti per immagini",
+        description:
+          "Esplora utility per immagini nel browser per ridimensionare, convertire, ottimizzare, ispezionare, generare e leggere file immagine senza caricarli.",
+      },
+      ja: {
+        name: "画像ツール",
+        description:
+          "画像ファイルをアップロードせずに、ブラウザー上でサイズ変更、変換、最適化、検査、生成、読み取りを行える画像ユーティリティを探せます。",
+      },
+      ko: {
+        name: "이미지 도구",
+        description:
+          "이미지 파일을 업로드하지 않고도 브라우저에서 크기 조정, 변환, 최적화, 검사, 생성, 읽기를 수행하는 이미지 유틸리티를 찾아보세요.",
+      },
+      ms: {
+        name: "Alat Imej",
+        description:
+          "Semak imbas utiliti imej berasaskan pelayar untuk mengubah saiz, menukar format, mengoptimumkan, memeriksa, menjana dan membaca fail imej tanpa memuat naiknya.",
+      },
+      nl: {
+        name: "Afbeeldingstools",
+        description:
+          "Blader door browsergebaseerde afbeeldingstools om afbeeldingsbestanden te schalen, converteren, optimaliseren, inspecteren, genereren en lezen zonder ze te uploaden.",
+      },
+      no: {
+        name: "Bildeverktøy",
+        description:
+          "Bla gjennom nettleserbaserte bildeverktøy for å endre størrelse, konvertere, optimalisere, inspisere, generere og lese bildefiler uten å laste dem opp.",
+      },
+      pl: {
+        name: "Narzędzia do obrazów",
+        description:
+          "Przeglądaj działające w przeglądarce narzędzia do obrazów, które pozwalają zmieniać rozmiar, konwertować, optymalizować, analizować, generować i odczytywać pliki graficzne bez ich przesyłania.",
+      },
+      pt: {
+        name: "Ferramentas de imagem",
+        description:
+          "Explore utilitários de imagem baseados no navegador para redimensionar, converter, otimizar, inspecionar, gerar e ler arquivos de imagem sem enviá-los.",
+      },
+      ru: {
+        name: "Инструменты для изображений",
+        description:
+          "Просматривайте браузерные утилиты для изменения размера, конвертации, оптимизации, проверки, генерации и считывания файлов изображений без их загрузки на сервер.",
+      },
+      sv: {
+        name: "Image Tools",
+        description:
+          "Bläddra bland webbläsarbaserade bildverktyg för att ändra storlek, konvertera, optimera, inspektera, generera och läsa bildfiler utan att ladda upp dem.",
+      },
+      th: {
+        name: "เครื่องมือรูปภาพ",
+        description:
+          "เรียกดูเครื่องมือรูปภาพที่ทำงานบนเบราว์เซอร์สำหรับปรับขนาด แปลง ปรับให้เหมาะสม ตรวจสอบ สร้าง และอ่านไฟล์รูปภาพโดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "Görüntü Araçları",
+        description:
+          "Görüntü dosyalarını yüklemeden yeniden boyutlandırma, dönüştürme, optimize etme, inceleme, oluşturma ve okuma için tarayıcı tabanlı görüntü yardımcılarına göz atın.",
+      },
+      vi: {
+        name: "Công cụ hình ảnh",
+        description:
+          "Duyệt các tiện ích hình ảnh chạy trong trình duyệt để đổi kích thước, chuyển đổi, tối ưu hóa, kiểm tra, tạo và đọc tệp hình ảnh mà không cần tải chúng lên.",
+      },
+      "zh-CN": {
+        name: "图像工具",
+        description:
+          "浏览基于浏览器的图像实用工具，用于调整大小、转换、优化、检查、生成和读取图像文件，无需上传。",
+      },
+      "zh-TW": {
+        name: "圖片工具",
+        description:
+          "瀏覽以瀏覽器為基礎的圖片工具，不必上傳檔案即可調整大小、轉換、最佳化、檢查、生成及讀取圖片檔案。",
       },
     },
   },
