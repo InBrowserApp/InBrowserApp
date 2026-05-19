@@ -20,6 +20,7 @@ import {
   isPdfFile,
 } from "./core/pdf-page-numbers"
 import { PreviewCard } from "./client/preview-card"
+import { ResponsiveToolLayout } from "./client/responsive-tool-layout"
 import { SettingsCard } from "./client/settings-card"
 import { UploadCard } from "./client/upload-card"
 import { getRangeErrorMessage, resolvePdfErrorMessage } from "./client/utils"
@@ -187,23 +188,19 @@ function PdfPageNumberAdderClient({ messages }: PdfPageNumberAdderClientProps) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
-        <div className="min-w-0 xl:col-start-1 xl:row-start-1">
-          <UploadCard
-            disabled={isReading || isGenerating}
+      <ResponsiveToolLayout
+        preview={
+          <PreviewCard
             file={fileState?.file ?? null}
-            inputId={inputId}
-            isReading={isReading}
+            isGenerating={isGenerating}
             messages={messages}
-            onFileSelected={(file) => {
-              void selectFile(file)
-            }}
-            onRemoveFile={removeFile}
+            options={formOptions}
             pageCount={pageCount}
+            result={result}
+            selectedPages={selectedPages}
           />
-        </div>
-
-        <div className="min-w-0 xl:sticky xl:top-6 xl:col-start-2 xl:row-span-2 xl:row-start-1">
+        }
+        settings={
           <SettingsCard
             canGenerate={canGenerate}
             disabled={isReading || isGenerating || !fileState}
@@ -225,20 +222,22 @@ function PdfPageNumberAdderClient({ messages }: PdfPageNumberAdderClientProps) {
             rangeError={rangeError}
             rangeInput={rangeInput}
           />
-        </div>
-
-        <div className="min-w-0 xl:col-start-1 xl:row-start-2">
-          <PreviewCard
+        }
+        upload={
+          <UploadCard
+            disabled={isReading || isGenerating}
             file={fileState?.file ?? null}
-            isGenerating={isGenerating}
+            inputId={inputId}
+            isReading={isReading}
             messages={messages}
-            options={formOptions}
+            onFileSelected={(file) => {
+              void selectFile(file)
+            }}
+            onRemoveFile={removeFile}
             pageCount={pageCount}
-            result={result}
-            selectedPages={selectedPages}
           />
-        </div>
-      </div>
+        }
+      />
 
       {error ? (
         <Alert variant="destructive">
