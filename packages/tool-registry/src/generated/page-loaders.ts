@@ -227,6 +227,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   timer: () => import("@tool/timer/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
+  "ulid-generator": () => import("@tool/ulid-generator/page"),
   "unicode-escape-unescape": () => import("@tool/unicode-escape-unescape/page"),
   "unicode-invisible-character-checker": () =>
     import("@tool/unicode-invisible-character-checker/page"),

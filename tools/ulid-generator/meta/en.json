@@ -1,0 +1,4 @@
+{
+  "name": "ULID Generator",
+  "description": "Generate Universally Unique Lexicographically Sortable Identifiers in-browser with optional custom timestamps."
+}

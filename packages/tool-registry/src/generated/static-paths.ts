@@ -15734,6 +15734,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ulid-generator",
+    language: "ar",
+  },
+  {
+    slug: "ulid-generator",
+    language: "de",
+  },
+  {
+    slug: "ulid-generator",
+    language: "en",
+  },
+  {
+    slug: "ulid-generator",
+    language: "es",
+  },
+  {
+    slug: "ulid-generator",
+    language: "fr",
+  },
+  {
+    slug: "ulid-generator",
+    language: "he",
+  },
+  {
+    slug: "ulid-generator",
+    language: "hi",
+  },
+  {
+    slug: "ulid-generator",
+    language: "id",
+  },
+  {
+    slug: "ulid-generator",
+    language: "it",
+  },
+  {
+    slug: "ulid-generator",
+    language: "ja",
+  },
+  {
+    slug: "ulid-generator",
+    language: "ko",
+  },
+  {
+    slug: "ulid-generator",
+    language: "ms",
+  },
+  {
+    slug: "ulid-generator",
+    language: "nl",
+  },
+  {
+    slug: "ulid-generator",
+    language: "no",
+  },
+  {
+    slug: "ulid-generator",
+    language: "pl",
+  },
+  {
+    slug: "ulid-generator",
+    language: "pt",
+  },
+  {
+    slug: "ulid-generator",
+    language: "ru",
+  },
+  {
+    slug: "ulid-generator",
+    language: "sv",
+  },
+  {
+    slug: "ulid-generator",
+    language: "th",
+  },
+  {
+    slug: "ulid-generator",
+    language: "tr",
+  },
+  {
+    slug: "ulid-generator",
+    language: "vi",
+  },
+  {
+    slug: "ulid-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "ulid-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "unicode-escape-unescape",
     language: "ar",
   },
