@@ -10858,6 +10858,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-page-organizer",
+    language: "ar",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "de",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "en",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "es",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "fr",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "he",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "hi",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "id",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "it",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "ja",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "ko",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "ms",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "nl",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "no",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "pl",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "pt",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "ru",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "sv",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "th",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "tr",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "vi",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-text-extractor",
     language: "ar",
   },

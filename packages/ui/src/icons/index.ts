@@ -32,6 +32,7 @@ export {
   FlashlightOff,
   Folder,
   Globe,
+  GripVertical,
   Image as ImageIcon,
   ImageUp,
   Languages,
