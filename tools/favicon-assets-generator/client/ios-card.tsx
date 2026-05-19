@@ -19,8 +19,9 @@ import { Slider } from "@workspace/ui/components/ui/slider"
 
 import type { IOSIconConfig } from "../core/config"
 import { ColorField } from "./color-field"
+import { IosPreview } from "./ios-preview"
 import { PlatformSourceToggle } from "./platform-source-toggle"
-import type { FaviconMessages, ImageSource } from "./types"
+import type { FaviconMessages, GeneratedBundle, ImageSource } from "./types"
 
 type IosCardProps = Readonly<{
   messages: FaviconMessages
@@ -28,6 +29,9 @@ type IosCardProps = Readonly<{
   onPatch: (patch: Partial<IOSIconConfig>) => void
   dedicatedSource: ImageSource | null
   onDedicatedFileChange: (file: File | null) => void | Promise<void>
+  appName: string
+  bundle: GeneratedBundle | null
+  globalSource: ImageSource | null
 }>
 
 function IosCard({
@@ -36,6 +40,9 @@ function IosCard({
   onPatch,
   dedicatedSource,
   onDedicatedFileChange,
+  appName,
+  bundle,
+  globalSource,
 }: IosCardProps) {
   const idPrefix = useId()
 
@@ -45,37 +52,49 @@ function IosCard({
         <CardTitle>{messages.iosCardTitle}</CardTitle>
         <CardDescription>{messages.iosCardDescription}</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-1 flex-col">
-        <FieldGroup>
-          <ColorField
-            id={`${idPrefix}-bg-color`}
-            label={messages.iosBackgroundColorLabel}
-            description={messages.iosBackgroundColorDescription}
-            value={cfg.backgroundColor}
-            onChange={(value) => onPatch({ backgroundColor: value })}
-          />
-          <Field>
-            <FieldLabel htmlFor={`${idPrefix}-margin`}>
-              {messages.marginLabel}: {cfg.margin}%
-            </FieldLabel>
-            <Slider
-              id={`${idPrefix}-margin`}
-              min={0}
-              max={50}
-              step={1}
-              value={[cfg.margin]}
-              onValueChange={(values) => onPatch({ margin: values[0] ?? 0 })}
+      <CardContent>
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
+          <FieldGroup>
+            <ColorField
+              id={`${idPrefix}-bg-color`}
+              label={messages.iosBackgroundColorLabel}
+              description={messages.iosBackgroundColorDescription}
+              value={cfg.backgroundColor}
+              onChange={(value) => onPatch({ backgroundColor: value })}
             />
-            <FieldDescription>{messages.marginDescription}</FieldDescription>
-          </Field>
-          <PlatformSourceToggle
+            <Field>
+              <FieldLabel htmlFor={`${idPrefix}-margin`}>
+                {messages.marginLabel}: {cfg.margin}%
+              </FieldLabel>
+              <Slider
+                id={`${idPrefix}-margin`}
+                min={0}
+                max={50}
+                step={1}
+                value={[cfg.margin]}
+                onValueChange={(values) =>
+                  onPatch({ margin: values[0] ?? 0 })
+                }
+              />
+              <FieldDescription>{messages.marginDescription}</FieldDescription>
+            </Field>
+            <PlatformSourceToggle
+              messages={messages}
+              enabled={cfg.useDifferentImage}
+              onToggle={(checked) => onPatch({ useDifferentImage: checked })}
+              source={dedicatedSource}
+              onFileChange={onDedicatedFileChange}
+            />
+          </FieldGroup>
+          <IosPreview
             messages={messages}
-            enabled={cfg.useDifferentImage}
-            onToggle={(checked) => onPatch({ useDifferentImage: checked })}
-            source={dedicatedSource}
-            onFileChange={onDedicatedFileChange}
+            appName={appName}
+            bundle={bundle}
+            globalSource={globalSource}
+            iosSource={dedicatedSource}
+            useDifferentImage={cfg.useDifferentImage}
           />
-        </FieldGroup>
+        </div>
       </CardContent>
     </Card>
   )

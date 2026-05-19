@@ -9,7 +9,6 @@ import { TriangleAlert } from "@workspace/ui/icons"
 
 import { DesktopCard } from "./client/desktop-card"
 import { IosCard } from "./client/ios-card"
-import { PreviewGallery } from "./client/preview-gallery"
 import { PwaCard } from "./client/pwa-card"
 import { ResultCard } from "./client/result-card"
 import { SiteInfoCard } from "./client/site-info-card"
@@ -46,50 +45,52 @@ function FaviconAssetsGeneratorClient({
     generate,
   } = useFaviconGenerator(messages)
 
+  const appName = siteCfg.name || messages.meta.name
+
   return (
     <div className="flex flex-col gap-6">
-      <div className="grid gap-6 xl:grid-cols-2">
-        <UploadCard
-          messages={messages}
-          source={globalSource}
-          onFileChange={handleGlobalFile}
-          onUseDemo={useDemo}
-        />
-        <SiteInfoCard
-          messages={messages}
-          siteCfg={siteCfg}
-          onPatch={patchSite}
-        />
-      </div>
-
-      <div className="grid gap-6 xl:grid-cols-3">
-        <DesktopCard
-          messages={messages}
-          cfg={desktopCfg}
-          onPatch={patchDesktop}
-          dedicatedSource={dedicatedSources.desktop}
-          onDedicatedFileChange={(file) => handleDedicatedFile("desktop", file)}
-        />
-        <IosCard
-          messages={messages}
-          cfg={iosCfg}
-          onPatch={patchIos}
-          dedicatedSource={dedicatedSources.ios}
-          onDedicatedFileChange={(file) => handleDedicatedFile("ios", file)}
-        />
-        <PwaCard
-          messages={messages}
-          cfg={pwaCfg}
-          onPatch={patchPwa}
-          dedicatedSource={dedicatedSources.pwa}
-          onDedicatedFileChange={(file) => handleDedicatedFile("pwa", file)}
-        />
-      </div>
-
-      <PreviewGallery
+      <UploadCard
         messages={messages}
-        appName={siteCfg.name || messages.meta.name}
-        themeColor={siteCfg.themeColor}
+        source={globalSource}
+        onFileChange={handleGlobalFile}
+        onUseDemo={useDemo}
+      />
+
+      <SiteInfoCard
+        messages={messages}
+        siteCfg={siteCfg}
+        onPatch={patchSite}
+      />
+
+      <DesktopCard
+        messages={messages}
+        cfg={desktopCfg}
+        onPatch={patchDesktop}
+        dedicatedSource={dedicatedSources.desktop}
+        onDedicatedFileChange={(file) => handleDedicatedFile("desktop", file)}
+        appName={appName}
+        bundle={bundle}
+        globalSource={globalSource}
+      />
+
+      <IosCard
+        messages={messages}
+        cfg={iosCfg}
+        onPatch={patchIos}
+        dedicatedSource={dedicatedSources.ios}
+        onDedicatedFileChange={(file) => handleDedicatedFile("ios", file)}
+        appName={appName}
+        bundle={bundle}
+        globalSource={globalSource}
+      />
+
+      <PwaCard
+        messages={messages}
+        cfg={pwaCfg}
+        onPatch={patchPwa}
+        dedicatedSource={dedicatedSources.pwa}
+        onDedicatedFileChange={(file) => handleDedicatedFile("pwa", file)}
+        appName={appName}
         bundle={bundle}
         globalSource={globalSource}
       />

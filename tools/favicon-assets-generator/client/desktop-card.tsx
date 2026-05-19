@@ -20,8 +20,9 @@ import { Switch } from "@workspace/ui/components/ui/switch"
 
 import type { DesktopIconConfig } from "../core/config"
 import { ColorField } from "./color-field"
+import { DesktopPreview } from "./desktop-preview"
 import { PlatformSourceToggle } from "./platform-source-toggle"
-import type { FaviconMessages, ImageSource } from "./types"
+import type { FaviconMessages, GeneratedBundle, ImageSource } from "./types"
 
 type DesktopCardProps = Readonly<{
   messages: FaviconMessages
@@ -29,6 +30,9 @@ type DesktopCardProps = Readonly<{
   onPatch: (patch: Partial<DesktopIconConfig>) => void
   dedicatedSource: ImageSource | null
   onDedicatedFileChange: (file: File | null) => void | Promise<void>
+  appName: string
+  bundle: GeneratedBundle | null
+  globalSource: ImageSource | null
 }>
 
 function DesktopCard({
@@ -37,6 +41,9 @@ function DesktopCard({
   onPatch,
   dedicatedSource,
   onDedicatedFileChange,
+  appName,
+  bundle,
+  globalSource,
 }: DesktopCardProps) {
   const idPrefix = useId()
 
@@ -46,87 +53,101 @@ function DesktopCard({
         <CardTitle>{messages.desktopCardTitle}</CardTitle>
         <CardDescription>{messages.desktopCardDescription}</CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-1 flex-col">
-        <FieldGroup>
-          <Field orientation="horizontal">
-            <FieldLabel htmlFor={`${idPrefix}-use-svg`} className="flex-1">
-              {messages.useOriginalSvgLabel}
-              <FieldDescription className="font-normal">
-                {messages.useOriginalSvgDescription}
-              </FieldDescription>
-            </FieldLabel>
-            <Switch
-              id={`${idPrefix}-use-svg`}
-              checked={cfg.useOriginalSvg}
-              onCheckedChange={(checked) =>
-                onPatch({ useOriginalSvg: checked })
-              }
-            />
-          </Field>
-
-          <Field orientation="horizontal">
-            <FieldLabel htmlFor={`${idPrefix}-bg`} className="flex-1">
-              {messages.addBackgroundLabel}
-            </FieldLabel>
-            <Switch
-              id={`${idPrefix}-bg`}
-              checked={cfg.addBackground}
-              onCheckedChange={(checked) => onPatch({ addBackground: checked })}
-            />
-          </Field>
-
-          {cfg.addBackground ? (
-            <>
-              <ColorField
-                id={`${idPrefix}-bg-color`}
-                label={messages.cardBackgroundColorLabel}
-                value={cfg.backgroundColor}
-                onChange={(value) => onPatch({ backgroundColor: value })}
-              />
-              <Field>
-                <FieldLabel htmlFor={`${idPrefix}-bg-radius`}>
-                  {messages.backgroundRadiusLabel}: {cfg.backgroundRadius}%
-                </FieldLabel>
-                <Slider
-                  id={`${idPrefix}-bg-radius`}
-                  min={0}
-                  max={100}
-                  step={1}
-                  value={[cfg.backgroundRadius]}
-                  onValueChange={(values) =>
-                    onPatch({ backgroundRadius: values[0] ?? 0 })
-                  }
-                />
-                <FieldDescription>
-                  {messages.backgroundRadiusDescription}
+      <CardContent>
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
+          <FieldGroup>
+            <Field orientation="horizontal">
+              <FieldLabel htmlFor={`${idPrefix}-use-svg`} className="flex-1">
+                {messages.useOriginalSvgLabel}
+                <FieldDescription className="font-normal">
+                  {messages.useOriginalSvgDescription}
                 </FieldDescription>
-              </Field>
-            </>
-          ) : null}
+              </FieldLabel>
+              <Switch
+                id={`${idPrefix}-use-svg`}
+                checked={cfg.useOriginalSvg}
+                onCheckedChange={(checked) =>
+                  onPatch({ useOriginalSvg: checked })
+                }
+              />
+            </Field>
 
-          <Field>
-            <FieldLabel htmlFor={`${idPrefix}-margin`}>
-              {messages.marginLabel}: {cfg.margin}%
-            </FieldLabel>
-            <Slider
-              id={`${idPrefix}-margin`}
-              min={0}
-              max={50}
-              step={1}
-              value={[cfg.margin]}
-              onValueChange={(values) => onPatch({ margin: values[0] ?? 0 })}
+            <Field orientation="horizontal">
+              <FieldLabel htmlFor={`${idPrefix}-bg`} className="flex-1">
+                {messages.addBackgroundLabel}
+              </FieldLabel>
+              <Switch
+                id={`${idPrefix}-bg`}
+                checked={cfg.addBackground}
+                onCheckedChange={(checked) =>
+                  onPatch({ addBackground: checked })
+                }
+              />
+            </Field>
+
+            {cfg.addBackground ? (
+              <>
+                <ColorField
+                  id={`${idPrefix}-bg-color`}
+                  label={messages.cardBackgroundColorLabel}
+                  value={cfg.backgroundColor}
+                  onChange={(value) => onPatch({ backgroundColor: value })}
+                />
+                <Field>
+                  <FieldLabel htmlFor={`${idPrefix}-bg-radius`}>
+                    {messages.backgroundRadiusLabel}: {cfg.backgroundRadius}%
+                  </FieldLabel>
+                  <Slider
+                    id={`${idPrefix}-bg-radius`}
+                    min={0}
+                    max={100}
+                    step={1}
+                    value={[cfg.backgroundRadius]}
+                    onValueChange={(values) =>
+                      onPatch({ backgroundRadius: values[0] ?? 0 })
+                    }
+                  />
+                  <FieldDescription>
+                    {messages.backgroundRadiusDescription}
+                  </FieldDescription>
+                </Field>
+              </>
+            ) : null}
+
+            <Field>
+              <FieldLabel htmlFor={`${idPrefix}-margin`}>
+                {messages.marginLabel}: {cfg.margin}%
+              </FieldLabel>
+              <Slider
+                id={`${idPrefix}-margin`}
+                min={0}
+                max={50}
+                step={1}
+                value={[cfg.margin]}
+                onValueChange={(values) =>
+                  onPatch({ margin: values[0] ?? 0 })
+                }
+              />
+              <FieldDescription>{messages.marginDescription}</FieldDescription>
+            </Field>
+
+            <PlatformSourceToggle
+              messages={messages}
+              enabled={cfg.useDifferentImage}
+              onToggle={(checked) => onPatch({ useDifferentImage: checked })}
+              source={dedicatedSource}
+              onFileChange={onDedicatedFileChange}
             />
-            <FieldDescription>{messages.marginDescription}</FieldDescription>
-          </Field>
-
-          <PlatformSourceToggle
+          </FieldGroup>
+          <DesktopPreview
             messages={messages}
-            enabled={cfg.useDifferentImage}
-            onToggle={(checked) => onPatch({ useDifferentImage: checked })}
-            source={dedicatedSource}
-            onFileChange={onDedicatedFileChange}
+            appName={appName}
+            bundle={bundle}
+            globalSource={globalSource}
+            desktopSource={dedicatedSource}
+            useDifferentImage={cfg.useDifferentImage}
           />
-        </FieldGroup>
+        </div>
       </CardContent>
     </Card>
   )
