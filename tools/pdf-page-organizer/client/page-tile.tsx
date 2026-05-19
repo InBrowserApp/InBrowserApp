@@ -222,8 +222,8 @@ function PageTile({
         </button>
       </div>
 
-      <div className="flex min-w-0 items-start justify-between gap-2">
-        <div className="min-w-0">
+      <div className="flex min-w-0 flex-col gap-2">
+        <div className="min-w-0 pe-1">
           <p className="truncate text-sm font-medium">{pageLabel}</p>
           <p className="mt-1 text-xs text-muted-foreground">
             {messages.pageSizeLabel}: {formatPageSize(page.width, page.height)}
@@ -233,7 +233,7 @@ function PageTile({
           </p>
         </div>
 
-        <div className="flex shrink-0 items-center gap-1">
+        <div className="flex items-center justify-end gap-1 border-t border-border/60 pt-1">
           <Button
             aria-label={`${messages.moveUpLabel}: ${pageLabel}`}
             className="size-8"
