@@ -45,7 +45,7 @@ const messages = {
   resultsTitle: "Results",
   resultsDescription:
     "ULID values generated locally for the selected mode and timestamp.",
-  resultsPlaceholder: "Generated ULIDs will appear here...",
+  resultsPlaceholder: "Generated ULIDs will appear here…",
   generatedAtLabel: "Generated with Unix milliseconds: {milliseconds}",
   copyResultsLabel: "Copy result",
   copiedLabel: "Copied",

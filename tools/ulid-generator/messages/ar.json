@@ -20,7 +20,7 @@
   "timestampOutOfRange": "يجب أن يكون الطابع الزمني بين {min} و {max} (مللي ثانية Unix).",
   "resultsTitle": "النتائج",
   "resultsDescription": "قيم ULID أُنشئت محليًا للوضع والطابع الزمني المحددين.",
-  "resultsPlaceholder": "ستظهر ULIDs المنشأة هنا...",
+  "resultsPlaceholder": "ستظهر ULIDs المنشأة هنا…",
   "generatedAtLabel": "أُنشئ باستخدام مللي ثانية Unix: {milliseconds}",
   "copyResultsLabel": "نسخ النتيجة",
   "copiedLabel": "تم النسخ",

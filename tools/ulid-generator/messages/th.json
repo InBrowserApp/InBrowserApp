@@ -20,7 +20,7 @@
   "timestampOutOfRange": "เวลาต้องอยู่ระหว่าง {min} ถึง {max} (Unix milliseconds)",
   "resultsTitle": "ผลลัพธ์",
   "resultsDescription": "ค่า ULID ที่สร้างในเครื่องสำหรับโหมดและเวลาที่เลือก",
-  "resultsPlaceholder": "ULID ที่สร้างจะปรากฏที่นี่...",
+  "resultsPlaceholder": "ULID ที่สร้างจะปรากฏที่นี่…",
   "generatedAtLabel": "สร้างด้วย Unix milliseconds: {milliseconds}",
   "copyResultsLabel": "คัดลอกผลลัพธ์",
   "copiedLabel": "คัดลอกแล้ว",

@@ -20,7 +20,7 @@
   "timestampOutOfRange": "Временная метка должна быть между {min} и {max} (миллисекунды Unix).",
   "resultsTitle": "Результаты",
   "resultsDescription": "Значения ULID, созданные локально для выбранного режима и временной метки.",
-  "resultsPlaceholder": "Сгенерированные ULID появятся здесь...",
+  "resultsPlaceholder": "Сгенерированные ULID появятся здесь…",
   "generatedAtLabel": "Сгенерировано с миллисекундами Unix: {milliseconds}",
   "copyResultsLabel": "Копировать результат",
   "copiedLabel": "Скопировано",

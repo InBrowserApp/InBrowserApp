@@ -20,7 +20,7 @@
   "timestampOutOfRange": "टाइमस्टैम्प {min} और {max} (Unix मिलीसेकंड) के बीच होना चाहिए।",
   "resultsTitle": "परिणाम",
   "resultsDescription": "चुने गए मोड और टाइमस्टैम्प के लिए स्थानीय रूप से जनरेट किए गए ULID मान।",
-  "resultsPlaceholder": "जनरेट किए गए ULIDs यहां दिखाई देंगे...",
+  "resultsPlaceholder": "जनरेट किए गए ULIDs यहां दिखाई देंगे…",
   "generatedAtLabel": "Unix मिलीसेकंड के साथ जनरेट किया गया: {milliseconds}",
   "copyResultsLabel": "परिणाम कॉपी करें",
   "copiedLabel": "कॉपी हो गया",

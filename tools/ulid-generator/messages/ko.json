@@ -20,7 +20,7 @@
   "timestampOutOfRange": "타임스탬프는 {min}에서 {max} 사이여야 합니다(Unix 밀리초).",
   "resultsTitle": "결과",
   "resultsDescription": "선택한 모드와 타임스탬프에 따라 로컬에서 생성된 ULID 값입니다.",
-  "resultsPlaceholder": "생성된 ULID가 여기에 표시됩니다...",
+  "resultsPlaceholder": "생성된 ULID가 여기에 표시됩니다…",
   "generatedAtLabel": "Unix 밀리초로 생성됨: {milliseconds}",
   "copyResultsLabel": "결과 복사",
   "copiedLabel": "복사됨",

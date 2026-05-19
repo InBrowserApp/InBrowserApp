@@ -20,7 +20,7 @@
   "timestampOutOfRange": "La marca de tiempo debe estar entre {min} y {max} (milisegundos Unix).",
   "resultsTitle": "Resultados",
   "resultsDescription": "Valores ULID generados localmente para el modo y la marca de tiempo seleccionados.",
-  "resultsPlaceholder": "Los ULID generados aparecerán aquí...",
+  "resultsPlaceholder": "Los ULID generados aparecerán aquí…",
   "generatedAtLabel": "Generado con milisegundos Unix: {milliseconds}",
   "copyResultsLabel": "Copiar resultado",
   "copiedLabel": "Copiado",

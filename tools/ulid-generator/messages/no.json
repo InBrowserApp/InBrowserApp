@@ -20,7 +20,7 @@
   "timestampOutOfRange": "Tidsstempelet må være mellom {min} og {max} (Unix-millisekunder).",
   "resultsTitle": "Resultater",
   "resultsDescription": "ULID-verdier generert lokalt for valgt modus og tidsstempel.",
-  "resultsPlaceholder": "Genererte ULID-er vises her ...",
+  "resultsPlaceholder": "Genererte ULID-er vises her…",
   "generatedAtLabel": "Generert med Unix-millisekunder: {milliseconds}",
   "copyResultsLabel": "Kopier resultat",
   "copiedLabel": "Kopiert",

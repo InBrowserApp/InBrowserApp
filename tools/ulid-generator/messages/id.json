@@ -20,7 +20,7 @@
   "timestampOutOfRange": "Stempel waktu harus berada antara {min} dan {max} (milidetik Unix).",
   "resultsTitle": "Hasil",
   "resultsDescription": "Nilai ULID dibuat secara lokal untuk mode dan stempel waktu yang dipilih.",
-  "resultsPlaceholder": "ULID yang dibuat akan muncul di sini...",
+  "resultsPlaceholder": "ULID yang dibuat akan muncul di sini…",
   "generatedAtLabel": "Dibuat dengan milidetik Unix: {milliseconds}",
   "copyResultsLabel": "Salin hasil",
   "copiedLabel": "Disalin",

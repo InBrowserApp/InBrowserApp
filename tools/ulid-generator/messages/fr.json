@@ -20,7 +20,7 @@
   "timestampOutOfRange": "L’horodatage doit être compris entre {min} et {max} (millisecondes Unix).",
   "resultsTitle": "Résultats",
   "resultsDescription": "Valeurs ULID générées localement pour le mode et l’horodatage sélectionnés.",
-  "resultsPlaceholder": "Les ULID générés apparaîtront ici...",
+  "resultsPlaceholder": "Les ULID générés apparaîtront ici…",
   "generatedAtLabel": "Généré avec les millisecondes Unix : {milliseconds}",
   "copyResultsLabel": "Copier le résultat",
   "copiedLabel": "Copié",

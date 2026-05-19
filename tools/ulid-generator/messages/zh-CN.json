@@ -20,7 +20,7 @@
   "timestampOutOfRange": "时间戳必须介于 {min} 和 {max} 之间（Unix 毫秒）。",
   "resultsTitle": "结果",
   "resultsDescription": "按所选模式和时间戳在本地生成的 ULID 值。",
-  "resultsPlaceholder": "生成的 ULID 将显示在这里...",
+  "resultsPlaceholder": "生成的 ULID 将显示在这里…",
   "generatedAtLabel": "使用 Unix 毫秒生成：{milliseconds}",
   "copyResultsLabel": "复制结果",
   "copiedLabel": "已复制",

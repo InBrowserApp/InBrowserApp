@@ -20,7 +20,7 @@
   "timestampOutOfRange": "Zaman damgası {min} ile {max} arasında olmalıdır (Unix milisaniyesi).",
   "resultsTitle": "Sonuçlar",
   "resultsDescription": "Seçilen mod ve zaman damgası için yerel olarak oluşturulan ULID değerleri.",
-  "resultsPlaceholder": "Oluşturulan ULID'ler burada görünecek...",
+  "resultsPlaceholder": "Oluşturulan ULID'ler burada görünecek…",
   "generatedAtLabel": "Unix milisaniyesiyle oluşturuldu: {milliseconds}",
   "copyResultsLabel": "Sonucu kopyala",
   "copiedLabel": "Kopyalandı",

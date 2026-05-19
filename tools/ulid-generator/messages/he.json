@@ -20,7 +20,7 @@
   "timestampOutOfRange": "חותמת הזמן חייבת להיות בין {min} ל-{max} (מילישניות Unix).",
   "resultsTitle": "תוצאות",
   "resultsDescription": "ערכי ULID שנוצרו מקומית עבור המצב וחותמת הזמן שנבחרו.",
-  "resultsPlaceholder": "ULIDs שנוצרו יופיעו כאן...",
+  "resultsPlaceholder": "ULIDs שנוצרו יופיעו כאן…",
   "generatedAtLabel": "נוצר עם מילישניות Unix: {milliseconds}",
   "copyResultsLabel": "העתקת התוצאה",
   "copiedLabel": "הועתק",

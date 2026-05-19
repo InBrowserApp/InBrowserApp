@@ -20,7 +20,7 @@
   "timestampOutOfRange": "Mốc thời gian phải nằm trong khoảng từ {min} đến {max} (mili giây Unix).",
   "resultsTitle": "Kết quả",
   "resultsDescription": "Các giá trị ULID được tạo cục bộ cho chế độ và mốc thời gian đã chọn.",
-  "resultsPlaceholder": "Các ULID đã tạo sẽ xuất hiện tại đây...",
+  "resultsPlaceholder": "Các ULID đã tạo sẽ xuất hiện tại đây…",
   "generatedAtLabel": "Đã tạo với mili giây Unix: {milliseconds}",
   "copyResultsLabel": "Sao chép kết quả",
   "copiedLabel": "Đã sao chép",

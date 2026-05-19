@@ -20,7 +20,7 @@
   "timestampOutOfRange": "O timestamp deve estar entre {min} e {max} (milissegundos Unix).",
   "resultsTitle": "Resultados",
   "resultsDescription": "Valores ULID gerados localmente para o modo e o timestamp selecionados.",
-  "resultsPlaceholder": "Os ULIDs gerados aparecerão aqui...",
+  "resultsPlaceholder": "Os ULIDs gerados aparecerão aqui…",
   "generatedAtLabel": "Gerado com milissegundos Unix: {milliseconds}",
   "copyResultsLabel": "Copiar resultado",
   "copiedLabel": "Copiado",

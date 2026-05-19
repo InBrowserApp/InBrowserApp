@@ -20,7 +20,7 @@
   "timestampOutOfRange": "Der Zeitstempel muss zwischen {min} und {max} liegen (Unix-Millisekunden).",
   "resultsTitle": "Ergebnisse",
   "resultsDescription": "ULID-Werte, die lokal für den ausgewählten Modus und Zeitstempel erzeugt wurden.",
-  "resultsPlaceholder": "Erzeugte ULIDs erscheinen hier...",
+  "resultsPlaceholder": "Erzeugte ULIDs erscheinen hier…",
   "generatedAtLabel": "Erzeugt mit Unix-Millisekunden: {milliseconds}",
   "copyResultsLabel": "Ergebnis kopieren",
   "copiedLabel": "Kopiert",

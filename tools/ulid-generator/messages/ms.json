@@ -20,7 +20,7 @@
   "timestampOutOfRange": "Cap masa mestilah antara {min} dan {max} (milisaat Unix).",
   "resultsTitle": "Hasil",
   "resultsDescription": "Nilai ULID yang dijana secara setempat untuk mod dan cap masa yang dipilih.",
-  "resultsPlaceholder": "ULID yang dijana akan muncul di sini...",
+  "resultsPlaceholder": "ULID yang dijana akan muncul di sini…",
   "generatedAtLabel": "Dijana dengan milisaat Unix: {milliseconds}",
   "copyResultsLabel": "Salin hasil",
   "copiedLabel": "Disalin",

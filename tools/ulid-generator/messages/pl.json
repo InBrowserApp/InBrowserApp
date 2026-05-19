@@ -20,7 +20,7 @@
   "timestampOutOfRange": "Znacznik czasu musi być z zakresu od {min} do {max} (milisekundy Unix).",
   "resultsTitle": "Wyniki",
   "resultsDescription": "Wartości ULID wygenerowane lokalnie dla wybranego trybu i znacznika czasu.",
-  "resultsPlaceholder": "Wygenerowane ULID pojawią się tutaj...",
+  "resultsPlaceholder": "Wygenerowane ULID pojawią się tutaj…",
   "generatedAtLabel": "Wygenerowano z milisekundami Unix: {milliseconds}",
   "copyResultsLabel": "Kopiuj wynik",
   "copiedLabel": "Skopiowano",
