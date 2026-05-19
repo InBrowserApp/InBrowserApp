@@ -16562,6 +16562,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "uuid-max-generator",
+    language: "ar",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "de",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "en",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "es",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "fr",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "he",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "hi",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "id",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "it",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "ja",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "ko",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "ms",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "nl",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "no",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "pl",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "pt",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "ru",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "sv",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "th",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "tr",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "vi",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "uuid-nil-generator",
     language: "ar",
   },

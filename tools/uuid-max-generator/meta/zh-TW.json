@@ -1,0 +1,4 @@
+{
+  "name": "Max UUID 產生器",
+  "description": "產生並複製標準化的全 1 max UUID，可用於上限、哨兵值和範圍測試。"
+}

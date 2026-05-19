@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "คัดลอก UUID แบบ all-one มาตรฐานในรูปแบบที่ระบบของคุณต้องการ",
+  "canonicalLabel": "UUID ตามรูปแบบมาตรฐาน",
+  "rawHexLabel": "hex 32 หลัก",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "คัดลอก UUID",
+  "copyHexLabel": "คัดลอก hex",
+  "copyUrnLabel": "คัดลอก URN",
+  "copiedLabel": "คัดลอกแล้ว",
+  "detailsTitle": "ข้อมูลอ้างอิง",
+  "detailsDescription": "max UUID เป็นค่า sentinel คงที่ ไม่ใช่ตัวระบุแบบสุ่ม",
+  "allBitsLabel": "บิต",
+  "allBitsValue": "ตั้งค่าทั้ง 128 บิตเป็นหนึ่ง",
+  "versionLabel": "เวอร์ชัน",
+  "versionValue": "รูปแบบพิเศษ",
+  "variantLabel": "Variant",
+  "variantValue": "ตั้งค่าทุกบิตไว้",
+  "stableLabel": "การสร้างซ้ำ",
+  "stableValue": "คืนค่าเดิมเสมอ"
+}

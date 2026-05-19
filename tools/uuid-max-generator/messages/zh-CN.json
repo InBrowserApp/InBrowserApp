@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "复制系统所需表示形式中的标准化全 1 UUID。",
+  "canonicalLabel": "规范 UUID",
+  "rawHexLabel": "32 位十六进制",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "复制 UUID",
+  "copyHexLabel": "复制十六进制",
+  "copyUrnLabel": "复制 URN",
+  "copiedLabel": "已复制",
+  "detailsTitle": "参考",
+  "detailsDescription": "max UUID 是固定的哨兵值，不是随机标识符。",
+  "allBitsLabel": "位",
+  "allBitsValue": "128 位全部设为 1",
+  "versionLabel": "版本",
+  "versionValue": "特殊形式",
+  "variantLabel": "变体",
+  "variantValue": "所有位均已设置",
+  "stableLabel": "重新生成",
+  "stableValue": "始终返回相同的值"
+}

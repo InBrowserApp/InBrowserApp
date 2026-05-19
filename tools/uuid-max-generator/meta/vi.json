@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo Max UUID",
+  "description": "Tạo và sao chép max UUID toàn bit một theo chuẩn cho giới hạn trên, sentinel và kiểm thử phạm vi."
+}

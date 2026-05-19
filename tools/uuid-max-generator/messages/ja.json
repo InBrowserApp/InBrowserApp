@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "システムが期待する表記で、標準化された全ビット 1 の UUID をコピーします。",
+  "canonicalLabel": "正規 UUID",
+  "rawHexLabel": "32 桁の 16 進数",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "UUID をコピー",
+  "copyHexLabel": "16 進数をコピー",
+  "copyUrnLabel": "URN をコピー",
+  "copiedLabel": "コピーしました",
+  "detailsTitle": "リファレンス",
+  "detailsDescription": "max UUID は固定のセンチネル値であり、ランダムな識別子ではありません。",
+  "allBitsLabel": "ビット",
+  "allBitsValue": "128 ビットすべてが 1",
+  "versionLabel": "バージョン",
+  "versionValue": "特殊形式",
+  "variantLabel": "バリアント",
+  "variantValue": "すべてのビットが設定済み",
+  "stableLabel": "再生成",
+  "stableValue": "常に同じ値を返します"
+}

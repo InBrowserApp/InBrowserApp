@@ -1,0 +1,4 @@
+{
+  "name": "Max UUID Generator",
+  "description": "Generera och kopiera den standardiserade max-UUID:n med enbart ettor för övre gränser, sentinlar och intervalltester."
+}

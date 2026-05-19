@@ -1,0 +1,4 @@
+{
+  "name": "Max UUID Generator",
+  "description": "上限値、センチネル、範囲テスト向けに、標準化された全ビット 1 の max UUID を生成してコピーします。"
+}

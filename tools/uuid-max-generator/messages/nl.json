@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "Kopieer de gestandaardiseerde UUID met alleen enen in de weergave die je systeem verwacht.",
+  "canonicalLabel": "Canonieke UUID",
+  "rawHexLabel": "32-cijferige hex",
+  "urnLabel": "UUID-URN",
+  "copyUuidLabel": "UUID kopieren",
+  "copyHexLabel": "Hex kopieren",
+  "copyUrnLabel": "URN kopieren",
+  "copiedLabel": "Gekopieerd",
+  "detailsTitle": "Referentie",
+  "detailsDescription": "De max UUID is een vaste sentinelwaarde, geen willekeurige identifier.",
+  "allBitsLabel": "Bits",
+  "allBitsValue": "128 bits ingesteld op een",
+  "versionLabel": "Versie",
+  "versionValue": "Speciale vorm",
+  "variantLabel": "Variant",
+  "variantValue": "Alle bits ingesteld",
+  "stableLabel": "Regeneratie",
+  "stableValue": "Geeft altijd dezelfde waarde terug"
+}

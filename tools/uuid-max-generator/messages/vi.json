@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "Sao chép UUID toàn bit một theo chuẩn ở dạng mà hệ thống của bạn cần.",
+  "canonicalLabel": "UUID chuẩn",
+  "rawHexLabel": "Hex 32 chữ số",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "Sao chép UUID",
+  "copyHexLabel": "Sao chép hex",
+  "copyUrnLabel": "Sao chép URN",
+  "copiedLabel": "Đã sao chép",
+  "detailsTitle": "Tham chiếu",
+  "detailsDescription": "Max UUID là một giá trị sentinel cố định, không phải định danh ngẫu nhiên.",
+  "allBitsLabel": "Bit",
+  "allBitsValue": "128 bit đều được đặt thành một",
+  "versionLabel": "Phiên bản",
+  "versionValue": "Dạng đặc biệt",
+  "variantLabel": "Biến thể",
+  "variantValue": "Tất cả bit được đặt",
+  "stableLabel": "Tạo lại",
+  "stableValue": "Luôn trả về cùng một giá trị"
+}
