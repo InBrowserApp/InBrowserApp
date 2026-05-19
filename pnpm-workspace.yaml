@@ -24,6 +24,7 @@ catalog:
   "@anglinb/city-hash": ^1.1.0
   "@noble/ed25519": ^3.0.0
   "@faker-js/faker": ^10.3.0
+  "@jspawn/qpdf-wasm": ^0.0.2
   "@jsquash/avif": ^2.1.1
   "@astrojs/check": ^0.9.8
   "@astrojs/mdx": ^4.3.14

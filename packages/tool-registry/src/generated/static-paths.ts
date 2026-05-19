@@ -11962,6 +11962,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "remove-pdf-owner-password",
+    language: "ar",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "de",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "en",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "es",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "fr",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "he",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "hi",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "id",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "it",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "ja",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "ko",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "ms",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "nl",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "no",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "pl",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "pt",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "ru",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "sv",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "th",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "tr",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "vi",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "zh-CN",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "zh-TW",
+  },
+  {
     slug: "reverse-ip-lookup",
     language: "ar",
   },

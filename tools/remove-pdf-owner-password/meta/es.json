@@ -1,0 +1,4 @@
+{
+  "name": "Quitar contraseña de propietario del PDF",
+  "description": "Elimina localmente las restricciones de contraseña de propietario del PDF para desbloquear los permisos de edición, impresión y copia."
+}

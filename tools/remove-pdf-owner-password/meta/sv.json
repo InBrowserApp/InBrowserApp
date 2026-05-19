@@ -1,0 +1,4 @@
+{
+  "name": "Ta bort PDF-ägarlösenord",
+  "description": "Ta bort begränsningar från PDF:ens ägarlösenord lokalt så att behörigheter för redigering, utskrift och kopiering låses upp."
+}

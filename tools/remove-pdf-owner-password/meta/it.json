@@ -1,0 +1,4 @@
+{
+  "name": "Rimuovi password proprietario PDF",
+  "description": "Rimuovi localmente le restrizioni della password proprietario dai PDF, così le autorizzazioni di modifica, stampa e copia vengono sbloccate."
+}

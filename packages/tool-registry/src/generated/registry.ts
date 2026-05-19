@@ -16249,6 +16249,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "remove-pdf-owner-password",
+    category: "pdf",
+    icon: "lock",
+    tags: ["pdf", "password", "permissions", "decrypt", "offline"],
+    locales: {
+      ar: {
+        name: "إزالة كلمة مرور مالك PDF",
+        description:
+          "أزِل قيود كلمة مرور مالك PDF محليًا لفتح أذونات التحرير والطباعة والنسخ.",
+      },
+      de: {
+        name: "PDF-Besitzerpasswort entfernen",
+        description:
+          "Entferne PDF-Besitzerpasswort-Beschränkungen lokal, damit Berechtigungen zum Bearbeiten, Drucken und Kopieren freigegeben werden.",
+      },
+      en: {
+        name: "Remove PDF Owner Password",
+        description:
+          "Remove PDF owner password restrictions locally so editing, printing, and copying permissions are unlocked.",
+      },
+      es: {
+        name: "Quitar contraseña de propietario del PDF",
+        description:
+          "Elimina localmente las restricciones de contraseña de propietario del PDF para desbloquear los permisos de edición, impresión y copia.",
+      },
+      fr: {
+        name: "Supprimer le mot de passe propriétaire d'un PDF",
+        description:
+          "Supprimez localement les restrictions liées au mot de passe propriétaire d'un PDF afin de débloquer les autorisations de modification, d'impression et de copie.",
+      },
+      he: {
+        name: "הסרת מגבלות סיסמת בעלים מ-PDF",
+        description:
+          "הסירו מגבלות של סיסמת בעלים מ-PDF באופן מקומי, כדי לפתוח הרשאות עריכה, הדפסה והעתקה.",
+      },
+      hi: {
+        name: "PDF स्वामी पासवर्ड हटाएं",
+        description:
+          "PDF के स्वामी-पासवर्ड प्रतिबंधों को स्थानीय रूप से हटाएं, ताकि संपादन, प्रिंटिंग और कॉपी करने की अनुमतियां अनलॉक हो जाएं।",
+      },
+      id: {
+        name: "Hapus Kata Sandi Pemilik PDF",
+        description:
+          "Hapus pembatasan kata sandi pemilik PDF secara lokal agar izin mengedit, mencetak, dan menyalin terbuka.",
+      },
+      it: {
+        name: "Rimuovi password proprietario PDF",
+        description:
+          "Rimuovi localmente le restrizioni della password proprietario dai PDF, così le autorizzazioni di modifica, stampa e copia vengono sbloccate.",
+      },
+      ja: {
+        name: "PDF 所有者パスワード制限解除ツール",
+        description:
+          "編集、印刷、コピーの権限制限を解除するために、PDF の所有者パスワード制限をローカルで削除します。",
+      },
+      ko: {
+        name: "PDF 소유자 비밀번호 제거",
+        description:
+          "편집, 인쇄, 복사 권한이 잠금 해제되도록 PDF 소유자 비밀번호 제한을 로컬에서 제거하세요.",
+      },
+      ms: {
+        name: "Alih Keluar Kata Laluan Pemilik PDF",
+        description:
+          "Alih keluar sekatan kata laluan pemilik PDF secara setempat supaya kebenaran menyunting, mencetak dan menyalin dinyahkunci.",
+      },
+      nl: {
+        name: "PDF-eigenaarswachtwoord verwijderen",
+        description:
+          "Verwijder lokaal PDF-beperkingen door het eigenaarswachtwoord, zodat machtigingen voor bewerken, afdrukken en kopiëren worden ontgrendeld.",
+      },
+      no: {
+        name: "Fjern PDF-eierpassord",
+        description:
+          "Fjern begrensninger satt av PDF-eierpassord lokalt, slik at tillatelser for redigering, utskrift og kopiering låses opp.",
+      },
+      pl: {
+        name: "Usuń hasło właściciela PDF",
+        description:
+          "Usuń lokalnie ograniczenia hasła właściciela pliku PDF, aby odblokować uprawnienia do edycji, drukowania i kopiowania.",
+      },
+      pt: {
+        name: "Remover palavra-passe de proprietário do PDF",
+        description:
+          "Remova localmente as restrições de palavra-passe de proprietário do PDF para desbloquear as permissões de edição, impressão e cópia.",
+      },
+      ru: {
+        name: "Удаление пароля владельца PDF",
+        description:
+          "Локально снимайте ограничения пароля владельца PDF, чтобы разблокировать разрешения на редактирование, печать и копирование.",
+      },
+      sv: {
+        name: "Ta bort PDF-ägarlösenord",
+        description:
+          "Ta bort begränsningar från PDF:ens ägarlösenord lokalt så att behörigheter för redigering, utskrift och kopiering låses upp.",
+      },
+      th: {
+        name: "ลบข้อจำกัดรหัสผ่านเจ้าของ PDF",
+        description:
+          "ลบข้อจำกัดรหัสผ่านเจ้าของ PDF ในเครื่อง เพื่อปลดล็อกสิทธิ์การแก้ไข การพิมพ์ และการคัดลอก",
+      },
+      tr: {
+        name: "PDF Sahip Parolasını Kaldır",
+        description:
+          "PDF sahip parolası kısıtlamalarını yerel olarak kaldırarak düzenleme, yazdırma ve kopyalama izinlerinin kilidini açın.",
+      },
+      vi: {
+        name: "Gỡ mật khẩu chủ sở hữu PDF",
+        description:
+          "Gỡ cục bộ các hạn chế do mật khẩu chủ sở hữu PDF đặt ra để mở khóa quyền chỉnh sửa, in và sao chép.",
+      },
+      "zh-CN": {
+        name: "移除 PDF 所有者密码",
+        description:
+          "在本地移除 PDF 所有者密码限制，解锁编辑、打印和复制权限。",
+      },
+      "zh-TW": {
+        name: "移除 PDF 擁有者密碼",
+        description:
+          "在本機移除 PDF 擁有者密碼限制，解除編輯、列印和複製權限。",
+      },
+    },
+  },
+  {
     slug: "reverse-ip-lookup",
     category: "network",
     icon: "network",
@@ -41539,6 +41662,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "正則測試與取代",
         description:
           "測試正則表達式、檢查匹配結果，並直接預覽取代後的文字輸出。",
+      },
+    },
+  },
+  "remove-pdf-owner-password": {
+    slug: "remove-pdf-owner-password",
+    category: "pdf",
+    icon: "lock",
+    tags: ["pdf", "password", "permissions", "decrypt", "offline"],
+    locales: {
+      ar: {
+        name: "إزالة كلمة مرور مالك PDF",
+        description:
+          "أزِل قيود كلمة مرور مالك PDF محليًا لفتح أذونات التحرير والطباعة والنسخ.",
+      },
+      de: {
+        name: "PDF-Besitzerpasswort entfernen",
+        description:
+          "Entferne PDF-Besitzerpasswort-Beschränkungen lokal, damit Berechtigungen zum Bearbeiten, Drucken und Kopieren freigegeben werden.",
+      },
+      en: {
+        name: "Remove PDF Owner Password",
+        description:
+          "Remove PDF owner password restrictions locally so editing, printing, and copying permissions are unlocked.",
+      },
+      es: {
+        name: "Quitar contraseña de propietario del PDF",
+        description:
+          "Elimina localmente las restricciones de contraseña de propietario del PDF para desbloquear los permisos de edición, impresión y copia.",
+      },
+      fr: {
+        name: "Supprimer le mot de passe propriétaire d'un PDF",
+        description:
+          "Supprimez localement les restrictions liées au mot de passe propriétaire d'un PDF afin de débloquer les autorisations de modification, d'impression et de copie.",
+      },
+      he: {
+        name: "הסרת מגבלות סיסמת בעלים מ-PDF",
+        description:
+          "הסירו מגבלות של סיסמת בעלים מ-PDF באופן מקומי, כדי לפתוח הרשאות עריכה, הדפסה והעתקה.",
+      },
+      hi: {
+        name: "PDF स्वामी पासवर्ड हटाएं",
+        description:
+          "PDF के स्वामी-पासवर्ड प्रतिबंधों को स्थानीय रूप से हटाएं, ताकि संपादन, प्रिंटिंग और कॉपी करने की अनुमतियां अनलॉक हो जाएं।",
+      },
+      id: {
+        name: "Hapus Kata Sandi Pemilik PDF",
+        description:
+          "Hapus pembatasan kata sandi pemilik PDF secara lokal agar izin mengedit, mencetak, dan menyalin terbuka.",
+      },
+      it: {
+        name: "Rimuovi password proprietario PDF",
+        description:
+          "Rimuovi localmente le restrizioni della password proprietario dai PDF, così le autorizzazioni di modifica, stampa e copia vengono sbloccate.",
+      },
+      ja: {
+        name: "PDF 所有者パスワード制限解除ツール",
+        description:
+          "編集、印刷、コピーの権限制限を解除するために、PDF の所有者パスワード制限をローカルで削除します。",
+      },
+      ko: {
+        name: "PDF 소유자 비밀번호 제거",
+        description:
+          "편집, 인쇄, 복사 권한이 잠금 해제되도록 PDF 소유자 비밀번호 제한을 로컬에서 제거하세요.",
+      },
+      ms: {
+        name: "Alih Keluar Kata Laluan Pemilik PDF",
+        description:
+          "Alih keluar sekatan kata laluan pemilik PDF secara setempat supaya kebenaran menyunting, mencetak dan menyalin dinyahkunci.",
+      },
+      nl: {
+        name: "PDF-eigenaarswachtwoord verwijderen",
+        description:
+          "Verwijder lokaal PDF-beperkingen door het eigenaarswachtwoord, zodat machtigingen voor bewerken, afdrukken en kopiëren worden ontgrendeld.",
+      },
+      no: {
+        name: "Fjern PDF-eierpassord",
+        description:
+          "Fjern begrensninger satt av PDF-eierpassord lokalt, slik at tillatelser for redigering, utskrift og kopiering låses opp.",
+      },
+      pl: {
+        name: "Usuń hasło właściciela PDF",
+        description:
+          "Usuń lokalnie ograniczenia hasła właściciela pliku PDF, aby odblokować uprawnienia do edycji, drukowania i kopiowania.",
+      },
+      pt: {
+        name: "Remover palavra-passe de proprietário do PDF",
+        description:
+          "Remova localmente as restrições de palavra-passe de proprietário do PDF para desbloquear as permissões de edição, impressão e cópia.",
+      },
+      ru: {
+        name: "Удаление пароля владельца PDF",
+        description:
+          "Локально снимайте ограничения пароля владельца PDF, чтобы разблокировать разрешения на редактирование, печать и копирование.",
+      },
+      sv: {
+        name: "Ta bort PDF-ägarlösenord",
+        description:
+          "Ta bort begränsningar från PDF:ens ägarlösenord lokalt så att behörigheter för redigering, utskrift och kopiering låses upp.",
+      },
+      th: {
+        name: "ลบข้อจำกัดรหัสผ่านเจ้าของ PDF",
+        description:
+          "ลบข้อจำกัดรหัสผ่านเจ้าของ PDF ในเครื่อง เพื่อปลดล็อกสิทธิ์การแก้ไข การพิมพ์ และการคัดลอก",
+      },
+      tr: {
+        name: "PDF Sahip Parolasını Kaldır",
+        description:
+          "PDF sahip parolası kısıtlamalarını yerel olarak kaldırarak düzenleme, yazdırma ve kopyalama izinlerinin kilidini açın.",
+      },
+      vi: {
+        name: "Gỡ mật khẩu chủ sở hữu PDF",
+        description:
+          "Gỡ cục bộ các hạn chế do mật khẩu chủ sở hữu PDF đặt ra để mở khóa quyền chỉnh sửa, in và sao chép.",
+      },
+      "zh-CN": {
+        name: "移除 PDF 所有者密码",
+        description:
+          "在本地移除 PDF 所有者密码限制，解锁编辑、打印和复制权限。",
+      },
+      "zh-TW": {
+        name: "移除 PDF 擁有者密碼",
+        description:
+          "在本機移除 PDF 擁有者密碼限制，解除編輯、列印和複製權限。",
       },
     },
   },

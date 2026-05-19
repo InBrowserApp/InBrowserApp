@@ -1,0 +1,4 @@
+{
+  "name": "Remove PDF Owner Password",
+  "description": "Remove PDF owner password restrictions locally so editing, printing, and copying permissions are unlocked."
+}
