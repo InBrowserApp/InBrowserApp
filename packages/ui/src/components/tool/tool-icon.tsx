@@ -14,6 +14,7 @@ import {
   Globe,
   ImageIcon,
   Lock,
+  Mic,
   Network,
   Wrench,
 } from "@workspace/ui/icons"
@@ -31,6 +32,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   globe: Globe,
   image: ImageIcon,
   lock: Lock,
+  mic: Mic,
   network: Network,
 }
 

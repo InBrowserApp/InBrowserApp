@@ -646,6 +646,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "audio-recorder",
+    language: "ar",
+  },
+  {
+    slug: "audio-recorder",
+    language: "de",
+  },
+  {
+    slug: "audio-recorder",
+    language: "en",
+  },
+  {
+    slug: "audio-recorder",
+    language: "es",
+  },
+  {
+    slug: "audio-recorder",
+    language: "fr",
+  },
+  {
+    slug: "audio-recorder",
+    language: "he",
+  },
+  {
+    slug: "audio-recorder",
+    language: "hi",
+  },
+  {
+    slug: "audio-recorder",
+    language: "id",
+  },
+  {
+    slug: "audio-recorder",
+    language: "it",
+  },
+  {
+    slug: "audio-recorder",
+    language: "ja",
+  },
+  {
+    slug: "audio-recorder",
+    language: "ko",
+  },
+  {
+    slug: "audio-recorder",
+    language: "ms",
+  },
+  {
+    slug: "audio-recorder",
+    language: "nl",
+  },
+  {
+    slug: "audio-recorder",
+    language: "no",
+  },
+  {
+    slug: "audio-recorder",
+    language: "pl",
+  },
+  {
+    slug: "audio-recorder",
+    language: "pt",
+  },
+  {
+    slug: "audio-recorder",
+    language: "ru",
+  },
+  {
+    slug: "audio-recorder",
+    language: "sv",
+  },
+  {
+    slug: "audio-recorder",
+    language: "th",
+  },
+  {
+    slug: "audio-recorder",
+    language: "tr",
+  },
+  {
+    slug: "audio-recorder",
+    language: "vi",
+  },
+  {
+    slug: "audio-recorder",
+    language: "zh-CN",
+  },
+  {
+    slug: "audio-recorder",
+    language: "zh-TW",
+  },
+  {
     slug: "barcode-generator",
     language: "ar",
   },
