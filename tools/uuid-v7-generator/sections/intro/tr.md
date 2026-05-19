@@ -4,6 +4,10 @@ UUID v7, tanımlayıcının başına Unix milisaniye zaman damgası yerleştiren
 
 Bu oluşturucu UUID v7 değerlerini tamamen tarayıcınızda oluşturur. Tek bir tanımlayıcı veya 100'e kadar toplu değer oluşturabilir, ardından listeyi kopyalayabilir ya da tohum verisi, veritabanı kayıtları, etkinlik sabitleri veya test yükleri için metin dosyası olarak indirebilirsiniz.
 
+## Geçerli Veya Özel Zaman
+
+Normal uygulama kayıtları, içe aktarma anahtarları ve oluşturuldukları zamanı yansıtması gereken test verileri için geçerli zamanı kullanın. Belirli bir anın etrafında sıralanması gereken deterministik görünümlü örneklere, sonradan doldurulan satırlara, yeniden oynatılan olaylara veya sabit test verilerine ihtiyaç duyduğunuzda özel zaman damgasına geçin.
+
 ## UUID v7 Ne Zaman Yardımcı Olur?
 
 UUID v7; veritabanlarında, günlüklerde, kuyruklarda ve dağıtık etkinlik akışlarında iyi sıralanan opak tanımlayıcılar istediğinizde kullanışlıdır. Rastgele UUID v4 değerleriyle karşılaştırıldığında UUID v7, daha yeni kayıtlar sıralı anahtar alanının sonuna yakın görünme eğiliminde olduğu için dizin hareketliliğini azaltır.

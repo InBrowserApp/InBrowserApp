@@ -4,6 +4,7 @@ import {
   ToolPanelCardContent,
   ToolPanelCardFooter,
 } from "@workspace/ui/components/tool/tool-panel-card"
+import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
@@ -13,7 +14,7 @@ import {
 } from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { cn } from "@workspace/ui/lib/utils"
-import { Download, RefreshCcw } from "@workspace/ui/icons"
+import { Download, RefreshCcw, TriangleAlert } from "@workspace/ui/icons"
 
 import type { UuidV7Messages } from "../types"
 
@@ -26,6 +27,7 @@ type UuidV7ResultsCardProps = Readonly<{
   output: string
   count: number
   isBatchMode: boolean
+  timestampError: string
   onRegenerate: () => void
 }>
 
@@ -38,6 +40,7 @@ function UuidV7ResultsCard({
   output,
   count,
   isBatchMode,
+  timestampError,
   onRegenerate,
 }: UuidV7ResultsCardProps) {
   return (
@@ -47,6 +50,13 @@ function UuidV7ResultsCard({
         <CardDescription>{messages.resultsDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent className="gap-4">
+        {timestampError ? (
+          <Alert variant="destructive">
+            <TriangleAlert />
+            <AlertDescription>{timestampError}</AlertDescription>
+          </Alert>
+        ) : null}
+
         <div
           aria-label={
             isBatchMode ? messages.batchSummaryLabel : messages.resultsTitle

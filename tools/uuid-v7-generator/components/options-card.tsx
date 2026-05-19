@@ -1,3 +1,4 @@
+import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
   CardContent,
@@ -16,31 +17,61 @@ import {
   ToggleGroup,
   ToggleGroupItem,
 } from "@workspace/ui/components/ui/toggle-group"
+import { Clock3 } from "@workspace/ui/icons"
 
-import { UUID_V7_MAX_COUNT, UUID_V7_MIN_BATCH_COUNT } from "../core/uuid-v7"
-import type { UuidV7GenerationMode, UuidV7Messages } from "../types"
+import {
+  UUID_V7_MAX_COUNT,
+  UUID_V7_MAX_TIMESTAMP_MS,
+  UUID_V7_MIN_BATCH_COUNT,
+} from "../core/uuid-v7"
+import type {
+  UuidV7GenerationMode,
+  UuidV7Messages,
+  UuidV7TimestampMode,
+} from "../types"
 
 type UuidV7OptionsCardProps = Readonly<{
   messages: UuidV7Messages
   countId: string
+  customDateTimeId: string
+  customUnixMillisecondsId: string
   className?: string
   mode: UuidV7GenerationMode
   count: number
+  timestampMode: UuidV7TimestampMode
+  customDateTimeInput: string
+  customUnixMillisecondsInput: string
+  timestampError: string
   onModeChange: (mode: UuidV7GenerationMode) => void
   onCountChange: (value: string) => void
+  onTimestampModeChange: (mode: UuidV7TimestampMode) => void
+  onCustomDateTimeChange: (value: string) => void
+  onCustomUnixMillisecondsChange: (value: string) => void
+  onSetNow: () => void
 }>
 
 function UuidV7OptionsCard({
   messages,
   countId,
+  customDateTimeId,
+  customUnixMillisecondsId,
   className,
   mode,
   count,
+  timestampMode,
+  customDateTimeInput,
+  customUnixMillisecondsInput,
+  timestampError,
   onModeChange,
   onCountChange,
+  onTimestampModeChange,
+  onCustomDateTimeChange,
+  onCustomUnixMillisecondsChange,
+  onSetNow,
 }: UuidV7OptionsCardProps) {
   const modeLabelId = `${countId}-mode-label`
   const countDescriptionId = `${countId}-description`
+  const timestampModeLabelId = `${countId}-timestamp-mode-label`
 
   return (
     <Card className={className}>
@@ -97,6 +128,92 @@ function UuidV7OptionsCard({
               {messages.countDescription}
             </FieldDescription>
           </Field>
+        ) : null}
+
+        <Field>
+          <FieldLabel id={timestampModeLabelId}>
+            {messages.timestampModeLabel}
+          </FieldLabel>
+          <FieldContent>
+            <ToggleGroup
+              type="single"
+              value={timestampMode}
+              spacing={0}
+              variant="outline"
+              size="sm"
+              aria-labelledby={timestampModeLabelId}
+              className="w-full [&>[data-slot=toggle-group-item]]:flex-1"
+              onValueChange={(value) => {
+                if (value === "now" || value === "custom") {
+                  onTimestampModeChange(value)
+                }
+              }}
+            >
+              <ToggleGroupItem value="now">
+                {messages.timestampNowLabel}
+              </ToggleGroupItem>
+              <ToggleGroupItem value="custom">
+                {messages.timestampCustomLabel}
+              </ToggleGroupItem>
+            </ToggleGroup>
+          </FieldContent>
+          <FieldDescription>
+            {messages.timestampModeDescription}
+          </FieldDescription>
+        </Field>
+
+        {timestampMode === "custom" ? (
+          <>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Field>
+                <FieldLabel htmlFor={customDateTimeId}>
+                  {messages.customDateTimeLabel}
+                </FieldLabel>
+                <Input
+                  id={customDateTimeId}
+                  name="uuid-v7-custom-date-time"
+                  type="datetime-local"
+                  step="0.001"
+                  autoComplete="off"
+                  value={customDateTimeInput}
+                  onChange={(event) => {
+                    onCustomDateTimeChange(event.target.value)
+                  }}
+                />
+              </Field>
+
+              <Field data-invalid={Boolean(timestampError)}>
+                <FieldLabel htmlFor={customUnixMillisecondsId}>
+                  {messages.customUnixMillisecondsLabel}
+                </FieldLabel>
+                <Input
+                  id={customUnixMillisecondsId}
+                  name="uuid-v7-custom-unix-milliseconds"
+                  type="number"
+                  inputMode="numeric"
+                  autoComplete="off"
+                  min={0}
+                  max={UUID_V7_MAX_TIMESTAMP_MS}
+                  step="1"
+                  value={customUnixMillisecondsInput}
+                  aria-invalid={Boolean(timestampError)}
+                  onChange={(event) => {
+                    onCustomUnixMillisecondsChange(event.target.value)
+                  }}
+                />
+              </Field>
+            </div>
+
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={onSetNow}
+            >
+              <Clock3 data-icon="inline-start" />
+              {messages.setNowLabel}
+            </Button>
+          </>
         ) : null}
       </CardContent>
     </Card>

@@ -39,6 +39,16 @@ function normalizeUnixTimestampMs(value: number): number {
   return Math.min(Math.max(Math.floor(value), 0), UUID_V7_MAX_TIMESTAMP_MS)
 }
 
+function isValidUuidV7TimestampMs(value: number): boolean {
+  if (!Number.isFinite(value)) {
+    return false
+  }
+
+  const normalized = Math.floor(value)
+
+  return normalized >= 0 && normalized <= UUID_V7_MAX_TIMESTAMP_MS
+}
+
 function fillRandomBytes(bytes: Uint8Array, randomBytes?: RandomBytes) {
   if (randomBytes) {
     randomBytes(bytes)
@@ -170,6 +180,7 @@ export {
   UUID_V7_MIN_COUNT,
   createUuidV7Generator,
   generateUuidV7Ids,
+  isValidUuidV7TimestampMs,
   isUuidV7,
   normalizeUnixTimestampMs,
   normalizeUuidV7Count,

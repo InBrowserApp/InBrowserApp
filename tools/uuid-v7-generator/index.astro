@@ -33,7 +33,7 @@ const messages = { meta, ...localizedMessages }
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <UuidV7GeneratorClient client:load messages={messages} />
+  <UuidV7GeneratorClient client:load messages={messages} language={lang} />
 
   {
     IntroSection ? (

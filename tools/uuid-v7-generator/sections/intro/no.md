@@ -4,6 +4,10 @@ UUID v7 er et moderne UUID-format som plasserer et Unix-tidsstempel i millisekun
 
 Denne generatoren oppretter UUID v7-verdier helt i nettleseren. Du kan generere én enkelt identifikator eller en gruppe på opptil 100, og deretter kopiere listen eller laste den ned som en tekstfil for startdata, databaseposter, hendelsesfiksturer eller testnyttelaster.
 
+## Gjeldende eller egendefinert tid
+
+Bruk gjeldende tid for vanlige programposter, importnøkler og testdata som skal gjenspeile når de ble opprettet. Bytt til et egendefinert tidsstempel når du trenger deterministisk utseende eksempler, tilbakefylte rader, avspilte hendelser eller fiksturer som skal sorteres rundt et bestemt tidspunkt.
+
 ## Når UUID v7 hjelper
 
 UUID v7 er nyttig når du vil ha ikke-beskrivende identifikatorer som fortsatt sorteres godt i databaser, logger, køer og distribuerte hendelsesstrømmer. Sammenlignet med tilfeldige UUID v4-verdier reduserer UUID v7 omorganisering i indekser fordi nyere poster vanligvis havner nær slutten av et sortert nøkkelrom.

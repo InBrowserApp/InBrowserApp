@@ -4,6 +4,10 @@ UUID v7 là một định dạng UUID hiện đại đặt dấu thời gian Uni
 
 Trình tạo này tạo các giá trị UUID v7 hoàn toàn trong trình duyệt của bạn. Bạn có thể tạo một mã định danh duy nhất hoặc một lô tối đa 100 mã, sau đó sao chép danh sách hoặc tải xuống dưới dạng tệp văn bản để dùng cho dữ liệu seed, bản ghi cơ sở dữ liệu, fixture sự kiện hoặc payload kiểm thử.
 
+## Thời Gian Hiện Tại Hoặc Tùy Chỉnh
+
+Dùng thời gian hiện tại cho bản ghi ứng dụng thông thường, khóa nhập và dữ liệu kiểm thử cần phản ánh thời điểm chúng được tạo. Chuyển sang mốc thời gian tùy chỉnh khi bạn cần mẫu trông có tính xác định, hàng được bổ sung ngược thời gian, sự kiện được phát lại hoặc fixture cần sắp xếp quanh một thời điểm cụ thể.
+
 ## Khi UUID v7 Hữu Ích
 
 UUID v7 hữu ích khi bạn muốn các mã định danh mờ vẫn sắp xếp tốt trong cơ sở dữ liệu, log, hàng đợi và luồng sự kiện phân tán. So với các giá trị UUID v4 ngẫu nhiên, UUID v7 giảm xáo trộn chỉ mục vì các bản ghi mới hơn thường xuất hiện gần cuối không gian khóa đã sắp xếp.

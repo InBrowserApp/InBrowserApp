@@ -6,6 +6,7 @@ import {
   UUID_V7_MAX_TIMESTAMP_MS,
   createUuidV7Generator,
   generateUuidV7Ids,
+  isValidUuidV7TimestampMs,
   isUuidV7,
   normalizeUnixTimestampMs,
   normalizeUuidV7Count,
@@ -39,6 +40,14 @@ describe("uuid v7 core", () => {
     expect(normalizeUnixTimestampMs(UUID_V7_MAX_TIMESTAMP_MS + 1)).toBe(
       UUID_V7_MAX_TIMESTAMP_MS
     )
+  })
+
+  test("validates Unix millisecond timestamps without clamping", () => {
+    expect(isValidUuidV7TimestampMs(0)).toBe(true)
+    expect(isValidUuidV7TimestampMs(123.9)).toBe(true)
+    expect(isValidUuidV7TimestampMs(Number.NaN)).toBe(false)
+    expect(isValidUuidV7TimestampMs(-1)).toBe(false)
+    expect(isValidUuidV7TimestampMs(UUID_V7_MAX_TIMESTAMP_MS + 1)).toBe(false)
   })
 
   test("creates an RFC-shaped UUID v7 from timestamp and random bytes", () => {
@@ -103,6 +112,22 @@ describe("uuid v7 core", () => {
 
     expect(ids).toHaveLength(3)
     expect(ids.every(isUuidV7)).toBe(true)
+  })
+
+  test("uses Date.now when no custom clock is passed", () => {
+    vi.spyOn(Date, "now").mockReturnValue(1234)
+    vi.spyOn(globalThis.crypto, "getRandomValues").mockImplementation(
+      (bytes) => {
+        const values = bytes as Uint8Array
+
+        values.fill(0)
+        return bytes
+      }
+    )
+
+    const ids = generateUuidV7Ids(1)
+
+    expect(parseUuidV7Timestamp(ids[0]!)).toBe(1234)
   })
 
   test("validates UUID v7 strings case-insensitively", () => {

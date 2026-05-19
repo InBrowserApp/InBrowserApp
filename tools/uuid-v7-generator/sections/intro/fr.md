@@ -4,6 +4,10 @@ UUID v7 est un format UUID moderne qui place un horodatage Unix en millisecondes
 
 Ce générateur crée des valeurs UUID v7 entièrement dans votre navigateur. Vous pouvez générer un seul identifiant ou un lot allant jusqu'à 100, puis copier la liste ou la télécharger sous forme de fichier texte pour des données d'initialisation, des enregistrements de base de données, des jeux d'événements ou des charges utiles de test.
 
+## Heure actuelle ou personnalisée
+
+Utilisez l’heure actuelle pour les enregistrements d’application courants, les clés d’importation et les données de test qui doivent refléter leur moment de création. Passez à un horodatage personnalisé lorsque vous avez besoin d’exemples d’apparence déterministe, de lignes ajoutées rétroactivement, d’événements rejoués ou de jeux de données de test qui doivent se trier autour d’un moment précis.
+
 ## Quand UUID v7 est utile
 
 UUID v7 est utile lorsque vous voulez des identifiants opaques qui se trient tout de même correctement dans les bases de données, les journaux, les files d'attente et les flux d'événements distribués. Par rapport aux valeurs UUID v4 aléatoires, UUID v7 réduit le brassage des index, car les nouveaux enregistrements tendent à apparaître près de la fin d'un espace de clés trié.

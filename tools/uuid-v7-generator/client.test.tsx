@@ -8,6 +8,8 @@ import {
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import UuidV7GeneratorClient from "./client"
+import { formatDateTimeLocalInput } from "./core/local-date"
+import { UUID_V7_MAX_TIMESTAMP_MS, parseUuidV7Timestamp } from "./core/uuid-v7"
 
 const messages = {
   meta: {
@@ -21,6 +23,17 @@ const messages = {
   batchModeLabel: "Batch",
   countLabel: "Count",
   countDescription: "Batch mode can generate 2 to 100 UUIDs at a time.",
+  timestampModeLabel: "Timestamp mode",
+  timestampModeDescription:
+    "Use the current clock value or pin the UUID v7 timestamp to a specific Unix millisecond.",
+  timestampNowLabel: "Use current time",
+  timestampCustomLabel: "Custom time",
+  customDateTimeLabel: "Custom date/time",
+  customUnixMillisecondsLabel: "Custom Unix milliseconds",
+  setNowLabel: "Set to now",
+  timestampInvalid: "Invalid timestamp.",
+  timestampOutOfRange:
+    "Timestamp must be between {min} and {max} (Unix milliseconds).",
   resultsTitle: "Generated UUIDs",
   resultsDescription: "UUID v7 values are generated locally in your browser.",
   resultsPlaceholder: "Generated UUID v7 values will appear here...",
@@ -85,12 +98,18 @@ function getModeOption(name: string) {
 
 describe("UuidV7GeneratorClient", () => {
   test("renders defaults and generates a single UUID v7 identifier", async () => {
-    render(<UuidV7GeneratorClient messages={messages} />)
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
 
     expect(
       getModeOption(messages.singleModeLabel).getAttribute("data-state")
     ).toBe("on")
     expect(screen.queryByLabelText(messages.countLabel)).toBeNull()
+    expect(
+      getModeOption(messages.timestampNowLabel).getAttribute("data-state")
+    ).toBe("on")
+    expect(
+      screen.queryByLabelText(messages.customUnixMillisecondsLabel)
+    ).toBeNull()
     expect(getResultsTextarea().getAttribute("rows")).toBe("5")
 
     await waitFor(() => {
@@ -113,7 +132,7 @@ describe("UuidV7GeneratorClient", () => {
   })
 
   test("switches to batch mode and generates ten UUID v7 identifiers", async () => {
-    render(<UuidV7GeneratorClient messages={messages} />)
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
 
     fireEvent.click(getModeOption(messages.batchModeLabel))
 
@@ -146,7 +165,7 @@ describe("UuidV7GeneratorClient", () => {
   })
 
   test("persists changed count and regenerates a smaller batch", async () => {
-    render(<UuidV7GeneratorClient messages={messages} />)
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
 
     fireEvent.click(getModeOption(messages.batchModeLabel))
 
@@ -169,7 +188,7 @@ describe("UuidV7GeneratorClient", () => {
     window.localStorage.setItem("tools:uuid-v7-generator:count", "2")
     window.localStorage.setItem("tools:uuid-v7-generator:mode", "batch")
 
-    render(<UuidV7GeneratorClient messages={messages} />)
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
 
     await waitFor(() => {
       expect(screen.getByLabelText(messages.countLabel)).toHaveProperty(
@@ -183,7 +202,7 @@ describe("UuidV7GeneratorClient", () => {
   test("treats a legacy saved count above one as batch mode", async () => {
     window.localStorage.setItem("tools:uuid-v7-generator:count", "3")
 
-    render(<UuidV7GeneratorClient messages={messages} />)
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
 
     await waitFor(() => {
       expect(screen.getByLabelText(messages.countLabel)).toHaveProperty(
@@ -198,7 +217,7 @@ describe("UuidV7GeneratorClient", () => {
   })
 
   test("keeps batch count at two or more", async () => {
-    render(<UuidV7GeneratorClient messages={messages} />)
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
 
     fireEvent.click(getModeOption(messages.batchModeLabel))
     fireEvent.change(screen.getByLabelText(messages.countLabel), {
@@ -215,7 +234,7 @@ describe("UuidV7GeneratorClient", () => {
   })
 
   test("switches back to single mode while preserving the batch count", async () => {
-    render(<UuidV7GeneratorClient messages={messages} />)
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
 
     fireEvent.click(getModeOption(messages.batchModeLabel))
     fireEvent.change(screen.getByLabelText(messages.countLabel), {
@@ -238,7 +257,7 @@ describe("UuidV7GeneratorClient", () => {
   })
 
   test("regenerates a fresh batch when the button is clicked", async () => {
-    render(<UuidV7GeneratorClient messages={messages} />)
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
 
     await waitFor(() => {
       expect(getResultsTextarea().value).not.toBe("")
@@ -256,7 +275,7 @@ describe("UuidV7GeneratorClient", () => {
   })
 
   test("exposes generated UUIDs as a downloadable text file", async () => {
-    render(<UuidV7GeneratorClient messages={messages} />)
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
 
     await waitFor(() => {
       expect(getResultsTextarea().value).not.toBe("")
@@ -267,6 +286,113 @@ describe("UuidV7GeneratorClient", () => {
     })
 
     expect(downloadLink.getAttribute("href")).toBe("blob:uuid-v7-results")
-    expect(downloadLink.getAttribute("download")).toBe("uuid-v7.txt")
+    expect(downloadLink.getAttribute("download")).toBe(
+      "uuid-v7-1700000000000.txt"
+    )
+  })
+
+  test("uses a custom Unix millisecond timestamp", async () => {
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
+
+    fireEvent.click(getModeOption(messages.timestampCustomLabel))
+    fireEvent.change(
+      screen.getByLabelText(messages.customUnixMillisecondsLabel),
+      {
+        target: { value: "1234" },
+      }
+    )
+
+    await waitFor(() => {
+      const [uuid] = getResultsTextarea().value.trim().split("\n")
+
+      expect(parseUuidV7Timestamp(uuid!)).toBe(1234)
+      expect(screen.getByText("1234")).toBeTruthy()
+      expect(
+        screen.getByLabelText(messages.customDateTimeLabel)
+      ).toHaveProperty("value", formatDateTimeLocalInput(1234))
+    })
+  })
+
+  test("syncs custom datetime input, restores now, and persists timestamp settings", async () => {
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
+
+    fireEvent.click(getModeOption(messages.timestampCustomLabel))
+    fireEvent.change(screen.getByLabelText(messages.customDateTimeLabel), {
+      target: { value: "1970-01-01T00:00:02.345" },
+    })
+
+    await waitFor(() => {
+      expect(
+        screen.getByLabelText(messages.customUnixMillisecondsLabel)
+      ).toHaveProperty(
+        "value",
+        String(new Date(1970, 0, 1, 0, 0, 2, 345).getTime())
+      )
+      expect(
+        window.localStorage.getItem("tools:uuid-v7-generator:timestamp-mode")
+      ).toBe("custom")
+    })
+
+    fireEvent.click(screen.getByRole("button", { name: messages.setNowLabel }))
+
+    await waitFor(() => {
+      expect(
+        screen.getByLabelText(messages.customUnixMillisecondsLabel)
+      ).toHaveProperty("value", String(nowMs))
+    })
+  })
+
+  test("shows an error and clears output for invalid custom timestamps", async () => {
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
+
+    fireEvent.click(getModeOption(messages.timestampCustomLabel))
+    fireEvent.change(
+      screen.getByLabelText(messages.customUnixMillisecondsLabel),
+      {
+        target: { value: String(UUID_V7_MAX_TIMESTAMP_MS + 1) },
+      }
+    )
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(
+          `Timestamp must be between 0 and ${UUID_V7_MAX_TIMESTAMP_MS} (Unix milliseconds).`
+        )
+      ).toBeTruthy()
+      expect(getResultsTextarea().value).toBe("")
+    })
+
+    expect(
+      screen.getByRole("button", { name: messages.downloadResultsLabel })
+    ).toHaveProperty("disabled", true)
+  })
+
+  test("restores saved custom timestamp settings", async () => {
+    window.localStorage.setItem(
+      "tools:uuid-v7-generator:timestamp-mode",
+      "custom"
+    )
+    window.localStorage.setItem(
+      "tools:uuid-v7-generator:custom-date-time",
+      "2026-04-15T08:30:45.123"
+    )
+    window.localStorage.setItem(
+      "tools:uuid-v7-generator:custom-unix-milliseconds",
+      "12345"
+    )
+
+    render(<UuidV7GeneratorClient messages={messages} language="en" />)
+
+    await waitFor(() => {
+      expect(
+        getModeOption(messages.timestampCustomLabel).getAttribute("data-state")
+      ).toBe("on")
+      expect(
+        screen.getByLabelText(messages.customUnixMillisecondsLabel)
+      ).toHaveProperty("value", "12345")
+      expect(parseUuidV7Timestamp(getResultsTextarea().value.trim())).toBe(
+        12345
+      )
+    })
   })
 })

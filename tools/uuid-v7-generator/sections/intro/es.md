@@ -4,6 +4,10 @@ UUID v7 es un formato UUID moderno que coloca una marca de tiempo Unix en milise
 
 Este generador crea valores UUID v7 completamente en tu navegador. Puedes generar un solo identificador o un lote de hasta 100, y luego copiar la lista o descargarla como archivo de texto para datos semilla, registros de base de datos, datos de prueba para eventos o cargas de prueba.
 
+## Hora Actual O Personalizada
+
+Usa la hora actual para registros normales de aplicaciones, claves de importación y datos de prueba que deban reflejar cuándo se crearon. Cambia a una marca de tiempo personalizada cuando necesites muestras de aspecto determinista, filas rellenadas a posteriori, eventos reproducidos o fixtures que deban ordenarse alrededor de un momento específico.
+
 ## Cuándo ayuda UUID v7
 
 UUID v7 es útil cuando quieres identificadores opacos que aun así se ordenen bien en bases de datos, registros, colas y flujos de eventos distribuidos. En comparación con los valores UUID v4 aleatorios, UUID v7 reduce el movimiento en los índices porque los registros nuevos tienden a aparecer cerca del final de un espacio de claves ordenado.
