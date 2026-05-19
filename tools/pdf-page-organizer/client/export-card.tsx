@@ -47,7 +47,7 @@ function ExportCard({
       </CardHeader>
       <CardContent aria-live="polite" className="flex flex-col gap-4">
         {result ? (
-          <div className="flex flex-col gap-4 rounded-lg border bg-background p-4">
+          <div className="flex flex-col gap-4 border-y border-border/70 py-3">
             <div>
               <h3 className="text-base font-medium">
                 {messages.resultReadyTitle}

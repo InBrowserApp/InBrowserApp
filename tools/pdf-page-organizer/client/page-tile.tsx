@@ -83,10 +83,12 @@ function PagePreview({
     <div className="flex h-full min-h-44 items-center justify-center overflow-hidden rounded-md border bg-muted/20 p-2">
       <img
         alt={`${messages.previewAltLabel} ${page.sourcePageNumber}`}
-        className="max-h-full max-w-full object-contain shadow-sm transition-transform"
+        className="max-h-full max-w-full object-contain shadow-sm transition-transform motion-reduce:transition-none"
         draggable={false}
+        height={preview.height}
         src={preview.dataUrl}
         style={{ transform: `rotate(${page.rotation}deg)` }}
+        width={preview.width}
       />
     </div>
   )
@@ -200,7 +202,8 @@ function PageTile({
           aria-describedby={dragHintId}
           aria-label={dragLabel}
           className={cn(
-            "absolute end-2 top-2 inline-flex size-8 touch-none items-center justify-center rounded-md border bg-background/95 text-muted-foreground shadow-sm transition",
+            "absolute end-2 top-2 inline-flex size-8 touch-none items-center justify-center rounded-md border bg-background/95 text-muted-foreground shadow-sm transition-colors",
+            "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
             !disabled &&
               "cursor-grab hover:border-foreground/30 hover:text-foreground active:cursor-grabbing",
             disabled && "cursor-not-allowed"
