@@ -1,0 +1,4 @@
+{
+  "name": "파비콘 에셋 생성기",
+  "description": "ICO, PNG, Apple touch icon, PWA 아이콘, 웹 매니페스트, HTML 스니펫을 포함한 완전한 파비콘 번들을 브라우저에서 로컬로 생성합니다."
+}
