@@ -21,6 +21,7 @@ import {
 } from "./core/pdf-page-numbers"
 import { PreviewCard } from "./client/preview-card"
 import { ResponsiveToolLayout } from "./client/responsive-tool-layout"
+import { ResultCard } from "./client/result-card"
 import { SettingsCard } from "./client/settings-card"
 import { UploadCard } from "./client/upload-card"
 import { getRangeErrorMessage, resolvePdfErrorMessage } from "./client/utils"
@@ -192,12 +193,17 @@ function PdfPageNumberAdderClient({ messages }: PdfPageNumberAdderClientProps) {
         preview={
           <PreviewCard
             file={fileState?.file ?? null}
-            isGenerating={isGenerating}
             messages={messages}
             options={formOptions}
             pageCount={pageCount}
-            result={result}
             selectedPages={selectedPages}
+          />
+        }
+        result={
+          <ResultCard
+            isGenerating={isGenerating}
+            messages={messages}
+            result={result}
           />
         }
         settings={

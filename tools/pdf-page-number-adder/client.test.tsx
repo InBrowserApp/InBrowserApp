@@ -155,6 +155,12 @@ describe("PdfPageNumberAdderClient", () => {
         Node.DOCUMENT_POSITION_FOLLOWING
     ).toBeTruthy()
     expect(
+      screen
+        .getByText(messages.previewTitle)
+        .compareDocumentPosition(screen.getByText(messages.resultTitle)) &
+        Node.DOCUMENT_POSITION_FOLLOWING
+    ).toBeTruthy()
+    expect(
       screen.getByRole("button", { name: messages.generateLabel })
     ).toHaveProperty("disabled", true)
   })
