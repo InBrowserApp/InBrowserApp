@@ -1,0 +1,6 @@
+{
+  "recurse": true,
+  "checkFragments": true,
+  "skip": ["^https?://"],
+  "concurrency": 10
+}

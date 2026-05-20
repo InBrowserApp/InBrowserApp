@@ -90,6 +90,7 @@ catalog:
   jsonpath-plus: ^10.3.0
   knip: ^6.3.0
   lint-staged: ^16.4.0
+  linkinator: ^7.6.1
   lucide-react: ^0.542.0
   mime-db: ^1.54.0
   murmurhash3js-revisited: ^3.0.0

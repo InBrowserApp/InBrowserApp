@@ -92,9 +92,7 @@ jobs:
         run: pnpm build
 
       - name: Check internal links in built HTML
-        uses: wjdp/htmltest-action@master
-        with:
-          config: .htmltest.yml
+        run: pnpm linkcheck
 
       - name: Upload web artifact
         uses: actions/upload-artifact@v4
