@@ -40,7 +40,7 @@
   "outputTitle": "Generierter CSR",
   "outputDescription": "Zertifikatsignieranfrage kopieren oder herunterladen sowie den generierten Privatschlüssel, falls ein neuer erstellt wurde.",
   "emptyTitle": "Noch kein CSR generiert",
-  "emptyDescription": "Formular ausfüllen und „CSR generieren" auswählen, um eine Anfrage zu erstellen.",
+  "emptyDescription": "Formular ausfüllen und 'CSR generieren' auswählen, um eine Anfrage zu erstellen.",
   "errorTitle": "CSR konnte nicht generiert werden",
   "errorMissingSubjectOrSan": "Mindestens ein Subject-Feld oder einen SAN-Eintrag angeben.",
   "errorMissingPrivateKey": "Vor der Generierung einen PKCS#8-PEM-Privatschlüssel einfügen.",

@@ -1,21 +1,9 @@
-import { useId } from "react"
-
 import {
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-} from "@workspace/ui/components/ui/field"
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@workspace/ui/components/ui/toggle-group"
-import { Textarea } from "@workspace/ui/components/ui/textarea"
+import { FieldGroup } from "@workspace/ui/components/ui/field"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   ToolPanelCard,
@@ -24,18 +12,16 @@ import {
 } from "@workspace/ui/components/tool/tool-panel-card"
 import { LoaderCircle, RefreshCcw } from "@workspace/ui/icons"
 
-import {
-  EC_CURVES,
-  RSA_HASHES,
-  RSA_KEY_SIZES,
-  type EcCurve,
-  type HashAlgorithm,
-  type KeyAlgorithm,
-  type KeySource,
-  type RsaKeySize,
-  type SubjectInput,
+import type {
+  EcCurve,
+  HashAlgorithm,
+  KeyAlgorithm,
+  KeySource,
+  RsaKeySize,
+  SubjectInput,
 } from "../core/csr"
 import type { CsrGeneratorMessages } from "../client/types"
+import { CsrKeySourceFields } from "./csr-key-source-fields"
 import { CsrSubjectFields } from "./csr-subject-fields"
 import { CsrSanFields } from "./csr-san-fields"
 
@@ -68,40 +54,7 @@ type CsrOptionsCardProps = Readonly<{
 }>
 
 function CsrOptionsCard(props: CsrOptionsCardProps) {
-  const {
-    keySource,
-    algorithm,
-    rsaKeySize,
-    rsaHash,
-    ecCurve,
-    keyPem,
-    subject,
-    sanDns,
-    sanIp,
-    sanEmail,
-    sanUri,
-    generating,
-    messages,
-    onKeySourceChange,
-    onAlgorithmChange,
-    onRsaKeySizeChange,
-    onRsaHashChange,
-    onEcCurveChange,
-    onKeyPemChange,
-    onSubjectChange,
-    onSanDnsChange,
-    onSanIpChange,
-    onSanEmailChange,
-    onSanUriChange,
-    onReset,
-  } = props
-
-  const keySourceId = useId()
-  const algorithmId = useId()
-  const rsaKeySizeId = useId()
-  const rsaHashId = useId()
-  const ecCurveId = useId()
-  const keyPemId = useId()
+  const { generating, messages, onReset } = props
 
   return (
     <ToolPanelCard className="xl:sticky xl:top-6 xl:h-auto xl:self-start">
@@ -111,189 +64,21 @@ function CsrOptionsCard(props: CsrOptionsCardProps) {
       </CardHeader>
       <ToolPanelCardContent className="gap-6">
         <FieldGroup>
-          <Field>
-            <FieldLabel id={keySourceId}>{messages.keySourceLabel}</FieldLabel>
-            <ToggleGroup
-              type="single"
-              value={keySource}
-              aria-labelledby={keySourceId}
-              variant="outline"
-              className="grid w-full grid-cols-2"
-              onValueChange={(value) => {
-                if (value === "generate" || value === "import") {
-                  onKeySourceChange(value)
-                }
-              }}
-            >
-              <ToggleGroupItem value="generate" className="w-full">
-                {messages.keySourceGenerate}
-              </ToggleGroupItem>
-              <ToggleGroupItem value="import" className="w-full">
-                {messages.keySourceImport}
-              </ToggleGroupItem>
-            </ToggleGroup>
-          </Field>
-
-          {keySource === "generate" ? (
-            <Field>
-              <FieldLabel id={algorithmId}>
-                {messages.algorithmLabel}
-              </FieldLabel>
-              <ToggleGroup
-                type="single"
-                value={algorithm}
-                aria-labelledby={algorithmId}
-                variant="outline"
-                className="grid w-full grid-cols-2"
-                onValueChange={(value) => {
-                  if (value === "rsa" || value === "ecdsa") {
-                    onAlgorithmChange(value)
-                  }
-                }}
-              >
-                <ToggleGroupItem value="rsa" className="w-full">
-                  {messages.algorithmRsa}
-                </ToggleGroupItem>
-                <ToggleGroupItem value="ecdsa" className="w-full">
-                  {messages.algorithmEcdsa}
-                </ToggleGroupItem>
-              </ToggleGroup>
-            </Field>
-          ) : null}
-
-          {keySource === "generate" && algorithm === "rsa" ? (
-            <>
-              <Field>
-                <FieldLabel id={rsaKeySizeId}>
-                  {messages.rsaKeySizeLabel}
-                </FieldLabel>
-                <ToggleGroup
-                  type="single"
-                  value={String(rsaKeySize)}
-                  aria-labelledby={rsaKeySizeId}
-                  variant="outline"
-                  className="grid w-full grid-cols-3"
-                  onValueChange={(value) => {
-                    const next = Number(value) as RsaKeySize
-                    if (RSA_KEY_SIZES.includes(next)) {
-                      onRsaKeySizeChange(next)
-                    }
-                  }}
-                >
-                  {RSA_KEY_SIZES.map((size) => (
-                    <ToggleGroupItem
-                      key={size}
-                      value={String(size)}
-                      className="w-full"
-                    >
-                      {size}
-                    </ToggleGroupItem>
-                  ))}
-                </ToggleGroup>
-              </Field>
-              <Field>
-                <FieldLabel id={rsaHashId}>{messages.rsaHashLabel}</FieldLabel>
-                <ToggleGroup
-                  type="single"
-                  value={rsaHash}
-                  aria-labelledby={rsaHashId}
-                  variant="outline"
-                  className="grid w-full grid-cols-3"
-                  onValueChange={(value) => {
-                    if (RSA_HASHES.includes(value as HashAlgorithm)) {
-                      onRsaHashChange(value as HashAlgorithm)
-                    }
-                  }}
-                >
-                  {RSA_HASHES.map((hash) => (
-                    <ToggleGroupItem
-                      key={hash}
-                      value={hash}
-                      className="w-full"
-                    >
-                      {hash}
-                    </ToggleGroupItem>
-                  ))}
-                </ToggleGroup>
-              </Field>
-            </>
-          ) : null}
-
-          {keySource === "generate" && algorithm === "ecdsa" ? (
-            <Field>
-              <FieldLabel id={ecCurveId}>{messages.ecCurveLabel}</FieldLabel>
-              <ToggleGroup
-                type="single"
-                value={ecCurve}
-                aria-labelledby={ecCurveId}
-                variant="outline"
-                className="grid w-full grid-cols-3"
-                onValueChange={(value) => {
-                  if (EC_CURVES.includes(value as EcCurve)) {
-                    onEcCurveChange(value as EcCurve)
-                  }
-                }}
-              >
-                {EC_CURVES.map((curve) => (
-                  <ToggleGroupItem
-                    key={curve}
-                    value={curve}
-                    className="w-full"
-                  >
-                    {curve}
-                  </ToggleGroupItem>
-                ))}
-              </ToggleGroup>
-            </Field>
-          ) : null}
-
-          {keySource === "import" ? (
-            <>
-              <Field>
-                <FieldLabel htmlFor={keyPemId}>
-                  {messages.importLabel}
-                </FieldLabel>
-                <Textarea
-                  id={keyPemId}
-                  name="private-key-pem"
-                  value={keyPem}
-                  placeholder={messages.importPlaceholder}
-                  spellCheck={false}
-                  autoCapitalize="off"
-                  autoCorrect="off"
-                  rows={8}
-                  className="font-mono text-xs"
-                  onChange={(event) => onKeyPemChange(event.target.value)}
-                />
-                <FieldDescription>{messages.importDescription}</FieldDescription>
-              </Field>
-              <Field>
-                <FieldLabel id={rsaHashId}>{messages.rsaHashLabel}</FieldLabel>
-                <ToggleGroup
-                  type="single"
-                  value={rsaHash}
-                  aria-labelledby={rsaHashId}
-                  variant="outline"
-                  className="grid w-full grid-cols-3"
-                  onValueChange={(value) => {
-                    if (RSA_HASHES.includes(value as HashAlgorithm)) {
-                      onRsaHashChange(value as HashAlgorithm)
-                    }
-                  }}
-                >
-                  {RSA_HASHES.map((hash) => (
-                    <ToggleGroupItem
-                      key={hash}
-                      value={hash}
-                      className="w-full"
-                    >
-                      {hash}
-                    </ToggleGroupItem>
-                  ))}
-                </ToggleGroup>
-              </Field>
-            </>
-          ) : null}
+          <CsrKeySourceFields
+            keySource={props.keySource}
+            algorithm={props.algorithm}
+            rsaKeySize={props.rsaKeySize}
+            rsaHash={props.rsaHash}
+            ecCurve={props.ecCurve}
+            keyPem={props.keyPem}
+            messages={messages}
+            onKeySourceChange={props.onKeySourceChange}
+            onAlgorithmChange={props.onAlgorithmChange}
+            onRsaKeySizeChange={props.onRsaKeySizeChange}
+            onRsaHashChange={props.onRsaHashChange}
+            onEcCurveChange={props.onEcCurveChange}
+            onKeyPemChange={props.onKeyPemChange}
+          />
         </FieldGroup>
 
         <section className="grid gap-3">
@@ -305,8 +90,8 @@ function CsrOptionsCard(props: CsrOptionsCardProps) {
           </div>
           <CsrSubjectFields
             messages={messages}
-            subject={subject}
-            onChange={onSubjectChange}
+            subject={props.subject}
+            onChange={props.onSubjectChange}
           />
         </section>
 
@@ -319,14 +104,14 @@ function CsrOptionsCard(props: CsrOptionsCardProps) {
           </div>
           <CsrSanFields
             messages={messages}
-            sanDns={sanDns}
-            sanIp={sanIp}
-            sanEmail={sanEmail}
-            sanUri={sanUri}
-            onSanDnsChange={onSanDnsChange}
-            onSanIpChange={onSanIpChange}
-            onSanEmailChange={onSanEmailChange}
-            onSanUriChange={onSanUriChange}
+            sanDns={props.sanDns}
+            sanIp={props.sanIp}
+            sanEmail={props.sanEmail}
+            sanUri={props.sanUri}
+            onSanDnsChange={props.onSanDnsChange}
+            onSanIpChange={props.onSanIpChange}
+            onSanEmailChange={props.onSanEmailChange}
+            onSanUriChange={props.onSanUriChange}
           />
         </section>
       </ToolPanelCardContent>

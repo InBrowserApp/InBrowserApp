@@ -40,7 +40,7 @@
   "outputTitle": "已生成的 CSR",
   "outputDescription": "复制或下载证书签名请求，以及生成的私钥（若创建了新密钥）。",
   "emptyTitle": "尚未生成 CSR",
-  "emptyDescription": "填写表单后点击"生成 CSR"以创建请求。",
+  "emptyDescription": "填写表单后点击「生成 CSR」以创建请求。",
   "errorTitle": "无法生成 CSR",
   "errorMissingSubjectOrSan": "请至少填写一个 Subject 字段或 SAN 条目。",
   "errorMissingPrivateKey": "请在生成前粘贴 PKCS#8 PEM 私钥。",

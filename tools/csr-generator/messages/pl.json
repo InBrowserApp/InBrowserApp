@@ -40,7 +40,7 @@
   "outputTitle": "Wygenerowany CSR",
   "outputDescription": "Skopiuj lub pobierz żądanie podpisania certyfikatu oraz wygenerowany klucz prywatny, jeśli został utworzony nowy.",
   "emptyTitle": "Brak wygenerowanego CSR",
-  "emptyDescription": "Wypełnij formularz i kliknij „Generuj CSR", aby utworzyć żądanie.",
+  "emptyDescription": "Wypełnij formularz i kliknij 'Generuj CSR', aby utworzyć żądanie.",
   "errorTitle": "Nie można wygenerować CSR",
   "errorMissingSubjectOrSan": "Podaj przynajmniej jedno pole Subject lub wpis SAN.",
   "errorMissingPrivateKey": "Przed wygenerowaniem wklej klucz prywatny PKCS#8 PEM.",
