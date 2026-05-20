@@ -22,9 +22,8 @@ const { generateMock } = vi.hoisted(() => ({
 }))
 
 vi.mock("./core/csr", async () => {
-  const actual = await vi.importActual<typeof import("./core/csr")>(
-    "./core/csr"
-  )
+  const actual =
+    await vi.importActual<typeof import("./core/csr")>("./core/csr")
 
   return {
     ...actual,
@@ -187,7 +186,9 @@ describe("CsrGeneratorClient", () => {
       screen.getByRole("radio", { name: messages.keySourceImport })
     )
     fireEvent.change(screen.getByLabelText(messages.importLabel), {
-      target: { value: "-----BEGIN PRIVATE KEY-----\nAAA\n-----END PRIVATE KEY-----" },
+      target: {
+        value: "-----BEGIN PRIVATE KEY-----\nAAA\n-----END PRIVATE KEY-----",
+      },
     })
     fireEvent.click(
       screen.getByRole("button", { name: messages.generateLabel })
@@ -206,10 +207,9 @@ describe("CsrGeneratorClient", () => {
     fireEvent.change(screen.getByLabelText(messages.subjectCommonNameLabel), {
       target: { value: "test.example.com" },
     })
-    fireEvent.change(
-      screen.getByLabelText(messages.subjectOrganizationLabel),
-      { target: { value: "Test Org" } }
-    )
+    fireEvent.change(screen.getByLabelText(messages.subjectOrganizationLabel), {
+      target: { value: "Test Org" },
+    })
     fireEvent.change(
       screen.getByLabelText(messages.subjectOrganizationalUnitLabel),
       { target: { value: "Test OU" } }
@@ -280,8 +280,7 @@ describe("CsrGeneratorClient", () => {
     ) as HTMLTextAreaElement
     fireEvent.change(importInput, {
       target: {
-        value:
-          "-----BEGIN PRIVATE KEY-----\nAAA\n-----END PRIVATE KEY-----\n",
+        value: "-----BEGIN PRIVATE KEY-----\nAAA\n-----END PRIVATE KEY-----\n",
       },
     })
     fireEvent.click(
@@ -313,8 +312,7 @@ describe("CsrGeneratorClient", () => {
     )
     fireEvent.change(screen.getByLabelText(messages.importLabel), {
       target: {
-        value:
-          "-----BEGIN PRIVATE KEY-----\nAAA\n-----END PRIVATE KEY-----\n",
+        value: "-----BEGIN PRIVATE KEY-----\nAAA\n-----END PRIVATE KEY-----\n",
       },
     })
     fireEvent.click(
@@ -350,9 +348,7 @@ describe("CsrGeneratorClient", () => {
       screen.getByRole("button", { name: messages.generateLabel })
     )
 
-    expect(
-      await screen.findByText("Invalid IP SAN: not-an-ip")
-    ).toBeTruthy()
+    expect(await screen.findByText("Invalid IP SAN: not-an-ip")).toBeTruthy()
   })
 
   test("resets all options and clears the output", async () => {
@@ -399,7 +395,9 @@ describe("CsrGeneratorClient", () => {
     render(<CsrGeneratorClient messages={messages} />)
 
     expect(
-      screen.getByRole("radio", { name: messages.algorithmEcdsa }).getAttribute("data-state")
+      screen
+        .getByRole("radio", { name: messages.algorithmEcdsa })
+        .getAttribute("data-state")
     ).toBe("on")
     expect(
       screen.getByRole("radio", { name: "P-521" }).getAttribute("data-state")
@@ -433,7 +431,9 @@ describe("CsrGeneratorClient", () => {
     render(<CsrGeneratorClient messages={messages} />)
 
     expect(
-      screen.getByRole("radio", { name: messages.algorithmRsa }).getAttribute("data-state")
+      screen
+        .getByRole("radio", { name: messages.algorithmRsa })
+        .getAttribute("data-state")
     ).toBe("on")
     expect(
       screen.getByRole("radio", { name: "2048" }).getAttribute("data-state")

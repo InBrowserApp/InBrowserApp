@@ -1,10 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 
 import { DEFAULT_SUBJECT, STORAGE_KEYS } from "./client/constants"
-import type {
-  CsrGenerationState,
-  CsrGeneratorMessages,
-} from "./client/types"
+import type { CsrGenerationState, CsrGeneratorMessages } from "./client/types"
 import { CsrOptionsCard } from "./components/csr-options-card"
 import { CsrOutputCard } from "./components/csr-output-card"
 import {

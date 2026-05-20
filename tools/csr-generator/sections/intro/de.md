@@ -12,7 +12,7 @@ Dieses Tool erstellt den CSR vollständig in Ihrem Browser mithilfe der Web Cryp
 
 ## Formular ausfüllen
 
-- **Schlüsselquelle** — *Neu generieren* wählen, um ein neues Schlüsselpaar zu erstellen, oder *Vorhandenen importieren*, um einen unverschlüsselten PKCS#8-PEM-Schlüssel einzufügen. Verschlüsselte Schlüssel sowie `RSA PRIVATE KEY`- und `EC PRIVATE KEY`-Blöcke im Legacy-Format werden nicht akzeptiert; diese zuerst mit `openssl pkcs8 -topk8 -nocrypt` konvertieren.
+- **Schlüsselquelle** — _Neu generieren_ wählen, um ein neues Schlüsselpaar zu erstellen, oder _Vorhandenen importieren_, um einen unverschlüsselten PKCS#8-PEM-Schlüssel einzufügen. Verschlüsselte Schlüssel sowie `RSA PRIVATE KEY`- und `EC PRIVATE KEY`-Blöcke im Legacy-Format werden nicht akzeptiert; diese zuerst mit `openssl pkcs8 -topk8 -nocrypt` konvertieren.
 - **Algorithmus** — RSA bietet die breiteste Kompatibilität als Standard. ECDSA erzeugt kleinere Signaturen und wird von modernen CAs und TLS-Clients weitgehend unterstützt.
 - **Subject** — Die meisten öffentlichen CAs ignorieren alles außer dem Common Name und verwenden die DNS-SAN-Liste als maßgeblich, private CAs können jedoch einen vollständigen DN erfordern.
 - **SAN-Einträge** — Die Hostnamen, IP-Adressen, E-Mail-Adressen oder URIs auflisten, die das Zertifikat abdecken soll. Ein Eintrag pro Zeile oder kommagetrennt.

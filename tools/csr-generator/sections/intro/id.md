@@ -12,7 +12,7 @@ Alat ini membangun CSR sepenuhnya di browser Anda menggunakan Web Crypto API dan
 
 ## Cara mengisi formulir
 
-- **Sumber kunci** — pilih *Buat baru* untuk membuat pasangan kunci baru, atau *Impor yang ada* untuk menempel kunci PKCS#8 PEM yang tidak terenkripsi. Kunci terenkripsi, `RSA PRIVATE KEY` lama, dan blok `EC PRIVATE KEY` tidak diterima; konversi terlebih dahulu dengan `openssl pkcs8 -topk8 -nocrypt`.
+- **Sumber kunci** — pilih _Buat baru_ untuk membuat pasangan kunci baru, atau _Impor yang ada_ untuk menempel kunci PKCS#8 PEM yang tidak terenkripsi. Kunci terenkripsi, `RSA PRIVATE KEY` lama, dan blok `EC PRIVATE KEY` tidak diterima; konversi terlebih dahulu dengan `openssl pkcs8 -topk8 -nocrypt`.
 - **Algoritme** — RSA adalah pilihan dengan kompatibilitas paling luas. ECDSA menghasilkan tanda tangan yang lebih kecil dan didukung secara luas oleh CA modern dan klien TLS.
 - **Subject** — sebagian besar CA publik mengabaikan semua kolom kecuali Common Name dan menganggap daftar DNS SAN sebagai referensi utama, tetapi CA privat mungkin masih membutuhkan DN lengkap.
 - **Entri SAN** — daftarkan nama host, IP, alamat email, atau URI yang ingin dicakup oleh sertifikat. Satu per baris, atau dipisahkan koma.

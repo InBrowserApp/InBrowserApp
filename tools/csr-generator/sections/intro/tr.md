@@ -12,7 +12,7 @@ Bu araç, CSR'ı tamamen tarayıcınızda Web Crypto API ve [`@peculiar/x509`](h
 
 ## Form Nasıl Doldurulur?
 
-- **Anahtar kaynağı** — yeni bir anahtar çifti oluşturmak için *Yeni oluştur*'u, şifrelenmemiş bir PKCS#8 PEM anahtarı yapıştırmak için *Mevcut olanı içe aktar*'ı seçin. Şifrelenmiş anahtarlar, eski `RSA PRIVATE KEY` ve `EC PRIVATE KEY` blokları kabul edilmez; önce `openssl pkcs8 -topk8 -nocrypt` komutuyla dönüştürün.
+- **Anahtar kaynağı** — yeni bir anahtar çifti oluşturmak için _Yeni oluştur_'u, şifrelenmemiş bir PKCS#8 PEM anahtarı yapıştırmak için _Mevcut olanı içe aktar_'ı seçin. Şifrelenmiş anahtarlar, eski `RSA PRIVATE KEY` ve `EC PRIVATE KEY` blokları kabul edilmez; önce `openssl pkcs8 -topk8 -nocrypt` komutuyla dönüştürün.
 - **Algoritma** — RSA en geniş uyumluluk için varsayılan seçenektir. ECDSA daha küçük imzalar üretir ve modern CA'lar ile TLS istemcileri tarafından yaygın biçimde desteklenir.
 - **Konu** — çoğu genel CA, DNS SAN listesini esas alır ve Common Name dışındaki alanları görmezden gelir; ancak özel CA'lar tam DN gerektirebilir.
 - **SAN girişleri** — sertifikanın kapsamsına almak istediğiniz ana bilgisayar adlarını, IP adreslerini, e-posta adreslerini veya URI'ları listeleyin. Satır başına bir giriş veya virgülle ayrılmış olarak yazabilirsiniz.

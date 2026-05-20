@@ -12,7 +12,7 @@ This tool builds the CSR entirely in your browser using the Web Crypto API and [
 
 ## How to fill in the form
 
-- **Key source** — pick *Generate new* to create a fresh key pair, or *Import existing* to paste an unencrypted PKCS#8 PEM key. Encrypted keys, legacy `RSA PRIVATE KEY`, and `EC PRIVATE KEY` blocks are not accepted; convert them with `openssl pkcs8 -topk8 -nocrypt` first.
+- **Key source** — pick _Generate new_ to create a fresh key pair, or _Import existing_ to paste an unencrypted PKCS#8 PEM key. Encrypted keys, legacy `RSA PRIVATE KEY`, and `EC PRIVATE KEY` blocks are not accepted; convert them with `openssl pkcs8 -topk8 -nocrypt` first.
 - **Algorithm** — RSA is the broadest compatibility default. ECDSA produces smaller signatures and is widely supported by modern CAs and TLS clients.
 - **Subject** — most public CAs ignore everything but the Common Name and treat the DNS SAN list as authoritative, but private CAs may still need a full DN.
 - **SAN entries** — list the hostnames, IPs, email addresses, or URIs you want the certificate to cover. One per line, or comma-separated.

@@ -87,9 +87,7 @@ describe("constants", () => {
 describe("buildSubjectJson", () => {
   test("returns null when every field is blank", () => {
     expect(buildSubjectJson(emptySubject)).toBeNull()
-    expect(
-      buildSubjectJson({ ...emptySubject, commonName: "   " })
-    ).toBeNull()
+    expect(buildSubjectJson({ ...emptySubject, commonName: "   " })).toBeNull()
   })
 
   test("includes only the fields that have a trimmed value", () => {
@@ -165,11 +163,14 @@ describe("generateCsr - new key generation", () => {
     expect(result.keyAlgorithmLabel).toBe("RSA 2048 (SHA-256)")
   })
 
-  test.each(RSA_KEY_SIZES.flatMap((size) =>
-    RSA_HASHES.map((hash) => ({ size, hash }))
-  ))("generates RSA $size/$hash", async ({ size, hash }) => {
+  test.each(
+    RSA_KEY_SIZES.flatMap((size) => RSA_HASHES.map((hash) => ({ size, hash })))
+  )("generates RSA $size/$hash", async ({ size, hash }) => {
     const result = await generateCsr(
-      buildInput({ rsaKeySize: size as RsaKeySize, rsaHash: hash as HashAlgorithm })
+      buildInput({
+        rsaKeySize: size as RsaKeySize,
+        rsaHash: hash as HashAlgorithm,
+      })
     )
 
     expect(result.keyAlgorithmLabel).toBe(`RSA ${size} (${hash})`)
@@ -180,7 +181,9 @@ describe("generateCsr - new key generation", () => {
       buildInput({ algorithm: "ecdsa", ecCurve: curve as EcCurve })
     )
 
-    expect(result.keyAlgorithmLabel).toBe(`ECDSA ${curve} (${EC_CURVE_HASH[curve as EcCurve]})`)
+    expect(result.keyAlgorithmLabel).toBe(
+      `ECDSA ${curve} (${EC_CURVE_HASH[curve as EcCurve]})`
+    )
     expect(result.csrPem).toContain("BEGIN CERTIFICATE REQUEST")
   })
 
@@ -415,11 +418,9 @@ describe("generateCsr - importing keys", () => {
 
   test("flags unknown key types", async () => {
     // X25519 has a different OID and is not supported
-    const sourceKeys = (await realCrypto.subtle.generateKey(
-      { name: "X25519" },
-      true,
-      ["deriveKey", "deriveBits"]
-    ).catch(() => null)) as CryptoKeyPair | null
+    const sourceKeys = (await realCrypto.subtle
+      .generateKey({ name: "X25519" }, true, ["deriveKey", "deriveBits"])
+      .catch(() => null)) as CryptoKeyPair | null
 
     if (!sourceKeys) {
       // Skip if the runtime does not support X25519
@@ -500,7 +501,6 @@ describe("generateCsr - importing keys", () => {
       )
     ).rejects.toMatchObject({ code: "IMPORT_FAILED" })
   })
-
 })
 
 describe("parsePrivateKeyPem - synthetic", () => {
@@ -551,7 +551,9 @@ describe("parsePrivateKeyPem", () => {
   })
 })
 
-function createGenerationFailureCrypto(options: { throwValue?: unknown } = {}): Crypto {
+function createGenerationFailureCrypto(
+  options: { throwValue?: unknown } = {}
+): Crypto {
   const subtle = {
     generateKey: vi.fn(async () => {
       throw options.throwValue ?? new Error("nope")

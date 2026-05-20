@@ -12,7 +12,7 @@ Alat ini membina CSR sepenuhnya dalam pelayar anda menggunakan Web Crypto API da
 
 ## Cara mengisi borang
 
-- **Sumber kunci** — pilih *Jana baharu* untuk mencipta pasangan kunci segar, atau *Import sedia ada* untuk menampal kunci PEM PKCS#8 tanpa penyulitan. Kunci yang disulitkan, blok `RSA PRIVATE KEY` lama, dan blok `EC PRIVATE KEY` tidak diterima; tukar terlebih dahulu dengan `openssl pkcs8 -topk8 -nocrypt`.
+- **Sumber kunci** — pilih _Jana baharu_ untuk mencipta pasangan kunci segar, atau _Import sedia ada_ untuk menampal kunci PEM PKCS#8 tanpa penyulitan. Kunci yang disulitkan, blok `RSA PRIVATE KEY` lama, dan blok `EC PRIVATE KEY` tidak diterima; tukar terlebih dahulu dengan `openssl pkcs8 -topk8 -nocrypt`.
 - **Algoritma** — RSA adalah lalai keserasian yang paling luas. ECDSA menghasilkan tandatangan yang lebih kecil dan disokong secara meluas oleh CA moden dan klien TLS.
 - **Subject** — kebanyakan CA awam mengabaikan semua kecuali Common Name dan menganggap senarai DNS SAN sebagai autoriti, tetapi CA peribadi mungkin masih memerlukan DN penuh.
 - **Entri SAN** — senaraikan nama hos, IP, alamat e-mel, atau URI yang anda mahu sijil meliputi. Satu setiap baris, atau dipisahkan dengan koma.

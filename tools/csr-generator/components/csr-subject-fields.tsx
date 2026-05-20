@@ -79,9 +79,7 @@ function CsrSubjectFields({
           autoCapitalize="off"
           autoComplete="off"
           spellCheck={false}
-          onChange={(event) =>
-            update("organizationalUnit", event.target.value)
-          }
+          onChange={(event) => update("organizationalUnit", event.target.value)}
         />
       </Field>
       <Field>

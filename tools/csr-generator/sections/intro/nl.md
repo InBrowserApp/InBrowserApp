@@ -12,7 +12,7 @@ Dit hulpmiddel bouwt de CSR volledig in uw browser op met behulp van de Web Cryp
 
 ## Hoe het formulier invullen
 
-- **Sleutelbron** — kies *Nieuw aanmaken* om een nieuw sleutelpaar te genereren, of *Bestaande importeren* om een niet-versleutelde PKCS#8 PEM-sleutel te plakken. Versleutelde sleutels, verouderde `RSA PRIVATE KEY`- en `EC PRIVATE KEY`-blokken worden niet geaccepteerd; converteer ze eerst met `openssl pkcs8 -topk8 -nocrypt`.
+- **Sleutelbron** — kies _Nieuw aanmaken_ om een nieuw sleutelpaar te genereren, of _Bestaande importeren_ om een niet-versleutelde PKCS#8 PEM-sleutel te plakken. Versleutelde sleutels, verouderde `RSA PRIVATE KEY`- en `EC PRIVATE KEY`-blokken worden niet geaccepteerd; converteer ze eerst met `openssl pkcs8 -topk8 -nocrypt`.
 - **Algoritme** — RSA biedt de breedste compatibiliteit als standaard. ECDSA produceert kleinere handtekeningen en wordt breed ondersteund door moderne CA's en TLS-clients.
 - **Subject** — de meeste openbare CA's negeren alles behalve de Common Name en beschouwen de DNS SAN-lijst als leidend, maar private CA's hebben mogelijk toch een volledig DN nodig.
 - **SAN-vermeldingen** — geef de hostnamen, IP-adressen, e-mailadressen of URI's op die het certificaat moet omvatten. Één per regel of kommagescheiden.

@@ -12,7 +12,7 @@ Questo strumento costruisce il CSR interamente nel tuo browser tramite la Web Cr
 
 ## Come compilare il modulo
 
-- **Sorgente della chiave** — scegli *Genera nuova* per creare una nuova coppia di chiavi, oppure *Importa esistente* per incollare una chiave PKCS#8 PEM non cifrata. Le chiavi cifrate, i blocchi `RSA PRIVATE KEY` e `EC PRIVATE KEY` legacy non sono accettati; convertili prima con `openssl pkcs8 -topk8 -nocrypt`.
+- **Sorgente della chiave** — scegli _Genera nuova_ per creare una nuova coppia di chiavi, oppure _Importa esistente_ per incollare una chiave PKCS#8 PEM non cifrata. Le chiavi cifrate, i blocchi `RSA PRIVATE KEY` e `EC PRIVATE KEY` legacy non sono accettati; convertili prima con `openssl pkcs8 -topk8 -nocrypt`.
 - **Algoritmo** — RSA offre la maggiore compatibilità per impostazione predefinita. ECDSA produce firme più compatte ed è ampiamente supportato dalle CA moderne e dai client TLS.
 - **Subject** — la maggior parte delle CA pubbliche ignora tutto tranne il Common Name e considera l'elenco SAN DNS come autorevole, ma le CA private potrebbero richiedere un DN completo.
 - **Voci SAN** — elenca i nomi host, gli indirizzi IP, gli indirizzi email o gli URI che vuoi che il certificato copra. Uno per riga o separati da virgola.

@@ -12,7 +12,7 @@ To narzędzie buduje CSR w całości w Twojej przeglądarce, korzystając z Web 
 
 ## Jak wypełnić formularz
 
-- **Źródło klucza** — wybierz *Wygeneruj nowy*, aby utworzyć nową parę kluczy, lub *Importuj istniejący*, aby wkleić niezaszyfrowany klucz prywatny PKCS#8 PEM. Klucze zaszyfrowane, starsze bloki `RSA PRIVATE KEY` i `EC PRIVATE KEY` nie są akceptowane; przekonwertuj je najpierw za pomocą `openssl pkcs8 -topk8 -nocrypt`.
+- **Źródło klucza** — wybierz _Wygeneruj nowy_, aby utworzyć nową parę kluczy, lub _Importuj istniejący_, aby wkleić niezaszyfrowany klucz prywatny PKCS#8 PEM. Klucze zaszyfrowane, starsze bloki `RSA PRIVATE KEY` i `EC PRIVATE KEY` nie są akceptowane; przekonwertuj je najpierw za pomocą `openssl pkcs8 -topk8 -nocrypt`.
 - **Algorytm** — RSA zapewnia najszerszą kompatybilność. ECDSA generuje mniejsze podpisy i jest szeroko obsługiwany przez nowoczesne CA i klientów TLS.
 - **Subject** — większość publicznych CA ignoruje wszystko poza Common Name i traktuje listę DNS SAN jako miarodajną, jednak prywatne CA mogą nadal wymagać pełnego DN.
 - **Wpisy SAN** — podaj nazwy hostów, adresy IP, adresy e-mail lub URI, które mają być objęte certyfikatem. Jeden wpis w wierszu lub oddzielone przecinkami.

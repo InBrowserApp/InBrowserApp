@@ -287,10 +287,4 @@ export {
   importKeyPair,
   parsePrivateKeyPem,
 }
-export type {
-  EcCurve,
-  HashAlgorithm,
-  KeyAlgorithm,
-  KeyResult,
-  RsaKeySize,
-}
+export type { EcCurve, HashAlgorithm, KeyAlgorithm, KeyResult, RsaKeySize }

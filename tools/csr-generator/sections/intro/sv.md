@@ -12,7 +12,7 @@ Det här verktyget skapar CSR:en helt i din webbläsare med hjälp av Web Crypto
 
 ## Hur du fyller i formuläret
 
-- **Nyckelkälla** — välj *Generera ny* för att skapa ett nytt nyckelpar, eller *Importera befintlig* för att klistra in en okrypterad PKCS#8 PEM-nyckel. Krypterade nycklar, äldre `RSA PRIVATE KEY`- och `EC PRIVATE KEY`-block accepteras inte; konvertera dem med `openssl pkcs8 -topk8 -nocrypt` först.
+- **Nyckelkälla** — välj _Generera ny_ för att skapa ett nytt nyckelpar, eller _Importera befintlig_ för att klistra in en okrypterad PKCS#8 PEM-nyckel. Krypterade nycklar, äldre `RSA PRIVATE KEY`- och `EC PRIVATE KEY`-block accepteras inte; konvertera dem med `openssl pkcs8 -topk8 -nocrypt` först.
 - **Algoritm** — RSA ger bredast kompatibilitet som standard. ECDSA producerar mindre signaturer och stöds brett av moderna CA:er och TLS-klienter.
 - **Subject** — de flesta offentliga CA:er ignorerar allt utom Common Name och behandlar DNS SAN-listan som auktoritativ, men privata CA:er kan fortfarande kräva ett fullständigt DN.
 - **SAN-poster** — lista de värdnamn, IP-adresser, e-postadresser eller URI:er du vill att certifikatet ska täcka. En per rad, eller kommaseparerade.

@@ -12,7 +12,7 @@ Dette verktøyet bygger CSR-en helt i nettleseren ved hjelp av Web Crypto API og
 
 ## Slik fyller du ut skjemaet
 
-- **Nøkkelkilde** — velg *Generer ny* for å opprette et nytt nøkkelpar, eller *Importer eksisterende* for å lime inn en ukryptert PKCS#8 PEM-nøkkel. Krypterte nøkler, eldre `RSA PRIVATE KEY`- og `EC PRIVATE KEY`-blokker godtas ikke; konverter dem med `openssl pkcs8 -topk8 -nocrypt` først.
+- **Nøkkelkilde** — velg _Generer ny_ for å opprette et nytt nøkkelpar, eller _Importer eksisterende_ for å lime inn en ukryptert PKCS#8 PEM-nøkkel. Krypterte nøkler, eldre `RSA PRIVATE KEY`- og `EC PRIVATE KEY`-blokker godtas ikke; konverter dem med `openssl pkcs8 -topk8 -nocrypt` først.
 - **Algoritme** — RSA gir bredest kompatibilitet som standardvalg. ECDSA produserer mindre signaturer og støttes av moderne CA-er og TLS-klienter.
 - **Subject** — de fleste offentlige CA-er ignorerer alt annet enn Common Name og behandler DNS SAN-listen som autoritativ, men private CA-er kan fremdeles trenge et fullstendig DN.
 - **SAN-oppføringer** — list opp vertsnavn, IP-adresser, e-postadresser eller URI-er du vil at sertifikatet skal dekke. Én per linje, eller kommaseparert.

@@ -168,11 +168,7 @@ function CsrKeySourceFields(props: CsrKeySourceFieldsProps) {
             }}
           >
             {EC_CURVES.map((curve) => (
-              <ToggleGroupItem
-                key={curve}
-                value={curve}
-                className="w-full"
-              >
+              <ToggleGroupItem key={curve} value={curve} className="w-full">
                 {curve}
               </ToggleGroupItem>
             ))}

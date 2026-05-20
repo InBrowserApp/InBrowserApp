@@ -33,10 +33,7 @@ import {
 } from "@workspace/ui/icons"
 
 import { useTextDownloadUrl } from "../client/use-text-download-url"
-import type {
-  CsrGenerationState,
-  CsrGeneratorMessages,
-} from "../client/types"
+import type { CsrGenerationState, CsrGeneratorMessages } from "../client/types"
 import type { CsrResult } from "../core/csr"
 
 type CsrOutputCardProps = Readonly<{
