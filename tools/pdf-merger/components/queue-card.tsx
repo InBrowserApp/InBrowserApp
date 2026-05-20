@@ -124,7 +124,7 @@ function QueueCard({
             </div>
 
             <TooltipProvider>
-              <ol className="flex flex-col gap-3">
+              <ol className="-mx-1 flex max-h-[32rem] flex-col gap-3 overflow-y-auto px-1">
                 {items.map((item, index) => (
                   <li
                     className={cn(
