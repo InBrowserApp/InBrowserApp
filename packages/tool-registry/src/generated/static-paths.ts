@@ -11134,6 +11134,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-merger",
+    language: "ar",
+  },
+  {
+    slug: "pdf-merger",
+    language: "de",
+  },
+  {
+    slug: "pdf-merger",
+    language: "en",
+  },
+  {
+    slug: "pdf-merger",
+    language: "es",
+  },
+  {
+    slug: "pdf-merger",
+    language: "fr",
+  },
+  {
+    slug: "pdf-merger",
+    language: "he",
+  },
+  {
+    slug: "pdf-merger",
+    language: "hi",
+  },
+  {
+    slug: "pdf-merger",
+    language: "id",
+  },
+  {
+    slug: "pdf-merger",
+    language: "it",
+  },
+  {
+    slug: "pdf-merger",
+    language: "ja",
+  },
+  {
+    slug: "pdf-merger",
+    language: "ko",
+  },
+  {
+    slug: "pdf-merger",
+    language: "ms",
+  },
+  {
+    slug: "pdf-merger",
+    language: "nl",
+  },
+  {
+    slug: "pdf-merger",
+    language: "no",
+  },
+  {
+    slug: "pdf-merger",
+    language: "pl",
+  },
+  {
+    slug: "pdf-merger",
+    language: "pt",
+  },
+  {
+    slug: "pdf-merger",
+    language: "ru",
+  },
+  {
+    slug: "pdf-merger",
+    language: "sv",
+  },
+  {
+    slug: "pdf-merger",
+    language: "th",
+  },
+  {
+    slug: "pdf-merger",
+    language: "tr",
+  },
+  {
+    slug: "pdf-merger",
+    language: "vi",
+  },
+  {
+    slug: "pdf-merger",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-merger",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-page-number-adder",
     language: "ar",
   },

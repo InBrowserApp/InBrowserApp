@@ -1,0 +1,92 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import PdfMergerClient from "./client"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { ToolMeta } from "@workspace/tool-sdk"
+
+type PdfMergerMessagesCatalog = Readonly<{
+  addFilesLabel: string
+  changeFilesLabel: string
+  clearAllLabel: string
+  closePreviewLabel: string
+  downloadPdfLabel: string
+  duplicateFileError: string
+  emptyQueueDescription: string
+  emptyQueueTitle: string
+  emptyResultDescription: string
+  emptyResultTitle: string
+  encryptedPdfError: string
+  errorTitle: string
+  fileCountLabel: string
+  fileSizeLabel: string
+  invalidPdfError: string
+  localOnlyNote: string
+  mergeFailedError: string
+  mergeLabel: string
+  mergingLabel: string
+  moveDownLabel: string
+  moveUpLabel: string
+  noFilesError: string
+  outputFileDescription: string
+  outputFileLabel: string
+  outputFilePlaceholder: string
+  outputSizeLabel: string
+  pageCountLabel: string
+  pageStatusLabel: string
+  pagesStatusLabel: string
+  previewLabel: string
+  previewTitle: string
+  processingStatusLabel: string
+  queueDescription: string
+  queueTitle: string
+  readingPdfLabel: string
+  readyStatusLabel: string
+  removeFileLabel: string
+  resultDescription: string
+  resultReadyTitle: string
+  resultTitle: string
+  summaryTitle: string
+  supportedFormatsLabel: string
+  uploadDescription: string
+  uploadTitle: string
+  workerUnavailableError: string
+}>
+
+interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const localizedMessages = resolveLocale<PdfMergerMessagesCatalog>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.{md,mdx}", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+)
+const messages = { meta, ...localizedMessages }
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <PdfMergerClient client:load messages={messages} />
+
+  {
+    IntroSection ? (
+      <ToolArticle>
+        <IntroSection />
+      </ToolArticle>
+    ) : null
+  }
+</ToolPageShell>
