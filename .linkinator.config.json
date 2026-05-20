@@ -1,6 +1,6 @@
 {
   "recurse": true,
   "checkFragments": true,
-  "skip": ["^https?://"],
+  "skip": ["^https?://(?!localhost[:/])"],
   "concurrency": 10
 }
