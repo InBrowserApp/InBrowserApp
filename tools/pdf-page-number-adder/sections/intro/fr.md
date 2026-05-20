@@ -31,6 +31,7 @@ ticket public.
 
 Cet outil écrit un texte noir simple pour les numéros de page à l’aide de polices
 PDF standard. Il ne supprime pas les mots de passe, ne répare pas les PDF
-endommagés, ne masque pas le contenu et n’affiche pas d’aperçu visuel du contenu
-original des pages. Les PDF chiffrés doivent être déverrouillés avant que des
-numéros de page puissent être ajoutés.
+endommagés, ne masque pas le contenu et ne modifie pas l’apparence originale des
+pages. L’aperçu aide à placer le numéro et peut différer légèrement du PDF final
+dans d’autres lecteurs. Les PDF chiffrés doivent être déverrouillés avant que
+des numéros de page puissent être ajoutés.

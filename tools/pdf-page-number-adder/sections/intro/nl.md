@@ -30,6 +30,7 @@ issue toevoegt.
 
 Deze tool schrijft gewone zwarte paginanummertekst met standaard
 PDF-lettertypen. De tool verwijdert geen wachtwoorden, herstelt geen beschadigde
-PDF's, redigeert geen inhoud en toont geen visueel voorbeeld van de
-oorspronkelijke pagina-opmaak. Versleutelde PDF's moeten worden ontgrendeld
-voordat paginanummers kunnen worden toegevoegd.
+PDF's, redigeert geen inhoud en wijzigt de oorspronkelijke pagina-opmaak niet.
+De preview helpt bij de plaatsing en kan in andere PDF-viewers iets afwijken van
+de uiteindelijke PDF. Versleutelde PDF's moeten worden ontgrendeld voordat
+paginanummers kunnen worden toegevoegd.

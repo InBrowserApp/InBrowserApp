@@ -29,5 +29,7 @@ offentligt ärende.
 
 Det här verktyget skriver vanlig svart sidnummertext med standardteckensnitt för
 PDF. Det tar inte bort lösenord, reparerar skadade PDF-filer, maskerar innehåll
-eller visar en visuell förhandsgranskning av den ursprungliga sidgrafiken.
-Krypterade PDF-filer måste låsas upp innan sidnummer kan läggas till.
+eller ändrar den ursprungliga sidgrafiken. Förhandsgranskningen hjälper till med
+placeringen och kan skilja sig lite från den slutliga PDF-filen i andra
+PDF-visare. Krypterade PDF-filer måste låsas upp innan sidnummer kan läggas
+till.

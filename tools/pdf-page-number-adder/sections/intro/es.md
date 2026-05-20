@@ -30,5 +30,6 @@ pública.
 
 Esta herramienta escribe texto de número de página negro y simple usando fuentes
 PDF estándar. No quita contraseñas, no repara PDF dañados, no redacta contenido
-ni muestra una vista previa visual del diseño original de la página. Los PDF
+ni cambia el diseño original de la página. La vista previa ayuda a colocar el
+número y puede diferir ligeramente del PDF final en otros visores. Los PDF
 cifrados deben desbloquearse antes de añadir números de página.

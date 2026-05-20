@@ -30,6 +30,7 @@ pubblica.
 
 Questo strumento scrive testo nero semplice per i numeri di pagina usando font
 PDF standard. Non rimuove password, non ripara PDF danneggiati, non oscura
-contenuti e non mostra un'anteprima visiva della grafica originale della pagina.
-I PDF crittografati devono essere sbloccati prima di poter aggiungere numeri di
-pagina.
+contenuti e non modifica la grafica originale della pagina. L'anteprima aiuta a
+posizionare il numero e può differire leggermente dal PDF finale in altri
+visualizzatori. I PDF crittografati devono essere sbloccati prima di poter
+aggiungere numeri di pagina.

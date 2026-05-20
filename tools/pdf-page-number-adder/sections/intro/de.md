@@ -30,6 +30,7 @@ ein öffentliches Ticket anhängst.
 
 Dieses Tool schreibt einfachen schwarzen Seitenzahltext mit Standard-PDF-
 Schriftarten. Es entfernt keine Passwörter, repariert keine beschädigten PDFs,
-schwärzt keine Inhalte und zeigt keine visuelle Vorschau der ursprünglichen
-Seitengestaltung. Verschlüsselte PDFs müssen entsperrt werden, bevor
+schwärzt keine Inhalte und ändert die ursprüngliche Seitengestaltung nicht. Die
+Vorschau dient als Platzierungshilfe und kann in anderen PDF-Betrachtern leicht
+vom finalen PDF abweichen. Verschlüsselte PDFs müssen entsperrt werden, bevor
 Seitenzahlen hinzugefügt werden können.

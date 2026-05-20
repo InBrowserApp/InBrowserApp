@@ -29,5 +29,7 @@ de compartilhá-lo fora da sua equipe ou anexá-lo a um chamado público.
 
 Esta ferramenta grava texto simples preto de número de página usando fontes PDF
 padrão. Ela não remove senhas, repara PDFs danificados, oculta conteúdo sensível
-nem pré-visualiza o visual original da página. PDFs criptografados precisam ser
-desbloqueados antes que números de página possam ser adicionados.
+nem altera o visual original da página. A pré-visualização ajuda a posicionar o
+número e pode diferir um pouco do PDF final em outros visualizadores. PDFs
+criptografados precisam ser desbloqueados antes que números de página possam ser
+adicionados.

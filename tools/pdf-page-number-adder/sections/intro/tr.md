@@ -29,5 +29,6 @@ paylaşmadan veya herkese açık bir konuya eklemeden önce gözden geçirin.
 
 Bu araç, standart PDF yazı tiplerini kullanarak düz siyah sayfa numarası metni
 yazar. Parolaları kaldırmaz, hasarlı PDF'leri onarmaz, içeriği sansürlemez veya
-özgün sayfa görselini görsel olarak önizlemez. Şifrelenmiş PDF'lerin sayfa
-numaraları eklenmeden önce kilidinin açılması gerekir.
+özgün sayfa görselini değiştirmez. Önizleme yerleşimi ayarlamaya yardımcı olur
+ve diğer PDF görüntüleyicilerde son PDF'den biraz farklı görünebilir. Şifrelenmiş
+PDF'lerin sayfa numaraları eklenmeden önce kilidinin açılması gerekir.

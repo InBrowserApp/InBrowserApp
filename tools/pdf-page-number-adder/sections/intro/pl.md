@@ -28,5 +28,7 @@ udostępnieniem go poza zespołem albo dołączeniem do publicznego zgłoszenia.
 
 To narzędzie zapisuje zwykły czarny tekst numerów stron przy użyciu standardowych
 czcionek PDF. Nie usuwa haseł, nie naprawia uszkodzonych PDF-ów, nie redaguje
-treści ani nie pokazuje wizualnego podglądu oryginalnej grafiki strony.
-Zaszyfrowane PDF-y trzeba odblokować, zanim będzie można dodać numery stron.
+treści ani nie zmienia oryginalnej grafiki strony. Podgląd pomaga ustawić
+położenie numeru i może nieznacznie różnić się od końcowego PDF-u w innych
+przeglądarkach. Zaszyfrowane PDF-y trzeba odblokować, zanim będzie można dodać
+numery stron.

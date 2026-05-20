@@ -29,5 +29,6 @@ offentlig sak.
 
 Dette verktøyet skriver ren svart sidenummertekst med standard PDF-skrifttyper.
 Det fjerner ikke passord, reparerer ikke skadede PDF-er, sladder ikke innhold
-og viser ikke en visuell forhåndsvisning av den opprinnelige sidegrafikken.
+og endrer ikke den opprinnelige sidegrafikken. Forhåndsvisningen hjelper med
+plasseringen og kan avvike litt fra den endelige PDF-en i andre PDF-visere.
 Krypterte PDF-er må låses opp før sidenumre kan legges til.

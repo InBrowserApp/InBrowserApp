@@ -29,5 +29,6 @@ turun sebelum berkongsi di luar pasukan anda atau melampirkannya pada isu awam.
 
 Alat ini menulis teks nombor halaman hitam biasa menggunakan fon PDF standard.
 Ia tidak mengalih keluar kata laluan, membaiki PDF rosak, menyunting keluar
-kandungan, atau mempratonton secara visual karya halaman asal. PDF tersulit
-perlu dibuka kunci sebelum nombor halaman boleh ditambah.
+kandungan, atau mengubah karya halaman asal. Pratonton membantu menentukan
+peletakan dan mungkin sedikit berbeza daripada PDF akhir dalam pemapar lain.
+PDF tersulit perlu dibuka kunci sebelum nombor halaman boleh ditambah.

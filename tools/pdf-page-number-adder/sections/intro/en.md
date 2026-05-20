@@ -27,6 +27,7 @@ your team or attaching it to a public issue.
 ## Limitations
 
 This tool writes plain black page-number text using standard PDF fonts. It does
-not remove passwords, repair damaged PDFs, redact content, or visually preview
-the original page artwork. Encrypted PDFs need to be unlocked before page
+not remove passwords, repair damaged PDFs, redact content, or change existing
+page artwork. The preview is a placement aid and may differ slightly from the
+final PDF in other viewers. Encrypted PDFs need to be unlocked before page
 numbers can be added.

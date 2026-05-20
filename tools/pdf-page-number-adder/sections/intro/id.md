@@ -29,5 +29,6 @@ membagikannya di luar tim Anda atau melampirkannya ke isu publik.
 
 Alat ini menulis teks nomor halaman hitam polos menggunakan font PDF standar.
 Alat ini tidak menghapus kata sandi, memperbaiki PDF yang rusak, menyunting
-konten, atau menampilkan pratinjau visual dari tampilan halaman asli. PDF
+konten, atau mengubah tampilan halaman asli. Pratinjau membantu menempatkan
+nomor dan mungkin sedikit berbeda dari PDF final di penampil lain. PDF
 terenkripsi harus dibuka kuncinya sebelum nomor halaman dapat ditambahkan.

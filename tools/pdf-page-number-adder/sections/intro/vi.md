@@ -27,5 +27,6 @@ ngoài nhóm của bạn hoặc đính kèm vào một vấn đề công khai.
 
 Công cụ này ghi văn bản số trang màu đen thuần túy bằng các phông chữ PDF tiêu
 chuẩn. Công cụ không gỡ mật khẩu, sửa PDF bị hỏng, ẩn hoặc xóa nội dung nhạy
-cảm, hay xem trước trực quan nội dung gốc của trang. PDF đã mã hóa cần được mở
-khóa trước khi có thể thêm số trang.
+cảm, hay thay đổi nội dung gốc của trang. Bản xem trước giúp căn vị trí và có
+thể khác đôi chút so với PDF cuối cùng trong trình xem khác. PDF đã mã hóa cần
+được mở khóa trước khi có thể thêm số trang.
