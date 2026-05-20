@@ -5873,6 +5873,142 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "csr-generator",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "csr",
+      "pkcs10",
+      "x509",
+      "certificate",
+      "tls",
+      "key",
+      "rsa",
+      "ecdsa",
+      "san",
+      "subject",
+      "security",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد CSR",
+        description:
+          "أنشئ طلبات توقيع الشهادات PKCS#10 مباشرةً في متصفحك. أنشئ مفتاحاً جديداً أو استورد مفتاحاً خاصاً موجوداً بصيغة PKCS#8، واملأ حقلَي Subject وSAN، ثم حمِّل ملف CSR.",
+      },
+      de: {
+        name: "CSR-Generator",
+        description:
+          "PKCS#10-Zertifikatsignieranfragen im Browser erstellen. Neuen Schlüssel erzeugen oder vorhandenen PKCS#8-Privatschlüssel importieren, Subject und SAN ausfüllen und den CSR herunterladen.",
+      },
+      en: {
+        name: "CSR Generator",
+        description:
+          "Generate PKCS#10 certificate signing requests in your browser. Create a fresh key or import an existing PKCS#8 private key, fill in Subject and SAN, then download the CSR.",
+      },
+      es: {
+        name: "Generador de CSR",
+        description:
+          "Genera solicitudes de firma de certificado PKCS#10 en tu navegador. Crea una nueva clave o importa una clave privada PKCS#8 existente, completa el Subject y el SAN, y descarga el CSR.",
+      },
+      fr: {
+        name: "Générateur de CSR",
+        description:
+          "Générez des demandes de signature de certificat PKCS#10 dans votre navigateur. Créez une nouvelle clé ou importez une clé privée PKCS#8 existante, renseignez le Sujet et le SAN, puis téléchargez le CSR.",
+      },
+      he: {
+        name: "מחולל CSR",
+        description:
+          "צרו בקשות חתימה על תעודה (PKCS#10) ישירות בדפדפן. צרו מפתח חדש או ייבאו מפתח פרטי PKCS#8 קיים, מלאו את שדות Subject ו-SAN, ולאחר מכן הורידו את ה-CSR.",
+      },
+      hi: {
+        name: "CSR जनरेटर",
+        description:
+          "अपने ब्राउज़र में PKCS#10 सर्टिफिकेट साइनिंग रिक्वेस्ट जनरेट करें। नई key बनाएं या मौजूदा PKCS#8 प्राइवेट key इम्पोर्ट करें, Subject और SAN भरें, फिर CSR डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator CSR",
+        description:
+          "Buat certificate signing request PKCS#10 di browser Anda. Buat kunci baru atau impor kunci privat PKCS#8 yang sudah ada, isi Subject dan SAN, lalu unduh CSR.",
+      },
+      it: {
+        name: "Generatore CSR",
+        description:
+          "Genera richieste di firma certificato PKCS#10 nel tuo browser. Crea una nuova chiave o importa una chiave privata PKCS#8 esistente, compila Subject e SAN, poi scarica il CSR.",
+      },
+      ja: {
+        name: "CSR ジェネレーター",
+        description:
+          "ブラウザー上で PKCS#10 証明書署名要求を生成します。新しい鍵を作成するか、既存の PKCS#8 秘密鍵をインポートし、Subject と SAN を入力して CSR をダウンロードできます。",
+      },
+      ko: {
+        name: "CSR 생성기",
+        description:
+          "브라우저에서 PKCS#10 인증서 서명 요청을 생성합니다. 새 키를 생성하거나 기존 PKCS#8 개인 키를 가져온 다음, Subject 및 SAN을 입력하고 CSR을 다운로드하세요.",
+      },
+      ms: {
+        name: "Penjana CSR",
+        description:
+          "Jana permintaan penandatanganan sijil PKCS#10 dalam pelayar anda. Cipta kunci baharu atau import kunci peribadi PKCS#8 sedia ada, isi Subject dan SAN, kemudian muat turun CSR.",
+      },
+      nl: {
+        name: "CSR Generator",
+        description:
+          "Genereer PKCS#10-certificaatondertekeningsverzoeken in uw browser. Maak een nieuwe sleutel aan of importeer een bestaande PKCS#8-privésleutel, vul Subject en SAN in en download de CSR.",
+      },
+      no: {
+        name: "CSR-generator",
+        description:
+          "Generer PKCS#10-forespørsler om sertifikatsignering i nettleseren. Opprett en ny nøkkel eller importer en eksisterende PKCS#8-privatnøkkel, fyll inn Subject og SAN, og last ned CSR-en.",
+      },
+      pl: {
+        name: "Generator CSR",
+        description:
+          "Generuj żądania podpisania certyfikatu PKCS#10 bezpośrednio w przeglądarce. Utwórz nowy klucz lub zaimportuj istniejący klucz prywatny PKCS#8, wypełnij pola Subject i SAN, a następnie pobierz CSR.",
+      },
+      pt: {
+        name: "Gerador de CSR",
+        description:
+          "Gere solicitações de assinatura de certificado PKCS#10 no seu navegador. Crie uma nova chave ou importe uma chave privada PKCS#8 existente, preencha o Sujeito e o SAN e baixe o CSR.",
+      },
+      ru: {
+        name: "Генератор CSR",
+        description:
+          "Генерируйте PKCS#10-запросы на подпись сертификата прямо в браузере. Создайте новый ключ или импортируйте существующий закрытый ключ PKCS#8, заполните поля Subject и SAN, затем скачайте CSR.",
+      },
+      sv: {
+        name: "CSR-generator",
+        description:
+          "Generera PKCS#10-certifikatsigneringsförfrågningar i din webbläsare. Skapa en ny nyckel eller importera en befintlig PKCS#8-privat nyckel, fyll i Subject och SAN och ladda sedan ned CSR:en.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง CSR",
+        description:
+          "สร้าง PKCS#10 certificate signing request ในเบราว์เซอร์ สร้างคีย์ใหม่หรือนำเข้า PKCS#8 private key ที่มีอยู่ กรอก Subject และ SAN แล้วดาวน์โหลด CSR",
+      },
+      tr: {
+        name: "CSR Oluşturucu",
+        description:
+          "Tarayıcınızda PKCS#10 sertifika imzalama istekleri oluşturun. Yeni bir anahtar oluşturun veya mevcut bir PKCS#8 özel anahtarını içe aktarın, Konu ve SAN bilgilerini doldurun, ardından CSR'ı indirin.",
+      },
+      vi: {
+        name: "Công cụ tạo CSR",
+        description:
+          "Tạo yêu cầu ký chứng chỉ PKCS#10 ngay trên trình duyệt. Tạo khóa mới hoặc nhập khóa riêng tư PKCS#8 có sẵn, điền Subject và SAN, sau đó tải xuống CSR.",
+      },
+      "zh-CN": {
+        name: "CSR 生成器",
+        description:
+          "在浏览器中生成 PKCS#10 证书签名请求。创建新密钥或导入现有 PKCS#8 私钥，填写 Subject 和 SAN，然后下载 CSR。",
+      },
+      "zh-TW": {
+        name: "CSR 產生器",
+        description:
+          "在瀏覽器中產生 PKCS#10 憑證簽章請求。建立全新金鑰或匯入現有的 PKCS#8 私鑰，填寫 Subject 與 SAN 後即可下載 CSR。",
+      },
+    },
+  },
+  {
     slug: "css-box-shadow-generator",
     category: "web",
     icon: "image",
@@ -32031,6 +32167,142 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Cron 表達式解析器",
         description:
           "解析、驗證並說明 cron 排程，包含欄位細節與即將執行的時間。",
+      },
+    },
+  },
+  "csr-generator": {
+    slug: "csr-generator",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "csr",
+      "pkcs10",
+      "x509",
+      "certificate",
+      "tls",
+      "key",
+      "rsa",
+      "ecdsa",
+      "san",
+      "subject",
+      "security",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد CSR",
+        description:
+          "أنشئ طلبات توقيع الشهادات PKCS#10 مباشرةً في متصفحك. أنشئ مفتاحاً جديداً أو استورد مفتاحاً خاصاً موجوداً بصيغة PKCS#8، واملأ حقلَي Subject وSAN، ثم حمِّل ملف CSR.",
+      },
+      de: {
+        name: "CSR-Generator",
+        description:
+          "PKCS#10-Zertifikatsignieranfragen im Browser erstellen. Neuen Schlüssel erzeugen oder vorhandenen PKCS#8-Privatschlüssel importieren, Subject und SAN ausfüllen und den CSR herunterladen.",
+      },
+      en: {
+        name: "CSR Generator",
+        description:
+          "Generate PKCS#10 certificate signing requests in your browser. Create a fresh key or import an existing PKCS#8 private key, fill in Subject and SAN, then download the CSR.",
+      },
+      es: {
+        name: "Generador de CSR",
+        description:
+          "Genera solicitudes de firma de certificado PKCS#10 en tu navegador. Crea una nueva clave o importa una clave privada PKCS#8 existente, completa el Subject y el SAN, y descarga el CSR.",
+      },
+      fr: {
+        name: "Générateur de CSR",
+        description:
+          "Générez des demandes de signature de certificat PKCS#10 dans votre navigateur. Créez une nouvelle clé ou importez une clé privée PKCS#8 existante, renseignez le Sujet et le SAN, puis téléchargez le CSR.",
+      },
+      he: {
+        name: "מחולל CSR",
+        description:
+          "צרו בקשות חתימה על תעודה (PKCS#10) ישירות בדפדפן. צרו מפתח חדש או ייבאו מפתח פרטי PKCS#8 קיים, מלאו את שדות Subject ו-SAN, ולאחר מכן הורידו את ה-CSR.",
+      },
+      hi: {
+        name: "CSR जनरेटर",
+        description:
+          "अपने ब्राउज़र में PKCS#10 सर्टिफिकेट साइनिंग रिक्वेस्ट जनरेट करें। नई key बनाएं या मौजूदा PKCS#8 प्राइवेट key इम्पोर्ट करें, Subject और SAN भरें, फिर CSR डाउनलोड करें।",
+      },
+      id: {
+        name: "Generator CSR",
+        description:
+          "Buat certificate signing request PKCS#10 di browser Anda. Buat kunci baru atau impor kunci privat PKCS#8 yang sudah ada, isi Subject dan SAN, lalu unduh CSR.",
+      },
+      it: {
+        name: "Generatore CSR",
+        description:
+          "Genera richieste di firma certificato PKCS#10 nel tuo browser. Crea una nuova chiave o importa una chiave privata PKCS#8 esistente, compila Subject e SAN, poi scarica il CSR.",
+      },
+      ja: {
+        name: "CSR ジェネレーター",
+        description:
+          "ブラウザー上で PKCS#10 証明書署名要求を生成します。新しい鍵を作成するか、既存の PKCS#8 秘密鍵をインポートし、Subject と SAN を入力して CSR をダウンロードできます。",
+      },
+      ko: {
+        name: "CSR 생성기",
+        description:
+          "브라우저에서 PKCS#10 인증서 서명 요청을 생성합니다. 새 키를 생성하거나 기존 PKCS#8 개인 키를 가져온 다음, Subject 및 SAN을 입력하고 CSR을 다운로드하세요.",
+      },
+      ms: {
+        name: "Penjana CSR",
+        description:
+          "Jana permintaan penandatanganan sijil PKCS#10 dalam pelayar anda. Cipta kunci baharu atau import kunci peribadi PKCS#8 sedia ada, isi Subject dan SAN, kemudian muat turun CSR.",
+      },
+      nl: {
+        name: "CSR Generator",
+        description:
+          "Genereer PKCS#10-certificaatondertekeningsverzoeken in uw browser. Maak een nieuwe sleutel aan of importeer een bestaande PKCS#8-privésleutel, vul Subject en SAN in en download de CSR.",
+      },
+      no: {
+        name: "CSR-generator",
+        description:
+          "Generer PKCS#10-forespørsler om sertifikatsignering i nettleseren. Opprett en ny nøkkel eller importer en eksisterende PKCS#8-privatnøkkel, fyll inn Subject og SAN, og last ned CSR-en.",
+      },
+      pl: {
+        name: "Generator CSR",
+        description:
+          "Generuj żądania podpisania certyfikatu PKCS#10 bezpośrednio w przeglądarce. Utwórz nowy klucz lub zaimportuj istniejący klucz prywatny PKCS#8, wypełnij pola Subject i SAN, a następnie pobierz CSR.",
+      },
+      pt: {
+        name: "Gerador de CSR",
+        description:
+          "Gere solicitações de assinatura de certificado PKCS#10 no seu navegador. Crie uma nova chave ou importe uma chave privada PKCS#8 existente, preencha o Sujeito e o SAN e baixe o CSR.",
+      },
+      ru: {
+        name: "Генератор CSR",
+        description:
+          "Генерируйте PKCS#10-запросы на подпись сертификата прямо в браузере. Создайте новый ключ или импортируйте существующий закрытый ключ PKCS#8, заполните поля Subject и SAN, затем скачайте CSR.",
+      },
+      sv: {
+        name: "CSR-generator",
+        description:
+          "Generera PKCS#10-certifikatsigneringsförfrågningar i din webbläsare. Skapa en ny nyckel eller importera en befintlig PKCS#8-privat nyckel, fyll i Subject och SAN och ladda sedan ned CSR:en.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง CSR",
+        description:
+          "สร้าง PKCS#10 certificate signing request ในเบราว์เซอร์ สร้างคีย์ใหม่หรือนำเข้า PKCS#8 private key ที่มีอยู่ กรอก Subject และ SAN แล้วดาวน์โหลด CSR",
+      },
+      tr: {
+        name: "CSR Oluşturucu",
+        description:
+          "Tarayıcınızda PKCS#10 sertifika imzalama istekleri oluşturun. Yeni bir anahtar oluşturun veya mevcut bir PKCS#8 özel anahtarını içe aktarın, Konu ve SAN bilgilerini doldurun, ardından CSR'ı indirin.",
+      },
+      vi: {
+        name: "Công cụ tạo CSR",
+        description:
+          "Tạo yêu cầu ký chứng chỉ PKCS#10 ngay trên trình duyệt. Tạo khóa mới hoặc nhập khóa riêng tư PKCS#8 có sẵn, điền Subject và SAN, sau đó tải xuống CSR.",
+      },
+      "zh-CN": {
+        name: "CSR 生成器",
+        description:
+          "在浏览器中生成 PKCS#10 证书签名请求。创建新密钥或导入现有 PKCS#8 私钥，填写 Subject 和 SAN，然后下载 CSR。",
+      },
+      "zh-TW": {
+        name: "CSR 產生器",
+        description:
+          "在瀏覽器中產生 PKCS#10 憑證簽章請求。建立全新金鑰或匯入現有的 PKCS#8 私鑰，填寫 Subject 與 SAN 後即可下載 CSR。",
       },
     },
   },

@@ -1,0 +1,4 @@
+{
+  "name": "CSR Generator",
+  "description": "Genereer PKCS#10-certificaatondertekeningsverzoeken in uw browser. Maak een nieuwe sleutel aan of importeer een bestaande PKCS#8-privésleutel, vul Subject en SAN in en download de CSR."
+}

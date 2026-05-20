@@ -53,6 +53,7 @@
     "@tool/credit-card-validator": "workspace:*",
     "@tool/cron-expression-generator": "workspace:*",
     "@tool/cron-expression-parser": "workspace:*",
+    "@tool/csr-generator": "workspace:*",
     "@tool/css-box-shadow-generator": "workspace:*",
     "@tool/css-gradient-generator": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",

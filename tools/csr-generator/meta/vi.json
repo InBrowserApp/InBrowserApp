@@ -1,0 +1,4 @@
+{
+  "name": "Công cụ tạo CSR",
+  "description": "Tạo yêu cầu ký chứng chỉ PKCS#10 ngay trên trình duyệt. Tạo khóa mới hoặc nhập khóa riêng tư PKCS#8 có sẵn, điền Subject và SAN, sau đó tải xuống CSR."
+}

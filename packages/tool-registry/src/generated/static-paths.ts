@@ -4234,6 +4234,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "csr-generator",
+    language: "ar",
+  },
+  {
+    slug: "csr-generator",
+    language: "de",
+  },
+  {
+    slug: "csr-generator",
+    language: "en",
+  },
+  {
+    slug: "csr-generator",
+    language: "es",
+  },
+  {
+    slug: "csr-generator",
+    language: "fr",
+  },
+  {
+    slug: "csr-generator",
+    language: "he",
+  },
+  {
+    slug: "csr-generator",
+    language: "hi",
+  },
+  {
+    slug: "csr-generator",
+    language: "id",
+  },
+  {
+    slug: "csr-generator",
+    language: "it",
+  },
+  {
+    slug: "csr-generator",
+    language: "ja",
+  },
+  {
+    slug: "csr-generator",
+    language: "ko",
+  },
+  {
+    slug: "csr-generator",
+    language: "ms",
+  },
+  {
+    slug: "csr-generator",
+    language: "nl",
+  },
+  {
+    slug: "csr-generator",
+    language: "no",
+  },
+  {
+    slug: "csr-generator",
+    language: "pl",
+  },
+  {
+    slug: "csr-generator",
+    language: "pt",
+  },
+  {
+    slug: "csr-generator",
+    language: "ru",
+  },
+  {
+    slug: "csr-generator",
+    language: "sv",
+  },
+  {
+    slug: "csr-generator",
+    language: "th",
+  },
+  {
+    slug: "csr-generator",
+    language: "tr",
+  },
+  {
+    slug: "csr-generator",
+    language: "vi",
+  },
+  {
+    slug: "csr-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "csr-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "css-box-shadow-generator",
     language: "ar",
   },

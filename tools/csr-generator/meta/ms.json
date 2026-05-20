@@ -1,0 +1,4 @@
+{
+  "name": "Penjana CSR",
+  "description": "Jana permintaan penandatanganan sijil PKCS#10 dalam pelayar anda. Cipta kunci baharu atau import kunci peribadi PKCS#8 sedia ada, isi Subject dan SAN, kemudian muat turun CSR."
+}
