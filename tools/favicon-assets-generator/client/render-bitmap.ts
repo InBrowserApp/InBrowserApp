@@ -33,17 +33,11 @@ function createCanvas(size: number): HTMLCanvasElement {
   return canvas
 }
 
-function paintBackground(
+function tracePath(
   ctx: CanvasRenderingContext2D,
   size: number,
-  background: { color: string; radius: number } | null
+  radiusPx: number
 ): void {
-  if (!background) {
-    return
-  }
-
-  const radiusPx = backgroundRadiusToPixels(background.radius, size)
-  ctx.save()
   ctx.beginPath()
   const r = Math.min(radiusPx, size / 2)
 
@@ -76,10 +70,6 @@ function paintBackground(
   }
 
   ctx.closePath()
-  ctx.fillStyle = background.color
-  ctx.fill()
-  ctx.clip()
-  ctx.restore()
 }
 
 function canvasToBlob(canvas: HTMLCanvasElement): Promise<Blob> {
@@ -102,8 +92,6 @@ async function renderRaster({ spec, image }: RenderInput): Promise<Blob> {
     throw new Error("CANVAS_CONTEXT_UNAVAILABLE")
   }
 
-  paintBackground(ctx, spec.size, spec.background)
-
   const layout = computeSquareDrawLayout({
     sourceWidth: image.naturalWidth || image.width,
     sourceHeight: image.naturalHeight || image.height,
@@ -111,7 +99,21 @@ async function renderRaster({ spec, image }: RenderInput): Promise<Blob> {
     marginPercent: spec.marginPercent,
   })
 
-  ctx.drawImage(image, layout.x, layout.y, layout.width, layout.height)
+  if (spec.background) {
+    const radiusPx = backgroundRadiusToPixels(spec.background.radius, spec.size)
+    ctx.save()
+    tracePath(ctx, spec.size, radiusPx)
+    ctx.fillStyle = spec.background.color
+    ctx.fill()
+    // Clip subsequent draws (the image) so it can't bleed past the rounded
+    // background corners. Without this, drawImage would render the source
+    // image over the canvas's transparent corners outside the rounded fill.
+    ctx.clip()
+    ctx.drawImage(image, layout.x, layout.y, layout.width, layout.height)
+    ctx.restore()
+  } else {
+    ctx.drawImage(image, layout.x, layout.y, layout.width, layout.height)
+  }
 
   return canvasToBlob(canvas)
 }

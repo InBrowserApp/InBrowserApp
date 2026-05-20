@@ -1,17 +1,19 @@
 "use client"
 
+import type { DesktopIconConfig } from "../core/config"
 import windowsChromeTabDark from "./preview-assets/windows-chrome-tab-dark.webp"
 import windowsChromeTab from "./preview-assets/windows-chrome-tab.webp"
 import { PreviewTile } from "./preview-tile"
+import { StyledIconOverlay } from "./styled-icon-overlay"
 import type { FaviconMessages, GeneratedBundle, ImageSource } from "./types"
 
 type DesktopPreviewProps = Readonly<{
   messages: FaviconMessages
   appName: string
+  cfg: DesktopIconConfig
   bundle: GeneratedBundle | null
   globalSource: ImageSource | null
   desktopSource: ImageSource | null
-  useDifferentImage: boolean
 }>
 
 function findAssetUrl(
@@ -24,19 +26,35 @@ function findAssetUrl(
   )
 }
 
+const ICON_TOP = `${(24 / 86) * 100}%`
+const ICON_LEFT = `${(46 / 524) * 100}%`
+const ICON_WIDTH = `${(32 / 524) * 100}%`
+const ICON_HEIGHT = `${(32 / 86) * 100}%`
+
 function DesktopPreview({
   messages,
   appName,
+  cfg,
   bundle,
   globalSource,
   desktopSource,
-  useDifferentImage,
 }: DesktopPreviewProps) {
-  const fallback =
-    (useDifferentImage ? desktopSource?.objectUrl : null) ??
-    globalSource?.objectUrl ??
+  const effectiveSource =
+    cfg.useDifferentImage && desktopSource ? desktopSource : globalSource
+  const iconUrl =
+    findAssetUrl(bundle, "favicon-32x32.png") ??
+    effectiveSource?.objectUrl ??
     null
-  const iconUrl = findAssetUrl(bundle, "favicon-32x32.png") ?? fallback
+  const background = cfg.addBackground
+    ? { color: cfg.backgroundColor, radius: cfg.backgroundRadius }
+    : null
+
+  const overlayContainerStyle = {
+    top: ICON_TOP,
+    left: ICON_LEFT,
+    width: ICON_WIDTH,
+    height: ICON_HEIGHT,
+  }
 
   return (
     <div className="grid gap-3 sm:grid-cols-2">
@@ -45,19 +63,13 @@ function DesktopPreview({
         chromeSrc={windowsChromeTab.src}
         aspectRatio="524 / 86"
       >
-        {iconUrl ? (
-          <img
-            src={iconUrl}
-            alt={`favicon-32x32 preview for ${appName}`}
-            className="absolute object-contain"
-            style={{
-              top: `${(24 / 86) * 100}%`,
-              left: `${(46 / 524) * 100}%`,
-              width: `${(32 / 524) * 100}%`,
-              height: `${(32 / 86) * 100}%`,
-            }}
-          />
-        ) : null}
+        <StyledIconOverlay
+          src={iconUrl}
+          alt={`favicon preview for ${appName}`}
+          containerStyle={overlayContainerStyle}
+          background={background}
+          marginPercent={cfg.margin}
+        />
         <div
           className="absolute truncate text-[10px] font-medium text-neutral-900 select-none"
           style={{
@@ -74,19 +86,13 @@ function DesktopPreview({
         chromeSrc={windowsChromeTabDark.src}
         aspectRatio="524 / 86"
       >
-        {iconUrl ? (
-          <img
-            src={iconUrl}
-            alt={`favicon-32x32 preview (dark) for ${appName}`}
-            className="absolute object-contain"
-            style={{
-              top: `${(24 / 86) * 100}%`,
-              left: `${(46 / 524) * 100}%`,
-              width: `${(32 / 524) * 100}%`,
-              height: `${(32 / 86) * 100}%`,
-            }}
-          />
-        ) : null}
+        <StyledIconOverlay
+          src={iconUrl}
+          alt={`favicon preview (dark) for ${appName}`}
+          containerStyle={overlayContainerStyle}
+          background={background}
+          marginPercent={cfg.margin}
+        />
         <div
           className="absolute truncate text-[10px] font-medium text-white select-none"
           style={{

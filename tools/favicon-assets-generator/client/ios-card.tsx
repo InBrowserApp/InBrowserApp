@@ -87,10 +87,10 @@ function IosCard({
           <IosPreview
             messages={messages}
             appName={appName}
+            cfg={cfg}
             bundle={bundle}
             globalSource={globalSource}
             iosSource={dedicatedSource}
-            useDifferentImage={cfg.useDifferentImage}
           />
         </div>
       </CardContent>

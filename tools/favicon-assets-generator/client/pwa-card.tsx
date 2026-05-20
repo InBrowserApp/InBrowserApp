@@ -171,11 +171,10 @@ function PwaCard({
           <PwaPreview
             messages={messages}
             appName={appName}
-            includeMaskable={cfg.includeMaskable}
+            cfg={cfg}
             bundle={bundle}
             globalSource={globalSource}
             pwaSource={dedicatedSource}
-            useDifferentImage={cfg.useDifferentImage}
           />
         </div>
       </CardContent>

@@ -140,10 +140,10 @@ function DesktopCard({
           <DesktopPreview
             messages={messages}
             appName={appName}
+            cfg={cfg}
             bundle={bundle}
             globalSource={globalSource}
             desktopSource={dedicatedSource}
-            useDifferentImage={cfg.useDifferentImage}
           />
         </div>
       </CardContent>
