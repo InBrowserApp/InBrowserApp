@@ -5706,6 +5706,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "gif-to-animated-webp-converter",
+    language: "ar",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "de",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "en",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "es",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "fr",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "he",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "hi",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "id",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "it",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "ja",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "ko",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "ms",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "nl",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "no",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "pl",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "pt",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "ru",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "sv",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "th",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "tr",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "vi",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "gif-to-apng-converter",
     language: "ar",
   },

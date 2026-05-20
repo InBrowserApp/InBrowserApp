@@ -84,6 +84,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/favicon-assets-generator/page"),
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
+  "gif-to-animated-webp-converter": () =>
+    import("@tool/gif-to-animated-webp-converter/page"),
   "gif-to-apng-converter": () => import("@tool/gif-to-apng-converter/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "highwayhash-hash-text-or-file": () =>

@@ -69,6 +69,7 @@
     "@tool/exif-viewer": "workspace:*",
     "@tool/favicon-assets-generator": "workspace:*",
     "@tool/file-to-data-uri-converter": "workspace:*",
+    "@tool/gif-to-animated-webp-converter": "workspace:*",
     "@tool/gif-to-apng-converter": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
     "@tool/highwayhash-hash-text-or-file": "workspace:*",

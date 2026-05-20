@@ -26,6 +26,8 @@ catalog:
   "@faker-js/faker": ^10.3.0
   "@jspawn/qpdf-wasm": ^0.0.2
   "@jsquash/avif": ^2.1.1
+  "@libwebp-wasm/gif2webp": ^1.0.8
+  "@libwebp-wasm/img2webp": ^1.0.0
   "@astrojs/check": ^0.9.8
   "@astrojs/mdx": ^4.3.14
   "@astrojs/react": ^4.4.2

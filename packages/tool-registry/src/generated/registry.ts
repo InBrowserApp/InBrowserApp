@@ -7852,6 +7852,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "gif-to-animated-webp-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "gif", "webp", "converter", "animation", "batch"],
+    locales: {
+      ar: {
+        name: "محول GIF إلى WebP متحرك",
+        description:
+          "حوّل صور GIF المتحركة إلى WebP متحرك مع التحجيم، وسرعة التشغيل، والتحكم في التكرار، والمعاينات، وتصدير ZIP دفعي.",
+      },
+      de: {
+        name: "GIF-zu-animiertem-WebP-Konverter",
+        description:
+          "Konvertiere animierte GIFs in animierte WebP-Dateien mit Skalierung, Wiedergabegeschwindigkeit, Schleifensteuerung, Vorschauen und Stapelexport als ZIP.",
+      },
+      en: {
+        name: "GIF to Animated WebP Converter",
+        description:
+          "Convert animated GIFs to animated WebP with scaling, playback speed, loop control, previews, and batch ZIP export.",
+      },
+      es: {
+        name: "Convertidor de GIF a WebP animado",
+        description:
+          "Convierte GIF animados en WebP animados con escalado, velocidad de reproducción, control de bucles, vistas previas y exportación ZIP por lotes.",
+      },
+      fr: {
+        name: "Convertisseur de GIF en WebP animé",
+        description:
+          "Convertissez des GIF animés en WebP animé avec mise à l’échelle, vitesse de lecture, contrôle des boucles, aperçus et export ZIP par lot.",
+      },
+      he: {
+        name: "ממיר GIF מונפש ל-WebP מונפש",
+        description:
+          "המר קובצי GIF מונפשים ל-WebP מונפש עם שינוי קנה מידה, מהירות הפעלה, בקרת לולאה, תצוגות מקדימות וייצוא ZIP באצווה.",
+      },
+      hi: {
+        name: "GIF से Animated WebP कन्वर्टर",
+        description:
+          "स्केलिंग, प्लेबैक गति, लूप नियंत्रण, प्रीव्यू और बैच ZIP एक्सपोर्ट के साथ एनिमेटेड GIF को Animated WebP में बदलें।",
+      },
+      id: {
+        name: "Konverter GIF ke WebP Animasi",
+        description:
+          "Konversi GIF animasi ke WebP animasi dengan pengaturan skala, kecepatan pemutaran, kontrol perulangan, pratinjau, dan ekspor ZIP untuk banyak file.",
+      },
+      it: {
+        name: "Convertitore da GIF a WebP animato",
+        description:
+          "Converti GIF animate in file WebP animati con ridimensionamento, velocità di riproduzione, controllo del ciclo, anteprime ed esportazione ZIP in blocco.",
+      },
+      ja: {
+        name: "GIFからAnimated WebPへの変換ツール",
+        description:
+          "スケール変更、再生速度、ループ制御、プレビュー、バッチZIPエクスポートに対応し、アニメーションGIFをAnimated WebPに変換します。",
+      },
+      ko: {
+        name: "GIF to Animated WebP 변환기",
+        description:
+          "크기 조정, 재생 속도, 루프 제어, 미리보기, 일괄 ZIP 내보내기로 애니메이션 GIF를 Animated WebP로 변환합니다.",
+      },
+      ms: {
+        name: "Penukar GIF kepada WebP Beranimasi",
+        description:
+          "Tukar GIF beranimasi kepada WebP beranimasi dengan penskalaan, kelajuan main balik, kawalan gelung, pratonton, dan eksport ZIP secara kelompok.",
+      },
+      nl: {
+        name: "GIF naar geanimeerde WebP-converter",
+        description:
+          "Converteer geanimeerde GIF-bestanden naar geanimeerde WebP met schalen, afspeelsnelheid, lusbeheer, voorbeelden en ZIP-export voor meerdere bestanden.",
+      },
+      no: {
+        name: "GIF til animert WebP-konverterer",
+        description:
+          "Konverter animerte GIF-er til animert WebP med skalering, avspillingshastighet, løkkekontroll, forhåndsvisninger og ZIP-eksport for flere filer.",
+      },
+      pl: {
+        name: "Konwerter GIF do animowanego WebP",
+        description:
+          "Konwertuj animowane GIF-y na animowane WebP ze skalowaniem, szybkością odtwarzania, kontrolą pętli, podglądami i eksportem wsadowym ZIP.",
+      },
+      pt: {
+        name: "Conversor de GIF para WebP animado",
+        description:
+          "Converta GIFs animados em WebP animados com escala, velocidade de reprodução, controle de loop, prévias e exportação em lote para ZIP.",
+      },
+      ru: {
+        name: "Конвертер GIF в анимированный WebP",
+        description:
+          "Конвертируйте анимированные GIF в анимированный WebP с масштабированием, настройкой скорости воспроизведения, управлением повторами, предпросмотром и пакетным экспортом в ZIP.",
+      },
+      sv: {
+        name: "GIF till animerad WebP-konverterare",
+        description:
+          "Konvertera animerade GIF-filer till animerad WebP med skalning, uppspelningshastighet, loopstyrning, förhandsgranskningar och samlad ZIP-export.",
+      },
+      th: {
+        name: "ตัวแปลง GIF เป็น WebP แบบเคลื่อนไหว",
+        description:
+          "แปลง GIF แบบเคลื่อนไหวเป็น WebP แบบเคลื่อนไหว พร้อมการปรับขนาด ความเร็วในการเล่น การควบคุมการวนซ้ำ ตัวอย่าง และการส่งออกเป็น ZIP แบบกลุ่ม",
+      },
+      tr: {
+        name: "GIF'ten Animasyonlu WebP'ye Dönüştürücü",
+        description:
+          "Animasyonlu GIF'leri ölçekleme, oynatma hızı, döngü kontrolü, önizlemeler ve toplu ZIP dışa aktarımıyla animasyonlu WebP'ye dönüştürün.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi GIF sang WebP động",
+        description:
+          "Chuyển đổi GIF động sang WebP động với tùy chọn đổi tỷ lệ, tốc độ phát, kiểm soát vòng lặp, xem trước và xuất ZIP hàng loạt.",
+      },
+      "zh-CN": {
+        name: "GIF 转动态 WebP 转换器",
+        description:
+          "将动态 GIF 转换为动态 WebP，支持缩放、播放速度、循环控制、预览和批量 ZIP 导出。",
+      },
+      "zh-TW": {
+        name: "GIF 轉動態 WebP 轉換器",
+        description:
+          "將動態 GIF 轉換為動態 WebP，可調整縮放、播放速度、重複播放控制、預覽，並批次匯出 ZIP。",
+      },
+    },
+  },
+  {
     slug: "gif-to-apng-converter",
     category: "image",
     icon: "image",
@@ -34264,6 +34387,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "檔案轉 Data URI 轉換器",
         description:
           "將檔案轉換為 Data URI 字串，方便嵌入 HTML、CSS 或 JSON，完全離線。",
+      },
+    },
+  },
+  "gif-to-animated-webp-converter": {
+    slug: "gif-to-animated-webp-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "gif", "webp", "converter", "animation", "batch"],
+    locales: {
+      ar: {
+        name: "محول GIF إلى WebP متحرك",
+        description:
+          "حوّل صور GIF المتحركة إلى WebP متحرك مع التحجيم، وسرعة التشغيل، والتحكم في التكرار، والمعاينات، وتصدير ZIP دفعي.",
+      },
+      de: {
+        name: "GIF-zu-animiertem-WebP-Konverter",
+        description:
+          "Konvertiere animierte GIFs in animierte WebP-Dateien mit Skalierung, Wiedergabegeschwindigkeit, Schleifensteuerung, Vorschauen und Stapelexport als ZIP.",
+      },
+      en: {
+        name: "GIF to Animated WebP Converter",
+        description:
+          "Convert animated GIFs to animated WebP with scaling, playback speed, loop control, previews, and batch ZIP export.",
+      },
+      es: {
+        name: "Convertidor de GIF a WebP animado",
+        description:
+          "Convierte GIF animados en WebP animados con escalado, velocidad de reproducción, control de bucles, vistas previas y exportación ZIP por lotes.",
+      },
+      fr: {
+        name: "Convertisseur de GIF en WebP animé",
+        description:
+          "Convertissez des GIF animés en WebP animé avec mise à l’échelle, vitesse de lecture, contrôle des boucles, aperçus et export ZIP par lot.",
+      },
+      he: {
+        name: "ממיר GIF מונפש ל-WebP מונפש",
+        description:
+          "המר קובצי GIF מונפשים ל-WebP מונפש עם שינוי קנה מידה, מהירות הפעלה, בקרת לולאה, תצוגות מקדימות וייצוא ZIP באצווה.",
+      },
+      hi: {
+        name: "GIF से Animated WebP कन्वर्टर",
+        description:
+          "स्केलिंग, प्लेबैक गति, लूप नियंत्रण, प्रीव्यू और बैच ZIP एक्सपोर्ट के साथ एनिमेटेड GIF को Animated WebP में बदलें।",
+      },
+      id: {
+        name: "Konverter GIF ke WebP Animasi",
+        description:
+          "Konversi GIF animasi ke WebP animasi dengan pengaturan skala, kecepatan pemutaran, kontrol perulangan, pratinjau, dan ekspor ZIP untuk banyak file.",
+      },
+      it: {
+        name: "Convertitore da GIF a WebP animato",
+        description:
+          "Converti GIF animate in file WebP animati con ridimensionamento, velocità di riproduzione, controllo del ciclo, anteprime ed esportazione ZIP in blocco.",
+      },
+      ja: {
+        name: "GIFからAnimated WebPへの変換ツール",
+        description:
+          "スケール変更、再生速度、ループ制御、プレビュー、バッチZIPエクスポートに対応し、アニメーションGIFをAnimated WebPに変換します。",
+      },
+      ko: {
+        name: "GIF to Animated WebP 변환기",
+        description:
+          "크기 조정, 재생 속도, 루프 제어, 미리보기, 일괄 ZIP 내보내기로 애니메이션 GIF를 Animated WebP로 변환합니다.",
+      },
+      ms: {
+        name: "Penukar GIF kepada WebP Beranimasi",
+        description:
+          "Tukar GIF beranimasi kepada WebP beranimasi dengan penskalaan, kelajuan main balik, kawalan gelung, pratonton, dan eksport ZIP secara kelompok.",
+      },
+      nl: {
+        name: "GIF naar geanimeerde WebP-converter",
+        description:
+          "Converteer geanimeerde GIF-bestanden naar geanimeerde WebP met schalen, afspeelsnelheid, lusbeheer, voorbeelden en ZIP-export voor meerdere bestanden.",
+      },
+      no: {
+        name: "GIF til animert WebP-konverterer",
+        description:
+          "Konverter animerte GIF-er til animert WebP med skalering, avspillingshastighet, løkkekontroll, forhåndsvisninger og ZIP-eksport for flere filer.",
+      },
+      pl: {
+        name: "Konwerter GIF do animowanego WebP",
+        description:
+          "Konwertuj animowane GIF-y na animowane WebP ze skalowaniem, szybkością odtwarzania, kontrolą pętli, podglądami i eksportem wsadowym ZIP.",
+      },
+      pt: {
+        name: "Conversor de GIF para WebP animado",
+        description:
+          "Converta GIFs animados em WebP animados com escala, velocidade de reprodução, controle de loop, prévias e exportação em lote para ZIP.",
+      },
+      ru: {
+        name: "Конвертер GIF в анимированный WebP",
+        description:
+          "Конвертируйте анимированные GIF в анимированный WebP с масштабированием, настройкой скорости воспроизведения, управлением повторами, предпросмотром и пакетным экспортом в ZIP.",
+      },
+      sv: {
+        name: "GIF till animerad WebP-konverterare",
+        description:
+          "Konvertera animerade GIF-filer till animerad WebP med skalning, uppspelningshastighet, loopstyrning, förhandsgranskningar och samlad ZIP-export.",
+      },
+      th: {
+        name: "ตัวแปลง GIF เป็น WebP แบบเคลื่อนไหว",
+        description:
+          "แปลง GIF แบบเคลื่อนไหวเป็น WebP แบบเคลื่อนไหว พร้อมการปรับขนาด ความเร็วในการเล่น การควบคุมการวนซ้ำ ตัวอย่าง และการส่งออกเป็น ZIP แบบกลุ่ม",
+      },
+      tr: {
+        name: "GIF'ten Animasyonlu WebP'ye Dönüştürücü",
+        description:
+          "Animasyonlu GIF'leri ölçekleme, oynatma hızı, döngü kontrolü, önizlemeler ve toplu ZIP dışa aktarımıyla animasyonlu WebP'ye dönüştürün.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi GIF sang WebP động",
+        description:
+          "Chuyển đổi GIF động sang WebP động với tùy chọn đổi tỷ lệ, tốc độ phát, kiểm soát vòng lặp, xem trước và xuất ZIP hàng loạt.",
+      },
+      "zh-CN": {
+        name: "GIF 转动态 WebP 转换器",
+        description:
+          "将动态 GIF 转换为动态 WebP，支持缩放、播放速度、循环控制、预览和批量 ZIP 导出。",
+      },
+      "zh-TW": {
+        name: "GIF 轉動態 WebP 轉換器",
+        description:
+          "將動態 GIF 轉換為動態 WebP，可調整縮放、播放速度、重複播放控制、預覽，並批次匯出 ZIP。",
       },
     },
   },
