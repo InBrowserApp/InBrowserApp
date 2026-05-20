@@ -217,13 +217,11 @@ export {
 export type {
   CsrErrorCode,
   CsrGenerationInput,
-  CsrGenerationRuntime,
   CsrResult,
   EcCurve,
   HashAlgorithm,
   KeyAlgorithm,
   KeySource,
   RsaKeySize,
-  SanInput,
   SubjectInput,
 }
