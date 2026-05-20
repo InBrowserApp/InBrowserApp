@@ -7598,6 +7598,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "favicon-assets-generator",
+    category: "favicon",
+    icon: "image",
+    tags: [
+      "favicon",
+      "icon",
+      "ico",
+      "apple-touch-icon",
+      "pwa",
+      "manifest",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد أصول الأيقونة المفضّلة (Favicon)",
+        description:
+          "أنشئ حزمة أيقونات مفضّلة كاملة — ICO وصور PNG وأيقونة Apple touch وأيقونات PWA وملف web manifest ومقتطف HTML — محلياً في متصفحك.",
+      },
+      de: {
+        name: "Favicon-Assets-Generator",
+        description:
+          "Erstellen Sie ein komplettes Favicon-Paket – ICO, PNGs, Apple-Touch-Icon, PWA-Icons, Web-Manifest und HTML-Snippet – lokal in Ihrem Browser.",
+      },
+      en: {
+        name: "Favicon Assets Generator",
+        description:
+          "Generate a complete favicon bundle — ICO, PNGs, Apple touch icon, PWA icons, web manifest, and the HTML snippet — locally in your browser.",
+      },
+      es: {
+        name: "Generador de Recursos Favicon",
+        description:
+          "Genera un paquete completo de favicons — ICO, PNG, icono Apple touch, iconos PWA, manifiesto web y el fragmento HTML — localmente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur d'éléments de favicon",
+        description:
+          "Générez un pack de favicons complet — ICO, PNG, icône Apple touch, icônes PWA, manifeste web et extrait HTML — directement dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל נכסי Favicon",
+        description:
+          "צור חבילת favicon מלאה — ICO, קובצי PNG, אייקון Apple touch, אייקוני PWA, web manifest וקטע HTML — באופן מקומי בדפדפן שלך.",
+      },
+      hi: {
+        name: "Favicon Assets Generator",
+        description:
+          "एक संपूर्ण favicon बंडल बनाएं — ICO, PNGs, Apple touch icon, PWA icons, web manifest, और HTML स्निपेट — सब कुछ आपके ब्राउज़र में स्थानीय रूप से।",
+      },
+      id: {
+        name: "Pembuat Aset Favicon",
+        description:
+          "Hasilkan paket favicon lengkap — ICO, PNG, ikon Apple touch, ikon PWA, web manifest, dan cuplikan HTML — secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Generatore di Asset Favicon",
+        description:
+          "Genera un pacchetto completo di favicon — ICO, PNG, icona Apple touch, icone PWA, web manifest e snippet HTML — localmente nel tuo browser.",
+      },
+      ja: {
+        name: "Favicon アセットジェネレーター",
+        description:
+          "ICO、PNG、Apple touch アイコン、PWA アイコン、Web manifest、HTML スニペットを含む完全な favicon バンドルをブラウザー内でローカルに生成。",
+      },
+      ko: {
+        name: "파비콘 에셋 생성기",
+        description:
+          "ICO, PNG, Apple touch icon, PWA 아이콘, 웹 매니페스트, HTML 스니펫을 포함한 완전한 파비콘 번들을 브라우저에서 로컬로 생성합니다.",
+      },
+      ms: {
+        name: "Penjana Aset Favicon",
+        description:
+          "Jana himpunan favicon yang lengkap — ICO, PNG, ikon sentuh Apple, ikon PWA, manifes web, dan coretan HTML — secara tempatan dalam pelayar anda.",
+      },
+      nl: {
+        name: "Favicon-assets-generator",
+        description:
+          "Genereer een complete favicon-bundel — ICO, PNG's, Apple touch icon, PWA-iconen, web manifest en het HTML-fragment — lokaal in je browser.",
+      },
+      no: {
+        name: "Generator for favicon-ressurser",
+        description:
+          "Generer en komplett favicon-pakke — ICO, PNG-er, Apple touch icon, PWA-ikoner, web-manifest og HTML-snutten — lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Generator zasobów favicon",
+        description:
+          "Wygeneruj kompletny pakiet favicon — ICO, PNG-i, ikonę Apple touch, ikony PWA, manifest webowy i fragment HTML — lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de Recursos de Favicon",
+        description:
+          "Gere um pacote completo de favicon — ICO, PNGs, ícone Apple touch, ícones PWA, web manifest e o snippet HTML — localmente no seu navegador.",
+      },
+      ru: {
+        name: "Генератор фавиконок",
+        description:
+          "Создайте полный комплект фавиконок — ICO, PNG, иконку Apple touch, иконки PWA, веб-манифест и HTML-фрагмент — локально в вашем браузере.",
+      },
+      sv: {
+        name: "Favicon-tillgångsgenerator",
+        description:
+          "Generera ett komplett favicon-paket — ICO, PNG:er, Apple touch-ikon, PWA-ikoner, webbmanifest och HTML-utdraget — lokalt i din webbläsare.",
+      },
+      th: {
+        name: "เครื่องสร้างชุดไฟล์ Favicon",
+        description:
+          "สร้างชุดไฟล์ favicon แบบครบชุด — ICO, PNG, Apple touch icon, ไอคอน PWA, web manifest และ HTML snippet — ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Favicon Varlık Oluşturucu",
+        description:
+          "ICO, PNG'ler, Apple touch simgesi, PWA simgeleri, web manifesti ve HTML parçacığından oluşan eksiksiz bir favicon paketini tarayıcınızda yerel olarak oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo bộ favicon",
+        description:
+          "Tạo bộ favicon hoàn chỉnh — ICO, PNG, biểu tượng Apple touch, biểu tượng PWA, web manifest và đoạn mã HTML — ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "Favicon 资源生成器",
+        description:
+          "在浏览器本地生成一套完整的 favicon 资源包 —— 包括 ICO、PNG、Apple touch 图标、PWA 图标、Web manifest 以及 HTML 代码片段。",
+      },
+      "zh-TW": {
+        name: "Favicon 資產產生器",
+        description:
+          "在瀏覽器本機產生完整的 favicon 套件——ICO、PNG、Apple touch icon、PWA 圖示、web manifest 以及 HTML 程式碼片段。",
+      },
+    },
+  },
+  {
     slug: "file-to-data-uri-converter",
     category: "web",
     icon: "file-text",
@@ -33756,6 +33887,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "EXIF 檢視器",
         description:
           "在瀏覽器本機檢視圖片元資料、相機設定、GPS 座標，以及嵌入的 EXIF/IPTC/XMP 欄位。",
+      },
+    },
+  },
+  "favicon-assets-generator": {
+    slug: "favicon-assets-generator",
+    category: "favicon",
+    icon: "image",
+    tags: [
+      "favicon",
+      "icon",
+      "ico",
+      "apple-touch-icon",
+      "pwa",
+      "manifest",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد أصول الأيقونة المفضّلة (Favicon)",
+        description:
+          "أنشئ حزمة أيقونات مفضّلة كاملة — ICO وصور PNG وأيقونة Apple touch وأيقونات PWA وملف web manifest ومقتطف HTML — محلياً في متصفحك.",
+      },
+      de: {
+        name: "Favicon-Assets-Generator",
+        description:
+          "Erstellen Sie ein komplettes Favicon-Paket – ICO, PNGs, Apple-Touch-Icon, PWA-Icons, Web-Manifest und HTML-Snippet – lokal in Ihrem Browser.",
+      },
+      en: {
+        name: "Favicon Assets Generator",
+        description:
+          "Generate a complete favicon bundle — ICO, PNGs, Apple touch icon, PWA icons, web manifest, and the HTML snippet — locally in your browser.",
+      },
+      es: {
+        name: "Generador de Recursos Favicon",
+        description:
+          "Genera un paquete completo de favicons — ICO, PNG, icono Apple touch, iconos PWA, manifiesto web y el fragmento HTML — localmente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur d'éléments de favicon",
+        description:
+          "Générez un pack de favicons complet — ICO, PNG, icône Apple touch, icônes PWA, manifeste web et extrait HTML — directement dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל נכסי Favicon",
+        description:
+          "צור חבילת favicon מלאה — ICO, קובצי PNG, אייקון Apple touch, אייקוני PWA, web manifest וקטע HTML — באופן מקומי בדפדפן שלך.",
+      },
+      hi: {
+        name: "Favicon Assets Generator",
+        description:
+          "एक संपूर्ण favicon बंडल बनाएं — ICO, PNGs, Apple touch icon, PWA icons, web manifest, और HTML स्निपेट — सब कुछ आपके ब्राउज़र में स्थानीय रूप से।",
+      },
+      id: {
+        name: "Pembuat Aset Favicon",
+        description:
+          "Hasilkan paket favicon lengkap — ICO, PNG, ikon Apple touch, ikon PWA, web manifest, dan cuplikan HTML — secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Generatore di Asset Favicon",
+        description:
+          "Genera un pacchetto completo di favicon — ICO, PNG, icona Apple touch, icone PWA, web manifest e snippet HTML — localmente nel tuo browser.",
+      },
+      ja: {
+        name: "Favicon アセットジェネレーター",
+        description:
+          "ICO、PNG、Apple touch アイコン、PWA アイコン、Web manifest、HTML スニペットを含む完全な favicon バンドルをブラウザー内でローカルに生成。",
+      },
+      ko: {
+        name: "파비콘 에셋 생성기",
+        description:
+          "ICO, PNG, Apple touch icon, PWA 아이콘, 웹 매니페스트, HTML 스니펫을 포함한 완전한 파비콘 번들을 브라우저에서 로컬로 생성합니다.",
+      },
+      ms: {
+        name: "Penjana Aset Favicon",
+        description:
+          "Jana himpunan favicon yang lengkap — ICO, PNG, ikon sentuh Apple, ikon PWA, manifes web, dan coretan HTML — secara tempatan dalam pelayar anda.",
+      },
+      nl: {
+        name: "Favicon-assets-generator",
+        description:
+          "Genereer een complete favicon-bundel — ICO, PNG's, Apple touch icon, PWA-iconen, web manifest en het HTML-fragment — lokaal in je browser.",
+      },
+      no: {
+        name: "Generator for favicon-ressurser",
+        description:
+          "Generer en komplett favicon-pakke — ICO, PNG-er, Apple touch icon, PWA-ikoner, web-manifest og HTML-snutten — lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Generator zasobów favicon",
+        description:
+          "Wygeneruj kompletny pakiet favicon — ICO, PNG-i, ikonę Apple touch, ikony PWA, manifest webowy i fragment HTML — lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de Recursos de Favicon",
+        description:
+          "Gere um pacote completo de favicon — ICO, PNGs, ícone Apple touch, ícones PWA, web manifest e o snippet HTML — localmente no seu navegador.",
+      },
+      ru: {
+        name: "Генератор фавиконок",
+        description:
+          "Создайте полный комплект фавиконок — ICO, PNG, иконку Apple touch, иконки PWA, веб-манифест и HTML-фрагмент — локально в вашем браузере.",
+      },
+      sv: {
+        name: "Favicon-tillgångsgenerator",
+        description:
+          "Generera ett komplett favicon-paket — ICO, PNG:er, Apple touch-ikon, PWA-ikoner, webbmanifest och HTML-utdraget — lokalt i din webbläsare.",
+      },
+      th: {
+        name: "เครื่องสร้างชุดไฟล์ Favicon",
+        description:
+          "สร้างชุดไฟล์ favicon แบบครบชุด — ICO, PNG, Apple touch icon, ไอคอน PWA, web manifest และ HTML snippet — ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Favicon Varlık Oluşturucu",
+        description:
+          "ICO, PNG'ler, Apple touch simgesi, PWA simgeleri, web manifesti ve HTML parçacığından oluşan eksiksiz bir favicon paketini tarayıcınızda yerel olarak oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo bộ favicon",
+        description:
+          "Tạo bộ favicon hoàn chỉnh — ICO, PNG, biểu tượng Apple touch, biểu tượng PWA, web manifest và đoạn mã HTML — ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "Favicon 资源生成器",
+        description:
+          "在浏览器本地生成一套完整的 favicon 资源包 —— 包括 ICO、PNG、Apple touch 图标、PWA 图标、Web manifest 以及 HTML 代码片段。",
+      },
+      "zh-TW": {
+        name: "Favicon 資產產生器",
+        description:
+          "在瀏覽器本機產生完整的 favicon 套件——ICO、PNG、Apple touch icon、PWA 圖示、web manifest 以及 HTML 程式碼片段。",
       },
     },
   },

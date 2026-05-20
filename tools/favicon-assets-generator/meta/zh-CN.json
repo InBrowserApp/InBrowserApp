@@ -1,0 +1,4 @@
+{
+  "name": "Favicon 资源生成器",
+  "description": "在浏览器本地生成一套完整的 favicon 资源包 —— 包括 ICO、PNG、Apple touch 图标、PWA 图标、Web manifest 以及 HTML 代码片段。"
+}

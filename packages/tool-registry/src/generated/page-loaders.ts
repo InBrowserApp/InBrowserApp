@@ -80,6 +80,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "email-validator": () => import("@tool/email-validator/page"),
   "eu-vat-number-validator": () => import("@tool/eu-vat-number-validator/page"),
   "exif-viewer": () => import("@tool/exif-viewer/page"),
+  "favicon-assets-generator": () =>
+    import("@tool/favicon-assets-generator/page"),
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
   "gif-to-apng-converter": () => import("@tool/gif-to-apng-converter/page"),
