@@ -1,4 +1,5 @@
 {
+  "serverRoot": "apps/web/dist",
   "recurse": true,
   "checkFragments": true,
   "skip": ["^https?://(?!localhost[:/])"],
