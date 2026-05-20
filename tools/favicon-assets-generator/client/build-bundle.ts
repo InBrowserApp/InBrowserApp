@@ -16,7 +16,6 @@ type AssembleInput = Readonly<{
   zipName: string
 }>
 
-/* v8 ignore start -- canvas + zip API path, covered by manual + staging verification */
 async function assembleBundle({
   plan,
   sourceMap,
@@ -46,9 +45,7 @@ async function assembleBundle({
       })
     } else if (asset.kind === "ico") {
       const icoBytes = await renderIco(asset, sourceMap)
-      const icoBlob = new Blob([icoBytes as BlobPart], {
-        type: "image/x-icon",
-      })
+      const icoBlob = new Blob([icoBytes], { type: "image/x-icon" })
       await zipWriter.add(asset.filename, new Uint8ArrayReader(icoBytes))
       generated.push({
         filename: asset.filename,
@@ -103,6 +100,7 @@ async function assembleBundle({
   }
 }
 
+/* v8 ignore start -- canvas calls are exercised by integration/staging tests, not unit tests */
 async function renderRasterFromPlan(
   asset: RasterAssetSpec,
   sourceMap: Record<SourceKey, ImageSource | null>
@@ -125,7 +123,7 @@ async function renderRasterFromPlan(
 async function renderIco(
   asset: IcoAssetSpec,
   sourceMap: Record<SourceKey, ImageSource | null>
-): Promise<Uint8Array> {
+): Promise<Uint8Array<ArrayBuffer>> {
   const components = await Promise.all(
     asset.components.map(async (component) => {
       const source = sourceMap[component.sourceKey] ?? sourceMap.global

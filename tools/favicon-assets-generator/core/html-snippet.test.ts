@@ -100,6 +100,30 @@ describe("buildHeadHtml", () => {
     expect(html).toContain(`href="/static/icons/site.webmanifest"`)
   })
 
+  test("escapes characters that would otherwise break out of href / content attributes", () => {
+    const html = buildHeadHtml({
+      site: {
+        ...DEFAULT_SITE_CONFIG,
+        assetPath: `/a"><script>x</script>/`,
+        themeColor: `red" onclick="alert(1)`,
+        enableDarkThemeColor: true,
+        darkThemeColor: `<script>`,
+      },
+      includeVectorDesktopIcon: false,
+    })
+
+    // The injection payload must not appear literally — the < and > and "
+    // characters must be entity-escaped so the browser can't treat them as
+    // markup boundaries.
+    expect(html).not.toContain("<script>")
+    expect(html).not.toContain("</script>")
+    expect(html).toContain("&lt;script&gt;")
+    expect(html).toContain("&quot;")
+    // The raw " in themeColor must be escaped to &quot; so the content
+    // attribute doesn't terminate early.
+    expect(html).toContain('content="red&quot; onclick=&quot;alert(1)"')
+  })
+
   test("emits a single theme-color meta when dark variant is disabled", () => {
     const html = buildHeadHtml({
       site: { ...DEFAULT_SITE_CONFIG, enableDarkThemeColor: false },

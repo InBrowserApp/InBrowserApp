@@ -52,7 +52,7 @@ function writeUint32LE(target: Uint8Array, offset: number, value: number) {
   target[offset + 3] = (value >>> 24) & 0xff
 }
 
-function encodeIco(images: readonly IcoImageInput[]): Uint8Array {
+function encodeIco(images: readonly IcoImageInput[]): Uint8Array<ArrayBuffer> {
   if (images.length === 0) {
     throw new Error("ICO_NO_IMAGES")
   }
@@ -63,7 +63,7 @@ function encodeIco(images: readonly IcoImageInput[]): Uint8Array {
     0
   )
   const totalSize = headerSize + totalPngBytes
-  const output = new Uint8Array(totalSize)
+  const output = new Uint8Array(new ArrayBuffer(totalSize))
 
   output[0] = 0
   output[1] = 0

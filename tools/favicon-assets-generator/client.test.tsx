@@ -1165,6 +1165,63 @@ describe("FaviconAssetsGeneratorClient", () => {
     expect(screen.getByText(messages.chooseImageLabel)).toBeDefined()
   })
 
+  test("stale in-flight generate is discarded after a file swap bumps the generation token", async () => {
+    const resolvers: Array<() => void> = []
+    const renderModule = await import("./client/render-bitmap")
+    const mockRender = vi.mocked(renderModule.renderRaster)
+    let callCount = 0
+    mockRender.mockImplementation(async ({ spec }) => {
+      callCount += 1
+      const bytes = makeFakePngBytes(spec.size)
+      if (callCount === 1) {
+        return new Promise<Blob>((resolve) => {
+          resolvers.push(() =>
+            resolve(new Blob([bytes as BlobPart], { type: "image/png" }))
+          )
+        })
+      }
+      return new Blob([bytes as BlobPart], { type: "image/png" })
+    })
+
+    render(<FaviconAssetsGeneratorClient messages={messages} />)
+    fireEvent.click(screen.getByRole("button", { name: messages.useDemoLabel }))
+    await waitFor(() => {
+      expect(
+        (
+          screen.getByRole("button", {
+            name: messages.generateLabel,
+          }) as HTMLButtonElement
+        ).disabled
+      ).toBe(false)
+    })
+
+    // Click Generate — the first renderRaster call parks on the
+    // unresolved promise, so the bundle never lands.
+    fireEvent.click(
+      screen.getByRole("button", { name: messages.generateLabel })
+    )
+
+    // While the first generate is parked, swap the source image. This bumps
+    // the generation token; the in-flight run is now stale.
+    fireEvent.click(screen.getByRole("button", { name: messages.useDemoLabel }))
+
+    // Resolve the parked render. The in-flight run will finish assembling
+    // a bundle from the previous source, but the hook must discard it.
+    resolvers.forEach((resolve) => resolve())
+    await new Promise((resolve) => setTimeout(resolve, 0))
+
+    // No bundle should have landed — the result card stays in the empty
+    // state, with the Generate button re-enabled.
+    expect(screen.getByText(messages.resultEmptyTitle)).toBeDefined()
+    expect(
+      (
+        screen.getByRole("button", {
+          name: messages.generateLabel,
+        }) as HTMLButtonElement
+      ).disabled
+    ).toBe(false)
+  })
+
   test("invalid hex characters in the color input are coerced to a hash-prefixed uppercase value", () => {
     render(<FaviconAssetsGeneratorClient messages={messages} />)
 

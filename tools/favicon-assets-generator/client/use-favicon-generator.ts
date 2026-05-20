@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 
 import {
   DEFAULT_DESKTOP_ICON_CONFIG,
@@ -25,19 +25,18 @@ import { assembleBundle } from "./build-bundle"
 import { DEMO_IMAGE_FILENAME, DOWNLOAD_ZIP_NAME } from "./constants"
 import { createDemoIconFile } from "./demo-icon"
 import { resolveErrorMessage } from "./errors"
-import { disposeImageSource, loadImageSource } from "./load-image-source"
+import {
+  loadDedicatedSource,
+  loadGlobalSource,
+  type DedicatedSources,
+} from "./file-handlers"
+import { disposeImageSource } from "./load-image-source"
 import type {
   FaviconMessages,
   GeneratedBundle,
   GenerationError,
   ImageSource,
 } from "./types"
-
-type DedicatedSources = Readonly<{
-  desktop: ImageSource | null
-  ios: ImageSource | null
-  pwa: ImageSource | null
-}>
 
 const DEDICATED_KEYS: readonly DedicatedSourceKey[] = ["desktop", "ios", "pwa"]
 
@@ -57,6 +56,9 @@ function useFaviconGenerator(messages: FaviconMessages) {
   const [isGenerating, setIsGenerating] = useState(false)
   const [bundle, setBundle] = useState<GeneratedBundle | null>(null)
   const [error, setError] = useState<GenerationError | null>(null)
+  // Monotonic generation token so a slow in-flight Generate can't overwrite
+  // the bundle produced by a later click (or a user file swap mid-flight).
+  const generationIdRef = useRef(0)
 
   useEffect(() => {
     return () => {
@@ -101,59 +103,26 @@ function useFaviconGenerator(messages: FaviconMessages) {
   )
 
   const handleGlobalFile = useCallback(
-    async (file: File | null) => {
-      setError(null)
-      setBundle(null)
-      if (!file) {
-        setGlobalSource((previous) => {
-          disposeImageSource(previous)
-          return null
-        })
-        return
-      }
-
-      try {
-        const next = await loadImageSource(file)
-        setGlobalSource((previous) => {
-          disposeImageSource(previous)
-          return next
-        })
-      } catch {
-        setError({
-          code: "invalid-image",
-          message: resolveErrorMessage("invalid-image", messages),
-        })
-      }
-    },
+    (file: File | null) =>
+      loadGlobalSource(file, setGlobalSource, {
+        messages,
+        generationIdRef,
+        setError,
+        setBundle,
+        setIsGenerating,
+      }),
     [messages]
   )
 
   const handleDedicatedFile = useCallback(
-    async (key: DedicatedSourceKey, file: File | null) => {
-      setError(null)
-      setBundle(null)
-
-      if (!file) {
-        setDedicatedSources((previous) => {
-          disposeImageSource(previous[key])
-          return { ...previous, [key]: null }
-        })
-        return
-      }
-
-      try {
-        const next = await loadImageSource(file)
-        setDedicatedSources((previous) => {
-          disposeImageSource(previous[key])
-          return { ...previous, [key]: next }
-        })
-      } catch {
-        setError({
-          code: "invalid-image",
-          message: resolveErrorMessage("invalid-image", messages),
-        })
-      }
-    },
+    (key: DedicatedSourceKey, file: File | null) =>
+      loadDedicatedSource(key, file, setDedicatedSources, {
+        messages,
+        generationIdRef,
+        setError,
+        setBundle,
+        setIsGenerating,
+      }),
     [messages]
   )
 
@@ -168,6 +137,8 @@ function useFaviconGenerator(messages: FaviconMessages) {
     setPwaCfg(DEFAULT_PWA_ICON_CONFIG)
     setBundle(null)
     setError(null)
+    generationIdRef.current += 1
+    setIsGenerating(false)
   }, [])
 
   const sourceMap = useMemo<Record<SourceKey, ImageSource | null>>(
@@ -234,6 +205,7 @@ function useFaviconGenerator(messages: FaviconMessages) {
       return
     }
 
+    const myGenerationId = ++generationIdRef.current
     setIsGenerating(true)
 
     try {
@@ -256,6 +228,16 @@ function useFaviconGenerator(messages: FaviconMessages) {
         zipName: DOWNLOAD_ZIP_NAME,
       })
 
+      if (myGenerationId !== generationIdRef.current) {
+        // A newer generate (or a source/reset) has superseded this run.
+        // Drop the result here instead of overwriting the current bundle.
+        URL.revokeObjectURL(generated.zip.url)
+        generated.assets.forEach((asset) =>
+          URL.revokeObjectURL(asset.previewUrl)
+        )
+        return
+      }
+
       setBundle((previous) => {
         if (previous) {
           URL.revokeObjectURL(previous.zip.url)
@@ -266,12 +248,17 @@ function useFaviconGenerator(messages: FaviconMessages) {
         return generated
       })
     } catch {
+      if (myGenerationId !== generationIdRef.current) {
+        return
+      }
       setError({
         code: "generation-failed",
         message: resolveErrorMessage("generation-failed", messages),
       })
     } finally {
-      setIsGenerating(false)
+      if (myGenerationId === generationIdRef.current) {
+        setIsGenerating(false)
+      }
     }
   }, [
     globalSource,
