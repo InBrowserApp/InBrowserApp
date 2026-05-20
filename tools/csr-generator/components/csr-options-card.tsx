@@ -3,7 +3,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import { FieldGroup } from "@workspace/ui/components/ui/field"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   ToolPanelCard,
@@ -63,23 +62,21 @@ function CsrOptionsCard(props: CsrOptionsCardProps) {
         <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
       <ToolPanelCardContent className="gap-4 py-4">
-        <FieldGroup>
-          <CsrKeySourceFields
-            keySource={props.keySource}
-            algorithm={props.algorithm}
-            rsaKeySize={props.rsaKeySize}
-            rsaHash={props.rsaHash}
-            ecCurve={props.ecCurve}
-            keyPem={props.keyPem}
-            messages={messages}
-            onKeySourceChange={props.onKeySourceChange}
-            onAlgorithmChange={props.onAlgorithmChange}
-            onRsaKeySizeChange={props.onRsaKeySizeChange}
-            onRsaHashChange={props.onRsaHashChange}
-            onEcCurveChange={props.onEcCurveChange}
-            onKeyPemChange={props.onKeyPemChange}
-          />
-        </FieldGroup>
+        <CsrKeySourceFields
+          keySource={props.keySource}
+          algorithm={props.algorithm}
+          rsaKeySize={props.rsaKeySize}
+          rsaHash={props.rsaHash}
+          ecCurve={props.ecCurve}
+          keyPem={props.keyPem}
+          messages={messages}
+          onKeySourceChange={props.onKeySourceChange}
+          onAlgorithmChange={props.onAlgorithmChange}
+          onRsaKeySizeChange={props.onRsaKeySizeChange}
+          onRsaHashChange={props.onRsaHashChange}
+          onEcCurveChange={props.onEcCurveChange}
+          onKeyPemChange={props.onKeyPemChange}
+        />
 
         <section className="grid gap-2">
           <div>

@@ -64,157 +64,210 @@ function CsrKeySourceFields(props: CsrKeySourceFieldsProps) {
   const keyPemId = useId()
 
   return (
-    <>
-      <Field>
-        <FieldLabel id={keySourceId}>{messages.keySourceLabel}</FieldLabel>
-        <ToggleGroup
-          type="single"
-          value={keySource}
-          aria-labelledby={keySourceId}
-          variant="outline"
-          className="grid w-full grid-cols-2"
-          onValueChange={(value) => {
-            if (value === "generate" || value === "import") {
-              onKeySourceChange(value)
-            }
-          }}
-        >
-          <ToggleGroupItem value="generate" className="w-full">
-            {messages.keySourceGenerate}
-          </ToggleGroupItem>
-          <ToggleGroupItem value="import" className="w-full">
-            {messages.keySourceImport}
-          </ToggleGroupItem>
-        </ToggleGroup>
-      </Field>
+    <div className="grid gap-3 sm:grid-cols-2">
+      <KeySourceField
+        id={keySourceId}
+        label={messages.keySourceLabel}
+        value={keySource}
+        generateLabel={messages.keySourceGenerate}
+        importLabel={messages.keySourceImport}
+        onChange={onKeySourceChange}
+      />
 
       {keySource === "generate" ? (
-        <Field>
-          <FieldLabel id={algorithmId}>{messages.algorithmLabel}</FieldLabel>
-          <ToggleGroup
-            type="single"
-            value={algorithm}
-            aria-labelledby={algorithmId}
-            variant="outline"
-            className="grid w-full grid-cols-2"
-            onValueChange={(value) => {
-              if (value === "rsa" || value === "ecdsa") {
-                onAlgorithmChange(value)
-              }
-            }}
-          >
-            <ToggleGroupItem value="rsa" className="w-full">
-              {messages.algorithmRsa}
-            </ToggleGroupItem>
-            <ToggleGroupItem value="ecdsa" className="w-full">
-              {messages.algorithmEcdsa}
-            </ToggleGroupItem>
-          </ToggleGroup>
-        </Field>
-      ) : null}
+        <AlgorithmField
+          id={algorithmId}
+          label={messages.algorithmLabel}
+          value={algorithm}
+          rsaLabel={messages.algorithmRsa}
+          ecdsaLabel={messages.algorithmEcdsa}
+          onChange={onAlgorithmChange}
+        />
+      ) : (
+        <RsaHashField
+          id={rsaHashId}
+          label={messages.rsaHashLabel}
+          value={rsaHash}
+          onChange={onRsaHashChange}
+        />
+      )}
 
       {keySource === "generate" && algorithm === "rsa" ? (
         <>
-          <Field>
-            <FieldLabel id={rsaKeySizeId}>
-              {messages.rsaKeySizeLabel}
-            </FieldLabel>
-            <ToggleGroup
-              type="single"
-              value={String(rsaKeySize)}
-              aria-labelledby={rsaKeySizeId}
-              variant="outline"
-              className="grid w-full grid-cols-3"
-              onValueChange={(value) => {
-                const next = Number(value) as RsaKeySize
-                if (RSA_KEY_SIZES.includes(next)) {
-                  onRsaKeySizeChange(next)
-                }
-              }}
-            >
-              {RSA_KEY_SIZES.map((size) => (
-                <ToggleGroupItem
-                  key={size}
-                  value={String(size)}
-                  className="w-full"
-                >
-                  {size}
-                </ToggleGroupItem>
-              ))}
-            </ToggleGroup>
-          </Field>
+          <RsaKeySizeField
+            id={rsaKeySizeId}
+            label={messages.rsaKeySizeLabel}
+            value={rsaKeySize}
+            onChange={onRsaKeySizeChange}
+          />
           <RsaHashField
             id={rsaHashId}
-            value={rsaHash}
             label={messages.rsaHashLabel}
+            value={rsaHash}
             onChange={onRsaHashChange}
           />
         </>
       ) : null}
 
       {keySource === "generate" && algorithm === "ecdsa" ? (
-        <Field>
-          <FieldLabel id={ecCurveId}>{messages.ecCurveLabel}</FieldLabel>
-          <ToggleGroup
-            type="single"
-            value={ecCurve}
-            aria-labelledby={ecCurveId}
-            variant="outline"
-            className="grid w-full grid-cols-3"
-            onValueChange={(value) => {
-              if (EC_CURVES.includes(value as EcCurve)) {
-                onEcCurveChange(value as EcCurve)
-              }
-            }}
-          >
-            {EC_CURVES.map((curve) => (
-              <ToggleGroupItem key={curve} value={curve} className="w-full">
-                {curve}
-              </ToggleGroupItem>
-            ))}
-          </ToggleGroup>
-        </Field>
+        <EcCurveField
+          id={ecCurveId}
+          label={messages.ecCurveLabel}
+          value={ecCurve}
+          onChange={onEcCurveChange}
+        />
       ) : null}
 
       {keySource === "import" ? (
-        <>
-          <Field>
-            <FieldLabel htmlFor={keyPemId}>{messages.importLabel}</FieldLabel>
-            <Textarea
-              id={keyPemId}
-              name="private-key-pem"
-              value={keyPem}
-              placeholder={messages.importPlaceholder}
-              spellCheck={false}
-              autoCapitalize="off"
-              autoCorrect="off"
-              rows={8}
-              className="font-mono text-xs"
-              onChange={(event) => onKeyPemChange(event.target.value)}
-            />
-            <FieldDescription>{messages.importDescription}</FieldDescription>
-          </Field>
-          <RsaHashField
-            id={rsaHashId}
-            value={rsaHash}
-            label={messages.rsaHashLabel}
-            onChange={onRsaHashChange}
+        <Field className="sm:col-span-2">
+          <FieldLabel htmlFor={keyPemId}>{messages.importLabel}</FieldLabel>
+          <Textarea
+            id={keyPemId}
+            name="private-key-pem"
+            value={keyPem}
+            placeholder={messages.importPlaceholder}
+            spellCheck={false}
+            autoCapitalize="off"
+            autoCorrect="off"
+            rows={6}
+            className="font-mono text-xs"
+            onChange={(event) => onKeyPemChange(event.target.value)}
           />
-        </>
+          <FieldDescription>{messages.importDescription}</FieldDescription>
+        </Field>
       ) : null}
-    </>
+    </div>
+  )
+}
+
+function KeySourceField({
+  id,
+  label,
+  value,
+  generateLabel,
+  importLabel,
+  onChange,
+}: Readonly<{
+  id: string
+  label: string
+  value: KeySource
+  generateLabel: string
+  importLabel: string
+  onChange: (value: KeySource) => void
+}>) {
+  return (
+    <Field>
+      <FieldLabel id={id}>{label}</FieldLabel>
+      <ToggleGroup
+        type="single"
+        value={value}
+        aria-labelledby={id}
+        variant="outline"
+        className="grid w-full grid-cols-2"
+        onValueChange={(next) => {
+          if (next === "generate" || next === "import") {
+            onChange(next)
+          }
+        }}
+      >
+        <ToggleGroupItem value="generate" className="w-full">
+          {generateLabel}
+        </ToggleGroupItem>
+        <ToggleGroupItem value="import" className="w-full">
+          {importLabel}
+        </ToggleGroupItem>
+      </ToggleGroup>
+    </Field>
+  )
+}
+
+function AlgorithmField({
+  id,
+  label,
+  value,
+  rsaLabel,
+  ecdsaLabel,
+  onChange,
+}: Readonly<{
+  id: string
+  label: string
+  value: KeyAlgorithm
+  rsaLabel: string
+  ecdsaLabel: string
+  onChange: (value: KeyAlgorithm) => void
+}>) {
+  return (
+    <Field>
+      <FieldLabel id={id}>{label}</FieldLabel>
+      <ToggleGroup
+        type="single"
+        value={value}
+        aria-labelledby={id}
+        variant="outline"
+        className="grid w-full grid-cols-2"
+        onValueChange={(next) => {
+          if (next === "rsa" || next === "ecdsa") {
+            onChange(next)
+          }
+        }}
+      >
+        <ToggleGroupItem value="rsa" className="w-full">
+          {rsaLabel}
+        </ToggleGroupItem>
+        <ToggleGroupItem value="ecdsa" className="w-full">
+          {ecdsaLabel}
+        </ToggleGroupItem>
+      </ToggleGroup>
+    </Field>
+  )
+}
+
+function RsaKeySizeField({
+  id,
+  label,
+  value,
+  onChange,
+}: Readonly<{
+  id: string
+  label: string
+  value: RsaKeySize
+  onChange: (value: RsaKeySize) => void
+}>) {
+  return (
+    <Field>
+      <FieldLabel id={id}>{label}</FieldLabel>
+      <ToggleGroup
+        type="single"
+        value={String(value)}
+        aria-labelledby={id}
+        variant="outline"
+        className="grid w-full grid-cols-3"
+        onValueChange={(next) => {
+          const size = Number(next) as RsaKeySize
+          if (RSA_KEY_SIZES.includes(size)) {
+            onChange(size)
+          }
+        }}
+      >
+        {RSA_KEY_SIZES.map((size) => (
+          <ToggleGroupItem key={size} value={String(size)} className="w-full">
+            {size}
+          </ToggleGroupItem>
+        ))}
+      </ToggleGroup>
+    </Field>
   )
 }
 
 function RsaHashField({
   id,
-  value,
   label,
+  value,
   onChange,
 }: Readonly<{
   id: string
-  value: HashAlgorithm
   label: string
+  value: HashAlgorithm
   onChange: (value: HashAlgorithm) => void
 }>) {
   return (
@@ -235,6 +288,42 @@ function RsaHashField({
         {RSA_HASHES.map((hash) => (
           <ToggleGroupItem key={hash} value={hash} className="w-full">
             {hash}
+          </ToggleGroupItem>
+        ))}
+      </ToggleGroup>
+    </Field>
+  )
+}
+
+function EcCurveField({
+  id,
+  label,
+  value,
+  onChange,
+}: Readonly<{
+  id: string
+  label: string
+  value: EcCurve
+  onChange: (value: EcCurve) => void
+}>) {
+  return (
+    <Field>
+      <FieldLabel id={id}>{label}</FieldLabel>
+      <ToggleGroup
+        type="single"
+        value={value}
+        aria-labelledby={id}
+        variant="outline"
+        className="grid w-full grid-cols-3"
+        onValueChange={(next) => {
+          if (EC_CURVES.includes(next as EcCurve)) {
+            onChange(next as EcCurve)
+          }
+        }}
+      >
+        {EC_CURVES.map((curve) => (
+          <ToggleGroupItem key={curve} value={curve} className="w-full">
+            {curve}
           </ToggleGroupItem>
         ))}
       </ToggleGroup>
