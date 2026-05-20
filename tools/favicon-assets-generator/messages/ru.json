@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Цвет тёмной темы",
   "backgroundColorLabel": "Цвет фона",
   "backgroundColorDescription": "background_color манифеста. Используется браузерами для отрисовки заставок PWA.",
+  "optimizePngLabel": "Оптимизировать вывод PNG",
+  "optimizePngDescription": "Прогоняет каждый созданный PNG (включая компоненты ICO) через проход oxipng без потерь. Добавляет несколько секунд и при первой генерации загружает WASM-модуль около 150 КБ, но заметно уменьшает размер zip.",
 
   "desktopCardTitle": "Фавикон для настольного браузера",
   "desktopCardDescription": "Управляет favicon.ico, favicon-16x16.png, favicon-32x32.png и (если исходник — SVG) favicon.svg.",

@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "डार्क थीम रंग",
   "backgroundColorLabel": "पृष्ठभूमि रंग",
   "backgroundColorDescription": "Manifest background_color। ब्राउज़र द्वारा PWAs पर स्प्लैश स्क्रीन रंगने के लिए उपयोग किया जाता है।",
+  "optimizePngLabel": "PNG आउटपुट को ऑप्टिमाइज़ करें",
+  "optimizePngDescription": "हर उत्सर्जित PNG (ICO घटकों सहित) को लॉसलेस oxipng पास के माध्यम से चलाता है। पहली बार जनरेट करने पर कुछ सेकंड जोड़ता है और ~150 KB WASM मॉड्यूल डाउनलोड करता है, लेकिन zip को उल्लेखनीय रूप से छोटा करता है।",
 
   "desktopCardTitle": "डेस्कटॉप ब्राउज़र favicon",
   "desktopCardDescription": "favicon.ico, favicon-16x16.png, favicon-32x32.png, और (जब स्रोत SVG हो) favicon.svg को नियंत्रित करता है।",

@@ -226,6 +226,7 @@ function useFaviconGenerator(messages: FaviconMessages) {
           }),
         }),
         zipName: DOWNLOAD_ZIP_NAME,
+        optimizePng: siteCfg.optimizePng,
       })
 
       if (myGenerationId !== generationIdRef.current) {

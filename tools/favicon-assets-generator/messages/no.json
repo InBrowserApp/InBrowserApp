@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Mørk temafarge",
   "backgroundColorLabel": "Bakgrunnsfarge",
   "backgroundColorDescription": "Manifestets background_color. Brukes av nettlesere til å tegne startskjermer for PWA-er.",
+  "optimizePngLabel": "Optimaliser PNG-utdata",
+  "optimizePngDescription": "Kjører hver genererte PNG (inkludert ICO-komponentene) gjennom en tapsfri oxipng-runde. Legger til noen få sekunder og laster ned en WASM-modul på ~150 KB første gang du genererer, men krymper zip-filen merkbart.",
 
   "desktopCardTitle": "Favicon for skrivebordsnettleser",
   "desktopCardDescription": "Styrer favicon.ico, favicon-16x16.png, favicon-32x32.png og (når kilden er SVG) favicon.svg.",

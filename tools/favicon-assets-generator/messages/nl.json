@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Donkere themakleur",
   "backgroundColorLabel": "Achtergrondkleur",
   "backgroundColorDescription": "Manifest background_color. Wordt door browsers gebruikt om splash screens van PWA's te tekenen.",
+  "optimizePngLabel": "PNG-uitvoer optimaliseren",
+  "optimizePngDescription": "Voert elke gegenereerde PNG (inclusief de ICO-componenten) door een lossless oxipng-bewerking. Voegt een paar seconden toe en downloadt de eerste keer een WASM-module van ~150 KB, maar verkleint de zip merkbaar.",
 
   "desktopCardTitle": "Favicon voor desktopbrowser",
   "desktopCardDescription": "Bepaalt favicon.ico, favicon-16x16.png, favicon-32x32.png en (wanneer de bron SVG is) favicon.svg.",

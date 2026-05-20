@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Couleur du thème sombre",
   "backgroundColorLabel": "Couleur d'arrière-plan",
   "backgroundColorDescription": "background_color du manifeste. Utilisé par les navigateurs pour peindre les écrans de démarrage des PWA.",
+  "optimizePngLabel": "Optimiser la sortie PNG",
+  "optimizePngDescription": "Soumet chaque PNG généré (y compris les composants de l'ICO) à une passe oxipng sans perte. Ajoute quelques secondes et télécharge un module WASM d'environ 150 KB lors de la première génération, mais réduit nettement la taille du zip.",
 
   "desktopCardTitle": "Favicon de navigateur de bureau",
   "desktopCardDescription": "Contrôle favicon.ico, favicon-16x16.png, favicon-32x32.png et (lorsque la source est SVG) favicon.svg.",

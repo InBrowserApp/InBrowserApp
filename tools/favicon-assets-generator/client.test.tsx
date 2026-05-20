@@ -55,6 +55,10 @@ vi.mock("./client/render-bitmap", async () => {
   }
 })
 
+vi.mock("./client/optimize-png", () => ({
+  optimizePngBytes: vi.fn(async (bytes: Uint8Array) => bytes),
+}))
+
 vi.mock("@zip.js/zip.js", () => {
   class BlobWriter {
     constructor(public mimeType: string) {}
@@ -137,6 +141,8 @@ const messages: FaviconMessages = {
   darkThemeColorLabel: "Dark theme color",
   backgroundColorLabel: "Background color",
   backgroundColorDescription: "bg desc",
+  optimizePngLabel: "Optimize PNG output",
+  optimizePngDescription: "Run oxipng over every emitted PNG.",
 
   desktopCardTitle: "Desktop browser favicon",
   desktopCardDescription: "desktop desc",

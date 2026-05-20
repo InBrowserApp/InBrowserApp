@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "สีธีมโหมดมืด",
   "backgroundColorLabel": "สีพื้นหลัง",
   "backgroundColorDescription": "background_color ใน manifest ใช้โดยเบราว์เซอร์เพื่อวาด splash screen ของ PWA",
+  "optimizePngLabel": "เพิ่มประสิทธิภาพไฟล์ PNG ที่ส่งออก",
+  "optimizePngDescription": "รันไฟล์ PNG ที่สร้างทั้งหมด (รวมถึงส่วนประกอบของ ICO) ผ่านขั้นตอน oxipng แบบไม่สูญเสียคุณภาพ จะใช้เวลาเพิ่มอีกไม่กี่วินาทีและดาวน์โหลดโมดูล WASM ขนาดประมาณ 150 KB ในครั้งแรกที่สร้าง แต่จะช่วยลดขนาดไฟล์ zip ได้อย่างเห็นได้ชัด",
 
   "desktopCardTitle": "Favicon สำหรับเบราว์เซอร์เดสก์ท็อป",
   "desktopCardDescription": "ควบคุม favicon.ico, favicon-16x16.png, favicon-32x32.png และ (เมื่อต้นฉบับเป็น SVG) favicon.svg",

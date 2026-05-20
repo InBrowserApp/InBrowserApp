@@ -39,6 +39,19 @@ vi.mock("./render-bitmap", async () => {
   }
 })
 
+const optimizePngMock = vi.fn(async (bytes: Uint8Array) => {
+  // Keep the PNG signature + dimensions intact so encodeIco still
+  // recognises this as a valid PNG; flip the last (payload) byte so a
+  // future assertion could distinguish optimized output from raw input.
+  const out = new Uint8Array(bytes)
+  out[out.byteLength - 1] = (out[out.byteLength - 1] ?? 0) ^ 0xff
+  return out
+})
+
+vi.mock("./optimize-png", () => ({
+  optimizePngBytes: optimizePngMock,
+}))
+
 vi.mock("@zip.js/zip.js", () => {
   class BlobWriter {
     constructor(public mimeType: string) {}
@@ -167,6 +180,7 @@ describe("assembleBundle", () => {
       manifestJson: '{"name":"Acme"}\n',
       htmlSnippet: "<link rel=icon>",
       zipName: "Favicon Assets.zip",
+      optimizePng: false,
     })
 
     expect(recordedZipAdds.map((entry) => entry.filename)).toEqual([
@@ -200,6 +214,7 @@ describe("assembleBundle", () => {
       manifestJson: "{}\n",
       htmlSnippet: "",
       zipName: "Favicon Assets.zip",
+      optimizePng: false,
     })
 
     expect(recordedZipAdds.map((entry) => entry.filename)).toEqual([
@@ -221,6 +236,7 @@ describe("assembleBundle", () => {
       manifestJson: "{}\n",
       htmlSnippet: "",
       zipName: "Favicon Assets.zip",
+      optimizePng: false,
     })
 
     expect(recordedZipAdds).toEqual([
@@ -246,7 +262,58 @@ describe("assembleBundle", () => {
         manifestJson: "{}\n",
         htmlSnippet: "",
         zipName: "Favicon Assets.zip",
+        optimizePng: false,
       })
     ).rejects.toThrow("MISSING_SOURCE_FOR_ASSET")
+  })
+
+  test("runs every raster + ICO component through the optimizer when optimizePng is on", async () => {
+    optimizePngMock.mockClear()
+
+    const plan: AssetSpec[] = [
+      {
+        kind: "ico",
+        filename: "favicon.ico",
+        components: [
+          { size: 16, marginPercent: 0, background: null, sourceKey: "global" },
+          { size: 32, marginPercent: 0, background: null, sourceKey: "global" },
+          { size: 48, marginPercent: 0, background: null, sourceKey: "global" },
+        ],
+      },
+      baseRasterAsset(16, "favicon-16x16.png", "desktop"),
+      baseRasterAsset(180, "apple-touch-icon.png", "ios"),
+    ]
+
+    await assembleBundle({
+      plan,
+      sourceMap: makeSourceMap(),
+      manifestJson: "{}\n",
+      htmlSnippet: "",
+      zipName: "Favicon Assets.zip",
+      optimizePng: true,
+    })
+
+    // 3 ICO components + 2 raster outputs = 5 optimizer invocations.
+    expect(optimizePngMock).toHaveBeenCalledTimes(5)
+  })
+
+  test("does not load or invoke the optimizer when optimizePng is off", async () => {
+    optimizePngMock.mockClear()
+
+    const plan: AssetSpec[] = [
+      baseRasterAsset(32, "favicon-32x32.png", "desktop"),
+      baseRasterAsset(180, "apple-touch-icon.png", "ios"),
+    ]
+
+    await assembleBundle({
+      plan,
+      sourceMap: makeSourceMap(),
+      manifestJson: "{}\n",
+      htmlSnippet: "",
+      zipName: "Favicon Assets.zip",
+      optimizePng: false,
+    })
+
+    expect(optimizePngMock).not.toHaveBeenCalled()
   })
 })

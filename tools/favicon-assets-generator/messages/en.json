@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Dark theme color",
   "backgroundColorLabel": "Background color",
   "backgroundColorDescription": "Manifest background_color. Used by browsers to paint splash screens on PWAs.",
+  "optimizePngLabel": "Optimize PNG output",
+  "optimizePngDescription": "Runs every emitted PNG (including the ICO components) through a lossless oxipng pass. Adds a few seconds and downloads a ~150 KB WASM module the first time you generate, but shrinks the zip noticeably.",
 
   "desktopCardTitle": "Desktop browser favicon",
   "desktopCardDescription": "Controls favicon.ico, favicon-16x16.png, favicon-32x32.png, and (when source is SVG) favicon.svg.",

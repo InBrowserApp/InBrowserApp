@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Warna tema gelap",
   "backgroundColorLabel": "Warna latar belakang",
   "backgroundColorDescription": "background_color manifes. Digunakan oleh pelayar untuk melukis skrin pemecut pada PWA.",
+  "optimizePngLabel": "Optimumkan output PNG",
+  "optimizePngDescription": "Menjalankan setiap PNG yang dikeluarkan (termasuk komponen ICO) melalui laluan oxipng tanpa kehilangan. Menambah beberapa saat dan memuat turun modul WASM ~150 KB pada kali pertama anda menjana, tetapi mengecilkan zip dengan ketara.",
 
   "desktopCardTitle": "Favicon pelayar desktop",
   "desktopCardDescription": "Mengawal favicon.ico, favicon-16x16.png, favicon-32x32.png, dan (apabila sumber ialah SVG) favicon.svg.",

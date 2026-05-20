@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Kolor motywu ciemnego",
   "backgroundColorLabel": "Kolor tła",
   "backgroundColorDescription": "background_color w manifeście. Używany przez przeglądarki do rysowania ekranów powitalnych w PWA.",
+  "optimizePngLabel": "Optymalizuj wyjściowe pliki PNG",
+  "optimizePngDescription": "Przepuszcza każdy wygenerowany plik PNG (w tym składowe ICO) przez bezstratną optymalizację oxipng. Dodaje kilka sekund i pobiera moduł WASM (~150 KB) przy pierwszym generowaniu, ale zauważalnie zmniejsza rozmiar archiwum zip.",
 
   "desktopCardTitle": "Favicon przeglądarki desktopowej",
   "desktopCardDescription": "Steruje plikami favicon.ico, favicon-16x16.png, favicon-32x32.png oraz (gdy źródłem jest SVG) favicon.svg.",

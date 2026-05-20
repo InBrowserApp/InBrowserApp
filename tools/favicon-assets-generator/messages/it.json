@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Colore tema scuro",
   "backgroundColorLabel": "Colore di sfondo",
   "backgroundColorDescription": "background_color del manifest. Utilizzato dai browser per disegnare le splash screen delle PWA.",
+  "optimizePngLabel": "Ottimizza output PNG",
+  "optimizePngDescription": "Esegue ogni PNG emesso (incluse le componenti ICO) attraverso un passaggio lossless di oxipng. Aggiunge qualche secondo e scarica un modulo WASM di circa 150 KB la prima volta che generi, ma riduce sensibilmente lo zip.",
 
   "desktopCardTitle": "Favicon browser desktop",
   "desktopCardDescription": "Controlla favicon.ico, favicon-16x16.png, favicon-32x32.png e (quando la sorgente è SVG) favicon.svg.",

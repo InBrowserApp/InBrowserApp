@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "צבע ערכת נושא כהה",
   "backgroundColorLabel": "צבע רקע",
   "backgroundColorDescription": "background_color של ה-manifest. בשימוש על ידי דפדפנים לציור מסכי פתיחה ב-PWA.",
+  "optimizePngLabel": "אופטימיזציה לפלט PNG",
+  "optimizePngDescription": "מריץ כל PNG שנוצר (כולל רכיבי ה-ICO) דרך מעבר oxipng ללא אובדן. מוסיף כמה שניות ומוריד מודול WASM בגודל כ-150 KB בפעם הראשונה שאתה יוצר, אך מקטין את ה-zip באופן ניכר.",
 
   "desktopCardTitle": "Favicon לדפדפן שולחני",
   "desktopCardDescription": "שולט ב-favicon.ico, favicon-16x16.png, favicon-32x32.png, ו-(כאשר המקור הוא SVG) favicon.svg.",

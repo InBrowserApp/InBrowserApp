@@ -2732,6 +2732,9 @@ importers:
 
   tools/favicon-assets-generator:
     dependencies:
+      '@jsquash/oxipng':
+        specifier: 'catalog:'
+        version: 2.3.0
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk

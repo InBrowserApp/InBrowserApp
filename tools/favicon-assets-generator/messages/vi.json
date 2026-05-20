@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Màu chủ đề tối",
   "backgroundColorLabel": "Màu nền",
   "backgroundColorDescription": "background_color của manifest. Được trình duyệt dùng để vẽ màn hình chờ cho PWA.",
+  "optimizePngLabel": "Tối ưu hóa đầu ra PNG",
+  "optimizePngDescription": "Chạy mọi tệp PNG được tạo ra (bao gồm cả các thành phần ICO) qua một lượt oxipng không mất dữ liệu. Mất thêm vài giây và tải về module WASM khoảng 150 KB trong lần tạo đầu tiên, nhưng giảm đáng kể kích thước tệp zip.",
 
   "desktopCardTitle": "Favicon trình duyệt máy tính",
   "desktopCardDescription": "Điều khiển favicon.ico, favicon-16x16.png, favicon-32x32.png và (khi nguồn là SVG) favicon.svg.",

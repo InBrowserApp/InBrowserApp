@@ -189,6 +189,20 @@ function SiteInfoCard({ messages, siteCfg, onPatch }: SiteInfoCardProps) {
             value={siteCfg.backgroundColor}
             onChange={(value) => onPatch({ backgroundColor: value })}
           />
+
+          <Field orientation="horizontal">
+            <FieldLabel htmlFor={`${idPrefix}-optimize-png`} className="flex-1">
+              {messages.optimizePngLabel}
+              <FieldDescription className="font-normal">
+                {messages.optimizePngDescription}
+              </FieldDescription>
+            </FieldLabel>
+            <Switch
+              id={`${idPrefix}-optimize-png`}
+              checked={siteCfg.optimizePng}
+              onCheckedChange={(checked) => onPatch({ optimizePng: checked })}
+            />
+          </Field>
         </FieldGroup>
       </CardContent>
     </Card>

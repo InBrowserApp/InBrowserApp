@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Color del tema oscuro",
   "backgroundColorLabel": "Color de fondo",
   "backgroundColorDescription": "background_color del manifiesto. Lo usan los navegadores para pintar las pantallas de inicio de las PWA.",
+  "optimizePngLabel": "Optimizar la salida PNG",
+  "optimizePngDescription": "Pasa cada PNG emitido (incluidos los componentes del ICO) por una pasada sin pérdidas de oxipng. Añade unos segundos y descarga un módulo WASM de ~150 KB la primera vez que generas, pero reduce el zip notablemente.",
 
   "desktopCardTitle": "Favicon para navegador de escritorio",
   "desktopCardDescription": "Controla favicon.ico, favicon-16x16.png, favicon-32x32.png y (cuando el origen es SVG) favicon.svg.",

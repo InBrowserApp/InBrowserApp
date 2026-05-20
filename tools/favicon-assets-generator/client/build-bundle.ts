@@ -8,13 +8,21 @@ import type {
 import { blobToUint8, renderRaster } from "./render-bitmap"
 import type { GeneratedAsset, GeneratedBundle, ImageSource } from "./types"
 
+type PngOptimizer = (bytes: Uint8Array) => Promise<Uint8Array<ArrayBuffer>>
+
 type AssembleInput = Readonly<{
   plan: readonly AssetSpec[]
   sourceMap: Record<SourceKey, ImageSource | null>
   manifestJson: string
   htmlSnippet: string
   zipName: string
+  optimizePng: boolean
 }>
+
+async function loadPngOptimizer(): Promise<PngOptimizer> {
+  const { optimizePngBytes } = await import("./optimize-png")
+  return optimizePngBytes
+}
 
 async function assembleBundle({
   plan,
@@ -22,9 +30,14 @@ async function assembleBundle({
   manifestJson,
   htmlSnippet,
   zipName,
+  optimizePng,
 }: AssembleInput): Promise<GeneratedBundle> {
   const { BlobWriter, TextReader, Uint8ArrayReader, ZipWriter } =
     await import("@zip.js/zip.js")
+
+  const optimizer: PngOptimizer | null = optimizePng
+    ? await loadPngOptimizer()
+    : null
 
   const generated: GeneratedAsset[] = []
   const zipWriter = new ZipWriter(new BlobWriter("application/zip"))
@@ -32,8 +45,13 @@ async function assembleBundle({
 
   for (const asset of plan) {
     if (asset.kind === "raster") {
-      const blob = await renderRasterFromPlan(asset, sourceMap)
-      const bytes = await blobToUint8(blob)
+      const sourceBlob = await renderRasterFromPlan(asset, sourceMap)
+      const rawBytes = await blobToUint8(sourceBlob)
+      const bytes = optimizer ? await optimizer(rawBytes) : rawBytes
+      const blob =
+        bytes === rawBytes
+          ? sourceBlob
+          : new Blob([bytes as BlobPart], { type: "image/png" })
       await zipWriter.add(asset.filename, new Uint8ArrayReader(bytes))
       generated.push({
         filename: asset.filename,
@@ -44,7 +62,7 @@ async function assembleBundle({
         byteLength: bytes.byteLength,
       })
     } else if (asset.kind === "ico") {
-      const icoBytes = await renderIco(asset, sourceMap)
+      const icoBytes = await renderIco(asset, sourceMap, optimizer)
       const icoBlob = new Blob([icoBytes], { type: "image/x-icon" })
       await zipWriter.add(asset.filename, new Uint8ArrayReader(icoBytes))
       generated.push({
@@ -122,7 +140,8 @@ async function renderRasterFromPlan(
 
 async function renderIco(
   asset: IcoAssetSpec,
-  sourceMap: Record<SourceKey, ImageSource | null>
+  sourceMap: Record<SourceKey, ImageSource | null>,
+  optimizer: PngOptimizer | null
 ): Promise<Uint8Array<ArrayBuffer>> {
   const components = await Promise.all(
     asset.components.map(async (component) => {
@@ -138,7 +157,8 @@ async function renderIco(
         },
         image: source.image,
       })
-      return blobToUint8(blob)
+      const bytes = await blobToUint8(blob)
+      return optimizer ? await optimizer(bytes) : bytes
     })
   )
 

@@ -11,6 +11,7 @@ type SiteConfig = Readonly<{
   enableDarkThemeColor: boolean
   darkThemeColor: string
   backgroundColor: string
+  optimizePng: boolean
 }>
 
 type DesktopIconConfig = Readonly<{
@@ -50,6 +51,10 @@ const DEFAULT_SITE_CONFIG: SiteConfig = {
   enableDarkThemeColor: true,
   darkThemeColor: "#000000",
   backgroundColor: "#FFFFFF",
+  // Lossless oxipng pass over every emitted PNG (incl. ICO components).
+  // Default on to match legacy behavior — the WASM module is lazy-loaded
+  // the first time Generate is clicked with this on.
+  optimizePng: true,
 }
 
 const DEFAULT_DESKTOP_ICON_CONFIG: DesktopIconConfig = {

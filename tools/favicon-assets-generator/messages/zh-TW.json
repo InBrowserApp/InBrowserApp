@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "深色主題色彩",
   "backgroundColorLabel": "背景色彩",
   "backgroundColorDescription": "Manifest 的 background_color。瀏覽器會用來為 PWA 繪製啟動畫面。",
+  "optimizePngLabel": "最佳化 PNG 輸出",
+  "optimizePngDescription": "讓所有輸出的 PNG(包含 ICO 元件)通過無損的 oxipng 處理。首次產生時會額外耗費數秒並下載約 150 KB 的 WASM 模組,但可顯著縮小 zip 檔案大小。",
 
   "desktopCardTitle": "桌面瀏覽器 favicon",
   "desktopCardDescription": "控制 favicon.ico、favicon-16x16.png、favicon-32x32.png,以及(當來源為 SVG 時)favicon.svg。",

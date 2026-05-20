@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Warna tema gelap",
   "backgroundColorLabel": "Warna latar belakang",
   "backgroundColorDescription": "background_color manifest. Digunakan oleh browser untuk melukis layar splash pada PWA.",
+  "optimizePngLabel": "Optimalkan keluaran PNG",
+  "optimizePngDescription": "Menjalankan setiap PNG yang dihasilkan (termasuk komponen ICO) melalui proses oxipng lossless. Menambah beberapa detik dan mengunduh modul WASM ~150 KB saat pertama kali Anda menghasilkan, tetapi mengecilkan zip secara signifikan.",
 
   "desktopCardTitle": "Favicon browser desktop",
   "desktopCardDescription": "Mengendalikan favicon.ico, favicon-16x16.png, favicon-32x32.png, dan (saat sumber adalah SVG) favicon.svg.",

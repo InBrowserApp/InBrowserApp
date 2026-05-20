@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "ダークテーマカラー",
   "backgroundColorLabel": "背景色",
   "backgroundColorDescription": "manifest の background_color。PWA のスプラッシュ画面の描画にブラウザーが使用します。",
+  "optimizePngLabel": "PNG 出力を最適化",
+  "optimizePngDescription": "出力されるすべての PNG（ICO のコンポーネントを含む）に対して、ロスレスな oxipng パスを実行します。初回生成時には数秒の処理時間と約 150 KB の WASM モジュールのダウンロードが発生しますが、zip のサイズを目に見えて削減できます。",
 
   "desktopCardTitle": "デスクトップブラウザー favicon",
   "desktopCardDescription": "favicon.ico、favicon-16x16.png、favicon-32x32.png、および（ソースが SVG の場合は）favicon.svg を制御します。",

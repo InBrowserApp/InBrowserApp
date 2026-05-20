@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "다크 테마 색상",
   "backgroundColorLabel": "배경 색상",
   "backgroundColorDescription": "매니페스트의 background_color입니다. 브라우저가 PWA의 스플래시 화면을 칠하는 데 사용됩니다.",
+  "optimizePngLabel": "PNG 출력 최적화",
+  "optimizePngDescription": "생성된 모든 PNG(ICO 구성 요소 포함)를 무손실 oxipng 단계로 처리합니다. 몇 초가 추가되고 처음 생성할 때 약 150KB의 WASM 모듈을 다운로드하지만, zip 크기를 눈에 띄게 줄여줍니다.",
 
   "desktopCardTitle": "데스크톱 브라우저 파비콘",
   "desktopCardDescription": "favicon.ico, favicon-16x16.png, favicon-32x32.png 그리고 (원본이 SVG일 때) favicon.svg를 제어합니다.",

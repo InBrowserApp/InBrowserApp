@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "لون الواجهة الداكن",
   "backgroundColorLabel": "لون الخلفية",
   "backgroundColorDescription": "قيمة background_color في الـ manifest. تستخدمها المتصفحات لرسم شاشات البداية في تطبيقات الـ PWA.",
+  "optimizePngLabel": "تحسين مخرجات PNG",
+  "optimizePngDescription": "يُمرّر كل ملف PNG مُولَّد (بما في ذلك مكوّنات ICO) عبر تمريرة oxipng بلا فقدان. يضيف بضع ثوانٍ ويُنزّل وحدة WASM بحجم ‎~150 ك.ب في المرة الأولى التي تُولّد فيها، لكنه يُقلّص حجم ملف الـ zip بشكل ملحوظ.",
 
   "desktopCardTitle": "أيقونة متصفح سطح المكتب",
   "desktopCardDescription": "تتحكّم في favicon.ico وfavicon-16x16.png وfavicon-32x32.png و(عندما يكون المصدر SVG) favicon.svg.",

@@ -76,6 +76,8 @@ type FaviconMessages = Readonly<{
   darkThemeColorLabel: string
   backgroundColorLabel: string
   backgroundColorDescription: string
+  optimizePngLabel: string
+  optimizePngDescription: string
 
   desktopCardTitle: string
   desktopCardDescription: string

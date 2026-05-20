@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Koyu tema rengi",
   "backgroundColorLabel": "Arka plan rengi",
   "backgroundColorDescription": "Manifest background_color. Tarayıcılar tarafından PWA'larda açılış ekranlarını boyamak için kullanılır.",
+  "optimizePngLabel": "PNG çıktısını optimize et",
+  "optimizePngDescription": "Yayılan her PNG'yi (ICO bileşenleri dahil) kayıpsız bir oxipng geçişinden geçirir. İlk oluşturmada birkaç saniye ekler ve yaklaşık 150 KB'lık bir WASM modülü indirir, ancak zip dosyasını gözle görülür şekilde küçültür.",
 
   "desktopCardTitle": "Masaüstü tarayıcı favicon'u",
   "desktopCardDescription": "favicon.ico, favicon-16x16.png, favicon-32x32.png ve (kaynak SVG ise) favicon.svg dosyalarını yönetir.",

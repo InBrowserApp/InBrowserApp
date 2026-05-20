@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "Dunkle Designfarbe",
   "backgroundColorLabel": "Hintergrundfarbe",
   "backgroundColorDescription": "Manifest background_color. Wird von Browsern verwendet, um Splash-Screens für PWAs zu zeichnen.",
+  "optimizePngLabel": "PNG-Ausgabe optimieren",
+  "optimizePngDescription": "Lässt jedes erzeugte PNG (einschließlich der ICO-Komponenten) durch einen verlustfreien oxipng-Durchlauf laufen. Verlängert die Generierung um einige Sekunden und lädt beim ersten Mal ein WASM-Modul von ca. 150 KB herunter, verkleinert das Zip-Archiv aber spürbar.",
 
   "desktopCardTitle": "Desktop-Browser-Favicon",
   "desktopCardDescription": "Steuert favicon.ico, favicon-16x16.png, favicon-32x32.png und (wenn die Quelle SVG ist) favicon.svg.",

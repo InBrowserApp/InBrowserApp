@@ -31,6 +31,8 @@
   "darkThemeColorLabel": "深色主题色",
   "backgroundColorLabel": "背景色",
   "backgroundColorDescription": "manifest 的 background_color。浏览器在 PWA 启动画面上使用此颜色。",
+  "optimizePngLabel": "优化 PNG 输出",
+  "optimizePngDescription": "对每个输出的 PNG（包括 ICO 内部的组件）执行一次无损 oxipng 压缩。会多花几秒，并在首次生成时下载约 150 KB 的 WASM 模块，但能明显减小 zip 体积。",
 
   "desktopCardTitle": "桌面浏览器 favicon",
   "desktopCardDescription": "控制 favicon.ico、favicon-16x16.png、favicon-32x32.png，以及（当源是 SVG 时）favicon.svg。",

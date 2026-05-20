@@ -8,6 +8,7 @@
     "./page": "./index.astro"
   },
   "dependencies": {
+    "@jsquash/oxipng": "catalog:",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "@zip.js/zip.js": "catalog:"
