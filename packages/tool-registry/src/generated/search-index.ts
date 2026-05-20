@@ -14992,6 +14992,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "pdf-page-number-adder",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "page", "number", "pagination", "document", "offline"],
+    locales: {
+      ar: {
+        name: "إضافة أرقام صفحات PDF",
+        description:
+          "أضف أرقام صفحات إلى صفحات PDF المحددة محليًا في متصفحك، مع تنسيق وموضع وخط وهوامش قابلة للضبط.",
+      },
+      de: {
+        name: "PDF-Seitenzahlen hinzufügen",
+        description:
+          "Füge ausgewählten PDF-Seiten lokal in deinem Browser Seitenzahlen mit konfigurierbarem Format, Position, Schriftart und Rändern hinzu.",
+      },
+      en: {
+        name: "PDF Page Number Adder",
+        description:
+          "Add page numbers to selected PDF pages locally in your browser with configurable format, position, font, and margins.",
+      },
+      es: {
+        name: "Añadir números de página a PDF",
+        description:
+          "Añade números de página a páginas PDF seleccionadas localmente en tu navegador con formato, posición, fuente y márgenes configurables.",
+      },
+      fr: {
+        name: "Ajout de numéros de page PDF",
+        description:
+          "Ajoutez des numéros de page aux pages PDF sélectionnées localement dans votre navigateur, avec un format, une position, une police et des marges configurables.",
+      },
+      he: {
+        name: "מוסיף מספרי עמודים ל-PDF",
+        description:
+          "הוסיפו מספרי עמודים לעמודי PDF נבחרים מקומית בדפדפן, עם פורמט, מיקום, גופן ושוליים שניתנים להגדרה.",
+      },
+      hi: {
+        name: "PDF पेज नंबर ऐडर",
+        description:
+          "कॉन्फ़िगर करने योग्य फ़ॉर्मैट, स्थिति, फ़ॉन्ट और मार्जिन के साथ अपने ब्राउज़र में स्थानीय रूप से चुने गए PDF पेजों में पेज नंबर जोड़ें।",
+      },
+      id: {
+        name: "Penambah Nomor Halaman PDF",
+        description:
+          "Tambahkan nomor halaman ke halaman PDF yang dipilih secara lokal di browser Anda dengan format, posisi, font, dan margin yang dapat dikonfigurasi.",
+      },
+      it: {
+        name: "PDF Page Number Adder",
+        description:
+          "Aggiungi numeri di pagina alle pagine PDF selezionate localmente nel tuo browser, con formato, posizione, font e margini configurabili.",
+      },
+      ja: {
+        name: "PDFページ番号追加ツール",
+        description:
+          "選択したPDFページに、形式、位置、フォント、余白を設定して、ブラウザー内でローカルにページ番号を追加します。",
+      },
+      ko: {
+        name: "PDF 페이지 번호 추가 도구",
+        description:
+          "선택한 PDF 페이지에 페이지 번호를 브라우저에서 로컬로 추가하세요. 형식, 위치, 글꼴, 여백을 설정할 수 있습니다.",
+      },
+      ms: {
+        name: "Penambah Nombor Halaman PDF",
+        description:
+          "Tambah nombor halaman pada halaman PDF terpilih secara setempat dalam pelayar anda dengan format, kedudukan, fon, dan jidar yang boleh dikonfigurasi.",
+      },
+      nl: {
+        name: "PDF-paginanummeraar",
+        description:
+          "Voeg lokaal in je browser paginanummers toe aan geselecteerde PDF-pagina's, met instelbare opmaak, positie, lettertype en marges.",
+      },
+      no: {
+        name: "PDF-sidenummerering",
+        description:
+          "Legg til sidenumre på valgte PDF-sider lokalt i nettleseren med konfigurerbart format, plassering, skrifttype og marger.",
+      },
+      pl: {
+        name: "Dodawanie numerów stron do PDF",
+        description:
+          "Dodawaj numery stron do wybranych stron PDF lokalnie w przeglądarce, z możliwością konfiguracji formatu, położenia, czcionki i marginesów.",
+      },
+      pt: {
+        name: "Adicionador de números de página em PDF",
+        description:
+          "Adicione números de página às páginas selecionadas de um PDF localmente no seu navegador, com formato, posição, fonte e margens configuráveis.",
+      },
+      ru: {
+        name: "Добавление номеров страниц в PDF",
+        description:
+          "Добавляйте номера на выбранные страницы PDF локально в браузере с настраиваемым форматом, положением, шрифтом и полями.",
+      },
+      sv: {
+        name: "PDF Page Number Adder",
+        description:
+          "Lägg till sidnummer på valda PDF-sidor lokalt i din webbläsare med konfigurerbart format, placering, teckensnitt och marginaler.",
+      },
+      th: {
+        name: "เครื่องมือเพิ่มเลขหน้า PDF",
+        description:
+          "เพิ่มเลขหน้าให้หน้าที่เลือกในไฟล์ PDF ได้ภายในเบราว์เซอร์ของคุณ พร้อมตั้งค่ารูปแบบ ตำแหน่ง ฟอนต์ และระยะขอบได้",
+      },
+      tr: {
+        name: "PDF Sayfa Numarası Ekleyici",
+        description:
+          "Yapılandırılabilir biçim, konum, yazı tipi ve kenar boşluklarıyla seçili PDF sayfalarına tarayıcınızda yerel olarak sayfa numaraları ekleyin.",
+      },
+      vi: {
+        name: "Trình thêm số trang PDF",
+        description:
+          "Thêm số trang vào các trang PDF đã chọn ngay trong trình duyệt của bạn, với định dạng, vị trí, phông chữ và lề có thể cấu hình.",
+      },
+      "zh-CN": {
+        name: "PDF 页码添加器",
+        description:
+          "在浏览器本地为选定 PDF 页面添加页码，可配置格式、位置、字体和边距。",
+      },
+      "zh-TW": {
+        name: "PDF 頁碼新增工具",
+        description:
+          "在瀏覽器中本機為選取的 PDF 頁面新增頁碼，可設定格式、位置、字體和邊距。",
+      },
+    },
+  },
+  {
     slug: "pdf-page-organizer",
     category: "pdf",
     icon: "file-text",
