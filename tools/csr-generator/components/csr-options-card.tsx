@@ -62,7 +62,7 @@ function CsrOptionsCard(props: CsrOptionsCardProps) {
         <CardTitle>{messages.optionsTitle}</CardTitle>
         <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-6 py-4">
+      <ToolPanelCardContent className="gap-4 py-4">
         <FieldGroup>
           <CsrKeySourceFields
             keySource={props.keySource}
@@ -81,8 +81,8 @@ function CsrOptionsCard(props: CsrOptionsCardProps) {
           />
         </FieldGroup>
 
-        <section className="grid gap-3">
-          <div className="grid gap-1">
+        <section className="grid gap-2">
+          <div>
             <h3 className="text-sm font-medium">{messages.subjectTitle}</h3>
             <p className="text-xs text-muted-foreground">
               {messages.subjectDescription}
@@ -95,8 +95,8 @@ function CsrOptionsCard(props: CsrOptionsCardProps) {
           />
         </section>
 
-        <section className="grid gap-3">
-          <div className="grid gap-1">
+        <section className="grid gap-2">
+          <div>
             <h3 className="text-sm font-medium">{messages.sanTitle}</h3>
             <p className="text-xs text-muted-foreground">
               {messages.sanDescription}

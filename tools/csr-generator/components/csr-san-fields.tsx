@@ -1,11 +1,6 @@
 import { useId } from "react"
 
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-} from "@workspace/ui/components/ui/field"
+import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 
 import type { CsrGeneratorMessages } from "../client/types"
@@ -39,69 +34,74 @@ function CsrSanFields({
   const uriId = useId()
 
   return (
-    <FieldGroup>
-      <Field>
-        <FieldLabel htmlFor={dnsId}>{messages.sanDnsLabel}</FieldLabel>
-        <Textarea
-          id={dnsId}
-          name="san-dns"
-          value={sanDns}
-          placeholder={messages.sanDnsPlaceholder}
-          spellCheck={false}
-          autoCapitalize="off"
-          autoComplete="off"
-          rows={2}
-          className="font-mono text-xs"
-          onChange={(event) => onSanDnsChange(event.target.value)}
-        />
-        <FieldDescription>{messages.sanDnsPlaceholder}</FieldDescription>
-      </Field>
-      <Field>
-        <FieldLabel htmlFor={ipId}>{messages.sanIpLabel}</FieldLabel>
-        <Textarea
-          id={ipId}
-          name="san-ip"
-          value={sanIp}
-          placeholder={messages.sanIpPlaceholder}
-          spellCheck={false}
-          autoCapitalize="off"
-          autoComplete="off"
-          rows={2}
-          className="font-mono text-xs"
-          onChange={(event) => onSanIpChange(event.target.value)}
-        />
-      </Field>
-      <Field>
-        <FieldLabel htmlFor={emailId}>{messages.sanEmailLabel}</FieldLabel>
-        <Textarea
-          id={emailId}
-          name="san-email"
-          value={sanEmail}
-          placeholder={messages.sanEmailPlaceholder}
-          spellCheck={false}
-          autoCapitalize="off"
-          autoComplete="off"
-          rows={2}
-          className="font-mono text-xs"
-          onChange={(event) => onSanEmailChange(event.target.value)}
-        />
-      </Field>
-      <Field>
-        <FieldLabel htmlFor={uriId}>{messages.sanUriLabel}</FieldLabel>
-        <Textarea
-          id={uriId}
-          name="san-uri"
-          value={sanUri}
-          placeholder={messages.sanUriPlaceholder}
-          spellCheck={false}
-          autoCapitalize="off"
-          autoComplete="off"
-          rows={2}
-          className="font-mono text-xs"
-          onChange={(event) => onSanUriChange(event.target.value)}
-        />
-      </Field>
-    </FieldGroup>
+    <div className="grid gap-3 sm:grid-cols-2">
+      <SanFieldEntry
+        id={dnsId}
+        name="san-dns"
+        label={messages.sanDnsLabel}
+        placeholder={messages.sanDnsPlaceholder}
+        value={sanDns}
+        onChange={onSanDnsChange}
+      />
+      <SanFieldEntry
+        id={ipId}
+        name="san-ip"
+        label={messages.sanIpLabel}
+        placeholder={messages.sanIpPlaceholder}
+        value={sanIp}
+        onChange={onSanIpChange}
+      />
+      <SanFieldEntry
+        id={emailId}
+        name="san-email"
+        label={messages.sanEmailLabel}
+        placeholder={messages.sanEmailPlaceholder}
+        value={sanEmail}
+        onChange={onSanEmailChange}
+      />
+      <SanFieldEntry
+        id={uriId}
+        name="san-uri"
+        label={messages.sanUriLabel}
+        placeholder={messages.sanUriPlaceholder}
+        value={sanUri}
+        onChange={onSanUriChange}
+      />
+    </div>
+  )
+}
+
+function SanFieldEntry({
+  id,
+  name,
+  label,
+  placeholder,
+  value,
+  onChange,
+}: Readonly<{
+  id: string
+  name: string
+  label: string
+  placeholder: string
+  value: string
+  onChange: (value: string) => void
+}>) {
+  return (
+    <Field>
+      <FieldLabel htmlFor={id}>{label}</FieldLabel>
+      <Textarea
+        id={id}
+        name={name}
+        value={value}
+        placeholder={placeholder}
+        spellCheck={false}
+        autoCapitalize="off"
+        autoComplete="off"
+        rows={2}
+        className="font-mono text-xs"
+        onChange={(event) => onChange(event.target.value)}
+      />
+    </Field>
   )
 }
 

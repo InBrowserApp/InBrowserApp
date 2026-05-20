@@ -1,11 +1,6 @@
 import { useId } from "react"
 
-import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-} from "@workspace/ui/components/ui/field"
+import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
 
 import type { SubjectInput } from "../core/csr"
@@ -38,8 +33,8 @@ function CsrSubjectFields({
   }
 
   return (
-    <FieldGroup>
-      <Field>
+    <div className="grid gap-3 sm:grid-cols-2">
+      <Field className="sm:col-span-2">
         <FieldLabel htmlFor={commonNameId}>
           {messages.subjectCommonNameLabel}
         </FieldLabel>
@@ -99,9 +94,6 @@ function CsrSubjectFields({
             update("country", event.target.value.toUpperCase())
           }
         />
-        <FieldDescription>
-          {messages.subjectCountryPlaceholder}
-        </FieldDescription>
       </Field>
       <Field>
         <FieldLabel htmlFor={stateId}>{messages.subjectStateLabel}</FieldLabel>
@@ -129,7 +121,7 @@ function CsrSubjectFields({
           onChange={(event) => update("locality", event.target.value)}
         />
       </Field>
-      <Field>
+      <Field className="sm:col-span-2">
         <FieldLabel htmlFor={emailId}>{messages.subjectEmailLabel}</FieldLabel>
         <Input
           id={emailId}
@@ -142,7 +134,7 @@ function CsrSubjectFields({
           onChange={(event) => update("emailAddress", event.target.value)}
         />
       </Field>
-    </FieldGroup>
+    </div>
   )
 }
 
