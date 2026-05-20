@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from "react"
 
 import { DEFAULT_SUBJECT, STORAGE_KEYS } from "./client/constants"
-import type { CsrGenerationState, CsrGeneratorMessages } from "./client/types"
+import type {
+  CsrGenerationState,
+  CsrGeneratorMessages,
+  CsrGeneratorMessagesCatalog,
+} from "./client/types"
 import { CsrOptionsCard } from "./components/csr-options-card"
 import { CsrOutputCard } from "./components/csr-output-card"
 import {
@@ -292,7 +296,7 @@ function CsrGeneratorClient({ messages }: CsrGeneratorClientProps) {
 }
 
 const ERROR_MESSAGES: Readonly<
-  Record<CsrErrorCode, keyof CsrGeneratorMessages>
+  Record<CsrErrorCode, keyof CsrGeneratorMessagesCatalog>
 > = {
   MISSING_SUBJECT_OR_SAN: "errorMissingSubjectOrSan",
   MISSING_PRIVATE_KEY: "errorMissingPrivateKey",
