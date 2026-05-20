@@ -221,29 +221,10 @@ async function convertGifBytesToAnimatedWebp(
   }
 }
 
-async function convertGifFileToAnimatedWebp(
-  file: File,
-  options: Partial<GifToAnimatedWebpOptions>,
-  outputName: string
-): Promise<GifToAnimatedWebpResult> {
-  const result = await convertGifBytesToAnimatedWebp(
-    new Uint8Array(await file.arrayBuffer()),
-    options,
-    outputName
-  )
-  const blob = new Blob([toArrayBuffer(result.bytes)], { type: "image/webp" })
-
-  return {
-    ...result,
-    blob,
-    file,
-  }
-}
 /* v8 ignore stop */
 
 export {
   convertGifBytesToAnimatedWebp,
-  convertGifFileToAnimatedWebp,
   resolveGifDimensions,
   shouldUseLosslessGif2WebpEncoder,
   toArrayBuffer,
