@@ -102,8 +102,8 @@ jobs:
           name: web-dist
           path: apps/web/dist
 
-  deploy-staging:
-    name: Deploy Staging
+  deploy-production:
+    name: Deploy Production
     runs-on: ubuntu-latest
     needs:
       - code-check
@@ -112,7 +112,7 @@ jobs:
     permissions:
       contents: read
     environment:
-      name: cloudflare-workers-staging
+      name: cloudflare-workers
       url: ${{ steps.deploy.outputs.deployment-url }}
     steps:
       - name: Checkout
@@ -135,14 +135,14 @@ jobs:
           name: web-dist
           path: apps/web/dist
 
-      - name: Deploy to Cloudflare Workers staging
+      - name: Deploy to Cloudflare Workers production
         id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: apps/web
-          environment: staging
+          command: deploy
 
   deploy-preview:
     name: Deploy Preview
