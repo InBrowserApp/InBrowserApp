@@ -11,7 +11,7 @@
     "knip": "knip --config .knip.json",
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
-    "linkcheck": "linkinator \"apps/web/dist/**/*.html\" --config .linkinator.config.json",
+    "linkcheck": "linkinator apps/web/dist --config .linkinator.config.json",
     "prepare": "husky",
     "tool-registry:generate": "pnpm --filter @workspace/tool-registry generate",
     "test": "vitest run --silent",
