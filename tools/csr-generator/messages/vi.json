@@ -60,7 +60,6 @@
   "privateKeyDescription": "Khóa riêng tư PKCS#8 không mã hóa tương ứng. Lưu trữ an toàn trước khi yêu cầu chứng chỉ.",
   "privateKeyWarningTitle": "Khóa riêng tư chỉ lưu cục bộ",
   "privateKeyWarningDescription": "Không có dữ liệu nào rời khỏi trình duyệt của bạn. Khóa riêng tư được tạo ra không có mã hóa, vì vậy hãy chuyển nó vào kho khóa bảo mật trước khi sử dụng.",
-  "keyAlgorithmLabel": "Thuật toán khóa",
   "copyCsrLabel": "Sao chép CSR",
   "copyPrivateKeyLabel": "Sao chép khóa riêng tư",
   "copiedLabel": "Đã sao chép",

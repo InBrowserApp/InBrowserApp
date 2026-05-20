@@ -60,7 +60,6 @@
   "privateKeyDescription": "Den tilhørende ukrypterte PKCS#8-privatnøkkelen. Lagre den sikkert før du ber om et sertifikat.",
   "privateKeyWarningTitle": "Privatnøkkelen forblir lokal",
   "privateKeyWarningDescription": "Ingenting forlater nettleseren din. Den genererte privatnøkkelen er ukryptert, så flytt den til et sikkert nøkkellager før bruk.",
-  "keyAlgorithmLabel": "Nøkkelalgoritme",
   "copyCsrLabel": "Kopier CSR",
   "copyPrivateKeyLabel": "Kopier privatnøkkel",
   "copiedLabel": "Kopiert",

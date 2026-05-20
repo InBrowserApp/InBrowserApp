@@ -161,31 +161,7 @@ function CsrReadyOutput({
           />
         </>
       ) : null}
-
-      <dl className="grid gap-3 text-sm sm:grid-cols-2">
-        <KeyDetail
-          label={messages.keyAlgorithmLabel}
-          value={result.keyAlgorithmLabel}
-        />
-      </dl>
     </section>
-  )
-}
-
-function KeyDetail({
-  label,
-  value,
-}: Readonly<{
-  label: string
-  value: string
-}>) {
-  return (
-    <div className="min-w-0 rounded-lg border bg-card p-3">
-      <dt className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
-        {label}
-      </dt>
-      <dd className="mt-1 font-mono text-sm break-all">{value}</dd>
-    </div>
   )
 }
 

@@ -60,7 +60,6 @@
   "privateKeyDescription": "对应的未加密 PKCS#8 私钥。请在申请证书前将其保存到安全的位置。",
   "privateKeyWarningTitle": "私钥保留在本地",
   "privateKeyWarningDescription": "所有数据均不会离开您的浏览器。生成的私钥未经加密，请在使用前将其转移至安全的密钥存储中。",
-  "keyAlgorithmLabel": "密钥算法",
   "copyCsrLabel": "复制 CSR",
   "copyPrivateKeyLabel": "复制私钥",
   "copiedLabel": "已复制",

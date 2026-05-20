@@ -60,7 +60,6 @@
   "privateKeyDescription": "対応する暗号化されていない PKCS#8 秘密鍵です。証明書を申請する前に安全な場所に保管してください。",
   "privateKeyWarningTitle": "秘密鍵はローカルに保持されます",
   "privateKeyWarningDescription": "ブラウザーの外部にはデータは送信されません。生成された秘密鍵は暗号化されていないため、使用前に安全な鍵ストアに移動してください。",
-  "keyAlgorithmLabel": "鍵アルゴリズム",
   "copyCsrLabel": "CSR をコピー",
   "copyPrivateKeyLabel": "秘密鍵をコピー",
   "copiedLabel": "コピーしました",

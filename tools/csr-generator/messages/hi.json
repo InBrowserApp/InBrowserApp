@@ -60,7 +60,6 @@
   "privateKeyDescription": "मिलान करने वाली अनएन्क्रिप्टेड PKCS#8 प्राइवेट key। सर्टिफिकेट के लिए रिक्वेस्ट करने से पहले इसे सुरक्षित रूप से संग्रहीत करें।",
   "privateKeyWarningTitle": "प्राइवेट key स्थानीय रहती है",
   "privateKeyWarningDescription": "कुछ भी आपके ब्राउज़र से बाहर नहीं जाता। जनरेट की गई प्राइवेट key अनएन्क्रिप्टेड है, इसलिए इसे उपयोग करने से पहले किसी सुरक्षित key स्टोर में स्थानांतरित करें।",
-  "keyAlgorithmLabel": "Key एल्गोरिदम",
   "copyCsrLabel": "CSR कॉपी करें",
   "copyPrivateKeyLabel": "प्राइवेट key कॉपी करें",
   "copiedLabel": "कॉपी हो गया",

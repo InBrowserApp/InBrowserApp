@@ -60,7 +60,6 @@
   "privateKeyDescription": "Pasujący, niezaszyfrowany klucz prywatny PKCS#8. Przechowaj go bezpiecznie przed złożeniem wniosku o certyfikat.",
   "privateKeyWarningTitle": "Klucz prywatny pozostaje lokalnie",
   "privateKeyWarningDescription": "Żadne dane nie opuszczają Twojej przeglądarki. Wygenerowany klucz prywatny jest niezaszyfrowany — przenieś go do bezpiecznego magazynu kluczy przed użyciem.",
-  "keyAlgorithmLabel": "Algorytm klucza",
   "copyCsrLabel": "Kopiuj CSR",
   "copyPrivateKeyLabel": "Kopiuj klucz prywatny",
   "copiedLabel": "Skopiowano",

@@ -60,7 +60,6 @@
   "privateKeyDescription": "De bijbehorende niet-versleutelde PKCS#8-privésleutel. Sla deze veilig op voordat u een certificaat aanvraagt.",
   "privateKeyWarningTitle": "Privésleutel blijft lokaal",
   "privateKeyWarningDescription": "Er wordt niets naar uw browser verzonden. De gegenereerde privésleutel is niet versleuteld, dus sla deze op in een beveiligde sleutelopslag voordat u deze gebruikt.",
-  "keyAlgorithmLabel": "Sleutelalgoritme",
   "copyCsrLabel": "CSR kopiëren",
   "copyPrivateKeyLabel": "Privésleutel kopiëren",
   "copiedLabel": "Gekopieerd",

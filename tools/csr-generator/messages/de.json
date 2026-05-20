@@ -60,7 +60,6 @@
   "privateKeyDescription": "Der passende unverschlüsselte PKCS#8-Privatschlüssel. Vor der Zertifikatsanfrage sicher aufbewahren.",
   "privateKeyWarningTitle": "Privatschlüssel bleibt lokal",
   "privateKeyWarningDescription": "Es werden keine Daten den Browser verlassen. Der generierte Privatschlüssel ist unverschlüsselt – vor der Verwendung in einem sicheren Schlüsselspeicher ablegen.",
-  "keyAlgorithmLabel": "Schlüsselalgorithmus",
   "copyCsrLabel": "CSR kopieren",
   "copyPrivateKeyLabel": "Privatschlüssel kopieren",
   "copiedLabel": "Kopiert",

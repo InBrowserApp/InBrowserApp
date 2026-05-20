@@ -96,7 +96,6 @@ const messages: CsrGeneratorMessages = {
   privateKeyDescription: "PEM",
   privateKeyWarningTitle: "Private key stays local",
   privateKeyWarningDescription: "Local only.",
-  keyAlgorithmLabel: "Key algorithm",
   copyCsrLabel: "Copy CSR",
   copyPrivateKeyLabel: "Copy private key",
   copiedLabel: "Copied",

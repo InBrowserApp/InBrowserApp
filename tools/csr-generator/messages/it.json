@@ -60,7 +60,6 @@
   "privateKeyDescription": "La chiave privata PKCS#8 non cifrata corrispondente. Conservala in modo sicuro prima di richiedere un certificato.",
   "privateKeyWarningTitle": "La chiave privata rimane in locale",
   "privateKeyWarningDescription": "Nessun dato lascia il tuo browser. La chiave privata generata è non cifrata, quindi spostala in un archivio sicuro prima di utilizzarla.",
-  "keyAlgorithmLabel": "Algoritmo della chiave",
   "copyCsrLabel": "Copia CSR",
   "copyPrivateKeyLabel": "Copia chiave privata",
   "copiedLabel": "Copiato",

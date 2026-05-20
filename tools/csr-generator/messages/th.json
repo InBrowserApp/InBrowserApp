@@ -60,7 +60,6 @@
   "privateKeyDescription": "PKCS#8 private key ที่ตรงคู่กันและไม่ได้เข้ารหัส จัดเก็บอย่างปลอดภัยก่อนขอใบรับรอง",
   "privateKeyWarningTitle": "Private key อยู่ในเครื่องของคุณ",
   "privateKeyWarningDescription": "ไม่มีข้อมูลใดถูกส่งออกจากเบราว์เซอร์ Private key ที่สร้างขึ้นไม่ได้เข้ารหัส กรุณาย้ายไปยังที่เก็บคีย์ที่ปลอดภัยก่อนนำไปใช้งาน",
-  "keyAlgorithmLabel": "อัลกอริทึมของคีย์",
   "copyCsrLabel": "คัดลอก CSR",
   "copyPrivateKeyLabel": "คัดลอก private key",
   "copiedLabel": "คัดลอกแล้ว",

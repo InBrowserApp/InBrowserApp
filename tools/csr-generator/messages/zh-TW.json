@@ -60,7 +60,6 @@
   "privateKeyDescription": "對應的未加密 PKCS#8 私鑰。請在申請憑證前將其妥善儲存於安全位置。",
   "privateKeyWarningTitle": "私鑰保留在本機",
   "privateKeyWarningDescription": "所有資料均不會離開您的瀏覽器。產生的私鑰為未加密格式，請在使用前將其移至安全的金鑰儲存區。",
-  "keyAlgorithmLabel": "金鑰演算法",
   "copyCsrLabel": "複製 CSR",
   "copyPrivateKeyLabel": "複製私鑰",
   "copiedLabel": "已複製",

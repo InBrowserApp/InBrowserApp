@@ -60,7 +60,6 @@
   "privateKeyDescription": "La clé privée PKCS#8 non chiffrée correspondante. Conservez-la en lieu sûr avant de demander un certificat.",
   "privateKeyWarningTitle": "La clé privée reste locale",
   "privateKeyWarningDescription": "Rien ne quitte votre navigateur. La clé privée générée est non chiffrée ; déplacez-la dans un coffre-fort de clés sécurisé avant de l'utiliser.",
-  "keyAlgorithmLabel": "Algorithme de clé",
   "copyCsrLabel": "Copier le CSR",
   "copyPrivateKeyLabel": "Copier la clé privée",
   "copiedLabel": "Copié",

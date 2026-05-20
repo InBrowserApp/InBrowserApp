@@ -60,7 +60,6 @@
   "privateKeyDescription": "Eşleşen şifrelenmemiş PKCS#8 özel anahtarı. Sertifika talep etmeden önce güvenli bir şekilde saklayın.",
   "privateKeyWarningTitle": "Özel anahtar yerel kalır",
   "privateKeyWarningDescription": "Hiçbir şey tarayıcınızı terk etmez. Oluşturulan özel anahtar şifrelenmemiştir; kullanmadan önce güvenli bir anahtar deposuna taşıyın.",
-  "keyAlgorithmLabel": "Anahtar algoritması",
   "copyCsrLabel": "CSR'ı kopyala",
   "copyPrivateKeyLabel": "Özel anahtarı kopyala",
   "copiedLabel": "Kopyalandı",

@@ -60,7 +60,6 @@
   "privateKeyDescription": "Kunci peribadi PKCS#8 tanpa penyulitan yang sepadan. Simpan dengan selamat sebelum meminta sijil.",
   "privateKeyWarningTitle": "Kunci peribadi kekal tempatan",
   "privateKeyWarningDescription": "Tiada apa yang meninggalkan pelayar anda. Kunci peribadi yang dijana tidak disulitkan, jadi pindahkan ke stor kunci yang selamat sebelum menggunakannya.",
-  "keyAlgorithmLabel": "Algoritma kunci",
   "copyCsrLabel": "Salin CSR",
   "copyPrivateKeyLabel": "Salin kunci peribadi",
   "copiedLabel": "Disalin",

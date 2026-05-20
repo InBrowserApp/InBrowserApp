@@ -63,7 +63,6 @@ type CsrGeneratorMessagesCatalog = Readonly<{
   privateKeyDescription: string
   privateKeyWarningTitle: string
   privateKeyWarningDescription: string
-  keyAlgorithmLabel: string
   copyCsrLabel: string
   copyPrivateKeyLabel: string
   copiedLabel: string

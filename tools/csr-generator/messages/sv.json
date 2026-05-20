@@ -60,7 +60,6 @@
   "privateKeyDescription": "Den matchande okrypterade PKCS#8-privata nyckeln. Lagra den säkert innan du begär ett certifikat.",
   "privateKeyWarningTitle": "Den privata nyckeln stannar lokalt",
   "privateKeyWarningDescription": "Ingenting lämnar din webbläsare. Den genererade privata nyckeln är okrypterad, så flytta den till ett säkert nyckelarkiv innan du använder den.",
-  "keyAlgorithmLabel": "Nyckelalgoritm",
   "copyCsrLabel": "Kopiera CSR",
   "copyPrivateKeyLabel": "Kopiera privat nyckel",
   "copiedLabel": "Kopierad",

@@ -60,7 +60,6 @@
   "privateKeyDescription": "مفتاح PKCS#8 الخاص غير المشفَّر المطابق. احفظه في مكان آمن قبل طلب الشهادة.",
   "privateKeyWarningTitle": "المفتاح الخاص يبقى محلياً",
   "privateKeyWarningDescription": "لا يُرسَل أي شيء خارج متصفحك. المفتاح الخاص المُنشأ غير مشفَّر، لذا انقله إلى مخزن مفاتيح آمن قبل استخدامه.",
-  "keyAlgorithmLabel": "خوارزمية المفتاح",
   "copyCsrLabel": "نسخ CSR",
   "copyPrivateKeyLabel": "نسخ المفتاح الخاص",
   "copiedLabel": "تم النسخ",

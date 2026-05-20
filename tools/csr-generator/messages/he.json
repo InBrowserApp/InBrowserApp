@@ -60,7 +60,6 @@
   "privateKeyDescription": "המפתח הפרטי PKCS#8 התואם ללא הצפנה. שמרו אותו במקום בטוח לפני שתבקשו תעודה.",
   "privateKeyWarningTitle": "המפתח הפרטי נשאר מקומי",
   "privateKeyWarningDescription": "שום דבר אינו עוזב את הדפדפן שלכם. המפתח הפרטי שנוצר אינו מוצפן, לכן העבירו אותו למאגר מפתחות מאובטח לפני השימוש.",
-  "keyAlgorithmLabel": "אלגוריתם המפתח",
   "copyCsrLabel": "העתק CSR",
   "copyPrivateKeyLabel": "העתק מפתח פרטי",
   "copiedLabel": "הועתק",

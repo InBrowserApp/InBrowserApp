@@ -60,7 +60,6 @@
   "privateKeyDescription": "Kunci privat PKCS#8 yang tidak terenkripsi dan cocok dengan CSR. Simpan dengan aman sebelum meminta sertifikat.",
   "privateKeyWarningTitle": "Kunci privat tetap di lokal",
   "privateKeyWarningDescription": "Tidak ada data yang meninggalkan browser Anda. Kunci privat yang dihasilkan tidak terenkripsi, jadi pindahkan ke penyimpanan kunci yang aman sebelum menggunakannya.",
-  "keyAlgorithmLabel": "Algoritme kunci",
   "copyCsrLabel": "Salin CSR",
   "copyPrivateKeyLabel": "Salin kunci privat",
   "copiedLabel": "Tersalin",

@@ -60,7 +60,6 @@
   "privateKeyDescription": "The matching unencrypted PKCS#8 private key. Store it securely before requesting a certificate.",
   "privateKeyWarningTitle": "Private key stays local",
   "privateKeyWarningDescription": "Nothing leaves your browser. The generated private key is unencrypted, so move it into a secure key store before using it.",
-  "keyAlgorithmLabel": "Key algorithm",
   "copyCsrLabel": "Copy CSR",
   "copyPrivateKeyLabel": "Copy private key",
   "copiedLabel": "Copied",
