@@ -268,7 +268,7 @@ function ToolsDirectorySearch({
                       />
                       {locale.name}
                     </h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground">
+                    <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
                       {locale.description}
                     </p>
                   </div>
