@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "merged.pdf",
   "outputSizeLabel": "Kích thước đầu ra",
   "pageCountLabel": "Trang",
+  "pageStatusLabel": "{count} trang",
   "pagesStatusLabel": "{count} trang",
   "previewLabel": "Xem trước",
   "previewTitle": "Xem trước: {name}",

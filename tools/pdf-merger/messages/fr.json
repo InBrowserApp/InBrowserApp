@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "fusionne.pdf",
   "outputSizeLabel": "Taille de sortie",
   "pageCountLabel": "Pages",
+  "pageStatusLabel": "{count} page",
   "pagesStatusLabel": "{count} pages",
   "previewLabel": "Aperçu",
   "previewTitle": "Aperçu : {name}",

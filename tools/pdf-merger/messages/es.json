@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "fusionado.pdf",
   "outputSizeLabel": "Tamaño de salida",
   "pageCountLabel": "Páginas",
+  "pageStatusLabel": "{count} página",
   "pagesStatusLabel": "{count} páginas",
   "previewLabel": "Vista previa",
   "previewTitle": "Vista previa: {name}",

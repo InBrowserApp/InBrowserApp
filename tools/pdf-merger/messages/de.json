@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "zusammengefuehrt.pdf",
   "outputSizeLabel": "Ausgabegröße",
   "pageCountLabel": "Seiten",
+  "pageStatusLabel": "{count} Seite",
   "pagesStatusLabel": "{count} Seiten",
   "previewLabel": "Vorschau",
   "previewTitle": "Vorschau: {name}",

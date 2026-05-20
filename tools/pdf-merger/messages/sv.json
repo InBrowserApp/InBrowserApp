@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "sammanslagen.pdf",
   "outputSizeLabel": "Utdatastorlek",
   "pageCountLabel": "Sidor",
+  "pageStatusLabel": "{count} sida",
   "pagesStatusLabel": "{count} sidor",
   "previewLabel": "Förhandsvisning",
   "previewTitle": "Förhandsvisning: {name}",

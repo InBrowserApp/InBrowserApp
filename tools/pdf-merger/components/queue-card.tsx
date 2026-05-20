@@ -72,10 +72,10 @@ function QueueCard({
       return messages.invalidPdfError
     }
 
-    return messages.pagesStatusLabel.replace(
-      "{count}",
-      String(item.pageCount ?? 0)
-    )
+    const count = item.pageCount ?? 0
+    const template =
+      count === 1 ? messages.pageStatusLabel : messages.pagesStatusLabel
+    return template.replace("{count}", String(count))
   }
 
   function handleDrop(targetIndex: number) {
@@ -149,7 +149,7 @@ function QueueCard({
                       handleDrop(index)
                     }}
                   >
-                    <div className="flex size-10 items-center justify-center rounded-md bg-muted text-sm font-medium text-muted-foreground">
+                    <div className="flex size-10 items-center justify-center self-center rounded-md bg-muted text-sm font-medium text-muted-foreground">
                       {index + 1}
                     </div>
 
@@ -167,7 +167,7 @@ function QueueCard({
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-4 gap-1 self-center sm:grid-cols-1">
+                    <div className="flex flex-wrap items-center justify-end gap-1 self-center">
                       <IconButton
                         disabled={disabled || index === 0}
                         label={`${messages.moveUpLabel}: ${item.name}`}

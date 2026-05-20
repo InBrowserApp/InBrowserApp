@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "merged.pdf",
   "outputSizeLabel": "גודל פלט",
   "pageCountLabel": "עמודים",
+  "pageStatusLabel": "{count} עמוד",
   "pagesStatusLabel": "{count} עמודים",
   "previewLabel": "תצוגה מקדימה",
   "previewTitle": "תצוגה מקדימה: {name}",

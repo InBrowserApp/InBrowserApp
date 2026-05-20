@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "gabungan.pdf",
   "outputSizeLabel": "Ukuran output",
   "pageCountLabel": "Halaman",
+  "pageStatusLabel": "{count} halaman",
   "pagesStatusLabel": "{count} halaman",
   "previewLabel": "Pratinjau",
   "previewTitle": "Pratinjau: {name}",

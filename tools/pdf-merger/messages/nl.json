@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "samengevoegd.pdf",
   "outputSizeLabel": "Uitvoergrootte",
   "pageCountLabel": "Pagina's",
+  "pageStatusLabel": "{count} pagina",
   "pagesStatusLabel": "{count} pagina's",
   "previewLabel": "Voorbeeld",
   "previewTitle": "Voorbeeld: {name}",

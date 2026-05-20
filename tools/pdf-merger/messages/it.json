@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "unito.pdf",
   "outputSizeLabel": "Dimensione output",
   "pageCountLabel": "Pagine",
+  "pageStatusLabel": "{count} pagina",
   "pagesStatusLabel": "{count} pagine",
   "previewLabel": "Anteprima",
   "previewTitle": "Anteprima: {name}",

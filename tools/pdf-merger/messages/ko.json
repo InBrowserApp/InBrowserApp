@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "merged.pdf",
   "outputSizeLabel": "출력 크기",
   "pageCountLabel": "페이지",
+  "pageStatusLabel": "{count}페이지",
   "pagesStatusLabel": "{count}페이지",
   "previewLabel": "미리보기",
   "previewTitle": "미리보기: {name}",

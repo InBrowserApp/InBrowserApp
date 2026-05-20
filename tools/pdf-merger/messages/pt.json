@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "combinado.pdf",
   "outputSizeLabel": "Tamanho de saída",
   "pageCountLabel": "Páginas",
+  "pageStatusLabel": "{count} página",
   "pagesStatusLabel": "{count} páginas",
   "previewLabel": "Prévia",
   "previewTitle": "Prévia: {name}",

@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "merged.pdf",
   "outputSizeLabel": "حجم الإخراج",
   "pageCountLabel": "الصفحات",
+  "pageStatusLabel": "{count} صفحة",
   "pagesStatusLabel": "{count} صفحات",
   "previewLabel": "معاينة",
   "previewTitle": "معاينة: {name}",

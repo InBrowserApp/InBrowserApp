@@ -72,6 +72,7 @@ const messages: PdfMergerMessages = {
   outputFilePlaceholder: "merged.pdf",
   outputSizeLabel: "Output size",
   pageCountLabel: "Pages",
+  pageStatusLabel: "{count} page",
   pagesStatusLabel: "{count} pages",
   previewLabel: "Preview",
   previewTitle: "Preview: {name}",

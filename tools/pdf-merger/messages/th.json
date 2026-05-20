@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "merged.pdf",
   "outputSizeLabel": "ขนาดไฟล์ผลลัพธ์",
   "pageCountLabel": "หน้า",
+  "pageStatusLabel": "{count} หน้า",
   "pagesStatusLabel": "{count} หน้า",
   "previewLabel": "ตัวอย่าง",
   "previewTitle": "ตัวอย่าง: {name}",

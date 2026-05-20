@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "merged.pdf",
   "outputSizeLabel": "輸出大小",
   "pageCountLabel": "頁數",
+  "pageStatusLabel": "{count} 頁",
   "pagesStatusLabel": "{count} 頁",
   "previewLabel": "預覽",
   "previewTitle": "預覽：{name}",

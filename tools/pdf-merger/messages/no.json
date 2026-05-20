@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "sammenslatt.pdf",
   "outputSizeLabel": "Utdatastørrelse",
   "pageCountLabel": "Sider",
+  "pageStatusLabel": "{count} side",
   "pagesStatusLabel": "{count} sider",
   "previewLabel": "Forhåndsvisning",
   "previewTitle": "Forhåndsvisning: {name}",

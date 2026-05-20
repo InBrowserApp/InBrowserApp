@@ -47,6 +47,7 @@ type PdfMergerMessages = Readonly<{
   outputFilePlaceholder: string
   outputSizeLabel: string
   pageCountLabel: string
+  pageStatusLabel: string
   pagesStatusLabel: string
   previewLabel: string
   previewTitle: string

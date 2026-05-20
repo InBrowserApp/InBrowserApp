@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "birlesmis.pdf",
   "outputSizeLabel": "Çıktı boyutu",
   "pageCountLabel": "Sayfa",
+  "pageStatusLabel": "{count} sayfa",
   "pagesStatusLabel": "{count} sayfa",
   "previewLabel": "Önizleme",
   "previewTitle": "Önizleme: {name}",

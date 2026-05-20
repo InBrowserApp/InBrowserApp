@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "merged.pdf",
   "outputSizeLabel": "出力サイズ",
   "pageCountLabel": "ページ",
+  "pageStatusLabel": "{count}ページ",
   "pagesStatusLabel": "{count}ページ",
   "previewLabel": "プレビュー",
   "previewTitle": "プレビュー: {name}",

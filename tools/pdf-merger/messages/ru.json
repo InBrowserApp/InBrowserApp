@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "merged.pdf",
   "outputSizeLabel": "Размер результата",
   "pageCountLabel": "Страницы",
+  "pageStatusLabel": "{count} стр.",
   "pagesStatusLabel": "{count} стр.",
   "previewLabel": "Предпросмотр",
   "previewTitle": "Предпросмотр: {name}",

@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "merged.pdf",
   "outputSizeLabel": "Saiz output",
   "pageCountLabel": "Halaman",
+  "pageStatusLabel": "{count} halaman",
   "pagesStatusLabel": "{count} halaman",
   "previewLabel": "Pratonton",
   "previewTitle": "Pratonton: {name}",

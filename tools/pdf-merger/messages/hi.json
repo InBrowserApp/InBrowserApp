@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "merged.pdf",
   "outputSizeLabel": "आउटपुट आकार",
   "pageCountLabel": "पेज",
+  "pageStatusLabel": "{count} पेज",
   "pagesStatusLabel": "{count} पेज",
   "previewLabel": "पूर्वावलोकन",
   "previewTitle": "पूर्वावलोकन: {name}",

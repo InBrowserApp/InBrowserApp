@@ -26,6 +26,7 @@
   "outputFilePlaceholder": "scalony.pdf",
   "outputSizeLabel": "Rozmiar wyjściowy",
   "pageCountLabel": "Strony",
+  "pageStatusLabel": "{count} strona",
   "pagesStatusLabel": "{count} stron",
   "previewLabel": "Podgląd",
   "previewTitle": "Podgląd: {name}",
