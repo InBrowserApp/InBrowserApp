@@ -57,12 +57,12 @@ function CsrOptionsCard(props: CsrOptionsCardProps) {
   const { generating, messages, onReset } = props
 
   return (
-    <ToolPanelCard className="xl:sticky xl:top-6 xl:h-auto xl:self-start">
-      <CardHeader className="border-b">
+    <ToolPanelCard>
+      <CardHeader className="border-b py-4">
         <CardTitle>{messages.optionsTitle}</CardTitle>
         <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-6">
+      <ToolPanelCardContent className="gap-6 py-4">
         <FieldGroup>
           <CsrKeySourceFields
             keySource={props.keySource}

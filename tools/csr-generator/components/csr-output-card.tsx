@@ -44,7 +44,7 @@ type CsrOutputCardProps = Readonly<{
 function CsrOutputCard({ messages, state }: CsrOutputCardProps) {
   return (
     <ToolPanelCard>
-      <CardHeader className="border-b sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
+      <CardHeader className="border-b py-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
         <div className="grid gap-1">
           <CardTitle>{messages.outputTitle}</CardTitle>
           <CardDescription>{messages.outputDescription}</CardDescription>
@@ -56,6 +56,7 @@ function CsrOutputCard({ messages, state }: CsrOutputCardProps) {
         ) : null}
       </CardHeader>
       <ToolPanelCardContent
+        className="py-4"
         aria-busy={state.status === "loading"}
         aria-live="polite"
       >

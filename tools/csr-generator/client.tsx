@@ -221,7 +221,7 @@ function CsrGeneratorClient({ messages }: CsrGeneratorClientProps) {
 
   return (
     <form
-      className="grid gap-6 xl:grid-cols-[minmax(0,28rem)_minmax(0,1fr)]"
+      className="grid gap-6"
       onSubmit={(event) => {
         event.preventDefault()
         if (state.status !== "loading") {
