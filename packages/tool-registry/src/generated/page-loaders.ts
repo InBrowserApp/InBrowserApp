@@ -13,6 +13,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "argon2-hash-password-verifier": () =>
     import("@tool/argon2-hash-password-verifier/page"),
   "ascii-art-generator": () => import("@tool/ascii-art-generator/page"),
+  "audio-recorder": () => import("@tool/audio-recorder/page"),
   "barcode-generator": () => import("@tool/barcode-generator/page"),
   "barcode-reader": () => import("@tool/barcode-reader/page"),
   "base16-decoder": () => import("@tool/base16-decoder/page"),
@@ -79,8 +80,13 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "email-validator": () => import("@tool/email-validator/page"),
   "eu-vat-number-validator": () => import("@tool/eu-vat-number-validator/page"),
   "exif-viewer": () => import("@tool/exif-viewer/page"),
+  "favicon-assets-generator": () =>
+    import("@tool/favicon-assets-generator/page"),
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
+  "gif-to-animated-webp-converter": () =>
+    import("@tool/gif-to-animated-webp-converter/page"),
+  "gif-to-apng-converter": () => import("@tool/gif-to-apng-converter/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
   "highwayhash-hash-text-or-file": () =>
     import("@tool/highwayhash-hash-text-or-file/page"),
@@ -152,6 +158,11 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "pbkdf2-key-derivation": () => import("@tool/pbkdf2-key-derivation/page"),
   "pdf-info-viewer": () => import("@tool/pdf-info-viewer/page"),
   "pdf-merger": () => import("@tool/pdf-merger/page"),
+  "pdf-page-number-adder": () => import("@tool/pdf-page-number-adder/page"),
+  "pdf-page-organizer": () => import("@tool/pdf-page-organizer/page"),
+  "pdf-splitter": () => import("@tool/pdf-splitter/page"),
+  "pdf-text-extractor": () => import("@tool/pdf-text-extractor/page"),
+  "pdf-to-image-converter": () => import("@tool/pdf-to-image-converter/page"),
   "pgp-key-generator": () => import("@tool/pgp-key-generator/page"),
   "placeholder-image-generator": () =>
     import("@tool/placeholder-image-generator/page"),
@@ -166,6 +177,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "random-password-generator": () =>
     import("@tool/random-password-generator/page"),
   "regex-tester-replacer": () => import("@tool/regex-tester-replacer/page"),
+  "remove-pdf-owner-password": () =>
+    import("@tool/remove-pdf-owner-password/page"),
   "reverse-ip-lookup": () => import("@tool/reverse-ip-lookup/page"),
   "ripemd128-hash-text-or-file": () =>
     import("@tool/ripemd128-hash-text-or-file/page"),
@@ -228,6 +241,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   timer: () => import("@tool/timer/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
+  "ulid-generator": () => import("@tool/ulid-generator/page"),
   "unicode-escape-unescape": () => import("@tool/unicode-escape-unescape/page"),
   "unicode-invisible-character-checker": () =>
     import("@tool/unicode-invisible-character-checker/page"),
@@ -242,11 +256,16 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "uuid-base64-hex-decimal-octal-binary-converter": () =>
     import("@tool/uuid-base64-hex-decimal-octal-binary-converter/page"),
   "uuid-decoder": () => import("@tool/uuid-decoder/page"),
+  "uuid-max-generator": () => import("@tool/uuid-max-generator/page"),
+  "uuid-nil-generator": () => import("@tool/uuid-nil-generator/page"),
   "uuid-v1-generator": () => import("@tool/uuid-v1-generator/page"),
   "uuid-v1-v6-converter": () => import("@tool/uuid-v1-v6-converter/page"),
   "uuid-v3-generator": () => import("@tool/uuid-v3-generator/page"),
   "uuid-v4-bulk-generator": () => import("@tool/uuid-v4-bulk-generator/page"),
   "uuid-v4-generator": () => import("@tool/uuid-v4-generator/page"),
+  "uuid-v5-generator": () => import("@tool/uuid-v5-generator/page"),
+  "uuid-v6-generator": () => import("@tool/uuid-v6-generator/page"),
+  "uuid-v7-generator": () => import("@tool/uuid-v7-generator/page"),
   "uuid-validator": () => import("@tool/uuid-validator/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
   "whirlpool-hash-text-or-file": () =>

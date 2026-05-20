@@ -1,0 +1,4 @@
+{
+  "name": "Max UUID Generator",
+  "description": "Generer og kopier den standardiserte max UUID-en med bare ettall for øvre grenser, sentinelverdier og områdetester."
+}

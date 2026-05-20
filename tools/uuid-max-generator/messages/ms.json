@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "Salin UUID semua-satu yang diseragamkan dalam perwakilan yang dijangka oleh sistem anda.",
+  "canonicalLabel": "UUID kanonik",
+  "rawHexLabel": "Hex 32 digit",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "Salin UUID",
+  "copyHexLabel": "Salin hex",
+  "copyUrnLabel": "Salin URN",
+  "copiedLabel": "Disalin",
+  "detailsTitle": "Rujukan",
+  "detailsDescription": "Max UUID ialah nilai sentinel tetap, bukan pengecam rawak.",
+  "allBitsLabel": "Bit",
+  "allBitsValue": "128 bit ditetapkan kepada satu",
+  "versionLabel": "Versi",
+  "versionValue": "Bentuk khas",
+  "variantLabel": "Varian",
+  "variantValue": "Semua bit ditetapkan",
+  "stableLabel": "Penjanaan semula",
+  "stableValue": "Sentiasa mengembalikan nilai yang sama"
+}

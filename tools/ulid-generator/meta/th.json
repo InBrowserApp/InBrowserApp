@@ -1,0 +1,4 @@
+{
+  "name": "เครื่องมือสร้าง ULID",
+  "description": "สร้าง Universally Unique Lexicographically Sortable Identifiers ในเบราว์เซอร์ พร้อมกำหนดเวลาที่กำหนดเองได้"
+}

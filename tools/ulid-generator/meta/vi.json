@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo ULID",
+  "description": "Tạo Universally Unique Lexicographically Sortable Identifiers ngay trong trình duyệt, với tùy chọn mốc thời gian tùy chỉnh."
+}

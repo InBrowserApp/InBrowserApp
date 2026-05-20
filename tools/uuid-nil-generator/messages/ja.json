@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Nil UUID",
+  "valueDescription": "システムが想定する表記で、標準化された全ゼロの UUID をコピーします。",
+  "canonicalLabel": "正規 UUID",
+  "rawHexLabel": "32 桁の 16 進数",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "UUID をコピー",
+  "copyHexLabel": "16 進数をコピー",
+  "copyUrnLabel": "URN をコピー",
+  "copiedLabel": "コピーしました",
+  "detailsTitle": "リファレンス",
+  "detailsDescription": "nil UUID は固定のセンチネル値であり、ランダムな識別子ではありません。",
+  "allBitsLabel": "ビット",
+  "allBitsValue": "128 個のゼロビット",
+  "versionLabel": "バージョン",
+  "versionValue": "なし",
+  "variantLabel": "バリアント",
+  "variantValue": "なし",
+  "stableLabel": "再生成",
+  "stableValue": "常に同じ値を返します"
+}

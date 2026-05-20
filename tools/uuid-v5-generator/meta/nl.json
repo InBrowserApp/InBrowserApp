@@ -1,0 +1,4 @@
+{
+  "name": "UUID v5 Generator",
+  "description": "Genereer deterministische naamgebaseerde UUID v5-identificaties op basis van een namespace-UUID en naam, volledig in je browser."
+}

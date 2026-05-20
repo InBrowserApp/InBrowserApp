@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "Copie o UUID padronizado composto só por uns na representação que seu sistema espera.",
+  "canonicalLabel": "UUID canônico",
+  "rawHexLabel": "Hex de 32 dígitos",
+  "urnLabel": "URN de UUID",
+  "copyUuidLabel": "Copiar UUID",
+  "copyHexLabel": "Copiar hex",
+  "copyUrnLabel": "Copiar URN",
+  "copiedLabel": "Copiado",
+  "detailsTitle": "Referência",
+  "detailsDescription": "O max UUID é um valor sentinela fixo, não um identificador aleatório.",
+  "allBitsLabel": "Bits",
+  "allBitsValue": "128 bits definidos como um",
+  "versionLabel": "Versão",
+  "versionValue": "Forma especial",
+  "variantLabel": "Variante",
+  "variantValue": "Todos os bits definidos",
+  "stableLabel": "Regeneração",
+  "stableValue": "Sempre retorna o mesmo valor"
+}

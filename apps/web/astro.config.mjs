@@ -11,6 +11,7 @@ import {
   DEFAULT_SITE_LANGUAGE,
   SUPPORTED_SITE_LANGUAGES,
 } from "./src/lib/site.ts"
+import { addXDefaultHreflang } from "./src/lib/sitemap-serialize.ts"
 
 // https://astro.build/config
 export default defineConfig({
@@ -46,6 +47,7 @@ export default defineConfig({
           SUPPORTED_SITE_LANGUAGES.map((locale) => [locale, locale])
         ),
       },
+      serialize: addXDefaultHreflang,
     }),
   ],
   prefetch: {

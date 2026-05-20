@@ -1,0 +1,4 @@
+{
+  "name": "Gerador de ULID",
+  "description": "Gere Identificadores Universalmente Únicos e Lexicograficamente Ordenáveis no navegador, com timestamps personalizados opcionais."
+}

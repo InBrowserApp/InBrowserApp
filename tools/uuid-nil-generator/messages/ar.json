@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Nil UUID",
+  "valueDescription": "انسخ UUID القياسي المكون بالكامل من أصفار بالتمثيل الذي يتوقعه نظامك.",
+  "canonicalLabel": "UUID بالصيغة القياسية",
+  "rawHexLabel": "ست عشري من 32 رقما",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "نسخ UUID",
+  "copyHexLabel": "نسخ الست عشري",
+  "copyUrnLabel": "نسخ URN",
+  "copiedLabel": "تم النسخ",
+  "detailsTitle": "مرجع",
+  "detailsDescription": "Nil UUID هو قيمة حارس ثابتة، وليس معرفا عشوائيا.",
+  "allBitsLabel": "البتات",
+  "allBitsValue": "128 بت صفري",
+  "versionLabel": "الإصدار",
+  "versionValue": "لا يوجد",
+  "variantLabel": "المتغير",
+  "variantValue": "لا يوجد",
+  "stableLabel": "إعادة التوليد",
+  "stableValue": "يعيد دائما القيمة نفسها"
+}

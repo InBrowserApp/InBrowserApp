@@ -266,9 +266,9 @@ function ToolsDirectorySearch({
                         icon={entry.icon}
                         className="size-4 shrink-0 text-muted-foreground"
                       />
-                      {locale.name}
+                      <span className="min-w-0 truncate">{locale.name}</span>
                     </h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground">
+                    <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
                       {locale.description}
                     </p>
                   </div>

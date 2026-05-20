@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Nil UUID",
+  "valueDescription": "Copy the standardized all-zero UUID in the representation your system expects.",
+  "canonicalLabel": "Canonical UUID",
+  "rawHexLabel": "32-digit hex",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "Copy UUID",
+  "copyHexLabel": "Copy hex",
+  "copyUrnLabel": "Copy URN",
+  "copiedLabel": "Copied",
+  "detailsTitle": "Reference",
+  "detailsDescription": "The nil UUID is a fixed sentinel value, not a random identifier.",
+  "allBitsLabel": "Bits",
+  "allBitsValue": "128 zero bits",
+  "versionLabel": "Version",
+  "versionValue": "None",
+  "variantLabel": "Variant",
+  "variantValue": "None",
+  "stableLabel": "Regeneration",
+  "stableValue": "Always returns the same value"
+}

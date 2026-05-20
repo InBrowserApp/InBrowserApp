@@ -24,7 +24,10 @@ catalog:
   "@anglinb/city-hash": ^1.1.0
   "@noble/ed25519": ^3.0.0
   "@faker-js/faker": ^10.3.0
+  "@jspawn/qpdf-wasm": ^0.0.2
   "@jsquash/avif": ^2.1.1
+  "@libwebp-wasm/gif2webp": ^1.0.8
+  "@libwebp-wasm/img2webp": ^1.0.0
   "@astrojs/check": ^0.9.8
   "@astrojs/mdx": ^4.3.14
   "@astrojs/react": ^4.4.2
@@ -72,6 +75,7 @@ catalog:
   diff: ^8.0.4
   exifr: ^7.1.3
   figlet: ^1.10.0
+  gifuct-js: ^2.1.2
   happy-dom: ^20.8.9
   hash-wasm: ^4.12.0
   highlight.js: ^11.11.1
@@ -98,6 +102,7 @@ catalog:
   oxlint: ^1.58.0
   papaparse: ^5.5.3
   pdf-lib: ^1.17.1
+  pdfjs-dist: ^5.4.624
   prettier: ^3.8.2
   prettier-plugin-svelte: ^3.5.1
   "@prettier/plugin-xml": ^3.4.2
@@ -122,6 +127,7 @@ catalog:
   typescript: ^5.9.3
   transliteration: ^2.6.1
   ua-parser-js: ^2.0.6
+  upng-js: ^2.1.0
   vitest: ^4.1.2
   webrtc-ips: ^0.2.0
   wrangler: 4.80.0

@@ -901,6 +901,125 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "audio-recorder",
+    category: "misc",
+    icon: "mic",
+    tags: ["audio", "recorder", "microphone", "voice", "recording", "sound"],
+    locales: {
+      ar: {
+        name: "مسجل الصوت",
+        description: "سجل صوت الميكروفون محليا، وعاين التسجيل، ونزل الملف.",
+      },
+      de: {
+        name: "Audiorecorder",
+        description:
+          "Nimm Mikrofon-Audio lokal auf, prüfe die Aufnahme und lade die Datei herunter.",
+      },
+      en: {
+        name: "Audio Recorder",
+        description:
+          "Record microphone audio locally, preview the take, and download the file.",
+      },
+      es: {
+        name: "Grabadora de audio",
+        description:
+          "Graba audio del micrófono localmente, previsualiza la toma y descarga el archivo.",
+      },
+      fr: {
+        name: "Enregistreur audio",
+        description:
+          "Enregistrez l'audio du microphone localement, prévisualisez la prise et téléchargez le fichier.",
+      },
+      he: {
+        name: "מקליט שמע",
+        description:
+          "הקליטו שמע מהמיקרופון באופן מקומי, האזינו להקלטה והורידו את הקובץ.",
+      },
+      hi: {
+        name: "ऑडियो रिकॉर्डर",
+        description:
+          "माइक्रोफ़ोन ऑडियो को स्थानीय रूप से रिकॉर्ड करें, टेक का पूर्वावलोकन करें और फ़ाइल डाउनलोड करें।",
+      },
+      id: {
+        name: "Perekam Audio",
+        description:
+          "Rekam audio mikrofon secara lokal, pratinjau rekaman, lalu unduh file.",
+      },
+      it: {
+        name: "Registratore audio",
+        description:
+          "Registra l'audio del microfono in locale, ascolta l'anteprima e scarica il file.",
+      },
+      ja: {
+        name: "音声レコーダー",
+        description:
+          "マイク音声をローカルで録音し、録音内容をプレビューしてファイルをダウンロードできます。",
+      },
+      ko: {
+        name: "오디오 녹음기",
+        description:
+          "마이크 오디오를 로컬에서 녹음하고, 녹음본을 미리 들은 뒤 파일로 다운로드하세요.",
+      },
+      ms: {
+        name: "Perakam Audio",
+        description:
+          "Rakam audio mikrofon secara setempat, pratonton rakaman, dan muat turun fail.",
+      },
+      nl: {
+        name: "Audiorecorder",
+        description:
+          "Neem microfoonaudio lokaal op, beluister de opname en download het bestand.",
+      },
+      no: {
+        name: "Lydopptaker",
+        description:
+          "Ta opp mikrofonlyd lokalt, forhåndsvis opptaket og last ned filen.",
+      },
+      pl: {
+        name: "Rejestrator audio",
+        description:
+          "Nagrywaj lokalnie dźwięk z mikrofonu, odsłuchuj nagranie i pobieraj plik.",
+      },
+      pt: {
+        name: "Gravador de áudio",
+        description:
+          "Grave áudio do microfone localmente, pré-visualize a gravação e transfira o ficheiro.",
+      },
+      ru: {
+        name: "Аудиорекордер",
+        description:
+          "Записывайте звук с микрофона локально, прослушивайте запись и скачивайте файл.",
+      },
+      sv: {
+        name: "Ljudinspelare",
+        description:
+          "Spela in mikrofonljud lokalt, förhandsgranska inspelningen och ladda ner filen.",
+      },
+      th: {
+        name: "เครื่องบันทึกเสียง",
+        description: "บันทึกเสียงจากไมโครโฟนไว้ในเครื่อง ฟังตัวอย่าง และดาวน์โหลดไฟล์",
+      },
+      tr: {
+        name: "Ses Kaydedici",
+        description:
+          "Mikrofon sesini yerel olarak kaydedin, kaydı önizleyin ve dosyayı indirin.",
+      },
+      vi: {
+        name: "Trình ghi âm",
+        description:
+          "Ghi âm từ micro cục bộ, xem trước bản ghi và tải tệp xuống.",
+      },
+      "zh-CN": {
+        name: "音频录音器",
+        description: "在本地录制麦克风音频，预览录音并下载文件。",
+      },
+      "zh-TW": {
+        name: "音訊錄音機",
+        description: "在本機錄製麥克風音訊、預覽錄音，並下載檔案。",
+      },
+    },
+  },
+  {
     slug: "barcode-generator",
     category: "image",
     icon: "image",
@@ -7479,6 +7598,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "favicon-assets-generator",
+    category: "favicon",
+    icon: "image",
+    tags: [
+      "favicon",
+      "icon",
+      "ico",
+      "apple-touch-icon",
+      "pwa",
+      "manifest",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد أصول الأيقونة المفضّلة (Favicon)",
+        description:
+          "أنشئ حزمة أيقونات مفضّلة كاملة — ICO وصور PNG وأيقونة Apple touch وأيقونات PWA وملف web manifest ومقتطف HTML — محلياً في متصفحك.",
+      },
+      de: {
+        name: "Favicon-Assets-Generator",
+        description:
+          "Erstellen Sie ein komplettes Favicon-Paket – ICO, PNGs, Apple-Touch-Icon, PWA-Icons, Web-Manifest und HTML-Snippet – lokal in Ihrem Browser.",
+      },
+      en: {
+        name: "Favicon Assets Generator",
+        description:
+          "Generate a complete favicon bundle — ICO, PNGs, Apple touch icon, PWA icons, web manifest, and the HTML snippet — locally in your browser.",
+      },
+      es: {
+        name: "Generador de Recursos Favicon",
+        description:
+          "Genera un paquete completo de favicons — ICO, PNG, icono Apple touch, iconos PWA, manifiesto web y el fragmento HTML — localmente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur d'éléments de favicon",
+        description:
+          "Générez un pack de favicons complet — ICO, PNG, icône Apple touch, icônes PWA, manifeste web et extrait HTML — directement dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל נכסי Favicon",
+        description:
+          "צור חבילת favicon מלאה — ICO, קובצי PNG, אייקון Apple touch, אייקוני PWA, web manifest וקטע HTML — באופן מקומי בדפדפן שלך.",
+      },
+      hi: {
+        name: "Favicon Assets Generator",
+        description:
+          "एक संपूर्ण favicon बंडल बनाएं — ICO, PNGs, Apple touch icon, PWA icons, web manifest, और HTML स्निपेट — सब कुछ आपके ब्राउज़र में स्थानीय रूप से।",
+      },
+      id: {
+        name: "Pembuat Aset Favicon",
+        description:
+          "Hasilkan paket favicon lengkap — ICO, PNG, ikon Apple touch, ikon PWA, web manifest, dan cuplikan HTML — secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Generatore di Asset Favicon",
+        description:
+          "Genera un pacchetto completo di favicon — ICO, PNG, icona Apple touch, icone PWA, web manifest e snippet HTML — localmente nel tuo browser.",
+      },
+      ja: {
+        name: "Favicon アセットジェネレーター",
+        description:
+          "ICO、PNG、Apple touch アイコン、PWA アイコン、Web manifest、HTML スニペットを含む完全な favicon バンドルをブラウザー内でローカルに生成。",
+      },
+      ko: {
+        name: "파비콘 에셋 생성기",
+        description:
+          "ICO, PNG, Apple touch icon, PWA 아이콘, 웹 매니페스트, HTML 스니펫을 포함한 완전한 파비콘 번들을 브라우저에서 로컬로 생성합니다.",
+      },
+      ms: {
+        name: "Penjana Aset Favicon",
+        description:
+          "Jana himpunan favicon yang lengkap — ICO, PNG, ikon sentuh Apple, ikon PWA, manifes web, dan coretan HTML — secara tempatan dalam pelayar anda.",
+      },
+      nl: {
+        name: "Favicon-assets-generator",
+        description:
+          "Genereer een complete favicon-bundel — ICO, PNG's, Apple touch icon, PWA-iconen, web manifest en het HTML-fragment — lokaal in je browser.",
+      },
+      no: {
+        name: "Generator for favicon-ressurser",
+        description:
+          "Generer en komplett favicon-pakke — ICO, PNG-er, Apple touch icon, PWA-ikoner, web-manifest og HTML-snutten — lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Generator zasobów favicon",
+        description:
+          "Wygeneruj kompletny pakiet favicon — ICO, PNG-i, ikonę Apple touch, ikony PWA, manifest webowy i fragment HTML — lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de Recursos de Favicon",
+        description:
+          "Gere um pacote completo de favicon — ICO, PNGs, ícone Apple touch, ícones PWA, web manifest e o snippet HTML — localmente no seu navegador.",
+      },
+      ru: {
+        name: "Генератор фавиконок",
+        description:
+          "Создайте полный комплект фавиконок — ICO, PNG, иконку Apple touch, иконки PWA, веб-манифест и HTML-фрагмент — локально в вашем браузере.",
+      },
+      sv: {
+        name: "Favicon-tillgångsgenerator",
+        description:
+          "Generera ett komplett favicon-paket — ICO, PNG:er, Apple touch-ikon, PWA-ikoner, webbmanifest och HTML-utdraget — lokalt i din webbläsare.",
+      },
+      th: {
+        name: "เครื่องสร้างชุดไฟล์ Favicon",
+        description:
+          "สร้างชุดไฟล์ favicon แบบครบชุด — ICO, PNG, Apple touch icon, ไอคอน PWA, web manifest และ HTML snippet — ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Favicon Varlık Oluşturucu",
+        description:
+          "ICO, PNG'ler, Apple touch simgesi, PWA simgeleri, web manifesti ve HTML parçacığından oluşan eksiksiz bir favicon paketini tarayıcınızda yerel olarak oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo bộ favicon",
+        description:
+          "Tạo bộ favicon hoàn chỉnh — ICO, PNG, biểu tượng Apple touch, biểu tượng PWA, web manifest và đoạn mã HTML — ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "Favicon 资源生成器",
+        description:
+          "在浏览器本地生成一套完整的 favicon 资源包 —— 包括 ICO、PNG、Apple touch 图标、PWA 图标、Web manifest 以及 HTML 代码片段。",
+      },
+      "zh-TW": {
+        name: "Favicon 資產產生器",
+        description:
+          "在瀏覽器本機產生完整的 favicon 套件——ICO、PNG、Apple touch icon、PWA 圖示、web manifest 以及 HTML 程式碼片段。",
+      },
+    },
+  },
+  {
     slug: "file-to-data-uri-converter",
     category: "web",
     icon: "file-text",
@@ -7598,6 +7848,252 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "檔案轉 Data URI 轉換器",
         description:
           "將檔案轉換為 Data URI 字串，方便嵌入 HTML、CSS 或 JSON，完全離線。",
+      },
+    },
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "gif", "webp", "converter", "animation", "batch"],
+    locales: {
+      ar: {
+        name: "محول GIF إلى WebP متحرك",
+        description:
+          "حوّل صور GIF المتحركة إلى WebP متحرك مع التحجيم، وسرعة التشغيل، والتحكم في التكرار، والمعاينات، وتصدير ZIP دفعي.",
+      },
+      de: {
+        name: "GIF-zu-animiertem-WebP-Konverter",
+        description:
+          "Konvertiere animierte GIFs in animierte WebP-Dateien mit Skalierung, Wiedergabegeschwindigkeit, Schleifensteuerung, Vorschauen und Stapelexport als ZIP.",
+      },
+      en: {
+        name: "GIF to Animated WebP Converter",
+        description:
+          "Convert animated GIFs to animated WebP with scaling, playback speed, loop control, previews, and batch ZIP export.",
+      },
+      es: {
+        name: "Convertidor de GIF a WebP animado",
+        description:
+          "Convierte GIF animados en WebP animados con escalado, velocidad de reproducción, control de bucles, vistas previas y exportación ZIP por lotes.",
+      },
+      fr: {
+        name: "Convertisseur de GIF en WebP animé",
+        description:
+          "Convertissez des GIF animés en WebP animé avec mise à l’échelle, vitesse de lecture, contrôle des boucles, aperçus et export ZIP par lot.",
+      },
+      he: {
+        name: "ממיר GIF מונפש ל-WebP מונפש",
+        description:
+          "המר קובצי GIF מונפשים ל-WebP מונפש עם שינוי קנה מידה, מהירות הפעלה, בקרת לולאה, תצוגות מקדימות וייצוא ZIP באצווה.",
+      },
+      hi: {
+        name: "GIF से Animated WebP कन्वर्टर",
+        description:
+          "स्केलिंग, प्लेबैक गति, लूप नियंत्रण, प्रीव्यू और बैच ZIP एक्सपोर्ट के साथ एनिमेटेड GIF को Animated WebP में बदलें।",
+      },
+      id: {
+        name: "Konverter GIF ke WebP Animasi",
+        description:
+          "Konversi GIF animasi ke WebP animasi dengan pengaturan skala, kecepatan pemutaran, kontrol perulangan, pratinjau, dan ekspor ZIP untuk banyak file.",
+      },
+      it: {
+        name: "Convertitore da GIF a WebP animato",
+        description:
+          "Converti GIF animate in file WebP animati con ridimensionamento, velocità di riproduzione, controllo del ciclo, anteprime ed esportazione ZIP in blocco.",
+      },
+      ja: {
+        name: "GIFからAnimated WebPへの変換ツール",
+        description:
+          "スケール変更、再生速度、ループ制御、プレビュー、バッチZIPエクスポートに対応し、アニメーションGIFをAnimated WebPに変換します。",
+      },
+      ko: {
+        name: "GIF to Animated WebP 변환기",
+        description:
+          "크기 조정, 재생 속도, 루프 제어, 미리보기, 일괄 ZIP 내보내기로 애니메이션 GIF를 Animated WebP로 변환합니다.",
+      },
+      ms: {
+        name: "Penukar GIF kepada WebP Beranimasi",
+        description:
+          "Tukar GIF beranimasi kepada WebP beranimasi dengan penskalaan, kelajuan main balik, kawalan gelung, pratonton, dan eksport ZIP secara kelompok.",
+      },
+      nl: {
+        name: "GIF naar geanimeerde WebP-converter",
+        description:
+          "Converteer geanimeerde GIF-bestanden naar geanimeerde WebP met schalen, afspeelsnelheid, lusbeheer, voorbeelden en ZIP-export voor meerdere bestanden.",
+      },
+      no: {
+        name: "GIF til animert WebP-konverterer",
+        description:
+          "Konverter animerte GIF-er til animert WebP med skalering, avspillingshastighet, løkkekontroll, forhåndsvisninger og ZIP-eksport for flere filer.",
+      },
+      pl: {
+        name: "Konwerter GIF do animowanego WebP",
+        description:
+          "Konwertuj animowane GIF-y na animowane WebP ze skalowaniem, szybkością odtwarzania, kontrolą pętli, podglądami i eksportem wsadowym ZIP.",
+      },
+      pt: {
+        name: "Conversor de GIF para WebP animado",
+        description:
+          "Converta GIFs animados em WebP animados com escala, velocidade de reprodução, controle de loop, prévias e exportação em lote para ZIP.",
+      },
+      ru: {
+        name: "Конвертер GIF в анимированный WebP",
+        description:
+          "Конвертируйте анимированные GIF в анимированный WebP с масштабированием, настройкой скорости воспроизведения, управлением повторами, предпросмотром и пакетным экспортом в ZIP.",
+      },
+      sv: {
+        name: "GIF till animerad WebP-konverterare",
+        description:
+          "Konvertera animerade GIF-filer till animerad WebP med skalning, uppspelningshastighet, loopstyrning, förhandsgranskningar och samlad ZIP-export.",
+      },
+      th: {
+        name: "ตัวแปลง GIF เป็น WebP แบบเคลื่อนไหว",
+        description:
+          "แปลง GIF แบบเคลื่อนไหวเป็น WebP แบบเคลื่อนไหว พร้อมการปรับขนาด ความเร็วในการเล่น การควบคุมการวนซ้ำ ตัวอย่าง และการส่งออกเป็น ZIP แบบกลุ่ม",
+      },
+      tr: {
+        name: "GIF'ten Animasyonlu WebP'ye Dönüştürücü",
+        description:
+          "Animasyonlu GIF'leri ölçekleme, oynatma hızı, döngü kontrolü, önizlemeler ve toplu ZIP dışa aktarımıyla animasyonlu WebP'ye dönüştürün.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi GIF sang WebP động",
+        description:
+          "Chuyển đổi GIF động sang WebP động với tùy chọn đổi tỷ lệ, tốc độ phát, kiểm soát vòng lặp, xem trước và xuất ZIP hàng loạt.",
+      },
+      "zh-CN": {
+        name: "GIF 转动态 WebP 转换器",
+        description:
+          "将动态 GIF 转换为动态 WebP，支持缩放、播放速度、循环控制、预览和批量 ZIP 导出。",
+      },
+      "zh-TW": {
+        name: "GIF 轉動態 WebP 轉換器",
+        description:
+          "將動態 GIF 轉換為動態 WebP，可調整縮放、播放速度、重複播放控制、預覽，並批次匯出 ZIP。",
+      },
+    },
+  },
+  {
+    slug: "gif-to-apng-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "gif", "apng", "animation", "converter", "offline"],
+    locales: {
+      ar: {
+        name: "محول GIF إلى APNG",
+        description:
+          "حوّل ملفات GIF المتحركة إلى رسوم APNG PNG متحركة مع تصدير دفعات محلي، والتحجيم، وسرعة التشغيل، وعناصر التحكم في التكرار.",
+      },
+      de: {
+        name: "GIF zu APNG Converter",
+        description:
+          "Konvertiere animierte GIF-Dateien zu APNG PNG-Animationen mit lokalem Batchexport, Skalierung, Wiedergabegeschwindigkeit und Schleifensteuerung.",
+      },
+      en: {
+        name: "GIF to APNG Converter",
+        description:
+          "Convert animated GIF files to APNG PNG animations with local batch export, scaling, playback speed, and loop controls.",
+      },
+      es: {
+        name: "Convertidor de GIF a APNG",
+        description:
+          "Convierte archivos GIF animados a animaciones APNG PNG con exportación local por lotes, escalado, velocidad de reproducción y controles de bucle.",
+      },
+      fr: {
+        name: "Convertisseur GIF en APNG",
+        description:
+          "Convertissez des fichiers GIF animés en animations APNG PNG avec export local par lot, mise à l'échelle, vitesse de lecture et contrôles de boucle.",
+      },
+      he: {
+        name: "ממיר GIF ל-APNG",
+        description:
+          "המר קובצי GIF מונפשים לאנימציות APNG PNG עם ייצוא אצווה מקומי, שינוי גודל, מהירות הפעלה ובקרות לולאה.",
+      },
+      hi: {
+        name: "GIF से APNG कन्वर्टर",
+        description:
+          "लोकल बैच एक्सपोर्ट, स्केलिंग, प्लेबैक स्पीड और लूप नियंत्रणों के साथ animated GIF फाइलों को APNG PNG animations में बदलें।",
+      },
+      id: {
+        name: "Konverter GIF ke APNG",
+        description:
+          "Konversi file GIF animasi ke animasi APNG PNG dengan ekspor batch lokal, penskalaan, kecepatan pemutaran, dan kontrol pengulangan.",
+      },
+      it: {
+        name: "Convertitore da GIF ad APNG",
+        description:
+          "Converti file GIF animati in animazioni APNG PNG con esportazione batch locale, ridimensionamento, velocita di riproduzione e controlli di ripetizione.",
+      },
+      ja: {
+        name: "GIF から APNG へのコンバーター",
+        description:
+          "アニメーション GIF ファイルを APNG PNG アニメーションに変換し、ローカルでの一括書き出し、拡大縮小、再生速度、ループを制御できます。",
+      },
+      ko: {
+        name: "GIF to APNG 변환기",
+        description:
+          "애니메이션 GIF 파일을 로컬 일괄 내보내기, 크기 조절, 재생 속도, 반복 제어 기능을 갖춘 APNG PNG 애니메이션으로 변환하세요.",
+      },
+      ms: {
+        name: "Penukar GIF kepada APNG",
+        description:
+          "Tukar fail GIF animasi kepada animasi APNG PNG dengan eksport kelompok setempat, penskalaan, kelajuan main balik, dan kawalan gelung.",
+      },
+      nl: {
+        name: "GIF naar APNG converter",
+        description:
+          "Zet geanimeerde GIF-bestanden om naar APNG PNG-animaties met lokale batchexport, schalen, afspeelsnelheid en lusinstellingen.",
+      },
+      no: {
+        name: "GIF til APNG-konverterer",
+        description:
+          "Konverter animerte GIF-filer til APNG PNG-animasjoner med lokal gruppeeksport, skalering, avspillingshastighet og løkkekontroller.",
+      },
+      pl: {
+        name: "Konwerter GIF na APNG",
+        description:
+          "Konwertuj animowane pliki GIF na animacje APNG PNG z lokalnym eksportem wsadowym, skalowaniem, kontrolą prędkości odtwarzania i pętli.",
+      },
+      pt: {
+        name: "Conversor de GIF para APNG",
+        description:
+          "Converta arquivos GIF animados em animações APNG PNG com exportação local em lote, escala, velocidade de reprodução e controles de loop.",
+      },
+      ru: {
+        name: "Конвертер GIF в APNG",
+        description:
+          "Конвертируйте анимированные GIF-файлы в APNG-анимации PNG с локальным пакетным экспортом, масштабированием, настройкой скорости воспроизведения и параметрами повтора.",
+      },
+      sv: {
+        name: "GIF till APNG-konverterare",
+        description:
+          "Konvertera animerade GIF-filer till APNG PNG-animationer med lokal batchexport, skalning, uppspelningshastighet och loopkontroller.",
+      },
+      th: {
+        name: "ตัวแปลง GIF เป็น APNG",
+        description:
+          "แปลงไฟล์ GIF แบบเคลื่อนไหวเป็นภาพเคลื่อนไหว APNG PNG พร้อมการส่งออกแบบชุดในเครื่อง การปรับขนาด ความเร็วในการเล่น และการควบคุมการวนซ้ำ",
+      },
+      tr: {
+        name: "GIF'ten APNG'ye Dönüştürücü",
+        description:
+          "Animasyonlu GIF dosyalarını yerel toplu dışa aktarma, ölçekleme, oynatma hızı ve döngü kontrolleriyle APNG PNG animasyonlarına dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi GIF sang APNG",
+        description:
+          "Chuyển đổi tệp GIF động thành ảnh động APNG PNG với xuất hàng loạt cục bộ, cùng các tùy chọn tỷ lệ, tốc độ phát và vòng lặp.",
+      },
+      "zh-CN": {
+        name: "GIF 转 APNG 转换器",
+        description:
+          "将动画 GIF 文件转换为 APNG PNG 动画，支持本地批量导出、缩放、播放速度和循环控制。",
+      },
+      "zh-TW": {
+        name: "GIF 轉 APNG 轉換器",
+        description:
+          "將動畫 GIF 檔轉換為 APNG PNG 動畫，支援本機批次匯出、縮放、播放速度與循環控制。",
       },
     },
   },
@@ -14742,6 +15238,620 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-page-number-adder",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "page", "number", "pagination", "document", "offline"],
+    locales: {
+      ar: {
+        name: "إضافة أرقام صفحات PDF",
+        description:
+          "أضف أرقام صفحات إلى صفحات PDF المحددة محليًا في متصفحك، مع تنسيق وموضع وخط وهوامش قابلة للضبط.",
+      },
+      de: {
+        name: "PDF-Seitenzahlen hinzufügen",
+        description:
+          "Füge ausgewählten PDF-Seiten lokal in deinem Browser Seitenzahlen mit konfigurierbarem Format, Position, Schriftart und Rändern hinzu.",
+      },
+      en: {
+        name: "PDF Page Number Adder",
+        description:
+          "Add page numbers to selected PDF pages locally in your browser with configurable format, position, font, and margins.",
+      },
+      es: {
+        name: "Añadir números de página a PDF",
+        description:
+          "Añade números de página a páginas PDF seleccionadas localmente en tu navegador con formato, posición, fuente y márgenes configurables.",
+      },
+      fr: {
+        name: "Ajout de numéros de page PDF",
+        description:
+          "Ajoutez des numéros de page aux pages PDF sélectionnées localement dans votre navigateur, avec un format, une position, une police et des marges configurables.",
+      },
+      he: {
+        name: "מוסיף מספרי עמודים ל-PDF",
+        description:
+          "הוסיפו מספרי עמודים לעמודי PDF נבחרים מקומית בדפדפן, עם פורמט, מיקום, גופן ושוליים שניתנים להגדרה.",
+      },
+      hi: {
+        name: "PDF पेज नंबर ऐडर",
+        description:
+          "कॉन्फ़िगर करने योग्य फ़ॉर्मैट, स्थिति, फ़ॉन्ट और मार्जिन के साथ अपने ब्राउज़र में स्थानीय रूप से चुने गए PDF पेजों में पेज नंबर जोड़ें।",
+      },
+      id: {
+        name: "Penambah Nomor Halaman PDF",
+        description:
+          "Tambahkan nomor halaman ke halaman PDF yang dipilih secara lokal di browser Anda dengan format, posisi, font, dan margin yang dapat dikonfigurasi.",
+      },
+      it: {
+        name: "PDF Page Number Adder",
+        description:
+          "Aggiungi numeri di pagina alle pagine PDF selezionate localmente nel tuo browser, con formato, posizione, font e margini configurabili.",
+      },
+      ja: {
+        name: "PDFページ番号追加ツール",
+        description:
+          "選択したPDFページに、形式、位置、フォント、余白を設定して、ブラウザー内でローカルにページ番号を追加します。",
+      },
+      ko: {
+        name: "PDF 페이지 번호 추가 도구",
+        description:
+          "선택한 PDF 페이지에 페이지 번호를 브라우저에서 로컬로 추가하세요. 형식, 위치, 글꼴, 여백을 설정할 수 있습니다.",
+      },
+      ms: {
+        name: "Penambah Nombor Halaman PDF",
+        description:
+          "Tambah nombor halaman pada halaman PDF terpilih secara setempat dalam pelayar anda dengan format, kedudukan, fon, dan jidar yang boleh dikonfigurasi.",
+      },
+      nl: {
+        name: "PDF-paginanummeraar",
+        description:
+          "Voeg lokaal in je browser paginanummers toe aan geselecteerde PDF-pagina's, met instelbare opmaak, positie, lettertype en marges.",
+      },
+      no: {
+        name: "PDF-sidenummerering",
+        description:
+          "Legg til sidenumre på valgte PDF-sider lokalt i nettleseren med konfigurerbart format, plassering, skrifttype og marger.",
+      },
+      pl: {
+        name: "Dodawanie numerów stron do PDF",
+        description:
+          "Dodawaj numery stron do wybranych stron PDF lokalnie w przeglądarce, z możliwością konfiguracji formatu, położenia, czcionki i marginesów.",
+      },
+      pt: {
+        name: "Adicionador de números de página em PDF",
+        description:
+          "Adicione números de página às páginas selecionadas de um PDF localmente no seu navegador, com formato, posição, fonte e margens configuráveis.",
+      },
+      ru: {
+        name: "Добавление номеров страниц в PDF",
+        description:
+          "Добавляйте номера на выбранные страницы PDF локально в браузере с настраиваемым форматом, положением, шрифтом и полями.",
+      },
+      sv: {
+        name: "PDF Page Number Adder",
+        description:
+          "Lägg till sidnummer på valda PDF-sidor lokalt i din webbläsare med konfigurerbart format, placering, teckensnitt och marginaler.",
+      },
+      th: {
+        name: "เครื่องมือเพิ่มเลขหน้า PDF",
+        description:
+          "เพิ่มเลขหน้าให้หน้าที่เลือกในไฟล์ PDF ได้ภายในเบราว์เซอร์ของคุณ พร้อมตั้งค่ารูปแบบ ตำแหน่ง ฟอนต์ และระยะขอบได้",
+      },
+      tr: {
+        name: "PDF Sayfa Numarası Ekleyici",
+        description:
+          "Yapılandırılabilir biçim, konum, yazı tipi ve kenar boşluklarıyla seçili PDF sayfalarına tarayıcınızda yerel olarak sayfa numaraları ekleyin.",
+      },
+      vi: {
+        name: "Trình thêm số trang PDF",
+        description:
+          "Thêm số trang vào các trang PDF đã chọn ngay trong trình duyệt của bạn, với định dạng, vị trí, phông chữ và lề có thể cấu hình.",
+      },
+      "zh-CN": {
+        name: "PDF 页码添加器",
+        description:
+          "在浏览器本地为选定 PDF 页面添加页码，可配置格式、位置、字体和边距。",
+      },
+      "zh-TW": {
+        name: "PDF 頁碼新增工具",
+        description:
+          "在瀏覽器中本機為選取的 PDF 頁面新增頁碼，可設定格式、位置、字體和邊距。",
+      },
+    },
+  },
+  {
+    slug: "pdf-page-organizer",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "organize", "reorder", "rotate", "delete", "offline"],
+    locales: {
+      ar: {
+        name: "منظم صفحات PDF",
+        description:
+          "أعد ترتيب صفحات PDF ودوّرها واحذفها محليًا في متصفحك قبل تصدير ملف PDF جديد.",
+      },
+      de: {
+        name: "PDF Page Organizer",
+        description:
+          "Ordne PDF-Seiten lokal in deinem Browser neu an, drehe oder entferne sie, bevor du eine neue PDF exportierst.",
+      },
+      en: {
+        name: "PDF Page Organizer",
+        description:
+          "Reorder, rotate, and remove PDF pages locally in your browser before exporting a new PDF.",
+      },
+      es: {
+        name: "PDF Page Organizer",
+        description:
+          "Reordena, gira y elimina páginas de un PDF localmente en tu navegador antes de exportar un PDF nuevo.",
+      },
+      fr: {
+        name: "Organiseur de pages PDF",
+        description:
+          "Réorganisez, faites pivoter et supprimez des pages PDF localement dans votre navigateur avant d’exporter un nouveau PDF.",
+      },
+      he: {
+        name: "PDF Page Organizer",
+        description:
+          "סדר מחדש, סובב והסר עמודים מ-PDF באופן מקומי בדפדפן שלך לפני ייצוא PDF חדש.",
+      },
+      hi: {
+        name: "PDF पेज ऑर्गनाइज़र",
+        description:
+          "नया PDF निर्यात करने से पहले अपने ब्राउज़र में ही PDF पेजों का क्रम बदलें, घुमाएँ और हटाएँ।",
+      },
+      id: {
+        name: "Pengatur Halaman PDF",
+        description:
+          "Susun ulang, putar, dan hapus halaman PDF secara lokal di browser Anda sebelum mengekspor PDF baru.",
+      },
+      it: {
+        name: "PDF Page Organizer",
+        description:
+          "Riordina, ruota e rimuovi le pagine di un PDF localmente nel browser prima di esportare un nuovo PDF.",
+      },
+      ja: {
+        name: "PDF Page Organizer",
+        description:
+          "新しい PDF として書き出す前に、PDF のページをブラウザ内でローカルに並べ替え、回転、削除できます。",
+      },
+      ko: {
+        name: "PDF Page Organizer",
+        description:
+          "브라우저에서 로컬로 새 PDF를 내보내기 전에 PDF 페이지 순서를 바꾸고, 회전하고, 제거하세요.",
+      },
+      ms: {
+        name: "Penyusun Halaman PDF",
+        description:
+          "Susun semula, putar dan alih keluar halaman PDF secara setempat dalam pelayar anda sebelum mengeksport PDF baharu.",
+      },
+      nl: {
+        name: "PDF-pagina-organizer",
+        description:
+          "Herschik, draai en verwijder PDF-pagina's lokaal in je browser voordat je een nieuwe PDF exporteert.",
+      },
+      no: {
+        name: "PDF Page Organizer",
+        description:
+          "Endre rekkefølge på, roter og fjern PDF-sider lokalt i nettleseren før du eksporterer en ny PDF.",
+      },
+      pl: {
+        name: "PDF Page Organizer",
+        description:
+          "Zmieniaj kolejność, obracaj i usuwaj strony PDF lokalnie w przeglądarce przed wyeksportowaniem nowego PDF.",
+      },
+      pt: {
+        name: "Organizador de páginas PDF",
+        description:
+          "Reordene, gire e remova páginas de um PDF localmente no seu navegador antes de exportar um novo PDF.",
+      },
+      ru: {
+        name: "Организатор страниц PDF",
+        description:
+          "Меняйте порядок, поворачивайте и удаляйте страницы PDF локально в браузере перед экспортом нового PDF.",
+      },
+      sv: {
+        name: "PDF Page Organizer",
+        description:
+          "Ordna om, rotera och ta bort PDF-sidor lokalt i webbläsaren innan du exporterar en ny PDF.",
+      },
+      th: {
+        name: "PDF Page Organizer",
+        description:
+          "จัดเรียง หมุน และลบหน้าของ PDF ภายในเบราว์เซอร์ของคุณก่อนส่งออกเป็น PDF ใหม่",
+      },
+      tr: {
+        name: "PDF Page Organizer",
+        description:
+          "Yeni bir PDF dışa aktarmadan önce PDF sayfalarını tarayıcınızda yerel olarak yeniden sıralayın, döndürün ve kaldırın.",
+      },
+      vi: {
+        name: "Trình sắp xếp trang PDF",
+        description:
+          "Sắp xếp lại, xoay và xóa các trang PDF ngay trong trình duyệt của bạn trước khi xuất một PDF mới.",
+      },
+      "zh-CN": {
+        name: "PDF Page Organizer",
+        description:
+          "在浏览器本地重新排序、旋转和移除 PDF 页面，然后导出新的 PDF。",
+      },
+      "zh-TW": {
+        name: "PDF 頁面整理器",
+        description:
+          "在瀏覽器本機重新排序、旋轉和移除 PDF 頁面，再匯出新的 PDF。",
+      },
+    },
+  },
+  {
+    slug: "pdf-splitter",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "split", "extract", "pages", "document", "offline"],
+    locales: {
+      ar: {
+        name: "مقسّم PDF",
+        description:
+          "قسّم صفحات PDF حسب النطاق، أو استخرج الصفحات المحددة في ملف PDF واحد، أو نزّل عدة ملفات مقسّمة كأرشيف ZIP.",
+      },
+      de: {
+        name: "PDF Splitter",
+        description:
+          "PDF-Seiten nach Bereich aufteilen, ausgewählte Seiten in eine PDF-Datei extrahieren oder mehrere getrennte Dateien als ZIP-Archiv herunterladen.",
+      },
+      en: {
+        name: "PDF Splitter",
+        description:
+          "Split PDF pages by range, extract selected pages into one PDF, or download multiple split files as a ZIP archive.",
+      },
+      es: {
+        name: "Divisor de PDF",
+        description:
+          "Divide páginas de PDF por rango, extrae páginas seleccionadas en un solo PDF o descarga varios archivos divididos como un archivo ZIP.",
+      },
+      fr: {
+        name: "Séparateur de PDF",
+        description:
+          "Divisez les pages d’un PDF par plage, extrayez les pages sélectionnées dans un seul PDF ou téléchargez plusieurs fichiers découpés sous forme d’archive ZIP.",
+      },
+      he: {
+        name: "מפצל PDF",
+        description:
+          "פצלו עמודי PDF לפי טווח, חלצו עמודים נבחרים ל-PDF אחד, או הורידו כמה קבצים מפוצלים כארכיון ZIP.",
+      },
+      hi: {
+        name: "PDF Splitter",
+        description:
+          "PDF पेजों को रेंज के अनुसार विभाजित करें, चुने गए पेजों को एक PDF में निकालें, या कई विभाजित फ़ाइलों को ZIP आर्काइव के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "PDF Splitter",
+        description:
+          "Pisahkan halaman PDF berdasarkan rentang, ekstrak halaman yang dipilih ke dalam satu PDF, atau unduh beberapa file hasil pemisahan sebagai arsip ZIP.",
+      },
+      it: {
+        name: "Divisore PDF",
+        description:
+          "Dividi le pagine PDF per intervallo, estrai le pagine selezionate in un unico PDF oppure scarica più file divisi come archivio ZIP.",
+      },
+      ja: {
+        name: "PDF 分割ツール",
+        description:
+          "PDF ページを範囲で分割したり、選択したページを 1 つの PDF に抽出したり、複数の分割ファイルを ZIP アーカイブとしてダウンロードしたりできます。",
+      },
+      ko: {
+        name: "PDF 분할기",
+        description:
+          "PDF 페이지를 범위별로 나누고, 선택한 페이지를 하나의 PDF로 추출하거나, 여러 분할 파일을 ZIP 아카이브로 다운로드하세요.",
+      },
+      ms: {
+        name: "PDF Splitter",
+        description:
+          "Pisahkan halaman PDF mengikut julat, ekstrak halaman yang dipilih ke dalam satu PDF, atau muat turun beberapa fail pecahan sebagai arkib ZIP.",
+      },
+      nl: {
+        name: "PDF Splitter",
+        description:
+          "Splits PDF-pagina's op bereik, extraheer geselecteerde pagina's naar één PDF of download meerdere gesplitste bestanden als ZIP-archief.",
+      },
+      no: {
+        name: "PDF-deler",
+        description:
+          "Del PDF-sider etter område, trekk ut valgte sider til én PDF, eller last ned flere delte filer som et ZIP-arkiv.",
+      },
+      pl: {
+        name: "PDF Splitter",
+        description:
+          "Dziel strony PDF według zakresu, wyodrębniaj wybrane strony do jednego pliku PDF albo pobieraj wiele podzielonych plików jako archiwum ZIP.",
+      },
+      pt: {
+        name: "Divisor de PDF",
+        description:
+          "Divida páginas de PDF por intervalo, extraia páginas selecionadas em um único PDF ou baixe vários arquivos divididos como um arquivo ZIP.",
+      },
+      ru: {
+        name: "Разделитель PDF",
+        description:
+          "Разделяйте страницы PDF по диапазонам, извлекайте выбранные страницы в один PDF или скачивайте несколько разделенных файлов в ZIP-архиве.",
+      },
+      sv: {
+        name: "PDF-delare",
+        description:
+          "Dela PDF-sidor efter intervall, extrahera valda sidor till en PDF eller ladda ned flera delade filer som ett ZIP-arkiv.",
+      },
+      th: {
+        name: "PDF Splitter",
+        description:
+          "แยกหน้า PDF ตามช่วงหน้า แยกหน้าที่เลือกออกเป็น PDF เดียว หรือดาวน์โหลดไฟล์ที่แยกหลายไฟล์เป็นไฟล์ ZIP",
+      },
+      tr: {
+        name: "PDF Splitter",
+        description:
+          "PDF sayfalarını aralığa göre bölün, seçili sayfaları tek bir PDF'ye çıkarın veya birden fazla bölünmüş dosyayı ZIP arşivi olarak indirin.",
+      },
+      vi: {
+        name: "Trình tách PDF",
+        description:
+          "Tách các trang PDF theo phạm vi, trích xuất các trang đã chọn thành một PDF, hoặc tải nhiều tệp đã tách xuống dưới dạng kho lưu trữ ZIP.",
+      },
+      "zh-CN": {
+        name: "PDF 拆分器",
+        description:
+          "按范围拆分 PDF 页面，将选定页面提取为一个 PDF，或将多个拆分文件作为 ZIP 归档下载。",
+      },
+      "zh-TW": {
+        name: "PDF 分割器",
+        description:
+          "依頁面範圍分割 PDF、將選取的頁面擷取成一個 PDF，或將多個分割檔案下載為 ZIP 壓縮檔。",
+      },
+    },
+  },
+  {
+    slug: "pdf-text-extractor",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "text", "extractor", "document", "offline"],
+    locales: {
+      ar: {
+        name: "PDF Text Extractor",
+        description:
+          "استخرج النص القابل للتحديد من ملفات PDF محليا في متصفحك وصدّره كنص عادي.",
+      },
+      de: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrahiere auswählbaren Text aus PDF-Dateien lokal in deinem Browser und exportiere ihn als reinen Text.",
+      },
+      en: {
+        name: "PDF Text Extractor",
+        description:
+          "Extract selectable text from PDF files locally in your browser and export it as plain text.",
+      },
+      es: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrae texto seleccionable de archivos PDF localmente en tu navegador y expórtalo como texto sin formato.",
+      },
+      fr: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrayez localement le texte sélectionnable de fichiers PDF dans votre navigateur et exportez-le en texte brut.",
+      },
+      he: {
+        name: "PDF Text Extractor",
+        description:
+          "חלצו טקסט ניתן לבחירה מקובצי PDF באופן מקומי בדפדפן ויצאו אותו כטקסט רגיל.",
+      },
+      hi: {
+        name: "PDF Text Extractor",
+        description:
+          "PDF फाइलों से चुनने योग्य टेक्स्ट को अपने ब्राउजर में स्थानीय रूप से निकालें और उसे plain text के रूप में export करें।",
+      },
+      id: {
+        name: "PDF Text Extractor",
+        description:
+          "Ekstrak teks yang dapat dipilih dari file PDF secara lokal di browser Anda dan ekspor sebagai teks biasa.",
+      },
+      it: {
+        name: "PDF Text Extractor",
+        description:
+          "Estrai testo selezionabile dai file PDF localmente nel browser ed esportalo come testo normale.",
+      },
+      ja: {
+        name: "PDF Text Extractor",
+        description:
+          "PDFファイルから選択可能なテキストをブラウザ内でローカルに抽出し、プレーンテキストとしてエクスポートします。",
+      },
+      ko: {
+        name: "PDF Text Extractor",
+        description:
+          "브라우저에서 PDF 파일의 선택 가능한 텍스트를 로컬로 추출하고 일반 텍스트로 내보냅니다.",
+      },
+      ms: {
+        name: "PDF Text Extractor",
+        description:
+          "Ekstrak teks boleh dipilih daripada fail PDF secara setempat dalam pelayar anda dan eksportkannya sebagai teks biasa.",
+      },
+      nl: {
+        name: "PDF Text Extractor",
+        description:
+          "Haal selecteerbare tekst lokaal in je browser uit PDF-bestanden en exporteer die als platte tekst.",
+      },
+      no: {
+        name: "PDF Text Extractor",
+        description:
+          "Trekk ut markerbar tekst fra PDF-filer lokalt i nettleseren din, og eksporter den som ren tekst.",
+      },
+      pl: {
+        name: "PDF Text Extractor",
+        description:
+          "Wyodrębniaj zaznaczalny tekst z plików PDF lokalnie w przeglądarce i eksportuj go jako zwykły tekst.",
+      },
+      pt: {
+        name: "PDF Text Extractor",
+        description:
+          "Extraia texto selecionável de arquivos PDF localmente no seu navegador e exporte como texto simples.",
+      },
+      ru: {
+        name: "PDF Text Extractor",
+        description:
+          "Извлекайте выделяемый текст из PDF-файлов локально в браузере и экспортируйте его как обычный текст.",
+      },
+      sv: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrahera markerbar text från PDF-filer lokalt i din webbläsare och exportera den som oformaterad text.",
+      },
+      th: {
+        name: "PDF Text Extractor",
+        description:
+          "ดึงข้อความที่เลือกได้จากไฟล์ PDF ภายในเบราว์เซอร์ของคุณ และส่งออกเป็นข้อความล้วน",
+      },
+      tr: {
+        name: "PDF Text Extractor",
+        description:
+          "PDF dosyalarından seçilebilir metni tarayıcınızda yerel olarak çıkarın ve düz metin olarak dışa aktarın.",
+      },
+      vi: {
+        name: "PDF Text Extractor",
+        description:
+          "Trích xuất văn bản có thể chọn từ tệp PDF ngay trong trình duyệt của bạn và xuất dưới dạng văn bản thuần túy.",
+      },
+      "zh-CN": {
+        name: "PDF 文本提取器",
+        description:
+          "在浏览器中本地提取 PDF 文件中的可选择文本，并导出为纯文本。",
+      },
+      "zh-TW": {
+        name: "PDF 文字擷取工具",
+        description: "在瀏覽器本機從 PDF 檔案擷取可選取文字，並匯出為純文字。",
+      },
+    },
+  },
+  {
+    slug: "pdf-to-image-converter",
+    category: "pdf",
+    icon: "image",
+    tags: ["pdf", "image", "converter", "export", "offline"],
+    locales: {
+      ar: {
+        name: "محول PDF إلى صور",
+        description:
+          "حوّل صفحات PDF إلى صور PNG أو JPG أو WebP مع عناصر تحكم في DPI، ومعاينة الصفحات، والتصدير بصيغة ZIP.",
+      },
+      de: {
+        name: "PDF-zu-Bild-Konverter",
+        description:
+          "Konvertiere PDF-Seiten in PNG-, JPG- oder WebP-Bilder mit DPI-Steuerung, Seitenvorschau und ZIP-Export.",
+      },
+      en: {
+        name: "PDF to Image Converter",
+        description:
+          "Convert PDF pages to PNG, JPG, or WebP images with DPI controls, page preview, and ZIP export.",
+      },
+      es: {
+        name: "Convertidor de PDF a imagen",
+        description:
+          "Convierte páginas de PDF en imágenes PNG, JPG o WebP con controles de DPI, vista previa de páginas y exportación ZIP.",
+      },
+      fr: {
+        name: "Convertisseur PDF en images",
+        description:
+          "Convertissez les pages PDF en images PNG, JPG ou WebP avec contrôle du DPI, aperçu des pages et export ZIP.",
+      },
+      he: {
+        name: "ממיר PDF לתמונות",
+        description:
+          "המרת עמודי PDF לתמונות PNG, JPG או WebP עם בקרות DPI, תצוגה מקדימה לעמוד וייצוא ZIP.",
+      },
+      hi: {
+        name: "PDF से इमेज कनवर्टर",
+        description:
+          "DPI नियंत्रणों, पेज पूर्वावलोकन और ZIP निर्यात के साथ PDF पेजों को PNG, JPG या WebP इमेज में बदलें।",
+      },
+      id: {
+        name: "Konverter PDF ke Gambar",
+        description:
+          "Konversi halaman PDF menjadi gambar PNG, JPG, atau WebP dengan kontrol DPI, pratinjau halaman, dan ekspor ZIP.",
+      },
+      it: {
+        name: "Convertitore da PDF a immagini",
+        description:
+          "Converti pagine PDF in immagini PNG, JPG o WebP con controlli DPI, anteprima delle pagine ed esportazione ZIP.",
+      },
+      ja: {
+        name: "PDF から画像への変換",
+        description:
+          "DPI 調整、ページプレビュー、ZIP エクスポートを使って、PDF ページを PNG、JPG、WebP 画像に変換します。",
+      },
+      ko: {
+        name: "PDF 이미지 변환기",
+        description:
+          "DPI 제어, 페이지 미리보기, ZIP 내보내기를 사용해 PDF 페이지를 PNG, JPG 또는 WebP 이미지로 변환하세요.",
+      },
+      ms: {
+        name: "Penukar PDF kepada Imej",
+        description:
+          "Tukar halaman PDF menjadi imej PNG, JPG atau WebP dengan kawalan DPI, pratonton halaman dan eksport ZIP.",
+      },
+      nl: {
+        name: "PDF-naar-afbeelding-converter",
+        description:
+          "Zet PDF-pagina's om naar PNG-, JPG- of WebP-afbeeldingen met DPI-instellingen, paginavoorbeeld en ZIP-export.",
+      },
+      no: {
+        name: "PDF-til-bilde-konverter",
+        description:
+          "Konverter PDF-sider til PNG-, JPG- eller WebP-bilder med DPI-innstillinger, sideforhåndsvisning og ZIP-eksport.",
+      },
+      pl: {
+        name: "Konwerter PDF na obrazy",
+        description:
+          "Konwertuj strony PDF na obrazy PNG, JPG lub WebP z kontrolą DPI, podglądem stron i eksportem ZIP.",
+      },
+      pt: {
+        name: "Conversor de PDF para imagens",
+        description:
+          "Converta páginas de PDF em imagens PNG, JPG ou WebP com controles de DPI, pré-visualização de páginas e exportação em ZIP.",
+      },
+      ru: {
+        name: "Конвертер PDF в изображения",
+        description:
+          "Преобразуйте страницы PDF в изображения PNG, JPG или WebP с настройками DPI, предварительным просмотром страниц и экспортом в ZIP.",
+      },
+      sv: {
+        name: "PDF-till-bild-konverterare",
+        description:
+          "Konvertera PDF-sidor till PNG-, JPG- eller WebP-bilder med DPI-kontroller, sidförhandsvisning och ZIP-export.",
+      },
+      th: {
+        name: "ตัวแปลง PDF เป็นรูปภาพ",
+        description:
+          "แปลงหน้า PDF เป็นรูปภาพ PNG, JPG หรือ WebP พร้อมการควบคุม DPI การดูตัวอย่างหน้า และการส่งออกเป็น ZIP",
+      },
+      tr: {
+        name: "PDF'den Görüntüye Dönüştürücü",
+        description:
+          "PDF sayfalarını DPI denetimleri, sayfa önizlemesi ve ZIP dışa aktarımıyla PNG, JPG veya WebP görüntülerine dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi PDF sang hình ảnh",
+        description:
+          "Chuyển đổi các trang PDF thành hình ảnh PNG, JPG hoặc WebP với tùy chọn DPI, xem trước trang và xuất ZIP.",
+      },
+      "zh-CN": {
+        name: "PDF 转图片转换器",
+        description:
+          "在浏览器本地将 PDF 页面转换为 PNG、JPG 或 WebP 图片，并支持 DPI 控制、页面预览和 ZIP 导出。",
+      },
+      "zh-TW": {
+        name: "PDF 轉圖片轉換器",
+        description:
+          "使用 DPI 控制、頁面預覽和 ZIP 匯出，將 PDF 頁面轉換成 PNG、JPG 或 WebP 圖片。",
+      },
+    },
+  },
+  {
     slug: "pgp-key-generator",
     category: "network",
     icon: "lock",
@@ -16246,6 +17356,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "正則測試與取代",
         description:
           "測試正則表達式、檢查匹配結果，並直接預覽取代後的文字輸出。",
+      },
+    },
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    category: "pdf",
+    icon: "lock",
+    tags: ["pdf", "password", "permissions", "decrypt", "offline"],
+    locales: {
+      ar: {
+        name: "إزالة كلمة مرور مالك PDF",
+        description:
+          "أزِل قيود كلمة مرور مالك PDF محليًا لفتح أذونات التحرير والطباعة والنسخ.",
+      },
+      de: {
+        name: "PDF-Besitzerpasswort entfernen",
+        description:
+          "Entferne PDF-Besitzerpasswort-Beschränkungen lokal, damit Berechtigungen zum Bearbeiten, Drucken und Kopieren freigegeben werden.",
+      },
+      en: {
+        name: "Remove PDF Owner Password",
+        description:
+          "Remove PDF owner password restrictions locally so editing, printing, and copying permissions are unlocked.",
+      },
+      es: {
+        name: "Quitar contraseña de propietario del PDF",
+        description:
+          "Elimina localmente las restricciones de contraseña de propietario del PDF para desbloquear los permisos de edición, impresión y copia.",
+      },
+      fr: {
+        name: "Supprimer le mot de passe propriétaire d'un PDF",
+        description:
+          "Supprimez localement les restrictions liées au mot de passe propriétaire d'un PDF afin de débloquer les autorisations de modification, d'impression et de copie.",
+      },
+      he: {
+        name: "הסרת מגבלות סיסמת בעלים מ-PDF",
+        description:
+          "הסירו מגבלות של סיסמת בעלים מ-PDF באופן מקומי, כדי לפתוח הרשאות עריכה, הדפסה והעתקה.",
+      },
+      hi: {
+        name: "PDF स्वामी पासवर्ड हटाएं",
+        description:
+          "PDF के स्वामी-पासवर्ड प्रतिबंधों को स्थानीय रूप से हटाएं, ताकि संपादन, प्रिंटिंग और कॉपी करने की अनुमतियां अनलॉक हो जाएं।",
+      },
+      id: {
+        name: "Hapus Kata Sandi Pemilik PDF",
+        description:
+          "Hapus pembatasan kata sandi pemilik PDF secara lokal agar izin mengedit, mencetak, dan menyalin terbuka.",
+      },
+      it: {
+        name: "Rimuovi password proprietario PDF",
+        description:
+          "Rimuovi localmente le restrizioni della password proprietario dai PDF, così le autorizzazioni di modifica, stampa e copia vengono sbloccate.",
+      },
+      ja: {
+        name: "PDF 所有者パスワード制限解除ツール",
+        description:
+          "編集、印刷、コピーの権限制限を解除するために、PDF の所有者パスワード制限をローカルで削除します。",
+      },
+      ko: {
+        name: "PDF 소유자 비밀번호 제거",
+        description:
+          "편집, 인쇄, 복사 권한이 잠금 해제되도록 PDF 소유자 비밀번호 제한을 로컬에서 제거하세요.",
+      },
+      ms: {
+        name: "Alih Keluar Kata Laluan Pemilik PDF",
+        description:
+          "Alih keluar sekatan kata laluan pemilik PDF secara setempat supaya kebenaran menyunting, mencetak dan menyalin dinyahkunci.",
+      },
+      nl: {
+        name: "PDF-eigenaarswachtwoord verwijderen",
+        description:
+          "Verwijder lokaal PDF-beperkingen door het eigenaarswachtwoord, zodat machtigingen voor bewerken, afdrukken en kopiëren worden ontgrendeld.",
+      },
+      no: {
+        name: "Fjern PDF-eierpassord",
+        description:
+          "Fjern begrensninger satt av PDF-eierpassord lokalt, slik at tillatelser for redigering, utskrift og kopiering låses opp.",
+      },
+      pl: {
+        name: "Usuń hasło właściciela PDF",
+        description:
+          "Usuń lokalnie ograniczenia hasła właściciela pliku PDF, aby odblokować uprawnienia do edycji, drukowania i kopiowania.",
+      },
+      pt: {
+        name: "Remover palavra-passe de proprietário do PDF",
+        description:
+          "Remova localmente as restrições de palavra-passe de proprietário do PDF para desbloquear as permissões de edição, impressão e cópia.",
+      },
+      ru: {
+        name: "Удаление пароля владельца PDF",
+        description:
+          "Локально снимайте ограничения пароля владельца PDF, чтобы разблокировать разрешения на редактирование, печать и копирование.",
+      },
+      sv: {
+        name: "Ta bort PDF-ägarlösenord",
+        description:
+          "Ta bort begränsningar från PDF:ens ägarlösenord lokalt så att behörigheter för redigering, utskrift och kopiering låses upp.",
+      },
+      th: {
+        name: "ลบข้อจำกัดรหัสผ่านเจ้าของ PDF",
+        description:
+          "ลบข้อจำกัดรหัสผ่านเจ้าของ PDF ในเครื่อง เพื่อปลดล็อกสิทธิ์การแก้ไข การพิมพ์ และการคัดลอก",
+      },
+      tr: {
+        name: "PDF Sahip Parolasını Kaldır",
+        description:
+          "PDF sahip parolası kısıtlamalarını yerel olarak kaldırarak düzenleme, yazdırma ve kopyalama izinlerinin kilidini açın.",
+      },
+      vi: {
+        name: "Gỡ mật khẩu chủ sở hữu PDF",
+        description:
+          "Gỡ cục bộ các hạn chế do mật khẩu chủ sở hữu PDF đặt ra để mở khóa quyền chỉnh sửa, in và sao chép.",
+      },
+      "zh-CN": {
+        name: "移除 PDF 所有者密码",
+        description:
+          "在本地移除 PDF 所有者密码限制，解锁编辑、打印和复制权限。",
+      },
+      "zh-TW": {
+        name: "移除 PDF 擁有者密碼",
+        description:
+          "在本機移除 PDF 擁有者密碼限制，解除編輯、列印和複製權限。",
       },
     },
   },
@@ -21572,6 +22805,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "ulid-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "ulid",
+      "uuid",
+      "id",
+      "identifier",
+      "unique",
+      "sortable",
+      "timestamp",
+      "random",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولد ULID",
+        description:
+          "أنشئ معرفات Universally Unique Lexicographically Sortable داخل المتصفح مع طوابع زمنية مخصصة اختيارية.",
+      },
+      de: {
+        name: "ULID-Generator",
+        description:
+          "Erzeuge universell eindeutige, lexikografisch sortierbare Identifikatoren im Browser mit optionalen benutzerdefinierten Zeitstempeln.",
+      },
+      en: {
+        name: "ULID Generator",
+        description:
+          "Generate Universally Unique Lexicographically Sortable Identifiers in-browser with optional custom timestamps.",
+      },
+      es: {
+        name: "Generador de ULID",
+        description:
+          "Genera identificadores Universally Unique Lexicographically Sortable en el navegador con marcas de tiempo personalizadas opcionales.",
+      },
+      fr: {
+        name: "Générateur ULID",
+        description:
+          "Générez dans le navigateur des identifiants universellement uniques, triables lexicographiquement, avec horodatages personnalisés facultatifs.",
+      },
+      he: {
+        name: "מחולל ULID",
+        description:
+          "צרו בדפדפן מזהים ייחודיים אוניברסלית הניתנים למיון לקסיקוגרפי, עם חותמות זמן מותאמות אישית כאפשרות.",
+      },
+      hi: {
+        name: "ULID जेनरेटर",
+        description:
+          "वैकल्पिक कस्टम टाइमस्टैम्प के साथ ब्राउज़र में Universally Unique Lexicographically Sortable Identifiers जनरेट करें।",
+      },
+      id: {
+        name: "Generator ULID",
+        description:
+          "Buat Universally Unique Lexicographically Sortable Identifier di browser dengan stempel waktu kustom opsional.",
+      },
+      it: {
+        name: "Generatore ULID",
+        description:
+          "Genera nel browser Universally Unique Lexicographically Sortable Identifiers con timestamp personalizzati opzionali.",
+      },
+      ja: {
+        name: "ULID Generator",
+        description:
+          "任意のカスタムタイムスタンプにも対応した、辞書順にソート可能な汎用一意識別子をブラウザー内で生成します。",
+      },
+      ko: {
+        name: "ULID 생성기",
+        description:
+          "선택적으로 사용자 지정 타임스탬프를 사용해 브라우저 안에서 Universally Unique Lexicographically Sortable Identifier를 생성합니다.",
+      },
+      ms: {
+        name: "Penjana ULID",
+        description:
+          "Jana Pengecam Boleh Isih Secara Leksikografi yang Unik Secara Universal dalam pelayar dengan cap masa tersuai pilihan.",
+      },
+      nl: {
+        name: "ULID Generator",
+        description:
+          "Genereer Universally Unique Lexicographically Sortable Identifiers in de browser met optionele aangepaste tijdstempels.",
+      },
+      no: {
+        name: "ULID-generator",
+        description:
+          "Generer Universally Unique Lexicographically Sortable Identifiers i nettleseren med valgfrie egendefinerte tidsstempler.",
+      },
+      pl: {
+        name: "Generator ULID",
+        description:
+          "Generuj w przeglądarce uniwersalnie unikalne identyfikatory sortowalne leksykograficznie z opcjonalnymi niestandardowymi znacznikami czasu.",
+      },
+      pt: {
+        name: "Gerador de ULID",
+        description:
+          "Gere Identificadores Universalmente Únicos e Lexicograficamente Ordenáveis no navegador, com timestamps personalizados opcionais.",
+      },
+      ru: {
+        name: "Генератор ULID",
+        description:
+          "Генерируйте универсально уникальные лексикографически сортируемые идентификаторы прямо в браузере с необязательными пользовательскими временными метками.",
+      },
+      sv: {
+        name: "ULID-generator",
+        description:
+          "Generera Universally Unique Lexicographically Sortable Identifiers i webbläsaren med valfria anpassade tidsstämplar.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง ULID",
+        description:
+          "สร้าง Universally Unique Lexicographically Sortable Identifiers ในเบราว์เซอร์ พร้อมกำหนดเวลาที่กำหนดเองได้",
+      },
+      tr: {
+        name: "ULID Oluşturucu",
+        description:
+          "İsteğe bağlı özel zaman damgalarıyla tarayıcı içinde Evrensel Olarak Benzersiz, Sözlük Sırasına Göre Sıralanabilir Tanımlayıcılar oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo ULID",
+        description:
+          "Tạo Universally Unique Lexicographically Sortable Identifiers ngay trong trình duyệt, với tùy chọn mốc thời gian tùy chỉnh.",
+      },
+      "zh-CN": {
+        name: "ULID 生成器",
+        description:
+          "在浏览器内生成按字典序可排序的通用唯一标识符，并可选择自定义时间戳。",
+      },
+      "zh-TW": {
+        name: "ULID 產生器",
+        description:
+          "在瀏覽器中產生 Universally Unique Lexicographically Sortable Identifiers，並可選擇自訂時間戳記。",
+      },
+    },
+  },
+  {
     slug: "unicode-escape-unescape",
     category: "web",
     icon: "globe",
@@ -22706,6 +24072,267 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "uuid-max-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "max uuid",
+      "identifier",
+      "sentinel",
+      "upper bound",
+      "rfc 9562",
+    ],
+    locales: {
+      ar: {
+        name: "مولد Max UUID",
+        description:
+          "أنشئ وانسخ قيمة Max UUID القياسية المكوّنة كلها من آحاد لاستخدامها في الحدود العليا، والقيم الحارسة، واختبارات النطاق.",
+      },
+      de: {
+        name: "Max UUID Generator",
+        description:
+          "Erzeuge und kopiere die standardisierte Max UUID mit lauter Einsen für obere Grenzen, Sentinel-Werte und Bereichstests.",
+      },
+      en: {
+        name: "Max UUID Generator",
+        description:
+          "Generate and copy the standardized all-one max UUID for upper bounds, sentinels, and range tests.",
+      },
+      es: {
+        name: "Generador de Max UUID",
+        description:
+          "Genera y copia el UUID máximo estandarizado, compuesto solo por unos, para límites superiores, centinelas y pruebas de rangos.",
+      },
+      fr: {
+        name: "Générateur de Max UUID",
+        description:
+          "Générez et copiez le Max UUID standardisé composé uniquement de uns pour les bornes supérieures, les sentinelles et les tests de plage.",
+      },
+      he: {
+        name: "מחולל Max UUID",
+        description:
+          "צרו והעתיקו את ה-Max UUID התקני שמורכב כולו מאחדות, עבור גבולות עליונים, ערכי sentinel ובדיקות טווח.",
+      },
+      hi: {
+        name: "Max UUID Generator",
+        description:
+          "ऊपरी सीमाओं, sentinel values, और range tests के लिए मानकीकृत all-one max UUID जनरेट और कॉपी करें।",
+      },
+      id: {
+        name: "Generator Max UUID",
+        description:
+          "Buat dan salin max UUID semua-satu standar untuk batas atas, sentinel, dan pengujian rentang.",
+      },
+      it: {
+        name: "Generatore di Max UUID",
+        description:
+          "Genera e copia il max UUID standardizzato composto solo da uno per limiti superiori, sentinelle e test di intervallo.",
+      },
+      ja: {
+        name: "Max UUID Generator",
+        description:
+          "上限値、センチネル、範囲テスト向けに、標準化された全ビット 1 の max UUID を生成してコピーします。",
+      },
+      ko: {
+        name: "Max UUID Generator",
+        description:
+          "상한, 센티널, 범위 테스트에 사용할 표준 all-one max UUID를 생성하고 복사합니다.",
+      },
+      ms: {
+        name: "Penjana Max UUID",
+        description:
+          "Jana dan salin max UUID semua-satu yang diseragamkan untuk batas atas, sentinel, dan ujian julat.",
+      },
+      nl: {
+        name: "Max UUID Generator",
+        description:
+          "Genereer en kopieer de gestandaardiseerde max UUID met alleen enen voor bovengrenzen, sentinels en bereiktests.",
+      },
+      no: {
+        name: "Max UUID Generator",
+        description:
+          "Generer og kopier den standardiserte max UUID-en med bare ettall for øvre grenser, sentinelverdier og områdetester.",
+      },
+      pl: {
+        name: "Generator Max UUID",
+        description:
+          "Generuj i kopiuj standaryzowany max UUID z samych jedynek do górnych granic, wartowników i testów zakresów.",
+      },
+      pt: {
+        name: "Max UUID Generator",
+        description:
+          "Gere e copie o max UUID padronizado composto só por uns para limites superiores, sentinelas e testes de intervalo.",
+      },
+      ru: {
+        name: "Генератор Max UUID",
+        description:
+          "Создавайте и копируйте стандартизированный max UUID из одних единиц для верхних границ, специальных значений и тестов диапазонов.",
+      },
+      sv: {
+        name: "Max UUID Generator",
+        description:
+          "Generera och kopiera den standardiserade max-UUID:n med enbart ettor för övre gränser, sentinlar och intervalltester.",
+      },
+      th: {
+        name: "ตัวสร้าง Max UUID",
+        description:
+          "สร้างและคัดลอก max UUID มาตรฐานที่เป็นค่า all-one สำหรับขอบเขตบน ค่า sentinel และการทดสอบช่วง",
+      },
+      tr: {
+        name: "Max UUID Generator",
+        description:
+          "Üst sınırlar, sentinel değerler ve aralık testleri için standartlaştırılmış tüm bitleri bir olan max UUID değerini üretin ve kopyalayın.",
+      },
+      vi: {
+        name: "Trình tạo Max UUID",
+        description:
+          "Tạo và sao chép max UUID toàn bit một theo chuẩn cho giới hạn trên, sentinel và kiểm thử phạm vi.",
+      },
+      "zh-CN": {
+        name: "Max UUID 生成器",
+        description:
+          "生成并复制标准化的全 1 max UUID，用于上限、哨兵值和范围测试。",
+      },
+      "zh-TW": {
+        name: "Max UUID 產生器",
+        description:
+          "產生並複製標準化的全 1 max UUID，可用於上限、哨兵值和範圍測試。",
+      },
+    },
+  },
+  {
+    slug: "uuid-nil-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "nil",
+      "null",
+      "identifier",
+      "placeholder",
+      "generator",
+      "rfc",
+    ],
+    locales: {
+      ar: {
+        name: "مولد Nil UUID",
+        description:
+          "أنشئ وانسخ Nil UUID القياسي المكون بالكامل من أصفار لاستخدامه في العناصر النائبة والقيم الافتراضية وقيم الحارس.",
+      },
+      de: {
+        name: "Nil-UUID-Generator",
+        description:
+          "Erzeuge und kopiere die standardisierte Null-UUID mit lauter Nullen für Platzhalter, Standardwerte und Sentinel-Werte.",
+      },
+      en: {
+        name: "Nil UUID Generator",
+        description:
+          "Generate and copy the standardized all-zero nil UUID for placeholders, defaults, and sentinel values.",
+      },
+      es: {
+        name: "Generador de UUID nil",
+        description:
+          "Genera y copia el UUID nil estandarizado compuesto solo por ceros para marcadores de posición, valores predeterminados y valores centinela.",
+      },
+      fr: {
+        name: "Generateur d'UUID nil",
+        description:
+          "Generez et copiez l'UUID nil standardise compose uniquement de zeros pour les espaces reserves, les valeurs par defaut et les valeurs sentinelles.",
+      },
+      he: {
+        name: "מחולל Nil UUID",
+        description:
+          "צרו והעתיקו את ה-nil UUID התקני שכולו אפסים עבור מצייני מקום, ערכי ברירת מחדל וערכי sentinel.",
+      },
+      hi: {
+        name: "Nil UUID Generator",
+        description:
+          "प्लेसहोल्डर, डिफॉल्ट और सेंटिनल मानों के लिए मानकीकृत सभी-शून्य nil UUID बनाएं और कॉपी करें.",
+      },
+      id: {
+        name: "Generator UUID Nil",
+        description:
+          "Buat dan salin UUID nil standar yang seluruhnya nol untuk placeholder, nilai default, dan nilai sentinel.",
+      },
+      it: {
+        name: "Generatore di UUID nil",
+        description:
+          "Genera e copia l'UUID nil standardizzato composto solo da zeri per segnaposto, valori predefiniti e valori sentinella.",
+      },
+      ja: {
+        name: "Nil UUID Generator",
+        description:
+          "プレースホルダー、デフォルト値、センチネル値に使う、標準化された全ゼロの nil UUID を生成してコピーします。",
+      },
+      ko: {
+        name: "Nil UUID 생성기",
+        description:
+          "자리 표시자, 기본값, 센티널 값에 사용할 표준화된 모든 값이 0인 nil UUID를 생성하고 복사합니다.",
+      },
+      ms: {
+        name: "Penjana UUID Nil",
+        description:
+          "Jana dan salin UUID nil semua sifar yang distandardkan untuk pemegang tempat, lalai, dan nilai sentinel.",
+      },
+      nl: {
+        name: "Nil UUID-generator",
+        description:
+          "Genereer en kopieer de gestandaardiseerde nil UUID met alleen nullen voor placeholders, standaardwaarden en sentinelwaarden.",
+      },
+      no: {
+        name: "Nil UUID Generator",
+        description:
+          "Generer og kopier den standardiserte nil-UUID-en med bare nuller for plassholdere, standardverdier og sentinel-verdier.",
+      },
+      pl: {
+        name: "Generator Nil UUID",
+        description:
+          "Wygeneruj i skopiuj znormalizowany, złożony z samych zer nil UUID do symboli zastępczych, wartości domyślnych i wartości sentinel.",
+      },
+      pt: {
+        name: "Gerador de UUID Nil",
+        description:
+          "Gere e copie o UUID nil padronizado com todos os zeros para placeholders, padrões e valores sentinela.",
+      },
+      ru: {
+        name: "Генератор nil UUID",
+        description:
+          "Создавайте и копируйте стандартизированный nil UUID из одних нулей для заполнителей, значений по умолчанию и сигнальных значений.",
+      },
+      sv: {
+        name: "Nil UUID-generator",
+        description:
+          "Generera och kopiera den standardiserade nil-UUID:n med bara nollor för platshållare, standardvärden och sentinel-värden.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง Nil UUID",
+        description:
+          "สร้างและคัดลอก nil UUID มาตรฐานที่เป็นศูนย์ทั้งหมด สำหรับ placeholder, ค่าเริ่มต้น และค่า sentinel",
+      },
+      tr: {
+        name: "Nil UUID Oluşturucu",
+        description:
+          "Yer tutucular, varsayılanlar ve sentinel değerler için standartlaştırılmış tamamı sıfır nil UUID'yi oluşturup kopyalayın.",
+      },
+      vi: {
+        name: "Trình tạo UUID nil",
+        description:
+          "Tạo và sao chép UUID nil toàn số không theo tiêu chuẩn để dùng làm phần giữ chỗ, giá trị mặc định và giá trị sentinel.",
+      },
+      "zh-CN": {
+        name: "Nil UUID 生成器",
+        description:
+          "生成并复制标准化的全零 nil UUID，用于占位符、默认值和哨兵值。",
+      },
+      "zh-TW": {
+        name: "Nil UUID 產生器",
+        description:
+          "產生並複製標準化的全零 nil UUID，可用於預留位置、預設值與哨兵值。",
+      },
+    },
+  },
+  {
     slug: "uuid-v1-generator",
     category: "developer",
     icon: "lock",
@@ -23359,6 +24986,401 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       "zh-TW": {
         name: "UUID v4 產生器",
         description: "直接在你的瀏覽器本機產生隨機 RFC 4122/RFC 9562 UUID v4。",
+      },
+    },
+  },
+  {
+    slug: "uuid-v5-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid-v5",
+      "identifier",
+      "deterministic",
+      "namespace",
+      "sha1",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "UUID v5 Generator",
+        description:
+          "أنشئ معرفات UUID v5 حتمية قائمة على الاسم من UUID لمساحة أسماء واسم، بالكامل داخل متصفحك.",
+      },
+      de: {
+        name: "UUID v5 Generator",
+        description:
+          "Erzeuge deterministische namensbasierte UUID-v5-Kennungen aus einer Namespace-UUID und einem Namen, vollständig in deinem Browser.",
+      },
+      en: {
+        name: "UUID v5 Generator",
+        description:
+          "Generate deterministic name-based UUID v5 identifiers from a namespace UUID and name, entirely in your browser.",
+      },
+      es: {
+        name: "Generador de UUID v5",
+        description:
+          "Genera identificadores UUID v5 deterministas basados en nombres a partir de un UUID de espacio de nombres y un nombre, íntegramente en tu navegador.",
+      },
+      fr: {
+        name: "UUID v5 Generator",
+        description:
+          "Générez des identifiants UUID v5 déterministes basés sur un nom à partir d'un UUID d'espace de noms et d'un nom, entièrement dans votre navigateur.",
+      },
+      he: {
+        name: "UUID v5 Generator",
+        description:
+          "צרו מזהי UUID v5 דטרמיניסטיים מבוססי שם מ-UUID מרחב שמות ומשם, כולו בדפדפן שלכם.",
+      },
+      hi: {
+        name: "UUID v5 Generator",
+        description:
+          "नेमस्पेस UUID और नाम से नियतात्मक नाम-आधारित UUID v5 पहचानकर्ता पूरी तरह अपने ब्राउज़र में बनाएं।",
+      },
+      id: {
+        name: "UUID v5 Generator",
+        description:
+          "Buat identifier UUID v5 deterministik berbasis nama dari UUID namespace dan nama, sepenuhnya di browser Anda.",
+      },
+      it: {
+        name: "UUID v5 Generator",
+        description:
+          "Genera identificatori UUID v5 deterministici basati sul nome da un UUID di namespace e da un nome, interamente nel browser.",
+      },
+      ja: {
+        name: "UUID v5 Generator",
+        description:
+          "名前空間 UUID と名前から、決定的な名前ベースの UUID v5 識別子を完全にブラウザー内で生成します。",
+      },
+      ko: {
+        name: "UUID v5 Generator",
+        description:
+          "네임스페이스 UUID와 이름으로 결정적 이름 기반 UUID v5 식별자를 브라우저에서만 생성합니다.",
+      },
+      ms: {
+        name: "UUID v5 Generator",
+        description:
+          "Jana pengecam UUID v5 berasaskan nama yang deterministik daripada UUID ruang nama dan nama, sepenuhnya dalam pelayar anda.",
+      },
+      nl: {
+        name: "UUID v5 Generator",
+        description:
+          "Genereer deterministische naamgebaseerde UUID v5-identificaties op basis van een namespace-UUID en naam, volledig in je browser.",
+      },
+      no: {
+        name: "UUID v5 Generator",
+        description:
+          "Generer deterministiske navnebaserte UUID v5-identifikatorer fra en namespace-UUID og et navn, helt i nettleseren din.",
+      },
+      pl: {
+        name: "UUID v5 Generator",
+        description:
+          "Generuj deterministyczne identyfikatory UUID v5 oparte na nazwie z UUID przestrzeni nazw i nazwy, całkowicie w przeglądarce.",
+      },
+      pt: {
+        name: "UUID v5 Generator",
+        description:
+          "Gere identificadores UUID v5 determinísticos baseados em nome a partir de um UUID de namespace e um nome, inteiramente no seu navegador.",
+      },
+      ru: {
+        name: "UUID v5 Generator",
+        description:
+          "Генерируйте детерминированные идентификаторы UUID v5 на основе имени из UUID пространства имен и имени полностью в браузере.",
+      },
+      sv: {
+        name: "UUID v5 Generator",
+        description:
+          "Generera deterministiska namnbaserade UUID v5-identifierare från ett namnrymds-UUID och ett namn, helt i din webbläsare.",
+      },
+      th: {
+        name: "UUID v5 Generator",
+        description:
+          "สร้างตัวระบุ UUID v5 แบบอิงชื่อที่ให้ผลคงเดิมจาก namespace UUID และชื่อ ทั้งหมดภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "UUID v5 Generator",
+        description:
+          "Bir ad alanı UUID'si ve addan, tamamen tarayıcınızda, deterministik ada dayalı UUID v5 tanımlayıcıları oluşturun.",
+      },
+      vi: {
+        name: "UUID v5 Generator",
+        description:
+          "Tạo mã định danh UUID v5 dựa trên tên, có tính xác định, từ UUID không gian tên và tên, hoàn toàn trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "UUID v5 Generator",
+        description:
+          "完全在浏览器中，根据命名空间 UUID 和名称生成确定性的基于名称的 UUID v5 标识符。",
+      },
+      "zh-TW": {
+        name: "UUID v5 Generator",
+        description:
+          "完全在瀏覽器中，從命名空間 UUID 和名稱產生確定性的名稱型 UUID v5 識別碼。",
+      },
+    },
+  },
+  {
+    slug: "uuid-v6-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuidv6",
+      "id",
+      "identifier",
+      "unique",
+      "sortable",
+      "timestamp",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولد UUID v6",
+        description: "أنشئ معرفات UUID v6 زمنية وقابلة للفرز محليًا في متصفحك.",
+      },
+      de: {
+        name: "UUID-v6-Generator",
+        description:
+          "Erzeuge sortierbare, zeitbasierte UUID-v6-Kennungen lokal in deinem Browser.",
+      },
+      en: {
+        name: "UUID v6 Generator",
+        description:
+          "Generate sortable, time-based UUID v6 identifiers locally in your browser.",
+      },
+      es: {
+        name: "Generador de UUID v6",
+        description:
+          "Genera identificadores UUID v6 ordenables y basados en tiempo localmente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur d'UUID v6",
+        description:
+          "Générez localement dans votre navigateur des identifiants UUID v6 triables et basés sur le temps.",
+      },
+      he: {
+        name: "מחולל UUID v6",
+        description:
+          "צרו מזהי UUID v6 מבוססי זמן וניתנים למיון באופן מקומי בדפדפן שלכם.",
+      },
+      hi: {
+        name: "UUID v6 जनरेटर",
+        description:
+          "अपने ब्राउज़र में स्थानीय रूप से सॉर्ट किए जा सकने वाले, समय-आधारित UUID v6 पहचानकर्ता जनरेट करें.",
+      },
+      id: {
+        name: "Generator UUID v6",
+        description:
+          "Buat pengenal UUID v6 berbasis waktu yang dapat diurutkan secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Generatore UUID v6",
+        description:
+          "Genera localmente nel browser identificatori UUID v6 ordinabili e basati sul tempo.",
+      },
+      ja: {
+        name: "UUID v6 生成ツール",
+        description:
+          "ソート可能な時刻ベースの UUID v6 識別子を、ブラウザー内でローカルに生成します。",
+      },
+      ko: {
+        name: "UUID v6 생성기",
+        description:
+          "정렬 가능한 시간 기반 UUID v6 식별자를 브라우저에서 로컬로 생성합니다.",
+      },
+      ms: {
+        name: "Penjana UUID v6",
+        description:
+          "Jana pengecam UUID v6 berasaskan masa yang boleh diisih secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "UUID v6-generator",
+        description:
+          "Genereer lokaal in je browser sorteerbare, tijdgebaseerde UUID v6-identificatiecodes.",
+      },
+      no: {
+        name: "UUID v6-generator",
+        description:
+          "Generer sorterbare, tidsbaserte UUID v6-identifikatorer lokalt i nettleseren din.",
+      },
+      pl: {
+        name: "Generator UUID v6",
+        description:
+          "Generuj sortowalne, oparte na czasie identyfikatory UUID v6 lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de UUID v6",
+        description:
+          "Gere identificadores UUID v6 ordenáveis e baseados em tempo localmente no seu navegador.",
+      },
+      ru: {
+        name: "Генератор UUID v6",
+        description:
+          "Генерируйте сортируемые идентификаторы UUID v6 на основе времени локально в браузере.",
+      },
+      sv: {
+        name: "UUID v6-generator",
+        description:
+          "Generera sorterbara, tidsbaserade UUID v6-identifierare lokalt i din webbläsare.",
+      },
+      th: {
+        name: "ตัวสร้าง UUID v6",
+        description:
+          "สร้างตัวระบุ UUID v6 แบบอิงเวลาและเรียงลำดับได้ภายในเบราว์เซอร์ของคุณ.",
+      },
+      tr: {
+        name: "UUID v6 Oluşturucu",
+        description:
+          "Sıralanabilir, zaman tabanlı UUID v6 tanımlayıcılarını tarayıcınızda yerel olarak oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo UUID v6",
+        description:
+          "Tạo mã định danh UUID v6 dựa trên thời gian, có thể sắp xếp, ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "UUID v6 生成器",
+        description: "在浏览器本地生成可排序、基于时间的 UUID v6 标识符。",
+      },
+      "zh-TW": {
+        name: "UUID v6 產生器",
+        description:
+          "在瀏覽器中於本機產生可排序、以時間為基礎的 UUID v6 識別碼。",
+      },
+    },
+  },
+  {
+    slug: "uuid-v7-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid-v7",
+      "id",
+      "identifier",
+      "unique",
+      "sortable",
+      "timestamp",
+      "random",
+      "generator",
+      "database",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد UUID v7",
+        description:
+          "أنشئ معرّفات UUID v7 قابلة للفرز حسب الطابع الزمني داخل متصفحك لقواعد البيانات والأحداث والأنظمة الموزعة.",
+      },
+      de: {
+        name: "UUID v7-Generator",
+        description:
+          "Erzeuge nach Zeitstempel sortierbare UUID v7-Kennungen im Browser für Datenbanken, Ereignisse und verteilte Systeme.",
+      },
+      en: {
+        name: "UUID v7 Generator",
+        description:
+          "Generate timestamp-sortable UUID v7 identifiers in your browser for databases, events, and distributed systems.",
+      },
+      es: {
+        name: "Generador de UUID v7",
+        description:
+          "Genera identificadores UUID v7 ordenables por marca de tiempo en tu navegador para bases de datos, eventos y sistemas distribuidos.",
+      },
+      fr: {
+        name: "Générateur d'UUID v7",
+        description:
+          "Générez dans votre navigateur des identifiants UUID v7 triables par horodatage pour les bases de données, les événements et les systèmes distribués.",
+      },
+      he: {
+        name: "מחולל UUID v7",
+        description:
+          "צרו מזהי UUID v7 הניתנים למיון לפי חותמת זמן ישירות בדפדפן, עבור מסדי נתונים, אירועים ומערכות מבוזרות.",
+      },
+      hi: {
+        name: "UUID v7 जनरेटर",
+        description:
+          "डेटाबेस, ईवेंट और वितरित सिस्टम के लिए अपने ब्राउज़र में टाइमस्टैम्प के आधार पर क्रमबद्ध होने योग्य UUID v7 पहचानकर्ता जनरेट करें।",
+      },
+      id: {
+        name: "Generator UUID v7",
+        description:
+          "Buat pengenal UUID v7 yang dapat diurutkan berdasarkan stempel waktu di browser Anda untuk basis data, peristiwa, dan sistem terdistribusi.",
+      },
+      it: {
+        name: "Generatore di UUID v7",
+        description:
+          "Genera identificatori UUID v7 ordinabili per timestamp nel browser per database, eventi e sistemi distribuiti.",
+      },
+      ja: {
+        name: "UUID v7 ジェネレーター",
+        description:
+          "データベース、イベント、分散システム向けに、タイムスタンプ順にソートできるUUID v7識別子をブラウザー内で生成します。",
+      },
+      ko: {
+        name: "UUID v7 생성기",
+        description:
+          "데이터베이스, 이벤트, 분산 시스템에 사용할 수 있는 타임스탬프 정렬 가능 UUID v7 식별자를 브라우저에서 생성합니다.",
+      },
+      ms: {
+        name: "Penjana UUID v7",
+        description:
+          "Jana pengecam UUID v7 yang boleh diisih mengikut cap masa dalam pelayar anda untuk pangkalan data, peristiwa dan sistem teragih.",
+      },
+      nl: {
+        name: "UUID v7-generator",
+        description:
+          "Genereer in je browser UUID v7-identifiers die op tijdstempel sorteerbaar zijn, voor databases, gebeurtenissen en gedistribueerde systemen.",
+      },
+      no: {
+        name: "UUID v7-generator",
+        description:
+          "Generer tidsstempelsorterbare UUID v7-identifikatorer i nettleseren for databaser, hendelser og distribuerte systemer.",
+      },
+      pl: {
+        name: "Generator UUID v7",
+        description:
+          "Generuj w przeglądarce identyfikatory UUID v7 sortowalne według czasu dla baz danych, zdarzeń i systemów rozproszonych.",
+      },
+      pt: {
+        name: "Gerador de UUID v7",
+        description:
+          "Gere identificadores UUID v7 ordenáveis por timestamp no navegador para bancos de dados, eventos e sistemas distribuídos.",
+      },
+      ru: {
+        name: "Генератор UUID v7",
+        description:
+          "Генерируйте сортируемые по времени идентификаторы UUID v7 прямо в браузере для баз данных, событий и распределенных систем.",
+      },
+      sv: {
+        name: "UUID v7-generator",
+        description:
+          "Generera tidsstämpelsorterbara UUID v7-identifierare i din webbläsare för databaser, händelser och distribuerade system.",
+      },
+      th: {
+        name: "ตัวสร้าง UUID v7",
+        description:
+          "สร้างตัวระบุ UUID v7 ที่เรียงตามเวลาได้ในเบราว์เซอร์ของคุณ สำหรับฐานข้อมูล เหตุการณ์ และระบบแบบกระจาย",
+      },
+      tr: {
+        name: "UUID v7 Oluşturucu",
+        description:
+          "Veritabanları, etkinlikler ve dağıtık sistemler için tarayıcınızda zaman damgasına göre sıralanabilir UUID v7 tanımlayıcıları oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo UUID v7",
+        description:
+          "Tạo các mã định danh UUID v7 có thể sắp xếp theo dấu thời gian ngay trong trình duyệt cho cơ sở dữ liệu, sự kiện và hệ thống phân tán.",
+      },
+      "zh-CN": {
+        name: "UUID v7 生成器",
+        description:
+          "在浏览器中生成可按时间戳排序的 UUID v7 标识符，适用于数据库、事件和分布式系统。",
+      },
+      "zh-TW": {
+        name: "UUID v7 產生器",
+        description:
+          "在瀏覽器中產生可依時間戳記排序的 UUID v7 識別碼，適用於資料庫、事件與分散式系統。",
       },
     },
   },
@@ -25537,6 +27559,125 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "ASCII 藝術產生器",
         description:
           "使用多種 figlet 字型將文字轉換為 ASCII 藝術。輸入文字或短語，選擇字型，然後複製結果。",
+      },
+    },
+  },
+  "audio-recorder": {
+    slug: "audio-recorder",
+    category: "misc",
+    icon: "mic",
+    tags: ["audio", "recorder", "microphone", "voice", "recording", "sound"],
+    locales: {
+      ar: {
+        name: "مسجل الصوت",
+        description: "سجل صوت الميكروفون محليا، وعاين التسجيل، ونزل الملف.",
+      },
+      de: {
+        name: "Audiorecorder",
+        description:
+          "Nimm Mikrofon-Audio lokal auf, prüfe die Aufnahme und lade die Datei herunter.",
+      },
+      en: {
+        name: "Audio Recorder",
+        description:
+          "Record microphone audio locally, preview the take, and download the file.",
+      },
+      es: {
+        name: "Grabadora de audio",
+        description:
+          "Graba audio del micrófono localmente, previsualiza la toma y descarga el archivo.",
+      },
+      fr: {
+        name: "Enregistreur audio",
+        description:
+          "Enregistrez l'audio du microphone localement, prévisualisez la prise et téléchargez le fichier.",
+      },
+      he: {
+        name: "מקליט שמע",
+        description:
+          "הקליטו שמע מהמיקרופון באופן מקומי, האזינו להקלטה והורידו את הקובץ.",
+      },
+      hi: {
+        name: "ऑडियो रिकॉर्डर",
+        description:
+          "माइक्रोफ़ोन ऑडियो को स्थानीय रूप से रिकॉर्ड करें, टेक का पूर्वावलोकन करें और फ़ाइल डाउनलोड करें।",
+      },
+      id: {
+        name: "Perekam Audio",
+        description:
+          "Rekam audio mikrofon secara lokal, pratinjau rekaman, lalu unduh file.",
+      },
+      it: {
+        name: "Registratore audio",
+        description:
+          "Registra l'audio del microfono in locale, ascolta l'anteprima e scarica il file.",
+      },
+      ja: {
+        name: "音声レコーダー",
+        description:
+          "マイク音声をローカルで録音し、録音内容をプレビューしてファイルをダウンロードできます。",
+      },
+      ko: {
+        name: "오디오 녹음기",
+        description:
+          "마이크 오디오를 로컬에서 녹음하고, 녹음본을 미리 들은 뒤 파일로 다운로드하세요.",
+      },
+      ms: {
+        name: "Perakam Audio",
+        description:
+          "Rakam audio mikrofon secara setempat, pratonton rakaman, dan muat turun fail.",
+      },
+      nl: {
+        name: "Audiorecorder",
+        description:
+          "Neem microfoonaudio lokaal op, beluister de opname en download het bestand.",
+      },
+      no: {
+        name: "Lydopptaker",
+        description:
+          "Ta opp mikrofonlyd lokalt, forhåndsvis opptaket og last ned filen.",
+      },
+      pl: {
+        name: "Rejestrator audio",
+        description:
+          "Nagrywaj lokalnie dźwięk z mikrofonu, odsłuchuj nagranie i pobieraj plik.",
+      },
+      pt: {
+        name: "Gravador de áudio",
+        description:
+          "Grave áudio do microfone localmente, pré-visualize a gravação e transfira o ficheiro.",
+      },
+      ru: {
+        name: "Аудиорекордер",
+        description:
+          "Записывайте звук с микрофона локально, прослушивайте запись и скачивайте файл.",
+      },
+      sv: {
+        name: "Ljudinspelare",
+        description:
+          "Spela in mikrofonljud lokalt, förhandsgranska inspelningen och ladda ner filen.",
+      },
+      th: {
+        name: "เครื่องบันทึกเสียง",
+        description: "บันทึกเสียงจากไมโครโฟนไว้ในเครื่อง ฟังตัวอย่าง และดาวน์โหลดไฟล์",
+      },
+      tr: {
+        name: "Ses Kaydedici",
+        description:
+          "Mikrofon sesini yerel olarak kaydedin, kaydı önizleyin ve dosyayı indirin.",
+      },
+      vi: {
+        name: "Trình ghi âm",
+        description:
+          "Ghi âm từ micro cục bộ, xem trước bản ghi và tải tệp xuống.",
+      },
+      "zh-CN": {
+        name: "音频录音器",
+        description: "在本地录制麦克风音频，预览录音并下载文件。",
+      },
+      "zh-TW": {
+        name: "音訊錄音機",
+        description: "在本機錄製麥克風音訊、預覽錄音，並下載檔案。",
       },
     },
   },
@@ -32118,6 +34259,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "favicon-assets-generator": {
+    slug: "favicon-assets-generator",
+    category: "favicon",
+    icon: "image",
+    tags: [
+      "favicon",
+      "icon",
+      "ico",
+      "apple-touch-icon",
+      "pwa",
+      "manifest",
+      "web",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد أصول الأيقونة المفضّلة (Favicon)",
+        description:
+          "أنشئ حزمة أيقونات مفضّلة كاملة — ICO وصور PNG وأيقونة Apple touch وأيقونات PWA وملف web manifest ومقتطف HTML — محلياً في متصفحك.",
+      },
+      de: {
+        name: "Favicon-Assets-Generator",
+        description:
+          "Erstellen Sie ein komplettes Favicon-Paket – ICO, PNGs, Apple-Touch-Icon, PWA-Icons, Web-Manifest und HTML-Snippet – lokal in Ihrem Browser.",
+      },
+      en: {
+        name: "Favicon Assets Generator",
+        description:
+          "Generate a complete favicon bundle — ICO, PNGs, Apple touch icon, PWA icons, web manifest, and the HTML snippet — locally in your browser.",
+      },
+      es: {
+        name: "Generador de Recursos Favicon",
+        description:
+          "Genera un paquete completo de favicons — ICO, PNG, icono Apple touch, iconos PWA, manifiesto web y el fragmento HTML — localmente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur d'éléments de favicon",
+        description:
+          "Générez un pack de favicons complet — ICO, PNG, icône Apple touch, icônes PWA, manifeste web et extrait HTML — directement dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל נכסי Favicon",
+        description:
+          "צור חבילת favicon מלאה — ICO, קובצי PNG, אייקון Apple touch, אייקוני PWA, web manifest וקטע HTML — באופן מקומי בדפדפן שלך.",
+      },
+      hi: {
+        name: "Favicon Assets Generator",
+        description:
+          "एक संपूर्ण favicon बंडल बनाएं — ICO, PNGs, Apple touch icon, PWA icons, web manifest, और HTML स्निपेट — सब कुछ आपके ब्राउज़र में स्थानीय रूप से।",
+      },
+      id: {
+        name: "Pembuat Aset Favicon",
+        description:
+          "Hasilkan paket favicon lengkap — ICO, PNG, ikon Apple touch, ikon PWA, web manifest, dan cuplikan HTML — secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Generatore di Asset Favicon",
+        description:
+          "Genera un pacchetto completo di favicon — ICO, PNG, icona Apple touch, icone PWA, web manifest e snippet HTML — localmente nel tuo browser.",
+      },
+      ja: {
+        name: "Favicon アセットジェネレーター",
+        description:
+          "ICO、PNG、Apple touch アイコン、PWA アイコン、Web manifest、HTML スニペットを含む完全な favicon バンドルをブラウザー内でローカルに生成。",
+      },
+      ko: {
+        name: "파비콘 에셋 생성기",
+        description:
+          "ICO, PNG, Apple touch icon, PWA 아이콘, 웹 매니페스트, HTML 스니펫을 포함한 완전한 파비콘 번들을 브라우저에서 로컬로 생성합니다.",
+      },
+      ms: {
+        name: "Penjana Aset Favicon",
+        description:
+          "Jana himpunan favicon yang lengkap — ICO, PNG, ikon sentuh Apple, ikon PWA, manifes web, dan coretan HTML — secara tempatan dalam pelayar anda.",
+      },
+      nl: {
+        name: "Favicon-assets-generator",
+        description:
+          "Genereer een complete favicon-bundel — ICO, PNG's, Apple touch icon, PWA-iconen, web manifest en het HTML-fragment — lokaal in je browser.",
+      },
+      no: {
+        name: "Generator for favicon-ressurser",
+        description:
+          "Generer en komplett favicon-pakke — ICO, PNG-er, Apple touch icon, PWA-ikoner, web-manifest og HTML-snutten — lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Generator zasobów favicon",
+        description:
+          "Wygeneruj kompletny pakiet favicon — ICO, PNG-i, ikonę Apple touch, ikony PWA, manifest webowy i fragment HTML — lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de Recursos de Favicon",
+        description:
+          "Gere um pacote completo de favicon — ICO, PNGs, ícone Apple touch, ícones PWA, web manifest e o snippet HTML — localmente no seu navegador.",
+      },
+      ru: {
+        name: "Генератор фавиконок",
+        description:
+          "Создайте полный комплект фавиконок — ICO, PNG, иконку Apple touch, иконки PWA, веб-манифест и HTML-фрагмент — локально в вашем браузере.",
+      },
+      sv: {
+        name: "Favicon-tillgångsgenerator",
+        description:
+          "Generera ett komplett favicon-paket — ICO, PNG:er, Apple touch-ikon, PWA-ikoner, webbmanifest och HTML-utdraget — lokalt i din webbläsare.",
+      },
+      th: {
+        name: "เครื่องสร้างชุดไฟล์ Favicon",
+        description:
+          "สร้างชุดไฟล์ favicon แบบครบชุด — ICO, PNG, Apple touch icon, ไอคอน PWA, web manifest และ HTML snippet — ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Favicon Varlık Oluşturucu",
+        description:
+          "ICO, PNG'ler, Apple touch simgesi, PWA simgeleri, web manifesti ve HTML parçacığından oluşan eksiksiz bir favicon paketini tarayıcınızda yerel olarak oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo bộ favicon",
+        description:
+          "Tạo bộ favicon hoàn chỉnh — ICO, PNG, biểu tượng Apple touch, biểu tượng PWA, web manifest và đoạn mã HTML — ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "Favicon 资源生成器",
+        description:
+          "在浏览器本地生成一套完整的 favicon 资源包 —— 包括 ICO、PNG、Apple touch 图标、PWA 图标、Web manifest 以及 HTML 代码片段。",
+      },
+      "zh-TW": {
+        name: "Favicon 資產產生器",
+        description:
+          "在瀏覽器本機產生完整的 favicon 套件——ICO、PNG、Apple touch icon、PWA 圖示、web manifest 以及 HTML 程式碼片段。",
+      },
+    },
+  },
   "file-to-data-uri-converter": {
     slug: "file-to-data-uri-converter",
     category: "web",
@@ -32238,6 +34510,252 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "檔案轉 Data URI 轉換器",
         description:
           "將檔案轉換為 Data URI 字串，方便嵌入 HTML、CSS 或 JSON，完全離線。",
+      },
+    },
+  },
+  "gif-to-animated-webp-converter": {
+    slug: "gif-to-animated-webp-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "gif", "webp", "converter", "animation", "batch"],
+    locales: {
+      ar: {
+        name: "محول GIF إلى WebP متحرك",
+        description:
+          "حوّل صور GIF المتحركة إلى WebP متحرك مع التحجيم، وسرعة التشغيل، والتحكم في التكرار، والمعاينات، وتصدير ZIP دفعي.",
+      },
+      de: {
+        name: "GIF-zu-animiertem-WebP-Konverter",
+        description:
+          "Konvertiere animierte GIFs in animierte WebP-Dateien mit Skalierung, Wiedergabegeschwindigkeit, Schleifensteuerung, Vorschauen und Stapelexport als ZIP.",
+      },
+      en: {
+        name: "GIF to Animated WebP Converter",
+        description:
+          "Convert animated GIFs to animated WebP with scaling, playback speed, loop control, previews, and batch ZIP export.",
+      },
+      es: {
+        name: "Convertidor de GIF a WebP animado",
+        description:
+          "Convierte GIF animados en WebP animados con escalado, velocidad de reproducción, control de bucles, vistas previas y exportación ZIP por lotes.",
+      },
+      fr: {
+        name: "Convertisseur de GIF en WebP animé",
+        description:
+          "Convertissez des GIF animés en WebP animé avec mise à l’échelle, vitesse de lecture, contrôle des boucles, aperçus et export ZIP par lot.",
+      },
+      he: {
+        name: "ממיר GIF מונפש ל-WebP מונפש",
+        description:
+          "המר קובצי GIF מונפשים ל-WebP מונפש עם שינוי קנה מידה, מהירות הפעלה, בקרת לולאה, תצוגות מקדימות וייצוא ZIP באצווה.",
+      },
+      hi: {
+        name: "GIF से Animated WebP कन्वर्टर",
+        description:
+          "स्केलिंग, प्लेबैक गति, लूप नियंत्रण, प्रीव्यू और बैच ZIP एक्सपोर्ट के साथ एनिमेटेड GIF को Animated WebP में बदलें।",
+      },
+      id: {
+        name: "Konverter GIF ke WebP Animasi",
+        description:
+          "Konversi GIF animasi ke WebP animasi dengan pengaturan skala, kecepatan pemutaran, kontrol perulangan, pratinjau, dan ekspor ZIP untuk banyak file.",
+      },
+      it: {
+        name: "Convertitore da GIF a WebP animato",
+        description:
+          "Converti GIF animate in file WebP animati con ridimensionamento, velocità di riproduzione, controllo del ciclo, anteprime ed esportazione ZIP in blocco.",
+      },
+      ja: {
+        name: "GIFからAnimated WebPへの変換ツール",
+        description:
+          "スケール変更、再生速度、ループ制御、プレビュー、バッチZIPエクスポートに対応し、アニメーションGIFをAnimated WebPに変換します。",
+      },
+      ko: {
+        name: "GIF to Animated WebP 변환기",
+        description:
+          "크기 조정, 재생 속도, 루프 제어, 미리보기, 일괄 ZIP 내보내기로 애니메이션 GIF를 Animated WebP로 변환합니다.",
+      },
+      ms: {
+        name: "Penukar GIF kepada WebP Beranimasi",
+        description:
+          "Tukar GIF beranimasi kepada WebP beranimasi dengan penskalaan, kelajuan main balik, kawalan gelung, pratonton, dan eksport ZIP secara kelompok.",
+      },
+      nl: {
+        name: "GIF naar geanimeerde WebP-converter",
+        description:
+          "Converteer geanimeerde GIF-bestanden naar geanimeerde WebP met schalen, afspeelsnelheid, lusbeheer, voorbeelden en ZIP-export voor meerdere bestanden.",
+      },
+      no: {
+        name: "GIF til animert WebP-konverterer",
+        description:
+          "Konverter animerte GIF-er til animert WebP med skalering, avspillingshastighet, løkkekontroll, forhåndsvisninger og ZIP-eksport for flere filer.",
+      },
+      pl: {
+        name: "Konwerter GIF do animowanego WebP",
+        description:
+          "Konwertuj animowane GIF-y na animowane WebP ze skalowaniem, szybkością odtwarzania, kontrolą pętli, podglądami i eksportem wsadowym ZIP.",
+      },
+      pt: {
+        name: "Conversor de GIF para WebP animado",
+        description:
+          "Converta GIFs animados em WebP animados com escala, velocidade de reprodução, controle de loop, prévias e exportação em lote para ZIP.",
+      },
+      ru: {
+        name: "Конвертер GIF в анимированный WebP",
+        description:
+          "Конвертируйте анимированные GIF в анимированный WebP с масштабированием, настройкой скорости воспроизведения, управлением повторами, предпросмотром и пакетным экспортом в ZIP.",
+      },
+      sv: {
+        name: "GIF till animerad WebP-konverterare",
+        description:
+          "Konvertera animerade GIF-filer till animerad WebP med skalning, uppspelningshastighet, loopstyrning, förhandsgranskningar och samlad ZIP-export.",
+      },
+      th: {
+        name: "ตัวแปลง GIF เป็น WebP แบบเคลื่อนไหว",
+        description:
+          "แปลง GIF แบบเคลื่อนไหวเป็น WebP แบบเคลื่อนไหว พร้อมการปรับขนาด ความเร็วในการเล่น การควบคุมการวนซ้ำ ตัวอย่าง และการส่งออกเป็น ZIP แบบกลุ่ม",
+      },
+      tr: {
+        name: "GIF'ten Animasyonlu WebP'ye Dönüştürücü",
+        description:
+          "Animasyonlu GIF'leri ölçekleme, oynatma hızı, döngü kontrolü, önizlemeler ve toplu ZIP dışa aktarımıyla animasyonlu WebP'ye dönüştürün.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi GIF sang WebP động",
+        description:
+          "Chuyển đổi GIF động sang WebP động với tùy chọn đổi tỷ lệ, tốc độ phát, kiểm soát vòng lặp, xem trước và xuất ZIP hàng loạt.",
+      },
+      "zh-CN": {
+        name: "GIF 转动态 WebP 转换器",
+        description:
+          "将动态 GIF 转换为动态 WebP，支持缩放、播放速度、循环控制、预览和批量 ZIP 导出。",
+      },
+      "zh-TW": {
+        name: "GIF 轉動態 WebP 轉換器",
+        description:
+          "將動態 GIF 轉換為動態 WebP，可調整縮放、播放速度、重複播放控制、預覽，並批次匯出 ZIP。",
+      },
+    },
+  },
+  "gif-to-apng-converter": {
+    slug: "gif-to-apng-converter",
+    category: "image",
+    icon: "image",
+    tags: ["image", "gif", "apng", "animation", "converter", "offline"],
+    locales: {
+      ar: {
+        name: "محول GIF إلى APNG",
+        description:
+          "حوّل ملفات GIF المتحركة إلى رسوم APNG PNG متحركة مع تصدير دفعات محلي، والتحجيم، وسرعة التشغيل، وعناصر التحكم في التكرار.",
+      },
+      de: {
+        name: "GIF zu APNG Converter",
+        description:
+          "Konvertiere animierte GIF-Dateien zu APNG PNG-Animationen mit lokalem Batchexport, Skalierung, Wiedergabegeschwindigkeit und Schleifensteuerung.",
+      },
+      en: {
+        name: "GIF to APNG Converter",
+        description:
+          "Convert animated GIF files to APNG PNG animations with local batch export, scaling, playback speed, and loop controls.",
+      },
+      es: {
+        name: "Convertidor de GIF a APNG",
+        description:
+          "Convierte archivos GIF animados a animaciones APNG PNG con exportación local por lotes, escalado, velocidad de reproducción y controles de bucle.",
+      },
+      fr: {
+        name: "Convertisseur GIF en APNG",
+        description:
+          "Convertissez des fichiers GIF animés en animations APNG PNG avec export local par lot, mise à l'échelle, vitesse de lecture et contrôles de boucle.",
+      },
+      he: {
+        name: "ממיר GIF ל-APNG",
+        description:
+          "המר קובצי GIF מונפשים לאנימציות APNG PNG עם ייצוא אצווה מקומי, שינוי גודל, מהירות הפעלה ובקרות לולאה.",
+      },
+      hi: {
+        name: "GIF से APNG कन्वर्टर",
+        description:
+          "लोकल बैच एक्सपोर्ट, स्केलिंग, प्लेबैक स्पीड और लूप नियंत्रणों के साथ animated GIF फाइलों को APNG PNG animations में बदलें।",
+      },
+      id: {
+        name: "Konverter GIF ke APNG",
+        description:
+          "Konversi file GIF animasi ke animasi APNG PNG dengan ekspor batch lokal, penskalaan, kecepatan pemutaran, dan kontrol pengulangan.",
+      },
+      it: {
+        name: "Convertitore da GIF ad APNG",
+        description:
+          "Converti file GIF animati in animazioni APNG PNG con esportazione batch locale, ridimensionamento, velocita di riproduzione e controlli di ripetizione.",
+      },
+      ja: {
+        name: "GIF から APNG へのコンバーター",
+        description:
+          "アニメーション GIF ファイルを APNG PNG アニメーションに変換し、ローカルでの一括書き出し、拡大縮小、再生速度、ループを制御できます。",
+      },
+      ko: {
+        name: "GIF to APNG 변환기",
+        description:
+          "애니메이션 GIF 파일을 로컬 일괄 내보내기, 크기 조절, 재생 속도, 반복 제어 기능을 갖춘 APNG PNG 애니메이션으로 변환하세요.",
+      },
+      ms: {
+        name: "Penukar GIF kepada APNG",
+        description:
+          "Tukar fail GIF animasi kepada animasi APNG PNG dengan eksport kelompok setempat, penskalaan, kelajuan main balik, dan kawalan gelung.",
+      },
+      nl: {
+        name: "GIF naar APNG converter",
+        description:
+          "Zet geanimeerde GIF-bestanden om naar APNG PNG-animaties met lokale batchexport, schalen, afspeelsnelheid en lusinstellingen.",
+      },
+      no: {
+        name: "GIF til APNG-konverterer",
+        description:
+          "Konverter animerte GIF-filer til APNG PNG-animasjoner med lokal gruppeeksport, skalering, avspillingshastighet og løkkekontroller.",
+      },
+      pl: {
+        name: "Konwerter GIF na APNG",
+        description:
+          "Konwertuj animowane pliki GIF na animacje APNG PNG z lokalnym eksportem wsadowym, skalowaniem, kontrolą prędkości odtwarzania i pętli.",
+      },
+      pt: {
+        name: "Conversor de GIF para APNG",
+        description:
+          "Converta arquivos GIF animados em animações APNG PNG com exportação local em lote, escala, velocidade de reprodução e controles de loop.",
+      },
+      ru: {
+        name: "Конвертер GIF в APNG",
+        description:
+          "Конвертируйте анимированные GIF-файлы в APNG-анимации PNG с локальным пакетным экспортом, масштабированием, настройкой скорости воспроизведения и параметрами повтора.",
+      },
+      sv: {
+        name: "GIF till APNG-konverterare",
+        description:
+          "Konvertera animerade GIF-filer till APNG PNG-animationer med lokal batchexport, skalning, uppspelningshastighet och loopkontroller.",
+      },
+      th: {
+        name: "ตัวแปลง GIF เป็น APNG",
+        description:
+          "แปลงไฟล์ GIF แบบเคลื่อนไหวเป็นภาพเคลื่อนไหว APNG PNG พร้อมการส่งออกแบบชุดในเครื่อง การปรับขนาด ความเร็วในการเล่น และการควบคุมการวนซ้ำ",
+      },
+      tr: {
+        name: "GIF'ten APNG'ye Dönüştürücü",
+        description:
+          "Animasyonlu GIF dosyalarını yerel toplu dışa aktarma, ölçekleme, oynatma hızı ve döngü kontrolleriyle APNG PNG animasyonlarına dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi GIF sang APNG",
+        description:
+          "Chuyển đổi tệp GIF động thành ảnh động APNG PNG với xuất hàng loạt cục bộ, cùng các tùy chọn tỷ lệ, tốc độ phát và vòng lặp.",
+      },
+      "zh-CN": {
+        name: "GIF 转 APNG 转换器",
+        description:
+          "将动画 GIF 文件转换为 APNG PNG 动画，支持本地批量导出、缩放、播放速度和循环控制。",
+      },
+      "zh-TW": {
+        name: "GIF 轉 APNG 轉換器",
+        description:
+          "將動畫 GIF 檔轉換為 APNG PNG 動畫，支援本機批次匯出、縮放、播放速度與循環控制。",
       },
     },
   },
@@ -39381,6 +41899,620 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "pdf-page-number-adder": {
+    slug: "pdf-page-number-adder",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "page", "number", "pagination", "document", "offline"],
+    locales: {
+      ar: {
+        name: "إضافة أرقام صفحات PDF",
+        description:
+          "أضف أرقام صفحات إلى صفحات PDF المحددة محليًا في متصفحك، مع تنسيق وموضع وخط وهوامش قابلة للضبط.",
+      },
+      de: {
+        name: "PDF-Seitenzahlen hinzufügen",
+        description:
+          "Füge ausgewählten PDF-Seiten lokal in deinem Browser Seitenzahlen mit konfigurierbarem Format, Position, Schriftart und Rändern hinzu.",
+      },
+      en: {
+        name: "PDF Page Number Adder",
+        description:
+          "Add page numbers to selected PDF pages locally in your browser with configurable format, position, font, and margins.",
+      },
+      es: {
+        name: "Añadir números de página a PDF",
+        description:
+          "Añade números de página a páginas PDF seleccionadas localmente en tu navegador con formato, posición, fuente y márgenes configurables.",
+      },
+      fr: {
+        name: "Ajout de numéros de page PDF",
+        description:
+          "Ajoutez des numéros de page aux pages PDF sélectionnées localement dans votre navigateur, avec un format, une position, une police et des marges configurables.",
+      },
+      he: {
+        name: "מוסיף מספרי עמודים ל-PDF",
+        description:
+          "הוסיפו מספרי עמודים לעמודי PDF נבחרים מקומית בדפדפן, עם פורמט, מיקום, גופן ושוליים שניתנים להגדרה.",
+      },
+      hi: {
+        name: "PDF पेज नंबर ऐडर",
+        description:
+          "कॉन्फ़िगर करने योग्य फ़ॉर्मैट, स्थिति, फ़ॉन्ट और मार्जिन के साथ अपने ब्राउज़र में स्थानीय रूप से चुने गए PDF पेजों में पेज नंबर जोड़ें।",
+      },
+      id: {
+        name: "Penambah Nomor Halaman PDF",
+        description:
+          "Tambahkan nomor halaman ke halaman PDF yang dipilih secara lokal di browser Anda dengan format, posisi, font, dan margin yang dapat dikonfigurasi.",
+      },
+      it: {
+        name: "PDF Page Number Adder",
+        description:
+          "Aggiungi numeri di pagina alle pagine PDF selezionate localmente nel tuo browser, con formato, posizione, font e margini configurabili.",
+      },
+      ja: {
+        name: "PDFページ番号追加ツール",
+        description:
+          "選択したPDFページに、形式、位置、フォント、余白を設定して、ブラウザー内でローカルにページ番号を追加します。",
+      },
+      ko: {
+        name: "PDF 페이지 번호 추가 도구",
+        description:
+          "선택한 PDF 페이지에 페이지 번호를 브라우저에서 로컬로 추가하세요. 형식, 위치, 글꼴, 여백을 설정할 수 있습니다.",
+      },
+      ms: {
+        name: "Penambah Nombor Halaman PDF",
+        description:
+          "Tambah nombor halaman pada halaman PDF terpilih secara setempat dalam pelayar anda dengan format, kedudukan, fon, dan jidar yang boleh dikonfigurasi.",
+      },
+      nl: {
+        name: "PDF-paginanummeraar",
+        description:
+          "Voeg lokaal in je browser paginanummers toe aan geselecteerde PDF-pagina's, met instelbare opmaak, positie, lettertype en marges.",
+      },
+      no: {
+        name: "PDF-sidenummerering",
+        description:
+          "Legg til sidenumre på valgte PDF-sider lokalt i nettleseren med konfigurerbart format, plassering, skrifttype og marger.",
+      },
+      pl: {
+        name: "Dodawanie numerów stron do PDF",
+        description:
+          "Dodawaj numery stron do wybranych stron PDF lokalnie w przeglądarce, z możliwością konfiguracji formatu, położenia, czcionki i marginesów.",
+      },
+      pt: {
+        name: "Adicionador de números de página em PDF",
+        description:
+          "Adicione números de página às páginas selecionadas de um PDF localmente no seu navegador, com formato, posição, fonte e margens configuráveis.",
+      },
+      ru: {
+        name: "Добавление номеров страниц в PDF",
+        description:
+          "Добавляйте номера на выбранные страницы PDF локально в браузере с настраиваемым форматом, положением, шрифтом и полями.",
+      },
+      sv: {
+        name: "PDF Page Number Adder",
+        description:
+          "Lägg till sidnummer på valda PDF-sidor lokalt i din webbläsare med konfigurerbart format, placering, teckensnitt och marginaler.",
+      },
+      th: {
+        name: "เครื่องมือเพิ่มเลขหน้า PDF",
+        description:
+          "เพิ่มเลขหน้าให้หน้าที่เลือกในไฟล์ PDF ได้ภายในเบราว์เซอร์ของคุณ พร้อมตั้งค่ารูปแบบ ตำแหน่ง ฟอนต์ และระยะขอบได้",
+      },
+      tr: {
+        name: "PDF Sayfa Numarası Ekleyici",
+        description:
+          "Yapılandırılabilir biçim, konum, yazı tipi ve kenar boşluklarıyla seçili PDF sayfalarına tarayıcınızda yerel olarak sayfa numaraları ekleyin.",
+      },
+      vi: {
+        name: "Trình thêm số trang PDF",
+        description:
+          "Thêm số trang vào các trang PDF đã chọn ngay trong trình duyệt của bạn, với định dạng, vị trí, phông chữ và lề có thể cấu hình.",
+      },
+      "zh-CN": {
+        name: "PDF 页码添加器",
+        description:
+          "在浏览器本地为选定 PDF 页面添加页码，可配置格式、位置、字体和边距。",
+      },
+      "zh-TW": {
+        name: "PDF 頁碼新增工具",
+        description:
+          "在瀏覽器中本機為選取的 PDF 頁面新增頁碼，可設定格式、位置、字體和邊距。",
+      },
+    },
+  },
+  "pdf-page-organizer": {
+    slug: "pdf-page-organizer",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "organize", "reorder", "rotate", "delete", "offline"],
+    locales: {
+      ar: {
+        name: "منظم صفحات PDF",
+        description:
+          "أعد ترتيب صفحات PDF ودوّرها واحذفها محليًا في متصفحك قبل تصدير ملف PDF جديد.",
+      },
+      de: {
+        name: "PDF Page Organizer",
+        description:
+          "Ordne PDF-Seiten lokal in deinem Browser neu an, drehe oder entferne sie, bevor du eine neue PDF exportierst.",
+      },
+      en: {
+        name: "PDF Page Organizer",
+        description:
+          "Reorder, rotate, and remove PDF pages locally in your browser before exporting a new PDF.",
+      },
+      es: {
+        name: "PDF Page Organizer",
+        description:
+          "Reordena, gira y elimina páginas de un PDF localmente en tu navegador antes de exportar un PDF nuevo.",
+      },
+      fr: {
+        name: "Organiseur de pages PDF",
+        description:
+          "Réorganisez, faites pivoter et supprimez des pages PDF localement dans votre navigateur avant d’exporter un nouveau PDF.",
+      },
+      he: {
+        name: "PDF Page Organizer",
+        description:
+          "סדר מחדש, סובב והסר עמודים מ-PDF באופן מקומי בדפדפן שלך לפני ייצוא PDF חדש.",
+      },
+      hi: {
+        name: "PDF पेज ऑर्गनाइज़र",
+        description:
+          "नया PDF निर्यात करने से पहले अपने ब्राउज़र में ही PDF पेजों का क्रम बदलें, घुमाएँ और हटाएँ।",
+      },
+      id: {
+        name: "Pengatur Halaman PDF",
+        description:
+          "Susun ulang, putar, dan hapus halaman PDF secara lokal di browser Anda sebelum mengekspor PDF baru.",
+      },
+      it: {
+        name: "PDF Page Organizer",
+        description:
+          "Riordina, ruota e rimuovi le pagine di un PDF localmente nel browser prima di esportare un nuovo PDF.",
+      },
+      ja: {
+        name: "PDF Page Organizer",
+        description:
+          "新しい PDF として書き出す前に、PDF のページをブラウザ内でローカルに並べ替え、回転、削除できます。",
+      },
+      ko: {
+        name: "PDF Page Organizer",
+        description:
+          "브라우저에서 로컬로 새 PDF를 내보내기 전에 PDF 페이지 순서를 바꾸고, 회전하고, 제거하세요.",
+      },
+      ms: {
+        name: "Penyusun Halaman PDF",
+        description:
+          "Susun semula, putar dan alih keluar halaman PDF secara setempat dalam pelayar anda sebelum mengeksport PDF baharu.",
+      },
+      nl: {
+        name: "PDF-pagina-organizer",
+        description:
+          "Herschik, draai en verwijder PDF-pagina's lokaal in je browser voordat je een nieuwe PDF exporteert.",
+      },
+      no: {
+        name: "PDF Page Organizer",
+        description:
+          "Endre rekkefølge på, roter og fjern PDF-sider lokalt i nettleseren før du eksporterer en ny PDF.",
+      },
+      pl: {
+        name: "PDF Page Organizer",
+        description:
+          "Zmieniaj kolejność, obracaj i usuwaj strony PDF lokalnie w przeglądarce przed wyeksportowaniem nowego PDF.",
+      },
+      pt: {
+        name: "Organizador de páginas PDF",
+        description:
+          "Reordene, gire e remova páginas de um PDF localmente no seu navegador antes de exportar um novo PDF.",
+      },
+      ru: {
+        name: "Организатор страниц PDF",
+        description:
+          "Меняйте порядок, поворачивайте и удаляйте страницы PDF локально в браузере перед экспортом нового PDF.",
+      },
+      sv: {
+        name: "PDF Page Organizer",
+        description:
+          "Ordna om, rotera och ta bort PDF-sidor lokalt i webbläsaren innan du exporterar en ny PDF.",
+      },
+      th: {
+        name: "PDF Page Organizer",
+        description:
+          "จัดเรียง หมุน และลบหน้าของ PDF ภายในเบราว์เซอร์ของคุณก่อนส่งออกเป็น PDF ใหม่",
+      },
+      tr: {
+        name: "PDF Page Organizer",
+        description:
+          "Yeni bir PDF dışa aktarmadan önce PDF sayfalarını tarayıcınızda yerel olarak yeniden sıralayın, döndürün ve kaldırın.",
+      },
+      vi: {
+        name: "Trình sắp xếp trang PDF",
+        description:
+          "Sắp xếp lại, xoay và xóa các trang PDF ngay trong trình duyệt của bạn trước khi xuất một PDF mới.",
+      },
+      "zh-CN": {
+        name: "PDF Page Organizer",
+        description:
+          "在浏览器本地重新排序、旋转和移除 PDF 页面，然后导出新的 PDF。",
+      },
+      "zh-TW": {
+        name: "PDF 頁面整理器",
+        description:
+          "在瀏覽器本機重新排序、旋轉和移除 PDF 頁面，再匯出新的 PDF。",
+      },
+    },
+  },
+  "pdf-splitter": {
+    slug: "pdf-splitter",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "split", "extract", "pages", "document", "offline"],
+    locales: {
+      ar: {
+        name: "مقسّم PDF",
+        description:
+          "قسّم صفحات PDF حسب النطاق، أو استخرج الصفحات المحددة في ملف PDF واحد، أو نزّل عدة ملفات مقسّمة كأرشيف ZIP.",
+      },
+      de: {
+        name: "PDF Splitter",
+        description:
+          "PDF-Seiten nach Bereich aufteilen, ausgewählte Seiten in eine PDF-Datei extrahieren oder mehrere getrennte Dateien als ZIP-Archiv herunterladen.",
+      },
+      en: {
+        name: "PDF Splitter",
+        description:
+          "Split PDF pages by range, extract selected pages into one PDF, or download multiple split files as a ZIP archive.",
+      },
+      es: {
+        name: "Divisor de PDF",
+        description:
+          "Divide páginas de PDF por rango, extrae páginas seleccionadas en un solo PDF o descarga varios archivos divididos como un archivo ZIP.",
+      },
+      fr: {
+        name: "Séparateur de PDF",
+        description:
+          "Divisez les pages d’un PDF par plage, extrayez les pages sélectionnées dans un seul PDF ou téléchargez plusieurs fichiers découpés sous forme d’archive ZIP.",
+      },
+      he: {
+        name: "מפצל PDF",
+        description:
+          "פצלו עמודי PDF לפי טווח, חלצו עמודים נבחרים ל-PDF אחד, או הורידו כמה קבצים מפוצלים כארכיון ZIP.",
+      },
+      hi: {
+        name: "PDF Splitter",
+        description:
+          "PDF पेजों को रेंज के अनुसार विभाजित करें, चुने गए पेजों को एक PDF में निकालें, या कई विभाजित फ़ाइलों को ZIP आर्काइव के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "PDF Splitter",
+        description:
+          "Pisahkan halaman PDF berdasarkan rentang, ekstrak halaman yang dipilih ke dalam satu PDF, atau unduh beberapa file hasil pemisahan sebagai arsip ZIP.",
+      },
+      it: {
+        name: "Divisore PDF",
+        description:
+          "Dividi le pagine PDF per intervallo, estrai le pagine selezionate in un unico PDF oppure scarica più file divisi come archivio ZIP.",
+      },
+      ja: {
+        name: "PDF 分割ツール",
+        description:
+          "PDF ページを範囲で分割したり、選択したページを 1 つの PDF に抽出したり、複数の分割ファイルを ZIP アーカイブとしてダウンロードしたりできます。",
+      },
+      ko: {
+        name: "PDF 분할기",
+        description:
+          "PDF 페이지를 범위별로 나누고, 선택한 페이지를 하나의 PDF로 추출하거나, 여러 분할 파일을 ZIP 아카이브로 다운로드하세요.",
+      },
+      ms: {
+        name: "PDF Splitter",
+        description:
+          "Pisahkan halaman PDF mengikut julat, ekstrak halaman yang dipilih ke dalam satu PDF, atau muat turun beberapa fail pecahan sebagai arkib ZIP.",
+      },
+      nl: {
+        name: "PDF Splitter",
+        description:
+          "Splits PDF-pagina's op bereik, extraheer geselecteerde pagina's naar één PDF of download meerdere gesplitste bestanden als ZIP-archief.",
+      },
+      no: {
+        name: "PDF-deler",
+        description:
+          "Del PDF-sider etter område, trekk ut valgte sider til én PDF, eller last ned flere delte filer som et ZIP-arkiv.",
+      },
+      pl: {
+        name: "PDF Splitter",
+        description:
+          "Dziel strony PDF według zakresu, wyodrębniaj wybrane strony do jednego pliku PDF albo pobieraj wiele podzielonych plików jako archiwum ZIP.",
+      },
+      pt: {
+        name: "Divisor de PDF",
+        description:
+          "Divida páginas de PDF por intervalo, extraia páginas selecionadas em um único PDF ou baixe vários arquivos divididos como um arquivo ZIP.",
+      },
+      ru: {
+        name: "Разделитель PDF",
+        description:
+          "Разделяйте страницы PDF по диапазонам, извлекайте выбранные страницы в один PDF или скачивайте несколько разделенных файлов в ZIP-архиве.",
+      },
+      sv: {
+        name: "PDF-delare",
+        description:
+          "Dela PDF-sidor efter intervall, extrahera valda sidor till en PDF eller ladda ned flera delade filer som ett ZIP-arkiv.",
+      },
+      th: {
+        name: "PDF Splitter",
+        description:
+          "แยกหน้า PDF ตามช่วงหน้า แยกหน้าที่เลือกออกเป็น PDF เดียว หรือดาวน์โหลดไฟล์ที่แยกหลายไฟล์เป็นไฟล์ ZIP",
+      },
+      tr: {
+        name: "PDF Splitter",
+        description:
+          "PDF sayfalarını aralığa göre bölün, seçili sayfaları tek bir PDF'ye çıkarın veya birden fazla bölünmüş dosyayı ZIP arşivi olarak indirin.",
+      },
+      vi: {
+        name: "Trình tách PDF",
+        description:
+          "Tách các trang PDF theo phạm vi, trích xuất các trang đã chọn thành một PDF, hoặc tải nhiều tệp đã tách xuống dưới dạng kho lưu trữ ZIP.",
+      },
+      "zh-CN": {
+        name: "PDF 拆分器",
+        description:
+          "按范围拆分 PDF 页面，将选定页面提取为一个 PDF，或将多个拆分文件作为 ZIP 归档下载。",
+      },
+      "zh-TW": {
+        name: "PDF 分割器",
+        description:
+          "依頁面範圍分割 PDF、將選取的頁面擷取成一個 PDF，或將多個分割檔案下載為 ZIP 壓縮檔。",
+      },
+    },
+  },
+  "pdf-text-extractor": {
+    slug: "pdf-text-extractor",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "text", "extractor", "document", "offline"],
+    locales: {
+      ar: {
+        name: "PDF Text Extractor",
+        description:
+          "استخرج النص القابل للتحديد من ملفات PDF محليا في متصفحك وصدّره كنص عادي.",
+      },
+      de: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrahiere auswählbaren Text aus PDF-Dateien lokal in deinem Browser und exportiere ihn als reinen Text.",
+      },
+      en: {
+        name: "PDF Text Extractor",
+        description:
+          "Extract selectable text from PDF files locally in your browser and export it as plain text.",
+      },
+      es: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrae texto seleccionable de archivos PDF localmente en tu navegador y expórtalo como texto sin formato.",
+      },
+      fr: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrayez localement le texte sélectionnable de fichiers PDF dans votre navigateur et exportez-le en texte brut.",
+      },
+      he: {
+        name: "PDF Text Extractor",
+        description:
+          "חלצו טקסט ניתן לבחירה מקובצי PDF באופן מקומי בדפדפן ויצאו אותו כטקסט רגיל.",
+      },
+      hi: {
+        name: "PDF Text Extractor",
+        description:
+          "PDF फाइलों से चुनने योग्य टेक्स्ट को अपने ब्राउजर में स्थानीय रूप से निकालें और उसे plain text के रूप में export करें।",
+      },
+      id: {
+        name: "PDF Text Extractor",
+        description:
+          "Ekstrak teks yang dapat dipilih dari file PDF secara lokal di browser Anda dan ekspor sebagai teks biasa.",
+      },
+      it: {
+        name: "PDF Text Extractor",
+        description:
+          "Estrai testo selezionabile dai file PDF localmente nel browser ed esportalo come testo normale.",
+      },
+      ja: {
+        name: "PDF Text Extractor",
+        description:
+          "PDFファイルから選択可能なテキストをブラウザ内でローカルに抽出し、プレーンテキストとしてエクスポートします。",
+      },
+      ko: {
+        name: "PDF Text Extractor",
+        description:
+          "브라우저에서 PDF 파일의 선택 가능한 텍스트를 로컬로 추출하고 일반 텍스트로 내보냅니다.",
+      },
+      ms: {
+        name: "PDF Text Extractor",
+        description:
+          "Ekstrak teks boleh dipilih daripada fail PDF secara setempat dalam pelayar anda dan eksportkannya sebagai teks biasa.",
+      },
+      nl: {
+        name: "PDF Text Extractor",
+        description:
+          "Haal selecteerbare tekst lokaal in je browser uit PDF-bestanden en exporteer die als platte tekst.",
+      },
+      no: {
+        name: "PDF Text Extractor",
+        description:
+          "Trekk ut markerbar tekst fra PDF-filer lokalt i nettleseren din, og eksporter den som ren tekst.",
+      },
+      pl: {
+        name: "PDF Text Extractor",
+        description:
+          "Wyodrębniaj zaznaczalny tekst z plików PDF lokalnie w przeglądarce i eksportuj go jako zwykły tekst.",
+      },
+      pt: {
+        name: "PDF Text Extractor",
+        description:
+          "Extraia texto selecionável de arquivos PDF localmente no seu navegador e exporte como texto simples.",
+      },
+      ru: {
+        name: "PDF Text Extractor",
+        description:
+          "Извлекайте выделяемый текст из PDF-файлов локально в браузере и экспортируйте его как обычный текст.",
+      },
+      sv: {
+        name: "PDF Text Extractor",
+        description:
+          "Extrahera markerbar text från PDF-filer lokalt i din webbläsare och exportera den som oformaterad text.",
+      },
+      th: {
+        name: "PDF Text Extractor",
+        description:
+          "ดึงข้อความที่เลือกได้จากไฟล์ PDF ภายในเบราว์เซอร์ของคุณ และส่งออกเป็นข้อความล้วน",
+      },
+      tr: {
+        name: "PDF Text Extractor",
+        description:
+          "PDF dosyalarından seçilebilir metni tarayıcınızda yerel olarak çıkarın ve düz metin olarak dışa aktarın.",
+      },
+      vi: {
+        name: "PDF Text Extractor",
+        description:
+          "Trích xuất văn bản có thể chọn từ tệp PDF ngay trong trình duyệt của bạn và xuất dưới dạng văn bản thuần túy.",
+      },
+      "zh-CN": {
+        name: "PDF 文本提取器",
+        description:
+          "在浏览器中本地提取 PDF 文件中的可选择文本，并导出为纯文本。",
+      },
+      "zh-TW": {
+        name: "PDF 文字擷取工具",
+        description: "在瀏覽器本機從 PDF 檔案擷取可選取文字，並匯出為純文字。",
+      },
+    },
+  },
+  "pdf-to-image-converter": {
+    slug: "pdf-to-image-converter",
+    category: "pdf",
+    icon: "image",
+    tags: ["pdf", "image", "converter", "export", "offline"],
+    locales: {
+      ar: {
+        name: "محول PDF إلى صور",
+        description:
+          "حوّل صفحات PDF إلى صور PNG أو JPG أو WebP مع عناصر تحكم في DPI، ومعاينة الصفحات، والتصدير بصيغة ZIP.",
+      },
+      de: {
+        name: "PDF-zu-Bild-Konverter",
+        description:
+          "Konvertiere PDF-Seiten in PNG-, JPG- oder WebP-Bilder mit DPI-Steuerung, Seitenvorschau und ZIP-Export.",
+      },
+      en: {
+        name: "PDF to Image Converter",
+        description:
+          "Convert PDF pages to PNG, JPG, or WebP images with DPI controls, page preview, and ZIP export.",
+      },
+      es: {
+        name: "Convertidor de PDF a imagen",
+        description:
+          "Convierte páginas de PDF en imágenes PNG, JPG o WebP con controles de DPI, vista previa de páginas y exportación ZIP.",
+      },
+      fr: {
+        name: "Convertisseur PDF en images",
+        description:
+          "Convertissez les pages PDF en images PNG, JPG ou WebP avec contrôle du DPI, aperçu des pages et export ZIP.",
+      },
+      he: {
+        name: "ממיר PDF לתמונות",
+        description:
+          "המרת עמודי PDF לתמונות PNG, JPG או WebP עם בקרות DPI, תצוגה מקדימה לעמוד וייצוא ZIP.",
+      },
+      hi: {
+        name: "PDF से इमेज कनवर्टर",
+        description:
+          "DPI नियंत्रणों, पेज पूर्वावलोकन और ZIP निर्यात के साथ PDF पेजों को PNG, JPG या WebP इमेज में बदलें।",
+      },
+      id: {
+        name: "Konverter PDF ke Gambar",
+        description:
+          "Konversi halaman PDF menjadi gambar PNG, JPG, atau WebP dengan kontrol DPI, pratinjau halaman, dan ekspor ZIP.",
+      },
+      it: {
+        name: "Convertitore da PDF a immagini",
+        description:
+          "Converti pagine PDF in immagini PNG, JPG o WebP con controlli DPI, anteprima delle pagine ed esportazione ZIP.",
+      },
+      ja: {
+        name: "PDF から画像への変換",
+        description:
+          "DPI 調整、ページプレビュー、ZIP エクスポートを使って、PDF ページを PNG、JPG、WebP 画像に変換します。",
+      },
+      ko: {
+        name: "PDF 이미지 변환기",
+        description:
+          "DPI 제어, 페이지 미리보기, ZIP 내보내기를 사용해 PDF 페이지를 PNG, JPG 또는 WebP 이미지로 변환하세요.",
+      },
+      ms: {
+        name: "Penukar PDF kepada Imej",
+        description:
+          "Tukar halaman PDF menjadi imej PNG, JPG atau WebP dengan kawalan DPI, pratonton halaman dan eksport ZIP.",
+      },
+      nl: {
+        name: "PDF-naar-afbeelding-converter",
+        description:
+          "Zet PDF-pagina's om naar PNG-, JPG- of WebP-afbeeldingen met DPI-instellingen, paginavoorbeeld en ZIP-export.",
+      },
+      no: {
+        name: "PDF-til-bilde-konverter",
+        description:
+          "Konverter PDF-sider til PNG-, JPG- eller WebP-bilder med DPI-innstillinger, sideforhåndsvisning og ZIP-eksport.",
+      },
+      pl: {
+        name: "Konwerter PDF na obrazy",
+        description:
+          "Konwertuj strony PDF na obrazy PNG, JPG lub WebP z kontrolą DPI, podglądem stron i eksportem ZIP.",
+      },
+      pt: {
+        name: "Conversor de PDF para imagens",
+        description:
+          "Converta páginas de PDF em imagens PNG, JPG ou WebP com controles de DPI, pré-visualização de páginas e exportação em ZIP.",
+      },
+      ru: {
+        name: "Конвертер PDF в изображения",
+        description:
+          "Преобразуйте страницы PDF в изображения PNG, JPG или WebP с настройками DPI, предварительным просмотром страниц и экспортом в ZIP.",
+      },
+      sv: {
+        name: "PDF-till-bild-konverterare",
+        description:
+          "Konvertera PDF-sidor till PNG-, JPG- eller WebP-bilder med DPI-kontroller, sidförhandsvisning och ZIP-export.",
+      },
+      th: {
+        name: "ตัวแปลง PDF เป็นรูปภาพ",
+        description:
+          "แปลงหน้า PDF เป็นรูปภาพ PNG, JPG หรือ WebP พร้อมการควบคุม DPI การดูตัวอย่างหน้า และการส่งออกเป็น ZIP",
+      },
+      tr: {
+        name: "PDF'den Görüntüye Dönüştürücü",
+        description:
+          "PDF sayfalarını DPI denetimleri, sayfa önizlemesi ve ZIP dışa aktarımıyla PNG, JPG veya WebP görüntülerine dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi PDF sang hình ảnh",
+        description:
+          "Chuyển đổi các trang PDF thành hình ảnh PNG, JPG hoặc WebP với tùy chọn DPI, xem trước trang và xuất ZIP.",
+      },
+      "zh-CN": {
+        name: "PDF 转图片转换器",
+        description:
+          "在浏览器本地将 PDF 页面转换为 PNG、JPG 或 WebP 图片，并支持 DPI 控制、页面预览和 ZIP 导出。",
+      },
+      "zh-TW": {
+        name: "PDF 轉圖片轉換器",
+        description:
+          "使用 DPI 控制、頁面預覽和 ZIP 匯出，將 PDF 頁面轉換成 PNG、JPG 或 WebP 圖片。",
+      },
+    },
+  },
   "pgp-key-generator": {
     slug: "pgp-key-generator",
     category: "network",
@@ -40886,6 +44018,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "正則測試與取代",
         description:
           "測試正則表達式、檢查匹配結果，並直接預覽取代後的文字輸出。",
+      },
+    },
+  },
+  "remove-pdf-owner-password": {
+    slug: "remove-pdf-owner-password",
+    category: "pdf",
+    icon: "lock",
+    tags: ["pdf", "password", "permissions", "decrypt", "offline"],
+    locales: {
+      ar: {
+        name: "إزالة كلمة مرور مالك PDF",
+        description:
+          "أزِل قيود كلمة مرور مالك PDF محليًا لفتح أذونات التحرير والطباعة والنسخ.",
+      },
+      de: {
+        name: "PDF-Besitzerpasswort entfernen",
+        description:
+          "Entferne PDF-Besitzerpasswort-Beschränkungen lokal, damit Berechtigungen zum Bearbeiten, Drucken und Kopieren freigegeben werden.",
+      },
+      en: {
+        name: "Remove PDF Owner Password",
+        description:
+          "Remove PDF owner password restrictions locally so editing, printing, and copying permissions are unlocked.",
+      },
+      es: {
+        name: "Quitar contraseña de propietario del PDF",
+        description:
+          "Elimina localmente las restricciones de contraseña de propietario del PDF para desbloquear los permisos de edición, impresión y copia.",
+      },
+      fr: {
+        name: "Supprimer le mot de passe propriétaire d'un PDF",
+        description:
+          "Supprimez localement les restrictions liées au mot de passe propriétaire d'un PDF afin de débloquer les autorisations de modification, d'impression et de copie.",
+      },
+      he: {
+        name: "הסרת מגבלות סיסמת בעלים מ-PDF",
+        description:
+          "הסירו מגבלות של סיסמת בעלים מ-PDF באופן מקומי, כדי לפתוח הרשאות עריכה, הדפסה והעתקה.",
+      },
+      hi: {
+        name: "PDF स्वामी पासवर्ड हटाएं",
+        description:
+          "PDF के स्वामी-पासवर्ड प्रतिबंधों को स्थानीय रूप से हटाएं, ताकि संपादन, प्रिंटिंग और कॉपी करने की अनुमतियां अनलॉक हो जाएं।",
+      },
+      id: {
+        name: "Hapus Kata Sandi Pemilik PDF",
+        description:
+          "Hapus pembatasan kata sandi pemilik PDF secara lokal agar izin mengedit, mencetak, dan menyalin terbuka.",
+      },
+      it: {
+        name: "Rimuovi password proprietario PDF",
+        description:
+          "Rimuovi localmente le restrizioni della password proprietario dai PDF, così le autorizzazioni di modifica, stampa e copia vengono sbloccate.",
+      },
+      ja: {
+        name: "PDF 所有者パスワード制限解除ツール",
+        description:
+          "編集、印刷、コピーの権限制限を解除するために、PDF の所有者パスワード制限をローカルで削除します。",
+      },
+      ko: {
+        name: "PDF 소유자 비밀번호 제거",
+        description:
+          "편집, 인쇄, 복사 권한이 잠금 해제되도록 PDF 소유자 비밀번호 제한을 로컬에서 제거하세요.",
+      },
+      ms: {
+        name: "Alih Keluar Kata Laluan Pemilik PDF",
+        description:
+          "Alih keluar sekatan kata laluan pemilik PDF secara setempat supaya kebenaran menyunting, mencetak dan menyalin dinyahkunci.",
+      },
+      nl: {
+        name: "PDF-eigenaarswachtwoord verwijderen",
+        description:
+          "Verwijder lokaal PDF-beperkingen door het eigenaarswachtwoord, zodat machtigingen voor bewerken, afdrukken en kopiëren worden ontgrendeld.",
+      },
+      no: {
+        name: "Fjern PDF-eierpassord",
+        description:
+          "Fjern begrensninger satt av PDF-eierpassord lokalt, slik at tillatelser for redigering, utskrift og kopiering låses opp.",
+      },
+      pl: {
+        name: "Usuń hasło właściciela PDF",
+        description:
+          "Usuń lokalnie ograniczenia hasła właściciela pliku PDF, aby odblokować uprawnienia do edycji, drukowania i kopiowania.",
+      },
+      pt: {
+        name: "Remover palavra-passe de proprietário do PDF",
+        description:
+          "Remova localmente as restrições de palavra-passe de proprietário do PDF para desbloquear as permissões de edição, impressão e cópia.",
+      },
+      ru: {
+        name: "Удаление пароля владельца PDF",
+        description:
+          "Локально снимайте ограничения пароля владельца PDF, чтобы разблокировать разрешения на редактирование, печать и копирование.",
+      },
+      sv: {
+        name: "Ta bort PDF-ägarlösenord",
+        description:
+          "Ta bort begränsningar från PDF:ens ägarlösenord lokalt så att behörigheter för redigering, utskrift och kopiering låses upp.",
+      },
+      th: {
+        name: "ลบข้อจำกัดรหัสผ่านเจ้าของ PDF",
+        description:
+          "ลบข้อจำกัดรหัสผ่านเจ้าของ PDF ในเครื่อง เพื่อปลดล็อกสิทธิ์การแก้ไข การพิมพ์ และการคัดลอก",
+      },
+      tr: {
+        name: "PDF Sahip Parolasını Kaldır",
+        description:
+          "PDF sahip parolası kısıtlamalarını yerel olarak kaldırarak düzenleme, yazdırma ve kopyalama izinlerinin kilidini açın.",
+      },
+      vi: {
+        name: "Gỡ mật khẩu chủ sở hữu PDF",
+        description:
+          "Gỡ cục bộ các hạn chế do mật khẩu chủ sở hữu PDF đặt ra để mở khóa quyền chỉnh sửa, in và sao chép.",
+      },
+      "zh-CN": {
+        name: "移除 PDF 所有者密码",
+        description:
+          "在本地移除 PDF 所有者密码限制，解锁编辑、打印和复制权限。",
+      },
+      "zh-TW": {
+        name: "移除 PDF 擁有者密碼",
+        description:
+          "在本機移除 PDF 擁有者密碼限制，解除編輯、列印和複製權限。",
       },
     },
   },
@@ -46211,6 +49466,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "ulid-generator": {
+    slug: "ulid-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "ulid",
+      "uuid",
+      "id",
+      "identifier",
+      "unique",
+      "sortable",
+      "timestamp",
+      "random",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولد ULID",
+        description:
+          "أنشئ معرفات Universally Unique Lexicographically Sortable داخل المتصفح مع طوابع زمنية مخصصة اختيارية.",
+      },
+      de: {
+        name: "ULID-Generator",
+        description:
+          "Erzeuge universell eindeutige, lexikografisch sortierbare Identifikatoren im Browser mit optionalen benutzerdefinierten Zeitstempeln.",
+      },
+      en: {
+        name: "ULID Generator",
+        description:
+          "Generate Universally Unique Lexicographically Sortable Identifiers in-browser with optional custom timestamps.",
+      },
+      es: {
+        name: "Generador de ULID",
+        description:
+          "Genera identificadores Universally Unique Lexicographically Sortable en el navegador con marcas de tiempo personalizadas opcionales.",
+      },
+      fr: {
+        name: "Générateur ULID",
+        description:
+          "Générez dans le navigateur des identifiants universellement uniques, triables lexicographiquement, avec horodatages personnalisés facultatifs.",
+      },
+      he: {
+        name: "מחולל ULID",
+        description:
+          "צרו בדפדפן מזהים ייחודיים אוניברסלית הניתנים למיון לקסיקוגרפי, עם חותמות זמן מותאמות אישית כאפשרות.",
+      },
+      hi: {
+        name: "ULID जेनरेटर",
+        description:
+          "वैकल्पिक कस्टम टाइमस्टैम्प के साथ ब्राउज़र में Universally Unique Lexicographically Sortable Identifiers जनरेट करें।",
+      },
+      id: {
+        name: "Generator ULID",
+        description:
+          "Buat Universally Unique Lexicographically Sortable Identifier di browser dengan stempel waktu kustom opsional.",
+      },
+      it: {
+        name: "Generatore ULID",
+        description:
+          "Genera nel browser Universally Unique Lexicographically Sortable Identifiers con timestamp personalizzati opzionali.",
+      },
+      ja: {
+        name: "ULID Generator",
+        description:
+          "任意のカスタムタイムスタンプにも対応した、辞書順にソート可能な汎用一意識別子をブラウザー内で生成します。",
+      },
+      ko: {
+        name: "ULID 생성기",
+        description:
+          "선택적으로 사용자 지정 타임스탬프를 사용해 브라우저 안에서 Universally Unique Lexicographically Sortable Identifier를 생성합니다.",
+      },
+      ms: {
+        name: "Penjana ULID",
+        description:
+          "Jana Pengecam Boleh Isih Secara Leksikografi yang Unik Secara Universal dalam pelayar dengan cap masa tersuai pilihan.",
+      },
+      nl: {
+        name: "ULID Generator",
+        description:
+          "Genereer Universally Unique Lexicographically Sortable Identifiers in de browser met optionele aangepaste tijdstempels.",
+      },
+      no: {
+        name: "ULID-generator",
+        description:
+          "Generer Universally Unique Lexicographically Sortable Identifiers i nettleseren med valgfrie egendefinerte tidsstempler.",
+      },
+      pl: {
+        name: "Generator ULID",
+        description:
+          "Generuj w przeglądarce uniwersalnie unikalne identyfikatory sortowalne leksykograficznie z opcjonalnymi niestandardowymi znacznikami czasu.",
+      },
+      pt: {
+        name: "Gerador de ULID",
+        description:
+          "Gere Identificadores Universalmente Únicos e Lexicograficamente Ordenáveis no navegador, com timestamps personalizados opcionais.",
+      },
+      ru: {
+        name: "Генератор ULID",
+        description:
+          "Генерируйте универсально уникальные лексикографически сортируемые идентификаторы прямо в браузере с необязательными пользовательскими временными метками.",
+      },
+      sv: {
+        name: "ULID-generator",
+        description:
+          "Generera Universally Unique Lexicographically Sortable Identifiers i webbläsaren med valfria anpassade tidsstämplar.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง ULID",
+        description:
+          "สร้าง Universally Unique Lexicographically Sortable Identifiers ในเบราว์เซอร์ พร้อมกำหนดเวลาที่กำหนดเองได้",
+      },
+      tr: {
+        name: "ULID Oluşturucu",
+        description:
+          "İsteğe bağlı özel zaman damgalarıyla tarayıcı içinde Evrensel Olarak Benzersiz, Sözlük Sırasına Göre Sıralanabilir Tanımlayıcılar oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo ULID",
+        description:
+          "Tạo Universally Unique Lexicographically Sortable Identifiers ngay trong trình duyệt, với tùy chọn mốc thời gian tùy chỉnh.",
+      },
+      "zh-CN": {
+        name: "ULID 生成器",
+        description:
+          "在浏览器内生成按字典序可排序的通用唯一标识符，并可选择自定义时间戳。",
+      },
+      "zh-TW": {
+        name: "ULID 產生器",
+        description:
+          "在瀏覽器中產生 Universally Unique Lexicographically Sortable Identifiers，並可選擇自訂時間戳記。",
+      },
+    },
+  },
   "unicode-escape-unescape": {
     slug: "unicode-escape-unescape",
     category: "web",
@@ -47345,6 +50733,267 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "uuid-max-generator": {
+    slug: "uuid-max-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "max uuid",
+      "identifier",
+      "sentinel",
+      "upper bound",
+      "rfc 9562",
+    ],
+    locales: {
+      ar: {
+        name: "مولد Max UUID",
+        description:
+          "أنشئ وانسخ قيمة Max UUID القياسية المكوّنة كلها من آحاد لاستخدامها في الحدود العليا، والقيم الحارسة، واختبارات النطاق.",
+      },
+      de: {
+        name: "Max UUID Generator",
+        description:
+          "Erzeuge und kopiere die standardisierte Max UUID mit lauter Einsen für obere Grenzen, Sentinel-Werte und Bereichstests.",
+      },
+      en: {
+        name: "Max UUID Generator",
+        description:
+          "Generate and copy the standardized all-one max UUID for upper bounds, sentinels, and range tests.",
+      },
+      es: {
+        name: "Generador de Max UUID",
+        description:
+          "Genera y copia el UUID máximo estandarizado, compuesto solo por unos, para límites superiores, centinelas y pruebas de rangos.",
+      },
+      fr: {
+        name: "Générateur de Max UUID",
+        description:
+          "Générez et copiez le Max UUID standardisé composé uniquement de uns pour les bornes supérieures, les sentinelles et les tests de plage.",
+      },
+      he: {
+        name: "מחולל Max UUID",
+        description:
+          "צרו והעתיקו את ה-Max UUID התקני שמורכב כולו מאחדות, עבור גבולות עליונים, ערכי sentinel ובדיקות טווח.",
+      },
+      hi: {
+        name: "Max UUID Generator",
+        description:
+          "ऊपरी सीमाओं, sentinel values, और range tests के लिए मानकीकृत all-one max UUID जनरेट और कॉपी करें।",
+      },
+      id: {
+        name: "Generator Max UUID",
+        description:
+          "Buat dan salin max UUID semua-satu standar untuk batas atas, sentinel, dan pengujian rentang.",
+      },
+      it: {
+        name: "Generatore di Max UUID",
+        description:
+          "Genera e copia il max UUID standardizzato composto solo da uno per limiti superiori, sentinelle e test di intervallo.",
+      },
+      ja: {
+        name: "Max UUID Generator",
+        description:
+          "上限値、センチネル、範囲テスト向けに、標準化された全ビット 1 の max UUID を生成してコピーします。",
+      },
+      ko: {
+        name: "Max UUID Generator",
+        description:
+          "상한, 센티널, 범위 테스트에 사용할 표준 all-one max UUID를 생성하고 복사합니다.",
+      },
+      ms: {
+        name: "Penjana Max UUID",
+        description:
+          "Jana dan salin max UUID semua-satu yang diseragamkan untuk batas atas, sentinel, dan ujian julat.",
+      },
+      nl: {
+        name: "Max UUID Generator",
+        description:
+          "Genereer en kopieer de gestandaardiseerde max UUID met alleen enen voor bovengrenzen, sentinels en bereiktests.",
+      },
+      no: {
+        name: "Max UUID Generator",
+        description:
+          "Generer og kopier den standardiserte max UUID-en med bare ettall for øvre grenser, sentinelverdier og områdetester.",
+      },
+      pl: {
+        name: "Generator Max UUID",
+        description:
+          "Generuj i kopiuj standaryzowany max UUID z samych jedynek do górnych granic, wartowników i testów zakresów.",
+      },
+      pt: {
+        name: "Max UUID Generator",
+        description:
+          "Gere e copie o max UUID padronizado composto só por uns para limites superiores, sentinelas e testes de intervalo.",
+      },
+      ru: {
+        name: "Генератор Max UUID",
+        description:
+          "Создавайте и копируйте стандартизированный max UUID из одних единиц для верхних границ, специальных значений и тестов диапазонов.",
+      },
+      sv: {
+        name: "Max UUID Generator",
+        description:
+          "Generera och kopiera den standardiserade max-UUID:n med enbart ettor för övre gränser, sentinlar och intervalltester.",
+      },
+      th: {
+        name: "ตัวสร้าง Max UUID",
+        description:
+          "สร้างและคัดลอก max UUID มาตรฐานที่เป็นค่า all-one สำหรับขอบเขตบน ค่า sentinel และการทดสอบช่วง",
+      },
+      tr: {
+        name: "Max UUID Generator",
+        description:
+          "Üst sınırlar, sentinel değerler ve aralık testleri için standartlaştırılmış tüm bitleri bir olan max UUID değerini üretin ve kopyalayın.",
+      },
+      vi: {
+        name: "Trình tạo Max UUID",
+        description:
+          "Tạo và sao chép max UUID toàn bit một theo chuẩn cho giới hạn trên, sentinel và kiểm thử phạm vi.",
+      },
+      "zh-CN": {
+        name: "Max UUID 生成器",
+        description:
+          "生成并复制标准化的全 1 max UUID，用于上限、哨兵值和范围测试。",
+      },
+      "zh-TW": {
+        name: "Max UUID 產生器",
+        description:
+          "產生並複製標準化的全 1 max UUID，可用於上限、哨兵值和範圍測試。",
+      },
+    },
+  },
+  "uuid-nil-generator": {
+    slug: "uuid-nil-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "nil",
+      "null",
+      "identifier",
+      "placeholder",
+      "generator",
+      "rfc",
+    ],
+    locales: {
+      ar: {
+        name: "مولد Nil UUID",
+        description:
+          "أنشئ وانسخ Nil UUID القياسي المكون بالكامل من أصفار لاستخدامه في العناصر النائبة والقيم الافتراضية وقيم الحارس.",
+      },
+      de: {
+        name: "Nil-UUID-Generator",
+        description:
+          "Erzeuge und kopiere die standardisierte Null-UUID mit lauter Nullen für Platzhalter, Standardwerte und Sentinel-Werte.",
+      },
+      en: {
+        name: "Nil UUID Generator",
+        description:
+          "Generate and copy the standardized all-zero nil UUID for placeholders, defaults, and sentinel values.",
+      },
+      es: {
+        name: "Generador de UUID nil",
+        description:
+          "Genera y copia el UUID nil estandarizado compuesto solo por ceros para marcadores de posición, valores predeterminados y valores centinela.",
+      },
+      fr: {
+        name: "Generateur d'UUID nil",
+        description:
+          "Generez et copiez l'UUID nil standardise compose uniquement de zeros pour les espaces reserves, les valeurs par defaut et les valeurs sentinelles.",
+      },
+      he: {
+        name: "מחולל Nil UUID",
+        description:
+          "צרו והעתיקו את ה-nil UUID התקני שכולו אפסים עבור מצייני מקום, ערכי ברירת מחדל וערכי sentinel.",
+      },
+      hi: {
+        name: "Nil UUID Generator",
+        description:
+          "प्लेसहोल्डर, डिफॉल्ट और सेंटिनल मानों के लिए मानकीकृत सभी-शून्य nil UUID बनाएं और कॉपी करें.",
+      },
+      id: {
+        name: "Generator UUID Nil",
+        description:
+          "Buat dan salin UUID nil standar yang seluruhnya nol untuk placeholder, nilai default, dan nilai sentinel.",
+      },
+      it: {
+        name: "Generatore di UUID nil",
+        description:
+          "Genera e copia l'UUID nil standardizzato composto solo da zeri per segnaposto, valori predefiniti e valori sentinella.",
+      },
+      ja: {
+        name: "Nil UUID Generator",
+        description:
+          "プレースホルダー、デフォルト値、センチネル値に使う、標準化された全ゼロの nil UUID を生成してコピーします。",
+      },
+      ko: {
+        name: "Nil UUID 생성기",
+        description:
+          "자리 표시자, 기본값, 센티널 값에 사용할 표준화된 모든 값이 0인 nil UUID를 생성하고 복사합니다.",
+      },
+      ms: {
+        name: "Penjana UUID Nil",
+        description:
+          "Jana dan salin UUID nil semua sifar yang distandardkan untuk pemegang tempat, lalai, dan nilai sentinel.",
+      },
+      nl: {
+        name: "Nil UUID-generator",
+        description:
+          "Genereer en kopieer de gestandaardiseerde nil UUID met alleen nullen voor placeholders, standaardwaarden en sentinelwaarden.",
+      },
+      no: {
+        name: "Nil UUID Generator",
+        description:
+          "Generer og kopier den standardiserte nil-UUID-en med bare nuller for plassholdere, standardverdier og sentinel-verdier.",
+      },
+      pl: {
+        name: "Generator Nil UUID",
+        description:
+          "Wygeneruj i skopiuj znormalizowany, złożony z samych zer nil UUID do symboli zastępczych, wartości domyślnych i wartości sentinel.",
+      },
+      pt: {
+        name: "Gerador de UUID Nil",
+        description:
+          "Gere e copie o UUID nil padronizado com todos os zeros para placeholders, padrões e valores sentinela.",
+      },
+      ru: {
+        name: "Генератор nil UUID",
+        description:
+          "Создавайте и копируйте стандартизированный nil UUID из одних нулей для заполнителей, значений по умолчанию и сигнальных значений.",
+      },
+      sv: {
+        name: "Nil UUID-generator",
+        description:
+          "Generera och kopiera den standardiserade nil-UUID:n med bara nollor för platshållare, standardvärden och sentinel-värden.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง Nil UUID",
+        description:
+          "สร้างและคัดลอก nil UUID มาตรฐานที่เป็นศูนย์ทั้งหมด สำหรับ placeholder, ค่าเริ่มต้น และค่า sentinel",
+      },
+      tr: {
+        name: "Nil UUID Oluşturucu",
+        description:
+          "Yer tutucular, varsayılanlar ve sentinel değerler için standartlaştırılmış tamamı sıfır nil UUID'yi oluşturup kopyalayın.",
+      },
+      vi: {
+        name: "Trình tạo UUID nil",
+        description:
+          "Tạo và sao chép UUID nil toàn số không theo tiêu chuẩn để dùng làm phần giữ chỗ, giá trị mặc định và giá trị sentinel.",
+      },
+      "zh-CN": {
+        name: "Nil UUID 生成器",
+        description:
+          "生成并复制标准化的全零 nil UUID，用于占位符、默认值和哨兵值。",
+      },
+      "zh-TW": {
+        name: "Nil UUID 產生器",
+        description:
+          "產生並複製標準化的全零 nil UUID，可用於預留位置、預設值與哨兵值。",
+      },
+    },
+  },
   "uuid-v1-generator": {
     slug: "uuid-v1-generator",
     category: "developer",
@@ -47999,6 +51648,401 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "UUID v4 產生器",
         description: "直接在你的瀏覽器本機產生隨機 RFC 4122/RFC 9562 UUID v4。",
+      },
+    },
+  },
+  "uuid-v5-generator": {
+    slug: "uuid-v5-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid-v5",
+      "identifier",
+      "deterministic",
+      "namespace",
+      "sha1",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "UUID v5 Generator",
+        description:
+          "أنشئ معرفات UUID v5 حتمية قائمة على الاسم من UUID لمساحة أسماء واسم، بالكامل داخل متصفحك.",
+      },
+      de: {
+        name: "UUID v5 Generator",
+        description:
+          "Erzeuge deterministische namensbasierte UUID-v5-Kennungen aus einer Namespace-UUID und einem Namen, vollständig in deinem Browser.",
+      },
+      en: {
+        name: "UUID v5 Generator",
+        description:
+          "Generate deterministic name-based UUID v5 identifiers from a namespace UUID and name, entirely in your browser.",
+      },
+      es: {
+        name: "Generador de UUID v5",
+        description:
+          "Genera identificadores UUID v5 deterministas basados en nombres a partir de un UUID de espacio de nombres y un nombre, íntegramente en tu navegador.",
+      },
+      fr: {
+        name: "UUID v5 Generator",
+        description:
+          "Générez des identifiants UUID v5 déterministes basés sur un nom à partir d'un UUID d'espace de noms et d'un nom, entièrement dans votre navigateur.",
+      },
+      he: {
+        name: "UUID v5 Generator",
+        description:
+          "צרו מזהי UUID v5 דטרמיניסטיים מבוססי שם מ-UUID מרחב שמות ומשם, כולו בדפדפן שלכם.",
+      },
+      hi: {
+        name: "UUID v5 Generator",
+        description:
+          "नेमस्पेस UUID और नाम से नियतात्मक नाम-आधारित UUID v5 पहचानकर्ता पूरी तरह अपने ब्राउज़र में बनाएं।",
+      },
+      id: {
+        name: "UUID v5 Generator",
+        description:
+          "Buat identifier UUID v5 deterministik berbasis nama dari UUID namespace dan nama, sepenuhnya di browser Anda.",
+      },
+      it: {
+        name: "UUID v5 Generator",
+        description:
+          "Genera identificatori UUID v5 deterministici basati sul nome da un UUID di namespace e da un nome, interamente nel browser.",
+      },
+      ja: {
+        name: "UUID v5 Generator",
+        description:
+          "名前空間 UUID と名前から、決定的な名前ベースの UUID v5 識別子を完全にブラウザー内で生成します。",
+      },
+      ko: {
+        name: "UUID v5 Generator",
+        description:
+          "네임스페이스 UUID와 이름으로 결정적 이름 기반 UUID v5 식별자를 브라우저에서만 생성합니다.",
+      },
+      ms: {
+        name: "UUID v5 Generator",
+        description:
+          "Jana pengecam UUID v5 berasaskan nama yang deterministik daripada UUID ruang nama dan nama, sepenuhnya dalam pelayar anda.",
+      },
+      nl: {
+        name: "UUID v5 Generator",
+        description:
+          "Genereer deterministische naamgebaseerde UUID v5-identificaties op basis van een namespace-UUID en naam, volledig in je browser.",
+      },
+      no: {
+        name: "UUID v5 Generator",
+        description:
+          "Generer deterministiske navnebaserte UUID v5-identifikatorer fra en namespace-UUID og et navn, helt i nettleseren din.",
+      },
+      pl: {
+        name: "UUID v5 Generator",
+        description:
+          "Generuj deterministyczne identyfikatory UUID v5 oparte na nazwie z UUID przestrzeni nazw i nazwy, całkowicie w przeglądarce.",
+      },
+      pt: {
+        name: "UUID v5 Generator",
+        description:
+          "Gere identificadores UUID v5 determinísticos baseados em nome a partir de um UUID de namespace e um nome, inteiramente no seu navegador.",
+      },
+      ru: {
+        name: "UUID v5 Generator",
+        description:
+          "Генерируйте детерминированные идентификаторы UUID v5 на основе имени из UUID пространства имен и имени полностью в браузере.",
+      },
+      sv: {
+        name: "UUID v5 Generator",
+        description:
+          "Generera deterministiska namnbaserade UUID v5-identifierare från ett namnrymds-UUID och ett namn, helt i din webbläsare.",
+      },
+      th: {
+        name: "UUID v5 Generator",
+        description:
+          "สร้างตัวระบุ UUID v5 แบบอิงชื่อที่ให้ผลคงเดิมจาก namespace UUID และชื่อ ทั้งหมดภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "UUID v5 Generator",
+        description:
+          "Bir ad alanı UUID'si ve addan, tamamen tarayıcınızda, deterministik ada dayalı UUID v5 tanımlayıcıları oluşturun.",
+      },
+      vi: {
+        name: "UUID v5 Generator",
+        description:
+          "Tạo mã định danh UUID v5 dựa trên tên, có tính xác định, từ UUID không gian tên và tên, hoàn toàn trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "UUID v5 Generator",
+        description:
+          "完全在浏览器中，根据命名空间 UUID 和名称生成确定性的基于名称的 UUID v5 标识符。",
+      },
+      "zh-TW": {
+        name: "UUID v5 Generator",
+        description:
+          "完全在瀏覽器中，從命名空間 UUID 和名稱產生確定性的名稱型 UUID v5 識別碼。",
+      },
+    },
+  },
+  "uuid-v6-generator": {
+    slug: "uuid-v6-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuidv6",
+      "id",
+      "identifier",
+      "unique",
+      "sortable",
+      "timestamp",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولد UUID v6",
+        description: "أنشئ معرفات UUID v6 زمنية وقابلة للفرز محليًا في متصفحك.",
+      },
+      de: {
+        name: "UUID-v6-Generator",
+        description:
+          "Erzeuge sortierbare, zeitbasierte UUID-v6-Kennungen lokal in deinem Browser.",
+      },
+      en: {
+        name: "UUID v6 Generator",
+        description:
+          "Generate sortable, time-based UUID v6 identifiers locally in your browser.",
+      },
+      es: {
+        name: "Generador de UUID v6",
+        description:
+          "Genera identificadores UUID v6 ordenables y basados en tiempo localmente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur d'UUID v6",
+        description:
+          "Générez localement dans votre navigateur des identifiants UUID v6 triables et basés sur le temps.",
+      },
+      he: {
+        name: "מחולל UUID v6",
+        description:
+          "צרו מזהי UUID v6 מבוססי זמן וניתנים למיון באופן מקומי בדפדפן שלכם.",
+      },
+      hi: {
+        name: "UUID v6 जनरेटर",
+        description:
+          "अपने ब्राउज़र में स्थानीय रूप से सॉर्ट किए जा सकने वाले, समय-आधारित UUID v6 पहचानकर्ता जनरेट करें.",
+      },
+      id: {
+        name: "Generator UUID v6",
+        description:
+          "Buat pengenal UUID v6 berbasis waktu yang dapat diurutkan secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Generatore UUID v6",
+        description:
+          "Genera localmente nel browser identificatori UUID v6 ordinabili e basati sul tempo.",
+      },
+      ja: {
+        name: "UUID v6 生成ツール",
+        description:
+          "ソート可能な時刻ベースの UUID v6 識別子を、ブラウザー内でローカルに生成します。",
+      },
+      ko: {
+        name: "UUID v6 생성기",
+        description:
+          "정렬 가능한 시간 기반 UUID v6 식별자를 브라우저에서 로컬로 생성합니다.",
+      },
+      ms: {
+        name: "Penjana UUID v6",
+        description:
+          "Jana pengecam UUID v6 berasaskan masa yang boleh diisih secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "UUID v6-generator",
+        description:
+          "Genereer lokaal in je browser sorteerbare, tijdgebaseerde UUID v6-identificatiecodes.",
+      },
+      no: {
+        name: "UUID v6-generator",
+        description:
+          "Generer sorterbare, tidsbaserte UUID v6-identifikatorer lokalt i nettleseren din.",
+      },
+      pl: {
+        name: "Generator UUID v6",
+        description:
+          "Generuj sortowalne, oparte na czasie identyfikatory UUID v6 lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de UUID v6",
+        description:
+          "Gere identificadores UUID v6 ordenáveis e baseados em tempo localmente no seu navegador.",
+      },
+      ru: {
+        name: "Генератор UUID v6",
+        description:
+          "Генерируйте сортируемые идентификаторы UUID v6 на основе времени локально в браузере.",
+      },
+      sv: {
+        name: "UUID v6-generator",
+        description:
+          "Generera sorterbara, tidsbaserade UUID v6-identifierare lokalt i din webbläsare.",
+      },
+      th: {
+        name: "ตัวสร้าง UUID v6",
+        description:
+          "สร้างตัวระบุ UUID v6 แบบอิงเวลาและเรียงลำดับได้ภายในเบราว์เซอร์ของคุณ.",
+      },
+      tr: {
+        name: "UUID v6 Oluşturucu",
+        description:
+          "Sıralanabilir, zaman tabanlı UUID v6 tanımlayıcılarını tarayıcınızda yerel olarak oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo UUID v6",
+        description:
+          "Tạo mã định danh UUID v6 dựa trên thời gian, có thể sắp xếp, ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "UUID v6 生成器",
+        description: "在浏览器本地生成可排序、基于时间的 UUID v6 标识符。",
+      },
+      "zh-TW": {
+        name: "UUID v6 產生器",
+        description:
+          "在瀏覽器中於本機產生可排序、以時間為基礎的 UUID v6 識別碼。",
+      },
+    },
+  },
+  "uuid-v7-generator": {
+    slug: "uuid-v7-generator",
+    category: "developer",
+    icon: "lock",
+    tags: [
+      "uuid",
+      "uuid-v7",
+      "id",
+      "identifier",
+      "unique",
+      "sortable",
+      "timestamp",
+      "random",
+      "generator",
+      "database",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد UUID v7",
+        description:
+          "أنشئ معرّفات UUID v7 قابلة للفرز حسب الطابع الزمني داخل متصفحك لقواعد البيانات والأحداث والأنظمة الموزعة.",
+      },
+      de: {
+        name: "UUID v7-Generator",
+        description:
+          "Erzeuge nach Zeitstempel sortierbare UUID v7-Kennungen im Browser für Datenbanken, Ereignisse und verteilte Systeme.",
+      },
+      en: {
+        name: "UUID v7 Generator",
+        description:
+          "Generate timestamp-sortable UUID v7 identifiers in your browser for databases, events, and distributed systems.",
+      },
+      es: {
+        name: "Generador de UUID v7",
+        description:
+          "Genera identificadores UUID v7 ordenables por marca de tiempo en tu navegador para bases de datos, eventos y sistemas distribuidos.",
+      },
+      fr: {
+        name: "Générateur d'UUID v7",
+        description:
+          "Générez dans votre navigateur des identifiants UUID v7 triables par horodatage pour les bases de données, les événements et les systèmes distribués.",
+      },
+      he: {
+        name: "מחולל UUID v7",
+        description:
+          "צרו מזהי UUID v7 הניתנים למיון לפי חותמת זמן ישירות בדפדפן, עבור מסדי נתונים, אירועים ומערכות מבוזרות.",
+      },
+      hi: {
+        name: "UUID v7 जनरेटर",
+        description:
+          "डेटाबेस, ईवेंट और वितरित सिस्टम के लिए अपने ब्राउज़र में टाइमस्टैम्प के आधार पर क्रमबद्ध होने योग्य UUID v7 पहचानकर्ता जनरेट करें।",
+      },
+      id: {
+        name: "Generator UUID v7",
+        description:
+          "Buat pengenal UUID v7 yang dapat diurutkan berdasarkan stempel waktu di browser Anda untuk basis data, peristiwa, dan sistem terdistribusi.",
+      },
+      it: {
+        name: "Generatore di UUID v7",
+        description:
+          "Genera identificatori UUID v7 ordinabili per timestamp nel browser per database, eventi e sistemi distribuiti.",
+      },
+      ja: {
+        name: "UUID v7 ジェネレーター",
+        description:
+          "データベース、イベント、分散システム向けに、タイムスタンプ順にソートできるUUID v7識別子をブラウザー内で生成します。",
+      },
+      ko: {
+        name: "UUID v7 생성기",
+        description:
+          "데이터베이스, 이벤트, 분산 시스템에 사용할 수 있는 타임스탬프 정렬 가능 UUID v7 식별자를 브라우저에서 생성합니다.",
+      },
+      ms: {
+        name: "Penjana UUID v7",
+        description:
+          "Jana pengecam UUID v7 yang boleh diisih mengikut cap masa dalam pelayar anda untuk pangkalan data, peristiwa dan sistem teragih.",
+      },
+      nl: {
+        name: "UUID v7-generator",
+        description:
+          "Genereer in je browser UUID v7-identifiers die op tijdstempel sorteerbaar zijn, voor databases, gebeurtenissen en gedistribueerde systemen.",
+      },
+      no: {
+        name: "UUID v7-generator",
+        description:
+          "Generer tidsstempelsorterbare UUID v7-identifikatorer i nettleseren for databaser, hendelser og distribuerte systemer.",
+      },
+      pl: {
+        name: "Generator UUID v7",
+        description:
+          "Generuj w przeglądarce identyfikatory UUID v7 sortowalne według czasu dla baz danych, zdarzeń i systemów rozproszonych.",
+      },
+      pt: {
+        name: "Gerador de UUID v7",
+        description:
+          "Gere identificadores UUID v7 ordenáveis por timestamp no navegador para bancos de dados, eventos e sistemas distribuídos.",
+      },
+      ru: {
+        name: "Генератор UUID v7",
+        description:
+          "Генерируйте сортируемые по времени идентификаторы UUID v7 прямо в браузере для баз данных, событий и распределенных систем.",
+      },
+      sv: {
+        name: "UUID v7-generator",
+        description:
+          "Generera tidsstämpelsorterbara UUID v7-identifierare i din webbläsare för databaser, händelser och distribuerade system.",
+      },
+      th: {
+        name: "ตัวสร้าง UUID v7",
+        description:
+          "สร้างตัวระบุ UUID v7 ที่เรียงตามเวลาได้ในเบราว์เซอร์ของคุณ สำหรับฐานข้อมูล เหตุการณ์ และระบบแบบกระจาย",
+      },
+      tr: {
+        name: "UUID v7 Oluşturucu",
+        description:
+          "Veritabanları, etkinlikler ve dağıtık sistemler için tarayıcınızda zaman damgasına göre sıralanabilir UUID v7 tanımlayıcıları oluşturun.",
+      },
+      vi: {
+        name: "Trình tạo UUID v7",
+        description:
+          "Tạo các mã định danh UUID v7 có thể sắp xếp theo dấu thời gian ngay trong trình duyệt cho cơ sở dữ liệu, sự kiện và hệ thống phân tán.",
+      },
+      "zh-CN": {
+        name: "UUID v7 生成器",
+        description:
+          "在浏览器中生成可按时间戳排序的 UUID v7 标识符，适用于数据库、事件和分布式系统。",
+      },
+      "zh-TW": {
+        name: "UUID v7 產生器",
+        description:
+          "在瀏覽器中產生可依時間戳記排序的 UUID v7 識別碼，適用於資料庫、事件與分散式系統。",
       },
     },
   },

@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "Standartlaştırılmış tüm bitleri bir olan UUID değerini sisteminizin beklediği gösterimde kopyalayın.",
+  "canonicalLabel": "Kanonik UUID",
+  "rawHexLabel": "32 basamaklı hex",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "UUID kopyala",
+  "copyHexLabel": "Hex kopyala",
+  "copyUrnLabel": "URN kopyala",
+  "copiedLabel": "Kopyalandı",
+  "detailsTitle": "Referans",
+  "detailsDescription": "Max UUID, rastgele bir tanımlayıcı değil, sabit bir sentinel değerdir.",
+  "allBitsLabel": "Bitler",
+  "allBitsValue": "128 bit bire ayarlı",
+  "versionLabel": "Sürüm",
+  "versionValue": "Özel biçim",
+  "variantLabel": "Varyant",
+  "variantValue": "Tüm bitler ayarlı",
+  "stableLabel": "Yeniden üretme",
+  "stableValue": "Her zaman aynı değeri döndürür"
+}

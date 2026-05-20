@@ -1,0 +1,4 @@
+{
+  "name": "Generator ULID",
+  "description": "Generuj w przeglądarce uniwersalnie unikalne identyfikatory sortowalne leksykograficznie z opcjonalnymi niestandardowymi znacznikami czasu."
+}

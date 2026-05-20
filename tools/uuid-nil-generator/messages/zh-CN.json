@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Nil UUID",
+  "valueDescription": "以系统所需的表示形式复制标准化的全零 UUID。",
+  "canonicalLabel": "规范 UUID",
+  "rawHexLabel": "32 位十六进制",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "复制 UUID",
+  "copyHexLabel": "复制十六进制",
+  "copyUrnLabel": "复制 URN",
+  "copiedLabel": "已复制",
+  "detailsTitle": "参考",
+  "detailsDescription": "nil UUID 是固定的哨兵值，不是随机标识符。",
+  "allBitsLabel": "位",
+  "allBitsValue": "128 个零位",
+  "versionLabel": "版本",
+  "versionValue": "无",
+  "variantLabel": "变体",
+  "variantValue": "无",
+  "stableLabel": "重新生成",
+  "stableValue": "始终返回相同的值"
+}

@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "Скопируйте стандартизированный UUID из одних единиц в представлении, которое ожидает ваша система.",
+  "canonicalLabel": "Канонический UUID",
+  "rawHexLabel": "32-значный hex",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "Копировать UUID",
+  "copyHexLabel": "Копировать hex",
+  "copyUrnLabel": "Копировать URN",
+  "copiedLabel": "Скопировано",
+  "detailsTitle": "Справка",
+  "detailsDescription": "Max UUID — это фиксированное специальное значение, а не случайный идентификатор.",
+  "allBitsLabel": "Биты",
+  "allBitsValue": "Все 128 бит установлены в единицу",
+  "versionLabel": "Версия",
+  "versionValue": "Специальная форма",
+  "variantLabel": "Вариант",
+  "variantValue": "Все биты установлены",
+  "stableLabel": "Повторная генерация",
+  "stableValue": "Всегда возвращает одно и то же значение"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "UUID v7 Generator",
+  "description": "Generate timestamp-sortable UUID v7 identifiers in your browser for databases, events, and distributed systems."
+}

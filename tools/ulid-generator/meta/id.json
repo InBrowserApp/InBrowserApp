@@ -1,0 +1,4 @@
+{
+  "name": "Generator ULID",
+  "description": "Buat Universally Unique Lexicographically Sortable Identifier di browser dengan stempel waktu kustom opsional."
+}

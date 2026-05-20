@@ -646,6 +646,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "audio-recorder",
+    language: "ar",
+  },
+  {
+    slug: "audio-recorder",
+    language: "de",
+  },
+  {
+    slug: "audio-recorder",
+    language: "en",
+  },
+  {
+    slug: "audio-recorder",
+    language: "es",
+  },
+  {
+    slug: "audio-recorder",
+    language: "fr",
+  },
+  {
+    slug: "audio-recorder",
+    language: "he",
+  },
+  {
+    slug: "audio-recorder",
+    language: "hi",
+  },
+  {
+    slug: "audio-recorder",
+    language: "id",
+  },
+  {
+    slug: "audio-recorder",
+    language: "it",
+  },
+  {
+    slug: "audio-recorder",
+    language: "ja",
+  },
+  {
+    slug: "audio-recorder",
+    language: "ko",
+  },
+  {
+    slug: "audio-recorder",
+    language: "ms",
+  },
+  {
+    slug: "audio-recorder",
+    language: "nl",
+  },
+  {
+    slug: "audio-recorder",
+    language: "no",
+  },
+  {
+    slug: "audio-recorder",
+    language: "pl",
+  },
+  {
+    slug: "audio-recorder",
+    language: "pt",
+  },
+  {
+    slug: "audio-recorder",
+    language: "ru",
+  },
+  {
+    slug: "audio-recorder",
+    language: "sv",
+  },
+  {
+    slug: "audio-recorder",
+    language: "th",
+  },
+  {
+    slug: "audio-recorder",
+    language: "tr",
+  },
+  {
+    slug: "audio-recorder",
+    language: "vi",
+  },
+  {
+    slug: "audio-recorder",
+    language: "zh-CN",
+  },
+  {
+    slug: "audio-recorder",
+    language: "zh-TW",
+  },
+  {
     slug: "barcode-generator",
     language: "ar",
   },
@@ -5430,6 +5522,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "favicon-assets-generator",
+    language: "ar",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "de",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "en",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "es",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "fr",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "he",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "hi",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "id",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "it",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "ja",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "ko",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "ms",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "nl",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "no",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "pl",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "pt",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "ru",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "sv",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "th",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "tr",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "vi",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "favicon-assets-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "file-to-data-uri-converter",
     language: "ar",
   },
@@ -5519,6 +5703,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "file-to-data-uri-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "ar",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "de",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "en",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "es",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "fr",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "he",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "hi",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "id",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "it",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "ja",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "ko",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "ms",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "nl",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "no",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "pl",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "pt",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "ru",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "sv",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "th",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "tr",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "vi",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "gif-to-animated-webp-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "ar",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "de",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "en",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "es",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "fr",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "he",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "hi",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "id",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "it",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "ja",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "ko",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "ms",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "nl",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "no",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "pl",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "pt",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "ru",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "sv",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "th",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "tr",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "vi",
+  },
+  {
+    slug: "gif-to-apng-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "gif-to-apng-converter",
     language: "zh-TW",
   },
   {
@@ -10858,6 +11226,466 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-page-number-adder",
+    language: "ar",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "de",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "en",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "es",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "fr",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "he",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "hi",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "id",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "it",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "ja",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "ko",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "ms",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "nl",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "no",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "pl",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "pt",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "ru",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "sv",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "th",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "tr",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "vi",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-page-number-adder",
+    language: "zh-TW",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "ar",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "de",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "en",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "es",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "fr",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "he",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "hi",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "id",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "it",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "ja",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "ko",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "ms",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "nl",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "no",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "pl",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "pt",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "ru",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "sv",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "th",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "tr",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "vi",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-page-organizer",
+    language: "zh-TW",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "ar",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "de",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "en",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "es",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "fr",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "he",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "hi",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "id",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "it",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "ja",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "ko",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "ms",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "nl",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "no",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "pl",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "pt",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "ru",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "sv",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "th",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "tr",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "vi",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-splitter",
+    language: "zh-TW",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "ar",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "de",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "en",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "es",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "fr",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "he",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "hi",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "id",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "it",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "ja",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "ko",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "ms",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "nl",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "no",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "pl",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "pt",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "ru",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "sv",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "th",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "tr",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "vi",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-text-extractor",
+    language: "zh-TW",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "ar",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "de",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "en",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "es",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "fr",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "he",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "hi",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "id",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "it",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "ja",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "ko",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "ms",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "nl",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "no",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "pl",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "pt",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "ru",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "sv",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "th",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "tr",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "vi",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-to-image-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "pgp-key-generator",
     language: "ar",
   },
@@ -11959,6 +12787,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "regex-tester-replacer",
+    language: "zh-TW",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "ar",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "de",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "en",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "es",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "fr",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "he",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "hi",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "id",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "it",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "ja",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "ko",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "ms",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "nl",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "no",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "pl",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "pt",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "ru",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "sv",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "th",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "tr",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "vi",
+  },
+  {
+    slug: "remove-pdf-owner-password",
+    language: "zh-CN",
+  },
+  {
+    slug: "remove-pdf-owner-password",
     language: "zh-TW",
   },
   {
@@ -15826,6 +16746,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ulid-generator",
+    language: "ar",
+  },
+  {
+    slug: "ulid-generator",
+    language: "de",
+  },
+  {
+    slug: "ulid-generator",
+    language: "en",
+  },
+  {
+    slug: "ulid-generator",
+    language: "es",
+  },
+  {
+    slug: "ulid-generator",
+    language: "fr",
+  },
+  {
+    slug: "ulid-generator",
+    language: "he",
+  },
+  {
+    slug: "ulid-generator",
+    language: "hi",
+  },
+  {
+    slug: "ulid-generator",
+    language: "id",
+  },
+  {
+    slug: "ulid-generator",
+    language: "it",
+  },
+  {
+    slug: "ulid-generator",
+    language: "ja",
+  },
+  {
+    slug: "ulid-generator",
+    language: "ko",
+  },
+  {
+    slug: "ulid-generator",
+    language: "ms",
+  },
+  {
+    slug: "ulid-generator",
+    language: "nl",
+  },
+  {
+    slug: "ulid-generator",
+    language: "no",
+  },
+  {
+    slug: "ulid-generator",
+    language: "pl",
+  },
+  {
+    slug: "ulid-generator",
+    language: "pt",
+  },
+  {
+    slug: "ulid-generator",
+    language: "ru",
+  },
+  {
+    slug: "ulid-generator",
+    language: "sv",
+  },
+  {
+    slug: "ulid-generator",
+    language: "th",
+  },
+  {
+    slug: "ulid-generator",
+    language: "tr",
+  },
+  {
+    slug: "ulid-generator",
+    language: "vi",
+  },
+  {
+    slug: "ulid-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "ulid-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "unicode-escape-unescape",
     language: "ar",
   },
@@ -16654,6 +17666,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "uuid-max-generator",
+    language: "ar",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "de",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "en",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "es",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "fr",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "he",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "hi",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "id",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "it",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "ja",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "ko",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "ms",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "nl",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "no",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "pl",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "pt",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "ru",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "sv",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "th",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "tr",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "vi",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-max-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "ar",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "de",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "en",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "es",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "fr",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "he",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "hi",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "id",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "it",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "ja",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "ko",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "ms",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "nl",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "no",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "pl",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "pt",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "ru",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "sv",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "th",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "tr",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "vi",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-nil-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "uuid-v1-generator",
     language: "ar",
   },
@@ -17111,6 +18307,282 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "uuid-v4-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "ar",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "de",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "en",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "es",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "fr",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "he",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "hi",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "id",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "it",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "ja",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "ko",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "ms",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "nl",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "no",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "pl",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "pt",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "ru",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "sv",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "th",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "tr",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "vi",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-v5-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "ar",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "de",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "en",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "es",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "fr",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "he",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "hi",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "id",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "it",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "ja",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "ko",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "ms",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "nl",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "no",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "pl",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "pt",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "ru",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "sv",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "th",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "tr",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "vi",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-v6-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "ar",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "de",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "en",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "es",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "fr",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "he",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "hi",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "id",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "it",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "ja",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "ko",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "ms",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "nl",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "no",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "pl",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "pt",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "ru",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "sv",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "th",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "tr",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "vi",
+  },
+  {
+    slug: "uuid-v7-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "uuid-v7-generator",
     language: "zh-TW",
   },
   {

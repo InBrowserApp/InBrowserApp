@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "Kopiera den standardiserade UUID:n med enbart ettor i den representation som ditt system förväntar sig.",
+  "canonicalLabel": "Kanonisk UUID",
+  "rawHexLabel": "32-siffrig hex",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "Kopiera UUID",
+  "copyHexLabel": "Kopiera hex",
+  "copyUrnLabel": "Kopiera URN",
+  "copiedLabel": "Kopierad",
+  "detailsTitle": "Referens",
+  "detailsDescription": "Max-UUID:n är ett fast sentinelvärde, inte en slumpmässig identifierare.",
+  "allBitsLabel": "Bitar",
+  "allBitsValue": "128 bitar satta till ett",
+  "versionLabel": "Version",
+  "versionValue": "Särskild form",
+  "variantLabel": "Variant",
+  "variantValue": "Alla bitar satta",
+  "stableLabel": "Återskapande",
+  "stableValue": "Returnerar alltid samma värde"
+}

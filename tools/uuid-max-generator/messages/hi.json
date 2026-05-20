@@ -1,0 +1,21 @@
+{
+  "valueTitle": "Max UUID",
+  "valueDescription": "मानकीकृत all-one UUID को उस representation में कॉपी करें जिसकी आपके system को अपेक्षा है।",
+  "canonicalLabel": "Canonical UUID",
+  "rawHexLabel": "32-digit hex",
+  "urnLabel": "UUID URN",
+  "copyUuidLabel": "UUID कॉपी करें",
+  "copyHexLabel": "hex कॉपी करें",
+  "copyUrnLabel": "URN कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "detailsTitle": "संदर्भ",
+  "detailsDescription": "max UUID एक fixed sentinel value है, random identifier नहीं।",
+  "allBitsLabel": "Bits",
+  "allBitsValue": "128 bits one पर सेट",
+  "versionLabel": "Version",
+  "versionValue": "Special form",
+  "variantLabel": "Variant",
+  "variantValue": "सभी bits सेट",
+  "stableLabel": "Regeneration",
+  "stableValue": "हमेशा वही value लौटाता है"
+}
