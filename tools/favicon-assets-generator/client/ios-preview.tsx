@@ -66,7 +66,10 @@ function IosPreview({
           top: "90.5%",
           left: "76.7%",
           width: "16.2%",
-          fontSize: "2.5%",
+          // Legacy used `calc(0.04 * --background-height)` — i.e. ~4% of the
+          // preview tile's rendered height. `cqh` gives us the same thing
+          // declaratively now that PreviewTile sets `container-type: size`.
+          fontSize: "4cqh",
           textShadow: "0.5px 0.5px 0.5px grey",
         }}
       >

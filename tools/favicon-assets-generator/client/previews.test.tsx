@@ -156,8 +156,8 @@ describe("DesktopPreview", () => {
     )
 
     const bgDivs = container.querySelectorAll('[aria-hidden="true"]')
-    // 2 chromes + 2 icon backgrounds (one per tab tile)
-    expect(bgDivs.length).toBe(4)
+    // 2 chromes + 3 icon backgrounds (one per tab tile + one for the SERP)
+    expect(bgDivs.length).toBe(5)
     const iconBg = bgDivs[1] as HTMLElement
     expect(iconBg.style.backgroundColor.toUpperCase()).toBe("#112233")
     expect(iconBg.style.borderRadius).toBe("30%")
@@ -166,6 +166,37 @@ describe("DesktopPreview", () => {
     // 2 tab favicons + 1 SERP favicon
     expect(imgs.length).toBe(3)
     expect((imgs[0] as HTMLImageElement).style.padding).toBe("10%")
+    // The SERP favicon also picks up the user's margin
+    expect((imgs[2] as HTMLImageElement).style.padding).toBe("10%")
+  })
+
+  test("SERP favicon reflects cfg.backgroundColor and cfg.margin", () => {
+    const cfg = {
+      ...DEFAULT_DESKTOP_ICON_CONFIG,
+      addBackground: true,
+      backgroundColor: "#0099FF",
+      backgroundRadius: 100,
+      margin: 16,
+    }
+    const { container } = render(
+      <DesktopPreview
+        messages={baseMessages}
+        appName="Acme"
+        cfg={cfg}
+        bundle={null}
+        globalSource={makeSource()}
+        desktopSource={null}
+      />
+    )
+
+    const tiles = container.querySelectorAll("figure")
+    const serpTile = tiles[2] as HTMLElement
+    const serpBg = serpTile.querySelector('[aria-hidden="true"]') as HTMLElement
+    expect(serpBg.style.backgroundColor.toUpperCase()).toBe("#0099FF")
+    expect(serpBg.style.borderRadius).toBe("50%")
+
+    const serpImg = serpTile.querySelector("img") as HTMLImageElement
+    expect(serpImg.style.padding).toBe("8%") // margin 16 / 2
   })
 })
 

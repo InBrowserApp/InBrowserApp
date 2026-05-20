@@ -112,15 +112,15 @@ function DesktopPreview({
         >
           <div className="absolute inset-0 flex flex-col items-start justify-center px-4 text-left">
             <div className="flex items-center gap-2">
-              {iconUrl ? (
-                <img
+              <div className="relative h-5 w-5 shrink-0 overflow-hidden rounded-full bg-white">
+                <StyledIconOverlay
                   src={iconUrl}
                   alt={`favicon preview for ${appName}`}
-                  className="h-5 w-5 rounded-full bg-white object-contain"
+                  containerStyle={{ inset: 0 }}
+                  background={background}
+                  marginPercent={cfg.margin}
                 />
-              ) : (
-                <div className="h-5 w-5 rounded-full bg-muted" />
-              )}
+              </div>
               <div className="flex flex-col">
                 <span className="text-[11px] text-neutral-700">
                   {appName} · example.com

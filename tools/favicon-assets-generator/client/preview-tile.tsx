@@ -36,7 +36,7 @@ function PreviewTile({
     >
       <div
         className="relative w-full overflow-hidden rounded-lg bg-muted/50"
-        style={containerStyle}
+        style={{ ...containerStyle, containerType: "size" }}
         role="img"
         aria-label={label}
       >
