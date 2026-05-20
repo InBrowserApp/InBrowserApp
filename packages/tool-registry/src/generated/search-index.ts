@@ -14984,6 +14984,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "pdf-splitter",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "split", "extract", "pages", "document", "offline"],
+    locales: {
+      ar: {
+        name: "مقسّم PDF",
+        description:
+          "قسّم صفحات PDF حسب النطاق، أو استخرج الصفحات المحددة في ملف PDF واحد، أو نزّل عدة ملفات مقسّمة كأرشيف ZIP.",
+      },
+      de: {
+        name: "PDF Splitter",
+        description:
+          "PDF-Seiten nach Bereich aufteilen, ausgewählte Seiten in eine PDF-Datei extrahieren oder mehrere getrennte Dateien als ZIP-Archiv herunterladen.",
+      },
+      en: {
+        name: "PDF Splitter",
+        description:
+          "Split PDF pages by range, extract selected pages into one PDF, or download multiple split files as a ZIP archive.",
+      },
+      es: {
+        name: "Divisor de PDF",
+        description:
+          "Divide páginas de PDF por rango, extrae páginas seleccionadas en un solo PDF o descarga varios archivos divididos como un archivo ZIP.",
+      },
+      fr: {
+        name: "Séparateur de PDF",
+        description:
+          "Divisez les pages d’un PDF par plage, extrayez les pages sélectionnées dans un seul PDF ou téléchargez plusieurs fichiers découpés sous forme d’archive ZIP.",
+      },
+      he: {
+        name: "מפצל PDF",
+        description:
+          "פצלו עמודי PDF לפי טווח, חלצו עמודים נבחרים ל-PDF אחד, או הורידו כמה קבצים מפוצלים כארכיון ZIP.",
+      },
+      hi: {
+        name: "PDF Splitter",
+        description:
+          "PDF पेजों को रेंज के अनुसार विभाजित करें, चुने गए पेजों को एक PDF में निकालें, या कई विभाजित फ़ाइलों को ZIP आर्काइव के रूप में डाउनलोड करें।",
+      },
+      id: {
+        name: "PDF Splitter",
+        description:
+          "Pisahkan halaman PDF berdasarkan rentang, ekstrak halaman yang dipilih ke dalam satu PDF, atau unduh beberapa file hasil pemisahan sebagai arsip ZIP.",
+      },
+      it: {
+        name: "Divisore PDF",
+        description:
+          "Dividi le pagine PDF per intervallo, estrai le pagine selezionate in un unico PDF oppure scarica più file divisi come archivio ZIP.",
+      },
+      ja: {
+        name: "PDF 分割ツール",
+        description:
+          "PDF ページを範囲で分割したり、選択したページを 1 つの PDF に抽出したり、複数の分割ファイルを ZIP アーカイブとしてダウンロードしたりできます。",
+      },
+      ko: {
+        name: "PDF 분할기",
+        description:
+          "PDF 페이지를 범위별로 나누고, 선택한 페이지를 하나의 PDF로 추출하거나, 여러 분할 파일을 ZIP 아카이브로 다운로드하세요.",
+      },
+      ms: {
+        name: "PDF Splitter",
+        description:
+          "Pisahkan halaman PDF mengikut julat, ekstrak halaman yang dipilih ke dalam satu PDF, atau muat turun beberapa fail pecahan sebagai arkib ZIP.",
+      },
+      nl: {
+        name: "PDF Splitter",
+        description:
+          "Splits PDF-pagina's op bereik, extraheer geselecteerde pagina's naar één PDF of download meerdere gesplitste bestanden als ZIP-archief.",
+      },
+      no: {
+        name: "PDF-deler",
+        description:
+          "Del PDF-sider etter område, trekk ut valgte sider til én PDF, eller last ned flere delte filer som et ZIP-arkiv.",
+      },
+      pl: {
+        name: "PDF Splitter",
+        description:
+          "Dziel strony PDF według zakresu, wyodrębniaj wybrane strony do jednego pliku PDF albo pobieraj wiele podzielonych plików jako archiwum ZIP.",
+      },
+      pt: {
+        name: "Divisor de PDF",
+        description:
+          "Divida páginas de PDF por intervalo, extraia páginas selecionadas em um único PDF ou baixe vários arquivos divididos como um arquivo ZIP.",
+      },
+      ru: {
+        name: "Разделитель PDF",
+        description:
+          "Разделяйте страницы PDF по диапазонам, извлекайте выбранные страницы в один PDF или скачивайте несколько разделенных файлов в ZIP-архиве.",
+      },
+      sv: {
+        name: "PDF-delare",
+        description:
+          "Dela PDF-sidor efter intervall, extrahera valda sidor till en PDF eller ladda ned flera delade filer som ett ZIP-arkiv.",
+      },
+      th: {
+        name: "PDF Splitter",
+        description:
+          "แยกหน้า PDF ตามช่วงหน้า แยกหน้าที่เลือกออกเป็น PDF เดียว หรือดาวน์โหลดไฟล์ที่แยกหลายไฟล์เป็นไฟล์ ZIP",
+      },
+      tr: {
+        name: "PDF Splitter",
+        description:
+          "PDF sayfalarını aralığa göre bölün, seçili sayfaları tek bir PDF'ye çıkarın veya birden fazla bölünmüş dosyayı ZIP arşivi olarak indirin.",
+      },
+      vi: {
+        name: "Trình tách PDF",
+        description:
+          "Tách các trang PDF theo phạm vi, trích xuất các trang đã chọn thành một PDF, hoặc tải nhiều tệp đã tách xuống dưới dạng kho lưu trữ ZIP.",
+      },
+      "zh-CN": {
+        name: "PDF 拆分器",
+        description:
+          "按范围拆分 PDF 页面，将选定页面提取为一个 PDF，或将多个拆分文件作为 ZIP 归档下载。",
+      },
+      "zh-TW": {
+        name: "PDF 分割器",
+        description:
+          "依頁面範圍分割 PDF、將選取的頁面擷取成一個 PDF，或將多個分割檔案下載為 ZIP 壓縮檔。",
+      },
+    },
+  },
+  {
     slug: "pdf-text-extractor",
     category: "pdf",
     icon: "file-text",
