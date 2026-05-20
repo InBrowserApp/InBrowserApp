@@ -1,0 +1,4 @@
+{
+  "name": "CSR-generator",
+  "description": "Generera PKCS#10-certifikatsigneringsförfrågningar i din webbläsare. Skapa en ny nyckel eller importera en befintlig PKCS#8-privat nyckel, fyll i Subject och SAN och ladda sedan ned CSR:en."
+}

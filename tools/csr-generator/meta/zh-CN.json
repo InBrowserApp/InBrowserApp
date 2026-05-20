@@ -1,0 +1,4 @@
+{
+  "name": "CSR 生成器",
+  "description": "在浏览器中生成 PKCS#10 证书签名请求。创建新密钥或导入现有 PKCS#8 私钥，填写 Subject 和 SAN，然后下载 CSR。"
+}

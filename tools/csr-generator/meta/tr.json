@@ -1,0 +1,4 @@
+{
+  "name": "CSR Oluşturucu",
+  "description": "Tarayıcınızda PKCS#10 sertifika imzalama istekleri oluşturun. Yeni bir anahtar oluşturun veya mevcut bir PKCS#8 özel anahtarını içe aktarın, Konu ve SAN bilgilerini doldurun, ardından CSR'ı indirin."
+}

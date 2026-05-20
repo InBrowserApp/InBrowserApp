@@ -1,0 +1,4 @@
+{
+  "name": "CSR Generator",
+  "description": "Generate PKCS#10 certificate signing requests in your browser. Create a fresh key or import an existing PKCS#8 private key, fill in Subject and SAN, then download the CSR."
+}

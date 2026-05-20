@@ -1,0 +1,4 @@
+{
+  "name": "CSR-Generator",
+  "description": "PKCS#10-Zertifikatsignieranfragen im Browser erstellen. Neuen Schlüssel erzeugen oder vorhandenen PKCS#8-Privatschlüssel importieren, Subject und SAN ausfüllen und den CSR herunterladen."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Generator CSR",
+  "description": "Buat certificate signing request PKCS#10 di browser Anda. Buat kunci baru atau impor kunci privat PKCS#8 yang sudah ada, isi Subject dan SAN, lalu unduh CSR."
+}

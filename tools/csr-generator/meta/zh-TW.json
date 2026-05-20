@@ -1,0 +1,4 @@
+{
+  "name": "CSR 產生器",
+  "description": "在瀏覽器中產生 PKCS#10 憑證簽章請求。建立全新金鑰或匯入現有的 PKCS#8 私鑰，填寫 Subject 與 SAN 後即可下載 CSR。"
+}

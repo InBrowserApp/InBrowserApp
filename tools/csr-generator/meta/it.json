@@ -1,0 +1,4 @@
+{
+  "name": "Generatore CSR",
+  "description": "Genera richieste di firma certificato PKCS#10 nel tuo browser. Crea una nuova chiave o importa una chiave privata PKCS#8 esistente, compila Subject e SAN, poi scarica il CSR."
+}

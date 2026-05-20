@@ -1,0 +1,4 @@
+{
+  "name": "เครื่องมือสร้าง CSR",
+  "description": "สร้าง PKCS#10 certificate signing request ในเบราว์เซอร์ สร้างคีย์ใหม่หรือนำเข้า PKCS#8 private key ที่มีอยู่ กรอก Subject และ SAN แล้วดาวน์โหลด CSR"
+}
