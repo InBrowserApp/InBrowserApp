@@ -8,17 +8,18 @@ import {
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import GifToAnimatedWebpClient from "./client"
-import { convertGifFileToAnimatedWebp } from "./core/animated-webp-conversion"
+import { convertGifFileToAnimatedWebpWithWorker } from "./client/conversion-worker-client"
 
 import type { GifToAnimatedWebpMessages } from "./client/types"
 import type { GifToAnimatedWebpResult } from "./core/animated-webp-conversion"
 
-vi.mock("./core/animated-webp-conversion", () => ({
-  convertGifFileToAnimatedWebp: vi.fn(),
+vi.mock("./client/conversion-worker-client", () => ({
+  WORKER_UNAVAILABLE_ERROR: "GIF_TO_ANIMATED_WEBP_WORKER_UNAVAILABLE",
+  convertGifFileToAnimatedWebpWithWorker: vi.fn(),
 }))
 
-const mockedConvertGifFileToAnimatedWebp = vi.mocked(
-  convertGifFileToAnimatedWebp
+const mockedConvertGifFileToAnimatedWebpWithWorker = vi.mocked(
+  convertGifFileToAnimatedWebpWithWorker
 )
 
 const messages: GifToAnimatedWebpMessages = {
@@ -102,8 +103,8 @@ function getFileInput(): HTMLInputElement {
 }
 
 beforeEach(() => {
-  mockedConvertGifFileToAnimatedWebp.mockReset()
-  mockedConvertGifFileToAnimatedWebp.mockImplementation(
+  mockedConvertGifFileToAnimatedWebpWithWorker.mockReset()
+  mockedConvertGifFileToAnimatedWebpWithWorker.mockImplementation(
     async (file, _options, name) => createResult(file, name)
   )
 
@@ -141,7 +142,9 @@ describe("GifToAnimatedWebpClient", () => {
     fireEvent.click(screen.getByRole("button", { name: messages.convertLabel }))
 
     await waitFor(() => {
-      expect(mockedConvertGifFileToAnimatedWebp).toHaveBeenCalledTimes(2)
+      expect(
+        mockedConvertGifFileToAnimatedWebpWithWorker
+      ).toHaveBeenCalledTimes(2)
     })
 
     expect(screen.getByText("clip.webp")).toBeTruthy()
@@ -187,7 +190,7 @@ describe("GifToAnimatedWebpClient", () => {
   })
 
   test("maps conversion errors to user-facing messages", async () => {
-    mockedConvertGifFileToAnimatedWebp.mockRejectedValueOnce(
+    mockedConvertGifFileToAnimatedWebpWithWorker.mockRejectedValueOnce(
       new Error("EMPTY_GIF")
     )
 

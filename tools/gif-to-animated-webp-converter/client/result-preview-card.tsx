@@ -79,7 +79,7 @@ function ResultPreviewCard({ messages, result }: ResultPreviewCardProps) {
         </dl>
       </div>
       {previewUrl ? (
-        <div className="flex justify-end border-t p-3">
+        <div className="flex justify-end border-t p-4">
           <Button asChild variant="outline">
             <a download={result.outputName} href={previewUrl}>
               <Download data-icon="inline-start" />

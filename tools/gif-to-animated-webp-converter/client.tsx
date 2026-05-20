@@ -10,7 +10,10 @@ import { TriangleAlert } from "@workspace/ui/icons"
 import { OptionsCard } from "./client/options-card"
 import { ResultsCard } from "./client/results-card"
 import { UploadCard, fileKey } from "./client/upload-card"
-import { convertGifFileToAnimatedWebp } from "./core/animated-webp-conversion"
+import {
+  WORKER_UNAVAILABLE_ERROR,
+  convertGifFileToAnimatedWebpWithWorker,
+} from "./client/conversion-worker-client"
 import {
   DEFAULT_GIF_TO_ANIMATED_WEBP_OPTIONS,
   isSupportedGifFile,
@@ -46,6 +49,8 @@ function resolveErrorMessage(
       return messages.invalidFrameError
     case "CANVAS_CONTEXT_UNAVAILABLE":
       return messages.canvasUnavailableError
+    case WORKER_UNAVAILABLE_ERROR:
+      return messages.conversionFailedError
     default:
       return messages.conversionFailedError
   }
@@ -132,7 +137,7 @@ function GifToAnimatedWebpClient({ messages }: GifToAnimatedWebpClientProps) {
         )
 
         try {
-          const result = await convertGifFileToAnimatedWebp(
+          const result = await convertGifFileToAnimatedWebpWithWorker(
             file,
             options,
             outputName
@@ -174,7 +179,7 @@ function GifToAnimatedWebpClient({ messages }: GifToAnimatedWebpClientProps) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
+      <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
         <UploadCard
           files={files}
           inputId={inputId}

@@ -69,11 +69,11 @@ function OptionsCard({
 
   return (
     <ToolPanelCard>
-      <CardHeader className="border-b">
+      <CardHeader className="border-b p-4">
         <CardTitle>{messages.optionsTitle}</CardTitle>
         <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-6">
+      <ToolPanelCardContent className="gap-6 p-4">
         <Field className="gap-3">
           <div className="flex items-center justify-between gap-3">
             <FieldLabel htmlFor="gif-to-animated-webp-scale">
@@ -199,8 +199,13 @@ function OptionsCard({
           </Field>
         ) : null}
       </ToolPanelCardContent>
-      <ToolPanelCardFooter className="justify-end border-t">
-        <Button disabled={!canConvert} onClick={onConvert} type="button">
+      <ToolPanelCardFooter className="justify-end border-t p-4">
+        <Button
+          className="w-full sm:w-auto"
+          disabled={!canConvert}
+          onClick={onConvert}
+          type="button"
+        >
           {isConverting ? (
             <LoaderCircle className="animate-spin" data-icon="inline-start" />
           ) : (

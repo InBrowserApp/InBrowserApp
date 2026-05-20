@@ -69,14 +69,14 @@ function UploadCard({
 
   return (
     <ToolPanelCard>
-      <CardHeader className="border-b">
+      <CardHeader className="border-b p-4">
         <CardTitle>{messages.uploadTitle}</CardTitle>
         <CardDescription>{messages.uploadDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-4">
+      <ToolPanelCardContent className="gap-4 p-4">
         <button
           aria-label={messages.chooseGifsLabel}
-          className="flex cursor-pointer rounded-lg focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none"
+          className="flex cursor-pointer rounded-lg text-left focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none rtl:text-right"
           onDragLeave={() => {
             setIsDraggingOver(false)
           }}
@@ -126,10 +126,10 @@ function UploadCard({
                 {messages.selectedGifsLabel}: {files.length}
               </Badge>
               <Button
-                className="h-auto p-0 text-muted-foreground hover:text-foreground"
                 onClick={onClearFiles}
+                size="sm"
                 type="button"
-                variant="link"
+                variant="ghost"
               >
                 {messages.clearAllLabel}
               </Button>
@@ -165,12 +165,12 @@ function UploadCard({
         ) : null}
       </ToolPanelCardContent>
       {files.length ? (
-        <ToolPanelCardFooter className="border-t">
+        <ToolPanelCardFooter className="border-t p-4">
           <Button
-            className="h-auto p-0 text-muted-foreground hover:text-foreground"
             onClick={openFilePicker}
+            size="sm"
             type="button"
-            variant="link"
+            variant="ghost"
           >
             {messages.changeFilesLabel}
           </Button>

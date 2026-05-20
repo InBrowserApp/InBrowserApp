@@ -1,5 +1,6 @@
 import { decompressFrames, parseGIF } from "gifuct-js"
 
+import { canvasToPngBytes, createBitmapCanvas } from "./bitmap-canvas"
 import { composeGifFrames } from "./gif-frame-composition"
 import { encodeGifBytesWithGif2Webp } from "./gif2webp-encoder"
 import {
@@ -27,6 +28,14 @@ type GifToAnimatedWebpResult = Readonly<{
   outputName: string
   outputWidth: number
 }>
+
+type GifToAnimatedWebpEncodedResult = Omit<
+  GifToAnimatedWebpResult,
+  "blob" | "file"
+> &
+  Readonly<{
+    bytes: Uint8Array
+  }>
 
 type ParsedGifLike = Readonly<{
   lsd?: {
@@ -100,24 +109,14 @@ function scaleFramesIfNeeded(
     return frames
   }
 
-  const sourceCanvas = document.createElement("canvas")
-  const targetCanvas = document.createElement("canvas")
-
-  sourceCanvas.width = width
-  sourceCanvas.height = height
-  targetCanvas.width = outputWidth
-  targetCanvas.height = outputHeight
-
-  const sourceContext = sourceCanvas.getContext("2d", {
-    willReadFrequently: true,
-  })
-  const targetContext = targetCanvas.getContext("2d", {
-    willReadFrequently: true,
-  })
-
-  if (!sourceContext || !targetContext) {
-    throw new Error("CANVAS_CONTEXT_UNAVAILABLE")
-  }
+  const { canvas: sourceCanvas, context: sourceContext } = createBitmapCanvas(
+    width,
+    height
+  )
+  const { context: targetContext } = createBitmapCanvas(
+    outputWidth,
+    outputHeight
+  )
 
   targetContext.imageSmoothingEnabled = true
   targetContext.imageSmoothingQuality = "high"
@@ -141,17 +140,7 @@ async function encodeFramesAsPngs(
   height: number,
   delays: readonly number[]
 ): Promise<PngAnimationFrame[]> {
-  const canvas = document.createElement("canvas")
-  const context = canvas.getContext("2d", {
-    willReadFrequently: true,
-  })
-
-  if (!context) {
-    throw new Error("CANVAS_CONTEXT_UNAVAILABLE")
-  }
-
-  canvas.width = width
-  canvas.height = height
+  const { canvas, context } = createBitmapCanvas(width, height)
 
   const pngFrames: PngAnimationFrame[] = []
 
@@ -162,19 +151,8 @@ async function encodeFramesAsPngs(
       0
     )
 
-    const blob = await new Promise<Blob>((resolve, reject) => {
-      canvas.toBlob((pngBlob) => {
-        if (!pngBlob) {
-          reject(new Error("CANVAS_CONTEXT_UNAVAILABLE"))
-          return
-        }
-
-        resolve(pngBlob)
-      }, "image/png")
-    })
-
     pngFrames.push({
-      data: new Uint8Array(await blob.arrayBuffer()),
+      data: await canvasToPngBytes(canvas),
       duration: delays[index] ?? 100,
     })
   }
@@ -182,19 +160,17 @@ async function encodeFramesAsPngs(
   return pngFrames
 }
 
-async function convertGifFileToAnimatedWebp(
-  file: File,
+async function convertGifBytesToAnimatedWebp(
+  gifBytes: Uint8Array,
   options: Partial<GifToAnimatedWebpOptions>,
   outputName: string
-): Promise<GifToAnimatedWebpResult> {
-  const buffer = await file.arrayBuffer()
-  const gifBytes = new Uint8Array(buffer)
-
+): Promise<GifToAnimatedWebpEncodedResult> {
   if (!isGifBytes(gifBytes)) {
     throw new Error("INVALID_GIF")
   }
 
   const normalizedOptions = normalizeGifToAnimatedWebpOptions(options)
+  const buffer = toArrayBuffer(gifBytes)
   const gif = parseGIF(buffer)
   const shouldUseLosslessEncoder =
     shouldUseLosslessGif2WebpEncoder(normalizedOptions)
@@ -234,11 +210,9 @@ async function convertGifFileToAnimatedWebp(
           resolveLoopCount(gifBytes, normalizedOptions)
         )
       })()
-  const blob = new Blob([toArrayBuffer(encoded)], { type: "image/webp" })
 
   return {
-    blob,
-    file,
+    bytes: encoded,
     originalHeight: height,
     originalWidth: width,
     outputHeight: outputDimensions.height,
@@ -246,12 +220,32 @@ async function convertGifFileToAnimatedWebp(
     outputWidth: outputDimensions.width,
   }
 }
+
+async function convertGifFileToAnimatedWebp(
+  file: File,
+  options: Partial<GifToAnimatedWebpOptions>,
+  outputName: string
+): Promise<GifToAnimatedWebpResult> {
+  const result = await convertGifBytesToAnimatedWebp(
+    new Uint8Array(await file.arrayBuffer()),
+    options,
+    outputName
+  )
+  const blob = new Blob([toArrayBuffer(result.bytes)], { type: "image/webp" })
+
+  return {
+    ...result,
+    blob,
+    file,
+  }
+}
 /* v8 ignore stop */
 
 export {
+  convertGifBytesToAnimatedWebp,
   convertGifFileToAnimatedWebp,
   resolveGifDimensions,
   shouldUseLosslessGif2WebpEncoder,
   toArrayBuffer,
 }
-export type { GifToAnimatedWebpResult }
+export type { GifToAnimatedWebpEncodedResult, GifToAnimatedWebpResult }

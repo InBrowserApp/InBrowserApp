@@ -60,11 +60,11 @@ function ResultsCard({
 
   return (
     <ToolPanelCard>
-      <CardHeader className="border-b">
+      <CardHeader className="border-b p-4">
         <CardTitle>{messages.resultTitle}</CardTitle>
         <CardDescription>{messages.resultDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-5">
+      <ToolPanelCardContent aria-live="polite" className="gap-5 p-4">
         {results.length ? (
           <>
             <div className="flex flex-wrap gap-2">
@@ -111,7 +111,7 @@ function ResultsCard({
         )}
       </ToolPanelCardContent>
       {zipUrl && results.length > 1 ? (
-        <ToolPanelCardFooter className="justify-end border-t">
+        <ToolPanelCardFooter className="justify-end border-t p-4">
           <Button asChild>
             <a download="animated-webp-images.zip" href={zipUrl}>
               <Download data-icon="inline-start" />
