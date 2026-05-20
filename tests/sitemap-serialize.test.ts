@@ -1,8 +1,8 @@
 import { describe, expect, test } from "vitest"
 
-import type { SitemapItem } from "@astrojs/sitemap"
-
 import { addXDefaultHreflang } from "../apps/web/src/lib/sitemap-serialize"
+
+type SitemapItem = Parameters<typeof addXDefaultHreflang>[0]
 
 describe("addXDefaultHreflang", () => {
   test("appends x-default pointing to the default-locale variant", () => {
