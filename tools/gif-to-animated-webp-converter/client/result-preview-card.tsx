@@ -39,10 +39,14 @@ function ResultPreviewCard({ messages, result }: ResultPreviewCardProps) {
         </div>
 
         <div className="min-w-0">
-          <p className="truncate text-sm font-medium">{result.outputName}</p>
+          <p className="truncate text-sm font-medium" translate="no">
+            {result.outputName}
+          </p>
           <div className="mt-2 flex flex-wrap gap-2">
-            <Badge variant="secondary">Animated WebP</Badge>
-            <Badge variant="outline">
+            <Badge translate="no" variant="secondary">
+              Animated WebP
+            </Badge>
+            <Badge dir="ltr" translate="no" variant="outline">
               {result.outputWidth} × {result.outputHeight}
             </Badge>
           </div>
@@ -51,14 +55,14 @@ function ResultPreviewCard({ messages, result }: ResultPreviewCardProps) {
         <dl className="grid gap-2 text-sm text-muted-foreground">
           <div className="flex justify-between gap-3">
             <dt>{messages.originalLabel}</dt>
-            <dd className="text-end text-foreground">
+            <dd className="text-end text-foreground" dir="ltr" translate="no">
               {result.originalWidth} × {result.originalHeight},{" "}
               {formatBytes(result.file.size)}
             </dd>
           </div>
           <div className="flex justify-between gap-3">
             <dt>{messages.outputLabel}</dt>
-            <dd className="text-end text-foreground">
+            <dd className="text-end text-foreground" dir="ltr" translate="no">
               {result.outputWidth} × {result.outputHeight},{" "}
               {formatBytes(result.blob.size)}
             </dd>

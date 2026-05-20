@@ -142,7 +142,9 @@ function UploadCard({
                   key={fileKey(file)}
                 >
                   <div className="min-w-0">
-                    <p className="truncate text-sm font-medium">{file.name}</p>
+                    <p className="truncate text-sm font-medium" translate="no">
+                      {file.name}
+                    </p>
                     <p className="text-xs text-muted-foreground">
                       {formatBytes(file.size)}
                     </p>

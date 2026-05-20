@@ -150,7 +150,9 @@ function OptionsCard({
         </Field>
 
         <Field className="gap-3">
-          <FieldLabel>{messages.loopLabel}</FieldLabel>
+          <FieldLabel htmlFor="gif-to-animated-webp-loop-mode">
+            {messages.loopLabel}
+          </FieldLabel>
           <FieldDescription>{messages.loopDescription}</FieldDescription>
           <Select
             onValueChange={(value) => {
@@ -158,7 +160,10 @@ function OptionsCard({
             }}
             value={options.loopMode}
           >
-            <SelectTrigger className="w-full">
+            <SelectTrigger
+              className="w-full"
+              id="gif-to-animated-webp-loop-mode"
+            >
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
