@@ -94,11 +94,7 @@ jobs:
         run: pnpm build
 
       - name: Check internal links in built HTML
-        uses: JustinBeckwith/linkinator-action@v1
-        with:
-          paths: apps/web/dist
-          recurse: true
-          linksToSkip: ^https?://
+        run: pnpm link-check
 
       - name: Upload web artifact
         uses: actions/upload-artifact@v4
