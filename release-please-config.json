@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "release-type": "node",
+  "bootstrap-sha": "5f63d8a9f92d63acbd3fa9de50675a446cf6d854",
+  "packages": {
+    ".": {
+      "package-name": "inbrowser-app",
+      "include-component-in-tag": false
+    }
+  }
+}
