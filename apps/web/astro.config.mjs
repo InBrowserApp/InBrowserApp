@@ -16,9 +16,7 @@ import { addXDefaultHreflang } from "./src/lib/sitemap-serialize.ts"
 // https://astro.build/config
 export default defineConfig({
   site: "https://inbrowser.app",
-  build: {
-    format: "file",
-  },
+  trailingSlash: "always",
   markdown: {
     shikiConfig: {
       themes: {

@@ -58,7 +58,9 @@ function normalizePathname(pathname: string) {
     ? normalized
     : `/${normalized}`
 
-  return withLeadingSlash.replace(/\/$/, "")
+  return withLeadingSlash.endsWith("/")
+    ? withLeadingSlash
+    : `${withLeadingSlash}/`
 }
 
 function isSupportedSiteLanguage(language: string): language is SiteLanguage {
@@ -102,7 +104,7 @@ function localizePath(pathname: string, language: SiteLanguage) {
     return normalized
   }
 
-  return normalized === "/" ? `/${language}` : `/${language}${normalized}`
+  return normalized === "/" ? `/${language}/` : `/${language}${normalized}`
 }
 
 function toAbsoluteUrl(pathname: string) {
