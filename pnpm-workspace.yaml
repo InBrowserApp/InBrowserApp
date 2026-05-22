@@ -80,7 +80,6 @@ catalog:
   jsonpath-plus: ^10.3.0
   jsqr: ^1.4.0
   knip: ^6.3.0
-  linkinator: ^7.6.1
   lint-staged: ^16.4.0
   lucide-react: ^0.542.0
   marked: ^16.4.0

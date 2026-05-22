@@ -1,5 +1,0 @@
-{
-  "recurse": true,
-  "cleanUrls": true,
-  "skip": ["^(?:https?://(?!localhost)|//|mailto:|tel:|javascript:)"]
-}
