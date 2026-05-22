@@ -1,6 +1,6 @@
 {
   "name": "inbrowser-app",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "pnpm tool-registry:generate && pnpm --filter web build",
