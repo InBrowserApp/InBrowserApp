@@ -19,7 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -52,21 +51,50 @@ jobs:
       - name: Typecheck
         run: pnpm typecheck
 
-      - name: Test
-        run: pnpm test:coverage
-
-      - name: Coverage report
-        if: github.event_name == 'pull_request'
-        uses: davelosert/vitest-coverage-report-action@v2
-        with:
-          json-summary-path: coverage/coverage-summary.json
-          json-final-path: coverage/coverage-final.json
-
       - name: Dep boundaries
         run: pnpm depcruise
 
       - name: Knip
         run: pnpm knip
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          cache: true
+          run_install: true
+
+      - name: Run tests (changed + coverage)
+        if: github.event_name == 'pull_request'
+        run: pnpm vitest run --changed "origin/${{ github.base_ref }}" --coverage
+
+      - name: Run tests (full + coverage)
+        if: github.event_name != 'pull_request'
+        run: pnpm test:coverage
+
+      - name: Report coverage
+        if: ${{ !cancelled() && (github.event_name == 'pull_request' || github.event_name == 'push') }}
+        uses: davelosert/vitest-coverage-report-action@v2
+        with:
+          comment-on: ${{ github.event_name == 'pull_request' && 'pr' || 'commit' }}
+          json-summary-path: ./coverage/coverage-summary.json
+          json-final-path: ./coverage/coverage-final.json
 
   build-web:
     name: Build Web
@@ -109,6 +137,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - code-check
+      - test
       - build-web
     if: github.event_name == 'release'
     permissions:
@@ -133,6 +162,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - code-check
+      - test
       - build-web
     if: github.event_name == 'release'
     permissions:
@@ -174,7 +204,6 @@ jobs:
     name: Upload Workers Version
     runs-on: ubuntu-latest
     needs:
-      - code-check
       - build-web
     if: |
       (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
