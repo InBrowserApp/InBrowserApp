@@ -1,6 +1,6 @@
 # `@workspace/tool-sdk`
 
-`packages/tool-sdk` owns the minimal, framework-agnostic tool contract for the Astro rewrite.
+`packages/tool-sdk` owns the minimal, framework-agnostic contract that every `@tool/*` package implements. It is what lets the app shell, the registry generator, and the tools share a vocabulary without leaking UI or routing concerns into the tool authoring surface.
 
 ## Responsibilities
 

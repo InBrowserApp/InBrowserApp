@@ -4,22 +4,22 @@ This file provides guidance to coding agents working in this repository.
 
 ## What this repo is
 
-The current working branch, `dev/astro-rewrite-base`, is the multilingual
-`Astro + React + shadcn/ui` rewrite of InBrowser.App. The legacy Vue 3 / Vite
-implementation still lives on `main` and remains the source of truth for older
-assets, copy, and tool ports until the rewrite reaches parity.
-
-When you need to port something from the legacy app, fetch it with
-`git show origin/main:<path>` instead of checking out `main`.
+InBrowser.App is the multilingual `Astro + React + shadcn/ui` application that
+hosts ~200 browser-only utilities at [inbrowser.app](https://inbrowser.app).
+`main` is the live product — shipped as v2.0.0 in #919. The legacy Vue 3 / Vite
+implementation is preserved on the `legacy/vue` branch; reach for it only when
+porting an asset or piece of copy that has not already made it across, and
+prefer `git show origin/legacy/vue:<path>` over checking the branch out.
 
 ## Working set
 
 - Treat the repo root as the source of truth.
 - Ignore generated or disposable directories unless the task explicitly targets
-  them: `apps/web/dist`, `apps/web/.astro`, `.turbo`, `coverage`,
-  `node_modules`.
+  them: `apps/web/dist`, `apps/web/.astro`, `coverage`, `node_modules`.
 - `packages/tool-registry/src/generated/*` is different: those generated files
-  are committed and should be updated when manifests or locales change.
+  are committed and should be updated when manifests or locales change. CI
+  fails if a fresh `pnpm tool-registry:generate` produces a diff under that
+  directory.
 - `.claude/worktrees/*` contains side worktrees and mirrors. Do not edit them
   unless the user explicitly asks you to work inside one of them.
 
@@ -47,12 +47,6 @@ Run a single test file or pattern from the repo root:
 pnpm exec vitest run path/to/file.test.ts
 pnpm exec vitest run -t "regex on test name"
 pnpm exec vitest
-```
-
-Deploy the Astro app to staging:
-
-```bash
-pnpm --filter web deploy:staging
 ```
 
 If `astro build` fails with `Cannot find module '<...>/dist/renderers.mjs'`,
@@ -159,13 +153,17 @@ When adding a new tool:
 1. Create `tools/<slug>/` with the required files.
 2. Run `pnpm tool-registry:generate`.
 3. If the generator reports that `packages/tool-registry/package.json` was out
-   of sync, run `pnpm install` and rerun `pnpm tool-registry:generate`.
+   of sync, it has already rewritten the `@tool/*` dependency block to match
+   the discovered tools — run `pnpm install` and rerun
+   `pnpm tool-registry:generate`.
 4. Commit both `packages/tool-registry/package.json` and
    `packages/tool-registry/src/generated/*` when they change.
 
 Do not hand-edit the `@tool/*` dependency list in
-`packages/tool-registry/package.json` unless you are also updating the
-generator. The generator now syncs those entries from the discovered tools.
+`packages/tool-registry/package.json`. The generator
+(`syncRegistryPackageDependencies` in
+`packages/tool-registry/src/generate/io.ts`) is the source of truth and will
+overwrite manual edits on the next run.
 
 ## i18n
 
@@ -179,6 +177,8 @@ generator. The generator now syncs those entries from the discovered tools.
 - Tool markdown content usually lives in `sections/<section>/<lang>.md`.
 - Native language names for the language picker live in
   `packages/ui/src/components/app/language-switcher.tsx`, not in message files.
+- The sitemap emits an `x-default` hreflang for multilingual entries
+  (`apps/web/src/lib/sitemap-serialize.ts`; see #910).
 
 Important repo-wide rule: `tests/i18n-consistency.test.ts` walks the entire repo
 and treats every directory containing `en.json` or `en.md` as a locale family.
@@ -224,17 +224,36 @@ Lint and formatting:
 - The web app is built from source packages directly via Astro aliases; there is
   no separate package compilation step.
 
+## CI, hosting, and releases
+
+Workflows live in `.github/workflows/`:
+
+- `ci.yml` — `code-check` (lint, format, registry-up-to-date check, typecheck,
+  test+coverage, depcruise, knip), `build-web` (astro build + htmltest on the
+  built HTML), and the deploy jobs below. Runs on PRs, on push to `main`, and on
+  release publish.
+- `pr-title.yml` — enforces Conventional Commits on PR titles.
+- `release-please.yml` — opens release PRs and publishes GitHub releases.
+- `actionlint.yml` — lints workflow YAML when `.github/workflows/**` changes.
+
+Cloudflare Workers (static assets via the Workers Sites model). There is no
+separate `staging` environment in `apps/web/wrangler.jsonc`; previews are
+Workers Versions:
+
+- **Same-repo PRs and pushes to `main`** — `deploy-staging` runs
+  `wrangler versions upload --tag <ref>` against the
+  `cloudflare-workers-staging` environment, exposing the version through the
+  job's `deployment-url`.
+- **Release publish** — `deploy-production` runs `wrangler deploy` against
+  production, and `upload-release-asset` attaches the built `apps/web/dist` as
+  a `.tar.zstd` archive on the GitHub release (#924).
+
 ## Git and PR conventions
 
 - Use Conventional Commits for commit messages.
 - PR titles must also follow Conventional Commits; CI checks this.
-- For rewrite work, the usual PR base branch is `dev/astro-rewrite-base`.
-  Do not target `main` unless the user explicitly asks for it, because `main`
-  is still the legacy Vue application.
-- Cloudflare staging preview and deploy workflows live in
-  `.github/workflows/staging.yml`.
-- Pull requests from branches in this repo get a preview deployment alias of
-  the form `pr-<number>-inbrowserapp-web-astro-staging.rwv.workers.dev`.
+- The PR base branch is `main`. Do not target `legacy/vue` unless the user
+  explicitly asks for it.
 
 ## Environment
 

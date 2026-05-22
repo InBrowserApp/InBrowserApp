@@ -1,6 +1,6 @@
 # `@workspace/ui`
 
-`packages/ui` is the single UI entrypoint for the Astro rewrite.
+`packages/ui` is the single UI entrypoint for `apps/web` and every `@tool/*`. Anything UI-shaped is imported from here, never directly from `shadcn`, `lucide-react`, or `@radix-ui/*`.
 
 ## Responsibilities
 

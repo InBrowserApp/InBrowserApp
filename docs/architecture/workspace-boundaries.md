@@ -1,6 +1,8 @@
 # Workspace Boundaries
 
-Issue [#316](https://github.com/InBrowserApp/InBrowserApp/issues/316) established the rewrite workspace layout. The current rewrite narrows those boundaries further around a smaller tool contract. As of `refactor: promote tools/* to workspace packages`, each leaf tool is also a private workspace package scoped under `@tool/<slug>`, so per-tool runtime dependencies live in the tool's own `package.json` instead of being phantom-resolved through the root.
+This document is the source of truth for what each top-level directory owns and what it is allowed to import from. The boundaries are enforced by `.dependency-cruiser.json`; the wording here is the rationale.
+
+Each leaf tool is a private workspace package scoped under `@tool/<slug>`, so per-tool runtime dependencies live in the tool's own `package.json` instead of being phantom-resolved through the root. The original constraints were set in issue [#316](https://github.com/InBrowserApp/InBrowserApp/issues/316).
 
 ## Top-level layout
 

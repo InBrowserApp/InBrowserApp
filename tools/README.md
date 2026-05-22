@@ -72,6 +72,8 @@ Tools may depend on `@workspace/tool-sdk`, `@workspace/ui`, and `packages/lib/*`
      }
    }
    ```
-3. Add `"@tool/<slug>": "workspace:*"` to `packages/tool-registry/package.json` dependencies (the registry needs this dep edge so its generated `page-loaders.ts` can import the tool).
-4. Run `pnpm install` to materialize the workspace symlinks.
-5. Run `pnpm tool-registry:generate` to refresh the generated registry, static paths, search index, and page loaders.
+3. Run `pnpm tool-registry:generate`. The generator auto-syncs the `@tool/*` block of `packages/tool-registry/package.json` to match the discovered tools (see `syncRegistryPackageDependencies` in `packages/tool-registry/src/generate/io.ts`), so do **not** hand-edit that block — it will be overwritten on the next run.
+4. If the generator reports that the registry's `package.json` was out of sync, it has already rewritten it. Run `pnpm install` to materialize the workspace symlink for the new `@tool/<slug>`, then re-run `pnpm tool-registry:generate`. The second run refreshes `src/generated/{registry,static-paths,search-index,page-loaders}.ts`.
+5. Commit both `packages/tool-registry/package.json` (if it changed) and any updates under `packages/tool-registry/src/generated/`.
+
+`pnpm build`, `pnpm dev`, and `pnpm typecheck` all run `pnpm tool-registry:generate` first, so the generator is on the day-to-day hot path — if you forget to commit the generated diffs, CI fails the "Verify generated tool registry is up to date" step.
