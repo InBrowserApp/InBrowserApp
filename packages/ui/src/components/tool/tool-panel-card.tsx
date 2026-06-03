@@ -8,7 +8,13 @@ function ToolPanelCard({
   ...props
 }: React.ComponentProps<typeof Card>) {
   return (
-    <Card className={cn("h-full min-h-0 gap-0 py-0", className)} {...props} />
+    <Card
+      className={cn(
+        "h-full min-h-0 gap-0 py-0 [&>[data-slot=card-header]]:pt-4 data-[size=sm]:[&>[data-slot=card-header]]:pt-3",
+        className
+      )}
+      {...props}
+    />
   )
 }
 

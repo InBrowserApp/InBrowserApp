@@ -23,6 +23,17 @@ describe("ToolPanelCard", () => {
     expect(card?.className).toContain("py-0")
   })
 
+  test("restores top padding on a header child", () => {
+    render(
+      <ToolPanelCard>
+        <div>body</div>
+      </ToolPanelCard>
+    )
+
+    const card = screen.getByText("body").closest("[data-slot='card']")
+    expect(card?.className).toContain("[&>[data-slot=card-header]]:pt-4")
+  })
+
   test("adds flex content defaults", () => {
     render(
       <ToolPanelCard>

@@ -79,7 +79,7 @@ function ResultsCard({
           </div>
         </CardAction>
       </CardHeader>
-      <ToolPanelCardContent className="gap-5">
+      <ToolPanelCardContent className="gap-5 py-4">
         <div className="flex flex-wrap items-center gap-4 rounded-xl border bg-muted/20 p-4">
           <div
             className="size-16 rounded-2xl border shadow-inner"

@@ -62,7 +62,7 @@ function PreviewCard({
           </Button>
         </CardAction>
       </CardHeader>
-      <ToolPanelCardContent className="min-w-0 gap-3">
+      <ToolPanelCardContent className="min-w-0 gap-3 py-3">
         <div
           className={cn(
             "grid min-h-48 place-items-center overflow-hidden rounded-lg border p-3 transition-colors sm:min-h-56 sm:p-4",

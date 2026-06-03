@@ -102,7 +102,7 @@ function CameraCard({
         <CardTitle>{messages.cameraTitle}</CardTitle>
         <CardDescription>{messages.cameraDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-4">
+      <ToolPanelCardContent className="gap-4 py-4">
         <div className="relative aspect-square w-full overflow-hidden rounded-xl border bg-muted">
           <video
             ref={videoRef}

@@ -31,7 +31,7 @@ function ResultPreviewCard({
   )}`
 
   return (
-    <Card className="gap-0 overflow-hidden">
+    <Card className="gap-0 overflow-hidden py-0">
       <CardContent className="flex flex-col gap-4 p-4 pb-3">
         <div className="flex min-h-44 items-center justify-center rounded-lg border bg-[linear-gradient(135deg,rgba(161,161,170,0.10),rgba(228,228,231,0.22))] p-3">
           {previewUrl ? (

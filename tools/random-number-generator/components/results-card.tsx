@@ -43,7 +43,7 @@ function ResultsCard({
         <CardTitle>{messages.resultsTitle}</CardTitle>
         <CardDescription>{messages.resultsDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-5">
+      <ToolPanelCardContent className="gap-5 py-4">
         <button
           type="button"
           className="flex min-h-52 w-full flex-1 items-center justify-center rounded-xl border border-dashed border-border bg-muted/20 px-4 py-6 text-center transition-colors hover:border-primary/40 hover:bg-muted/40 disabled:cursor-default disabled:hover:border-border disabled:hover:bg-muted/20"
