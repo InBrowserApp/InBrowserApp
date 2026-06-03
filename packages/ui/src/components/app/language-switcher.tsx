@@ -42,7 +42,9 @@ function useSortedOptions(options: readonly LanguageOption[]) {
       return options
     }
 
-    const browserLangs = navigator.languages ?? [navigator.language]
+    const browserLangs = navigator.languages?.length
+      ? navigator.languages
+      : [navigator.language]
     const preferred = resolvePreferredLanguageCode(
       options.map((option) => option.code),
       browserLangs

@@ -57,8 +57,11 @@ describe("resolvePreferredLanguageCode", () => {
       expect(resolve(["zh-Hani"])).toBe("zh-CN")
     })
 
-    it("lets script win over a contradictory region", () => {
+    it("lets the script subtag win over a contradictory region", () => {
       expect(resolve(["zh-Hant-CN"])).toBe("zh-TW")
+      expect(resolve(["zh-Hans-HK"])).toBe("zh-CN")
+      expect(resolve(["zh-Hans-TW"])).toBe("zh-CN")
+      expect(resolve(["zh-Hans-MO"])).toBe("zh-CN")
     })
 
     it("never collapses Traditional into Simplified (regression)", () => {

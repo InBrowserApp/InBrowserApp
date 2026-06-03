@@ -30,9 +30,12 @@ const LANGUAGE_ALIASES: Readonly<Record<string, string>> = {
 }
 
 // Script/region subtags that select a specific Chinese script when only
-// regional variants (e.g. zh-CN / zh-TW) are offered.
-const TRADITIONAL_SUBTAG = /(^|-)(hant|tw|hk|mo)(-|$)/
-const SIMPLIFIED_SUBTAG = /(^|-)(hans|cn|sg|my)(-|$)/
+// regional variants (e.g. zh-CN / zh-TW) are offered. An explicit script
+// subtag (Hans/Hant) is authoritative; region is only a secondary signal.
+const SCRIPT_TRADITIONAL = /(^|-)hant(-|$)/
+const SCRIPT_SIMPLIFIED = /(^|-)hans(-|$)/
+const REGION_TRADITIONAL = /(^|-)(tw|hk|mo)(-|$)/
+const REGION_SIMPLIFIED = /(^|-)(cn|sg|my)(-|$)/
 const TRADITIONAL_VARIANT = /-(tw|hk|mo)$/i
 const SIMPLIFIED_VARIANT = /-(cn|sg|my)$/i
 
@@ -46,25 +49,24 @@ function baseOf(tag: string): string {
 
 /**
  * Choose among supported variants that share a base language (only
- * Chinese in practice). Traditional vs Simplified is decided by script
- * first, then region; an undetermined tag (bare "zh") defaults to the
- * Simplified variant.
+ * Chinese in practice). An explicit script subtag (Hans/Hant) wins over
+ * the region; failing both, an undetermined tag (bare "zh") defaults to
+ * the Simplified variant.
  */
 function pickRegionalVariant(
   lower: string,
   variants: readonly string[],
   fallback: string
 ): string {
-  if (TRADITIONAL_SUBTAG.test(lower)) {
-    const traditional = variants.find((code) => TRADITIONAL_VARIANT.test(code))
-    if (traditional) return traditional
-  }
-  if (SIMPLIFIED_SUBTAG.test(lower)) {
-    const simplified = variants.find((code) => SIMPLIFIED_VARIANT.test(code))
-    if (simplified) return simplified
-  }
+  const traditional = variants.find((code) => TRADITIONAL_VARIANT.test(code))
+  const simplified = variants.find((code) => SIMPLIFIED_VARIANT.test(code))
 
-  return variants.find((code) => SIMPLIFIED_VARIANT.test(code)) ?? fallback
+  if (SCRIPT_TRADITIONAL.test(lower)) return traditional ?? fallback
+  if (SCRIPT_SIMPLIFIED.test(lower)) return simplified ?? fallback
+  if (REGION_TRADITIONAL.test(lower)) return traditional ?? fallback
+  if (REGION_SIMPLIFIED.test(lower)) return simplified ?? fallback
+
+  return simplified ?? fallback
 }
 
 function bestSupportedMatch(

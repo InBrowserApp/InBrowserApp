@@ -52,7 +52,8 @@ function interpolate(template: string, language: string): string {
  */
 function onIdle(callback: () => void): () => void {
   if (typeof window.requestIdleCallback === "function") {
-    const handle = window.requestIdleCallback(callback)
+    // Bound the delay so a continuously busy page still shows the banner.
+    const handle = window.requestIdleCallback(callback, { timeout: 2000 })
     return () => window.cancelIdleCallback(handle)
   }
 
@@ -68,7 +69,9 @@ function detectSuggestion(
     return null
   }
 
-  const browserLanguages = navigator.languages ?? [navigator.language]
+  const browserLanguages = navigator.languages?.length
+    ? navigator.languages
+    : [navigator.language]
   const preferred = resolvePreferredLanguageCode(
     options.map((option) => option.code),
     browserLanguages
@@ -105,7 +108,7 @@ function LanguageSuggestion({
     })
   }, [options, currentLanguage])
 
-  // "No thanks" / switching language is a permanent decision.
+  // "No thanks" is the single permanent opt-out.
   function dismiss() {
     dismissLanguageSuggestion()
     setTarget(null)
