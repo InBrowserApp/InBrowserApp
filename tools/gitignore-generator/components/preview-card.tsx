@@ -29,11 +29,11 @@ function PreviewCard({
 }: PreviewCardProps) {
   return (
     <ToolPanelCard>
-      <CardHeader className="border-b">
+      <CardHeader className="border-b pt-4">
         <CardTitle>{messages.resultLabel}</CardTitle>
         <CardDescription>{messages.resultDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent>
+      <ToolPanelCardContent className="py-4">
         <ScrollArea className="h-[28rem] overflow-hidden rounded-lg border border-input bg-transparent sm:h-[32rem]">
           <HighlightedGitignore
             ariaLabel={messages.resultLabel}
