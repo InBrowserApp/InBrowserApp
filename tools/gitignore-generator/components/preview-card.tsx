@@ -29,7 +29,7 @@ function PreviewCard({
 }: PreviewCardProps) {
   return (
     <ToolPanelCard>
-      <CardHeader className="border-b pt-4">
+      <CardHeader className="border-b">
         <CardTitle>{messages.resultLabel}</CardTitle>
         <CardDescription>{messages.resultDescription}</CardDescription>
       </CardHeader>
