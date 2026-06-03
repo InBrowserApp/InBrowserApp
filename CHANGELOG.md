@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.1.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.0.0...v2.1.0) (2026-06-03)
+
+
+### Features
+
+* **web:** add language-mismatch suggestion banner ([#933](https://github.com/InBrowserApp/InBrowserApp/issues/933)) ([c20f5af](https://github.com/InBrowserApp/InBrowserApp/commit/c20f5af55c51a816c6dcfa75b806fa1c46aff5b9))
+
+
+### Bug Fixes
+
+* **ui:** correct systemic and per-tool card padding issues ([#930](https://github.com/InBrowserApp/InBrowserApp/issues/930)) ([8170816](https://github.com/InBrowserApp/InBrowserApp/commit/8170816568f6e91df1a894688aeb9e46b2b5b49e))
+* **web:** constrain tools grid to single column on mobile ([#927](https://github.com/InBrowserApp/InBrowserApp/issues/927)) ([95d658e](https://github.com/InBrowserApp/InBrowserApp/commit/95d658e351289aa7d97ce35b1cf2d15698d3c2b9))
+* **web:** prevent iOS Safari zoom on directory search focus ([#929](https://github.com/InBrowserApp/InBrowserApp/issues/929)) ([922e9c6](https://github.com/InBrowserApp/InBrowserApp/commit/922e9c684a43ab5ebf8255e3c3008fd71d9dcd68))
+
 ## [2.0.0](https://github.com/InBrowserApp/InBrowserApp/compare/v1.5.0...v2.0.0) (2026-05-22)
 
 
