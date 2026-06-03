@@ -11,7 +11,7 @@ import {
 } from "@workspace/ui/components/ui/dropdown-menu"
 import { Check, Languages } from "@workspace/ui/icons"
 import { getLanguageNativeName } from "@workspace/ui/lib/language-native-names"
-import { dismissLanguageSuggestion } from "@workspace/ui/lib/language-preference"
+import { snoozeLanguageSuggestion } from "@workspace/ui/lib/language-preference"
 import { resolvePreferredLanguageCode } from "@workspace/ui/lib/resolve-preferred-language"
 
 type LanguageOption = Readonly<{
@@ -76,7 +76,7 @@ function LanguageSwitcher({ label, options }: LanguageSwitcherProps) {
               href={option.href}
               hrefLang={option.code}
               lang={option.code}
-              onClick={() => dismissLanguageSuggestion()}
+              onClick={() => snoozeLanguageSuggestion()}
             >
               {getLanguageLabel(option)}
               {option.current ? (

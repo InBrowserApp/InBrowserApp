@@ -177,7 +177,7 @@ function LanguageSuggestion({
               href={target.href}
               hrefLang={target.code}
               lang={target.code}
-              onClick={() => dismissLanguageSuggestion()}
+              onClick={() => snoozeLanguageSuggestion()}
             >
               {interpolate(strings.action, nativeName)}
             </a>

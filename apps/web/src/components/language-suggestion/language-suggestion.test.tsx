@@ -90,11 +90,12 @@ describe("LanguageSuggestion", () => {
     expect(screen.queryByText(/View this page/)).toBeNull()
   })
 
-  it("permanently dismisses when the switch link is followed", async () => {
+  it("only snoozes for the session when the switch link is followed", async () => {
     render(<LanguageSuggestion options={OPTIONS} currentLanguage="de" />)
 
     const link = await screen.findByRole("link", { name: "Switch to English" })
     fireEvent.click(link)
-    expect(localStorage.getItem("langSuggestionDismissed")).toBe("1")
+    expect(sessionStorage.getItem("langSuggestionSnoozed")).toBe("1")
+    expect(localStorage.getItem("langSuggestionDismissed")).toBeNull()
   })
 })
