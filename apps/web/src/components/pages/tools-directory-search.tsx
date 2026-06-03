@@ -193,7 +193,7 @@ function ToolsDirectorySearch({
           <Input
             ref={inputRef}
             aria-label={messages.searchLabel}
-            className="h-11 pl-10 text-sm"
+            className="h-11 pl-10 text-base md:text-sm"
             placeholder={messages.searchPlaceholder}
             defaultValue={query}
             onCompositionStart={() => {
