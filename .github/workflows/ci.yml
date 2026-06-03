@@ -121,16 +121,33 @@ jobs:
           NODE_OPTIONS: --max-old-space-size=6144
         run: pnpm build
 
-      - name: Check internal links in built HTML
-        uses: wjdp/htmltest-action@master
-        with:
-          config: .htmltest.yml
-
       - name: Upload web artifact
         uses: actions/upload-artifact@v4
         with:
           name: web-dist
           path: apps/web/dist
+
+  html-check:
+    name: HTML Link Check
+    runs-on: ubuntu-latest
+    needs:
+      - build-web
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Download web artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: web-dist
+          path: apps/web/dist
+
+      - name: Check internal links in built HTML
+        uses: wjdp/htmltest-action@master
+        with:
+          config: .htmltest.yml
 
   upload-release-asset:
     name: Upload Release Asset
@@ -139,6 +156,7 @@ jobs:
       - code-check
       - test
       - build-web
+      - html-check
     if: github.event_name == 'release'
     permissions:
       contents: write
@@ -164,6 +182,7 @@ jobs:
       - code-check
       - test
       - build-web
+      - html-check
     if: github.event_name == 'release'
     permissions:
       contents: read
@@ -205,6 +224,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - build-web
+      - html-check
     if: |
       (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
       || (github.event_name == 'push' && github.ref == 'refs/heads/main')
