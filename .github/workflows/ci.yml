@@ -149,6 +149,43 @@ jobs:
         with:
           config: .htmltest.yml
 
+  lighthouse:
+    name: Lighthouse
+    runs-on: ubuntu-latest
+    needs: build-web
+    if: |
+      github.event_name == 'pull_request'
+      || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    permissions:
+      contents: read
+    # Soft launch: keep non-blocking until the real baseline scores are
+    # observed across a few runs, then drop continue-on-error to make the
+    # accessibility / SEO / best-practices assertions hard gates.
+    continue-on-error: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          cache: true
+          run_install: true
+
+      - name: Download web artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: web-dist
+          path: apps/web/dist
+
+      - name: Run Lighthouse CI
+        run: pnpm lighthouse
+
   upload-release-asset:
     name: Upload Release Asset
     runs-on: ubuntu-latest

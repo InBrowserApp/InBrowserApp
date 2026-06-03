@@ -20,6 +20,7 @@ catalog:
   "@jspawn/qpdf-wasm": ^0.0.2
   "@jsquash/avif": ^2.1.1
   "@jsquash/oxipng": ^2.3.0
+  "@lhci/cli": ^0.15.1
   "@libwebp-wasm/gif2webp": ^1.0.8
   "@libwebp-wasm/img2webp": ^1.0.0
   "@noble/ed25519": ^3.0.0
