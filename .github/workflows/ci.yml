@@ -158,6 +158,7 @@ jobs:
       || (github.event_name == 'push' && github.ref == 'refs/heads/main')
     permissions:
       contents: read
+      statuses: write
     # Soft launch: keep non-blocking until the real baseline scores are
     # observed across a few runs, then drop continue-on-error to make the
     # accessibility / SEO / best-practices assertions hard gates.
@@ -184,6 +185,11 @@ jobs:
           path: apps/web/dist
 
       - name: Run Lighthouse CI
+        # Posts a per-URL commit status with the Lighthouse scores using the
+        # repo's own Actions token (no third-party GitHub App). Read-only on
+        # fork PRs, so the status is best-effort there.
+        env:
+          LHCI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: pnpm lighthouse
 
   upload-release-asset:
