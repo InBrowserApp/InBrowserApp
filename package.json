@@ -9,6 +9,7 @@
     "format": "oxfmt .",
     "format:check": "oxfmt --check .",
     "knip": "knip --config .knip.json",
+    "lighthouse": "lhci autorun",
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
     "prepare": "husky",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "@commitlint/cli": "catalog:",
     "@commitlint/config-conventional": "catalog:",
+    "@lhci/cli": "catalog:",
     "@vitest/coverage-v8": "catalog:",
     "astro": "catalog:",
     "dependency-cruiser": "catalog:",
