@@ -58,7 +58,7 @@ function ResultsCard({
         <CardTitle>{messages.resultsTitle}</CardTitle>
         <CardDescription>{messages.resultsDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-5">
+      <ToolPanelCardContent className="gap-5 py-4">
         <div
           aria-label={messages.resultsTitle}
           className="flex min-h-56 w-full flex-1 items-center justify-center rounded-2xl border border-dashed border-border bg-linear-to-br from-muted/10 via-background to-muted/25 px-5 py-6 text-center"

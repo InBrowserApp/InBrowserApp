@@ -86,7 +86,7 @@ function UuidMaxGeneratorClient({ messages }: UuidMaxGeneratorClientProps) {
             <Badge variant="secondary">{messages.stableValue}</Badge>
           </div>
         </CardHeader>
-        <ToolPanelCardContent className="gap-4">
+        <ToolPanelCardContent className="gap-4 py-4">
           <div className="rounded-md border bg-muted/20 p-4">
             <div className="mb-2 text-sm font-medium">
               {messages.canonicalLabel}
