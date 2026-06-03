@@ -14,8 +14,7 @@
   },
   "packageRules": [
     {
-      "description": "Automerge non-major devDependency updates once CI passes",
-      "matchDepTypes": ["devDependencies"],
+      "description": "Automerge all non-major updates once CI passes",
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
     },
