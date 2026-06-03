@@ -1,16 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    ":dependencyDashboard",
-    ":semanticCommits",
-    "group:monorepos",
-    "group:recommended"
-  ],
+  "extends": ["config:recommended", ":semanticCommits"],
   "timezone": "Etc/UTC",
   "schedule": ["before 6am on monday"],
-  "prHourlyLimit": 4,
-  "prConcurrentLimit": 10,
   "rangeStrategy": "bump",
   "postUpdateOptions": ["pnpmDedupe"],
   "lockFileMaintenance": {
@@ -18,25 +10,17 @@
     "schedule": ["before 6am on monday"]
   },
   "vulnerabilityAlerts": {
-    "labels": ["security"],
-    "schedule": ["at any time"]
+    "labels": ["security"]
   },
   "packageRules": [
     {
-      "description": "Group all non-major devDependency updates and automerge once CI is green",
+      "description": "Automerge non-major devDependency updates once CI passes",
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "dev dependencies (non-major)",
       "automerge": true
     },
     {
-      "description": "Group patch-level updates for runtime dependencies",
-      "matchDepTypes": ["dependencies", "peerDependencies"],
-      "matchUpdateTypes": ["patch"],
-      "groupName": "runtime dependencies (patch)"
-    },
-    {
-      "description": "Keep React, React DOM and their types moving together",
+      "description": "Keep React, React DOM and their type packages in one PR",
       "matchPackageNames": [
         "react",
         "react-dom",
@@ -44,11 +28,6 @@
         "@types/react-dom"
       ],
       "groupName": "react"
-    },
-    {
-      "description": "Astro and its integrations move together",
-      "matchPackageNames": ["astro", "@astrojs/{/,}**"],
-      "groupName": "astro"
     }
   ]
 }
