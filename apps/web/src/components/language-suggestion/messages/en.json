@@ -1,6 +1,6 @@
 {
   "message": "View this page in {language}?",
   "action": "Switch to {language}",
-  "dismiss": "Not now",
-  "close": "Dismiss"
+  "dismiss": "No thanks",
+  "close": "Close"
 }

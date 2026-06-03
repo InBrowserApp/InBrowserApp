@@ -8,6 +8,7 @@ import { getLanguageNativeName } from "@workspace/ui/lib/language-native-names"
 import {
   dismissLanguageSuggestion,
   isLanguageSuggestionDismissed,
+  snoozeLanguageSuggestion,
 } from "@workspace/ui/lib/language-preference"
 import { resolvePreferredLanguageCode } from "@workspace/ui/lib/resolve-preferred-language"
 
@@ -104,8 +105,16 @@ function LanguageSuggestion({
     })
   }, [options, currentLanguage])
 
+  // "No thanks" / switching language is a permanent decision.
   function dismiss() {
     dismissLanguageSuggestion()
+    setTarget(null)
+  }
+
+  // The "✕" icon and Escape only close for this session; the banner
+  // returns on the visitor's next visit.
+  function snooze() {
+    snoozeLanguageSuggestion()
     setTarget(null)
   }
 
@@ -116,7 +125,7 @@ function LanguageSuggestion({
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        dismiss()
+        snooze()
       }
     }
 
@@ -153,7 +162,7 @@ function LanguageSuggestion({
           <button
             type="button"
             className="-m-1 shrink-0 rounded-sm p-1 text-muted-foreground transition-colors hover:text-foreground"
-            onClick={dismiss}
+            onClick={snooze}
             aria-label={strings.close}
           >
             <X className="size-4" />

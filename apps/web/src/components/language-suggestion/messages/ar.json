@@ -1,6 +1,6 @@
 {
   "message": "هل تريد عرض هذه الصفحة بـ{language}؟",
   "action": "التبديل إلى {language}",
-  "dismiss": "ليس الآن",
+  "dismiss": "لا، شكرًا",
   "close": "إغلاق"
 }

@@ -24,6 +24,7 @@ function setBrowserLanguages(languages: readonly string[]) {
 describe("LanguageSuggestion", () => {
   beforeEach(() => {
     localStorage.clear()
+    sessionStorage.clear()
     setBrowserLanguages(["en-US", "en"])
   })
 
@@ -53,16 +54,27 @@ describe("LanguageSuggestion", () => {
     expect(screen.queryByText(/View this page/)).toBeNull()
   })
 
-  it("hides and persists dismissal when 'Not now' is clicked", async () => {
+  it("permanently dismisses when 'No thanks' is clicked", async () => {
     render(<LanguageSuggestion options={OPTIONS} currentLanguage="de" />)
 
-    fireEvent.click(await screen.findByRole("button", { name: "Not now" }))
+    fireEvent.click(await screen.findByRole("button", { name: "No thanks" }))
 
     await waitFor(() => expect(screen.queryByText(/View this page/)).toBeNull())
     expect(localStorage.getItem("langSuggestionDismissed")).toBe("1")
+    expect(sessionStorage.getItem("langSuggestionSnoozed")).toBeNull()
   })
 
-  it("does not render once dismissal has been persisted", async () => {
+  it("only snoozes for the session when the ✕ close icon is clicked", async () => {
+    render(<LanguageSuggestion options={OPTIONS} currentLanguage="de" />)
+
+    fireEvent.click(await screen.findByRole("button", { name: "Close" }))
+
+    await waitFor(() => expect(screen.queryByText(/View this page/)).toBeNull())
+    expect(sessionStorage.getItem("langSuggestionSnoozed")).toBe("1")
+    expect(localStorage.getItem("langSuggestionDismissed")).toBeNull()
+  })
+
+  it("does not render once permanently dismissed", async () => {
     localStorage.setItem("langSuggestionDismissed", "1")
     render(<LanguageSuggestion options={OPTIONS} currentLanguage="de" />)
 
@@ -70,7 +82,15 @@ describe("LanguageSuggestion", () => {
     expect(screen.queryByText(/View this page/)).toBeNull()
   })
 
-  it("persists dismissal when the switch link is followed", async () => {
+  it("does not render when snoozed for the current session", async () => {
+    sessionStorage.setItem("langSuggestionSnoozed", "1")
+    render(<LanguageSuggestion options={OPTIONS} currentLanguage="de" />)
+
+    await new Promise((resolve) => setTimeout(resolve, 10))
+    expect(screen.queryByText(/View this page/)).toBeNull()
+  })
+
+  it("permanently dismisses when the switch link is followed", async () => {
     render(<LanguageSuggestion options={OPTIONS} currentLanguage="de" />)
 
     const link = await screen.findByRole("link", { name: "Switch to English" })

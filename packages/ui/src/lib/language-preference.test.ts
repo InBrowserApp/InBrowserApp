@@ -3,11 +3,13 @@ import { afterEach, describe, expect, it, vi } from "vitest"
 import {
   dismissLanguageSuggestion,
   isLanguageSuggestionDismissed,
+  snoozeLanguageSuggestion,
 } from "./language-preference"
 
 describe("language-preference", () => {
   afterEach(() => {
     localStorage.clear()
+    sessionStorage.clear()
     vi.restoreAllMocks()
   })
 
@@ -15,8 +17,16 @@ describe("language-preference", () => {
     expect(isLanguageSuggestionDismissed()).toBe(false)
   })
 
-  it("persists and reads back the dismissed flag", () => {
+  it("persists a permanent dismissal in localStorage", () => {
     dismissLanguageSuggestion()
+    expect(localStorage.getItem("langSuggestionDismissed")).toBe("1")
+    expect(isLanguageSuggestionDismissed()).toBe(true)
+  })
+
+  it("snoozes for the session in sessionStorage", () => {
+    snoozeLanguageSuggestion()
+    expect(sessionStorage.getItem("langSuggestionSnoozed")).toBe("1")
+    expect(localStorage.getItem("langSuggestionDismissed")).toBeNull()
     expect(isLanguageSuggestionDismissed()).toBe(true)
   })
 
@@ -32,5 +42,6 @@ describe("language-preference", () => {
       throw new Error("storage disabled")
     })
     expect(() => dismissLanguageSuggestion()).not.toThrow()
+    expect(() => snoozeLanguageSuggestion()).not.toThrow()
   })
 })

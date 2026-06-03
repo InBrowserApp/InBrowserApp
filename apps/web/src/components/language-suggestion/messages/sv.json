@@ -1,6 +1,6 @@
 {
   "message": "Visa den här sidan på {language}?",
   "action": "Byt till {language}",
-  "dismiss": "Inte nu",
+  "dismiss": "Nej tack",
   "close": "Stäng"
 }

@@ -1,6 +1,6 @@
 {
   "message": "Vis denne siden på {language}?",
   "action": "Bytt til {language}",
-  "dismiss": "Ikke nå",
+  "dismiss": "Nei takk",
   "close": "Lukk"
 }

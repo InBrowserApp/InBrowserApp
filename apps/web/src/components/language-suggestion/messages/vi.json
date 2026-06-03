@@ -1,6 +1,6 @@
 {
   "message": "Xem trang này bằng {language}?",
   "action": "Chuyển sang {language}",
-  "dismiss": "Để sau",
-  "close": "Bỏ qua"
+  "dismiss": "Không, cảm ơn",
+  "close": "Đóng"
 }

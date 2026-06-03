@@ -1,6 +1,6 @@
 {
   "message": "Afficher cette page en {language} ?",
   "action": "Passer au {language}",
-  "dismiss": "Pas maintenant",
+  "dismiss": "Non merci",
   "close": "Fermer"
 }
