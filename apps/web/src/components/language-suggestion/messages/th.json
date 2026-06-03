@@ -1,0 +1,6 @@
+{
+  "message": "ดูหน้านี้เป็นภาษา{language}ไหม",
+  "action": "เปลี่ยนเป็น{language}",
+  "dismiss": "ไว้ทีหลัง",
+  "close": "ปิด"
+}

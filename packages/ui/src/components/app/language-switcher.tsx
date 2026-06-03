@@ -10,6 +10,9 @@ import {
   DropdownMenuTrigger,
 } from "@workspace/ui/components/ui/dropdown-menu"
 import { Check, Languages } from "@workspace/ui/icons"
+import { getLanguageNativeName } from "@workspace/ui/lib/language-native-names"
+import { dismissLanguageSuggestion } from "@workspace/ui/lib/language-preference"
+import { resolvePreferredLanguageCode } from "@workspace/ui/lib/resolve-preferred-language"
 
 type LanguageOption = Readonly<{
   code: string
@@ -18,38 +21,8 @@ type LanguageOption = Readonly<{
   current?: boolean
 }>
 
-const LANGUAGE_NATIVE_NAMES: Readonly<Record<string, string>> = {
-  en: "English",
-  "zh-CN": "简体中文",
-  "zh-TW": "繁體中文",
-  "zh-HK": "繁體中文（香港）",
-  zh: "中文",
-  es: "Español",
-  fr: "Français",
-  de: "Deutsch",
-  it: "Italiano",
-  ja: "日本語",
-  ko: "한국어",
-  ru: "Русский",
-  pt: "Português",
-  ar: "العربية",
-  hi: "हिन्दी",
-  tr: "Türkçe",
-  nl: "Nederlands",
-  sv: "Svenska",
-  pl: "Polski",
-  vi: "Tiếng Việt",
-  th: "ไทย",
-  id: "Bahasa Indonesia",
-  he: "עברית",
-  ms: "Bahasa Melayu",
-  no: "Norsk",
-  fa: "فارسی",
-  ur: "اردو",
-}
-
 function getLanguageLabel(option: LanguageOption) {
-  return option.label ?? LANGUAGE_NATIVE_NAMES[option.code] ?? option.code
+  return option.label ?? getLanguageNativeName(option.code)
 }
 
 type LanguageSwitcherProps = {
@@ -60,6 +33,8 @@ type LanguageSwitcherProps = {
 /**
  * Sort options so the current language comes first, then the user's
  * preferred browser language (if different), then the rest unchanged.
+ * The preferred language is resolved with the same matcher the
+ * suggestion banner uses, so the two never disagree.
  */
 function useSortedOptions(options: readonly LanguageOption[]) {
   return useMemo(() => {
@@ -68,35 +43,18 @@ function useSortedOptions(options: readonly LanguageOption[]) {
     }
 
     const browserLangs = navigator.languages ?? [navigator.language]
-    const sorted = [...options]
+    const preferred = resolvePreferredLanguageCode(
+      options.map((option) => option.code),
+      browserLangs
+    )
 
-    sorted.sort((a, b) => {
-      // Current language always first
+    return [...options].sort((a, b) => {
       if (a.current) return -1
       if (b.current) return 1
-
-      // Then prioritise by browser language preference
-      const aIdx = browserLangs.findIndex(
-        (l) =>
-          l === a.code ||
-          l.startsWith(`${a.code}-`) ||
-          a.code.startsWith(`${l}-`) ||
-          l.split("-")[0] === a.code.split("-")[0]
-      )
-      const bIdx = browserLangs.findIndex(
-        (l) =>
-          l === b.code ||
-          l.startsWith(`${b.code}-`) ||
-          b.code.startsWith(`${l}-`) ||
-          l.split("-")[0] === b.code.split("-")[0]
-      )
-      const aPrio = aIdx === -1 ? Infinity : aIdx
-      const bPrio = bIdx === -1 ? Infinity : bIdx
-
-      return aPrio - bPrio
+      if (a.code === preferred) return -1
+      if (b.code === preferred) return 1
+      return 0
     })
-
-    return sorted
   }, [options])
 }
 
@@ -114,7 +72,12 @@ function LanguageSwitcher({ label, options }: LanguageSwitcherProps) {
       <DropdownMenuContent align="end">
         {sortedOptions.map((option) => (
           <DropdownMenuItem key={option.code} asChild className="relative pr-8">
-            <a href={option.href} hrefLang={option.code} lang={option.code}>
+            <a
+              href={option.href}
+              hrefLang={option.code}
+              lang={option.code}
+              onClick={() => dismissLanguageSuggestion()}
+            >
               {getLanguageLabel(option)}
               {option.current ? (
                 <span className="pointer-events-none absolute right-2 flex items-center justify-center">

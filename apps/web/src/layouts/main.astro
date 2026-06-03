@@ -2,7 +2,9 @@
 import { ClientRouter } from "astro:transitions"
 import "@/styles/global.css"
 import SiteNavbar from "@/components/site-navbar.astro"
+import { LanguageSuggestion } from "@/components/language-suggestion/language-suggestion"
 import {
+  createLanguageOptions,
   getSiteLanguageDirection,
   resolveSiteLanguage,
   type SiteLanguage,
@@ -37,6 +39,11 @@ const {
 
 const language = resolveSiteLanguage(lang)
 const dir = getSiteLanguageDirection(language)
+const languageOptions = createLanguageOptions(
+  pathname,
+  language,
+  availableLanguages
+)
 ---
 
 <html lang={lang} dir={dir} data-theme="system" transition:animate="none">
@@ -102,5 +109,10 @@ const dir = getSiteLanguageDirection(language)
         <slot />
       </div>
     </div>
+    <LanguageSuggestion
+      client:only="react"
+      options={languageOptions}
+      currentLanguage={language}
+    />
   </body>
 </html>
