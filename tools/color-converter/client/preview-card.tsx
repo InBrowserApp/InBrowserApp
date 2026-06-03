@@ -45,7 +45,7 @@ export function PreviewCard({
         <CardTitle>{messages.previewTitle}</CardTitle>
         <CardDescription>{messages.meta.description}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-6">
+      <ToolPanelCardContent className="gap-6 py-4">
         <div
           className="rounded-2xl border p-4"
           style={{

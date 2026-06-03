@@ -52,7 +52,7 @@ function PasswordResultsCard({ analysis, messages }: PasswordResultsCardProps) {
         <CardTitle>{messages.resultTitle}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-4">
+      <ToolPanelCardContent className="gap-4 py-4">
         {analysis ? (
           <>
             <section className="rounded-xl border border-border/70 bg-muted/20 p-4">

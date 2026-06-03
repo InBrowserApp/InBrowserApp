@@ -47,7 +47,7 @@ export function OptionsCard({
         <CardTitle>{messages.optionsTitle}</CardTitle>
         <CardDescription>{messages.meta.description}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-6">
+      <ToolPanelCardContent className="gap-6 py-4">
         <div className="flex items-center gap-4 rounded-xl border bg-muted/20 p-4">
           <div
             aria-hidden="true"
