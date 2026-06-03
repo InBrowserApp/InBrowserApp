@@ -27,7 +27,9 @@
   "devDependencies": {
     "@astrojs/check": "catalog:",
     "@tailwindcss/vite": "catalog:",
+    "@testing-library/react": "catalog:",
     "@types/node": "catalog:",
+    "vitest": "catalog:",
     "wrangler": "catalog:"
   }
 }
