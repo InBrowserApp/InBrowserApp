@@ -124,7 +124,7 @@ function CronResultsCard({
           </Badge>
         </div>
       </CardHeader>
-      <CardContent className="flex flex-col gap-6 p-6">
+      <CardContent className="flex flex-col gap-6 p-4">
         {validation.state === "empty" ? (
           <Empty className="rounded-none border-0 py-10">
             <EmptyHeader>
