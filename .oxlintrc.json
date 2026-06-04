@@ -1,6 +1,15 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["import", "react", "jsx-a11y", "typescript", "unicorn", "oxc"],
+  "plugins": [
+    "import",
+    "react",
+    "jsx-a11y",
+    "typescript",
+    "unicorn",
+    "oxc",
+    "vitest",
+    "promise"
+  ],
   "categories": {
     "correctness": "error"
   },
@@ -14,7 +23,23 @@
     {
       "files": ["**/*.test.ts", "**/*.test.tsx", "**/tests/**"],
       "rules": {
-        "max-lines": "off"
+        "max-lines": "off",
+        "vitest/require-mock-type-parameters": "off",
+        "vitest/no-conditional-expect": "off",
+        "vitest/valid-expect": "error",
+        "vitest/expect-expect": [
+          "error",
+          {
+            "assertFunctionNames": [
+              "expect*",
+              "screen.findBy*",
+              "screen.findAllBy*",
+              "screen.getBy*",
+              "screen.getAllBy*"
+            ]
+          }
+        ],
+        "vitest/require-to-throw-message": "error"
       }
     },
     {

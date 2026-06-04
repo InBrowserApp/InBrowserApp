@@ -43,7 +43,7 @@ describe("decodeBase64", () => {
   })
 
   test("throws on invalid base64", () => {
-    expect(() => decodeBase64("!!!")).toThrow()
+    expect(() => decodeBase64("!!!")).toThrow("Invalid character")
   })
 })
 

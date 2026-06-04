@@ -36,11 +36,11 @@ describe("decodeUrlComponent", () => {
   })
 
   test("throws for incomplete escape sequences", () => {
-    expect(() => decodeUrlComponent("100%")).toThrow()
+    expect(() => decodeUrlComponent("100%")).toThrow("URI malformed")
   })
 
   test("throws for malformed utf-8 byte sequences", () => {
-    expect(() => decodeUrlComponent("%E0%A4%A")).toThrow()
+    expect(() => decodeUrlComponent("%E0%A4%A")).toThrow("URI malformed")
   })
 })
 

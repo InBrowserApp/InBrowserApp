@@ -231,7 +231,7 @@ describe("decryptAesEnvelope", () => {
 
     await expect(
       decryptAesEnvelope(tamperedEnvelope, { password: "secret" })
-    ).rejects.toThrow()
+    ).rejects.toThrow(/operation failed/i)
   })
 
   it("rejects malformed hexadecimal envelope fields", async () => {

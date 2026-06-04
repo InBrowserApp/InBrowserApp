@@ -63,7 +63,7 @@ describe("formatRequest", () => {
   it("rejects invalid input with the underlying prettier message", async () => {
     await expect(
       formatRequest(createPrettierFormatRequest("{", { language: "json" }))
-    ).rejects.toThrow()
+    ).rejects.toThrow(/Unexpected token/)
   })
 
   it("registers a worker message handler that posts formatted results", async () => {

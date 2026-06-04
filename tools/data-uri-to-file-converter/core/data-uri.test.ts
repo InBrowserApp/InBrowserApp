@@ -55,8 +55,12 @@ describe("parseDataUri", () => {
   })
 
   test("throws for malformed values", () => {
-    expect(() => parseDataUri("https://example.com")).toThrow()
-    expect(() => parseDataUri("data:text/plain;base64")).toThrow()
+    expect(() => parseDataUri("https://example.com")).toThrow(
+      "Invalid Data URI"
+    )
+    expect(() => parseDataUri("data:text/plain;base64")).toThrow(
+      "Invalid Data URI"
+    )
   })
 })
 
