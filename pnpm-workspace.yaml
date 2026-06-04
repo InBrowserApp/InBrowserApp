@@ -14,8 +14,8 @@ catalog:
   "@astrojs/mdx": ^4.3.14
   "@astrojs/react": ^4.4.2
   "@astrojs/sitemap": ^3.7.3
-  "@commitlint/cli": ^20.5.0
-  "@commitlint/config-conventional": ^20.5.0
+  "@commitlint/cli": ^20.5.3
+  "@commitlint/config-conventional": ^20.5.3
   "@faker-js/faker": ^10.3.0
   "@jspawn/qpdf-wasm": ^0.0.2
   "@jsquash/avif": ^2.1.1
