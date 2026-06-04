@@ -89,7 +89,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --spacing-page-x: clamp(1.25rem, 0.9rem + 1.4vw, 2.75rem);
-  --spacing-page-y: clamp(2.5rem, 1.6rem + 3vw, 5rem);
+  --spacing-page-y: clamp(1.5rem, 0.45rem + 4.25vw, 5rem);
   --spacing-section-y: clamp(1.5rem, 1rem + 1.6vw, 2.75rem);
   --shadow-elevated: 0 20px 60px
     color-mix(in oklab, var(--foreground) 8%, transparent);
