@@ -119,8 +119,10 @@ describe("SignalEngine", () => {
       () => new FakeAudioContext() as unknown as AudioContext
     )
 
-    engine.setVolume(0.2)
-    ;(engine as unknown as { schedule: () => void }).schedule()
+    expect(() => {
+      engine.setVolume(0.2)
+      ;(engine as unknown as { schedule: () => void }).schedule()
+    }).not.toThrow()
   })
 })
 

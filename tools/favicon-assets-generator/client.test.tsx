@@ -980,19 +980,17 @@ describe("FaviconAssetsGeneratorClient", () => {
   test("changing the maskable margin slider via keyboard moves the value", async () => {
     render(<FaviconAssetsGeneratorClient messages={messages} />)
 
-    const sliders = document.querySelectorAll<HTMLElement>("[role='slider']")
-    const maskableSlider = Array.from(sliders).find((s) => {
-      const labelledBy = s.getAttribute("aria-labelledby")
-      if (!labelledBy) return false
-      const label = document.getElementById(labelledBy)
-      return (
-        label !== null &&
-        (label.textContent ?? "").includes(messages.maskableMarginLabel)
-      )
-    })
-    if (maskableSlider) {
-      fireEvent.keyDown(maskableSlider, { key: "ArrowLeft" })
-    }
+    const marginLabel = Array.from(document.querySelectorAll("label")).find(
+      (el) => (el.textContent ?? "").includes(messages.maskableMarginLabel)
+    )
+    const sliderId = marginLabel?.getAttribute("for")
+    const root = sliderId ? document.getElementById(sliderId) : null
+    const thumb = root?.querySelector<HTMLElement>("[role='slider']")
+    expect(thumb).toBeTruthy()
+
+    const before = Number(thumb!.getAttribute("aria-valuenow"))
+    fireEvent.keyDown(thumb!, { key: "ArrowLeft" })
+    expect(Number(thumb!.getAttribute("aria-valuenow"))).toBeLessThan(before)
   })
 
   test("the description and asset path FieldDescription elements render", () => {

@@ -154,23 +154,20 @@ describe.each(families)("locale family $relDir/*.$ext", ({ dir, ext }) => {
     expect(missing).toEqual([])
   })
 
-  if (ext === "json") {
-    const enKeys = collectKeyPaths(loadJson(path.join(dir, "en.json")))
-    const others = filesInDir.filter((f) => f !== "en.json")
-    for (const file of others) {
-      test(`${file}: JSON key parity with en`, () => {
+  const enFile = `en.${ext}`
+  const parityKind = ext === "json" ? "JSON key" : "markdown heading structure"
+  const others = filesInDir.filter((f) => f !== enFile)
+  for (const file of others) {
+    test(`${file}: ${parityKind} parity with en`, () => {
+      if (ext === "json") {
+        const enKeys = collectKeyPaths(loadJson(path.join(dir, enFile)))
         const keys = collectKeyPaths(loadJson(path.join(dir, file)))
         expect(diffSets(enKeys, keys)).toEqual({ missing: [], extra: [] })
-      })
-    }
-  } else {
-    const enLevels = extractHeadingLevels(loadText(path.join(dir, "en.md")))
-    const others = filesInDir.filter((f) => f !== "en.md")
-    for (const file of others) {
-      test(`${file}: markdown heading structure parity with en`, () => {
+      } else {
+        const enLevels = extractHeadingLevels(loadText(path.join(dir, enFile)))
         const levels = extractHeadingLevels(loadText(path.join(dir, file)))
         expect(levels).toEqual(enLevels)
-      })
-    }
+      }
+    })
   }
 })

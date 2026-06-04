@@ -121,7 +121,9 @@ describe("ScryptKeyDerivationClient", () => {
 
     expect(screen.getByText(messages.emptyStateDescription)).toBeTruthy()
     expect(getSaltInput().getAttribute("placeholder")).toBe(messages.saltLabel)
-    expect(screen.getByText(`${messages.memoryEstimateLabel}: 16 MiB`))
+    expect(
+      screen.getByText(`${messages.memoryEstimateLabel}: 16 MiB`)
+    ).toBeTruthy()
   })
 
   test("derives a key from password and text salt", async () => {

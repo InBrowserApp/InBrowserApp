@@ -175,9 +175,9 @@ describe("generateJsonSchema", () => {
       string,
       Record<string, unknown>
     >
-    for (const [key, property] of Object.entries(properties)) {
-      expect(property.type, key).toBe("string")
-      expect(property.format, key).toBeUndefined()
+    for (const property of Object.values(properties)) {
+      expect(property.type).toBe("string")
+      expect(property.format).toBeUndefined()
     }
   })
 
