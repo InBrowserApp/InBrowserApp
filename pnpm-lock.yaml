@@ -106,7 +106,7 @@ catalogs:
       specifier: ^19.2.3
       version: 19.2.3
     '@types/turndown':
-      specifier: ^5.0.5
+      specifier: ^5.0.6
       version: 5.0.6
     '@vitest/coverage-v8':
       specifier: ^4.1.2
