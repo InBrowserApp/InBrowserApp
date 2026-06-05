@@ -23,7 +23,7 @@ catalog:
   "@lhci/cli": ^0.15.1
   "@libwebp-wasm/gif2webp": ^1.0.8
   "@libwebp-wasm/img2webp": ^1.0.0
-  "@noble/ed25519": ^3.0.0
+  "@noble/ed25519": ^3.1.0
   "@noble/hashes": ^2.2.0
   "@paralleldrive/cuid2": ^3.3.0
   "@peculiar/x509": ^1.14.3
