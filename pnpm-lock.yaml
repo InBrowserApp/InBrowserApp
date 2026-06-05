@@ -28,7 +28,7 @@ catalogs:
       specifier: ^20.5.3
       version: 20.5.3
     '@faker-js/faker':
-      specifier: ^10.3.0
+      specifier: ^10.4.0
       version: 10.4.0
     '@jspawn/qpdf-wasm':
       specifier: ^0.0.2
