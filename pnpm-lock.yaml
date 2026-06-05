@@ -49,7 +49,7 @@ catalogs:
       specifier: ^1.0.0
       version: 1.0.0
     '@noble/ed25519':
-      specifier: ^3.0.0
+      specifier: ^3.1.0
       version: 3.1.0
     '@noble/hashes':
       specifier: ^2.2.0
