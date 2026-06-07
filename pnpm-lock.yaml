@@ -229,7 +229,7 @@ catalogs:
       specifier: ^0.542.0
       version: 0.542.0
     marked:
-      specifier: ^16.4.0
+      specifier: ^16.4.2
       version: 16.4.2
     mime-db:
       specifier: ^1.54.0
