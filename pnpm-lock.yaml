@@ -241,8 +241,8 @@ catalogs:
       specifier: ^7.13.0
       version: 7.13.0
     openpgp:
-      specifier: ^6.3.0
-      version: 6.3.0
+      specifier: ^6.3.1
+      version: 6.3.1
     oxfmt:
       specifier: ^0.43.0
       version: 0.43.0
@@ -4692,7 +4692,7 @@ importers:
         version: 6.4.4(@types/node@25.5.2)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.21.0)(yaml@2.8.3)
       openpgp:
         specifier: 'catalog:'
-        version: 6.3.0
+        version: 6.3.1
       react:
         specifier: 'catalog:'
         version: 19.2.4
@@ -12457,9 +12457,14 @@ packages:
     peerDependencies:
       typescript: ^5.x
 
-  openpgp@6.3.0:
-    resolution: {integrity: sha512-pLzCU8IgyKXPSO11eeharQkQ4GzOKNWhXq79pQarIRZEMt1/ssyr+MIuWBv1mNoenJLg04gvPx+fi4gcKZ4bag==}
-    engines: {node: '>= 18.0.0'}
+  openpgp@6.3.1:
+    resolution: {integrity: sha512-7oSPvmlKPojxFoyelT5DWPIAVmqWZh4qU/5pO6bdoShEtRpCw9Sye9IXUQj6EFM3XpgGssqccAr705YtTcLNQw==}
+    engines: {node: '>= 18.0.0', typescript: '>= 5.0.0'}
+    peerDependencies:
+      '@openpgp/web-stream-tools': ~0.3.0
+    peerDependenciesMeta:
+      '@openpgp/web-stream-tools':
+        optional: true
 
   ora@8.2.0:
     resolution: {integrity: sha512-weP+BZ8MVNnlCm8c0Qdc1WSWq4Qn7I+9CJGm7Qali6g44e/PUzbjNqJX5NJ9ljlNMosfJvg1fKEGILklK9cwnw==}
@@ -19898,7 +19903,7 @@ snapshots:
       typescript: 5.9.3
       yargs-parser: 21.1.1
 
-  openpgp@6.3.0: {}
+  openpgp@6.3.1: {}
 
   ora@8.2.0:
     dependencies:

@@ -87,7 +87,7 @@ catalog:
   mime-db: ^1.54.0
   murmurhash3js-revisited: ^3.0.0
   openapi-typescript: ^7.13.0
-  openpgp: ^6.3.0
+  openpgp: ^6.3.1
   oxfmt: ^0.43.0
   oxlint: ^1.58.0
   papaparse: ^5.5.3
