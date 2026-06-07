@@ -78,7 +78,7 @@ catalog:
   jmespath: ^0.16.0
   js-yaml: ^4.1.1
   jsbarcode: ^3.12.3
-  jsonpath-plus: ^10.3.0
+  jsonpath-plus: ^10.4.0
   jsqr: ^1.4.0
   knip: ^6.3.0
   lint-staged: ^16.4.0
