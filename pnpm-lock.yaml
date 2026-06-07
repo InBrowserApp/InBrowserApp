@@ -214,7 +214,7 @@ catalogs:
       specifier: ^3.12.3
       version: 3.12.3
     jsonpath-plus:
-      specifier: ^10.3.0
+      specifier: ^10.4.0
       version: 10.4.0
     jsqr:
       specifier: ^1.4.0
