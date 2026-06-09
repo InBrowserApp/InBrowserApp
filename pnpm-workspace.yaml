@@ -102,7 +102,7 @@ catalog:
   react-dom: ^19.2.4
   shadcn: ^4.1.2
   sm-crypto: ^0.4.0
-  smol-toml: ^1.4.1
+  smol-toml: ^1.6.1
   sql-formatter: ^15.7.2
   svelte: ^5.38.7
   svgo: ^4.0.1
