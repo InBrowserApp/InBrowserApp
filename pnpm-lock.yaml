@@ -286,7 +286,7 @@ catalogs:
       specifier: ^0.4.0
       version: 0.4.0
     smol-toml:
-      specifier: ^1.4.1
+      specifier: ^1.6.1
       version: 1.6.1
     sql-formatter:
       specifier: ^15.7.2
