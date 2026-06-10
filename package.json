@@ -27,6 +27,7 @@
     "dependency-cruiser": "catalog:",
     "happy-dom": "catalog:",
     "husky": "catalog:",
+    "jsdom": "catalog:",
     "knip": "catalog:",
     "lint-staged": "catalog:",
     "oxfmt": "catalog:",

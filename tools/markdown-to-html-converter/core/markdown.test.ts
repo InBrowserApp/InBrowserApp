@@ -1,3 +1,8 @@
+// @vitest-environment jsdom
+// DOMPurify (3.4.8+) walks the DOM with createNodeIterator, which happy-dom
+// does not implement faithfully, so sanitize() mangles its output there
+// (keeps unsafe attributes, drops safe tags). These tests exercise DOMPurify,
+// so they run under jsdom for parity with real browsers. See #965.
 import { describe, expect, test } from "vitest"
 
 import {
