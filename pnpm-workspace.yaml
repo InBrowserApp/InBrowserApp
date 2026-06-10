@@ -45,7 +45,7 @@ catalog:
   "@types/turndown": ^5.0.6
   "@vitest/coverage-v8": ^4.1.8
   "@zip.js/zip.js": ^2.8.26
-  "@zxing/browser": ^0.1.5
+  "@zxing/browser": ^0.2.0
   "@zxing/library": ^0.21.3
   ajv: ^8.18.0
   ajv-formats: ^3.0.1
