@@ -36,7 +36,7 @@ catalog:
   "@types/js-yaml": ^4.0.9
   "@types/mime-db": ^1.43.6
   "@types/murmurhash3js-revisited": ^3.0.3
-  "@types/node": ^25.1.0
+  "@types/node": ^25.9.2
   "@types/papaparse": ^5.5.2
   "@types/punycode": ^2.1.4
   "@types/qrcode": ^1.5.6
