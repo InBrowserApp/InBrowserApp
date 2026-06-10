@@ -16,6 +16,7 @@ import {
   Lock,
   Mic,
   Network,
+  Ruler,
   Wrench,
 } from "@workspace/ui/icons"
 
@@ -34,6 +35,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   lock: Lock,
   mic: Mic,
   network: Network,
+  ruler: Ruler,
 }
 
 type ToolIconProps = LucideProps & {

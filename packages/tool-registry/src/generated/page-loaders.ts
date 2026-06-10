@@ -248,6 +248,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/unicode-invisible-character-checker/page"),
   "unicode-punycode-converter": () =>
     import("@tool/unicode-punycode-converter/page"),
+  "unit-converter": () => import("@tool/unit-converter/page"),
   "unix-timestamp-converter": () =>
     import("@tool/unix-timestamp-converter/page"),
   "url-component-encoder-decoder": () =>
