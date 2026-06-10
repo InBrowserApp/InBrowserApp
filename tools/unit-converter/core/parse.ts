@@ -41,4 +41,3 @@ function parseNumber(raw: string): ParseResult {
 }
 
 export { parseNumber }
-export type { ParseResult }
