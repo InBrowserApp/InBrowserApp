@@ -63,7 +63,7 @@ catalog:
   cronstrue: ^3.14.0
   crypto-js: ^4.2.0
   curlconverter: ^4.12.0
-  dependency-cruiser: ^17.3.10
+  dependency-cruiser: ^17.4.3
   diff: ^8.0.4
   dompurify: ^3.4.9
   exifr: ^7.1.3
