@@ -76,7 +76,7 @@ catalog:
   husky: ^9.1.7
   is-ip: ^5.0.1
   jmespath: ^0.16.0
-  js-yaml: ^4.1.1
+  js-yaml: ^4.2.0
   jsbarcode: ^3.12.3
   jsdom: ^29.1.1
   jsonpath-plus: ^10.4.0
