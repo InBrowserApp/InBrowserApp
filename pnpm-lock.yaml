@@ -295,8 +295,8 @@ catalogs:
       specifier: ^15.8.1
       version: 15.8.1
     svelte:
-      specifier: ^5.38.7
-      version: 5.55.7
+      specifier: ^5.56.3
+      version: 5.56.3
     svgo:
       specifier: ^4.0.1
       version: 4.0.1
@@ -390,7 +390,7 @@ importers:
         version: 16.4.0
       oxfmt:
         specifier: 'catalog:'
-        version: 0.54.0(svelte@5.55.7)
+        version: 0.54.0(svelte@5.56.3)
       oxlint:
         specifier: 'catalog:'
         version: 1.58.0
@@ -4838,7 +4838,7 @@ importers:
         version: 3.8.4
       prettier-plugin-svelte:
         specifier: 'catalog:'
-        version: 3.5.2(prettier@3.8.4)(svelte@5.55.7)
+        version: 3.5.2(prettier@3.8.4)(svelte@5.56.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4847,7 +4847,7 @@ importers:
         version: 19.2.7(react@19.2.7)
       svelte:
         specifier: 'catalog:'
-        version: 5.55.7
+        version: 5.56.3
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -13387,8 +13387,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte@5.55.7:
-    resolution: {integrity: sha512-ymI5ykLPwIHW839E053FQbI1G+jnRFJEw3Kv5Y4njixVWywQBx+NUFpkkKyk5LIb36Fg9DVXSYpqiGekLD0hyw==}
+  svelte@5.56.3:
+    resolution: {integrity: sha512-w7JvrM5IFl5cmfbY0TLik9o7mjRUJmRMhOR51tBPu708Gr/MjbGs7VnJnr/B0CaXeI4vtnOh7RKxDr0cwhMdDA==}
     engines: {node: '>=18'}
 
   svgo@4.0.1:
@@ -20251,7 +20251,7 @@ snapshots:
       - '@emnapi/core'
       - '@emnapi/runtime'
 
-  oxfmt@0.54.0(svelte@5.55.7):
+  oxfmt@0.54.0(svelte@5.56.3):
     dependencies:
       tinypool: 2.1.0
     optionalDependencies:
@@ -20274,7 +20274,7 @@ snapshots:
       '@oxfmt/binding-win32-arm64-msvc': 0.54.0
       '@oxfmt/binding-win32-ia32-msvc': 0.54.0
       '@oxfmt/binding-win32-x64-msvc': 0.54.0
-      svelte: 5.55.7
+      svelte: 5.56.3
 
   oxlint@1.58.0:
     optionalDependencies:
@@ -20453,10 +20453,10 @@ snapshots:
 
   powershell-utils@0.1.0: {}
 
-  prettier-plugin-svelte@3.5.2(prettier@3.8.4)(svelte@5.55.7):
+  prettier-plugin-svelte@3.5.2(prettier@3.8.4)(svelte@5.56.3):
     dependencies:
       prettier: 3.8.4
-      svelte: 5.55.7
+      svelte: 5.56.3
 
   prettier@3.8.4: {}
 
@@ -21322,7 +21322,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte@5.55.7:
+  svelte@5.56.3:
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/sourcemap-codec': 1.5.5
