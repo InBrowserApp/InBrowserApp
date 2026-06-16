@@ -168,7 +168,7 @@ function UnitConverterClient({
         <CardDescription>{messages.converterDescription}</CardDescription>
       </CardHeader>
 
-      <ToolPanelCardContent className="gap-6">
+      <ToolPanelCardContent className="gap-6 py-4">
         <CategorySelector
           label={messages.categoryLabel}
           names={messages.categories}
