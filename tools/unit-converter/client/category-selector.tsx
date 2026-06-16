@@ -27,7 +27,8 @@ function CategorySelector({
         type="single"
         value={value}
         variant="outline"
-        className="flex-wrap justify-start gap-2"
+        spacing={8}
+        className="w-full flex-wrap"
         onValueChange={(next) => {
           if (next) {
             onChange(next as UnitCategoryId)

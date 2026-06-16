@@ -42,7 +42,7 @@ function AllUnitsCard({
           >
             <button
               type="button"
-              className="flex flex-1 items-baseline gap-2 text-left"
+              className="flex min-w-0 flex-1 items-baseline gap-2 text-left"
               onClick={() => {
                 onSelectUnit(unit.id)
               }}

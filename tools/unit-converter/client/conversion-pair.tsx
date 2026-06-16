@@ -39,7 +39,9 @@ function ConversionPair(props: ConversionPairProps) {
   return (
     <div className="grid items-end gap-4 sm:grid-cols-[1fr_auto_1fr]">
       <div className="grid gap-2">
-        <Label htmlFor={fromId}>{props.fromLabel}</Label>
+        <div className="flex h-8 items-center">
+          <Label htmlFor={fromId}>{props.fromLabel}</Label>
+        </div>
         <Input
           id={fromId}
           value={props.value}
@@ -69,14 +71,14 @@ function ConversionPair(props: ConversionPairProps) {
         size="icon"
         aria-label={props.swapLabel}
         title={props.swapLabel}
-        className="mb-1 self-center sm:self-end"
+        className="self-center justify-self-center"
         onClick={props.onSwap}
       >
         <ArrowLeftRight />
       </Button>
 
       <div className="grid gap-2">
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex h-8 items-center justify-between gap-3">
           <Label htmlFor={toId}>{props.toLabel}</Label>
           <ToolCopyButton
             value={props.toValue}
