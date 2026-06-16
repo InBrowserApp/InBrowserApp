@@ -43,7 +43,7 @@ catalog:
   "@types/react": ^19.2.17
   "@types/react-dom": ^19.2.3
   "@types/turndown": ^5.0.6
-  "@vitest/coverage-v8": ^4.1.8
+  "@vitest/coverage-v8": ^4.1.9
   "@zip.js/zip.js": ^2.8.26
   "@zxing/browser": ^0.2.0
   "@zxing/library": ^0.23.0
@@ -116,7 +116,7 @@ catalog:
   typescript: ^5.9.3
   ua-parser-js: ^2.0.10
   upng-js: ^2.1.0
-  vitest: ^4.1.8
+  vitest: ^4.1.9
   webrtc-ips: ^0.2.0
   wrangler: 4.100.0
   xml-js: ^1.6.11
