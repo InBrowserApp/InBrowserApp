@@ -16,7 +16,7 @@ catalog:
   "@astrojs/sitemap": ^3.7.3
   "@commitlint/cli": ^20.5.3
   "@commitlint/config-conventional": ^20.5.3
-  "@faker-js/faker": ^10.4.0
+  "@faker-js/faker": ^10.5.0
   "@jspawn/qpdf-wasm": ^0.0.2
   "@jsquash/avif": ^2.1.1
   "@jsquash/oxipng": ^2.3.0
