@@ -49,7 +49,7 @@ catalog:
   "@zxing/library": ^0.23.0
   ajv: ^8.20.0
   ajv-formats: ^3.0.1
-  astro: ^6.4.7
+  astro: ^6.4.8
   bcrypt-ts: ^8.0.1
   bip39: ^3.1.0
   blake3-wasm: 2.1.5
