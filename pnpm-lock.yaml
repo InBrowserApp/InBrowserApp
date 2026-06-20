@@ -253,8 +253,8 @@ catalogs:
       specifier: ^1.58.0
       version: 1.58.0
     papaparse:
-      specifier: ^5.5.3
-      version: 5.5.3
+      specifier: ^5.5.4
+      version: 5.5.4
     pdf-lib:
       specifier: ^1.17.1
       version: 1.17.1
@@ -2486,7 +2486,7 @@ importers:
         version: 11.11.1
       papaparse:
         specifier: 'catalog:'
-        version: 5.5.3
+        version: 5.5.4
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3660,7 +3660,7 @@ importers:
         version: 6.4.8(@types/node@25.9.4)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
       papaparse:
         specifier: 'catalog:'
-        version: 5.5.3
+        version: 5.5.4
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -12646,8 +12646,8 @@ packages:
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
 
-  papaparse@5.5.3:
-    resolution: {integrity: sha512-5QvjGxYVjxO59MGU2lHVYpRWBBtKHnlIAcSe1uNFCkkptUh63NFRj0FJQm7nR67puEruUci/ZkjmEFrjCAyP4A==}
+  papaparse@5.5.4:
+    resolution: {integrity: sha512-SwzWD9gl/ElwYLCI0nUja1mFJzjq2D8ziShfNBa7zCHzkOozeOGDwHWQ+tvCzEZcewecWZ5U7kUopDnG+DFYEQ==}
 
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
@@ -20325,7 +20325,7 @@ snapshots:
 
   pako@1.0.11: {}
 
-  papaparse@5.5.3: {}
+  papaparse@5.5.4: {}
 
   parent-module@1.0.1:
     dependencies:
