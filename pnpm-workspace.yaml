@@ -91,7 +91,7 @@ catalog:
   openpgp: ^6.3.1
   oxfmt: ^0.55.0
   oxlint: ^1.58.0
-  papaparse: ^5.5.3
+  papaparse: ^5.5.4
   pdf-lib: ^1.17.1
   pdfjs-dist: ^5.7.284
   prettier: ^3.8.4
