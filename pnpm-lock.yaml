@@ -157,8 +157,8 @@ catalogs:
       specifier: ^2.1.0
       version: 2.1.0
     cron-parser:
-      specifier: ^5.5.0
-      version: 5.5.0
+      specifier: ^5.6.0
+      version: 5.6.0
     cronstrue:
       specifier: ^3.20.0
       version: 3.20.0
@@ -2371,7 +2371,7 @@ importers:
         version: 6.4.8(@types/node@25.9.4)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
       cron-parser:
         specifier: 'catalog:'
-        version: 5.5.0
+        version: 5.6.0
       cronstrue:
         specifier: 'catalog:'
         version: 3.20.0
@@ -10761,8 +10761,8 @@ packages:
       typescript:
         optional: true
 
-  cron-parser@5.5.0:
-    resolution: {integrity: sha512-oML4lKUXxizYswqmxuOCpgFS8BNUJpIu6k/2HVHyaL8Ynnf3wdf9tkns0yRdJLSIjkJ+b0DXHMZEHGpMwjnPww==}
+  cron-parser@5.6.0:
+    resolution: {integrity: sha512-6159NDv4eDOjXYDmMTkvUtaVcIrNZI779ydTMOfDdi9fSjhPqmySx0icCHX2+nOyXgNSw6sFCsgLKxYs/2KPuQ==}
     engines: {node: '>=18'}
 
   cronstrue@3.20.0:
@@ -17931,7 +17931,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  cron-parser@5.5.0:
+  cron-parser@5.6.0:
     dependencies:
       luxon: 3.7.2
 
