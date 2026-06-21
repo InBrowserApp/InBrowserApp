@@ -69,7 +69,7 @@ catalog:
   exifr: ^7.1.3
   figlet: ^1.11.0
   gifuct-js: ^2.1.2
-  happy-dom: ^20.8.9
+  happy-dom: ^20.10.6
   hash-wasm: ^4.12.0
   highlight.js: ^11.11.1
   highwayhasher: ^0.4.4
