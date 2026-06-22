@@ -292,8 +292,8 @@ catalogs:
       specifier: ^1.6.1
       version: 1.6.1
     sql-formatter:
-      specifier: ^15.8.1
-      version: 15.8.1
+      specifier: ^15.8.2
+      version: 15.8.2
     svelte:
       specifier: ^5.56.3
       version: 5.56.3
@@ -5816,7 +5816,7 @@ importers:
         version: 19.2.7(react@19.2.7)
       sql-formatter:
         specifier: 'catalog:'
-        version: 15.8.1
+        version: 15.8.2
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -13279,8 +13279,8 @@ packages:
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
-  sql-formatter@15.8.1:
-    resolution: {integrity: sha512-nT2r90kTEYBuse9fe4r1Rp78v1mOBD35KsGc07Vo9eQSVa1TcTSnCS0zouf6BCmdzvmqBsBW+cYuBoYkHO/OWg==}
+  sql-formatter@15.8.2:
+    resolution: {integrity: sha512-kTYRg5FIcvsDtYUG2Qn9pYT6xKwiLJN5TTIvc5Mur6hIg4pSfdpHu8Yyu5bqESLHnVM3mXzD446cb2+uEaKZXg==}
     hasBin: true
 
   stackback@0.0.2:
@@ -21203,7 +21203,7 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  sql-formatter@15.8.1:
+  sql-formatter@15.8.2:
     dependencies:
       argparse: 2.0.1
       nearley: 2.20.1
