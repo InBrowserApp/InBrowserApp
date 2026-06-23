@@ -160,8 +160,8 @@ catalogs:
       specifier: ^5.6.0
       version: 5.6.0
     cronstrue:
-      specifier: ^3.20.0
-      version: 3.20.0
+      specifier: ^3.21.0
+      version: 3.21.0
     crypto-js:
       specifier: ^4.2.0
       version: 4.2.0
@@ -2374,7 +2374,7 @@ importers:
         version: 5.6.0
       cronstrue:
         specifier: 'catalog:'
-        version: 3.20.0
+        version: 3.21.0
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -10769,8 +10769,8 @@ packages:
     resolution: {integrity: sha512-6159NDv4eDOjXYDmMTkvUtaVcIrNZI779ydTMOfDdi9fSjhPqmySx0icCHX2+nOyXgNSw6sFCsgLKxYs/2KPuQ==}
     engines: {node: '>=18'}
 
-  cronstrue@3.20.0:
-    resolution: {integrity: sha512-2VOOE8DSemXhqEtlU23GBMoeowHnhcto+HPelhtCfM5cP+PB59UOuoeOIBQATzKSW+RfOGF7OJjcwfaUxRW6QQ==}
+  cronstrue@3.21.0:
+    resolution: {integrity: sha512-6DgX87NpjknhNmYC0/JjexQIAwCvtaUNoayqxLsciU5NkwGcEhuXLgXkIOX/bsuXL4f/aaLfgimJ6/2X8c5ezg==}
     hasBin: true
 
   cross-spawn@7.0.6:
@@ -17943,7 +17943,7 @@ snapshots:
     dependencies:
       luxon: 3.7.2
 
-  cronstrue@3.20.0: {}
+  cronstrue@3.21.0: {}
 
   cross-spawn@7.0.6:
     dependencies:
