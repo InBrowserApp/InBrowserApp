@@ -295,8 +295,8 @@ catalogs:
       specifier: ^15.8.2
       version: 15.8.2
     svelte:
-      specifier: ^5.56.3
-      version: 5.56.3
+      specifier: ^5.56.4
+      version: 5.56.4
     svgo:
       specifier: ^4.0.1
       version: 4.0.1
@@ -390,7 +390,7 @@ importers:
         version: 16.4.0
       oxfmt:
         specifier: 'catalog:'
-        version: 0.56.0(svelte@5.56.3)
+        version: 0.56.0(svelte@5.56.4)
       oxlint:
         specifier: 'catalog:'
         version: 1.58.0
@@ -4838,7 +4838,7 @@ importers:
         version: 3.8.4
       prettier-plugin-svelte:
         specifier: 'catalog:'
-        version: 3.5.2(prettier@3.8.4)(svelte@5.56.3)
+        version: 3.5.2(prettier@3.8.4)(svelte@5.56.4)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4847,7 +4847,7 @@ importers:
         version: 19.2.7(react@19.2.7)
       svelte:
         specifier: 'catalog:'
-        version: 5.56.3
+        version: 5.56.4
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -11123,8 +11123,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  esrap@2.2.11:
-    resolution: {integrity: sha512-gPdx+I+BjYEinNMQaBXFjbaJVyoPMU4ZODg5mE+M4DqVG9VusAVHHjcBX+zqyITlI0DIARwDMMzZwAWj36dRoQ==}
+  esrap@2.2.12:
+    resolution: {integrity: sha512-On0QbLyaiAkVC4eXtgnXK9Kh2opit+3rcUSOc45DqJ2s/X2eXAHsGOKRSJ6IDagQEW5vPyivANfXUiqgXC67Rw==}
     peerDependencies:
       '@typescript-eslint/types': ^8.2.0
     peerDependenciesMeta:
@@ -13391,8 +13391,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte@5.56.3:
-    resolution: {integrity: sha512-w7JvrM5IFl5cmfbY0TLik9o7mjRUJmRMhOR51tBPu708Gr/MjbGs7VnJnr/B0CaXeI4vtnOh7RKxDr0cwhMdDA==}
+  svelte@5.56.4:
+    resolution: {integrity: sha512-/d0QHehmRuJW8gVz395MTkPcPozxzdjBMBE8oEYGz8O3b9KTMzzQ9ZHJQLuFKOHOPQbU6kx/X4iid/EBBzH7iw==}
     engines: {node: '>=18'}
 
   svgo@4.0.1:
@@ -18332,7 +18332,7 @@ snapshots:
 
   esprima@4.0.1: {}
 
-  esrap@2.2.11:
+  esrap@2.2.12:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
@@ -20244,7 +20244,7 @@ snapshots:
       - '@emnapi/core'
       - '@emnapi/runtime'
 
-  oxfmt@0.56.0(svelte@5.56.3):
+  oxfmt@0.56.0(svelte@5.56.4):
     dependencies:
       tinypool: 2.1.0
     optionalDependencies:
@@ -20267,7 +20267,7 @@ snapshots:
       '@oxfmt/binding-win32-arm64-msvc': 0.56.0
       '@oxfmt/binding-win32-ia32-msvc': 0.56.0
       '@oxfmt/binding-win32-x64-msvc': 0.56.0
-      svelte: 5.56.3
+      svelte: 5.56.4
 
   oxlint@1.58.0:
     optionalDependencies:
@@ -20446,10 +20446,10 @@ snapshots:
 
   powershell-utils@0.1.0: {}
 
-  prettier-plugin-svelte@3.5.2(prettier@3.8.4)(svelte@5.56.3):
+  prettier-plugin-svelte@3.5.2(prettier@3.8.4)(svelte@5.56.4):
     dependencies:
       prettier: 3.8.4
-      svelte: 5.56.3
+      svelte: 5.56.4
 
   prettier@3.8.4: {}
 
@@ -21315,7 +21315,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte@5.56.3:
+  svelte@5.56.4:
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -21328,7 +21328,7 @@ snapshots:
       clsx: 2.1.1
       devalue: 5.8.1
       esm-env: 1.2.2
-      esrap: 2.2.11
+      esrap: 2.2.12
       is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.21
