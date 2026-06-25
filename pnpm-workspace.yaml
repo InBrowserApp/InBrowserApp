@@ -28,7 +28,7 @@ catalog:
   "@paralleldrive/cuid2": ^3.3.0
   "@peculiar/x509": ^1.14.3
   "@prettier/plugin-xml": ^3.4.2
-  "@tailwindcss/vite": ^4.1.18
+  "@tailwindcss/vite": ^4.3.1
   "@testing-library/react": ^16.3.2
   "@types/crypto-js": ^4.2.2
   "@types/figlet": ^1.7.0
@@ -108,7 +108,7 @@ catalog:
   svelte: ^5.56.4
   svgo: ^4.0.1
   tailwind-merge: ^3.6.0
-  tailwindcss: ^4.1.18
+  tailwindcss: ^4.3.1
   transliteration: ^2.6.1
   tsx: ^4.22.4
   turndown: ^7.2.4
