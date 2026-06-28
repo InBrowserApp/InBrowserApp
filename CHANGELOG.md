@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/InBrowserApp/InBrowserApp/compare/v2.1.0...v2.1.1) (2026-06-28)
+
+
+### Bug Fixes
+
+* **web:** restore single-column tools grid on mobile ([#943](https://github.com/InBrowserApp/InBrowserApp/issues/943)) ([ab5e966](https://github.com/InBrowserApp/InBrowserApp/commit/ab5e966d34e9ed24925e1e330621ea99fbc31900))
+
 ## [2.1.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.0.0...v2.1.0) (2026-06-03)
 
 
