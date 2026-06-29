@@ -23436,6 +23436,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "unit-converter",
+    category: "web",
+    icon: "ruler",
+    tags: [
+      "unit converter",
+      "measurement",
+      "length",
+      "weight",
+      "temperature",
+      "metric imperial",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الوحدات",
+        description:
+          "حوّل الطول والكتلة ودرجة الحرارة والمساحة والحجم والسرعة والتخزين الرقمي والوقت بين الوحدات المترية والإمبراطورية وغيرها فورًا داخل متصفحك.",
+      },
+      de: {
+        name: "Einheitenumrechner",
+        description:
+          "Rechnen Sie Länge, Masse, Temperatur, Fläche, Volumen, Geschwindigkeit, digitale Speichergrößen und Zeit sofort zwischen metrischen, imperialen und weiteren Einheiten direkt im Browser um.",
+      },
+      en: {
+        name: "Unit Converter",
+        description:
+          "Convert length, mass, temperature, area, volume, speed, digital storage, and time between metric, imperial, and other units instantly in your browser.",
+      },
+      es: {
+        name: "Conversor de unidades",
+        description:
+          "Convierte longitud, masa, temperatura, área, volumen, velocidad, almacenamiento digital y tiempo entre unidades métricas, imperiales y otras al instante en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur d'unités",
+        description:
+          "Convertissez instantanément longueur, masse, température, surface, volume, vitesse, stockage numérique et temps entre les unités métriques, impériales et autres, directement dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר יחידות",
+        description:
+          "המירו אורך, מסה, טמפרטורה, שטח, נפח, מהירות, אחסון דיגיטלי וזמן בין יחידות מטריות, אימפריאליות ואחרות באופן מיידי בדפדפן שלכם.",
+      },
+      hi: {
+        name: "इकाई कनवर्टर",
+        description:
+          "अपने ब्राउज़र में तुरंत लंबाई, द्रव्यमान, तापमान, क्षेत्रफल, आयतन, गति, डिजिटल स्टोरेज और समय को मीट्रिक, इम्पीरियल और अन्य इकाइयों के बीच परिवर्तित करें।",
+      },
+      id: {
+        name: "Konverter Satuan",
+        description:
+          "Konversikan panjang, massa, suhu, luas, volume, kecepatan, penyimpanan digital, dan waktu antara satuan metrik, imperial, dan lainnya secara instan di browser Anda.",
+      },
+      it: {
+        name: "Convertitore di unità",
+        description:
+          "Converti lunghezza, massa, temperatura, area, volume, velocità, memoria digitale e tempo tra unità metriche, imperiali e altre, istantaneamente nel tuo browser.",
+      },
+      ja: {
+        name: "単位変換ツール",
+        description:
+          "長さ・質量・温度・面積・体積・速度・デジタルストレージ・時間を、メートル法・ヤードポンド法・その他の単位の間でブラウザ上で即座に変換します。",
+      },
+      ko: {
+        name: "단위 변환기",
+        description:
+          "길이, 질량, 온도, 면적, 부피, 속도, 디지털 저장 용량, 시간을 미터법, 야드파운드법 및 기타 단위 간에 브라우저에서 즉시 변환하세요.",
+      },
+      ms: {
+        name: "Penukar Unit",
+        description:
+          "Tukar panjang, jisim, suhu, luas, isi padu, kelajuan, storan digital, dan masa antara unit metrik, imperial, dan unit lain dengan serta-merta dalam pelayar anda.",
+      },
+      nl: {
+        name: "Eenhedenconverter",
+        description:
+          "Converteer lengte, massa, temperatuur, oppervlakte, volume, snelheid, digitale opslag en tijd direct in je browser tussen metrische, imperiale en andere eenheden.",
+      },
+      no: {
+        name: "Enhetskonverterer",
+        description:
+          "Konverter lengde, masse, temperatur, areal, volum, fart, digital lagring og tid mellom metriske, britiske og andre enheter umiddelbart i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter jednostek",
+        description:
+          "Konwertuj długość, masę, temperaturę, powierzchnię, objętość, prędkość, pamięć cyfrową i czas między jednostkami metrycznymi, imperialnymi i innymi — natychmiast w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de Unidades",
+        description:
+          "Converta comprimento, massa, temperatura, área, volume, velocidade, armazenamento digital e tempo entre unidades métricas, imperiais e outras instantaneamente no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер единиц",
+        description:
+          "Мгновенно конвертируйте длину, массу, температуру, площадь, объём, скорость, цифровое хранилище и время между метрическими, имперскими и другими единицами прямо в браузере.",
+      },
+      sv: {
+        name: "Enhetsomvandlare",
+        description:
+          "Omvandla längd, massa, temperatur, area, volym, hastighet, digital lagring och tid mellan metriska, brittiska och andra enheter direkt i din webbläsare.",
+      },
+      th: {
+        name: "ตัวแปลงหน่วย",
+        description:
+          "แปลงความยาว มวล อุณหภูมิ พื้นที่ ปริมาตร ความเร็ว หน่วยจัดเก็บข้อมูลดิจิทัล และเวลา ระหว่างหน่วยเมตริก อิมพีเรียล และหน่วยอื่น ๆ ได้ทันทีในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Birim Dönüştürücü",
+        description:
+          "Uzunluk, kütle, sıcaklık, alan, hacim, hız, dijital depolama ve zamanı metrik, imparatorluk ve diğer birimler arasında tarayıcınızda anında dönüştürün.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi đơn vị",
+        description:
+          "Chuyển đổi tức thì độ dài, khối lượng, nhiệt độ, diện tích, thể tích, tốc độ, dung lượng số và thời gian giữa các đơn vị hệ mét, hệ Anh và các hệ khác ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "单位换算器",
+        description:
+          "在浏览器中即时换算长度、质量、温度、面积、体积、速度、数字存储和时间，支持公制、英制及其他单位。",
+      },
+      "zh-TW": {
+        name: "單位換算器",
+        description:
+          "在瀏覽器中即時換算長度、質量、溫度、面積、體積、速度、數位儲存與時間，支援公制、英制及其他各種單位。",
+      },
+    },
+  },
+  {
     slug: "unix-timestamp-converter",
     category: "developer",
     icon: "binary",
@@ -50230,6 +50360,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "Unicode ↔ Punycode 轉換器",
         description: "雙向轉換 Unicode（IDN）與 ASCII（Punycode）網域",
+      },
+    },
+  },
+  "unit-converter": {
+    slug: "unit-converter",
+    category: "web",
+    icon: "ruler",
+    tags: [
+      "unit converter",
+      "measurement",
+      "length",
+      "weight",
+      "temperature",
+      "metric imperial",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الوحدات",
+        description:
+          "حوّل الطول والكتلة ودرجة الحرارة والمساحة والحجم والسرعة والتخزين الرقمي والوقت بين الوحدات المترية والإمبراطورية وغيرها فورًا داخل متصفحك.",
+      },
+      de: {
+        name: "Einheitenumrechner",
+        description:
+          "Rechnen Sie Länge, Masse, Temperatur, Fläche, Volumen, Geschwindigkeit, digitale Speichergrößen und Zeit sofort zwischen metrischen, imperialen und weiteren Einheiten direkt im Browser um.",
+      },
+      en: {
+        name: "Unit Converter",
+        description:
+          "Convert length, mass, temperature, area, volume, speed, digital storage, and time between metric, imperial, and other units instantly in your browser.",
+      },
+      es: {
+        name: "Conversor de unidades",
+        description:
+          "Convierte longitud, masa, temperatura, área, volumen, velocidad, almacenamiento digital y tiempo entre unidades métricas, imperiales y otras al instante en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur d'unités",
+        description:
+          "Convertissez instantanément longueur, masse, température, surface, volume, vitesse, stockage numérique et temps entre les unités métriques, impériales et autres, directement dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר יחידות",
+        description:
+          "המירו אורך, מסה, טמפרטורה, שטח, נפח, מהירות, אחסון דיגיטלי וזמן בין יחידות מטריות, אימפריאליות ואחרות באופן מיידי בדפדפן שלכם.",
+      },
+      hi: {
+        name: "इकाई कनवर्टर",
+        description:
+          "अपने ब्राउज़र में तुरंत लंबाई, द्रव्यमान, तापमान, क्षेत्रफल, आयतन, गति, डिजिटल स्टोरेज और समय को मीट्रिक, इम्पीरियल और अन्य इकाइयों के बीच परिवर्तित करें।",
+      },
+      id: {
+        name: "Konverter Satuan",
+        description:
+          "Konversikan panjang, massa, suhu, luas, volume, kecepatan, penyimpanan digital, dan waktu antara satuan metrik, imperial, dan lainnya secara instan di browser Anda.",
+      },
+      it: {
+        name: "Convertitore di unità",
+        description:
+          "Converti lunghezza, massa, temperatura, area, volume, velocità, memoria digitale e tempo tra unità metriche, imperiali e altre, istantaneamente nel tuo browser.",
+      },
+      ja: {
+        name: "単位変換ツール",
+        description:
+          "長さ・質量・温度・面積・体積・速度・デジタルストレージ・時間を、メートル法・ヤードポンド法・その他の単位の間でブラウザ上で即座に変換します。",
+      },
+      ko: {
+        name: "단위 변환기",
+        description:
+          "길이, 질량, 온도, 면적, 부피, 속도, 디지털 저장 용량, 시간을 미터법, 야드파운드법 및 기타 단위 간에 브라우저에서 즉시 변환하세요.",
+      },
+      ms: {
+        name: "Penukar Unit",
+        description:
+          "Tukar panjang, jisim, suhu, luas, isi padu, kelajuan, storan digital, dan masa antara unit metrik, imperial, dan unit lain dengan serta-merta dalam pelayar anda.",
+      },
+      nl: {
+        name: "Eenhedenconverter",
+        description:
+          "Converteer lengte, massa, temperatuur, oppervlakte, volume, snelheid, digitale opslag en tijd direct in je browser tussen metrische, imperiale en andere eenheden.",
+      },
+      no: {
+        name: "Enhetskonverterer",
+        description:
+          "Konverter lengde, masse, temperatur, areal, volum, fart, digital lagring og tid mellom metriske, britiske og andre enheter umiddelbart i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter jednostek",
+        description:
+          "Konwertuj długość, masę, temperaturę, powierzchnię, objętość, prędkość, pamięć cyfrową i czas między jednostkami metrycznymi, imperialnymi i innymi — natychmiast w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de Unidades",
+        description:
+          "Converta comprimento, massa, temperatura, área, volume, velocidade, armazenamento digital e tempo entre unidades métricas, imperiais e outras instantaneamente no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер единиц",
+        description:
+          "Мгновенно конвертируйте длину, массу, температуру, площадь, объём, скорость, цифровое хранилище и время между метрическими, имперскими и другими единицами прямо в браузере.",
+      },
+      sv: {
+        name: "Enhetsomvandlare",
+        description:
+          "Omvandla längd, massa, temperatur, area, volym, hastighet, digital lagring och tid mellan metriska, brittiska och andra enheter direkt i din webbläsare.",
+      },
+      th: {
+        name: "ตัวแปลงหน่วย",
+        description:
+          "แปลงความยาว มวล อุณหภูมิ พื้นที่ ปริมาตร ความเร็ว หน่วยจัดเก็บข้อมูลดิจิทัล และเวลา ระหว่างหน่วยเมตริก อิมพีเรียล และหน่วยอื่น ๆ ได้ทันทีในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Birim Dönüştürücü",
+        description:
+          "Uzunluk, kütle, sıcaklık, alan, hacim, hız, dijital depolama ve zamanı metrik, imparatorluk ve diğer birimler arasında tarayıcınızda anında dönüştürün.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi đơn vị",
+        description:
+          "Chuyển đổi tức thì độ dài, khối lượng, nhiệt độ, diện tích, thể tích, tốc độ, dung lượng số và thời gian giữa các đơn vị hệ mét, hệ Anh và các hệ khác ngay trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "单位换算器",
+        description:
+          "在浏览器中即时换算长度、质量、温度、面积、体积、速度、数字存储和时间，支持公制、英制及其他单位。",
+      },
+      "zh-TW": {
+        name: "單位換算器",
+        description:
+          "在瀏覽器中即時換算長度、質量、溫度、面積、體積、速度、數位儲存與時間，支援公制、英制及其他各種單位。",
       },
     },
   },
