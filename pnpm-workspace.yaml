@@ -11,8 +11,8 @@ packages:
 catalog:
   "@anglinb/city-hash": ^1.1.0
   "@astrojs/check": ^0.9.9
-  "@astrojs/mdx": ^4.3.14
-  "@astrojs/react": ^4.4.2
+  "@astrojs/mdx": ^7.0.1
+  "@astrojs/react": ^6.0.0
   "@astrojs/sitemap": ^3.7.3
   "@commitlint/cli": ^20.5.3
   "@commitlint/config-conventional": ^20.5.3
@@ -49,7 +49,7 @@ catalog:
   "@zxing/library": ^0.23.0
   ajv: ^8.20.0
   ajv-formats: ^3.0.1
-  astro: ^6.4.8
+  astro: ^7.0.5
   bcrypt-ts: ^8.0.1
   bip39: ^3.1.0
   blake3-wasm: 2.1.5
