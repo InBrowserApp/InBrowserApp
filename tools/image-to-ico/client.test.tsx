@@ -110,13 +110,12 @@ describe("ImageToIcoClient", () => {
       screen.getByRole("button", { name: messages.generateLabel })
     )
 
-    await waitFor(() => {
-      expect(mockedConvertImageFileToIco).toHaveBeenCalledTimes(1)
+    const downloadLink = await screen.findByRole("link", {
+      name: messages.downloadLabel,
     })
 
-    expect(
-      screen.getByRole("link", { name: messages.downloadLabel })
-    ).toBeTruthy()
+    expect(mockedConvertImageFileToIco).toHaveBeenCalledTimes(1)
+    expect(downloadLink).toBeTruthy()
     expect(screen.getAllByText("256 × 256").length).toBeGreaterThan(0)
   })
 
