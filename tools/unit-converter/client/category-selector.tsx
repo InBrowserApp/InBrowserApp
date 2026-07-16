@@ -1,3 +1,6 @@
+import { useId } from "react"
+
+import { FieldLegend, FieldSet } from "@workspace/ui/components/ui/field"
 import {
   ToggleGroup,
   ToggleGroupItem,
@@ -9,6 +12,7 @@ import type { UnitCategoryId } from "../core/units"
 
 type CategorySelectorProps = Readonly<{
   label: string
+  direction: "ltr" | "rtl"
   names: Readonly<Record<UnitCategoryId, string>>
   onChange: (category: UnitCategoryId) => void
   value: UnitCategoryId
@@ -16,15 +20,22 @@ type CategorySelectorProps = Readonly<{
 
 function CategorySelector({
   label,
+  direction,
   names,
   onChange,
   value,
 }: CategorySelectorProps) {
+  const labelId = useId()
+
   return (
-    <div className="grid gap-2">
-      <span className="text-sm font-medium">{label}</span>
+    <FieldSet className="gap-2">
+      <FieldLegend id={labelId} variant="label">
+        {label}
+      </FieldLegend>
       <ToggleGroup
         type="single"
+        aria-labelledby={labelId}
+        dir={direction}
         value={value}
         variant="outline"
         spacing={8}
@@ -41,7 +52,7 @@ function CategorySelector({
           </ToggleGroupItem>
         ))}
       </ToggleGroup>
-    </div>
+    </FieldSet>
   )
 }
 

@@ -4,6 +4,7 @@ import { Label } from "@workspace/ui/components/ui/label"
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue,
@@ -15,6 +16,7 @@ import type { PrecisionOption } from "../core/format"
 
 type PrecisionControlProps = Readonly<{
   label: string
+  direction: "ltr" | "rtl"
   onChange: (precision: PrecisionOption) => void
   optionLabels: Readonly<Record<PrecisionOption, string>>
   value: PrecisionOption
@@ -22,6 +24,7 @@ type PrecisionControlProps = Readonly<{
 
 function PrecisionControl({
   label,
+  direction,
   onChange,
   optionLabels,
   value,
@@ -32,6 +35,7 @@ function PrecisionControl({
     <div className="grid gap-2">
       <Label htmlFor={id}>{label}</Label>
       <Select
+        dir={direction}
         value={value}
         onValueChange={(next) => {
           onChange(next as PrecisionOption)
@@ -41,11 +45,13 @@ function PrecisionControl({
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
-          {PRECISION_OPTIONS.map((option) => (
-            <SelectItem key={option} value={option}>
-              {optionLabels[option]}
-            </SelectItem>
-          ))}
+          <SelectGroup>
+            {PRECISION_OPTIONS.map((option) => (
+              <SelectItem key={option} value={option}>
+                {optionLabels[option]}
+              </SelectItem>
+            ))}
+          </SelectGroup>
         </SelectContent>
       </Select>
     </div>

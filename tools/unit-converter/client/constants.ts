@@ -11,12 +11,8 @@ const SAMPLE = {
   value: "1",
 } as const
 
-const STORAGE_KEYS = {
-  category: "tools:unit-converter:category",
-  units: "tools:unit-converter:units",
-  value: "tools:unit-converter:value",
-  precision: "tools:unit-converter:precision",
-} as const
+const STORAGE_KEY = "tools:unit-converter:state"
+const STORAGE_VERSION = 1
 
 type StoredUnits = Readonly<
   Record<UnitCategoryId, { from: string; to: string }>
@@ -33,6 +29,7 @@ export {
   DEFAULT_CATEGORY,
   DEFAULT_PRECISION,
   SAMPLE,
-  STORAGE_KEYS,
+  STORAGE_KEY,
+  STORAGE_VERSION,
 }
 export type { PrecisionOption, StoredUnits }

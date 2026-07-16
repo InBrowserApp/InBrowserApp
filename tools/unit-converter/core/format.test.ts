@@ -23,15 +23,18 @@ describe("formatNumber", () => {
     expect(formatNumber(2000, "6")).toBe("2000")
   })
 
-  test("max keeps far more digits", () => {
-    expect(formatNumber(1 / 3, "max")).toBe("0.333333333333333")
+  test("max uses the shortest lossless Number representation", () => {
+    expect(formatNumber(1 / 3, "max")).toBe("0.3333333333333333")
+    expect(formatNumber(Number.MAX_SAFE_INTEGER, "max")).toBe(
+      "9007199254740991"
+    )
   })
 })
 
 describe("significantDigits", () => {
-  test("maps numeric options and max", () => {
+  test("maps numeric precision options", () => {
     expect(significantDigits("4")).toBe(4)
-    expect(significantDigits("max")).toBe(15)
+    expect(significantDigits("10")).toBe(10)
   })
 })
 

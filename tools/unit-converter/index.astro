@@ -13,6 +13,7 @@ interface Props {
 }
 
 const { lang } = Astro.props
+const direction = ["ar", "he"].includes(lang) ? "rtl" : "ltr"
 
 const meta = resolveLocale<ToolMeta>(
   import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
@@ -33,7 +34,12 @@ const messages = { meta, ...localizedMessages }
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <UnitConverterClient client:load messages={messages} />
+  <UnitConverterClient
+    client:load
+    messages={messages}
+    language={lang}
+    direction={direction}
+  />
 
   {
     IntroSection ? (

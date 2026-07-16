@@ -18,6 +18,7 @@
   "allUnitsDescription": "Alle enheter i denne kategorien, konvertert fra din inndata. Velg en rad for å bruke den som mål.",
   "valuePlaceholder": "Skriv inn en verdi …",
   "invalidValueMessage": "Skriv inn et gyldig tall for å konvertere.",
+  "outOfRangeMessage": "Resultatet ligger utenfor det støttede tallområdet.",
   "copyValueLabel": "Kopier verdi",
   "copiedLabel": "Kopiert",
   "loadSampleLabel": "Last inn eksempel",
@@ -49,8 +50,8 @@
     "gram": "Gram",
     "milligram": "Milligram",
     "microgram": "Mikrogram",
-    "poundMass": "Pund",
-    "ounceMass": "Unse",
+    "poundMass": "Pund (avoirdupois)",
+    "ounceMass": "Unse (avoirdupois)",
     "stone": "Stone",
     "shortTon": "US-tonn",
     "carat": "Karat",
@@ -73,9 +74,9 @@
     "milliliter": "Milliliter",
     "cubicFoot": "Kubikkfot",
     "cubicInch": "Kubikktomme",
-    "gallonUs": "US-gallon",
-    "quartUs": "US-quart",
-    "pintUs": "US-pint",
+    "gallonUs": "US-væskegallon",
+    "quartUs": "US-væskequart",
+    "pintUs": "US-væskepint",
     "cupUs": "US-kopp",
     "fluidOunceUs": "US-væskeunse",
     "tablespoonUs": "US-spiseskje",
@@ -106,7 +107,7 @@
     "hour": "Time",
     "day": "Dag",
     "week": "Uke",
-    "month": "Måned",
-    "year": "År"
+    "month": "Gjennomsnittlig gregoriansk måned",
+    "year": "Gjennomsnittlig gregoriansk år"
   }
 }

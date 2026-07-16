@@ -18,6 +18,7 @@
   "allUnitsDescription": "此類別中的每個單位，皆依你的輸入換算。點選一列即可將其設為目標單位。",
   "valuePlaceholder": "輸入數值…",
   "invalidValueMessage": "請輸入有效的數字以進行換算。",
+  "outOfRangeMessage": "換算結果超出支援的數值範圍。",
   "copyValueLabel": "複製數值",
   "copiedLabel": "已複製",
   "loadSampleLabel": "載入範例",
@@ -49,8 +50,8 @@
     "gram": "公克",
     "milligram": "毫克",
     "microgram": "微克",
-    "poundMass": "磅",
-    "ounceMass": "盎司",
+    "poundMass": "常衡磅",
+    "ounceMass": "常衡盎司",
     "stone": "英石",
     "shortTon": "美噸",
     "carat": "克拉",
@@ -73,9 +74,9 @@
     "milliliter": "毫升",
     "cubicFoot": "立方英尺",
     "cubicInch": "立方英寸",
-    "gallonUs": "美制加侖",
-    "quartUs": "美制夸脫",
-    "pintUs": "美制品脫",
+    "gallonUs": "美制液量加侖",
+    "quartUs": "美制液量夸脫",
+    "pintUs": "美制液量品脫",
     "cupUs": "美制杯",
     "fluidOunceUs": "美制液量盎司",
     "tablespoonUs": "美制湯匙",
@@ -106,7 +107,7 @@
     "hour": "小時",
     "day": "天",
     "week": "週",
-    "month": "月",
-    "year": "年"
+    "month": "平均格里曆月",
+    "year": "平均格里曆年"
   }
 }

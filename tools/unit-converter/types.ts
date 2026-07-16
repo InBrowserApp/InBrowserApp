@@ -17,6 +17,7 @@ type UnitConverterMessagesCatalog = Readonly<{
   allUnitsDescription: string
   valuePlaceholder: string
   invalidValueMessage: string
+  outOfRangeMessage: string
   copyValueLabel: string
   copiedLabel: string
   loadSampleLabel: string

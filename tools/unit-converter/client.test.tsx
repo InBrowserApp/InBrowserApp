@@ -8,6 +8,7 @@ import {
 import { afterEach, beforeEach, describe, expect, test } from "vitest"
 
 import UnitConverterClient from "./client"
+import { createDefaultUnits, STORAGE_KEY } from "./client/constants"
 import enMessages from "./messages/en.json"
 import enMeta from "./meta/en.json"
 
@@ -19,8 +20,24 @@ function fromInput() {
   ) as HTMLInputElement
 }
 
-function toInput() {
-  return screen.getByLabelText(messages.toLabel) as HTMLInputElement
+function toOutput() {
+  return screen.getByRole("status", {
+    name: messages.toLabel,
+  }) as HTMLOutputElement
+}
+
+function outputValue() {
+  return toOutput().querySelector("[data-output-value]")?.textContent ?? ""
+}
+
+function renderClient(language = "en", direction: "ltr" | "rtl" = "ltr") {
+  return render(
+    <UnitConverterClient
+      messages={messages}
+      language={language}
+      direction={direction}
+    />
+  )
 }
 
 function selectOption(comboboxName: string, optionName: string) {
@@ -38,98 +55,108 @@ describe("UnitConverterClient", () => {
   })
 
   test("renders the default sample (1 m → ft)", () => {
-    render(<UnitConverterClient messages={messages} />)
+    renderClient()
 
     expect(fromInput().value).toBe("1")
-    expect(toInput().value).toBe("3.28084")
+    expect(outputValue()).toBe("3.28084")
+    expect(toOutput().getAttribute("aria-live")).toBe("polite")
+    expect(
+      toOutput().querySelector("[data-output-value]")?.getAttribute("dir")
+    ).toBe("ltr")
   })
 
   test("recomputes the target when the value changes", async () => {
-    render(<UnitConverterClient messages={messages} />)
+    renderClient()
 
     fireEvent.change(fromInput(), { target: { value: "2" } })
 
     await waitFor(() => {
-      expect(toInput().value).toBe("6.56168")
+      expect(outputValue()).toBe("6.56168")
     })
   })
 
   test("shows a validation alert for invalid input", async () => {
-    render(<UnitConverterClient messages={messages} />)
+    renderClient()
 
     fireEvent.change(fromInput(), { target: { value: "abc" } })
+
+    expect(screen.queryByText(messages.invalidValueMessage)).toBeNull()
+    fireEvent.blur(fromInput())
 
     await waitFor(() => {
       expect(screen.getByText(messages.invalidValueMessage)).toBeTruthy()
     })
-    expect(toInput().value).toBe("")
+    expect(fromInput().getAttribute("aria-errormessage")).toBe(
+      screen.getByText(messages.invalidValueMessage).id
+    )
+    expect(outputValue()).toBe("")
   })
 
   test("swap moves the converted value into the source", async () => {
-    render(<UnitConverterClient messages={messages} />)
+    renderClient()
 
     fireEvent.click(screen.getByRole("button", { name: messages.swapLabel }))
 
     await waitFor(() => {
       expect(fromInput().value.startsWith("3.28")).toBe(true)
     })
-    expect(toInput().value).toBe("1")
+    expect(outputValue()).toBe("1")
   })
 
   test("switching category reuses the typed value", async () => {
-    render(<UnitConverterClient messages={messages} />)
+    renderClient()
 
     fireEvent.click(
       screen.getByRole("radio", { name: messages.categories.mass })
     )
 
     await waitFor(() => {
-      expect(toInput().value).toBe("2.20462")
+      expect(outputValue()).toBe("2.20462")
     })
   })
 
   test("selecting a unit from the list sets it as the target", async () => {
-    render(<UnitConverterClient messages={messages} />)
+    renderClient()
 
-    fireEvent.click(screen.getByRole("button", { name: /Centimeter/ }))
+    fireEvent.click(screen.getByRole("button", { name: "Centimeter cm" }))
 
     await waitFor(() => {
-      expect(toInput().value).toBe("100")
+      expect(outputValue()).toBe("100")
     })
   })
 
   test("changing the source unit updates the result", async () => {
-    render(<UnitConverterClient messages={messages} />)
+    renderClient()
 
     selectOption(messages.fromUnitLabel, "Kilometer (km)")
 
     await waitFor(() => {
-      expect(toInput().value).toBe("3280.84")
+      expect(outputValue()).toBe("3280.84")
     })
   })
 
   test("changing the target unit updates the result", async () => {
-    render(<UnitConverterClient messages={messages} />)
+    renderClient()
 
     selectOption(messages.toUnitLabel, "Inch (in)")
 
     await waitFor(() => {
-      expect(toInput().value).toBe("39.3701")
+      expect(outputValue()).toBe("39.3701")
     })
   })
 
   test("raising precision shows more significant figures", async () => {
-    render(<UnitConverterClient messages={messages} />)
+    renderClient()
 
     selectOption(messages.precisionLabel, messages.precisionOptions["10"])
 
     await waitFor(() => {
-      expect(toInput().value).toBe("3.280839895")
+      expect(outputValue()).toBe("3.280839895")
     })
   })
 
   test("clears and reloads the sample", async () => {
-    render(<UnitConverterClient messages={messages} />)
+    renderClient()
 
     fireEvent.click(
       screen.getByRole("button", { name: messages.clearAllLabel })
@@ -138,7 +165,7 @@ describe("UnitConverterClient", () => {
     await waitFor(() => {
       expect(fromInput().value).toBe("")
     })
-    expect(toInput().value).toBe("")
+    expect(outputValue()).toBe("")
 
     fireEvent.click(
       screen.getByRole("button", { name: messages.loadSampleLabel })
@@ -147,32 +174,83 @@ describe("UnitConverterClient", () => {
     await waitFor(() => {
       expect(fromInput().value).toBe("1")
     })
-    expect(toInput().value).toBe("3.28084")
+    expect(outputValue()).toBe("3.28084")
   })
 
   test("restores saved state from localStorage", async () => {
-    window.localStorage.setItem("tools:unit-converter:category", "temperature")
-    window.localStorage.setItem("tools:unit-converter:value", "100")
-    window.localStorage.setItem("tools:unit-converter:precision", "6")
     window.localStorage.setItem(
-      "tools:unit-converter:units",
-      JSON.stringify({ temperature: { from: "celsius", to: "fahrenheit" } })
+      STORAGE_KEY,
+      JSON.stringify({
+        version: 1,
+        category: "temperature",
+        value: "100",
+        precision: "6",
+        units: createDefaultUnits(),
+      })
     )
 
-    render(<UnitConverterClient messages={messages} />)
+    renderClient()
 
     await waitFor(() => {
-      expect(toInput().value).toBe("212")
+      expect(outputValue()).toBe("212")
     })
   })
 
   test("ignores malformed stored units", async () => {
-    window.localStorage.setItem("tools:unit-converter:units", "{not json")
+    window.localStorage.setItem(STORAGE_KEY, "{not json")
 
-    render(<UnitConverterClient messages={messages} />)
+    renderClient()
 
     await waitFor(() => {
       expect(fromInput().value).toBe("1")
     })
+  })
+
+  test("uses the page locale for grouped decimal input", async () => {
+    renderClient("de")
+
+    fireEvent.change(fromInput(), { target: { value: "1.234,5" } })
+
+    await waitFor(() => {
+      expect(outputValue()).toBe("4050.2")
+    })
+  })
+
+  test("forwards RTL direction to the category and select roots", () => {
+    renderClient("ar", "rtl")
+
+    expect(
+      screen.getByRole("radiogroup", { name: messages.categoryLabel }).dir
+    ).toBe("rtl")
+    expect(
+      screen
+        .getByRole("combobox", { name: messages.fromUnitLabel })
+        .getAttribute("dir")
+    ).toBe("rtl")
+  })
+
+  test("exposes selected rows and unique compact copy actions", () => {
+    renderClient()
+
+    expect(screen.getByRole("button", { pressed: true })).toBeTruthy()
+    expect(
+      screen.getByRole("button", { name: "Copy value: Foot" })
+    ).toBeTruthy()
+  })
+
+  test("reports numeric overflow instead of showing an empty result", async () => {
+    renderClient()
+
+    selectOption(messages.fromUnitLabel, "Kilometer (km)")
+    fireEvent.change(fromInput(), { target: { value: "1e308" } })
+
+    await waitFor(() => {
+      expect(outputValue()).toBe(messages.outOfRangeMessage)
+    })
+    expect(
+      screen
+        .getByRole("button", { name: messages.swapLabel })
+        .hasAttribute("disabled")
+    ).toBe(true)
   })
 })

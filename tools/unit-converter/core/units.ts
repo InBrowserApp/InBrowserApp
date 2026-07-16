@@ -1,7 +1,7 @@
 // Unit registry for the converter.
 //
 // Every unit is expressed relative to its category base unit with an affine
-// transform: `base = value * factor + offset`. Linear units (length, mass,
+// transform: `base = (value + offset) * factor`. Linear units (length, mass,
 // data, ...) leave `offset` at 0; only temperature needs a non-zero offset.
 // This single model keeps the conversion core tiny and fully testable.
 
@@ -30,9 +30,6 @@ const CATEGORY_IDS = [
 ] as const
 
 type UnitCategoryId = (typeof CATEGORY_IDS)[number]
-
-// Fahrenheit in kelvin: K = (F + 459.67) * 5 / 9 → factor 5/9, offset below.
-const FAHRENHEIT_OFFSET = (459.67 * 5) / 9
 
 const CATEGORIES: Readonly<Record<UnitCategoryId, UnitCategory>> = {
   length: {
@@ -77,7 +74,7 @@ const CATEGORIES: Readonly<Record<UnitCategoryId, UnitCategory>> = {
         id: "fahrenheit",
         symbol: "°F",
         factor: 5 / 9,
-        offset: FAHRENHEIT_OFFSET,
+        offset: 459.67,
       },
       { id: "kelvin", symbol: "K", factor: 1, offset: 0 },
       { id: "rankine", symbol: "°R", factor: 5 / 9, offset: 0 },
@@ -179,7 +176,9 @@ const DEFAULT_PAIRS: Readonly<
 }
 
 function getCategory(id: string): UnitCategory | undefined {
-  return CATEGORIES[id as UnitCategoryId]
+  return Object.hasOwn(CATEGORIES, id)
+    ? CATEGORIES[id as UnitCategoryId]
+    : undefined
 }
 
 function findUnit(category: UnitCategory, unitId: string): Unit | undefined {

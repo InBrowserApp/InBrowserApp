@@ -1,18 +1,18 @@
 // Output formatting controlled by a significant-figures setting.
 //
-// `value.toPrecision(n)` rounds to n significant figures and removes most
-// floating-point noise; wrapping it in `Number(...)` collapses trailing
-// zeros, and `String(...)` picks a readable plain/exponential form. This is
-// deterministic and easy to test, which the 100% core coverage bar needs.
+// Numeric precision options round with `value.toPrecision(n)`. The `max`
+// option instead uses Number's shortest round-trippable representation so it
+// never discards an already representable digit.
 
 const PRECISION_OPTIONS = ["4", "6", "10", "max"] as const
 
 type PrecisionOption = (typeof PRECISION_OPTIONS)[number]
+type RoundedPrecisionOption = Exclude<PrecisionOption, "max">
 
 const DEFAULT_PRECISION: PrecisionOption = "6"
 
-function significantDigits(option: PrecisionOption): number {
-  return option === "max" ? 15 : Number(option)
+function significantDigits(option: RoundedPrecisionOption): number {
+  return Number(option)
 }
 
 function formatNumber(value: number, option: PrecisionOption): string {
@@ -22,6 +22,10 @@ function formatNumber(value: number, option: PrecisionOption): string {
 
   if (value === 0) {
     return "0"
+  }
+
+  if (option === "max") {
+    return String(value)
   }
 
   const rounded = Number(value.toPrecision(significantDigits(option)))
