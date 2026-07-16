@@ -172,19 +172,16 @@ describe("PdfMergerClient", () => {
     )
     fireEvent.click(screen.getByRole("button", { name: messages.mergeLabel }))
 
-    await waitFor(() => {
-      expect(mockedMergePdfFilesWithWorker).toHaveBeenCalledTimes(1)
+    const downloadLink = await screen.findByRole("link", {
+      name: messages.downloadPdfLabel,
     })
 
+    expect(mockedMergePdfFilesWithWorker).toHaveBeenCalledTimes(1)
     expect(
       mockedMergePdfFilesWithWorker.mock.calls[0]?.[0].files[0]?.name
     ).toBe("second.pdf")
     expect(screen.getByText(messages.resultReadyTitle)).toBeTruthy()
-    expect(
-      screen
-        .getByRole("link", { name: messages.downloadPdfLabel })
-        .getAttribute("download")
-    ).toBe("combined-report.pdf")
+    expect(downloadLink.getAttribute("download")).toBe("combined-report.pdf")
   })
 
   test("adds files from drop and paste interactions", async () => {
