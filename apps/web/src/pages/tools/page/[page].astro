@@ -1,0 +1,15 @@
+---
+import ToolsIndexPage from "@/components/pages/tools-index-page.astro"
+import { DEFAULT_SITE_LANGUAGE } from "@/lib/site"
+import { getDefaultToolsDirectoryStaticPaths } from "@/lib/static-paths"
+
+export { getDefaultToolsDirectoryStaticPaths as getStaticPaths }
+
+interface Props {
+  pageNumber: number
+}
+
+const { pageNumber } = Astro.props
+---
+
+<ToolsIndexPage language={DEFAULT_SITE_LANGUAGE} pageNumber={pageNumber} />

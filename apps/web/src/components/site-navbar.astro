@@ -31,15 +31,17 @@ const navItems = [
   <div class="flex items-center gap-4">
     <a
       href={localizePath("/", language)}
-      class="text-sm font-semibold text-foreground"
+      aria-current={current === "home" ? "page" : undefined}
+      class="rounded-sm text-sm font-semibold text-foreground outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
     >
       {catalog.site.name}
     </a>
     {navItems.map((item) => (
       <a
         href={item.href}
+        aria-current={item.id === current ? "page" : undefined}
         class:list={[
-          "text-sm transition-colors hover:text-foreground",
+          "rounded-sm text-sm transition-colors outline-none hover:text-foreground focus-visible:ring-3 focus-visible:ring-ring/50",
           item.id === current ? "text-foreground" : "text-muted-foreground",
         ]}
       >

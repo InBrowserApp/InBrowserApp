@@ -106,7 +106,9 @@ const languageOptions = createLanguageOptions(
           pathname={pathname}
           availableLanguages={availableLanguages}
         />
-        <slot />
+        <main id="main-content" class="flex min-w-0 flex-col gap-8">
+          <slot />
+        </main>
       </div>
     </div>
     <LanguageSuggestion

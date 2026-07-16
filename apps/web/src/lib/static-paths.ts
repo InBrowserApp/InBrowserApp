@@ -1,7 +1,11 @@
-import { toolStaticPaths } from "@workspace/tool-registry"
+import { toolSearchIndex, toolStaticPaths } from "@workspace/tool-registry"
 
-import { DEFAULT_SITE_LANGUAGE, isSupportedSiteLanguage } from "./site"
-import { createNonDefaultLanguageStaticPaths } from "./site"
+import { getPageCount } from "./tools-directory"
+import {
+  DEFAULT_SITE_LANGUAGE,
+  createNonDefaultLanguageStaticPaths,
+  isSupportedSiteLanguage,
+} from "./site"
 
 function getNonDefaultSiteStaticPaths() {
   return createNonDefaultLanguageStaticPaths().map(({ params }) => ({ params }))
@@ -32,8 +36,38 @@ function getNonDefaultToolStaticPaths() {
     }))
 }
 
+function getToolsDirectoryPageNumbers() {
+  const pageCount = getPageCount(toolSearchIndex.length)
+
+  return Array.from({ length: pageCount - 1 }, (_, index) => index + 2)
+}
+
+function getDefaultToolsDirectoryStaticPaths() {
+  return getToolsDirectoryPageNumbers().map((pageNumber) => ({
+    params: { page: String(pageNumber) },
+    props: { pageNumber },
+  }))
+}
+
+function getNonDefaultToolsDirectoryStaticPaths() {
+  return createNonDefaultLanguageStaticPaths().flatMap(({ params, props }) =>
+    getToolsDirectoryPageNumbers().map((pageNumber) => ({
+      params: {
+        lang: params.lang,
+        page: String(pageNumber),
+      },
+      props: {
+        language: props.language,
+        pageNumber,
+      },
+    }))
+  )
+}
+
 export {
   getDefaultToolStaticPaths,
+  getDefaultToolsDirectoryStaticPaths,
   getNonDefaultSiteStaticPaths,
   getNonDefaultToolStaticPaths,
+  getNonDefaultToolsDirectoryStaticPaths,
 }

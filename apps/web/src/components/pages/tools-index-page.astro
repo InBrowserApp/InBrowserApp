@@ -4,19 +4,38 @@ import MainLayout from "@/layouts/main.astro"
 import { ToolsDirectorySearch } from "@/components/pages/tools-directory-search"
 import { loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
+import { localizePath } from "@/lib/site"
+import {
+  createLocalizedToolEntries,
+  getToolsPagePath,
+  paginateToolEntries,
+} from "@/lib/tools-directory"
+
 import type { SiteLanguage } from "@/lib/site"
 
 interface Props {
   language: SiteLanguage
+  pageNumber?: number
 }
 
-const { language } = Astro.props
+const { language, pageNumber = 1 } = Astro.props
 const { catalog } = loadSiteMessages(language)
+const entries = createLocalizedToolEntries(toolSearchIndex, language)
+const page = paginateToolEntries(entries, pageNumber)
+const pathname = getToolsPagePath(pageNumber)
+const formattedPageNumber = new Intl.NumberFormat(language).format(pageNumber)
+const formattedPageCount = new Intl.NumberFormat(language).format(
+  page.pageCount
+)
+const pageTitle =
+  pageNumber === 1
+    ? catalog.metadata.toolsTitle
+    : `${catalog.metadata.toolsTitle} · ${formattedPageNumber}/${formattedPageCount}`
 const seo = createPageSeo({
   description: catalog.metadata.toolsDescription,
   language,
-  pathname: "/tools",
-  title: catalog.metadata.toolsTitle,
+  pathname,
+  title: pageTitle,
 })
 const searchMessages = {
   clearSearchLabel: catalog.tools.clearSearchLabel,
@@ -27,6 +46,7 @@ const searchMessages = {
   resultCountSuffix: catalog.tools.resultCountSuffix,
   searchLabel: catalog.tools.searchLabel,
   searchPlaceholder: catalog.tools.searchPlaceholder,
+  toolsTitle: catalog.tools.title,
 }
 ---
 
@@ -37,7 +57,7 @@ const searchMessages = {
   lang={language}
   title={seo.title}
   current="tools"
-  pathname="/tools"
+  pathname={pathname}
 >
   <header class="max-w-3xl space-y-3">
     <h1 class="font-heading text-4xl leading-none tracking-[var(--tracking-display)] text-balance sm:text-5xl">
@@ -50,8 +70,10 @@ const searchMessages = {
 
   <ToolsDirectorySearch
     client:load
-    entries={toolSearchIndex}
+    basePath={localizePath("/tools", language)}
+    entries={entries}
     language={language}
     messages={searchMessages}
+    pageNumber={pageNumber}
   />
 </MainLayout>

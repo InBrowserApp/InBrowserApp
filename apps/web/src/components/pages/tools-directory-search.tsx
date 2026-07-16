@@ -2,19 +2,39 @@ import {
   useDeferredValue,
   useEffect,
   useEffectEvent,
+  useMemo,
   useRef,
   useState,
 } from "react"
 
-import { Button } from "@workspace/ui/components/ui/button"
-import { Input } from "@workspace/ui/components/ui/input"
-import { ToolIcon } from "@workspace/ui/components/tool/tool-icon"
-import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
-import { LayoutGrid, Search } from "@workspace/ui/icons"
-import { localizePath } from "@/lib/site"
+import {
+  Field,
+  FieldGroup,
+  FieldLabel,
+} from "@workspace/ui/components/ui/field"
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+  InputGroupInput,
+} from "@workspace/ui/components/ui/input-group"
+import { Search, X } from "@workspace/ui/icons"
+import { ToolsDirectoryResults } from "@/components/pages/tools-directory-results"
+import {
+  isPlainLeftClick,
+  normalizeQuery,
+  rankEntries,
+  readLocationState,
+} from "@/components/pages/tools-directory-search-utils"
+import {
+  TOOLS_PER_PAGE,
+  getLocalizedToolsPagePath,
+  paginateToolEntries,
+} from "@/lib/tools-directory"
 
-import type { ToolSearchIndexEntry } from "@workspace/tool-registry"
+import type { MouseEvent } from "react"
 import type { SiteLanguage } from "@/lib/site"
+import type { ToolDirectoryEntry } from "@/lib/tools-directory"
 
 type ToolsDirectorySearchMessages = Readonly<{
   searchLabel: string
@@ -25,112 +45,69 @@ type ToolsDirectorySearchMessages = Readonly<{
   emptyRegistryDescription: string
   emptySearchTitle: string
   emptySearchDescription: string
+  toolsTitle: string
 }>
 
 type ToolsDirectorySearchProps = Readonly<{
-  entries: readonly ToolSearchIndexEntry[]
+  basePath: string
+  entries: readonly ToolDirectoryEntry[]
   language: SiteLanguage
   messages: ToolsDirectorySearchMessages
+  pageNumber: number
 }>
 
-function normalizeQuery(query: string) {
-  return query.trim().replace(/\s+/g, " ")
-}
-
-function readQueryFromLocation() {
-  if (typeof window === "undefined") {
-    return ""
-  }
-
-  return normalizeQuery(
-    new URL(window.location.href).searchParams.get("query") ?? ""
-  )
-}
-
-function resolveLocale(entry: ToolSearchIndexEntry, language: SiteLanguage) {
-  return (
-    entry.locales[language] ??
-    entry.locales.en ??
-    Object.values(entry.locales)[0] ?? {
-      description: "",
-      name: entry.slug,
-    }
-  )
-}
-
-function getSearchScore(
-  entry: ToolSearchIndexEntry,
-  query: string,
-  language: SiteLanguage
-) {
-  const normalizedQuery = normalizeQuery(query).toLowerCase()
-
-  if (!normalizedQuery) {
-    return 0
-  }
-
-  const locale = resolveLocale(entry, language)
-  const tokens = normalizedQuery.split(" ")
-  const searchableText = [locale.name, locale.description]
-    .join(" ")
-    .toLowerCase()
-
-  if (!tokens.every((token) => searchableText.includes(token))) {
-    return -1
-  }
-
-  let score = 0
-  const normalizedName = locale.name.toLowerCase()
-  const normalizedDescription = locale.description.toLowerCase()
-
-  if (normalizedName === normalizedQuery) {
-    score += 120
-  }
-
-  if (normalizedName.startsWith(normalizedQuery)) {
-    score += 60
-  }
-
-  if (normalizedName.includes(normalizedQuery)) {
-    score += 30
-  }
-
-  if (normalizedDescription.includes(normalizedQuery)) {
-    score += 15
-  }
-  return score
-}
-
 function ToolsDirectorySearch({
+  basePath,
   entries,
   language,
   messages,
+  pageNumber,
 }: ToolsDirectorySearchProps) {
   const [query, setQuery] = useState("")
+  const [currentPage, setCurrentPage] = useState(pageNumber)
+  const [locationReady, setLocationReady] = useState(false)
   const deferredQuery = useDeferredValue(query)
   const inputRef = useRef<HTMLInputElement>(null)
+  const resultsStatusRef = useRef<HTMLParagraphElement>(null)
   const composingRef = useRef(false)
-  const syncQueryToUrl = useEffectEvent((nextQuery: string) => {
-    if (typeof window === "undefined") {
-      return
+  const focusResultsRef = useRef(false)
+  const normalizedQuery = normalizeQuery(deferredQuery)
+  const rankedEntries = useMemo(
+    () => rankEntries(entries, normalizedQuery, language),
+    [entries, language, normalizedQuery]
+  )
+  const pageCount = Math.max(
+    1,
+    Math.ceil(rankedEntries.length / TOOLS_PER_PAGE)
+  )
+  const safePage = Math.min(currentPage, pageCount)
+  const page = paginateToolEntries(rankedEntries, safePage)
+  const numberFormatter = useMemo(
+    () => new Intl.NumberFormat(language),
+    [language]
+  )
+  const syncStateToUrl = useEffectEvent(
+    (nextQuery: string, nextPage: number) => {
+      const url = new URL(window.location.href)
+
+      if (nextQuery) {
+        url.pathname = getLocalizedToolsPagePath(basePath, pageNumber)
+        url.searchParams.set("query", nextQuery)
+        if (nextPage > 1) {
+          url.searchParams.set("page", String(nextPage))
+        } else {
+          url.searchParams.delete("page")
+        }
+      } else {
+        url.pathname = getLocalizedToolsPagePath(basePath, nextPage)
+        url.searchParams.delete("query")
+        url.searchParams.delete("page")
+      }
+
+      window.history.replaceState(window.history.state, "", url)
     }
+  )
 
-    const url = new URL(window.location.href)
-
-    if (nextQuery) {
-      url.searchParams.set("query", nextQuery)
-    } else {
-      url.searchParams.delete("query")
-    }
-
-    window.history.replaceState(window.history.state, "", url)
-  })
-
-  /**
-   * Keep the uncontrolled input in sync with React state for
-   * programmatic updates (clear button, popstate, etc.) but only
-   * when the user is NOT mid-IME-composition.
-   */
   useEffect(() => {
     if (inputRef.current && !composingRef.current) {
       inputRef.current.value = query
@@ -139,145 +116,125 @@ function ToolsDirectorySearch({
 
   useEffect(() => {
     const syncFromLocation = () => {
-      const nextQuery = readQueryFromLocation()
-
-      setQuery((currentQuery) =>
-        currentQuery === nextQuery ? currentQuery : nextQuery
-      )
+      const state = readLocationState(pageNumber)
+      setQuery(state.query)
+      setCurrentPage(state.query ? state.pageNumber : pageNumber)
+      setLocationReady(true)
     }
 
     syncFromLocation()
     window.addEventListener("popstate", syncFromLocation)
-
-    return () => {
-      window.removeEventListener("popstate", syncFromLocation)
-    }
-  }, [])
+    return () => window.removeEventListener("popstate", syncFromLocation)
+  }, [pageNumber])
 
   useEffect(() => {
-    syncQueryToUrl(normalizeQuery(deferredQuery))
-  }, [deferredQuery])
+    if (locationReady && query === deferredQuery) {
+      syncStateToUrl(normalizedQuery, safePage)
+    }
+  }, [deferredQuery, locationReady, normalizedQuery, query, safePage])
 
-  const normalizedQuery = normalizeQuery(deferredQuery)
-  const rankedEntries = entries
-    .map((entry) => ({
-      entry,
-      score: getSearchScore(entry, normalizedQuery, language),
-    }))
-    .filter(({ score }) => normalizedQuery === "" || score >= 0)
-    .sort((left, right) => {
-      if (normalizedQuery === "") {
-        return resolveLocale(left.entry, language).name.localeCompare(
-          resolveLocale(right.entry, language).name,
-          language
-        )
-      }
+  useEffect(() => {
+    if (focusResultsRef.current) {
+      focusResultsRef.current = false
+      resultsStatusRef.current?.focus({ preventScroll: true })
+      resultsStatusRef.current?.scrollIntoView({ block: "start" })
+    }
+  }, [safePage])
 
-      return right.score - left.score
-    })
-  const resultCount = new Intl.NumberFormat(language).format(
-    rankedEntries.length
-  )
-  const isRegistryEmpty = entries.length === 0
-  const isSearchEmpty = !isRegistryEmpty && rankedEntries.length === 0
+  const setSearchQuery = (nextQuery: string) => {
+    setQuery(nextQuery)
+    setCurrentPage(normalizeQuery(nextQuery) ? 1 : pageNumber)
+  }
+  const handleSearchPageChange = (
+    event: MouseEvent<HTMLAnchorElement>,
+    nextPage: number
+  ) => {
+    if (!isPlainLeftClick(event)) {
+      return
+    }
 
+    event.preventDefault()
+    const url = new URL(event.currentTarget.href)
+    window.history.pushState(window.history.state, "", url)
+    focusResultsRef.current = true
+    setCurrentPage(nextPage)
+  }
+  const resultRange = page.total
+    ? `${numberFormatter.format(page.start)}–${numberFormatter.format(page.end)} / `
+    : ""
+  const resultCount = `${resultRange}${numberFormatter.format(page.total)} ${messages.resultCountSuffix}`
   return (
-    <div
-      className="space-y-6"
-      aria-busy={query !== deferredQuery}
-      aria-live="polite"
-    >
-      <div className="flex items-center gap-3">
-        <div className="relative flex-1">
-          <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
-          <Input
-            ref={inputRef}
-            aria-label={messages.searchLabel}
-            className="h-11 pl-10 text-base md:text-sm"
-            placeholder={messages.searchPlaceholder}
-            defaultValue={query}
-            onCompositionStart={() => {
-              composingRef.current = true
-            }}
-            onCompositionEnd={(event) => {
-              composingRef.current = false
-              setQuery(event.currentTarget.value)
-            }}
-            onChange={(event) => {
-              if (composingRef.current) {
-                return
-              }
-
-              setQuery(event.currentTarget.value)
-            }}
-          />
-        </div>
-
-        {query ? (
-          <Button
-            type="button"
-            variant="outline"
-            onClick={() => {
-              setQuery("")
-            }}
-          >
-            {messages.clearSearchLabel}
-          </Button>
-        ) : null}
+    <div className="flex flex-col gap-6">
+      <div role="search">
+        <FieldGroup>
+          <Field>
+            <FieldLabel className="sr-only" htmlFor="tool-directory-search">
+              {messages.searchLabel}
+            </FieldLabel>
+            <InputGroup className="h-11">
+              <InputGroupInput
+                ref={inputRef}
+                id="tool-directory-search"
+                name="query"
+                type="search"
+                autoComplete="off"
+                enterKeyHint="search"
+                spellCheck={false}
+                aria-controls="tool-directory-results"
+                className="text-base md:text-sm"
+                defaultValue={query}
+                placeholder={messages.searchPlaceholder}
+                onCompositionStart={() => {
+                  composingRef.current = true
+                }}
+                onCompositionEnd={(event) => {
+                  composingRef.current = false
+                  setSearchQuery(event.currentTarget.value)
+                }}
+                onChange={(event) => {
+                  if (!composingRef.current) {
+                    setSearchQuery(event.currentTarget.value)
+                  }
+                }}
+              />
+              <InputGroupAddon align="inline-start">
+                <Search aria-hidden="true" />
+              </InputGroupAddon>
+              {query ? (
+                <InputGroupAddon align="inline-end">
+                  <InputGroupButton
+                    aria-label={messages.clearSearchLabel}
+                    size="icon-sm"
+                    onClick={() => {
+                      setSearchQuery("")
+                      inputRef.current?.focus()
+                    }}
+                  >
+                    <X aria-hidden="true" />
+                  </InputGroupButton>
+                </InputGroupAddon>
+              ) : null}
+            </InputGroup>
+          </Field>
+        </FieldGroup>
       </div>
 
-      {!isRegistryEmpty && !isSearchEmpty ? (
-        <p className="text-sm text-muted-foreground">
-          {resultCount} {messages.resultCountSuffix}
-        </p>
-      ) : null}
-
-      {isRegistryEmpty ? (
-        <div className="rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-12 text-center">
-          <LayoutGrid className="mx-auto size-6 text-muted-foreground" />
-          <h3 className="mt-3 font-medium">{messages.emptyRegistryTitle}</h3>
-          <p className="mt-1 text-sm text-muted-foreground">
-            {messages.emptyRegistryDescription}
-          </p>
-        </div>
-      ) : isSearchEmpty ? (
-        <div className="rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-12 text-center">
-          <Search className="mx-auto size-6 text-muted-foreground" />
-          <h3 className="mt-3 font-medium">{messages.emptySearchTitle}</h3>
-          <p className="mt-1 text-sm text-muted-foreground">
-            {messages.emptySearchDescription}
-          </p>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {rankedEntries.map(({ entry }) => {
-            const locale = resolveLocale(entry, language)
-
-            return (
-              <a
-                key={entry.slug}
-                href={localizePath(`/tools/${entry.slug}`, language)}
-                className="group block"
-              >
-                <ToolSurface className="flex h-full flex-col gap-3 transition-colors group-hover:border-foreground/20">
-                  <div className="flex flex-1 flex-col gap-1.5">
-                    <h3 className="flex items-center gap-2 font-heading text-lg leading-tight tracking-[var(--tracking-display)]">
-                      <ToolIcon
-                        icon={entry.icon}
-                        className="size-4 shrink-0 text-muted-foreground"
-                      />
-                      <span className="min-w-0 truncate">{locale.name}</span>
-                    </h3>
-                    <p className="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
-                      {locale.description}
-                    </p>
-                  </div>
-                </ToolSurface>
-              </a>
-            )
-          })}
-        </div>
-      )}
+      <ToolsDirectoryResults
+        basePath={basePath}
+        browsePageNumber={pageNumber}
+        busy={query !== deferredQuery}
+        emptyRegistryDescription={messages.emptyRegistryDescription}
+        emptyRegistryTitle={messages.emptyRegistryTitle}
+        emptySearchDescription={messages.emptySearchDescription}
+        emptySearchTitle={messages.emptySearchTitle}
+        language={language}
+        page={page}
+        query={normalizedQuery}
+        resultCount={resultCount}
+        resultsStatusRef={resultsStatusRef}
+        toolsTitle={messages.toolsTitle}
+        onSearchPageChange={handleSearchPageChange}
+      />
     </div>
   )
 }

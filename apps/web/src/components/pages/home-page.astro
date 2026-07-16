@@ -1,10 +1,19 @@
 ---
 import { toolSearchIndex } from "@workspace/tool-registry"
+import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
+import { Badge } from "@workspace/ui/components/ui/badge"
+import { buttonVariants } from "@workspace/ui/components/ui/button"
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+  InputGroupInput,
+} from "@workspace/ui/components/ui/input-group"
+import { ArrowRight, Search } from "@workspace/ui/icons"
 import MainLayout from "@/layouts/main.astro"
-import { ToolsDirectorySearch } from "@/components/pages/tools-directory-search"
+import { localizePath, type SiteLanguage } from "@/lib/site"
 import { loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
-import type { SiteLanguage } from "@/lib/site"
 
 interface Props {
   language: SiteLanguage
@@ -12,22 +21,14 @@ interface Props {
 
 const { language } = Astro.props
 const { catalog } = loadSiteMessages(language)
+const toolsPath = localizePath("/tools", language)
+const toolCount = new Intl.NumberFormat(language).format(toolSearchIndex.length)
 const seo = createPageSeo({
   description: catalog.metadata.homeDescription,
   language,
   pathname: "/",
   title: catalog.metadata.homeTitle,
 })
-const searchMessages = {
-  clearSearchLabel: catalog.tools.clearSearchLabel,
-  emptyRegistryDescription: catalog.tools.emptyRegistryDescription,
-  emptyRegistryTitle: catalog.tools.emptyRegistryTitle,
-  emptySearchDescription: catalog.tools.emptySearchDescription,
-  emptySearchTitle: catalog.tools.emptySearchTitle,
-  resultCountSuffix: catalog.tools.resultCountSuffix,
-  searchLabel: catalog.tools.searchLabel,
-  searchPlaceholder: catalog.tools.searchPlaceholder,
-}
 ---
 
 <MainLayout
@@ -39,19 +40,79 @@ const searchMessages = {
   current="home"
   pathname="/"
 >
-  <header class="max-w-3xl space-y-3">
-    <h1 class="font-heading text-4xl leading-none tracking-[var(--tracking-display)] text-balance sm:text-5xl">
-      {catalog.home.title}
-    </h1>
-    <p class="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-      {catalog.home.description}
-    </p>
-  </header>
+  <section
+    class="relative isolate overflow-hidden rounded-[calc(var(--radius)*2.5)] border border-border/70 bg-card/60 px-5 py-8 shadow-[var(--shadow-elevated)] sm:px-8 sm:py-12 lg:px-12 lg:py-16"
+  >
+    <div
+      class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,var(--color-muted),transparent_55%)] opacity-80 rtl:bg-[radial-gradient(circle_at_top_right,var(--color-muted),transparent_55%)]"
+      aria-hidden="true"
+    >
+    </div>
 
-  <ToolsDirectorySearch
-    client:load
-    entries={toolSearchIndex}
-    language={language}
-    messages={searchMessages}
-  />
+    <div class="grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(20rem,0.95fr)] lg:gap-14">
+      <header class="max-w-2xl space-y-5">
+        <Badge variant="outline" className="bg-background/70 tabular-nums">
+          {`${toolCount} ${catalog.tools.resultCountSuffix}`}
+        </Badge>
+        <div class="space-y-4">
+          <h1 class="font-heading text-4xl leading-none tracking-[var(--tracking-display)] text-balance sm:text-5xl lg:text-6xl">
+            {catalog.home.title}
+          </h1>
+          <p class="max-w-xl text-base leading-7 text-muted-foreground sm:text-lg">
+            {catalog.home.description}
+          </p>
+        </div>
+        <a href={toolsPath} class={buttonVariants({ size: "lg" })}>
+          {catalog.home.primaryAction}
+          <ArrowRight data-icon="inline-end" className="rtl:rotate-180" aria-hidden="true" />
+        </a>
+      </header>
+
+      <ToolSurface className="relative bg-background/85 p-5 sm:p-6">
+        <div class="mb-5 space-y-2">
+          <h2 class="font-heading text-xl tracking-tight">
+            {catalog.tools.title}
+          </h2>
+          <p class="text-sm leading-6 text-muted-foreground">
+            {catalog.tools.description}
+          </p>
+        </div>
+
+        <form action={toolsPath} method="get" role="search">
+          <label class="sr-only" for="home-tool-search">
+            {catalog.tools.searchLabel}
+          </label>
+          <InputGroup className="h-12 bg-background">
+            <InputGroupAddon align="inline-start">
+              <Search aria-hidden="true" />
+            </InputGroupAddon>
+            <InputGroupInput
+              id="home-tool-search"
+              name="query"
+              type="search"
+              autoComplete="off"
+              enterKeyHint="search"
+              placeholder={catalog.tools.searchPlaceholder}
+              spellCheck={false}
+            />
+            <InputGroupAddon align="inline-end">
+              <InputGroupButton
+                className="h-9 px-3"
+                size="sm"
+                type="submit"
+                variant="default"
+              >
+                {catalog.tools.searchLabel}
+                <ArrowRight
+                  data-icon="inline-end"
+                  className="hidden sm:block rtl:rotate-180"
+                  aria-hidden="true"
+                />
+              </InputGroupButton>
+            </InputGroupAddon>
+          </InputGroup>
+        </form>
+      </ToolSurface>
+    </div>
+  </section>
 </MainLayout>
