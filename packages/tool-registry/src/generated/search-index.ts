@@ -10780,6 +10780,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ipv6-ula-generator",
+    category: "network",
+    icon: "network",
+    tags: [
+      "ipv6",
+      "ula",
+      "unique-local-address",
+      "rfc-4193",
+      "fd00",
+      "subnet",
+      "prefix",
+      "network",
+      "generator",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد IPv6 ULA",
+        description:
+          "أنشئ في المتصفح بادئة /48 آمنة لعنوان IPv6 محلي فريد (ULA) وفق RFC 4193، وخطّط لشبكات /64 الفرعية ضمن نطاق fd00.",
+      },
+      de: {
+        name: "IPv6-ULA-Generator",
+        description:
+          "Erzeuge im Browser ein sicheres /48-Präfix für eine IPv6 Unique Local Address (ULA) gemäß RFC 4193 und plane die zugehörigen /64-Subnetze im fd00-Bereich.",
+      },
+      en: {
+        name: "IPv6 ULA Generator",
+        description:
+          "Generate a secure RFC 4193 IPv6 Unique Local Address (ULA) /48 prefix in the browser and plan its fd00 /64 subnets.",
+      },
+      es: {
+        name: "Generador de ULA IPv6",
+        description:
+          "Genera en el navegador un prefijo /48 seguro de dirección local única (ULA) IPv6 según RFC 4193 y planifica sus subredes /64 dentro de fd00.",
+      },
+      fr: {
+        name: "Générateur d’ULA IPv6",
+        description:
+          "Générez dans le navigateur un préfixe /48 sécurisé d’adresse locale unique IPv6 (ULA) conforme à la RFC 4193, puis planifiez ses sous-réseaux fd00 en /64.",
+      },
+      he: {
+        name: "מחולל ULA ל-IPv6",
+        description:
+          "צור בדפדפן קידומת /48 מאובטחת של כתובת IPv6 מקומית ייחודית (ULA) לפי RFC 4193, ותכנן את תת-הרשתות שלה מסוג /64 במרחב fd00.",
+      },
+      hi: {
+        name: "IPv6 ULA जनरेटर",
+        description:
+          "ब्राउज़र में RFC 4193 के अनुरूप IPv6 अद्वितीय स्थानीय पते (ULA) का सुरक्षित /48 प्रीफ़िक्स जनरेट करें और उसके fd00 क्षेत्र के /64 सबनेट की योजना बनाएं।",
+      },
+      id: {
+        name: "Generator ULA IPv6",
+        description:
+          "Buat prefiks /48 Alamat Lokal Unik (ULA) IPv6 RFC 4193 yang aman di browser serta rencanakan subnet fd00 /64 untuk prefiks tersebut.",
+      },
+      it: {
+        name: "Generatore di ULA IPv6",
+        description:
+          "Genera nel browser un prefisso /48 sicuro RFC 4193 per un indirizzo locale univoco IPv6 (ULA) e pianifica le relative subnet /64 nello spazio fd00.",
+      },
+      ja: {
+        name: "IPv6 ULA 生成ツール",
+        description:
+          "ブラウザー内で安全な RFC 4193 IPv6 ユニークローカルアドレス（ULA）の /48 プレフィックスを生成し、その fd00 /64 サブネットを計画します。",
+      },
+      ko: {
+        name: "IPv6 ULA 생성기",
+        description:
+          "브라우저에서 안전한 RFC 4193 IPv6 고유 로컬 주소(ULA) /48 프리픽스를 생성하고 fd00 /64 서브넷을 계획하세요.",
+      },
+      ms: {
+        name: "Penjana ULA IPv6",
+        description:
+          "Jana awalan /48 Alamat Setempat Unik (ULA) IPv6 yang selamat mengikut RFC 4193 dalam pelayar dan rancang subnet /64 dalam ruang fd00.",
+      },
+      nl: {
+        name: "IPv6 ULA-generator",
+        description:
+          "Genereer in de browser een veilig /48-prefix voor een IPv6 Unique Local Address (ULA) volgens RFC 4193 en plan de bijbehorende /64-subnetten binnen fd00.",
+      },
+      no: {
+        name: "IPv6 ULA-generator",
+        description:
+          "Generer et sikkert RFC 4193-prefiks /48 for en unik lokal IPv6-adresse (ULA) i nettleseren, og planlegg tilhørende fd00 /64-subnett.",
+      },
+      pl: {
+        name: "Generator ULA IPv6",
+        description:
+          "Generuj w przeglądarce bezpieczny prefiks /48 unikalnego adresu lokalnego IPv6 (ULA) zgodny z RFC 4193 i planuj jego podsieci fd00 /64.",
+      },
+      pt: {
+        name: "Gerador de ULA IPv6",
+        description:
+          "Gere no navegador um prefixo /48 seguro de endereço local único (ULA) IPv6 conforme a RFC 4193 e planeje suas sub-redes fd00 /64.",
+      },
+      ru: {
+        name: "Генератор ULA IPv6",
+        description:
+          "Создавайте в браузере безопасный /48-префикс уникального локального IPv6-адреса (ULA) по RFC 4193 и планируйте его подсети /64 в диапазоне fd00.",
+      },
+      sv: {
+        name: "IPv6 ULA-generator",
+        description:
+          "Generera ett säkert /48-prefix för en unik lokal IPv6-adress (ULA) enligt RFC 4193 i webbläsaren och planera dess /64-subnät i fd00-rymden.",
+      },
+      th: {
+        name: "ตัวสร้าง IPv6 ULA",
+        description:
+          "สร้างพรีฟิกซ์ /48 ของที่อยู่ IPv6 เฉพาะภายใน (ULA) ตาม RFC 4193 อย่างปลอดภัยในเบราว์เซอร์ และวางแผนซับเน็ต /64 ภายในช่วง fd00",
+      },
+      tr: {
+        name: "IPv6 ULA Oluşturucu",
+        description:
+          "RFC 4193'e uygun güvenli bir IPv6 Benzersiz Yerel Adres (ULA) /48 önekini tarayıcıda oluşturun ve fd00 /64 alt ağlarını planlayın.",
+      },
+      vi: {
+        name: "Trình tạo ULA IPv6",
+        description:
+          "Tạo ngay trong trình duyệt một prefix /48 an toàn cho địa chỉ cục bộ duy nhất (ULA) IPv6 theo RFC 4193 và lập kế hoạch các subnet /64 trong dải fd00.",
+      },
+      "zh-CN": {
+        name: "IPv6 ULA 生成器",
+        description:
+          "在浏览器中安全生成 RFC 4193 IPv6 唯一本地地址（ULA）/48 前缀，并规划其 fd00 /64 子网。",
+      },
+      "zh-TW": {
+        name: "IPv6 ULA 產生器",
+        description:
+          "在瀏覽器中安全產生 RFC 4193 IPv6 唯一本地位址（ULA）/48 前綴，並規劃其 fd00 /64 子網路。",
+      },
+    },
+  },
+  {
     slug: "isbn-validator",
     category: "text",
     icon: "file-text",

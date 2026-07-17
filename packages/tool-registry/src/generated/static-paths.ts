@@ -7914,6 +7914,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ipv6-ula-generator",
+    language: "ar",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "de",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "en",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "es",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "fr",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "he",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "hi",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "id",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "it",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "ja",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "ko",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "ms",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "nl",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "no",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "pl",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "pt",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "ru",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "sv",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "th",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "tr",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "vi",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "ipv6-ula-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "isbn-validator",
     language: "ar",
   },

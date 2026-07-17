@@ -63,7 +63,9 @@ function ToolCopyButton({
       ) : (
         <Copy data-icon="inline-start" />
       )}
-      {copied ? copiedLabel : copyLabel}
+      <span aria-atomic="true" aria-live="polite">
+        {copied ? copiedLabel : copyLabel}
+      </span>
     </Button>
   )
 }
