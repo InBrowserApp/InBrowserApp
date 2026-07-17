@@ -48,6 +48,7 @@ export {
   Plus,
   Printer,
   RefreshCcw,
+  Ruler,
   Search,
   Sparkles,
   Square,

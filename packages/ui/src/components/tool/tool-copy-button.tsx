@@ -9,20 +9,25 @@ type ToolCopyButtonProps = Readonly<{
   value: string
   copyLabel: string
   copiedLabel: string
+  ariaLabel?: string
   className?: string
   disabled?: boolean
+  size?: "sm" | "icon-sm"
   variant?: "default" | "outline" | "secondary" | "ghost"
 }>
 
 function ToolCopyButton({
+  ariaLabel,
   className,
   value,
   copyLabel,
   copiedLabel,
   disabled = false,
+  size = "sm",
   variant = "outline",
 }: ToolCopyButtonProps) {
   const [copied, setCopied] = useState(false)
+  const statusLabel = copied ? copiedLabel : copyLabel
 
   useEffect(() => {
     if (!copied) {
@@ -51,7 +56,14 @@ function ToolCopyButton({
     <Button
       type="button"
       variant={variant}
-      size="sm"
+      size={size}
+      aria-label={
+        ariaLabel
+          ? copied
+            ? `${copiedLabel}: ${ariaLabel}`
+            : ariaLabel
+          : undefined
+      }
       className={className}
       disabled={disabled || value.length === 0}
       onClick={() => {
@@ -63,7 +75,11 @@ function ToolCopyButton({
       ) : (
         <Copy data-icon="inline-start" />
       )}
-      {copied ? copiedLabel : copyLabel}
+      {size === "icon-sm" ? (
+        <span className="sr-only">{statusLabel}</span>
+      ) : (
+        statusLabel
+      )}
     </Button>
   )
 }

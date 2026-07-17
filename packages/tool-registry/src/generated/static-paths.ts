@@ -17206,6 +17206,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "unit-converter",
+    language: "ar",
+  },
+  {
+    slug: "unit-converter",
+    language: "de",
+  },
+  {
+    slug: "unit-converter",
+    language: "en",
+  },
+  {
+    slug: "unit-converter",
+    language: "es",
+  },
+  {
+    slug: "unit-converter",
+    language: "fr",
+  },
+  {
+    slug: "unit-converter",
+    language: "he",
+  },
+  {
+    slug: "unit-converter",
+    language: "hi",
+  },
+  {
+    slug: "unit-converter",
+    language: "id",
+  },
+  {
+    slug: "unit-converter",
+    language: "it",
+  },
+  {
+    slug: "unit-converter",
+    language: "ja",
+  },
+  {
+    slug: "unit-converter",
+    language: "ko",
+  },
+  {
+    slug: "unit-converter",
+    language: "ms",
+  },
+  {
+    slug: "unit-converter",
+    language: "nl",
+  },
+  {
+    slug: "unit-converter",
+    language: "no",
+  },
+  {
+    slug: "unit-converter",
+    language: "pl",
+  },
+  {
+    slug: "unit-converter",
+    language: "pt",
+  },
+  {
+    slug: "unit-converter",
+    language: "ru",
+  },
+  {
+    slug: "unit-converter",
+    language: "sv",
+  },
+  {
+    slug: "unit-converter",
+    language: "th",
+  },
+  {
+    slug: "unit-converter",
+    language: "tr",
+  },
+  {
+    slug: "unit-converter",
+    language: "vi",
+  },
+  {
+    slug: "unit-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "unit-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "unix-timestamp-converter",
     language: "ar",
   },
