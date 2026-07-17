@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.2.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.1.0...v2.2.0) (2026-07-17)
+
+
+### Features
+
+* **tools:** add unit converter ([#971](https://github.com/InBrowserApp/InBrowserApp/issues/971)) ([901fe21](https://github.com/InBrowserApp/InBrowserApp/commit/901fe2125268be95fb457fcba497b43805188108))
+* **web:** redesign home landing and tools directory with category browsing ([#1032](https://github.com/InBrowserApp/InBrowserApp/issues/1032)) ([713233d](https://github.com/InBrowserApp/InBrowserApp/commit/713233dae136792bf7669e7575d07ea9c07c4306))
+
+
+### Bug Fixes
+
+* **web:** restore single-column tools grid on mobile ([#943](https://github.com/InBrowserApp/InBrowserApp/issues/943)) ([ab5e966](https://github.com/InBrowserApp/InBrowserApp/commit/ab5e966d34e9ed24925e1e330621ea99fbc31900))
+
 ## [2.1.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.0.0...v2.1.0) (2026-06-03)
 
 
