@@ -11,6 +11,7 @@ describe("ToolCopyButton", () => {
       <ToolCopyButton value="text" copyLabel="Copy" copiedLabel="Copied" />
     )
     expect(screen.getByText("Copy")).toBeTruthy()
+    expect(screen.getByText("Copy").getAttribute("aria-live")).toBe("polite")
   })
 
   test("is disabled when value is empty", () => {

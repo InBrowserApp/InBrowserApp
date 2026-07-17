@@ -93,6 +93,7 @@
     "@tool/ip-info-lookup": "workspace:*",
     "@tool/ip-range-to-cidr-converter": "workspace:*",
     "@tool/ipv6-address-to-mac-address-converter": "workspace:*",
+    "@tool/ipv6-ula-generator": "workspace:*",
     "@tool/isbn-validator": "workspace:*",
     "@tool/jmespath-tester": "workspace:*",
     "@tool/json-diff-path": "workspace:*",
