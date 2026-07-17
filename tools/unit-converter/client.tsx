@@ -49,7 +49,7 @@ function UnitConverterClient({
   const [hasLoadedStorage, setHasLoadedStorage] = useState(false)
 
   useEffect(() => {
-    const stored = readStoredState()
+    const stored = readStoredState(language)
 
     if (stored) {
       setCategoryId(stored.category)
@@ -59,7 +59,7 @@ function UnitConverterClient({
     }
 
     setHasLoadedStorage(true)
-  }, [])
+  }, [language])
 
   useEffect(() => {
     /* v8 ignore next */
@@ -69,11 +69,12 @@ function UnitConverterClient({
 
     writeStoredState({
       category: categoryId,
+      locale: language,
       units,
       value: inputValue,
       precision,
     })
-  }, [categoryId, units, inputValue, precision, hasLoadedStorage])
+  }, [categoryId, units, inputValue, precision, hasLoadedStorage, language])
 
   const category = getCategory(categoryId)!
   const { from: fromUnit, to: toUnit } = units[categoryId]
@@ -87,7 +88,9 @@ function UnitConverterClient({
       : convertByIds(categoryId, fromUnit, toUnit, value)
   const outOfRange = toRaw !== undefined && !Number.isFinite(toRaw)
   const toValue =
-    toRaw === undefined || outOfRange ? "" : formatNumber(toRaw, precision)
+    toRaw === undefined || outOfRange
+      ? ""
+      : formatNumber(toRaw, precision, language)
   const conversions =
     value === undefined ? {} : convertToAll(category, fromUnit, value)
 
@@ -110,7 +113,7 @@ function UnitConverterClient({
     patchUnits({ from: toUnit, to: fromUnit })
 
     if (toRaw !== undefined && Number.isFinite(toRaw)) {
-      setInputValue(formatNumber(toRaw, "max"))
+      setInputValue(formatNumber(toRaw, "max", language))
     }
   }
 
@@ -211,6 +214,7 @@ function UnitConverterClient({
           <AllUnitsCard
             category={category}
             conversions={conversions}
+            language={language}
             precision={precision}
             toUnit={toUnit}
             unitNames={messages.units}

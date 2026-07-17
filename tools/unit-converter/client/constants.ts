@@ -12,7 +12,7 @@ const SAMPLE = {
 } as const
 
 const STORAGE_KEY = "tools:unit-converter:state"
-const STORAGE_VERSION = 1
+const STORAGE_VERSION = 2
 
 type StoredUnits = Readonly<
   Record<UnitCategoryId, { from: string; to: string }>

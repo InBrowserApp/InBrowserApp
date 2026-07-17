@@ -1,5 +1,6 @@
 import { createDefaultUnits, STORAGE_KEY, STORAGE_VERSION } from "./constants"
-import { PRECISION_OPTIONS } from "../core/format"
+import { formatNumber, PRECISION_OPTIONS } from "../core/format"
+import { parseNumber } from "../core/parse"
 import { CATEGORY_IDS, findUnit, getCategory } from "../core/units"
 
 import type { PrecisionOption, StoredUnits } from "./constants"
@@ -7,6 +8,7 @@ import type { UnitCategoryId } from "../core/units"
 
 type StoredState = Readonly<{
   category: UnitCategoryId
+  locale: string
   precision: PrecisionOption
   units: StoredUnits
   value: string
@@ -64,6 +66,8 @@ function parseStoredState(raw: string | null): StoredState | undefined {
     value.version !== STORAGE_VERSION ||
     typeof value.category !== "string" ||
     !getCategory(value.category) ||
+    typeof value.locale !== "string" ||
+    value.locale.length === 0 ||
     typeof value.value !== "string" ||
     typeof value.precision !== "string" ||
     !PRECISION_OPTIONS.includes(value.precision as PrecisionOption)
@@ -79,13 +83,33 @@ function parseStoredState(raw: string | null): StoredState | undefined {
 
   return {
     category: value.category as UnitCategoryId,
+    locale: value.locale,
     precision: value.precision as PrecisionOption,
     units,
     value: value.value,
   }
 }
 
-function readStoredState(storage?: StorageReader): StoredState | undefined {
+function localizeStoredValue(
+  value: string,
+  sourceLocale: string,
+  targetLocale: string
+): string {
+  if (sourceLocale === targetLocale) {
+    return value
+  }
+
+  const parsed = parseNumber(value, sourceLocale)
+
+  return parsed.kind === "valid"
+    ? formatNumber(parsed.value, "max", targetLocale)
+    : value
+}
+
+function readStoredState(
+  locale: string,
+  storage?: StorageReader
+): StoredState | undefined {
   /* v8 ignore next 3 */
   if (typeof window === "undefined") {
     return undefined
@@ -93,7 +117,15 @@ function readStoredState(storage?: StorageReader): StoredState | undefined {
 
   try {
     const target = storage ?? window.localStorage
-    return parseStoredState(target.getItem(STORAGE_KEY))
+    const stored = parseStoredState(target.getItem(STORAGE_KEY))
+
+    return stored
+      ? {
+          ...stored,
+          locale,
+          value: localizeStoredValue(stored.value, stored.locale, locale),
+        }
+      : undefined
   } catch {
     return undefined
   }
@@ -120,4 +152,9 @@ function writeStoredState(
   }
 }
 
-export { parseStoredState, readStoredState, writeStoredState }
+export {
+  localizeStoredValue,
+  parseStoredState,
+  readStoredState,
+  writeStoredState,
+}

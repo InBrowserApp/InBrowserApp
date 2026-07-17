@@ -115,10 +115,13 @@ describe("UnitConverterClient", () => {
     })
   })
 
-  test("selecting a unit from the list sets it as the target", async () => {
+  test("selecting a row value sets its unit as the target", async () => {
     renderClient()
 
-    fireEvent.click(screen.getByRole("button", { name: "Centimeter cm" }))
+    const rowValue = screen.getByText("100")
+
+    expect(rowValue.closest("button")).not.toBeNull()
+    fireEvent.click(rowValue)
 
     await waitFor(() => {
       expect(outputValue()).toBe("100")
@@ -181,8 +184,9 @@ describe("UnitConverterClient", () => {
     window.localStorage.setItem(
       STORAGE_KEY,
       JSON.stringify({
-        version: 1,
+        version: 2,
         category: "temperature",
+        locale: "en",
         value: "100",
         precision: "6",
         units: createDefaultUnits(),
@@ -212,7 +216,69 @@ describe("UnitConverterClient", () => {
     fireEvent.change(fromInput(), { target: { value: "1.234,5" } })
 
     await waitFor(() => {
-      expect(outputValue()).toBe("4050.2")
+      expect(outputValue()).toBe("4050,2")
+    })
+  })
+
+  test("preserves a stored value when switching page locales", async () => {
+    window.localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        version: 2,
+        category: "length",
+        locale: "de",
+        value: "1.234",
+        precision: "6",
+        units: createDefaultUnits(),
+      })
+    )
+
+    renderClient("en")
+
+    await waitFor(() => {
+      expect(fromInput().value).toBe("1234")
+      expect(outputValue()).toBe("4048.56")
+    })
+  })
+
+  test("re-localizes the current value when the island locale changes", async () => {
+    const rendered = renderClient("de")
+
+    fireEvent.change(fromInput(), { target: { value: "1.234" } })
+
+    await waitFor(() => {
+      expect(window.localStorage.getItem(STORAGE_KEY)).toContain(
+        '"locale":"de"'
+      )
+    })
+
+    rendered.rerender(
+      <UnitConverterClient messages={messages} language="en" direction="ltr" />
+    )
+
+    await waitFor(() => {
+      expect(fromInput().value).toBe("1234")
+      expect(outputValue()).toBe("4048.56")
+      expect(window.localStorage.getItem(STORAGE_KEY)).toContain(
+        '"locale":"en"'
+      )
+    })
+  })
+
+  test("round-trips a localized decimal value through swap", async () => {
+    renderClient("de")
+
+    selectOption(messages.toUnitLabel, "Kilometer (km)")
+
+    await waitFor(() => {
+      expect(outputValue()).toBe("0,001")
+    })
+
+    fireEvent.click(screen.getByRole("button", { name: messages.swapLabel }))
+
+    await waitFor(() => {
+      expect(fromInput().value).toBe("0,001")
+      expect(outputValue()).toBe("1")
     })
   })
 
