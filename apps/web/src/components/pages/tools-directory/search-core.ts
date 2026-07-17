@@ -2,6 +2,7 @@ import { resolveEntryLocale } from "@/lib/tool-directory"
 
 import type { ToolSearchIndexEntry } from "@workspace/tool-registry"
 import type { SiteLanguage } from "@/lib/site"
+import type { SearchSuggestionEntry } from "@/lib/tool-directory"
 
 type DirectoryLocationState = Readonly<{
   query: string
@@ -102,8 +103,7 @@ function rankToolEntries(
 }
 
 type ToolSearchSuggestion = Readonly<{
-  entry: ToolSearchIndexEntry
-  name: string
+  entry: SearchSuggestionEntry
   pre: string
   match: string
   post: string
@@ -156,7 +156,7 @@ function splitSuggestionName(name: string, normalizedQuery: string) {
  * tokens included, ties alphabetical, capped at SUGGESTION_LIMIT.
  */
 function buildSearchSuggestions(
-  entries: readonly ToolSearchIndexEntry[],
+  entries: readonly SearchSuggestionEntry[],
   query: string,
   language: SiteLanguage
 ): readonly ToolSearchSuggestion[] {
@@ -167,26 +167,20 @@ function buildSearchSuggestions(
   }
 
   return entries
-    .map((entry) => {
-      const name = resolveEntryLocale(entry, language).name
-
-      return {
-        entry,
-        name,
-        score: getSuggestionScore(name.toLowerCase(), normalizedQuery),
-      }
-    })
+    .map((entry) => ({
+      entry,
+      score: getSuggestionScore(entry.name.toLowerCase(), normalizedQuery),
+    }))
     .filter(({ score }) => score >= 0)
     .sort(
       (left, right) =>
         right.score - left.score ||
-        left.name.localeCompare(right.name, language)
+        left.entry.name.localeCompare(right.entry.name, language)
     )
     .slice(0, SUGGESTION_LIMIT)
-    .map(({ entry, name }) => ({
+    .map(({ entry }) => ({
       entry,
-      name,
-      ...splitSuggestionName(name, normalizedQuery),
+      ...splitSuggestionName(entry.name, normalizedQuery),
     }))
 }
 

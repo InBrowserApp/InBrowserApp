@@ -8,8 +8,8 @@ import { localizePath } from "@/lib/site"
 import { buildSearchSuggestions, normalizeQuery } from "./search-core"
 import { SearchSuggestions, suggestionOptionId } from "./search-suggestions"
 
-import type { ToolSearchIndexEntry } from "@workspace/tool-registry"
 import type { SiteLanguage } from "@/lib/site"
+import type { SearchSuggestionEntry } from "@/lib/tool-directory"
 import type { ToolSearchSuggestion } from "./search-core"
 import type { SearchSuggestionsMessages } from "./search-suggestions"
 
@@ -21,15 +21,42 @@ type SearchComboboxMessages = SearchSuggestionsMessages &
   }>
 
 type SearchComboboxProps = Readonly<{
-  entries: readonly ToolSearchIndexEntry[]
+  entries: readonly SearchSuggestionEntry[]
   language: SiteLanguage
   query: string
   onQueryChange: (query: string) => void
+  /**
+   * Called when Enter is pressed while the dropdown is dismissed or has
+   * no suggestion to open (the home hero uses this to jump to /tools).
+   */
+  onSubmitQuery?: (query: string) => void
+  variant?: "directory" | "hero"
   categoryLabels: Readonly<Record<string, string>>
   messages: SearchComboboxMessages
 }>
 
 const LISTBOX_ID = "tools-search-suggestions"
+
+const VARIANT_CLASSES = {
+  directory: {
+    root: "relative flex-1",
+    icon: "start-3",
+    input: "h-10 ps-9.5 text-base md:text-sm",
+    inputEmpty: "pe-3 sm:pe-12",
+    inputFilled: "pe-10",
+    clear: "end-2",
+    kbd: "end-3",
+  },
+  hero: {
+    root: "relative w-full",
+    icon: "start-3.5",
+    input: "h-12 rounded-xl ps-10.5 text-base shadow-xs md:text-sm",
+    inputEmpty: "pe-3 sm:pe-14",
+    inputFilled: "pe-11",
+    clear: "end-2.5",
+    kbd: "end-3",
+  },
+} as const
 
 function isEditableTarget(target: EventTarget | null) {
   return (
@@ -47,7 +74,9 @@ function SearchCombobox({
   language,
   messages,
   onQueryChange,
+  onSubmitQuery,
   query,
+  variant = "directory",
 }: SearchComboboxProps) {
   const inputRef = useRef<HTMLInputElement>(null)
   const composingRef = useRef(false)
@@ -56,6 +85,7 @@ function SearchCombobox({
   const [highlightedIndex, setHighlightedIndex] = useState(0)
   const [shortcutHint, setShortcutHint] = useState("⌘K")
 
+  const styles = VARIANT_CLASSES[variant]
   const suggestions = buildSearchSuggestions(entries, query, language)
   const hasQuery = query.length > 0
   const isOpen = isFocused && normalizeQuery(query) !== "" && !isDismissed
@@ -125,6 +155,22 @@ function SearchCombobox({
       return
     }
 
+    if (event.key === "Enter") {
+      const suggestion = isOpen
+        ? suggestions[Math.min(highlightedIndex, suggestions.length - 1)]
+        : undefined
+
+      if (suggestion) {
+        event.preventDefault()
+        openSuggestion(suggestion)
+      } else if (onSubmitQuery && normalizeQuery(query) !== "") {
+        event.preventDefault()
+        onSubmitQuery(normalizeQuery(query))
+      }
+
+      return
+    }
+
     if (!isOpen || suggestions.length === 0) {
       return
     }
@@ -137,20 +183,17 @@ function SearchCombobox({
     } else if (event.key === "ArrowUp") {
       event.preventDefault()
       setHighlightedIndex((index) => Math.max(index - 1, 0))
-    } else if (event.key === "Enter") {
-      const suggestion =
-        suggestions[Math.min(highlightedIndex, suggestions.length - 1)]
-
-      if (suggestion) {
-        event.preventDefault()
-        openSuggestion(suggestion)
-      }
     }
   }
 
   return (
-    <div className="relative flex-1">
-      <Search className="pointer-events-none absolute start-3 top-1/2 z-10 size-4 -translate-y-1/2 text-muted-foreground" />
+    <div className={styles.root}>
+      <Search
+        className={cn(
+          "pointer-events-none absolute top-1/2 z-10 size-4 -translate-y-1/2 text-muted-foreground",
+          styles.icon
+        )}
+      />
       <Input
         ref={inputRef}
         role="combobox"
@@ -167,8 +210,8 @@ function SearchCombobox({
             : undefined
         }
         className={cn(
-          "h-10 ps-9.5 text-base md:text-sm",
-          hasQuery ? "pe-10" : "pe-3 sm:pe-12"
+          styles.input,
+          hasQuery ? styles.inputFilled : styles.inputEmpty
         )}
         placeholder={messages.searchPlaceholder}
         defaultValue={query}
@@ -204,14 +247,20 @@ function SearchCombobox({
             setQuery("")
             inputRef.current?.focus()
           }}
-          className="absolute end-2 top-1/2 inline-flex size-6 -translate-y-1/2 items-center justify-center rounded-[7px] bg-muted text-muted-foreground transition-colors hover:bg-border hover:text-foreground"
+          className={cn(
+            "absolute top-1/2 inline-flex size-6 -translate-y-1/2 items-center justify-center rounded-[7px] bg-muted text-muted-foreground transition-colors hover:bg-border hover:text-foreground",
+            styles.clear
+          )}
         >
           <X className="size-3" strokeWidth={2.5} />
         </button>
       ) : (
         <kbd
           aria-hidden="true"
-          className="pointer-events-none absolute end-3 top-1/2 hidden -translate-y-1/2 rounded-md border border-border px-1.5 py-0.5 font-mono text-[11px] font-medium text-muted-foreground sm:inline-flex"
+          className={cn(
+            "pointer-events-none absolute top-1/2 hidden -translate-y-1/2 rounded-md border border-border px-1.5 py-0.5 font-mono text-[11px] font-medium text-muted-foreground sm:inline-flex",
+            styles.kbd
+          )}
         >
           {shortcutHint}
         </kbd>

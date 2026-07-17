@@ -6,7 +6,7 @@ import {
   useState,
 } from "react"
 
-import { countToolsByCategory } from "@/lib/tool-directory"
+import { countToolsByCategory, toSuggestionEntries } from "@/lib/tool-directory"
 import { CategoryChips, CategorySidebar } from "./category-nav"
 import { normalizeQuery, readDirectoryStateFromLocation } from "./search-core"
 import { rankToolEntries } from "./search-core"
@@ -44,6 +44,10 @@ function ToolsDirectorySearch({
   const deferredQuery = useDeferredValue(query)
 
   const categoryCounts = useMemo(() => countToolsByCategory(entries), [entries])
+  const suggestionEntries = useMemo(
+    () => toSuggestionEntries(entries, language),
+    [entries, language]
+  )
   const validCategories = useMemo(
     () => new Set(categoryCounts.map(({ category: value }) => value)),
     [categoryCounts]
@@ -139,7 +143,7 @@ function ToolsDirectorySearch({
 
         <div className="flex items-center gap-3">
           <SearchCombobox
-            entries={entries}
+            entries={suggestionEntries}
             language={language}
             query={query}
             onQueryChange={setQuery}

@@ -6,10 +6,10 @@ import {
   ArrowRight,
   CircleArrowDown,
   Code,
-  Search,
   Shield,
 } from "@workspace/ui/icons"
 import MainLayout from "@/layouts/main.astro"
+import { HomeSearch } from "@/components/pages/home-search"
 import { localizePath } from "@/lib/site"
 import { formatSiteMessage, loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
@@ -21,6 +21,7 @@ import {
   getCategoryIcon,
   getCategoryLabel,
   resolveEntryLocale,
+  toSuggestionEntries,
 } from "@/lib/tool-directory"
 import type { SiteLanguage } from "@/lib/site"
 
@@ -42,6 +43,20 @@ const toolsPath = localizePath("/tools", language)
 const categories = countToolsByCategory(toolSearchIndex).slice(0, 8)
 const popularTools = findToolsBySlugs(toolSearchIndex, POPULAR_TOOL_SLUGS)
 const featuredTools = findToolsBySlugs(toolSearchIndex, FEATURED_TOOL_SLUGS)
+const suggestionEntries = toSuggestionEntries(toolSearchIndex, language)
+const searchMessages = {
+  clearSearchLabel: catalog.tools.clearSearchLabel,
+  emptySearchDescription: catalog.tools.emptySearchDescription,
+  emptySearchTitle: catalog.tools.emptySearchTitle,
+  searchLabel: catalog.tools.searchLabel,
+  searchPlaceholder: formatSiteMessage(catalog.tools.searchPlaceholder, {
+    count: toolCount,
+  }),
+  suggestionMatchCount: catalog.tools.suggestionMatchCount,
+  suggestionMatchCountOne: catalog.tools.suggestionMatchCountOne,
+  suggestionsHint: catalog.tools.suggestionsHint,
+  suggestionsLabel: catalog.tools.suggestionsLabel,
+}
 
 const privacyFeatures = [
   {
@@ -86,34 +101,15 @@ const privacyFeatures = [
       {catalog.home.description}
     </p>
     <div class="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center">
-      <form
-        action={toolsPath}
-        method="get"
-        role="search"
-        class="relative w-full sm:max-w-[32.5rem]"
-      >
-        <Search
-          className="pointer-events-none absolute top-1/2 start-3.5 size-4 -translate-y-1/2 text-muted-foreground"
+      <div class="w-full sm:max-w-[32.5rem]">
+        <HomeSearch
+          client:load
+          entries={suggestionEntries}
+          language={language}
+          categoryLabels={catalog.tools.categories}
+          messages={searchMessages}
         />
-        <input
-          type="search"
-          name="query"
-          id="home-search-input"
-          aria-label={catalog.tools.searchLabel}
-          placeholder={formatSiteMessage(catalog.tools.searchPlaceholder, {
-            count: toolCount,
-          })}
-          autocomplete="off"
-          class="h-12 w-full min-w-0 rounded-xl border border-input bg-transparent ps-10.5 pe-14 text-base shadow-xs transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 md:text-sm dark:bg-input/30"
-        />
-        <kbd
-          id="home-search-kbd"
-          aria-hidden="true"
-          class="pointer-events-none absolute top-1/2 end-3 hidden -translate-y-1/2 rounded-md border border-border px-1.5 py-0.5 font-mono text-[11px] font-medium text-muted-foreground sm:inline-flex"
-        >
-          ⌘K
-        </kbd>
-      </form>
+      </div>
       <a
         href={toolsPath}
         class="inline-flex h-12 shrink-0 items-center justify-center gap-1.5 rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
@@ -250,53 +246,3 @@ const privacyFeatures = [
   </section>
 </MainLayout>
 
-<script>
-  const APPLE_PLATFORM_PATTERN = /Mac|iPhone|iPad|iPod/i
-
-  function isApplePlatform() {
-    return APPLE_PLATFORM_PATTERN.test(navigator.userAgent)
-  }
-
-  function localizeSearchShortcutHint() {
-    const kbd = document.getElementById("home-search-kbd")
-
-    if (kbd && !isApplePlatform()) {
-      kbd.textContent = "Ctrl K"
-    }
-  }
-
-  function isEditableTarget(target: EventTarget | null) {
-    return (
-      target instanceof HTMLElement &&
-      (target instanceof HTMLInputElement ||
-        target instanceof HTMLTextAreaElement ||
-        target instanceof HTMLSelectElement ||
-        target.isContentEditable)
-    )
-  }
-
-  localizeSearchShortcutHint()
-  document.addEventListener("astro:page-load", localizeSearchShortcutHint)
-  document.addEventListener("keydown", (event) => {
-    const isShortcut =
-      (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k"
-    const isSlash =
-      event.key === "/" &&
-      !event.metaKey &&
-      !event.ctrlKey &&
-      !event.altKey &&
-      !isEditableTarget(event.target)
-
-    if (!isShortcut && !isSlash) {
-      return
-    }
-
-    const input = document.getElementById("home-search-input")
-
-    if (input instanceof HTMLInputElement) {
-      event.preventDefault()
-      input.focus()
-      input.select()
-    }
-  })
-</script>
