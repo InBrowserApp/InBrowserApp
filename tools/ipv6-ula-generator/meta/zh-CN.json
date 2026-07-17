@@ -1,0 +1,4 @@
+{
+  "name": "IPv6 ULA 生成器",
+  "description": "在浏览器中安全生成 RFC 4193 IPv6 唯一本地地址（ULA）/48 前缀，并规划其 fd00 /64 子网。"
+}

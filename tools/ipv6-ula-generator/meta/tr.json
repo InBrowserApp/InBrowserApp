@@ -1,0 +1,4 @@
+{
+  "name": "IPv6 ULA Oluşturucu",
+  "description": "RFC 4193'e uygun güvenli bir IPv6 Benzersiz Yerel Adres (ULA) /48 önekini tarayıcıda oluşturun ve fd00 /64 alt ağlarını planlayın."
+}

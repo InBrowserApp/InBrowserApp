@@ -75,11 +75,13 @@ function ToolCopyButton({
       ) : (
         <Copy data-icon="inline-start" />
       )}
-      {size === "icon-sm" ? (
-        <span className="sr-only">{statusLabel}</span>
-      ) : (
-        statusLabel
-      )}
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className={size === "icon-sm" ? "sr-only" : undefined}
+      >
+        {statusLabel}
+      </span>
     </Button>
   )
 }
