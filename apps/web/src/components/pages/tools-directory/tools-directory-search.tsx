@@ -3,39 +3,30 @@ import {
   useEffect,
   useEffectEvent,
   useMemo,
-  useRef,
   useState,
 } from "react"
 
-import { Button } from "@workspace/ui/components/ui/button"
-import { Input } from "@workspace/ui/components/ui/input"
-import { Search } from "@workspace/ui/icons"
 import { countToolsByCategory } from "@/lib/tool-directory"
 import { CategoryChips, CategorySidebar } from "./category-nav"
-import {
-  normalizeQuery,
-  rankToolEntries,
-  readDirectoryStateFromLocation,
-} from "./search-core"
+import { normalizeQuery, readDirectoryStateFromLocation } from "./search-core"
+import { rankToolEntries } from "./search-core"
+import { SearchCombobox } from "./search-combobox"
 import { DirectoryEmptyState, ToolList } from "./tool-list"
 
 import type { ToolSearchIndexEntry } from "@workspace/tool-registry"
 import type { SiteLanguage } from "@/lib/site"
+import type { SearchComboboxMessages } from "./search-combobox"
 
-type ToolsDirectorySearchMessages = Readonly<{
-  searchLabel: string
-  searchPlaceholder: string
-  resultCountSuffix: string
-  clearSearchLabel: string
-  categoriesLabel: string
-  categoryAll: string
-  sortLabel: string
-  emptyRegistryTitle: string
-  emptyRegistryDescription: string
-  emptySearchTitle: string
-  emptySearchDescription: string
-  categoryLabels: Readonly<Record<string, string>>
-}>
+type ToolsDirectorySearchMessages = SearchComboboxMessages &
+  Readonly<{
+    resultCountSuffix: string
+    categoriesLabel: string
+    categoryAll: string
+    sortLabel: string
+    emptyRegistryTitle: string
+    emptyRegistryDescription: string
+    categoryLabels: Readonly<Record<string, string>>
+  }>
 
 type ToolsDirectorySearchProps = Readonly<{
   entries: readonly ToolSearchIndexEntry[]
@@ -51,8 +42,6 @@ function ToolsDirectorySearch({
   const [query, setQuery] = useState("")
   const [category, setCategory] = useState<string | null>(null)
   const deferredQuery = useDeferredValue(query)
-  const inputRef = useRef<HTMLInputElement>(null)
-  const composingRef = useRef(false)
 
   const categoryCounts = useMemo(() => countToolsByCategory(entries), [entries])
   const validCategories = useMemo(
@@ -99,17 +88,6 @@ function ToolsDirectorySearch({
     )
   })
 
-  /**
-   * Keep the uncontrolled input in sync with React state for
-   * programmatic updates (clear button, popstate, etc.) but only
-   * when the user is NOT mid-IME-composition.
-   */
-  useEffect(() => {
-    if (inputRef.current && !composingRef.current) {
-      inputRef.current.value = query
-    }
-  }, [query])
-
   useEffect(() => {
     syncStateFromLocation()
 
@@ -127,28 +105,6 @@ function ToolsDirectorySearch({
   useEffect(() => {
     syncStateToUrl(normalizeQuery(deferredQuery), category)
   }, [deferredQuery, category])
-
-  /** ⌘K / Ctrl+K focuses the directory search input. */
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (
-        !(event.metaKey || event.ctrlKey) ||
-        event.key.toLowerCase() !== "k"
-      ) {
-        return
-      }
-
-      event.preventDefault()
-      inputRef.current?.focus()
-      inputRef.current?.select()
-    }
-
-    document.addEventListener("keydown", handleKeyDown)
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown)
-    }
-  }, [])
 
   const normalizedQuery = normalizeQuery(deferredQuery)
   const rankedEntries = rankToolEntries(
@@ -182,43 +138,16 @@ function ToolsDirectorySearch({
         <CategoryChips {...categoryNavProps} />
 
         <div className="flex items-center gap-3">
-          <div className="relative flex-1">
-            <Search className="pointer-events-none absolute start-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
-            <Input
-              ref={inputRef}
-              aria-label={messages.searchLabel}
-              className="h-10 ps-9.5 text-base md:text-sm"
-              placeholder={messages.searchPlaceholder}
-              defaultValue={query}
-              onCompositionStart={() => {
-                composingRef.current = true
-              }}
-              onCompositionEnd={(event) => {
-                composingRef.current = false
-                setQuery(event.currentTarget.value)
-              }}
-              onChange={(event) => {
-                if (composingRef.current) {
-                  return
-                }
+          <SearchCombobox
+            entries={entries}
+            language={language}
+            query={query}
+            onQueryChange={setQuery}
+            categoryLabels={messages.categoryLabels}
+            messages={messages}
+          />
 
-                setQuery(event.currentTarget.value)
-              }}
-            />
-          </div>
-
-          {query ? (
-            <Button
-              type="button"
-              variant="outline"
-              className="h-10"
-              onClick={() => {
-                setQuery("")
-              }}
-            >
-              {messages.clearSearchLabel}
-            </Button>
-          ) : (
+          {query ? null : (
             <span
               aria-hidden="true"
               className="shrink-0 text-[13px] text-muted-foreground"

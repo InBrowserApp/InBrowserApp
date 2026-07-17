@@ -101,4 +101,99 @@ function rankToolEntries(
     .map(({ entry }) => entry)
 }
 
-export { normalizeQuery, rankToolEntries, readDirectoryStateFromLocation }
+type ToolSearchSuggestion = Readonly<{
+  entry: ToolSearchIndexEntry
+  name: string
+  pre: string
+  match: string
+  post: string
+}>
+
+/** Suggestion rows shown in the search dropdown (per design spec). */
+const SUGGESTION_LIMIT = 8
+
+function getSuggestionScore(loweredName: string, normalizedQuery: string) {
+  const index = loweredName.indexOf(normalizedQuery)
+
+  if (index === 0) {
+    return 100
+  }
+
+  if (index > 0) {
+    return 50
+  }
+
+  const tokens = normalizedQuery.split(" ")
+
+  return tokens.every((token) => loweredName.includes(token)) ? 10 : -1
+}
+
+function splitSuggestionName(name: string, normalizedQuery: string) {
+  const loweredName = name.toLowerCase()
+  let index = loweredName.indexOf(normalizedQuery)
+  let length = normalizedQuery.length
+
+  if (index < 0) {
+    const firstToken = normalizedQuery.split(" ")[0] ?? ""
+
+    index = firstToken ? loweredName.indexOf(firstToken) : -1
+    length = firstToken.length
+  }
+
+  if (index < 0) {
+    return { match: "", post: "", pre: name }
+  }
+
+  return {
+    match: name.slice(index, index + length),
+    post: name.slice(index + length),
+    pre: name.slice(0, index),
+  }
+}
+
+/**
+ * Name-only dropdown suggestions: name prefix > name contains > all
+ * tokens included, ties alphabetical, capped at SUGGESTION_LIMIT.
+ */
+function buildSearchSuggestions(
+  entries: readonly ToolSearchIndexEntry[],
+  query: string,
+  language: SiteLanguage
+): readonly ToolSearchSuggestion[] {
+  const normalizedQuery = normalizeQuery(query).toLowerCase()
+
+  if (!normalizedQuery) {
+    return []
+  }
+
+  return entries
+    .map((entry) => {
+      const name = resolveEntryLocale(entry, language).name
+
+      return {
+        entry,
+        name,
+        score: getSuggestionScore(name.toLowerCase(), normalizedQuery),
+      }
+    })
+    .filter(({ score }) => score >= 0)
+    .sort(
+      (left, right) =>
+        right.score - left.score ||
+        left.name.localeCompare(right.name, language)
+    )
+    .slice(0, SUGGESTION_LIMIT)
+    .map(({ entry, name }) => ({
+      entry,
+      name,
+      ...splitSuggestionName(name, normalizedQuery),
+    }))
+}
+
+export {
+  buildSearchSuggestions,
+  normalizeQuery,
+  rankToolEntries,
+  readDirectoryStateFromLocation,
+}
+export type { ToolSearchSuggestion }
