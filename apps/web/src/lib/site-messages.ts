@@ -11,6 +11,8 @@ type SiteMessageCatalog = Readonly<{
     themeLight: string
     themeDark: string
     themeSystem: string
+    footerTagline: string
+    footerGitHub: string
     navigation: Readonly<{
       home: string
       tools: string
@@ -26,19 +28,34 @@ type SiteMessageCatalog = Readonly<{
   home: Readonly<{
     title: string
     description: string
+    eyebrow: string
     primaryAction: string
+    popularLabel: string
+    featureNoUploadsTitle: string
+    featureNoUploadsDescription: string
+    featureNoServersTitle: string
+    featureNoServersDescription: string
+    featureOfflineTitle: string
+    featureOfflineDescription: string
+    categoriesTitle: string
+    categoriesAction: string
+    popularToolsTitle: string
+    popularToolsAction: string
   }>
   tools: Readonly<{
     title: string
-    description: string
     searchLabel: string
     searchPlaceholder: string
     resultCountSuffix: string
     clearSearchLabel: string
+    categoriesLabel: string
+    categoryAll: string
+    sortLabel: string
     emptyRegistryTitle: string
     emptyRegistryDescription: string
     emptySearchTitle: string
     emptySearchDescription: string
+    categories: Readonly<Record<string, string>>
   }>
 }>
 
@@ -74,4 +91,17 @@ function loadSiteMessages(language: SiteLanguage) {
   }
 }
 
-export { loadSiteMessages }
+/**
+ * Replaces `{placeholder}` tokens in a site message template with the
+ * provided values. Unknown placeholders are left untouched.
+ */
+function formatSiteMessage(
+  template: string,
+  values: Readonly<Record<string, string | number>>
+) {
+  return template.replace(/\{(\w+)\}/g, (token, key: string) =>
+    key in values ? String(values[key]) : token
+  )
+}
+
+export { formatSiteMessage, loadSiteMessages }

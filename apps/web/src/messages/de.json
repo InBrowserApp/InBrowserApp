@@ -7,6 +7,8 @@
     "themeLight": "Hell",
     "themeDark": "Dunkel",
     "themeSystem": "System",
+    "footerTagline": "Kostenlos & Open Source",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Startseite",
       "tools": "Tools"
@@ -22,18 +24,45 @@
   "home": {
     "title": "Browserbasierte Tools, die Ihre Privatsphäre respektieren",
     "description": "Jedes Tool läuft lokal in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät.",
-    "primaryAction": "Alle Tools durchsuchen"
+    "eyebrow": "{count} Tools · Open Source · Läuft zu 100 % in Ihrem Browser",
+    "primaryAction": "Alle Tools durchsuchen",
+    "popularLabel": "Beliebt:",
+    "featureNoUploadsTitle": "Keine Uploads",
+    "featureNoUploadsDescription": "Dateien werden auf Ihrem Gerät verarbeitet und niemals irgendwohin gesendet.",
+    "featureNoServersTitle": "Keine Server",
+    "featureNoServersDescription": "Alles wird lokal berechnet — Open Source und überprüfbar.",
+    "featureOfflineTitle": "Funktioniert offline",
+    "featureOfflineDescription": "Als PWA installierbar — Tools funktionieren auch ohne Netzwerk weiter.",
+    "categoriesTitle": "Nach Kategorie durchsuchen",
+    "categoriesAction": "Alle Tools",
+    "popularToolsTitle": "Beliebte Tools",
+    "popularToolsAction": "Alle {count} anzeigen"
   },
   "tools": {
     "title": "Alle Tools",
-    "description": "Alles läuft in Ihrem Browser — es werden keine Daten hochgeladen.",
     "searchLabel": "Tools suchen",
-    "searchPlaceholder": "Nach Name oder Beschreibung suchen…",
+    "searchPlaceholder": "{count} Tools durchsuchen…",
     "resultCountSuffix": "Tools",
     "clearSearchLabel": "Löschen",
+    "categoriesLabel": "Kategorien",
+    "categoryAll": "Alle Tools",
+    "sortLabel": "A–Z",
     "emptyRegistryTitle": "Noch keine Tools verfügbar.",
     "emptyRegistryDescription": "Tools werden hinzugefügt — schauen Sie bald wieder vorbei.",
     "emptySearchTitle": "Keine passenden Tools.",
-    "emptySearchDescription": "Versuchen Sie ein anderes Stichwort oder löschen Sie die Suche."
+    "emptySearchDescription": "Versuchen Sie ein anderes Stichwort oder löschen Sie die Suche.",
+    "categories": {
+      "crypto": "Krypto & Hashing",
+      "developer": "Entwickler",
+      "image": "Bild & Medien",
+      "json": "JSON & Daten",
+      "misc": "Sonstiges",
+      "network": "Netzwerk",
+      "pdf": "PDF",
+      "random": "Zufall",
+      "text": "Text",
+      "time": "Zeit & Datum",
+      "web": "Web"
+    }
   }
 }

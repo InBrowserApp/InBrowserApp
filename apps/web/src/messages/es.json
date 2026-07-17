@@ -7,6 +7,8 @@
     "themeLight": "Claro",
     "themeDark": "Oscuro",
     "themeSystem": "Sistema",
+    "footerTagline": "Gratis y de código abierto",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Inicio",
       "tools": "Herramientas"
@@ -22,18 +24,45 @@
   "home": {
     "title": "Herramientas basadas en el navegador que respetan tu privacidad",
     "description": "Cada herramienta se ejecuta localmente en tu navegador. Tus datos nunca salen de tu dispositivo.",
-    "primaryAction": "Explorar todas las herramientas"
+    "eyebrow": "{count} herramientas · Código abierto · Se ejecuta 100% en tu navegador",
+    "primaryAction": "Explorar todas las herramientas",
+    "popularLabel": "Populares:",
+    "featureNoUploadsTitle": "Sin subidas",
+    "featureNoUploadsDescription": "Los archivos se procesan en tu dispositivo y nunca se envían a ninguna parte.",
+    "featureNoServersTitle": "Sin servidores",
+    "featureNoServersDescription": "Todo se calcula localmente — código abierto y auditable.",
+    "featureOfflineTitle": "Funciona sin conexión",
+    "featureOfflineDescription": "Instalable como PWA — las herramientas siguen funcionando sin red.",
+    "categoriesTitle": "Explorar por categoría",
+    "categoriesAction": "Todas las herramientas",
+    "popularToolsTitle": "Herramientas populares",
+    "popularToolsAction": "Ver todas las {count}"
   },
   "tools": {
     "title": "Todas las herramientas",
-    "description": "Todo se ejecuta en tu navegador — no se sube ningún dato.",
     "searchLabel": "Buscar herramientas",
-    "searchPlaceholder": "Buscar por nombre o descripción…",
+    "searchPlaceholder": "Buscar entre {count} herramientas…",
     "resultCountSuffix": "herramientas",
     "clearSearchLabel": "Limpiar",
+    "categoriesLabel": "Categorías",
+    "categoryAll": "Todas las herramientas",
+    "sortLabel": "A–Z",
     "emptyRegistryTitle": "Aún no hay herramientas disponibles.",
     "emptyRegistryDescription": "Se están añadiendo herramientas — vuelve pronto.",
     "emptySearchTitle": "No hay herramientas coincidentes.",
-    "emptySearchDescription": "Prueba con otra palabra clave o borra la búsqueda."
+    "emptySearchDescription": "Prueba con otra palabra clave o borra la búsqueda.",
+    "categories": {
+      "crypto": "Criptografía y hashing",
+      "developer": "Desarrollo",
+      "image": "Imagen y multimedia",
+      "json": "JSON y datos",
+      "misc": "Varios",
+      "network": "Redes",
+      "pdf": "PDF",
+      "random": "Aleatorio",
+      "text": "Texto",
+      "time": "Fecha y hora",
+      "web": "Web"
+    }
   }
 }

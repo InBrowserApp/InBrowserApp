@@ -7,6 +7,8 @@
     "themeLight": "Chiaro",
     "themeDark": "Scuro",
     "themeSystem": "Sistema",
+    "footerTagline": "Gratuito e open source",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Home",
       "tools": "Strumenti"
@@ -22,18 +24,45 @@
   "home": {
     "title": "Strumenti basati sul browser che rispettano la tua privacy",
     "description": "Ogni strumento viene eseguito localmente nel tuo browser. I tuoi dati non lasciano mai il tuo dispositivo.",
-    "primaryAction": "Sfoglia tutti gli strumenti"
+    "eyebrow": "{count} strumenti · Open source · Funziona al 100% nel tuo browser",
+    "primaryAction": "Sfoglia tutti gli strumenti",
+    "popularLabel": "Popolari:",
+    "featureNoUploadsTitle": "Nessun caricamento",
+    "featureNoUploadsDescription": "I file vengono elaborati sul tuo dispositivo e non vengono mai inviati da nessuna parte.",
+    "featureNoServersTitle": "Nessun server",
+    "featureNoServersDescription": "Tutto viene elaborato localmente — open source e verificabile.",
+    "featureOfflineTitle": "Funziona offline",
+    "featureOfflineDescription": "Installabile come PWA — gli strumenti continuano a funzionare senza rete.",
+    "categoriesTitle": "Sfoglia per categoria",
+    "categoriesAction": "Tutti gli strumenti",
+    "popularToolsTitle": "Strumenti popolari",
+    "popularToolsAction": "Vedi tutti e {count}"
   },
   "tools": {
     "title": "Tutti gli strumenti",
-    "description": "Tutto viene eseguito nel tuo browser — nessun dato viene caricato.",
     "searchLabel": "Cerca strumenti",
-    "searchPlaceholder": "Cerca per nome o descrizione…",
+    "searchPlaceholder": "Cerca tra {count} strumenti…",
     "resultCountSuffix": "strumenti",
     "clearSearchLabel": "Cancella",
+    "categoriesLabel": "Categorie",
+    "categoryAll": "Tutti gli strumenti",
+    "sortLabel": "A–Z",
     "emptyRegistryTitle": "Nessuno strumento ancora disponibile.",
     "emptyRegistryDescription": "Gli strumenti sono in fase di aggiunta — torna presto.",
     "emptySearchTitle": "Nessuno strumento corrispondente.",
-    "emptySearchDescription": "Prova una parola chiave diversa o cancella la ricerca."
+    "emptySearchDescription": "Prova una parola chiave diversa o cancella la ricerca.",
+    "categories": {
+      "crypto": "Crittografia e hashing",
+      "developer": "Sviluppatori",
+      "image": "Immagini e media",
+      "json": "JSON e dati",
+      "misc": "Varie",
+      "network": "Rete",
+      "pdf": "PDF",
+      "random": "Casuale",
+      "text": "Testo",
+      "time": "Data e ora",
+      "web": "Web"
+    }
   }
 }

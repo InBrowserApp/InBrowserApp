@@ -7,6 +7,8 @@
     "themeLight": "בהיר",
     "themeDark": "כהה",
     "themeSystem": "מערכת",
+    "footerTagline": "חינמי ובקוד פתוח",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "בית",
       "tools": "כלים"
@@ -22,18 +24,45 @@
   "home": {
     "title": "כלים מבוססי דפדפן המכבדים את הפרטיות שלך",
     "description": "כל כלי פועל מקומית בדפדפן שלך. הנתונים שלך לעולם אינם עוזבים את המכשיר.",
-    "primaryAction": "עיין בכל הכלים"
+    "eyebrow": "{count} כלים · קוד פתוח · פועל 100% בדפדפן שלך",
+    "primaryAction": "עיין בכל הכלים",
+    "popularLabel": "פופולריים:",
+    "featureNoUploadsTitle": "ללא העלאות",
+    "featureNoUploadsDescription": "הקבצים מעובדים במכשיר שלך ולעולם אינם נשלחים לשום מקום.",
+    "featureNoServersTitle": "ללא שרתים",
+    "featureNoServersDescription": "הכל מחושב מקומית — קוד פתוח וניתן לבדיקה.",
+    "featureOfflineTitle": "פועל ללא אינטרנט",
+    "featureOfflineDescription": "ניתן להתקנה כאפליקציית PWA — הכלים ממשיכים לפעול גם ללא רשת.",
+    "categoriesTitle": "עיון לפי קטגוריה",
+    "categoriesAction": "כל הכלים",
+    "popularToolsTitle": "כלים פופולריים",
+    "popularToolsAction": "הצג את כל ה-{count}"
   },
   "tools": {
     "title": "כל הכלים",
-    "description": "הכל פועל בדפדפן שלך — לא מועלים נתונים.",
     "searchLabel": "חפש כלים",
-    "searchPlaceholder": "חפש לפי שם או תיאור…",
+    "searchPlaceholder": "חפש בין {count} כלים…",
     "resultCountSuffix": "כלים",
     "clearSearchLabel": "נקה",
+    "categoriesLabel": "קטגוריות",
+    "categoryAll": "כל הכלים",
+    "sortLabel": "א–ת",
     "emptyRegistryTitle": "אין כלים זמינים עדיין.",
     "emptyRegistryDescription": "כלים מתווספים — חזור בקרוב.",
     "emptySearchTitle": "אין כלים תואמים.",
-    "emptySearchDescription": "נסה מילת מפתח אחרת או נקה את החיפוש."
+    "emptySearchDescription": "נסה מילת מפתח אחרת או נקה את החיפוש.",
+    "categories": {
+      "crypto": "הצפנה וגיבוב",
+      "developer": "מפתחים",
+      "image": "תמונות ומדיה",
+      "json": "JSON ונתונים",
+      "misc": "שונות",
+      "network": "רשת",
+      "pdf": "PDF",
+      "random": "אקראיות",
+      "text": "טקסט",
+      "time": "זמן ותאריך",
+      "web": "אינטרנט"
+    }
   }
 }

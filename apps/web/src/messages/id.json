@@ -7,6 +7,8 @@
     "themeLight": "Terang",
     "themeDark": "Gelap",
     "themeSystem": "Sistem",
+    "footerTagline": "Gratis & sumber terbuka",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Beranda",
       "tools": "Alat"
@@ -22,18 +24,45 @@
   "home": {
     "title": "Alat berbasis peramban yang menghormati privasi Anda",
     "description": "Setiap alat berjalan secara lokal di peramban Anda. Data Anda tidak pernah meninggalkan perangkat Anda.",
-    "primaryAction": "Jelajahi semua alat"
+    "eyebrow": "{count} alat · Sumber terbuka · Berjalan 100% di peramban Anda",
+    "primaryAction": "Jelajahi semua alat",
+    "popularLabel": "Populer:",
+    "featureNoUploadsTitle": "Tanpa unggahan",
+    "featureNoUploadsDescription": "Berkas diproses di perangkat Anda dan tidak pernah dikirim ke mana pun.",
+    "featureNoServersTitle": "Tanpa server",
+    "featureNoServersDescription": "Semua komputasi berjalan secara lokal — sumber terbuka dan dapat diaudit.",
+    "featureOfflineTitle": "Berfungsi offline",
+    "featureOfflineDescription": "Dapat dipasang sebagai PWA — alat tetap berfungsi tanpa jaringan.",
+    "categoriesTitle": "Jelajahi berdasarkan kategori",
+    "categoriesAction": "Semua alat",
+    "popularToolsTitle": "Alat populer",
+    "popularToolsAction": "Lihat semua {count}"
   },
   "tools": {
     "title": "Semua Alat",
-    "description": "Semuanya berjalan di peramban Anda — tidak ada data yang diunggah.",
     "searchLabel": "Cari alat",
-    "searchPlaceholder": "Cari berdasarkan nama atau deskripsi…",
+    "searchPlaceholder": "Cari {count} alat…",
     "resultCountSuffix": "alat",
     "clearSearchLabel": "Hapus",
+    "categoriesLabel": "Kategori",
+    "categoryAll": "Semua alat",
+    "sortLabel": "A–Z",
     "emptyRegistryTitle": "Belum ada alat yang tersedia.",
     "emptyRegistryDescription": "Alat sedang ditambahkan — periksa kembali nanti.",
     "emptySearchTitle": "Tidak ada alat yang cocok.",
-    "emptySearchDescription": "Coba kata kunci lain atau hapus pencarian."
+    "emptySearchDescription": "Coba kata kunci lain atau hapus pencarian.",
+    "categories": {
+      "crypto": "Kripto & Hashing",
+      "developer": "Pengembang",
+      "image": "Gambar & Media",
+      "json": "JSON & Data",
+      "misc": "Lain-lain",
+      "network": "Jaringan",
+      "pdf": "PDF",
+      "random": "Acak",
+      "text": "Teks",
+      "time": "Waktu & Tanggal",
+      "web": "Web"
+    }
   }
 }

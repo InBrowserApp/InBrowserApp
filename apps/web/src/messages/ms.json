@@ -7,6 +7,8 @@
     "themeLight": "Cerah",
     "themeDark": "Gelap",
     "themeSystem": "Sistem",
+    "footerTagline": "Percuma & sumber terbuka",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Laman Utama",
       "tools": "Alat"
@@ -22,18 +24,45 @@
   "home": {
     "title": "Alat berasaskan pelayar yang menghormati privasi anda",
     "description": "Setiap alat berjalan secara tempatan dalam pelayar anda. Data anda tidak pernah meninggalkan peranti anda.",
-    "primaryAction": "Layari semua alat"
+    "eyebrow": "{count} alat · Sumber terbuka · Berjalan 100% dalam pelayar anda",
+    "primaryAction": "Layari semua alat",
+    "popularLabel": "Popular:",
+    "featureNoUploadsTitle": "Tiada muat naik",
+    "featureNoUploadsDescription": "Fail diproses pada peranti anda dan tidak pernah dihantar ke mana-mana.",
+    "featureNoServersTitle": "Tiada pelayan",
+    "featureNoServersDescription": "Semuanya dikira secara tempatan — sumber terbuka dan boleh diaudit.",
+    "featureOfflineTitle": "Berfungsi luar talian",
+    "featureOfflineDescription": "Boleh dipasang sebagai PWA — alat terus berfungsi tanpa rangkaian.",
+    "categoriesTitle": "Layari mengikut kategori",
+    "categoriesAction": "Semua alat",
+    "popularToolsTitle": "Alat popular",
+    "popularToolsAction": "Lihat semua {count}"
   },
   "tools": {
     "title": "Semua Alat",
-    "description": "Semuanya berjalan dalam pelayar anda — tiada data dimuat naik.",
     "searchLabel": "Cari alat",
-    "searchPlaceholder": "Cari mengikut nama atau penerangan…",
+    "searchPlaceholder": "Cari {count} alat…",
     "resultCountSuffix": "alat",
     "clearSearchLabel": "Kosongkan",
+    "categoriesLabel": "Kategori",
+    "categoryAll": "Semua alat",
+    "sortLabel": "A–Z",
     "emptyRegistryTitle": "Tiada alat tersedia lagi.",
     "emptyRegistryDescription": "Alat sedang ditambah — sila semak semula tidak lama lagi.",
     "emptySearchTitle": "Tiada alat yang sepadan.",
-    "emptySearchDescription": "Cuba kata kunci lain atau kosongkan carian."
+    "emptySearchDescription": "Cuba kata kunci lain atau kosongkan carian.",
+    "categories": {
+      "crypto": "Kripto & Pencincangan",
+      "developer": "Pembangun",
+      "image": "Imej & Media",
+      "json": "JSON & Data",
+      "misc": "Pelbagai",
+      "network": "Rangkaian",
+      "pdf": "PDF",
+      "random": "Rawak",
+      "text": "Teks",
+      "time": "Masa & Tarikh",
+      "web": "Web"
+    }
   }
 }

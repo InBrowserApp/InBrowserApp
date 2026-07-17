@@ -7,6 +7,8 @@
     "themeLight": "Claro",
     "themeDark": "Escuro",
     "themeSystem": "Sistema",
+    "footerTagline": "Gratuito e de código aberto",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Início",
       "tools": "Ferramentas"
@@ -22,18 +24,45 @@
   "home": {
     "title": "Ferramentas baseadas no navegador que respeitam a sua privacidade",
     "description": "Cada ferramenta funciona localmente no seu navegador. Os seus dados nunca saem do seu dispositivo.",
-    "primaryAction": "Ver todas as ferramentas"
+    "eyebrow": "{count} ferramentas · Código aberto · Funciona 100% no seu navegador",
+    "primaryAction": "Ver todas as ferramentas",
+    "popularLabel": "Populares:",
+    "featureNoUploadsTitle": "Sem uploads",
+    "featureNoUploadsDescription": "Os ficheiros são processados no seu dispositivo e nunca são enviados para lado nenhum.",
+    "featureNoServersTitle": "Sem servidores",
+    "featureNoServersDescription": "Tudo é processado localmente — código aberto e auditável.",
+    "featureOfflineTitle": "Funciona offline",
+    "featureOfflineDescription": "Instalável como PWA — as ferramentas continuam a funcionar sem rede.",
+    "categoriesTitle": "Explorar por categoria",
+    "categoriesAction": "Todas as ferramentas",
+    "popularToolsTitle": "Ferramentas populares",
+    "popularToolsAction": "Ver todas as {count}"
   },
   "tools": {
     "title": "Todas as ferramentas",
-    "description": "Tudo funciona no seu navegador — nenhum dado é enviado.",
     "searchLabel": "Pesquisar ferramentas",
-    "searchPlaceholder": "Pesquisar por nome ou descrição…",
+    "searchPlaceholder": "Pesquisar {count} ferramentas…",
     "resultCountSuffix": "ferramentas",
     "clearSearchLabel": "Limpar",
+    "categoriesLabel": "Categorias",
+    "categoryAll": "Todas as ferramentas",
+    "sortLabel": "A–Z",
     "emptyRegistryTitle": "Ainda não há ferramentas disponíveis.",
     "emptyRegistryDescription": "Ferramentas estão a ser adicionadas — volte em breve.",
     "emptySearchTitle": "Nenhuma ferramenta correspondente.",
-    "emptySearchDescription": "Tente uma palavra-chave diferente ou limpe a pesquisa."
+    "emptySearchDescription": "Tente uma palavra-chave diferente ou limpe a pesquisa.",
+    "categories": {
+      "crypto": "Criptografia e hashing",
+      "developer": "Desenvolvimento",
+      "image": "Imagem e multimédia",
+      "json": "JSON e dados",
+      "misc": "Diversos",
+      "network": "Rede",
+      "pdf": "PDF",
+      "random": "Aleatório",
+      "text": "Texto",
+      "time": "Data e hora",
+      "web": "Web"
+    }
   }
 }

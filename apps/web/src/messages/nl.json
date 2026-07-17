@@ -7,6 +7,8 @@
     "themeLight": "Licht",
     "themeDark": "Donker",
     "themeSystem": "Systeem",
+    "footerTagline": "Gratis & open source",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Start",
       "tools": "Tools"
@@ -22,18 +24,45 @@
   "home": {
     "title": "Browsergebaseerde tools die je privacy respecteren",
     "description": "Elke tool draait lokaal in je browser. Je gegevens verlaten nooit je apparaat.",
-    "primaryAction": "Alle tools bekijken"
+    "eyebrow": "{count} tools · Open source · Draait 100% in je browser",
+    "primaryAction": "Alle tools bekijken",
+    "popularLabel": "Populair:",
+    "featureNoUploadsTitle": "Geen uploads",
+    "featureNoUploadsDescription": "Bestanden worden op je apparaat verwerkt en nooit ergens naartoe verstuurd.",
+    "featureNoServersTitle": "Geen servers",
+    "featureNoServersDescription": "Alles wordt lokaal berekend — open source en controleerbaar.",
+    "featureOfflineTitle": "Werkt offline",
+    "featureOfflineDescription": "Installeerbaar als PWA — tools blijven werken zonder netwerk.",
+    "categoriesTitle": "Blader per categorie",
+    "categoriesAction": "Alle tools",
+    "popularToolsTitle": "Populaire tools",
+    "popularToolsAction": "Bekijk alle {count}"
   },
   "tools": {
     "title": "Alle tools",
-    "description": "Alles draait in je browser — er worden geen gegevens geüpload.",
     "searchLabel": "Tools zoeken",
-    "searchPlaceholder": "Zoeken op naam of beschrijving…",
+    "searchPlaceholder": "Doorzoek {count} tools…",
     "resultCountSuffix": "tools",
     "clearSearchLabel": "Wissen",
+    "categoriesLabel": "Categorieën",
+    "categoryAll": "Alle tools",
+    "sortLabel": "A–Z",
     "emptyRegistryTitle": "Nog geen tools beschikbaar.",
     "emptyRegistryDescription": "Er worden tools toegevoegd — kom snel terug.",
     "emptySearchTitle": "Geen overeenkomende tools.",
-    "emptySearchDescription": "Probeer een ander trefwoord of wis de zoekopdracht."
+    "emptySearchDescription": "Probeer een ander trefwoord of wis de zoekopdracht.",
+    "categories": {
+      "crypto": "Crypto & hashing",
+      "developer": "Ontwikkelaars",
+      "image": "Afbeeldingen & media",
+      "json": "JSON & data",
+      "misc": "Overig",
+      "network": "Netwerk",
+      "pdf": "PDF",
+      "random": "Willekeurig",
+      "text": "Tekst",
+      "time": "Tijd & datum",
+      "web": "Web"
+    }
   }
 }

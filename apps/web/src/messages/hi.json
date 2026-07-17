@@ -7,6 +7,8 @@
     "themeLight": "हल्का",
     "themeDark": "गहरा",
     "themeSystem": "सिस्टम",
+    "footerTagline": "मुफ़्त और ओपन सोर्स",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "मुखपृष्ठ",
       "tools": "उपकरण"
@@ -22,18 +24,45 @@
   "home": {
     "title": "ब्राउज़र-आधारित उपकरण जो आपकी गोपनीयता का सम्मान करते हैं",
     "description": "हर उपकरण स्थानीय रूप से आपके ब्राउज़र में चलता है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
-    "primaryAction": "सभी उपकरण देखें"
+    "eyebrow": "{count} उपकरण · ओपन सोर्स · 100% आपके ब्राउज़र में चलता है",
+    "primaryAction": "सभी उपकरण देखें",
+    "popularLabel": "लोकप्रिय:",
+    "featureNoUploadsTitle": "कोई अपलोड नहीं",
+    "featureNoUploadsDescription": "फ़ाइलें आपके डिवाइस पर ही प्रोसेस होती हैं और कभी कहीं नहीं भेजी जातीं।",
+    "featureNoServersTitle": "कोई सर्वर नहीं",
+    "featureNoServersDescription": "सारी गणना स्थानीय रूप से होती है — ओपन सोर्स और ऑडिट करने योग्य।",
+    "featureOfflineTitle": "ऑफ़लाइन काम करता है",
+    "featureOfflineDescription": "PWA के रूप में इंस्टॉल किया जा सकता है — उपकरण नेटवर्क के बिना भी काम करते रहते हैं।",
+    "categoriesTitle": "श्रेणी के अनुसार ब्राउज़ करें",
+    "categoriesAction": "सभी उपकरण",
+    "popularToolsTitle": "लोकप्रिय उपकरण",
+    "popularToolsAction": "सभी {count} देखें"
   },
   "tools": {
     "title": "सभी उपकरण",
-    "description": "सब कुछ आपके ब्राउज़र में चलता है — कोई डेटा अपलोड नहीं किया जाता।",
     "searchLabel": "उपकरण खोजें",
-    "searchPlaceholder": "नाम या विवरण से खोजें…",
+    "searchPlaceholder": "{count} उपकरणों में खोजें…",
     "resultCountSuffix": "उपकरण",
     "clearSearchLabel": "साफ़ करें",
+    "categoriesLabel": "श्रेणियाँ",
+    "categoryAll": "सभी उपकरण",
+    "sortLabel": "A–Z",
     "emptyRegistryTitle": "अभी तक कोई उपकरण उपलब्ध नहीं है।",
     "emptyRegistryDescription": "उपकरण जोड़े जा रहे हैं — जल्द ही फिर से देखें।",
     "emptySearchTitle": "कोई मेल खाने वाले उपकरण नहीं।",
-    "emptySearchDescription": "कोई अन्य कीवर्ड आज़माएँ या खोज साफ़ करें।"
+    "emptySearchDescription": "कोई अन्य कीवर्ड आज़माएँ या खोज साफ़ करें।",
+    "categories": {
+      "crypto": "क्रिप्टो और हैशिंग",
+      "developer": "डेवलपर",
+      "image": "छवि और मीडिया",
+      "json": "JSON और डेटा",
+      "misc": "विविध",
+      "network": "नेटवर्क",
+      "pdf": "PDF",
+      "random": "रैंडम",
+      "text": "टेक्स्ट",
+      "time": "समय और दिनांक",
+      "web": "वेब"
+    }
   }
 }

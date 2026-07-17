@@ -402,7 +402,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "archive-viewer",
-    category: "code",
+    category: "developer",
     icon: "archive",
     tags: ["archive", "zip", "tar", "gzip", "viewer", "offline"],
     locales: {
@@ -2709,7 +2709,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "bcrypt-hash-password",
-    category: "hash",
+    category: "crypto",
     icon: "lock",
     tags: [
       "bcrypt",
@@ -7735,7 +7735,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "favicon-assets-generator",
-    category: "favicon",
+    category: "image",
     icon: "image",
     tags: [
       "favicon",
@@ -13257,7 +13257,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   },
   {
     slug: "markdown-previewer",
-    category: "document",
+    category: "text",
     icon: "file-text",
     tags: ["document", "markdown", "preview"],
     locales: {
@@ -27330,7 +27330,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "archive-viewer": {
     slug: "archive-viewer",
-    category: "code",
+    category: "developer",
     icon: "archive",
     tags: ["archive", "zip", "tar", "gzip", "viewer", "offline"],
     locales: {
@@ -29637,7 +29637,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "bcrypt-hash-password": {
     slug: "bcrypt-hash-password",
-    category: "hash",
+    category: "crypto",
     icon: "lock",
     tags: [
       "bcrypt",
@@ -34663,7 +34663,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "favicon-assets-generator": {
     slug: "favicon-assets-generator",
-    category: "favicon",
+    category: "image",
     icon: "image",
     tags: [
       "favicon",
@@ -40185,7 +40185,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   },
   "markdown-previewer": {
     slug: "markdown-previewer",
-    category: "document",
+    category: "text",
     icon: "file-text",
     tags: ["document", "markdown", "preview"],
     locales: {

@@ -3,8 +3,8 @@ import { describe, expect, test } from "vitest"
 import { tool } from "./manifest"
 
 describe("favicon-assets-generator manifest", () => {
-  test("declares the favicon category", () => {
-    expect(tool.category).toBe("favicon")
+  test("declares the image category", () => {
+    expect(tool.category).toBe("image")
   })
 
   test("uses the image icon for the tool tile", () => {

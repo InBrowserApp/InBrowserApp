@@ -1,7 +1,7 @@
 import { defineTool } from "@workspace/tool-sdk"
 
 export const tool = defineTool({
-  category: "hash",
+  category: "crypto",
   icon: "lock",
   tags: [
     "bcrypt",

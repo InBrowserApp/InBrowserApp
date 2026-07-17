@@ -7,6 +7,8 @@
     "themeLight": "ライト",
     "themeDark": "ダーク",
     "themeSystem": "システム",
+    "footerTagline": "無料・オープンソース",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "ホーム",
       "tools": "ツール"
@@ -22,18 +24,45 @@
   "home": {
     "title": "あなたのプライバシーを尊重するブラウザベースのツール",
     "description": "すべてのツールはブラウザ内でローカルに実行されます。データがデバイスの外に出ることはありません。",
-    "primaryAction": "すべてのツールを見る"
+    "eyebrow": "{count}個のツール · オープンソース · 100%ブラウザ内で動作",
+    "primaryAction": "すべてのツールを見る",
+    "popularLabel": "人気：",
+    "featureNoUploadsTitle": "アップロードなし",
+    "featureNoUploadsDescription": "ファイルはお使いのデバイス上で処理され、どこにも送信されません。",
+    "featureNoServersTitle": "サーバーなし",
+    "featureNoServersDescription": "すべての処理はローカルで実行されます — オープンソースで監査可能です。",
+    "featureOfflineTitle": "オフラインで動作",
+    "featureOfflineDescription": "PWAとしてインストール可能 — ネットワークがなくてもツールは動作し続けます。",
+    "categoriesTitle": "カテゴリから探す",
+    "categoriesAction": "すべてのツール",
+    "popularToolsTitle": "人気のツール",
+    "popularToolsAction": "{count}個すべてを見る"
   },
   "tools": {
     "title": "すべてのツール",
-    "description": "すべてブラウザ内で動作します — データはアップロードされません。",
     "searchLabel": "ツールを検索",
-    "searchPlaceholder": "名前または説明で検索…",
+    "searchPlaceholder": "{count}個のツールを検索…",
     "resultCountSuffix": "ツール",
     "clearSearchLabel": "クリア",
+    "categoriesLabel": "カテゴリ",
+    "categoryAll": "すべてのツール",
+    "sortLabel": "A–Z",
     "emptyRegistryTitle": "利用可能なツールはまだありません。",
     "emptyRegistryDescription": "ツールは順次追加されています — またご確認ください。",
     "emptySearchTitle": "一致するツールがありません。",
-    "emptySearchDescription": "別のキーワードを試すか、検索をクリアしてください。"
+    "emptySearchDescription": "別のキーワードを試すか、検索をクリアしてください。",
+    "categories": {
+      "crypto": "暗号・ハッシュ",
+      "developer": "開発者向け",
+      "image": "画像・メディア",
+      "json": "JSON・データ",
+      "misc": "その他",
+      "network": "ネットワーク",
+      "pdf": "PDF",
+      "random": "ランダム",
+      "text": "テキスト",
+      "time": "日付・時刻",
+      "web": "ウェブ"
+    }
   }
 }

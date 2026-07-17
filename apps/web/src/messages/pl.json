@@ -7,6 +7,8 @@
     "themeLight": "Jasny",
     "themeDark": "Ciemny",
     "themeSystem": "Systemowy",
+    "footerTagline": "Darmowe i open source",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Strona główna",
       "tools": "Narzędzia"
@@ -22,18 +24,45 @@
   "home": {
     "title": "Narzędzia przeglądarkowe, które szanują Twoją prywatność",
     "description": "Każde narzędzie działa lokalnie w Twojej przeglądarce. Twoje dane nigdy nie opuszczają urządzenia.",
-    "primaryAction": "Przeglądaj wszystkie narzędzia"
+    "eyebrow": "{count} narzędzi · Open source · Działa w 100% w Twojej przeglądarce",
+    "primaryAction": "Przeglądaj wszystkie narzędzia",
+    "popularLabel": "Popularne:",
+    "featureNoUploadsTitle": "Bez przesyłania",
+    "featureNoUploadsDescription": "Pliki są przetwarzane na Twoim urządzeniu i nigdy nigdzie nie są wysyłane.",
+    "featureNoServersTitle": "Bez serwerów",
+    "featureNoServersDescription": "Wszystko jest obliczane lokalnie — open source i możliwe do audytu.",
+    "featureOfflineTitle": "Działa offline",
+    "featureOfflineDescription": "Można zainstalować jako PWA — narzędzia działają bez dostępu do sieci.",
+    "categoriesTitle": "Przeglądaj według kategorii",
+    "categoriesAction": "Wszystkie narzędzia",
+    "popularToolsTitle": "Popularne narzędzia",
+    "popularToolsAction": "Zobacz wszystkie {count}"
   },
   "tools": {
     "title": "Wszystkie narzędzia",
-    "description": "Wszystko działa w Twojej przeglądarce — żadne dane nie są przesyłane.",
     "searchLabel": "Szukaj narzędzi",
-    "searchPlaceholder": "Szukaj po nazwie lub opisie…",
+    "searchPlaceholder": "Szukaj wśród {count} narzędzi…",
     "resultCountSuffix": "narzędzi",
     "clearSearchLabel": "Wyczyść",
+    "categoriesLabel": "Kategorie",
+    "categoryAll": "Wszystkie narzędzia",
+    "sortLabel": "A–Z",
     "emptyRegistryTitle": "Brak dostępnych narzędzi.",
     "emptyRegistryDescription": "Narzędzia są dodawane — zajrzyj wkrótce.",
     "emptySearchTitle": "Brak pasujących narzędzi.",
-    "emptySearchDescription": "Spróbuj innego słowa kluczowego lub wyczyść wyszukiwanie."
+    "emptySearchDescription": "Spróbuj innego słowa kluczowego lub wyczyść wyszukiwanie.",
+    "categories": {
+      "crypto": "Kryptografia i haszowanie",
+      "developer": "Dla programistów",
+      "image": "Obrazy i multimedia",
+      "json": "JSON i dane",
+      "misc": "Różne",
+      "network": "Sieć",
+      "pdf": "PDF",
+      "random": "Losowe",
+      "text": "Tekst",
+      "time": "Czas i data",
+      "web": "Web"
+    }
   }
 }
