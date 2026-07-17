@@ -20,19 +20,15 @@ type DirectoryEmptyStateProps = Readonly<{
 
 function ToolList({ categoryLabels, entries, language }: ToolListProps) {
   return (
-    <div className="overflow-hidden rounded-xl border border-border">
-      {entries.map((entry, index) => {
+    <div className="divide-y divide-border/70 overflow-hidden rounded-xl border border-border">
+      {entries.map((entry) => {
         const locale = resolveEntryLocale(entry, language)
 
         return (
           <a
             key={entry.slug}
             href={localizePath(`/tools/${entry.slug}`, language)}
-            className={
-              index > 0
-                ? "flex items-center gap-3.5 border-t border-border/70 px-4 py-3.5 transition-colors hover:bg-muted/50 sm:px-4.5"
-                : "flex items-center gap-3.5 px-4 py-3.5 transition-colors hover:bg-muted/50 sm:px-4.5"
-            }
+            className="flex items-center gap-3.5 px-4 py-3.5 transition-colors hover:bg-muted/50 sm:px-4.5"
           >
             <ToolIcon
               icon={entry.icon}
