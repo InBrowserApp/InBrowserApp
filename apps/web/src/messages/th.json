@@ -7,6 +7,8 @@
     "themeLight": "สว่าง",
     "themeDark": "มืด",
     "themeSystem": "ระบบ",
+    "footerTagline": "ฟรีและโอเพนซอร์ส",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "หน้าแรก",
       "tools": "เครื่องมือ"
@@ -22,18 +24,49 @@
   "home": {
     "title": "เครื่องมือบนเบราว์เซอร์ที่เคารพความเป็นส่วนตัวของคุณ",
     "description": "เครื่องมือทุกอย่างทำงานภายในเบราว์เซอร์ของคุณ ข้อมูลของคุณจะไม่ออกจากอุปกรณ์เลย",
-    "primaryAction": "เรียกดูเครื่องมือทั้งหมด"
+    "eyebrow": "เครื่องมือ {count} รายการ · โอเพนซอร์ส · ทำงาน 100% ในเบราว์เซอร์ของคุณ",
+    "primaryAction": "เรียกดูเครื่องมือทั้งหมด",
+    "popularLabel": "ยอดนิยม:",
+    "featureNoUploadsTitle": "ไม่มีการอัปโหลด",
+    "featureNoUploadsDescription": "ไฟล์ถูกประมวลผลบนอุปกรณ์ของคุณและไม่มีการส่งออกไปที่ใดเลย",
+    "featureNoServersTitle": "ไม่มีเซิร์ฟเวอร์",
+    "featureNoServersDescription": "ทุกอย่างประมวลผลภายในเครื่อง — โอเพนซอร์สและตรวจสอบได้",
+    "featureOfflineTitle": "ใช้งานออฟไลน์ได้",
+    "featureOfflineDescription": "ติดตั้งเป็น PWA ได้ — เครื่องมือยังคงทำงานได้แม้ไม่มีเครือข่าย",
+    "categoriesTitle": "เรียกดูตามหมวดหมู่",
+    "categoriesAction": "เครื่องมือทั้งหมด",
+    "popularToolsTitle": "เครื่องมือยอดนิยม",
+    "popularToolsAction": "ดูทั้งหมด {count} รายการ"
   },
   "tools": {
     "title": "เครื่องมือทั้งหมด",
-    "description": "ทุกอย่างทำงานในเบราว์เซอร์ของคุณ — ไม่มีการอัปโหลดข้อมูล",
     "searchLabel": "ค้นหาเครื่องมือ",
-    "searchPlaceholder": "ค้นหาด้วยชื่อหรือคำอธิบาย…",
+    "searchPlaceholder": "ค้นหาเครื่องมือ {count} รายการ…",
     "resultCountSuffix": "เครื่องมือ",
     "clearSearchLabel": "ล้าง",
+    "categoriesLabel": "หมวดหมู่",
+    "categoryAll": "เครื่องมือทั้งหมด",
+    "sortLabel": "A–Z",
+    "suggestionsLabel": "คำแนะนำ",
+    "suggestionsHint": "↑↓ เลื่อนดู · ↵ เปิด · esc ปิด",
+    "suggestionMatchCountOne": "{count} รายการที่ตรงกัน",
+    "suggestionMatchCount": "{count} รายการที่ตรงกัน",
     "emptyRegistryTitle": "ยังไม่มีเครื่องมือ",
     "emptyRegistryDescription": "กำลังเพิ่มเครื่องมือ — กลับมาดูใหม่เร็ว ๆ นี้",
     "emptySearchTitle": "ไม่พบเครื่องมือที่ตรงกัน",
-    "emptySearchDescription": "ลองใช้คำค้นหาอื่นหรือล้างการค้นหา"
+    "emptySearchDescription": "ลองใช้คำค้นหาอื่นหรือล้างการค้นหา",
+    "categories": {
+      "crypto": "การเข้ารหัสลับและแฮช",
+      "developer": "นักพัฒนา",
+      "image": "รูปภาพและสื่อ",
+      "json": "JSON และข้อมูล",
+      "misc": "เบ็ดเตล็ด",
+      "network": "เครือข่าย",
+      "pdf": "PDF",
+      "random": "สุ่ม",
+      "text": "ข้อความ",
+      "time": "เวลาและวันที่",
+      "web": "เว็บ"
+    }
   }
 }

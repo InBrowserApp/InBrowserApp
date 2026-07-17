@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions"
 import "@/styles/global.css"
+import SiteFooter from "@/components/site-footer.astro"
 import SiteNavbar from "@/components/site-navbar.astro"
 import { LanguageSuggestion } from "@/components/language-suggestion/language-suggestion"
 import {
@@ -99,7 +100,7 @@ const languageOptions = createLanguageOptions(
   </head>
   <body>
     <div class="min-h-svh bg-background">
-      <div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-[var(--spacing-page-x)] py-[var(--spacing-page-y)]">
+      <div class="mx-auto flex min-h-svh w-full max-w-6xl flex-col gap-8 px-[var(--spacing-page-x)] py-[var(--spacing-page-y)]">
         <SiteNavbar
           language={language}
           current={current}
@@ -107,6 +108,7 @@ const languageOptions = createLanguageOptions(
           availableLanguages={availableLanguages}
         />
         <slot />
+        <SiteFooter language={language} />
       </div>
     </div>
     <LanguageSuggestion

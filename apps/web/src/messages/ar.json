@@ -7,6 +7,8 @@
     "themeLight": "فاتح",
     "themeDark": "داكن",
     "themeSystem": "النظام",
+    "footerTagline": "مجاني ومفتوح المصدر",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "الرئيسية",
       "tools": "الأدوات"
@@ -22,18 +24,49 @@
   "home": {
     "title": "أدوات تعتمد على المتصفح وتحترم خصوصيتك",
     "description": "تعمل كل أداة محليًا في متصفحك. بياناتك لا تغادر جهازك أبدًا.",
-    "primaryAction": "تصفح جميع الأدوات"
+    "eyebrow": "{count} أداة · مفتوح المصدر · يعمل بنسبة 100% في متصفحك",
+    "primaryAction": "تصفح جميع الأدوات",
+    "popularLabel": "الشائعة:",
+    "featureNoUploadsTitle": "لا تحميلات",
+    "featureNoUploadsDescription": "تُعالج الملفات على جهازك ولا تُرسل إلى أي مكان أبدًا.",
+    "featureNoServersTitle": "لا خوادم",
+    "featureNoServersDescription": "كل العمليات تجري محليًا — مفتوح المصدر وقابل للتدقيق.",
+    "featureOfflineTitle": "يعمل دون اتصال",
+    "featureOfflineDescription": "قابل للتثبيت كتطبيق PWA — تواصل الأدوات عملها دون اتصال بالشبكة.",
+    "categoriesTitle": "تصفح حسب الفئة",
+    "categoriesAction": "جميع الأدوات",
+    "popularToolsTitle": "الأدوات الشائعة",
+    "popularToolsAction": "عرض الكل ({count})"
   },
   "tools": {
     "title": "جميع الأدوات",
-    "description": "كل شيء يعمل في متصفحك — لا يتم تحميل أي بيانات.",
     "searchLabel": "البحث في الأدوات",
-    "searchPlaceholder": "ابحث بالاسم أو الوصف…",
+    "searchPlaceholder": "ابحث في {count} أداة…",
     "resultCountSuffix": "أدوات",
     "clearSearchLabel": "مسح",
+    "categoriesLabel": "الفئات",
+    "categoryAll": "جميع الأدوات",
+    "sortLabel": "أ–ي",
+    "suggestionsLabel": "الاقتراحات",
+    "suggestionsHint": "↑↓ تنقّل · ↵ فتح · esc إغلاق",
+    "suggestionMatchCountOne": "{count} نتيجة مطابقة",
+    "suggestionMatchCount": "{count} نتائج مطابقة",
     "emptyRegistryTitle": "لا توجد أدوات متاحة بعد.",
     "emptyRegistryDescription": "تتم إضافة الأدوات — تحقق مرة أخرى قريبًا.",
     "emptySearchTitle": "لا توجد أدوات مطابقة.",
-    "emptySearchDescription": "جرب كلمة مفتاحية مختلفة أو امسح البحث."
+    "emptySearchDescription": "جرب كلمة مفتاحية مختلفة أو امسح البحث.",
+    "categories": {
+      "crypto": "التشفير والتجزئة",
+      "developer": "للمطورين",
+      "image": "الصور والوسائط",
+      "json": "JSON والبيانات",
+      "misc": "متنوعات",
+      "network": "الشبكات",
+      "pdf": "PDF",
+      "random": "عشوائي",
+      "text": "النصوص",
+      "time": "الوقت والتاريخ",
+      "web": "الويب"
+    }
   }
 }

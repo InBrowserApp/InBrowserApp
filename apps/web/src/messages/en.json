@@ -7,6 +7,8 @@
     "themeLight": "Light",
     "themeDark": "Dark",
     "themeSystem": "System",
+    "footerTagline": "Free & open source",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Home",
       "tools": "Tools"
@@ -22,18 +24,49 @@
   "home": {
     "title": "Browser-based tools that respect your privacy",
     "description": "Every tool runs locally in your browser. Your data never leaves your device.",
-    "primaryAction": "Browse all tools"
+    "eyebrow": "{count} tools · Open source · Runs 100% in your browser",
+    "primaryAction": "Browse all tools",
+    "popularLabel": "Popular:",
+    "featureNoUploadsTitle": "No uploads",
+    "featureNoUploadsDescription": "Files are processed on your device and never sent anywhere.",
+    "featureNoServersTitle": "No servers",
+    "featureNoServersDescription": "Everything computes locally — open source and auditable.",
+    "featureOfflineTitle": "Works offline",
+    "featureOfflineDescription": "Installable as a PWA — tools keep working without a network.",
+    "categoriesTitle": "Browse by category",
+    "categoriesAction": "All tools",
+    "popularToolsTitle": "Popular tools",
+    "popularToolsAction": "See all {count}"
   },
   "tools": {
     "title": "All Tools",
-    "description": "Everything runs in your browser — no data is uploaded.",
     "searchLabel": "Search tools",
-    "searchPlaceholder": "Search by name or description…",
+    "searchPlaceholder": "Search {count} tools…",
     "resultCountSuffix": "tools",
     "clearSearchLabel": "Clear",
+    "categoriesLabel": "Categories",
+    "categoryAll": "All tools",
+    "sortLabel": "A–Z",
+    "suggestionsLabel": "Suggestions",
+    "suggestionsHint": "↑↓ navigate · ↵ open · esc close",
+    "suggestionMatchCountOne": "{count} match",
+    "suggestionMatchCount": "{count} matches",
     "emptyRegistryTitle": "No tools available yet.",
     "emptyRegistryDescription": "Tools are being added — check back soon.",
     "emptySearchTitle": "No matching tools.",
-    "emptySearchDescription": "Try a different keyword or clear the search."
+    "emptySearchDescription": "Try a different keyword or clear the search.",
+    "categories": {
+      "crypto": "Crypto & Hashing",
+      "developer": "Developer",
+      "image": "Image & Media",
+      "json": "JSON & Data",
+      "misc": "Miscellaneous",
+      "network": "Network",
+      "pdf": "PDF",
+      "random": "Random",
+      "text": "Text",
+      "time": "Time & Date",
+      "web": "Web"
+    }
   }
 }

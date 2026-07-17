@@ -7,6 +7,8 @@
     "themeLight": "Sáng",
     "themeDark": "Tối",
     "themeSystem": "Hệ thống",
+    "footerTagline": "Miễn phí & mã nguồn mở",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Trang chủ",
       "tools": "Công cụ"
@@ -22,18 +24,49 @@
   "home": {
     "title": "Công cụ chạy trên trình duyệt tôn trọng quyền riêng tư của bạn",
     "description": "Mọi công cụ đều chạy cục bộ trong trình duyệt của bạn. Dữ liệu của bạn không bao giờ rời khỏi thiết bị.",
-    "primaryAction": "Xem tất cả công cụ"
+    "eyebrow": "{count} công cụ · Mã nguồn mở · Chạy 100% trong trình duyệt của bạn",
+    "primaryAction": "Xem tất cả công cụ",
+    "popularLabel": "Phổ biến:",
+    "featureNoUploadsTitle": "Không tải lên",
+    "featureNoUploadsDescription": "Tệp được xử lý trên thiết bị của bạn và không bao giờ được gửi đi bất cứ đâu.",
+    "featureNoServersTitle": "Không máy chủ",
+    "featureNoServersDescription": "Mọi thứ được tính toán cục bộ — mã nguồn mở và có thể kiểm chứng.",
+    "featureOfflineTitle": "Hoạt động ngoại tuyến",
+    "featureOfflineDescription": "Có thể cài đặt dưới dạng PWA — các công cụ vẫn hoạt động khi không có mạng.",
+    "categoriesTitle": "Duyệt theo danh mục",
+    "categoriesAction": "Tất cả công cụ",
+    "popularToolsTitle": "Công cụ phổ biến",
+    "popularToolsAction": "Xem tất cả {count} công cụ"
   },
   "tools": {
     "title": "Tất cả công cụ",
-    "description": "Mọi thứ đều chạy trong trình duyệt của bạn — không có dữ liệu nào được tải lên.",
     "searchLabel": "Tìm kiếm công cụ",
-    "searchPlaceholder": "Tìm theo tên hoặc mô tả…",
+    "searchPlaceholder": "Tìm kiếm trong {count} công cụ…",
     "resultCountSuffix": "công cụ",
     "clearSearchLabel": "Xóa",
+    "categoriesLabel": "Danh mục",
+    "categoryAll": "Tất cả công cụ",
+    "sortLabel": "A–Z",
+    "suggestionsLabel": "Gợi ý",
+    "suggestionsHint": "↑↓ di chuyển · ↵ mở · esc đóng",
+    "suggestionMatchCountOne": "{count} kết quả",
+    "suggestionMatchCount": "{count} kết quả",
     "emptyRegistryTitle": "Chưa có công cụ nào.",
     "emptyRegistryDescription": "Các công cụ đang được thêm vào — vui lòng quay lại sau.",
     "emptySearchTitle": "Không tìm thấy công cụ phù hợp.",
-    "emptySearchDescription": "Hãy thử từ khóa khác hoặc xóa tìm kiếm."
+    "emptySearchDescription": "Hãy thử từ khóa khác hoặc xóa tìm kiếm.",
+    "categories": {
+      "crypto": "Mã hóa & Băm",
+      "developer": "Nhà phát triển",
+      "image": "Hình ảnh & Đa phương tiện",
+      "json": "JSON & Dữ liệu",
+      "misc": "Khác",
+      "network": "Mạng",
+      "pdf": "PDF",
+      "random": "Ngẫu nhiên",
+      "text": "Văn bản",
+      "time": "Thời gian & Ngày tháng",
+      "web": "Web"
+    }
   }
 }

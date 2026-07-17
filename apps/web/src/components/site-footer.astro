@@ -1,0 +1,35 @@
+---
+import { localizePath, type SiteLanguage } from "@/lib/site"
+import { loadSiteMessages } from "@/lib/site-messages"
+
+interface Props {
+  language: SiteLanguage
+}
+
+const GITHUB_URL = "https://github.com/InBrowserApp/InBrowserApp"
+
+const { language } = Astro.props
+const { catalog } = loadSiteMessages(language)
+---
+
+<footer
+  class="mt-auto flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-t border-border pt-5 text-sm text-muted-foreground"
+>
+  <p class="m-0">{catalog.site.name} — {catalog.site.footerTagline}</p>
+  <p class="m-0 flex items-center gap-6">
+    <a
+      href={localizePath("/tools", language)}
+      class="transition-colors hover:text-foreground"
+    >
+      {catalog.site.navigation.tools}
+    </a>
+    <a
+      href={GITHUB_URL}
+      rel="noopener"
+      target="_blank"
+      class="transition-colors hover:text-foreground"
+    >
+      {catalog.site.footerGitHub}
+    </a>
+  </p>
+</footer>

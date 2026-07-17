@@ -7,6 +7,8 @@
     "themeLight": "浅色",
     "themeDark": "深色",
     "themeSystem": "跟随系统",
+    "footerTagline": "免费且开源",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "首页",
       "tools": "工具"
@@ -22,18 +24,49 @@
   "home": {
     "title": "尊重隐私的浏览器工具",
     "description": "所有工具都在浏览器中本地运行，数据不会离开你的设备。",
-    "primaryAction": "浏览所有工具"
+    "eyebrow": "{count} 个工具 · 开源 · 100% 在浏览器中运行",
+    "primaryAction": "浏览所有工具",
+    "popularLabel": "热门：",
+    "featureNoUploadsTitle": "无需上传",
+    "featureNoUploadsDescription": "文件在你的设备上处理，绝不会被发送到任何地方。",
+    "featureNoServersTitle": "无需服务器",
+    "featureNoServersDescription": "一切都在本地计算——开源且可审计。",
+    "featureOfflineTitle": "支持离线",
+    "featureOfflineDescription": "可作为 PWA 安装——没有网络时工具也能正常使用。",
+    "categoriesTitle": "按分类浏览",
+    "categoriesAction": "所有工具",
+    "popularToolsTitle": "热门工具",
+    "popularToolsAction": "查看全部 {count} 个"
   },
   "tools": {
     "title": "所有工具",
-    "description": "所有工具都在浏览器中运行，不会上传任何数据。",
     "searchLabel": "搜索工具",
-    "searchPlaceholder": "按名称或描述搜索…",
+    "searchPlaceholder": "搜索 {count} 个工具…",
     "resultCountSuffix": "个工具",
     "clearSearchLabel": "清除",
+    "categoriesLabel": "分类",
+    "categoryAll": "所有工具",
+    "sortLabel": "A–Z",
+    "suggestionsLabel": "搜索建议",
+    "suggestionsHint": "↑↓ 选择 · ↵ 打开 · esc 关闭",
+    "suggestionMatchCountOne": "{count} 个匹配结果",
+    "suggestionMatchCount": "{count} 个匹配结果",
     "emptyRegistryTitle": "暂无可用工具。",
     "emptyRegistryDescription": "工具正在添加中，请稍后再来。",
     "emptySearchTitle": "没有匹配的工具。",
-    "emptySearchDescription": "试试其他关键词，或清除搜索。"
+    "emptySearchDescription": "试试其他关键词，或清除搜索。",
+    "categories": {
+      "crypto": "加密与哈希",
+      "developer": "开发者",
+      "image": "图像与媒体",
+      "json": "JSON 与数据",
+      "misc": "其他",
+      "network": "网络",
+      "pdf": "PDF",
+      "random": "随机",
+      "text": "文本",
+      "time": "时间与日期",
+      "web": "Web"
+    }
   }
 }

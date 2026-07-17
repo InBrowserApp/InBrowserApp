@@ -7,6 +7,8 @@
     "themeLight": "Clair",
     "themeDark": "Sombre",
     "themeSystem": "Système",
+    "footerTagline": "Gratuit et open source",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Accueil",
       "tools": "Outils"
@@ -22,18 +24,49 @@
   "home": {
     "title": "Des outils basés sur le navigateur qui respectent votre vie privée",
     "description": "Chaque outil s'exécute localement dans votre navigateur. Vos données ne quittent jamais votre appareil.",
-    "primaryAction": "Parcourir tous les outils"
+    "eyebrow": "{count} outils · Open source · Fonctionne à 100 % dans votre navigateur",
+    "primaryAction": "Parcourir tous les outils",
+    "popularLabel": "Populaires :",
+    "featureNoUploadsTitle": "Aucun téléversement",
+    "featureNoUploadsDescription": "Les fichiers sont traités sur votre appareil et ne sont jamais envoyés où que ce soit.",
+    "featureNoServersTitle": "Aucun serveur",
+    "featureNoServersDescription": "Tout est traité localement — open source et auditable.",
+    "featureOfflineTitle": "Fonctionne hors ligne",
+    "featureOfflineDescription": "Installable en tant que PWA — les outils continuent de fonctionner sans réseau.",
+    "categoriesTitle": "Parcourir par catégorie",
+    "categoriesAction": "Tous les outils",
+    "popularToolsTitle": "Outils populaires",
+    "popularToolsAction": "Voir les {count} outils"
   },
   "tools": {
     "title": "Tous les outils",
-    "description": "Tout s'exécute dans votre navigateur — aucune donnée n'est téléversée.",
     "searchLabel": "Rechercher des outils",
-    "searchPlaceholder": "Rechercher par nom ou description…",
+    "searchPlaceholder": "Rechercher parmi {count} outils…",
     "resultCountSuffix": "outils",
     "clearSearchLabel": "Effacer",
+    "categoriesLabel": "Catégories",
+    "categoryAll": "Tous les outils",
+    "sortLabel": "A–Z",
+    "suggestionsLabel": "Suggestions",
+    "suggestionsHint": "↑↓ naviguer · ↵ ouvrir · esc fermer",
+    "suggestionMatchCountOne": "{count} résultat",
+    "suggestionMatchCount": "{count} résultats",
     "emptyRegistryTitle": "Aucun outil disponible pour le moment.",
     "emptyRegistryDescription": "Des outils sont en cours d'ajout — revenez bientôt.",
     "emptySearchTitle": "Aucun outil correspondant.",
-    "emptySearchDescription": "Essayez un autre mot-clé ou effacez la recherche."
+    "emptySearchDescription": "Essayez un autre mot-clé ou effacez la recherche.",
+    "categories": {
+      "crypto": "Crypto et hachage",
+      "developer": "Développement",
+      "image": "Image et médias",
+      "json": "JSON et données",
+      "misc": "Divers",
+      "network": "Réseau",
+      "pdf": "PDF",
+      "random": "Aléatoire",
+      "text": "Texte",
+      "time": "Date et heure",
+      "web": "Web"
+    }
   }
 }

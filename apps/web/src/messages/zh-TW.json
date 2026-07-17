@@ -7,6 +7,8 @@
     "themeLight": "淺色",
     "themeDark": "深色",
     "themeSystem": "系統",
+    "footerTagline": "免費且開放原始碼",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "首頁",
       "tools": "工具"
@@ -22,18 +24,49 @@
   "home": {
     "title": "尊重您隱私的瀏覽器工具",
     "description": "每個工具都在您的瀏覽器本地執行。您的資料永遠不會離開您的裝置。",
-    "primaryAction": "瀏覽所有工具"
+    "eyebrow": "{count} 個工具 · 開放原始碼 · 100% 在您的瀏覽器中執行",
+    "primaryAction": "瀏覽所有工具",
+    "popularLabel": "熱門：",
+    "featureNoUploadsTitle": "無需上傳",
+    "featureNoUploadsDescription": "檔案皆在您的裝置上處理，絕不會傳送到任何地方。",
+    "featureNoServersTitle": "無伺服器",
+    "featureNoServersDescription": "所有運算皆在本地完成 — 開放原始碼且可供稽核。",
+    "featureOfflineTitle": "可離線使用",
+    "featureOfflineDescription": "可安裝為 PWA — 即使沒有網路，工具仍能持續運作。",
+    "categoriesTitle": "依分類瀏覽",
+    "categoriesAction": "所有工具",
+    "popularToolsTitle": "熱門工具",
+    "popularToolsAction": "查看全部 {count} 個"
   },
   "tools": {
     "title": "所有工具",
-    "description": "一切都在您的瀏覽器中執行 — 不會上傳任何資料。",
     "searchLabel": "搜尋工具",
-    "searchPlaceholder": "依名稱或說明搜尋…",
+    "searchPlaceholder": "搜尋 {count} 個工具…",
     "resultCountSuffix": "個工具",
     "clearSearchLabel": "清除",
+    "categoriesLabel": "分類",
+    "categoryAll": "所有工具",
+    "sortLabel": "A–Z",
+    "suggestionsLabel": "建議",
+    "suggestionsHint": "↑↓ 導覽 · ↵ 開啟 · esc 關閉",
+    "suggestionMatchCountOne": "{count} 個符合項目",
+    "suggestionMatchCount": "{count} 個符合項目",
     "emptyRegistryTitle": "尚無可用的工具。",
     "emptyRegistryDescription": "工具正在新增中 — 請稍後再回來查看。",
     "emptySearchTitle": "沒有符合的工具。",
-    "emptySearchDescription": "請嘗試其他關鍵字或清除搜尋。"
+    "emptySearchDescription": "請嘗試其他關鍵字或清除搜尋。",
+    "categories": {
+      "crypto": "加密與雜湊",
+      "developer": "開發者",
+      "image": "圖片與媒體",
+      "json": "JSON 與資料",
+      "misc": "其他",
+      "network": "網路",
+      "pdf": "PDF",
+      "random": "隨機",
+      "text": "文字",
+      "time": "時間與日期",
+      "web": "網頁"
+    }
   }
 }

@@ -7,6 +7,8 @@
     "themeLight": "Lyst",
     "themeDark": "Mørkt",
     "themeSystem": "System",
+    "footerTagline": "Gratis og åpen kildekode",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Hjem",
       "tools": "Verktøy"
@@ -22,18 +24,49 @@
   "home": {
     "title": "Nettleserbaserte verktøy som respekterer personvernet ditt",
     "description": "Alle verktøy kjører lokalt i nettleseren din. Dataene dine forlater aldri enheten.",
-    "primaryAction": "Bla gjennom alle verktøy"
+    "eyebrow": "{count} verktøy · Åpen kildekode · Kjører 100 % i nettleseren din",
+    "primaryAction": "Bla gjennom alle verktøy",
+    "popularLabel": "Populære:",
+    "featureNoUploadsTitle": "Ingen opplastinger",
+    "featureNoUploadsDescription": "Filer behandles på enheten din og sendes aldri noe sted.",
+    "featureNoServersTitle": "Ingen servere",
+    "featureNoServersDescription": "Alt beregnes lokalt — åpen kildekode og etterprøvbart.",
+    "featureOfflineTitle": "Fungerer uten nett",
+    "featureOfflineDescription": "Kan installeres som PWA — verktøyene fortsetter å fungere uten nettverk.",
+    "categoriesTitle": "Utforsk etter kategori",
+    "categoriesAction": "Alle verktøy",
+    "popularToolsTitle": "Populære verktøy",
+    "popularToolsAction": "Se alle {count}"
   },
   "tools": {
     "title": "Alle verktøy",
-    "description": "Alt kjører i nettleseren din — ingen data lastes opp.",
     "searchLabel": "Søk i verktøy",
-    "searchPlaceholder": "Søk etter navn eller beskrivelse…",
+    "searchPlaceholder": "Søk i {count} verktøy…",
     "resultCountSuffix": "verktøy",
     "clearSearchLabel": "Tøm",
+    "categoriesLabel": "Kategorier",
+    "categoryAll": "Alle verktøy",
+    "sortLabel": "A–Å",
+    "suggestionsLabel": "Forslag",
+    "suggestionsHint": "↑↓ naviger · ↵ åpne · esc lukk",
+    "suggestionMatchCountOne": "{count} treff",
+    "suggestionMatchCount": "{count} treff",
     "emptyRegistryTitle": "Ingen verktøy tilgjengelig ennå.",
     "emptyRegistryDescription": "Verktøy legges til — kom tilbake snart.",
     "emptySearchTitle": "Ingen treff på verktøy.",
-    "emptySearchDescription": "Prøv et annet søkeord eller tøm søket."
+    "emptySearchDescription": "Prøv et annet søkeord eller tøm søket.",
+    "categories": {
+      "crypto": "Krypto og hashing",
+      "developer": "Utvikler",
+      "image": "Bilde og media",
+      "json": "JSON og data",
+      "misc": "Diverse",
+      "network": "Nettverk",
+      "pdf": "PDF",
+      "random": "Tilfeldig",
+      "text": "Tekst",
+      "time": "Tid og dato",
+      "web": "Web"
+    }
   }
 }

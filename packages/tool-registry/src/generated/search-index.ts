@@ -402,7 +402,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "archive-viewer",
-    category: "code",
+    category: "developer",
     icon: "archive",
     tags: ["archive", "zip", "tar", "gzip", "viewer", "offline"],
     locales: {
@@ -2709,7 +2709,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "bcrypt-hash-password",
-    category: "hash",
+    category: "crypto",
     icon: "lock",
     tags: [
       "bcrypt",
@@ -7735,7 +7735,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "favicon-assets-generator",
-    category: "favicon",
+    category: "image",
     icon: "image",
     tags: [
       "favicon",
@@ -13257,7 +13257,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   },
   {
     slug: "markdown-previewer",
-    category: "document",
+    category: "text",
     icon: "file-text",
     tags: ["document", "markdown", "preview"],
     locales: {

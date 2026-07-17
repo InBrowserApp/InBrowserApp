@@ -7,6 +7,8 @@
     "themeLight": "라이트",
     "themeDark": "다크",
     "themeSystem": "시스템",
+    "footerTagline": "무료 & 오픈 소스",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "홈",
       "tools": "도구"
@@ -22,18 +24,49 @@
   "home": {
     "title": "개인정보를 존중하는 브라우저 기반 도구",
     "description": "모든 도구는 브라우저에서 로컬로 실행됩니다. 데이터가 기기를 벗어나지 않습니다.",
-    "primaryAction": "모든 도구 보기"
+    "eyebrow": "{count}개 도구 · 오픈 소스 · 100% 브라우저에서 실행",
+    "primaryAction": "모든 도구 보기",
+    "popularLabel": "인기:",
+    "featureNoUploadsTitle": "업로드 없음",
+    "featureNoUploadsDescription": "파일은 기기에서 처리되며 어디로도 전송되지 않습니다.",
+    "featureNoServersTitle": "서버 없음",
+    "featureNoServersDescription": "모든 처리가 로컬에서 이루어집니다 — 오픈 소스이며 검증 가능합니다.",
+    "featureOfflineTitle": "오프라인 작동",
+    "featureOfflineDescription": "PWA로 설치 가능 — 네트워크가 없어도 도구가 계속 작동합니다.",
+    "categoriesTitle": "카테고리별 둘러보기",
+    "categoriesAction": "모든 도구",
+    "popularToolsTitle": "인기 도구",
+    "popularToolsAction": "{count}개 모두 보기"
   },
   "tools": {
     "title": "모든 도구",
-    "description": "모든 것이 브라우저에서 실행됩니다 — 데이터가 업로드되지 않습니다.",
     "searchLabel": "도구 검색",
-    "searchPlaceholder": "이름 또는 설명으로 검색…",
+    "searchPlaceholder": "{count}개 도구 검색…",
     "resultCountSuffix": "개 도구",
     "clearSearchLabel": "지우기",
+    "categoriesLabel": "카테고리",
+    "categoryAll": "모든 도구",
+    "sortLabel": "A–Z",
+    "suggestionsLabel": "제안",
+    "suggestionsHint": "↑↓ 이동 · ↵ 열기 · esc 닫기",
+    "suggestionMatchCountOne": "{count}개 일치",
+    "suggestionMatchCount": "{count}개 일치",
     "emptyRegistryTitle": "아직 사용할 수 있는 도구가 없습니다.",
     "emptyRegistryDescription": "도구가 추가되고 있습니다 — 곧 다시 확인해 주세요.",
     "emptySearchTitle": "일치하는 도구가 없습니다.",
-    "emptySearchDescription": "다른 키워드를 시도하거나 검색을 지워 보세요."
+    "emptySearchDescription": "다른 키워드를 시도하거나 검색을 지워 보세요.",
+    "categories": {
+      "crypto": "암호화 & 해싱",
+      "developer": "개발자",
+      "image": "이미지 & 미디어",
+      "json": "JSON & 데이터",
+      "misc": "기타",
+      "network": "네트워크",
+      "pdf": "PDF",
+      "random": "랜덤",
+      "text": "텍스트",
+      "time": "시간 & 날짜",
+      "web": "웹"
+    }
   }
 }

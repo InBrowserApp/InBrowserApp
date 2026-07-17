@@ -7,6 +7,8 @@
     "themeLight": "Светлая",
     "themeDark": "Тёмная",
     "themeSystem": "Системная",
+    "footerTagline": "Бесплатно и с открытым кодом",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Главная",
       "tools": "Инструменты"
@@ -22,18 +24,49 @@
   "home": {
     "title": "Браузерные инструменты, уважающие вашу приватность",
     "description": "Каждый инструмент работает локально в вашем браузере. Ваши данные никогда не покидают устройство.",
-    "primaryAction": "Посмотреть все инструменты"
+    "eyebrow": "{count} инструментов · Открытый код · Работает на 100% в вашем браузере",
+    "primaryAction": "Посмотреть все инструменты",
+    "popularLabel": "Популярное:",
+    "featureNoUploadsTitle": "Без загрузок",
+    "featureNoUploadsDescription": "Файлы обрабатываются на вашем устройстве и никуда не отправляются.",
+    "featureNoServersTitle": "Без серверов",
+    "featureNoServersDescription": "Все вычисления выполняются локально — открытый исходный код, доступный для проверки.",
+    "featureOfflineTitle": "Работает офлайн",
+    "featureOfflineDescription": "Устанавливается как PWA — инструменты продолжают работать без сети.",
+    "categoriesTitle": "Просмотр по категориям",
+    "categoriesAction": "Все инструменты",
+    "popularToolsTitle": "Популярные инструменты",
+    "popularToolsAction": "Показать все {count}"
   },
   "tools": {
     "title": "Все инструменты",
-    "description": "Всё работает в вашем браузере — никакие данные не загружаются.",
     "searchLabel": "Поиск инструментов",
-    "searchPlaceholder": "Поиск по названию или описанию…",
+    "searchPlaceholder": "Поиск среди {count} инструментов…",
     "resultCountSuffix": "инструментов",
     "clearSearchLabel": "Очистить",
+    "categoriesLabel": "Категории",
+    "categoryAll": "Все инструменты",
+    "sortLabel": "A–Z",
+    "suggestionsLabel": "Подсказки",
+    "suggestionsHint": "↑↓ навигация · ↵ открыть · esc закрыть",
+    "suggestionMatchCountOne": "{count} совпадение",
+    "suggestionMatchCount": "Совпадений: {count}",
     "emptyRegistryTitle": "Инструменты пока недоступны.",
     "emptyRegistryDescription": "Инструменты добавляются — загляните позже.",
     "emptySearchTitle": "Нет подходящих инструментов.",
-    "emptySearchDescription": "Попробуйте другое ключевое слово или очистите поиск."
+    "emptySearchDescription": "Попробуйте другое ключевое слово или очистите поиск.",
+    "categories": {
+      "crypto": "Криптография и хеширование",
+      "developer": "Для разработчиков",
+      "image": "Изображения и медиа",
+      "json": "JSON и данные",
+      "misc": "Разное",
+      "network": "Сеть",
+      "pdf": "PDF",
+      "random": "Случайное",
+      "text": "Текст",
+      "time": "Время и дата",
+      "web": "Веб"
+    }
   }
 }

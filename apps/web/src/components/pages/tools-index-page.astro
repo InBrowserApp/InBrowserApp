@@ -1,8 +1,8 @@
 ---
 import { toolSearchIndex } from "@workspace/tool-registry"
 import MainLayout from "@/layouts/main.astro"
-import { ToolsDirectorySearch } from "@/components/pages/tools-directory-search"
-import { loadSiteMessages } from "@/lib/site-messages"
+import { ToolsDirectorySearch } from "@/components/pages/tools-directory/tools-directory-search"
+import { formatSiteMessage, loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
 import type { SiteLanguage } from "@/lib/site"
 
@@ -18,7 +18,11 @@ const seo = createPageSeo({
   pathname: "/tools",
   title: catalog.metadata.toolsTitle,
 })
+const toolCount = new Intl.NumberFormat(language).format(toolSearchIndex.length)
 const searchMessages = {
+  categoriesLabel: catalog.tools.categoriesLabel,
+  categoryAll: catalog.tools.categoryAll,
+  categoryLabels: catalog.tools.categories,
   clearSearchLabel: catalog.tools.clearSearchLabel,
   emptyRegistryDescription: catalog.tools.emptyRegistryDescription,
   emptyRegistryTitle: catalog.tools.emptyRegistryTitle,
@@ -26,7 +30,14 @@ const searchMessages = {
   emptySearchTitle: catalog.tools.emptySearchTitle,
   resultCountSuffix: catalog.tools.resultCountSuffix,
   searchLabel: catalog.tools.searchLabel,
-  searchPlaceholder: catalog.tools.searchPlaceholder,
+  searchPlaceholder: formatSiteMessage(catalog.tools.searchPlaceholder, {
+    count: toolCount,
+  }),
+  sortLabel: catalog.tools.sortLabel,
+  suggestionMatchCount: catalog.tools.suggestionMatchCount,
+  suggestionMatchCountOne: catalog.tools.suggestionMatchCountOne,
+  suggestionsHint: catalog.tools.suggestionsHint,
+  suggestionsLabel: catalog.tools.suggestionsLabel,
 }
 ---
 
@@ -39,14 +50,7 @@ const searchMessages = {
   current="tools"
   pathname="/tools"
 >
-  <header class="max-w-3xl space-y-3">
-    <h1 class="font-heading text-4xl leading-none tracking-[var(--tracking-display)] text-balance sm:text-5xl">
-      {catalog.tools.title}
-    </h1>
-    <p class="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-      {catalog.tools.description}
-    </p>
-  </header>
+  <h1 class="sr-only">{catalog.tools.title}</h1>
 
   <ToolsDirectorySearch
     client:load

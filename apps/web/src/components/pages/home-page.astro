@@ -1,9 +1,28 @@
 ---
 import { toolSearchIndex } from "@workspace/tool-registry"
+import { ToolIcon } from "@workspace/ui/components/tool/tool-icon"
+import { ToolSurface } from "@workspace/ui/components/tool/tool-surface"
+import {
+  ArrowRight,
+  CircleArrowDown,
+  Code,
+  Shield,
+} from "@workspace/ui/icons"
 import MainLayout from "@/layouts/main.astro"
-import { ToolsDirectorySearch } from "@/components/pages/tools-directory-search"
-import { loadSiteMessages } from "@/lib/site-messages"
+import { HomeSearch } from "@/components/pages/home-search"
+import { localizePath } from "@/lib/site"
+import { formatSiteMessage, loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
+import {
+  FEATURED_TOOL_SLUGS,
+  POPULAR_TOOL_SLUGS,
+  countToolsByCategory,
+  findToolsBySlugs,
+  getCategoryIcon,
+  getCategoryLabel,
+  resolveEntryLocale,
+  toSuggestionEntries,
+} from "@/lib/tool-directory"
 import type { SiteLanguage } from "@/lib/site"
 
 interface Props {
@@ -18,16 +37,44 @@ const seo = createPageSeo({
   pathname: "/",
   title: catalog.metadata.homeTitle,
 })
+
+const toolCount = new Intl.NumberFormat(language).format(toolSearchIndex.length)
+const toolsPath = localizePath("/tools", language)
+const categories = countToolsByCategory(toolSearchIndex).slice(0, 8)
+const popularTools = findToolsBySlugs(toolSearchIndex, POPULAR_TOOL_SLUGS)
+const featuredTools = findToolsBySlugs(toolSearchIndex, FEATURED_TOOL_SLUGS)
+const suggestionEntries = toSuggestionEntries(toolSearchIndex, language)
 const searchMessages = {
   clearSearchLabel: catalog.tools.clearSearchLabel,
-  emptyRegistryDescription: catalog.tools.emptyRegistryDescription,
-  emptyRegistryTitle: catalog.tools.emptyRegistryTitle,
   emptySearchDescription: catalog.tools.emptySearchDescription,
   emptySearchTitle: catalog.tools.emptySearchTitle,
-  resultCountSuffix: catalog.tools.resultCountSuffix,
   searchLabel: catalog.tools.searchLabel,
-  searchPlaceholder: catalog.tools.searchPlaceholder,
+  searchPlaceholder: formatSiteMessage(catalog.tools.searchPlaceholder, {
+    count: toolCount,
+  }),
+  suggestionMatchCount: catalog.tools.suggestionMatchCount,
+  suggestionMatchCountOne: catalog.tools.suggestionMatchCountOne,
+  suggestionsHint: catalog.tools.suggestionsHint,
+  suggestionsLabel: catalog.tools.suggestionsLabel,
 }
+
+const privacyFeatures = [
+  {
+    Icon: Shield,
+    title: catalog.home.featureNoUploadsTitle,
+    description: catalog.home.featureNoUploadsDescription,
+  },
+  {
+    Icon: Code,
+    title: catalog.home.featureNoServersTitle,
+    description: catalog.home.featureNoServersDescription,
+  },
+  {
+    Icon: CircleArrowDown,
+    title: catalog.home.featureOfflineTitle,
+    description: catalog.home.featureOfflineDescription,
+  },
+] as const
 ---
 
 <MainLayout
@@ -39,19 +86,163 @@ const searchMessages = {
   current="home"
   pathname="/"
 >
-  <header class="max-w-3xl space-y-3">
-    <h1 class="font-heading text-4xl leading-none tracking-[var(--tracking-display)] text-balance sm:text-5xl">
+  <section class="flex max-w-[52rem] flex-col gap-5 pt-4 sm:pt-8 lg:pt-14">
+    <p
+      class="text-xs font-medium tracking-[0.2em] text-muted-foreground uppercase"
+    >
+      {formatSiteMessage(catalog.home.eyebrow, { count: toolCount })}
+    </p>
+    <h1
+      class="font-heading text-4xl leading-[1.05] font-semibold tracking-[var(--tracking-display)] text-balance sm:text-5xl lg:text-6xl"
+    >
       {catalog.home.title}
     </h1>
     <p class="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
       {catalog.home.description}
     </p>
-  </header>
+    <div class="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center">
+      <div class="w-full sm:max-w-[32.5rem]">
+        <HomeSearch
+          client:load
+          entries={suggestionEntries}
+          language={language}
+          categoryLabels={catalog.tools.categories}
+          messages={searchMessages}
+        />
+      </div>
+      <a
+        href={toolsPath}
+        class="inline-flex h-12 shrink-0 items-center justify-center gap-1.5 rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+      >
+        {catalog.home.primaryAction}
+        <ArrowRight className="size-4 rtl:rotate-180" />
+      </a>
+    </div>
+    <p class="text-[13px] leading-6 text-muted-foreground">
+      {catalog.home.popularLabel}&nbsp;
+      {
+        popularTools.map((entry, index) => (
+          <>
+            {index > 0 && <span aria-hidden="true"> · </span>}
+            <a
+              href={localizePath(`/tools/${entry.slug}`, language)}
+              class="text-foreground underline decoration-border underline-offset-[3px] transition-colors hover:decoration-foreground/40"
+            >
+              {resolveEntryLocale(entry, language).name}
+            </a>
+          </>
+        ))
+      }
+    </p>
+  </section>
 
-  <ToolsDirectorySearch
-    client:load
-    entries={toolSearchIndex}
-    language={language}
-    messages={searchMessages}
-  />
+  <section
+    class="grid divide-y divide-border border-y border-border sm:grid-cols-3 sm:divide-y-0"
+  >
+    {
+      privacyFeatures.map(({ Icon, title, description }, index) => (
+        <div
+          class:list={[
+            "flex items-start gap-3 py-5 sm:py-6 sm:pe-6",
+            index > 0 && "sm:border-s sm:border-border sm:ps-6",
+          ]}
+        >
+          <Icon className="mt-0.5 size-4.5 shrink-0 text-foreground" />
+          <div>
+            <p class="text-sm font-semibold">{title}</p>
+            <p class="mt-0.5 text-sm leading-normal text-muted-foreground">
+              {description}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </section>
+
+  <section class="flex flex-col gap-5 pt-4 sm:pt-8">
+    <div class="flex items-end justify-between gap-4">
+      <h2
+        class="font-heading text-2xl leading-tight font-semibold tracking-[var(--tracking-display)]"
+      >
+        {catalog.home.categoriesTitle}
+      </h2>
+      <a
+        href={toolsPath}
+        class="inline-flex shrink-0 items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+      >
+        {catalog.home.categoriesAction}
+        <ArrowRight className="size-3.5 rtl:rotate-180" />
+      </a>
+    </div>
+    <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        categories.map(({ category, count }) => (
+          <a
+            href={`${toolsPath}?category=${encodeURIComponent(category)}`}
+            class="flex items-center gap-3 rounded-xl border border-border p-4 transition-colors hover:bg-muted/50"
+          >
+            <ToolIcon
+              icon={getCategoryIcon(category)}
+              className="size-4.5 shrink-0 text-muted-foreground"
+            />
+            <span class="min-w-0">
+              <span class="block truncate text-sm font-medium">
+                {getCategoryLabel(catalog.tools.categories, category)}
+              </span>
+              <span class="block text-xs text-muted-foreground">
+                {new Intl.NumberFormat(language).format(count)}{" "}
+                {catalog.tools.resultCountSuffix}
+              </span>
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="flex flex-col gap-5 pt-2 pb-6 sm:pt-4 sm:pb-10">
+    <div class="flex items-end justify-between gap-4">
+      <h2
+        class="font-heading text-2xl leading-tight font-semibold tracking-[var(--tracking-display)]"
+      >
+        {catalog.home.popularToolsTitle}
+      </h2>
+      <a
+        href={toolsPath}
+        class="inline-flex shrink-0 items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+      >
+        {formatSiteMessage(catalog.home.popularToolsAction, {
+          count: toolCount,
+        })}
+        <ArrowRight className="size-3.5 rtl:rotate-180" />
+      </a>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        featuredTools.map((entry) => {
+          const locale = resolveEntryLocale(entry, language)
+
+          return (
+            <a href={localizePath(`/tools/${entry.slug}`, language)} class="group block">
+              <ToolSurface className="flex h-full flex-col gap-3 transition-colors group-hover:border-foreground/20">
+                <div class="flex flex-1 flex-col gap-1.5">
+                  <h3 class="flex items-center gap-2 font-heading text-lg leading-tight tracking-[var(--tracking-display)]">
+                    <ToolIcon
+                      icon={entry.icon}
+                      className="size-4 shrink-0 text-muted-foreground"
+                    />
+                    <span class="min-w-0 truncate">{locale.name}</span>
+                  </h3>
+                  <p class="line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+                    {locale.description}
+                  </p>
+                </div>
+              </ToolSurface>
+            </a>
+          )
+        })
+      }
+    </div>
+  </section>
 </MainLayout>
+

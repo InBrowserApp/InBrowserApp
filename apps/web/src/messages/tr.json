@@ -7,6 +7,8 @@
     "themeLight": "Açık",
     "themeDark": "Koyu",
     "themeSystem": "Sistem",
+    "footerTagline": "Ücretsiz ve açık kaynak",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Ana Sayfa",
       "tools": "Araçlar"
@@ -22,18 +24,49 @@
   "home": {
     "title": "Gizliliğinize saygı duyan tarayıcı tabanlı araçlar",
     "description": "Her araç tarayıcınızda yerel olarak çalışır. Verileriniz cihazınızdan asla ayrılmaz.",
-    "primaryAction": "Tüm araçlara göz at"
+    "eyebrow": "{count} araç · Açık kaynak · %100 tarayıcınızda çalışır",
+    "primaryAction": "Tüm araçlara göz at",
+    "popularLabel": "Popüler:",
+    "featureNoUploadsTitle": "Yükleme yok",
+    "featureNoUploadsDescription": "Dosyalar cihazınızda işlenir ve asla hiçbir yere gönderilmez.",
+    "featureNoServersTitle": "Sunucu yok",
+    "featureNoServersDescription": "Her şey yerel olarak hesaplanır — açık kaynak ve denetlenebilir.",
+    "featureOfflineTitle": "Çevrimdışı çalışır",
+    "featureOfflineDescription": "PWA olarak yüklenebilir — araçlar ağ bağlantısı olmadan da çalışmaya devam eder.",
+    "categoriesTitle": "Kategoriye göre göz at",
+    "categoriesAction": "Tüm araçlar",
+    "popularToolsTitle": "Popüler araçlar",
+    "popularToolsAction": "{count} aracın tamamını gör"
   },
   "tools": {
     "title": "Tüm Araçlar",
-    "description": "Her şey tarayıcınızda çalışır — hiçbir veri yüklenmez.",
     "searchLabel": "Araçlarda ara",
-    "searchPlaceholder": "İsme veya açıklamaya göre ara…",
+    "searchPlaceholder": "{count} araç arasında ara…",
     "resultCountSuffix": "araç",
     "clearSearchLabel": "Temizle",
+    "categoriesLabel": "Kategoriler",
+    "categoryAll": "Tüm araçlar",
+    "sortLabel": "A–Z",
+    "suggestionsLabel": "Öneriler",
+    "suggestionsHint": "↑↓ gezinin · ↵ açın · esc kapatın",
+    "suggestionMatchCountOne": "{count} eşleşme",
+    "suggestionMatchCount": "{count} eşleşme",
     "emptyRegistryTitle": "Henüz mevcut araç yok.",
     "emptyRegistryDescription": "Araçlar ekleniyor — yakında tekrar kontrol edin.",
     "emptySearchTitle": "Eşleşen araç yok.",
-    "emptySearchDescription": "Farklı bir anahtar kelime deneyin veya aramayı temizleyin."
+    "emptySearchDescription": "Farklı bir anahtar kelime deneyin veya aramayı temizleyin.",
+    "categories": {
+      "crypto": "Kripto ve Hash",
+      "developer": "Geliştirici",
+      "image": "Görsel ve Medya",
+      "json": "JSON ve Veri",
+      "misc": "Çeşitli",
+      "network": "Ağ",
+      "pdf": "PDF",
+      "random": "Rastgele",
+      "text": "Metin",
+      "time": "Zaman ve Tarih",
+      "web": "Web"
+    }
   }
 }

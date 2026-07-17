@@ -13,10 +13,12 @@ import {
   FileText,
   Globe,
   ImageIcon,
+  LayoutGrid,
   Lock,
   Mic,
   Network,
   Ruler,
+  Sparkles,
   Wrench,
 } from "@workspace/ui/icons"
 
@@ -32,10 +34,13 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   "file-text": FileText,
   globe: Globe,
   image: ImageIcon,
+  "layout-grid": LayoutGrid,
   lock: Lock,
   mic: Mic,
   network: Network,
   ruler: Ruler,
+  sparkles: Sparkles,
+  wrench: Wrench,
 }
 
 type ToolIconProps = LucideProps & {

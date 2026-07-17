@@ -7,6 +7,8 @@
     "themeLight": "Ljust",
     "themeDark": "Mörkt",
     "themeSystem": "System",
+    "footerTagline": "Gratis & öppen källkod",
+    "footerGitHub": "GitHub",
     "navigation": {
       "home": "Hem",
       "tools": "Verktyg"
@@ -22,18 +24,49 @@
   "home": {
     "title": "Webbläsarbaserade verktyg som respekterar din integritet",
     "description": "Varje verktyg körs lokalt i din webbläsare. Dina data lämnar aldrig din enhet.",
-    "primaryAction": "Bläddra bland alla verktyg"
+    "eyebrow": "{count} verktyg · Öppen källkod · Körs till 100 % i din webbläsare",
+    "primaryAction": "Bläddra bland alla verktyg",
+    "popularLabel": "Populära:",
+    "featureNoUploadsTitle": "Inga uppladdningar",
+    "featureNoUploadsDescription": "Filer bearbetas på din enhet och skickas aldrig någonstans.",
+    "featureNoServersTitle": "Inga servrar",
+    "featureNoServersDescription": "Allt beräknas lokalt — öppen källkod och granskningsbart.",
+    "featureOfflineTitle": "Fungerar offline",
+    "featureOfflineDescription": "Kan installeras som PWA — verktygen fortsätter fungera utan nätverk.",
+    "categoriesTitle": "Bläddra efter kategori",
+    "categoriesAction": "Alla verktyg",
+    "popularToolsTitle": "Populära verktyg",
+    "popularToolsAction": "Visa alla {count}"
   },
   "tools": {
     "title": "Alla verktyg",
-    "description": "Allt körs i din webbläsare — inga data laddas upp.",
     "searchLabel": "Sök verktyg",
-    "searchPlaceholder": "Sök efter namn eller beskrivning…",
+    "searchPlaceholder": "Sök bland {count} verktyg…",
     "resultCountSuffix": "verktyg",
     "clearSearchLabel": "Rensa",
+    "categoriesLabel": "Kategorier",
+    "categoryAll": "Alla verktyg",
+    "sortLabel": "A–Ö",
+    "suggestionsLabel": "Förslag",
+    "suggestionsHint": "↑↓ navigera · ↵ öppna · esc stäng",
+    "suggestionMatchCountOne": "{count} träff",
+    "suggestionMatchCount": "{count} träffar",
     "emptyRegistryTitle": "Inga verktyg tillgängliga ännu.",
     "emptyRegistryDescription": "Verktyg läggs till — kom tillbaka snart.",
     "emptySearchTitle": "Inga matchande verktyg.",
-    "emptySearchDescription": "Prova ett annat nyckelord eller rensa sökningen."
+    "emptySearchDescription": "Prova ett annat nyckelord eller rensa sökningen.",
+    "categories": {
+      "crypto": "Krypto & hashning",
+      "developer": "Utvecklare",
+      "image": "Bild & media",
+      "json": "JSON & data",
+      "misc": "Övrigt",
+      "network": "Nätverk",
+      "pdf": "PDF",
+      "random": "Slump",
+      "text": "Text",
+      "time": "Tid & datum",
+      "web": "Webb"
+    }
   }
 }
