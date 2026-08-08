@@ -286,8 +286,8 @@ catalogs:
       specifier: ^4.12.0
       version: 4.12.0
     sm-crypto:
-      specifier: ^0.4.0
-      version: 0.4.0
+      specifier: ^0.5.0
+      version: 0.5.5
     smol-toml:
       specifier: ^1.7.0
       version: 1.7.0
@@ -5788,7 +5788,7 @@ importers:
         version: 19.2.7(react@19.2.7)
       sm-crypto:
         specifier: 'catalog:'
-        version: 0.4.0
+        version: 0.5.5
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -13252,8 +13252,8 @@ packages:
     resolution: {integrity: sha512-stxByr12oeeOyY2BlviTNQlYV5xOj47GirPr4yA1hE9JCtxfQN0+tVbkxwCtYDQWhEKWFHsEK48ORg5jrouCAg==}
     engines: {node: '>=20'}
 
-  sm-crypto@0.4.0:
-    resolution: {integrity: sha512-OexH2V1EqmhXuOIPGoCl55OjMF0wwPUM/zhUjT0Q6vHBeopSRvTNRy76/1eRoFs3VBKt39hdFnxwpFmooHYa2A==}
+  sm-crypto@0.5.5:
+    resolution: {integrity: sha512-C9KG6UgKPvMjd3YwDNsj3Aj9XincYfQ445vPaDHBXpp+lGklm3bUbqz/rVp78UaIyt/4uMXrkYM3MskRNHKrJQ==}
 
   smart-buffer@4.2.0:
     resolution: {integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==}
@@ -21153,7 +21153,7 @@ snapshots:
       ansi-styles: 6.2.3
       is-fullwidth-code-point: 5.1.0
 
-  sm-crypto@0.4.0:
+  sm-crypto@0.5.5:
     dependencies:
       jsbn: 1.1.0
 
