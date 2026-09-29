@@ -153,7 +153,7 @@ function InfoSectionCard({
   unavailableLabel: string
 }>) {
   return (
-    <Card className="gap-0">
+    <Card className="gap-0 pb-0">
       <CardHeader className="border-b">
         <CardTitle>{section.title}</CardTitle>
         <CardDescription>{section.description}</CardDescription>

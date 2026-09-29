@@ -51,7 +51,7 @@ function PreviewCardHeader({
   }
 
   return (
-    <CardHeader className="gap-4 border-b px-5 py-5 sm:px-6">
+    <CardHeader className="gap-4 border-b px-5 sm:px-6">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
         <div className="flex min-w-0 flex-col gap-1.5">
           <CardTitle className="text-pretty">{messages.previewTitle}</CardTitle>

@@ -83,13 +83,13 @@ function QueryCard({
   onSubmit,
 }: QueryCardProps) {
   return (
-    <ToolPanelCard className="gap-0">
+    <ToolPanelCard>
       <CardHeader className="border-b">
         <CardTitle>{messages.queryTitle}</CardTitle>
         <CardDescription>{messages.queryDescription}</CardDescription>
       </CardHeader>
       <form className="flex min-h-0 flex-1 flex-col" onSubmit={onSubmit}>
-        <ToolPanelCardContent className="pt-3 pb-4">
+        <ToolPanelCardContent className="pt-3">
           <FieldGroup className="grid gap-4 lg:grid-cols-2">
             <Field>
               <FieldLabel htmlFor={domainInputId}>

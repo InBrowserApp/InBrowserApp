@@ -1,3 +1,4 @@
+import { ToolPanelCardContent } from "@workspace/ui/components/tool/tool-panel-card"
 import {
   CardAction,
   CardDescription,
@@ -64,7 +65,7 @@ function EventRemindersCard({
           </Button>
         </CardAction>
       </CardHeader>
-      <div className="px-4">
+      <ToolPanelCardContent>
         <FieldGroup>
           <Field orientation="responsive">
             <FieldLabel htmlFor="reminders-enabled">
@@ -170,7 +171,7 @@ function EventRemindersCard({
               })
             : null}
         </FieldGroup>
-      </div>
+      </ToolPanelCardContent>
     </>
   )
 }

@@ -111,7 +111,7 @@ function PreviewCard({
   }
 
   return (
-    <ToolPanelCard className="min-w-0 !gap-0 !py-0">
+    <ToolPanelCard className="min-w-0">
       <PreviewCardHeader
         messages={messages}
         badges={badges}
@@ -123,7 +123,7 @@ function PreviewCard({
         onShowOutlineChange={onShowOutlineChange}
       />
 
-      <ToolPanelCardContent className="p-0">
+      <ToolPanelCardContent padding="none">
         {hasMarkdown ? (
           <div
             className={cn(

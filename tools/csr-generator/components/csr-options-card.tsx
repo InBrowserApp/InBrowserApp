@@ -61,7 +61,7 @@ function CsrOptionsCard(props: CsrOptionsCardProps) {
         <CardTitle>{messages.optionsTitle}</CardTitle>
         <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-4 py-4">
+      <ToolPanelCardContent className="gap-4">
         <CsrKeySourceFields
           keySource={props.keySource}
           algorithm={props.algorithm}

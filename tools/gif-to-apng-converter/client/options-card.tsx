@@ -68,7 +68,7 @@ function OptionsCard({
         <CardTitle>{messages.optionsTitle}</CardTitle>
         <CardDescription>{messages.optionsDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-6 p-4">
+      <ToolPanelCardContent className="gap-6">
         <Field className="gap-3">
           <div className="flex items-center justify-between gap-3">
             <FieldLabel htmlFor="gif-to-apng-scale">

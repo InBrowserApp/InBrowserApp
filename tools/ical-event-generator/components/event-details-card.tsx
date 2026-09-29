@@ -1,5 +1,6 @@
 import { useId } from "react"
 
+import { ToolPanelCardContent } from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   CardAction,
@@ -68,7 +69,7 @@ function EventDetailsCard({
           </Button>
         </CardAction>
       </CardHeader>
-      <div className="px-4">
+      <ToolPanelCardContent>
         <FieldGroup>
           <Field>
             <FieldLabel htmlFor={titleId}>
@@ -157,7 +158,7 @@ function EventDetailsCard({
             </FieldContent>
           </Field>
         </FieldGroup>
-      </div>
+      </ToolPanelCardContent>
     </>
   )
 }

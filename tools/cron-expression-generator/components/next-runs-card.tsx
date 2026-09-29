@@ -1,5 +1,5 @@
+import { ToolPanelCardContent } from "@workspace/ui/components/tool/tool-panel-card"
 import {
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -44,7 +44,7 @@ function NextRunsCard({
         <CardTitle>{messages.nextRuns.title}</CardTitle>
         <CardDescription>{messages.nextRuns.description}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <ToolPanelCardContent>
         {runTimes.length > 0 ? (
           <Table>
             <TableHeader>
@@ -83,7 +83,7 @@ function NextRunsCard({
             </EmptyHeader>
           </Empty>
         )}
-      </CardContent>
+      </ToolPanelCardContent>
     </>
   )
 }

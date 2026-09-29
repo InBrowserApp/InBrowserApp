@@ -56,7 +56,6 @@ function CsrOutputCard({ messages, state }: CsrOutputCardProps) {
         ) : null}
       </CardHeader>
       <ToolPanelCardContent
-        className="py-4"
         aria-busy={state.status === "loading"}
         aria-live="polite"
       >
