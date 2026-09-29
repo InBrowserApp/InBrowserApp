@@ -1,5 +1,6 @@
 import { useId } from "react"
 
+import { ToolPanelCardContent } from "@workspace/ui/components/tool/tool-panel-card"
 import {
   CardDescription,
   CardHeader,
@@ -129,7 +130,7 @@ function EventScheduleCard({
         <CardTitle>{messages.schedule.title}</CardTitle>
         <CardDescription>{messages.schedule.description}</CardDescription>
       </CardHeader>
-      <div className="px-4">
+      <ToolPanelCardContent>
         <FieldGroup>
           <Field orientation="responsive">
             <FieldLabel htmlFor="all-day-switch">
@@ -288,7 +289,7 @@ function EventScheduleCard({
             </Select>
           </Field>
         </FieldGroup>
-      </div>
+      </ToolPanelCardContent>
     </>
   )
 }

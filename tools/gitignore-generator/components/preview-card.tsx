@@ -33,7 +33,7 @@ function PreviewCard({
         <CardTitle>{messages.resultLabel}</CardTitle>
         <CardDescription>{messages.resultDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="py-4">
+      <ToolPanelCardContent>
         <ScrollArea className="h-[28rem] overflow-hidden rounded-lg border border-input bg-transparent sm:h-[32rem]">
           <HighlightedGitignore
             ariaLabel={messages.resultLabel}

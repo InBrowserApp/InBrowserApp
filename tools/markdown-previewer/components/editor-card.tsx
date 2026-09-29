@@ -34,15 +34,15 @@ function EditorCard({
   onClear,
 }: EditorCardProps) {
   return (
-    <ToolPanelCard className="min-w-0 !gap-0 !py-0">
-      <CardHeader className="gap-1.5 border-b px-5 py-5 sm:px-6">
+    <ToolPanelCard className="min-w-0">
+      <CardHeader className="gap-1.5 border-b px-5 sm:px-6">
         <CardTitle className="text-pretty">{messages.editorTitle}</CardTitle>
         <CardDescription className="max-w-2xl text-pretty">
           {messages.editorDescription}
         </CardDescription>
       </CardHeader>
 
-      <ToolPanelCardContent className="p-4 sm:p-5">
+      <ToolPanelCardContent className="sm:p-5">
         <label htmlFor={textareaId} className="sr-only">
           {messages.sourceLabel}
         </label>

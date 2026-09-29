@@ -48,12 +48,12 @@ function ResultsCard({
   )
 
   return (
-    <ToolPanelCard className="gap-0 py-0">
+    <ToolPanelCard>
       <CardHeader className="border-b p-4">
         <CardTitle>{messages.resultTitle}</CardTitle>
         <CardDescription>{messages.resultDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent aria-live="polite" className="gap-5 p-4">
+      <ToolPanelCardContent aria-live="polite" className="gap-5">
         {results.length ? (
           <>
             <div className="flex flex-wrap gap-2">

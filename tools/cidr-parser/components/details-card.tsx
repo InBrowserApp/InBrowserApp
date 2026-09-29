@@ -25,12 +25,12 @@ function DetailsCard({
   messages,
 }: DetailsCardProps) {
   return (
-    <ToolPanelCard className="gap-0 py-0">
+    <ToolPanelCard>
       <CardHeader className="border-b py-4">
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-3 py-4">
+      <ToolPanelCardContent className="gap-3">
         {items.map((item) => (
           <div
             key={item.label}

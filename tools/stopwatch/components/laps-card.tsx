@@ -73,7 +73,7 @@ function LapsCard({ messages, laps, onClear }: LapsCardProps) {
         <CardDescription>{messages.lapsDescription}</CardDescription>
       </CardHeader>
 
-      <ToolPanelCardContent className="gap-4 pt-4">
+      <ToolPanelCardContent className="gap-4">
         {lapRows.length ? (
           <Table>
             <TableHeader>

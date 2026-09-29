@@ -75,7 +75,7 @@ function UploadCard({
         <CardTitle>{messages.uploadTitle}</CardTitle>
         <CardDescription>{messages.uploadDescription}</CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="gap-4 p-4">
+      <ToolPanelCardContent className="gap-4">
         <button
           aria-label={messages.chooseFilesLabel}
           className="flex flex-1 cursor-pointer rounded-lg text-left outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"

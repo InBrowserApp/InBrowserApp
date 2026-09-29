@@ -48,7 +48,7 @@ const DNS_FLAGS = ["TC", "RD", "RA", "AD", "CD"] as const
 
 function ResultsCard({ language, messages, state }: ResultsCardProps) {
   return (
-    <Card className="gap-0 overflow-hidden">
+    <Card className="gap-0 overflow-hidden pb-0">
       <CardHeader className="border-b">
         <CardTitle>{messages.resultsTitle}</CardTitle>
         <CardDescription>{messages.resultsDescription}</CardDescription>

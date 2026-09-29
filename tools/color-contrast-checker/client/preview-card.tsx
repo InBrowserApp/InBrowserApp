@@ -26,7 +26,7 @@ export function PreviewCard({ messages, previewStyle }: PreviewCardProps) {
           {messages.normalTextLabel} / {messages.largeTextLabel}
         </CardDescription>
       </CardHeader>
-      <ToolPanelCardContent className="py-4">
+      <ToolPanelCardContent>
         <div
           className="grid gap-5 rounded-xl border p-5 shadow-xs"
           style={previewStyle}

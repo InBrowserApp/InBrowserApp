@@ -266,7 +266,7 @@ function UnixTimestampConverterClient({
       </ToolPanelCard>
 
       <ToolPanelCard>
-        <ToolPanelCardContent className="gap-4 pt-4">
+        <ToolPanelCardContent className="gap-4">
           {detailRows.map(([label, value, copyable]) => (
             <div
               key={label}

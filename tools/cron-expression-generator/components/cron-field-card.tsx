@@ -1,9 +1,9 @@
 import { useId } from "react"
 
+import { ToolPanelCardContent } from "@workspace/ui/components/tool/tool-panel-card"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Checkbox } from "@workspace/ui/components/ui/checkbox"
 import {
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -104,7 +104,7 @@ function CronFieldCard({
           {messages.fields.descriptions[fieldName]}
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <ToolPanelCardContent>
         <FieldGroup>
           <FieldSet>
             <FieldLegend variant="label">
@@ -223,7 +223,7 @@ function CronFieldCard({
             </div>
           ) : null}
         </FieldGroup>
-      </CardContent>
+      </ToolPanelCardContent>
     </>
   )
 }

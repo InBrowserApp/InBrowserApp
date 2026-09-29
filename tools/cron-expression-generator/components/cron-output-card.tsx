@@ -1,4 +1,5 @@
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
+import { ToolPanelCardContent } from "@workspace/ui/components/tool/tool-panel-card"
 import {
   Alert,
   AlertDescription,
@@ -7,7 +8,6 @@ import {
 import { Badge } from "@workspace/ui/components/ui/badge"
 import {
   CardAction,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -41,7 +41,7 @@ function CronOutputCard({ expression, messages, state }: CronOutputCardProps) {
           />
         </CardAction>
       </CardHeader>
-      <CardContent className="flex flex-col gap-5">
+      <ToolPanelCardContent className="gap-5">
         <div className="flex flex-col gap-2">
           <p className="text-sm font-medium">
             {messages.output.expressionLabel}
@@ -80,7 +80,7 @@ function CronOutputCard({ expression, messages, state }: CronOutputCardProps) {
           <AlertTitle>{messages.output.noteTitle}</AlertTitle>
           <AlertDescription>{messages.output.noteDescription}</AlertDescription>
         </Alert>
-      </CardContent>
+      </ToolPanelCardContent>
     </>
   )
 }

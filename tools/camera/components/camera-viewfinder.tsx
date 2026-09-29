@@ -101,7 +101,7 @@ function CameraViewfinder({
         <CardDescription>{messages.viewfinderDescription}</CardDescription>
       </CardHeader>
 
-      <ToolPanelCardContent className="gap-4 p-4">
+      <ToolPanelCardContent className="gap-4">
         <div className="relative mx-auto aspect-[3/4] w-full max-w-5xl overflow-hidden rounded-2xl bg-neutral-950 shadow-2xl ring-1 ring-foreground/10 sm:aspect-video sm:rounded-3xl">
           <video
             ref={videoRef}

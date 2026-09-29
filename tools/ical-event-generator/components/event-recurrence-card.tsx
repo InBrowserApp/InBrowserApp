@@ -1,5 +1,6 @@
 import { useId, useMemo } from "react"
 
+import { ToolPanelCardContent } from "@workspace/ui/components/tool/tool-panel-card"
 import {
   CardDescription,
   CardHeader,
@@ -84,7 +85,7 @@ function EventRecurrenceCard({
         <CardTitle>{messages.recurrence.title}</CardTitle>
         <CardDescription>{messages.recurrence.description}</CardDescription>
       </CardHeader>
-      <div className="px-4">
+      <ToolPanelCardContent>
         <FieldGroup>
           <Field>
             <FieldLabel htmlFor={frequencyId}>
@@ -252,7 +253,7 @@ function EventRecurrenceCard({
             </>
           ) : null}
         </FieldGroup>
-      </div>
+      </ToolPanelCardContent>
     </>
   )
 }

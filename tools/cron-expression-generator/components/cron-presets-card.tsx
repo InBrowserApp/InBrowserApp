@@ -1,6 +1,6 @@
+import { ToolPanelCardContent } from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -25,7 +25,7 @@ function CronPresetsCard({ messages, onSelect }: CronPresetsCardProps) {
         <CardTitle>{messages.presets.title}</CardTitle>
         <CardDescription>{messages.presets.description}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <ToolPanelCardContent>
         <div className="flex flex-wrap gap-2">
           {PRESET_IDS.map((presetId) => (
             <Button
@@ -42,7 +42,7 @@ function CronPresetsCard({ messages, onSelect }: CronPresetsCardProps) {
             </Button>
           ))}
         </div>
-      </CardContent>
+      </ToolPanelCardContent>
     </>
   )
 }
