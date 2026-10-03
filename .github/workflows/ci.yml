@@ -233,7 +233,8 @@ jobs:
       - test
       - build-web
       - html-check
-    if: github.event_name == 'release'
+    # Published prereleases still build and receive assets, but never go live.
+    if: github.event_name == 'release' && github.event.release.prerelease == false
     permissions:
       contents: read
     environment:

@@ -244,9 +244,11 @@ Workers Versions:
   `wrangler versions upload --tag <ref>` against the
   `cloudflare-workers-staging` environment, exposing the version through the
   job's `deployment-url`.
-- **Release publish** — `deploy-production` runs `wrangler deploy` against
-  production, and `upload-release-asset` attaches the built `apps/web/dist` as
-  a `.tar.zstd` archive on the GitHub release (#924).
+- **Release publish** — `upload-release-asset` attaches the built
+  `apps/web/dist` as a `.tar.zstd` archive on the GitHub release (#924).
+  `deploy-production` runs `wrangler deploy` against production only when
+  `release.prerelease` is `false`. Prereleases run validation and receive
+  release assets, but do not deploy to production.
 
 ## Git and PR conventions
 
