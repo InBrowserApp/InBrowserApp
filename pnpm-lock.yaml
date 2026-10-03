@@ -209,7 +209,7 @@ catalogs:
       version: 0.16.0
     js-yaml:
       specifier: ^4.3.0
-      version: 4.3.0
+      version: 4.3.2
     jsbarcode:
       specifier: ^3.12.3
       version: 3.12.3
@@ -2682,7 +2682,7 @@ importers:
         version: 11.11.1
       js-yaml:
         specifier: 'catalog:'
-        version: 4.3.0
+        version: 4.3.2
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3756,7 +3756,7 @@ importers:
         version: 11.11.1
       js-yaml:
         specifier: 'catalog:'
-        version: 4.3.0
+        version: 4.3.2
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4412,7 +4412,7 @@ importers:
         version: 11.11.1
       js-yaml:
         specifier: 'catalog:'
-        version: 4.3.0
+        version: 4.3.2
       openapi-typescript:
         specifier: 'catalog:'
         version: 7.13.0(typescript@5.9.3)
@@ -6165,7 +6165,7 @@ importers:
         version: 11.11.1
       js-yaml:
         specifier: 'catalog:'
-        version: 4.3.0
+        version: 4.3.2
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6966,7 +6966,7 @@ importers:
         version: 11.11.1
       js-yaml:
         specifier: 'catalog:'
-        version: 4.3.0
+        version: 4.3.2
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7000,7 +7000,7 @@ importers:
         version: 11.11.1
       js-yaml:
         specifier: 'catalog:'
-        version: 4.3.0
+        version: 4.3.2
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -11863,16 +11863,16 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
-  js-yaml@3.14.2:
-    resolution: {integrity: sha512-PMSmkqxr106Xa156c2M265Z+FTrPl+oxd/rgOQy2tijQeK5TxQ43psO1ZCwhVOSdnn+RzkzlRz/eY4BgJBYVpg==}
+  js-yaml@3.15.2:
+    resolution: {integrity: sha512-6EuL879VkRA+1Cz578mKMiKvjPNEuk6+r1JaFzoSWejZmtf7xWbIyw1e3KkxlkzTIt9Taw6JBhEppG7utc1P+w==}
     hasBin: true
 
   js-yaml@4.1.1:
     resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
 
-  js-yaml@4.3.0:
-    resolution: {integrity: sha512-1td788aAnnZ5qs7V2QIRl1owjtYpbKt749Y3xauqQgwIIGF/xXWz1wMTEBx5O3LK3lXLVuqXPdPxj2BoFHaW9Q==}
+  js-yaml@4.3.2:
+    resolution: {integrity: sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==}
     hasBin: true
 
   jsbarcode@3.12.3:
@@ -14342,7 +14342,7 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
-      js-yaml: 4.3.0
+      js-yaml: 4.3.2
       picomatch: 4.0.4
       retext-smartypants: 6.2.0
       shiki: 4.2.0
@@ -14384,7 +14384,7 @@ snapshots:
       hast-util-from-html: 2.0.3
       hast-util-to-text: 4.0.2
       import-meta-resolve: 4.2.0
-      js-yaml: 4.3.0
+      js-yaml: 4.3.2
       mdast-util-definitions: 6.0.0
       rehype-raw: 7.0.0
       rehype-stringify: 10.0.1
@@ -15424,7 +15424,7 @@ snapshots:
     dependencies:
       debug: 4.4.3(supports-color@10.2.2)
       isomorphic-fetch: 3.0.0
-      js-yaml: 3.14.2
+      js-yaml: 3.15.2
       lighthouse: 12.6.1
       tree-kill: 1.2.2
     transitivePeerDependencies:
@@ -17483,7 +17483,7 @@ snapshots:
       github-slugger: 2.0.0
       html-escaper: 3.0.3
       http-cache-semantics: 4.2.0
-      js-yaml: 4.3.0
+      js-yaml: 4.3.2
       jsonc-parser: 3.3.1
       magic-string: 0.30.21
       magicast: 0.5.2
@@ -17936,7 +17936,7 @@ snapshots:
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
-      js-yaml: 4.3.0
+      js-yaml: 4.3.2
       parse-json: 5.2.0
     optionalDependencies:
       typescript: 5.9.3
@@ -19172,7 +19172,7 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
-  js-yaml@3.14.2:
+  js-yaml@3.15.2:
     dependencies:
       argparse: 1.0.10
       esprima: 4.0.1
@@ -19181,7 +19181,7 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  js-yaml@4.3.0:
+  js-yaml@4.3.2:
     dependencies:
       argparse: 2.0.1
 
