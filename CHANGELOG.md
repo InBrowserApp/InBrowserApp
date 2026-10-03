@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.2.1](https://github.com/InBrowserApp/InBrowserApp/compare/v2.2.0...v2.2.1) (2026-10-03)
+
+
+### Bug Fixes
+
+* **ci:** prevent prereleases from deploying to production ([#1042](https://github.com/InBrowserApp/InBrowserApp/issues/1042)) ([c7aedb5](https://github.com/InBrowserApp/InBrowserApp/commit/c7aedb5598c1353aff24b5c02efb1a0fa887e021))
+* **ci:** require tests and HTML link checks before merging ([#1041](https://github.com/InBrowserApp/InBrowserApp/issues/1041)) ([ff21f42](https://github.com/InBrowserApp/InBrowserApp/commit/ff21f425e5c32c78f2d262082998e71f73dfdbf4))
+* **ui:** normalize tool panel card spacing ([#1037](https://github.com/InBrowserApp/InBrowserApp/issues/1037)) ([fa83735](https://github.com/InBrowserApp/InBrowserApp/commit/fa8373572538218810ac238924de62af90ecde98))
+
 ## [2.2.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.1.0...v2.2.0) (2026-07-17)
 
 
