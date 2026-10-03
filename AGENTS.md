@@ -229,12 +229,18 @@ Lint and formatting:
 Workflows live in `.github/workflows/`:
 
 - `ci.yml` — `code-check` (lint, format, registry-up-to-date check, typecheck,
-  test+coverage, depcruise, knip), `build-web` (astro build + htmltest on the
-  built HTML), and the deploy jobs below. Runs on PRs, on push to `main`, and on
-  release publish.
+  depcruise, knip), `test` (tests + coverage), `build-web` (Astro build),
+  `html-check` (internal links in built HTML), and the deploy jobs below. Runs
+  on PRs, on push to `main`, and on release publish.
 - `pr-title.yml` — enforces Conventional Commits on PR titles.
 - `release-please.yml` — opens release PRs and publishes GitHub releases.
 - `actionlint.yml` — lints workflow YAML when `.github/workflows/**` changes.
+
+The GitHub **Protect Default** ruleset requires these GitHub Actions checks
+before merging into `main`: `Code Check`, `Test`, `Build Web`,
+`HTML Link Check`, and `Conventional Commits`. These names match job display
+names, not job IDs. When renaming or splitting a required job, update the
+live repository ruleset as well; workflow edits alone do not update it.
 
 Cloudflare Workers (static assets via the Workers Sites model). There is no
 separate `staging` environment in `apps/web/wrangler.jsonc`; previews are
