@@ -1,5 +1,6 @@
 import { useId, useState } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
+import { DocumentNumberInput } from "@workspace/ui/components/tool/document-number-input"
 import { Input } from "@workspace/ui/components/ui/input"
 import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
 import {
@@ -50,17 +51,13 @@ export function Toolbar({
         </Field>
         <Field className="w-24">
           <FieldLabel htmlFor={`${id}-zoom`}>{m.zoom}</FieldLabel>
-          <Input
+          <DocumentNumberInput
             id={`${id}-zoom`}
-            type="number"
             min={25}
             max={400}
             step={25}
             value={state.zoom}
-            onChange={(event) => {
-              const zoom = Number(event.target.value)
-              if (zoom >= 25 && zoom <= 400) reader.zoom(zoom)
-            }}
+            onCommit={reader.zoom}
           />
         </Field>
         <Button variant="outline" onClick={() => reader.zoom("page-width")}>

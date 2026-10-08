@@ -1,5 +1,6 @@
 import { useId, useState } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
+import { DocumentNumberInput } from "@workspace/ui/components/tool/document-number-input"
 import { Input } from "@workspace/ui/components/ui/input"
 import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
 import { ChevronLeft, ChevronRight } from "@workspace/ui/icons"
@@ -60,17 +61,12 @@ export function DocumentToolbar({
         </Button>
         <Field className="w-24">
           <FieldLabel htmlFor={`${id}-page`}>{m.page}</FieldLabel>
-          <Input
+          <DocumentNumberInput
             id={`${id}-page`}
-            type="number"
             min={1}
             max={state.total}
             value={state.page}
-            onChange={(event) => {
-              const page = Number(event.target.value)
-              if (Number.isInteger(page) && page >= 1 && page <= state.total)
-                reader.page(page)
-            }}
+            onCommit={reader.page}
           />
         </Field>
         <span className="pb-2 text-sm text-muted-foreground">
@@ -87,17 +83,13 @@ export function DocumentToolbar({
         </Button>
         <Field className="ms-auto w-24">
           <FieldLabel htmlFor={`${id}-zoom`}>{m.zoom}</FieldLabel>
-          <Input
+          <DocumentNumberInput
             id={`${id}-zoom`}
-            type="number"
             min={25}
             max={400}
             step={25}
             value={state.zoom}
-            onChange={(event) => {
-              const zoom = Number(event.target.value)
-              if (zoom >= 25 && zoom <= 400) reader.zoom(zoom)
-            }}
+            onCommit={reader.zoom}
           />
         </Field>
         <Button variant="outline" onClick={() => reader.zoom("page-width")}>
