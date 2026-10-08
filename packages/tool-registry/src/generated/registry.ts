@@ -26404,6 +26404,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "xlsx-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["xlsx", "excel", "viewer", "reader", "document", "offline"],
+    locales: {
+      ar: {
+        name: "عارض XLSX",
+        description:
+          "تصفح أوراق عمل Excel بصيغة XLSX محليًا مع التبديل بين الأوراق والتمرير وفحص الخلايا. دون رفع الملفات.",
+      },
+      de: {
+        name: "XLSX Viewer",
+        description:
+          "Durchsuchen Sie Excel-XLSX-Arbeitsblätter lokal mit Blattwechsel, Scrollen und Anzeige von Zellinhalten. Ohne Uploads.",
+      },
+      en: {
+        name: "XLSX Viewer",
+        description:
+          "Browse Excel XLSX worksheets locally with sheet switching, scrolling, and cell inspection. No uploads.",
+      },
+      es: {
+        name: "Visor de XLSX",
+        description:
+          "Explora hojas de cálculo Excel XLSX localmente: cambia de hoja, desplázate y consulta las celdas. Sin subir archivos.",
+      },
+      fr: {
+        name: "Lecteur XLSX",
+        description:
+          "Consultez vos classeurs Excel XLSX en local : changez de feuille, faites défiler les cellules et examinez leur contenu. Aucun envoi à un serveur.",
+      },
+      he: {
+        name: "מציג XLSX",
+        description:
+          "עיון בגיליונות Excel XLSX מקומיים עם מעבר בין גיליונות, גלילה ובדיקת תוכן תאים. ללא העלאת קבצים.",
+      },
+      hi: {
+        name: "XLSX व्यूअर",
+        description:
+          "वर्कशीट बदलने, स्क्रॉल करने और सेल की सामग्री देखने की सुविधा के साथ Excel XLSX वर्कशीट स्थानीय रूप से देखें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Penampil XLSX",
+        description:
+          "Jelajahi lembar kerja Excel XLSX secara lokal dengan beralih lembar, menggulir, dan memeriksa sel. Tanpa unggahan.",
+      },
+      it: {
+        name: "Visualizzatore XLSX",
+        description:
+          "Esplora i fogli di lavoro Excel XLSX in locale: passa da un foglio all’altro, scorri le celle e consultane il contenuto. Nessun caricamento su server.",
+      },
+      ja: {
+        name: "XLSXビューアー",
+        description:
+          "シートの切り替え、スクロール、セル内容の確認でExcelのXLSXワークシートをローカルで閲覧できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "XLSX 뷰어",
+        description:
+          "시트 전환, 스크롤, 셀 내용 확인 기능으로 Excel XLSX 워크시트를 기기에서 살펴보세요. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Pemapar XLSX",
+        description:
+          "Semak lembaran kerja Excel XLSX secara setempat dengan beralih antara lembaran, menatal dan memeriksa sel. Tiada muat naik.",
+      },
+      nl: {
+        name: "XLSX-viewer",
+        description:
+          "Bekijk Excel XLSX-werkbladen lokaal, wissel tussen werkbladen, scrol door cellen en bekijk celinhoud. Geen uploads.",
+      },
+      no: {
+        name: "XLSX-viser",
+        description:
+          "Bla gjennom Excel XLSX-regneark lokalt, bytt mellom ark, rull og se innholdet i cellene. Ingen opplasting.",
+      },
+      pl: {
+        name: "Przeglądarka XLSX",
+        description:
+          "Przeglądaj arkusze Excel XLSX lokalnie: przełączaj arkusze, przewijaj je i sprawdzaj zawartość komórek. Bez przesyłania plików na serwer.",
+      },
+      pt: {
+        name: "Visualizador de XLSX",
+        description:
+          "Explore planilhas XLSX do Excel localmente, alternando entre planilhas, rolando e inspecionando células. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Просмотр XLSX",
+        description:
+          "Просматривайте книги Excel XLSX локально: переключайте листы, прокручивайте таблицы и изучайте содержимое ячеек. Без загрузки на сервер.",
+      },
+      sv: {
+        name: "XLSX-visare",
+        description:
+          "Bläddra i Excel-kalkylblad i XLSX-format lokalt genom att växla blad, rulla och granska cellinnehåll. Ingen uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมดู XLSX",
+        description:
+          "เรียกดูเวิร์กชีต Excel XLSX ในเครื่อง พร้อมการสลับชีต เลื่อนดู และตรวจดูเซลล์ โดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "XLSX Görüntüleyici",
+        description:
+          "Excel XLSX çalışma sayfalarını sayfa değiştirme, kaydırma ve hücre inceleme özellikleriyle yerel olarak görüntüleyin. Dosyalar yüklenmez.",
+      },
+      vi: {
+        name: "Trình xem XLSX",
+        description:
+          "Duyệt trang tính Excel XLSX ngay trên thiết bị với tính năng chuyển trang tính, cuộn và xem nội dung ô. Không tải lên.",
+      },
+      "zh-CN": {
+        name: "XLSX 阅读器",
+        description:
+          "在本地浏览 Excel XLSX 工作表，支持切换工作表、滚动浏览和查看单元格内容，无需上传。",
+      },
+      "zh-TW": {
+        name: "XLSX 檢視器",
+        description:
+          "在本機瀏覽 Excel XLSX 工作表，支援切換工作表、捲動與檢視儲存格。無須上傳。",
+      },
+    },
+  },
+  {
     slug: "xml-to-json-converter",
     category: "json",
     icon: "file-json-2",
@@ -53705,6 +53828,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Whirlpool 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 Whirlpool 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  "xlsx-viewer": {
+    slug: "xlsx-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["xlsx", "excel", "viewer", "reader", "document", "offline"],
+    locales: {
+      ar: {
+        name: "عارض XLSX",
+        description:
+          "تصفح أوراق عمل Excel بصيغة XLSX محليًا مع التبديل بين الأوراق والتمرير وفحص الخلايا. دون رفع الملفات.",
+      },
+      de: {
+        name: "XLSX Viewer",
+        description:
+          "Durchsuchen Sie Excel-XLSX-Arbeitsblätter lokal mit Blattwechsel, Scrollen und Anzeige von Zellinhalten. Ohne Uploads.",
+      },
+      en: {
+        name: "XLSX Viewer",
+        description:
+          "Browse Excel XLSX worksheets locally with sheet switching, scrolling, and cell inspection. No uploads.",
+      },
+      es: {
+        name: "Visor de XLSX",
+        description:
+          "Explora hojas de cálculo Excel XLSX localmente: cambia de hoja, desplázate y consulta las celdas. Sin subir archivos.",
+      },
+      fr: {
+        name: "Lecteur XLSX",
+        description:
+          "Consultez vos classeurs Excel XLSX en local : changez de feuille, faites défiler les cellules et examinez leur contenu. Aucun envoi à un serveur.",
+      },
+      he: {
+        name: "מציג XLSX",
+        description:
+          "עיון בגיליונות Excel XLSX מקומיים עם מעבר בין גיליונות, גלילה ובדיקת תוכן תאים. ללא העלאת קבצים.",
+      },
+      hi: {
+        name: "XLSX व्यूअर",
+        description:
+          "वर्कशीट बदलने, स्क्रॉल करने और सेल की सामग्री देखने की सुविधा के साथ Excel XLSX वर्कशीट स्थानीय रूप से देखें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Penampil XLSX",
+        description:
+          "Jelajahi lembar kerja Excel XLSX secara lokal dengan beralih lembar, menggulir, dan memeriksa sel. Tanpa unggahan.",
+      },
+      it: {
+        name: "Visualizzatore XLSX",
+        description:
+          "Esplora i fogli di lavoro Excel XLSX in locale: passa da un foglio all’altro, scorri le celle e consultane il contenuto. Nessun caricamento su server.",
+      },
+      ja: {
+        name: "XLSXビューアー",
+        description:
+          "シートの切り替え、スクロール、セル内容の確認でExcelのXLSXワークシートをローカルで閲覧できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "XLSX 뷰어",
+        description:
+          "시트 전환, 스크롤, 셀 내용 확인 기능으로 Excel XLSX 워크시트를 기기에서 살펴보세요. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Pemapar XLSX",
+        description:
+          "Semak lembaran kerja Excel XLSX secara setempat dengan beralih antara lembaran, menatal dan memeriksa sel. Tiada muat naik.",
+      },
+      nl: {
+        name: "XLSX-viewer",
+        description:
+          "Bekijk Excel XLSX-werkbladen lokaal, wissel tussen werkbladen, scrol door cellen en bekijk celinhoud. Geen uploads.",
+      },
+      no: {
+        name: "XLSX-viser",
+        description:
+          "Bla gjennom Excel XLSX-regneark lokalt, bytt mellom ark, rull og se innholdet i cellene. Ingen opplasting.",
+      },
+      pl: {
+        name: "Przeglądarka XLSX",
+        description:
+          "Przeglądaj arkusze Excel XLSX lokalnie: przełączaj arkusze, przewijaj je i sprawdzaj zawartość komórek. Bez przesyłania plików na serwer.",
+      },
+      pt: {
+        name: "Visualizador de XLSX",
+        description:
+          "Explore planilhas XLSX do Excel localmente, alternando entre planilhas, rolando e inspecionando células. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Просмотр XLSX",
+        description:
+          "Просматривайте книги Excel XLSX локально: переключайте листы, прокручивайте таблицы и изучайте содержимое ячеек. Без загрузки на сервер.",
+      },
+      sv: {
+        name: "XLSX-visare",
+        description:
+          "Bläddra i Excel-kalkylblad i XLSX-format lokalt genom att växla blad, rulla och granska cellinnehåll. Ingen uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมดู XLSX",
+        description:
+          "เรียกดูเวิร์กชีต Excel XLSX ในเครื่อง พร้อมการสลับชีต เลื่อนดู และตรวจดูเซลล์ โดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "XLSX Görüntüleyici",
+        description:
+          "Excel XLSX çalışma sayfalarını sayfa değiştirme, kaydırma ve hücre inceleme özellikleriyle yerel olarak görüntüleyin. Dosyalar yüklenmez.",
+      },
+      vi: {
+        name: "Trình xem XLSX",
+        description:
+          "Duyệt trang tính Excel XLSX ngay trên thiết bị với tính năng chuyển trang tính, cuộn và xem nội dung ô. Không tải lên.",
+      },
+      "zh-CN": {
+        name: "XLSX 阅读器",
+        description:
+          "在本地浏览 Excel XLSX 工作表，支持切换工作表、滚动浏览和查看单元格内容，无需上传。",
+      },
+      "zh-TW": {
+        name: "XLSX 檢視器",
+        description:
+          "在本機瀏覽 Excel XLSX 工作表，支援切換工作表、捲動與檢視儲存格。無須上傳。",
       },
     },
   },

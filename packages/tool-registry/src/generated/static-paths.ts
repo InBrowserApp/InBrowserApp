@@ -19322,6 +19322,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "xlsx-viewer",
+    language: "ar",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "de",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "en",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "es",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "fr",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "he",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "hi",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "id",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "it",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "ja",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "ko",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "ms",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "nl",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "no",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "pl",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "pt",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "ru",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "sv",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "th",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "tr",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "vi",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "xlsx-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "xml-to-json-converter",
     language: "ar",
   },

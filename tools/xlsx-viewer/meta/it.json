@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore XLSX",
+  "description": "Esplora i fogli di lavoro Excel XLSX in locale: passa da un foglio all’altro, scorri le celle e consultane il contenuto. Nessun caricamento su server."
+}
