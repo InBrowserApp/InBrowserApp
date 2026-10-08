@@ -5246,6 +5246,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "docx-viewer",
+    language: "ar",
+  },
+  {
+    slug: "docx-viewer",
+    language: "de",
+  },
+  {
+    slug: "docx-viewer",
+    language: "en",
+  },
+  {
+    slug: "docx-viewer",
+    language: "es",
+  },
+  {
+    slug: "docx-viewer",
+    language: "fr",
+  },
+  {
+    slug: "docx-viewer",
+    language: "he",
+  },
+  {
+    slug: "docx-viewer",
+    language: "hi",
+  },
+  {
+    slug: "docx-viewer",
+    language: "id",
+  },
+  {
+    slug: "docx-viewer",
+    language: "it",
+  },
+  {
+    slug: "docx-viewer",
+    language: "ja",
+  },
+  {
+    slug: "docx-viewer",
+    language: "ko",
+  },
+  {
+    slug: "docx-viewer",
+    language: "ms",
+  },
+  {
+    slug: "docx-viewer",
+    language: "nl",
+  },
+  {
+    slug: "docx-viewer",
+    language: "no",
+  },
+  {
+    slug: "docx-viewer",
+    language: "pl",
+  },
+  {
+    slug: "docx-viewer",
+    language: "pt",
+  },
+  {
+    slug: "docx-viewer",
+    language: "ru",
+  },
+  {
+    slug: "docx-viewer",
+    language: "sv",
+  },
+  {
+    slug: "docx-viewer",
+    language: "th",
+  },
+  {
+    slug: "docx-viewer",
+    language: "tr",
+  },
+  {
+    slug: "docx-viewer",
+    language: "vi",
+  },
+  {
+    slug: "docx-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "docx-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "duration-calculator",
     language: "ar",
   },

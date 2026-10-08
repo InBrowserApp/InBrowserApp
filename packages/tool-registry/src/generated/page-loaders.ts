@@ -77,6 +77,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "dns-lookup": () => import("@tool/dns-lookup/page"),
   "docker-run-to-compose-converter": () =>
     import("@tool/docker-run-to-compose-converter/page"),
+  "docx-viewer": () => import("@tool/docx-viewer/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
   "email-validator": () => import("@tool/email-validator/page"),
   "eu-vat-number-validator": () => import("@tool/eu-vat-number-validator/page"),

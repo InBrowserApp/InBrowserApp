@@ -64,6 +64,7 @@
     "@tool/device-information": "workspace:*",
     "@tool/dns-lookup": "workspace:*",
     "@tool/docker-run-to-compose-converter": "workspace:*",
+    "@tool/docx-viewer": "workspace:*",
     "@tool/duration-calculator": "workspace:*",
     "@tool/email-validator": "workspace:*",
     "@tool/eu-vat-number-validator": "workspace:*",
