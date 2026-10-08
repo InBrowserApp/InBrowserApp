@@ -78,7 +78,7 @@ export async function openReader({
     links.setDocument(null)
     resize.disconnect()
     lifetime.abort()
-    void viewer.l10n.destroy().catch(() => {})
+    void viewer.l10n?.destroy().catch(() => {})
     void task.destroy().catch(() => {})
   }
   signal.addEventListener("abort", dispose, { once: true })
