@@ -77,6 +77,7 @@ test("opens, navigates cells, zooms, copies and closes a workbook", async () => 
   fireEvent.change(reference, { target: { value: "b2" } })
   fireEvent.submit(reference.closest("form")!)
   expect(mock.go).toHaveBeenCalledWith("B2")
+  fireEvent.change(reference, { target: { value: "D4" } })
   fireEvent.keyDown(reference, { key: "Escape" })
   expect(reference).toHaveProperty("value", "A1")
   fireEvent.change(reference, { target: { value: "C3" } })
