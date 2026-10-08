@@ -71,17 +71,22 @@ test("opens local files, navigates, searches, zooms and clears", async () => {
   fireEvent.change(screen.getByLabelText(m.zoom), { target: { value: "900" } })
   fireEvent.keyDown(screen.getByLabelText(m.zoom), { key: "Enter" })
   expect(mock.zoom).toHaveBeenCalledTimes(1)
-  fireEvent.click(screen.getByText(m.fit))
+  fireEvent.click(screen.getByRole("button", { name: m.fit }))
   expect(mock.zoom).toHaveBeenCalledWith("page-width")
-  fireEvent.change(screen.getByLabelText(m.search), {
+  fireEvent.click(screen.getByRole("button", { name: m.search }))
+  fireEvent.change(screen.getByRole("searchbox", { name: m.search }), {
     target: { value: " local " },
   })
-  fireEvent.submit(screen.getByLabelText(m.search).closest("form")!)
+  fireEvent.submit(
+    screen.getByRole("searchbox", { name: m.search }).closest("form")!
+  )
   expect(mock.find).toHaveBeenCalledWith("local")
   fireEvent.click(screen.getByLabelText(m.previousMatch))
   expect(mock.find).toHaveBeenCalledWith("local", true)
   fireEvent.click(screen.getByLabelText(m.nextMatch))
-  fireEvent.change(screen.getByLabelText(m.search), { target: { value: "" } })
+  fireEvent.change(screen.getByRole("searchbox", { name: m.search }), {
+    target: { value: "" },
+  })
   expect(mock.find).toHaveBeenCalledWith("")
   fireEvent.click(screen.getByLabelText(m.clear))
   expect(screen.getByText(m.drop)).toBeTruthy()
@@ -137,6 +142,7 @@ test("reports parse, render and page limit failures", async () => {
   choose(file("good.pptx"))
   await screen.findByLabelText(m.page)
   const options = mock.open.mock.calls.at(-1)![0] as Options
+  fireEvent.click(screen.getByRole("button", { name: m.search }))
   options.onChange({ page: 2, searching: true })
   await screen.findByText(m.searching)
   fireEvent.click(screen.getByLabelText(m.previous))

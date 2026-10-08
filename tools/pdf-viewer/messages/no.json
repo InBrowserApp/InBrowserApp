@@ -26,5 +26,11 @@
   "passwordHint": "Denne PDF-filen er passordbeskyttet. Skriv inn passordet for å åpne den.",
   "wrongPassword": "Passordet fungerte ikke. Prøv igjen.",
   "unlock": "Åpne dokument",
-  "reader": "Leseområde for PDF"
+  "reader": "Leseområde for PDF",
+  "focus": "Les i fokusmodus",
+  "exitFocus": "Avslutt fokusmodus",
+  "zoomIn": "Zoom inn",
+  "zoomOut": "Zoom ut",
+  "closeSearch": "Lukk søk",
+  "releaseFile": "Slipp for å åpne dokumentet"
 }

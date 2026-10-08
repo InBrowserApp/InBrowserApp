@@ -26,5 +26,11 @@
   "passwordHint": "Bu PDF parola korumalıdır. Açmak için parolasını girin.",
   "wrongPassword": "Bu parola işe yaramadı. Tekrar deneyin.",
   "unlock": "Belgeyi aç",
-  "reader": "PDF okuma alanı"
+  "reader": "PDF okuma alanı",
+  "focus": "Odaklanarak oku",
+  "exitFocus": "Odaklanarak okumadan çık",
+  "zoomIn": "Yakınlaştır",
+  "zoomOut": "Uzaklaştır",
+  "closeSearch": "Aramayı kapat",
+  "releaseFile": "Bu belgeyi açmak için bırakın"
 }

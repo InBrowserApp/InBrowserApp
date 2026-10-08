@@ -22,5 +22,11 @@
   "matches": "{current} จาก {total} ผลลัพธ์",
   "searching": "กำลังค้นหา…",
   "noMatches": "ไม่พบผลลัพธ์",
-  "reader": "พื้นที่อ่าน DOCX"
+  "reader": "พื้นที่อ่าน DOCX",
+  "focus": "โหมดอ่านแบบมีสมาธิ",
+  "exitFocus": "ออกจากโหมดอ่านแบบมีสมาธิ",
+  "zoomIn": "ซูมเข้า",
+  "zoomOut": "ซูมออก",
+  "closeSearch": "ปิดการค้นหา",
+  "releaseFile": "ปล่อยเพื่อเปิดเอกสารนี้"
 }

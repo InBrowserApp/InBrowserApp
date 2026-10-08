@@ -24,5 +24,11 @@
   "copyFailed": "Bu seçim kopyalanamıyor. Daha küçük bir aralık seçip tekrar deneyin.",
   "formula": "Formül",
   "noCachedValue": "Önbelleğe alınmış değer yok. Formüller yeniden hesaplanmaz.",
-  "hidden": "Gizli"
+  "hidden": "Gizli",
+  "focus": "Odaklanarak oku",
+  "exitFocus": "Odaklanarak okumadan çık",
+  "zoomIn": "Yakınlaştır",
+  "zoomOut": "Uzaklaştır",
+  "closeSearch": "Aramayı kapat",
+  "releaseFile": "Bu belgeyi açmak için bırakın"
 }

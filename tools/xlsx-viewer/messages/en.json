@@ -24,5 +24,11 @@
   "copyFailed": "Unable to copy this selection. Select a smaller range and try again.",
   "formula": "Formula",
   "noCachedValue": "No cached value. Formulas are not recalculated.",
-  "hidden": "Hidden"
+  "hidden": "Hidden",
+  "focus": "Focus reading",
+  "exitFocus": "Exit focus reading",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
+  "closeSearch": "Close search",
+  "releaseFile": "Release to open this document"
 }

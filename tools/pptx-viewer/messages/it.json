@@ -24,5 +24,11 @@
   "noMatches": "Nessuna corrispondenza.",
   "reader": "Area di lettura PPTX",
   "empty": "Questa presentazione non contiene diapositive.",
-  "thumbnails": "Miniature delle diapositive"
+  "thumbnails": "Miniature delle diapositive",
+  "focus": "Lettura senza distrazioni",
+  "exitFocus": "Esci dalla lettura senza distrazioni",
+  "zoomIn": "Ingrandisci",
+  "zoomOut": "Riduci",
+  "closeSearch": "Chiudi ricerca",
+  "releaseFile": "Rilascia per aprire questo documento"
 }

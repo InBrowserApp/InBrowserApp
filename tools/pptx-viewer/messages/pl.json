@@ -24,5 +24,11 @@
   "noMatches": "Brak wyników.",
   "reader": "Obszar czytania PPTX",
   "empty": "Ta prezentacja nie zawiera slajdów.",
-  "thumbnails": "Miniatury slajdów"
+  "thumbnails": "Miniatury slajdów",
+  "focus": "Tryb czytania",
+  "exitFocus": "Wyjdź z trybu czytania",
+  "zoomIn": "Powiększ",
+  "zoomOut": "Pomniejsz",
+  "closeSearch": "Zamknij wyszukiwanie",
+  "releaseFile": "Upuść, aby otworzyć ten dokument"
 }

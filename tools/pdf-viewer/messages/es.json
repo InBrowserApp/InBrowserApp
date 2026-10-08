@@ -26,5 +26,11 @@
   "passwordHint": "Este PDF está protegido con contraseña. Introduce su contraseña para abrirlo.",
   "wrongPassword": "La contraseña no es correcta. Inténtalo de nuevo.",
   "unlock": "Abrir documento",
-  "reader": "Área de lectura del PDF"
+  "reader": "Área de lectura del PDF",
+  "focus": "Modo de lectura",
+  "exitFocus": "Salir del modo de lectura",
+  "zoomIn": "Acercar",
+  "zoomOut": "Alejar",
+  "closeSearch": "Cerrar búsqueda",
+  "releaseFile": "Suelta para abrir este documento"
 }

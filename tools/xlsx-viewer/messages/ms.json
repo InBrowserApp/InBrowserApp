@@ -24,5 +24,11 @@
   "copyFailed": "Pilihan ini tidak dapat disalin. Pilih julat yang lebih kecil dan cuba lagi.",
   "formula": "Formula",
   "noCachedValue": "Tiada nilai dalam cache. Formula tidak dikira semula.",
-  "hidden": "Tersembunyi"
+  "hidden": "Tersembunyi",
+  "focus": "Fokus membaca",
+  "exitFocus": "Keluar daripada fokus membaca",
+  "zoomIn": "Zum masuk",
+  "zoomOut": "Zum keluar",
+  "closeSearch": "Tutup carian",
+  "releaseFile": "Lepaskan untuk membuka dokumen ini"
 }

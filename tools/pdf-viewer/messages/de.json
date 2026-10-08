@@ -26,5 +26,11 @@
   "passwordHint": "Diese PDF ist passwortgeschützt. Geben Sie das Passwort ein, um sie zu öffnen.",
   "wrongPassword": "Das Passwort war falsch. Versuchen Sie es erneut.",
   "unlock": "Dokument öffnen",
-  "reader": "PDF-Lesebereich"
+  "reader": "PDF-Lesebereich",
+  "focus": "Lesemodus",
+  "exitFocus": "Lesemodus beenden",
+  "zoomIn": "Vergrößern",
+  "zoomOut": "Verkleinern",
+  "closeSearch": "Suche schließen",
+  "releaseFile": "Loslassen, um dieses Dokument zu öffnen"
 }

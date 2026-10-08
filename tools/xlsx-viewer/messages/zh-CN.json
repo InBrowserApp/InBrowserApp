@@ -24,5 +24,11 @@
   "copyFailed": "无法复制此选中区域。请选择较小的区域后重试。",
   "formula": "公式",
   "noCachedValue": "没有缓存值。公式不会重新计算。",
-  "hidden": "隐藏"
+  "hidden": "隐藏",
+  "focus": "专注阅读",
+  "exitFocus": "退出专注阅读",
+  "zoomIn": "放大",
+  "zoomOut": "缩小",
+  "closeSearch": "关闭搜索",
+  "releaseFile": "松开以打开此文档"
 }

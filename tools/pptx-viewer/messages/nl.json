@@ -24,5 +24,11 @@
   "noMatches": "Geen resultaten.",
   "reader": "PPTX-leesgebied",
   "empty": "Deze presentatie bevat geen dia's.",
-  "thumbnails": "Diaminiaturen"
+  "thumbnails": "Diaminiaturen",
+  "focus": "Afleidingsvrij lezen",
+  "exitFocus": "Afleidingsvrij lezen afsluiten",
+  "zoomIn": "Inzoomen",
+  "zoomOut": "Uitzoomen",
+  "closeSearch": "Zoeken sluiten",
+  "releaseFile": "Laat los om dit document te openen"
 }

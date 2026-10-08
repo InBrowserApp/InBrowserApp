@@ -26,6 +26,7 @@ export {
   Flag,
   Maximize2,
   Minimize2,
+  Minus,
   File,
   FileArchive,
   FileJson2,

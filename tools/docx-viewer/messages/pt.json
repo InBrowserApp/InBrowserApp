@@ -22,5 +22,11 @@
   "matches": "{current} de {total} ocorrências",
   "searching": "Pesquisando…",
   "noMatches": "Nenhuma ocorrência.",
-  "reader": "Área de leitura do DOCX"
+  "reader": "Área de leitura do DOCX",
+  "focus": "Leitura focada",
+  "exitFocus": "Sair da leitura focada",
+  "zoomIn": "Ampliar",
+  "zoomOut": "Reduzir",
+  "closeSearch": "Fechar pesquisa",
+  "releaseFile": "Solte para abrir este documento"
 }

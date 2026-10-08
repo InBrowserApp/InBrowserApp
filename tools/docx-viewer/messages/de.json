@@ -22,5 +22,11 @@
   "matches": "{current} von {total} Treffern",
   "searching": "Suche läuft…",
   "noMatches": "Keine Treffer.",
-  "reader": "DOCX-Lesebereich"
+  "reader": "DOCX-Lesebereich",
+  "focus": "Lesemodus",
+  "exitFocus": "Lesemodus beenden",
+  "zoomIn": "Vergrößern",
+  "zoomOut": "Verkleinern",
+  "closeSearch": "Suche schließen",
+  "releaseFile": "Loslassen, um dieses Dokument zu öffnen"
 }

@@ -24,5 +24,11 @@
   "copyFailed": "無法複製此選取範圍。請選取較小的範圍後再試一次。",
   "formula": "公式",
   "noCachedValue": "沒有快取值。不會重新計算公式。",
-  "hidden": "隱藏"
+  "hidden": "隱藏",
+  "focus": "專注閱讀",
+  "exitFocus": "結束專注閱讀",
+  "zoomIn": "放大",
+  "zoomOut": "縮小",
+  "closeSearch": "關閉搜尋",
+  "releaseFile": "放開以開啟文件"
 }

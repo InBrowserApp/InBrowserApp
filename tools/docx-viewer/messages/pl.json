@@ -22,5 +22,11 @@
   "matches": "{current} z {total} wyników",
   "searching": "Wyszukiwanie…",
   "noMatches": "Brak wyników.",
-  "reader": "Obszar czytania DOCX"
+  "reader": "Obszar czytania DOCX",
+  "focus": "Tryb czytania",
+  "exitFocus": "Wyjdź z trybu czytania",
+  "zoomIn": "Powiększ",
+  "zoomOut": "Pomniejsz",
+  "closeSearch": "Zamknij wyszukiwanie",
+  "releaseFile": "Upuść, aby otworzyć ten dokument"
 }

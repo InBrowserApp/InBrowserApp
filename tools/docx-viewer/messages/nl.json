@@ -22,5 +22,11 @@
   "matches": "{current} van {total} resultaten",
   "searching": "Zoeken…",
   "noMatches": "Geen resultaten.",
-  "reader": "DOCX-leesgebied"
+  "reader": "DOCX-leesgebied",
+  "focus": "Afleidingsvrij lezen",
+  "exitFocus": "Afleidingsvrij lezen afsluiten",
+  "zoomIn": "Inzoomen",
+  "zoomOut": "Uitzoomen",
+  "closeSearch": "Zoeken sluiten",
+  "releaseFile": "Laat los om dit document te openen"
 }

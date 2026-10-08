@@ -24,5 +24,11 @@
   "copyFailed": "Impossibile copiare questa selezione. Seleziona un intervallo più piccolo e riprova.",
   "formula": "Formula",
   "noCachedValue": "Nessun valore memorizzato. Le formule non vengono ricalcolate.",
-  "hidden": "Nascosto"
+  "hidden": "Nascosto",
+  "focus": "Lettura senza distrazioni",
+  "exitFocus": "Esci dalla lettura senza distrazioni",
+  "zoomIn": "Ingrandisci",
+  "zoomOut": "Riduci",
+  "closeSearch": "Chiudi ricerca",
+  "releaseFile": "Rilascia per aprire questo documento"
 }

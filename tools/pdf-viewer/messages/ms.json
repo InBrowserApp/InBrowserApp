@@ -26,5 +26,11 @@
   "passwordHint": "PDF ini dilindungi kata laluan. Masukkan kata laluannya untuk membukanya.",
   "wrongPassword": "Kata laluan itu tidak berfungsi. Cuba lagi.",
   "unlock": "Buka dokumen",
-  "reader": "Ruang bacaan PDF"
+  "reader": "Ruang bacaan PDF",
+  "focus": "Fokus membaca",
+  "exitFocus": "Keluar daripada fokus membaca",
+  "zoomIn": "Zum masuk",
+  "zoomOut": "Zum keluar",
+  "closeSearch": "Tutup carian",
+  "releaseFile": "Lepaskan untuk membuka dokumen ini"
 }

@@ -22,5 +22,11 @@
   "matches": "{current} من {total} تطابقات",
   "searching": "جارٍ البحث…",
   "noMatches": "لا توجد تطابقات.",
-  "reader": "منطقة قراءة DOCX"
+  "reader": "منطقة قراءة DOCX",
+  "focus": "القراءة المركزة",
+  "exitFocus": "إنهاء القراءة المركزة",
+  "zoomIn": "تكبير",
+  "zoomOut": "تصغير",
+  "closeSearch": "إغلاق البحث",
+  "releaseFile": "أفلت لفتح هذا المستند"
 }

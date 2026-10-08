@@ -24,5 +24,11 @@
   "noMatches": "No matches.",
   "reader": "PPTX reading area",
   "empty": "This presentation has no slides.",
-  "thumbnails": "Slide thumbnails"
+  "thumbnails": "Slide thumbnails",
+  "focus": "Focus reading",
+  "exitFocus": "Exit focus reading",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
+  "closeSearch": "Close search",
+  "releaseFile": "Release to open this document"
 }

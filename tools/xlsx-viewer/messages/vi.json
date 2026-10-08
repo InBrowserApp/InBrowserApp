@@ -24,5 +24,11 @@
   "copyFailed": "Không thể sao chép vùng chọn này. Hãy chọn vùng nhỏ hơn và thử lại.",
   "formula": "Công thức",
   "noCachedValue": "Không có giá trị đã lưu. Công thức không được tính toán lại.",
-  "hidden": "Ẩn"
+  "hidden": "Ẩn",
+  "focus": "Đọc tập trung",
+  "exitFocus": "Thoát chế độ đọc tập trung",
+  "zoomIn": "Phóng to",
+  "zoomOut": "Thu nhỏ",
+  "closeSearch": "Đóng tìm kiếm",
+  "releaseFile": "Thả để mở tài liệu này"
 }

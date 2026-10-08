@@ -22,5 +22,11 @@
   "matches": "{current} מתוך {total} התאמות",
   "searching": "חיפוש…",
   "noMatches": "לא נמצאו התאמות.",
-  "reader": "אזור קריאת DOCX"
+  "reader": "אזור קריאת DOCX",
+  "focus": "קריאה ממוקדת",
+  "exitFocus": "יציאה מקריאה ממוקדת",
+  "zoomIn": "הגדלה",
+  "zoomOut": "הקטנה",
+  "closeSearch": "סגירת החיפוש",
+  "releaseFile": "יש לשחרר כדי לפתוח את המסמך"
 }

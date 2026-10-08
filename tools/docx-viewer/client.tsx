@@ -1,5 +1,5 @@
 import { useRef, useState } from "react"
-import { Button } from "@workspace/ui/components/ui/button"
+import { DocumentWorkspace } from "@workspace/ui/components/tool/document-workspace"
 import {
   Alert,
   AlertTitle,
@@ -12,7 +12,7 @@ import {
   EmptyTitle,
   EmptyDescription,
 } from "@workspace/ui/components/ui/empty"
-import { FileText, Folder, X } from "@workspace/ui/icons"
+import { FileText } from "@workspace/ui/icons"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { DocumentToolbar as Toolbar } from "@workspace/ui/components/tool/document-toolbar"
 import { useReader } from "./use-reader"
@@ -20,7 +20,6 @@ import type { Messages } from "./types"
 import "./viewer.css"
 
 export default function Client({ messages: m }: { messages: Messages }) {
-  const input = useRef<HTMLInputElement>(null)
   const container = useRef<HTMLDivElement>(null)
   const [file, setFile] = useState<File | null>(null)
   const { state, loading, error, reader } = useReader(file, container, m)
@@ -28,61 +27,21 @@ export default function Client({ messages: m }: { messages: Messages }) {
     setFile(next)
   }
   return (
-    <section
-      data-tool="docx-viewer"
-      className="flex min-w-0 flex-col gap-4"
-      onDragOver={(event) => event.preventDefault()}
-      onDrop={(event) => {
-        event.preventDefault()
-        const next = event.dataTransfer.files[0]
-        if (next) selectFile(next)
-      }}
+    <DocumentWorkspace
+      tool="docx-viewer"
+      file={file}
+      onFile={selectFile}
+      accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      active={Boolean(file && !error)}
+      messages={m}
     >
-      <div className="flex flex-wrap items-center gap-3">
-        <Button onClick={() => input.current?.click()}>
-          <Folder data-icon="inline-start" />
-          {file ? m.replace : m.open}
-        </Button>
-        {file ? (
-          <>
-            <span dir="auto" className="min-w-0 flex-1 truncate text-sm">
-              {file.name}{" "}
-              <span className="text-muted-foreground">
-                ({(file.size / 1024 / 1024).toFixed(1)} MB)
-              </span>
-            </span>
-            <Button
-              variant="ghost"
-              size="icon"
-              aria-label={m.clear}
-              onClick={() => selectFile(null)}
-            >
-              <X />
-            </Button>
-          </>
-        ) : (
-          <span className="text-sm text-muted-foreground">{m.limits}</span>
-        )}
-        <input
-          ref={input}
-          type="file"
-          accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-          className="sr-only"
-          aria-label={m.open}
-          onChange={(event) => {
-            const next = event.target.files?.[0]
-            if (next) selectFile(next)
-            event.target.value = ""
-          }}
-        />
-      </div>
       {error ? (
         <Alert variant="destructive">
           <AlertTitle>{m.error}</AlertTitle>
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       ) : null}
-      <div className="overflow-hidden rounded-xl border">
+      <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
         {reader.current && state.total ? (
           <Toolbar messages={m} state={state} reader={reader.current} />
         ) : null}
@@ -108,7 +67,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
         ) : null}
         <div
           className={
-            file && !error ? "relative h-[70vh] min-h-80 bg-muted" : "hidden"
+            file && !error ? "relative min-h-48 flex-1 bg-muted" : "hidden"
           }
         >
           <div
@@ -124,6 +83,6 @@ export default function Client({ messages: m }: { messages: Messages }) {
           ></div>
         </div>
       </div>
-    </section>
+    </DocumentWorkspace>
   )
 }

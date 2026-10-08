@@ -24,5 +24,11 @@
   "noMatches": "没有匹配项。",
   "reader": "PPTX 阅读区域",
   "empty": "此演示文稿没有幻灯片。",
-  "thumbnails": "幻灯片缩略图"
+  "thumbnails": "幻灯片缩略图",
+  "focus": "专注阅读",
+  "exitFocus": "退出专注阅读",
+  "zoomIn": "放大",
+  "zoomOut": "缩小",
+  "closeSearch": "关闭搜索",
+  "releaseFile": "松开以打开此文档"
 }

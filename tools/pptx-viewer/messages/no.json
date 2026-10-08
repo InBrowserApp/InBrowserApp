@@ -24,5 +24,11 @@
   "noMatches": "Ingen treff.",
   "reader": "Leseområde for PPTX",
   "empty": "Denne presentasjonen har ingen lysbilder.",
-  "thumbnails": "Miniatyrbilder av lysbilder"
+  "thumbnails": "Miniatyrbilder av lysbilder",
+  "focus": "Les i fokusmodus",
+  "exitFocus": "Avslutt fokusmodus",
+  "zoomIn": "Zoom inn",
+  "zoomOut": "Zoom ut",
+  "closeSearch": "Lukk søk",
+  "releaseFile": "Slipp for å åpne dokumentet"
 }

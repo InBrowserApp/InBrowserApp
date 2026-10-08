@@ -22,5 +22,11 @@
   "matches": "{current} av {total} träffar",
   "searching": "Söker…",
   "noMatches": "Inga träffar.",
-  "reader": "Läsområde för DOCX"
+  "reader": "Läsområde för DOCX",
+  "focus": "Fokuserad läsning",
+  "exitFocus": "Avsluta fokuserad läsning",
+  "zoomIn": "Zooma in",
+  "zoomOut": "Zooma ut",
+  "closeSearch": "Stäng sökning",
+  "releaseFile": "Släpp för att öppna dokumentet"
 }

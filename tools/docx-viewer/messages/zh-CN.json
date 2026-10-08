@@ -22,5 +22,11 @@
   "matches": "第 {current} 项，共 {total} 个匹配项",
   "searching": "正在搜索…",
   "noMatches": "没有匹配项。",
-  "reader": "DOCX 阅读区域"
+  "reader": "DOCX 阅读区域",
+  "focus": "专注阅读",
+  "exitFocus": "退出专注阅读",
+  "zoomIn": "放大",
+  "zoomOut": "缩小",
+  "closeSearch": "关闭搜索",
+  "releaseFile": "松开以打开此文档"
 }

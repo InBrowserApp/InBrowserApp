@@ -22,5 +22,11 @@
   "matches": "{current} / {total} मिलान",
   "searching": "खोज जारी है…",
   "noMatches": "कोई मिलान नहीं मिला।",
-  "reader": "DOCX पढ़ने का क्षेत्र"
+  "reader": "DOCX पढ़ने का क्षेत्र",
+  "focus": "एकाग्र होकर पढ़ें",
+  "exitFocus": "एकाग्र पठन से बाहर निकलें",
+  "zoomIn": "ज़ूम बढ़ाएँ",
+  "zoomOut": "ज़ूम घटाएँ",
+  "closeSearch": "खोज बंद करें",
+  "releaseFile": "दस्तावेज़ खोलने के लिए छोड़ें"
 }

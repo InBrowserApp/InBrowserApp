@@ -24,5 +24,11 @@
   "noMatches": "Aucun résultat.",
   "reader": "Zone de lecture PPTX",
   "empty": "Cette présentation ne contient aucune diapositive.",
-  "thumbnails": "Miniatures des diapositives"
+  "thumbnails": "Miniatures des diapositives",
+  "focus": "Lecture sans distraction",
+  "exitFocus": "Quitter la lecture sans distraction",
+  "zoomIn": "Agrandir",
+  "zoomOut": "Réduire",
+  "closeSearch": "Fermer la recherche",
+  "releaseFile": "Relâchez pour ouvrir ce document"
 }

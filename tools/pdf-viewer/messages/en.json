@@ -26,5 +26,11 @@
   "passwordHint": "This PDF is password protected. Enter its password to open it.",
   "wrongPassword": "That password did not work. Try again.",
   "unlock": "Open document",
-  "reader": "PDF reading area"
+  "reader": "PDF reading area",
+  "focus": "Focus reading",
+  "exitFocus": "Exit focus reading",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
+  "closeSearch": "Close search",
+  "releaseFile": "Release to open this document"
 }

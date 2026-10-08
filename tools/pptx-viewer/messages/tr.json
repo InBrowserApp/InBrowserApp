@@ -24,5 +24,11 @@
   "noMatches": "Eşleşme yok.",
   "reader": "PPTX okuma alanı",
   "empty": "Bu sunumda slayt yok.",
-  "thumbnails": "Slayt küçük resimleri"
+  "thumbnails": "Slayt küçük resimleri",
+  "focus": "Odaklanarak oku",
+  "exitFocus": "Odaklanarak okumadan çık",
+  "zoomIn": "Yakınlaştır",
+  "zoomOut": "Uzaklaştır",
+  "closeSearch": "Aramayı kapat",
+  "releaseFile": "Bu belgeyi açmak için bırakın"
 }

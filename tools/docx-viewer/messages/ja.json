@@ -22,5 +22,11 @@
   "matches": "{current} / {total} 件",
   "searching": "検索中…",
   "noMatches": "一致する結果がありません。",
-  "reader": "DOCX閲覧領域"
+  "reader": "DOCX閲覧領域",
+  "focus": "集中して読む",
+  "exitFocus": "集中モードを終了",
+  "zoomIn": "拡大",
+  "zoomOut": "縮小",
+  "closeSearch": "検索を閉じる",
+  "releaseFile": "ドロップして文書を開く"
 }

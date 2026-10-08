@@ -22,5 +22,11 @@
   "matches": "{current} dari {total} hasil",
   "searching": "Mencari…",
   "noMatches": "Tidak ada hasil.",
-  "reader": "Area baca DOCX"
+  "reader": "Area baca DOCX",
+  "focus": "Fokus membaca",
+  "exitFocus": "Keluar dari fokus membaca",
+  "zoomIn": "Perbesar",
+  "zoomOut": "Perkecil",
+  "closeSearch": "Tutup pencarian",
+  "releaseFile": "Lepaskan untuk membuka dokumen ini"
 }
