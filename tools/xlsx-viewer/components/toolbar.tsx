@@ -106,6 +106,7 @@ export function Toolbar({
               return
             }
             reader.go(reference.toUpperCase())
+            setReference(address)
           }}
         >
           <Input

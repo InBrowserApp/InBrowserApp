@@ -106,6 +106,28 @@ test("opens, navigates cells, zooms, copies and closes a workbook", async () => 
   expect((mock.open.mock.calls[0]![0] as Options).signal.aborted).toBe(true)
 })
 
+test("keeps the canonical address when repeated navigation emits no selection change", async () => {
+  render(<Client messages={m} />)
+  choose()
+  const reference = await screen.findByLabelText(m.range)
+  const options = mock.open.mock.calls[0]![0] as Options
+  options.onChange({
+    selection: {
+      reference: "A8",
+      value: "Merged text",
+      formula: "",
+      noCachedValue: false,
+    },
+  })
+  await waitFor(() => expect(reference).toHaveProperty("value", "A8"))
+  for (let attempt = 0; attempt < 2; attempt++) {
+    fireEvent.change(reference, { target: { value: "B8" } })
+    fireEvent.submit(reference.closest("form")!)
+    expect(mock.go).toHaveBeenCalledWith("B8")
+    expect(reference).toHaveProperty("value", "A8")
+  }
+})
+
 test("shows formula cache, empty sheet, switching and clipboard feedback", async () => {
   render(<Client messages={m} />)
   choose()
