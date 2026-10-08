@@ -24,7 +24,7 @@ export function DocumentZoom({
       </DocumentIconButton>
       <DocumentNumberInput
         aria-label={m.zoom}
-        className="w-20"
+        className="w-24"
         value={value}
         min={25}
         max={400}
