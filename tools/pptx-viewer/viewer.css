@@ -1,0 +1,8 @@
+.pptx-reader-container {
+  color-scheme: light;
+  color: #111;
+  text-align: center;
+}
+.pptx-reader-container canvas {
+  background: white;
+}

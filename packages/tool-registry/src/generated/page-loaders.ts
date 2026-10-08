@@ -171,6 +171,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/placeholder-image-generator/page"),
   "png-optimizer": () => import("@tool/png-optimizer/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
+  "pptx-viewer": () => import("@tool/pptx-viewer/page"),
   "prc-id-validator": () => import("@tool/prc-id-validator/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),
   "qr-code-generator": () => import("@tool/qr-code-generator/page"),

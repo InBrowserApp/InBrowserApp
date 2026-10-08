@@ -1,5 +1,10 @@
 import { beforeEach, expect, test, vi } from "vitest"
 import { openReader } from "./reader"
+import { assertOfficeArchive } from "@workspace/document-reader"
+vi.mock("@workspace/document-reader", async (original) => ({
+  ...(await original<typeof import("@workspace/document-reader")>()),
+  assertOfficeArchive: vi.fn(),
+}))
 
 const mock = vi.hoisted(() => ({
   load: vi.fn(),
@@ -66,6 +71,10 @@ const flush = async () => {
 test("renders one page with local fonts, resource limits, navigation and search", async () => {
   const { options, controller, doc } = setup()
   const reader = await openReader(options)
+  expect(assertOfficeArchive).toHaveBeenCalledWith(
+    expect.any(ArrayBuffer),
+    "docx"
+  )
   expect(mock.load).toHaveBeenCalledWith(
     expect.any(ArrayBuffer),
     expect.objectContaining({

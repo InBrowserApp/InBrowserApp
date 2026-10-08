@@ -1,3 +1,9 @@
+import {
+  officeLoadOptions,
+  assertOfficeArchive,
+  imageResources,
+  maximumPageZoom,
+} from "@workspace/document-reader"
 import { DocxDocument, DocxViewer } from "@silurus/ooxml/docx"
 import type { Reader, ReaderState } from "./types"
 
@@ -16,6 +22,7 @@ export async function openReader({
 }): Promise<Reader> {
   signal.throwIfAborted()
   const data = await file.arrayBuffer()
+  assertOfficeArchive(data, "docx")
   signal.throwIfAborted()
   let document: DocxDocument | undefined
   let viewer: ReturnType<typeof DocxViewer.fromDocument> | undefined
@@ -41,16 +48,7 @@ export async function openReader({
     })
   }
   try {
-    document = await DocxDocument.load(data, {
-      useGoogleFonts: false,
-      mode: "main",
-      workerTimeoutMs: 30_000,
-      resourceLimits: {
-        maxArchiveEntryBytes: 32 * 1024 * 1024,
-        maxTotalInflatedBytes: 128 * 1024 * 1024,
-        maxArchiveEntries: 10_000,
-      },
-    })
+    document = await DocxDocument.load(data, officeLoadOptions)
     signal.throwIfAborted()
     if (!document.pageCount || document.pageCount > 1000)
       throw new Error("TOO_LARGE")
@@ -59,16 +57,8 @@ export async function openReader({
       const size = document.pageSize(index)
       const width = (size.widthPt * 4) / 3
       const height = (size.heightPt * 4) / 3
-      if (!Number.isFinite(width * height) || width <= 0 || height <= 0)
-        throw new Error("TOO_LARGE")
-      zoomMax = Math.min(
-        zoomMax,
-        8192 / width,
-        8192 / height,
-        Math.sqrt(16_000_000 / width / height)
-      )
+      zoomMax = Math.min(zoomMax, maximumPageZoom(width, height))
     }
-    if (zoomMax < 0.25) throw new Error("TOO_LARGE")
     container.append(canvas)
     viewer = DocxViewer.fromDocument(canvas, document, {
       container,
@@ -77,10 +67,7 @@ export async function openReader({
       zoomMax,
       enableTextSelection: true,
       enableHyperlinks: false,
-      imageResources: {
-        decodedByteBudget: 64 * 1024 * 1024,
-        strategy: "strict",
-      },
+      imageResources,
       onPageChange: (page, total) => {
         if (!disposed) onChange({ page: page + 1, total })
       },

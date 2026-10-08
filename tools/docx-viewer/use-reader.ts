@@ -1,3 +1,4 @@
+import { isDocumentLimitError } from "@workspace/document-reader"
 import { useEffect, useRef, useState } from "react"
 import type { RefObject } from "react"
 import type { Messages, Reader, ReaderState } from "./types"
@@ -40,13 +41,9 @@ export function useReader(
     const element = container.current
     function report(reason: unknown) {
       if (signal.aborted) return
-      const limit =
-        reason instanceof Error &&
-        (reason.message === "TOO_LARGE" ||
-          ("code" in reason &&
-            (reason.code === "ooxml-resource-limit" ||
-              reason.code === "ooxml-decoded-image-limit")))
-      setError(limit ? messages.tooLarge : messages.invalid)
+      setError(
+        isDocumentLimitError(reason) ? messages.tooLarge : messages.invalid
+      )
       setLoading(false)
       controller.abort()
       reader.current = null
