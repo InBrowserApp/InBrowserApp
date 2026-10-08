@@ -16725,6 +16725,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pptx-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "pptx",
+      "powerpoint",
+      "viewer",
+      "reader",
+      "document",
+      "search",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض PPTX",
+        description:
+          "اقرأ عروض PowerPoint بصيغة PPTX محليًا مع التنقل بين الشرائح والتكبير وتحديد النص والبحث. دون رفع الملفات.",
+      },
+      de: {
+        name: "PPTX Viewer",
+        description:
+          "Lesen Sie PowerPoint-PPTX-Präsentationen lokal mit Foliennavigation, Zoom, Textauswahl und Suche. Ohne Uploads.",
+      },
+      en: {
+        name: "PPTX Viewer",
+        description:
+          "Read PowerPoint PPTX presentations locally with slide navigation, zoom, text selection, and search. No uploads.",
+      },
+      es: {
+        name: "Visor de PPTX",
+        description:
+          "Lee presentaciones PowerPoint PPTX localmente con navegación por diapositivas, zoom, selección de texto y búsqueda. Sin subir archivos.",
+      },
+      fr: {
+        name: "Lecteur PPTX",
+        description:
+          "Lisez vos présentations PowerPoint PPTX en local avec navigation entre les diapositives, zoom, sélection de texte et recherche. Aucun envoi à un serveur.",
+      },
+      he: {
+        name: "מציג PPTX",
+        description:
+          "קריאת מצגות PowerPoint PPTX מקומיות עם ניווט בין שקופיות, שינוי גודל התצוגה, בחירת טקסט וחיפוש. ללא העלאת קבצים.",
+      },
+      hi: {
+        name: "PPTX व्यूअर",
+        description:
+          "स्लाइड नेविगेशन, ज़ूम, टेक्स्ट चयन और खोज के साथ PowerPoint PPTX प्रेज़ेंटेशन स्थानीय रूप से पढ़ें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Penampil PPTX",
+        description:
+          "Baca presentasi PowerPoint PPTX secara lokal dengan navigasi slide, zoom, pemilihan teks, dan pencarian. Tanpa unggahan.",
+      },
+      it: {
+        name: "Visualizzatore PPTX",
+        description:
+          "Leggi le presentazioni PowerPoint PPTX in locale con navigazione tra le diapositive, zoom, selezione del testo e ricerca. Nessun caricamento su server.",
+      },
+      ja: {
+        name: "PPTXビューアー",
+        description:
+          "スライド移動、ズーム、テキスト選択、検索機能でPowerPointのPPTXプレゼンテーションをローカルで閲覧できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "PPTX 뷰어",
+        description:
+          "슬라이드 이동, 확대 및 축소, 텍스트 선택, 검색 기능으로 PowerPoint PPTX 프레젠테이션을 기기에서 읽으세요. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Pemapar PPTX",
+        description:
+          "Baca pembentangan PowerPoint PPTX secara setempat dengan navigasi slaid, zum, pemilihan teks dan carian. Tiada muat naik.",
+      },
+      nl: {
+        name: "PPTX-viewer",
+        description:
+          "Lees PowerPoint PPTX-presentaties lokaal met dianavigatie, zoomen, tekstselectie en zoeken. Geen uploads.",
+      },
+      no: {
+        name: "PPTX-viser",
+        description:
+          "Les PowerPoint PPTX-presentasjoner lokalt med lysbildenavigering, zoom, tekstmarkering og søk. Ingen opplasting.",
+      },
+      pl: {
+        name: "Przeglądarka PPTX",
+        description:
+          "Czytaj prezentacje PowerPoint PPTX lokalnie, przechodź między slajdami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Bez przesyłania plików na serwer.",
+      },
+      pt: {
+        name: "Visualizador de PPTX",
+        description:
+          "Leia apresentações PPTX do PowerPoint localmente com navegação entre slides, zoom, seleção de texto e pesquisa. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Просмотр PPTX",
+        description:
+          "Читайте презентации PowerPoint PPTX локально: переходите между слайдами, меняйте масштаб, выделяйте и ищите текст. Без загрузки на сервер.",
+      },
+      sv: {
+        name: "PPTX-visare",
+        description:
+          "Läs PowerPoint-presentationer i PPTX-format lokalt med bildnavigering, zoom, textmarkering och sökning. Ingen uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมดู PPTX",
+        description:
+          "อ่านงานนำเสนอ PowerPoint PPTX ในเครื่อง พร้อมการเปลี่ยนสไลด์ ซูม เลือกข้อความ และค้นหา โดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "PPTX Görüntüleyici",
+        description:
+          "PowerPoint PPTX sunumlarını slayt gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Dosyalar yüklenmez.",
+      },
+      vi: {
+        name: "Trình xem PPTX",
+        description:
+          "Đọc bản trình bày PowerPoint PPTX ngay trên thiết bị với tính năng chuyển trang chiếu, thu phóng, chọn văn bản và tìm kiếm. Không tải lên.",
+      },
+      "zh-CN": {
+        name: "PPTX 阅读器",
+        description:
+          "在本地阅读 PowerPoint PPTX 演示文稿，支持幻灯片切换、缩放、文本选择和搜索，无需上传。",
+      },
+      "zh-TW": {
+        name: "PPTX 檢視器",
+        description:
+          "在本機閱讀 PowerPoint PPTX 簡報，支援投影片導覽、縮放、文字選取與搜尋。無須上傳。",
+      },
+    },
+  },
+  {
     slug: "prc-id-validator",
     category: "text",
     icon: "file-text",
@@ -43895,6 +44026,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "連接埠號碼查詢",
         description: "搜尋和瀏覽常見網路連接埠號碼",
+      },
+    },
+  },
+  "pptx-viewer": {
+    slug: "pptx-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "pptx",
+      "powerpoint",
+      "viewer",
+      "reader",
+      "document",
+      "search",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض PPTX",
+        description:
+          "اقرأ عروض PowerPoint بصيغة PPTX محليًا مع التنقل بين الشرائح والتكبير وتحديد النص والبحث. دون رفع الملفات.",
+      },
+      de: {
+        name: "PPTX Viewer",
+        description:
+          "Lesen Sie PowerPoint-PPTX-Präsentationen lokal mit Foliennavigation, Zoom, Textauswahl und Suche. Ohne Uploads.",
+      },
+      en: {
+        name: "PPTX Viewer",
+        description:
+          "Read PowerPoint PPTX presentations locally with slide navigation, zoom, text selection, and search. No uploads.",
+      },
+      es: {
+        name: "Visor de PPTX",
+        description:
+          "Lee presentaciones PowerPoint PPTX localmente con navegación por diapositivas, zoom, selección de texto y búsqueda. Sin subir archivos.",
+      },
+      fr: {
+        name: "Lecteur PPTX",
+        description:
+          "Lisez vos présentations PowerPoint PPTX en local avec navigation entre les diapositives, zoom, sélection de texte et recherche. Aucun envoi à un serveur.",
+      },
+      he: {
+        name: "מציג PPTX",
+        description:
+          "קריאת מצגות PowerPoint PPTX מקומיות עם ניווט בין שקופיות, שינוי גודל התצוגה, בחירת טקסט וחיפוש. ללא העלאת קבצים.",
+      },
+      hi: {
+        name: "PPTX व्यूअर",
+        description:
+          "स्लाइड नेविगेशन, ज़ूम, टेक्स्ट चयन और खोज के साथ PowerPoint PPTX प्रेज़ेंटेशन स्थानीय रूप से पढ़ें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Penampil PPTX",
+        description:
+          "Baca presentasi PowerPoint PPTX secara lokal dengan navigasi slide, zoom, pemilihan teks, dan pencarian. Tanpa unggahan.",
+      },
+      it: {
+        name: "Visualizzatore PPTX",
+        description:
+          "Leggi le presentazioni PowerPoint PPTX in locale con navigazione tra le diapositive, zoom, selezione del testo e ricerca. Nessun caricamento su server.",
+      },
+      ja: {
+        name: "PPTXビューアー",
+        description:
+          "スライド移動、ズーム、テキスト選択、検索機能でPowerPointのPPTXプレゼンテーションをローカルで閲覧できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "PPTX 뷰어",
+        description:
+          "슬라이드 이동, 확대 및 축소, 텍스트 선택, 검색 기능으로 PowerPoint PPTX 프레젠테이션을 기기에서 읽으세요. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Pemapar PPTX",
+        description:
+          "Baca pembentangan PowerPoint PPTX secara setempat dengan navigasi slaid, zum, pemilihan teks dan carian. Tiada muat naik.",
+      },
+      nl: {
+        name: "PPTX-viewer",
+        description:
+          "Lees PowerPoint PPTX-presentaties lokaal met dianavigatie, zoomen, tekstselectie en zoeken. Geen uploads.",
+      },
+      no: {
+        name: "PPTX-viser",
+        description:
+          "Les PowerPoint PPTX-presentasjoner lokalt med lysbildenavigering, zoom, tekstmarkering og søk. Ingen opplasting.",
+      },
+      pl: {
+        name: "Przeglądarka PPTX",
+        description:
+          "Czytaj prezentacje PowerPoint PPTX lokalnie, przechodź między slajdami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Bez przesyłania plików na serwer.",
+      },
+      pt: {
+        name: "Visualizador de PPTX",
+        description:
+          "Leia apresentações PPTX do PowerPoint localmente com navegação entre slides, zoom, seleção de texto e pesquisa. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Просмотр PPTX",
+        description:
+          "Читайте презентации PowerPoint PPTX локально: переходите между слайдами, меняйте масштаб, выделяйте и ищите текст. Без загрузки на сервер.",
+      },
+      sv: {
+        name: "PPTX-visare",
+        description:
+          "Läs PowerPoint-presentationer i PPTX-format lokalt med bildnavigering, zoom, textmarkering och sökning. Ingen uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมดู PPTX",
+        description:
+          "อ่านงานนำเสนอ PowerPoint PPTX ในเครื่อง พร้อมการเปลี่ยนสไลด์ ซูม เลือกข้อความ และค้นหา โดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "PPTX Görüntüleyici",
+        description:
+          "PowerPoint PPTX sunumlarını slayt gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Dosyalar yüklenmez.",
+      },
+      vi: {
+        name: "Trình xem PPTX",
+        description:
+          "Đọc bản trình bày PowerPoint PPTX ngay trên thiết bị với tính năng chuyển trang chiếu, thu phóng, chọn văn bản và tìm kiếm. Không tải lên.",
+      },
+      "zh-CN": {
+        name: "PPTX 阅读器",
+        description:
+          "在本地阅读 PowerPoint PPTX 演示文稿，支持幻灯片切换、缩放、文本选择和搜索，无需上传。",
+      },
+      "zh-TW": {
+        name: "PPTX 檢視器",
+        description:
+          "在本機閱讀 PowerPoint PPTX 簡報，支援投影片導覽、縮放、文字選取與搜尋。無須上傳。",
       },
     },
   },

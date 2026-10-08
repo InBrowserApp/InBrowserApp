@@ -12330,6 +12330,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pptx-viewer",
+    language: "ar",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "de",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "en",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "es",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "fr",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "he",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "hi",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "id",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "it",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "ja",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "ko",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "ms",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "nl",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "no",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "pl",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "pt",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "ru",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "sv",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "th",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "tr",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "vi",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "pptx-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "prc-id-validator",
     language: "ar",
   },

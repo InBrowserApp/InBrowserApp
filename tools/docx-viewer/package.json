@@ -10,7 +10,8 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "@silurus/ooxml": "catalog:"
+    "@silurus/ooxml": "catalog:",
+    "@workspace/document-reader": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",
