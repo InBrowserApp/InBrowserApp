@@ -11778,6 +11778,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-viewer",
+    language: "ar",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "de",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "en",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "es",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "fr",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "he",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "hi",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "id",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "it",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "ja",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "ko",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "ms",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "nl",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "no",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "pl",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "pt",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "ru",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "sv",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "th",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "tr",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "vi",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "pgp-key-generator",
     language: "ar",
   },

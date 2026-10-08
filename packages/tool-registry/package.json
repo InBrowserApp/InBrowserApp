@@ -135,6 +135,7 @@
     "@tool/pdf-splitter": "workspace:*",
     "@tool/pdf-text-extractor": "workspace:*",
     "@tool/pdf-to-image-converter": "workspace:*",
+    "@tool/pdf-viewer": "workspace:*",
     "@tool/pgp-key-generator": "workspace:*",
     "@tool/placeholder-image-generator": "workspace:*",
     "@tool/png-optimizer": "workspace:*",
