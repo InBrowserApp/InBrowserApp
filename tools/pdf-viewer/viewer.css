@@ -1,0 +1,8 @@
+/* Document pages retain their authored colors, including in dark mode. */
+.pdf-reader-container {
+  color-scheme: light;
+}
+
+.pdf-reader-container .pdfViewer .page {
+  margin: 12px auto;
+}

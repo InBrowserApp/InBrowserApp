@@ -15988,6 +15988,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pdf-viewer",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "viewer", "reader", "document", "search", "offline"],
+    locales: {
+      ar: {
+        name: "عارض PDF",
+        description:
+          "اقرأ ملفات PDF محليًا مع التنقل بين الصفحات والتكبير وتحديد النص والبحث. تبقى مستنداتك في متصفحك.",
+      },
+      de: {
+        name: "PDF-Betrachter",
+        description:
+          "PDF-Dateien lokal lesen, durch Seiten blättern, zoomen, Text auswählen und suchen. Ihre Dokumente bleiben in Ihrem Browser.",
+      },
+      en: {
+        name: "PDF Viewer",
+        description:
+          "Read PDF files locally with page navigation, zoom, text selection, and search. Your documents stay in your browser.",
+      },
+      es: {
+        name: "Visor de PDF",
+        description:
+          "Lee archivos PDF localmente con navegación entre páginas, zoom, selección de texto y búsqueda. Tus documentos permanecen en tu navegador.",
+      },
+      fr: {
+        name: "Lecteur PDF",
+        description:
+          "Lisez vos fichiers PDF en local avec navigation entre les pages, zoom, sélection de texte et recherche. Vos documents restent dans votre navigateur.",
+      },
+      he: {
+        name: "מציג PDF",
+        description:
+          "קריאת קובצי PDF מקומיים עם ניווט בין עמודים, שינוי גודל התצוגה, בחירת טקסט וחיפוש. המסמכים נשארים בדפדפן שלך.",
+      },
+      hi: {
+        name: "PDF व्यूअर",
+        description:
+          "पेज नेविगेशन, ज़ूम, टेक्स्ट चयन और खोज के साथ PDF फ़ाइलें स्थानीय रूप से पढ़ें। आपके दस्तावेज़ आपके ब्राउज़र में ही रहते हैं।",
+      },
+      id: {
+        name: "Penampil PDF",
+        description:
+          "Baca file PDF secara lokal dengan navigasi halaman, zoom, pemilihan teks, dan pencarian. Dokumen Anda tetap berada di browser.",
+      },
+      it: {
+        name: "Visualizzatore PDF",
+        description:
+          "Leggi i file PDF in locale con navigazione tra le pagine, zoom, selezione del testo e ricerca. I tuoi documenti restano nel browser.",
+      },
+      ja: {
+        name: "PDFビューアー",
+        description:
+          "ページ移動、ズーム、テキスト選択、検索機能を備えたローカルPDFリーダー。文書はブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "PDF 뷰어",
+        description:
+          "페이지 이동, 확대 및 축소, 텍스트 선택, 검색 기능으로 PDF 파일을 기기에서 읽으세요. 문서는 브라우저 안에만 머무릅니다.",
+      },
+      ms: {
+        name: "Pemapar PDF",
+        description:
+          "Baca fail PDF secara setempat dengan navigasi halaman, zum, pemilihan teks dan carian. Dokumen anda kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF-viewer",
+        description:
+          "Lees PDF-bestanden lokaal met paginanavigatie, zoomen, tekstselectie en zoeken. Je documenten blijven in je browser.",
+      },
+      no: {
+        name: "PDF-viser",
+        description:
+          "Les PDF-filer lokalt med sidenavigering, zoom, tekstmarkering og søk. Dokumentene dine forblir i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka PDF",
+        description:
+          "Czytaj pliki PDF lokalnie, przechodź między stronami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Twoje dokumenty pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de PDF",
+        description:
+          "Leia arquivos PDF localmente com navegação entre páginas, zoom, seleção de texto e pesquisa. Seus documentos ficam no navegador.",
+      },
+      ru: {
+        name: "Просмотр PDF",
+        description:
+          "Читайте PDF-файлы локально: переходите между страницами, меняйте масштаб, выделяйте и ищите текст. Документы остаются в вашем браузере.",
+      },
+      sv: {
+        name: "PDF-visare",
+        description:
+          "Läs PDF-filer lokalt med sidnavigering, zoom, textmarkering och sökning. Dina dokument stannar i din webbläsare.",
+      },
+      th: {
+        name: "โปรแกรมดู PDF",
+        description:
+          "อ่านไฟล์ PDF ในเครื่อง พร้อมการเปลี่ยนหน้า ซูม เลือกข้อความ และค้นหา เอกสารของคุณอยู่ในเบราว์เซอร์เท่านั้น",
+      },
+      tr: {
+        name: "PDF Görüntüleyici",
+        description:
+          "PDF dosyalarını sayfa gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Belgeleriniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem PDF",
+        description:
+          "Đọc tệp PDF ngay trên thiết bị với tính năng chuyển trang, thu phóng, chọn văn bản và tìm kiếm. Tài liệu của bạn luôn ở trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 阅读器",
+        description:
+          "在本地阅读 PDF 文件，支持页面导航、缩放、文本选择和搜索。文档始终留在您的浏览器中。",
+      },
+      "zh-TW": {
+        name: "PDF 檢視器",
+        description:
+          "在本機閱讀 PDF 檔案，支援頁面導覽、縮放、文字選取與搜尋。文件始終保留在您的瀏覽器中。",
+      },
+    },
+  },
+  {
     slug: "pgp-key-generator",
     category: "network",
     icon: "lock",
@@ -42912,6 +43035,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PDF 轉圖片轉換器",
         description:
           "使用 DPI 控制、頁面預覽和 ZIP 匯出，將 PDF 頁面轉換成 PNG、JPG 或 WebP 圖片。",
+      },
+    },
+  },
+  "pdf-viewer": {
+    slug: "pdf-viewer",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "viewer", "reader", "document", "search", "offline"],
+    locales: {
+      ar: {
+        name: "عارض PDF",
+        description:
+          "اقرأ ملفات PDF محليًا مع التنقل بين الصفحات والتكبير وتحديد النص والبحث. تبقى مستنداتك في متصفحك.",
+      },
+      de: {
+        name: "PDF-Betrachter",
+        description:
+          "PDF-Dateien lokal lesen, durch Seiten blättern, zoomen, Text auswählen und suchen. Ihre Dokumente bleiben in Ihrem Browser.",
+      },
+      en: {
+        name: "PDF Viewer",
+        description:
+          "Read PDF files locally with page navigation, zoom, text selection, and search. Your documents stay in your browser.",
+      },
+      es: {
+        name: "Visor de PDF",
+        description:
+          "Lee archivos PDF localmente con navegación entre páginas, zoom, selección de texto y búsqueda. Tus documentos permanecen en tu navegador.",
+      },
+      fr: {
+        name: "Lecteur PDF",
+        description:
+          "Lisez vos fichiers PDF en local avec navigation entre les pages, zoom, sélection de texte et recherche. Vos documents restent dans votre navigateur.",
+      },
+      he: {
+        name: "מציג PDF",
+        description:
+          "קריאת קובצי PDF מקומיים עם ניווט בין עמודים, שינוי גודל התצוגה, בחירת טקסט וחיפוש. המסמכים נשארים בדפדפן שלך.",
+      },
+      hi: {
+        name: "PDF व्यूअर",
+        description:
+          "पेज नेविगेशन, ज़ूम, टेक्स्ट चयन और खोज के साथ PDF फ़ाइलें स्थानीय रूप से पढ़ें। आपके दस्तावेज़ आपके ब्राउज़र में ही रहते हैं।",
+      },
+      id: {
+        name: "Penampil PDF",
+        description:
+          "Baca file PDF secara lokal dengan navigasi halaman, zoom, pemilihan teks, dan pencarian. Dokumen Anda tetap berada di browser.",
+      },
+      it: {
+        name: "Visualizzatore PDF",
+        description:
+          "Leggi i file PDF in locale con navigazione tra le pagine, zoom, selezione del testo e ricerca. I tuoi documenti restano nel browser.",
+      },
+      ja: {
+        name: "PDFビューアー",
+        description:
+          "ページ移動、ズーム、テキスト選択、検索機能を備えたローカルPDFリーダー。文書はブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "PDF 뷰어",
+        description:
+          "페이지 이동, 확대 및 축소, 텍스트 선택, 검색 기능으로 PDF 파일을 기기에서 읽으세요. 문서는 브라우저 안에만 머무릅니다.",
+      },
+      ms: {
+        name: "Pemapar PDF",
+        description:
+          "Baca fail PDF secara setempat dengan navigasi halaman, zum, pemilihan teks dan carian. Dokumen anda kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF-viewer",
+        description:
+          "Lees PDF-bestanden lokaal met paginanavigatie, zoomen, tekstselectie en zoeken. Je documenten blijven in je browser.",
+      },
+      no: {
+        name: "PDF-viser",
+        description:
+          "Les PDF-filer lokalt med sidenavigering, zoom, tekstmarkering og søk. Dokumentene dine forblir i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka PDF",
+        description:
+          "Czytaj pliki PDF lokalnie, przechodź między stronami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Twoje dokumenty pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de PDF",
+        description:
+          "Leia arquivos PDF localmente com navegação entre páginas, zoom, seleção de texto e pesquisa. Seus documentos ficam no navegador.",
+      },
+      ru: {
+        name: "Просмотр PDF",
+        description:
+          "Читайте PDF-файлы локально: переходите между страницами, меняйте масштаб, выделяйте и ищите текст. Документы остаются в вашем браузере.",
+      },
+      sv: {
+        name: "PDF-visare",
+        description:
+          "Läs PDF-filer lokalt med sidnavigering, zoom, textmarkering och sökning. Dina dokument stannar i din webbläsare.",
+      },
+      th: {
+        name: "โปรแกรมดู PDF",
+        description:
+          "อ่านไฟล์ PDF ในเครื่อง พร้อมการเปลี่ยนหน้า ซูม เลือกข้อความ และค้นหา เอกสารของคุณอยู่ในเบราว์เซอร์เท่านั้น",
+      },
+      tr: {
+        name: "PDF Görüntüleyici",
+        description:
+          "PDF dosyalarını sayfa gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Belgeleriniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem PDF",
+        description:
+          "Đọc tệp PDF ngay trên thiết bị với tính năng chuyển trang, thu phóng, chọn văn bản và tìm kiếm. Tài liệu của bạn luôn ở trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 阅读器",
+        description:
+          "在本地阅读 PDF 文件，支持页面导航、缩放、文本选择和搜索。文档始终留在您的浏览器中。",
+      },
+      "zh-TW": {
+        name: "PDF 檢視器",
+        description:
+          "在本機閱讀 PDF 檔案，支援頁面導覽、縮放、文字選取與搜尋。文件始終保留在您的瀏覽器中。",
       },
     },
   },
