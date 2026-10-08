@@ -6,6 +6,7 @@ import type {
 export type Messages = typeof messages
 export type ReaderState = DocumentReaderState
 export type Reader = DocumentControls & {
+  fitPage: () => void
   dispose: () => void
   thumbnail: (canvas: HTMLCanvasElement, page: number) => Promise<void>
 }

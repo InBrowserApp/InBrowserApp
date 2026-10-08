@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { DocumentWorkspace } from "@workspace/ui/components/tool/document-workspace"
 import {
   Alert,
@@ -14,12 +14,18 @@ import {
 } from "@workspace/ui/components/ui/empty"
 import { FileText } from "@workspace/ui/icons"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
+import { Tabs, TabsContent } from "@workspace/ui/components/ui/tabs"
+import { Worksheets } from "./components/worksheets"
 import { Toolbar } from "./components/toolbar"
 import { useReader } from "./use-reader"
 import type { Messages } from "./types"
 import "./viewer.css"
 
 export default function Client({ messages: m }: { messages: Messages }) {
+  const [direction, setDirection] = useState<"ltr" | "rtl">("ltr")
+  useEffect(() => {
+    setDirection(document.documentElement.dir === "rtl" ? "rtl" : "ltr")
+  }, [])
   const container = useRef<HTMLDivElement>(null)
   const [file, setFile] = useState<File | null>(null)
   const { state, loading, error, reader } = useReader(file, container, m)
@@ -38,7 +44,13 @@ export default function Client({ messages: m }: { messages: Messages }) {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       ) : null}
-      <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
+      <Tabs
+        dir={direction}
+        value={String(state.sheet)}
+        activationMode="manual"
+        onValueChange={(value) => reader.current?.sheet(Number(value))}
+        className="min-h-0 flex-1 gap-0 overflow-hidden"
+      >
         {reader.current && state.sheets.length ? (
           <Toolbar messages={m} state={state} reader={reader.current} />
         ) : null}
@@ -62,7 +74,10 @@ export default function Client({ messages: m }: { messages: Messages }) {
             </EmptyHeader>
           </Empty>
         ) : null}
-        <div
+        <TabsContent
+          forceMount
+          value={String(state.sheet)}
+          tabIndex={-1}
           className={
             file && !error ? "relative min-h-48 flex-1 bg-muted" : "hidden"
           }
@@ -73,8 +88,11 @@ export default function Client({ messages: m }: { messages: Messages }) {
             dir="ltr"
             aria-busy={loading}
           ></div>
-        </div>
-      </div>
+        </TabsContent>
+        {reader.current && state.sheets.length ? (
+          <Worksheets state={state} messages={m} />
+        ) : null}
+      </Tabs>
     </DocumentWorkspace>
   )
 }

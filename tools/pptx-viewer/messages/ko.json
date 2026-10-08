@@ -30,5 +30,6 @@
   "zoomIn": "확대",
   "zoomOut": "축소",
   "closeSearch": "검색 닫기",
-  "releaseFile": "놓으면 문서가 열립니다"
+  "releaseFile": "놓으면 문서가 열립니다",
+  "fitPage": "페이지에 맞추기"
 }

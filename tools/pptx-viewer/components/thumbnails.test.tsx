@@ -37,6 +37,7 @@ test("renders visible previews in sequence, discards hidden work, and clears can
     thumbnail,
     page: vi.fn(),
     zoom: vi.fn(),
+    fitPage: vi.fn(),
     find: vi.fn(),
     dispose: vi.fn(),
   }
@@ -92,6 +93,7 @@ test("continues after a preview failure and cancels queued work on unmount", asy
     thumbnail,
     page: vi.fn(),
     zoom: vi.fn(),
+    fitPage: vi.fn(),
     find: vi.fn(),
     dispose: vi.fn(),
   }

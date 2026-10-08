@@ -14,6 +14,7 @@ const mock = vi.hoisted(() => ({
   open: vi.fn(),
   page: vi.fn(),
   zoom: vi.fn(),
+  fitPage: vi.fn(),
   find: vi.fn(),
   dispose: vi.fn(),
 }))
@@ -21,6 +22,7 @@ vi.mock("./reader", () => ({ openReader: mock.open }))
 const instance = {
   page: mock.page,
   zoom: mock.zoom,
+  fitPage: mock.fitPage,
   find: mock.find,
   dispose: mock.dispose,
   thumbnail: async () => {},
@@ -73,6 +75,13 @@ test("opens local files, navigates, searches, zooms and clears", async () => {
   expect(mock.zoom).toHaveBeenCalledTimes(1)
   fireEvent.click(screen.getByRole("button", { name: m.fit }))
   expect(mock.zoom).toHaveBeenCalledWith("page-width")
+  fireEvent.click(screen.getByRole("button", { name: m.fitPage }))
+  expect(mock.fitPage).toHaveBeenCalledOnce()
+  const toggle = screen.getByRole("button", { name: m.thumbnails })
+  const shown = toggle.getAttribute("aria-expanded") === "true"
+  fireEvent.click(toggle)
+  expect(toggle.getAttribute("aria-expanded")).toBe(String(!shown))
+  fireEvent.click(toggle)
   fireEvent.click(screen.getByRole("button", { name: m.search }))
   fireEvent.change(screen.getByRole("searchbox", { name: m.search }), {
     target: { value: " local " },

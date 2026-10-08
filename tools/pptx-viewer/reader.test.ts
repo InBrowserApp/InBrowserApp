@@ -12,6 +12,7 @@ const mock = vi.hoisted(() => ({
   documentDestroy: vi.fn(),
   destroy: vi.fn(),
   fitWidth: vi.fn(),
+  fitPage: vi.fn(),
   getScale: vi.fn(),
   goToSlide: vi.fn(),
   setScale: vi.fn(),
@@ -49,7 +50,12 @@ function setup() {
 beforeEach(() => {
   vi.resetAllMocks()
   mock.create.mockReturnValue(mock)
-  for (const method of [mock.fitWidth, mock.goToSlide, mock.setScale])
+  for (const method of [
+    mock.fitPage,
+    mock.fitWidth,
+    mock.goToSlide,
+    mock.setScale,
+  ])
     method.mockResolvedValue(undefined)
   mock.getScale.mockReturnValue(1)
   mock.findText.mockResolvedValue([{}, {}])
@@ -106,13 +112,17 @@ test("renders one page with local fonts, resource limits, navigation and search"
   reader.page(2)
   expect(mock.goToSlide).toHaveBeenCalledWith(1)
   mock.resize()
-  expect(mock.fitWidth).toHaveBeenCalledTimes(2)
+  expect(mock.fitPage).toHaveBeenCalledTimes(2)
   reader.zoom(150)
   expect(mock.setScale).toHaveBeenCalledWith(1.5)
   mock.resize()
-  expect(mock.fitWidth).toHaveBeenCalledTimes(2)
+  expect(mock.fitPage).toHaveBeenCalledTimes(2)
   reader.zoom("page-width")
-  expect(mock.fitWidth).toHaveBeenCalledTimes(3)
+  expect(mock.fitWidth).toHaveBeenCalledOnce()
+  mock.resize()
+  expect(mock.fitWidth).toHaveBeenCalledTimes(2)
+  reader.fitPage()
+  expect(mock.fitPage).toHaveBeenCalledTimes(3)
   reader.find("hello")
   await flush()
   expect(options.onChange).toHaveBeenCalledWith({ matches: 2 })
@@ -184,7 +194,7 @@ test("cleans up failures and documents that finish loading after cancellation", 
   await expect(pending).rejects.toThrow("aborted")
   expect(mock.documentDestroy).toHaveBeenCalledOnce()
   const next = setup()
-  mock.fitWidth.mockRejectedValueOnce(new Error("render failed"))
+  mock.fitPage.mockRejectedValueOnce(new Error("render failed"))
   await expect(openReader(next.options)).rejects.toThrow("render failed")
   expect(mock.destroy).toHaveBeenCalledOnce()
   expect(next.options.container.children).toHaveLength(0)

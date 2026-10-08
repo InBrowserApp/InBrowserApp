@@ -30,5 +30,6 @@
   "zoomIn": "Zooma in",
   "zoomOut": "Zooma ut",
   "closeSearch": "Stäng sökning",
-  "releaseFile": "Släpp för att öppna dokumentet"
+  "releaseFile": "Släpp för att öppna dokumentet",
+  "details": "Cellinformation"
 }

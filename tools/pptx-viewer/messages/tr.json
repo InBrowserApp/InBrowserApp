@@ -30,5 +30,6 @@
   "zoomIn": "Yakınlaştır",
   "zoomOut": "Uzaklaştır",
   "closeSearch": "Aramayı kapat",
-  "releaseFile": "Bu belgeyi açmak için bırakın"
+  "releaseFile": "Bu belgeyi açmak için bırakın",
+  "fitPage": "Sayfaya sığdır"
 }

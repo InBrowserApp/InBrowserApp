@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 import { DocumentWorkspace } from "@workspace/ui/components/tool/document-workspace"
 import {
   Alert,
@@ -12,7 +12,8 @@ import {
   EmptyTitle,
   EmptyDescription,
 } from "@workspace/ui/components/ui/empty"
-import { FileText } from "@workspace/ui/icons"
+import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
+import { FileText, LayoutGrid, Square } from "@workspace/ui/icons"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { DocumentToolbar as Toolbar } from "@workspace/ui/components/tool/document-toolbar"
 import { useReader } from "./use-reader"
@@ -24,14 +25,20 @@ export default function Client({ messages: m }: { messages: Messages }) {
   const container = useRef<HTMLDivElement>(null)
   const [file, setFile] = useState<File | null>(null)
   const { state, loading, error, reader } = useReader(file, container, m)
-  function selectFile(next: File | null) {
-    setFile(next)
-  }
+  const railId = useId()
+  const [thumbnails, setThumbnails] = useState(false)
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 640px)")
+    const update = () => setThumbnails(media.matches)
+    update()
+    media.addEventListener("change", update)
+    return () => media.removeEventListener("change", update)
+  }, [])
   return (
     <DocumentWorkspace
       tool="pptx-viewer"
       file={file}
-      onFile={selectFile}
+      onFile={setFile}
       accept=".pptx,application/vnd.openxmlformats-officedocument.presentationml.presentation"
       active={Boolean(file && !error)}
       messages={m}
@@ -44,7 +51,29 @@ export default function Client({ messages: m }: { messages: Messages }) {
       ) : null}
       <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
         {reader.current && state.total ? (
-          <Toolbar messages={m} state={state} reader={reader.current} />
+          <Toolbar
+            messages={m}
+            state={state}
+            reader={reader.current}
+            actions={
+              <>
+                <DocumentIconButton
+                  label={m.fitPage}
+                  onClick={() => reader.current?.fitPage()}
+                >
+                  <Square aria-hidden="true" />
+                </DocumentIconButton>
+                <DocumentIconButton
+                  label={m.thumbnails}
+                  aria-expanded={thumbnails}
+                  aria-controls={railId}
+                  onClick={() => setThumbnails((open) => !open)}
+                >
+                  <LayoutGrid aria-hidden="true" />
+                </DocumentIconButton>
+              </>
+            }
+          />
         ) : null}
         {loading ? (
           <p
@@ -73,8 +102,13 @@ export default function Client({ messages: m }: { messages: Messages }) {
               : "hidden"
           }
         >
-          {reader.current && state.total ? (
-            <Thumbnails reader={reader.current} state={state} messages={m} />
+          {reader.current && state.total && thumbnails ? (
+            <Thumbnails
+              id={railId}
+              reader={reader.current}
+              state={state}
+              messages={m}
+            />
           ) : null}
           <div className="relative min-h-48 min-w-0 flex-1 bg-muted">
             <div

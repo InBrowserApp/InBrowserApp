@@ -30,5 +30,6 @@
   "zoomIn": "拡大",
   "zoomOut": "縮小",
   "closeSearch": "検索を閉じる",
-  "releaseFile": "ドロップして文書を開く"
+  "releaseFile": "ドロップして文書を開く",
+  "fitPage": "ページ全体を表示"
 }

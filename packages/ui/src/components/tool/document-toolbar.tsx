@@ -110,7 +110,7 @@ export function DocumentToolbar({
           </DocumentIconButton>
           <DocumentNumberInput
             aria-label={m.page}
-            className="w-16"
+            className="w-20"
             min={1}
             max={state.total}
             value={state.page}

@@ -30,5 +30,6 @@
   "zoomIn": "放大",
   "zoomOut": "缩小",
   "closeSearch": "关闭搜索",
-  "releaseFile": "松开以打开此文档"
+  "releaseFile": "松开以打开此文档",
+  "fitPage": "适应整页"
 }

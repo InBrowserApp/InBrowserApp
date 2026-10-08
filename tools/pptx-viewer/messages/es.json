@@ -30,5 +30,6 @@
   "zoomIn": "Acercar",
   "zoomOut": "Alejar",
   "closeSearch": "Cerrar búsqueda",
-  "releaseFile": "Suelta para abrir este documento"
+  "releaseFile": "Suelta para abrir este documento",
+  "fitPage": "Ajustar página"
 }
