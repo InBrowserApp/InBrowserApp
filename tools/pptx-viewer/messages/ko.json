@@ -24,5 +24,11 @@
   "noMatches": "검색 결과가 없습니다.",
   "reader": "PPTX 읽기 영역",
   "empty": "이 프레젠테이션에는 슬라이드가 없습니다.",
-  "thumbnails": "슬라이드 축소판"
+  "thumbnails": "슬라이드 축소판",
+  "focus": "집중 읽기",
+  "exitFocus": "집중 읽기 종료",
+  "zoomIn": "확대",
+  "zoomOut": "축소",
+  "closeSearch": "검색 닫기",
+  "releaseFile": "놓으면 문서가 열립니다"
 }

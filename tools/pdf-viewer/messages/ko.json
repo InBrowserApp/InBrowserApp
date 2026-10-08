@@ -26,5 +26,11 @@
   "passwordHint": "이 PDF는 비밀번호로 보호되어 있습니다. 비밀번호를 입력하여 여세요.",
   "wrongPassword": "비밀번호가 맞지 않습니다. 다시 시도하세요.",
   "unlock": "문서 열기",
-  "reader": "PDF 읽기 영역"
+  "reader": "PDF 읽기 영역",
+  "focus": "집중 읽기",
+  "exitFocus": "집중 읽기 종료",
+  "zoomIn": "확대",
+  "zoomOut": "축소",
+  "closeSearch": "검색 닫기",
+  "releaseFile": "놓으면 문서가 열립니다"
 }

@@ -22,5 +22,11 @@
   "matches": "{current} / {total}개 검색 결과",
   "searching": "검색 중…",
   "noMatches": "검색 결과가 없습니다.",
-  "reader": "DOCX 읽기 영역"
+  "reader": "DOCX 읽기 영역",
+  "focus": "집중 읽기",
+  "exitFocus": "집중 읽기 종료",
+  "zoomIn": "확대",
+  "zoomOut": "축소",
+  "closeSearch": "검색 닫기",
+  "releaseFile": "놓으면 문서가 열립니다"
 }

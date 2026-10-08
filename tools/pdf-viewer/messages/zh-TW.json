@@ -26,5 +26,11 @@
   "passwordHint": "此 PDF 受密碼保護。請輸入密碼以開啟文件。",
   "wrongPassword": "密碼不正確。請再試一次。",
   "unlock": "開啟文件",
-  "reader": "PDF 閱讀區域"
+  "reader": "PDF 閱讀區域",
+  "focus": "專注閱讀",
+  "exitFocus": "結束專注閱讀",
+  "zoomIn": "放大",
+  "zoomOut": "縮小",
+  "closeSearch": "關閉搜尋",
+  "releaseFile": "放開以開啟文件"
 }

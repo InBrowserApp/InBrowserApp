@@ -24,5 +24,11 @@
   "noMatches": "Sin coincidencias.",
   "reader": "Área de lectura del PPTX",
   "empty": "Esta presentación no tiene diapositivas.",
-  "thumbnails": "Miniaturas de diapositivas"
+  "thumbnails": "Miniaturas de diapositivas",
+  "focus": "Modo de lectura",
+  "exitFocus": "Salir del modo de lectura",
+  "zoomIn": "Acercar",
+  "zoomOut": "Alejar",
+  "closeSearch": "Cerrar búsqueda",
+  "releaseFile": "Suelta para abrir este documento"
 }

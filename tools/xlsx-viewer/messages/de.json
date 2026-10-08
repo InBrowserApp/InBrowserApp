@@ -24,5 +24,11 @@
   "copyFailed": "Diese Auswahl kann nicht kopiert werden. Wählen Sie einen kleineren Bereich und versuchen Sie es erneut.",
   "formula": "Formel",
   "noCachedValue": "Kein gespeicherter Wert. Formeln werden nicht neu berechnet.",
-  "hidden": "Ausgeblendet"
+  "hidden": "Ausgeblendet",
+  "focus": "Lesemodus",
+  "exitFocus": "Lesemodus beenden",
+  "zoomIn": "Vergrößern",
+  "zoomOut": "Verkleinern",
+  "closeSearch": "Suche schließen",
+  "releaseFile": "Loslassen, um dieses Dokument zu öffnen"
 }

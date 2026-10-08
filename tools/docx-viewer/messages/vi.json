@@ -22,5 +22,11 @@
   "matches": "{current} trên {total} kết quả",
   "searching": "Đang tìm…",
   "noMatches": "Không có kết quả.",
-  "reader": "Vùng đọc DOCX"
+  "reader": "Vùng đọc DOCX",
+  "focus": "Đọc tập trung",
+  "exitFocus": "Thoát chế độ đọc tập trung",
+  "zoomIn": "Phóng to",
+  "zoomOut": "Thu nhỏ",
+  "closeSearch": "Đóng tìm kiếm",
+  "releaseFile": "Thả để mở tài liệu này"
 }

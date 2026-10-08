@@ -26,5 +26,11 @@
   "passwordHint": "Ten plik PDF jest chroniony hasłem. Wpisz hasło, aby go otworzyć.",
   "wrongPassword": "Hasło jest nieprawidłowe. Spróbuj ponownie.",
   "unlock": "Otwórz dokument",
-  "reader": "Obszar czytania PDF"
+  "reader": "Obszar czytania PDF",
+  "focus": "Tryb czytania",
+  "exitFocus": "Wyjdź z trybu czytania",
+  "zoomIn": "Powiększ",
+  "zoomOut": "Pomniejsz",
+  "closeSearch": "Zamknij wyszukiwanie",
+  "releaseFile": "Upuść, aby otworzyć ten dokument"
 }

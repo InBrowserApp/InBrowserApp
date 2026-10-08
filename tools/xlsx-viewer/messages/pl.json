@@ -24,5 +24,11 @@
   "copyFailed": "Nie można skopiować tego zaznaczenia. Zaznacz mniejszy zakres i spróbuj ponownie.",
   "formula": "Formuła",
   "noCachedValue": "Brak zapisanej wartości. Formuły nie są przeliczane.",
-  "hidden": "Ukryty"
+  "hidden": "Ukryty",
+  "focus": "Tryb czytania",
+  "exitFocus": "Wyjdź z trybu czytania",
+  "zoomIn": "Powiększ",
+  "zoomOut": "Pomniejsz",
+  "closeSearch": "Zamknij wyszukiwanie",
+  "releaseFile": "Upuść, aby otworzyć ten dokument"
 }

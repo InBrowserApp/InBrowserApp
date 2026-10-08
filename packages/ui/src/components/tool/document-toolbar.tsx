@@ -1,9 +1,17 @@
-import { useId, useState } from "react"
+import { useCallback, useEffect, useId, useRef, useState } from "react"
+import type { ReactNode } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
-import { DocumentNumberInput } from "@workspace/ui/components/tool/document-number-input"
 import { Input } from "@workspace/ui/components/ui/input"
-import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
-import { ChevronLeft, ChevronRight } from "@workspace/ui/icons"
+import { DocumentNumberInput } from "@workspace/ui/components/tool/document-number-input"
+import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
+import { DocumentZoom } from "@workspace/ui/components/tool/document-zoom"
+import {
+  ArrowLeftRight,
+  ChevronLeft,
+  ChevronRight,
+  Search,
+  X,
+} from "@workspace/ui/icons"
 export type DocumentReaderState = {
   page: number
   total: number
@@ -24,15 +32,17 @@ type ToolbarMessages = Record<
   | "pageCount"
   | "next"
   | "zoom"
+  | "zoomIn"
+  | "zoomOut"
   | "fit"
   | "search"
+  | "closeSearch"
   | "find"
   | "previousMatch"
   | "nextMatch"
   | "searching"
   | "matches"
-  | "noMatches"
-  | "privacy",
+  | "noMatches",
   string
 >
 
@@ -40,74 +50,121 @@ export function DocumentToolbar({
   messages: m,
   state,
   reader,
+  actions,
 }: {
   messages: ToolbarMessages
   state: DocumentReaderState
   reader: DocumentControls
+  actions?: ReactNode
 }) {
   const id = useId()
   const [query, setQuery] = useState("")
+  const [open, setOpen] = useState(false)
+  const root = useRef<HTMLDivElement>(null)
+  const search = useRef<HTMLInputElement>(null)
+  const toggle = useRef<HTMLButtonElement>(null)
+  const closeSearch = useCallback(() => {
+    setOpen(false)
+    setQuery("")
+    reader.find("")
+    toggle.current?.focus()
+  }, [reader])
+  useEffect(() => {
+    if (open) search.current?.focus()
+  }, [open])
+  useEffect(() => {
+    const workspace = root.current!.closest("[data-document-workspace]")!
+    function onKey(event: Event) {
+      const e = event as KeyboardEvent
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "f") {
+        e.preventDefault()
+        setOpen(true)
+        search.current?.focus()
+      } else if (e.key === "Escape" && !e.defaultPrevented && open) {
+        e.preventDefault()
+        closeSearch()
+      }
+    }
+    workspace.addEventListener("keydown", onKey)
+    return () => workspace.removeEventListener("keydown", onKey)
+  }, [open, closeSearch])
+  const status = state.searching
+    ? m.searching
+    : state.matches
+      ? m.matches
+          .replace("{current}", String(state.current))
+          .replace("{total}", String(state.matches))
+      : state.query
+        ? m.noMatches
+        : ""
   return (
-    <div className="flex flex-col gap-3 border-b p-3">
-      <div className="flex flex-wrap items-end gap-2">
-        <Button
-          variant="outline"
-          size="icon"
-          aria-label={m.previous}
-          disabled={state.page <= 1}
-          onClick={() => reader.page(state.page - 1)}
-        >
-          <ChevronLeft className="rtl:rotate-180" />
-        </Button>
-        <Field className="w-24">
-          <FieldLabel htmlFor={`${id}-page`}>{m.page}</FieldLabel>
+    <div ref={root} className="shrink-0 border-b p-2">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex items-center gap-1">
+          <DocumentIconButton
+            label={m.previous}
+            disabled={state.page <= 1}
+            onClick={() => reader.page(state.page - 1)}
+          >
+            <ChevronLeft aria-hidden="true" className="rtl:rotate-180" />
+          </DocumentIconButton>
           <DocumentNumberInput
-            id={`${id}-page`}
+            aria-label={m.page}
+            className="w-16"
             min={1}
             max={state.total}
             value={state.page}
             onCommit={reader.page}
           />
-        </Field>
-        <span className="pb-2 text-sm text-muted-foreground">
-          {m.pageCount.replace("{total}", String(state.total))}
-        </span>
-        <Button
-          variant="outline"
-          size="icon"
-          aria-label={m.next}
-          disabled={state.page >= state.total}
-          onClick={() => reader.page(state.page + 1)}
-        >
-          <ChevronRight className="rtl:rotate-180" />
-        </Button>
-        <Field className="ms-auto w-24">
-          <FieldLabel htmlFor={`${id}-zoom`}>{m.zoom}</FieldLabel>
-          <DocumentNumberInput
-            id={`${id}-zoom`}
-            min={25}
-            max={400}
-            step={25}
+          <span className="text-sm text-muted-foreground tabular-nums">
+            {m.pageCount.replace("{total}", String(state.total))}
+          </span>
+          <DocumentIconButton
+            label={m.next}
+            disabled={state.page >= state.total}
+            onClick={() => reader.page(state.page + 1)}
+          >
+            <ChevronRight aria-hidden="true" className="rtl:rotate-180" />
+          </DocumentIconButton>
+        </div>
+        <div className="flex flex-wrap items-center gap-1">
+          <DocumentZoom
             value={state.zoom}
-            onCommit={reader.zoom}
+            onChange={reader.zoom}
+            messages={m}
           />
-        </Field>
-        <Button variant="outline" onClick={() => reader.zoom("page-width")}>
-          {m.fit}
-        </Button>
+          <DocumentIconButton
+            label={m.fit}
+            onClick={() => reader.zoom("page-width")}
+          >
+            <ArrowLeftRight aria-hidden="true" />
+          </DocumentIconButton>
+          {actions}
+          <DocumentIconButton
+            ref={toggle}
+            label={m.search}
+            aria-expanded={open}
+            aria-controls={`${id}-search-panel`}
+            onClick={() => (open ? closeSearch() : setOpen(true))}
+          >
+            <Search aria-hidden="true" />
+          </DocumentIconButton>
+        </div>
       </div>
-      <form
-        className="flex flex-wrap items-end gap-2"
-        onSubmit={(event) => {
-          event.preventDefault()
-          reader.find(query.trim())
-        }}
-      >
-        <Field className="min-w-40 flex-1">
-          <FieldLabel htmlFor={`${id}-search`}>{m.search}</FieldLabel>
+      {open ? (
+        <form
+          id={`${id}-search-panel`}
+          className="mt-2 flex flex-wrap items-center gap-1"
+          onSubmit={(event) => {
+            event.preventDefault()
+            reader.find(query.trim())
+          }}
+        >
           <Input
-            id={`${id}-search`}
+            ref={search}
+            aria-label={m.search}
             type="search"
+            className="min-w-32 flex-1"
             maxLength={200}
             value={query}
             onChange={(event) => {
@@ -115,42 +172,37 @@ export function DocumentToolbar({
               if (!event.target.value) reader.find("")
             }}
           />
-        </Field>
-        <Button type="submit" variant="outline" disabled={!query.trim()}>
-          {m.find}
-        </Button>
-        <Button
-          type="button"
-          variant="ghost"
-          size="icon"
-          aria-label={m.previousMatch}
-          disabled={!query.trim()}
-          onClick={() => reader.find(query.trim(), true)}
-        >
-          <ChevronLeft className="rtl:rotate-180" />
-        </Button>
-        <Button
-          type="button"
-          variant="ghost"
-          size="icon"
-          aria-label={m.nextMatch}
-          disabled={!query.trim()}
-          onClick={() => reader.find(query.trim())}
-        >
-          <ChevronRight className="rtl:rotate-180" />
-        </Button>
-      </form>
-      <p role="status" className="text-xs text-muted-foreground">
-        {state.searching
-          ? m.searching
-          : state.matches
-            ? m.matches
-                .replace("{current}", String(state.current))
-                .replace("{total}", String(state.matches))
-            : state.query
-              ? m.noMatches
-              : m.privacy}
-      </p>
+          <Button type="submit" variant="outline" disabled={!query.trim()}>
+            {m.find}
+          </Button>
+          <DocumentIconButton
+            type="button"
+            label={m.previousMatch}
+            disabled={!query.trim()}
+            onClick={() => reader.find(query.trim(), true)}
+          >
+            <ChevronLeft aria-hidden="true" className="rtl:rotate-180" />
+          </DocumentIconButton>
+          <DocumentIconButton
+            type="button"
+            label={m.nextMatch}
+            disabled={!query.trim()}
+            onClick={() => reader.find(query.trim())}
+          >
+            <ChevronRight aria-hidden="true" className="rtl:rotate-180" />
+          </DocumentIconButton>
+          <DocumentIconButton
+            type="button"
+            label={m.closeSearch}
+            onClick={closeSearch}
+          >
+            <X aria-hidden="true" />
+          </DocumentIconButton>
+          <p role="status" className="basis-full text-xs text-muted-foreground">
+            {status}
+          </p>
+        </form>
+      ) : null}
     </div>
   )
 }

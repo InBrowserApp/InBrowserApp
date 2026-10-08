@@ -22,5 +22,11 @@
   "matches": "{current} из {total} совпадений",
   "searching": "Поиск…",
   "noMatches": "Совпадений нет.",
-  "reader": "Область чтения DOCX"
+  "reader": "Область чтения DOCX",
+  "focus": "Режим чтения",
+  "exitFocus": "Выйти из режима чтения",
+  "zoomIn": "Увеличить",
+  "zoomOut": "Уменьшить",
+  "closeSearch": "Закрыть поиск",
+  "releaseFile": "Отпустите, чтобы открыть документ"
 }

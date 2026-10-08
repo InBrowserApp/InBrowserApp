@@ -26,5 +26,11 @@
   "passwordHint": "此 PDF 受密码保护。请输入密码以打开文档。",
   "wrongPassword": "密码不正确，请重试。",
   "unlock": "打开文档",
-  "reader": "PDF 阅读区域"
+  "reader": "PDF 阅读区域",
+  "focus": "专注阅读",
+  "exitFocus": "退出专注阅读",
+  "zoomIn": "放大",
+  "zoomOut": "缩小",
+  "closeSearch": "关闭搜索",
+  "releaseFile": "松开以打开此文档"
 }

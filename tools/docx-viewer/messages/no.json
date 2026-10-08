@@ -22,5 +22,11 @@
   "matches": "{current} av {total} treff",
   "searching": "Søker…",
   "noMatches": "Ingen treff.",
-  "reader": "Leseområde for DOCX"
+  "reader": "Leseområde for DOCX",
+  "focus": "Les i fokusmodus",
+  "exitFocus": "Avslutt fokusmodus",
+  "zoomIn": "Zoom inn",
+  "zoomOut": "Zoom ut",
+  "closeSearch": "Lukk søk",
+  "releaseFile": "Slipp for å åpne dokumentet"
 }

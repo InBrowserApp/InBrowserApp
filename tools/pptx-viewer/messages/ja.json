@@ -24,5 +24,11 @@
   "noMatches": "一致する結果がありません。",
   "reader": "PPTX閲覧領域",
   "empty": "このプレゼンテーションにはスライドがありません。",
-  "thumbnails": "スライドのサムネイル"
+  "thumbnails": "スライドのサムネイル",
+  "focus": "集中して読む",
+  "exitFocus": "集中モードを終了",
+  "zoomIn": "拡大",
+  "zoomOut": "縮小",
+  "closeSearch": "検索を閉じる",
+  "releaseFile": "ドロップして文書を開く"
 }

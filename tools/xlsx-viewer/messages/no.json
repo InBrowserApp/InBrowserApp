@@ -24,5 +24,11 @@
   "copyFailed": "Kan ikke kopiere dette utvalget. Velg et mindre område og prøv igjen.",
   "formula": "Formel",
   "noCachedValue": "Ingen mellomlagret verdi. Formler beregnes ikke på nytt.",
-  "hidden": "Skjult"
+  "hidden": "Skjult",
+  "focus": "Les i fokusmodus",
+  "exitFocus": "Avslutt fokusmodus",
+  "zoomIn": "Zoom inn",
+  "zoomOut": "Zoom ut",
+  "closeSearch": "Lukk søk",
+  "releaseFile": "Slipp for å åpne dokumentet"
 }

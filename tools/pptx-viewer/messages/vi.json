@@ -24,5 +24,11 @@
   "noMatches": "Không có kết quả.",
   "reader": "Vùng đọc PPTX",
   "empty": "Bản trình bày này không có trang chiếu.",
-  "thumbnails": "Hình thu nhỏ trang chiếu"
+  "thumbnails": "Hình thu nhỏ trang chiếu",
+  "focus": "Đọc tập trung",
+  "exitFocus": "Thoát chế độ đọc tập trung",
+  "zoomIn": "Phóng to",
+  "zoomOut": "Thu nhỏ",
+  "closeSearch": "Đóng tìm kiếm",
+  "releaseFile": "Thả để mở tài liệu này"
 }

@@ -24,5 +24,11 @@
   "copyFailed": "이 선택 영역을 복사할 수 없습니다. 더 작은 범위를 선택한 후 다시 시도하세요.",
   "formula": "수식",
   "noCachedValue": "저장된 계산 결과가 없습니다. 수식은 다시 계산되지 않습니다.",
-  "hidden": "숨김"
+  "hidden": "숨김",
+  "focus": "집중 읽기",
+  "exitFocus": "집중 읽기 종료",
+  "zoomIn": "확대",
+  "zoomOut": "축소",
+  "closeSearch": "검색 닫기",
+  "releaseFile": "놓으면 문서가 열립니다"
 }

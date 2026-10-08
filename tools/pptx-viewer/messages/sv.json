@@ -24,5 +24,11 @@
   "noMatches": "Inga träffar.",
   "reader": "Läsområde för PPTX",
   "empty": "Den här presentationen har inga bilder.",
-  "thumbnails": "Bildminiatyrer"
+  "thumbnails": "Bildminiatyrer",
+  "focus": "Fokuserad läsning",
+  "exitFocus": "Avsluta fokuserad läsning",
+  "zoomIn": "Zooma in",
+  "zoomOut": "Zooma ut",
+  "closeSearch": "Stäng sökning",
+  "releaseFile": "Släpp för att öppna dokumentet"
 }

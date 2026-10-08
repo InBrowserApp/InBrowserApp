@@ -26,5 +26,11 @@
   "passwordHint": "Deze PDF is beveiligd met een wachtwoord. Voer het wachtwoord in om de PDF te openen.",
   "wrongPassword": "Dat wachtwoord werkte niet. Probeer het opnieuw.",
   "unlock": "Document openen",
-  "reader": "PDF-leesgebied"
+  "reader": "PDF-leesgebied",
+  "focus": "Afleidingsvrij lezen",
+  "exitFocus": "Afleidingsvrij lezen afsluiten",
+  "zoomIn": "Inzoomen",
+  "zoomOut": "Uitzoomen",
+  "closeSearch": "Zoeken sluiten",
+  "releaseFile": "Laat los om dit document te openen"
 }

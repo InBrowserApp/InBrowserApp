@@ -57,7 +57,7 @@ export function Thumbnails({
     <nav
       ref={rail}
       aria-label={m.thumbnails}
-      className="flex h-36 shrink-0 gap-2 overflow-auto border-b bg-muted/50 p-2 sm:h-[70vh] sm:w-40 sm:flex-col sm:border-e sm:border-b-0"
+      className="flex h-36 shrink-0 gap-2 overflow-auto border-b bg-muted/50 p-2 sm:h-auto sm:w-40 sm:flex-col sm:border-e sm:border-b-0"
     >
       {Array.from({ length: state.total }, (_, index) => (
         <Button

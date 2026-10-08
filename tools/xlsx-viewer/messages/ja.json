@@ -24,5 +24,11 @@
   "copyFailed": "この選択範囲をコピーできません。範囲を狭めて、もう一度お試しください。",
   "formula": "数式",
   "noCachedValue": "キャッシュされた値がありません。数式は再計算されません。",
-  "hidden": "非表示"
+  "hidden": "非表示",
+  "focus": "集中して読む",
+  "exitFocus": "集中モードを終了",
+  "zoomIn": "拡大",
+  "zoomOut": "縮小",
+  "closeSearch": "検索を閉じる",
+  "releaseFile": "ドロップして文書を開く"
 }

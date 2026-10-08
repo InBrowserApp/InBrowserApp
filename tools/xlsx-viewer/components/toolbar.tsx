@@ -1,6 +1,6 @@
 import { useId, useState } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
-import { DocumentNumberInput } from "@workspace/ui/components/tool/document-number-input"
+import { DocumentZoom } from "@workspace/ui/components/tool/document-zoom"
 import { Input } from "@workspace/ui/components/ui/input"
 import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
 import {
@@ -26,7 +26,7 @@ export function Toolbar({
   const id = useId()
   const [reference, setReference] = useState("A1")
   return (
-    <div className="flex flex-col gap-3 border-b p-3">
+    <div className="flex shrink-0 flex-col gap-3 border-b p-3">
       <div className="flex flex-wrap items-end gap-3">
         <Field className="min-w-40 flex-1">
           <FieldLabel htmlFor={`${id}-sheet`}>{m.sheet}</FieldLabel>
@@ -49,17 +49,7 @@ export function Toolbar({
             </SelectContent>
           </Select>
         </Field>
-        <Field className="w-24">
-          <FieldLabel htmlFor={`${id}-zoom`}>{m.zoom}</FieldLabel>
-          <DocumentNumberInput
-            id={`${id}-zoom`}
-            min={25}
-            max={400}
-            step={25}
-            value={state.zoom}
-            onCommit={reader.zoom}
-          />
-        </Field>
+        <DocumentZoom value={state.zoom} onChange={reader.zoom} messages={m} />
         <Button variant="outline" onClick={() => reader.zoom("page-width")}>
           {m.fit}
         </Button>

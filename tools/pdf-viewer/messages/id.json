@@ -26,5 +26,11 @@
   "passwordHint": "PDF ini dilindungi kata sandi. Masukkan kata sandinya untuk membukanya.",
   "wrongPassword": "Kata sandi salah. Coba lagi.",
   "unlock": "Buka dokumen",
-  "reader": "Area baca PDF"
+  "reader": "Area baca PDF",
+  "focus": "Fokus membaca",
+  "exitFocus": "Keluar dari fokus membaca",
+  "zoomIn": "Perbesar",
+  "zoomOut": "Perkecil",
+  "closeSearch": "Tutup pencarian",
+  "releaseFile": "Lepaskan untuk membuka dokumen ini"
 }

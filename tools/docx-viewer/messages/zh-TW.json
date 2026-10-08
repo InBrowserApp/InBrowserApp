@@ -22,5 +22,11 @@
   "matches": "第 {current} 個，共 {total} 個相符項目",
   "searching": "搜尋中…",
   "noMatches": "找不到相符項目。",
-  "reader": "DOCX 閱讀區域"
+  "reader": "DOCX 閱讀區域",
+  "focus": "專注閱讀",
+  "exitFocus": "結束專注閱讀",
+  "zoomIn": "放大",
+  "zoomOut": "縮小",
+  "closeSearch": "關閉搜尋",
+  "releaseFile": "放開以開啟文件"
 }

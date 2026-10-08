@@ -24,5 +24,11 @@
   "copyFailed": "Deze selectie kan niet worden gekopieerd. Selecteer een kleiner bereik en probeer het opnieuw.",
   "formula": "Formule",
   "noCachedValue": "Geen opgeslagen waarde. Formules worden niet opnieuw berekend.",
-  "hidden": "Verborgen"
+  "hidden": "Verborgen",
+  "focus": "Afleidingsvrij lezen",
+  "exitFocus": "Afleidingsvrij lezen afsluiten",
+  "zoomIn": "Inzoomen",
+  "zoomOut": "Uitzoomen",
+  "closeSearch": "Zoeken sluiten",
+  "releaseFile": "Laat los om dit document te openen"
 }

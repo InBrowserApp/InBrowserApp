@@ -22,5 +22,11 @@
   "matches": "{current} di {total} corrispondenze",
   "searching": "Ricerca in corso…",
   "noMatches": "Nessuna corrispondenza.",
-  "reader": "Area di lettura DOCX"
+  "reader": "Area di lettura DOCX",
+  "focus": "Lettura senza distrazioni",
+  "exitFocus": "Esci dalla lettura senza distrazioni",
+  "zoomIn": "Ingrandisci",
+  "zoomOut": "Riduci",
+  "closeSearch": "Chiudi ricerca",
+  "releaseFile": "Rilascia per aprire questo documento"
 }

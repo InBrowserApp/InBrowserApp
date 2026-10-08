@@ -26,5 +26,11 @@
   "passwordHint": "Den här PDF-filen är lösenordsskyddad. Ange lösenordet för att öppna den.",
   "wrongPassword": "Lösenordet fungerade inte. Försök igen.",
   "unlock": "Öppna dokument",
-  "reader": "Läsområde för PDF"
+  "reader": "Läsområde för PDF",
+  "focus": "Fokuserad läsning",
+  "exitFocus": "Avsluta fokuserad läsning",
+  "zoomIn": "Zooma in",
+  "zoomOut": "Zooma ut",
+  "closeSearch": "Stäng sökning",
+  "releaseFile": "Släpp för att öppna dokumentet"
 }

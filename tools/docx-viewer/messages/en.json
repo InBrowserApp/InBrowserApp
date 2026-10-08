@@ -22,5 +22,11 @@
   "matches": "{current} of {total} matches",
   "searching": "Searching…",
   "noMatches": "No matches.",
-  "reader": "DOCX reading area"
+  "reader": "DOCX reading area",
+  "focus": "Focus reading",
+  "exitFocus": "Exit focus reading",
+  "zoomIn": "Zoom in",
+  "zoomOut": "Zoom out",
+  "closeSearch": "Close search",
+  "releaseFile": "Release to open this document"
 }

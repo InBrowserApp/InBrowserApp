@@ -22,5 +22,11 @@
   "matches": "{current} daripada {total} padanan",
   "searching": "Mencari…",
   "noMatches": "Tiada padanan.",
-  "reader": "Ruang bacaan DOCX"
+  "reader": "Ruang bacaan DOCX",
+  "focus": "Fokus membaca",
+  "exitFocus": "Keluar daripada fokus membaca",
+  "zoomIn": "Zum masuk",
+  "zoomOut": "Zum keluar",
+  "closeSearch": "Tutup carian",
+  "releaseFile": "Lepaskan untuk membuka dokumen ini"
 }

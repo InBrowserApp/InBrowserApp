@@ -22,5 +22,11 @@
   "matches": "{current} de {total} coincidencias",
   "searching": "Buscando…",
   "noMatches": "Sin coincidencias.",
-  "reader": "Área de lectura del DOCX"
+  "reader": "Área de lectura del DOCX",
+  "focus": "Modo de lectura",
+  "exitFocus": "Salir del modo de lectura",
+  "zoomIn": "Acercar",
+  "zoomOut": "Alejar",
+  "closeSearch": "Cerrar búsqueda",
+  "releaseFile": "Suelta para abrir este documento"
 }

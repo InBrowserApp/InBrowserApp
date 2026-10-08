@@ -24,5 +24,11 @@
   "copyFailed": "Det går inte att kopiera den här markeringen. Markera ett mindre område och försök igen.",
   "formula": "Formel",
   "noCachedValue": "Inget sparat värde. Formler beräknas inte om.",
-  "hidden": "Dolt"
+  "hidden": "Dolt",
+  "focus": "Fokuserad läsning",
+  "exitFocus": "Avsluta fokuserad läsning",
+  "zoomIn": "Zooma in",
+  "zoomOut": "Zooma ut",
+  "closeSearch": "Stäng sökning",
+  "releaseFile": "Släpp för att öppna dokumentet"
 }
