@@ -29,7 +29,7 @@ export async function openReader({
   let resize: ResizeObserver | undefined
   const canvas = window.document.createElement("canvas")
   let disposed = false
-  let fit = true
+  let fit: "page" | "width" | null = "page"
   let query = ""
   let searchGeneration = 0
   function dispose() {
@@ -77,7 +77,7 @@ export async function openReader({
       },
     })
     signal.addEventListener("abort", dispose, { once: true })
-    await viewer.fitWidth()
+    await viewer.fitPage()
     signal.throwIfAborted()
     onChange({
       total: document.slideCount,
@@ -85,7 +85,8 @@ export async function openReader({
       zoom: Math.round(viewer.getScale() * 100),
     })
     resize = new ResizeObserver(() => {
-      if (fit && !disposed) run(viewer!.fitWidth())
+      if (fit && !disposed)
+        run(fit === "page" ? viewer!.fitPage() : viewer!.fitWidth())
     })
     resize.observe(container)
     async function find(value: string, previous: boolean) {
@@ -116,8 +117,12 @@ export async function openReader({
         run(viewer!.goToSlide(page - 1))
       },
       zoom: (value) => {
-        fit = value === "page-width"
+        fit = value === "page-width" ? "width" : null
         run(fit ? viewer!.fitWidth() : viewer!.setScale(Number(value) / 100))
+      },
+      fitPage: () => {
+        fit = "page"
+        run(viewer!.fitPage())
       },
       find: (value, previous = false) => run(find(value, previous)),
       thumbnail: (target, page) => {

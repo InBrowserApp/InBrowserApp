@@ -30,5 +30,6 @@
   "zoomIn": "Vergrößern",
   "zoomOut": "Verkleinern",
   "closeSearch": "Suche schließen",
-  "releaseFile": "Loslassen, um dieses Dokument zu öffnen"
+  "releaseFile": "Loslassen, um dieses Dokument zu öffnen",
+  "fitPage": "Seite einpassen"
 }

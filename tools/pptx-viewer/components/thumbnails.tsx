@@ -3,10 +3,12 @@ import { Button } from "@workspace/ui/components/ui/button"
 import type { Messages, Reader, ReaderState } from "../types"
 
 export function Thumbnails({
+  id,
   reader,
   state,
   messages: m,
 }: {
+  id?: string
   reader: Reader
   state: ReaderState
   messages: Messages
@@ -53,8 +55,30 @@ export function Thumbnails({
       })
     }
   }, [reader, state.total])
+  useEffect(() => {
+    const root = rail.current!
+    const current = root.querySelector<HTMLElement>('[aria-current="page"]')
+    if (!current) return
+    const outer = root.getBoundingClientRect(),
+      inner = current.getBoundingClientRect()
+    root.scrollBy({
+      top:
+        inner.top < outer.top
+          ? inner.top - outer.top
+          : inner.bottom > outer.bottom
+            ? inner.bottom - outer.bottom
+            : 0,
+      left:
+        inner.left < outer.left
+          ? inner.left - outer.left
+          : inner.right > outer.right
+            ? inner.right - outer.right
+            : 0,
+    })
+  }, [state.page])
   return (
     <nav
+      id={id}
       ref={rail}
       aria-label={m.thumbnails}
       className="flex h-36 shrink-0 gap-2 overflow-auto border-b bg-muted/50 p-2 sm:h-auto sm:w-40 sm:flex-col sm:border-e sm:border-b-0"

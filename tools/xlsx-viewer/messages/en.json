@@ -30,5 +30,6 @@
   "zoomIn": "Zoom in",
   "zoomOut": "Zoom out",
   "closeSearch": "Close search",
-  "releaseFile": "Release to open this document"
+  "releaseFile": "Release to open this document",
+  "details": "Cell details"
 }

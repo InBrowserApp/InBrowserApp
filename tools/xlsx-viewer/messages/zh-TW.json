@@ -30,5 +30,6 @@
   "zoomIn": "放大",
   "zoomOut": "縮小",
   "closeSearch": "關閉搜尋",
-  "releaseFile": "放開以開啟文件"
+  "releaseFile": "放開以開啟文件",
+  "details": "儲存格詳細資訊"
 }

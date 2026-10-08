@@ -30,5 +30,6 @@
   "zoomIn": "Powiększ",
   "zoomOut": "Pomniejsz",
   "closeSearch": "Zamknij wyszukiwanie",
-  "releaseFile": "Upuść, aby otworzyć ten dokument"
+  "releaseFile": "Upuść, aby otworzyć ten dokument",
+  "details": "Szczegóły komórki"
 }

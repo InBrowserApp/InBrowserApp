@@ -30,5 +30,6 @@
   "zoomIn": "تكبير",
   "zoomOut": "تصغير",
   "closeSearch": "إغلاق البحث",
-  "releaseFile": "أفلت لفتح هذا المستند"
+  "releaseFile": "أفلت لفتح هذا المستند",
+  "fitPage": "ملاءمة الصفحة"
 }

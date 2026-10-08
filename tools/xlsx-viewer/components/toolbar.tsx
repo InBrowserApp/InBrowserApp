@@ -1,16 +1,17 @@
-import { useId, useState } from "react"
-import { Button } from "@workspace/ui/components/ui/button"
-import { DocumentZoom } from "@workspace/ui/components/tool/document-zoom"
+import { useEffect, useId, useRef, useState } from "react"
 import { Input } from "@workspace/ui/components/ui/input"
-import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
+import { Textarea } from "@workspace/ui/components/ui/textarea"
+import { DocumentZoom } from "@workspace/ui/components/tool/document-zoom"
+import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import {
   Select,
   SelectTrigger,
   SelectValue,
   SelectContent,
   SelectItem,
+  SelectGroup,
 } from "@workspace/ui/components/ui/select"
-import { Copy, Check } from "@workspace/ui/icons"
+import { ArrowLeftRight, Copy, Check, Eye } from "@workspace/ui/icons"
 import { isCellReference } from "../core/cells"
 import type { Messages, Reader, ReaderState } from "../types"
 
@@ -24,39 +25,78 @@ export function Toolbar({
   reader: Reader
 }) {
   const id = useId()
-  const [reference, setReference] = useState("A1")
+  const root = useRef<HTMLDivElement>(null)
+  const [portal, setPortal] = useState<HTMLElement | null>(null)
+  useEffect(() => {
+    setPortal(root.current!.closest("dialog"))
+  }, [])
+  const address = state.selection?.reference ?? ""
+  const [reference, setReference] = useState(address)
+  const [details, setDetails] = useState(false)
+  useEffect(() => {
+    setReference(address)
+  }, [address, state.selection])
+  const status = state.switching
+    ? m.loading
+    : state.copyStatus === "failed"
+      ? m.copyFailed
+      : state.selection?.noCachedValue
+        ? m.noCachedValue
+        : state.empty
+          ? m.empty
+          : ""
   return (
-    <div className="flex shrink-0 flex-col gap-3 border-b p-3">
-      <div className="flex flex-wrap items-end gap-3">
-        <Field className="min-w-40 flex-1">
-          <FieldLabel htmlFor={`${id}-sheet`}>{m.sheet}</FieldLabel>
+    <div ref={root} className="flex shrink-0 flex-col gap-2 border-b p-2">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="min-w-32 flex-1 sm:hidden">
           <Select
             value={String(state.sheet)}
             onValueChange={(value) => reader.sheet(Number(value))}
           >
-            <SelectTrigger id={`${id}-sheet`} className="w-full">
+            <SelectTrigger aria-label={m.sheet} className="w-full">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
-              {state.sheets.map((sheet, index) => (
-                <SelectItem key={index} value={String(index)}>
-                  <span dir="auto">
-                    {sheet.name}
-                    {sheet.hidden ? ` (${m.hidden})` : ""}
-                  </span>
-                </SelectItem>
-              ))}
+            <SelectContent container={portal}>
+              <SelectGroup>
+                {state.sheets.map((sheet, index) => (
+                  <SelectItem key={index} value={String(index)}>
+                    <span dir="auto">
+                      {sheet.name}
+                      {sheet.hidden ? ` (${m.hidden})` : ""}
+                    </span>
+                  </SelectItem>
+                ))}
+              </SelectGroup>
             </SelectContent>
           </Select>
-        </Field>
-        <DocumentZoom value={state.zoom} onChange={reader.zoom} messages={m} />
-        <Button variant="outline" onClick={() => reader.zoom("page-width")}>
-          {m.fit}
-        </Button>
+        </div>
+        <div className="flex items-center gap-1">
+          <DocumentZoom
+            value={state.zoom}
+            onChange={reader.zoom}
+            messages={m}
+          />
+          <DocumentIconButton
+            label={m.fit}
+            onClick={() => reader.zoom("page-width")}
+          >
+            <ArrowLeftRight aria-hidden="true" />
+          </DocumentIconButton>
+          <DocumentIconButton
+            label={state.copyStatus === "copied" ? m.copied : m.copy}
+            disabled={!state.selection || state.switching}
+            onClick={() => reader.copy()}
+          >
+            {state.copyStatus === "copied" ? (
+              <Check aria-hidden="true" />
+            ) : (
+              <Copy aria-hidden="true" />
+            )}
+          </DocumentIconButton>
+        </div>
       </div>
-      <div className="flex flex-wrap items-end gap-3">
+      <div className="grid grid-cols-[6rem_minmax(0,1fr)_auto] items-start gap-2">
         <form
-          className="flex items-end gap-2"
           onSubmit={(event) => {
             event.preventDefault()
             const input = event.currentTarget.querySelector("input")!
@@ -68,76 +108,84 @@ export function Toolbar({
             reader.go(reference.toUpperCase())
           }}
         >
-          <Field className="w-36">
-            <FieldLabel htmlFor={`${id}-reference`}>{m.range}</FieldLabel>
-            <Input
-              id={`${id}-reference`}
-              value={reference}
-              maxLength={10}
-              placeholder="A1"
-              dir="ltr"
-              onChange={(event) => {
-                event.target.setCustomValidity("")
-                setReference(event.target.value)
-              }}
-            />
-          </Field>
-          <Button type="submit" variant="outline" disabled={state.switching}>
-            {m.go}
-          </Button>
+          <Input
+            aria-label={m.range}
+            title={m.range}
+            value={reference}
+            maxLength={10}
+            placeholder="A1"
+            dir="ltr"
+            disabled={state.switching}
+            onChange={(event) => {
+              event.target.setCustomValidity("")
+              setReference(event.target.value)
+            }}
+            onBlur={(event) => {
+              event.target.setCustomValidity("")
+              setReference(address)
+            }}
+            onKeyDown={(event) => {
+              if (event.key === "Escape" && reference !== address) {
+                event.preventDefault()
+                event.stopPropagation()
+                event.currentTarget.setCustomValidity("")
+                setReference(address)
+              }
+            }}
+          />
         </form>
-        <Button
-          variant="outline"
-          disabled={!state.selection || state.switching}
-          onClick={() => reader.copy()}
+        <div className="flex min-w-0 flex-col gap-1">
+          <Input
+            aria-label={m.value}
+            value={state.selection?.value ?? ""}
+            readOnly
+            dir="auto"
+          />
+          <Input
+            aria-label={m.formula}
+            value={state.selection?.formula ?? ""}
+            placeholder={m.formula}
+            readOnly
+            dir="ltr"
+            className="h-7"
+          />
+        </div>
+        <DocumentIconButton
+          label={m.details}
+          aria-expanded={details}
+          aria-controls={`${id}-details`}
+          onClick={() => setDetails((open) => !open)}
         >
-          {state.copyStatus === "copied" ? <Check /> : <Copy />}
-          {state.copyStatus === "copied" ? m.copied : m.copy}
-        </Button>
+          <Eye aria-hidden="true" />
+        </DocumentIconButton>
       </div>
-      {state.selection ? (
-        <div className="grid grid-cols-[6rem_minmax(0,1fr)] gap-3">
-          <Field>
-            <FieldLabel htmlFor={`${id}-cell`}>{m.cell}</FieldLabel>
-            <Input
-              id={`${id}-cell`}
-              value={state.selection.reference}
-              readOnly
-              dir="ltr"
-            />
-          </Field>
-          <Field>
-            <FieldLabel htmlFor={`${id}-value`}>{m.value}</FieldLabel>
-            <Input
-              id={`${id}-value`}
-              value={state.selection.value}
-              readOnly
-              dir="auto"
-            />
-          </Field>
-          {state.selection.formula ? (
-            <Field className="col-span-2">
-              <FieldLabel htmlFor={`${id}-formula`}>{m.formula}</FieldLabel>
-              <Input
-                id={`${id}-formula`}
-                value={state.selection.formula}
-                readOnly
-                dir="ltr"
-              />
-            </Field>
-          ) : null}
+      {details ? (
+        <div
+          id={`${id}-details`}
+          className="grid max-h-48 gap-2 overflow-auto sm:grid-cols-2"
+        >
+          <Textarea
+            aria-label={`${m.details}: ${m.value}`}
+            value={state.selection?.value ?? ""}
+            readOnly
+            rows={3}
+            dir="auto"
+          />
+          <Textarea
+            aria-label={`${m.details}: ${m.formula}`}
+            value={state.selection?.formula ?? ""}
+            readOnly
+            rows={3}
+            dir="ltr"
+          />
         </div>
       ) : null}
-      <p role="status" className="text-xs text-muted-foreground">
-        {state.switching
-          ? m.loading
-          : state.copyStatus === "failed"
-            ? m.copyFailed
-            : state.selection?.noCachedValue
-              ? m.noCachedValue
-              : state.empty
-                ? m.empty
-                : m.privacy}
+      <p
+        role="status"
+        title={status}
+        className="h-8 overflow-auto text-xs text-muted-foreground"
+      >
+        {status}
       </p>
     </div>
   )

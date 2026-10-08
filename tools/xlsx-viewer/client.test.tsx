@@ -60,7 +60,7 @@ test("opens, navigates cells, zooms, copies and closes a workbook", async () => 
   fireEvent.click(screen.getByRole("button", { name: m.open }))
   expect(click).toHaveBeenCalledOnce()
   choose()
-  await screen.findByLabelText(m.cell)
+  await screen.findByLabelText(m.range)
   expect(screen.getByLabelText(m.value)).toHaveProperty("value", "Item")
   fireEvent.change(screen.getByLabelText(m.zoom), { target: { value: "150" } })
   fireEvent.keyDown(screen.getByLabelText(m.zoom), { key: "Enter" })
@@ -68,7 +68,7 @@ test("opens, navigates cells, zooms, copies and closes a workbook", async () => 
   fireEvent.change(screen.getByLabelText(m.zoom), { target: { value: "900" } })
   fireEvent.keyDown(screen.getByLabelText(m.zoom), { key: "Enter" })
   expect(mock.zoom).toHaveBeenCalledTimes(1)
-  fireEvent.click(screen.getByText(m.fit))
+  fireEvent.click(screen.getByRole("button", { name: m.fit }))
   expect(mock.zoom).toHaveBeenCalledWith("page-width")
   const reference = screen.getByLabelText(m.range)
   fireEvent.change(reference, { target: { value: "wrong" } })
@@ -77,7 +77,24 @@ test("opens, navigates cells, zooms, copies and closes a workbook", async () => 
   fireEvent.change(reference, { target: { value: "b2" } })
   fireEvent.submit(reference.closest("form")!)
   expect(mock.go).toHaveBeenCalledWith("B2")
-  fireEvent.click(screen.getByText(m.copy))
+  fireEvent.keyDown(reference, { key: "Escape" })
+  expect(reference).toHaveProperty("value", "A1")
+  fireEvent.change(reference, { target: { value: "C3" } })
+  fireEvent.blur(reference)
+  expect(reference).toHaveProperty("value", "A1")
+  fireEvent.click(screen.getByRole("button", { name: m.details }))
+  expect(screen.getByLabelText(`${m.details}: ${m.value}`)).toHaveProperty(
+    "value",
+    "Item"
+  )
+  fireEvent.click(screen.getByRole("button", { name: m.details }))
+  expect(screen.queryByLabelText(`${m.details}: ${m.value}`)).toBeNull()
+  fireEvent.mouseDown(screen.getByRole("tab", { name: "Secret (Hidden)" }), {
+    button: 0,
+    ctrlKey: false,
+  })
+  expect(mock.sheet).toHaveBeenCalledWith(1)
+  fireEvent.click(screen.getByRole("button", { name: m.copy }))
   expect(mock.copy).toHaveBeenCalledOnce()
   fireEvent.keyDown(screen.getByRole("combobox"), { key: "ArrowDown" })
   fireEvent.click(
@@ -92,7 +109,7 @@ test("opens, navigates cells, zooms, copies and closes a workbook", async () => 
 test("shows formula cache, empty sheet, switching and clipboard feedback", async () => {
   render(<Client messages={m} />)
   choose()
-  await screen.findByLabelText(m.cell)
+  await screen.findByLabelText(m.range)
   const options = mock.open.mock.calls[0]![0] as Options
   options.onChange({
     selection: {
@@ -108,7 +125,7 @@ test("shows formula cache, empty sheet, switching and clipboard feedback", async
     "=SUM(B2:B3)"
   )
   options.onChange({ copyStatus: "copied" })
-  await screen.findByText(m.copied)
+  await screen.findByRole("button", { name: m.copied })
   options.onChange({ copyStatus: "failed" })
   await screen.findByText(m.copyFailed)
   options.onChange({ copyStatus: "", selection: null, empty: true })
@@ -153,7 +170,7 @@ test("ignores replaced files and releases a reader that resolves after cancellat
   const section = screen.getByText(m.loading).closest("section")!
   fireEvent.dragOver(section)
   fireEvent.drop(section, { dataTransfer: { files: [file("new.xlsx")] } })
-  await screen.findByLabelText(m.cell)
+  await screen.findByLabelText(m.range)
   old.onChange({ sheets: [] })
   old.onError(new Error("stale"))
   finish(instance)
