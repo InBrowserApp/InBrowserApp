@@ -26,6 +26,7 @@ export default defineConfig({
     },
   },
   vite: {
+    optimizeDeps: { exclude: ["@silurus/ooxml"] },
     resolve: {
       alias: {
         "node:perf_hooks": fileURLToPath(

@@ -3,16 +3,46 @@ import { Button } from "@workspace/ui/components/ui/button"
 import { Input } from "@workspace/ui/components/ui/input"
 import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
 import { ChevronLeft, ChevronRight } from "@workspace/ui/icons"
-import type { Messages, Reader, ReaderState } from "../types"
+export type DocumentReaderState = {
+  page: number
+  total: number
+  zoom: number
+  current: number
+  matches: number
+  searching: boolean
+  query: string
+}
+export type DocumentControls = {
+  page: (page: number) => void
+  zoom: (scale: number | "page-width") => void
+  find: (query: string, previous?: boolean) => void
+}
+type ToolbarMessages = Record<
+  | "previous"
+  | "page"
+  | "pageCount"
+  | "next"
+  | "zoom"
+  | "fit"
+  | "search"
+  | "find"
+  | "previousMatch"
+  | "nextMatch"
+  | "searching"
+  | "matches"
+  | "noMatches"
+  | "privacy",
+  string
+>
 
-export function Toolbar({
+export function DocumentToolbar({
   messages: m,
   state,
   reader,
 }: {
-  messages: Messages
-  state: ReaderState
-  reader: Reader
+  messages: ToolbarMessages
+  state: DocumentReaderState
+  reader: DocumentControls
 }) {
   const id = useId()
   const [query, setQuery] = useState("")

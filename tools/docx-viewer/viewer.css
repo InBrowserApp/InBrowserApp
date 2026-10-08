@@ -1,0 +1,8 @@
+.docx-reader-container {
+  color-scheme: light;
+  color: #111;
+  text-align: center;
+}
+.docx-reader-container canvas {
+  background: white;
+}
