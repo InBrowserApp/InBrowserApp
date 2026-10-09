@@ -4834,7 +4834,7 @@ importers:
         version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
       dompurify:
         specifier: 'catalog:'
-        version: 3.4.13
+        version: 3.4.15
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
