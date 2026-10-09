@@ -22,7 +22,9 @@
     "@workspace/ui": "workspace:*",
     "astro": "catalog:",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "buffer": "catalog:",
+    "string_decoder": "catalog:"
   },
   "devDependencies": {
     "@astrojs/check": "catalog:",

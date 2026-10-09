@@ -1,0 +1,4 @@
+{
+  "name": "Email Viewer",
+  "description": "Baca file email EML, EMLX, dan MSG secara lokal, termasuk header pesan, HTML atau teks biasa, gambar dalam pesan, dan detail lampiran."
+}

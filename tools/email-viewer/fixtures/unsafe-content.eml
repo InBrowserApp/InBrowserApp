@@ -1,0 +1,7 @@
+From: Local safety test <fixture@example.test>
+To: Reader <reader@example.test>
+Date: Thu, 8 Oct 2026 14:35:00 -0700
+Subject: Safe preview test
+Content-Type: text/html; charset=utf-8
+
+<html><head><base href="https://tracking.invalid/base"><meta http-equiv="refresh" content="0;url=https://tracking.invalid/refresh"><style>@import "https://tracking.invalid/style";body{background-image:url(https://tracking.invalid/background)}</style><script>top.emailExecuted=true</script></head><body><h1>Safe content survives</h1><p style="background:url(https://tracking.invalid/css)">Readable message</p><img src="https://tracking.invalid/pixel" onerror="top.emailExecuted=true"><iframe src="https://tracking.invalid/frame" srcdoc="<script>top.emailExecuted=true</script>"></iframe><object data="https://tracking.invalid/object"></object><form action="https://tracking.invalid/form"><button>Send</button></form><a href="javascript:top.emailExecuted=true" onclick="top.emailExecuted=true">JavaScript link</a><a href="https://tracking.invalid/navigation" target="_top" ping="https://tracking.invalid/ping">External link</a><svg><a href="https://tracking.invalid/svg"><text>SVG link</text></a></svg><math href="https://tracking.invalid/math"><mi>x</mi></math><video poster="https://tracking.invalid/poster"><source src="https://tracking.invalid/video"></video></body></html>
