@@ -3980,6 +3980,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cbz-reader",
+    category: "image",
+    icon: "image",
+    tags: ["cbz", "comic", "manga", "reader", "zip", "offline"],
+    locales: {
+      ar: {
+        name: "CBZ Comic Reader",
+        description:
+          "اقرأ قصص CBZ المحلية بترتيب طبيعي للصفحات ومصغّرات وأدوات تكبير وملاءمة، مع القراءة من اليسار لليمين أو من اليمين لليسار. تبقى الملفات على جهازك.",
+      },
+      de: {
+        name: "CBZ Comic Reader",
+        description:
+          "Lies lokale CBZ-Comics mit natürlicher Seitenfolge, Vorschauen, Zoom, Größenanpassung und Leserichtung von links oder rechts. Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CBZ Comic Reader",
+        description:
+          "Read local CBZ comics with natural page ordering, thumbnails, zoom, fit controls, and left-to-right or right-to-left reading. Files stay on your device.",
+      },
+      es: {
+        name: "CBZ Comic Reader",
+        description:
+          "Lee cómics CBZ locales con orden natural de páginas, miniaturas, zoom, ajustes de tamaño y lectura de izquierda a derecha o de derecha a izquierda. Los archivos permanecen en tu dispositivo.",
+      },
+      fr: {
+        name: "CBZ Comic Reader",
+        description:
+          "Lisez vos BD CBZ locales avec un ordre naturel des pages, des miniatures, le zoom, l’ajustement et la lecture dans les deux sens. Les fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "CBZ Comic Reader",
+        description:
+          "קריאת קומיקס מקומי בפורמט CBZ עם סדר עמודים טבעי, תמונות ממוזערות, הגדלה, פקדי התאמה וקריאה משמאל לימין או מימין לשמאל. הקבצים נשארים במכשיר שלך.",
+      },
+      hi: {
+        name: "CBZ Comic Reader",
+        description:
+          "अपने डिवाइस की CBZ कॉमिक पढ़ें: पृष्ठों का स्वाभाविक क्रम, थंबनेल, ज़ूम, फ़िट नियंत्रण और बाएँ से दाएँ या दाएँ से बाएँ पठन। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "CBZ Comic Reader",
+        description:
+          "Baca komik CBZ lokal dengan urutan halaman alami, pratinjau, pembesaran, penyesuaian tampilan, serta arah baca kiri ke kanan atau kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "CBZ Comic Reader",
+        description:
+          "Leggi fumetti CBZ locali con ordine naturale delle pagine, miniature, zoom, adattamento e lettura da sinistra a destra o viceversa. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CBZ Comic Reader",
+        description:
+          "端末内の CBZ コミックを自然なページ順で閲覧。サムネイル、拡大縮小、画面に合わせた表示、左右の読む方向の切り替えに対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CBZ Comic Reader",
+        description:
+          "숫자 순서를 고려한 페이지 정렬, 미리보기, 확대/축소, 화면 맞춤 기능으로 로컬 CBZ 만화를 읽으세요. 좌우 읽기 방향을 선택할 수 있으며 파일은 기기에만 유지됩니다.",
+      },
+      ms: {
+        name: "CBZ Comic Reader",
+        description:
+          "Baca komik CBZ setempat dengan susunan halaman semula jadi, lakaran kecil, zum, kawalan muat dan bacaan kiri ke kanan atau kanan ke kiri. Fail kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CBZ Comic Reader",
+        description:
+          "Lees lokale CBZ-strips met natuurlijke paginavolgorde, miniaturen, zoom, passende weergave en leesrichting van links naar rechts of andersom. Bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CBZ Comic Reader",
+        description:
+          "Les lokale CBZ-tegneserier med naturlig siderekkefølge, miniatyrbilder, zoom, visningstilpasning og lesing fra venstre mot høyre eller omvendt. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "CBZ Comic Reader",
+        description:
+          "Czytaj lokalne komiksy CBZ z naturalną kolejnością stron, miniaturami, powiększaniem, dopasowaniem widoku i kierunkiem od lewej lub prawej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "CBZ Comic Reader",
+        description:
+          "Leia quadrinhos CBZ locais com ordem natural das páginas, miniaturas, zoom, ajustes de exibição e leitura da esquerda para a direita ou inversa. Os arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "CBZ Comic Reader",
+        description:
+          "Читайте локальные комиксы CBZ: естественный порядок страниц, миниатюры, масштаб, вписывание и чтение слева направо или справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CBZ Comic Reader",
+        description:
+          "Läs lokala CBZ-serier med naturlig sidordning, miniatyrer, zoom, storleksanpassning och läsning från vänster till höger eller höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "CBZ Comic Reader",
+        description:
+          "อ่านการ์ตูน CBZ ในอุปกรณ์ พร้อมการเรียงหน้าตามลำดับธรรมชาติ ภาพย่อ การซูม การปรับภาพให้พอดี และการอ่านจากซ้ายไปขวาหรือขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CBZ Comic Reader",
+        description:
+          "Yerel CBZ çizgi romanlarını doğal sayfa sırası, küçük resimler, yakınlaştırma, sığdırma kontrolleri ve soldan sağa veya sağdan sola okuma seçenekleriyle okuyun. Dosyalar cihazınızda kalır.",
+      },
+      vi: {
+        name: "CBZ Comic Reader",
+        description:
+          "Đọc truyện CBZ trên thiết bị với thứ tự trang tự nhiên, ảnh thu nhỏ, thu phóng, điều chỉnh vừa khung và hướng đọc trái sang phải hoặc phải sang trái. Tệp luôn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CBZ Comic Reader",
+        description:
+          "阅读本地 CBZ 漫画，支持页面自然排序、缩略图、缩放、页面适配以及从左到右或从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CBZ Comic Reader",
+        description:
+          "閱讀本機 CBZ 漫畫，支援自然頁面排序、縮圖、縮放、符合頁面與寬度，以及由左至右或由右至左閱讀。檔案會留在您的裝置上。",
+      },
+    },
+  },
+  {
     slug: "certificate-public-key-parser",
     category: "network",
     icon: "lock",
@@ -31685,6 +31808,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "大小寫轉換器",
         description:
           "在不同命名慣例之間轉換文字：camelCase、PascalCase、snake_case、kebab-case 等。",
+      },
+    },
+  },
+  "cbz-reader": {
+    slug: "cbz-reader",
+    category: "image",
+    icon: "image",
+    tags: ["cbz", "comic", "manga", "reader", "zip", "offline"],
+    locales: {
+      ar: {
+        name: "CBZ Comic Reader",
+        description:
+          "اقرأ قصص CBZ المحلية بترتيب طبيعي للصفحات ومصغّرات وأدوات تكبير وملاءمة، مع القراءة من اليسار لليمين أو من اليمين لليسار. تبقى الملفات على جهازك.",
+      },
+      de: {
+        name: "CBZ Comic Reader",
+        description:
+          "Lies lokale CBZ-Comics mit natürlicher Seitenfolge, Vorschauen, Zoom, Größenanpassung und Leserichtung von links oder rechts. Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "CBZ Comic Reader",
+        description:
+          "Read local CBZ comics with natural page ordering, thumbnails, zoom, fit controls, and left-to-right or right-to-left reading. Files stay on your device.",
+      },
+      es: {
+        name: "CBZ Comic Reader",
+        description:
+          "Lee cómics CBZ locales con orden natural de páginas, miniaturas, zoom, ajustes de tamaño y lectura de izquierda a derecha o de derecha a izquierda. Los archivos permanecen en tu dispositivo.",
+      },
+      fr: {
+        name: "CBZ Comic Reader",
+        description:
+          "Lisez vos BD CBZ locales avec un ordre naturel des pages, des miniatures, le zoom, l’ajustement et la lecture dans les deux sens. Les fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "CBZ Comic Reader",
+        description:
+          "קריאת קומיקס מקומי בפורמט CBZ עם סדר עמודים טבעי, תמונות ממוזערות, הגדלה, פקדי התאמה וקריאה משמאל לימין או מימין לשמאל. הקבצים נשארים במכשיר שלך.",
+      },
+      hi: {
+        name: "CBZ Comic Reader",
+        description:
+          "अपने डिवाइस की CBZ कॉमिक पढ़ें: पृष्ठों का स्वाभाविक क्रम, थंबनेल, ज़ूम, फ़िट नियंत्रण और बाएँ से दाएँ या दाएँ से बाएँ पठन। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "CBZ Comic Reader",
+        description:
+          "Baca komik CBZ lokal dengan urutan halaman alami, pratinjau, pembesaran, penyesuaian tampilan, serta arah baca kiri ke kanan atau kanan ke kiri. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "CBZ Comic Reader",
+        description:
+          "Leggi fumetti CBZ locali con ordine naturale delle pagine, miniature, zoom, adattamento e lettura da sinistra a destra o viceversa. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "CBZ Comic Reader",
+        description:
+          "端末内の CBZ コミックを自然なページ順で閲覧。サムネイル、拡大縮小、画面に合わせた表示、左右の読む方向の切り替えに対応。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "CBZ Comic Reader",
+        description:
+          "숫자 순서를 고려한 페이지 정렬, 미리보기, 확대/축소, 화면 맞춤 기능으로 로컬 CBZ 만화를 읽으세요. 좌우 읽기 방향을 선택할 수 있으며 파일은 기기에만 유지됩니다.",
+      },
+      ms: {
+        name: "CBZ Comic Reader",
+        description:
+          "Baca komik CBZ setempat dengan susunan halaman semula jadi, lakaran kecil, zum, kawalan muat dan bacaan kiri ke kanan atau kanan ke kiri. Fail kekal pada peranti anda.",
+      },
+      nl: {
+        name: "CBZ Comic Reader",
+        description:
+          "Lees lokale CBZ-strips met natuurlijke paginavolgorde, miniaturen, zoom, passende weergave en leesrichting van links naar rechts of andersom. Bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "CBZ Comic Reader",
+        description:
+          "Les lokale CBZ-tegneserier med naturlig siderekkefølge, miniatyrbilder, zoom, visningstilpasning og lesing fra venstre mot høyre eller omvendt. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "CBZ Comic Reader",
+        description:
+          "Czytaj lokalne komiksy CBZ z naturalną kolejnością stron, miniaturami, powiększaniem, dopasowaniem widoku i kierunkiem od lewej lub prawej. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "CBZ Comic Reader",
+        description:
+          "Leia quadrinhos CBZ locais com ordem natural das páginas, miniaturas, zoom, ajustes de exibição e leitura da esquerda para a direita ou inversa. Os arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "CBZ Comic Reader",
+        description:
+          "Читайте локальные комиксы CBZ: естественный порядок страниц, миниатюры, масштаб, вписывание и чтение слева направо или справа налево. Файлы остаются на устройстве.",
+      },
+      sv: {
+        name: "CBZ Comic Reader",
+        description:
+          "Läs lokala CBZ-serier med naturlig sidordning, miniatyrer, zoom, storleksanpassning och läsning från vänster till höger eller höger till vänster. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "CBZ Comic Reader",
+        description:
+          "อ่านการ์ตูน CBZ ในอุปกรณ์ พร้อมการเรียงหน้าตามลำดับธรรมชาติ ภาพย่อ การซูม การปรับภาพให้พอดี และการอ่านจากซ้ายไปขวาหรือขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "CBZ Comic Reader",
+        description:
+          "Yerel CBZ çizgi romanlarını doğal sayfa sırası, küçük resimler, yakınlaştırma, sığdırma kontrolleri ve soldan sağa veya sağdan sola okuma seçenekleriyle okuyun. Dosyalar cihazınızda kalır.",
+      },
+      vi: {
+        name: "CBZ Comic Reader",
+        description:
+          "Đọc truyện CBZ trên thiết bị với thứ tự trang tự nhiên, ảnh thu nhỏ, thu phóng, điều chỉnh vừa khung và hướng đọc trái sang phải hoặc phải sang trái. Tệp luôn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "CBZ Comic Reader",
+        description:
+          "阅读本地 CBZ 漫画，支持页面自然排序、缩略图、缩放、页面适配以及从左到右或从右到左阅读。文件仅保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "CBZ Comic Reader",
+        description:
+          "閱讀本機 CBZ 漫畫，支援自然頁面排序、縮圖、縮放、符合頁面與寬度，以及由左至右或由右至左閱讀。檔案會留在您的裝置上。",
       },
     },
   },

@@ -2854,6 +2854,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cbz-reader",
+    language: "ar",
+  },
+  {
+    slug: "cbz-reader",
+    language: "de",
+  },
+  {
+    slug: "cbz-reader",
+    language: "en",
+  },
+  {
+    slug: "cbz-reader",
+    language: "es",
+  },
+  {
+    slug: "cbz-reader",
+    language: "fr",
+  },
+  {
+    slug: "cbz-reader",
+    language: "he",
+  },
+  {
+    slug: "cbz-reader",
+    language: "hi",
+  },
+  {
+    slug: "cbz-reader",
+    language: "id",
+  },
+  {
+    slug: "cbz-reader",
+    language: "it",
+  },
+  {
+    slug: "cbz-reader",
+    language: "ja",
+  },
+  {
+    slug: "cbz-reader",
+    language: "ko",
+  },
+  {
+    slug: "cbz-reader",
+    language: "ms",
+  },
+  {
+    slug: "cbz-reader",
+    language: "nl",
+  },
+  {
+    slug: "cbz-reader",
+    language: "no",
+  },
+  {
+    slug: "cbz-reader",
+    language: "pl",
+  },
+  {
+    slug: "cbz-reader",
+    language: "pt",
+  },
+  {
+    slug: "cbz-reader",
+    language: "ru",
+  },
+  {
+    slug: "cbz-reader",
+    language: "sv",
+  },
+  {
+    slug: "cbz-reader",
+    language: "th",
+  },
+  {
+    slug: "cbz-reader",
+    language: "tr",
+  },
+  {
+    slug: "cbz-reader",
+    language: "vi",
+  },
+  {
+    slug: "cbz-reader",
+    language: "zh-CN",
+  },
+  {
+    slug: "cbz-reader",
+    language: "zh-TW",
+  },
+  {
     slug: "certificate-public-key-parser",
     language: "ar",
   },

@@ -38,6 +38,7 @@
     "@tool/business-days-calculator": "workspace:*",
     "@tool/camera": "workspace:*",
     "@tool/case-converter": "workspace:*",
+    "@tool/cbz-reader": "workspace:*",
     "@tool/certificate-public-key-parser": "workspace:*",
     "@tool/chinese-uppercase-number-converter": "workspace:*",
     "@tool/chmod-calculator": "workspace:*",
