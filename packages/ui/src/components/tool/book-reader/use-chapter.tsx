@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react"
-import { readingDocument } from "./reading-document"
-import type { OpenBook } from "./types"
+import { readingDocument } from "@workspace/ui/lib/reading-document"
+import type { ReadingBook } from "@workspace/ui/lib/book-reader"
 
-export function useChapter(book: OpenBook, index: number) {
+export function useChapter(book: ReadingBook, index: number) {
   const [chapter, setChapter] = useState<{
     index: number
     html?: string
@@ -31,13 +31,13 @@ export function useChapter(book: OpenBook, index: number) {
               error instanceof RangeError ? "resourceLimit" : "chapterError",
           })
       } finally {
-        if (cancelled && loaded) section.unload()
+        if (cancelled && loaded) section.unload?.()
       }
     })
     return () => {
       cancelled = true
       if (loaded) {
-        section.unload()
+        section.unload?.()
         loaded = false
       }
     }

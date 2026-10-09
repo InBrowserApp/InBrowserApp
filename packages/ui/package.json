@@ -10,7 +10,8 @@
     "radix-ui": "catalog:",
     "shadcn": "catalog:",
     "tailwind-merge": "catalog:",
-    "tw-animate-css": "catalog:"
+    "tw-animate-css": "catalog:",
+    "dompurify": "catalog:"
   },
   "peerDependencies": {
     "react": "catalog:",

@@ -120,7 +120,7 @@ export function readingDocument(html: string) {
     ],
     FORBID_ATTR: ["autofocus", "contenteditable", "ping", "srcdoc"],
     ALLOWED_URI_REGEXP:
-      /^(?:(?:https?|mailto|tel|blob):|data:image\/|[^a-z]|[a-z+.-]+(?:[^a-z+.-:]|$))/i,
+      /^(?:(?:https?|mailto|tel|blob|filepos|kindle):|data:image\/|[^a-z]|[a-z+.-]+(?:[^a-z+.-:]|$))/i,
   }) as HTMLElement
   const doc = root.ownerDocument
   const head = root.querySelector("head")!

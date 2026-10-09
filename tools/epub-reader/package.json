@@ -11,7 +11,6 @@
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "@zip.js/zip.js": "catalog:",
-    "dompurify": "catalog:",
     "foliate-js": "catalog:"
   },
   "peerDependencies": {

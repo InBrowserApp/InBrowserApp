@@ -172,3 +172,19 @@ test("sanitizes malformed SVG and MathML mutation payloads without removing ordi
   expect(doc.querySelector("[onerror], [onload], script")).toBeNull()
   expect(doc.querySelector("mi")?.textContent).toBe("x")
 })
+
+test("keeps MOBI and KF8 destinations inert until the reader handles activation", () => {
+  const result = readingDocument(
+    '<a href="filepos:123">MOBI note</a><a href="kindle:pos:fid:0001:off:000000000A">KF8 note</a>'
+  )
+  const doc = new DOMParser().parseFromString(result.html, "text/html")
+  expect(doc.querySelectorAll("a[href]")).toHaveLength(0)
+  expect(
+    Array.from(doc.querySelectorAll("a"), (a) =>
+      a.getAttribute("data-epub-href")
+    )
+  ).toEqual(["filepos:123", "kindle:pos:fid:0001:off:000000000A"])
+  expect(doc.querySelector("meta")?.getAttribute("content")).toContain(
+    "script-src 'none'"
+  )
+})

@@ -122,6 +122,7 @@
     "@tool/md4-hash-text-or-file": "workspace:*",
     "@tool/md5-hash-text-or-file": "workspace:*",
     "@tool/mime-type-lookup": "workspace:*",
+    "@tool/mobi-reader": "workspace:*",
     "@tool/morse-code-converter": "workspace:*",
     "@tool/murmurhash3-x64-128-hash-text-or-file": "workspace:*",
     "@tool/murmurhash3-x86-128-hash-text-or-file": "workspace:*",

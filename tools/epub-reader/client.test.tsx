@@ -111,7 +111,11 @@ test("opens a local book, navigates the reading order, and changes reading setti
   expect(screen.getByRole("navigation", { name: m.contents })).toBeTruthy()
   fireEvent.click(screen.getByRole("button", { name: "Notes" }))
   await screen.findByTitle(m.reader)
-  expect((screen.getByLabelText(m.chapter) as HTMLInputElement).value).toBe("2")
+  await waitFor(() =>
+    expect((screen.getByLabelText(m.chapter) as HTMLInputElement).value).toBe(
+      "2"
+    )
+  )
   expect(document.activeElement).toBe(
     screen.getByRole("button", { name: m.contents })
   )
@@ -265,7 +269,7 @@ test("handles reading-frame links only after a deliberate click", async () => {
   fireEvent.keyDown(doc.querySelector("a")!, { key: "Enter" })
   expect(external).toHaveBeenCalledTimes(2)
   fireEvent.click(doc.querySelectorAll("a")[1]!)
-  expect(screen.getByText(m.blockedLink)).toBeTruthy()
+  expect(await screen.findByText(m.blockedLink)).toBeTruthy()
   fireEvent.click(screen.getByRole("button", { name: m.largerText }))
   expect(Number(doc.documentElement.style.zoom)).toBeCloseTo(20 / 18)
   fireEvent.click(screen.getByRole("button", { name: m.readingWidth }))
