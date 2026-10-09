@@ -7178,6 +7178,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "hwp-viewer",
+    language: "ar",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "de",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "en",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "es",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "fr",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "he",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "hi",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "id",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "it",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "ja",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "ko",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "ms",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "nl",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "no",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "pl",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "pt",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "ru",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "sv",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "th",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "tr",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "vi",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "hwp-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "iban-validator",
     language: "ar",
   },
