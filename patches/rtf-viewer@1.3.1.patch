@@ -1,0 +1,98 @@
+--- a/dist/shared-6NCHZLKA.js
++++ b/dist/shared-6NCHZLKA.js
+@@ -403,8 +403,8 @@
+   if (!values.every(Number.isFinite) || p.width <= 0 || p.height <= 0 || p.width > 14400 || p.height > 14400 || values.slice(2).some((v) => v < 0) || p.width <= p.marginLeft + p.marginRight || p.height <= p.marginTop + p.marginBottom) {
+     throw new RangeError("Invalid RTF paper size or margins.");
+   }
+-  const maxPages = options.maxPages ?? 2e3;
+-  if (!Number.isInteger(maxPages) || maxPages < 1 || maxPages > 2e3)
++  const maxPages = options.maxPages ?? Infinity;
++  if (maxPages !== Infinity && (!Number.isSafeInteger(maxPages) || maxPages < 1))
+     throw new RangeError("Invalid page limit.");
+   const pages = [];
+   const diagnostics = [];
+@@ -721,23 +721,21 @@
+ }
+ 
+ // packages/rtf-viewer/src/parser-client.ts
+-var MAX_BYTES = 16 * 1024 * 1024;
+ async function parseInput(input, options) {
+   checkAbort(options.signal);
+   if (!(input instanceof Blob) && !(input instanceof ArrayBuffer) && !(input instanceof Uint8Array))
+     throw new TypeError("Expected a Blob, ArrayBuffer or Uint8Array.");
+-  const size = input instanceof Blob ? input.size : input.byteLength;
+-  if (!Number.isFinite(size) || size > MAX_BYTES) throw new RangeError("RTF input exceeds 16 MiB.");
+   let bytes;
+   if (input instanceof Blob) bytes = await abortable(input.arrayBuffer(), options.signal);
+   else if (input instanceof ArrayBuffer) bytes = input.slice(0);
+   else if (input instanceof Uint8Array) bytes = new Uint8Array(input).buffer;
+   else throw new TypeError("Expected a Blob, ArrayBuffer or Uint8Array.");
+   checkAbort(options.signal);
+-  const timeout = options.parseTimeoutMs ?? 3e4;
+-  if (!Number.isFinite(timeout) || timeout < 1 || timeout > 12e4)
++  const timeout = options.parseTimeoutMs ?? 0;
++  if (!Number.isFinite(timeout) || timeout < 0 || timeout > 2147483647)
+     throw new RangeError("Invalid parser timeout.");
+-  const wasmUrl = options.wasmUrl ? new URL(String(options.wasmUrl), globalThis.location.href).href : new URL("./rtf_parser_bg.wasm", import.meta.url).href;
++  if (!options.wasmUrl) throw new TypeError("An explicit WASM URL is required.");
++  const wasmUrl = new URL(String(options.wasmUrl), globalThis.location.href).href;
+   const worker = options.workerUrl ? new Worker(options.workerUrl, { type: "module" }) : new Worker(new URL("./parser.worker.js", import.meta.url), { type: "module" });
+   return new Promise((resolve, reject) => {
+     let settled = false;
+@@ -751,10 +749,10 @@
+       else resolve(model);
+     };
+     const abort = () => finish(abortError());
+-    const timer = setTimeout(
++    const timer = timeout ? setTimeout(
+       () => finish(new Error("RTF parsing exceeded its time limit.")),
+       timeout
+-    );
++    ) : undefined;
+     worker.onmessage = ({ data }) => {
+       try {
+         if (!data || typeof data !== "object" || typeof data.ok !== "boolean")
+@@ -1179,7 +1177,9 @@
+         const { width: width2, height: height2, data } = resource.raster;
+         if (!Number.isInteger(width2) || !Number.isInteger(height2) || width2 <= 0 || height2 <= 0 || width2 > 32767 || height2 > 32767 || data.length !== width2 * height2 * 4 || width2 * height2 + pixels > 32e6) {
+           throw new RangeError(
+-            `Image ${resource.id} has an invalid embedded bitmap or exceeds the decoded image budget.`
++            !Number.isInteger(width2) || !Number.isInteger(height2) || width2 <= 0 || height2 <= 0 || data.length !== width2 * height2 * 4
++              ? `Image ${resource.id} has an invalid embedded bitmap.`
++              : `Image ${resource.id} exceeds the decoded image budget.`
+           );
+         }
+         pixels += width2 * height2;
+@@ -1216,7 +1216,9 @@
+       const dims = sniffRasterDimensions2(bytes);
+       if (!dims || dims.width <= 0 || dims.height <= 0 || dims.width > 32767 || dims.height > 32767 || dims.width * dims.height + pixels > 32e6) {
+         throw new RangeError(
+-          `Image ${resource.id} is invalid or exceeds the decoded image budget.`
++          !dims || dims.width <= 0 || dims.height <= 0
++            ? `Image ${resource.id} has invalid picture data.`
++            : `Image ${resource.id} exceeds the decoded image budget.`
+         );
+       }
+       const signatureMatches = resource.format === "png" ? bytes[0] === 137 && bytes[1] === 80 : bytes[0] === 255 && bytes[1] === 216;
+--- a/dist/types.d.ts
++++ b/dist/types.d.ts
+@@ -16,7 +16,7 @@
+     /** Optional deployment overrides. Defaults are assets adjacent to this module. */
+     workerUrl?: string | URL;
+     wasmUrl?: string | URL;
+-    /** Default 30 seconds; must be between 1 and 120000 ms. */
++    /** Disabled by default. Zero disables; a positive finite timer value opts in. */
+     parseTimeoutMs?: number;
+ }
+ export interface RenderOptions {
+--- a/dist/rtf_parser.js
++++ b/dist/rtf_parser.js
+@@ -171,7 +171,7 @@
+     }
+ 
+     if (module_or_path === undefined) {
+-        module_or_path = new URL('rtf_parser_bg.wasm', import.meta.url);
++        throw new TypeError('An explicit WASM module or URL is required.');
+     }
+     const imports = __wbg_get_imports();
+ 
