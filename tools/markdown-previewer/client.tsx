@@ -19,7 +19,6 @@ import {
   createExportHtmlDocument,
   slugifyHeading,
 } from "./core/markdown-preview"
-import { exportBody } from "./prepare-preview"
 import { useDocument } from "./use-document"
 import { usePreview } from "./use-preview"
 import { usePreferences } from "./use-preferences"
@@ -72,7 +71,7 @@ export default function MarkdownPreviewerClient({
       preview
         ? createExportHtmlDocument({
             title: preview.documentTitle,
-            html: exportBody(preview.html),
+            html: preview.exportHtml,
             theme,
             language,
             direction,

@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { describe, expect, test } from "vitest"
-import { preparePreview, exportBody } from "./prepare-preview"
+import { preparePreview } from "./prepare-preview"
 import {
   buildMarkdownPreview,
   createExportHtmlDocument,
@@ -50,8 +50,8 @@ console.log('<script>')
     expect(result.localImages).toBe(false)
     expect(result.remoteImages).toBe(false)
     expect(result.html).not.toContain("href=")
-    expect(exportBody(result.html)).toContain('href="#markdown-bookmark"')
-    expect(exportBody(result.html)).toContain(
+    expect(result.exportHtml).toContain('href="#markdown-bookmark"')
+    expect(result.exportHtml).toContain(
       'rel="noopener noreferrer" target="_blank"'
     )
   })
@@ -101,7 +101,7 @@ console.log('<script>')
       expect(holder.content.getElementById(id)).toBeTruthy()
     }
     expect(links[2]!.getAttribute("data-markdown-link")).toBe("#markdown-%25zz")
-    expect(exportBody(result.html)).toContain('href="#markdown-note%2520one"')
+    expect(result.exportHtml).toContain('href="#markdown-note%2520one"')
   })
 
   test("exports a safe standalone document with the CSP before styles and valid link targets", () => {
@@ -110,7 +110,7 @@ console.log('<script>')
     )
     const html = createExportHtmlDocument({
       title: "<x>",
-      html: exportBody(prepared.html),
+      html: prepared.exportHtml,
       theme: "clean",
       language: 'en" onload="bad',
       direction: "ltr",
@@ -125,30 +125,33 @@ console.log('<script>')
     expect(html).toContain("&quot; onload=&quot;bad")
   })
 
-  test("revalidates managed link protocols at the export boundary", () => {
-    const html =
-      exportBody(`<a data-markdown-link="javascript:alert(1)">Script</a>
-      <a href="javascript:old()" data-markdown-link="&#x6a;ava&#10;script:alert(1)">Encoded</a>
-      <a data-markdown-link="data:text/html,bad">Data</a>
-      <a data-markdown-link="//example.com">Relative</a>
-      <a data-markdown-link=" HtTpS://example.com/Case?q=&lt;tag&gt;&amp;v=%2520 ">Web</a>
-      <a data-markdown-link="mailto:reader@example.com">Mail</a>
-      <a data-markdown-link="#markdown-target">Section</a>`)
+  test("exports sanitized links directly without activating forged preview metadata", () => {
+    const result = preparePreview(`<a href="javascript:alert(1)">Script</a>
+      <a href="&#x6a;ava&#10;script:alert(1)">Encoded</a>
+      <a href="data:text/html,bad">Data</a>
+      <a href="//example.com">Relative</a>
+      <a data-markdown-link="https://forged.test">Forged</a>
+      <a href=" HtTpS://example.com/Case?q=&lt;tag&gt;&amp;v=%2520 ">Web</a>
+      <a href="mailto:reader@example.com">Mail</a>
+      <a href="#target">Section</a>`)
+    const html = result.exportHtml
     const template = document.createElement("template")
     template.innerHTML = html
     const links = Array.from(template.content.querySelectorAll("a"))
-    expect(links.slice(0, 4).map((link) => link.getAttribute("href"))).toEqual([
+    expect(links.slice(0, 5).map((link) => link.getAttribute("href"))).toEqual([
+      null,
       null,
       null,
       null,
       null,
     ])
-    expect(links.slice(4).map((link) => link.getAttribute("href"))).toEqual([
-      "https://example.com/Case?q=<tag>&v=%2520",
+    expect(links.slice(5).map((link) => link.getAttribute("href"))).toEqual([
+      "HtTpS://example.com/Case?q=<tag>&v=%2520",
       "mailto:reader@example.com",
       "#markdown-target",
     ])
     expect(html).not.toContain("data-markdown-link")
+    expect(result.html).not.toContain("href=")
     expect(template.content.querySelector("tag")).toBeNull()
   })
 })

@@ -33,9 +33,9 @@ export function preparePreview(html: string) {
     }
     node.removeAttribute("href")
     if (href && /^(?:#|https?:\/\/|mailto:)/i.test(href)) {
-      node.setAttribute("data-markdown-link", href)
-      node.setAttribute("role", "link")
-      node.setAttribute("tabindex", "0")
+      node.setAttribute("href", href)
+      node.setAttribute("rel", "noopener noreferrer")
+      if (!href.startsWith("#")) node.setAttribute("target", "_blank")
     }
     if (!node.id && node.getAttribute("name"))
       node.id = node.getAttribute("name")!
@@ -120,32 +120,16 @@ export function preparePreview(html: string) {
     element.replaceWith(wrapper)
     wrapper.append(element)
   }
-  return { html: body.innerHTML, localImages, remoteImages }
-}
-
-export function exportBody(html: string) {
-  const template = document.createElement("template")
-  template.innerHTML = html
-  for (const link of template.content.querySelectorAll(
-    "[data-markdown-link]"
-  )) {
-    const href = link
-      .getAttribute("data-markdown-link")!
-      .trim()
-      .replace(/^(?:https?|mailto):/i, (scheme) => scheme.toLowerCase())
-    link.removeAttribute("data-markdown-link")
+  // Keep export links directly from sanitization, then make preview links inert.
+  // Never turn DOM metadata back into an active URL during export.
+  const exportHtml = body.innerHTML
+  for (const link of body.querySelectorAll("a[href]")) {
+    link.setAttribute("data-markdown-link", link.getAttribute("href")!)
     link.removeAttribute("href")
-    // Revalidate when turning inert preview metadata into an active link.
-    if (
-      !href.startsWith("#") &&
-      !href.startsWith("https://") &&
-      !href.startsWith("http://") &&
-      !href.startsWith("mailto:")
-    )
-      continue
-    link.setAttribute("href", href)
-    link.setAttribute("rel", "noopener noreferrer")
-    if (!href.startsWith("#")) link.setAttribute("target", "_blank")
+    link.removeAttribute("rel")
+    link.removeAttribute("target")
+    link.setAttribute("role", "link")
+    link.setAttribute("tabindex", "0")
   }
-  return template.innerHTML
+  return { html: body.innerHTML, exportHtml, localImages, remoteImages }
 }
