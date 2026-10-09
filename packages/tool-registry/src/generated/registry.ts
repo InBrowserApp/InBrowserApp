@@ -26426,122 +26426,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     slug: "xlsx-viewer",
     category: "document",
     icon: "file-text",
-    tags: ["xlsx", "excel", "viewer", "reader", "document", "offline"],
+    tags: [
+      "xlsx",
+      "excel",
+      "csv",
+      "tsv",
+      "xls",
+      "xlsb",
+      "ods",
+      "numbers",
+      "wps",
+      "spreadsheet",
+      "table",
+      "viewer",
+      "reader",
+      "document",
+      "offline",
+    ],
     locales: {
       ar: {
-        name: "عارض XLSX",
+        name: "عارض جداول البيانات",
         description:
-          "تصفح أوراق عمل Excel بصيغة XLSX محليًا مع التبديل بين الأوراق والتمرير وفحص الخلايا. دون رفع الملفات.",
+          "اقرأ جداول بيانات Excel وCSV وODS وNumbers وWPS والصيغ القديمة محليًا. بدّل بين أوراق العمل، وتصفح الخلايا، وافحص القيم المحفوظة. دون رفع الملفات.",
       },
       de: {
-        name: "XLSX Viewer",
+        name: "Spreadsheet Viewer",
         description:
-          "Durchsuchen Sie Excel-XLSX-Arbeitsblätter lokal mit Blattwechsel, Scrollen und Anzeige von Zellinhalten. Ohne Uploads.",
+          "Lesen Sie Excel-, CSV-, ODS-, Numbers-, WPS- und ältere Tabellen lokal. Wechseln Sie Arbeitsblätter, durchsuchen Sie Zellen und prüfen Sie gespeicherte Werte. Ohne Uploads.",
       },
       en: {
-        name: "XLSX Viewer",
+        name: "Spreadsheet Viewer",
         description:
-          "Browse Excel XLSX worksheets locally with sheet switching, scrolling, and cell inspection. No uploads.",
+          "Read Excel, CSV, ODS, Numbers, WPS, and legacy spreadsheets locally. Switch worksheets, browse cells, and inspect saved values. No uploads.",
       },
       es: {
-        name: "Visor de XLSX",
+        name: "Visor de hojas de cálculo",
         description:
-          "Explora hojas de cálculo Excel XLSX localmente: cambia de hoja, desplázate y consulta las celdas. Sin subir archivos.",
+          "Lee hojas de cálculo de Excel, CSV, ODS, Numbers, WPS y formatos antiguos localmente. Cambia de hoja, explora celdas y consulta valores guardados. Sin subir archivos.",
       },
       fr: {
-        name: "Lecteur XLSX",
+        name: "Lecteur de feuilles de calcul",
         description:
-          "Consultez vos classeurs Excel XLSX en local : changez de feuille, faites défiler les cellules et examinez leur contenu. Aucun envoi à un serveur.",
+          "Consultez les feuilles de calcul Excel, CSV, ODS, Numbers, WPS et les anciens formats en local. Changez de feuille, parcourez les cellules et examinez les valeurs enregistrées. Aucun envoi à un serveur.",
       },
       he: {
-        name: "מציג XLSX",
+        name: "מציג גיליונות אלקטרוניים",
         description:
-          "עיון בגיליונות Excel XLSX מקומיים עם מעבר בין גיליונות, גלילה ובדיקת תוכן תאים. ללא העלאת קבצים.",
+          "קריאה מקומית של גיליונות Excel, CSV, ODS, Numbers, WPS ופורמטים ישנים. מעבר בין גיליונות עבודה, עיון בתאים ובדיקת ערכים שמורים. ללא העלאת קבצים.",
       },
       hi: {
-        name: "XLSX व्यूअर",
+        name: "स्प्रेडशीट व्यूअर",
         description:
-          "वर्कशीट बदलने, स्क्रॉल करने और सेल की सामग्री देखने की सुविधा के साथ Excel XLSX वर्कशीट स्थानीय रूप से देखें। कोई अपलोड नहीं।",
+          "Excel, CSV, ODS, Numbers, WPS और पुराने फ़ॉर्मैट की स्प्रेडशीट स्थानीय रूप से पढ़ें। वर्कशीट बदलें, सेल देखें और सहेजे गए मान जाँचें। कोई अपलोड नहीं।",
       },
       id: {
-        name: "Penampil XLSX",
+        name: "Penampil Lembar Bentang",
         description:
-          "Jelajahi lembar kerja Excel XLSX secara lokal dengan beralih lembar, menggulir, dan memeriksa sel. Tanpa unggahan.",
+          "Baca lembar bentang Excel, CSV, ODS, Numbers, WPS, dan format lama secara lokal. Beralih lembar kerja, jelajahi sel, dan periksa nilai tersimpan. Tanpa unggahan.",
       },
       it: {
-        name: "Visualizzatore XLSX",
+        name: "Visualizzatore di fogli di calcolo",
         description:
-          "Esplora i fogli di lavoro Excel XLSX in locale: passa da un foglio all’altro, scorri le celle e consultane il contenuto. Nessun caricamento su server.",
+          "Leggi in locale fogli di calcolo Excel, CSV, ODS, Numbers, WPS e formati meno recenti. Passa da un foglio di lavoro all’altro, esplora le celle e consulta i valori salvati. Nessun caricamento su server.",
       },
       ja: {
-        name: "XLSXビューアー",
+        name: "スプレッドシートビューアー",
         description:
-          "シートの切り替え、スクロール、セル内容の確認でExcelのXLSXワークシートをローカルで閲覧できます。アップロードは不要です。",
+          "Excel、CSV、ODS、Numbers、WPS、旧形式のスプレッドシートをローカルで閲覧できます。ワークシートを切り替え、セルを閲覧し、保存された値を確認できます。アップロードは不要です。",
       },
       ko: {
-        name: "XLSX 뷰어",
+        name: "스프레드시트 뷰어",
         description:
-          "시트 전환, 스크롤, 셀 내용 확인 기능으로 Excel XLSX 워크시트를 기기에서 살펴보세요. 파일을 업로드하지 않습니다.",
+          "Excel, CSV, ODS, Numbers, WPS 및 이전 형식의 스프레드시트를 기기에서 읽으세요. 워크시트를 전환하고, 셀을 살펴보고, 저장된 값을 확인할 수 있습니다. 파일을 업로드하지 않습니다.",
       },
       ms: {
-        name: "Pemapar XLSX",
+        name: "Pemapar Hamparan",
         description:
-          "Semak lembaran kerja Excel XLSX secara setempat dengan beralih antara lembaran, menatal dan memeriksa sel. Tiada muat naik.",
+          "Baca hamparan Excel, CSV, ODS, Numbers, WPS dan format lama secara setempat. Beralih antara lembaran kerja, semak sel dan periksa nilai yang disimpan. Tiada muat naik.",
       },
       nl: {
-        name: "XLSX-viewer",
+        name: "Spreadsheet-viewer",
         description:
-          "Bekijk Excel XLSX-werkbladen lokaal, wissel tussen werkbladen, scrol door cellen en bekijk celinhoud. Geen uploads.",
+          "Lees Excel-, CSV-, ODS-, Numbers-, WPS- en oudere spreadsheets lokaal. Wissel tussen werkbladen, blader door cellen en bekijk opgeslagen waarden. Geen uploads.",
       },
       no: {
-        name: "XLSX-viser",
+        name: "Regnearkviser",
         description:
-          "Bla gjennom Excel XLSX-regneark lokalt, bytt mellom ark, rull og se innholdet i cellene. Ingen opplasting.",
+          "Les Excel, CSV, ODS, Numbers, WPS og eldre regneark lokalt. Bytt mellom ark, bla gjennom celler og se lagrede verdier. Ingen opplasting.",
       },
       pl: {
-        name: "Przeglądarka XLSX",
+        name: "Przeglądarka arkuszy kalkulacyjnych",
         description:
-          "Przeglądaj arkusze Excel XLSX lokalnie: przełączaj arkusze, przewijaj je i sprawdzaj zawartość komórek. Bez przesyłania plików na serwer.",
+          "Czytaj lokalnie arkusze Excel, CSV, ODS, Numbers, WPS i starsze formaty. Przełączaj arkusze, przeglądaj komórki i sprawdzaj zapisane wartości. Bez przesyłania plików na serwer.",
       },
       pt: {
-        name: "Visualizador de XLSX",
+        name: "Visualizador de planilhas",
         description:
-          "Explore planilhas XLSX do Excel localmente, alternando entre planilhas, rolando e inspecionando células. Sem enviar arquivos.",
+          "Leia planilhas do Excel, CSV, ODS, Numbers, WPS e formatos antigos localmente. Alterne entre planilhas, explore células e inspecione valores salvos. Sem enviar arquivos.",
       },
       ru: {
-        name: "Просмотр XLSX",
+        name: "Просмотр таблиц",
         description:
-          "Просматривайте книги Excel XLSX локально: переключайте листы, прокручивайте таблицы и изучайте содержимое ячеек. Без загрузки на сервер.",
+          "Читайте таблицы Excel, CSV, ODS, Numbers, WPS и устаревших форматов локально. Переключайте листы, просматривайте ячейки и изучайте сохранённые значения. Без загрузки на сервер.",
       },
       sv: {
-        name: "XLSX-visare",
+        name: "Kalkylbladsvisare",
         description:
-          "Bläddra i Excel-kalkylblad i XLSX-format lokalt genom att växla blad, rulla och granska cellinnehåll. Ingen uppladdning.",
+          "Läs Excel, CSV, ODS, Numbers, WPS och äldre kalkylblad lokalt. Växla mellan kalkylblad, bläddra bland celler och granska sparade värden. Ingen uppladdning.",
       },
       th: {
-        name: "โปรแกรมดู XLSX",
+        name: "โปรแกรมดูสเปรดชีต",
         description:
-          "เรียกดูเวิร์กชีต Excel XLSX ในเครื่อง พร้อมการสลับชีต เลื่อนดู และตรวจดูเซลล์ โดยไม่ต้องอัปโหลด",
+          "อ่านสเปรดชีต Excel, CSV, ODS, Numbers, WPS และรูปแบบรุ่นเก่าในเครื่อง สลับเวิร์กชีต เรียกดูเซลล์ และตรวจดูค่าที่บันทึกไว้ โดยไม่ต้องอัปโหลด",
       },
       tr: {
-        name: "XLSX Görüntüleyici",
+        name: "Elektronik Tablo Görüntüleyici",
         description:
-          "Excel XLSX çalışma sayfalarını sayfa değiştirme, kaydırma ve hücre inceleme özellikleriyle yerel olarak görüntüleyin. Dosyalar yüklenmez.",
+          "Excel, CSV, ODS, Numbers, WPS ve eski elektronik tablo dosyalarını yerel olarak okuyun. Çalışma sayfaları arasında geçiş yapın, hücrelere göz atın ve kayıtlı değerleri inceleyin. Dosyalar yüklenmez.",
       },
       vi: {
-        name: "Trình xem XLSX",
+        name: "Trình xem bảng tính",
         description:
-          "Duyệt trang tính Excel XLSX ngay trên thiết bị với tính năng chuyển trang tính, cuộn và xem nội dung ô. Không tải lên.",
+          "Đọc Excel, CSV, ODS, Numbers, WPS và bảng tính đời cũ ngay trên thiết bị. Chuyển trang tính, duyệt các ô và xem giá trị đã lưu. Không tải lên.",
       },
       "zh-CN": {
-        name: "XLSX 阅读器",
+        name: "电子表格阅读器",
         description:
-          "在本地浏览 Excel XLSX 工作表，支持切换工作表、滚动浏览和查看单元格内容，无需上传。",
+          "在本地阅读 Excel、CSV、ODS、Numbers、WPS 及旧版电子表格。支持切换工作表、浏览单元格和查看已保存的值，无需上传。",
       },
       "zh-TW": {
-        name: "XLSX 檢視器",
+        name: "試算表檢視器",
         description:
-          "在本機瀏覽 Excel XLSX 工作表，支援切換工作表、捲動與檢視儲存格。無須上傳。",
+          "在本機閱讀 Excel、CSV、ODS、Numbers、WPS 與舊版試算表。切換工作表、瀏覽儲存格，並檢視已儲存的值。無須上傳。",
       },
     },
   },
@@ -53873,122 +53889,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
     slug: "xlsx-viewer",
     category: "document",
     icon: "file-text",
-    tags: ["xlsx", "excel", "viewer", "reader", "document", "offline"],
+    tags: [
+      "xlsx",
+      "excel",
+      "csv",
+      "tsv",
+      "xls",
+      "xlsb",
+      "ods",
+      "numbers",
+      "wps",
+      "spreadsheet",
+      "table",
+      "viewer",
+      "reader",
+      "document",
+      "offline",
+    ],
     locales: {
       ar: {
-        name: "عارض XLSX",
+        name: "عارض جداول البيانات",
         description:
-          "تصفح أوراق عمل Excel بصيغة XLSX محليًا مع التبديل بين الأوراق والتمرير وفحص الخلايا. دون رفع الملفات.",
+          "اقرأ جداول بيانات Excel وCSV وODS وNumbers وWPS والصيغ القديمة محليًا. بدّل بين أوراق العمل، وتصفح الخلايا، وافحص القيم المحفوظة. دون رفع الملفات.",
       },
       de: {
-        name: "XLSX Viewer",
+        name: "Spreadsheet Viewer",
         description:
-          "Durchsuchen Sie Excel-XLSX-Arbeitsblätter lokal mit Blattwechsel, Scrollen und Anzeige von Zellinhalten. Ohne Uploads.",
+          "Lesen Sie Excel-, CSV-, ODS-, Numbers-, WPS- und ältere Tabellen lokal. Wechseln Sie Arbeitsblätter, durchsuchen Sie Zellen und prüfen Sie gespeicherte Werte. Ohne Uploads.",
       },
       en: {
-        name: "XLSX Viewer",
+        name: "Spreadsheet Viewer",
         description:
-          "Browse Excel XLSX worksheets locally with sheet switching, scrolling, and cell inspection. No uploads.",
+          "Read Excel, CSV, ODS, Numbers, WPS, and legacy spreadsheets locally. Switch worksheets, browse cells, and inspect saved values. No uploads.",
       },
       es: {
-        name: "Visor de XLSX",
+        name: "Visor de hojas de cálculo",
         description:
-          "Explora hojas de cálculo Excel XLSX localmente: cambia de hoja, desplázate y consulta las celdas. Sin subir archivos.",
+          "Lee hojas de cálculo de Excel, CSV, ODS, Numbers, WPS y formatos antiguos localmente. Cambia de hoja, explora celdas y consulta valores guardados. Sin subir archivos.",
       },
       fr: {
-        name: "Lecteur XLSX",
+        name: "Lecteur de feuilles de calcul",
         description:
-          "Consultez vos classeurs Excel XLSX en local : changez de feuille, faites défiler les cellules et examinez leur contenu. Aucun envoi à un serveur.",
+          "Consultez les feuilles de calcul Excel, CSV, ODS, Numbers, WPS et les anciens formats en local. Changez de feuille, parcourez les cellules et examinez les valeurs enregistrées. Aucun envoi à un serveur.",
       },
       he: {
-        name: "מציג XLSX",
+        name: "מציג גיליונות אלקטרוניים",
         description:
-          "עיון בגיליונות Excel XLSX מקומיים עם מעבר בין גיליונות, גלילה ובדיקת תוכן תאים. ללא העלאת קבצים.",
+          "קריאה מקומית של גיליונות Excel, CSV, ODS, Numbers, WPS ופורמטים ישנים. מעבר בין גיליונות עבודה, עיון בתאים ובדיקת ערכים שמורים. ללא העלאת קבצים.",
       },
       hi: {
-        name: "XLSX व्यूअर",
+        name: "स्प्रेडशीट व्यूअर",
         description:
-          "वर्कशीट बदलने, स्क्रॉल करने और सेल की सामग्री देखने की सुविधा के साथ Excel XLSX वर्कशीट स्थानीय रूप से देखें। कोई अपलोड नहीं।",
+          "Excel, CSV, ODS, Numbers, WPS और पुराने फ़ॉर्मैट की स्प्रेडशीट स्थानीय रूप से पढ़ें। वर्कशीट बदलें, सेल देखें और सहेजे गए मान जाँचें। कोई अपलोड नहीं।",
       },
       id: {
-        name: "Penampil XLSX",
+        name: "Penampil Lembar Bentang",
         description:
-          "Jelajahi lembar kerja Excel XLSX secara lokal dengan beralih lembar, menggulir, dan memeriksa sel. Tanpa unggahan.",
+          "Baca lembar bentang Excel, CSV, ODS, Numbers, WPS, dan format lama secara lokal. Beralih lembar kerja, jelajahi sel, dan periksa nilai tersimpan. Tanpa unggahan.",
       },
       it: {
-        name: "Visualizzatore XLSX",
+        name: "Visualizzatore di fogli di calcolo",
         description:
-          "Esplora i fogli di lavoro Excel XLSX in locale: passa da un foglio all’altro, scorri le celle e consultane il contenuto. Nessun caricamento su server.",
+          "Leggi in locale fogli di calcolo Excel, CSV, ODS, Numbers, WPS e formati meno recenti. Passa da un foglio di lavoro all’altro, esplora le celle e consulta i valori salvati. Nessun caricamento su server.",
       },
       ja: {
-        name: "XLSXビューアー",
+        name: "スプレッドシートビューアー",
         description:
-          "シートの切り替え、スクロール、セル内容の確認でExcelのXLSXワークシートをローカルで閲覧できます。アップロードは不要です。",
+          "Excel、CSV、ODS、Numbers、WPS、旧形式のスプレッドシートをローカルで閲覧できます。ワークシートを切り替え、セルを閲覧し、保存された値を確認できます。アップロードは不要です。",
       },
       ko: {
-        name: "XLSX 뷰어",
+        name: "스프레드시트 뷰어",
         description:
-          "시트 전환, 스크롤, 셀 내용 확인 기능으로 Excel XLSX 워크시트를 기기에서 살펴보세요. 파일을 업로드하지 않습니다.",
+          "Excel, CSV, ODS, Numbers, WPS 및 이전 형식의 스프레드시트를 기기에서 읽으세요. 워크시트를 전환하고, 셀을 살펴보고, 저장된 값을 확인할 수 있습니다. 파일을 업로드하지 않습니다.",
       },
       ms: {
-        name: "Pemapar XLSX",
+        name: "Pemapar Hamparan",
         description:
-          "Semak lembaran kerja Excel XLSX secara setempat dengan beralih antara lembaran, menatal dan memeriksa sel. Tiada muat naik.",
+          "Baca hamparan Excel, CSV, ODS, Numbers, WPS dan format lama secara setempat. Beralih antara lembaran kerja, semak sel dan periksa nilai yang disimpan. Tiada muat naik.",
       },
       nl: {
-        name: "XLSX-viewer",
+        name: "Spreadsheet-viewer",
         description:
-          "Bekijk Excel XLSX-werkbladen lokaal, wissel tussen werkbladen, scrol door cellen en bekijk celinhoud. Geen uploads.",
+          "Lees Excel-, CSV-, ODS-, Numbers-, WPS- en oudere spreadsheets lokaal. Wissel tussen werkbladen, blader door cellen en bekijk opgeslagen waarden. Geen uploads.",
       },
       no: {
-        name: "XLSX-viser",
+        name: "Regnearkviser",
         description:
-          "Bla gjennom Excel XLSX-regneark lokalt, bytt mellom ark, rull og se innholdet i cellene. Ingen opplasting.",
+          "Les Excel, CSV, ODS, Numbers, WPS og eldre regneark lokalt. Bytt mellom ark, bla gjennom celler og se lagrede verdier. Ingen opplasting.",
       },
       pl: {
-        name: "Przeglądarka XLSX",
+        name: "Przeglądarka arkuszy kalkulacyjnych",
         description:
-          "Przeglądaj arkusze Excel XLSX lokalnie: przełączaj arkusze, przewijaj je i sprawdzaj zawartość komórek. Bez przesyłania plików na serwer.",
+          "Czytaj lokalnie arkusze Excel, CSV, ODS, Numbers, WPS i starsze formaty. Przełączaj arkusze, przeglądaj komórki i sprawdzaj zapisane wartości. Bez przesyłania plików na serwer.",
       },
       pt: {
-        name: "Visualizador de XLSX",
+        name: "Visualizador de planilhas",
         description:
-          "Explore planilhas XLSX do Excel localmente, alternando entre planilhas, rolando e inspecionando células. Sem enviar arquivos.",
+          "Leia planilhas do Excel, CSV, ODS, Numbers, WPS e formatos antigos localmente. Alterne entre planilhas, explore células e inspecione valores salvos. Sem enviar arquivos.",
       },
       ru: {
-        name: "Просмотр XLSX",
+        name: "Просмотр таблиц",
         description:
-          "Просматривайте книги Excel XLSX локально: переключайте листы, прокручивайте таблицы и изучайте содержимое ячеек. Без загрузки на сервер.",
+          "Читайте таблицы Excel, CSV, ODS, Numbers, WPS и устаревших форматов локально. Переключайте листы, просматривайте ячейки и изучайте сохранённые значения. Без загрузки на сервер.",
       },
       sv: {
-        name: "XLSX-visare",
+        name: "Kalkylbladsvisare",
         description:
-          "Bläddra i Excel-kalkylblad i XLSX-format lokalt genom att växla blad, rulla och granska cellinnehåll. Ingen uppladdning.",
+          "Läs Excel, CSV, ODS, Numbers, WPS och äldre kalkylblad lokalt. Växla mellan kalkylblad, bläddra bland celler och granska sparade värden. Ingen uppladdning.",
       },
       th: {
-        name: "โปรแกรมดู XLSX",
+        name: "โปรแกรมดูสเปรดชีต",
         description:
-          "เรียกดูเวิร์กชีต Excel XLSX ในเครื่อง พร้อมการสลับชีต เลื่อนดู และตรวจดูเซลล์ โดยไม่ต้องอัปโหลด",
+          "อ่านสเปรดชีต Excel, CSV, ODS, Numbers, WPS และรูปแบบรุ่นเก่าในเครื่อง สลับเวิร์กชีต เรียกดูเซลล์ และตรวจดูค่าที่บันทึกไว้ โดยไม่ต้องอัปโหลด",
       },
       tr: {
-        name: "XLSX Görüntüleyici",
+        name: "Elektronik Tablo Görüntüleyici",
         description:
-          "Excel XLSX çalışma sayfalarını sayfa değiştirme, kaydırma ve hücre inceleme özellikleriyle yerel olarak görüntüleyin. Dosyalar yüklenmez.",
+          "Excel, CSV, ODS, Numbers, WPS ve eski elektronik tablo dosyalarını yerel olarak okuyun. Çalışma sayfaları arasında geçiş yapın, hücrelere göz atın ve kayıtlı değerleri inceleyin. Dosyalar yüklenmez.",
       },
       vi: {
-        name: "Trình xem XLSX",
+        name: "Trình xem bảng tính",
         description:
-          "Duyệt trang tính Excel XLSX ngay trên thiết bị với tính năng chuyển trang tính, cuộn và xem nội dung ô. Không tải lên.",
+          "Đọc Excel, CSV, ODS, Numbers, WPS và bảng tính đời cũ ngay trên thiết bị. Chuyển trang tính, duyệt các ô và xem giá trị đã lưu. Không tải lên.",
       },
       "zh-CN": {
-        name: "XLSX 阅读器",
+        name: "电子表格阅读器",
         description:
-          "在本地浏览 Excel XLSX 工作表，支持切换工作表、滚动浏览和查看单元格内容，无需上传。",
+          "在本地阅读 Excel、CSV、ODS、Numbers、WPS 及旧版电子表格。支持切换工作表、浏览单元格和查看已保存的值，无需上传。",
       },
       "zh-TW": {
-        name: "XLSX 檢視器",
+        name: "試算表檢視器",
         description:
-          "在本機瀏覽 Excel XLSX 工作表，支援切換工作表、捲動與檢視儲存格。無須上傳。",
+          "在本機閱讀 Excel、CSV、ODS、Numbers、WPS 與舊版試算表。切換工作表、瀏覽儲存格，並檢視已儲存的值。無須上傳。",
       },
     },
   },

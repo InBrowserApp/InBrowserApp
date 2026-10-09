@@ -1,9 +1,13 @@
-## Explora un libro de Excel en tu navegador
+## Explora hojas de cálculo y tablas en tu navegador
 
-Abre un archivo .xlsx local o suéltalo en el visor. Cambia de hoja de cálculo, desplázate por las celdas, ajusta el zoom y consulta el contenido de las celdas. Se muestran los formatos de celda habituales y las celdas combinadas cuando son compatibles.
+Abre un archivo local o suéltalo en el visor. Cambia de hoja de cálculo, desplázate por las celdas, ajusta el zoom y consulta su contenido. Los libros de Excel conservan su experiencia de lectura habitual. Los archivos CSV y TSV aparecen como una única hoja de cálculo; usa Separador y Codificación del texto para corregir la detección. Las columnas de texto conservan sin cambios los ceros iniciales, los identificadores largos y las cadenas que parecen fechas.
+
+Los formatos compatibles incluyen Excel XLSX, XLSM, XLTX, XLTM, XLS y XLSB; CSV y TSV; ODS y FODS; Numbers 3.0 y versiones posteriores; hojas de cálculo WPS ET/ETT y UOS compatibles; DIF, SLK, PRN y DBF; Lotus WK1/WK3/WK4/WKS/123; Quattro Pro WQ1/WQ2/WB1/WB2/WB3/QPW; Works XLR; y EtherCalc ETH. La compatibilidad depende de la versión y las funciones utilizadas en cada archivo. En los formatos antiguos se priorizan los datos de las celdas sobre la reproducción de todos los detalles visuales.
 
 ## Privacidad y compatibilidad
 
-Los libros se procesan localmente y esta herramienta no los sube ni los guarda. Las fuentes proceden de tu dispositivo; no se solicitan fuentes en línea. Las celdas con fórmulas muestran los valores guardados en el libro cuando están disponibles. Las fórmulas no se recalculan y las conexiones de datos externas no se actualizan.
+Los archivos se procesan localmente y esta herramienta no los sube ni los guarda. Las fuentes proceden de tu dispositivo; no se solicitan fuentes en línea. Las celdas con fórmulas muestran los resultados guardados cuando están disponibles. Las fórmulas no se recalculan, las macros nunca se ejecutan, las conexiones de datos externas no se actualizan y los enlaces del documento no se cargan automáticamente.
 
-Se limita el tamaño de los datos descomprimidos y el renderizado visible para mantener acotado el uso de memoria del navegador. Los libros grandes o complejos pueden superar estos límites. No se admiten libros cifrados, archivos .xls antiguos ni archivos habilitados para macros. Este visor no edita, exporta ni imprime hojas de cálculo, no ejecuta macros ni carga recursos externos del documento. Los gráficos, las imágenes, las funciones de tablas dinámicas y los formatos no compatibles pueden diferir de los de Excel de escritorio o no mostrarse.
+Las tablas de Numbers aparecen en pestañas de hojas de cálculo independientes, con los nombres originales de las hojas y tablas cuando están disponibles. No se admiten documentos de versiones anteriores a Numbers 3. No se cargan los archivos memo asociados a DBF. PRN utiliza el diseño de ancho fijo de Lotus/Excel; no se admiten archivos de impresión arbitrarios. En los formatos importados pueden faltar gráficos, dibujos, funciones de tablas dinámicas, fuentes y algunos estilos. Cuando se aplican estas limitaciones, aparece una nota de compatibilidad junto al documento.
+
+No hay un límite fijo de tamaño de archivo ni de número de hojas. En los archivos complejos siguen aplicándose las restricciones reales de memoria del navegador y las medidas de protección al descomprimir archivos. No se pueden abrir libros cifrados o dañados. Este visor no edita, exporta ni imprime hojas de cálculo.

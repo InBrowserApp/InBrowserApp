@@ -1,4 +1,4 @@
 {
-  "name": "Lecteur XLSX",
-  "description": "Consultez vos classeurs Excel XLSX en local : changez de feuille, faites défiler les cellules et examinez leur contenu. Aucun envoi à un serveur."
+  "name": "Lecteur de feuilles de calcul",
+  "description": "Consultez les feuilles de calcul Excel, CSV, ODS, Numbers, WPS et les anciens formats en local. Changez de feuille, parcourez les cellules et examinez les valeurs enregistrées. Aucun envoi à un serveur."
 }

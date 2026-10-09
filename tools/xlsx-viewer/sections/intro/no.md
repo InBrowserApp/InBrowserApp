@@ -1,9 +1,13 @@
-## Bla gjennom en Excel-arbeidsbok i nettleseren
+## Bla gjennom regneark og tabeller i nettleseren
 
-Åpne en lokal .xlsx-fil eller slipp den i viseren. Bytt mellom regneark, bla gjennom celler, juster zoomen og se innholdet i cellene. Vanlig celleformatering og sammenslåtte celler vises der de støttes.
+Åpne en lokal fil eller slipp den i viseren. Bytt mellom regneark, bla gjennom celler, juster zoomen og se innholdet i cellene. Excel-arbeidsbøker beholder den eksisterende leseopplevelsen. CSV- og TSV-filer vises som ett regneark; bruk Skilletegn og Tekstkoding for å korrigere automatisk gjenkjenning. Tekstkolonner bevarer innledende nuller, lange identifikatorer og datolignende strenger uendret.
+
+Støttede formater omfatter Excel XLSX, XLSM, XLTX, XLTM, XLS og XLSB; CSV og TSV; ODS og FODS; Numbers 3.0 og nyere; kompatible WPS ET/ETT- og UOS-regneark; DIF, SLK, PRN og DBF; Lotus WK1/WK3/WK4/WKS/123; Quattro Pro WQ1/WQ2/WB1/WB2/WB3/QPW; Works XLR; og EtherCalc ETH. Kompatibiliteten avhenger av versjonen og funksjonene som brukes i hver fil. For eldre formater er hovedvekten på celledata fremfor å gjengi alle visuelle detaljer.
 
 ## Personvern og kompatibilitet
 
-Arbeidsbøker behandles lokalt og blir ikke lastet opp eller lagret av dette verktøyet. Skrifter hentes fra enheten din; ingen skrifter hentes fra nettet. Formelceller viser verdier som er lagret i arbeidsboken, når de er tilgjengelige. Formler beregnes ikke på nytt, og eksterne datatilkoblinger oppdateres ikke.
+Filer behandles lokalt og blir ikke lastet opp eller lagret av dette verktøyet. Skrifter hentes fra enheten din; ingen skrifter hentes fra nettet. Formelceller viser lagrede resultater når de er tilgjengelige. Formler beregnes ikke på nytt, makroer kjøres aldri, eksterne datatilkoblinger oppdateres ikke, og dokumentlenker lastes ikke inn automatisk.
 
-Utpakking av arkiver og gjengivelse av synlig innhold er begrenset for å begrense nettleserens minnebruk. Store eller komplekse arbeidsbøker kan overskride disse grensene. Krypterte arbeidsbøker, eldre .xls-filer og makroaktiverte filer støttes ikke. Denne viseren redigerer, eksporterer eller skriver ikke ut regneark, kjører ikke makroer og laster ikke inn eksterne dokumentressurser. Diagrammer, bilder, pivottabellfunksjoner og formatering som ikke støttes, kan avvike fra skrivebordsversjonen av Excel eller mangle.
+Numbers-tabeller vises som egne regnearkfaner, med opprinnelige ark- og tabellnavn der de er tilgjengelige. Eldre Numbers-dokumenter fra før Numbers 3 støttes ikke. Tilhørende memofiler for DBF lastes ikke inn. PRN bruker Lotus/Excel-oppsettet med fast kolonnebredde; vilkårlige utskriftsfiler støttes ikke. Diagrammer, tegninger, pivottabellfunksjoner, skrifter og noe formatering kan mangle i importerte formater. En merknad om kompatibilitet vises ved siden av dokumentet når disse begrensningene gjelder.
+
+Det er ingen fast grense for filstørrelse eller antall ark. Nettleserens faktiske minnebegrensninger og sikkerhetsgrenser for utpakking av arkiver gjelder fortsatt for komplekse filer. Krypterte eller skadede arbeidsbøker kan ikke åpnes. Denne viseren redigerer, eksporterer eller skriver ikke ut regneark.

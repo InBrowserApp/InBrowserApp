@@ -1,4 +1,4 @@
 {
-  "name": "XLSX Görüntüleyici",
-  "description": "Excel XLSX çalışma sayfalarını sayfa değiştirme, kaydırma ve hücre inceleme özellikleriyle yerel olarak görüntüleyin. Dosyalar yüklenmez."
+  "name": "Elektronik Tablo Görüntüleyici",
+  "description": "Excel, CSV, ODS, Numbers, WPS ve eski elektronik tablo dosyalarını yerel olarak okuyun. Çalışma sayfaları arasında geçiş yapın, hücrelere göz atın ve kayıtlı değerleri inceleyin. Dosyalar yüklenmez."
 }

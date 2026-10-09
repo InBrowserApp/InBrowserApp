@@ -1,4 +1,3 @@
-import { useId } from "react"
 import { DocumentNumberInput } from "@workspace/ui/components/tool/document-number-input"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import { Minus, Plus } from "@workspace/ui/icons"
@@ -12,7 +11,6 @@ export function DocumentZoom({
   onChange: (value: number) => void
   messages: Record<"zoom" | "zoomIn" | "zoomOut", string>
 }) {
-  const id = useId()
   return (
     <div className="flex items-center gap-1">
       <DocumentIconButton
@@ -30,18 +28,10 @@ export function DocumentZoom({
         max={400}
         step={1}
         onCommit={onChange}
-        list={id}
       />
       <span aria-hidden="true" className="text-sm text-muted-foreground">
         %
       </span>
-      <datalist id={id}>
-        {[25, 50, 75, 100, 125, 150, 200, 300, 400].map((value) => (
-          <option key={value} value={value}>
-            {value}%
-          </option>
-        ))}
-      </datalist>
       <DocumentIconButton
         label={m.zoomIn}
         disabled={value >= 400}

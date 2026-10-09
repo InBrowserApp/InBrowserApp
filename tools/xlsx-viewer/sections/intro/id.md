@@ -1,9 +1,13 @@
-## Jelajahi buku kerja Excel di browser Anda
+## Jelajahi lembar bentang dan tabel di browser Anda
 
-Buka file .xlsx lokal atau letakkan di penampil. Beralih lembar kerja, gulir sel, atur zoom, dan periksa isi sel. Pemformatan sel umum dan sel gabungan ditampilkan jika didukung.
+Buka file lokal atau letakkan di penampil. Beralih lembar kerja, gulir sel, atur zoom, dan periksa isi sel. Buku kerja Excel mempertahankan pengalaman membaca yang sudah ada. File CSV dan TSV ditampilkan sebagai satu lembar kerja; gunakan Pemisah dan Pengodean teks untuk memperbaiki hasil deteksi. Kolom teks mempertahankan nol di awal, pengenal panjang, dan string yang menyerupai tanggal tanpa perubahan.
+
+Format yang didukung meliputi Excel XLSX, XLSM, XLTX, XLTM, XLS, dan XLSB; CSV dan TSV; ODS dan FODS; Numbers 3.0 dan yang lebih baru; lembar bentang WPS ET/ETT dan UOS yang kompatibel; DIF, SLK, PRN, dan DBF; Lotus WK1/WK3/WK4/WKS/123; Quattro Pro WQ1/WQ2/WB1/WB2/WB3/QPW; Works XLR; serta EtherCalc ETH. Kompatibilitas bergantung pada versi dan fitur yang digunakan dalam setiap file. Format lama berfokus pada data sel, bukan mereproduksi setiap detail visual.
 
 ## Privasi dan kompatibilitas
 
-Buku kerja diproses secara lokal serta tidak diunggah atau disimpan oleh alat ini. Font berasal dari perangkat Anda; tidak ada font daring yang diminta. Sel rumus menampilkan nilai yang tersimpan dalam buku kerja jika tersedia. Rumus tidak dihitung ulang, dan koneksi data eksternal tidak diperbarui.
+File diproses secara lokal serta tidak diunggah atau disimpan oleh alat ini. Font berasal dari perangkat Anda; tidak ada font daring yang diminta. Sel rumus menampilkan hasil tersimpan jika tersedia. Rumus tidak dihitung ulang, makro tidak pernah dijalankan, koneksi data eksternal tidak diperbarui, dan tautan dokumen tidak dimuat secara otomatis.
 
-Ukuran hasil ekstraksi arsip dan perenderan area yang terlihat dibatasi untuk membatasi penggunaan memori browser. Buku kerja yang besar atau kompleks dapat melebihi batas ini. Buku kerja terenkripsi, file .xls lama, dan file dengan makro tidak didukung. Penampil ini tidak mengedit, mengekspor, atau mencetak lembar bentang, menjalankan makro, maupun memuat sumber daya dokumen eksternal. Bagan, gambar, fitur pivot, dan pemformatan yang tidak didukung dapat berbeda dari Excel desktop atau tidak ditampilkan.
+Tabel Numbers ditampilkan sebagai tab lembar kerja terpisah, dengan nama lembar/tabel asli jika tersedia. Dokumen Numbers lama dari sebelum Numbers 3 tidak didukung. File memo pendamping DBF tidak dimuat. PRN menggunakan tata letak lebar tetap Lotus/Excel; file cetak sembarang tidak didukung. Bagan, gambar, fitur pivot, font, dan sebagian gaya mungkin tidak ditampilkan dalam format yang diimpor. Catatan kompatibilitas muncul di samping dokumen ketika keterbatasan ini berlaku.
+
+Tidak ada batas tetap untuk ukuran file atau jumlah lembar. Batas memori browser yang sebenarnya dan pengamanan ekstraksi arsip tetap berlaku untuk file kompleks. Buku kerja yang terenkripsi atau rusak tidak dapat dibuka. Penampil ini tidak mengedit, mengekspor, atau mencetak lembar bentang.

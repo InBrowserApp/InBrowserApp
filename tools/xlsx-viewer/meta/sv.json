@@ -1,4 +1,4 @@
 {
-  "name": "XLSX-visare",
-  "description": "Bläddra i Excel-kalkylblad i XLSX-format lokalt genom att växla blad, rulla och granska cellinnehåll. Ingen uppladdning."
+  "name": "Kalkylbladsvisare",
+  "description": "Läs Excel, CSV, ODS, Numbers, WPS och äldre kalkylblad lokalt. Växla mellan kalkylblad, bläddra bland celler och granska sparade värden. Ingen uppladdning."
 }

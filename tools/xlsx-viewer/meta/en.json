@@ -1,4 +1,4 @@
 {
-  "name": "XLSX Viewer",
-  "description": "Browse Excel XLSX worksheets locally with sheet switching, scrolling, and cell inspection. No uploads."
+  "name": "Spreadsheet Viewer",
+  "description": "Read Excel, CSV, ODS, Numbers, WPS, and legacy spreadsheets locally. Switch worksheets, browse cells, and inspect saved values. No uploads."
 }

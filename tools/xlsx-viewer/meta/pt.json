@@ -1,4 +1,4 @@
 {
-  "name": "Visualizador de XLSX",
-  "description": "Explore planilhas XLSX do Excel localmente, alternando entre planilhas, rolando e inspecionando células. Sem enviar arquivos."
+  "name": "Visualizador de planilhas",
+  "description": "Leia planilhas do Excel, CSV, ODS, Numbers, WPS e formatos antigos localmente. Alterne entre planilhas, explore células e inspecione valores salvos. Sem enviar arquivos."
 }

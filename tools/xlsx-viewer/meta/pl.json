@@ -1,4 +1,4 @@
 {
-  "name": "Przeglądarka XLSX",
-  "description": "Przeglądaj arkusze Excel XLSX lokalnie: przełączaj arkusze, przewijaj je i sprawdzaj zawartość komórek. Bez przesyłania plików na serwer."
+  "name": "Przeglądarka arkuszy kalkulacyjnych",
+  "description": "Czytaj lokalnie arkusze Excel, CSV, ODS, Numbers, WPS i starsze formaty. Przełączaj arkusze, przeglądaj komórki i sprawdzaj zapisane wartości. Bez przesyłania plików na serwer."
 }

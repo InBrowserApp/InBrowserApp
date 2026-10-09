@@ -184,7 +184,11 @@ export function Toolbar({
       <p
         role="status"
         title={status}
-        className="h-8 overflow-auto text-xs text-muted-foreground"
+        className={
+          status
+            ? "max-h-16 overflow-auto text-xs text-muted-foreground"
+            : "sr-only"
+        }
       >
         {status}
       </p>

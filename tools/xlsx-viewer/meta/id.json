@@ -1,4 +1,4 @@
 {
-  "name": "Penampil XLSX",
-  "description": "Jelajahi lembar kerja Excel XLSX secara lokal dengan beralih lembar, menggulir, dan memeriksa sel. Tanpa unggahan."
+  "name": "Penampil Lembar Bentang",
+  "description": "Baca lembar bentang Excel, CSV, ODS, Numbers, WPS, dan format lama secara lokal. Beralih lembar kerja, jelajahi sel, dan periksa nilai tersimpan. Tanpa unggahan."
 }

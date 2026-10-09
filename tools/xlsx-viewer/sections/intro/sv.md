@@ -1,9 +1,13 @@
-## Bläddra i en Excel-arbetsbok i din webbläsare
+## Bläddra i kalkylblad och tabeller i din webbläsare
 
-Öppna en lokal .xlsx-fil eller släpp den i visaren. Växla mellan kalkylblad, rulla genom celler, justera zoomen och granska cellinnehåll. Vanlig cellformatering och sammanfogade celler visas där de stöds.
+Öppna en lokal fil eller släpp den i visaren. Växla mellan kalkylblad, rulla genom celler, justera zoomen och granska cellinnehåll. Excel-arbetsböcker visas på samma sätt som tidigare. CSV- och TSV-filer visas som ett enda kalkylblad. Använd Avgränsare och Textkodning för att korrigera den automatiska identifieringen. I textkolumner bevaras inledande nollor, långa identifierare och strängar som liknar datum oförändrade.
+
+Format som stöds omfattar Excel XLSX, XLSM, XLTX, XLTM, XLS och XLSB; CSV och TSV; ODS och FODS; Numbers 3.0 och senare; kompatibla WPS ET/ETT- och UOS-kalkylblad; DIF, SLK, PRN och DBF; Lotus WK1/WK3/WK4/WKS/123; Quattro Pro WQ1/WQ2/WB1/WB2/WB3/QPW; Works XLR; och EtherCalc ETH. Kompatibiliteten beror på vilken version och vilka funktioner som används i varje fil. För äldre format ligger fokus på celldata snarare än att återge varje visuell detalj.
 
 ## Integritet och kompatibilitet
 
-Arbetsböcker behandlas lokalt och laddas inte upp eller sparas av det här verktyget. Teckensnitt hämtas från din enhet. Inga teckensnitt hämtas från nätet. Formelceller visar värden som sparats i arbetsboken, när sådana finns. Formler beräknas inte om och externa dataanslutningar uppdateras inte.
+Filer behandlas lokalt och laddas inte upp eller sparas av det här verktyget. Teckensnitt hämtas från din enhet. Inga teckensnitt hämtas från nätet. Formelceller visar sparade resultat när sådana finns. Formler beräknas inte om, makron körs aldrig, externa dataanslutningar uppdateras inte och dokumentlänkar läses inte in automatiskt.
 
-Arkivens uppackade storlek och renderingen av det synliga innehållet begränsas för att hålla webbläsarens minnesanvändning under kontroll. Stora eller komplexa arbetsböcker kan överskrida dessa gränser. Krypterade arbetsböcker, äldre .xls-filer och filer med makron stöds inte. Den här visaren redigerar, exporterar eller skriver inte ut kalkylblad, kör inte makron och läser inte in externa dokumentresurser. Diagram, bilder, pivotfunktioner och formatering som inte stöds kan visas annorlunda än i Excel på datorn eller saknas.
+Numbers-tabeller visas som separata kalkylbladsflikar med de ursprungliga blad- och tabellnamnen när de finns tillgängliga. Äldre Numbers-dokument från före Numbers 3 stöds inte. Tillhörande memo-filer för DBF läses inte in. PRN använder Lotus/Excel-layouten med fast kolumnbredd. Godtyckliga utskriftsfiler stöds inte. Diagram, ritningar, pivotfunktioner, teckensnitt och viss formatering kan saknas i importerade format. En kompatibilitetsnotis visas intill dokumentet när dessa begränsningar gäller.
+
+Det finns ingen fast gräns för filstorlek eller antal kalkylblad. Webbläsarens faktiska minne och skyddsåtgärder vid uppackning av arkiv begränsar fortfarande hanteringen av komplexa filer. Krypterade eller skadade arbetsböcker kan inte öppnas. Den här visaren redigerar, exporterar eller skriver inte ut kalkylblad.

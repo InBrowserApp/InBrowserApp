@@ -1,7 +1,9 @@
+import type { ImportNotice } from "./formats"
 import type messages from "./messages/en.json"
 import type { CellDetails } from "./core/cells"
 export type Messages = typeof messages
 export type ReaderState = {
+  notices: ImportNotice[]
   sheet: number
   sheets: { name: string; hidden: boolean }[]
   zoom: number
