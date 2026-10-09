@@ -15540,6 +15540,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "odt-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["odt", "ott", "opendocument", "libreoffice", "document", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض ODT",
+        description:
+          "اقرأ مستندات ODT وقوالب OTT محليًا، مع التنقل بين العناوين والتكبير ووضع التركيز.",
+      },
+      de: {
+        name: "ODT Viewer",
+        description:
+          "Lesen Sie ODT-Dokumente und OTT-Vorlagen lokal, mit Navigation über Überschriften, Zoom und Fokusmodus.",
+      },
+      en: {
+        name: "ODT Viewer",
+        description:
+          "Read ODT documents and OTT templates locally, with heading navigation, zoom, and focus mode.",
+      },
+      es: {
+        name: "Visor ODT",
+        description:
+          "Lee documentos ODT y plantillas OTT localmente, con navegación por títulos, zoom y modo sin distracciones.",
+      },
+      fr: {
+        name: "Visionneuse ODT",
+        description:
+          "Lisez des documents ODT et des modèles OTT en local, avec navigation par titres, zoom et mode lecture immersive.",
+      },
+      he: {
+        name: "ODT Viewer",
+        description:
+          "קריאת מסמכי ODT ותבניות OTT באופן מקומי, עם ניווט בין כותרות, שינוי תקריב ומצב קריאה ממוקדת.",
+      },
+      hi: {
+        name: "ODT Viewer",
+        description:
+          "शीर्षकों से नेविगेशन, ज़ूम और एकाग्र पठन मोड के साथ ODT दस्तावेज़ और OTT टेम्पलेट स्थानीय रूप से पढ़ें।",
+      },
+      id: {
+        name: "ODT Viewer",
+        description:
+          "Baca dokumen ODT dan templat OTT secara lokal, dengan navigasi judul bagian, perbesaran, dan mode fokus.",
+      },
+      it: {
+        name: "Visualizzatore ODT",
+        description:
+          "Leggi documenti ODT e modelli OTT in locale, con navigazione per titoli, zoom e lettura immersiva.",
+      },
+      ja: {
+        name: "ODT ビューアー",
+        description:
+          "ODT 文書や OTT テンプレートを端末内で閲覧。見出しへの移動、表示倍率の調整、集中読書モードを利用できます。",
+      },
+      ko: {
+        name: "ODT 뷰어",
+        description:
+          "ODT 문서와 OTT 서식을 기기에서 읽으세요. 제목 탐색, 확대/축소, 집중 모드를 지원합니다.",
+      },
+      ms: {
+        name: "Pemapar ODT",
+        description:
+          "Baca dokumen ODT dan templat OTT secara setempat, dengan navigasi tajuk, zum dan mod fokus.",
+      },
+      nl: {
+        name: "ODT Viewer",
+        description:
+          "Lees ODT-documenten en OTT-sjablonen lokaal, met navigatie via koppen, zoom en een leesmodus zonder afleiding.",
+      },
+      no: {
+        name: "ODT Viewer",
+        description:
+          "Les ODT-dokumenter og OTT-maler lokalt, med navigering via overskrifter, zoom og fokusmodus.",
+      },
+      pl: {
+        name: "ODT Viewer",
+        description:
+          "Czytaj lokalnie dokumenty ODT i szablony OTT, korzystając z nawigacji po nagłówkach, powiększenia i trybu skupienia.",
+      },
+      pt: {
+        name: "Visualizador ODT",
+        description:
+          "Leia documentos ODT e modelos OTT localmente, com navegação por títulos, zoom e modo de leitura focada.",
+      },
+      ru: {
+        name: "Просмотр ODT",
+        description:
+          "Читайте документы ODT и шаблоны OTT локально: переходите по заголовкам, меняйте масштаб и включайте режим сосредоточенного чтения.",
+      },
+      sv: {
+        name: "ODT-visare",
+        description:
+          "Läs ODT-dokument och OTT-mallar lokalt med rubriknavigering, zoom och fokuserat läsläge.",
+      },
+      th: {
+        name: "ODT Viewer",
+        description:
+          "อ่านเอกสาร ODT และแม่แบบ OTT ในอุปกรณ์ พร้อมการนำทางตามหัวข้อ การซูม และโหมดอ่านแบบมีสมาธิ",
+      },
+      tr: {
+        name: "ODT Görüntüleyici",
+        description:
+          "ODT belgelerini ve OTT şablonlarını başlıklar arasında gezinme, yakınlaştırma ve odak modu ile yerel olarak okuyun.",
+      },
+      vi: {
+        name: "Trình xem ODT",
+        description:
+          "Đọc tài liệu ODT và mẫu OTT ngay trên thiết bị, với điều hướng theo tiêu đề, thu phóng và chế độ tập trung.",
+      },
+      "zh-CN": {
+        name: "ODT 查看器",
+        description:
+          "在本地阅读 ODT 文档和 OTT 模板，支持标题导航、缩放和专注阅读模式。",
+      },
+      "zh-TW": {
+        name: "ODT 檢視器",
+        description:
+          "在本機閱讀 ODT 文件與 OTT 範本，支援標題導覽、縮放及專注模式。",
+      },
+    },
+  },
+  {
     slug: "ofd-viewer",
     category: "document",
     icon: "file-text",
