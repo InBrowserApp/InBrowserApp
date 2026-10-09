@@ -1,9 +1,12 @@
+import { extensions, extension } from "./formats"
+import type { ImportOptions } from "./formats"
 import { isDocumentLimitError } from "@workspace/document-reader"
 import { useEffect, useRef, useState } from "react"
 import type { RefObject } from "react"
 import type { Messages, Reader, ReaderState } from "./types"
 
 const initial: ReaderState = {
+  notices: [],
   sheet: 0,
   sheets: [],
   zoom: 100,
@@ -16,7 +19,8 @@ const initial: ReaderState = {
 export function useReader(
   file: File | null,
   container: RefObject<HTMLDivElement | null>,
-  messages: Messages
+  messages: Messages,
+  importOptions: ImportOptions
 ) {
   const reader = useRef<Reader | null>(null)
   const [state, setState] = useState(initial)
@@ -28,7 +32,7 @@ export function useReader(
     setError("")
     setLoading(false)
     if (!file || !container.current) return
-    if (!file.name.toLowerCase().endsWith(".xlsx") || file.size === 0) {
+    if (!extensions.includes(extension(file.name)) || file.size === 0) {
       setError(messages.invalid)
       return
     }
@@ -38,7 +42,14 @@ export function useReader(
     function report(reason: unknown) {
       if (signal.aborted) return
       setError(
-        isDocumentLimitError(reason) ? messages.resourceLimit : messages.invalid
+        isDocumentLimitError(reason) || reason instanceof RangeError
+          ? messages.resourceLimit
+          : reason instanceof Error && reason.message === "DELIMITED_INVALID"
+            ? messages.delimitedInvalid
+            : reason instanceof Error &&
+                /password|encrypt/i.test(reason.message)
+              ? messages.protected
+              : messages.invalid
       )
       setLoading(false)
       controller.abort()
@@ -50,6 +61,7 @@ export function useReader(
         signal.throwIfAborted()
         return openReader({
           file,
+          importOptions,
           label: messages.reader,
           container: element,
           signal,
@@ -72,7 +84,7 @@ export function useReader(
       controller.abort()
       reader.current = null
     }
-  }, [file, container, messages])
+  }, [file, container, messages, importOptions])
 
   return {
     state,

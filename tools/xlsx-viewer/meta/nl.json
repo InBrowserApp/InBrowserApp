@@ -1,4 +1,4 @@
 {
-  "name": "XLSX-viewer",
-  "description": "Bekijk Excel XLSX-werkbladen lokaal, wissel tussen werkbladen, scrol door cellen en bekijk celinhoud. Geen uploads."
+  "name": "Spreadsheet-viewer",
+  "description": "Lees Excel-, CSV-, ODS-, Numbers-, WPS- en oudere spreadsheets lokaal. Wissel tussen werkbladen, blader door cellen en bekijk opgeslagen waarden. Geen uploads."
 }

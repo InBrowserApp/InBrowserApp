@@ -11,7 +11,11 @@
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "@silurus/ooxml": "catalog:",
-    "@workspace/document-reader": "workspace:*"
+    "@workspace/document-reader": "workspace:*",
+    "xlsx": "catalog:",
+    "papaparse": "catalog:",
+    "fflate": "catalog:",
+    "xml-js": "catalog:"
   },
   "peerDependencies": {
     "astro": "catalog:",
@@ -20,6 +24,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@types/papaparse": "catalog:"
   }
 }

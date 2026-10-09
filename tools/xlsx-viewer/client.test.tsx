@@ -208,3 +208,61 @@ test("attempts to open files above the former 50 MB cap", async () => {
   )
   expect(screen.queryByRole("alert")).toBeNull()
 })
+
+test("opens text tables, corrects separator and encoding, and resets options on replacement", async () => {
+  render(<Client messages={m} />)
+  choose(file("accounts.csv"))
+  await screen.findByLabelText(m.range)
+  expect(screen.getByText(m.textValues)).toBeTruthy()
+  fireEvent.keyDown(screen.getByRole("combobox", { name: m.delimiter }), {
+    key: "ArrowDown",
+  })
+  fireEvent.click(await screen.findByRole("option", { name: m.semicolon }))
+  await waitFor(() =>
+    expect(mock.open).toHaveBeenLastCalledWith(
+      expect.objectContaining({
+        importOptions: { delimiter: ";", encoding: "auto" },
+      })
+    )
+  )
+  fireEvent.keyDown(screen.getByRole("combobox", { name: m.encoding }), {
+    key: "ArrowDown",
+  })
+  fireEvent.click(await screen.findByRole("option", { name: "Windows-1252" }))
+  await waitFor(() =>
+    expect(mock.open).toHaveBeenLastCalledWith(
+      expect.objectContaining({
+        importOptions: { delimiter: ";", encoding: "windows-1252" },
+      })
+    )
+  )
+  const options = mock.open.mock.calls.at(-1)![0] as Options
+  options.onChange({ notices: ["encodingFallback", "unevenRows"] })
+  await screen.findByText(m.compatibility)
+  fireEvent.click(screen.getByText(m.compatibility))
+  expect(screen.getByText(m.encodingFallback)).toBeTruthy()
+  expect(screen.getByText(m.unevenRows)).toBeTruthy()
+  choose(file("next.xls"))
+  await waitFor(() =>
+    expect(mock.open).toHaveBeenLastCalledWith(
+      expect.objectContaining({
+        importOptions: { delimiter: "auto", encoding: "auto" },
+      })
+    )
+  )
+  expect(screen.queryByText(m.textValues)).toBeNull()
+})
+
+test("explains protected, malformed text, and exhausted memory errors", async () => {
+  render(<Client messages={m} />)
+  mock.open.mockRejectedValueOnce(new Error("Password required"))
+  choose(file("locked.xls"))
+  await screen.findByText(m.protected)
+  mock.open.mockRejectedValueOnce(new Error("DELIMITED_INVALID"))
+  choose(file("bad.csv"))
+  await screen.findByText(m.delimitedInvalid)
+  expect(screen.getByRole("combobox", { name: m.delimiter })).toBeTruthy()
+  mock.open.mockRejectedValueOnce(new RangeError("Out of memory"))
+  choose(file("memory.numbers"))
+  await screen.findByText(m.resourceLimit)
+})

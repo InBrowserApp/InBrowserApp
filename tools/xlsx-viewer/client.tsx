@@ -15,6 +15,8 @@ import {
 import { FileText } from "@workspace/ui/icons"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { Tabs, TabsContent } from "@workspace/ui/components/ui/tabs"
+import { acceptedFiles, defaultImportOptions, isDelimited } from "./formats"
+import { ImportControls } from "./components/import-options"
 import { Worksheets } from "./components/worksheets"
 import { Toolbar } from "./components/toolbar"
 import { useReader } from "./use-reader"
@@ -28,16 +30,42 @@ export default function Client({ messages: m }: { messages: Messages }) {
   }, [])
   const container = useRef<HTMLDivElement>(null)
   const [file, setFile] = useState<File | null>(null)
-  const { state, loading, error, reader } = useReader(file, container, m)
+  const [importOptions, setImportOptions] = useState(defaultImportOptions)
+  const { state, loading, error, reader } = useReader(
+    file,
+    container,
+    m,
+    importOptions
+  )
   return (
     <DocumentWorkspace
       tool="xlsx-viewer"
       file={file}
-      onFile={setFile}
-      accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      onFile={(next) => {
+        setImportOptions(defaultImportOptions)
+        setFile(next)
+      }}
+      accept={acceptedFiles}
       active={Boolean(file && !error)}
       messages={m}
     >
+      {file && isDelimited(file.name) ? (
+        <ImportControls
+          value={importOptions}
+          onChange={setImportOptions}
+          messages={m}
+        />
+      ) : null}
+      {state.notices.length && !error ? (
+        <details className="border-b px-3 py-2 text-xs text-muted-foreground">
+          <summary className="cursor-pointer">{m.compatibility}</summary>
+          <ul className="mt-2 list-disc ps-4">
+            {state.notices.map((notice) => (
+              <li key={notice}>{m[notice]}</li>
+            ))}
+          </ul>
+        </details>
+      ) : null}
       {error ? (
         <Alert variant="destructive">
           <AlertTitle>{m.error}</AlertTitle>

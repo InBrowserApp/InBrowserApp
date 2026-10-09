@@ -1,7 +1,10 @@
 import { beforeEach, expect, test, vi } from "vitest"
 import type { Worksheet, XlsxSelectionState } from "@silurus/ooxml/xlsx"
 import { assertOfficeArchive } from "@workspace/document-reader"
+import { importFile } from "./import-file"
 import { openReader } from "./reader"
+
+vi.mock("./import-file", () => ({ importFile: vi.fn() }))
 
 vi.mock("@workspace/document-reader", async (original) => ({
   ...(await original<typeof import("@workspace/document-reader")>()),
@@ -57,7 +60,10 @@ function setup() {
       : worksheet
   )
   const options = {
-    file: { arrayBuffer: async () => new ArrayBuffer(10) } as File,
+    file: {
+      name: "test.xlsx",
+      arrayBuffer: async () => new ArrayBuffer(10),
+    } as File,
     container,
     signal: controller.signal,
     label: "Localized grid",
@@ -323,5 +329,36 @@ test("uses the first available sheet and reports current async errors", async ()
   reader.sheet(2)
   await flush()
   expect(options.onError).toHaveBeenCalledOnce()
+  reader.dispose()
+})
+
+test("imports additional formats locally and keeps their original worksheet labels", async () => {
+  const { options } = setup()
+  options.file = {
+    name: "legacy.xls",
+    arrayBuffer: async () => new ArrayBuffer(8),
+  } as File
+  const data = new ArrayBuffer(4)
+  vi.mocked(importFile).mockResolvedValue({
+    data,
+    names: ["Original report", "Empty", "Secret"],
+    notices: ["dataOnly"],
+  })
+  const reader = await openReader(options)
+  expect(importFile).toHaveBeenCalledWith(
+    expect.any(ArrayBuffer),
+    "legacy.xls",
+    { delimiter: "auto", encoding: "auto" },
+    options.signal
+  )
+  expect(mock.load).toHaveBeenCalledWith(data, expect.anything())
+  expect(options.onChange).toHaveBeenCalledWith({ notices: ["dataOnly"] })
+  expect(options.onChange).toHaveBeenCalledWith({
+    sheets: [
+      { name: "Original report", hidden: false },
+      { name: "Empty", hidden: false },
+      { name: "Secret", hidden: true },
+    ],
+  })
   reader.dispose()
 })

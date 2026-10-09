@@ -1,4 +1,4 @@
 {
-  "name": "XLSX 檢視器",
-  "description": "在本機瀏覽 Excel XLSX 工作表，支援切換工作表、捲動與檢視儲存格。無須上傳。"
+  "name": "試算表檢視器",
+  "description": "在本機閱讀 Excel、CSV、ODS、Numbers、WPS 與舊版試算表。切換工作表、瀏覽儲存格，並檢視已儲存的值。無須上傳。"
 }

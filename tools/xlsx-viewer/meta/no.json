@@ -1,4 +1,4 @@
 {
-  "name": "XLSX-viser",
-  "description": "Bla gjennom Excel XLSX-regneark lokalt, bytt mellom ark, rull og se innholdet i cellene. Ingen opplasting."
+  "name": "Regnearkviser",
+  "description": "Les Excel, CSV, ODS, Numbers, WPS og eldre regneark lokalt. Bytt mellom ark, bla gjennom celler og se lagrede verdier. Ingen opplasting."
 }

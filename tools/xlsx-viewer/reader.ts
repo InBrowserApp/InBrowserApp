@@ -5,6 +5,9 @@ import {
   officeLoadOptions,
   imageResources,
 } from "@workspace/document-reader"
+import { importFile } from "./import-file"
+import { isModernExcel, defaultImportOptions } from "./formats"
+import type { ImportOptions } from "./formats"
 import { cellDetails, cellReference, isCellReference } from "./core/cells"
 import type { Reader, ReaderState } from "./types"
 
@@ -15,8 +18,10 @@ export async function openReader({
   label,
   onChange,
   onError,
+  importOptions = defaultImportOptions,
 }: {
   file: File
+  importOptions?: ImportOptions
   container: HTMLDivElement
   signal: AbortSignal
   label: string
@@ -24,7 +29,15 @@ export async function openReader({
   onError: (error: unknown) => void
 }): Promise<Reader> {
   signal.throwIfAborted()
-  const data = await file.arrayBuffer()
+  let data = await file.arrayBuffer()
+  signal.throwIfAborted()
+  let originalNames: string[] | undefined
+  if (!isModernExcel(file.name)) {
+    const imported = await importFile(data, file.name, importOptions, signal)
+    data = imported.data
+    originalNames = imported.names
+    onChange({ notices: imported.notices })
+  }
   signal.throwIfAborted()
   assertOfficeArchive(data, "xlsx")
   let workbook: XlsxWorkbook | undefined
@@ -149,7 +162,7 @@ export async function openReader({
     signal.addEventListener("abort", dispose, { once: true })
     container.addEventListener("keydown", onKeyDown, true)
     const sheets = workbook.sheetNames.map((name, index) => ({
-      name,
+      name: originalNames?.[index] ?? name,
       hidden: workbook!.isHidden(index),
     }))
     onChange({ sheets })

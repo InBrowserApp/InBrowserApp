@@ -1,4 +1,4 @@
 {
-  "name": "Visor de XLSX",
-  "description": "Explora hojas de cálculo Excel XLSX localmente: cambia de hoja, desplázate y consulta las celdas. Sin subir archivos."
+  "name": "Visor de hojas de cálculo",
+  "description": "Lee hojas de cálculo de Excel, CSV, ODS, Numbers, WPS y formatos antiguos localmente. Cambia de hoja, explora celdas y consulta valores guardados. Sin subir archivos."
 }

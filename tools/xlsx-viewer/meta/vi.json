@@ -1,4 +1,4 @@
 {
-  "name": "Trình xem XLSX",
-  "description": "Duyệt trang tính Excel XLSX ngay trên thiết bị với tính năng chuyển trang tính, cuộn và xem nội dung ô. Không tải lên."
+  "name": "Trình xem bảng tính",
+  "description": "Đọc Excel, CSV, ODS, Numbers, WPS và bảng tính đời cũ ngay trên thiết bị. Chuyển trang tính, duyệt các ô và xem giá trị đã lưu. Không tải lên."
 }

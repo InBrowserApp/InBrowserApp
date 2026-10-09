@@ -1,4 +1,4 @@
 {
-  "name": "Pemapar XLSX",
-  "description": "Semak lembaran kerja Excel XLSX secara setempat dengan beralih antara lembaran, menatal dan memeriksa sel. Tiada muat naik."
+  "name": "Pemapar Hamparan",
+  "description": "Baca hamparan Excel, CSV, ODS, Numbers, WPS dan format lama secara setempat. Beralih antara lembaran kerja, semak sel dan periksa nilai yang disimpan. Tiada muat naik."
 }

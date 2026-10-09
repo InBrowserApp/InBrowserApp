@@ -16,4 +16,5 @@ const Intro = resolveLocale<AstroComponentFactory>(import.meta.glob("./sections/
 <ToolPageShell title={meta.name} description={meta.description}>
   <Client client:load messages={messages} />
   <ToolArticle><Intro /></ToolArticle>
+  <p class="text-xs text-muted-foreground"><a href="/licenses/sheetjs.txt">SheetJS CE · Apache-2.0</a></p>
 </ToolPageShell>

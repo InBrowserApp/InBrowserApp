@@ -1,9 +1,13 @@
-## Explore uma pasta de trabalho do Excel no navegador
+## Explore planilhas e tabelas no navegador
 
-Abra um arquivo .xlsx local ou solte-o no visualizador. Alterne entre planilhas, role pelas células, ajuste o zoom e inspecione o conteúdo das células. A formatação comum de células e as células mescladas são exibidas quando compatíveis.
+Abra um arquivo local ou solte-o no visualizador. Alterne entre planilhas, role pelas células, ajuste o zoom e inspecione o conteúdo das células. As pastas de trabalho do Excel mantêm a experiência de leitura existente. Os arquivos CSV e TSV aparecem como uma única planilha; use Separador e Codificação de texto para corrigir a detecção. As colunas de texto preservam zeros à esquerda, identificadores longos e textos que parecem datas.
+
+Os formatos compatíveis incluem Excel XLSX, XLSM, XLTX, XLTM, XLS e XLSB; CSV e TSV; ODS e FODS; Numbers 3.0 e versões mais recentes; planilhas compatíveis do WPS ET/ETT e UOS; DIF, SLK, PRN e DBF; Lotus WK1/WK3/WK4/WKS/123; Quattro Pro WQ1/WQ2/WB1/WB2/WB3/QPW; Works XLR; e EtherCalc ETH. A compatibilidade depende da versão e dos recursos usados em cada arquivo. Os formatos antigos priorizam os dados das células em vez de reproduzir cada detalhe visual.
 
 ## Privacidade e compatibilidade
 
-As pastas de trabalho são processadas localmente e não são enviadas nem salvas por esta ferramenta. As fontes são obtidas do seu dispositivo; nenhuma fonte online é solicitada. As células com fórmulas mostram os valores salvos na pasta de trabalho, quando disponíveis. As fórmulas não são recalculadas e as conexões com dados externos não são atualizadas.
+Os arquivos são processados localmente e não são enviados nem salvos por esta ferramenta. As fontes são obtidas do seu dispositivo; nenhuma fonte online é solicitada. As células com fórmulas mostram os resultados salvos, quando disponíveis. As fórmulas não são recalculadas, as macros nunca são executadas, as conexões com dados externos não são atualizadas e os links dos documentos não são carregados automaticamente.
 
-A expansão dos arquivos compactados e a renderização da área visível são limitadas para restringir o uso de memória do navegador. Pastas de trabalho grandes ou complexas podem exceder esses limites. Pastas de trabalho criptografadas, arquivos .xls antigos e arquivos habilitados para macros não são compatíveis. Este visualizador não edita, exporta ou imprime planilhas, não executa macros nem carrega recursos externos do documento. Gráficos, imagens, recursos de tabelas dinâmicas e formatações não compatíveis podem diferir do Excel para desktop ou não ser exibidos.
+As tabelas do Numbers aparecem em abas de planilha separadas, com os nomes originais das planilhas e tabelas, quando disponíveis. Documentos antigos do Numbers, anteriores ao Numbers 3, não são compatíveis. Os arquivos de memorando que acompanham arquivos DBF não são carregados. PRN usa o layout de largura fixa do Lotus/Excel; arquivos de impressão arbitrários não são compatíveis. Gráficos, desenhos, recursos de tabelas dinâmicas, fontes e alguns estilos podem estar ausentes nos formatos importados. Uma observação sobre compatibilidade aparece junto ao documento quando essas limitações se aplicam.
+
+Não há um limite fixo de tamanho de arquivo ou quantidade de planilhas. A memória disponível no navegador e as proteções contra expansão de arquivos compactados ainda se aplicam a arquivos complexos. Pastas de trabalho criptografadas ou danificadas não podem ser abertas. Este visualizador não edita, exporta ou imprime planilhas.

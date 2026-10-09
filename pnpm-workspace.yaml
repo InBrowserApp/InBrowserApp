@@ -121,6 +121,7 @@ catalog:
   vitest: ^4.1.9
   webrtc-ips: ^0.2.0
   wrangler: 4.105.0
+  xlsx: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
   xml-js: ^1.6.11
   xxhash-wasm: ^1.1.0
   zod: ^4.4.3

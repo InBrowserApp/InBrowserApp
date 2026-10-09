@@ -1,9 +1,13 @@
-## Een Excel-werkmap bekijken in je browser
+## Spreadsheets en tabellen bekijken in je browser
 
-Open een lokaal .xlsx-bestand of sleep het naar de viewer. Wissel tussen werkbladen, scrol door cellen, pas de zoom aan en bekijk de celinhoud. Gangbare celopmaak en samengevoegde cellen worden weergegeven voor zover ze worden ondersteund.
+Open een lokaal bestand of sleep het naar de viewer. Wissel tussen werkbladen, scrol door cellen, pas de zoom aan en bekijk de celinhoud. Excel-werkmappen behouden hun bestaande leeservaring. CSV- en TSV-bestanden verschijnen als één werkblad; gebruik Scheidingsteken en Tekencodering om de detectie te corrigeren. Tekstkolommen behouden voorloopnullen, lange identificatiecodes en tekst die op datums lijkt ongewijzigd.
+
+Ondersteunde formaten zijn Excel XLSX, XLSM, XLTX, XLTM, XLS en XLSB; CSV en TSV; ODS en FODS; Numbers 3.0 en nieuwer; compatibele WPS ET/ETT- en UOS-spreadsheets; DIF, SLK, PRN en DBF; Lotus WK1/WK3/WK4/WKS/123; Quattro Pro WQ1/WQ2/WB1/WB2/WB3/QPW; Works XLR; en EtherCalc ETH. De compatibiliteit hangt af van de versie en de functies die in elk bestand worden gebruikt. Bij oudere formaten ligt de nadruk op celgegevens, niet op het weergeven van elk visueel detail.
 
 ## Privacy en compatibiliteit
 
-Werkmappen worden lokaal verwerkt en niet door deze tool geüpload of opgeslagen. Lettertypen komen van je apparaat; er worden geen online lettertypen opgehaald. Formulecellen tonen de waarden die in de werkmap zijn opgeslagen, indien beschikbaar. Formules worden niet opnieuw berekend en externe gegevensverbindingen worden niet vernieuwd.
+Bestanden worden lokaal verwerkt en niet door deze tool geüpload of opgeslagen. Lettertypen komen van je apparaat; er worden geen online lettertypen opgehaald. Formulecellen tonen opgeslagen resultaten, indien beschikbaar. Formules worden niet opnieuw berekend, macro's worden nooit uitgevoerd, externe gegevensverbindingen worden niet vernieuwd en documentlinks worden niet automatisch geladen.
 
-De grootte van uitgepakte archieven en de zichtbare weergave is beperkt om het geheugengebruik van de browser te begrenzen. Grote of complexe werkmappen kunnen deze limieten overschrijden. Versleutelde werkmappen, oude .xls-bestanden en bestanden met macro's worden niet ondersteund. Deze viewer bewerkt, exporteert of print geen spreadsheets, voert geen macro's uit en laadt geen externe documentbronnen. Niet-ondersteunde grafieken, afbeeldingen, draaitabelfuncties en opmaak kunnen afwijken van Excel op de desktop of ontbreken.
+Numbers-tabellen verschijnen als aparte werkbladtabbladen, met de oorspronkelijke namen van het werkblad en de tabel indien beschikbaar. Oudere Numbers-documenten van vóór Numbers 3 worden niet ondersteund. Bijbehorende memobestanden voor DBF worden niet geladen. PRN gebruikt de Lotus/Excel-indeling met vaste kolombreedtes; andere soorten afdrukbestanden worden niet ondersteund. Grafieken, tekeningen, draaitabelfuncties, lettertypen en bepaalde opmaak kunnen ontbreken in geïmporteerde formaten. Wanneer deze beperkingen van toepassing zijn, verschijnt er een compatibiliteitsmelding naast het document.
+
+Er geldt geen vaste limiet voor de bestandsgrootte of het aantal werkbladen. Bij complexe bestanden blijven het beschikbare browsergeheugen en de beveiligingen voor het uitpakken van archieven van toepassing. Versleutelde of beschadigde werkmappen kunnen niet worden geopend. Deze viewer bewerkt, exporteert of print geen spreadsheets.
