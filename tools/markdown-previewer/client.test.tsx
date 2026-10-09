@@ -230,31 +230,40 @@ describe("Markdown reading and editing", () => {
     expect(screen.getByText(m.storageFailed)).toBeTruthy()
   })
 
-  test("prints sanitized HTML and safely handles a blocked popup", async () => {
-    mount()
-    await ready("Product launch checklist")
-    const load: Array<() => void> = []
-    const popup = {
-      opener: window,
-      document: { open: vi.fn(), write: vi.fn(), close: vi.fn() },
-      focus: vi.fn(),
-      print: vi.fn(),
-      close: vi.fn(),
-      onafterprint: null as null | (() => void),
-      addEventListener: (_: string, fn: () => void) => load.push(fn),
+  test.each(["during close", "after close"])(
+    "prints sanitized HTML when loading finishes %s and handles a blocked popup",
+    async (timing) => {
+      mount()
+      await ready("Product launch checklist")
+      const load: Array<() => void> = []
+      const popup = {
+        opener: window,
+        document: {
+          open: vi.fn(),
+          write: vi.fn(),
+          close: vi.fn(() => {
+            if (timing === "during close") load.forEach((fn) => fn())
+          }),
+        },
+        focus: vi.fn(),
+        print: vi.fn(),
+        close: vi.fn(),
+        onafterprint: null as null | (() => void),
+        addEventListener: (_: string, fn: () => void) => load.push(fn),
+      }
+      vi.spyOn(window, "open")
+        .mockReturnValueOnce(null)
+        .mockReturnValue(popup as unknown as Window)
+      fireEvent.click(screen.getByRole("button", { name: m.printLabel }))
+      fireEvent.click(screen.getByRole("button", { name: m.printLabel }))
+      expect(popup.document.write.mock.calls[0]?.[0]).toContain(
+        "script-src 'none'"
+      )
+      expect(popup.opener).toBeNull()
+      if (timing === "after close") load.forEach((fn) => fn())
+      expect(popup.print).toHaveBeenCalledTimes(1)
+      popup.onafterprint?.()
+      expect(popup.close).toHaveBeenCalled()
     }
-    vi.spyOn(window, "open")
-      .mockReturnValueOnce(null)
-      .mockReturnValue(popup as unknown as Window)
-    fireEvent.click(screen.getByRole("button", { name: m.printLabel }))
-    fireEvent.click(screen.getByRole("button", { name: m.printLabel }))
-    expect(popup.document.write.mock.calls[0]?.[0]).toContain(
-      "script-src 'none'"
-    )
-    expect(popup.opener).toBeNull()
-    load.forEach((fn) => fn())
-    expect(popup.print).toHaveBeenCalled()
-    popup.onafterprint?.()
-    expect(popup.close).toHaveBeenCalled()
-  })
+  )
 })

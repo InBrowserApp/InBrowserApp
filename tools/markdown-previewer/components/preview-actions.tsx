@@ -33,10 +33,17 @@ export function PreviewActions({
     popup.opener = null
     popup.document.open()
     popup.document.write(html)
-    popup.document.close()
-    popup.focus()
     popup.onafterprint = () => popup.close()
-    popup.addEventListener("load", () => popup.print())
+    // WebKit can finish loading synchronously inside document.close().
+    popup.addEventListener(
+      "load",
+      () => {
+        popup.focus()
+        popup.print()
+      },
+      { once: true }
+    )
+    popup.document.close()
   }
   return (
     <div className="flex flex-wrap gap-1">
