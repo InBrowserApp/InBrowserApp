@@ -6,6 +6,7 @@ import {
   type ReadingLocation,
 } from "@workspace/ui/lib/reading-location"
 import { useReadingPosition } from "@workspace/ui/lib/use-reading-position"
+import { scrollReadingTarget } from "@workspace/ui/lib/scroll-reading-target"
 
 export function ChapterFrame({
   html,
@@ -82,18 +83,13 @@ export function ChapterFrame({
     navigate(() => {
       if (destination.position) {
         restoreReadingLocation(doc, destination.position)
-        ;(doc.defaultView?.frameElement as HTMLElement | null)?.focus()
+        ;(doc.defaultView?.frameElement as HTMLElement | null)?.focus({
+          preventScroll: true,
+        })
         return
       }
       const anchor = destination.anchor?.(doc)
-      if (anchor && typeof anchor !== "number" && "scrollIntoView" in anchor)
-        anchor.scrollIntoView()
-      else if (
-        anchor &&
-        typeof anchor !== "number" &&
-        "getBoundingClientRect" in anchor
-      )
-        doc.defaultView?.scrollBy(0, anchor.getBoundingClientRect().top)
+      if (anchor && typeof anchor !== "number") scrollReadingTarget(doc, anchor)
       else doc.defaultView?.scrollTo(0, 0)
     })
   }, [doc, destination, navigate])

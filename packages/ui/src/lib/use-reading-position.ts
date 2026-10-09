@@ -41,7 +41,7 @@ export function useReadingPosition(doc: Document | null) {
       scroll: update,
       navigate: (change: () => void) => {
         // Firefox needs both layouts flushed after revealing a hidden frame,
-        // otherwise scrollIntoView can run against its previous zero viewport.
+        // otherwise navigation can run against its previous zero viewport.
         view?.frameElement?.getBoundingClientRect()
         doc?.documentElement.getBoundingClientRect()
         change()

@@ -35,8 +35,9 @@ test("keeps the visible passage stable under zoom and scrolls outline targets", 
   scroll.mockClear()
   rerender(<DocumentFrame {...props} zoom={125} target={{ id: "chapter" }} />)
   expect(scroll).toHaveBeenCalledWith(0, 300)
-  expect(into).toHaveBeenCalledOnce()
-  expect(focus).toHaveBeenCalledOnce()
+  expect(scroll).toHaveBeenLastCalledWith(0, 308)
+  expect(into).not.toHaveBeenCalled()
+  expect(focus).toHaveBeenCalledWith({ preventScroll: true })
   expect(frame.getAttribute("srcdoc")).toBe(props.html)
 })
 
@@ -58,17 +59,21 @@ test("handles inert internal links, missing fragments and Escape in focus mode",
   const doc = frame.contentDocument!
   doc.body.innerHTML =
     '<a data-odt-reference="note%20one">Note</a><a data-odt-reference="bad%">Bad</a><details><p id="note one">Footnote</p></details>'
-  const scroll = vi.fn()
-  doc.getElementById("note one")!.scrollIntoView = scroll
+  vi.spyOn(
+    doc.getElementById("note one")!,
+    "getBoundingClientRect"
+  ).mockReturnValue({ top: 680 } as DOMRect)
+  const scroll = vi.spyOn(doc.defaultView!, "scrollBy")
   const dialog = frame.closest("dialog")!
   vi.spyOn(dialog, "matches").mockReturnValue(true)
   const close = vi.fn()
   Object.defineProperty(dialog, "requestClose", { value: close })
   Object.defineProperty(doc.defaultView!, "frameElement", { value: frame })
   fireEvent.load(frame)
+  scroll.mockClear()
   const links = doc.querySelectorAll("a")
   fireEvent.click(links[0]!)
-  expect(scroll).toHaveBeenCalledOnce()
+  expect(scroll).toHaveBeenCalledExactlyOnceWith(0, 680)
   expect(doc.querySelector("details")?.open).toBe(true)
   fireEvent.keyDown(links[1]!, { key: "Enter" })
   expect(missing).toHaveBeenCalledOnce()
