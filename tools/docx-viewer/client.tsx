@@ -31,7 +31,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
       tool="docx-viewer"
       file={file}
       onFile={selectFile}
-      accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      accept=".docx,.docm,.dotx,.dotm,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-word.document.macroEnabled.12,application/vnd.openxmlformats-officedocument.wordprocessingml.template,application/vnd.ms-word.template.macroEnabled.12"
       active={Boolean(file && !error)}
       messages={m}
     >

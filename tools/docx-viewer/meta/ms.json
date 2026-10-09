@@ -1,4 +1,4 @@
 {
   "name": "Pemapar DOCX",
-  "description": "Baca fail Word DOCX secara setempat dengan navigasi halaman, zum, pemilihan teks dan carian. Tiada muat naik."
+  "description": "Baca dokumen dan templat Word DOCX, DOCM, DOTX dan DOTM secara setempat dengan navigasi halaman, zum, pemilihan teks dan carian. Tiada muat naik atau pelaksanaan makro."
 }

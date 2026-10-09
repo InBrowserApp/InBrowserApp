@@ -1,4 +1,4 @@
 {
   "name": "DOCX-visare",
-  "description": "Läs Word-dokument i DOCX-format lokalt med sidnavigering, zoom, textmarkering och sökning. Ingen uppladdning."
+  "description": "Läs Word-dokument och mallar i DOCX-, DOCM-, DOTX- och DOTM-format lokalt med sidnavigering, zoom, textmarkering och sökning. Ingen uppladdning eller körning av makron."
 }

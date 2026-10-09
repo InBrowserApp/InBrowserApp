@@ -28,7 +28,7 @@ export function useReader(
     setError("")
     setLoading(false)
     if (!file || !container.current) return
-    if (!file.name.toLowerCase().endsWith(".docx") || file.size === 0) {
+    if (!/\.(docx|docm|dotx|dotm)$/i.test(file.name) || file.size === 0) {
       setError(messages.invalid)
       return
     }

@@ -1,9 +1,11 @@
 ## Baca dokumen Word dalam pelayar anda
 
-Buka fail .docx setempat atau lepaskannya ke dalam pemapar. Beralih antara halaman, laraskan zum atau muatkan halaman mengikut lebar yang tersedia, pilih teks untuk disalin dan cari dalam dokumen. Jadual, imej, pengepala dan pengaki dipaparkan jika disokong.
+Buka fail .docx, .docm, .dotx atau .dotm setempat atau lepaskannya ke dalam pemapar. Dokumen dan templat dibuka dengan kandungan yang disimpan dalam mod baca sahaja. Beralih antara halaman, laraskan zum atau muatkan halaman mengikut lebar yang tersedia, pilih teks untuk disalin dan cari dalam dokumen. Jadual, imej, pengepala dan pengaki dipaparkan jika disokong.
 
 ## Privasi dan keserasian
 
 Dokumen diproses secara setempat dan tidak dimuat naik atau disimpan oleh alat ini. Fon diambil daripada dokumen atau peranti anda; tiada fon dalam talian diminta. Penggantian fon dan ciri yang tidak disokong boleh mengubah pembalutan baris dan pembahagian halaman berbanding Word versi desktop.
 
-Pengembangan arkib dan saiz halaman yang dipaparkan dihadkan untuk mengehadkan penggunaan memori pelayar. Dokumen yang disulitkan, fail .doc lama, templat dan fail dengan makro tidak disokong. Pemapar ini tidak menyunting, mengeksport atau mencetak dokumen, menjalankan makro atau memuatkan sumber dokumen luaran.
+Dokumen dan templat dengan makro boleh dilihat, tetapi makronya tidak akan dijalankan. Kandungan yang bergantung pada makro, automasi borang atau data luaran tidak dikemas kini. Templat dibuka tanpa mencipta dokumen baharu.
+
+Pengembangan arkib dan saiz halaman yang dipaparkan dihadkan untuk mengehadkan penggunaan memori pelayar. Dokumen yang disulitkan dan fail .doc lama tidak disokong. Pemapar ini tidak menyunting, mengeksport atau mencetak dokumen atau memuatkan sumber dokumen luaran.

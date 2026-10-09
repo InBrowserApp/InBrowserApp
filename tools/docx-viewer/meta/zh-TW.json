@@ -1,4 +1,4 @@
 {
   "name": "DOCX 檢視器",
-  "description": "在本機閱讀 Word DOCX 檔案，支援頁面導覽、縮放、文字選取與搜尋。無須上傳。"
+  "description": "在本機閱讀 Word DOCX、DOCM、DOTX 與 DOTM 文件和範本，支援頁面導覽、縮放、文字選取與搜尋。無須上傳，也不會執行巨集。"
 }

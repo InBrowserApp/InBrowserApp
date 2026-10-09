@@ -1,4 +1,4 @@
 {
   "name": "DOCX-viewer",
-  "description": "Lees Word DOCX-bestanden lokaal met paginanavigatie, zoomen, tekstselectie en zoeken. Geen uploads."
+  "description": "Lees Word-documenten en -sjablonen in DOCX-, DOCM-, DOTX- en DOTM-formaat lokaal met paginanavigatie, zoomen, tekstselectie en zoeken. Geen uploads of uitvoering van macro's."
 }
