@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter Notebook Viewer",
+  "description": "Read local .ipynb notebooks with Markdown, code, saved outputs, and cell navigation. No uploads or code execution."
+}

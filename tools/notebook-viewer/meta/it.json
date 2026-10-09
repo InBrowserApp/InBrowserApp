@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore di notebook Jupyter",
+  "description": "Leggi notebook .ipynb locali con Markdown, codice, output salvati e navigazione tra le celle. Nessun caricamento o esecuzione di codice."
+}

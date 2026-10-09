@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter Notebook Görüntüleyici",
+  "description": "Yerel .ipynb not defterlerini Markdown, kod, kaydedilmiş çıktılar ve hücreler arasında gezinme ile okuyun. Yükleme yapılmaz, kod çalıştırılmaz."
+}

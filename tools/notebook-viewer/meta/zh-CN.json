@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter 笔记本查看器",
+  "description": "阅读本地 .ipynb 笔记本中的 Markdown、代码和已保存的输出，支持单元格导航。不会上传文件或执行代码。"
+}

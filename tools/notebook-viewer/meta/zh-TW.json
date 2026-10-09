@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter 筆記本檢視器",
+  "description": "閱讀本機 .ipynb 筆記本中的 Markdown、程式碼及已儲存的輸出，並透過儲存格導覽。不會上傳或執行程式碼。"
+}

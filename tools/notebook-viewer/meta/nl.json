@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter Notebook Viewer",
+  "description": "Lees lokale .ipynb-notebooks met Markdown, code, opgeslagen uitvoer en celnavigatie. Zonder uploads of uitvoering van code."
+}
