@@ -131,6 +131,7 @@
     "@tool/my-ip-address": "workspace:*",
     "@tool/nanoid-generator": "workspace:*",
     "@tool/number-base-converter": "workspace:*",
+    "@tool/odt-viewer": "workspace:*",
     "@tool/ofd-viewer": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",

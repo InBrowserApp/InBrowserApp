@@ -11410,6 +11410,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "odt-viewer",
+    language: "ar",
+  },
+  {
+    slug: "odt-viewer",
+    language: "de",
+  },
+  {
+    slug: "odt-viewer",
+    language: "en",
+  },
+  {
+    slug: "odt-viewer",
+    language: "es",
+  },
+  {
+    slug: "odt-viewer",
+    language: "fr",
+  },
+  {
+    slug: "odt-viewer",
+    language: "he",
+  },
+  {
+    slug: "odt-viewer",
+    language: "hi",
+  },
+  {
+    slug: "odt-viewer",
+    language: "id",
+  },
+  {
+    slug: "odt-viewer",
+    language: "it",
+  },
+  {
+    slug: "odt-viewer",
+    language: "ja",
+  },
+  {
+    slug: "odt-viewer",
+    language: "ko",
+  },
+  {
+    slug: "odt-viewer",
+    language: "ms",
+  },
+  {
+    slug: "odt-viewer",
+    language: "nl",
+  },
+  {
+    slug: "odt-viewer",
+    language: "no",
+  },
+  {
+    slug: "odt-viewer",
+    language: "pl",
+  },
+  {
+    slug: "odt-viewer",
+    language: "pt",
+  },
+  {
+    slug: "odt-viewer",
+    language: "ru",
+  },
+  {
+    slug: "odt-viewer",
+    language: "sv",
+  },
+  {
+    slug: "odt-viewer",
+    language: "th",
+  },
+  {
+    slug: "odt-viewer",
+    language: "tr",
+  },
+  {
+    slug: "odt-viewer",
+    language: "vi",
+  },
+  {
+    slug: "odt-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "odt-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "ofd-viewer",
     language: "ar",
   },
