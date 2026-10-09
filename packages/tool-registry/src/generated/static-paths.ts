@@ -10950,6 +10950,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mhtml-viewer",
+    language: "ar",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "de",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "en",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "es",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "fr",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "he",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "hi",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "id",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "it",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "ja",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "ko",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "ms",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "nl",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "no",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "pl",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "pt",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "ru",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "sv",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "th",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "tr",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "vi",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "mhtml-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "mime-type-lookup",
     language: "ar",
   },

@@ -14896,6 +14896,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "mhtml-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["mhtml", "mht", "archive", "webpage", "document", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض MHTML",
+        description:
+          "اقرأ أرشيفات الويب MHTML وMHT محلياً مع الصور والأنماط المضمّنة والتنقل داخل المستند، دون طلب موارد من الإنترنت.",
+      },
+      de: {
+        name: "MHTML Viewer",
+        description:
+          "Lies MHTML- und MHT-Webarchive lokal mit mitgespeicherten Bildern, Styles und Dokumentnavigation, ohne Ressourcen aus dem Internet nachzuladen.",
+      },
+      en: {
+        name: "MHTML Viewer",
+        description:
+          "Read MHTML and MHT web archives locally with bundled images, styles, document navigation, and no live resource requests.",
+      },
+      es: {
+        name: "Visor de MHTML",
+        description:
+          "Lee archivos web MHTML y MHT localmente con imágenes y estilos incluidos, navegación por el documento y sin solicitar recursos en línea.",
+      },
+      fr: {
+        name: "Visionneuse MHTML",
+        description:
+          "Lis des archives web MHTML et MHT localement avec leurs images et styles intégrés, la navigation dans le document et aucun chargement de ressources en ligne.",
+      },
+      he: {
+        name: "מציג MHTML",
+        description:
+          "קרא ארכיוני אינטרנט מסוג MHTML ו-MHT באופן מקומי, עם תמונות וסגנונות הכלולים בהם, ניווט במסמך וללא בקשות למשאבים מהאינטרנט.",
+      },
+      hi: {
+        name: "MHTML Viewer",
+        description:
+          "MHTML और MHT वेब आर्काइव को साथ में सहेजी गई छवियों, शैलियों और दस्तावेज़ नेविगेशन के साथ स्थानीय रूप से पढ़ें, बिना ऑनलाइन संसाधनों का अनुरोध किए।",
+      },
+      id: {
+        name: "MHTML Viewer",
+        description:
+          "Baca arsip web MHTML dan MHT secara lokal dengan gambar dan gaya yang disertakan, navigasi dokumen, dan tanpa permintaan sumber daya langsung.",
+      },
+      it: {
+        name: "Visualizzatore MHTML",
+        description:
+          "Leggi archivi web MHTML e MHT localmente con immagini e stili inclusi, navigazione del documento e nessuna richiesta di risorse online.",
+      },
+      ja: {
+        name: "MHTML Viewer",
+        description:
+          "MHTML・MHT Web アーカイブを端末上で閲覧。含まれている画像やスタイル、文書内の移動に対応し、外部リソースへのリクエストは行いません。",
+      },
+      ko: {
+        name: "MHTML 뷰어",
+        description:
+          "기기에서 MHTML 및 MHT 웹 아카이브를 읽으세요. 포함된 이미지와 스타일, 문서 탐색을 지원하며 온라인 리소스를 요청하지 않습니다.",
+      },
+      ms: {
+        name: "Pemapar MHTML",
+        description:
+          "Baca arkib web MHTML dan MHT secara setempat dengan imej dan gaya yang disertakan, navigasi dokumen serta tanpa permintaan sumber langsung.",
+      },
+      nl: {
+        name: "MHTML Viewer",
+        description:
+          "Lees MHTML- en MHT-webarchieven lokaal met gebundelde afbeeldingen, stijlen en documentnavigatie, zonder online bronnen op te vragen.",
+      },
+      no: {
+        name: "MHTML Viewer",
+        description:
+          "Les MHTML- og MHT-nettarkiver lokalt med medfølgende bilder, stiler og dokumentnavigasjon, uten forespørsler om ressurser på nettet.",
+      },
+      pl: {
+        name: "MHTML Viewer",
+        description:
+          "Czytaj lokalnie archiwa stron MHTML i MHT z dołączonymi obrazami, stylami i nawigacją po dokumencie, bez pobierania zasobów z sieci.",
+      },
+      pt: {
+        name: "Visualizador de MHTML",
+        description:
+          "Leia arquivos da web MHTML e MHT localmente com imagens e estilos incluídos, navegação pelo documento e sem solicitações de recursos à internet.",
+      },
+      ru: {
+        name: "Просмотр MHTML",
+        description:
+          "Читайте веб-архивы MHTML и MHT локально: с включёнными изображениями, стилями и навигацией по документу, без запросов ресурсов из сети.",
+      },
+      sv: {
+        name: "MHTML-visare",
+        description:
+          "Läs MHTML- och MHT-webbarkiv lokalt med inkluderade bilder, stilar och dokumentnavigering, utan resursförfrågningar till internet.",
+      },
+      th: {
+        name: "MHTML Viewer",
+        description:
+          "อ่านไฟล์เก็บถาวรเว็บ MHTML และ MHT บนอุปกรณ์ พร้อมรูปภาพ สไตล์ และการนำทางเอกสาร โดยไม่มีการร้องขอทรัพยากรออนไลน์",
+      },
+      tr: {
+        name: "MHTML Görüntüleyici",
+        description:
+          "MHTML ve MHT web arşivlerini, içindeki görseller, stiller ve belge içinde gezinme özelliğiyle yerel olarak okuyun. Çevrimiçi kaynak isteği yapılmaz.",
+      },
+      vi: {
+        name: "Trình xem MHTML",
+        description:
+          "Đọc tệp lưu trữ web MHTML và MHT trên thiết bị với hình ảnh, kiểu hiển thị đi kèm, điều hướng tài liệu và không yêu cầu tài nguyên trực tuyến.",
+      },
+      "zh-CN": {
+        name: "MHTML 查看器",
+        description:
+          "在本地阅读 MHTML 和 MHT 网页存档，支持内含的图片、样式和文档导航，不请求在线资源。",
+      },
+      "zh-TW": {
+        name: "MHTML 檢視器",
+        description:
+          "在本機閱讀 MHTML 與 MHT 網頁封存檔，支援封存的圖片、樣式及文件導覽，且不會向網站請求資源。",
+      },
+    },
+  },
+  {
     slug: "mime-type-lookup",
     category: "network",
     icon: "network",
@@ -44006,6 +44129,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "MD5 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 MD5 雜湊值。更適合遺留系統相容與非安全關鍵的完整性檢查。",
+      },
+    },
+  },
+  "mhtml-viewer": {
+    slug: "mhtml-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["mhtml", "mht", "archive", "webpage", "document", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض MHTML",
+        description:
+          "اقرأ أرشيفات الويب MHTML وMHT محلياً مع الصور والأنماط المضمّنة والتنقل داخل المستند، دون طلب موارد من الإنترنت.",
+      },
+      de: {
+        name: "MHTML Viewer",
+        description:
+          "Lies MHTML- und MHT-Webarchive lokal mit mitgespeicherten Bildern, Styles und Dokumentnavigation, ohne Ressourcen aus dem Internet nachzuladen.",
+      },
+      en: {
+        name: "MHTML Viewer",
+        description:
+          "Read MHTML and MHT web archives locally with bundled images, styles, document navigation, and no live resource requests.",
+      },
+      es: {
+        name: "Visor de MHTML",
+        description:
+          "Lee archivos web MHTML y MHT localmente con imágenes y estilos incluidos, navegación por el documento y sin solicitar recursos en línea.",
+      },
+      fr: {
+        name: "Visionneuse MHTML",
+        description:
+          "Lis des archives web MHTML et MHT localement avec leurs images et styles intégrés, la navigation dans le document et aucun chargement de ressources en ligne.",
+      },
+      he: {
+        name: "מציג MHTML",
+        description:
+          "קרא ארכיוני אינטרנט מסוג MHTML ו-MHT באופן מקומי, עם תמונות וסגנונות הכלולים בהם, ניווט במסמך וללא בקשות למשאבים מהאינטרנט.",
+      },
+      hi: {
+        name: "MHTML Viewer",
+        description:
+          "MHTML और MHT वेब आर्काइव को साथ में सहेजी गई छवियों, शैलियों और दस्तावेज़ नेविगेशन के साथ स्थानीय रूप से पढ़ें, बिना ऑनलाइन संसाधनों का अनुरोध किए।",
+      },
+      id: {
+        name: "MHTML Viewer",
+        description:
+          "Baca arsip web MHTML dan MHT secara lokal dengan gambar dan gaya yang disertakan, navigasi dokumen, dan tanpa permintaan sumber daya langsung.",
+      },
+      it: {
+        name: "Visualizzatore MHTML",
+        description:
+          "Leggi archivi web MHTML e MHT localmente con immagini e stili inclusi, navigazione del documento e nessuna richiesta di risorse online.",
+      },
+      ja: {
+        name: "MHTML Viewer",
+        description:
+          "MHTML・MHT Web アーカイブを端末上で閲覧。含まれている画像やスタイル、文書内の移動に対応し、外部リソースへのリクエストは行いません。",
+      },
+      ko: {
+        name: "MHTML 뷰어",
+        description:
+          "기기에서 MHTML 및 MHT 웹 아카이브를 읽으세요. 포함된 이미지와 스타일, 문서 탐색을 지원하며 온라인 리소스를 요청하지 않습니다.",
+      },
+      ms: {
+        name: "Pemapar MHTML",
+        description:
+          "Baca arkib web MHTML dan MHT secara setempat dengan imej dan gaya yang disertakan, navigasi dokumen serta tanpa permintaan sumber langsung.",
+      },
+      nl: {
+        name: "MHTML Viewer",
+        description:
+          "Lees MHTML- en MHT-webarchieven lokaal met gebundelde afbeeldingen, stijlen en documentnavigatie, zonder online bronnen op te vragen.",
+      },
+      no: {
+        name: "MHTML Viewer",
+        description:
+          "Les MHTML- og MHT-nettarkiver lokalt med medfølgende bilder, stiler og dokumentnavigasjon, uten forespørsler om ressurser på nettet.",
+      },
+      pl: {
+        name: "MHTML Viewer",
+        description:
+          "Czytaj lokalnie archiwa stron MHTML i MHT z dołączonymi obrazami, stylami i nawigacją po dokumencie, bez pobierania zasobów z sieci.",
+      },
+      pt: {
+        name: "Visualizador de MHTML",
+        description:
+          "Leia arquivos da web MHTML e MHT localmente com imagens e estilos incluídos, navegação pelo documento e sem solicitações de recursos à internet.",
+      },
+      ru: {
+        name: "Просмотр MHTML",
+        description:
+          "Читайте веб-архивы MHTML и MHT локально: с включёнными изображениями, стилями и навигацией по документу, без запросов ресурсов из сети.",
+      },
+      sv: {
+        name: "MHTML-visare",
+        description:
+          "Läs MHTML- och MHT-webbarkiv lokalt med inkluderade bilder, stilar och dokumentnavigering, utan resursförfrågningar till internet.",
+      },
+      th: {
+        name: "MHTML Viewer",
+        description:
+          "อ่านไฟล์เก็บถาวรเว็บ MHTML และ MHT บนอุปกรณ์ พร้อมรูปภาพ สไตล์ และการนำทางเอกสาร โดยไม่มีการร้องขอทรัพยากรออนไลน์",
+      },
+      tr: {
+        name: "MHTML Görüntüleyici",
+        description:
+          "MHTML ve MHT web arşivlerini, içindeki görseller, stiller ve belge içinde gezinme özelliğiyle yerel olarak okuyun. Çevrimiçi kaynak isteği yapılmaz.",
+      },
+      vi: {
+        name: "Trình xem MHTML",
+        description:
+          "Đọc tệp lưu trữ web MHTML và MHT trên thiết bị với hình ảnh, kiểu hiển thị đi kèm, điều hướng tài liệu và không yêu cầu tài nguyên trực tuyến.",
+      },
+      "zh-CN": {
+        name: "MHTML 查看器",
+        description:
+          "在本地阅读 MHTML 和 MHT 网页存档，支持内含的图片、样式和文档导航，不请求在线资源。",
+      },
+      "zh-TW": {
+        name: "MHTML 檢視器",
+        description:
+          "在本機閱讀 MHTML 與 MHT 網頁封存檔，支援封存的圖片、樣式及文件導覽，且不會向網站請求資源。",
       },
     },
   },

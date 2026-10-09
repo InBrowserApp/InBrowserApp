@@ -100,6 +100,7 @@ catalog:
   lint-staged: ^16.4.0
   lucide-react: ^0.577.0
   marked: ^16.4.2
+  mhtml-to-html: 2.1.0
   mime-db: ^1.54.0
   murmurhash3js-revisited: ^3.0.0
   openapi-typescript: ^7.13.0
@@ -107,6 +108,7 @@ catalog:
   oxfmt: ^0.56.0
   oxlint: ^1.58.0
   papaparse: ^5.5.4
+  parse5: ^8.0.1
   pdf-lib: ^1.17.1
   pdfjs-dist: ^5.7.284
   prettier: ^3.9.1
