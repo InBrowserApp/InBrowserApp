@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useState } from "react"
 import { useReadingPosition } from "@workspace/ui/lib/use-reading-position"
+import { scrollReadingTarget } from "@workspace/ui/lib/scroll-reading-target"
 
 export function DocumentFrame({
   html,
@@ -32,7 +33,7 @@ export function DocumentFrame({
       if (anchor) {
         navigate(() => {
           anchor.closest("details")?.setAttribute("open", "")
-          anchor.scrollIntoView()
+          scrollReadingTarget(doc!, anchor)
         })
       } else onMissing()
     }
@@ -60,8 +61,10 @@ export function DocumentFrame({
   }, [doc, zoom, preserve])
   useLayoutEffect(() => {
     if (!target || !doc) return
-    navigate(() => doc.getElementById(target.id)?.scrollIntoView())
-    ;(doc.defaultView?.frameElement as HTMLElement | null)?.focus()
+    navigate(() => scrollReadingTarget(doc, doc.getElementById(target.id)))
+    ;(doc.defaultView?.frameElement as HTMLElement | null)?.focus({
+      preventScroll: true,
+    })
   }, [doc, target, navigate])
   // WebKit requires allow-scripts for trusted parent key handlers. The first
   // head CSP blocks all scripts; sanitization removes every navigation path.
