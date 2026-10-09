@@ -395,12 +395,12 @@ catalogs:
       version: 4.4.3
 
 patchedDependencies:
+  '@extend-ai/react-pptx@0.2.2':
+    hash: bde606e53b22a946dedd6ad4aae1c54fc95d1f338548800b490f5f4c820869cc
+    path: patches/@extend-ai__react-pptx@0.2.2.patch
   '@file-viewer/doc@3.1.2':
     hash: e9ec60eab3809b5dada43262fa15902aa67911a6e37b47134db0989557687500
     path: patches/@file-viewer__doc@3.1.2.patch
-  '@extend-ai/react-pptx@0.2.2':
-    hash: fa49698a5c2ed7cf04976c7ba5631f010290ded9689fb4742bcdd776524131c4
-    path: patches/@extend-ai__react-pptx@0.2.2.patch
   caj2pdf-rust@0.6.1:
     hash: 284d32b89a54b2c4cf716b538dda63c896c90a673dadb6a8bf1d35d6228f500d
     path: patches/caj2pdf-rust@0.6.1.patch
@@ -5331,7 +5331,7 @@ importers:
     dependencies:
       '@extend-ai/react-pptx':
         specifier: 'catalog:'
-        version: 0.2.2(patch_hash=fa49698a5c2ed7cf04976c7ba5631f010290ded9689fb4742bcdd776524131c4)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        version: 0.2.2(patch_hash=bde606e53b22a946dedd6ad4aae1c54fc95d1f338548800b490f5f4c820869cc)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -15993,7 +15993,7 @@ snapshots:
     optionalDependencies:
       '@noble/hashes': 2.2.0
 
-  '@extend-ai/react-pptx@0.2.2(patch_hash=fa49698a5c2ed7cf04976c7ba5631f010290ded9689fb4742bcdd776524131c4)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@extend-ai/react-pptx@0.2.2(patch_hash=bde606e53b22a946dedd6ad4aae1c54fc95d1f338548800b490f5f4c820869cc)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@tanstack/react-virtual': 3.14.13(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@tanstack/virtual-core': 3.17.11

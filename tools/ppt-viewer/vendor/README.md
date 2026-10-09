@@ -16,4 +16,6 @@ Do not reuse this patched package in a modern-format viewer. Restore or isolate 
 
 Canvas snapshots decode their intermediate SVG at the natural slide dimensions, then scale in `drawImage`. This avoids WebKit clipping HTML inside `foreignObject` when the SVG viewport scales a `viewBox`; the final canvas still uses the requested bounded dimensions. This path is checked with real desktop and mobile screenshots in Chromium, Firefox, and WebKit.
 
+After inlining assets, snapshots represent raster pictures with SVG `image` elements in the same styled boxes. WebKit otherwise omits HTML `img` contents on repeated `foreignObject` snapshots, including focus-mode resizing; awaiting image decoding does not prevent it. The SVG representation preserves contain, stretch, and crop behavior without timers or changing the source document. Public renderer regressions cover those sizing modes; browser pixel checks cover cold renders, focus, fit, and resizing for the owned PNG and a saved EMF chart.
+
 The parser copies transfer bytes before creating its worker, so an allocation failure cannot leave a worker behind. A regression exercises this through the public parser API.

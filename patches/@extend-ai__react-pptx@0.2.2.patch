@@ -96,7 +96,30 @@ index 58ef2c42a6344c58b563732bb09ca2929aca05b5..3cc3c81914f1cd875cf82356fa15c4ff
      let settled = false;
      const cleanup = () => {
        signal?.removeEventListener("abort", abort);
-@@ -12781,8 +12765,11 @@ var ThumbnailRenderer = class {
+@@ -12635,6 +12619,22 @@ async function serializeSlide(slide, naturalWidth, naturalHeight, width, height, si
+     }
+   });
+   await inlineResources(clone, signal);
++  // WebKit can omit HTML images on repeated foreignObject snapshots even
++  // after decode(). SVG image elements retain their embedded raster content.
++  for (const source of clone.querySelectorAll("img")) {
++    const namespace = "http://www.w3.org/2000/svg";
++    const box = document.createElementNS(namespace, "svg");
++    box.setAttribute("style", source.getAttribute("style") ?? "");
++    box.setAttribute("width", "100%");
++    box.setAttribute("height", "100%");
++    const image = document.createElementNS(namespace, "image");
++    image.setAttribute("width", "100%");
++    image.setAttribute("height", "100%");
++    image.setAttribute("href", source.src);
++    image.setAttribute("preserveAspectRatio", source.style.objectFit === "contain" ? "xMidYMid meet" : "none");
++    box.append(image);
++    source.replaceWith(box);
++  }
+   const content = new XMLSerializer().serializeToString(clone);
+   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${naturalWidth} ${naturalHeight}"><foreignObject width="${naturalWidth}" height="${naturalHeight}">${content}</foreignObject></svg>`;
+ }
+@@ -12781,8 +12781,11 @@ var ThumbnailRenderer = class {
            handle.element,
            size.naturalWidth,
            size.naturalHeight,
