@@ -3,6 +3,7 @@ import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-
 import { DocumentNumberInput } from "@workspace/ui/components/tool/document-number-input"
 import {
   ArrowLeftRight,
+  Undo2,
   ChevronLeft,
   ChevronRight,
   List,
@@ -10,7 +11,9 @@ import {
   Plus,
 } from "@workspace/ui/icons"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
+import type { ReadingLocation } from "@workspace/ui/lib/reading-location"
 import { cn } from "@workspace/ui/lib/utils"
+import { BookHeader } from "./book-header"
 import { ChapterFrame } from "./chapter-frame"
 import { Contents } from "./contents"
 import { useChapter } from "./use-chapter"
@@ -43,6 +46,7 @@ export function BookReader({
       parsed.sections.findIndex((section) => section.linear !== "no")
     ),
   }))
+  const [history, setHistory] = useState<Destination[]>([])
   const [contents, setContents] = useState(false)
   const [size, setSize] = useState(18)
   const [wide, setWide] = useState(false)
@@ -64,10 +68,10 @@ export function BookReader({
     [parsed]
   )
   const follow = useCallback(
-    async (href: string, fromChapter = false) => {
+    async (href: string, position?: ReadingLocation) => {
       const request = ++navigation.current
       try {
-        const resolved = fromChapter
+        const resolved = position
           ? (parsed.sections[index]!.resolveHref?.(href) ?? href)
           : href
         if (/^https?:\/\//i.test(resolved)) {
@@ -76,13 +80,21 @@ export function BookReader({
         }
         const next = await parsed.resolveHref(resolved)
         if (request !== navigation.current) return
+        if (
+          position &&
+          m.returnToText &&
+          next &&
+          next.index >= 0 &&
+          next.index < parsed.sections.length
+        )
+          setHistory((entries) => [...entries, { index, position }])
         go(next)
-        if (!fromChapter) contentsButton.current?.focus()
+        if (!position) contentsButton.current?.focus()
       } catch {
         if (request === navigation.current) setBlockedLink(true)
       }
     },
-    [parsed, index, go]
+    [parsed, index, go, m.returnToText]
   )
   const toc = parsed.toc?.length
     ? parsed.toc
@@ -97,31 +109,11 @@ export function BookReader({
   )
   return (
     <>
-      <div className="flex shrink-0 items-center gap-3 border-b px-4 py-3">
-        {book.cover && !coverFailed ? (
-          <img
-            src={book.cover}
-            alt={m.cover}
-            width={32}
-            height={48}
-            onError={() => setCoverFailed(true)}
-            className="h-12 w-8 shrink-0 object-contain"
-          />
-        ) : null}
-        <div className="min-w-0 flex-1" dir="auto">
-          <h2 className="line-clamp-2 text-sm font-medium" title={book.title}>
-            {book.title}
-          </h2>
-          {book.author ? (
-            <p
-              className="truncate text-xs text-muted-foreground"
-              title={book.author}
-            >
-              {book.author}
-            </p>
-          ) : null}
-        </div>
-      </div>
+      <BookHeader
+        book={book}
+        messages={m}
+        onCoverError={() => setCoverFailed(true)}
+      />
       <div className="flex shrink-0 flex-wrap items-center justify-between gap-2 border-b p-2">
         <div className="flex items-center gap-1">
           <DocumentIconButton
@@ -160,6 +152,17 @@ export function BookReader({
           </DocumentIconButton>
         </div>
         <div className="flex items-center gap-1">
+          {m.returnToText && history.length ? (
+            <DocumentIconButton
+              label={m.returnToText}
+              onClick={() => {
+                go(history[history.length - 1]!)
+                setHistory((entries) => entries.slice(0, -1))
+              }}
+            >
+              <Undo2 aria-hidden="true" className="rtl:rotate-180" />
+            </DocumentIconButton>
+          ) : null}
           <DocumentIconButton
             label={m.smallerText}
             disabled={size <= 14}
@@ -245,7 +248,8 @@ export function BookReader({
               size={size}
               wide={wide}
               destination={destination}
-              onLink={(href) => follow(href, true)}
+              onLink={(href, position) => follow(href, position)}
+              onResourceError={() => setCoverFailed(true)}
             />
           )}
         </div>

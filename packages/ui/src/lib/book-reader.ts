@@ -1,3 +1,4 @@
+import type { ReadingLocation } from "./reading-location"
 export type ContentsItem = {
   label: string
   href: string
@@ -5,6 +6,7 @@ export type ContentsItem = {
 }
 export type Destination = {
   index: number
+  position?: ReadingLocation
   anchor?: (doc: Document) => Element | Range | number | null
 }
 export interface ReadingSection {
@@ -23,6 +25,7 @@ export interface ReadingBook {
     ) => Destination | null | Promise<Destination | null>
   }
   title: string
+  description?: string
   author: string
   cover: string | null
   missing: boolean
@@ -49,4 +52,4 @@ export type BookReaderMessages = Record<
   | "missingContent"
   | "limitedContent",
   string
->
+> & { returnToText?: string; description?: string }
