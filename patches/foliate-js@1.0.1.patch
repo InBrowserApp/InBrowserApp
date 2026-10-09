@@ -1,3 +1,34 @@
+diff --git a/fb2.js b/fb2.js
+index ce9bdc0ca798d7c45667fd347aa3f3203457862c..9681ce2e5181417189fac1afc429809459994378 100644
+--- a/fb2.js
++++ b/fb2.js
+@@ -34,6 +34,7 @@ const TABLE = {
+ }
+ 
+ const POEM = {
++    'title': ['header', { 'p': ['h2', STYLE], 'empty-line': ['br'] }],
+     'epigraph': ['blockquote'],
+     'subtitle': ['h2', STYLE],
+     'text-author': ['p', STYLE],
+@@ -91,6 +92,7 @@ class FB2Converter {
+     }
+     image(node) {
+         const el = this.doc.createElement('img')
++        if (node.id) el.id = node.id
+         el.alt = node.getAttribute('alt')
+         el.title = node.getAttribute('title')
+         el.setAttribute('src', this.getImageSrc(node))
+@@ -114,7 +116,9 @@ class FB2Converter {
+             }],
+         })
+         for (const child of node.children) if (child.nodeName === 'v') {
+-            el.append(this.doc.createTextNode(child.textContent))
++            // Preserve emphasis and links inside verse lines.
++            const line = this.convert(child, { 'v': ['span', STYLE] })
++            el.append(...line.childNodes)
+             el.append(this.doc.createElement('br'))
+         }
+         return el
 diff --git a/mobi.js b/mobi.js
 index 116477d46aa5782f4082f11c543735818c84e64f..f8f1b6a43ef729b176759e7813fc2102a46e978a 100644
 --- a/mobi.js

@@ -31,7 +31,6 @@ export function Contents({
         {flatten(items).map(({ item, depth }, index) => (
           <li
             key={index}
-            className="[contain-intrinsic-size:auto_44px] [content-visibility:auto]"
             style={{ paddingInlineStart: Math.min(depth, 8) * 12 }}
           >
             <Button

@@ -8511,6 +8511,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "fb2-reader",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "fb2",
+      "fbz",
+      "fictionbook",
+      "ebook",
+      "reader",
+      "viewer",
+      "book",
+      "offline",
+      "document",
+    ],
+    locales: {
+      ar: {
+        name: "قارئ FB2",
+        description:
+          "اقرأ كتب FB2 وFBZ محليًا مع الأقسام والرسوم التوضيحية والشعر والحواشي. اضبط حجم النص وعد من الحاشية إلى موضع القراءة.",
+      },
+      de: {
+        name: "FB2 Reader",
+        description:
+          "Lesen Sie FB2- und FBZ-Bücher lokal mit Abschnitten, Bildern, Gedichten und Anmerkungen. Passen Sie die Schriftgröße an und kehren Sie von einer Anmerkung zur Leseposition zurück.",
+      },
+      en: {
+        name: "FB2 Reader",
+        description:
+          "Read FB2 and FBZ books locally with sections, illustrations, poetry, and notes. Adjust text size and return from a note to your reading position.",
+      },
+      es: {
+        name: "Lector FB2",
+        description:
+          "Lee libros FB2 y FBZ localmente con secciones, ilustraciones, poesía y notas. Ajusta el tamaño del texto y vuelve de una nota al punto de lectura.",
+      },
+      fr: {
+        name: "Lecteur FB2",
+        description:
+          "Lisez des livres FB2 et FBZ en local, avec sections, illustrations, poésie et notes. Ajustez la taille du texte et retrouvez votre position après avoir consulté une note.",
+      },
+      he: {
+        name: "FB2 Reader",
+        description:
+          "קריאת ספרי FB2 ו-FBZ באופן מקומי, עם חלקים, איורים, שירה והערות. אפשר לשנות את גודל הטקסט ולחזור מהערה למיקום הקריאה.",
+      },
+      hi: {
+        name: "FB2 Reader",
+        description:
+          "खंडों, चित्रों, कविता और टिप्पणियों सहित FB2 और FBZ पुस्तकें स्थानीय रूप से पढ़ें। टेक्स्ट का आकार बदलें और टिप्पणी से पढ़ने की पिछली जगह पर लौटें।",
+      },
+      id: {
+        name: "FB2 Reader",
+        description:
+          "Baca buku FB2 dan FBZ secara lokal, lengkap dengan bagian, ilustrasi, puisi, dan catatan. Sesuaikan ukuran teks dan kembali dari catatan ke posisi baca Anda.",
+      },
+      it: {
+        name: "Lettore FB2",
+        description:
+          "Leggi libri FB2 e FBZ in locale con sezioni, illustrazioni, poesie e note. Regola la dimensione del testo e torna da una nota al punto di lettura.",
+      },
+      ja: {
+        name: "FB2 リーダー",
+        description:
+          "FB2 や FBZ の本を端末内で閲覧。セクション、挿絵、詩、注釈に対応。文字サイズを調整でき、注釈から読んでいた位置に戻れます。",
+      },
+      ko: {
+        name: "FB2 리더",
+        description:
+          "FB2와 FBZ 책의 절, 삽화, 시, 주석을 기기에서 읽으세요. 글자 크기를 조절하고 주석에서 읽던 위치로 돌아갈 수 있습니다.",
+      },
+      ms: {
+        name: "Pembaca FB2",
+        description:
+          "Baca buku FB2 dan FBZ secara setempat dengan bahagian, ilustrasi, puisi dan nota. Laraskan saiz teks dan kembali dari nota ke tempat bacaan anda.",
+      },
+      nl: {
+        name: "FB2 Reader",
+        description:
+          "Lees FB2- en FBZ-boeken lokaal met secties, illustraties, poëzie en noten. Pas de tekstgrootte aan en keer vanuit een noot terug naar je leespositie.",
+      },
+      no: {
+        name: "FB2 Reader",
+        description:
+          "Les FB2- og FBZ-bøker lokalt med deler, illustrasjoner, poesi og noter. Juster tekststørrelsen og gå tilbake fra en note til leseposisjonen.",
+      },
+      pl: {
+        name: "FB2 Reader",
+        description:
+          "Czytaj lokalnie książki FB2 i FBZ z sekcjami, ilustracjami, poezją i przypisami. Dostosuj rozmiar tekstu i wracaj z przypisu do miejsca czytania.",
+      },
+      pt: {
+        name: "Leitor FB2",
+        description:
+          "Leia livros FB2 e FBZ localmente, com seções, ilustrações, poesia e notas. Ajuste o tamanho do texto e volte de uma nota ao seu ponto de leitura.",
+      },
+      ru: {
+        name: "Читалка FB2",
+        description:
+          "Читайте книги FB2 и FBZ локально: разделы, иллюстрации, стихи и примечания. Меняйте размер текста и возвращайтесь из примечания к месту чтения.",
+      },
+      sv: {
+        name: "FB2-läsare",
+        description:
+          "Läs FB2- och FBZ-böcker lokalt med avsnitt, illustrationer, poesi och noter. Anpassa textstorleken och återgå från en not till din läsposition.",
+      },
+      th: {
+        name: "FB2 Reader",
+        description:
+          "อ่านหนังสือ FB2 และ FBZ ในอุปกรณ์ พร้อมส่วนต่าง ๆ ภาพประกอบ บทกวี และหมายเหตุ ปรับขนาดตัวอักษรและกลับจากหมายเหตุไปยังตำแหน่งที่อ่าน",
+      },
+      tr: {
+        name: "FB2 Okuyucu",
+        description:
+          "FB2 ve FBZ kitaplarını bölümler, görseller, şiirler ve notlarla yerel olarak okuyun. Yazı boyutunu ayarlayın ve nottan okuma konumunuza dönün.",
+      },
+      vi: {
+        name: "Trình đọc FB2",
+        description:
+          "Đọc sách FB2 và FBZ ngay trên thiết bị, với các mục, hình minh họa, thơ và chú thích. Điều chỉnh cỡ chữ và quay lại vị trí đang đọc từ chú thích.",
+      },
+      "zh-CN": {
+        name: "FB2 阅读器",
+        description:
+          "在本地阅读 FB2 和 FBZ 书籍，查看章节、插图、诗歌和注释。可调整字号，并从注释返回原阅读位置。",
+      },
+      "zh-TW": {
+        name: "FB2 閱讀器",
+        description:
+          "在本機閱讀 FB2 與 FBZ 書籍，支援章節、插圖、詩歌及註釋。調整文字大小，並從註釋返回原本的閱讀位置。",
+      },
+    },
+  },
+  {
     slug: "file-to-data-uri-converter",
     category: "web",
     icon: "file-text",

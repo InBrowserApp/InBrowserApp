@@ -387,7 +387,7 @@ patchedDependencies:
     hash: c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484
     path: patches/curlconverter@4.12.0.patch
   foliate-js@1.0.1:
-    hash: 4ba6120ea5015129760413021ff3ecc6f73ff6d865418de0e033b1d9c0e49f14
+    hash: d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236
     path: patches/foliate-js@1.0.1.patch
 
 importers:
@@ -724,6 +724,9 @@ importers:
       '@tool/favicon-assets-generator':
         specifier: workspace:*
         version: link:../../tools/favicon-assets-generator
+      '@tool/fb2-reader':
+        specifier: workspace:*
+        version: link:../../tools/fb2-reader
       '@tool/file-to-data-uri-converter':
         specifier: workspace:*
         version: link:../../tools/file-to-data-uri-converter
@@ -2994,7 +2997,7 @@ importers:
         version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
       foliate-js:
         specifier: 'catalog:'
-        version: 1.0.1(patch_hash=4ba6120ea5015129760413021ff3ecc6f73ff6d865418de0e033b1d9c0e49f14)
+        version: 1.0.1(patch_hash=d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3079,6 +3082,37 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+      react:
+        specifier: 'catalog:'
+        version: 19.2.7
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.7(react@19.2.7)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      vitest:
+        specifier: 'catalog:'
+        version: 4.1.9(@types/node@25.9.4)(@vitest/coverage-v8@4.1.9)(happy-dom@20.10.6)(jsdom@29.1.1(@noble/hashes@2.2.0))(msw@2.12.14(@types/node@25.9.4)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.22.4)(yaml@2.8.3))
+
+  tools/fb2-reader:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@zip.js/zip.js':
+        specifier: 'catalog:'
+        version: 2.8.26
+      astro:
+        specifier: 'catalog:'
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+      foliate-js:
+        specifier: 'catalog:'
+        version: 1.0.1(patch_hash=d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4472,7 +4506,7 @@ importers:
         version: 0.8.3
       foliate-js:
         specifier: 'catalog:'
-        version: 1.0.1(patch_hash=4ba6120ea5015129760413021ff3ecc6f73ff6d865418de0e033b1d9c0e49f14)
+        version: 1.0.1(patch_hash=d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -19151,7 +19185,7 @@ snapshots:
 
   flattie@1.1.1: {}
 
-  foliate-js@1.0.1(patch_hash=4ba6120ea5015129760413021ff3ecc6f73ff6d865418de0e033b1d9c0e49f14):
+  foliate-js@1.0.1(patch_hash=d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236):
     dependencies:
       construct-style-sheets-polyfill: 3.1.0
 

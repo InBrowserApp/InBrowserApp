@@ -88,6 +88,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "exif-viewer": () => import("@tool/exif-viewer/page"),
   "favicon-assets-generator": () =>
     import("@tool/favicon-assets-generator/page"),
+  "fb2-reader": () => import("@tool/fb2-reader/page"),
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
   "gif-to-animated-webp-converter": () =>

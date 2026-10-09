@@ -1,5 +1,10 @@
 import { useEffect, useLayoutEffect, useState } from "react"
 import type { Destination } from "@workspace/ui/lib/book-reader"
+import {
+  captureReadingLocation,
+  restoreReadingLocation,
+  type ReadingLocation,
+} from "@workspace/ui/lib/reading-location"
 import { readingPosition } from "@workspace/ui/lib/reading-position"
 
 export function ChapterFrame({
@@ -9,13 +14,15 @@ export function ChapterFrame({
   wide,
   destination,
   onLink,
+  onResourceError,
 }: {
   html: string
   title: string
   size: number
   wide: boolean
   destination: Destination
-  onLink: (href: string) => void
+  onLink: (href: string, position: ReadingLocation) => void
+  onResourceError: () => void
 }) {
   const [doc, setDoc] = useState<Document | null>(null)
   useEffect(() => {
@@ -25,7 +32,7 @@ export function ChapterFrame({
       if (!anchor) return
       event.preventDefault()
       const href = anchor.getAttribute("data-epub-href")
-      if (href) onLink(href)
+      if (href) onLink(href, captureReadingLocation(doc!))
     }
     function keydown(event: KeyboardEvent) {
       if (event.key === "Enter" && !event.defaultPrevented) {
@@ -39,13 +46,27 @@ export function ChapterFrame({
         dialog.requestClose()
       }
     }
+    function failed(event: Event) {
+      const target = event.target as Element
+      if (target?.localName === "img" && target.getAttribute("src"))
+        onResourceError()
+    }
+    if (
+      Array.from(doc.images).some(
+        (image) =>
+          image.getAttribute("src") && image.complete && !image.naturalWidth
+      )
+    )
+      onResourceError()
+    doc.addEventListener("error", failed, true)
     doc.addEventListener("click", activate)
     doc.addEventListener("keydown", keydown)
     return () => {
+      doc.removeEventListener("error", failed, true)
       doc.removeEventListener("click", activate)
       doc.removeEventListener("keydown", keydown)
     }
-  }, [doc, onLink])
+  }, [doc, onLink, onResourceError])
   useLayoutEffect(() => {
     if (!doc) return
     const position = readingPosition(doc)
@@ -63,6 +84,11 @@ export function ChapterFrame({
   }, [doc, size, wide])
   useLayoutEffect(() => {
     if (!doc) return
+    if (destination.position) {
+      restoreReadingLocation(doc, destination.position)
+      ;(doc.defaultView?.frameElement as HTMLElement | null)?.focus()
+      return
+    }
     const anchor = destination.anchor?.(doc)
     if (anchor && typeof anchor !== "number" && "scrollIntoView" in anchor)
       anchor.scrollIntoView()

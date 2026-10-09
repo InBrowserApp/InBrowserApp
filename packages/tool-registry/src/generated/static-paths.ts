@@ -6166,6 +6166,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "fb2-reader",
+    language: "ar",
+  },
+  {
+    slug: "fb2-reader",
+    language: "de",
+  },
+  {
+    slug: "fb2-reader",
+    language: "en",
+  },
+  {
+    slug: "fb2-reader",
+    language: "es",
+  },
+  {
+    slug: "fb2-reader",
+    language: "fr",
+  },
+  {
+    slug: "fb2-reader",
+    language: "he",
+  },
+  {
+    slug: "fb2-reader",
+    language: "hi",
+  },
+  {
+    slug: "fb2-reader",
+    language: "id",
+  },
+  {
+    slug: "fb2-reader",
+    language: "it",
+  },
+  {
+    slug: "fb2-reader",
+    language: "ja",
+  },
+  {
+    slug: "fb2-reader",
+    language: "ko",
+  },
+  {
+    slug: "fb2-reader",
+    language: "ms",
+  },
+  {
+    slug: "fb2-reader",
+    language: "nl",
+  },
+  {
+    slug: "fb2-reader",
+    language: "no",
+  },
+  {
+    slug: "fb2-reader",
+    language: "pl",
+  },
+  {
+    slug: "fb2-reader",
+    language: "pt",
+  },
+  {
+    slug: "fb2-reader",
+    language: "ru",
+  },
+  {
+    slug: "fb2-reader",
+    language: "sv",
+  },
+  {
+    slug: "fb2-reader",
+    language: "th",
+  },
+  {
+    slug: "fb2-reader",
+    language: "tr",
+  },
+  {
+    slug: "fb2-reader",
+    language: "vi",
+  },
+  {
+    slug: "fb2-reader",
+    language: "zh-CN",
+  },
+  {
+    slug: "fb2-reader",
+    language: "zh-TW",
+  },
+  {
     slug: "file-to-data-uri-converter",
     language: "ar",
   },
