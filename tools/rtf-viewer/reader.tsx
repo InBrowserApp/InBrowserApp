@@ -26,6 +26,7 @@ export function Reader({
   const [manualZoom, setZoom] = useState(100)
   const [size, setSize] = useState({ width: 0, height: 0 })
   const root = useRef<HTMLDivElement>(null)
+  const paper = useRef<HTMLDivElement>(null)
   const anchor = useRef<{ x: number; y: number } | null>(null)
   const onPage = useCallback(
     (next: number) => {
@@ -62,20 +63,34 @@ export function Reader({
         )
       : manualZoom
   function rememberPosition() {
+    anchor.current = null
     const region = root.current!
+    const bounds = paper.current?.getBoundingClientRect()
+    if (!bounds?.width || !bounds.height) return
+    const viewport = region.getBoundingClientRect()
     anchor.current = {
-      x: (region.scrollLeft + region.clientWidth / 2) / zoom,
-      y: (region.scrollTop + region.clientHeight / 2) / zoom,
+      x: (viewport.left + region.clientWidth / 2 - bounds.left) / bounds.width,
+      y: (viewport.top + region.clientHeight / 2 - bounds.top) / bounds.height,
     }
   }
   useLayoutEffect(() => {
+    const position = anchor.current
+    const bounds = paper.current?.getBoundingClientRect()
+    anchor.current = null
+    if (!position || !bounds) return
     const region = root.current!
-    if (anchor.current) {
-      region.scrollLeft = anchor.current.x * zoom - region.clientWidth / 2
-      region.scrollTop = anchor.current.y * zoom - region.clientHeight / 2
-      anchor.current = null
-    }
-  }, [zoom])
+    const viewport = region.getBoundingClientRect()
+    region.scrollBy(
+      bounds.left +
+        position.x * bounds.width -
+        viewport.left -
+        region.clientWidth / 2,
+      bounds.top +
+        position.y * bounds.height -
+        viewport.top -
+        region.clientHeight / 2
+    )
+  }, [zoom, fit, manualZoom])
   const notes = diagnosticMessages(rtf.diagnostics, m)
   return (
     <>
@@ -93,6 +108,13 @@ export function Reader({
         reader={{
           page: onPage,
           zoom: (value) => {
+            if (
+              (value === "page-width" && fit === "width") ||
+              (typeof value === "number" &&
+                fit === null &&
+                value === manualZoom)
+            )
+              return
             rememberPosition()
             if (value === "page-width") setFit("width")
             else {
@@ -106,6 +128,7 @@ export function Reader({
           <DocumentIconButton
             label={m.fitPage}
             onClick={() => {
+              if (fit === "page") return
               rememberPosition()
               setFit("page")
             }}
@@ -146,13 +169,15 @@ export function Reader({
         }}
       >
         <div className="flex min-h-full w-max min-w-full items-start justify-center">
-          <PageView
-            document={rtf}
-            page={page}
-            zoom={zoom}
-            match={search.match}
-            messages={m}
-          />
+          <div ref={paper} className="shrink-0">
+            <PageView
+              document={rtf}
+              page={page}
+              zoom={zoom}
+              match={search.match}
+              messages={m}
+            />
+          </div>
         </div>
       </div>
       <details className="max-h-36 shrink-0 overflow-auto border-t px-3 py-1">
