@@ -43,6 +43,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/business-days-calculator/page"),
   camera: () => import("@tool/camera/page"),
   "case-converter": () => import("@tool/case-converter/page"),
+  "cbz-reader": () => import("@tool/cbz-reader/page"),
   "certificate-public-key-parser": () =>
     import("@tool/certificate-public-key-parser/page"),
   "chinese-uppercase-number-converter": () =>
