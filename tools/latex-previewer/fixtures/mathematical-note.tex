@@ -1,0 +1,48 @@
+\documentclass{article}
+\title{A short note on convergent series}
+\author{InBrowser.App fixture}
+\date{October 2026}
+\newcommand{\energy}[1]{E_{#1}}
+\begin{document}
+\maketitle
+\begin{abstract}
+A self-contained reading sample: mathematics, plain tables, references, and multilingual text. No packages or external files are needed.
+\end{abstract}
+\tableofcontents
+\section{A useful identity}\label{identity}
+For a geometric sequence with $|r|<1$, the partial sums approach a finite value. Inline mathematics keeps the surrounding paragraph readable: $e^{i\pi}+1=0$.
+\begin{equation}\label{sum}
+\sum_{n=0}^{\infty} r^n = \frac{1}{1-r}
+\end{equation}
+A locally defined macro can appear in mathematics: $\energy{n}=n^2$. A square root and an integral are represented with native mathematical structure:
+\[
+\int_0^1 x^2\,dx = \frac{1}{3}, \qquad \sqrt{a^2+b^2}.
+\]
+\[
+\begin{pmatrix}1 & 2\\3 & 4\end{pmatrix}, \qquad x \not= y.
+\]
+\subsection{Reading the assumptions}
+\begin{enumerate}
+\item The ratio has absolute value smaller than one.
+\item The first term is one.
+\item The terms are added in their original order.
+\end{enumerate}
+\section{A small table}
+\begin{tabular}{lcr}
+Case & Ratio & Sum \\\hline
+One & $1/2$ & $2$ \\
+Two & $1/3$ & $3/2$ \\
+Three & $1/4$ & $4/3$
+\end{tabular}
+\section{Languages and references}
+Café, naïve, Ελληνικά, 日本語, 中文, العربية, עברית. The surrounding source remains available for inspection.
+The main assumption appears in Section~\ref{identity}; the series is written in Equation~\eqref{sum}. A manually written bibliography entry is cited here~\cite{owned}.
+\begin{thebibliography}{9}
+\bibitem{owned} InBrowser.App. A local preview fixture. 2026.
+\end{thebibliography}
+\section{Literal source}
+\begin{verbatim}
+\input{not-a-real-dependency}
+{ dollar $ and percent % are literal here }
+\end{verbatim}
+\end{document}

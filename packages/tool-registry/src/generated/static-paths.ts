@@ -10306,6 +10306,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "latex-previewer",
+    language: "ar",
+  },
+  {
+    slug: "latex-previewer",
+    language: "de",
+  },
+  {
+    slug: "latex-previewer",
+    language: "en",
+  },
+  {
+    slug: "latex-previewer",
+    language: "es",
+  },
+  {
+    slug: "latex-previewer",
+    language: "fr",
+  },
+  {
+    slug: "latex-previewer",
+    language: "he",
+  },
+  {
+    slug: "latex-previewer",
+    language: "hi",
+  },
+  {
+    slug: "latex-previewer",
+    language: "id",
+  },
+  {
+    slug: "latex-previewer",
+    language: "it",
+  },
+  {
+    slug: "latex-previewer",
+    language: "ja",
+  },
+  {
+    slug: "latex-previewer",
+    language: "ko",
+  },
+  {
+    slug: "latex-previewer",
+    language: "ms",
+  },
+  {
+    slug: "latex-previewer",
+    language: "nl",
+  },
+  {
+    slug: "latex-previewer",
+    language: "no",
+  },
+  {
+    slug: "latex-previewer",
+    language: "pl",
+  },
+  {
+    slug: "latex-previewer",
+    language: "pt",
+  },
+  {
+    slug: "latex-previewer",
+    language: "ru",
+  },
+  {
+    slug: "latex-previewer",
+    language: "sv",
+  },
+  {
+    slug: "latex-previewer",
+    language: "th",
+  },
+  {
+    slug: "latex-previewer",
+    language: "tr",
+  },
+  {
+    slug: "latex-previewer",
+    language: "vi",
+  },
+  {
+    slug: "latex-previewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "latex-previewer",
+    language: "zh-TW",
+  },
+  {
     slug: "list-comparer",
     language: "ar",
   },

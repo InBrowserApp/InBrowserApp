@@ -119,6 +119,7 @@
     "@tool/jwt-signer": "workspace:*",
     "@tool/keccak-hash-text-or-file": "workspace:*",
     "@tool/ksuid-generator": "workspace:*",
+    "@tool/latex-previewer": "workspace:*",
     "@tool/list-comparer": "workspace:*",
     "@tool/local-font-book": "workspace:*",
     "@tool/lorem-ipsum-generator": "workspace:*",

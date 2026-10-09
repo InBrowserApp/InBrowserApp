@@ -14029,6 +14029,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "latex-previewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["latex", "tex", "math", "document", "preview", "viewer"],
+    locales: {
+      ar: {
+        name: "معاينة LaTeX",
+        description:
+          "عاين مستندات LaTeX المكتفية بذاتها محليًا مع معادلات واضحة ومخطط للعناوين وإمكانية فحص المصدر وملاحظات التوافق.",
+      },
+      de: {
+        name: "LaTeX Previewer",
+        description:
+          "Sieh dir eigenständige LaTeX-Dokumente lokal an: mit lesbaren Formeln, Gliederung, Quelltextansicht und Kompatibilitätshinweisen.",
+      },
+      en: {
+        name: "LaTeX Previewer",
+        description:
+          "Preview self-contained LaTeX documents locally with readable mathematics, an outline, source inspection, and compatibility notes.",
+      },
+      es: {
+        name: "Vista previa de LaTeX",
+        description:
+          "Previsualiza documentos LaTeX autocontenidos en tu dispositivo con fórmulas legibles, un esquema, consulta del código fuente y notas de compatibilidad.",
+      },
+      fr: {
+        name: "Aperçu LaTeX",
+        description:
+          "Prévisualisez localement des documents LaTeX autonomes avec des formules lisibles, un plan, un accès à la source et des notes de compatibilité.",
+      },
+      he: {
+        name: "LaTeX Previewer",
+        description:
+          "תצוגה מקדימה מקומית של מסמכי LaTeX שכל תוכנם כלול בקובץ, עם מתמטיקה קריאה, ראשי פרקים, עיון במקור והערות תאימות.",
+      },
+      hi: {
+        name: "LaTeX Previewer",
+        description:
+          "पढ़ने योग्य गणित, रूपरेखा, स्रोत निरीक्षण और संगतता संबंधी टिप्पणियों के साथ एक ही फ़ाइल में मौजूद LaTeX दस्तावेज़ों का स्थानीय पूर्वावलोकन देखें।",
+      },
+      id: {
+        name: "LaTeX Previewer",
+        description:
+          "Pratinjau dokumen LaTeX dalam satu file lengkap secara lokal, dengan matematika yang mudah dibaca, kerangka dokumen, pemeriksaan sumber, dan catatan kompatibilitas.",
+      },
+      it: {
+        name: "Anteprima LaTeX",
+        description:
+          "Visualizza in locale l’anteprima di documenti LaTeX autonomi con formule leggibili, struttura del documento, esame del sorgente e note di compatibilità.",
+      },
+      ja: {
+        name: "LaTeX Previewer",
+        description:
+          "単一ファイルで完結する LaTeX 文書を端末内でプレビューできます。読みやすい数式表示、目次、ソースの確認、互換性の注意事項に対応しています。",
+      },
+      ko: {
+        name: "LaTeX 미리보기",
+        description:
+          "하나의 파일로 완결된 LaTeX 문서를 기기에서 미리 보세요. 읽기 쉬운 수식, 목차, 소스 확인 및 호환성 참고 사항을 제공합니다.",
+      },
+      ms: {
+        name: "Pemapar Pratonton LaTeX",
+        description:
+          "Pratonton dokumen LaTeX serba lengkap secara setempat dengan matematik yang boleh dibaca, rangka, pemeriksaan sumber dan nota keserasian.",
+      },
+      nl: {
+        name: "LaTeX Previewer",
+        description:
+          "Bekijk zelfstandige LaTeX-documenten lokaal met leesbare wiskunde, een inhoudsopgave, brontekstweergave en compatibiliteitsopmerkingen.",
+      },
+      no: {
+        name: "LaTeX-forhåndsvisning",
+        description:
+          "Forhåndsvis selvstendige LaTeX-dokumenter lokalt med lesbar matematikk, dokumentoversikt, kildevisning og kompatibilitetsmerknader.",
+      },
+      pl: {
+        name: "LaTeX Previewer",
+        description:
+          "Przeglądaj lokalnie samodzielne dokumenty LaTeX z czytelnymi wzorami, spisem treści, podglądem źródła i uwagami dotyczącymi zgodności.",
+      },
+      pt: {
+        name: "Visualizador de LaTeX",
+        description:
+          "Visualize documentos LaTeX autossuficientes localmente, com fórmulas legíveis, estrutura de títulos, inspeção do código-fonte e notas de compatibilidade.",
+      },
+      ru: {
+        name: "Предпросмотр LaTeX",
+        description:
+          "Просматривайте автономные документы LaTeX локально: читаемые формулы, структура документа, исходный текст и примечания о совместимости.",
+      },
+      sv: {
+        name: "LaTeX Previewer",
+        description:
+          "Förhandsvisa fristående LaTeX-dokument lokalt med läsbar matematik, dokumentöversikt, källtextgranskning och kompatibilitetsnotiser.",
+      },
+      th: {
+        name: "LaTeX Previewer",
+        description:
+          "ดูตัวอย่างเอกสาร LaTeX ที่มีเนื้อหาครบในไฟล์เดียวบนอุปกรณ์ พร้อมสูตรคณิตศาสตร์ที่อ่านได้ โครงร่างเอกสาร การตรวจสอบซอร์ส และหมายเหตุความเข้ากันได้",
+      },
+      tr: {
+        name: "LaTeX Önizleyici",
+        description:
+          "Tek başına yeterli LaTeX belgelerini okunabilir matematik, ana hatlar, kaynak incelemesi ve uyumluluk notlarıyla yerel olarak önizleyin.",
+      },
+      vi: {
+        name: "LaTeX Previewer",
+        description:
+          "Xem trước tài liệu LaTeX độc lập trên thiết bị với công thức toán dễ đọc, mục lục, chế độ kiểm tra mã nguồn và lưu ý về khả năng tương thích.",
+      },
+      "zh-CN": {
+        name: "LaTeX 预览器",
+        description:
+          "在本地预览内容自包含的 LaTeX 文档，支持数学公式显示、大纲导航、源码查看和兼容性说明。",
+      },
+      "zh-TW": {
+        name: "LaTeX 預覽器",
+        description:
+          "在本機預覽內容完整獨立的 LaTeX 文件，提供易讀的數學公式、大綱、原始碼檢視及相容性說明。",
+      },
+    },
+  },
+  {
     slug: "list-comparer",
     category: "text",
     icon: "file-text",
@@ -43508,6 +43631,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "KSUID 產生器",
         description:
           "在瀏覽器內產生 KSUID（可排序的唯一識別），支援自訂時間戳。",
+      },
+    },
+  },
+  "latex-previewer": {
+    slug: "latex-previewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["latex", "tex", "math", "document", "preview", "viewer"],
+    locales: {
+      ar: {
+        name: "معاينة LaTeX",
+        description:
+          "عاين مستندات LaTeX المكتفية بذاتها محليًا مع معادلات واضحة ومخطط للعناوين وإمكانية فحص المصدر وملاحظات التوافق.",
+      },
+      de: {
+        name: "LaTeX Previewer",
+        description:
+          "Sieh dir eigenständige LaTeX-Dokumente lokal an: mit lesbaren Formeln, Gliederung, Quelltextansicht und Kompatibilitätshinweisen.",
+      },
+      en: {
+        name: "LaTeX Previewer",
+        description:
+          "Preview self-contained LaTeX documents locally with readable mathematics, an outline, source inspection, and compatibility notes.",
+      },
+      es: {
+        name: "Vista previa de LaTeX",
+        description:
+          "Previsualiza documentos LaTeX autocontenidos en tu dispositivo con fórmulas legibles, un esquema, consulta del código fuente y notas de compatibilidad.",
+      },
+      fr: {
+        name: "Aperçu LaTeX",
+        description:
+          "Prévisualisez localement des documents LaTeX autonomes avec des formules lisibles, un plan, un accès à la source et des notes de compatibilité.",
+      },
+      he: {
+        name: "LaTeX Previewer",
+        description:
+          "תצוגה מקדימה מקומית של מסמכי LaTeX שכל תוכנם כלול בקובץ, עם מתמטיקה קריאה, ראשי פרקים, עיון במקור והערות תאימות.",
+      },
+      hi: {
+        name: "LaTeX Previewer",
+        description:
+          "पढ़ने योग्य गणित, रूपरेखा, स्रोत निरीक्षण और संगतता संबंधी टिप्पणियों के साथ एक ही फ़ाइल में मौजूद LaTeX दस्तावेज़ों का स्थानीय पूर्वावलोकन देखें।",
+      },
+      id: {
+        name: "LaTeX Previewer",
+        description:
+          "Pratinjau dokumen LaTeX dalam satu file lengkap secara lokal, dengan matematika yang mudah dibaca, kerangka dokumen, pemeriksaan sumber, dan catatan kompatibilitas.",
+      },
+      it: {
+        name: "Anteprima LaTeX",
+        description:
+          "Visualizza in locale l’anteprima di documenti LaTeX autonomi con formule leggibili, struttura del documento, esame del sorgente e note di compatibilità.",
+      },
+      ja: {
+        name: "LaTeX Previewer",
+        description:
+          "単一ファイルで完結する LaTeX 文書を端末内でプレビューできます。読みやすい数式表示、目次、ソースの確認、互換性の注意事項に対応しています。",
+      },
+      ko: {
+        name: "LaTeX 미리보기",
+        description:
+          "하나의 파일로 완결된 LaTeX 문서를 기기에서 미리 보세요. 읽기 쉬운 수식, 목차, 소스 확인 및 호환성 참고 사항을 제공합니다.",
+      },
+      ms: {
+        name: "Pemapar Pratonton LaTeX",
+        description:
+          "Pratonton dokumen LaTeX serba lengkap secara setempat dengan matematik yang boleh dibaca, rangka, pemeriksaan sumber dan nota keserasian.",
+      },
+      nl: {
+        name: "LaTeX Previewer",
+        description:
+          "Bekijk zelfstandige LaTeX-documenten lokaal met leesbare wiskunde, een inhoudsopgave, brontekstweergave en compatibiliteitsopmerkingen.",
+      },
+      no: {
+        name: "LaTeX-forhåndsvisning",
+        description:
+          "Forhåndsvis selvstendige LaTeX-dokumenter lokalt med lesbar matematikk, dokumentoversikt, kildevisning og kompatibilitetsmerknader.",
+      },
+      pl: {
+        name: "LaTeX Previewer",
+        description:
+          "Przeglądaj lokalnie samodzielne dokumenty LaTeX z czytelnymi wzorami, spisem treści, podglądem źródła i uwagami dotyczącymi zgodności.",
+      },
+      pt: {
+        name: "Visualizador de LaTeX",
+        description:
+          "Visualize documentos LaTeX autossuficientes localmente, com fórmulas legíveis, estrutura de títulos, inspeção do código-fonte e notas de compatibilidade.",
+      },
+      ru: {
+        name: "Предпросмотр LaTeX",
+        description:
+          "Просматривайте автономные документы LaTeX локально: читаемые формулы, структура документа, исходный текст и примечания о совместимости.",
+      },
+      sv: {
+        name: "LaTeX Previewer",
+        description:
+          "Förhandsvisa fristående LaTeX-dokument lokalt med läsbar matematik, dokumentöversikt, källtextgranskning och kompatibilitetsnotiser.",
+      },
+      th: {
+        name: "LaTeX Previewer",
+        description:
+          "ดูตัวอย่างเอกสาร LaTeX ที่มีเนื้อหาครบในไฟล์เดียวบนอุปกรณ์ พร้อมสูตรคณิตศาสตร์ที่อ่านได้ โครงร่างเอกสาร การตรวจสอบซอร์ส และหมายเหตุความเข้ากันได้",
+      },
+      tr: {
+        name: "LaTeX Önizleyici",
+        description:
+          "Tek başına yeterli LaTeX belgelerini okunabilir matematik, ana hatlar, kaynak incelemesi ve uyumluluk notlarıyla yerel olarak önizleyin.",
+      },
+      vi: {
+        name: "LaTeX Previewer",
+        description:
+          "Xem trước tài liệu LaTeX độc lập trên thiết bị với công thức toán dễ đọc, mục lục, chế độ kiểm tra mã nguồn và lưu ý về khả năng tương thích.",
+      },
+      "zh-CN": {
+        name: "LaTeX 预览器",
+        description:
+          "在本地预览内容自包含的 LaTeX 文档，支持数学公式显示、大纲导航、源码查看和兼容性说明。",
+      },
+      "zh-TW": {
+        name: "LaTeX 預覽器",
+        description:
+          "在本機預覽內容完整獨立的 LaTeX 文件，提供易讀的數學公式、大綱、原始碼檢視及相容性說明。",
       },
     },
   },
