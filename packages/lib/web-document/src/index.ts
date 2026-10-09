@@ -202,7 +202,6 @@ export function prepareWebDocument(
   const csp = inert.createElement("meta")
   csp.httpEquiv = "Content-Security-Policy"
   csp.content = policy
-  head.prepend(csp)
   const style = inert.createElement("style")
   style.textContent = readerStyle
   head.prepend(style)
