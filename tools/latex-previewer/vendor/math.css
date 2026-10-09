@@ -1,0 +1,126 @@
+/* Adapted from pulldown-latex 0.8.0, MIT. Copyright 2024 Charles Edward Gagnon.
+   External font declarations removed; the browser supplies native math fonts. */
+@namespace m url("http://www.w3.org/1998/Math/MathML");
+
+/* MathML css styling */
+m|mtd {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+m|mo.small {
+  font-size: 70%;
+}
+
+m|merror > m|mtable {
+  border-color: currentColor;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+m|mtr:last-child > m|mtd:empty:only-child {
+  display: none;
+}
+
+m|mtr:last-child:has(> m|mtd:empty)::after {
+  display: none;
+}
+
+m|mtable.menv-alignlike > m|mtr > m|mtd:nth-child(odd),
+m|mtable.menv-cells-right > m|mtr > m|mtd,
+m|mtable.menv-multline > m|mtr > m|mtd:last-child,
+m|mtd.cell-right {
+  text-align: right;
+  text-align: -webkit-right;
+  text-align: -moz-right;
+}
+
+m|mtable.menv-alignlike > m|mtr > m|mtd:nth-child(even),
+m|mtable.menv-cells-left > m|mtr > m|mtd,
+m|mtable.menv-multline > m|mtr > m|mtd:first-child,
+m|mtd.cell-left {
+  text-align: left;
+}
+
+m|mtable.menv-multline > m|mtr > m|mtd {
+  width: 100%;
+}
+
+m|mtable.menv-align > m|mtr > m|mtd:nth-child(2n + 3) {
+  padding-left: 1em;
+}
+
+m|mtable.menv-cases > m|mtr > m|mtd:first-child {
+  padding-right: 1em;
+}
+
+m|mtable.menv-arraylike > m|mtr > m|mtd {
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}
+
+m|mtable.menv-matrix > m|mtr > m|mtd:first-child {
+  padding-left: 0;
+}
+
+m|mtable.menv-matrix > m|mtr > m|mtd:last-child {
+  padding-right: 0;
+}
+
+m|mtable.menv-with-eqn > m|mtr:not(:has(> m|mtd.menv-nonumber)) {
+  counter-increment: eq-number;
+}
+
+m|mtable.menv-with-eqn > m|mtr:not(:has(> m|mtd.menv-nonumber))::after {
+  position: absolute;
+  right: 0;
+  padding: 0 0.4em;
+  content: "(" counter(eq-number) ")";
+}
+
+m|mo.mop-negated {
+  background: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) calc(50% - 0.8px),
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) calc(50% + 0.8px),
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+m|mtd.menv-left-solid {
+  border-left: 0.06em solid;
+}
+
+m|mtd.menv-right-solid {
+  border-right: 0.06em solid;
+}
+
+m|mtd.menv-left-dashed {
+  border-left: 0.06em dashed;
+}
+
+m|mtd.menv-right-dashed {
+  border-right: 0.06em dashed;
+}
+
+m|mtr.menv-hline {
+  border-top: 0.06em solid;
+}
+
+m|mtr.menv-hdashline {
+  border-top: 0.06em dashed;
+}
+
+m|mtr.menv-hline > m|mtd.menv-nonumber:only-child,
+m|mtr.menv-hdashline:empty > m|mtd.menv-nonumber:only-child {
+  padding-top: 0.1em;
+  padding-bottom: 0;
+}
+
+m|mtd.menv-border-only:empty {
+  width: 0.1em;
+  padding: 0;
+  margin: 0;
+}

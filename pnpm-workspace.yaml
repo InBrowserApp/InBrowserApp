@@ -10,6 +10,7 @@ packages:
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
   "@asciidoctor/core": 4.1.1
+  faster-latex: 0.1.0
   "@rhwp/core": 0.8.7
   cfb: 1.2.2
   rtf-viewer: 1.3.1
