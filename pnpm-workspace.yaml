@@ -9,6 +9,7 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  "@imagemagick/magick-wasm": 0.0.44
   "@asciidoctor/core": 4.1.1
   faster-latex: 0.1.0
   "@myriaddreamin/typst.ts": 0.7.0

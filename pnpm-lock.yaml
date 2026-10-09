@@ -39,6 +39,9 @@ catalogs:
     '@file-viewer/doc':
       specifier: 3.1.2
       version: 3.1.2
+    '@imagemagick/magick-wasm':
+      specifier: 0.0.44
+      version: 0.0.44
     '@jspawn/qpdf-wasm':
       specifier: ^0.0.2
       version: 0.0.2
@@ -854,6 +857,9 @@ importers:
       '@tool/image-to-webp-converter':
         specifier: workspace:*
         version: link:../../tools/image-to-webp-converter
+      '@tool/image-viewer':
+        specifier: workspace:*
+        version: link:../../tools/image-viewer
       '@tool/imei-validator':
         specifier: workspace:*
         version: link:../../tools/imei-validator
@@ -3845,6 +3851,34 @@ importers:
 
   tools/image-to-webp-converter:
     dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+      react:
+        specifier: 'catalog:'
+        version: 19.2.7
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.7(react@19.2.7)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      vitest:
+        specifier: 'catalog:'
+        version: 4.1.9(@types/node@25.9.4)(@vitest/coverage-v8@4.1.9)(happy-dom@20.10.6)(jsdom@29.1.1(@noble/hashes@2.2.0))(msw@2.12.14(@types/node@25.9.4)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.22.4)(yaml@2.8.3))
+
+  tools/image-viewer:
+    dependencies:
+      '@imagemagick/magick-wasm':
+        specifier: 'catalog:'
+        version: 0.0.44
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk
@@ -8997,6 +9031,9 @@ packages:
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
+
+  '@imagemagick/magick-wasm@0.0.44':
+    resolution: {integrity: sha512-J6oieSjlJzamANwtrNAlO+DKnRm49ILtSIWDhtkGn35f/5zS99AXta2gPsZuG9m2JvQbsu3h3CHe14ViXrFD/Q==}
 
   '@img/colour@1.1.0':
     resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
@@ -16425,6 +16462,8 @@ snapshots:
   '@hono/node-server@1.19.12(hono@4.12.10)':
     dependencies:
       hono: 4.12.10
+
+  '@imagemagick/magick-wasm@0.0.44': {}
 
   '@img/colour@1.1.0': {}
 

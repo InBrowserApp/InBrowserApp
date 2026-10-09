@@ -8374,6 +8374,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-viewer",
+    language: "ar",
+  },
+  {
+    slug: "image-viewer",
+    language: "de",
+  },
+  {
+    slug: "image-viewer",
+    language: "en",
+  },
+  {
+    slug: "image-viewer",
+    language: "es",
+  },
+  {
+    slug: "image-viewer",
+    language: "fr",
+  },
+  {
+    slug: "image-viewer",
+    language: "he",
+  },
+  {
+    slug: "image-viewer",
+    language: "hi",
+  },
+  {
+    slug: "image-viewer",
+    language: "id",
+  },
+  {
+    slug: "image-viewer",
+    language: "it",
+  },
+  {
+    slug: "image-viewer",
+    language: "ja",
+  },
+  {
+    slug: "image-viewer",
+    language: "ko",
+  },
+  {
+    slug: "image-viewer",
+    language: "ms",
+  },
+  {
+    slug: "image-viewer",
+    language: "nl",
+  },
+  {
+    slug: "image-viewer",
+    language: "no",
+  },
+  {
+    slug: "image-viewer",
+    language: "pl",
+  },
+  {
+    slug: "image-viewer",
+    language: "pt",
+  },
+  {
+    slug: "image-viewer",
+    language: "ru",
+  },
+  {
+    slug: "image-viewer",
+    language: "sv",
+  },
+  {
+    slug: "image-viewer",
+    language: "th",
+  },
+  {
+    slug: "image-viewer",
+    language: "tr",
+  },
+  {
+    slug: "image-viewer",
+    language: "vi",
+  },
+  {
+    slug: "image-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "imei-validator",
     language: "ar",
   },

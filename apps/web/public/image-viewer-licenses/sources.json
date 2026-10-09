@@ -1,0 +1,62 @@
+[
+  {
+    "file": "Dependencies-2026.09.26.1516.tar.gz",
+    "bytes": 14967,
+    "sha256": "f9f8ed52bfdc6d690ba7759e02067614088547eaa8ca27316ba111c06a817fe7",
+    "source": "https://github.com/ImageMagick/Dependencies/archive/refs/tags/2026.09.26.1516.tar.gz"
+  },
+  {
+    "file": "ImageMagick-ad98b244c995d2e3051757fa3b7855f45b550d24.tar.gz",
+    "bytes": 14675984,
+    "sha256": "b917080691e66e9f708818edbcf5155f9ed2112dd7b726e8b84a95160da3bdc5",
+    "source": "https://github.com/ImageMagick/ImageMagick/archive/ad98b244c995d2e3051757fa3b7855f45b550d24.tar.gz"
+  },
+  {
+    "file": "Magick.Native-999720f7ebe03d5a0029536f1586a2cb82b500ae.tar.gz",
+    "bytes": 73158,
+    "sha256": "632838b83014af87229853bf1dfe12670e7aa996b37d6880c000a3fe89f9a8e2",
+    "source": "https://github.com/dlemstra/Magick.Native/archive/999720f7ebe03d5a0029536f1586a2cb82b500ae.tar.gz"
+  },
+  {
+    "file": "de265-5a0bf9f624d810de6af20e41ac3cfd92bf7de508.tar.gz",
+    "bytes": 326375,
+    "sha256": "a6c6f0ba717bb2d317e44e055615f89cbe6a19102c49b7f1477076eaa97661ac",
+    "source": "https://github.com/ImageMagick/de265/archive/5a0bf9f624d810de6af20e41ac3cfd92bf7de508.tar.gz"
+  },
+  {
+    "file": "glib-ea0118ca0d408473d320b21262a1cdc6ce3e5f40.tar.gz",
+    "bytes": 8322548,
+    "sha256": "c797ca6e45da4df7fdf7b4da4889cc7484bca2448bf03c3c1c00fe5d38104fb3",
+    "source": "https://github.com/ImageMagick/glib/archive/ea0118ca0d408473d320b21262a1cdc6ce3e5f40.tar.gz"
+  },
+  {
+    "file": "heif-b8fbb502979530d5e4baa7d24d8c353c3d13d1cd.tar.gz",
+    "bytes": 2217753,
+    "sha256": "dec046b6e8ecc8839b89ac754b3d322fa195671d55cd8b95d715e20242c6d1fd",
+    "source": "https://github.com/ImageMagick/heif/archive/b8fbb502979530d5e4baa7d24d8c353c3d13d1cd.tar.gz"
+  },
+  {
+    "file": "lqr-a2e9e8b5b41bf0569f51482707a12d354a086f3a.tar.gz",
+    "bytes": 550036,
+    "sha256": "a543255184370596adff8522e585df53d3f9088c0fc351073fc1c4b8a2df54d2",
+    "source": "https://github.com/ImageMagick/lqr/archive/a2e9e8b5b41bf0569f51482707a12d354a086f3a.tar.gz"
+  },
+  {
+    "file": "magick-wasm-8d346777ce0e172dacdb797a65346569425c43af.tar.gz",
+    "bytes": 1311121,
+    "sha256": "2a346634ac29e619f39feb372a4c324daa6e87f9ac4a189ea69e818d0ed984eb",
+    "source": "https://github.com/dlemstra/magick-wasm/archive/8d346777ce0e172dacdb797a65346569425c43af.tar.gz"
+  },
+  {
+    "file": "raw-9f7613ef48877180225b9377c87b0f3a65a2ca8e.tar.gz",
+    "bytes": 609926,
+    "sha256": "7a33c80b123d75c9c63cc80d4e27bc0f5bb1654f12f93d83e3db09c0ad346031",
+    "source": "https://github.com/ImageMagick/raw/archive/9f7613ef48877180225b9377c87b0f3a65a2ca8e.tar.gz"
+  },
+  {
+    "file": "wasm-x86-static.zip",
+    "bytes": 13303474,
+    "sha256": "aa4fa82cd23b0c694713dc739bd62615de4fdf4b9c74db4105f41ff0ac2ee283",
+    "source": "https://github.com/ImageMagick/Dependencies/releases/download/2026.09.26.1516/wasm-x86-static.zip"
+  }
+]

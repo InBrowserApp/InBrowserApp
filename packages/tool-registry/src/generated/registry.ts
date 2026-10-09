@@ -11444,6 +11444,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "image-viewer",
+    category: "image",
+    icon: "image",
+    tags: [
+      "image",
+      "viewer",
+      "tiff",
+      "heic",
+      "heif",
+      "jxl",
+      "jpeg2000",
+      "ico",
+      "animation",
+    ],
+    locales: {
+      ar: {
+        name: "عارض الصور",
+        description:
+          "افحص الصور المحلية وصفحات TIFF ونسخ الأيقونات وإطارات الحركة. افتح صور HEIC وJPEG XL وصور JPEG 2000 المدعومة في متصفحك.",
+      },
+      de: {
+        name: "Bildbetrachter",
+        description:
+          "Lokale Bilder, TIFF-Seiten, Symbolvarianten und Animationsbilder untersuchen. HEIC, JPEG XL und unterstützte JPEG-2000-Bilder im Browser öffnen.",
+      },
+      en: {
+        name: "Image Viewer",
+        description:
+          "Inspect local images, TIFF pages, icon variants and animation frames. Open HEIC, JPEG XL and supported JPEG 2000 images in your browser.",
+      },
+      es: {
+        name: "Visor de imágenes",
+        description:
+          "Inspecciona imágenes locales, páginas TIFF, variantes de iconos y fotogramas de animación. Abre imágenes HEIC, JPEG XL y JPEG 2000 compatibles en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse d’images",
+        description:
+          "Inspectez des images locales, des pages TIFF, des variantes d’icônes et des images d’animation. Ouvrez des images HEIC, JPEG XL et JPEG 2000 prises en charge dans votre navigateur.",
+      },
+      he: {
+        name: "מציג תמונות",
+        description:
+          "בדיקת תמונות מקומיות, עמודי TIFF, גרסאות סמלים ופריימים של הנפשה. פתיחת תמונות HEIC,‏ JPEG XL ותמונות JPEG 2000 נתמכות בדפדפן שלך.",
+      },
+      hi: {
+        name: "चित्र व्यूअर",
+        description:
+          "स्थानीय चित्र, TIFF पृष्ठ, आइकन के प्रकार और एनीमेशन फ़्रेम देखें। अपने ब्राउज़र में HEIC, JPEG XL और समर्थित JPEG 2000 चित्र खोलें।",
+      },
+      id: {
+        name: "Penampil Gambar",
+        description:
+          "Periksa gambar lokal, halaman TIFF, varian ikon, dan bingkai animasi. Buka gambar HEIC, JPEG XL, serta JPEG 2000 yang didukung di browser Anda.",
+      },
+      it: {
+        name: "Visualizzatore di immagini",
+        description:
+          "Esamina immagini locali, pagine TIFF, varianti di icone e fotogrammi di animazioni. Apri immagini HEIC, JPEG XL e JPEG 2000 supportate nel browser.",
+      },
+      ja: {
+        name: "画像ビューアー",
+        description:
+          "ローカルの画像、TIFF の各ページ、アイコンの種類、アニメーションのフレームを確認。HEIC、JPEG XL、対応する JPEG 2000 画像をブラウザーで開けます。",
+      },
+      ko: {
+        name: "이미지 뷰어",
+        description:
+          "로컬 이미지, TIFF 페이지, 아이콘 변형, 애니메이션 프레임을 살펴보세요. 브라우저에서 HEIC, JPEG XL 및 지원되는 JPEG 2000 이미지를 열 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Imej",
+        description:
+          "Periksa imej setempat, halaman TIFF, varian ikon dan bingkai animasi. Buka imej HEIC, JPEG XL dan JPEG 2000 yang disokong dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeeldingsviewer",
+        description:
+          "Bekijk lokale afbeeldingen, TIFF-pagina's, pictogramvarianten en animatieframes. Open HEIC-, JPEG XL- en ondersteunde JPEG 2000-afbeeldingen in je browser.",
+      },
+      no: {
+        name: "Bildeviser",
+        description:
+          "Se nærmere på lokale bilder, TIFF-sider, ikonvarianter og animasjonsbilder. Åpne HEIC, JPEG XL og støttede JPEG 2000-bilder i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka obrazów",
+        description:
+          "Przeglądaj lokalne obrazy, strony TIFF, warianty ikon i klatki animacji. Otwieraj w przeglądarce obrazy HEIC, JPEG XL i obsługiwane obrazy JPEG 2000.",
+      },
+      pt: {
+        name: "Visualizador de imagens",
+        description:
+          "Inspecione imagens locais, páginas TIFF, variantes de ícones e quadros de animação. Abra imagens HEIC, JPEG XL e JPEG 2000 compatíveis no navegador.",
+      },
+      ru: {
+        name: "Просмотр изображений",
+        description:
+          "Изучайте локальные изображения, страницы TIFF, варианты значков и кадры анимации. Открывайте HEIC, JPEG XL и поддерживаемые изображения JPEG 2000 в браузере.",
+      },
+      sv: {
+        name: "Bildvisare",
+        description:
+          "Granska lokala bilder, TIFF-sidor, ikonvarianter och animationsrutor. Öppna HEIC, JPEG XL och JPEG 2000-bilder som stöds i din webbläsare.",
+      },
+      th: {
+        name: "โปรแกรมดูรูปภาพ",
+        description:
+          "ตรวจสอบรูปภาพบนอุปกรณ์ หน้า TIFF แบบต่าง ๆ ของไอคอน และเฟรมภาพเคลื่อนไหว เปิดภาพ HEIC, JPEG XL และ JPEG 2000 ที่รองรับในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Görsel Görüntüleyici",
+        description:
+          "Yerel görselleri, TIFF sayfalarını, simge çeşitlerini ve animasyon karelerini inceleyin. HEIC, JPEG XL ve desteklenen JPEG 2000 görsellerini tarayıcınızda açın.",
+      },
+      vi: {
+        name: "Trình xem ảnh",
+        description:
+          "Kiểm tra ảnh trên thiết bị, các trang TIFF, biến thể biểu tượng và khung hình hoạt ảnh. Mở ảnh HEIC, JPEG XL và JPEG 2000 được hỗ trợ trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片查看器",
+        description:
+          "查看本地图片、TIFF 页面、图标变体和动画帧。在浏览器中打开 HEIC、JPEG XL 及受支持的 JPEG 2000 图片。",
+      },
+      "zh-TW": {
+        name: "圖片檢視器",
+        description:
+          "檢視本機圖片、TIFF 頁面、圖示版本與動畫畫格。在瀏覽器中開啟 HEIC、JPEG XL 及支援的 JPEG 2000 圖片。",
+      },
+    },
+  },
+  {
     slug: "imei-validator",
     category: "text",
     icon: "binary",
@@ -41415,6 +41548,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "圖片轉 WebP 轉換器",
         description: "將圖片轉換為 WebP，可選擇調整尺寸並批次匯出 ZIP。",
+      },
+    },
+  },
+  "image-viewer": {
+    slug: "image-viewer",
+    category: "image",
+    icon: "image",
+    tags: [
+      "image",
+      "viewer",
+      "tiff",
+      "heic",
+      "heif",
+      "jxl",
+      "jpeg2000",
+      "ico",
+      "animation",
+    ],
+    locales: {
+      ar: {
+        name: "عارض الصور",
+        description:
+          "افحص الصور المحلية وصفحات TIFF ونسخ الأيقونات وإطارات الحركة. افتح صور HEIC وJPEG XL وصور JPEG 2000 المدعومة في متصفحك.",
+      },
+      de: {
+        name: "Bildbetrachter",
+        description:
+          "Lokale Bilder, TIFF-Seiten, Symbolvarianten und Animationsbilder untersuchen. HEIC, JPEG XL und unterstützte JPEG-2000-Bilder im Browser öffnen.",
+      },
+      en: {
+        name: "Image Viewer",
+        description:
+          "Inspect local images, TIFF pages, icon variants and animation frames. Open HEIC, JPEG XL and supported JPEG 2000 images in your browser.",
+      },
+      es: {
+        name: "Visor de imágenes",
+        description:
+          "Inspecciona imágenes locales, páginas TIFF, variantes de iconos y fotogramas de animación. Abre imágenes HEIC, JPEG XL y JPEG 2000 compatibles en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse d’images",
+        description:
+          "Inspectez des images locales, des pages TIFF, des variantes d’icônes et des images d’animation. Ouvrez des images HEIC, JPEG XL et JPEG 2000 prises en charge dans votre navigateur.",
+      },
+      he: {
+        name: "מציג תמונות",
+        description:
+          "בדיקת תמונות מקומיות, עמודי TIFF, גרסאות סמלים ופריימים של הנפשה. פתיחת תמונות HEIC,‏ JPEG XL ותמונות JPEG 2000 נתמכות בדפדפן שלך.",
+      },
+      hi: {
+        name: "चित्र व्यूअर",
+        description:
+          "स्थानीय चित्र, TIFF पृष्ठ, आइकन के प्रकार और एनीमेशन फ़्रेम देखें। अपने ब्राउज़र में HEIC, JPEG XL और समर्थित JPEG 2000 चित्र खोलें।",
+      },
+      id: {
+        name: "Penampil Gambar",
+        description:
+          "Periksa gambar lokal, halaman TIFF, varian ikon, dan bingkai animasi. Buka gambar HEIC, JPEG XL, serta JPEG 2000 yang didukung di browser Anda.",
+      },
+      it: {
+        name: "Visualizzatore di immagini",
+        description:
+          "Esamina immagini locali, pagine TIFF, varianti di icone e fotogrammi di animazioni. Apri immagini HEIC, JPEG XL e JPEG 2000 supportate nel browser.",
+      },
+      ja: {
+        name: "画像ビューアー",
+        description:
+          "ローカルの画像、TIFF の各ページ、アイコンの種類、アニメーションのフレームを確認。HEIC、JPEG XL、対応する JPEG 2000 画像をブラウザーで開けます。",
+      },
+      ko: {
+        name: "이미지 뷰어",
+        description:
+          "로컬 이미지, TIFF 페이지, 아이콘 변형, 애니메이션 프레임을 살펴보세요. 브라우저에서 HEIC, JPEG XL 및 지원되는 JPEG 2000 이미지를 열 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar Imej",
+        description:
+          "Periksa imej setempat, halaman TIFF, varian ikon dan bingkai animasi. Buka imej HEIC, JPEG XL dan JPEG 2000 yang disokong dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeeldingsviewer",
+        description:
+          "Bekijk lokale afbeeldingen, TIFF-pagina's, pictogramvarianten en animatieframes. Open HEIC-, JPEG XL- en ondersteunde JPEG 2000-afbeeldingen in je browser.",
+      },
+      no: {
+        name: "Bildeviser",
+        description:
+          "Se nærmere på lokale bilder, TIFF-sider, ikonvarianter og animasjonsbilder. Åpne HEIC, JPEG XL og støttede JPEG 2000-bilder i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka obrazów",
+        description:
+          "Przeglądaj lokalne obrazy, strony TIFF, warianty ikon i klatki animacji. Otwieraj w przeglądarce obrazy HEIC, JPEG XL i obsługiwane obrazy JPEG 2000.",
+      },
+      pt: {
+        name: "Visualizador de imagens",
+        description:
+          "Inspecione imagens locais, páginas TIFF, variantes de ícones e quadros de animação. Abra imagens HEIC, JPEG XL e JPEG 2000 compatíveis no navegador.",
+      },
+      ru: {
+        name: "Просмотр изображений",
+        description:
+          "Изучайте локальные изображения, страницы TIFF, варианты значков и кадры анимации. Открывайте HEIC, JPEG XL и поддерживаемые изображения JPEG 2000 в браузере.",
+      },
+      sv: {
+        name: "Bildvisare",
+        description:
+          "Granska lokala bilder, TIFF-sidor, ikonvarianter och animationsrutor. Öppna HEIC, JPEG XL och JPEG 2000-bilder som stöds i din webbläsare.",
+      },
+      th: {
+        name: "โปรแกรมดูรูปภาพ",
+        description:
+          "ตรวจสอบรูปภาพบนอุปกรณ์ หน้า TIFF แบบต่าง ๆ ของไอคอน และเฟรมภาพเคลื่อนไหว เปิดภาพ HEIC, JPEG XL และ JPEG 2000 ที่รองรับในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Görsel Görüntüleyici",
+        description:
+          "Yerel görselleri, TIFF sayfalarını, simge çeşitlerini ve animasyon karelerini inceleyin. HEIC, JPEG XL ve desteklenen JPEG 2000 görsellerini tarayıcınızda açın.",
+      },
+      vi: {
+        name: "Trình xem ảnh",
+        description:
+          "Kiểm tra ảnh trên thiết bị, các trang TIFF, biến thể biểu tượng và khung hình hoạt ảnh. Mở ảnh HEIC, JPEG XL và JPEG 2000 được hỗ trợ trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片查看器",
+        description:
+          "查看本地图片、TIFF 页面、图标变体和动画帧。在浏览器中打开 HEIC、JPEG XL 及受支持的 JPEG 2000 图片。",
+      },
+      "zh-TW": {
+        name: "圖片檢視器",
+        description:
+          "檢視本機圖片、TIFF 頁面、圖示版本與動畫畫格。在瀏覽器中開啟 HEIC、JPEG XL 及支援的 JPEG 2000 圖片。",
       },
     },
   },
