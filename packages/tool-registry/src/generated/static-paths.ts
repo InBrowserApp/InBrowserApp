@@ -18126,6 +18126,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "text-log-viewer",
+    language: "ar",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "de",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "en",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "es",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "fr",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "he",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "hi",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "id",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "it",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "ja",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "ko",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "ms",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "nl",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "no",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "pl",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "pt",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "ru",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "sv",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "th",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "tr",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "vi",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "text-log-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "text-statistics",
     language: "ar",
   },

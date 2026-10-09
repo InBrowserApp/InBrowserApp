@@ -109,12 +109,15 @@ test("handles documents with no available text or visible fallback element", () 
   expect(readingPosition(document)).toBeNull()
 })
 
-test("falls back to the visible preformatted text when caret APIs are absent", () => {
-  document.body.innerHTML = "<pre>A plain-text message</pre>"
-  const target = document.querySelector("pre")!
-  vi.spyOn(target, "getBoundingClientRect").mockReturnValue(bounds(8))
-  expect(readingPosition(document)).toEqual({ target, left: 20, top: 8 })
-})
+test.each(["pre", "code"])(
+  "falls back to visible %s text when caret APIs are absent",
+  (tag) => {
+    document.body.innerHTML = `<${tag}>A plain-text message</${tag}>`
+    const target = document.querySelector(tag)!
+    vi.spyOn(target, "getBoundingClientRect").mockReturnValue(bounds(8))
+    expect(readingPosition(document)).toEqual({ target, left: 20, top: 8 })
+  }
+)
 
 test("keeps an empty text caret valid without requesting an out-of-range offset", () => {
   const { paragraph } = sample()
