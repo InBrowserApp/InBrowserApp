@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.3.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.2.0...v2.3.0) (2026-10-09)
+
+
+### Features
+
+* add a browser-only DOCX viewer ([#1051](https://github.com/InBrowserApp/InBrowserApp/issues/1051)) ([08a0025](https://github.com/InBrowserApp/InBrowserApp/commit/08a0025bac66a0eaf5240a9bb164d418d769f2c0))
+* add a browser-only PDF viewer ([#1050](https://github.com/InBrowserApp/InBrowserApp/issues/1050)) ([47100d9](https://github.com/InBrowserApp/InBrowserApp/commit/47100d969c0dc57eff35cb22f417eba0037f0e06))
+* add a browser-only PPTX viewer ([#1052](https://github.com/InBrowserApp/InBrowserApp/issues/1052)) ([bb98f3c](https://github.com/InBrowserApp/InBrowserApp/commit/bb98f3c17f3b1db3dd8a79256cc7e6228790e9df))
+* add a browser-only XLSX worksheet viewer ([#1053](https://github.com/InBrowserApp/InBrowserApp/issues/1053)) ([9eb59dc](https://github.com/InBrowserApp/InBrowserApp/commit/9eb59dc63df8d68bcda28dfde3b4f77ff962ee5b))
+* improve document viewer reading space and controls ([#1058](https://github.com/InBrowserApp/InBrowserApp/issues/1058)) ([541f860](https://github.com/InBrowserApp/InBrowserApp/commit/541f8601a5067d53a4097ad3c82d878326f45346))
+* refine XLSX and PPTX viewer navigation ([#1059](https://github.com/InBrowserApp/InBrowserApp/issues/1059)) ([8ea79e5](https://github.com/InBrowserApp/InBrowserApp/commit/8ea79e56ff986cf4369da35d6a73f990c049efc3))
+
+
+### Bug Fixes
+
+* **ci:** prevent prereleases from deploying to production ([#1042](https://github.com/InBrowserApp/InBrowserApp/issues/1042)) ([c7aedb5](https://github.com/InBrowserApp/InBrowserApp/commit/c7aedb5598c1353aff24b5c02efb1a0fa887e021))
+* **ci:** require tests and HTML link checks before merging ([#1041](https://github.com/InBrowserApp/InBrowserApp/issues/1041)) ([ff21f42](https://github.com/InBrowserApp/InBrowserApp/commit/ff21f425e5c32c78f2d262082998e71f73dfdbf4))
+* make document viewer numeric controls editable ([#1057](https://github.com/InBrowserApp/InBrowserApp/issues/1057)) ([535f364](https://github.com/InBrowserApp/InBrowserApp/commit/535f364bc7806ce70ac5acebb1e1bc7cbdb6a141))
+* remove arbitrary document viewer size and count caps ([#1061](https://github.com/InBrowserApp/InBrowserApp/issues/1061)) ([db5d683](https://github.com/InBrowserApp/InBrowserApp/commit/db5d683754683cc66b8047a12e55a11299733c12))
+* **ui:** normalize tool panel card spacing ([#1037](https://github.com/InBrowserApp/InBrowserApp/issues/1037)) ([fa83735](https://github.com/InBrowserApp/InBrowserApp/commit/fa8373572538218810ac238924de62af90ecde98))
+
 ## [2.2.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.1.0...v2.2.0) (2026-07-17)
 
 
