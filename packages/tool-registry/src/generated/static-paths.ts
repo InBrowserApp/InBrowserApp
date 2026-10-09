@@ -5522,6 +5522,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "email-viewer",
+    language: "ar",
+  },
+  {
+    slug: "email-viewer",
+    language: "de",
+  },
+  {
+    slug: "email-viewer",
+    language: "en",
+  },
+  {
+    slug: "email-viewer",
+    language: "es",
+  },
+  {
+    slug: "email-viewer",
+    language: "fr",
+  },
+  {
+    slug: "email-viewer",
+    language: "he",
+  },
+  {
+    slug: "email-viewer",
+    language: "hi",
+  },
+  {
+    slug: "email-viewer",
+    language: "id",
+  },
+  {
+    slug: "email-viewer",
+    language: "it",
+  },
+  {
+    slug: "email-viewer",
+    language: "ja",
+  },
+  {
+    slug: "email-viewer",
+    language: "ko",
+  },
+  {
+    slug: "email-viewer",
+    language: "ms",
+  },
+  {
+    slug: "email-viewer",
+    language: "nl",
+  },
+  {
+    slug: "email-viewer",
+    language: "no",
+  },
+  {
+    slug: "email-viewer",
+    language: "pl",
+  },
+  {
+    slug: "email-viewer",
+    language: "pt",
+  },
+  {
+    slug: "email-viewer",
+    language: "ru",
+  },
+  {
+    slug: "email-viewer",
+    language: "sv",
+  },
+  {
+    slug: "email-viewer",
+    language: "th",
+  },
+  {
+    slug: "email-viewer",
+    language: "tr",
+  },
+  {
+    slug: "email-viewer",
+    language: "vi",
+  },
+  {
+    slug: "email-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "email-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "epub-reader",
     language: "ar",
   },
