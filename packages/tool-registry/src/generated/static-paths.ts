@@ -13250,6 +13250,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ppt-viewer",
+    language: "ar",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "de",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "en",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "es",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "fr",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "he",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "hi",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "id",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "it",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "ja",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "ko",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "ms",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "nl",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "no",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "pl",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "pt",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "ru",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "sv",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "th",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "tr",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "vi",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "ppt-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "pptx-viewer",
     language: "ar",
   },

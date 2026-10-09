@@ -1,0 +1,67 @@
+diff --git a/crates/pptx-core/src/legacy.rs b/crates/pptx-core/src/legacy.rs
+index 16fa5cf..2947d8e 100644
+--- a/crates/pptx-core/src/legacy.rs
++++ b/crates/pptx-core/src/legacy.rs
+@@ -253,15 +253,12 @@ fn parse_persist_directory(data: &[u8], offset: u32) -> Result<Vec<(u32, u32)>,
+ fn live_persist_directory(
+     data: &[u8],
+     current_user: &[u8],
+-    limits: &ParseLimits,
++    _limits: &ParseLimits,
+ ) -> Result<(BTreeMap<u32, u32>, u32), ParseError> {
+     let mut edit_offset = current_edit_offset(current_user)?;
+     let mut visited = BTreeSet::new();
+     let mut edits = Vec::new();
+     while edit_offset != 0 {
+-        if edits.len() >= limits.max_xml_depth.max(1) {
+-            return Err(ParseError::ResourceLimit("legacy edit-chain depth".into()));
+-        }
+         if !visited.insert(edit_offset) {
+             return Err(ParseError::Corrupt("cyclic legacy edit chain".into()));
+         }
+@@ -994,7 +991,7 @@ fn picture_data(
+ fn picture_assets(
+     pictures: Option<&[u8]>,
+     offsets: &[u32],
+-    limits: &ParseLimits,
++    _limits: &ParseLimits,
+ ) -> (BTreeMap<String, PresentationAsset>, BTreeMap<u32, String>) {
+     let mut assets = BTreeMap::new();
+     let mut references = BTreeMap::new();
+@@ -1005,13 +1002,10 @@ fn picture_assets(
+         let Some(record) = record_at(pictures, offset as usize) else {
+             continue;
+         };
+-        let Some((content_type, data, extension)) = picture_data(record, limits.max_entry_bytes)
++        let Some((content_type, data, extension)) = picture_data(record, 64 * 1024 * 1024)
+         else {
+             continue;
+         };
+-        if data.len() > limits.max_entry_bytes {
+-            continue;
+-        }
+         let asset_id = format!("legacy-picture-{}", index + 1);
+         assets.insert(
+             asset_id.clone(),
+diff --git a/crates/pptx-wasm/src/lib.rs b/crates/pptx-wasm/src/lib.rs
+index dafc968..240367a 100644
+--- a/crates/pptx-wasm/src/lib.rs
++++ b/crates/pptx-wasm/src/lib.rs
+@@ -18,7 +18,16 @@ pub fn detect_presentation_format(bytes: &[u8]) -> Result<String, JsValue> {
+ 
+ #[wasm_bindgen]
+ pub fn parse_presentation(bytes: &[u8]) -> Result<JsValue, JsValue> {
+-    let document = parse_core_presentation(bytes, &ParseLimits::default())
++    // OLE streams are uncompressed: their size is bounded by the source bytes.
++    // Keep drawing recursion protection; document size/count is browser-limited.
++    let limits = ParseLimits {
++        max_input_bytes: usize::MAX,
++        max_entries: usize::MAX,
++        max_entry_bytes: bytes.len(),
++        max_total_uncompressed_bytes: usize::MAX,
++        ..ParseLimits::default()
++    };
++    let document = parse_core_presentation(bytes, &limits)
+         .map_err(|error| JsValue::from_str(&error.to_string()))?;
+ 
+     // The TypeScript model exposes keyed collections as `Record<string, T>` rather than

@@ -1,0 +1,112 @@
+diff --git a/dist/index.js b/dist/index.js
+index 58ef2c42a6344c58b563732bb09ca2929aca05b5..3cc3c81914f1cd875cf82356fa15c4ffa2e3f66c 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -1,13 +1,6 @@
+-import { getRegionMapAtlas, normalizeRegionMapKey, REGION_MAP_US_STATE_ALIASES, REGION_MAP_COUNTRY_ALIASES, loadRegionMapAtlas } from './chunk-YVOPQP3D.js';
+ import * as React2 from 'react';
+ import { forwardRef, useRef, useState, useCallback, useEffect, useMemo, useImperativeHandle, createElement } from 'react';
+ import { useVirtualizer } from '@tanstack/react-virtual';
+-import { renderToStaticMarkup } from 'react-dom/server';
+-import { hierarchy, partition, treemap, treemapDice, treemapBinary } from 'd3-hierarchy';
+-import { geoIdentity, geoMercator, geoNaturalEarth1, geoPath } from 'd3-geo';
+-import { scaleBand, scaleLinear, scalePoint } from 'd3-scale';
+-import { line, curveLinear, curveCatmullRom, area, curveLinearClosed, pie, arc, symbol, symbolCircle, symbolStar, symbolCross, symbolTriangle, symbolSquare, symbolDiamond } from 'd3-shape';
+-import createREGL from 'regl';
+ import { jsxs, jsx, Fragment } from 'react/jsx-runtime';
+ import { Virtualizer } from '@tanstack/virtual-core';
+ 
+@@ -8377,7 +8370,7 @@ function renderChartPlot(chart, palette, layout, chartType, selectedChartElement
+   }
+   return renderUnsupported(chart, palette, layout, chartType);
+ }
+-var MemoChartSvg = React2.memo(function MemoChartSvg2({
++var MemoChartSvg = /* @__PURE__ */ React2.memo(function MemoChartSvg2({
+   chart,
+   onChartElementDoubleClick,
+   onChartElementPointerDown,
+@@ -9283,7 +9276,7 @@ var PresentationAssetCache = class {
+     const pending = convert(ownedBytes.buffer, 2048, 2048, {
+       dpiScale: 2,
+       maxCanvasDimension: 4096,
+-      maxRecords: 2e5,
++      maxRecords: Number.MAX_SAFE_INTEGER,
+       fontFamilyMap: METAFILE_FONT_MAP
+     }).then((url) => url || void 0);
+     this.metafileUrls.set(assetId, pending);
+@@ -10178,16 +10171,11 @@ var NormalizedPresentationViewer = class {
+     const master = this.presentation.masters.find((entry) => entry.id === slide?.masterId);
+     return this.presentation.themes.find((entry) => entry.id === master?.themeId) ?? this.presentation.themes[0];
+   }
+-  createChart(node) {
+-    const container = document.createElement("div");
+-    container.style.width = "100%";
+-    container.style.height = "100%";
+-    container.setAttribute("role", "img");
+-    container.setAttribute("aria-label", node.title ?? `${node.chartType} chart`);
+-    if (renderChartInto(container, node, this.themeForSlide(this.renderingSlideIndex))) {
+-      return container;
+-    }
+-    return this.createChartFallback(node);
++  createChart() {
++    // This package patch is exclusively for the binary PPT viewer. Its native
++    // parser emits shapes/images, including saved EMF/WMF chart previews, never
++    // DrawingML chart nodes. Do not reuse this build for modern presentations.
++    throw new PptxViewerError("render-failed", "DrawingML charts are unavailable in the legacy-only renderer.");
+   }
+   createChartFallback(node) {
+     const chart = document.createElement("div");
+@@ -11188,18 +11176,13 @@ function isPresentationDocument(value) {
+ function parserFailure(error) {
+   if (error instanceof PptxViewerError) return error;
+   const message = error instanceof Error ? error.message : String(error);
+-  const normalized = message.toLowerCase();
+-  if (normalized.includes("encrypted presentation")) {
+-    return new PptxViewerError(
+-      "encrypted-document",
+-      "Encrypted PowerPoint presentations are not supported.",
+-      { cause: error }
+-    );
+-  }
+-  if (normalized.includes("resource limit exceeded") || normalized.includes("input exceeds the configured")) {
++  if (/encrypted presentation/i.test(message))
++    return new PptxViewerError("encrypted-document", message, { cause: error });
++  if (/resource limit exceeded|input exceeds the configured|out of memory|allocation|memory access|unreachable/i.test(message))
+     return new PptxViewerError("resource-limit", message, { cause: error });
+-  }
+-  return null;
++  if (/missing \/PowerPoint Document stream|unsupported.*version/i.test(message))
++    return new PptxViewerError("unsupported-format", message, { cause: error });
++  return new PptxViewerError("parse-failed", message, { cause: error });
+ }
+ async function parseWithWasm(bytes, options) {
+   try {
+@@ -11228,12 +11211,13 @@ var workerRequestId = 0;
+ async function parseInWorker(bytes, signal, wasmSource) {
+   if (signal?.aborted) throw new DOMException("Parsing was aborted.", "AbortError");
++  // Allocate before starting a worker so allocation failures cannot leak it.
++  const owned = bytes.slice().buffer;
+   const worker = new Worker(new URL("./native-parser-worker.js", import.meta.url), {
+     type: "module",
+     name: "react-pptx-parser"
+   });
+   const id = ++workerRequestId;
+-  const owned = bytes.slice().buffer;
+   return await new Promise((resolve, reject) => {
+     let settled = false;
+     const cleanup = () => {
+       signal?.removeEventListener("abort", abort);
+@@ -12781,8 +12765,11 @@ var ThumbnailRenderer = class {
+           handle.element,
+           size.naturalWidth,
+           size.naturalHeight,
+-          size.width,
+-          size.height,
++          // WebKit clips foreignObject content when the SVG image viewport
++          // scales its viewBox. Decode canvas snapshots at natural dimensions;
++          // the canvas draw below performs the requested output scaling.
++          options.output === "canvas" ? size.naturalWidth : size.width,
++          options.output === "canvas" ? size.naturalHeight : size.height,
+           options.signal
+         );
+         this.record(

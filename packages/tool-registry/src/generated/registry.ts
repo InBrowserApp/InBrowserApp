@@ -18008,6 +18008,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "ppt-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "ppt",
+      "dps",
+      "dpt",
+      "powerpoint",
+      "wps",
+      "presentation",
+      "template",
+      "viewer",
+      "reader",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض PPT وDPS",
+        description:
+          "اقرأ عروض PowerPoint القديمة بتنسيق PPT وعروض WPS المتوافقة بتنسيق DPS وقوالب DPT محليًا في متصفحك.",
+      },
+      de: {
+        name: "PPT- und DPS-Betrachter",
+        description:
+          "Lies ältere PowerPoint-PPT-Dateien sowie kompatible WPS-DPS-Präsentationen und DPT-Vorlagen lokal in deinem Browser.",
+      },
+      en: {
+        name: "PPT and DPS Viewer",
+        description:
+          "Read legacy PowerPoint PPT and compatible WPS DPS presentations and DPT templates locally in your browser.",
+      },
+      es: {
+        name: "Visor de PPT y DPS",
+        description:
+          "Lee presentaciones antiguas de PowerPoint PPT y presentaciones WPS DPS y plantillas DPT compatibles de forma local en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse PPT et DPS",
+        description:
+          "Lisez les anciennes présentations PowerPoint PPT ainsi que les présentations WPS DPS et modèles DPT compatibles, localement dans votre navigateur.",
+      },
+      he: {
+        name: "מציג PPT ו-DPS",
+        description:
+          "קריאת מצגות PowerPoint PPT ישנות, מצגות WPS DPS תואמות ותבניות DPT באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "PPT और DPS व्यूअर",
+        description:
+          "पुरानी PowerPoint PPT और संगत WPS DPS प्रस्तुतियाँ तथा DPT टेम्पलेट अपने ब्राउज़र में स्थानीय रूप से पढ़ें।",
+      },
+      id: {
+        name: "Penampil PPT dan DPS",
+        description:
+          "Baca presentasi PowerPoint PPT lama serta presentasi WPS DPS dan templat DPT yang kompatibel secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Visualizzatore PPT e DPS",
+        description:
+          "Leggi presentazioni PowerPoint PPT in formato precedente, presentazioni WPS DPS compatibili e modelli DPT in locale nel browser.",
+      },
+      ja: {
+        name: "PPT・DPSビューアー",
+        description:
+          "旧形式のPowerPoint PPT、互換性のあるWPS DPSプレゼンテーション、DPTテンプレートをブラウザー内でローカルに閲覧できます。",
+      },
+      ko: {
+        name: "PPT 및 DPS 뷰어",
+        description:
+          "이전 형식의 PowerPoint PPT, 호환되는 WPS DPS 프레젠테이션과 DPT 템플릿을 브라우저에서 로컬로 읽으세요.",
+      },
+      ms: {
+        name: "Pemapar PPT dan DPS",
+        description:
+          "Baca pembentangan PowerPoint PPT lama serta pembentangan WPS DPS dan templat DPT yang serasi secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "PPT- en DPS-viewer",
+        description:
+          "Lees oudere PowerPoint-PPT-presentaties, compatibele WPS-DPS-presentaties en DPT-sjablonen lokaal in je browser.",
+      },
+      no: {
+        name: "PPT- og DPS-viser",
+        description:
+          "Les eldre PowerPoint PPT-presentasjoner og kompatible WPS DPS-presentasjoner og DPT-maler lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka PPT i DPS",
+        description:
+          "Czytaj lokalnie w przeglądarce starsze prezentacje PowerPoint PPT oraz zgodne prezentacje WPS DPS i szablony DPT.",
+      },
+      pt: {
+        name: "Visualizador de PPT e DPS",
+        description:
+          "Leia apresentações antigas do PowerPoint em PPT, apresentações WPS em DPS e modelos DPT compatíveis localmente no navegador.",
+      },
+      ru: {
+        name: "Просмотр PPT и DPS",
+        description:
+          "Читайте презентации старого формата PowerPoint PPT, совместимые презентации WPS DPS и шаблоны DPT локально в браузере.",
+      },
+      sv: {
+        name: "PPT- och DPS-visare",
+        description:
+          "Läs äldre PowerPoint-presentationer i PPT-format samt kompatibla WPS-presentationer i DPS-format och DPT-mallar lokalt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู PPT และ DPS",
+        description:
+          "อ่านงานนำเสนอ PowerPoint PPT รุ่นเก่า งานนำเสนอ WPS DPS และแม่แบบ DPT ที่เข้ากันได้จากไฟล์ในเครื่องผ่านเบราว์เซอร์",
+      },
+      tr: {
+        name: "PPT ve DPS Görüntüleyici",
+        description:
+          "Eski PowerPoint PPT ve uyumlu WPS DPS sunumlarını ve DPT şablonlarını tarayıcınızda yerel olarak okuyun.",
+      },
+      vi: {
+        name: "Trình xem PPT và DPS",
+        description:
+          "Đọc bản trình bày PowerPoint PPT định dạng cũ, bản trình bày WPS DPS và mẫu DPT tương thích ngay trên thiết bị trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PPT 和 DPS 查看器",
+        description:
+          "在浏览器中本地阅读旧版 PowerPoint PPT、兼容的 WPS DPS 演示文稿和 DPT 模板。",
+      },
+      "zh-TW": {
+        name: "PPT 與 DPS 檢視器",
+        description:
+          "直接在瀏覽器中閱讀本機的舊版 PowerPoint PPT、相容的 WPS DPS 簡報及 DPT 範本。",
+      },
+    },
+  },
+  {
     slug: "pptx-viewer",
     category: "document",
     icon: "file-text",
@@ -46861,6 +46995,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "連接埠號碼查詢",
         description: "搜尋和瀏覽常見網路連接埠號碼",
+      },
+    },
+  },
+  "ppt-viewer": {
+    slug: "ppt-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "ppt",
+      "dps",
+      "dpt",
+      "powerpoint",
+      "wps",
+      "presentation",
+      "template",
+      "viewer",
+      "reader",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض PPT وDPS",
+        description:
+          "اقرأ عروض PowerPoint القديمة بتنسيق PPT وعروض WPS المتوافقة بتنسيق DPS وقوالب DPT محليًا في متصفحك.",
+      },
+      de: {
+        name: "PPT- und DPS-Betrachter",
+        description:
+          "Lies ältere PowerPoint-PPT-Dateien sowie kompatible WPS-DPS-Präsentationen und DPT-Vorlagen lokal in deinem Browser.",
+      },
+      en: {
+        name: "PPT and DPS Viewer",
+        description:
+          "Read legacy PowerPoint PPT and compatible WPS DPS presentations and DPT templates locally in your browser.",
+      },
+      es: {
+        name: "Visor de PPT y DPS",
+        description:
+          "Lee presentaciones antiguas de PowerPoint PPT y presentaciones WPS DPS y plantillas DPT compatibles de forma local en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse PPT et DPS",
+        description:
+          "Lisez les anciennes présentations PowerPoint PPT ainsi que les présentations WPS DPS et modèles DPT compatibles, localement dans votre navigateur.",
+      },
+      he: {
+        name: "מציג PPT ו-DPS",
+        description:
+          "קריאת מצגות PowerPoint PPT ישנות, מצגות WPS DPS תואמות ותבניות DPT באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "PPT और DPS व्यूअर",
+        description:
+          "पुरानी PowerPoint PPT और संगत WPS DPS प्रस्तुतियाँ तथा DPT टेम्पलेट अपने ब्राउज़र में स्थानीय रूप से पढ़ें।",
+      },
+      id: {
+        name: "Penampil PPT dan DPS",
+        description:
+          "Baca presentasi PowerPoint PPT lama serta presentasi WPS DPS dan templat DPT yang kompatibel secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Visualizzatore PPT e DPS",
+        description:
+          "Leggi presentazioni PowerPoint PPT in formato precedente, presentazioni WPS DPS compatibili e modelli DPT in locale nel browser.",
+      },
+      ja: {
+        name: "PPT・DPSビューアー",
+        description:
+          "旧形式のPowerPoint PPT、互換性のあるWPS DPSプレゼンテーション、DPTテンプレートをブラウザー内でローカルに閲覧できます。",
+      },
+      ko: {
+        name: "PPT 및 DPS 뷰어",
+        description:
+          "이전 형식의 PowerPoint PPT, 호환되는 WPS DPS 프레젠테이션과 DPT 템플릿을 브라우저에서 로컬로 읽으세요.",
+      },
+      ms: {
+        name: "Pemapar PPT dan DPS",
+        description:
+          "Baca pembentangan PowerPoint PPT lama serta pembentangan WPS DPS dan templat DPT yang serasi secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "PPT- en DPS-viewer",
+        description:
+          "Lees oudere PowerPoint-PPT-presentaties, compatibele WPS-DPS-presentaties en DPT-sjablonen lokaal in je browser.",
+      },
+      no: {
+        name: "PPT- og DPS-viser",
+        description:
+          "Les eldre PowerPoint PPT-presentasjoner og kompatible WPS DPS-presentasjoner og DPT-maler lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka PPT i DPS",
+        description:
+          "Czytaj lokalnie w przeglądarce starsze prezentacje PowerPoint PPT oraz zgodne prezentacje WPS DPS i szablony DPT.",
+      },
+      pt: {
+        name: "Visualizador de PPT e DPS",
+        description:
+          "Leia apresentações antigas do PowerPoint em PPT, apresentações WPS em DPS e modelos DPT compatíveis localmente no navegador.",
+      },
+      ru: {
+        name: "Просмотр PPT и DPS",
+        description:
+          "Читайте презентации старого формата PowerPoint PPT, совместимые презентации WPS DPS и шаблоны DPT локально в браузере.",
+      },
+      sv: {
+        name: "PPT- och DPS-visare",
+        description:
+          "Läs äldre PowerPoint-presentationer i PPT-format samt kompatibla WPS-presentationer i DPS-format och DPT-mallar lokalt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู PPT และ DPS",
+        description:
+          "อ่านงานนำเสนอ PowerPoint PPT รุ่นเก่า งานนำเสนอ WPS DPS และแม่แบบ DPT ที่เข้ากันได้จากไฟล์ในเครื่องผ่านเบราว์เซอร์",
+      },
+      tr: {
+        name: "PPT ve DPS Görüntüleyici",
+        description:
+          "Eski PowerPoint PPT ve uyumlu WPS DPS sunumlarını ve DPT şablonlarını tarayıcınızda yerel olarak okuyun.",
+      },
+      vi: {
+        name: "Trình xem PPT và DPS",
+        description:
+          "Đọc bản trình bày PowerPoint PPT định dạng cũ, bản trình bày WPS DPS và mẫu DPT tương thích ngay trên thiết bị trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PPT 和 DPS 查看器",
+        description:
+          "在浏览器中本地阅读旧版 PowerPoint PPT、兼容的 WPS DPS 演示文稿和 DPT 模板。",
+      },
+      "zh-TW": {
+        name: "PPT 與 DPS 檢視器",
+        description:
+          "直接在瀏覽器中閱讀本機的舊版 PowerPoint PPT、相容的 WPS DPS 簡報及 DPT 範本。",
       },
     },
   },
