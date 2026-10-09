@@ -19,13 +19,13 @@ export function MessageDetails({
       </div>
       <p className="mt-1 text-sm wrap-anywhere" dir="auto">
         <span className="text-muted-foreground">{m.from}: </span>
-        {email.from || m.unknown}
+        <bdi>{email.from || m.unknown}</bdi>
       </p>
       <p
         className="mt-1 text-xs wrap-anywhere text-muted-foreground"
         dir="auto"
       >
-        {m.date}: {email.date || m.unknown}
+        {m.date}: <bdi>{email.date || m.unknown}</bdi>
       </p>
       <div className="mt-2 flex flex-wrap gap-x-4 gap-y-2 text-sm">
         <details className="open:w-full">
