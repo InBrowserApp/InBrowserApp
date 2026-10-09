@@ -131,7 +131,7 @@ console.log('<script>')
       <a href="javascript:old()" data-markdown-link="&#x6a;ava&#10;script:alert(1)">Encoded</a>
       <a data-markdown-link="data:text/html,bad">Data</a>
       <a data-markdown-link="//example.com">Relative</a>
-      <a data-markdown-link=" HTTPS://example.com/?q=&lt;tag&gt; ">Web</a>
+      <a data-markdown-link=" HtTpS://example.com/Case?q=&lt;tag&gt;&amp;v=%2520 ">Web</a>
       <a data-markdown-link="mailto:reader@example.com">Mail</a>
       <a data-markdown-link="#markdown-target">Section</a>`)
     const template = document.createElement("template")
@@ -144,7 +144,7 @@ console.log('<script>')
       null,
     ])
     expect(links.slice(4).map((link) => link.getAttribute("href"))).toEqual([
-      "HTTPS://example.com/?q=<tag>",
+      "https://example.com/Case?q=<tag>&v=%2520",
       "mailto:reader@example.com",
       "#markdown-target",
     ])
