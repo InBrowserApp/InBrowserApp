@@ -1,0 +1,15 @@
+## Inspect local images
+
+Open a local image to inspect its detail and transparency without uploading it. Fit the image to the workspace, view it at actual size, or zoom and pan. Switch between a transparency grid, light and dark backgrounds. Focus mode gives the image more room.
+
+## Formats and multiple images
+
+The viewer reads JPEG, PNG, GIF, BMP, WebP, AVIF still images, TIFF, ICO, HEIC/HEIF still images and collections, JPEG XL, JP2 and JPEG 2000 codestreams (J2K). It detects the file content rather than trusting the filename. Availability depends on the encoding inside the file.
+
+Browse TIFF pages, icon sizes, image collections and animation frames with the image controls. GIF, animated WebP and JPEG XL frames are composited into complete still previews; there is no automatic playback. Animated PNG shows only its default still image and is labeled accordingly. HEIF/AVIF timed sequences, JPEG 2000 compositions (JPX/JPF/JPM) and Motion JPEG 2000 (MJ2) are not supported. Auxiliary images and depth maps are not shown.
+
+## Preview fidelity and privacy
+
+Orientation is applied to the displayed image. Previews use 8-bit channels, so high bit depth and HDR are reduced. Embedded color profiles are retained where supported, but this viewer is not a substitute for a color-managed editor. Browser and decoder resource limits may prevent very large or complex images from opening; there is no fixed file-size or image-count cap.
+
+Files stay on this device. Closing or replacing a file releases its decoder and preview. This viewer does not edit, export or automatically save your images. Decoder licenses and corresponding source information are available from the image details.

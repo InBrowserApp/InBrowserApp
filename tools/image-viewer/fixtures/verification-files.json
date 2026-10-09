@@ -1,0 +1,42 @@
+{
+  "example.heic": {
+    "bytes": 718114,
+    "sha256": "7f8b363e4936c0666a25f64f3a92fda10bd8e5453be4592530b65a55dd98f3f2"
+  },
+  "with-alpha.heic": {
+    "bytes": 8284,
+    "sha256": "dac399d3bf1019baaf5f88eef8b277087d0643e735db947c42355237bb9d0221"
+  },
+  "sequence.heif": {
+    "bytes": 1064,
+    "sha256": "a5abddf977aba0c950b5d512c173482f5df0d1d76c7cfe567114dcafc6ab9f1c"
+  },
+  "traffic-light.jxl": {
+    "bytes": 793,
+    "sha256": "28429b199c41fb54eda40986cd80dc5ddcf93c6253b9ce8eec5017e3c9d5a419"
+  },
+  "pq-gradient.jxl": {
+    "bytes": 137,
+    "sha256": "b37c9cd69b62458a3d5fb4efc2efe9f6da8e434db4772d9e03cbbf0d50945193"
+  },
+  "balloon.jpf": {
+    "bytes": 628654,
+    "sha256": "6099d2aa43657064e8e26ae037d132c74ddd1ffd25a535e6bcc28c9d7d9dd5b3"
+  },
+  "balloon.jpm": {
+    "bytes": 888827,
+    "sha256": "ae749b2c27af51294c80c8501485ec84fac36680c708ac3e77cde499c12b717f"
+  },
+  "Speedway.mj2": {
+    "bytes": 3018267,
+    "sha256": "07536fca40528bc4f72d52668ea1ca66967f09ec150d13d3858d8a43d81aaf60"
+  },
+  "large.bmp": {
+    "bytes": 56760054,
+    "sha256": "c4c419eab54e1c6c13a7863422355489fb9099528c5ea2ffe617f433aa3184d1"
+  },
+  "many-pages.tiff": {
+    "bytes": 144144,
+    "sha256": "0828a9c5ed2a844fa9770dc680e67dd9a6170ed9d09539105ae8c3b90c935213"
+  }
+}

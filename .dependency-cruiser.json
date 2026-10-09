@@ -14,7 +14,7 @@
       "from": {},
       "to": {
         "couldNotResolve": true,
-        "pathNot": "^astro:"
+        "pathNot": ["^astro:", "^@imagemagick/magick-wasm/magick[.]wasm[?]url$"]
       }
     },
     {
