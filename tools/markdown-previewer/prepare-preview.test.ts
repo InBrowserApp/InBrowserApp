@@ -124,4 +124,31 @@ console.log('<script>')
     expect(html).not.toContain("bad.test")
     expect(html).toContain("&quot; onload=&quot;bad")
   })
+
+  test("revalidates managed link protocols at the export boundary", () => {
+    const html =
+      exportBody(`<a data-markdown-link="javascript:alert(1)">Script</a>
+      <a href="javascript:old()" data-markdown-link="&#x6a;ava&#10;script:alert(1)">Encoded</a>
+      <a data-markdown-link="data:text/html,bad">Data</a>
+      <a data-markdown-link="//example.com">Relative</a>
+      <a data-markdown-link=" HTTPS://example.com/?q=&lt;tag&gt; ">Web</a>
+      <a data-markdown-link="mailto:reader@example.com">Mail</a>
+      <a data-markdown-link="#markdown-target">Section</a>`)
+    const template = document.createElement("template")
+    template.innerHTML = html
+    const links = Array.from(template.content.querySelectorAll("a"))
+    expect(links.slice(0, 4).map((link) => link.getAttribute("href"))).toEqual([
+      null,
+      null,
+      null,
+      null,
+    ])
+    expect(links.slice(4).map((link) => link.getAttribute("href"))).toEqual([
+      "HTTPS://example.com/?q=<tag>",
+      "mailto:reader@example.com",
+      "#markdown-target",
+    ])
+    expect(html).not.toContain("data-markdown-link")
+    expect(template.content.querySelector("tag")).toBeNull()
+  })
 })

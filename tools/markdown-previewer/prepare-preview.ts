@@ -129,11 +129,14 @@ export function exportBody(html: string) {
   for (const link of template.content.querySelectorAll(
     "[data-markdown-link]"
   )) {
-    link.setAttribute("href", link.getAttribute("data-markdown-link")!)
+    const href = link.getAttribute("data-markdown-link")!.trim()
     link.removeAttribute("data-markdown-link")
+    link.removeAttribute("href")
+    // Revalidate when turning inert preview metadata into an active link.
+    if (!/^(?:#|https?:\/\/|mailto:)/i.test(href)) continue
+    link.setAttribute("href", href)
     link.setAttribute("rel", "noopener noreferrer")
-    if (!link.getAttribute("href")!.startsWith("#"))
-      link.setAttribute("target", "_blank")
+    if (!href.startsWith("#")) link.setAttribute("target", "_blank")
   }
   return template.innerHTML
 }
