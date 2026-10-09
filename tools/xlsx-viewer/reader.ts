@@ -125,7 +125,6 @@ export async function openReader({
     workbook = await XlsxWorkbook.load(data, officeLoadOptions)
     signal.throwIfAborted()
     if (!workbook.sheetCount) throw new Error("INVALID")
-    if (workbook.sheetCount > 1000) throw new Error("TOO_LARGE")
     canvas.style.width = canvas.style.height = "100%"
     container.append(canvas)
     viewer = XlsxSheetViewer.fromWorkbook(canvas, workbook, {

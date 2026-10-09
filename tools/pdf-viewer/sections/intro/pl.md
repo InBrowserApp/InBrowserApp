@@ -4,6 +4,6 @@ Otwórz lokalny plik PDF lub upuść go w przeglądarce dokumentów. Przechodź 
 
 ## Prywatność i zgodność
 
-Pliki i hasła są przetwarzane lokalnie. To narzędzie nie przesyła ich na serwer ani nie zapisuje. Przeglądarka obsługuje pliki do 50 MB i 1000 stron. Pliki PDF chronione hasłem można otworzyć po jego podaniu. Osadzone czcionki i dołączone zasoby PDF są wykorzystywane, gdy są dostępne; brak czcionek może wpłynąć na wygląd niektórych dokumentów.
+Pliki i hasła są przetwarzane lokalnie. To narzędzie nie przesyła ich na serwer ani nie zapisuje. Pliki PDF chronione hasłem można otworzyć po jego podaniu. Osadzone czcionki i dołączone zasoby PDF są wykorzystywane, gdy są dostępne; brak czcionek może wpłynąć na wygląd niektórych dokumentów.
 
 Można czytać skany zawierające wyłącznie obrazy, ale zaznaczanie tekstu i wyszukiwanie wymagają istniejącej warstwy tekstowej. Ta przeglądarka nie rozpoznaje tekstu metodą OCR, nie edytuje dokumentów ani nie uruchamia osadzonych skryptów. Linki w dokumencie otwierają się tylko po ich wybraniu.

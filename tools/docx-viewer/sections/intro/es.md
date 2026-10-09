@@ -6,4 +6,4 @@ Abre un archivo .docx local o suéltalo en el visor. Navega por las páginas, am
 
 Los documentos se procesan localmente y esta herramienta no los sube ni los guarda. Las fuentes se toman del documento o de tu dispositivo; no se solicitan fuentes en línea. La sustitución de fuentes y las funciones no compatibles pueden cambiar los saltos de línea y la paginación con respecto a Word de escritorio.
 
-Los archivos están limitados a 50 MB y 1.000 páginas. También se limita el tamaño de los datos descomprimidos y de las páginas renderizadas para mantener acotado el uso de memoria del navegador. No se admiten documentos cifrados, archivos .doc antiguos, plantillas ni archivos habilitados para macros. El visor no edita, exporta ni imprime documentos, no ejecuta macros ni carga recursos externos del documento.
+Se limita el tamaño de los datos descomprimidos y de las páginas renderizadas para mantener acotado el uso de memoria del navegador. No se admiten documentos cifrados, archivos .doc antiguos, plantillas ni archivos habilitados para macros. El visor no edita, exporta ni imprime documentos, no ejecuta macros ni carga recursos externos del documento.

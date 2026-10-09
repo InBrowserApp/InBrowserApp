@@ -161,20 +161,31 @@ test("renders one page with local fonts, resource limits, navigation and search"
   expect(options.onError).toHaveBeenCalledOnce()
 })
 
-test("releases documents rejected by page and geometry limits", async () => {
-  for (const pages of [0, 1001]) {
-    const { options, doc } = setup()
-    doc.slideCount = pages
-    await expect(openReader(options)).rejects.toThrow(
-      pages === 0 ? "EMPTY" : "TOO_LARGE"
-    )
-  }
+test("opens presentations above 1,000 slides and navigates to the last slide", async () => {
+  const { options, doc } = setup()
+  doc.slideCount = 1001
+  const reader = await openReader(options)
+  expect(options.onChange).toHaveBeenCalledWith({
+    total: 1001,
+    page: 1,
+    zoom: 100,
+  })
+  reader.page(1001)
+  expect(mock.goToSlide).toHaveBeenCalledWith(1000)
+  reader.dispose()
+  expect(mock.documentDestroy).toHaveBeenCalledOnce()
+})
+
+test("releases empty presentations and those rejected by geometry limits", async () => {
+  const empty = setup()
+  empty.doc.slideCount = 0
+  await expect(openReader(empty.options)).rejects.toThrow("EMPTY")
   for (const width of [0, NaN, 1e8]) {
     const { options, doc } = setup()
     doc.slideWidth = width * 9525
     await expect(openReader(options)).rejects.toThrow("TOO_LARGE")
   }
-  expect(mock.documentDestroy).toHaveBeenCalledTimes(5)
+  expect(mock.documentDestroy).toHaveBeenCalledTimes(4)
   expect(mock.create).not.toHaveBeenCalled()
 })
 

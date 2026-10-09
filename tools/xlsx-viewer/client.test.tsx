@@ -165,17 +165,13 @@ test("validates inputs and maps engine failures", async () => {
   await screen.findByText(m.invalid)
   choose(new File([], "empty.xlsx"))
   await screen.findByText(m.invalid)
-  const large = file()
-  Object.defineProperty(large, "size", { value: 50 * 1024 * 1024 + 1 })
-  choose(large)
-  await screen.findByText(m.tooLarge)
   expect(mock.open).not.toHaveBeenCalled()
   mock.open.mockRejectedValueOnce(new Error("failed"))
   choose()
   await screen.findByText(m.invalid)
   mock.open.mockRejectedValueOnce(new Error("TOO_LARGE"))
   choose(file("large.xlsx"))
-  await screen.findByText(m.tooLarge)
+  await screen.findByText(m.resourceLimit)
 })
 
 test("ignores replaced files and releases a reader that resolves after cancellation", async () => {
@@ -199,4 +195,16 @@ test("ignores replaced files and releases a reader that resolves after cancellat
   finish(instance)
   await waitFor(() => expect(mock.dispose).toHaveBeenCalledOnce())
   expect(screen.getByLabelText(m.value)).toHaveProperty("value", "Item")
+})
+
+test("attempts to open files above the former 50 MB cap", async () => {
+  render(<Client messages={m} />)
+  const large = file()
+  Object.defineProperty(large, "size", { value: 50 * 1024 * 1024 + 1 })
+  choose(large)
+  await screen.findByLabelText(m.range)
+  expect(mock.open).toHaveBeenCalledWith(
+    expect.objectContaining({ file: large })
+  )
+  expect(screen.queryByRole("alert")).toBeNull()
 })

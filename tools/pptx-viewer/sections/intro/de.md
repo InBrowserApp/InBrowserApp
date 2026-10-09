@@ -6,4 +6,4 @@
 
 Präsentationen werden lokal verarbeitet und von diesem Tool weder hochgeladen noch gespeichert. Schriftarten stammen aus der Präsentation oder von Ihrem Gerät; es werden keine Online-Schriftarten angefordert. Ersetzte Schriftarten und nicht unterstützte Funktionen können das Layout beeinflussen. Animationen, Übergänge, die Wiedergabe eingebetteter Medien und die Referentenansicht sind nicht enthalten.
 
-Dateien sind auf 50 MB und 1.000 Folien begrenzt. Auch die entpackte Archivgröße und die Größe gerenderter Folien sind begrenzt. Verschlüsselte Präsentationen, ältere .ppt-Dateien, Vorlagen und Dateien mit Makros werden nicht unterstützt. Der Betrachter bearbeitet, exportiert oder druckt keine Präsentationen, führt keine Makros aus und lädt keine externen Dokumentressourcen.
+Die entpackte Archivgröße und die Größe gerenderter Folien sind begrenzt. Verschlüsselte Präsentationen, ältere .ppt-Dateien, Vorlagen und Dateien mit Makros werden nicht unterstützt. Der Betrachter bearbeitet, exportiert oder druckt keine Präsentationen, führt keine Makros aus und lädt keine externen Dokumentressourcen.

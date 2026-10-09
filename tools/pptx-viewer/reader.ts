@@ -51,7 +51,6 @@ export async function openReader({
     document = await PptxPresentation.load(data, officeLoadOptions)
     signal.throwIfAborted()
     if (!document.slideCount) throw new Error("EMPTY")
-    if (document.slideCount > 1000) throw new Error("TOO_LARGE")
     // Presentation dimensions are EMUs (9,525 EMUs per CSS pixel).
     const zoomMax = maximumPageZoom(
       document.slideWidth / 9525,

@@ -129,14 +129,21 @@ test("wires the local viewer, navigation, search and password events", async () 
   expect(mock.destroy).toHaveBeenCalledOnce()
 })
 
-test("unloads oversized and corrupt PDFs instead of leaving workers alive", async () => {
-  const oversized = setup(1001)
-  await expect(openReader(oversized.options)).rejects.toThrow("TOO_LARGE")
+test("opens PDFs above 1,000 pages and navigates to the last page", async () => {
+  const { options } = setup(1001)
+  const reader = await openReader(options)
+  expect(options.onChange).toHaveBeenCalledWith({ total: 1001, page: 1 })
+  reader.page(1001)
+  expect(mock.viewer.currentPageNumber).toBe(1001)
+  reader.dispose()
   expect(mock.destroy).toHaveBeenCalledOnce()
+})
+
+test("unloads corrupt PDFs instead of leaving workers alive", async () => {
   const broken = setup()
   broken.task.promise = Promise.reject(new Error("corrupt"))
   await expect(openReader(broken.options)).rejects.toThrow("corrupt")
-  expect(mock.destroy).toHaveBeenCalledTimes(2)
+  expect(mock.destroy).toHaveBeenCalledOnce()
 })
 
 test("cancels before allocation and while a document is loading", async () => {

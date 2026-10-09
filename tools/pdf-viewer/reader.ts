@@ -117,7 +117,6 @@ export async function openReader({
   try {
     const document = await task.promise
     signal.throwIfAborted()
-    if (document.numPages > 1000) throw new Error("TOO_LARGE")
     links.setDocument(document)
     viewer.setDocument(document)
     await viewer.firstPagePromise

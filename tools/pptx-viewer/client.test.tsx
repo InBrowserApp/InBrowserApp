@@ -102,15 +102,12 @@ test("opens local files, navigates, searches, zooms and clears", async () => {
   expect((mock.open.mock.calls[0]![0] as Options).signal.aborted).toBe(true)
 })
 
-test("does not parse invalid, empty or oversized files", async () => {
+test("does not parse invalid or empty files", async () => {
   render(<Client messages={m} />)
   choose(file("text.txt"))
   expect(await screen.findByText(m.invalid)).toBeTruthy()
   choose(new File([], "empty.pptx"))
-  const large = file()
-  Object.defineProperty(large, "size", { value: 50 * 1024 * 1024 + 1 })
-  choose(large)
-  expect(await screen.findByText(m.tooLarge)).toBeTruthy()
+  await screen.findByText(m.invalid)
   expect(mock.open).not.toHaveBeenCalled()
 })
 
@@ -140,14 +137,14 @@ test("ignores stale results and failures when files are replaced or closed", asy
   expect(screen.queryByText(m.invalid)).toBeNull()
 })
 
-test("reports parse, render and page limit failures", async () => {
+test("reports parse, render and resource limit failures", async () => {
   mock.open.mockRejectedValueOnce(new Error("broken"))
   render(<Client messages={m} />)
   choose()
   await screen.findByText(m.invalid)
   mock.open.mockRejectedValueOnce(new Error("TOO_LARGE"))
   choose(file("long.pptx"))
-  await screen.findByText(m.tooLarge)
+  await screen.findByText(m.resourceLimit)
   choose(file("good.pptx"))
   await screen.findByLabelText(m.page)
   const options = mock.open.mock.calls.at(-1)![0] as Options
@@ -169,7 +166,7 @@ test("reports archive and decoded image limits without exposing parser details",
       Object.assign(new Error("private parser detail"), { code })
     )
     choose(file(`${code}.pptx`))
-    await screen.findByText(m.tooLarge)
+    await screen.findByText(m.resourceLimit)
     expect(screen.queryByText("private parser detail")).toBeNull()
   }
 })
@@ -179,4 +176,16 @@ test("explains an empty presentation", async () => {
   render(<Client messages={m} />)
   choose()
   await screen.findByText(m.empty)
+})
+
+test("attempts to open files above the former 50 MB cap", async () => {
+  render(<Client messages={m} />)
+  const large = file()
+  Object.defineProperty(large, "size", { value: 50 * 1024 * 1024 + 1 })
+  choose(large)
+  await screen.findByLabelText(m.page)
+  expect(mock.open).toHaveBeenCalledWith(
+    expect.objectContaining({ file: large })
+  )
+  expect(screen.queryByRole("alert")).toBeNull()
 })

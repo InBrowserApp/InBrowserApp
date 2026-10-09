@@ -6,4 +6,4 @@
 
 Presentasjoner behandles lokalt og blir ikke lastet opp eller lagret av dette verktøyet. Skrifter hentes fra presentasjonen eller enheten din; ingen skrifter hentes fra nettet. Skrifterstatning og funksjoner som ikke støttes, kan påvirke oppsettet. Animasjoner, overganger, avspilling av innebygde medier og presentasjonsvisning er ikke inkludert.
 
-Filer er begrenset til 50 MB og 1 000 lysbilder. Utpakking av arkiver og størrelsen på gjengitte lysbilder er også begrenset. Krypterte presentasjoner, eldre .ppt-filer, maler og makroaktiverte filer støttes ikke. Viseren redigerer, eksporterer eller skriver ikke ut presentasjoner, kjører ikke makroer og laster ikke inn eksterne dokumentressurser.
+Utpakking av arkiver og størrelsen på gjengitte lysbilder er begrenset. Krypterte presentasjoner, eldre .ppt-filer, maler og makroaktiverte filer støttes ikke. Viseren redigerer, eksporterer eller skriver ikke ut presentasjoner, kjører ikke makroer og laster ikke inn eksterne dokumentressurser.

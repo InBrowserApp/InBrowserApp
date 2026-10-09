@@ -275,7 +275,22 @@ test("ignores stale sheet changes and stale navigation or clipboard results", as
   expect(options.onChange).not.toHaveBeenCalledWith({ copyStatus: "copied" })
 })
 
-test("cleans up late loads, empty or excessive sheet counts, and renderer failures", async () => {
+test("opens workbooks above 1,000 sheets and navigates to the last sheet", async () => {
+  const { options, workbook } = setup()
+  workbook.sheetCount = 1001
+  workbook.sheetNames = Array.from({ length: 1001 }, (_, i) => `Sheet ${i + 1}`)
+  const reader = await openReader(options)
+  expect(options.onChange).toHaveBeenCalledWith({
+    sheets: expect.arrayContaining([{ name: "Sheet 1001", hidden: false }]),
+  })
+  reader.sheet(1000)
+  await flush()
+  expect(mock.goToSheet).toHaveBeenCalledWith(1000)
+  reader.dispose()
+  expect(workbook.destroy).toHaveBeenCalledOnce()
+})
+
+test("cleans up late loads, empty workbooks, and renderer failures", async () => {
   const { options, controller, workbook } = setup()
   let finish!: (value: typeof workbook) => void
   mock.load.mockImplementationOnce(
@@ -290,13 +305,9 @@ test("cleans up late loads, empty or excessive sheet counts, and renderer failur
   finish(workbook)
   await expect(pending).rejects.toThrow("aborted")
   expect(workbook.destroy).toHaveBeenCalledOnce()
-  for (const count of [0, 1001]) {
-    const next = setup()
-    next.workbook.sheetCount = count
-    await expect(openReader(next.options)).rejects.toThrow(
-      count ? "TOO_LARGE" : "INVALID"
-    )
-  }
+  const empty = setup()
+  empty.workbook.sheetCount = 0
+  await expect(openReader(empty.options)).rejects.toThrow("INVALID")
   const next = setup()
   mock.goToSheet.mockRejectedValueOnce(new Error("invalid sheet"))
   await expect(openReader(next.options)).rejects.toThrow("invalid sheet")
