@@ -1,4 +1,4 @@
 {
   "name": "DOCX 阅读器",
-  "description": "在本地阅读 Word DOCX 文件，支持翻页、缩放、文本选择和搜索，无需上传。"
+  "description": "在本地阅读 Word DOCX、DOCM、DOTX 和 DOTM 文档及模板，支持翻页、缩放、文本选择和搜索。无需上传，不运行宏。"
 }

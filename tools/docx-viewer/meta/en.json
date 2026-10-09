@@ -1,4 +1,4 @@
 {
   "name": "DOCX Viewer",
-  "description": "Read Word DOCX files locally with page navigation, zoom, text selection, and search. No uploads."
+  "description": "Read Word DOCX, DOCM, DOTX, and DOTM documents and templates locally with page navigation, zoom, text selection, and search. No uploads or macro execution."
 }

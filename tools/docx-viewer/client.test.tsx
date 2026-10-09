@@ -85,12 +85,29 @@ test("opens local files, navigates, searches, zooms and clears", async () => {
   expect((mock.open.mock.calls[0]![0] as Options).signal.aborted).toBe(true)
 })
 
-test("does not parse invalid or empty files", async () => {
+test.each(["docx", "docm", "dotx", "dotm", "DOTM"])(
+  "opens modern Word documents and templates: %s",
+  async (extension) => {
+    render(<Client messages={m} />)
+    const document = file(`read.${extension}`)
+    choose(document)
+    await screen.findByLabelText(m.page)
+    expect(mock.open).toHaveBeenCalledWith(
+      expect.objectContaining({ file: document })
+    )
+  }
+)
+
+test("does not parse unrelated, legacy, misleading or empty files", async () => {
   render(<Client messages={m} />)
-  choose(file("text.txt"))
-  expect(await screen.findByText(m.invalid)).toBeTruthy()
-  choose(new File([], "empty.docx"))
-  await screen.findByText(m.invalid)
+  for (const name of ["text.txt", "old.doc", "file.docm.zip", "docm"]) {
+    choose(file(name))
+    expect(await screen.findByText(m.invalid)).toBeTruthy()
+  }
+  for (const name of ["empty.docx", "empty.docm", "empty.dotx", "empty.dotm"]) {
+    choose(new File([], name))
+    await screen.findByText(m.invalid)
+  }
   expect(mock.open).not.toHaveBeenCalled()
 })
 

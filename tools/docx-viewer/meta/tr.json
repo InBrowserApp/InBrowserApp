@@ -1,4 +1,4 @@
 {
   "name": "DOCX Görüntüleyici",
-  "description": "Word DOCX dosyalarını sayfa gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Dosyalar yüklenmez."
+  "description": "Word DOCX, DOCM, DOTX ve DOTM belgelerini ve şablonlarını sayfa gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Dosyalar yüklenmez, makrolar çalıştırılmaz."
 }

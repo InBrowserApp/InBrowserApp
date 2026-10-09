@@ -7247,122 +7247,134 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     slug: "docx-viewer",
     category: "document",
     icon: "file-text",
-    tags: ["docx", "word", "viewer", "reader", "document", "search", "offline"],
+    tags: [
+      "docx",
+      "docm",
+      "dotx",
+      "dotm",
+      "word",
+      "template",
+      "viewer",
+      "reader",
+      "document",
+      "search",
+      "offline",
+    ],
     locales: {
       ar: {
         name: "عارض DOCX",
         description:
-          "اقرأ ملفات Word بصيغة DOCX محليًا مع التنقل بين الصفحات والتكبير وتحديد النص والبحث. دون رفع الملفات.",
+          "اقرأ مستندات Word وقوالبه بصيغ DOCX وDOCM وDOTX وDOTM محليًا مع التنقل بين الصفحات والتكبير وتحديد النص والبحث. دون رفع الملفات أو تشغيل وحدات الماكرو.",
       },
       de: {
         name: "DOCX Viewer",
         description:
-          "Lesen Sie Word-DOCX-Dateien lokal mit Seitennavigation, Zoom, Textauswahl und Suche. Ohne Uploads.",
+          "Lesen Sie Word-Dokumente und -Vorlagen in den Formaten DOCX, DOCM, DOTX und DOTM lokal mit Seitennavigation, Zoom, Textauswahl und Suche. Ohne Uploads oder Makroausführung.",
       },
       en: {
         name: "DOCX Viewer",
         description:
-          "Read Word DOCX files locally with page navigation, zoom, text selection, and search. No uploads.",
+          "Read Word DOCX, DOCM, DOTX, and DOTM documents and templates locally with page navigation, zoom, text selection, and search. No uploads or macro execution.",
       },
       es: {
         name: "Visor de DOCX",
         description:
-          "Lee archivos Word DOCX localmente con navegación por páginas, zoom, selección de texto y búsqueda. Sin subir archivos.",
+          "Lee documentos y plantillas de Word DOCX, DOCM, DOTX y DOTM localmente con navegación por páginas, zoom, selección de texto y búsqueda. Sin subir archivos ni ejecutar macros.",
       },
       fr: {
         name: "Lecteur DOCX",
         description:
-          "Lisez vos fichiers Word DOCX en local avec navigation entre les pages, zoom, sélection de texte et recherche. Aucun envoi à un serveur.",
+          "Lisez vos documents et modèles Word DOCX, DOCM, DOTX et DOTM en local avec navigation entre les pages, zoom, sélection de texte et recherche. Aucun envoi à un serveur ni exécution de macros.",
       },
       he: {
         name: "מציג DOCX",
         description:
-          "קריאת קובצי Word DOCX מקומיים עם ניווט בין עמודים, שינוי גודל התצוגה, בחירת טקסט וחיפוש. ללא העלאת קבצים.",
+          "קריאת מסמכים ותבניות Word מסוג DOCX, DOCM, DOTX ו-DOTM באופן מקומי עם ניווט בין עמודים, שינוי גודל התצוגה, בחירת טקסט וחיפוש. ללא העלאת קבצים או הרצת פקודות מאקרו.",
       },
       hi: {
         name: "DOCX व्यूअर",
         description:
-          "पेज नेविगेशन, ज़ूम, टेक्स्ट चयन और खोज के साथ Word DOCX फ़ाइलें स्थानीय रूप से पढ़ें। कोई अपलोड नहीं।",
+          "पेज नेविगेशन, ज़ूम, टेक्स्ट चयन और खोज के साथ Word DOCX, DOCM, DOTX और DOTM दस्तावेज़ और टेम्पलेट स्थानीय रूप से पढ़ें। कोई अपलोड नहीं और मैक्रो नहीं चलते।",
       },
       id: {
         name: "Penampil DOCX",
         description:
-          "Baca file Word DOCX secara lokal dengan navigasi halaman, zoom, pemilihan teks, dan pencarian. Tanpa unggahan.",
+          "Baca dokumen dan templat Word DOCX, DOCM, DOTX, dan DOTM secara lokal dengan navigasi halaman, zoom, pemilihan teks, dan pencarian. Tanpa unggahan atau eksekusi makro.",
       },
       it: {
         name: "Visualizzatore DOCX",
         description:
-          "Leggi i file Word DOCX in locale con navigazione tra le pagine, zoom, selezione del testo e ricerca. Nessun caricamento su server.",
+          "Leggi documenti e modelli Word DOCX, DOCM, DOTX e DOTM in locale con navigazione tra le pagine, zoom, selezione del testo e ricerca. Nessun caricamento su server né esecuzione di macro.",
       },
       ja: {
         name: "DOCXビューアー",
         description:
-          "ページ移動、ズーム、テキスト選択、検索機能でWordのDOCXファイルをローカルで閲覧できます。アップロードは不要です。",
+          "ページ移動、ズーム、テキスト選択、検索機能でWordのDOCX、DOCM、DOTX、DOTM文書やテンプレートをローカルで閲覧できます。アップロードもマクロの実行も行いません。",
       },
       ko: {
         name: "DOCX 뷰어",
         description:
-          "페이지 이동, 확대 및 축소, 텍스트 선택, 검색 기능으로 Word DOCX 파일을 기기에서 읽으세요. 파일을 업로드하지 않습니다.",
+          "페이지 이동, 확대 및 축소, 텍스트 선택, 검색 기능으로 Word DOCX, DOCM, DOTX, DOTM 문서와 서식 파일을 기기에서 읽으세요. 파일을 업로드하거나 매크로를 실행하지 않습니다.",
       },
       ms: {
         name: "Pemapar DOCX",
         description:
-          "Baca fail Word DOCX secara setempat dengan navigasi halaman, zum, pemilihan teks dan carian. Tiada muat naik.",
+          "Baca dokumen dan templat Word DOCX, DOCM, DOTX dan DOTM secara setempat dengan navigasi halaman, zum, pemilihan teks dan carian. Tiada muat naik atau pelaksanaan makro.",
       },
       nl: {
         name: "DOCX-viewer",
         description:
-          "Lees Word DOCX-bestanden lokaal met paginanavigatie, zoomen, tekstselectie en zoeken. Geen uploads.",
+          "Lees Word-documenten en -sjablonen in DOCX-, DOCM-, DOTX- en DOTM-formaat lokaal met paginanavigatie, zoomen, tekstselectie en zoeken. Geen uploads of uitvoering van macro's.",
       },
       no: {
         name: "DOCX-viser",
         description:
-          "Les Word DOCX-filer lokalt med sidenavigering, zoom, tekstmarkering og søk. Ingen opplasting.",
+          "Les Word-dokumenter og -maler i DOCX-, DOCM-, DOTX- og DOTM-format lokalt med sidenavigering, zoom, tekstmarkering og søk. Ingen opplasting eller kjøring av makroer.",
       },
       pl: {
         name: "Przeglądarka DOCX",
         description:
-          "Czytaj pliki Word DOCX lokalnie, przechodź między stronami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Bez przesyłania plików na serwer.",
+          "Czytaj lokalnie dokumenty i szablony Word DOCX, DOCM, DOTX i DOTM, przechodź między stronami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Bez przesyłania plików na serwer ani uruchamiania makr.",
       },
       pt: {
         name: "Visualizador de DOCX",
         description:
-          "Leia arquivos DOCX do Word localmente com navegação entre páginas, zoom, seleção de texto e pesquisa. Sem enviar arquivos.",
+          "Leia documentos e modelos DOCX, DOCM, DOTX e DOTM do Word localmente com navegação entre páginas, zoom, seleção de texto e pesquisa. Sem enviar arquivos nem executar macros.",
       },
       ru: {
         name: "Просмотр DOCX",
         description:
-          "Читайте файлы Word DOCX локально: переходите между страницами, меняйте масштаб, выделяйте и ищите текст. Без загрузки на сервер.",
+          "Читайте документы и шаблоны Word DOCX, DOCM, DOTX и DOTM локально: переходите между страницами, меняйте масштаб, выделяйте и ищите текст. Без загрузки на сервер и запуска макросов.",
       },
       sv: {
         name: "DOCX-visare",
         description:
-          "Läs Word-dokument i DOCX-format lokalt med sidnavigering, zoom, textmarkering och sökning. Ingen uppladdning.",
+          "Läs Word-dokument och mallar i DOCX-, DOCM-, DOTX- och DOTM-format lokalt med sidnavigering, zoom, textmarkering och sökning. Ingen uppladdning eller körning av makron.",
       },
       th: {
         name: "โปรแกรมดู DOCX",
         description:
-          "อ่านไฟล์ Word DOCX ในเครื่อง พร้อมการเปลี่ยนหน้า ซูม เลือกข้อความ และค้นหา โดยไม่ต้องอัปโหลด",
+          "อ่านเอกสารและแม่แบบ Word DOCX, DOCM, DOTX และ DOTM ในเครื่อง พร้อมการเปลี่ยนหน้า ซูม เลือกข้อความ และค้นหา โดยไม่ต้องอัปโหลดหรือเรียกใช้แมโคร",
       },
       tr: {
         name: "DOCX Görüntüleyici",
         description:
-          "Word DOCX dosyalarını sayfa gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Dosyalar yüklenmez.",
+          "Word DOCX, DOCM, DOTX ve DOTM belgelerini ve şablonlarını sayfa gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Dosyalar yüklenmez, makrolar çalıştırılmaz.",
       },
       vi: {
         name: "Trình xem DOCX",
         description:
-          "Đọc tệp Word DOCX ngay trên thiết bị với tính năng chuyển trang, thu phóng, chọn văn bản và tìm kiếm. Không tải lên.",
+          "Đọc tài liệu và mẫu Word DOCX, DOCM, DOTX và DOTM ngay trên thiết bị với tính năng chuyển trang, thu phóng, chọn văn bản và tìm kiếm. Không tải lên hoặc chạy macro.",
       },
       "zh-CN": {
         name: "DOCX 阅读器",
         description:
-          "在本地阅读 Word DOCX 文件，支持翻页、缩放、文本选择和搜索，无需上传。",
+          "在本地阅读 Word DOCX、DOCM、DOTX 和 DOTM 文档及模板，支持翻页、缩放、文本选择和搜索。无需上传，不运行宏。",
       },
       "zh-TW": {
         name: "DOCX 檢視器",
         description:
-          "在本機閱讀 Word DOCX 檔案，支援頁面導覽、縮放、文字選取與搜尋。無須上傳。",
+          "在本機閱讀 Word DOCX、DOCM、DOTX 與 DOTM 文件和範本，支援頁面導覽、縮放、文字選取與搜尋。無須上傳，也不會執行巨集。",
       },
     },
   },
@@ -34675,122 +34687,134 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
     slug: "docx-viewer",
     category: "document",
     icon: "file-text",
-    tags: ["docx", "word", "viewer", "reader", "document", "search", "offline"],
+    tags: [
+      "docx",
+      "docm",
+      "dotx",
+      "dotm",
+      "word",
+      "template",
+      "viewer",
+      "reader",
+      "document",
+      "search",
+      "offline",
+    ],
     locales: {
       ar: {
         name: "عارض DOCX",
         description:
-          "اقرأ ملفات Word بصيغة DOCX محليًا مع التنقل بين الصفحات والتكبير وتحديد النص والبحث. دون رفع الملفات.",
+          "اقرأ مستندات Word وقوالبه بصيغ DOCX وDOCM وDOTX وDOTM محليًا مع التنقل بين الصفحات والتكبير وتحديد النص والبحث. دون رفع الملفات أو تشغيل وحدات الماكرو.",
       },
       de: {
         name: "DOCX Viewer",
         description:
-          "Lesen Sie Word-DOCX-Dateien lokal mit Seitennavigation, Zoom, Textauswahl und Suche. Ohne Uploads.",
+          "Lesen Sie Word-Dokumente und -Vorlagen in den Formaten DOCX, DOCM, DOTX und DOTM lokal mit Seitennavigation, Zoom, Textauswahl und Suche. Ohne Uploads oder Makroausführung.",
       },
       en: {
         name: "DOCX Viewer",
         description:
-          "Read Word DOCX files locally with page navigation, zoom, text selection, and search. No uploads.",
+          "Read Word DOCX, DOCM, DOTX, and DOTM documents and templates locally with page navigation, zoom, text selection, and search. No uploads or macro execution.",
       },
       es: {
         name: "Visor de DOCX",
         description:
-          "Lee archivos Word DOCX localmente con navegación por páginas, zoom, selección de texto y búsqueda. Sin subir archivos.",
+          "Lee documentos y plantillas de Word DOCX, DOCM, DOTX y DOTM localmente con navegación por páginas, zoom, selección de texto y búsqueda. Sin subir archivos ni ejecutar macros.",
       },
       fr: {
         name: "Lecteur DOCX",
         description:
-          "Lisez vos fichiers Word DOCX en local avec navigation entre les pages, zoom, sélection de texte et recherche. Aucun envoi à un serveur.",
+          "Lisez vos documents et modèles Word DOCX, DOCM, DOTX et DOTM en local avec navigation entre les pages, zoom, sélection de texte et recherche. Aucun envoi à un serveur ni exécution de macros.",
       },
       he: {
         name: "מציג DOCX",
         description:
-          "קריאת קובצי Word DOCX מקומיים עם ניווט בין עמודים, שינוי גודל התצוגה, בחירת טקסט וחיפוש. ללא העלאת קבצים.",
+          "קריאת מסמכים ותבניות Word מסוג DOCX, DOCM, DOTX ו-DOTM באופן מקומי עם ניווט בין עמודים, שינוי גודל התצוגה, בחירת טקסט וחיפוש. ללא העלאת קבצים או הרצת פקודות מאקרו.",
       },
       hi: {
         name: "DOCX व्यूअर",
         description:
-          "पेज नेविगेशन, ज़ूम, टेक्स्ट चयन और खोज के साथ Word DOCX फ़ाइलें स्थानीय रूप से पढ़ें। कोई अपलोड नहीं।",
+          "पेज नेविगेशन, ज़ूम, टेक्स्ट चयन और खोज के साथ Word DOCX, DOCM, DOTX और DOTM दस्तावेज़ और टेम्पलेट स्थानीय रूप से पढ़ें। कोई अपलोड नहीं और मैक्रो नहीं चलते।",
       },
       id: {
         name: "Penampil DOCX",
         description:
-          "Baca file Word DOCX secara lokal dengan navigasi halaman, zoom, pemilihan teks, dan pencarian. Tanpa unggahan.",
+          "Baca dokumen dan templat Word DOCX, DOCM, DOTX, dan DOTM secara lokal dengan navigasi halaman, zoom, pemilihan teks, dan pencarian. Tanpa unggahan atau eksekusi makro.",
       },
       it: {
         name: "Visualizzatore DOCX",
         description:
-          "Leggi i file Word DOCX in locale con navigazione tra le pagine, zoom, selezione del testo e ricerca. Nessun caricamento su server.",
+          "Leggi documenti e modelli Word DOCX, DOCM, DOTX e DOTM in locale con navigazione tra le pagine, zoom, selezione del testo e ricerca. Nessun caricamento su server né esecuzione di macro.",
       },
       ja: {
         name: "DOCXビューアー",
         description:
-          "ページ移動、ズーム、テキスト選択、検索機能でWordのDOCXファイルをローカルで閲覧できます。アップロードは不要です。",
+          "ページ移動、ズーム、テキスト選択、検索機能でWordのDOCX、DOCM、DOTX、DOTM文書やテンプレートをローカルで閲覧できます。アップロードもマクロの実行も行いません。",
       },
       ko: {
         name: "DOCX 뷰어",
         description:
-          "페이지 이동, 확대 및 축소, 텍스트 선택, 검색 기능으로 Word DOCX 파일을 기기에서 읽으세요. 파일을 업로드하지 않습니다.",
+          "페이지 이동, 확대 및 축소, 텍스트 선택, 검색 기능으로 Word DOCX, DOCM, DOTX, DOTM 문서와 서식 파일을 기기에서 읽으세요. 파일을 업로드하거나 매크로를 실행하지 않습니다.",
       },
       ms: {
         name: "Pemapar DOCX",
         description:
-          "Baca fail Word DOCX secara setempat dengan navigasi halaman, zum, pemilihan teks dan carian. Tiada muat naik.",
+          "Baca dokumen dan templat Word DOCX, DOCM, DOTX dan DOTM secara setempat dengan navigasi halaman, zum, pemilihan teks dan carian. Tiada muat naik atau pelaksanaan makro.",
       },
       nl: {
         name: "DOCX-viewer",
         description:
-          "Lees Word DOCX-bestanden lokaal met paginanavigatie, zoomen, tekstselectie en zoeken. Geen uploads.",
+          "Lees Word-documenten en -sjablonen in DOCX-, DOCM-, DOTX- en DOTM-formaat lokaal met paginanavigatie, zoomen, tekstselectie en zoeken. Geen uploads of uitvoering van macro's.",
       },
       no: {
         name: "DOCX-viser",
         description:
-          "Les Word DOCX-filer lokalt med sidenavigering, zoom, tekstmarkering og søk. Ingen opplasting.",
+          "Les Word-dokumenter og -maler i DOCX-, DOCM-, DOTX- og DOTM-format lokalt med sidenavigering, zoom, tekstmarkering og søk. Ingen opplasting eller kjøring av makroer.",
       },
       pl: {
         name: "Przeglądarka DOCX",
         description:
-          "Czytaj pliki Word DOCX lokalnie, przechodź między stronami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Bez przesyłania plików na serwer.",
+          "Czytaj lokalnie dokumenty i szablony Word DOCX, DOCM, DOTX i DOTM, przechodź między stronami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Bez przesyłania plików na serwer ani uruchamiania makr.",
       },
       pt: {
         name: "Visualizador de DOCX",
         description:
-          "Leia arquivos DOCX do Word localmente com navegação entre páginas, zoom, seleção de texto e pesquisa. Sem enviar arquivos.",
+          "Leia documentos e modelos DOCX, DOCM, DOTX e DOTM do Word localmente com navegação entre páginas, zoom, seleção de texto e pesquisa. Sem enviar arquivos nem executar macros.",
       },
       ru: {
         name: "Просмотр DOCX",
         description:
-          "Читайте файлы Word DOCX локально: переходите между страницами, меняйте масштаб, выделяйте и ищите текст. Без загрузки на сервер.",
+          "Читайте документы и шаблоны Word DOCX, DOCM, DOTX и DOTM локально: переходите между страницами, меняйте масштаб, выделяйте и ищите текст. Без загрузки на сервер и запуска макросов.",
       },
       sv: {
         name: "DOCX-visare",
         description:
-          "Läs Word-dokument i DOCX-format lokalt med sidnavigering, zoom, textmarkering och sökning. Ingen uppladdning.",
+          "Läs Word-dokument och mallar i DOCX-, DOCM-, DOTX- och DOTM-format lokalt med sidnavigering, zoom, textmarkering och sökning. Ingen uppladdning eller körning av makron.",
       },
       th: {
         name: "โปรแกรมดู DOCX",
         description:
-          "อ่านไฟล์ Word DOCX ในเครื่อง พร้อมการเปลี่ยนหน้า ซูม เลือกข้อความ และค้นหา โดยไม่ต้องอัปโหลด",
+          "อ่านเอกสารและแม่แบบ Word DOCX, DOCM, DOTX และ DOTM ในเครื่อง พร้อมการเปลี่ยนหน้า ซูม เลือกข้อความ และค้นหา โดยไม่ต้องอัปโหลดหรือเรียกใช้แมโคร",
       },
       tr: {
         name: "DOCX Görüntüleyici",
         description:
-          "Word DOCX dosyalarını sayfa gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Dosyalar yüklenmez.",
+          "Word DOCX, DOCM, DOTX ve DOTM belgelerini ve şablonlarını sayfa gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Dosyalar yüklenmez, makrolar çalıştırılmaz.",
       },
       vi: {
         name: "Trình xem DOCX",
         description:
-          "Đọc tệp Word DOCX ngay trên thiết bị với tính năng chuyển trang, thu phóng, chọn văn bản và tìm kiếm. Không tải lên.",
+          "Đọc tài liệu và mẫu Word DOCX, DOCM, DOTX và DOTM ngay trên thiết bị với tính năng chuyển trang, thu phóng, chọn văn bản và tìm kiếm. Không tải lên hoặc chạy macro.",
       },
       "zh-CN": {
         name: "DOCX 阅读器",
         description:
-          "在本地阅读 Word DOCX 文件，支持翻页、缩放、文本选择和搜索，无需上传。",
+          "在本地阅读 Word DOCX、DOCM、DOTX 和 DOTM 文档及模板，支持翻页、缩放、文本选择和搜索。无需上传，不运行宏。",
       },
       "zh-TW": {
         name: "DOCX 檢視器",
         description:
-          "在本機閱讀 Word DOCX 檔案，支援頁面導覽、縮放、文字選取與搜尋。無須上傳。",
+          "在本機閱讀 Word DOCX、DOCM、DOTX 與 DOTM 文件和範本，支援頁面導覽、縮放、文字選取與搜尋。無須上傳，也不會執行巨集。",
       },
     },
   },
