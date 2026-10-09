@@ -16,6 +16,7 @@ test("keeps the visible passage stable under zoom and scrolls outline targets", 
   }
   const { rerender } = render(<DocumentFrame {...props} />)
   const frame = screen.getByTitle("Document") as HTMLIFrameElement
+  Object.defineProperty(frame, "clientWidth", { value: 800 })
   const doc = frame.contentDocument!
   Object.defineProperty(doc.defaultView!, "frameElement", { value: frame })
   const focus = vi.spyOn(frame, "focus")
@@ -53,6 +54,7 @@ test("handles inert internal links, missing fragments and Escape in focus mode",
     </dialog>
   )
   const frame = screen.getByTitle("Document") as HTMLIFrameElement
+  Object.defineProperty(frame, "clientWidth", { value: 800 })
   const doc = frame.contentDocument!
   doc.body.innerHTML =
     '<a data-odt-reference="note%20one">Note</a><a data-odt-reference="bad%">Bad</a><details><p id="note one">Footnote</p></details>'

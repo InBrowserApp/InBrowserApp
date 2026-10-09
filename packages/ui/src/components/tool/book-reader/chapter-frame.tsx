@@ -5,7 +5,7 @@ import {
   restoreReadingLocation,
   type ReadingLocation,
 } from "@workspace/ui/lib/reading-location"
-import { readingPosition } from "@workspace/ui/lib/reading-position"
+import { useReadingPosition } from "@workspace/ui/lib/use-reading-position"
 
 export function ChapterFrame({
   html,
@@ -25,6 +25,7 @@ export function ChapterFrame({
   onResourceError: () => void
 }) {
   const [doc, setDoc] = useState<Document | null>(null)
+  const { preserve, navigate } = useReadingPosition(doc)
   useEffect(() => {
     if (!doc) return
     function activate(event: MouseEvent | KeyboardEvent) {
@@ -69,37 +70,33 @@ export function ChapterFrame({
   }, [doc, onLink, onResourceError])
   useLayoutEffect(() => {
     if (!doc) return
-    const position = readingPosition(doc)
-    // Zoom also scales publisher fonts specified in absolute px/pt units.
-    doc.documentElement.style.fontSize = "18px"
-    doc.documentElement.style.zoom = String(size / 18)
-    doc.body.style.maxWidth = wide ? "100ch" : "68ch"
-    if (position) {
-      const bounds = position.target.getBoundingClientRect()
-      doc.defaultView?.scrollBy(
-        bounds.left - position.left,
-        bounds.top - position.top
-      )
-    }
-  }, [doc, size, wide])
+    preserve(() => {
+      // Zoom also scales publisher fonts specified in absolute px/pt units.
+      doc.documentElement.style.fontSize = "18px"
+      doc.documentElement.style.zoom = String(size / 18)
+      doc.body.style.maxWidth = wide ? "100ch" : "68ch"
+    })
+  }, [doc, size, wide, preserve])
   useLayoutEffect(() => {
     if (!doc) return
-    if (destination.position) {
-      restoreReadingLocation(doc, destination.position)
-      ;(doc.defaultView?.frameElement as HTMLElement | null)?.focus()
-      return
-    }
-    const anchor = destination.anchor?.(doc)
-    if (anchor && typeof anchor !== "number" && "scrollIntoView" in anchor)
-      anchor.scrollIntoView()
-    else if (
-      anchor &&
-      typeof anchor !== "number" &&
-      "getBoundingClientRect" in anchor
-    )
-      doc.defaultView?.scrollBy(0, anchor.getBoundingClientRect().top)
-    else doc.defaultView?.scrollTo(0, 0)
-  }, [doc, destination])
+    navigate(() => {
+      if (destination.position) {
+        restoreReadingLocation(doc, destination.position)
+        ;(doc.defaultView?.frameElement as HTMLElement | null)?.focus()
+        return
+      }
+      const anchor = destination.anchor?.(doc)
+      if (anchor && typeof anchor !== "number" && "scrollIntoView" in anchor)
+        anchor.scrollIntoView()
+      else if (
+        anchor &&
+        typeof anchor !== "number" &&
+        "getBoundingClientRect" in anchor
+      )
+        doc.defaultView?.scrollBy(0, anchor.getBoundingClientRect().top)
+      else doc.defaultView?.scrollTo(0, 0)
+    })
+  }, [doc, destination, navigate])
   // WebKit also blocks parent-owned event handlers without allow-scripts.
   // Chapter CSP forbids scripts; sanitized links cannot navigate the frame
   // to a new document that would lose that policy.

@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useState } from "react"
-import { readingPosition } from "@workspace/ui/lib/reading-position"
+import { useReadingPosition } from "@workspace/ui/lib/use-reading-position"
 
 export function MessageFrame({
   html,
@@ -11,18 +11,13 @@ export function MessageFrame({
   size: number
 }) {
   const [doc, setDoc] = useState<Document | null>(null)
+  const { preserve } = useReadingPosition(doc)
   useLayoutEffect(() => {
     if (!doc) return
-    const position = readingPosition(doc)
-    doc.documentElement.style.zoom = String(size / 16)
-    if (position) {
-      const bounds = position.target.getBoundingClientRect()
-      doc.defaultView?.scrollBy(
-        bounds.left - position.left,
-        bounds.top - position.top
-      )
-    }
-  }, [doc, size])
+    preserve(() => {
+      doc.documentElement.style.zoom = String(size / 16)
+    })
+  }, [doc, size, preserve])
   useEffect(() => {
     if (!doc) return
     function escape(event: KeyboardEvent) {
