@@ -5522,6 +5522,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "epub-reader",
+    language: "ar",
+  },
+  {
+    slug: "epub-reader",
+    language: "de",
+  },
+  {
+    slug: "epub-reader",
+    language: "en",
+  },
+  {
+    slug: "epub-reader",
+    language: "es",
+  },
+  {
+    slug: "epub-reader",
+    language: "fr",
+  },
+  {
+    slug: "epub-reader",
+    language: "he",
+  },
+  {
+    slug: "epub-reader",
+    language: "hi",
+  },
+  {
+    slug: "epub-reader",
+    language: "id",
+  },
+  {
+    slug: "epub-reader",
+    language: "it",
+  },
+  {
+    slug: "epub-reader",
+    language: "ja",
+  },
+  {
+    slug: "epub-reader",
+    language: "ko",
+  },
+  {
+    slug: "epub-reader",
+    language: "ms",
+  },
+  {
+    slug: "epub-reader",
+    language: "nl",
+  },
+  {
+    slug: "epub-reader",
+    language: "no",
+  },
+  {
+    slug: "epub-reader",
+    language: "pl",
+  },
+  {
+    slug: "epub-reader",
+    language: "pt",
+  },
+  {
+    slug: "epub-reader",
+    language: "ru",
+  },
+  {
+    slug: "epub-reader",
+    language: "sv",
+  },
+  {
+    slug: "epub-reader",
+    language: "th",
+  },
+  {
+    slug: "epub-reader",
+    language: "tr",
+  },
+  {
+    slug: "epub-reader",
+    language: "vi",
+  },
+  {
+    slug: "epub-reader",
+    language: "zh-CN",
+  },
+  {
+    slug: "epub-reader",
+    language: "zh-TW",
+  },
+  {
     slug: "eu-vat-number-validator",
     language: "ar",
   },

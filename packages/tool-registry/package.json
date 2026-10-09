@@ -67,6 +67,7 @@
     "@tool/docx-viewer": "workspace:*",
     "@tool/duration-calculator": "workspace:*",
     "@tool/email-validator": "workspace:*",
+    "@tool/epub-reader": "workspace:*",
     "@tool/eu-vat-number-validator": "workspace:*",
     "@tool/exif-viewer": "workspace:*",
     "@tool/favicon-assets-generator": "workspace:*",
