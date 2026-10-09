@@ -24614,6 +24614,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "svg-viewer",
+    category: "image",
+    icon: "image",
+    tags: ["svg", "svgz", "vector", "image", "diagram", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض SVG",
+        description:
+          "افتح رسوم SVG وSVGZ محليًا. كبّر الرسوم المتجهية، وحرّك العرض، وافحص الأبعاد، وبدّل خلفيات الشفافية.",
+      },
+      de: {
+        name: "SVG-Betrachter",
+        description:
+          "SVG- und SVGZ-Grafiken lokal öffnen. Vektorgrafiken vergrößern, verschieben, Abmessungen prüfen und Transparenzhintergründe wechseln.",
+      },
+      en: {
+        name: "SVG Viewer",
+        description:
+          "Open SVG and SVGZ illustrations locally. Zoom into vector artwork, pan, inspect dimensions, and switch transparency backgrounds.",
+      },
+      es: {
+        name: "Visor de SVG",
+        description:
+          "Abre ilustraciones SVG y SVGZ de forma local. Amplía y desplaza dibujos vectoriales, consulta sus dimensiones y cambia el fondo de transparencia.",
+      },
+      fr: {
+        name: "Visionneuse SVG",
+        description:
+          "Ouvrez des illustrations SVG et SVGZ en local. Zoomez, déplacez la vue, inspectez les dimensions et changez l’arrière-plan pour révéler la transparence.",
+      },
+      he: {
+        name: "מציג SVG",
+        description:
+          "פתיחה מקומית של איורי SVG ו-SVGZ. הגדלת איורים וקטוריים, הזזת התצוגה, בדיקת מידות והחלפת רקעים לבדיקת שקיפות.",
+      },
+      hi: {
+        name: "SVG व्यूअर",
+        description:
+          "SVG और SVGZ चित्र स्थानीय रूप से खोलें। वेक्टर चित्र में ज़ूम करें, उसे खिसकाएँ, आयाम जाँचें और पारदर्शिता देखने के लिए पृष्ठभूमि बदलें।",
+      },
+      id: {
+        name: "Penampil SVG",
+        description:
+          "Buka ilustrasi SVG dan SVGZ secara lokal. Perbesar gambar vektor, geser tampilan, periksa dimensi, dan ganti latar transparansi.",
+      },
+      it: {
+        name: "Visualizzatore SVG",
+        description:
+          "Apri illustrazioni SVG e SVGZ in locale. Ingrandisci e sposta la grafica vettoriale, controlla le dimensioni e cambia lo sfondo della trasparenza.",
+      },
+      ja: {
+        name: "SVG ビューアー",
+        description:
+          "SVG や SVGZ のイラストをローカルで開きます。ベクター画像の拡大・縮小、表示位置の移動、寸法の確認、透明部分の背景切り替えができます。",
+      },
+      ko: {
+        name: "SVG 뷰어",
+        description:
+          "SVG 및 SVGZ 일러스트를 로컬에서 여세요. 벡터 그림을 확대하거나 이동하고, 크기를 확인하고, 투명도 배경을 바꿀 수 있습니다.",
+      },
+      ms: {
+        name: "Pemapar SVG",
+        description:
+          "Buka ilustrasi SVG dan SVGZ secara setempat. Zum masuk pada karya vektor, alih paparan, periksa dimensi dan tukar latar belakang kelutsinaran.",
+      },
+      nl: {
+        name: "SVG-viewer",
+        description:
+          "Open SVG- en SVGZ-illustraties lokaal. Zoom in op vectorillustraties, verschuif ze, bekijk afmetingen en wissel van achtergrond om transparantie te bekijken.",
+      },
+      no: {
+        name: "SVG-viser",
+        description:
+          "Åpne SVG- og SVGZ-illustrasjoner lokalt. Zoom inn på vektorgrafikk, panorer, se på mål og bytt bakgrunn for gjennomsiktighet.",
+      },
+      pl: {
+        name: "Przeglądarka SVG",
+        description:
+          "Otwieraj lokalnie ilustracje SVG i SVGZ. Powiększaj i przesuwaj grafikę wektorową, sprawdzaj wymiary i zmieniaj tło przezroczystości.",
+      },
+      pt: {
+        name: "Visualizador de SVG",
+        description:
+          "Abra ilustrações SVG e SVGZ localmente. Amplie desenhos vetoriais, desloque a visualização, confira dimensões e alterne fundos para inspecionar a transparência.",
+      },
+      ru: {
+        name: "Просмотр SVG",
+        description:
+          "Открывайте иллюстрации SVG и SVGZ локально. Масштабируйте и перемещайте векторный рисунок, проверяйте размеры и меняйте фон для оценки прозрачности.",
+      },
+      sv: {
+        name: "SVG-visare",
+        description:
+          "Öppna SVG- och SVGZ-illustrationer lokalt. Zooma in på vektorgrafik, panorera, granska mått och växla bakgrund för att se transparens.",
+      },
+      th: {
+        name: "โปรแกรมดู SVG",
+        description:
+          "เปิดภาพ SVG และ SVGZ บนอุปกรณ์ของคุณ ซูมดูภาพเวกเตอร์ เลื่อนมุมมอง ตรวจสอบขนาด และเปลี่ยนพื้นหลังเพื่อดูความโปร่งใส",
+      },
+      tr: {
+        name: "SVG Görüntüleyici",
+        description:
+          "SVG ve SVGZ çizimlerini yerel olarak açın. Vektör çizimlerini yakınlaştırın, kaydırın, boyutlarını inceleyin ve saydamlık arka planlarını değiştirin.",
+      },
+      vi: {
+        name: "Trình xem SVG",
+        description:
+          "Mở hình minh họa SVG và SVGZ trên thiết bị. Thu phóng hình vector, di chuyển, kiểm tra kích thước và đổi nền để xem độ trong suốt.",
+      },
+      "zh-CN": {
+        name: "SVG 查看器",
+        description:
+          "在本地打开 SVG 和 SVGZ 矢量图，支持缩放、平移、查看尺寸和切换透明背景。",
+      },
+      "zh-TW": {
+        name: "SVG 檢視器",
+        description:
+          "在本機開啟 SVG 與 SVGZ 向量圖。放大、平移向量圖像、檢查尺寸，並切換透明度背景。",
+      },
+    },
+  },
+  {
     slug: "text-diff",
     category: "text",
     icon: "file-text",

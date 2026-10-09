@@ -203,6 +203,7 @@
     "@tool/stopwatch": "workspace:*",
     "@tool/svg-optimizer": "workspace:*",
     "@tool/svg-to-image-converter": "workspace:*",
+    "@tool/svg-viewer": "workspace:*",
     "@tool/text-diff": "workspace:*",
     "@tool/text-statistics": "workspace:*",
     "@tool/time-diff-calculator": "workspace:*",

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="600" viewBox="-80 -40 960 600">
+<title>Coastal field notes</title><style>.title{font:700 34px sans-serif;fill:#163f54}.label{font:18px sans-serif;fill:#285165}.fine{fill:none;stroke:#24788b;stroke-width:2}</style>
+<defs><linearGradient id="sea" x2="1" y2="1"><stop stop-color="#63c4c7"/><stop offset="1" stop-color="#176880"/></linearGradient><linearGradient id="fade"><stop stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient><mask id="mist"><rect width="260" height="80" fill="url(#fade)"/></mask><filter id="soft"><feGaussianBlur stdDeviation="3"/></filter></defs>
+<rect x="-64" y="-24" width="928" height="568" rx="20" fill="#f5f4e9"/><text class="title" x="-30" y="36">Coastal field notes</text><text class="label" x="-30" y="69">Native vectors · local images · transparent layers</text>
+<path d="M-30 140 Q130 40 280 155 T800 155 L800 345 Q500 415 260 320 T-30 340Z" fill="url(#sea)"/>
+<path class="fine" d="M-30 440 Q100 365 245 440 T530 440 T800 440"/>
+<g transform="translate(10 370)"><rect width="260" height="80" fill="#df733a" mask="url(#mist)"/></g>
+<circle cx="640" cy="400" r="30" fill="#22777e" filter="url(#soft)"/>
+<image x="740" y="380" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAKklEQVR4nGN4Fq9MU8QwasGoBaMWjFowasGoBaMWjFowasGoBaMWDBULABfxoEzPkX01AAAAAElFTkSuQmCC"/>
+<text class="label" x="-30" y="504">Gradient coast / fading mask / soft filter / embedded PNG</text>
+</svg>
