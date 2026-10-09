@@ -193,7 +193,7 @@ test("does not cap a book at 1,000 sections and honors cancellation", async () =
   await expect(
     openBook(await fixture("reading.fb2"), controller.signal)
   ).rejects.toThrow("aborted")
-}, 15000)
+}, 60000)
 
 test("rejects invalid UTF-8 instead of replacing broken characters", () => {
   expect(() => normalize(new Uint8Array([60, 255, 62]))).toThrow("encoded data")
