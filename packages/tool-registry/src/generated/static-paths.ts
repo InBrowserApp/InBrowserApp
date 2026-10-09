@@ -5338,6 +5338,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "doc-viewer",
+    language: "ar",
+  },
+  {
+    slug: "doc-viewer",
+    language: "de",
+  },
+  {
+    slug: "doc-viewer",
+    language: "en",
+  },
+  {
+    slug: "doc-viewer",
+    language: "es",
+  },
+  {
+    slug: "doc-viewer",
+    language: "fr",
+  },
+  {
+    slug: "doc-viewer",
+    language: "he",
+  },
+  {
+    slug: "doc-viewer",
+    language: "hi",
+  },
+  {
+    slug: "doc-viewer",
+    language: "id",
+  },
+  {
+    slug: "doc-viewer",
+    language: "it",
+  },
+  {
+    slug: "doc-viewer",
+    language: "ja",
+  },
+  {
+    slug: "doc-viewer",
+    language: "ko",
+  },
+  {
+    slug: "doc-viewer",
+    language: "ms",
+  },
+  {
+    slug: "doc-viewer",
+    language: "nl",
+  },
+  {
+    slug: "doc-viewer",
+    language: "no",
+  },
+  {
+    slug: "doc-viewer",
+    language: "pl",
+  },
+  {
+    slug: "doc-viewer",
+    language: "pt",
+  },
+  {
+    slug: "doc-viewer",
+    language: "ru",
+  },
+  {
+    slug: "doc-viewer",
+    language: "sv",
+  },
+  {
+    slug: "doc-viewer",
+    language: "th",
+  },
+  {
+    slug: "doc-viewer",
+    language: "tr",
+  },
+  {
+    slug: "doc-viewer",
+    language: "vi",
+  },
+  {
+    slug: "doc-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "doc-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "docker-run-to-compose-converter",
     language: "ar",
   },

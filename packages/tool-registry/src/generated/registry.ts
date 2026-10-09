@@ -7384,6 +7384,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "doc-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["doc", "wps", "wpt", "word", "document", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض DOC وWPS",
+        description:
+          "اقرأ مستندات Word DOC القديمة ومستندات وقوالب WPS Writer المتوافقة محليًا في متصفحك.",
+      },
+      de: {
+        name: "DOC- und WPS-Betrachter",
+        description:
+          "Lesen Sie ältere Word-DOC-Dokumente sowie kompatible WPS-Writer-Dokumente und -Vorlagen lokal in Ihrem Browser.",
+      },
+      en: {
+        name: "DOC and WPS Viewer",
+        description:
+          "Read legacy Word DOC documents and compatible WPS Writer documents and templates locally in your browser.",
+      },
+      es: {
+        name: "Visor de DOC y WPS",
+        description:
+          "Lee documentos DOC de Word antiguos y documentos y plantillas compatibles de WPS Writer de forma local en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse DOC et WPS",
+        description:
+          "Lisez les anciens documents Word DOC et les documents et modèles WPS Writer compatibles localement dans votre navigateur.",
+      },
+      he: {
+        name: "מציג קובצי DOC ו-WPS",
+        description:
+          "קריאת מסמכי Word ישנים בפורמט DOC ומסמכים ותבניות תואמים של WPS Writer באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "DOC और WPS व्यूअर",
+        description:
+          "पुराने Word DOC दस्तावेज़ और संगत WPS Writer दस्तावेज़ व टेम्पलेट अपने ब्राउज़र में स्थानीय रूप से पढ़ें।",
+      },
+      id: {
+        name: "Penampil DOC dan WPS",
+        description:
+          "Baca dokumen Word DOC lama serta dokumen dan templat WPS Writer yang kompatibel secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Visualizzatore DOC e WPS",
+        description:
+          "Leggi documenti Word DOC precedenti e documenti e modelli WPS Writer compatibili in locale nel browser.",
+      },
+      ja: {
+        name: "DOC・WPSビューアー",
+        description:
+          "従来のWord DOC文書や互換性のあるWPS Writer文書・テンプレートを、ブラウザー内でローカルに閲覧できます。",
+      },
+      ko: {
+        name: "DOC 및 WPS 뷰어",
+        description:
+          "이전 버전의 Word DOC 문서와 호환되는 WPS Writer 문서 및 서식 파일을 브라우저에서 로컬로 읽어 보세요.",
+      },
+      ms: {
+        name: "Pemapar DOC dan WPS",
+        description:
+          "Baca dokumen Word DOC lama serta dokumen dan templat WPS Writer yang serasi secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "DOC- en WPS-viewer",
+        description:
+          "Lees oudere Word DOC-documenten en compatibele WPS Writer-documenten en -sjablonen lokaal in je browser.",
+      },
+      no: {
+        name: "DOC- og WPS-viser",
+        description:
+          "Les eldre Word DOC-dokumenter og kompatible WPS Writer-dokumenter og -maler lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka DOC i WPS",
+        description:
+          "Czytaj dokumenty w starszym formacie Word DOC oraz zgodne dokumenty i szablony WPS Writer lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de DOC e WPS",
+        description:
+          "Leia documentos antigos do Word em DOC e documentos e modelos compatíveis do WPS Writer localmente no navegador.",
+      },
+      ru: {
+        name: "Просмотр DOC и WPS",
+        description:
+          "Читайте документы Word старого формата DOC, а также совместимые документы и шаблоны WPS Writer локально в браузере.",
+      },
+      sv: {
+        name: "DOC- och WPS-visare",
+        description:
+          "Läs äldre Word DOC-dokument och kompatibla WPS Writer-dokument och mallar lokalt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู DOC และ WPS",
+        description:
+          "อ่านเอกสาร Word DOC รุ่นเก่า รวมถึงเอกสารและแม่แบบ WPS Writer ที่รองรับในเบราว์เซอร์บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "DOC ve WPS Görüntüleyici",
+        description:
+          "Eski Word DOC belgelerini ve uyumlu WPS Writer belgeleri ile şablonlarını tarayıcınızda yerel olarak okuyun.",
+      },
+      vi: {
+        name: "Trình xem DOC và WPS",
+        description:
+          "Đọc tài liệu Word DOC định dạng cũ cùng tài liệu và mẫu WPS Writer tương thích ngay trong trình duyệt trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "DOC 和 WPS 查看器",
+        description:
+          "在浏览器本地阅读旧版 Word DOC 文档以及兼容的 WPS 文字文档和模板。",
+      },
+      "zh-TW": {
+        name: "DOC 與 WPS 檢視器",
+        description:
+          "在瀏覽器本機閱讀舊版 Word DOC 文件，以及相容的 WPS Writer 文件與範本。",
+      },
+    },
+  },
+  {
     slug: "docker-run-to-compose-converter",
     category: "developer",
     icon: "network",
@@ -36114,6 +36237,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "DNS 查詢",
         description:
           "透過 DNS over HTTPS 解析器查詢 A、AAAA、CNAME、MX、TXT、NS、SOA、CAA、SRV、HTTPS 和 SVCB DNS 記錄。",
+      },
+    },
+  },
+  "doc-viewer": {
+    slug: "doc-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["doc", "wps", "wpt", "word", "document", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض DOC وWPS",
+        description:
+          "اقرأ مستندات Word DOC القديمة ومستندات وقوالب WPS Writer المتوافقة محليًا في متصفحك.",
+      },
+      de: {
+        name: "DOC- und WPS-Betrachter",
+        description:
+          "Lesen Sie ältere Word-DOC-Dokumente sowie kompatible WPS-Writer-Dokumente und -Vorlagen lokal in Ihrem Browser.",
+      },
+      en: {
+        name: "DOC and WPS Viewer",
+        description:
+          "Read legacy Word DOC documents and compatible WPS Writer documents and templates locally in your browser.",
+      },
+      es: {
+        name: "Visor de DOC y WPS",
+        description:
+          "Lee documentos DOC de Word antiguos y documentos y plantillas compatibles de WPS Writer de forma local en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse DOC et WPS",
+        description:
+          "Lisez les anciens documents Word DOC et les documents et modèles WPS Writer compatibles localement dans votre navigateur.",
+      },
+      he: {
+        name: "מציג קובצי DOC ו-WPS",
+        description:
+          "קריאת מסמכי Word ישנים בפורמט DOC ומסמכים ותבניות תואמים של WPS Writer באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "DOC और WPS व्यूअर",
+        description:
+          "पुराने Word DOC दस्तावेज़ और संगत WPS Writer दस्तावेज़ व टेम्पलेट अपने ब्राउज़र में स्थानीय रूप से पढ़ें।",
+      },
+      id: {
+        name: "Penampil DOC dan WPS",
+        description:
+          "Baca dokumen Word DOC lama serta dokumen dan templat WPS Writer yang kompatibel secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Visualizzatore DOC e WPS",
+        description:
+          "Leggi documenti Word DOC precedenti e documenti e modelli WPS Writer compatibili in locale nel browser.",
+      },
+      ja: {
+        name: "DOC・WPSビューアー",
+        description:
+          "従来のWord DOC文書や互換性のあるWPS Writer文書・テンプレートを、ブラウザー内でローカルに閲覧できます。",
+      },
+      ko: {
+        name: "DOC 및 WPS 뷰어",
+        description:
+          "이전 버전의 Word DOC 문서와 호환되는 WPS Writer 문서 및 서식 파일을 브라우저에서 로컬로 읽어 보세요.",
+      },
+      ms: {
+        name: "Pemapar DOC dan WPS",
+        description:
+          "Baca dokumen Word DOC lama serta dokumen dan templat WPS Writer yang serasi secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "DOC- en WPS-viewer",
+        description:
+          "Lees oudere Word DOC-documenten en compatibele WPS Writer-documenten en -sjablonen lokaal in je browser.",
+      },
+      no: {
+        name: "DOC- og WPS-viser",
+        description:
+          "Les eldre Word DOC-dokumenter og kompatible WPS Writer-dokumenter og -maler lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka DOC i WPS",
+        description:
+          "Czytaj dokumenty w starszym formacie Word DOC oraz zgodne dokumenty i szablony WPS Writer lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de DOC e WPS",
+        description:
+          "Leia documentos antigos do Word em DOC e documentos e modelos compatíveis do WPS Writer localmente no navegador.",
+      },
+      ru: {
+        name: "Просмотр DOC и WPS",
+        description:
+          "Читайте документы Word старого формата DOC, а также совместимые документы и шаблоны WPS Writer локально в браузере.",
+      },
+      sv: {
+        name: "DOC- och WPS-visare",
+        description:
+          "Läs äldre Word DOC-dokument och kompatibla WPS Writer-dokument och mallar lokalt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู DOC และ WPS",
+        description:
+          "อ่านเอกสาร Word DOC รุ่นเก่า รวมถึงเอกสารและแม่แบบ WPS Writer ที่รองรับในเบราว์เซอร์บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "DOC ve WPS Görüntüleyici",
+        description:
+          "Eski Word DOC belgelerini ve uyumlu WPS Writer belgeleri ile şablonlarını tarayıcınızda yerel olarak okuyun.",
+      },
+      vi: {
+        name: "Trình xem DOC và WPS",
+        description:
+          "Đọc tài liệu Word DOC định dạng cũ cùng tài liệu và mẫu WPS Writer tương thích ngay trong trình duyệt trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "DOC 和 WPS 查看器",
+        description:
+          "在浏览器本地阅读旧版 Word DOC 文档以及兼容的 WPS 文字文档和模板。",
+      },
+      "zh-TW": {
+        name: "DOC 與 WPS 檢視器",
+        description:
+          "在瀏覽器本機閱讀舊版 Word DOC 文件，以及相容的 WPS Writer 文件與範本。",
       },
     },
   },
