@@ -10,6 +10,7 @@ packages:
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
   foliate-js: 1.0.1
+  "@ofdjs/viewer": 0.1.1
   fflate: 0.8.3
   "@silurus/ooxml": 0.88.0
   "@anglinb/city-hash": ^1.1.0

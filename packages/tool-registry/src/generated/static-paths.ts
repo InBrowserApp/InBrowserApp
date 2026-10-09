@@ -11042,6 +11042,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ofd-viewer",
+    language: "ar",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "de",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "en",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "es",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "fr",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "he",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "hi",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "id",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "it",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "ja",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "ko",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "ms",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "nl",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "no",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "pl",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "pt",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "ru",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "sv",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "th",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "tr",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "vi",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "ofd-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "openapi-to-typescript-converter",
     language: "ar",
   },
