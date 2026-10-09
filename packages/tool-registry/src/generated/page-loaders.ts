@@ -154,6 +154,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "my-ip-address": () => import("@tool/my-ip-address/page"),
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "number-base-converter": () => import("@tool/number-base-converter/page"),
+  "ofd-viewer": () => import("@tool/ofd-viewer/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
   "password-strength-checker": () =>

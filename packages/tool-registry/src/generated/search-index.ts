@@ -15017,6 +15017,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ofd-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["ofd", "viewer", "reader", "invoice", "document", "offline"],
+    locales: {
+      ar: {
+        name: "عارض OFD",
+        description:
+          "اقرأ مستندات OFD المحلية في متصفحك. تصفّح الصفحات وكبّرها ودوّرها واطّلع على الفواتير أو المنشورات دون رفع الملفات.",
+      },
+      de: {
+        name: "OFD Viewer",
+        description:
+          "Lesen Sie lokale OFD-Dokumente im Browser. Blättern, vergrößern und drehen Sie Seiten und prüfen Sie Rechnungen oder Publikationen, ohne Dateien hochzuladen.",
+      },
+      en: {
+        name: "OFD Viewer",
+        description:
+          "Read local OFD documents in your browser. Browse pages, zoom, rotate, and inspect invoices or publications without uploading files.",
+      },
+      es: {
+        name: "Visor OFD",
+        description:
+          "Lee documentos OFD locales en tu navegador. Recorre las páginas, ajusta el zoom, gíralas y consulta facturas o publicaciones sin subir archivos.",
+      },
+      fr: {
+        name: "Visionneuse OFD",
+        description:
+          "Lisez des documents OFD locaux dans votre navigateur. Parcourez les pages, zoomez, faites pivoter et consultez des factures ou des publications sans téléverser de fichiers.",
+      },
+      he: {
+        name: "OFD Viewer",
+        description:
+          "קריאת מסמכי OFD מקומיים בדפדפן. עיון בעמודים, הגדלה, סיבוב ובדיקת חשבוניות או פרסומים ללא העלאת קבצים.",
+      },
+      hi: {
+        name: "OFD Viewer",
+        description:
+          "स्थानीय OFD दस्तावेज़ अपने ब्राउज़र में पढ़ें। फ़ाइलें अपलोड किए बिना पृष्ठ देखें, ज़ूम करें, घुमाएँ और चालानों या प्रकाशनों की जाँच करें।",
+      },
+      id: {
+        name: "OFD Viewer",
+        description:
+          "Baca dokumen OFD lokal di browser Anda. Telusuri halaman, perbesar, putar, dan periksa faktur atau publikasi tanpa mengunggah file.",
+      },
+      it: {
+        name: "OFD Viewer",
+        description:
+          "Leggi documenti OFD locali nel browser. Sfoglia le pagine, ingrandisci, ruota ed esamina fatture o pubblicazioni senza caricare file online.",
+      },
+      ja: {
+        name: "OFD ビューアー",
+        description:
+          "ローカルの OFD 文書をブラウザーで閲覧。ファイルをアップロードせずに、ページの移動、拡大・縮小、回転を行い、請求書や出版物を確認できます。",
+      },
+      ko: {
+        name: "OFD 뷰어",
+        description:
+          "브라우저에서 로컬 OFD 문서를 읽으세요. 파일을 업로드하지 않고 페이지를 탐색하고 확대하거나 회전하며 청구서나 출판물을 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "OFD Viewer",
+        description:
+          "Baca dokumen OFD setempat dalam pelayar anda. Semak halaman, zum, putar dan periksa invois atau penerbitan tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "OFD Viewer",
+        description:
+          "Lees lokale OFD-documenten in je browser. Blader door pagina's, zoom, draai en bekijk facturen of publicaties zonder bestanden te uploaden.",
+      },
+      no: {
+        name: "OFD Viewer",
+        description:
+          "Les lokale OFD-dokumenter i nettleseren. Bla mellom sider, zoom, roter og undersøk fakturaer eller publikasjoner uten å laste opp filer.",
+      },
+      pl: {
+        name: "OFD Viewer",
+        description:
+          "Czytaj lokalne dokumenty OFD w przeglądarce. Przeglądaj strony, powiększaj, obracaj i sprawdzaj faktury lub publikacje bez przesyłania plików.",
+      },
+      pt: {
+        name: "OFD Viewer",
+        description:
+          "Leia documentos OFD locais no navegador. Navegue pelas páginas, amplie, gire e examine faturas ou publicações sem enviar arquivos.",
+      },
+      ru: {
+        name: "OFD Viewer",
+        description:
+          "Читайте локальные документы OFD в браузере. Листайте страницы, меняйте масштаб, поворачивайте их и просматривайте счета или публикации без загрузки файлов на сервер.",
+      },
+      sv: {
+        name: "OFD Viewer",
+        description:
+          "Läs lokala OFD-dokument i webbläsaren. Bläddra bland sidor, zooma, rotera och granska fakturor eller publikationer utan att ladda upp filer.",
+      },
+      th: {
+        name: "OFD Viewer",
+        description:
+          "อ่านเอกสาร OFD ในเครื่องผ่านเบราว์เซอร์ เปลี่ยนหน้า ซูม หมุน และตรวจสอบใบแจ้งหนี้หรือสิ่งพิมพ์โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "OFD Viewer",
+        description:
+          "Yerel OFD belgelerini tarayıcınızda okuyun. Dosya yüklemeden sayfalar arasında gezinin, yakınlaştırın, döndürün, fatura veya yayınları inceleyin.",
+      },
+      vi: {
+        name: "OFD Viewer",
+        description:
+          "Đọc tài liệu OFD cục bộ trong trình duyệt. Duyệt trang, thu phóng, xoay và kiểm tra hóa đơn hoặc ấn phẩm mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "OFD 查看器",
+        description:
+          "在浏览器中阅读本地 OFD 文档。浏览页面、缩放、旋转和查看发票或出版物，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "OFD 檢視器",
+        description:
+          "在瀏覽器中閱讀本機 OFD 文件。瀏覽頁面、縮放、旋轉及查看發票或出版品，無須上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "openapi-to-typescript-converter",
     category: "developer",
     icon: "braces",
