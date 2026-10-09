@@ -126,6 +126,8 @@ export function IllustrationView({
           >
             1:1
           </Button>
+        </div>
+        <div className="flex items-center gap-2">
           <DocumentIconButton
             label={m.reset}
             onClick={() => {
@@ -135,29 +137,29 @@ export function IllustrationView({
           >
             <RotateCw aria-hidden="true" />
           </DocumentIconButton>
-        </div>
-        <div
-          role="group"
-          aria-label={m.background}
-          className="flex items-center gap-0.5"
-        >
-          {(
-            [
-              ["checkerboard", LayoutGrid],
-              ["light", Sun],
-              ["dark", Moon],
-            ] as const
-          ).map(([value, Icon]) => (
-            <DocumentIconButton
-              key={value}
-              label={m[value]}
-              className="aria-pressed:bg-accent"
-              aria-pressed={background === value}
-              onClick={() => setBackground(value)}
-            >
-              <Icon aria-hidden="true" />
-            </DocumentIconButton>
-          ))}
+          <div
+            role="group"
+            aria-label={m.background}
+            className="flex items-center gap-0.5"
+          >
+            {(
+              [
+                ["checkerboard", LayoutGrid],
+                ["light", Sun],
+                ["dark", Moon],
+              ] as const
+            ).map(([value, Icon]) => (
+              <DocumentIconButton
+                key={value}
+                label={m[value]}
+                className="aria-pressed:bg-accent"
+                aria-pressed={background === value}
+                onClick={() => setBackground(value)}
+              >
+                <Icon aria-hidden="true" />
+              </DocumentIconButton>
+            ))}
+          </div>
         </div>
       </div>
       {preview.empty ? (
