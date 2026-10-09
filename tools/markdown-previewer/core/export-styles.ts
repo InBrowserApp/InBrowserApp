@@ -28,9 +28,9 @@ const EXPORT_BASE_STYLES = `
   }
 
   main {
-    max-width: 960px;
+    max-width: 76ch;
     margin: 0 auto;
-    padding: 48px 24px 72px;
+    padding: 24px 16px 48px;
   }
 
   article {
@@ -38,7 +38,8 @@ const EXPORT_BASE_STYLES = `
     border-radius: 16px;
     background: var(--surface-background);
     box-shadow: 0 18px 60px -42px rgba(15, 23, 42, 0.32);
-    padding: 40px;
+    padding: clamp(12px, 3vw, 32px);
+    overflow-wrap: anywhere;
   }
 
   h1,
@@ -109,6 +110,8 @@ const EXPORT_BASE_STYLES = `
   }
 
   pre {
+    white-space: pre;
+    overflow-wrap: normal;
     overflow-x: auto;
     border: 1px solid var(--pre-border);
     border-radius: 18px;
@@ -123,6 +126,7 @@ const EXPORT_BASE_STYLES = `
   }
 
   table {
+    overflow-wrap: normal;
     display: block;
     max-width: 100%;
     overflow-x: auto;
@@ -138,9 +142,31 @@ const EXPORT_BASE_STYLES = `
     vertical-align: top;
   }
 
+  [align="right"] { text-align: right; }
+  [align="center"] { text-align: center; }
+  [align="left"] { text-align: left; }
+
   th {
     color: var(--text-color);
     font-weight: 600;
+  }
+
+  [data-markdown-wide] {
+    max-width: 100%;
+    overflow: auto;
+    margin-block: 1rem;
+  }
+
+  [data-markdown-wide] > table { margin: 0; display: table; }
+  [data-markdown-wide] > pre { margin: 0; overflow: visible; width: max-content; min-width: 100%; }
+  :focus-visible { outline: 2px solid var(--link-color); outline-offset: 2px; }
+  a { text-decoration: underline; cursor: pointer; }
+  img:not([src]) { display: inline; }
+  @media print {
+    main { max-width: none; padding: 0; }
+    article { border: 0; box-shadow: none; padding: 0; }
+    [data-markdown-wide] { overflow: visible; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; }
   }
 
   img {

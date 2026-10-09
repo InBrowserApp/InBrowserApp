@@ -1,85 +1,47 @@
-import {
-  ToolPanelCard,
-  ToolPanelCardContent,
-  ToolPanelCardFooter,
-} from "@workspace/ui/components/tool/tool-panel-card"
+import { useId } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
-import {
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
-import { FileText, Sparkles, Trash2 } from "@workspace/ui/icons"
-
+import { Field, FieldLabel } from "@workspace/ui/components/ui/field"
 import type { MarkdownPreviewerMessages } from "../types"
 
-type EditorCardProps = Readonly<{
-  messages: MarkdownPreviewerMessages
-  markdown: string
-  textareaId: string
-  onMarkdownChange: (value: string) => void
-  onImportClick: () => void
-  onLoadSample: () => void
-  onClear: () => void
-}>
-
-function EditorCard({
-  messages,
+export function EditorCard({
+  messages: m,
   markdown,
-  textareaId,
   onMarkdownChange,
-  onImportClick,
   onLoadSample,
   onClear,
-}: EditorCardProps) {
+}: {
+  messages: MarkdownPreviewerMessages
+  markdown: string
+  onMarkdownChange: (value: string) => void
+  onLoadSample: () => void
+  onClear: () => void
+}) {
+  const id = useId()
   return (
-    <ToolPanelCard className="min-w-0">
-      <CardHeader className="gap-1.5 border-b px-5 sm:px-6">
-        <CardTitle className="text-pretty">{messages.editorTitle}</CardTitle>
-        <CardDescription className="max-w-2xl text-pretty">
-          {messages.editorDescription}
-        </CardDescription>
-      </CardHeader>
-
-      <ToolPanelCardContent className="sm:p-5">
-        <label htmlFor={textareaId} className="sr-only">
-          {messages.sourceLabel}
-        </label>
-
+    <div className="flex h-full min-h-0 flex-col gap-2 p-3">
+      <Field className="min-h-0 flex-1">
+        <FieldLabel htmlFor={id}>{m.editorTitle}</FieldLabel>
         <Textarea
-          id={textareaId}
+          id={id}
           name="markdown-source"
-          aria-label={messages.sourceLabel}
+          aria-label={m.sourceLabel}
           autoComplete="off"
-          value={markdown}
-          onChange={(event) => {
-            onMarkdownChange(event.target.value)
-          }}
-          placeholder={messages.sourcePlaceholder}
           spellCheck={false}
-          className="![field-sizing:fixed] h-[22rem] min-w-0 resize-y overflow-y-auto font-mono text-sm leading-6 sm:h-[24rem]"
+          value={markdown}
+          placeholder={m.sourcePlaceholder}
+          className="![field-sizing:fixed] min-h-0 flex-1 resize-none font-mono text-sm"
+          onChange={(event) => onMarkdownChange(event.target.value)}
         />
-      </ToolPanelCardContent>
-
-      <ToolPanelCardFooter className="flex flex-wrap justify-start gap-2 border-t px-5 py-3 sm:px-6">
-        <Button type="button" variant="ghost" size="sm" onClick={onImportClick}>
-          <FileText data-icon="inline-start" />
-          {messages.importLabel}
+      </Field>
+      <div className="flex flex-wrap gap-2">
+        <Button variant="ghost" size="sm" onClick={onLoadSample}>
+          {m.loadSampleLabel}
         </Button>
-
-        <Button type="button" variant="ghost" size="sm" onClick={onLoadSample}>
-          <Sparkles data-icon="inline-start" />
-          {messages.loadSampleLabel}
+        <Button variant="ghost" size="sm" onClick={onClear}>
+          {m.clearLabel}
         </Button>
-
-        <Button type="button" variant="ghost" size="sm" onClick={onClear}>
-          <Trash2 data-icon="inline-start" />
-          {messages.clearLabel}
-        </Button>
-      </ToolPanelCardFooter>
-    </ToolPanelCard>
+      </div>
+    </div>
   )
 }
-
-export { EditorCard }

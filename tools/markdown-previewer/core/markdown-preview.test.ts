@@ -96,6 +96,31 @@ describe("buildMarkdownPreview", () => {
   })
 })
 
+describe("document reading syntax", () => {
+  test("keeps reference links in headings and creates collision-free anchors", () => {
+    const result = buildMarkdownPreview(
+      "\ufeff# [Guide][ref]\n\n[ref]: https://example.com\n\n## Guide\n## Guide-1\n## Guide",
+      "Untitled"
+    )
+    expect(result.toc.map((item) => item.id)).toEqual([
+      "guide",
+      "guide-1",
+      "guide-1-1",
+      "guide-2",
+    ])
+    expect(result.html).toContain('<a href="https://example.com">Guide</a>')
+  })
+  test("escapes HTML in blocks and headings when inline HTML is disabled", () => {
+    const result = buildMarkdownPreview(
+      "# <b>Title</b>\n\n<div>body</div>",
+      "Untitled",
+      false
+    )
+    expect(result.html).toContain("&lt;b&gt;Title&lt;/b&gt;")
+    expect(result.html).toContain("&lt;div&gt;body&lt;/div&gt;")
+  })
+})
+
 describe("createExportHtmlDocument", () => {
   test("builds a standalone html document for the selected theme", () => {
     const document = createExportHtmlDocument({

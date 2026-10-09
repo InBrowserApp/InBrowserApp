@@ -14412,117 +14412,117 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "معاين Markdown",
         description:
-          "معاينة Markdown مباشرة مع التنقية، جدول المحتويات، تصدير HTML والطباعة.",
+          "اقرأ ملفات Markdown المحلية مع مخطط قابل للطي وحجم نص وعرض قابلين للتعديل ووضع التركيز. حرّر المسودات المحفوظة، وعاين بأمان، وصدّر HTML أو اطبعه في متصفحك.",
       },
       de: {
         name: "Markdown-Vorschau",
         description:
-          "Markdown live mit Bereinigung, Inhaltsverzeichnis, HTML-Export und Drucken.",
+          "Lies lokale Markdown-Dateien mit einklappbarer Gliederung, anpassbarer Textgröße und Breite sowie Fokusmodus. Bearbeite gespeicherte Entwürfe, nutze eine sichere Vorschau und exportiere oder drucke HTML im Browser.",
       },
       en: {
         name: "Markdown Previewer",
         description:
-          "Preview Markdown live with a synchronized outline, HTML sanitization toggle, export-ready HTML, and clean/slate themes.",
+          "Read local Markdown with a collapsible outline, adjustable text size and width, and focus mode. Edit saved drafts, preview safely, and export or print HTML in your browser.",
       },
       es: {
         name: "Visor de Markdown",
         description:
-          "Previsualiza Markdown en vivo con limpieza, índice, exportación HTML e impresión.",
+          "Lee Markdown local con un esquema plegable, tamaño de texto y ancho ajustables y modo sin distracciones. Edita borradores guardados, previsualiza de forma segura y exporta o imprime HTML en tu navegador.",
       },
       fr: {
         name: "Aperçu Markdown",
         description:
-          "Aperçu Markdown en direct avec nettoyage, sommaire, export HTML et impression.",
+          "Lis du Markdown local avec un plan repliable, une taille de texte et une largeur réglables et un mode concentration. Modifie des brouillons enregistrés, prévisualise en toute sécurité, puis exporte ou imprime du HTML dans ton navigateur.",
       },
       he: {
         name: "מציג Markdown",
         description:
-          "תצוגה מקדימה חיה של Markdown עם סינון, תוכן עניינים, ייצוא HTML והדפסה.",
+          "קרא Markdown מקומי עם מתאר שניתן לכווץ, גודל טקסט ורוחב מתכווננים ומצב מיקוד. ערוך טיוטות שמורות, צפה בתצוגה מקדימה בטוחה וייצא או הדפס HTML בדפדפן שלך.",
       },
       hi: {
         name: "Markdown प्रीव्यूअर",
         description:
-          "Markdown का लाइव प्रीव्यू, साफ़-सफ़ाई, सामग्री सूची, HTML निर्यात और प्रिंट।",
+          "सिमटने वाली रूपरेखा, बदलने योग्य पाठ आकार और चौड़ाई, तथा फ़ोकस मोड के साथ स्थानीय Markdown पढ़ें। ब्राउज़र में सहेजे गए ड्राफ़्ट संपादित करें, सुरक्षित पूर्वावलोकन देखें और HTML निर्यात या प्रिंट करें।",
       },
       id: {
         name: "Pratinjau Markdown",
         description:
-          "Pratinjau Markdown secara langsung dengan pembersihan, daftar isi, ekspor HTML, dan cetak.",
+          "Baca Markdown lokal dengan kerangka yang dapat dilipat, ukuran teks dan lebar yang dapat disesuaikan, serta mode fokus. Edit draf tersimpan, pratinjau dengan aman, dan ekspor atau cetak HTML di browser Anda.",
       },
       it: {
         name: "Anteprima Markdown",
         description:
-          "Anteprima Markdown in tempo reale con sanificazione, sommario, export HTML e stampa.",
+          "Leggi file Markdown locali con una struttura comprimibile, dimensione del testo e larghezza regolabili e modalità concentrazione. Modifica bozze salvate, visualizza anteprime sicure ed esporta o stampa HTML nel browser.",
       },
       ja: {
         name: "Markdown プレビューア",
         description:
-          "Markdown をリアルタイムにプレビュー。サニタイズ、目次、HTML 書き出し、印刷に対応。",
+          "ローカルの Markdown を、折りたたみ可能なアウトライン、文字サイズと表示幅の調整、集中モードで快適に閲覧。保存した下書きの編集、安全なプレビュー、HTML の書き出しや印刷をブラウザー内で行えます。",
       },
       ko: {
         name: "Markdown 미리보기",
         description:
-          "실시간 Markdown 미리보기, 정화, 목차, HTML 내보내기, 인쇄 지원.",
+          "접을 수 있는 목차, 글자 크기 및 너비 조절, 집중 모드로 로컬 Markdown을 읽으세요. 브라우저에서 저장된 초안을 편집하고 안전하게 미리 보며 HTML로 내보내거나 인쇄할 수 있습니다.",
       },
       ms: {
         name: "Pratonton Markdown",
         description:
-          "Pratonton Markdown secara langsung dengan pembersihan, jadual kandungan, eksport HTML dan cetak.",
+          "Baca Markdown setempat dengan rangka yang boleh dikuncupkan, saiz teks dan lebar boleh laras serta mod fokus. Sunting draf yang disimpan, pratonton dengan selamat, dan eksport atau cetak HTML dalam pelayar anda.",
       },
       nl: {
         name: "Markdown-voorvertoner",
         description:
-          "Live Markdown-voorbeeld met opschoning, inhoudsopgave, HTML-export en afdrukken.",
+          "Lees lokale Markdown met een inklapbare inhoudsopgave, instelbare tekstgrootte en breedte en focusmodus. Bewerk opgeslagen concepten, bekijk veilige previews en exporteer of print HTML in je browser.",
       },
       no: {
         name: "Markdown-forhåndsviser",
         description:
-          "Forhåndsvis Markdown direkte med rensing, innholdsfortegnelse, HTML-eksport og utskrift.",
+          "Les lokale Markdown-filer med en sammenleggbar disposisjon, justerbar tekststørrelse og bredde samt fokusmodus. Rediger lagrede utkast, forhåndsvis trygt, og eksporter eller skriv ut HTML i nettleseren.",
       },
       pl: {
         name: "Podgląd Markdown",
         description:
-          "Podgląd Markdown na żywo z oczyszczaniem, spisem treści, eksportem HTML i drukiem.",
+          "Czytaj lokalne pliki Markdown ze zwijanym konspektem, regulacją rozmiaru tekstu i szerokości oraz trybem skupienia. Edytuj zapisane szkice, wyświetlaj bezpieczny podgląd oraz eksportuj lub drukuj HTML w przeglądarce.",
       },
       pt: {
         name: "Visualizador de Markdown",
         description:
-          "Pré-visualize Markdown ao vivo com limpeza, sumário, exportação HTML e impressão.",
+          "Leia Markdown local com sumário recolhível, tamanho do texto e largura ajustáveis e modo de foco. Edite rascunhos salvos, visualize com segurança e exporte ou imprima HTML no navegador.",
       },
       ru: {
         name: "Просмотр Markdown",
         description:
-          "Живой просмотр Markdown с очисткой, оглавлением, экспортом HTML и печатью.",
+          "Читайте локальные файлы Markdown со сворачиваемым оглавлением, настройкой размера текста и ширины и режимом сосредоточенного чтения. Редактируйте сохранённые черновики, безопасно просматривайте, экспортируйте и печатайте HTML в браузере.",
       },
       sv: {
         name: "Markdown-förhandsgranskare",
         description:
-          "Liveförhandsgranska Markdown med sanering, innehållsförteckning, HTML-export och utskrift.",
+          "Läs lokal Markdown med en hopfällbar disposition, justerbar textstorlek och bredd samt fokusläge. Redigera sparade utkast, förhandsvisa säkert och exportera eller skriv ut HTML i webbläsaren.",
       },
       th: {
         name: "ตัวอย่าง Markdown",
         description:
-          "ดูตัวอย่าง Markdown แบบเรียลไทม์ พร้อมการทำความสะอาด สารบัญ ส่งออก HTML และพิมพ์",
+          "อ่าน Markdown บนอุปกรณ์พร้อมโครงร่างที่ยุบได้ ปรับขนาดข้อความและความกว้าง และโหมดมีสมาธิ แก้ไขร่างที่บันทึกไว้ ดูตัวอย่างอย่างปลอดภัย และส่งออกหรือพิมพ์ HTML ในเบราว์เซอร์",
       },
       tr: {
         name: "Markdown Önizleyici",
         description:
-          "Markdown'u canlı önizleyin; temizleme, içerik tablosu, HTML dışa aktarma ve yazdırma.",
+          "Yerel Markdown belgelerini daraltılabilir ana hat, ayarlanabilir metin boyutu ve genişliği ile odak modunda okuyun. Kayıtlı taslakları düzenleyin, güvenle önizleyin ve tarayıcınızda HTML olarak dışa aktarın veya yazdırın.",
       },
       vi: {
         name: "Trình xem Markdown",
         description:
-          "Xem trước Markdown trực tiếp, có làm sạch, mục lục, xuất HTML và in.",
+          "Đọc Markdown cục bộ với dàn ý có thể thu gọn, cỡ chữ và chiều rộng tùy chỉnh cùng chế độ tập trung. Chỉnh sửa bản nháp đã lưu, xem trước an toàn và xuất hoặc in HTML trong trình duyệt.",
       },
       "zh-CN": {
         name: "Markdown 预览器",
         description:
-          "实时预览 Markdown，支持同步目录、HTML 净化切换、导出独立 HTML，以及简洁/深色预览主题。",
+          "阅读本地 Markdown，支持可折叠目录、文字大小与宽度调节和专注模式。在浏览器中编辑已保存的草稿、安全预览，并导出或打印 HTML。",
       },
       "zh-TW": {
         name: "Markdown 預覽器",
         description:
-          "即時預覽 Markdown，支援同步目錄、HTML 淨化切換、匯出獨立 HTML，以及簡潔/深色預覽主題。",
+          "在本機閱讀 Markdown，使用可收合的目錄、可調整的文字大小與寬度，以及專注模式。在瀏覽器中編輯已儲存的草稿、安全地預覽，並匯出或列印 HTML。",
       },
     },
   },

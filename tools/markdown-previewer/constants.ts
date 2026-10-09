@@ -1,7 +1,3 @@
-import type { PreviewTheme } from "./core/preview-options"
-
-const DEFAULT_PREVIEW_THEME: PreviewTheme = "clean"
-
 const DEFAULT_MARKDOWN = `# Product launch checklist
 
 Launch notes for the next release stay in Markdown until the draft is ready to
@@ -44,4 +40,4 @@ const STORAGE_KEYS = {
 
 const IMPORT_ACCEPT = ".md,.markdown,.mdown,.txt,text/markdown,text/plain"
 
-export { DEFAULT_MARKDOWN, DEFAULT_PREVIEW_THEME, IMPORT_ACCEPT, STORAGE_KEYS }
+export { DEFAULT_MARKDOWN, IMPORT_ACCEPT, STORAGE_KEYS }

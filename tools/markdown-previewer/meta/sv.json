@@ -1,4 +1,4 @@
 {
   "name": "Markdown-förhandsgranskare",
-  "description": "Liveförhandsgranska Markdown med sanering, innehållsförteckning, HTML-export och utskrift."
+  "description": "Läs lokal Markdown med en hopfällbar disposition, justerbar textstorlek och bredd samt fokusläge. Redigera sparade utkast, förhandsvisa säkert och exportera eller skriv ut HTML i webbläsaren."
 }
