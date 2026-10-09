@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react"
 import {
   Select,
   SelectContent,
@@ -25,12 +26,21 @@ export function EncodingPicker({
   onChange: (value: string) => void
   m: Messages
 }) {
+  const trigger = useRef<HTMLButtonElement>(null)
+  const [portal, setPortal] = useState<HTMLElement | null>(null)
+  useEffect(() => {
+    setPortal(trigger.current!.closest("dialog"))
+  }, [])
   return (
     <Select value={value} onValueChange={onChange}>
-      <SelectTrigger aria-label={m.encoding} className="max-w-full">
+      <SelectTrigger
+        ref={trigger}
+        aria-label={m.encoding}
+        className="max-w-full"
+      >
         <SelectValue />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent container={portal}>
         <SelectGroup>
           <SelectItem value="auto">{m.automatic}</SelectItem>
           {encodings.map((encoding) => (
