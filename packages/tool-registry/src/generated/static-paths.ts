@@ -646,6 +646,10 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "asciidoc-viewer",
+    language: "en",
+  },
+  {
     slug: "audio-recorder",
     language: "ar",
   },

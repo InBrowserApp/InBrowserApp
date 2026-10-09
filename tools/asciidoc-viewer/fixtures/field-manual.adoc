@@ -1,0 +1,63 @@
+= River Observatory: Field Manual
+Field Operations Team
+v1.0, 2026-10-09
+:description: A self-contained fixture for the AsciiDoc reader.
+:sectnums:
+
+Read the *field instructions* before collecting samples. This manual includes 日本語, العربية, עברית, and café.
+
+Jump to <<observations,Observation log>> or visit https://example.org[the research website].
+
+== Prepare the station
+
+NOTE: Record the station identifier before starting a measurement.
+
+WARNING: Do not enter the water during a flood.
+
+* Check the gauge.
+* Prepare equipment.
+** Use a clean sampling bottle.
+** Keep the notebook dry.
+
+. Record the time.
+. Collect the sample.
+. Review the reading.
+
+=== Record a measurement
+
+.Sample command
+[source,shell]
+----
+observe --station river-north --sample temperature --format json --notes "A wide command line stays inside its own scrolling area" # <1>
+----
+<1> The station identifier follows the printed gauge label.
+
+[cols="1,1,2",options="header"]
+|===
+|Time |Reading |Observation
+|09:00 |14.2 °C |Clear water
+|12:00 |15.1 °C |Light rain
+|===
+
+[#observations]
+== Observation log
+
+A handwritten observation complements each measurement.footnote:[Record unusual weather and nearby activity.]
+
+=== Review procedure
+
+Use *bold*, _italic_, `inline code`, and a <<observations,local reference>>.
+
+[quote,Field team]
+____
+A careful observation is more useful than an unexplained number.
+____
+
+==== Daily checklist
+
+Station:: Identify the station.
+Sample:: Label the bottle.
+
+++++
+<img alt="Embedded blue marker" width="1" height="1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aN0cAAAAASUVORK5CYII=">
+++++

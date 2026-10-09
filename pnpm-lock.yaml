@@ -9,6 +9,9 @@ catalogs:
     '@anglinb/city-hash':
       specifier: ^1.1.0
       version: 1.1.0
+    '@asciidoctor/core':
+      specifier: 4.1.1
+      version: 4.1.1
     '@astrojs/check':
       specifier: ^0.9.9
       version: 0.9.9
@@ -584,6 +587,9 @@ importers:
       '@tool/ascii-art-generator':
         specifier: workspace:*
         version: link:../../tools/ascii-art-generator
+      '@tool/asciidoc-viewer':
+        specifier: workspace:*
+        version: link:../../tools/asciidoc-viewer
       '@tool/audio-recorder':
         specifier: workspace:*
         version: link:../../tools/audio-recorder
@@ -1518,6 +1524,37 @@ importers:
       '@types/figlet':
         specifier: 'catalog:'
         version: 1.7.0
+      vitest:
+        specifier: 'catalog:'
+        version: 4.1.9(@types/node@25.9.4)(@vitest/coverage-v8@4.1.9)(happy-dom@20.10.6)(jsdom@29.1.1(@noble/hashes@2.2.0))(msw@2.12.14(@types/node@25.9.4)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.22.4)(yaml@2.8.3))
+
+  tools/asciidoc-viewer:
+    dependencies:
+      '@asciidoctor/core':
+        specifier: 'catalog:'
+        version: 4.1.1(highlight.js@11.11.1)
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@workspace/web-document':
+        specifier: workspace:*
+        version: link:../../packages/lib/web-document
+      astro:
+        specifier: 'catalog:'
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+      react:
+        specifier: 'catalog:'
+        version: 19.2.7
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.7(react@19.2.7)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       vitest:
         specifier: 'catalog:'
         version: 4.1.9(@types/node@25.9.4)(@vitest/coverage-v8@4.1.9)(happy-dom@20.10.6)(jsdom@29.1.1(@noble/hashes@2.2.0))(msw@2.12.14(@types/node@25.9.4)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.22.4)(yaml@2.8.3))
@@ -7793,6 +7830,15 @@ packages:
 
   '@asamuzakjp/nwsapi@2.3.9':
     resolution: {integrity: sha512-n8GuYSrI9bF7FFZ/SjhwevlHc8xaVlb/7HmHelnc/PZXBD2ZR49NnN9sMMuDdEGPeeRQ5d0hqlSlEpgCX3Wl0Q==}
+
+  '@asciidoctor/core@4.1.1':
+    resolution: {integrity: sha512-kwynyx6FXXi985Q9tfIPUitZ/2vzISYmcUVVZXkSamwD91I5nL7TJt33HXjnBYwfzugLu36RZuhNA/DB4fogEA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      highlight.js: ^11.0.0
+    peerDependenciesMeta:
+      highlight.js:
+        optional: true
 
   '@astrojs/check@0.9.9':
     resolution: {integrity: sha512-A5UW8uIuErLWEoRQvzgXpO1gTjUFtK8r7nU2Z7GewAMxUb7bPvpk11qaKKgxqXlHJWlAvaaxy+Xg28A6bmQ1Tg==}
@@ -15241,6 +15287,10 @@ snapshots:
   '@asamuzakjp/generational-cache@1.0.1': {}
 
   '@asamuzakjp/nwsapi@2.3.9': {}
+
+  '@asciidoctor/core@4.1.1(highlight.js@11.11.1)':
+    optionalDependencies:
+      highlight.js: 11.11.1
 
   '@astrojs/check@0.9.9(prettier@3.9.1)(typescript@5.9.3)':
     dependencies:

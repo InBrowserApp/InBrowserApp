@@ -901,6 +901,19 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "asciidoc-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["asciidoc", "adoc", "manual", "document", "viewer"],
+    locales: {
+      en: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Read local AsciiDoc manuals and articles with an outline, adjustable reading size, and focus mode. Files stay on your device.",
+      },
+    },
+  },
+  {
     slug: "audio-recorder",
     category: "misc",
     icon: "mic",

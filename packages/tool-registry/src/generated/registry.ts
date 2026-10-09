@@ -901,6 +901,19 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "asciidoc-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["asciidoc", "adoc", "manual", "document", "viewer"],
+    locales: {
+      en: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Read local AsciiDoc manuals and articles with an outline, adjustable reading size, and focus mode. Files stay on your device.",
+      },
+    },
+  },
+  {
     slug: "audio-recorder",
     category: "misc",
     icon: "mic",
@@ -30134,6 +30147,19 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "ASCII 藝術產生器",
         description:
           "使用多種 figlet 字型將文字轉換為 ASCII 藝術。輸入文字或短語，選擇字型，然後複製結果。",
+      },
+    },
+  },
+  "asciidoc-viewer": {
+    slug: "asciidoc-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["asciidoc", "adoc", "manual", "document", "viewer"],
+    locales: {
+      en: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Read local AsciiDoc manuals and articles with an outline, adjustable reading size, and focus mode. Files stay on your device.",
       },
     },
   },

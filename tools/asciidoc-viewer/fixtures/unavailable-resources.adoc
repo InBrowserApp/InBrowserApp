@@ -1,0 +1,30 @@
+= Project-dependent manual
+:source-highlighter: highlight.js
+:icons: font
+:allow-uri-read:
+
+== External chapter
+
+include::https://example.invalid/remote-chapter.adoc[]
+
+include::local-chapter.adoc[]
+
+image::https://example.invalid/remote.png[Remote diagram]
+
+image::images/local.png[Local figure]
+
+[mermaid]
+....
+graph TD; A-->B;
+....
+
+Unknown macro:: {project-attribute}
+
+++++
+<script>fetch('https://example.invalid/script')</script>
+<iframe src="https://example.invalid/frame"></iframe>
+<img src="https://example.invalid/passthrough" onerror="window.parent.__asciidocScriptRan=true">
+<style>@import 'https://example.invalid/theme'; p { background-image:url(https://example.invalid/css) }</style>
+<form action="https://example.invalid/post"><input autofocus><button>Submit</button></form>
+<meta http-equiv="refresh" content="0;url=https://example.invalid/redirect">
+++++
