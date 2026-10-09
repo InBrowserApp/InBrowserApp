@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useState } from "react"
 import { useReadingPosition } from "@workspace/ui/lib/use-reading-position"
+import { scrollReadingTarget } from "@workspace/ui/lib/scroll-reading-target"
 
 export function DocumentFrame({
   html,
@@ -46,9 +47,7 @@ export function DocumentFrame({
           details = details.parentElement?.closest("details") ?? null
         )
           details.open = true
-        navigate(() =>
-          doc!.defaultView?.scrollBy(0, anchor.getBoundingClientRect().top)
-        )
+        navigate(() => scrollReadingTarget(doc!, anchor))
       } else onMissing()
     }
     function keydown(event: KeyboardEvent) {
@@ -102,8 +101,7 @@ export function DocumentFrame({
     if (!target || !doc) return
     navigate(() => {
       const anchor = doc.getElementById(target.id)
-      if (anchor)
-        doc.defaultView?.scrollBy(0, anchor.getBoundingClientRect().top)
+      scrollReadingTarget(doc, anchor)
     })
     ;(doc.defaultView?.frameElement as HTMLElement | null)?.focus({
       preventScroll: true,

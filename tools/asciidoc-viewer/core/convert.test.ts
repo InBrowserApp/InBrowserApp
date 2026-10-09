@@ -80,6 +80,18 @@ test("distinguishes resource, encoding, and general failures", () => {
   expect(failure(null)).toBe("invalid")
 })
 
+test("preserves a decoder allocation failure as a resource error", () => {
+  vi.stubGlobal(
+    "TextDecoder",
+    class {
+      decode() {
+        throw new RangeError("allocation failed")
+      }
+    }
+  )
+  expect(() => decode(new Uint8Array([65]))).toThrow(RangeError)
+})
+
 test("preserves attribute values beyond the processor's secure-mode default", async () => {
   const value = "Unabridged reading. ".repeat(300) + "ATTRIBUTE END"
   const result = await convert(`= Manual\n:passage: ${value}\n\n{passage}`)

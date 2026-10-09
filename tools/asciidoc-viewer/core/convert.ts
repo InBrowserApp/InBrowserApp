@@ -10,8 +10,9 @@ export function decode(bytes: Uint8Array) {
   let source: string
   try {
     source = new TextDecoder(encoding, { fatal: true }).decode(bytes)
-  } catch {
-    throw new Error("ENCODING")
+  } catch (reason) {
+    if (reason instanceof TypeError) throw new Error("ENCODING")
+    throw reason
   }
   // oxlint-disable-next-line no-control-regex
   if (/[\u0000-\u0008\u000e-\u001f]/.test(source)) throw new Error("INVALID")

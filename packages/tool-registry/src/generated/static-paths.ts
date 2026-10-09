@@ -647,7 +647,95 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "asciidoc-viewer",
+    language: "ar",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "de",
+  },
+  {
+    slug: "asciidoc-viewer",
     language: "en",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "es",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "fr",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "he",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "hi",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "id",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "it",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "ja",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "ko",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "ms",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "nl",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "no",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "pl",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "pt",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "ru",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "sv",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "th",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "tr",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "vi",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "asciidoc-viewer",
+    language: "zh-TW",
   },
   {
     slug: "audio-recorder",
