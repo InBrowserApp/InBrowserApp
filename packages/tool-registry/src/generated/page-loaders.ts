@@ -255,6 +255,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   stopwatch: () => import("@tool/stopwatch/page"),
   "svg-optimizer": () => import("@tool/svg-optimizer/page"),
   "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
+  "svg-viewer": () => import("@tool/svg-viewer/page"),
   "text-diff": () => import("@tool/text-diff/page"),
   "text-log-viewer": () => import("@tool/text-log-viewer/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),

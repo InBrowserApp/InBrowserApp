@@ -18034,6 +18034,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "svg-viewer",
+    language: "ar",
+  },
+  {
+    slug: "svg-viewer",
+    language: "de",
+  },
+  {
+    slug: "svg-viewer",
+    language: "en",
+  },
+  {
+    slug: "svg-viewer",
+    language: "es",
+  },
+  {
+    slug: "svg-viewer",
+    language: "fr",
+  },
+  {
+    slug: "svg-viewer",
+    language: "he",
+  },
+  {
+    slug: "svg-viewer",
+    language: "hi",
+  },
+  {
+    slug: "svg-viewer",
+    language: "id",
+  },
+  {
+    slug: "svg-viewer",
+    language: "it",
+  },
+  {
+    slug: "svg-viewer",
+    language: "ja",
+  },
+  {
+    slug: "svg-viewer",
+    language: "ko",
+  },
+  {
+    slug: "svg-viewer",
+    language: "ms",
+  },
+  {
+    slug: "svg-viewer",
+    language: "nl",
+  },
+  {
+    slug: "svg-viewer",
+    language: "no",
+  },
+  {
+    slug: "svg-viewer",
+    language: "pl",
+  },
+  {
+    slug: "svg-viewer",
+    language: "pt",
+  },
+  {
+    slug: "svg-viewer",
+    language: "ru",
+  },
+  {
+    slug: "svg-viewer",
+    language: "sv",
+  },
+  {
+    slug: "svg-viewer",
+    language: "th",
+  },
+  {
+    slug: "svg-viewer",
+    language: "tr",
+  },
+  {
+    slug: "svg-viewer",
+    language: "vi",
+  },
+  {
+    slug: "svg-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "svg-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "text-diff",
     language: "ar",
   },

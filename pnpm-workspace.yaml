@@ -27,6 +27,8 @@ catalog:
   fflate: 0.8.3
   odf-kit: 0.14.4
   saxes: 6.0.0
+  css-tree: 3.2.1
+  "@types/css-tree": 3.2.0
   "@silurus/ooxml": 0.88.0
   "@anglinb/city-hash": ^1.1.0
   "@astrojs/check": ^0.9.9
