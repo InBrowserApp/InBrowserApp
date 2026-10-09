@@ -1,0 +1,128 @@
+diff --git a/crates/rtf-parser/src/parser.rs b/crates/rtf-parser/src/parser.rs
+index 0b0a1ba..c3e5941 100644
+--- a/crates/rtf-parser/src/parser.rs
++++ b/crates/rtf-parser/src/parser.rs
+@@ -8,16 +8,18 @@ use encoding_rs::Encoding;
+ use std::collections::{HashMap, HashSet};
+ use thiserror::Error;
+ 
+-const MAX_INPUT_BYTES: usize = 16 * 1024 * 1024;
+-const MAX_NESTING: usize = 256;
+-const MAX_TOKENS: usize = 2_000_000;
+-const MAX_TEXT_UNITS: usize = 2_000_000;
+-const MAX_PARAGRAPHS: usize = 100_000;
+-const MAX_IMAGES: usize = 256;
+-const MAX_IMAGE_BYTES: usize = 8 * 1024 * 1024;
++// Content counts are limited by representable storage, not product quotas.
++// Keep decoded-image allocation safeguards and the RTF nine-level list bound.
++const MAX_INPUT_BYTES: usize = usize::MAX;
++const MAX_NESTING: usize = usize::MAX;
++const MAX_TOKENS: usize = usize::MAX;
++const MAX_TEXT_UNITS: usize = usize::MAX;
++const MAX_PARAGRAPHS: usize = usize::MAX;
++const MAX_IMAGES: usize = usize::MAX;
++const MAX_IMAGE_BYTES: usize = usize::MAX;
+ const MAX_DIAGNOSTICS: usize = 512;
+-const MAX_CELLS_PER_ROW: usize = 256;
+-const MAX_LISTS: usize = 512;
++const MAX_CELLS_PER_ROW: usize = usize::MAX;
++const MAX_LISTS: usize = usize::MAX;
+ const MAX_LIST_LEVELS: usize = 9;
+ const MAX_BORDER_WIDTH: f64 = 12.0;
+ const MIN_BORDER_WIDTH: f64 = 0.25;
+@@ -25,19 +27,19 @@ const DEFAULT_BORDER_WIDTH: f64 = 0.5;
+ 
+ #[derive(Debug, Error, Clone, PartialEq, Eq)]
+ pub enum ParseError {
+-    #[error("RTF input exceeds 16 MiB")]
++    #[error("RTF input exceeds addressable storage")]
+     InputTooLarge,
+-    #[error("RTF nesting exceeds 256 groups at byte {0}")]
++    #[error("RTF nesting exceeds addressable storage at byte {0}")]
+     NestingLimit(usize),
+-    #[error("RTF token count exceeds 2,000,000")]
++    #[error("RTF token count exceeds addressable storage")]
+     TokenLimit,
+-    #[error("decoded text exceeds 2,000,000 UTF-16 units")]
++    #[error("decoded text exceeds addressable storage")]
+     TextLimit,
+-    #[error("document exceeds 100,000 paragraphs")]
++    #[error("paragraph count exceeds addressable storage")]
+     ParagraphLimit,
+-    #[error("document exceeds 256 embedded images")]
++    #[error("image count exceeds addressable storage")]
+     ImageLimit,
+-    #[error("embedded image exceeds 8 MiB at byte {0}")]
++    #[error("embedded image exceeds addressable storage at byte {0}")]
+     ImageByteLimit(usize),
+     #[error(
+         "truncated binary payload at byte {offset}: expected {expected} bytes, found {remaining}"
+diff --git a/crates/rtf-parser/tests/parser.rs b/crates/rtf-parser/tests/parser.rs
+index d8f291c..e63e7c9 100644
+--- a/crates/rtf-parser/tests/parser.rs
++++ b/crates/rtf-parser/tests/parser.rs
+@@ -1181,45 +1181,32 @@ fn enforces_one_root_header_and_rejects_trailing_documents() {
+ }
+ 
+ #[test]
+-fn enforces_input_nesting_token_and_block_budgets() {
+-    use rtf_parser::ParseError;
+-    assert_eq!(
+-        parse(&vec![b' '; 16 * 1024 * 1024 + 1]).unwrap_err(),
+-        ParseError::InputTooLarge
+-    );
+-    let nested = format!("{{\\rtf1 {}text{}}}", "{".repeat(256), "}".repeat(256));
+-    assert!(matches!(
+-        parse(nested.as_bytes()),
+-        Err(ParseError::NestingLimit(_))
+-    ));
+-    let tokens = format!("{{\\rtf1 {}}}", "a".repeat(2_000_000));
+-    assert_eq!(
+-        parse(tokens.as_bytes()).unwrap_err(),
+-        ParseError::TokenLimit
+-    );
+-    let paragraphs = format!("{{\\rtf1 {}}}", r"\par ".repeat(100_001));
+-    assert_eq!(
+-        parse(paragraphs.as_bytes()).unwrap_err(),
+-        ParseError::ParagraphLimit
+-    );
+-    let pages = format!("{{\\rtf1 {}}}", r"\page ".repeat(100_001));
+-    assert_eq!(
+-        parse(pages.as_bytes()).unwrap_err(),
+-        ParseError::ParagraphLimit
++fn accepts_documents_beyond_former_content_quotas() {
++    let large = format!(
++        r"{{\rtf1 {{\*\comment {}}}Visible}}",
++        "x".repeat(51 * 1024 * 1024)
+     );
++    assert!(parse(large.as_bytes()).is_ok());
++    let nested = format!(r"{{\rtf1 {}text{}}}", "{".repeat(257), "}".repeat(257));
++    assert!(parse(nested.as_bytes()).is_ok());
++    let tokens = format!(r"{{\rtf1 {}}}", "a".repeat(2_000_001));
++    assert!(parse(tokens.as_bytes()).is_ok());
++    for control in [r"\par ", r"\page "] {
++        let blocks = format!(r"{{\rtf1 {}}}", control.repeat(100_001));
++        assert!(parse(blocks.as_bytes()).is_ok());
++    }
+ }
+ 
+ #[test]
+-fn enforces_image_byte_and_count_budgets() {
+-    use rtf_parser::ParseError;
+-    let count = format!("{{\\rtf1 {}}}", r"{\pict\pngblip 00}".repeat(257));
+-    assert_eq!(parse(count.as_bytes()).unwrap_err(), ParseError::ImageLimit);
+-    let mut bytes = format!("{{\\rtf1{{\\pict\\pngblip\\bin{} ", 8 * 1024 * 1024 + 1).into_bytes();
++fn accepts_images_beyond_former_count_and_encoded_byte_quotas() {
++    let count = format!(r"{{\rtf1 {}}}", r"{\pict\pngblip 00}".repeat(257));
++    assert_eq!(parse(count.as_bytes()).unwrap().images.len(), 257);
++    let mut bytes = format!(r"{{\rtf1{{\pict\pngblip\bin{} ", 8 * 1024 * 1024 + 1).into_bytes();
+     bytes.resize(bytes.len() + 8 * 1024 * 1024 + 1, b'x');
+     bytes.extend_from_slice(b"}}");
+-    assert!(matches!(parse(&bytes), Err(ParseError::ImageByteLimit(_))));
++    assert!(parse(&bytes).is_ok());
+     assert!(matches!(
+         parse(br"{\rtf1\bin-1 x}"),
+-        Err(ParseError::NegativeBinaryLength(_))
++        Err(rtf_parser::ParseError::NegativeBinaryLength(_))
+     ));
+ }

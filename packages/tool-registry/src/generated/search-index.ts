@@ -20193,6 +20193,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "rtf-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["rtf", "rich-text", "viewer", "reader", "document", "offline"],
+    locales: {
+      ar: {
+        name: "عارض RTF",
+        description:
+          "افتح مستندات RTF المحلية مع النص المنسّق والصور والتنقّل بين الصفحات والتكبير وتحديد النص. لا حاجة لرفع الملفات.",
+      },
+      de: {
+        name: "RTF-Betrachter",
+        description:
+          "Öffnen Sie lokale RTF-Dokumente mit formatiertem Text, Bildern, Seitennavigation, Zoom und Textauswahl. Keine Uploads erforderlich.",
+      },
+      en: {
+        name: "RTF Viewer",
+        description:
+          "Open local RTF documents with formatted text, pictures, page navigation, zoom, and selectable text. No uploads required.",
+      },
+      es: {
+        name: "Visor de RTF",
+        description:
+          "Abre documentos RTF locales con texto con formato, imágenes, navegación por páginas, zoom y texto seleccionable. Sin subir archivos.",
+      },
+      fr: {
+        name: "Visionneuse RTF",
+        description:
+          "Ouvrez des documents RTF locaux avec texte mis en forme, images, navigation entre les pages, zoom et sélection de texte. Aucun transfert requis.",
+      },
+      he: {
+        name: "מציג קובצי RTF",
+        description:
+          "פתיחת מסמכי RTF מקומיים עם טקסט מעוצב, תמונות, ניווט בין עמודים, שינוי מרחק התצוגה וטקסט שניתן לבחור. אין צורך בהעלאה.",
+      },
+      hi: {
+        name: "RTF व्यूअर",
+        description:
+          "स्वरूपित पाठ, चित्र, पृष्ठ नेविगेशन, ज़ूम और चुनने योग्य पाठ के साथ स्थानीय RTF दस्तावेज़ खोलें। अपलोड की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Penampil RTF",
+        description:
+          "Buka dokumen RTF lokal dengan teks berformat, gambar, navigasi halaman, pembesaran, dan teks yang dapat dipilih. Tanpa perlu mengunggah.",
+      },
+      it: {
+        name: "Visualizzatore RTF",
+        description:
+          "Apri documenti RTF locali con testo formattato, immagini, navigazione tra le pagine, zoom e testo selezionabile. Nessun caricamento richiesto.",
+      },
+      ja: {
+        name: "RTFビューアー",
+        description:
+          "ローカルのRTF文書を開き、書式付きテキストや画像を閲覧できます。ページ移動、拡大・縮小、テキスト選択に対応。アップロードは不要です。",
+      },
+      ko: {
+        name: "RTF 뷰어",
+        description:
+          "로컬 RTF 문서를 열어 서식이 적용된 텍스트와 그림을 확인하세요. 페이지 이동, 확대/축소, 텍스트 선택을 지원하며 업로드가 필요 없습니다.",
+      },
+      ms: {
+        name: "Pemapar RTF",
+        description:
+          "Buka dokumen RTF setempat dengan teks berformat, gambar, navigasi halaman, zum dan teks yang boleh dipilih. Tiada muat naik diperlukan.",
+      },
+      nl: {
+        name: "RTF-viewer",
+        description:
+          "Open lokale RTF-documenten met opgemaakte tekst, afbeeldingen, paginanavigatie, zoomen en selecteerbare tekst. Geen uploads nodig.",
+      },
+      no: {
+        name: "RTF-viser",
+        description:
+          "Åpne lokale RTF-dokumenter med formatert tekst, bilder, sidenavigasjon, zoom og tekst du kan merke. Ingen opplasting nødvendig.",
+      },
+      pl: {
+        name: "Przeglądarka RTF",
+        description:
+          "Otwieraj lokalne dokumenty RTF z formatowanym tekstem, obrazami, nawigacją po stronach, powiększaniem i zaznaczaniem tekstu. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Visualizador de RTF",
+        description:
+          "Abra documentos RTF locais com texto formatado, imagens, navegação entre páginas, zoom e seleção de texto. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Просмотр RTF",
+        description:
+          "Открывайте локальные документы RTF с форматированным текстом, изображениями, навигацией по страницам, масштабированием и выделением текста. Без отправки на сервер.",
+      },
+      sv: {
+        name: "RTF-visare",
+        description:
+          "Öppna lokala RTF-dokument med formaterad text, bilder, sidnavigering, zoom och markerbar text. Ingen uppladdning krävs.",
+      },
+      th: {
+        name: "โปรแกรมดู RTF",
+        description:
+          "เปิดเอกสาร RTF บนอุปกรณ์ พร้อมข้อความที่จัดรูปแบบ รูปภาพ การเปลี่ยนหน้า การซูม และการเลือกข้อความ ไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "RTF Görüntüleyici",
+        description:
+          "Yerel RTF belgelerini biçimlendirilmiş metin, resimler, sayfalar arası gezinme, yakınlaştırma ve seçilebilir metinle açın. Yükleme gerekmez.",
+      },
+      vi: {
+        name: "Trình xem RTF",
+        description:
+          "Mở tài liệu RTF trên thiết bị với văn bản có định dạng, hình ảnh, chuyển trang, thu phóng và chọn văn bản. Không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "RTF 查看器",
+        description:
+          "打开本地 RTF 文档，阅读带格式的文本和图片，支持翻页、缩放和文本选择。无需上传。",
+      },
+      "zh-TW": {
+        name: "RTF 檢視器",
+        description:
+          "開啟本機 RTF 文件，支援格式化文字、圖片、頁面導覽、縮放與文字選取，無須上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "screen-recorder",
     category: "misc",
     icon: "video",

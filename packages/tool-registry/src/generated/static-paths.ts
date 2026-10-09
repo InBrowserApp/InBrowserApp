@@ -14814,6 +14814,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "rtf-viewer",
+    language: "ar",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "de",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "en",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "es",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "fr",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "he",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "hi",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "id",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "it",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "ja",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "ko",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "ms",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "nl",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "no",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "pl",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "pt",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "ru",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "sv",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "th",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "tr",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "vi",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "rtf-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "screen-recorder",
     language: "ar",
   },
