@@ -901,6 +901,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "asciidoc-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["asciidoc", "adoc", "manual", "document", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض AsciiDoc",
+        description:
+          "اقرأ أدلة ومقالات AsciiDoc المحلية مع مخطط للعناوين وحجم قراءة قابل للتعديل ووضع تركيز. تبقى الملفات على جهازك.",
+      },
+      de: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Lies lokale AsciiDoc-Handbücher und -Artikel mit Gliederung, einstellbarer Lesegröße und Fokusmodus. Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Read local AsciiDoc manuals and articles with an outline, adjustable reading size, and focus mode. Files stay on your device.",
+      },
+      es: {
+        name: "Visor de AsciiDoc",
+        description:
+          "Lee manuales y artículos AsciiDoc locales con un esquema, tamaño de lectura ajustable y modo sin distracciones. Los archivos permanecen en tu dispositivo.",
+      },
+      fr: {
+        name: "Visionneuse AsciiDoc",
+        description:
+          "Lisez des manuels et articles AsciiDoc locaux avec un plan, une taille de lecture réglable et un mode concentration. Les fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "AsciiDoc Viewer",
+        description:
+          "קריאת מדריכים ומאמרים מקומיים ב־AsciiDoc עם ראשי פרקים, גודל תצוגה מתכוונן ומצב קריאה ממוקדת. הקבצים נשארים במכשיר שלך.",
+      },
+      hi: {
+        name: "AsciiDoc Viewer",
+        description:
+          "रूपरेखा, पढ़ने का समायोज्य आकार और एकाग्र मोड के साथ स्थानीय AsciiDoc मैनुअल और लेख पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Baca manual dan artikel AsciiDoc lokal dengan kerangka dokumen, ukuran baca yang dapat disesuaikan, dan mode fokus. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Visualizzatore AsciiDoc",
+        description:
+          "Leggi manuali e articoli AsciiDoc locali con struttura del documento, zoom regolabile e modalità senza distrazioni. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "AsciiDoc Viewer",
+        description:
+          "端末内の AsciiDoc マニュアルや記事を、目次、表示サイズの調整、集中読書モードで快適に閲覧できます。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "AsciiDoc 뷰어",
+        description:
+          "기기에 있는 AsciiDoc 설명서와 문서를 목차, 크기 조절 및 집중 모드로 읽어 보세요. 파일은 기기에 그대로 유지됩니다.",
+      },
+      ms: {
+        name: "Pemapar AsciiDoc",
+        description:
+          "Baca manual dan artikel AsciiDoc setempat dengan rangka, saiz bacaan boleh laras dan mod fokus. Fail kekal pada peranti anda.",
+      },
+      nl: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Lees lokale AsciiDoc-handleidingen en -artikelen met een inhoudsopgave, instelbare leesgrootte en leesmodus. Bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "AsciiDoc-viser",
+        description:
+          "Les lokale AsciiDoc-håndbøker og artikler med dokumentoversikt, justerbar tekststørrelse og fokusmodus. Filene forblir på enheten din.",
+      },
+      pl: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Czytaj lokalne podręczniki i artykuły AsciiDoc ze spisem treści, regulowanym rozmiarem tekstu i trybem skupienia. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Visualizador de AsciiDoc",
+        description:
+          "Leia manuais e artigos AsciiDoc locais com estrutura de títulos, tamanho de leitura ajustável e modo de foco. Os arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Просмотр AsciiDoc",
+        description:
+          "Читайте локальные руководства и статьи AsciiDoc со структурой документа, настройкой масштаба и режимом чтения. Файлы остаются на вашем устройстве.",
+      },
+      sv: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Läs lokala AsciiDoc-handböcker och artiklar med dokumentöversikt, justerbar lässtorlek och fokusläge. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "AsciiDoc Viewer",
+        description:
+          "อ่านคู่มือและบทความ AsciiDoc บนอุปกรณ์ พร้อมโครงร่างเอกสาร ขนาดการอ่านที่ปรับได้ และโหมดอ่านแบบมีสมาธิ ไฟล์อยู่บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "AsciiDoc Görüntüleyici",
+        description:
+          "Yerel AsciiDoc kılavuzlarını ve makalelerini ana hatlar, ayarlanabilir okuma boyutu ve odak modu ile okuyun. Dosyalar cihazınızda kalır.",
+      },
+      vi: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Đọc hướng dẫn và bài viết AsciiDoc trên thiết bị với mục lục, cỡ hiển thị tùy chỉnh và chế độ tập trung. Tệp luôn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "AsciiDoc 查看器",
+        description:
+          "在本地阅读 AsciiDoc 手册和文章，支持大纲导航、阅读缩放和专注模式。文件保留在你的设备上。",
+      },
+      "zh-TW": {
+        name: "AsciiDoc 檢視器",
+        description:
+          "閱讀本機 AsciiDoc 手冊與文章，提供大綱、閱讀大小調整及專注模式。檔案保留在您的裝置上。",
+      },
+    },
+  },
+  {
     slug: "audio-recorder",
     category: "misc",
     icon: "mic",
@@ -30134,6 +30257,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "ASCII 藝術產生器",
         description:
           "使用多種 figlet 字型將文字轉換為 ASCII 藝術。輸入文字或短語，選擇字型，然後複製結果。",
+      },
+    },
+  },
+  "asciidoc-viewer": {
+    slug: "asciidoc-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["asciidoc", "adoc", "manual", "document", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض AsciiDoc",
+        description:
+          "اقرأ أدلة ومقالات AsciiDoc المحلية مع مخطط للعناوين وحجم قراءة قابل للتعديل ووضع تركيز. تبقى الملفات على جهازك.",
+      },
+      de: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Lies lokale AsciiDoc-Handbücher und -Artikel mit Gliederung, einstellbarer Lesegröße und Fokusmodus. Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Read local AsciiDoc manuals and articles with an outline, adjustable reading size, and focus mode. Files stay on your device.",
+      },
+      es: {
+        name: "Visor de AsciiDoc",
+        description:
+          "Lee manuales y artículos AsciiDoc locales con un esquema, tamaño de lectura ajustable y modo sin distracciones. Los archivos permanecen en tu dispositivo.",
+      },
+      fr: {
+        name: "Visionneuse AsciiDoc",
+        description:
+          "Lisez des manuels et articles AsciiDoc locaux avec un plan, une taille de lecture réglable et un mode concentration. Les fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "AsciiDoc Viewer",
+        description:
+          "קריאת מדריכים ומאמרים מקומיים ב־AsciiDoc עם ראשי פרקים, גודל תצוגה מתכוונן ומצב קריאה ממוקדת. הקבצים נשארים במכשיר שלך.",
+      },
+      hi: {
+        name: "AsciiDoc Viewer",
+        description:
+          "रूपरेखा, पढ़ने का समायोज्य आकार और एकाग्र मोड के साथ स्थानीय AsciiDoc मैनुअल और लेख पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Baca manual dan artikel AsciiDoc lokal dengan kerangka dokumen, ukuran baca yang dapat disesuaikan, dan mode fokus. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Visualizzatore AsciiDoc",
+        description:
+          "Leggi manuali e articoli AsciiDoc locali con struttura del documento, zoom regolabile e modalità senza distrazioni. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "AsciiDoc Viewer",
+        description:
+          "端末内の AsciiDoc マニュアルや記事を、目次、表示サイズの調整、集中読書モードで快適に閲覧できます。ファイルは端末内に留まります。",
+      },
+      ko: {
+        name: "AsciiDoc 뷰어",
+        description:
+          "기기에 있는 AsciiDoc 설명서와 문서를 목차, 크기 조절 및 집중 모드로 읽어 보세요. 파일은 기기에 그대로 유지됩니다.",
+      },
+      ms: {
+        name: "Pemapar AsciiDoc",
+        description:
+          "Baca manual dan artikel AsciiDoc setempat dengan rangka, saiz bacaan boleh laras dan mod fokus. Fail kekal pada peranti anda.",
+      },
+      nl: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Lees lokale AsciiDoc-handleidingen en -artikelen met een inhoudsopgave, instelbare leesgrootte en leesmodus. Bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "AsciiDoc-viser",
+        description:
+          "Les lokale AsciiDoc-håndbøker og artikler med dokumentoversikt, justerbar tekststørrelse og fokusmodus. Filene forblir på enheten din.",
+      },
+      pl: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Czytaj lokalne podręczniki i artykuły AsciiDoc ze spisem treści, regulowanym rozmiarem tekstu i trybem skupienia. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Visualizador de AsciiDoc",
+        description:
+          "Leia manuais e artigos AsciiDoc locais com estrutura de títulos, tamanho de leitura ajustável e modo de foco. Os arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Просмотр AsciiDoc",
+        description:
+          "Читайте локальные руководства и статьи AsciiDoc со структурой документа, настройкой масштаба и режимом чтения. Файлы остаются на вашем устройстве.",
+      },
+      sv: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Läs lokala AsciiDoc-handböcker och artiklar med dokumentöversikt, justerbar lässtorlek och fokusläge. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "AsciiDoc Viewer",
+        description:
+          "อ่านคู่มือและบทความ AsciiDoc บนอุปกรณ์ พร้อมโครงร่างเอกสาร ขนาดการอ่านที่ปรับได้ และโหมดอ่านแบบมีสมาธิ ไฟล์อยู่บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "AsciiDoc Görüntüleyici",
+        description:
+          "Yerel AsciiDoc kılavuzlarını ve makalelerini ana hatlar, ayarlanabilir okuma boyutu ve odak modu ile okuyun. Dosyalar cihazınızda kalır.",
+      },
+      vi: {
+        name: "AsciiDoc Viewer",
+        description:
+          "Đọc hướng dẫn và bài viết AsciiDoc trên thiết bị với mục lục, cỡ hiển thị tùy chỉnh và chế độ tập trung. Tệp luôn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "AsciiDoc 查看器",
+        description:
+          "在本地阅读 AsciiDoc 手册和文章，支持大纲导航、阅读缩放和专注模式。文件保留在你的设备上。",
+      },
+      "zh-TW": {
+        name: "AsciiDoc 檢視器",
+        description:
+          "閱讀本機 AsciiDoc 手冊與文章，提供大綱、閱讀大小調整及專注模式。檔案保留在您的裝置上。",
       },
     },
   },
