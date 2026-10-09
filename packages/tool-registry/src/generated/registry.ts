@@ -24737,6 +24737,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "text-log-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["text", "txt", "log", "encoding", "search", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض النصوص والسجلات",
+        description:
+          "اقرأ ملفات النصوص والسجلات المحلية مع أرقام الأسطر والبحث في الملف بأكمله وخيارات الترميز والقراءة المركّزة. تبقى الملفات على جهازك.",
+      },
+      de: {
+        name: "Text- und Log-Betrachter",
+        description:
+          "Lokale Text- und Logdateien mit Zeilennummern, dateiweiter Suche, Zeichenkodierungen und Lesemodus lesen. Dateien bleiben auf Ihrem Gerät.",
+      },
+      en: {
+        name: "Text and Log Viewer",
+        description:
+          "Read local text and log files with line numbers, whole-file search, encoding choices, and focused reading. Files stay on your device.",
+      },
+      es: {
+        name: "Visor de texto y registros",
+        description:
+          "Lee archivos locales de texto y registros con números de línea, búsqueda en todo el archivo, opciones de codificación y lectura sin distracciones. Los archivos permanecen en tu dispositivo.",
+      },
+      fr: {
+        name: "Visionneuse de texte et de journaux",
+        description:
+          "Lisez des fichiers texte et journaux locaux avec numéros de ligne, recherche intégrale, choix d’encodage et lecture concentrée. Les fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "מציג טקסט ויומני רישום",
+        description:
+          "קריאת קובצי טקסט ויומני רישום מקומיים עם מספרי שורות, חיפוש בכל הקובץ, בחירת קידוד וקריאה ממוקדת. הקבצים נשארים במכשיר שלך.",
+      },
+      hi: {
+        name: "टेक्स्ट और लॉग व्यूअर",
+        description:
+          "पंक्ति संख्याओं, पूरी फ़ाइल में खोज, एन्कोडिंग विकल्पों और फ़ोकस पठन के साथ स्थानीय टेक्स्ट और लॉग फ़ाइलें पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Penampil Teks dan Log",
+        description:
+          "Baca file teks dan log lokal dengan nomor baris, pencarian seluruh file, pilihan pengodean, dan fokus membaca. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Visualizzatore di testo e log",
+        description:
+          "Leggi file locali di testo e log con numeri di riga, ricerca nell’intero file, scelta della codifica e lettura senza distrazioni. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "テキスト・ログビューアー",
+        description:
+          "ローカルのテキストやログを閲覧。行番号、ファイル全体の検索、文字コードの選択、集中モードに対応しています。ファイルはデバイス内に留まります。",
+      },
+      ko: {
+        name: "텍스트 및 로그 뷰어",
+        description:
+          "줄 번호, 파일 전체 검색, 인코딩 선택, 집중 읽기로 로컬 텍스트 및 로그 파일을 읽어 보세요. 파일은 기기에만 보관됩니다.",
+      },
+      ms: {
+        name: "Pemapar Teks dan Log",
+        description:
+          "Baca fail teks dan log setempat dengan nombor baris, carian seluruh fail, pilihan pengekodan dan bacaan berfokus. Fail kekal pada peranti anda.",
+      },
+      nl: {
+        name: "Tekst- en logviewer",
+        description:
+          "Lees lokale tekst- en logbestanden met regelnummers, zoeken in het hele bestand, keuze van tekencodering en een focusmodus. Bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "Tekst- og loggviser",
+        description:
+          "Les lokale tekst- og loggfiler med linjenumre, søk i hele filen, valg av tegnkoding og fokusert lesing. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Przeglądarka tekstu i dzienników",
+        description:
+          "Czytaj lokalne pliki tekstowe i dzienniki z numerami wierszy, wyszukiwaniem w całym pliku, wyborem kodowania i trybem skupienia. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Visualizador de texto e logs",
+        description:
+          "Leia arquivos locais de texto e logs com números de linha, pesquisa em todo o arquivo, opções de codificação e leitura focada. Os arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Просмотр текста и журналов",
+        description:
+          "Читайте локальные текстовые файлы и журналы с номерами строк, поиском по всему файлу, выбором кодировки и режимом чтения. Файлы остаются на вашем устройстве.",
+      },
+      sv: {
+        name: "Text- och loggvisare",
+        description:
+          "Läs lokala text- och loggfiler med radnummer, sökning i hela filen, val av teckenkodning och fokuserad läsning. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมดูข้อความและบันทึก",
+        description:
+          "อ่านไฟล์ข้อความและบันทึกบนอุปกรณ์ พร้อมเลขบรรทัด การค้นหาทั้งไฟล์ ตัวเลือกการเข้ารหัส และโหมดเน้นการอ่าน ไฟล์อยู่บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "Metin ve Günlük Görüntüleyici",
+        description:
+          "Yerel metin ve günlük dosyalarını satır numaraları, tüm dosyada arama, kodlama seçenekleri ve odaklı okumayla okuyun. Dosyalar cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem văn bản và nhật ký",
+        description:
+          "Đọc tệp văn bản và nhật ký trên thiết bị với số dòng, tìm kiếm toàn bộ tệp, lựa chọn bảng mã và chế độ đọc tập trung. Tệp luôn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "文本和日志查看器",
+        description:
+          "阅读本地文本和日志文件，支持行号、全文查找、编码选择和专注阅读。文件始终保留在你的设备上。",
+      },
+      "zh-TW": {
+        name: "文字與記錄檢視器",
+        description:
+          "閱讀本機文字與記錄檔，提供行號、完整檔案搜尋、編碼選擇及專注閱讀。檔案只會留在您的裝置上。",
+      },
+    },
+  },
+  {
     slug: "text-statistics",
     category: "text",
     icon: "file-text",
@@ -54462,6 +54585,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "文字比對",
         description:
           "在瀏覽器中並排比較兩份文本、查看逐行變更，並匯出乾淨的統一 diff。",
+      },
+    },
+  },
+  "text-log-viewer": {
+    slug: "text-log-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["text", "txt", "log", "encoding", "search", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض النصوص والسجلات",
+        description:
+          "اقرأ ملفات النصوص والسجلات المحلية مع أرقام الأسطر والبحث في الملف بأكمله وخيارات الترميز والقراءة المركّزة. تبقى الملفات على جهازك.",
+      },
+      de: {
+        name: "Text- und Log-Betrachter",
+        description:
+          "Lokale Text- und Logdateien mit Zeilennummern, dateiweiter Suche, Zeichenkodierungen und Lesemodus lesen. Dateien bleiben auf Ihrem Gerät.",
+      },
+      en: {
+        name: "Text and Log Viewer",
+        description:
+          "Read local text and log files with line numbers, whole-file search, encoding choices, and focused reading. Files stay on your device.",
+      },
+      es: {
+        name: "Visor de texto y registros",
+        description:
+          "Lee archivos locales de texto y registros con números de línea, búsqueda en todo el archivo, opciones de codificación y lectura sin distracciones. Los archivos permanecen en tu dispositivo.",
+      },
+      fr: {
+        name: "Visionneuse de texte et de journaux",
+        description:
+          "Lisez des fichiers texte et journaux locaux avec numéros de ligne, recherche intégrale, choix d’encodage et lecture concentrée. Les fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "מציג טקסט ויומני רישום",
+        description:
+          "קריאת קובצי טקסט ויומני רישום מקומיים עם מספרי שורות, חיפוש בכל הקובץ, בחירת קידוד וקריאה ממוקדת. הקבצים נשארים במכשיר שלך.",
+      },
+      hi: {
+        name: "टेक्स्ट और लॉग व्यूअर",
+        description:
+          "पंक्ति संख्याओं, पूरी फ़ाइल में खोज, एन्कोडिंग विकल्पों और फ़ोकस पठन के साथ स्थानीय टेक्स्ट और लॉग फ़ाइलें पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Penampil Teks dan Log",
+        description:
+          "Baca file teks dan log lokal dengan nomor baris, pencarian seluruh file, pilihan pengodean, dan fokus membaca. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Visualizzatore di testo e log",
+        description:
+          "Leggi file locali di testo e log con numeri di riga, ricerca nell’intero file, scelta della codifica e lettura senza distrazioni. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "テキスト・ログビューアー",
+        description:
+          "ローカルのテキストやログを閲覧。行番号、ファイル全体の検索、文字コードの選択、集中モードに対応しています。ファイルはデバイス内に留まります。",
+      },
+      ko: {
+        name: "텍스트 및 로그 뷰어",
+        description:
+          "줄 번호, 파일 전체 검색, 인코딩 선택, 집중 읽기로 로컬 텍스트 및 로그 파일을 읽어 보세요. 파일은 기기에만 보관됩니다.",
+      },
+      ms: {
+        name: "Pemapar Teks dan Log",
+        description:
+          "Baca fail teks dan log setempat dengan nombor baris, carian seluruh fail, pilihan pengekodan dan bacaan berfokus. Fail kekal pada peranti anda.",
+      },
+      nl: {
+        name: "Tekst- en logviewer",
+        description:
+          "Lees lokale tekst- en logbestanden met regelnummers, zoeken in het hele bestand, keuze van tekencodering en een focusmodus. Bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "Tekst- og loggviser",
+        description:
+          "Les lokale tekst- og loggfiler med linjenumre, søk i hele filen, valg av tegnkoding og fokusert lesing. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Przeglądarka tekstu i dzienników",
+        description:
+          "Czytaj lokalne pliki tekstowe i dzienniki z numerami wierszy, wyszukiwaniem w całym pliku, wyborem kodowania i trybem skupienia. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Visualizador de texto e logs",
+        description:
+          "Leia arquivos locais de texto e logs com números de linha, pesquisa em todo o arquivo, opções de codificação e leitura focada. Os arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Просмотр текста и журналов",
+        description:
+          "Читайте локальные текстовые файлы и журналы с номерами строк, поиском по всему файлу, выбором кодировки и режимом чтения. Файлы остаются на вашем устройстве.",
+      },
+      sv: {
+        name: "Text- och loggvisare",
+        description:
+          "Läs lokala text- och loggfiler med radnummer, sökning i hela filen, val av teckenkodning och fokuserad läsning. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมดูข้อความและบันทึก",
+        description:
+          "อ่านไฟล์ข้อความและบันทึกบนอุปกรณ์ พร้อมเลขบรรทัด การค้นหาทั้งไฟล์ ตัวเลือกการเข้ารหัส และโหมดเน้นการอ่าน ไฟล์อยู่บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "Metin ve Günlük Görüntüleyici",
+        description:
+          "Yerel metin ve günlük dosyalarını satır numaraları, tüm dosyada arama, kodlama seçenekleri ve odaklı okumayla okuyun. Dosyalar cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem văn bản và nhật ký",
+        description:
+          "Đọc tệp văn bản và nhật ký trên thiết bị với số dòng, tìm kiếm toàn bộ tệp, lựa chọn bảng mã và chế độ đọc tập trung. Tệp luôn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "文本和日志查看器",
+        description:
+          "阅读本地文本和日志文件，支持行号、全文查找、编码选择和专注阅读。文件始终保留在你的设备上。",
+      },
+      "zh-TW": {
+        name: "文字與記錄檢視器",
+        description:
+          "閱讀本機文字與記錄檔，提供行號、完整檔案搜尋、編碼選擇及專注閱讀。檔案只會留在您的裝置上。",
       },
     },
   },

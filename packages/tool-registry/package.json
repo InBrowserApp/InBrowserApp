@@ -204,6 +204,7 @@
     "@tool/svg-optimizer": "workspace:*",
     "@tool/svg-to-image-converter": "workspace:*",
     "@tool/text-diff": "workspace:*",
+    "@tool/text-log-viewer": "workspace:*",
     "@tool/text-statistics": "workspace:*",
     "@tool/time-diff-calculator": "workspace:*",
     "@tool/time-zone-converter": "workspace:*",
