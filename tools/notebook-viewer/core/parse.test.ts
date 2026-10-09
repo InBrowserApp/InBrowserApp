@@ -1,5 +1,5 @@
 import { readFileSync } from "node:fs"
-import { expect, test } from "vitest"
+import { expect, test, vi } from "vitest"
 import { parse } from "./parse"
 import { output } from "./outputs"
 import { imageData } from "./images"
@@ -112,6 +112,21 @@ test("decodes UTF-8 and classifies version, encoding and resource errors", () =>
   expect(failure(new Error("VERSION"))).toBe("version")
   expect(failure(new Error("bad"))).toBe("invalid")
   expect(failure(null)).toBe("invalid")
+})
+
+test("preserves allocation failures during text decoding", () => {
+  const reason = new RangeError("Invalid string length")
+  const decoder = vi
+    .spyOn(TextDecoder.prototype, "decode")
+    .mockImplementation(() => {
+      throw reason
+    })
+  try {
+    expect(() => decode(new Uint8Array([65]))).toThrow(reason)
+    expect(failure(reason)).toBe("resourceLimit")
+  } finally {
+    decoder.mockRestore()
+  }
 })
 
 test("multiline text, escaped markup, terminal commands and unknown code remain readable", () => {

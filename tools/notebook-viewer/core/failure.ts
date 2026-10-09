@@ -15,7 +15,8 @@ export function failure(reason: unknown): Failure {
 export function decode(bytes: Uint8Array) {
   try {
     return new TextDecoder("utf-8", { fatal: true }).decode(bytes)
-  } catch {
-    throw new Error("ENCODING")
+  } catch (reason) {
+    if (reason instanceof TypeError) throw new Error("ENCODING")
+    throw reason
   }
 }
