@@ -7623,6 +7623,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "epub-reader",
+    category: "document",
+    icon: "book-open",
+    tags: ["epub", "ebook", "book", "reader", "viewer", "offline", "document"],
+    locales: {
+      ar: {
+        name: "قارئ EPUB",
+        description:
+          "اقرأ كتب EPUB محليًا مع التنقل بين الفصول وفهرس المحتويات وحجم نص قابل للتعديل ووضع للقراءة المركّزة. لا حاجة إلى رفع الملفات.",
+      },
+      de: {
+        name: "EPUB-Reader",
+        description:
+          "Lies EPUB-Bücher lokal mit Kapitelnavigation, Inhaltsverzeichnis, einstellbarer Schriftgröße und einer fokussierten Leseansicht. Kein Upload nötig.",
+      },
+      en: {
+        name: "EPUB Reader",
+        description:
+          "Read EPUB books locally with chapter navigation, a table of contents, adjustable text size, and a focused reading view. No upload required.",
+      },
+      es: {
+        name: "Lector de EPUB",
+        description:
+          "Lee libros EPUB localmente con navegación por capítulos, índice, tamaño de texto ajustable y una vista de lectura sin distracciones. Sin subir archivos.",
+      },
+      fr: {
+        name: "Lecteur EPUB",
+        description:
+          "Lisez vos livres EPUB localement avec navigation par chapitre, table des matières, taille du texte réglable et lecture sans distraction. Aucun envoi requis.",
+      },
+      he: {
+        name: "קורא EPUB",
+        description:
+          "קריאה מקומית של ספרי EPUB עם ניווט בין פרקים, תוכן עניינים, גודל טקסט מתכוונן ותצוגת קריאה ממוקדת. ללא צורך בהעלאת קבצים.",
+      },
+      hi: {
+        name: "EPUB Reader",
+        description:
+          "अध्याय नेविगेशन, विषय सूची, बदलने योग्य टेक्स्ट आकार और केंद्रित पठन दृश्य के साथ EPUB पुस्तकें स्थानीय रूप से पढ़ें। अपलोड की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Pembaca EPUB",
+        description:
+          "Baca buku EPUB secara lokal dengan navigasi bab, daftar isi, ukuran teks yang dapat diatur, dan tampilan fokus membaca. Tanpa perlu mengunggah.",
+      },
+      it: {
+        name: "Lettore EPUB",
+        description:
+          "Leggi libri EPUB in locale con navigazione tra capitoli, indice, dimensione del testo regolabile e una vista di lettura senza distrazioni. Nessun caricamento richiesto.",
+      },
+      ja: {
+        name: "EPUB Reader",
+        description:
+          "章の移動、目次、文字サイズの調整、集中読書モードを使って、EPUBの本をローカルで読めます。アップロードは不要です。",
+      },
+      ko: {
+        name: "EPUB 리더",
+        description:
+          "장 이동, 목차, 글자 크기 조절 및 집중 읽기 화면으로 EPUB 책을 로컬에서 읽으세요. 업로드할 필요가 없습니다.",
+      },
+      ms: {
+        name: "Pembaca EPUB",
+        description:
+          "Baca buku EPUB secara setempat dengan navigasi bab, isi kandungan, saiz teks boleh laras dan paparan bacaan fokus. Tiada muat naik diperlukan.",
+      },
+      nl: {
+        name: "EPUB Reader",
+        description:
+          "Lees EPUB-boeken lokaal met hoofdstuknavigatie, een inhoudsopgave, instelbare tekstgrootte en een gerichte leesweergave. Uploaden is niet nodig.",
+      },
+      no: {
+        name: "EPUB-leser",
+        description:
+          "Les EPUB-bøker lokalt med kapittelnavigasjon, innholdsfortegnelse, justerbar tekststørrelse og fokusert lesevisning. Ingen opplasting nødvendig.",
+      },
+      pl: {
+        name: "Czytnik EPUB",
+        description:
+          "Czytaj książki EPUB lokalnie: przechodź między rozdziałami, korzystaj ze spisu treści, zmieniaj rozmiar tekstu i włączaj tryb czytania. Bez przesyłania plików na serwer.",
+      },
+      pt: {
+        name: "Leitor de EPUB",
+        description:
+          "Leia livros EPUB localmente com navegação por capítulos, sumário, tamanho de texto ajustável e uma visualização sem distrações. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Читалка EPUB",
+        description:
+          "Читайте книги EPUB локально: переходите между главами, используйте оглавление, меняйте размер текста и включайте режим сосредоточенного чтения. Загрузка на сервер не требуется.",
+      },
+      sv: {
+        name: "EPUB-läsare",
+        description:
+          "Läs EPUB-böcker lokalt med kapitelnavigering, innehållsförteckning, justerbar textstorlek och en fokuserad läsvy. Ingen uppladdning krävs.",
+      },
+      th: {
+        name: "โปรแกรมอ่าน EPUB",
+        description:
+          "อ่านหนังสือ EPUB ในเครื่อง พร้อมการนำทางระหว่างบท สารบัญ การปรับขนาดข้อความ และโหมดอ่านแบบมีสมาธิ โดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "EPUB Okuyucu",
+        description:
+          "Bölüm gezinmesi, içindekiler, ayarlanabilir yazı boyutu ve odaklı okuma görünümüyle EPUB kitaplarını yerel olarak okuyun. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Trình đọc EPUB",
+        description:
+          "Đọc sách EPUB ngay trên thiết bị với tính năng chuyển chương, mục lục, cỡ chữ tùy chỉnh và chế độ đọc tập trung. Không cần tải lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 阅读器",
+        description:
+          "在本地阅读 EPUB 书籍，支持章节切换、目录浏览、字号调整和专注阅读视图，无需上传。",
+      },
+      "zh-TW": {
+        name: "EPUB 閱讀器",
+        description:
+          "在本機閱讀 EPUB 書籍，支援章節導覽、目錄、可調整的文字大小及專注閱讀檢視。無須上傳。",
+      },
+    },
+  },
+  {
     slug: "eu-vat-number-validator",
     category: "text",
     icon: "file-text",
@@ -35082,6 +35205,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "電子郵件驗證器",
         description: "驗證電子郵件地址，檢查語法、長度與網域。",
+      },
+    },
+  },
+  "epub-reader": {
+    slug: "epub-reader",
+    category: "document",
+    icon: "book-open",
+    tags: ["epub", "ebook", "book", "reader", "viewer", "offline", "document"],
+    locales: {
+      ar: {
+        name: "قارئ EPUB",
+        description:
+          "اقرأ كتب EPUB محليًا مع التنقل بين الفصول وفهرس المحتويات وحجم نص قابل للتعديل ووضع للقراءة المركّزة. لا حاجة إلى رفع الملفات.",
+      },
+      de: {
+        name: "EPUB-Reader",
+        description:
+          "Lies EPUB-Bücher lokal mit Kapitelnavigation, Inhaltsverzeichnis, einstellbarer Schriftgröße und einer fokussierten Leseansicht. Kein Upload nötig.",
+      },
+      en: {
+        name: "EPUB Reader",
+        description:
+          "Read EPUB books locally with chapter navigation, a table of contents, adjustable text size, and a focused reading view. No upload required.",
+      },
+      es: {
+        name: "Lector de EPUB",
+        description:
+          "Lee libros EPUB localmente con navegación por capítulos, índice, tamaño de texto ajustable y una vista de lectura sin distracciones. Sin subir archivos.",
+      },
+      fr: {
+        name: "Lecteur EPUB",
+        description:
+          "Lisez vos livres EPUB localement avec navigation par chapitre, table des matières, taille du texte réglable et lecture sans distraction. Aucun envoi requis.",
+      },
+      he: {
+        name: "קורא EPUB",
+        description:
+          "קריאה מקומית של ספרי EPUB עם ניווט בין פרקים, תוכן עניינים, גודל טקסט מתכוונן ותצוגת קריאה ממוקדת. ללא צורך בהעלאת קבצים.",
+      },
+      hi: {
+        name: "EPUB Reader",
+        description:
+          "अध्याय नेविगेशन, विषय सूची, बदलने योग्य टेक्स्ट आकार और केंद्रित पठन दृश्य के साथ EPUB पुस्तकें स्थानीय रूप से पढ़ें। अपलोड की ज़रूरत नहीं।",
+      },
+      id: {
+        name: "Pembaca EPUB",
+        description:
+          "Baca buku EPUB secara lokal dengan navigasi bab, daftar isi, ukuran teks yang dapat diatur, dan tampilan fokus membaca. Tanpa perlu mengunggah.",
+      },
+      it: {
+        name: "Lettore EPUB",
+        description:
+          "Leggi libri EPUB in locale con navigazione tra capitoli, indice, dimensione del testo regolabile e una vista di lettura senza distrazioni. Nessun caricamento richiesto.",
+      },
+      ja: {
+        name: "EPUB Reader",
+        description:
+          "章の移動、目次、文字サイズの調整、集中読書モードを使って、EPUBの本をローカルで読めます。アップロードは不要です。",
+      },
+      ko: {
+        name: "EPUB 리더",
+        description:
+          "장 이동, 목차, 글자 크기 조절 및 집중 읽기 화면으로 EPUB 책을 로컬에서 읽으세요. 업로드할 필요가 없습니다.",
+      },
+      ms: {
+        name: "Pembaca EPUB",
+        description:
+          "Baca buku EPUB secara setempat dengan navigasi bab, isi kandungan, saiz teks boleh laras dan paparan bacaan fokus. Tiada muat naik diperlukan.",
+      },
+      nl: {
+        name: "EPUB Reader",
+        description:
+          "Lees EPUB-boeken lokaal met hoofdstuknavigatie, een inhoudsopgave, instelbare tekstgrootte en een gerichte leesweergave. Uploaden is niet nodig.",
+      },
+      no: {
+        name: "EPUB-leser",
+        description:
+          "Les EPUB-bøker lokalt med kapittelnavigasjon, innholdsfortegnelse, justerbar tekststørrelse og fokusert lesevisning. Ingen opplasting nødvendig.",
+      },
+      pl: {
+        name: "Czytnik EPUB",
+        description:
+          "Czytaj książki EPUB lokalnie: przechodź między rozdziałami, korzystaj ze spisu treści, zmieniaj rozmiar tekstu i włączaj tryb czytania. Bez przesyłania plików na serwer.",
+      },
+      pt: {
+        name: "Leitor de EPUB",
+        description:
+          "Leia livros EPUB localmente com navegação por capítulos, sumário, tamanho de texto ajustável e uma visualização sem distrações. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Читалка EPUB",
+        description:
+          "Читайте книги EPUB локально: переходите между главами, используйте оглавление, меняйте размер текста и включайте режим сосредоточенного чтения. Загрузка на сервер не требуется.",
+      },
+      sv: {
+        name: "EPUB-läsare",
+        description:
+          "Läs EPUB-böcker lokalt med kapitelnavigering, innehållsförteckning, justerbar textstorlek och en fokuserad läsvy. Ingen uppladdning krävs.",
+      },
+      th: {
+        name: "โปรแกรมอ่าน EPUB",
+        description:
+          "อ่านหนังสือ EPUB ในเครื่อง พร้อมการนำทางระหว่างบท สารบัญ การปรับขนาดข้อความ และโหมดอ่านแบบมีสมาธิ โดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "EPUB Okuyucu",
+        description:
+          "Bölüm gezinmesi, içindekiler, ayarlanabilir yazı boyutu ve odaklı okuma görünümüyle EPUB kitaplarını yerel olarak okuyun. Dosya yüklemeniz gerekmez.",
+      },
+      vi: {
+        name: "Trình đọc EPUB",
+        description:
+          "Đọc sách EPUB ngay trên thiết bị với tính năng chuyển chương, mục lục, cỡ chữ tùy chỉnh và chế độ đọc tập trung. Không cần tải lên.",
+      },
+      "zh-CN": {
+        name: "EPUB 阅读器",
+        description:
+          "在本地阅读 EPUB 书籍，支持章节切换、目录浏览、字号调整和专注阅读视图，无需上传。",
+      },
+      "zh-TW": {
+        name: "EPUB 閱讀器",
+        description:
+          "在本機閱讀 EPUB 書籍，支援章節導覽、目錄、可調整的文字大小及專注閱讀檢視。無須上傳。",
       },
     },
   },

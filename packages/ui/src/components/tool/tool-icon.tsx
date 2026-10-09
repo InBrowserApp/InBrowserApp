@@ -3,6 +3,7 @@ import type { ComponentType } from "react"
 
 import {
   Binary,
+  BookOpen,
   Braces,
   Camera,
   CaseSensitive,
@@ -25,6 +26,7 @@ import {
 const iconMap: Record<string, ComponentType<LucideProps>> = {
   archive: FileArchive,
   binary: Binary,
+  "book-open": BookOpen,
   braces: Braces,
   camera: Camera,
   "case-sensitive": CaseSensitive,
