@@ -1,4 +1,4 @@
 {
   "name": "Trình xem PPTX",
-  "description": "Đọc bản trình bày PowerPoint PPTX ngay trên thiết bị với tính năng chuyển trang chiếu, thu phóng, chọn văn bản và tìm kiếm. Không tải lên."
+  "description": "Đọc tệp PowerPoint PPTX, PPTM, POTX, POTM, PPSX và PPSM ngay trên thiết bị với tính năng chuyển trang chiếu, thu phóng, chọn văn bản và tìm kiếm. Không tải lên hoặc chạy macro."
 }

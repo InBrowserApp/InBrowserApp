@@ -1,4 +1,4 @@
 {
   "name": "PPTX-viewer",
-  "description": "Lees PowerPoint PPTX-presentaties lokaal met dianavigatie, zoomen, tekstselectie en zoeken. Geen uploads."
+  "description": "Lees PowerPoint-bestanden in PPTX-, PPTM-, POTX-, POTM-, PPSX- en PPSM-formaat lokaal met dianavigatie, zoomen, tekstselectie en zoeken. Geen uploads of uitvoering van macro's."
 }

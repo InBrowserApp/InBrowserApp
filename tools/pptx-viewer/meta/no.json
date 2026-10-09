@@ -1,4 +1,4 @@
 {
   "name": "PPTX-viser",
-  "description": "Les PowerPoint PPTX-presentasjoner lokalt med lysbildenavigering, zoom, tekstmarkering og søk. Ingen opplasting."
+  "description": "Les PowerPoint-filer i PPTX-, PPTM-, POTX-, POTM-, PPSX- og PPSM-format lokalt med lysbildenavigering, zoom, tekstmarkering og søk. Ingen opplasting eller kjøring av makroer."
 }

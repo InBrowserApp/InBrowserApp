@@ -1,4 +1,4 @@
 {
   "name": "Przeglądarka PPTX",
-  "description": "Czytaj prezentacje PowerPoint PPTX lokalnie, przechodź między slajdami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Bez przesyłania plików na serwer."
+  "description": "Czytaj lokalnie pliki PowerPoint PPTX, PPTM, POTX, POTM, PPSX i PPSM, przechodź między slajdami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Bez przesyłania plików na serwer ani uruchamiania makr."
 }

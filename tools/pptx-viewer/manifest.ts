@@ -5,6 +5,13 @@ export const tool = defineTool({
   icon: "file-text",
   tags: [
     "pptx",
+    "pptm",
+    "potx",
+    "potm",
+    "ppsx",
+    "ppsm",
+    "template",
+    "slideshow",
     "powerpoint",
     "viewer",
     "reader",

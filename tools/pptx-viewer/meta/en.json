@@ -1,4 +1,4 @@
 {
   "name": "PPTX Viewer",
-  "description": "Read PowerPoint PPTX presentations locally with slide navigation, zoom, text selection, and search. No uploads."
+  "description": "Read PowerPoint PPTX, PPTM, POTX, POTM, PPSX, and PPSM files locally with slide navigation, zoom, text selection, and search. No uploads or macro execution."
 }

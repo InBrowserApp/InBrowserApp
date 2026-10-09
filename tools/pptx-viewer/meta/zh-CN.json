@@ -1,4 +1,4 @@
 {
   "name": "PPTX 阅读器",
-  "description": "在本地阅读 PowerPoint PPTX 演示文稿，支持幻灯片切换、缩放、文本选择和搜索，无需上传。"
+  "description": "在本地阅读 PowerPoint PPTX、PPTM、POTX、POTM、PPSX 和 PPSM 文件，支持幻灯片切换、缩放、文本选择和搜索。无需上传，不会运行宏。"
 }

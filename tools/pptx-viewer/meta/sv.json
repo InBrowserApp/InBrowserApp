@@ -1,4 +1,4 @@
 {
   "name": "PPTX-visare",
-  "description": "Läs PowerPoint-presentationer i PPTX-format lokalt med bildnavigering, zoom, textmarkering och sökning. Ingen uppladdning."
+  "description": "Läs PowerPoint-filer i PPTX-, PPTM-, POTX-, POTM-, PPSX- och PPSM-format lokalt med bildnavigering, zoom, textmarkering och sökning. Ingen uppladdning eller körning av makron."
 }

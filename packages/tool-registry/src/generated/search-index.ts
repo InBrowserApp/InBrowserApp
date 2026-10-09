@@ -16742,6 +16742,13 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     icon: "file-text",
     tags: [
       "pptx",
+      "pptm",
+      "potx",
+      "potm",
+      "ppsx",
+      "ppsm",
+      "template",
+      "slideshow",
       "powerpoint",
       "viewer",
       "reader",
@@ -16753,117 +16760,117 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "عارض PPTX",
         description:
-          "اقرأ عروض PowerPoint بصيغة PPTX محليًا مع التنقل بين الشرائح والتكبير وتحديد النص والبحث. دون رفع الملفات.",
+          "اقرأ ملفات PowerPoint بصيغ PPTX وPPTM وPOTX وPOTM وPPSX وPPSM محليًا مع التنقل بين الشرائح والتكبير وتحديد النص والبحث. دون رفع الملفات أو تشغيل وحدات الماكرو.",
       },
       de: {
         name: "PPTX Viewer",
         description:
-          "Lesen Sie PowerPoint-PPTX-Präsentationen lokal mit Foliennavigation, Zoom, Textauswahl und Suche. Ohne Uploads.",
+          "Lesen Sie PowerPoint-Dateien in den Formaten PPTX, PPTM, POTX, POTM, PPSX und PPSM lokal mit Foliennavigation, Zoom, Textauswahl und Suche. Ohne Uploads oder Makroausführung.",
       },
       en: {
         name: "PPTX Viewer",
         description:
-          "Read PowerPoint PPTX presentations locally with slide navigation, zoom, text selection, and search. No uploads.",
+          "Read PowerPoint PPTX, PPTM, POTX, POTM, PPSX, and PPSM files locally with slide navigation, zoom, text selection, and search. No uploads or macro execution.",
       },
       es: {
         name: "Visor de PPTX",
         description:
-          "Lee presentaciones PowerPoint PPTX localmente con navegación por diapositivas, zoom, selección de texto y búsqueda. Sin subir archivos.",
+          "Lee archivos de PowerPoint PPTX, PPTM, POTX, POTM, PPSX y PPSM localmente con navegación por diapositivas, zoom, selección de texto y búsqueda. Sin subir archivos ni ejecutar macros.",
       },
       fr: {
         name: "Lecteur PPTX",
         description:
-          "Lisez vos présentations PowerPoint PPTX en local avec navigation entre les diapositives, zoom, sélection de texte et recherche. Aucun envoi à un serveur.",
+          "Lisez vos fichiers PowerPoint PPTX, PPTM, POTX, POTM, PPSX et PPSM en local avec navigation entre les diapositives, zoom, sélection de texte et recherche. Aucun envoi à un serveur ni exécution de macros.",
       },
       he: {
         name: "מציג PPTX",
         description:
-          "קריאת מצגות PowerPoint PPTX מקומיות עם ניווט בין שקופיות, שינוי גודל התצוגה, בחירת טקסט וחיפוש. ללא העלאת קבצים.",
+          "קריאת קובצי PowerPoint מסוג PPTX, PPTM, POTX, POTM, PPSX ו-PPSM באופן מקומי עם ניווט בין שקופיות, שינוי גודל התצוגה, בחירת טקסט וחיפוש. ללא העלאת קבצים או הרצת פקודות מאקרו.",
       },
       hi: {
         name: "PPTX व्यूअर",
         description:
-          "स्लाइड नेविगेशन, ज़ूम, टेक्स्ट चयन और खोज के साथ PowerPoint PPTX प्रेज़ेंटेशन स्थानीय रूप से पढ़ें। कोई अपलोड नहीं।",
+          "स्लाइड नेविगेशन, ज़ूम, टेक्स्ट चयन और खोज के साथ PowerPoint PPTX, PPTM, POTX, POTM, PPSX और PPSM फ़ाइलें स्थानीय रूप से पढ़ें। कोई अपलोड नहीं और मैक्रो नहीं चलते।",
       },
       id: {
         name: "Penampil PPTX",
         description:
-          "Baca presentasi PowerPoint PPTX secara lokal dengan navigasi slide, zoom, pemilihan teks, dan pencarian. Tanpa unggahan.",
+          "Baca file PowerPoint PPTX, PPTM, POTX, POTM, PPSX, dan PPSM secara lokal dengan navigasi slide, zoom, pemilihan teks, dan pencarian. Tanpa unggahan atau eksekusi makro.",
       },
       it: {
         name: "Visualizzatore PPTX",
         description:
-          "Leggi le presentazioni PowerPoint PPTX in locale con navigazione tra le diapositive, zoom, selezione del testo e ricerca. Nessun caricamento su server.",
+          "Leggi i file PowerPoint PPTX, PPTM, POTX, POTM, PPSX e PPSM in locale con navigazione tra le diapositive, zoom, selezione del testo e ricerca. Nessun caricamento su server né esecuzione di macro.",
       },
       ja: {
         name: "PPTXビューアー",
         description:
-          "スライド移動、ズーム、テキスト選択、検索機能でPowerPointのPPTXプレゼンテーションをローカルで閲覧できます。アップロードは不要です。",
+          "スライド移動、ズーム、テキスト選択、検索機能でPowerPointのPPTX、PPTM、POTX、POTM、PPSX、PPSMファイルをローカルで閲覧できます。アップロードやマクロの実行は行いません。",
       },
       ko: {
         name: "PPTX 뷰어",
         description:
-          "슬라이드 이동, 확대 및 축소, 텍스트 선택, 검색 기능으로 PowerPoint PPTX 프레젠테이션을 기기에서 읽으세요. 파일을 업로드하지 않습니다.",
+          "슬라이드 이동, 확대 및 축소, 텍스트 선택, 검색 기능으로 PowerPoint PPTX, PPTM, POTX, POTM, PPSX, PPSM 파일을 기기에서 읽으세요. 파일을 업로드하거나 매크로를 실행하지 않습니다.",
       },
       ms: {
         name: "Pemapar PPTX",
         description:
-          "Baca pembentangan PowerPoint PPTX secara setempat dengan navigasi slaid, zum, pemilihan teks dan carian. Tiada muat naik.",
+          "Baca fail PowerPoint PPTX, PPTM, POTX, POTM, PPSX dan PPSM secara setempat dengan navigasi slaid, zum, pemilihan teks dan carian. Tiada muat naik atau pelaksanaan makro.",
       },
       nl: {
         name: "PPTX-viewer",
         description:
-          "Lees PowerPoint PPTX-presentaties lokaal met dianavigatie, zoomen, tekstselectie en zoeken. Geen uploads.",
+          "Lees PowerPoint-bestanden in PPTX-, PPTM-, POTX-, POTM-, PPSX- en PPSM-formaat lokaal met dianavigatie, zoomen, tekstselectie en zoeken. Geen uploads of uitvoering van macro's.",
       },
       no: {
         name: "PPTX-viser",
         description:
-          "Les PowerPoint PPTX-presentasjoner lokalt med lysbildenavigering, zoom, tekstmarkering og søk. Ingen opplasting.",
+          "Les PowerPoint-filer i PPTX-, PPTM-, POTX-, POTM-, PPSX- og PPSM-format lokalt med lysbildenavigering, zoom, tekstmarkering og søk. Ingen opplasting eller kjøring av makroer.",
       },
       pl: {
         name: "Przeglądarka PPTX",
         description:
-          "Czytaj prezentacje PowerPoint PPTX lokalnie, przechodź między slajdami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Bez przesyłania plików na serwer.",
+          "Czytaj lokalnie pliki PowerPoint PPTX, PPTM, POTX, POTM, PPSX i PPSM, przechodź między slajdami, zmieniaj powiększenie, zaznaczaj tekst i wyszukuj. Bez przesyłania plików na serwer ani uruchamiania makr.",
       },
       pt: {
         name: "Visualizador de PPTX",
         description:
-          "Leia apresentações PPTX do PowerPoint localmente com navegação entre slides, zoom, seleção de texto e pesquisa. Sem enviar arquivos.",
+          "Leia arquivos PPTX, PPTM, POTX, POTM, PPSX e PPSM do PowerPoint localmente com navegação entre slides, zoom, seleção de texto e pesquisa. Sem enviar arquivos nem executar macros.",
       },
       ru: {
         name: "Просмотр PPTX",
         description:
-          "Читайте презентации PowerPoint PPTX локально: переходите между слайдами, меняйте масштаб, выделяйте и ищите текст. Без загрузки на сервер.",
+          "Читайте файлы PowerPoint PPTX, PPTM, POTX, POTM, PPSX и PPSM локально: переходите между слайдами, меняйте масштаб, выделяйте и ищите текст. Без загрузки на сервер и запуска макросов.",
       },
       sv: {
         name: "PPTX-visare",
         description:
-          "Läs PowerPoint-presentationer i PPTX-format lokalt med bildnavigering, zoom, textmarkering och sökning. Ingen uppladdning.",
+          "Läs PowerPoint-filer i PPTX-, PPTM-, POTX-, POTM-, PPSX- och PPSM-format lokalt med bildnavigering, zoom, textmarkering och sökning. Ingen uppladdning eller körning av makron.",
       },
       th: {
         name: "โปรแกรมดู PPTX",
         description:
-          "อ่านงานนำเสนอ PowerPoint PPTX ในเครื่อง พร้อมการเปลี่ยนสไลด์ ซูม เลือกข้อความ และค้นหา โดยไม่ต้องอัปโหลด",
+          "อ่านไฟล์ PowerPoint PPTX, PPTM, POTX, POTM, PPSX และ PPSM ในเครื่อง พร้อมการเปลี่ยนสไลด์ ซูม เลือกข้อความ และค้นหา โดยไม่ต้องอัปโหลดหรือเรียกใช้แมโคร",
       },
       tr: {
         name: "PPTX Görüntüleyici",
         description:
-          "PowerPoint PPTX sunumlarını slayt gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Dosyalar yüklenmez.",
+          "PowerPoint PPTX, PPTM, POTX, POTM, PPSX ve PPSM dosyalarını slayt gezinme, yakınlaştırma, metin seçimi ve arama özellikleriyle yerel olarak okuyun. Dosyalar yüklenmez, makrolar çalıştırılmaz.",
       },
       vi: {
         name: "Trình xem PPTX",
         description:
-          "Đọc bản trình bày PowerPoint PPTX ngay trên thiết bị với tính năng chuyển trang chiếu, thu phóng, chọn văn bản và tìm kiếm. Không tải lên.",
+          "Đọc tệp PowerPoint PPTX, PPTM, POTX, POTM, PPSX và PPSM ngay trên thiết bị với tính năng chuyển trang chiếu, thu phóng, chọn văn bản và tìm kiếm. Không tải lên hoặc chạy macro.",
       },
       "zh-CN": {
         name: "PPTX 阅读器",
         description:
-          "在本地阅读 PowerPoint PPTX 演示文稿，支持幻灯片切换、缩放、文本选择和搜索，无需上传。",
+          "在本地阅读 PowerPoint PPTX、PPTM、POTX、POTM、PPSX 和 PPSM 文件，支持幻灯片切换、缩放、文本选择和搜索。无需上传，不会运行宏。",
       },
       "zh-TW": {
         name: "PPTX 檢視器",
         description:
-          "在本機閱讀 PowerPoint PPTX 簡報，支援投影片導覽、縮放、文字選取與搜尋。無須上傳。",
+          "在本機閱讀 PowerPoint PPTX、PPTM、POTX、POTM、PPSX 與 PPSM 檔案，支援投影片導覽、縮放、文字選取與搜尋。無須上傳，不會執行巨集。",
       },
     },
   },

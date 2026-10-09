@@ -24,7 +24,7 @@ export function DocumentZoom({
       </DocumentIconButton>
       <DocumentNumberInput
         aria-label={m.zoom}
-        className="w-24"
+        className="w-20"
         value={value}
         min={25}
         max={400}
@@ -32,6 +32,9 @@ export function DocumentZoom({
         onCommit={onChange}
         list={id}
       />
+      <span aria-hidden="true" className="text-sm text-muted-foreground">
+        %
+      </span>
       <datalist id={id}>
         {[25, 50, 75, 100, 125, 150, 200, 300, 400].map((value) => (
           <option key={value} value={value}>
