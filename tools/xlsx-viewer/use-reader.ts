@@ -32,17 +32,13 @@ export function useReader(
       setError(messages.invalid)
       return
     }
-    if (file.size > 50 * 1024 * 1024) {
-      setError(messages.tooLarge)
-      return
-    }
     const controller = new AbortController()
     const { signal } = controller
     const element = container.current
     function report(reason: unknown) {
       if (signal.aborted) return
       setError(
-        isDocumentLimitError(reason) ? messages.tooLarge : messages.invalid
+        isDocumentLimitError(reason) ? messages.resourceLimit : messages.invalid
       )
       setLoading(false)
       controller.abort()

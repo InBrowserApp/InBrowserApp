@@ -4,6 +4,6 @@ Yerel bir PDF açın veya görüntüleyiciye bırakın. Sayfalar arasında gezin
 
 ## Gizlilik ve uyumluluk
 
-Dosyalar ve parolalar yerel olarak işlenir; bu araç tarafından yüklenmez veya kaydedilmez. Görüntüleyici en fazla 50 MB ve 1.000 sayfalık dosyaları destekler. Parola korumalı PDF'ler parolalarıyla açılabilir. Varsa gömülü yazı tipleri ve paketle birlikte gelen PDF kaynakları kullanılır; eksik yazı tipleri bazı belgelerin görünümünü etkileyebilir.
+Dosyalar ve parolalar yerel olarak işlenir; bu araç tarafından yüklenmez veya kaydedilmez. Parola korumalı PDF'ler parolalarıyla açılabilir. Varsa gömülü yazı tipleri ve paketle birlikte gelen PDF kaynakları kullanılır; eksik yazı tipleri bazı belgelerin görünümünü etkileyebilir.
 
 Yalnızca görüntü içeren taramalar okunabilir, ancak metin seçimi ve arama için mevcut bir metin katmanı gerekir. Bu görüntüleyici OCR yapmaz, belgeleri düzenlemez veya gömülü betikleri çalıştırmaz. Belgedeki bağlantılar yalnızca siz seçtiğinizde açılır.

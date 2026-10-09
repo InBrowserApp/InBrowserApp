@@ -6,7 +6,6 @@ const messages = {
   open: "Open",
   replace: "Replace",
   clear: "Close",
-  limits: "50 MB",
   reader: "Reader",
   privacy: "Local only",
   focus: "Focus",

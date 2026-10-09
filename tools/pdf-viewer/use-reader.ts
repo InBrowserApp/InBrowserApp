@@ -36,10 +36,6 @@ export function useReader(
       setError(messages.invalid)
       return
     }
-    if (file.size > 50 * 1024 * 1024) {
-      setError(messages.tooLarge)
-      return
-    }
     const controller = new AbortController()
     const { signal } = controller
     const element = container.current
@@ -74,13 +70,9 @@ export function useReader(
         setPassword(null)
         passwordCallback.current = null
       })
-      .catch((reason: unknown) => {
+      .catch(() => {
         if (signal.aborted) return
-        setError(
-          reason instanceof Error && reason.message === "TOO_LARGE"
-            ? messages.tooLarge
-            : messages.invalid
-        )
+        setError(messages.invalid)
         setLoading(false)
         setPassword(null)
         controller.abort()

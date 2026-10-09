@@ -50,8 +50,7 @@ export async function openReader({
   try {
     document = await DocxDocument.load(data, officeLoadOptions)
     signal.throwIfAborted()
-    if (!document.pageCount || document.pageCount > 1000)
-      throw new Error("TOO_LARGE")
+    if (!document.pageCount) throw new Error("INVALID")
     let zoomMax = 4
     for (let index = 0; index < document.pageCount; index++) {
       const size = document.pageSize(index)

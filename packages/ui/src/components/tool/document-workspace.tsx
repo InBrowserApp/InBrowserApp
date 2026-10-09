@@ -9,7 +9,6 @@ type Messages = Record<
   | "open"
   | "replace"
   | "clear"
-  | "limits"
   | "reader"
   | "privacy"
   | "focus"
@@ -160,16 +159,16 @@ export function DocumentWorkspace({
               {m.open}
             </Button>
           )}
-          <span
-            dir="auto"
-            className="min-w-0 flex-1 truncate text-sm"
-            title={file ? `${file.name}\n${m.privacy}` : undefined}
-          >
-            {file ? file.name : m.limits}
-            {file ? (
+          {file ? (
+            <span
+              dir="auto"
+              className="min-w-0 flex-1 truncate text-sm"
+              title={`${file.name}\n${m.privacy}`}
+            >
+              {file.name}
               <span className="ms-2 text-xs text-muted-foreground">{size}</span>
-            ) : null}
-          </span>
+            </span>
+          ) : null}
           {active ? (
             <DocumentIconButton
               ref={focusButton}

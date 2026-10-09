@@ -4,6 +4,6 @@
 
 ## Datenschutz und Kompatibilität
 
-Dateien und Passwörter werden lokal verarbeitet und von diesem Tool weder hochgeladen noch gespeichert. Der Betrachter unterstützt Dateien bis zu 50 MB und 1.000 Seiten. Passwortgeschützte PDFs können mit ihrem Passwort geöffnet werden. Eingebettete Schriftarten und mitgelieferte PDF-Ressourcen werden verwendet, sofern verfügbar. Fehlende Schriftarten können das Erscheinungsbild einiger Dokumente beeinträchtigen.
+Dateien und Passwörter werden lokal verarbeitet und von diesem Tool weder hochgeladen noch gespeichert. Passwortgeschützte PDFs können mit ihrem Passwort geöffnet werden. Eingebettete Schriftarten und mitgelieferte PDF-Ressourcen werden verwendet, sofern verfügbar. Fehlende Schriftarten können das Erscheinungsbild einiger Dokumente beeinträchtigen.
 
 Scans, die nur aus Bildern bestehen, lassen sich lesen. Textauswahl und Suche erfordern jedoch eine vorhandene Textebene. Dieser Betrachter führt keine OCR durch, bearbeitet keine Dokumente und führt keine eingebetteten Skripte aus. Links im Dokument werden nur geöffnet, wenn Sie sie auswählen.

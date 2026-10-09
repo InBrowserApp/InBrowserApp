@@ -6,4 +6,4 @@ Otwórz lokalny plik .pptx lub upuść go w przeglądarce dokumentów. Przechod�
 
 Prezentacje są przetwarzane lokalnie. To narzędzie nie przesyła ich na serwer ani nie zapisuje. Czcionki pochodzą z prezentacji lub urządzenia; czcionki z internetu nie są pobierane. Zastępowanie czcionek i nieobsługiwane funkcje mogą wpływać na układ. Animacje, przejścia, odtwarzanie osadzonych multimediów i tryb prezentera nie są dostępne.
 
-Limit rozmiaru pliku wynosi 50 MB, a liczby slajdów — 1000. Rozmiar rozpakowanego archiwum i renderowanych slajdów również jest ograniczony. Zaszyfrowane prezentacje, starsze pliki .ppt, szablony i pliki z obsługą makr nie są obsługiwane. Przeglądarka nie edytuje, nie eksportuje ani nie drukuje prezentacji, nie uruchamia makr i nie ładuje zewnętrznych zasobów dokumentu.
+Rozmiar rozpakowanego archiwum i renderowanych slajdów jest ograniczony. Zaszyfrowane prezentacje, starsze pliki .ppt, szablony i pliki z obsługą makr nie są obsługiwane. Przeglądarka nie edytuje, nie eksportuje ani nie drukuje prezentacji, nie uruchamia makr i nie ładuje zewnętrznych zasobów dokumentu.

@@ -142,18 +142,31 @@ test("renders one page with local fonts, resource limits, navigation and search"
   expect(options.onError).toHaveBeenCalledOnce()
 })
 
-test("releases documents rejected by page and geometry limits", async () => {
-  for (const pages of [0, 1001]) {
-    const { options, doc } = setup()
-    doc.pageCount = pages
-    await expect(openReader(options)).rejects.toThrow("TOO_LARGE")
-  }
+test("opens documents above 1,000 pages and navigates to the last page", async () => {
+  const { options, doc } = setup()
+  doc.pageCount = 1001
+  const reader = await openReader(options)
+  expect(options.onChange).toHaveBeenCalledWith({
+    total: 1001,
+    page: 1,
+    zoom: 100,
+  })
+  reader.page(1001)
+  expect(mock.goToPage).toHaveBeenCalledWith(1000)
+  reader.dispose()
+  expect(mock.documentDestroy).toHaveBeenCalledOnce()
+})
+
+test("releases empty documents and those rejected by geometry limits", async () => {
+  const empty = setup()
+  empty.doc.pageCount = 0
+  await expect(openReader(empty.options)).rejects.toThrow("INVALID")
   for (const width of [0, NaN, 1e8]) {
     const { options, doc } = setup()
     doc.pageSize = () => ({ widthPt: width, heightPt: 792 })
     await expect(openReader(options)).rejects.toThrow("TOO_LARGE")
   }
-  expect(mock.documentDestroy).toHaveBeenCalledTimes(5)
+  expect(mock.documentDestroy).toHaveBeenCalledTimes(4)
   expect(mock.create).not.toHaveBeenCalled()
 })
 

@@ -85,15 +85,12 @@ test("opens local files, navigates, searches, zooms and clears", async () => {
   expect((mock.open.mock.calls[0]![0] as Options).signal.aborted).toBe(true)
 })
 
-test("does not parse invalid, empty or oversized files", async () => {
+test("does not parse invalid or empty files", async () => {
   render(<Client messages={m} />)
   choose(file("text.txt"))
   expect(await screen.findByText(m.invalid)).toBeTruthy()
   choose(new File([], "empty.pdf"))
-  const large = file()
-  Object.defineProperty(large, "size", { value: 50 * 1024 * 1024 + 1 })
-  choose(large)
-  expect(await screen.findByText(m.tooLarge)).toBeTruthy()
+  await screen.findByText(m.invalid)
   expect(mock.open).not.toHaveBeenCalled()
 })
 
@@ -153,14 +150,11 @@ test("ignores stale results and failures when files are replaced or closed", asy
   expect(screen.queryByText(m.invalid)).toBeNull()
 })
 
-test("reports parse, render and page limit failures", async () => {
+test("reports parse and render failures", async () => {
   mock.open.mockRejectedValueOnce(new Error("broken"))
   render(<Client messages={m} />)
   choose()
   await screen.findByText(m.invalid)
-  mock.open.mockRejectedValueOnce(new Error("TOO_LARGE"))
-  choose(file("long.pdf"))
-  await screen.findByText(m.tooLarge)
   choose(file("good.pdf"))
   await screen.findByLabelText(m.page)
   const options = mock.open.mock.calls.at(-1)![0] as Options
@@ -173,4 +167,16 @@ test("reports parse, render and page limit failures", async () => {
   await screen.findByText("2 of 4 matches")
   options.onError()
   await screen.findByText(m.invalid)
+})
+
+test("attempts to open files above the former 50 MB cap", async () => {
+  render(<Client messages={m} />)
+  const large = file()
+  Object.defineProperty(large, "size", { value: 50 * 1024 * 1024 + 1 })
+  choose(large)
+  await screen.findByLabelText(m.page)
+  expect(mock.open).toHaveBeenCalledWith(
+    expect.objectContaining({ file: large })
+  )
+  expect(screen.queryByRole("alert")).toBeNull()
 })
