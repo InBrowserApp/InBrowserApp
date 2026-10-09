@@ -9,6 +9,7 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  caj2pdf-rust: 0.6.1
   foliate-js: 1.0.1
   "@ofdjs/viewer": 0.1.1
   postal-mime: 4.0.5

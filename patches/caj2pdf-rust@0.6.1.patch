@@ -1,0 +1,31 @@
+diff --git a/browser.d.mts b/browser.d.mts
+index 868e3998c4915e0b436412f7c17e7e9090156cd8..2ff25c03efeff240d5f9ecc2990fccfe1a4a0b3f 100644
+--- a/browser.d.mts
++++ b/browser.d.mts
+@@ -21,8 +21,8 @@ export * from "./io.mjs";
+  */
+ export type BrowserInput = Blob | FileSystemFileHandle;
+ 
+-/** Fetch and compile the packaged `caj2pdf_wasm.wasm`, or the one at `url`. */
+-export declare function loadModule(url?: URL | string): Promise<WebAssembly.Module>;
++/** Fetch and compile the caller-selected WASM module. */
++export declare function loadModule(url: URL | string): Promise<WebAssembly.Module>;
+ 
+ /** Convert PDF, CAJ, KDH or HN/C8 in a module Worker. */
+ export declare function convert(
+diff --git a/browser.mjs b/browser.mjs
+index c14b7039f75c0818a52cf7e255406350d9bb5ec7..1e77906f1a8100dfd935d4d4a5b160920860e274 100644
+--- a/browser.mjs
++++ b/browser.mjs
+@@ -10,8 +10,9 @@ import { convertSpooledWith, runOperation } from "./internal/run.mjs";
+ 
+ export * from "./io.mjs";
+ 
+-/** Fetch and compile the packaged WASM module (or the one at `url`) once for reuse. */
+-export async function loadModule(url = new URL("./caj2pdf_wasm.wasm", import.meta.url)) {
++/** Fetch and compile the caller-selected WASM module once for reuse. */
++export async function loadModule(url) {
++  if (url === undefined) throw new TypeError("an explicit WASM URL is required");
+   const response = await fetch(url);
+   if (!response.ok) {
+     throw new Error(`could not fetch ${url}: HTTP ${response.status}`);

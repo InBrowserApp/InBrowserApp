@@ -36,6 +36,7 @@
     "@tool/blake2s-hash-text-or-file": "workspace:*",
     "@tool/blake3-hash-text-or-file": "workspace:*",
     "@tool/business-days-calculator": "workspace:*",
+    "@tool/caj-viewer": "workspace:*",
     "@tool/camera": "workspace:*",
     "@tool/case-converter": "workspace:*",
     "@tool/cbz-reader": "workspace:*",

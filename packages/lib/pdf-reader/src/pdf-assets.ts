@@ -5,7 +5,7 @@ type AssetGlob = (
   options: { query: string; import: string; eager: true }
 ) => Record<string, string>
 const assets = (import.meta.glob as unknown as AssetGlob)(
-  "./node_modules/pdfjs-dist/{cmaps,standard_fonts,wasm}/*.{bcmap,pfb,ttf,wasm}",
+  "../node_modules/pdfjs-dist/{cmaps,standard_fonts,wasm}/*.{bcmap,pfb,ttf,wasm}",
   { query: "?url", import: "default", eager: true }
 )
 
@@ -16,7 +16,7 @@ export class PdfAssets {
       standardFontDataUrl: "standard_fonts",
       wasmUrl: "wasm",
     }[kind]
-    const url = assets[`./node_modules/pdfjs-dist/${directory}/${filename}`]
+    const url = assets[`../node_modules/pdfjs-dist/${directory}/${filename}`]
     if (!url) throw new Error("PDF_ASSET_UNAVAILABLE")
     const response = await fetch(url)
     if (!response.ok) throw new Error("PDF_ASSET_UNAVAILABLE")

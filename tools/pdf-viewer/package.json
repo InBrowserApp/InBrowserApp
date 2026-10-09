@@ -10,7 +10,8 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "pdfjs-dist": "catalog:"
+    "pdfjs-dist": "catalog:",
+    "@workspace/pdf-reader": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

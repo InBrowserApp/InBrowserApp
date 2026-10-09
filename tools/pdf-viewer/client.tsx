@@ -25,7 +25,7 @@ import { DocumentToolbar as Toolbar } from "@workspace/ui/components/tool/docume
 import { useReader } from "./use-reader"
 import type { Messages } from "./types"
 import "pdfjs-dist/web/pdf_viewer.css"
-import "./viewer.css"
+import "@workspace/pdf-reader/viewer.css"
 
 export default function Client({ messages: m }: { messages: Messages }) {
   const container = useRef<HTMLDivElement>(null)

@@ -42,7 +42,8 @@
   "pnpm": {
     "patchedDependencies": {
       "curlconverter@4.12.0": "patches/curlconverter@4.12.0.patch",
-      "foliate-js@1.0.1": "patches/foliate-js@1.0.1.patch"
+      "foliate-js@1.0.1": "patches/foliate-js@1.0.1.patch",
+      "caj2pdf-rust@0.6.1": "patches/caj2pdf-rust@0.6.1.patch"
     }
   }
 }

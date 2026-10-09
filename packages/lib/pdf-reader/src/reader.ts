@@ -6,12 +6,14 @@ import {
 } from "pdfjs-dist"
 import * as workerUrl from "pdfjs-dist/build/pdf.worker.min.mjs?url"
 import { PdfAssets } from "./pdf-assets"
+import { readOutline, renderThumbnail } from "./navigation"
+import type { PDFDocumentProxy } from "pdfjs-dist"
 import type { Reader, ReaderState } from "./types"
 
 GlobalWorkerOptions.workerSrc = workerUrl.default
 
 type Options = {
-  file: File
+  file: Blob
   container: HTMLDivElement
   signal: AbortSignal
   onChange: (state: Partial<ReaderState>) => void
@@ -55,9 +57,17 @@ export async function openReader({
   }
   const viewer = new PDFSinglePageViewer(options)
   const resize = new ResizeObserver(() => {
-    if (viewer.pdfDocument && viewer.currentScaleValue === "page-width") {
-      viewer.currentScaleValue = "page-width"
-    }
+    if (
+      !container.clientWidth ||
+      !container.clientHeight ||
+      !viewer.pdfDocument
+    )
+      return
+    const fit = viewer.currentScaleValue
+    if (["page-width", "page-fit"].includes(fit)) viewer.currentScaleValue = fit
+    // Reopening a mobile overview can reveal a page selected while hidden.
+    // An unchanged fit scale does not itself restart PDF.js's render queue.
+    viewer.update()
   })
   resize.observe(container)
   links.setViewer(viewer)
@@ -114,8 +124,9 @@ export async function openReader({
   })
   task.onPassword = (submit: (password: string) => void, reason: number) =>
     onPassword(submit, reason === PasswordResponses.INCORRECT_PASSWORD)
+  let document: PDFDocumentProxy
   try {
-    const document = await task.promise
+    document = await task.promise
     signal.throwIfAborted()
     links.setDocument(document)
     viewer.setDocument(document)
@@ -132,7 +143,7 @@ export async function openReader({
       viewer.currentPageNumber = page
     },
     zoom: (scale) => {
-      if (scale === "page-width") viewer.currentScaleValue = scale
+      if (typeof scale === "string") viewer.currentScaleValue = scale
       else viewer.currentScale = scale / 100
     },
     find: (nextQuery, previous = false) => {
@@ -154,6 +165,21 @@ export async function openReader({
       })
       query = nextQuery
     },
+    rotate: () => {
+      viewer.pagesRotation = (viewer.pagesRotation + 90) % 360
+    },
+    outline: () => readOutline(document),
+    destination: (destination) => {
+      // A bookmark lookup can finish after its document has been unloaded.
+      void links.goToDestination(destination).catch(() => {})
+    },
+    thumbnail: (page, canvas, thumbnailSignal) =>
+      renderThumbnail(
+        document,
+        page,
+        canvas,
+        AbortSignal.any([signal, thumbnailSignal])
+      ),
     dispose,
   }
 }

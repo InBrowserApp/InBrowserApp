@@ -1,0 +1,136 @@
+diff --git a/crates/caj2pdf-core/src/hnc8/compose.rs b/crates/caj2pdf-core/src/hnc8/compose.rs
+index ddef42f..e38edbb 100644
+--- a/crates/caj2pdf-core/src/hnc8/compose.rs
++++ b/crates/caj2pdf-core/src/hnc8/compose.rs
+@@ -697,15 +697,12 @@ where
+                 source_image_transform(page_geometry, coordinate)
+             }
+             .map_err(image_at.locator(Hnc8Stage::Geometry))?;
+-            if matches!(checked, CheckedImage::Type0(_) | CheckedImage::Type3) {
+-                // Top-first rows give the same placement as bottom-first rows
+-                // under the reference's negative-height matrix, without a copy.
+-                // Both terms pass through memory first: x87 targets (i586)
+-                // otherwise keep one of them in extended precision and a
+-                // full-height image lands at 2.6e-14 instead of exactly 0.
+-                transform[5] = black_box(transform[5]) + black_box(transform[3]);
+-                transform[3] = -transform[3];
+-            }
++            // Every emitted codec uses top-first rows, including unchanged
++            // JPEG streams. Preserve the source rectangle while placing the
++            // first coded row at its top, rather than vertically reflecting it.
++            // Keep both terms at f64 precision on x87 targets (i586).
++            transform[5] = black_box(transform[5]) + black_box(transform[3]);
++            transform[3] = -transform[3];
+             images.push(ComposedImage {
+                 record,
+                 visible_width,
+diff --git a/crates/caj2pdf-core/src/hnc8/compose/native.rs b/crates/caj2pdf-core/src/hnc8/compose/native.rs
+index 6715eb0..eb64037 100644
+--- a/crates/caj2pdf-core/src/hnc8/compose/native.rs
++++ b/crates/caj2pdf-core/src/hnc8/compose/native.rs
+@@ -151,7 +151,8 @@ where
+                 limits,
+                 cancellation,
+             )?;
+-            top_first.push(!matches!(checked, CheckedImage::Jpeg(_)));
++            // JPEG streams, like decoded bilevel rasters, have top-first rows.
++            top_first.push(true);
+             // Native placement comes from the record visitor, after resources
+             // are emitted. The codec emitter does not consume this transform.
+             let mut image = ComposedImage {
+diff --git a/crates/caj2pdf-core/src/hnc8/compose/tests.rs b/crates/caj2pdf-core/src/hnc8/compose/tests.rs
+index 67f8073..b509cd7 100644
+--- a/crates/caj2pdf-core/src/hnc8/compose/tests.rs
++++ b/crates/caj2pdf-core/src/hnc8/compose/tests.rs
+@@ -624,8 +624,8 @@ fn hnb_maps_all_six_rows_without_a_table() {
+         report.conversion.output_bytes_written,
+         sink.bytes.len() as u64
+     );
+-    assert_eq!(visitor.images[0].4, [3.84, 0.0, 0.0, -1.92, 0.0, 1.92]);
+-    assert_eq!(visitor.images[1].4, [1.92, 0.0, 0.0, -3.84, 0.0, 3.84]);
++    assert_eq!(visitor.images[0].4, [3.84, 0.0, 0.0, 1.92, 0.0, 0.0]);
++    assert_eq!(visitor.images[1].4, [1.92, 0.0, 0.0, 3.84, 0.0, 0.0]);
+     assert_eq!(visitor.sizes[1..5], [None; 4]);
+     assert!(contains(&sink.bytes, &first.bytes));
+     assert!(contains(&sink.bytes, &last.bytes));
+@@ -671,9 +671,9 @@ fn invented_hna_c8_text_preserves_order_overlap_repeats_and_off_page_positions()
+                 80.0 * scale,
+                 0.0,
+                 0.0,
+-                -40.0 * scale,
++                40.0 * scale,
+                 17.0 * scale,
+-                200.0 * scale - 3.0 * scale
++                200.0 * scale - 3.0 * scale - 40.0 * scale
+             ]
+         );
+         assert!(visitor.images[3].4[4] > 3.84);
+@@ -1967,9 +1967,9 @@ fn source_page_and_image_extents_are_independent_of_decoded_pixels() {
+                         1200.0,
+                         0.0,
+                         0.0,
+-                        -240.0,
++                        240.0,
+                         7.0 * (240.0 / 2473.0),
+-                        480.0 - 11.0 * (240.0 / 2473.0)
++                        480.0 - 11.0 * (240.0 / 2473.0) - 240.0
+                     ]
+                 );
+                 assert_eq!(
+@@ -2288,9 +2288,9 @@ fn hna_paired_page_sizes_override_header_per_page_in_raw_and_compressed_text() {
+                     80.0 * unit,
+                     0.0,
+                     0.0,
+-                    -40.0 * unit,
++                    40.0 * unit,
+                     10.0 * unit,
+-                    (height - 30.0) * unit
++                    (height - 30.0) * unit - 40.0 * unit
+                 ]
+             );
+         }
+diff --git a/crates/caj2pdf-core/tests/hnc8_type2_pdf.rs b/crates/caj2pdf-core/tests/hnc8_type2_pdf.rs
+index 6ea5fab..50bd7a3 100644
+--- a/crates/caj2pdf-core/tests/hnc8_type2_pdf.rs
++++ b/crates/caj2pdf-core/tests/hnc8_type2_pdf.rs
+@@ -417,9 +417,15 @@ fn render_jpeg_and_pdf(jpeg: &[u8], pdf: &[u8], color: bool, dpi: &str) -> (Vec<
+ }
+ 
+ #[test]
+-fn original_asymmetric_pgm_ppm_pixels_render_flipped_by_the_measured_matrix_in_their_color() {
++fn original_asymmetric_pgm_ppm_pixels_keep_top_first_orientation_and_color() {
+     // Type 1 is admitted on HN-A/C8 pages; HN-B admits type 2 only.
+-    for (layout, kind) in [(Variant::HnA, 1), (Variant::HnB, 2)] {
++    for (layout, kind) in [
++        (Variant::HnA, 1),
++        (Variant::HnA, 2),
++        (Variant::C8, 1),
++        (Variant::C8, 2),
++        (Variant::HnB, 2),
++    ] {
+         for channels in [1, 3] {
+             let jpeg = jpeg_from_pnm(&pnm(channels));
+             let built = document(layout, &[vec![jpeg_image(kind, jpeg.clone())]]);
+@@ -442,11 +448,8 @@ fn original_asymmetric_pgm_ppm_pixels_render_flipped_by_the_measured_matrix_in_t
+                 RENDER_DPI
+             };
+             let (direct, rendered) = render_jpeg_and_pdf(&jpeg, &sink.bytes, channels == 3, dpi);
+-            // The composer draws every JPEG with the measured negative-height
+-            // matrix, so its first coded row is the page's bottom row.
+-            let row = 16 * channels;
+-            let flipped: Vec<u8> = direct.rchunks(row).flatten().copied().collect();
+-            let worst = flipped
++            // Compare the displayed page with the original JPEG's coded rows.
++            let worst = direct
+                 .iter()
+                 .zip(&rendered)
+                 .map(|(a, b)| a.abs_diff(*b))
+@@ -454,7 +457,7 @@ fn original_asymmetric_pgm_ppm_pixels_render_flipped_by_the_measured_matrix_in_t
+                 .unwrap();
+             assert!(
+                 worst <= 5,
+-                "{layout:?}: flipped JPEG and PDF rendered pixels differ by {worst}"
++                "{layout:?}: JPEG and PDF rendered pixels differ by {worst}"
+             );
+             if channels == 1 {
+                 for (x, y, expected) in [(0, 0, 15), (15, 0, 75), (0, 15, 190), (15, 15, 245)] {

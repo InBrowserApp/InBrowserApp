@@ -8,7 +8,7 @@ import {
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
 import Client from "./client"
 import m from "./messages/en.json"
-import type { openReader } from "./reader"
+import type { openReader } from "@workspace/pdf-reader"
 
 const mock = vi.hoisted(() => ({
   open: vi.fn(),
@@ -17,7 +17,7 @@ const mock = vi.hoisted(() => ({
   find: vi.fn(),
   dispose: vi.fn(),
 }))
-vi.mock("./reader", () => ({ openReader: mock.open }))
+vi.mock("@workspace/pdf-reader", () => ({ openReader: mock.open }))
 const instance = {
   page: mock.page,
   zoom: mock.zoom,

@@ -2670,6 +2670,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "caj-viewer",
+    language: "ar",
+  },
+  {
+    slug: "caj-viewer",
+    language: "de",
+  },
+  {
+    slug: "caj-viewer",
+    language: "en",
+  },
+  {
+    slug: "caj-viewer",
+    language: "es",
+  },
+  {
+    slug: "caj-viewer",
+    language: "fr",
+  },
+  {
+    slug: "caj-viewer",
+    language: "he",
+  },
+  {
+    slug: "caj-viewer",
+    language: "hi",
+  },
+  {
+    slug: "caj-viewer",
+    language: "id",
+  },
+  {
+    slug: "caj-viewer",
+    language: "it",
+  },
+  {
+    slug: "caj-viewer",
+    language: "ja",
+  },
+  {
+    slug: "caj-viewer",
+    language: "ko",
+  },
+  {
+    slug: "caj-viewer",
+    language: "ms",
+  },
+  {
+    slug: "caj-viewer",
+    language: "nl",
+  },
+  {
+    slug: "caj-viewer",
+    language: "no",
+  },
+  {
+    slug: "caj-viewer",
+    language: "pl",
+  },
+  {
+    slug: "caj-viewer",
+    language: "pt",
+  },
+  {
+    slug: "caj-viewer",
+    language: "ru",
+  },
+  {
+    slug: "caj-viewer",
+    language: "sv",
+  },
+  {
+    slug: "caj-viewer",
+    language: "th",
+  },
+  {
+    slug: "caj-viewer",
+    language: "tr",
+  },
+  {
+    slug: "caj-viewer",
+    language: "vi",
+  },
+  {
+    slug: "caj-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "caj-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "camera",
     language: "ar",
   },
