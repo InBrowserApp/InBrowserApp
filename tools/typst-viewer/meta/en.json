@@ -1,0 +1,4 @@
+{
+  "name": "Typst Viewer",
+  "description": "Preview a self-contained Typst document locally, with page navigation, zoom, search, and source error details."
+}

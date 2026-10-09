@@ -25480,6 +25480,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "typst-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["typst", "typ", "document", "viewer", "reader", "math", "local"],
+    locales: {
+      ar: {
+        name: "عارض Typst",
+        description:
+          "عاين مستند Typst مكتفيًا بذاته محليًا، مع التنقل بين الصفحات والتكبير والبحث وتفاصيل أخطاء المصدر.",
+      },
+      de: {
+        name: "Typst-Betrachter",
+        description:
+          "Eigenständige Typst-Dokumente lokal mit Seitennavigation, Zoom, Suche und Details zu Quelltextfehlern ansehen.",
+      },
+      en: {
+        name: "Typst Viewer",
+        description:
+          "Preview a self-contained Typst document locally, with page navigation, zoom, search, and source error details.",
+      },
+      es: {
+        name: "Visor de Typst",
+        description:
+          "Previsualiza un documento Typst autocontenido de forma local, con navegación por páginas, zoom, búsqueda y detalles de errores del código fuente.",
+      },
+      fr: {
+        name: "Visionneuse Typst",
+        description:
+          "Prévisualisez un document Typst autonome en local, avec navigation par page, zoom, recherche et détails des erreurs du code source.",
+      },
+      he: {
+        name: "מציג Typst",
+        description:
+          "תצוגה מקדימה מקומית של מסמך Typst שכל משאביו כלולים בו, עם ניווט בין עמודים, הגדלה, חיפוש ופרטי שגיאות בקוד המקור.",
+      },
+      hi: {
+        name: "Typst व्यूअर",
+        description:
+          "सारी सामग्री एक ही फ़ाइल में रखने वाले Typst दस्तावेज़ का स्थानीय पूर्वावलोकन करें। पृष्ठ बदलें, ज़ूम करें, खोजें और स्रोत की त्रुटियों का विवरण देखें।",
+      },
+      id: {
+        name: "Penampil Typst",
+        description:
+          "Pratinjau dokumen Typst mandiri secara lokal, dengan navigasi halaman, perbesaran, pencarian, dan perincian kesalahan sumber.",
+      },
+      it: {
+        name: "Visualizzatore Typst",
+        description:
+          "Visualizza in locale l’anteprima di un documento Typst autonomo, con navigazione tra le pagine, zoom, ricerca e dettagli sugli errori del sorgente.",
+      },
+      ja: {
+        name: "Typst ビューアー",
+        description:
+          "単一ファイルで完結する Typst 文書をローカルでプレビュー。ページ移動、ズーム、検索、ソースエラーの詳細表示に対応しています。",
+      },
+      ko: {
+        name: "Typst 뷰어",
+        description:
+          "하나의 파일로 완결된 Typst 문서를 로컬에서 미리 보세요. 페이지 이동, 확대/축소, 검색, 소스 오류 상세 정보를 제공합니다.",
+      },
+      ms: {
+        name: "Pemapar Typst",
+        description:
+          "Pratonton dokumen Typst serba lengkap secara setempat, dengan navigasi halaman, zum, carian dan butiran ralat sumber.",
+      },
+      nl: {
+        name: "Typst-viewer",
+        description:
+          "Bekijk lokaal een Typst-document zonder externe bestanden, met paginanavigatie, zoom, zoeken en details over fouten in de broncode.",
+      },
+      no: {
+        name: "Typst-viser",
+        description:
+          "Forhåndsvis et Typst-dokument med alt innhold i én fil lokalt, med sidenavigering, zoom, søk og detaljer om feil i kildekoden.",
+      },
+      pl: {
+        name: "Przeglądarka Typst",
+        description:
+          "Wyświetl lokalnie samodzielny dokument Typst z nawigacją po stronach, powiększeniem, wyszukiwaniem i szczegółami błędów źródła.",
+      },
+      pt: {
+        name: "Visualizador de Typst",
+        description:
+          "Visualize um documento Typst autocontido localmente, com navegação entre páginas, zoom, pesquisa e detalhes de erros no código-fonte.",
+      },
+      ru: {
+        name: "Просмотр Typst",
+        description:
+          "Просматривайте самодостаточные документы Typst локально: переходите по страницам, меняйте масштаб, ищите текст и изучайте ошибки исходного текста.",
+      },
+      sv: {
+        name: "Typst-visare",
+        description:
+          "Förhandsvisa ett fristående Typst-dokument lokalt med sidnavigering, zoom, sökning och detaljer om fel i källtexten.",
+      },
+      th: {
+        name: "โปรแกรมดู Typst",
+        description:
+          "ดูตัวอย่างเอกสาร Typst ที่มีทุกอย่างในไฟล์เดียวบนอุปกรณ์ของคุณ พร้อมการเปลี่ยนหน้า ซูม ค้นหา และรายละเอียดข้อผิดพลาดในไฟล์ต้นฉบับ",
+      },
+      tr: {
+        name: "Typst Görüntüleyici",
+        description:
+          "Kendi kendine yeterli bir Typst belgesini sayfa gezintisi, yakınlaştırma, arama ve kaynak hatası ayrıntılarıyla yerel olarak önizleyin.",
+      },
+      vi: {
+        name: "Trình xem Typst",
+        description:
+          "Xem trước tài liệu Typst chứa đầy đủ nội dung trong một tệp ngay trên thiết bị, với điều hướng trang, thu phóng, tìm kiếm và chi tiết lỗi mã nguồn.",
+      },
+      "zh-CN": {
+        name: "Typst 查看器",
+        description:
+          "在本地预览无需外部依赖的 Typst 文档，支持翻页、缩放、查找和源文件错误详情。",
+      },
+      "zh-TW": {
+        name: "Typst 檢視器",
+        description:
+          "在本機預覽不需外部資源的 Typst 文件，提供頁面導覽、縮放、搜尋及原始碼錯誤詳情。",
+      },
+    },
+  },
+  {
     slug: "ulid-generator",
     category: "developer",
     icon: "lock",
@@ -55082,6 +55205,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "TOML 轉 YAML 轉換器",
         description:
           "將 TOML 轉為 YAML。貼上 TOML 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  "typst-viewer": {
+    slug: "typst-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["typst", "typ", "document", "viewer", "reader", "math", "local"],
+    locales: {
+      ar: {
+        name: "عارض Typst",
+        description:
+          "عاين مستند Typst مكتفيًا بذاته محليًا، مع التنقل بين الصفحات والتكبير والبحث وتفاصيل أخطاء المصدر.",
+      },
+      de: {
+        name: "Typst-Betrachter",
+        description:
+          "Eigenständige Typst-Dokumente lokal mit Seitennavigation, Zoom, Suche und Details zu Quelltextfehlern ansehen.",
+      },
+      en: {
+        name: "Typst Viewer",
+        description:
+          "Preview a self-contained Typst document locally, with page navigation, zoom, search, and source error details.",
+      },
+      es: {
+        name: "Visor de Typst",
+        description:
+          "Previsualiza un documento Typst autocontenido de forma local, con navegación por páginas, zoom, búsqueda y detalles de errores del código fuente.",
+      },
+      fr: {
+        name: "Visionneuse Typst",
+        description:
+          "Prévisualisez un document Typst autonome en local, avec navigation par page, zoom, recherche et détails des erreurs du code source.",
+      },
+      he: {
+        name: "מציג Typst",
+        description:
+          "תצוגה מקדימה מקומית של מסמך Typst שכל משאביו כלולים בו, עם ניווט בין עמודים, הגדלה, חיפוש ופרטי שגיאות בקוד המקור.",
+      },
+      hi: {
+        name: "Typst व्यूअर",
+        description:
+          "सारी सामग्री एक ही फ़ाइल में रखने वाले Typst दस्तावेज़ का स्थानीय पूर्वावलोकन करें। पृष्ठ बदलें, ज़ूम करें, खोजें और स्रोत की त्रुटियों का विवरण देखें।",
+      },
+      id: {
+        name: "Penampil Typst",
+        description:
+          "Pratinjau dokumen Typst mandiri secara lokal, dengan navigasi halaman, perbesaran, pencarian, dan perincian kesalahan sumber.",
+      },
+      it: {
+        name: "Visualizzatore Typst",
+        description:
+          "Visualizza in locale l’anteprima di un documento Typst autonomo, con navigazione tra le pagine, zoom, ricerca e dettagli sugli errori del sorgente.",
+      },
+      ja: {
+        name: "Typst ビューアー",
+        description:
+          "単一ファイルで完結する Typst 文書をローカルでプレビュー。ページ移動、ズーム、検索、ソースエラーの詳細表示に対応しています。",
+      },
+      ko: {
+        name: "Typst 뷰어",
+        description:
+          "하나의 파일로 완결된 Typst 문서를 로컬에서 미리 보세요. 페이지 이동, 확대/축소, 검색, 소스 오류 상세 정보를 제공합니다.",
+      },
+      ms: {
+        name: "Pemapar Typst",
+        description:
+          "Pratonton dokumen Typst serba lengkap secara setempat, dengan navigasi halaman, zum, carian dan butiran ralat sumber.",
+      },
+      nl: {
+        name: "Typst-viewer",
+        description:
+          "Bekijk lokaal een Typst-document zonder externe bestanden, met paginanavigatie, zoom, zoeken en details over fouten in de broncode.",
+      },
+      no: {
+        name: "Typst-viser",
+        description:
+          "Forhåndsvis et Typst-dokument med alt innhold i én fil lokalt, med sidenavigering, zoom, søk og detaljer om feil i kildekoden.",
+      },
+      pl: {
+        name: "Przeglądarka Typst",
+        description:
+          "Wyświetl lokalnie samodzielny dokument Typst z nawigacją po stronach, powiększeniem, wyszukiwaniem i szczegółami błędów źródła.",
+      },
+      pt: {
+        name: "Visualizador de Typst",
+        description:
+          "Visualize um documento Typst autocontido localmente, com navegação entre páginas, zoom, pesquisa e detalhes de erros no código-fonte.",
+      },
+      ru: {
+        name: "Просмотр Typst",
+        description:
+          "Просматривайте самодостаточные документы Typst локально: переходите по страницам, меняйте масштаб, ищите текст и изучайте ошибки исходного текста.",
+      },
+      sv: {
+        name: "Typst-visare",
+        description:
+          "Förhandsvisa ett fristående Typst-dokument lokalt med sidnavigering, zoom, sökning och detaljer om fel i källtexten.",
+      },
+      th: {
+        name: "โปรแกรมดู Typst",
+        description:
+          "ดูตัวอย่างเอกสาร Typst ที่มีทุกอย่างในไฟล์เดียวบนอุปกรณ์ของคุณ พร้อมการเปลี่ยนหน้า ซูม ค้นหา และรายละเอียดข้อผิดพลาดในไฟล์ต้นฉบับ",
+      },
+      tr: {
+        name: "Typst Görüntüleyici",
+        description:
+          "Kendi kendine yeterli bir Typst belgesini sayfa gezintisi, yakınlaştırma, arama ve kaynak hatası ayrıntılarıyla yerel olarak önizleyin.",
+      },
+      vi: {
+        name: "Trình xem Typst",
+        description:
+          "Xem trước tài liệu Typst chứa đầy đủ nội dung trong một tệp ngay trên thiết bị, với điều hướng trang, thu phóng, tìm kiếm và chi tiết lỗi mã nguồn.",
+      },
+      "zh-CN": {
+        name: "Typst 查看器",
+        description:
+          "在本地预览无需外部依赖的 Typst 文档，支持翻页、缩放、查找和源文件错误详情。",
+      },
+      "zh-TW": {
+        name: "Typst 檢視器",
+        description:
+          "在本機預覽不需外部資源的 Typst 文件，提供頁面導覽、縮放、搜尋及原始碼錯誤詳情。",
       },
     },
   },

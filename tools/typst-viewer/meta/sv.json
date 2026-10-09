@@ -1,0 +1,4 @@
+{
+  "name": "Typst-visare",
+  "description": "Förhandsvisa ett fristående Typst-dokument lokalt med sidnavigering, zoom, sökning och detaljer om fel i källtexten."
+}

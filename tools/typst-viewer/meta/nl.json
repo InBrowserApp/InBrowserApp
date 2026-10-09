@@ -1,0 +1,4 @@
+{
+  "name": "Typst-viewer",
+  "description": "Bekijk lokaal een Typst-document zonder externe bestanden, met paginanavigatie, zoom, zoeken en details over fouten in de broncode."
+}

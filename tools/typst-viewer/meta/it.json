@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore Typst",
+  "description": "Visualizza in locale l’anteprima di un documento Typst autonomo, con navigazione tra le pagine, zoom, ricerca e dettagli sugli errori del sorgente."
+}
