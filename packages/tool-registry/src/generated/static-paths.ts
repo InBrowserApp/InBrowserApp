@@ -18678,6 +18678,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "typst-viewer",
+    language: "ar",
+  },
+  {
+    slug: "typst-viewer",
+    language: "de",
+  },
+  {
+    slug: "typst-viewer",
+    language: "en",
+  },
+  {
+    slug: "typst-viewer",
+    language: "es",
+  },
+  {
+    slug: "typst-viewer",
+    language: "fr",
+  },
+  {
+    slug: "typst-viewer",
+    language: "he",
+  },
+  {
+    slug: "typst-viewer",
+    language: "hi",
+  },
+  {
+    slug: "typst-viewer",
+    language: "id",
+  },
+  {
+    slug: "typst-viewer",
+    language: "it",
+  },
+  {
+    slug: "typst-viewer",
+    language: "ja",
+  },
+  {
+    slug: "typst-viewer",
+    language: "ko",
+  },
+  {
+    slug: "typst-viewer",
+    language: "ms",
+  },
+  {
+    slug: "typst-viewer",
+    language: "nl",
+  },
+  {
+    slug: "typst-viewer",
+    language: "no",
+  },
+  {
+    slug: "typst-viewer",
+    language: "pl",
+  },
+  {
+    slug: "typst-viewer",
+    language: "pt",
+  },
+  {
+    slug: "typst-viewer",
+    language: "ru",
+  },
+  {
+    slug: "typst-viewer",
+    language: "sv",
+  },
+  {
+    slug: "typst-viewer",
+    language: "th",
+  },
+  {
+    slug: "typst-viewer",
+    language: "tr",
+  },
+  {
+    slug: "typst-viewer",
+    language: "vi",
+  },
+  {
+    slug: "typst-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "typst-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "ulid-generator",
     language: "ar",
   },

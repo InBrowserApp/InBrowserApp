@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse Typst",
+  "description": "Prévisualisez un document Typst autonome en local, avec navigation par page, zoom, recherche et détails des erreurs du code source."
+}

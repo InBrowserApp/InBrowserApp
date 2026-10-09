@@ -1,0 +1,4 @@
+{
+  "name": "Visor de Typst",
+  "description": "Previsualiza un documento Typst autocontenido de forma local, con navegación por páginas, zoom, búsqueda y detalles de errores del código fuente."
+}

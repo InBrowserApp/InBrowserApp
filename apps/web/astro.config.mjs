@@ -8,6 +8,8 @@ import sitemap from "@astrojs/sitemap"
 import { fileURLToPath } from "node:url"
 import { createRequire } from "node:module"
 
+import { gzipAssets } from "./build/gzip-assets.mjs"
+
 const require = createRequire(import.meta.url)
 
 import {
@@ -42,8 +44,9 @@ export default defineConfig({
     },
     worker: {
       format: "es",
+      plugins: () => [gzipAssets()],
     },
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss(), gzipAssets()],
   },
   integrations: [
     mdx(),
