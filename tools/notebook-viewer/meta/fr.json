@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse de notebooks Jupyter",
+  "description": "Lisez des notebooks .ipynb locaux avec Markdown, code, sorties enregistrées et navigation par cellule. Aucun envoi ni exécution de code."
+}

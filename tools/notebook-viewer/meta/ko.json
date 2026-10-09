@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter Notebook 뷰어",
+  "description": "기기에 있는 .ipynb 노트북의 Markdown, 코드 및 저장된 출력을 셀 탐색 기능으로 읽어 보세요. 업로드하거나 코드를 실행하지 않습니다."
+}

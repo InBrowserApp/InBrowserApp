@@ -163,6 +163,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/murmurhash3-x86-32-hash-text-or-file/page"),
   "my-ip-address": () => import("@tool/my-ip-address/page"),
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
+  "notebook-viewer": () => import("@tool/notebook-viewer/page"),
   "number-base-converter": () => import("@tool/number-base-converter/page"),
   "odt-viewer": () => import("@tool/odt-viewer/page"),
   "ofd-viewer": () => import("@tool/ofd-viewer/page"),

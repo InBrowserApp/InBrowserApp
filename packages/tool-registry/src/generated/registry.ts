@@ -16158,6 +16158,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "notebook-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["jupyter", "notebook", "ipynb", "code", "document", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض دفاتر Jupyter",
+        description:
+          "اقرأ دفاتر .ipynb المحلية مع Markdown والتعليمات البرمجية والمخرجات المحفوظة والتنقّل بين الخلايا. دون رفع ملفات أو تنفيذ تعليمات برمجية.",
+      },
+      de: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Lies lokale .ipynb-Notebooks mit Markdown, Code, gespeicherten Ausgaben und Zellnavigation. Ohne Uploads oder Codeausführung.",
+      },
+      en: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Read local .ipynb notebooks with Markdown, code, saved outputs, and cell navigation. No uploads or code execution.",
+      },
+      es: {
+        name: "Visor de cuadernos Jupyter",
+        description:
+          "Lee cuadernos .ipynb locales con Markdown, código, salidas guardadas y navegación por celdas. Sin subir archivos ni ejecutar código.",
+      },
+      fr: {
+        name: "Visionneuse de notebooks Jupyter",
+        description:
+          "Lisez des notebooks .ipynb locaux avec Markdown, code, sorties enregistrées et navigation par cellule. Aucun envoi ni exécution de code.",
+      },
+      he: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "קריאת מחברות .ipynb מקומיות עם Markdown, קוד, פלטים שמורים וניווט בין תאים. ללא העלאות או הרצת קוד.",
+      },
+      hi: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Markdown, कोड, सहेजे गए आउटपुट और सेल नेविगेशन के साथ स्थानीय .ipynb नोटबुक पढ़ें। कोई अपलोड या कोड निष्पादन नहीं।",
+      },
+      id: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Baca notebook .ipynb lokal dengan Markdown, kode, keluaran tersimpan, dan navigasi sel. Tanpa unggahan atau eksekusi kode.",
+      },
+      it: {
+        name: "Visualizzatore di notebook Jupyter",
+        description:
+          "Leggi notebook .ipynb locali con Markdown, codice, output salvati e navigazione tra le celle. Nessun caricamento o esecuzione di codice.",
+      },
+      ja: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "端末内の .ipynb ノートブックの Markdown、コード、保存済みの出力を閲覧し、セル単位で移動できます。アップロードやコードの実行は行いません。",
+      },
+      ko: {
+        name: "Jupyter Notebook 뷰어",
+        description:
+          "기기에 있는 .ipynb 노트북의 Markdown, 코드 및 저장된 출력을 셀 탐색 기능으로 읽어 보세요. 업로드하거나 코드를 실행하지 않습니다.",
+      },
+      ms: {
+        name: "Pemapar Jupyter Notebook",
+        description:
+          "Baca buku nota .ipynb setempat dengan Markdown, kod, output tersimpan dan navigasi sel. Tiada muat naik atau pelaksanaan kod.",
+      },
+      nl: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Lees lokale .ipynb-notebooks met Markdown, code, opgeslagen uitvoer en celnavigatie. Zonder uploads of uitvoering van code.",
+      },
+      no: {
+        name: "Jupyter-notatbokviser",
+        description:
+          "Les lokale .ipynb-notatbøker med Markdown, kode, lagrede utdata og cellenavigering. Ingen opplastinger eller kjøring av kode.",
+      },
+      pl: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Czytaj lokalne notatniki .ipynb z Markdown, kodem, zapisanymi wynikami i nawigacją po komórkach. Bez przesyłania i wykonywania kodu.",
+      },
+      pt: {
+        name: "Visualizador de Jupyter Notebook",
+        description:
+          "Leia notebooks .ipynb locais com Markdown, código, saídas salvas e navegação por células. Sem envios nem execução de código.",
+      },
+      ru: {
+        name: "Просмотр блокнотов Jupyter",
+        description:
+          "Читайте локальные блокноты .ipynb с Markdown, кодом, сохранённым выводом и навигацией по ячейкам. Без отправки на сервер и выполнения кода.",
+      },
+      sv: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Läs lokala .ipynb-filer med Markdown, kod, sparade utmatningar och cellnavigering. Inga uppladdningar eller kodkörningar.",
+      },
+      th: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "อ่านโน้ตบุ๊ก .ipynb บนอุปกรณ์ พร้อม Markdown โค้ด เอาต์พุตที่บันทึกไว้ และการนำทางตามเซลล์ ไม่มีการอัปโหลดหรือรันโค้ด",
+      },
+      tr: {
+        name: "Jupyter Notebook Görüntüleyici",
+        description:
+          "Yerel .ipynb not defterlerini Markdown, kod, kaydedilmiş çıktılar ve hücreler arasında gezinme ile okuyun. Yükleme yapılmaz, kod çalıştırılmaz.",
+      },
+      vi: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Đọc notebook .ipynb trên thiết bị với Markdown, mã, đầu ra đã lưu và điều hướng theo ô. Không tải lên hay thực thi mã.",
+      },
+      "zh-CN": {
+        name: "Jupyter 笔记本查看器",
+        description:
+          "阅读本地 .ipynb 笔记本中的 Markdown、代码和已保存的输出，支持单元格导航。不会上传文件或执行代码。",
+      },
+      "zh-TW": {
+        name: "Jupyter 筆記本檢視器",
+        description:
+          "閱讀本機 .ipynb 筆記本中的 Markdown、程式碼及已儲存的輸出，並透過儲存格導覽。不會上傳或執行程式碼。",
+      },
+    },
+  },
+  {
     slug: "number-base-converter",
     category: "web",
     icon: "binary",
@@ -45514,6 +45637,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "NanoID 產生器",
         description:
           "在瀏覽器內產生 URL 安全的 NanoID，支援自訂長度與字元集預設。",
+      },
+    },
+  },
+  "notebook-viewer": {
+    slug: "notebook-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["jupyter", "notebook", "ipynb", "code", "document", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض دفاتر Jupyter",
+        description:
+          "اقرأ دفاتر .ipynb المحلية مع Markdown والتعليمات البرمجية والمخرجات المحفوظة والتنقّل بين الخلايا. دون رفع ملفات أو تنفيذ تعليمات برمجية.",
+      },
+      de: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Lies lokale .ipynb-Notebooks mit Markdown, Code, gespeicherten Ausgaben und Zellnavigation. Ohne Uploads oder Codeausführung.",
+      },
+      en: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Read local .ipynb notebooks with Markdown, code, saved outputs, and cell navigation. No uploads or code execution.",
+      },
+      es: {
+        name: "Visor de cuadernos Jupyter",
+        description:
+          "Lee cuadernos .ipynb locales con Markdown, código, salidas guardadas y navegación por celdas. Sin subir archivos ni ejecutar código.",
+      },
+      fr: {
+        name: "Visionneuse de notebooks Jupyter",
+        description:
+          "Lisez des notebooks .ipynb locaux avec Markdown, code, sorties enregistrées et navigation par cellule. Aucun envoi ni exécution de code.",
+      },
+      he: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "קריאת מחברות .ipynb מקומיות עם Markdown, קוד, פלטים שמורים וניווט בין תאים. ללא העלאות או הרצת קוד.",
+      },
+      hi: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Markdown, कोड, सहेजे गए आउटपुट और सेल नेविगेशन के साथ स्थानीय .ipynb नोटबुक पढ़ें। कोई अपलोड या कोड निष्पादन नहीं।",
+      },
+      id: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Baca notebook .ipynb lokal dengan Markdown, kode, keluaran tersimpan, dan navigasi sel. Tanpa unggahan atau eksekusi kode.",
+      },
+      it: {
+        name: "Visualizzatore di notebook Jupyter",
+        description:
+          "Leggi notebook .ipynb locali con Markdown, codice, output salvati e navigazione tra le celle. Nessun caricamento o esecuzione di codice.",
+      },
+      ja: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "端末内の .ipynb ノートブックの Markdown、コード、保存済みの出力を閲覧し、セル単位で移動できます。アップロードやコードの実行は行いません。",
+      },
+      ko: {
+        name: "Jupyter Notebook 뷰어",
+        description:
+          "기기에 있는 .ipynb 노트북의 Markdown, 코드 및 저장된 출력을 셀 탐색 기능으로 읽어 보세요. 업로드하거나 코드를 실행하지 않습니다.",
+      },
+      ms: {
+        name: "Pemapar Jupyter Notebook",
+        description:
+          "Baca buku nota .ipynb setempat dengan Markdown, kod, output tersimpan dan navigasi sel. Tiada muat naik atau pelaksanaan kod.",
+      },
+      nl: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Lees lokale .ipynb-notebooks met Markdown, code, opgeslagen uitvoer en celnavigatie. Zonder uploads of uitvoering van code.",
+      },
+      no: {
+        name: "Jupyter-notatbokviser",
+        description:
+          "Les lokale .ipynb-notatbøker med Markdown, kode, lagrede utdata og cellenavigering. Ingen opplastinger eller kjøring av kode.",
+      },
+      pl: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Czytaj lokalne notatniki .ipynb z Markdown, kodem, zapisanymi wynikami i nawigacją po komórkach. Bez przesyłania i wykonywania kodu.",
+      },
+      pt: {
+        name: "Visualizador de Jupyter Notebook",
+        description:
+          "Leia notebooks .ipynb locais com Markdown, código, saídas salvas e navegação por células. Sem envios nem execução de código.",
+      },
+      ru: {
+        name: "Просмотр блокнотов Jupyter",
+        description:
+          "Читайте локальные блокноты .ipynb с Markdown, кодом, сохранённым выводом и навигацией по ячейкам. Без отправки на сервер и выполнения кода.",
+      },
+      sv: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Läs lokala .ipynb-filer med Markdown, kod, sparade utmatningar och cellnavigering. Inga uppladdningar eller kodkörningar.",
+      },
+      th: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "อ่านโน้ตบุ๊ก .ipynb บนอุปกรณ์ พร้อม Markdown โค้ด เอาต์พุตที่บันทึกไว้ และการนำทางตามเซลล์ ไม่มีการอัปโหลดหรือรันโค้ด",
+      },
+      tr: {
+        name: "Jupyter Notebook Görüntüleyici",
+        description:
+          "Yerel .ipynb not defterlerini Markdown, kod, kaydedilmiş çıktılar ve hücreler arasında gezinme ile okuyun. Yükleme yapılmaz, kod çalıştırılmaz.",
+      },
+      vi: {
+        name: "Jupyter Notebook Viewer",
+        description:
+          "Đọc notebook .ipynb trên thiết bị với Markdown, mã, đầu ra đã lưu và điều hướng theo ô. Không tải lên hay thực thi mã.",
+      },
+      "zh-CN": {
+        name: "Jupyter 笔记本查看器",
+        description:
+          "阅读本地 .ipynb 笔记本中的 Markdown、代码和已保存的输出，支持单元格导航。不会上传文件或执行代码。",
+      },
+      "zh-TW": {
+        name: "Jupyter 筆記本檢視器",
+        description:
+          "閱讀本機 .ipynb 筆記本中的 Markdown、程式碼及已儲存的輸出，並透過儲存格導覽。不會上傳或執行程式碼。",
       },
     },
   },

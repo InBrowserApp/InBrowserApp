@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter Notebook Viewer",
+  "description": "Đọc notebook .ipynb trên thiết bị với Markdown, mã, đầu ra đã lưu và điều hướng theo ô. Không tải lên hay thực thi mã."
+}

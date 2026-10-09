@@ -1,0 +1,4 @@
+{
+  "name": "Visor de cuadernos Jupyter",
+  "description": "Lee cuadernos .ipynb locales con Markdown, código, salidas guardadas y navegación por celdas. Sin subir archivos ni ejecutar código."
+}
