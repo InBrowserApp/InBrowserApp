@@ -1,4 +1,5 @@
 import {
+  act,
   cleanup,
   fireEvent,
   render,
@@ -57,7 +58,7 @@ test("opens local files, navigates, searches, zooms and clears", async () => {
   const click = vi.spyOn(picker, "click")
   fireEvent.click(screen.getByRole("button", { name: m.open }))
   expect(click).toHaveBeenCalledOnce()
-  choose()
+  await act(async () => choose())
   await screen.findByLabelText(m.page)
   fireEvent.click(screen.getByLabelText(m.next))
   expect(mock.page).toHaveBeenCalledWith(2)
