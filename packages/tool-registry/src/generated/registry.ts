@@ -3726,6 +3726,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "caj-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "caj",
+      "kdh",
+      "nh",
+      "viewer",
+      "reader",
+      "paper",
+      "document",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "CAJ Viewer",
+        description:
+          "اقرأ أوراق CAJ وKDH وNH البحثية المحلية مع التنقل بين الصفحات والصور المصغّرة والتكبير والبحث النصي حيث يتوفر.",
+      },
+      de: {
+        name: "CAJ Viewer",
+        description:
+          "Lies lokale CAJ-, KDH- und NH-Artikel mit Seitennavigation, Vorschaubildern, Zoom und Textsuche, soweit verfügbar.",
+      },
+      en: {
+        name: "CAJ Viewer",
+        description:
+          "Read local CAJ, KDH, and NH papers with page navigation, thumbnails, zoom, and text search where available.",
+      },
+      es: {
+        name: "CAJ Viewer",
+        description:
+          "Lee artículos CAJ, KDH y NH locales con navegación por páginas, miniaturas, zoom y búsqueda de texto cuando esté disponible.",
+      },
+      fr: {
+        name: "CAJ Viewer",
+        description:
+          "Lisez des articles CAJ, KDH et NH locaux avec navigation par page, vignettes, zoom et recherche de texte lorsqu’elle est disponible.",
+      },
+      he: {
+        name: "CAJ Viewer",
+        description:
+          "קראו מאמרי CAJ, KDH ו־NH מקומיים עם ניווט בין עמודים, תמונות ממוזערות, הגדלה וחיפוש בטקסט כשאפשר.",
+      },
+      hi: {
+        name: "CAJ व्यूअर",
+        description:
+          "स्थानीय CAJ, KDH और NH शोधपत्र पढ़ें। पृष्ठों पर जाएँ, थंबनेल देखें, ज़ूम करें और जहाँ पाठ उपलब्ध हो, वहाँ खोजें।",
+      },
+      id: {
+        name: "Penampil CAJ",
+        description:
+          "Baca makalah CAJ, KDH, dan NH lokal dengan navigasi halaman, gambar mini, zoom, dan pencarian teks jika tersedia.",
+      },
+      it: {
+        name: "Visualizzatore CAJ",
+        description:
+          "Leggi documenti locali CAJ, KDH e NH con navigazione tra le pagine, miniature, zoom e ricerca nel testo, se disponibile.",
+      },
+      ja: {
+        name: "CAJ Viewer",
+        description:
+          "端末内の CAJ、KDH、NH 論文を閲覧。ページ移動、サムネイル、ズーム、利用可能な場合はテキスト検索に対応しています。",
+      },
+      ko: {
+        name: "CAJ Viewer",
+        description:
+          "로컬 CAJ, KDH 및 NH 논문을 읽으세요. 페이지 이동, 미리보기, 확대/축소와 가능한 경우 텍스트 검색을 지원합니다.",
+      },
+      ms: {
+        name: "Pemapar CAJ",
+        description:
+          "Baca makalah CAJ, KDH dan NH setempat dengan navigasi halaman, imej kecil, zum dan carian teks apabila tersedia.",
+      },
+      nl: {
+        name: "CAJ Viewer",
+        description:
+          "Lees lokale CAJ-, KDH- en NH-artikelen met paginanavigatie, miniaturen, zoom en tekstzoekfunctie waar beschikbaar.",
+      },
+      no: {
+        name: "CAJ-viser",
+        description:
+          "Les lokale CAJ-, KDH- og NH-dokumenter med sidenavigasjon, miniatyrbilder, zoom og tekstsøk der det er tilgjengelig.",
+      },
+      pl: {
+        name: "Przeglądarka CAJ",
+        description:
+          "Czytaj lokalne publikacje CAJ, KDH i NH z nawigacją po stronach, miniaturami, powiększaniem i wyszukiwaniem tekstu, jeśli jest dostępny.",
+      },
+      pt: {
+        name: "Visualizador de CAJ",
+        description:
+          "Leia artigos CAJ, KDH e NH locais com navegação por páginas, miniaturas, zoom e busca de texto quando disponível.",
+      },
+      ru: {
+        name: "Просмотр CAJ",
+        description:
+          "Читайте локальные работы в форматах CAJ, KDH и NH: переход по страницам, миниатюры, масштабирование и поиск по доступному тексту.",
+      },
+      sv: {
+        name: "CAJ Viewer",
+        description:
+          "Läs lokala CAJ-, KDH- och NH-dokument med sidnavigering, miniatyrbilder, zoom och textsökning där det är möjligt.",
+      },
+      th: {
+        name: "เครื่องมือดู CAJ",
+        description:
+          "อ่านเอกสารวิชาการ CAJ, KDH และ NH จากอุปกรณ์ พร้อมการเปลี่ยนหน้า ภาพขนาดย่อ การซูม และการค้นหาข้อความเมื่อมีข้อความให้ค้นหา",
+      },
+      tr: {
+        name: "CAJ Görüntüleyici",
+        description:
+          "Yerel CAJ, KDH ve NH makalelerini sayfa gezinme, küçük resimler, yakınlaştırma ve desteklenen yerlerde metin arama özellikleriyle okuyun.",
+      },
+      vi: {
+        name: "Trình xem CAJ",
+        description:
+          "Đọc bài nghiên cứu CAJ, KDH và NH trên thiết bị với điều hướng trang, hình thu nhỏ, thu phóng và tìm kiếm văn bản khi có.",
+      },
+      "zh-CN": {
+        name: "CAJ Viewer",
+        description:
+          "阅读本地 CAJ、KDH 和 NH 论文，支持翻页、缩略图、缩放，以及可用文字的搜索。",
+      },
+      "zh-TW": {
+        name: "CAJ Viewer",
+        description:
+          "閱讀本機 CAJ、KDH 與 NH 論文，提供翻頁、縮圖、縮放功能，並可在有文字的部分進行搜尋。",
+      },
+    },
+  },
+  {
     slug: "camera",
     category: "misc",
     icon: "camera",
@@ -31822,6 +31954,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "工作日計算器",
         description:
           "統計日期之間的工作日，並依自訂週末與節假日進行工作日加減。",
+      },
+    },
+  },
+  "caj-viewer": {
+    slug: "caj-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "caj",
+      "kdh",
+      "nh",
+      "viewer",
+      "reader",
+      "paper",
+      "document",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "CAJ Viewer",
+        description:
+          "اقرأ أوراق CAJ وKDH وNH البحثية المحلية مع التنقل بين الصفحات والصور المصغّرة والتكبير والبحث النصي حيث يتوفر.",
+      },
+      de: {
+        name: "CAJ Viewer",
+        description:
+          "Lies lokale CAJ-, KDH- und NH-Artikel mit Seitennavigation, Vorschaubildern, Zoom und Textsuche, soweit verfügbar.",
+      },
+      en: {
+        name: "CAJ Viewer",
+        description:
+          "Read local CAJ, KDH, and NH papers with page navigation, thumbnails, zoom, and text search where available.",
+      },
+      es: {
+        name: "CAJ Viewer",
+        description:
+          "Lee artículos CAJ, KDH y NH locales con navegación por páginas, miniaturas, zoom y búsqueda de texto cuando esté disponible.",
+      },
+      fr: {
+        name: "CAJ Viewer",
+        description:
+          "Lisez des articles CAJ, KDH et NH locaux avec navigation par page, vignettes, zoom et recherche de texte lorsqu’elle est disponible.",
+      },
+      he: {
+        name: "CAJ Viewer",
+        description:
+          "קראו מאמרי CAJ, KDH ו־NH מקומיים עם ניווט בין עמודים, תמונות ממוזערות, הגדלה וחיפוש בטקסט כשאפשר.",
+      },
+      hi: {
+        name: "CAJ व्यूअर",
+        description:
+          "स्थानीय CAJ, KDH और NH शोधपत्र पढ़ें। पृष्ठों पर जाएँ, थंबनेल देखें, ज़ूम करें और जहाँ पाठ उपलब्ध हो, वहाँ खोजें।",
+      },
+      id: {
+        name: "Penampil CAJ",
+        description:
+          "Baca makalah CAJ, KDH, dan NH lokal dengan navigasi halaman, gambar mini, zoom, dan pencarian teks jika tersedia.",
+      },
+      it: {
+        name: "Visualizzatore CAJ",
+        description:
+          "Leggi documenti locali CAJ, KDH e NH con navigazione tra le pagine, miniature, zoom e ricerca nel testo, se disponibile.",
+      },
+      ja: {
+        name: "CAJ Viewer",
+        description:
+          "端末内の CAJ、KDH、NH 論文を閲覧。ページ移動、サムネイル、ズーム、利用可能な場合はテキスト検索に対応しています。",
+      },
+      ko: {
+        name: "CAJ Viewer",
+        description:
+          "로컬 CAJ, KDH 및 NH 논문을 읽으세요. 페이지 이동, 미리보기, 확대/축소와 가능한 경우 텍스트 검색을 지원합니다.",
+      },
+      ms: {
+        name: "Pemapar CAJ",
+        description:
+          "Baca makalah CAJ, KDH dan NH setempat dengan navigasi halaman, imej kecil, zum dan carian teks apabila tersedia.",
+      },
+      nl: {
+        name: "CAJ Viewer",
+        description:
+          "Lees lokale CAJ-, KDH- en NH-artikelen met paginanavigatie, miniaturen, zoom en tekstzoekfunctie waar beschikbaar.",
+      },
+      no: {
+        name: "CAJ-viser",
+        description:
+          "Les lokale CAJ-, KDH- og NH-dokumenter med sidenavigasjon, miniatyrbilder, zoom og tekstsøk der det er tilgjengelig.",
+      },
+      pl: {
+        name: "Przeglądarka CAJ",
+        description:
+          "Czytaj lokalne publikacje CAJ, KDH i NH z nawigacją po stronach, miniaturami, powiększaniem i wyszukiwaniem tekstu, jeśli jest dostępny.",
+      },
+      pt: {
+        name: "Visualizador de CAJ",
+        description:
+          "Leia artigos CAJ, KDH e NH locais com navegação por páginas, miniaturas, zoom e busca de texto quando disponível.",
+      },
+      ru: {
+        name: "Просмотр CAJ",
+        description:
+          "Читайте локальные работы в форматах CAJ, KDH и NH: переход по страницам, миниатюры, масштабирование и поиск по доступному тексту.",
+      },
+      sv: {
+        name: "CAJ Viewer",
+        description:
+          "Läs lokala CAJ-, KDH- och NH-dokument med sidnavigering, miniatyrbilder, zoom och textsökning där det är möjligt.",
+      },
+      th: {
+        name: "เครื่องมือดู CAJ",
+        description:
+          "อ่านเอกสารวิชาการ CAJ, KDH และ NH จากอุปกรณ์ พร้อมการเปลี่ยนหน้า ภาพขนาดย่อ การซูม และการค้นหาข้อความเมื่อมีข้อความให้ค้นหา",
+      },
+      tr: {
+        name: "CAJ Görüntüleyici",
+        description:
+          "Yerel CAJ, KDH ve NH makalelerini sayfa gezinme, küçük resimler, yakınlaştırma ve desteklenen yerlerde metin arama özellikleriyle okuyun.",
+      },
+      vi: {
+        name: "Trình xem CAJ",
+        description:
+          "Đọc bài nghiên cứu CAJ, KDH và NH trên thiết bị với điều hướng trang, hình thu nhỏ, thu phóng và tìm kiếm văn bản khi có.",
+      },
+      "zh-CN": {
+        name: "CAJ Viewer",
+        description:
+          "阅读本地 CAJ、KDH 和 NH 论文，支持翻页、缩略图、缩放，以及可用文字的搜索。",
+      },
+      "zh-TW": {
+        name: "CAJ Viewer",
+        description:
+          "閱讀本機 CAJ、KDH 與 NH 論文，提供翻頁、縮圖、縮放功能，並可在有文字的部分進行搜尋。",
       },
     },
   },

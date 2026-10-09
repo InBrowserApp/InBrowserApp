@@ -40,7 +40,7 @@ export function useReader(
     const { signal } = controller
     const element = container.current
     setLoading(true)
-    void import("./reader")
+    void import("@workspace/pdf-reader")
       .then(({ openReader }) => {
         signal.throwIfAborted()
         return openReader({

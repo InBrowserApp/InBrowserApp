@@ -6,9 +6,17 @@ const mock = vi.hoisted(() => ({
   destroy: vi.fn(),
   setDocument: vi.fn(),
   setLinkDocument: vi.fn(),
+  goToDestination: vi.fn(),
   dispatch: vi.fn(),
   events: new Map<string, (event?: unknown) => void>(),
-  viewer: { currentPageNumber: 1, currentScale: 1, currentScaleValue: "" },
+  viewer: {
+    currentPageNumber: 1,
+    currentScale: 1,
+    currentScaleValue: "",
+    pagesRotation: 0,
+    update: vi.fn(),
+    pdfDocument: null as unknown,
+  },
 }))
 vi.mock("pdfjs-dist", () => ({
   getDocument: mock.getDocument,
@@ -27,6 +35,7 @@ vi.mock("pdfjs-dist/web/pdf_viewer.mjs", () => ({
   PDFLinkService: class {
     setViewer() {}
     setDocument = mock.setLinkDocument
+    goToDestination = mock.goToDestination
   },
   PDFFindController: class {},
   PDFSinglePageViewer: class {
@@ -62,6 +71,7 @@ beforeEach(() => {
   vi.clearAllMocks()
   mock.events.clear()
   mock.destroy.mockResolvedValue(undefined)
+  mock.goToDestination.mockResolvedValue(undefined)
   mock.viewer.currentScaleValue = ""
 })
 
@@ -146,6 +156,24 @@ test("unloads corrupt PDFs instead of leaving workers alive", async () => {
   expect(mock.destroy).toHaveBeenCalledOnce()
 })
 
+test("handles a bookmark lookup rejected after its document closes", async () => {
+  const { options } = setup()
+  const reader = await openReader(options)
+  let reject!: (error: Error) => void
+  mock.goToDestination.mockReturnValue(
+    new Promise<void>((_resolve, failed) => {
+      reject = failed
+    })
+  )
+  reader.destination("chapter-two")
+  expect(mock.goToDestination).toHaveBeenCalledWith("chapter-two")
+  reader.dispose()
+  reject(new Error("Destination document was unloaded"))
+  // Yield through the rejection checkpoint; Vitest fails on an unhandled one.
+  await new Promise((resolve) => setTimeout(resolve, 0))
+  expect(options.onError).not.toHaveBeenCalled()
+})
+
 test("cancels before allocation and while a document is loading", async () => {
   const canceled = setup()
   canceled.controller.abort()
@@ -162,4 +190,44 @@ test("cancels before allocation and while a document is loading", async () => {
   complete({ numPages: 3 })
   await expect(opening).rejects.toThrow(/abort/i)
   expect(mock.destroy).toHaveBeenCalledOnce()
+})
+
+test("refreshes a page revealed after a collapsed mobile reading pane", async () => {
+  let resized!: ResizeObserverCallback
+  const original = globalThis.ResizeObserver
+  globalThis.ResizeObserver = class {
+    constructor(callback: ResizeObserverCallback) {
+      resized = callback
+    }
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  }
+  try {
+    const { options } = setup()
+    let width = 0
+    Object.defineProperty(options.container, "clientWidth", {
+      get: () => width,
+    })
+    Object.defineProperty(options.container, "clientHeight", { value: 400 })
+    const reader = await openReader(options)
+    mock.viewer.pdfDocument = {}
+    resized([], {} as ResizeObserver)
+    expect(mock.viewer.update).not.toHaveBeenCalled()
+    width = 320
+    reader.zoom("page-fit")
+    resized([], {} as ResizeObserver)
+    expect(mock.viewer.currentScaleValue).toBe("page-fit")
+    expect(mock.viewer.update).toHaveBeenCalledOnce()
+    reader.zoom(150)
+    mock.viewer.currentScaleValue = "1.5"
+    resized([], {} as ResizeObserver)
+    expect(mock.viewer.update).toHaveBeenCalledTimes(2)
+    reader.rotate()
+    expect(mock.viewer.pagesRotation).toBe(90)
+    reader.dispose()
+  } finally {
+    mock.viewer.pdfDocument = null
+    globalThis.ResizeObserver = original
+  }
 })

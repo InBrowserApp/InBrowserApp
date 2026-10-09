@@ -41,6 +41,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/blake3-hash-text-or-file/page"),
   "business-days-calculator": () =>
     import("@tool/business-days-calculator/page"),
+  "caj-viewer": () => import("@tool/caj-viewer/page"),
   camera: () => import("@tool/camera/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "cbz-reader": () => import("@tool/cbz-reader/page"),

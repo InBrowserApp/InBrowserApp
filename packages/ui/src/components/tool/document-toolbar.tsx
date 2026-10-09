@@ -51,11 +51,13 @@ export function DocumentToolbar({
   state,
   reader,
   actions,
+  navigationActions,
 }: {
   messages: ToolbarMessages
   state: DocumentReaderState
   reader: DocumentControls
   actions?: ReactNode
+  navigationActions?: ReactNode
 }) {
   const id = useId()
   const [query, setQuery] = useState("")
@@ -101,7 +103,7 @@ export function DocumentToolbar({
     <div ref={root} className="shrink-0 border-b p-2">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="flex w-full items-center justify-between gap-2 sm:w-auto">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-0 sm:gap-1">
             <DocumentIconButton
               label={m.previous}
               disabled={state.page <= 1}
@@ -117,7 +119,7 @@ export function DocumentToolbar({
               value={state.page}
               onCommit={reader.page}
             />
-            <span className="text-sm text-muted-foreground tabular-nums">
+            <span className="text-sm whitespace-nowrap text-muted-foreground tabular-nums">
               {m.pageCount.replace("{total}", String(state.total))}
             </span>
             <DocumentIconButton
@@ -128,17 +130,20 @@ export function DocumentToolbar({
               <ChevronRight aria-hidden="true" className="rtl:rotate-180" />
             </DocumentIconButton>
           </div>
-          <DocumentIconButton
-            ref={toggle}
-            label={m.search}
-            aria-expanded={open}
-            aria-controls={`${id}-search-panel`}
-            onClick={() => (open ? closeSearch() : setOpen(true))}
-          >
-            <Search aria-hidden="true" />
-          </DocumentIconButton>
+          <div className="flex items-center gap-0 sm:gap-1">
+            <DocumentIconButton
+              ref={toggle}
+              label={m.search}
+              aria-expanded={open}
+              aria-controls={`${id}-search-panel`}
+              onClick={() => (open ? closeSearch() : setOpen(true))}
+            >
+              <Search aria-hidden="true" />
+            </DocumentIconButton>
+            {navigationActions}
+          </div>
         </div>
-        <div className="flex flex-wrap items-center gap-1">
+        <div className="flex flex-wrap items-center gap-0 sm:gap-1">
           <DocumentZoom
             value={state.zoom}
             onChange={reader.zoom}

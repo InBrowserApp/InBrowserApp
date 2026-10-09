@@ -12,7 +12,7 @@ export function DocumentZoom({
   messages: Record<"zoom" | "zoomIn" | "zoomOut", string>
 }) {
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center gap-0 sm:gap-1">
       <DocumentIconButton
         label={m.zoomOut}
         disabled={value <= 25}
