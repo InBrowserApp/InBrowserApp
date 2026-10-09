@@ -9867,6 +9867,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "hwp-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["hwp", "hwpx", "hangul", "hancom", "viewer", "document", "offline"],
+    locales: {
+      ar: {
+        name: "عارض HWP / HWPX",
+        description:
+          "عاين مستندات Hangul بصيغتي HWP 5 وHWPX محليًا، مع التنقّل بين الصفحات والتكبير والقراءة المركّزة.",
+      },
+      de: {
+        name: "HWP- / HWPX-Betrachter",
+        description:
+          "Zeigen Sie Hangul-Dokumente im Format HWP 5 und HWPX lokal an, mit Seitennavigation, Zoom und Lesemodus.",
+      },
+      en: {
+        name: "HWP / HWPX Viewer",
+        description:
+          "Preview Hangul HWP 5 and HWPX documents locally, with page navigation, zoom, and focused reading.",
+      },
+      es: {
+        name: "Visor de HWP / HWPX",
+        description:
+          "Previsualiza documentos HWP 5 y HWPX de Hangul de forma local, con navegación por páginas, zoom y lectura sin distracciones.",
+      },
+      fr: {
+        name: "Visionneuse HWP / HWPX",
+        description:
+          "Affichez un aperçu local des documents Hangul HWP 5 et HWPX, avec navigation entre les pages, zoom et lecture sans distraction.",
+      },
+      he: {
+        name: "מציג קובצי HWP / HWPX",
+        description:
+          "תצוגה מקדימה מקומית של מסמכי Hangul בפורמט HWP 5 ו-HWPX, עם ניווט בין עמודים, שינוי מרחק התצוגה וקריאה ממוקדת.",
+      },
+      hi: {
+        name: "HWP / HWPX व्यूअर",
+        description:
+          "पृष्ठ नेविगेशन, ज़ूम और एकाग्र पठन के साथ Hangul HWP 5 और HWPX दस्तावेज़ों का स्थानीय रूप से पूर्वावलोकन करें।",
+      },
+      id: {
+        name: "Penampil HWP / HWPX",
+        description:
+          "Pratinjau dokumen Hangul HWP 5 dan HWPX secara lokal, dengan navigasi halaman, pembesaran, dan mode baca fokus.",
+      },
+      it: {
+        name: "Visualizzatore HWP / HWPX",
+        description:
+          "Visualizza in locale l’anteprima dei documenti Hangul HWP 5 e HWPX, con navigazione tra le pagine, zoom e lettura senza distrazioni.",
+      },
+      ja: {
+        name: "HWP / HWPXビューアー",
+        description:
+          "HangulのHWP 5・HWPX文書をローカルでプレビューできます。ページ移動、拡大・縮小、集中閲覧に対応しています。",
+      },
+      ko: {
+        name: "HWP / HWPX 뷰어",
+        description:
+          "한글 HWP 5 및 HWPX 문서를 로컬에서 미리 보세요. 페이지 이동, 확대/축소, 집중 읽기를 지원합니다.",
+      },
+      ms: {
+        name: "Pemapar HWP / HWPX",
+        description:
+          "Pratonton dokumen Hangul HWP 5 dan HWPX secara setempat, dengan navigasi halaman, zum dan bacaan fokus.",
+      },
+      nl: {
+        name: "HWP / HWPX-viewer",
+        description:
+          "Bekijk Hangul HWP 5- en HWPX-documenten lokaal, met paginanavigatie, zoomen en afleidingsvrij lezen.",
+      },
+      no: {
+        name: "HWP- / HWPX-viser",
+        description:
+          "Forhåndsvis Hangul HWP 5- og HWPX-dokumenter lokalt med sidenavigasjon, zoom og fokusert lesing.",
+      },
+      pl: {
+        name: "Przeglądarka HWP / HWPX",
+        description:
+          "Przeglądaj dokumenty Hangul HWP 5 i HWPX lokalnie, z nawigacją po stronach, powiększaniem i trybem skupionego czytania.",
+      },
+      pt: {
+        name: "Visualizador de HWP / HWPX",
+        description:
+          "Visualize documentos HWP 5 e HWPX do Hangul localmente, com navegação entre páginas, zoom e leitura focada.",
+      },
+      ru: {
+        name: "Просмотр HWP / HWPX",
+        description:
+          "Просматривайте документы Hangul HWP 5 и HWPX локально: переходите по страницам, меняйте масштаб и читайте без отвлечений.",
+      },
+      sv: {
+        name: "HWP-/HWPX-visare",
+        description:
+          "Förhandsvisa Hangul-dokument i HWP 5- och HWPX-format lokalt, med sidnavigering, zoom och fokuserat läsläge.",
+      },
+      th: {
+        name: "โปรแกรมดู HWP / HWPX",
+        description:
+          "ดูตัวอย่างเอกสาร Hangul HWP 5 และ HWPX บนอุปกรณ์ของคุณ พร้อมการเปลี่ยนหน้า การซูม และโหมดอ่านแบบจดจ่อ",
+      },
+      tr: {
+        name: "HWP / HWPX Görüntüleyici",
+        description:
+          "Hangul HWP 5 ve HWPX belgelerini sayfalar arası gezinme, yakınlaştırma ve odaklı okuma özellikleriyle yerel olarak önizleyin.",
+      },
+      vi: {
+        name: "Trình xem HWP / HWPX",
+        description:
+          "Xem trước tài liệu Hangul HWP 5 và HWPX trên thiết bị, với tính năng chuyển trang, thu phóng và đọc tập trung.",
+      },
+      "zh-CN": {
+        name: "HWP / HWPX 查看器",
+        description:
+          "在本地预览 Hangul HWP 5 和 HWPX 文档，支持翻页、缩放和专注阅读。",
+      },
+      "zh-TW": {
+        name: "HWP / HWPX 檢視器",
+        description:
+          "在本機預覽 Hangul HWP 5 與 HWPX 文件，支援頁面導覽、縮放與專注閱讀。",
+      },
+    },
+  },
+  {
     slug: "iban-validator",
     category: "text",
     icon: "file-text",

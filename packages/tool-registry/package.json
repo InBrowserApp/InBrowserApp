@@ -85,6 +85,7 @@
     "@tool/html-entity-encoder-decoder": "workspace:*",
     "@tool/html-to-markdown-converter": "workspace:*",
     "@tool/http-status-code-lookup": "workspace:*",
+    "@tool/hwp-viewer": "workspace:*",
     "@tool/iban-validator": "workspace:*",
     "@tool/ical-event-generator": "workspace:*",
     "@tool/image-metadata-cleaner": "workspace:*",

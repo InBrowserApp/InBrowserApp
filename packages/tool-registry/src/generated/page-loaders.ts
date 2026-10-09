@@ -104,6 +104,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "html-to-markdown-converter": () =>
     import("@tool/html-to-markdown-converter/page"),
   "http-status-code-lookup": () => import("@tool/http-status-code-lookup/page"),
+  "hwp-viewer": () => import("@tool/hwp-viewer/page"),
   "iban-validator": () => import("@tool/iban-validator/page"),
   "ical-event-generator": () => import("@tool/ical-event-generator/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
