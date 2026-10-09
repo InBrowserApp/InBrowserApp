@@ -165,7 +165,6 @@ test("validates inputs and maps engine failures", async () => {
   await screen.findByText(m.invalid)
   choose(new File([], "empty.xlsx"))
   await screen.findByText(m.invalid)
-  await screen.findByText(m.invalid)
   expect(mock.open).not.toHaveBeenCalled()
   mock.open.mockRejectedValueOnce(new Error("failed"))
   choose()
