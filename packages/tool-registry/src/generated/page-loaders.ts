@@ -146,6 +146,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "md4-hash-text-or-file": () => import("@tool/md4-hash-text-or-file/page"),
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "mime-type-lookup": () => import("@tool/mime-type-lookup/page"),
+  "mobi-reader": () => import("@tool/mobi-reader/page"),
   "morse-code-converter": () => import("@tool/morse-code-converter/page"),
   "murmurhash3-x64-128-hash-text-or-file": () =>
     import("@tool/murmurhash3-x64-128-hash-text-or-file/page"),

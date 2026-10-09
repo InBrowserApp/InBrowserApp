@@ -1,0 +1,13 @@
+diff --git a/mobi.js b/mobi.js
+index 116477d46aa5782f4082f11c543735818c84e64f..f8f1b6a43ef729b176759e7813fc2102a46e978a 100644
+--- a/mobi.js
++++ b/mobi.js
+@@ -759,6 +759,8 @@ class MOBI6 {
+             .map(filepos => ({ filepos, number: Number(filepos) }))
+             .sort((a, b) => a.number - b.number)
+ 
++        // The guide may have cached chapter text before filepos anchors existed.
++        this.#textCache.clear()
+         this.metadata = this.mobi.getMetadata()
+         this.getCover = this.mobi.getCover.bind(this.mobi)
+         return this

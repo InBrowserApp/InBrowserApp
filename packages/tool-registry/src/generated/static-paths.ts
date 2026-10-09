@@ -10582,6 +10582,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mobi-reader",
+    language: "ar",
+  },
+  {
+    slug: "mobi-reader",
+    language: "de",
+  },
+  {
+    slug: "mobi-reader",
+    language: "en",
+  },
+  {
+    slug: "mobi-reader",
+    language: "es",
+  },
+  {
+    slug: "mobi-reader",
+    language: "fr",
+  },
+  {
+    slug: "mobi-reader",
+    language: "he",
+  },
+  {
+    slug: "mobi-reader",
+    language: "hi",
+  },
+  {
+    slug: "mobi-reader",
+    language: "id",
+  },
+  {
+    slug: "mobi-reader",
+    language: "it",
+  },
+  {
+    slug: "mobi-reader",
+    language: "ja",
+  },
+  {
+    slug: "mobi-reader",
+    language: "ko",
+  },
+  {
+    slug: "mobi-reader",
+    language: "ms",
+  },
+  {
+    slug: "mobi-reader",
+    language: "nl",
+  },
+  {
+    slug: "mobi-reader",
+    language: "no",
+  },
+  {
+    slug: "mobi-reader",
+    language: "pl",
+  },
+  {
+    slug: "mobi-reader",
+    language: "pt",
+  },
+  {
+    slug: "mobi-reader",
+    language: "ru",
+  },
+  {
+    slug: "mobi-reader",
+    language: "sv",
+  },
+  {
+    slug: "mobi-reader",
+    language: "th",
+  },
+  {
+    slug: "mobi-reader",
+    language: "tr",
+  },
+  {
+    slug: "mobi-reader",
+    language: "vi",
+  },
+  {
+    slug: "mobi-reader",
+    language: "zh-CN",
+  },
+  {
+    slug: "mobi-reader",
+    language: "zh-TW",
+  },
+  {
     slug: "morse-code-converter",
     language: "ar",
   },

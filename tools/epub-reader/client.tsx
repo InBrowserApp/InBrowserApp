@@ -14,7 +14,7 @@ import {
 } from "@workspace/ui/components/ui/empty"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { BookOpen } from "@workspace/ui/icons"
-import { BookReader } from "./book-reader"
+import { BookReader } from "@workspace/ui/components/tool/book-reader/book-reader"
 import { useBook } from "./use-book"
 import type { Messages } from "./types"
 

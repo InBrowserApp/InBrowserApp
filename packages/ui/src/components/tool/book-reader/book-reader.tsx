@@ -1,4 +1,4 @@
-import { useCallback, useId, useRef, useState } from "react"
+import { useCallback, useEffect, useId, useRef, useState } from "react"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import { DocumentNumberInput } from "@workspace/ui/components/tool/document-number-input"
 import {
@@ -14,16 +14,27 @@ import { cn } from "@workspace/ui/lib/utils"
 import { ChapterFrame } from "./chapter-frame"
 import { Contents } from "./contents"
 import { useChapter } from "./use-chapter"
-import type { Destination, Messages, OpenBook } from "./types"
+import type {
+  Destination,
+  BookReaderMessages,
+  ReadingBook,
+} from "@workspace/ui/lib/book-reader"
 
 export function BookReader({
   book,
   messages: m,
 }: {
-  book: OpenBook
-  messages: Messages
+  book: ReadingBook
+  messages: BookReaderMessages
 }) {
   const { parsed } = book
+  const navigation = useRef(0)
+  useEffect(
+    () => () => {
+      navigation.current++
+    },
+    [book]
+  )
   const contentsId = useId()
   const contentsButton = useRef<HTMLButtonElement>(null)
   const [destination, setDestination] = useState<Destination>(() => ({
@@ -41,6 +52,7 @@ export function BookReader({
   const chapter = useChapter(book, index)
   const go = useCallback(
     (next: Destination | null) => {
+      navigation.current++
       if (!next || next.index < 0 || next.index >= parsed.sections.length) {
         setBlockedLink(true)
         return
@@ -52,19 +64,22 @@ export function BookReader({
     [parsed]
   )
   const follow = useCallback(
-    (href: string, fromChapter = false) => {
+    async (href: string, fromChapter = false) => {
+      const request = ++navigation.current
       try {
         const resolved = fromChapter
-          ? parsed.sections[index]!.resolveHref(href)
+          ? (parsed.sections[index]!.resolveHref?.(href) ?? href)
           : href
         if (/^https?:\/\//i.test(resolved)) {
           window.open(resolved, "_blank", "noopener,noreferrer")
           return
         }
-        go(parsed.resolveHref(resolved))
+        const next = await parsed.resolveHref(resolved)
+        if (request !== navigation.current) return
+        go(next)
         if (!fromChapter) contentsButton.current?.focus()
       } catch {
-        setBlockedLink(true)
+        if (request === navigation.current) setBlockedLink(true)
       }
     },
     [parsed, index, go]

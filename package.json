@@ -41,7 +41,8 @@
   },
   "pnpm": {
     "patchedDependencies": {
-      "curlconverter@4.12.0": "patches/curlconverter@4.12.0.patch"
+      "curlconverter@4.12.0": "patches/curlconverter@4.12.0.patch",
+      "foliate-js@1.0.1": "patches/foliate-js@1.0.1.patch"
     }
   }
 }

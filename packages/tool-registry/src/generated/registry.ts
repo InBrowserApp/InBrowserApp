@@ -14368,6 +14368,141 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "mobi-reader",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "mobi",
+      "azw",
+      "azw3",
+      "prc",
+      "kindle",
+      "ebook",
+      "book",
+      "reader",
+      "viewer",
+      "offline",
+      "document",
+    ],
+    locales: {
+      ar: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "اقرأ كتب MOBI وAZW وAZW3 وPRC غير المشفّرة محليًا، مع جدول محتويات ونص قابل لتعديل حجمه ومنطقة للقراءة المركّزة.",
+      },
+      de: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "Lies unverschlüsselte MOBI-, AZW-, AZW3- und PRC-Bücher lokal mit Inhaltsverzeichnis, anpassbarer Schrift und Fokusmodus.",
+      },
+      en: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "Read unencrypted MOBI, AZW, AZW3, and PRC books locally, with contents, adjustable text, and a focused reading area.",
+      },
+      es: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "Lee libros MOBI, AZW, AZW3 y PRC sin cifrar de forma local, con índice, texto ajustable y un área de lectura sin distracciones.",
+      },
+      fr: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "Lisez localement des livres MOBI, AZW, AZW3 et PRC non chiffrés, avec un sommaire, un texte ajustable et une zone de lecture concentrée.",
+      },
+      he: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "קראו ספרי MOBI, AZW, AZW3 ו־PRC לא מוצפנים באופן מקומי, עם תוכן עניינים, טקסט הניתן להתאמה ואזור קריאה ממוקדת.",
+      },
+      hi: {
+        name: "MOBI और AZW3 रीडर",
+        description:
+          "बिना एन्क्रिप्शन वाली MOBI, AZW, AZW3 और PRC पुस्तकें स्थानीय रूप से पढ़ें। विषय-सूची, अक्षरों का आकार बदलने और एकाग्र पठन की सुविधाएँ पाएँ।",
+      },
+      id: {
+        name: "Pembaca MOBI & AZW3",
+        description:
+          "Baca buku MOBI, AZW, AZW3, dan PRC tanpa enkripsi secara lokal, dengan daftar isi, ukuran teks yang dapat diatur, dan area fokus membaca.",
+      },
+      it: {
+        name: "Lettore MOBI e AZW3",
+        description:
+          "Leggi libri MOBI, AZW, AZW3 e PRC non crittografati in locale, con sommario, testo regolabile e un’area di lettura immersiva.",
+      },
+      ja: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "暗号化されていない MOBI、AZW、AZW3、PRC の本を端末内で閲覧。目次、文字サイズ調整、集中読書に対応しています。",
+      },
+      ko: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "암호화되지 않은 MOBI, AZW, AZW3 및 PRC 책을 로컬에서 읽으세요. 목차, 글자 크기 조절, 집중 읽기 영역을 제공합니다.",
+      },
+      ms: {
+        name: "Pembaca MOBI & AZW3",
+        description:
+          "Baca buku MOBI, AZW, AZW3 dan PRC yang tidak disulitkan secara setempat, dengan isi kandungan, teks boleh laras dan ruang bacaan fokus.",
+      },
+      nl: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "Lees onversleutelde MOBI-, AZW-, AZW3- en PRC-boeken lokaal, met een inhoudsopgave, aanpasbare tekst en een leesgebied met focusmodus.",
+      },
+      no: {
+        name: "MOBI- og AZW3-leser",
+        description:
+          "Les ukrypterte MOBI-, AZW-, AZW3- og PRC-bøker lokalt, med innholdsfortegnelse, justerbar tekst og et fokusert leseområde.",
+      },
+      pl: {
+        name: "Czytnik MOBI i AZW3",
+        description:
+          "Czytaj lokalnie niezaszyfrowane książki MOBI, AZW, AZW3 i PRC ze spisem treści, regulacją rozmiaru tekstu i trybem skupienia.",
+      },
+      pt: {
+        name: "Leitor de MOBI e AZW3",
+        description:
+          "Leia livros MOBI, AZW, AZW3 e PRC não criptografados localmente, com sumário, texto ajustável e uma área de leitura sem distrações.",
+      },
+      ru: {
+        name: "Чтение MOBI и AZW3",
+        description:
+          "Читайте незашифрованные книги MOBI, AZW, AZW3 и PRC локально: оглавление, настройка текста и удобный режим чтения.",
+      },
+      sv: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "Läs okrypterade MOBI-, AZW-, AZW3- och PRC-böcker lokalt, med innehållsförteckning, justerbar text och en fokuserad läsyta.",
+      },
+      th: {
+        name: "เครื่องมืออ่าน MOBI และ AZW3",
+        description:
+          "อ่านหนังสือ MOBI, AZW, AZW3 และ PRC ที่ไม่เข้ารหัสในเบราว์เซอร์ พร้อมสารบัญ การปรับขนาดตัวอักษร และโหมดอ่านเต็มพื้นที่",
+      },
+      tr: {
+        name: "MOBI ve AZW3 Okuyucu",
+        description:
+          "Şifresiz MOBI, AZW, AZW3 ve PRC kitaplarını içindekiler, ayarlanabilir yazı boyutu ve odaklı okuma alanıyla yerel olarak okuyun.",
+      },
+      vi: {
+        name: "Trình đọc MOBI & AZW3",
+        description:
+          "Đọc sách MOBI, AZW, AZW3 và PRC không mã hóa ngay trên thiết bị, với mục lục, cỡ chữ tùy chỉnh và vùng đọc tập trung.",
+      },
+      "zh-CN": {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "在本地阅读未加密的 MOBI、AZW、AZW3 和 PRC 书籍，支持目录、字号调整和专注阅读。",
+      },
+      "zh-TW": {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "在本機閱讀未加密的 MOBI、AZW、AZW3 與 PRC 書籍，提供目錄、可調整的文字大小與專注閱讀區。",
+      },
+    },
+  },
+  {
     slug: "morse-code-converter",
     category: "misc",
     icon: "file-text",
@@ -42329,6 +42464,141 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "MIME 類型查詢",
         description: "搜尋和瀏覽 MIME 類型及其檔案副檔名",
+      },
+    },
+  },
+  "mobi-reader": {
+    slug: "mobi-reader",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "mobi",
+      "azw",
+      "azw3",
+      "prc",
+      "kindle",
+      "ebook",
+      "book",
+      "reader",
+      "viewer",
+      "offline",
+      "document",
+    ],
+    locales: {
+      ar: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "اقرأ كتب MOBI وAZW وAZW3 وPRC غير المشفّرة محليًا، مع جدول محتويات ونص قابل لتعديل حجمه ومنطقة للقراءة المركّزة.",
+      },
+      de: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "Lies unverschlüsselte MOBI-, AZW-, AZW3- und PRC-Bücher lokal mit Inhaltsverzeichnis, anpassbarer Schrift und Fokusmodus.",
+      },
+      en: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "Read unencrypted MOBI, AZW, AZW3, and PRC books locally, with contents, adjustable text, and a focused reading area.",
+      },
+      es: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "Lee libros MOBI, AZW, AZW3 y PRC sin cifrar de forma local, con índice, texto ajustable y un área de lectura sin distracciones.",
+      },
+      fr: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "Lisez localement des livres MOBI, AZW, AZW3 et PRC non chiffrés, avec un sommaire, un texte ajustable et une zone de lecture concentrée.",
+      },
+      he: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "קראו ספרי MOBI, AZW, AZW3 ו־PRC לא מוצפנים באופן מקומי, עם תוכן עניינים, טקסט הניתן להתאמה ואזור קריאה ממוקדת.",
+      },
+      hi: {
+        name: "MOBI और AZW3 रीडर",
+        description:
+          "बिना एन्क्रिप्शन वाली MOBI, AZW, AZW3 और PRC पुस्तकें स्थानीय रूप से पढ़ें। विषय-सूची, अक्षरों का आकार बदलने और एकाग्र पठन की सुविधाएँ पाएँ।",
+      },
+      id: {
+        name: "Pembaca MOBI & AZW3",
+        description:
+          "Baca buku MOBI, AZW, AZW3, dan PRC tanpa enkripsi secara lokal, dengan daftar isi, ukuran teks yang dapat diatur, dan area fokus membaca.",
+      },
+      it: {
+        name: "Lettore MOBI e AZW3",
+        description:
+          "Leggi libri MOBI, AZW, AZW3 e PRC non crittografati in locale, con sommario, testo regolabile e un’area di lettura immersiva.",
+      },
+      ja: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "暗号化されていない MOBI、AZW、AZW3、PRC の本を端末内で閲覧。目次、文字サイズ調整、集中読書に対応しています。",
+      },
+      ko: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "암호화되지 않은 MOBI, AZW, AZW3 및 PRC 책을 로컬에서 읽으세요. 목차, 글자 크기 조절, 집중 읽기 영역을 제공합니다.",
+      },
+      ms: {
+        name: "Pembaca MOBI & AZW3",
+        description:
+          "Baca buku MOBI, AZW, AZW3 dan PRC yang tidak disulitkan secara setempat, dengan isi kandungan, teks boleh laras dan ruang bacaan fokus.",
+      },
+      nl: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "Lees onversleutelde MOBI-, AZW-, AZW3- en PRC-boeken lokaal, met een inhoudsopgave, aanpasbare tekst en een leesgebied met focusmodus.",
+      },
+      no: {
+        name: "MOBI- og AZW3-leser",
+        description:
+          "Les ukrypterte MOBI-, AZW-, AZW3- og PRC-bøker lokalt, med innholdsfortegnelse, justerbar tekst og et fokusert leseområde.",
+      },
+      pl: {
+        name: "Czytnik MOBI i AZW3",
+        description:
+          "Czytaj lokalnie niezaszyfrowane książki MOBI, AZW, AZW3 i PRC ze spisem treści, regulacją rozmiaru tekstu i trybem skupienia.",
+      },
+      pt: {
+        name: "Leitor de MOBI e AZW3",
+        description:
+          "Leia livros MOBI, AZW, AZW3 e PRC não criptografados localmente, com sumário, texto ajustável e uma área de leitura sem distrações.",
+      },
+      ru: {
+        name: "Чтение MOBI и AZW3",
+        description:
+          "Читайте незашифрованные книги MOBI, AZW, AZW3 и PRC локально: оглавление, настройка текста и удобный режим чтения.",
+      },
+      sv: {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "Läs okrypterade MOBI-, AZW-, AZW3- och PRC-böcker lokalt, med innehållsförteckning, justerbar text och en fokuserad läsyta.",
+      },
+      th: {
+        name: "เครื่องมืออ่าน MOBI และ AZW3",
+        description:
+          "อ่านหนังสือ MOBI, AZW, AZW3 และ PRC ที่ไม่เข้ารหัสในเบราว์เซอร์ พร้อมสารบัญ การปรับขนาดตัวอักษร และโหมดอ่านเต็มพื้นที่",
+      },
+      tr: {
+        name: "MOBI ve AZW3 Okuyucu",
+        description:
+          "Şifresiz MOBI, AZW, AZW3 ve PRC kitaplarını içindekiler, ayarlanabilir yazı boyutu ve odaklı okuma alanıyla yerel olarak okuyun.",
+      },
+      vi: {
+        name: "Trình đọc MOBI & AZW3",
+        description:
+          "Đọc sách MOBI, AZW, AZW3 và PRC không mã hóa ngay trên thiết bị, với mục lục, cỡ chữ tùy chỉnh và vùng đọc tập trung.",
+      },
+      "zh-CN": {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "在本地阅读未加密的 MOBI、AZW、AZW3 和 PRC 书籍，支持目录、字号调整和专注阅读。",
+      },
+      "zh-TW": {
+        name: "MOBI & AZW3 Reader",
+        description:
+          "在本機閱讀未加密的 MOBI、AZW、AZW3 與 PRC 書籍，提供目錄、可調整的文字大小與專注閱讀區。",
       },
     },
   },

@@ -1,5 +1,5 @@
 import { Button } from "@workspace/ui/components/ui/button"
-import type { ContentsItem } from "./types"
+import type { ContentsItem } from "@workspace/ui/lib/book-reader"
 
 function flatten(items: ContentsItem[]) {
   const result: { item: ContentsItem; depth: number }[] = []
