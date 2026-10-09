@@ -1,4 +1,4 @@
 {
   "name": "PPTX Viewer",
-  "description": "Lesen Sie PowerPoint-PPTX-Präsentationen lokal mit Foliennavigation, Zoom, Textauswahl und Suche. Ohne Uploads."
+  "description": "Lesen Sie PowerPoint-Dateien in den Formaten PPTX, PPTM, POTX, POTM, PPSX und PPSM lokal mit Foliennavigation, Zoom, Textauswahl und Suche. Ohne Uploads oder Makroausführung."
 }

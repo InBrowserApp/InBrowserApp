@@ -39,7 +39,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
       tool="pptx-viewer"
       file={file}
       onFile={setFile}
-      accept=".pptx,application/vnd.openxmlformats-officedocument.presentationml.presentation"
+      accept=".pptx,.pptm,.potx,.potm,.ppsx,.ppsm,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.ms-powerpoint.presentation.macroEnabled.12,application/vnd.openxmlformats-officedocument.presentationml.template,application/vnd.ms-powerpoint.template.macroEnabled.12,application/vnd.openxmlformats-officedocument.presentationml.slideshow,application/vnd.ms-powerpoint.slideshow.macroEnabled.12"
       active={Boolean(file && !error)}
       messages={m}
     >

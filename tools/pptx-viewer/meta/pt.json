@@ -1,4 +1,4 @@
 {
   "name": "Visualizador de PPTX",
-  "description": "Leia apresentações PPTX do PowerPoint localmente com navegação entre slides, zoom, seleção de texto e pesquisa. Sem enviar arquivos."
+  "description": "Leia arquivos PPTX, PPTM, POTX, POTM, PPSX e PPSM do PowerPoint localmente com navegação entre slides, zoom, seleção de texto e pesquisa. Sem enviar arquivos nem executar macros."
 }

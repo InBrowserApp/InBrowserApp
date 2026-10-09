@@ -28,7 +28,10 @@ export function useReader(
     setError("")
     setLoading(false)
     if (!file || !container.current) return
-    if (!file.name.toLowerCase().endsWith(".pptx") || file.size === 0) {
+    if (
+      !/\.(pptx|pptm|potx|potm|ppsx|ppsm)$/i.test(file.name) ||
+      file.size === 0
+    ) {
       setError(messages.invalid)
       return
     }

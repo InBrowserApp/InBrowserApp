@@ -1,4 +1,4 @@
 {
   "name": "PPTX 檢視器",
-  "description": "在本機閱讀 PowerPoint PPTX 簡報，支援投影片導覽、縮放、文字選取與搜尋。無須上傳。"
+  "description": "在本機閱讀 PowerPoint PPTX、PPTM、POTX、POTM、PPSX 與 PPSM 檔案，支援投影片導覽、縮放、文字選取與搜尋。無須上傳，不會執行巨集。"
 }

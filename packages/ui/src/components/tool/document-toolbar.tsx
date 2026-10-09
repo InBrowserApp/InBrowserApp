@@ -100,31 +100,42 @@ export function DocumentToolbar({
   return (
     <div ref={root} className="shrink-0 border-b p-2">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <div className="flex items-center gap-1">
+        <div className="flex w-full items-center justify-between gap-2 sm:w-auto">
+          <div className="flex items-center gap-1">
+            <DocumentIconButton
+              label={m.previous}
+              disabled={state.page <= 1}
+              onClick={() => reader.page(state.page - 1)}
+            >
+              <ChevronLeft aria-hidden="true" className="rtl:rotate-180" />
+            </DocumentIconButton>
+            <DocumentNumberInput
+              aria-label={m.page}
+              className="w-20"
+              min={1}
+              max={state.total}
+              value={state.page}
+              onCommit={reader.page}
+            />
+            <span className="text-sm text-muted-foreground tabular-nums">
+              {m.pageCount.replace("{total}", String(state.total))}
+            </span>
+            <DocumentIconButton
+              label={m.next}
+              disabled={state.page >= state.total}
+              onClick={() => reader.page(state.page + 1)}
+            >
+              <ChevronRight aria-hidden="true" className="rtl:rotate-180" />
+            </DocumentIconButton>
+          </div>
           <DocumentIconButton
-            label={m.previous}
-            disabled={state.page <= 1}
-            onClick={() => reader.page(state.page - 1)}
+            ref={toggle}
+            label={m.search}
+            aria-expanded={open}
+            aria-controls={`${id}-search-panel`}
+            onClick={() => (open ? closeSearch() : setOpen(true))}
           >
-            <ChevronLeft aria-hidden="true" className="rtl:rotate-180" />
-          </DocumentIconButton>
-          <DocumentNumberInput
-            aria-label={m.page}
-            className="w-20"
-            min={1}
-            max={state.total}
-            value={state.page}
-            onCommit={reader.page}
-          />
-          <span className="text-sm text-muted-foreground tabular-nums">
-            {m.pageCount.replace("{total}", String(state.total))}
-          </span>
-          <DocumentIconButton
-            label={m.next}
-            disabled={state.page >= state.total}
-            onClick={() => reader.page(state.page + 1)}
-          >
-            <ChevronRight aria-hidden="true" className="rtl:rotate-180" />
+            <Search aria-hidden="true" />
           </DocumentIconButton>
         </div>
         <div className="flex flex-wrap items-center gap-1">
@@ -140,15 +151,6 @@ export function DocumentToolbar({
             <ArrowLeftRight aria-hidden="true" />
           </DocumentIconButton>
           {actions}
-          <DocumentIconButton
-            ref={toggle}
-            label={m.search}
-            aria-expanded={open}
-            aria-controls={`${id}-search-panel`}
-            onClick={() => (open ? closeSearch() : setOpen(true))}
-          >
-            <Search aria-hidden="true" />
-          </DocumentIconButton>
         </div>
       </div>
       {open ? (

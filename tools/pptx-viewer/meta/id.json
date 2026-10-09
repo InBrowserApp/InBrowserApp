@@ -1,4 +1,4 @@
 {
   "name": "Penampil PPTX",
-  "description": "Baca presentasi PowerPoint PPTX secara lokal dengan navigasi slide, zoom, pemilihan teks, dan pencarian. Tanpa unggahan."
+  "description": "Baca file PowerPoint PPTX, PPTM, POTX, POTM, PPSX, dan PPSM secara lokal dengan navigasi slide, zoom, pemilihan teks, dan pencarian. Tanpa unggahan atau eksekusi makro."
 }
