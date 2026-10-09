@@ -7178,6 +7178,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "html-viewer",
+    language: "ar",
+  },
+  {
+    slug: "html-viewer",
+    language: "de",
+  },
+  {
+    slug: "html-viewer",
+    language: "en",
+  },
+  {
+    slug: "html-viewer",
+    language: "es",
+  },
+  {
+    slug: "html-viewer",
+    language: "fr",
+  },
+  {
+    slug: "html-viewer",
+    language: "he",
+  },
+  {
+    slug: "html-viewer",
+    language: "hi",
+  },
+  {
+    slug: "html-viewer",
+    language: "id",
+  },
+  {
+    slug: "html-viewer",
+    language: "it",
+  },
+  {
+    slug: "html-viewer",
+    language: "ja",
+  },
+  {
+    slug: "html-viewer",
+    language: "ko",
+  },
+  {
+    slug: "html-viewer",
+    language: "ms",
+  },
+  {
+    slug: "html-viewer",
+    language: "nl",
+  },
+  {
+    slug: "html-viewer",
+    language: "no",
+  },
+  {
+    slug: "html-viewer",
+    language: "pl",
+  },
+  {
+    slug: "html-viewer",
+    language: "pt",
+  },
+  {
+    slug: "html-viewer",
+    language: "ru",
+  },
+  {
+    slug: "html-viewer",
+    language: "sv",
+  },
+  {
+    slug: "html-viewer",
+    language: "th",
+  },
+  {
+    slug: "html-viewer",
+    language: "tr",
+  },
+  {
+    slug: "html-viewer",
+    language: "vi",
+  },
+  {
+    slug: "html-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "html-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "http-status-code-lookup",
     language: "ar",
   },

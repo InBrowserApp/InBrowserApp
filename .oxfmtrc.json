@@ -18,6 +18,7 @@
     ".agents/",
     ".playwright-cli/",
     "coverage/",
+    "tools/html-viewer/fixtures/",
     "pnpm-lock.yaml",
     ".pnpm-store/",
     "CHANGELOG.md"
