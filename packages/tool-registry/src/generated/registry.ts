@@ -9883,6 +9883,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "html-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["html", "htm", "xhtml", "document", "report", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض مستندات HTML",
+        description:
+          "اقرأ مستندات HTML وHTM وXHTML المحلية مع مخطط للمستند وتكبير وقراءة مركزة. تبقى الملفات على جهازك.",
+      },
+      de: {
+        name: "HTML-Dokumentbetrachter",
+        description:
+          "Lies lokale HTML-, HTM- und XHTML-Dokumente mit Gliederung, Zoom und fokussiertem Lesemodus. Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "HTML Document Viewer",
+        description:
+          "Read local HTML, HTM, and XHTML documents with an outline, zoom, and focused reading. Files stay on your device.",
+      },
+      es: {
+        name: "Visor de documentos HTML",
+        description:
+          "Lee documentos locales HTML, HTM y XHTML con esquema, zoom y lectura sin distracciones. Los archivos permanecen en tu dispositivo.",
+      },
+      fr: {
+        name: "Visionneuse de documents HTML",
+        description:
+          "Lisez des documents HTML, HTM et XHTML locaux avec un plan, un zoom et un mode lecture concentrée. Les fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "מציג מסמכי HTML",
+        description:
+          "קריאת מסמכי HTML, HTM ו-XHTML מקומיים עם ראשי פרקים, שינוי קנה מידה וקריאה ממוקדת. הקבצים נשארים במכשיר שלך.",
+      },
+      hi: {
+        name: "HTML दस्तावेज़ व्यूअर",
+        description:
+          "रूपरेखा, ज़ूम और एकाग्र पठन के साथ स्थानीय HTML, HTM और XHTML दस्तावेज़ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Penampil Dokumen HTML",
+        description:
+          "Baca dokumen HTML, HTM, dan XHTML lokal dengan kerangka dokumen, zoom, dan mode baca fokus. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Visualizzatore di documenti HTML",
+        description:
+          "Leggi documenti HTML, HTM e XHTML locali con indice, zoom e lettura senza distrazioni. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "HTML文書ビューアー",
+        description:
+          "端末内のHTML、HTM、XHTML文書を、アウトライン、ズーム、集中閲覧機能で読めます。ファイルはお使いの端末内に留まります。",
+      },
+      ko: {
+        name: "HTML 문서 뷰어",
+        description:
+          "문서 개요, 확대/축소, 집중 읽기 기능으로 기기에 저장된 HTML, HTM, XHTML 문서를 읽으세요. 파일은 기기에만 보관됩니다.",
+      },
+      ms: {
+        name: "Pemapar Dokumen HTML",
+        description:
+          "Baca dokumen HTML, HTM dan XHTML setempat dengan rangka, zum dan bacaan fokus. Fail kekal pada peranti anda.",
+      },
+      nl: {
+        name: "HTML-documentviewer",
+        description:
+          "Lees lokale HTML-, HTM- en XHTML-documenten met een overzicht, zoomfunctie en geconcentreerde leesmodus. Bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "HTML-dokumentviser",
+        description:
+          "Les lokale HTML-, HTM- og XHTML-dokumenter med oversikt, zoom og fokusert lesing. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Przeglądarka dokumentów HTML",
+        description:
+          "Czytaj lokalne dokumenty HTML, HTM i XHTML z konspektem, powiększeniem i trybem skupienia. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Visualizador de documentos HTML",
+        description:
+          "Leia documentos locais HTML, HTM e XHTML com estrutura de títulos, zoom e leitura focada. Os arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Просмотр HTML-документов",
+        description:
+          "Читайте локальные документы HTML, HTM и XHTML с оглавлением, масштабированием и режимом чтения без отвлечений. Файлы остаются на вашем устройстве.",
+      },
+      sv: {
+        name: "HTML-dokumentvisare",
+        description:
+          "Läs lokala HTML-, HTM- och XHTML-dokument med disposition, zoom och fokuserad läsning. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมดูเอกสาร HTML",
+        description:
+          "อ่านเอกสาร HTML, HTM และ XHTML ในเครื่อง พร้อมเค้าโครง การซูม และโหมดอ่านแบบมีสมาธิ ไฟล์อยู่บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "HTML Belge Görüntüleyici",
+        description:
+          "Yerel HTML, HTM ve XHTML belgelerini ana hatlar, yakınlaştırma ve odaklı okuma özellikleriyle okuyun. Dosyalar cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem tài liệu HTML",
+        description:
+          "Đọc tài liệu HTML, HTM và XHTML trên thiết bị với mục lục, thu phóng và chế độ đọc tập trung. Tệp luôn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "HTML 文档查看器",
+        description:
+          "阅读本地 HTML、HTM 和 XHTML 文档，支持大纲导航、缩放和专注阅读。文件保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "HTML 文件檢視器",
+        description:
+          "閱讀本機 HTML、HTM 和 XHTML 文件，支援大綱、縮放和專注閱讀。檔案保留在你的裝置上。",
+      },
+    },
+  },
+  {
     slug: "http-status-code-lookup",
     category: "network",
     icon: "network",
@@ -38736,6 +38859,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "HTML 轉 Markdown 轉換器",
         description:
           "使用可調整的標題、清單與程式碼區塊樣式，將原始 HTML 轉成 Markdown。貼上標記或匯入檔案，然後複製或下載結果。",
+      },
+    },
+  },
+  "html-viewer": {
+    slug: "html-viewer",
+    category: "document",
+    icon: "file-text",
+    tags: ["html", "htm", "xhtml", "document", "report", "viewer"],
+    locales: {
+      ar: {
+        name: "عارض مستندات HTML",
+        description:
+          "اقرأ مستندات HTML وHTM وXHTML المحلية مع مخطط للمستند وتكبير وقراءة مركزة. تبقى الملفات على جهازك.",
+      },
+      de: {
+        name: "HTML-Dokumentbetrachter",
+        description:
+          "Lies lokale HTML-, HTM- und XHTML-Dokumente mit Gliederung, Zoom und fokussiertem Lesemodus. Dateien bleiben auf deinem Gerät.",
+      },
+      en: {
+        name: "HTML Document Viewer",
+        description:
+          "Read local HTML, HTM, and XHTML documents with an outline, zoom, and focused reading. Files stay on your device.",
+      },
+      es: {
+        name: "Visor de documentos HTML",
+        description:
+          "Lee documentos locales HTML, HTM y XHTML con esquema, zoom y lectura sin distracciones. Los archivos permanecen en tu dispositivo.",
+      },
+      fr: {
+        name: "Visionneuse de documents HTML",
+        description:
+          "Lisez des documents HTML, HTM et XHTML locaux avec un plan, un zoom et un mode lecture concentrée. Les fichiers restent sur votre appareil.",
+      },
+      he: {
+        name: "מציג מסמכי HTML",
+        description:
+          "קריאת מסמכי HTML, HTM ו-XHTML מקומיים עם ראשי פרקים, שינוי קנה מידה וקריאה ממוקדת. הקבצים נשארים במכשיר שלך.",
+      },
+      hi: {
+        name: "HTML दस्तावेज़ व्यूअर",
+        description:
+          "रूपरेखा, ज़ूम और एकाग्र पठन के साथ स्थानीय HTML, HTM और XHTML दस्तावेज़ पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
+      },
+      id: {
+        name: "Penampil Dokumen HTML",
+        description:
+          "Baca dokumen HTML, HTM, dan XHTML lokal dengan kerangka dokumen, zoom, dan mode baca fokus. File tetap di perangkat Anda.",
+      },
+      it: {
+        name: "Visualizzatore di documenti HTML",
+        description:
+          "Leggi documenti HTML, HTM e XHTML locali con indice, zoom e lettura senza distrazioni. I file restano sul tuo dispositivo.",
+      },
+      ja: {
+        name: "HTML文書ビューアー",
+        description:
+          "端末内のHTML、HTM、XHTML文書を、アウトライン、ズーム、集中閲覧機能で読めます。ファイルはお使いの端末内に留まります。",
+      },
+      ko: {
+        name: "HTML 문서 뷰어",
+        description:
+          "문서 개요, 확대/축소, 집중 읽기 기능으로 기기에 저장된 HTML, HTM, XHTML 문서를 읽으세요. 파일은 기기에만 보관됩니다.",
+      },
+      ms: {
+        name: "Pemapar Dokumen HTML",
+        description:
+          "Baca dokumen HTML, HTM dan XHTML setempat dengan rangka, zum dan bacaan fokus. Fail kekal pada peranti anda.",
+      },
+      nl: {
+        name: "HTML-documentviewer",
+        description:
+          "Lees lokale HTML-, HTM- en XHTML-documenten met een overzicht, zoomfunctie en geconcentreerde leesmodus. Bestanden blijven op je apparaat.",
+      },
+      no: {
+        name: "HTML-dokumentviser",
+        description:
+          "Les lokale HTML-, HTM- og XHTML-dokumenter med oversikt, zoom og fokusert lesing. Filene blir på enheten din.",
+      },
+      pl: {
+        name: "Przeglądarka dokumentów HTML",
+        description:
+          "Czytaj lokalne dokumenty HTML, HTM i XHTML z konspektem, powiększeniem i trybem skupienia. Pliki pozostają na Twoim urządzeniu.",
+      },
+      pt: {
+        name: "Visualizador de documentos HTML",
+        description:
+          "Leia documentos locais HTML, HTM e XHTML com estrutura de títulos, zoom e leitura focada. Os arquivos ficam no seu dispositivo.",
+      },
+      ru: {
+        name: "Просмотр HTML-документов",
+        description:
+          "Читайте локальные документы HTML, HTM и XHTML с оглавлением, масштабированием и режимом чтения без отвлечений. Файлы остаются на вашем устройстве.",
+      },
+      sv: {
+        name: "HTML-dokumentvisare",
+        description:
+          "Läs lokala HTML-, HTM- och XHTML-dokument med disposition, zoom och fokuserad läsning. Filerna stannar på din enhet.",
+      },
+      th: {
+        name: "โปรแกรมดูเอกสาร HTML",
+        description:
+          "อ่านเอกสาร HTML, HTM และ XHTML ในเครื่อง พร้อมเค้าโครง การซูม และโหมดอ่านแบบมีสมาธิ ไฟล์อยู่บนอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "HTML Belge Görüntüleyici",
+        description:
+          "Yerel HTML, HTM ve XHTML belgelerini ana hatlar, yakınlaştırma ve odaklı okuma özellikleriyle okuyun. Dosyalar cihazınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem tài liệu HTML",
+        description:
+          "Đọc tài liệu HTML, HTM và XHTML trên thiết bị với mục lục, thu phóng và chế độ đọc tập trung. Tệp luôn ở trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "HTML 文档查看器",
+        description:
+          "阅读本地 HTML、HTM 和 XHTML 文档，支持大纲导航、缩放和专注阅读。文件保留在您的设备上。",
+      },
+      "zh-TW": {
+        name: "HTML 文件檢視器",
+        description:
+          "閱讀本機 HTML、HTM 和 XHTML 文件，支援大綱、縮放和專注閱讀。檔案保留在你的裝置上。",
       },
     },
   },

@@ -1,0 +1,15 @@
+{
+  "name": "@workspace/web-document",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "dompurify": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

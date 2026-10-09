@@ -1,0 +1,59 @@
+<!doctype html>
+<head>
+  <title>Safe preview check</title>
+  <meta
+    http-equiv="refresh"
+    content="0;url=https://tracking.invalid/redirect"
+  />
+  <base href="https://tracking.invalid/" />
+  <link rel="stylesheet" href="https://tracking.invalid/style.css" />
+  <style>
+    @import "https://tracking.invalid/import.css";
+    p {
+      color: rgb(22, 75, 100);
+      background: url(https://tracking.invalid/bg);
+    }
+    @font-face {
+      font-family: evil;
+      src: url(https://tracking.invalid/font);
+    }
+    @media (min-width: 1px) {
+      p {
+        background-image: image-set("https://tracking.invalid/image" 1x);
+      }
+    }
+  </style>
+</head>
+<body onload="parent.__hacked = 1">
+  <h1>Safe preview check</h1>
+  <script>
+    parent.__hacked = 1
+    fetch("https://tracking.invalid/fetch")
+  </script>
+  <form action="https://tracking.invalid/form">
+    <p>Form text remains readable.</p>
+    <input autofocus /><button>Submit</button>
+  </form>
+  <iframe
+    src="https://tracking.invalid/frame"
+    srcdoc="&lt;script&gt;parent.__hacked=1&lt;/script&gt;"
+  ></iframe
+  ><object data="https://tracking.invalid/object"></object
+  ><svg onload="parent.__hacked = 1"></svg
+  ><img
+    src="https://tracking.invalid/image"
+    srcset="https://tracking.invalid/2x 2x"
+    onerror="parent.__hacked = 1"
+  /><img src="river-report_files/image.png" />
+  <p style="background: u\72l(https://tracking.invalid/escaped)">
+    Visible safe text
+  </p>
+  <a href="javascript:alert(1)">Unsafe link</a
+  ><a href="data:text/html,evil">Data link</a
+  ><a
+    href="https://example.org/report"
+    ping="https://tracking.invalid/ping"
+    target="_top"
+    >External reference</a
+  ><a data-web-link="https://tracking.invalid/forged">Forged</a>
+</body>
