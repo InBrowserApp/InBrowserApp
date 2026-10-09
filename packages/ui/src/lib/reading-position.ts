@@ -1,4 +1,4 @@
-/** Keep a character on the visible line stable when a chapter reflows. */
+/** Keep a character on the visible line stable when a document reflows. */
 export function readingPosition(doc: Document) {
   const view = doc.defaultView!
   const body = doc.body.getBoundingClientRect()
@@ -27,7 +27,7 @@ export function readingPosition(doc: Document) {
       return { target: range, left: bounds.left, top: bounds.top }
   }
   const target = Array.from(
-    doc.body.querySelectorAll("p,h1,h2,h3,h4,li,table,img")
+    doc.body.querySelectorAll("p,pre,h1,h2,h3,h4,li,table,img")
   ).find((element) => element.getBoundingClientRect().bottom > 0)
   if (!target) return null
   const bounds = target.getBoundingClientRect()

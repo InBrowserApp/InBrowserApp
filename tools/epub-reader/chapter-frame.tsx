@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useState } from "react"
 import type { Destination } from "./types"
-import { readingPosition } from "./reading-position"
+import { readingPosition } from "@workspace/ui/lib/reading-position"
 
 export function ChapterFrame({
   html,

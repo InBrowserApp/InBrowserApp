@@ -104,9 +104,16 @@ test.each(["no API", "element caret", "above viewport", "below viewport"])(
   }
 )
 
-test("handles chapters with no available text or visible fallback element", () => {
+test("handles documents with no available text or visible fallback element", () => {
   document.body.innerHTML = "<div></div>"
   expect(readingPosition(document)).toBeNull()
+})
+
+test("falls back to the visible preformatted text when caret APIs are absent", () => {
+  document.body.innerHTML = "<pre>A plain-text message</pre>"
+  const target = document.querySelector("pre")!
+  vi.spyOn(target, "getBoundingClientRect").mockReturnValue(bounds(8))
+  expect(readingPosition(document)).toEqual({ target, left: 20, top: 8 })
 })
 
 test("keeps an empty text caret valid without requesting an out-of-range offset", () => {

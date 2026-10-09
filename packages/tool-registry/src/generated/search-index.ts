@@ -7746,6 +7746,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "email-viewer",
+    category: "document",
+    icon: "mail",
+    tags: [
+      "email",
+      "eml",
+      "emlx",
+      "msg",
+      "outlook",
+      "mail",
+      "viewer",
+      "reader",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "Email Viewer",
+        description:
+          "اقرأ ملفات البريد الإلكتروني EML وEMLX وMSG محليًا، بما فيها ترويسات الرسائل وHTML أو النص العادي والصور المضمّنة وتفاصيل المرفقات.",
+      },
+      de: {
+        name: "Email Viewer",
+        description:
+          "Lies EML-, EMLX- und MSG-E-Mails lokal, einschließlich Kopfzeilen, HTML oder reinem Text, eingebetteten Bildern und Anhangdetails.",
+      },
+      en: {
+        name: "Email Viewer",
+        description:
+          "Read EML, EMLX, and MSG email files locally, including message headers, HTML or plain text, inline images, and attachment details.",
+      },
+      es: {
+        name: "Email Viewer",
+        description:
+          "Lee archivos de correo EML, EMLX y MSG localmente, incluidos encabezados, HTML o texto sin formato, imágenes insertadas y detalles de los adjuntos.",
+      },
+      fr: {
+        name: "Email Viewer",
+        description:
+          "Lisez localement des e-mails EML, EMLX et MSG, avec leurs en-têtes, leur contenu HTML ou texte brut, leurs images intégrées et les détails des pièces jointes.",
+      },
+      he: {
+        name: "Email Viewer",
+        description:
+          "קריאת קובצי דוא״ל EML, EMLX ו־MSG באופן מקומי, כולל כותרות ההודעה, HTML או טקסט פשוט, תמונות משובצות ופרטי קבצים מצורפים.",
+      },
+      hi: {
+        name: "Email Viewer",
+        description:
+          "EML, EMLX और MSG ईमेल फ़ाइलें अपने डिवाइस पर पढ़ें। संदेश के हेडर, HTML या सादा टेक्स्ट, संदेश में शामिल चित्र और अटैचमेंट का विवरण देखें।",
+      },
+      id: {
+        name: "Email Viewer",
+        description:
+          "Baca file email EML, EMLX, dan MSG secara lokal, termasuk header pesan, HTML atau teks biasa, gambar dalam pesan, dan detail lampiran.",
+      },
+      it: {
+        name: "Email Viewer",
+        description:
+          "Leggi file email EML, EMLX e MSG in locale, con intestazioni, HTML o testo semplice, immagini incorporate e dettagli degli allegati.",
+      },
+      ja: {
+        name: "Email Viewer",
+        description:
+          "EML、EMLX、MSG のメールファイルを端末内で閲覧。ヘッダー、HTML やテキストの本文、埋め込み画像、添付ファイルの詳細を確認できます。",
+      },
+      ko: {
+        name: "Email Viewer",
+        description:
+          "EML, EMLX 및 MSG 이메일 파일을 로컬에서 읽고 메시지 헤더, HTML 또는 일반 텍스트, 본문 내 이미지, 첨부 파일 정보를 확인하세요.",
+      },
+      ms: {
+        name: "Email Viewer",
+        description:
+          "Baca fail e-mel EML, EMLX dan MSG secara setempat, termasuk pengepala mesej, HTML atau teks biasa, imej sebaris dan butiran lampiran.",
+      },
+      nl: {
+        name: "Email Viewer",
+        description:
+          "Lees EML-, EMLX- en MSG-e-mailbestanden lokaal, inclusief berichtheaders, HTML of platte tekst, ingesloten afbeeldingen en bijlagegegevens.",
+      },
+      no: {
+        name: "Email Viewer",
+        description:
+          "Les EML-, EMLX- og MSG-e-postfiler lokalt, med meldingshoder, HTML eller ren tekst, innebygde bilder og vedleggsdetaljer.",
+      },
+      pl: {
+        name: "Email Viewer",
+        description:
+          "Czytaj lokalnie pliki e-mail EML, EMLX i MSG: nagłówki wiadomości, HTML lub zwykły tekst, obrazy w treści i szczegóły załączników.",
+      },
+      pt: {
+        name: "Email Viewer",
+        description:
+          "Leia arquivos de e-mail EML, EMLX e MSG localmente, incluindo cabeçalhos, HTML ou texto simples, imagens incorporadas e detalhes dos anexos.",
+      },
+      ru: {
+        name: "Email Viewer",
+        description:
+          "Читайте файлы писем EML, EMLX и MSG локально: заголовки, HTML или обычный текст, встроенные изображения и сведения о вложениях.",
+      },
+      sv: {
+        name: "Email Viewer",
+        description:
+          "Läs EML-, EMLX- och MSG-filer lokalt, inklusive meddelandehuvuden, HTML eller oformaterad text, inbäddade bilder och information om bilagor.",
+      },
+      th: {
+        name: "Email Viewer",
+        description:
+          "อ่านไฟล์อีเมล EML, EMLX และ MSG ในอุปกรณ์ของคุณ พร้อมส่วนหัวข้อความ HTML หรือข้อความธรรมดา ภาพในข้อความ และรายละเอียดไฟล์แนบ",
+      },
+      tr: {
+        name: "Email Viewer",
+        description:
+          "EML, EMLX ve MSG e-posta dosyalarını üstbilgiler, HTML veya düz metin, satır içi görseller ve ek ayrıntılarıyla birlikte yerel olarak okuyun.",
+      },
+      vi: {
+        name: "Email Viewer",
+        description:
+          "Đọc cục bộ các tệp email EML, EMLX và MSG, gồm các trường tiêu đề thư, nội dung HTML hoặc văn bản thuần, ảnh nội tuyến và thông tin tệp đính kèm.",
+      },
+      "zh-CN": {
+        name: "Email Viewer",
+        description:
+          "在本地读取 EML、EMLX 和 MSG 邮件文件，查看邮件头、HTML 或纯文本正文、内嵌图片及附件详情。",
+      },
+      "zh-TW": {
+        name: "Email Viewer",
+        description:
+          "在本機閱讀 EML、EMLX 與 MSG 郵件檔案，檢視郵件標頭、HTML 或純文字內容、內嵌圖片及附件詳細資訊。",
+      },
+    },
+  },
+  {
     slug: "epub-reader",
     category: "document",
     icon: "book-open",

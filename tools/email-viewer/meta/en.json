@@ -1,0 +1,4 @@
+{
+  "name": "Email Viewer",
+  "description": "Read EML, EMLX, and MSG email files locally, including message headers, HTML or plain text, inline images, and attachment details."
+}

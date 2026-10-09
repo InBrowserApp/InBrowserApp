@@ -6,6 +6,9 @@ import mdx from "@astrojs/mdx"
 import react from "@astrojs/react"
 import sitemap from "@astrojs/sitemap"
 import { fileURLToPath } from "node:url"
+import { createRequire } from "node:module"
+
+const require = createRequire(import.meta.url)
 
 import {
   DEFAULT_SITE_LANGUAGE,
@@ -29,6 +32,9 @@ export default defineConfig({
     optimizeDeps: { exclude: ["@silurus/ooxml"] },
     resolve: {
       alias: {
+        // MSG ANSI decoding uses iconv-lite through these browser packages.
+        buffer: require.resolve("buffer/index.js"),
+        string_decoder: require.resolve("string_decoder/lib/string_decoder.js"),
         "node:perf_hooks": fileURLToPath(
           new URL("./src/shims/perf-hooks.ts", import.meta.url)
         ),

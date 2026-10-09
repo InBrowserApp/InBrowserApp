@@ -2,7 +2,8 @@
   "$schema": "./node_modules/knip/schema.json",
   "workspaces": {
     "apps/web": {
-      "astro": true
+      "astro": true,
+      "ignoreDependencies": ["buffer", "string_decoder"]
     },
     "packages/*": {
       "astro": false
