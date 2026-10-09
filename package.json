@@ -44,7 +44,8 @@
       "curlconverter@4.12.0": "patches/curlconverter@4.12.0.patch",
       "foliate-js@1.0.1": "patches/foliate-js@1.0.1.patch",
       "caj2pdf-rust@0.6.1": "patches/caj2pdf-rust@0.6.1.patch",
-      "rtf-viewer@1.3.1": "patches/rtf-viewer@1.3.1.patch"
+      "rtf-viewer@1.3.1": "patches/rtf-viewer@1.3.1.patch",
+      "@file-viewer/doc@3.1.2": "patches/@file-viewer__doc@3.1.2.patch"
     }
   }
 }

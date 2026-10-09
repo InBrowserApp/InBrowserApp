@@ -65,6 +65,7 @@
     "@tool/data-uri-to-file-converter": "workspace:*",
     "@tool/device-information": "workspace:*",
     "@tool/dns-lookup": "workspace:*",
+    "@tool/doc-viewer": "workspace:*",
     "@tool/docker-run-to-compose-converter": "workspace:*",
     "@tool/docx-viewer": "workspace:*",
     "@tool/duration-calculator": "workspace:*",

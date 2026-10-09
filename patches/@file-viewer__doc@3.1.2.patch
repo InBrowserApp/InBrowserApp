@@ -1,0 +1,48 @@
+diff --git a/dist/core/cfb.js b/dist/core/cfb.js
+index 7ced727f10e8b7e9da567faf04dade3086858dc9..ead86cb9440d5be0a2acb2c39184364020d08cbc 100644
+--- a/dist/core/cfb.js
++++ b/dist/core/cfb.js
+@@ -5,7 +5,6 @@ const FREESECT = 0xffffffff;
+ const ENDOFCHAIN = 0xfffffffe;
+ const FATSECT = 0xfffffffd;
+ const DIFSECT = 0xfffffffc;
+-const MAX_CHAIN_SECTORS = 1 << 20;
+ const MINI_STREAM_CUTOFF = 4096;
+ function isSpecialSectorId(sid) {
+     return sid === FREESECT || sid === ENDOFCHAIN || sid === FATSECT || sid === DIFSECT;
+@@ -22,7 +21,7 @@ function readSectorAbsolute(bytes, sectorSize, sid) {
+     sector.set(bytes.subarray(start));
+     return sector;
+ }
+-function collectChain(startSid, nextSectorFn, limit = MAX_CHAIN_SECTORS) {
++function collectChain(startSid, nextSectorFn, limit) {
+     const chain = [];
+     const seen = new Set();
+     let sid = startSid;
+@@ -35,7 +34,7 @@ function collectChain(startSid, nextSectorFn, limit = MAX_CHAIN_SECTORS) {
+         sid = nextSectorFn(sid);
+         guard += 1;
+         if (guard > limit)
+-            throw new Error('Sector chain exceeds safe limit');
++            throw new Error('Sector chain exceeds allocation table');
+     }
+     return chain;
+ }
+@@ -43,7 +42,7 @@ function readChainBytes(bytes, sectorSize, startSid, fat, expectedSize = null) {
+     if (startSid === ENDOFCHAIN || startSid === FREESECT || startSid < 0) {
+         return new Uint8Array(0);
+     }
+-    const chain = collectChain(startSid, (sid) => fat[sid] ?? ENDOFCHAIN);
++    const chain = collectChain(startSid, (sid) => fat[sid] ?? ENDOFCHAIN, fat.length);
+     const out = new Uint8Array(chain.length * sectorSize);
+     let offset = 0;
+     for (const sid of chain) {
+@@ -212,7 +211,7 @@ export function parseCFB(input, _options = {}) {
+     function readMiniStream(entry) {
+         if (entry.startSector < 0)
+             return new Uint8Array(0);
+-        const chain = collectChain(entry.startSector, (sid) => miniFat[sid] ?? ENDOFCHAIN);
++        const chain = collectChain(entry.startSector, (sid) => miniFat[sid] ?? ENDOFCHAIN, miniFat.length);
+         const out = new Uint8Array(chain.length * miniSectorSize);
+         let offset = 0;
+         for (const miniSid of chain) {
