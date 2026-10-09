@@ -1,11 +1,11 @@
 ## Perkara Yang Dilakukan Alat Ini
 
-Markdown Previewer merender Markdown secara setempat dalam pelayar anda supaya anda boleh menyemak tajuk, senarai, jadual, blok kod, pautan dan HTML sebaris sebelum diterbitkan. Penulisan semula ini merapatkan proses penyuntingan dan semakan, menambah rangka langsung serta membolehkan eksport salinan HTML kendiri untuk perkongsian atau cetakan tanpa menghantar draf ke pelayan.
+Markdown Previewer membuka dokumen `.md`, `.markdown`, `.mdown` dan `.txt` secara setempat dalam pelayar anda. Mod baca menyembunyikan editor sumber, manakala mod fokus menyediakan seluruh skrin untuk dokumen. Laraskan saiz teks, lebar bacaan serta tema bersih atau slate tanpa kehilangan kedudukan bacaan anda. Rangka yang boleh dikuncupkan membolehkan navigasi antara tajuk Markdown, manakala jadual lebar dan blok kod boleh ditatal secara berasingan.
 
 ## Bila Menggunakannya
 
-Gunakannya untuk README, nota keluaran, dokumentasi dalaman, runbook, draf blog dan apa-apa Markdown yang memerlukan semakan persembahan pantas. Togol sanitasi membantu membandingkan pratonton pelayar yang lebih selamat dengan HTML mentah, manakala tema bersih dan slate memudahkan semakan dalam konteks bacaan terang dan gelap.
+Gunakannya untuk README, nota keluaran, runbook dan dokumen Markdown lain. Markdown standard serta jadual, senarai tugasan, teks bergaris potong dan kod berpagar gaya GitHub disokong. Kod tiada penyerlahan sintaks; matematik, rajah, nota kaki dan sambungan dialek lain tidak dirender. HTML sebaris disanitasi, dan skrip, gaya, borang serta benaman tidak boleh dijalankan. Imej dan fon jauh tidak diambil. Imej relatif memerlukan fail yang tidak disediakan; teks alternatif kekal kelihatan apabila tersedia. Imej raster terbenam berfungsi, tetapi imej SVG dan pautan ke dokumen setempat lain tidak dimuatkan.
 
 ## Tip Aliran Kerja
 
-Sunting dalam panel sumber sementara pratonton langsung mengikuti hasil render, kemudian gunakan rangka untuk menyemak rentak, jarak dan hierarki tajuk. Import fail `.md` sedia ada, muatkan dokumen contoh untuk menguji jadual dan blok kod berpagar, dan eksport HTML hanya selepas rangka serta tajuk akhir kelihatan betul.
+Buka atau lepaskan fail untuk mula membaca, kemudian pilih Sunting untuk memeriksa atau mengubah sumbernya. Kandungan fail setempat dan suntingan kekal dalam memori dan dibuang apabila anda menutup atau memuatkan semula halaman; fail asal anda tidak pernah diubah. Draf penyuntingan yang berasingan disimpan dalam pelayar ini dan dipulihkan apabila anda menutup fail setempat. Gunakan Kosongkan teks apabila tiada fail dibuka untuk memadamkan draf yang disimpan itu. Salin HTML, Muat turun HTML dan Cetak mengekalkan kandungan yang dirender serta tema yang dipilih. Eksport menggunakan sekatan sumber selamat yang sama seperti pratonton; saiz teks dan lebar pembaca tidak disertakan.

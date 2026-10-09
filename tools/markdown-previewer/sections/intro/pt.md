@@ -1,11 +1,11 @@
 ## O Que Esta Ferramenta Faz
 
-Markdown Previewer renderiza Markdown localmente no seu navegador para que você possa inspecionar títulos, listas, tabelas, blocos de código, links e HTML inline antes de publicar. Esta reescrita aproxima edição e revisão, adiciona um sumário ao vivo e permite exportar uma cópia HTML independente para compartilhar ou imprimir sem enviar rascunhos a um servidor.
+Markdown Previewer abre documentos `.md`, `.markdown`, `.mdown` e `.txt` localmente no seu navegador. O modo de leitura oculta o editor de código-fonte, enquanto o modo de foco dá a tela ao documento. Ajuste o tamanho do texto, a largura de leitura e o tema limpo ou ardósia sem perder seu lugar. O sumário recolhível navega pelos títulos Markdown, e tabelas largas e blocos de código têm rolagem independente.
 
 ## Quando Usar
 
-Use para READMEs, notas de versão, documentação interna, runbooks, rascunhos de blog e qualquer Markdown que precise de uma checagem rápida de apresentação. O alternador de sanitização ajuda a comparar uma prévia mais segura no navegador com HTML bruto, enquanto os temas limpo e ardósia facilitam revisar contextos de leitura claros e escuros.
+Use para READMEs, notas de versão, runbooks e outros documentos Markdown. Markdown padrão e tabelas, listas de tarefas, texto tachado e blocos de código cercados no estilo GitHub são compatíveis. O código não tem realce de sintaxe; fórmulas matemáticas, diagramas, notas de rodapé e outras extensões de dialetos não são renderizados. O HTML inline é sanitizado, e scripts, estilos, formulários e conteúdo incorporado não podem ser executados. Imagens e fontes remotas não são buscadas. Imagens relativas precisam de arquivos que não foram fornecidos; o texto alternativo permanece visível quando disponível. Imagens raster incorporadas funcionam, mas imagens SVG e links para outros documentos locais não são carregados.
 
 ## Dicas De Fluxo De Trabalho
 
-Edite no painel de fonte enquanto a prévia ao vivo acompanha o resultado renderizado, e use o sumário para revisar ritmo, espaçamento e hierarquia de títulos. Importe arquivos `.md` existentes, carregue o documento de exemplo para testar tabelas e blocos de código cercados, e exporte HTML apenas quando o sumário e os títulos finais estiverem corretos.
+Abra ou solte um arquivo para começar a ler e escolha Editar para inspecionar ou alterar seu código-fonte. O conteúdo do arquivo local e suas edições ficam na memória e são descartados quando você fecha ou recarrega a página; seu arquivo original nunca é alterado. O rascunho de edição separado é salvo neste navegador e restaurado quando você fecha um arquivo local. Use Limpar texto sem nenhum arquivo aberto para remover esse rascunho salvo. Copiar HTML, Baixar HTML e Imprimir mantêm o conteúdo renderizado e o tema selecionado. As exportações usam as mesmas restrições de segurança para recursos da prévia; o tamanho do texto e a largura de leitura não são incluídos.

@@ -1,4 +1,4 @@
 {
   "name": "Markdown 预览器",
-  "description": "实时预览 Markdown，支持同步目录、HTML 净化切换、导出独立 HTML，以及简洁/深色预览主题。"
+  "description": "阅读本地 Markdown，支持可折叠目录、文字大小与宽度调节和专注模式。在浏览器中编辑已保存的草稿、安全预览，并导出或打印 HTML。"
 }

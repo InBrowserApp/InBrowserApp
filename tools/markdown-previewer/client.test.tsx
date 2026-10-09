@@ -1,8 +1,4 @@
 // @vitest-environment jsdom
-// DOMPurify (3.4.8+) walks the DOM with createNodeIterator, which happy-dom
-// does not implement faithfully, so sanitize() mangles its output there
-// (keeps unsafe attributes, drops safe tags). This client renders sanitized
-// HTML, so the test runs under jsdom for parity with real browsers. See #965.
 import {
   cleanup,
   fireEvent,
@@ -11,384 +7,254 @@ import {
   waitFor,
 } from "@testing-library/react"
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
-
 import MarkdownPreviewerClient from "./client"
-import { STORAGE_KEYS } from "./constants"
+import { STORAGE_KEYS, DEFAULT_MARKDOWN } from "./constants"
+import { buildMarkdownPreview } from "./core/markdown-preview"
+import catalog from "./messages/en.json"
+import meta from "./meta/en.json"
 
-const messages = {
-  meta: {
-    name: "Markdown Previewer",
-    description:
-      "Preview Markdown with a live outline, presentation themes, and export actions.",
-  },
-  editorTitle: "Markdown source",
-  editorDescription:
-    "Write, paste, or import Markdown. The preview updates as you type.",
-  sourceLabel: "Markdown",
-  sourcePlaceholder: "Write Markdown here…",
-  importLabel: "Import file",
-  loadSampleLabel: "Load sample",
-  loadSampleConfirmMessage: "Replace draft?",
-  clearLabel: "Clear",
-  clearConfirmMessage: "Clear draft?",
-  previewTitle: "Live preview",
-  previewDescription:
-    "Review the rendered document, tune the presentation, and export HTML.",
-  themeLabel: "Theme",
-  cleanThemeLabel: "Clean",
-  slateThemeLabel: "Slate",
-  sanitizeHtmlLabel: "Sanitize HTML",
-  showOutlineLabel: "Show outline",
-  wordsLabel: "Words",
-  headingsLabel: "Headings",
-  linksLabel: "Links",
-  imagesLabel: "Images",
-  readTimeLabel: "Read time",
-  outlineTitle: "Outline",
-  outlineDescription: "Jump between headings in the current document.",
-  outlineEmptyTitle: "No headings yet",
-  outlineEmptyDescription: "Add Markdown headings to build an outline.",
-  previewEmptyTitle: "Nothing to preview yet",
-  previewEmptyDescription:
-    "Start typing in the editor or import a Markdown file to render a preview.",
-  copyHtmlLabel: "Copy HTML",
-  copiedLabel: "Copied",
-  downloadHtmlLabel: "Download HTML",
-  printLabel: "Print",
-  untitledHeadingLabel: "Untitled",
-} as const
-
-beforeEach(() => {
-  vi.stubGlobal(
-    "URL",
-    Object.assign({}, globalThis.URL, {
-      createObjectURL: vi.fn(() => "blob:markdown-preview"),
-      revokeObjectURL: vi.fn(),
+const m = { ...catalog, meta }
+class ParserWorker {
+  static fail = false
+  onmessage: ((event: { data: object }) => void) | null = null
+  onerror: (() => void) | null = null
+  terminated = false
+  postMessage(data: { source: string; untitled: string; renderHtml: boolean }) {
+    queueMicrotask(() => {
+      if (this.terminated) return
+      this.onmessage?.({
+        data: ParserWorker.fail
+          ? { error: true }
+          : {
+              preview: buildMarkdownPreview(
+                data.source,
+                data.untitled,
+                data.renderHtml
+              ),
+            },
+      })
     })
-  )
+  }
+  terminate() {
+    this.terminated = true
+  }
+}
+beforeEach(() => {
+  ParserWorker.fail = false
+  vi.stubGlobal("Worker", ParserWorker)
   vi.stubGlobal(
-    "confirm",
-    vi.fn(() => true)
+    "ResizeObserver",
+    class {
+      observe() {}
+      disconnect() {}
+    }
   )
-
-  window.localStorage.clear()
+  URL.createObjectURL = vi.fn(() => "blob:markdown-preview")
+  URL.revokeObjectURL = vi.fn()
+  vi.spyOn(window, "confirm").mockReturnValue(true)
+  localStorage.clear()
 })
-
 afterEach(() => {
   cleanup()
   vi.restoreAllMocks()
   vi.unstubAllGlobals()
 })
-
-function getMarkdownInput() {
-  return screen.getByRole("textbox", {
-    name: messages.sourceLabel,
-  }) as HTMLTextAreaElement
+const editor = () =>
+  document.querySelector<HTMLTextAreaElement>(
+    'textarea[name="markdown-source"]'
+  )!
+const frame = () => screen.getByTitle(m.previewTitle) as HTMLIFrameElement
+const mount = () =>
+  render(<MarkdownPreviewerClient messages={m} language="en" direction="ltr" />)
+async function ready(text: string) {
+  await waitFor(() => expect(frame().srcdoc).toContain(text))
+}
+function select(text: string, name = "private.md") {
+  fireEvent.change(screen.getByLabelText(m.importLabel), {
+    target: { files: [new File([text], name, { type: "text/markdown" })] },
+  })
 }
 
-function makeRect(top: number, height: number): DOMRect {
-  return {
-    bottom: top + height,
-    height,
-    left: 0,
-    right: 640,
-    top,
-    width: 640,
-    x: 0,
-    y: top,
-    toJSON: () => ({}),
-  } as DOMRect
-}
-
-describe("MarkdownPreviewerClient", () => {
-  test("renders the default sample, preview metrics, and a download link", () => {
-    render(
-      <MarkdownPreviewerClient
-        messages={messages}
-        language="en"
-        direction="ltr"
-      />
-    )
-
-    expect(screen.getByText(messages.editorDescription)).toBeTruthy()
-    expect(getMarkdownInput().value).toContain("# Product launch checklist")
-    expect(screen.getByText(messages.previewDescription)).toBeTruthy()
-    expect(screen.getByText(messages.outlineTitle)).toBeTruthy()
+describe("Markdown reading and editing", () => {
+  test("retains the sample, live source editing, theme, export, and collapsible outline", async () => {
+    mount()
+    await ready("Product launch checklist")
+    expect(editor().value).toBe(DEFAULT_MARKDOWN)
+    fireEvent.change(editor(), {
+      target: { value: "# Draft\n\nPasted **text**." },
+    })
+    await ready("<strong>text</strong>")
+    expect(localStorage.getItem(STORAGE_KEYS.markdown)).toContain("# Draft")
     expect(
-      screen.getByRole("link", { name: messages.downloadHtmlLabel })
+      await screen.findByRole("link", { name: m.downloadHtmlLabel })
     ).toHaveProperty("href", "blob:markdown-preview")
-    expect(URL.createObjectURL).toHaveBeenCalled()
-  })
-
-  test("toggles theme and outline without hiding the editor", async () => {
-    render(
-      <MarkdownPreviewerClient
-        messages={messages}
-        language="en"
-        direction="ltr"
-      />
-    )
-
+    fireEvent.click(screen.getByRole("radio", { name: m.slateThemeLabel }))
+    expect(localStorage.getItem(STORAGE_KEYS.previewTheme)).toBe("slate")
+    fireEvent.click(screen.getByLabelText(m.showOutlineLabel))
     expect(
-      screen.getAllByRole("radio").map((radio) => radio.textContent)
-    ).toEqual([messages.cleanThemeLabel, messages.slateThemeLabel])
-
-    fireEvent.click(
-      screen.getByRole("radio", { name: messages.slateThemeLabel })
-    )
-    fireEvent.click(screen.getByLabelText(messages.showOutlineLabel))
-
-    await waitFor(() => {
-      expect(screen.queryByText(messages.outlineTitle)).toBeNull()
-    })
-
-    expect(getMarkdownInput()).toBeTruthy()
-  })
-
-  test("scrolls the preview region instead of the page from outline clicks", () => {
-    const scrollToDescriptor = Object.getOwnPropertyDescriptor(
-      HTMLElement.prototype,
-      "scrollTo"
-    )
-    const previewScrollTo = vi.fn()
-    const pageScrollTo = vi
-      .spyOn(window, "scrollTo")
-      .mockImplementation(() => undefined)
-
-    Object.defineProperty(HTMLElement.prototype, "scrollTo", {
-      configurable: true,
-      value: previewScrollTo,
-    })
-
-    try {
-      render(
-        <MarkdownPreviewerClient
-          messages={messages}
-          language="en"
-          direction="ltr"
-        />
-      )
-
-      const previewRegion = screen.getByRole("region", {
-        name: messages.previewTitle,
-      })
-
-      Object.defineProperty(previewRegion, "scrollTop", {
-        configurable: true,
-        value: 24,
-        writable: true,
-      })
-
-      vi.spyOn(
-        HTMLElement.prototype,
-        "getBoundingClientRect"
-      ).mockImplementation(function getBoundingClientRect(this: HTMLElement) {
-        if (this === previewRegion) {
-          return makeRect(100, 480)
-        }
-
-        if (this.id === "release-plan") {
-          return makeRect(360, 32)
-        }
-
-        return makeRect(0, 0)
-      })
-
-      fireEvent.click(screen.getByRole("button", { name: "Release plan" }))
-
-      expect(previewScrollTo).toHaveBeenCalledWith(
-        expect.objectContaining({
-          top: 284,
-        })
-      )
-      expect(pageScrollTo).not.toHaveBeenCalled()
-    } finally {
-      if (scrollToDescriptor) {
-        Object.defineProperty(
-          HTMLElement.prototype,
-          "scrollTo",
-          scrollToDescriptor
-        )
-      } else {
-        Reflect.deleteProperty(HTMLElement.prototype, "scrollTo")
-      }
-    }
-  })
-
-  test("imports markdown from a selected file", async () => {
-    render(
-      <MarkdownPreviewerClient
-        messages={messages}
-        language="en"
-        direction="ltr"
-      />
-    )
-
-    const file = new File(["# Imported"], "draft.md", {
-      type: "text/markdown",
-    })
-
-    fireEvent.change(screen.getByLabelText(messages.importLabel), {
-      target: { files: [file] },
-    })
-
-    await waitFor(() => {
-      expect(getMarkdownInput().value).toBe("# Imported")
-    })
-  })
-
-  test("keeps imported markdown when loading the sample is canceled", async () => {
-    vi.spyOn(window, "confirm").mockReturnValue(false)
-
-    render(
-      <MarkdownPreviewerClient
-        messages={messages}
-        language="en"
-        direction="ltr"
-      />
-    )
-
-    const file = new File(["# Imported"], "draft.md", {
-      type: "text/markdown",
-    })
-
-    fireEvent.change(screen.getByLabelText(messages.importLabel), {
-      target: { files: [file] },
-    })
-
-    await waitFor(() => {
-      expect(getMarkdownInput().value).toBe("# Imported")
-    })
-
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.loadSampleLabel })
-    )
-
-    await waitFor(() => {
-      expect(getMarkdownInput().value).toBe("# Imported")
-    })
-
-    expect(window.confirm).toHaveBeenCalledWith(
-      messages.loadSampleConfirmMessage
-    )
-  })
-
-  test("clears the editor and shows an empty preview state", async () => {
-    const confirmSpy = vi.spyOn(window, "confirm").mockReturnValue(true)
-
-    render(
-      <MarkdownPreviewerClient
-        messages={messages}
-        language="en"
-        direction="ltr"
-      />
-    )
-
-    fireEvent.click(screen.getByRole("button", { name: messages.clearLabel }))
-
-    await waitFor(() => {
-      expect(getMarkdownInput().value).toBe("")
-    })
-
-    expect(screen.getByText(messages.previewEmptyTitle)).toBeTruthy()
-    expect(
-      screen.getByRole("button", { name: messages.downloadHtmlLabel })
-    ).toHaveProperty("disabled", true)
-    expect(confirmSpy).toHaveBeenCalledWith(messages.clearConfirmMessage)
-  })
-
-  test("keeps the draft when clear is canceled", async () => {
-    vi.spyOn(window, "confirm").mockReturnValue(false)
-
-    render(
-      <MarkdownPreviewerClient
-        messages={messages}
-        language="en"
-        direction="ltr"
-      />
-    )
-
-    fireEvent.click(screen.getByRole("button", { name: messages.clearLabel }))
-
-    await waitFor(() => {
-      expect(getMarkdownInput().value).toContain("# Product launch checklist")
-    })
-  })
-
-  test("restores persisted markdown and settings from local storage", async () => {
-    window.localStorage.setItem(STORAGE_KEYS.markdown, "# Saved")
-    window.localStorage.setItem(STORAGE_KEYS.previewTheme, "slate")
-    window.localStorage.setItem(STORAGE_KEYS.sanitizeHtml, "false")
-    window.localStorage.setItem(STORAGE_KEYS.showOutline, "false")
-
-    render(
-      <MarkdownPreviewerClient
-        messages={messages}
-        language="en"
-        direction="ltr"
-      />
-    )
-
-    await waitFor(() => {
-      expect(getMarkdownInput().value).toBe("# Saved")
-    })
-
-    expect(
-      screen.getByRole("radio", { name: messages.slateThemeLabel })
+      screen.getByRole("navigation", { name: m.outlineTitle })
     ).toBeTruthy()
+    fireEvent.click(screen.getByRole("button", { name: "Draft" }))
+    expect(screen.queryByRole("navigation")).toBeNull()
+    const initial = frame()
+    fireEvent.click(screen.getByRole("radio", { name: m.read }))
+    expect(screen.queryByRole("textbox", { name: m.sourceLabel })).toBeNull()
+    fireEvent.click(screen.getByRole("radio", { name: m.edit }))
+    expect(frame()).toBe(initial)
+    fireEvent.click(screen.getByLabelText(m.wide))
+    fireEvent.click(screen.getByLabelText(m.zoomIn))
+    expect(screen.getByLabelText(m.zoom)).toHaveProperty("value", "125")
+    fireEvent.click(screen.getByLabelText(m.resetZoom))
+    expect(screen.getByLabelText(m.zoom)).toHaveProperty("value", "100")
   })
 
-  test("prints the exported HTML when a popup window is available", () => {
-    render(
-      <MarkdownPreviewerClient
-        messages={messages}
-        language="en"
-        direction="ltr"
-      />
+  test("reads and edits a private file only in memory, restores the saved draft on close", async () => {
+    localStorage.setItem(STORAGE_KEYS.markdown, "# Saved private draft")
+    mount()
+    await ready("Saved private draft")
+    select("# Local private file")
+    await ready("Local private file")
+    expect(screen.queryByRole("textbox", { name: m.sourceLabel })).toBeNull()
+    expect(localStorage.getItem(STORAGE_KEYS.markdown)).toBe(
+      "# Saved private draft"
     )
+    fireEvent.click(screen.getByRole("radio", { name: m.edit }))
+    fireEvent.change(editor(), { target: { value: "# Unsaved local edit" } })
+    await ready("Unsaved local edit")
+    expect(localStorage.getItem(STORAGE_KEYS.markdown)).toBe(
+      "# Saved private draft"
+    )
+    vi.mocked(window.confirm).mockReturnValueOnce(false)
+    select("# Replacement")
+    expect(editor().value).toBe("# Unsaved local edit")
+    fireEvent.click(screen.getByLabelText(m.close))
+    await ready("Saved private draft")
+    expect(window.confirm).toHaveBeenCalledWith(m.replaceEditedConfirm)
+    expect(editor().value).toBe("# Saved private draft")
+  })
 
-    const writeSpy = vi.fn()
-    const openDocumentSpy = vi.fn()
-    const closeDocumentSpy = vi.fn()
-    const focusSpy = vi.fn()
-    const printSpy = vi.fn()
-    const closeSpy = vi.fn()
-    const loadHandlers: Array<() => void> = []
+  test("replaces read-only files without prompting and accepts a drop", async () => {
+    mount()
+    await ready("Product launch checklist")
+    const file = new File(["# Dropped"], "readme.mdown")
+    fireEvent.drop(
+      document.querySelector("[data-tool='markdown-previewer']")!,
+      { dataTransfer: { files: [file] } }
+    )
+    await ready("Dropped")
+    select("# Replacement", "readme.markdown")
+    await ready("Replacement")
+    expect(window.confirm).not.toHaveBeenCalled()
+    fireEvent.click(screen.getByLabelText(m.close))
+    await ready("Product launch checklist")
+  })
 
-    const printWindow = {
-      document: {
-        open: openDocumentSpy,
-        write: writeSpy,
-        close: closeDocumentSpy,
-      },
-      focus: focusSpy,
-      print: printSpy,
-      close: closeSpy,
-      addEventListener: (event: string, handler: () => void) => {
-        if (event === "load") {
-          loadHandlers.push(handler)
-        }
-      },
+  test("clears with confirmation, can load a sample, and escapes optional inline HTML", async () => {
+    mount()
+    await ready("Product launch checklist")
+    vi.mocked(window.confirm).mockReturnValueOnce(false)
+    fireEvent.click(screen.getByRole("button", { name: m.clearLabel }))
+    expect(editor().value).toBe(DEFAULT_MARKDOWN)
+    fireEvent.click(screen.getByRole("button", { name: m.clearLabel }))
+    await waitFor(() =>
+      expect(screen.getByText(m.previewEmptyDescription)).toBeTruthy()
+    )
+    expect(localStorage.getItem(STORAGE_KEYS.markdown)).toBe("")
+    vi.mocked(window.confirm).mockReturnValueOnce(false)
+    fireEvent.click(screen.getByRole("button", { name: m.loadSampleLabel }))
+    expect(editor().value).toBe("")
+    fireEvent.click(screen.getByRole("button", { name: m.loadSampleLabel }))
+    await ready("Product launch checklist")
+    fireEvent.change(editor(), {
+      target: { value: "# HTML\n\n<b>bold</b><img src='https://bad.test/a'>" },
+    })
+    await ready("<b>bold</b>")
+    expect(frame().srcdoc).not.toContain("https://bad.test")
+    fireEvent.click(screen.getByLabelText(m.renderHtmlLabel))
+    await ready("&lt;b&gt;bold&lt;/b&gt;")
+    expect(frame().srcdoc).not.toContain("<b>bold</b>")
+  })
+
+  test("handles unsupported, empty, and invalid text without losing the current document", async () => {
+    mount()
+    await ready("Product launch checklist")
+    fireEvent.change(screen.getByLabelText(m.importLabel), {
+      target: { files: [new File(["bad"], "archive.zip")] },
+    })
+    expect(screen.getByText(m.unsupported)).toBeTruthy()
+    select("\0binary")
+    await waitFor(() => expect(screen.getByText(m.encodingFailed)).toBeTruthy())
+    expect(editor().value).toBe(DEFAULT_MARKDOWN)
+    select("")
+    await waitFor(() =>
+      expect(screen.getByText(m.previewEmptyDescription)).toBeTruthy()
+    )
+    expect(
+      screen.getByRole("button", { name: m.downloadHtmlLabel })
+    ).toHaveProperty("disabled", true)
+  })
+
+  test("reports parser failure and retries without discarding source", async () => {
+    ParserWorker.fail = true
+    mount()
+    await waitFor(() => expect(screen.getByText(m.previewFailed)).toBeTruthy())
+    expect(editor().value).toBe(DEFAULT_MARKDOWN)
+    ParserWorker.fail = false
+    fireEvent.click(screen.getByRole("button", { name: m.retry }))
+    await ready("Product launch checklist")
+  })
+
+  test("restores legacy draft preferences and tolerates storage failure", async () => {
+    localStorage.setItem(STORAGE_KEYS.previewTheme, "slate")
+    localStorage.setItem(STORAGE_KEYS.showOutline, "true")
+    mount()
+    await ready("Product launch checklist")
+    expect(
+      screen
+        .getByRole("radio", { name: m.slateThemeLabel })
+        .getAttribute("aria-checked")
+    ).toBe("true")
+    fireEvent.keyDown(screen.getByRole("navigation"), { key: "Escape" })
+    expect(document.activeElement).toBe(
+      screen.getByLabelText(m.showOutlineLabel)
+    )
+    cleanup()
+    vi.spyOn(Storage.prototype, "getItem").mockImplementation(() => {
+      throw new Error("blocked")
+    })
+    vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => {
+      throw new Error("full")
+    })
+    mount()
+    await ready("Product launch checklist")
+    expect(screen.getByText(m.storageFailed)).toBeTruthy()
+  })
+
+  test("prints sanitized HTML and safely handles a blocked popup", async () => {
+    mount()
+    await ready("Product launch checklist")
+    const load: Array<() => void> = []
+    const popup = {
+      opener: window,
+      document: { open: vi.fn(), write: vi.fn(), close: vi.fn() },
+      focus: vi.fn(),
+      print: vi.fn(),
+      close: vi.fn(),
       onafterprint: null as null | (() => void),
+      addEventListener: (_: string, fn: () => void) => load.push(fn),
     }
-
-    const openSpy = vi
-      .spyOn(window, "open")
-      .mockReturnValue(printWindow as unknown as Window)
-
-    fireEvent.click(screen.getByRole("button", { name: messages.printLabel }))
-
-    expect(openDocumentSpy).toHaveBeenCalled()
-    expect(writeSpy.mock.calls[0]?.[0]).toContain("<!doctype html>")
-    expect(writeSpy.mock.calls[0]?.[0]).toContain('<html lang="en" dir="ltr">')
-    expect(focusSpy).toHaveBeenCalled()
-
-    printWindow.onafterprint?.()
-    expect(closeSpy).toHaveBeenCalled()
-
-    loadHandlers.forEach((handler) => handler())
-    expect(printSpy).toHaveBeenCalled()
-
-    openSpy.mockRestore()
+    vi.spyOn(window, "open")
+      .mockReturnValueOnce(null)
+      .mockReturnValue(popup as unknown as Window)
+    fireEvent.click(screen.getByRole("button", { name: m.printLabel }))
+    fireEvent.click(screen.getByRole("button", { name: m.printLabel }))
+    expect(popup.document.write.mock.calls[0]?.[0]).toContain(
+      "script-src 'none'"
+    )
+    expect(popup.opener).toBeNull()
+    load.forEach((fn) => fn())
+    expect(popup.print).toHaveBeenCalled()
+    popup.onafterprint?.()
+    expect(popup.close).toHaveBeenCalled()
   })
 })

@@ -1,4 +1,4 @@
 {
   "name": "Podgląd Markdown",
-  "description": "Podgląd Markdown na żywo z oczyszczaniem, spisem treści, eksportem HTML i drukiem."
+  "description": "Czytaj lokalne pliki Markdown ze zwijanym konspektem, regulacją rozmiaru tekstu i szerokości oraz trybem skupienia. Edytuj zapisane szkice, wyświetlaj bezpieczny podgląd oraz eksportuj lub drukuj HTML w przeglądarce."
 }

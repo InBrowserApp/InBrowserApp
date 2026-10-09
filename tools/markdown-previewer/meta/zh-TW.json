@@ -1,4 +1,4 @@
 {
   "name": "Markdown 預覽器",
-  "description": "即時預覽 Markdown，支援同步目錄、HTML 淨化切換、匯出獨立 HTML，以及簡潔/深色預覽主題。"
+  "description": "在本機閱讀 Markdown，使用可收合的目錄、可調整的文字大小與寬度，以及專注模式。在瀏覽器中編輯已儲存的草稿、安全地預覽，並匯出或列印 HTML。"
 }

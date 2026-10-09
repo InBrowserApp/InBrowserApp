@@ -80,15 +80,15 @@ function slugifyHeading(value: string) {
 }
 
 function createSlugger() {
-  const seen = new Map<string, number>()
+  const seen = new Set<string>()
 
   return (value: string) => {
     const base = slugifyHeading(value)
-    const count = seen.get(base) ?? 0
-
-    seen.set(base, count + 1)
-
-    return count === 0 ? base : `${base}-${count}`
+    let id = base
+    let count = 0
+    while (seen.has(id)) id = `${base}-${++count}`
+    seen.add(id)
+    return id
   }
 }
 
@@ -145,15 +145,16 @@ function collectLinkAndImageCounts(tokens: unknown) {
 
 function buildMarkdownPreview(
   source: string,
-  untitledHeadingLabel: string
+  untitledHeadingLabel: string,
+  renderHtml = true
 ): MarkdownPreviewResult {
   const toc: TocItem[] = []
   const nextHeadingId = createSlugger()
   const renderer = new marked.Renderer()
 
-  renderer.heading = (token: Tokens.Heading) => {
-    const headingHtml =
-      token.text.length > 0 ? (marked.parseInline(token.text) as string) : ""
+  if (!renderHtml) renderer.html = (token) => escapeHtml(token.text)
+  renderer.heading = function (token: Tokens.Heading) {
+    const headingHtml = this.parser.parseInline(token.tokens)
     const headingText = stripHtmlTags(headingHtml)
     const visibleHeadingText = headingText || untitledHeadingLabel
     const renderedHeadingHtml = headingText ? headingHtml : visibleHeadingText
@@ -168,7 +169,7 @@ function buildMarkdownPreview(
     return `<h${token.depth} id="${id}">${renderedHeadingHtml}</h${token.depth}>`
   }
 
-  const html = marked.parse(source, {
+  const html = marked.parse(source.replace(/^\uFEFF/, ""), {
     gfm: true,
     breaks: false,
     renderer,
@@ -205,6 +206,7 @@ function createExportHtmlDocument({
   return `<!doctype html>
 <html lang="${escapeHtmlAttribute(language)}" dir="${direction}">
   <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${escapeHtml(title)}</title>
@@ -219,4 +221,4 @@ function createExportHtmlDocument({
 }
 
 export { buildMarkdownPreview, createExportHtmlDocument, slugifyHeading }
-export type { PreviewStats, TocItem }
+export type { TocItem }
