@@ -11,6 +11,7 @@ test("keeps the visible passage in place when scaling without rebuilding HTML", 
     <MessageFrame html="<p>Message</p>" title="Message" size={16} />
   )
   const frame = screen.getByTitle("Message") as HTMLIFrameElement
+  Object.defineProperty(frame, "clientWidth", { value: 800 })
   const document = frame.contentDocument!
   document.body.innerHTML = "<p>A passage in the middle of a long thread.</p>"
   vi.spyOn(
@@ -44,6 +45,7 @@ test("Escape requests closing the containing focus dialog", () => {
     </dialog>
   )
   const frame = screen.getByTitle("Message") as HTMLIFrameElement
+  Object.defineProperty(frame, "clientWidth", { value: 800 })
   const document = frame.contentDocument!
   const dialog = frame.closest("dialog")!
   vi.spyOn(dialog, "matches").mockReturnValue(true)

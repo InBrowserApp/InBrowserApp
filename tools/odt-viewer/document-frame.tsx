@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useState } from "react"
-import { readingPosition } from "@workspace/ui/lib/reading-position"
+import { useReadingPosition } from "@workspace/ui/lib/use-reading-position"
 
 export function DocumentFrame({
   html,
@@ -15,6 +15,7 @@ export function DocumentFrame({
   onMissing: () => void
 }) {
   const [doc, setDoc] = useState<Document | null>(null)
+  const { preserve, navigate } = useReadingPosition(doc)
   useEffect(() => {
     if (!doc) return
     function activate(event: MouseEvent | KeyboardEvent) {
@@ -29,8 +30,10 @@ export function DocumentFrame({
       }
       const anchor = doc!.getElementById(id)
       if (anchor) {
-        anchor.closest("details")?.setAttribute("open", "")
-        anchor.scrollIntoView()
+        navigate(() => {
+          anchor.closest("details")?.setAttribute("open", "")
+          anchor.scrollIntoView()
+        })
       } else onMissing()
     }
     function keydown(event: KeyboardEvent) {
@@ -48,24 +51,18 @@ export function DocumentFrame({
       doc.removeEventListener("click", activate)
       doc.removeEventListener("keydown", keydown)
     }
-  }, [doc, onMissing])
+  }, [doc, onMissing, navigate])
   useLayoutEffect(() => {
     if (!doc) return
-    const position = readingPosition(doc)
-    doc.documentElement.style.zoom = String(zoom / 100)
-    if (position) {
-      const bounds = position.target.getBoundingClientRect()
-      doc.defaultView?.scrollBy(
-        bounds.left - position.left,
-        bounds.top - position.top
-      )
-    }
-  }, [doc, zoom])
+    preserve(() => {
+      doc.documentElement.style.zoom = String(zoom / 100)
+    })
+  }, [doc, zoom, preserve])
   useLayoutEffect(() => {
     if (!target || !doc) return
-    doc.getElementById(target.id)?.scrollIntoView()
+    navigate(() => doc.getElementById(target.id)?.scrollIntoView())
     ;(doc.defaultView?.frameElement as HTMLElement | null)?.focus()
-  }, [doc, target])
+  }, [doc, target, navigate])
   // WebKit requires allow-scripts for trusted parent key handlers. The first
   // head CSP blocks all scripts; sanitization removes every navigation path.
   return (
