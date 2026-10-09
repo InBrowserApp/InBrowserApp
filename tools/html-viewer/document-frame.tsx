@@ -44,7 +44,9 @@ export function DocumentFrame({
           details = details.parentElement?.closest("details") ?? null
         )
           details.open = true
-        navigate(() => anchor.scrollIntoView())
+        navigate(() =>
+          doc!.defaultView?.scrollBy(0, anchor.getBoundingClientRect().top)
+        )
       } else onMissing()
     }
     function keydown(event: KeyboardEvent) {
@@ -95,8 +97,14 @@ export function DocumentFrame({
   }, [doc, zoom, preserve])
   useLayoutEffect(() => {
     if (!target || !doc) return
-    navigate(() => doc.getElementById(target.id)?.scrollIntoView())
-    ;(doc.defaultView?.frameElement as HTMLElement | null)?.focus()
+    navigate(() => {
+      const anchor = doc.getElementById(target.id)
+      if (anchor)
+        doc.defaultView?.scrollBy(0, anchor.getBoundingClientRect().top)
+    })
+    ;(doc.defaultView?.frameElement as HTMLElement | null)?.focus({
+      preventScroll: true,
+    })
   }, [doc, target, navigate])
   // WebKit requires allow-scripts for trusted parent key handlers. The first
   // head CSP blocks all scripts; sanitization removes every navigation path.

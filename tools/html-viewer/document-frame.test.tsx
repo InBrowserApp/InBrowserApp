@@ -36,8 +36,9 @@ test("keeps the visible passage stable under zoom and scrolls outline targets", 
   scroll.mockClear()
   rerender(<DocumentFrame {...props} zoom={125} target={{ id: "chapter" }} />)
   expect(scroll).toHaveBeenCalledWith(0, 300)
-  expect(into).toHaveBeenCalledOnce()
-  expect(focus).toHaveBeenCalledOnce()
+  expect(into).not.toHaveBeenCalled()
+  expect(scroll).toHaveBeenCalledWith(0, 308)
+  expect(focus).toHaveBeenCalledWith({ preventScroll: true })
   expect(frame.getAttribute("srcdoc")).toBe(props.html)
 })
 
@@ -60,8 +61,12 @@ test("handles inert internal links, missing fragments and Escape in focus mode",
   Object.defineProperty(frame, "clientWidth", { value: 800 })
   doc.body.innerHTML =
     '<a data-web-link="#note%20one">Note</a><a data-web-link="#bad%">Bad</a><details><p id="note one">Footnote</p></details>'
-  const scroll = vi.fn()
-  doc.getElementById("note one")!.scrollIntoView = scroll
+  const scroll = vi.spyOn(doc.defaultView!, "scrollBy")
+  const target = doc.getElementById("note one")!
+  vi.spyOn(target, "getBoundingClientRect").mockReturnValue({
+    top: 250,
+  } as DOMRect)
+  target.scrollIntoView = vi.fn()
   const dialog = frame.closest("dialog")!
   vi.spyOn(dialog, "matches").mockReturnValue(true)
   const close = vi.fn()
@@ -70,7 +75,8 @@ test("handles inert internal links, missing fragments and Escape in focus mode",
   fireEvent.load(frame)
   const links = doc.querySelectorAll("a")
   fireEvent.click(links[0]!)
-  expect(scroll).toHaveBeenCalledOnce()
+  expect(scroll).toHaveBeenCalledWith(0, 250)
+  expect(target.scrollIntoView).not.toHaveBeenCalled()
   expect(doc.querySelector("details")?.open).toBe(true)
   fireEvent.keyDown(links[1]!, { key: "Enter" })
   expect(missing).toHaveBeenCalledOnce()
@@ -113,5 +119,5 @@ test("external links open separately only after activation and unsafe protocols 
   fireEvent.keyDown(links[1]!, { key: "Enter" })
   expect(open).toHaveBeenCalledOnce()
   fireEvent.click(links[2]!)
-  expect(doc.body.scrollIntoView).toHaveBeenCalledOnce()
+  expect(doc.body.scrollIntoView).not.toHaveBeenCalled()
 })
