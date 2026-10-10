@@ -169,6 +169,7 @@
     "@tool/port-number-lookup": "workspace:*",
     "@tool/ppt-viewer": "workspace:*",
     "@tool/pptx-to-markdown-converter": "workspace:*",
+    "@tool/pptx-to-pdf-converter": "workspace:*",
     "@tool/pptx-viewer": "workspace:*",
     "@tool/prc-id-validator": "workspace:*",
     "@tool/prettier-code-formatter": "workspace:*",

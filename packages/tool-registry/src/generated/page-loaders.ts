@@ -202,6 +202,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ppt-viewer": () => import("@tool/ppt-viewer/page"),
   "pptx-to-markdown-converter": () =>
     import("@tool/pptx-to-markdown-converter/page"),
+  "pptx-to-pdf-converter": () => import("@tool/pptx-to-pdf-converter/page"),
   "pptx-viewer": () => import("@tool/pptx-viewer/page"),
   "prc-id-validator": () => import("@tool/prc-id-validator/page"),
   "prettier-code-formatter": () => import("@tool/prettier-code-formatter/page"),

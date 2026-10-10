@@ -11,3 +11,5 @@ Makroaktiverte filer kan vises, men makroene kjøres aldri. Innhold som er avhen
 Utpakking av arkiver og størrelsen på gjengitte lysbilder er begrenset. Krypterte presentasjoner og eldre .ppt-filer støttes ikke. Viseren redigerer eller skriver ikke ut presentasjoner og laster ikke inn eksterne dokumentressurser.
 
 Markdown-eksport bevarer lysbilderekkefølgen, tilgjengelige titler, grunnleggende tekststruktur og foredragsnotater. Skjulte lysbilder tas med og merkes. Eksporten bevarer ikke lysbildeoppsett, maldekorasjoner, korrekturkommentarer, animasjoner eller overganger. Bilder, diagrammer, ligninger, medier og innebygde objekter erstattes med markører for utelatt innhold; tilgjengelig tekst i figurer beholdes. Tabeller med sammenslåtte celler og kompleks formatering forenkles. Sammenlign den eksporterte teksten med den opprinnelige presentasjonen.
+
+Bruk [Konverterer fra PPTX til PDF](../pptx-to-pdf-converter/) til å laste ned en støttet presentasjon som en bildebasert PDF, og kontroller resultatets utseende før du laster ned.

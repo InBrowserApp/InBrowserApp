@@ -11,3 +11,5 @@ Dateien mit Makros können angezeigt werden, ihre Makros werden jedoch nie ausge
 Die entpackte Archivgröße und die Größe gerenderter Folien sind begrenzt. Verschlüsselte Präsentationen und ältere .ppt-Dateien werden nicht unterstützt. Der Betrachter bearbeitet oder druckt keine Präsentationen und lädt keine externen Dokumentressourcen.
 
 Der Markdown-Export erhält die Folienreihenfolge, verfügbare Titel, die grundlegende Textstruktur und Referentennotizen. Ausgeblendete Folien werden einbezogen und gekennzeichnet. Folienlayout, Dekorationen aus Vorlagen, Überprüfungskommentare, Animationen und Übergänge bleiben nicht erhalten. Bilder, Diagramme, Formeln, Medien und eingebettete Objekte werden durch Auslassungsmarkierungen ersetzt; verfügbarer Text in Formen bleibt erhalten. Tabellen mit verbundenen Zellen und komplexe Formatierungen werden vereinfacht. Vergleichen Sie den exportierten Text mit der ursprünglichen Präsentation.
+
+Um eine unterstützte Präsentation als bildbasierte PDF herunterzuladen, verwenden Sie den [PPTX-zu-PDF-Konverter](../pptx-to-pdf-converter/) und prüfen Sie vor dem Herunterladen das Aussehen der Ausgabe.

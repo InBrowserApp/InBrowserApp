@@ -11,3 +11,5 @@ Filer med makron kan visas, men deras makron körs aldrig. Innehåll som är ber
 Arkivens uppackade storlek och renderade bilders storlek begränsas. Krypterade presentationer och äldre .ppt-filer stöds inte. Visaren varken redigerar eller skriver ut presentationer och läser inte in externa dokumentresurser.
 
 Markdown-export bevarar bildernas ordning, tillgängliga titlar, grundläggande textstruktur och talaranteckningar. Dolda bilder tas med och markeras. Bildernas layout, malldekorationer, granskningskommentarer, animationer och övergångar bevaras inte. Bilder, diagram, ekvationer, medier och inbäddade objekt ersätts med markörer för utelämnat innehåll; tillgänglig text i former bevaras. Tabeller med sammanslagna celler och komplex formatering förenklas. Kontrollera den exporterade texten mot originalpresentationen.
+
+Använd [Konverterare från PPTX till PDF](../pptx-to-pdf-converter/) för att ladda ner en presentation som stöds som en bildbaserad PDF, och kontrollera resultatets utseende innan du laddar ner.

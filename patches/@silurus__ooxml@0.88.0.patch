@@ -1,0 +1,144 @@
+diff --git a/dist/pptx-DkyYBYoL.js b/dist/pptx-DkyYBYoL.js
+index 2d6e4896d20e7fbb6f2479cc2d8fe4f47a9537d5..21cfc7716fc5f367d30e814c843e5100b052767e 100644
+--- a/dist/pptx-DkyYBYoL.js
++++ b/dist/pptx-DkyYBYoL.js
+@@ -1243,6 +1243,7 @@ var J = class e {
+ 				fetchMedia: this._fetchMedia,
+ 				fetchImage: this._fetchImage,
+ 				skipMediaControls: r.skipMediaControls,
++				failOnError: r.failOnError,
+ 				dim: r.dim,
+ 				math: this._math,
+ 				threeD: this._threeD,
+diff --git a/dist/slide-pull-client-DiPnm240.js b/dist/slide-pull-client-DiPnm240.js
+index 6bcc7c20bb24abe696e2c4a9487502a96a1a4a4e..16ac6db917aa4606fc59e3b41a447dd1a18537ba 100644
+--- a/dist/slide-pull-client-DiPnm240.js
++++ b/dist/slide-pull-client-DiPnm240.js
+@@ -4103,7 +4103,7 @@ function xr(e, t, n, r, a, s, c, l = !1, u = !1, d = 1, f, p = {
+ 	}
+ 	return h.push(y), h;
+ }
+-async function Sr(e, t, n, r, i, o, s, c, l, u) {
++async function Sr(e, t, n, r, i, o, s, c, l, u, failOnError = false) {
+ 	if (t && t.fillType === "image") {
+ 		if (e.fillStyle = "#FFFFFF", e.fillRect(0, 0, n, r), !t.imagePath || !t.mimeType || !s) return;
+ 		try {
+@@ -4114,9 +4114,11 @@ async function Sr(e, t, n, r, i, o, s, c, l, u) {
+ 				tiff: c,
+ 				svgDecoder: l
+ 			});
++			if (!x && failOnError) throw Error("Slide background could not be decoded");
+ 			if (o() || !x) return;
+ 			e.save(), e.beginPath(), e.rect(0, 0, n, r), e.clip(), t.alpha != null && (e.globalAlpha = t.alpha), t.tile ? Er(e, x, t.tile, n, r, i, t.srcRect, b?.dimensions ?? void 0) : ke(e, x, t.srcRect, h, g, _, v), e.restore();
+ 		} catch (t) {
++			if (failOnError) throw t;
+ 			if (C(t, "tiff")) {
+ 				a(e, "tiff", {
+ 					x: 0,
+@@ -5212,7 +5214,7 @@ function fi(e, t, n) {
+ 		e.restore();
+ 	}
+ }
+-async function pi(e, t, r, i, a, o, c = 1, l, u) {
++async function pi(e, t, r, i, a, o, c = 1, l, u, failOnError = false) {
+ 	if (a) try {
+ 		let d = t.mimeType === "image/svg+xml", f = Me(t.mimeType, t.srcRect, t.width / Y, t.height / Y);
+ 		if (!f) return;
+@@ -5240,6 +5242,7 @@ async function pi(e, t, r, i, a, o, c = 1, l, u) {
+ 			..._ ?? {},
+ 			tiff: o
+ 		});
++		if (!b && failOnError) throw Error("Slide image could not be decoded");
+ 		if (!b || i()) return;
+ 		e.save(), t.alpha != null && (e.globalAlpha *= t.alpha);
+ 		let x = X(t.x, r), S = X(t.y, r), C = X(t.width, r), w = X(t.height, r);
+@@ -5302,6 +5305,7 @@ async function pi(e, t, r, i, a, o, c = 1, l, u) {
+ 			h: e.canvas.height || 0
+ 		}) : se, ie.bbox, ie.anchor, r, ae, q), e.restore();
+ 	} catch (n) {
++		if (failOnError) throw n;
+ 		if (C(n, "tiff")) {
+ 			i() || fi(e, t, r);
+ 			return;
+@@ -5309,11 +5313,12 @@ async function pi(e, t, r, i, a, o, c = 1, l, u) {
+ 		if (Ke(n) || Ze(n)) throw n;
+ 	}
+ }
+-async function mi(e, t, n, r, i, o, s, c, l = 1, u, d) {
++async function mi(e, t, n, r, i, o, s, c, l = 1, u, d, failOnError = false) {
+ 	let f = X(t.x, n), p = X(t.y, n), m = X(t.width, n), h = X(t.height, n), g, _ = !1;
+ 	if (t.posterPath && i) try {
+ 		g = await di(t, i, s, c, t.posterMimeType === "image/svg+xml" ? In(m, h, l) : d ? Ln(d, Z(t.posterPath)) : void 0, u);
+ 	} catch (e) {
++		if (failOnError) throw e;
+ 		if (C(e, "tiff")) _ = !0;
+ 		else if (Ke(e) || Ze(e)) throw e;
+ 	}
+@@ -5602,6 +5607,7 @@ async function Ti(t, n, r, i, a = {}, o, s, c = () => !1) {
+ 	t.width = m.width, t.height = m.height, I(t) && (t.style.width = `${d}px`, t.style.display || (t.style.display = "block"));
+ 	let _ = t.getContext("2d");
+ 	if (!_) throw Error("Could not get 2D context");
++	if (n.parseError && a.failOnError) throw Error("Slide could not be parsed");
+ 	if (_.scale(h, h), n.parseError) return Si(_, d, f, n.slideNumber, n.parseError), t;
+ 	let v = a.defaultTextColor ? `#${a.defaultTextColor}` : "#000000", y = /* @__PURE__ */ new Map(), b = {
+ 		cjkFallback: a.cjkFallback ? ln(n, a.majorFont ?? null, a.minorFont ?? null, a.cjkFallback) : void 0,
+@@ -5614,7 +5620,7 @@ async function Ti(t, n, r, i, a = {}, o, s, c = () => !1) {
+ 		smartArtFallbackTextColor: kn(n.background, v),
+ 		pictureBulletImages: y
+ 	};
+-	if (await Sr(_, n.background, d, f, u, c, a.fetchImage, a.tiff, a.svgDecoder, g), c() || (a.math && await qn(n, a.math), c())) return t;
++	if (await Sr(_, n.background, d, f, u, c, a.fetchImage, a.tiff, a.svgDecoder, g, a.failOnError), c() || (a.math && await qn(n, a.math), c())) return t;
+ 	let x = n.slideNumber;
+ 	for (let e of n.elements) if (e.type === "picture" && a.fetchImage) {
+ 		let t = e, n = t.mimeType === "image/svg+xml", r = V(t) || n, i = !r && !t.duotone ? Ln(g, Z(Rn(t), t.duotone)) : void 0, o = In(X(t.width, u), X(t.height, u), h, t.srcRect), s = r ? o : i, c = s && "maxRetainedPixels" in s ? s.maxRetainedPixels : void 0, l = {
+@@ -5722,8 +5728,10 @@ async function Ti(t, n, r, i, a = {}, o, s, c = () => !1) {
+ 						tiff: a.tiff,
+ 						...i
+ 					});
++					if (!o && a.failOnError) throw Error("Picture bullet could not be decoded");
+ 					y.set(t, o);
+ 				} catch (e) {
++					if (a.failOnError) throw e;
+ 					if (C(e, "tiff")) {
+ 						y.set(t, null);
+ 						return;
+@@ -5760,8 +5768,10 @@ async function Ti(t, n, r, i, a = {}, o, s, c = () => !1) {
+ 						s = await n();
+ 					}
+ 					else s = await n();
++					if (!s && a.failOnError) throw Error("Chart image could not be decoded");
+ 					S.set(t, s);
+ 				} catch (e) {
++					if (a.failOnError) throw e;
+ 					if (C(e, "tiff")) {
+ 						S.set(t, null);
+ 						return;
+@@ -5780,13 +5790,13 @@ async function Ti(t, n, r, i, a = {}, o, s, c = () => !1) {
+ 			elementIndex: e,
+ 			origin: n.elementSources?.[e]?.origin ?? "slide"
+ 		}) : void 0, a.fetchImage);
+-		else if (r.type === "picture") await pi(_, r, u, c, a.fetchImage, a.tiff, h, a.svgDecoder, g);
++		else if (r.type === "picture") await pi(_, r, u, c, a.fetchImage, a.tiff, h, a.svgDecoder, g, a.failOnError);
+ 		else if (r.type === "table") vi(_, r, u, x, b, o ? (t) => o({
+ 			...t,
+ 			elementIndex: e,
+ 			origin: n.elementSources?.[e]?.origin ?? "slide"
+ 		}) : void 0);
+-		else if (r.type === "media") await mi(_, r, u, c, a.fetchMedia, a.skipMediaControls, a.fetchImage, a.tiff, h, a.svgDecoder, g);
++		else if (r.type === "media") await mi(_, r, u, c, a.fetchMedia, a.skipMediaControls, a.fetchImage, a.tiff, h, a.svgDecoder, g, a.failOnError);
+ 		else if (r.type === "chart") {
+ 			let e = Y * u;
+ 			_.save(), _i(_, r, u), qe(_, r.chart, {
+diff --git a/dist/types/pptx.d.ts b/dist/types/pptx.d.ts
+index bbf33883a39d3ba5d85202f8f2a48d2759c1f032..857b8772f92c2e7b55c12d334543e077d1c61b22 100644
+--- a/dist/types/pptx.d.ts
++++ b/dist/types/pptx.d.ts
+@@ -1989,6 +1989,8 @@ interface RenderSlideToBitmapOptions {
+   onTextRun?: TextRunCallback;
+ }
+ interface RenderSlideOptions {
++  /** Reject parser errors and undecodable images instead of drawing placeholders. Main-thread renderSlide only. */
++  failOnError?: boolean;
+   width?: number;
+   dpr?: number;
+   imageResources?: ImageResourceOptions;

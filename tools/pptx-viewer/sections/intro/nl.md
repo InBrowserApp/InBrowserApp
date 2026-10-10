@@ -11,3 +11,5 @@ Bestanden met macro's kunnen worden bekeken, maar hun macro's worden nooit uitge
 De grootte van uitgepakte archieven en weergegeven dia's is beperkt. Versleutelde presentaties en oude .ppt-bestanden worden niet ondersteund. De viewer bewerkt of print geen presentaties en laadt geen externe documentbronnen.
 
 Markdown-export behoudt de volgorde van dia’s, beschikbare titels, de basisstructuur van tekst en sprekersnotities. Verborgen dia’s worden meegenomen en gemarkeerd. De dia-indeling, decoratieve sjabloonelementen, revisieopmerkingen, animaties en overgangen blijven niet behouden. Afbeeldingen, grafieken, vergelijkingen, media en ingesloten objecten worden vervangen door markeringen voor weggelaten inhoud; beschikbare tekst in vormen blijft behouden. Tabellen met samengevoegde cellen en complexe opmaak worden vereenvoudigd. Controleer de geëxporteerde tekst aan de hand van de oorspronkelijke presentatie.
+
+Gebruik de [PPTX-naar-PDF-converter](../pptx-to-pdf-converter/) om een ondersteunde presentatie als PDF met afbeeldingspagina’s te downloaden en controleer hoe de uitvoer eruitziet voordat je downloadt.

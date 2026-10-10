@@ -20327,6 +20327,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pptx-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "pptx",
+      "pptm",
+      "potx",
+      "potm",
+      "ppsx",
+      "ppsm",
+      "powerpoint",
+      "pdf",
+      "presentation",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محول PPTX إلى PDF",
+        description:
+          "حوّل عروض PowerPoint التقديمية وعروض الشرائح والقوالب المحلية المدعومة إلى صفحات PDF قائمة على الصور. عاين كل شريحة وتحقّق من النتيجة قبل التنزيل. دون رفع الملفات.",
+      },
+      de: {
+        name: "PPTX-zu-PDF-Konverter",
+        description:
+          "Konvertiere unterstützte lokale PowerPoint-Präsentationen, Bildschirmpräsentationen und Vorlagen in bildbasierte PDF-Seiten. Sieh dir jede Folie in der Vorschau an und prüfe das Ergebnis vor dem Herunterladen. Ohne Uploads.",
+      },
+      en: {
+        name: "PPTX to PDF Converter",
+        description:
+          "Convert supported local PowerPoint presentations, slideshows, and templates to image-based PDF pages. Preview every slide and check the result before downloading. No uploads.",
+      },
+      es: {
+        name: "Conversor de PPTX a PDF",
+        description:
+          "Convierte presentaciones, presentaciones con diapositivas y plantillas de PowerPoint locales compatibles en páginas PDF basadas en imágenes. Revisa cada diapositiva y comprueba el resultado antes de descargar. Sin subir archivos.",
+      },
+      fr: {
+        name: "Convertisseur PPTX en PDF",
+        description:
+          "Convertissez les présentations, diaporamas et modèles PowerPoint locaux pris en charge en pages PDF composées d’images. Prévisualisez chaque diapositive et vérifiez le résultat avant de télécharger. Aucun envoi à un serveur.",
+      },
+      he: {
+        name: "ממיר PPTX ל-PDF",
+        description:
+          "המרת מצגות, הצגות שקופיות ותבניות PowerPoint מקומיות ונתמכות לעמודי PDF מבוססי תמונות. אפשר לצפות בכל שקופית ולבדוק את התוצאה לפני ההורדה. ללא העלאות.",
+      },
+      hi: {
+        name: "PPTX से PDF कन्वर्टर",
+        description:
+          "समर्थित स्थानीय PowerPoint प्रेज़ेंटेशन, स्लाइडशो और टेम्पलेट को चित्र आधारित PDF पृष्ठों में बदलें। हर स्लाइड का पूर्वावलोकन देखें और डाउनलोड करने से पहले परिणाम जाँचें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Konverter PPTX ke PDF",
+        description:
+          "Konversi presentasi, peragaan slide, dan templat PowerPoint lokal yang didukung menjadi halaman PDF berbasis gambar. Pratinjau setiap slide dan periksa hasilnya sebelum mengunduh. Tanpa unggahan.",
+      },
+      it: {
+        name: "Convertitore da PPTX a PDF",
+        description:
+          "Converti presentazioni, presentazioni automatiche e modelli PowerPoint locali supportati in pagine PDF basate su immagini. Visualizza ogni diapositiva in anteprima e controlla il risultato prima di scaricare. Nessun caricamento su server.",
+      },
+      ja: {
+        name: "PPTXからPDFへの変換ツール",
+        description:
+          "対応するローカルのPowerPointプレゼンテーション、スライドショー、テンプレートを画像ベースのPDFページに変換します。すべてのスライドをプレビューし、ダウンロード前に結果を確認できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "PPTX → PDF 변환기",
+        description:
+          "기기에 있는 지원되는 PowerPoint 프레젠테이션, 슬라이드 쇼, 서식 파일을 이미지 기반 PDF 페이지로 변환하세요. 모든 슬라이드를 미리 보고 다운로드 전에 결과를 확인할 수 있습니다. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Penukar PPTX kepada PDF",
+        description:
+          "Tukar pembentangan, tayangan slaid dan templat PowerPoint setempat yang disokong kepada halaman PDF berasaskan imej. Pratonton setiap slaid dan semak hasilnya sebelum memuat turun. Tiada muat naik.",
+      },
+      nl: {
+        name: "PPTX-naar-PDF-converter",
+        description:
+          "Zet ondersteunde lokale PowerPoint-presentaties, -diavoorstellingen en -sjablonen om in PDF-pagina’s op basis van afbeeldingen. Bekijk elke dia en controleer het resultaat voordat je downloadt. Geen uploads.",
+      },
+      no: {
+        name: "Konverterer fra PPTX til PDF",
+        description:
+          "Konverter lokale PowerPoint-presentasjoner, lysbildefremvisninger og maler som støttes, til bildebaserte PDF-sider. Forhåndsvis hvert lysbilde og kontroller resultatet før du laster ned. Ingen opplasting.",
+      },
+      pl: {
+        name: "Konwerter PPTX na PDF",
+        description:
+          "Konwertuj obsługiwane lokalne prezentacje, pokazy slajdów i szablony PowerPoint na strony PDF z obrazami. Obejrzyj każdy slajd i sprawdź wynik przed pobraniem. Bez przesyłania plików na serwer.",
+      },
+      pt: {
+        name: "Conversor de PPTX para PDF",
+        description:
+          "Converta apresentações, apresentações de slides e modelos locais compatíveis do PowerPoint em páginas PDF baseadas em imagens. Visualize cada slide e confira o resultado antes de baixar. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Конвертер PPTX в PDF",
+        description:
+          "Преобразуйте поддерживаемые локальные презентации, демонстрации и шаблоны PowerPoint в PDF со страницами в виде изображений. Просмотрите каждый слайд и проверьте результат перед скачиванием. Без отправки файлов на сервер.",
+      },
+      sv: {
+        name: "Konverterare från PPTX till PDF",
+        description:
+          "Konvertera lokala PowerPoint-presentationer, bildspel och mallar som stöds till bildbaserade PDF-sidor. Förhandsvisa varje bild och kontrollera resultatet innan du laddar ner. Inga uppladdningar.",
+      },
+      th: {
+        name: "โปรแกรมแปลง PPTX เป็น PDF",
+        description:
+          "แปลงงานนำเสนอ การนำเสนอสไลด์ และแม่แบบ PowerPoint ในเครื่องที่รองรับเป็นหน้า PDF แบบภาพ ดูตัวอย่างทุกสไลด์และตรวจสอบผลลัพธ์ก่อนดาวน์โหลด โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PPTX’ten PDF’ye Dönüştürücü",
+        description:
+          "Desteklenen yerel PowerPoint sunumlarını, slayt gösterilerini ve şablonlarını görsel tabanlı PDF sayfalarına dönüştürün. Her slaytı önizleyin ve indirmeden önce sonucu kontrol edin. Dosyalar yüklenmez.",
+      },
+      vi: {
+        name: "Trình chuyển đổi PPTX sang PDF",
+        description:
+          "Chuyển bản trình bày, tệp trình chiếu và mẫu PowerPoint được hỗ trợ từ thiết bị của bạn sang các trang PDF dạng hình ảnh. Xem trước từng trang chiếu và kiểm tra kết quả trước khi tải xuống. Không tải lên.",
+      },
+      "zh-CN": {
+        name: "PPTX 转 PDF 转换器",
+        description:
+          "将受支持的本地 PowerPoint 演示文稿、放映文件和模板转换为由图像页面组成的 PDF。下载前可预览每张幻灯片并检查结果，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "PPTX 轉 PDF 轉換器",
+        description:
+          "將本機支援的 PowerPoint 簡報、投影片放映檔與範本轉換為圖片式 PDF 頁面。預覽每張投影片，並在下載前檢查結果。無須上傳。",
+      },
+    },
+  },
+  {
     slug: "pptx-viewer",
     category: "document",
     icon: "file-text",
@@ -52373,6 +52507,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PPTX 轉 Markdown 轉換器",
         description:
           "在瀏覽器中將 PowerPoint 簡報、投影片放映檔與範本轉換為 Markdown。預覽、複製及下載投影片文字與演講者備忘稿，無須上傳檔案。",
+      },
+    },
+  },
+  "pptx-to-pdf-converter": {
+    slug: "pptx-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "pptx",
+      "pptm",
+      "potx",
+      "potm",
+      "ppsx",
+      "ppsm",
+      "powerpoint",
+      "pdf",
+      "presentation",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محول PPTX إلى PDF",
+        description:
+          "حوّل عروض PowerPoint التقديمية وعروض الشرائح والقوالب المحلية المدعومة إلى صفحات PDF قائمة على الصور. عاين كل شريحة وتحقّق من النتيجة قبل التنزيل. دون رفع الملفات.",
+      },
+      de: {
+        name: "PPTX-zu-PDF-Konverter",
+        description:
+          "Konvertiere unterstützte lokale PowerPoint-Präsentationen, Bildschirmpräsentationen und Vorlagen in bildbasierte PDF-Seiten. Sieh dir jede Folie in der Vorschau an und prüfe das Ergebnis vor dem Herunterladen. Ohne Uploads.",
+      },
+      en: {
+        name: "PPTX to PDF Converter",
+        description:
+          "Convert supported local PowerPoint presentations, slideshows, and templates to image-based PDF pages. Preview every slide and check the result before downloading. No uploads.",
+      },
+      es: {
+        name: "Conversor de PPTX a PDF",
+        description:
+          "Convierte presentaciones, presentaciones con diapositivas y plantillas de PowerPoint locales compatibles en páginas PDF basadas en imágenes. Revisa cada diapositiva y comprueba el resultado antes de descargar. Sin subir archivos.",
+      },
+      fr: {
+        name: "Convertisseur PPTX en PDF",
+        description:
+          "Convertissez les présentations, diaporamas et modèles PowerPoint locaux pris en charge en pages PDF composées d’images. Prévisualisez chaque diapositive et vérifiez le résultat avant de télécharger. Aucun envoi à un serveur.",
+      },
+      he: {
+        name: "ממיר PPTX ל-PDF",
+        description:
+          "המרת מצגות, הצגות שקופיות ותבניות PowerPoint מקומיות ונתמכות לעמודי PDF מבוססי תמונות. אפשר לצפות בכל שקופית ולבדוק את התוצאה לפני ההורדה. ללא העלאות.",
+      },
+      hi: {
+        name: "PPTX से PDF कन्वर्टर",
+        description:
+          "समर्थित स्थानीय PowerPoint प्रेज़ेंटेशन, स्लाइडशो और टेम्पलेट को चित्र आधारित PDF पृष्ठों में बदलें। हर स्लाइड का पूर्वावलोकन देखें और डाउनलोड करने से पहले परिणाम जाँचें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Konverter PPTX ke PDF",
+        description:
+          "Konversi presentasi, peragaan slide, dan templat PowerPoint lokal yang didukung menjadi halaman PDF berbasis gambar. Pratinjau setiap slide dan periksa hasilnya sebelum mengunduh. Tanpa unggahan.",
+      },
+      it: {
+        name: "Convertitore da PPTX a PDF",
+        description:
+          "Converti presentazioni, presentazioni automatiche e modelli PowerPoint locali supportati in pagine PDF basate su immagini. Visualizza ogni diapositiva in anteprima e controlla il risultato prima di scaricare. Nessun caricamento su server.",
+      },
+      ja: {
+        name: "PPTXからPDFへの変換ツール",
+        description:
+          "対応するローカルのPowerPointプレゼンテーション、スライドショー、テンプレートを画像ベースのPDFページに変換します。すべてのスライドをプレビューし、ダウンロード前に結果を確認できます。アップロードは不要です。",
+      },
+      ko: {
+        name: "PPTX → PDF 변환기",
+        description:
+          "기기에 있는 지원되는 PowerPoint 프레젠테이션, 슬라이드 쇼, 서식 파일을 이미지 기반 PDF 페이지로 변환하세요. 모든 슬라이드를 미리 보고 다운로드 전에 결과를 확인할 수 있습니다. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Penukar PPTX kepada PDF",
+        description:
+          "Tukar pembentangan, tayangan slaid dan templat PowerPoint setempat yang disokong kepada halaman PDF berasaskan imej. Pratonton setiap slaid dan semak hasilnya sebelum memuat turun. Tiada muat naik.",
+      },
+      nl: {
+        name: "PPTX-naar-PDF-converter",
+        description:
+          "Zet ondersteunde lokale PowerPoint-presentaties, -diavoorstellingen en -sjablonen om in PDF-pagina’s op basis van afbeeldingen. Bekijk elke dia en controleer het resultaat voordat je downloadt. Geen uploads.",
+      },
+      no: {
+        name: "Konverterer fra PPTX til PDF",
+        description:
+          "Konverter lokale PowerPoint-presentasjoner, lysbildefremvisninger og maler som støttes, til bildebaserte PDF-sider. Forhåndsvis hvert lysbilde og kontroller resultatet før du laster ned. Ingen opplasting.",
+      },
+      pl: {
+        name: "Konwerter PPTX na PDF",
+        description:
+          "Konwertuj obsługiwane lokalne prezentacje, pokazy slajdów i szablony PowerPoint na strony PDF z obrazami. Obejrzyj każdy slajd i sprawdź wynik przed pobraniem. Bez przesyłania plików na serwer.",
+      },
+      pt: {
+        name: "Conversor de PPTX para PDF",
+        description:
+          "Converta apresentações, apresentações de slides e modelos locais compatíveis do PowerPoint em páginas PDF baseadas em imagens. Visualize cada slide e confira o resultado antes de baixar. Sem enviar arquivos.",
+      },
+      ru: {
+        name: "Конвертер PPTX в PDF",
+        description:
+          "Преобразуйте поддерживаемые локальные презентации, демонстрации и шаблоны PowerPoint в PDF со страницами в виде изображений. Просмотрите каждый слайд и проверьте результат перед скачиванием. Без отправки файлов на сервер.",
+      },
+      sv: {
+        name: "Konverterare från PPTX till PDF",
+        description:
+          "Konvertera lokala PowerPoint-presentationer, bildspel och mallar som stöds till bildbaserade PDF-sidor. Förhandsvisa varje bild och kontrollera resultatet innan du laddar ner. Inga uppladdningar.",
+      },
+      th: {
+        name: "โปรแกรมแปลง PPTX เป็น PDF",
+        description:
+          "แปลงงานนำเสนอ การนำเสนอสไลด์ และแม่แบบ PowerPoint ในเครื่องที่รองรับเป็นหน้า PDF แบบภาพ ดูตัวอย่างทุกสไลด์และตรวจสอบผลลัพธ์ก่อนดาวน์โหลด โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PPTX’ten PDF’ye Dönüştürücü",
+        description:
+          "Desteklenen yerel PowerPoint sunumlarını, slayt gösterilerini ve şablonlarını görsel tabanlı PDF sayfalarına dönüştürün. Her slaytı önizleyin ve indirmeden önce sonucu kontrol edin. Dosyalar yüklenmez.",
+      },
+      vi: {
+        name: "Trình chuyển đổi PPTX sang PDF",
+        description:
+          "Chuyển bản trình bày, tệp trình chiếu và mẫu PowerPoint được hỗ trợ từ thiết bị của bạn sang các trang PDF dạng hình ảnh. Xem trước từng trang chiếu và kiểm tra kết quả trước khi tải xuống. Không tải lên.",
+      },
+      "zh-CN": {
+        name: "PPTX 转 PDF 转换器",
+        description:
+          "将受支持的本地 PowerPoint 演示文稿、放映文件和模板转换为由图像页面组成的 PDF。下载前可预览每张幻灯片并检查结果，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "PPTX 轉 PDF 轉換器",
+        description:
+          "將本機支援的 PowerPoint 簡報、投影片放映檔與範本轉換為圖片式 PDF 頁面。預覽每張投影片，並在下載前檢查結果。無須上傳。",
       },
     },
   },

@@ -11,3 +11,5 @@ Makro içeren dosyalar görüntülenebilir, ancak makroları hiçbir zaman çal�
 Arşivlerin açılmış boyutu ve görüntülenen slaytların boyutları sınırlandırılır. Şifrelenmiş sunumlar ve eski .ppt dosyaları desteklenmez. Bu görüntüleyici sunumları düzenlemez veya yazdırmaz; harici belge kaynaklarını yüklemez.
 
 Markdown dışa aktarımı, slayt sırasını, mevcut başlıkları, temel metin yapısını ve konuşmacı notlarını korur. Gizli slaytlar da dahil edilir ve işaretlenir. Slayt düzeni, şablon süslemeleri, inceleme yorumları, animasyonlar veya geçişler korunmaz. Resimler, grafikler, denklemler, medya ve gömülü nesneler yerine içeriğin atlandığını belirten işaretler kullanılır; şekillerde bulunan metin korunur. Birleştirilmiş hücreler içeren tablolar ve karmaşık biçimlendirme basitleştirilir. Dışa aktarılan metni asıl sunumla karşılaştırın.
+
+Desteklenen bir sunumu görsel tabanlı PDF olarak indirmek için [PPTX’ten PDF’ye Dönüştürücü](../pptx-to-pdf-converter/) aracını kullanın ve indirmeden önce çıktının görünümünü kontrol edin.

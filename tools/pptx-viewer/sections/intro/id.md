@@ -11,3 +11,5 @@ File dengan makro dapat dilihat, tetapi makronya tidak pernah dijalankan. Konten
 Ukuran hasil ekstraksi arsip dan slide yang dirender dibatasi. Presentasi terenkripsi dan file .ppt lama tidak didukung. Penampil ini tidak mengedit atau mencetak presentasi maupun memuat sumber daya dokumen eksternal.
 
 Ekspor Markdown mempertahankan urutan slide, judul yang tersedia, struktur teks dasar, dan catatan pembicara. Slide tersembunyi disertakan dan ditandai. Ekspor tidak mempertahankan tata letak slide, dekorasi templat, komentar peninjauan, animasi, atau transisi. Gambar, bagan, persamaan, media, dan objek yang disematkan diganti dengan penanda bahwa konten tidak disertakan; teks yang tersedia di dalam bentuk tetap dipertahankan. Tabel dengan sel gabungan dan pemformatan kompleks disederhanakan. Bandingkan teks yang diekspor dengan presentasi asli.
+
+Untuk mengunduh presentasi yang didukung sebagai PDF berbasis gambar, gunakan [Konverter PPTX ke PDF](../pptx-to-pdf-converter/) dan periksa tampilan hasilnya sebelum mengunduh.
