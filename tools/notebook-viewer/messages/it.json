@@ -2,7 +2,7 @@
   "open": "Apri documento",
   "replace": "Sostituisci documento",
   "clear": "Chiudi documento",
-  "reader": "Lettore di notebook Jupyter",
+  "reader": "Visualizzatore di notebook Jupyter",
   "privacy": "I file restano sul tuo dispositivo. Nessun caricamento, esecuzione di codice o risorsa remota.",
   "focus": "Modalità lettura senza distrazioni",
   "exitFocus": "Esci dalla lettura senza distrazioni",

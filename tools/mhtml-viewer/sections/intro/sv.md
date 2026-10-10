@@ -8,6 +8,6 @@ Visaren hanterar content-location- och content-ID-referenser inom arkivet. Om en
 
 ## Kompatibilitet
 
-Läsaren stöder HTML-sidor i multipart/related-webbarkiv, inklusive base64- och quoted-printable-resurser samt vanliga textkodningar. Ofullständiga arkiv visar återställt innehåll med ett meddelande. Ovanliga nästlade multipart-strukturer och e-postmeddelanden får en tydlig förklaring.
+Visaren stöder HTML-sidor i multipart/related-webbarkiv, inklusive base64- och quoted-printable-resurser samt vanliga textkodningar. Ofullständiga arkiv visar återställt innehåll med ett meddelande. Ovanliga nästlade multipart-strukturer och e-postmeddelanden får en tydlig förklaring.
 
 Skript, formulär, omdirigeringar, inbäddade appar och nästlade sidor är inaktiverade. Bildformat som inte stöds och komplexa sidlayouter kan skilja sig från originalet. Visaren kan inte återställa webbplatssessioner eller innehåll som inte sparades i arkivet. Om filen är skadad, spara ett nytt webbarkiv i det ursprungliga programmet.

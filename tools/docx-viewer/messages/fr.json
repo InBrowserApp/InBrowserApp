@@ -7,7 +7,7 @@
   "loading": "Ouverture du document…",
   "error": "Impossible d’afficher ce fichier Word",
   "invalid": "Choisissez un fichier DOCX, DOCM, DOTX ou DOTM lisible et non chiffré. Il est peut-être endommagé ou utilise une fonctionnalité non prise en charge.",
-  "resourceLimit": "Ce document dépasse les limites de ressources du lecteur. Essayez un document moins complexe.",
+  "resourceLimit": "Ce document dépasse les limites de ressources de la visionneuse. Essayez un document moins complexe.",
   "page": "Page",
   "pageCount": "sur {total}",
   "previous": "Page précédente",

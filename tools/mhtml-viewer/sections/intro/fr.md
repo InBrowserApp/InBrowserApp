@@ -8,6 +8,6 @@ La visionneuse résout les références content-location et content-ID à l’in
 
 ## Compatibilité
 
-Ce lecteur prend en charge les pages HTML des archives web multipart/related, y compris les ressources base64 et quoted-printable ainsi que les encodages de texte courants. Les captures incomplètes affichent le contenu récupéré avec un avertissement. Les structures multipart imbriquées inhabituelles et les e-mails font l’objet d’une explication claire.
+Cette visionneuse prend en charge les pages HTML des archives web multipart/related, y compris les ressources base64 et quoted-printable ainsi que les encodages de texte courants. Les captures incomplètes affichent le contenu récupéré avec un avertissement. Les structures multipart imbriquées inhabituelles et les e-mails font l’objet d’une explication claire.
 
 Les scripts, formulaires, redirections, applications intégrées et pages imbriquées sont désactivés. Les formats d’image non pris en charge et les mises en page complexes peuvent différer de l’original. La visionneuse ne peut pas restaurer les sessions de sites web ni le contenu absent de l’archive. Si un fichier est endommagé, enregistre une nouvelle archive web dans l’application d’origine.

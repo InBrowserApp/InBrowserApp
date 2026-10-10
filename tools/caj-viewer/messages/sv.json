@@ -34,7 +34,7 @@
   "fontsRequired": "Den här textbaserade varianten kräver teckensnittsresurser som inte ingår. Prova en PDF-kopia från dokumentleverantören.",
   "protected": "Dokumentet är skyddat. Öppna en åtkomlig kopia från dokumentleverantören.",
   "resource": "Dokumentet kräver mer minne än webbläsaren kan tillhandahålla. Stäng andra flikar eller prova en annan enhet.",
-  "engineUnavailable": "Läsaren kunde inte laddas. Kontrollera anslutningen och öppna dokumentet igen.",
+  "engineUnavailable": "Visaren kunde inte laddas. Kontrollera anslutningen och öppna dokumentet igen.",
   "missingPages": "Dokumentet kunde inte öppnas fullständigt. Vissa sidor saknas eller är oläsbara. Prova en annan kopia.",
   "fitPage": "Anpassa sida",
   "rotate": "Rotera medurs",

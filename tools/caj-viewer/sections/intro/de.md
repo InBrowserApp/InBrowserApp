@@ -6,7 +6,7 @@
 
 Nutze die Seitenzahl, die Schaltflächen zum Vor- und Zurückblättern oder die Seitenübersicht, um durch einen Artikel zu navigieren. Die Übersicht enthält Vorschaubilder und, sofern verfügbar, ein Inhaltsverzeichnis. Passe die Seite oder ihre Breite an, ändere den Zoom, drehe Seiten oder wechsle für mehr Platz in den Fokusmodus.
 
-Suche und markiere Text dort, wo tatsächlicher Dokumenttext vorhanden ist. Gescannte Seiten bleiben Bilder: Dieser Viewer führt keine Texterkennung (OCR) durch. Mit der Tastatur kannst du per Tabulatortaste in den Lesebereich wechseln, die Seitensteuerung nutzen und mit Escape eine geöffnete Übersicht, die Suche oder den Fokusmodus verlassen.
+Suche und markiere Text dort, wo tatsächlicher Dokumenttext vorhanden ist. Gescannte Seiten bleiben Bilder: Dieser Betrachter führt keine Texterkennung (OCR) durch. Mit der Tastatur kannst du per Tabulatortaste in den Lesebereich wechseln, die Seitensteuerung nutzen und mit Escape eine geöffnete Übersicht, die Suche oder den Fokusmodus verlassen.
 
 ## Formatkompatibilität
 

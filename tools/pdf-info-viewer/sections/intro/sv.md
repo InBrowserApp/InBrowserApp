@@ -1,9 +1,9 @@
 ## Vad det här verktyget gör
 
-PDF Info Viewer öppnar en PDF i din webbläsare och sammanfattar grundläggande
+PDF-informationsvisaren öppnar en PDF i din webbläsare och sammanfattar grundläggande
 filinformation, PDF-rubrikens version, sidantal, första sidans storlek,
 krypteringsstatus och dokumentmetadata som titel, författare, ämne, nyckelord,
-skapare, producent och datum. Det är avsett för snabb granskning innan du delar,
+skapare, producent och datum. Den är avsedd för snabb granskning innan du delar,
 arkiverar, felsöker eller bearbetar ett dokument.
 
 ## Bra användningsfall

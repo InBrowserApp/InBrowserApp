@@ -4,7 +4,7 @@ Buka fail .txt, .text atau .log untuk membacanya dengan nombor baris, saiz teks 
 
 ## Fail besar dan baris panjang
 
-Pembaca memaparkan satu bahagian pada satu masa supaya fail besar kekal mudah digunakan. Setiap bahagian tetap boleh diakses, termasuk sambungan baris yang sangat panjang. Pemilihan teks dan perintah carian pelayar anda meliputi bahagian semasa; Cari teks dalam pembaca mencari dalam keseluruhan fail yang dinyahkod, termasuk padanan yang merentasi sempadan bahagian. Tiada had saiz fail atau bilangan baris dikenakan. Memori pelayar yang tersedia masih menetapkan had praktikal.
+Pemapar memaparkan satu bahagian pada satu masa supaya fail besar kekal mudah digunakan. Setiap bahagian tetap boleh diakses, termasuk sambungan baris yang sangat panjang. Pemilihan teks dan perintah carian pelayar anda meliputi bahagian semasa; Cari teks dalam pemapar mencari dalam keseluruhan fail yang dinyahkod, termasuk padanan yang merentasi sempadan bahagian. Tiada had saiz fail atau bilangan baris dikenakan. Memori pelayar yang tersedia masih menetapkan had praktikal.
 
 Baris kosong, tab, campuran pengakhiran baris CRLF/CR/LF dan teks Unicode dikekalkan. Pengakhiran baris dipaparkan sebagai pemisah baris. Penanda dan jujukan lepas terminal kekal sebagai teks yang tidak dilaksanakan. Sesetengah aksara kawalan tiada bentuk yang kelihatan; fail yang mengandungi aksara NUL menerima notis fail binari.
 

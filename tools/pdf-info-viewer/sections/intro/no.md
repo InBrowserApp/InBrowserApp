@@ -1,6 +1,6 @@
 ## Hva dette verktøyet gjør
 
-PDF Info Viewer åpner en PDF i nettleseren og oppsummerer grunnleggende
+PDF-informasjonsviseren åpner en PDF i nettleseren og oppsummerer grunnleggende
 fildetaljer, PDF-hodeversjon, sidetall, størrelse på første side,
 krypteringsstatus og dokumentmetadata som tittel, forfatter, emne, nøkkelord,
 oppretter, produsent og datoer. Den er laget for rask inspeksjon før deling,
@@ -29,7 +29,7 @@ i en offentlig sak.
 ## Begrensninger
 
 Noen krypterte eller skadede PDF-er viser bare filnavn, størrelse og
-hodeversjon. Denne visningen fjerner ikke metadata, dekrypterer ikke filer,
+hodeversjon. Denne viseren fjerner ikke metadata, dekrypterer ikke filer,
 reparerer ikke ødelagte dokumenter og validerer ikke visuell layout. Bruk et
 dedikert PDF-redigeringsprogram eller renseverktøy når du må endre dokumentet
 før du deler det.

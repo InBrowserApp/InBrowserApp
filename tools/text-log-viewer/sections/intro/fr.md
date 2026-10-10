@@ -4,7 +4,7 @@ Ouvrez un fichier .txt, .text ou .log pour le lire avec des numéros de ligne, u
 
 ## Fichiers volumineux et longues lignes
 
-Le lecteur affiche une section à la fois pour faciliter la consultation des fichiers volumineux. Toutes les sections restent accessibles, y compris la suite des très longues lignes. La sélection et la commande de recherche du navigateur couvrent la section actuelle ; la fonction Rechercher du texte du lecteur parcourt tout le fichier décodé, y compris les résultats à cheval sur plusieurs sections. Aucune limite de taille de fichier ou de nombre de lignes n’est imposée. La mémoire disponible dans le navigateur constitue toutefois une limite pratique.
+La visionneuse affiche une section à la fois pour faciliter la consultation des fichiers volumineux. Toutes les sections restent accessibles, y compris la suite des très longues lignes. La sélection et la commande de recherche du navigateur couvrent la section actuelle ; la fonction Rechercher du texte de la visionneuse parcourt tout le fichier décodé, y compris les résultats à cheval sur plusieurs sections. Aucune limite de taille de fichier ou de nombre de lignes n’est imposée. La mémoire disponible dans le navigateur constitue toutefois une limite pratique.
 
 Les lignes vides, les tabulations, les fins de ligne mixtes CRLF/CR/LF et le texte Unicode sont préservés. Les fins de ligne sont affichées comme des sauts de ligne. Le balisage et les séquences d’échappement du terminal restent du texte inactif. Certains caractères de contrôle n’ont pas de glyphe visible ; les fichiers contenant des caractères NUL affichent un avertissement de fichier binaire.
 

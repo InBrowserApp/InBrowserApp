@@ -2,7 +2,7 @@
   "open": "Open archive",
   "replace": "Replace archive",
   "clear": "Close archive",
-  "reader": "MHTML archive reader",
+  "reader": "MHTML archive viewer",
   "privacy": "Files stay on your device. No uploads or live resource requests.",
   "focus": "Focus reading mode",
   "exitFocus": "Exit focus reading mode",

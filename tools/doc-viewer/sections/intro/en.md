@@ -4,7 +4,7 @@ Open a Word 97–2003 `.doc` document, a compatible WPS Writer `.wps` document, 
 
 ## Compatibility and reading layout
 
-This reader supports Word binary documents and compatible WPS Writer files that contain Word binary or HTML document content in an OLE container. The file contents determine compatibility, not just the extension. Microsoft Works files and older proprietary WPS formats are not supported. Use the DOCX viewer for modern Word files.
+This viewer supports Word binary documents and compatible WPS Writer files that contain Word binary or HTML document content in an OLE container. The file contents determine compatibility, not just the extension. Microsoft Works files and older proprietary WPS formats are not supported. Use the DOCX viewer for modern Word files.
 
 The preview preserves readable text, tables, basic formatting, and supported embedded pictures. Fonts, list numbering, columns, floating objects, and page boundaries can differ from the original. Headers, footers, footnotes, endnotes, and comments are not displayed. Recovered text boxes may follow the main text. Unsupported drawings and embedded applications can be omitted; reading notes identify a partial preview when detected.
 

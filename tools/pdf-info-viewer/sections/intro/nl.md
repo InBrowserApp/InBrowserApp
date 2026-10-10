@@ -1,6 +1,6 @@
 ## Wat deze tool doet
 
-PDF Info Viewer opent een PDF in je browser en vat de basisgegevens van het
+PDF-informatieviewer opent een PDF in je browser en vat de basisgegevens van het
 bestand samen: PDF-headerversie, aantal pagina's, grootte van de eerste pagina,
 versleutelingsstatus en documentmetadata zoals titel, auteur, onderwerp,
 trefwoorden, maker, producent en datums. De tool is bedoeld voor snelle

@@ -4,7 +4,7 @@ Mở tệp .txt, .text hoặc .log để đọc với số dòng, cỡ chữ có
 
 ## Tệp lớn và dòng dài
 
-Trình đọc hiển thị từng phần để bạn vẫn dễ dàng đọc tệp lớn. Bạn có thể truy cập mọi phần, kể cả phần tiếp nối của các dòng rất dài. Việc chọn văn bản và lệnh Tìm của trình duyệt chỉ áp dụng cho phần hiện tại; chức năng Tìm văn bản của trình đọc tìm trong toàn bộ tệp đã giải mã, kể cả kết quả nằm trên ranh giới giữa các phần. Không áp đặt giới hạn kích thước tệp hay số dòng. Bộ nhớ khả dụng của trình duyệt vẫn là giới hạn thực tế.
+Trình xem hiển thị từng phần để bạn vẫn dễ dàng đọc tệp lớn. Bạn có thể truy cập mọi phần, kể cả phần tiếp nối của các dòng rất dài. Việc chọn văn bản và lệnh Tìm của trình duyệt chỉ áp dụng cho phần hiện tại; chức năng Tìm văn bản của trình xem tìm trong toàn bộ tệp đã giải mã, kể cả kết quả nằm trên ranh giới giữa các phần. Không áp đặt giới hạn kích thước tệp hay số dòng. Bộ nhớ khả dụng của trình duyệt vẫn là giới hạn thực tế.
 
 Các dòng trống, ký tự tab, kiểu kết thúc dòng CRLF/CR/LF hỗn hợp và văn bản Unicode được giữ nguyên. Ký tự kết thúc dòng được hiển thị thành ngắt dòng. Mã đánh dấu và chuỗi thoát của giao diện dòng lệnh vẫn là văn bản không được thực thi. Một số ký tự điều khiển không có hình dạng hiển thị; tệp chứa ký tự NUL sẽ có thông báo về tệp nhị phân.
 

@@ -1,8 +1,8 @@
 ## Hva dette verktøyet gjør
 
-EXIF Viewer leser bildemetadata direkte i nettleseren og grupperer
+EXIF-viseren leser bildemetadata direkte i nettleseren og grupperer
 resultatene i grunnleggende bildedetaljer, kamerainnstillinger, GPS-felt og
-avanserte innebygde data. Det støtter vanlige fotoformater som JPEG, PNG,
+avanserte innebygde data. Den støtter vanlige fotoformater som JPEG, PNG,
 HEIC, TIFF, WebP og GIF når nettleseren og metadataparseren kan lese dem.
 
 ## Gode bruksområder
@@ -18,7 +18,7 @@ HEIC, TIFF, WebP og GIF når nettleseren og metadataparseren kan lese dem.
 **Personvernpåminnelse:** Bildemetadata kan inneholde nøyaktig posisjon, enhets- og tidsstempeldetaljer. Se gjennom dem før du deler bilder offentlig.
 
 Metadata kan avsløre nøyaktig posisjon, opptakstidspunkt, enhetsmodell,
-programvare som ble brukt til å lage filen, eller opphavsrettsfelt. Dette
-visningsverktøyet laster ikke opp bildet, men det fjerner heller ikke metadata;
+programvare som ble brukt til å lage filen, eller opphavsrettsfelt. Denne
+viseren laster ikke opp bildet, men den fjerner heller ikke metadata;
 bruk et verktøy for å rense bildemetadata før du deler et bilde hvis feltene
 avslører mer enn du ønsker.

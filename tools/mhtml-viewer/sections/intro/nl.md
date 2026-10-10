@@ -8,6 +8,6 @@ De viewer verwerkt content-location- en content-ID-verwijzingen binnen het archi
 
 ## Compatibiliteit
 
-Deze lezer ondersteunt HTML-pagina’s in multipart/related-webarchieven, waaronder base64- en quoted-printable-bronnen en gangbare tekstcoderingen. Bij onvolledige archieven wordt herstelde inhoud met een melding getoond. Bij ongebruikelijke geneste multipartstructuren en e-mailberichten krijg je een duidelijke uitleg.
+Deze viewer ondersteunt HTML-pagina’s in multipart/related-webarchieven, waaronder base64- en quoted-printable-bronnen en gangbare tekstcoderingen. Bij onvolledige archieven wordt herstelde inhoud met een melding getoond. Bij ongebruikelijke geneste multipartstructuren en e-mailberichten krijg je een duidelijke uitleg.
 
 Scripts, formulieren, omleidingen, ingesloten apps en geneste pagina’s zijn uitgeschakeld. Niet-ondersteunde afbeeldingsformaten en complexe pagina-indelingen kunnen afwijken van het origineel. De viewer kan geen websitesessies of inhoud herstellen die niet in het archief is opgeslagen. Sla bij een beschadigd bestand een nieuw webarchief op in de oorspronkelijke toepassing.

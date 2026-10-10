@@ -4,7 +4,7 @@ Abre un documento `.doc` de Word 97–2003, un documento `.wps` compatible de WP
 
 ## Compatibilidad y diseño de lectura
 
-Este lector admite documentos binarios de Word y archivos compatibles de WPS Writer que contienen documentos binarios de Word o contenido HTML en un contenedor OLE. La compatibilidad depende del contenido del archivo, no solo de su extensión. No se admiten archivos de Microsoft Works ni formatos WPS propietarios antiguos. Usa el visor de DOCX para los archivos de Word modernos.
+Este visor admite documentos binarios de Word y archivos compatibles de WPS Writer que contienen documentos binarios de Word o contenido HTML en un contenedor OLE. La compatibilidad depende del contenido del archivo, no solo de su extensión. No se admiten archivos de Microsoft Works ni formatos WPS propietarios antiguos. Usa el visor de DOCX para los archivos de Word modernos.
 
 La vista previa conserva el texto legible, las tablas, el formato básico y las imágenes incrustadas compatibles. Las fuentes, la numeración de listas, las columnas, los objetos flotantes y los límites de página pueden diferir del original. No se muestran encabezados de página, pies de página, notas al pie, notas al final ni comentarios. Los cuadros de texto recuperados pueden aparecer después del texto principal. Los dibujos no compatibles y las aplicaciones incrustadas pueden omitirse; las notas de lectura indican si se detecta una vista previa parcial.
 

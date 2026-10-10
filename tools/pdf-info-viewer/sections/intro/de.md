@@ -1,6 +1,6 @@
 ## Was dieses Tool macht
 
-PDF Info Viewer öffnet eine PDF in deinem Browser und fasst grundlegende
+Der PDF-Info-Betrachter öffnet eine PDF in deinem Browser und fasst grundlegende
 Dateidetails, die PDF-Header-Version, Seitenanzahl, Größe der ersten Seite,
 Verschlüsselungsstatus und Dokumentmetadaten wie Titel, Autor, Betreff,
 Schlüsselwörter, Ersteller, Produzent und Datumsangaben zusammen. Er ist für
@@ -31,7 +31,7 @@ veröffentlichst oder an einen öffentlichen Fehlerbericht anhängst.
 ## Einschränkungen
 
 Einige verschlüsselte oder beschädigte PDFs geben nur Dateiname, Größe und
-Header-Version preis. Dieser Viewer entfernt keine Metadaten, entschlüsselt
+Header-Version preis. Dieser Betrachter entfernt keine Metadaten, entschlüsselt
 keine Dateien, repariert keine beschädigten Dokumente und validiert kein
 visuelles Layout. Verwende einen spezialisierten PDF-Editor oder Sanitizer,
 wenn du das Dokument vor dem Teilen ändern musst.

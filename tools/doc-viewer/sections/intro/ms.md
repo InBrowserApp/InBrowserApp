@@ -4,7 +4,7 @@ Buka dokumen Word 97–2003 `.doc`, dokumen WPS Writer `.wps` yang serasi atau t
 
 ## Keserasian dan susun atur bacaan
 
-Pembaca ini menyokong dokumen binari Word dan fail WPS Writer yang serasi yang mengandungi kandungan dokumen binari Word atau HTML dalam bekas OLE. Kandungan fail menentukan keserasian, bukan sekadar sambungannya. Fail Microsoft Works dan format WPS proprietari lama tidak disokong. Gunakan pemapar DOCX untuk fail Word moden.
+Pemapar ini menyokong dokumen binari Word dan fail WPS Writer yang serasi yang mengandungi kandungan dokumen binari Word atau HTML dalam bekas OLE. Kandungan fail menentukan keserasian, bukan sekadar sambungannya. Fail Microsoft Works dan format WPS proprietari lama tidak disokong. Gunakan pemapar DOCX untuk fail Word moden.
 
 Pratonton mengekalkan teks yang boleh dibaca, jadual, pemformatan asas dan gambar terbenam yang disokong. Fon, penomboran senarai, lajur, objek terapung dan sempadan halaman boleh berbeza daripada yang asal. Pengepala, pengaki, nota kaki, nota hujung dan komen tidak dipaparkan. Kotak teks yang dipulihkan mungkin muncul selepas teks utama. Lukisan yang tidak disokong dan aplikasi terbenam mungkin tidak disertakan; nota bacaan menyatakan pratonton separa apabila dikesan.
 

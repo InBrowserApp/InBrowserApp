@@ -1,6 +1,6 @@
 ## Cosa Fa Questo Strumento
 
-Markdown Previewer apre documenti `.md`, `.markdown`, `.mdown` e `.txt` localmente nel browser. La modalità Leggi nasconde l’editor del sorgente, mentre la modalità concentrazione dedica lo schermo al documento. Regola la dimensione del testo, la larghezza di lettura e il tema pulito o ardesia senza perdere il punto. La struttura comprimibile permette di navigare tra i titoli Markdown, mentre tabelle larghe e blocchi di codice scorrono in modo indipendente.
+Anteprima Markdown apre documenti `.md`, `.markdown`, `.mdown` e `.txt` localmente nel browser. La modalità Leggi nasconde l’editor del sorgente, mentre la modalità concentrazione dedica lo schermo al documento. Regola la dimensione del testo, la larghezza di lettura e il tema pulito o ardesia senza perdere il punto. La struttura comprimibile permette di navigare tra i titoli Markdown, mentre tabelle larghe e blocchi di codice scorrono in modo indipendente.
 
 ## Quando Usarlo
 

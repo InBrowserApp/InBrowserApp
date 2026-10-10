@@ -1,6 +1,6 @@
 ## Công cụ này làm gì
 
-EXIF Viewer đọc siêu dữ liệu ảnh trực tiếp trong trình duyệt của bạn và nhóm
+Trình xem EXIF đọc siêu dữ liệu ảnh trực tiếp trong trình duyệt của bạn và nhóm
 kết quả thành thông tin ảnh cơ bản, cài đặt máy ảnh, trường GPS và dữ liệu
 nhúng nâng cao. Công cụ hỗ trợ các định dạng ảnh phổ biến như JPEG, PNG, HEIC,
 TIFF, WebP và GIF khi trình duyệt và bộ phân tích siêu dữ liệu có thể đọc được.

@@ -2,7 +2,7 @@
   "open": "開啟文件",
   "replace": "更換文件",
   "clear": "關閉文件",
-  "reader": "Jupyter 筆記本閱讀器",
+  "reader": "Jupyter 筆記本檢視器",
   "privacy": "檔案保留在您的裝置上，不會上傳、執行程式碼或載入遠端資源。",
   "focus": "專注閱讀模式",
   "exitFocus": "退出專注閱讀模式",

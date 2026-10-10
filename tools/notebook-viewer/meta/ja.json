@@ -1,4 +1,4 @@
 {
-  "name": "Jupyter Notebook Viewer",
+  "name": "Jupyter Notebook ビューアー",
   "description": "端末内の .ipynb ノートブックの Markdown、コード、保存済みの出力を閲覧し、セル単位で移動できます。アップロードやコードの実行は行いません。"
 }

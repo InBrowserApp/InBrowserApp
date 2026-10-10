@@ -2,7 +2,7 @@
   "open": "文書を開く",
   "replace": "文書を入れ替える",
   "clear": "文書を閉じる",
-  "reader": "OpenDocument リーダー",
+  "reader": "OpenDocument ビューアー",
   "privacy": "ファイルはお使いの端末内に留まります。アップロードや外部リソースの読み込みは行いません。",
   "focus": "集中読書モード",
   "exitFocus": "集中読書モードを終了",

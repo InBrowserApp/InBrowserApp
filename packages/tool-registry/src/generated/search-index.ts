@@ -497,7 +497,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Öppna ZIP, TAR, GZ och TGZ-filer lokalt i webbläsaren, bläddra i deras mappträd, förhandsgranska läsbara poster och ladda ner enskilda filer.",
       },
       th: {
-        name: "ตัวดูไฟล์อาร์ไคฟ์",
+        name: "โปรแกรมดูไฟล์อาร์ไคฟ์",
         description:
           "เปิดไฟล์ ZIP, TAR, GZ และ TGZ ภายในเบราว์เซอร์ของคุณ เลือกดูโครงสร้างโฟลเดอร์ แสดงตัวอย่างรายการที่อ่านได้ และดาวน์โหลดไฟล์แต่ละรายการได้โดยตรง",
       },
@@ -912,7 +912,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "اقرأ أدلة ومقالات AsciiDoc المحلية مع مخطط للعناوين وحجم قراءة قابل للتعديل ووضع تركيز. تبقى الملفات على جهازك.",
       },
       de: {
-        name: "AsciiDoc Viewer",
+        name: "AsciiDoc-Betrachter",
         description:
           "Lies lokale AsciiDoc-Handbücher und -Artikel mit Gliederung, einstellbarer Lesegröße und Fokusmodus. Dateien bleiben auf deinem Gerät.",
       },
@@ -932,17 +932,17 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Lisez des manuels et articles AsciiDoc locaux avec un plan, une taille de lecture réglable et un mode concentration. Les fichiers restent sur votre appareil.",
       },
       he: {
-        name: "AsciiDoc Viewer",
+        name: "מציג AsciiDoc",
         description:
           "קריאת מדריכים ומאמרים מקומיים ב־AsciiDoc עם ראשי פרקים, גודל תצוגה מתכוונן ומצב קריאה ממוקדת. הקבצים נשארים במכשיר שלך.",
       },
       hi: {
-        name: "AsciiDoc Viewer",
+        name: "AsciiDoc व्यूअर",
         description:
           "रूपरेखा, पढ़ने का समायोज्य आकार और एकाग्र मोड के साथ स्थानीय AsciiDoc मैनुअल और लेख पढ़ें। फ़ाइलें आपके डिवाइस पर रहती हैं।",
       },
       id: {
-        name: "AsciiDoc Viewer",
+        name: "Penampil AsciiDoc",
         description:
           "Baca manual dan artikel AsciiDoc lokal dengan kerangka dokumen, ukuran baca yang dapat disesuaikan, dan mode fokus. File tetap di perangkat Anda.",
       },
@@ -952,7 +952,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi manuali e articoli AsciiDoc locali con struttura del documento, zoom regolabile e modalità senza distrazioni. I file restano sul tuo dispositivo.",
       },
       ja: {
-        name: "AsciiDoc Viewer",
+        name: "AsciiDoc ビューアー",
         description:
           "端末内の AsciiDoc マニュアルや記事を、目次、表示サイズの調整、集中読書モードで快適に閲覧できます。ファイルは端末内に留まります。",
       },
@@ -967,7 +967,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Baca manual dan artikel AsciiDoc setempat dengan rangka, saiz bacaan boleh laras dan mod fokus. Fail kekal pada peranti anda.",
       },
       nl: {
-        name: "AsciiDoc Viewer",
+        name: "AsciiDoc-viewer",
         description:
           "Lees lokale AsciiDoc-handleidingen en -artikelen met een inhoudsopgave, instelbare leesgrootte en leesmodus. Bestanden blijven op je apparaat.",
       },
@@ -977,7 +977,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Les lokale AsciiDoc-håndbøker og artikler med dokumentoversikt, justerbar tekststørrelse og fokusmodus. Filene forblir på enheten din.",
       },
       pl: {
-        name: "AsciiDoc Viewer",
+        name: "Przeglądarka AsciiDoc",
         description:
           "Czytaj lokalne podręczniki i artykuły AsciiDoc ze spisem treści, regulowanym rozmiarem tekstu i trybem skupienia. Pliki pozostają na Twoim urządzeniu.",
       },
@@ -992,12 +992,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Читайте локальные руководства и статьи AsciiDoc со структурой документа, настройкой масштаба и режимом чтения. Файлы остаются на вашем устройстве.",
       },
       sv: {
-        name: "AsciiDoc Viewer",
+        name: "AsciiDoc-visare",
         description:
           "Läs lokala AsciiDoc-handböcker och artiklar med dokumentöversikt, justerbar lässtorlek och fokusläge. Filerna stannar på din enhet.",
       },
       th: {
-        name: "AsciiDoc Viewer",
+        name: "โปรแกรมดู AsciiDoc",
         description:
           "อ่านคู่มือและบทความ AsciiDoc บนอุปกรณ์ พร้อมโครงร่างเอกสาร ขนาดการอ่านที่ปรับได้ และโหมดอ่านแบบมีสมาธิ ไฟล์อยู่บนอุปกรณ์ของคุณ",
       },
@@ -1007,7 +1007,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Yerel AsciiDoc kılavuzlarını ve makalelerini ana hatlar, ayarlanabilir okuma boyutu ve odak modu ile okuyun. Dosyalar cihazınızda kalır.",
       },
       vi: {
-        name: "AsciiDoc Viewer",
+        name: "Trình xem AsciiDoc",
         description:
           "Đọc hướng dẫn và bài viết AsciiDoc trên thiết bị với mục lục, cỡ hiển thị tùy chỉnh và chế độ tập trung. Tệp luôn ở trên thiết bị của bạn.",
       },
@@ -3864,12 +3864,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     ],
     locales: {
       ar: {
-        name: "CAJ Viewer",
+        name: "عارض CAJ",
         description:
           "اقرأ أوراق CAJ وKDH وNH البحثية المحلية مع التنقل بين الصفحات والصور المصغّرة والتكبير والبحث النصي حيث يتوفر.",
       },
       de: {
-        name: "CAJ Viewer",
+        name: "CAJ-Betrachter",
         description:
           "Lies lokale CAJ-, KDH- und NH-Artikel mit Seitennavigation, Vorschaubildern, Zoom und Textsuche, soweit verfügbar.",
       },
@@ -3879,17 +3879,17 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Read local CAJ, KDH, and NH papers with page navigation, thumbnails, zoom, and text search where available.",
       },
       es: {
-        name: "CAJ Viewer",
+        name: "Visor de CAJ",
         description:
           "Lee artículos CAJ, KDH y NH locales con navegación por páginas, miniaturas, zoom y búsqueda de texto cuando esté disponible.",
       },
       fr: {
-        name: "CAJ Viewer",
+        name: "Visionneuse CAJ",
         description:
           "Lisez des articles CAJ, KDH et NH locaux avec navigation par page, vignettes, zoom et recherche de texte lorsqu’elle est disponible.",
       },
       he: {
-        name: "CAJ Viewer",
+        name: "מציג CAJ",
         description:
           "קראו מאמרי CAJ, KDH ו־NH מקומיים עם ניווט בין עמודים, תמונות ממוזערות, הגדלה וחיפוש בטקסט כשאפשר.",
       },
@@ -3909,12 +3909,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi documenti locali CAJ, KDH e NH con navigazione tra le pagine, miniature, zoom e ricerca nel testo, se disponibile.",
       },
       ja: {
-        name: "CAJ Viewer",
+        name: "CAJ ビューアー",
         description:
           "端末内の CAJ、KDH、NH 論文を閲覧。ページ移動、サムネイル、ズーム、利用可能な場合はテキスト検索に対応しています。",
       },
       ko: {
-        name: "CAJ Viewer",
+        name: "CAJ 뷰어",
         description:
           "로컬 CAJ, KDH 및 NH 논문을 읽으세요. 페이지 이동, 미리보기, 확대/축소와 가능한 경우 텍스트 검색을 지원합니다.",
       },
@@ -3924,7 +3924,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Baca makalah CAJ, KDH dan NH setempat dengan navigasi halaman, imej kecil, zum dan carian teks apabila tersedia.",
       },
       nl: {
-        name: "CAJ Viewer",
+        name: "CAJ-viewer",
         description:
           "Lees lokale CAJ-, KDH- en NH-artikelen met paginanavigatie, miniaturen, zoom en tekstzoekfunctie waar beschikbaar.",
       },
@@ -3949,12 +3949,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Читайте локальные работы в форматах CAJ, KDH и NH: переход по страницам, миниатюры, масштабирование и поиск по доступному тексту.",
       },
       sv: {
-        name: "CAJ Viewer",
+        name: "CAJ-visare",
         description:
           "Läs lokala CAJ-, KDH- och NH-dokument med sidnavigering, miniatyrbilder, zoom och textsökning där det är möjligt.",
       },
       th: {
-        name: "เครื่องมือดู CAJ",
+        name: "โปรแกรมดู CAJ",
         description:
           "อ่านเอกสารวิชาการ CAJ, KDH และ NH จากอุปกรณ์ พร้อมการเปลี่ยนหน้า ภาพขนาดย่อ การซูม และการค้นหาข้อความเมื่อมีข้อความให้ค้นหา",
       },
@@ -3969,12 +3969,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Đọc bài nghiên cứu CAJ, KDH và NH trên thiết bị với điều hướng trang, hình thu nhỏ, thu phóng và tìm kiếm văn bản khi có.",
       },
       "zh-CN": {
-        name: "CAJ Viewer",
+        name: "CAJ 查看器",
         description:
           "阅读本地 CAJ、KDH 和 NH 论文，支持翻页、缩略图、缩放，以及可用文字的搜索。",
       },
       "zh-TW": {
-        name: "CAJ Viewer",
+        name: "CAJ 檢視器",
         description:
           "閱讀本機 CAJ、KDH 與 NH 論文，提供翻頁、縮圖、縮放功能，並可在有文字的部分進行搜尋。",
       },
@@ -4241,12 +4241,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["cbz", "comic", "manga", "reader", "zip", "offline"],
     locales: {
       ar: {
-        name: "CBZ Comic Reader",
+        name: "قارئ القصص المصوّرة CBZ",
         description:
           "اقرأ قصص CBZ المحلية بترتيب طبيعي للصفحات ومصغّرات وأدوات تكبير وملاءمة، مع القراءة من اليسار لليمين أو من اليمين لليسار. تبقى الملفات على جهازك.",
       },
       de: {
-        name: "CBZ Comic Reader",
+        name: "CBZ-Comic-Reader",
         description:
           "Lies lokale CBZ-Comics mit natürlicher Seitenfolge, Vorschauen, Zoom, Größenanpassung und Leserichtung von links oder rechts. Dateien bleiben auf deinem Gerät.",
       },
@@ -4256,102 +4256,102 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Read local CBZ comics with natural page ordering, thumbnails, zoom, fit controls, and left-to-right or right-to-left reading. Files stay on your device.",
       },
       es: {
-        name: "CBZ Comic Reader",
+        name: "Lector de cómics CBZ",
         description:
           "Lee cómics CBZ locales con orden natural de páginas, miniaturas, zoom, ajustes de tamaño y lectura de izquierda a derecha o de derecha a izquierda. Los archivos permanecen en tu dispositivo.",
       },
       fr: {
-        name: "CBZ Comic Reader",
+        name: "Lecteur de BD CBZ",
         description:
           "Lisez vos BD CBZ locales avec un ordre naturel des pages, des miniatures, le zoom, l’ajustement et la lecture dans les deux sens. Les fichiers restent sur votre appareil.",
       },
       he: {
-        name: "CBZ Comic Reader",
+        name: "קורא קומיקס CBZ",
         description:
           "קריאת קומיקס מקומי בפורמט CBZ עם סדר עמודים טבעי, תמונות ממוזערות, הגדלה, פקדי התאמה וקריאה משמאל לימין או מימין לשמאל. הקבצים נשארים במכשיר שלך.",
       },
       hi: {
-        name: "CBZ Comic Reader",
+        name: "CBZ कॉमिक रीडर",
         description:
           "अपने डिवाइस की CBZ कॉमिक पढ़ें: पृष्ठों का स्वाभाविक क्रम, थंबनेल, ज़ूम, फ़िट नियंत्रण और बाएँ से दाएँ या दाएँ से बाएँ पठन। फ़ाइलें आपके डिवाइस पर रहती हैं।",
       },
       id: {
-        name: "CBZ Comic Reader",
+        name: "Pembaca Komik CBZ",
         description:
           "Baca komik CBZ lokal dengan urutan halaman alami, pratinjau, pembesaran, penyesuaian tampilan, serta arah baca kiri ke kanan atau kanan ke kiri. File tetap di perangkat Anda.",
       },
       it: {
-        name: "CBZ Comic Reader",
+        name: "Lettore di fumetti CBZ",
         description:
           "Leggi fumetti CBZ locali con ordine naturale delle pagine, miniature, zoom, adattamento e lettura da sinistra a destra o viceversa. I file restano sul tuo dispositivo.",
       },
       ja: {
-        name: "CBZ Comic Reader",
+        name: "CBZ コミックリーダー",
         description:
           "端末内の CBZ コミックを自然なページ順で閲覧。サムネイル、拡大縮小、画面に合わせた表示、左右の読む方向の切り替えに対応。ファイルは端末内に留まります。",
       },
       ko: {
-        name: "CBZ Comic Reader",
+        name: "CBZ 만화 리더",
         description:
           "숫자 순서를 고려한 페이지 정렬, 미리보기, 확대/축소, 화면 맞춤 기능으로 로컬 CBZ 만화를 읽으세요. 좌우 읽기 방향을 선택할 수 있으며 파일은 기기에만 유지됩니다.",
       },
       ms: {
-        name: "CBZ Comic Reader",
+        name: "Pembaca Komik CBZ",
         description:
           "Baca komik CBZ setempat dengan susunan halaman semula jadi, lakaran kecil, zum, kawalan muat dan bacaan kiri ke kanan atau kanan ke kiri. Fail kekal pada peranti anda.",
       },
       nl: {
-        name: "CBZ Comic Reader",
+        name: "CBZ-striplezer",
         description:
           "Lees lokale CBZ-strips met natuurlijke paginavolgorde, miniaturen, zoom, passende weergave en leesrichting van links naar rechts of andersom. Bestanden blijven op je apparaat.",
       },
       no: {
-        name: "CBZ Comic Reader",
+        name: "CBZ-tegneserieleser",
         description:
           "Les lokale CBZ-tegneserier med naturlig siderekkefølge, miniatyrbilder, zoom, visningstilpasning og lesing fra venstre mot høyre eller omvendt. Filene blir på enheten din.",
       },
       pl: {
-        name: "CBZ Comic Reader",
+        name: "Czytnik komiksów CBZ",
         description:
           "Czytaj lokalne komiksy CBZ z naturalną kolejnością stron, miniaturami, powiększaniem, dopasowaniem widoku i kierunkiem od lewej lub prawej. Pliki pozostają na Twoim urządzeniu.",
       },
       pt: {
-        name: "CBZ Comic Reader",
+        name: "Leitor de quadrinhos CBZ",
         description:
           "Leia quadrinhos CBZ locais com ordem natural das páginas, miniaturas, zoom, ajustes de exibição e leitura da esquerda para a direita ou inversa. Os arquivos ficam no seu dispositivo.",
       },
       ru: {
-        name: "CBZ Comic Reader",
+        name: "Читалка комиксов CBZ",
         description:
           "Читайте локальные комиксы CBZ: естественный порядок страниц, миниатюры, масштаб, вписывание и чтение слева направо или справа налево. Файлы остаются на устройстве.",
       },
       sv: {
-        name: "CBZ Comic Reader",
+        name: "CBZ-serieläsare",
         description:
           "Läs lokala CBZ-serier med naturlig sidordning, miniatyrer, zoom, storleksanpassning och läsning från vänster till höger eller höger till vänster. Filerna stannar på din enhet.",
       },
       th: {
-        name: "CBZ Comic Reader",
+        name: "โปรแกรมอ่านการ์ตูน CBZ",
         description:
           "อ่านการ์ตูน CBZ ในอุปกรณ์ พร้อมการเรียงหน้าตามลำดับธรรมชาติ ภาพย่อ การซูม การปรับภาพให้พอดี และการอ่านจากซ้ายไปขวาหรือขวาไปซ้าย ไฟล์อยู่ในอุปกรณ์ของคุณ",
       },
       tr: {
-        name: "CBZ Comic Reader",
+        name: "CBZ Çizgi Roman Okuyucu",
         description:
           "Yerel CBZ çizgi romanlarını doğal sayfa sırası, küçük resimler, yakınlaştırma, sığdırma kontrolleri ve soldan sağa veya sağdan sola okuma seçenekleriyle okuyun. Dosyalar cihazınızda kalır.",
       },
       vi: {
-        name: "CBZ Comic Reader",
+        name: "Trình đọc truyện tranh CBZ",
         description:
           "Đọc truyện CBZ trên thiết bị với thứ tự trang tự nhiên, ảnh thu nhỏ, thu phóng, điều chỉnh vừa khung và hướng đọc trái sang phải hoặc phải sang trái. Tệp luôn ở trên thiết bị của bạn.",
       },
       "zh-CN": {
-        name: "CBZ Comic Reader",
+        name: "CBZ 漫画阅读器",
         description:
           "阅读本地 CBZ 漫画，支持页面自然排序、缩略图、缩放、页面适配以及从左到右或从右到左阅读。文件仅保留在您的设备上。",
       },
       "zh-TW": {
-        name: "CBZ Comic Reader",
+        name: "CBZ 漫畫閱讀器",
         description:
           "閱讀本機 CBZ 漫畫，支援自然頁面排序、縮圖、縮放、符合頁面與寬度，以及由左至右或由右至左閱讀。檔案會留在您的裝置上。",
       },
@@ -7558,7 +7558,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi documenti Word DOC precedenti e documenti e modelli WPS Writer compatibili in locale nel browser.",
       },
       ja: {
-        name: "DOC・WPSビューアー",
+        name: "DOC・WPS ビューアー",
         description:
           "従来のWord DOC文書や互換性のあるWPS Writer文書・テンプレートを、ブラウザー内でローカルに閲覧できます。",
       },
@@ -7768,7 +7768,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "اقرأ مستندات Word وقوالبه بصيغ DOCX وDOCM وDOTX وDOTM محليًا مع التنقل بين الصفحات والتكبير وتحديد النص والبحث. دون رفع الملفات أو تشغيل وحدات الماكرو.",
       },
       de: {
-        name: "DOCX Viewer",
+        name: "DOCX-Betrachter",
         description:
           "Lesen Sie Word-Dokumente und -Vorlagen in den Formaten DOCX, DOCM, DOTX und DOTM lokal mit Seitennavigation, Zoom, Textauswahl und Suche. Ohne Uploads oder Makroausführung.",
       },
@@ -7783,7 +7783,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Lee documentos y plantillas de Word DOCX, DOCM, DOTX y DOTM localmente con navegación por páginas, zoom, selección de texto y búsqueda. Sin subir archivos ni ejecutar macros.",
       },
       fr: {
-        name: "Lecteur DOCX",
+        name: "Visionneuse DOCX",
         description:
           "Lisez vos documents et modèles Word DOCX, DOCM, DOTX et DOTM en local avec navigation entre les pages, zoom, sélection de texte et recherche. Aucun envoi à un serveur ni exécution de macros.",
       },
@@ -7808,7 +7808,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi documenti e modelli Word DOCX, DOCM, DOTX e DOTM in locale con navigazione tra le pagine, zoom, selezione del testo e ricerca. Nessun caricamento su server né esecuzione di macro.",
       },
       ja: {
-        name: "DOCXビューアー",
+        name: "DOCX ビューアー",
         description:
           "ページ移動、ズーム、テキスト選択、検索機能でWordのDOCX、DOCM、DOTX、DOTM文書やテンプレートをローカルで閲覧できます。アップロードもマクロの実行も行いません。",
       },
@@ -7868,7 +7868,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Đọc tài liệu và mẫu Word DOCX, DOCM, DOTX và DOTM ngay trên thiết bị với tính năng chuyển trang, thu phóng, chọn văn bản và tìm kiếm. Không tải lên hoặc chạy macro.",
       },
       "zh-CN": {
-        name: "DOCX 阅读器",
+        name: "DOCX 查看器",
         description:
           "在本地阅读 Word DOCX、DOCM、DOTX 和 DOTM 文档及模板，支持翻页、缩放、文本选择和搜索。无需上传，不运行宏。",
       },
@@ -8140,12 +8140,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     ],
     locales: {
       ar: {
-        name: "Email Viewer",
+        name: "عارض البريد الإلكتروني",
         description:
           "اقرأ ملفات البريد الإلكتروني EML وEMLX وMSG محليًا، بما فيها ترويسات الرسائل وHTML أو النص العادي والصور المضمّنة وتفاصيل المرفقات.",
       },
       de: {
-        name: "Email Viewer",
+        name: "E-Mail-Betrachter",
         description:
           "Lies EML-, EMLX- und MSG-E-Mails lokal, einschließlich Kopfzeilen, HTML oder reinem Text, eingebetteten Bildern und Anhangdetails.",
       },
@@ -8155,102 +8155,102 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Read EML, EMLX, and MSG email files locally, including message headers, HTML or plain text, inline images, and attachment details.",
       },
       es: {
-        name: "Email Viewer",
+        name: "Visor de correo electrónico",
         description:
           "Lee archivos de correo EML, EMLX y MSG localmente, incluidos encabezados, HTML o texto sin formato, imágenes insertadas y detalles de los adjuntos.",
       },
       fr: {
-        name: "Email Viewer",
+        name: "Visionneuse d’e-mails",
         description:
           "Lisez localement des e-mails EML, EMLX et MSG, avec leurs en-têtes, leur contenu HTML ou texte brut, leurs images intégrées et les détails des pièces jointes.",
       },
       he: {
-        name: "Email Viewer",
+        name: "מציג דוא״ל",
         description:
           "קריאת קובצי דוא״ל EML, EMLX ו־MSG באופן מקומי, כולל כותרות ההודעה, HTML או טקסט פשוט, תמונות משובצות ופרטי קבצים מצורפים.",
       },
       hi: {
-        name: "Email Viewer",
+        name: "ईमेल व्यूअर",
         description:
           "EML, EMLX और MSG ईमेल फ़ाइलें अपने डिवाइस पर पढ़ें। संदेश के हेडर, HTML या सादा टेक्स्ट, संदेश में शामिल चित्र और अटैचमेंट का विवरण देखें।",
       },
       id: {
-        name: "Email Viewer",
+        name: "Penampil Email",
         description:
           "Baca file email EML, EMLX, dan MSG secara lokal, termasuk header pesan, HTML atau teks biasa, gambar dalam pesan, dan detail lampiran.",
       },
       it: {
-        name: "Email Viewer",
+        name: "Visualizzatore di email",
         description:
           "Leggi file email EML, EMLX e MSG in locale, con intestazioni, HTML o testo semplice, immagini incorporate e dettagli degli allegati.",
       },
       ja: {
-        name: "Email Viewer",
+        name: "メールビューアー",
         description:
           "EML、EMLX、MSG のメールファイルを端末内で閲覧。ヘッダー、HTML やテキストの本文、埋め込み画像、添付ファイルの詳細を確認できます。",
       },
       ko: {
-        name: "Email Viewer",
+        name: "이메일 뷰어",
         description:
           "EML, EMLX 및 MSG 이메일 파일을 로컬에서 읽고 메시지 헤더, HTML 또는 일반 텍스트, 본문 내 이미지, 첨부 파일 정보를 확인하세요.",
       },
       ms: {
-        name: "Email Viewer",
+        name: "Pemapar E-mel",
         description:
           "Baca fail e-mel EML, EMLX dan MSG secara setempat, termasuk pengepala mesej, HTML atau teks biasa, imej sebaris dan butiran lampiran.",
       },
       nl: {
-        name: "Email Viewer",
+        name: "E-mailviewer",
         description:
           "Lees EML-, EMLX- en MSG-e-mailbestanden lokaal, inclusief berichtheaders, HTML of platte tekst, ingesloten afbeeldingen en bijlagegegevens.",
       },
       no: {
-        name: "Email Viewer",
+        name: "E-postviser",
         description:
           "Les EML-, EMLX- og MSG-e-postfiler lokalt, med meldingshoder, HTML eller ren tekst, innebygde bilder og vedleggsdetaljer.",
       },
       pl: {
-        name: "Email Viewer",
+        name: "Przeglądarka wiadomości e-mail",
         description:
           "Czytaj lokalnie pliki e-mail EML, EMLX i MSG: nagłówki wiadomości, HTML lub zwykły tekst, obrazy w treści i szczegóły załączników.",
       },
       pt: {
-        name: "Email Viewer",
+        name: "Visualizador de e-mails",
         description:
           "Leia arquivos de e-mail EML, EMLX e MSG localmente, incluindo cabeçalhos, HTML ou texto simples, imagens incorporadas e detalhes dos anexos.",
       },
       ru: {
-        name: "Email Viewer",
+        name: "Просмотр писем",
         description:
           "Читайте файлы писем EML, EMLX и MSG локально: заголовки, HTML или обычный текст, встроенные изображения и сведения о вложениях.",
       },
       sv: {
-        name: "Email Viewer",
+        name: "E-postvisare",
         description:
           "Läs EML-, EMLX- och MSG-filer lokalt, inklusive meddelandehuvuden, HTML eller oformaterad text, inbäddade bilder och information om bilagor.",
       },
       th: {
-        name: "Email Viewer",
+        name: "โปรแกรมดูอีเมล",
         description:
           "อ่านไฟล์อีเมล EML, EMLX และ MSG ในอุปกรณ์ของคุณ พร้อมส่วนหัวข้อความ HTML หรือข้อความธรรมดา ภาพในข้อความ และรายละเอียดไฟล์แนบ",
       },
       tr: {
-        name: "Email Viewer",
+        name: "E-posta Görüntüleyici",
         description:
           "EML, EMLX ve MSG e-posta dosyalarını üstbilgiler, HTML veya düz metin, satır içi görseller ve ek ayrıntılarıyla birlikte yerel olarak okuyun.",
       },
       vi: {
-        name: "Email Viewer",
+        name: "Trình xem email",
         description:
           "Đọc cục bộ các tệp email EML, EMLX và MSG, gồm các trường tiêu đề thư, nội dung HTML hoặc văn bản thuần, ảnh nội tuyến và thông tin tệp đính kèm.",
       },
       "zh-CN": {
-        name: "Email Viewer",
+        name: "邮件查看器",
         description:
           "在本地读取 EML、EMLX 和 MSG 邮件文件，查看邮件头、HTML 或纯文本正文、内嵌图片及附件详情。",
       },
       "zh-TW": {
-        name: "Email Viewer",
+        name: "電子郵件檢視器",
         description:
           "在本機閱讀 EML、EMLX 與 MSG 郵件檔案，檢視郵件標頭、HTML 或純文字內容、內嵌圖片及附件詳細資訊。",
       },
@@ -8293,7 +8293,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "קריאה מקומית של ספרי EPUB עם ניווט בין פרקים, תוכן עניינים, גודל טקסט מתכוונן ותצוגת קריאה ממוקדת. ללא צורך בהעלאת קבצים.",
       },
       hi: {
-        name: "EPUB Reader",
+        name: "EPUB रीडर",
         description:
           "अध्याय नेविगेशन, विषय सूची, बदलने योग्य टेक्स्ट आकार और केंद्रित पठन दृश्य के साथ EPUB पुस्तकें स्थानीय रूप से पढ़ें। अपलोड की ज़रूरत नहीं।",
       },
@@ -8308,7 +8308,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi libri EPUB in locale con navigazione tra capitoli, indice, dimensione del testo regolabile e una vista di lettura senza distrazioni. Nessun caricamento richiesto.",
       },
       ja: {
-        name: "EPUB Reader",
+        name: "EPUB リーダー",
         description:
           "章の移動、目次、文字サイズの調整、集中読書モードを使って、EPUBの本をローカルで読めます。アップロードは不要です。",
       },
@@ -8323,7 +8323,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Baca buku EPUB secara setempat dengan navigasi bab, isi kandungan, saiz teks boleh laras dan paparan bacaan fokus. Tiada muat naik diperlukan.",
       },
       nl: {
-        name: "EPUB Reader",
+        name: "EPUB-lezer",
         description:
           "Lees EPUB-boeken lokaal met hoofdstuknavigatie, een inhoudsopgave, instelbare tekstgrootte en een gerichte leesweergave. Uploaden is niet nodig.",
       },
@@ -8514,7 +8514,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "اعرض بيانات الصور الوصفية، وإعدادات الكاميرا، وإحداثيات GPS، وحقول EXIF/IPTC/XMP المضمنة محليًا في متصفحك.",
       },
       de: {
-        name: "EXIF-Viewer",
+        name: "EXIF-Betrachter",
         description:
           "Zeigen Sie Bildmetadaten, Kameraeinstellungen, GPS-Koordinaten und eingebettete EXIF/IPTC/XMP-Felder lokal in Ihrem Browser an.",
       },
@@ -8524,7 +8524,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "View image metadata, camera settings, GPS coordinates, and embedded EXIF/IPTC/XMP fields locally in your browser.",
       },
       es: {
-        name: "Visor EXIF",
+        name: "Visor de EXIF",
         description:
           "Consulta metadatos de imágenes, ajustes de cámara, coordenadas GPS y campos EXIF/IPTC/XMP incrustados localmente en tu navegador.",
       },
@@ -8569,12 +8569,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Paparkan metadata imej, tetapan kamera, koordinat GPS, dan medan EXIF/IPTC/XMP terbenam secara setempat dalam pelayar anda.",
       },
       nl: {
-        name: "EXIF Viewer",
+        name: "EXIF-viewer",
         description:
           "Bekijk afbeeldingsmetadata, camera-instellingen, GPS-coördinaten en ingesloten EXIF/IPTC/XMP-velden lokaal in je browser.",
       },
       no: {
-        name: "EXIF Viewer",
+        name: "EXIF-viser",
         description:
           "Vis bildemetadata, kamerainnstillinger, GPS-koordinater og innebygde EXIF/IPTC/XMP-felt lokalt i nettleseren.",
       },
@@ -8599,7 +8599,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Visa bildmetadata, kamerainställningar, GPS-koordinater och inbäddade EXIF-/IPTC-/XMP-fält lokalt i din webbläsare.",
       },
       th: {
-        name: "ตัวดู EXIF",
+        name: "โปรแกรมดู EXIF",
         description:
           "ดูเมตาดาต้าของรูปภาพ การตั้งค่ากล้อง พิกัด GPS และฟิลด์ EXIF/IPTC/XMP ที่ฝังอยู่ได้ในเบราว์เซอร์ของคุณแบบโลคัล.",
       },
@@ -8609,7 +8609,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Görsel meta verilerini, kamera ayarlarını, GPS koordinatlarını ve gömülü EXIF/IPTC/XMP alanlarını tarayıcınızda yerel olarak görüntüleyin.",
       },
       vi: {
-        name: "EXIF Viewer",
+        name: "Trình xem EXIF",
         description:
           "Xem siêu dữ liệu ảnh, cài đặt máy ảnh, tọa độ GPS và các trường EXIF/IPTC/XMP được nhúng cục bộ trong trình duyệt của bạn.",
       },
@@ -8778,7 +8778,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "اقرأ كتب FB2 وFBZ محليًا مع الأقسام والرسوم التوضيحية والشعر والحواشي. اضبط حجم النص وعد من الحاشية إلى موضع القراءة.",
       },
       de: {
-        name: "FB2 Reader",
+        name: "FB2-Reader",
         description:
           "Lesen Sie FB2- und FBZ-Bücher lokal mit Abschnitten, Bildern, Gedichten und Anmerkungen. Passen Sie die Schriftgröße an und kehren Sie von einer Anmerkung zur Leseposition zurück.",
       },
@@ -8788,7 +8788,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Read FB2 and FBZ books locally with sections, illustrations, poetry, and notes. Adjust text size and return from a note to your reading position.",
       },
       es: {
-        name: "Lector FB2",
+        name: "Lector de FB2",
         description:
           "Lee libros FB2 y FBZ localmente con secciones, ilustraciones, poesía y notas. Ajusta el tamaño del texto y vuelve de una nota al punto de lectura.",
       },
@@ -8798,17 +8798,17 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Lisez des livres FB2 et FBZ en local, avec sections, illustrations, poésie et notes. Ajustez la taille du texte et retrouvez votre position après avoir consulté une note.",
       },
       he: {
-        name: "FB2 Reader",
+        name: "קורא FB2",
         description:
           "קריאת ספרי FB2 ו-FBZ באופן מקומי, עם חלקים, איורים, שירה והערות. אפשר לשנות את גודל הטקסט ולחזור מהערה למיקום הקריאה.",
       },
       hi: {
-        name: "FB2 Reader",
+        name: "FB2 रीडर",
         description:
           "खंडों, चित्रों, कविता और टिप्पणियों सहित FB2 और FBZ पुस्तकें स्थानीय रूप से पढ़ें। टेक्स्ट का आकार बदलें और टिप्पणी से पढ़ने की पिछली जगह पर लौटें।",
       },
       id: {
-        name: "FB2 Reader",
+        name: "Pembaca FB2",
         description:
           "Baca buku FB2 dan FBZ secara lokal, lengkap dengan bagian, ilustrasi, puisi, dan catatan. Sesuaikan ukuran teks dan kembali dari catatan ke posisi baca Anda.",
       },
@@ -8833,22 +8833,22 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Baca buku FB2 dan FBZ secara setempat dengan bahagian, ilustrasi, puisi dan nota. Laraskan saiz teks dan kembali dari nota ke tempat bacaan anda.",
       },
       nl: {
-        name: "FB2 Reader",
+        name: "FB2-lezer",
         description:
           "Lees FB2- en FBZ-boeken lokaal met secties, illustraties, poëzie en noten. Pas de tekstgrootte aan en keer vanuit een noot terug naar je leespositie.",
       },
       no: {
-        name: "FB2 Reader",
+        name: "FB2-leser",
         description:
           "Les FB2- og FBZ-bøker lokalt med deler, illustrasjoner, poesi og noter. Juster tekststørrelsen og gå tilbake fra en note til leseposisjonen.",
       },
       pl: {
-        name: "FB2 Reader",
+        name: "Czytnik FB2",
         description:
           "Czytaj lokalnie książki FB2 i FBZ z sekcjami, ilustracjami, poezją i przypisami. Dostosuj rozmiar tekstu i wracaj z przypisu do miejsca czytania.",
       },
       pt: {
-        name: "Leitor FB2",
+        name: "Leitor de FB2",
         description:
           "Leia livros FB2 e FBZ localmente, com seções, ilustrações, poesia e notas. Ajuste o tamanho do texto e volte de uma nota ao seu ponto de leitura.",
       },
@@ -8863,7 +8863,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Läs FB2- och FBZ-böcker lokalt med avsnitt, illustrationer, poesi och noter. Anpassa textstorleken och återgå från en not till din läsposition.",
       },
       th: {
-        name: "FB2 Reader",
+        name: "โปรแกรมอ่าน FB2",
         description:
           "อ่านหนังสือ FB2 และ FBZ ในอุปกรณ์ พร้อมส่วนต่าง ๆ ภาพประกอบ บทกวี และหมายเหตุ ปรับขนาดตัวอักษรและกลับจากหมายเหตุไปยังตำแหน่งที่อ่าน",
       },
@@ -10057,7 +10057,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi documenti HTML, HTM e XHTML locali con indice, zoom e lettura senza distrazioni. I file restano sul tuo dispositivo.",
       },
       ja: {
-        name: "HTML文書ビューアー",
+        name: "HTML 文書ビューアー",
         description:
           "端末内のHTML、HTM、XHTML文書を、アウトライン、ズーム、集中閲覧機能で読めます。ファイルはお使いの端末内に留まります。",
       },
@@ -10247,7 +10247,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "عاين مستندات Hangul بصيغتي HWP 5 وHWPX محليًا، مع التنقّل بين الصفحات والتكبير والقراءة المركّزة.",
       },
       de: {
-        name: "HWP- / HWPX-Betrachter",
+        name: "HWP- und HWPX-Betrachter",
         description:
           "Zeigen Sie Hangul-Dokumente im Format HWP 5 und HWPX lokal an, mit Seitennavigation, Zoom und Lesemodus.",
       },
@@ -10287,7 +10287,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Visualizza in locale l’anteprima dei documenti Hangul HWP 5 e HWPX, con navigazione tra le pagine, zoom e lettura senza distrazioni.",
       },
       ja: {
-        name: "HWP / HWPXビューアー",
+        name: "HWP / HWPX ビューアー",
         description:
           "HangulのHWP 5・HWPX文書をローカルでプレビューできます。ページ移動、拡大・縮小、集中閲覧に対応しています。",
       },
@@ -14168,12 +14168,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["latex", "tex", "math", "document", "preview", "viewer"],
     locales: {
       ar: {
-        name: "معاينة LaTeX",
+        name: "معاين LaTeX",
         description:
           "عاين مستندات LaTeX المكتفية بذاتها محليًا مع معادلات واضحة ومخطط للعناوين وإمكانية فحص المصدر وملاحظات التوافق.",
       },
       de: {
-        name: "LaTeX Previewer",
+        name: "LaTeX-Vorschau",
         description:
           "Sieh dir eigenständige LaTeX-Dokumente lokal an: mit lesbaren Formeln, Gliederung, Quelltextansicht und Kompatibilitätshinweisen.",
       },
@@ -14193,17 +14193,17 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Prévisualisez localement des documents LaTeX autonomes avec des formules lisibles, un plan, un accès à la source et des notes de compatibilité.",
       },
       he: {
-        name: "LaTeX Previewer",
+        name: "תצוגה מקדימה של LaTeX",
         description:
           "תצוגה מקדימה מקומית של מסמכי LaTeX שכל תוכנם כלול בקובץ, עם מתמטיקה קריאה, ראשי פרקים, עיון במקור והערות תאימות.",
       },
       hi: {
-        name: "LaTeX Previewer",
+        name: "LaTeX प्रीव्यूअर",
         description:
           "पढ़ने योग्य गणित, रूपरेखा, स्रोत निरीक्षण और संगतता संबंधी टिप्पणियों के साथ एक ही फ़ाइल में मौजूद LaTeX दस्तावेज़ों का स्थानीय पूर्वावलोकन देखें।",
       },
       id: {
-        name: "LaTeX Previewer",
+        name: "Pratinjau LaTeX",
         description:
           "Pratinjau dokumen LaTeX dalam satu file lengkap secara lokal, dengan matematika yang mudah dibaca, kerangka dokumen, pemeriksaan sumber, dan catatan kompatibilitas.",
       },
@@ -14213,7 +14213,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Visualizza in locale l’anteprima di documenti LaTeX autonomi con formule leggibili, struttura del documento, esame del sorgente e note di compatibilità.",
       },
       ja: {
-        name: "LaTeX Previewer",
+        name: "LaTeX プレビューアー",
         description:
           "単一ファイルで完結する LaTeX 文書を端末内でプレビューできます。読みやすい数式表示、目次、ソースの確認、互換性の注意事項に対応しています。",
       },
@@ -14223,27 +14223,27 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "하나의 파일로 완결된 LaTeX 문서를 기기에서 미리 보세요. 읽기 쉬운 수식, 목차, 소스 확인 및 호환성 참고 사항을 제공합니다.",
       },
       ms: {
-        name: "Pemapar Pratonton LaTeX",
+        name: "Pratonton LaTeX",
         description:
           "Pratonton dokumen LaTeX serba lengkap secara setempat dengan matematik yang boleh dibaca, rangka, pemeriksaan sumber dan nota keserasian.",
       },
       nl: {
-        name: "LaTeX Previewer",
+        name: "LaTeX-voorvertoner",
         description:
           "Bekijk zelfstandige LaTeX-documenten lokaal met leesbare wiskunde, een inhoudsopgave, brontekstweergave en compatibiliteitsopmerkingen.",
       },
       no: {
-        name: "LaTeX-forhåndsvisning",
+        name: "LaTeX-forhåndsviser",
         description:
           "Forhåndsvis selvstendige LaTeX-dokumenter lokalt med lesbar matematikk, dokumentoversikt, kildevisning og kompatibilitetsmerknader.",
       },
       pl: {
-        name: "LaTeX Previewer",
+        name: "Podgląd LaTeX",
         description:
           "Przeglądaj lokalnie samodzielne dokumenty LaTeX z czytelnymi wzorami, spisem treści, podglądem źródła i uwagami dotyczącymi zgodności.",
       },
       pt: {
-        name: "Visualizador de LaTeX",
+        name: "Pré-visualizador de LaTeX",
         description:
           "Visualize documentos LaTeX autossuficientes localmente, com fórmulas legíveis, estrutura de títulos, inspeção do código-fonte e notas de compatibilidade.",
       },
@@ -14253,12 +14253,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Просматривайте автономные документы LaTeX локально: читаемые формулы, структура документа, исходный текст и примечания о совместимости.",
       },
       sv: {
-        name: "LaTeX Previewer",
+        name: "LaTeX-förhandsgranskare",
         description:
           "Förhandsvisa fristående LaTeX-dokument lokalt med läsbar matematik, dokumentöversikt, källtextgranskning och kompatibilitetsnotiser.",
       },
       th: {
-        name: "LaTeX Previewer",
+        name: "โปรแกรมดูตัวอย่าง LaTeX",
         description:
           "ดูตัวอย่างเอกสาร LaTeX ที่มีเนื้อหาครบในไฟล์เดียวบนอุปกรณ์ พร้อมสูตรคณิตศาสตร์ที่อ่านได้ โครงร่างเอกสาร การตรวจสอบซอร์ส และหมายเหตุความเข้ากันได้",
       },
@@ -14268,7 +14268,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Tek başına yeterli LaTeX belgelerini okunabilir matematik, ana hatlar, kaynak incelemesi ve uyumluluk notlarıyla yerel olarak önizleyin.",
       },
       vi: {
-        name: "LaTeX Previewer",
+        name: "Trình xem trước LaTeX",
         description:
           "Xem trước tài liệu LaTeX độc lập trên thiết bị với công thức toán dễ đọc, mục lục, chế độ kiểm tra mã nguồn và lưu ý về khả năng tương thích.",
       },
@@ -14804,7 +14804,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Read local Markdown with a collapsible outline, adjustable text size and width, and focus mode. Edit saved drafts, preview safely, and export or print HTML in your browser.",
       },
       es: {
-        name: "Visor de Markdown",
+        name: "Vista previa de Markdown",
         description:
           "Lee Markdown local con un esquema plegable, tamaño de texto y ancho ajustables y modo sin distracciones. Edita borradores guardados, previsualiza de forma segura y exporta o imprime HTML en tu navegador.",
       },
@@ -14814,7 +14814,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Lis du Markdown local avec un plan repliable, une taille de texte et une largeur réglables et un mode concentration. Modifie des brouillons enregistrés, prévisualise en toute sécurité, puis exporte ou imprime du HTML dans ton navigateur.",
       },
       he: {
-        name: "מציג Markdown",
+        name: "תצוגה מקדימה של Markdown",
         description:
           "קרא Markdown מקומי עם מתאר שניתן לכווץ, גודל טקסט ורוחב מתכווננים ומצב מיקוד. ערוך טיוטות שמורות, צפה בתצוגה מקדימה בטוחה וייצא או הדפס HTML בדפדפן שלך.",
       },
@@ -14834,7 +14834,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi file Markdown locali con una struttura comprimibile, dimensione del testo e larghezza regolabili e modalità concentrazione. Modifica bozze salvate, visualizza anteprime sicure ed esporta o stampa HTML nel browser.",
       },
       ja: {
-        name: "Markdown プレビューア",
+        name: "Markdown プレビューアー",
         description:
           "ローカルの Markdown を、折りたたみ可能なアウトライン、文字サイズと表示幅の調整、集中モードで快適に閲覧。保存した下書きの編集、安全なプレビュー、HTML の書き出しや印刷をブラウザー内で行えます。",
       },
@@ -14864,12 +14864,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Czytaj lokalne pliki Markdown ze zwijanym konspektem, regulacją rozmiaru tekstu i szerokości oraz trybem skupienia. Edytuj zapisane szkice, wyświetlaj bezpieczny podgląd oraz eksportuj lub drukuj HTML w przeglądarce.",
       },
       pt: {
-        name: "Visualizador de Markdown",
+        name: "Pré-visualizador de Markdown",
         description:
           "Leia Markdown local com sumário recolhível, tamanho do texto e largura ajustáveis e modo de foco. Edite rascunhos salvos, visualize com segurança e exporte ou imprima HTML no navegador.",
       },
       ru: {
-        name: "Просмотр Markdown",
+        name: "Предпросмотр Markdown",
         description:
           "Читайте локальные файлы Markdown со сворачиваемым оглавлением, настройкой размера текста и ширины и режимом сосредоточенного чтения. Редактируйте сохранённые черновики, безопасно просматривайте, экспортируйте и печатайте HTML в браузере.",
       },
@@ -14879,7 +14879,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Läs lokal Markdown med en hopfällbar disposition, justerbar textstorlek och bredd samt fokusläge. Redigera sparade utkast, förhandsvisa säkert och exportera eller skriv ut HTML i webbläsaren.",
       },
       th: {
-        name: "ตัวอย่าง Markdown",
+        name: "โปรแกรมดูตัวอย่าง Markdown",
         description:
           "อ่าน Markdown บนอุปกรณ์พร้อมโครงร่างที่ยุบได้ ปรับขนาดข้อความและความกว้าง และโหมดมีสมาธิ แก้ไขร่างที่บันทึกไว้ ดูตัวอย่างอย่างปลอดภัย และส่งออกหรือพิมพ์ HTML ในเบราว์เซอร์",
       },
@@ -14889,7 +14889,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Yerel Markdown belgelerini daraltılabilir ana hat, ayarlanabilir metin boyutu ve genişliği ile odak modunda okuyun. Kayıtlı taslakları düzenleyin, güvenle önizleyin ve tarayıcınızda HTML olarak dışa aktarın veya yazdırın.",
       },
       vi: {
-        name: "Trình xem Markdown",
+        name: "Trình xem trước Markdown",
         description:
           "Đọc Markdown cục bộ với dàn ý có thể thu gọn, cỡ chữ và chiều rộng tùy chỉnh cùng chế độ tập trung. Chỉnh sửa bản nháp đã lưu, xem trước an toàn và xuất hoặc in HTML trong trình duyệt.",
       },
@@ -15286,7 +15286,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "اقرأ أرشيفات الويب MHTML وMHT محلياً مع الصور والأنماط المضمّنة والتنقل داخل المستند، دون طلب موارد من الإنترنت.",
       },
       de: {
-        name: "MHTML Viewer",
+        name: "MHTML-Betrachter",
         description:
           "Lies MHTML- und MHT-Webarchive lokal mit mitgespeicherten Bildern, Styles und Dokumentnavigation, ohne Ressourcen aus dem Internet nachzuladen.",
       },
@@ -15311,12 +15311,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "קרא ארכיוני אינטרנט מסוג MHTML ו-MHT באופן מקומי, עם תמונות וסגנונות הכלולים בהם, ניווט במסמך וללא בקשות למשאבים מהאינטרנט.",
       },
       hi: {
-        name: "MHTML Viewer",
+        name: "MHTML व्यूअर",
         description:
           "MHTML और MHT वेब आर्काइव को साथ में सहेजी गई छवियों, शैलियों और दस्तावेज़ नेविगेशन के साथ स्थानीय रूप से पढ़ें, बिना ऑनलाइन संसाधनों का अनुरोध किए।",
       },
       id: {
-        name: "MHTML Viewer",
+        name: "Penampil MHTML",
         description:
           "Baca arsip web MHTML dan MHT secara lokal dengan gambar dan gaya yang disertakan, navigasi dokumen, dan tanpa permintaan sumber daya langsung.",
       },
@@ -15326,7 +15326,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi archivi web MHTML e MHT localmente con immagini e stili inclusi, navigazione del documento e nessuna richiesta di risorse online.",
       },
       ja: {
-        name: "MHTML Viewer",
+        name: "MHTML ビューアー",
         description:
           "MHTML・MHT Web アーカイブを端末上で閲覧。含まれている画像やスタイル、文書内の移動に対応し、外部リソースへのリクエストは行いません。",
       },
@@ -15341,17 +15341,17 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Baca arkib web MHTML dan MHT secara setempat dengan imej dan gaya yang disertakan, navigasi dokumen serta tanpa permintaan sumber langsung.",
       },
       nl: {
-        name: "MHTML Viewer",
+        name: "MHTML-viewer",
         description:
           "Lees MHTML- en MHT-webarchieven lokaal met gebundelde afbeeldingen, stijlen en documentnavigatie, zonder online bronnen op te vragen.",
       },
       no: {
-        name: "MHTML Viewer",
+        name: "MHTML-viser",
         description:
           "Les MHTML- og MHT-nettarkiver lokalt med medfølgende bilder, stiler og dokumentnavigasjon, uten forespørsler om ressurser på nettet.",
       },
       pl: {
-        name: "MHTML Viewer",
+        name: "Przeglądarka MHTML",
         description:
           "Czytaj lokalnie archiwa stron MHTML i MHT z dołączonymi obrazami, stylami i nawigacją po dokumencie, bez pobierania zasobów z sieci.",
       },
@@ -15371,7 +15371,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Läs MHTML- och MHT-webbarkiv lokalt med inkluderade bilder, stilar och dokumentnavigering, utan resursförfrågningar till internet.",
       },
       th: {
-        name: "MHTML Viewer",
+        name: "โปรแกรมดู MHTML",
         description:
           "อ่านไฟล์เก็บถาวรเว็บ MHTML และ MHT บนอุปกรณ์ พร้อมรูปภาพ สไตล์ และการนำทางเอกสาร โดยไม่มีการร้องขอทรัพยากรออนไลน์",
       },
@@ -15522,12 +15522,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     ],
     locales: {
       ar: {
-        name: "MOBI & AZW3 Reader",
+        name: "قارئ MOBI وAZW3",
         description:
           "اقرأ كتب MOBI وAZW وAZW3 وPRC غير المشفّرة محليًا، مع جدول محتويات ونص قابل لتعديل حجمه ومنطقة للقراءة المركّزة.",
       },
       de: {
-        name: "MOBI & AZW3 Reader",
+        name: "MOBI- und AZW3-Reader",
         description:
           "Lies unverschlüsselte MOBI-, AZW-, AZW3- und PRC-Bücher lokal mit Inhaltsverzeichnis, anpassbarer Schrift und Fokusmodus.",
       },
@@ -15537,17 +15537,17 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Read unencrypted MOBI, AZW, AZW3, and PRC books locally, with contents, adjustable text, and a focused reading area.",
       },
       es: {
-        name: "MOBI & AZW3 Reader",
+        name: "Lector de MOBI y AZW3",
         description:
           "Lee libros MOBI, AZW, AZW3 y PRC sin cifrar de forma local, con índice, texto ajustable y un área de lectura sin distracciones.",
       },
       fr: {
-        name: "MOBI & AZW3 Reader",
+        name: "Lecteur MOBI et AZW3",
         description:
           "Lisez localement des livres MOBI, AZW, AZW3 et PRC non chiffrés, avec un sommaire, un texte ajustable et une zone de lecture concentrée.",
       },
       he: {
-        name: "MOBI & AZW3 Reader",
+        name: "קורא MOBI ו-AZW3",
         description:
           "קראו ספרי MOBI, AZW, AZW3 ו־PRC לא מוצפנים באופן מקומי, עם תוכן עניינים, טקסט הניתן להתאמה ואזור קריאה ממוקדת.",
       },
@@ -15567,12 +15567,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi libri MOBI, AZW, AZW3 e PRC non crittografati in locale, con sommario, testo regolabile e un’area di lettura immersiva.",
       },
       ja: {
-        name: "MOBI & AZW3 Reader",
+        name: "MOBI・AZW3 リーダー",
         description:
           "暗号化されていない MOBI、AZW、AZW3、PRC の本を端末内で閲覧。目次、文字サイズ調整、集中読書に対応しています。",
       },
       ko: {
-        name: "MOBI & AZW3 Reader",
+        name: "MOBI 및 AZW3 리더",
         description:
           "암호화되지 않은 MOBI, AZW, AZW3 및 PRC 책을 로컬에서 읽으세요. 목차, 글자 크기 조절, 집중 읽기 영역을 제공합니다.",
       },
@@ -15582,7 +15582,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Baca buku MOBI, AZW, AZW3 dan PRC yang tidak disulitkan secara setempat, dengan isi kandungan, teks boleh laras dan ruang bacaan fokus.",
       },
       nl: {
-        name: "MOBI & AZW3 Reader",
+        name: "MOBI- en AZW3-lezer",
         description:
           "Lees onversleutelde MOBI-, AZW-, AZW3- en PRC-boeken lokaal, met een inhoudsopgave, aanpasbare tekst en een leesgebied met focusmodus.",
       },
@@ -15602,17 +15602,17 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leia livros MOBI, AZW, AZW3 e PRC não criptografados localmente, com sumário, texto ajustável e uma área de leitura sem distrações.",
       },
       ru: {
-        name: "Чтение MOBI и AZW3",
+        name: "Читалка MOBI и AZW3",
         description:
           "Читайте незашифрованные книги MOBI, AZW, AZW3 и PRC локально: оглавление, настройка текста и удобный режим чтения.",
       },
       sv: {
-        name: "MOBI & AZW3 Reader",
+        name: "MOBI- och AZW3-läsare",
         description:
           "Läs okrypterade MOBI-, AZW-, AZW3- och PRC-böcker lokalt, med innehållsförteckning, justerbar text och en fokuserad läsyta.",
       },
       th: {
-        name: "เครื่องมืออ่าน MOBI และ AZW3",
+        name: "โปรแกรมอ่าน MOBI และ AZW3",
         description:
           "อ่านหนังสือ MOBI, AZW, AZW3 และ PRC ที่ไม่เข้ารหัสในเบราว์เซอร์ พร้อมสารบัญ การปรับขนาดตัวอักษร และโหมดอ่านเต็มพื้นที่",
       },
@@ -15627,12 +15627,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Đọc sách MOBI, AZW, AZW3 và PRC không mã hóa ngay trên thiết bị, với mục lục, cỡ chữ tùy chỉnh và vùng đọc tập trung.",
       },
       "zh-CN": {
-        name: "MOBI & AZW3 Reader",
+        name: "MOBI 和 AZW3 阅读器",
         description:
           "在本地阅读未加密的 MOBI、AZW、AZW3 和 PRC 书籍，支持目录、字号调整和专注阅读。",
       },
       "zh-TW": {
-        name: "MOBI & AZW3 Reader",
+        name: "MOBI 與 AZW3 閱讀器",
         description:
           "在本機閱讀未加密的 MOBI、AZW、AZW3 與 PRC 書籍，提供目錄、可調整的文字大小與專注閱讀區。",
       },
@@ -16425,7 +16425,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "اقرأ دفاتر .ipynb المحلية مع Markdown والتعليمات البرمجية والمخرجات المحفوظة والتنقّل بين الخلايا. دون رفع ملفات أو تنفيذ تعليمات برمجية.",
       },
       de: {
-        name: "Jupyter Notebook Viewer",
+        name: "Jupyter-Notebook-Betrachter",
         description:
           "Lies lokale .ipynb-Notebooks mit Markdown, Code, gespeicherten Ausgaben und Zellnavigation. Ohne Uploads oder Codeausführung.",
       },
@@ -16445,17 +16445,17 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Lisez des notebooks .ipynb locaux avec Markdown, code, sorties enregistrées et navigation par cellule. Aucun envoi ni exécution de code.",
       },
       he: {
-        name: "Jupyter Notebook Viewer",
+        name: "מציג מחברות Jupyter",
         description:
           "קריאת מחברות .ipynb מקומיות עם Markdown, קוד, פלטים שמורים וניווט בין תאים. ללא העלאות או הרצת קוד.",
       },
       hi: {
-        name: "Jupyter Notebook Viewer",
+        name: "Jupyter नोटबुक व्यूअर",
         description:
           "Markdown, कोड, सहेजे गए आउटपुट और सेल नेविगेशन के साथ स्थानीय .ipynb नोटबुक पढ़ें। कोई अपलोड या कोड निष्पादन नहीं।",
       },
       id: {
-        name: "Jupyter Notebook Viewer",
+        name: "Penampil Notebook Jupyter",
         description:
           "Baca notebook .ipynb lokal dengan Markdown, kode, keluaran tersimpan, dan navigasi sel. Tanpa unggahan atau eksekusi kode.",
       },
@@ -16465,12 +16465,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi notebook .ipynb locali con Markdown, codice, output salvati e navigazione tra le celle. Nessun caricamento o esecuzione di codice.",
       },
       ja: {
-        name: "Jupyter Notebook Viewer",
+        name: "Jupyter Notebook ビューアー",
         description:
           "端末内の .ipynb ノートブックの Markdown、コード、保存済みの出力を閲覧し、セル単位で移動できます。アップロードやコードの実行は行いません。",
       },
       ko: {
-        name: "Jupyter Notebook 뷰어",
+        name: "Jupyter 노트북 뷰어",
         description:
           "기기에 있는 .ipynb 노트북의 Markdown, 코드 및 저장된 출력을 셀 탐색 기능으로 읽어 보세요. 업로드하거나 코드를 실행하지 않습니다.",
       },
@@ -16480,7 +16480,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Baca buku nota .ipynb setempat dengan Markdown, kod, output tersimpan dan navigasi sel. Tiada muat naik atau pelaksanaan kod.",
       },
       nl: {
-        name: "Jupyter Notebook Viewer",
+        name: "Jupyter-notebookviewer",
         description:
           "Lees lokale .ipynb-notebooks met Markdown, code, opgeslagen uitvoer en celnavigatie. Zonder uploads of uitvoering van code.",
       },
@@ -16490,7 +16490,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Les lokale .ipynb-notatbøker med Markdown, kode, lagrede utdata og cellenavigering. Ingen opplastinger eller kjøring av kode.",
       },
       pl: {
-        name: "Jupyter Notebook Viewer",
+        name: "Przeglądarka notatników Jupyter",
         description:
           "Czytaj lokalne notatniki .ipynb z Markdown, kodem, zapisanymi wynikami i nawigacją po komórkach. Bez przesyłania i wykonywania kodu.",
       },
@@ -16505,12 +16505,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Читайте локальные блокноты .ipynb с Markdown, кодом, сохранённым выводом и навигацией по ячейкам. Без отправки на сервер и выполнения кода.",
       },
       sv: {
-        name: "Jupyter Notebook Viewer",
+        name: "Jupyter Notebook-visare",
         description:
           "Läs lokala .ipynb-filer med Markdown, kod, sparade utmatningar och cellnavigering. Inga uppladdningar eller kodkörningar.",
       },
       th: {
-        name: "Jupyter Notebook Viewer",
+        name: "โปรแกรมดูโน้ตบุ๊ก Jupyter",
         description:
           "อ่านโน้ตบุ๊ก .ipynb บนอุปกรณ์ พร้อม Markdown โค้ด เอาต์พุตที่บันทึกไว้ และการนำทางตามเซลล์ ไม่มีการอัปโหลดหรือรันโค้ด",
       },
@@ -16520,7 +16520,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Yerel .ipynb not defterlerini Markdown, kod, kaydedilmiş çıktılar ve hücreler arasında gezinme ile okuyun. Yükleme yapılmaz, kod çalıştırılmaz.",
       },
       vi: {
-        name: "Jupyter Notebook Viewer",
+        name: "Trình xem notebook Jupyter",
         description:
           "Đọc notebook .ipynb trên thiết bị với Markdown, mã, đầu ra đã lưu và điều hướng theo ô. Không tải lên hay thực thi mã.",
       },
@@ -16678,7 +16678,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "اقرأ مستندات ODT وقوالب OTT محليًا، مع التنقل بين العناوين والتكبير ووضع التركيز.",
       },
       de: {
-        name: "ODT Viewer",
+        name: "ODT-Betrachter",
         description:
           "Lesen Sie ODT-Dokumente und OTT-Vorlagen lokal, mit Navigation über Überschriften, Zoom und Fokusmodus.",
       },
@@ -16688,7 +16688,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Read ODT documents and OTT templates locally, with heading navigation, zoom, and focus mode.",
       },
       es: {
-        name: "Visor ODT",
+        name: "Visor de ODT",
         description:
           "Lee documentos ODT y plantillas OTT localmente, con navegación por títulos, zoom y modo sin distracciones.",
       },
@@ -16698,17 +16698,17 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Lisez des documents ODT et des modèles OTT en local, avec navigation par titres, zoom et mode lecture immersive.",
       },
       he: {
-        name: "ODT Viewer",
+        name: "מציג ODT",
         description:
           "קריאת מסמכי ODT ותבניות OTT באופן מקומי, עם ניווט בין כותרות, שינוי תקריב ומצב קריאה ממוקדת.",
       },
       hi: {
-        name: "ODT Viewer",
+        name: "ODT व्यूअर",
         description:
           "शीर्षकों से नेविगेशन, ज़ूम और एकाग्र पठन मोड के साथ ODT दस्तावेज़ और OTT टेम्पलेट स्थानीय रूप से पढ़ें।",
       },
       id: {
-        name: "ODT Viewer",
+        name: "Penampil ODT",
         description:
           "Baca dokumen ODT dan templat OTT secara lokal, dengan navigasi judul bagian, perbesaran, dan mode fokus.",
       },
@@ -16733,22 +16733,22 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Baca dokumen ODT dan templat OTT secara setempat, dengan navigasi tajuk, zum dan mod fokus.",
       },
       nl: {
-        name: "ODT Viewer",
+        name: "ODT-viewer",
         description:
           "Lees ODT-documenten en OTT-sjablonen lokaal, met navigatie via koppen, zoom en een leesmodus zonder afleiding.",
       },
       no: {
-        name: "ODT Viewer",
+        name: "ODT-viser",
         description:
           "Les ODT-dokumenter og OTT-maler lokalt, med navigering via overskrifter, zoom og fokusmodus.",
       },
       pl: {
-        name: "ODT Viewer",
+        name: "Przeglądarka ODT",
         description:
           "Czytaj lokalnie dokumenty ODT i szablony OTT, korzystając z nawigacji po nagłówkach, powiększenia i trybu skupienia.",
       },
       pt: {
-        name: "Visualizador ODT",
+        name: "Visualizador de ODT",
         description:
           "Leia documentos ODT e modelos OTT localmente, com navegação por títulos, zoom e modo de leitura focada.",
       },
@@ -16763,7 +16763,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Läs ODT-dokument och OTT-mallar lokalt med rubriknavigering, zoom och fokuserat läsläge.",
       },
       th: {
-        name: "ODT Viewer",
+        name: "โปรแกรมดู ODT",
         description:
           "อ่านเอกสาร ODT และแม่แบบ OTT ในอุปกรณ์ พร้อมการนำทางตามหัวข้อ การซูม และโหมดอ่านแบบมีสมาธิ",
       },
@@ -16801,7 +16801,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "اقرأ مستندات OFD المحلية في متصفحك. تصفّح الصفحات وكبّرها ودوّرها واطّلع على الفواتير أو المنشورات دون رفع الملفات.",
       },
       de: {
-        name: "OFD Viewer",
+        name: "OFD-Betrachter",
         description:
           "Lesen Sie lokale OFD-Dokumente im Browser. Blättern, vergrößern und drehen Sie Seiten und prüfen Sie Rechnungen oder Publikationen, ohne Dateien hochzuladen.",
       },
@@ -16811,7 +16811,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Read local OFD documents in your browser. Browse pages, zoom, rotate, and inspect invoices or publications without uploading files.",
       },
       es: {
-        name: "Visor OFD",
+        name: "Visor de OFD",
         description:
           "Lee documentos OFD locales en tu navegador. Recorre las páginas, ajusta el zoom, gíralas y consulta facturas o publicaciones sin subir archivos.",
       },
@@ -16821,22 +16821,22 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Lisez des documents OFD locaux dans votre navigateur. Parcourez les pages, zoomez, faites pivoter et consultez des factures ou des publications sans téléverser de fichiers.",
       },
       he: {
-        name: "OFD Viewer",
+        name: "מציג OFD",
         description:
           "קריאת מסמכי OFD מקומיים בדפדפן. עיון בעמודים, הגדלה, סיבוב ובדיקת חשבוניות או פרסומים ללא העלאת קבצים.",
       },
       hi: {
-        name: "OFD Viewer",
+        name: "OFD व्यूअर",
         description:
           "स्थानीय OFD दस्तावेज़ अपने ब्राउज़र में पढ़ें। फ़ाइलें अपलोड किए बिना पृष्ठ देखें, ज़ूम करें, घुमाएँ और चालानों या प्रकाशनों की जाँच करें।",
       },
       id: {
-        name: "OFD Viewer",
+        name: "Penampil OFD",
         description:
           "Baca dokumen OFD lokal di browser Anda. Telusuri halaman, perbesar, putar, dan periksa faktur atau publikasi tanpa mengunggah file.",
       },
       it: {
-        name: "OFD Viewer",
+        name: "Visualizzatore OFD",
         description:
           "Leggi documenti OFD locali nel browser. Sfoglia le pagine, ingrandisci, ruota ed esamina fatture o pubblicazioni senza caricare file online.",
       },
@@ -16851,52 +16851,52 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "브라우저에서 로컬 OFD 문서를 읽으세요. 파일을 업로드하지 않고 페이지를 탐색하고 확대하거나 회전하며 청구서나 출판물을 확인할 수 있습니다.",
       },
       ms: {
-        name: "OFD Viewer",
+        name: "Pemapar OFD",
         description:
           "Baca dokumen OFD setempat dalam pelayar anda. Semak halaman, zum, putar dan periksa invois atau penerbitan tanpa memuat naik fail.",
       },
       nl: {
-        name: "OFD Viewer",
+        name: "OFD-viewer",
         description:
           "Lees lokale OFD-documenten in je browser. Blader door pagina's, zoom, draai en bekijk facturen of publicaties zonder bestanden te uploaden.",
       },
       no: {
-        name: "OFD Viewer",
+        name: "OFD-viser",
         description:
           "Les lokale OFD-dokumenter i nettleseren. Bla mellom sider, zoom, roter og undersøk fakturaer eller publikasjoner uten å laste opp filer.",
       },
       pl: {
-        name: "OFD Viewer",
+        name: "Przeglądarka OFD",
         description:
           "Czytaj lokalne dokumenty OFD w przeglądarce. Przeglądaj strony, powiększaj, obracaj i sprawdzaj faktury lub publikacje bez przesyłania plików.",
       },
       pt: {
-        name: "OFD Viewer",
+        name: "Visualizador de OFD",
         description:
           "Leia documentos OFD locais no navegador. Navegue pelas páginas, amplie, gire e examine faturas ou publicações sem enviar arquivos.",
       },
       ru: {
-        name: "OFD Viewer",
+        name: "Просмотр OFD",
         description:
           "Читайте локальные документы OFD в браузере. Листайте страницы, меняйте масштаб, поворачивайте их и просматривайте счета или публикации без загрузки файлов на сервер.",
       },
       sv: {
-        name: "OFD Viewer",
+        name: "OFD-visare",
         description:
           "Läs lokala OFD-dokument i webbläsaren. Bläddra bland sidor, zooma, rotera och granska fakturor eller publikationer utan att ladda upp filer.",
       },
       th: {
-        name: "OFD Viewer",
+        name: "โปรแกรมดู OFD",
         description:
           "อ่านเอกสาร OFD ในเครื่องผ่านเบราว์เซอร์ เปลี่ยนหน้า ซูม หมุน และตรวจสอบใบแจ้งหนี้หรือสิ่งพิมพ์โดยไม่ต้องอัปโหลดไฟล์",
       },
       tr: {
-        name: "OFD Viewer",
+        name: "OFD Görüntüleyici",
         description:
           "Yerel OFD belgelerini tarayıcınızda okuyun. Dosya yüklemeden sayfalar arasında gezinin, yakınlaştırın, döndürün, fatura veya yayınları inceleyin.",
       },
       vi: {
-        name: "OFD Viewer",
+        name: "Trình xem OFD",
         description:
           "Đọc tài liệu OFD cục bộ trong trình duyệt. Duyệt trang, thu phóng, xoay và kiểm tra hóa đơn hoặc ấn phẩm mà không cần tải tệp lên.",
       },
@@ -17288,12 +17288,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["pdf", "metadata", "document", "viewer", "offline"],
     locales: {
       ar: {
-        name: "PDF Info Viewer",
+        name: "عارض معلومات PDF",
         description:
           "اعرض بيانات PDF الوصفية، وعدد الصفحات، والإصدار، وتفاصيل الملف، وخصائص المستند محليًا في متصفحك.",
       },
       de: {
-        name: "PDF Info Viewer",
+        name: "PDF-Info-Betrachter",
         description:
           "PDF-Metadaten, Seitenanzahl, Version, Dateidetails und Dokumenteigenschaften lokal in deinem Browser anzeigen.",
       },
@@ -17303,102 +17303,102 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "View PDF metadata, page count, version, file details, and document properties locally in your browser.",
       },
       es: {
-        name: "PDF Info Viewer",
+        name: "Visor de información de PDF",
         description:
           "Consulta metadatos de PDF, recuento de páginas, versión, detalles del archivo y propiedades del documento localmente en tu navegador.",
       },
       fr: {
-        name: "PDF Info Viewer",
+        name: "Visionneuse d’informations PDF",
         description:
           "Consultez les métadonnées PDF, le nombre de pages, la version, les détails du fichier et les propriétés du document localement dans votre navigateur.",
       },
       he: {
-        name: "PDF Info Viewer",
+        name: "מציג מידע על PDF",
         description:
           "הצג מטא-נתונים של PDF, מספר עמודים, גרסה, פרטי קובץ ומאפייני מסמך באופן מקומי בדפדפן שלך.",
       },
       hi: {
-        name: "PDF Info Viewer",
+        name: "PDF जानकारी व्यूअर",
         description:
           "अपने ब्राउज़र में ही PDF मेटाडेटा, पृष्ठ संख्या, संस्करण, फ़ाइल विवरण और दस्तावेज़ गुण देखें.",
       },
       id: {
-        name: "PDF Info Viewer",
+        name: "Penampil Info PDF",
         description:
           "Lihat metadata PDF, jumlah halaman, versi, detail file, dan properti dokumen secara lokal di browser Anda.",
       },
       it: {
-        name: "PDF Info Viewer",
+        name: "Visualizzatore di informazioni PDF",
         description:
           "Visualizza metadati PDF, numero di pagine, versione, dettagli del file e proprietà del documento localmente nel tuo browser.",
       },
       ja: {
-        name: "PDF Info Viewer",
+        name: "PDF 情報ビューアー",
         description:
           "PDF のメタデータ、ページ数、バージョン、ファイル詳細、ドキュメントプロパティをブラウザ内でローカルに表示します。",
       },
       ko: {
-        name: "PDF Info Viewer",
+        name: "PDF 정보 뷰어",
         description:
           "브라우저에서 로컬로 PDF 메타데이터, 페이지 수, 버전, 파일 세부 정보, 문서 속성을 확인하세요.",
       },
       ms: {
-        name: "PDF Info Viewer",
+        name: "Pemapar Maklumat PDF",
         description:
           "Lihat metadata PDF, bilangan halaman, versi, butiran fail dan sifat dokumen secara setempat dalam pelayar anda.",
       },
       nl: {
-        name: "PDF Info Viewer",
+        name: "PDF-informatieviewer",
         description:
           "Bekijk PDF-metadata, aantal pagina's, versie, bestandsdetails en documenteigenschappen lokaal in je browser.",
       },
       no: {
-        name: "PDF Info Viewer",
+        name: "PDF-informasjonsviser",
         description:
           "Vis PDF-metadata, sidetall, versjon, fildetaljer og dokumentegenskaper lokalt i nettleseren.",
       },
       pl: {
-        name: "PDF Info Viewer",
+        name: "Przeglądarka informacji o PDF",
         description:
           "Wyświetlaj metadane PDF, liczbę stron, wersję, szczegóły pliku i właściwości dokumentu lokalnie w przeglądarce.",
       },
       pt: {
-        name: "PDF Info Viewer",
+        name: "Visualizador de informações de PDF",
         description:
           "Veja metadados de PDF, contagem de páginas, versão, detalhes do arquivo e propriedades do documento localmente no seu navegador.",
       },
       ru: {
-        name: "PDF Info Viewer",
+        name: "Просмотр сведений о PDF",
         description:
           "Просматривайте метаданные PDF, количество страниц, версию, сведения о файле и свойства документа локально в браузере.",
       },
       sv: {
-        name: "PDF Info Viewer",
+        name: "PDF-informationsvisare",
         description:
           "Visa PDF-metadata, sidantal, version, filinformation och dokumentegenskaper lokalt i din webbläsare.",
       },
       th: {
-        name: "PDF Info Viewer",
+        name: "โปรแกรมดูข้อมูล PDF",
         description:
           "ดู metadata ของ PDF, จำนวนหน้า, เวอร์ชัน, รายละเอียดไฟล์ และคุณสมบัติเอกสารภายในเบราว์เซอร์ของคุณโดยตรง",
       },
       tr: {
-        name: "PDF Info Viewer",
+        name: "PDF Bilgi Görüntüleyici",
         description:
           "PDF meta verilerini, sayfa sayısını, sürümü, dosya ayrıntılarını ve belge özelliklerini tarayıcınızda yerel olarak görüntüleyin.",
       },
       vi: {
-        name: "PDF Info Viewer",
+        name: "Trình xem thông tin PDF",
         description:
           "Xem siêu dữ liệu PDF, số trang, phiên bản, chi tiết tệp và thuộc tính tài liệu ngay trong trình duyệt của bạn.",
       },
       "zh-CN": {
-        name: "PDF Info Viewer",
+        name: "PDF 信息查看器",
         description:
           "在浏览器本地查看 PDF 元数据、页数、版本、文件详情和文档属性。",
       },
       "zh-TW": {
-        name: "PDF Info Viewer",
+        name: "PDF 資訊檢視器",
         description:
           "在瀏覽器本機查看 PDF 中繼資料、頁數、版本、檔案詳細資訊與文件屬性。",
       },
@@ -18168,7 +18168,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Lee archivos PDF localmente con navegación entre páginas, zoom, selección de texto y búsqueda. Tus documentos permanecen en tu navegador.",
       },
       fr: {
-        name: "Lecteur PDF",
+        name: "Visionneuse PDF",
         description:
           "Lisez vos fichiers PDF en local avec navigation entre les pages, zoom, sélection de texte et recherche. Vos documents restent dans votre navigateur.",
       },
@@ -18193,9 +18193,9 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi i file PDF in locale con navigazione tra le pagine, zoom, selezione del testo e ricerca. I tuoi documenti restano nel browser.",
       },
       ja: {
-        name: "PDFビューアー",
+        name: "PDF ビューアー",
         description:
-          "ページ移動、ズーム、テキスト選択、検索機能を備えたローカルPDFリーダー。文書はブラウザー内で処理されます。",
+          "ページ移動、ズーム、テキスト選択、検索機能を備えたローカル PDF ビューアー。文書はブラウザー内で処理されます。",
       },
       ko: {
         name: "PDF 뷰어",
@@ -18253,7 +18253,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Đọc tệp PDF ngay trên thiết bị với tính năng chuyển trang, thu phóng, chọn văn bản và tìm kiếm. Tài liệu của bạn luôn ở trong trình duyệt.",
       },
       "zh-CN": {
-        name: "PDF 阅读器",
+        name: "PDF 查看器",
         description:
           "在本地阅读 PDF 文件，支持页面导航、缩放、文本选择和搜索。文档始终留在您的浏览器中。",
       },
@@ -18818,7 +18818,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi presentazioni PowerPoint PPT in formato precedente, presentazioni WPS DPS compatibili e modelli DPT in locale nel browser.",
       },
       ja: {
-        name: "PPT・DPSビューアー",
+        name: "PPT・DPS ビューアー",
         description:
           "旧形式のPowerPoint PPT、互換性のあるWPS DPSプレゼンテーション、DPTテンプレートをブラウザー内でローカルに閲覧できます。",
       },
@@ -18916,7 +18916,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "اقرأ ملفات PowerPoint بصيغ PPTX وPPTM وPOTX وPOTM وPPSX وPPSM محليًا مع التنقل بين الشرائح والتكبير وتحديد النص والبحث. دون رفع الملفات أو تشغيل وحدات الماكرو.",
       },
       de: {
-        name: "PPTX Viewer",
+        name: "PPTX-Betrachter",
         description:
           "Lesen Sie PowerPoint-Dateien in den Formaten PPTX, PPTM, POTX, POTM, PPSX und PPSM lokal mit Foliennavigation, Zoom, Textauswahl und Suche. Ohne Uploads oder Makroausführung.",
       },
@@ -18931,7 +18931,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Lee archivos de PowerPoint PPTX, PPTM, POTX, POTM, PPSX y PPSM localmente con navegación por diapositivas, zoom, selección de texto y búsqueda. Sin subir archivos ni ejecutar macros.",
       },
       fr: {
-        name: "Lecteur PPTX",
+        name: "Visionneuse PPTX",
         description:
           "Lisez vos fichiers PowerPoint PPTX, PPTM, POTX, POTM, PPSX et PPSM en local avec navigation entre les diapositives, zoom, sélection de texte et recherche. Aucun envoi à un serveur ni exécution de macros.",
       },
@@ -18956,7 +18956,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Leggi i file PowerPoint PPTX, PPTM, POTX, POTM, PPSX e PPSM in locale con navigazione tra le diapositive, zoom, selezione del testo e ricerca. Nessun caricamento su server né esecuzione di macro.",
       },
       ja: {
-        name: "PPTXビューアー",
+        name: "PPTX ビューアー",
         description:
           "スライド移動、ズーム、テキスト選択、検索機能でPowerPointのPPTX、PPTM、POTX、POTM、PPSX、PPSMファイルをローカルで閲覧できます。アップロードやマクロの実行は行いません。",
       },
@@ -19016,7 +19016,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Đọc tệp PowerPoint PPTX, PPTM, POTX, POTM, PPSX và PPSM ngay trên thiết bị với tính năng chuyển trang chiếu, thu phóng, chọn văn bản và tìm kiếm. Không tải lên hoặc chạy macro.",
       },
       "zh-CN": {
-        name: "PPTX 阅读器",
+        name: "PPTX 查看器",
         description:
           "在本地阅读 PowerPoint PPTX、PPTM、POTX、POTM、PPSX 和 PPSM 文件，支持幻灯片切换、缩放、文本选择和搜索。无需上传，不会运行宏。",
       },
@@ -21249,7 +21249,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Apri documenti RTF locali con testo formattato, immagini, navigazione tra le pagine, zoom e testo selezionabile. Nessun caricamento richiesto.",
       },
       ja: {
-        name: "RTFビューアー",
+        name: "RTF ビューアー",
         description:
           "ローカルのRTF文書を開き、書式付きテキストや画像を閲覧できます。ページ移動、拡大・縮小、テキスト選択に対応。アップロードは不要です。",
       },
@@ -29095,7 +29095,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "اقرأ جداول بيانات Excel وCSV وODS وNumbers وWPS والصيغ القديمة محليًا. بدّل بين أوراق العمل، وتصفح الخلايا، وافحص القيم المحفوظة. دون رفع الملفات.",
       },
       de: {
-        name: "Spreadsheet Viewer",
+        name: "Tabellenbetrachter",
         description:
           "Lesen Sie Excel-, CSV-, ODS-, Numbers-, WPS- und ältere Tabellen lokal. Wechseln Sie Arbeitsblätter, durchsuchen Sie Zellen und prüfen Sie gespeicherte Werte. Ohne Uploads.",
       },
@@ -29110,7 +29110,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Lee hojas de cálculo de Excel, CSV, ODS, Numbers, WPS y formatos antiguos localmente. Cambia de hoja, explora celdas y consulta valores guardados. Sin subir archivos.",
       },
       fr: {
-        name: "Lecteur de feuilles de calcul",
+        name: "Visionneuse de feuilles de calcul",
         description:
           "Consultez les feuilles de calcul Excel, CSV, ODS, Numbers, WPS et les anciens formats en local. Changez de feuille, parcourez les cellules et examinez les valeurs enregistrées. Aucun envoi à un serveur.",
       },
@@ -29195,7 +29195,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Đọc Excel, CSV, ODS, Numbers, WPS và bảng tính đời cũ ngay trên thiết bị. Chuyển trang tính, duyệt các ô và xem giá trị đã lưu. Không tải lên.",
       },
       "zh-CN": {
-        name: "电子表格阅读器",
+        name: "电子表格查看器",
         description:
           "在本地阅读 Excel、CSV、ODS、Numbers、WPS 及旧版电子表格。支持切换工作表、浏览单元格和查看已保存的值，无需上传。",
       },

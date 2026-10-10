@@ -1,6 +1,6 @@
 ## Bu araç ne yapar
 
-PDF Info Viewer, bir PDF'i tarayıcınızda açar ve temel dosya
+PDF Bilgi Görüntüleyici, bir PDF'i tarayıcınızda açar ve temel dosya
 ayrıntılarını, PDF üst bilgi sürümünü, sayfa sayısını, ilk sayfa boyutunu,
 şifreleme durumunu ve başlık, yazar, konu, anahtar kelimeler, oluşturan,
 üretici ve tarihler gibi belge meta verilerini özetler. Bir belgeyi

@@ -2,7 +2,7 @@
   "open": "Buka dokumen",
   "replace": "Ganti dokumen",
   "clear": "Tutup dokumen",
-  "reader": "Pembaca notebook Jupyter",
+  "reader": "Penampil notebook Jupyter",
   "privacy": "File tetap di perangkat Anda. Tanpa unggahan, eksekusi kode, atau sumber daya jarak jauh.",
   "focus": "Mode baca fokus",
   "exitFocus": "Keluar dari mode baca fokus",

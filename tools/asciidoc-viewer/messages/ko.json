@@ -2,7 +2,7 @@
   "open": "문서 열기",
   "replace": "문서 바꾸기",
   "clear": "문서 닫기",
-  "reader": "AsciiDoc 문서 리더",
+  "reader": "AsciiDoc 문서 뷰어",
   "privacy": "파일은 기기에 그대로 유지됩니다. 업로드하거나 원격 리소스를 불러오지 않습니다.",
   "focus": "집중 읽기 모드",
   "exitFocus": "집중 읽기 모드 종료",

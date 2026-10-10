@@ -1,6 +1,6 @@
 ## Bu Araç Ne Yapar
 
-Markdown Previewer, `.md`, `.markdown`, `.mdown` ve `.txt` belgelerini tarayıcınızda yerel olarak açar. Okuma modu kaynak düzenleyicisini gizlerken odak modu ekranı belgeye ayırır. Kaldığınız yeri kaybetmeden metin boyutunu, okuma genişliğini ve temiz veya arduvaz temasını ayarlayın. Daraltılabilir ana hat, Markdown başlıkları arasında gezinmenizi sağlar; geniş tablolar ve kod blokları bağımsız olarak kaydırılır.
+Markdown Önizleyici, `.md`, `.markdown`, `.mdown` ve `.txt` belgelerini tarayıcınızda yerel olarak açar. Okuma modu kaynak düzenleyicisini gizlerken odak modu ekranı belgeye ayırır. Kaldığınız yeri kaybetmeden metin boyutunu, okuma genişliğini ve temiz veya arduvaz temasını ayarlayın. Daraltılabilir ana hat, Markdown başlıkları arasında gezinmenizi sağlar; geniş tablolar ve kod blokları bağımsız olarak kaydırılır.
 
 ## Ne Zaman Kullanılır
 

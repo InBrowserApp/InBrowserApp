@@ -1,6 +1,6 @@
 ## Perkara yang dilakukan oleh alat ini
 
-PDF Info Viewer membuka PDF dalam pelayar anda dan meringkaskan butiran fail
+Pemapar Maklumat PDF membuka PDF dalam pelayar anda dan meringkaskan butiran fail
 asasnya, versi pengepala PDF, bilangan halaman, saiz halaman pertama, status
 penyulitan dan metadata dokumen seperti tajuk, pengarang, subjek, kata kunci,
 pencipta, pengeluar dan tarikh. Alat ini bertujuan untuk pemeriksaan pantas

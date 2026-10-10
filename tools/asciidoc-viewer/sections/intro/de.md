@@ -4,10 +4,10 @@
 
 ## Eigenständige Dokumente und fehlende Inhalte
 
-Der Viewer unterstützt Titel, verschachtelte Abschnitte, übliche Formatierungen, Listen, Tabellen, Code, Code-Anmerkungen und Hinweisblöcke. Dokumente in UTF-8 und UTF-16 mit Byte-Reihenfolge-Markierung werden unterstützt. Eingebettete Rasterbilder können angezeigt werden; separate Bilddateien und externe Ressourcen werden nicht geladen.
+Der Betrachter unterstützt Titel, verschachtelte Abschnitte, übliche Formatierungen, Listen, Tabellen, Code, Code-Anmerkungen und Hinweisblöcke. Dokumente in UTF-8 und UTF-16 mit Byte-Reihenfolge-Markierung werden unterstützt. Eingebettete Rasterbilder können angezeigt werden; separate Bilddateien und externe Ressourcen werden nicht geladen.
 
 Eingebundene Dateien, Attribute von Dokumentationsprojekten, eigene Erweiterungen, Diagramme und Erweiterungen zur Syntaxhervorhebung werden nicht geladen. Eingebundene Inhalte müssen bereits in die ausgewählte Datei eingefügt worden sein. Lesehinweise melden erkannte fehlende Einbindungen, Ressourcen und Parserwarnungen. Unbekannte Makros oder Diagrammquelltext können als Text stehen bleiben. Bitte den Autor um ein eigenständiges Dokument, wenn die Vorschau unvollständig ist.
 
 ## Lokal und schreibgeschützt lesen
 
-Dateien bleiben auf deinem Gerät. Beim Öffnen eines Dokuments werden keine externen Ressourcen abgerufen, anderen lokalen Dateien gelesen oder Skripte ausgeführt. Externe Links öffnen sich nur nach Auswahl separat. Schließe oder ersetze die Datei, um die aktuelle Vorschau freizugeben. Dieser Viewer bearbeitet und exportiert keine Dokumente und erstellt keine Dokumentationswebsites. Die Erweiterung .asc wird nicht akzeptiert, da sie auch für andere Dateitypen verwendet wird.
+Dateien bleiben auf deinem Gerät. Beim Öffnen eines Dokuments werden keine externen Ressourcen abgerufen, anderen lokalen Dateien gelesen oder Skripte ausgeführt. Externe Links öffnen sich nur nach Auswahl separat. Schließe oder ersetze die Datei, um die aktuelle Vorschau freizugeben. Dieser Betrachter bearbeitet und exportiert keine Dokumente und erstellt keine Dokumentationswebsites. Die Erweiterung .asc wird nicht akzeptiert, da sie auch für andere Dateitypen verwendet wird.

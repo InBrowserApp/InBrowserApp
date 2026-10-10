@@ -1,6 +1,6 @@
 ## Wat Deze Tool Doet
 
-Markdown Previewer opent `.md`-, `.markdown`-, `.mdown`- en `.txt`-documenten lokaal in je browser. De leesmodus verbergt de broneditor, terwijl de focusmodus het document het hele scherm geeft. Pas de tekstgrootte, leesbreedte en het schone of slate-thema aan zonder je plek te verliezen. Met de inklapbare inhoudsopgave navigeer je tussen Markdown-koppen; brede tabellen en codeblokken kun je afzonderlijk scrollen.
+Markdown-voorvertoner opent `.md`-, `.markdown`-, `.mdown`- en `.txt`-documenten lokaal in je browser. De leesmodus verbergt de broneditor, terwijl de focusmodus het document het hele scherm geeft. Pas de tekstgrootte, leesbreedte en het schone of slate-thema aan zonder je plek te verliezen. Met de inklapbare inhoudsopgave navigeer je tussen Markdown-koppen; brede tabellen en codeblokken kun je afzonderlijk scrollen.
 
 ## Wanneer Je Het Gebruikt
 

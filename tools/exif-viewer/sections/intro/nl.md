@@ -1,6 +1,6 @@
 ## Wat deze tool doet
 
-EXIF Viewer leest afbeeldingsmetadata direct in je browser en groepeert de
+EXIF-viewer leest afbeeldingsmetadata direct in je browser en groepeert de
 resultaten in basisgegevens van de afbeelding, camera-instellingen, GPS-velden
 en geavanceerde ingesloten data. De tool ondersteunt gangbare fotoformaten
 zoals JPEG, PNG, HEIC, TIFF, WebP en GIF wanneer de browser en metadataparser

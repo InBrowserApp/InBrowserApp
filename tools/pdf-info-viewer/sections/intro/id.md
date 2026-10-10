@@ -1,6 +1,6 @@
 ## Fungsi alat ini
 
-PDF Info Viewer membuka PDF di browser Anda dan merangkum detail file
+Penampil Info PDF membuka PDF di browser Anda dan merangkum detail file
 dasarnya, versi header PDF, jumlah halaman, ukuran halaman pertama, status
 enkripsi, dan metadata dokumen seperti judul, penulis, subjek, kata kunci,
 pembuat, producer, dan tanggal. Alat ini ditujukan untuk pemeriksaan cepat
@@ -30,7 +30,7 @@ melampirkannya ke laporan masalah publik.
 ## Batasan
 
 Beberapa PDF yang terenkripsi atau rusak hanya menampilkan nama file, ukuran,
-dan versi header. Viewer ini tidak menghapus metadata, mendekripsi file,
+dan versi header. Penampil ini tidak menghapus metadata, mendekripsi file,
 memperbaiki dokumen rusak, atau memvalidasi tata letak visual. Gunakan editor
 PDF atau sanitizer khusus saat Anda perlu mengubah dokumen sebelum
 membagikannya.

@@ -4,7 +4,7 @@ Open a .txt, .text, or .log file to read it with line numbers, adjustable text s
 
 ## Large files and long lines
 
-The reader displays a section at a time to keep large files usable. Every section remains accessible, including the continuation of very long lines. Selection and your browser's Find command cover the current section; the reader's Find text searches the complete decoded file, including matches across section boundaries. No file-size or line-count cap is imposed. Available browser memory still sets a practical limit.
+The viewer displays a section at a time to keep large files usable. Every section remains accessible, including the continuation of very long lines. Selection and your browser's Find command cover the current section; the viewer's Find text searches the complete decoded file, including matches across section boundaries. No file-size or line-count cap is imposed. Available browser memory still sets a practical limit.
 
 Blank lines, tabs, mixed CRLF/CR/LF line endings, and Unicode text are preserved. Line endings are displayed as line breaks. Markup and terminal escape sequences stay inert text. Some control characters have no visible glyph; files containing NUL characters receive a binary-file notice.
 

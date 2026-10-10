@@ -1,6 +1,6 @@
 ## Yang Dilakukan Alat Ini
 
-Markdown Previewer membuka dokumen `.md`, `.markdown`, `.mdown`, dan `.txt` secara lokal di browser Anda. Mode baca menyembunyikan editor sumber, sedangkan mode fokus memberikan ruang layar untuk dokumen. Sesuaikan ukuran teks, lebar baca, serta tema bersih atau slate tanpa kehilangan posisi baca. Kerangka yang dapat dilipat menavigasi judul Markdown, sementara tabel lebar dan blok kode dapat digulir secara terpisah.
+Pratinjau Markdown membuka dokumen `.md`, `.markdown`, `.mdown`, dan `.txt` secara lokal di browser Anda. Mode baca menyembunyikan editor sumber, sedangkan mode fokus memberikan ruang layar untuk dokumen. Sesuaikan ukuran teks, lebar baca, serta tema bersih atau slate tanpa kehilangan posisi baca. Kerangka yang dapat dilipat menavigasi judul Markdown, sementara tabel lebar dan blok kode dapat digulir secara terpisah.
 
 ## Kapan Menggunakannya
 
