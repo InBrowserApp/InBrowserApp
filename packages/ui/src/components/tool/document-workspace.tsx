@@ -23,6 +23,7 @@ export function DocumentWorkspace({
   onFile,
   accept,
   active,
+  minHeight = 400,
   messages: m,
   children,
 }: {
@@ -31,6 +32,7 @@ export function DocumentWorkspace({
   onFile: (file: File | null) => void
   accept: string
   active: boolean
+  minHeight?: number
   messages: Messages
   children: ReactNode
 }) {
@@ -72,7 +74,7 @@ export function DocumentWorkspace({
   useEffect(() => {
     function resize() {
       const top = frame.current!.getBoundingClientRect().top + window.scrollY
-      setHeight(Math.max(400, window.innerHeight - top - 24))
+      setHeight(Math.max(minHeight, window.innerHeight - top - 24))
     }
     if (focused) return
     resize()
@@ -83,7 +85,7 @@ export function DocumentWorkspace({
       observer.disconnect()
       window.removeEventListener("resize", resize)
     }
-  }, [focused, active])
+  }, [focused, active, minHeight])
   const unit =
     file && file.size >= 1024 * 1024
       ? "megabyte"

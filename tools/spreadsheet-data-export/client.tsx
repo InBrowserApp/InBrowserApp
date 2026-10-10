@@ -28,6 +28,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
       onFile={setFile}
       accept=".xlsx,.xlsm,.xltx,.xltm"
       active={Boolean(file && !error)}
+      minHeight={720}
       messages={m}
     >
       {error ? (
