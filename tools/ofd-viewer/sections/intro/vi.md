@@ -11,3 +11,5 @@ Tệp OFD có thể chứa văn bản được định vị, bảng, hình ảnh
 Chữ ký số không được xác minh. Hình ảnh con dấu lưu trong chữ ký số không được hiển thị; hình ảnh hoặc hình vẽ con dấu thông thường có thể vẫn xuất hiện. Con dấu hiển thị không chứng minh tính xác thực. Nếu một gói chứa nhiều tài liệu, trình xem này chỉ hiển thị tài liệu đầu tiên và thông báo rằng gói không được hiển thị đầy đủ ở đây. Hãy kiểm tra các số tiền quan trọng, nội dung bị thiếu và thông tin chữ ký bằng trình đọc OFD phù hợp.
 
 Không có giới hạn cố định về kích thước tệp hoặc số trang. Bộ nhớ trình duyệt khả dụng và độ phức tạp của trang vẫn có thể khiến tài liệu không mở được. Ở mức phóng to rất cao, một trang có thể vượt quá giới hạn bộ nhớ dành cho canvas của trình duyệt; hãy giảm mức thu phóng hoặc dùng Vừa trang.
+
+Để tạo PDF từ các tài liệu được hỗ trợ, hãy dùng [Trình chuyển đổi OFD sang PDF](../ofd-to-pdf-converter/).

@@ -13066,6 +13066,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ofd-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "ofd-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "ofd-viewer",
     language: "ar",
   },

@@ -11,3 +11,5 @@ OFD-filer kan innehålla positionerad text, tabeller, inbäddade bilder och ante
 Digitala signaturer verifieras inte. Sigillbilder som lagras i digitala signaturer visas inte; vanliga bilder eller teckningar av sigill kan vara synliga. Ett synligt sigill bekräftar inte äktheten. Om ett paket innehåller flera dokument visar den här visaren endast det första och meddelar att paketet inte visas i sin helhet här. Kontrollera viktiga belopp, saknat innehåll och signaturinformation med en lämplig OFD-läsare.
 
 Det finns ingen fast gräns för filstorlek eller sidantal. Webbläsarens tillgängliga minne och en sidas komplexitet kan ändå hindra den från att öppnas. Vid mycket hög zoom kan en sida överskrida webbläsarens minnesgräns för ritytan; minska zoomnivån eller använd Anpassa sida.
+
+Använd [Konverterare från OFD till PDF](../ofd-to-pdf-converter/) för att skapa en PDF från dokument som stöds.

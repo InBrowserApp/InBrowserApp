@@ -11,3 +11,5 @@ Os arquivos OFD podem conter texto posicionado, tabelas, imagens incorporadas e 
 As assinaturas digitais não são verificadas. As representações visuais dos selos armazenadas dentro das assinaturas digitais não são exibidas; imagens ou desenhos comuns de selos podem estar visíveis. Um selo visível não comprova a autenticidade. Se um pacote contiver vários documentos, este visualizador mostra apenas o primeiro e informa que o pacote está incompleto aqui. Confira valores importantes, conteúdo ausente e informações de assinatura com um leitor OFD adequado.
 
 Não há um limite fixo de tamanho de arquivo ou número de páginas. Ainda assim, a memória disponível no navegador e a complexidade de uma página podem impedir sua abertura. Com um zoom muito alto, uma página pode exceder o limite de memória para a área de desenho do navegador; reduza o zoom ou use Ajustar à página.
+
+Para criar um PDF a partir de documentos compatíveis, use o [Conversor de OFD para PDF](../ofd-to-pdf-converter/).

@@ -11,3 +11,5 @@ Pliki OFD mogą zawierać tekst o określonym położeniu, tabele, osadzone obra
 Podpisy cyfrowe nie są weryfikowane. Wizerunki pieczęci zapisane wewnątrz podpisów cyfrowych nie są wyświetlane; zwykłe obrazy lub rysunki pieczęci mogą być widoczne. Widoczna pieczęć nie potwierdza autentyczności. Jeśli pakiet zawiera wiele dokumentów, ta przeglądarka wyświetla tylko pierwszy i informuje, że pakiet jest tutaj niekompletny. Sprawdź ważne kwoty, brakujące treści i informacje o podpisach w odpowiednim czytniku OFD.
 
 Nie ma stałego limitu rozmiaru pliku ani liczby stron. Dostępna pamięć przeglądarki i złożoność strony mogą jednak uniemożliwić jej otwarcie. Przy bardzo dużym powiększeniu strona może przekroczyć limit pamięci przydzielanej przez przeglądarkę na obszar rysowania; zmniejsz powiększenie lub użyj opcji Dopasuj stronę.
+
+Aby utworzyć plik PDF z obsługiwanych dokumentów, użyj narzędzia [Konwerter OFD na PDF](../ofd-to-pdf-converter/).

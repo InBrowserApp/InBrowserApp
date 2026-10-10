@@ -11,3 +11,5 @@ File OFD dapat berisi teks dengan posisi tertentu, tabel, gambar yang disematkan
 Tanda tangan digital tidak diverifikasi. Tampilan cap yang disimpan di dalam tanda tangan digital tidak ditampilkan; gambar atau ilustrasi cap biasa mungkin terlihat. Cap yang terlihat tidak membuktikan keaslian. Jika suatu paket berisi beberapa dokumen, penampil ini hanya menampilkan dokumen pertama dan menjelaskan bahwa paket tersebut ditampilkan secara tidak lengkap di sini. Periksa jumlah nominal penting, konten yang hilang, dan informasi tanda tangan dengan aplikasi pembaca OFD yang sesuai.
 
 Tidak ada batas tetap untuk ukuran file atau jumlah halaman. Memori browser yang tersedia dan kerumitan halaman tetap dapat menyebabkan dokumen gagal dibuka. Pada tingkat pembesaran yang sangat tinggi, halaman dapat melebihi batas alokasi kanvas browser; kurangi pembesaran atau gunakan Sesuaikan halaman.
+
+Untuk membuat PDF dari dokumen yang didukung, gunakan [Konverter OFD ke PDF](../ofd-to-pdf-converter/).

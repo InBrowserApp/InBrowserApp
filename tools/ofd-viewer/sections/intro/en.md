@@ -11,3 +11,5 @@ OFD files can contain positioned text, tables, embedded images, and annotations.
 Digital signatures are not verified. Seal appearances stored inside digital signatures are not displayed; ordinary images or drawings of seals may be visible. A visible seal does not establish authenticity. If a package contains multiple documents, this viewer shows only the first and explains that the package is incomplete here. Check important amounts, missing content, and signature information with an appropriate OFD reader.
 
 There is no fixed file-size or page-count limit. Available browser memory and the complexity of a page can still prevent it from opening. At very high zoom, a page may exceed the browser canvas allocation budget; reduce the zoom or use Fit page.
+
+To create a PDF from supported documents, use the [OFD to PDF Converter](../ofd-to-pdf-converter/).

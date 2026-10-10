@@ -11,3 +11,5 @@ OFD-Dateien können positionierten Text, Tabellen, eingebettete Bilder und Anmer
 Digitale Signaturen werden nicht überprüft. In digitalen Signaturen gespeicherte Siegeldarstellungen werden nicht angezeigt; gewöhnliche Bilder oder Zeichnungen von Siegeln können sichtbar sein. Ein sichtbares Siegel belegt keine Echtheit. Enthält ein Paket mehrere Dokumente, zeigt dieser Betrachter nur das erste an und weist darauf hin, dass das Paket hier unvollständig dargestellt wird. Prüfen Sie wichtige Beträge, fehlende Inhalte und Signaturinformationen mit einem geeigneten OFD-Leseprogramm.
 
 Es gibt keine feste Begrenzung für Dateigröße oder Seitenzahl. Der verfügbare Browserspeicher und die Komplexität einer Seite können das Öffnen dennoch verhindern. Bei sehr starker Vergrößerung kann eine Seite den für die Zeichenfläche verfügbaren Browserspeicher überschreiten; verkleinern Sie die Ansicht oder wählen Sie „Ganze Seite“.
+
+Verwenden Sie den [OFD-zu-PDF-Konverter](../ofd-to-pdf-converter/), um eine PDF aus unterstützten Dokumenten zu erstellen.
