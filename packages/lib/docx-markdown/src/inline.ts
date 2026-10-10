@@ -1,7 +1,21 @@
-import type { DocRun, DocxDocumentModel } from "@silurus/ooxml/docx"
+import type {
+  DocRun,
+  DocxDocumentModel,
+  DocxTextRun,
+} from "@silurus/ooxml/docx"
 import type { Labels } from "./types"
 
-type InlineRun = Exclude<DocRun, { type: "field" }>
+type TextRun = Pick<
+  DocxTextRun,
+  | "text"
+  | "bold"
+  | "italic"
+  | "strikethrough"
+  | "hyperlink"
+  | "hyperlinkAnchor"
+  | "noteRef"
+> & { type: "text" }
+type InlineRun = Exclude<DocRun, { type: "field" | "text" }> | TextRun
 
 export type Context = {
   model: DocxDocumentModel
@@ -64,12 +78,14 @@ export function inlineRuns(
     if (["deletion", "moveFrom"].includes(source.revision?.kind ?? "")) continue
     const run: InlineRun =
       source.type === "field"
-        ? ({
-            ...source,
+        ? {
             type: "text",
             text: source.fallbackText,
+            bold: source.bold,
+            italic: source.italic,
+            strikethrough: source.strikethrough,
             hyperlink: null,
-          } as InlineRun)
+          }
         : source
     const previous = merged.at(-1)
     if (
