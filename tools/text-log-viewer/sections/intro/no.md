@@ -4,7 +4,7 @@
 
 ## Store filer og lange linjer
 
-Leseren viser én del om gangen for å gjøre store filer håndterlige. Alle delene er tilgjengelige, også fortsettelsen av svært lange linjer. Markering og nettleserens søkekommando gjelder den gjeldende delen; leserens Finn tekst søker i hele den dekodede filen, også etter treff som går på tvers av delene. Det er ingen fast grense for filstørrelse eller antall linjer. Tilgjengelig minne i nettleseren setter likevel en praktisk grense.
+Viseren viser én del om gangen for å gjøre store filer håndterlige. Alle delene er tilgjengelige, også fortsettelsen av svært lange linjer. Markering og nettleserens søkekommando gjelder den gjeldende delen; viserens Finn tekst søker i hele den dekodede filen, også etter treff som går på tvers av delene. Det er ingen fast grense for filstørrelse eller antall linjer. Tilgjengelig minne i nettleseren setter likevel en praktisk grense.
 
 Tomme linjer, tabulatorer, blandede CRLF/CR/LF-linjeavslutninger og Unicode-tekst bevares. Linjeavslutninger vises som linjeskift. Oppmerking og escape-sekvenser for terminaler forblir uvirksom tekst. Noen kontrolltegn har ikke noe synlig tegnbilde; filer som inneholder NUL-tegn, får en merknad om binærfiler.
 

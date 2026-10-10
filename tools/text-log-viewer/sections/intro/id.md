@@ -4,7 +4,7 @@ Buka file .txt, .text, atau .log untuk membacanya dengan nomor baris, ukuran tek
 
 ## File besar dan baris panjang
 
-Pembaca menampilkan satu bagian setiap saat agar file besar tetap mudah dibaca. Semua bagian tetap dapat diakses, termasuk lanjutan baris yang sangat panjang. Pemilihan teks dan perintah Cari di browser mencakup bagian saat ini; fitur Cari teks pada pembaca menelusuri seluruh file yang telah didekodekan, termasuk kecocokan yang melintasi batas bagian. Tidak ada batas ukuran file atau jumlah baris yang ditetapkan. Memori browser yang tersedia tetap menjadi batas praktis.
+Penampil menampilkan satu bagian setiap saat agar file besar tetap mudah dibaca. Semua bagian tetap dapat diakses, termasuk lanjutan baris yang sangat panjang. Pemilihan teks dan perintah Cari di browser mencakup bagian saat ini; fitur Cari teks pada penampil menelusuri seluruh file yang telah didekodekan, termasuk kecocokan yang melintasi batas bagian. Tidak ada batas ukuran file atau jumlah baris yang ditetapkan. Memori browser yang tersedia tetap menjadi batas praktis.
 
 Baris kosong, tab, campuran penanda akhir baris CRLF/CR/LF, dan teks Unicode dipertahankan. Penanda akhir baris ditampilkan sebagai pergantian baris. Markup dan urutan escape terminal tetap berupa teks yang tidak dieksekusi. Beberapa karakter kontrol tidak memiliki bentuk yang terlihat; file yang mengandung karakter NUL akan menampilkan pemberitahuan file biner.
 

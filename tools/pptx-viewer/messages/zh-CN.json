@@ -7,7 +7,7 @@
   "loading": "正在打开文档…",
   "error": "无法显示此 PowerPoint 文件",
   "invalid": "请选择可读取且未加密的 PPTX、PPTM、POTX、POTM、PPSX 或 PPSM 文件。此文件可能已损坏或使用了不支持的功能。",
-  "resourceLimit": "此文档超出了阅读器的资源限制。请尝试复杂度较低的文档。",
+  "resourceLimit": "此文档超出了查看器的资源限制。请尝试复杂度较低的文档。",
   "page": "幻灯片",
   "pageCount": "共 {total} 张",
   "previous": "上一张幻灯片",

@@ -4,7 +4,7 @@ Word 97–2003 `.doc` belgesi, uyumlu WPS Writer `.wps` belgesi veya `.wpt` şab
 
 ## Uyumluluk ve okuma düzeni
 
-Bu okuyucu, Word ikili belgelerini ve OLE kapsayıcısında Word ikili veya HTML belge içeriği bulunan uyumlu WPS Writer dosyalarını destekler. Uyumluluğu yalnızca uzantı değil, dosyanın içeriği belirler. Microsoft Works dosyaları ve eski tescilli WPS biçimleri desteklenmez. Modern Word dosyaları için DOCX görüntüleyiciyi kullanın.
+Bu görüntüleyici, Word ikili belgelerini ve OLE kapsayıcısında Word ikili veya HTML belge içeriği bulunan uyumlu WPS Writer dosyalarını destekler. Uyumluluğu yalnızca uzantı değil, dosyanın içeriği belirler. Microsoft Works dosyaları ve eski tescilli WPS biçimleri desteklenmez. Modern Word dosyaları için DOCX görüntüleyiciyi kullanın.
 
 Önizleme; okunabilir metni, tabloları, temel biçimlendirmeyi ve desteklenen gömülü resimleri korur. Yazı tipleri, liste numaraları, sütunlar, serbest konumlandırılmış nesneler ve sayfa sınırları özgün belgeden farklı olabilir. Üstbilgiler, altbilgiler, dipnotlar, sonnotlar ve açıklamalar gösterilmez. Kurtarılan metin kutuları ana metinden sonra görünebilir. Desteklenmeyen çizimler ve gömülü uygulamalar atlanabilir; kısmi bir önizleme tespit edildiğinde bu durum okuma notlarında belirtilir.
 

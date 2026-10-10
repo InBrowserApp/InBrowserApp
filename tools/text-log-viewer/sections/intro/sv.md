@@ -4,7 +4,7 @@
 
 ## Stora filer och långa rader
 
-Läsaren visar ett avsnitt i taget för att stora filer ska vara hanterbara. Alla avsnitt är tillgängliga, även fortsättningen på mycket långa rader. Markering och webbläsarens sökkommando omfattar det aktuella avsnittet; läsarens Sök text söker i hela den avkodade filen, även efter träffar som sträcker sig över avsnittsgränser. Ingen gräns för filstorlek eller antal rader tillämpas. Webbläsarens tillgängliga minne sätter ändå en praktisk gräns.
+Visaren visar ett avsnitt i taget för att stora filer ska vara hanterbara. Alla avsnitt är tillgängliga, även fortsättningen på mycket långa rader. Markering och webbläsarens sökkommando omfattar det aktuella avsnittet; visarens Sök text söker i hela den avkodade filen, även efter träffar som sträcker sig över avsnittsgränser. Ingen gräns för filstorlek eller antal rader tillämpas. Webbläsarens tillgängliga minne sätter ändå en praktisk gräns.
 
 Tomma rader, tabbar, blandade CRLF/CR/LF-radslut och Unicode-text bevaras. Radslut visas som radbrytningar. Märkkod och terminalens escape-sekvenser förblir text utan att köras. Vissa styrtecken saknar synlig symbol; filer som innehåller NUL-tecken får ett meddelande om att filen kan vara binär.
 

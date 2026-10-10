@@ -4,7 +4,7 @@ Buka dokumen Word 97–2003 `.doc`, dokumen WPS Writer `.wps` yang kompatibel, a
 
 ## Kompatibilitas dan tata letak baca
 
-Pembaca ini mendukung dokumen biner Word dan file WPS Writer yang kompatibel, yang berisi konten dokumen biner Word atau HTML dalam kontainer OLE. Kompatibilitas ditentukan oleh isi file, bukan hanya ekstensinya. File Microsoft Works dan format WPS proprieter lama tidak didukung. Gunakan penampil DOCX untuk file Word modern.
+Penampil ini mendukung dokumen biner Word dan file WPS Writer yang kompatibel, yang berisi konten dokumen biner Word atau HTML dalam kontainer OLE. Kompatibilitas ditentukan oleh isi file, bukan hanya ekstensinya. File Microsoft Works dan format WPS proprieter lama tidak didukung. Gunakan penampil DOCX untuk file Word modern.
 
 Pratinjau mempertahankan teks yang dapat dibaca, tabel, pemformatan dasar, dan gambar tertanam yang didukung. Font, penomoran daftar, kolom, objek mengambang, dan batas halaman dapat berbeda dari aslinya. Header, footer, catatan kaki, catatan akhir, dan komentar tidak ditampilkan. Kotak teks yang dipulihkan mungkin muncul setelah teks utama. Gambar dan aplikasi tertanam yang tidak didukung dapat dihilangkan; catatan pembacaan menunjukkan pratinjau parsial bila terdeteksi.
 

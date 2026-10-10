@@ -1,4 +1,4 @@
 {
-  "name": "Email Viewer",
+  "name": "邮件查看器",
   "description": "在本地读取 EML、EMLX 和 MSG 邮件文件，查看邮件头、HTML 或纯文本正文、内嵌图片及附件详情。"
 }

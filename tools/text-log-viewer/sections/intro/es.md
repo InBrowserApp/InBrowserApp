@@ -4,7 +4,7 @@ Abre un archivo .txt, .text o .log para leerlo con números de línea, tamaño d
 
 ## Archivos grandes y líneas largas
 
-El lector muestra una sección a la vez para facilitar la lectura de archivos grandes. Todas las secciones siguen siendo accesibles, incluida la continuación de las líneas muy largas. La selección y el comando de búsqueda de tu navegador abarcan la sección actual; Buscar texto del lector busca en todo el archivo decodificado, incluidas las coincidencias que atraviesan los límites entre secciones. No se impone ningún límite de tamaño de archivo ni de número de líneas. La memoria disponible en el navegador sigue estableciendo un límite práctico.
+El visor muestra una sección a la vez para facilitar la lectura de archivos grandes. Todas las secciones siguen siendo accesibles, incluida la continuación de las líneas muy largas. La selección y el comando de búsqueda de tu navegador abarcan la sección actual; Buscar texto del visor busca en todo el archivo decodificado, incluidas las coincidencias que atraviesan los límites entre secciones. No se impone ningún límite de tamaño de archivo ni de número de líneas. La memoria disponible en el navegador sigue estableciendo un límite práctico.
 
 Se conservan las líneas en blanco, las tabulaciones, los finales de línea CRLF/CR/LF mixtos y el texto Unicode. Los finales de línea se muestran como saltos de línea. El marcado y las secuencias de escape de terminal se mantienen como texto inerte. Algunos caracteres de control no tienen una representación visible; los archivos que contienen caracteres NUL reciben un aviso de archivo binario.
 

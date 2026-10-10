@@ -2,7 +2,7 @@
   "open": "Document openen",
   "replace": "Document vervangen",
   "clear": "Document sluiten",
-  "reader": "Jupyter-notebooklezer",
+  "reader": "Jupyter-notebookviewer",
   "privacy": "Bestanden blijven op je apparaat. Geen uploads, uitvoering van code of externe bronnen.",
   "focus": "Leesmodus zonder afleiding",
   "exitFocus": "Leesmodus verlaten",

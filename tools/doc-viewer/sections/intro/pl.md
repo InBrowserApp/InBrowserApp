@@ -4,7 +4,7 @@ Otwórz dokument Word 97–2003 `.doc`, zgodny dokument WPS Writer `.wps` lub sz
 
 ## Zgodność i układ do czytania
 
-Ten czytnik obsługuje dokumenty binarne Word oraz zgodne pliki WPS Writer zawierające dokument binarny Word lub treść HTML w kontenerze OLE. O zgodności decyduje zawartość pliku, a nie samo rozszerzenie. Pliki Microsoft Works i starsze zastrzeżone formaty WPS nie są obsługiwane. Do nowszych plików Word użyj przeglądarki DOCX.
+Ta przeglądarka obsługuje dokumenty binarne Word oraz zgodne pliki WPS Writer zawierające dokument binarny Word lub treść HTML w kontenerze OLE. O zgodności decyduje zawartość pliku, a nie samo rozszerzenie. Pliki Microsoft Works i starsze zastrzeżone formaty WPS nie są obsługiwane. Do nowszych plików Word użyj przeglądarki DOCX.
 
 Podgląd zachowuje czytelny tekst, tabele, podstawowe formatowanie i obsługiwane osadzone obrazy. Czcionki, numeracja list, kolumny, obiekty pływające i podział na strony mogą różnić się od oryginału. Nagłówki, stopki, przypisy dolne i końcowe oraz komentarze nie są wyświetlane. Odzyskane pola tekstowe mogą pojawić się po tekście głównym. Nieobsługiwane rysunki i osadzone aplikacje mogą zostać pominięte; wykryte ograniczenia podglądu są wskazywane w uwagach dotyczących odczytu.
 

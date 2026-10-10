@@ -4,7 +4,7 @@ Apri un documento Word 97–2003 `.doc`, un documento WPS Writer `.wps` compatib
 
 ## Compatibilità e impaginazione
 
-Questo lettore supporta i documenti binari Word e i file WPS Writer compatibili che contengono un documento binario Word o HTML in un contenitore OLE. La compatibilità dipende dal contenuto del file, non solo dall’estensione. I file Microsoft Works e i formati proprietari WPS meno recenti non sono supportati. Usa il visualizzatore DOCX per i file Word moderni.
+Questo visualizzatore supporta i documenti binari Word e i file WPS Writer compatibili che contengono un documento binario Word o HTML in un contenitore OLE. La compatibilità dipende dal contenuto del file, non solo dall’estensione. I file Microsoft Works e i formati proprietari WPS meno recenti non sono supportati. Usa il visualizzatore DOCX per i file Word moderni.
 
 L’anteprima conserva il testo leggibile, le tabelle, la formattazione di base e le immagini incorporate supportate. Caratteri, numerazione degli elenchi, colonne, oggetti mobili e limiti delle pagine possono differire dall’originale. Intestazioni, piè di pagina, note a piè di pagina, note di chiusura e commenti non vengono visualizzati. Le caselle di testo recuperate possono apparire dopo il testo principale. I disegni non supportati e le applicazioni incorporate possono essere omessi; le note di lettura segnalano un’anteprima parziale quando viene rilevata.
 

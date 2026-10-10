@@ -1,9 +1,9 @@
 ## Qué hace esta herramienta
 
-PDF Info Viewer abre un PDF en tu navegador y resume sus detalles básicos de
-archivo, la versión del encabezado PDF, el recuento de páginas, el tamaño de la
+El visor de información de PDF abre un PDF en tu navegador y resume sus detalles
+básicos de archivo, la versión del encabezado PDF, el recuento de páginas, el tamaño de la
 primera página, el estado de cifrado y los metadatos del documento, como título,
-autor, asunto, palabras clave, creador, productor y fechas. Está pensada para
+autor, asunto, palabras clave, creador, productor y fechas. Está pensado para
 una inspección rápida antes de compartir, archivar, depurar o procesar un
 documento.
 

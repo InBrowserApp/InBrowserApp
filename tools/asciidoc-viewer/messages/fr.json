@@ -2,7 +2,7 @@
   "open": "Ouvrir un document",
   "replace": "Remplacer le document",
   "clear": "Fermer le document",
-  "reader": "Lecteur de documents AsciiDoc",
+  "reader": "Visionneuse de documents AsciiDoc",
   "privacy": "Les fichiers restent sur votre appareil. Aucun envoi ni ressource distante.",
   "focus": "Mode lecture concentrée",
   "exitFocus": "Quitter la lecture concentrée",

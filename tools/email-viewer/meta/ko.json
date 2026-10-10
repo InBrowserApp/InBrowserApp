@@ -1,4 +1,4 @@
 {
-  "name": "Email Viewer",
+  "name": "이메일 뷰어",
   "description": "EML, EMLX 및 MSG 이메일 파일을 로컬에서 읽고 메시지 헤더, HTML 또는 일반 텍스트, 본문 내 이미지, 첨부 파일 정보를 확인하세요."
 }

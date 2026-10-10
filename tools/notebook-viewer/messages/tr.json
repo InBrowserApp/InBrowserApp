@@ -2,7 +2,7 @@
   "open": "Belge aç",
   "replace": "Belgeyi değiştir",
   "clear": "Belgeyi kapat",
-  "reader": "Jupyter not defteri okuyucu",
+  "reader": "Jupyter not defteri görüntüleyici",
   "privacy": "Dosyalar cihazınızda kalır. Yükleme yapılmaz, kod çalıştırılmaz, uzak kaynaklar alınmaz.",
   "focus": "Odaklanmış okuma modu",
   "exitFocus": "Odaklanmış okuma modundan çık",

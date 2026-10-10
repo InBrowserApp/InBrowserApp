@@ -2,7 +2,7 @@
   "open": "Open file",
   "replace": "Replace file",
   "clear": "Close file",
-  "reader": "Text and log reader",
+  "reader": "Text and log viewer",
   "privacy": "Files stay on your device. No uploads or automatic storage.",
   "focus": "Focus reading mode",
   "exitFocus": "Exit focus reading mode",

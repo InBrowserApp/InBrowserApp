@@ -1,6 +1,6 @@
 ## Hva Dette Verktøyet Gjør
 
-Markdown Previewer åpner `.md`-, `.markdown`-, `.mdown`- og `.txt`-dokumenter lokalt i nettleseren din. Lesemodus skjuler kildeeditoren, mens fokusmodus gir dokumentet hele skjermen. Juster tekststørrelse, lesebredde og temaet ren eller skifer uten å miste plassen din. Den sammenleggbare disposisjonen navigerer mellom Markdown-overskrifter, og brede tabeller og kodeblokker kan rulles uavhengig av resten.
+Markdown-forhåndsviseren åpner `.md`-, `.markdown`-, `.mdown`- og `.txt`-dokumenter lokalt i nettleseren din. Lesemodus skjuler kildeeditoren, mens fokusmodus gir dokumentet hele skjermen. Juster tekststørrelse, lesebredde og temaet ren eller skifer uten å miste plassen din. Den sammenleggbare disposisjonen navigerer mellom Markdown-overskrifter, og brede tabeller og kodeblokker kan rulles uavhengig av resten.
 
 ## Når Du Bør Bruke Det
 

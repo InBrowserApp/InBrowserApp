@@ -34,7 +34,7 @@
   "fontsRequired": "Ten wariant tekstowy wymaga czcionek, których nie dołączono. Spróbuj użyć wersji PDF od dostawcy dokumentu.",
   "protected": "Ten dokument jest zabezpieczony. Otwórz wersję dostępną do odczytu od dostawcy dokumentu.",
   "resource": "Ten dokument wymaga więcej pamięci, niż przeglądarka może zapewnić. Zamknij inne karty lub spróbuj na innym urządzeniu.",
-  "engineUnavailable": "Nie udało się wczytać czytnika. Sprawdź połączenie i ponownie otwórz dokument.",
+  "engineUnavailable": "Nie udało się wczytać przeglądarki dokumentów. Sprawdź połączenie i ponownie otwórz dokument.",
   "missingPages": "Nie udało się otworzyć całego dokumentu. Niektórych stron brakuje lub nie można ich odczytać. Spróbuj użyć innego egzemplarza pliku.",
   "fitPage": "Dopasuj stronę",
   "rotate": "Obróć w prawo",

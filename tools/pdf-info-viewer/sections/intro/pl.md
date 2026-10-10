@@ -1,6 +1,6 @@
 ## Do czego służy to narzędzie
 
-PDF Info Viewer otwiera PDF w przeglądarce i podsumowuje podstawowe
+Przeglądarka informacji o PDF otwiera PDF w przeglądarce i podsumowuje podstawowe
 szczegóły pliku, wersję nagłówka PDF, liczbę stron, rozmiar pierwszej strony,
 stan szyfrowania oraz metadane dokumentu, takie jak tytuł, autor, temat,
 słowa kluczowe, twórca, producent i daty. Służy do szybkiej kontroli przed
@@ -29,7 +29,7 @@ zewnątrz lub dołączeniem go do publicznego zgłoszenia.
 ## Ograniczenia
 
 Niektóre zaszyfrowane lub uszkodzone PDF-y ujawniają tylko nazwę pliku, rozmiar
-i wersję nagłówka. Ten podgląd nie usuwa metadanych, nie odszyfrowuje plików,
+i wersję nagłówka. Ta przeglądarka nie usuwa metadanych, nie odszyfrowuje plików,
 nie naprawia uszkodzonych dokumentów ani nie weryfikuje układu wizualnego.
 Użyj dedykowanego edytora PDF lub narzędzia do oczyszczania, gdy musisz zmienić
 dokument przed jego udostępnieniem.

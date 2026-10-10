@@ -4,7 +4,7 @@ Satır numaraları, ayarlanabilir metin boyutu, isteğe bağlı satır kaydırma
 
 ## Büyük dosyalar ve uzun satırlar
 
-Okuyucu, büyük dosyaların kullanılabilirliğini korumak için bir seferde tek bölüm gösterir. Çok uzun satırların devamı dahil her bölüme erişilebilir. Seçim ve tarayıcınızın Bul komutu geçerli bölümü kapsar; okuyucunun Metin bul işlevi ise bölüm sınırlarını aşan eşleşmeler dahil çözülen dosyanın tamamında arama yapar. Dosya boyutu veya satır sayısı sınırı uygulanmaz. Kullanılabilir tarayıcı belleği yine de pratik bir sınır oluşturur.
+Görüntüleyici, büyük dosyaların kullanılabilirliğini korumak için bir seferde tek bölüm gösterir. Çok uzun satırların devamı dahil her bölüme erişilebilir. Seçim ve tarayıcınızın Bul komutu geçerli bölümü kapsar; görüntüleyicinin Metin bul işlevi ise bölüm sınırlarını aşan eşleşmeler dahil çözülen dosyanın tamamında arama yapar. Dosya boyutu veya satır sayısı sınırı uygulanmaz. Kullanılabilir tarayıcı belleği yine de pratik bir sınır oluşturur.
 
 Boş satırlar, sekmeler, karışık CRLF/CR/LF satır sonları ve Unicode metin korunur. Satır sonları, satır geçişleri olarak gösterilir. İşaretleme ve terminal kaçış dizileri, işlem görmeyen metin olarak kalır. Bazı kontrol karakterlerinin görünür bir simgesi yoktur; NUL karakterleri içeren dosyalar için ikili dosya bildirimi gösterilir.
 

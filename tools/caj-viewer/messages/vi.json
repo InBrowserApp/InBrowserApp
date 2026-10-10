@@ -34,7 +34,7 @@
   "fontsRequired": "Biến thể chứa văn bản này cần tài nguyên phông chữ không được đính kèm. Hãy thử bản PDF từ nhà cung cấp tài liệu.",
   "protected": "Tài liệu này được bảo vệ. Hãy mở bản có thể truy cập từ nhà cung cấp tài liệu.",
   "resource": "Tài liệu này cần nhiều bộ nhớ hơn mức trình duyệt có thể cung cấp. Hãy đóng các thẻ khác hoặc thử thiết bị khác.",
-  "engineUnavailable": "Không thể tải trình đọc. Hãy kiểm tra kết nối và mở lại tài liệu.",
+  "engineUnavailable": "Không thể tải trình xem. Hãy kiểm tra kết nối và mở lại tài liệu.",
   "missingPages": "Không thể mở đầy đủ tài liệu. Một số trang bị thiếu hoặc không đọc được. Hãy thử bản khác.",
   "fitPage": "Vừa trang",
   "rotate": "Xoay theo chiều kim đồng hồ",

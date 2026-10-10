@@ -1,6 +1,6 @@
 ## Ce Que Fait Cet Outil
 
-Markdown Previewer ouvre les documents `.md`, `.markdown`, `.mdown` et `.txt` localement dans ton navigateur. Le mode lecture masque l’éditeur source, tandis que le mode concentration laisse tout l’écran au document. Ajuste la taille du texte, la largeur de lecture et le thème clair ou ardoise sans perdre ta position. Le plan repliable permet de naviguer entre les titres Markdown, et les tableaux larges et les blocs de code défilent indépendamment.
+L’outil Aperçu Markdown ouvre les documents `.md`, `.markdown`, `.mdown` et `.txt` localement dans ton navigateur. Le mode lecture masque l’éditeur source, tandis que le mode concentration laisse tout l’écran au document. Ajuste la taille du texte, la largeur de lecture et le thème clair ou ardoise sans perdre ta position. Le plan repliable permet de naviguer entre les titres Markdown, et les tableaux larges et les blocs de code défilent indépendamment.
 
 ## Quand L’utiliser
 

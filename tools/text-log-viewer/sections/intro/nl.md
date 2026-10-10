@@ -4,7 +4,7 @@ Open een .txt-, .text- of .log-bestand om het te lezen met regelnummers, instelb
 
 ## Grote bestanden en lange regels
 
-De lezer toont één gedeelte tegelijk om grote bestanden bruikbaar te houden. Elk gedeelte blijft toegankelijk, ook het vervolg van zeer lange regels. Selecteren en zoeken via je browser gelden voor het huidige gedeelte; Tekst zoeken in de lezer doorzoekt het volledige gedecodeerde bestand, ook op treffers die over de grenzen van gedeelten lopen. Er geldt geen limiet voor de bestandsgrootte of het aantal regels. Het beschikbare browsergeheugen vormt wel een praktische grens.
+De viewer toont één gedeelte tegelijk om grote bestanden bruikbaar te houden. Elk gedeelte blijft toegankelijk, ook het vervolg van zeer lange regels. Selecteren en zoeken via je browser gelden voor het huidige gedeelte; Tekst zoeken in de viewer doorzoekt het volledige gedecodeerde bestand, ook op treffers die over de grenzen van gedeelten lopen. Er geldt geen limiet voor de bestandsgrootte of het aantal regels. Het beschikbare browsergeheugen vormt wel een praktische grens.
 
 Lege regels, tabs, gemengde CRLF/CR/LF-regeleinden en Unicode-tekst blijven behouden. Regeleinden worden als regelafbrekingen weergegeven. Opmaakcode en terminal-escapesequenties blijven gewone tekst zonder effect. Sommige stuurtekens hebben geen zichtbaar teken; bestanden met NUL-tekens krijgen een melding over een mogelijk binair bestand.
 

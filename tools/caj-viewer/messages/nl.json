@@ -34,7 +34,7 @@
   "fontsRequired": "Deze tekstvariant heeft lettertypen nodig die niet zijn inbegrepen. Probeer een PDF-kopie van de documentaanbieder.",
   "protected": "Dit document is beveiligd. Open een toegankelijke kopie van de documentaanbieder.",
   "resource": "Dit document heeft meer geheugen nodig dan deze browser kan bieden. Sluit andere tabbladen of probeer een ander apparaat.",
-  "engineUnavailable": "De lezer kon niet worden geladen. Controleer je verbinding en open het document opnieuw.",
+  "engineUnavailable": "De viewer kon niet worden geladen. Controleer je verbinding en open het document opnieuw.",
   "missingPages": "Het document kon niet volledig worden geopend. Sommige pagina’s ontbreken of zijn onleesbaar. Probeer een andere kopie.",
   "fitPage": "Passend op pagina",
   "rotate": "Rechtsom draaien",

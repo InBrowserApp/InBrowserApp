@@ -8,6 +8,6 @@ Trình xem xử lý các tham chiếu content-location và content-ID trong tệ
 
 ## Khả năng tương thích
 
-Trình đọc này hỗ trợ các trang HTML trong tệp lưu trữ web multipart/related, bao gồm tài nguyên base64, quoted-printable và các mã hóa văn bản phổ biến. Bản lưu chưa hoàn chỉnh hiển thị nội dung khôi phục kèm thông báo. Các cấu trúc nhiều phần lồng nhau bất thường và thư email được giải thích rõ ràng.
+Trình xem này hỗ trợ các trang HTML trong tệp lưu trữ web multipart/related, bao gồm tài nguyên base64, quoted-printable và các mã hóa văn bản phổ biến. Bản lưu chưa hoàn chỉnh hiển thị nội dung khôi phục kèm thông báo. Các cấu trúc nhiều phần lồng nhau bất thường và thư email được giải thích rõ ràng.
 
 Tập lệnh, biểu mẫu, chuyển hướng, ứng dụng nhúng và các trang lồng nhau bị vô hiệu hóa. Định dạng hình ảnh không được hỗ trợ và bố cục trang web phức tạp có thể hiển thị khác bản gốc. Trình xem không thể khôi phục phiên truy cập trang web hoặc nội dung chưa được lưu trong tệp lưu trữ. Nếu tệp bị hỏng, hãy lưu một tệp lưu trữ web mới trong ứng dụng gốc.

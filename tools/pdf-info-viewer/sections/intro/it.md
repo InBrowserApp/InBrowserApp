@@ -1,7 +1,7 @@
 ## Cosa fa questo strumento
 
-PDF Info Viewer apre un PDF nel tuo browser e ne riepiloga i dettagli di base
-del file, la versione dell'intestazione PDF, il numero di pagine, la dimensione
+Il Visualizzatore di informazioni PDF apre un PDF nel tuo browser e ne
+riepiloga i dettagli di base del file, la versione dell'intestazione PDF, il numero di pagine, la dimensione
 della prima pagina, lo stato di crittografia e i metadati del documento, come
 titolo, autore, oggetto, parole chiave, creatore, produttore e date. È pensato
 per un'ispezione rapida prima di condividere, archiviare, eseguire il debug o

@@ -34,7 +34,7 @@
   "fontsRequired": "This text-based variant needs font resources that are not included. Try a PDF copy from the document provider.",
   "protected": "This document is protected. Open an accessible copy from the document provider.",
   "resource": "This document needs more memory than this browser can provide. Close other tabs or try another device.",
-  "engineUnavailable": "The reader could not load. Check your connection and open the document again.",
+  "engineUnavailable": "The viewer could not load. Check your connection and open the document again.",
   "missingPages": "The document could not be opened completely. Some pages are missing or unreadable. Try another copy.",
   "fitPage": "Fit page",
   "rotate": "Rotate clockwise",

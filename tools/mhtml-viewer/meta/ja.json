@@ -1,4 +1,4 @@
 {
-  "name": "MHTML Viewer",
+  "name": "MHTML ビューアー",
   "description": "MHTML・MHT Web アーカイブを端末上で閲覧。含まれている画像やスタイル、文書内の移動に対応し、外部リソースへのリクエストは行いません。"
 }

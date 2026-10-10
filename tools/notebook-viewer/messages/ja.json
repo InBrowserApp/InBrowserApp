@@ -2,7 +2,7 @@
   "open": "文書を開く",
   "replace": "文書を入れ替える",
   "clear": "文書を閉じる",
-  "reader": "Jupyter ノートブックリーダー",
+  "reader": "Jupyter Notebook ビューアー",
   "privacy": "ファイルはお使いの端末内に留まります。アップロード、コードの実行、外部リソースの読み込みは行いません。",
   "focus": "集中読書モード",
   "exitFocus": "集中読書モードを終了",

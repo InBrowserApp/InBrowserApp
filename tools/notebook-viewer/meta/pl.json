@@ -1,4 +1,4 @@
 {
-  "name": "Jupyter Notebook Viewer",
+  "name": "Przeglądarka notatników Jupyter",
   "description": "Czytaj lokalne notatniki .ipynb z Markdown, kodem, zapisanymi wynikami i nawigacją po komórkach. Bez przesyłania i wykonywania kodu."
 }

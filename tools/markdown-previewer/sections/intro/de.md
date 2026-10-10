@@ -1,6 +1,6 @@
 ## Was Dieses Tool Leistet
 
-Markdown Previewer öffnet `.md`-, `.markdown`-, `.mdown`- und `.txt`-Dokumente lokal in deinem Browser. Der Lesemodus blendet den Quelltexteditor aus, während der Fokusmodus dem Dokument den Bildschirm überlässt. Passe Textgröße, Lesebreite und das Theme „Klar“ oder „Schiefer“ an, ohne deine Leseposition zu verlieren. Mit der einklappbaren Gliederung navigierst du zwischen Markdown-Überschriften. Breite Tabellen und Codeblöcke lassen sich unabhängig scrollen.
+Die Markdown-Vorschau öffnet `.md`-, `.markdown`-, `.mdown`- und `.txt`-Dokumente lokal in deinem Browser. Der Lesemodus blendet den Quelltexteditor aus, während der Fokusmodus dem Dokument den Bildschirm überlässt. Passe Textgröße, Lesebreite und das Theme „Klar“ oder „Schiefer“ an, ohne deine Leseposition zu verlieren. Mit der einklappbaren Gliederung navigierst du zwischen Markdown-Überschriften. Breite Tabellen und Codeblöcke lassen sich unabhängig scrollen.
 
 ## Wann Du Es Verwenden Solltest
 

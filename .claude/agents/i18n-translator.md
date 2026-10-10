@@ -30,7 +30,7 @@ If any of these are missing, ask the caller — do not guess.
 
 - **Tone**: match the source. UI labels stay short and imperative; marketing copy stays warm; error messages stay direct.
 - **Placeholders**: leave `{name}`, `{{count}}`, `%s`, `<a>...</a>`, `\n`, and similar tokens **untouched and in the same position**. Translate around them.
-- **Brand and proper nouns**: keep "InBrowser.App", tool names, library names, and code identifiers in English unless the target language has an established native form.
+- **Brand and proper nouns**: keep "InBrowser.App", format names, library names, and code identifiers unchanged unless the target language has an established native form. A descriptive tool title is not a brand: translate generic words such as "Viewer", "Reader", and "Previewer". Follow `docs/i18n-terminology.md` for their distinct roles and keep tool names, self-references, related-tool references, and accessible labels consistent within the target language.
 - **Code, file paths, CLI commands, URLs**: never translate.
 - **Punctuation**: use the target language's conventions (e.g. `，。` for zh, full-width colons for ja, RTL punctuation for ar/he).
 - **Native language names**: do **not** translate language names in language pickers — those live in `packages/ui/src/components/app/language-switcher.tsx` and are out of scope.

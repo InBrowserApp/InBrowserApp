@@ -1,6 +1,6 @@
 ## Công cụ này làm gì
 
-PDF Info Viewer mở một PDF trong trình duyệt của bạn và tóm tắt các chi tiết
+Trình xem thông tin PDF mở một PDF trong trình duyệt của bạn và tóm tắt các chi tiết
 tệp cơ bản, phiên bản tiêu đề PDF, số trang, kích thước trang đầu, trạng thái
 mã hóa và siêu dữ liệu tài liệu như tiêu đề, tác giả, chủ đề, từ khóa, người
 tạo, producer và ngày tháng. Công cụ này dùng để kiểm tra nhanh trước khi chia

@@ -34,7 +34,7 @@
   "fontsRequired": "Varian berasaskan teks ini memerlukan sumber fon yang tidak disertakan. Cuba salinan PDF daripada penyedia dokumen.",
   "protected": "Dokumen ini dilindungi. Buka salinan yang boleh diakses daripada penyedia dokumen.",
   "resource": "Dokumen ini memerlukan lebih banyak memori daripada yang dapat disediakan oleh pelayar ini. Tutup tab lain atau cuba peranti lain.",
-  "engineUnavailable": "Pembaca tidak dapat dimuatkan. Periksa sambungan anda dan buka dokumen semula.",
+  "engineUnavailable": "Pemapar tidak dapat dimuatkan. Periksa sambungan anda dan buka dokumen semula.",
   "missingPages": "Dokumen tidak dapat dibuka sepenuhnya. Sesetengah halaman hilang atau tidak dapat dibaca. Cuba salinan lain.",
   "fitPage": "Muatkan halaman",
   "rotate": "Putar ikut jam",

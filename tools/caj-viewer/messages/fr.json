@@ -34,7 +34,7 @@
   "fontsRequired": "Cette variante textuelle nécessite des polices qui ne sont pas incluses. Essayez une copie PDF provenant du fournisseur du document.",
   "protected": "Ce document est protégé. Ouvrez une copie accessible provenant du fournisseur du document.",
   "resource": "Ce document nécessite plus de mémoire que ce navigateur ne peut en fournir. Fermez d’autres onglets ou essayez un autre appareil.",
-  "engineUnavailable": "Le lecteur n’a pas pu se charger. Vérifiez votre connexion et ouvrez à nouveau le document.",
+  "engineUnavailable": "La visionneuse n’a pas pu se charger. Vérifiez votre connexion et ouvrez à nouveau le document.",
   "missingPages": "Le document n’a pas pu être ouvert entièrement. Certaines pages sont manquantes ou illisibles. Essayez une autre copie.",
   "fitPage": "Ajuster à la page",
   "rotate": "Pivoter vers la droite",

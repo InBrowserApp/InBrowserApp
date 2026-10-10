@@ -1,10 +1,11 @@
 ## Ce que fait cet outil
 
-PDF Info Viewer ouvre un PDF dans votre navigateur et résume ses informations
-de base, la version de l'en-tête PDF, le nombre de pages, la taille de la
-première page, l'état du chiffrement et les métadonnées du document, comme le
+La visionneuse d’informations PDF ouvre un PDF dans votre navigateur et résume
+ses informations de base, la version de l'en-tête PDF, le nombre de pages, la
+taille de la première page, l'état du chiffrement et les métadonnées du
+document, comme le
 titre, l'auteur, le sujet, les mots-clés, le créateur, le producteur et les
-dates. Il est conçu pour une inspection rapide avant de partager, archiver,
+dates. Elle est conçue pour une inspection rapide avant de partager, archiver,
 déboguer ou traiter un document.
 
 ## Bons cas d'utilisation

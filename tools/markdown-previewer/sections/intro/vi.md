@@ -1,6 +1,6 @@
 ## Công Cụ Này Làm Gì
 
-Markdown Previewer mở các tài liệu `.md`, `.markdown`, `.mdown` và `.txt` cục bộ trong trình duyệt của bạn. Chế độ đọc ẩn trình soạn thảo mã nguồn, còn chế độ tập trung dành màn hình cho tài liệu. Điều chỉnh cỡ chữ, chiều rộng vùng đọc và giao diện sạch hoặc slate mà không mất vị trí đang đọc. Dàn ý có thể thu gọn giúp điều hướng giữa các tiêu đề Markdown; bảng rộng và khối mã có thể cuộn độc lập.
+Trình xem trước Markdown mở các tài liệu `.md`, `.markdown`, `.mdown` và `.txt` cục bộ trong trình duyệt của bạn. Chế độ đọc ẩn trình soạn thảo mã nguồn, còn chế độ tập trung dành màn hình cho tài liệu. Điều chỉnh cỡ chữ, chiều rộng vùng đọc và giao diện sạch hoặc slate mà không mất vị trí đang đọc. Dàn ý có thể thu gọn giúp điều hướng giữa các tiêu đề Markdown; bảng rộng và khối mã có thể cuộn độc lập.
 
 ## Khi Nào Nên Dùng
 

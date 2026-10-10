@@ -34,7 +34,7 @@
   "fontsRequired": "Diese textbasierte Variante benötigt Schriftressourcen, die nicht enthalten sind. Versuche es mit einer PDF-Kopie vom Dokumentanbieter.",
   "protected": "Dieses Dokument ist geschützt. Öffne eine zugängliche Kopie vom Dokumentanbieter.",
   "resource": "Dieses Dokument benötigt mehr Speicher, als dieser Browser bereitstellen kann. Schließe andere Tabs oder versuche es auf einem anderen Gerät.",
-  "engineUnavailable": "Der Reader konnte nicht geladen werden. Prüfe deine Verbindung und öffne das Dokument erneut.",
+  "engineUnavailable": "Der Betrachter konnte nicht geladen werden. Prüfe deine Verbindung und öffne das Dokument erneut.",
   "missingPages": "Das Dokument konnte nicht vollständig geöffnet werden. Einige Seiten fehlen oder sind unlesbar. Versuche es mit einer anderen Kopie.",
   "fitPage": "Seite einpassen",
   "rotate": "Im Uhrzeigersinn drehen",

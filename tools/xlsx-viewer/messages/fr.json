@@ -7,7 +7,7 @@
   "loading": "Ouverture du document…",
   "error": "Impossible d’afficher cette feuille de calcul",
   "invalid": "Choisissez une feuille de calcul lisible dans un format pris en charge. Elle est peut-être endommagée ou utilise une fonctionnalité non prise en charge.",
-  "resourceLimit": "Ce document dépasse les limites de ressources du lecteur. Essayez un document moins complexe.",
+  "resourceLimit": "Ce document dépasse les limites de ressources de la visionneuse. Essayez un document moins complexe.",
   "zoom": "Zoom (%)",
   "fit": "Ajuster à la largeur",
   "reader": "Zone de lecture des feuilles de calcul",

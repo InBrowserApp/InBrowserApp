@@ -2,7 +2,7 @@
   "open": "Abrir documento",
   "replace": "Reemplazar documento",
   "clear": "Cerrar documento",
-  "reader": "Lector de cuadernos Jupyter",
+  "reader": "Visor de cuadernos Jupyter",
   "privacy": "Los archivos permanecen en tu dispositivo. No se suben archivos, se ejecuta código ni se cargan recursos remotos.",
   "focus": "Modo de lectura sin distracciones",
   "exitFocus": "Salir del modo sin distracciones",

@@ -4,7 +4,7 @@
 
 ## Kompatibilitet og leseoppsett
 
-Denne leseren støtter binære Word-dokumenter og kompatible WPS Writer-filer som inneholder binært Word-innhold eller HTML-dokumentinnhold i en OLE-beholder. Det er filinnholdet som avgjør kompatibiliteten, ikke bare filtypen. Microsoft Works-filer og eldre proprietære WPS-formater støttes ikke. Bruk DOCX-viseren for moderne Word-filer.
+Denne viseren støtter binære Word-dokumenter og kompatible WPS Writer-filer som inneholder binært Word-innhold eller HTML-dokumentinnhold i en OLE-beholder. Det er filinnholdet som avgjør kompatibiliteten, ikke bare filtypen. Microsoft Works-filer og eldre proprietære WPS-formater støttes ikke. Bruk DOCX-viseren for moderne Word-filer.
 
 Forhåndsvisningen bevarer lesbar tekst, tabeller, grunnleggende formatering og innebygde bilder som støttes. Skrifter, listenummerering, spalter, flytende objekter og sidegrenser kan avvike fra originalen. Topptekster, bunntekster, fotnoter, sluttnoter og kommentarer vises ikke. Gjenopprettede tekstbokser kan følge etter hovedteksten. Tegninger som ikke støttes, og innebygde programmer kan være utelatt. Merknader om visningen varsler om en delvis forhåndsvisning når dette oppdages.
 

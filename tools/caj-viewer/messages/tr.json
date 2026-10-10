@@ -34,7 +34,7 @@
   "fontsRequired": "Bu metin tabanlı varyant, dosyada bulunmayan yazı tipi kaynakları gerektiriyor. Belge sağlayıcısından bir PDF kopyası edinmeyi deneyin.",
   "protected": "Bu belge korumalı. Belge sağlayıcısından erişilebilir bir kopya açın.",
   "resource": "Bu belge, tarayıcının sağlayabileceğinden fazla bellek gerektiriyor. Diğer sekmeleri kapatın veya başka bir cihaz deneyin.",
-  "engineUnavailable": "Okuyucu yüklenemedi. Bağlantınızı kontrol edip belgeyi yeniden açın.",
+  "engineUnavailable": "Görüntüleyici yüklenemedi. Bağlantınızı kontrol edip belgeyi yeniden açın.",
   "missingPages": "Belge tamamen açılamadı. Bazı sayfalar eksik veya okunamıyor. Başka bir kopya deneyin.",
   "fitPage": "Sayfaya sığdır",
   "rotate": "Saat yönünde döndür",

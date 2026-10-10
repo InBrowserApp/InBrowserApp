@@ -4,7 +4,7 @@ Apri un file .txt, .text o .log per leggerlo con numeri di riga, dimensione del 
 
 ## File grandi e righe lunghe
 
-Il lettore mostra una sezione alla volta per mantenere utilizzabili i file di grandi dimensioni. Ogni sezione resta accessibile, compresa la continuazione delle righe molto lunghe. La selezione e il comando Trova del browser riguardano la sezione corrente; Trova testo del lettore cerca nell’intero file decodificato, incluse le corrispondenze a cavallo tra sezioni. Non viene imposto alcun limite alla dimensione del file o al numero di righe. La memoria disponibile nel browser costituisce comunque un limite pratico.
+Il visualizzatore mostra una sezione alla volta per mantenere utilizzabili i file di grandi dimensioni. Ogni sezione resta accessibile, compresa la continuazione delle righe molto lunghe. La selezione e il comando Trova del browser riguardano la sezione corrente; Trova testo del visualizzatore cerca nell’intero file decodificato, incluse le corrispondenze a cavallo tra sezioni. Non viene imposto alcun limite alla dimensione del file o al numero di righe. La memoria disponibile nel browser costituisce comunque un limite pratico.
 
 Righe vuote, tabulazioni, fine riga misti CRLF/CR/LF e testo Unicode vengono preservati. I fine riga sono visualizzati come interruzioni di riga. Il markup e le sequenze di escape del terminale restano testo inerte. Alcuni caratteri di controllo non hanno un glifo visibile; per i file contenenti caratteri NUL viene mostrato un avviso di file binario.
 

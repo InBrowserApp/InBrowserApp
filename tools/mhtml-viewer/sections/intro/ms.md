@@ -8,6 +8,6 @@ Pemapar ini menyelesaikan rujukan content-location dan content-ID dalam arkib. L
 
 ## Keserasian
 
-Pembaca ini menyokong halaman HTML dalam arkib web multipart/related, termasuk sumber base64 dan quoted-printable serta pengekodan teks biasa. Tangkapan yang tidak lengkap memaparkan kandungan yang dipulihkan berserta notis. Struktur berbilang bahagian bersarang yang luar biasa dan mesej e-mel diberikan penjelasan yang jelas.
+Pemapar ini menyokong halaman HTML dalam arkib web multipart/related, termasuk sumber base64 dan quoted-printable serta pengekodan teks biasa. Tangkapan yang tidak lengkap memaparkan kandungan yang dipulihkan berserta notis. Struktur berbilang bahagian bersarang yang luar biasa dan mesej e-mel diberikan penjelasan yang jelas.
 
 Skrip, borang, ubah hala, aplikasi terbenam dan halaman bersarang dinyahdayakan. Format imej yang tidak disokong dan susun atur laman yang kompleks mungkin berbeza daripada yang asal. Pemapar ini tidak dapat memulihkan sesi laman web atau kandungan yang tidak disimpan dalam arkib. Untuk fail yang rosak, simpan arkib web baharu dalam aplikasi asal.

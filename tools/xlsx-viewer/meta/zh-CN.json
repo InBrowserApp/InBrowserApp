@@ -1,4 +1,4 @@
 {
-  "name": "电子表格阅读器",
+  "name": "电子表格查看器",
   "description": "在本地阅读 Excel、CSV、ODS、Numbers、WPS 及旧版电子表格。支持切换工作表、浏览单元格和查看已保存的值，无需上传。"
 }

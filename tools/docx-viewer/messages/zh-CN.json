@@ -7,7 +7,7 @@
   "loading": "正在打开文档…",
   "error": "无法显示此 Word 文件",
   "invalid": "请选择可读取且未加密的 DOCX、DOCM、DOTX 或 DOTM 文件。此文件可能已损坏或使用了不支持的功能。",
-  "resourceLimit": "此文档超出了阅读器的资源限制。请尝试复杂度较低的文档。",
+  "resourceLimit": "此文档超出了查看器的资源限制。请尝试复杂度较低的文档。",
   "page": "页码",
   "pageCount": "共 {total} 页",
   "previous": "上一页",

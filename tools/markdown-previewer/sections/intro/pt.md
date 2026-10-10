@@ -1,6 +1,6 @@
 ## O Que Esta Ferramenta Faz
 
-Markdown Previewer abre documentos `.md`, `.markdown`, `.mdown` e `.txt` localmente no seu navegador. O modo de leitura oculta o editor de código-fonte, enquanto o modo de foco dá a tela ao documento. Ajuste o tamanho do texto, a largura de leitura e o tema limpo ou ardósia sem perder seu lugar. O sumário recolhível navega pelos títulos Markdown, e tabelas largas e blocos de código têm rolagem independente.
+O pré-visualizador de Markdown abre documentos `.md`, `.markdown`, `.mdown` e `.txt` localmente no seu navegador. O modo de leitura oculta o editor de código-fonte, enquanto o modo de foco dá a tela ao documento. Ajuste o tamanho do texto, a largura de leitura e o tema limpo ou ardósia sem perder seu lugar. O sumário recolhível navega pelos títulos Markdown, e tabelas largas e blocos de código têm rolagem independente.
 
 ## Quando Usar
 

@@ -34,7 +34,7 @@
   "fontsRequired": "Denne tekstbaserte varianten trenger skrifttypefiler som ikke følger med. Prøv en PDF-kopi fra dokumentleverandøren.",
   "protected": "Dokumentet er beskyttet. Åpne en tilgjengelig kopi fra dokumentleverandøren.",
   "resource": "Dokumentet trenger mer minne enn nettleseren kan tilby. Lukk andre faner eller prøv en annen enhet.",
-  "engineUnavailable": "Leseren kunne ikke lastes inn. Kontroller tilkoblingen og åpne dokumentet på nytt.",
+  "engineUnavailable": "Viseren kunne ikke lastes inn. Kontroller tilkoblingen og åpne dokumentet på nytt.",
   "missingPages": "Dokumentet kunne ikke åpnes fullstendig. Noen sider mangler eller er uleselige. Prøv en annen kopi.",
   "fitPage": "Tilpass siden",
   "rotate": "Roter med klokken",

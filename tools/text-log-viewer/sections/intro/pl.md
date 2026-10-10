@@ -4,7 +4,7 @@ Otwórz plik .txt, .text lub .log, aby czytać go z numerami wierszy, regulowany
 
 ## Duże pliki i długie wiersze
 
-Czytnik wyświetla po jednej sekcji, aby ułatwić korzystanie z dużych plików. Każda sekcja pozostaje dostępna, łącznie z dalszym ciągiem bardzo długich wierszy. Zaznaczanie i polecenie Znajdź w przeglądarce obejmują bieżącą sekcję; funkcja Znajdź tekst w czytniku przeszukuje cały zdekodowany plik, również dopasowania przekraczające granice sekcji. Nie ma narzuconego limitu rozmiaru pliku ani liczby wierszy. Praktyczne ograniczenie nadal stanowi pamięć dostępna w przeglądarce.
+Przeglądarka wyświetla po jednej sekcji, aby ułatwić korzystanie z dużych plików. Każda sekcja pozostaje dostępna, łącznie z dalszym ciągiem bardzo długich wierszy. Zaznaczanie i polecenie Znajdź w przeglądarce obejmują bieżącą sekcję; funkcja Znajdź tekst w przeglądarce plików przeszukuje cały zdekodowany plik, również dopasowania przekraczające granice sekcji. Nie ma narzuconego limitu rozmiaru pliku ani liczby wierszy. Praktyczne ograniczenie nadal stanowi pamięć dostępna w przeglądarce.
 
 Puste wiersze, tabulatory, mieszane zakończenia wierszy CRLF/CR/LF i tekst Unicode są zachowywane. Zakończenia wierszy są wyświetlane jako podziały wierszy. Znaczniki i sekwencje sterujące terminala pozostają nieaktywnym tekstem. Niektóre znaki sterujące nie mają widocznego glifu; przy plikach zawierających znaki NUL pojawia się informacja o możliwym pliku binarnym.
 
