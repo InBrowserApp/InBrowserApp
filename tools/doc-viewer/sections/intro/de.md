@@ -15,3 +15,5 @@ Nachverfolgte Änderungen werden als angenommen dargestellt: Eingefügter Text b
 Dokumente werden in Ihrem Browser verarbeitet. Externe Links, entfernte Bilder, Makros, Formulare und eingebettete Anwendungen werden nicht ausgeführt. Interne Verweise sind in der Vorschau möglicherweise nicht verfügbar. Über die Gliederung erreichen Sie erkannte Überschriften. Dokumentinhalte werden weder hochgeladen noch automatisch gespeichert.
 
 Für passwortgeschützte Dokumente benötigen Sie eine unverschlüsselte Kopie. Bei leeren, beschädigten, nicht unterstützten oder zu ressourcenintensiven Dokumenten erscheint eine Erklärung; Sie können die Datei ersetzen oder schließen. Es gibt keine feste Grenze für Dateigröße oder Seitenzahl. Was sich öffnen lässt, hängt vom verfügbaren Browserspeicher ab.
+
+Um unterstützte Inhalte aus dem Hauptteil des Dokuments als neu umbrochene PDF zu exportieren, verwenden Sie den [DOC/WPS-zu-PDF-Konverter](../doc-to-pdf-converter/).

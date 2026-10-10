@@ -15,3 +15,5 @@ Podgląd zachowuje czytelny tekst, tabele, podstawowe formatowanie i obsługiwan
 Dokumenty są przetwarzane w przeglądarce. Linki zewnętrzne, zdalne obrazy, makra, formularze i osadzone aplikacje nie są uruchamiane. Odwołania wewnętrzne mogą być niedostępne w podglądzie. Użyj konspektu, aby przejść do rozpoznanych nagłówków. Treść dokumentu nie jest przesyłana ani automatycznie zapisywana.
 
 Dokumenty chronione hasłem wymagają niezaszyfrowanej kopii. Jeśli dokument jest pusty, uszkodzony, nieobsługiwany lub wymaga zbyt wielu zasobów, pojawi się wyjaśnienie i możliwość zastąpienia lub zamknięcia pliku. Nie ma stałego limitu rozmiaru pliku ani liczby stron; możliwość otwarcia zależy od pamięci dostępnej w przeglądarce.
+
+Aby wyeksportować obsługiwaną treść główną do pliku PDF z nowym układem stron, użyj narzędzia [Konwerter DOC / WPS na PDF](../doc-to-pdf-converter/).

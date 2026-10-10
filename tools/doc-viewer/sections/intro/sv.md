@@ -15,3 +15,5 @@ Spårade ändringar visas som om de har accepterats: infogad text finns kvar och
 Dokument bearbetas i webbläsaren. Externa länkar, fjärrbilder, makron, formulär och inbäddade program aktiveras inte. Interna referenser kan saknas i förhandsvisningen. Använd översikten för att gå till identifierade rubriker. Inget dokumentinnehåll laddas upp eller sparas automatiskt.
 
 För lösenordsskyddade dokument behövs en okrypterad kopia. Om ett dokument är tomt, skadat, för resurskrävande eller inte stöds visas en förklaring, och dokumentet kan bytas ut eller stängas. Det finns ingen fast gräns för filstorlek eller sidantal. Webbläsarens tillgängliga minne påverkar vilka filer som kan öppnas.
+
+Använd [Konverterare från DOC och WPS till PDF](../doc-to-pdf-converter/) för att exportera innehåll som stöds i dokumentets huvuddel som en PDF med omflödat innehåll.

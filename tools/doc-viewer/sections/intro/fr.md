@@ -15,3 +15,5 @@ Les modifications suivies apparaissent comme acceptées : le texte inséré rest
 Les documents sont traités dans votre navigateur. Les liens externes, les images distantes, les macros, les formulaires et les applications intégrées ne sont pas activés. Les renvois internes peuvent être indisponibles dans l’aperçu. Utilisez le plan pour accéder aux titres reconnus. Aucun contenu du document n’est transféré ni enregistré automatiquement.
 
 Les documents protégés par mot de passe nécessitent une copie non chiffrée. Un document vide, endommagé, non pris en charge ou trop gourmand en ressources entraîne l’affichage d’une explication et peut être remplacé ou fermé. Il n’existe aucune limite fixe de taille de fichier ou de nombre de pages ; la mémoire disponible du navigateur détermine ce qui peut être ouvert.
+
+Pour exporter le contenu pris en charge du corps du document en PDF remis en page, utilisez le [Convertisseur DOC et WPS en PDF](../doc-to-pdf-converter/).

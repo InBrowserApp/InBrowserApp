@@ -15,3 +15,5 @@ Tracked changes are shown as if accepted: inserted text remains and deleted text
 Documents are processed in your browser. External links, remote pictures, macros, forms, and embedded applications do not run. Internal references may be unavailable in the preview. Use the outline to reach recognized headings. No document content is uploaded or saved automatically.
 
 Password-protected documents need an unencrypted copy. An empty, damaged, unsupported, or resource-intensive document produces an explanation and can be replaced or closed. There is no fixed file-size or page-count limit; available browser memory affects what can be opened.
+
+To export supported body content as a reflowed PDF, use the [DOC / WPS to PDF Converter](../doc-to-pdf-converter/).

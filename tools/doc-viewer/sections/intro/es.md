@@ -15,3 +15,5 @@ Los cambios registrados se muestran como aceptados: el texto insertado permanece
 Los documentos se procesan en tu navegador. No se activan enlaces externos, imágenes remotas, macros, formularios ni aplicaciones incrustadas. Las referencias internas pueden no estar disponibles en la vista previa. Usa el esquema para ir a los encabezados reconocidos. El contenido del documento no se sube ni se guarda automáticamente.
 
 Los documentos protegidos con contraseña necesitan una copia sin cifrar. Si un documento está vacío, dañado, no es compatible o consume demasiados recursos, se muestra una explicación y puedes reemplazarlo o cerrarlo. No hay un límite fijo de tamaño de archivo ni de número de páginas; la memoria disponible del navegador determina qué se puede abrir.
+
+Para exportar el contenido compatible del cuerpo del documento como un PDF con el contenido redistribuido, usa el [Conversor de DOC / WPS a PDF](../doc-to-pdf-converter/).

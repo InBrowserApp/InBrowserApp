@@ -15,3 +15,5 @@ Perubahan yang dijejak dipaparkan seolah-olah telah diterima: teks yang disisipk
 Dokumen diproses dalam pelayar anda. Pautan luaran, gambar jauh, makro, borang dan aplikasi terbenam tidak dijalankan. Rujukan dalaman mungkin tidak tersedia dalam pratonton. Gunakan rangka untuk ke tajuk yang dikenal pasti. Tiada kandungan dokumen dimuat naik atau disimpan secara automatik.
 
 Dokumen yang dilindungi kata laluan memerlukan salinan tanpa penyulitan. Dokumen yang kosong, rosak, tidak disokong atau memerlukan banyak sumber akan memaparkan penjelasan dan boleh diganti atau ditutup. Tiada had tetap bagi saiz fail atau bilangan halaman; memori pelayar yang tersedia mempengaruhi fail yang boleh dibuka.
+
+Untuk mengeksport kandungan utama yang disokong sebagai PDF dengan kandungan yang disusun semula, gunakan [Penukar DOC dan WPS kepada PDF](../doc-to-pdf-converter/).

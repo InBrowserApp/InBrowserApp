@@ -15,3 +15,5 @@ Perubahan terlacak ditampilkan seolah telah diterima: teks yang disisipkan tetap
 Dokumen diproses di browser Anda. Tautan eksternal, gambar jarak jauh, makro, formulir, dan aplikasi tertanam tidak dijalankan. Rujukan internal mungkin tidak tersedia dalam pratinjau. Gunakan kerangka dokumen untuk menuju judul yang dikenali. Tidak ada konten dokumen yang diunggah atau disimpan secara otomatis.
 
 Dokumen yang dilindungi kata sandi memerlukan salinan tanpa enkripsi. Dokumen yang kosong, rusak, tidak didukung, atau membutuhkan banyak sumber daya akan menampilkan penjelasan dan dapat diganti atau ditutup. Tidak ada batas tetap untuk ukuran file atau jumlah halaman; memori browser yang tersedia memengaruhi file yang dapat dibuka.
+
+Untuk mengekspor konten utama yang didukung sebagai PDF yang ditata ulang, gunakan [Konverter DOC dan WPS ke PDF](../doc-to-pdf-converter/).
