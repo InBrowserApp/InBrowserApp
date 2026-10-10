@@ -11739,109 +11739,132 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     slug: "image-to-pdf-converter",
     category: "pdf",
     icon: "file-text",
-    tags: ["pdf", "image", "converter", "document", "offline"],
+    tags: [
+      "pdf",
+      "image",
+      "converter",
+      "document",
+      "offline",
+      "tiff",
+      "heic",
+      "jxl",
+      "jpeg2000",
+    ],
     locales: {
       ar: {
         name: "محول الصور إلى PDF",
-        description: "اجمع الصور في ملف PDF واحد محليًا في متصفحك.",
+        description:
+          "اجمع الصور المحلية وصفحات TIFF المحددة في ملف PDF. افتح HEIC وJPEG XL وJPEG 2000، وأعد ترتيب الصفحات ودوّر الصور واضبط التخطيط دون رفع الملفات.",
       },
       de: {
         name: "Bild-zu-PDF-Konverter",
         description:
-          "Führe Bilder lokal in deinem Browser zu einer einzigen PDF zusammen.",
+          "Führe lokale Bilder und ausgewählte TIFF-Seiten zu einer PDF zusammen. Öffne HEIC, JPEG XL und JPEG 2000, ordne Seiten neu, drehe Bilder und passe das Layout an, ohne Dateien hochzuladen.",
       },
       en: {
         name: "Image to PDF Converter",
         description:
-          "Combine images into a single PDF locally in your browser.",
+          "Combine local images and selected TIFF pages into a PDF. Open HEIC, JPEG XL and JPEG 2000, reorder pages, rotate images and adjust the layout without uploading files.",
       },
       es: {
         name: "Convertidor de imagen a PDF",
         description:
-          "Combina imágenes en un único PDF localmente en tu navegador.",
+          "Combina imágenes locales y páginas TIFF seleccionadas en un PDF. Abre HEIC, JPEG XL y JPEG 2000, reordena páginas, gira imágenes y ajusta el diseño sin subir archivos.",
       },
       fr: {
         name: "Convertisseur d'images en PDF",
         description:
-          "Combinez des images en un seul PDF localement dans votre navigateur.",
+          "Combinez des images locales et des pages TIFF sélectionnées en un PDF. Ouvrez des fichiers HEIC, JPEG XL et JPEG 2000, réordonnez les pages, faites pivoter les images et ajustez la mise en page sans envoyer de fichiers.",
       },
       he: {
         name: "ממיר תמונות ל-PDF",
-        description: "חברו תמונות לקובץ PDF יחיד באופן מקומי בדפדפן.",
+        description:
+          "שלבו תמונות מקומיות ועמודי TIFF נבחרים לקובץ PDF. פתחו HEIC,‏ JPEG XL ו-JPEG 2000, שנו את סדר העמודים, סובבו תמונות והתאימו את הפריסה בלי להעלות קבצים.",
       },
       hi: {
         name: "इमेज से PDF कन्वर्टर",
-        description: "अपने ब्राउज़र में स्थानीय रूप से इमेजों को एक PDF में जोड़ें.",
+        description:
+          "स्थानीय इमेज और चुने हुए TIFF पेजों को एक PDF में जोड़ें. HEIC, JPEG XL और JPEG 2000 खोलें, पेजों का क्रम बदलें, इमेज घुमाएं और फाइलें अपलोड किए बिना लेआउट समायोजित करें.",
       },
       id: {
         name: "Konverter Gambar ke PDF",
         description:
-          "Gabungkan gambar menjadi satu PDF secara lokal di browser Anda.",
+          "Gabungkan gambar lokal dan halaman TIFF yang dipilih menjadi PDF. Buka HEIC, JPEG XL, dan JPEG 2000, ubah urutan halaman, putar gambar, dan sesuaikan tata letak tanpa mengunggah file.",
       },
       it: {
         name: "Convertitore immagini in PDF",
         description:
-          "Combina immagini in un unico PDF localmente nel tuo browser.",
+          "Combina immagini locali e pagine TIFF selezionate in un PDF. Apri HEIC, JPEG XL e JPEG 2000, riordina le pagine, ruota le immagini e regola il layout senza caricare file online.",
       },
       ja: {
         name: "画像をPDFに変換",
-        description: "ブラウザー内で画像を1つのPDFにまとめます。",
+        description:
+          "ローカルの画像や選択したTIFFページをPDFにまとめます。HEIC、JPEG XL、JPEG 2000を開き、ファイルをアップロードせずにページの並べ替え、画像の回転、レイアウトの調整ができます。",
       },
       ko: {
         name: "이미지 PDF 변환기",
-        description: "브라우저에서 이미지를 하나의 PDF로 로컬에서 합치세요.",
+        description:
+          "로컬 이미지와 선택한 TIFF 페이지를 PDF로 합치세요. 파일을 업로드하지 않고 HEIC, JPEG XL 및 JPEG 2000을 열어 페이지 순서를 바꾸고, 이미지를 회전하고, 레이아웃을 조정하세요.",
       },
       ms: {
         name: "Penukar Imej kepada PDF",
         description:
-          "Gabungkan imej menjadi satu PDF secara setempat dalam pelayar anda.",
+          "Gabungkan imej setempat dan halaman TIFF yang dipilih menjadi PDF. Buka HEIC, JPEG XL dan JPEG 2000, susun semula halaman, putar imej dan laraskan susun atur tanpa memuat naik fail.",
       },
       nl: {
         name: "Afbeeldingen naar PDF-converter",
         description:
-          "Combineer afbeeldingen lokaal in je browser tot een enkele PDF.",
+          "Combineer lokale afbeeldingen en geselecteerde TIFF-pagina's tot een PDF. Open HEIC, JPEG XL en JPEG 2000, wijzig de paginavolgorde, draai afbeeldingen en pas de lay-out aan zonder bestanden te uploaden.",
       },
       no: {
         name: "Bilde-til-PDF-konverterer",
-        description: "Kombiner bilder til én PDF lokalt i nettleseren din.",
+        description:
+          "Kombiner lokale bilder og valgte TIFF-sider til én PDF. Åpne HEIC, JPEG XL og JPEG 2000, endre siderekkefølgen, roter bilder og juster oppsettet uten å laste opp filer.",
       },
       pl: {
         name: "Konwerter obrazów do PDF",
-        description: "Łącz obrazy w jeden PDF lokalnie w przeglądarce.",
+        description:
+          "Łącz lokalne obrazy i wybrane strony TIFF w PDF. Otwieraj HEIC, JPEG XL i JPEG 2000, zmieniaj kolejność stron, obracaj obrazy i dostosowuj układ bez przesyłania plików.",
       },
       pt: {
         name: "Conversor de imagens para PDF",
         description:
-          "Combine imagens em um único PDF localmente no seu navegador.",
+          "Combine imagens locais e páginas TIFF selecionadas em um PDF. Abra HEIC, JPEG XL e JPEG 2000, reordene páginas, gire imagens e ajuste o layout sem enviar arquivos.",
       },
       ru: {
         name: "Конвертер изображений в PDF",
-        description: "Объединяйте изображения в один PDF локально в браузере.",
+        description:
+          "Объединяйте локальные изображения и выбранные страницы TIFF в PDF. Открывайте HEIC, JPEG XL и JPEG 2000, меняйте порядок страниц, поворачивайте изображения и настраивайте размещение без отправки файлов на сервер.",
       },
       sv: {
         name: "Bild till PDF-konverterare",
-        description: "Slå ihop bilder till en enda PDF lokalt i webbläsaren.",
+        description:
+          "Slå ihop lokala bilder och valda TIFF-sidor till en PDF. Öppna HEIC, JPEG XL och JPEG 2000, ändra sidordningen, rotera bilder och justera layouten utan att ladda upp filer.",
       },
       th: {
         name: "ตัวแปลงรูปภาพเป็น PDF",
-        description: "รวมรูปภาพเป็น PDF ไฟล์เดียวในเครื่องภายในเบราว์เซอร์ของคุณ",
+        description:
+          "รวมรูปภาพบนอุปกรณ์และหน้า TIFF ที่เลือกเป็น PDF เปิด HEIC, JPEG XL และ JPEG 2000 จัดลำดับหน้าใหม่ หมุนรูปภาพ และปรับการจัดวางโดยไม่ต้องอัปโหลดไฟล์",
       },
       tr: {
         name: "Görselden PDF Dönüştürücü",
         description:
-          "Görselleri tarayıcınızda yerel olarak tek bir PDF halinde birleştirin.",
+          "Yerel görselleri ve seçilen TIFF sayfalarını bir PDF içinde birleştirin. Dosyaları sunucuya yüklemeden HEIC, JPEG XL ve JPEG 2000 açın, sayfaları yeniden sıralayın, görselleri döndürün ve düzeni ayarlayın.",
       },
       vi: {
         name: "Trình chuyển ảnh sang PDF",
-        description: "Gộp ảnh thành một PDF ngay trong trình duyệt của bạn.",
+        description:
+          "Gộp ảnh trên thiết bị và các trang TIFF đã chọn thành PDF. Mở HEIC, JPEG XL và JPEG 2000, sắp xếp lại trang, xoay ảnh và điều chỉnh bố cục mà không cần tải tệp lên.",
       },
       "zh-CN": {
         name: "图片转 PDF 转换器",
-        description: "在浏览器中本地将图片合并为一个 PDF。",
+        description:
+          "将本地图片和所选 TIFF 页面合并为 PDF。打开 HEIC、JPEG XL 和 JPEG 2000 图片，调整页面顺序、旋转图片并设置布局，无需上传文件。",
       },
       "zh-TW": {
         name: "圖片轉 PDF 轉換器",
-        description: "在瀏覽器中本機將圖片合併成單一 PDF。",
+        description:
+          "將本機圖片與選取的 TIFF 頁面合併為 PDF。無須上傳檔案，即可開啟 HEIC、JPEG XL 和 JPEG 2000，重新排列頁面、旋轉圖片並調整版面配置。",
       },
     },
   },
@@ -42896,109 +42919,132 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
     slug: "image-to-pdf-converter",
     category: "pdf",
     icon: "file-text",
-    tags: ["pdf", "image", "converter", "document", "offline"],
+    tags: [
+      "pdf",
+      "image",
+      "converter",
+      "document",
+      "offline",
+      "tiff",
+      "heic",
+      "jxl",
+      "jpeg2000",
+    ],
     locales: {
       ar: {
         name: "محول الصور إلى PDF",
-        description: "اجمع الصور في ملف PDF واحد محليًا في متصفحك.",
+        description:
+          "اجمع الصور المحلية وصفحات TIFF المحددة في ملف PDF. افتح HEIC وJPEG XL وJPEG 2000، وأعد ترتيب الصفحات ودوّر الصور واضبط التخطيط دون رفع الملفات.",
       },
       de: {
         name: "Bild-zu-PDF-Konverter",
         description:
-          "Führe Bilder lokal in deinem Browser zu einer einzigen PDF zusammen.",
+          "Führe lokale Bilder und ausgewählte TIFF-Seiten zu einer PDF zusammen. Öffne HEIC, JPEG XL und JPEG 2000, ordne Seiten neu, drehe Bilder und passe das Layout an, ohne Dateien hochzuladen.",
       },
       en: {
         name: "Image to PDF Converter",
         description:
-          "Combine images into a single PDF locally in your browser.",
+          "Combine local images and selected TIFF pages into a PDF. Open HEIC, JPEG XL and JPEG 2000, reorder pages, rotate images and adjust the layout without uploading files.",
       },
       es: {
         name: "Convertidor de imagen a PDF",
         description:
-          "Combina imágenes en un único PDF localmente en tu navegador.",
+          "Combina imágenes locales y páginas TIFF seleccionadas en un PDF. Abre HEIC, JPEG XL y JPEG 2000, reordena páginas, gira imágenes y ajusta el diseño sin subir archivos.",
       },
       fr: {
         name: "Convertisseur d'images en PDF",
         description:
-          "Combinez des images en un seul PDF localement dans votre navigateur.",
+          "Combinez des images locales et des pages TIFF sélectionnées en un PDF. Ouvrez des fichiers HEIC, JPEG XL et JPEG 2000, réordonnez les pages, faites pivoter les images et ajustez la mise en page sans envoyer de fichiers.",
       },
       he: {
         name: "ממיר תמונות ל-PDF",
-        description: "חברו תמונות לקובץ PDF יחיד באופן מקומי בדפדפן.",
+        description:
+          "שלבו תמונות מקומיות ועמודי TIFF נבחרים לקובץ PDF. פתחו HEIC,‏ JPEG XL ו-JPEG 2000, שנו את סדר העמודים, סובבו תמונות והתאימו את הפריסה בלי להעלות קבצים.",
       },
       hi: {
         name: "इमेज से PDF कन्वर्टर",
-        description: "अपने ब्राउज़र में स्थानीय रूप से इमेजों को एक PDF में जोड़ें.",
+        description:
+          "स्थानीय इमेज और चुने हुए TIFF पेजों को एक PDF में जोड़ें. HEIC, JPEG XL और JPEG 2000 खोलें, पेजों का क्रम बदलें, इमेज घुमाएं और फाइलें अपलोड किए बिना लेआउट समायोजित करें.",
       },
       id: {
         name: "Konverter Gambar ke PDF",
         description:
-          "Gabungkan gambar menjadi satu PDF secara lokal di browser Anda.",
+          "Gabungkan gambar lokal dan halaman TIFF yang dipilih menjadi PDF. Buka HEIC, JPEG XL, dan JPEG 2000, ubah urutan halaman, putar gambar, dan sesuaikan tata letak tanpa mengunggah file.",
       },
       it: {
         name: "Convertitore immagini in PDF",
         description:
-          "Combina immagini in un unico PDF localmente nel tuo browser.",
+          "Combina immagini locali e pagine TIFF selezionate in un PDF. Apri HEIC, JPEG XL e JPEG 2000, riordina le pagine, ruota le immagini e regola il layout senza caricare file online.",
       },
       ja: {
         name: "画像をPDFに変換",
-        description: "ブラウザー内で画像を1つのPDFにまとめます。",
+        description:
+          "ローカルの画像や選択したTIFFページをPDFにまとめます。HEIC、JPEG XL、JPEG 2000を開き、ファイルをアップロードせずにページの並べ替え、画像の回転、レイアウトの調整ができます。",
       },
       ko: {
         name: "이미지 PDF 변환기",
-        description: "브라우저에서 이미지를 하나의 PDF로 로컬에서 합치세요.",
+        description:
+          "로컬 이미지와 선택한 TIFF 페이지를 PDF로 합치세요. 파일을 업로드하지 않고 HEIC, JPEG XL 및 JPEG 2000을 열어 페이지 순서를 바꾸고, 이미지를 회전하고, 레이아웃을 조정하세요.",
       },
       ms: {
         name: "Penukar Imej kepada PDF",
         description:
-          "Gabungkan imej menjadi satu PDF secara setempat dalam pelayar anda.",
+          "Gabungkan imej setempat dan halaman TIFF yang dipilih menjadi PDF. Buka HEIC, JPEG XL dan JPEG 2000, susun semula halaman, putar imej dan laraskan susun atur tanpa memuat naik fail.",
       },
       nl: {
         name: "Afbeeldingen naar PDF-converter",
         description:
-          "Combineer afbeeldingen lokaal in je browser tot een enkele PDF.",
+          "Combineer lokale afbeeldingen en geselecteerde TIFF-pagina's tot een PDF. Open HEIC, JPEG XL en JPEG 2000, wijzig de paginavolgorde, draai afbeeldingen en pas de lay-out aan zonder bestanden te uploaden.",
       },
       no: {
         name: "Bilde-til-PDF-konverterer",
-        description: "Kombiner bilder til én PDF lokalt i nettleseren din.",
+        description:
+          "Kombiner lokale bilder og valgte TIFF-sider til én PDF. Åpne HEIC, JPEG XL og JPEG 2000, endre siderekkefølgen, roter bilder og juster oppsettet uten å laste opp filer.",
       },
       pl: {
         name: "Konwerter obrazów do PDF",
-        description: "Łącz obrazy w jeden PDF lokalnie w przeglądarce.",
+        description:
+          "Łącz lokalne obrazy i wybrane strony TIFF w PDF. Otwieraj HEIC, JPEG XL i JPEG 2000, zmieniaj kolejność stron, obracaj obrazy i dostosowuj układ bez przesyłania plików.",
       },
       pt: {
         name: "Conversor de imagens para PDF",
         description:
-          "Combine imagens em um único PDF localmente no seu navegador.",
+          "Combine imagens locais e páginas TIFF selecionadas em um PDF. Abra HEIC, JPEG XL e JPEG 2000, reordene páginas, gire imagens e ajuste o layout sem enviar arquivos.",
       },
       ru: {
         name: "Конвертер изображений в PDF",
-        description: "Объединяйте изображения в один PDF локально в браузере.",
+        description:
+          "Объединяйте локальные изображения и выбранные страницы TIFF в PDF. Открывайте HEIC, JPEG XL и JPEG 2000, меняйте порядок страниц, поворачивайте изображения и настраивайте размещение без отправки файлов на сервер.",
       },
       sv: {
         name: "Bild till PDF-konverterare",
-        description: "Slå ihop bilder till en enda PDF lokalt i webbläsaren.",
+        description:
+          "Slå ihop lokala bilder och valda TIFF-sidor till en PDF. Öppna HEIC, JPEG XL och JPEG 2000, ändra sidordningen, rotera bilder och justera layouten utan att ladda upp filer.",
       },
       th: {
         name: "ตัวแปลงรูปภาพเป็น PDF",
-        description: "รวมรูปภาพเป็น PDF ไฟล์เดียวในเครื่องภายในเบราว์เซอร์ของคุณ",
+        description:
+          "รวมรูปภาพบนอุปกรณ์และหน้า TIFF ที่เลือกเป็น PDF เปิด HEIC, JPEG XL และ JPEG 2000 จัดลำดับหน้าใหม่ หมุนรูปภาพ และปรับการจัดวางโดยไม่ต้องอัปโหลดไฟล์",
       },
       tr: {
         name: "Görselden PDF Dönüştürücü",
         description:
-          "Görselleri tarayıcınızda yerel olarak tek bir PDF halinde birleştirin.",
+          "Yerel görselleri ve seçilen TIFF sayfalarını bir PDF içinde birleştirin. Dosyaları sunucuya yüklemeden HEIC, JPEG XL ve JPEG 2000 açın, sayfaları yeniden sıralayın, görselleri döndürün ve düzeni ayarlayın.",
       },
       vi: {
         name: "Trình chuyển ảnh sang PDF",
-        description: "Gộp ảnh thành một PDF ngay trong trình duyệt của bạn.",
+        description:
+          "Gộp ảnh trên thiết bị và các trang TIFF đã chọn thành PDF. Mở HEIC, JPEG XL và JPEG 2000, sắp xếp lại trang, xoay ảnh và điều chỉnh bố cục mà không cần tải tệp lên.",
       },
       "zh-CN": {
         name: "图片转 PDF 转换器",
-        description: "在浏览器中本地将图片合并为一个 PDF。",
+        description:
+          "将本地图片和所选 TIFF 页面合并为 PDF。打开 HEIC、JPEG XL 和 JPEG 2000 图片，调整页面顺序、旋转图片并设置布局，无需上传文件。",
       },
       "zh-TW": {
         name: "圖片轉 PDF 轉換器",
-        description: "在瀏覽器中本機將圖片合併成單一 PDF。",
+        description:
+          "將本機圖片與選取的 TIFF 頁面合併為 PDF。無須上傳檔案，即可開啟 HEIC、JPEG XL 和 JPEG 2000，重新排列頁面、旋轉圖片並調整版面配置。",
       },
     },
   },

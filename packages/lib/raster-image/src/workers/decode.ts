@@ -15,7 +15,13 @@ import { failureOf } from "../core/failure"
 import { detectImage } from "../core/detect"
 import { declaredItems } from "../core/item-count"
 import { srgbProfile } from "./srgb-profile"
-import type { ImageInfo, Preview, SourceKind, JpegOptions } from "../types"
+import type {
+  ImageInfo,
+  Preview,
+  SourceKind,
+  JpegOptions,
+  ImageTransform,
+} from "../types"
 
 let source: Uint8Array
 let kind: SourceKind
@@ -47,7 +53,7 @@ function initialize() {
   return initialized
 }
 
-export async function openImage(file: File, jpeg?: JpegOptions) {
+export async function inspectImage(file: File) {
   source = new Uint8Array(await file.arrayBuffer())
   kind = detectImage(source)
   const expected = declaredItems(source, kind.format)
@@ -76,10 +82,26 @@ export async function openImage(file: File, jpeg?: JpegOptions) {
   } finally {
     collection.dispose()
   }
+  return info
+}
+
+export async function openImage(file: File, jpeg?: JpegOptions) {
+  await inspectImage(file)
   return { info, preview: renderImage(0, jpeg) }
 }
 
-export function renderImage(index: number, jpeg?: JpegOptions): Preview {
+export function renderImage(
+  index: number,
+  jpeg?: JpegOptions,
+  transform?: ImageTransform
+): Preview {
+  const rotation = transform?.rotation ?? 0
+  const size = transform?.maxDimension
+  if (
+    ![0, 90, 180, 270].includes(rotation) ||
+    (size !== undefined && (!Number.isSafeInteger(size) || size <= 0))
+  )
+    throw new Error("invalid")
   if (
     jpeg &&
     (!Number.isInteger(jpeg.quality) ||
@@ -105,6 +127,11 @@ export function renderImage(index: number, jpeg?: JpegOptions): Preview {
     const depth = image.depth
     const profile = image.getColorProfile() !== null
     image.autoOrient()
+    if (rotation) image.rotate(rotation)
+    const fullWidth = image.width
+    const fullHeight = image.height
+    if (size !== undefined && (fullWidth > size || fullHeight > size))
+      image.resize(size, size)
     if (jpeg) {
       // Convert before compositing so the selected background is interpreted as sRGB.
       if (!image.transformColorSpace(srgbProfile)) {
@@ -126,6 +153,8 @@ export function renderImage(index: number, jpeg?: JpegOptions): Preview {
         bytes: new Uint8Array(bytes),
         width: image.width,
         height: image.height,
+        fullWidth,
+        fullHeight,
         delay: image.animationTicksPerSecond
           ? (image.animationDelay * 1000) / image.animationTicksPerSecond
           : 0,

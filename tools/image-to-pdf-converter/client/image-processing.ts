@@ -1,284 +1,158 @@
-import { getJpegQuality, normalizeRotation } from "../core/options"
-
-import type { QualityPreset, Rotation } from "../core/options"
-
-type LoadedImageSource = Readonly<{
-  close: () => void
-  height: number
-  source: CanvasImageSource
-  width: number
-}>
-
-type LoadedHtmlImage = Readonly<{
-  element: HTMLImageElement
-  objectUrl: string
-}>
-
-type CanvasFactoryResult = Readonly<{
-  canvas: HTMLCanvasElement
-  context: CanvasRenderingContext2D | null
-}>
-
-type ImageProcessingEnvironment = Readonly<{
-  createCanvas?: (width: number, height: number) => CanvasFactoryResult
-  createImageBitmap?: typeof globalThis.createImageBitmap
-  createObjectUrl?: (file: File) => string
-  loadHtmlImage?: (file: File) => Promise<LoadedHtmlImage>
-  revokeObjectUrl?: (url: string) => void
-}>
-
-type RenderedImage = Readonly<{
-  height: number
-  jpegBytes: Uint8Array
-  width: number
-}>
+import { imageSession } from "@workspace/raster-image"
+import { failureOf } from "@workspace/raster-image/failure"
+import type { Failure, ImageInfo } from "@workspace/raster-image/types"
+import { getJpegQuality } from "../core/options"
+import type { PdfImageInput } from "../core/pdf-document"
+import type { QualityPreset } from "../core/options"
+import type { ImageQueueItem } from "./types"
 
 const SUPPORTED_IMAGE_ACCEPT =
-  "image/png,image/jpeg,image/webp,image/gif,image/bmp,image/avif"
-const IMAGE_EXTENSION_PATTERN = /\.(png|jpe?g|webp|bmp|gif|avif)$/i
-
-function isProbablyImageFile(file: File) {
-  return (
-    file.type.startsWith("image/") || IMAGE_EXTENSION_PATTERN.test(file.name)
-  )
-}
+  ".jpg,.jpeg,.png,.apng,.gif,.bmp,.webp,.avif,.tif,.tiff,.ico,.heic,.heif,.jxl,.jp2,.j2k,.jpf,.jpx,.jpm,.mj2"
+let nextId = 0
 
 function getFileSignature(file: File) {
   return `${file.name}-${file.size}-${file.lastModified}`
 }
 
-async function readImageDimensions(
-  file: File,
-  environment?: ImageProcessingEnvironment
-) {
-  const loadedImage = await loadImageSource(file, environment)
-
+function openSource(file: File, signal: AbortSignal) {
+  signal.throwIfAborted()
+  const lifetime = new AbortController()
+  const abort = () => lifetime.abort()
+  signal.addEventListener("abort", abort, { once: true })
+  const close = () => {
+    signal.removeEventListener("abort", abort)
+    lifetime.abort()
+  }
   try {
-    return {
-      width: loadedImage.width,
-      height: loadedImage.height,
-    }
-  } finally {
-    loadedImage.close()
+    return { session: imageSession(file, lifetime.signal), close }
+  } catch (reason) {
+    close()
+    throw reason
   }
 }
 
-async function renderImageToJpeg(
-  file: File,
-  {
-    qualityPreset,
-    rotation,
-  }: {
-    qualityPreset: QualityPreset
-    rotation: Rotation
-  },
-  environment?: ImageProcessingEnvironment
-): Promise<RenderedImage> {
-  const normalizedRotation = normalizeRotation(rotation)
-  const loadedImage = await loadImageSource(file, environment)
-
-  try {
-    const isQuarterTurn =
-      normalizedRotation === 90 || normalizedRotation === 270
-    const outputWidth = isQuarterTurn ? loadedImage.height : loadedImage.width
-    const outputHeight = isQuarterTurn ? loadedImage.width : loadedImage.height
-    const { canvas, context } = createCanvas(
-      outputWidth,
-      outputHeight,
-      environment
-    )
-
-    if (!context) {
-      throw new Error("CANVAS_UNAVAILABLE")
-    }
-
-    context.fillStyle = "#ffffff"
-    context.fillRect(0, 0, outputWidth, outputHeight)
-    context.translate(outputWidth / 2, outputHeight / 2)
-    context.rotate((normalizedRotation * Math.PI) / 180)
-    context.drawImage(
-      loadedImage.source,
-      -loadedImage.width / 2,
-      -loadedImage.height / 2,
-      loadedImage.width,
-      loadedImage.height
-    )
-
-    const jpegBlob = await canvasToBlob(canvas, getJpegQuality(qualityPreset))
-
-    return {
-      jpegBytes: new Uint8Array(await jpegBlob.arrayBuffer()),
-      width: outputWidth,
-      height: outputHeight,
-    }
-  } finally {
-    loadedImage.close()
+function releasePages(items: readonly ImageQueueItem[]) {
+  for (const item of items) {
+    if (item.previewUrl) URL.revokeObjectURL(item.previewUrl)
   }
 }
 
-async function loadImageSource(
+function makePage(
   file: File,
-  environment?: ImageProcessingEnvironment
-): Promise<LoadedImageSource> {
-  const bitmap = await createImageBitmapWithOrientation(file, environment)
-
-  if (bitmap) {
-    return {
-      width: Math.max(1, bitmap.width),
-      height: Math.max(1, bitmap.height),
-      source: bitmap,
-      close: () => {
-        bitmap.close?.()
-      },
-    }
-  }
-
-  const image = await loadHtmlImage(file, environment)
-
+  sourceIndex: number,
+  info: ImageInfo | null
+): ImageQueueItem {
   return {
-    width: Math.max(1, image.element.naturalWidth || image.element.width || 1),
-    height: Math.max(
-      1,
-      image.element.naturalHeight || image.element.height || 1
-    ),
-    source: image.element,
-    close: () => {
-      resolveRevokeObjectUrl(environment)(image.objectUrl)
+    id: `image-page-${++nextId}`,
+    file,
+    name: file.name,
+    size: file.size,
+    sourceIndex,
+    info,
+    selected: true,
+    width: 0,
+    height: 0,
+    previewUrl: null,
+    rotation: 0,
+  }
+}
+
+async function readSourcePages(
+  file: File,
+  signal: AbortSignal,
+  onProgress: (completed: number, total: number) => void
+): Promise<ImageQueueItem[]> {
+  const items: ImageQueueItem[] = []
+  let source: ReturnType<typeof openSource> | undefined
+  try {
+    source = openSource(file, signal)
+    const info = await source.session.inspect()
+    signal.throwIfAborted()
+    for (let index = 0; index < info.count; index++) {
+      let item = makePage(file, index, info)
+      try {
+        const preview = await source.session.render(index, undefined, {
+          maxDimension: 192,
+        })
+        signal.throwIfAborted()
+        item = {
+          ...item,
+          width: preview.fullWidth,
+          height: preview.fullHeight,
+          previewUrl: URL.createObjectURL(
+            new Blob([preview.bytes], { type: preview.mime })
+          ),
+        }
+      } catch (reason) {
+        if (signal.aborted) throw reason
+        item = { ...item, failure: failureOf(reason) }
+      }
+      items.push(item)
+      onProgress(index + 1, info.count)
+    }
+    return items
+  } catch (reason) {
+    releasePages(items)
+    if (signal.aborted) throw reason
+    return [{ ...makePage(file, 0, null), failure: failureOf(reason) }]
+  } finally {
+    source?.close()
+  }
+}
+
+class ImagePageError extends Error {
+  constructor(
+    readonly item: ImageQueueItem,
+    readonly failure: Failure
+  ) {
+    super("imagePage")
+  }
+}
+
+function createPageRenderer(signal: AbortSignal) {
+  let current: { file: File; source: ReturnType<typeof openSource> } | undefined
+  return {
+    async render(
+      item: ImageQueueItem,
+      quality: QualityPreset
+    ): Promise<PdfImageInput> {
+      try {
+        signal.throwIfAborted()
+        if (current?.file !== item.file) {
+          current?.source.close()
+          current = { file: item.file, source: openSource(item.file, signal) }
+          await current.source.session.inspect()
+        }
+        const preview = await current.source.session.render(
+          item.sourceIndex,
+          {
+            quality: Math.round(getJpegQuality(quality) * 100),
+            background: "#ffffff",
+          },
+          { rotation: item.rotation }
+        )
+        signal.throwIfAborted()
+        return {
+          jpegBytes: preview.bytes,
+          width: preview.width,
+          height: preview.height,
+        }
+      } catch (reason) {
+        if (signal.aborted) throw reason
+        throw new ImagePageError(item, failureOf(reason))
+      }
+    },
+    close() {
+      current?.source.close()
     },
   }
-}
-
-async function createImageBitmapWithOrientation(
-  file: File,
-  environment?: ImageProcessingEnvironment
-) {
-  const createBitmap =
-    environment?.createImageBitmap ?? globalThis.createImageBitmap
-
-  if (typeof createBitmap !== "function") {
-    return null
-  }
-
-  try {
-    return await createBitmap(file, { imageOrientation: "from-image" })
-  } catch {
-    try {
-      return await createBitmap(file)
-    } catch {
-      return null
-    }
-  }
-}
-
-async function loadHtmlImage(
-  file: File,
-  environment?: ImageProcessingEnvironment
-) {
-  if (environment?.loadHtmlImage) {
-    return environment.loadHtmlImage(file)
-  }
-
-  if (typeof Image === "undefined") {
-    throw new Error("INVALID_IMAGE")
-  }
-
-  const objectUrl = resolveCreateObjectUrl(environment)(file)
-
-  try {
-    const element = await new Promise<HTMLImageElement>((resolve, reject) => {
-      const image = new Image()
-      image.decoding = "async"
-      image.onload = () => {
-        resolve(image)
-      }
-      image.onerror = () => {
-        reject(new Error("INVALID_IMAGE"))
-      }
-      image.src = objectUrl
-    })
-
-    return {
-      element,
-      objectUrl,
-    }
-  } catch (error) {
-    resolveRevokeObjectUrl(environment)(objectUrl)
-    throw error
-  }
-}
-
-function createCanvas(
-  width: number,
-  height: number,
-  environment?: ImageProcessingEnvironment
-): CanvasFactoryResult {
-  if (environment?.createCanvas) {
-    return environment.createCanvas(width, height)
-  }
-
-  if (
-    typeof document === "undefined" ||
-    typeof document.createElement !== "function"
-  ) {
-    throw new Error("CANVAS_UNAVAILABLE")
-  }
-
-  const canvas = document.createElement("canvas")
-  canvas.width = Math.max(1, Math.round(width))
-  canvas.height = Math.max(1, Math.round(height))
-
-  return {
-    canvas,
-    context: canvas.getContext("2d"),
-  }
-}
-
-function canvasToBlob(canvas: HTMLCanvasElement, quality: number) {
-  if (typeof canvas.toBlob !== "function") {
-    throw new Error("CANVAS_EXPORT_FAILED")
-  }
-
-  return new Promise<Blob>((resolve, reject) => {
-    canvas.toBlob(
-      (blob) => {
-        if (!blob) {
-          reject(new Error("CANVAS_EXPORT_FAILED"))
-          return
-        }
-
-        resolve(blob)
-      },
-      "image/jpeg",
-      quality
-    )
-  })
-}
-
-function resolveCreateObjectUrl(environment?: ImageProcessingEnvironment) {
-  const createObjectUrl = environment?.createObjectUrl ?? URL.createObjectURL
-
-  if (typeof createObjectUrl !== "function") {
-    throw new Error("INVALID_IMAGE")
-  }
-
-  return createObjectUrl
-}
-
-function resolveRevokeObjectUrl(environment?: ImageProcessingEnvironment) {
-  const revokeObjectUrl = environment?.revokeObjectUrl ?? URL.revokeObjectURL
-
-  if (typeof revokeObjectUrl !== "function") {
-    return () => {}
-  }
-
-  return revokeObjectUrl
 }
 
 export {
   SUPPORTED_IMAGE_ACCEPT,
   getFileSignature,
-  isProbablyImageFile,
-  readImageDimensions,
-  renderImageToJpeg,
+  readSourcePages,
+  releasePages,
+  createPageRenderer,
+  ImagePageError,
 }
-export type { ImageProcessingEnvironment }

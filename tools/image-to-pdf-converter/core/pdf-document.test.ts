@@ -37,8 +37,16 @@ describe("image-to-pdf PDF document assembly", () => {
     const progress: Array<{ completed: number; total: number }> = []
     const bytes = await createImagePdf({
       images: [
-        { jpegBytes: new Uint8Array([1]), width: 200, height: 400 },
-        { jpegBytes: new Uint8Array([2]), width: 400, height: 200 },
+        async () => ({
+          jpegBytes: new Uint8Array([1]),
+          width: 200,
+          height: 400,
+        }),
+        async () => ({
+          jpegBytes: new Uint8Array([2]),
+          width: 400,
+          height: 200,
+        }),
       ],
       options: DEFAULT_CONVERTER_OPTIONS,
       onProgress: (nextProgress) => {
@@ -61,7 +69,13 @@ describe("image-to-pdf PDF document assembly", () => {
     const { createImagePdf } = await import("./pdf-document")
 
     await createImagePdf({
-      images: [{ jpegBytes: new Uint8Array([1]), width: 400, height: 200 }],
+      images: [
+        async () => ({
+          jpegBytes: new Uint8Array([1]),
+          width: 400,
+          height: 200,
+        }),
+      ],
       options: {
         ...DEFAULT_CONVERTER_OPTIONS,
         fitMode: "cover",
@@ -79,4 +93,49 @@ describe("image-to-pdf PDF document assembly", () => {
     expect(blob.type).toBe(PDF_MIME_TYPE)
     expect(await blob.arrayBuffer()).toEqual(new Uint8Array([1, 2, 3]).buffer)
   })
+})
+
+test("loads images sequentially and stops before later pages or a cancelled save", async () => {
+  const { createImagePdf } = await import("./pdf-document")
+  const image = { jpegBytes: new Uint8Array([1]), width: 400, height: 200 }
+  for (const stage of ["before", "load", "progress", "save", "complete"]) {
+    const controller = new AbortController()
+    const later = vi.fn(async () => image)
+    const load = vi.fn(async () => {
+      if (stage === "load") controller.abort()
+      return image
+    })
+    if (stage === "before") controller.abort()
+    save.mockImplementationOnce(async () => {
+      if (stage === "save") controller.abort()
+      return new Uint8Array([37])
+    })
+    const pending = createImagePdf({
+      images: [load, later],
+      options: { ...DEFAULT_CONVERTER_OPTIONS, fitMode: "cover", marginMm: 0 },
+      signal: controller.signal,
+      onProgress: ({ completed }) => {
+        if (stage === "progress" && completed === 1) controller.abort()
+      },
+    })
+    if (stage === "complete")
+      await expect(pending).resolves.toEqual(new Uint8Array([37]))
+    else await expect(pending).rejects.toThrow(/abort/i)
+    if (["before", "load", "progress"].includes(stage))
+      expect(later).not.toHaveBeenCalled()
+    save.mockReset().mockResolvedValue(new Uint8Array([37]))
+  }
+  const later = vi.fn()
+  await expect(
+    createImagePdf({
+      images: [
+        async () => {
+          throw new Error("page failed")
+        },
+        later,
+      ],
+      options: DEFAULT_CONVERTER_OPTIONS,
+    })
+  ).rejects.toThrow("page failed")
+  expect(later).not.toHaveBeenCalled()
 })

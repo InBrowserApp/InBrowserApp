@@ -21,3 +21,7 @@ Tải ảnh, trang, biến thể biểu tượng hoặc khung hình hoạt ảnh
 ## Lưu ảnh JPG
 
 Chọn JPG làm định dạng tải xuống để xem trước kết quả nén thực tế. Đặt chất lượng từ 1 đến 100 và chọn màu trắng, đen hoặc màu tùy chỉnh để lấp vùng trong suốt. Chất lượng cao hơn thường tạo tệp lớn hơn; ngay cả chất lượng 100 vẫn dùng nén mất dữ liệu. Trang hoặc khung hình đã chọn cùng kích thước pixel đầy đủ được giữ nguyên khi thay đổi thiết lập. JPG dùng màu sRGB 8 bit và làm giảm độ sâu bit cao và HDR. Thu phóng và nền xem trước không làm thay đổi ảnh JPG đã lưu. Chỉ thiết lập nền JPG mới lấp các pixel trong suốt.
+
+## Gộp ảnh thành PDF
+
+Dùng [Trình chuyển ảnh sang PDF](../image-to-pdf-converter/) để gộp ảnh được hỗ trợ hoặc các trang TIFF đã chọn thành một PDF. Chọn và sắp xếp lại trang, xoay trang rồi chọn khổ trang, lề và cách vừa ảnh. Tệp luôn ở trên thiết bị của bạn; hãy mở lại tệp nguồn trong trình chuyển đổi. PDF dùng ảnh tĩnh, không giữ lại hoạt ảnh hoặc thêm OCR.

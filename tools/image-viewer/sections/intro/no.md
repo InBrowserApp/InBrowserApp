@@ -21,3 +21,7 @@ Last ned det valgte bildet, siden, ikonvarianten eller det sammensatte animasjon
 ## Lagre en JPG
 
 Velg JPG som nedlastingsformat for å forhåndsvise det faktiske komprimerte resultatet. Angi en kvalitet fra 1 til 100 og velg hvitt, svart eller en tilpasset farge for å fylle gjennomsiktige områder. Høyere kvalitet gir vanligvis en større fil; selv kvalitet 100 medfører tap av informasjon. Den valgte siden eller animasjonsbildet og de fulle pikselmålene beholdes når innstillingene endres. JPG bruker 8-bits sRGB-farger og reduserer høy bitdybde og HDR. Zoom og bakgrunner i forhåndsvisningen endrer ikke det lagrede JPG-bildet. Bare innstillingen for JPG-bakgrunn fyller gjennomsiktige piksler.
+
+## Kombiner bilder til en PDF
+
+Bruk [Bilde-til-PDF-konverterer](../image-to-pdf-converter/) til å kombinere støttede bilder eller valgte TIFF-sider til én PDF. Velg sider, endre rekkefølgen, roter dem og velg sidestørrelse, marger og tilpasning. Filene blir på enheten din; åpne kildefilene på nytt i konvertereren. PDF-en bruker stillbilder; animasjon bevares ikke, og OCR legges ikke til.

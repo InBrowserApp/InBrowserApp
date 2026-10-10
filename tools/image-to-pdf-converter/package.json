@@ -10,7 +10,8 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "pdf-lib": "catalog:"
+    "pdf-lib": "catalog:",
+    "@workspace/raster-image": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

@@ -41,21 +41,19 @@ function UploadCard({
   const [isDraggingOver, setIsDraggingOver] = useState(false)
 
   function handleDragOver(event: DragEvent<HTMLLabelElement>) {
+    event.preventDefault()
     if (disabled) {
       return
     }
-
-    event.preventDefault()
     event.dataTransfer.dropEffect = "copy"
     setIsDraggingOver(true)
   }
 
   function handleDrop(event: DragEvent<HTMLLabelElement>) {
+    event.preventDefault()
     if (disabled) {
       return
     }
-
-    event.preventDefault()
     setIsDraggingOver(false)
     onFilesSelected(Array.from(event.dataTransfer.files))
   }

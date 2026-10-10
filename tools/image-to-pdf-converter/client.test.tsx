@@ -1,489 +1,354 @@
 import {
+  act,
   cleanup,
   fireEvent,
   render,
   screen,
   waitFor,
 } from "@testing-library/react"
-import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
-
+import { afterEach, beforeEach, expect, test, vi } from "vitest"
+import { imageSession } from "@workspace/raster-image"
 import ImageToPdfClient from "./client"
-import {
-  readImageDimensions,
-  renderImageToJpeg,
-} from "./client/image-processing"
 import { SettingsCard } from "./client/settings-card"
 import { UploadCard } from "./client/upload-card"
 import { DEFAULT_CONVERTER_OPTIONS } from "./core/options"
 import { createImagePdf } from "./core/pdf-document"
-
-import type { ImageToPdfMessages } from "./client/types"
-
-vi.mock("./client/image-processing", async () => {
-  const actual = await vi.importActual<
-    typeof import("./client/image-processing")
-  >("./client/image-processing")
-
-  return {
-    ...actual,
-    readImageDimensions: vi.fn(),
-    renderImageToJpeg: vi.fn(),
-  }
-})
-
-vi.mock("./core/pdf-document", async () => {
-  const actual = await vi.importActual<typeof import("./core/pdf-document")>(
-    "./core/pdf-document"
-  )
-
-  return {
-    ...actual,
-    createImagePdf: vi.fn(),
-  }
-})
-
-const mockedReadImageDimensions = vi.mocked(readImageDimensions)
-const mockedRenderImageToJpeg = vi.mocked(renderImageToJpeg)
-const mockedCreateImagePdf = vi.mocked(createImagePdf)
-
-const messages: ImageToPdfMessages = {
-  addImagesLabel: "Add images",
-  autoOrientation: "Auto",
-  balancedQuality: "Balanced",
-  bestQuality: "Best",
-  canvasUnavailableError: "Canvas is unavailable.",
-  changeImagesLabel: "Choose images",
-  clearAllLabel: "Clear all",
-  containFit: "Contain",
-  coverFit: "Cover",
-  downloadPdfLabel: "Download PDF",
-  duplicateFileError: "That image is already in the page queue.",
-  emptyQueueDescription: "Add images to build the PDF page order.",
-  emptyQueueTitle: "No images yet",
-  emptyResultDescription: "Add images, adjust settings, then generate the PDF.",
-  emptyResultTitle: "No PDF yet",
-  errorTitle: "Unable to create PDF",
-  fileSizeLabel: "Input size",
-  fitModeDescription: "Contain keeps the full image visible.",
-  fitModeLabel: "Image fit",
-  generateFailedError: "PDF generation failed.",
-  generateLabel: "Generate PDF",
-  generatingLabel: "Generating PDF...",
-  imageCountLabel: "Images",
-  invalidImageError: "One image could not be read.",
-  invalidImageTypeError: "Only image files can be added.",
-  landscapeOrientation: "Landscape",
-  localOnlyNote: "Images stay in this browser session.",
-  marginDescription: "White space around each image.",
-  marginLabel: "Margin",
-  meta: {
-    description: "Combine images into a single PDF.",
-    name: "Image to PDF Converter",
-  },
-  moveDownLabel: "Move down",
-  moveUpLabel: "Move up",
-  noImagesError: "Add at least one image before generating a PDF.",
-  orientationLabel: "Orientation",
-  outputSizeLabel: "Output size",
-  pageCountLabel: "Pages",
-  pageSizeDescription: "Each image becomes one PDF page.",
-  pageSizeLabel: "Page size",
-  pasteHint: "Click, drag images here, or paste from your clipboard.",
-  portraitOrientation: "Portrait",
-  previewAlt: "Preview of {name}",
-  progressLabel: "Processing {completed} of {total} pages",
-  qualityDescription: "Higher quality creates a larger PDF.",
-  qualityLabel: "Image quality",
-  queueDescription: "Review, rotate, and order images.",
-  queueTitle: "Page queue",
-  readingImagesLabel: "Reading images...",
-  removeImageLabel: "Remove image",
-  resultDescription: "Download the generated PDF.",
-  resultReadyTitle: "PDF ready",
-  resultTitle: "Result",
-  rotateLabel: "Rotate 90 degrees",
-  settingsDescription: "Choose PDF output settings.",
-  settingsTitle: "PDF settings",
-  smallQuality: "Small",
-  supportedFormatsLabel: "Supports PNG, JPEG, WebP, GIF, BMP, and AVIF.",
-  uploadDescription: "Add the images you want to turn into PDF pages.",
-  uploadTitle: "Upload images",
+import catalog from "./messages/en.json"
+import meta from "./meta/en.json"
+vi.mock("@workspace/raster-image", () => ({ imageSession: vi.fn() }))
+vi.mock("./core/pdf-document", async (original) => ({
+  ...(await original<typeof import("./core/pdf-document")>()),
+  createImagePdf: vi.fn(),
+}))
+const messages = { ...catalog, meta }
+const m = messages
+const preview = {
+  bytes: new Uint8Array([1, 2]),
+  mime: "image/png" as const,
+  width: 192,
+  height: 144,
+  fullWidth: 640,
+  fullHeight: 480,
+  depth: 8,
+  profile: false,
+  delay: 0,
 }
-
-function createImageFile(name = "photo.png", type = "image/png") {
-  return new File([new Uint8Array([1, 2, 3])], name, {
-    lastModified: 1,
-    type,
-  })
-}
-
-function getFileInput(): HTMLInputElement {
-  return screen.getByTestId("image-to-pdf-input") as HTMLInputElement
-}
-
+const inspect = vi.fn()
+const decode = vi.fn()
+const exports: Array<{
+  file: string
+  index: number
+  rotation?: number
+  quality: number
+}> = []
+let signals: AbortSignal[] = []
+const file = (name = "scan.png") =>
+  new File(["bytes"], name, { lastModified: 1 })
+const input = () => screen.getByTestId("image-to-pdf-input")
+const button = (name: string) => screen.getByRole("button", { name })
+const add = (...files: File[]) =>
+  fireEvent.change(input(), { target: { files } })
+const generate = () => fireEvent.click(button(m.generateLabel))
 beforeEach(() => {
-  mockedReadImageDimensions.mockReset()
-  mockedReadImageDimensions.mockResolvedValue({ width: 640, height: 480 })
-  mockedRenderImageToJpeg.mockReset()
-  mockedRenderImageToJpeg.mockResolvedValue({
-    height: 480,
-    jpegBytes: new Uint8Array([1, 2, 3]),
-    width: 640,
-  })
-  mockedCreateImagePdf.mockReset()
-  mockedCreateImagePdf.mockResolvedValue(new Uint8Array([37, 80, 68, 70]))
-
-  let urlCounter = 0
-  vi.spyOn(URL, "createObjectURL").mockImplementation(
-    () => `blob:pdf-${++urlCounter}`
-  )
+  signals = []
+  exports.length = 0
+  inspect.mockReset().mockImplementation(async (source: File) => ({
+    format: "TIFF",
+    count: source.name.endsWith(".tiff") ? 3 : 1,
+    kind: "page",
+    poster: source.name.endsWith(".apng"),
+  }))
+  decode.mockReset().mockResolvedValue(preview)
+  vi.mocked(imageSession)
+    .mockReset()
+    .mockImplementation((source, signal) => {
+      signals.push(signal)
+      return {
+        open: vi.fn(),
+        inspect: () => inspect(source),
+        render: async (index, jpeg, transform) => {
+          if (jpeg)
+            exports.push({
+              file: source.name,
+              index,
+              quality: jpeg.quality,
+              rotation: transform?.rotation,
+            })
+          return decode(index, jpeg, transform)
+        },
+      }
+    })
+  vi.mocked(createImagePdf)
+    .mockReset()
+    .mockImplementation(async ({ images, onProgress, signal }) => {
+      for (const [i, load] of images.entries()) {
+        signal?.throwIfAborted()
+        await load()
+        onProgress?.({ completed: i + 1, total: images.length })
+      }
+      return new Uint8Array([37, 80, 68, 70])
+    })
+  let id = 0
+  vi.spyOn(URL, "createObjectURL").mockImplementation(() => `blob:pdf-${++id}`)
   vi.spyOn(URL, "revokeObjectURL").mockImplementation(() => {})
 })
-
 afterEach(() => {
   cleanup()
   vi.restoreAllMocks()
 })
 
-describe("ImageToPdfClient", () => {
-  test("renders the initial upload, queue, settings, and result states", () => {
-    render(<ImageToPdfClient messages={messages} />)
+test("starts empty and combines selected TIFF pages and a mixed source in displayed order", async () => {
+  render(<ImageToPdfClient messages={m} />)
+  expect(button(m.generateLabel)).toHaveProperty("disabled", true)
+  add(file("pages.tiff"), file("photo.heic"))
+  await screen.findByText("4 of 4 selected")
+  expect(screen.getByText("Input size: 10 B")).toBeTruthy()
+  fireEvent.click(
+    screen.getByRole("checkbox", { name: "Include pages.tiff · Page 2 of 3" })
+  )
+  fireEvent.click(button("Move up: photo.heic"))
+  fireEvent.click(button("Move down: pages.tiff · Page 1 of 3"))
+  fireEvent.click(button("Rotate 90 degrees: pages.tiff · Page 3 of 3"))
+  generate()
+  await screen.findByText(m.resultReadyTitle)
+  expect(exports).toEqual([
+    { file: "pages.tiff", index: 0, rotation: 0, quality: 82 },
+    { file: "photo.heic", index: 0, rotation: 0, quality: 82 },
+    { file: "pages.tiff", index: 2, rotation: 90, quality: 82 },
+  ])
+  expect(screen.getByRole("link", { name: m.downloadPdfLabel })).toHaveProperty(
+    "download",
+    "images-3-pages.pdf"
+  )
+  expect(signals.every((s) => s.aborted)).toBe(true)
+  fireEvent.click(button(m.deselectAllLabel))
+  expect(button(m.generateLabel)).toHaveProperty("disabled", true)
+  expect(screen.queryByRole("link", { name: m.downloadPdfLabel })).toBeNull()
+  expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:pdf-5")
+  fireEvent.click(button(m.selectAllLabel))
+  expect(screen.getByText("4 of 4 selected")).toBeTruthy()
+  expect(button(m.generateLabel)).toHaveProperty("disabled", false)
+})
 
-    expect(screen.getByText(messages.uploadTitle)).toBeTruthy()
-    expect(screen.getByText(messages.emptyQueueTitle)).toBeTruthy()
-    expect(screen.getByText(messages.settingsTitle)).toBeTruthy()
-    expect(screen.getByText(messages.emptyResultTitle)).toBeTruthy()
-    expect(
-      screen.getByRole("button", { name: messages.generateLabel })
-    ).toHaveProperty("disabled", true)
+test("keeps unreadable pages visible and blocks output until explicitly deselected", async () => {
+  decode.mockRejectedValueOnce(new Error("invalid"))
+  render(<ImageToPdfClient messages={m} />)
+  add(file("pages.tiff"))
+  await screen.findByText("3 of 3 selected")
+  expect(screen.getByText(m.failures.invalid)).toBeTruthy()
+  expect(screen.getByText(m.unreadableSelectionError)).toBeTruthy()
+  expect(button(m.generateLabel)).toHaveProperty("disabled", true)
+  fireEvent.click(
+    screen.getByRole("checkbox", { name: "Include pages.tiff · Page 1 of 3" })
+  )
+  generate()
+  await screen.findByText(m.resultReadyTitle)
+  expect(exports.map((p) => p.index)).toEqual([1, 2])
+})
+
+test("preserves PDF settings and invalidates output immediately when settings change", async () => {
+  render(<ImageToPdfClient messages={m} />)
+  add(file())
+  await screen.findByText("scan.png")
+  fireEvent.click(screen.getByText(m.landscapeOrientation))
+  fireEvent.click(screen.getByText(m.coverFit))
+  fireEvent.click(screen.getByText(m.bestQuality))
+  fireEvent.change(screen.getByRole("spinbutton", { name: m.marginLabel }), {
+    target: { value: "25" },
   })
-
-  test("adds images, updates the queue, and creates a downloadable PDF", async () => {
-    render(<ImageToPdfClient messages={messages} />)
-
-    fireEvent.change(getFileInput(), {
-      target: {
-        files: [createImageFile("scan.png"), createImageFile("wide.jpg")],
-      },
-    })
-
-    await screen.findByText("scan.png")
-    expect(screen.getByText("wide.jpg")).toBeTruthy()
-    expect(screen.getByText(`${messages.imageCountLabel}: 2`)).toBeTruthy()
-
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.generateLabel })
-    )
-
-    await waitFor(() => {
-      expect(mockedCreateImagePdf).toHaveBeenCalledTimes(1)
-    })
-
-    expect(mockedRenderImageToJpeg).toHaveBeenCalledTimes(2)
-    expect(screen.getByText(messages.resultReadyTitle)).toBeTruthy()
-    expect(
-      screen
-        .getByRole("link", { name: messages.downloadPdfLabel })
-        .getAttribute("download")
-    ).toBe("images-2-pages.pdf")
+  generate()
+  await screen.findByText(m.resultReadyTitle)
+  expect(exports[0]!.quality).toBe(92)
+  expect(vi.mocked(createImagePdf).mock.calls[0]![0].options).toMatchObject({
+    fitMode: "cover",
+    marginMm: 25,
+    pageOrientation: "landscape",
+    qualityPreset: "best",
   })
+  fireEvent.click(screen.getByText(m.portraitOrientation))
+  expect(screen.queryByRole("link", { name: m.downloadPdfLabel })).toBeNull()
+})
 
-  test("adds files from drop and paste interactions", async () => {
-    render(<ImageToPdfClient messages={messages} />)
-
-    fireEvent.drop(screen.getByLabelText(messages.addImagesLabel), {
-      dataTransfer: {
-        files: [createImageFile("dropped.png")],
-      },
-    })
-
-    await screen.findByText("dropped.png")
-
-    fireEvent.paste(window, {
-      clipboardData: {
-        files: [createImageFile("pasted.jpg", "image/jpeg")],
-      },
-    })
-
-    await screen.findByText("pasted.jpg")
-    expect(mockedReadImageDimensions).toHaveBeenCalledTimes(2)
+test("adds via drop/paste, rejects duplicates and releases removed and cleared thumbnails", async () => {
+  render(<ImageToPdfClient messages={m} />)
+  const first = file()
+  fireEvent.drop(screen.getByLabelText(m.addImagesLabel), {
+    dataTransfer: { files: [first] },
   })
+  await screen.findByText("scan.png")
+  fireEvent.paste(window, { clipboardData: { files: [file("other.png")] } })
+  await screen.findByText("other.png")
+  add(first)
+  await screen.findByText(m.duplicateFileError)
+  expect(inspect).toHaveBeenCalledTimes(2)
+  fireEvent.click(button("Remove image: scan.png"))
+  expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:pdf-1")
+  fireEvent.click(button(m.clearAllLabel))
+  expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:pdf-2")
+  expect(screen.getByText(m.emptyQueueTitle)).toBeTruthy()
+  add()
+  fireEvent.paste(window)
+  expect(inspect).toHaveBeenCalledTimes(2)
+})
 
-  test("applies output settings before generation", async () => {
-    render(<ImageToPdfClient messages={messages} />)
-
-    fireEvent.change(getFileInput(), {
-      target: {
-        files: [createImageFile("receipt.png")],
-      },
-    })
-
-    await screen.findByText("receipt.png")
-    fireEvent.click(screen.getByText(messages.landscapeOrientation))
-    fireEvent.click(screen.getByText(messages.coverFit))
-    fireEvent.click(screen.getByText(messages.bestQuality))
-    fireEvent.change(
-      screen.getByRole("spinbutton", { name: messages.marginLabel }),
-      {
-        target: { value: "25" },
-      }
-    )
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.generateLabel })
-    )
-
-    await waitFor(() => {
-      expect(mockedCreateImagePdf).toHaveBeenCalledTimes(1)
-    })
-
-    expect(mockedRenderImageToJpeg.mock.calls[0]?.[1]).toMatchObject({
-      qualityPreset: "best",
-      rotation: 0,
-    })
-    expect(mockedCreateImagePdf.mock.calls[0]?.[0].options).toMatchObject({
-      fitMode: "cover",
-      marginMm: 25,
-      pageOrientation: "landscape",
-      qualityPreset: "best",
-    })
-  })
-
-  test("shows progress while generation is pending", async () => {
-    let resolvePdf!: (bytes: Uint8Array) => void
-    mockedCreateImagePdf.mockReturnValueOnce(
+test("cancels an atomic add batch, retains old pages and discards late thumbnails", async () => {
+  render(<ImageToPdfClient messages={m} />)
+  add(file())
+  await screen.findByText("scan.png")
+  let finish!: (value: typeof preview) => void
+  decode.mockResolvedValueOnce(preview).mockImplementationOnce(
+    () =>
       new Promise((resolve) => {
-        resolvePdf = resolve
+        finish = resolve
       })
-    )
+  )
+  add(file("new.tiff"))
+  await screen.findByText("Reading new.tiff: 1 of 3")
+  fireEvent.paste(window, { clipboardData: { files: [file("ignored.png")] } })
+  expect(signals).toHaveLength(2)
+  fireEvent.click(button(m.cancelLabel))
+  expect(signals[1]!.aborted).toBe(true)
+  add(file("replacement.png"))
+  await screen.findByText("replacement.png")
+  await act(async () => finish(preview))
+  expect(screen.queryByText("new.tiff · Page 1 of 3")).toBeNull()
+  expect(screen.getByText("2 of 2 selected")).toBeTruthy()
+  expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:pdf-2")
+})
 
-    render(<ImageToPdfClient messages={messages} />)
-
-    fireEvent.change(getFileInput(), {
-      target: {
-        files: [createImageFile("scan.png")],
-      },
+test("cancels PDF generation, ignores late completion and permits another generation", async () => {
+  let finish!: (bytes: Uint8Array) => void
+  vi.mocked(createImagePdf).mockImplementationOnce(({ onProgress }) => {
+    onProgress?.({ completed: 1, total: 1 })
+    return new Promise((resolve) => {
+      finish = resolve
     })
-
-    await screen.findByText("scan.png")
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.generateLabel })
-    )
-
-    await screen.findByRole("button", { name: messages.generatingLabel })
-    expect(
-      screen.getByText(
-        messages.progressLabel
-          .replace("{completed}", "1")
-          .replace("{total}", "1")
-      )
-    ).toBeTruthy()
-
-    resolvePdf(new Uint8Array([37, 80, 68, 70]))
-
-    await screen.findByText(messages.resultReadyTitle)
   })
+  render(<ImageToPdfClient messages={m} />)
+  add(file())
+  await screen.findByText("scan.png")
+  generate()
+  expect(screen.getByRole("progressbar").getAttribute("aria-valuenow")).toBe(
+    "100"
+  )
+  fireEvent.paste(window, { clipboardData: { files: [file("ignored.png")] } })
+  expect(inspect).toHaveBeenCalledTimes(1)
+  fireEvent.click(button(m.cancelLabel))
+  await act(async () => finish(new Uint8Array([1])))
+  expect(screen.queryByRole("link", { name: m.downloadPdfLabel })).toBeNull()
+  generate()
+  await screen.findByText(m.resultReadyTitle)
+})
 
-  test("supports rotation and ordering before generation", async () => {
-    render(<ImageToPdfClient messages={messages} />)
-
-    fireEvent.change(getFileInput(), {
-      target: {
-        files: [createImageFile("first.png"), createImageFile("second.png")],
-      },
-    })
-
-    await screen.findByText("first.png")
-    fireEvent.click(
-      screen.getByRole("button", {
-        name: `${messages.rotateLabel}: first.png`,
+test("clear and unmount abort in-flight operations and never restore stale output", async () => {
+  const view = render(<ImageToPdfClient messages={m} />)
+  add(file())
+  await screen.findByText("scan.png")
+  let finish!: (value: typeof preview) => void
+  decode.mockImplementationOnce(
+    () =>
+      new Promise((resolve) => {
+        finish = resolve
       })
-    )
-    fireEvent.click(
-      screen.getByRole("button", {
-        name: `${messages.moveUpLabel}: second.png`,
+  )
+  generate()
+  await waitFor(() => expect(signals).toHaveLength(2))
+  fireEvent.click(button(m.clearAllLabel))
+  expect(signals[1]!.aborted).toBe(true)
+  await act(async () => finish(preview))
+  expect(screen.getByText(m.emptyQueueTitle)).toBeTruthy()
+  expect(screen.queryByRole("link", { name: m.downloadPdfLabel })).toBeNull()
+  add(file("again.png"))
+  await screen.findByText("again.png")
+  decode.mockImplementationOnce(
+    () =>
+      new Promise((resolve) => {
+        finish = resolve
       })
-    )
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.generateLabel })
-    )
+  )
+  add(file("late.png"))
+  await waitFor(() => expect(signals).toHaveLength(4))
+  view.unmount()
+  expect(signals[3]!.aborted).toBe(true)
+  await act(async () => finish(preview))
+  expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:pdf-2")
+})
 
-    await waitFor(() => {
-      expect(mockedRenderImageToJpeg).toHaveBeenCalledTimes(2)
-    })
+test("identifies failed sources and failed exports before any PDF is offered", async () => {
+  render(<ImageToPdfClient messages={m} />)
+  inspect.mockRejectedValueOnce(new Error("unsupported"))
+  add(file("notes.txt"))
+  await screen.findByText(m.failures.unsupported)
+  fireEvent.click(button("Remove image: notes.txt"))
+  add(file("animation.apng"), file("other.png"))
+  await screen.findByText("animation.apng · APNG poster only")
+  expect(screen.getByText(m.framesNote)).toBeTruthy()
+  decode.mockRejectedValueOnce(new Error("resourceLimit"))
+  generate()
+  await screen.findByText(m.unreadableSelectionError)
+  expect(screen.getByRole("alert").textContent).toContain("animation.apng")
+  expect(screen.queryByRole("link", { name: m.downloadPdfLabel })).toBeNull()
+  fireEvent.click(button("Remove image: animation.apng · APNG poster only"))
+  vi.mocked(createImagePdf).mockRejectedValueOnce(new Error("save failed"))
+  generate()
+  await screen.findByText(m.generateFailedError)
+})
 
-    expect(mockedRenderImageToJpeg.mock.calls[0]?.[0].name).toBe("second.png")
-    expect(mockedRenderImageToJpeg.mock.calls[1]?.[0].name).toBe("first.png")
-    expect(mockedRenderImageToJpeg.mock.calls[1]?.[1].rotation).toBe(90)
-  })
+test("upload interactions prevent navigation even while disabled", () => {
+  const selected = vi.fn()
+  const click = vi
+    .spyOn(HTMLInputElement.prototype, "click")
+    .mockImplementation(() => {})
+  const view = render(
+    <UploadCard
+      disabled={false}
+      inputId="upload"
+      isAddingImages={false}
+      messages={m}
+      onFilesSelected={selected}
+    />
+  )
+  const target = screen.getByLabelText(m.addImagesLabel)
+  const dataTransfer = { files: [file()], dropEffect: "none" }
+  fireEvent.dragOver(target, { dataTransfer })
+  fireEvent.dragLeave(target)
+  fireEvent.drop(target, { dataTransfer })
+  fireEvent.click(button(m.changeImagesLabel))
+  expect(click).toHaveBeenCalledOnce()
+  expect(selected).toHaveBeenCalledOnce()
+  view.rerender(
+    <UploadCard
+      disabled
+      inputId="upload"
+      isAddingImages
+      messages={m}
+      onFilesSelected={selected}
+    />
+  )
+  expect(fireEvent.drop(target, { dataTransfer })).toBe(false)
+  expect(fireEvent.dragOver(target, { dataTransfer })).toBe(false)
+  expect(selected).toHaveBeenCalledOnce()
+})
 
-  test("shows duplicate, invalid type, and invalid image errors", async () => {
-    render(<ImageToPdfClient messages={messages} />)
-
-    const file = createImageFile("scan.png")
-    fireEvent.change(getFileInput(), {
-      target: { files: [file] },
-    })
-    await screen.findByText("scan.png")
-    fireEvent.change(getFileInput(), {
-      target: { files: [file] },
-    })
-    await screen.findByText(messages.duplicateFileError)
-
-    fireEvent.change(getFileInput(), {
-      target: { files: [createImageFile("notes.txt", "text/plain")] },
-    })
-    await screen.findByText(messages.invalidImageTypeError)
-
-    mockedReadImageDimensions.mockRejectedValueOnce(new Error("bad image"))
-    fireEvent.change(getFileInput(), {
-      target: { files: [createImageFile("bad.png")] },
-    })
-    await screen.findByText(messages.invalidImageError)
-  })
-
-  test("clears and removes queue items", async () => {
-    render(<ImageToPdfClient messages={messages} />)
-
-    fireEvent.change(getFileInput(), {
-      target: {
-        files: [createImageFile("scan.png"), createImageFile("other.png")],
-      },
-    })
-
-    await screen.findByText("scan.png")
-    fireEvent.click(
-      screen.getByRole("button", {
-        name: `${messages.removeImageLabel}: scan.png`,
-      })
-    )
-
-    expect(screen.queryByText("scan.png")).toBeNull()
-    expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:pdf-1")
-
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.clearAllLabel })
-    )
-
-    expect(screen.queryByText("other.png")).toBeNull()
-    expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:pdf-2")
-  })
-
-  test("maps generation failures to visible error states", async () => {
-    mockedRenderImageToJpeg.mockRejectedValueOnce(
-      new Error("CANVAS_UNAVAILABLE")
-    )
-
-    render(<ImageToPdfClient messages={messages} />)
-
-    fireEvent.change(getFileInput(), {
-      target: { files: [createImageFile("scan.png")] },
-    })
-    await screen.findByText("scan.png")
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.generateLabel })
-    )
-
-    await screen.findByText(messages.canvasUnavailableError)
-  })
-
-  test("ignores disabled drag and drop uploads", () => {
-    const onFilesSelected = vi.fn()
-
-    render(
-      <UploadCard
-        disabled={true}
-        inputId="disabled-upload"
-        isAddingImages={false}
-        messages={messages}
-        onFilesSelected={onFilesSelected}
-      />
-    )
-
-    fireEvent.drop(screen.getByLabelText(messages.addImagesLabel), {
-      dataTransfer: {
-        files: [createImageFile("ignored.png")],
-      },
-    })
-
-    expect(onFilesSelected).not.toHaveBeenCalled()
-  })
-
-  test("handles direct upload card interactions", () => {
-    const onFilesSelected = vi.fn()
-    const inputClickSpy = vi
-      .spyOn(HTMLInputElement.prototype, "click")
-      .mockImplementation(() => {})
-
-    render(
-      <UploadCard
-        disabled={false}
-        inputId="direct-upload"
-        isAddingImages={true}
-        messages={messages}
-        onFilesSelected={onFilesSelected}
-      />
-    )
-
-    expect(screen.getByText(messages.readingImagesLabel)).toBeTruthy()
-
-    const dataTransfer = {
-      dropEffect: "none",
-      files: [createImageFile("dragged.png")],
-    }
-
-    fireEvent.dragOver(screen.getByLabelText(messages.addImagesLabel), {
-      dataTransfer,
-    })
-    fireEvent.dragLeave(screen.getByLabelText(messages.addImagesLabel))
-    fireEvent.drop(screen.getByLabelText(messages.addImagesLabel), {
-      dataTransfer,
-    })
-    fireEvent.change(screen.getByTestId("image-to-pdf-input"), {
-      target: { files: [createImageFile("picked.png")] },
-    })
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.changeImagesLabel })
-    )
-
-    expect(onFilesSelected).toHaveBeenCalledWith([
-      expect.objectContaining({ name: "dragged.png" }),
-    ])
-    expect(onFilesSelected).toHaveBeenCalledWith([
-      expect.objectContaining({ name: "picked.png" }),
-    ])
-    expect(inputClickSpy).toHaveBeenCalled()
-  })
-
-  test("handles direct settings card toggle actions", () => {
-    const onOptionsChange = vi.fn()
-
-    render(
-      <SettingsCard
-        canGenerate={true}
-        disabled={false}
-        isGenerating={false}
-        messages={messages}
-        onGenerate={vi.fn()}
-        onOptionsChange={onOptionsChange}
-        options={DEFAULT_CONVERTER_OPTIONS}
-      />
-    )
-
-    fireEvent.click(screen.getByText(messages.portraitOrientation))
-    fireEvent.click(screen.getByText(messages.coverFit))
-    fireEvent.click(screen.getByText(messages.smallQuality))
-
-    expect(onOptionsChange).toHaveBeenCalledWith({
-      ...DEFAULT_CONVERTER_OPTIONS,
-      pageOrientation: "portrait",
-    })
-    expect(onOptionsChange).toHaveBeenCalledWith({
-      ...DEFAULT_CONVERTER_OPTIONS,
-      fitMode: "cover",
-    })
-    expect(onOptionsChange).toHaveBeenCalledWith({
-      ...DEFAULT_CONVERTER_OPTIONS,
-      qualityPreset: "small",
-    })
-  })
+test("settings retain existing quality, portrait and cover controls", () => {
+  const change = vi.fn()
+  render(
+    <SettingsCard
+      canGenerate
+      disabled={false}
+      isGenerating={false}
+      messages={m}
+      onGenerate={vi.fn()}
+      onOptionsChange={change}
+      options={DEFAULT_CONVERTER_OPTIONS}
+    />
+  )
+  fireEvent.click(screen.getByText(m.portraitOrientation))
+  fireEvent.click(screen.getByText(m.coverFit))
+  fireEvent.click(screen.getByText(m.smallQuality))
+  expect(change.mock.calls.map(([o]) => o)).toEqual([
+    { ...DEFAULT_CONVERTER_OPTIONS, pageOrientation: "portrait" },
+    { ...DEFAULT_CONVERTER_OPTIONS, fitMode: "cover" },
+    { ...DEFAULT_CONVERTER_OPTIONS, qualityPreset: "small" },
+  ])
 })

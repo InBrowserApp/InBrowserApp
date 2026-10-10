@@ -1,4 +1,4 @@
 {
   "name": "Görselden PDF Dönüştürücü",
-  "description": "Görselleri tarayıcınızda yerel olarak tek bir PDF halinde birleştirin."
+  "description": "Yerel görselleri ve seçilen TIFF sayfalarını bir PDF içinde birleştirin. Dosyaları sunucuya yüklemeden HEIC, JPEG XL ve JPEG 2000 açın, sayfaları yeniden sıralayın, görselleri döndürün ve düzeni ayarlayın."
 }

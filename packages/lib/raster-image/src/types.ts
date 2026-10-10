@@ -32,17 +32,29 @@ export type Preview = {
   mime: "image/png" | "image/jpeg"
   width: number
   height: number
+  fullWidth: number
+  fullHeight: number
   delay: number
   depth: number
   profile: boolean
 }
+export type ImageTransform = {
+  rotation?: 0 | 90 | 180 | 270
+  maxDimension?: number
+}
 export type JpegOptions = { quality: number; background: string }
 export type OpenedImage = { info: ImageInfo; preview: Preview }
-export type Request = { id: number; jpeg?: JpegOptions } & (
+export type Request = {
+  id: number
+  jpeg?: JpegOptions
+  transform?: ImageTransform
+} & (
+  | { type: "inspect"; file: File }
   | { type: "open"; file: File }
   | { type: "render"; index: number }
 )
 export type Reply = { id: number } & (
+  | { type: "inspected"; info: ImageInfo }
   | { type: "opened"; result: OpenedImage }
   | { type: "rendered"; preview: Preview }
   | { type: "error"; failure: Failure }

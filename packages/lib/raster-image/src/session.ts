@@ -1,5 +1,13 @@
 import { failureOf } from "./core/failure"
-import type { JpegOptions, OpenedImage, Preview, Reply, Request } from "./types"
+import type {
+  JpegOptions,
+  ImageTransform,
+  ImageInfo,
+  OpenedImage,
+  Preview,
+  Reply,
+  Request,
+} from "./types"
 
 export function imageSession(file: File, signal: AbortSignal) {
   signal.throwIfAborted()
@@ -55,17 +63,27 @@ export function imageSession(file: File, signal: AbortSignal) {
     })
   }
   return {
+    inspect: async (): Promise<ImageInfo> => {
+      const reply = await request({ id: ++sequence, type: "inspect", file })
+      if (reply.type !== "inspected") throw new Error("invalid")
+      return reply.info
+    },
     open: async (jpeg?: JpegOptions): Promise<OpenedImage> => {
       const reply = await request({ id: ++sequence, type: "open", file, jpeg })
       if (reply.type !== "opened") throw new Error("invalid")
       return reply.result
     },
-    render: async (index: number, jpeg?: JpegOptions): Promise<Preview> => {
+    render: async (
+      index: number,
+      jpeg?: JpegOptions,
+      transform?: ImageTransform
+    ): Promise<Preview> => {
       const reply = await request({
         id: ++sequence,
         type: "render",
         index,
         jpeg,
+        transform,
       })
       if (reply.type !== "rendered") throw new Error("invalid")
       return reply.preview

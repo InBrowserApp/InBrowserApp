@@ -21,3 +21,7 @@ Unduh gambar, halaman, varian ikon, atau bingkai animasi hasil komposit yang sed
 ## Simpan JPG
 
 Pilih JPG sebagai format unduhan untuk melihat pratinjau hasil kompresi yang sebenarnya. Atur kualitas dari 1 hingga 100 dan pilih putih, hitam, atau warna kustom untuk mengisi area transparan. Kualitas yang lebih tinggi biasanya menghasilkan file yang lebih besar; bahkan kualitas 100 tetap menghilangkan sebagian data. Halaman atau bingkai yang dipilih beserta dimensi piksel penuhnya tetap dipertahankan saat pengaturan berubah. JPG menggunakan warna sRGB 8-bit dan mengurangi kedalaman bit tinggi serta HDR. Perbesaran dan latar belakang pratinjau tidak mengubah JPG yang disimpan. Hanya pengaturan latar belakang JPG yang mengisi piksel transparan.
+
+## Gabungkan gambar menjadi PDF
+
+Gunakan [Konverter Gambar ke PDF](../image-to-pdf-converter/) untuk menggabungkan gambar yang didukung atau halaman TIFF yang dipilih menjadi satu PDF. Pilih dan urutkan ulang halaman, putar halaman, lalu pilih ukuran halaman, margin, dan penyesuaian. File tetap di perangkat Anda; buka kembali file sumber di konverter. PDF menggunakan gambar diam dan tidak mempertahankan animasi atau menambahkan OCR.

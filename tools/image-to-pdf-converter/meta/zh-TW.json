@@ -1,4 +1,4 @@
 {
   "name": "圖片轉 PDF 轉換器",
-  "description": "在瀏覽器中本機將圖片合併成單一 PDF。"
+  "description": "將本機圖片與選取的 TIFF 頁面合併為 PDF。無須上傳檔案，即可開啟 HEIC、JPEG XL 和 JPEG 2000，重新排列頁面、旋轉圖片並調整版面配置。"
 }

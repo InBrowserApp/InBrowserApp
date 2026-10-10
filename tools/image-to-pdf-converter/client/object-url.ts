@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react"
 
 function useObjectUrl(blob: Blob | null) {
-  const [objectUrl, setObjectUrl] = useState<string | null>(null)
+  const [objectUrl, setObjectUrl] = useState<{
+    blob: Blob
+    url: string
+  } | null>(null)
 
   useEffect(() => {
     if (!blob) {
@@ -10,14 +13,14 @@ function useObjectUrl(blob: Blob | null) {
     }
 
     const nextObjectUrl = URL.createObjectURL(blob)
-    setObjectUrl(nextObjectUrl)
+    setObjectUrl({ blob, url: nextObjectUrl })
 
     return () => {
       URL.revokeObjectURL(nextObjectUrl)
     }
   }, [blob])
 
-  return objectUrl
+  return objectUrl?.blob === blob ? objectUrl.url : null
 }
 
 export { useObjectUrl }

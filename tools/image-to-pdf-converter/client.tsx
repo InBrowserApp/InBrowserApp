@@ -5,6 +5,7 @@ import {
   AlertDescription,
   AlertTitle,
 } from "@workspace/ui/components/ui/alert"
+import { Button } from "@workspace/ui/components/ui/button"
 import { TriangleAlert } from "@workspace/ui/icons"
 
 import { QueueCard } from "./client/queue-card"
@@ -51,10 +52,30 @@ function ImageToPdfClient({ messages }: ImageToPdfClientProps) {
 
   return (
     <div className="flex flex-col gap-6" data-tool={IMAGE_TO_PDF_TOOL_ID}>
+      {(state.isAddingImages || state.isGenerating) && (
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border p-3">
+          <p role="status" className="min-w-0 text-sm break-all">
+            {state.readingProgress?.total
+              ? messages.readingProgressLabel
+                  .replace("{name}", state.readingProgress.name)
+                  .replace(
+                    "{completed}",
+                    String(state.readingProgress.completed)
+                  )
+                  .replace("{total}", String(state.readingProgress.total))
+              : state.isAddingImages
+                ? messages.readingImagesLabel
+                : messages.generatingLabel}
+          </p>
+          <Button type="button" variant="outline" onClick={state.cancel}>
+            {messages.cancelLabel}
+          </Button>
+        </div>
+      )}
       <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1fr)_24rem]">
         <div className="flex min-w-0 flex-col gap-6">
           <UploadCard
-            disabled={state.isGenerating}
+            disabled={state.isGenerating || state.isAddingImages}
             inputId={inputId}
             isAddingImages={state.isAddingImages}
             messages={messages}
@@ -63,7 +84,7 @@ function ImageToPdfClient({ messages }: ImageToPdfClientProps) {
             }}
           />
           <QueueCard
-            disabled={state.isGenerating}
+            disabled={state.isGenerating || state.isAddingImages}
             items={state.items}
             messages={messages}
             onClear={state.clearItems}
@@ -71,6 +92,8 @@ function ImageToPdfClient({ messages }: ImageToPdfClientProps) {
             onMoveUp={state.moveItemUp}
             onRemove={state.removeItem}
             onRotate={state.rotateItem}
+            onToggle={state.toggleItem}
+            onSelectAll={state.selectAll}
           />
         </div>
 
@@ -94,6 +117,13 @@ function ImageToPdfClient({ messages }: ImageToPdfClientProps) {
           <AlertDescription>{state.error}</AlertDescription>
         </Alert>
       ) : null}
+
+      <a
+        className="text-sm text-muted-foreground underline underline-offset-4"
+        href="/image-viewer-licenses/"
+      >
+        {messages.decoderLicensesLabel}
+      </a>
 
       <ResultCard
         isGenerating={state.isGenerating}

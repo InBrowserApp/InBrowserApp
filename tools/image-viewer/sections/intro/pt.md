@@ -21,3 +21,7 @@ Baixe a imagem, página, variante de ícone ou quadro de animação com composi�
 ## Salve um JPG
 
 Escolha JPG como formato de download para visualizar o resultado realmente comprimido. Defina a qualidade de 1 a 100 e escolha branco, preto ou uma cor personalizada para preencher a transparência. Uma qualidade maior geralmente produz um arquivo maior; mesmo a qualidade 100 tem perdas. A página ou o quadro selecionado e suas dimensões completas em pixels são mantidos quando as configurações mudam. O JPG usa cores sRGB de 8 bits e reduz a alta profundidade de bits e o HDR. O zoom e os fundos da visualização não alteram o JPG salvo. Somente a configuração de fundo do JPG preenche os pixels transparentes.
+
+## Combine imagens em um PDF
+
+Use o [Conversor de imagens para PDF](../image-to-pdf-converter/) para combinar imagens compatíveis ou páginas TIFF selecionadas em um único PDF. Selecione e reordene páginas, gire-as e escolha tamanho da página, margens e ajuste. Os arquivos ficam no seu dispositivo; abra os arquivos de origem novamente no conversor. O PDF usa imagens estáticas e não preserva a animação nem adiciona OCR.

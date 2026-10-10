@@ -4077,6 +4077,9 @@ importers:
 
   tools/image-to-pdf-converter:
     dependencies:
+      '@workspace/raster-image':
+        specifier: workspace:*
+        version: link:../../packages/lib/raster-image
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk

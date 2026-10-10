@@ -1,4 +1,4 @@
 {
   "name": "Bild till PDF-konverterare",
-  "description": "Slå ihop bilder till en enda PDF lokalt i webbläsaren."
+  "description": "Slå ihop lokala bilder och valda TIFF-sidor till en PDF. Öppna HEIC, JPEG XL och JPEG 2000, ändra sidordningen, rotera bilder och justera layouten utan att ladda upp filer."
 }

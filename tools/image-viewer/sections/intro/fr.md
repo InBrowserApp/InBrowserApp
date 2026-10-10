@@ -21,3 +21,7 @@ Téléchargez l’image, la page, la variante d’icône ou l’image d’animat
 ## Enregistrer un JPG
 
 Choisissez JPG comme format de téléchargement pour prévisualiser le résultat réellement compressé. Réglez la qualité de 1 à 100 et choisissez du blanc, du noir ou une couleur personnalisée pour remplir les zones transparentes. Une qualité supérieure produit généralement un fichier plus volumineux ; même la qualité 100 reste avec perte. La page ou l’image d’animation sélectionnée et ses dimensions complètes en pixels sont conservées lorsque les réglages changent. Le JPG utilise des couleurs sRGB sur 8 bits et réduit les profondeurs de couleur élevées et le HDR. Le zoom et les arrière-plans de l’aperçu ne modifient pas le JPG enregistré. Seul le réglage d’arrière-plan JPG remplit les pixels transparents.
+
+## Combiner des images en un PDF
+
+Utilisez le [Convertisseur d'images en PDF](../image-to-pdf-converter/) pour combiner des images prises en charge ou des pages TIFF sélectionnées en un seul PDF. Sélectionnez et réordonnez les pages, faites-les pivoter et choisissez la taille de page, les marges et l’ajustement. Les fichiers restent sur votre appareil ; ouvrez à nouveau les fichiers sources dans le convertisseur. Le PDF utilise des images fixes. Il ne conserve pas l’animation et n’ajoute pas de reconnaissance optique de caractères (OCR).

@@ -21,3 +21,7 @@ Pobierz aktualnie wybrany obraz, stronę, wariant ikony lub złożoną klatkę a
 ## Zapisz JPG
 
 Wybierz JPG jako format pobierania, aby zobaczyć podgląd rzeczywistego wyniku kompresji. Ustaw jakość od 1 do 100 i wybierz biel, czerń lub własny kolor do wypełnienia przezroczystych obszarów. Wyższa jakość zwykle oznacza większy plik; nawet przy jakości 100 kompresja jest stratna. Wybrana strona lub klatka i jej pełne wymiary w pikselach są zachowywane podczas zmiany ustawień. JPG używa przestrzeni kolorów sRGB i 8 bitów na kanał oraz redukuje wysoką głębię bitową i HDR. Powiększenie i tło podglądu nie zmieniają zapisanego pliku JPG. Tylko ustawienie tła JPG wypełnia przezroczyste piksele.
+
+## Połącz obrazy w PDF
+
+Użyj narzędzia [Konwerter obrazów do PDF](../image-to-pdf-converter/), aby połączyć obsługiwane obrazy lub wybrane strony TIFF w jeden PDF. Wybieraj strony, zmieniaj ich kolejność, obracaj je i ustawiaj rozmiar strony, marginesy oraz dopasowanie. Pliki pozostają na Twoim urządzeniu; otwórz pliki źródłowe ponownie w konwerterze. PDF wykorzystuje nieruchome obrazy, nie zachowuje animacji ani nie dodaje OCR.
