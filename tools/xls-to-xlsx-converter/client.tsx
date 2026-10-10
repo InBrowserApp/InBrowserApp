@@ -15,9 +15,12 @@ import {
 import { Button } from "@workspace/ui/components/ui/button"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { Download, FileText } from "@workspace/ui/icons"
-import { outputName } from "./core/navigation"
+import {
+  cellPosition,
+  outputName,
+} from "@workspace/spreadsheet-conversion/navigation"
 import { useWorkbook } from "./use-workbook"
-import { Worksheet } from "./worksheet"
+import { Worksheet } from "@workspace/ui/components/tool/spreadsheet-preview"
 import type { Messages } from "./types"
 
 export default function Client({ messages: m }: { messages: Messages }) {
@@ -81,7 +84,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
               >
                 <a
                   href={url}
-                  download={outputName(file.name)}
+                  download={outputName(file.name, "xls")}
                   data-astro-prefetch="false"
                 >
                   <Download aria-hidden="true" />
@@ -96,6 +99,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
               </Alert>
             ) : null}
             <Worksheet
+              cellPosition={cellPosition}
               info={info}
               preview={preview}
               requestPreview={requestPreview}

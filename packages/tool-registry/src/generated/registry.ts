@@ -17345,6 +17345,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "numbers-to-xlsx-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["numbers", "xlsx", "apple", "excel", "spreadsheet", "converter"],
+    locales: {
+      ar: {
+        name: "محول Numbers إلى XLSX",
+        description:
+          "حوّل جداول بيانات Apple Numbers المحلية إلى Excel XLSX في متصفحك. افحص الجداول، واطّلع على مطابقة أوراق العمل، ونزّل بياناتك دون رفعها.",
+      },
+      de: {
+        name: "Numbers-zu-XLSX-Konverter",
+        description:
+          "Konvertieren Sie lokale Tabellen aus Apple Numbers im Browser in Excel XLSX. Prüfen Sie Tabellen, sehen Sie sich die Arbeitsblattzuordnung an und laden Sie Ihre Daten ohne Upload herunter.",
+      },
+      en: {
+        name: "Numbers to XLSX Converter",
+        description:
+          "Convert local Apple Numbers spreadsheets to Excel XLSX in your browser. Inspect tables, see worksheet mappings, and download your data without uploading it.",
+      },
+      es: {
+        name: "Conversor de Numbers a XLSX",
+        description:
+          "Convierte hojas de cálculo locales de Apple Numbers a Excel XLSX en tu navegador. Revisa tablas, consulta la correspondencia entre hojas de cálculo y descarga tus datos sin subirlos.",
+      },
+      fr: {
+        name: "Convertisseur Numbers en XLSX",
+        description:
+          "Convertissez des feuilles de calcul Apple Numbers locales en Excel XLSX dans votre navigateur. Examinez les tableaux, consultez leur correspondance avec les feuilles Excel et téléchargez vos données sans les envoyer à un serveur.",
+      },
+      he: {
+        name: "ממיר Numbers ל-XLSX",
+        description:
+          "המרת גיליונות אלקטרוניים מקומיים של Apple Numbers ל-Excel XLSX בדפדפן. אפשר לבדוק טבלאות, לעיין במיפוי גיליונות העבודה ולהוריד את הנתונים בלי להעלות אותם.",
+      },
+      hi: {
+        name: "Numbers से XLSX कन्वर्टर",
+        description:
+          "स्थानीय Apple Numbers स्प्रेडशीट को अपने ब्राउज़र में Excel XLSX में बदलें। तालिकाएँ जाँचें, वर्कशीट मैपिंग देखें और अपना डेटा अपलोड किए बिना डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Numbers ke XLSX",
+        description:
+          "Konversi lembar bentang Apple Numbers lokal ke Excel XLSX di browser Anda. Periksa tabel, lihat pemetaan lembar kerja, dan unduh data tanpa mengunggahnya.",
+      },
+      it: {
+        name: "Convertitore da Numbers a XLSX",
+        description:
+          "Converti fogli di calcolo Apple Numbers locali in Excel XLSX nel browser. Esamina le tabelle, consulta le corrispondenze dei fogli di lavoro e scarica i dati senza caricarli su server.",
+      },
+      ja: {
+        name: "NumbersからXLSXへの変換ツール",
+        description:
+          "ローカルのApple Numbersスプレッドシートを、ブラウザー内でExcelのXLSX形式に変換できます。テーブルやワークシートの対応関係を確認し、アップロードせずにデータをダウンロードできます。",
+      },
+      ko: {
+        name: "Numbers → XLSX 변환기",
+        description:
+          "기기에 있는 Apple Numbers 스프레드시트를 브라우저에서 Excel XLSX로 변환하세요. 표와 워크시트 대응 관계를 확인하고 업로드 없이 데이터를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Numbers ke XLSX",
+        description:
+          "Tukar hamparan Apple Numbers setempat kepada Excel XLSX dalam pelayar anda. Periksa jadual, lihat pemetaan lembaran kerja dan muat turun data anda tanpa memuat naiknya.",
+      },
+      nl: {
+        name: "Numbers-naar-XLSX-converter",
+        description:
+          "Converteer lokale Apple Numbers-spreadsheets naar Excel XLSX in je browser. Bekijk tabellen en werkbladtoewijzingen en download je gegevens zonder ze te uploaden.",
+      },
+      no: {
+        name: "Numbers til XLSX-konverterer",
+        description:
+          "Konverter lokale Apple Numbers-regneark til Excel XLSX i nettleseren. Se gjennom tabeller, se tilordningen av regneark og last ned dataene uten å laste dem opp.",
+      },
+      pl: {
+        name: "Konwerter Numbers na XLSX",
+        description:
+          "Konwertuj lokalne arkusze Apple Numbers na Excel XLSX w przeglądarce. Sprawdzaj tabele, przeglądaj mapowanie arkuszy i pobieraj dane bez przesyłania ich na serwer.",
+      },
+      pt: {
+        name: "Conversor de Numbers para XLSX",
+        description:
+          "Converta planilhas locais do Apple Numbers para Excel XLSX no navegador. Inspecione tabelas, veja o mapeamento das planilhas e baixe seus dados sem enviá-los.",
+      },
+      ru: {
+        name: "Конвертер Numbers в XLSX",
+        description:
+          "Преобразуйте локальные таблицы Apple Numbers в Excel XLSX в браузере. Изучайте таблицы и соответствие листов, скачивайте данные без загрузки на сервер.",
+      },
+      sv: {
+        name: "Numbers till XLSX-konverterare",
+        description:
+          "Konvertera lokala Apple Numbers-kalkylblad till Excel XLSX i webbläsaren. Granska tabeller, se hur kalkylbladen mappas och ladda ner dina data utan att ladda upp dem.",
+      },
+      th: {
+        name: "โปรแกรมแปลง Numbers เป็น XLSX",
+        description:
+          "แปลงสเปรดชีต Apple Numbers จากเครื่องเป็น Excel XLSX ในเบราว์เซอร์ ตรวจดูตาราง ดูการจับคู่เวิร์กชีต และดาวน์โหลดข้อมูลโดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "Numbers’tan XLSX’e Dönüştürücü",
+        description:
+          "Yerel Apple Numbers elektronik tablolarını tarayıcınızda Excel XLSX biçimine dönüştürün. Tabloları inceleyin, çalışma sayfası eşlemelerini görün ve verilerinizi sunucuya yüklemeden indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi Numbers sang XLSX",
+        description:
+          "Chuyển bảng tính Apple Numbers trên thiết bị sang Excel XLSX ngay trong trình duyệt. Kiểm tra các bảng, xem ánh xạ trang tính và tải dữ liệu xuống mà không cần tải lên.",
+      },
+      "zh-CN": {
+        name: "Numbers 转 XLSX 转换器",
+        description:
+          "在浏览器中将本地 Apple Numbers 电子表格转换为 Excel XLSX。查看表格和工作表对应关系，并下载数据，无需上传。",
+      },
+      "zh-TW": {
+        name: "Numbers 轉 XLSX 轉換器",
+        description:
+          "在瀏覽器中將本機 Apple Numbers 試算表轉換為 Excel XLSX。檢視表格、查看工作表對應關係並下載資料，無須上傳。",
+      },
+    },
+  },
+  {
     slug: "odt-viewer",
     category: "document",
     icon: "file-text",
@@ -48644,6 +48767,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "進制轉換器",
         description:
           "在二進制、八進制、十進制、十六進制、32/36/62/64 進制和自定義進制 (2-64) 之間轉換數字。",
+      },
+    },
+  },
+  "numbers-to-xlsx-converter": {
+    slug: "numbers-to-xlsx-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["numbers", "xlsx", "apple", "excel", "spreadsheet", "converter"],
+    locales: {
+      ar: {
+        name: "محول Numbers إلى XLSX",
+        description:
+          "حوّل جداول بيانات Apple Numbers المحلية إلى Excel XLSX في متصفحك. افحص الجداول، واطّلع على مطابقة أوراق العمل، ونزّل بياناتك دون رفعها.",
+      },
+      de: {
+        name: "Numbers-zu-XLSX-Konverter",
+        description:
+          "Konvertieren Sie lokale Tabellen aus Apple Numbers im Browser in Excel XLSX. Prüfen Sie Tabellen, sehen Sie sich die Arbeitsblattzuordnung an und laden Sie Ihre Daten ohne Upload herunter.",
+      },
+      en: {
+        name: "Numbers to XLSX Converter",
+        description:
+          "Convert local Apple Numbers spreadsheets to Excel XLSX in your browser. Inspect tables, see worksheet mappings, and download your data without uploading it.",
+      },
+      es: {
+        name: "Conversor de Numbers a XLSX",
+        description:
+          "Convierte hojas de cálculo locales de Apple Numbers a Excel XLSX en tu navegador. Revisa tablas, consulta la correspondencia entre hojas de cálculo y descarga tus datos sin subirlos.",
+      },
+      fr: {
+        name: "Convertisseur Numbers en XLSX",
+        description:
+          "Convertissez des feuilles de calcul Apple Numbers locales en Excel XLSX dans votre navigateur. Examinez les tableaux, consultez leur correspondance avec les feuilles Excel et téléchargez vos données sans les envoyer à un serveur.",
+      },
+      he: {
+        name: "ממיר Numbers ל-XLSX",
+        description:
+          "המרת גיליונות אלקטרוניים מקומיים של Apple Numbers ל-Excel XLSX בדפדפן. אפשר לבדוק טבלאות, לעיין במיפוי גיליונות העבודה ולהוריד את הנתונים בלי להעלות אותם.",
+      },
+      hi: {
+        name: "Numbers से XLSX कन्वर्टर",
+        description:
+          "स्थानीय Apple Numbers स्प्रेडशीट को अपने ब्राउज़र में Excel XLSX में बदलें। तालिकाएँ जाँचें, वर्कशीट मैपिंग देखें और अपना डेटा अपलोड किए बिना डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Numbers ke XLSX",
+        description:
+          "Konversi lembar bentang Apple Numbers lokal ke Excel XLSX di browser Anda. Periksa tabel, lihat pemetaan lembar kerja, dan unduh data tanpa mengunggahnya.",
+      },
+      it: {
+        name: "Convertitore da Numbers a XLSX",
+        description:
+          "Converti fogli di calcolo Apple Numbers locali in Excel XLSX nel browser. Esamina le tabelle, consulta le corrispondenze dei fogli di lavoro e scarica i dati senza caricarli su server.",
+      },
+      ja: {
+        name: "NumbersからXLSXへの変換ツール",
+        description:
+          "ローカルのApple Numbersスプレッドシートを、ブラウザー内でExcelのXLSX形式に変換できます。テーブルやワークシートの対応関係を確認し、アップロードせずにデータをダウンロードできます。",
+      },
+      ko: {
+        name: "Numbers → XLSX 변환기",
+        description:
+          "기기에 있는 Apple Numbers 스프레드시트를 브라우저에서 Excel XLSX로 변환하세요. 표와 워크시트 대응 관계를 확인하고 업로드 없이 데이터를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Numbers ke XLSX",
+        description:
+          "Tukar hamparan Apple Numbers setempat kepada Excel XLSX dalam pelayar anda. Periksa jadual, lihat pemetaan lembaran kerja dan muat turun data anda tanpa memuat naiknya.",
+      },
+      nl: {
+        name: "Numbers-naar-XLSX-converter",
+        description:
+          "Converteer lokale Apple Numbers-spreadsheets naar Excel XLSX in je browser. Bekijk tabellen en werkbladtoewijzingen en download je gegevens zonder ze te uploaden.",
+      },
+      no: {
+        name: "Numbers til XLSX-konverterer",
+        description:
+          "Konverter lokale Apple Numbers-regneark til Excel XLSX i nettleseren. Se gjennom tabeller, se tilordningen av regneark og last ned dataene uten å laste dem opp.",
+      },
+      pl: {
+        name: "Konwerter Numbers na XLSX",
+        description:
+          "Konwertuj lokalne arkusze Apple Numbers na Excel XLSX w przeglądarce. Sprawdzaj tabele, przeglądaj mapowanie arkuszy i pobieraj dane bez przesyłania ich na serwer.",
+      },
+      pt: {
+        name: "Conversor de Numbers para XLSX",
+        description:
+          "Converta planilhas locais do Apple Numbers para Excel XLSX no navegador. Inspecione tabelas, veja o mapeamento das planilhas e baixe seus dados sem enviá-los.",
+      },
+      ru: {
+        name: "Конвертер Numbers в XLSX",
+        description:
+          "Преобразуйте локальные таблицы Apple Numbers в Excel XLSX в браузере. Изучайте таблицы и соответствие листов, скачивайте данные без загрузки на сервер.",
+      },
+      sv: {
+        name: "Numbers till XLSX-konverterare",
+        description:
+          "Konvertera lokala Apple Numbers-kalkylblad till Excel XLSX i webbläsaren. Granska tabeller, se hur kalkylbladen mappas och ladda ner dina data utan att ladda upp dem.",
+      },
+      th: {
+        name: "โปรแกรมแปลง Numbers เป็น XLSX",
+        description:
+          "แปลงสเปรดชีต Apple Numbers จากเครื่องเป็น Excel XLSX ในเบราว์เซอร์ ตรวจดูตาราง ดูการจับคู่เวิร์กชีต และดาวน์โหลดข้อมูลโดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "Numbers’tan XLSX’e Dönüştürücü",
+        description:
+          "Yerel Apple Numbers elektronik tablolarını tarayıcınızda Excel XLSX biçimine dönüştürün. Tabloları inceleyin, çalışma sayfası eşlemelerini görün ve verilerinizi sunucuya yüklemeden indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi Numbers sang XLSX",
+        description:
+          "Chuyển bảng tính Apple Numbers trên thiết bị sang Excel XLSX ngay trong trình duyệt. Kiểm tra các bảng, xem ánh xạ trang tính và tải dữ liệu xuống mà không cần tải lên.",
+      },
+      "zh-CN": {
+        name: "Numbers 转 XLSX 转换器",
+        description:
+          "在浏览器中将本地 Apple Numbers 电子表格转换为 Excel XLSX。查看表格和工作表对应关系，并下载数据，无需上传。",
+      },
+      "zh-TW": {
+        name: "Numbers 轉 XLSX 轉換器",
+        description:
+          "在瀏覽器中將本機 Apple Numbers 試算表轉換為 Excel XLSX。檢視表格、查看工作表對應關係並下載資料，無須上傳。",
       },
     },
   },

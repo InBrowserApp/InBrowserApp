@@ -12698,6 +12698,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "numbers-to-xlsx-converter",
+    language: "ar",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "de",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "en",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "es",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "fr",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "he",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "hi",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "id",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "it",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "ja",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "ko",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "ms",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "nl",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "no",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "pl",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "pt",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "ru",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "sv",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "th",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "tr",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "vi",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "numbers-to-xlsx-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "odt-viewer",
     language: "ar",
   },

@@ -3,9 +3,15 @@ import { describe as suite, expect, test } from "vitest"
 import { CFB, utils, write } from "xlsx"
 import type { WorkBook } from "xlsx"
 import { strFromU8, unzipSync } from "fflate"
-import { assertXls, describe, failure, readXls, writeXlsx } from "./workbook"
-import { preview } from "./preview"
-import { cellPosition, outputName } from "./navigation"
+import { assertXls, readXls } from "./workbook"
+import {
+  describe,
+  failure,
+  writeXlsx,
+  preview,
+  cellPosition,
+  outputName,
+} from "@workspace/spreadsheet-conversion"
 
 const fixture = (name: string) =>
   new Uint8Array(
@@ -199,9 +205,9 @@ test("validates preview navigation and safe output names without changing Unicod
   expect(cellPosition("A1", { ...sheet, start: { r: 1, c: 1 } })).toBeNull()
   expect(cellPosition("B1", { ...sheet, start: { r: 1, c: 1 } })).toBeNull()
   expect(cellPosition("A2", { ...sheet, start: { r: 1, c: 1 } })).toBeNull()
-  expect(outputName("数据.v2.XLS")).toBe("数据.v2.xlsx")
-  expect(outputName("bad/:name.xls")).toBe("bad__name.xlsx")
-  expect(outputName(".xls")).toBe("workbook.xlsx")
+  expect(outputName("数据.v2.XLS", "xls")).toBe("数据.v2.xlsx")
+  expect(outputName("bad/:name.xls", "xls")).toBe("bad__name.xlsx")
+  expect(outputName(".xls", "xls")).toBe("workbook.xlsx")
 })
 
 function alteredLegacy(mode: "missing" | "macro" | "chart" | "vba") {

@@ -1,4 +1,4 @@
-import type { SheetInfo } from "../types"
+import type { SheetInfo } from "./types"
 
 export function cellPosition(value: string, sheet: SheetInfo) {
   const match = /^\$?([a-z]{1,3})\$?([1-9]\d{0,6})$/i.exec(value.trim())
@@ -18,10 +18,10 @@ export function cellPosition(value: string, sheet: SheetInfo) {
   return { row, column }
 }
 
-export function outputName(name: string) {
+export function outputName(name: string, extension: string) {
   return `${
     name
-      .replace(/\.xls$/i, "")
+      .replace(new RegExp(`\\.${extension}$`, "i"), "")
       .replace(/[\\/:*?"<>|]/g, "_")
       .trim() || "workbook"
   }.xlsx`

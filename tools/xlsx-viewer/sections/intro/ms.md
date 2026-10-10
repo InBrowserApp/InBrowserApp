@@ -15,3 +15,5 @@ Tiada had tetap bagi saiz fail atau bilangan lembaran. Had memori sebenar pelaya
 Eksport lembaran kerja menyertakan baris dan lajur tersembunyi serta menggunakan hasil formula yang disimpan. Hasil tersimpan yang tiada menjadi sel kosong, ralat hamparan kekal kelihatan dan sel bercantum tidak dikembangkan. JSON mengekalkan baris pertama sebagai data dan menggunakan tatasusunan baris dengan null untuk sel kosong. Markdown boleh menggunakan baris pertama sebagai pengepala. Teks berformat mengikut format nombor yang disokong; tarikh tersimpan kekal sebagai nombor siri Excel. Carta, imej, komen dan gaya tidak dieksport. Bagi format yang diimport, eksport mencerminkan data lembaran kerja yang tersedia dalam pemapar ini serta nota keserasiannya.
 
 Untuk buku kerja XLS lama, gunakan [Penukar XLS ke XLSX](../xls-to-xlsx-converter/) bagi memeriksa data yang diimport dan memuat turun salinan dalam format Excel moden. Penukaran mempunyai nota keserasiannya sendiri; buka fail itu semula dalam penukar.
+
+Untuk mengeksport jadual Numbers setempat sebagai lembaran kerja Excel, gunakan [Penukar Numbers ke XLSX](../numbers-to-xlsx-converter/).

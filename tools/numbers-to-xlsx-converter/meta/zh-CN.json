@@ -1,0 +1,4 @@
+{
+  "name": "Numbers 转 XLSX 转换器",
+  "description": "在浏览器中将本地 Apple Numbers 电子表格转换为 Excel XLSX。查看表格和工作表对应关系，并下载数据，无需上传。"
+}

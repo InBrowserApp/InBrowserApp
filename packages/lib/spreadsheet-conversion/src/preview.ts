@@ -1,6 +1,6 @@
 import { utils } from "xlsx"
 import type { WorkBook } from "xlsx"
-import type { Cell, Preview } from "../types"
+import type { Cell, Preview } from "./types"
 
 export function preview(
   book: WorkBook,

@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da Numbers a XLSX",
+  "description": "Converti fogli di calcolo Apple Numbers locali in Excel XLSX nel browser. Esamina le tabelle, consulta le corrispondenze dei fogli di lavoro e scarica i dati senza caricarli su server."
+}

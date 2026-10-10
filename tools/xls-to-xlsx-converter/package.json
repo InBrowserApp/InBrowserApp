@@ -10,7 +10,8 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "xlsx": "catalog:"
+    "xlsx": "catalog:",
+    "@workspace/spreadsheet-conversion": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",
