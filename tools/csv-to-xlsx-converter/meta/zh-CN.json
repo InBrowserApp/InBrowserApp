@@ -1,0 +1,4 @@
+{
+  "name": "CSV / TSV 转 XLSX 转换器",
+  "description": "将本地 CSV 和 TSV 文件转换为 Excel。可选择分隔符、编码和首行处理方式，将标识符及所有字段保留为文本。"
+}

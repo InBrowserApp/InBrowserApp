@@ -1,0 +1,4 @@
+{
+  "name": "CSV / TSV til XLSX-konverterer",
+  "description": "Konverter lokale CSV- og TSV-filer til Excel. Velg skilletegn, koding og behandling av overskriftsraden, og bevar identifikatorer og alle felt som tekst."
+}

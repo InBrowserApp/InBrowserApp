@@ -1,0 +1,4 @@
+{
+  "name": "CSV/TSV-zu-XLSX-Konverter",
+  "description": "Konvertieren Sie lokale CSV- und TSV-Dateien in Excel. Wählen Sie Trennzeichen, Kodierung und Kopfzeilenbehandlung, während Kennungen und alle Felder als Text erhalten bleiben."
+}

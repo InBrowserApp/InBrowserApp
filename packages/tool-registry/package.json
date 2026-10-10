@@ -62,6 +62,7 @@
     "@tool/css-box-shadow-generator": "workspace:*",
     "@tool/css-gradient-generator": "workspace:*",
     "@tool/csv-to-json-converter": "workspace:*",
+    "@tool/csv-to-xlsx-converter": "workspace:*",
     "@tool/cuid2-generator": "workspace:*",
     "@tool/curl-converter": "workspace:*",
     "@tool/current-network-time": "workspace:*",

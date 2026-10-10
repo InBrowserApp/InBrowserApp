@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da CSV / TSV a XLSX",
+  "description": "Converti file CSV e TSV locali in Excel. Scegli delimitatore, codifica e gestione delle intestazioni, mantenendo gli identificatori e tutti i campi come testo."
+}

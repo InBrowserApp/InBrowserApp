@@ -5062,6 +5062,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "csv-to-xlsx-converter",
+    language: "ar",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "de",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "en",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "es",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "fr",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "he",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "hi",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "id",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "it",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "ja",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "ko",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "ms",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "nl",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "no",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "pl",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "pt",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "ru",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "sv",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "th",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "tr",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "vi",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "csv-to-xlsx-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "cuid2-generator",
     language: "ar",
   },

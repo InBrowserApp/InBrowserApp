@@ -1,0 +1,28 @@
+{
+  "name": "@tool/csv-to-xlsx-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "xlsx": "catalog:",
+    "@workspace/spreadsheet-conversion": "workspace:*",
+    "papaparse": "catalog:"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:",
+    "@types/papaparse": "catalog:",
+    "fflate": "catalog:"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "name": "CSV/TSV-naar-XLSX-converter",
+  "description": "Converteer lokale CSV- en TSV-bestanden naar Excel. Kies het scheidingsteken, de codering en de verwerking van de koprij, waarbij identificatiecodes en alle velden als tekst behouden blijven."
+}

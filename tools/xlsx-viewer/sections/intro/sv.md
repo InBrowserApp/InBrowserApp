@@ -21,3 +21,5 @@ Använd [Numbers till XLSX-konverterare](../numbers-to-xlsx-converter/) för att
 Använd [ODS till XLSX-konverterare](../ods-to-xlsx-converter/) för att exportera data från OpenDocument-kalkylblad som en Excel-arbetsbok.
 
 Använd [XLSX till ODS-konverterare](../xlsx-to-ods-converter/) för att exportera data från Excel-arbetsböcker som OpenDocument-kalkylblad.
+
+Använd [CSV / TSV till XLSX-konverterare](../csv-to-xlsx-converter/) för att omvandla avgränsad text till en Excel-arbetsbok.

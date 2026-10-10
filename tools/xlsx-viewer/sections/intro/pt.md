@@ -21,3 +21,5 @@ Para exportar tabelas locais do Numbers como planilhas do Excel, use o [Converso
 Para exportar dados de planilhas OpenDocument como uma pasta de trabalho do Excel, use o [Conversor de ODS para XLSX](../ods-to-xlsx-converter/).
 
 Para exportar dados de arquivos Excel XLSX como uma planilha OpenDocument, use o [Conversor de XLSX para ODS](../xlsx-to-ods-converter/).
+
+Para transformar texto delimitado em uma pasta de trabalho do Excel, use o [Conversor de CSV / TSV para XLSX](../csv-to-xlsx-converter/).

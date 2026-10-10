@@ -21,3 +21,5 @@ Verwenden Sie den [Numbers-zu-XLSX-Konverter](../numbers-to-xlsx-converter/), um
 Verwenden Sie den [ODS-zu-XLSX-Konverter](../ods-to-xlsx-converter/), um OpenDocument-Tabellendaten als Excel-Arbeitsmappe zu exportieren.
 
 Verwenden Sie den [XLSX-zu-ODS-Konverter](../xlsx-to-ods-converter/), um Excel-XLSX-Daten als OpenDocument-Tabelle zu exportieren.
+
+Verwenden Sie den [CSV/TSV-zu-XLSX-Konverter](../csv-to-xlsx-converter/), um Text mit Trennzeichen in eine Excel-Arbeitsmappe umzuwandeln.

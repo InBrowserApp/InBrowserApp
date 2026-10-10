@@ -1,0 +1,4 @@
+{
+  "name": "CSV / TSV 轉 XLSX 轉換器",
+  "description": "將本機 CSV 與 TSV 檔案轉換為 Excel。選擇分隔符號、編碼與標題列處理方式，並將識別碼及所有欄位保留為文字。"
+}

@@ -21,3 +21,5 @@ Yerel Numbers tablolarını Excel çalışma sayfaları olarak dışa aktarmak i
 OpenDocument elektronik tablo verilerini Excel çalışma kitabı olarak dışa aktarmak için [ODS’den XLSX’e Dönüştürücü](../ods-to-xlsx-converter/) aracını kullanın.
 
 Excel XLSX verilerini OpenDocument elektronik tablosu olarak dışa aktarmak için [XLSX’ten ODS’ye Dönüştürücü](../xlsx-to-ods-converter/) aracını kullanın.
+
+Ayırıcılarla ayrılmış metni bir Excel çalışma kitabına dönüştürmek için [CSV / TSV’den XLSX’e Dönüştürücü](../csv-to-xlsx-converter/) aracını kullanın.

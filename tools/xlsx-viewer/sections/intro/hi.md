@@ -21,3 +21,5 @@ Numbers तालिकाएँ अलग-अलग वर्कशीट ट�
 OpenDocument स्प्रेडशीट डेटा को Excel वर्कबुक के रूप में निर्यात करने के लिए [ODS से XLSX कन्वर्टर](../ods-to-xlsx-converter/) का उपयोग करें।
 
 Excel XLSX डेटा को OpenDocument स्प्रेडशीट के रूप में निर्यात करने के लिए [XLSX से ODS कन्वर्टर](../xlsx-to-ods-converter/) का उपयोग करें।
+
+विभाजक वाले टेक्स्ट को Excel वर्कबुक में बदलने के लिए [CSV / TSV से XLSX कन्वर्टर](../csv-to-xlsx-converter/) का उपयोग करें।

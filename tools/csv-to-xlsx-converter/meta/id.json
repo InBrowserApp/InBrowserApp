@@ -1,0 +1,4 @@
+{
+  "name": "Konverter CSV / TSV ke XLSX",
+  "description": "Konversi file CSV dan TSV lokal ke Excel. Pilih pemisah, pengodean, dan penanganan header sambil mempertahankan pengenal dan semua bidang sebagai teks."
+}

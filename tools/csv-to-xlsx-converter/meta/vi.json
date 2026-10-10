@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi CSV / TSV sang XLSX",
+  "description": "Chuyển đổi tệp CSV và TSV trên thiết bị sang Excel. Chọn dấu phân cách, mã hóa và cách xử lý hàng tiêu đề, đồng thời giữ mã định danh và mọi trường ở dạng văn bản."
+}
