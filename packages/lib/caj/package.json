@@ -1,0 +1,16 @@
+{
+  "name": "@workspace/caj",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/convert.ts",
+    "./failure": "./src/failure.ts"
+  },
+  "dependencies": {
+    "caj2pdf-rust": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

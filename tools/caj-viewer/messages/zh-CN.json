@@ -53,5 +53,6 @@
   "textHint": "仅当文档包含文字时，才能搜索和选择文字。扫描页面以图片显示，不进行 OCR 识别。",
   "substituted": "部分字符使用替代字形，外观可能与原文不同。",
   "outlineWarning": "部分目录条目无法显示或已调整。仍可阅读文档页面。",
-  "format": "检测到的格式：{format}"
+  "format": "检测到的格式：{format}",
+  "download": "下载 PDF"
 }

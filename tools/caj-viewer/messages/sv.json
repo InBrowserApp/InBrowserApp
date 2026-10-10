@@ -53,5 +53,6 @@
   "textHint": "Sökning och markering fungerar bara där dokumentet innehåller text. Skannade sidor visas som bilder; ingen OCR utförs.",
   "substituted": "Vissa tecken visas med ersättningsglyfer. De kan se annorlunda ut än i originalet.",
   "outlineWarning": "Vissa poster i innehållsförteckningen kunde inte visas eller har justerats. Sidorna går fortfarande att läsa.",
-  "format": "Identifierat format: {format}"
+  "format": "Identifierat format: {format}",
+  "download": "Ladda ner PDF"
 }

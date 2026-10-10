@@ -53,5 +53,6 @@
   "textHint": "Pencarian dan pemilihan hanya berfungsi jika dokumen berisi teks. Halaman pindaian ditampilkan sebagai gambar; OCR tidak dilakukan.",
   "substituted": "Beberapa karakter menggunakan glif pengganti. Tampilannya mungkin berbeda dari aslinya.",
   "outlineWarning": "Beberapa entri daftar isi tidak dapat ditampilkan atau telah disesuaikan. Halaman tetap dapat dibaca.",
-  "format": "Format terdeteksi: {format}"
+  "format": "Format terdeteksi: {format}",
+  "download": "Unduh PDF"
 }

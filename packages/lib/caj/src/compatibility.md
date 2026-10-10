@@ -1,9 +1,11 @@
 # CAJ family compatibility
 
-The viewer detects internal bytes using `caj2pdf-rust` 0.6.1 with the
+The converter and viewer detect internal bytes using `caj2pdf-rust` 0.6.1 with the
 [documented JPEG placement correction](vendor/README.md) and renders the
 prepared pages with the same local PDF.js reader as the PDF viewer. The
-intermediate PDF remains in memory and is not offered for download.
+prepared PDF remains in memory until closed and can be downloaded from either
+tool after the preview opens successfully. Downloaded output retains the
+conversion's page content; view-only zoom and rotation do not modify it.
 
 ## Supported behavior and boundaries
 

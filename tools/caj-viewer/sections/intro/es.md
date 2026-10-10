@@ -16,4 +16,4 @@ Las páginas de texto nativo HN-B y C8 que requieren fuentes externas no se pued
 
 ## Privacidad y documentos grandes
 
-El contenido del documento se procesa de forma local. No se usan cuentas ni recursos remotos del documento, y no hay edición, descarga de PDF ni OCR. No hay un límite fijo de tamaño de archivo ni de número de páginas. Los archivos muy exigentes pueden superar los límites de memoria o de representación gráfica del navegador; al cerrar el documento se liberan los recursos usados para leerlo.
+El contenido del documento se procesa de forma local. Descargar PDF guarda el documento preparado con el texto y los marcadores disponibles. El zoom y la rotación de la vista previa no modifican el PDF descargado. No se usan cuentas ni recursos remotos del documento, y no hay edición ni OCR. No hay un límite fijo de tamaño de archivo ni de número de páginas. Los archivos muy exigentes pueden superar los límites de memoria o de representación gráfica del navegador; al cerrar el documento se liberan los recursos usados para leerlo.

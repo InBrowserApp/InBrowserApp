@@ -16,4 +16,4 @@ Natywne strony tekstowe HN-B i C8 wymagające osobnych czcionek nie mogą być t
 
 ## Prywatność i duże dokumenty
 
-Treść dokumentu jest przetwarzana lokalnie. Narzędzie nie wymaga konta, nie pobiera zdalnych zasobów dokumentu i nie oferuje edycji, pobierania pliku PDF ani OCR. Nie ma stałego limitu rozmiaru pliku ani liczby stron. Bardzo wymagające pliki mogą jednak przekroczyć dostępną pamięć przeglądarki lub jej możliwości rysowania; zamknięcie dokumentu zwalnia zasoby używane do czytania.
+Treść dokumentu jest przetwarzana lokalnie. Opcja Pobierz PDF zapisuje przygotowany dokument z dostępnym tekstem i zakładkami. Powiększenie i obrót służą wyłącznie do podglądu i nie zmieniają pobranego pliku PDF. Narzędzie nie wymaga konta, nie pobiera zdalnych zasobów dokumentu i nie oferuje edycji ani OCR. Nie ma stałego limitu rozmiaru pliku ani liczby stron. Bardzo wymagające pliki mogą jednak przekroczyć dostępną pamięć przeglądarki lub jej możliwości rysowania; zamknięcie dokumentu zwalnia zasoby używane do czytania.

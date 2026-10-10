@@ -16,4 +16,4 @@ Oorspronkelijke HN-B- en C8-tekstpagina’s die aparte lettertypen nodig hebben,
 
 ## Privacy en grote documenten
 
-De documentinhoud wordt lokaal verwerkt. Er is geen account nodig en er worden geen externe documentbronnen, bewerkingen, PDF-downloads of OCR gebruikt. Er is geen vaste limiet voor de bestandsgrootte of het aantal pagina’s. Zeer zware bestanden kunnen nog steeds het browsergeheugen of de tekenlimieten overschrijden. Als je het document sluit, worden de bronnen voor het lezen vrijgegeven.
+De documentinhoud wordt lokaal verwerkt. Met PDF downloaden sla je het voorbereide document op met de beschikbare tekst en bladwijzers. Zoomen en draaien gelden alleen voor de weergave en veranderen de gedownloade PDF niet. Er is geen account nodig en er worden geen externe documentbronnen, bewerkingen of OCR gebruikt. Er is geen vaste limiet voor de bestandsgrootte of het aantal pagina’s. Zeer zware bestanden kunnen nog steeds het browsergeheugen of de tekenlimieten overschrijden. Als je het document sluit, worden de bronnen voor het lezen vrijgegeven.

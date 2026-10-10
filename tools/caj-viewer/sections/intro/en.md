@@ -16,4 +16,4 @@ Native HN-B and C8 text pages that require separate fonts cannot be displayed he
 
 ## Privacy and large documents
 
-Document contents are processed locally. No account, remote document resources, editing, PDF download, or OCR is involved. There is no fixed file-size or page-count quota. Very demanding files can still exceed browser memory or drawing limits; closing the document releases its reading resources.
+Document contents are processed locally. Download PDF saves the prepared document with available text and bookmarks. View-only zoom and rotation do not change the downloaded PDF. No account, remote document resources, editing, or OCR is involved. There is no fixed file-size or page-count quota. Very demanding files can still exceed browser memory or drawing limits; closing the document releases its reading resources.

@@ -53,5 +53,6 @@
   "textHint": "La búsqueda y la selección solo funcionan si el documento contiene texto. Las páginas escaneadas se muestran como imágenes; no se realiza OCR.",
   "substituted": "Algunos caracteres usan glifos de sustitución. Su aspecto puede diferir del original.",
   "outlineWarning": "Algunas entradas del índice no se pudieron mostrar o se ajustaron. Puedes seguir leyendo las páginas.",
-  "format": "Formato detectado: {format}"
+  "format": "Formato detectado: {format}",
+  "download": "Descargar PDF"
 }

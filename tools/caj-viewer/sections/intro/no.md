@@ -16,4 +16,4 @@ Tekstsider i HN-B- og C8-format som krever separate skrifttyper, kan ikke vises 
 
 ## Personvern og store dokumenter
 
-Dokumentinnholdet behandles lokalt. Ingen konto, eksterne dokumentressurser, redigering, PDF-nedlasting eller OCR er involvert. Det finnes ingen fast grense for filstørrelse eller antall sider. Svært krevende filer kan likevel overskride nettleserens minne- eller tegnegrenser; når dokumentet lukkes, frigjøres ressursene som brukes til lesing.
+Dokumentinnholdet behandles lokalt. Last ned PDF lagrer det klargjorte dokumentet med tilgjengelig tekst og bokmerker. Zoom og rotasjon gjelder bare visningen og endrer ikke den nedlastede PDF-filen. Ingen konto, eksterne dokumentressurser, redigering eller OCR er involvert. Det finnes ingen fast grense for filstørrelse eller antall sider. Svært krevende filer kan likevel overskride nettleserens minne- eller tegnegrenser; når dokumentet lukkes, frigjøres ressursene som brukes til lesing.

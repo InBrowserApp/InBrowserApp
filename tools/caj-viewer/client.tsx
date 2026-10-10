@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react"
+import { DocumentDownload } from "@workspace/ui/components/tool/document-download"
 import { DocumentWorkspace } from "@workspace/ui/components/tool/document-workspace"
 import { DocumentToolbar } from "@workspace/ui/components/tool/document-toolbar"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
@@ -30,7 +31,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
   const overviewButton = useRef<HTMLButtonElement>(null)
   const focusPage = useRef(false)
   const id = useId()
-  const { reader, state, report, status, error } = useDocument(
+  const { reader, state, report, status, error, pdf } = useDocument(
     file,
     container,
     m
@@ -97,6 +98,15 @@ export default function Client({ messages: m }: { messages: Messages }) {
           }
         }}
       >
+        {pdf && file ? (
+          <div className="flex shrink-0 justify-end border-b p-2">
+            <DocumentDownload
+              file={pdf}
+              filename={file.name.replace(/\.[^.]+$/, ".pdf")}
+              label={m.download}
+            />
+          </div>
+        ) : null}
         {reader && state.total ? (
           <DocumentToolbar
             messages={m}

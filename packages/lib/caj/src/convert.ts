@@ -5,6 +5,8 @@ import {
   MAX_U64,
 } from "caj2pdf-rust/browser"
 import type { ConversionReport } from "caj2pdf-rust/browser"
+export type { ConversionReport } from "caj2pdf-rust/browser"
+
 const wasmUrl = new URL("./vendor/caj2pdf_wasm.wasm", import.meta.url)
 
 // These are the engine's integer/ABI bounds, not document quotas. The WASM

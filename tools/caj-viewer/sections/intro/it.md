@@ -16,4 +16,4 @@ Le pagine testuali native HN-B e C8 che richiedono caratteri separati non posson
 
 ## Privacy e documenti di grandi dimensioni
 
-I contenuti dei documenti vengono elaborati in locale. Non sono previsti account, risorse documentali remote, modifica, download in PDF o OCR. Non ci sono limiti fissi alla dimensione del file o al numero di pagine. I file molto impegnativi possono comunque superare la memoria del browser o i limiti di rendering; la chiusura del documento libera le risorse usate per la lettura.
+I contenuti dei documenti vengono elaborati in locale. Scarica PDF salva il documento preparato con il testo e i segnalibri disponibili. Lo zoom e la rotazione applicati alla visualizzazione non modificano il PDF scaricato. Non sono previsti account, risorse documentali remote, modifica o OCR. Non ci sono limiti fissi alla dimensione del file o al numero di pagine. I file molto impegnativi possono comunque superare la memoria del browser o i limiti di rendering; la chiusura del documento libera le risorse usate per la lettura.

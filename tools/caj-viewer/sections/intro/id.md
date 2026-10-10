@@ -16,4 +16,4 @@ Halaman teks asli HN-B dan C8 yang membutuhkan font terpisah tidak dapat ditampi
 
 ## Privasi dan dokumen besar
 
-Isi dokumen diproses secara lokal. Tidak diperlukan akun, dan tidak melibatkan sumber daya dokumen jarak jauh, penyuntingan, unduhan PDF, atau OCR. Tidak ada batas tetap untuk ukuran file atau jumlah halaman. File yang sangat berat tetap dapat melampaui batas memori atau penggambaran browser; menutup dokumen akan melepaskan sumber daya baca yang digunakannya.
+Isi dokumen diproses secara lokal. Unduh PDF menyimpan dokumen yang telah disiapkan beserta teks dan penanda yang tersedia. Zoom dan rotasi yang hanya berlaku pada tampilan tidak mengubah PDF yang diunduh. Tidak diperlukan akun, dan tidak melibatkan sumber daya dokumen jarak jauh, penyuntingan, atau OCR. Tidak ada batas tetap untuk ukuran file atau jumlah halaman. File yang sangat berat tetap dapat melampaui batas memori atau penggambaran browser; menutup dokumen akan melepaskan sumber daya baca yang digunakannya.

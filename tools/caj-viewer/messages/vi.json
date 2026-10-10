@@ -53,5 +53,6 @@
   "textHint": "Chỉ có thể tìm kiếm và chọn văn bản ở nơi tài liệu có văn bản. Các trang quét được hiển thị dưới dạng hình ảnh; không thực hiện OCR.",
   "substituted": "Một số ký tự dùng hình dạng thay thế. Hình thức có thể khác bản gốc.",
   "outlineWarning": "Một số mục trong mục lục không thể hiển thị hoặc đã được điều chỉnh. Bạn vẫn có thể đọc các trang.",
-  "format": "Định dạng phát hiện được: {format}"
+  "format": "Định dạng phát hiện được: {format}",
+  "download": "Tải xuống PDF"
 }

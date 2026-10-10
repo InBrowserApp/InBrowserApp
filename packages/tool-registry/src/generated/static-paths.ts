@@ -2762,6 +2762,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "caj-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "caj-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "caj-viewer",
     language: "ar",
   },
