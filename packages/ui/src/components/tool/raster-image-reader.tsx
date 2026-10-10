@@ -59,8 +59,11 @@ export function RasterImageReader({
   return (
     <>
       {image.info.count > 1 ? (
-        <div className="flex shrink-0 flex-wrap items-center gap-1 border-b px-2 py-1">
-          <span className="ms-1 text-sm text-muted-foreground">
+        <div className="flex shrink-0 items-center gap-1 border-b px-2 py-1">
+          <span
+            title={m[image.info.kind]}
+            className="ms-1 min-w-0 truncate text-sm text-muted-foreground"
+          >
             {m[image.info.kind]}
           </span>
           <DocumentIconButton
@@ -72,14 +75,14 @@ export function RasterImageReader({
           </DocumentIconButton>
           <DocumentNumberInput
             aria-label={m[image.info.kind]}
-            className="w-20"
+            className="w-16 shrink-0 sm:w-20"
             min={1}
             max={image.info.count}
             value={index + 1}
             disabled={loading}
             onCommit={(value) => void select(value - 1)}
           />
-          <span className="text-sm text-muted-foreground tabular-nums">
+          <span className="shrink-0 text-sm text-muted-foreground tabular-nums">
             {m.count.replace("{total}", String(image.info.count))}
           </span>
           <DocumentIconButton
