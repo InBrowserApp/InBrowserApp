@@ -428,9 +428,6 @@ patchedDependencies:
   '@file-viewer/doc@3.1.2':
     hash: e9ec60eab3809b5dada43262fa15902aa67911a6e37b47134db0989557687500
     path: patches/@file-viewer__doc@3.1.2.patch
-  '@silurus/ooxml@0.88.0':
-    hash: ddab22af8232f5050b2769f6025ce14a3d24a3ba764db5015024ffd17f661c49
-    path: patches/@silurus__ooxml@0.88.0.patch
   caj2pdf-rust@0.6.1:
     hash: 284d32b89a54b2c4cf716b538dda63c896c90a673dadb6a8bf1d35d6228f500d
     path: patches/caj2pdf-rust@0.6.1.patch
@@ -595,7 +592,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.88.0(patch_hash=ddab22af8232f5050b2769f6025ce14a3d24a3ba764db5015024ffd17f661c49)
+        version: 0.88.0
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -3334,7 +3331,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.88.0(patch_hash=ddab22af8232f5050b2769f6025ce14a3d24a3ba764db5015024ffd17f661c49)
+        version: 0.88.0
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -3377,7 +3374,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.88.0(patch_hash=ddab22af8232f5050b2769f6025ce14a3d24a3ba764db5015024ffd17f661c49)
+        version: 0.88.0
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -6158,7 +6155,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.88.0(patch_hash=ddab22af8232f5050b2769f6025ce14a3d24a3ba764db5015024ffd17f661c49)
+        version: 0.88.0
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -8459,7 +8456,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.88.0(patch_hash=ddab22af8232f5050b2769f6025ce14a3d24a3ba764db5015024ffd17f661c49)
+        version: 0.88.0
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -18890,7 +18887,7 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.0.2': {}
 
-  '@silurus/ooxml@0.88.0(patch_hash=ddab22af8232f5050b2769f6025ce14a3d24a3ba764db5015024ffd17f661c49)': {}
+  '@silurus/ooxml@0.88.0': {}
 
   '@simple-libs/child-process-utils@1.0.2':
     dependencies:
