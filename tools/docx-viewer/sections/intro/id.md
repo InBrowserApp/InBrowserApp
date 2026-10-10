@@ -11,3 +11,5 @@ Dokumen dan templat dengan makro dapat dilihat, tetapi makronya tidak pernah dij
 Ukuran hasil ekstraksi arsip dan halaman yang dirender dibatasi untuk membatasi penggunaan memori browser. Dokumen terenkripsi dan file .doc lama tidak didukung. Penampil ini tidak mengedit atau mencetak dokumen maupun memuat sumber daya dokumen eksternal.
 
 Ekspor Markdown mempertahankan teks dan struktur dasar, dengan header, footer, catatan, dan komentar di bagian terpisah. Tata letak halaman dan font tidak dipertahankan. Gambar, bagan, persamaan, dan bentuk yang tidak didukung diganti dengan penanda bahwa konten tidak disertakan; tabel kompleks dan perubahan terlacak disederhanakan. Bandingkan konten penting dengan dokumen asli.
+
+Untuk mengunduh dokumen yang didukung sebagai PDF berbasis gambar, gunakan [Konverter DOCX ke PDF](../docx-to-pdf-converter/) dan periksa tampilan hasilnya sebelum mengunduh.

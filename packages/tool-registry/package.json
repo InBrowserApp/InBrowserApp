@@ -72,6 +72,7 @@
     "@tool/doc-viewer": "workspace:*",
     "@tool/docker-run-to-compose-converter": "workspace:*",
     "@tool/docx-to-markdown-converter": "workspace:*",
+    "@tool/docx-to-pdf-converter": "workspace:*",
     "@tool/docx-viewer": "workspace:*",
     "@tool/duration-calculator": "workspace:*",
     "@tool/email-validator": "workspace:*",

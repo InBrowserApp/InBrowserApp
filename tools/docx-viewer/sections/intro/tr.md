@@ -11,3 +11,5 @@ Makro içeren belgeler ve şablonlar görüntülenebilir, ancak makroları hiçb
 Tarayıcının bellek kullanımını sınırlamak için arşivlerin açılmış boyutu ve görüntülenen sayfaların boyutları sınırlandırılır. Şifrelenmiş belgeler ve eski .doc dosyaları desteklenmez. Bu görüntüleyici belgeleri düzenlemez veya yazdırmaz; harici belge kaynaklarını yüklemez.
 
 Markdown olarak dışa aktarma, metni ve temel yapıyı korur; üst bilgiler, alt bilgiler, notlar ve yorumlar ayrı bölümlerde yer alır. Sayfa düzeni ve yazı tipleri korunmaz. Resimler, grafikler, denklemler ve desteklenmeyen şekiller yerine içeriğin atlandığını belirten işaretler kullanılır; karmaşık tablolar ve izlenen değişiklikler basitleştirilir. Önemli içerikleri asıl belgeyle karşılaştırın.
+
+Desteklenen bir belgeyi görsel tabanlı PDF olarak indirmek için [DOCX’ten PDF’ye Dönüştürücü](../docx-to-pdf-converter/) aracını kullanın ve indirmeden önce çıktının görünümünü kontrol edin.

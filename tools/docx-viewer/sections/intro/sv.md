@@ -11,3 +11,5 @@ Dokument och mallar med makron kan visas, men deras makron körs aldrig. Innehå
 Arkivens uppackade storlek och renderade sidors storlek begränsas för att hålla webbläsarens minnesanvändning under kontroll. Krypterade dokument och äldre .doc-filer stöds inte. Visaren redigerar eller skriver inte ut dokument och läser inte in externa dokumentresurser.
 
 Markdown-export bevarar text och grundläggande struktur, med sidhuvuden, sidfötter, noter och kommentarer i separata avsnitt. Sidlayout och teckensnitt bevaras inte. Bilder, diagram, ekvationer och figurer som inte stöds ersätts med markörer för utelämnat innehåll; komplexa tabeller och spårade ändringar förenklas. Kontrollera viktigt innehåll mot originalet.
+
+Använd [Konverterare från DOCX till PDF](../docx-to-pdf-converter/) för att ladda ner ett dokument som stöds som en bildbaserad PDF, och kontrollera resultatets utseende innan du laddar ner.
