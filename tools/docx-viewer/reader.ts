@@ -121,6 +121,20 @@ export async function openReader({
         run(fit ? viewer!.fitWidth() : viewer!.setScale(Number(value) / 100))
       },
       find: (value, previous = false) => run(find(value, previous)),
+      exportMarkdown: async (labels, exportSignal) => {
+        if (disposed) throw new Error("invalid")
+        exportSignal.throwIfAborted()
+        signal.throwIfAborted()
+        const { exportDocument } = await import("@workspace/docx-markdown")
+        exportSignal.throwIfAborted()
+        signal.throwIfAborted()
+        if (disposed) throw new Error("invalid")
+        return exportDocument(
+          { model: document!.document },
+          labels,
+          exportSignal
+        )
+      },
       dispose,
     }
   } catch (error) {

@@ -27,5 +27,25 @@
   "zoomIn": "Zoom inn",
   "zoomOut": "Zoom ut",
   "closeSearch": "Lukk søk",
-  "releaseFile": "Slipp for å åpne dokumentet"
+  "releaseFile": "Slipp for å åpne dokumentet",
+  "markdown": {
+    "export": "Eksporter Markdown",
+    "converting": "Eksporterer Markdown…",
+    "download": "Last ned Markdown",
+    "error": "Markdown kunne ikke eksporteres. Prøv DOCX til Markdown-konvertereren eller et mindre komplekst dokument.",
+    "resource": "Dette dokumentet trenger mer minne enn denne nettleseren kan tilby. Lukk andre faner eller prøv en annen enhet.",
+    "note": "Markdown bevarer tekst og grunnleggende struktur, men ikke sideoppsett. Topptekster, bunntekster, noter og kommentarer vises i separate seksjoner. Felt bruker den lagrede teksten sin; makroer kjøres ikke, og eksterne ressurser lastes ikke inn. Noe innhold kan ikke gjengis nøyaktig. Bilder, diagrammer, ligninger og figurer kan erstattes med markører for utelatt innhold; tabeller med sammenslåtte celler eller nestede tabeller og sporede endringer forenkles. Sammenlign resultatet med originalen.",
+    "labels": {
+      "headers": "Topptekster",
+      "footers": "Bunntekster",
+      "footnotes": "Fotnoter",
+      "endnotes": "Sluttnoter",
+      "comments": "Korrekturkommentarer",
+      "replyTo": "Svar til",
+      "image": "[Bilde utelatt]",
+      "chart": "[Diagram utelatt]",
+      "equation": "[Ligning utelatt]",
+      "shape": "[Figur utelatt]"
+    }
+  }
 }

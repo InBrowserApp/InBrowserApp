@@ -27,5 +27,25 @@
   "zoomIn": "Powiększ",
   "zoomOut": "Pomniejsz",
   "closeSearch": "Zamknij wyszukiwanie",
-  "releaseFile": "Upuść, aby otworzyć ten dokument"
+  "releaseFile": "Upuść, aby otworzyć ten dokument",
+  "markdown": {
+    "export": "Eksportuj do Markdown",
+    "converting": "Eksportowanie do Markdown…",
+    "download": "Pobierz Markdown",
+    "error": "Nie udało się wyeksportować Markdown. Wypróbuj Konwerter DOCX na Markdown lub mniej złożony dokument.",
+    "resource": "Ten dokument wymaga więcej pamięci, niż może udostępnić ta przeglądarka. Zamknij inne karty lub spróbuj na innym urządzeniu.",
+    "note": "Markdown zachowuje tekst i podstawową strukturę, ale nie układ stron. Nagłówki, stopki, przypisy i komentarze pojawiają się w osobnych sekcjach. Pola wykorzystują zapisany tekst; makra nie są uruchamiane, a zasoby zewnętrzne nie są ładowane. Niektórych treści nie można wiernie odwzorować. Obrazy, wykresy, równania i kształty mogą zostać zastąpione znacznikami pominięcia; tabele ze scalonymi komórkami lub zagnieżdżonymi tabelami oraz śledzone zmiany są upraszczane. Porównaj wynik z oryginałem.",
+    "labels": {
+      "headers": "Nagłówki",
+      "footers": "Stopki",
+      "footnotes": "Przypisy dolne",
+      "endnotes": "Przypisy końcowe",
+      "comments": "Komentarze recenzentów",
+      "replyTo": "Odpowiedź na",
+      "image": "[Pominięto obraz]",
+      "chart": "[Pominięto wykres]",
+      "equation": "[Pominięto równanie]",
+      "shape": "[Pominięto kształt]"
+    }
+  }
 }

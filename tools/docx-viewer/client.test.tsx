@@ -1,4 +1,5 @@
 import {
+  act,
   cleanup,
   fireEvent,
   render,
@@ -49,6 +50,7 @@ test("opens local files, navigates, searches, zooms and clears", async () => {
   expect(click).toHaveBeenCalledOnce()
   choose()
   await screen.findByLabelText(m.page)
+  await act(async () => {})
   fireEvent.click(screen.getByLabelText(m.next))
   expect(mock.page).toHaveBeenCalledWith(2)
   fireEvent.change(screen.getByLabelText(m.page), { target: { value: "3" } })

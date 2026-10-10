@@ -27,5 +27,25 @@
   "zoomIn": "Zooma in",
   "zoomOut": "Zooma ut",
   "closeSearch": "Stäng sökning",
-  "releaseFile": "Släpp för att öppna dokumentet"
+  "releaseFile": "Släpp för att öppna dokumentet",
+  "markdown": {
+    "export": "Exportera Markdown",
+    "converting": "Exporterar Markdown…",
+    "download": "Ladda ner Markdown",
+    "error": "Markdown kunde inte exporteras. Prova konverteraren från DOCX till Markdown eller ett mindre komplext dokument.",
+    "resource": "Det här dokumentet behöver mer minne än webbläsaren kan tillhandahålla. Stäng andra flikar eller prova en annan enhet.",
+    "note": "Markdown bevarar text och grundläggande struktur, men inte sidlayout. Sidhuvuden, sidfötter, noter och kommentarer visas i separata avsnitt. Fält använder sin sparade text; makron körs inte och externa resurser läses inte in. Visst innehåll kan inte återges troget. Bilder, diagram, ekvationer och figurer kan ersättas med markörer för utelämnat innehåll; sammanslagna eller nästlade tabeller och spårade ändringar förenklas. Kontrollera resultatet mot originalet.",
+    "labels": {
+      "headers": "Sidhuvuden",
+      "footers": "Sidfötter",
+      "footnotes": "Fotnoter",
+      "endnotes": "Slutnoter",
+      "comments": "Granskningskommentarer",
+      "replyTo": "Svar till",
+      "image": "[Bild utelämnad]",
+      "chart": "[Diagram utelämnat]",
+      "equation": "[Ekvation utelämnad]",
+      "shape": "[Figur utelämnad]"
+    }
+  }
 }

@@ -5,4 +5,8 @@ import type {
 } from "@workspace/ui/components/tool/document-toolbar"
 export type Messages = typeof messages
 export type ReaderState = DocumentReaderState
-export type Reader = DocumentControls & { dispose: () => void }
+import type { Labels, Result } from "@workspace/docx-markdown/types"
+export type Reader = DocumentControls & {
+  dispose: () => void
+  exportMarkdown: (labels: Labels, signal: AbortSignal) => Promise<Result>
+}

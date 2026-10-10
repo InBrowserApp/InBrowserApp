@@ -27,5 +27,25 @@
   "zoomIn": "Yakınlaştır",
   "zoomOut": "Uzaklaştır",
   "closeSearch": "Aramayı kapat",
-  "releaseFile": "Bu belgeyi açmak için bırakın"
+  "releaseFile": "Bu belgeyi açmak için bırakın",
+  "markdown": {
+    "export": "Markdown olarak dışa aktar",
+    "converting": "Markdown olarak dışa aktarılıyor…",
+    "download": "Markdown’ı indir",
+    "error": "Markdown dışa aktarılamadı. DOCX’ten Markdown’a Dönüştürücü aracını veya daha az karmaşık bir belgeyi deneyin.",
+    "resource": "Bu belge, tarayıcının sağlayabileceğinden daha fazla belleğe ihtiyaç duyuyor. Diğer sekmeleri kapatın veya başka bir cihaz deneyin.",
+    "note": "Markdown, metni ve temel yapıyı korur; sayfa düzenini korumaz. Üst bilgiler, alt bilgiler, notlar ve yorumlar ayrı bölümlerde yer alır. Alanlar kaydedilmiş metinlerini kullanır; makrolar çalıştırılmaz ve harici kaynaklar yüklenmez. Bazı içerikler aslına uygun biçimde temsil edilemez. Resimler, grafikler, denklemler ve şekiller yerine içeriğin atlandığını belirten işaretler kullanılabilir; birleştirilmiş hücreler veya iç içe tablolar içeren tablolar ile izlenen değişiklikler basitleştirilir. Çıktıyı asıl belgeyle karşılaştırın.",
+    "labels": {
+      "headers": "Üst bilgiler",
+      "footers": "Alt bilgiler",
+      "footnotes": "Dipnotlar",
+      "endnotes": "Sonnotlar",
+      "comments": "İnceleme yorumları",
+      "replyTo": "Yanıt verilen",
+      "image": "[Resim atlandı]",
+      "chart": "[Grafik atlandı]",
+      "equation": "[Denklem atlandı]",
+      "shape": "[Şekil atlandı]"
+    }
+  }
 }

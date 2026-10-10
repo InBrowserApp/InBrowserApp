@@ -7877,6 +7877,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "docx-to-markdown-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "docx",
+      "docm",
+      "dotx",
+      "dotm",
+      "word",
+      "markdown",
+      "converter",
+      "export",
+      "local",
+    ],
+    locales: {
+      ar: {
+        name: "محول DOCX إلى Markdown",
+        description:
+          "حوّل مستندات Word وقوالبه إلى Markdown في متصفحك. عاين النص أو انسخه أو نزّل ملفًا بترميز UTF-8 دون رفع مستندك.",
+      },
+      de: {
+        name: "DOCX-zu-Markdown-Konverter",
+        description:
+          "Konvertieren Sie Word-Dokumente und Vorlagen im Browser in Markdown. Sehen Sie den Text an, kopieren Sie ihn oder laden Sie eine UTF-8-Datei herunter, ohne Ihr Dokument hochzuladen.",
+      },
+      en: {
+        name: "DOCX to Markdown Converter",
+        description:
+          "Convert Word documents and templates to Markdown in your browser. Preview the text, copy it, or download a UTF-8 file without uploading your document.",
+      },
+      es: {
+        name: "Conversor de DOCX a Markdown",
+        description:
+          "Convierte documentos y plantillas de Word a Markdown en tu navegador. Previsualiza el texto, cópialo o descarga un archivo UTF-8 sin subir tu documento.",
+      },
+      fr: {
+        name: "Convertisseur DOCX en Markdown",
+        description:
+          "Convertissez des documents et modèles Word en Markdown dans votre navigateur. Prévisualisez le texte, copiez-le ou téléchargez un fichier UTF-8 sans envoyer votre document à un serveur.",
+      },
+      he: {
+        name: "ממיר DOCX ל-Markdown",
+        description:
+          "המרת מסמכים ותבניות Word ל-Markdown בדפדפן. אפשר לצפות בטקסט, להעתיק אותו או להוריד קובץ בקידוד UTF-8 ללא העלאת המסמך.",
+      },
+      hi: {
+        name: "DOCX से Markdown कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में Word दस्तावेज़ों और टेम्पलेट को Markdown में बदलें। दस्तावेज़ अपलोड किए बिना टेक्स्ट का पूर्वावलोकन करें, उसे कॉपी करें या UTF-8 फ़ाइल डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter DOCX ke Markdown",
+        description:
+          "Konversi dokumen dan templat Word ke Markdown di browser Anda. Pratinjau teks, salin, atau unduh file UTF-8 tanpa mengunggah dokumen Anda.",
+      },
+      it: {
+        name: "Convertitore da DOCX a Markdown",
+        description:
+          "Converti documenti e modelli Word in Markdown nel browser. Visualizza il testo in anteprima, copialo o scarica un file UTF-8 senza caricare il documento su un server.",
+      },
+      ja: {
+        name: "DOCXからMarkdownへの変換ツール",
+        description:
+          "ブラウザーでWord文書やテンプレートをMarkdownに変換します。文書をアップロードせずに、テキストの確認、コピー、UTF-8ファイルのダウンロードができます。",
+      },
+      ko: {
+        name: "DOCX → Markdown 변환기",
+        description:
+          "브라우저에서 Word 문서와 서식 파일을 Markdown으로 변환하세요. 문서를 업로드하지 않고 텍스트를 미리 보거나 복사하거나 UTF-8 파일로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar DOCX kepada Markdown",
+        description:
+          "Tukar dokumen dan templat Word kepada Markdown dalam pelayar anda. Pratonton teks, salin atau muat turun fail UTF-8 tanpa memuat naik dokumen anda.",
+      },
+      nl: {
+        name: "DOCX-naar-Markdown-converter",
+        description:
+          "Zet Word-documenten en -sjablonen om naar Markdown in je browser. Bekijk de tekst, kopieer deze of download een UTF-8-bestand zonder je document te uploaden.",
+      },
+      no: {
+        name: "DOCX til Markdown-konverterer",
+        description:
+          "Konverter Word-dokumenter og maler til Markdown i nettleseren. Forhåndsvis teksten, kopier den eller last ned en UTF-8-fil uten å laste opp dokumentet.",
+      },
+      pl: {
+        name: "Konwerter DOCX na Markdown",
+        description:
+          "Konwertuj dokumenty i szablony Word na Markdown w przeglądarce. Przeglądaj tekst, kopiuj go lub pobierz plik UTF-8 bez przesyłania dokumentu na serwer.",
+      },
+      pt: {
+        name: "Conversor de DOCX para Markdown",
+        description:
+          "Converta documentos e modelos do Word para Markdown no navegador. Visualize o texto, copie-o ou baixe um arquivo UTF-8 sem enviar seu documento.",
+      },
+      ru: {
+        name: "Конвертер DOCX в Markdown",
+        description:
+          "Преобразуйте документы и шаблоны Word в Markdown в браузере. Просматривайте текст, копируйте его или скачивайте файл в кодировке UTF-8 без отправки документа на сервер.",
+      },
+      sv: {
+        name: "Konverterare från DOCX till Markdown",
+        description:
+          "Konvertera Word-dokument och mallar till Markdown i webbläsaren. Förhandsvisa texten, kopiera den eller ladda ner en UTF-8-fil utan att ladda upp dokumentet.",
+      },
+      th: {
+        name: "โปรแกรมแปลง DOCX เป็น Markdown",
+        description:
+          "แปลงเอกสารและแม่แบบ Word เป็น Markdown ในเบราว์เซอร์ ดูตัวอย่างข้อความ คัดลอก หรือดาวน์โหลดไฟล์ UTF-8 โดยไม่ต้องอัปโหลดเอกสาร",
+      },
+      tr: {
+        name: "DOCX’ten Markdown’a Dönüştürücü",
+        description:
+          "Word belgelerini ve şablonlarını tarayıcınızda Markdown’a dönüştürün. Belgenizi sunucuya yüklemeden metni önizleyin, kopyalayın veya UTF-8 dosyası indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi DOCX sang Markdown",
+        description:
+          "Chuyển tài liệu và mẫu Word sang Markdown trong trình duyệt. Xem trước văn bản, sao chép hoặc tải xuống tệp UTF-8 mà không tải tài liệu lên.",
+      },
+      "zh-CN": {
+        name: "DOCX 转 Markdown 转换器",
+        description:
+          "在浏览器中将 Word 文档和模板转换为 Markdown。无需上传文档，即可预览文本、复制文本或下载 UTF-8 文件。",
+      },
+      "zh-TW": {
+        name: "DOCX 轉 Markdown 轉換器",
+        description:
+          "在瀏覽器中將 Word 文件與範本轉換為 Markdown。預覽或複製文字，或下載 UTF-8 檔案，無須上傳文件。",
+      },
+    },
+  },
+  {
     slug: "docx-viewer",
     category: "document",
     icon: "file-text",
@@ -38236,6 +38369,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "Docker Run 轉 Compose 轉換器",
         description: "將 docker run 命令轉換為 docker-compose.yml 檔案。",
+      },
+    },
+  },
+  "docx-to-markdown-converter": {
+    slug: "docx-to-markdown-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "docx",
+      "docm",
+      "dotx",
+      "dotm",
+      "word",
+      "markdown",
+      "converter",
+      "export",
+      "local",
+    ],
+    locales: {
+      ar: {
+        name: "محول DOCX إلى Markdown",
+        description:
+          "حوّل مستندات Word وقوالبه إلى Markdown في متصفحك. عاين النص أو انسخه أو نزّل ملفًا بترميز UTF-8 دون رفع مستندك.",
+      },
+      de: {
+        name: "DOCX-zu-Markdown-Konverter",
+        description:
+          "Konvertieren Sie Word-Dokumente und Vorlagen im Browser in Markdown. Sehen Sie den Text an, kopieren Sie ihn oder laden Sie eine UTF-8-Datei herunter, ohne Ihr Dokument hochzuladen.",
+      },
+      en: {
+        name: "DOCX to Markdown Converter",
+        description:
+          "Convert Word documents and templates to Markdown in your browser. Preview the text, copy it, or download a UTF-8 file without uploading your document.",
+      },
+      es: {
+        name: "Conversor de DOCX a Markdown",
+        description:
+          "Convierte documentos y plantillas de Word a Markdown en tu navegador. Previsualiza el texto, cópialo o descarga un archivo UTF-8 sin subir tu documento.",
+      },
+      fr: {
+        name: "Convertisseur DOCX en Markdown",
+        description:
+          "Convertissez des documents et modèles Word en Markdown dans votre navigateur. Prévisualisez le texte, copiez-le ou téléchargez un fichier UTF-8 sans envoyer votre document à un serveur.",
+      },
+      he: {
+        name: "ממיר DOCX ל-Markdown",
+        description:
+          "המרת מסמכים ותבניות Word ל-Markdown בדפדפן. אפשר לצפות בטקסט, להעתיק אותו או להוריד קובץ בקידוד UTF-8 ללא העלאת המסמך.",
+      },
+      hi: {
+        name: "DOCX से Markdown कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में Word दस्तावेज़ों और टेम्पलेट को Markdown में बदलें। दस्तावेज़ अपलोड किए बिना टेक्स्ट का पूर्वावलोकन करें, उसे कॉपी करें या UTF-8 फ़ाइल डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter DOCX ke Markdown",
+        description:
+          "Konversi dokumen dan templat Word ke Markdown di browser Anda. Pratinjau teks, salin, atau unduh file UTF-8 tanpa mengunggah dokumen Anda.",
+      },
+      it: {
+        name: "Convertitore da DOCX a Markdown",
+        description:
+          "Converti documenti e modelli Word in Markdown nel browser. Visualizza il testo in anteprima, copialo o scarica un file UTF-8 senza caricare il documento su un server.",
+      },
+      ja: {
+        name: "DOCXからMarkdownへの変換ツール",
+        description:
+          "ブラウザーでWord文書やテンプレートをMarkdownに変換します。文書をアップロードせずに、テキストの確認、コピー、UTF-8ファイルのダウンロードができます。",
+      },
+      ko: {
+        name: "DOCX → Markdown 변환기",
+        description:
+          "브라우저에서 Word 문서와 서식 파일을 Markdown으로 변환하세요. 문서를 업로드하지 않고 텍스트를 미리 보거나 복사하거나 UTF-8 파일로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar DOCX kepada Markdown",
+        description:
+          "Tukar dokumen dan templat Word kepada Markdown dalam pelayar anda. Pratonton teks, salin atau muat turun fail UTF-8 tanpa memuat naik dokumen anda.",
+      },
+      nl: {
+        name: "DOCX-naar-Markdown-converter",
+        description:
+          "Zet Word-documenten en -sjablonen om naar Markdown in je browser. Bekijk de tekst, kopieer deze of download een UTF-8-bestand zonder je document te uploaden.",
+      },
+      no: {
+        name: "DOCX til Markdown-konverterer",
+        description:
+          "Konverter Word-dokumenter og maler til Markdown i nettleseren. Forhåndsvis teksten, kopier den eller last ned en UTF-8-fil uten å laste opp dokumentet.",
+      },
+      pl: {
+        name: "Konwerter DOCX na Markdown",
+        description:
+          "Konwertuj dokumenty i szablony Word na Markdown w przeglądarce. Przeglądaj tekst, kopiuj go lub pobierz plik UTF-8 bez przesyłania dokumentu na serwer.",
+      },
+      pt: {
+        name: "Conversor de DOCX para Markdown",
+        description:
+          "Converta documentos e modelos do Word para Markdown no navegador. Visualize o texto, copie-o ou baixe um arquivo UTF-8 sem enviar seu documento.",
+      },
+      ru: {
+        name: "Конвертер DOCX в Markdown",
+        description:
+          "Преобразуйте документы и шаблоны Word в Markdown в браузере. Просматривайте текст, копируйте его или скачивайте файл в кодировке UTF-8 без отправки документа на сервер.",
+      },
+      sv: {
+        name: "Konverterare från DOCX till Markdown",
+        description:
+          "Konvertera Word-dokument och mallar till Markdown i webbläsaren. Förhandsvisa texten, kopiera den eller ladda ner en UTF-8-fil utan att ladda upp dokumentet.",
+      },
+      th: {
+        name: "โปรแกรมแปลง DOCX เป็น Markdown",
+        description:
+          "แปลงเอกสารและแม่แบบ Word เป็น Markdown ในเบราว์เซอร์ ดูตัวอย่างข้อความ คัดลอก หรือดาวน์โหลดไฟล์ UTF-8 โดยไม่ต้องอัปโหลดเอกสาร",
+      },
+      tr: {
+        name: "DOCX’ten Markdown’a Dönüştürücü",
+        description:
+          "Word belgelerini ve şablonlarını tarayıcınızda Markdown’a dönüştürün. Belgenizi sunucuya yüklemeden metni önizleyin, kopyalayın veya UTF-8 dosyası indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi DOCX sang Markdown",
+        description:
+          "Chuyển tài liệu và mẫu Word sang Markdown trong trình duyệt. Xem trước văn bản, sao chép hoặc tải xuống tệp UTF-8 mà không tải tài liệu lên.",
+      },
+      "zh-CN": {
+        name: "DOCX 转 Markdown 转换器",
+        description:
+          "在浏览器中将 Word 文档和模板转换为 Markdown。无需上传文档，即可预览文本、复制文本或下载 UTF-8 文件。",
+      },
+      "zh-TW": {
+        name: "DOCX 轉 Markdown 轉換器",
+        description:
+          "在瀏覽器中將 Word 文件與範本轉換為 Markdown。預覽或複製文字，或下載 UTF-8 檔案，無須上傳文件。",
       },
     },
   },

@@ -27,5 +27,25 @@
   "zoomIn": "Perbesar",
   "zoomOut": "Perkecil",
   "closeSearch": "Tutup pencarian",
-  "releaseFile": "Lepaskan untuk membuka dokumen ini"
+  "releaseFile": "Lepaskan untuk membuka dokumen ini",
+  "markdown": {
+    "export": "Ekspor Markdown",
+    "converting": "Mengekspor Markdown…",
+    "download": "Unduh Markdown",
+    "error": "Markdown tidak dapat diekspor. Coba Konverter DOCX ke Markdown atau dokumen yang tidak terlalu kompleks.",
+    "resource": "Dokumen ini membutuhkan lebih banyak memori daripada yang dapat disediakan browser ini. Tutup tab lain atau coba perangkat lain.",
+    "note": "Markdown mempertahankan teks dan struktur dasar, bukan tata letak halaman. Header, footer, catatan, dan komentar ditampilkan di bagian terpisah. Bidang menggunakan teks yang tersimpan; makro tidak dijalankan dan sumber daya eksternal tidak dimuat. Sebagian konten tidak dapat ditampilkan secara utuh dan akurat. Gambar, bagan, persamaan, dan bentuk dapat diganti dengan penanda bahwa konten tidak disertakan; tabel dengan sel gabungan atau tabel bersarang serta perubahan terlacak disederhanakan. Bandingkan hasilnya dengan dokumen asli.",
+    "labels": {
+      "headers": "Header",
+      "footers": "Footer",
+      "footnotes": "Catatan kaki",
+      "endnotes": "Catatan akhir",
+      "comments": "Komentar peninjauan",
+      "replyTo": "Balasan untuk",
+      "image": "[Gambar tidak disertakan]",
+      "chart": "[Bagan tidak disertakan]",
+      "equation": "[Persamaan tidak disertakan]",
+      "shape": "[Bentuk tidak disertakan]"
+    }
+  }
 }

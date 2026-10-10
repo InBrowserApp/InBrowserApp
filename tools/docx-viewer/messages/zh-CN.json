@@ -27,5 +27,25 @@
   "zoomIn": "放大",
   "zoomOut": "缩小",
   "closeSearch": "关闭搜索",
-  "releaseFile": "松开以打开此文档"
+  "releaseFile": "松开以打开此文档",
+  "markdown": {
+    "export": "导出 Markdown",
+    "converting": "正在导出 Markdown…",
+    "download": "下载 Markdown",
+    "error": "无法导出 Markdown。请尝试使用 DOCX 转 Markdown 转换器，或复杂度较低的文档。",
+    "resource": "此文档所需的内存超出了此浏览器可提供的范围。请关闭其他标签页或尝试其他设备。",
+    "note": "Markdown 会保留文本和基本结构，但不保留页面布局。页眉、页脚、注释和批注会分别列于独立章节。域使用其已保存的文本；宏不会运行，外部资源也不会加载。部分内容无法准确呈现。图片、图表、公式和形状可能以省略标记表示；合并表格、嵌套表格和修订内容会被简化。请对照原文检查输出。",
+    "labels": {
+      "headers": "页眉",
+      "footers": "页脚",
+      "footnotes": "脚注",
+      "endnotes": "尾注",
+      "comments": "审阅批注",
+      "replyTo": "回复",
+      "image": "[图片已省略]",
+      "chart": "[图表已省略]",
+      "equation": "[公式已省略]",
+      "shape": "[形状已省略]"
+    }
+  }
 }

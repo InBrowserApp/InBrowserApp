@@ -16,6 +16,7 @@ import { FileText } from "@workspace/ui/icons"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { DocumentToolbar as Toolbar } from "@workspace/ui/components/tool/document-toolbar"
 import { useReader } from "./use-reader"
+import { MarkdownExport } from "./markdown-export"
 import type { Messages } from "./types"
 import "./viewer.css"
 
@@ -42,8 +43,15 @@ export default function Client({ messages: m }: { messages: Messages }) {
         </Alert>
       ) : null}
       <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
-        {reader.current && state.total ? (
-          <Toolbar messages={m} state={state} reader={reader.current} />
+        {reader && file && state.total ? (
+          <>
+            <MarkdownExport
+              reader={reader}
+              filename={file.name}
+              messages={m.markdown}
+            />
+            <Toolbar messages={m} state={state} reader={reader} />
+          </>
         ) : null}
         {loading ? (
           <p

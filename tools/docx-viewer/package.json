@@ -11,7 +11,8 @@
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "@silurus/ooxml": "catalog:",
-    "@workspace/document-reader": "workspace:*"
+    "@workspace/document-reader": "workspace:*",
+    "@workspace/docx-markdown": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",
