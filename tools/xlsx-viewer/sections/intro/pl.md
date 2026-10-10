@@ -21,3 +21,5 @@ Aby wyeksportować lokalne tabele Numbers jako arkusze Excel, użyj narzędzia [
 Aby wyeksportować dane arkusza OpenDocument jako skoroszyt Excel, użyj narzędzia [Konwerter ODS na XLSX](../ods-to-xlsx-converter/).
 
 Aby wyeksportować dane Excel XLSX jako arkusz OpenDocument, użyj narzędzia [Konwerter XLSX na ODS](../xlsx-to-ods-converter/).
+
+Aby przekształcić tekst z separatorami w skoroszyt Excel, użyj narzędzia [Konwerter CSV / TSV na XLSX](../csv-to-xlsx-converter/).

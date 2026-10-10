@@ -1,0 +1,4 @@
+{
+  "name": "CSV / TSV to XLSX Converter",
+  "description": "Convert local CSV and TSV files to Excel. Choose a delimiter, encoding, and header handling while preserving identifiers and all fields as text."
+}

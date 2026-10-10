@@ -21,3 +21,5 @@ Untuk mengeksport jadual Numbers setempat sebagai lembaran kerja Excel, gunakan 
 Untuk mengeksport data hamparan OpenDocument sebagai buku kerja Excel, gunakan [Penukar ODS ke XLSX](../ods-to-xlsx-converter/).
 
 Untuk mengeksport data Excel XLSX sebagai hamparan OpenDocument, gunakan [Penukar XLSX ke ODS](../xlsx-to-ods-converter/).
+
+Untuk menukar teks dengan pemisah kepada buku kerja Excel, gunakan [Penukar CSV / TSV ke XLSX](../csv-to-xlsx-converter/).

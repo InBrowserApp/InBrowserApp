@@ -1,0 +1,4 @@
+{
+  "name": "CSV / TSV’den XLSX’e Dönüştürücü",
+  "description": "Yerel CSV ve TSV dosyalarını Excel’e dönüştürün. Tanımlayıcıları ve tüm alanları metin olarak koruyarak ayırıcıyı, kodlamayı ve başlıkların nasıl işleneceğini seçin."
+}

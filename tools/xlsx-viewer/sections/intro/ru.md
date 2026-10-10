@@ -21,3 +21,5 @@
 Чтобы экспортировать данные таблиц OpenDocument в книгу Excel, используйте [Конвертер ODS в XLSX](../ods-to-xlsx-converter/).
 
 Чтобы экспортировать данные книги Excel в таблицу OpenDocument, используйте [Конвертер XLSX в ODS](../xlsx-to-ods-converter/).
+
+Чтобы преобразовать текст с разделителями в книгу Excel, используйте [Конвертер CSV / TSV в XLSX](../csv-to-xlsx-converter/).

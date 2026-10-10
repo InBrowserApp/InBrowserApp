@@ -7011,6 +7011,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "csv-to-xlsx-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["csv", "tsv", "xlsx", "excel", "spreadsheet", "converter"],
+    locales: {
+      ar: {
+        name: "محول CSV / TSV إلى XLSX",
+        description:
+          "حوّل ملفات CSV وTSV المحلية إلى Excel. اختر الفاصل والترميز وطريقة التعامل مع الرؤوس مع الحفاظ على المعرّفات وجميع الحقول كنصوص.",
+      },
+      de: {
+        name: "CSV/TSV-zu-XLSX-Konverter",
+        description:
+          "Konvertieren Sie lokale CSV- und TSV-Dateien in Excel. Wählen Sie Trennzeichen, Kodierung und Kopfzeilenbehandlung, während Kennungen und alle Felder als Text erhalten bleiben.",
+      },
+      en: {
+        name: "CSV / TSV to XLSX Converter",
+        description:
+          "Convert local CSV and TSV files to Excel. Choose a delimiter, encoding, and header handling while preserving identifiers and all fields as text.",
+      },
+      es: {
+        name: "Conversor de CSV / TSV a XLSX",
+        description:
+          "Convierte archivos CSV y TSV locales a Excel. Elige el delimitador, la codificación y el tratamiento de los encabezados, conservando los identificadores y todos los campos como texto.",
+      },
+      fr: {
+        name: "Convertisseur CSV / TSV en XLSX",
+        description:
+          "Convertissez des fichiers CSV et TSV locaux en Excel. Choisissez un séparateur, un encodage et le traitement de l’en-tête tout en conservant les identifiants et tous les champs sous forme de texte.",
+      },
+      he: {
+        name: "ממיר CSV / TSV ל-XLSX",
+        description:
+          "המרת קובצי CSV ו-TSV מקומיים ל-Excel. בחירת מפריד, קידוד ואופן הטיפול בכותרות, תוך שמירה על מזהים ועל כל השדות כטקסט.",
+      },
+      hi: {
+        name: "CSV / TSV से XLSX कन्वर्टर",
+        description:
+          "स्थानीय CSV और TSV फ़ाइलों को Excel में बदलें। पहचानकर्ताओं और सभी फ़ील्ड को टेक्स्ट के रूप में रखते हुए विभाजक, एन्कोडिंग और हेडर के लिए विकल्प चुनें।",
+      },
+      id: {
+        name: "Konverter CSV / TSV ke XLSX",
+        description:
+          "Konversi file CSV dan TSV lokal ke Excel. Pilih pemisah, pengodean, dan penanganan header sambil mempertahankan pengenal dan semua bidang sebagai teks.",
+      },
+      it: {
+        name: "Convertitore da CSV / TSV a XLSX",
+        description:
+          "Converti file CSV e TSV locali in Excel. Scegli delimitatore, codifica e gestione delle intestazioni, mantenendo gli identificatori e tutti i campi come testo.",
+      },
+      ja: {
+        name: "CSV / TSVからXLSXへの変換ツール",
+        description:
+          "ローカルのCSV・TSVファイルをExcelに変換できます。区切り文字、エンコーディング、ヘッダーの扱いを選択し、識別子を含むすべてのフィールドをテキストとして保持します。",
+      },
+      ko: {
+        name: "CSV / TSV → XLSX 변환기",
+        description:
+          "기기에 있는 CSV와 TSV 파일을 Excel로 변환하세요. 구분 기호, 인코딩, 머리글 처리 방식을 선택하고 식별자를 비롯한 모든 필드를 텍스트로 유지할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar CSV / TSV ke XLSX",
+        description:
+          "Tukar fail CSV dan TSV setempat kepada Excel. Pilih pemisah, pengekodan dan cara mengendalikan pengepala sambil mengekalkan pengecam serta semua medan sebagai teks.",
+      },
+      nl: {
+        name: "CSV/TSV-naar-XLSX-converter",
+        description:
+          "Converteer lokale CSV- en TSV-bestanden naar Excel. Kies het scheidingsteken, de codering en de verwerking van de koprij, waarbij identificatiecodes en alle velden als tekst behouden blijven.",
+      },
+      no: {
+        name: "CSV / TSV til XLSX-konverterer",
+        description:
+          "Konverter lokale CSV- og TSV-filer til Excel. Velg skilletegn, koding og behandling av overskriftsraden, og bevar identifikatorer og alle felt som tekst.",
+      },
+      pl: {
+        name: "Konwerter CSV / TSV na XLSX",
+        description:
+          "Konwertuj lokalne pliki CSV i TSV na Excel. Wybierz separator, kodowanie i sposób obsługi nagłówka, zachowując identyfikatory i wszystkie pola jako tekst.",
+      },
+      pt: {
+        name: "Conversor de CSV / TSV para XLSX",
+        description:
+          "Converta arquivos CSV e TSV locais para Excel. Escolha o separador, a codificação e o tratamento do cabeçalho, preservando identificadores e todos os campos como texto.",
+      },
+      ru: {
+        name: "Конвертер CSV / TSV в XLSX",
+        description:
+          "Преобразуйте локальные файлы CSV и TSV в Excel. Выбирайте разделитель, кодировку и обработку заголовков, сохраняя идентификаторы и все поля как текст.",
+      },
+      sv: {
+        name: "CSV / TSV till XLSX-konverterare",
+        description:
+          "Konvertera lokala CSV- och TSV-filer till Excel. Välj avgränsare, kodning och rubrikhantering samtidigt som identifierare och alla fält bevaras som text.",
+      },
+      th: {
+        name: "โปรแกรมแปลง CSV / TSV เป็น XLSX",
+        description:
+          "แปลงไฟล์ CSV และ TSV จากเครื่องเป็น Excel เลือกตัวคั่น การเข้ารหัส และวิธีจัดการหัวตาราง โดยคงรหัสระบุและทุกฟิลด์ไว้เป็นข้อความ",
+      },
+      tr: {
+        name: "CSV / TSV’den XLSX’e Dönüştürücü",
+        description:
+          "Yerel CSV ve TSV dosyalarını Excel’e dönüştürün. Tanımlayıcıları ve tüm alanları metin olarak koruyarak ayırıcıyı, kodlamayı ve başlıkların nasıl işleneceğini seçin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CSV / TSV sang XLSX",
+        description:
+          "Chuyển đổi tệp CSV và TSV trên thiết bị sang Excel. Chọn dấu phân cách, mã hóa và cách xử lý hàng tiêu đề, đồng thời giữ mã định danh và mọi trường ở dạng văn bản.",
+      },
+      "zh-CN": {
+        name: "CSV / TSV 转 XLSX 转换器",
+        description:
+          "将本地 CSV 和 TSV 文件转换为 Excel。可选择分隔符、编码和首行处理方式，将标识符及所有字段保留为文本。",
+      },
+      "zh-TW": {
+        name: "CSV / TSV 轉 XLSX 轉換器",
+        description:
+          "將本機 CSV 與 TSV 檔案轉換為 Excel。選擇分隔符號、編碼與標題列處理方式，並將識別碼及所有欄位保留為文字。",
+      },
+    },
+  },
+  {
     slug: "cuid2-generator",
     category: "developer",
     icon: "lock",
@@ -38679,6 +38802,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "CSV 轉 JSON 轉換器",
         description:
           "將 CSV 轉為 JSON。貼上 CSV 或匯入檔案；調整選項（表頭、分隔符、裁剪 等），預覽、複製並下載。",
+      },
+    },
+  },
+  "csv-to-xlsx-converter": {
+    slug: "csv-to-xlsx-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["csv", "tsv", "xlsx", "excel", "spreadsheet", "converter"],
+    locales: {
+      ar: {
+        name: "محول CSV / TSV إلى XLSX",
+        description:
+          "حوّل ملفات CSV وTSV المحلية إلى Excel. اختر الفاصل والترميز وطريقة التعامل مع الرؤوس مع الحفاظ على المعرّفات وجميع الحقول كنصوص.",
+      },
+      de: {
+        name: "CSV/TSV-zu-XLSX-Konverter",
+        description:
+          "Konvertieren Sie lokale CSV- und TSV-Dateien in Excel. Wählen Sie Trennzeichen, Kodierung und Kopfzeilenbehandlung, während Kennungen und alle Felder als Text erhalten bleiben.",
+      },
+      en: {
+        name: "CSV / TSV to XLSX Converter",
+        description:
+          "Convert local CSV and TSV files to Excel. Choose a delimiter, encoding, and header handling while preserving identifiers and all fields as text.",
+      },
+      es: {
+        name: "Conversor de CSV / TSV a XLSX",
+        description:
+          "Convierte archivos CSV y TSV locales a Excel. Elige el delimitador, la codificación y el tratamiento de los encabezados, conservando los identificadores y todos los campos como texto.",
+      },
+      fr: {
+        name: "Convertisseur CSV / TSV en XLSX",
+        description:
+          "Convertissez des fichiers CSV et TSV locaux en Excel. Choisissez un séparateur, un encodage et le traitement de l’en-tête tout en conservant les identifiants et tous les champs sous forme de texte.",
+      },
+      he: {
+        name: "ממיר CSV / TSV ל-XLSX",
+        description:
+          "המרת קובצי CSV ו-TSV מקומיים ל-Excel. בחירת מפריד, קידוד ואופן הטיפול בכותרות, תוך שמירה על מזהים ועל כל השדות כטקסט.",
+      },
+      hi: {
+        name: "CSV / TSV से XLSX कन्वर्टर",
+        description:
+          "स्थानीय CSV और TSV फ़ाइलों को Excel में बदलें। पहचानकर्ताओं और सभी फ़ील्ड को टेक्स्ट के रूप में रखते हुए विभाजक, एन्कोडिंग और हेडर के लिए विकल्प चुनें।",
+      },
+      id: {
+        name: "Konverter CSV / TSV ke XLSX",
+        description:
+          "Konversi file CSV dan TSV lokal ke Excel. Pilih pemisah, pengodean, dan penanganan header sambil mempertahankan pengenal dan semua bidang sebagai teks.",
+      },
+      it: {
+        name: "Convertitore da CSV / TSV a XLSX",
+        description:
+          "Converti file CSV e TSV locali in Excel. Scegli delimitatore, codifica e gestione delle intestazioni, mantenendo gli identificatori e tutti i campi come testo.",
+      },
+      ja: {
+        name: "CSV / TSVからXLSXへの変換ツール",
+        description:
+          "ローカルのCSV・TSVファイルをExcelに変換できます。区切り文字、エンコーディング、ヘッダーの扱いを選択し、識別子を含むすべてのフィールドをテキストとして保持します。",
+      },
+      ko: {
+        name: "CSV / TSV → XLSX 변환기",
+        description:
+          "기기에 있는 CSV와 TSV 파일을 Excel로 변환하세요. 구분 기호, 인코딩, 머리글 처리 방식을 선택하고 식별자를 비롯한 모든 필드를 텍스트로 유지할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar CSV / TSV ke XLSX",
+        description:
+          "Tukar fail CSV dan TSV setempat kepada Excel. Pilih pemisah, pengekodan dan cara mengendalikan pengepala sambil mengekalkan pengecam serta semua medan sebagai teks.",
+      },
+      nl: {
+        name: "CSV/TSV-naar-XLSX-converter",
+        description:
+          "Converteer lokale CSV- en TSV-bestanden naar Excel. Kies het scheidingsteken, de codering en de verwerking van de koprij, waarbij identificatiecodes en alle velden als tekst behouden blijven.",
+      },
+      no: {
+        name: "CSV / TSV til XLSX-konverterer",
+        description:
+          "Konverter lokale CSV- og TSV-filer til Excel. Velg skilletegn, koding og behandling av overskriftsraden, og bevar identifikatorer og alle felt som tekst.",
+      },
+      pl: {
+        name: "Konwerter CSV / TSV na XLSX",
+        description:
+          "Konwertuj lokalne pliki CSV i TSV na Excel. Wybierz separator, kodowanie i sposób obsługi nagłówka, zachowując identyfikatory i wszystkie pola jako tekst.",
+      },
+      pt: {
+        name: "Conversor de CSV / TSV para XLSX",
+        description:
+          "Converta arquivos CSV e TSV locais para Excel. Escolha o separador, a codificação e o tratamento do cabeçalho, preservando identificadores e todos os campos como texto.",
+      },
+      ru: {
+        name: "Конвертер CSV / TSV в XLSX",
+        description:
+          "Преобразуйте локальные файлы CSV и TSV в Excel. Выбирайте разделитель, кодировку и обработку заголовков, сохраняя идентификаторы и все поля как текст.",
+      },
+      sv: {
+        name: "CSV / TSV till XLSX-konverterare",
+        description:
+          "Konvertera lokala CSV- och TSV-filer till Excel. Välj avgränsare, kodning och rubrikhantering samtidigt som identifierare och alla fält bevaras som text.",
+      },
+      th: {
+        name: "โปรแกรมแปลง CSV / TSV เป็น XLSX",
+        description:
+          "แปลงไฟล์ CSV และ TSV จากเครื่องเป็น Excel เลือกตัวคั่น การเข้ารหัส และวิธีจัดการหัวตาราง โดยคงรหัสระบุและทุกฟิลด์ไว้เป็นข้อความ",
+      },
+      tr: {
+        name: "CSV / TSV’den XLSX’e Dönüştürücü",
+        description:
+          "Yerel CSV ve TSV dosyalarını Excel’e dönüştürün. Tanımlayıcıları ve tüm alanları metin olarak koruyarak ayırıcıyı, kodlamayı ve başlıkların nasıl işleneceğini seçin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CSV / TSV sang XLSX",
+        description:
+          "Chuyển đổi tệp CSV và TSV trên thiết bị sang Excel. Chọn dấu phân cách, mã hóa và cách xử lý hàng tiêu đề, đồng thời giữ mã định danh và mọi trường ở dạng văn bản.",
+      },
+      "zh-CN": {
+        name: "CSV / TSV 转 XLSX 转换器",
+        description:
+          "将本地 CSV 和 TSV 文件转换为 Excel。可选择分隔符、编码和首行处理方式，将标识符及所有字段保留为文本。",
+      },
+      "zh-TW": {
+        name: "CSV / TSV 轉 XLSX 轉換器",
+        description:
+          "將本機 CSV 與 TSV 檔案轉換為 Excel。選擇分隔符號、編碼與標題列處理方式，並將識別碼及所有欄位保留為文字。",
       },
     },
   },

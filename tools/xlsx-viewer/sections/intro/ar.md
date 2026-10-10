@@ -21,3 +21,5 @@
 لتصدير بيانات جداول OpenDocument كمصنف Excel، استخدم [محول ODS إلى XLSX](../ods-to-xlsx-converter/).
 
 لتصدير بيانات Excel بصيغة XLSX كجدول بيانات OpenDocument، استخدم [محول XLSX إلى ODS](../xlsx-to-ods-converter/).
+
+لتحويل النص المفصول بفواصل إلى مصنف Excel، استخدم [محول CSV / TSV إلى XLSX](../csv-to-xlsx-converter/).

@@ -21,3 +21,5 @@ Numbers 表格會顯示為獨立的工作表分頁，並在可用時顯示原始
 如要將 OpenDocument 試算表資料匯出為 Excel 活頁簿，請使用 [ODS 轉 XLSX 轉換器](../ods-to-xlsx-converter/)。
 
 如要將 Excel XLSX 資料匯出為 OpenDocument 試算表，請使用 [XLSX 轉 ODS 轉換器](../xlsx-to-ods-converter/)。
+
+如要將分隔文字轉換為 Excel 活頁簿，請使用 [CSV / TSV 轉 XLSX 轉換器](../csv-to-xlsx-converter/)。

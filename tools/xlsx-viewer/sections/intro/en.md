@@ -20,3 +20,5 @@ To export local Numbers tables as Excel worksheets, use the [Numbers to XLSX Con
 To export OpenDocument spreadsheet data as an Excel workbook, use the [ODS to XLSX Converter](../ods-to-xlsx-converter/).
 
 To export Excel XLSX data as an OpenDocument spreadsheet, use the [XLSX to ODS Converter](../xlsx-to-ods-converter/).
+
+To turn delimited text into an Excel workbook, use the [CSV / TSV to XLSX Converter](../csv-to-xlsx-converter/).

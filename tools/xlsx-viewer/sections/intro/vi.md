@@ -21,3 +21,5 @@ Với sổ làm việc XLS đời cũ, hãy dùng [Trình chuyển đổi XLS sa
 Để xuất dữ liệu bảng tính OpenDocument thành sổ làm việc Excel, hãy dùng [Trình chuyển đổi ODS sang XLSX](../ods-to-xlsx-converter/).
 
 Để xuất dữ liệu Excel XLSX thành bảng tính OpenDocument, hãy dùng [Trình chuyển đổi XLSX sang ODS](../xlsx-to-ods-converter/).
+
+Để chuyển văn bản có dấu phân cách thành sổ làm việc Excel, hãy dùng [Trình chuyển đổi CSV / TSV sang XLSX](../csv-to-xlsx-converter/).

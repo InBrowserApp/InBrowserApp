@@ -21,3 +21,5 @@ Para exportar tablas de Numbers locales como hojas de cálculo de Excel, usa el 
 Para exportar datos de hojas de cálculo OpenDocument como un libro de Excel, usa el [Conversor de ODS a XLSX](../ods-to-xlsx-converter/).
 
 Para exportar los datos de un libro de Excel como una hoja de cálculo OpenDocument, usa el [Conversor de XLSX a ODS](../xlsx-to-ods-converter/).
+
+Para convertir texto delimitado en un libro de Excel, usa el [Conversor de CSV / TSV a XLSX](../csv-to-xlsx-converter/).

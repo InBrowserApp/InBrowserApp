@@ -21,3 +21,5 @@ Untuk mengekspor tabel Numbers lokal sebagai lembar kerja Excel, gunakan [Konver
 Untuk mengekspor data lembar bentang OpenDocument sebagai buku kerja Excel, gunakan [Konverter ODS ke XLSX](../ods-to-xlsx-converter/).
 
 Untuk mengekspor data Excel XLSX sebagai lembar bentang OpenDocument, gunakan [Konverter XLSX ke ODS](../xlsx-to-ods-converter/).
+
+Untuk mengubah teks berpemisah menjadi buku kerja Excel, gunakan [Konverter CSV / TSV ke XLSX](../csv-to-xlsx-converter/).

@@ -21,3 +21,5 @@ Numbersの各表は個別のワークシートタブとして表示され、元�
 OpenDocumentスプレッドシートのデータをExcelブックとして書き出すには、[ODSからXLSXへの変換ツール](../ods-to-xlsx-converter/)をご利用ください。
 
 ExcelのXLSXデータをOpenDocumentスプレッドシートとして書き出すには、[XLSXからODSへの変換ツール](../xlsx-to-ods-converter/)をご利用ください。
+
+区切り文字付きテキストをExcelブックに変換するには、[CSV / TSVからXLSXへの変換ツール](../csv-to-xlsx-converter/)をご利用ください。
