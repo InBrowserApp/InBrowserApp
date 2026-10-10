@@ -12,4 +12,8 @@ Duyệt các trang TIFF, kích thước biểu tượng, bộ sưu tập ảnh v
 
 Hướng ảnh được áp dụng cho ảnh hiển thị. Bản xem trước dùng các kênh 8 bit, nên độ sâu bit cao và HDR bị giảm. Hồ sơ màu nhúng được giữ lại khi được hỗ trợ, nhưng trình xem này không thay thế trình chỉnh sửa có quản lý màu. Giới hạn tài nguyên của trình duyệt và bộ giải mã có thể khiến ảnh rất lớn hoặc phức tạp không mở được; không có giới hạn cố định về kích thước tệp hay số lượng ảnh.
 
-Tệp luôn ở trên thiết bị này. Đóng hoặc thay tệp sẽ giải phóng bộ giải mã và bản xem trước. Trình xem này không chỉnh sửa, xuất hay tự động lưu ảnh của bạn. Bạn có thể xem giấy phép bộ giải mã và thông tin mã nguồn tương ứng trong phần chi tiết ảnh.
+Tệp luôn ở trên thiết bị này. Đóng hoặc thay tệp sẽ giải phóng bộ giải mã và bản xem trước. Trình xem này không chỉnh sửa hay tự động lưu ảnh của bạn. Bạn có thể xem giấy phép bộ giải mã và thông tin mã nguồn tương ứng trong phần chi tiết ảnh.
+
+## Lưu ảnh PNG
+
+Tải ảnh, trang, biến thể biểu tượng hoặc khung hình hoạt ảnh đã ghép hiện được chọn xuống dưới dạng PNG tĩnh. Ảnh đã lưu giữ nguyên kích thước pixel đầy đủ, hướng ảnh đã áp dụng và độ trong suốt được hỗ trợ; thu phóng và nền xem trước không làm thay đổi ảnh đó. Tính năng xuất PNG dùng cùng ảnh 8 bit như bản xem trước, nên không giữ lại độ sâu bit cao hoặc HDR. PNG động chỉ xuất ảnh tĩnh mặc định. Không đảm bảo giữ lại hoạt ảnh hoặc siêu dữ liệu của tệp chứa.

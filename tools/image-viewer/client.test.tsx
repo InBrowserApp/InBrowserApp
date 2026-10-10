@@ -8,14 +8,14 @@ import {
 } from "@testing-library/react"
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
 import Client from "./client"
-import type { OpenedImage, Preview } from "./types"
+import type { OpenedImage, Preview } from "@workspace/raster-image/types"
 import m from "./messages/en.json"
 const mock = vi.hoisted(() => ({
   open: vi.fn(),
   render: vi.fn(),
   session: vi.fn(),
 }))
-vi.mock("./session", () => ({ imageSession: mock.session }))
+vi.mock("@workspace/raster-image", () => ({ imageSession: mock.session }))
 const preview: Preview = {
   png: new Uint8Array([1, 2]),
   width: 960,
@@ -243,4 +243,27 @@ test("pans with a primary pointer and retains native touch scrolling", async () 
   fireEvent.pointerCancel(region)
   fireEvent.lostPointerCapture(region)
   expect(region.setPointerCapture).toHaveBeenCalledWith(1)
+})
+
+test("exports the selected full-resolution PNG and removes its link on close", async () => {
+  mock.open.mockResolvedValue({
+    ...image,
+    info: { ...image.info, format: "ICO", kind: "variant", count: 5 },
+  })
+  render(<Client messages={m} />)
+  choose(new File(["icon"], "sample.ico"))
+  const img = await screen.findByRole("img")
+  expect(screen.queryByRole("link", { name: m.downloadPng })).toBeNull()
+  fireEvent.load(img)
+  expect(
+    screen.getByRole("link", { name: m.downloadPng }).getAttribute("download")
+  ).toBe("sample-variant-1.png")
+  fireEvent.click(screen.getByRole("button", { name: m.next }))
+  expect(screen.queryByRole("link", { name: m.downloadPng })).toBeNull()
+  fireEvent.load(await screen.findByRole("img"))
+  expect(
+    screen.getByRole("link", { name: m.downloadPng }).getAttribute("download")
+  ).toBe("sample-variant-2.png")
+  fireEvent.click(screen.getByRole("button", { name: m.clear }))
+  expect(screen.queryByRole("link", { name: m.downloadPng })).toBeNull()
 })

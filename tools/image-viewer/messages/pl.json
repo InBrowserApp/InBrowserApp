@@ -52,5 +52,7 @@
   "poster": "Animowany PNG: wyświetlany jest tylko domyślny nieruchomy obraz. Klatki animacji są niedostępne.",
   "precision": "To podgląd 8-bitowy. Wysoka głębia bitowa i HDR są redukowane; kolory mogą się różnić od tych w edytorze z zarządzaniem kolorami.",
   "compatibility": "Osadzone profile są zachowywane tam, gdzie są obsługiwane. Obrazy pomocnicze, mapy głębi i metadane kontenera nie są wyświetlane.",
-  "licenses": "Licencje i źródła dekoderów"
+  "licenses": "Licencje i źródła dekoderów",
+  "downloadPng": "Pobierz PNG",
+  "pngNote": "Zapisz wybrany obraz jako 8-bitowy PNG. Wysoka głębia bitowa i HDR są redukowane. Powiększenie i tło podglądu nie zmieniają zapisanego obrazu."
 }

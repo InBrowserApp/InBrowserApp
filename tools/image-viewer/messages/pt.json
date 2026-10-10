@@ -52,5 +52,7 @@
   "poster": "PNG animado: apenas a imagem estática padrão é exibida. Os quadros da animação não estão disponíveis.",
   "precision": "Esta é uma visualização de 8 bits. A alta profundidade de bits e o HDR são reduzidos; as cores podem diferir das exibidas em um editor com gerenciamento de cores.",
   "compatibility": "Perfis incorporados são preservados quando compatíveis. Imagens auxiliares, mapas de profundidade e metadados do contêiner não são exibidos.",
-  "licenses": "Licenças e código-fonte dos decodificadores"
+  "licenses": "Licenças e código-fonte dos decodificadores",
+  "downloadPng": "Baixar PNG",
+  "pngNote": "Salve a imagem selecionada como um PNG de 8 bits. A alta profundidade de bits e o HDR são reduzidos. O zoom e os fundos da visualização não alteram a imagem salva."
 }

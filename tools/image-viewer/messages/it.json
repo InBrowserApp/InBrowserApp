@@ -52,5 +52,7 @@
   "poster": "PNG animato: viene mostrata solo l’immagine statica predefinita. I fotogrammi dell’animazione non sono disponibili.",
   "precision": "Questa è un’anteprima a 8 bit. La profondità di colore elevata e l’HDR vengono ridotti; i colori possono differire da quelli di un editor con gestione del colore.",
   "compatibility": "I profili incorporati vengono conservati dove supportato. Immagini ausiliarie, mappe di profondità e metadati del contenitore non vengono mostrati.",
-  "licenses": "Licenze e sorgenti dei decodificatori"
+  "licenses": "Licenze e sorgenti dei decodificatori",
+  "downloadPng": "Scarica PNG",
+  "pngNote": "Salva l’immagine selezionata come PNG a 8 bit. La profondità di colore elevata e l’HDR vengono ridotti. Lo zoom e gli sfondi dell’anteprima non modificano l’immagine salvata."
 }

@@ -12,4 +12,8 @@ Blättern Sie mit den Bildsteuerelementen durch TIFF-Seiten, Symbolgrößen, Bil
 
 Die Bildausrichtung wird bei der Anzeige berücksichtigt. Vorschauen verwenden 8-Bit-Kanäle, sodass hohe Bittiefe und HDR reduziert werden. Eingebettete Farbprofile bleiben erhalten, soweit unterstützt, aber dieser Betrachter ersetzt keinen Editor mit Farbmanagement. Ressourcenlimits des Browsers und Decoders können verhindern, dass sehr große oder komplexe Bilder geöffnet werden; es gibt keine feste Obergrenze für die Dateigröße oder die Anzahl der Bilder.
 
-Dateien bleiben auf diesem Gerät. Beim Schließen oder Ersetzen einer Datei werden ihr Decoder und ihre Vorschau freigegeben. Dieser Betrachter bearbeitet oder exportiert Ihre Bilder nicht und speichert sie auch nicht automatisch. Decoder-Lizenzen und Informationen zum zugehörigen Quellcode sind über die Bilddetails verfügbar.
+Dateien bleiben auf diesem Gerät. Beim Schließen oder Ersetzen einer Datei werden ihr Decoder und ihre Vorschau freigegeben. Dieser Betrachter bearbeitet Ihre Bilder nicht und speichert sie auch nicht automatisch. Decoder-Lizenzen und Informationen zum zugehörigen Quellcode sind über die Bilddetails verfügbar.
+
+## Ein PNG speichern
+
+Laden Sie das aktuell ausgewählte Bild, die Seite, Symbolvariante oder das zusammengesetzte Animationsbild als PNG-Standbild herunter. Das gespeicherte Bild behält die vollständigen Pixelabmessungen, die angewandte Ausrichtung und unterstützte Transparenz; Zoom und Vorschauhintergründe verändern es nicht. Der PNG-Export verwendet dasselbe 8-Bit-Bild wie die Vorschau und erhält daher weder hohe Bittiefe noch HDR. Bei animiertem PNG wird nur das Standard-Standbild exportiert. Die Erhaltung von Animationen oder Container-Metadaten wird nicht zugesichert.

@@ -52,5 +52,7 @@
   "poster": "Animert PNG: Bare standardstillbildet vises. Animasjonsbilder er ikke tilgjengelige.",
   "precision": "Dette er en 8-bits forhåndsvisning. Høy bitdybde og HDR reduseres; fargene kan avvike fra et bilderedigeringsprogram med fargestyring.",
   "compatibility": "Innebygde profiler bevares der det støttes. Hjelpebilder, dybdekart og metadata i beholderen vises ikke.",
-  "licenses": "Dekoderlisenser og kildekode"
+  "licenses": "Dekoderlisenser og kildekode",
+  "downloadPng": "Last ned PNG",
+  "pngNote": "Lagre det valgte bildet som et 8-bits PNG-bilde. Høy bitdybde og HDR reduseres. Zoom og bakgrunner i forhåndsvisningen endrer ikke det lagrede bildet."
 }

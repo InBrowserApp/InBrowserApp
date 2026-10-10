@@ -52,5 +52,7 @@
   "poster": "Animiertes PNG: Nur das Standard-Standbild wird angezeigt. Animationsbilder sind nicht verfügbar.",
   "precision": "Dies ist eine 8-Bit-Vorschau. Hohe Bittiefe und HDR werden reduziert; Farben können von der Darstellung in einem Editor mit Farbmanagement abweichen.",
   "compatibility": "Eingebettete Profile bleiben erhalten, soweit unterstützt. Zusatzbilder, Tiefenkarten und Container-Metadaten werden nicht angezeigt.",
-  "licenses": "Decoder-Lizenzen und Quellcode"
+  "licenses": "Decoder-Lizenzen und Quellcode",
+  "downloadPng": "PNG herunterladen",
+  "pngNote": "Speichern Sie das ausgewählte Bild als 8-Bit-PNG. Hohe Bittiefe und HDR werden reduziert. Zoom und Vorschauhintergründe verändern das gespeicherte Bild nicht."
 }

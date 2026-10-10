@@ -20,7 +20,7 @@ export function ZoomInput({
   }
   return (
     <Input
-      className="w-24"
+      className="w-20 sm:w-24"
       aria-label={label}
       type="number"
       inputMode="decimal"

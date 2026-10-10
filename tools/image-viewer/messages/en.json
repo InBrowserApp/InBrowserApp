@@ -52,5 +52,7 @@
   "poster": "Animated PNG: only the default still image is shown. Animation frames are unavailable.",
   "precision": "This is an 8-bit preview. High bit depth and HDR are reduced; colors may differ from a color-managed editor.",
   "compatibility": "Embedded profiles are retained where supported. Auxiliary images, depth maps and container metadata are not shown.",
-  "licenses": "Decoder licenses and source"
+  "licenses": "Decoder licenses and source",
+  "downloadPng": "Download PNG",
+  "pngNote": "Save the selected image as an 8-bit PNG. High bit depth and HDR are reduced. Zoom and preview backgrounds do not change the saved image."
 }

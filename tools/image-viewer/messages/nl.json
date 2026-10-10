@@ -52,5 +52,7 @@
   "poster": "Geanimeerde PNG: alleen de standaard stilstaande afbeelding wordt getoond. Animatieframes zijn niet beschikbaar.",
   "precision": "Dit voorbeeld heeft een bitdiepte van 8 bits. Hoge bitdiepte en HDR worden teruggebracht; kleuren kunnen afwijken van die in een editor met kleurbeheer.",
   "compatibility": "Ingesloten profielen blijven behouden waar dat wordt ondersteund. Hulpafbeeldingen, dieptekaarten en containermetadata worden niet getoond.",
-  "licenses": "Decoderlicenties en broncode"
+  "licenses": "Decoderlicenties en broncode",
+  "downloadPng": "PNG downloaden",
+  "pngNote": "Sla de geselecteerde afbeelding op als een PNG met een bitdiepte van 8 bits. Hoge bitdiepte en HDR worden teruggebracht. Zoom en voorbeeldachtergronden veranderen de opgeslagen afbeelding niet."
 }

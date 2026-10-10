@@ -12,4 +12,8 @@ Blader met de afbeeldingsbediening door TIFF-pagina's, pictogramgroottes, afbeel
 
 De oriëntatie wordt toegepast op de weergegeven afbeelding. Voorbeelden gebruiken kanalen van 8 bits, dus hoge bitdiepte en HDR worden teruggebracht. Ingesloten kleurprofielen blijven behouden waar dat wordt ondersteund, maar deze viewer vervangt geen editor met kleurbeheer. Beperkte browser- en decodermiddelen kunnen verhinderen dat zeer grote of complexe afbeeldingen worden geopend; er is geen vaste limiet voor de bestandsgrootte of het aantal afbeeldingen.
 
-Bestanden blijven op dit apparaat. Bij het sluiten of vervangen van een bestand worden de decoder en het voorbeeld vrijgegeven. Deze viewer bewerkt of exporteert je afbeeldingen niet en slaat ze niet automatisch op. Decoderlicenties en informatie over de bijbehorende broncode zijn beschikbaar bij de afbeeldingsdetails.
+Bestanden blijven op dit apparaat. Bij het sluiten of vervangen van een bestand worden de decoder en het voorbeeld vrijgegeven. Deze viewer bewerkt je afbeeldingen niet en slaat ze niet automatisch op. Decoderlicenties en informatie over de bijbehorende broncode zijn beschikbaar bij de afbeeldingsdetails.
+
+## Een PNG opslaan
+
+Download de geselecteerde afbeelding, pagina, pictogramvariant of het samengestelde animatieframe als een stilstaande PNG. De opgeslagen afbeelding behoudt de volledige pixelafmetingen, toegepaste oriëntatie en ondersteunde transparantie; zoom en voorbeeldachtergronden veranderen die niet. PNG-export gebruikt dezelfde afbeelding met een bitdiepte van 8 bits als het voorbeeld en behoudt dus geen hoge bitdiepte of HDR. Geanimeerde PNG exporteert alleen de standaard stilstaande afbeelding. Behoud van animatie of containermetadata wordt niet gegarandeerd.

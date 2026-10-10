@@ -8,26 +8,32 @@ import {
 } from "@workspace/ui/components/ui/alert"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { ChevronLeft, ChevronRight } from "@workspace/ui/icons"
-import { failureOf } from "./core/failure"
-import { ImageView } from "./image-view"
-import type { imageSession } from "./session"
-import type { Failure, Messages, OpenedImage, Preview } from "./types"
+import { RasterImageView } from "./raster-image-view"
+import type {
+  RasterImageMessages,
+  RasterImage,
+  RasterPreview,
+} from "./raster-image-types"
 
-export function ImageReader({
+export function RasterImageReader({
   image,
-  session,
+  render,
+  errorMessage,
+  download,
   messages: m,
 }: {
-  image: OpenedImage
-  session: ReturnType<typeof imageSession>
-  messages: Messages
+  image: RasterImage
+  render: (index: number) => Promise<RasterPreview>
+  errorMessage: (reason: unknown) => string
+  download: { label: string; filename: (index: number) => string }
+  messages: RasterImageMessages
 }) {
   const [index, setIndex] = useState(0)
   const [zoom, setZoom] = useState<number | null>(null)
   const [background, setBackground] = useState("checkerboard")
-  const [preview, setPreview] = useState<Preview | null>(image.preview)
+  const [preview, setPreview] = useState<RasterPreview | null>(image.preview)
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<Failure | null>(null)
+  const [error, setError] = useState<string | null>(null)
   const generation = useRef(0)
   useEffect(
     () => () => {
@@ -42,10 +48,10 @@ export function ImageReader({
     setError(null)
     setLoading(true)
     try {
-      const result = await session.render(next)
+      const result = await render(next)
       if (current === generation.current) setPreview(result)
     } catch (reason) {
-      if (current === generation.current) setError(failureOf(reason))
+      if (current === generation.current) setError(errorMessage(reason))
     } finally {
       if (current === generation.current) setLoading(false)
     }
@@ -53,8 +59,11 @@ export function ImageReader({
   return (
     <>
       {image.info.count > 1 ? (
-        <div className="flex shrink-0 flex-wrap items-center gap-1 border-b px-2 py-1">
-          <span className="ms-1 text-sm text-muted-foreground">
+        <div className="flex shrink-0 items-center gap-1 border-b px-2 py-1">
+          <span
+            title={m[image.info.kind]}
+            className="ms-1 min-w-0 truncate text-sm text-muted-foreground"
+          >
             {m[image.info.kind]}
           </span>
           <DocumentIconButton
@@ -66,14 +75,14 @@ export function ImageReader({
           </DocumentIconButton>
           <DocumentNumberInput
             aria-label={m[image.info.kind]}
-            className="w-20"
+            className="w-16 shrink-0 sm:w-20"
             min={1}
             max={image.info.count}
             value={index + 1}
             disabled={loading}
             onCommit={(value) => void select(value - 1)}
           />
-          <span className="text-sm text-muted-foreground tabular-nums">
+          <span className="shrink-0 text-sm text-muted-foreground tabular-nums">
             {m.count.replace("{total}", String(image.info.count))}
           </span>
           <DocumentIconButton
@@ -104,12 +113,12 @@ export function ImageReader({
         <div className="flex-1 p-3">
           <Alert variant="destructive">
             <AlertTitle>{m.itemError}</AlertTitle>
-            <AlertDescription>{m[error]}</AlertDescription>
+            <AlertDescription>{error}</AlertDescription>
           </Alert>
         </div>
       ) : null}
       {preview ? (
-        <ImageView
+        <RasterImageView
           key={index}
           preview={preview}
           info={image.info}
@@ -118,6 +127,10 @@ export function ImageReader({
           background={background}
           onBackground={setBackground}
           messages={m}
+          download={{
+            label: download.label,
+            filename: download.filename(index),
+          }}
         />
       ) : null}
     </>

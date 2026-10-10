@@ -12,4 +12,8 @@ Przeglądaj strony TIFF, rozmiary ikon, kolekcje obrazów i klatki animacji za p
 
 Orientacja jest uwzględniana przy wyświetlaniu obrazu. Podglądy używają 8-bitowych kanałów, więc wysoka głębia bitowa i HDR są redukowane. Osadzone profile kolorów są zachowywane tam, gdzie są obsługiwane, ale ta przeglądarka nie zastępuje edytora z zarządzaniem kolorami. Ograniczenia zasobów przeglądarki i dekodera mogą uniemożliwić otwarcie bardzo dużych lub złożonych obrazów; nie ma stałego limitu rozmiaru pliku ani liczby obrazów.
 
-Pliki pozostają na tym urządzeniu. Zamknięcie lub zastąpienie pliku zwalnia jego dekoder i podgląd. Ta przeglądarka nie edytuje, nie eksportuje ani nie zapisuje automatycznie obrazów. Licencje dekoderów i informacje o odpowiadających im źródłach są dostępne w szczegółach obrazu.
+Pliki pozostają na tym urządzeniu. Zamknięcie lub zastąpienie pliku zwalnia jego dekoder i podgląd. Ta przeglądarka nie edytuje ani nie zapisuje automatycznie obrazów. Licencje dekoderów i informacje o odpowiadających im źródłach są dostępne w szczegółach obrazu.
+
+## Zapisz PNG
+
+Pobierz aktualnie wybrany obraz, stronę, wariant ikony lub złożoną klatkę animacji jako nieruchomy PNG. Zapisany obraz zachowuje pełne wymiary w pikselach, zastosowaną orientację i obsługiwaną przezroczystość; powiększenie i tło podglądu go nie zmieniają. Eksport PNG używa tego samego 8-bitowego obrazu co podgląd, więc nie zachowuje wysokiej głębi bitowej ani HDR. Animowany PNG eksportuje tylko domyślny nieruchomy obraz. Zachowanie animacji ani metadanych kontenera nie jest gwarantowane.
