@@ -33,6 +33,94 @@
  	}
  	o[o.length] = "</cols>";
  	return o.join("");
+@@ -24724,6 +24727,7 @@
+     numbers_format_cell(ret, t | v << 8, flags, lut.ofmt[zidx], lut.nfmt[zidx]);
+   if (t == 7)
+     ret.v /= 86400;
++  if (opts && opts.numbersNames) ret.numbersType = t;
+   return ret;
+ }
+ function parse_new_storage(buf, lut, opts) {
+@@ -24824,6 +24828,7 @@
+     numbers_format_cell(ret, t | 5 << 8, fields >> 13, lut.ofmt[zidx], lut.nfmt[zidx]);
+   if (t == 7)
+     ret.v /= 86400;
++  if (opts && opts.numbersNames) ret.numbersType = t;
+   return ret;
+ }
+ function write_new_storage(cell, lut) {
+@@ -25196,6 +25201,7 @@
+ function parse_TST_TableModelArchive(M, root, ws, opts) {
+   var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n;
+   var pb = parse_shallow(root.data);
++  if (opts && opts.numbersNames) ws["!numbers"] = { table: pb[8] && pb[8][0] ? u8str(pb[8][0].data) : "" };
+   var range = { s: { r: 0, c: 0 }, e: { r: 0, c: 0 } };
+   range.e.r = (varint_to_i32(pb[6][0].data) >>> 0) - 1;
+   if (range.e.r < 0)
+@@ -25228,9 +25234,12 @@
+   var rtt = parse_shallow(store[9][0].data)[1].map(function(p) {
+     return parse_shallow(p.data);
+   });
++  var visitedTiles = new Set();
+   rtt.forEach(function(kv) {
+     _R = varint_to_i32(kv[1][0].data);
+     var tidx = varint_to_i32(kv[2][0].data);
++    if (opts && opts.WTF && visitedTiles.has(tidx)) throw new Error("Unsupported duplicate row tile index");
++    visitedTiles.add(tidx);
+     var t = tile[1][tidx];
+     if (!t)
+       throw "NUMBERS missing tile " + tidx;
+@@ -25256,12 +25265,13 @@
+     });
+     _R += _tile.nrows;
+   });
++  if (opts && opts.WTF && visitedTiles.size != (tile[1] || []).length) throw new Error("Unsupported incomplete row tile index");
+   if ((_i = store[13]) == null ? void 0 : _i[0]) {
+     var ref = M[parse_TSP_Reference(store[13][0].data)][0];
+     var mtype = varint_to_i32(ref.meta[1][0].data);
+     if (mtype != 6144)
+       throw new Error("Expected merge type 6144, found ".concat(mtype));
+-    ws["!merges"] = (_j = parse_shallow(ref.data)) == null ? void 0 : _j[1].map(function(pi) {
++    ws["!merges"] = (_j = parse_shallow(ref.data)) == null ? void 0 : (_j[1] || []).map(function(pi) {
+       var merge = parse_shallow(pi.data);
+       var origin = u8_to_dataview(parse_shallow(merge[1][0].data)[1][0].data), size = u8_to_dataview(parse_shallow(merge[2][0].data)[1][0].data);
+       return {
+@@ -25349,7 +25359,10 @@
+       if (mtype == 2) {
+         var root2 = parse_TN_SheetArchive(M, m, opts);
+         root2.sheets.forEach(function(sheet, idx) {
+-          book_append_sheet(out, sheet, idx == 0 ? root2.name : root2.name + "_" + idx, true);
++          if (opts && opts.numbersNames) {
++            sheet["!numbers"].sheet = root2.name;
++            book_append_sheet(out, sheet, "Table" + (out.SheetNames.length + 1));
++          } else book_append_sheet(out, sheet, idx == 0 ? root2.name : root2.name + "_" + idx, true);
+         });
+       }
+     });
+@@ -25369,18 +25382,22 @@
+   cfb.FileIndex.forEach(function(s) {
+     if (!s.name.match(/\.iwa$/))
+       return;
+-    if (s.content[0] != 0)
++    if (s.content[0] != 0) {
++      if (opts && opts.WTF) throw new Error("Invalid IWA stream");
+       return;
++    }
+     var o;
+     try {
+       o = decompress_iwa_file(s.content);
+     } catch (e) {
++      if (opts && opts.WTF) throw e;
+       return console.log("?? " + s.content.length + " " + (e.message || e));
+     }
+     var packets;
+     try {
+       packets = parse_iwa_file(o);
+     } catch (e) {
++      if (opts && opts.WTF) throw e;
+       return console.log("## " + (e.message || e));
+     }
+     packets.forEach(function(packet) {
 --- a/xlsx.mjs
 +++ b/xlsx.mjs
 @@ -4261,10 +4261,11 @@
@@ -68,3 +156,91 @@
  	}
  	o[o.length] = "</cols>";
  	return o.join("");
+@@ -24829,6 +24832,7 @@
+     numbers_format_cell(ret, t | v << 8, flags, lut.ofmt[zidx], lut.nfmt[zidx]);
+   if (t == 7)
+     ret.v /= 86400;
++  if (opts && opts.numbersNames) ret.numbersType = t;
+   return ret;
+ }
+ function parse_new_storage(buf, lut, opts) {
+@@ -24929,6 +24933,7 @@
+     numbers_format_cell(ret, t | 5 << 8, fields >> 13, lut.ofmt[zidx], lut.nfmt[zidx]);
+   if (t == 7)
+     ret.v /= 86400;
++  if (opts && opts.numbersNames) ret.numbersType = t;
+   return ret;
+ }
+ function write_new_storage(cell, lut) {
+@@ -25301,6 +25306,7 @@
+ function parse_TST_TableModelArchive(M, root, ws, opts) {
+   var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n;
+   var pb = parse_shallow(root.data);
++  if (opts && opts.numbersNames) ws["!numbers"] = { table: pb[8] && pb[8][0] ? u8str(pb[8][0].data) : "" };
+   var range = { s: { r: 0, c: 0 }, e: { r: 0, c: 0 } };
+   range.e.r = (varint_to_i32(pb[6][0].data) >>> 0) - 1;
+   if (range.e.r < 0)
+@@ -25333,9 +25339,12 @@
+   var rtt = parse_shallow(store[9][0].data)[1].map(function(p) {
+     return parse_shallow(p.data);
+   });
++  var visitedTiles = new Set();
+   rtt.forEach(function(kv) {
+     _R = varint_to_i32(kv[1][0].data);
+     var tidx = varint_to_i32(kv[2][0].data);
++    if (opts && opts.WTF && visitedTiles.has(tidx)) throw new Error("Unsupported duplicate row tile index");
++    visitedTiles.add(tidx);
+     var t = tile[1][tidx];
+     if (!t)
+       throw "NUMBERS missing tile " + tidx;
+@@ -25361,12 +25370,13 @@
+     });
+     _R += _tile.nrows;
+   });
++  if (opts && opts.WTF && visitedTiles.size != (tile[1] || []).length) throw new Error("Unsupported incomplete row tile index");
+   if ((_i = store[13]) == null ? void 0 : _i[0]) {
+     var ref = M[parse_TSP_Reference(store[13][0].data)][0];
+     var mtype = varint_to_i32(ref.meta[1][0].data);
+     if (mtype != 6144)
+       throw new Error("Expected merge type 6144, found ".concat(mtype));
+-    ws["!merges"] = (_j = parse_shallow(ref.data)) == null ? void 0 : _j[1].map(function(pi) {
++    ws["!merges"] = (_j = parse_shallow(ref.data)) == null ? void 0 : (_j[1] || []).map(function(pi) {
+       var merge = parse_shallow(pi.data);
+       var origin = u8_to_dataview(parse_shallow(merge[1][0].data)[1][0].data), size = u8_to_dataview(parse_shallow(merge[2][0].data)[1][0].data);
+       return {
+@@ -25454,7 +25464,10 @@
+       if (mtype == 2) {
+         var root2 = parse_TN_SheetArchive(M, m, opts);
+         root2.sheets.forEach(function(sheet, idx) {
+-          book_append_sheet(out, sheet, idx == 0 ? root2.name : root2.name + "_" + idx, true);
++          if (opts && opts.numbersNames) {
++            sheet["!numbers"].sheet = root2.name;
++            book_append_sheet(out, sheet, "Table" + (out.SheetNames.length + 1));
++          } else book_append_sheet(out, sheet, idx == 0 ? root2.name : root2.name + "_" + idx, true);
+         });
+       }
+     });
+@@ -25474,18 +25487,22 @@
+   cfb.FileIndex.forEach(function(s) {
+     if (!s.name.match(/\.iwa$/))
+       return;
+-    if (s.content[0] != 0)
++    if (s.content[0] != 0) {
++      if (opts && opts.WTF) throw new Error("Invalid IWA stream");
+       return;
++    }
+     var o;
+     try {
+       o = decompress_iwa_file(s.content);
+     } catch (e) {
++      if (opts && opts.WTF) throw e;
+       return console.log("?? " + s.content.length + " " + (e.message || e));
+     }
+     var packets;
+     try {
+       packets = parse_iwa_file(o);
+     } catch (e) {
++      if (opts && opts.WTF) throw e;
+       return console.log("## " + (e.message || e));
+     }
+     packets.forEach(function(packet) {

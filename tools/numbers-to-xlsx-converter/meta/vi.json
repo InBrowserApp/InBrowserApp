@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi Numbers sang XLSX",
+  "description": "Chuyển bảng tính Apple Numbers trên thiết bị sang Excel XLSX ngay trong trình duyệt. Kiểm tra các bảng, xem ánh xạ trang tính và tải dữ liệu xuống mà không cần tải lên."
+}

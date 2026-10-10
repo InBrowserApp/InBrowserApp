@@ -11,16 +11,27 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@workspace/ui/components/ui/select"
-import { cellPosition } from "./core/navigation"
-import type { Cell, Loaded, Messages, Preview } from "./types"
+import type {
+  Cell,
+  Loaded,
+  Preview,
+  SheetInfo,
+} from "@workspace/spreadsheet-conversion/types"
+
+import type { Messages } from "@workspace/ui/lib/spreadsheet-preview"
 
 type Props = {
+  cellPosition: (
+    value: string,
+    sheet: SheetInfo
+  ) => { row: number; column: number } | null
   info: Loaded
   preview?: Preview
   requestPreview: (sheet: number, row: number, column: number) => void
   messages: Messages
 }
 export function Worksheet({
+  cellPosition,
   info,
   preview: incomingPreview,
   requestPreview,

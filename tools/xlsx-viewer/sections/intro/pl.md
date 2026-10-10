@@ -15,3 +15,5 @@ Nie ma stałego limitu rozmiaru pliku ani liczby arkuszy. W przypadku złożonyc
 Eksport arkusza uwzględnia ukryte wiersze i kolumny oraz wykorzystuje zapisane wyniki formuł. Brakujące zapisane wyniki stają się pustymi komórkami, błędy arkusza pozostają widoczne, a scalone komórki nie są rozwijane. JSON zachowuje pierwszy wiersz jako dane i używa tablic wierszy z null dla pustych komórek. Markdown może użyć pierwszego wiersza jako nagłówka. Tekst sformatowany stosuje obsługiwane formaty liczb; zapisane daty pozostają numerami seryjnymi Excela. Wykresy, obrazy, komentarze i style nie są eksportowane. W przypadku importowanych formatów eksport odzwierciedla dane arkusza dostępne w tej przeglądarce oraz jej informacje o zgodności.
 
 W przypadku starszego skoroszytu XLS użyj narzędzia [Konwerter XLS na XLSX](../xls-to-xlsx-converter/), aby sprawdzić zaimportowane dane i pobrać kopię w nowoczesnym formacie Excel. Konwersja ma własne informacje o zgodności; otwórz plik ponownie w konwerterze.
+
+Aby wyeksportować lokalne tabele Numbers jako arkusze Excel, użyj narzędzia [Konwerter Numbers na XLSX](../numbers-to-xlsx-converter/).

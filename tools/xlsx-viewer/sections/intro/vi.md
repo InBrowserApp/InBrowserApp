@@ -15,3 +15,5 @@ Không có giới hạn cố định về kích thước tệp hoặc số lư�
 Việc xuất trang tính bao gồm các hàng và cột ẩn và sử dụng kết quả công thức đã lưu. Kết quả chưa được lưu trở thành ô trống, lỗi bảng tính vẫn hiển thị và ô gộp không được mở rộng. JSON giữ hàng đầu tiên làm dữ liệu và sử dụng các mảng hàng với null cho ô trống. Markdown có thể dùng hàng đầu tiên làm hàng tiêu đề. Văn bản đã định dạng tuân theo các định dạng số được hỗ trợ; ngày tháng được lưu vẫn là số sê-ri Excel. Biểu đồ, hình ảnh, nhận xét và kiểu định dạng không được xuất. Với các định dạng được nhập, kết quả xuất phản ánh dữ liệu trang tính có sẵn trong trình xem này và các ghi chú về khả năng tương thích.
 
 Với sổ làm việc XLS đời cũ, hãy dùng [Trình chuyển đổi XLS sang XLSX](../xls-to-xlsx-converter/) để kiểm tra dữ liệu đã nhập và tải xuống bản sao ở định dạng Excel hiện đại. Việc chuyển đổi có ghi chú riêng về khả năng tương thích; hãy mở lại tệp trong trình chuyển đổi.
+
+Để xuất các bảng Numbers trên thiết bị thành trang tính Excel, hãy dùng [Trình chuyển đổi Numbers sang XLSX](../numbers-to-xlsx-converter/).

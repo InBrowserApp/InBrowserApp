@@ -173,6 +173,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "nanoid-generator": () => import("@tool/nanoid-generator/page"),
   "notebook-viewer": () => import("@tool/notebook-viewer/page"),
   "number-base-converter": () => import("@tool/number-base-converter/page"),
+  "numbers-to-xlsx-converter": () =>
+    import("@tool/numbers-to-xlsx-converter/page"),
   "odt-viewer": () => import("@tool/odt-viewer/page"),
   "ofd-viewer": () => import("@tool/ofd-viewer/page"),
   "openapi-to-typescript-converter": () =>

@@ -1,6 +1,11 @@
 import type { WorkBook } from "xlsx"
-import { describe, failure, readXls, writeXlsx } from "./core/workbook"
-import { preview } from "./core/preview"
+import { readXls } from "./core/workbook"
+import {
+  describe,
+  failure,
+  writeXlsx,
+  preview,
+} from "@workspace/spreadsheet-conversion"
 import type { Request, Response } from "./types"
 
 declare const self: DedicatedWorkerGlobalScope

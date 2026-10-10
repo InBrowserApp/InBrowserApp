@@ -15,3 +15,5 @@ Det er ingen fast grense for filstørrelse eller antall ark. Nettleserens faktis
 Regnearkeksport inkluderer skjulte rader og kolonner og bruker lagrede formelresultater. Manglende lagrede resultater blir tomme celler, regnearkfeil forblir synlige, og sammenslåtte celler utvides ikke. JSON beholder den første raden som data og bruker en liste av radlister med null for tomme celler. Markdown kan bruke den første raden som overskriftsrad. Formatert tekst følger støttede tallformater; lagrede datoer forblir Excel-serienumre. Diagrammer, bilder, kommentarer og formatering eksporteres ikke. For importerte formater gjenspeiler eksporten regnearkdataene som er tilgjengelige i denne viseren, og merknadene om kompatibilitet.
 
 For en eldre XLS-arbeidsbok kan du bruke [XLS til XLSX-konverterer](../xls-to-xlsx-converter/) til å se gjennom de importerte dataene og laste ned en kopi i et moderne Excel-format. Konverteringen har egne merknader om kompatibilitet; åpne filen på nytt i konvertereren.
+
+For å eksportere lokale Numbers-tabeller som Excel-regneark kan du bruke [Numbers til XLSX-konverterer](../numbers-to-xlsx-converter/).

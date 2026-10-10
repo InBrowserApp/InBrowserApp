@@ -1,0 +1,26 @@
+export type Messages = Record<
+  | "address"
+  | "blank"
+  | "details"
+  | "empty"
+  | "formula"
+  | "go"
+  | "goTo"
+  | "hidden"
+  | "invalidAddress"
+  | "nextColumns"
+  | "nextRows"
+  | "noCache"
+  | "numberFormat"
+  | "preview"
+  | "previewNote"
+  | "previousColumns"
+  | "previousRows"
+  | "range"
+  | "sheet"
+  | "storedValue"
+  | "value"
+  | "veryHidden"
+  | "window",
+  string
+>

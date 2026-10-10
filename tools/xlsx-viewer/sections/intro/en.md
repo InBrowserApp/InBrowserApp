@@ -14,3 +14,5 @@ There is no fixed file-size or sheet-count cap. Actual browser memory and archiv
 
 Worksheet export includes hidden rows and columns and uses saved formula results. Missing saved results become blanks, spreadsheet errors stay visible, and merged cells are not expanded. JSON keeps the first row as data and uses row arrays with null for blank cells. Markdown can use the first row as a header. Formatted text follows supported number formats; stored dates remain Excel serial numbers. Charts, images, comments, and styling are not exported. For imported formats, the export reflects the worksheet data available in this viewer and its compatibility notes.
 For a legacy XLS workbook, use the [XLS to XLSX Converter](../xls-to-xlsx-converter/) to inspect its imported data and download a modern Excel copy. Conversion has its own compatibility notes; open the file again in the converter.
+
+To export local Numbers tables as Excel worksheets, use the [Numbers to XLSX Converter](../numbers-to-xlsx-converter/).

@@ -15,3 +15,5 @@ Det finns ingen fast gräns för filstorlek eller antal kalkylblad. Webbläsaren
 Kalkylbladsexport tar med dolda rader och kolumner och använder sparade formelresultat. Saknade sparade resultat blir tomma celler, kalkylbladsfel förblir synliga och sammanfogade celler utökas inte. JSON behåller första raden som data och använder radarrayer med null för tomma celler. Markdown kan använda första raden som rubrikrad. Formaterad text följer talformat som stöds; lagrade datum förblir Excels serienummer. Diagram, bilder, kommentarer och formatering exporteras inte. För importerade format återspeglar exporten de kalkylbladsdata som är tillgängliga i den här visaren och dess kompatibilitetsnotiser.
 
 För en äldre XLS-arbetsbok kan du använda [XLS till XLSX-konverterare](../xls-to-xlsx-converter/) för att granska importerade data och ladda ner en kopia i ett modernt Excel-format. Konverteringen har egna kompatibilitetsnotiser; öppna filen igen i konverteraren.
+
+Använd [Numbers till XLSX-konverterare](../numbers-to-xlsx-converter/) för att exportera lokala Numbers-tabeller som Excel-kalkylblad.

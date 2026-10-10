@@ -11,7 +11,8 @@
     "shadcn": "catalog:",
     "tailwind-merge": "catalog:",
     "tw-animate-css": "catalog:",
-    "dompurify": "catalog:"
+    "dompurify": "catalog:",
+    "@workspace/spreadsheet-conversion": "workspace:*"
   },
   "peerDependencies": {
     "react": "catalog:",
