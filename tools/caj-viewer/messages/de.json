@@ -53,5 +53,6 @@
   "textHint": "Suchen und Auswählen funktioniert nur dort, wo das Dokument Text enthält. Gescannte Seiten werden als Bilder angezeigt; eine Texterkennung (OCR) findet nicht statt.",
   "substituted": "Einige Zeichen werden mit Ersatzglyphen dargestellt. Ihr Aussehen kann vom Original abweichen.",
   "outlineWarning": "Einige Einträge im Inhaltsverzeichnis konnten nicht angezeigt werden oder wurden angepasst. Die Seiten lassen sich weiterhin lesen.",
-  "format": "Erkanntes Format: {format}"
+  "format": "Erkanntes Format: {format}",
+  "download": "PDF herunterladen"
 }

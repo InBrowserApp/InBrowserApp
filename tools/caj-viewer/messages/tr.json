@@ -53,5 +53,6 @@
   "textHint": "Arama ve seçim yalnızca belgenin metin içerdiği yerlerde çalışır. Taranmış sayfalar görüntü olarak gösterilir; OCR yapılmaz.",
   "substituted": "Bazı karakterler yerine farklı glifler kullanılıyor. Görünümleri asıllarından farklı olabilir.",
   "outlineWarning": "Bazı içindekiler öğeleri gösterilemedi veya uyarlandı. Sayfaları okumaya devam edebilirsiniz.",
-  "format": "Algılanan biçim: {format}"
+  "format": "Algılanan biçim: {format}",
+  "download": "PDF indir"
 }

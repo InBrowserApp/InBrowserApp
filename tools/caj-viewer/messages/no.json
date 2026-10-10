@@ -53,5 +53,6 @@
   "textHint": "Søk og markering fungerer bare der dokumentet inneholder tekst. Skannede sider vises som bilder; OCR utføres ikke.",
   "substituted": "Noen tegn vises med erstatningsglyfer. Utseendet kan avvike fra originalen.",
   "outlineWarning": "Noen oppføringer i innholdsfortegnelsen kunne ikke vises eller ble justert. Sidene kan fortsatt leses.",
-  "format": "Oppdaget format: {format}"
+  "format": "Oppdaget format: {format}",
+  "download": "Last ned PDF"
 }

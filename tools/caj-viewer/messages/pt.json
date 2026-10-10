@@ -53,5 +53,6 @@
   "textHint": "A busca e a seleção funcionam apenas onde o documento contém texto. Páginas digitalizadas são exibidas como imagens; não é realizado OCR.",
   "substituted": "Alguns caracteres usam glifos substitutos. Sua aparência pode diferir do original.",
   "outlineWarning": "Algumas entradas do sumário não puderam ser exibidas ou foram ajustadas. As páginas continuam disponíveis para leitura.",
-  "format": "Formato detectado: {format}"
+  "format": "Formato detectado: {format}",
+  "download": "Baixar PDF"
 }

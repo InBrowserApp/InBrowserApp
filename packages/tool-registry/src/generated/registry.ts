@@ -3849,6 +3849,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "caj-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "caj",
+      "kdh",
+      "nh",
+      "pdf",
+      "converter",
+      "paper",
+      "document",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل CAJ إلى PDF",
+        description:
+          "حوّل مستندات CAJ وKDH وNH المدعومة إلى PDF محليًا. عاين الصفحات ونزّل ملف PDF دون رفع ورقتك البحثية.",
+      },
+      de: {
+        name: "CAJ-zu-PDF-Konverter",
+        description:
+          "Konvertiere unterstützte CAJ-, KDH- und NH-Dokumente lokal in PDF. Sieh dir die Seitenvorschau an und lade eine PDF herunter, ohne deinen Artikel hochzuladen.",
+      },
+      en: {
+        name: "CAJ to PDF Converter",
+        description:
+          "Convert supported CAJ, KDH, and NH documents to PDF locally. Preview the pages and download a PDF without uploading your paper.",
+      },
+      es: {
+        name: "Conversor de CAJ a PDF",
+        description:
+          "Convierte documentos CAJ, KDH y NH compatibles a PDF de forma local. Revisa la vista previa de las páginas y descarga un PDF sin subir tu artículo.",
+      },
+      fr: {
+        name: "Convertisseur CAJ en PDF",
+        description:
+          "Convertissez localement les documents CAJ, KDH et NH pris en charge en PDF. Prévisualisez les pages et téléchargez un PDF sans envoyer votre article.",
+      },
+      he: {
+        name: "ממיר CAJ ל־PDF",
+        description:
+          "המירו מסמכי CAJ, KDH ו־NH נתמכים ל־PDF באופן מקומי. צפו בתצוגה מקדימה של העמודים והורידו PDF בלי להעלות את המאמר לשרת.",
+      },
+      hi: {
+        name: "CAJ से PDF कन्वर्टर",
+        description:
+          "समर्थित CAJ, KDH और NH दस्तावेज़ों को स्थानीय रूप से PDF में बदलें। पृष्ठों का पूर्वावलोकन देखें और अपना शोधपत्र अपलोड किए बिना PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter CAJ ke PDF",
+        description:
+          "Konversi dokumen CAJ, KDH, dan NH yang didukung ke PDF secara lokal. Pratinjau halaman dan unduh PDF tanpa mengunggah makalah Anda.",
+      },
+      it: {
+        name: "Convertitore da CAJ a PDF",
+        description:
+          "Converti in PDF i documenti CAJ, KDH e NH supportati in locale. Visualizza le pagine in anteprima e scarica un PDF senza caricare il documento su un server.",
+      },
+      ja: {
+        name: "CAJ から PDF への変換ツール",
+        description:
+          "対応する CAJ、KDH、NH 文書を端末内で PDF に変換できます。論文をアップロードせずに、ページをプレビューして PDF をダウンロードできます。",
+      },
+      ko: {
+        name: "CAJ를 PDF로 변환하는 도구",
+        description:
+          "지원되는 CAJ, KDH 및 NH 문서를 로컬에서 PDF로 변환하세요. 논문을 업로드하지 않고 페이지를 미리 보고 PDF를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar CAJ kepada PDF",
+        description:
+          "Tukar dokumen CAJ, KDH dan NH yang disokong kepada PDF secara setempat. Pratonton halaman dan muat turun PDF tanpa memuat naik makalah anda.",
+      },
+      nl: {
+        name: "CAJ-naar-PDF-converter",
+        description:
+          "Zet ondersteunde CAJ-, KDH- en NH-documenten lokaal om naar PDF. Bekijk de pagina’s en download een PDF zonder je artikel te uploaden.",
+      },
+      no: {
+        name: "Konverterer fra CAJ til PDF",
+        description:
+          "Konverter støttede CAJ-, KDH- og NH-dokumenter til PDF lokalt. Forhåndsvis sidene og last ned en PDF uten å laste opp dokumentet.",
+      },
+      pl: {
+        name: "Konwerter CAJ na PDF",
+        description:
+          "Konwertuj obsługiwane dokumenty CAJ, KDH i NH na PDF lokalnie. Przeglądaj strony i pobieraj plik PDF bez przesyłania publikacji.",
+      },
+      pt: {
+        name: "Conversor de CAJ para PDF",
+        description:
+          "Converta documentos CAJ, KDH e NH compatíveis para PDF localmente. Visualize as páginas e baixe um PDF sem enviar seu artigo.",
+      },
+      ru: {
+        name: "Конвертер CAJ в PDF",
+        description:
+          "Преобразуйте поддерживаемые документы CAJ, KDH и NH в PDF локально. Просматривайте страницы и скачивайте PDF, не отправляя работу на сервер.",
+      },
+      sv: {
+        name: "CAJ till PDF-konverterare",
+        description:
+          "Konvertera CAJ-, KDH- och NH-dokument som stöds till PDF lokalt. Förhandsvisa sidorna och ladda ner en PDF utan att ladda upp ditt dokument.",
+      },
+      th: {
+        name: "โปรแกรมแปลง CAJ เป็น PDF",
+        description:
+          "แปลงเอกสาร CAJ, KDH และ NH ที่รองรับเป็น PDF ภายในอุปกรณ์ ดูตัวอย่างหน้าและดาวน์โหลด PDF โดยไม่ต้องอัปโหลดเอกสารของคุณ",
+      },
+      tr: {
+        name: "CAJ’den PDF’ye Dönüştürücü",
+        description:
+          "Desteklenen CAJ, KDH ve NH belgelerini yerel olarak PDF’ye dönüştürün. Makalenizi yüklemeden sayfaları önizleyin ve PDF indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CAJ sang PDF",
+        description:
+          "Chuyển đổi tài liệu CAJ, KDH và NH được hỗ trợ sang PDF ngay trên thiết bị. Xem trước các trang và tải xuống PDF mà không cần tải bài nghiên cứu lên.",
+      },
+      "zh-CN": {
+        name: "CAJ 转 PDF 转换器",
+        description:
+          "在本地将受支持的 CAJ、KDH 和 NH 文档转换为 PDF。无需上传论文，即可预览页面并下载 PDF。",
+      },
+      "zh-TW": {
+        name: "CAJ 轉 PDF 轉換器",
+        description:
+          "在本機將支援的 CAJ、KDH 與 NH 文件轉換為 PDF。預覽頁面並下載 PDF，無須上傳論文。",
+      },
+    },
+  },
+  {
     slug: "caj-viewer",
     category: "document",
     icon: "file-text",
@@ -33953,6 +34085,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "工作日計算器",
         description:
           "統計日期之間的工作日，並依自訂週末與節假日進行工作日加減。",
+      },
+    },
+  },
+  "caj-to-pdf-converter": {
+    slug: "caj-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "caj",
+      "kdh",
+      "nh",
+      "pdf",
+      "converter",
+      "paper",
+      "document",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل CAJ إلى PDF",
+        description:
+          "حوّل مستندات CAJ وKDH وNH المدعومة إلى PDF محليًا. عاين الصفحات ونزّل ملف PDF دون رفع ورقتك البحثية.",
+      },
+      de: {
+        name: "CAJ-zu-PDF-Konverter",
+        description:
+          "Konvertiere unterstützte CAJ-, KDH- und NH-Dokumente lokal in PDF. Sieh dir die Seitenvorschau an und lade eine PDF herunter, ohne deinen Artikel hochzuladen.",
+      },
+      en: {
+        name: "CAJ to PDF Converter",
+        description:
+          "Convert supported CAJ, KDH, and NH documents to PDF locally. Preview the pages and download a PDF without uploading your paper.",
+      },
+      es: {
+        name: "Conversor de CAJ a PDF",
+        description:
+          "Convierte documentos CAJ, KDH y NH compatibles a PDF de forma local. Revisa la vista previa de las páginas y descarga un PDF sin subir tu artículo.",
+      },
+      fr: {
+        name: "Convertisseur CAJ en PDF",
+        description:
+          "Convertissez localement les documents CAJ, KDH et NH pris en charge en PDF. Prévisualisez les pages et téléchargez un PDF sans envoyer votre article.",
+      },
+      he: {
+        name: "ממיר CAJ ל־PDF",
+        description:
+          "המירו מסמכי CAJ, KDH ו־NH נתמכים ל־PDF באופן מקומי. צפו בתצוגה מקדימה של העמודים והורידו PDF בלי להעלות את המאמר לשרת.",
+      },
+      hi: {
+        name: "CAJ से PDF कन्वर्टर",
+        description:
+          "समर्थित CAJ, KDH और NH दस्तावेज़ों को स्थानीय रूप से PDF में बदलें। पृष्ठों का पूर्वावलोकन देखें और अपना शोधपत्र अपलोड किए बिना PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter CAJ ke PDF",
+        description:
+          "Konversi dokumen CAJ, KDH, dan NH yang didukung ke PDF secara lokal. Pratinjau halaman dan unduh PDF tanpa mengunggah makalah Anda.",
+      },
+      it: {
+        name: "Convertitore da CAJ a PDF",
+        description:
+          "Converti in PDF i documenti CAJ, KDH e NH supportati in locale. Visualizza le pagine in anteprima e scarica un PDF senza caricare il documento su un server.",
+      },
+      ja: {
+        name: "CAJ から PDF への変換ツール",
+        description:
+          "対応する CAJ、KDH、NH 文書を端末内で PDF に変換できます。論文をアップロードせずに、ページをプレビューして PDF をダウンロードできます。",
+      },
+      ko: {
+        name: "CAJ를 PDF로 변환하는 도구",
+        description:
+          "지원되는 CAJ, KDH 및 NH 문서를 로컬에서 PDF로 변환하세요. 논문을 업로드하지 않고 페이지를 미리 보고 PDF를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar CAJ kepada PDF",
+        description:
+          "Tukar dokumen CAJ, KDH dan NH yang disokong kepada PDF secara setempat. Pratonton halaman dan muat turun PDF tanpa memuat naik makalah anda.",
+      },
+      nl: {
+        name: "CAJ-naar-PDF-converter",
+        description:
+          "Zet ondersteunde CAJ-, KDH- en NH-documenten lokaal om naar PDF. Bekijk de pagina’s en download een PDF zonder je artikel te uploaden.",
+      },
+      no: {
+        name: "Konverterer fra CAJ til PDF",
+        description:
+          "Konverter støttede CAJ-, KDH- og NH-dokumenter til PDF lokalt. Forhåndsvis sidene og last ned en PDF uten å laste opp dokumentet.",
+      },
+      pl: {
+        name: "Konwerter CAJ na PDF",
+        description:
+          "Konwertuj obsługiwane dokumenty CAJ, KDH i NH na PDF lokalnie. Przeglądaj strony i pobieraj plik PDF bez przesyłania publikacji.",
+      },
+      pt: {
+        name: "Conversor de CAJ para PDF",
+        description:
+          "Converta documentos CAJ, KDH e NH compatíveis para PDF localmente. Visualize as páginas e baixe um PDF sem enviar seu artigo.",
+      },
+      ru: {
+        name: "Конвертер CAJ в PDF",
+        description:
+          "Преобразуйте поддерживаемые документы CAJ, KDH и NH в PDF локально. Просматривайте страницы и скачивайте PDF, не отправляя работу на сервер.",
+      },
+      sv: {
+        name: "CAJ till PDF-konverterare",
+        description:
+          "Konvertera CAJ-, KDH- och NH-dokument som stöds till PDF lokalt. Förhandsvisa sidorna och ladda ner en PDF utan att ladda upp ditt dokument.",
+      },
+      th: {
+        name: "โปรแกรมแปลง CAJ เป็น PDF",
+        description:
+          "แปลงเอกสาร CAJ, KDH และ NH ที่รองรับเป็น PDF ภายในอุปกรณ์ ดูตัวอย่างหน้าและดาวน์โหลด PDF โดยไม่ต้องอัปโหลดเอกสารของคุณ",
+      },
+      tr: {
+        name: "CAJ’den PDF’ye Dönüştürücü",
+        description:
+          "Desteklenen CAJ, KDH ve NH belgelerini yerel olarak PDF’ye dönüştürün. Makalenizi yüklemeden sayfaları önizleyin ve PDF indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CAJ sang PDF",
+        description:
+          "Chuyển đổi tài liệu CAJ, KDH và NH được hỗ trợ sang PDF ngay trên thiết bị. Xem trước các trang và tải xuống PDF mà không cần tải bài nghiên cứu lên.",
+      },
+      "zh-CN": {
+        name: "CAJ 转 PDF 转换器",
+        description:
+          "在本地将受支持的 CAJ、KDH 和 NH 文档转换为 PDF。无需上传论文，即可预览页面并下载 PDF。",
+      },
+      "zh-TW": {
+        name: "CAJ 轉 PDF 轉換器",
+        description:
+          "在本機將支援的 CAJ、KDH 與 NH 文件轉換為 PDF。預覽頁面並下載 PDF，無須上傳論文。",
       },
     },
   },

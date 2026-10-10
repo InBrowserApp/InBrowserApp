@@ -11,8 +11,8 @@
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "pdfjs-dist": "catalog:",
-    "caj2pdf-rust": "catalog:",
-    "@workspace/pdf-reader": "workspace:*"
+    "@workspace/pdf-reader": "workspace:*",
+    "@workspace/caj": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

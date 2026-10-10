@@ -16,4 +16,4 @@ Các trang văn bản HN-B và C8 nguyên bản cần phông chữ riêng không
 
 ## Quyền riêng tư và tài liệu lớn
 
-Nội dung tài liệu được xử lý ngay trên thiết bị. Không cần tài khoản, không tải tài nguyên tài liệu từ xa, không chỉnh sửa, không tải xuống PDF và không thực hiện OCR. Không có hạn mức cố định về kích thước tệp hay số trang. Tệp quá phức tạp vẫn có thể vượt quá giới hạn bộ nhớ hoặc hiển thị của trình duyệt; đóng tài liệu sẽ giải phóng tài nguyên đọc.
+Nội dung tài liệu được xử lý ngay trên thiết bị. Tải xuống PDF lưu tài liệu đã chuẩn bị cùng văn bản và dấu trang có sẵn. Thu phóng và xoay chỉ áp dụng khi xem, không làm thay đổi tệp PDF tải xuống. Không cần tài khoản, không tải tài nguyên tài liệu từ xa, không chỉnh sửa và không thực hiện OCR. Không có hạn mức cố định về kích thước tệp hay số trang. Tệp quá phức tạp vẫn có thể vượt quá giới hạn bộ nhớ hoặc hiển thị của trình duyệt; đóng tài liệu sẽ giải phóng tài nguyên đọc.

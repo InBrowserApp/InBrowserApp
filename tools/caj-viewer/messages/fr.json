@@ -53,5 +53,6 @@
   "textHint": "La recherche et la sélection fonctionnent uniquement lorsque le document contient du texte. Les pages numérisées sont affichées comme des images ; aucune reconnaissance optique de caractères (OCR) n’est effectuée.",
   "substituted": "Certains caractères utilisent des glyphes de substitution. Leur apparence peut différer de l’original.",
   "outlineWarning": "Certaines entrées du sommaire n’ont pas pu être affichées ou ont été ajustées. La lecture des pages reste disponible.",
-  "format": "Format détecté : {format}"
+  "format": "Format détecté : {format}",
+  "download": "Télécharger le PDF"
 }

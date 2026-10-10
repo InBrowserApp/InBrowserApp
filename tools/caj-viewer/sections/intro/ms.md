@@ -16,4 +16,4 @@ Halaman teks asli HN-B dan C8 yang memerlukan fon berasingan tidak dapat dipapar
 
 ## Privasi dan dokumen besar
 
-Kandungan dokumen diproses secara setempat. Tiada akaun, sumber dokumen jauh, penyuntingan, muat turun PDF atau OCR digunakan. Tiada kuota saiz fail atau bilangan halaman yang tetap. Fail yang memerlukan banyak sumber masih boleh melebihi had memori atau lukisan pelayar; menutup dokumen akan melepaskan sumber bacaannya.
+Kandungan dokumen diproses secara setempat. Muat turun PDF menyimpan dokumen yang telah disediakan bersama teks dan penanda buku yang tersedia. Zum dan putaran untuk paparan sahaja tidak mengubah PDF yang dimuat turun. Tiada akaun, sumber dokumen jauh, penyuntingan atau OCR digunakan. Tiada kuota saiz fail atau bilangan halaman yang tetap. Fail yang memerlukan banyak sumber masih boleh melebihi had memori atau lukisan pelayar; menutup dokumen akan melepaskan sumber bacaannya.

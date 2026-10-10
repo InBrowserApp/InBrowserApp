@@ -16,4 +16,4 @@ Textbaserade sidor i HN-B:s och C8:s egna format som kräver separata teckensnit
 
 ## Integritet och stora dokument
 
-Dokumentinnehållet bearbetas lokalt. Inga konton, externa dokumentresurser, redigering, PDF-nedladdning eller OCR ingår. Det finns ingen fast gräns för filstorlek eller antal sidor. Mycket krävande filer kan ändå överskrida webbläsarens minne eller renderingsgränser; när dokumentet stängs frigörs dess läsresurser.
+Dokumentinnehållet bearbetas lokalt. Ladda ner PDF sparar det förberedda dokumentet med tillgänglig text och bokmärken. Zoom och rotation i visningen ändrar inte den nedladdade PDF-filen. Inga konton, externa dokumentresurser, redigering eller OCR ingår. Det finns ingen fast gräns för filstorlek eller antal sidor. Mycket krävande filer kan ändå överskrida webbläsarens minne eller renderingsgränser; när dokumentet stängs frigörs dess läsresurser.

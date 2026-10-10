@@ -16,4 +16,4 @@ Native HN-B- und C8-Textseiten, die separate Schriftarten benötigen, können hi
 
 ## Datenschutz und große Dokumente
 
-Dokumentinhalte werden lokal verarbeitet. Ein Konto, externe Dokumentressourcen, Bearbeitung, PDF-Download oder OCR sind nicht vorgesehen. Es gibt keine feste Grenze für die Dateigröße oder Seitenanzahl. Sehr anspruchsvolle Dateien können dennoch die Speicher- oder Darstellungsgrenzen des Browsers überschreiten. Beim Schließen des Dokuments werden die zum Lesen verwendeten Ressourcen freigegeben.
+Dokumentinhalte werden lokal verarbeitet. „PDF herunterladen“ speichert das aufbereitete Dokument mit verfügbarem Text und Lesezeichen. Zoom und Drehung in der Ansicht verändern die heruntergeladene PDF nicht. Ein Konto, externe Dokumentressourcen, Bearbeitung oder OCR sind nicht vorgesehen. Es gibt keine feste Grenze für die Dateigröße oder Seitenanzahl. Sehr anspruchsvolle Dateien können dennoch die Speicher- oder Darstellungsgrenzen des Browsers überschreiten. Beim Schließen des Dokuments werden die zum Lesen verwendeten Ressourcen freigegeben.

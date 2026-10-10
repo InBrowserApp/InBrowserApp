@@ -53,5 +53,6 @@
   "textHint": "只有文件含有文字的部分才能搜尋與選取。掃描頁面會以圖片顯示，不會進行 OCR 辨識。",
   "substituted": "部分字元使用替代字形，外觀可能與原始文件不同。",
   "outlineWarning": "部分目錄項目無法顯示或已調整。您仍可閱讀頁面。",
-  "format": "偵測到的格式：{format}"
+  "format": "偵測到的格式：{format}",
+  "download": "下載 PDF"
 }

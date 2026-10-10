@@ -16,4 +16,4 @@ Ayrı yazı tipleri gerektiren yerel HN-B ve C8 metin sayfaları burada görünt
 
 ## Gizlilik ve büyük belgeler
 
-Belge içeriği yerel olarak işlenir. Hesap, uzak belge kaynakları, düzenleme, PDF indirme veya OCR kullanılmaz. Sabit dosya boyutu veya sayfa sayısı kotası yoktur. Çok fazla kaynak gerektiren dosyalar yine de tarayıcının bellek veya çizim sınırlarını aşabilir; belgeyi kapatmak okuma kaynaklarını serbest bırakır.
+Belge içeriği yerel olarak işlenir. PDF indir seçeneği, hazırlanmış belgeyi mevcut metinler ve yer imleriyle birlikte kaydeder. Yalnızca görüntülemeyi etkileyen yakınlaştırma ve döndürme, indirilen PDF’yi değiştirmez. Hesap, uzak belge kaynakları, düzenleme veya OCR kullanılmaz. Sabit dosya boyutu veya sayfa sayısı kotası yoktur. Çok fazla kaynak gerektiren dosyalar yine de tarayıcının bellek veya çizim sınırlarını aşabilir; belgeyi kapatmak okuma kaynaklarını serbest bırakır.

@@ -53,5 +53,6 @@
   "textHint": "Zoeken en selecteren werken alleen waar het document tekst bevat. Gescande pagina’s worden als afbeeldingen getoond; er wordt geen OCR uitgevoerd.",
   "substituted": "Sommige tekens worden met vervangende tekenvormen weergegeven. Ze kunnen er anders uitzien dan in het origineel.",
   "outlineWarning": "Sommige items in de inhoudsopgave konden niet worden getoond of zijn aangepast. Je kunt de pagina’s nog steeds lezen.",
-  "format": "Herkend formaat: {format}"
+  "format": "Herkend formaat: {format}",
+  "download": "PDF downloaden"
 }

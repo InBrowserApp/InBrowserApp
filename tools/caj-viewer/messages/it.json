@@ -53,5 +53,6 @@
   "textHint": "La ricerca e la selezione funzionano solo dove il documento contiene testo. Le pagine scansionate vengono mostrate come immagini; non viene eseguito l’OCR.",
   "substituted": "Alcuni caratteri usano glifi sostitutivi. Il loro aspetto potrebbe differire dall’originale.",
   "outlineWarning": "Alcune voci del sommario non sono state mostrate o sono state adattate. Le pagine rimangono leggibili.",
-  "format": "Formato rilevato: {format}"
+  "format": "Formato rilevato: {format}",
+  "download": "Scarica PDF"
 }

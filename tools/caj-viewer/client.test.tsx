@@ -26,7 +26,7 @@ const mock = vi.hoisted(() => ({
   fail: null as null | (() => void),
   password: null as null | (() => void),
 }))
-vi.mock("./convert", () => ({ prepareDocument: mock.prepare }))
+vi.mock("@workspace/caj", () => ({ prepareDocument: mock.prepare }))
 vi.mock("@workspace/pdf-reader", () => ({ openReader: mock.open }))
 const report = {
   format: "caj",
@@ -87,6 +87,28 @@ beforeEach(() => {
   mock.thumbnail.mockResolvedValue(undefined)
 })
 afterEach(cleanup)
+
+test("downloads the prepared PDF and removes the link when the document closes", async () => {
+  const create = vi
+    .spyOn(URL, "createObjectURL")
+    .mockReturnValue("blob:viewer-pdf")
+  const revoke = vi.spyOn(URL, "revokeObjectURL").mockImplementation(() => {})
+  try {
+    render(<Client messages={m} />)
+    upload()
+    const link = await screen.findByRole("link", { name: m.download })
+    expect(link.getAttribute("download")).toBe("paper.pdf")
+    expect(link.getAttribute("href")).toBe("blob:viewer-pdf")
+    expect(await (create.mock.calls[0]![0] as Blob).text()).toBe("PDF")
+    fireEvent.click(button(m.clear))
+    expect(screen.queryByRole("link", { name: m.download })).toBeNull()
+    expect(revoke).toHaveBeenCalledWith("blob:viewer-pdf")
+  } finally {
+    cleanup()
+    create.mockRestore()
+    revoke.mockRestore()
+  }
+})
 
 test("reads, navigates, searches, rotates and closes without retaining workers", async () => {
   render(<Client messages={m} />)

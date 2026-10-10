@@ -16,4 +16,4 @@ Les pages textuelles natives HN-B et C8 qui nécessitent des polices séparées 
 
 ## Confidentialité et documents volumineux
 
-Le contenu des documents est traité localement. Aucun compte, ressource documentaire distante, édition, téléchargement PDF ou OCR n’intervient. Il n’existe aucune limite fixe de taille de fichier ou de nombre de pages. Les fichiers très exigeants peuvent toutefois dépasser les capacités de mémoire ou d’affichage du navigateur ; fermer le document libère ses ressources de lecture.
+Le contenu des documents est traité localement. Télécharger le PDF enregistre le document préparé avec le texte et les signets disponibles. Le zoom et la rotation de l’affichage ne modifient pas le PDF téléchargé. Aucun compte, ressource documentaire distante, édition ou OCR n’intervient. Il n’existe aucune limite fixe de taille de fichier ou de nombre de pages. Les fichiers très exigeants peuvent toutefois dépasser les capacités de mémoire ou d’affichage du navigateur ; fermer le document libère ses ressources de lecture.

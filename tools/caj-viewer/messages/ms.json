@@ -53,5 +53,6 @@
   "textHint": "Carian dan pemilihan hanya berfungsi apabila dokumen mengandungi teks. Halaman imbasan dipaparkan sebagai imej; tiada OCR dilakukan.",
   "substituted": "Sesetengah aksara menggunakan glif pengganti. Rupanya mungkin berbeza daripada yang asal.",
   "outlineWarning": "Sesetengah entri kandungan tidak dapat dipaparkan atau telah dilaraskan. Halaman masih boleh dibaca.",
-  "format": "Format dikesan: {format}"
+  "format": "Format dikesan: {format}",
+  "download": "Muat turun PDF"
 }

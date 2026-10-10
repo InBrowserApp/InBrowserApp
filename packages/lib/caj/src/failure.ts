@@ -1,4 +1,14 @@
-import type { Messages } from "./types"
+type Messages = Record<
+  | "invalid"
+  | "descriptor"
+  | "missingPages"
+  | "engineUnavailable"
+  | "unsupported"
+  | "protected"
+  | "resource"
+  | "fontsRequired",
+  string
+>
 
 export function failureMessage(error: unknown, m: Messages): string {
   if (!(error instanceof Error)) return m.invalid

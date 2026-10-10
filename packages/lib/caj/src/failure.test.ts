@@ -1,6 +1,15 @@
 import { expect, test } from "vitest"
 import { failureMessage } from "./failure"
-import m from "./messages/en.json"
+const m = {
+  invalid: "invalid",
+  descriptor: "descriptor",
+  missingPages: "missing pages",
+  engineUnavailable: "engine unavailable",
+  unsupported: "unsupported",
+  protected: "protected",
+  resource: "resource",
+  fontsRequired: "fonts required",
+}
 
 test("explains known format, protection, missing-resource and memory outcomes", () => {
   for (const [message, key] of [

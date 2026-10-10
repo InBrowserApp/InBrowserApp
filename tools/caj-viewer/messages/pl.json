@@ -53,5 +53,6 @@
   "textHint": "Wyszukiwanie i zaznaczanie działa tylko tam, gdzie dokument zawiera tekst. Zeskanowane strony są wyświetlane jako obrazy; rozpoznawanie tekstu (OCR) nie jest wykonywane.",
   "substituted": "Niektóre znaki są wyświetlane przy użyciu zastępczych glifów. Ich wygląd może różnić się od oryginału.",
   "outlineWarning": "Niektórych pozycji spisu treści nie udało się wyświetlić lub zostały dostosowane. Strony nadal można czytać.",
-  "format": "Wykryty format: {format}"
+  "format": "Wykryty format: {format}",
+  "download": "Pobierz PDF"
 }
