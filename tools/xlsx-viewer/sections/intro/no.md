@@ -19,3 +19,5 @@ For en eldre XLS-arbeidsbok kan du bruke [XLS til XLSX-konverterer](../xls-to-xl
 For å eksportere lokale Numbers-tabeller som Excel-regneark kan du bruke [Numbers til XLSX-konverterer](../numbers-to-xlsx-converter/).
 
 For å eksportere OpenDocument-regnearkdata som en Excel-arbeidsbok kan du bruke [ODS til XLSX-konverterer](../ods-to-xlsx-converter/).
+
+For å eksportere Excel XLSX-data som et OpenDocument-regneark kan du bruke [XLSX til ODS-konverterer](../xlsx-to-ods-converter/).

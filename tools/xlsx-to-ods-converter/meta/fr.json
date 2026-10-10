@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur XLSX en ODS",
+  "description": "Convertissez des classeurs Excel locaux en feuilles de calcul OpenDocument avec plusieurs feuilles, des valeurs de cellules avec leur type et un aperçu des données. Les fichiers restent dans votre navigateur."
+}

@@ -22266,6 +22266,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "xlsx-to-ods-converter",
+    language: "ar",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "de",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "en",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "es",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "fr",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "he",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "hi",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "id",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "it",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "ja",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "ko",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "ms",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "nl",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "no",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "pl",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "pt",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "ru",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "sv",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "th",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "tr",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "vi",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "xlsx-to-ods-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "xlsx-viewer",
     language: "ar",
   },

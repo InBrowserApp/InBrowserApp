@@ -1,0 +1,4 @@
+{
+  "name": "XLSX 轉 ODS 轉換器",
+  "description": "將本機 Excel 活頁簿轉換為 OpenDocument 試算表，支援多個工作表、具資料類型的儲存格值與資料預覽。檔案保留在您的瀏覽器中。"
+}

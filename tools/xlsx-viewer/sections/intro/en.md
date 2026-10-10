@@ -18,3 +18,5 @@ For a legacy XLS workbook, use the [XLS to XLSX Converter](../xls-to-xlsx-conver
 To export local Numbers tables as Excel worksheets, use the [Numbers to XLSX Converter](../numbers-to-xlsx-converter/).
 
 To export OpenDocument spreadsheet data as an Excel workbook, use the [ODS to XLSX Converter](../ods-to-xlsx-converter/).
+
+To export Excel XLSX data as an OpenDocument spreadsheet, use the [XLSX to ODS Converter](../xlsx-to-ods-converter/).

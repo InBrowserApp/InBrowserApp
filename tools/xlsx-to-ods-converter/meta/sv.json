@@ -1,0 +1,4 @@
+{
+  "name": "XLSX till ODS-konverterare",
+  "description": "Konvertera lokala Excel-arbetsböcker till OpenDocument-kalkylblad med flera kalkylblad, cellvärden med sina datatyper och en förhandsvisning av data. Filerna stannar i din webbläsare."
+}

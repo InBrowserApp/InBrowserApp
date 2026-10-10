@@ -20,7 +20,8 @@ export function useSpreadsheetConversion(
   file: File | null,
   m: Messages,
   extension: string,
-  createWorker: () => Worker
+  createWorker: () => Worker,
+  mime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 ) {
   const worker = useRef<Worker | null>(null)
   const requestId = useRef(0)
@@ -62,7 +63,7 @@ export function useSpreadsheetConversion(
           try {
             url = URL.createObjectURL(
               new Blob([data.bytes], {
-                type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                type: mime,
               })
             )
             setState({ file, info: data.info, url })
@@ -87,7 +88,7 @@ export function useSpreadsheetConversion(
       worker.current = null
       if (url) URL.revokeObjectURL(url)
     }
-  }, [file, m, extension, createWorker])
+  }, [file, m, extension, createWorker, mime])
   const requestPreview = useCallback(
     (sheet: number, row: number, column: number) => {
       setState((current) =>

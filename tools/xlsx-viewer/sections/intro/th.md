@@ -19,3 +19,5 @@
 หากต้องการส่งออกตาราง Numbers จากเครื่องเป็นเวิร์กชีต Excel ให้ใช้[โปรแกรมแปลง Numbers เป็น XLSX](../numbers-to-xlsx-converter/)
 
 หากต้องการส่งออกข้อมูลสเปรดชีต OpenDocument เป็นเวิร์กบุ๊ก Excel ให้ใช้[โปรแกรมแปลง ODS เป็น XLSX](../ods-to-xlsx-converter/)
+
+หากต้องการส่งออกข้อมูล Excel XLSX เป็นสเปรดชีต OpenDocument ให้ใช้[โปรแกรมแปลง XLSX เป็น ODS](../xlsx-to-ods-converter/)

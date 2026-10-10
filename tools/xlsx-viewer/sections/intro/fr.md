@@ -19,3 +19,5 @@ Pour un ancien classeur XLS, utilisez le [Convertisseur XLS en XLSX](../xls-to-x
 Pour exporter des tableaux Numbers locaux sous forme de feuilles de calcul Excel, utilisez le [Convertisseur Numbers en XLSX](../numbers-to-xlsx-converter/).
 
 Pour exporter les données d’une feuille de calcul OpenDocument sous forme de classeur Excel, utilisez le [Convertisseur ODS en XLSX](../ods-to-xlsx-converter/).
+
+Pour exporter les données d’un classeur Excel sous forme de feuille de calcul OpenDocument, utilisez le [Convertisseur XLSX en ODS](../xlsx-to-ods-converter/).

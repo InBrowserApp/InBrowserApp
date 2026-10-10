@@ -1419,6 +1419,9 @@ importers:
       '@tool/xls-to-xlsx-converter':
         specifier: workspace:*
         version: link:../../tools/xls-to-xlsx-converter
+      '@tool/xlsx-to-ods-converter':
+        specifier: workspace:*
+        version: link:../../tools/xlsx-to-ods-converter
       '@tool/xlsx-viewer':
         specifier: workspace:*
         version: link:../../tools/xlsx-viewer
@@ -8276,6 +8279,43 @@ importers:
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
+      vitest:
+        specifier: 'catalog:'
+        version: 4.1.9(@types/node@25.9.4)(@vitest/coverage-v8@4.1.9)(happy-dom@20.10.6)(jsdom@29.1.1(@noble/hashes@2.2.0))(msw@2.12.14(@types/node@25.9.4)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.22.4)(yaml@2.8.3))
+
+  tools/xlsx-to-ods-converter:
+    dependencies:
+      '@workspace/spreadsheet-conversion':
+        specifier: workspace:*
+        version: link:../../packages/lib/spreadsheet-conversion
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+      fflate:
+        specifier: 'catalog:'
+        version: 0.8.3
+      react:
+        specifier: 'catalog:'
+        version: 19.2.7
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.7(react@19.2.7)
+      saxes:
+        specifier: 'catalog:'
+        version: 6.0.0
+      xlsx:
+        specifier: 'catalog:'
+        version: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz(patch_hash=4761cf17d2137c777889a52930e3b18e1cab1a17290a14cc4fd8b408415a9edf)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       vitest:
         specifier: 'catalog:'
         version: 4.1.9(@types/node@25.9.4)(@vitest/coverage-v8@4.1.9)(happy-dom@20.10.6)(jsdom@29.1.1(@noble/hashes@2.2.0))(msw@2.12.14(@types/node@25.9.4)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.22.4)(yaml@2.8.3))

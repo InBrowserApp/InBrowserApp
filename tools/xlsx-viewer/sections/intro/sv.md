@@ -19,3 +19,5 @@ För en äldre XLS-arbetsbok kan du använda [XLS till XLSX-konverterare](../xls
 Använd [Numbers till XLSX-konverterare](../numbers-to-xlsx-converter/) för att exportera lokala Numbers-tabeller som Excel-kalkylblad.
 
 Använd [ODS till XLSX-konverterare](../ods-to-xlsx-converter/) för att exportera data från OpenDocument-kalkylblad som en Excel-arbetsbok.
+
+Använd [XLSX till ODS-konverterare](../xlsx-to-ods-converter/) för att exportera data från Excel-arbetsböcker som OpenDocument-kalkylblad.
