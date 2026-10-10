@@ -247,3 +247,21 @@ test("joins adjacent formatting runs without injecting Markdown delimiter charac
   )
   expect(result.querySelector("strong")?.textContent).toBe("bold saved")
 })
+
+test("keeps emphasized punctuation, symbols and multiline spans literal at word boundaries", () => {
+  for (const value of ["!", ".", "*", "<x>", "😀", "a\n\nb"]) {
+    for (const style of [
+      { bold: true },
+      { italic: true },
+      { bold: true, italic: true },
+    ]) {
+      const result = html(
+        model([paragraph([text("left"), text(value, style), text("right")])])
+      )
+      expect(result.textContent?.trim()).toBe(
+        `left${value.replace(/\n/g, "")}right`
+      )
+      expect(result.querySelector(style.bold ? "strong" : "em")).toBeTruthy()
+    }
+  }
+})

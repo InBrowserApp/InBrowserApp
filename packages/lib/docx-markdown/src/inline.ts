@@ -41,8 +41,15 @@ function emphasis(
   const before = value.match(/^\s*/)?.[0] ?? ""
   const after = value.match(/\s*$/)?.[0] ?? ""
   let text = value.trim()
-  if (run.bold) text = `**${text}**`
-  if (run.italic) text = `*${text}*`
+  // Delimiters beside punctuation (for example a**!**b) can become literal
+  // characters. Safe inline tags preserve those spans and explicit line breaks.
+  const delimiters =
+    !text.includes("\n") &&
+    /^[\p{L}\p{N}\p{M}]/u.test(text) &&
+    /[\p{L}\p{N}\p{M}]$/u.test(text)
+  if (!delimiters) text = text.replace(/ {2}\n/g, "<br>")
+  if (run.bold) text = delimiters ? `**${text}**` : `<strong>${text}</strong>`
+  if (run.italic) text = delimiters ? `*${text}*` : `<em>${text}</em>`
   if (run.strikethrough) text = `<del>${text}</del>`
   return before + text + after
 }
