@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de ODS a XLSX",
+  "description": "Convierte hojas de cálculo OpenDocument locales a XLSX con varias hojas, valores de celda con sus tipos de datos y una vista previa de los datos. Los archivos permanecen en tu navegador."
+}

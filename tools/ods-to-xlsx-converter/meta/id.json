@@ -1,0 +1,4 @@
+{
+  "name": "Konverter ODS ke XLSX",
+  "description": "Konversi lembar bentang OpenDocument lokal ke XLSX dengan beberapa lembar kerja, nilai sel beserta tipe datanya, dan pratinjau data. File tetap berada di browser Anda."
+}

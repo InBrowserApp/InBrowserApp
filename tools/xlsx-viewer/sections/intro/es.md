@@ -17,3 +17,5 @@ La exportación de hojas de cálculo incluye filas y columnas ocultas y usa los 
 Para un libro XLS antiguo, usa el [Conversor de XLS a XLSX](../xls-to-xlsx-converter/) para revisar sus datos importados y descargar una copia en un formato moderno de Excel. La conversión tiene sus propias notas de compatibilidad; vuelve a abrir el archivo en el conversor.
 
 Para exportar tablas de Numbers locales como hojas de cálculo de Excel, usa el [Conversor de Numbers a XLSX](../numbers-to-xlsx-converter/).
+
+Para exportar datos de hojas de cálculo OpenDocument como un libro de Excel, usa el [Conversor de ODS a XLSX](../ods-to-xlsx-converter/).

@@ -17,3 +17,5 @@ Eksport lembaran kerja menyertakan baris dan lajur tersembunyi serta menggunakan
 Untuk buku kerja XLS lama, gunakan [Penukar XLS ke XLSX](../xls-to-xlsx-converter/) bagi memeriksa data yang diimport dan memuat turun salinan dalam format Excel moden. Penukaran mempunyai nota keserasiannya sendiri; buka fail itu semula dalam penukar.
 
 Untuk mengeksport jadual Numbers setempat sebagai lembaran kerja Excel, gunakan [Penukar Numbers ke XLSX](../numbers-to-xlsx-converter/).
+
+Untuk mengeksport data hamparan OpenDocument sebagai buku kerja Excel, gunakan [Penukar ODS ke XLSX](../ods-to-xlsx-converter/).

@@ -17,3 +17,5 @@ A exportação de planilhas inclui linhas e colunas ocultas e usa os resultados 
 Para uma pasta de trabalho XLS antiga, use o [Conversor de XLS para XLSX](../xls-to-xlsx-converter/) para inspecionar os dados importados e baixar uma cópia em um formato moderno do Excel. A conversão tem suas próprias observações de compatibilidade; abra o arquivo novamente no conversor.
 
 Para exportar tabelas locais do Numbers como planilhas do Excel, use o [Conversor de Numbers para XLSX](../numbers-to-xlsx-converter/).
+
+Para exportar dados de planilhas OpenDocument como uma pasta de trabalho do Excel, use o [Conversor de ODS para XLSX](../ods-to-xlsx-converter/).

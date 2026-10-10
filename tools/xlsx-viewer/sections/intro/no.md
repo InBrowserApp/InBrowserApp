@@ -17,3 +17,5 @@ Regnearkeksport inkluderer skjulte rader og kolonner og bruker lagrede formelres
 For en eldre XLS-arbeidsbok kan du bruke [XLS til XLSX-konverterer](../xls-to-xlsx-converter/) til å se gjennom de importerte dataene og laste ned en kopi i et moderne Excel-format. Konverteringen har egne merknader om kompatibilitet; åpne filen på nytt i konvertereren.
 
 For å eksportere lokale Numbers-tabeller som Excel-regneark kan du bruke [Numbers til XLSX-konverterer](../numbers-to-xlsx-converter/).
+
+For å eksportere OpenDocument-regnearkdata som en Excel-arbeidsbok kan du bruke [ODS til XLSX-konverterer](../ods-to-xlsx-converter/).

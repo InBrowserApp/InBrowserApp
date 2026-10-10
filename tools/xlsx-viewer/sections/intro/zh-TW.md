@@ -17,3 +17,5 @@ Numbers 表格會顯示為獨立的工作表分頁，並在可用時顯示原始
 對於舊版 XLS 活頁簿，請使用 [XLS 轉 XLSX 轉換器](../xls-to-xlsx-converter/) 檢視匯入的資料，並下載新版 Excel 格式的副本。轉換功能另有相容性說明；請在轉換器中重新開啟檔案。
 
 如要將本機 Numbers 表格匯出為 Excel 工作表，請使用 [Numbers 轉 XLSX 轉換器](../numbers-to-xlsx-converter/)。
+
+如要將 OpenDocument 試算表資料匯出為 Excel 活頁簿，請使用 [ODS 轉 XLSX 轉換器](../ods-to-xlsx-converter/)。

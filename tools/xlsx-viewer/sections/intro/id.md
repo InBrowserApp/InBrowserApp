@@ -17,3 +17,5 @@ Ekspor lembar kerja menyertakan baris dan kolom tersembunyi serta menggunakan ha
 Untuk buku kerja XLS lama, gunakan [Konverter XLS ke XLSX](../xls-to-xlsx-converter/) untuk memeriksa data yang diimpor dan mengunduh salinan dalam format Excel modern. Konversi memiliki catatan kompatibilitas tersendiri; buka kembali file tersebut di konverter.
 
 Untuk mengekspor tabel Numbers lokal sebagai lembar kerja Excel, gunakan [Konverter Numbers ke XLSX](../numbers-to-xlsx-converter/).
+
+Untuk mengekspor data lembar bentang OpenDocument sebagai buku kerja Excel, gunakan [Konverter ODS ke XLSX](../ods-to-xlsx-converter/).

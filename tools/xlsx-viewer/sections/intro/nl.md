@@ -17,3 +17,5 @@ Bij het exporteren van werkbladen worden verborgen rijen en kolommen meegenomen 
 Gebruik voor een oudere XLS-werkmap de [XLS-naar-XLSX-converter](../xls-to-xlsx-converter/) om de geïmporteerde gegevens te bekijken en een kopie in een modern Excel-formaat te downloaden. De conversie heeft eigen opmerkingen over compatibiliteit; open het bestand opnieuw in de converter.
 
 Gebruik de [Numbers-naar-XLSX-converter](../numbers-to-xlsx-converter/) om lokale Numbers-tabellen als Excel-werkbladen te exporteren.
+
+Gebruik de [ODS-naar-XLSX-converter](../ods-to-xlsx-converter/) om OpenDocument-spreadsheetgegevens als Excel-werkmap te exporteren.

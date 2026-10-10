@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da ODS a XLSX",
+  "description": "Converti fogli di calcolo OpenDocument locali in XLSX con più fogli di lavoro, valori delle celle con i relativi tipi di dati e un’anteprima dei dati. I file restano nel tuo browser."
+}

@@ -17,3 +17,5 @@ Numbersの各表は個別のワークシートタブとして表示され、元�
 旧形式のXLSブックを扱う場合は、[XLSからXLSXへの変換ツール](../xls-to-xlsx-converter/)で読み込まれたデータを確認し、新しいExcel形式のコピーをダウンロードできます。変換には独自の互換性に関する注意事項があります。変換ツールでファイルを開き直してください。
 
 ローカルのNumbersのテーブルをExcelのワークシートとして書き出すには、[NumbersからXLSXへの変換ツール](../numbers-to-xlsx-converter/)をご利用ください。
+
+OpenDocumentスプレッドシートのデータをExcelブックとして書き出すには、[ODSからXLSXへの変換ツール](../ods-to-xlsx-converter/)をご利用ください。

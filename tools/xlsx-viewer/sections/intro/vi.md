@@ -17,3 +17,5 @@ Việc xuất trang tính bao gồm các hàng và cột ẩn và sử dụng k�
 Với sổ làm việc XLS đời cũ, hãy dùng [Trình chuyển đổi XLS sang XLSX](../xls-to-xlsx-converter/) để kiểm tra dữ liệu đã nhập và tải xuống bản sao ở định dạng Excel hiện đại. Việc chuyển đổi có ghi chú riêng về khả năng tương thích; hãy mở lại tệp trong trình chuyển đổi.
 
 Để xuất các bảng Numbers trên thiết bị thành trang tính Excel, hãy dùng [Trình chuyển đổi Numbers sang XLSX](../numbers-to-xlsx-converter/).
+
+Để xuất dữ liệu bảng tính OpenDocument thành sổ làm việc Excel, hãy dùng [Trình chuyển đổi ODS sang XLSX](../ods-to-xlsx-converter/).
