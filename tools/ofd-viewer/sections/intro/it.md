@@ -11,3 +11,5 @@ I file OFD possono contenere testo posizionato, tabelle, immagini incorporate e 
 Le firme digitali non vengono verificate. Le rappresentazioni dei sigilli memorizzate nelle firme digitali non vengono visualizzate; le normali immagini o i disegni di sigilli possono essere visibili. Un sigillo visibile non ne dimostra l'autenticità. Se un pacchetto contiene più documenti, questo visualizzatore mostra solo il primo e segnala che qui il pacchetto è incompleto. Verifica gli importi importanti, i contenuti mancanti e le informazioni sulle firme con un lettore OFD appropriato.
 
 Non esistono limiti fissi alla dimensione del file o al numero di pagine. La memoria disponibile nel browser e la complessità di una pagina possono comunque impedirne l'apertura. Con uno zoom molto elevato, una pagina potrebbe superare la memoria che il browser può allocare per il canvas; riduci lo zoom o usa Adatta alla pagina.
+
+Per creare un PDF da documenti supportati, usa il [Convertitore da OFD a PDF](../ofd-to-pdf-converter/).

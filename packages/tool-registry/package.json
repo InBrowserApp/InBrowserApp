@@ -149,6 +149,7 @@
     "@tool/numbers-to-xlsx-converter": "workspace:*",
     "@tool/ods-to-xlsx-converter": "workspace:*",
     "@tool/odt-viewer": "workspace:*",
+    "@tool/ofd-to-pdf-converter": "workspace:*",
     "@tool/ofd-viewer": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",
     "@tool/password-strength-checker": "workspace:*",

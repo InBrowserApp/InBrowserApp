@@ -11,3 +11,5 @@ OFD-filer kan inneholde posisjonert tekst, tabeller, innebygde bilder og merknad
 Digitale signaturer blir ikke verifisert. Segl som er lagret i digitale signaturer, vises ikke; vanlige bilder eller tegninger av segl kan være synlige. Et synlig segl bekrefter ikke ektheten. Hvis en pakke inneholder flere dokumenter, viser denne viseren bare det første og forklarer at pakken ikke vises i sin helhet her. Kontroller viktige beløp, manglende innhold og signaturinformasjon med en egnet OFD-leser.
 
 Det er ingen fast grense for filstørrelse eller antall sider. Tilgjengelig nettleserminne og kompleksiteten til en side kan likevel hindre at den åpnes. Ved svært høy zoom kan en side overskride minnegrensen for nettleserens tegneflate; reduser zoomen, eller bruk Tilpass side.
+
+For å opprette en PDF fra dokumenter som støttes, bruk [Konverterer fra OFD til PDF](../ofd-to-pdf-converter/).

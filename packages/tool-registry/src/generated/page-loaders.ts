@@ -178,6 +178,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/numbers-to-xlsx-converter/page"),
   "ods-to-xlsx-converter": () => import("@tool/ods-to-xlsx-converter/page"),
   "odt-viewer": () => import("@tool/odt-viewer/page"),
+  "ofd-to-pdf-converter": () => import("@tool/ofd-to-pdf-converter/page"),
   "ofd-viewer": () => import("@tool/ofd-viewer/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),

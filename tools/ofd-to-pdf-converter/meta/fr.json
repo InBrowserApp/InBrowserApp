@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur OFD en PDF",
+  "description": "Convertissez les documents OFD locaux pris en charge en PDF composés d’images, en conservant les dimensions et l’ordre des pages. Prévisualisez chaque page sans envoyer votre fichier à un serveur."
+}

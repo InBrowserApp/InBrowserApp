@@ -17837,6 +17837,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ofd-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["ofd", "pdf", "document", "converter", "invoice"],
+    locales: {
+      ar: {
+        name: "محول OFD إلى PDF",
+        description:
+          "حوّل مستندات OFD المحلية المدعومة إلى ملفات PDF قائمة على الصور مع الاحتفاظ بأحجام الصفحات وترتيبها الأصلي. عاين كل صفحة دون رفع ملفك.",
+      },
+      de: {
+        name: "OFD-zu-PDF-Konverter",
+        description:
+          "Konvertiere unterstützte lokale OFD-Dokumente in bildbasierte PDFs mit ursprünglichen Seitengrößen und ursprünglicher Reihenfolge. Prüfe jede Seite in der Vorschau, ohne deine Datei hochzuladen.",
+      },
+      en: {
+        name: "OFD to PDF Converter",
+        description:
+          "Convert supported local OFD documents to image-based PDFs with their original page sizes and order. Preview every page without uploading your file.",
+      },
+      es: {
+        name: "Conversor de OFD a PDF",
+        description:
+          "Convierte documentos OFD locales compatibles en PDF basados en imágenes, con los tamaños de página y el orden originales. Revisa cada página sin subir el archivo.",
+      },
+      fr: {
+        name: "Convertisseur OFD en PDF",
+        description:
+          "Convertissez les documents OFD locaux pris en charge en PDF composés d’images, en conservant les dimensions et l’ordre des pages. Prévisualisez chaque page sans envoyer votre fichier à un serveur.",
+      },
+      he: {
+        name: "ממיר OFD ל־PDF",
+        description:
+          "המרת מסמכי OFD מקומיים נתמכים לקובצי PDF מבוססי תמונות, תוך שמירה על גדלי העמודים וסדרם המקוריים. תצוגה מקדימה של כל עמוד ללא העלאת הקובץ.",
+      },
+      hi: {
+        name: "OFD से PDF कन्वर्टर",
+        description:
+          "अपने डिवाइस के समर्थित OFD दस्तावेज़ों को मूल पृष्ठ आकार और क्रम के साथ चित्र-आधारित PDF में बदलें। फ़ाइल अपलोड किए बिना हर पृष्ठ का पूर्वावलोकन करें।",
+      },
+      id: {
+        name: "Konverter OFD ke PDF",
+        description:
+          "Konversikan dokumen OFD lokal yang didukung ke PDF berbasis gambar dengan ukuran dan urutan halaman aslinya. Pratinjau setiap halaman tanpa mengunggah file Anda.",
+      },
+      it: {
+        name: "Convertitore da OFD a PDF",
+        description:
+          "Converti documenti OFD locali supportati in PDF basati su immagini, mantenendo le dimensioni e l’ordine originali delle pagine. Visualizza l’anteprima di ogni pagina senza caricare il file online.",
+      },
+      ja: {
+        name: "OFD から PDF への変換ツール",
+        description:
+          "対応するローカルの OFD 文書を、元のページサイズと順序を保った画像ベースの PDF に変換します。ファイルをアップロードせずに、すべてのページをプレビューできます。",
+      },
+      ko: {
+        name: "OFD → PDF 변환기",
+        description:
+          "지원되는 로컬 OFD 문서를 원래 페이지 크기와 순서를 유지하는 이미지 기반 PDF로 변환하세요. 파일을 업로드하지 않고 모든 페이지를 미리 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar OFD kepada PDF",
+        description:
+          "Tukar dokumen OFD setempat yang disokong kepada PDF berasaskan imej dengan saiz dan susunan halaman asal. Pratonton setiap halaman tanpa memuat naik fail anda.",
+      },
+      nl: {
+        name: "OFD-naar-PDF-converter",
+        description:
+          "Converteer ondersteunde lokale OFD-documenten naar PDF’s op basis van afbeeldingen met de oorspronkelijke paginaformaten en volgorde. Bekijk elke pagina zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Konverterer fra OFD til PDF",
+        description:
+          "Konverter lokale OFD-dokumenter som støttes, til bildebaserte PDF-er med opprinnelige sidestørrelser og siderekkefølge. Forhåndsvis hver side uten å laste opp filen.",
+      },
+      pl: {
+        name: "Konwerter OFD na PDF",
+        description:
+          "Konwertuj obsługiwane lokalne dokumenty OFD na pliki PDF oparte na obrazach, zachowując oryginalne rozmiary i kolejność stron. Podglądaj każdą stronę bez przesyłania pliku.",
+      },
+      pt: {
+        name: "Conversor de OFD para PDF",
+        description:
+          "Converta documentos OFD locais compatíveis em PDFs baseados em imagens, preservando os tamanhos e a ordem originais das páginas. Visualize todas as páginas sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Конвертер OFD в PDF",
+        description:
+          "Преобразуйте поддерживаемые локальные документы OFD в PDF из изображений с исходными размерами и порядком страниц. Просматривайте каждую страницу без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Konverterare från OFD till PDF",
+        description:
+          "Konvertera lokala OFD-dokument som stöds till bildbaserade PDF-filer med ursprungliga sidstorlekar och sidordning. Förhandsvisa varje sida utan att ladda upp filen.",
+      },
+      th: {
+        name: "โปรแกรมแปลง OFD เป็น PDF",
+        description:
+          "แปลงเอกสาร OFD ในเครื่องที่รองรับเป็น PDF แบบภาพ โดยคงขนาดและลำดับหน้าเดิม ดูตัวอย่างทุกหน้าโดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "OFD’den PDF’ye Dönüştürücü",
+        description:
+          "Desteklenen yerel OFD belgelerini, özgün sayfa boyutları ve sırası korunarak görsel tabanlı PDF’lere dönüştürün. Dosyanızı yüklemeden tüm sayfaları önizleyin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi OFD sang PDF",
+        description:
+          "Chuyển tài liệu OFD được hỗ trợ trên thiết bị sang PDF dạng ảnh, giữ nguyên kích thước và thứ tự trang gốc. Xem trước mọi trang mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "OFD 转 PDF 转换器",
+        description:
+          "将受支持的本地 OFD 文档转换为由图片页面组成的 PDF，保留原始页面尺寸和顺序。无需上传文件，即可预览每一页。",
+      },
+      "zh-TW": {
+        name: "OFD 轉 PDF 轉換器",
+        description:
+          "將支援的本機 OFD 文件轉換為圖片式 PDF，保留原始頁面尺寸與順序。無須上傳檔案，即可預覽每一頁。",
+      },
+    },
+  },
+  {
     slug: "ofd-viewer",
     category: "document",
     icon: "file-text",

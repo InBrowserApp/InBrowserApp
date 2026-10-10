@@ -11,3 +11,5 @@ OFD dosyaları konumlandırılmış metin, tablolar, gömülü resimler ve açı
 Dijital imzalar doğrulanmaz. Dijital imzaların içinde saklanan mühür görünümleri gösterilmez; normal mühür resimleri veya çizimleri görünebilir. Bir mührün görünür olması, gerçekliğini kanıtlamaz. Bir paket birden fazla belge içeriyorsa bu görüntüleyici yalnızca ilkini gösterir ve paketin burada eksik görüntülendiğini açıklar. Önemli tutarları, eksik içeriği ve imza bilgilerini uygun bir OFD okuyucusuyla kontrol edin.
 
 Sabit bir dosya boyutu veya sayfa sayısı sınırı yoktur. Ancak kullanılabilir tarayıcı belleği ve sayfanın karmaşıklığı, sayfanın açılmasını engelleyebilir. Çok yüksek yakınlaştırma düzeylerinde bir sayfa, tarayıcının tuval için ayırabildiği bellek sınırını aşabilir; yakınlaştırmayı azaltın veya Sayfaya sığdır seçeneğini kullanın.
+
+Desteklenen belgelerden PDF oluşturmak için [OFD’den PDF’ye Dönüştürücü](../ofd-to-pdf-converter/) aracını kullanın.

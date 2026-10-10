@@ -1,0 +1,4 @@
+{
+  "name": "Konverterer fra OFD til PDF",
+  "description": "Konverter lokale OFD-dokumenter som støttes, til bildebaserte PDF-er med opprinnelige sidestørrelser og siderekkefølge. Forhåndsvis hver side uten å laste opp filen."
+}

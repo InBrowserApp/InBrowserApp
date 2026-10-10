@@ -11,3 +11,5 @@ Les fichiers OFD peuvent contenir du texte positionné, des tableaux, des images
 Les signatures numériques ne sont pas vérifiées. Les représentations de cachets stockées dans les signatures numériques ne sont pas affichées ; les images ou dessins ordinaires de cachets peuvent être visibles. La présence d’un cachet visible ne prouve pas l’authenticité du document. Si un paquet contient plusieurs documents, cette visionneuse n’affiche que le premier et indique que le paquet est incomplet ici. Vérifiez les montants importants, le contenu manquant et les informations de signature avec un lecteur OFD adapté.
 
 Il n’y a pas de limite fixe de taille de fichier ni de nombre de pages. La mémoire disponible dans le navigateur et la complexité d’une page peuvent toutefois empêcher son ouverture. À un niveau de zoom très élevé, une page peut dépasser la capacité d’allocation du canevas du navigateur ; réduisez le zoom ou utilisez Ajuster à la page.
+
+Pour créer un PDF à partir des documents pris en charge, utilisez le [Convertisseur OFD en PDF](../ofd-to-pdf-converter/).

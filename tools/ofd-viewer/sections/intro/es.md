@@ -11,3 +11,5 @@ Los archivos OFD pueden contener texto con posiciones definidas, tablas, imágen
 Las firmas digitales no se verifican. No se muestran las representaciones de sellos almacenadas dentro de las firmas digitales; las imágenes o los dibujos de sellos que formen parte del contenido normal sí pueden ser visibles. Un sello visible no demuestra la autenticidad. Si un paquete contiene varios documentos, este visor muestra solo el primero e indica que el paquete se presenta de forma incompleta. Comprueba los importes importantes, el contenido que falte y la información de las firmas con un lector OFD adecuado.
 
 No hay un límite fijo de tamaño de archivo ni de número de páginas. Aun así, la memoria disponible en el navegador y la complejidad de una página pueden impedir que se abra. Con un zoom muy alto, una página puede superar la memoria que el navegador puede asignar al lienzo de dibujo; reduce el zoom o usa Ajustar página.
+
+Para crear un PDF a partir de documentos compatibles, usa el [Conversor de OFD a PDF](../ofd-to-pdf-converter/).

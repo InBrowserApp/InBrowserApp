@@ -11,3 +11,5 @@ Fail OFD boleh mengandungi teks dengan kedudukan yang ditetapkan, jadual, imej t
 Tandatangan digital tidak disahkan. Rupa cap yang disimpan dalam tandatangan digital tidak dipaparkan; imej atau lukisan cap biasa mungkin kelihatan. Cap yang kelihatan tidak membuktikan ketulenan. Jika pakej mengandungi berbilang dokumen, pemapar ini hanya menunjukkan dokumen pertama dan menjelaskan bahawa pakej tersebut tidak dipaparkan sepenuhnya di sini. Semak amaun penting, kandungan yang hilang dan maklumat tandatangan menggunakan pembaca OFD yang sesuai.
 
 Tiada had tetap untuk saiz fail atau bilangan halaman. Memori pelayar yang tersedia dan kerumitan halaman masih boleh menghalangnya daripada dibuka. Pada tahap zum yang sangat tinggi, halaman mungkin melebihi had peruntukan kanvas pelayar; kurangkan zum atau gunakan Muatkan halaman.
+
+Untuk menghasilkan PDF daripada dokumen yang disokong, gunakan [Penukar OFD kepada PDF](../ofd-to-pdf-converter/).
