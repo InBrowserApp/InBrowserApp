@@ -1,0 +1,70 @@
+--- a/xlsx.js
++++ b/xlsx.js
+@@ -4188,10 +4188,11 @@
+ 			while((w=__readUInt16LE(this,this.l +size))!==0){oo.push(_getchar(w));size+=2;}
+ 			size+=2; o = oo.join(""); break;
+ 
++		/* Cache BIFF continuation boundaries: scanning the array for every character is quadratic. */
+ 		/* sbcs and dbcs support continue records in the SST way TODO codepages */
+ 		case 'dbcs-cont': o = ""; loc = this.l;
+ 			for(i = 0; i < size; ++i) {
+-				if(this.lens && this.lens.indexOf(loc) !== -1) {
++				if(this.lens && (this.lensSet || (this.lensSet = new Set(this.lens))).has(loc)) {
+ 					w = __readUInt8(this, loc);
+ 					this.l = loc + 1;
+ 					vv = ReadShift.call(this, size-i, w ? 'dbcs-cont' : 'sbcs-cont');
+@@ -4209,7 +4210,7 @@
+ 		/* falls through */
+ 		case 'sbcs-cont': o = ""; loc = this.l;
+ 			for(i = 0; i != size; ++i) {
+-				if(this.lens && this.lens.indexOf(loc) !== -1) {
++				if(this.lens && (this.lensSet || (this.lensSet = new Set(this.lens))).has(loc)) {
+ 					w = __readUInt8(this, loc);
+ 					this.l = loc + 1;
+ 					vv = ReadShift.call(this, size-i, w ? 'dbcs-cont' : 'sbcs-cont');
+@@ -15973,7 +15974,9 @@
+ 	var o = ["<cols>"], col;
+ 	for(var i = 0; i != cols.length; ++i) {
+ 		if(!(col = cols[i])) continue;
+-		o[o.length] = (writextag('col', null, col_obj_w(i, col)));
++		var attributes = col_obj_w(i, col);
++		delete attributes.level; /* OOXML uses outlineLevel; other formats still need level. */
++		o[o.length] = (writextag('col', null, attributes));
+ 	}
+ 	o[o.length] = "</cols>";
+ 	return o.join("");
+--- a/xlsx.mjs
++++ b/xlsx.mjs
+@@ -4261,10 +4261,11 @@
+ 			while((w=__readUInt16LE(this,this.l +size))!==0){oo.push(_getchar(w));size+=2;}
+ 			size+=2; o = oo.join(""); break;
+ 
++		/* Cache BIFF continuation boundaries: scanning the array for every character is quadratic. */
+ 		/* sbcs and dbcs support continue records in the SST way TODO codepages */
+ 		case 'dbcs-cont': o = ""; loc = this.l;
+ 			for(i = 0; i < size; ++i) {
+-				if(this.lens && this.lens.indexOf(loc) !== -1) {
++				if(this.lens && (this.lensSet || (this.lensSet = new Set(this.lens))).has(loc)) {
+ 					w = __readUInt8(this, loc);
+ 					this.l = loc + 1;
+ 					vv = ReadShift.call(this, size-i, w ? 'dbcs-cont' : 'sbcs-cont');
+@@ -4282,7 +4283,7 @@
+ 		/* falls through */
+ 		case 'sbcs-cont': o = ""; loc = this.l;
+ 			for(i = 0; i != size; ++i) {
+-				if(this.lens && this.lens.indexOf(loc) !== -1) {
++				if(this.lens && (this.lensSet || (this.lensSet = new Set(this.lens))).has(loc)) {
+ 					w = __readUInt8(this, loc);
+ 					this.l = loc + 1;
+ 					vv = ReadShift.call(this, size-i, w ? 'dbcs-cont' : 'sbcs-cont');
+@@ -16062,7 +16063,9 @@
+ 	var o = ["<cols>"], col;
+ 	for(var i = 0; i != cols.length; ++i) {
+ 		if(!(col = cols[i])) continue;
+-		o[o.length] = (writextag('col', null, col_obj_w(i, col)));
++		var attributes = col_obj_w(i, col);
++		delete attributes.level; /* OOXML uses outlineLevel; other formats still need level. */
++		o[o.length] = (writextag('col', null, attributes));
+ 	}
+ 	o[o.length] = "</cols>";
+ 	return o.join("");

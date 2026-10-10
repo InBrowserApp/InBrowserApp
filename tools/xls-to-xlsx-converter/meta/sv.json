@@ -1,0 +1,4 @@
+{
+  "name": "XLS till XLSX-konverterare",
+  "description": "Konvertera äldre Excel-arbetsböcker i XLS-format till XLSX lokalt i webbläsaren. Granska kalkylblad och celldata före nedladdning, med tydlig information om kompatibilitet."
+}

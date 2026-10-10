@@ -21990,6 +21990,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "xls-to-xlsx-converter",
+    language: "ar",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "de",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "en",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "es",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "fr",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "he",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "hi",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "id",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "it",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "ja",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "ko",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "ms",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "nl",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "no",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "pl",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "pt",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "ru",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "sv",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "th",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "tr",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "vi",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "xls-to-xlsx-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "xlsx-viewer",
     language: "ar",
   },

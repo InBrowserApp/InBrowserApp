@@ -246,6 +246,7 @@
     "@tool/uuid-validator": "workspace:*",
     "@tool/vin-validator": "workspace:*",
     "@tool/whirlpool-hash-text-or-file": "workspace:*",
+    "@tool/xls-to-xlsx-converter": "workspace:*",
     "@tool/xlsx-viewer": "workspace:*",
     "@tool/xml-to-json-converter": "workspace:*",
     "@tool/xxhash-xxh3-128-hash-text-or-file": "workspace:*",

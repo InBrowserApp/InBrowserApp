@@ -1,0 +1,27 @@
+import type { WorkBook } from "xlsx"
+import { describe, failure, readXls, writeXlsx } from "./core/workbook"
+import { preview } from "./core/preview"
+import type { Request, Response } from "./types"
+
+declare const self: DedicatedWorkerGlobalScope
+let workbook: WorkBook
+const send = (message: Response, transfer: Transferable[] = []) =>
+  self.postMessage(message, transfer)
+self.onmessage = async ({ data }: MessageEvent<Request>) => {
+  try {
+    if (data.type === "open") {
+      workbook = readXls(new Uint8Array(await data.file.arrayBuffer()))
+      const info = describe(workbook)
+      const bytes = writeXlsx(workbook)
+      send({ type: "ready", info, bytes }, [bytes])
+    } else {
+      send({
+        type: "preview",
+        id: data.id,
+        preview: preview(workbook, data.sheet, data.row, data.column),
+      })
+    }
+  } catch (reason) {
+    send({ type: "error", error: failure(reason) })
+  }
+}

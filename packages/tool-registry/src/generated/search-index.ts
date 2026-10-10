@@ -30140,6 +30140,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "xls-to-xlsx-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["xls", "xlsx", "excel", "spreadsheet", "converter", "local"],
+    locales: {
+      ar: {
+        name: "محول XLS إلى XLSX",
+        description:
+          "حوّل مصنفات Excel القديمة بصيغة XLS إلى XLSX محليًا في متصفحك. افحص أوراق العمل وبيانات الخلايا قبل التنزيل، مع ملاحظات واضحة حول التوافق.",
+      },
+      de: {
+        name: "XLS-zu-XLSX-Konverter",
+        description:
+          "Konvertieren Sie ältere Excel-Arbeitsmappen im XLS-Format lokal im Browser in XLSX. Prüfen Sie vor dem Download Arbeitsblätter und Zelldaten mit klaren Hinweisen zur Kompatibilität.",
+      },
+      en: {
+        name: "XLS to XLSX Converter",
+        description:
+          "Convert legacy Excel XLS workbooks to XLSX locally in your browser. Inspect worksheets and cell data before downloading, with clear compatibility notes.",
+      },
+      es: {
+        name: "Conversor de XLS a XLSX",
+        description:
+          "Convierte libros antiguos de Excel XLS a XLSX localmente en tu navegador. Revisa las hojas de cálculo y los datos de las celdas antes de descargar, con notas claras sobre compatibilidad.",
+      },
+      fr: {
+        name: "Convertisseur XLS en XLSX",
+        description:
+          "Convertissez les anciens classeurs Excel XLS en XLSX localement dans votre navigateur. Examinez les feuilles et les données des cellules avant le téléchargement, avec des notes de compatibilité claires.",
+      },
+      he: {
+        name: "ממיר XLS ל-XLSX",
+        description:
+          "המרה מקומית של חוברות Excel ישנות בפורמט XLS ל-XLSX בדפדפן. אפשר לבדוק גיליונות עבודה ונתוני תאים לפני ההורדה, עם הערות תאימות ברורות.",
+      },
+      hi: {
+        name: "XLS से XLSX कन्वर्टर",
+        description:
+          "पुरानी Excel XLS वर्कबुक को अपने ब्राउज़र में स्थानीय रूप से XLSX में बदलें। डाउनलोड करने से पहले वर्कशीट और सेल डेटा जाँचें, साथ ही अनुकूलता संबंधी स्पष्ट जानकारी देखें।",
+      },
+      id: {
+        name: "Konverter XLS ke XLSX",
+        description:
+          "Konversi buku kerja Excel XLS lama ke XLSX secara lokal di browser Anda. Periksa lembar kerja dan data sel sebelum mengunduh, dengan catatan kompatibilitas yang jelas.",
+      },
+      it: {
+        name: "Convertitore da XLS a XLSX",
+        description:
+          "Converti le cartelle di lavoro Excel XLS meno recenti in XLSX, in locale nel browser. Esamina fogli di lavoro e dati delle celle prima del download, con note chiare sulla compatibilità.",
+      },
+      ja: {
+        name: "XLSからXLSXへの変換ツール",
+        description:
+          "旧形式のExcel XLSブックをブラウザー内でローカルにXLSXへ変換します。ダウンロード前にワークシートやセルデータを確認でき、互換性に関する注意事項も明示します。",
+      },
+      ko: {
+        name: "XLS → XLSX 변환기",
+        description:
+          "이전 형식의 Excel XLS 통합 문서를 브라우저에서 로컬로 XLSX로 변환하세요. 다운로드 전에 워크시트와 셀 데이터를 살펴보고 명확한 호환성 안내를 확인할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar XLS ke XLSX",
+        description:
+          "Tukar buku kerja Excel XLS lama kepada XLSX secara setempat dalam pelayar anda. Periksa lembaran kerja dan data sel sebelum memuat turun, dengan nota keserasian yang jelas.",
+      },
+      nl: {
+        name: "XLS-naar-XLSX-converter",
+        description:
+          "Converteer oudere Excel-werkmappen in XLS-formaat lokaal in je browser naar XLSX. Bekijk werkbladen en celgegevens vóór het downloaden, met duidelijke informatie over compatibiliteit.",
+      },
+      no: {
+        name: "XLS til XLSX-konverterer",
+        description:
+          "Konverter eldre Excel-arbeidsbøker i XLS-format til XLSX lokalt i nettleseren. Se gjennom regneark og celledata før nedlasting, med tydelige merknader om kompatibilitet.",
+      },
+      pl: {
+        name: "Konwerter XLS na XLSX",
+        description:
+          "Konwertuj starsze skoroszyty Excel XLS na XLSX lokalnie w przeglądarce. Sprawdzaj arkusze i dane komórek przed pobraniem, z jasnymi informacjami o zgodności.",
+      },
+      pt: {
+        name: "Conversor de XLS para XLSX",
+        description:
+          "Converta pastas de trabalho antigas do Excel XLS para XLSX localmente no navegador. Inspecione planilhas e dados das células antes de baixar, com observações claras sobre compatibilidade.",
+      },
+      ru: {
+        name: "Конвертер XLS в XLSX",
+        description:
+          "Преобразуйте книги Excel устаревшего формата XLS в XLSX локально в браузере. Просматривайте листы и данные ячеек перед скачиванием с понятными примечаниями о совместимости.",
+      },
+      sv: {
+        name: "XLS till XLSX-konverterare",
+        description:
+          "Konvertera äldre Excel-arbetsböcker i XLS-format till XLSX lokalt i webbläsaren. Granska kalkylblad och celldata före nedladdning, med tydlig information om kompatibilitet.",
+      },
+      th: {
+        name: "โปรแกรมแปลง XLS เป็น XLSX",
+        description:
+          "แปลงเวิร์กบุ๊ก Excel XLS รุ่นเก่าเป็น XLSX ภายในเบราว์เซอร์ ตรวจดูเวิร์กชีตและข้อมูลเซลล์ก่อนดาวน์โหลด พร้อมหมายเหตุเกี่ยวกับความเข้ากันได้ที่ชัดเจน",
+      },
+      tr: {
+        name: "XLS’ten XLSX’e Dönüştürücü",
+        description:
+          "Eski Excel XLS çalışma kitaplarını tarayıcınızda yerel olarak XLSX’e dönüştürün. İndirmeden önce çalışma sayfalarını ve hücre verilerini inceleyin, açık uyumluluk notlarını görün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi XLS sang XLSX",
+        description:
+          "Chuyển sổ làm việc Excel XLS đời cũ sang XLSX ngay trong trình duyệt. Kiểm tra trang tính và dữ liệu ô trước khi tải xuống, kèm ghi chú rõ ràng về khả năng tương thích.",
+      },
+      "zh-CN": {
+        name: "XLS 转 XLSX 转换器",
+        description:
+          "在浏览器本地将旧版 Excel XLS 工作簿转换为 XLSX。下载前可查看工作表和单元格数据，并提供清晰的兼容性说明。",
+      },
+      "zh-TW": {
+        name: "XLS 轉 XLSX 轉換器",
+        description:
+          "在瀏覽器中將舊版 Excel XLS 活頁簿轉換為 XLSX，全程在本機處理。下載前可檢視工作表與儲存格資料，並查看明確的相容性說明。",
+      },
+    },
+  },
+  {
     slug: "xlsx-viewer",
     category: "document",
     icon: "file-text",

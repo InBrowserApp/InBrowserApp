@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da XLS a XLSX",
+  "description": "Converti le cartelle di lavoro Excel XLS meno recenti in XLSX, in locale nel browser. Esamina fogli di lavoro e dati delle celle prima del download, con note chiare sulla compatibilità."
+}
