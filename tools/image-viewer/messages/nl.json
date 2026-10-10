@@ -54,5 +54,18 @@
   "compatibility": "Ingesloten profielen blijven behouden waar dat wordt ondersteund. Hulpafbeeldingen, dieptekaarten en containermetadata worden niet getoond.",
   "licenses": "Decoderlicenties en broncode",
   "downloadPng": "PNG downloaden",
-  "pngNote": "Sla de geselecteerde afbeelding op als een PNG met een bitdiepte van 8 bits. Hoge bitdiepte en HDR worden teruggebracht. Zoom en voorbeeldachtergronden veranderen de opgeslagen afbeelding niet."
+  "pngNote": "Sla de geselecteerde afbeelding op als een PNG met een bitdiepte van 8 bits. Hoge bitdiepte en HDR worden teruggebracht. Zoom en voorbeeldachtergronden veranderen de opgeslagen afbeelding niet.",
+  "jpgExport": {
+    "format": "Downloadformaat",
+    "quality": "JPG-kwaliteit",
+    "qualityHint": "1–100. Een hogere kwaliteit levert meestal een groter bestand op. Druk op Enter of verlaat het veld om de waarde toe te passen.",
+    "background": "JPG-achtergrond",
+    "white": "Wit",
+    "black": "Zwart",
+    "custom": "Aangepast",
+    "color": "Aangepaste achtergrondkleur",
+    "download": "JPG downloaden",
+    "note": "Bekijk de daadwerkelijke JPG voordat je opslaat. JPG gebruikt compressie met verlies en kleuren met een bitdiepte van 8 bits, en vult transparante delen met de geselecteerde JPG-achtergrond. Zoom en voorbeeldachtergronden veranderen de opgeslagen afbeelding niet.",
+    "compatibility": "De JPG-uitvoer wordt geconverteerd naar sRGB. Ingesloten profielen van het bronbestand worden gebruikt waar dat wordt ondersteund; kleuren kunnen afwijken van die in een editor met kleurbeheer. Hulpafbeeldingen, dieptekaarten en containermetadata blijven niet behouden."
+  }
 }

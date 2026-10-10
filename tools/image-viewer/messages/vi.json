@@ -54,5 +54,18 @@
   "compatibility": "Hồ sơ màu nhúng được giữ lại khi được hỗ trợ. Ảnh phụ, bản đồ độ sâu và siêu dữ liệu của tệp chứa không được hiển thị.",
   "licenses": "Giấy phép và mã nguồn bộ giải mã",
   "downloadPng": "Tải PNG",
-  "pngNote": "Lưu ảnh đã chọn dưới dạng PNG 8 bit. Độ sâu bit cao và HDR bị giảm. Thu phóng và nền xem trước không làm thay đổi ảnh đã lưu."
+  "pngNote": "Lưu ảnh đã chọn dưới dạng PNG 8 bit. Độ sâu bit cao và HDR bị giảm. Thu phóng và nền xem trước không làm thay đổi ảnh đã lưu.",
+  "jpgExport": {
+    "format": "Định dạng tải xuống",
+    "quality": "Chất lượng JPG",
+    "qualityHint": "1–100. Chất lượng cao hơn thường tạo tệp lớn hơn. Nhấn Enter hoặc rời khỏi ô nhập để áp dụng.",
+    "background": "Nền JPG",
+    "white": "Trắng",
+    "black": "Đen",
+    "custom": "Tùy chỉnh",
+    "color": "Màu nền tùy chỉnh",
+    "download": "Tải JPG",
+    "note": "Xem trước ảnh JPG thực tế trước khi lưu. JPG dùng nén mất dữ liệu, màu 8 bit và lấp vùng trong suốt bằng nền JPG đã chọn. Thu phóng và nền xem trước không làm thay đổi ảnh đã lưu.",
+    "compatibility": "Đầu ra JPG được chuyển sang sRGB. Hồ sơ màu nhúng trong ảnh nguồn được sử dụng khi được hỗ trợ; màu sắc có thể khác với trình chỉnh sửa có quản lý màu. Ảnh phụ, bản đồ độ sâu và siêu dữ liệu của tệp chứa không được giữ lại."
+  }
 }

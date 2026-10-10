@@ -54,5 +54,18 @@
   "compatibility": "Los perfiles incrustados se conservan cuando son compatibles. No se muestran las imágenes auxiliares, los mapas de profundidad ni los metadatos del contenedor.",
   "licenses": "Licencias y código fuente de los decodificadores",
   "downloadPng": "Descargar PNG",
-  "pngNote": "Guarda la imagen seleccionada como PNG de 8 bits. Se reducen la alta profundidad de bits y el HDR. El zoom y los fondos de la vista previa no modifican la imagen guardada."
+  "pngNote": "Guarda la imagen seleccionada como PNG de 8 bits. Se reducen la alta profundidad de bits y el HDR. El zoom y los fondos de la vista previa no modifican la imagen guardada.",
+  "jpgExport": {
+    "format": "Formato de descarga",
+    "quality": "Calidad JPG",
+    "qualityHint": "1–100. Una mayor calidad suele generar un archivo más grande. Pulsa Intro o sal del campo para aplicar el cambio.",
+    "background": "Fondo JPG",
+    "white": "Blanco",
+    "black": "Negro",
+    "custom": "Personalizado",
+    "color": "Color de fondo personalizado",
+    "download": "Descargar JPG",
+    "note": "Previsualiza el JPG final antes de guardarlo. JPG usa compresión con pérdida, color de 8 bits y rellena las áreas transparentes con el fondo JPG seleccionado. El zoom y los fondos de la vista previa no modifican la imagen guardada.",
+    "compatibility": "La salida JPG se convierte a sRGB. Los perfiles incrustados del archivo de origen se usan cuando son compatibles; los colores pueden diferir de los de un editor con gestión del color. No se conservan las imágenes auxiliares, los mapas de profundidad ni los metadatos del contenedor."
+  }
 }

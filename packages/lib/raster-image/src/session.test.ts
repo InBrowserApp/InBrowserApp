@@ -34,6 +34,7 @@ test("keeps a decoder for navigation, correlates requests and releases it on clo
     id: 2,
     type: "render",
     index: 1,
+    jpeg: undefined,
   })
   worker.onmessage!({
     data: { id: 2, type: "rendered", preview: { width: 123 } },
@@ -100,4 +101,31 @@ test("cleans up failed posts and does not start an already aborted request", asy
   controller.abort()
   expect(() => imageSession(file, controller.signal)).toThrow(/abort/i)
   expect(WorkerDouble.instances).toHaveLength(1)
+})
+
+test("sends explicit JPEG options for both initial and selected images", async () => {
+  vi.stubGlobal("Worker", WorkerDouble)
+  const controller = new AbortController()
+  const session = imageSession(file, controller.signal)
+  const worker = WorkerDouble.instances[0]!
+  const jpeg = { quality: 65, background: "#102030" }
+  const opened = session.open(jpeg)
+  expect(worker.postMessage).toHaveBeenLastCalledWith({
+    id: 1,
+    type: "open",
+    file,
+    jpeg,
+  })
+  worker.onmessage!({ data: { id: 1, type: "opened", result: {} } })
+  await opened
+  const rendered = session.render(2, jpeg)
+  expect(worker.postMessage).toHaveBeenLastCalledWith({
+    id: 2,
+    type: "render",
+    index: 2,
+    jpeg,
+  })
+  worker.onmessage!({ data: { id: 2, type: "rendered", preview: {} } })
+  await rendered
+  controller.abort()
 })

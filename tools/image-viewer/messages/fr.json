@@ -54,5 +54,18 @@
   "compatibility": "Les profils intégrés sont conservés lorsqu’ils sont pris en charge. Les images auxiliaires, les cartes de profondeur et les métadonnées du conteneur ne sont pas affichées.",
   "licenses": "Licences et code source des décodeurs",
   "downloadPng": "Télécharger le PNG",
-  "pngNote": "Enregistrez l’image sélectionnée au format PNG 8 bits. Les profondeurs de couleur élevées et le HDR sont réduits. Le zoom et les arrière-plans de l’aperçu ne modifient pas l’image enregistrée."
+  "pngNote": "Enregistrez l’image sélectionnée au format PNG 8 bits. Les profondeurs de couleur élevées et le HDR sont réduits. Le zoom et les arrière-plans de l’aperçu ne modifient pas l’image enregistrée.",
+  "jpgExport": {
+    "format": "Format de téléchargement",
+    "quality": "Qualité JPG",
+    "qualityHint": "1–100. Une qualité supérieure produit généralement un fichier plus volumineux. Appuyez sur Entrée ou quittez le champ pour appliquer la valeur.",
+    "background": "Arrière-plan JPG",
+    "white": "Blanc",
+    "black": "Noir",
+    "custom": "Personnalisé",
+    "color": "Couleur d’arrière-plan personnalisée",
+    "download": "Télécharger le JPG",
+    "note": "Prévisualisez le JPG réel avant de l’enregistrer. Le JPG utilise une compression avec perte et des couleurs sur 8 bits, et remplit les zones transparentes avec l’arrière-plan JPG sélectionné. Le zoom et les arrière-plans de l’aperçu ne modifient pas l’image enregistrée.",
+    "compatibility": "Le JPG produit est converti en sRGB. Les profils intégrés à la source sont utilisés lorsqu’ils sont pris en charge ; les couleurs peuvent différer de celles d’un éditeur avec gestion des couleurs. Les images auxiliaires, les cartes de profondeur et les métadonnées du conteneur ne sont pas conservées."
+  }
 }

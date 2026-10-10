@@ -11602,6 +11602,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "image-to-jpg-converter",
+    category: "image",
+    icon: "image",
+    tags: [
+      "image",
+      "jpg",
+      "jpeg",
+      "converter",
+      "heic",
+      "heif",
+      "tiff",
+      "jxl",
+      "jpeg2000",
+      "ico",
+    ],
+    locales: {
+      ar: {
+        name: "محول الصور إلى JPG",
+        description:
+          "حوّل الصور المحلية وصفحات TIFF ونسخ الأيقونات وإطارات الحركة إلى JPG. اضبط الجودة وخلفية المناطق الشفافة دون رفع ملفاتك.",
+      },
+      de: {
+        name: "Bild-zu-JPG-Konverter",
+        description:
+          "Konvertieren Sie lokale Bilder, TIFF-Seiten, Symbolvarianten und Animationsbilder in JPG. Passen Sie Qualität und Hintergrundfarbe für transparente Bereiche an, ohne Ihre Dateien hochzuladen.",
+      },
+      en: {
+        name: "Image to JPG Converter",
+        description:
+          "Convert local images, TIFF pages, icon variants and animation frames to JPG. Adjust quality and transparency background without uploading your files.",
+      },
+      es: {
+        name: "Convertidor de imágenes a JPG",
+        description:
+          "Convierte imágenes locales, páginas TIFF, variantes de iconos y fotogramas de animación a JPG. Ajusta la calidad y el fondo de las áreas transparentes sin subir tus archivos.",
+      },
+      fr: {
+        name: "Convertisseur d’images en JPG",
+        description:
+          "Convertissez des images locales, des pages TIFF, des variantes d’icônes et des images d’animation en JPG. Réglez la qualité et l’arrière-plan des zones transparentes sans envoyer vos fichiers.",
+      },
+      he: {
+        name: "ממיר תמונות ל-JPG",
+        description:
+          "המרת תמונות מקומיות, עמודי TIFF, גרסאות סמלים ופריימים של הנפשה ל-JPG. אפשר להתאים את האיכות ואת הרקע לאזורים שקופים ללא העלאת הקבצים.",
+      },
+      hi: {
+        name: "चित्र से JPG कनवर्टर",
+        description:
+          "स्थानीय चित्रों, TIFF पृष्ठों, आइकन के प्रकारों और एनीमेशन फ़्रेम को JPG में बदलें। अपनी फ़ाइलें अपलोड किए बिना गुणवत्ता और पारदर्शी हिस्सों की पृष्ठभूमि समायोजित करें।",
+      },
+      id: {
+        name: "Konverter Gambar ke JPG",
+        description:
+          "Konversikan gambar lokal, halaman TIFF, varian ikon, dan bingkai animasi ke JPG. Sesuaikan kualitas dan latar belakang area transparan tanpa mengunggah file Anda.",
+      },
+      it: {
+        name: "Convertitore di immagini in JPG",
+        description:
+          "Converti immagini locali, pagine TIFF, varianti di icone e fotogrammi di animazioni in JPG. Regola la qualità e lo sfondo delle aree trasparenti senza caricare i file online.",
+      },
+      ja: {
+        name: "画像 JPG 変換ツール",
+        description:
+          "ローカルの画像、TIFF のページ、各種アイコン、アニメーションのフレームを JPG に変換します。ファイルをアップロードせずに、品質や透明部分の背景色を調整できます。",
+      },
+      ko: {
+        name: "이미지 JPG 변환기",
+        description:
+          "로컬 이미지, TIFF 페이지, 아이콘 변형 및 애니메이션 프레임을 JPG로 변환하세요. 파일을 업로드하지 않고 품질과 투명한 영역의 배경색을 조정할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Imej kepada JPG",
+        description:
+          "Tukar imej setempat, halaman TIFF, varian ikon dan bingkai animasi kepada JPG. Laraskan kualiti dan latar belakang kawasan lutsinar tanpa memuat naik fail anda.",
+      },
+      nl: {
+        name: "Afbeelding-naar-JPG-converter",
+        description:
+          "Converteer lokale afbeeldingen, TIFF-pagina's, pictogramvarianten en animatieframes naar JPG. Pas de kwaliteit en de achtergrond van transparante delen aan zonder je bestanden te uploaden.",
+      },
+      no: {
+        name: "Bilde til JPG-konverterer",
+        description:
+          "Konverter lokale bilder, TIFF-sider, ikonvarianter og animasjonsbilder til JPG. Juster kvaliteten og bakgrunnen for gjennomsiktige områder uten å laste opp filene dine.",
+      },
+      pl: {
+        name: "Konwerter obrazów na JPG",
+        description:
+          "Konwertuj lokalne obrazy, strony TIFF, warianty ikon i klatki animacji na JPG. Dostosuj jakość i tło przezroczystych obszarów bez przesyłania plików.",
+      },
+      pt: {
+        name: "Conversor de imagens para JPG",
+        description:
+          "Converta imagens locais, páginas TIFF, variantes de ícones e quadros de animação para JPG. Ajuste a qualidade e o fundo das áreas transparentes sem enviar seus arquivos.",
+      },
+      ru: {
+        name: "Конвертер изображений в JPG",
+        description:
+          "Преобразуйте локальные изображения, страницы TIFF, варианты значков и кадры анимации в JPG. Настраивайте качество и фон прозрачных областей без отправки файлов на сервер.",
+      },
+      sv: {
+        name: "Bildkonverterare till JPG",
+        description:
+          "Konvertera lokala bilder, TIFF-sidor, ikonvarianter och animationsrutor till JPG. Justera kvaliteten och bakgrundsfärgen för transparenta områden utan att ladda upp dina filer.",
+      },
+      th: {
+        name: "โปรแกรมแปลงรูปภาพเป็น JPG",
+        description:
+          "แปลงรูปภาพบนอุปกรณ์ หน้า TIFF แบบไอคอน และเฟรมภาพเคลื่อนไหวเป็น JPG ปรับคุณภาพและพื้นหลังสำหรับพื้นที่โปร่งใสโดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "Görselden JPG'ye dönüştürücü",
+        description:
+          "Yerel görselleri, TIFF sayfalarını, simge çeşitlerini ve animasyon karelerini JPG'ye dönüştürün. Dosyalarınızı yüklemeden kaliteyi ve saydam alanların arka planını ayarlayın.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi ảnh sang JPG",
+        description:
+          "Chuyển ảnh trên thiết bị, trang TIFF, biến thể biểu tượng và khung hình hoạt ảnh sang JPG. Điều chỉnh chất lượng và nền cho vùng trong suốt mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "图片转 JPG 转换器",
+        description:
+          "将本地图片、TIFF 页面、图标变体和动画帧转换为 JPG。调整质量和透明区域背景，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "圖片轉 JPG 轉換器",
+        description:
+          "將本機圖片、TIFF 頁面、圖示版本與動畫畫格轉換為 JPG。無須上傳檔案即可調整品質與透明區域的背景色。",
+      },
+    },
+  },
+  {
     slug: "image-to-pdf-converter",
     category: "pdf",
     icon: "file-text",

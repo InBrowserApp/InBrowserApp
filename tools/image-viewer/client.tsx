@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { DocumentWorkspace } from "@workspace/ui/components/tool/document-workspace"
 import {
   Alert,
@@ -18,21 +18,34 @@ import { ImageIcon } from "@workspace/ui/icons"
 import { failureOf } from "@workspace/raster-image/failure"
 import { RasterImageReader } from "@workspace/ui/components/tool/raster-image-reader"
 import { imageSession } from "@workspace/raster-image"
-import { pngFilename } from "@workspace/raster-image/png"
-import type { Failure, OpenedImage } from "@workspace/raster-image/types"
+import { imageFilename } from "@workspace/raster-image/filename"
+import { RasterExportOptions } from "@workspace/ui/components/tool/raster-export-options"
+import type {
+  Failure,
+  OpenedImage,
+  JpegOptions,
+} from "@workspace/raster-image/types"
 import type { Messages } from "./types"
 
 type Session = ReturnType<typeof imageSession>
 export default function Client({ messages: m }: { messages: Messages }) {
-  const [selection, setSelection] = useState<{ file: File | null; id: number }>(
-    { file: null, id: 0 }
-  )
+  const [format, setFormat] = useState<"png" | "jpg">("png")
+  const [jpeg, setJpeg] = useState<JpegOptions>({
+    quality: 90,
+    background: "#ffffff",
+  })
+  const output = format === "jpg" ? jpeg : undefined
+  const [selection, setSelection] = useState<{
+    file: File | null
+    id: number
+    jpeg?: JpegOptions
+  }>({ file: null, id: 0 })
   const file = selection.file
   function setFile(file: File | null) {
-    setSelection((previous) => ({ file, id: previous.id + 1 }))
+    setSelection((previous) => ({ file, id: previous.id + 1, jpeg: output }))
   }
   const [ready, setReady] = useState<{
-    file: File
+    id: number
     image: OpenedImage
     session: Session
   } | null>(null)
@@ -52,9 +65,9 @@ export default function Client({ messages: m }: { messages: Messages }) {
     void Promise.resolve()
       .then(async () => {
         const session = imageSession(file, controller.signal)
-        const image = await session.open()
+        const image = await session.open(selection.jpeg)
         controller.signal.throwIfAborted()
-        setReady({ file, image, session })
+        setReady({ id: selection.id, image, session })
         setLoading(false)
       })
       .catch((reason: unknown) => {
@@ -64,10 +77,27 @@ export default function Client({ messages: m }: { messages: Messages }) {
         controller.abort()
       })
     return () => controller.abort()
-  }, [file])
+  }, [file, selection])
+  const renderImage = useCallback(
+    (index: number) => {
+      if (!ready) return Promise.reject(new Error("invalid"))
+      return ready.session.render(index, output)
+    },
+    [ready, output]
+  )
   return (
     <>
-      <p className="mb-3 text-sm text-muted-foreground">{m.pngNote}</p>
+      <RasterExportOptions
+        format={format}
+        onFormat={setFormat}
+        jpeg={jpeg}
+        onJpeg={setJpeg}
+        disabled={Boolean(file && ready?.id !== selection.id && !error)}
+        messages={m.jpgExport}
+      />
+      <p className="mb-3 text-sm text-muted-foreground">
+        {format === "jpg" ? m.jpgExport.note : m.pngNote}
+      </p>
       <DocumentWorkspace
         tool="image-viewer"
         file={file}
@@ -108,18 +138,22 @@ export default function Client({ messages: m }: { messages: Messages }) {
             </EmptyHeader>
           </Empty>
         ) : null}
-        {ready && ready.file === file ? (
+        {ready && ready.id === selection.id && file ? (
           <RasterImageReader
             key={selection.id}
             image={ready.image}
-            render={ready.session.render}
+            render={renderImage}
             errorMessage={(reason) => m[failureOf(reason)]}
             download={{
-              label: m.downloadPng,
+              label: format === "jpg" ? m.jpgExport.download : m.downloadPng,
               filename: (index) =>
-                pngFilename(file.name, ready.image.info, index),
+                imageFilename(file.name, ready.image.info, index, format),
             }}
-            messages={m}
+            messages={
+              format === "jpg"
+                ? { ...m, compatibility: m.jpgExport.compatibility }
+                : m
+            }
           />
         ) : null}
       </DocumentWorkspace>

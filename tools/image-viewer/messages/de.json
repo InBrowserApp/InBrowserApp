@@ -54,5 +54,18 @@
   "compatibility": "Eingebettete Profile bleiben erhalten, soweit unterstützt. Zusatzbilder, Tiefenkarten und Container-Metadaten werden nicht angezeigt.",
   "licenses": "Decoder-Lizenzen und Quellcode",
   "downloadPng": "PNG herunterladen",
-  "pngNote": "Speichern Sie das ausgewählte Bild als 8-Bit-PNG. Hohe Bittiefe und HDR werden reduziert. Zoom und Vorschauhintergründe verändern das gespeicherte Bild nicht."
+  "pngNote": "Speichern Sie das ausgewählte Bild als 8-Bit-PNG. Hohe Bittiefe und HDR werden reduziert. Zoom und Vorschauhintergründe verändern das gespeicherte Bild nicht.",
+  "jpgExport": {
+    "format": "Downloadformat",
+    "quality": "JPG-Qualität",
+    "qualityHint": "1–100. Höhere Qualität führt meist zu einer größeren Datei. Drücken Sie Enter oder verlassen Sie das Feld, um den Wert anzuwenden.",
+    "background": "JPG-Hintergrund",
+    "white": "Weiß",
+    "black": "Schwarz",
+    "custom": "Benutzerdefiniert",
+    "color": "Benutzerdefinierte Hintergrundfarbe",
+    "download": "JPG herunterladen",
+    "note": "Prüfen Sie vor dem Speichern die Vorschau der tatsächlichen JPG-Datei. JPG ist verlustbehaftet, verwendet 8-Bit-Farben und füllt transparente Bereiche mit dem ausgewählten JPG-Hintergrund. Zoom und Vorschauhintergründe verändern das gespeicherte Bild nicht.",
+    "compatibility": "Die JPG-Ausgabe wird in sRGB konvertiert. Eingebettete Quellprofile werden verwendet, soweit unterstützt; Farben können von der Darstellung in einem Editor mit Farbmanagement abweichen. Zusatzbilder, Tiefenkarten und Container-Metadaten bleiben nicht erhalten."
+  }
 }

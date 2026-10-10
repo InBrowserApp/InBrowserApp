@@ -54,5 +54,18 @@
   "compatibility": "Gömülü profiller desteklendiğinde korunur. Yardımcı görseller, derinlik haritaları ve kapsayıcı meta verileri gösterilmez.",
   "licenses": "Kod çözücü lisansları ve kaynak kodu",
   "downloadPng": "PNG indir",
-  "pngNote": "Seçilen görseli 8 bitlik PNG olarak kaydedin. Yüksek bit derinliği ve HDR azaltılır. Yakınlaştırma ve önizleme arka planları kaydedilen görseli değiştirmez."
+  "pngNote": "Seçilen görseli 8 bitlik PNG olarak kaydedin. Yüksek bit derinliği ve HDR azaltılır. Yakınlaştırma ve önizleme arka planları kaydedilen görseli değiştirmez.",
+  "jpgExport": {
+    "format": "İndirme biçimi",
+    "quality": "JPG kalitesi",
+    "qualityHint": "1–100. Daha yüksek kalite genellikle daha büyük bir dosya oluşturur. Uygulamak için Enter tuşuna basın veya alandan çıkın.",
+    "background": "JPG arka planı",
+    "white": "Beyaz",
+    "black": "Siyah",
+    "custom": "Özel",
+    "color": "Özel arka plan rengi",
+    "download": "JPG indir",
+    "note": "Kaydetmeden önce gerçek JPG çıktısını önizleyin. JPG kayıplı sıkıştırma ve 8 bit renk kullanır, saydam alanları seçilen JPG arka planıyla doldurur. Yakınlaştırma ve önizleme arka planları kaydedilen görseli değiştirmez.",
+    "compatibility": "JPG çıktısı sRGB'ye dönüştürülür. Kaynak görseldeki gömülü profiller desteklendiğinde kullanılır; renkler, renk yönetimli bir düzenleyiciden farklı olabilir. Yardımcı görseller, derinlik haritaları ve kapsayıcı meta verileri korunmaz."
+  }
 }

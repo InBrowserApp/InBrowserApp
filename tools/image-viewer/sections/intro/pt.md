@@ -12,8 +12,12 @@ Navegue por páginas TIFF, tamanhos de ícones, coleções de imagens e quadros 
 
 A orientação é aplicada à imagem exibida. As visualizações usam canais de 8 bits, portanto a alta profundidade de bits e o HDR são reduzidos. Perfis de cor incorporados são preservados quando compatíveis, mas este visualizador não substitui um editor com gerenciamento de cores. Os limites de recursos do navegador e dos decodificadores podem impedir a abertura de imagens muito grandes ou complexas; não há limite fixo de tamanho de arquivo ou quantidade de imagens.
 
-Os arquivos ficam neste dispositivo. Fechar ou substituir um arquivo libera seu decodificador e sua visualização. Este visualizador não edita nem salva automaticamente suas imagens. As licenças dos decodificadores e as informações sobre o código-fonte correspondente estão disponíveis nos detalhes da imagem.
+Os arquivos ficam neste dispositivo. Fechar ou substituir um arquivo libera seu decodificador e sua visualização. Este visualizador não salva automaticamente suas imagens. As licenças dos decodificadores e as informações sobre o código-fonte correspondente estão disponíveis nos detalhes da imagem.
 
 ## Salve um PNG
 
 Baixe a imagem, página, variante de ícone ou quadro de animação com composição aplicada que estiver selecionado como um PNG estático. A imagem salva mantém as dimensões completas em pixels, a orientação aplicada e a transparência compatível; o zoom e os fundos da visualização não a alteram. A exportação em PNG usa a mesma imagem de 8 bits da visualização, portanto não preserva a alta profundidade de bits nem o HDR. PNG animado exporta apenas a imagem estática padrão. Não há garantia de preservação da animação ou dos metadados do contêiner.
+
+## Salve um JPG
+
+Escolha JPG como formato de download para visualizar o resultado realmente comprimido. Defina a qualidade de 1 a 100 e escolha branco, preto ou uma cor personalizada para preencher a transparência. Uma qualidade maior geralmente produz um arquivo maior; mesmo a qualidade 100 tem perdas. A página ou o quadro selecionado e suas dimensões completas em pixels são mantidos quando as configurações mudam. O JPG usa cores sRGB de 8 bits e reduz a alta profundidade de bits e o HDR. O zoom e os fundos da visualização não alteram o JPG salvo. Somente a configuração de fundo do JPG preenche os pixels transparentes.

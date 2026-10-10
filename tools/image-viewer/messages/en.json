@@ -54,5 +54,18 @@
   "compatibility": "Embedded profiles are retained where supported. Auxiliary images, depth maps and container metadata are not shown.",
   "licenses": "Decoder licenses and source",
   "downloadPng": "Download PNG",
-  "pngNote": "Save the selected image as an 8-bit PNG. High bit depth and HDR are reduced. Zoom and preview backgrounds do not change the saved image."
+  "pngNote": "Save the selected image as an 8-bit PNG. High bit depth and HDR are reduced. Zoom and preview backgrounds do not change the saved image.",
+  "jpgExport": {
+    "format": "Download format",
+    "quality": "JPG quality",
+    "qualityHint": "1–100. Higher quality usually makes a larger file. Press Enter or leave the field to apply.",
+    "background": "JPG background",
+    "white": "White",
+    "black": "Black",
+    "custom": "Custom",
+    "color": "Custom background color",
+    "download": "Download JPG",
+    "note": "Preview the actual JPG before saving. JPG is lossy, uses 8-bit color and fills transparency with the selected JPG background. Zoom and preview backgrounds do not change the saved image.",
+    "compatibility": "JPG output is converted to sRGB. Embedded source profiles are used where supported; colors may differ from a color-managed editor. Auxiliary images, depth maps and container metadata are not preserved."
+  }
 }

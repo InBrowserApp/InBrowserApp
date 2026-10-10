@@ -54,5 +54,18 @@
   "compatibility": "I profili incorporati vengono conservati dove supportato. Immagini ausiliarie, mappe di profondità e metadati del contenitore non vengono mostrati.",
   "licenses": "Licenze e sorgenti dei decodificatori",
   "downloadPng": "Scarica PNG",
-  "pngNote": "Salva l’immagine selezionata come PNG a 8 bit. La profondità di colore elevata e l’HDR vengono ridotti. Lo zoom e gli sfondi dell’anteprima non modificano l’immagine salvata."
+  "pngNote": "Salva l’immagine selezionata come PNG a 8 bit. La profondità di colore elevata e l’HDR vengono ridotti. Lo zoom e gli sfondi dell’anteprima non modificano l’immagine salvata.",
+  "jpgExport": {
+    "format": "Formato di download",
+    "quality": "Qualità JPG",
+    "qualityHint": "1–100. Una qualità più alta di solito produce un file più grande. Premi Invio o esci dal campo per applicare la modifica.",
+    "background": "Sfondo JPG",
+    "white": "Bianco",
+    "black": "Nero",
+    "custom": "Personalizzato",
+    "color": "Colore di sfondo personalizzato",
+    "download": "Scarica JPG",
+    "note": "Visualizza in anteprima il JPG finale prima di salvarlo. JPG usa una compressione con perdita, colori a 8 bit e riempie le aree trasparenti con lo sfondo JPG selezionato. Lo zoom e gli sfondi dell’anteprima non modificano l’immagine salvata.",
+    "compatibility": "Il risultato JPG viene convertito in sRGB. I profili incorporati nel file originale vengono usati dove supportato; i colori possono differire da quelli di un editor con gestione del colore. Immagini ausiliarie, mappe di profondità e metadati del contenitore non vengono conservati."
+  }
 }

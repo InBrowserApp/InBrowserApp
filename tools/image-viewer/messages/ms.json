@@ -54,5 +54,18 @@
   "compatibility": "Profil terbenam dikekalkan apabila disokong. Imej tambahan, peta kedalaman dan metadata bekas tidak dipaparkan.",
   "licenses": "Lesen dan sumber penyahkod",
   "downloadPng": "Muat turun PNG",
-  "pngNote": "Simpan imej yang dipilih sebagai PNG 8 bit. Kedalaman bit tinggi dan HDR dikurangkan. Zum dan latar belakang pratonton tidak mengubah imej yang disimpan."
+  "pngNote": "Simpan imej yang dipilih sebagai PNG 8 bit. Kedalaman bit tinggi dan HDR dikurangkan. Zum dan latar belakang pratonton tidak mengubah imej yang disimpan.",
+  "jpgExport": {
+    "format": "Format muat turun",
+    "quality": "Kualiti JPG",
+    "qualityHint": "1–100. Kualiti yang lebih tinggi biasanya menghasilkan fail yang lebih besar. Tekan Enter atau keluar daripada medan untuk menggunakan nilai.",
+    "background": "Latar belakang JPG",
+    "white": "Putih",
+    "black": "Hitam",
+    "custom": "Tersuai",
+    "color": "Warna latar belakang tersuai",
+    "download": "Muat turun JPG",
+    "note": "Pratonton JPG sebenar sebelum menyimpan. JPG melibatkan kehilangan data, menggunakan warna 8 bit dan mengisi kawasan lutsinar dengan latar belakang JPG yang dipilih. Zum dan latar belakang pratonton tidak mengubah imej yang disimpan.",
+    "compatibility": "Hasil JPG ditukar kepada sRGB. Profil yang terbenam dalam fail sumber digunakan apabila disokong; warna mungkin berbeza daripada penyunting dengan pengurusan warna. Imej tambahan, peta kedalaman dan metadata bekas tidak dikekalkan."
+  }
 }

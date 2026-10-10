@@ -70,7 +70,7 @@ export function RasterImageView({
     setFailed(false)
     try {
       const next = URL.createObjectURL(
-        new Blob([preview.png], { type: "image/png" })
+        new Blob([preview.bytes], { type: preview.mime })
       )
       setObjectUrl({ preview, url: next })
       return () => URL.revokeObjectURL(next)

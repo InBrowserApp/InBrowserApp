@@ -54,5 +54,18 @@
   "compatibility": "Innebygde profiler bevares der det støttes. Hjelpebilder, dybdekart og metadata i beholderen vises ikke.",
   "licenses": "Dekoderlisenser og kildekode",
   "downloadPng": "Last ned PNG",
-  "pngNote": "Lagre det valgte bildet som et 8-bits PNG-bilde. Høy bitdybde og HDR reduseres. Zoom og bakgrunner i forhåndsvisningen endrer ikke det lagrede bildet."
+  "pngNote": "Lagre det valgte bildet som et 8-bits PNG-bilde. Høy bitdybde og HDR reduseres. Zoom og bakgrunner i forhåndsvisningen endrer ikke det lagrede bildet.",
+  "jpgExport": {
+    "format": "Nedlastingsformat",
+    "quality": "JPG-kvalitet",
+    "qualityHint": "1–100. Høyere kvalitet gir vanligvis en større fil. Trykk på Enter eller forlat feltet for å bruke verdien.",
+    "background": "JPG-bakgrunn",
+    "white": "Hvit",
+    "black": "Svart",
+    "custom": "Tilpasset",
+    "color": "Tilpasset bakgrunnsfarge",
+    "download": "Last ned JPG",
+    "note": "Forhåndsvis det faktiske JPG-bildet før du lagrer. JPG bruker komprimering med tap og 8-bits farger, og fyller gjennomsiktige områder med den valgte JPG-bakgrunnen. Zoom og bakgrunner i forhåndsvisningen endrer ikke det lagrede bildet.",
+    "compatibility": "JPG-resultatet konverteres til sRGB. Innebygde profiler fra kildebildet brukes der det støttes; fargene kan avvike fra et bilderedigeringsprogram med fargestyring. Hjelpebilder, dybdekart og metadata i beholderen bevares ikke."
+  }
 }

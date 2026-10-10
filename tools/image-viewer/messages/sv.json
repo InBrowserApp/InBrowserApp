@@ -54,5 +54,18 @@
   "compatibility": "Inbäddade profiler bevaras där de stöds. Hjälpbilder, djupkartor och behållarens metadata visas inte.",
   "licenses": "Avkodarlicenser och källkod",
   "downloadPng": "Ladda ned PNG",
-  "pngNote": "Spara den valda bilden som en 8-bitars PNG. Högt bitdjup och HDR reduceras. Zoom och bakgrunder i förhandsvisningen ändrar inte den sparade bilden."
+  "pngNote": "Spara den valda bilden som en 8-bitars PNG. Högt bitdjup och HDR reduceras. Zoom och bakgrunder i förhandsvisningen ändrar inte den sparade bilden.",
+  "jpgExport": {
+    "format": "Nedladdningsformat",
+    "quality": "JPG-kvalitet",
+    "qualityHint": "1–100. Högre kvalitet ger oftast en större fil. Tryck på Enter eller lämna fältet för att tillämpa värdet.",
+    "background": "JPG-bakgrund",
+    "white": "Vit",
+    "black": "Svart",
+    "custom": "Anpassad",
+    "color": "Anpassad bakgrundsfärg",
+    "download": "Ladda ned JPG",
+    "note": "Förhandsvisa den faktiska JPG-bilden innan du sparar. JPG använder förlustkomprimering och 8-bitars färg samt fyller transparenta områden med den valda JPG-bakgrunden. Zoom och bakgrunder i förhandsvisningen ändrar inte den sparade bilden.",
+    "compatibility": "JPG-resultatet konverteras till sRGB. Inbäddade profiler i källbilden används där de stöds; färgerna kan skilja sig från dem i ett redigeringsprogram med färghantering. Hjälpbilder, djupkartor och behållarens metadata bevaras inte."
+  }
 }
