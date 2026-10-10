@@ -11,3 +11,5 @@ Bạn có thể xem tệp hỗ trợ macro, nhưng macro không bao giờ đư�
 Dung lượng giải nén và kích thước trang chiếu được kết xuất được giới hạn. Bản trình bày được mã hóa và tệp .ppt cũ không được hỗ trợ. Trình xem không chỉnh sửa hoặc in bản trình bày hay tải tài nguyên bên ngoài của tài liệu.
 
 Xuất Markdown giữ lại thứ tự trang chiếu, tiêu đề có sẵn, cấu trúc văn bản cơ bản và ghi chú của diễn giả. Trang chiếu ẩn cũng được đưa vào và đánh dấu. Bản xuất không giữ bố cục trang chiếu, thành phần trang trí của mẫu, nhận xét duyệt tài liệu, hoạt ảnh hoặc hiệu ứng chuyển trang. Hình ảnh, biểu đồ, phương trình, nội dung đa phương tiện và đối tượng nhúng được thay bằng dấu chỉ nội dung bị lược bỏ; văn bản có sẵn trong hình dạng được giữ lại. Bảng có ô gộp và định dạng phức tạp được đơn giản hóa. Hãy đối chiếu văn bản đã xuất với bản trình bày gốc.
+
+Để tải bản trình bày được hỗ trợ xuống dưới dạng PDF hình ảnh, hãy dùng [Trình chuyển đổi PPTX sang PDF](../pptx-to-pdf-converter/) và kiểm tra cách hiển thị của kết quả trước khi tải xuống.

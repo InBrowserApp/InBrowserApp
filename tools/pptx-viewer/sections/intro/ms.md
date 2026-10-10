@@ -11,3 +11,5 @@ Fail dengan makro boleh dilihat, tetapi makronya tidak akan dijalankan. Kandunga
 Pengembangan arkib dan saiz slaid yang dipaparkan dihadkan. Pembentangan yang disulitkan dan fail .ppt lama tidak disokong. Pemapar ini tidak menyunting atau mencetak pembentangan atau memuatkan sumber dokumen luaran.
 
 Eksport Markdown mengekalkan urutan slaid, tajuk yang tersedia, struktur teks asas dan nota pembentang. Slaid tersembunyi disertakan dan ditandakan. Susun atur slaid, hiasan templat, komen semakan, animasi dan peralihan tidak dikekalkan. Imej, carta, persamaan, media dan objek terbenam menggunakan penanda pengguguran; teks yang tersedia dalam bentuk dikekalkan. Jadual dengan sel bercantum dan pemformatan kompleks dipermudah. Semak teks yang dieksport dengan membandingkannya dengan pembentangan asal.
+
+Untuk memuat turun pembentangan yang disokong sebagai PDF berasaskan imej, gunakan [Penukar PPTX kepada PDF](../pptx-to-pdf-converter/) dan semak rupa hasilnya sebelum memuat turun.

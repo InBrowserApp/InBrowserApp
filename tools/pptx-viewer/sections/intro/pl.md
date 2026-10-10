@@ -11,3 +11,5 @@ Można przeglądać pliki z obsługą makr, ale ich makra nigdy nie są uruchami
 Rozmiar rozpakowanego archiwum i renderowanych slajdów jest ograniczony. Zaszyfrowane prezentacje i starsze pliki .ppt nie są obsługiwane. Przeglądarka nie edytuje ani nie drukuje prezentacji i nie ładuje zewnętrznych zasobów dokumentu.
 
 Eksport do Markdown zachowuje kolejność slajdów, dostępne tytuły, podstawową strukturę tekstu i notatki prelegenta. Ukryte slajdy są uwzględniane i oznaczane. Nie zachowuje układu slajdów, ozdób szablonu, komentarzy recenzentów, animacji ani przejść. Obrazy, wykresy, równania, multimedia i osadzone obiekty są zastępowane znacznikami pominięcia; dostępny tekst wewnątrz kształtów jest zachowywany. Tabele ze scalonymi komórkami i złożone formatowanie są upraszczane. Porównaj wyeksportowany tekst z oryginalną prezentacją.
+
+Aby pobrać obsługiwaną prezentację jako PDF oparty na obrazach, użyj narzędzia [Konwerter PPTX na PDF](../pptx-to-pdf-converter/) i przed pobraniem sprawdź wygląd wyniku.

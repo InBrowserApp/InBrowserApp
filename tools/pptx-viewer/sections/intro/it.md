@@ -11,3 +11,5 @@ Le presentazioni vengono elaborate in locale e non vengono caricate su server n�
 L'espansione degli archivi e le dimensioni delle diapositive renderizzate sono limitate. Le presentazioni crittografate e i vecchi file .ppt non sono supportati. Il visualizzatore non modifica o stampa presentazioni e non carica risorse esterne del documento.
 
 L’esportazione Markdown conserva l’ordine delle diapositive, i titoli disponibili, la struttura di base del testo e le note del relatore. Le diapositive nascoste vengono incluse e contrassegnate. Non conserva il layout delle diapositive, le decorazioni dei modelli, i commenti di revisione, le animazioni o le transizioni. Immagini, grafici, equazioni, contenuti multimediali e oggetti incorporati vengono sostituiti da indicatori di omissione; il testo disponibile nelle forme viene conservato. Le tabelle con celle unite e la formattazione complessa vengono semplificate. Confronta il testo esportato con la presentazione originale.
+
+Per scaricare una presentazione supportata come PDF basato su immagini, usa il [Convertitore da PPTX a PDF](../pptx-to-pdf-converter/) e controlla l’aspetto del risultato prima di scaricarlo.

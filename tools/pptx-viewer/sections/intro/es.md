@@ -11,3 +11,5 @@ Se pueden ver archivos habilitados para macros, pero sus macros nunca se ejecuta
 Se limita el tamaño de los datos descomprimidos y de las diapositivas renderizadas. No se admiten presentaciones cifradas ni archivos .ppt antiguos. El visor no edita ni imprime presentaciones ni carga recursos externos del documento.
 
 La exportación a Markdown conserva el orden de las diapositivas, los títulos disponibles, la estructura básica del texto y las notas del orador. Las diapositivas ocultas se incluyen y se marcan. No conserva el diseño de las diapositivas, los elementos decorativos de la plantilla, los comentarios de revisión, las animaciones ni las transiciones. Las imágenes, los gráficos, las ecuaciones, el contenido multimedia y los objetos incrustados se sustituyen por marcadores de omisión; se conserva el texto disponible dentro de las formas. Las tablas con celdas combinadas y el formato complejo se simplifican. Compara el texto exportado con la presentación original.
+
+Para descargar una presentación compatible como PDF basado en imágenes, usa el [Conversor de PPTX a PDF](../pptx-to-pdf-converter/) y comprueba el aspecto del resultado antes de descargarlo.

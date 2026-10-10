@@ -11,3 +11,5 @@ Arquivos habilitados para macros podem ser visualizados, mas suas macros nunca s
 A expansão dos arquivos compactados e as dimensões dos slides renderizados são limitadas. Apresentações criptografadas e arquivos .ppt antigos não são compatíveis. O visualizador não edita ou imprime apresentações nem carrega recursos externos do documento.
 
 A exportação para Markdown preserva a ordem dos slides, os títulos disponíveis, a estrutura básica do texto e as anotações do apresentador. Slides ocultos são incluídos e marcados. Ela não preserva o layout dos slides, os elementos decorativos do modelo, os comentários de revisão, as animações ou as transições. Imagens, gráficos, equações, mídia e objetos incorporados são substituídos por marcadores de omissão; o texto disponível nas formas é preservado. Tabelas com células mescladas e formatação complexa são simplificadas. Confira o texto exportado com a apresentação original.
+
+Para baixar uma apresentação compatível como PDF baseado em imagens, use o [Conversor de PPTX para PDF](../pptx-to-pdf-converter/) e confira a aparência do resultado antes de baixar.
