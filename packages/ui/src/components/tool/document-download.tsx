@@ -22,7 +22,7 @@ export function DocumentDownload({
   if (resource?.file !== file) return null
   return (
     <Button asChild>
-      <a href={resource.url} download={filename}>
+      <a href={resource.url} download={filename} data-astro-prefetch="false">
         <Download data-icon="inline-start" aria-hidden="true" />
         {label}
       </a>
