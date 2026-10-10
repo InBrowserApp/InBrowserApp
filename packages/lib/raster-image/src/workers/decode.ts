@@ -85,7 +85,7 @@ export function renderImage(index: number): Preview {
   })
   return ImageMagick.readCollection(source, settings, (collection) => {
     if (animated) collection.coalesce()
-    const image = collection[animated ? index : 0]
+    const image = collection.at(animated ? index : 0)
     if (!image) throw new Error("invalid")
     const depth = image.depth
     const profile = image.getColorProfile() !== null

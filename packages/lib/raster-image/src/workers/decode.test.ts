@@ -135,3 +135,23 @@ test("rejects disguised executable descriptions, malformed raster and file read 
     } as File)
   ).rejects.toThrow("allocation")
 })
+
+test("rejects nonnumeric worker indices without touching a prototype", async () => {
+  await openImage(fixture("animation.gif"))
+  const before = Object.getOwnPropertyDescriptor(Object.prototype, "depth")
+  for (const value of [
+    "__proto__",
+    "constructor",
+    "prototype",
+    "1",
+    null,
+    {},
+    Infinity,
+  ]) {
+    expect(() => renderImage(value as unknown as number)).toThrow("invalid")
+  }
+  expect(Object.getOwnPropertyDescriptor(Object.prototype, "depth")).toEqual(
+    before
+  )
+  expect(renderImage(1).width).toBe(100)
+})
