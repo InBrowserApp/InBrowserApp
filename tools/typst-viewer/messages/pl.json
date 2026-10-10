@@ -41,5 +41,6 @@
   "dependencyNote": "Dostępny jest tylko wybrany plik źródłowy. Nie można wczytać pakietów ani osobnych obrazów, danych czy plików źródłowych. Użyj samodzielnego dokumentu.",
   "fontNote": "Dołączone czcionki mogą zastąpić niedostępne czcionki. Może brakować niektórych znaków, w tym znaków CJK i emoji. Porównaj ważne symbole z oryginałem.",
   "runtimeNote": "Korzysta z Typst 0.14.2 oraz czcionek Libertinus Serif, New Computer Modern i DejaVu Sans Mono. Funkcje z innych wersji mogą się różnić.",
-  "diagnosticLanguage": "Szczegółowe komunikaty poniżej pochodzą z silnika dokumentów i są w języku angielskim."
+  "diagnosticLanguage": "Szczegółowe komunikaty poniżej pochodzą z silnika dokumentów i są w języku angielskim.",
+  "download": "Pobierz PDF"
 }

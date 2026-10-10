@@ -41,5 +41,6 @@
   "dependencyNote": "선택한 소스 파일만 사용할 수 있습니다. 패키지와 별도의 이미지, 데이터 또는 소스 파일은 불러올 수 없습니다. 필요한 내용이 모두 하나의 파일에 포함된 문서를 사용하세요.",
   "fontNote": "사용할 수 없는 글꼴은 내장 글꼴로 대체될 수 있습니다. 한중일 문자와 이모지를 비롯한 일부 문자가 표시되지 않을 수 있습니다. 중요한 기호는 원본과 비교해 확인하세요.",
   "runtimeNote": "Typst 0.14.2와 Libertinus Serif, New Computer Modern, DejaVu Sans Mono를 사용합니다. 다른 버전의 기능은 다를 수 있습니다.",
-  "diagnosticLanguage": "아래의 상세 메시지는 문서 엔진에서 영어로 제공합니다."
+  "diagnosticLanguage": "아래의 상세 메시지는 문서 엔진에서 영어로 제공합니다.",
+  "download": "PDF 다운로드"
 }

@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur Typst en PDF",
+  "description": "Compilez un fichier Typst autonome en PDF dans votre navigateur. Prévisualisez les pages, consultez les diagnostics du code source et téléchargez le PDF sans envoyer votre document."
+}

@@ -41,5 +41,6 @@
   "dependencyNote": "利用できるのは選択したソースファイルのみです。パッケージや別ファイルの画像、データ、ソースは読み込めません。単一ファイルで完結する文書を使用してください。",
   "fontNote": "利用できないフォントは同梱フォントに置き換わる場合があります。CJK 文字や絵文字など、一部の文字が表示されないことがあります。重要な記号は原本と照合してください。",
   "runtimeNote": "Typst 0.14.2 と Libertinus Serif、New Computer Modern、DejaVu Sans Mono を使用します。他のバージョンとは機能が異なる場合があります。",
-  "diagnosticLanguage": "以下の詳細メッセージは文書エンジンが英語で提供しています。"
+  "diagnosticLanguage": "以下の詳細メッセージは文書エンジンが英語で提供しています。",
+  "download": "PDF をダウンロード"
 }

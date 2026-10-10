@@ -1,6 +1,6 @@
 ## Lire un document Typst en local
 
-Ouvrez un fichier `.typ` pour lire ses pages après rendu. Parcourez les pages, recherchez du texte, réglez le zoom, ajustez la page ou sa largeur et utilisez la lecture concentrée pour gagner de l’espace. Vous pouvez remplacer ou fermer le document pendant son rendu. Les fichiers restent dans votre navigateur.
+Ouvrez un fichier `.typ` pour lire ses pages après rendu. Parcourez les pages, recherchez du texte, réglez le zoom, ajustez la page ou sa largeur et utilisez la lecture concentrée pour gagner de l’espace. Vous pouvez remplacer ou fermer le document pendant son rendu. Les fichiers restent dans votre navigateur. Télécharger le PDF enregistre le document compilé. Le zoom de l’aperçu ne modifie pas le PDF téléchargé.
 
 ## Compatibilité et polices
 

@@ -41,5 +41,6 @@
   "dependencyNote": "Hanya fail sumber yang dipilih tersedia. Pakej serta imej, data atau fail sumber berasingan tidak boleh dimuatkan. Gunakan dokumen serba lengkap.",
   "fontNote": "Fon yang disertakan mungkin menggantikan fon yang tidak tersedia. Sesetengah aksara, termasuk teks CJK dan emoji, mungkin tiada. Semak simbol penting dengan membandingkannya dengan yang asal.",
   "runtimeNote": "Menggunakan Typst 0.14.2 dengan Libertinus Serif, New Computer Modern dan DejaVu Sans Mono. Ciri daripada versi lain mungkin berbeza.",
-  "diagnosticLanguage": "Mesej terperinci di bawah disediakan oleh enjin dokumen dalam bahasa Inggeris."
+  "diagnosticLanguage": "Mesej terperinci di bawah disediakan oleh enjin dokumen dalam bahasa Inggeris.",
+  "download": "Muat turun PDF"
 }

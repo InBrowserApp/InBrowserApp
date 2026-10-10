@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de Typst a PDF",
+  "description": "Compila un archivo Typst autocontenido a PDF en tu navegador. Previsualiza las páginas, revisa los diagnósticos del código fuente y descarga el resultado sin subir tu documento."
+}

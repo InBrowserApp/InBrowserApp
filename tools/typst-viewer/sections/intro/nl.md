@@ -1,6 +1,6 @@
 ## Een Typst-document lokaal lezen
 
-Open een `.typ`-bestand om de opgemaakte pagina's te lezen. Blader door pagina's, zoek tekst, pas de zoom aan, maak de pagina of de breedte passend en gebruik de focusmodus voor meer ruimte. Je kunt het document vervangen of sluiten terwijl het wordt weergegeven. Bestanden blijven in je browser.
+Open een `.typ`-bestand om de opgemaakte pagina's te lezen. Blader door pagina's, zoek tekst, pas de zoom aan, maak de pagina of de breedte passend en gebruik de focusmodus voor meer ruimte. Je kunt het document vervangen of sluiten terwijl het wordt weergegeven. Bestanden blijven in je browser. Met PDF downloaden sla je het gecompileerde document op. De zoom van het voorbeeld heeft geen invloed op de gedownloade PDF.
 
 ## Compatibiliteit en lettertypen
 

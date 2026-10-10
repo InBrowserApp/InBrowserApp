@@ -1,6 +1,6 @@
 ## Leia um documento Typst localmente
 
-Abra um arquivo `.typ` para ler suas páginas renderizadas. Navegue entre páginas, localize texto, ajuste o zoom, ajuste a página ou sua largura e use a leitura focada para ter mais espaço. Você pode substituir ou fechar o documento durante a renderização. Os arquivos ficam no seu navegador.
+Abra um arquivo `.typ` para ler suas páginas renderizadas. Navegue entre páginas, localize texto, ajuste o zoom, ajuste a página ou sua largura e use a leitura focada para ter mais espaço. Você pode substituir ou fechar o documento durante a renderização. Os arquivos ficam no seu navegador. Baixar PDF salva o documento compilado. O zoom da prévia não altera o PDF baixado.
 
 ## Compatibilidade e fontes
 

@@ -1,6 +1,6 @@
 ## Bir Typst belgesini yerel olarak okuyun
 
-Oluşturulmuş sayfalarını okumak için bir `.typ` dosyası açın. Sayfalar arasında gezinin, metin bulun, yakınlaştırmayı ayarlayın, sayfayı veya genişliğini sığdırın ve daha fazla alan için odaklı okumayı kullanın. Belge oluşturulurken belgeyi değiştirebilir veya kapatabilirsiniz. Dosyalar tarayıcınızda kalır.
+Oluşturulmuş sayfalarını okumak için bir `.typ` dosyası açın. Sayfalar arasında gezinin, metin bulun, yakınlaştırmayı ayarlayın, sayfayı veya genişliğini sığdırın ve daha fazla alan için odaklı okumayı kullanın. Belge oluşturulurken belgeyi değiştirebilir veya kapatabilirsiniz. Dosyalar tarayıcınızda kalır. PDF indir seçeneği derlenmiş belgeyi kaydeder. Önizlemedeki yakınlaştırma, indirilen PDF’yi değiştirmez.
 
 ## Uyumluluk ve yazı tipleri
 

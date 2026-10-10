@@ -41,5 +41,6 @@
   "dependencyNote": "仅能访问所选源文件，无法加载包以及单独的图片、数据或源文件。请使用无需外部依赖的文档。",
   "fontNote": "不可用的字体可能被内置字体替代。部分字符（包括中日韩文字和表情符号）可能缺失。请对照原文核对重要符号。",
   "runtimeNote": "使用 Typst 0.14.2 及 Libertinus Serif、New Computer Modern 和 DejaVu Sans Mono 字体。其他版本的功能可能有所不同。",
-  "diagnosticLanguage": "以下详细消息由文档引擎以英文提供。"
+  "diagnosticLanguage": "以下详细消息由文档引擎以英文提供。",
+  "download": "下载 PDF"
 }

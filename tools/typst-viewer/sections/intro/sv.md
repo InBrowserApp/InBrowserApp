@@ -1,6 +1,6 @@
 ## Läs ett Typst-dokument lokalt
 
-Öppna en `.typ`-fil för att läsa dess renderade sidor. Växla mellan sidor, sök efter text, justera zoom, anpassa till sidan eller dess bredd och använd fokuserad läsning för mer utrymme. Du kan byta eller stänga dokumentet medan det renderas. Filerna stannar i din webbläsare.
+Öppna en `.typ`-fil för att läsa dess renderade sidor. Växla mellan sidor, sök efter text, justera zoom, anpassa till sidan eller dess bredd och använd fokuserad läsning för mer utrymme. Du kan byta eller stänga dokumentet medan det renderas. Filerna stannar i din webbläsare. Ladda ner PDF sparar det kompilerade dokumentet. Zoomnivån i förhandsvisningen ändrar inte den nedladdade PDF-filen.
 
 ## Kompatibilitet och teckensnitt
 

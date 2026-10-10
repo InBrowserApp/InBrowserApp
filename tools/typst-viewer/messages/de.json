@@ -41,5 +41,6 @@
   "dependencyNote": "Nur die ausgewählte Quelldatei ist verfügbar. Pakete sowie separate Bilder, Daten- oder Quelldateien können nicht geladen werden. Verwenden Sie ein eigenständiges Dokument.",
   "fontNote": "Mitgelieferte Schriftarten können nicht verfügbare Schriftarten ersetzen. Einige Zeichen, darunter CJK-Text und Emoji, fehlen möglicherweise. Vergleichen Sie wichtige Symbole mit dem Original.",
   "runtimeNote": "Verwendet Typst 0.14.2 mit Libertinus Serif, New Computer Modern und DejaVu Sans Mono. Funktionen anderer Versionen können abweichen.",
-  "diagnosticLanguage": "Die folgenden detaillierten Meldungen werden von der Dokument-Engine auf Englisch bereitgestellt."
+  "diagnosticLanguage": "Die folgenden detaillierten Meldungen werden von der Dokument-Engine auf Englisch bereitgestellt.",
+  "download": "PDF herunterladen"
 }

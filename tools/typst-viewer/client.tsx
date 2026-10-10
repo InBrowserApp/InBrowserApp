@@ -1,5 +1,6 @@
 import { useRef, useState } from "react"
 import { DocumentWorkspace } from "@workspace/ui/components/tool/document-workspace"
+import { DocumentDownload } from "@workspace/ui/components/tool/document-download"
 import { DocumentToolbar } from "@workspace/ui/components/tool/document-toolbar"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import {
@@ -25,7 +26,7 @@ import "@workspace/pdf-reader/viewer.css"
 export default function Client({ messages: m }: { messages: Messages }) {
   const [file, setFile] = useState<File | null>(null)
   const container = useRef<HTMLDivElement>(null)
-  const { reader, state, status, error, diagnostics } = useDocument(
+  const { reader, state, status, error, diagnostics, pdf } = useDocument(
     file,
     container,
     m
@@ -59,6 +60,15 @@ export default function Client({ messages: m }: { messages: Messages }) {
       <div
         className={file && !error ? "flex min-h-0 flex-1 flex-col" : "hidden"}
       >
+        {pdf && file ? (
+          <div className="flex shrink-0 justify-end border-b p-2">
+            <DocumentDownload
+              file={pdf}
+              filename={file.name.replace(/\.[^.]+$/, ".pdf")}
+              label={m.download}
+            />
+          </div>
+        ) : null}
         {reader && state.total ? (
           <DocumentToolbar
             messages={m}

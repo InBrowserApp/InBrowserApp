@@ -41,5 +41,6 @@
   "dependencyNote": "Bare den valgte kildefilen er tilgjengelig. Pakker og separate bilder, data eller kildefiler kan ikke lastes inn. Bruk et dokument med alt innhold samlet i én fil.",
   "fontNote": "Medfølgende skrifter kan erstatte utilgjengelige skrifter. Noen tegn, blant annet CJK-tekst og emoji, kan mangle. Kontroller viktige symboler mot originalen.",
   "runtimeNote": "Bruker Typst 0.14.2 med Libertinus Serif, New Computer Modern og DejaVu Sans Mono. Funksjoner fra andre versjoner kan være annerledes.",
-  "diagnosticLanguage": "De detaljerte meldingene nedenfor leveres på engelsk av dokumentmotoren."
+  "diagnosticLanguage": "De detaljerte meldingene nedenfor leveres på engelsk av dokumentmotoren.",
+  "download": "Last ned PDF"
 }

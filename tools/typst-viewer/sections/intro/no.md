@@ -1,6 +1,6 @@
 ## Les et Typst-dokument lokalt
 
-Åpne en `.typ`-fil for å lese de gjengitte sidene. Bla mellom sider, finn tekst, juster zoom, tilpass siden eller bredden, og bruk fokusert lesing for å få mer plass. Du kan bytte eller lukke dokumentet mens det gjengis. Filene blir i nettleseren din.
+Åpne en `.typ`-fil for å lese de gjengitte sidene. Bla mellom sider, finn tekst, juster zoom, tilpass siden eller bredden, og bruk fokusert lesing for å få mer plass. Du kan bytte eller lukke dokumentet mens det gjengis. Filene blir i nettleseren din. Last ned PDF lagrer det kompilerte dokumentet. Zoom i forhåndsvisningen endrer ikke den nedlastede PDF-en.
 
 ## Kompatibilitet og skrifter
 

@@ -41,5 +41,6 @@
   "dependencyNote": "Alleen het geselecteerde bronbestand is beschikbaar. Pakketten en afzonderlijke afbeeldingen, gegevens of bronbestanden kunnen niet worden geladen. Gebruik een document zonder externe bestanden.",
   "fontNote": "Meegeleverde lettertypen kunnen ontbrekende lettertypen vervangen. Sommige tekens, waaronder CJK-tekst en emoji, kunnen ontbreken. Vergelijk belangrijke symbolen met het origineel.",
   "runtimeNote": "Gebruikt Typst 0.14.2 met Libertinus Serif, New Computer Modern en DejaVu Sans Mono. Functies uit andere versies kunnen verschillen.",
-  "diagnosticLanguage": "De documentengine levert de gedetailleerde meldingen hieronder in het Engels."
+  "diagnosticLanguage": "De documentengine levert de gedetailleerde meldingen hieronder in het Engels.",
+  "download": "PDF downloaden"
 }

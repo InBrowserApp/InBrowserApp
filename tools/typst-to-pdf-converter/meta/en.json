@@ -1,0 +1,4 @@
+{
+  "name": "Typst to PDF Converter",
+  "description": "Compile a self-contained Typst file to PDF in your browser. Preview the pages, review source diagnostics, and download without uploading your document."
+}

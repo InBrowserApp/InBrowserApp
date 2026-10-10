@@ -266,6 +266,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   timer: () => import("@tool/timer/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
+  "typst-to-pdf-converter": () => import("@tool/typst-to-pdf-converter/page"),
   "typst-viewer": () => import("@tool/typst-viewer/page"),
   "ulid-generator": () => import("@tool/ulid-generator/page"),
   "unicode-escape-unescape": () => import("@tool/unicode-escape-unescape/page"),

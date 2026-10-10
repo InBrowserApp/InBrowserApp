@@ -1,6 +1,6 @@
 ## Read a Typst document locally
 
-Open a `.typ` file to read its rendered pages. Move between pages, find text, adjust zoom, fit the page or its width, and use focus reading for more space. You can replace or close the document while it is rendering. Files stay in your browser.
+Open a `.typ` file to read its rendered pages. Move between pages, find text, adjust zoom, fit the page or its width, and use focus reading for more space. You can replace or close the document while it is rendering. Files stay in your browser. Download PDF saves the compiled document. Preview zoom does not change the downloaded PDF.
 
 ## Compatibility and fonts
 
