@@ -23,7 +23,7 @@ export function DocumentWorkspace({
   onFile,
   accept,
   active,
-  minHeight = 400,
+  fitContent = false,
   messages: m,
   children,
 }: {
@@ -32,7 +32,7 @@ export function DocumentWorkspace({
   onFile: (file: File | null) => void
   accept: string
   active: boolean
-  minHeight?: number
+  fitContent?: boolean
   messages: Messages
   children: ReactNode
 }) {
@@ -74,9 +74,9 @@ export function DocumentWorkspace({
   useEffect(() => {
     function resize() {
       const top = frame.current!.getBoundingClientRect().top + window.scrollY
-      setHeight(Math.max(minHeight, window.innerHeight - top - 24))
+      setHeight(Math.max(400, window.innerHeight - top - 24))
     }
-    if (focused) return
+    if (focused || fitContent) return
     resize()
     const observer = new ResizeObserver(resize)
     observer.observe(frame.current!.parentElement!)
@@ -85,7 +85,7 @@ export function DocumentWorkspace({
       observer.disconnect()
       window.removeEventListener("resize", resize)
     }
-  }, [focused, active, minHeight])
+  }, [focused, active, fitContent])
   const unit =
     file && file.size >= 1024 * 1024
       ? "megabyte"
@@ -139,9 +139,15 @@ export function DocumentWorkspace({
           event.preventDefault()
           exitFocus()
         }}
-        style={{ height: focused ? "100dvh" : active ? height : undefined }}
+        style={{
+          height: focused
+            ? "100dvh"
+            : active && !fitContent
+              ? height
+              : undefined,
+        }}
         className={cn(
-          "m-0 flex w-full max-w-none min-w-0 flex-col overflow-hidden bg-background p-0 text-foreground",
+          "group/workspace m-0 flex w-full max-w-none min-w-0 flex-col overflow-hidden bg-background p-0 text-foreground",
           focused
             ? "fixed inset-0 max-h-none border-0"
             : "relative rounded-xl border"

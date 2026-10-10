@@ -96,7 +96,7 @@ export function ExportPanel({
               {m.missingCached.replace("{count}", String(output.missingCached))}
             </p>
           ) : null}
-          <div className="flex min-h-80 flex-1 flex-col">
+          <div className="flex h-96 min-h-80 shrink-0 flex-col group-data-[focus]/workspace:flex-1">
             <DocumentTextExport
               key={JSON.stringify(options)}
               text={output.text}
