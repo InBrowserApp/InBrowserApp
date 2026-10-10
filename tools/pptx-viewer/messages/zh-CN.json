@@ -30,5 +30,24 @@
   "zoomOut": "缩小",
   "closeSearch": "关闭搜索",
   "releaseFile": "松开以打开此文档",
-  "fitPage": "适应整页"
+  "fitPage": "适应整页",
+  "markdown": {
+    "export": "导出 Markdown",
+    "converting": "正在导出 Markdown…",
+    "download": "下载 Markdown",
+    "error": "无法导出 Markdown。请尝试使用 PPTX 转 Markdown 转换器，或复杂度较低的演示文稿。",
+    "resource": "此文档所需的内存超出了此浏览器可提供的范围。请关闭其他标签页或尝试其他设备。",
+    "note": "Markdown 会保留文本和基本结构，但不保留幻灯片布局。幻灯片按文件中的顺序排列，隐藏幻灯片也会包含在内并加以标记。演讲者备注会列在对应幻灯片之后。图片、图表、公式、媒体和嵌入对象会以省略标记表示。模板装饰、审阅批注、动画和切换效果不会导出。包含合并单元格的表格和复杂格式会被简化；请对照原文检查输出。",
+    "labels": {
+      "slide": "幻灯片 {number}",
+      "hidden": "隐藏幻灯片",
+      "notes": "演讲者备注",
+      "image": "[图片已省略]",
+      "chart": "[图表已省略]",
+      "equation": "[公式已省略]",
+      "media": "[媒体已省略]",
+      "object": "[嵌入对象已省略]",
+      "shape": "[形状已省略]"
+    }
+  }
 }

@@ -16,6 +16,7 @@ import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-
 import { FileText, LayoutGrid, Square } from "@workspace/ui/icons"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { DocumentToolbar as Toolbar } from "@workspace/ui/components/tool/document-toolbar"
+import { MarkdownExport } from "./markdown-export"
 import { useReader } from "./use-reader"
 import type { Messages } from "./types"
 import { Thumbnails } from "./components/thumbnails"
@@ -49,17 +50,20 @@ export default function Client({ messages: m }: { messages: Messages }) {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       ) : null}
+      {file && !error && !loading && reader && state.total ? (
+        <MarkdownExport file={file} messages={m.markdown} />
+      ) : null}
       <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
-        {reader.current && state.total ? (
+        {reader && state.total ? (
           <Toolbar
             messages={m}
             state={state}
-            reader={reader.current}
+            reader={reader}
             actions={
               <>
                 <DocumentIconButton
                   label={m.fitPage}
-                  onClick={() => reader.current?.fitPage()}
+                  onClick={() => reader?.fitPage()}
                 >
                   <Square aria-hidden="true" />
                 </DocumentIconButton>
@@ -80,7 +84,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
             role="status"
             className="flex items-center justify-center gap-2 p-6"
           >
-            <Spinner />
+            <Spinner aria-hidden="true" />
             {m.loading}
           </p>
         ) : null}
@@ -102,10 +106,10 @@ export default function Client({ messages: m }: { messages: Messages }) {
               : "hidden"
           }
         >
-          {reader.current && state.total && thumbnails ? (
+          {reader && state.total && thumbnails ? (
             <Thumbnails
               id={railId}
-              reader={reader.current}
+              reader={reader}
               state={state}
               messages={m}
             />

@@ -30,5 +30,24 @@
   "zoomOut": "Uzaklaştır",
   "closeSearch": "Aramayı kapat",
   "releaseFile": "Bu belgeyi açmak için bırakın",
-  "fitPage": "Sayfaya sığdır"
+  "fitPage": "Sayfaya sığdır",
+  "markdown": {
+    "export": "Markdown olarak dışa aktar",
+    "converting": "Markdown olarak dışa aktarılıyor…",
+    "download": "Markdown’ı indir",
+    "error": "Markdown dışa aktarılamadı. PPTX’ten Markdown’a Dönüştürücü aracını veya daha az karmaşık bir sunumu deneyin.",
+    "resource": "Bu belge, tarayıcının sağlayabileceğinden daha fazla belleğe ihtiyaç duyuyor. Diğer sekmeleri kapatın veya başka bir cihaz deneyin.",
+    "note": "Markdown, metni ve temel yapıyı korur; slayt düzenini korumaz. Slaytlar dosyadaki sırayla kalır; gizli slaytlar da dahil edilir ve işaretlenir. Konuşmacı notları ilgili slaytların ardından gelir. Resimler, grafikler, denklemler, medya ve gömülü nesneler yerine içeriğin atlandığını belirten işaretler kullanılır. Şablon süslemeleri, inceleme yorumları, animasyonlar ve geçişler dışa aktarılmaz. Birleştirilmiş hücreler içeren tablolar ve karmaşık biçimlendirme basitleştirilir; çıktıyı asıl sunumla karşılaştırın.",
+    "labels": {
+      "slide": "Slayt {number}",
+      "hidden": "Gizli slayt",
+      "notes": "Konuşmacı notları",
+      "image": "[Resim atlandı]",
+      "chart": "[Grafik atlandı]",
+      "equation": "[Denklem atlandı]",
+      "media": "[Medya atlandı]",
+      "object": "[Gömülü nesne atlandı]",
+      "shape": "[Şekil atlandı]"
+    }
+  }
 }

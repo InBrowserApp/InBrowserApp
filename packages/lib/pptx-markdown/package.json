@@ -1,0 +1,19 @@
+{
+  "name": "@workspace/pptx-markdown",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/export-document.ts",
+    "./types": "./src/types.ts",
+    "./errors": "./src/errors.ts"
+  },
+  "dependencies": {
+    "fflate": "catalog:",
+    "saxes": "catalog:"
+  },
+  "devDependencies": {
+    "marked": "catalog:",
+    "vitest": "catalog:"
+  }
+}

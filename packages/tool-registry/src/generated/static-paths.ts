@@ -14078,6 +14078,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pptx-to-markdown-converter",
+    language: "ar",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "de",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "en",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "es",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "fr",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "he",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "hi",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "id",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "it",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "ja",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "ko",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "ms",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "nl",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "no",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "pl",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "pt",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "ru",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "sv",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "th",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "tr",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "vi",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "pptx-to-markdown-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "pptx-viewer",
     language: "ar",
   },

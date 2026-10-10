@@ -18,8 +18,10 @@ const mock = vi.hoisted(() => ({
   fitPage: vi.fn(),
   find: vi.fn(),
   dispose: vi.fn(),
+  convert: vi.fn(),
 }))
 vi.mock("./reader", () => ({ openReader: mock.open }))
+vi.mock("@workspace/pptx-markdown", () => ({ exportDocument: mock.convert }))
 const instance = {
   page: mock.page,
   zoom: mock.zoom,
@@ -37,6 +39,9 @@ function choose(value = file()) {
 }
 beforeEach(() => {
   vi.clearAllMocks()
+  vi.spyOn(URL, "createObjectURL").mockReturnValue("blob:markdown")
+  vi.spyOn(URL, "revokeObjectURL").mockImplementation(() => {})
+  mock.convert.mockResolvedValue({ text: "# Slides\n\nSpeaker notes" })
   vi.stubGlobal(
     "IntersectionObserver",
     class {
@@ -49,7 +54,10 @@ beforeEach(() => {
     return instance
   })
 })
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
 
 test("opens local files, navigates, searches, zooms and clears", async () => {
   render(<Client messages={m} />)
@@ -206,4 +214,76 @@ test("attempts to open files above the former 50 MB cap", async () => {
     expect.objectContaining({ file: large })
   )
   expect(screen.queryByRole("alert")).toBeNull()
+})
+
+test("exports Markdown on request and removes the download immediately when replacing the source", async () => {
+  render(<Client messages={m} />)
+  const source = file("talk.PPTM")
+  choose(source)
+  const exportButton = await screen.findByRole("button", {
+    name: m.markdown.export,
+  })
+  expect(mock.convert).not.toHaveBeenCalled()
+  fireEvent.click(exportButton)
+  const download = await screen.findByRole("link", {
+    name: m.markdown.download,
+  })
+  expect(download.getAttribute("download")).toBe("talk.md")
+  expect(mock.convert).toHaveBeenCalledWith(
+    { file: source },
+    m.markdown.labels,
+    expect.any(AbortSignal)
+  )
+  expect(
+    await (vi.mocked(URL.createObjectURL).mock.calls[0]![0] as Blob).text()
+  ).toContain("Speaker notes")
+  expect(screen.getByText(m.markdown.note)).toBeTruthy()
+  choose(file("replacement.pptx"))
+  expect(screen.queryByRole("link", { name: m.markdown.download })).toBeNull()
+  expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:markdown")
+  await screen.findByRole("button", { name: m.markdown.export })
+})
+
+test("cancels Markdown work on close and ignores late success or failure", async () => {
+  render(<Client messages={m} />)
+  for (const outcome of ["resolve", "reject"] as const) {
+    let finish!: () => void
+    mock.convert.mockImplementationOnce(
+      () =>
+        new Promise((resolve, reject) => {
+          finish = () =>
+            outcome === "resolve"
+              ? resolve({ text: "stale" })
+              : reject(new Error("late"))
+        })
+    )
+    choose()
+    fireEvent.click(
+      await screen.findByRole("button", { name: m.markdown.export })
+    )
+    await waitFor(() =>
+      expect(mock.convert.mock.calls.length).toBe(outcome === "resolve" ? 1 : 2)
+    )
+    const signal = mock.convert.mock.calls.at(-1)![2] as AbortSignal
+    fireEvent.click(screen.getByRole("button", { name: m.clear }))
+    expect(signal.aborted).toBe(true)
+    await act(async () => finish())
+    expect(screen.queryByRole("link", { name: m.markdown.download })).toBeNull()
+    expect(screen.queryByRole("alert")).toBeNull()
+  }
+})
+
+test("explains Markdown failures without discarding the slide reader", async () => {
+  render(<Client messages={m} />)
+  choose()
+  await screen.findByRole("button", { name: m.markdown.export })
+  for (const error of ["resource", "invalid"] as const) {
+    mock.convert.mockResolvedValueOnce({ error })
+    fireEvent.click(screen.getByRole("button", { name: m.markdown.export }))
+    await screen.findByText(
+      error === "resource" ? m.markdown.resource : m.markdown.error
+    )
+    expect(screen.queryByRole("link", { name: m.markdown.download })).toBeNull()
+    expect(screen.getByLabelText(m.page)).toBeTruthy()
+  }
 })

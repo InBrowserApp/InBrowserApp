@@ -30,5 +30,24 @@
   "zoomOut": "Reduzir",
   "closeSearch": "Fechar pesquisa",
   "releaseFile": "Solte para abrir este documento",
-  "fitPage": "Ajustar à página"
+  "fitPage": "Ajustar à página",
+  "markdown": {
+    "export": "Exportar Markdown",
+    "converting": "Exportando Markdown…",
+    "download": "Baixar Markdown",
+    "error": "Não foi possível exportar Markdown. Tente o Conversor de PPTX para Markdown ou uma apresentação menos complexa.",
+    "resource": "Este documento precisa de mais memória do que este navegador pode oferecer. Feche outras abas ou tente outro dispositivo.",
+    "note": "O Markdown preserva o texto e a estrutura básica, mas não o layout dos slides. Os slides mantêm a ordem do arquivo; slides ocultos são incluídos e marcados. As anotações do apresentador aparecem após seus respectivos slides. Imagens, gráficos, equações, mídia e objetos incorporados são substituídos por marcadores de omissão. Elementos decorativos do modelo, comentários de revisão, animações e transições não são exportados. Tabelas com células mescladas e formatação complexa são simplificadas; confira o resultado com o original.",
+    "labels": {
+      "slide": "Slide {number}",
+      "hidden": "Slide oculto",
+      "notes": "Anotações do apresentador",
+      "image": "[Imagem omitida]",
+      "chart": "[Gráfico omitido]",
+      "equation": "[Equação omitida]",
+      "media": "[Mídia omitida]",
+      "object": "[Objeto incorporado omitido]",
+      "shape": "[Forma omitida]"
+    }
+  }
 }

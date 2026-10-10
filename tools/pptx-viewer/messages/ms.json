@@ -30,5 +30,24 @@
   "zoomOut": "Zum keluar",
   "closeSearch": "Tutup carian",
   "releaseFile": "Lepaskan untuk membuka dokumen ini",
-  "fitPage": "Muatkan halaman"
+  "fitPage": "Muatkan halaman",
+  "markdown": {
+    "export": "Eksport Markdown",
+    "converting": "Mengeksport Markdown…",
+    "download": "Muat turun Markdown",
+    "error": "Markdown tidak dapat dieksport. Cuba Penukar PPTX kepada Markdown atau pembentangan yang kurang rumit.",
+    "resource": "Dokumen ini memerlukan lebih banyak memori daripada yang tersedia dalam pelayar ini. Tutup tab lain atau cuba peranti lain.",
+    "note": "Markdown mengekalkan teks dan struktur asas, bukan susun atur slaid. Slaid kekal mengikut urutan dalam fail; slaid tersembunyi disertakan dan ditandakan. Nota pembentang diletakkan selepas slaid masing-masing. Imej, carta, persamaan, media dan objek terbenam menggunakan penanda pengguguran. Hiasan templat, komen semakan, animasi dan peralihan tidak dieksport. Jadual dengan sel bercantum dan pemformatan kompleks dipermudah; semak hasil dengan membandingkannya dengan yang asal.",
+    "labels": {
+      "slide": "Slaid {number}",
+      "hidden": "Slaid tersembunyi",
+      "notes": "Nota pembentang",
+      "image": "[Imej digugurkan]",
+      "chart": "[Carta digugurkan]",
+      "equation": "[Persamaan digugurkan]",
+      "media": "[Media digugurkan]",
+      "object": "[Objek terbenam digugurkan]",
+      "shape": "[Bentuk digugurkan]"
+    }
+  }
 }

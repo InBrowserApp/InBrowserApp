@@ -19155,6 +19155,141 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "pptx-to-markdown-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "pptx",
+      "pptm",
+      "potx",
+      "potm",
+      "ppsx",
+      "ppsm",
+      "powerpoint",
+      "markdown",
+      "converter",
+      "export",
+      "local",
+    ],
+    locales: {
+      ar: {
+        name: "محول PPTX إلى Markdown",
+        description:
+          "حوّل عروض PowerPoint التقديمية وعروض الشرائح والقوالب إلى Markdown في متصفحك. عاين نصوص الشرائح وملاحظات المتحدث وانسخها ونزّلها دون رفع ملفك.",
+      },
+      de: {
+        name: "PPTX-zu-Markdown-Konverter",
+        description:
+          "Konvertieren Sie PowerPoint-Präsentationen, Bildschirmpräsentationen und Vorlagen im Browser in Markdown. Sehen Sie Folientext und Referentennotizen an, kopieren Sie sie und laden Sie sie herunter, ohne Ihre Datei hochzuladen.",
+      },
+      en: {
+        name: "PPTX to Markdown Converter",
+        description:
+          "Convert PowerPoint presentations, slideshows, and templates to Markdown in your browser. Preview, copy, and download slide text and speaker notes without uploading your file.",
+      },
+      es: {
+        name: "Conversor de PPTX a Markdown",
+        description:
+          "Convierte presentaciones, presentaciones con diapositivas y plantillas de PowerPoint a Markdown en tu navegador. Previsualiza, copia y descarga el texto de las diapositivas y las notas del orador sin subir tu archivo.",
+      },
+      fr: {
+        name: "Convertisseur PPTX en Markdown",
+        description:
+          "Convertissez des présentations, diaporamas et modèles PowerPoint en Markdown dans votre navigateur. Prévisualisez, copiez et téléchargez le texte des diapositives et les notes du présentateur sans envoyer votre fichier à un serveur.",
+      },
+      he: {
+        name: "ממיר PPTX ל-Markdown",
+        description:
+          "המרת מצגות, הצגות שקופיות ותבניות PowerPoint ל-Markdown בדפדפן. אפשר לצפות בטקסט השקופיות ובהערות הדובר, להעתיק ולהוריד אותם ללא העלאת הקובץ.",
+      },
+      hi: {
+        name: "PPTX से Markdown कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में PowerPoint प्रेज़ेंटेशन, स्लाइडशो और टेम्पलेट को Markdown में बदलें। फ़ाइल अपलोड किए बिना स्लाइड का टेक्स्ट और वक्ता के नोट्स देखें, कॉपी करें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter PPTX ke Markdown",
+        description:
+          "Konversi presentasi, peragaan slide, dan templat PowerPoint ke Markdown di browser Anda. Pratinjau, salin, dan unduh teks slide serta catatan pembicara tanpa mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da PPTX a Markdown",
+        description:
+          "Converti presentazioni, presentazioni automatiche e modelli PowerPoint in Markdown nel browser. Visualizza in anteprima, copia e scarica il testo delle diapositive e le note del relatore senza caricare il file su un server.",
+      },
+      ja: {
+        name: "PPTXからMarkdownへの変換ツール",
+        description:
+          "ブラウザーでPowerPointのプレゼンテーション、スライドショー、テンプレートをMarkdownに変換します。ファイルをアップロードせずに、スライドのテキストや発表者ノートの確認、コピー、ダウンロードができます。",
+      },
+      ko: {
+        name: "PPTX → Markdown 변환기",
+        description:
+          "브라우저에서 PowerPoint 프레젠테이션, 슬라이드 쇼, 서식 파일을 Markdown으로 변환하세요. 파일을 업로드하지 않고 슬라이드 텍스트와 발표자 노트를 미리 보고 복사하거나 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar PPTX kepada Markdown",
+        description:
+          "Tukar pembentangan, tayangan slaid dan templat PowerPoint kepada Markdown dalam pelayar anda. Pratonton, salin dan muat turun teks slaid serta nota pembentang tanpa memuat naik fail anda.",
+      },
+      nl: {
+        name: "PPTX-naar-Markdown-converter",
+        description:
+          "Zet PowerPoint-presentaties, -diavoorstellingen en -sjablonen om naar Markdown in je browser. Bekijk, kopieer en download diatekst en sprekersnotities zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "PPTX til Markdown-konverterer",
+        description:
+          "Konverter presentasjoner, lysbildefremvisninger og maler fra PowerPoint til Markdown i nettleseren. Forhåndsvis, kopier og last ned lysbildetekst og foredragsnotater uten å laste opp filen.",
+      },
+      pl: {
+        name: "Konwerter PPTX na Markdown",
+        description:
+          "Konwertuj prezentacje, pokazy slajdów i szablony PowerPoint na Markdown w przeglądarce. Przeglądaj, kopiuj i pobieraj tekst slajdów oraz notatki prelegenta bez przesyłania pliku na serwer.",
+      },
+      pt: {
+        name: "Conversor de PPTX para Markdown",
+        description:
+          "Converta apresentações, apresentações de slides e modelos do PowerPoint para Markdown no navegador. Visualize, copie e baixe o texto dos slides e as anotações do apresentador sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Конвертер PPTX в Markdown",
+        description:
+          "Преобразуйте презентации, демонстрации и шаблоны PowerPoint в Markdown в браузере. Просматривайте, копируйте и скачивайте текст слайдов и заметки докладчика без загрузки файла на сервер.",
+      },
+      sv: {
+        name: "Konverterare från PPTX till Markdown",
+        description:
+          "Konvertera PowerPoint-presentationer, bildspel och mallar till Markdown i webbläsaren. Förhandsvisa, kopiera och ladda ner bildernas text och talaranteckningar utan att ladda upp filen.",
+      },
+      th: {
+        name: "โปรแกรมแปลง PPTX เป็น Markdown",
+        description:
+          "แปลงงานนำเสนอ การนำเสนอสไลด์ และแม่แบบ PowerPoint เป็น Markdown ในเบราว์เซอร์ ดูตัวอย่าง คัดลอก และดาวน์โหลดข้อความในสไลด์และบันทึกย่อของผู้บรรยายโดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PPTX’ten Markdown’a Dönüştürücü",
+        description:
+          "PowerPoint sunumlarını, slayt gösterilerini ve şablonlarını tarayıcınızda Markdown’a dönüştürün. Dosyanızı yüklemeden slayt metinlerini ve konuşmacı notlarını önizleyin, kopyalayın ve indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi PPTX sang Markdown",
+        description:
+          "Chuyển bản trình bày, tệp trình chiếu và mẫu PowerPoint sang Markdown trong trình duyệt. Xem trước, sao chép và tải xuống văn bản trang chiếu cùng ghi chú của diễn giả mà không tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "PPTX 转 Markdown 转换器",
+        description:
+          "在浏览器中将 PowerPoint 演示文稿、放映文件和模板转换为 Markdown。无需上传文件，即可预览、复制和下载幻灯片文本及演讲者备注。",
+      },
+      "zh-TW": {
+        name: "PPTX 轉 Markdown 轉換器",
+        description:
+          "在瀏覽器中將 PowerPoint 簡報、投影片放映檔與範本轉換為 Markdown。預覽、複製及下載投影片文字與演講者備忘稿，無須上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "pptx-viewer",
     category: "document",
     icon: "file-text",
@@ -49647,6 +49782,141 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "PPT 與 DPS 檢視器",
         description:
           "直接在瀏覽器中閱讀本機的舊版 PowerPoint PPT、相容的 WPS DPS 簡報及 DPT 範本。",
+      },
+    },
+  },
+  "pptx-to-markdown-converter": {
+    slug: "pptx-to-markdown-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "pptx",
+      "pptm",
+      "potx",
+      "potm",
+      "ppsx",
+      "ppsm",
+      "powerpoint",
+      "markdown",
+      "converter",
+      "export",
+      "local",
+    ],
+    locales: {
+      ar: {
+        name: "محول PPTX إلى Markdown",
+        description:
+          "حوّل عروض PowerPoint التقديمية وعروض الشرائح والقوالب إلى Markdown في متصفحك. عاين نصوص الشرائح وملاحظات المتحدث وانسخها ونزّلها دون رفع ملفك.",
+      },
+      de: {
+        name: "PPTX-zu-Markdown-Konverter",
+        description:
+          "Konvertieren Sie PowerPoint-Präsentationen, Bildschirmpräsentationen und Vorlagen im Browser in Markdown. Sehen Sie Folientext und Referentennotizen an, kopieren Sie sie und laden Sie sie herunter, ohne Ihre Datei hochzuladen.",
+      },
+      en: {
+        name: "PPTX to Markdown Converter",
+        description:
+          "Convert PowerPoint presentations, slideshows, and templates to Markdown in your browser. Preview, copy, and download slide text and speaker notes without uploading your file.",
+      },
+      es: {
+        name: "Conversor de PPTX a Markdown",
+        description:
+          "Convierte presentaciones, presentaciones con diapositivas y plantillas de PowerPoint a Markdown en tu navegador. Previsualiza, copia y descarga el texto de las diapositivas y las notas del orador sin subir tu archivo.",
+      },
+      fr: {
+        name: "Convertisseur PPTX en Markdown",
+        description:
+          "Convertissez des présentations, diaporamas et modèles PowerPoint en Markdown dans votre navigateur. Prévisualisez, copiez et téléchargez le texte des diapositives et les notes du présentateur sans envoyer votre fichier à un serveur.",
+      },
+      he: {
+        name: "ממיר PPTX ל-Markdown",
+        description:
+          "המרת מצגות, הצגות שקופיות ותבניות PowerPoint ל-Markdown בדפדפן. אפשר לצפות בטקסט השקופיות ובהערות הדובר, להעתיק ולהוריד אותם ללא העלאת הקובץ.",
+      },
+      hi: {
+        name: "PPTX से Markdown कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में PowerPoint प्रेज़ेंटेशन, स्लाइडशो और टेम्पलेट को Markdown में बदलें। फ़ाइल अपलोड किए बिना स्लाइड का टेक्स्ट और वक्ता के नोट्स देखें, कॉपी करें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter PPTX ke Markdown",
+        description:
+          "Konversi presentasi, peragaan slide, dan templat PowerPoint ke Markdown di browser Anda. Pratinjau, salin, dan unduh teks slide serta catatan pembicara tanpa mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da PPTX a Markdown",
+        description:
+          "Converti presentazioni, presentazioni automatiche e modelli PowerPoint in Markdown nel browser. Visualizza in anteprima, copia e scarica il testo delle diapositive e le note del relatore senza caricare il file su un server.",
+      },
+      ja: {
+        name: "PPTXからMarkdownへの変換ツール",
+        description:
+          "ブラウザーでPowerPointのプレゼンテーション、スライドショー、テンプレートをMarkdownに変換します。ファイルをアップロードせずに、スライドのテキストや発表者ノートの確認、コピー、ダウンロードができます。",
+      },
+      ko: {
+        name: "PPTX → Markdown 변환기",
+        description:
+          "브라우저에서 PowerPoint 프레젠테이션, 슬라이드 쇼, 서식 파일을 Markdown으로 변환하세요. 파일을 업로드하지 않고 슬라이드 텍스트와 발표자 노트를 미리 보고 복사하거나 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar PPTX kepada Markdown",
+        description:
+          "Tukar pembentangan, tayangan slaid dan templat PowerPoint kepada Markdown dalam pelayar anda. Pratonton, salin dan muat turun teks slaid serta nota pembentang tanpa memuat naik fail anda.",
+      },
+      nl: {
+        name: "PPTX-naar-Markdown-converter",
+        description:
+          "Zet PowerPoint-presentaties, -diavoorstellingen en -sjablonen om naar Markdown in je browser. Bekijk, kopieer en download diatekst en sprekersnotities zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "PPTX til Markdown-konverterer",
+        description:
+          "Konverter presentasjoner, lysbildefremvisninger og maler fra PowerPoint til Markdown i nettleseren. Forhåndsvis, kopier og last ned lysbildetekst og foredragsnotater uten å laste opp filen.",
+      },
+      pl: {
+        name: "Konwerter PPTX na Markdown",
+        description:
+          "Konwertuj prezentacje, pokazy slajdów i szablony PowerPoint na Markdown w przeglądarce. Przeglądaj, kopiuj i pobieraj tekst slajdów oraz notatki prelegenta bez przesyłania pliku na serwer.",
+      },
+      pt: {
+        name: "Conversor de PPTX para Markdown",
+        description:
+          "Converta apresentações, apresentações de slides e modelos do PowerPoint para Markdown no navegador. Visualize, copie e baixe o texto dos slides e as anotações do apresentador sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Конвертер PPTX в Markdown",
+        description:
+          "Преобразуйте презентации, демонстрации и шаблоны PowerPoint в Markdown в браузере. Просматривайте, копируйте и скачивайте текст слайдов и заметки докладчика без загрузки файла на сервер.",
+      },
+      sv: {
+        name: "Konverterare från PPTX till Markdown",
+        description:
+          "Konvertera PowerPoint-presentationer, bildspel och mallar till Markdown i webbläsaren. Förhandsvisa, kopiera och ladda ner bildernas text och talaranteckningar utan att ladda upp filen.",
+      },
+      th: {
+        name: "โปรแกรมแปลง PPTX เป็น Markdown",
+        description:
+          "แปลงงานนำเสนอ การนำเสนอสไลด์ และแม่แบบ PowerPoint เป็น Markdown ในเบราว์เซอร์ ดูตัวอย่าง คัดลอก และดาวน์โหลดข้อความในสไลด์และบันทึกย่อของผู้บรรยายโดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "PPTX’ten Markdown’a Dönüştürücü",
+        description:
+          "PowerPoint sunumlarını, slayt gösterilerini ve şablonlarını tarayıcınızda Markdown’a dönüştürün. Dosyanızı yüklemeden slayt metinlerini ve konuşmacı notlarını önizleyin, kopyalayın ve indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi PPTX sang Markdown",
+        description:
+          "Chuyển bản trình bày, tệp trình chiếu và mẫu PowerPoint sang Markdown trong trình duyệt. Xem trước, sao chép và tải xuống văn bản trang chiếu cùng ghi chú của diễn giả mà không tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "PPTX 转 Markdown 转换器",
+        description:
+          "在浏览器中将 PowerPoint 演示文稿、放映文件和模板转换为 Markdown。无需上传文件，即可预览、复制和下载幻灯片文本及演讲者备注。",
+      },
+      "zh-TW": {
+        name: "PPTX 轉 Markdown 轉換器",
+        description:
+          "在瀏覽器中將 PowerPoint 簡報、投影片放映檔與範本轉換為 Markdown。預覽、複製及下載投影片文字與演講者備忘稿，無須上傳檔案。",
       },
     },
   },

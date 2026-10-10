@@ -30,5 +30,24 @@
   "zoomOut": "Perkecil",
   "closeSearch": "Tutup pencarian",
   "releaseFile": "Lepaskan untuk membuka dokumen ini",
-  "fitPage": "Sesuaikan halaman"
+  "fitPage": "Sesuaikan halaman",
+  "markdown": {
+    "export": "Ekspor Markdown",
+    "converting": "Mengekspor Markdown…",
+    "download": "Unduh Markdown",
+    "error": "Markdown tidak dapat diekspor. Coba Konverter PPTX ke Markdown atau presentasi yang tidak terlalu kompleks.",
+    "resource": "Dokumen ini membutuhkan lebih banyak memori daripada yang dapat disediakan browser ini. Tutup tab lain atau coba perangkat lain.",
+    "note": "Markdown mempertahankan teks dan struktur dasar, bukan tata letak slide. Slide tetap mengikuti urutan dalam file; slide tersembunyi disertakan dan ditandai. Catatan pembicara mengikuti slide masing-masing. Gambar, bagan, persamaan, media, dan objek yang disematkan diganti dengan penanda bahwa konten tidak disertakan. Dekorasi templat, komentar peninjauan, animasi, dan transisi tidak diekspor. Tabel dengan sel gabungan dan pemformatan kompleks disederhanakan; bandingkan hasilnya dengan presentasi asli.",
+    "labels": {
+      "slide": "Slide {number}",
+      "hidden": "Slide tersembunyi",
+      "notes": "Catatan pembicara",
+      "image": "[Gambar tidak disertakan]",
+      "chart": "[Bagan tidak disertakan]",
+      "equation": "[Persamaan tidak disertakan]",
+      "media": "[Media tidak disertakan]",
+      "object": "[Objek yang disematkan tidak disertakan]",
+      "shape": "[Bentuk tidak disertakan]"
+    }
+  }
 }

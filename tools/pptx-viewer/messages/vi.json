@@ -30,5 +30,24 @@
   "zoomOut": "Thu nhỏ",
   "closeSearch": "Đóng tìm kiếm",
   "releaseFile": "Thả để mở tài liệu này",
-  "fitPage": "Vừa trang"
+  "fitPage": "Vừa trang",
+  "markdown": {
+    "export": "Xuất Markdown",
+    "converting": "Đang xuất Markdown…",
+    "download": "Tải Markdown xuống",
+    "error": "Không thể xuất Markdown. Hãy thử Trình chuyển đổi PPTX sang Markdown hoặc một bản trình bày ít phức tạp hơn.",
+    "resource": "Tài liệu này cần nhiều bộ nhớ hơn mức trình duyệt có thể cung cấp. Đóng các thẻ khác hoặc thử thiết bị khác.",
+    "note": "Markdown giữ lại văn bản và cấu trúc cơ bản, nhưng không giữ bố cục trang chiếu. Các trang chiếu giữ nguyên thứ tự trong tệp; trang chiếu ẩn cũng được đưa vào và đánh dấu. Ghi chú của diễn giả nằm sau trang chiếu tương ứng. Hình ảnh, biểu đồ, phương trình, nội dung đa phương tiện và đối tượng nhúng được thay bằng dấu chỉ nội dung bị lược bỏ. Thành phần trang trí của mẫu, nhận xét duyệt tài liệu, hoạt ảnh và hiệu ứng chuyển trang không được xuất. Bảng có ô gộp và định dạng phức tạp được đơn giản hóa; hãy đối chiếu kết quả với bản gốc.",
+    "labels": {
+      "slide": "Trang chiếu {number}",
+      "hidden": "Trang chiếu ẩn",
+      "notes": "Ghi chú của diễn giả",
+      "image": "[Đã lược bỏ hình ảnh]",
+      "chart": "[Đã lược bỏ biểu đồ]",
+      "equation": "[Đã lược bỏ phương trình]",
+      "media": "[Đã lược bỏ nội dung đa phương tiện]",
+      "object": "[Đã lược bỏ đối tượng nhúng]",
+      "shape": "[Đã lược bỏ hình dạng]"
+    }
+  }
 }

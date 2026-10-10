@@ -15,7 +15,7 @@ import {
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { FileText } from "@workspace/ui/icons"
 import { useDocument } from "./use-document"
-import { Output } from "./output"
+import { DocumentTextExport } from "@workspace/ui/components/tool/document-text-export"
 import type { Messages } from "./types"
 
 export default function Client({ messages: m }: { messages: Messages }) {
@@ -54,7 +54,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
         </p>
       ) : null}
       {output?.blob && file ? (
-        <Output
+        <DocumentTextExport
           text={output.text}
           blob={output.blob}
           filename={file.name.replace(/\.[^.]+$/, ".md")}

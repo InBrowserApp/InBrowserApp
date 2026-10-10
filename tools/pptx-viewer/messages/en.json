@@ -30,5 +30,24 @@
   "zoomOut": "Zoom out",
   "closeSearch": "Close search",
   "releaseFile": "Release to open this document",
-  "fitPage": "Fit page"
+  "fitPage": "Fit page",
+  "markdown": {
+    "export": "Export Markdown",
+    "converting": "Exporting Markdown…",
+    "download": "Download Markdown",
+    "error": "Markdown could not be exported. Try the PPTX to Markdown Converter or a less complex presentation.",
+    "resource": "This document needs more memory than this browser can provide. Close other tabs or try another device.",
+    "note": "Markdown keeps text and basic structure, not slide layout. Slides remain in file order; hidden slides are included and marked. Speaker notes follow their slides. Images, charts, equations, media, and embedded objects use omission markers. Template decorations, review comments, animations, and transitions are not exported. Merged tables and complex formatting are simplified; check the output against the original.",
+    "labels": {
+      "slide": "Slide {number}",
+      "hidden": "Hidden slide",
+      "notes": "Speaker notes",
+      "image": "[Image omitted]",
+      "chart": "[Chart omitted]",
+      "equation": "[Equation omitted]",
+      "media": "[Media omitted]",
+      "object": "[Embedded object omitted]",
+      "shape": "[Shape omitted]"
+    }
+  }
 }

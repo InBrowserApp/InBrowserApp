@@ -30,5 +30,24 @@
   "zoomOut": "Riduci",
   "closeSearch": "Chiudi ricerca",
   "releaseFile": "Rilascia per aprire questo documento",
-  "fitPage": "Adatta alla pagina"
+  "fitPage": "Adatta alla pagina",
+  "markdown": {
+    "export": "Esporta Markdown",
+    "converting": "Esportazione Markdown…",
+    "download": "Scarica Markdown",
+    "error": "Impossibile esportare Markdown. Prova il Convertitore da PPTX a Markdown o una presentazione meno complessa.",
+    "resource": "Questo documento richiede più memoria di quella disponibile nel browser. Chiudi altre schede o prova un altro dispositivo.",
+    "note": "Markdown conserva il testo e la struttura di base, ma non il layout delle diapositive. Le diapositive mantengono l’ordine del file; quelle nascoste vengono incluse e contrassegnate. Le note del relatore seguono le rispettive diapositive. Immagini, grafici, equazioni, contenuti multimediali e oggetti incorporati vengono sostituiti da indicatori di omissione. Decorazioni dei modelli, commenti di revisione, animazioni e transizioni non vengono esportati. Le tabelle con celle unite e la formattazione complessa vengono semplificate; confronta il risultato con l’originale.",
+    "labels": {
+      "slide": "Diapositiva {number}",
+      "hidden": "Diapositiva nascosta",
+      "notes": "Note del relatore",
+      "image": "[Immagine omessa]",
+      "chart": "[Grafico omesso]",
+      "equation": "[Equazione omessa]",
+      "media": "[Contenuto multimediale omesso]",
+      "object": "[Oggetto incorporato omesso]",
+      "shape": "[Forma omessa]"
+    }
+  }
 }
