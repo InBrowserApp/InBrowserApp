@@ -4,9 +4,12 @@ import { Button } from "@workspace/ui/components/ui/button"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Label } from "@workspace/ui/components/ui/label"
 import { Copy, Check } from "@workspace/ui/icons"
-import type { Messages } from "./types"
+type Messages = Record<
+  "output" | "copy" | "copied" | "copyFailed" | "download",
+  string
+>
 
-export function Output({
+export function DocumentTextExport({
   text,
   blob,
   filename,

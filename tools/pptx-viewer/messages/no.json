@@ -30,5 +30,24 @@
   "zoomOut": "Zoom ut",
   "closeSearch": "Lukk søk",
   "releaseFile": "Slipp for å åpne dokumentet",
-  "fitPage": "Tilpass til side"
+  "fitPage": "Tilpass til side",
+  "markdown": {
+    "export": "Eksporter Markdown",
+    "converting": "Eksporterer Markdown…",
+    "download": "Last ned Markdown",
+    "error": "Markdown kunne ikke eksporteres. Prøv PPTX til Markdown-konvertereren eller en mindre kompleks presentasjon.",
+    "resource": "Dette dokumentet trenger mer minne enn denne nettleseren kan tilby. Lukk andre faner eller prøv en annen enhet.",
+    "note": "Markdown bevarer tekst og grunnleggende struktur, men ikke lysbildeoppsett. Lysbildene beholder rekkefølgen fra filen; skjulte lysbilder tas med og merkes. Foredragsnotater vises etter tilhørende lysbilder. Bilder, diagrammer, ligninger, medier og innebygde objekter erstattes med markører for utelatt innhold. Maldekorasjoner, korrekturkommentarer, animasjoner og overganger eksporteres ikke. Tabeller med sammenslåtte celler og kompleks formatering forenkles; sammenlign resultatet med originalen.",
+    "labels": {
+      "slide": "Lysbilde {number}",
+      "hidden": "Skjult lysbilde",
+      "notes": "Foredragsnotater",
+      "image": "[Bilde utelatt]",
+      "chart": "[Diagram utelatt]",
+      "equation": "[Ligning utelatt]",
+      "media": "[Medier utelatt]",
+      "object": "[Innebygd objekt utelatt]",
+      "shape": "[Figur utelatt]"
+    }
+  }
 }

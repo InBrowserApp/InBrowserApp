@@ -30,5 +30,24 @@
   "zoomOut": "Verkleinern",
   "closeSearch": "Suche schließen",
   "releaseFile": "Loslassen, um dieses Dokument zu öffnen",
-  "fitPage": "Seite einpassen"
+  "fitPage": "Seite einpassen",
+  "markdown": {
+    "export": "Markdown exportieren",
+    "converting": "Markdown wird exportiert…",
+    "download": "Markdown herunterladen",
+    "error": "Markdown konnte nicht exportiert werden. Versuchen Sie es mit dem PPTX-zu-Markdown-Konverter oder einer weniger komplexen Präsentation.",
+    "resource": "Dieses Dokument benötigt mehr Arbeitsspeicher, als dieser Browser bereitstellen kann. Schließen Sie andere Tabs oder versuchen Sie es auf einem anderen Gerät.",
+    "note": "Markdown erhält Text und grundlegende Struktur, aber nicht das Folienlayout. Folien bleiben in der Reihenfolge der Datei; ausgeblendete Folien werden einbezogen und gekennzeichnet. Referentennotizen folgen der jeweiligen Folie. Bilder, Diagramme, Formeln, Medien und eingebettete Objekte werden durch Auslassungsmarkierungen ersetzt. Dekorationen aus Vorlagen, Überprüfungskommentare, Animationen und Übergänge werden nicht exportiert. Tabellen mit verbundenen Zellen und komplexe Formatierungen werden vereinfacht; vergleichen Sie die Ausgabe mit dem Original.",
+    "labels": {
+      "slide": "Folie {number}",
+      "hidden": "Ausgeblendete Folie",
+      "notes": "Referentennotizen",
+      "image": "[Bild ausgelassen]",
+      "chart": "[Diagramm ausgelassen]",
+      "equation": "[Formel ausgelassen]",
+      "media": "[Medien ausgelassen]",
+      "object": "[Eingebettetes Objekt ausgelassen]",
+      "shape": "[Form ausgelassen]"
+    }
+  }
 }

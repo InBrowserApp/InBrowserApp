@@ -30,5 +30,24 @@
   "zoomOut": "Uitzoomen",
   "closeSearch": "Zoeken sluiten",
   "releaseFile": "Laat los om dit document te openen",
-  "fitPage": "Pagina passend maken"
+  "fitPage": "Pagina passend maken",
+  "markdown": {
+    "export": "Markdown exporteren",
+    "converting": "Markdown exporteren…",
+    "download": "Markdown downloaden",
+    "error": "Markdown kan niet worden geëxporteerd. Probeer de PPTX-naar-Markdown-converter of een minder complexe presentatie.",
+    "resource": "Dit document heeft meer geheugen nodig dan deze browser kan bieden. Sluit andere tabbladen of probeer een ander apparaat.",
+    "note": "Markdown behoudt tekst en basisstructuur, maar niet de dia-indeling. Dia’s blijven in de volgorde van het bestand staan; verborgen dia’s worden meegenomen en gemarkeerd. Sprekersnotities volgen op de bijbehorende dia’s. Afbeeldingen, grafieken, vergelijkingen, media en ingesloten objecten worden vervangen door markeringen voor weggelaten inhoud. Decoratieve sjabloonelementen, revisieopmerkingen, animaties en overgangen worden niet geëxporteerd. Tabellen met samengevoegde cellen en complexe opmaak worden vereenvoudigd; controleer de uitvoer aan de hand van het origineel.",
+    "labels": {
+      "slide": "Dia {number}",
+      "hidden": "Verborgen dia",
+      "notes": "Sprekersnotities",
+      "image": "[Afbeelding weggelaten]",
+      "chart": "[Grafiek weggelaten]",
+      "equation": "[Vergelijking weggelaten]",
+      "media": "[Media weggelaten]",
+      "object": "[Ingesloten object weggelaten]",
+      "shape": "[Vorm weggelaten]"
+    }
+  }
 }

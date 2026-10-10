@@ -30,5 +30,24 @@
   "zoomOut": "Pomniejsz",
   "closeSearch": "Zamknij wyszukiwanie",
   "releaseFile": "Upuść, aby otworzyć ten dokument",
-  "fitPage": "Dopasuj stronę"
+  "fitPage": "Dopasuj stronę",
+  "markdown": {
+    "export": "Eksportuj Markdown",
+    "converting": "Eksportowanie Markdown…",
+    "download": "Pobierz Markdown",
+    "error": "Nie udało się wyeksportować Markdown. Spróbuj użyć Konwertera PPTX na Markdown lub mniej złożonej prezentacji.",
+    "resource": "Ten dokument wymaga więcej pamięci, niż może udostępnić ta przeglądarka. Zamknij inne karty lub spróbuj na innym urządzeniu.",
+    "note": "Markdown zachowuje tekst i podstawową strukturę, ale nie układ slajdów. Slajdy pozostają w kolejności zapisanej w pliku; ukryte slajdy są uwzględniane i oznaczane. Notatki prelegenta są umieszczane po odpowiadających im slajdach. Obrazy, wykresy, równania, multimedia i osadzone obiekty są zastępowane znacznikami pominięcia. Ozdoby szablonu, komentarze recenzentów, animacje i przejścia nie są eksportowane. Tabele ze scalonymi komórkami i złożone formatowanie są upraszczane; porównaj wynik z oryginałem.",
+    "labels": {
+      "slide": "Slajd {number}",
+      "hidden": "Ukryty slajd",
+      "notes": "Notatki prelegenta",
+      "image": "[Pominięto obraz]",
+      "chart": "[Pominięto wykres]",
+      "equation": "[Pominięto równanie]",
+      "media": "[Pominięto multimedia]",
+      "object": "[Pominięto osadzony obiekt]",
+      "shape": "[Pominięto kształt]"
+    }
+  }
 }

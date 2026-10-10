@@ -30,5 +30,24 @@
   "zoomOut": "Zooma ut",
   "closeSearch": "Stäng sökning",
   "releaseFile": "Släpp för att öppna dokumentet",
-  "fitPage": "Anpassa till sidan"
+  "fitPage": "Anpassa till sidan",
+  "markdown": {
+    "export": "Exportera Markdown",
+    "converting": "Exporterar Markdown…",
+    "download": "Ladda ner Markdown",
+    "error": "Markdown kunde inte exporteras. Prova konverteraren från PPTX till Markdown eller en mindre komplex presentation.",
+    "resource": "Det här dokumentet behöver mer minne än webbläsaren kan tillhandahålla. Stäng andra flikar eller prova en annan enhet.",
+    "note": "Markdown bevarar text och grundläggande struktur, men inte bildernas layout. Bilderna behåller ordningen i filen; dolda bilder tas med och markeras. Talaranteckningar följer efter respektive bild. Bilder, diagram, ekvationer, medier och inbäddade objekt ersätts med markörer för utelämnat innehåll. Malldekorationer, granskningskommentarer, animationer och övergångar exporteras inte. Tabeller med sammanslagna celler och komplex formatering förenklas; kontrollera resultatet mot originalet.",
+    "labels": {
+      "slide": "Bild {number}",
+      "hidden": "Dold bild",
+      "notes": "Talaranteckningar",
+      "image": "[Bild utelämnad]",
+      "chart": "[Diagram utelämnat]",
+      "equation": "[Ekvation utelämnad]",
+      "media": "[Media utelämnade]",
+      "object": "[Inbäddat objekt utelämnat]",
+      "shape": "[Figur utelämnad]"
+    }
+  }
 }
