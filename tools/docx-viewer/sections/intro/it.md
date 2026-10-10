@@ -11,3 +11,5 @@ I documenti vengono elaborati in locale e non vengono caricati su server né sal
 L'espansione degli archivi e le dimensioni delle pagine renderizzate sono limitate per contenere l'uso della memoria del browser. I documenti crittografati e i vecchi file .doc non sono supportati. Il visualizzatore non modifica o stampa documenti e non carica risorse esterne del documento.
 
 L’esportazione in Markdown conserva il testo e la struttura di base, con intestazioni, piè di pagina, note e commenti in sezioni separate. Non conserva il layout delle pagine o i caratteri. Immagini, grafici, equazioni e forme non supportate vengono sostituiti da indicatori di omissione; le tabelle complesse e le revisioni vengono semplificate. Confronta i contenuti importanti con l’originale.
+
+Per scaricare un documento supportato come PDF basato su immagini, usa il [Convertitore da DOCX a PDF](../docx-to-pdf-converter/) e controlla l’aspetto del risultato prima di scaricarlo.

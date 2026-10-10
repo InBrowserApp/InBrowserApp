@@ -1,0 +1,30 @@
+diff --git a/dist/docx-BF9WXrYH.js b/dist/docx-BF9WXrYH.js
+index a8b7aa045db8d253788b3812af54b5d609c7501c..70f5e3f3031f28ed55c0f615e61c4c7ee7607022 100644
+--- a/dist/docx-BF9WXrYH.js
++++ b/dist/docx-BF9WXrYH.js
+@@ -263,10 +263,22 @@ function Ft(e) {
+ 			type: "module",
+ 			name: e?.name
+ 		});
+-		return n.addEventListener("error", () => {
+-			(self.URL || self.webkitURL).revokeObjectURL(t);
+-		}), n;
++		// Release the inline parser script after startup or termination. Keeping
++		// this URL until an error leaks one Blob for every opened document.
++		const release = () => {
++			if (t) (self.URL || self.webkitURL).revokeObjectURL(t);
++			t = void 0;
++		};
++		n.addEventListener("message", release, { once: true });
++		n.addEventListener("error", release, { once: true });
++		const terminate = n.terminate;
++		n.terminate = function () {
++			release();
++			return terminate.call(this);
++		};
++		return n;
+ 	} catch {
++		if (t) (self.URL || self.webkitURL).revokeObjectURL(t);
+ 		return new Worker("data:text/javascript;charset=utf-8," + encodeURIComponent(Nt), {
+ 			type: "module",
+ 			name: e?.name

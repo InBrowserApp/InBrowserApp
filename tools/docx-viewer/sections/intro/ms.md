@@ -11,3 +11,5 @@ Dokumen dan templat dengan makro boleh dilihat, tetapi makronya tidak akan dijal
 Pengembangan arkib dan saiz halaman yang dipaparkan dihadkan untuk mengehadkan penggunaan memori pelayar. Dokumen yang disulitkan dan fail .doc lama tidak disokong. Pemapar ini tidak menyunting atau mencetak dokumen atau memuatkan sumber dokumen luaran.
 
 Eksport Markdown mengekalkan teks dan struktur asas, dengan pengepala, pengaki, nota dan komen dalam bahagian berasingan. Ia tidak mengekalkan susun atur halaman atau fon. Imej, carta, persamaan dan bentuk yang tidak disokong menggunakan penanda pengguguran; jadual rumit dan perubahan yang dijejak dipermudah. Semak kandungan penting dengan membandingkannya dengan yang asal.
+
+Untuk memuat turun dokumen yang disokong sebagai PDF berasaskan imej, gunakan [Penukar DOCX kepada PDF](../docx-to-pdf-converter/) dan semak rupa hasilnya sebelum memuat turun.

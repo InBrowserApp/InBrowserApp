@@ -11,3 +11,5 @@ Bạn có thể xem tài liệu và mẫu hỗ trợ macro, nhưng macro không 
 Dung lượng giải nén và kích thước trang được kết xuất được giới hạn để kiểm soát mức sử dụng bộ nhớ của trình duyệt. Tài liệu được mã hóa và tệp .doc cũ không được hỗ trợ. Trình xem không chỉnh sửa hoặc in tài liệu hay tải tài nguyên bên ngoài của tài liệu.
 
 Xuất Markdown giữ lại văn bản và cấu trúc cơ bản, với đầu trang, chân trang, chú thích và nhận xét trong các phần riêng. Bố cục trang và phông chữ không được giữ lại. Hình ảnh, biểu đồ, phương trình và hình dạng không được hỗ trợ được thay bằng dấu chỉ nội dung bị lược bỏ; bảng phức tạp và các thay đổi được theo dõi sẽ được đơn giản hóa. Đối chiếu nội dung quan trọng với bản gốc.
+
+Để tải tài liệu được hỗ trợ xuống dưới dạng PDF hình ảnh, hãy dùng [Trình chuyển đổi DOCX sang PDF](../docx-to-pdf-converter/) và kiểm tra cách hiển thị của kết quả trước khi tải xuống.

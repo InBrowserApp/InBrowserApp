@@ -11,3 +11,5 @@ Można przeglądać dokumenty i szablony z obsługą makr, ale ich makra nigdy n
 Rozmiar rozpakowanego archiwum i renderowanych stron jest ograniczony, aby kontrolować zużycie pamięci przeglądarki. Zaszyfrowane dokumenty i starsze pliki .doc nie są obsługiwane. Przeglądarka nie edytuje ani nie drukuje dokumentów i nie ładuje zewnętrznych zasobów dokumentu.
 
 Eksport do Markdown zachowuje tekst i podstawową strukturę, umieszczając nagłówki, stopki, przypisy i komentarze w osobnych sekcjach. Nie zachowuje układu stron ani czcionek. Obrazy, wykresy, równania i nieobsługiwane kształty są zastępowane znacznikami pominięcia; złożone tabele i śledzone zmiany są upraszczane. Porównaj ważne treści z oryginałem.
+
+Aby pobrać obsługiwany dokument jako PDF oparty na obrazach, użyj narzędzia [Konwerter DOCX na PDF](../docx-to-pdf-converter/) i sprawdź wygląd wyniku przed pobraniem.

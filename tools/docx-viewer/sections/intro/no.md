@@ -11,3 +11,5 @@ Makroaktiverte dokumenter og maler kan vises, men makroene kjøres aldri. Innhol
 Utpakking av arkiver og størrelsen på gjengitte sider er begrenset for å begrense nettleserens minnebruk. Krypterte dokumenter og eldre .doc-filer støttes ikke. Viseren redigerer eller skriver ikke ut dokumenter og laster ikke inn eksterne dokumentressurser.
 
 Markdown-eksport bevarer tekst og grunnleggende struktur, med topptekster, bunntekster, noter og kommentarer i separate seksjoner. Sideoppsett og skrifter bevares ikke. Bilder, diagrammer, ligninger og figurer som ikke støttes, erstattes med markører for utelatt innhold; komplekse tabeller og sporede endringer forenkles. Sammenlign viktig innhold med originalen.
+
+For å laste ned et støttet dokument som en bildebasert PDF, bruk [Konverterer fra DOCX til PDF](../docx-to-pdf-converter/) og kontroller hvordan resultatet ser ut før du laster ned.

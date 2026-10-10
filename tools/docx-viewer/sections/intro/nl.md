@@ -11,3 +11,5 @@ Documenten en sjablonen met macro's kunnen worden bekeken, maar hun macro's word
 De grootte van uitgepakte archieven en weergegeven pagina's is beperkt om het geheugengebruik van de browser te begrenzen. Versleutelde documenten en oude .doc-bestanden worden niet ondersteund. De viewer bewerkt of print geen documenten en laadt geen externe documentbronnen.
 
 Markdown-export behoudt tekst en basisstructuur, met kopteksten, voetteksten, noten en opmerkingen in aparte secties. De pagina-indeling en lettertypen blijven niet behouden. Afbeeldingen, grafieken, vergelijkingen en niet-ondersteunde vormen worden vervangen door markeringen voor weggelaten inhoud; complexe tabellen en bijgehouden wijzigingen worden vereenvoudigd. Controleer belangrijke inhoud aan de hand van het origineel.
+
+Gebruik de [DOCX-naar-PDF-converter](../docx-to-pdf-converter/) om een ondersteund document als PDF met afbeeldingspagina’s te downloaden en controleer hoe de uitvoer eruitziet voordat je downloadt.

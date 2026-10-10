@@ -5982,6 +5982,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "docx-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "docx-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "docx-viewer",
     language: "ar",
   },

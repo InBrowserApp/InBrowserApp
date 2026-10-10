@@ -11,3 +11,5 @@ Documentos e modelos habilitados para macros podem ser visualizados, mas suas ma
 A expansão dos arquivos compactados e as dimensões das páginas renderizadas são limitadas para restringir o uso de memória do navegador. Documentos criptografados e arquivos .doc antigos não são compatíveis. O visualizador não edita ou imprime documentos nem carrega recursos externos do documento.
 
 A exportação em Markdown mantém o texto e a estrutura básica, com cabeçalhos, rodapés, notas e comentários em seções separadas. Ela não preserva o layout das páginas ou as fontes. Imagens, gráficos, equações e formas não compatíveis são substituídos por marcadores de omissão; tabelas complexas e alterações controladas são simplificadas. Confira os conteúdos importantes com o original.
+
+Para baixar um documento compatível como PDF baseado em imagens, use o [Conversor de DOCX para PDF](../docx-to-pdf-converter/) e confira a aparência do resultado antes de baixar.

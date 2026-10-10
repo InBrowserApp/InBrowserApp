@@ -11,3 +11,5 @@ Dokumente und Vorlagen mit Makros können angezeigt werden, ihre Makros werden j
 Die entpackte Archivgröße und die Größe gerenderter Seiten sind begrenzt, um den Speicherverbrauch im Browser zu beschränken. Verschlüsselte Dokumente und ältere .doc-Dateien werden nicht unterstützt. Der Betrachter bearbeitet oder druckt keine Dokumente und lädt keine externen Dokumentressourcen.
 
 Der Markdown-Export erhält Text und grundlegende Struktur; Kopf- und Fußzeilen, Anmerkungen und Kommentare stehen in separaten Abschnitten. Seitenlayout und Schriftarten bleiben nicht erhalten. Bilder, Diagramme, Formeln und nicht unterstützte Formen werden durch Auslassungsmarkierungen ersetzt; komplexe Tabellen und nachverfolgte Änderungen werden vereinfacht. Vergleichen Sie wichtige Inhalte mit dem Original.
+
+Um ein unterstütztes Dokument als bildbasierte PDF herunterzuladen, verwenden Sie den [DOCX-zu-PDF-Konverter](../docx-to-pdf-converter/) und prüfen Sie vor dem Herunterladen das Aussehen der Ausgabe.

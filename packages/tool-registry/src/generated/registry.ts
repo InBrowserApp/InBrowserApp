@@ -8256,6 +8256,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "docx-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "docx",
+      "docm",
+      "dotx",
+      "dotm",
+      "word",
+      "pdf",
+      "document",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محول DOCX إلى PDF",
+        description:
+          "حوّل مستندات Word وقوالبه المحلية المدعومة إلى ملفات PDF قائمة على الصور. عاين الصفحات وتحقّق من مظهرها ثم نزّل النتيجة دون رفع ملفك.",
+      },
+      de: {
+        name: "DOCX-zu-PDF-Konverter",
+        description:
+          "Konvertiere unterstützte lokale Word-Dokumente und -Vorlagen in bildbasierte PDFs. Sieh dir die Seiten in der Vorschau an, prüfe ihr Aussehen und lade das Ergebnis herunter, ohne deine Datei hochzuladen.",
+      },
+      en: {
+        name: "DOCX to PDF Converter",
+        description:
+          "Convert supported local Word documents and templates to image-based PDFs. Preview the pages, check their appearance, and download without uploading your file.",
+      },
+      es: {
+        name: "Conversor de DOCX a PDF",
+        description:
+          "Convierte documentos y plantillas de Word locales compatibles en PDF basados en imágenes. Revisa las páginas, comprueba su aspecto y descarga el resultado sin subir el archivo.",
+      },
+      fr: {
+        name: "Convertisseur DOCX en PDF",
+        description:
+          "Convertissez les documents et modèles Word locaux pris en charge en PDF composés d’images. Prévisualisez les pages, vérifiez leur apparence et téléchargez le résultat sans envoyer votre fichier à un serveur.",
+      },
+      he: {
+        name: "ממיר DOCX ל-PDF",
+        description:
+          "המרת מסמכים ותבניות Word מקומיים ונתמכים לקובצי PDF מבוססי תמונות. אפשר לצפות בעמודים, לבדוק את המראה שלהם ולהוריד את התוצאה ללא העלאת הקובץ.",
+      },
+      hi: {
+        name: "DOCX से PDF कन्वर्टर",
+        description:
+          "समर्थित स्थानीय Word दस्तावेज़ों और टेम्पलेट को चित्र-आधारित PDF में बदलें। फ़ाइल अपलोड किए बिना पृष्ठों का पूर्वावलोकन करें, उनका रूप जाँचें और परिणाम डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter DOCX ke PDF",
+        description:
+          "Konversikan dokumen dan templat Word lokal yang didukung ke PDF berbasis gambar. Pratinjau halaman, periksa tampilannya, dan unduh hasilnya tanpa mengunggah file Anda.",
+      },
+      it: {
+        name: "Convertitore da DOCX a PDF",
+        description:
+          "Converti documenti e modelli Word locali supportati in PDF basati su immagini. Visualizza le pagine in anteprima, controllane l’aspetto e scarica il risultato senza caricare il file online.",
+      },
+      ja: {
+        name: "DOCXからPDFへの変換ツール",
+        description:
+          "対応するローカルのWord文書やテンプレートを画像ベースのPDFに変換します。ファイルをアップロードせずに、ページをプレビューして表示を確認し、ダウンロードできます。",
+      },
+      ko: {
+        name: "DOCX → PDF 변환기",
+        description:
+          "지원되는 Word 문서와 서식 파일을 기기에서 이미지 기반 PDF로 변환하세요. 파일을 업로드하지 않고 페이지를 미리 보고 모양을 확인한 후 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar DOCX kepada PDF",
+        description:
+          "Tukar dokumen dan templat Word setempat yang disokong kepada PDF berasaskan imej. Pratonton halaman, semak rupanya dan muat turun tanpa memuat naik fail anda.",
+      },
+      nl: {
+        name: "DOCX-naar-PDF-converter",
+        description:
+          "Zet ondersteunde lokale Word-documenten en -sjablonen om in PDF’s met afbeeldingspagina’s. Bekijk de pagina’s, controleer hoe ze eruitzien en download het resultaat zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Konverterer fra DOCX til PDF",
+        description:
+          "Konverter lokale Word-dokumenter og maler som støttes, til bildebaserte PDF-er. Forhåndsvis sidene, kontroller utseendet og last ned uten å laste opp filen.",
+      },
+      pl: {
+        name: "Konwerter DOCX na PDF",
+        description:
+          "Konwertuj obsługiwane lokalne dokumenty i szablony Word na pliki PDF oparte na obrazach. Przejrzyj strony, sprawdź ich wygląd i pobierz wynik bez przesyłania pliku na serwer.",
+      },
+      pt: {
+        name: "Conversor de DOCX para PDF",
+        description:
+          "Converta documentos e modelos locais compatíveis do Word em PDFs baseados em imagens. Visualize as páginas, confira sua aparência e baixe o resultado sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Конвертер DOCX в PDF",
+        description:
+          "Преобразуйте поддерживаемые локальные документы и шаблоны Word в PDF из изображений. Просмотрите страницы, проверьте их вид и скачайте результат без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Konverterare från DOCX till PDF",
+        description:
+          "Konvertera lokala Word-dokument och mallar som stöds till bildbaserade PDF-filer. Förhandsvisa sidorna, kontrollera hur de ser ut och ladda ner resultatet utan att ladda upp filen.",
+      },
+      th: {
+        name: "โปรแกรมแปลง DOCX เป็น PDF",
+        description:
+          "แปลงเอกสารและแม่แบบ Word ในเครื่องที่รองรับเป็น PDF แบบภาพ ดูตัวอย่างหน้า ตรวจสอบรูปลักษณ์ และดาวน์โหลดโดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "DOCX’ten PDF’ye Dönüştürücü",
+        description:
+          "Desteklenen yerel Word belgelerini ve şablonlarını görsel tabanlı PDF’lere dönüştürün. Sayfaları önizleyin, görünümlerini kontrol edin ve dosyanızı yüklemeden sonucu indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi DOCX sang PDF",
+        description:
+          "Chuyển tài liệu và mẫu Word được hỗ trợ từ thiết bị của bạn sang PDF dạng hình ảnh. Xem trước các trang, kiểm tra cách hiển thị và tải xuống mà không tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "DOCX 转 PDF 转换器",
+        description:
+          "将受支持的本地 Word 文档和模板转换为由图像页面组成的 PDF。无需上传文件，即可预览页面、检查显示效果并下载。",
+      },
+      "zh-TW": {
+        name: "DOCX 轉 PDF 轉換器",
+        description:
+          "將本機支援的 Word 文件與範本轉換為圖片式 PDF。預覽頁面、檢查外觀並下載，無須上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "docx-viewer",
     category: "document",
     icon: "file-text",
@@ -40170,6 +40302,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "DOCX 轉 Markdown 轉換器",
         description:
           "在瀏覽器中將 Word 文件與範本轉換為 Markdown。預覽或複製文字，或下載 UTF-8 檔案，無須上傳文件。",
+      },
+    },
+  },
+  "docx-to-pdf-converter": {
+    slug: "docx-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "docx",
+      "docm",
+      "dotx",
+      "dotm",
+      "word",
+      "pdf",
+      "document",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محول DOCX إلى PDF",
+        description:
+          "حوّل مستندات Word وقوالبه المحلية المدعومة إلى ملفات PDF قائمة على الصور. عاين الصفحات وتحقّق من مظهرها ثم نزّل النتيجة دون رفع ملفك.",
+      },
+      de: {
+        name: "DOCX-zu-PDF-Konverter",
+        description:
+          "Konvertiere unterstützte lokale Word-Dokumente und -Vorlagen in bildbasierte PDFs. Sieh dir die Seiten in der Vorschau an, prüfe ihr Aussehen und lade das Ergebnis herunter, ohne deine Datei hochzuladen.",
+      },
+      en: {
+        name: "DOCX to PDF Converter",
+        description:
+          "Convert supported local Word documents and templates to image-based PDFs. Preview the pages, check their appearance, and download without uploading your file.",
+      },
+      es: {
+        name: "Conversor de DOCX a PDF",
+        description:
+          "Convierte documentos y plantillas de Word locales compatibles en PDF basados en imágenes. Revisa las páginas, comprueba su aspecto y descarga el resultado sin subir el archivo.",
+      },
+      fr: {
+        name: "Convertisseur DOCX en PDF",
+        description:
+          "Convertissez les documents et modèles Word locaux pris en charge en PDF composés d’images. Prévisualisez les pages, vérifiez leur apparence et téléchargez le résultat sans envoyer votre fichier à un serveur.",
+      },
+      he: {
+        name: "ממיר DOCX ל-PDF",
+        description:
+          "המרת מסמכים ותבניות Word מקומיים ונתמכים לקובצי PDF מבוססי תמונות. אפשר לצפות בעמודים, לבדוק את המראה שלהם ולהוריד את התוצאה ללא העלאת הקובץ.",
+      },
+      hi: {
+        name: "DOCX से PDF कन्वर्टर",
+        description:
+          "समर्थित स्थानीय Word दस्तावेज़ों और टेम्पलेट को चित्र-आधारित PDF में बदलें। फ़ाइल अपलोड किए बिना पृष्ठों का पूर्वावलोकन करें, उनका रूप जाँचें और परिणाम डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter DOCX ke PDF",
+        description:
+          "Konversikan dokumen dan templat Word lokal yang didukung ke PDF berbasis gambar. Pratinjau halaman, periksa tampilannya, dan unduh hasilnya tanpa mengunggah file Anda.",
+      },
+      it: {
+        name: "Convertitore da DOCX a PDF",
+        description:
+          "Converti documenti e modelli Word locali supportati in PDF basati su immagini. Visualizza le pagine in anteprima, controllane l’aspetto e scarica il risultato senza caricare il file online.",
+      },
+      ja: {
+        name: "DOCXからPDFへの変換ツール",
+        description:
+          "対応するローカルのWord文書やテンプレートを画像ベースのPDFに変換します。ファイルをアップロードせずに、ページをプレビューして表示を確認し、ダウンロードできます。",
+      },
+      ko: {
+        name: "DOCX → PDF 변환기",
+        description:
+          "지원되는 Word 문서와 서식 파일을 기기에서 이미지 기반 PDF로 변환하세요. 파일을 업로드하지 않고 페이지를 미리 보고 모양을 확인한 후 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar DOCX kepada PDF",
+        description:
+          "Tukar dokumen dan templat Word setempat yang disokong kepada PDF berasaskan imej. Pratonton halaman, semak rupanya dan muat turun tanpa memuat naik fail anda.",
+      },
+      nl: {
+        name: "DOCX-naar-PDF-converter",
+        description:
+          "Zet ondersteunde lokale Word-documenten en -sjablonen om in PDF’s met afbeeldingspagina’s. Bekijk de pagina’s, controleer hoe ze eruitzien en download het resultaat zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "Konverterer fra DOCX til PDF",
+        description:
+          "Konverter lokale Word-dokumenter og maler som støttes, til bildebaserte PDF-er. Forhåndsvis sidene, kontroller utseendet og last ned uten å laste opp filen.",
+      },
+      pl: {
+        name: "Konwerter DOCX na PDF",
+        description:
+          "Konwertuj obsługiwane lokalne dokumenty i szablony Word na pliki PDF oparte na obrazach. Przejrzyj strony, sprawdź ich wygląd i pobierz wynik bez przesyłania pliku na serwer.",
+      },
+      pt: {
+        name: "Conversor de DOCX para PDF",
+        description:
+          "Converta documentos e modelos locais compatíveis do Word em PDFs baseados em imagens. Visualize as páginas, confira sua aparência e baixe o resultado sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Конвертер DOCX в PDF",
+        description:
+          "Преобразуйте поддерживаемые локальные документы и шаблоны Word в PDF из изображений. Просмотрите страницы, проверьте их вид и скачайте результат без отправки файла на сервер.",
+      },
+      sv: {
+        name: "Konverterare från DOCX till PDF",
+        description:
+          "Konvertera lokala Word-dokument och mallar som stöds till bildbaserade PDF-filer. Förhandsvisa sidorna, kontrollera hur de ser ut och ladda ner resultatet utan att ladda upp filen.",
+      },
+      th: {
+        name: "โปรแกรมแปลง DOCX เป็น PDF",
+        description:
+          "แปลงเอกสารและแม่แบบ Word ในเครื่องที่รองรับเป็น PDF แบบภาพ ดูตัวอย่างหน้า ตรวจสอบรูปลักษณ์ และดาวน์โหลดโดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "DOCX’ten PDF’ye Dönüştürücü",
+        description:
+          "Desteklenen yerel Word belgelerini ve şablonlarını görsel tabanlı PDF’lere dönüştürün. Sayfaları önizleyin, görünümlerini kontrol edin ve dosyanızı yüklemeden sonucu indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi DOCX sang PDF",
+        description:
+          "Chuyển tài liệu và mẫu Word được hỗ trợ từ thiết bị của bạn sang PDF dạng hình ảnh. Xem trước các trang, kiểm tra cách hiển thị và tải xuống mà không tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "DOCX 转 PDF 转换器",
+        description:
+          "将受支持的本地 Word 文档和模板转换为由图像页面组成的 PDF。无需上传文件，即可预览页面、检查显示效果并下载。",
+      },
+      "zh-TW": {
+        name: "DOCX 轉 PDF 轉換器",
+        description:
+          "將本機支援的 Word 文件與範本轉換為圖片式 PDF。預覽頁面、檢查外觀並下載，無須上傳檔案。",
       },
     },
   },

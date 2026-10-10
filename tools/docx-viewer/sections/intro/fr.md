@@ -11,3 +11,5 @@ Les documents et modèles prenant en charge les macros peuvent être consultés,
 La décompression des archives et la taille des pages rendues sont limitées afin de maîtriser l’utilisation de la mémoire du navigateur. Les documents chiffrés et les anciens fichiers .doc ne sont pas acceptés. Cette visionneuse ne modifie pas et n’imprime pas les documents et ne charge pas les ressources externes des documents.
 
 L’exportation en Markdown conserve le texte et la structure de base, avec les en-têtes, pieds de page, notes et commentaires dans des sections distinctes. Elle ne préserve ni la mise en page ni les polices. Les images, graphiques, équations et formes non prises en charge sont remplacés par des indications d’omission ; les tableaux complexes et les modifications suivies sont simplifiés. Comparez les contenus importants avec l’original.
+
+Pour télécharger un document pris en charge sous forme de PDF composé d’images, utilisez le [Convertisseur DOCX en PDF](../docx-to-pdf-converter/) et vérifiez l’apparence du résultat avant de le télécharger.

@@ -86,6 +86,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/docker-run-to-compose-converter/page"),
   "docx-to-markdown-converter": () =>
     import("@tool/docx-to-markdown-converter/page"),
+  "docx-to-pdf-converter": () => import("@tool/docx-to-pdf-converter/page"),
   "docx-viewer": () => import("@tool/docx-viewer/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
   "email-validator": () => import("@tool/email-validator/page"),
