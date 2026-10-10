@@ -54,5 +54,18 @@
   "compatibility": "Osadzone profile są zachowywane tam, gdzie są obsługiwane. Obrazy pomocnicze, mapy głębi i metadane kontenera nie są wyświetlane.",
   "licenses": "Licencje i źródła dekoderów",
   "downloadPng": "Pobierz PNG",
-  "pngNote": "Zapisz wybrany obraz jako 8-bitowy PNG. Wysoka głębia bitowa i HDR są redukowane. Powiększenie i tło podglądu nie zmieniają zapisanego obrazu."
+  "pngNote": "Zapisz wybrany obraz jako 8-bitowy PNG. Wysoka głębia bitowa i HDR są redukowane. Powiększenie i tło podglądu nie zmieniają zapisanego obrazu.",
+  "jpgExport": {
+    "format": "Format pobierania",
+    "quality": "Jakość JPG",
+    "qualityHint": "1–100. Wyższa jakość zwykle oznacza większy plik. Naciśnij Enter lub opuść pole, aby zastosować zmianę.",
+    "background": "Tło JPG",
+    "white": "Biały",
+    "black": "Czarny",
+    "custom": "Własny",
+    "color": "Własny kolor tła",
+    "download": "Pobierz JPG",
+    "note": "Przed zapisaniem sprawdź podgląd wynikowego pliku JPG. JPG stosuje kompresję stratną, używa 8 bitów na kanał i wypełnia przezroczyste obszary wybranym tłem JPG. Powiększenie i tło podglądu nie zmieniają zapisanego obrazu.",
+    "compatibility": "Wynikowy JPG jest konwertowany do sRGB. Osadzone profile pliku źródłowego są używane tam, gdzie są obsługiwane; kolory mogą się różnić od tych w edytorze z zarządzaniem kolorami. Obrazy pomocnicze, mapy głębi i metadane kontenera nie są zachowywane."
+  }
 }

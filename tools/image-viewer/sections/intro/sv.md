@@ -12,8 +12,12 @@ Bläddra mellan TIFF-sidor, ikonstorlekar, bildsamlingar och animationsrutor med
 
 Orienteringen tillämpas på den visade bilden. Förhandsvisningar använder 8-bitars kanaler, så högt bitdjup och HDR reduceras. Inbäddade färgprofiler bevaras där de stöds, men visaren ersätter inte ett redigeringsprogram med färghantering. Webbläsarens och avkodarens resursgränser kan hindra mycket stora eller komplexa bilder från att öppnas; det finns ingen fast gräns för filstorlek eller antal bilder.
 
-Filerna stannar på den här enheten. När du stänger eller byter fil frigörs dess avkodare och förhandsvisning. Visaren redigerar inte dina bilder och sparar dem inte automatiskt. Avkodarlicenser och motsvarande källkodsinformation finns i bilddetaljerna.
+Filerna stannar på den här enheten. När du stänger eller byter fil frigörs dess avkodare och förhandsvisning. Visaren sparar inte dina bilder automatiskt. Avkodarlicenser och motsvarande källkodsinformation finns i bilddetaljerna.
 
 ## Spara en PNG
 
 Ladda ned den valda bilden, sidan, ikonvarianten eller sammansatta animationsrutan som en stillbild i PNG-format. Den sparade bilden behåller fulla pixelmått, tillämpad orientering och transparens som stöds; zoom och bakgrunder i förhandsvisningen ändrar den inte. PNG-exporten använder samma 8-bitars bild som förhandsvisningen och bevarar därför inte högt bitdjup eller HDR. Animerad PNG exporterar endast standardstillbilden. Det finns ingen garanti för att animation eller behållarens metadata bevaras.
+
+## Spara en JPG
+
+Välj JPG som nedladdningsformat för att förhandsvisa det faktiska komprimerade resultatet. Ställ in kvaliteten från 1 till 100 och välj vitt, svart eller en anpassad färg för att fylla transparenta områden. Högre kvalitet ger oftast en större fil; även kvalitet 100 innebär informationsförlust. Den valda sidan eller bildrutan och dess fulla pixelmått bevaras när inställningarna ändras. JPG använder 8-bitars sRGB-färg och reducerar högt bitdjup och HDR. Zoom och bakgrunder i förhandsvisningen ändrar inte den sparade JPG-bilden. Endast inställningen för JPG-bakgrund fyller transparenta pixlar.

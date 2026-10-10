@@ -12,8 +12,12 @@ Layari halaman TIFF, saiz ikon, koleksi imej dan bingkai animasi menggunakan kaw
 
 Orientasi digunakan pada imej yang dipaparkan. Pratonton menggunakan saluran 8 bit, maka kedalaman bit tinggi dan HDR dikurangkan. Profil warna terbenam dikekalkan apabila disokong, tetapi pemapar ini bukan pengganti penyunting dengan pengurusan warna. Had sumber pelayar dan penyahkod mungkin menghalang imej yang sangat besar atau kompleks daripada dibuka; tiada had tetap bagi saiz fail atau bilangan imej.
 
-Fail kekal pada peranti ini. Menutup atau mengganti fail membebaskan penyahkod dan pratontonnya. Pemapar ini tidak menyunting atau menyimpan imej anda secara automatik. Lesen penyahkod dan maklumat sumber yang berkaitan tersedia dalam butiran imej.
+Fail kekal pada peranti ini. Menutup atau mengganti fail membebaskan penyahkod dan pratontonnya. Pemapar ini tidak menyimpan imej anda secara automatik. Lesen penyahkod dan maklumat sumber yang berkaitan tersedia dalam butiran imej.
 
 ## Simpan PNG
 
 Muat turun pilihan semasa sebagai PNG pegun, sama ada imej, halaman, varian ikon atau bingkai animasi yang telah dikompositkan. Imej yang disimpan mengekalkan dimensi piksel penuh, orientasi yang digunakan dan kelutsinaran yang disokong; zum dan latar belakang pratonton tidak mengubahnya. Eksport PNG menggunakan imej 8 bit yang sama seperti pratonton, jadi kedalaman bit tinggi atau HDR tidak dikekalkan. PNG beranimasi hanya mengeksport imej pegun lalai. Pengekalan animasi atau metadata bekas tidak dijamin.
+
+## Simpan JPG
+
+Pilih JPG sebagai format muat turun untuk melihat pratonton hasil mampatan sebenar. Tetapkan kualiti dari 1 hingga 100 dan pilih warna putih, hitam atau warna tersuai untuk mengisi kawasan lutsinar. Kualiti yang lebih tinggi biasanya menghasilkan fail yang lebih besar; walaupun pada kualiti 100, masih berlaku kehilangan data. Halaman atau bingkai yang dipilih serta dimensi piksel penuhnya dikekalkan apabila tetapan diubah. JPG menggunakan warna sRGB 8 bit dan mengurangkan kedalaman bit tinggi serta HDR. Zum dan latar belakang pratonton tidak mengubah JPG yang disimpan. Hanya tetapan latar belakang JPG mengisi piksel lutsinar.

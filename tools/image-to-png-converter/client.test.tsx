@@ -18,7 +18,8 @@ const mock = vi.hoisted(() => ({
 }))
 vi.mock("@workspace/raster-image", () => ({ imageSession: mock.session }))
 const preview: Preview = {
-  png: new Uint8Array([137, 80, 78, 71]),
+  mime: "image/png",
+  bytes: new Uint8Array([137, 80, 78, 71]),
   width: 320,
   height: 200,
   delay: 0,
@@ -42,7 +43,8 @@ beforeEach(() => {
   mock.open.mockResolvedValue(image)
   mock.render.mockResolvedValue({
     ...preview,
-    png: new Uint8Array([5, 6]),
+    mime: "image/png",
+    bytes: new Uint8Array([5, 6]),
     width: 200,
   })
   mock.session.mockReturnValue({ open: mock.open, render: mock.render })
@@ -70,7 +72,7 @@ test("downloads the displayed PNG bytes at native dimensions, independently of p
   expect(download()?.getAttribute("href")).toBe(img.getAttribute("src"))
   const blob = created.mock.calls[0]![0] as Blob
   expect(blob.type).toBe("image/png")
-  expect(new Uint8Array(await blob.arrayBuffer())).toEqual(preview.png)
+  expect(new Uint8Array(await blob.arrayBuffer())).toEqual(preview.bytes)
   const originalUrl = download()?.getAttribute("href")
   fireEvent.click(screen.getByRole("button", { name: m.zoomIn }))
   fireEvent.click(screen.getByRole("button", { name: m.dark }))

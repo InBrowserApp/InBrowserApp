@@ -12,8 +12,12 @@ Blättern Sie mit den Bildsteuerelementen durch TIFF-Seiten, Symbolgrößen, Bil
 
 Die Bildausrichtung wird bei der Anzeige berücksichtigt. Vorschauen verwenden 8-Bit-Kanäle, sodass hohe Bittiefe und HDR reduziert werden. Eingebettete Farbprofile bleiben erhalten, soweit unterstützt, aber dieser Betrachter ersetzt keinen Editor mit Farbmanagement. Ressourcenlimits des Browsers und Decoders können verhindern, dass sehr große oder komplexe Bilder geöffnet werden; es gibt keine feste Obergrenze für die Dateigröße oder die Anzahl der Bilder.
 
-Dateien bleiben auf diesem Gerät. Beim Schließen oder Ersetzen einer Datei werden ihr Decoder und ihre Vorschau freigegeben. Dieser Betrachter bearbeitet Ihre Bilder nicht und speichert sie auch nicht automatisch. Decoder-Lizenzen und Informationen zum zugehörigen Quellcode sind über die Bilddetails verfügbar.
+Dateien bleiben auf diesem Gerät. Beim Schließen oder Ersetzen einer Datei werden ihr Decoder und ihre Vorschau freigegeben. Dieser Betrachter speichert Ihre Bilder nicht automatisch. Decoder-Lizenzen und Informationen zum zugehörigen Quellcode sind über die Bilddetails verfügbar.
 
 ## Ein PNG speichern
 
 Laden Sie das aktuell ausgewählte Bild, die Seite, Symbolvariante oder das zusammengesetzte Animationsbild als PNG-Standbild herunter. Das gespeicherte Bild behält die vollständigen Pixelabmessungen, die angewandte Ausrichtung und unterstützte Transparenz; Zoom und Vorschauhintergründe verändern es nicht. Der PNG-Export verwendet dasselbe 8-Bit-Bild wie die Vorschau und erhält daher weder hohe Bittiefe noch HDR. Bei animiertem PNG wird nur das Standard-Standbild exportiert. Die Erhaltung von Animationen oder Container-Metadaten wird nicht zugesichert.
+
+## Ein JPG speichern
+
+Wählen Sie JPG als Downloadformat, um die tatsächliche komprimierte Ausgabe in der Vorschau zu sehen. Stellen Sie die Qualität auf einen Wert von 1 bis 100 ein und wählen Sie Weiß, Schwarz oder eine benutzerdefinierte Farbe zum Füllen transparenter Bereiche. Höhere Qualität führt meist zu einer größeren Datei; selbst Qualität 100 ist verlustbehaftet. Die ausgewählte Seite oder das Einzelbild und die vollständigen Pixelabmessungen bleiben erhalten, wenn Sie die Einstellungen ändern. JPG verwendet 8-Bit-sRGB-Farben und reduziert hohe Bittiefe und HDR. Zoom und Vorschauhintergründe verändern das gespeicherte JPG nicht. Nur die Einstellung für den JPG-Hintergrund füllt transparente Pixel.

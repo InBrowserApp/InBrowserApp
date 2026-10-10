@@ -7,8 +7,16 @@ self.onmessage = async ({ data }: MessageEvent<Request>) => {
   try {
     reply =
       data.type === "open"
-        ? { id: data.id, type: "opened", result: await openImage(data.file) }
-        : { id: data.id, type: "rendered", preview: renderImage(data.index) }
+        ? {
+            id: data.id,
+            type: "opened",
+            result: await openImage(data.file, data.jpeg),
+          }
+        : {
+            id: data.id,
+            type: "rendered",
+            preview: renderImage(data.index, data.jpeg),
+          }
   } catch (reason) {
     reply = { id: data.id, type: "error", failure: failureOf(reason) }
   }
@@ -18,5 +26,5 @@ self.onmessage = async ({ data }: MessageEvent<Request>) => {
       : reply.type === "rendered"
         ? reply.preview
         : null
-  self.postMessage(reply, { transfer: preview ? [preview.png.buffer] : [] })
+  self.postMessage(reply, { transfer: preview ? [preview.bytes.buffer] : [] })
 }

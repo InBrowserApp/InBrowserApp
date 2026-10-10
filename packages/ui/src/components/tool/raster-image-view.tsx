@@ -70,7 +70,7 @@ export function RasterImageView({
     setFailed(false)
     try {
       const next = URL.createObjectURL(
-        new Blob([preview.png], { type: "image/png" })
+        new Blob([preview.bytes], { type: preview.mime })
       )
       setObjectUrl({ preview, url: next })
       return () => URL.revokeObjectURL(next)
@@ -182,7 +182,11 @@ export function RasterImageView({
         </div>
         {url && loaded === preview && !failed ? (
           <Button asChild size="sm">
-            <a href={url} download={download.filename}>
+            <a
+              href={url}
+              download={download.filename}
+              data-astro-prefetch="false"
+            >
               {download.label}
             </a>
           </Button>

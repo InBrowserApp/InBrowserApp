@@ -31,31 +31,34 @@ export function RasterImageReader({
   const [index, setIndex] = useState(0)
   const [zoom, setZoom] = useState<number | null>(null)
   const [background, setBackground] = useState("checkerboard")
-  const [preview, setPreview] = useState<RasterPreview | null>(image.preview)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const generation = useRef(0)
-  useEffect(
-    () => () => {
-      generation.current++
-    },
-    []
-  )
-  async function select(next: number) {
-    const current = ++generation.current
-    setIndex(next)
-    setPreview(null)
-    setError(null)
-    setLoading(true)
-    try {
-      const result = await render(next)
-      if (current === generation.current) setPreview(result)
-    } catch (reason) {
-      if (current === generation.current) setError(errorMessage(reason))
-    } finally {
-      if (current === generation.current) setLoading(false)
+  const firstRender = useRef(render)
+  const initial = index === 0 && render === firstRender.current
+  const [result, setResult] = useState<{
+    index: number
+    render: typeof render
+    preview?: RasterPreview
+    error?: unknown
+  } | null>(null)
+  const current = result?.index === index && result.render === render
+  const preview = initial ? image.preview : current ? result.preview : null
+  const loading = !initial && !current
+  const error =
+    !initial && current && !result.preview ? errorMessage(result.error) : null
+  useEffect(() => {
+    if (initial) return
+    let active = true
+    void render(index).then(
+      (preview) => {
+        if (active) setResult({ index, render, preview })
+      },
+      (error: unknown) => {
+        if (active) setResult({ index, render, error })
+      }
+    )
+    return () => {
+      active = false
     }
-  }
+  }, [index, render, initial])
   return (
     <>
       {image.info.count > 1 ? (
@@ -69,7 +72,7 @@ export function RasterImageReader({
           <DocumentIconButton
             label={m.previous}
             disabled={loading || index === 0}
-            onClick={() => void select(index - 1)}
+            onClick={() => setIndex(index - 1)}
           >
             <ChevronLeft className="rtl:rotate-180" aria-hidden="true" />
           </DocumentIconButton>
@@ -80,7 +83,7 @@ export function RasterImageReader({
             max={image.info.count}
             value={index + 1}
             disabled={loading}
-            onCommit={(value) => void select(value - 1)}
+            onCommit={(value) => setIndex(value - 1)}
           />
           <span className="shrink-0 text-sm text-muted-foreground tabular-nums">
             {m.count.replace("{total}", String(image.info.count))}
@@ -88,7 +91,7 @@ export function RasterImageReader({
           <DocumentIconButton
             label={m.next}
             disabled={loading || index === image.info.count - 1}
-            onClick={() => void select(index + 1)}
+            onClick={() => setIndex(index + 1)}
           >
             <ChevronRight className="rtl:rotate-180" aria-hidden="true" />
           </DocumentIconButton>

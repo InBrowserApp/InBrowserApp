@@ -12,8 +12,12 @@ Duyệt các trang TIFF, kích thước biểu tượng, bộ sưu tập ảnh v
 
 Hướng ảnh được áp dụng cho ảnh hiển thị. Bản xem trước dùng các kênh 8 bit, nên độ sâu bit cao và HDR bị giảm. Hồ sơ màu nhúng được giữ lại khi được hỗ trợ, nhưng trình xem này không thay thế trình chỉnh sửa có quản lý màu. Giới hạn tài nguyên của trình duyệt và bộ giải mã có thể khiến ảnh rất lớn hoặc phức tạp không mở được; không có giới hạn cố định về kích thước tệp hay số lượng ảnh.
 
-Tệp luôn ở trên thiết bị này. Đóng hoặc thay tệp sẽ giải phóng bộ giải mã và bản xem trước. Trình xem này không chỉnh sửa hay tự động lưu ảnh của bạn. Bạn có thể xem giấy phép bộ giải mã và thông tin mã nguồn tương ứng trong phần chi tiết ảnh.
+Tệp luôn ở trên thiết bị này. Đóng hoặc thay tệp sẽ giải phóng bộ giải mã và bản xem trước. Trình xem này không tự động lưu ảnh của bạn. Bạn có thể xem giấy phép bộ giải mã và thông tin mã nguồn tương ứng trong phần chi tiết ảnh.
 
 ## Lưu ảnh PNG
 
 Tải ảnh, trang, biến thể biểu tượng hoặc khung hình hoạt ảnh đã ghép hiện được chọn xuống dưới dạng PNG tĩnh. Ảnh đã lưu giữ nguyên kích thước pixel đầy đủ, hướng ảnh đã áp dụng và độ trong suốt được hỗ trợ; thu phóng và nền xem trước không làm thay đổi ảnh đó. Tính năng xuất PNG dùng cùng ảnh 8 bit như bản xem trước, nên không giữ lại độ sâu bit cao hoặc HDR. PNG động chỉ xuất ảnh tĩnh mặc định. Không đảm bảo giữ lại hoạt ảnh hoặc siêu dữ liệu của tệp chứa.
+
+## Lưu ảnh JPG
+
+Chọn JPG làm định dạng tải xuống để xem trước kết quả nén thực tế. Đặt chất lượng từ 1 đến 100 và chọn màu trắng, đen hoặc màu tùy chỉnh để lấp vùng trong suốt. Chất lượng cao hơn thường tạo tệp lớn hơn; ngay cả chất lượng 100 vẫn dùng nén mất dữ liệu. Trang hoặc khung hình đã chọn cùng kích thước pixel đầy đủ được giữ nguyên khi thay đổi thiết lập. JPG dùng màu sRGB 8 bit và làm giảm độ sâu bit cao và HDR. Thu phóng và nền xem trước không làm thay đổi ảnh JPG đã lưu. Chỉ thiết lập nền JPG mới lấp các pixel trong suốt.

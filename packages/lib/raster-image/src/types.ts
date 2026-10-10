@@ -28,15 +28,17 @@ export type ImageInfo = {
   poster: boolean
 }
 export type Preview = {
-  png: Uint8Array<ArrayBuffer>
+  bytes: Uint8Array<ArrayBuffer>
+  mime: "image/png" | "image/jpeg"
   width: number
   height: number
   delay: number
   depth: number
   profile: boolean
 }
+export type JpegOptions = { quality: number; background: string }
 export type OpenedImage = { info: ImageInfo; preview: Preview }
-export type Request = { id: number } & (
+export type Request = { id: number; jpeg?: JpegOptions } & (
   | { type: "open"; file: File }
   | { type: "render"; index: number }
 )

@@ -9,20 +9,20 @@ test("transfers owned previews and classifies decoder errors", async () => {
   }
   vi.stubGlobal("self", target)
   await import("./image.worker")
-  const preview = { png: new Uint8Array([1, 2, 3]) }
+  const preview = { mime: "image/png", bytes: new Uint8Array([1, 2, 3]) }
   mock.open.mockResolvedValue({ info: { count: 1 }, preview })
   await target.onmessage({ data: { id: 1, type: "open", file: "source" } })
-  expect(mock.open).toHaveBeenCalledWith("source")
+  expect(mock.open).toHaveBeenCalledWith("source", undefined)
   expect(target.postMessage).toHaveBeenLastCalledWith(
     { id: 1, type: "opened", result: { info: { count: 1 }, preview } },
-    { transfer: [preview.png.buffer] }
+    { transfer: [preview.bytes.buffer] }
   )
   mock.render.mockReturnValue(preview)
   await target.onmessage({ data: { id: 2, type: "render", index: 3 } })
-  expect(mock.render).toHaveBeenCalledWith(3)
+  expect(mock.render).toHaveBeenCalledWith(3, undefined)
   expect(target.postMessage).toHaveBeenLastCalledWith(
     { id: 2, type: "rendered", preview },
-    { transfer: [preview.png.buffer] }
+    { transfer: [preview.bytes.buffer] }
   )
   mock.render.mockImplementation(() => {
     throw new RangeError("allocation")

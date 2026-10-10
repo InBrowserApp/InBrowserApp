@@ -8466,6 +8466,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-to-jpg-converter",
+    language: "ar",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "de",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "en",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "es",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "fr",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "he",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "hi",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "id",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "it",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "ja",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "ko",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "ms",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "nl",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "no",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "pl",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "pt",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "ru",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "sv",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "th",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "tr",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "vi",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-to-jpg-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "image-to-pdf-converter",
     language: "ar",
   },

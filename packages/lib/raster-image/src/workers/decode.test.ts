@@ -51,7 +51,7 @@ test("reads real TIFF pages, applies orientation and retains profile metadata", 
   expect([opened.preview.width, opened.preview.height]).toEqual([320, 200])
   const second = renderImage(1)
   expect([second.width, second.height]).toEqual([200, 320])
-  expect(pixel(second.png, 10, 10)).toEqual([20, 132, 150])
+  expect(pixel(second.bytes, 10, 10)).toEqual([20, 132, 150])
   const third = renderImage(2)
   expect([third.width, third.height]).toEqual([100, 100])
   for (const index of [-1, 3, NaN, 1.5])
@@ -63,10 +63,10 @@ test("reads real TIFF pages, applies orientation and retains profile metadata", 
   expect((await openImage(fixture("profiled.png"))).preview.profile).toBe(true)
   const reduced = (await openImage(fixture("high-depth.tiff"))).preview
   expect(reduced.depth).toBe(16)
-  expect(reduced.png[24]).toBeLessThanOrEqual(8) // PNG IHDR bit depth
-  expect(pixel(reduced.png, 10, 10)[0]).toBe(128)
+  expect(reduced.bytes[24]).toBeLessThanOrEqual(8) // PNG IHDR bit depth
+  expect(pixel(reduced.bytes, 10, 10)[0]).toBe(128)
   const transparent = (await openImage(fixture("color-chart.png"))).preview
-  ImageMagick.read(transparent.png, (image) => {
+  ImageMagick.read(transparent.bytes, (image) => {
     expect(image.width).toBe(320)
     expect(image.height).toBe(200)
     image.getPixels((pixels) => expect(pixels.getPixel(200, 150)[3]).toBe(128))
@@ -86,7 +86,7 @@ test("browses actual icon variants and reads AVIF/JXL/JP2 pixels", async () => {
   ]) {
     const result = await openImage(fixture(name))
     expect([result.preview.width, result.preview.height]).toEqual([320, 200])
-    expect(pixel(result.preview.png, 10, 10)[0]).toBeGreaterThan(225)
+    expect(pixel(result.preview.bytes, 10, 10)[0]).toBeGreaterThan(225)
   }
 })
 
@@ -97,19 +97,19 @@ test("coalesces real optimized GIF/WebP deltas and labels APNG's poster", async 
     const second = renderImage(1)
     expect([second.width, second.height, second.delay]).toEqual([100, 100, 200])
     expect(
-      pixel(second.png, 10, 10).every(
+      pixel(second.bytes, 10, 10).every(
         (v, i) => Math.abs(v - [232, 92, 40][i]!) < 8
       )
     ).toBe(true)
     expect(
-      pixel(second.png, 30, 30).every(
+      pixel(second.bytes, 30, 30).every(
         (v, i) => Math.abs(v - [20, 132, 150][i]!) < 8
       )
     ).toBe(true)
     const third = renderImage(2)
     expect([third.width, third.height, third.delay]).toEqual([100, 100, 300])
     expect(
-      pixel(third.png, 80, 80).every(
+      pixel(third.bytes, 80, 80).every(
         (v, i) => Math.abs(v - [80, 166, 63][i]!) < 8
       )
     ).toBe(true)
@@ -154,4 +154,100 @@ test("rejects nonnumeric worker indices without touching a prototype", async () 
     before
   )
   expect(renderImage(1).width).toBe(100)
+})
+
+test("writes actual 8-bit JPEGs with the selected quality, flattened background and sRGB profile", async () => {
+  const output = await openImage(fixture("color-chart.png"), {
+    quality: 90,
+    background: "#ffffff",
+  })
+  expect(output.preview.mime).toBe("image/jpeg")
+  expect(output.preview.bytes.slice(0, 3)).toEqual(
+    new Uint8Array([255, 216, 255])
+  )
+  for (const [background, expected] of [
+    ["#ffffff", [167, 210, 159]],
+    ["#000000", [40, 83, 32]],
+    ["#102030", [48, 99, 56]],
+  ] as const) {
+    const result = renderImage(0, { quality: 90, background })
+    expect(
+      pixel(result.bytes, 200, 150).every(
+        (value, i) => Math.abs(value - expected[i]!) < 4
+      )
+    ).toBe(true)
+    ImageMagick.read(result.bytes, (image) => {
+      expect([image.width, image.height, image.depth, image.hasAlpha]).toEqual([
+        320,
+        200,
+        8,
+        false,
+      ])
+      expect(image.getColorProfile()?.colorSpace).toBe(23)
+    })
+  }
+  const low = renderImage(0, { quality: 25, background: "#ffffff" })
+  expect(low.bytes.length).toBeLessThan(output.preview.bytes.length)
+  // Re-encoding never mutates the retained source: PNG still has its alpha.
+  const png = renderImage(0)
+  expect(png.mime).toBe("image/png")
+  ImageMagick.read(png.bytes, (image) => expect(image.hasAlpha).toBe(true))
+  const profiled = await openImage(fixture("profiled.png"), {
+    quality: 100,
+    background: "#102030",
+  })
+  expect(profiled.preview.profile).toBe(true)
+  expect(
+    pixel(profiled.preview.bytes, 200, 150).every(
+      (value, i) => Math.abs(value - [48, 99, 56][i]!) < 3
+    )
+  ).toBe(true)
+  const oriented = await openImage(fixture("orientation-6.jpg"), {
+    quality: 1,
+    background: "#FFFFFF",
+  })
+  expect([oriented.preview.width, oriented.preview.height]).toEqual([200, 320])
+})
+
+test("rejects invalid JPEG settings without invalidating a valid source", async () => {
+  await openImage(fixture("pages.tiff"))
+  for (const quality of [0, 101, NaN, 1.5, Infinity, "90"]) {
+    expect(() =>
+      renderImage(1, { quality: quality as number, background: "#ffffff" })
+    ).toThrow("invalid")
+  }
+  for (const background of [
+    "white",
+    "#fff",
+    "#fffffff",
+    "url(https://example.test)",
+    "#ffffff\n",
+  ]) {
+    expect(() => renderImage(1, { quality: 90, background })).toThrow("invalid")
+  }
+  const second = renderImage(1, { quality: 90, background: "#ffffff" })
+  expect([second.width, second.height, second.mime]).toEqual([
+    200,
+    320,
+    "image/jpeg",
+  ])
+  expect(
+    pixel(second.bytes, 10, 10).every(
+      (value, i) => Math.abs(value - [20, 132, 150][i]!) < 3
+    )
+  ).toBe(true)
+})
+
+test("encodes grayscale sources as RGB JPEG matching the sRGB output profile", async () => {
+  const gray = await openImage(fixture("high-depth.tiff"), {
+    quality: 90,
+    background: "#ffffff",
+  })
+  ImageMagick.read(gray.preview.bytes, (image) => {
+    expect(image.colorSpace).toBe(23)
+    expect(image.getColorProfile()?.colorSpace).toBe(23)
+    expect(
+      image.getPixels((pixels) => [...pixels.getPixel(10, 10)].slice(0, 3))
+    ).toEqual([128, 128, 128])
+  })
 })

@@ -54,5 +54,18 @@
   "compatibility": "Profil tertanam dipertahankan jika didukung. Gambar tambahan, peta kedalaman, dan metadata kontainer tidak ditampilkan.",
   "licenses": "Lisensi dan sumber dekoder",
   "downloadPng": "Unduh PNG",
-  "pngNote": "Simpan gambar yang dipilih sebagai PNG 8-bit. Kedalaman bit tinggi dan HDR dikurangi. Perbesaran dan latar belakang pratinjau tidak mengubah gambar yang disimpan."
+  "pngNote": "Simpan gambar yang dipilih sebagai PNG 8-bit. Kedalaman bit tinggi dan HDR dikurangi. Perbesaran dan latar belakang pratinjau tidak mengubah gambar yang disimpan.",
+  "jpgExport": {
+    "format": "Format unduhan",
+    "quality": "Kualitas JPG",
+    "qualityHint": "1–100. Kualitas yang lebih tinggi biasanya menghasilkan file yang lebih besar. Tekan Enter atau keluar dari kolom untuk menerapkan nilai.",
+    "background": "Latar belakang JPG",
+    "white": "Putih",
+    "black": "Hitam",
+    "custom": "Kustom",
+    "color": "Warna latar belakang kustom",
+    "download": "Unduh JPG",
+    "note": "Lihat pratinjau JPG yang sebenarnya sebelum menyimpan. JPG menggunakan kompresi dengan kehilangan data dan warna 8-bit, serta mengisi area transparan dengan latar belakang JPG yang dipilih. Perbesaran dan latar belakang pratinjau tidak mengubah gambar yang disimpan.",
+    "compatibility": "Hasil JPG dikonversi ke sRGB. Profil tertanam pada gambar sumber digunakan jika didukung; warna mungkin berbeda dari editor dengan pengelolaan warna. Gambar tambahan, peta kedalaman, dan metadata kontainer tidak dipertahankan."
+  }
 }

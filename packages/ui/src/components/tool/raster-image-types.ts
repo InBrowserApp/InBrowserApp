@@ -5,7 +5,8 @@ export type RasterInfo = {
   poster: boolean
 }
 export type RasterPreview = {
-  png: Uint8Array<ArrayBuffer>
+  bytes: Uint8Array<ArrayBuffer>
+  mime: "image/png" | "image/jpeg"
   width: number
   height: number
   delay: number

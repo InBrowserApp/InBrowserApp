@@ -17,7 +17,8 @@ const mock = vi.hoisted(() => ({
 }))
 vi.mock("@workspace/raster-image", () => ({ imageSession: mock.session }))
 const preview: Preview = {
-  png: new Uint8Array([1, 2]),
+  mime: "image/png",
+  bytes: new Uint8Array([1, 2]),
   width: 960,
   height: 600,
   delay: 0,
@@ -108,7 +109,7 @@ test("browses frames with explicit policy and allows recovery past an unreadable
   const input = screen.getByRole("spinbutton", { name: m.frame })
   fireEvent.change(input, { target: { value: "3" } })
   fireEvent.keyDown(input, { key: "Enter" })
-  await waitFor(() => expect(mock.render).toHaveBeenCalledWith(2))
+  await waitFor(() => expect(mock.render).toHaveBeenCalledWith(2, undefined))
   await screen.findByRole("img")
   mock.render.mockRejectedValueOnce(new RangeError("memory"))
   fireEvent.click(screen.getByRole("button", { name: m.previous }))
@@ -116,7 +117,10 @@ test("browses frames with explicit policy and allows recovery past an unreadable
   expect(screen.queryByRole("img")).toBeNull()
   fireEvent.click(screen.getByRole("button", { name: m.previous }))
   await screen.findByRole("img")
-  expect(mock.render).toHaveBeenLastCalledWith(0)
+  expect(
+    screen.getByRole("spinbutton", { name: m.frame }).getAttribute("value")
+  ).toBe("1")
+  expect(screen.queryByText(m.resourceLimit)).toBeNull()
   choose(new File(["different"], "next.png"))
   await screen.findByRole("img")
   expect(
@@ -266,4 +270,66 @@ test("exports the selected full-resolution PNG and removes its link on close", a
   ).toBe("sample-variant-2.png")
   fireEvent.click(screen.getByRole("button", { name: m.clear }))
   expect(screen.queryByRole("link", { name: m.downloadPng })).toBeNull()
+})
+
+test("switches selected-image downloads between PNG and JPG and retains page and settings", async () => {
+  mock.open.mockResolvedValue({
+    ...image,
+    info: { ...image.info, count: 3, kind: "variant" },
+  })
+  render(<Client messages={m} />)
+  choose()
+  fireEvent.load(await screen.findByRole("img"))
+  fireEvent.click(screen.getByRole("button", { name: m.next }))
+  fireEvent.load(await screen.findByRole("img"))
+  fireEvent.click(screen.getByRole("combobox", { name: m.jpgExport.format }))
+  fireEvent.click(await screen.findByRole("option", { name: "JPG" }))
+  expect(screen.queryByRole("link", { name: m.downloadPng })).toBeNull()
+  fireEvent.load(await screen.findByRole("img"))
+  expect(mock.render).toHaveBeenLastCalledWith(1, {
+    quality: 90,
+    background: "#ffffff",
+  })
+  expect(
+    screen
+      .getByRole("link", { name: m.jpgExport.download })
+      .getAttribute("download")
+  ).toBe("image-variant-2.jpg")
+  fireEvent.click(
+    screen.getByRole("combobox", { name: m.jpgExport.background })
+  )
+  fireEvent.click(
+    await screen.findByRole("option", { name: m.jpgExport.black })
+  )
+  fireEvent.load(await screen.findByRole("img"))
+  expect(mock.render).toHaveBeenLastCalledWith(1, {
+    quality: 90,
+    background: "#000000",
+  })
+  fireEvent.click(
+    screen.getByRole("combobox", { name: m.jpgExport.background })
+  )
+  fireEvent.click(
+    await screen.findByRole("option", { name: m.jpgExport.custom })
+  )
+  fireEvent.load(await screen.findByRole("img"))
+  expect(mock.render).toHaveBeenLastCalledWith(1, {
+    quality: 90,
+    background: "#808080",
+  })
+  fireEvent.click(
+    screen.getByRole("combobox", { name: m.jpgExport.background })
+  )
+  fireEvent.click(
+    await screen.findByRole("option", { name: m.jpgExport.white })
+  )
+  fireEvent.load(await screen.findByRole("img"))
+  fireEvent.click(screen.getByRole("combobox", { name: m.jpgExport.format }))
+  fireEvent.click(await screen.findByRole("option", { name: "PNG" }))
+  expect(screen.queryByRole("link", { name: m.jpgExport.download })).toBeNull()
+  fireEvent.load(await screen.findByRole("img"))
+  expect(mock.render).toHaveBeenLastCalledWith(1, undefined)
+  expect(
+    screen.getByRole("link", { name: m.downloadPng }).getAttribute("download")
+  ).toBe("image-variant-2.png")
 })
