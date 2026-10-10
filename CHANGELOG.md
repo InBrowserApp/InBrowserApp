@@ -1,5 +1,42 @@
 # Changelog
 
+## [2.4.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.3.0...v2.4.0) (2026-10-09)
+
+
+### Features
+
+* add a local image viewer with extended format support ([#1120](https://github.com/InBrowserApp/InBrowserApp/issues/1120)) ([a1b63a0](https://github.com/InBrowserApp/InBrowserApp/commit/a1b63a0cd35b99cf243cb28702fdf734559412bc))
+* add a local SVG and SVGZ viewer ([#1119](https://github.com/InBrowserApp/InBrowserApp/issues/1119)) ([76803f6](https://github.com/InBrowserApp/InBrowserApp/commit/76803f68a8b509c2d158d645d3853c54336ed631))
+* add a local text and log reader ([#1118](https://github.com/InBrowserApp/InBrowserApp/issues/1118)) ([5ef4379](https://github.com/InBrowserApp/InBrowserApp/commit/5ef4379186a7a85c1c7a9fd9edfcbb1de49168a9))
+* add a local Typst document viewer ([#1117](https://github.com/InBrowserApp/InBrowserApp/issues/1117)) ([cd05bce](https://github.com/InBrowserApp/InBrowserApp/commit/cd05bcea3d3ff3e240dee196d39a7cefe20fa2fb))
+* add local CAJ KDH and NH document viewer ([#1097](https://github.com/InBrowserApp/InBrowserApp/issues/1097)) ([480fcf6](https://github.com/InBrowserApp/InBrowserApp/commit/480fcf6feb89f4de4b917f100c6c41c06f622742))
+* add local CBZ comic reader ([#1094](https://github.com/InBrowserApp/InBrowserApp/issues/1094)) ([4c8ebf9](https://github.com/InBrowserApp/InBrowserApp/commit/4c8ebf90e004d2ddf7875a734c682cca7d6c2329))
+* add local FictionBook reader ([#1098](https://github.com/InBrowserApp/InBrowserApp/issues/1098)) ([4e03440](https://github.com/InBrowserApp/InBrowserApp/commit/4e03440729374982ba3f809ea559d5fb8c5f6793))
+* add local MOBI and KF8 reader ([#1096](https://github.com/InBrowserApp/InBrowserApp/issues/1096)) ([3409e7a](https://github.com/InBrowserApp/InBrowserApp/commit/3409e7a965248c9df3688797a001a3a2572ed3bf))
+* add local ODT and OTT document viewer ([#1099](https://github.com/InBrowserApp/InBrowserApp/issues/1099)) ([4b2d6ee](https://github.com/InBrowserApp/InBrowserApp/commit/4b2d6ee73dacb68f2cd4d5571cd22bf1ef940235))
+* add local saved email viewer ([#1095](https://github.com/InBrowserApp/InBrowserApp/issues/1095)) ([04c17e9](https://github.com/InBrowserApp/InBrowserApp/commit/04c17e9791852de4cc941339e4dc61296ebe8e68))
+* **asciidoc-viewer:** add local AsciiDoc document reading ([#1112](https://github.com/InBrowserApp/InBrowserApp/issues/1112)) ([29f3c39](https://github.com/InBrowserApp/InBrowserApp/commit/29f3c39719e46b23d307ec8715d54ae2cb46867d))
+* **doc-viewer:** add local legacy DOC and WPS document reading ([#1104](https://github.com/InBrowserApp/InBrowserApp/issues/1104)) ([db7a76d](https://github.com/InBrowserApp/InBrowserApp/commit/db7a76d49d7dcb75dc96f555315e1331267905f9))
+* **epub-reader:** add local chapter-based book reading ([#1092](https://github.com/InBrowserApp/InBrowserApp/issues/1092)) ([e874f8e](https://github.com/InBrowserApp/InBrowserApp/commit/e874f8e19a3081fd9aaf427e53d02502f6a33292))
+* **html-viewer:** add local HTML and XHTML reading ([#1105](https://github.com/InBrowserApp/InBrowserApp/issues/1105)) ([cdc09be](https://github.com/InBrowserApp/InBrowserApp/commit/cdc09be8e5ec23b0ac9c9f26eb2e3ae806fbd359))
+* **hwp-viewer:** add local HWP and HWPX reading ([#1101](https://github.com/InBrowserApp/InBrowserApp/issues/1101)) ([ea4cf7b](https://github.com/InBrowserApp/InBrowserApp/commit/ea4cf7b16a39581c84c438837fcbe0293502d79c))
+* **latex-previewer:** add local source and mathematics preview ([#1114](https://github.com/InBrowserApp/InBrowserApp/issues/1114)) ([eda567d](https://github.com/InBrowserApp/InBrowserApp/commit/eda567d46a9ec3feae3cdf70d53a0300ca279913))
+* **markdown-previewer:** add local document reading workspace ([#1109](https://github.com/InBrowserApp/InBrowserApp/issues/1109)) ([cf6fd15](https://github.com/InBrowserApp/InBrowserApp/commit/cf6fd151a61554a1f906463290949807efbf7c9d))
+* **mhtml-viewer:** add local web archive reading ([#1110](https://github.com/InBrowserApp/InBrowserApp/issues/1110)) ([ee49ecb](https://github.com/InBrowserApp/InBrowserApp/commit/ee49ecb4b97dd9b656347e85300346ad48e4023e))
+* **notebook-viewer:** add local saved notebook reading ([#1113](https://github.com/InBrowserApp/InBrowserApp/issues/1113)) ([90ba1ee](https://github.com/InBrowserApp/InBrowserApp/commit/90ba1eeb70affb68b063761cfe00b6d25094124d))
+* **ofd-viewer:** add local paged document reading ([#1093](https://github.com/InBrowserApp/InBrowserApp/issues/1093)) ([cebb3e5](https://github.com/InBrowserApp/InBrowserApp/commit/cebb3e5c7f8f7f3d6d4e747c62c5ae46f1228063))
+* **ppt-viewer:** read legacy presentations locally ([#1106](https://github.com/InBrowserApp/InBrowserApp/issues/1106)) ([8f2d497](https://github.com/InBrowserApp/InBrowserApp/commit/8f2d4977ce3c7d1281c932f0dba90c4700a1ede0))
+* **rtf-viewer:** add local rich-text document reading ([#1102](https://github.com/InBrowserApp/InBrowserApp/issues/1102)) ([019ba05](https://github.com/InBrowserApp/InBrowserApp/commit/019ba05807eb3d5a5776d6666fd001b5194482eb))
+* view PowerPoint slideshows and templates ([#1090](https://github.com/InBrowserApp/InBrowserApp/issues/1090)) ([8baa186](https://github.com/InBrowserApp/InBrowserApp/commit/8baa186305d2bbd14668913518570478d90dc35c))
+* view Word templates and macro-enabled documents ([#1088](https://github.com/InBrowserApp/InBrowserApp/issues/1088)) ([4565d2c](https://github.com/InBrowserApp/InBrowserApp/commit/4565d2c1518e701636ab0383e54e2eb0550a2393))
+* **xlsx-viewer:** read additional spreadsheet formats ([#1091](https://github.com/InBrowserApp/InBrowserApp/issues/1091)) ([7668731](https://github.com/InBrowserApp/InBrowserApp/commit/7668731481fae766a874a032397b5943c4c75133))
+
+
+### Bug Fixes
+
+* preserve passages when document readers reflow ([#1103](https://github.com/InBrowserApp/InBrowserApp/issues/1103)) ([1a309a9](https://github.com/InBrowserApp/InBrowserApp/commit/1a309a971759c068c75eebfa30a0ca03dbbf4c37))
+* **readers:** keep document navigation inside its viewport ([#1108](https://github.com/InBrowserApp/InBrowserApp/issues/1108)) ([db36205](https://github.com/InBrowserApp/InBrowserApp/commit/db36205503334fa906b611604fd462930b9a9ef0))
+
 ## [2.3.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.2.0...v2.3.0) (2026-10-09)
 
 
