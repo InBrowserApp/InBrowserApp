@@ -118,6 +118,8 @@ test.each([
 const invalid: Record<string, string | Uint8Array>[] = [
   { "./word/document.xml": document() },
   { "../escape": "" },
+  { "word/./media/image.png": new Uint8Array([255]) },
+  { "word\\media\\image.png": new Uint8Array([255]) },
   { "word/document.xml": "<broken>" },
   { "word/document.xml": "" },
   { "word/document.xml": "<!DOCTYPE root><root/>" },

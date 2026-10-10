@@ -55,7 +55,8 @@ export function inspectArchive(data: ArrayBuffer) {
   const files = unzipSync(bytes, {
     filter(entry) {
       const name = path(entry.name)
-      if (names.has(name)) throw new ConversionError("invalid")
+      if (entry.name.replace(/\/$/, "") !== name || names.has(name))
+        throw new ConversionError("invalid")
       names.add(name)
       return /\.(xml|rels)$/i.test(name)
     },
