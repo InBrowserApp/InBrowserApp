@@ -1,0 +1,4 @@
+{
+  "name": "Eksportverktøy for regnearkdata",
+  "description": "Eksporter et Excel-regneark til CSV, TSV, JSON eller Markdown i nettleseren. Velg et ark og celleområde, forhåndsvis dataene og last ned uten å laste opp arbeidsboken."
+}

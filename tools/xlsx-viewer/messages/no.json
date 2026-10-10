@@ -45,5 +45,32 @@
   "dataOnly": "Dette formatet vises som regnearkdata. Verdier, tallformater og sammenslåtte celler vises der de støttes; tegninger, diagrammer og noe formatering vises ikke.",
   "numbersTables": "Hver Numbers-tabell vises som en egen regnearkfane. De opprinnelige navnene på arket og tabellen vises når de er tilgjengelige.",
   "encodingFallback": "Denne filen er ikke gyldig UTF-8. Windows-1252 ble brukt; endre Tekstkoding hvis tegnene ser feil ut.",
-  "unevenRows": "Radene har ulikt antall felt. Tomme celler bevares; endre Skilletegn hvis kolonnene ser feil ut."
+  "unevenRows": "Radene har ulikt antall felt. Tomme celler bevares; endre Skilletegn hvis kolonnene ser feil ut.",
+  "dataExport": {
+    "converting": "Forbereder eksport…",
+    "resource": "Dette dokumentet trenger mer minne enn denne nettleseren kan tilby. Lukk andre faner eller prøv en annen enhet.",
+    "download": "Last ned eksport",
+    "format": "Eksportformat",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Celleverdier",
+    "valueModes": {
+      "formatted": "Formatert tekst",
+      "raw": "Lagrede verdier"
+    },
+    "firstRowHeader": "Bruk første rad som overskriftsrad i Markdown",
+    "summary": "{rows} rader × {columns} kolonner",
+    "missingCached": "{count} formelceller har ikke noe lagret resultat og eksporteres som tomme celler.",
+    "empty": "Det valgte området inneholder ingen lagrede verdier eller formler.",
+    "formatNote": "CSV og TSV omslutter felt med skilletegn, anførselstegn eller linjeskift med anførselstegn. JSON er en liste med rader, inkludert den første raden; tomme celler er null. Markdown kan bruke den første raden som overskriftsrad eller legge til en tom overskriftsrad. Nedlastinger bruker UTF-8.",
+    "valuesNote": "Formatert tekst følger støttede tallformater, inkludert datoer og innledende nuller; formater som avhenger av regionale innstillinger, kan avvike fra Excel. Lagrede verdier beholder tall og boolske verdier; datoer bruker Excel-serienumre. Tekstverdier forblir tekst. Regnearkfeil forblir synlige strenger.",
+    "scopeNote": "Bare lagrede celleverdier eksporteres. Formler beregnes ikke på nytt; manglende lagrede resultater blir tomme celler. Skjulte rader og kolonner inkluderes. Sammenslåtte celler utvides ikke. Diagrammer, bilder, kommentarer, makroer og formatering eksporteres ikke. Standardområdet inneholder lagrede verdier eller formler; tomme celler innenfor området beholdes.",
+    "title": "Eksporter regneark",
+    "action": "Forbered eksport",
+    "error": "Kan ikke eksportere dette regnearket. Prøv igjen eller åpne en mindre kompleks arbeidsbok."
+  }
 }

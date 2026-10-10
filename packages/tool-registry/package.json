@@ -200,6 +200,7 @@
     "@tool/sitemap-xml-generator": "workspace:*",
     "@tool/slug-generator": "workspace:*",
     "@tool/sm3-hash-text-or-file": "workspace:*",
+    "@tool/spreadsheet-data-export": "workspace:*",
     "@tool/sql-formatter-and-linter": "workspace:*",
     "@tool/sri-hash-generator": "workspace:*",
     "@tool/ssh-key-generator": "workspace:*",

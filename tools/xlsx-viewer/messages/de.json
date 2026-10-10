@@ -45,5 +45,32 @@
   "dataOnly": "Dieses Format wird als Arbeitsblattdaten angezeigt. Werte, Zahlenformate und verbundene Zellen erscheinen, soweit unterstützt; Zeichnungen, Diagramme und einige Formatierungen werden nicht angezeigt.",
   "numbersTables": "Jede Numbers-Tabelle erscheint als eigener Arbeitsblattreiter. Die ursprünglichen Blatt- und Tabellennamen werden angezeigt, sofern verfügbar.",
   "encodingFallback": "Diese Datei enthält kein gültiges UTF-8. Windows-1252 wurde verwendet; ändern Sie die Textkodierung, falls Zeichen falsch dargestellt werden.",
-  "unevenRows": "Die Zeilen enthalten unterschiedlich viele Felder. Leere Zellen bleiben erhalten; ändern Sie das Trennzeichen, falls Spalten falsch dargestellt werden."
+  "unevenRows": "Die Zeilen enthalten unterschiedlich viele Felder. Leere Zellen bleiben erhalten; ändern Sie das Trennzeichen, falls Spalten falsch dargestellt werden.",
+  "dataExport": {
+    "converting": "Export wird vorbereitet…",
+    "resource": "Dieses Dokument benötigt mehr Arbeitsspeicher, als dieser Browser bereitstellen kann. Schließen Sie andere Tabs oder versuchen Sie es auf einem anderen Gerät.",
+    "download": "Export herunterladen",
+    "format": "Exportformat",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Zellwerte",
+    "valueModes": {
+      "formatted": "Formatierter Text",
+      "raw": "Gespeicherte Werte"
+    },
+    "firstRowHeader": "Erste Zeile als Markdown-Kopfzeile verwenden",
+    "summary": "{rows} Zeilen × {columns} Spalten",
+    "missingCached": "{count} Formelzellen haben kein gespeichertes Ergebnis und werden als leere Zellen exportiert.",
+    "empty": "Der ausgewählte Bereich enthält keine gespeicherten Werte oder Formeln.",
+    "formatNote": "CSV und TSV setzen Felder mit Trennzeichen, Anführungszeichen oder Zeilenumbrüchen in Anführungszeichen. JSON ist ein Array von Zeilen einschließlich der ersten Zeile; leere Zellen sind null. Markdown kann die erste Zeile als Kopfzeile verwenden oder eine leere Kopfzeile hinzufügen. Downloads verwenden UTF-8.",
+    "valuesNote": "Formatierter Text folgt unterstützten Zahlenformaten, einschließlich Datumsangaben und führender Nullen; gebietsschemaabhängige Formate können von Excel abweichen. Gespeicherte Werte behalten Zahlen und boolesche Werte bei; Datumsangaben verwenden Excel-Seriennummern. Textwerte bleiben Text. Tabellenfehler bleiben sichtbare Zeichenfolgen.",
+    "scopeNote": "Nur gespeicherte Zellwerte werden exportiert. Formeln werden nicht neu berechnet; fehlende gespeicherte Ergebnisse werden zu leeren Zellen. Ausgeblendete Zeilen und Spalten werden einbezogen. Verbundene Zellen werden nicht erweitert. Diagramme, Bilder, Kommentare, Makros und Formatierungen werden nicht exportiert. Der Standardbereich enthält gespeicherte Werte oder Formeln; leere Zellen darin bleiben erhalten.",
+    "title": "Arbeitsblatt exportieren",
+    "action": "Export vorbereiten",
+    "error": "Dieses Arbeitsblatt kann nicht exportiert werden. Versuchen Sie es erneut oder öffnen Sie eine weniger komplexe Arbeitsmappe."
+  }
 }

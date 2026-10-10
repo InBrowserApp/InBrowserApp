@@ -1,0 +1,22 @@
+{
+  "name": "@workspace/spreadsheet-export",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/open-workbook.ts",
+    "./types": "./src/types.ts",
+    "./errors": "./src/errors.ts",
+    "./range": "./src/range.ts"
+  },
+  "dependencies": {
+    "fflate": "catalog:",
+    "xlsx": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:",
+    "papaparse": "catalog:",
+    "@types/papaparse": "catalog:",
+    "marked": "catalog:"
+  }
+}

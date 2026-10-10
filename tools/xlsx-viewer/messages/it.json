@@ -45,5 +45,32 @@
   "dataOnly": "Questo formato viene visualizzato come dati del foglio di lavoro. Valori, formati numerici e celle unite appaiono quando supportati; disegni, grafici e alcune formattazioni non vengono mostrati.",
   "numbersTables": "Ogni tabella di Numbers appare in una scheda separata del foglio di lavoro. I nomi originali del foglio e della tabella vengono mostrati quando disponibili.",
   "encodingFallback": "Questo file non è un UTF-8 valido. È stato utilizzato Windows-1252; cambia la Codifica del testo se i caratteri appaiono errati.",
-  "unevenRows": "Le righe hanno un numero diverso di campi. Le celle vuote vengono mantenute; cambia il Separatore se le colonne appaiono errate."
+  "unevenRows": "Le righe hanno un numero diverso di campi. Le celle vuote vengono mantenute; cambia il Separatore se le colonne appaiono errate.",
+  "dataExport": {
+    "converting": "Preparazione dell’esportazione…",
+    "resource": "Questo documento richiede più memoria di quella disponibile nel browser. Chiudi altre schede o prova un altro dispositivo.",
+    "download": "Scarica esportazione",
+    "format": "Formato di esportazione",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Valori delle celle",
+    "valueModes": {
+      "formatted": "Testo formattato",
+      "raw": "Valori memorizzati"
+    },
+    "firstRowHeader": "Usa la prima riga come intestazione Markdown",
+    "summary": "{rows} righe × {columns} colonne",
+    "missingCached": "{count} celle con formule non hanno un risultato salvato e vengono esportate come celle vuote.",
+    "empty": "L’area selezionata non contiene valori salvati o formule.",
+    "formatNote": "CSV e TSV racchiudono tra virgolette i campi con separatori, virgolette o interruzioni di riga. JSON è un array di righe, inclusa la prima; le celle vuote sono null. Markdown può usare la prima riga come intestazione o aggiungerne una vuota. I download usano UTF-8.",
+    "valuesNote": "Il testo formattato segue i formati numerici supportati, incluse date e zeri iniziali; i formati che dipendono dalle impostazioni locali possono differire da Excel. I valori memorizzati mantengono numeri e valori booleani; le date usano i numeri seriali di Excel. I valori di testo restano testo. Gli errori del foglio di calcolo restano stringhe visibili.",
+    "scopeNote": "Vengono esportati solo i valori salvati nelle celle. Le formule non vengono ricalcolate; i risultati salvati mancanti diventano celle vuote. Sono incluse le righe e le colonne nascoste. Le celle unite non vengono espanse. Grafici, immagini, commenti, macro e stili non vengono esportati. L’intervallo predefinito contiene valori salvati o formule; le celle vuote al suo interno vengono mantenute.",
+    "title": "Esporta foglio di lavoro",
+    "action": "Prepara esportazione",
+    "error": "Impossibile esportare questo foglio di lavoro. Riprova o apri una cartella di lavoro meno complessa."
+  }
 }

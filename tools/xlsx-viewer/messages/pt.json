@@ -45,5 +45,32 @@
   "dataOnly": "Este formato é exibido como dados de planilha. Valores, formatos numéricos e mesclagens aparecem quando compatíveis; desenhos, gráficos e algumas formatações não são exibidos.",
   "numbersTables": "Cada tabela do Numbers aparece em uma aba de planilha separada. Os nomes originais da planilha e da tabela são exibidos quando disponíveis.",
   "encodingFallback": "Este arquivo não é UTF-8 válido. Foi usado Windows-1252; altere a Codificação de texto se os caracteres parecerem incorretos.",
-  "unevenRows": "As linhas têm quantidades diferentes de campos. As células vazias são preservadas; altere o Separador se as colunas parecerem incorretas."
+  "unevenRows": "As linhas têm quantidades diferentes de campos. As células vazias são preservadas; altere o Separador se as colunas parecerem incorretas.",
+  "dataExport": {
+    "converting": "Preparando exportação…",
+    "resource": "Este documento precisa de mais memória do que este navegador pode oferecer. Feche outras abas ou tente outro dispositivo.",
+    "download": "Baixar exportação",
+    "format": "Formato de exportação",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Valores das células",
+    "valueModes": {
+      "formatted": "Texto formatado",
+      "raw": "Valores armazenados"
+    },
+    "firstRowHeader": "Usar a primeira linha como cabeçalho do Markdown",
+    "summary": "{rows} linhas × {columns} colunas",
+    "missingCached": "{count} células com fórmulas não têm resultado salvo e são exportadas em branco.",
+    "empty": "A área selecionada não contém valores salvos nem fórmulas.",
+    "formatNote": "CSV e TSV colocam entre aspas os campos que contêm separadores, aspas ou quebras de linha. JSON é um array de linhas, incluindo a primeira linha; células vazias são null. Markdown pode usar a primeira linha como cabeçalho ou adicionar um cabeçalho vazio. Os downloads usam UTF-8.",
+    "valuesNote": "O texto formatado segue os formatos numéricos compatíveis, incluindo datas e zeros à esquerda; formatos que dependem da configuração regional podem diferir do Excel. Os valores armazenados preservam números e booleanos; as datas usam números de série do Excel. Os valores de texto permanecem como texto. Os erros da planilha continuam como strings visíveis.",
+    "scopeNote": "Apenas os valores salvos das células são exportados. As fórmulas não são recalculadas; resultados salvos ausentes ficam em branco. Linhas e colunas ocultas são incluídas. Células mescladas não são expandidas. Gráficos, imagens, comentários, macros e estilos não são exportados. O intervalo padrão contém valores salvos ou fórmulas; as células vazias dentro dele são preservadas.",
+    "title": "Exportar planilha",
+    "action": "Preparar exportação",
+    "error": "Não foi possível exportar esta planilha. Tente novamente ou abra uma pasta de trabalho menos complexa."
+  }
 }

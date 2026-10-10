@@ -1,0 +1,4 @@
+{
+  "name": "Eksporter danych arkuszy kalkulacyjnych",
+  "description": "Eksportuj arkusz Excel do CSV, TSV, JSON lub Markdown w przeglądarce. Wybierz arkusz i zakres komórek, przejrzyj dane i pobierz je bez przesyłania skoroszytu na serwer."
+}

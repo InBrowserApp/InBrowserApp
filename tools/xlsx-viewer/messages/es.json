@@ -45,5 +45,32 @@
   "dataOnly": "Este formato se muestra como datos de hojas de cálculo. Los valores, los formatos numéricos y las celdas combinadas aparecen cuando son compatibles; los dibujos, los gráficos y algunos formatos no se muestran.",
   "numbersTables": "Cada tabla de Numbers aparece en una pestaña de hoja de cálculo independiente. Se muestran los nombres originales de la hoja y la tabla cuando están disponibles.",
   "encodingFallback": "Este archivo no contiene UTF-8 válido. Se ha usado Windows-1252; cambia la codificación del texto si los caracteres no se ven correctamente.",
-  "unevenRows": "Las filas tienen un número diferente de campos. Se conservan las celdas vacías; cambia el separador si las columnas no se ven correctamente."
+  "unevenRows": "Las filas tienen un número diferente de campos. Se conservan las celdas vacías; cambia el separador si las columnas no se ven correctamente.",
+  "dataExport": {
+    "converting": "Preparando exportación…",
+    "resource": "Este documento necesita más memoria de la que puede proporcionar este navegador. Cierra otras pestañas o prueba con otro dispositivo.",
+    "download": "Descargar exportación",
+    "format": "Formato de exportación",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Valores de las celdas",
+    "valueModes": {
+      "formatted": "Texto con formato",
+      "raw": "Valores almacenados"
+    },
+    "firstRowHeader": "Usar la primera fila como encabezado de Markdown",
+    "summary": "{rows} filas × {columns} columnas",
+    "missingCached": "{count} celdas con fórmulas no tienen un resultado guardado y se exportan en blanco.",
+    "empty": "El área seleccionada no contiene valores guardados ni fórmulas.",
+    "formatNote": "CSV y TSV entrecomillan los campos que contienen separadores, comillas o saltos de línea. JSON es una matriz de filas que incluye la primera fila; las celdas vacías son null. Markdown puede usar la primera fila como encabezado o añadir un encabezado vacío. Las descargas usan UTF-8.",
+    "valuesNote": "El texto con formato sigue los formatos numéricos compatibles, incluidas las fechas y los ceros iniciales; los formatos que dependen de la configuración regional pueden diferir de Excel. Los valores almacenados conservan los números y los booleanos; las fechas usan números de serie de Excel. Los valores de texto siguen siendo texto. Los errores de la hoja de cálculo permanecen como cadenas visibles.",
+    "scopeNote": "Solo se exportan valores de celda guardados. Las fórmulas no se recalculan; si falta un resultado guardado, la celda queda en blanco. Se incluyen las filas y columnas ocultas. Las celdas combinadas no se expanden. No se exportan gráficos, imágenes, comentarios, macros ni estilos. El rango predeterminado contiene valores guardados o fórmulas; se conservan las celdas vacías de su interior.",
+    "title": "Exportar hoja de cálculo",
+    "action": "Preparar exportación",
+    "error": "No se puede exportar esta hoja de cálculo. Inténtalo de nuevo o abre un libro menos complejo."
+  }
 }

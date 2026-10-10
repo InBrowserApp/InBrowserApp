@@ -252,6 +252,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "sitemap-xml-generator": () => import("@tool/sitemap-xml-generator/page"),
   "slug-generator": () => import("@tool/slug-generator/page"),
   "sm3-hash-text-or-file": () => import("@tool/sm3-hash-text-or-file/page"),
+  "spreadsheet-data-export": () => import("@tool/spreadsheet-data-export/page"),
   "sql-formatter-and-linter": () =>
     import("@tool/sql-formatter-and-linter/page"),
   "sri-hash-generator": () => import("@tool/sri-hash-generator/page"),

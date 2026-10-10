@@ -1,0 +1,4 @@
+{
+  "name": "Tabellendaten-Exporter",
+  "description": "Exportieren Sie ein Excel-Arbeitsblatt im Browser als CSV, TSV, JSON oder Markdown. Wählen Sie ein Blatt und einen Zellbereich, sehen Sie die Daten an und laden Sie sie herunter, ohne Ihre Arbeitsmappe hochzuladen."
+}

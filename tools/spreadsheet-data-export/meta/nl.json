@@ -1,0 +1,4 @@
+{
+  "name": "Exporttool voor spreadsheetgegevens",
+  "description": "Exporteer een Excel-werkblad naar CSV, TSV, JSON of Markdown in je browser. Kies een werkblad en celbereik, bekijk de gegevens en download ze zonder je werkmap te uploaden."
+}

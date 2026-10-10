@@ -45,5 +45,32 @@
   "dataOnly": "Det här formatet visas som kalkylbladsdata. Värden, talformat och sammanfogade celler visas där de stöds. Ritningar, diagram och viss formatering visas inte.",
   "numbersTables": "Varje Numbers-tabell visas som en separat kalkylbladsflik. Dess ursprungliga blad- och tabellnamn visas när de finns tillgängliga.",
   "encodingFallback": "Den här filen är inte giltig UTF-8. Windows-1252 användes. Ändra Textkodning om tecknen ser felaktiga ut.",
-  "unevenRows": "Raderna har olika antal fält. Tomma celler bevaras. Ändra Avgränsare om kolumnerna ser felaktiga ut."
+  "unevenRows": "Raderna har olika antal fält. Tomma celler bevaras. Ändra Avgränsare om kolumnerna ser felaktiga ut.",
+  "dataExport": {
+    "converting": "Förbereder export…",
+    "resource": "Det här dokumentet behöver mer minne än webbläsaren kan tillhandahålla. Stäng andra flikar eller prova en annan enhet.",
+    "download": "Ladda ner export",
+    "format": "Exportformat",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Cellvärden",
+    "valueModes": {
+      "formatted": "Formaterad text",
+      "raw": "Lagrade värden"
+    },
+    "firstRowHeader": "Använd första raden som Markdown-rubrikrad",
+    "summary": "{rows} rader × {columns} kolumner",
+    "missingCached": "{count} formelceller saknar sparat resultat och exporteras som tomma celler.",
+    "empty": "Det markerade området innehåller inga sparade värden eller formler.",
+    "formatNote": "CSV och TSV omger fält som innehåller avgränsare, citattecken eller radbrytningar med citattecken. JSON är en array med rader, inklusive den första raden; tomma celler är null. Markdown kan använda första raden som rubrikrad eller lägga till en tom rubrikrad. Nedladdningar använder UTF-8.",
+    "valuesNote": "Formaterad text följer talformat som stöds, inklusive datum och inledande nollor; format som beror på regionala inställningar kan skilja sig från Excel. Lagrade värden bevarar tal och booleska värden; datum använder Excels serienummer. Textvärden förblir text. Kalkylbladsfel förblir synliga strängar.",
+    "scopeNote": "Endast sparade cellvärden exporteras. Formler beräknas inte om; saknade sparade resultat blir tomma celler. Dolda rader och kolumner tas med. Sammanfogade celler utökas inte. Diagram, bilder, kommentarer, makron och formatering exporteras inte. Standardområdet innehåller sparade värden eller formler; tomma celler inom området bevaras.",
+    "title": "Exportera kalkylblad",
+    "action": "Förbered export",
+    "error": "Det går inte att exportera det här kalkylbladet. Försök igen eller öppna en mindre komplex arbetsbok."
+  }
 }

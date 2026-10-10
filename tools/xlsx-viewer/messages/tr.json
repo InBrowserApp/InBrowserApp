@@ -45,5 +45,32 @@
   "dataOnly": "Bu biçim, çalışma sayfası verileri olarak gösterilir. Değerler, sayı biçimleri ve birleştirilmiş hücreler desteklendiği ölçüde görünür; çizimler, grafikler ve bazı biçimlendirmeler gösterilmez.",
   "numbersTables": "Her Numbers tablosu ayrı bir çalışma sayfası sekmesinde görünür. Varsa özgün sayfa ve tablo adları gösterilir.",
   "encodingFallback": "Bu dosya geçerli UTF-8 biçiminde değil. Windows-1252 kullanıldı; karakterler yanlış görünüyorsa Metin kodlaması ayarını değiştirin.",
-  "unevenRows": "Satırlardaki alan sayıları farklı. Boş hücreler korunur; sütunlar yanlış görünüyorsa Ayırıcı ayarını değiştirin."
+  "unevenRows": "Satırlardaki alan sayıları farklı. Boş hücreler korunur; sütunlar yanlış görünüyorsa Ayırıcı ayarını değiştirin.",
+  "dataExport": {
+    "converting": "Dışa aktarma hazırlanıyor…",
+    "resource": "Bu belge, tarayıcının sağlayabileceğinden daha fazla belleğe ihtiyaç duyuyor. Diğer sekmeleri kapatın veya başka bir cihaz deneyin.",
+    "download": "Dışa aktarılan dosyayı indir",
+    "format": "Dışa aktarma biçimi",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Hücre değerleri",
+    "valueModes": {
+      "formatted": "Biçimlendirilmiş metin",
+      "raw": "Kayıtlı değerler"
+    },
+    "firstRowHeader": "İlk satırı Markdown tablo başlığı olarak kullan",
+    "summary": "{rows} satır × {columns} sütun",
+    "missingCached": "{count} formül hücresinin kayıtlı sonucu yok ve bu hücreler boş olarak dışa aktarılır.",
+    "empty": "Seçili alan kayıtlı değer veya formül içermiyor.",
+    "formatNote": "CSV ve TSV, ayırıcı, tırnak işareti veya satır sonu içeren alanları tırnak içine alır. JSON, ilk satır dahil satırlardan oluşan bir dizidir; boş hücreler null olur. Markdown ilk satırı tablo başlığı olarak kullanabilir veya boş bir başlık ekleyebilir. İndirilen dosyalar UTF-8 kullanır.",
+    "valuesNote": "Biçimlendirilmiş metin, tarihler ve baştaki sıfırlar dahil desteklenen sayı biçimlerini izler; yerel ayarlara bağlı biçimler Excel’den farklı olabilir. Kayıtlı değerler, sayıları ve mantıksal değerleri korur; tarihler Excel seri numaralarını kullanır. Metin değerleri metin olarak kalır. Elektronik tablo hataları görünür dizeler olarak korunur.",
+    "scopeNote": "Yalnızca kayıtlı hücre değerleri dışa aktarılır. Formüller yeniden hesaplanmaz; kayıtlı sonucu olmayan hücreler boş kalır. Gizli satırlar ve sütunlar dahil edilir. Birleştirilmiş hücreler genişletilmez. Grafikler, resimler, yorumlar, makrolar ve stiller dışa aktarılmaz. Varsayılan aralık kayıtlı değerleri veya formülleri içerir; bu aralığın içindeki boş hücreler korunur.",
+    "title": "Çalışma sayfasını dışa aktar",
+    "action": "Dışa aktarmayı hazırla",
+    "error": "Bu çalışma sayfası dışa aktarılamıyor. Yeniden deneyin veya daha az karmaşık bir çalışma kitabı açın."
+  }
 }

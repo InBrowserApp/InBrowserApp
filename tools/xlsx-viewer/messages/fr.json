@@ -45,5 +45,32 @@
   "dataOnly": "Ce format est affiché sous forme de données de feuille de calcul. Les valeurs, les formats numériques et les cellules fusionnées apparaissent lorsqu’ils sont pris en charge ; les dessins, les graphiques et certaines mises en forme ne sont pas affichés.",
   "numbersTables": "Chaque tableau Numbers apparaît dans un onglet de feuille de calcul distinct. Les noms d’origine de la feuille et du tableau sont affichés lorsqu’ils sont disponibles.",
   "encodingFallback": "Ce fichier n’est pas encodé en UTF-8 valide. Windows-1252 a été utilisé ; modifiez l’encodage du texte si les caractères semblent incorrects.",
-  "unevenRows": "Les lignes ont des nombres de champs différents. Les cellules vides sont conservées ; modifiez le séparateur si les colonnes semblent incorrectes."
+  "unevenRows": "Les lignes ont des nombres de champs différents. Les cellules vides sont conservées ; modifiez le séparateur si les colonnes semblent incorrectes.",
+  "dataExport": {
+    "converting": "Préparation de l’exportation…",
+    "resource": "Ce document nécessite plus de mémoire que ce navigateur ne peut en fournir. Fermez d’autres onglets ou essayez un autre appareil.",
+    "download": "Télécharger l’exportation",
+    "format": "Format d’exportation",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Valeurs des cellules",
+    "valueModes": {
+      "formatted": "Texte mis en forme",
+      "raw": "Valeurs enregistrées"
+    },
+    "firstRowHeader": "Utiliser la première ligne comme en-tête Markdown",
+    "summary": "{rows} lignes × {columns} colonnes",
+    "missingCached": "{count} cellules de formule n’ont pas de résultat enregistré et sont exportées comme cellules vides.",
+    "empty": "La zone sélectionnée ne contient aucune valeur enregistrée ni formule.",
+    "formatNote": "CSV et TSV entourent de guillemets les champs contenant des séparateurs, des guillemets ou des sauts de ligne. JSON est un tableau de lignes, première ligne comprise ; les cellules vides valent null. Markdown peut utiliser la première ligne comme en-tête ou ajouter un en-tête vide. Les téléchargements utilisent UTF-8.",
+    "valuesNote": "Le texte mis en forme suit les formats numériques pris en charge, y compris les dates et les zéros initiaux ; les formats dépendant des paramètres régionaux peuvent différer d’Excel. Les valeurs enregistrées conservent les nombres et les booléens ; les dates utilisent les numéros de série Excel. Les valeurs textuelles restent du texte. Les erreurs de la feuille de calcul restent des chaînes visibles.",
+    "scopeNote": "Seules les valeurs enregistrées des cellules sont exportées. Les formules ne sont pas recalculées ; les résultats enregistrés manquants deviennent des cellules vides. Les lignes et colonnes masquées sont incluses. Les cellules fusionnées ne sont pas développées. Les graphiques, images, commentaires, macros et mises en forme ne sont pas exportés. La plage par défaut contient des valeurs enregistrées ou des formules ; les cellules vides qu’elle contient sont conservées.",
+    "title": "Exporter la feuille de calcul",
+    "action": "Préparer l’exportation",
+    "error": "Impossible d’exporter cette feuille de calcul. Réessayez ou ouvrez un classeur moins complexe."
+  }
 }

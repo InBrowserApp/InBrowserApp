@@ -1,0 +1,4 @@
+{
+  "name": "Trình xuất dữ liệu bảng tính",
+  "description": "Xuất trang tính Excel sang CSV, TSV, JSON hoặc Markdown trong trình duyệt. Chọn trang tính và phạm vi ô, xem trước dữ liệu rồi tải xuống mà không cần tải sổ làm việc lên."
+}

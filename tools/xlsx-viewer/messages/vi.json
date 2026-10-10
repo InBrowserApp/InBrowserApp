@@ -45,5 +45,32 @@
   "dataOnly": "Định dạng này được hiển thị dưới dạng dữ liệu trang tính. Giá trị, định dạng số và ô gộp xuất hiện khi được hỗ trợ; hình vẽ, biểu đồ và một số định dạng không được hiển thị.",
   "numbersTables": "Mỗi bảng Numbers xuất hiện dưới dạng một thẻ trang tính riêng. Tên trang tính và bảng gốc được hiển thị nếu có.",
   "encodingFallback": "Tệp này không phải là UTF-8 hợp lệ. Đã dùng Windows-1252; hãy thay đổi Mã hóa văn bản nếu các ký tự hiển thị không đúng.",
-  "unevenRows": "Các hàng có số lượng trường khác nhau. Các ô trống được giữ nguyên; hãy thay đổi Dấu phân cách nếu các cột hiển thị không đúng."
+  "unevenRows": "Các hàng có số lượng trường khác nhau. Các ô trống được giữ nguyên; hãy thay đổi Dấu phân cách nếu các cột hiển thị không đúng.",
+  "dataExport": {
+    "converting": "Đang chuẩn bị xuất…",
+    "resource": "Tài liệu này cần nhiều bộ nhớ hơn mức trình duyệt có thể cung cấp. Đóng các thẻ khác hoặc thử thiết bị khác.",
+    "download": "Tải tệp xuất xuống",
+    "format": "Định dạng xuất",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Giá trị ô",
+    "valueModes": {
+      "formatted": "Văn bản đã định dạng",
+      "raw": "Giá trị được lưu"
+    },
+    "firstRowHeader": "Dùng hàng đầu tiên làm hàng tiêu đề Markdown",
+    "summary": "{rows} hàng × {columns} cột",
+    "missingCached": "{count} ô công thức không có kết quả đã lưu và được xuất dưới dạng ô trống.",
+    "empty": "Vùng đã chọn không chứa giá trị hoặc công thức đã lưu.",
+    "formatNote": "CSV và TSV đặt các trường chứa dấu phân cách, dấu ngoặc kép và dấu xuống dòng trong dấu ngoặc kép. JSON là một mảng các hàng, bao gồm hàng đầu tiên; ô trống có giá trị null. Markdown có thể dùng hàng đầu tiên làm hàng tiêu đề hoặc thêm một hàng tiêu đề trống. Tệp tải xuống sử dụng UTF-8.",
+    "valuesNote": "Văn bản đã định dạng tuân theo các định dạng số được hỗ trợ, bao gồm ngày tháng và số 0 ở đầu; các định dạng phụ thuộc vào thiết lập vùng có thể khác với Excel. Giá trị được lưu giữ nguyên số và giá trị boolean; ngày tháng sử dụng số sê-ri Excel. Giá trị văn bản vẫn là văn bản. Lỗi bảng tính vẫn hiển thị dưới dạng chuỗi.",
+    "scopeNote": "Chỉ các giá trị ô đã lưu được xuất. Công thức không được tính toán lại; kết quả chưa được lưu trở thành ô trống. Bao gồm cả các hàng và cột ẩn. Ô gộp không được mở rộng. Biểu đồ, hình ảnh, nhận xét, macro và kiểu định dạng không được xuất. Phạm vi mặc định chứa các giá trị hoặc công thức đã lưu; các ô trống bên trong được giữ nguyên.",
+    "title": "Xuất trang tính",
+    "action": "Chuẩn bị xuất",
+    "error": "Không thể xuất trang tính này. Hãy thử lại hoặc mở sổ làm việc ít phức tạp hơn."
+  }
 }

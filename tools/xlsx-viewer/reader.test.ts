@@ -3,6 +3,9 @@ import type { Worksheet, XlsxSelectionState } from "@silurus/ooxml/xlsx"
 import { assertOfficeArchive } from "@workspace/document-reader"
 import { importFile } from "./import-file"
 import { openReader } from "./reader"
+import { openWorkbook } from "@workspace/spreadsheet-export"
+
+vi.mock("@workspace/spreadsheet-export", () => ({ openWorkbook: vi.fn() }))
 
 vi.mock("./import-file", () => ({ importFile: vi.fn() }))
 
@@ -360,5 +363,53 @@ test("imports additional formats locally and keeps their original worksheet labe
       { name: "Secret", hidden: true },
     ],
   })
+  reader.dispose()
+})
+
+test("opens one reusable export session and cancels it when the reader is disposed", async () => {
+  const { options } = setup()
+  const reader = await openReader(options)
+  const session = { sheets: [], export: vi.fn() }
+  vi.mocked(openWorkbook).mockResolvedValue(session)
+  expect(await reader.exportSession()).toBe(session)
+  expect(await reader.exportSession()).toBe(session)
+  expect(openWorkbook).toHaveBeenCalledOnce()
+  expect(openWorkbook).toHaveBeenCalledWith(
+    { file: options.file, names: undefined },
+    expect.anything()
+  )
+  const signal = vi.mocked(openWorkbook).mock.calls[0]![1]
+  reader.dispose()
+  expect(signal.aborted).toBe(true)
+  expect(() => reader.exportSession()).toThrow("aborted")
+})
+
+test("exports imported data and original names, preserves bytes before renderer transfer, and retries failed initialization", async () => {
+  const { options } = setup()
+  options.file = new File(["csv"], "original.csv")
+  const bytes = new Uint8Array([80, 75, 3, 4]).buffer
+  vi.mocked(importFile).mockResolvedValue({
+    data: bytes,
+    names: ["Original/中文"],
+    notices: [],
+  })
+  const load = mock.load.getMockImplementation()!
+  mock.load.mockImplementation((data, config) => {
+    const result = load(data, config)
+    structuredClone(data, { transfer: [data] })
+    return result
+  })
+  const reader = await openReader(options)
+  vi.mocked(openWorkbook).mockRejectedValueOnce(new Error("worker unavailable"))
+  await expect(reader.exportSession()).rejects.toThrow("worker unavailable")
+  vi.mocked(openWorkbook).mockResolvedValue({ sheets: [], export: vi.fn() })
+  await reader.exportSession()
+  const calls = vi.mocked(openWorkbook).mock.calls
+  const source = calls[calls.length - 1]![0]
+  expect(source.file.name).toBe("original.csv")
+  expect(source.names).toEqual(["Original/中文"])
+  expect(Array.from(new Uint8Array(await source.file.arrayBuffer()))).toEqual([
+    80, 75, 3, 4,
+  ])
   reader.dispose()
 })

@@ -45,5 +45,32 @@
   "dataOnly": "Format ini ditampilkan sebagai data lembar kerja. Nilai, format angka, dan penggabungan sel ditampilkan jika didukung; gambar, bagan, dan sebagian pemformatan tidak ditampilkan.",
   "numbersTables": "Setiap tabel Numbers ditampilkan sebagai tab lembar kerja terpisah. Nama lembar dan tabel aslinya ditampilkan jika tersedia.",
   "encodingFallback": "File ini bukan UTF-8 yang valid. Windows-1252 digunakan; ubah Pengodean teks jika karakter tampak keliru.",
-  "unevenRows": "Jumlah bidang berbeda antarbaris. Sel kosong dipertahankan; ubah Pemisah jika kolom tampak keliru."
+  "unevenRows": "Jumlah bidang berbeda antarbaris. Sel kosong dipertahankan; ubah Pemisah jika kolom tampak keliru.",
+  "dataExport": {
+    "converting": "Menyiapkan ekspor…",
+    "resource": "Dokumen ini membutuhkan lebih banyak memori daripada yang dapat disediakan browser ini. Tutup tab lain atau coba perangkat lain.",
+    "download": "Unduh hasil ekspor",
+    "format": "Format ekspor",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Nilai sel",
+    "valueModes": {
+      "formatted": "Teks berformat",
+      "raw": "Nilai tersimpan"
+    },
+    "firstRowHeader": "Gunakan baris pertama sebagai header Markdown",
+    "summary": "{rows} baris × {columns} kolom",
+    "missingCached": "{count} sel rumus tidak memiliki hasil tersimpan dan diekspor sebagai sel kosong.",
+    "empty": "Area yang dipilih tidak berisi nilai tersimpan atau rumus.",
+    "formatNote": "CSV dan TSV mengapit bidang yang berisi pemisah, tanda kutip, dan baris baru dengan tanda kutip. JSON berupa larik baris, termasuk baris pertama; sel kosong bernilai null. Markdown dapat menggunakan baris pertama sebagai header atau menambahkan header kosong. Unduhan menggunakan UTF-8.",
+    "valuesNote": "Teks berformat mengikuti format angka yang didukung, termasuk tanggal dan nol di awal; format yang bergantung pada lokal dapat berbeda dari Excel. Nilai tersimpan mempertahankan angka dan boolean; tanggal menggunakan nomor seri Excel. Nilai teks tetap berupa teks. Kesalahan lembar bentang tetap berupa string yang terlihat.",
+    "scopeNote": "Hanya nilai sel tersimpan yang diekspor. Rumus tidak dihitung ulang; hasil tersimpan yang tidak tersedia menjadi sel kosong. Baris dan kolom tersembunyi disertakan. Sel gabungan tidak diperluas. Bagan, gambar, komentar, makro, dan gaya tidak diekspor. Rentang default berisi nilai tersimpan atau rumus; sel kosong di dalamnya dipertahankan.",
+    "title": "Ekspor lembar kerja",
+    "action": "Siapkan ekspor",
+    "error": "Tidak dapat mengekspor lembar kerja ini. Coba lagi atau buka buku kerja yang tidak terlalu kompleks."
+  }
 }

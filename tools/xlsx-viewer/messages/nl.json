@@ -45,5 +45,32 @@
   "dataOnly": "Dit formaat wordt weergegeven als werkbladgegevens. Waarden, getalnotaties en samengevoegde cellen worden weergegeven voor zover ze worden ondersteund; tekeningen, grafieken en bepaalde opmaak worden niet weergegeven.",
   "numbersTables": "Elke Numbers-tabel verschijnt als een apart werkbladtabblad. De oorspronkelijke namen van het werkblad en de tabel worden weergegeven wanneer ze beschikbaar zijn.",
   "encodingFallback": "Dit bestand is geen geldige UTF-8. Windows-1252 is gebruikt; wijzig de tekencodering als tekens onjuist worden weergegeven.",
-  "unevenRows": "Rijen hebben verschillende aantallen velden. Lege cellen blijven behouden; wijzig het scheidingsteken als kolommen onjuist worden weergegeven."
+  "unevenRows": "Rijen hebben verschillende aantallen velden. Lege cellen blijven behouden; wijzig het scheidingsteken als kolommen onjuist worden weergegeven.",
+  "dataExport": {
+    "converting": "Export voorbereiden…",
+    "resource": "Dit document heeft meer geheugen nodig dan deze browser kan bieden. Sluit andere tabbladen of probeer een ander apparaat.",
+    "download": "Export downloaden",
+    "format": "Exportformaat",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Celwaarden",
+    "valueModes": {
+      "formatted": "Opgemaakte tekst",
+      "raw": "Opgeslagen waarden"
+    },
+    "firstRowHeader": "De eerste rij als Markdown-koprij gebruiken",
+    "summary": "{rows} rijen × {columns} kolommen",
+    "missingCached": "{count} formulecellen hebben geen opgeslagen resultaat en worden als lege cellen geëxporteerd.",
+    "empty": "Het geselecteerde gebied bevat geen opgeslagen waarden of formules.",
+    "formatNote": "CSV en TSV plaatsen velden met scheidingstekens, aanhalingstekens of regeleinden tussen aanhalingstekens. JSON is een array van rijen, inclusief de eerste rij; lege cellen zijn null. Markdown kan de eerste rij als koprij gebruiken of een lege koprij toevoegen. Downloads gebruiken UTF-8.",
+    "valuesNote": "Opgemaakte tekst volgt ondersteunde getalnotaties, inclusief datums en voorloopnullen; landinstellingsafhankelijke notaties kunnen afwijken van Excel. Opgeslagen waarden behouden getallen en booleaanse waarden; datums gebruiken Excel-serienummers. Tekstwaarden blijven tekst. Spreadsheetfouten blijven zichtbare tekenreeksen.",
+    "scopeNote": "Alleen opgeslagen celwaarden worden geëxporteerd. Formules worden niet opnieuw berekend; ontbrekende opgeslagen resultaten worden lege cellen. Verborgen rijen en kolommen worden meegenomen. Samengevoegde cellen worden niet uitgebreid. Grafieken, afbeeldingen, opmerkingen, macro’s en opmaak worden niet geëxporteerd. Het standaardbereik bevat opgeslagen waarden of formules; lege cellen daarbinnen blijven behouden.",
+    "title": "Werkblad exporteren",
+    "action": "Export voorbereiden",
+    "error": "Dit werkblad kan niet worden geëxporteerd. Probeer het opnieuw of open een minder complexe werkmap."
+  }
 }

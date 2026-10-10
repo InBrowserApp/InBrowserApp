@@ -1,3 +1,4 @@
+import type { Session } from "@workspace/spreadsheet-export/types"
 import { XlsxWorkbook, XlsxSheetViewer } from "@silurus/ooxml/xlsx"
 import type { Worksheet } from "@silurus/ooxml/xlsx"
 import {
@@ -40,6 +41,9 @@ export async function openReader({
   }
   signal.throwIfAborted()
   assertOfficeArchive(data, "xlsx")
+  const exportFile = originalNames ? new File([data], file.name) : file
+  let exportSession: Promise<Session> | undefined
+  const exportController = new AbortController()
   let workbook: XlsxWorkbook | undefined
   let viewer: ReturnType<typeof XlsxSheetViewer.fromWorkbook> | undefined
   let worksheet: Worksheet | undefined
@@ -49,6 +53,7 @@ export async function openReader({
   function dispose() {
     if (disposed) return
     disposed = true
+    exportController.abort()
     signal.removeEventListener("abort", dispose)
     container.removeEventListener("keydown", onKeyDown, true)
     viewer?.destroy()
@@ -190,6 +195,22 @@ export async function openReader({
             viewer!.setSelection(reference)
         }),
       copy: () => run(copySelection),
+      exportSession: () => {
+        signal.throwIfAborted()
+        exportController.signal.throwIfAborted()
+        exportSession ??= import("@workspace/spreadsheet-export")
+          .then(({ openWorkbook }) =>
+            openWorkbook(
+              { file: exportFile, names: originalNames },
+              exportController.signal
+            )
+          )
+          .catch((error: unknown) => {
+            exportSession = undefined
+            throw error
+          })
+        return exportSession
+      },
       dispose,
     }
   } catch (error) {

@@ -45,5 +45,32 @@
   "dataOnly": "Format ini dipaparkan sebagai data lembaran kerja. Nilai, format nombor dan cantuman dipaparkan jika disokong; lukisan, carta dan sesetengah pemformatan tidak dipaparkan.",
   "numbersTables": "Setiap jadual Numbers dipaparkan sebagai tab lembaran kerja yang berasingan. Nama lembaran dan jadual asalnya dipaparkan jika tersedia.",
   "encodingFallback": "Fail ini bukan UTF-8 yang sah. Windows-1252 telah digunakan; ubah Pengekodan teks jika aksara kelihatan salah.",
-  "unevenRows": "Baris mempunyai bilangan medan yang berbeza. Sel kosong dikekalkan; ubah Pemisah jika lajur kelihatan salah."
+  "unevenRows": "Baris mempunyai bilangan medan yang berbeza. Sel kosong dikekalkan; ubah Pemisah jika lajur kelihatan salah.",
+  "dataExport": {
+    "converting": "Menyediakan eksport…",
+    "resource": "Dokumen ini memerlukan lebih banyak memori daripada yang tersedia dalam pelayar ini. Tutup tab lain atau cuba peranti lain.",
+    "download": "Muat turun eksport",
+    "format": "Format eksport",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Nilai sel",
+    "valueModes": {
+      "formatted": "Teks berformat",
+      "raw": "Nilai tersimpan"
+    },
+    "firstRowHeader": "Gunakan baris pertama sebagai pengepala Markdown",
+    "summary": "{rows} baris × {columns} lajur",
+    "missingCached": "{count} sel formula tiada hasil tersimpan dan dieksport sebagai sel kosong.",
+    "empty": "Kawasan yang dipilih tidak mengandungi nilai tersimpan atau formula.",
+    "formatNote": "CSV dan TSV mengapit medan yang mengandungi pemisah, tanda petikan atau pemisah baris dengan tanda petikan. JSON ialah tatasusunan baris, termasuk baris pertama; sel kosong ialah null. Markdown boleh menggunakan baris pertama sebagai pengepala atau menambah pengepala kosong. Muat turun menggunakan UTF-8.",
+    "valuesNote": "Teks berformat mengikut format nombor yang disokong, termasuk tarikh dan sifar di hadapan; format yang bergantung pada tetapan wilayah mungkin berbeza daripada Excel. Nilai tersimpan mengekalkan nombor dan boolean; tarikh menggunakan nombor siri Excel. Nilai teks kekal sebagai teks. Ralat hamparan kekal sebagai rentetan yang kelihatan.",
+    "scopeNote": "Hanya nilai sel yang disimpan dieksport. Formula tidak dikira semula; hasil tersimpan yang tiada menjadi sel kosong. Baris dan lajur tersembunyi disertakan. Sel bercantum tidak dikembangkan. Carta, imej, komen, makro dan gaya tidak dieksport. Julat lalai mengandungi nilai tersimpan atau formula; sel kosong di dalamnya dikekalkan.",
+    "title": "Eksport lembaran kerja",
+    "action": "Sediakan eksport",
+    "error": "Tidak dapat mengeksport lembaran kerja ini. Cuba lagi atau buka buku kerja yang kurang rumit."
+  }
 }
