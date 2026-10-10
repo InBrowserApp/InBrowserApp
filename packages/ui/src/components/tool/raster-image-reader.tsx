@@ -8,26 +8,32 @@ import {
 } from "@workspace/ui/components/ui/alert"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { ChevronLeft, ChevronRight } from "@workspace/ui/icons"
-import { failureOf } from "./core/failure"
-import { ImageView } from "./image-view"
-import type { imageSession } from "./session"
-import type { Failure, Messages, OpenedImage, Preview } from "./types"
+import { RasterImageView } from "./raster-image-view"
+import type {
+  RasterImageMessages,
+  RasterImage,
+  RasterPreview,
+} from "./raster-image-types"
 
-export function ImageReader({
+export function RasterImageReader({
   image,
-  session,
+  render,
+  errorMessage,
+  download,
   messages: m,
 }: {
-  image: OpenedImage
-  session: ReturnType<typeof imageSession>
-  messages: Messages
+  image: RasterImage
+  render: (index: number) => Promise<RasterPreview>
+  errorMessage: (reason: unknown) => string
+  download: { label: string; filename: (index: number) => string }
+  messages: RasterImageMessages
 }) {
   const [index, setIndex] = useState(0)
   const [zoom, setZoom] = useState<number | null>(null)
   const [background, setBackground] = useState("checkerboard")
-  const [preview, setPreview] = useState<Preview | null>(image.preview)
+  const [preview, setPreview] = useState<RasterPreview | null>(image.preview)
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<Failure | null>(null)
+  const [error, setError] = useState<string | null>(null)
   const generation = useRef(0)
   useEffect(
     () => () => {
@@ -42,10 +48,10 @@ export function ImageReader({
     setError(null)
     setLoading(true)
     try {
-      const result = await session.render(next)
+      const result = await render(next)
       if (current === generation.current) setPreview(result)
     } catch (reason) {
-      if (current === generation.current) setError(failureOf(reason))
+      if (current === generation.current) setError(errorMessage(reason))
     } finally {
       if (current === generation.current) setLoading(false)
     }
@@ -104,12 +110,12 @@ export function ImageReader({
         <div className="flex-1 p-3">
           <Alert variant="destructive">
             <AlertTitle>{m.itemError}</AlertTitle>
-            <AlertDescription>{m[error]}</AlertDescription>
+            <AlertDescription>{error}</AlertDescription>
           </Alert>
         </div>
       ) : null}
       {preview ? (
-        <ImageView
+        <RasterImageView
           key={index}
           preview={preview}
           info={image.info}
@@ -118,6 +124,10 @@ export function ImageReader({
           background={background}
           onBackground={setBackground}
           messages={m}
+          download={{
+            label: download.label,
+            filename: download.filename(index),
+          }}
         />
       ) : null}
     </>

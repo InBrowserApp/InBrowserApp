@@ -12,4 +12,8 @@ Recorre páginas TIFF, tamaños de icono, colecciones de imágenes y fotogramas 
 
 La orientación se aplica a la imagen mostrada. Las vistas previas usan canales de 8 bits, por lo que se reducen la alta profundidad de bits y el HDR. Los perfiles de color incrustados se conservan cuando son compatibles, pero este visor no sustituye a un editor con gestión del color. Los límites de recursos del navegador y del decodificador pueden impedir que se abran imágenes muy grandes o complejas; no hay un límite fijo de tamaño de archivo ni de número de imágenes.
 
-Los archivos permanecen en este dispositivo. Al cerrar o reemplazar un archivo, se liberan su decodificador y su vista previa. Este visor no edita, exporta ni guarda automáticamente tus imágenes. Las licencias de los decodificadores y la información correspondiente sobre su código fuente están disponibles en los detalles de la imagen.
+Los archivos permanecen en este dispositivo. Al cerrar o reemplazar un archivo, se liberan su decodificador y su vista previa. Este visor no edita ni guarda automáticamente tus imágenes. Las licencias de los decodificadores y la información correspondiente sobre su código fuente están disponibles en los detalles de la imagen.
+
+## Guarda un PNG
+
+Descarga la imagen, página, variante de icono o fotograma de animación recompuesto que esté seleccionado como PNG estático. La imagen guardada conserva las dimensiones completas en píxeles, la orientación aplicada y la transparencia compatible; el zoom y los fondos de la vista previa no la modifican. La exportación a PNG usa la misma imagen de 8 bits que la vista previa, por lo que no conserva la alta profundidad de bits ni el HDR. Los PNG animados solo exportan la imagen estática predeterminada. No se garantiza la conservación de la animación ni de los metadatos del contenedor.

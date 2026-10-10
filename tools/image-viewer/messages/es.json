@@ -52,5 +52,7 @@
   "poster": "PNG animado: solo se muestra la imagen estática predeterminada. Los fotogramas de animación no están disponibles.",
   "precision": "Esta es una vista previa de 8 bits. Se reducen la alta profundidad de bits y el HDR; los colores pueden diferir de los de un editor con gestión del color.",
   "compatibility": "Los perfiles incrustados se conservan cuando son compatibles. No se muestran las imágenes auxiliares, los mapas de profundidad ni los metadatos del contenedor.",
-  "licenses": "Licencias y código fuente de los decodificadores"
+  "licenses": "Licencias y código fuente de los decodificadores",
+  "downloadPng": "Descargar PNG",
+  "pngNote": "Guarda la imagen seleccionada como PNG de 8 bits. Se reducen la alta profundidad de bits y el HDR. El zoom y los fondos de la vista previa no modifican la imagen guardada."
 }

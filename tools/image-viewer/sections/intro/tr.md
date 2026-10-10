@@ -12,4 +12,8 @@ Görsel kontrolleriyle TIFF sayfaları, simge boyutları, görsel koleksiyonlar�
 
 Görüntülenen görsele yön bilgisi uygulanır. Önizlemeler 8 bitlik kanallar kullanır; bu nedenle yüksek bit derinliği ve HDR azaltılır. Gömülü renk profilleri desteklendiğinde korunur, ancak bu görüntüleyici renk yönetimli bir düzenleyicinin yerini tutmaz. Tarayıcı ve kod çözücü kaynak sınırları, çok büyük veya karmaşık görsellerin açılmasını engelleyebilir; sabit bir dosya boyutu veya görsel sayısı sınırı yoktur.
 
-Dosyalar bu cihazda kalır. Bir dosyanın kapatılması veya değiştirilmesi kod çözücü ve önizleme kaynaklarını serbest bırakır. Bu görüntüleyici görsellerinizi düzenlemez, dışa aktarmaz veya otomatik olarak kaydetmez. Kod çözücü lisanslarına ve ilgili kaynak kodu bilgilerine görsel ayrıntılarından ulaşılabilir.
+Dosyalar bu cihazda kalır. Bir dosyanın kapatılması veya değiştirilmesi kod çözücü ve önizleme kaynaklarını serbest bırakır. Bu görüntüleyici görsellerinizi düzenlemez veya otomatik olarak kaydetmez. Kod çözücü lisanslarına ve ilgili kaynak kodu bilgilerine görsel ayrıntılarından ulaşılabilir.
+
+## PNG kaydedin
+
+Seçili görseli, sayfayı, simge çeşidini veya birleştirilmiş animasyon karesini durağan PNG olarak indirin. Kaydedilen görsel, tam piksel boyutlarını, uygulanan yön bilgisini ve desteklenen saydamlığı korur; yakınlaştırma ve önizleme arka planları bunu değiştirmez. PNG dışa aktarımı, önizlemeyle aynı 8 bitlik görseli kullanır; bu nedenle yüksek bit derinliğini veya HDR'yi korumaz. Animasyonlu PNG yalnızca varsayılan durağan görseli dışa aktarır. Animasyonun veya kapsayıcı meta verilerinin korunması garanti edilmez.

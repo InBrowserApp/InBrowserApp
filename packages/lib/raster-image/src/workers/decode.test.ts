@@ -15,7 +15,7 @@ vi.mock("@imagemagick/magick-wasm", async (original) => {
       module.initializeImageMagick(
         readFileSync(
           new URL(
-            "../node_modules/@imagemagick/magick-wasm/dist/x86/magick.wasm",
+            "../../node_modules/@imagemagick/magick-wasm/dist/x86/magick.wasm",
             import.meta.url
           )
         ),
@@ -25,7 +25,14 @@ vi.mock("@imagemagick/magick-wasm", async (original) => {
 })
 const fixture = (name: string) =>
   new File(
-    [readFileSync(new URL(`../fixtures/${name}`, import.meta.url))],
+    [
+      readFileSync(
+        new URL(
+          `../../../../../tools/image-viewer/fixtures/${name}`,
+          import.meta.url
+        )
+      ),
+    ],
     name
   )
 const pixel = (png: Uint8Array, x: number, y: number) =>
@@ -54,7 +61,16 @@ test("reads real TIFF pages, applies orientation and retains profile metadata", 
   const oriented = (await openImage(fixture("orientation-6.jpg"))).preview
   expect([oriented.width, oriented.height]).toEqual([200, 320])
   expect((await openImage(fixture("profiled.png"))).preview.profile).toBe(true)
-  expect((await openImage(fixture("high-depth.tiff"))).preview.depth).toBe(16)
+  const reduced = (await openImage(fixture("high-depth.tiff"))).preview
+  expect(reduced.depth).toBe(16)
+  expect(reduced.png[24]).toBeLessThanOrEqual(8) // PNG IHDR bit depth
+  expect(pixel(reduced.png, 10, 10)[0]).toBe(128)
+  const transparent = (await openImage(fixture("color-chart.png"))).preview
+  ImageMagick.read(transparent.png, (image) => {
+    expect(image.width).toBe(320)
+    expect(image.height).toBe(200)
+    image.getPixels((pixels) => expect(pixels.getPixel(200, 150)[3]).toBe(128))
+  })
 })
 
 test("browses actual icon variants and reads AVIF/JXL/JP2 pixels", async () => {

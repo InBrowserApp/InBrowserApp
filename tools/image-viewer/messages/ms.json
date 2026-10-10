@@ -52,5 +52,7 @@
   "poster": "PNG beranimasi: hanya imej pegun lalai dipaparkan. Bingkai animasi tidak tersedia.",
   "precision": "Ini ialah pratonton 8 bit. Kedalaman bit tinggi dan HDR dikurangkan; warna mungkin berbeza daripada penyunting dengan pengurusan warna.",
   "compatibility": "Profil terbenam dikekalkan apabila disokong. Imej tambahan, peta kedalaman dan metadata bekas tidak dipaparkan.",
-  "licenses": "Lesen dan sumber penyahkod"
+  "licenses": "Lesen dan sumber penyahkod",
+  "downloadPng": "Muat turun PNG",
+  "pngNote": "Simpan imej yang dipilih sebagai PNG 8 bit. Kedalaman bit tinggi dan HDR dikurangkan. Zum dan latar belakang pratonton tidak mengubah imej yang disimpan."
 }

@@ -10,7 +10,7 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "@imagemagick/magick-wasm": "catalog:"
+    "@workspace/raster-image": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

@@ -90,6 +90,8 @@ export function renderImage(index: number): Preview {
     const depth = image.depth
     const profile = image.getColorProfile() !== null
     image.autoOrient()
+    // Q8 decoding already reduces source precision; encode the same 8-bit pixels.
+    image.depth = 8
     return image.write(MagickFormat.Png, (png) => ({
       png: new Uint8Array(png),
       width: image.width,

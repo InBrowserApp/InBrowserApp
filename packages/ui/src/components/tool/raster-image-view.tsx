@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
-import { ZoomInput } from "./zoom-input"
+import { ZoomInput } from "./raster-image-zoom-input"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   LayoutGrid,
@@ -11,7 +11,12 @@ import {
   RotateCw,
   Sun,
 } from "@workspace/ui/icons"
-import type { ImageInfo, Preview, Messages } from "./types"
+import type {
+  RasterInfo,
+  RasterPreview,
+  RasterImageMessages,
+} from "./raster-image-types"
+import { RasterImageDetails } from "./raster-image-details"
 
 const grid = {
   backgroundColor: "#fff",
@@ -20,7 +25,7 @@ const grid = {
   backgroundSize: "24px 24px",
 }
 
-export function ImageView({
+export function RasterImageView({
   preview,
   info,
   zoom,
@@ -28,14 +33,16 @@ export function ImageView({
   background,
   onBackground,
   messages: m,
+  download,
 }: {
-  preview: Preview
-  info: ImageInfo
+  preview: RasterPreview
+  info: RasterInfo
   zoom: number | null
   onZoom: (zoom: number | null) => void
   background: string
   onBackground: (background: string) => void
-  messages: Messages
+  messages: RasterImageMessages
+  download: { label: string; filename: string }
 }) {
   const viewport = useRef<HTMLDivElement>(null)
   const drag = useRef<{
@@ -44,7 +51,12 @@ export function ImageView({
     left: number
     top: number
   } | null>(null)
-  const [url, setUrl] = useState("")
+  const [objectUrl, setObjectUrl] = useState<{
+    preview: RasterPreview
+    url: string
+  } | null>(null)
+  const [loaded, setLoaded] = useState<RasterPreview | null>(null)
+  const url = objectUrl?.preview === preview ? objectUrl.url : ""
   const [failed, setFailed] = useState(false)
   const [space, setSpace] = useState({ width: 1, height: 1 })
   const hint = useId()
@@ -55,11 +67,12 @@ export function ImageView({
       Math.max(1, space.height - 32) / preview.height
     )
   useEffect(() => {
+    setFailed(false)
     try {
       const next = URL.createObjectURL(
         new Blob([preview.png], { type: "image/png" })
       )
-      setUrl(next)
+      setObjectUrl({ preview, url: next })
       return () => URL.revokeObjectURL(next)
     } catch {
       setFailed(true)
@@ -133,7 +146,7 @@ export function ImageView({
             1:1
           </Button>
         </div>
-        <div className="flex items-center gap-0.5">
+        <div className="flex flex-wrap items-center gap-0.5">
           <DocumentIconButton
             label={m.reset}
             onClick={() => {
@@ -167,6 +180,13 @@ export function ImageView({
             ))}
           </div>
         </div>
+        {url && loaded === preview && !failed ? (
+          <Button asChild size="sm">
+            <a href={url} download={download.filename}>
+              {download.label}
+            </a>
+          </Button>
+        ) : null}
       </div>
       <div
         ref={viewport}
@@ -237,53 +257,18 @@ export function ImageView({
                 width: preview.width * scale,
                 height: preview.height * scale,
               }}
+              onLoad={() => setLoaded(preview)}
               onError={() => setFailed(true)}
             />
           ) : null}
         </div>
       </div>
-      <div className="shrink-0 border-t px-3 py-2 text-xs text-muted-foreground">
-        <details className="max-h-36 overflow-auto">
-          <summary className="cursor-pointer">
-            {info.format} ·{" "}
-            <span dir="ltr">
-              {preview.width} × {preview.height} px
-            </span>
-            <span className="sr-only"> — {m.details}</span>
-          </summary>
-          <dl className="mt-2 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1">
-            <dt>{m.detectedFormat}</dt>
-            <dd>{info.format}</dd>
-            <dt>{m.dimensions}</dt>
-            <dd dir="ltr">
-              {preview.width} × {preview.height} px
-            </dd>
-            {preview.delay > 0 ? (
-              <>
-                <dt>{m.duration}</dt>
-                <dd>
-                  {m.milliseconds.replace("{value}", String(preview.delay))}
-                </dd>
-              </>
-            ) : null}
-            <dt>{m.profile}</dt>
-            <dd>{preview.profile ? m.present : m.absent}</dd>
-          </dl>
-          <p className="mt-2">{m.precision}</p>
-          <p className="mt-2">{m.compatibility}</p>
-          <p id={hint} className="mt-2">
-            {m.panHint}
-          </p>
-          <a
-            className="mt-2 inline-block underline underline-offset-2"
-            href="/image-viewer-licenses/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {m.licenses}
-          </a>
-        </details>
-      </div>
+      <RasterImageDetails
+        preview={preview}
+        info={info}
+        messages={m}
+        hint={hint}
+      />
     </>
   )
 }

@@ -52,5 +52,7 @@
   "poster": "Animasyonlu PNG: yalnızca varsayılan durağan görsel gösterilir. Animasyon kareleri kullanılamaz.",
   "precision": "Bu, 8 bitlik bir önizlemedir. Yüksek bit derinliği ve HDR azaltılır; renkler, renk yönetimli bir düzenleyiciden farklı olabilir.",
   "compatibility": "Gömülü profiller desteklendiğinde korunur. Yardımcı görseller, derinlik haritaları ve kapsayıcı meta verileri gösterilmez.",
-  "licenses": "Kod çözücü lisansları ve kaynak kodu"
+  "licenses": "Kod çözücü lisansları ve kaynak kodu",
+  "downloadPng": "PNG indir",
+  "pngNote": "Seçilen görseli 8 bitlik PNG olarak kaydedin. Yüksek bit derinliği ve HDR azaltılır. Yakınlaştırma ve önizleme arka planları kaydedilen görseli değiştirmez."
 }

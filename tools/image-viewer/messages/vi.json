@@ -52,5 +52,7 @@
   "poster": "PNG động: chỉ hiển thị ảnh tĩnh mặc định. Không có các khung hình hoạt ảnh.",
   "precision": "Đây là bản xem trước 8 bit. Độ sâu bit cao và HDR bị giảm; màu sắc có thể khác với trình chỉnh sửa có quản lý màu.",
   "compatibility": "Hồ sơ màu nhúng được giữ lại khi được hỗ trợ. Ảnh phụ, bản đồ độ sâu và siêu dữ liệu của tệp chứa không được hiển thị.",
-  "licenses": "Giấy phép và mã nguồn bộ giải mã"
+  "licenses": "Giấy phép và mã nguồn bộ giải mã",
+  "downloadPng": "Tải PNG",
+  "pngNote": "Lưu ảnh đã chọn dưới dạng PNG 8 bit. Độ sâu bit cao và HDR bị giảm. Thu phóng và nền xem trước không làm thay đổi ảnh đã lưu."
 }

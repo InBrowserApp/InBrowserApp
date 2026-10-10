@@ -12,4 +12,8 @@ Sfoglia pagine TIFF, dimensioni delle icone, raccolte di immagini e fotogrammi d
 
 L’orientamento viene applicato all’immagine visualizzata. Le anteprime usano canali a 8 bit, quindi la profondità di colore elevata e l’HDR vengono ridotti. I profili colore incorporati vengono conservati dove supportato, ma questo visualizzatore non sostituisce un editor con gestione del colore. I limiti di risorse del browser e del decodificatore possono impedire l’apertura di immagini molto grandi o complesse; non esiste un limite fisso alla dimensione del file o al numero di immagini.
 
-I file restano su questo dispositivo. La chiusura o la sostituzione di un file libera le risorse del decodificatore e dell’anteprima. Questo visualizzatore non modifica, esporta né salva automaticamente le immagini. Le licenze dei decodificatori e le informazioni sui relativi sorgenti sono disponibili nei dettagli dell’immagine.
+I file restano su questo dispositivo. La chiusura o la sostituzione di un file libera le risorse del decodificatore e dell’anteprima. Questo visualizzatore non modifica né salva automaticamente le immagini. Le licenze dei decodificatori e le informazioni sui relativi sorgenti sono disponibili nei dettagli dell’immagine.
+
+## Salva un PNG
+
+Scarica l’immagine, la pagina, la variante dell’icona o il fotogramma ricomposto dell’animazione attualmente selezionato come PNG statico. L’immagine salvata mantiene le dimensioni complete in pixel, l’orientamento applicato e la trasparenza supportata; lo zoom e gli sfondi dell’anteprima non la modificano. L’esportazione PNG usa la stessa immagine a 8 bit dell’anteprima, quindi non conserva la profondità di colore elevata né l’HDR. Per i PNG animati viene esportata solo l’immagine statica predefinita. Non è garantita la conservazione dell’animazione o dei metadati del contenitore.

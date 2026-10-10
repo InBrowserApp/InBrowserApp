@@ -11712,6 +11712,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "image-to-png-converter",
+    category: "image",
+    icon: "image",
+    tags: [
+      "image",
+      "png",
+      "converter",
+      "heic",
+      "heif",
+      "tiff",
+      "jxl",
+      "jpeg2000",
+      "ico",
+    ],
+    locales: {
+      ar: {
+        name: "محول الصور إلى PNG",
+        description:
+          "حوّل الصور المحلية وصفحات TIFF ونسخ الأيقونات وإطارات الحركة إلى PNG. افتح صور HEIC وJPEG XL وصور JPEG 2000 المدعومة دون رفعها.",
+      },
+      de: {
+        name: "Bild-zu-PNG-Konverter",
+        description:
+          "Konvertieren Sie lokale Bilder, TIFF-Seiten, Symbolvarianten und Animationsbilder in PNG. Öffnen Sie HEIC, JPEG XL und unterstützte JPEG-2000-Bilder, ohne sie hochzuladen.",
+      },
+      en: {
+        name: "Image to PNG Converter",
+        description:
+          "Convert local images, TIFF pages, icon variants and animation frames to PNG. Open HEIC, JPEG XL and supported JPEG 2000 images without uploading them.",
+      },
+      es: {
+        name: "Convertidor de imágenes a PNG",
+        description:
+          "Convierte imágenes locales, páginas TIFF, variantes de iconos y fotogramas de animación a PNG. Abre imágenes HEIC, JPEG XL y JPEG 2000 compatibles sin subirlas.",
+      },
+      fr: {
+        name: "Convertisseur d’images en PNG",
+        description:
+          "Convertissez des images locales, des pages TIFF, des variantes d’icônes et des images d’animation en PNG. Ouvrez des images HEIC, JPEG XL et JPEG 2000 prises en charge sans les envoyer.",
+      },
+      he: {
+        name: "ממיר תמונות ל-PNG",
+        description:
+          "המרת תמונות מקומיות, עמודי TIFF, גרסאות סמלים ופריימים של הנפשה ל-PNG. פתיחת תמונות HEIC,‏ JPEG XL ותמונות JPEG 2000 נתמכות ללא העלאה לרשת.",
+      },
+      hi: {
+        name: "चित्र से PNG कनवर्टर",
+        description:
+          "स्थानीय चित्रों, TIFF पृष्ठों, आइकन के प्रकारों और एनीमेशन फ़्रेम को PNG में बदलें। HEIC, JPEG XL और समर्थित JPEG 2000 चित्र बिना अपलोड किए खोलें।",
+      },
+      id: {
+        name: "Konverter Gambar ke PNG",
+        description:
+          "Konversikan gambar lokal, halaman TIFF, varian ikon, dan bingkai animasi ke PNG. Buka gambar HEIC, JPEG XL, serta JPEG 2000 yang didukung tanpa mengunggahnya.",
+      },
+      it: {
+        name: "Convertitore di immagini in PNG",
+        description:
+          "Converti immagini locali, pagine TIFF, varianti di icone e fotogrammi di animazioni in PNG. Apri immagini HEIC, JPEG XL e JPEG 2000 supportate senza caricarle online.",
+      },
+      ja: {
+        name: "画像 PNG 変換ツール",
+        description:
+          "ローカルの画像、TIFF の各ページ、アイコンの種類、アニメーションのフレームを PNG に変換。HEIC、JPEG XL、対応する JPEG 2000 画像をアップロードせずに開けます。",
+      },
+      ko: {
+        name: "이미지 PNG 변환기",
+        description:
+          "로컬 이미지, TIFF 페이지, 아이콘 변형 및 애니메이션 프레임을 PNG로 변환하세요. 업로드 없이 HEIC, JPEG XL 및 지원되는 JPEG 2000 이미지를 열 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Imej kepada PNG",
+        description:
+          "Tukar imej setempat, halaman TIFF, varian ikon dan bingkai animasi kepada PNG. Buka imej HEIC, JPEG XL dan JPEG 2000 yang disokong tanpa memuat naiknya.",
+      },
+      nl: {
+        name: "Afbeelding-naar-PNG-converter",
+        description:
+          "Converteer lokale afbeeldingen, TIFF-pagina's, pictogramvarianten en animatieframes naar PNG. Open HEIC-, JPEG XL- en ondersteunde JPEG 2000-afbeeldingen zonder ze te uploaden.",
+      },
+      no: {
+        name: "Bilde til PNG-konverterer",
+        description:
+          "Konverter lokale bilder, TIFF-sider, ikonvarianter og animasjonsbilder til PNG. Åpne HEIC, JPEG XL og støttede JPEG 2000-bilder uten å laste dem opp.",
+      },
+      pl: {
+        name: "Konwerter obrazów na PNG",
+        description:
+          "Konwertuj lokalne obrazy, strony TIFF, warianty ikon i klatki animacji na PNG. Otwieraj obrazy HEIC, JPEG XL i obsługiwane obrazy JPEG 2000 bez ich przesyłania.",
+      },
+      pt: {
+        name: "Conversor de imagens para PNG",
+        description:
+          "Converta imagens locais, páginas TIFF, variantes de ícones e quadros de animação para PNG. Abra imagens HEIC, JPEG XL e JPEG 2000 compatíveis sem enviá-las.",
+      },
+      ru: {
+        name: "Конвертер изображений в PNG",
+        description:
+          "Преобразуйте локальные изображения, страницы TIFF, варианты значков и кадры анимации в PNG. Открывайте HEIC, JPEG XL и поддерживаемые изображения JPEG 2000 без отправки на сервер.",
+      },
+      sv: {
+        name: "Bildkonverterare till PNG",
+        description:
+          "Konvertera lokala bilder, TIFF-sidor, ikonvarianter och animationsrutor till PNG. Öppna HEIC, JPEG XL och JPEG 2000-bilder som stöds utan att ladda upp dem.",
+      },
+      th: {
+        name: "โปรแกรมแปลงรูปภาพเป็น PNG",
+        description:
+          "แปลงรูปภาพบนอุปกรณ์ หน้า TIFF แบบไอคอน และเฟรมภาพเคลื่อนไหวเป็น PNG เปิดรูปภาพ HEIC, JPEG XL และ JPEG 2000 ที่รองรับโดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "Görselden PNG'ye Dönüştürücü",
+        description:
+          "Yerel görselleri, TIFF sayfalarını, simge çeşitlerini ve animasyon karelerini PNG'ye dönüştürün. HEIC, JPEG XL ve desteklenen JPEG 2000 görsellerini hiçbir yere yüklemeden açın.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi ảnh sang PNG",
+        description:
+          "Chuyển đổi ảnh trên thiết bị, các trang TIFF, biến thể biểu tượng và khung hình hoạt ảnh sang PNG. Mở ảnh HEIC, JPEG XL và JPEG 2000 được hỗ trợ mà không cần tải lên.",
+      },
+      "zh-CN": {
+        name: "图片转 PNG 转换器",
+        description:
+          "将本地图片、TIFF 页面、图标变体和动画帧转换为 PNG。无需上传即可打开 HEIC、JPEG XL 和受支持的 JPEG 2000 图片。",
+      },
+      "zh-TW": {
+        name: "圖片轉 PNG 轉換器",
+        description:
+          "將本機圖片、TIFF 頁面、圖示版本與動畫畫格轉換為 PNG。無須上傳即可開啟 HEIC、JPEG XL 及支援的 JPEG 2000 圖片。",
+      },
+    },
+  },
+  {
     slug: "image-to-webp-converter",
     category: "image",
     icon: "image",
@@ -42598,6 +42731,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "圖片轉 PDF 轉換器",
         description: "在瀏覽器中本機將圖片合併成單一 PDF。",
+      },
+    },
+  },
+  "image-to-png-converter": {
+    slug: "image-to-png-converter",
+    category: "image",
+    icon: "image",
+    tags: [
+      "image",
+      "png",
+      "converter",
+      "heic",
+      "heif",
+      "tiff",
+      "jxl",
+      "jpeg2000",
+      "ico",
+    ],
+    locales: {
+      ar: {
+        name: "محول الصور إلى PNG",
+        description:
+          "حوّل الصور المحلية وصفحات TIFF ونسخ الأيقونات وإطارات الحركة إلى PNG. افتح صور HEIC وJPEG XL وصور JPEG 2000 المدعومة دون رفعها.",
+      },
+      de: {
+        name: "Bild-zu-PNG-Konverter",
+        description:
+          "Konvertieren Sie lokale Bilder, TIFF-Seiten, Symbolvarianten und Animationsbilder in PNG. Öffnen Sie HEIC, JPEG XL und unterstützte JPEG-2000-Bilder, ohne sie hochzuladen.",
+      },
+      en: {
+        name: "Image to PNG Converter",
+        description:
+          "Convert local images, TIFF pages, icon variants and animation frames to PNG. Open HEIC, JPEG XL and supported JPEG 2000 images without uploading them.",
+      },
+      es: {
+        name: "Convertidor de imágenes a PNG",
+        description:
+          "Convierte imágenes locales, páginas TIFF, variantes de iconos y fotogramas de animación a PNG. Abre imágenes HEIC, JPEG XL y JPEG 2000 compatibles sin subirlas.",
+      },
+      fr: {
+        name: "Convertisseur d’images en PNG",
+        description:
+          "Convertissez des images locales, des pages TIFF, des variantes d’icônes et des images d’animation en PNG. Ouvrez des images HEIC, JPEG XL et JPEG 2000 prises en charge sans les envoyer.",
+      },
+      he: {
+        name: "ממיר תמונות ל-PNG",
+        description:
+          "המרת תמונות מקומיות, עמודי TIFF, גרסאות סמלים ופריימים של הנפשה ל-PNG. פתיחת תמונות HEIC,‏ JPEG XL ותמונות JPEG 2000 נתמכות ללא העלאה לרשת.",
+      },
+      hi: {
+        name: "चित्र से PNG कनवर्टर",
+        description:
+          "स्थानीय चित्रों, TIFF पृष्ठों, आइकन के प्रकारों और एनीमेशन फ़्रेम को PNG में बदलें। HEIC, JPEG XL और समर्थित JPEG 2000 चित्र बिना अपलोड किए खोलें।",
+      },
+      id: {
+        name: "Konverter Gambar ke PNG",
+        description:
+          "Konversikan gambar lokal, halaman TIFF, varian ikon, dan bingkai animasi ke PNG. Buka gambar HEIC, JPEG XL, serta JPEG 2000 yang didukung tanpa mengunggahnya.",
+      },
+      it: {
+        name: "Convertitore di immagini in PNG",
+        description:
+          "Converti immagini locali, pagine TIFF, varianti di icone e fotogrammi di animazioni in PNG. Apri immagini HEIC, JPEG XL e JPEG 2000 supportate senza caricarle online.",
+      },
+      ja: {
+        name: "画像 PNG 変換ツール",
+        description:
+          "ローカルの画像、TIFF の各ページ、アイコンの種類、アニメーションのフレームを PNG に変換。HEIC、JPEG XL、対応する JPEG 2000 画像をアップロードせずに開けます。",
+      },
+      ko: {
+        name: "이미지 PNG 변환기",
+        description:
+          "로컬 이미지, TIFF 페이지, 아이콘 변형 및 애니메이션 프레임을 PNG로 변환하세요. 업로드 없이 HEIC, JPEG XL 및 지원되는 JPEG 2000 이미지를 열 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Imej kepada PNG",
+        description:
+          "Tukar imej setempat, halaman TIFF, varian ikon dan bingkai animasi kepada PNG. Buka imej HEIC, JPEG XL dan JPEG 2000 yang disokong tanpa memuat naiknya.",
+      },
+      nl: {
+        name: "Afbeelding-naar-PNG-converter",
+        description:
+          "Converteer lokale afbeeldingen, TIFF-pagina's, pictogramvarianten en animatieframes naar PNG. Open HEIC-, JPEG XL- en ondersteunde JPEG 2000-afbeeldingen zonder ze te uploaden.",
+      },
+      no: {
+        name: "Bilde til PNG-konverterer",
+        description:
+          "Konverter lokale bilder, TIFF-sider, ikonvarianter og animasjonsbilder til PNG. Åpne HEIC, JPEG XL og støttede JPEG 2000-bilder uten å laste dem opp.",
+      },
+      pl: {
+        name: "Konwerter obrazów na PNG",
+        description:
+          "Konwertuj lokalne obrazy, strony TIFF, warianty ikon i klatki animacji na PNG. Otwieraj obrazy HEIC, JPEG XL i obsługiwane obrazy JPEG 2000 bez ich przesyłania.",
+      },
+      pt: {
+        name: "Conversor de imagens para PNG",
+        description:
+          "Converta imagens locais, páginas TIFF, variantes de ícones e quadros de animação para PNG. Abra imagens HEIC, JPEG XL e JPEG 2000 compatíveis sem enviá-las.",
+      },
+      ru: {
+        name: "Конвертер изображений в PNG",
+        description:
+          "Преобразуйте локальные изображения, страницы TIFF, варианты значков и кадры анимации в PNG. Открывайте HEIC, JPEG XL и поддерживаемые изображения JPEG 2000 без отправки на сервер.",
+      },
+      sv: {
+        name: "Bildkonverterare till PNG",
+        description:
+          "Konvertera lokala bilder, TIFF-sidor, ikonvarianter och animationsrutor till PNG. Öppna HEIC, JPEG XL och JPEG 2000-bilder som stöds utan att ladda upp dem.",
+      },
+      th: {
+        name: "โปรแกรมแปลงรูปภาพเป็น PNG",
+        description:
+          "แปลงรูปภาพบนอุปกรณ์ หน้า TIFF แบบไอคอน และเฟรมภาพเคลื่อนไหวเป็น PNG เปิดรูปภาพ HEIC, JPEG XL และ JPEG 2000 ที่รองรับโดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "Görselden PNG'ye Dönüştürücü",
+        description:
+          "Yerel görselleri, TIFF sayfalarını, simge çeşitlerini ve animasyon karelerini PNG'ye dönüştürün. HEIC, JPEG XL ve desteklenen JPEG 2000 görsellerini hiçbir yere yüklemeden açın.",
+      },
+      vi: {
+        name: "Bộ chuyển đổi ảnh sang PNG",
+        description:
+          "Chuyển đổi ảnh trên thiết bị, các trang TIFF, biến thể biểu tượng và khung hình hoạt ảnh sang PNG. Mở ảnh HEIC, JPEG XL và JPEG 2000 được hỗ trợ mà không cần tải lên.",
+      },
+      "zh-CN": {
+        name: "图片转 PNG 转换器",
+        description:
+          "将本地图片、TIFF 页面、图标变体和动画帧转换为 PNG。无需上传即可打开 HEIC、JPEG XL 和受支持的 JPEG 2000 图片。",
+      },
+      "zh-TW": {
+        name: "圖片轉 PNG 轉換器",
+        description:
+          "將本機圖片、TIFF 頁面、圖示版本與動畫畫格轉換為 PNG。無須上傳即可開啟 HEIC、JPEG XL 及支援的 JPEG 2000 圖片。",
       },
     },
   },

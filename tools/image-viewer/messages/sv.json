@@ -52,5 +52,7 @@
   "poster": "Animerad PNG: endast standardstillbilden visas. Animationens bildrutor är inte tillgängliga.",
   "precision": "Detta är en 8-bitars förhandsvisning. Högt bitdjup och HDR reduceras; färger kan skilja sig från ett redigeringsprogram med färghantering.",
   "compatibility": "Inbäddade profiler bevaras där de stöds. Hjälpbilder, djupkartor och behållarens metadata visas inte.",
-  "licenses": "Avkodarlicenser och källkod"
+  "licenses": "Avkodarlicenser och källkod",
+  "downloadPng": "Ladda ned PNG",
+  "pngNote": "Spara den valda bilden som en 8-bitars PNG. Högt bitdjup och HDR reduceras. Zoom och bakgrunder i förhandsvisningen ändrar inte den sparade bilden."
 }

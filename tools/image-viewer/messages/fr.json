@@ -52,5 +52,7 @@
   "poster": "PNG animé : seule l’image fixe par défaut est affichée. Les images d’animation ne sont pas disponibles.",
   "precision": "Cet aperçu est en 8 bits. Les profondeurs de couleur élevées et le HDR sont réduits ; les couleurs peuvent différer de celles d’un éditeur avec gestion des couleurs.",
   "compatibility": "Les profils intégrés sont conservés lorsqu’ils sont pris en charge. Les images auxiliaires, les cartes de profondeur et les métadonnées du conteneur ne sont pas affichées.",
-  "licenses": "Licences et code source des décodeurs"
+  "licenses": "Licences et code source des décodeurs",
+  "downloadPng": "Télécharger le PNG",
+  "pngNote": "Enregistrez l’image sélectionnée au format PNG 8 bits. Les profondeurs de couleur élevées et le HDR sont réduits. Le zoom et les arrière-plans de l’aperçu ne modifient pas l’image enregistrée."
 }

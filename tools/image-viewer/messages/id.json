@@ -52,5 +52,7 @@
   "poster": "PNG animasi: hanya gambar diam bawaan yang ditampilkan. Bingkai animasi tidak tersedia.",
   "precision": "Ini adalah pratinjau 8-bit. Kedalaman bit tinggi dan HDR dikurangi; warna mungkin berbeda dari editor dengan pengelolaan warna.",
   "compatibility": "Profil tertanam dipertahankan jika didukung. Gambar tambahan, peta kedalaman, dan metadata kontainer tidak ditampilkan.",
-  "licenses": "Lisensi dan sumber dekoder"
+  "licenses": "Lisensi dan sumber dekoder",
+  "downloadPng": "Unduh PNG",
+  "pngNote": "Simpan gambar yang dipilih sebagai PNG 8-bit. Kedalaman bit tinggi dan HDR dikurangi. Perbesaran dan latar belakang pratinjau tidak mengubah gambar yang disimpan."
 }
