@@ -73,6 +73,8 @@ test.each([
 test.each([
   [new RangeError("Invalid array length"), "resourceLimit"],
   [new Error("Out of memory"), "resourceLimit"],
+  [new Error("Allocating buffer failed"), "resourceLimit"],
+  [new Error("Insufficient available memory"), "resourceLimit"],
   [new Error("Password required"), "encrypted"],
   [new Error("Encrypted directory"), "encrypted"],
   [new Error("CRC mismatch"), "damaged"],
@@ -81,6 +83,12 @@ test.each([
 ])("classifies actionable failures", (reason, expected) =>
   expect(failureCode(reason)).toBe(expected)
 )
+
+test("classifies long decoder messages without a backtracking expression", () => {
+  const repeated = "allocat insufficient ".repeat(100000)
+  expect(failureCode(new Error(repeated))).toBe("damaged")
+  expect(failureCode(new Error(repeated + "memory"))).toBe("resourceLimit")
+})
 
 test("maps canvas keys predictably independent of site direction", () => {
   for (const rtl of [false, true]) {

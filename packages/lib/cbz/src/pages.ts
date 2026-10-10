@@ -93,15 +93,16 @@ export function imageMime(bytes: Uint8Array): string | null {
 export function failureCode(
   reason: unknown
 ): "resourceLimit" | "encrypted" | "damaged" {
+  const message = reason instanceof Error ? reason.message.toLowerCase() : ""
   if (
     reason instanceof RangeError ||
-    (reason instanceof Error &&
-      /out of memory|allocation|allocat.*fail|insufficient.*memory/i.test(
-        reason.message
-      ))
+    message.includes("out of memory") ||
+    message.includes("allocation") ||
+    (message.includes("allocat") && message.includes("fail")) ||
+    (message.includes("insufficient") && message.includes("memory"))
   )
     return "resourceLimit"
-  if (reason instanceof Error && /encrypt|password/i.test(reason.message))
+  if (message.includes("encrypt") || message.includes("password"))
     return "encrypted"
   return "damaged"
 }
