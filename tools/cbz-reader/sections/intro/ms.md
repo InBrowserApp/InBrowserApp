@@ -19,3 +19,7 @@ Entri yang dilindungi kata laluan tidak boleh dibuka. Imej yang rosak tidak meng
 Arkib dibaca secara setempat. Kandungan komik tidak dimuat naik, skrip tidak dilaksanakan dan sumber dokumen jauh tidak diambil. Menutup atau menggantikan komik melepaskan URL imejnya. Komik dan kedudukan bacaan tidak disimpan secara automatik.
 
 Tiada had saiz fail atau bilangan halaman dikenakan. Data imej diekstrak apabila diperlukan, dan jalur lakaran kecil menunjukkan kumpulan halaman yang berubah supaya komik panjang kekal mudah dilayari. Arkib atau imej yang sangat besar masih boleh menghabiskan memori atau sumber penyahkodan pelayar. Tutup tab lain atau gunakan peranti dengan lebih banyak memori jika ralat sumber berlaku.
+
+## Eksport PDF
+
+Pilih Eksport PDF, kemudian Sediakan PDF untuk menukar semua halaman imej mengikut susunan laluan semula jadi yang sama. PDF mengekalkan perkadaran imej, menggunakan warna putih untuk kawasan lutsinar dan mengambil bingkai statik lalai imej animasi. PDF mengandungi halaman imej tanpa OCR. Jika ada halaman yang tidak boleh dibaca atau tidak disokong, fail yang tidak lengkap tidak akan disediakan untuk dimuat turun; nombor halaman dan nama failnya akan dipaparkan. Menutup atau menggantikan komik akan membatalkan penukaran. Untuk pratonton PDF, gunakan Penukar CBZ kepada PDF.

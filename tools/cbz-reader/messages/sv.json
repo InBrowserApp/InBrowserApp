@@ -40,5 +40,26 @@
   "partial": "{count} sida/sidor kunde inte visas. Deras ursprungliga positioner bevaras. Andra sidor kontrolleras medan du läser.",
   "keyboard": "Använd vänster-/högerpil i läsytan för att bläddra i vald läsriktning. Page Down/Up går alltid framåt/bakåt; Home/End hoppar till första/sista sidan.",
   "order": "Sidorna följer naturlig sorteringsordning efter fullständig mapp- och filsökväg. Seriens metadata ändrar inte ordningen.",
-  "encrypted": "Arkivet är lösenordsskyddat. Krypterade arkiv kan inte öppnas här."
+  "encrypted": "Arkivet är lösenordsskyddat. Krypterade arkiv kan inte öppnas här.",
+  "pdfExport": {
+    "title": "Exportera PDF",
+    "action": "Förbered PDF",
+    "download": "Ladda ner PDF",
+    "cancel": "Avbryt konvertering",
+    "reading": "Läser serie…",
+    "converting": "Konverterar sida {page} av {total}…",
+    "saving": "Skapar PDF…",
+    "ready": "PDF klar · {total} sidor",
+    "failed": "PDF-filen kunde inte skapas. Ingen ofullständig fil finns att ladda ner.",
+    "damaged": "Arkivet kunde inte läsas. Det kan vara skadat eller använda ZIP-funktioner som inte stöds.",
+    "encrypted": "Arkivet är lösenordsskyddat. Krypterade arkiv kan inte öppnas här.",
+    "resourceLimit": "Webbläsaren kunde inte tilldela tillräckliga resurser. Stäng andra flikar eller prova en enhet med mer minne och öppna sedan serien igen.",
+    "engineUnavailable": "Konverteringsmotorn kunde inte starta. Ladda om sidan eller prova en uppdaterad webbläsare.",
+    "empty": "Arkivet innehåller inga bildsidor. Dolda filer och arkivmetadata ignoreras.",
+    "unsupportedPage": "Sidan använder ett bildformat som inte stöds. Ingen ofullständig PDF-fil skapades.",
+    "encryptedPage": "Sidan är lösenordsskyddad. Ingen ofullständig PDF-fil skapades.",
+    "damagedPage": "Sidan kunde inte avkodas. Den kan vara skadad eller överskrida webbläsarens bildgränser. Ingen ofullständig PDF-fil skapades.",
+    "pageFailure": "Sida {page}: {name}",
+    "note": "Exporterar alla bildsidor i naturlig sorteringsordning efter sökväg. Bildproportionerna bevaras, genomskinliga områden blir vita och animerade bilder använder sin statiska standardbildruta. PDF-filen innehåller bildsidor utan OCR."
+  }
 }

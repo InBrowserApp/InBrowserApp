@@ -1,4 +1,4 @@
-import { imageMime, indexPages } from "./core/pages"
+import { imageMime, indexPages } from "./pages"
 import type { Comic } from "./types"
 
 export async function openComic(

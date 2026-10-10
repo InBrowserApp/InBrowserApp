@@ -40,5 +40,26 @@
   "partial": "{count} pagina(’s) konden niet worden weergegeven. Hun oorspronkelijke paginaposities blijven behouden. Andere pagina’s worden tijdens het lezen gecontroleerd.",
   "keyboard": "Gebruik in het leesgebied de pijlen Links/Rechts om in de gekozen leesrichting te bladeren. Page Down/Up gaat altijd vooruit/terug; Home/End gaat naar de eerste/laatste pagina.",
   "order": "Pagina’s volgen de natuurlijke volgorde van het volledige map- en bestandspad. Stripmetadata verandert de volgorde niet.",
-  "encrypted": "Dit archief is met een wachtwoord beveiligd. Versleutelde archieven kunnen hier niet worden geopend."
+  "encrypted": "Dit archief is met een wachtwoord beveiligd. Versleutelde archieven kunnen hier niet worden geopend.",
+  "pdfExport": {
+    "title": "PDF exporteren",
+    "action": "PDF voorbereiden",
+    "download": "PDF downloaden",
+    "cancel": "Conversie annuleren",
+    "reading": "Strip lezen…",
+    "converting": "Pagina {page} van {total} converteren…",
+    "saving": "PDF maken…",
+    "ready": "PDF gereed · {total} pagina’s",
+    "failed": "De PDF kon niet worden gemaakt. Er is geen onvolledig bestand beschikbaar om te downloaden.",
+    "damaged": "Het archief kon niet worden gelezen. Het is mogelijk beschadigd of gebruikt niet-ondersteunde ZIP-functies.",
+    "encrypted": "Dit archief is met een wachtwoord beveiligd. Versleutelde archieven kunnen hier niet worden geopend.",
+    "resourceLimit": "De browser kon niet genoeg middelen vrijmaken. Sluit andere tabbladen of probeer een apparaat met meer geheugen en open de strip opnieuw.",
+    "engineUnavailable": "De conversie-engine kon niet worden gestart. Laad de pagina opnieuw of probeer een actuele browser.",
+    "empty": "Dit archief bevat geen afbeeldingspagina’s. Verborgen bestanden en archiefmetadata worden genegeerd.",
+    "unsupportedPage": "Deze pagina gebruikt een niet-ondersteund afbeeldingsformaat. Er is geen onvolledige PDF gemaakt.",
+    "encryptedPage": "Deze pagina is met een wachtwoord beveiligd. Er is geen onvolledige PDF gemaakt.",
+    "damagedPage": "Deze pagina kon niet worden gedecodeerd. Ze is mogelijk beschadigd of overschrijdt de afbeeldingslimieten van de browser. Er is geen onvolledige PDF gemaakt.",
+    "pageFailure": "Pagina {page}: {name}",
+    "note": "Exporteert alle afbeeldingspagina’s in natuurlijke padvolgorde. De beeldverhoudingen blijven behouden, transparante delen worden wit en bij bewegende afbeeldingen wordt het standaard stilstaande beeld gebruikt. De PDF bevat afbeeldingspagina’s zonder OCR."
+  }
 }

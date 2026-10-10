@@ -40,5 +40,26 @@
   "partial": "{count} trang không thể hiển thị. Vị trí gốc của các trang được giữ nguyên. Các trang khác sẽ được kiểm tra khi bạn đọc.",
   "keyboard": "Trong vùng đọc, dùng phím mũi tên trái/phải để lật trang theo hướng đọc đã chọn. Page Down/Up luôn chuyển tới/lui; Home/End nhảy đến trang đầu/cuối.",
   "order": "Các trang theo thứ tự tự nhiên dựa trên đường dẫn thư mục và tệp đầy đủ. Siêu dữ liệu truyện không làm thay đổi thứ tự.",
-  "encrypted": "Tệp nén này được bảo vệ bằng mật khẩu. Không thể mở tệp nén được mã hóa tại đây."
+  "encrypted": "Tệp nén này được bảo vệ bằng mật khẩu. Không thể mở tệp nén được mã hóa tại đây.",
+  "pdfExport": {
+    "title": "Xuất PDF",
+    "action": "Chuẩn bị PDF",
+    "download": "Tải xuống PDF",
+    "cancel": "Hủy chuyển đổi",
+    "reading": "Đang đọc truyện…",
+    "converting": "Đang chuyển đổi trang {page} trên {total}…",
+    "saving": "Đang tạo PDF…",
+    "ready": "PDF đã sẵn sàng · {total} trang",
+    "failed": "Không thể tạo PDF. Không có tệp không hoàn chỉnh để tải xuống.",
+    "damaged": "Không thể đọc tệp nén. Tệp có thể bị hỏng hoặc sử dụng tính năng ZIP không được hỗ trợ.",
+    "encrypted": "Tệp nén này được bảo vệ bằng mật khẩu. Không thể mở tệp nén được mã hóa tại đây.",
+    "resourceLimit": "Trình duyệt không thể cấp đủ tài nguyên. Hãy đóng các thẻ khác hoặc dùng thiết bị có nhiều bộ nhớ hơn, rồi mở lại truyện.",
+    "engineUnavailable": "Không thể khởi động bộ chuyển đổi. Hãy tải lại trang hoặc thử trình duyệt phiên bản mới.",
+    "empty": "Tệp nén này không chứa trang ảnh nào. Các tệp ẩn và siêu dữ liệu của tệp nén được bỏ qua.",
+    "unsupportedPage": "Trang này sử dụng định dạng ảnh không được hỗ trợ. Không có PDF không hoàn chỉnh nào được tạo.",
+    "encryptedPage": "Trang này được bảo vệ bằng mật khẩu. Không có PDF không hoàn chỉnh nào được tạo.",
+    "damagedPage": "Không thể giải mã trang này. Trang có thể bị hỏng hoặc vượt quá giới hạn xử lý ảnh của trình duyệt. Không có PDF không hoàn chỉnh nào được tạo.",
+    "pageFailure": "Trang {page}: {name}",
+    "note": "Xuất mọi trang ảnh theo thứ tự tự nhiên của đường dẫn. Tỷ lệ ảnh được giữ nguyên, vùng trong suốt chuyển thành màu trắng và ảnh động sử dụng khung hình tĩnh mặc định. PDF chứa các trang ảnh, không thực hiện OCR."
+  }
 }

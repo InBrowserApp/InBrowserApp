@@ -10,7 +10,7 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "@zip.js/zip.js": "catalog:"
+    "@workspace/cbz": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@zip.js/zip.js": "catalog:"
   }
 }

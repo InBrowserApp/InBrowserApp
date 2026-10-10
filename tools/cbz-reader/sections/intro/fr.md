@@ -19,3 +19,7 @@ Les entrées protégées par mot de passe ne peuvent pas être ouvertes. Une ima
 L’archive est lue localement. Le contenu de la BD n’est pas envoyé à un serveur, aucun script n’est exécuté et aucune ressource distante du document n’est téléchargée. Fermer ou remplacer la BD libère les URL de ses images. Aucune BD ni position de lecture n’est enregistrée automatiquement.
 
 Aucune limite de taille de fichier ou de nombre de pages n’est imposée. Les données des images sont extraites à la demande, et le volet de miniatures affiche un groupe de pages qui se déplace pour faciliter la navigation dans les longues BD. Les archives ou images très volumineuses peuvent néanmoins épuiser la mémoire du navigateur ou ses ressources de décodage. Fermez d’autres onglets ou utilisez un appareil doté de plus de mémoire en cas d’erreur de ressources.
+
+## Exporter un PDF
+
+Choisissez « Exporter le PDF », puis « Préparer le PDF » pour convertir toutes les pages sous forme d’image dans le même ordre naturel des chemins. Le PDF conserve les proportions des images, remplace les zones transparentes par du blanc et utilise l’image fixe par défaut des images animées. Il contient des pages sous forme d’image sans reconnaissance de texte (OCR). Toute page illisible ou non prise en charge empêche le téléchargement d’un fichier incomplet ; son numéro de page et son nom de fichier sont affichés. Fermer ou remplacer la BD annule la conversion. Pour prévisualiser le PDF, utilisez le Convertisseur CBZ en PDF.

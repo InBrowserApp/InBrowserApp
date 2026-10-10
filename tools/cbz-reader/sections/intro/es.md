@@ -19,3 +19,7 @@ Las entradas protegidas con contraseña no se pueden abrir. Una imagen dañada n
 El archivo se lee localmente. El contenido del cómic no se sube, no se ejecutan scripts ni se descargan recursos remotos del documento. Al cerrar o reemplazar el cómic, se liberan las URL de sus imágenes. No se guarda automáticamente el cómic ni la posición de lectura.
 
 No se imponen límites de tamaño de archivo ni de número de páginas. Los datos de las imágenes se extraen según se necesitan, y la tira de miniaturas muestra un grupo de páginas que cambia para facilitar la navegación por cómics largos. Aun así, los archivos o las imágenes muy grandes pueden agotar la memoria del navegador o sus recursos de decodificación. Cierra otras pestañas o usa un dispositivo con más memoria si se produce un error de recursos.
+
+## Exporta un PDF
+
+Elige Exportar PDF y después Preparar PDF para convertir todas las páginas de imagen en el mismo orden natural de sus rutas. El PDF conserva las proporciones de las imágenes, usa blanco para las zonas transparentes y toma el fotograma estático predeterminado de las imágenes animadas. Contiene páginas de imagen sin OCR. Cualquier página ilegible o no compatible impide descargar un archivo incompleto; se muestran su número de página y el nombre del archivo. Cerrar o reemplazar el cómic cancela la conversión. Para previsualizar el PDF, usa el Conversor de CBZ a PDF.

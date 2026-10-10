@@ -4490,6 +4490,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "cbz-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["cbz", "comic", "archive", "pdf", "converter", "offline"],
+    locales: {
+      ar: {
+        name: "محوّل CBZ إلى PDF",
+        description:
+          "حوّل قصة مصوّرة محلية بتنسيق CBZ إلى PDF بترتيب طبيعي للصفحات. حافظ على نسب أبعاد الصور، وعاين النتيجة، ونزّلها دون رفع قصتك.",
+      },
+      de: {
+        name: "CBZ-zu-PDF-Konverter",
+        description:
+          "Konvertiere einen lokalen CBZ-Comic in PDF mit natürlicher Seitenfolge. Erhalte die Bildproportionen, prüfe die Vorschau und lade das Ergebnis herunter, ohne deinen Comic hochzuladen.",
+      },
+      en: {
+        name: "CBZ to PDF Converter",
+        description:
+          "Convert a local CBZ comic to PDF in natural page order. Preserve image proportions, preview the result, and download without uploading your comic.",
+      },
+      es: {
+        name: "Conversor de CBZ a PDF",
+        description:
+          "Convierte un cómic CBZ local a PDF con el orden natural de sus páginas. Conserva las proporciones de las imágenes, previsualiza el resultado y descárgalo sin subir tu cómic.",
+      },
+      fr: {
+        name: "Convertisseur CBZ en PDF",
+        description:
+          "Convertissez une BD CBZ locale en PDF dans l’ordre naturel des pages. Conservez les proportions des images, prévisualisez le résultat et téléchargez-le sans envoyer votre BD.",
+      },
+      he: {
+        name: "ממיר CBZ ל־PDF",
+        description:
+          "המרת קומיקס מקומי בפורמט CBZ ל־PDF בסדר עמודים טבעי. שמירה על יחסי הממדים של התמונות, תצוגה מקדימה של התוצאה והורדה ללא העלאת הקומיקס.",
+      },
+      hi: {
+        name: "CBZ से PDF कन्वर्टर",
+        description:
+          "अपने डिवाइस की CBZ कॉमिक को पृष्ठों के स्वाभाविक क्रम में PDF में बदलें। चित्रों का अनुपात बनाए रखें, परिणाम का पूर्वावलोकन करें और कॉमिक अपलोड किए बिना डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter CBZ ke PDF",
+        description:
+          "Konversikan komik CBZ lokal ke PDF dengan urutan halaman alami. Pertahankan proporsi gambar, pratinjau hasilnya, dan unduh tanpa mengunggah komik Anda.",
+      },
+      it: {
+        name: "Convertitore da CBZ a PDF",
+        description:
+          "Converti un fumetto CBZ locale in PDF nell’ordine naturale delle pagine. Mantieni le proporzioni delle immagini, visualizza l’anteprima e scarica il risultato senza caricare il fumetto.",
+      },
+      ja: {
+        name: "CBZ から PDF への変換ツール",
+        description:
+          "端末内の CBZ コミックを自然なページ順で PDF に変換します。画像の縦横比を保ち、結果をプレビューしてダウンロードできます。コミックのアップロードは不要です。",
+      },
+      ko: {
+        name: "CBZ PDF 변환기",
+        description:
+          "기기에 있는 CBZ 만화를 숫자를 고려한 페이지 순서대로 PDF로 변환하세요. 이미지 비율을 유지하고 결과를 미리 본 뒤 다운로드할 수 있습니다. 만화를 업로드할 필요가 없습니다.",
+      },
+      ms: {
+        name: "Penukar CBZ kepada PDF",
+        description:
+          "Tukar komik CBZ setempat kepada PDF mengikut susunan halaman semula jadi. Kekalkan perkadaran imej, pratonton hasilnya dan muat turun tanpa memuat naik komik anda.",
+      },
+      nl: {
+        name: "CBZ-naar-PDF-converter",
+        description:
+          "Converteer een lokale CBZ-strip naar PDF met natuurlijke paginavolgorde. Behoud de beeldverhoudingen, bekijk het resultaat en download zonder je strip te uploaden.",
+      },
+      no: {
+        name: "Konverterer fra CBZ til PDF",
+        description:
+          "Konverter en lokal CBZ-tegneserie til PDF i naturlig siderekkefølge. Behold bildeproporsjonene, forhåndsvis resultatet og last ned uten å laste opp tegneserien.",
+      },
+      pl: {
+        name: "Konwerter CBZ na PDF",
+        description:
+          "Konwertuj lokalny komiks CBZ na PDF z naturalną kolejnością stron. Zachowaj proporcje obrazów, sprawdź podgląd i pobierz wynik bez przesyłania komiksu.",
+      },
+      pt: {
+        name: "Conversor de CBZ para PDF",
+        description:
+          "Converta um quadrinho CBZ local para PDF na ordem natural das páginas. Preserve as proporções das imagens, visualize o resultado e baixe sem enviar seu quadrinho.",
+      },
+      ru: {
+        name: "Конвертер CBZ в PDF",
+        description:
+          "Преобразуйте локальный комикс CBZ в PDF с естественным порядком страниц. Сохраняйте пропорции изображений, просматривайте результат и скачивайте его без отправки комикса на сервер.",
+      },
+      sv: {
+        name: "Konverterare från CBZ till PDF",
+        description:
+          "Konvertera en lokal CBZ-serie till PDF i naturlig sidordning. Bevara bildproportionerna, förhandsvisa resultatet och ladda ner utan att ladda upp serien.",
+      },
+      th: {
+        name: "โปรแกรมแปลง CBZ เป็น PDF",
+        description:
+          "แปลงการ์ตูน CBZ ในอุปกรณ์เป็น PDF ตามลำดับหน้าธรรมชาติ คงสัดส่วนภาพ ดูตัวอย่างผลลัพธ์ และดาวน์โหลดโดยไม่ต้องอัปโหลดการ์ตูน",
+      },
+      tr: {
+        name: "CBZ’den PDF’ye Dönüştürücü",
+        description:
+          "Yerel bir CBZ çizgi romanını doğal sayfa sırasıyla PDF’ye dönüştürün. Görsellerin en boy oranlarını koruyun, sonucu önizleyin ve çizgi romanınızı yüklemeden indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CBZ sang PDF",
+        description:
+          "Chuyển truyện CBZ trên thiết bị sang PDF theo thứ tự trang tự nhiên. Giữ nguyên tỷ lệ ảnh, xem trước kết quả và tải xuống mà không cần tải truyện lên.",
+      },
+      "zh-CN": {
+        name: "CBZ 转 PDF 转换器",
+        description:
+          "将本地 CBZ 漫画按页面自然顺序转换为 PDF。保留图片比例、预览转换结果并下载，无需上传漫画。",
+      },
+      "zh-TW": {
+        name: "CBZ 轉 PDF 轉換器",
+        description:
+          "將本機 CBZ 漫畫依頁面自然順序轉換為 PDF。保留圖片比例、預覽結果並下載，無須上傳漫畫。",
+      },
+    },
+  },
+  {
     slug: "certificate-public-key-parser",
     category: "network",
     icon: "lock",

@@ -42,6 +42,7 @@
     "@tool/camera": "workspace:*",
     "@tool/case-converter": "workspace:*",
     "@tool/cbz-reader": "workspace:*",
+    "@tool/cbz-to-pdf-converter": "workspace:*",
     "@tool/certificate-public-key-parser": "workspace:*",
     "@tool/chinese-uppercase-number-converter": "workspace:*",
     "@tool/chmod-calculator": "workspace:*",

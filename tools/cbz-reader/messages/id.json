@@ -40,5 +40,26 @@
   "partial": "{count} halaman tidak dapat ditampilkan. Posisi halaman aslinya dipertahankan. Halaman lain diperiksa saat Anda membaca.",
   "keyboard": "Di area baca, gunakan tombol panah Kiri/Kanan untuk berpindah halaman sesuai arah baca yang dipilih. Page Down/Up selalu bergerak maju/mundur; Home/End melompat ke halaman pertama/terakhir.",
   "order": "Halaman mengikuti urutan alami berdasarkan jalur lengkap folder dan file. Metadata komik tidak mengubah urutan.",
-  "encrypted": "Arsip ini dilindungi kata sandi. Arsip terenkripsi tidak dapat dibuka di sini."
+  "encrypted": "Arsip ini dilindungi kata sandi. Arsip terenkripsi tidak dapat dibuka di sini.",
+  "pdfExport": {
+    "title": "Ekspor PDF",
+    "action": "Siapkan PDF",
+    "download": "Unduh PDF",
+    "cancel": "Batalkan konversi",
+    "reading": "Membaca komik…",
+    "converting": "Mengonversi halaman {page} dari {total}…",
+    "saving": "Membuat PDF…",
+    "ready": "PDF siap · {total} halaman",
+    "failed": "PDF tidak dapat dibuat. File yang tidak lengkap tidak tersedia untuk diunduh.",
+    "damaged": "Arsip tidak dapat dibaca. Arsip mungkin rusak atau menggunakan fitur ZIP yang tidak didukung.",
+    "encrypted": "Arsip ini dilindungi kata sandi. Arsip terenkripsi tidak dapat dibuka di sini.",
+    "resourceLimit": "Browser tidak dapat mengalokasikan cukup sumber daya. Tutup tab lain atau coba perangkat dengan memori lebih besar, lalu buka kembali komik.",
+    "engineUnavailable": "Mesin konversi tidak dapat dimulai. Muat ulang halaman atau coba browser terbaru.",
+    "empty": "Arsip ini tidak berisi halaman gambar. File tersembunyi dan metadata arsip diabaikan.",
+    "unsupportedPage": "Halaman ini menggunakan format gambar yang tidak didukung. PDF yang tidak lengkap tidak dibuat.",
+    "encryptedPage": "Halaman ini dilindungi kata sandi. PDF yang tidak lengkap tidak dibuat.",
+    "damagedPage": "Halaman ini tidak dapat didekode. Halaman mungkin rusak atau melampaui batas gambar browser. PDF yang tidak lengkap tidak dibuat.",
+    "pageFailure": "Halaman {page}: {name}",
+    "note": "Mengekspor setiap halaman gambar dalam urutan jalur alami. Proporsi gambar dipertahankan, area transparan menjadi putih, dan gambar animasi menggunakan bingkai statis bawaannya. PDF berisi halaman gambar tanpa OCR."
+  }
 }

@@ -19,3 +19,7 @@ Không thể mở các mục được bảo vệ bằng mật khẩu. Ảnh hỏ
 Tệp nén được đọc cục bộ. Nội dung truyện không được tải lên, tập lệnh không được thực thi và tài nguyên tài liệu từ xa không được tải về. Đóng hoặc đổi truyện sẽ giải phóng các URL ảnh của truyện. Không có truyện hay vị trí đọc nào được tự động lưu.
 
 Không áp đặt giới hạn kích thước tệp hay số trang. Dữ liệu ảnh được giải nén khi cần, và dải ảnh thu nhỏ hiển thị một nhóm trang thay đổi theo vị trí để bạn vẫn dễ di chuyển trong truyện dài. Tệp nén hoặc ảnh rất lớn vẫn có thể làm cạn bộ nhớ hoặc tài nguyên giải mã của trình duyệt. Hãy đóng các thẻ khác hoặc dùng thiết bị có nhiều bộ nhớ hơn nếu xảy ra lỗi tài nguyên.
+
+## Xuất PDF
+
+Chọn Xuất PDF, rồi chọn Chuẩn bị PDF để chuyển đổi tất cả các trang ảnh theo cùng thứ tự tự nhiên của đường dẫn. PDF giữ nguyên tỷ lệ ảnh, dùng màu trắng cho vùng trong suốt và lấy khung hình tĩnh mặc định của ảnh động. PDF chứa các trang ảnh, không thực hiện OCR. Nếu có trang không đọc được hoặc không được hỗ trợ, tệp không hoàn chỉnh sẽ không được cung cấp để tải xuống; số trang và tên tệp của trang đó sẽ được hiển thị. Đóng hoặc đổi truyện sẽ hủy chuyển đổi. Để xem trước PDF, hãy dùng Trình chuyển đổi CBZ sang PDF.

@@ -8,7 +8,7 @@ import {
   Uint8ArrayReader,
 } from "@zip.js/zip.js"
 import { expect, test } from "vitest"
-import { openComic } from "./archive"
+import { openComic } from "@workspace/cbz"
 
 const signal = () => new AbortController().signal
 async function fixture(name: string) {

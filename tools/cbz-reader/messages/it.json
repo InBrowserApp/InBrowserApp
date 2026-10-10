@@ -40,5 +40,26 @@
   "partial": "{count} pagine non sono state visualizzate. Le posizioni originali delle pagine sono mantenute. Le altre pagine vengono controllate durante la lettura.",
   "keyboard": "Nell’area di lettura, usa le frecce sinistra/destra per sfogliare nella direzione selezionata. Pag Giù/Pag Su avanzano e tornano sempre indietro; Home/Fine passano alla prima/ultima pagina.",
   "order": "Le pagine seguono l’ordine naturale dei percorsi completi di cartelle e file. I metadati del fumetto non modificano la sequenza.",
-  "encrypted": "Questo archivio è protetto da password. Gli archivi crittografati non possono essere aperti qui."
+  "encrypted": "Questo archivio è protetto da password. Gli archivi crittografati non possono essere aperti qui.",
+  "pdfExport": {
+    "title": "Esporta PDF",
+    "action": "Prepara PDF",
+    "download": "Scarica PDF",
+    "cancel": "Annulla conversione",
+    "reading": "Lettura del fumetto…",
+    "converting": "Conversione della pagina {page} di {total}…",
+    "saving": "Creazione del PDF…",
+    "ready": "PDF pronto · {total} pagine",
+    "failed": "Impossibile creare il PDF. Nessun file incompleto è disponibile per il download.",
+    "damaged": "Impossibile leggere l’archivio. Potrebbe essere danneggiato o usare funzionalità ZIP non supportate.",
+    "encrypted": "Questo archivio è protetto da password. Gli archivi crittografati non possono essere aperti qui.",
+    "resourceLimit": "Il browser non è riuscito ad allocare risorse sufficienti. Chiudi altre schede o prova un dispositivo con più memoria, poi riapri il fumetto.",
+    "engineUnavailable": "Impossibile avviare il motore di conversione. Ricarica la pagina o prova un browser aggiornato.",
+    "empty": "Questo archivio non contiene pagine immagine. I file nascosti e i metadati dell’archivio vengono ignorati.",
+    "unsupportedPage": "Questa pagina usa un formato immagine non supportato. Non è stato creato alcun PDF incompleto.",
+    "encryptedPage": "Questa pagina è protetta da password. Non è stato creato alcun PDF incompleto.",
+    "damagedPage": "Impossibile decodificare questa pagina. Potrebbe essere danneggiata o superare i limiti del browser per le immagini. Non è stato creato alcun PDF incompleto.",
+    "pageFailure": "Pagina {page}: {name}",
+    "note": "Esporta tutte le pagine immagine nell’ordine naturale dei percorsi. Le proporzioni delle immagini vengono mantenute, le aree trasparenti diventano bianche e per le immagini animate viene usato il fotogramma statico predefinito. Il PDF contiene pagine immagine senza OCR."
+  }
 }

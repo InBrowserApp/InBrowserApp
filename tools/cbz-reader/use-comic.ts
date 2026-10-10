@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import { failureCode } from "./core/pages"
+import { failureCode } from "@workspace/cbz/pages"
 import { decodeImage } from "./image"
-import type { Comic, LoadedImage, Messages } from "./types"
+import type { Comic, LoadedImage } from "./types"
 
 export type OpenedComic = {
   comic: Comic
@@ -13,7 +13,9 @@ export function useComic(file: File | null) {
     file: File
     value: OpenedComic
   } | null>(null)
-  const [error, setError] = useState<keyof Messages | null>(null)
+  const [error, setError] = useState<
+    "invalid" | "empty" | ReturnType<typeof failureCode> | null
+  >(null)
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     setOpened(null)
@@ -41,7 +43,7 @@ export function useComic(file: File | null) {
       }
     }
     setLoading(true)
-    void import("./archive")
+    void import("@workspace/cbz")
       .then(async ({ openComic }) => {
         signal.throwIfAborted()
         comic = await openComic(file, signal)

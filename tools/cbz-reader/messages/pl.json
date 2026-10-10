@@ -40,5 +40,26 @@
   "partial": "{count} str. nie udało się wyświetlić. Ich pierwotne pozycje zostały zachowane. Pozostałe strony są sprawdzane podczas czytania.",
   "keyboard": "W obszarze czytania używaj strzałek w lewo i w prawo, aby zmieniać strony w wybranym kierunku czytania. Page Down/Up zawsze przesuwają do przodu/do tyłu; Home/End przechodzą do pierwszej/ostatniej strony.",
   "order": "Strony są ułożone w kolejności naturalnej według pełnych ścieżek folderów i plików. Metadane komiksu nie zmieniają tej kolejności.",
-  "encrypted": "To archiwum jest chronione hasłem. Zaszyfrowanych archiwów nie można tutaj otworzyć."
+  "encrypted": "To archiwum jest chronione hasłem. Zaszyfrowanych archiwów nie można tutaj otworzyć.",
+  "pdfExport": {
+    "title": "Eksportuj PDF",
+    "action": "Przygotuj PDF",
+    "download": "Pobierz PDF",
+    "cancel": "Anuluj konwersję",
+    "reading": "Odczytywanie komiksu…",
+    "converting": "Konwertowanie strony {page} z {total}…",
+    "saving": "Tworzenie PDF…",
+    "ready": "PDF gotowy · {total} str.",
+    "failed": "Nie udało się utworzyć pliku PDF. Niekompletny plik nie jest dostępny do pobrania.",
+    "damaged": "Nie udało się odczytać archiwum. Może być uszkodzone lub korzystać z nieobsługiwanych funkcji ZIP.",
+    "encrypted": "To archiwum jest chronione hasłem. Zaszyfrowanych archiwów nie można tutaj otworzyć.",
+    "resourceLimit": "Przeglądarka nie mogła przydzielić wystarczających zasobów. Zamknij inne karty lub użyj urządzenia z większą pamięcią, a następnie ponownie otwórz komiks.",
+    "engineUnavailable": "Nie udało się uruchomić silnika konwersji. Odśwież stronę lub spróbuj użyć aktualnej przeglądarki.",
+    "empty": "To archiwum nie zawiera stron z obrazami. Ukryte pliki i metadane archiwum są pomijane.",
+    "unsupportedPage": "Ta strona używa nieobsługiwanego formatu obrazu. Nie utworzono niekompletnego pliku PDF.",
+    "encryptedPage": "Ta strona jest chroniona hasłem. Nie utworzono niekompletnego pliku PDF.",
+    "damagedPage": "Nie udało się zdekodować tej strony. Może być uszkodzona lub przekraczać limity przetwarzania obrazów w przeglądarce. Nie utworzono niekompletnego pliku PDF.",
+    "pageFailure": "Strona {page}: {name}",
+    "note": "Eksportuje wszystkie strony z obrazami w naturalnej kolejności ścieżek. Proporcje obrazów są zachowane, przezroczyste obszary stają się białe, a obrazy animowane korzystają z domyślnej statycznej klatki. PDF zawiera strony z obrazami bez OCR."
+  }
 }

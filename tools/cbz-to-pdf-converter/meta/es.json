@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de CBZ a PDF",
+  "description": "Convierte un cómic CBZ local a PDF con el orden natural de sus páginas. Conserva las proporciones de las imágenes, previsualiza el resultado y descárgalo sin subir tu cómic."
+}

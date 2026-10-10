@@ -40,5 +40,26 @@
   "partial": "{count} halaman tidak dapat dipaparkan. Kedudukan halaman asalnya dikekalkan. Halaman lain diperiksa semasa anda membaca.",
   "keyboard": "Dalam ruang bacaan, gunakan anak panah Kiri/Kanan untuk menukar halaman mengikut arah bacaan yang dipilih. Page Down/Up sentiasa bergerak ke hadapan/belakang; Home/End melompat ke halaman pertama/terakhir.",
   "order": "Halaman mengikut susunan semula jadi berdasarkan laluan penuh folder dan fail. Metadata komik tidak mengubah turutan.",
-  "encrypted": "Arkib ini dilindungi kata laluan. Arkib yang disulitkan tidak boleh dibuka di sini."
+  "encrypted": "Arkib ini dilindungi kata laluan. Arkib yang disulitkan tidak boleh dibuka di sini.",
+  "pdfExport": {
+    "title": "Eksport PDF",
+    "action": "Sediakan PDF",
+    "download": "Muat turun PDF",
+    "cancel": "Batalkan penukaran",
+    "reading": "Membaca komik…",
+    "converting": "Menukar halaman {page} daripada {total}…",
+    "saving": "Menghasilkan PDF…",
+    "ready": "PDF sedia · {total} halaman",
+    "failed": "PDF tidak dapat dihasilkan. Fail yang tidak lengkap tidak disediakan untuk dimuat turun.",
+    "damaged": "Arkib tidak dapat dibaca. Arkib mungkin rosak atau menggunakan ciri ZIP yang tidak disokong.",
+    "encrypted": "Arkib ini dilindungi kata laluan. Arkib yang disulitkan tidak boleh dibuka di sini.",
+    "resourceLimit": "Pelayar tidak dapat memperuntukkan sumber yang mencukupi. Tutup tab lain atau cuba peranti dengan lebih banyak memori, kemudian buka semula komik.",
+    "engineUnavailable": "Enjin penukaran tidak dapat dimulakan. Muat semula halaman atau cuba pelayar versi terkini.",
+    "empty": "Arkib ini tidak mengandungi halaman imej. Fail tersembunyi dan metadata arkib diabaikan.",
+    "unsupportedPage": "Halaman ini menggunakan format imej yang tidak disokong. PDF yang tidak lengkap tidak dihasilkan.",
+    "encryptedPage": "Halaman ini dilindungi kata laluan. PDF yang tidak lengkap tidak dihasilkan.",
+    "damagedPage": "Halaman ini tidak dapat dinyahkod. Halaman mungkin rosak atau melebihi had imej pelayar. PDF yang tidak lengkap tidak dihasilkan.",
+    "pageFailure": "Halaman {page}: {name}",
+    "note": "Mengeksport setiap halaman imej mengikut susunan laluan semula jadi. Perkadaran imej dikekalkan, kawasan lutsinar menjadi putih dan imej animasi menggunakan bingkai statik lalainya. PDF mengandungi halaman imej tanpa OCR."
+  }
 }

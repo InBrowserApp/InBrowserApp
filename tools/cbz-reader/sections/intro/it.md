@@ -19,3 +19,7 @@ Le voci protette da password non possono essere aperte. Un’immagine danneggiat
 L’archivio viene letto in locale. Il contenuto del fumetto non viene caricato, gli script non vengono eseguiti e le risorse remote del documento non vengono scaricate. Chiudere o sostituire il fumetto libera gli URL delle sue immagini. Il fumetto e la posizione di lettura non vengono salvati automaticamente.
 
 Non vengono imposti limiti alla dimensione dei file o al numero di pagine. I dati delle immagini vengono estratti su richiesta e la barra delle miniature mostra un gruppo scorrevole di pagine, così anche i fumetti lunghi restano facili da esplorare. Archivi o immagini molto grandi possono comunque esaurire la memoria del browser o le risorse di decodifica. Chiudi altre schede o usa un dispositivo con più memoria se si verifica un errore relativo alle risorse.
+
+## Esporta un PDF
+
+Scegli Esporta PDF, poi Prepara PDF per convertire tutte le pagine immagine nello stesso ordine naturale dei percorsi. Il PDF mantiene le proporzioni delle immagini, usa il bianco per le aree trasparenti e il fotogramma statico predefinito per le immagini animate. Contiene pagine immagine senza OCR. Qualsiasi pagina illeggibile o non supportata impedisce il download di un file incompleto; vengono mostrati il numero di pagina e il nome del file. Chiudere o sostituire il fumetto annulla la conversione. Per un’anteprima del PDF, usa il Convertitore da CBZ a PDF.

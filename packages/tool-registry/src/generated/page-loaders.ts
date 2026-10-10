@@ -47,6 +47,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   camera: () => import("@tool/camera/page"),
   "case-converter": () => import("@tool/case-converter/page"),
   "cbz-reader": () => import("@tool/cbz-reader/page"),
+  "cbz-to-pdf-converter": () => import("@tool/cbz-to-pdf-converter/page"),
   "certificate-public-key-parser": () =>
     import("@tool/certificate-public-key-parser/page"),
   "chinese-uppercase-number-converter": () =>

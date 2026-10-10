@@ -13,7 +13,7 @@ import m from "./messages/en.json"
 import type { Comic } from "./types"
 
 const mock = vi.hoisted(() => ({ open: vi.fn(), decode: vi.fn() }))
-vi.mock("./archive", () => ({ openComic: mock.open }))
+vi.mock("@workspace/cbz", () => ({ openComic: mock.open }))
 vi.mock("./image", () => ({ decodeImage: mock.decode }))
 let book: Comic
 let serial = 0

@@ -19,3 +19,7 @@ Met een wachtwoord beveiligde bestanden kunnen niet worden geopend. Een beschadi
 Het archief wordt lokaal gelezen. De inhoud van de strip wordt niet geüpload, scripts worden niet uitgevoerd en externe documentbronnen worden niet opgehaald. Bij het sluiten of vervangen van de strip worden de afbeeldings-URL’s vrijgegeven. Strips en leesposities worden niet automatisch opgeslagen.
 
 Er zijn geen opgelegde limieten voor bestandsgrootte of aantal pagina’s. Afbeeldingsgegevens worden naar behoefte uitgepakt en de miniaturenstrook toont telkens een wisselende groep pagina’s, zodat ook lange strips goed navigeerbaar blijven. Zeer grote archieven of afbeeldingen kunnen toch het browsergeheugen of de beschikbare middelen voor decodering uitputten. Sluit andere tabbladen of gebruik een apparaat met meer geheugen als er onvoldoende middelen beschikbaar zijn.
+
+## Exporteer een PDF
+
+Kies PDF exporteren en vervolgens PDF voorbereiden om alle afbeeldingspagina’s in dezelfde natuurlijke padvolgorde te converteren. De PDF behoudt de beeldverhoudingen, gebruikt wit voor transparante delen en neemt bij bewegende afbeeldingen het standaard stilstaande beeld over. De PDF bevat afbeeldingspagina’s zonder OCR. Elke onleesbare of niet-ondersteunde pagina voorkomt dat een onvolledig bestand kan worden gedownload; het paginanummer en de bestandsnaam worden getoond. Als je de strip sluit of vervangt, wordt de conversie geannuleerd. Gebruik de CBZ-naar-PDF-converter voor een PDF-voorvertoning.
