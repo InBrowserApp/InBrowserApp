@@ -263,7 +263,7 @@ const resultCell = (source: string, cell: string) =>
   source.replace(/<c r="D4"[\s\S]*?<\/c>/, cell)
 
 test("distinguishes absent and empty typed formula caches from saved false and empty string results", () => {
-  for (const kind of ["", ' t="b"', ' t="str"', ' t="n"']) {
+  for (const kind of ["", ' t="b"', ' t="str"', ' t="n"', ' t="e"']) {
     const { book, info } = readXlsx(
       worksheet((s) => resultCell(s, `<c r="D4"${kind}><f>SUM(1,2)</f></c>`))
     )
@@ -361,3 +361,20 @@ test("does not import spreadsheet-like cells stored only inside extension metada
   expect(book.Sheets["Data 中文"]!.Z99).toBeUndefined()
   expect(info.missingCaches).toBe(1)
 })
+
+test.each(["#SPILL!", "#CALC!"])(
+  "preserves newer Excel error results as text: %s",
+  (error) => {
+    const { book, info } = readXlsx(
+      worksheet((s) =>
+        resultCell(
+          s,
+          `<c r="D4" t="e"><f>_xlfn.SEQUENCE(2)</f><v>${error}</v></c>`
+        )
+      )
+    )
+    expect(info.missingCaches).toBe(0)
+    expect(book.Sheets["Data 中文"]!.D4.v).toBe(error)
+    expect(content(book)).toContain(`office:string-value="${error}"`)
+  }
+)

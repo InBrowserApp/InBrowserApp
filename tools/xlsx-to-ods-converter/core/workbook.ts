@@ -161,6 +161,13 @@ export function readXlsx(bytes: Uint8Array) {
       delete cell.v
       delete cell.w
     }
+    // New Excel errors may have display text without a legacy numeric error
+    // code. Preserve that saved text before describe checks for missing caches.
+    for (const [address, cell] of Object.entries(sheet))
+      if (!address.startsWith("!") && cell.t === "e" && cell.w !== undefined) {
+        cell.t = "s"
+        cell.v = cell.w
+      }
     if (!Object.keys(sheet).some((address) => !address.startsWith("!")))
       delete sheet["!ref"]
   }

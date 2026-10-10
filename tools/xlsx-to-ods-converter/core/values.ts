@@ -1,4 +1,4 @@
-import { SSF, utils } from "xlsx"
+import { SSF } from "xlsx"
 import type { CellObject } from "xlsx"
 import { paragraph, xml } from "./xml"
 
@@ -42,8 +42,8 @@ export function cellXml(cell: CellObject, date1904: boolean): string {
       : `office:value-type="float" office:value="${cell.v}"`
   } else if (cell.t === "b") {
     attributes = `office:value-type="boolean" office:boolean-value="${Boolean(cell.v)}" table:style-name="boolean"`
-  } else if (cell.t === "s" || cell.t === "e") {
-    const value = cell.t === "e" ? utils.format_cell(cell) : String(cell.v)
+  } else if (cell.t === "s") {
+    const value = String(cell.v)
     return `<table:table-cell office:value-type="string" office:string-value="${xml(value)}">${paragraph(value)}</table:table-cell>`
   } else {
     throw new Error("unsupported")
