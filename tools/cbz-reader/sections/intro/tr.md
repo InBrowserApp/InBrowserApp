@@ -19,3 +19,7 @@ Parola korumalı girdiler açılamaz. ZIP dizini okunabiliyorsa hasarlı bir gö
 Arşiv yerel olarak okunur. Çizgi roman içeriği yüklenmez, betikler çalıştırılmaz ve uzak belge kaynakları alınmaz. Çizgi romanı kapatmak veya değiştirmek, görsel URL'lerini serbest bırakır. Çizgi roman veya okuma konumu otomatik olarak kaydedilmez.
 
 Dosya boyutu veya sayfa sayısı için uygulanan bir sınır yoktur. Görsel verileri gerektiğinde arşivden çıkarılır; küçük resim şeridi, uzun çizgi romanlarda gezinmeyi kolaylaştırmak için kaydırılan bir sayfa grubunu gösterir. Çok büyük arşivler veya görseller yine de tarayıcı belleğini ya da çözümleme kaynaklarını tüketebilir. Kaynak hatası oluşursa diğer sekmeleri kapatın veya daha fazla belleği olan bir cihaz kullanın.
+
+## PDF dışa aktarın
+
+Tüm görsel sayfalarını dosya yollarına göre aynı doğal sırayla dönüştürmek için PDF dışa aktar ve ardından PDF hazırla seçeneğini kullanın. PDF, görsellerin en boy oranlarını korur, saydam alanları beyaz yapar ve animasyonlu görsellerin varsayılan durağan karelerini kullanır. OCR uygulanmamış görsel sayfaları içerir. Okunamayan veya desteklenmeyen bir sayfa varsa eksik dosya indirilmesine izin verilmez; sayfa numarası ve dosya adı gösterilir. Çizgi romanı kapatmak veya değiştirmek dönüştürmeyi iptal eder. PDF önizlemesi için CBZ’den PDF’ye Dönüştürücü aracını kullanın.

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { failureCode } from "./core/pages"
+import { failureCode } from "@workspace/cbz/pages"
 import { decodeImage } from "./image"
 import type { Comic, LoadedImage, PageStatus } from "./types"
 import type { OpenedComic } from "./use-comic"

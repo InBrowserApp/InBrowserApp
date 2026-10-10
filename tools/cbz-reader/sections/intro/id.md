@@ -19,3 +19,7 @@ Entri yang dilindungi kata sandi tidak dapat dibuka. Gambar yang rusak tidak men
 Arsip dibaca secara lokal. Isi komik tidak diunggah, skrip tidak dijalankan, dan sumber daya dokumen jarak jauh tidak diambil. Menutup atau mengganti komik akan melepaskan URL gambarnya. Komik maupun posisi baca tidak disimpan secara otomatis.
 
 Tidak ada batas ukuran file atau jumlah halaman yang diberlakukan. Data gambar diekstrak sesuai kebutuhan, dan deretan pratinjau menampilkan sekelompok halaman yang bergeser agar komik panjang tetap mudah dijelajahi. Arsip atau gambar yang sangat besar tetap dapat menghabiskan memori atau sumber daya dekode browser. Tutup tab lain atau gunakan perangkat dengan memori lebih besar jika terjadi kesalahan sumber daya.
+
+## Ekspor PDF
+
+Pilih Ekspor PDF, lalu Siapkan PDF untuk mengonversi semua halaman gambar dalam urutan jalur alami yang sama. PDF mempertahankan proporsi gambar, menggunakan warna putih untuk area transparan, dan mengambil bingkai statis bawaan dari gambar animasi. PDF berisi halaman gambar tanpa OCR. Jika ada halaman yang tidak dapat dibaca atau tidak didukung, unduhan yang tidak lengkap tidak akan tersedia; nomor halaman dan nama filenya akan ditampilkan. Menutup atau mengganti komik akan membatalkan konversi. Untuk pratinjau PDF, gunakan Konverter CBZ ke PDF.

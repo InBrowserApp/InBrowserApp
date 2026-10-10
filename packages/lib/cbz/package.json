@@ -1,0 +1,20 @@
+{
+  "name": "@workspace/cbz",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/archive.ts",
+    "./types": "./src/types.ts",
+    "./pages": "./src/pages.ts",
+    "./pdf": "./src/prepare-pdf.ts",
+    "./errors": "./src/errors.ts"
+  },
+  "dependencies": {
+    "@zip.js/zip.js": "catalog:",
+    "pdf-lib": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

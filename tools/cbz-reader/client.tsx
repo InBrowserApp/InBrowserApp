@@ -16,10 +16,16 @@ import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { ImageIcon } from "@workspace/ui/icons"
 import { Reader } from "./components/reader"
 import { useComic } from "./use-comic"
+import { PdfExport } from "./pdf-export"
 import type { Messages } from "./types"
 
 export default function Client({ messages: m }: { messages: Messages }) {
-  const [file, setFile] = useState<File | null>(null)
+  const [selection, setSelection] = useState<{ file: File | null; id: number }>(
+    { file: null, id: 0 }
+  )
+  const { file } = selection
+  const setFile = (next: File | null) =>
+    setSelection((value) => ({ file: next, id: value.id + 1 }))
   const { opened, error, loading } = useComic(file)
   return (
     <>
@@ -47,7 +53,14 @@ export default function Client({ messages: m }: { messages: Messages }) {
           </p>
         ) : null}
         {opened ? (
-          <Reader key={file!.name + file!.lastModified} {...opened} m={m} />
+          <Reader key={`reader-${selection.id}`} {...opened} m={m} />
+        ) : null}
+        {opened ? (
+          <PdfExport
+            key={`export-${selection.id}`}
+            file={file!}
+            m={m.pdfExport}
+          />
         ) : null}
         {!file ? (
           <Empty className="min-h-80">

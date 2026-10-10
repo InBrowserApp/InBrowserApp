@@ -19,3 +19,7 @@ Passwortgeschützte Einträge lassen sich nicht öffnen. Ein beschädigtes Bild 
 Das Archiv wird lokal gelesen. Comic-Inhalte werden nicht hochgeladen, Skripte nicht ausgeführt und externe Dokumentressourcen nicht abgerufen. Beim Schließen oder Ersetzen des Comics werden seine Bild-URLs freigegeben. Weder der Comic noch die Leseposition werden automatisch gespeichert.
 
 Es gibt keine vorgegebenen Grenzen für Dateigröße oder Seitenanzahl. Bilddaten werden bei Bedarf extrahiert, und die Vorschauleiste zeigt einen wechselnden Seitenausschnitt, damit auch lange Comics übersichtlich bleiben. Sehr große Archive oder Bilder können dennoch den Browserspeicher oder die Dekodierungsressourcen ausschöpfen. Schließe bei einem Ressourcenfehler andere Tabs oder nutze ein Gerät mit mehr Speicher.
+
+## Eine PDF exportieren
+
+Wähle „PDF exportieren“ und anschließend „PDF vorbereiten“, um alle Bildseiten in derselben natürlichen Pfadreihenfolge zu konvertieren. Die PDF erhält die Bildproportionen, verwendet Weiß für transparente Bereiche und übernimmt bei animierten Bildern das standardmäßige Standbild. Sie enthält Bildseiten ohne OCR. Jede unlesbare oder nicht unterstützte Seite verhindert einen unvollständigen Download; ihre Seitenzahl und ihr Dateiname werden angezeigt. Wenn du den Comic schließt oder ersetzt, wird die Konvertierung abgebrochen. Für eine PDF-Vorschau nutze den CBZ-zu-PDF-Konverter.

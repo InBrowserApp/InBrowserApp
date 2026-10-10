@@ -40,5 +40,26 @@
   "partial": "{count} side(r) kunne ikke vises. De opprinnelige sideplasseringene beholdes. Andre sider kontrolleres mens du leser.",
   "keyboard": "Bruk venstre/høyre piltast i leseområdet for å bla i valgt leseretning. Page Down/Up går alltid frem/tilbake. Home/End hopper til første/siste side.",
   "order": "Sidene følger naturlig rekkefølge etter fullstendig mappe- og filsti. Tegneseriemetadata endrer ikke rekkefølgen.",
-  "encrypted": "Dette arkivet er passordbeskyttet. Krypterte arkiver kan ikke åpnes her."
+  "encrypted": "Dette arkivet er passordbeskyttet. Krypterte arkiver kan ikke åpnes her.",
+  "pdfExport": {
+    "title": "Eksporter PDF",
+    "action": "Klargjør PDF",
+    "download": "Last ned PDF",
+    "cancel": "Avbryt konvertering",
+    "reading": "Leser tegneserie…",
+    "converting": "Konverterer side {page} av {total}…",
+    "saving": "Oppretter PDF…",
+    "ready": "PDF klar · {total} sider",
+    "failed": "PDF-en kunne ikke opprettes. Ingen ufullstendig fil er tilgjengelig for nedlasting.",
+    "damaged": "Arkivet kunne ikke leses. Det kan være skadet eller bruke ZIP-funksjoner som ikke støttes.",
+    "encrypted": "Dette arkivet er passordbeskyttet. Krypterte arkiver kan ikke åpnes her.",
+    "resourceLimit": "Nettleseren kunne ikke tildele nok ressurser. Lukk andre faner eller prøv en enhet med mer minne, og åpne så tegneserien på nytt.",
+    "engineUnavailable": "Konverteringsmotoren kunne ikke starte. Last inn siden på nytt eller prøv en oppdatert nettleser.",
+    "empty": "Dette arkivet inneholder ingen bildesider. Skjulte filer og arkivmetadata ignoreres.",
+    "unsupportedPage": "Denne siden bruker et bildeformat som ikke støttes. Ingen ufullstendig PDF ble opprettet.",
+    "encryptedPage": "Denne siden er passordbeskyttet. Ingen ufullstendig PDF ble opprettet.",
+    "damagedPage": "Denne siden kunne ikke dekodes. Den kan være skadet eller overskride nettleserens bildegrenser. Ingen ufullstendig PDF ble opprettet.",
+    "pageFailure": "Side {page}: {name}",
+    "note": "Eksporterer alle bildesider i naturlig rekkefølge etter filsti. Bildeproporsjonene beholdes, gjennomsiktige områder blir hvite, og animerte bilder bruker sitt statiske standardbilde. PDF-en inneholder bildesider uten OCR."
+  }
 }

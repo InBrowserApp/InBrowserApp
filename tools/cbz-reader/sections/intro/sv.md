@@ -19,3 +19,7 @@ Lösenordsskyddade poster kan inte öppnas. En skadad bild hindrar dig inte frå
 Arkivet läses lokalt. Seriens innehåll laddas inte upp, skript körs inte och dokumentresurser hämtas inte från andra servrar. När du stänger eller byter serie frigörs dess bild-URL:er. Varken serien eller läspositionen sparas automatiskt.
 
 Det finns inga fasta gränser för filstorlek eller sidantal. Bilddata packas upp vid behov, och miniatyrfältet visar en förskjutbar grupp sidor så att även långa serier är lätta att navigera i. Mycket stora arkiv eller bilder kan ändå förbruka allt tillgängligt minne eller alla avkodningsresurser i webbläsaren. Stäng andra flikar eller använd en enhet med mer minne om ett resursfel uppstår.
+
+## Exportera en PDF
+
+Välj Exportera PDF och sedan Förbered PDF för att konvertera alla bildsidor i samma naturliga sorteringsordning efter sökväg. PDF-filen behåller bildproportionerna, använder vitt för genomskinliga områden och använder den statiska standardbildrutan för animerade bilder. Den innehåller bildsidor utan OCR. Om någon sida är oläsbar eller inte stöds erbjuds ingen ofullständig nedladdning; sidnummer och filnamn visas. Om du stänger eller byter serie avbryts konverteringen. Använd konverteraren från CBZ till PDF om du vill förhandsvisa PDF-filen.

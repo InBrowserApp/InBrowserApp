@@ -19,3 +19,7 @@ Passordbeskyttede oppføringer kan ikke åpnes. Et skadet bilde hindrer deg ikke
 Arkivet leses lokalt. Tegneserieinnhold lastes ikke opp, skript kjøres ikke, og eksterne dokumentressurser hentes ikke. Når tegneserien lukkes eller byttes ut, frigjøres bilde-URL-ene. Verken tegneserien eller leseposisjonen lagres automatisk.
 
 Det er ingen pålagte grenser for filstørrelse eller antall sider. Bildedata pakkes ut ved behov, og miniatyrbildelinjen viser en skiftende gruppe sider slik at lange tegneserier forblir enkle å navigere i. Svært store arkiver eller bilder kan likevel bruke opp nettleserens minne eller dekodingsressurser. Lukk andre faner eller bruk en enhet med mer minne hvis det oppstår en ressursfeil.
+
+## Eksporter en PDF
+
+Velg Eksporter PDF og deretter Klargjør PDF for å konvertere alle bildesider i samme naturlige rekkefølge etter filsti. PDF-en beholder bildeproporsjonene, bruker hvitt for gjennomsiktige områder og det statiske standardbildet for animerte bilder. Den inneholder bildesider uten OCR. Hvis en side er uleselig eller ikke støttes, blir ingen ufullstendig fil tilgjengelig for nedlasting; sidetallet og filnavnet vises. Hvis du lukker eller bytter tegneserie, avbrytes konverteringen. Bruk konvertereren fra CBZ til PDF for å forhåndsvise PDF-en.

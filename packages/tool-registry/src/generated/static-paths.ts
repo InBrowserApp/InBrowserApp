@@ -3222,6 +3222,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cbz-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "cbz-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "certificate-public-key-parser",
     language: "ar",
   },

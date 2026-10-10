@@ -19,3 +19,7 @@ Nie można otworzyć plików chronionych hasłem. Uszkodzony obraz nie przeszkad
 Archiwum jest odczytywane lokalnie. Zawartość komiksu nie jest przesyłana, skrypty nie są wykonywane, a zdalne zasoby dokumentu nie są pobierane. Zamknięcie lub zmiana komiksu zwalnia adresy URL jego obrazów. Komiks ani pozycja czytania nie są automatycznie zapisywane.
 
 Nie ma narzuconych limitów rozmiaru pliku ani liczby stron. Dane obrazów są wypakowywane na żądanie, a pasek miniatur pokazuje przesuwany zestaw stron, co ułatwia nawigację po długich komiksach. Bardzo duże archiwa lub obrazy mogą jednak wyczerpać pamięć przeglądarki albo zasoby dekodowania. Jeśli wystąpi błąd zasobów, zamknij inne karty lub użyj urządzenia z większą pamięcią.
+
+## Eksportuj PDF
+
+Wybierz Eksportuj PDF, a następnie Przygotuj PDF, aby przekonwertować wszystkie strony z obrazami w tej samej naturalnej kolejności ścieżek. PDF zachowuje proporcje obrazów, zastępuje przezroczyste obszary bielą i wykorzystuje domyślną statyczną klatkę obrazów animowanych. Zawiera strony z obrazami bez OCR. Jeśli jakakolwiek strona jest nieczytelna lub nieobsługiwana, niekompletny plik nie zostanie udostępniony do pobrania, a jej numer i nazwa pliku zostaną wyświetlone. Zamknięcie lub zmiana komiksu anuluje konwersję. Aby wyświetlić podgląd PDF, użyj Konwertera CBZ na PDF.

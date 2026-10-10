@@ -19,3 +19,7 @@ Itens protegidos por senha não podem ser abertos. Uma imagem danificada não im
 O arquivo compactado é lido localmente. O conteúdo dos quadrinhos não é enviado, scripts não são executados e recursos remotos do documento não são buscados. Fechar ou substituir o quadrinho libera suas URLs de imagem. Nenhum quadrinho ou posição de leitura é salvo automaticamente.
 
 Não há limites impostos de tamanho de arquivo ou quantidade de páginas. Os dados das imagens são extraídos sob demanda, e a faixa de miniaturas exibe um grupo variável de páginas para manter a navegação em quadrinhos longos. Arquivos compactados ou imagens muito grandes ainda podem esgotar a memória ou os recursos de decodificação do navegador. Feche outras abas ou use um dispositivo com mais memória se ocorrer um erro de recursos.
+
+## Exporte um PDF
+
+Escolha Exportar PDF e depois Preparar PDF para converter todas as páginas de imagem na mesma ordem natural dos caminhos. O PDF preserva as proporções das imagens, usa branco nas áreas transparentes e utiliza o quadro estático padrão de imagens animadas. Ele contém páginas de imagem sem OCR. Qualquer página ilegível ou não compatível impede o download de um arquivo incompleto; o número da página e o nome do arquivo são exibidos. Fechar ou substituir o quadrinho cancela a conversão. Para visualizar uma prévia do PDF, use o Conversor de CBZ para PDF.

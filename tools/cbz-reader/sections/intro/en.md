@@ -19,3 +19,7 @@ Password-protected entries cannot be opened. A damaged image does not stop you r
 The archive is read locally. Comic contents are not uploaded, scripts are not executed, and remote document resources are not fetched. Closing or replacing the comic releases its image URLs. No comic or reading position is saved automatically.
 
 There are no imposed file-size or page-count limits. Image data is extracted on demand, and the thumbnail strip shows a moving group of pages so long comics remain navigable. Very large archives or images can still exhaust browser memory or decoding resources. Close other tabs or use a device with more memory if a resource error occurs.
+
+## Export a PDF
+
+Choose Export PDF, then Prepare PDF to convert all image pages in the same natural path order. The PDF keeps image proportions, uses white for transparent areas, and takes the default static frame of animated images. It contains image pages without OCR. Any unreadable or unsupported page prevents an incomplete download; its page number and filename are shown. Closing or replacing the comic cancels conversion. For a PDF preview, use the CBZ to PDF Converter.

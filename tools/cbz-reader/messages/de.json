@@ -40,5 +40,26 @@
   "partial": "{count} Seite(n) konnten nicht angezeigt werden. Ihre ursprünglichen Seitenpositionen bleiben erhalten. Weitere Seiten werden beim Lesen geprüft.",
   "keyboard": "Nutze im Lesebereich die Pfeiltasten links/rechts zum Blättern in der gewählten Leserichtung. Bild ab/auf blättert immer vor/zurück; Pos1/Ende springt zur ersten/letzten Seite.",
   "order": "Die Seiten folgen der natürlichen Sortierung nach vollständigem Ordner- und Dateipfad. Comic-Metadaten ändern die Reihenfolge nicht.",
-  "encrypted": "Dieses Archiv ist passwortgeschützt. Verschlüsselte Archive lassen sich hier nicht öffnen."
+  "encrypted": "Dieses Archiv ist passwortgeschützt. Verschlüsselte Archive lassen sich hier nicht öffnen.",
+  "pdfExport": {
+    "title": "PDF exportieren",
+    "action": "PDF vorbereiten",
+    "download": "PDF herunterladen",
+    "cancel": "Konvertierung abbrechen",
+    "reading": "Comic wird gelesen…",
+    "converting": "Seite {page} von {total} wird konvertiert…",
+    "saving": "PDF wird erstellt…",
+    "ready": "PDF bereit · {total} Seiten",
+    "failed": "Die PDF konnte nicht erstellt werden. Es steht keine unvollständige Datei zum Herunterladen bereit.",
+    "damaged": "Das Archiv konnte nicht gelesen werden. Es ist möglicherweise beschädigt oder nutzt nicht unterstützte ZIP-Funktionen.",
+    "encrypted": "Dieses Archiv ist passwortgeschützt. Verschlüsselte Archive lassen sich hier nicht öffnen.",
+    "resourceLimit": "Der Browser konnte nicht genügend Ressourcen bereitstellen. Schließe andere Tabs oder nutze ein Gerät mit mehr Speicher und öffne den Comic erneut.",
+    "engineUnavailable": "Die Konvertierungs-Engine konnte nicht gestartet werden. Lade die Seite neu oder versuche es mit einem aktuellen Browser.",
+    "empty": "Dieses Archiv enthält keine Bildseiten. Versteckte Dateien und Archivmetadaten werden ignoriert.",
+    "unsupportedPage": "Diese Seite verwendet ein nicht unterstütztes Bildformat. Es wurde keine unvollständige PDF erstellt.",
+    "encryptedPage": "Diese Seite ist passwortgeschützt. Es wurde keine unvollständige PDF erstellt.",
+    "damagedPage": "Diese Seite konnte nicht dekodiert werden. Sie ist möglicherweise beschädigt oder überschreitet die Grenzen des Browsers bei der Bildverarbeitung. Es wurde keine unvollständige PDF erstellt.",
+    "pageFailure": "Seite {page}: {name}",
+    "note": "Exportiert alle Bildseiten in natürlicher Pfadreihenfolge. Die Bildproportionen bleiben erhalten, transparente Bereiche werden weiß und bei animierten Bildern wird das standardmäßige Standbild verwendet. Die PDF enthält Bildseiten ohne OCR."
+  }
 }
