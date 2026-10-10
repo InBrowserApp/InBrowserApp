@@ -21,3 +21,7 @@ Download the currently selected image, page, icon variant or composited animatio
 ## Save a JPG
 
 Choose JPG as the download format to preview the actual compressed output. Set quality from 1 to 100 and choose white, black or a custom color to fill transparency. Higher quality usually makes a larger file; even quality 100 is lossy. The selected page or frame and its full pixel dimensions are retained when settings change. JPG uses 8-bit sRGB color and reduces high bit depth and HDR. Zoom and preview backgrounds do not change the saved JPG. Only the JPG background setting fills transparent pixels.
+
+## Combine images into a PDF
+
+Use the [Image to PDF Converter](../image-to-pdf-converter/) to combine supported images or selected TIFF pages into one PDF. Select and reorder pages, rotate them and choose page size, margins and fit. Files stay on your device; open the source files again in the converter. The PDF uses still images and does not preserve animation or add OCR.

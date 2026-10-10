@@ -21,3 +21,7 @@ Seçili görseli, sayfayı, simge çeşidini veya birleştirilmiş animasyon kar
 ## JPG kaydedin
 
 Gerçek sıkıştırılmış çıktıyı önizlemek için indirme biçimi olarak JPG seçin. Kaliteyi 1 ile 100 arasında ayarlayın ve saydam alanları doldurmak için beyaz, siyah veya özel bir renk seçin. Daha yüksek kalite genellikle daha büyük bir dosya oluşturur; kalite 100 olsa bile sıkıştırma kayıplıdır. Ayarlar değiştiğinde seçilen sayfa veya kare ve tam piksel boyutları korunur. JPG, 8 bit sRGB renk kullanır ve yüksek bit derinliğini ve HDR'yi azaltır. Yakınlaştırma ve önizleme arka planları kaydedilen JPG'yi değiştirmez. Saydam pikselleri yalnızca JPG arka planı ayarı doldurur.
+
+## Görselleri bir PDF içinde birleştirin
+
+Desteklenen görselleri veya seçilen TIFF sayfalarını tek bir PDF içinde birleştirmek için [Görselden PDF Dönüştürücü](../image-to-pdf-converter/) aracını kullanın. Sayfaları seçip yeniden sıralayın, döndürün ve sayfa boyutunu, kenar boşluklarını ve sığdırma biçimini seçin. Dosyalar cihazınızda kalır; kaynak dosyaları dönüştürücüde yeniden açın. PDF durağan görseller kullanır; animasyonu korumaz veya OCR eklemez.

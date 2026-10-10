@@ -20,6 +20,11 @@ describe("client formatting utilities", () => {
   test("formats dimensions, progress, and totals", () => {
     expect(formatDimensions(320.4, 240.6)).toBe("320 x 241 px")
     expect(formatProgressLabel("{completed}/{total}", 2, 5)).toBe("2/5")
-    expect(getTotalImageSize([{ size: 10 }, { size: 25 }] as never)).toBe(35)
+    expect(
+      getTotalImageSize([
+        { file: new File(["0123456789"], "a") },
+        { file: new File(["x".repeat(25)], "b") },
+      ] as never)
+    ).toBe(35)
   })
 })

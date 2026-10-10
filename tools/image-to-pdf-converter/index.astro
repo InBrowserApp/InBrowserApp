@@ -7,65 +7,7 @@ import ImageToPdfClient from "./client"
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
 
-type ImageToPdfMessagesCatalog = Readonly<{
-  addImagesLabel: string
-  autoOrientation: string
-  balancedQuality: string
-  bestQuality: string
-  canvasUnavailableError: string
-  changeImagesLabel: string
-  clearAllLabel: string
-  containFit: string
-  coverFit: string
-  downloadPdfLabel: string
-  duplicateFileError: string
-  emptyQueueDescription: string
-  emptyQueueTitle: string
-  emptyResultDescription: string
-  emptyResultTitle: string
-  errorTitle: string
-  fileSizeLabel: string
-  fitModeDescription: string
-  fitModeLabel: string
-  generateFailedError: string
-  generateLabel: string
-  generatingLabel: string
-  imageCountLabel: string
-  invalidImageError: string
-  invalidImageTypeError: string
-  landscapeOrientation: string
-  localOnlyNote: string
-  marginDescription: string
-  marginLabel: string
-  moveDownLabel: string
-  moveUpLabel: string
-  noImagesError: string
-  orientationLabel: string
-  outputSizeLabel: string
-  pageCountLabel: string
-  pageSizeDescription: string
-  pageSizeLabel: string
-  pasteHint: string
-  portraitOrientation: string
-  previewAlt: string
-  progressLabel: string
-  qualityDescription: string
-  qualityLabel: string
-  queueDescription: string
-  queueTitle: string
-  readingImagesLabel: string
-  removeImageLabel: string
-  resultDescription: string
-  resultReadyTitle: string
-  resultTitle: string
-  rotateLabel: string
-  settingsDescription: string
-  settingsTitle: string
-  smallQuality: string
-  supportedFormatsLabel: string
-  uploadDescription: string
-  uploadTitle: string
-}>
+type ImageToPdfMessagesCatalog = typeof import("./messages/en.json")
 
 interface Props {
   lang: string

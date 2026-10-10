@@ -21,3 +21,7 @@ Laden Sie das aktuell ausgewählte Bild, die Seite, Symbolvariante oder das zusa
 ## Ein JPG speichern
 
 Wählen Sie JPG als Downloadformat, um die tatsächliche komprimierte Ausgabe in der Vorschau zu sehen. Stellen Sie die Qualität auf einen Wert von 1 bis 100 ein und wählen Sie Weiß, Schwarz oder eine benutzerdefinierte Farbe zum Füllen transparenter Bereiche. Höhere Qualität führt meist zu einer größeren Datei; selbst Qualität 100 ist verlustbehaftet. Die ausgewählte Seite oder das Einzelbild und die vollständigen Pixelabmessungen bleiben erhalten, wenn Sie die Einstellungen ändern. JPG verwendet 8-Bit-sRGB-Farben und reduziert hohe Bittiefe und HDR. Zoom und Vorschauhintergründe verändern das gespeicherte JPG nicht. Nur die Einstellung für den JPG-Hintergrund füllt transparente Pixel.
+
+## Bilder zu einer PDF zusammenführen
+
+Verwenden Sie den [Bild-zu-PDF-Konverter](../image-to-pdf-converter/), um unterstützte Bilder oder ausgewählte TIFF-Seiten zu einer PDF zusammenzuführen. Wählen Sie Seiten aus, ordnen und drehen Sie sie und legen Sie Seitengröße, Ränder und Bildanpassung fest. Dateien bleiben auf Ihrem Gerät; öffnen Sie die Quelldateien erneut im Konverter. Die PDF verwendet Standbilder; Animationen bleiben nicht erhalten, und OCR wird nicht hinzugefügt.

@@ -1,4 +1,4 @@
 {
   "name": "Image to PDF Converter",
-  "description": "Combine images into a single PDF locally in your browser."
+  "description": "Combine local images and selected TIFF pages into a PDF. Open HEIC, JPEG XL and JPEG 2000, reorder pages, rotate images and adjust the layout without uploading files."
 }

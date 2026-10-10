@@ -1,4 +1,4 @@
 {
   "name": "Convertisseur d'images en PDF",
-  "description": "Combinez des images en un seul PDF localement dans votre navigateur."
+  "description": "Combinez des images locales et des pages TIFF sélectionnées en un PDF. Ouvrez des fichiers HEIC, JPEG XL et JPEG 2000, réordonnez les pages, faites pivoter les images et ajustez la mise en page sans envoyer de fichiers."
 }

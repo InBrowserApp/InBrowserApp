@@ -1,240 +1,250 @@
-import { useEffect, useMemo, useRef, useState } from "react"
-
-import { DEFAULT_CONVERTER_OPTIONS, clampMarginMm } from "../core/options"
+import { useCallback, useEffect, useRef, useState } from "react"
+import {
+  DEFAULT_CONVERTER_OPTIONS,
+  clampMarginMm,
+  normalizeRotation,
+} from "../core/options"
 import { getOutputFileName } from "../core/file-names"
 import { createImagePdf, createPdfBlob } from "../core/pdf-document"
 import {
   getFileSignature,
-  isProbablyImageFile,
-  readImageDimensions,
-  renderImageToJpeg,
+  readSourcePages,
+  releasePages,
+  createPageRenderer,
+  ImagePageError,
 } from "./image-processing"
-
-import type {
-  ConverterOptions,
-  PdfGenerationProgress,
-  Rotation,
-} from "../core/options"
-import type { PdfImageInput } from "../core/pdf-document"
+import { imageLabel } from "./utils"
+import type { ConverterOptions, PdfGenerationProgress } from "../core/options"
 import type { ImageQueueItem, ImageToPdfMessages, PdfResult } from "./types"
 
-let fallbackItemId = 0
-
-function createItemId() {
-  if (
-    typeof crypto !== "undefined" &&
-    typeof crypto.randomUUID === "function"
-  ) {
-    return crypto.randomUUID()
-  }
-
-  fallbackItemId += 1
-  return `image-to-pdf-${fallbackItemId}`
-}
-
-function normalizeOptions(options: ConverterOptions): ConverterOptions {
-  return {
-    ...options,
-    marginMm: clampMarginMm(options.marginMm),
-  }
-}
-
-function resolveErrorMessage(error: unknown, messages: ImageToPdfMessages) {
-  if (!(error instanceof Error)) {
-    return messages.generateFailedError
-  }
-
-  if (error.message === "CANVAS_UNAVAILABLE") {
-    return messages.canvasUnavailableError
-  }
-
-  if (
-    error.message === "CANVAS_EXPORT_FAILED" ||
-    error.message === "INVALID_IMAGE"
-  ) {
-    return messages.invalidImageError
-  }
-
-  return messages.generateFailedError
-}
-
 function useImageToPdf(messages: ImageToPdfMessages) {
-  const itemsRef = useRef<readonly ImageQueueItem[]>([])
+  const itemsRef = useRef<ImageQueueItem[]>([])
+  const operation = useRef<AbortController | null>(null)
   const [items, setItems] = useState<ImageQueueItem[]>([])
-  const [options, setOptions] = useState<ConverterOptions>({
-    ...DEFAULT_CONVERTER_OPTIONS,
-  })
+  const [options, setOptions] = useState<ConverterOptions>(
+    DEFAULT_CONVERTER_OPTIONS
+  )
   const [isAddingImages, setIsAddingImages] = useState(false)
   const [isGenerating, setIsGenerating] = useState(false)
   const [generationProgress, setGenerationProgress] =
     useState<PdfGenerationProgress | null>(null)
+  const [readingProgress, setReadingProgress] = useState<{
+    name: string
+    completed: number
+    total: number
+  } | null>(null)
   const [result, setResult] = useState<PdfResult | null>(null)
   const [error, setError] = useState("")
-  const canGenerate = items.length > 0 && !isGenerating && !isAddingImages
-  const optionsKey = useMemo(() => JSON.stringify(options), [options])
-
-  useEffect(() => {
-    itemsRef.current = items
-  }, [items])
-
-  useEffect(() => {
-    setResult(null)
-  }, [optionsKey])
+  const selected = items.filter((item) => item.selected)
+  const canGenerate =
+    selected.length > 0 &&
+    selected.every((item) => !item.failure) &&
+    !isGenerating &&
+    !isAddingImages
 
   useEffect(
     () => () => {
-      for (const item of itemsRef.current) {
-        URL.revokeObjectURL(item.previewUrl)
-      }
+      operation.current?.abort()
+      releasePages(itemsRef.current)
     },
     []
   )
 
-  async function addFiles(files: readonly File[]) {
-    if (!files.length || isGenerating || isAddingImages) {
-      return
-    }
-
-    const existingSignatures = new Set(
-      itemsRef.current.map((item) => getFileSignature(item.file))
-    )
-    const nextItems: ImageQueueItem[] = []
-    let hadDuplicate = false
-    let hadInvalidType = false
-    let hadInvalidImage = false
-
-    setIsAddingImages(true)
-    setError("")
-
-    try {
-      for (const file of files) {
-        if (!isProbablyImageFile(file)) {
-          hadInvalidType = true
-          continue
-        }
-
-        const signature = getFileSignature(file)
-
-        if (existingSignatures.has(signature)) {
-          hadDuplicate = true
-          continue
-        }
-
-        existingSignatures.add(signature)
-
-        try {
-          const dimensions = await readImageDimensions(file)
-          nextItems.push({
-            id: createItemId(),
-            file,
-            name: file.name,
-            size: file.size,
-            previewUrl: URL.createObjectURL(file),
-            width: dimensions.width,
-            height: dimensions.height,
-            rotation: 0,
-          })
-        } catch {
-          hadInvalidImage = true
-        }
-      }
-
-      if (nextItems.length) {
-        setItems((currentItems) => [...currentItems, ...nextItems])
-        setResult(null)
-      }
-
-      if (hadInvalidImage) {
-        setError(messages.invalidImageError)
-      } else if (hadInvalidType) {
-        setError(messages.invalidImageTypeError)
-      } else if (hadDuplicate) {
-        setError(messages.duplicateFileError)
-      }
-    } finally {
-      setIsAddingImages(false)
-    }
-  }
-
-  function updateItems(
-    updater: (currentItems: readonly ImageQueueItem[]) => ImageQueueItem[]
-  ) {
-    setItems((currentItems) => updater(currentItems))
+  const updateItems = useCallback((next: ImageQueueItem[]) => {
+    itemsRef.current = next
+    setItems(next)
     setResult(null)
     setError("")
-  }
+  }, [])
 
-  function clearItems() {
-    for (const item of itemsRef.current) {
-      URL.revokeObjectURL(item.previewUrl)
-    }
+  const cancel = useCallback(() => {
+    operation.current?.abort()
+    operation.current = null
+    setIsAddingImages(false)
+    setIsGenerating(false)
+    setGenerationProgress(null)
+    setReadingProgress(null)
+    setResult(null)
+    setError("")
+  }, [])
 
-    updateItems(() => [])
-  }
-
-  function removeItem(id: string) {
-    const item = itemsRef.current.find((currentItem) => currentItem.id === id)
-
-    if (item) {
-      URL.revokeObjectURL(item.previewUrl)
-    }
-
-    updateItems((currentItems) =>
-      currentItems.filter((currentItem) => currentItem.id !== id)
+  async function addFiles(files: readonly File[]) {
+    if (!files.length || operation.current) return
+    const controller = new AbortController()
+    operation.current = controller
+    const pending: ImageQueueItem[] = []
+    const signatures = new Set(
+      itemsRef.current.map((item) => getFileSignature(item.file))
     )
+    let duplicate = false
+    setIsAddingImages(true)
+    setResult(null)
+    setError("")
+    try {
+      for (const file of files) {
+        const signature = getFileSignature(file)
+        if (signatures.has(signature)) {
+          duplicate = true
+          continue
+        }
+        signatures.add(signature)
+        setReadingProgress({ name: file.name, completed: 0, total: 0 })
+        const pages = await readSourcePages(
+          file,
+          controller.signal,
+          (completed, total) => {
+            if (!controller.signal.aborted)
+              setReadingProgress({ name: file.name, completed, total })
+          }
+        )
+        for (const page of pages) pending.push(page)
+        controller.signal.throwIfAborted()
+      }
+      updateItems([...itemsRef.current, ...pending])
+      if (duplicate) setError(messages.duplicateFileError)
+    } catch {
+      releasePages(pending)
+      if (!controller.signal.aborted) setError(messages.invalidImageError)
+    } finally {
+      if (operation.current === controller) {
+        operation.current = null
+        setIsAddingImages(false)
+        setReadingProgress(null)
+      }
+    }
   }
+
+  const clearItems = useCallback(() => {
+    cancel()
+    releasePages(itemsRef.current)
+    updateItems([])
+  }, [cancel, updateItems])
+
+  const removeItem = useCallback(
+    (id: string) => {
+      releasePages(itemsRef.current.filter((item) => item.id === id))
+      updateItems(itemsRef.current.filter((item) => item.id !== id))
+    },
+    [updateItems]
+  )
 
   async function generatePdf() {
+    if (operation.current) return
     if (!canGenerate) {
       setError(messages.noImagesError)
       return
     }
-
-    const generationItems = itemsRef.current.map((item) => ({ ...item }))
-    const generationOptions = normalizeOptions(options)
-
+    const controller = new AbortController()
+    operation.current = controller
+    const generationItems = itemsRef.current.filter((item) => item.selected)
+    const renderer = createPageRenderer(controller.signal)
     setIsGenerating(true)
     setResult(null)
     setError("")
     setGenerationProgress({ completed: 0, total: generationItems.length })
-
     try {
-      const images: PdfImageInput[] = []
-
-      for (const [index, item] of generationItems.entries()) {
-        images.push(
-          await renderImageToJpeg(item.file, {
-            qualityPreset: generationOptions.qualityPreset,
-            rotation: item.rotation,
-          })
-        )
-        setGenerationProgress({
-          completed: index + 1,
-          total: generationItems.length,
-        })
-      }
-
       const bytes = await createImagePdf({
-        images,
-        options: generationOptions,
+        images: generationItems.map(
+          (item) => () => renderer.render(item, options.qualityPreset)
+        ),
+        options,
+        signal: controller.signal,
+        onProgress: (progress) => {
+          if (!controller.signal.aborted) setGenerationProgress(progress)
+        },
       })
-
+      controller.signal.throwIfAborted()
       setResult({
         blob: createPdfBlob(bytes),
         fileName: getOutputFileName(generationItems),
         pageCount: generationItems.length,
       })
-    } catch (generateError) {
-      setError(resolveErrorMessage(generateError, messages))
+    } catch (reason) {
+      if (!controller.signal.aborted) {
+        if (reason instanceof ImagePageError) {
+          updateItems(
+            itemsRef.current.map((item) =>
+              item.id === reason.item.id
+                ? { ...item, failure: reason.failure }
+                : item
+            )
+          )
+          setError(
+            messages.exportErrorLabel.replace(
+              "{name}",
+              imageLabel(reason.item, messages)
+            ) +
+              " " +
+              messages.failures[reason.failure]
+          )
+        } else setError(messages.generateFailedError)
+      }
     } finally {
-      setIsGenerating(false)
-      setGenerationProgress(null)
+      renderer.close()
+      if (operation.current === controller) {
+        operation.current = null
+        setIsGenerating(false)
+        setGenerationProgress(null)
+      }
     }
   }
+
+  const moveItem = useCallback(
+    (from: number, to: number) => {
+      if (
+        from < 0 ||
+        to < 0 ||
+        from >= itemsRef.current.length ||
+        to >= itemsRef.current.length ||
+        from === to
+      )
+        return
+      const next = [...itemsRef.current]
+      const [item] = next.splice(from, 1)
+      next.splice(to, 0, item!)
+      updateItems(next)
+    },
+    [updateItems]
+  )
+
+  const moveItemDown = useCallback(
+    (index: number) => moveItem(index, index + 1),
+    [moveItem]
+  )
+  const moveItemUp = useCallback(
+    (index: number) => moveItem(index, index - 1),
+    [moveItem]
+  )
+  const rotateItem = useCallback(
+    (id: string) =>
+      updateItems(
+        itemsRef.current.map((item) =>
+          item.id === id
+            ? { ...item, rotation: normalizeRotation(item.rotation + 90) }
+            : item
+        )
+      ),
+    [updateItems]
+  )
+  const toggleItem = useCallback(
+    (id: string) =>
+      updateItems(
+        itemsRef.current.map((item) =>
+          item.id === id ? { ...item, selected: !item.selected } : item
+        )
+      ),
+    [updateItems]
+  )
+  const selectAll = useCallback(
+    (selected: boolean) =>
+      updateItems(itemsRef.current.map((item) => ({ ...item, selected }))),
+    [updateItems]
+  )
 
   return {
     addFiles,
     canGenerate,
+    cancel,
     clearItems,
     error,
     generatePdf,
@@ -242,54 +252,19 @@ function useImageToPdf(messages: ImageToPdfMessages) {
     isAddingImages,
     isGenerating,
     items,
-    moveItemDown: (index: number) => {
-      updateItems((currentItems) => moveItem(currentItems, index, index + 1))
-    },
-    moveItemUp: (index: number) => {
-      updateItems((currentItems) => moveItem(currentItems, index, index - 1))
-    },
     options,
+    readingProgress,
     removeItem,
     result,
-    rotateItem: (id: string) => {
-      updateItems((currentItems) =>
-        currentItems.map((item) =>
-          item.id === id
-            ? { ...item, rotation: ((item.rotation + 90) % 360) as Rotation }
-            : item
-        )
-      )
-    },
-    setOptions: (nextOptions: ConverterOptions) => {
-      setOptions(normalizeOptions(nextOptions))
+    moveItemDown,
+    moveItemUp,
+    rotateItem,
+    toggleItem,
+    selectAll,
+    setOptions: (next: ConverterOptions) => {
+      setOptions({ ...next, marginMm: clampMarginMm(next.marginMm) })
+      setResult(null)
     },
   }
 }
-
-function moveItem(
-  items: readonly ImageQueueItem[],
-  oldIndex: number,
-  newIndex: number
-) {
-  if (
-    oldIndex < 0 ||
-    newIndex < 0 ||
-    oldIndex >= items.length ||
-    newIndex >= items.length ||
-    oldIndex === newIndex
-  ) {
-    return [...items]
-  }
-
-  const nextItems = [...items]
-  const [movedItem] = nextItems.splice(oldIndex, 1)
-
-  if (!movedItem) {
-    return nextItems
-  }
-
-  nextItems.splice(newIndex, 0, movedItem)
-  return nextItems
-}
-
 export { useImageToPdf }

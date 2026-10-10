@@ -1,13 +1,19 @@
-Ubah foto, pindaian, tangkapan layar, dan gambar yang diekspor menjadi satu PDF tanpa mengirim file ke server. Setiap gambar yang dipilih menjadi satu halaman, dan PDF dibuat secara lokal di browser Anda.
+Gabungkan foto lokal, pindaian, dan halaman yang dipilih menjadi satu PDF tanpa mengunggah file. Setiap gambar yang dipilih menjadi halaman PDF sesuai urutan yang ditampilkan dalam antrean.
 
-## Kapan menggunakannya
+## Format dan halaman sumber
 
-Gunakan konverter ini saat Anda perlu mengumpulkan beberapa file gambar menjadi satu dokumen untuk dibagikan, diarsipkan, dikirim bersama formulir, atau dicetak. Alat ini berguna untuk pindaian dari ponsel, foto papan tulis, gambar tanda terima, ekspor desain, dan tangkapan layar yang perlu dikirim sebagai PDF, bukan sebagai lampiran gambar terpisah.
+Buka JPEG, PNG, GIF, BMP, WebP, gambar diam AVIF, TIFF, ICO, gambar diam dan koleksi HEIC/HEIF, JPEG XL, JP2, serta aliran kode JPEG 2000 (J2K). Isi file diperiksa; mengubah ekstensi tidak membuat file menjadi kompatibel. Ketersediaan dukungan bergantung pada pengodean di dalam file.
 
-## Cara kerja tata letak
+TIFF dengan beberapa halaman ditampilkan sebagai halaman terpisah. Gambar dalam koleksi, varian ikon, dan bingkai animasi GIF/WebP/JXL hasil komposit juga ditampilkan secara terpisah. Semua entri yang dapat maupun tidak dapat dibaca tercantum dalam daftar, dan semuanya dipilih pada awalnya. Batalkan pilihan atau hapus apa pun yang tidak ingin disertakan dalam PDF, termasuk bingkai atau ukuran ikon yang tidak diinginkan. Entri terpilih yang tidak dapat dibaca harus dihapus atau dibatalkan pilihannya sebelum ekspor. PNG animasi hanya menyediakan gambar diam bawaannya, dengan label poster; PDF tidak mempertahankan animasi.
 
-Tambahkan gambar, susun antrean halaman, putar gambar yang memerlukannya, lalu pilih pengaturan halaman sebelum membuat PDF. Orientasi otomatis menggunakan halaman potret untuk gambar potret dan halaman lanskap untuk gambar yang lebih lebar. Muat utuh menjaga seluruh gambar tetap terlihat di dalam margin, sedangkan penuhi mengisi area cetak dan dapat memangkas tepi gambar.
+## Pemilihan, urutan, dan tata letak
 
-## Privasi dan batasan
+Gabungkan format yang didukung, pilih halaman melalui kotak centangnya, ubah urutan antrean, dan putar gambar satu per satu sebelum membuat PDF. PDF yang disimpan mengikuti urutan entri terpilih yang ditampilkan. Gambar mini diperkecil untuk memudahkan penelusuran; ekspor menggunakan dimensi piksel penuh dari hasil dekode dengan orientasi sumber dan rotasi yang Anda pilih diterapkan.
 
-File tetap berada dalam sesi browser: pratinjau gambar, konversi, dan penyusunan PDF semuanya berjalan secara lokal. Konverter ini bergantung pada dekoder gambar browser Anda, sehingga file gambar yang tidak didukung atau rusak mungkin gagal dimuat. Kumpulan gambar yang sangat besar dapat menggunakan memori yang signifikan; kurangi dimensi gambar atau proses lebih sedikit file sekaligus jika pembuatan gagal.
+Pilih ukuran halaman, margin, orientasi, penyesuaian, dan kualitas JPEG. Orientasi otomatis mengikuti dimensi gambar setelah diputar. Muat utuh menjaga seluruh gambar di dalam margin; Penuhi mengisi area cetak dan dapat memangkas tepi. Area transparan menjadi putih. Gambar dikodekan ulang sebagai JPEG sRGB 8-bit: kompresi menghilangkan sebagian data, kedalaman bit tinggi dan HDR dikurangi, dan warna mungkin berbeda dari editor dengan pengelolaan warna. PDF ini berisi gambar; OCR dan teks yang dapat dicari tidak ditambahkan.
+
+## Privasi, pembatalan, dan batasan
+
+File dan pemrosesan tetap di perangkat ini. Batal menghentikan operasi saat ini, sedangkan Hapus semua mengosongkan antrean dan menghapus hasil sebelumnya yang tersedia untuk diunduh. Mengubah antrean atau pengaturan output membuat PDF sebelumnya tidak berlaku lagi. Input yang tidak didukung dan halaman yang tidak dapat dibaca ditandai dalam antrean; kesalahan ekspor tidak pernah menawarkan PDF yang tidak lengkap sebagai hasil yang berhasil.
+
+Urutan berwaktu HEIF/AVIF, komposisi JPEG 2000 (JPX/JPF/JPM), Motion JPEG 2000 (MJ2), SVG, dan format dokumen tidak didukung di sini. Gunakan konverter khusus untuk format lain. Gambar yang sangat besar atau rumit mungkin membutuhkan lebih banyak sumber daya daripada yang tersedia di browser atau dekoder; tidak ada batas tetap untuk ukuran file atau jumlah halaman. Tautan ke lisensi dekoder dan informasi sumber terkait tersedia di alat ini.

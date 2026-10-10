@@ -1,4 +1,4 @@
-import type { ImageQueueItem } from "./types"
+import type { ImageQueueItem, ImageToPdfMessages } from "./types"
 
 function formatBytes(value: number) {
   if (!Number.isFinite(value) || value <= 0) {
@@ -25,7 +25,10 @@ function formatDimensions(width: number, height: number) {
 }
 
 function getTotalImageSize(items: readonly ImageQueueItem[]) {
-  return items.reduce((total, item) => total + item.size, 0)
+  return [...new Set(items.map((item) => item.file))].reduce(
+    (total, file) => total + file.size,
+    0
+  )
 }
 
 function formatProgressLabel(
@@ -39,3 +42,10 @@ function formatProgressLabel(
 }
 
 export { formatBytes, formatDimensions, formatProgressLabel, getTotalImageSize }
+
+export function imageLabel(item: ImageQueueItem, m: ImageToPdfMessages) {
+  if (item.info?.poster) return `${item.name} · ${m.posterLabel}`
+  if (!item.info || item.info.count === 1) return item.name
+  const key = `${item.info.kind}Label` as const
+  return `${item.name} · ${m[key].replace("{index}", String(item.sourceIndex + 1)).replace("{total}", String(item.info.count))}`
+}

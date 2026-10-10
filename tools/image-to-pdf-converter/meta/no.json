@@ -1,4 +1,4 @@
 {
   "name": "Bilde-til-PDF-konverterer",
-  "description": "Kombiner bilder til én PDF lokalt i nettleseren din."
+  "description": "Kombiner lokale bilder og valgte TIFF-sider til én PDF. Åpne HEIC, JPEG XL og JPEG 2000, endre siderekkefølgen, roter bilder og juster oppsettet uten å laste opp filer."
 }

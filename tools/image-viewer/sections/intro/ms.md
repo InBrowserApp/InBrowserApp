@@ -21,3 +21,7 @@ Muat turun pilihan semasa sebagai PNG pegun, sama ada imej, halaman, varian ikon
 ## Simpan JPG
 
 Pilih JPG sebagai format muat turun untuk melihat pratonton hasil mampatan sebenar. Tetapkan kualiti dari 1 hingga 100 dan pilih warna putih, hitam atau warna tersuai untuk mengisi kawasan lutsinar. Kualiti yang lebih tinggi biasanya menghasilkan fail yang lebih besar; walaupun pada kualiti 100, masih berlaku kehilangan data. Halaman atau bingkai yang dipilih serta dimensi piksel penuhnya dikekalkan apabila tetapan diubah. JPG menggunakan warna sRGB 8 bit dan mengurangkan kedalaman bit tinggi serta HDR. Zum dan latar belakang pratonton tidak mengubah JPG yang disimpan. Hanya tetapan latar belakang JPG mengisi piksel lutsinar.
+
+## Gabungkan imej menjadi PDF
+
+Gunakan [Penukar Imej kepada PDF](../image-to-pdf-converter/) untuk menggabungkan imej yang disokong atau halaman TIFF yang dipilih menjadi satu PDF. Pilih dan susun semula halaman, putarkannya dan pilih saiz halaman, jidar serta padanan. Fail kekal pada peranti anda; buka semula fail sumber dalam penukar. PDF menggunakan imej pegun dan tidak mengekalkan animasi atau menambah OCR.

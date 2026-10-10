@@ -21,3 +21,7 @@ Download de geselecteerde afbeelding, pagina, pictogramvariant of het samengeste
 ## Een JPG opslaan
 
 Kies JPG als downloadformaat om de daadwerkelijke gecomprimeerde uitvoer te bekijken. Stel de kwaliteit in van 1 tot 100 en kies wit, zwart of een aangepaste kleur om transparante delen op te vullen. Een hogere kwaliteit levert meestal een groter bestand op; zelfs kwaliteit 100 gaat gepaard met verlies. De geselecteerde pagina of het geselecteerde frame en de volledige pixelafmetingen blijven behouden wanneer je instellingen wijzigt. JPG gebruikt sRGB-kleuren met een bitdiepte van 8 bits en brengt hoge bitdiepte en HDR terug. Zoom en voorbeeldachtergronden veranderen de opgeslagen JPG niet. Alleen de JPG-achtergrondinstelling vult transparante pixels op.
+
+## Afbeeldingen combineren tot een PDF
+
+Gebruik de [Afbeeldingen naar PDF-converter](../image-to-pdf-converter/) om ondersteunde afbeeldingen of geselecteerde TIFF-pagina's tot één PDF te combineren. Selecteer pagina's, wijzig hun volgorde, draai ze en kies paginagrootte, marges en passing. Bestanden blijven op je apparaat; open de bronbestanden opnieuw in de converter. De PDF gebruikt stilstaande afbeeldingen, behoudt geen animatie en voegt geen OCR toe.

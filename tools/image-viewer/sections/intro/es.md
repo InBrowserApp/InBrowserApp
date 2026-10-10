@@ -21,3 +21,7 @@ Descarga la imagen, página, variante de icono o fotograma de animación recompu
 ## Guarda un JPG
 
 Elige JPG como formato de descarga para previsualizar el resultado comprimido real. Ajusta la calidad de 1 a 100 y elige blanco, negro o un color personalizado para rellenar las áreas transparentes. Una mayor calidad suele generar un archivo más grande; incluso la calidad 100 tiene pérdida. La página o el fotograma seleccionado y sus dimensiones completas en píxeles se conservan al cambiar los ajustes. JPG usa color sRGB de 8 bits y reduce la alta profundidad de bits y el HDR. El zoom y los fondos de la vista previa no modifican el JPG guardado. Solo el ajuste de fondo JPG rellena los píxeles transparentes.
+
+## Combina imágenes en un PDF
+
+Usa el [Convertidor de imagen a PDF](../image-to-pdf-converter/) para combinar imágenes compatibles o páginas TIFF seleccionadas en un único PDF. Selecciona y reordena páginas, gíralas y elige el tamaño de página, los márgenes y el ajuste. Los archivos permanecen en tu dispositivo; vuelve a abrir los archivos de origen en el convertidor. El PDF usa imágenes estáticas y no conserva la animación ni añade OCR.

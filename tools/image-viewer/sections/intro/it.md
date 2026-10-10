@@ -21,3 +21,7 @@ Scarica l’immagine, la pagina, la variante dell’icona o il fotogramma ricomp
 ## Salva un JPG
 
 Scegli JPG come formato di download per visualizzare in anteprima il risultato effettivo della compressione. Imposta la qualità da 1 a 100 e scegli bianco, nero o un colore personalizzato per riempire le aree trasparenti. Una qualità più alta di solito produce un file più grande; anche a qualità 100 la compressione comporta una perdita di dati. La pagina o il fotogramma selezionato e le sue dimensioni complete in pixel vengono mantenuti quando cambi le impostazioni. JPG usa colori sRGB a 8 bit e riduce la profondità di colore elevata e l’HDR. Lo zoom e gli sfondi dell’anteprima non modificano il JPG salvato. Solo l’impostazione dello sfondo JPG riempie i pixel trasparenti.
+
+## Combina immagini in un PDF
+
+Usa il [Convertitore immagini in PDF](../image-to-pdf-converter/) per combinare immagini supportate o pagine TIFF selezionate in un unico PDF. Seleziona e riordina le pagine, ruotale e scegli dimensione pagina, margini e adattamento. I file restano sul tuo dispositivo; riapri i file originali nel convertitore. Il PDF usa immagini statiche e non conserva l’animazione né aggiunge OCR.

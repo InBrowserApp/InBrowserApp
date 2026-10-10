@@ -1,6 +1,14 @@
 import { afterEach, expect, test, vi } from "vitest"
-const mock = vi.hoisted(() => ({ open: vi.fn(), render: vi.fn() }))
-vi.mock("./decode", () => ({ openImage: mock.open, renderImage: mock.render }))
+const mock = vi.hoisted(() => ({
+  open: vi.fn(),
+  render: vi.fn(),
+  inspect: vi.fn(),
+}))
+vi.mock("./decode", () => ({
+  openImage: mock.open,
+  renderImage: mock.render,
+  inspectImage: mock.inspect,
+}))
 afterEach(() => vi.unstubAllGlobals())
 test("transfers owned previews and classifies decoder errors", async () => {
   const target = {
@@ -19,10 +27,17 @@ test("transfers owned previews and classifies decoder errors", async () => {
   )
   mock.render.mockReturnValue(preview)
   await target.onmessage({ data: { id: 2, type: "render", index: 3 } })
-  expect(mock.render).toHaveBeenCalledWith(3, undefined)
+  expect(mock.render).toHaveBeenCalledWith(3, undefined, undefined)
   expect(target.postMessage).toHaveBeenLastCalledWith(
     { id: 2, type: "rendered", preview },
     { transfer: [preview.bytes.buffer] }
+  )
+  mock.inspect.mockResolvedValue({ count: 3 })
+  await target.onmessage({ data: { id: 5, type: "inspect", file: "tiff" } })
+  expect(mock.inspect).toHaveBeenCalledWith("tiff")
+  expect(target.postMessage).toHaveBeenLastCalledWith(
+    { id: 5, type: "inspected", info: { count: 3 } },
+    { transfer: [] }
   )
   mock.render.mockImplementation(() => {
     throw new RangeError("allocation")

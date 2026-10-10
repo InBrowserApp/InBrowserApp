@@ -35,6 +35,7 @@ test("keeps a decoder for navigation, correlates requests and releases it on clo
     type: "render",
     index: 1,
     jpeg: undefined,
+    transform: undefined,
   })
   worker.onmessage!({
     data: { id: 2, type: "rendered", preview: { width: 123 } },
@@ -124,8 +125,39 @@ test("sends explicit JPEG options for both initial and selected images", async (
     type: "render",
     index: 2,
     jpeg,
+    transform: undefined,
   })
   worker.onmessage!({ data: { id: 2, type: "rendered", preview: {} } })
   await rendered
+  controller.abort()
+})
+
+test("inspects source pages before rendering and passes thumbnail transforms", async () => {
+  vi.stubGlobal("Worker", WorkerDouble)
+  const controller = new AbortController()
+  const session = imageSession(file, controller.signal)
+  const worker = WorkerDouble.instances[0]!
+  const pending = session.inspect()
+  expect(worker.postMessage).toHaveBeenLastCalledWith({
+    id: 1,
+    type: "inspect",
+    file,
+  })
+  worker.onmessage!({ data: { id: 1, type: "inspected", info: { count: 3 } } })
+  expect(await pending).toEqual({ count: 3 })
+  const transform = { maxDimension: 192, rotation: 90 as const }
+  const thumbnail = session.render(2, undefined, transform)
+  expect(worker.postMessage).toHaveBeenLastCalledWith({
+    id: 2,
+    type: "render",
+    index: 2,
+    jpeg: undefined,
+    transform,
+  })
+  worker.onmessage!({ data: { id: 2, type: "rendered", preview: {} } })
+  await thumbnail
+  const wrong = session.inspect()
+  worker.onmessage!({ data: { id: 3, type: "rendered" } })
+  await expect(wrong).rejects.toThrow("invalid")
   controller.abort()
 })

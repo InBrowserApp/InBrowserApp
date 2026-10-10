@@ -19,6 +19,8 @@ vi.mock("@workspace/raster-image", () => ({ imageSession: mock.session }))
 const preview: Preview = {
   mime: "image/png",
   bytes: new Uint8Array([1, 2]),
+  fullWidth: 960,
+  fullHeight: 600,
   width: 960,
   height: 600,
   delay: 0,

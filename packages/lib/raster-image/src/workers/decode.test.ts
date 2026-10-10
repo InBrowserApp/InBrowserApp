@@ -2,7 +2,7 @@
 import { readFileSync } from "node:fs"
 import { expect, test, vi } from "vitest"
 import { ImageMagick } from "@imagemagick/magick-wasm"
-import { openImage, renderImage } from "./decode"
+import { inspectImage, openImage, renderImage } from "./decode"
 
 vi.mock("@imagemagick/magick-wasm", async (original) => {
   const module = await original<typeof import("@imagemagick/magick-wasm")>()
@@ -250,4 +250,75 @@ test("encodes grayscale sources as RGB JPEG matching the sRGB output profile", a
       image.getPixels((pixels) => [...pixels.getPixel(10, 10)].slice(0, 3))
     ).toEqual([128, 128, 128])
   })
+})
+
+test("inspects TIFF without rendering, fits thumbnails and exports full-size clockwise rotation", async () => {
+  expect(await inspectImage(fixture("pages.tiff"))).toMatchObject({
+    count: 3,
+    kind: "page",
+  })
+  const thumb = renderImage(1, undefined, { maxDimension: 192 })
+  expect([
+    thumb.width,
+    thumb.height,
+    thumb.fullWidth,
+    thumb.fullHeight,
+  ]).toEqual([120, 192, 200, 320])
+  expect(renderImage(2, undefined, { maxDimension: 192 }).width).toBe(100)
+  await inspectImage(fixture("color-chart.png"))
+  const rotated = renderImage(
+    0,
+    { quality: 92, background: "#ffffff" },
+    { rotation: 90 }
+  )
+  expect([
+    rotated.width,
+    rotated.height,
+    rotated.fullWidth,
+    rotated.fullHeight,
+  ]).toEqual([200, 320, 200, 320])
+  expect(
+    pixel(rotated.bytes, 10, 10).every(
+      (v, i) => Math.abs(v - [232, 92, 40][i]!) < 4
+    )
+  ).toBe(true)
+  expect(
+    pixel(rotated.bytes, 190, 300).every(
+      (v, i) => Math.abs(v - [20, 132, 150][i]!) < 4
+    )
+  ).toBe(true)
+  expect(renderImage(0).width).toBe(320)
+  for (const rotation of [-90, 45, NaN, "90"])
+    expect(() =>
+      renderImage(0, undefined, { rotation: rotation as 90 })
+    ).toThrow("invalid")
+  for (const maxDimension of [0, -1, NaN, Infinity, 1.2])
+    expect(() => renderImage(0, undefined, { maxDimension })).toThrow("invalid")
+})
+
+test("retains later TIFF pages when one strip offset points beyond the file", async () => {
+  const bytes = new Uint8Array(await fixture("pages.tiff").arrayBuffer())
+  const view = new DataView(bytes.buffer)
+  const little = bytes[0] === 73
+  const first = view.getUint32(4, little)
+  const second = view.getUint32(
+    first + 2 + view.getUint16(first, little) * 12,
+    little
+  )
+  for (let i = 0; i < view.getUint16(second, little); i++) {
+    const entry = second + 2 + i * 12
+    if (view.getUint16(entry, little) !== 273) continue // StripOffsets
+    const count = view.getUint32(entry + 4, little)
+    const offset = count === 1 ? entry + 8 : view.getUint32(entry + 8, little)
+    for (let strip = 0; strip < count; strip++)
+      view.setUint32(offset + strip * 4, bytes.length + 100000, little)
+  }
+  expect(
+    await inspectImage(new File([bytes], "broken-middle.tiff"))
+  ).toMatchObject({ count: 3 })
+  expect(renderImage(0).width).toBe(320)
+  expect(() => renderImage(1)).toThrow(/TIFF|strip|read/i)
+  const third = renderImage(2)
+  expect([third.width, third.height]).toEqual([100, 100])
+  expect(pixel(third.bytes, 10, 10)).toEqual([232, 92, 40])
 })

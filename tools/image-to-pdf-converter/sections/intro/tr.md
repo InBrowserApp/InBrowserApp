@@ -1,13 +1,19 @@
-Fotoğrafları, taramaları, ekran görüntülerini ve dışa aktarılan görselleri sunucuya dosya göndermeden tek bir PDF'ye dönüştürün. Seçilen her görsel bir sayfa olur ve PDF tarayıcınızda yerel olarak oluşturulur.
+Yerel fotoğrafları, taramaları ve seçilen sayfaları dosyaları sunucuya yüklemeden tek bir PDF içinde birleştirin. Seçilen her görsel, kuyrukta gösterilen sırayla bir PDF sayfasına dönüşür.
 
-## Ne zaman kullanılır
+## Biçimler ve kaynak sayfalar
 
-Paylaşmak, arşivlemek, formlara eklemek veya yazdırmak için birkaç görsel dosyasını tek bir belgede toplamanız gerektiğinde bu dönüştürücüyü kullanın. Telefon taramaları, beyaz tahta fotoğrafları, fiş görselleri, tasarım çıktıları ve ayrı görsel ekleri yerine PDF olarak gönderilmesi gereken ekran görüntüleri için kullanışlıdır.
+JPEG, PNG, GIF, BMP, WebP, AVIF durağan görsellerini, TIFF, ICO, HEIC/HEIF durağan görsellerini ve koleksiyonlarını, JPEG XL, JP2 ve JPEG 2000 kod akışlarını (J2K) açın. Dosya içerikleri kontrol edilir; uzantıyı değiştirmek bir dosyayı uyumlu hale getirmez. Destek, dosyanın içindeki kodlamaya bağlıdır.
 
-## Düzen nasıl çalışır
+Çok sayfalı TIFF dosyaları ayrı sayfalar olarak görünür. Koleksiyonlar, simge çeşitleri ve birleştirilmiş GIF/WebP/JXL animasyon kareleri de ayrı ayrı görünür. Okunabilen ve okunamayan tüm öğeler listelenir ve başlangıçta tüm öğeler seçilidir. İstenmeyen kareler veya simge boyutları da dahil olmak üzere PDF'de istemediğiniz öğeleri kaldırın veya seçimlerini kaldırın. Okunamayan seçili bir öğeyi dışa aktarmadan önce kaldırmanız veya seçimini kaldırmanız gerekir. Animasyonlu PNG yalnızca poster olarak etiketlenen varsayılan durağan görselini sunar; PDF dosyaları animasyonu korumaz.
 
-Görseller ekleyin, sayfa kuyruğunu düzenleyin, gereken görselleri döndürün ve PDF oluşturmadan önce sayfa ayarlarını seçin. Otomatik yönlendirme, dikey görseller için dikey sayfalar ve daha geniş görseller için yatay sayfalar kullanır. Sığdır, tüm görseli kenar boşluğu içinde görünür tutar; kapla ise yazdırılabilir alanı doldurur ve görsel kenarlarını kırpabilir.
+## Seçim, sıra ve düzen
 
-## Gizlilik ve sınırlamalar
+Desteklenen biçimleri birlikte kullanın, onay kutularıyla sayfaları seçin, kuyruğun sırasını değiştirin ve oluşturmadan önce görselleri tek tek döndürün. Kaydedilen PDF, seçili öğelerin görüntülenen sırasını izler. Küçük resimler gezinmek için küçültülür; dışa aktarımda, kaynak yön bilgisi ve uyguladığınız döndürme ile birlikte kodu çözülmüş görselin tam piksel boyutları kullanılır.
 
-Dosyalar tarayıcı oturumunda kalır: görsel önizlemeleri, dönüştürme ve PDF birleştirme işlemlerinin tümü yerel olarak çalışır. Dönüştürücü tarayıcınızın görsel çözücüsüne bağlıdır, bu nedenle desteklenmeyen veya bozuk görsel dosyaları yüklenemeyebilir. Çok büyük görsel grupları önemli ölçüde bellek kullanabilir; oluşturma başarısız olursa görsel boyutlarını küçültün veya aynı anda daha az dosya işleyin.
+Sayfa boyutunu, kenar boşluklarını, yönü, sığdırma biçimini ve JPEG kalitesini seçin. Otomatik yön, döndürülmüş görselin boyutlarına göre belirlenir. Sığdır, görselin tamamını kenar boşluklarının içinde tutar; kapla, yazdırılabilir alanı doldurur ve kenarları kırpabilir. Saydam alanlar beyaz olur. Görseller 8 bit sRGB JPEG olarak yeniden kodlanır: sıkıştırma kayıplıdır, yüksek bit derinliği ve HDR azaltılır ve renkler, renk yönetimli bir düzenleyiciden farklı olabilir. Bu, görsellerden oluşan bir PDF'dir; OCR veya aranabilir metin eklenmez.
+
+## Gizlilik, iptal ve sınırlar
+
+Dosyalar ve işlemler bu cihazda kalır. İptal, geçerli işlemi durdurur; tümünü temizle ise kuyruğu ve önceki indirme verilerini kaldırır. Kuyruğu veya çıktı ayarlarını değiştirmek önceki PDF'yi geçersiz kılar. Desteklenmeyen girdiler ve okunamayan sayfalar kuyrukta belirtilir; dışa aktarım hatası olduğunda eksik bir PDF hiçbir zaman başarılı bir sonuç olarak sunulmaz.
+
+HEIF/AVIF zamanlanmış dizileri, JPEG 2000 kompozisyonları (JPX/JPF/JPM), Motion JPEG 2000 (MJ2), SVG ve belge biçimleri burada desteklenmez. Diğer biçimler için özel dönüştürücüleri kullanın. Çok büyük veya karmaşık görseller tarayıcının veya kod çözücünün kaynaklarını aşabilir; sabit bir dosya boyutu veya sayfa sayısı sınırı yoktur. Kod çözücü lisanslarına ve ilgili kaynak kodu bilgilerine aracın içindeki bağlantılardan ulaşılabilir.

@@ -18,7 +18,8 @@ type PdfImageInput = Readonly<{
 }>
 
 type CreateImagePdfInput = Readonly<{
-  images: readonly PdfImageInput[]
+  images: readonly (() => Promise<PdfImageInput>)[]
+  signal?: AbortSignal
   onProgress?: (progress: PdfGenerationProgress) => void
   options: ConverterOptions
 }>
@@ -29,11 +30,16 @@ async function createImagePdf({
   images,
   options,
   onProgress,
+  signal,
 }: CreateImagePdfInput) {
+  signal?.throwIfAborted()
   const pdfDocument = await PDFDocument.create()
   const marginPt = mmToPt(options.marginMm)
 
-  for (const [index, image] of images.entries()) {
+  for (const [index, loadImage] of images.entries()) {
+    signal?.throwIfAborted()
+    const image = await loadImage()
+    signal?.throwIfAborted()
     const page = resolvePageDimensions(
       options.pageSize,
       options.pageOrientation,
@@ -74,7 +80,9 @@ async function createImagePdf({
     })
   }
 
-  return pdfDocument.save()
+  const bytes = await pdfDocument.save()
+  signal?.throwIfAborted()
+  return bytes
 }
 
 function createPdfBlob(bytes: Uint8Array) {

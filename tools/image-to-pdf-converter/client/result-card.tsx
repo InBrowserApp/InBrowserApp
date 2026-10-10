@@ -114,7 +114,11 @@ function ResultCard({
       {resultUrl && result ? (
         <CardFooter className="justify-end">
           <Button asChild className="max-w-full text-center whitespace-normal">
-            <a download={result.fileName} href={resultUrl}>
+            <a
+              download={result.fileName}
+              href={resultUrl}
+              data-astro-prefetch="false"
+            >
               <Download data-icon="inline-start" />
               {messages.downloadPdfLabel}
             </a>
