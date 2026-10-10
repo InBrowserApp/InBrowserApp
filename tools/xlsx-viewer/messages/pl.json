@@ -45,5 +45,32 @@
   "dataOnly": "Ten format jest wyświetlany jako dane arkusza. Wartości, formaty liczb i scalenia są widoczne tam, gdzie są obsługiwane; rysunki, wykresy i część formatowania nie są wyświetlane.",
   "numbersTables": "Każda tabela Numbers jest wyświetlana na osobnej karcie arkusza. Oryginalne nazwy arkusza i tabeli są widoczne, jeśli są dostępne.",
   "encodingFallback": "Ten plik nie ma prawidłowego kodowania UTF-8. Użyto Windows-1252; zmień kodowanie tekstu, jeśli znaki wyglądają nieprawidłowo.",
-  "unevenRows": "Wiersze mają różną liczbę pól. Puste komórki są zachowywane; zmień separator, jeśli kolumny wyglądają nieprawidłowo."
+  "unevenRows": "Wiersze mają różną liczbę pól. Puste komórki są zachowywane; zmień separator, jeśli kolumny wyglądają nieprawidłowo.",
+  "dataExport": {
+    "converting": "Przygotowywanie eksportu…",
+    "resource": "Ten dokument wymaga więcej pamięci, niż może udostępnić ta przeglądarka. Zamknij inne karty lub spróbuj na innym urządzeniu.",
+    "download": "Pobierz eksport",
+    "format": "Format eksportu",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Wartości komórek",
+    "valueModes": {
+      "formatted": "Tekst sformatowany",
+      "raw": "Zapisane wartości"
+    },
+    "firstRowHeader": "Użyj pierwszego wiersza jako nagłówka Markdown",
+    "summary": "{rows} wierszy × {columns} kolumn",
+    "missingCached": "Liczba komórek z formułami bez zapisanego wyniku: {count}. Są eksportowane jako puste komórki.",
+    "empty": "Wybrany obszar nie zawiera zapisanych wartości ani formuł.",
+    "formatNote": "CSV i TSV ujmują w cudzysłowy pola z separatorami, cudzysłowami lub podziałami wiersza. JSON jest tablicą wierszy, łącznie z pierwszym; puste komórki mają wartość null. Markdown może użyć pierwszego wiersza jako nagłówka lub dodać pusty nagłówek. Pobierane pliki używają UTF-8.",
+    "valuesNote": "Tekst sformatowany stosuje obsługiwane formaty liczb, w tym daty i zera wiodące; formaty zależne od ustawień regionalnych mogą różnić się od Excela. Zapisane wartości zachowują liczby i wartości logiczne; daty używają numerów seryjnych Excela. Wartości tekstowe pozostają tekstem. Błędy arkusza pozostają widocznymi ciągami znaków.",
+    "scopeNote": "Eksportowane są tylko zapisane wartości komórek. Formuły nie są przeliczane; brakujące zapisane wyniki stają się pustymi komórkami. Ukryte wiersze i kolumny są uwzględniane. Scalone komórki nie są rozwijane. Wykresy, obrazy, komentarze, makra i style nie są eksportowane. Domyślny zakres zawiera zapisane wartości lub formuły; puste komórki w jego obrębie są zachowywane.",
+    "title": "Eksportuj arkusz",
+    "action": "Przygotuj eksport",
+    "error": "Nie można wyeksportować tego arkusza. Spróbuj ponownie lub otwórz mniej złożony skoroszyt."
+  }
 }

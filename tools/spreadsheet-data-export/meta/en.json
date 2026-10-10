@@ -1,0 +1,4 @@
+{
+  "name": "Spreadsheet Data Exporter",
+  "description": "Export an Excel worksheet to CSV, TSV, JSON, or Markdown in your browser. Choose a sheet and cell range, preview the data, and download without uploading your workbook."
+}

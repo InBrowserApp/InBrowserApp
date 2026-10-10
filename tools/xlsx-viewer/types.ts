@@ -1,3 +1,4 @@
+import type { Session } from "@workspace/spreadsheet-export/types"
 import type { ImportNotice } from "./formats"
 import type messages from "./messages/en.json"
 import type { CellDetails } from "./core/cells"
@@ -17,5 +18,6 @@ export type Reader = {
   zoom: (value: number | "page-width") => void
   go: (reference: string) => void
   copy: () => void
+  exportSession: () => Promise<Session>
   dispose: () => void
 }

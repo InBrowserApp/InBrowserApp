@@ -1,0 +1,4 @@
+{
+  "name": "試算表資料匯出工具",
+  "description": "在瀏覽器中將 Excel 工作表匯出為 CSV、TSV、JSON 或 Markdown。選擇工作表與儲存格範圍，預覽資料並下載，無須上傳活頁簿。"
+}

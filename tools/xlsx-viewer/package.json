@@ -15,7 +15,8 @@
     "xlsx": "catalog:",
     "papaparse": "catalog:",
     "fflate": "catalog:",
-    "xml-js": "catalog:"
+    "xml-js": "catalog:",
+    "@workspace/spreadsheet-export": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

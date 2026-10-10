@@ -19,6 +19,7 @@ import { acceptedFiles, defaultImportOptions, isDelimited } from "./formats"
 import { ImportControls } from "./components/import-options"
 import { Worksheets } from "./components/worksheets"
 import { Toolbar } from "./components/toolbar"
+import { DataExport } from "./data-export"
 import { useReader } from "./use-reader"
 import type { Messages } from "./types"
 import "./viewer.css"
@@ -76,18 +77,18 @@ export default function Client({ messages: m }: { messages: Messages }) {
         dir={direction}
         value={String(state.sheet)}
         activationMode="manual"
-        onValueChange={(value) => reader.current?.sheet(Number(value))}
+        onValueChange={(value) => reader?.sheet(Number(value))}
         className="min-h-0 flex-1 gap-0 overflow-hidden"
       >
-        {reader.current && state.sheets.length ? (
-          <Toolbar messages={m} state={state} reader={reader.current} />
+        {reader && state.sheets.length ? (
+          <Toolbar messages={m} state={state} reader={reader} />
         ) : null}
         {loading ? (
           <p
             role="status"
             className="flex items-center justify-center gap-2 p-6"
           >
-            <Spinner />
+            <Spinner aria-hidden="true" />
             {m.loading}
           </p>
         ) : null}
@@ -117,10 +118,18 @@ export default function Client({ messages: m }: { messages: Messages }) {
             aria-busy={loading}
           ></div>
         </TabsContent>
-        {reader.current && state.sheets.length ? (
+        {reader && state.sheets.length ? (
           <Worksheets state={state} messages={m} />
         ) : null}
       </Tabs>
+      {reader ? (
+        <DataExport
+          key={state.sheet}
+          reader={reader}
+          sheet={state.sheet}
+          messages={m.dataExport}
+        />
+      ) : null}
     </DocumentWorkspace>
   )
 }

@@ -1,0 +1,4 @@
+{
+  "name": "Esportatore di dati da fogli di calcolo",
+  "description": "Esporta un foglio di lavoro Excel in CSV, TSV, JSON o Markdown nel browser. Scegli un foglio e un intervallo di celle, visualizza i dati in anteprima e scaricali senza caricare la cartella di lavoro su un server."
+}

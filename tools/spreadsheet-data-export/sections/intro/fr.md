@@ -1,0 +1,17 @@
+## Exporter une feuille de calcul dans un format portable
+
+Ouvrez un fichier .xlsx, .xlsm, .xltx ou .xltm local ou déposez-le dans l’outil d’exportation. Choisissez une feuille de calcul par son nom d’origine, y compris parmi les feuilles masquées, puis sélectionnez CSV, TSV, JSON ou Markdown. Prévisualisez le résultat, copiez-le ou téléchargez un fichier UTF-8 dont le nom reprend ceux du classeur et de la feuille. Remplacer ou fermer le fichier annule le travail inachevé et supprime les téléchargements précédents. La Visionneuse de feuilles de calcul propose également l’action Exporter la feuille de calcul pour la feuille actuelle.
+
+La plage de cellules par défaut est le plus petit rectangle contenant des valeurs enregistrées ou des formules. Les cellules et lignes vides à l’intérieur de ce rectangle restent dans le résultat. Vous pouvez saisir une autre plage, comme A1:D20, et choisir Appliquer la plage. Une feuille vide produit un fichier texte vide ou un tableau JSON vide, sauf si vous choisissez explicitement une plage.
+
+## Choisir la représentation des valeurs et des en-têtes
+
+Le texte mis en forme suit les formats numériques pris en charge, en conservant les dates affichées et les formats numériques avec zéros initiaux lorsqu’ils sont disponibles. Les formats dépendant des paramètres régionaux peuvent différer d’Excel. Les valeurs enregistrées conservent les nombres et les booléens ; les dates restent des numéros de série Excel, sans ajout d’un fuseau horaire. Les cellules textuelles conservent leur texte dans les deux modes. Les formules utilisent leurs résultats enregistrés, sans recalcul. Un résultat enregistré manquant devient une cellule vide, avec un avertissement dans l’interface. Les erreurs de la feuille de calcul restent des chaînes lisibles comme #DIV/0!.
+
+CSV et TSV entourent de guillemets les champs contenant des séparateurs, des guillemets ou des sauts de ligne. JSON est un tableau de tableaux représentant les lignes : la première ligne reste dans les données, les en-têtes en double ou vides ne deviennent pas des clés d’objet et les cellules vides utilisent null. Markdown peut traiter la première ligne comme un en-tête ou ajouter un en-tête vide au-dessus de toutes les lignes de données. Les signes Markdown, le HTML, les barres verticales et les sauts de ligne des cellules sont échappés ou représentés de manière sûre. Les téléchargements utilisent UTF-8 sans marque d’ordre des octets ; choisissez UTF-8 lors de l’importation dans une autre application.
+
+## Traitement local et compatibilité
+
+Votre classeur reste dans ce navigateur et n’est ni envoyé à un serveur ni enregistré par l’outil. Les macros, les scripts et les connexions à des données externes ne sont ni exécutés ni actualisés. Les lignes et colonnes masquées sont incluses dans la plage sélectionnée. Les cellules fusionnées ne sont pas développées en valeurs répétées. Les graphiques, les images, les commentaires et la mise en forme du classeur ne font pas partie de ces formats texte.
+
+Un message d’erreur clair s’affiche pour les classeurs chiffrés, endommagés ou non pris en charge. Il n’existe aucune limite fixe de taille de fichier, de nombre de feuilles, de lignes ou de colonnes, mais une exportation volumineuse peut dépasser la mémoire du navigateur. Cette fonction exporte les données enregistrées ; elle ne modifie pas le classeur et ne garantit pas qu’une autre application de tableur interprétera les champs en texte brut de la même manière.

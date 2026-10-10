@@ -17758,6 +17758,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "spreadsheet-data-export",
+    language: "ar",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "de",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "en",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "es",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "fr",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "he",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "hi",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "id",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "it",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "ja",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "ko",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "ms",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "nl",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "no",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "pl",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "pt",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "ru",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "sv",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "th",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "tr",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "vi",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "zh-CN",
+  },
+  {
+    slug: "spreadsheet-data-export",
+    language: "zh-TW",
+  },
+  {
     slug: "sql-formatter-and-linter",
     language: "ar",
   },

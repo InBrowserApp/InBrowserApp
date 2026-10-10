@@ -1,0 +1,4 @@
+{
+  "name": "电子表格数据导出器",
+  "description": "在浏览器中将 Excel 工作表导出为 CSV、TSV、JSON 或 Markdown。选择工作表和单元格区域，预览数据并下载，无需上传工作簿。"
+}

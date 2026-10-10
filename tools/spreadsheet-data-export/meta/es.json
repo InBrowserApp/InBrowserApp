@@ -1,0 +1,4 @@
+{
+  "name": "Exportador de datos de hojas de cálculo",
+  "description": "Exporta una hoja de Excel a CSV, TSV, JSON o Markdown en tu navegador. Elige una hoja y un rango de celdas, previsualiza los datos y descárgalos sin subir tu libro."
+}

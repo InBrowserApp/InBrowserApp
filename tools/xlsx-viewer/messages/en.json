@@ -45,5 +45,32 @@
   "dataOnly": "This format is shown as worksheet data. Values, number formats, and merges appear where supported; drawings, charts, and some formatting are not shown.",
   "numbersTables": "Each Numbers table appears as a separate worksheet tab. Its original sheet and table names are shown when available.",
   "encodingFallback": "This file is not valid UTF-8. Windows-1252 was used; change Text encoding if characters look incorrect.",
-  "unevenRows": "Rows have different numbers of fields. Empty cells are preserved; change Separator if columns look incorrect."
+  "unevenRows": "Rows have different numbers of fields. Empty cells are preserved; change Separator if columns look incorrect.",
+  "dataExport": {
+    "converting": "Preparing export…",
+    "resource": "This document needs more memory than this browser can provide. Close other tabs or try another device.",
+    "download": "Download export",
+    "format": "Export format",
+    "formats": {
+      "csv": "CSV",
+      "tsv": "TSV",
+      "json": "JSON",
+      "markdown": "Markdown"
+    },
+    "values": "Cell values",
+    "valueModes": {
+      "formatted": "Formatted text",
+      "raw": "Stored values"
+    },
+    "firstRowHeader": "Use the first row as a Markdown header",
+    "summary": "{rows} rows × {columns} columns",
+    "missingCached": "{count} formula cells have no saved result and are exported as blanks.",
+    "empty": "The selected area contains no saved values or formulas.",
+    "formatNote": "CSV and TSV quote separators, quotes, and line breaks. JSON is an array of rows, including the first row; blank cells are null. Markdown can use the first row as a header or add an empty header. Downloads use UTF-8.",
+    "valuesNote": "Formatted text follows supported number formats, including dates and leading zeros; locale-dependent formats may differ from Excel. Stored values keep numbers and booleans; dates use Excel serial numbers. Text values remain text. Spreadsheet errors remain visible strings.",
+    "scopeNote": "Only saved cell values are exported. Formulas are not recalculated; missing saved results become blanks. Hidden rows and columns are included. Merged cells are not expanded. Charts, images, comments, macros, and styling are not exported. The default range contains saved values or formulas; blank cells inside it are kept.",
+    "title": "Export worksheet",
+    "action": "Prepare export",
+    "error": "Unable to export this worksheet. Try again or open a less complex workbook."
+  }
 }

@@ -24281,6 +24281,142 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "spreadsheet-data-export",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "xlsx",
+      "xlsm",
+      "xltx",
+      "xltm",
+      "excel",
+      "spreadsheet",
+      "csv",
+      "tsv",
+      "json",
+      "markdown",
+      "export",
+      "local",
+    ],
+    locales: {
+      ar: {
+        name: "مصدّر بيانات جداول البيانات",
+        description:
+          "صدّر ورقة عمل Excel إلى CSV أو TSV أو JSON أو Markdown في متصفحك. اختر ورقة ونطاق خلايا، وعاين البيانات ونزّلها دون رفع المصنف.",
+      },
+      de: {
+        name: "Tabellendaten-Exporter",
+        description:
+          "Exportieren Sie ein Excel-Arbeitsblatt im Browser als CSV, TSV, JSON oder Markdown. Wählen Sie ein Blatt und einen Zellbereich, sehen Sie die Daten an und laden Sie sie herunter, ohne Ihre Arbeitsmappe hochzuladen.",
+      },
+      en: {
+        name: "Spreadsheet Data Exporter",
+        description:
+          "Export an Excel worksheet to CSV, TSV, JSON, or Markdown in your browser. Choose a sheet and cell range, preview the data, and download without uploading your workbook.",
+      },
+      es: {
+        name: "Exportador de datos de hojas de cálculo",
+        description:
+          "Exporta una hoja de Excel a CSV, TSV, JSON o Markdown en tu navegador. Elige una hoja y un rango de celdas, previsualiza los datos y descárgalos sin subir tu libro.",
+      },
+      fr: {
+        name: "Exportateur de données de feuilles de calcul",
+        description:
+          "Exportez une feuille Excel en CSV, TSV, JSON ou Markdown dans votre navigateur. Choisissez une feuille et une plage de cellules, prévisualisez les données et téléchargez-les sans envoyer votre classeur à un serveur.",
+      },
+      he: {
+        name: "כלי לייצוא נתוני גיליונות אלקטרוניים",
+        description:
+          "ייצוא גיליון עבודה של Excel ל-CSV, TSV, JSON או Markdown בדפדפן. אפשר לבחור גיליון וטווח תאים, לצפות בנתונים ולהוריד אותם ללא העלאת חוברת העבודה.",
+      },
+      hi: {
+        name: "स्प्रेडशीट डेटा निर्यातक",
+        description:
+          "अपने ब्राउज़र में Excel वर्कशीट को CSV, TSV, JSON या Markdown में निर्यात करें। शीट और सेल क्षेत्र चुनें, डेटा का पूर्वावलोकन करें और वर्कबुक अपलोड किए बिना डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengekspor Data Lembar Bentang",
+        description:
+          "Ekspor lembar kerja Excel ke CSV, TSV, JSON, atau Markdown di browser Anda. Pilih lembar dan rentang sel, pratinjau data, lalu unduh tanpa mengunggah buku kerja Anda.",
+      },
+      it: {
+        name: "Esportatore di dati da fogli di calcolo",
+        description:
+          "Esporta un foglio di lavoro Excel in CSV, TSV, JSON o Markdown nel browser. Scegli un foglio e un intervallo di celle, visualizza i dati in anteprima e scaricali senza caricare la cartella di lavoro su un server.",
+      },
+      ja: {
+        name: "スプレッドシートデータエクスポートツール",
+        description:
+          "ブラウザーでExcelワークシートをCSV、TSV、JSON、Markdownにエクスポートできます。シートとセル範囲を選び、データをプレビューして、ブックをアップロードせずにダウンロードできます。",
+      },
+      ko: {
+        name: "스프레드시트 데이터 내보내기",
+        description:
+          "브라우저에서 Excel 워크시트를 CSV, TSV, JSON 또는 Markdown으로 내보내세요. 시트와 셀 범위를 선택하고 데이터를 미리 본 다음 통합 문서를 업로드하지 않고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengeksport Data Hamparan",
+        description:
+          "Eksport lembaran kerja Excel kepada CSV, TSV, JSON atau Markdown dalam pelayar anda. Pilih lembaran dan julat sel, pratonton data dan muat turun tanpa memuat naik buku kerja anda.",
+      },
+      nl: {
+        name: "Exporttool voor spreadsheetgegevens",
+        description:
+          "Exporteer een Excel-werkblad naar CSV, TSV, JSON of Markdown in je browser. Kies een werkblad en celbereik, bekijk de gegevens en download ze zonder je werkmap te uploaden.",
+      },
+      no: {
+        name: "Eksportverktøy for regnearkdata",
+        description:
+          "Eksporter et Excel-regneark til CSV, TSV, JSON eller Markdown i nettleseren. Velg et ark og celleområde, forhåndsvis dataene og last ned uten å laste opp arbeidsboken.",
+      },
+      pl: {
+        name: "Eksporter danych arkuszy kalkulacyjnych",
+        description:
+          "Eksportuj arkusz Excel do CSV, TSV, JSON lub Markdown w przeglądarce. Wybierz arkusz i zakres komórek, przejrzyj dane i pobierz je bez przesyłania skoroszytu na serwer.",
+      },
+      pt: {
+        name: "Exportador de dados de planilhas",
+        description:
+          "Exporte uma planilha do Excel para CSV, TSV, JSON ou Markdown no navegador. Escolha uma planilha e um intervalo de células, visualize os dados e baixe o resultado sem enviar sua pasta de trabalho.",
+      },
+      ru: {
+        name: "Экспорт данных таблиц",
+        description:
+          "Экспортируйте лист Excel в CSV, TSV, JSON или Markdown прямо в браузере. Выберите лист и диапазон ячеек, просмотрите данные и скачайте результат без загрузки книги на сервер.",
+      },
+      sv: {
+        name: "Exportverktyg för kalkylbladsdata",
+        description:
+          "Exportera ett Excel-kalkylblad till CSV, TSV, JSON eller Markdown i webbläsaren. Välj ett blad och ett cellområde, förhandsvisa data och ladda ner utan att ladda upp arbetsboken.",
+      },
+      th: {
+        name: "โปรแกรมส่งออกข้อมูลสเปรดชีต",
+        description:
+          "ส่งออกเวิร์กชีต Excel เป็น CSV, TSV, JSON หรือ Markdown ในเบราว์เซอร์ เลือกชีตและช่วงเซลล์ ดูตัวอย่างข้อมูล แล้วดาวน์โหลดโดยไม่ต้องอัปโหลดเวิร์กบุ๊ก",
+      },
+      tr: {
+        name: "Elektronik Tablo Verilerini Dışa Aktarma Aracı",
+        description:
+          "Bir Excel çalışma sayfasını tarayıcınızda CSV, TSV, JSON veya Markdown olarak dışa aktarın. Sayfa ve hücre aralığı seçin, verileri önizleyin ve çalışma kitabınızı yüklemeden indirin.",
+      },
+      vi: {
+        name: "Trình xuất dữ liệu bảng tính",
+        description:
+          "Xuất trang tính Excel sang CSV, TSV, JSON hoặc Markdown trong trình duyệt. Chọn trang tính và phạm vi ô, xem trước dữ liệu rồi tải xuống mà không cần tải sổ làm việc lên.",
+      },
+      "zh-CN": {
+        name: "电子表格数据导出器",
+        description:
+          "在浏览器中将 Excel 工作表导出为 CSV、TSV、JSON 或 Markdown。选择工作表和单元格区域，预览数据并下载，无需上传工作簿。",
+      },
+      "zh-TW": {
+        name: "試算表資料匯出工具",
+        description:
+          "在瀏覽器中將 Excel 工作表匯出為 CSV、TSV、JSON 或 Markdown。選擇工作表與儲存格範圍，預覽資料並下載，無須上傳活頁簿。",
+      },
+    },
+  },
+  {
     slug: "sql-formatter-and-linter",
     category: "developer",
     icon: "braces",

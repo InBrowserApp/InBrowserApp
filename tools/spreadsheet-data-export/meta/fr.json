@@ -1,0 +1,4 @@
+{
+  "name": "Exportateur de données de feuilles de calcul",
+  "description": "Exportez une feuille Excel en CSV, TSV, JSON ou Markdown dans votre navigateur. Choisissez une feuille et une plage de cellules, prévisualisez les données et téléchargez-les sans envoyer votre classeur à un serveur."
+}

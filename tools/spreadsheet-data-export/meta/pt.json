@@ -1,0 +1,4 @@
+{
+  "name": "Exportador de dados de planilhas",
+  "description": "Exporte uma planilha do Excel para CSV, TSV, JSON ou Markdown no navegador. Escolha uma planilha e um intervalo de células, visualize os dados e baixe o resultado sem enviar sua pasta de trabalho."
+}

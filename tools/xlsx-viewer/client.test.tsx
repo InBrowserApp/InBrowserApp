@@ -97,7 +97,9 @@ test("opens, navigates cells, zooms, copies and closes a workbook", async () => 
   expect(mock.sheet).toHaveBeenCalledWith(1)
   fireEvent.click(screen.getByRole("button", { name: m.copy }))
   expect(mock.copy).toHaveBeenCalledOnce()
-  fireEvent.keyDown(screen.getByRole("combobox"), { key: "ArrowDown" })
+  fireEvent.keyDown(screen.getByRole("combobox", { name: m.sheet }), {
+    key: "ArrowDown",
+  })
   fireEvent.click(
     await screen.findByRole("option", { name: "Secret (Hidden)" })
   )

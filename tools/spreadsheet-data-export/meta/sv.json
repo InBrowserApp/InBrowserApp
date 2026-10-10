@@ -1,0 +1,4 @@
+{
+  "name": "Exportverktyg för kalkylbladsdata",
+  "description": "Exportera ett Excel-kalkylblad till CSV, TSV, JSON eller Markdown i webbläsaren. Välj ett blad och ett cellområde, förhandsvisa data och ladda ner utan att ladda upp arbetsboken."
+}
