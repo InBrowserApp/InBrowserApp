@@ -1,0 +1,4 @@
+{
+  "name": "XLS to XLSX Converter",
+  "description": "Convert legacy Excel XLS workbooks to XLSX locally in your browser. Inspect worksheets and cell data before downloading, with clear compatibility notes."
+}
