@@ -27,5 +27,25 @@
   "zoomIn": "Phóng to",
   "zoomOut": "Thu nhỏ",
   "closeSearch": "Đóng tìm kiếm",
-  "releaseFile": "Thả để mở tài liệu này"
+  "releaseFile": "Thả để mở tài liệu này",
+  "markdown": {
+    "export": "Xuất Markdown",
+    "converting": "Đang xuất Markdown…",
+    "download": "Tải Markdown xuống",
+    "error": "Không thể xuất Markdown. Hãy thử Trình chuyển đổi DOCX sang Markdown hoặc tài liệu ít phức tạp hơn.",
+    "resource": "Tài liệu này cần nhiều bộ nhớ hơn mức trình duyệt có thể cung cấp. Đóng các thẻ khác hoặc thử thiết bị khác.",
+    "note": "Markdown giữ lại văn bản và cấu trúc cơ bản, nhưng không giữ bố cục trang. Đầu trang, chân trang, chú thích và nhận xét xuất hiện trong các phần riêng. Các trường sử dụng văn bản đã lưu; macro không được chạy và tài nguyên bên ngoài không được tải. Một số nội dung không thể được thể hiện chính xác. Hình ảnh, biểu đồ, phương trình và hình dạng có thể được thay bằng dấu chỉ nội dung bị lược bỏ; bảng gộp hoặc lồng nhau và các thay đổi được theo dõi sẽ được đơn giản hóa. Đối chiếu kết quả với bản gốc.",
+    "labels": {
+      "headers": "Đầu trang",
+      "footers": "Chân trang",
+      "footnotes": "Chú thích cuối trang",
+      "endnotes": "Chú thích cuối tài liệu",
+      "comments": "Nhận xét duyệt tài liệu",
+      "replyTo": "Trả lời cho",
+      "image": "[Đã lược bỏ hình ảnh]",
+      "chart": "[Đã lược bỏ biểu đồ]",
+      "equation": "[Đã lược bỏ phương trình]",
+      "shape": "[Đã lược bỏ hình dạng]"
+    }
+  }
 }

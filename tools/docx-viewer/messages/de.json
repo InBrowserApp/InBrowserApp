@@ -27,5 +27,25 @@
   "zoomIn": "Vergrößern",
   "zoomOut": "Verkleinern",
   "closeSearch": "Suche schließen",
-  "releaseFile": "Loslassen, um dieses Dokument zu öffnen"
+  "releaseFile": "Loslassen, um dieses Dokument zu öffnen",
+  "markdown": {
+    "export": "Markdown exportieren",
+    "converting": "Markdown wird exportiert…",
+    "download": "Markdown herunterladen",
+    "error": "Markdown konnte nicht exportiert werden. Versuchen Sie es mit dem DOCX-zu-Markdown-Konverter oder einem weniger komplexen Dokument.",
+    "resource": "Dieses Dokument benötigt mehr Arbeitsspeicher, als dieser Browser bereitstellen kann. Schließen Sie andere Tabs oder versuchen Sie es auf einem anderen Gerät.",
+    "note": "Markdown erhält Text und grundlegende Struktur, aber nicht das Seitenlayout. Kopf- und Fußzeilen, Anmerkungen und Kommentare erscheinen in separaten Abschnitten. Felder verwenden ihren gespeicherten Text; Makros werden nicht ausgeführt und externe Ressourcen nicht geladen. Einige Inhalte lassen sich nicht originalgetreu darstellen. Bilder, Diagramme, Formeln und Formen können durch Auslassungsmarkierungen ersetzt werden; Tabellen mit verbundenen Zellen oder verschachtelte Tabellen sowie nachverfolgte Änderungen werden vereinfacht. Vergleichen Sie die Ausgabe mit dem Original.",
+    "labels": {
+      "headers": "Kopfzeilen",
+      "footers": "Fußzeilen",
+      "footnotes": "Fußnoten",
+      "endnotes": "Endnoten",
+      "comments": "Überprüfungskommentare",
+      "replyTo": "Antwort auf",
+      "image": "[Bild ausgelassen]",
+      "chart": "[Diagramm ausgelassen]",
+      "equation": "[Formel ausgelassen]",
+      "shape": "[Form ausgelassen]"
+    }
+  }
 }

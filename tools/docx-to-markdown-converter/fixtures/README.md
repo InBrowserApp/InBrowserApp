@@ -1,0 +1,1 @@
+Synthetic Word document created for conversion verification with python-docx and explicit OOXML note/comment parts. It contains headings, Unicode, literal Markdown/HTML, emphasis, lists, a link, a table with pipes and line breaks, footnotes, endnotes, and a review comment. No third-party document content is included.

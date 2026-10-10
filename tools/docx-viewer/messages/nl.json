@@ -27,5 +27,25 @@
   "zoomIn": "Inzoomen",
   "zoomOut": "Uitzoomen",
   "closeSearch": "Zoeken sluiten",
-  "releaseFile": "Laat los om dit document te openen"
+  "releaseFile": "Laat los om dit document te openen",
+  "markdown": {
+    "export": "Markdown exporteren",
+    "converting": "Markdown exporteren…",
+    "download": "Markdown downloaden",
+    "error": "Markdown kan niet worden geëxporteerd. Probeer de DOCX-naar-Markdown-converter of een minder complex document.",
+    "resource": "Dit document heeft meer geheugen nodig dan deze browser kan bieden. Sluit andere tabbladen of probeer een ander apparaat.",
+    "note": "Markdown behoudt tekst en basisstructuur, maar niet de pagina-indeling. Kopteksten, voetteksten, noten en opmerkingen verschijnen in aparte secties. Velden gebruiken hun opgeslagen tekst; macro’s worden niet uitgevoerd en externe bronnen worden niet geladen. Sommige inhoud kan niet getrouw worden weergegeven. Afbeeldingen, grafieken, vergelijkingen en vormen kunnen worden vervangen door markeringen voor weggelaten inhoud; samengevoegde of geneste tabellen en bijgehouden wijzigingen worden vereenvoudigd. Controleer de uitvoer aan de hand van het origineel.",
+    "labels": {
+      "headers": "Kopteksten",
+      "footers": "Voetteksten",
+      "footnotes": "Voetnoten",
+      "endnotes": "Eindnoten",
+      "comments": "Revisieopmerkingen",
+      "replyTo": "Antwoord op",
+      "image": "[Afbeelding weggelaten]",
+      "chart": "[Grafiek weggelaten]",
+      "equation": "[Vergelijking weggelaten]",
+      "shape": "[Vorm weggelaten]"
+    }
+  }
 }

@@ -27,5 +27,25 @@
   "zoomIn": "Zum masuk",
   "zoomOut": "Zum keluar",
   "closeSearch": "Tutup carian",
-  "releaseFile": "Lepaskan untuk membuka dokumen ini"
+  "releaseFile": "Lepaskan untuk membuka dokumen ini",
+  "markdown": {
+    "export": "Eksport Markdown",
+    "converting": "Mengeksport Markdown…",
+    "download": "Muat turun Markdown",
+    "error": "Markdown tidak dapat dieksport. Cuba Penukar DOCX kepada Markdown atau dokumen yang kurang rumit.",
+    "resource": "Dokumen ini memerlukan lebih banyak memori daripada yang tersedia dalam pelayar ini. Tutup tab lain atau cuba peranti lain.",
+    "note": "Markdown mengekalkan teks dan struktur asas, bukan susun atur halaman. Pengepala, pengaki, nota dan komen muncul dalam bahagian berasingan. Medan menggunakan teks yang disimpan; makro tidak dijalankan dan sumber luaran tidak dimuatkan. Sesetengah kandungan tidak dapat diwakili dengan tepat. Imej, carta, persamaan dan bentuk mungkin menggunakan penanda pengguguran; jadual bercantum atau bersarang dan perubahan yang dijejak dipermudah. Semak hasil dengan membandingkannya dengan yang asal.",
+    "labels": {
+      "headers": "Pengepala",
+      "footers": "Pengaki",
+      "footnotes": "Nota kaki",
+      "endnotes": "Nota hujung",
+      "comments": "Komen semakan",
+      "replyTo": "Balasan kepada",
+      "image": "[Imej digugurkan]",
+      "chart": "[Carta digugurkan]",
+      "equation": "[Persamaan digugurkan]",
+      "shape": "[Bentuk digugurkan]"
+    }
+  }
 }

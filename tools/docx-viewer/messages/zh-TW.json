@@ -27,5 +27,25 @@
   "zoomIn": "放大",
   "zoomOut": "縮小",
   "closeSearch": "關閉搜尋",
-  "releaseFile": "放開以開啟文件"
+  "releaseFile": "放開以開啟文件",
+  "markdown": {
+    "export": "匯出 Markdown",
+    "converting": "正在匯出 Markdown…",
+    "download": "下載 Markdown",
+    "error": "無法匯出 Markdown。請嘗試使用 DOCX 轉 Markdown 轉換器，或改用複雜度較低的文件。",
+    "resource": "此文件所需的記憶體超過瀏覽器可提供的容量。請關閉其他分頁或嘗試使用其他裝置。",
+    "note": "Markdown 會保留文字與基本結構，但不保留頁面版面配置。頁首、頁尾、註腳、章節附註與註解會顯示在各自的區段。欄位使用已儲存的文字；不會執行巨集或載入外部資源。部分內容無法忠實呈現。圖片、圖表、方程式與圖形可能以省略標記代替；含合併儲存格或巢狀表格的表格，以及追蹤修訂內容都會簡化。請將輸出與原始文件核對。",
+    "labels": {
+      "headers": "頁首",
+      "footers": "頁尾",
+      "footnotes": "註腳",
+      "endnotes": "章節附註",
+      "comments": "審閱註解",
+      "replyTo": "回覆對象",
+      "image": "[已省略圖片]",
+      "chart": "[已省略圖表]",
+      "equation": "[已省略方程式]",
+      "shape": "[已省略圖形]"
+    }
+  }
 }

@@ -27,5 +27,25 @@
   "zoomIn": "Acercar",
   "zoomOut": "Alejar",
   "closeSearch": "Cerrar búsqueda",
-  "releaseFile": "Suelta para abrir este documento"
+  "releaseFile": "Suelta para abrir este documento",
+  "markdown": {
+    "export": "Exportar Markdown",
+    "converting": "Exportando Markdown…",
+    "download": "Descargar Markdown",
+    "error": "No se pudo exportar Markdown. Prueba con el Conversor de DOCX a Markdown o con un documento menos complejo.",
+    "resource": "Este documento necesita más memoria de la que puede proporcionar este navegador. Cierra otras pestañas o prueba con otro dispositivo.",
+    "note": "Markdown conserva el texto y la estructura básica, pero no el diseño de página. Los encabezados, pies de página, notas y comentarios aparecen en secciones separadas. Los campos usan su texto guardado; no se ejecutan macros ni se cargan recursos externos. Algunos contenidos no se pueden representar fielmente. Las imágenes, gráficos, ecuaciones y formas pueden usar marcadores de omisión; las tablas con celdas combinadas, las tablas anidadas y los cambios registrados se simplifican. Compara el resultado con el original.",
+    "labels": {
+      "headers": "Encabezados",
+      "footers": "Pies de página",
+      "footnotes": "Notas al pie",
+      "endnotes": "Notas al final",
+      "comments": "Comentarios de revisión",
+      "replyTo": "Respuesta a",
+      "image": "[Imagen omitida]",
+      "chart": "[Gráfico omitido]",
+      "equation": "[Ecuación omitida]",
+      "shape": "[Forma omitida]"
+    }
+  }
 }

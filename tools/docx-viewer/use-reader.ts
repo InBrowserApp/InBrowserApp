@@ -1,5 +1,5 @@
 import { isDocumentLimitError } from "@workspace/document-reader"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import type { RefObject } from "react"
 import type { Messages, Reader, ReaderState } from "./types"
 
@@ -18,12 +18,15 @@ export function useReader(
   container: RefObject<HTMLDivElement | null>,
   messages: Messages
 ) {
-  const reader = useRef<Reader | null>(null)
+  const [loaded, setLoaded] = useState<{ file: File; reader: Reader } | null>(
+    null
+  )
   const [state, setState] = useState(initial)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
 
   useEffect(() => {
+    setLoaded(null)
     setState(initial)
     setError("")
     setLoading(false)
@@ -42,7 +45,7 @@ export function useReader(
       )
       setLoading(false)
       controller.abort()
-      reader.current = null
+      setLoaded(null)
     }
     setLoading(true)
     void import("./reader")
@@ -63,13 +66,12 @@ export function useReader(
           instance.dispose()
           return
         }
-        reader.current = instance
+        setLoaded({ file, reader: instance })
         setLoading(false)
       })
       .catch(report)
     return () => {
       controller.abort()
-      reader.current = null
     }
   }, [file, container, messages])
 
@@ -77,6 +79,6 @@ export function useReader(
     state,
     loading,
     error,
-    reader,
+    reader: loaded?.file === file && !error && !loading ? loaded.reader : null,
   }
 }

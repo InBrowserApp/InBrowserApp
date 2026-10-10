@@ -1,0 +1,4 @@
+{
+  "name": "DOCX → Markdown 변환기",
+  "description": "브라우저에서 Word 문서와 서식 파일을 Markdown으로 변환하세요. 문서를 업로드하지 않고 텍스트를 미리 보거나 복사하거나 UTF-8 파일로 다운로드할 수 있습니다."
+}

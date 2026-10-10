@@ -27,5 +27,25 @@
   "zoomIn": "Ampliar",
   "zoomOut": "Reduzir",
   "closeSearch": "Fechar pesquisa",
-  "releaseFile": "Solte para abrir este documento"
+  "releaseFile": "Solte para abrir este documento",
+  "markdown": {
+    "export": "Exportar Markdown",
+    "converting": "Exportando Markdown…",
+    "download": "Baixar Markdown",
+    "error": "Não foi possível exportar Markdown. Tente o Conversor de DOCX para Markdown ou um documento menos complexo.",
+    "resource": "Este documento precisa de mais memória do que este navegador pode oferecer. Feche outras abas ou tente outro dispositivo.",
+    "note": "O Markdown preserva o texto e a estrutura básica, mas não o layout das páginas. Cabeçalhos, rodapés, notas e comentários aparecem em seções separadas. Os campos usam seu texto salvo; macros não são executadas e recursos externos não são carregados. Alguns conteúdos não podem ser representados fielmente. Imagens, gráficos, equações e formas podem ser substituídos por marcadores de omissão; tabelas mescladas ou aninhadas e alterações controladas são simplificadas. Confira o resultado com o original.",
+    "labels": {
+      "headers": "Cabeçalhos",
+      "footers": "Rodapés",
+      "footnotes": "Notas de rodapé",
+      "endnotes": "Notas de fim",
+      "comments": "Comentários de revisão",
+      "replyTo": "Resposta a",
+      "image": "[Imagem omitida]",
+      "chart": "[Gráfico omitido]",
+      "equation": "[Equação omitida]",
+      "shape": "[Forma omitida]"
+    }
+  }
 }

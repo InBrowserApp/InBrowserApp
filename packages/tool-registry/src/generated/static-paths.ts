@@ -5706,6 +5706,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "docx-to-markdown-converter",
+    language: "ar",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "de",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "en",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "es",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "fr",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "he",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "hi",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "id",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "it",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "ja",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "ko",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "ms",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "nl",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "no",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "pl",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "pt",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "ru",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "sv",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "th",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "tr",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "vi",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "docx-to-markdown-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "docx-viewer",
     language: "ar",
   },

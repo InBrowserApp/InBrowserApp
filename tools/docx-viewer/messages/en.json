@@ -27,5 +27,25 @@
   "zoomIn": "Zoom in",
   "zoomOut": "Zoom out",
   "closeSearch": "Close search",
-  "releaseFile": "Release to open this document"
+  "releaseFile": "Release to open this document",
+  "markdown": {
+    "export": "Export Markdown",
+    "converting": "Exporting Markdown…",
+    "download": "Download Markdown",
+    "error": "Markdown could not be exported. Try the DOCX to Markdown Converter or a less complex document.",
+    "resource": "This document needs more memory than this browser can provide. Close other tabs or try another device.",
+    "note": "Markdown preserves text and basic structure, not page layout. Headers, footers, notes, and comments appear in separate sections. Fields use their saved text; macros and external resources are not run or loaded. Some content cannot be represented faithfully. Images, charts, equations, and shapes may use omission markers; merged or nested tables and tracked changes are simplified. Check the output against the original.",
+    "labels": {
+      "headers": "Headers",
+      "footers": "Footers",
+      "footnotes": "Footnotes",
+      "endnotes": "Endnotes",
+      "comments": "Review comments",
+      "replyTo": "Reply to",
+      "image": "[Image omitted]",
+      "chart": "[Chart omitted]",
+      "equation": "[Equation omitted]",
+      "shape": "[Shape omitted]"
+    }
+  }
 }

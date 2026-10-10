@@ -21,6 +21,10 @@ const mock = vi.hoisted(() => ({
   clearFind: vi.fn(),
   resize: vi.fn(),
   disconnect: vi.fn(),
+  exportDocument: vi.fn(),
+}))
+vi.mock("@workspace/docx-markdown", () => ({
+  exportDocument: mock.exportDocument,
 }))
 vi.mock("@silurus/ooxml/docx", () => ({
   DocxDocument: { load: mock.load },
@@ -30,6 +34,7 @@ function setup() {
   const controller = new AbortController()
   const container = document.createElement("div")
   const doc = {
+    document: { body: [] },
     pageCount: 3,
     pageSize: () => ({ widthPt: 612, heightPt: 792 }),
     destroy: mock.documentDestroy,
@@ -67,6 +72,25 @@ beforeEach(() => {
 const flush = async () => {
   await new Promise((resolve) => setTimeout(resolve, 0))
 }
+
+test("exports the loaded model without reparsing and refuses disposed readers", async () => {
+  const { options, doc } = setup()
+  const reader = await openReader(options)
+  const labels = {} as import("@workspace/docx-markdown/types").Labels
+  const signal = new AbortController().signal
+  mock.exportDocument.mockResolvedValue({ text: "# Markdown" })
+  expect(await reader.exportMarkdown(labels, signal)).toEqual({
+    text: "# Markdown",
+  })
+  expect(mock.exportDocument).toHaveBeenCalledWith(
+    { model: doc.document },
+    labels,
+    signal
+  )
+  expect(mock.load).toHaveBeenCalledOnce()
+  reader.dispose()
+  await expect(reader.exportMarkdown(labels, signal)).rejects.toThrow("invalid")
+})
 
 test("renders one page with local fonts, resource limits, navigation and search", async () => {
   const { options, controller, doc } = setup()

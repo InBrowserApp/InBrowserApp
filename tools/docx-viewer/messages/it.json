@@ -27,5 +27,25 @@
   "zoomIn": "Ingrandisci",
   "zoomOut": "Riduci",
   "closeSearch": "Chiudi ricerca",
-  "releaseFile": "Rilascia per aprire questo documento"
+  "releaseFile": "Rilascia per aprire questo documento",
+  "markdown": {
+    "export": "Esporta Markdown",
+    "converting": "Esportazione Markdown…",
+    "download": "Scarica Markdown",
+    "error": "Impossibile esportare Markdown. Prova il convertitore da DOCX a Markdown o un documento meno complesso.",
+    "resource": "Questo documento richiede più memoria di quella disponibile nel browser. Chiudi altre schede o prova un altro dispositivo.",
+    "note": "Markdown conserva il testo e la struttura di base, ma non il layout delle pagine. Intestazioni, piè di pagina, note e commenti compaiono in sezioni separate. I campi usano il testo salvato; le macro non vengono eseguite e le risorse esterne non vengono caricate. Alcuni contenuti non possono essere rappresentati fedelmente. Immagini, grafici, equazioni e forme possono essere sostituiti da indicatori di omissione; le tabelle unite o annidate e le revisioni vengono semplificate. Confronta il risultato con l’originale.",
+    "labels": {
+      "headers": "Intestazioni",
+      "footers": "Piè di pagina",
+      "footnotes": "Note a piè di pagina",
+      "endnotes": "Note di chiusura",
+      "comments": "Commenti di revisione",
+      "replyTo": "Risposta a",
+      "image": "[Immagine omessa]",
+      "chart": "[Grafico omesso]",
+      "equation": "[Equazione omessa]",
+      "shape": "[Forma omessa]"
+    }
+  }
 }
