@@ -15,3 +15,5 @@ Sporede endringer vises som om de er godtatt: innsatt tekst beholdes, og slettet
 Dokumenter behandles i nettleseren. Eksterne lenker, eksterne bilder, makroer, skjemaer og innebygde programmer kjøres ikke. Interne referanser kan være utilgjengelige i forhåndsvisningen. Bruk disposisjonen for å gå til gjenkjente overskrifter. Dokumentinnhold lastes ikke opp eller lagres automatisk.
 
 Passordbeskyttede dokumenter krever en ukryptert kopi. Hvis dokumentet er tomt, skadet, ressurskrevende eller ikke støttes, vises en forklaring, og du kan bytte eller lukke dokumentet. Det er ingen fast grense for filstørrelse eller antall sider; tilgjengelig minne i nettleseren påvirker hva som kan åpnes.
+
+Bruk [Konverterer fra DOC / WPS til PDF](../doc-to-pdf-converter/) for å eksportere støttet innhold fra dokumentets hoveddel som en PDF med nytt sideoppsett.

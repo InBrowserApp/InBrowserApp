@@ -12,7 +12,7 @@
     "@workspace/ui": "workspace:*",
     "dompurify": "catalog:",
     "@file-viewer/doc": "catalog:",
-    "cfb": "catalog:"
+    "@workspace/legacy-doc": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "cfb": "catalog:"
   }
 }

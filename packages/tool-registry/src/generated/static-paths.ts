@@ -5706,6 +5706,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "doc-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "doc-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "doc-viewer",
     language: "ar",
   },

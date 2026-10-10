@@ -15,3 +15,5 @@ As alterações controladas são exibidas como se tivessem sido aceitas: o texto
 Os documentos são processados no navegador. Links externos, imagens remotas, macros, formulários e aplicativos incorporados não são executados. Referências internas podem não estar disponíveis na prévia. Use a estrutura do documento para acessar os títulos reconhecidos. Nenhum conteúdo do documento é enviado ou salvo automaticamente.
 
 Documentos protegidos por senha precisam de uma cópia não criptografada. Um documento vazio, danificado, não compatível ou que exija muitos recursos gera uma explicação e pode ser substituído ou fechado. Não há limite fixo de tamanho de arquivo nem de número de páginas; a memória disponível no navegador afeta o que pode ser aberto.
+
+Para exportar o conteúdo compatível do corpo do documento como um PDF com o conteúdo redistribuído, use o [Conversor de DOC / WPS para PDF](../doc-to-pdf-converter/).

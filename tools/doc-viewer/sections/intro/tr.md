@@ -15,3 +15,5 @@ Bu görüntüleyici, Word ikili belgelerini ve OLE kapsayıcısında Word ikili 
 Belgeler tarayıcınızda işlenir. Harici bağlantılar, uzak resimler, makrolar, formlar ve gömülü uygulamalar çalıştırılmaz. Belge içi başvurular önizlemede kullanılamayabilir. Tanınan başlıklara ulaşmak için belge ana hatlarını kullanın. Belge içeriği yüklenmez veya otomatik kaydedilmez.
 
 Parola korumalı belgeler için şifrelenmemiş bir kopya gerekir. Boş, hasarlı, desteklenmeyen veya fazla kaynak gerektiren bir belge için açıklama gösterilir; belge değiştirilebilir ya da kapatılabilir. Sabit bir dosya boyutu veya sayfa sayısı sınırı yoktur; kullanılabilir tarayıcı belleği hangi dosyaların açılabileceğini etkiler.
+
+Belgenin ana bölümündeki desteklenen içeriği yeniden sayfalara yerleştirilmiş bir PDF olarak dışa aktarmak için [DOC ve WPS’ten PDF’ye Dönüştürücü](../doc-to-pdf-converter/) aracını kullanın.

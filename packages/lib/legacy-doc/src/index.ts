@@ -3,7 +3,11 @@ import { find, read } from "cfb"
 const signature = [0xd0, 0xcf, 0x11, 0xe0, 0xa1, 0xb1, 0x1a, 0xe1]
 
 /** Read only container and FIB metadata; document content stays in the worker. */
-export function inspectDocument(buffer: ArrayBuffer, name: string) {
+export function inspectDocument(
+  buffer: ArrayBuffer,
+  name: string,
+  complete = false
+) {
   const bytes = new Uint8Array(buffer)
   if (!signature.every((value, index) => bytes[index] === value))
     throw new Error("unsupported")
@@ -24,8 +28,10 @@ export function inspectDocument(buffer: ArrayBuffer, name: string) {
   if (!stream) throw new Error("unsupported")
   const word = new Uint8Array(stream)
   const preview = new TextDecoder().decode(word.subarray(0, 1024)).trimStart()
-  if (/^(?:<!doctype\s+html\b|<html\b|<body\b)/i.test(preview))
+  if (/^(?:<!doctype\s+html\b|<html\b|<body\b)/i.test(preview)) {
+    if (complete) throw new Error("unsupported")
     return { template: /\.wpt$/i.test(name), limited: true }
+  }
   if (word.length < 34) throw new Error("invalid")
   const fib = new DataView(word.buffer, word.byteOffset, word.byteLength)
   const flags = fib.getUint16(10, true)
@@ -42,6 +48,30 @@ export function inspectDocument(buffer: ArrayBuffer, name: string) {
     (index) =>
       index < longs && fib.getUint32(longsOffset + 2 + index * 4, true) > 0
   )
+  if (
+    complete &&
+    (omitted ||
+      [9, 10].some(
+        (index) =>
+          index < longs && fib.getUint32(longsOffset + 2 + index * 4, true) > 0
+      ))
+  )
+    throw new Error("unsupported")
+  if (complete) {
+    // Floating drawing anchors are not represented by the body HTML model.
+    const pairsOffset = longsOffset + 2 + longs * 4
+    if (longs < 11 || pairsOffset + 2 > word.length) throw new Error("invalid")
+    const pairs = fib.getUint16(pairsOffset, true)
+    if (pairsOffset + 2 + pairs * 8 > word.length) throw new Error("invalid")
+    if (
+      [40, 41].some(
+        (index) =>
+          index < pairs &&
+          fib.getUint32(pairsOffset + 2 + index * 8 + 4, true) > 0
+      )
+    )
+      throw new Error("unsupported")
+  }
   return {
     template: Boolean(flags & 1) || /\.wpt$/i.test(name),
     limited: omitted,

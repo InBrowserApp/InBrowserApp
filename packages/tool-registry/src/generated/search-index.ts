@@ -7885,6 +7885,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "doc-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["doc", "wps", "wpt", "word", "pdf", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محول DOC وWPS إلى PDF",
+        description:
+          "حوّل مستندات Word وWPS القديمة المدعومة إلى ملف PDF قابل للتنزيل مع إعادة توزيع المحتوى، محليًا في متصفحك.",
+      },
+      de: {
+        name: "DOC/WPS-zu-PDF-Konverter",
+        description:
+          "Konvertiere unterstützte ältere Word- und WPS-Dokumente lokal im Browser in eine neu umbrochene PDF zum Herunterladen.",
+      },
+      en: {
+        name: "DOC / WPS to PDF Converter",
+        description:
+          "Convert supported legacy Word and WPS documents to a downloadable, reflowed PDF locally in your browser.",
+      },
+      es: {
+        name: "Conversor de DOC / WPS a PDF",
+        description:
+          "Convierte documentos antiguos de Word y WPS compatibles en un PDF descargable con el contenido redistribuido, de forma local en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur DOC et WPS en PDF",
+        description:
+          "Convertissez les anciens documents Word et WPS pris en charge en PDF remis en page et téléchargeables, localement dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר DOC / WPS ל-PDF",
+        description:
+          "המרת מסמכי Word ו־WPS ישנים ונתמכים ל־PDF בפריסה מחודשת שניתן להוריד, באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "DOC और WPS से PDF कन्वर्टर",
+        description:
+          "समर्थित पुराने Word और WPS दस्तावेज़ों को अपने ब्राउज़र में स्थानीय रूप से नए सिरे से व्यवस्थित, डाउनलोड करने योग्य PDF में बदलें।",
+      },
+      id: {
+        name: "Konverter DOC dan WPS ke PDF",
+        description:
+          "Konversikan dokumen Word dan WPS lama yang didukung menjadi PDF yang ditata ulang dan dapat diunduh, secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Convertitore da DOC / WPS a PDF",
+        description:
+          "Converti documenti Word e WPS di formati precedenti supportati in un PDF reimpaginato e scaricabile, in locale nel browser.",
+      },
+      ja: {
+        name: "DOC・WPSからPDFへの変換ツール",
+        description:
+          "対応する従来のWord文書やWPS文書をブラウザー内でローカルに再配置し、ダウンロード可能なPDFに変換します。",
+      },
+      ko: {
+        name: "DOC / WPS → PDF 변환기",
+        description:
+          "지원되는 이전 버전의 Word 및 WPS 문서를 브라우저에서 로컬로 재배치하여 다운로드할 수 있는 PDF로 변환하세요.",
+      },
+      ms: {
+        name: "Penukar DOC dan WPS kepada PDF",
+        description:
+          "Tukar dokumen Word dan WPS lama yang disokong kepada PDF dengan kandungan yang disusun semula dan boleh dimuat turun, secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "DOC/WPS-naar-PDF-converter",
+        description:
+          "Zet ondersteunde oudere Word- en WPS-documenten lokaal in je browser om in een opnieuw ingedeelde PDF die je kunt downloaden.",
+      },
+      no: {
+        name: "Konverterer fra DOC / WPS til PDF",
+        description:
+          "Konverter eldre Word- og WPS-dokumenter som støttes, til en nedlastbar PDF med nytt sideoppsett, lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter DOC / WPS na PDF",
+        description:
+          "Konwertuj obsługiwane dokumenty w starszych formatach Word i WPS na gotowy do pobrania plik PDF z ponownie rozmieszczoną treścią, lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de DOC / WPS para PDF",
+        description:
+          "Converta documentos antigos compatíveis do Word e do WPS em um PDF para download com o conteúdo redistribuído, localmente no navegador.",
+      },
+      ru: {
+        name: "Конвертер DOC / WPS в PDF",
+        description:
+          "Преобразуйте поддерживаемые документы Word и WPS старых форматов в PDF с новой вёрсткой для скачивания. Обработка выполняется локально в браузере.",
+      },
+      sv: {
+        name: "Konverterare från DOC och WPS till PDF",
+        description:
+          "Konvertera äldre Word- och WPS-dokument som stöds till en nedladdningsbar PDF med omflödat innehåll, lokalt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมแปลง DOC / WPS เป็น PDF",
+        description:
+          "แปลงเอกสาร Word และ WPS รุ่นเก่าที่รองรับเป็น PDF ที่จัดวางเนื้อหาใหม่และดาวน์โหลดได้ โดยประมวลผลบนอุปกรณ์ในเบราว์เซอร์",
+      },
+      tr: {
+        name: "DOC ve WPS’ten PDF’ye Dönüştürücü",
+        description:
+          "Desteklenen eski Word ve WPS belgelerini tarayıcınızda yerel olarak içeriği yeniden sayfalara yerleştirilmiş, indirilebilir PDF’lere dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi DOC và WPS sang PDF",
+        description:
+          "Chuyển tài liệu Word và WPS định dạng cũ được hỗ trợ thành PDF được dàn trang lại và có thể tải xuống, xử lý ngay trong trình duyệt trên thiết bị của bạn.",
+      },
+      "zh-CN": {
+        name: "DOC / WPS 转 PDF 转换器",
+        description:
+          "在浏览器本地将受支持的旧版 Word 和 WPS 文档重新排版并转换为可下载的 PDF。",
+      },
+      "zh-TW": {
+        name: "DOC / WPS 轉 PDF 轉換器",
+        description:
+          "在瀏覽器本機將支援的舊版 Word 與 WPS 文件轉換為可下載、重新排版的 PDF。",
+      },
+    },
+  },
+  {
     slug: "doc-viewer",
     category: "document",
     icon: "file-text",

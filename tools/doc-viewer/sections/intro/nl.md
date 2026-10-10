@@ -15,3 +15,5 @@ Bijgehouden wijzigingen worden als geaccepteerd weergegeven: ingevoegde tekst bl
 Documenten worden in je browser verwerkt. Externe links, externe afbeeldingen, macro’s, formulieren en ingesloten toepassingen worden niet uitgevoerd. Interne verwijzingen zijn mogelijk niet beschikbaar in de voorvertoning. Gebruik het documentoverzicht om naar herkende koppen te gaan. Documentinhoud wordt niet geüpload of automatisch opgeslagen.
 
 Voor documenten met wachtwoordbeveiliging is een niet-versleutelde kopie nodig. Bij een leeg, beschadigd, niet-ondersteund of te veeleisend document krijg je uitleg en kun je het document vervangen of sluiten. Er is geen vaste limiet voor de bestandsgrootte of het aantal pagina’s; het beschikbare browsergeheugen bepaalt wat kan worden geopend.
+
+Gebruik de [DOC/WPS-naar-PDF-converter](../doc-to-pdf-converter/) om ondersteunde inhoud uit de hoofdtekst als een opnieuw ingedeelde PDF te exporteren.

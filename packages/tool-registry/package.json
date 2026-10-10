@@ -69,6 +69,7 @@
     "@tool/data-uri-to-file-converter": "workspace:*",
     "@tool/device-information": "workspace:*",
     "@tool/dns-lookup": "workspace:*",
+    "@tool/doc-to-pdf-converter": "workspace:*",
     "@tool/doc-viewer": "workspace:*",
     "@tool/docker-run-to-compose-converter": "workspace:*",
     "@tool/docx-to-markdown-converter": "workspace:*",

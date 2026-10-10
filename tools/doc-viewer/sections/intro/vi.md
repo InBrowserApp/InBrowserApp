@@ -15,3 +15,5 @@ Các thay đổi được theo dõi hiển thị như đã được chấp nhậ
 Tài liệu được xử lý trong trình duyệt của bạn. Liên kết ngoài, hình ảnh từ xa, macro, biểu mẫu và ứng dụng nhúng không được thực thi. Tham chiếu nội bộ có thể không dùng được trong bản xem trước. Hãy dùng dàn ý để đến các tiêu đề đã nhận diện. Không có nội dung tài liệu nào được tải lên hoặc tự động lưu.
 
 Tài liệu được bảo vệ bằng mật khẩu cần một bản không mã hóa. Với tài liệu trống, bị hỏng, không được hỗ trợ hoặc cần quá nhiều tài nguyên, trình xem sẽ hiển thị lý do và bạn có thể thay hoặc đóng tài liệu. Không có giới hạn cố định về kích thước tệp hay số trang; bộ nhớ khả dụng của trình duyệt ảnh hưởng đến khả năng mở tệp.
+
+Để xuất phần nội dung chính được hỗ trợ thành PDF được dàn trang lại, hãy dùng [Trình chuyển đổi DOC và WPS sang PDF](../doc-to-pdf-converter/).

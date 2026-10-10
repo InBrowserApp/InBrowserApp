@@ -1,6 +1,6 @@
 import { parseMsDoc, renderMsDoc } from "@file-viewer/doc"
 import { markParagraphs } from "./semantics"
-import { inspectDocument } from "./preflight"
+import { inspectDocument } from "@workspace/legacy-doc"
 import type { DocDocument } from "./types"
 
 export function parseDocument(buffer: ArrayBuffer, name: string): DocDocument {

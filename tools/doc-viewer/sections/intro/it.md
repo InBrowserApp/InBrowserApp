@@ -15,3 +15,5 @@ Le revisioni vengono mostrate come se fossero state accettate: il testo inserito
 I documenti vengono elaborati nel browser. Link esterni, immagini remote, macro, moduli e applicazioni incorporate non vengono attivati. I riferimenti interni potrebbero non essere disponibili nell’anteprima. Usa la struttura per raggiungere i titoli riconosciuti. Nessun contenuto del documento viene caricato su un server o salvato automaticamente.
 
 Per i documenti protetti da password serve una copia non crittografata. Se un documento è vuoto, danneggiato, non supportato o richiede troppe risorse, viene mostrata una spiegazione ed è possibile sostituirlo o chiuderlo. Non esiste un limite fisso alla dimensione dei file o al numero di pagine; la memoria disponibile nel browser determina quali file possono essere aperti.
+
+Per esportare il contenuto supportato del corpo del documento in un PDF reimpaginato, usa il [Convertitore da DOC / WPS a PDF](../doc-to-pdf-converter/).

@@ -1,0 +1,12 @@
+{
+  "name": "@workspace/legacy-doc",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "cfb": "catalog:"
+  }
+}
