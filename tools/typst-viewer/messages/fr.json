@@ -41,5 +41,6 @@
   "dependencyNote": "Seul le fichier source sélectionné est disponible. Les paquets et les images, données ou fichiers source séparés ne peuvent pas être chargés. Utilisez un document autonome.",
   "fontNote": "Les polices fournies peuvent remplacer les polices indisponibles. Certains caractères, dont les textes CJK et les emoji, peuvent manquer. Comparez les symboles importants avec l’original.",
   "runtimeNote": "Utilise Typst 0.14.2 avec Libertinus Serif, New Computer Modern et DejaVu Sans Mono. Les fonctionnalités d’autres versions peuvent différer.",
-  "diagnosticLanguage": "Les messages détaillés ci-dessous sont fournis en anglais par le moteur de rendu du document."
+  "diagnosticLanguage": "Les messages détaillés ci-dessous sont fournis en anglais par le moteur de rendu du document.",
+  "download": "Télécharger le PDF"
 }

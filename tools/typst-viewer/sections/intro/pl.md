@@ -1,6 +1,6 @@
 ## Czytaj dokument Typst lokalnie
 
-Otwórz plik `.typ`, aby czytać jego wyrenderowane strony. Przechodź między stronami, wyszukuj tekst, zmieniaj powiększenie, dopasuj stronę lub jej szerokość i użyj trybu skupienia, aby zyskać więcej miejsca. Możesz zastąpić lub zamknąć dokument podczas renderowania. Pliki pozostają w przeglądarce.
+Otwórz plik `.typ`, aby czytać jego wyrenderowane strony. Przechodź między stronami, wyszukuj tekst, zmieniaj powiększenie, dopasuj stronę lub jej szerokość i użyj trybu skupienia, aby zyskać więcej miejsca. Możesz zastąpić lub zamknąć dokument podczas renderowania. Pliki pozostają w przeglądarce. Opcja Pobierz PDF zapisuje skompilowany dokument. Powiększenie podglądu nie zmienia pobieranego pliku PDF.
 
 ## Zgodność i czcionki
 

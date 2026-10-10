@@ -1,6 +1,6 @@
 ## Đọc tài liệu Typst trên thiết bị
 
-Mở tệp `.typ` để đọc các trang đã kết xuất. Chuyển trang, tìm văn bản, điều chỉnh thu phóng, xem vừa trang hoặc vừa chiều rộng và dùng chế độ đọc tập trung để có thêm không gian. Bạn có thể thay hoặc đóng tài liệu trong lúc kết xuất. Tệp luôn ở trong trình duyệt của bạn.
+Mở tệp `.typ` để đọc các trang đã kết xuất. Chuyển trang, tìm văn bản, điều chỉnh thu phóng, xem vừa trang hoặc vừa chiều rộng và dùng chế độ đọc tập trung để có thêm không gian. Bạn có thể thay hoặc đóng tài liệu trong lúc kết xuất. Tệp luôn ở trong trình duyệt của bạn. Tải xuống PDF lưu tài liệu đã biên dịch. Thu phóng bản xem trước không làm thay đổi tệp PDF tải xuống.
 
 ## Khả năng tương thích và phông chữ
 

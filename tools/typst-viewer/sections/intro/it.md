@@ -1,6 +1,6 @@
 ## Leggi un documento Typst in locale
 
-Apri un file `.typ` per leggerne le pagine dopo il rendering. Passa da una pagina all’altra, cerca testo, regola lo zoom, adatta la pagina o la sua larghezza e usa la lettura senza distrazioni per avere più spazio. Puoi sostituire o chiudere il documento durante il rendering. I file restano nel browser.
+Apri un file `.typ` per leggerne le pagine dopo il rendering. Passa da una pagina all’altra, cerca testo, regola lo zoom, adatta la pagina o la sua larghezza e usa la lettura senza distrazioni per avere più spazio. Puoi sostituire o chiudere il documento durante il rendering. I file restano nel browser. Scarica PDF salva il documento compilato. Lo zoom dell’anteprima non modifica il PDF scaricato.
 
 ## Compatibilità e font
 

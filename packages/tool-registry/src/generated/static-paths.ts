@@ -19046,6 +19046,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "typst-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "typst-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "typst-viewer",
     language: "ar",
   },

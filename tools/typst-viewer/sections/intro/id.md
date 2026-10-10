@@ -1,6 +1,6 @@
 ## Baca dokumen Typst secara lokal
 
-Buka file `.typ` untuk membaca halaman yang telah dirender. Berpindah antarhalaman, cari teks, atur perbesaran, sesuaikan halaman atau lebarnya, dan gunakan fokus membaca untuk ruang yang lebih luas. Anda dapat mengganti atau menutup dokumen saat proses render berlangsung. File tetap di browser Anda.
+Buka file `.typ` untuk membaca halaman yang telah dirender. Berpindah antarhalaman, cari teks, atur perbesaran, sesuaikan halaman atau lebarnya, dan gunakan fokus membaca untuk ruang yang lebih luas. Anda dapat mengganti atau menutup dokumen saat proses render berlangsung. File tetap di browser Anda. Unduh PDF menyimpan dokumen yang telah dikompilasi. Perbesaran pratinjau tidak mengubah PDF yang diunduh.
 
 ## Kompatibilitas dan font
 

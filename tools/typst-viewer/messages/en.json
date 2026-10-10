@@ -41,5 +41,6 @@
   "dependencyNote": "Only the selected source file is available. Packages and separate images, data, or source files cannot be loaded. Use a self-contained document.",
   "fontNote": "Bundled fonts may replace unavailable fonts. Some characters, including CJK text and emoji, may be missing. Check important symbols against the original.",
   "runtimeNote": "Uses Typst 0.14.2 with Libertinus Serif, New Computer Modern, and DejaVu Sans Mono. Features from other versions may differ.",
-  "diagnosticLanguage": "Detailed messages below are provided by the document engine in English."
+  "diagnosticLanguage": "Detailed messages below are provided by the document engine in English.",
+  "download": "Download PDF"
 }

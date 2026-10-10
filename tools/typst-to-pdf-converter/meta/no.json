@@ -1,0 +1,4 @@
+{
+  "name": "Konverterer fra Typst til PDF",
+  "description": "Kompiler en Typst-fil med alt innhold samlet til PDF i nettleseren. Forhåndsvis sidene, se meldinger om kildekoden og last ned uten å laste opp dokumentet."
+}

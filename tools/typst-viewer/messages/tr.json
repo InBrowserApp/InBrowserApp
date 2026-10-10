@@ -41,5 +41,6 @@
   "dependencyNote": "Yalnızca seçilen kaynak dosya kullanılabilir. Paketler ve ayrı resim, veri veya kaynak dosyaları yüklenemez. Kendi kendine yeterli bir belge kullanın.",
   "fontNote": "Kullanılamayan yazı tiplerinin yerine birlikte sunulan yazı tipleri kullanılabilir. CJK metinleri ve emoji dahil bazı karakterler eksik olabilir. Önemli sembolleri aslıyla karşılaştırın.",
   "runtimeNote": "Typst 0.14.2 ile Libertinus Serif, New Computer Modern ve DejaVu Sans Mono kullanılır. Diğer sürümlerdeki özellikler farklı olabilir.",
-  "diagnosticLanguage": "Aşağıdaki ayrıntılı iletiler belge motoru tarafından İngilizce olarak sağlanır."
+  "diagnosticLanguage": "Aşağıdaki ayrıntılı iletiler belge motoru tarafından İngilizce olarak sağlanır.",
+  "download": "PDF indir"
 }

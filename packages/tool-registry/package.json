@@ -214,6 +214,7 @@
     "@tool/timer": "workspace:*",
     "@tool/toml-to-json-converter": "workspace:*",
     "@tool/toml-to-yaml-converter": "workspace:*",
+    "@tool/typst-to-pdf-converter": "workspace:*",
     "@tool/typst-viewer": "workspace:*",
     "@tool/ulid-generator": "workspace:*",
     "@tool/unicode-escape-unescape": "workspace:*",

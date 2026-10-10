@@ -41,5 +41,6 @@
   "dependencyNote": "Hanya file sumber yang dipilih yang tersedia. Paket serta gambar, data, atau file sumber terpisah tidak dapat dimuat. Gunakan dokumen mandiri.",
   "fontNote": "Font bawaan dapat menggantikan font yang tidak tersedia. Beberapa karakter, termasuk teks CJK dan emoji, mungkin tidak muncul. Cocokkan simbol penting dengan dokumen asli.",
   "runtimeNote": "Menggunakan Typst 0.14.2 dengan Libertinus Serif, New Computer Modern, dan DejaVu Sans Mono. Fitur pada versi lain mungkin berbeda.",
-  "diagnosticLanguage": "Pesan terperinci di bawah ini disediakan oleh mesin dokumen dalam bahasa Inggris."
+  "diagnosticLanguage": "Pesan terperinci di bawah ini disediakan oleh mesin dokumen dalam bahasa Inggris.",
+  "download": "Unduh PDF"
 }

@@ -41,5 +41,6 @@
   "dependencyNote": "Apenas o arquivo-fonte selecionado está disponível. Pacotes, imagens, dados ou arquivos-fonte separados não podem ser carregados. Use um documento autocontido.",
   "fontNote": "As fontes incluídas podem substituir fontes indisponíveis. Alguns caracteres, incluindo texto CJK e emojis, podem estar ausentes. Confira os símbolos importantes no original.",
   "runtimeNote": "Usa Typst 0.14.2 com Libertinus Serif, New Computer Modern e DejaVu Sans Mono. Os recursos de outras versões podem ser diferentes.",
-  "diagnosticLanguage": "As mensagens detalhadas abaixo são fornecidas em inglês pelo mecanismo de documentos."
+  "diagnosticLanguage": "As mensagens detalhadas abaixo são fornecidas em inglês pelo mecanismo de documentos.",
+  "download": "Baixar PDF"
 }

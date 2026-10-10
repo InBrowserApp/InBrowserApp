@@ -25991,6 +25991,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "typst-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["typst", "typ", "pdf", "converter", "export", "math", "local"],
+    locales: {
+      ar: {
+        name: "محوّل Typst إلى PDF",
+        description:
+          "جمّع ملف Typst مكتفيًا بذاته إلى PDF في متصفحك. عاين الصفحات، وراجع رسائل تشخيص المصدر، ونزّل الملف دون رفع مستندك.",
+      },
+      de: {
+        name: "Typst-zu-PDF-Konverter",
+        description:
+          "Kompilieren Sie eine eigenständige Typst-Datei in Ihrem Browser zu PDF. Sehen Sie sich die Seitenvorschau und Quelltextmeldungen an und laden Sie das Ergebnis herunter, ohne Ihr Dokument hochzuladen.",
+      },
+      en: {
+        name: "Typst to PDF Converter",
+        description:
+          "Compile a self-contained Typst file to PDF in your browser. Preview the pages, review source diagnostics, and download without uploading your document.",
+      },
+      es: {
+        name: "Conversor de Typst a PDF",
+        description:
+          "Compila un archivo Typst autocontenido a PDF en tu navegador. Previsualiza las páginas, revisa los diagnósticos del código fuente y descarga el resultado sin subir tu documento.",
+      },
+      fr: {
+        name: "Convertisseur Typst en PDF",
+        description:
+          "Compilez un fichier Typst autonome en PDF dans votre navigateur. Prévisualisez les pages, consultez les diagnostics du code source et téléchargez le PDF sans envoyer votre document.",
+      },
+      he: {
+        name: "ממיר Typst ל-PDF",
+        description:
+          "הידור קובץ Typst שכל משאביו כלולים בו ל-PDF בדפדפן. הצגת העמודים בתצוגה מקדימה, בדיקת הודעות האבחון של קוד המקור והורדה ללא העלאת המסמך לרשת.",
+      },
+      hi: {
+        name: "Typst से PDF कन्वर्टर",
+        description:
+          "ऐसी Typst फ़ाइल को अपने ब्राउज़र में PDF में संकलित करें जिसकी सारी सामग्री उसी में हो। पृष्ठों का पूर्वावलोकन देखें, स्रोत की त्रुटियाँ और चेतावनियाँ जाँचें और दस्तावेज़ अपलोड किए बिना डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Typst ke PDF",
+        description:
+          "Kompilasi file Typst mandiri menjadi PDF di browser Anda. Lihat pratinjau halaman, tinjau diagnostik sumber, dan unduh tanpa mengunggah dokumen Anda.",
+      },
+      it: {
+        name: "Convertitore da Typst a PDF",
+        description:
+          "Compila un file Typst autonomo in PDF nel browser. Visualizza l’anteprima delle pagine, esamina la diagnostica del sorgente e scarica il risultato senza caricare il documento.",
+      },
+      ja: {
+        name: "Typst → PDF 変換",
+        description:
+          "単一ファイルで完結する Typst ファイルをブラウザー内で PDF にコンパイルします。文書をアップロードせずに、ページのプレビュー、ソースの診断結果の確認、ダウンロードができます。",
+      },
+      ko: {
+        name: "Typst PDF 변환기",
+        description:
+          "필요한 내용이 하나의 파일에 모두 포함된 Typst 파일을 브라우저에서 PDF로 컴파일하세요. 문서를 업로드하지 않고 페이지를 미리 보고, 소스 진단 메시지를 확인하고, 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Typst kepada PDF",
+        description:
+          "Kompil fail Typst serba lengkap kepada PDF dalam pelayar anda. Pratonton halaman, semak diagnostik sumber dan muat turun tanpa memuat naik dokumen anda.",
+      },
+      nl: {
+        name: "Typst-naar-PDF-converter",
+        description:
+          "Compileer een Typst-bestand zonder externe afhankelijkheden naar PDF in je browser. Bekijk de pagina’s, controleer broncodemeldingen en download zonder je document te uploaden.",
+      },
+      no: {
+        name: "Konverterer fra Typst til PDF",
+        description:
+          "Kompiler en Typst-fil med alt innhold samlet til PDF i nettleseren. Forhåndsvis sidene, se meldinger om kildekoden og last ned uten å laste opp dokumentet.",
+      },
+      pl: {
+        name: "Konwerter Typst na PDF",
+        description:
+          "Skompiluj samodzielny plik Typst do PDF w przeglądarce. Wyświetl podgląd stron, sprawdź komunikaty diagnostyczne źródła i pobierz plik bez przesyłania dokumentu.",
+      },
+      pt: {
+        name: "Conversor de Typst para PDF",
+        description:
+          "Compile um arquivo Typst autocontido para PDF no navegador. Visualize as páginas, confira os diagnósticos do código-fonte e baixe sem enviar seu documento.",
+      },
+      ru: {
+        name: "Конвертер Typst в PDF",
+        description:
+          "Компилируйте самодостаточный файл Typst в PDF прямо в браузере. Просматривайте страницы, изучайте ошибки исходного текста и скачивайте PDF без отправки документа на сервер.",
+      },
+      sv: {
+        name: "Konverterare från Typst till PDF",
+        description:
+          "Kompilera en fristående Typst-fil till PDF i webbläsaren. Förhandsvisa sidorna, granska meddelanden om källtexten och ladda ner utan att ladda upp dokumentet.",
+      },
+      th: {
+        name: "โปรแกรมแปลง Typst เป็น PDF",
+        description:
+          "คอมไพล์ไฟล์ Typst ที่มีทุกอย่างในตัวเป็น PDF ในเบราว์เซอร์ ดูตัวอย่างหน้า ตรวจสอบข้อความวินิจฉัยไฟล์ต้นฉบับ และดาวน์โหลดโดยไม่ต้องอัปโหลดเอกสารของคุณ",
+      },
+      tr: {
+        name: "Typst’ten PDF’ye Dönüştürücü",
+        description:
+          "Kendi kendine yeterli bir Typst dosyasını tarayıcınızda PDF olarak derleyin. Sayfaları önizleyin, kaynak iletilerini inceleyin ve belgenizi yüklemeden indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi Typst sang PDF",
+        description:
+          "Biên dịch tệp Typst chứa đầy đủ nội dung sang PDF trong trình duyệt. Xem trước các trang, xem các thông báo về mã nguồn và tải xuống mà không cần tải tài liệu lên.",
+      },
+      "zh-CN": {
+        name: "Typst 转 PDF 转换器",
+        description:
+          "在浏览器中将无需外部依赖的 Typst 文件编译为 PDF。预览页面、查看源文件诊断信息并下载，无需上传文档。",
+      },
+      "zh-TW": {
+        name: "Typst 轉 PDF 轉換器",
+        description:
+          "在瀏覽器中將不需外部資源的 Typst 檔案編譯為 PDF。預覽頁面、檢查原始碼診斷訊息，並下載結果，無需上傳文件。",
+      },
+    },
+  },
+  {
     slug: "typst-viewer",
     category: "document",
     icon: "file-text",

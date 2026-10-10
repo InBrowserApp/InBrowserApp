@@ -1,6 +1,6 @@
 ## Baca dokumen Typst secara setempat
 
-Buka fail `.typ` untuk membaca halaman yang dirender. Beralih antara halaman, cari teks, laraskan zum, muatkan halaman atau lebarnya, dan gunakan bacaan berfokus untuk lebih banyak ruang. Anda boleh mengganti atau menutup dokumen semasa ia sedang dirender. Fail kekal dalam pelayar anda.
+Buka fail `.typ` untuk membaca halaman yang dirender. Beralih antara halaman, cari teks, laraskan zum, muatkan halaman atau lebarnya, dan gunakan bacaan berfokus untuk lebih banyak ruang. Anda boleh mengganti atau menutup dokumen semasa ia sedang dirender. Fail kekal dalam pelayar anda. Muat turun PDF menyimpan dokumen yang telah dikompil. Zum pratonton tidak mengubah PDF yang dimuat turun.
 
 ## Keserasian dan fon
 

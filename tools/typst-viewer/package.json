@@ -12,8 +12,7 @@
     "@workspace/ui": "workspace:*",
     "pdfjs-dist": "catalog:",
     "@workspace/pdf-reader": "workspace:*",
-    "@myriaddreamin/typst.ts": "catalog:",
-    "@myriaddreamin/typst-ts-web-compiler": "catalog:"
+    "@workspace/typst": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

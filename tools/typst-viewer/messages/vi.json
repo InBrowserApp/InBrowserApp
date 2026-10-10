@@ -41,5 +41,6 @@
   "dependencyNote": "Chỉ có tệp nguồn đã chọn khả dụng. Không thể tải các gói và tệp hình ảnh, dữ liệu hay mã nguồn riêng biệt. Hãy dùng tài liệu chứa đầy đủ nội dung trong một tệp.",
   "fontNote": "Phông chữ đi kèm có thể thay thế phông chữ không khả dụng. Một số ký tự, bao gồm chữ CJK và emoji, có thể bị thiếu. Hãy đối chiếu các ký hiệu quan trọng với bản gốc.",
   "runtimeNote": "Sử dụng Typst 0.14.2 với Libertinus Serif, New Computer Modern và DejaVu Sans Mono. Các tính năng ở phiên bản khác có thể khác biệt.",
-  "diagnosticLanguage": "Các thông báo chi tiết bên dưới do bộ xử lý tài liệu cung cấp bằng tiếng Anh."
+  "diagnosticLanguage": "Các thông báo chi tiết bên dưới do bộ xử lý tài liệu cung cấp bằng tiếng Anh.",
+  "download": "Tải xuống PDF"
 }
