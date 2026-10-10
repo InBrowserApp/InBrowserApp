@@ -182,7 +182,11 @@ export function RasterImageView({
         </div>
         {url && loaded === preview && !failed ? (
           <Button asChild size="sm">
-            <a href={url} download={download.filename}>
+            <a
+              href={url}
+              download={download.filename}
+              data-astro-prefetch="false"
+            >
               {download.label}
             </a>
           </Button>
