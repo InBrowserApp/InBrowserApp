@@ -15,5 +15,5 @@ const Intro = resolveLocale<AstroComponentFactory>(import.meta.glob("./sections/
 ---
 <ToolPageShell title={meta.name} description={meta.description}>
   <Client client:load messages={messages} />
-  <ToolArticle><Intro /></ToolArticle>
+  <ToolArticle className="wrap-anywhere"><Intro /></ToolArticle>
 </ToolPageShell>
