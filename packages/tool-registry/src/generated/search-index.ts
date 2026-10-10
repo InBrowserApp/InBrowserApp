@@ -30509,6 +30509,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "xlsx-to-ods-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["ods", "xlsx", "opendocument", "excel", "spreadsheet", "converter"],
+    locales: {
+      ar: {
+        name: "محول XLSX إلى ODS",
+        description:
+          "حوّل مصنفات Excel المحلية إلى جداول بيانات OpenDocument مع أوراق عمل متعددة وقيم خلايا بأنواع بياناتها ومعاينة للبيانات. تبقى الملفات في متصفحك.",
+      },
+      de: {
+        name: "XLSX-zu-ODS-Konverter",
+        description:
+          "Konvertieren Sie lokale Excel-Arbeitsmappen in OpenDocument-Tabellen mit mehreren Arbeitsblättern, Zellwerten mit Datentypen und einer Datenvorschau. Dateien bleiben in Ihrem Browser.",
+      },
+      en: {
+        name: "XLSX to ODS Converter",
+        description:
+          "Convert local Excel workbooks to OpenDocument spreadsheets with multiple worksheets, typed cell values, and a data preview. Files stay in your browser.",
+      },
+      es: {
+        name: "Conversor de XLSX a ODS",
+        description:
+          "Convierte libros de Excel locales en hojas de cálculo OpenDocument con varias hojas, valores de celdas con sus tipos de datos y una vista previa de los datos. Los archivos permanecen en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur XLSX en ODS",
+        description:
+          "Convertissez des classeurs Excel locaux en feuilles de calcul OpenDocument avec plusieurs feuilles, des valeurs de cellules avec leur type et un aperçu des données. Les fichiers restent dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר XLSX ל-ODS",
+        description:
+          "המרת חוברות עבודה מקומיות של Excel לגיליונות OpenDocument עם גיליונות עבודה מרובים, ערכי תאים וסוגי הנתונים שלהם ותצוגה מקדימה של הנתונים. הקבצים נשארים בדפדפן שלך.",
+      },
+      hi: {
+        name: "XLSX से ODS कन्वर्टर",
+        description:
+          "स्थानीय Excel वर्कबुक को कई वर्कशीट, अपने डेटा प्रकारों के साथ सेल मानों और डेटा पूर्वावलोकन सहित OpenDocument स्प्रेडशीट में बदलें। फ़ाइलें आपके ब्राउज़र में रहती हैं।",
+      },
+      id: {
+        name: "Konverter XLSX ke ODS",
+        description:
+          "Konversi buku kerja Excel lokal ke lembar bentang OpenDocument dengan beberapa lembar kerja, nilai sel beserta tipe datanya, dan pratinjau data. File tetap berada di browser Anda.",
+      },
+      it: {
+        name: "Convertitore da XLSX a ODS",
+        description:
+          "Converti cartelle di lavoro Excel locali in fogli di calcolo OpenDocument con più fogli di lavoro, valori delle celle con i relativi tipi di dati e un’anteprima dei dati. I file restano nel browser.",
+      },
+      ja: {
+        name: "XLSXからODSへの変換ツール",
+        description:
+          "ローカルのExcelブックをOpenDocumentスプレッドシートに変換できます。複数のワークシートとセルの値・データ型に対応し、データをプレビューできます。ファイルはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "XLSX → ODS 변환기",
+        description:
+          "기기에 있는 Excel 통합 문서를 OpenDocument 스프레드시트로 변환하세요. 여러 워크시트, 셀 값과 데이터 형식, 데이터 미리 보기를 지원합니다. 파일은 브라우저 안에만 머무릅니다.",
+      },
+      ms: {
+        name: "Penukar XLSX ke ODS",
+        description:
+          "Tukar buku kerja Excel setempat kepada hamparan OpenDocument dengan berbilang lembaran kerja, nilai sel berserta jenis datanya dan pratonton data. Fail kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "XLSX-naar-ODS-converter",
+        description:
+          "Converteer lokale Excel-werkmappen naar OpenDocument-spreadsheets met meerdere werkbladen, celwaarden met hun gegevenstypen en een gegevensvoorbeeld. Bestanden blijven in je browser.",
+      },
+      no: {
+        name: "XLSX til ODS-konverterer",
+        description:
+          "Konverter lokale Excel-arbeidsbøker til OpenDocument-regneark med flere regneark, celleverdier med datatyper og forhåndsvisning av data. Filene forblir i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter XLSX na ODS",
+        description:
+          "Konwertuj lokalne skoroszyty Excel na arkusze OpenDocument z obsługą wielu arkuszy, zachowaniem typów wartości komórek i podglądem danych. Pliki pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de XLSX para ODS",
+        description:
+          "Converta pastas de trabalho locais do Excel em planilhas OpenDocument com várias planilhas, valores de células com seus tipos de dados e uma prévia dos dados. Os arquivos ficam no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер XLSX в ODS",
+        description:
+          "Преобразуйте локальные книги Excel в таблицы OpenDocument с несколькими листами, сохранением типов значений ячеек и предпросмотром данных. Файлы остаются в вашем браузере.",
+      },
+      sv: {
+        name: "XLSX till ODS-konverterare",
+        description:
+          "Konvertera lokala Excel-arbetsböcker till OpenDocument-kalkylblad med flera kalkylblad, cellvärden med sina datatyper och en förhandsvisning av data. Filerna stannar i din webbläsare.",
+      },
+      th: {
+        name: "โปรแกรมแปลง XLSX เป็น ODS",
+        description:
+          "แปลงเวิร์กบุ๊ก Excel จากเครื่องเป็นสเปรดชีต OpenDocument พร้อมหลายเวิร์กชีต ค่าในเซลล์พร้อมชนิดข้อมูล และตัวอย่างข้อมูล ไฟล์จะอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "XLSX’ten ODS’ye Dönüştürücü",
+        description:
+          "Yerel Excel çalışma kitaplarını birden fazla çalışma sayfası, veri türleriyle birlikte hücre değerleri ve veri önizlemesiyle OpenDocument elektronik tablolarına dönüştürün. Dosyalar tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình chuyển đổi XLSX sang ODS",
+        description:
+          "Chuyển đổi sổ làm việc Excel trên thiết bị sang bảng tính OpenDocument với nhiều trang tính, giá trị ô cùng kiểu dữ liệu và bản xem trước dữ liệu. Tệp luôn ở trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "XLSX 转 ODS 转换器",
+        description:
+          "将本地 Excel 工作簿转换为 OpenDocument 电子表格，保留多个工作表及单元格值的数据类型，并提供数据预览。文件始终留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "XLSX 轉 ODS 轉換器",
+        description:
+          "將本機 Excel 活頁簿轉換為 OpenDocument 試算表，支援多個工作表、具資料類型的儲存格值與資料預覽。檔案保留在您的瀏覽器中。",
+      },
+    },
+  },
+  {
     slug: "xlsx-viewer",
     category: "document",
     icon: "file-text",

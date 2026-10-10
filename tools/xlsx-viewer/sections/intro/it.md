@@ -19,3 +19,5 @@ Per una cartella di lavoro XLS meno recente, usa il [Convertitore da XLS a XLSX]
 Per esportare tabelle Numbers locali come fogli di lavoro Excel, usa il [Convertitore da Numbers a XLSX](../numbers-to-xlsx-converter/).
 
 Per esportare i dati dei fogli di calcolo OpenDocument come cartella di lavoro Excel, usa il [Convertitore da ODS a XLSX](../ods-to-xlsx-converter/).
+
+Per esportare i dati Excel XLSX come foglio di calcolo OpenDocument, usa il [Convertitore da XLSX a ODS](../xlsx-to-ods-converter/).

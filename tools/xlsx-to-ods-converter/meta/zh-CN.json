@@ -1,0 +1,4 @@
+{
+  "name": "XLSX 转 ODS 转换器",
+  "description": "将本地 Excel 工作簿转换为 OpenDocument 电子表格，保留多个工作表及单元格值的数据类型，并提供数据预览。文件始终留在浏览器中。"
+}

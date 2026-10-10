@@ -19,3 +19,5 @@ Gebruik voor een oudere XLS-werkmap de [XLS-naar-XLSX-converter](../xls-to-xlsx-
 Gebruik de [Numbers-naar-XLSX-converter](../numbers-to-xlsx-converter/) om lokale Numbers-tabellen als Excel-werkbladen te exporteren.
 
 Gebruik de [ODS-naar-XLSX-converter](../ods-to-xlsx-converter/) om OpenDocument-spreadsheetgegevens als Excel-werkmap te exporteren.
+
+Gebruik de [XLSX-naar-ODS-converter](../xlsx-to-ods-converter/) om Excel XLSX-gegevens als OpenDocument-spreadsheet te exporteren.

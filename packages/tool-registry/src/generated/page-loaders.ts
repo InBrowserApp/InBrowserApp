@@ -310,6 +310,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),
   "xls-to-xlsx-converter": () => import("@tool/xls-to-xlsx-converter/page"),
+  "xlsx-to-ods-converter": () => import("@tool/xlsx-to-ods-converter/page"),
   "xlsx-viewer": () => import("@tool/xlsx-viewer/page"),
   "xml-to-json-converter": () => import("@tool/xml-to-json-converter/page"),
   "xxhash-xxh3-128-hash-text-or-file": () =>

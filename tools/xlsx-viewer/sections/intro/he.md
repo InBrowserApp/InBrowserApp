@@ -19,3 +19,5 @@
 כדי לייצא טבלאות Numbers מקומיות כגיליונות עבודה של Excel, אפשר להשתמש ב[ממיר Numbers ל-XLSX](../numbers-to-xlsx-converter/).
 
 כדי לייצא נתוני גיליונות OpenDocument כחוברת עבודה של Excel, אפשר להשתמש ב[ממיר ODS ל-XLSX](../ods-to-xlsx-converter/).
+
+כדי לייצא נתוני Excel XLSX כגיליון אלקטרוני בפורמט OpenDocument, אפשר להשתמש ב[ממיר XLSX ל-ODS](../xlsx-to-ods-converter/).

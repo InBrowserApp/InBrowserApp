@@ -1,0 +1,4 @@
+{
+  "name": "XLSX til ODS-konverterer",
+  "description": "Konverter lokale Excel-arbeidsbøker til OpenDocument-regneark med flere regneark, celleverdier med datatyper og forhåndsvisning av data. Filene forblir i nettleseren din."
+}

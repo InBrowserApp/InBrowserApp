@@ -1,0 +1,4 @@
+{
+  "name": "Konverter XLSX ke ODS",
+  "description": "Konversi buku kerja Excel lokal ke lembar bentang OpenDocument dengan beberapa lembar kerja, nilai sel beserta tipe datanya, dan pratinjau data. File tetap berada di browser Anda."
+}

@@ -19,3 +19,5 @@ Numbers तालिकाएँ अलग-अलग वर्कशीट ट�
 स्थानीय Numbers तालिकाओं को Excel वर्कशीट के रूप में निर्यात करने के लिए [Numbers से XLSX कन्वर्टर](../numbers-to-xlsx-converter/) का उपयोग करें।
 
 OpenDocument स्प्रेडशीट डेटा को Excel वर्कबुक के रूप में निर्यात करने के लिए [ODS से XLSX कन्वर्टर](../ods-to-xlsx-converter/) का उपयोग करें।
+
+Excel XLSX डेटा को OpenDocument स्प्रेडशीट के रूप में निर्यात करने के लिए [XLSX से ODS कन्वर्टर](../xlsx-to-ods-converter/) का उपयोग करें।

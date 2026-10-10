@@ -19,3 +19,5 @@ Numbers 表格显示为单独的工作表标签，并在可用时显示原始工
 如需将本地 Numbers 表格导出为 Excel 工作表，请使用[Numbers 转 XLSX 转换器](../numbers-to-xlsx-converter/)。
 
 如需将 OpenDocument 电子表格数据导出为 Excel 工作簿，请使用[ODS 转 XLSX 转换器](../ods-to-xlsx-converter/)。
+
+如需将 Excel XLSX 数据导出为 OpenDocument 电子表格，请使用[XLSX 转 ODS 转换器](../xlsx-to-ods-converter/)。

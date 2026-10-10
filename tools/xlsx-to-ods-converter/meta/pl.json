@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter XLSX na ODS",
+  "description": "Konwertuj lokalne skoroszyty Excel na arkusze OpenDocument z obsługą wielu arkuszy, zachowaniem typów wartości komórek i podglądem danych. Pliki pozostają w przeglądarce."
+}

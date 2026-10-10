@@ -19,3 +19,5 @@ Numbers 표는 별도의 워크시트 탭으로 표시되며, 원래 시트와 �
 기기에 있는 Numbers 표를 Excel 워크시트로 내보내려면 [Numbers → XLSX 변환기](../numbers-to-xlsx-converter/)를 사용하세요.
 
 OpenDocument 스프레드시트 데이터를 Excel 통합 문서로 내보내려면 [ODS → XLSX 변환기](../ods-to-xlsx-converter/)를 사용하세요.
+
+Excel XLSX 데이터를 OpenDocument 스프레드시트로 내보내려면 [XLSX → ODS 변환기](../xlsx-to-ods-converter/)를 사용하세요.

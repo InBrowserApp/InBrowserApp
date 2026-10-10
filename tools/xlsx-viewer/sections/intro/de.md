@@ -19,3 +19,5 @@ Verwenden Sie für eine ältere XLS-Arbeitsmappe den [XLS-zu-XLSX-Konverter](../
 Verwenden Sie den [Numbers-zu-XLSX-Konverter](../numbers-to-xlsx-converter/), um lokale Numbers-Tabellen als Excel-Arbeitsblätter zu exportieren.
 
 Verwenden Sie den [ODS-zu-XLSX-Konverter](../ods-to-xlsx-converter/), um OpenDocument-Tabellendaten als Excel-Arbeitsmappe zu exportieren.
+
+Verwenden Sie den [XLSX-zu-ODS-Konverter](../xlsx-to-ods-converter/), um Excel-XLSX-Daten als OpenDocument-Tabelle zu exportieren.

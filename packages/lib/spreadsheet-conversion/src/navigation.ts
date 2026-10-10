@@ -18,11 +18,11 @@ export function cellPosition(value: string, sheet: SheetInfo) {
   return { row, column }
 }
 
-export function outputName(name: string, extension: string) {
+export function outputName(name: string, extension: string, output = "xlsx") {
   return `${
     name
       .replace(new RegExp(`\\.${extension}$`, "i"), "")
       .replace(/[\\/:*?"<>|]/g, "_")
       .trim() || "workbook"
-  }.xlsx`
+  }.${output}`
 }

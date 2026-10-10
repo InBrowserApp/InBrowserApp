@@ -19,3 +19,5 @@
 لتصدير جداول Numbers المحلية كأوراق عمل Excel، استخدم [محول Numbers إلى XLSX](../numbers-to-xlsx-converter/).
 
 لتصدير بيانات جداول OpenDocument كمصنف Excel، استخدم [محول ODS إلى XLSX](../ods-to-xlsx-converter/).
+
+لتصدير بيانات Excel بصيغة XLSX كجدول بيانات OpenDocument، استخدم [محول XLSX إلى ODS](../xlsx-to-ods-converter/).
