@@ -16,3 +16,5 @@ Worksheet export includes hidden rows and columns and uses saved formula results
 For a legacy XLS workbook, use the [XLS to XLSX Converter](../xls-to-xlsx-converter/) to inspect its imported data and download a modern Excel copy. Conversion has its own compatibility notes; open the file again in the converter.
 
 To export local Numbers tables as Excel worksheets, use the [Numbers to XLSX Converter](../numbers-to-xlsx-converter/).
+
+To export OpenDocument spreadsheet data as an Excel workbook, use the [ODS to XLSX Converter](../ods-to-xlsx-converter/).

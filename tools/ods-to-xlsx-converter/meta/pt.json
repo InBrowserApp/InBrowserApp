@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de ODS para XLSX",
+  "description": "Converta planilhas OpenDocument locais para XLSX com várias planilhas, valores de células com seus tipos e uma prévia dos dados. Os arquivos ficam no navegador."
+}

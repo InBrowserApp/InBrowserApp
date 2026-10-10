@@ -17,3 +17,5 @@
 للمصنفات القديمة بصيغة XLS، استخدم [محول XLS إلى XLSX](../xls-to-xlsx-converter/) لفحص البيانات المستوردة وتنزيل نسخة بصيغة Excel الحديثة. للتحويل ملاحظات توافق خاصة به؛ افتح الملف مجددًا في المحول.
 
 لتصدير جداول Numbers المحلية كأوراق عمل Excel، استخدم [محول Numbers إلى XLSX](../numbers-to-xlsx-converter/).
+
+لتصدير بيانات جداول OpenDocument كمصنف Excel، استخدم [محول ODS إلى XLSX](../ods-to-xlsx-converter/).

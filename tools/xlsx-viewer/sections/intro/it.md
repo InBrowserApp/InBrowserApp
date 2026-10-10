@@ -17,3 +17,5 @@ L’esportazione del foglio di lavoro include righe e colonne nascoste e usa i r
 Per una cartella di lavoro XLS meno recente, usa il [Convertitore da XLS a XLSX](../xls-to-xlsx-converter/) per esaminare i dati importati e scaricare una copia in un formato Excel moderno. La conversione ha le proprie note sulla compatibilità; apri nuovamente il file nel convertitore.
 
 Per esportare tabelle Numbers locali come fogli di lavoro Excel, usa il [Convertitore da Numbers a XLSX](../numbers-to-xlsx-converter/).
+
+Per esportare i dati dei fogli di calcolo OpenDocument come cartella di lavoro Excel, usa il [Convertitore da ODS a XLSX](../ods-to-xlsx-converter/).

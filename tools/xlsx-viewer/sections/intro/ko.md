@@ -17,3 +17,5 @@ Numbers 표는 별도의 워크시트 탭으로 표시되며, 원래 시트와 �
 이전 형식의 XLS 통합 문서는 [XLS → XLSX 변환기](../xls-to-xlsx-converter/)에서 가져온 데이터를 확인하고 최신 Excel 형식의 사본으로 다운로드할 수 있습니다. 변환 기능에는 별도의 호환성 안내가 있습니다. 변환기에서 파일을 다시 여세요.
 
 기기에 있는 Numbers 표를 Excel 워크시트로 내보내려면 [Numbers → XLSX 변환기](../numbers-to-xlsx-converter/)를 사용하세요.
+
+OpenDocument 스프레드시트 데이터를 Excel 통합 문서로 내보내려면 [ODS → XLSX 변환기](../ods-to-xlsx-converter/)를 사용하세요.

@@ -17,3 +17,5 @@ Numbers 表格显示为单独的工作表标签，并在可用时显示原始工
 对于旧版 XLS 工作簿，可使用[XLS 转 XLSX 转换器](../xls-to-xlsx-converter/)查看导入的数据，并下载新版 Excel 格式的副本。转换功能有其自身的兼容性说明；请在转换器中重新打开文件。
 
 如需将本地 Numbers 表格导出为 Excel 工作表，请使用[Numbers 转 XLSX 转换器](../numbers-to-xlsx-converter/)。
+
+如需将 OpenDocument 电子表格数据导出为 Excel 工作簿，请使用[ODS 转 XLSX 转换器](../ods-to-xlsx-converter/)。

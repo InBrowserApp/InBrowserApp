@@ -146,6 +146,7 @@
     "@tool/notebook-viewer": "workspace:*",
     "@tool/number-base-converter": "workspace:*",
     "@tool/numbers-to-xlsx-converter": "workspace:*",
+    "@tool/ods-to-xlsx-converter": "workspace:*",
     "@tool/odt-viewer": "workspace:*",
     "@tool/ofd-viewer": "workspace:*",
     "@tool/openapi-to-typescript-converter": "workspace:*",

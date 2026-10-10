@@ -17,3 +17,5 @@ Dosya boyutu veya sayfa sayısı için sabit bir üst sınır yoktur. Karmaşık
 Eski bir XLS çalışma kitabının içe aktarılan verilerini incelemek ve yeni Excel biçiminde bir kopyasını indirmek için [XLS’ten XLSX’e Dönüştürücü](../xls-to-xlsx-converter/) aracını kullanın. Dönüştürmenin kendine özgü uyumluluk notları vardır; dosyayı dönüştürücüde yeniden açın.
 
 Yerel Numbers tablolarını Excel çalışma sayfaları olarak dışa aktarmak için [Numbers’tan XLSX’e Dönüştürücü](../numbers-to-xlsx-converter/) aracını kullanın.
+
+OpenDocument elektronik tablo verilerini Excel çalışma kitabı olarak dışa aktarmak için [ODS’den XLSX’e Dönüştürücü](../ods-to-xlsx-converter/) aracını kullanın.

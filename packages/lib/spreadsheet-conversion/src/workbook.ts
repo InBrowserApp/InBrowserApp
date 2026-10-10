@@ -50,17 +50,12 @@ function writerBook(book: WorkBook): WorkBook {
   const sheets = Object.fromEntries(
     book.SheetNames.map((name) => {
       const sheet = book.Sheets[name]!
-      const empty: CellObject[] = []
-      // Numeric row lookup avoids millions of string-key lookups for sparse XLS.
-      // Empty rows share an array; only rows with stored cells allocate entries.
-      const rows: CellObject[][] = Array.from(
-        { length: utils.decode_range(sheet["!ref"] ?? "A1").e.r + 1 },
-        () => empty
-      )
+      // Sparse numeric rows let the writer skip absent rows and trailing cells.
+      const rows: CellObject[][] = []
       for (const [address, cell] of Object.entries(sheet)) {
         if (address.startsWith("!")) continue
         const { r, c } = utils.decode_cell(address)
-        if (rows[r] === empty) rows[r] = []
+        rows[r] ??= []
         rows[r]![c] = cell
       }
       return [name, { ...sheet, "!data": rows }]

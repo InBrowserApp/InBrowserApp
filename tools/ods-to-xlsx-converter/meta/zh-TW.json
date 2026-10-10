@@ -1,0 +1,4 @@
+{
+  "name": "ODS 轉 XLSX 轉換器",
+  "description": "將本機 OpenDocument 試算表轉換為 XLSX，支援多個工作表、具資料類型的儲存格值與資料預覽。檔案保留在您的瀏覽器中。"
+}

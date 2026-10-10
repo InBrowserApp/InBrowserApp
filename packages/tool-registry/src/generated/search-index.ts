@@ -17468,6 +17468,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ods-to-xlsx-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["ods", "xlsx", "opendocument", "excel", "spreadsheet", "converter"],
+    locales: {
+      ar: {
+        name: "محول ODS إلى XLSX",
+        description:
+          "حوّل جداول بيانات OpenDocument المحلية إلى XLSX مع أوراق عمل متعددة وقيم خلايا بأنواع بياناتها ومعاينة للبيانات. تبقى الملفات في متصفحك.",
+      },
+      de: {
+        name: "ODS-zu-XLSX-Konverter",
+        description:
+          "Konvertieren Sie lokale OpenDocument-Tabellen in XLSX mit mehreren Arbeitsblättern, Zellwerten mit Datentypen und einer Datenvorschau. Dateien bleiben in Ihrem Browser.",
+      },
+      en: {
+        name: "ODS to XLSX Converter",
+        description:
+          "Convert local OpenDocument spreadsheets to XLSX with multiple worksheets, typed cell values, and a data preview. Files stay in your browser.",
+      },
+      es: {
+        name: "Conversor de ODS a XLSX",
+        description:
+          "Convierte hojas de cálculo OpenDocument locales a XLSX con varias hojas, valores de celda con sus tipos de datos y una vista previa de los datos. Los archivos permanecen en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur ODS en XLSX",
+        description:
+          "Convertissez des feuilles de calcul OpenDocument locales en XLSX avec plusieurs feuilles, des valeurs de cellule typées et un aperçu des données. Les fichiers restent dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר ODS ל-XLSX",
+        description:
+          "המרת גיליונות OpenDocument מקומיים ל-XLSX עם גיליונות עבודה מרובים, ערכי תאים וסוגי הנתונים שלהם ותצוגה מקדימה של הנתונים. הקבצים נשארים בדפדפן שלך.",
+      },
+      hi: {
+        name: "ODS से XLSX कन्वर्टर",
+        description:
+          "स्थानीय OpenDocument स्प्रेडशीट को कई वर्कशीट, डेटा प्रकार सहित सेल मान और डेटा पूर्वावलोकन के साथ XLSX में बदलें। फ़ाइलें आपके ब्राउज़र में ही रहती हैं।",
+      },
+      id: {
+        name: "Konverter ODS ke XLSX",
+        description:
+          "Konversi lembar bentang OpenDocument lokal ke XLSX dengan beberapa lembar kerja, nilai sel beserta tipe datanya, dan pratinjau data. File tetap berada di browser Anda.",
+      },
+      it: {
+        name: "Convertitore da ODS a XLSX",
+        description:
+          "Converti fogli di calcolo OpenDocument locali in XLSX con più fogli di lavoro, valori delle celle con i relativi tipi di dati e un’anteprima dei dati. I file restano nel tuo browser.",
+      },
+      ja: {
+        name: "ODSからXLSXへの変換ツール",
+        description:
+          "ローカルのOpenDocumentスプレッドシートをXLSXに変換できます。複数のワークシートとセルの値・データ型に対応し、データをプレビューできます。ファイルはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "ODS → XLSX 변환기",
+        description:
+          "기기에 있는 OpenDocument 스프레드시트를 XLSX로 변환하세요. 여러 워크시트와 셀 데이터 형식을 지원하며 데이터 미리 보기를 제공합니다. 파일은 브라우저 안에만 머무릅니다.",
+      },
+      ms: {
+        name: "Penukar ODS ke XLSX",
+        description:
+          "Tukar hamparan OpenDocument setempat kepada XLSX dengan berbilang lembaran kerja, nilai sel berserta jenis datanya dan pratonton data. Fail kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "ODS-naar-XLSX-converter",
+        description:
+          "Converteer lokale OpenDocument-spreadsheets naar XLSX met meerdere werkbladen, celwaarden met hun gegevenstypen en een gegevensvoorbeeld. Bestanden blijven in je browser.",
+      },
+      no: {
+        name: "ODS til XLSX-konverterer",
+        description:
+          "Konverter lokale OpenDocument-regneark til XLSX med flere regneark, celleverdier med datatyper og forhåndsvisning av data. Filene forblir i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter ODS na XLSX",
+        description:
+          "Konwertuj lokalne arkusze OpenDocument na XLSX z obsługą wielu arkuszy, zachowaniem typów wartości komórek i podglądem danych. Pliki pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de ODS para XLSX",
+        description:
+          "Converta planilhas OpenDocument locais para XLSX com várias planilhas, valores de células com seus tipos e uma prévia dos dados. Os arquivos ficam no navegador.",
+      },
+      ru: {
+        name: "Конвертер ODS в XLSX",
+        description:
+          "Преобразуйте локальные таблицы OpenDocument в XLSX с несколькими листами, сохранением типов значений ячеек и предпросмотром данных. Файлы остаются в вашем браузере.",
+      },
+      sv: {
+        name: "ODS till XLSX-konverterare",
+        description:
+          "Konvertera lokala OpenDocument-kalkylblad till XLSX med flera kalkylblad, cellvärden med sina datatyper och en förhandsvisning av data. Filerna stannar i din webbläsare.",
+      },
+      th: {
+        name: "โปรแกรมแปลง ODS เป็น XLSX",
+        description:
+          "แปลงสเปรดชีต OpenDocument จากเครื่องเป็น XLSX พร้อมหลายเวิร์กชีต ค่าในเซลล์พร้อมชนิดข้อมูล และตัวอย่างข้อมูล ไฟล์จะอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "ODS’den XLSX’e Dönüştürücü",
+        description:
+          "Yerel OpenDocument elektronik tablolarını birden fazla çalışma sayfası, veri türleriyle birlikte hücre değerleri ve veri önizlemesiyle XLSX’e dönüştürün. Dosyalar tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình chuyển đổi ODS sang XLSX",
+        description:
+          "Chuyển đổi bảng tính OpenDocument trên thiết bị sang XLSX với nhiều trang tính, giá trị ô cùng kiểu dữ liệu và bản xem trước dữ liệu. Tệp luôn ở trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "ODS 转 XLSX 转换器",
+        description:
+          "将本地 OpenDocument 电子表格转换为 XLSX，保留多个工作表及单元格值的数据类型，并提供数据预览。文件始终留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "ODS 轉 XLSX 轉換器",
+        description:
+          "將本機 OpenDocument 試算表轉換為 XLSX，支援多個工作表、具資料類型的儲存格值與資料預覽。檔案保留在您的瀏覽器中。",
+      },
+    },
+  },
+  {
     slug: "odt-viewer",
     category: "document",
     icon: "file-text",

@@ -1,0 +1,4 @@
+{
+  "name": "ODS to XLSX Converter",
+  "description": "Convert local OpenDocument spreadsheets to XLSX with multiple worksheets, typed cell values, and a data preview. Files stay in your browser."
+}

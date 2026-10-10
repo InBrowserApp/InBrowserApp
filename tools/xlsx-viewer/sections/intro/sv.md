@@ -17,3 +17,5 @@ Kalkylbladsexport tar med dolda rader och kolumner och använder sparade formelr
 För en äldre XLS-arbetsbok kan du använda [XLS till XLSX-konverterare](../xls-to-xlsx-converter/) för att granska importerade data och ladda ner en kopia i ett modernt Excel-format. Konverteringen har egna kompatibilitetsnotiser; öppna filen igen i konverteraren.
 
 Använd [Numbers till XLSX-konverterare](../numbers-to-xlsx-converter/) för att exportera lokala Numbers-tabeller som Excel-kalkylblad.
+
+Använd [ODS till XLSX-konverterare](../ods-to-xlsx-converter/) för att exportera data från OpenDocument-kalkylblad som en Excel-arbetsbok.

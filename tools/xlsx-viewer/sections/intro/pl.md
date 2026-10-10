@@ -17,3 +17,5 @@ Eksport arkusza uwzględnia ukryte wiersze i kolumny oraz wykorzystuje zapisane 
 W przypadku starszego skoroszytu XLS użyj narzędzia [Konwerter XLS na XLSX](../xls-to-xlsx-converter/), aby sprawdzić zaimportowane dane i pobrać kopię w nowoczesnym formacie Excel. Konwersja ma własne informacje o zgodności; otwórz plik ponownie w konwerterze.
 
 Aby wyeksportować lokalne tabele Numbers jako arkusze Excel, użyj narzędzia [Konwerter Numbers na XLSX](../numbers-to-xlsx-converter/).
+
+Aby wyeksportować dane arkusza OpenDocument jako skoroszyt Excel, użyj narzędzia [Konwerter ODS na XLSX](../ods-to-xlsx-converter/).

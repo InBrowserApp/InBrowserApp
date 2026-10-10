@@ -17,3 +17,5 @@ L’exportation de feuilles de calcul inclut les lignes et colonnes masquées et
 Pour un ancien classeur XLS, utilisez le [Convertisseur XLS en XLSX](../xls-to-xlsx-converter/) afin d’examiner ses données importées et de télécharger une copie au format Excel récent. La conversion dispose de ses propres notes de compatibilité ; ouvrez à nouveau le fichier dans le convertisseur.
 
 Pour exporter des tableaux Numbers locaux sous forme de feuilles de calcul Excel, utilisez le [Convertisseur Numbers en XLSX](../numbers-to-xlsx-converter/).
+
+Pour exporter les données d’une feuille de calcul OpenDocument sous forme de classeur Excel, utilisez le [Convertisseur ODS en XLSX](../ods-to-xlsx-converter/).

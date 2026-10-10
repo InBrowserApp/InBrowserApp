@@ -118,7 +118,8 @@ jobs:
 
       - name: Build
         env:
-          NODE_OPTIONS: --max-old-space-size=6144
+          # Document-worker bundling needs more than a 6 GiB JavaScript heap.
+          NODE_OPTIONS: --max-old-space-size=8192
         run: pnpm build
 
       - name: Upload web artifact

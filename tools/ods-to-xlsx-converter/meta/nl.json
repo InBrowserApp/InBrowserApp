@@ -1,0 +1,4 @@
+{
+  "name": "ODS-naar-XLSX-converter",
+  "description": "Converteer lokale OpenDocument-spreadsheets naar XLSX met meerdere werkbladen, celwaarden met hun gegevenstypen en een gegevensvoorbeeld. Bestanden blijven in je browser."
+}

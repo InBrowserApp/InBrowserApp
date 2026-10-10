@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter ODS na XLSX",
+  "description": "Konwertuj lokalne arkusze OpenDocument na XLSX z obsługą wielu arkuszy, zachowaniem typów wartości komórek i podglądem danych. Pliki pozostają w przeglądarce."
+}

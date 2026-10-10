@@ -1,0 +1,4 @@
+{
+  "name": "ODS 转 XLSX 转换器",
+  "description": "将本地 OpenDocument 电子表格转换为 XLSX，保留多个工作表及单元格值的数据类型，并提供数据预览。文件始终留在浏览器中。"
+}
