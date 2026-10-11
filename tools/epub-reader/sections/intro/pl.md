@@ -9,3 +9,5 @@ Czytnik otwiera standardowe publikacje EPUB 2 i EPUB 3 z układem dopasowującym
 Pliki pozostają na Twoim urządzeniu. To narzędzie nie przesyła ich na serwer ani nie zapisuje. Skrypty książki nie są uruchamiane, a zewnętrzne obrazy, style, czcionki, dźwięk i filmy nie są pobierane automatycznie. Nie można wyświetlać książek chronionych ani książek o stałym lub mieszanym układzie stron. Wygląd pisma pionowego i nietypowych stylów wydawców może się różnić między przeglądarkami; zastępowanie czcionek może zmienić podział wierszy. Brakujące rozdziały i niedostępne zasoby są wyraźnie sygnalizowane, aby nie sprawiać wrażenia, że książka jest kompletna.
 
 Nie ma stałego limitu rozmiaru pliku ani liczby rozdziałów. Nadal obowiązują rzeczywiste ograniczenia pamięci przeglądarki. Zamknięcie lub zastąpienie książki zwalnia zasoby używane do jej czytania. To czytnik bez edycji, eksportu, synchronizacji z chmurą ani zapisanej historii czytania.
+
+Aby zapisać czytelną treść obsługiwanej książki jako lokalny plik TXT lub HTML, użyj narzędzia [Konwerter e-booków na TXT / HTML](/tools/ebook-text-html-export/).

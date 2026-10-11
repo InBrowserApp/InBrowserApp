@@ -11,3 +11,5 @@ Usa el índice para recorrer secciones y títulos anidados. Ajusta el tamaño de
 El lector admite texto FictionBook 2, párrafos, énfasis, poesía, tablas e ilustraciones de mapa de bits incrustadas. Detecta las codificaciones de texto declaradas habituales, incluidas las cirílicas y UTF-16. La apariencia puede diferir de la de otras aplicaciones de lectura. Las imágenes ausentes y el contenido no compatible se indican sin ocultar el texto disponible.
 
 Los archivos comprimidos deben contener un solo libro FB2. Extrae los archivos que contengan varios libros y abre el que elijas por separado. No se pueden abrir archivos comprimidos cifrados, XML mal formado ni documentos con declaraciones de entidades externas. No hay un límite fijo de tamaño de archivo ni de número de secciones; la memoria disponible del navegador sigue influyendo en los libros muy grandes.
+
+Para guardar el contenido legible de un libro compatible como archivo TXT o HTML local, usa el [Convertidor de libros electrónicos a TXT / HTML](/tools/ebook-text-html-export/).

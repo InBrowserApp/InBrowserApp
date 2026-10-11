@@ -13,3 +13,5 @@ Sách mã hóa hoặc được bảo vệ chống sao chép, sách có bố cụ
 Sách của bạn luôn ở trong trình duyệt này. Tập lệnh, âm thanh, video và tài nguyên từ xa không được tải. Liên kết web thông thường chỉ mở khi bạn kích hoạt. Không cần tài khoản, tải tệp lên hay dịch vụ chuyển đổi; đóng hoặc thay sách sẽ giải phóng tài nguyên của sách.
 
 Không có giới hạn đặt trước về kích thước tệp hay số chương. Sách lớn hoặc phức tạp vẫn phụ thuộc vào thiết bị và bộ nhớ trình duyệt. Các nút điều khiển nằm riêng với văn bản sách, và việc đổi cỡ chữ sẽ giữ vị trí đọc hiện tại khi có thể.
+
+Để lưu nội dung đọc được của sách được hỗ trợ thành tệp TXT hoặc HTML trên thiết bị, hãy dùng [Trình chuyển đổi sách điện tử sang TXT / HTML](/tools/ebook-text-html-export/).

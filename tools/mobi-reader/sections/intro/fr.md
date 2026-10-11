@@ -13,3 +13,5 @@ Les livres chiffrés ou protégés contre la copie, les livres à mise en page f
 Votre livre reste dans ce navigateur. Les scripts, l’audio, la vidéo et les ressources distantes ne sont pas chargés. Les liens web ordinaires ne s’ouvrent que lorsque vous les activez. Aucun compte, envoi de fichier ou service de conversion n’est nécessaire. Fermer ou remplacer le livre libère ses ressources.
 
 Aucune limite de taille de fichier ou de nombre de chapitres n’est prédéfinie. Les livres volumineux ou complexes restent soumis aux capacités de votre appareil et à la mémoire du navigateur. Les commandes de lecture restent séparées du texte du livre, et le changement de taille du texte conserve votre position de lecture lorsque c’est possible.
+
+Pour enregistrer le contenu lisible d’un livre pris en charge dans un fichier TXT ou HTML local, utilisez le [Convertisseur de livres numériques en TXT / HTML](/tools/ebook-text-html-export/).

@@ -10,8 +10,7 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "foliate-js": "catalog:",
-    "fflate": "catalog:"
+    "@workspace/ebook": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

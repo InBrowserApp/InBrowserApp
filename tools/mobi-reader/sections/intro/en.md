@@ -13,3 +13,5 @@ Encrypted or copy-protected books, fixed-layout books, and newer Kindle formats 
 Your book stays in this browser. Scripts, audio, video, and remote resources are not loaded. Ordinary web links open only when you activate them. No account, upload, or conversion service is needed, and closing or replacing the book releases its resources.
 
 There is no preset file-size or chapter-count limit. Large or complex books still depend on your device and browser memory. Reading controls stay separate from the book text, and changing text size keeps your current reading position where possible.
+
+To save the readable content of a supported book as a local TXT or HTML file, use the [Ebook to TXT / HTML Converter](/tools/ebook-text-html-export/).

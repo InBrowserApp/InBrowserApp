@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor de libros electrónicos a TXT / HTML",
+  "description": "Exporta libros EPUB, MOBI/AZW3 y FB2 locales como texto legible o HTML independiente. Conserva el orden de lectura y el contenido compatible sin subir tu libro."
+}

@@ -1,4 +1,4 @@
-/** Only sanitized, embedded notebook images reach the browser decoder. */
+/** Only sanitized, embedded images reach the browser decoder. */
 export async function readableImage(src: string, signal: AbortSignal) {
   signal.throwIfAborted()
   if (
@@ -18,10 +18,18 @@ export async function readableImage(src: string, signal: AbortSignal) {
       reject(signal.reason)
     }
     signal.addEventListener("abort", abort, { once: true })
-    image.onload = () => {
-      const readable = image.naturalWidth > 0
+    const finish = (readable: boolean) => {
+      if (signal.aborted) return
       clean()
       resolve(readable)
+    }
+    image.onload = () => {
+      // A decoder can discover truncated/corrupt pixels after the load event.
+      // Wait for complete decoding before calling an image portable.
+      void image.decode().then(
+        () => finish(image.naturalWidth > 0),
+        () => finish(false)
+      )
     }
     image.onerror = () => {
       clean()

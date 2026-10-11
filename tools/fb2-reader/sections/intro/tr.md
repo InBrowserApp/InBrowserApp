@@ -11,3 +11,5 @@ Bölümlere ve alt başlıklara göz atmak için içindekileri kullanın. Yazı 
 Okuyucu; FictionBook 2 metinlerini, paragrafları, vurgulamayı, şiirleri, tabloları ve gömülü raster görselleri destekler. Kiril kodlamaları ve UTF-16 dahil olmak üzere, dosyada belirtilen yaygın metin kodlamaları algılanır. Görünüm, başka bir okuma uygulamasındakinden farklı olabilir. Eksik görseller veya desteklenmeyen içerikler, mevcut metin gizlenmeden belirtilir.
 
 Sıkıştırılmış dosyalar tek bir FB2 kitabı içermelidir. Birden fazla kitap içeren arşivleri çıkarın ve seçtiğiniz kitabı ayrı olarak açın. Şifreli arşivler, hatalı XML ve harici varlık bildirimleri kullanan belgeler açılamaz. Sabit bir dosya boyutu veya bölüm sayısı sınırı yoktur; ancak kullanılabilir tarayıcı belleği çok büyük kitapların açılmasını etkiler.
+
+Desteklenen bir kitabın okunabilir içeriğini yerel bir TXT veya HTML dosyası olarak kaydetmek için [E-kitaptan TXT / HTML’ye Dönüştürücü](/tools/ebook-text-html-export/) kullanın.

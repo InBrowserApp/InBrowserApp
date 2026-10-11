@@ -13,3 +13,5 @@ Buku yang dienkripsi atau dilindungi dari penyalinan, buku dengan tata letak tet
 Buku Anda tetap di browser ini. Skrip, audio, video, dan sumber daya jarak jauh tidak dimuat. Tautan web biasa hanya terbuka saat Anda mengaktifkannya. Tidak diperlukan akun, unggahan, atau layanan konversi. Menutup atau mengganti buku akan melepaskan sumber daya yang digunakannya.
 
 Tidak ada batas ukuran file atau jumlah bab yang ditetapkan sebelumnya. Buku besar atau kompleks tetap bergantung pada perangkat dan memori browser Anda. Kontrol membaca terpisah dari teks buku, dan perubahan ukuran teks mempertahankan posisi baca Anda jika memungkinkan.
+
+Untuk menyimpan konten yang dapat dibaca dari buku yang didukung sebagai file TXT atau HTML lokal, gunakan [Konverter Buku Elektronik ke TXT / HTML](/tools/ebook-text-html-export/).

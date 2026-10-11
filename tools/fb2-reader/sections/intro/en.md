@@ -11,3 +11,5 @@ Use the contents to browse sections and nested headings. Adjust text size or rea
 The reader supports FictionBook 2 text, paragraphs, emphasis, poetry, tables, and embedded raster illustrations. Common declared text encodings, including Cyrillic and UTF-16, are detected. Appearance can differ from another reading app. Missing images or unsupported content are identified without hiding the available text.
 
 Compressed files must contain one FB2 book. Extract archives containing several books and open your chosen book separately. Encrypted archives, malformed XML, and documents using external entity declarations cannot be opened. There is no fixed file-size or section-count limit; available browser memory still affects very large books.
+
+To save the readable content of a supported book as a local TXT or HTML file, use the [Ebook to TXT / HTML Converter](/tools/ebook-text-html-export/).

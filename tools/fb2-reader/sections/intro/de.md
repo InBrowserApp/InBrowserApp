@@ -11,3 +11,5 @@ Navigieren Sie über das Inhaltsverzeichnis durch Abschnitte und untergeordnete 
 Der Reader unterstützt FictionBook-2-Text, Absätze, Hervorhebungen, Gedichte, Tabellen und eingebettete Rasterbilder. Gängige angegebene Textkodierungen, darunter kyrillische Kodierungen und UTF-16, werden erkannt. Das Erscheinungsbild kann von anderen Lese-Apps abweichen. Fehlende Bilder oder nicht unterstützte Inhalte werden gekennzeichnet, ohne den verfügbaren Text auszublenden.
 
 Komprimierte Dateien müssen genau ein FB2-Buch enthalten. Entpacken Sie Archive mit mehreren Büchern und öffnen Sie das gewünschte Buch einzeln. Verschlüsselte Archive, fehlerhaftes XML und Dokumente mit Deklarationen externer Entitäten können nicht geöffnet werden. Es gibt keine feste Grenze für Dateigröße oder Abschnittsanzahl; der verfügbare Browserspeicher beeinflusst dennoch das Öffnen sehr großer Bücher.
+
+Um den lesbaren Inhalt eines unterstützten Buchs als lokale TXT- oder HTML-Datei zu speichern, nutze den [E-Book-zu-TXT-/HTML-Konverter](/tools/ebook-text-html-export/).

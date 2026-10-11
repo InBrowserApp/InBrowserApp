@@ -13,3 +13,5 @@ Buku yang disulitkan atau dilindungi daripada penyalinan, buku dengan susun atur
 Buku anda kekal dalam pelayar ini. Skrip, audio, video dan sumber jauh tidak dimuatkan. Pautan web biasa hanya dibuka apabila anda mengaktifkannya. Tiada akaun, muat naik atau perkhidmatan penukaran diperlukan. Menutup atau menggantikan buku akan melepaskan sumbernya.
 
 Tiada had saiz fail atau bilangan bab yang ditetapkan terlebih dahulu. Buku yang besar atau kompleks masih bergantung pada peranti dan memori pelayar anda. Kawalan bacaan kekal berasingan daripada teks buku, dan perubahan saiz teks mengekalkan kedudukan bacaan semasa anda jika boleh.
+
+Untuk menyimpan kandungan buku yang boleh dibaca dan disokong sebagai fail TXT atau HTML setempat, gunakan [Penukar E-buku kepada TXT / HTML](/tools/ebook-text-html-export/).

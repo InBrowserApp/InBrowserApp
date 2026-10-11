@@ -11,3 +11,5 @@ Gunakan daftar isi untuk menelusuri bagian dan judul bertingkat. Sesuaikan ukura
 Pembaca ini mendukung teks FictionBook 2, paragraf, penekanan, puisi, tabel, dan ilustrasi raster tersemat. Pengodean teks umum yang dinyatakan dalam file, termasuk Sirilik dan UTF-16, dapat dideteksi. Tampilan dapat berbeda dari aplikasi baca lain. Gambar yang hilang atau konten yang tidak didukung ditandai tanpa menyembunyikan teks yang tersedia.
 
 File terkompresi harus berisi satu buku FB2. Ekstrak arsip yang berisi beberapa buku, lalu buka buku pilihan Anda secara terpisah. Arsip terenkripsi, XML yang tidak valid, dan dokumen yang menggunakan deklarasi entitas eksternal tidak dapat dibuka. Tidak ada batas tetap untuk ukuran file atau jumlah bagian; memori browser yang tersedia tetap memengaruhi buku yang sangat besar.
+
+Untuk menyimpan konten yang dapat dibaca dari buku yang didukung sebagai file TXT atau HTML lokal, gunakan [Konverter Buku Elektronik ke TXT / HTML](/tools/ebook-text-html-export/).

@@ -94,6 +94,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "docx-to-pdf-converter": () => import("@tool/docx-to-pdf-converter/page"),
   "docx-viewer": () => import("@tool/docx-viewer/page"),
   "duration-calculator": () => import("@tool/duration-calculator/page"),
+  "ebook-text-html-export": () => import("@tool/ebook-text-html-export/page"),
   "email-attachment-extractor": () =>
     import("@tool/email-attachment-extractor/page"),
   "email-content-export": () => import("@tool/email-content-export/page"),

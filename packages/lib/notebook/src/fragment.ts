@@ -2,7 +2,7 @@ import { prepareWebDocument } from "@workspace/web-document"
 import type { Bundle, Messages } from "./types"
 import { imageData } from "./core/images"
 import { text } from "./core/text"
-import { staticSvg } from "./static-svg"
+import { staticSvg } from "@workspace/web-document"
 
 export function fragment(
   html: string,

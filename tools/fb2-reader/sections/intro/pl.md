@@ -11,3 +11,5 @@ Korzystaj ze spisu treści, aby przeglądać sekcje i zagnieżdżone nagłówki.
 Czytnik obsługuje tekst FictionBook 2, akapity, wyróżnienia, poezję, tabele i osadzone ilustracje rastrowe. Rozpoznaje popularne deklarowane kodowania tekstu, w tym kodowania cyrylicy i UTF-16. Wygląd może różnić się od tego w innej aplikacji do czytania. Brakujące obrazy i nieobsługiwana treść są sygnalizowane bez ukrywania dostępnego tekstu.
 
 Skompresowane pliki muszą zawierać jedną książkę FB2. Archiwa z kilkoma książkami należy rozpakować i otworzyć wybraną książkę osobno. Nie można otworzyć zaszyfrowanych archiwów, niepoprawnego XML ani dokumentów z deklaracjami encji zewnętrznych. Nie ma stałego limitu rozmiaru pliku ani liczby sekcji; dostępna pamięć przeglądarki nadal wpływa na obsługę bardzo dużych książek.
+
+Aby zapisać czytelną treść obsługiwanej książki jako lokalny plik TXT lub HTML, użyj narzędzia [Konwerter e-booków na TXT / HTML](/tools/ebook-text-html-export/).

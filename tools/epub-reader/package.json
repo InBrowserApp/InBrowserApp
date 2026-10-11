@@ -10,8 +10,7 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "@zip.js/zip.js": "catalog:",
-    "foliate-js": "catalog:"
+    "@workspace/ebook": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

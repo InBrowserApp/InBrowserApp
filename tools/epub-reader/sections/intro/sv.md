@@ -9,3 +9,5 @@ Läsaren öppnar vanliga EPUB 2- och EPUB 3-publikationer med flödande textlayo
 Filerna stannar på din enhet och laddas inte upp eller sparas av det här verktyget. Bokens skript körs inte, och externa bilder, stilmallar, typsnitt, ljud och videor hämtas inte automatiskt. Skyddade böcker och böcker med fast eller blandad sidlayout kan inte visas. Vertikal text och ovanliga förlagsstilar kan se olika ut i olika webbläsare. Ersättningstypsnitt kan ändra radbrytningarna. Saknade kapitel och otillgängliga resurser markeras tydligt så att boken inte framstår som fullständig.
 
 Det finns ingen fast gräns för filstorlek eller antal kapitel. Webbläsarens faktiska minnesbegränsningar gäller fortfarande. När du stänger eller byter bok frigörs resurserna som användes för läsningen. Det här är en läsare utan redigering, export, molnsynkronisering eller sparad läshistorik.
+
+För att spara det läsbara innehållet i en bok som stöds som en lokal TXT- eller HTML-fil använder du [Konverterare från e-bok till TXT / HTML](/tools/ebook-text-html-export/).

@@ -9,8 +9,7 @@
   "dependencies": {
     "@workspace/web-document": "workspace:*",
     "marked": "catalog:",
-    "highlight.js": "catalog:",
-    "dompurify": "catalog:"
+    "highlight.js": "catalog:"
   },
   "devDependencies": {
     "vitest": "catalog:"

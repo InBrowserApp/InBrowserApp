@@ -9,3 +9,5 @@ The reader opens ordinary, reflowable EPUB 2 and EPUB 3 publications. It preserv
 Files stay on your device and are not uploaded or saved by this tool. Book scripts do not run, and external images, styles, fonts, audio, and video are not fetched automatically. Protected books and fixed or mixed page layouts cannot be displayed. Vertical writing and unusual publisher styles can vary between browsers; font substitution can change line breaks. Missing chapters and unavailable resources receive visible feedback rather than being presented as a complete book.
 
 There is no fixed file-size or chapter-count cap. Actual browser memory constraints still apply. Closing or replacing the book releases its reading resources. This is a reader, without editing, export, cloud sync, or saved reading history.
+
+To save the readable content of a supported book as a local TXT or HTML file, use the [Ebook to TXT / HTML Converter](/tools/ebook-text-html-export/).

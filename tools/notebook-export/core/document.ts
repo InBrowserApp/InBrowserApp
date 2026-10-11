@@ -1,7 +1,7 @@
 import { preparePreview } from "@workspace/notebook"
 import type { Notebook } from "@workspace/notebook"
 import type { Messages } from "../types"
-import { readableImage } from "./images"
+import { readableImage } from "@workspace/web-document"
 
 export async function notebookDocument(
   notebook: Notebook,
