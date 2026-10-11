@@ -11,3 +11,5 @@ Les en-têtes, pieds de page, notes de bas de page, l’héritage des feuilles d
 ## Fichiers locaux et ressources du navigateur
 
 Le contenu du document reste dans ce navigateur. Les applications intégrées ne sont pas exécutées, les liens ne sont pas suivis et les images liées ou autres ressources distantes du document ne sont pas téléchargées. Le produit n’impose aucune limite de taille de fichier ou de nombre de pages. Les documents et images volumineux peuvent néanmoins dépasser la mémoire du navigateur ou la capacité de sa surface de dessin ; réduisez le zoom pour une page trop grande ou utilisez un appareil disposant de plus de mémoire.
+
+Pour obtenir un PDF téléchargeable, utilisez le [Convertisseur RTF en PDF](../rtf-to-pdf-converter/). Consultez ses remarques sur la compatibilité et examinez les pages exportées avant de télécharger.

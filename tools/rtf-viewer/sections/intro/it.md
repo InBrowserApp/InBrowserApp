@@ -11,3 +11,5 @@ Intestazioni, piè di pagina, note a piè di pagina, ereditarietà dei fogli di 
 ## File locali e risorse del browser
 
 Il contenuto dei documenti resta in questo browser. Le applicazioni incorporate non vengono eseguite, i link non vengono aperti e le immagini collegate o altre risorse remote dei documenti non vengono scaricate. Il prodotto non impone limiti alla dimensione dei file o al numero di pagine. Documenti e immagini di grandi dimensioni possono comunque superare la memoria o la capacità di disegno del browser; riduci lo zoom per una pagina troppo grande oppure usa un dispositivo con più memoria.
+
+Per ottenere un PDF da scaricare, usa il [Convertitore da RTF a PDF](../rtf-to-pdf-converter/). Consulta le note sulla compatibilità e controlla le pagine esportate prima di scaricare.

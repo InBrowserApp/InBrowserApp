@@ -5,6 +5,8 @@ import { isolatedConverter } from "../apps/web/build/isolated-converter.mjs"
 test.each([
   "/tools/ppt-to-pdf-converter/",
   "/tools/odt-to-pdf-converter/",
+  "/tools/rtf-to-pdf-converter/",
+  "/ar/tools/rtf-to-pdf-converter/",
   "/ko/tools/odt-to-pdf-converter/",
   "/zh-CN/tools/ppt-to-pdf-converter/?query=1",
   "/ar/tools/ppt-to-pdf-converter/",

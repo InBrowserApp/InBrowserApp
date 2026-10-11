@@ -11,3 +11,5 @@ Sidhuvuden, sidfötter, fotnoter, arv av formatmallar, avsnittsinställningar, s
 ## Lokala filer och webbläsarens resurser
 
 Dokumentinnehållet stannar i den här webbläsaren. Inbäddade program körs inte, länkar följs inte och länkade bilder eller andra fjärresurser i dokumentet hämtas inte. Produkten har inga gränser för filstorlek eller sidantal. Stora dokument och bilder kan ändå överskrida webbläsarens minne eller ritytans kapacitet. Minska zoomnivån för en alltför stor sida eller använd en enhet med mer minne.
+
+För att ladda ner en PDF kan du använda [Konverterare från RTF till PDF](../rtf-to-pdf-converter/). Läs anmärkningarna om kompatibilitet och granska de exporterade sidorna innan du laddar ner.

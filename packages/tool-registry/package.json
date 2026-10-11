@@ -192,6 +192,7 @@
     "@tool/robots-txt-generator": "workspace:*",
     "@tool/roman-numeral-converter": "workspace:*",
     "@tool/rot-cipher": "workspace:*",
+    "@tool/rtf-to-pdf-converter": "workspace:*",
     "@tool/rtf-viewer": "workspace:*",
     "@tool/screen-recorder": "workspace:*",
     "@tool/scrypt-key-derivation": "workspace:*",

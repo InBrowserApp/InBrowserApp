@@ -11,3 +11,5 @@ Sokongan untuk pengepala, pengaki, nota kaki, pewarisan helaian gaya, tetapan ba
 ## Fail setempat dan sumber pelayar
 
 Kandungan dokumen kekal dalam pelayar ini. Aplikasi terbenam tidak dijalankan, pautan tidak diikuti, dan gambar yang dipautkan atau sumber dokumen jauh yang lain tidak diambil. Produk ini tidak mengehadkan saiz fail atau bilangan halaman. Dokumen dan gambar yang besar masih boleh melebihi memori atau kapasiti kanvas pelayar; kurangkan zum untuk halaman yang terlalu besar, atau gunakan peranti dengan lebih banyak memori.
+
+Untuk mendapatkan PDF yang boleh dimuat turun, gunakan [Penukar RTF kepada PDF](../rtf-to-pdf-converter/). Semak nota keserasiannya dan periksa halaman yang dieksport sebelum memuat turun.

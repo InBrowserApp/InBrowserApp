@@ -19,6 +19,14 @@
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Embedder-Policy: require-corp
 
+/tools/rtf-to-pdf-converter/
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+/:language/tools/rtf-to-pdf-converter/
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
 # Brand icons — non-fingerprinted, change rarely. 7d fresh / 30d SWR.
 /favicon.ico
   Cache-Control: public, max-age=604800, stale-while-revalidate=2592000

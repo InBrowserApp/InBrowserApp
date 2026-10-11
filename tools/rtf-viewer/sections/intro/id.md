@@ -11,3 +11,5 @@ Dukungan untuk header, footer, catatan kaki, pewarisan lembar gaya, pengaturan b
 ## File lokal dan sumber daya browser
 
 Isi dokumen tetap di browser ini. Aplikasi tertanam tidak dijalankan, tautan tidak diikuti, dan gambar tertaut atau sumber daya dokumen jarak jauh lainnya tidak diambil. Produk ini tidak membatasi ukuran file atau jumlah halaman. Dokumen dan gambar besar tetap dapat melampaui kapasitas memori atau kanvas browser; kurangi pembesaran untuk halaman yang terlalu besar, atau gunakan perangkat dengan memori lebih besar.
+
+Untuk mendapatkan PDF yang dapat diunduh, gunakan [Konverter RTF ke PDF](../rtf-to-pdf-converter/). Periksa catatan kompatibilitasnya dan periksa halaman yang diekspor sebelum mengunduh.

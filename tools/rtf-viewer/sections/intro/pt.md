@@ -11,3 +11,5 @@ Cabeçalhos, rodapés, notas de rodapé, herança de folhas de estilo, configura
 ## Arquivos locais e recursos do navegador
 
 O conteúdo dos documentos fica neste navegador. Aplicativos incorporados não são executados, links não são seguidos e imagens vinculadas ou outros recursos remotos do documento não são buscados. O produto não impõe limites de tamanho de arquivo nem de número de páginas. Documentos e imagens grandes ainda podem exceder a memória do navegador ou a capacidade da área de renderização; reduza o zoom de uma página muito grande ou use um dispositivo com mais memória.
+
+Para baixar um PDF, use o [Conversor de RTF para PDF](../rtf-to-pdf-converter/). Confira as notas de compatibilidade e inspecione as páginas exportadas antes de baixar.

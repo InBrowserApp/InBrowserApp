@@ -11,3 +11,4 @@ Topptekster, bunntekster, fotnoter, arv fra stilark, seksjonsinnstillinger, samm
 ## Lokale filer og nettleserressurser
 
 Dokumentinnholdet blir i denne nettleseren. Innebygde programmer kjøres ikke, lenker følges ikke, og lenkede bilder eller andre eksterne dokumentressurser hentes ikke. Verktøyet har ingen grense for filstørrelse eller antall sider. Store dokumenter og bilder kan likevel overskride nettleserens minne- eller tegningskapasitet; reduser zoomnivået for en for stor side, eller bruk en enhet med mer minne.
+For en PDF som kan lastes ned, bruk [RTF til PDF-konvertereren](../rtf-to-pdf-converter/). Les merknadene om kompatibilitet og kontroller de eksporterte sidene før du laster ned.

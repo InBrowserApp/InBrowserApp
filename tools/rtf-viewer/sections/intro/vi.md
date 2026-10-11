@@ -11,3 +11,5 @@ Trình xem hỗ trợ định dạng đoạn văn thông dụng, kiểu chữ nh
 ## Tệp trên thiết bị và tài nguyên trình duyệt
 
 Nội dung tài liệu luôn ở trong trình duyệt này. Ứng dụng nhúng không được chạy, liên kết không được truy cập, hình ảnh được liên kết và các tài nguyên tài liệu từ xa khác không được tải. Sản phẩm không đặt giới hạn về kích thước tệp hay số trang. Tài liệu và hình ảnh lớn vẫn có thể vượt quá bộ nhớ hoặc khả năng vẽ trên canvas của trình duyệt; hãy giảm mức thu phóng nếu trang quá lớn hoặc dùng thiết bị có nhiều bộ nhớ hơn.
+
+Để tạo PDF có thể tải xuống, hãy dùng [Trình chuyển đổi RTF sang PDF](../rtf-to-pdf-converter/). Xem các lưu ý về khả năng tương thích và kiểm tra các trang đã xuất trước khi tải xuống.
