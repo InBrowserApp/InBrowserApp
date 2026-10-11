@@ -15,3 +15,5 @@ MSG admite encabezados de correo de Outlook, texto sin formato, HTML, informaci�
 Ver un correo no verifica la identidad del remitente ni una firma digital. Si la fecha falta o tiene un formato incorrecto, se muestra sin intentar deducirla. La memoria disponible y las capacidades del navegador determinan qué archivos se pueden abrir; no hay un límite fijo de tamaño de archivo ni de cantidad de adjuntos.
 
 Para obtener una copia de lectura imprimible con los encabezados guardados y una lista de adjuntos, usa el [Convertidor de correo electrónico a PDF](../email-to-pdf-converter/). No se incluye el contenido de los adjuntos.
+
+Para reutilizar el contenido del mensaje, usa el [Convertidor de correo electrónico a HTML / texto](../email-content-export/) y obtén HTML sin conexión o texto UTF-8 que puedes copiar, con los encabezados guardados y los detalles de los adjuntos.

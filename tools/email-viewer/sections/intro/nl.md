@@ -15,3 +15,5 @@ MSG ondersteunt Outlook-e-mailheaders, platte tekst, HTML, bijlagegegevens en bi
 Het bekijken van een e-mail verifieert de identiteit van de afzender of een digitale handtekening niet. Een ontbrekende of onjuist opgemaakte datum wordt zonder aannames weergegeven. Het beschikbare geheugen en de mogelijkheden van de browser bepalen welke bestanden kunnen worden geopend; er is geen vaste limiet voor de bestandsgrootte of het aantal bijlagen.
 
 Gebruik de [E-mail naar PDF-converter](../email-to-pdf-converter/) voor een afdrukbare leeskopie met opgeslagen headers en een bijlagenlijst. De inhoud van bijlagen wordt niet opgenomen.
+
+Gebruik de [E-mail naar HTML / tekst-converter](../email-content-export/) om berichtinhoud opnieuw te gebruiken als offline HTML of kopieerbare UTF-8-tekst, met opgeslagen headers en bijlagegegevens.

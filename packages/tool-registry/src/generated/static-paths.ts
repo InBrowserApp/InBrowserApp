@@ -6534,6 +6534,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "email-content-export",
+    language: "ar",
+  },
+  {
+    slug: "email-content-export",
+    language: "de",
+  },
+  {
+    slug: "email-content-export",
+    language: "en",
+  },
+  {
+    slug: "email-content-export",
+    language: "es",
+  },
+  {
+    slug: "email-content-export",
+    language: "fr",
+  },
+  {
+    slug: "email-content-export",
+    language: "he",
+  },
+  {
+    slug: "email-content-export",
+    language: "hi",
+  },
+  {
+    slug: "email-content-export",
+    language: "id",
+  },
+  {
+    slug: "email-content-export",
+    language: "it",
+  },
+  {
+    slug: "email-content-export",
+    language: "ja",
+  },
+  {
+    slug: "email-content-export",
+    language: "ko",
+  },
+  {
+    slug: "email-content-export",
+    language: "ms",
+  },
+  {
+    slug: "email-content-export",
+    language: "nl",
+  },
+  {
+    slug: "email-content-export",
+    language: "no",
+  },
+  {
+    slug: "email-content-export",
+    language: "pl",
+  },
+  {
+    slug: "email-content-export",
+    language: "pt",
+  },
+  {
+    slug: "email-content-export",
+    language: "ru",
+  },
+  {
+    slug: "email-content-export",
+    language: "sv",
+  },
+  {
+    slug: "email-content-export",
+    language: "th",
+  },
+  {
+    slug: "email-content-export",
+    language: "tr",
+  },
+  {
+    slug: "email-content-export",
+    language: "vi",
+  },
+  {
+    slug: "email-content-export",
+    language: "zh-CN",
+  },
+  {
+    slug: "email-content-export",
+    language: "zh-TW",
+  },
+  {
     slug: "email-to-pdf-converter",
     language: "ar",
   },

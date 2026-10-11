@@ -15,3 +15,5 @@ MSG mendukung header email Outlook, teks biasa, HTML, informasi lampiran, dan ga
 Melihat email tidak memverifikasi identitas pengirim atau tanda tangan digital. Tanggal yang tidak ada atau salah format ditampilkan tanpa diterka. Memori yang tersedia dan kemampuan browser menentukan file mana yang dapat dibuka; tidak ada batas tetap untuk ukuran file atau jumlah lampiran.
 
 Untuk membuat salinan baca yang dapat dicetak dengan header tersimpan dan daftar lampiran, gunakan [Konverter Email ke PDF](../email-to-pdf-converter/). Isi lampiran tidak disertakan.
+
+Untuk menggunakan kembali isi pesan, gunakan [Konverter Email ke HTML / Teks](../email-content-export/) untuk HTML offline atau teks UTF-8 yang dapat disalin, beserta header tersimpan dan detail lampiran.

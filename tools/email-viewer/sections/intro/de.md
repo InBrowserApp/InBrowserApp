@@ -15,3 +15,5 @@ MSG unterstützt Outlook-E-Mail-Kopfzeilen, reinen Text, HTML, Anhanginformation
 Das Anzeigen einer E-Mail überprüft weder die Identität des Absenders noch eine digitale Signatur. Bei einem fehlenden oder fehlerhaften Datum wird nichts ergänzt oder geschätzt. Welche Dateien sich öffnen lassen, hängt vom verfügbaren Speicher und den Fähigkeiten des Browsers ab; es gibt keine feste Grenze für Dateigröße oder Anzahl der Anhänge.
 
 Für eine druckbare Lesekopie mit gespeicherten Kopfzeilen und einer Anhangliste nutze den [E-Mail-zu-PDF-Konverter](../email-to-pdf-converter/). Anhanginhalte sind nicht enthalten.
+
+Um Nachrichteninhalte weiterzuverwenden, nutze den [E-Mail-zu-HTML-/Text-Konverter](../email-content-export/) für Offline-HTML oder kopierbaren UTF-8-Text mit gespeicherten Kopfzeilen und Anhangdetails.

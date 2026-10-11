@@ -15,3 +15,5 @@ MSG supporta intestazioni email di Outlook, testo semplice, HTML, informazioni s
 La visualizzazione di un’email non verifica l’identità del mittente o una firma digitale. Una data mancante o non valida viene mostrata senza tentare di ricostruirla. La memoria disponibile e le capacità del browser determinano quali file possono essere aperti; non ci sono limiti fissi alla dimensione dei file o al numero di allegati.
 
 Per una copia stampabile per la lettura con intestazioni salvate ed elenco degli allegati, usa il [Convertitore da email a PDF](../email-to-pdf-converter/). Il contenuto degli allegati non è incluso.
+
+Per riutilizzare il contenuto del messaggio, usa il [Convertitore da email a HTML / testo](../email-content-export/) per ottenere HTML offline o testo UTF-8 copiabile, con intestazioni salvate e dettagli degli allegati.

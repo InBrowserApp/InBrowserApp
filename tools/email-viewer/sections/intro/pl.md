@@ -15,3 +15,5 @@ MSG obsługuje nagłówki e-maili programu Outlook, zwykły tekst, HTML, informa
 Wyświetlenie e-maila nie weryfikuje tożsamości nadawcy ani podpisu cyfrowego. Brakująca lub nieprawidłowa data jest przedstawiana bez zgadywania. O tym, które pliki można otworzyć, decydują dostępna pamięć i możliwości przeglądarki; nie ma stałego limitu rozmiaru pliku ani liczby załączników.
 
 Aby utworzyć kopię do czytania i druku z zapisanymi nagłówkami i listą załączników, użyj narzędzia [Konwerter e-maili na PDF](../email-to-pdf-converter/). Zawartość załączników nie jest dołączana.
+
+Aby ponownie wykorzystać treść wiadomości, użyj narzędzia [Konwerter e-maili na HTML / tekst](../email-content-export/), które tworzy HTML do odczytu offline lub tekst UTF-8 możliwy do skopiowania, z zapisanymi nagłówkami i szczegółami załączników.

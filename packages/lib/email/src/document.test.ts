@@ -182,3 +182,21 @@ test("uses literal plain text when HTML is absent and explicitly labels missing 
       .textContent
   ).toBe(labels.noBody)
 })
+
+test("keeps fragment destinations and opts into safe external links only for reusable HTML", () => {
+  const source = email({
+    html: '<p id="mail-note">Target</p><a name="legacy"></a><a href="#mail-note">Jump</a><a href="https://example.test">Reference</a><a href="javascript:alert(1)">Unsafe</a>',
+  })
+  const standard = body(emailDocument(source, labels).html)
+  expect(standard.querySelector('a[href="https://example.test"]')).toBeNull()
+  const exported = body(emailDocument(source, labels, { links: "direct" }).html)
+  expect(exported.querySelector("#mail-note")!.textContent).toBe("Target")
+  expect(exported.querySelector('a[name="legacy"]')).toBeTruthy()
+  expect(exported.querySelector('a[href="#mail-note"]')).toBeTruthy()
+  expect(
+    exported
+      .querySelector('a[href="https://example.test"]')!
+      .getAttribute("rel")
+  ).toBe("noopener noreferrer")
+  expect(exported.querySelector('a[href^="javascript:"]')).toBeNull()
+})

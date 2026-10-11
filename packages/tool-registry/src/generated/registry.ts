@@ -9020,6 +9020,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "email-content-export",
+    category: "document",
+    icon: "mail",
+    tags: [
+      "email",
+      "eml",
+      "emlx",
+      "msg",
+      "html",
+      "text",
+      "export",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل البريد الإلكتروني إلى HTML / نص",
+        description:
+          "صدّر رسائل EML وEMLX وMSG المحلية إلى HTML يعمل دون اتصال أو نص بترميز UTF-8، مع ترويسات ومتن قابلين للقراءة وتفاصيل المرفقات. عاين وانسخ ونزّل في متصفحك.",
+      },
+      de: {
+        name: "E-Mail-zu-HTML-/Text-Konverter",
+        description:
+          "Exportiere lokale EML-, EMLX- und MSG-E-Mails als Offline-HTML oder UTF-8-Text mit lesbaren Kopfzeilen, Nachrichtentext und Anhangdetails. Vorschau, Kopieren und Herunterladen direkt im Browser.",
+      },
+      en: {
+        name: "Email to HTML / Text Converter",
+        description:
+          "Export local EML, EMLX and MSG emails as offline HTML or UTF-8 text with readable headers, body and attachment details. Preview, copy and download in your browser.",
+      },
+      es: {
+        name: "Convertidor de correo electrónico a HTML / texto",
+        description:
+          "Exporta correos EML, EMLX y MSG locales como HTML sin conexión o texto UTF-8 con encabezados, cuerpo y detalles de los adjuntos legibles. Previsualiza, copia y descarga en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur d’e-mails en HTML / texte",
+        description:
+          "Exportez des e-mails locaux EML, EMLX et MSG en HTML hors ligne ou en texte UTF-8, avec des en-têtes lisibles, le corps du message et les détails des pièces jointes. Prévisualisez, copiez et téléchargez dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר דוא״ל ל־HTML / טקסט",
+        description:
+          "ייצוא הודעות דוא״ל מקומיות בפורמטים EML, EMLX ו־MSG ל־HTML שנפתח ללא חיבור לאינטרנט או לטקסט בקידוד UTF-8, עם כותרות קריאות, גוף ההודעה ופרטי קבצים מצורפים. תצוגה מקדימה, העתקה והורדה בדפדפן.",
+      },
+      hi: {
+        name: "ईमेल से HTML / टेक्स्ट कनवर्टर",
+        description:
+          "स्थानीय EML, EMLX और MSG ईमेल को पढ़ने योग्य हेडर, संदेश सामग्री और अटैचमेंट विवरण सहित ऑफ़लाइन HTML या UTF-8 टेक्स्ट में निर्यात करें। अपने ब्राउज़र में पूर्वावलोकन देखें, कॉपी करें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Email ke HTML / Teks",
+        description:
+          "Ekspor email EML, EMLX, dan MSG lokal sebagai HTML offline atau teks UTF-8 dengan header, isi pesan, dan detail lampiran yang dapat dibaca. Pratinjau, salin, dan unduh di browser Anda.",
+      },
+      it: {
+        name: "Convertitore da email a HTML / testo",
+        description:
+          "Esporta email EML, EMLX e MSG locali come HTML offline o testo UTF-8 con intestazioni leggibili, corpo e dettagli degli allegati. Visualizza l’anteprima, copia e scarica nel browser.",
+      },
+      ja: {
+        name: "メールから HTML / テキストへの変換ツール",
+        description:
+          "端末内の EML、EMLX、MSG メールを、読み取り可能なヘッダー、本文、添付ファイルの詳細を含むオフライン HTML または UTF-8 テキストとして書き出します。ブラウザーでプレビュー、コピー、ダウンロードできます。",
+      },
+      ko: {
+        name: "이메일 HTML / 텍스트 변환기",
+        description:
+          "로컬 EML, EMLX 및 MSG 이메일을 읽을 수 있는 헤더, 본문 및 첨부 파일 정보가 포함된 오프라인 HTML 또는 UTF-8 텍스트로 내보내세요. 브라우저에서 미리 보고, 복사하고, 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar E-mel kepada HTML / Teks",
+        description:
+          "Eksport e-mel EML, EMLX dan MSG setempat sebagai HTML luar talian atau teks UTF-8 dengan pengepala, isi dan butiran lampiran yang boleh dibaca. Pratonton, salin dan muat turun dalam pelayar anda.",
+      },
+      nl: {
+        name: "E-mail naar HTML / tekst-converter",
+        description:
+          "Exporteer lokale EML-, EMLX- en MSG-e-mails als offline HTML of UTF-8-tekst met leesbare headers, berichttekst en bijlagegegevens. Bekijk, kopieer en download in je browser.",
+      },
+      no: {
+        name: "E-post til HTML / tekst-konverterer",
+        description:
+          "Eksporter lokale EML-, EMLX- og MSG-e-poster som HTML for bruk uten nettilkobling eller UTF-8-tekst med lesbare meldingshoder, meldingstekst og vedleggsdetaljer. Forhåndsvis, kopier og last ned i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter e-maili na HTML / tekst",
+        description:
+          "Eksportuj lokalne e-maile EML, EMLX i MSG jako HTML do odczytu offline lub tekst UTF-8 z czytelnymi nagłówkami, treścią i szczegółami załączników. Przeglądaj, kopiuj i pobieraj w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de e-mail para HTML / texto",
+        description:
+          "Exporte e-mails locais EML, EMLX e MSG como HTML offline ou texto UTF-8 com cabeçalhos, corpo e detalhes dos anexos legíveis. Visualize, copie e baixe no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер писем в HTML / текст",
+        description:
+          "Экспортируйте локальные письма EML, EMLX и MSG в автономный HTML или текст UTF-8 с читаемыми заголовками, текстом письма и сведениями о вложениях. Просматривайте, копируйте и скачивайте в браузере.",
+      },
+      sv: {
+        name: "Konverterare från e-post till HTML/text",
+        description:
+          "Exportera lokala EML-, EMLX- och MSG-meddelanden som HTML för offlinebruk eller UTF-8-text med läsbara meddelandehuvuden, meddelandetext och bilageuppgifter. Förhandsvisa, kopiera och ladda ner i din webbläsare.",
+      },
+      th: {
+        name: "โปรแกรมแปลงอีเมลเป็น HTML / ข้อความ",
+        description:
+          "ส่งออกอีเมล EML, EMLX และ MSG ในเครื่องเป็น HTML แบบออฟไลน์หรือข้อความ UTF-8 พร้อมส่วนหัว เนื้อหา และรายละเอียดไฟล์แนบที่อ่านได้ ดูตัวอย่าง คัดลอก และดาวน์โหลดในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "E-postadan HTML / Metne Dönüştürücü",
+        description:
+          "Yerel EML, EMLX ve MSG e-postalarını okunabilir üstbilgiler, gövde ve ek ayrıntılarıyla çevrimdışı HTML veya UTF-8 metin olarak dışa aktarın. Tarayıcınızda önizleyin, kopyalayın ve indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi email sang HTML / văn bản",
+        description:
+          "Xuất email EML, EMLX và MSG trên thiết bị thành HTML ngoại tuyến hoặc văn bản UTF-8 với các trường tiêu đề, nội dung đọc được và thông tin tệp đính kèm. Xem trước, sao chép và tải xuống trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "邮件转 HTML / 文本转换器",
+        description:
+          "将本地 EML、EMLX 和 MSG 邮件导出为离线 HTML 或 UTF-8 文本，包含可读取的邮件头、正文和附件详情。在浏览器中预览、复制和下载。",
+      },
+      "zh-TW": {
+        name: "電子郵件轉 HTML／文字轉換器",
+        description:
+          "將本機 EML、EMLX 與 MSG 郵件匯出為離線 HTML 或 UTF-8 文字，包含可讀取的郵件標頭、本文與附件詳細資訊。在瀏覽器中預覽、複製及下載。",
+      },
+    },
+  },
+  {
     slug: "email-to-pdf-converter",
     category: "document",
     icon: "mail",
@@ -42695,6 +42827,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "時長加減計算器",
         description: "在任何時區，從基準時間加減 ISO 8601 時長，精確到毫秒。",
+      },
+    },
+  },
+  "email-content-export": {
+    slug: "email-content-export",
+    category: "document",
+    icon: "mail",
+    tags: [
+      "email",
+      "eml",
+      "emlx",
+      "msg",
+      "html",
+      "text",
+      "export",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل البريد الإلكتروني إلى HTML / نص",
+        description:
+          "صدّر رسائل EML وEMLX وMSG المحلية إلى HTML يعمل دون اتصال أو نص بترميز UTF-8، مع ترويسات ومتن قابلين للقراءة وتفاصيل المرفقات. عاين وانسخ ونزّل في متصفحك.",
+      },
+      de: {
+        name: "E-Mail-zu-HTML-/Text-Konverter",
+        description:
+          "Exportiere lokale EML-, EMLX- und MSG-E-Mails als Offline-HTML oder UTF-8-Text mit lesbaren Kopfzeilen, Nachrichtentext und Anhangdetails. Vorschau, Kopieren und Herunterladen direkt im Browser.",
+      },
+      en: {
+        name: "Email to HTML / Text Converter",
+        description:
+          "Export local EML, EMLX and MSG emails as offline HTML or UTF-8 text with readable headers, body and attachment details. Preview, copy and download in your browser.",
+      },
+      es: {
+        name: "Convertidor de correo electrónico a HTML / texto",
+        description:
+          "Exporta correos EML, EMLX y MSG locales como HTML sin conexión o texto UTF-8 con encabezados, cuerpo y detalles de los adjuntos legibles. Previsualiza, copia y descarga en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur d’e-mails en HTML / texte",
+        description:
+          "Exportez des e-mails locaux EML, EMLX et MSG en HTML hors ligne ou en texte UTF-8, avec des en-têtes lisibles, le corps du message et les détails des pièces jointes. Prévisualisez, copiez et téléchargez dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר דוא״ל ל־HTML / טקסט",
+        description:
+          "ייצוא הודעות דוא״ל מקומיות בפורמטים EML, EMLX ו־MSG ל־HTML שנפתח ללא חיבור לאינטרנט או לטקסט בקידוד UTF-8, עם כותרות קריאות, גוף ההודעה ופרטי קבצים מצורפים. תצוגה מקדימה, העתקה והורדה בדפדפן.",
+      },
+      hi: {
+        name: "ईमेल से HTML / टेक्स्ट कनवर्टर",
+        description:
+          "स्थानीय EML, EMLX और MSG ईमेल को पढ़ने योग्य हेडर, संदेश सामग्री और अटैचमेंट विवरण सहित ऑफ़लाइन HTML या UTF-8 टेक्स्ट में निर्यात करें। अपने ब्राउज़र में पूर्वावलोकन देखें, कॉपी करें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Email ke HTML / Teks",
+        description:
+          "Ekspor email EML, EMLX, dan MSG lokal sebagai HTML offline atau teks UTF-8 dengan header, isi pesan, dan detail lampiran yang dapat dibaca. Pratinjau, salin, dan unduh di browser Anda.",
+      },
+      it: {
+        name: "Convertitore da email a HTML / testo",
+        description:
+          "Esporta email EML, EMLX e MSG locali come HTML offline o testo UTF-8 con intestazioni leggibili, corpo e dettagli degli allegati. Visualizza l’anteprima, copia e scarica nel browser.",
+      },
+      ja: {
+        name: "メールから HTML / テキストへの変換ツール",
+        description:
+          "端末内の EML、EMLX、MSG メールを、読み取り可能なヘッダー、本文、添付ファイルの詳細を含むオフライン HTML または UTF-8 テキストとして書き出します。ブラウザーでプレビュー、コピー、ダウンロードできます。",
+      },
+      ko: {
+        name: "이메일 HTML / 텍스트 변환기",
+        description:
+          "로컬 EML, EMLX 및 MSG 이메일을 읽을 수 있는 헤더, 본문 및 첨부 파일 정보가 포함된 오프라인 HTML 또는 UTF-8 텍스트로 내보내세요. 브라우저에서 미리 보고, 복사하고, 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar E-mel kepada HTML / Teks",
+        description:
+          "Eksport e-mel EML, EMLX dan MSG setempat sebagai HTML luar talian atau teks UTF-8 dengan pengepala, isi dan butiran lampiran yang boleh dibaca. Pratonton, salin dan muat turun dalam pelayar anda.",
+      },
+      nl: {
+        name: "E-mail naar HTML / tekst-converter",
+        description:
+          "Exporteer lokale EML-, EMLX- en MSG-e-mails als offline HTML of UTF-8-tekst met leesbare headers, berichttekst en bijlagegegevens. Bekijk, kopieer en download in je browser.",
+      },
+      no: {
+        name: "E-post til HTML / tekst-konverterer",
+        description:
+          "Eksporter lokale EML-, EMLX- og MSG-e-poster som HTML for bruk uten nettilkobling eller UTF-8-tekst med lesbare meldingshoder, meldingstekst og vedleggsdetaljer. Forhåndsvis, kopier og last ned i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter e-maili na HTML / tekst",
+        description:
+          "Eksportuj lokalne e-maile EML, EMLX i MSG jako HTML do odczytu offline lub tekst UTF-8 z czytelnymi nagłówkami, treścią i szczegółami załączników. Przeglądaj, kopiuj i pobieraj w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de e-mail para HTML / texto",
+        description:
+          "Exporte e-mails locais EML, EMLX e MSG como HTML offline ou texto UTF-8 com cabeçalhos, corpo e detalhes dos anexos legíveis. Visualize, copie e baixe no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер писем в HTML / текст",
+        description:
+          "Экспортируйте локальные письма EML, EMLX и MSG в автономный HTML или текст UTF-8 с читаемыми заголовками, текстом письма и сведениями о вложениях. Просматривайте, копируйте и скачивайте в браузере.",
+      },
+      sv: {
+        name: "Konverterare från e-post till HTML/text",
+        description:
+          "Exportera lokala EML-, EMLX- och MSG-meddelanden som HTML för offlinebruk eller UTF-8-text med läsbara meddelandehuvuden, meddelandetext och bilageuppgifter. Förhandsvisa, kopiera och ladda ner i din webbläsare.",
+      },
+      th: {
+        name: "โปรแกรมแปลงอีเมลเป็น HTML / ข้อความ",
+        description:
+          "ส่งออกอีเมล EML, EMLX และ MSG ในเครื่องเป็น HTML แบบออฟไลน์หรือข้อความ UTF-8 พร้อมส่วนหัว เนื้อหา และรายละเอียดไฟล์แนบที่อ่านได้ ดูตัวอย่าง คัดลอก และดาวน์โหลดในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "E-postadan HTML / Metne Dönüştürücü",
+        description:
+          "Yerel EML, EMLX ve MSG e-postalarını okunabilir üstbilgiler, gövde ve ek ayrıntılarıyla çevrimdışı HTML veya UTF-8 metin olarak dışa aktarın. Tarayıcınızda önizleyin, kopyalayın ve indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi email sang HTML / văn bản",
+        description:
+          "Xuất email EML, EMLX và MSG trên thiết bị thành HTML ngoại tuyến hoặc văn bản UTF-8 với các trường tiêu đề, nội dung đọc được và thông tin tệp đính kèm. Xem trước, sao chép và tải xuống trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "邮件转 HTML / 文本转换器",
+        description:
+          "将本地 EML、EMLX 和 MSG 邮件导出为离线 HTML 或 UTF-8 文本，包含可读取的邮件头、正文和附件详情。在浏览器中预览、复制和下载。",
+      },
+      "zh-TW": {
+        name: "電子郵件轉 HTML／文字轉換器",
+        description:
+          "將本機 EML、EMLX 與 MSG 郵件匯出為離線 HTML 或 UTF-8 文字，包含可讀取的郵件標頭、本文與附件詳細資訊。在瀏覽器中預覽、複製及下載。",
       },
     },
   },

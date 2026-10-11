@@ -15,3 +15,5 @@ Le format MSG prend en charge les en-têtes d’e-mails Outlook, le texte brut, 
 Afficher un e-mail ne vérifie ni l’identité de l’expéditeur ni une signature numérique. Une date absente ou mal formée est affichée sans tenter de la deviner. La mémoire disponible et les capacités du navigateur déterminent quels fichiers peuvent être ouverts ; il n’y a aucune limite fixe de taille de fichier ou de nombre de pièces jointes.
 
 Pour obtenir une copie de lecture imprimable avec les en-têtes enregistrés et la liste des pièces jointes, utilisez le [Convertisseur d’e-mails en PDF](../email-to-pdf-converter/). Le contenu des pièces jointes n’est pas inclus.
+
+Pour réutiliser le contenu du message, utilisez le [Convertisseur d’e-mails en HTML / texte](../email-content-export/) afin d’obtenir du HTML hors ligne ou du texte UTF-8 à copier, avec les en-têtes enregistrés et les détails des pièces jointes.
