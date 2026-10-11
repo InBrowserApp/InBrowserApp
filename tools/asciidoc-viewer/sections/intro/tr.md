@@ -13,3 +13,5 @@ Dahil edilen dosyalar, dokümantasyon projesi öznitelikleri, özel uzantılar, 
 Dosyalar cihazınızda kalır. Bir belgeyi açmak uzak kaynakları getirmez, diğer yerel dosyaları okumaz veya betik çalıştırmaz. Dış bağlantılar yalnızca seçildiğinde ayrı olarak açılır. Geçerli önizlemenin kullandığı kaynakları serbest bırakmak için dosyayı kapatın veya değiştirin. Bu görüntüleyici belgeleri düzenlemez, dışa aktarmaz veya dokümantasyon siteleri oluşturmaz. .asc uzantısı, ilgisiz dosya türleri için de kullanıldığından kabul edilmez.
 
 İndirilebilir bir A4 baskı kopyası için [AsciiDoc’tan PDF’ye Dönüştürücü](../asciidoc-to-pdf-converter/) aracını kullanın. Oluşturulan PDF’yi önizler ve desteklenen kaynakları ve çıktı sınırlamalarını açıklar.
+
+Çevrimdışı açılan bağımsız bir HTML belgesi için [AsciiDoc’tan HTML’ye Dönüştürücü](../asciidoc-to-html-converter/) aracını kullanın.

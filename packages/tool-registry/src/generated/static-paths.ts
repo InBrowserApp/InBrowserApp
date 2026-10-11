@@ -646,6 +646,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "asciidoc-to-html-converter",
+    language: "ar",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "de",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "en",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "es",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "fr",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "he",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "hi",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "id",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "it",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "ja",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "ko",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "ms",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "nl",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "no",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "pl",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "pt",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "ru",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "sv",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "th",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "tr",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "vi",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "asciidoc-to-html-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "asciidoc-to-pdf-converter",
     language: "ar",
   },

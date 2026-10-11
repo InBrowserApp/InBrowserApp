@@ -13,3 +13,5 @@ Included files, documentation-project attributes, custom extensions, diagrams, a
 Files stay on your device. Opening a document does not fetch remote resources, read other local files, or run scripts. External links open separately only when selected. Close or replace the file to release the current preview. This viewer does not edit, export, or build documentation sites. The .asc extension is not accepted because it is also used for unrelated file types.
 
 For a downloadable A4 print copy, use the [AsciiDoc to PDF Converter](../asciidoc-to-pdf-converter/). It previews the generated PDF and explains the supported source and output limits.
+
+For a standalone HTML document that opens offline, use the [AsciiDoc to HTML Converter](../asciidoc-to-html-converter/).

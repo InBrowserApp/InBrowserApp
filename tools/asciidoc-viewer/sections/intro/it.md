@@ -13,3 +13,4 @@ I file inclusi, gli attributi del progetto di documentazione, le estensioni pers
 I file restano sul tuo dispositivo. L’apertura di un documento non recupera risorse remote, non legge altri file locali e non esegue script. I collegamenti esterni si aprono separatamente solo quando vengono selezionati. Chiudi o sostituisci il file per liberare l’anteprima corrente. Questo visualizzatore non modifica, non esporta e non genera siti di documentazione. L’estensione .asc non è accettata perché viene usata anche per tipi di file non correlati.
 
 Per una copia di stampa A4 scaricabile, usa il [Convertitore da AsciiDoc a PDF](../asciidoc-to-pdf-converter/). Mostra in anteprima il PDF generato e spiega i sorgenti supportati e i limiti del risultato.
+Per un documento HTML autonomo che si apre offline, usa il [Convertitore da AsciiDoc a HTML](../asciidoc-to-html-converter/).

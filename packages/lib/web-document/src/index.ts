@@ -50,6 +50,8 @@ export function prepareWebDocument(
     headingText: string
     print?: boolean
     links?: "inert" | "direct"
+    /** Application-owned CSS, never document-provided content. */
+    styles?: string
   }
 ): WebDocument {
   const notes: ResourceNotes = { local: false, remote: false, active: false }
@@ -220,6 +222,11 @@ export function prepareWebDocument(
   const style = inert.createElement("style")
   style.textContent = readerStyle
   if (!options.print) head.prepend(style)
+  if (options.styles) {
+    const theme = inert.createElement("style")
+    theme.textContent = options.styles
+    head.append(theme)
+  }
   // CSP must precede every element, including document-provided CSS.
   const charset = inert.createElement("meta")
   charset.setAttribute("charset", "utf-8")

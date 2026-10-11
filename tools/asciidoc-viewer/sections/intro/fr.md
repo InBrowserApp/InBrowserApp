@@ -13,3 +13,5 @@ Les fichiers inclus, les attributs des projets de documentation, les extensions 
 Les fichiers restent sur votre appareil. L’ouverture d’un document ne récupère aucune ressource distante, ne lit aucun autre fichier local et n’exécute aucun script. Les liens externes s’ouvrent séparément, uniquement lorsque vous les sélectionnez. Fermez ou remplacez le fichier pour libérer l’aperçu actuel. Cette visionneuse ne permet pas de modifier, d’exporter ou de générer des sites de documentation. L’extension .asc n’est pas acceptée, car elle sert aussi à d’autres types de fichiers sans rapport.
 
 Pour obtenir une copie A4 à imprimer et à télécharger, utilisez le [Convertisseur AsciiDoc en PDF](../asciidoc-to-pdf-converter/). Il affiche un aperçu du PDF généré et explique les sources prises en charge ainsi que les limites du résultat.
+
+Pour obtenir un document HTML autonome qui s’ouvre hors ligne, utilisez le [Convertisseur AsciiDoc en HTML](../asciidoc-to-html-converter/).

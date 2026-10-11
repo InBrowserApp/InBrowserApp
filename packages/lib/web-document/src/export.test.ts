@@ -143,3 +143,24 @@ test("cancels image decoding and discards a result canceled before serialization
   next.abort()
   await expect(late).rejects.toMatchObject({ name: "AbortError" })
 })
+
+test("keeps the application reading theme in both preview and offline HTML", async () => {
+  const styles = "h1 { color: rgb(22, 75, 100); }"
+  const result = await exportWebDocument(
+    '<html lang="ar" dir="rtl"><head><title>دليل</title></head><body><h1>中文 دليل</h1></body></html>',
+    new AbortController().signal,
+    "Section",
+    styles
+  )
+  for (const html of [result.preview.html, await result.file.text()]) {
+    const document = new DOMParser().parseFromString(html, "text/html")
+    expect(document.documentElement.lang).toBe("ar")
+    expect(document.documentElement.dir).toBe("rtl")
+    expect(document.head.firstElementChild?.getAttribute("http-equiv")).toBe(
+      "Content-Security-Policy"
+    )
+    expect(document.head.lastElementChild?.textContent).toBe(styles)
+    expect(document.title).toBe("دليل")
+    expect(document.body.textContent).toContain("中文 دليل")
+  }
+})

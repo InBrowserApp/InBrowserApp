@@ -13,3 +13,5 @@ Arquivos incluídos, atributos de projetos de documentação, extensões persona
 Os arquivos ficam no seu dispositivo. Abrir um documento não busca recursos remotos, não lê outros arquivos locais nem executa scripts. Links externos só são abertos separadamente quando selecionados. Feche ou substitua o arquivo para liberar a prévia atual. Este visualizador não edita, exporta nem gera sites de documentação. A extensão .asc não é aceita porque também é usada por tipos de arquivo não relacionados.
 
 Para baixar uma cópia A4 para impressão, use o [Conversor de AsciiDoc para PDF](../asciidoc-to-pdf-converter/). Ele exibe uma prévia do PDF gerado e explica o conteúdo-fonte compatível e as limitações do resultado.
+
+Para obter um documento HTML independente que abre offline, use o [Conversor de AsciiDoc para HTML](../asciidoc-to-html-converter/).

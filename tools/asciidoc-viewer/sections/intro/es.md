@@ -13,3 +13,5 @@ No se cargan archivos incluidos, atributos de proyectos de documentación, exten
 Los archivos permanecen en tu dispositivo. Abrir un documento no descarga recursos remotos, lee otros archivos locales ni ejecuta scripts. Los enlaces externos se abren por separado solo al seleccionarlos. Cierra o reemplaza el archivo para liberar la vista previa actual. Este visor no edita, exporta ni genera sitios de documentación. No se admite la extensión .asc porque también se usa para otros tipos de archivo.
 
 Para obtener una copia de impresión A4 descargable, usa el [Convertidor de AsciiDoc a PDF](../asciidoc-to-pdf-converter/). Esta herramienta permite previsualizar el PDF generado y explica qué documentos fuente son compatibles y cuáles son los límites del resultado.
+
+Para obtener un documento HTML independiente que se abra sin conexión, usa el [Convertidor de AsciiDoc a HTML](../asciidoc-to-html-converter/).

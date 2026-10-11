@@ -13,3 +13,5 @@ Inkluderte filer, attributter fra dokumentasjonsprosjekter, egendefinerte utvide
 Filene forblir på enheten din. Åpning av et dokument henter ikke eksterne ressurser, leser ikke andre lokale filer og kjører ikke skript. Eksterne lenker åpnes separat bare når du velger dem. Lukk eller bytt fil for å frigjøre den gjeldende forhåndsvisningen. Denne viseren redigerer ikke, eksporterer ikke og bygger ikke dokumentasjonsnettsteder. Filendelsen .asc godtas ikke fordi den også brukes til andre filtyper.
 
 Bruk [AsciiDoc til PDF-konverterer](../asciidoc-to-pdf-converter/) for å få en utskriftskopi i A4-format som kan lastes ned. Verktøyet forhåndsviser den genererte PDF-en og forklarer hvilket kildeinnhold som støttes, og begrensningene for resultatet.
+
+Bruk [AsciiDoc til HTML-konverterer](../asciidoc-to-html-converter/) for å få et selvstendig HTML-dokument som kan åpnes uten nettilkobling.
