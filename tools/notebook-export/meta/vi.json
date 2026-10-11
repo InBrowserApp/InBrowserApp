@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi notebook Jupyter",
+  "description": "Chuyển đổi notebook IPYNB trên thiết bị sang HTML, Markdown hoặc mã. Giữ nguyên thứ tự ô đã lưu và đầu ra được hỗ trợ mà không tải lên tệp hay thực thi mã."
+}

@@ -11,3 +11,5 @@ O visualizador exibe apenas o que foi salvo. A ausência de saída não indica u
 ## Visualização local e somente leitura
 
 Os arquivos ficam no seu dispositivo. Abrir um notebook não executa código, inicia um kernel, instala pacotes nem busca recursos externos. Imagens remotas e anexos ausentes são informados. Links externos só são abertos separadamente quando selecionados. Feche ou substitua o notebook para liberar a prévia. Este visualizador não edita, exporta nem armazena automaticamente o conteúdo do notebook.
+
+Para salvar o notebook como HTML, Markdown ou um script de código, use o [Conversor de Jupyter Notebook](/tools/notebook-export/). Ele exporta o conteúdo salvo sem executar código.

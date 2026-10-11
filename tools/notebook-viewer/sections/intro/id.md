@@ -11,3 +11,5 @@ Penampil ini hanya menampilkan konten yang telah disimpan. Keluaran yang tidak a
 ## Penayangan lokal, hanya baca
 
 File tetap di perangkat Anda. Membuka notebook tidak menjalankan kode, memulai kernel, memasang paket, atau mengambil sumber daya eksternal. Gambar jarak jauh dan lampiran yang hilang dilaporkan. Tautan eksternal terbuka secara terpisah hanya saat dipilih. Tutup atau ganti notebook untuk melepaskan pratinjau. Penampil ini tidak mengedit, mengekspor, atau menyimpan konten notebook secara otomatis.
+
+Untuk menyimpan notebook sebagai HTML, Markdown, atau skrip kode, gunakan [Konverter Notebook Jupyter](/tools/notebook-export/). Alat ini mengekspor konten tersimpan tanpa menjalankan kode.

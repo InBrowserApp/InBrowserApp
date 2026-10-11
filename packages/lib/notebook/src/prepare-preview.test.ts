@@ -5,7 +5,9 @@ import { parse } from "./core/parse"
 import { preparePreview } from "./prepare-preview"
 import { fragment } from "./fragment"
 import { staticSvg } from "./static-svg"
-import m from "./messages/en.json"
+const m = JSON.parse(
+  readFileSync("tools/notebook-viewer/messages/en.json", "utf8")
+)
 const signal = () => new AbortController().signal
 const documentOf = (html: string) =>
   new DOMParser().parseFromString(html, "text/html")

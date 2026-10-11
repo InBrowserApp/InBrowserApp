@@ -18709,6 +18709,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "notebook-export",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "jupyter",
+      "notebook",
+      "ipynb",
+      "html",
+      "markdown",
+      "code",
+      "export",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل دفاتر Jupyter",
+        description:
+          "حوّل دفاتر IPYNB المحلية إلى HTML أو Markdown أو تعليمات برمجية. احتفظ بترتيب الخلايا المحفوظ والمخرجات المدعومة دون رفع ملفات أو تنفيذ تعليمات برمجية.",
+      },
+      de: {
+        name: "Jupyter-Notebook-Konverter",
+        description:
+          "Konvertiere lokale IPYNB-Notebooks in HTML, Markdown oder Code. Erhalte die gespeicherte Zellreihenfolge und unterstützte Ausgaben, ohne Dateien hochzuladen oder Code auszuführen.",
+      },
+      en: {
+        name: "Jupyter Notebook Converter",
+        description:
+          "Convert local IPYNB notebooks to HTML, Markdown or code. Keep saved cell order and supported outputs without uploading files or executing code.",
+      },
+      es: {
+        name: "Conversor de cuadernos Jupyter",
+        description:
+          "Convierte cuadernos IPYNB locales a HTML, Markdown o código. Conserva el orden de las celdas guardadas y las salidas compatibles sin subir archivos ni ejecutar código.",
+      },
+      fr: {
+        name: "Convertisseur de notebooks Jupyter",
+        description:
+          "Convertissez des notebooks IPYNB locaux en HTML, Markdown ou code. Conservez l’ordre des cellules et les sorties prises en charge, sans envoi de fichiers ni exécution de code.",
+      },
+      he: {
+        name: "ממיר מחברות Jupyter",
+        description:
+          "המרת מחברות IPYNB מקומיות ל־HTML, ל־Markdown או לקוד. סדר התאים השמור והפלטים הנתמכים נשמרים ללא העלאת קבצים או הרצת קוד.",
+      },
+      hi: {
+        name: "Jupyter नोटबुक कन्वर्टर",
+        description:
+          "स्थानीय IPYNB नोटबुक को HTML, Markdown या कोड में बदलें। फ़ाइलें अपलोड किए या कोड चलाए बिना सहेजे गए सेल का क्रम और समर्थित आउटपुट बनाए रखें।",
+      },
+      id: {
+        name: "Konverter Notebook Jupyter",
+        description:
+          "Konversi notebook IPYNB lokal ke HTML, Markdown, atau kode. Pertahankan urutan sel tersimpan dan keluaran yang didukung tanpa mengunggah file atau menjalankan kode.",
+      },
+      it: {
+        name: "Convertitore di notebook Jupyter",
+        description:
+          "Converti notebook IPYNB locali in HTML, Markdown o codice. Mantieni l’ordine delle celle salvate e gli output supportati senza caricare file né eseguire codice.",
+      },
+      ja: {
+        name: "Jupyter Notebook 変換ツール",
+        description:
+          "端末内の IPYNB ノートブックを HTML、Markdown、コードに変換します。ファイルのアップロードやコードの実行を行わず、保存されたセルの順序と対応する出力を保持します。",
+      },
+      ko: {
+        name: "Jupyter 노트북 변환기",
+        description:
+          "기기에 있는 IPYNB 노트북을 HTML, Markdown 또는 코드로 변환하세요. 파일을 업로드하거나 코드를 실행하지 않고 저장된 셀 순서와 지원되는 출력을 유지합니다.",
+      },
+      ms: {
+        name: "Penukar Jupyter Notebook",
+        description:
+          "Tukar buku nota IPYNB setempat kepada HTML, Markdown atau kod. Kekalkan susunan sel tersimpan dan output yang disokong tanpa memuat naik fail atau melaksanakan kod.",
+      },
+      nl: {
+        name: "Jupyter-notebookconverter",
+        description:
+          "Converteer lokale IPYNB-notebooks naar HTML, Markdown of code. Behoud de opgeslagen celvolgorde en ondersteunde uitvoer zonder bestanden te uploaden of code uit te voeren.",
+      },
+      no: {
+        name: "Jupyter-notatbokkonverterer",
+        description:
+          "Konverter lokale IPYNB-notatbøker til HTML, Markdown eller kode. Bevar lagret cellerekkefølge og utdata som støttes, uten å laste opp filer eller kjøre kode.",
+      },
+      pl: {
+        name: "Konwerter notatników Jupyter",
+        description:
+          "Konwertuj lokalne notatniki IPYNB do HTML, Markdown lub kodu. Zachowaj zapisaną kolejność komórek i obsługiwane dane wyjściowe bez przesyłania plików ani wykonywania kodu.",
+      },
+      pt: {
+        name: "Conversor de Jupyter Notebook",
+        description:
+          "Converta notebooks IPYNB locais para HTML, Markdown ou código. Preserve a ordem das células salvas e as saídas compatíveis sem enviar arquivos nem executar código.",
+      },
+      ru: {
+        name: "Конвертер блокнотов Jupyter",
+        description:
+          "Преобразуйте локальные блокноты IPYNB в HTML, Markdown или код. Сохраните порядок ячеек и поддерживаемый вывод без отправки файлов на сервер и выполнения кода.",
+      },
+      sv: {
+        name: "Jupyter Notebook-konverterare",
+        description:
+          "Konvertera lokala IPYNB-notebooks till HTML, Markdown eller kod. Bevara den sparade cellordningen och utmatningar som stöds utan att ladda upp filer eller köra kod.",
+      },
+      th: {
+        name: "โปรแกรมแปลงโน้ตบุ๊ก Jupyter",
+        description:
+          "แปลงโน้ตบุ๊ก IPYNB บนอุปกรณ์เป็น HTML, Markdown หรือโค้ด คงลำดับเซลล์ที่บันทึกไว้และเอาต์พุตที่รองรับ โดยไม่อัปโหลดไฟล์หรือรันโค้ด",
+      },
+      tr: {
+        name: "Jupyter Notebook Dönüştürücü",
+        description:
+          "Yerel IPYNB not defterlerini HTML, Markdown veya koda dönüştürün. Dosya yüklemeden veya kod çalıştırmadan kaydedilmiş hücre sırasını ve desteklenen çıktıları koruyun.",
+      },
+      vi: {
+        name: "Trình chuyển đổi notebook Jupyter",
+        description:
+          "Chuyển đổi notebook IPYNB trên thiết bị sang HTML, Markdown hoặc mã. Giữ nguyên thứ tự ô đã lưu và đầu ra được hỗ trợ mà không tải lên tệp hay thực thi mã.",
+      },
+      "zh-CN": {
+        name: "Jupyter 笔记本转换器",
+        description:
+          "将本地 IPYNB 笔记本转换为 HTML、Markdown 或代码。保留已保存的单元格顺序和受支持的输出，不上传文件或执行代码。",
+      },
+      "zh-TW": {
+        name: "Jupyter 筆記本轉換器",
+        description:
+          "將本機 IPYNB 筆記本轉換為 HTML、Markdown 或程式碼。保留已儲存的儲存格順序及支援的輸出，不會上傳檔案或執行程式碼。",
+      },
+    },
+  },
+  {
     slug: "notebook-viewer",
     category: "document",
     icon: "file-text",

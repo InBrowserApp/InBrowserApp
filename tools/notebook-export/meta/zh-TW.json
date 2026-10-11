@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter 筆記本轉換器",
+  "description": "將本機 IPYNB 筆記本轉換為 HTML、Markdown 或程式碼。保留已儲存的儲存格順序及支援的輸出，不會上傳檔案或執行程式碼。"
+}

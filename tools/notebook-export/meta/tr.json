@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter Notebook Dönüştürücü",
+  "description": "Yerel IPYNB not defterlerini HTML, Markdown veya koda dönüştürün. Dosya yüklemeden veya kod çalıştırmadan kaydedilmiş hücre sırasını ve desteklenen çıktıları koruyun."
+}

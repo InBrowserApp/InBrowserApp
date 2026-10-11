@@ -10,10 +10,7 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "@workspace/web-document": "workspace:*",
-    "marked": "catalog:",
-    "highlight.js": "catalog:",
-    "dompurify": "catalog:"
+    "@workspace/notebook": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

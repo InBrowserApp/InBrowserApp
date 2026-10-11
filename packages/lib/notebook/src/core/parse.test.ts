@@ -19,6 +19,25 @@ const cell = (cell_type = "markdown", source: unknown = "Text", rest = {}) => ({
   ...rest,
 })
 
+test("retains original source and language only when requested for export", () => {
+  const source = notebook(
+    [
+      cell("code", ["%time x\n", "!echo 世界"], {
+        execution_count: null,
+        outputs: [],
+      }),
+    ],
+    { language_info: { name: "Python" } }
+  )
+  expect(parse(source).cells[0]).not.toHaveProperty("source")
+  expect(parse(source)).not.toHaveProperty("language")
+  expect(parse(source, true)).toMatchObject({
+    language: "python",
+    cells: [{ source: "%time x\n!echo 世界" }],
+  })
+  expect(parse(notebook([]), true).language).toBe("")
+})
+
 test("reads the mixed original fixture in order with code, counts and saved outputs", () => {
   const result = parse(
     readFileSync("tools/notebook-viewer/fixtures/survey.ipynb", "utf8")

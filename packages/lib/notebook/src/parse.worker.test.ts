@@ -15,12 +15,18 @@ test("the worker reads locally and returns conversion output or a classified fai
   await import("./parse.worker")
   const bytes = new ArrayBuffer(2)
   const event = {
-    data: { arrayBuffer: async () => bytes },
-  } as MessageEvent<File>
+    data: { file: { arrayBuffer: async () => bytes } },
+  } as MessageEvent<{ file: File }>
   mocks.decode.mockReturnValue("Manual")
   mocks.parse.mockReturnValue({ cells: [] })
   await self.onmessage!(event)
   expect(mocks.decode).toHaveBeenCalledWith(new Uint8Array(bytes))
+  expect(mocks.parse).toHaveBeenCalledWith("Manual", undefined)
+  await self.onmessage!({
+    ...event,
+    data: { ...event.data, includeSource: true },
+  } as MessageEvent)
+  expect(mocks.parse).toHaveBeenLastCalledWith("Manual", true)
   expect(post).toHaveBeenCalledWith({
     result: { cells: [] },
   })

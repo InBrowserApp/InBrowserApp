@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de cuadernos Jupyter",
+  "description": "Convierte cuadernos IPYNB locales a HTML, Markdown o código. Conserva el orden de las celdas guardadas y las salidas compatibles sin subir archivos ni ejecutar código."
+}

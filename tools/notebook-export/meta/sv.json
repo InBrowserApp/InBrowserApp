@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter Notebook-konverterare",
+  "description": "Konvertera lokala IPYNB-notebooks till HTML, Markdown eller kod. Bevara den sparade cellordningen och utmatningar som stöds utan att ladda upp filer eller köra kod."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter 笔记本转换器",
+  "description": "将本地 IPYNB 笔记本转换为 HTML、Markdown 或代码。保留已保存的单元格顺序和受支持的输出，不上传文件或执行代码。"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter-Notebook-Konverter",
+  "description": "Konvertiere lokale IPYNB-Notebooks in HTML, Markdown oder Code. Erhalte die gespeicherte Zellreihenfolge und unterstützte Ausgaben, ohne Dateien hochzuladen oder Code auszuführen."
+}
