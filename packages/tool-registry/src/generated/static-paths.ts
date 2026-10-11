@@ -646,6 +646,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "asciidoc-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "asciidoc-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "asciidoc-viewer",
     language: "ar",
   },

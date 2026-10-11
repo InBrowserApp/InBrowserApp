@@ -1,0 +1,4 @@
+{
+  "name": "AsciiDoc 转 PDF 转换器",
+  "description": "在浏览器中将本地 ADOC 或 AsciiDoc 文档转换为 PDF。预览使用固定主题的 A4 图像页面并下载结果，无需上传文件。"
+}

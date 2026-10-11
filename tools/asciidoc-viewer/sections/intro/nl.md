@@ -11,3 +11,5 @@ Ingevoegde bestanden, attributen van documentatieprojecten, aangepaste extensies
 ## Lokaal en alleen-lezen bekijken
 
 Bestanden blijven op je apparaat. Bij het openen van een document worden geen externe bronnen opgehaald, andere lokale bestanden gelezen of scripts uitgevoerd. Externe links openen alleen afzonderlijk als je ze selecteert. Sluit of vervang het bestand om het huidige voorbeeld vrij te geven. Deze viewer bewerkt of exporteert geen documenten en bouwt geen documentatiesites. De extensie .asc wordt niet geaccepteerd omdat deze ook voor andere bestandstypen wordt gebruikt.
+
+Gebruik de [AsciiDoc naar PDF-converter](../asciidoc-to-pdf-converter/) voor een downloadbare A4-afdrukkopie. Deze toont een voorvertoning van de gegenereerde PDF en legt uit welke broninhoud wordt ondersteund en welke beperkingen het resultaat heeft.

@@ -11,3 +11,5 @@ File yang disertakan, atribut proyek dokumentasi, ekstensi khusus, diagram, dan 
 ## Penayangan lokal, hanya baca
 
 File tetap di perangkat Anda. Membuka dokumen tidak mengambil sumber daya jarak jauh, membaca file lokal lain, atau menjalankan skrip. Tautan eksternal terbuka secara terpisah hanya saat dipilih. Tutup atau ganti file untuk melepaskan pratinjau saat ini. Penampil ini tidak mengedit, mengekspor, atau membangun situs dokumentasi. Ekstensi .asc tidak diterima karena juga digunakan untuk jenis file lain yang tidak terkait.
+
+Untuk salinan cetak A4 yang dapat diunduh, gunakan [Konverter AsciiDoc ke PDF](../asciidoc-to-pdf-converter/). Alat ini menampilkan pratinjau PDF yang dihasilkan serta menjelaskan sumber yang didukung dan batasan hasilnya.

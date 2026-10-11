@@ -11,3 +11,5 @@ Tệp chèn, thuộc tính của dự án tài liệu, phần mở rộng tùy c
 ## Xem trên thiết bị, chỉ đọc
 
 Tệp luôn ở trên thiết bị của bạn. Việc mở tài liệu không tải tài nguyên từ xa, đọc các tệp khác trên thiết bị hay chạy tập lệnh. Liên kết bên ngoài chỉ mở riêng khi được chọn. Đóng hoặc thay tệp để giải phóng bản xem trước hiện tại. Trình xem này không chỉnh sửa, xuất tệp hay xây dựng trang web tài liệu. Phần mở rộng .asc không được chấp nhận vì cũng được dùng cho các loại tệp không liên quan.
+
+Để có bản in A4 có thể tải xuống, hãy dùng [Trình chuyển đổi AsciiDoc sang PDF](../asciidoc-to-pdf-converter/). Công cụ cho xem trước tệp PDF đã tạo và giải thích mã nguồn được hỗ trợ cùng các giới hạn của kết quả.

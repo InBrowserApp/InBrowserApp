@@ -15,3 +15,5 @@ is opened. Include references remain visible but are not navigable.
 The independent Git `gitcli.adoc` manual is downloaded only for compatibility
 checks, not bundled in this repository. Its source and revision are recorded in
 `../compatibility.md`.
+
+The manual’s embedded PNG IDAT checksum was corrected during PDF export verification; its image payload is unchanged.

@@ -1,0 +1,13 @@
+## Convertir un document AsciiDoc localement
+
+Ouvrez un document local `.adoc` ou `.asciidoc`, examinez les pages générées et téléchargez le PDF affiché dans l’aperçu. Le fichier PDF est généré directement, sans boîte de dialogue d’impression. Les sources UTF-8 et UTF-16 avec marqueur d’ordre des octets (BOM) sont prises en charge. Pour lire sans convertir, utilisez la [Visionneuse AsciiDoc](../asciidoc-viewer/).
+
+## Résultat d’impression et sources prises en charge
+
+Le document est rendu avec un thème d’impression fixe sur des pages A4 en orientation portrait avec des marges de 18 mm, puis capturé sous forme de pages d’images à 150 DPI. Les titres, sections, paragraphes, listes, tableaux, code, encadrés d’avertissement, annotations, notes de bas de page, sauts de page explicites et images matricielles intégrées pris en charge sont inclus. Les tableaux larges et le code sont remis en page pour s’adapter à la largeur de la page. Le texte du PDF n’est pas sélectionnable, et aucune reconnaissance de texte (OCR) ni aucun lien interactif ne sont ajoutés. Les polices, l’espacement et la pagination peuvent différer de ceux d’autres outils AsciiDoc. Vérifiez chaque page avant d’utiliser le résultat.
+
+Les inclusions, les ressources d’images ou de styles manquantes, les images illisibles, les avertissements d’analyse et les attributs non résolus interrompent la conversion sans proposer de téléchargement partiel. Regroupez d’abord le contenu source nécessaire dans un seul document autonome. Les macros personnalisées, les diagrammes, les extensions, les thèmes de projet et les polices intégrées ne sont pas pris en charge ; la notation non prise en charge peut rester sous forme de texte. Les scripts, les formulaires, les applications intégrées, le SVG et le MathML sont omis. Le contenu actif du HTML transmis tel quel est supprimé. Les formats de papier de la source sont remplacés par la mise en page A4 fixe.
+
+## Confidentialité et ressources du navigateur
+
+Votre document reste dans ce navigateur. Les fichiers source, les images et les autres ressources ne sont jamais récupérés sur votre ordinateur ou sur le réseau, et le contenu des fichiers n’est jamais envoyé. Les données matricielles intégrées sont lues dans le document sélectionné. Les fichiers volumineux peuvent demander du temps et de la mémoire, car chaque page est rendue sous forme d’image. Vous pouvez annuler la conversion, fermer le document ou le remplacer. Il n’existe aucune limite fixe de taille de fichier ou de nombre de pages ; les défaillances réelles des ressources du navigateur produisent une erreur lorsqu’elles peuvent être détectées.

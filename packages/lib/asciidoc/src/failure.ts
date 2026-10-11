@@ -1,4 +1,4 @@
-import type { Failure } from "../types"
+import type { Failure } from "./types"
 
 export function failure(reason: unknown): Failure {
   if (

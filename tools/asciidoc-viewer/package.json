@@ -11,7 +11,7 @@
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "@workspace/web-document": "workspace:*",
-    "@asciidoctor/core": "catalog:"
+    "@workspace/asciidoc": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

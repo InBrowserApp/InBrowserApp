@@ -1,0 +1,4 @@
+{
+  "name": "AsciiDoc til PDF-konverterer",
+  "description": "Konverter et lokalt ADOC- eller AsciiDoc-dokument til PDF i nettleseren. Forhåndsvis A4-bildesider med et fast tema og last ned resultatet uten å laste opp filen."
+}

@@ -11,3 +11,5 @@ Eingebundene Dateien, Attribute von Dokumentationsprojekten, eigene Erweiterunge
 ## Lokal und schreibgeschützt lesen
 
 Dateien bleiben auf deinem Gerät. Beim Öffnen eines Dokuments werden keine externen Ressourcen abgerufen, anderen lokalen Dateien gelesen oder Skripte ausgeführt. Externe Links öffnen sich nur nach Auswahl separat. Schließe oder ersetze die Datei, um die aktuelle Vorschau freizugeben. Dieser Betrachter bearbeitet und exportiert keine Dokumente und erstellt keine Dokumentationswebsites. Die Erweiterung .asc wird nicht akzeptiert, da sie auch für andere Dateitypen verwendet wird.
+
+Für eine A4-Druckkopie zum Herunterladen verwende den [AsciiDoc-zu-PDF-Konverter](../asciidoc-to-pdf-converter/). Er zeigt die erzeugte PDF in einer Vorschau an und erläutert die unterstützten Quellinhalte und die Einschränkungen der Ausgabe.
