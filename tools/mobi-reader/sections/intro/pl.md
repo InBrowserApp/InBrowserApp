@@ -15,3 +15,5 @@ Książka pozostaje w tej przeglądarce. Skrypty, dźwięk, wideo i zasoby zdaln
 Nie ma z góry ustalonego limitu rozmiaru pliku ani liczby rozdziałów. Możliwość otwarcia dużych lub złożonych książek nadal zależy od urządzenia i pamięci przeglądarki. Elementy sterujące są oddzielone od tekstu książki, a zmiana rozmiaru tekstu w miarę możliwości zachowuje bieżącą pozycję czytania.
 
 Aby zapisać czytelną treść obsługiwanej książki jako lokalny plik TXT lub HTML, użyj narzędzia [Konwerter e-booków na TXT / HTML](/tools/ebook-text-html-export/).
+
+Aby utworzyć kopię do czytania w formacie EPUB, użyj narzędzia [Konwerter MOBI / AZW3 na EPUB](/tools/mobi-to-epub-converter/). Zachowuje ono obsługiwaną treść rozdziałów, metadane i obrazy; nie usuwa DRM ani nie odtwarza oryginalnego podziału na strony.

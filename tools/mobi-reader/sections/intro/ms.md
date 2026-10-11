@@ -15,3 +15,5 @@ Buku anda kekal dalam pelayar ini. Skrip, audio, video dan sumber jauh tidak dim
 Tiada had saiz fail atau bilangan bab yang ditetapkan terlebih dahulu. Buku yang besar atau kompleks masih bergantung pada peranti dan memori pelayar anda. Kawalan bacaan kekal berasingan daripada teks buku, dan perubahan saiz teks mengekalkan kedudukan bacaan semasa anda jika boleh.
 
 Untuk menyimpan kandungan buku yang boleh dibaca dan disokong sebagai fail TXT atau HTML setempat, gunakan [Penukar E-buku kepada TXT / HTML](/tools/ebook-text-html-export/).
+
+Untuk salinan bacaan EPUB, gunakan [Penukar MOBI / AZW3 kepada EPUB](/tools/mobi-to-epub-converter/). Alat ini mengekalkan kandungan bab, metadata dan imej yang disokong; ia tidak membuang DRM atau menghasilkan semula pembahagian halaman asal.

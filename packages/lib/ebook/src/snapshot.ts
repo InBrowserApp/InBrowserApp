@@ -2,7 +2,7 @@ import { bookImages } from "./resources"
 import { bookLinks, chapterTitles } from "./links"
 import type { LoadedChapter } from "./links"
 import { cleanChapter } from "./chapter"
-import type { ReadingBook } from "./types"
+import type { BookSnapshot, ContentsItem, ReadingBook } from "./types"
 
 type SnapshotMessages = { chapter: string; imageUnavailable: string }
 
@@ -11,7 +11,7 @@ export async function snapshotBook(
   book: ReadingBook,
   signal: AbortSignal,
   m: SnapshotMessages
-) {
+): Promise<BookSnapshot> {
   signal.throwIfAborted()
   if (book.incomplete) throw new Error("incomplete")
   const chapters: LoadedChapter[] = []
@@ -70,7 +70,8 @@ export async function snapshotBook(
   }
   if (!chapters.length) throw new Error("empty")
   await chapterTitles(book, indices, signal)
-  let unresolved = await bookLinks(book, chapters, indices, signal)
+  const links = await bookLinks(book, chapters, indices, signal)
+  let unresolved = links.unresolved
   const output: {
     id: string
     title: string
@@ -112,12 +113,22 @@ export async function snapshotBook(
   }
   for (const [index, section] of Array.from(doc.body.children).entries())
     output[index]!.html = section.innerHTML
+  function validContents(items: ContentsItem[]): ContentsItem[] {
+    return items.flatMap((item) => {
+      const subitems = validContents(item.subitems || [])
+      return doc.getElementById(item.href.slice(1))
+        ? [{ ...item, subitems }]
+        : subitems
+    })
+  }
   const cover = book.cover ? await images.embed(book.cover) : null
   signal.throwIfAborted()
   return {
+    contents: validContents(links.contents),
     title: book.title,
     author: book.author,
     description: book.description,
+    language: book.language,
     chapters: [
       ...output.filter((chapter) => !chapter.supporting),
       ...output.filter((chapter) => chapter.supporting),

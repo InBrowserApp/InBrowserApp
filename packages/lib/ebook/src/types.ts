@@ -26,8 +26,21 @@ export type ReadingBook = {
   title: string
   author: string
   description?: string
+  language?: string
   cover: string | null
   missing: boolean
   incomplete?: boolean
   dispose: () => void
+}
+
+export type BookSnapshot = {
+  contents?: ContentsItem[]
+  title: string
+  author: string
+  description?: string
+  language?: string
+  chapters: { id: string; title: string; html: string; supporting: boolean }[]
+  cover: string | null
+  missing: boolean
+  unresolved: boolean
 }

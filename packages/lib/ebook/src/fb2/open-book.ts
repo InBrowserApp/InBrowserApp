@@ -1,3 +1,4 @@
+import { languageTag } from "../language"
 import { makeFB2 } from "foliate-js/fb2.js"
 import type { ContentsItem } from "../types"
 import { readBook } from "./archive"
@@ -76,6 +77,9 @@ export async function openBook(
       description: normalized.doc
         .querySelector("title-info > annotation")
         ?.textContent?.trim(),
+      language: languageTag(
+        normalized.doc.querySelector("title-info > lang")?.textContent
+      ),
       cover,
       missing: normalized.missing,
       parsed: {

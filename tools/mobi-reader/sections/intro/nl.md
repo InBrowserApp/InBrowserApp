@@ -15,3 +15,5 @@ Je boek blijft in deze browser. Scripts, audio, video en externe bronnen worden 
 Er is geen vooraf ingestelde limiet voor de bestandsgrootte of het aantal hoofdstukken. Grote of complexe boeken blijven afhankelijk van je apparaat en het browsergeheugen. De leesbediening staat los van de boektekst. Als je de tekstgrootte wijzigt, blijft je huidige leespositie waar mogelijk behouden.
 
 Gebruik de [E-book naar TXT / HTML-converter](/tools/ebook-text-html-export/) om de leesbare inhoud van een ondersteund boek als lokaal TXT- of HTML-bestand op te slaan.
+
+Gebruik de [MOBI / AZW3 naar EPUB-converter](/tools/mobi-to-epub-converter/) voor een EPUB-leeskopie. Deze behoudt ondersteunde hoofdstukinhoud, metadata en afbeeldingen; DRM wordt niet verwijderd en de oorspronkelijke paginering wordt niet overgenomen.

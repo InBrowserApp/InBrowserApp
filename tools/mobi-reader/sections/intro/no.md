@@ -15,3 +15,5 @@ Boken din forblir i denne nettleseren. Skript, lyd, video og eksterne ressurser 
 Det finnes ingen forhåndsbestemt grense for filstørrelse eller antall kapitler. Store eller komplekse bøker avhenger likevel av enheten og minnet i nettleseren. Lesekontrollene holdes atskilt fra bokteksten, og leseposisjonen beholdes så langt det er mulig når du endrer tekststørrelsen.
 
 For å lagre det lesbare innholdet i en bok som støttes, som en lokal TXT- eller HTML-fil, kan du bruke [E-bok til TXT / HTML-konverterer](/tools/ebook-text-html-export/).
+
+For en lesekopi i EPUB-format kan du bruke [MOBI / AZW3 til EPUB-konverterer](/tools/mobi-to-epub-converter/). Den bevarer kapittelinnhold, metadata og bilder som støttes; den fjerner ikke DRM og gjengir ikke den opprinnelige sideinndelingen.

@@ -1,3 +1,4 @@
+import { languageTag } from "../language"
 import { unzlibSync } from "fflate"
 import { MOBI } from "foliate-js/mobi.js"
 import { checkHeader } from "./header"
@@ -71,6 +72,7 @@ export async function openBook(
           ?.map((author) => author.trim())
           .filter(Boolean)
           .join(", ") ?? "",
+      language: languageTag(engine.metadata.language),
       cover,
       missing,
       incomplete,

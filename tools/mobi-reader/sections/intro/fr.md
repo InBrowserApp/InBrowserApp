@@ -15,3 +15,5 @@ Votre livre reste dans ce navigateur. Les scripts, l’audio, la vidéo et les r
 Aucune limite de taille de fichier ou de nombre de chapitres n’est prédéfinie. Les livres volumineux ou complexes restent soumis aux capacités de votre appareil et à la mémoire du navigateur. Les commandes de lecture restent séparées du texte du livre, et le changement de taille du texte conserve votre position de lecture lorsque c’est possible.
 
 Pour enregistrer le contenu lisible d’un livre pris en charge dans un fichier TXT ou HTML local, utilisez le [Convertisseur de livres numériques en TXT / HTML](/tools/ebook-text-html-export/).
+
+Pour obtenir une copie de lecture EPUB, utilisez le [Convertisseur MOBI / AZW3 en EPUB](/tools/mobi-to-epub-converter/). Il conserve le contenu des chapitres, les métadonnées et les images pris en charge ; il ne supprime pas les DRM et ne reproduit pas la pagination d’origine.

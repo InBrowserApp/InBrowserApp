@@ -1,3 +1,4 @@
+import { languageTag } from "../language"
 import { BlobReader, BlobWriter, TextWriter, ZipReader } from "@zip.js/zip.js"
 import { EPUB } from "foliate-js/epub.js"
 import type { OpenBook } from "./types"
@@ -172,6 +173,7 @@ export async function openBook(
       parsed,
       title: metadataText(parsed.metadata.title) || file.name,
       author: metadataText(parsed.metadata.author),
+      language: languageTag(parsed.metadata.language),
       cover,
       incomplete: parsed.resources.spine.length !== parsed.sections.length,
       missing:

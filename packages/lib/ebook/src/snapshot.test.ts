@@ -208,3 +208,28 @@ test("omits empty pagebreak sections and uses contents labels for books without 
     )
   ).rejects.toThrow("empty")
 })
+
+test("retains nested navigation targets after rewriting publisher IDs", async () => {
+  const b = book([
+    section(
+      "a",
+      '<h1 id="start">Start</h1><h2 id="inside">Nested</h2><p>Content</p>'
+    ),
+  ])
+  b.parsed.toc = [
+    {
+      label: "Start",
+      href: "a#start",
+      subitems: [{ label: "Nested", href: "a#inside" }],
+    },
+  ]
+  const result = await snapshotBook(b, signal(), m)
+  expect(result.contents?.[0]?.label).toBe("Start")
+  expect(result.contents?.[0]?.subitems?.[0]?.label).toBe("Nested")
+  const doc = document.implementation.createHTMLDocument("")
+  doc.body.innerHTML = result.chapters[0]!.html
+  expect(
+    doc.getElementById(result.contents![0]!.subitems![0]!.href.slice(1))!
+      .textContent
+  ).toBe("Nested")
+})

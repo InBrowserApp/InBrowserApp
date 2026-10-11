@@ -7,7 +7,9 @@
     ".": "./src/index.ts",
     "./epub": "./src/epub/open-book.ts",
     "./mobi": "./src/mobi/open-book.ts",
-    "./fb2": "./src/fb2/open-book.ts"
+    "./fb2": "./src/fb2/open-book.ts",
+    "./document": "./src/document.ts",
+    "./write-epub": "./src/write-epub/index.ts"
   },
   "dependencies": {
     "@workspace/web-document": "workspace:*",

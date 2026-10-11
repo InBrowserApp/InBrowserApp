@@ -8,7 +8,7 @@ export interface MobiBook {
     load?: () => Promise<string>
   }[]
   toc?: ContentsItem[]
-  metadata: { title?: string; author?: string[] }
+  metadata: { title?: string; author?: string[]; language?: string | string[] }
   rendition?: { layout?: string }
   getCover: () => Promise<Blob | undefined>
   resolveHref: (
