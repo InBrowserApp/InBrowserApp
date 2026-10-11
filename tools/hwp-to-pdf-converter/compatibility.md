@@ -64,4 +64,12 @@ embedded SVG, opening protection, and distribution restrictions fail without a
 partial download. Raster MIME signatures are checked before browser decoding,
 and conflicting SVG href/xlink:href values are rejected rather than allowing
 browser and rasterizer interpretations to diverge. No external document-resource
-requests were observed. Additional final-head deployment acceptance is pending.
+requests were observed.
+
+The CI production artifact for implementation commit `bfe89adc` was served on
+localhost for Chromium, Firefox, and WebKit acceptance: English, Simplified
+Chinese, and Arabic at 320 px; viewer/converter navigation; PDF download;
+page navigation and focus mode; cancellation and reopening. The nine downloaded
+PDFs were independently checked for two correctly sized, image-only pages.
+The deployed preview passed separate read-only page/hydration checks in all
+three engines and languages. Document fixtures were processed locally only.
