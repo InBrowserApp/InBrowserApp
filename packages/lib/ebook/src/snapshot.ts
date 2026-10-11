@@ -4,7 +4,7 @@ import type { LoadedChapter } from "./links"
 import { cleanChapter } from "./chapter"
 import type { ReadingBook } from "./types"
 
-export type SnapshotMessages = { chapter: string; imageUnavailable: string }
+type SnapshotMessages = { chapter: string; imageUnavailable: string }
 
 /** Materialize a complete reading copy while the caller owns the open book. */
 export async function snapshotBook(

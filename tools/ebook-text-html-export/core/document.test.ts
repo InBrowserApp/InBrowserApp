@@ -8,6 +8,7 @@ test("builds UTF-8 reading copies with local navigation, supporting sections and
     {
       title: "<世界>",
       author: "Author",
+      description: undefined,
       cover: null,
       missing: true,
       unresolved: true,
@@ -80,6 +81,7 @@ test("supports a book without author or compatibility notes", () => {
     {
       title: "Book",
       author: "",
+      description: undefined,
       cover: null,
       missing: false,
       unresolved: false,
@@ -102,6 +104,7 @@ test("retains a metadata cover without duplicating an existing chapter image", a
   const book = {
     title: "Book",
     author: "",
+    description: undefined,
     cover: "data:image/png;base64,AA==",
     missing: false,
     unresolved: false,
