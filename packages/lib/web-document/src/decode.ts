@@ -11,12 +11,12 @@ export function decodeWebDocument(bytes: Uint8Array) {
       bytes.subarray(0, 4096)
     )
     encoding =
-      prefix.match(/<\?xml[^>]*\bencoding\s*=\s*["']([^"']+)/i)?.[1] || ""
+      prefix.match(/<\?xml[^<>]*\bencoding\s*=\s*["']([^"']+)/i)?.[1] || ""
     if (!encoding) {
-      const metas = prefix.match(/<meta\s[^>]*>/gi) || []
+      const metas = prefix.match(/<meta\s[^<>]*>/gi) || []
       for (const meta of metas) {
         encoding =
-          meta.match(/\bcharset\s*=\s*["']?\s*([^\s"'/>;]+)/i)?.[1] || ""
+          meta.match(/\bcharset\s*=\s*(?:["']\s*)?([^\s"'/>;]+)/i)?.[1] || ""
         if (encoding) break
       }
     }
