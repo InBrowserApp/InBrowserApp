@@ -13,3 +13,5 @@ This viewer supports HTML pages inside multipart/related web archives, including
 Scripts, forms, redirects, embedded apps, and nested pages are disabled. Unsupported image formats and complex site layouts may differ from the original. The viewer cannot restore website sessions or content that was not saved in the archive. For a damaged file, save a new web archive in the original application.
 
 For a downloadable static PDF of a complete main document, use the [MHTML to PDF Converter](../mhtml-to-pdf-converter/).
+
+To create a standalone file that opens offline, use the [MHTML to HTML Converter](../mhtml-to-html-converter/).

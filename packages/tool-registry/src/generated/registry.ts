@@ -16823,6 +16823,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "mhtml-to-html-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["mhtml", "mht", "html", "archive", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل MHTML إلى HTML",
+        description:
+          "حوّل أرشيف MHTML أو MHT محليًا إلى ملف HTML مستقل مع الصور والأنماط المضمّنة ومعاينة آمنة. دون رفع ملفات.",
+      },
+      de: {
+        name: "MHTML-zu-HTML-Konverter",
+        description:
+          "Konvertiere ein lokales MHTML- oder MHT-Archiv in eine eigenständige HTML-Datei mit mitgespeicherten Bildern, Stilen und einer sicheren Vorschau. Keine Uploads.",
+      },
+      en: {
+        name: "MHTML to HTML Converter",
+        description:
+          "Convert a local MHTML or MHT archive into a standalone HTML file with bundled images, styles and a safe preview. No uploads.",
+      },
+      es: {
+        name: "Conversor de MHTML a HTML",
+        description:
+          "Convierte un archivo MHTML o MHT local en un archivo HTML independiente con imágenes y estilos incluidos y una vista previa segura. Sin subidas.",
+      },
+      fr: {
+        name: "Convertisseur MHTML en HTML",
+        description:
+          "Convertissez une archive MHTML ou MHT locale en un fichier HTML autonome avec ses images, ses styles et un aperçu sécurisé. Aucun envoi.",
+      },
+      he: {
+        name: "ממיר MHTML ל־HTML",
+        description:
+          "המרת ארכיון MHTML או MHT מקומי לקובץ HTML עצמאי עם תמונות וסגנונות כלולים ותצוגה מקדימה בטוחה. ללא העלאות.",
+      },
+      hi: {
+        name: "MHTML से HTML कन्वर्टर",
+        description:
+          "स्थानीय MHTML या MHT आर्काइव को शामिल चित्रों, स्टाइल और सुरक्षित पूर्वावलोकन वाली स्वतंत्र HTML फ़ाइल में बदलें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Konverter MHTML ke HTML",
+        description:
+          "Konversikan arsip MHTML atau MHT lokal menjadi file HTML mandiri dengan gambar, gaya, dan pratinjau yang aman. Tanpa unggahan.",
+      },
+      it: {
+        name: "Convertitore da MHTML a HTML",
+        description:
+          "Converti un archivio locale MHTML o MHT in un file HTML autonomo con immagini e stili inclusi e un’anteprima sicura. Nessun caricamento.",
+      },
+      ja: {
+        name: "MHTMLからHTMLへの変換ツール",
+        description:
+          "端末上のMHTMLまたはMHTアーカイブを、画像やスタイルを含む単独のHTMLファイルに変換します。安全なプレビューを利用でき、アップロードは行いません。",
+      },
+      ko: {
+        name: "MHTML HTML 변환기",
+        description:
+          "기기에 저장된 MHTML 또는 MHT 아카이브를 이미지와 스타일이 포함된 독립적인 HTML 파일로 변환하고 안전하게 미리 보세요. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Penukar MHTML kepada HTML",
+        description:
+          "Tukar arkib MHTML atau MHT setempat kepada fail HTML kendiri dengan imej dan gaya yang disertakan serta pratonton yang selamat. Tiada muat naik.",
+      },
+      nl: {
+        name: "MHTML naar HTML-converter",
+        description:
+          "Converteer een lokaal MHTML- of MHT-archief naar een zelfstandig HTML-bestand met gebundelde afbeeldingen, stijlen en een veilige voorvertoning. Geen uploads.",
+      },
+      no: {
+        name: "MHTML til HTML-konverterer",
+        description:
+          "Konverter et lokalt MHTML- eller MHT-arkiv til en selvstendig HTML-fil med medfølgende bilder, stiler og en trygg forhåndsvisning. Ingen opplasting.",
+      },
+      pl: {
+        name: "Konwerter MHTML na HTML",
+        description:
+          "Konwertuj lokalne archiwum MHTML lub MHT na samodzielny plik HTML z dołączonymi obrazami, stylami i bezpiecznym podglądem. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Conversor de MHTML para HTML",
+        description:
+          "Converta um arquivo MHTML ou MHT local em um arquivo HTML independente com imagens e estilos incluídos e uma prévia segura. Sem uploads.",
+      },
+      ru: {
+        name: "Конвертер MHTML в HTML",
+        description:
+          "Преобразуйте локальный архив MHTML или MHT в автономный HTML-файл с включёнными изображениями, стилями и безопасным предпросмотром. Без загрузки на сервер.",
+      },
+      sv: {
+        name: "MHTML till HTML-konverterare",
+        description:
+          "Konvertera ett lokalt MHTML- eller MHT-arkiv till en fristående HTML-fil med inkluderade bilder, stilar och en säker förhandsvisning. Inga uppladdningar.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MHTML เป็น HTML",
+        description:
+          "แปลงไฟล์เก็บถาวร MHTML หรือ MHT บนอุปกรณ์เป็นไฟล์ HTML แบบแยกเดี่ยว พร้อมรูปภาพ สไตล์ และตัวอย่างที่ปลอดภัย ไม่มีการอัปโหลด",
+      },
+      tr: {
+        name: "MHTML’den HTML’ye Dönüştürücü",
+        description:
+          "Yerel bir MHTML veya MHT arşivini, içerdiği resimler, stiller ve güvenli bir önizlemeyle bağımsız bir HTML dosyasına dönüştürün. Yükleme yapılmaz.",
+      },
+      vi: {
+        name: "Trình chuyển đổi MHTML sang HTML",
+        description:
+          "Chuyển tệp lưu trữ MHTML hoặc MHT trên thiết bị thành tệp HTML độc lập với hình ảnh, kiểu định dạng đi kèm và bản xem trước an toàn. Không tải lên.",
+      },
+      "zh-CN": {
+        name: "MHTML 转 HTML 转换器",
+        description:
+          "将本地 MHTML 或 MHT 存档转换为独立的 HTML 文件，保留内含图片和样式，并提供安全预览。无需上传。",
+      },
+      "zh-TW": {
+        name: "MHTML 轉 HTML 轉換器",
+        description:
+          "將本機 MHTML 或 MHT 封存檔轉換為獨立的 HTML 檔案，包含封存的圖片、樣式，並提供安全預覽。檔案不會上傳。",
+      },
+    },
+  },
+  {
     slug: "mhtml-to-pdf-converter",
     category: "document",
     icon: "file-text",
@@ -50129,6 +50252,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "MD5 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 MD5 雜湊值。更適合遺留系統相容與非安全關鍵的完整性檢查。",
+      },
+    },
+  },
+  "mhtml-to-html-converter": {
+    slug: "mhtml-to-html-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["mhtml", "mht", "html", "archive", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل MHTML إلى HTML",
+        description:
+          "حوّل أرشيف MHTML أو MHT محليًا إلى ملف HTML مستقل مع الصور والأنماط المضمّنة ومعاينة آمنة. دون رفع ملفات.",
+      },
+      de: {
+        name: "MHTML-zu-HTML-Konverter",
+        description:
+          "Konvertiere ein lokales MHTML- oder MHT-Archiv in eine eigenständige HTML-Datei mit mitgespeicherten Bildern, Stilen und einer sicheren Vorschau. Keine Uploads.",
+      },
+      en: {
+        name: "MHTML to HTML Converter",
+        description:
+          "Convert a local MHTML or MHT archive into a standalone HTML file with bundled images, styles and a safe preview. No uploads.",
+      },
+      es: {
+        name: "Conversor de MHTML a HTML",
+        description:
+          "Convierte un archivo MHTML o MHT local en un archivo HTML independiente con imágenes y estilos incluidos y una vista previa segura. Sin subidas.",
+      },
+      fr: {
+        name: "Convertisseur MHTML en HTML",
+        description:
+          "Convertissez une archive MHTML ou MHT locale en un fichier HTML autonome avec ses images, ses styles et un aperçu sécurisé. Aucun envoi.",
+      },
+      he: {
+        name: "ממיר MHTML ל־HTML",
+        description:
+          "המרת ארכיון MHTML או MHT מקומי לקובץ HTML עצמאי עם תמונות וסגנונות כלולים ותצוגה מקדימה בטוחה. ללא העלאות.",
+      },
+      hi: {
+        name: "MHTML से HTML कन्वर्टर",
+        description:
+          "स्थानीय MHTML या MHT आर्काइव को शामिल चित्रों, स्टाइल और सुरक्षित पूर्वावलोकन वाली स्वतंत्र HTML फ़ाइल में बदलें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Konverter MHTML ke HTML",
+        description:
+          "Konversikan arsip MHTML atau MHT lokal menjadi file HTML mandiri dengan gambar, gaya, dan pratinjau yang aman. Tanpa unggahan.",
+      },
+      it: {
+        name: "Convertitore da MHTML a HTML",
+        description:
+          "Converti un archivio locale MHTML o MHT in un file HTML autonomo con immagini e stili inclusi e un’anteprima sicura. Nessun caricamento.",
+      },
+      ja: {
+        name: "MHTMLからHTMLへの変換ツール",
+        description:
+          "端末上のMHTMLまたはMHTアーカイブを、画像やスタイルを含む単独のHTMLファイルに変換します。安全なプレビューを利用でき、アップロードは行いません。",
+      },
+      ko: {
+        name: "MHTML HTML 변환기",
+        description:
+          "기기에 저장된 MHTML 또는 MHT 아카이브를 이미지와 스타일이 포함된 독립적인 HTML 파일로 변환하고 안전하게 미리 보세요. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Penukar MHTML kepada HTML",
+        description:
+          "Tukar arkib MHTML atau MHT setempat kepada fail HTML kendiri dengan imej dan gaya yang disertakan serta pratonton yang selamat. Tiada muat naik.",
+      },
+      nl: {
+        name: "MHTML naar HTML-converter",
+        description:
+          "Converteer een lokaal MHTML- of MHT-archief naar een zelfstandig HTML-bestand met gebundelde afbeeldingen, stijlen en een veilige voorvertoning. Geen uploads.",
+      },
+      no: {
+        name: "MHTML til HTML-konverterer",
+        description:
+          "Konverter et lokalt MHTML- eller MHT-arkiv til en selvstendig HTML-fil med medfølgende bilder, stiler og en trygg forhåndsvisning. Ingen opplasting.",
+      },
+      pl: {
+        name: "Konwerter MHTML na HTML",
+        description:
+          "Konwertuj lokalne archiwum MHTML lub MHT na samodzielny plik HTML z dołączonymi obrazami, stylami i bezpiecznym podglądem. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Conversor de MHTML para HTML",
+        description:
+          "Converta um arquivo MHTML ou MHT local em um arquivo HTML independente com imagens e estilos incluídos e uma prévia segura. Sem uploads.",
+      },
+      ru: {
+        name: "Конвертер MHTML в HTML",
+        description:
+          "Преобразуйте локальный архив MHTML или MHT в автономный HTML-файл с включёнными изображениями, стилями и безопасным предпросмотром. Без загрузки на сервер.",
+      },
+      sv: {
+        name: "MHTML till HTML-konverterare",
+        description:
+          "Konvertera ett lokalt MHTML- eller MHT-arkiv till en fristående HTML-fil med inkluderade bilder, stilar och en säker förhandsvisning. Inga uppladdningar.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MHTML เป็น HTML",
+        description:
+          "แปลงไฟล์เก็บถาวร MHTML หรือ MHT บนอุปกรณ์เป็นไฟล์ HTML แบบแยกเดี่ยว พร้อมรูปภาพ สไตล์ และตัวอย่างที่ปลอดภัย ไม่มีการอัปโหลด",
+      },
+      tr: {
+        name: "MHTML’den HTML’ye Dönüştürücü",
+        description:
+          "Yerel bir MHTML veya MHT arşivini, içerdiği resimler, stiller ve güvenli bir önizlemeyle bağımsız bir HTML dosyasına dönüştürün. Yükleme yapılmaz.",
+      },
+      vi: {
+        name: "Trình chuyển đổi MHTML sang HTML",
+        description:
+          "Chuyển tệp lưu trữ MHTML hoặc MHT trên thiết bị thành tệp HTML độc lập với hình ảnh, kiểu định dạng đi kèm và bản xem trước an toàn. Không tải lên.",
+      },
+      "zh-CN": {
+        name: "MHTML 转 HTML 转换器",
+        description:
+          "将本地 MHTML 或 MHT 存档转换为独立的 HTML 文件，保留内含图片和样式，并提供安全预览。无需上传。",
+      },
+      "zh-TW": {
+        name: "MHTML 轉 HTML 轉換器",
+        description:
+          "將本機 MHTML 或 MHT 封存檔轉換為獨立的 HTML 檔案，包含封存的圖片、樣式，並提供安全預覽。檔案不會上傳。",
       },
     },
   },

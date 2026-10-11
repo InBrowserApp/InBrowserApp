@@ -13,3 +13,5 @@ Dieser Betrachter unterstützt HTML-Seiten in multipart/related-Webarchiven, ein
 Skripte, Formulare, Weiterleitungen, eingebettete Apps und verschachtelte Seiten sind deaktiviert. Nicht unterstützte Bildformate und komplexe Website-Layouts können vom Original abweichen. Der Betrachter kann keine Website-Sitzungen oder Inhalte wiederherstellen, die nicht im Archiv gespeichert wurden. Speichere bei einer beschädigten Datei in der ursprünglichen Anwendung ein neues Webarchiv.
 
 Für eine statische PDF eines vollständigen Hauptdokuments zum Herunterladen nutze den [MHTML-zu-PDF-Konverter](../mhtml-to-pdf-converter/).
+
+Um eine eigenständige Datei zu erstellen, die sich offline öffnen lässt, nutze den [MHTML-zu-HTML-Konverter](../mhtml-to-html-converter/).

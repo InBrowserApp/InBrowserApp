@@ -13,3 +13,5 @@ Ta przeglądarka obsługuje strony HTML w archiwach stron multipart/related, w t
 Skrypty, formularze, przekierowania, osadzone aplikacje i zagnieżdżone strony są wyłączone. Nieobsługiwane formaty obrazów i złożone układy witryn mogą różnić się od oryginału. Przeglądarka nie może przywrócić sesji witryny ani treści, która nie została zapisana w archiwum. Jeśli plik jest uszkodzony, zapisz nowe archiwum strony w oryginalnej aplikacji.
 
 Aby pobrać statyczny plik PDF kompletnego głównego dokumentu, użyj [Konwertera MHTML na PDF](../mhtml-to-pdf-converter/).
+
+Aby utworzyć samodzielny plik otwierany offline, użyj [Konwertera MHTML na HTML](../mhtml-to-html-converter/).

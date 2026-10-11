@@ -13,3 +13,5 @@ Cette visionneuse prend en charge les pages HTML des archives web multipart/rela
 Les scripts, formulaires, redirections, applications intégrées et pages imbriquées sont désactivés. Les formats d’image non pris en charge et les mises en page complexes peuvent différer de l’original. La visionneuse ne peut pas restaurer les sessions de sites web ni le contenu absent de l’archive. Si un fichier est endommagé, enregistre une nouvelle archive web dans l’application d’origine.
 
 Pour obtenir un PDF statique téléchargeable d’un document principal complet, utilise le [Convertisseur MHTML en PDF](../mhtml-to-pdf-converter/).
+
+Pour créer un fichier autonome qui s’ouvre hors ligne, utilise le [Convertisseur MHTML en HTML](../mhtml-to-html-converter/).

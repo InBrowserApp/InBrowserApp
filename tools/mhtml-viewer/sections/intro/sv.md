@@ -13,3 +13,5 @@ Visaren stöder HTML-sidor i multipart/related-webbarkiv, inklusive base64- och 
 Skript, formulär, omdirigeringar, inbäddade appar och nästlade sidor är inaktiverade. Bildformat som inte stöds och komplexa sidlayouter kan skilja sig från originalet. Visaren kan inte återställa webbplatssessioner eller innehåll som inte sparades i arkivet. Om filen är skadad, spara ett nytt webbarkiv i det ursprungliga programmet.
 
 För en nedladdningsbar statisk PDF av ett fullständigt huvuddokument, använd [MHTML till PDF-konverterare](../mhtml-to-pdf-converter/).
+
+För att skapa en fristående fil som kan öppnas offline, använd [MHTML till HTML-konverterare](../mhtml-to-html-converter/).

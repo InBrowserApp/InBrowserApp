@@ -42,7 +42,10 @@ test("removes active content, network paths, forged controls and dangerous style
       "script,iframe,form,input,button,svg,link,[onclick],[srcset],[src],[data-web-link]"
     )
   ).toBeNull()
-  expect(doc.head.querySelectorAll("meta")).toHaveLength(1)
+  expect(doc.head.querySelectorAll("meta")).toHaveLength(2)
+  expect(doc.head.querySelector("meta[charset]")?.getAttribute("charset")).toBe(
+    "utf-8"
+  )
   expect(doc.querySelectorAll("style")[1]?.textContent).not.toMatch(
     /url\(|image-set|@import/
   )

@@ -49,6 +49,7 @@ export function prepareWebDocument(
     emptyText: string
     headingText: string
     print?: boolean
+    links?: "inert" | "direct"
   }
 ): WebDocument {
   const notes: ResourceNotes = { local: false, remote: false, active: false }
@@ -137,9 +138,15 @@ export function prepareWebDocument(
       href &&
       /^(?:#|https?:\/\/|mailto:)/i.test(href)
     ) {
-      node.setAttribute("data-web-link", href)
-      node.setAttribute("role", "link")
-      node.setAttribute("tabindex", "0")
+      if (options.links === "direct") {
+        node.setAttribute("href", href)
+        node.setAttribute("rel", "noopener noreferrer")
+        if (!href.startsWith("#")) node.setAttribute("target", "_blank")
+      } else {
+        node.setAttribute("data-web-link", href)
+        node.setAttribute("role", "link")
+        node.setAttribute("tabindex", "0")
+      }
     }
     if (node.localName === "a" && node.getAttribute("name") && !node.id)
       node.id = node.getAttribute("name")!
@@ -214,7 +221,9 @@ export function prepareWebDocument(
   style.textContent = readerStyle
   if (!options.print) head.prepend(style)
   // CSP must precede every element, including document-provided CSS.
-  head.prepend(csp)
+  const charset = inert.createElement("meta")
+  charset.setAttribute("charset", "utf-8")
+  head.prepend(csp, charset)
   return {
     html: "<!doctype html>" + root.outerHTML,
     title,

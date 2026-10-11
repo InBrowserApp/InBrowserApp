@@ -13,3 +13,5 @@ Questo visualizzatore supporta pagine HTML all’interno di archivi web multipar
 Script, moduli, reindirizzamenti, app incorporate e pagine annidate sono disattivati. I formati di immagine non supportati e le impaginazioni complesse dei siti potrebbero apparire diversi dall’originale. Il visualizzatore non può ripristinare sessioni di siti web o contenuti non salvati nell’archivio. Se un file è danneggiato, salva un nuovo archivio web nell’applicazione originale.
 
 Per ottenere un PDF statico scaricabile di un documento principale completo, usa il [Convertitore da MHTML a PDF](../mhtml-to-pdf-converter/).
+
+Per creare un file autonomo che si apre offline, usa il [Convertitore da MHTML a HTML](../mhtml-to-html-converter/).

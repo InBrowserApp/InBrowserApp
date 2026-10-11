@@ -13,3 +13,5 @@ Este visor admite páginas HTML dentro de archivos web multipart/related, inclui
 Los scripts, formularios, redirecciones, aplicaciones incrustadas y páginas anidadas están desactivados. Los formatos de imagen no compatibles y los diseños complejos pueden verse diferentes del original. El visor no puede restaurar sesiones de sitios web ni contenido que no se haya guardado en el archivo. Si un archivo está dañado, guarda un nuevo archivo web en la aplicación original.
 
 Para obtener un PDF estático descargable de un documento principal completo, usa el [Conversor de MHTML a PDF](../mhtml-to-pdf-converter/).
+
+Para crear un archivo independiente que se abra sin conexión, usa el [Conversor de MHTML a HTML](../mhtml-to-html-converter/).

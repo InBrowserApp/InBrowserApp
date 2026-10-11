@@ -13,7 +13,7 @@ vi.mock("./open-document", () => ({
   openArchive: mock.open,
   failure: () => "invalid",
 }))
-vi.mock("./document-frame", () => ({
+vi.mock("@workspace/ui/components/tool/document-frame", () => ({
   DocumentFrame: ({
     title,
     zoom,

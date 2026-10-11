@@ -10,7 +10,7 @@ import {
   ArrowLeftRight,
 } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
-import { DocumentFrame } from "./document-frame"
+import { DocumentFrame } from "@workspace/ui/components/tool/document-frame"
 import type { Messages } from "./types"
 
 export function DocumentView({
