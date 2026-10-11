@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter Notebook 変換ツール",
+  "description": "端末内の IPYNB ノートブックを HTML、Markdown、コードに変換します。ファイルのアップロードやコードの実行を行わず、保存されたセルの順序と対応する出力を保持します。"
+}

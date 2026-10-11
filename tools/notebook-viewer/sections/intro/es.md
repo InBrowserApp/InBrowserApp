@@ -11,3 +11,5 @@ El visor solo muestra lo que se guardó. La ausencia de salida no indica que una
 ## Visualización local de solo lectura
 
 Los archivos permanecen en tu dispositivo. Abrir un cuaderno no ejecuta código, inicia un kernel, instala paquetes ni descarga recursos externos. Se informa de las imágenes remotas y los adjuntos ausentes. Los enlaces externos se abren por separado solo al seleccionarlos. Cierra o reemplaza el cuaderno para liberar la vista previa. Este visor no edita, exporta ni almacena automáticamente el contenido del cuaderno.
+
+Para guardar el cuaderno como HTML, Markdown o script de código, usa el [Conversor de cuadernos Jupyter](/tools/notebook-export/). Exporta el contenido guardado sin ejecutar código.

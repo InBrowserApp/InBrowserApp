@@ -11,3 +11,5 @@ Der Betrachter zeigt nur gespeicherte Inhalte an. Eine fehlende Ausgabe bedeutet
 ## Lokal und schreibgeschützt lesen
 
 Dateien bleiben auf deinem Gerät. Beim Öffnen eines Notebooks wird kein Code ausgeführt, kein Kernel gestartet, kein Paket installiert und keine externe Ressource abgerufen. Externe Bilder und fehlende Anhänge werden gemeldet. Externe Links öffnen sich nur nach Auswahl separat. Schließe oder ersetze das Notebook, um die Vorschau freizugeben. Dieser Betrachter bietet weder Bearbeitung noch Export und speichert Notebook-Inhalte nicht automatisch.
+
+Um das Notebook als HTML, Markdown oder Code-Skript zu speichern, verwende den [Jupyter-Notebook-Konverter](/tools/notebook-export/). Er exportiert gespeicherte Inhalte, ohne Code auszuführen.

@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter-notatbokkonverterer",
+  "description": "Konverter lokale IPYNB-notatbøker til HTML, Markdown eller kode. Bevar lagret cellerekkefølge og utdata som støttes, uten å laste opp filer eller kjøre kode."
+}

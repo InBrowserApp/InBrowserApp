@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore di notebook Jupyter",
+  "description": "Converti notebook IPYNB locali in HTML, Markdown o codice. Mantieni l’ordine delle celle salvate e gli output supportati senza caricare file né eseguire codice."
+}

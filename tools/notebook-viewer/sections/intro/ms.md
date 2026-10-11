@@ -11,3 +11,5 @@ Pemapar hanya memaparkan kandungan yang telah disimpan. Ketiadaan output tidak m
 ## Paparan setempat untuk bacaan sahaja
 
 Fail kekal pada peranti anda. Membuka buku nota tidak melaksanakan kod, memulakan kernel, memasang pakej atau mengambil sumber luar. Imej jauh dan lampiran yang tiada akan dilaporkan. Pautan luar hanya dibuka secara berasingan apabila dipilih. Tutup atau ganti buku nota untuk melepaskan pratonton. Pemapar ini tidak menyunting, mengeksport atau menyimpan kandungan buku nota secara automatik.
+
+Untuk menyimpan buku nota sebagai HTML, Markdown atau skrip kod, gunakan [Penukar Jupyter Notebook](/tools/notebook-export/). Ia mengeksport kandungan tersimpan tanpa menjalankan kod.

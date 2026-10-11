@@ -1,0 +1,4 @@
+{
+  "name": "Jupyter Notebook Converter",
+  "description": "Convert local IPYNB notebooks to HTML, Markdown or code. Keep saved cell order and supported outputs without uploading files or executing code."
+}

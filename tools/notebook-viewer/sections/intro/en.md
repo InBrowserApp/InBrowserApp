@@ -11,3 +11,5 @@ The viewer displays only what was saved. Missing output does not indicate a fail
 ## Local, read-only viewing
 
 Files stay on your device. Opening a notebook does not execute code, start a kernel, install packages, or fetch external resources. Remote images and missing attachments are reported. External links open separately only when selected. Close or replace the notebook to release the preview. This viewer does not edit, export, or automatically store notebook content.
+
+To save the notebook as HTML, Markdown or a code script, use the [Jupyter Notebook Converter](/tools/notebook-export/). It exports saved content without running code.

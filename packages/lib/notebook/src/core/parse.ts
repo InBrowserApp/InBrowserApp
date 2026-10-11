@@ -4,7 +4,7 @@ import { output } from "./outputs"
 import { pre, record, text } from "./text"
 import type { Cell, Notebook } from "../types"
 
-export function parse(source: string): Notebook {
+export function parse(source: string, includeSource?: true): Notebook {
   const notebook = record(JSON.parse(source))
   if (!Number.isInteger(notebook.nbformat)) throw new Error("INVALID")
   if (notebook.nbformat !== 4) throw new Error("VERSION")
@@ -45,6 +45,7 @@ export function parse(source: string): Notebook {
     )
     const result: Cell = {
       kind,
+      ...(includeSource ? { source } : {}),
       html:
         kind === "markdown"
           ? markdown.parse(source, { async: false })
@@ -68,5 +69,5 @@ export function parse(source: string): Notebook {
     }
     return result
   })
-  return { cells }
+  return { cells, ...(includeSource ? { language } : {}) }
 }

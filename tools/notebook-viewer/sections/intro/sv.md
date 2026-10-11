@@ -11,3 +11,5 @@ Visaren visar endast det som har sparats. Saknad utmatning innebär inte att en 
 ## Lokal visning utan redigering
 
 Filerna stannar på din enhet. När en notebook öppnas körs ingen kod, ingen kernel startas, inga paket installeras och inga externa resurser hämtas. Bilder från fjärrkällor och saknade bilagor rapporteras. Externa länkar öppnas separat först när du väljer dem. Stäng eller byt notebook för att frigöra förhandsvisningen. Visaren redigerar, exporterar eller lagrar inte automatiskt notebook-innehåll.
+
+Använd [Jupyter Notebook-konverterare](/tools/notebook-export/) för att spara din notebook som HTML, Markdown eller ett kodskript. Verktyget exporterar sparat innehåll utan att köra kod.

@@ -13710,6 +13710,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "notebook-export",
+    language: "ar",
+  },
+  {
+    slug: "notebook-export",
+    language: "de",
+  },
+  {
+    slug: "notebook-export",
+    language: "en",
+  },
+  {
+    slug: "notebook-export",
+    language: "es",
+  },
+  {
+    slug: "notebook-export",
+    language: "fr",
+  },
+  {
+    slug: "notebook-export",
+    language: "he",
+  },
+  {
+    slug: "notebook-export",
+    language: "hi",
+  },
+  {
+    slug: "notebook-export",
+    language: "id",
+  },
+  {
+    slug: "notebook-export",
+    language: "it",
+  },
+  {
+    slug: "notebook-export",
+    language: "ja",
+  },
+  {
+    slug: "notebook-export",
+    language: "ko",
+  },
+  {
+    slug: "notebook-export",
+    language: "ms",
+  },
+  {
+    slug: "notebook-export",
+    language: "nl",
+  },
+  {
+    slug: "notebook-export",
+    language: "no",
+  },
+  {
+    slug: "notebook-export",
+    language: "pl",
+  },
+  {
+    slug: "notebook-export",
+    language: "pt",
+  },
+  {
+    slug: "notebook-export",
+    language: "ru",
+  },
+  {
+    slug: "notebook-export",
+    language: "sv",
+  },
+  {
+    slug: "notebook-export",
+    language: "th",
+  },
+  {
+    slug: "notebook-export",
+    language: "tr",
+  },
+  {
+    slug: "notebook-export",
+    language: "vi",
+  },
+  {
+    slug: "notebook-export",
+    language: "zh-CN",
+  },
+  {
+    slug: "notebook-export",
+    language: "zh-TW",
+  },
+  {
     slug: "notebook-viewer",
     language: "ar",
   },

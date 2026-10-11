@@ -11,3 +11,5 @@ Trình xem chỉ hiển thị những gì đã được lưu. Việc thiếu đ�
 ## Xem trên thiết bị, chỉ đọc
 
 Tệp luôn ở trên thiết bị của bạn. Việc mở notebook không thực thi mã, khởi động kernel, cài đặt gói hay tải tài nguyên bên ngoài. Hình ảnh từ xa và tệp đính kèm bị thiếu sẽ được báo. Liên kết bên ngoài chỉ mở riêng khi được chọn. Đóng hoặc thay notebook để giải phóng bản xem trước. Trình xem này không chỉnh sửa, xuất tệp hay tự động lưu nội dung notebook.
+
+Để lưu notebook dưới dạng HTML, Markdown hoặc tập lệnh, hãy dùng [Trình chuyển đổi notebook Jupyter](/tools/notebook-export/). Công cụ này xuất nội dung đã lưu mà không chạy mã.

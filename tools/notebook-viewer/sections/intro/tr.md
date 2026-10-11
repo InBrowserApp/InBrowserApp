@@ -11,3 +11,5 @@ Görüntüleyici yalnızca kaydedilmiş içeriği gösterir. Eksik çıktı, ça
 ## Yerel, salt okunur görüntüleme
 
 Dosyalar cihazınızda kalır. Bir not defterini açmak kod çalıştırmaz, çekirdek başlatmaz, paket kurmaz veya dış kaynakları getirmez. Uzak görseller ve eksik ekler bildirilir. Dış bağlantılar yalnızca seçildiğinde ayrı olarak açılır. Önizlemenin kullandığı kaynakları serbest bırakmak için not defterini kapatın veya değiştirin. Bu görüntüleyici not defteri içeriğini düzenlemez, dışa aktarmaz veya otomatik olarak saklamaz.
+
+Not defterini HTML, Markdown veya kod betiği olarak kaydetmek için [Jupyter Notebook Dönüştürücü](/tools/notebook-export/) aracını kullanın. Kaydedilmiş içeriği kod çalıştırmadan dışa aktarır.

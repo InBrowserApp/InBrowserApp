@@ -11,3 +11,5 @@ Viseren viser bare det som er lagret. Manglende utdata betyr ikke at en kjøring
 ## Lokal, skrivebeskyttet visning
 
 Filene forblir på enheten din. Åpning av en notatbok kjører ikke kode, starter ikke en kjerne, installerer ikke pakker og henter ikke eksterne ressurser. Eksterne bilder og manglende vedlegg meldes fra om. Eksterne lenker åpnes separat bare når du velger dem. Lukk eller bytt notatbok for å frigjøre forhåndsvisningen. Denne viseren redigerer ikke, eksporterer ikke og lagrer ikke notatbokinnhold automatisk.
+
+Bruk [Jupyter-notatbokkonverterer](/tools/notebook-export/) for å lagre notatboken som HTML, Markdown eller et kodeskript. Den eksporterer lagret innhold uten å kjøre kode.

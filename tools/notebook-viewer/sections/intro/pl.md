@@ -11,3 +11,5 @@ Przeglądarka wyświetla tylko to, co zapisano. Brak danych wyjściowych nie ozn
 ## Lokalny podgląd tylko do odczytu
 
 Pliki pozostają na Twoim urządzeniu. Otwarcie notatnika nie wykonuje kodu, nie uruchamia jądra, nie instaluje pakietów ani nie pobiera zasobów zewnętrznych. Zdalne obrazy i brakujące załączniki są zgłaszane. Linki zewnętrzne otwierają się osobno tylko po ich wybraniu. Zamknij lub zastąp notatnik, aby zwolnić podgląd. Ta przeglądarka nie edytuje, nie eksportuje ani nie zapisuje automatycznie treści notatnika.
+
+Aby zapisać notatnik jako HTML, Markdown lub skrypt z kodem, użyj [Konwertera notatników Jupyter](/tools/notebook-export/). Eksportuje zapisaną treść bez uruchamiania kodu.

@@ -11,3 +11,5 @@ La visionneuse affiche uniquement ce qui a été enregistré. Une sortie manquan
 ## Consultation locale en lecture seule
 
 Les fichiers restent sur votre appareil. L’ouverture d’un notebook n’exécute aucun code, ne lance aucun noyau, n’installe aucun package et ne récupère aucune ressource externe. Les images distantes et les pièces jointes manquantes sont signalées. Les liens externes s’ouvrent séparément, uniquement lorsque vous les sélectionnez. Fermez ou remplacez le notebook pour libérer l’aperçu. Cette visionneuse ne permet pas de modifier, d’exporter ou de stocker automatiquement le contenu des notebooks.
+
+Pour enregistrer le notebook en HTML, en Markdown ou sous forme de script, utilisez le [Convertisseur de notebooks Jupyter](/tools/notebook-export/). Il exporte le contenu enregistré sans exécuter de code.

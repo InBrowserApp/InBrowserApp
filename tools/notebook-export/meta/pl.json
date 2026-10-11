@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter notatników Jupyter",
+  "description": "Konwertuj lokalne notatniki IPYNB do HTML, Markdown lub kodu. Zachowaj zapisaną kolejność komórek i obsługiwane dane wyjściowe bez przesyłania plików ani wykonywania kodu."
+}

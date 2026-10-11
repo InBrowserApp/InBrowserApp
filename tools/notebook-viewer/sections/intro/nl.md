@@ -11,3 +11,5 @@ De viewer toont alleen wat is opgeslagen. Ontbrekende uitvoer betekent niet dat 
 ## Lokaal en alleen-lezen bekijken
 
 Bestanden blijven op je apparaat. Bij het openen van een notebook wordt geen code uitgevoerd, geen kernel gestart, geen pakket geïnstalleerd en geen externe bron opgehaald. Externe afbeeldingen en ontbrekende bijlagen worden gemeld. Externe links openen alleen afzonderlijk als je ze selecteert. Sluit of vervang het notebook om het voorbeeld vrij te geven. Deze viewer bewerkt of exporteert geen notebookinhoud en slaat deze niet automatisch op.
+
+Gebruik de [Jupyter-notebookconverter](/tools/notebook-export/) om het notebook op te slaan als HTML, Markdown of een codescript. Deze exporteert opgeslagen inhoud zonder code uit te voeren.

@@ -26,7 +26,10 @@ test("converts in an owned worker, sanitizes the result and terminates on succes
     signal = new AbortController().signal
   const pending = openDocument(f, signal, m)
   const worker = FakeWorker.last
-  expect(worker.postMessage).toHaveBeenCalledWith(f)
+  expect(worker.postMessage).toHaveBeenCalledWith({
+    file: f,
+    includeSource: undefined,
+  })
   worker.finish({
     result: {
       cells: [
