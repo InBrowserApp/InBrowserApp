@@ -123,6 +123,13 @@ export async function parseMsg(
         )
           throw new Error("missing attachment")
         result.bytes = new Uint8Array(reader.getAttachment(item).content)
+        if (
+          options?.attachmentBytes === "all" &&
+          !item.innerMsgContent &&
+          item.contentLength !== undefined &&
+          result.bytes.byteLength !== item.contentLength
+        )
+          throw new Error("incomplete attachment")
         result.size = result.bytes.byteLength
         if (item.innerMsgContent) result.type = "application/vnd.ms-outlook"
       } catch {

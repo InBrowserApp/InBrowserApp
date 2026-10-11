@@ -40,3 +40,17 @@ test("retains ordinary Outlook attachment bytes only when explicitly requested",
     "Local attachment."
   )
 })
+
+test("does not pass a broken MSG mini-stream off as a valid empty attachment", async () => {
+  const bytes = readFileSync("tools/email-viewer/fixtures/outlook-html.msg")
+  const name = Buffer.from("__substg1.0_37010102", "utf16le")
+  const first = bytes.indexOf(name)
+  const second = bytes.indexOf(name, first + name.length)
+  expect(second).toBeGreaterThan(first)
+  // Keep the declared 17-byte stream length, but remove its mini-sector chain.
+  bytes.writeUInt32LE(0xfffffffe, second + 116)
+  const email = await parseEmail(new Uint8Array(bytes).buffer, "broken.msg", {
+    attachmentBytes: "all",
+  })
+  expect(email.notices).toContain("attachmentError")
+})
