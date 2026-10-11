@@ -10,7 +10,11 @@ import { readOutline, renderThumbnail } from "./navigation"
 import type { PDFDocumentProxy } from "pdfjs-dist"
 import type { Reader, ReaderState } from "./types"
 
-GlobalWorkerOptions.workerSrc = workerUrl.default
+// Isolated pages need a worker response carrying COEP. Keep their URL separate
+// from immutable worker responses cached before that header was introduced.
+GlobalWorkerOptions.workerSrc = globalThis.crossOriginIsolated
+  ? `${workerUrl.default}${workerUrl.default.includes("?") ? "&" : "?"}isolated=1`
+  : workerUrl.default
 
 type Options = {
   file: Blob

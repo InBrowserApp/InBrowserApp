@@ -11,3 +11,5 @@ Skrifter som finnes på enheten din, brukes. Manglende skrifter erstattes, noe s
 ## Filer som ikke kan åpnes
 
 Passordbeskyttede filer, PowerPoint-formater eldre enn PowerPoint 97 og andre eller inkompatible WPS-varianter støttes ikke. Å endre filendelsen endrer ikke det underliggende formatet. Bruk PPTX-viseren for moderne PowerPoint-presentasjoner. Skadede filer og begrensninger i nettleserens minne eller tegneflate gir en feil. Lukk eller bytt filen for å fortsette.
+
+Bruk [Konverterer fra PPT og DPS til PDF](../ppt-to-pdf-converter/) for å få en PDF som kan lastes ned. Kontroller de konverterte sidene før du laster ned.

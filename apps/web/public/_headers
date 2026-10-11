@@ -1,5 +1,15 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
+  Cross-Origin-Embedder-Policy: require-corp
+
+# Shared WebAssembly memory is isolated only on the legacy PDF converter.
+/tools/ppt-to-pdf-converter/
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+/:language/tools/ppt-to-pdf-converter/
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
 
 # Brand icons — non-fingerprinted, change rarely. 7d fresh / 30d SWR.
 /favicon.ico

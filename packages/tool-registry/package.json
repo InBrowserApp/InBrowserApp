@@ -168,6 +168,7 @@
     "@tool/placeholder-image-generator": "workspace:*",
     "@tool/png-optimizer": "workspace:*",
     "@tool/port-number-lookup": "workspace:*",
+    "@tool/ppt-to-pdf-converter": "workspace:*",
     "@tool/ppt-viewer": "workspace:*",
     "@tool/pptx-to-markdown-converter": "workspace:*",
     "@tool/pptx-to-pdf-converter": "workspace:*",

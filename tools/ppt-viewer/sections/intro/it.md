@@ -11,3 +11,5 @@ Vengono usati i caratteri disponibili sul dispositivo. I caratteri mancanti veng
 ## File che non possono essere aperti
 
 Non sono supportati i file protetti da password, i formati PowerPoint precedenti a PowerPoint 97 e le varianti WPS di altro tipo o incompatibili. Rinominare l’estensione non cambia il formato del file. Usa il visualizzatore PPTX per le presentazioni PowerPoint moderne. I file danneggiati e i limiti di memoria o del canvas del browser generano un errore; chiudi o sostituisci il file per continuare.
+
+Per ottenere un PDF scaricabile, usa il [Convertitore da PPT e DPS a PDF](../ppt-to-pdf-converter/). Controlla le pagine convertite prima di scaricare.

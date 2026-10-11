@@ -1,0 +1,11 @@
+diff --git a/package.json b/package.json
+--- a/package.json
++++ b/package.json
+@@ -10,6 +10,7 @@
+   "types": "dist/index.d.ts",
+   "type": "module",
+   "exports": {
++    "./wasm/*": "./wasm/*",
+     ".": {
+       "types": "./dist/index.d.ts",
+       "import": "./dist/index.js",

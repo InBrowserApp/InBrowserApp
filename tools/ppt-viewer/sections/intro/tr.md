@@ -11,3 +11,5 @@ Cihazınızdaki yazı tipleri kullanılır. Eksik yazı tiplerinin yerine başka
 ## Açılamayan dosyalar
 
 Parola korumalı dosyalar, PowerPoint 97 öncesindeki PowerPoint biçimleri ve ilgisiz ya da uyumsuz WPS çeşitleri desteklenmez. Dosya uzantısını değiştirmek, dosyanın asıl biçimini değiştirmez. Modern PowerPoint sunumları için PPTX Görüntüleyiciyi kullanın. Hasarlı dosyalar ve tarayıcının bellek veya tuval sınırlamaları hataya yol açar; devam etmek için dosyayı kapatın veya değiştirin.
+
+İndirilebilir bir PDF için [PPT / DPS’den PDF’ye Dönüştürücü](../ppt-to-pdf-converter/) aracını kullanın. İndirmeden önce dönüştürülen sayfaları kontrol edin.

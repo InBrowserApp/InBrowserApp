@@ -11,3 +11,5 @@ Font yang tersedia di perangkat Anda digunakan. Font yang tidak tersedia akan di
 ## File yang tidak dapat dibuka
 
 File yang dilindungi kata sandi, format PowerPoint yang lebih lama dari PowerPoint 97, serta varian WPS lain yang tidak terkait atau tidak kompatibel tidak didukung. Mengganti nama ekstensi tidak mengubah format aslinya. Gunakan Penampil PPTX untuk presentasi PowerPoint modern. File yang rusak serta keterbatasan memori browser atau kanvas akan menimbulkan kesalahan; tutup atau ganti file untuk melanjutkan.
+
+Untuk membuat PDF yang dapat diunduh, gunakan [Konverter PPT / DPS ke PDF](../ppt-to-pdf-converter/). Periksa halaman hasil konversi sebelum mengunduh.

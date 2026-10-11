@@ -11,3 +11,5 @@ Es werden die Schriftarten auf deinem Gerät verwendet. Fehlende Schriftarten we
 ## Dateien, die nicht geöffnet werden können
 
 Passwortgeschützte Dateien, PowerPoint-Formate älter als PowerPoint 97 sowie andere oder inkompatible WPS-Varianten werden nicht unterstützt. Eine umbenannte Dateiendung ändert das zugrunde liegende Format nicht. Verwende für moderne PowerPoint-Präsentationen den PPTX-Betrachter. Beschädigte Dateien sowie Speicher- oder Canvas-Beschränkungen des Browsers führen zu einem Fehler. Schließe oder ersetze die Datei, um fortzufahren.
+
+Verwende für eine herunterladbare PDF den [PPT/DPS-zu-PDF-Konverter](../ppt-to-pdf-converter/). Prüfe die konvertierten Seiten vor dem Herunterladen.

@@ -200,6 +200,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/placeholder-image-generator/page"),
   "png-optimizer": () => import("@tool/png-optimizer/page"),
   "port-number-lookup": () => import("@tool/port-number-lookup/page"),
+  "ppt-to-pdf-converter": () => import("@tool/ppt-to-pdf-converter/page"),
   "ppt-viewer": () => import("@tool/ppt-viewer/page"),
   "pptx-to-markdown-converter": () =>
     import("@tool/pptx-to-markdown-converter/page"),

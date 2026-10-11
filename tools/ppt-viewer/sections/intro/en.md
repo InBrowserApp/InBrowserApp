@@ -11,3 +11,5 @@ Fonts available on your device are used. Missing fonts are substituted, which ca
 ## Files that cannot be opened
 
 Password-protected files, PowerPoint formats older than PowerPoint 97, and unrelated or incompatible WPS variants are not supported. A renamed extension does not change the underlying format. Use the PPTX Viewer for modern PowerPoint presentations. Damaged files and browser memory or canvas limitations produce an error; close or replace the file to continue.
+
+For a downloadable PDF, use the [PPT / DPS to PDF Converter](../ppt-to-pdf-converter/). Review the converted pages before downloading.

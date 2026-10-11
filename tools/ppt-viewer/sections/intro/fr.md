@@ -11,3 +11,5 @@ Les polices disponibles sur votre appareil sont utilisées. Les polices manquant
 ## Fichiers qui ne peuvent pas être ouverts
 
 Les fichiers protégés par un mot de passe, les formats PowerPoint antérieurs à PowerPoint 97 et les variantes WPS sans rapport ou incompatibles ne sont pas pris en charge. Renommer l’extension ne change pas le format sous-jacent. Utilisez la visionneuse PPTX pour les présentations PowerPoint modernes. Les fichiers endommagés et les limites de mémoire ou de canevas du navigateur provoquent une erreur ; fermez ou remplacez le fichier pour continuer.
+
+Pour obtenir un PDF téléchargeable, utilisez le [Convertisseur PPT / DPS en PDF](../ppt-to-pdf-converter/). Vérifiez les pages converties avant de télécharger.
