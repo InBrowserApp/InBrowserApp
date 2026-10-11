@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Pandoc river report</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Pandoc river report</h1>
+</header>
+<h1 id="reading-the-river">Reading the river</h1>
+<p>A local field report with included formatting, images, and links.</p>
+<p>English · 中文 · العربية · 日本語 · Français</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAwCAIAAABhdOiYAAAAhklEQVR4nO3QQQ2AMAAEwXrBI1ZwRYIIfGChPEiO3iRrYGdc9znTth/5Tb68agACBCgBqNYIECBAKUCdRoAAAQoCKjQCBAhQFlCbESBAgOKAqowAAQKUCNRjBAgQoFCgEiNAgADlAjUYAQIEKBpoeSNAgAClA61tBAgQoB8ALWwECBCgT4Ee36SXki99tLsAAAAASUVORK5CYII=" width="80" height="80" alt="River marker" /></p>
+<p><a href="#observations">Jump to observations</a> · <a href="https://example.org/report" ping="https://tracking.invalid/ping">External reference</a> · <a href="#missing">Missing note</a></p>
+<h2 id="observations">Observations</h2>
+<p>Water quality improved through the spring.</p>
+<table>
+<caption>Monthly sampling</caption>
+<thead>
+<tr class="header">
+<th>Station 1</th>
+<th>Station 2</th>
+<th>Station 3</th>
+<th>Station 4</th>
+<th>Station 5</th>
+<th>Station 6</th>
+<th>Station 7</th>
+<th>Station 8</th>
+<th>Station 9</th>
+<th>Station 10</th>
+<th>Station 11</th>
+<th>Station 12</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.25 mg/L</td>
+<td>2.25 mg/L</td>
+<td>3.25 mg/L</td>
+<td>4.25 mg/L</td>
+<td>5.25 mg/L</td>
+<td>6.25 mg/L</td>
+<td>7.25 mg/L</td>
+<td>8.25 mg/L</td>
+<td>9.25 mg/L</td>
+<td>10.25 mg/L</td>
+<td>11.25 mg/L</td>
+<td>12.25 mg/L</td>
+</tr>
+</tbody>
+</table>
+<pre><code>station,date,temperature,conductivity,dissolved_oxygen,acidity,turbidity,flow_rate,depth,notes,operator,calibration_status</code></pre>
+<h2 id="note-1">Field note 1</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-2">Field note 2</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-3">Field note 3</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-4">Field note 4</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-5">Field note 5</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-6">Field note 6</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-7">Field note 7</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-8">Field note 8</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-9">Field note 9</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-10">Field note 10</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-11">Field note 11</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-12">Field note 12</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-13">Field note 13</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-14">Field note 14</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-15">Field note 15</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-16">Field note 16</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-17">Field note 17</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-18">Field note 18</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-19">Field note 19</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<h2 id="note-20">Field note 20</h2>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+<p>The river has changed throughout the season. This paragraph follows a
+visible passage through zoom and narrower reading widths.</p>
+</body>
+</html>

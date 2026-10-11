@@ -1,3 +1,4 @@
+export { decodeWebDocument } from "./decode"
 import createDOMPurify from "dompurify"
 import {
   cleanStyle,
@@ -43,7 +44,12 @@ export type WebDocument = {
 
 export function prepareWebDocument(
   source: string,
-  options: { xhtml?: boolean; emptyText: string; headingText: string }
+  options: {
+    xhtml?: boolean
+    emptyText: string
+    headingText: string
+    print?: boolean
+  }
 ): WebDocument {
   const notes: ResourceNotes = { local: false, remote: false, active: false }
   // Parse in a template contents owner document: there is no browsing context
@@ -178,7 +184,9 @@ export function prepareWebDocument(
     p.textContent = options.emptyText
     body.append(p)
   }
-  for (const element of body.querySelectorAll("table,pre")) {
+  for (const element of options.print
+    ? []
+    : body.querySelectorAll("table,pre")) {
     const wrapper = inert.createElement("div")
     wrapper.setAttribute("data-web-wide", "")
     wrapper.tabIndex = 0
@@ -187,7 +195,7 @@ export function prepareWebDocument(
   }
   const prefix = `web-heading-${crypto.randomUUID()}-`
   const outline = Array.from(
-    body.querySelectorAll("h1,h2,h3,h4,h5,h6"),
+    options.print ? [] : body.querySelectorAll("h1,h2,h3,h4,h5,h6"),
     (heading, index) => {
       const target = inert.createElement("span")
       target.id = `${prefix}${index}`
@@ -204,7 +212,7 @@ export function prepareWebDocument(
   csp.content = policy
   const style = inert.createElement("style")
   style.textContent = readerStyle
-  head.prepend(style)
+  if (!options.print) head.prepend(style)
   // CSP must precede every element, including document-provided CSS.
   head.prepend(csp)
   return {

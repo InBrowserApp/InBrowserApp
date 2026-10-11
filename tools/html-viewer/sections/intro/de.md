@@ -11,3 +11,5 @@ HTML wird als fortlaufendes Dokument angezeigt; komplexe Website-Layouts können
 ## Lokal und schreibgeschützt ansehen
 
 Dateien bleiben auf deinem Gerät. Skripte, Formulare, Weiterleitungen und eingebettete Frames sind deaktiviert. Wenn du einen externen Link auswählst, wird er separat geöffnet. Der Betrachter lädt keine Website-Adressen, stellt keine Anmeldesitzungen wieder her und führt keine Webanwendungen aus. Schließe oder ersetze das Dokument, um die aktuelle Vorschau freizugeben. MHTML-Archive benötigen einen MHTML-Betrachter.
+
+Um eine statische PDF eines eigenständigen Dokuments herunterzuladen, verwende den [HTML-zu-PDF-Konverter](../html-to-pdf-converter/).

@@ -11,3 +11,5 @@ HTML jest wyświetlany jako ciągły dokument; złożone układy stron interneto
 ## Lokalne przeglądanie tylko do odczytu
 
 Pliki pozostają na Twoim urządzeniu. Skrypty, formularze, przekierowania i osadzone ramki są wyłączone. Wybranie linku zewnętrznego otwiera go osobno. Przeglądarka dokumentów nie wczytuje adresów stron internetowych, nie przywraca sesji logowania ani nie uruchamia aplikacji internetowych. Zamknij lub zastąp dokument, aby zwolnić bieżący podgląd. Archiwa MHTML wymagają przeglądarki MHTML.
+
+Aby pobrać statyczny plik PDF z samodzielnego dokumentu, użyj [Konwertera HTML na PDF](../html-to-pdf-converter/).

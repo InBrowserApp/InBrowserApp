@@ -112,6 +112,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/html-entity-encoder-decoder/page"),
   "html-to-markdown-converter": () =>
     import("@tool/html-to-markdown-converter/page"),
+  "html-to-pdf-converter": () => import("@tool/html-to-pdf-converter/page"),
   "html-viewer": () => import("@tool/html-viewer/page"),
   "http-status-code-lookup": () => import("@tool/http-status-code-lookup/page"),
   "hwp-to-pdf-converter": () => import("@tool/hwp-to-pdf-converter/page"),

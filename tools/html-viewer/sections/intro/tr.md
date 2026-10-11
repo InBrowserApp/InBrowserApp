@@ -11,3 +11,5 @@ HTML, kesintisiz bir belge olarak görüntülenir; karmaşık web sitesi düzenl
 ## Yerel, salt okunur görüntüleme
 
 Dosyalar cihazınızda kalır. Betikler, formlar, yönlendirmeler ve gömülü çerçeveler devre dışıdır. Bir dış bağlantı seçildiğinde ayrı olarak açılır. Görüntüleyici web sitesi adreslerini yüklemez, oturumları geri getirmez ve web uygulamalarını çalıştırmaz. Geçerli önizlemeyi serbest bırakmak için belgeyi kapatın veya değiştirin. MHTML arşivleri için bir MHTML görüntüleyici gerekir.
+
+Tüm kaynaklarını içinde barındıran bir belgenin statik PDF kopyasını indirmek için [HTML’den PDF’ye Dönüştürücü](../html-to-pdf-converter/) aracını kullanın.

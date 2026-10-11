@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de HTML a PDF",
+  "description": "Convierte un documento HTML autónomo a PDF de forma local. Previsualiza las páginas A4 generadas como imágenes y descarga el mismo PDF."
+}

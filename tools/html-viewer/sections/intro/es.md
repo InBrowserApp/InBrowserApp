@@ -11,3 +11,5 @@ El HTML se muestra como un documento continuo; los diseños web complejos pueden
 ## Visualización local de solo lectura
 
 Los archivos permanecen en tu dispositivo. Los scripts, formularios, redirecciones y marcos incrustados están desactivados. Al seleccionar un enlace externo, se abre por separado. El visor no carga direcciones web, restaura sesiones de inicio de sesión ni ejecuta aplicaciones web. Cierra o reemplaza el documento para liberar la vista previa actual. Los archivos MHTML requieren un visor de MHTML.
+
+Para descargar un PDF estático de un documento autónomo, usa el [Conversor de HTML a PDF](../html-to-pdf-converter/).

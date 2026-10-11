@@ -11,3 +11,5 @@ HTML được hiển thị dưới dạng tài liệu liên tục; bố cục tr
 ## Xem cục bộ, chỉ đọc
 
 Tệp luôn ở trên thiết bị của bạn. Tập lệnh, biểu mẫu, chuyển hướng và khung nhúng đều bị vô hiệu hóa. Khi được chọn, liên kết bên ngoài sẽ mở riêng. Trình xem không tải địa chỉ trang web, khôi phục phiên đăng nhập hay chạy ứng dụng web. Đóng hoặc thay tài liệu để giải phóng bản xem trước hiện tại. Tệp lưu trữ MHTML cần trình xem MHTML.
+
+Để tải xuống bản PDF tĩnh của tài liệu chứa sẵn mọi tài nguyên, hãy dùng [Trình chuyển đổi HTML sang PDF](../html-to-pdf-converter/).

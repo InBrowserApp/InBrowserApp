@@ -11,3 +11,5 @@ HTML vises som et sammenhengende dokument. Komplekse nettsideoppsett kan se anne
 ## Lokal visning uten redigering
 
 Filene blir på enheten din. Skript, skjemaer, omdirigeringer og innebygde rammer er deaktivert. Når du velger en ekstern lenke, åpnes den separat. Viseren laster ikke inn nettadresser, gjenoppretter ikke innloggingsøkter og kjører ikke nettapplikasjoner. Lukk eller bytt dokumentet for å frigjøre den gjeldende forhåndsvisningen. MHTML-arkiver krever en MHTML-viser.
+
+For å laste ned en statisk PDF av et selvstendig dokument kan du bruke [HTML til PDF-konvertereren](../html-to-pdf-converter/).
