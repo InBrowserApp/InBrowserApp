@@ -13,3 +13,5 @@ EML và EMLX hỗ trợ thư MIME, tên và chủ đề được mã hóa, các 
 MSG hỗ trợ các trường tiêu đề email Outlook, văn bản thuần, HTML, thông tin tệp đính kèm và ảnh raster đi kèm. Nội dung chỉ có văn bản định dạng phong phú của Outlook không được hiển thị. Các mục lịch và danh bạ, thư mã hóa và thư được bảo vệ không được hỗ trợ. Định dạng Outlook phức tạp có thể khác với ứng dụng gốc. Dấu thời gian đã lưu giữ nguyên văn bản múi giờ gốc nếu có; dấu thời gian MSG không có ngày giờ trong tiêu đề truyền thư được ghi rõ là UTC.
 
 Việc xem email không xác minh danh tính người gửi hay chữ ký số. Ngày giờ bị thiếu hoặc sai định dạng được hiển thị mà không phỏng đoán. Bộ nhớ khả dụng và khả năng của trình duyệt quyết định tệp nào có thể mở; không có giới hạn cố định về kích thước tệp hay số lượng tệp đính kèm.
+
+Để tạo bản đọc có thể in với các trường tiêu đề đã lưu và danh sách tệp đính kèm, hãy dùng [Trình chuyển đổi email sang PDF](../email-to-pdf-converter/). Nội dung tệp đính kèm không được đưa vào.

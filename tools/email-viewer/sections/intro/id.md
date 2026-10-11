@@ -13,3 +13,5 @@ EML dan EMLX mendukung pesan MIME, nama dan subjek yang dienkode, set karakter u
 MSG mendukung header email Outlook, teks biasa, HTML, informasi lampiran, dan gambar raster yang disertakan. Isi pesan yang hanya berupa teks berformat Outlook tidak ditampilkan. Item kalender dan kontak, pesan terenkripsi, serta email yang dilindungi tidak didukung. Pemformatan Outlook yang rumit dapat berbeda dari aplikasi aslinya. Stempel waktu tersimpan mempertahankan teks zona waktu aslinya jika tersedia; stempel waktu MSG tanpa tanggal pengiriman ditandai secara jelas sebagai UTC.
 
 Melihat email tidak memverifikasi identitas pengirim atau tanda tangan digital. Tanggal yang tidak ada atau salah format ditampilkan tanpa diterka. Memori yang tersedia dan kemampuan browser menentukan file mana yang dapat dibuka; tidak ada batas tetap untuk ukuran file atau jumlah lampiran.
+
+Untuk membuat salinan baca yang dapat dicetak dengan header tersimpan dan daftar lampiran, gunakan [Konverter Email ke PDF](../email-to-pdf-converter/). Isi lampiran tidak disertakan.

@@ -78,6 +78,7 @@
     "@tool/docx-to-pdf-converter": "workspace:*",
     "@tool/docx-viewer": "workspace:*",
     "@tool/duration-calculator": "workspace:*",
+    "@tool/email-to-pdf-converter": "workspace:*",
     "@tool/email-validator": "workspace:*",
     "@tool/email-viewer": "workspace:*",
     "@tool/epub-reader": "workspace:*",

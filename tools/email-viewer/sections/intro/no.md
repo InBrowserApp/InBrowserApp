@@ -13,3 +13,5 @@ EML og EMLX støtter MIME-meldinger, kodede navn og emner, vanlige tegnsett, tek
 MSG støtter Outlook-meldingshoder, ren tekst, HTML, vedleggsinformasjon og inkluderte rasterbilder. Meldinger som bare har Outlook-riktekst, vises ikke. Kalender- og kontaktelementer, krypterte meldinger og beskyttet e-post støttes ikke. Kompleks Outlook-formatering kan avvike fra det opprinnelige programmet. Et lagret tidsstempel beholder den opprinnelige tidssoneteksten når den er tilgjengelig. MSG-tidsstempler uten transportdato merkes uttrykkelig som UTC.
 
 Visning av en e-post bekrefter ikke avsenderens identitet eller en digital signatur. En manglende dato eller en dato med ugyldig format vises uten gjetting. Tilgjengelig minne og nettleserens funksjoner avgjør hvilke filer som kan åpnes. Det er ingen fast grense for filstørrelse eller antall vedlegg.
+
+For en lesekopi som kan skrives ut, med lagrede meldingshoder og en vedleggsliste, bruk [E-post til PDF-konvertereren](../email-to-pdf-converter/). Innholdet i vedlegg tas ikke med.

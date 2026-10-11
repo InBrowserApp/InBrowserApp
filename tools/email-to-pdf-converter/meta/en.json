@@ -1,0 +1,4 @@
+{
+  "name": "Email to PDF Converter",
+  "description": "Convert local EML, EMLX and MSG emails to PDF with saved headers, readable body, inline images and an attachment list. Preview and download in your browser."
+}

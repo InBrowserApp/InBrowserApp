@@ -13,3 +13,5 @@ EML en EMLX ondersteunen MIME-berichten, gecodeerde namen en onderwerpen, gangba
 MSG ondersteunt Outlook-e-mailheaders, platte tekst, HTML, bijlagegegevens en bijgevoegde rasterafbeeldingen. Berichttekst die alleen in Outlook-opmaak beschikbaar is, wordt niet weergegeven. Agenda-items, contactpersonen, versleutelde berichten en beveiligde e-mails worden niet ondersteund. Complexe Outlook-opmaak kan afwijken van de oorspronkelijke toepassing. Een opgeslagen tijdstempel behoudt de oorspronkelijke tijdzoneaanduiding wanneer die beschikbaar is; MSG-tijdstempels zonder transportdatum worden uitdrukkelijk als UTC aangeduid.
 
 Het bekijken van een e-mail verifieert de identiteit van de afzender of een digitale handtekening niet. Een ontbrekende of onjuist opgemaakte datum wordt zonder aannames weergegeven. Het beschikbare geheugen en de mogelijkheden van de browser bepalen welke bestanden kunnen worden geopend; er is geen vaste limiet voor de bestandsgrootte of het aantal bijlagen.
+
+Gebruik de [E-mail naar PDF-converter](../email-to-pdf-converter/) voor een afdrukbare leeskopie met opgeslagen headers en een bijlagenlijst. De inhoud van bijlagen wordt niet opgenomen.

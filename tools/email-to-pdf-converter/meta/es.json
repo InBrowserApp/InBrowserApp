@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor de correo electrónico a PDF",
+  "description": "Convierte correos EML, EMLX y MSG locales a PDF con sus encabezados guardados, cuerpo legible, imágenes insertadas y lista de adjuntos. Previsualiza y descarga en tu navegador."
+}

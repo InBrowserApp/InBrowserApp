@@ -1,5 +1,5 @@
 import createDOMPurify from "dompurify"
-import { contentId, rasterImage } from "./mime"
+import { contentId, rasterImage } from "@workspace/email"
 import type { Email } from "./types"
 
 const policy =

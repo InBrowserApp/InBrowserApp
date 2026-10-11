@@ -8,7 +8,7 @@ import {
   contentId,
   rasterImage,
   referencedImage,
-} from "./mime"
+} from "./content"
 import type { Attachment, Email, Notice } from "./types"
 
 export async function parseMsg(buffer: ArrayBuffer): Promise<Email> {

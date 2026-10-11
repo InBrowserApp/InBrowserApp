@@ -15,7 +15,7 @@ import {
 import { Spinner } from "@workspace/ui/components/ui/spinner"
 import { Mail } from "@workspace/ui/icons"
 import { MessageView } from "./message-view"
-import { failure } from "./failure"
+import { failure } from "@workspace/email"
 import type { Email, Failure, Messages } from "./types"
 
 type Ready = {
@@ -51,7 +51,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
     const { signal } = controller
     let preview: Ready["preview"] | undefined
     setLoading(true)
-    void Promise.all([import("./open-email"), import("./preview")])
+    void Promise.all([import("@workspace/email"), import("./preview")])
       .then(async ([{ openEmail }, { preparePreview }]) => {
         signal.throwIfAborted()
         const email = await openEmail(file, signal)

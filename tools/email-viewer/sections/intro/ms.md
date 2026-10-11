@@ -13,3 +13,5 @@ EML dan EMLX menyokong mesej MIME, nama dan subjek yang dikodkan, set aksara laz
 MSG menyokong pengepala e-mel Outlook, teks biasa, HTML, maklumat lampiran dan imej raster yang disertakan. Isi mesej yang hanya mengandungi teks kaya Outlook tidak dipaparkan. Item kalendar dan kenalan, mesej yang disulitkan serta e-mel yang dilindungi tidak disokong. Pemformatan Outlook yang rumit mungkin berbeza daripada aplikasi asal. Cap masa tersimpan mengekalkan teks zon waktu asalnya jika tersedia; cap masa MSG tanpa tarikh pengangkutan dinyatakan dengan jelas sebagai UTC.
 
 Melihat e-mel tidak mengesahkan identiti pengirim atau tandatangan digital. Tarikh yang tiada atau formatnya tidak sah dipaparkan tanpa membuat andaian. Memori yang tersedia dan keupayaan pelayar menentukan fail yang boleh dibuka; tiada had tetap bagi saiz fail atau bilangan lampiran.
+
+Untuk salinan bacaan yang boleh dicetak dengan pengepala tersimpan dan senarai lampiran, gunakan [Penukar E-mel kepada PDF](../email-to-pdf-converter/). Kandungan lampiran tidak disertakan.

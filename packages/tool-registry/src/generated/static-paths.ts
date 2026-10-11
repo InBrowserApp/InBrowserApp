@@ -6534,6 +6534,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "email-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "email-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "email-validator",
     language: "ar",
   },

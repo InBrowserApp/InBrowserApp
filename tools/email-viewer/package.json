@@ -10,9 +10,8 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "postal-mime": "catalog:",
-    "@kenjiuno/msgreader": "catalog:",
-    "dompurify": "catalog:"
+    "dompurify": "catalog:",
+    "@workspace/email": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",
