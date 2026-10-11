@@ -13,3 +13,5 @@ Pemapar ini menyokong halaman HTML dalam arkib web multipart/related, termasuk s
 Skrip, borang, ubah hala, aplikasi terbenam dan halaman bersarang dinyahdayakan. Format imej yang tidak disokong dan susun atur laman yang kompleks mungkin berbeza daripada yang asal. Pemapar ini tidak dapat memulihkan sesi laman web atau kandungan yang tidak disimpan dalam arkib. Untuk fail yang rosak, simpan arkib web baharu dalam aplikasi asal.
 
 Untuk mendapatkan PDF statik dokumen utama yang lengkap dan boleh dimuat turun, gunakan [Penukar MHTML kepada PDF](../mhtml-to-pdf-converter/).
+
+Untuk menghasilkan fail kendiri yang boleh dibuka di luar talian, gunakan [Penukar MHTML kepada HTML](../mhtml-to-html-converter/).

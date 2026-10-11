@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useState } from "react"
-import { useReadingPosition } from "@workspace/ui/lib/use-reading-position"
-import { scrollReadingTarget } from "@workspace/ui/lib/scroll-reading-target"
+import { useReadingPosition } from "../../lib/use-reading-position"
+import { scrollReadingTarget } from "../../lib/scroll-reading-target"
 
 export function DocumentFrame({
   html,

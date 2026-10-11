@@ -13,3 +13,5 @@ Deze viewer ondersteunt HTML-pagina’s in multipart/related-webarchieven, waaro
 Scripts, formulieren, omleidingen, ingesloten apps en geneste pagina’s zijn uitgeschakeld. Niet-ondersteunde afbeeldingsformaten en complexe pagina-indelingen kunnen afwijken van het origineel. De viewer kan geen websitesessies of inhoud herstellen die niet in het archief is opgeslagen. Sla bij een beschadigd bestand een nieuw webarchief op in de oorspronkelijke toepassing.
 
 Gebruik de [MHTML naar PDF-converter](../mhtml-to-pdf-converter/) voor een downloadbare statische PDF van een volledig hoofddocument.
+
+Gebruik de [MHTML naar HTML-converter](../mhtml-to-html-converter/) om een zelfstandig bestand te maken dat offline opent.

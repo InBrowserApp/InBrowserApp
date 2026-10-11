@@ -13,3 +13,5 @@ Denne viseren støtter HTML-sider i multipart/related-nettarkiver, inkludert bas
 Skript, skjemaer, omdirigeringer, innebygde apper og underliggende sider er deaktivert. Bildeformater som ikke støttes, og komplekse sideoppsett kan avvike fra originalen. Viseren kan ikke gjenopprette nettstedsøkter eller innhold som ikke ble lagret i arkivet. Hvis filen er skadet, lagrer du et nytt nettarkiv i det opprinnelige programmet.
 
 Bruk [MHTML til PDF-konverterer](../mhtml-to-pdf-converter/) for å lage en nedlastbar statisk PDF av et fullstendig hoveddokument.
+
+Bruk [MHTML til HTML-konverterer](../mhtml-to-html-converter/) for å lage en selvstendig fil som kan åpnes uten nettilkobling.

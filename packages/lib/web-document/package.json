@@ -6,7 +6,8 @@
   "exports": {
     ".": "./src/index.ts",
     "./archive": "./src/archive/open.ts",
-    "./print": "./src/print.ts"
+    "./print": "./src/print.ts",
+    "./export": "./src/export.ts"
   },
   "dependencies": {
     "dompurify": "catalog:",

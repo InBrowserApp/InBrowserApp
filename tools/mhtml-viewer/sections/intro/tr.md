@@ -13,3 +13,5 @@ Bu görüntüleyici, multipart/related web arşivlerindeki HTML sayfalarını; b
 Betikler, formlar, yönlendirmeler, gömülü uygulamalar ve iç içe sayfalar devre dışıdır. Desteklenmeyen görsel biçimleri ve karmaşık site düzenleri özgün halinden farklı görünebilir. Görüntüleyici, web sitesi oturumlarını veya arşive kaydedilmemiş içeriği geri getiremez. Hasarlı bir dosya için özgün uygulamada yeni bir web arşivi kaydedin.
 
 Eksiksiz bir ana belgenin indirilebilir statik PDF kopyasını oluşturmak için [MHTML’den PDF’ye Dönüştürücü](../mhtml-to-pdf-converter/) aracını kullanın.
+
+Çevrimdışı açılan bağımsız bir dosya oluşturmak için [MHTML’den HTML’ye Dönüştürücü](../mhtml-to-html-converter/) aracını kullanın.

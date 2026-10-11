@@ -1,0 +1,4 @@
+{
+  "name": "MHTML 轉 HTML 轉換器",
+  "description": "將本機 MHTML 或 MHT 封存檔轉換為獨立的 HTML 檔案，包含封存的圖片、樣式，並提供安全預覽。檔案不會上傳。"
+}

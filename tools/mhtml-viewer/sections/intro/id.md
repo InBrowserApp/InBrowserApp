@@ -13,3 +13,5 @@ Penampil ini mendukung halaman HTML di dalam arsip web multipart/related, termas
 Skrip, formulir, pengalihan, aplikasi yang disematkan, dan halaman bersarang dinonaktifkan. Format gambar yang tidak didukung dan tata letak situs yang kompleks mungkin berbeda dari aslinya. Penampil tidak dapat memulihkan sesi situs web atau konten yang tidak disimpan dalam arsip. Untuk file yang rusak, simpan arsip web baru di aplikasi asal.
 
 Untuk PDF statis yang dapat diunduh dari dokumen utama yang lengkap, gunakan [Konverter MHTML ke PDF](../mhtml-to-pdf-converter/).
+
+Untuk membuat file mandiri yang dapat dibuka secara offline, gunakan [Konverter MHTML ke HTML](../mhtml-to-html-converter/).

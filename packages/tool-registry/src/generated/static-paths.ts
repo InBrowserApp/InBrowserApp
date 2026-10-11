@@ -12330,6 +12330,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mhtml-to-html-converter",
+    language: "ar",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "de",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "en",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "es",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "fr",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "he",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "hi",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "id",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "it",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "ja",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "ko",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "ms",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "nl",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "no",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "pl",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "pt",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "ru",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "sv",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "th",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "tr",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "vi",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "mhtml-to-html-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "mhtml-to-pdf-converter",
     language: "ar",
   },
