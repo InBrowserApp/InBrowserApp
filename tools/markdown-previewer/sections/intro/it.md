@@ -9,3 +9,5 @@ Usalo per README, note di rilascio, runbook e altri documenti Markdown. Sono sup
 ## Suggerimenti Di Flusso
 
 Apri o trascina un file per iniziare a leggere, poi scegli Modifica per esaminare o cambiare il sorgente. Il contenuto dei file locali e le modifiche restano in memoria e vengono scartati quando chiudi o ricarichi la pagina; il file originale non viene mai modificato. La bozza di modifica separata viene salvata in questo browser e ripristinata quando chiudi un file locale. Usa Cancella testo senza file aperti per rimuovere la bozza salvata. Copia HTML, Scarica HTML e Stampa conservano il contenuto renderizzato e il tema selezionato. Le esportazioni usano le stesse restrizioni di sicurezza sulle risorse dell’anteprima; la dimensione del testo e la larghezza di lettura non vengono incluse.
+
+Per creare direttamente un file PDF, usa il [Convertitore da Markdown a PDF](../markdown-to-pdf-converter/).

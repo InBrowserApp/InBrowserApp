@@ -12054,6 +12054,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "markdown-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "markdown-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "md4-hash-text-or-file",
     language: "ar",
   },

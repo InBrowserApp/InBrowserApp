@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useState } from "react"
 import { useReadingPosition } from "@workspace/ui/lib/use-reading-position"
 import { scrollReadingTarget } from "@workspace/ui/lib/scroll-reading-target"
-import { EXPORT_THEME_STYLES } from "../core/export-styles"
+import { EXPORT_THEME_STYLES } from "@workspace/markdown/styles"
 import type { PreviewTheme } from "../types"
 
 export function PreviewFrame({

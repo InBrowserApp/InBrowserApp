@@ -16454,6 +16454,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "markdown-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["markdown", "md", "pdf", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل Markdown إلى PDF",
+        description:
+          "حوّل مستند Markdown محليًا إلى PDF مع معاينة الصفحات وتنزيل الملف. تتم المعالجة في متصفحك.",
+      },
+      de: {
+        name: "Markdown-zu-PDF-Konverter",
+        description:
+          "Konvertiere ein lokales Markdown-Dokument in eine PDF mit Seitenvorschau und Download. Die Verarbeitung bleibt in deinem Browser.",
+      },
+      en: {
+        name: "Markdown to PDF Converter",
+        description:
+          "Convert a local Markdown document into a PDF with a page preview and download. Processing stays in your browser.",
+      },
+      es: {
+        name: "Conversor de Markdown a PDF",
+        description:
+          "Convierte un documento Markdown local en un PDF con vista previa de las páginas y descarga. El procesamiento permanece en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur Markdown en PDF",
+        description:
+          "Convertissez un document Markdown local en PDF avec aperçu des pages et téléchargement. Le traitement reste dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר Markdown ל־PDF",
+        description:
+          "המרת מסמך Markdown מקומי ל־PDF עם תצוגה מקדימה של העמודים והורדה. העיבוד נשאר בדפדפן שלך.",
+      },
+      hi: {
+        name: "Markdown से PDF कन्वर्टर",
+        description:
+          "स्थानीय Markdown दस्तावेज़ को PDF में बदलें, पृष्ठों का पूर्वावलोकन देखें और डाउनलोड करें। पूरी प्रक्रिया आपके ब्राउज़र में होती है।",
+      },
+      id: {
+        name: "Konverter Markdown ke PDF",
+        description:
+          "Konversi dokumen Markdown lokal menjadi PDF dengan pratinjau halaman dan unduhan. Pemrosesan tetap dilakukan di browser Anda.",
+      },
+      it: {
+        name: "Convertitore da Markdown a PDF",
+        description:
+          "Converti un documento Markdown locale in un PDF con anteprima delle pagine e download. L’elaborazione avviene nel browser.",
+      },
+      ja: {
+        name: "Markdown PDF 変換ツール",
+        description:
+          "ローカルの Markdown 文書を PDF に変換し、ページをプレビューしてダウンロードできます。処理はブラウザー内で完結します。",
+      },
+      ko: {
+        name: "Markdown PDF 변환기",
+        description:
+          "로컬 Markdown 문서를 PDF로 변환하고 페이지를 미리 본 후 다운로드하세요. 모든 처리는 브라우저 안에서 이루어집니다.",
+      },
+      ms: {
+        name: "Penukar Markdown kepada PDF",
+        description:
+          "Tukar dokumen Markdown setempat kepada PDF dengan pratonton halaman dan muat turun. Pemprosesan kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Markdown naar PDF-converter",
+        description:
+          "Converteer een lokaal Markdown-document naar PDF met een paginavoorvertoning en download. De verwerking blijft in je browser.",
+      },
+      no: {
+        name: "Markdown til PDF-konverterer",
+        description:
+          "Konverter et lokalt Markdown-dokument til en PDF med sideforhåndsvisning og nedlasting. Behandlingen skjer i nettleseren din.",
+      },
+      pl: {
+        name: "Konwerter Markdown na PDF",
+        description:
+          "Konwertuj lokalny dokument Markdown na PDF z podglądem stron i możliwością pobrania. Przetwarzanie odbywa się w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de Markdown para PDF",
+        description:
+          "Converta um documento Markdown local em PDF com prévia das páginas e download. O processamento fica no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер Markdown в PDF",
+        description:
+          "Преобразуйте локальный документ Markdown в PDF с предпросмотром страниц и скачиванием. Обработка выполняется в вашем браузере.",
+      },
+      sv: {
+        name: "Markdown till PDF-konverterare",
+        description:
+          "Konvertera ett lokalt Markdown-dokument till en PDF med sidförhandsvisning och nedladdning. Bearbetningen sker i din webbläsare.",
+      },
+      th: {
+        name: "เครื่องมือแปลง Markdown เป็น PDF",
+        description:
+          "แปลงเอกสาร Markdown บนอุปกรณ์เป็น PDF พร้อมดูตัวอย่างหน้าและดาวน์โหลด การประมวลผลอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Markdown’dan PDF’ye Dönüştürücü",
+        description:
+          "Yerel bir Markdown belgesini PDF’ye dönüştürün, sayfaları önizleyin ve sonucu indirin. İşleme tarayıcınızda gerçekleşir.",
+      },
+      vi: {
+        name: "Trình chuyển đổi Markdown sang PDF",
+        description:
+          "Chuyển tài liệu Markdown cục bộ sang PDF với bản xem trước từng trang và tùy chọn tải xuống. Quá trình xử lý diễn ra trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "Markdown 转 PDF 转换器",
+        description:
+          "将本地 Markdown 文档转换为 PDF，预览页面并下载。所有处理均在浏览器中完成。",
+      },
+      "zh-TW": {
+        name: "Markdown 轉 PDF 轉換器",
+        description:
+          "將本機 Markdown 文件轉換為 PDF，並預覽頁面與下載檔案。處理過程皆在瀏覽器中完成。",
+      },
+    },
+  },
+  {
     slug: "md4-hash-text-or-file",
     category: "crypto",
     icon: "lock",

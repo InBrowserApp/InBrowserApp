@@ -1,0 +1,4 @@
+{
+  "name": "Markdown PDF 変換ツール",
+  "description": "ローカルの Markdown 文書を PDF に変換し、ページをプレビューしてダウンロードできます。処理はブラウザー内で完結します。"
+}

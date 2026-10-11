@@ -9,7 +9,7 @@ import {
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 import MarkdownPreviewerClient from "./client"
 import { STORAGE_KEYS, DEFAULT_MARKDOWN } from "./constants"
-import { buildMarkdownPreview } from "./core/markdown-preview"
+import { buildMarkdownPreview } from "@workspace/markdown"
 import catalog from "./messages/en.json"
 import meta from "./meta/en.json"
 

@@ -1,6 +1,6 @@
 import type catalog from "./messages/en.json"
-import type { TocItem } from "./core/markdown-preview"
-import type { PreviewTheme } from "./core/preview-options"
+import type { TocItem } from "@workspace/markdown"
+import type { PreviewTheme } from "@workspace/markdown/types"
 
 type MarkdownPreviewerLocalizedCatalog = Readonly<typeof catalog>
 type MarkdownPreviewerMessages = MarkdownPreviewerLocalizedCatalog &

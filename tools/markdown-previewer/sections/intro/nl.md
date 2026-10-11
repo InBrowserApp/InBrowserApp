@@ -9,3 +9,5 @@ Gebruik het voor README’s, release notes, runbooks en andere Markdown-document
 ## Tips Voor Je Workflow
 
 Open een bestand of sleep het naar de pagina om te beginnen met lezen en kies vervolgens Bewerken om de bron te bekijken of te wijzigen. De inhoud van lokale bestanden en je bewerkingen blijven in het geheugen en worden verwijderd wanneer je de pagina sluit of opnieuw laadt; je oorspronkelijke bestand wordt nooit gewijzigd. Het afzonderlijke bewerkingsconcept wordt in deze browser opgeslagen en hersteld wanneer je een lokaal bestand sluit. Gebruik Tekst wissen wanneer er geen bestand open is om dat opgeslagen concept te verwijderen. HTML kopiëren, HTML downloaden en Afdrukken behouden de gerenderde inhoud en het geselecteerde thema. Exports gebruiken dezelfde veilige bronbeperkingen als de preview; tekstgrootte en breedte van de leesweergave worden niet meegenomen.
+
+Gebruik de [Markdown naar PDF-converter](../markdown-to-pdf-converter/) om rechtstreeks een PDF-bestand te maken.

@@ -2,7 +2,7 @@
 import { act, cleanup, renderHook } from "@testing-library/react"
 import { afterEach, expect, test, vi } from "vitest"
 import { usePreview } from "./use-preview"
-import { buildMarkdownPreview } from "./core/markdown-preview"
+import { buildMarkdownPreview } from "@workspace/markdown"
 
 afterEach(() => {
   cleanup()

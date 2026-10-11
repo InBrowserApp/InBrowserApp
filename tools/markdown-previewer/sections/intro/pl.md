@@ -9,3 +9,5 @@ Używaj go do plików README, notatek wydania, instrukcji operacyjnych i innych 
 ## Wskazówki Dotyczące Pracy
 
 Otwórz lub upuść plik, aby zacząć czytać, a następnie wybierz Edytuj, aby sprawdzić lub zmienić jego źródło. Zawartość lokalnego pliku i zmiany pozostają w pamięci i są odrzucane po zamknięciu lub ponownym załadowaniu strony; oryginalny plik nigdy nie jest zmieniany. Osobny szkic do edycji jest zapisywany w tej przeglądarce i przywracany po zamknięciu lokalnego pliku. Użyj opcji Wyczyść tekst, gdy żaden plik nie jest otwarty, aby usunąć zapisany szkic. Opcje Kopiuj HTML, Pobierz HTML i Drukuj zachowują wyrenderowaną treść i wybrany motyw. Eksporty stosują te same bezpieczne ograniczenia zasobów co podgląd; rozmiar tekstu i szerokość obszaru czytania nie są uwzględniane.
+
+Aby bezpośrednio utworzyć plik PDF, użyj narzędzia [Konwerter Markdown na PDF](../markdown-to-pdf-converter/).

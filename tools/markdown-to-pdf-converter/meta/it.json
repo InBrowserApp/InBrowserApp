@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da Markdown a PDF",
+  "description": "Converti un documento Markdown locale in un PDF con anteprima delle pagine e download. L’elaborazione avviene nel browser."
+}

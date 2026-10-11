@@ -138,6 +138,7 @@
     "@tool/mac-address-to-ipv6-link-local-address-converter": "workspace:*",
     "@tool/markdown-previewer": "workspace:*",
     "@tool/markdown-to-html-converter": "workspace:*",
+    "@tool/markdown-to-pdf-converter": "workspace:*",
     "@tool/md4-hash-text-or-file": "workspace:*",
     "@tool/md5-hash-text-or-file": "workspace:*",
     "@tool/mhtml-to-pdf-converter": "workspace:*",

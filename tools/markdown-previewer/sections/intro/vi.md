@@ -9,3 +9,5 @@ Dùng cho README, ghi chú phát hành, tài liệu hướng dẫn vận hành v
 ## Mẹo Quy Trình
 
 Mở hoặc thả tệp để bắt đầu đọc, rồi chọn Chỉnh sửa để xem hoặc thay đổi mã nguồn. Nội dung tệp cục bộ và các chỉnh sửa được giữ trong bộ nhớ và bị loại bỏ khi bạn đóng hoặc tải lại trang; tệp gốc của bạn không bao giờ bị thay đổi. Bản nháp chỉnh sửa riêng biệt được lưu trong trình duyệt này và khôi phục khi bạn đóng tệp cục bộ. Dùng Xóa văn bản khi không có tệp nào đang mở để xóa bản nháp đã lưu đó. Sao chép HTML, Tải HTML và In giữ lại nội dung đã hiển thị và giao diện đã chọn. Bản xuất áp dụng cùng các hạn chế tài nguyên an toàn như bản xem trước; cỡ chữ và chiều rộng khi đọc không được giữ lại.
+
+Để tạo trực tiếp tệp PDF, hãy dùng [Trình chuyển đổi Markdown sang PDF](../markdown-to-pdf-converter/).

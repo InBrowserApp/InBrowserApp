@@ -1,0 +1,19 @@
+{
+  "name": "@workspace/markdown",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/markdown-preview.ts",
+    "./sanitize": "./src/sanitize.ts",
+    "./styles": "./src/export-styles.ts",
+    "./types": "./src/preview-options.ts"
+  },
+  "dependencies": {
+    "marked": "catalog:",
+    "dompurify": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

@@ -9,3 +9,5 @@ Vista previa de Markdown abre documentos `.md`, `.markdown`, `.mdown` y `.txt` l
 ## Consejos De Flujo De Trabajo
 
 Abre o arrastra un archivo para empezar a leer y luego elige Editar para inspeccionar o modificar su código fuente. El contenido de los archivos locales y sus modificaciones permanecen en memoria y se descartan al cerrar o recargar la página; el archivo original nunca se modifica. El borrador de edición independiente se guarda en este navegador y se restaura al cerrar un archivo local. Usa Borrar texto sin ningún archivo abierto para eliminar ese borrador guardado. Copiar HTML, Descargar HTML e Imprimir conservan el contenido renderizado y el tema seleccionado. Las exportaciones usan las mismas restricciones de seguridad para los recursos que la vista previa; no incluyen el tamaño del texto ni el ancho del área de lectura.
+
+Para crear un archivo PDF directamente, usa el [Conversor de Markdown a PDF](../markdown-to-pdf-converter/).

@@ -9,3 +9,5 @@ Use it for READMEs, release notes, runbooks, and other Markdown documents. Stand
 ## Workflow Tips
 
 Open or drop a file to start reading, then choose Edit to inspect or change its source. Local file contents and edits stay in memory and are discarded when you close or reload the page; your original file is never changed. The separate editing draft is saved in this browser and restored when you close a local file. Use Clear text with no file open to remove that saved draft. Copy HTML, Download HTML, and Print keep the rendered content and selected theme. Exports use the same safe resource restrictions as the preview; reader text size and width are not included.
+
+To create a PDF file directly, use the [Markdown to PDF Converter](../markdown-to-pdf-converter/).

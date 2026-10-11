@@ -9,3 +9,5 @@ Utilise-le pour les README, les notes de version, les procédures d’exploitati
 ## Conseils De Flux De Travail
 
 Ouvre ou dépose un fichier pour commencer à lire, puis choisis Modifier pour examiner ou changer sa source. Le contenu du fichier local et les modifications restent en mémoire et sont abandonnés lorsque tu fermes ou recharges la page ; ton fichier d’origine n’est jamais modifié. Le brouillon d’édition distinct est enregistré dans ce navigateur et restauré lorsque tu fermes un fichier local. Utilise Effacer le texte sans fichier ouvert pour supprimer ce brouillon enregistré. Copier le HTML, Télécharger le HTML et Imprimer conservent le contenu rendu et le thème sélectionné. Les exports appliquent les mêmes restrictions de ressources que l’aperçu pour rester sûrs ; la taille du texte et la largeur de lecture ne sont pas incluses.
+
+Pour créer directement un fichier PDF, utilise le [Convertisseur Markdown en PDF](../markdown-to-pdf-converter/).

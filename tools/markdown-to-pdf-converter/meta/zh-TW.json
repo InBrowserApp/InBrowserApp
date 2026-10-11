@@ -1,0 +1,4 @@
+{
+  "name": "Markdown 轉 PDF 轉換器",
+  "description": "將本機 Markdown 文件轉換為 PDF，並預覽頁面與下載檔案。處理過程皆在瀏覽器中完成。"
+}

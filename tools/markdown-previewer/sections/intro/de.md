@@ -9,3 +9,5 @@ Nutze das Tool für READMEs, Release Notes, Runbooks und andere Markdown-Dokumen
 ## Tipps Für Den Workflow
 
 Öffne eine Datei oder lege sie im Tool ab, um mit dem Lesen zu beginnen. Wähle dann „Bearbeiten“, um ihren Quelltext anzusehen oder zu ändern. Inhalte lokaler Dateien und Änderungen bleiben im Arbeitsspeicher und werden beim Schließen oder Neuladen der Seite verworfen; die Originaldatei wird nie geändert. Der separate Bearbeitungsentwurf wird in diesem Browser gespeichert und wiederhergestellt, wenn du eine lokale Datei schließt. Wähle „Text löschen“, während keine Datei geöffnet ist, um den gespeicherten Entwurf zu entfernen. „HTML kopieren“, „HTML herunterladen“ und „Drucken“ übernehmen den gerenderten Inhalt und das gewählte Theme. Für Exporte gelten dieselben Sicherheitsbeschränkungen für Ressourcen wie für die Vorschau; Textgröße und Breite des Lesebereichs werden nicht übernommen.
+
+Um direkt eine PDF-Datei zu erstellen, verwende den [Markdown-zu-PDF-Konverter](../markdown-to-pdf-converter/).
