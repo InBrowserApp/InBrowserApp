@@ -71,3 +71,33 @@ export async function bookLinks(
   for (const [element, id] of targets) element.id = id
   return unresolved
 }
+
+/** MOBI 6 may encode headings as styled paragraphs; use its contents labels. */
+export async function chapterTitles(
+  book: ReadingBook,
+  indices: Map<number, LoadedChapter>,
+  signal: AbortSignal
+) {
+  const items = [...(book.parsed.toc || [])]
+  const titled = new Set<LoadedChapter>()
+  for (const item of items) {
+    signal.throwIfAborted()
+    for (const child of item.subitems || []) items.push(child)
+    if (!item.label.trim()) continue
+    try {
+      const destination = await book.parsed.resolveHref(item.href)
+      const chapter = destination && indices.get(destination.index)
+      if (
+        chapter &&
+        !titled.has(chapter) &&
+        !chapter.document.body.querySelector("h1,h2,h3,h4,h5,h6")
+      ) {
+        chapter.title = item.label.trim()
+        titled.add(chapter)
+      }
+    } catch (error) {
+      signal.throwIfAborted()
+      if (error instanceof RangeError) throw error
+    }
+  }
+}

@@ -190,3 +190,21 @@ test("includes non-spine EPUB footnotes only for export and rewrites duplicate p
     opened.dispose()
   }
 })
+
+test("omits empty pagebreak sections and uses contents labels for books without semantic headings", async () => {
+  const b = book([
+    section("one", "<p>Actual chapter text</p>"),
+    section("blank", "<html><body><p> </p></body></html>"),
+  ])
+  b.parsed.toc = [{ label: "Named chapter", href: "one" }]
+  const result = await snapshotBook(b, signal(), m)
+  expect(result.chapters).toHaveLength(1)
+  expect(result.chapters[0]!.title).toBe("Named chapter")
+  await expect(
+    snapshotBook(
+      book([section("blank", "<html><body></body></html>")]),
+      signal(),
+      m
+    )
+  ).rejects.toThrow("empty")
+})

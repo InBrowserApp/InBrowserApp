@@ -1,5 +1,5 @@
 import { bookImages } from "./resources"
-import { bookLinks } from "./links"
+import { bookLinks, chapterTitles } from "./links"
 import type { LoadedChapter } from "./links"
 import { cleanChapter } from "./chapter"
 import type { ReadingBook } from "./types"
@@ -69,6 +69,7 @@ export async function snapshotBook(
     await new Promise<void>((resolve) => setTimeout(resolve, 0))
   }
   if (!chapters.length) throw new Error("empty")
+  await chapterTitles(book, indices, signal)
   let unresolved = await bookLinks(book, chapters, indices, signal)
   const output: {
     id: string
@@ -76,7 +77,6 @@ export async function snapshotBook(
     html: string
     supporting: boolean
   }[] = []
-  let readable = false
   for (const chapter of chapters) {
     signal.throwIfAborted()
     const body = await cleanChapter(
@@ -84,9 +84,8 @@ export async function snapshotBook(
       images,
       m.imageUnavailable
     )
-    readable ||= Boolean(
-      body.textContent?.trim() || body.querySelector("img[src],table")
-    )
+    if (!body.textContent?.trim() && !body.querySelector("img[src],table"))
+      continue
     output.push({
       id: chapter.id,
       title: chapter.title,
@@ -96,7 +95,7 @@ export async function snapshotBook(
       supporting: chapter.section.linear === "no",
     })
   }
-  if (!readable) throw new Error("empty")
+  if (!output.length) throw new Error("empty")
   // A target removed by sanitization must not leave a broken clickable link.
   const doc = document.implementation.createHTMLDocument("")
   for (const chapter of output) {
