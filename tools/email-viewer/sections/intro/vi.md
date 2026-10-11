@@ -15,3 +15,5 @@ MSG hỗ trợ các trường tiêu đề email Outlook, văn bản thuần, HTM
 Việc xem email không xác minh danh tính người gửi hay chữ ký số. Ngày giờ bị thiếu hoặc sai định dạng được hiển thị mà không phỏng đoán. Bộ nhớ khả dụng và khả năng của trình duyệt quyết định tệp nào có thể mở; không có giới hạn cố định về kích thước tệp hay số lượng tệp đính kèm.
 
 Để tạo bản đọc có thể in với các trường tiêu đề đã lưu và danh sách tệp đính kèm, hãy dùng [Trình chuyển đổi email sang PDF](../email-to-pdf-converter/). Nội dung tệp đính kèm không được đưa vào.
+
+Để sử dụng lại nội dung thư, hãy dùng [Trình chuyển đổi email sang HTML / văn bản](../email-content-export/) để tạo HTML ngoại tuyến hoặc văn bản UTF-8 có thể sao chép, kèm các trường tiêu đề đã lưu và thông tin tệp đính kèm.

@@ -15,3 +15,5 @@ MSG menyokong pengepala e-mel Outlook, teks biasa, HTML, maklumat lampiran dan i
 Melihat e-mel tidak mengesahkan identiti pengirim atau tandatangan digital. Tarikh yang tiada atau formatnya tidak sah dipaparkan tanpa membuat andaian. Memori yang tersedia dan keupayaan pelayar menentukan fail yang boleh dibuka; tiada had tetap bagi saiz fail atau bilangan lampiran.
 
 Untuk salinan bacaan yang boleh dicetak dengan pengepala tersimpan dan senarai lampiran, gunakan [Penukar E-mel kepada PDF](../email-to-pdf-converter/). Kandungan lampiran tidak disertakan.
+
+Untuk menggunakan semula kandungan mesej, gunakan [Penukar E-mel kepada HTML / Teks](../email-content-export/) bagi mendapatkan HTML luar talian atau teks UTF-8 yang boleh disalin, bersama pengepala tersimpan dan butiran lampiran.

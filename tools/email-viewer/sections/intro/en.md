@@ -15,3 +15,5 @@ MSG supports Outlook email headers, plain text, HTML, attachment information, an
 Viewing an email does not verify the sender’s identity or a digital signature. A missing or malformed date is displayed without guessing. Available memory and browser capabilities determine which files can be opened; there is no fixed file-size or attachment-count limit.
 
 For a printable reading copy with saved headers and an attachment list, use the [Email to PDF Converter](../email-to-pdf-converter/). Attachment contents are not included.
+
+To reuse message content, use the [Email to HTML / Text Converter](../email-content-export/) for offline HTML or copyable UTF-8 text, with saved headers and attachment details.

@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor de correo electrónico a HTML / texto",
+  "description": "Exporta correos EML, EMLX y MSG locales como HTML sin conexión o texto UTF-8 con encabezados, cuerpo y detalles de los adjuntos legibles. Previsualiza, copia y descarga en tu navegador."
+}

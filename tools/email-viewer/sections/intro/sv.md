@@ -15,3 +15,5 @@ MSG stöder Outlook-meddelandehuvuden, oformaterad text, HTML, information om bi
 När du visar ett e-postmeddelande verifieras varken avsändarens identitet eller digitala signaturer. Ett datum som saknas eller är felaktigt formaterat visas utan gissningar. Tillgängligt minne och webbläsarens funktioner avgör vilka filer som kan öppnas; det finns ingen fast gräns för filstorlek eller antal bilagor.
 
 För en utskrivbar läskopia med sparade meddelandehuvuden och en bilagelista kan du använda [E-post till PDF-konverteraren](../email-to-pdf-converter/). Bilagornas innehåll ingår inte.
+
+För att återanvända meddelandeinnehållet kan du använda [konverteraren från e-post till HTML/text](../email-content-export/) för HTML som fungerar offline eller kopierbar UTF-8-text, med sparade meddelandehuvuden och bilageuppgifter.

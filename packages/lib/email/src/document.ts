@@ -40,6 +40,8 @@ const attributes = new Set([
   "value",
   "reversed",
   "type",
+  "id",
+  "name",
 ])
 const remote = /^(?:https?:)?\/\//i
 
@@ -51,7 +53,11 @@ function dataImage(bytes: Uint8Array, type: string) {
 }
 
 /** A canonical reading copy: sender CSS cannot hide the saved headers/notes. */
-export function emailDocument(email: Email, labels: DocumentLabels) {
+export function emailDocument(
+  email: Email,
+  labels: DocumentLabels,
+  options: { links?: "direct" } = {}
+) {
   if (email.notices.includes("rtfOnly")) throw new Error("rtfOnly")
   if (
     email.notices.some(
@@ -109,6 +115,7 @@ export function emailDocument(email: Email, labels: DocumentLabels) {
     emptyText: "",
     headingText: "",
     print: true,
+    links: options.links,
   })
   if (safe.notes.local) throw new Error("unsupported")
   omittedRemote ||= safe.notes.remote

@@ -15,3 +15,5 @@ MSG; Outlook e-posta üstbilgilerini, düz metni, HTML'yi, ek bilgilerini ve dos
 Bir e-postayı görüntülemek, gönderenin kimliğini veya dijital imzayı doğrulamaz. Eksik veya hatalı biçimlendirilmiş tarih, tahminde bulunulmadan gösterilir. Hangi dosyaların açılabileceğini kullanılabilir bellek ve tarayıcı özellikleri belirler; sabit bir dosya boyutu veya ek sayısı sınırı yoktur.
 
 Kayıtlı üstbilgiler ve ek listesi içeren yazdırılabilir bir okuma kopyası için [E-postadan PDF’ye Dönüştürücü](../email-to-pdf-converter/) aracını kullanın. Eklerin içerikleri dahil edilmez.
+
+İleti içeriğini yeniden kullanmak için [E-postadan HTML / Metne Dönüştürücü](../email-content-export/) aracını kullanarak kayıtlı üstbilgiler ve ek ayrıntıları içeren çevrimdışı HTML veya kopyalanabilir UTF-8 metin elde edin.
