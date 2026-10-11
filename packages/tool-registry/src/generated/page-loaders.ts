@@ -164,6 +164,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "markdown-previewer": () => import("@tool/markdown-previewer/page"),
   "markdown-to-html-converter": () =>
     import("@tool/markdown-to-html-converter/page"),
+  "markdown-to-pdf-converter": () =>
+    import("@tool/markdown-to-pdf-converter/page"),
   "md4-hash-text-or-file": () => import("@tool/md4-hash-text-or-file/page"),
   "md5-hash-text-or-file": () => import("@tool/md5-hash-text-or-file/page"),
   "mhtml-to-pdf-converter": () => import("@tool/mhtml-to-pdf-converter/page"),

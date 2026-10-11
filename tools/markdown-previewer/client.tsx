@@ -15,10 +15,7 @@ import {
 } from "@workspace/ui/components/ui/toggle-group"
 import { cn } from "@workspace/ui/lib/utils"
 import { IMPORT_ACCEPT } from "./constants"
-import {
-  createExportHtmlDocument,
-  slugifyHeading,
-} from "./core/markdown-preview"
+import { createExportHtmlDocument, slugifyHeading } from "@workspace/markdown"
 import { useDocument } from "./use-document"
 import { usePreview } from "./use-preview"
 import { usePreferences } from "./use-preferences"

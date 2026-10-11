@@ -9,3 +9,5 @@ Bruk det til README-filer, versjonsnotater, driftsveiledninger og andre Markdown
 ## Tips Til Arbeidsflyt
 
 Åpne eller slipp en fil for å begynne å lese, og velg deretter Rediger for å undersøke eller endre kilden. Lokalt filinnhold og endringer blir i minnet og forkastes når du lukker eller laster siden på nytt; den opprinnelige filen blir aldri endret. Det separate redigeringsutkastet lagres i denne nettleseren og gjenopprettes når du lukker en lokal fil. Bruk Tøm tekst uten en åpen fil for å fjerne det lagrede utkastet. Kopier HTML, Last ned HTML og Skriv ut bevarer det gjengitte innholdet og det valgte temaet. Eksporter bruker de samme trygge ressursbegrensningene som forhåndsvisningen; tekststørrelse og bredde i lesevisningen tas ikke med.
+
+Bruk [Markdown til PDF-konvertereren](../markdown-to-pdf-converter/) for å opprette en PDF-fil direkte.

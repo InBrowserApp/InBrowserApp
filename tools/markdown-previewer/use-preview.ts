@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import type { buildMarkdownPreview } from "./core/markdown-preview"
-import { preparePreview } from "./prepare-preview"
+import type { buildMarkdownPreview } from "@workspace/markdown"
+import { preparePreview } from "@workspace/markdown/sanitize"
 
 type Preview = ReturnType<typeof buildMarkdownPreview> &
   ReturnType<typeof preparePreview>

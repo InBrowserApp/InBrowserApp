@@ -9,3 +9,5 @@ Use para READMEs, notas de versão, runbooks e outros documentos Markdown. Markd
 ## Dicas De Fluxo De Trabalho
 
 Abra ou solte um arquivo para começar a ler e escolha Editar para inspecionar ou alterar seu código-fonte. O conteúdo do arquivo local e suas edições ficam na memória e são descartados quando você fecha ou recarrega a página; seu arquivo original nunca é alterado. O rascunho de edição separado é salvo neste navegador e restaurado quando você fecha um arquivo local. Use Limpar texto sem nenhum arquivo aberto para remover esse rascunho salvo. Copiar HTML, Baixar HTML e Imprimir mantêm o conteúdo renderizado e o tema selecionado. As exportações usam as mesmas restrições de segurança para recursos da prévia; o tamanho do texto e a largura de leitura não são incluídos.
+
+Para criar um arquivo PDF diretamente, use o [Conversor de Markdown para PDF](../markdown-to-pdf-converter/).

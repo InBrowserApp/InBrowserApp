@@ -7,12 +7,14 @@ export function preparePreview(html: string) {
   const purifier = createDOMPurify(window)
   let localImages = false
   let remoteImages = false
-  purifier.addHook("uponSanitizeAttribute", (_node, data) => {
+  purifier.addHook("uponSanitizeAttribute", (node, data) => {
     if (data.attrName === "id" || data.attrName === "name")
       data.attrValue = `markdown-${data.attrValue}`
     if (data.attrName !== "src" || raster.test(data.attrValue)) return
-    if (/^(?:https?:)?\/\//i.test(data.attrValue)) remoteImages = true
-    else localImages = true
+    if (node.localName === "img") {
+      if (/^(?:https?:)?\/\//i.test(data.attrValue)) remoteImages = true
+      else localImages = true
+    }
     data.keepAttr = false
   })
   purifier.addHook("afterSanitizeAttributes", (node) => {

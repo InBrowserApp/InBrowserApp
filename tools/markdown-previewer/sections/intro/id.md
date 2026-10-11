@@ -9,3 +9,5 @@ Gunakan untuk README, catatan rilis, runbook, dan dokumen Markdown lainnya. Mark
 ## Tips Alur Kerja
 
 Buka atau letakkan file untuk mulai membaca, lalu pilih Edit untuk memeriksa atau mengubah sumbernya. Konten file lokal dan perubahan tetap berada di memori dan dibuang saat Anda menutup atau memuat ulang halaman; file asli Anda tidak pernah diubah. Draf penyuntingan yang terpisah disimpan di browser ini dan dipulihkan saat Anda menutup file lokal. Gunakan Hapus teks saat tidak ada file yang terbuka untuk menghapus draf tersimpan tersebut. Salin HTML, Unduh HTML, dan Cetak mempertahankan konten yang dirender dan tema yang dipilih. Ekspor menggunakan pembatasan sumber daya aman yang sama dengan pratinjau; ukuran teks dan lebar area baca tidak disertakan.
+
+Untuk membuat file PDF secara langsung, gunakan [Konverter Markdown ke PDF](../markdown-to-pdf-converter/).

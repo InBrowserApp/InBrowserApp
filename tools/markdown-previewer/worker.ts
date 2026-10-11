@@ -1,4 +1,4 @@
-import { buildMarkdownPreview } from "./core/markdown-preview"
+import { buildMarkdownPreview } from "@workspace/markdown"
 
 self.onmessage = (
   event: MessageEvent<{ source: string; untitled: string; renderHtml: boolean }>

@@ -9,3 +9,5 @@ README dosyaları, sürüm notları, işlem kılavuzları ve diğer Markdown bel
 ## İş Akışı İpuçları
 
 Okumaya başlamak için bir dosya açın veya bırakın, ardından kaynağını incelemek ya da değiştirmek için Düzenle’yi seçin. Yerel dosya içeriği ve düzenlemeler bellekte kalır; sayfayı kapattığınızda veya yeniden yüklediğinizde silinir. Özgün dosyanız hiçbir zaman değiştirilmez. Ayrı tutulan düzenleme taslağı bu tarayıcıda kaydedilir ve yerel dosyayı kapattığınızda geri yüklenir. Kayıtlı taslağı silmek için açık dosya yokken Metni temizle’yi kullanın. HTML kopyala, HTML indir ve Yazdır, işlenen içeriği ve seçili temayı korur. Dışa aktarımlarda önizlemeyle aynı güvenli kaynak kısıtlamaları uygulanır; okuyucunun metin boyutu ve genişliği dahil edilmez.
+
+Doğrudan bir PDF dosyası oluşturmak için [Markdown’dan PDF’ye Dönüştürücü](../markdown-to-pdf-converter/) aracını kullanın.

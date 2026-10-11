@@ -1,10 +1,10 @@
 // @vitest-environment jsdom
 import { describe, expect, test } from "vitest"
-import { preparePreview } from "./prepare-preview"
+import { preparePreview } from "@workspace/markdown/sanitize"
 import {
   buildMarkdownPreview,
   createExportHtmlDocument,
-} from "./core/markdown-preview"
+} from "@workspace/markdown"
 
 describe("safe Markdown documents", () => {
   test("keeps GFM tasks, semantic HTML, embedded raster images, and independent wide blocks", () => {
@@ -154,4 +154,13 @@ console.log('<script>')
     expect(result.html).not.toContain("href=")
     expect(template.content.querySelector("tag")).toBeNull()
   })
+})
+
+test("omitted embedded apps do not count as missing document images", () => {
+  const result = preparePreview(
+    '<p>Safe</p><iframe src="https://example.test/embed"></iframe>'
+  )
+  expect(result.localImages).toBe(false)
+  expect(result.remoteImages).toBe(false)
+  expect(result.html).toBe("<p>Safe</p>")
 })
