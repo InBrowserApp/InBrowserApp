@@ -13,3 +13,5 @@ Leseren støtter tekst, avsnitt, utheving, poesi, tabeller og innebygde rasteril
 Komprimerte filer må inneholde én FB2-bok. Pakk ut arkiver med flere bøker, og åpne den valgte boken separat. Krypterte arkiver, ugyldig XML og dokumenter som bruker eksterne entitetsdeklarasjoner, kan ikke åpnes. Det er ingen fast grense for filstørrelse eller antall deler; tilgjengelig nettleserminne påvirker likevel svært store bøker.
 
 For å lagre det lesbare innholdet i en bok som støttes, som en lokal TXT- eller HTML-fil, kan du bruke [E-bok til TXT / HTML-konverterer](/tools/ebook-text-html-export/).
+
+For en lesekopi i EPUB-format kan du bruke [FB2 til EPUB-konverterer](/tools/fb2-to-epub-converter/). Den bevarer kapittelinnhold, metadata og bilder som støttes, i en enkel, flytende layout.

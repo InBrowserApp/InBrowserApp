@@ -225,3 +225,23 @@ test("cleans chapters when cover allocation fails", async () => {
   ).rejects.toThrow("allocation failed")
   expect(blobs.size).toBe(0)
 })
+
+test("retains safe missing-image positions for exporters without exposing source URLs", async () => {
+  const source = `<FictionBook xmlns:l="http://www.w3.org/1999/xlink"><description><title-info><coverpage><image l:href="#absent"/></coverpage></title-info></description><body><image id="opening" l:href="https://example.com/remote.png"/><section><p>Read <image id="inline" l:href="#absent"/> on.</p></section></body></FictionBook>`
+  const book = await openBook(new File([source], "missing.fb2"), signal(), {
+    preserveMissingImages: true,
+  })
+  closes.push(book.dispose)
+  expect(book.missing).toBe(true)
+  expect(book.cover).toBeNull()
+  expect(book.parsed.sections).toHaveLength(2)
+  for (const [index, id] of ["opening", "inline"].entries()) {
+    const html = await blobs
+      .get((await book.parsed.sections[index]!.load())!)!
+      .text()
+    const doc = new DOMParser().parseFromString(html, "text/html")
+    expect(doc.getElementById(id)?.getAttribute("src")).toBe("data:,")
+    expect(html).not.toContain("https://example.com")
+    expect(html).not.toContain("#absent")
+  }
+})

@@ -193,3 +193,43 @@ test("does not append an unlisted title page after the source contents", async (
     )
   ).not.toBeNull()
 })
+
+test("orders nested contents by emitted chapters when supporting notes move to the end", async () => {
+  const book = sample()
+  book.chapters.splice(1, 0, {
+    id: "appendix",
+    title: "Appendix",
+    html: '<h2 id="first">First</h2><h2 id="second">Second</h2>',
+    supporting: false,
+  })
+  book.contents = [
+    { label: "Start", href: "#chapter-1" },
+    {
+      label: "Notes",
+      href: "#notes",
+      subitems: [{ label: "A note", href: "#note" }],
+    },
+    {
+      label: "Appendix",
+      href: "#appendix",
+      subitems: [
+        { label: "Second", href: "#second" },
+        { label: "First", href: "#first" },
+      ],
+    },
+  ]
+  const files = await contents(
+    await writeEpub(book, new AbortController().signal, m)
+  )
+  const nav = xml(files.get("EPUB/nav.xhtml")!)
+  expect(Array.from(nav.querySelectorAll("a"), (a) => a.textContent)).toEqual([
+    "Start",
+    "Appendix",
+    "First",
+    "Second",
+    "Notes",
+    "A note",
+  ])
+  expect(nav.querySelectorAll("ol ol")).toHaveLength(2)
+  expect(book.contents[1]!.label).toBe("Notes")
+})

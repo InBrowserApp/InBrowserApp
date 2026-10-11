@@ -13,3 +13,5 @@ Pembaca ini mendukung teks FictionBook 2, paragraf, penekanan, puisi, tabel, dan
 File terkompresi harus berisi satu buku FB2. Ekstrak arsip yang berisi beberapa buku, lalu buka buku pilihan Anda secara terpisah. Arsip terenkripsi, XML yang tidak valid, dan dokumen yang menggunakan deklarasi entitas eksternal tidak dapat dibuka. Tidak ada batas tetap untuk ukuran file atau jumlah bagian; memori browser yang tersedia tetap memengaruhi buku yang sangat besar.
 
 Untuk menyimpan konten yang dapat dibaca dari buku yang didukung sebagai file TXT atau HTML lokal, gunakan [Konverter Buku Elektronik ke TXT / HTML](/tools/ebook-text-html-export/).
+
+Untuk mendapatkan salinan baca EPUB, gunakan [Konverter FB2 ke EPUB](/tools/fb2-to-epub-converter/). Alat ini mempertahankan konten bab, metadata, dan gambar yang didukung dalam tata letak sederhana yang dapat menyesuaikan layar.

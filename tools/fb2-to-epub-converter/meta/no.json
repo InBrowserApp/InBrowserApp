@@ -1,0 +1,4 @@
+{
+  "name": "FB2 til EPUB-konverterer",
+  "description": "Konverter lokale FB2- og FBZ-bøker til EPUB. Bevar lesbare kapitler, innholdsfortegnelse, metadata og bilder som støttes, uten å laste opp boken."
+}

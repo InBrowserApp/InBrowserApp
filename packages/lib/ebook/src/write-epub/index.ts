@@ -31,9 +31,12 @@ export async function writeEpub(
     return { ...chapter, doc, body, href: `chapter-${index + 1}.xhtml` }
   })
   const targets = new Map<string, string>()
+  const targetOrder = new Map<string, number>()
   for (const chapter of chapters)
-    for (const target of chapter.doc.querySelectorAll("[id]"))
+    for (const target of chapter.doc.querySelectorAll("[id]")) {
       targets.set(target.id, `${chapter.href}#${target.id}`)
+      targetOrder.set(target.id, targetOrder.size)
+    }
   const zip = new ZipWriter(new BlobWriter("application/epub+zip"), {
     signal,
     extendedTimestamp: false,
@@ -103,7 +106,14 @@ export async function writeEpub(
     contents.append(element(nav.doc, "h1", {}, m.contents))
     const list = element(nav.doc, "ol")
     function appendContents(parent: Element, entries: ContentsItem[]) {
-      for (const entry of entries) {
+      // Supporting notes can move behind the main reading chapters. Keep
+      // sibling navigation entries in the emitted spine and document order.
+      const ordered = [...entries].sort(
+        (a, b) =>
+          (targetOrder.get(a.href.slice(1)) ?? Infinity) -
+          (targetOrder.get(b.href.slice(1)) ?? Infinity)
+      )
+      for (const entry of ordered) {
         const href = targets.get(entry.href.slice(1))
         if (!href) continue
         const item = element(nav.doc, "li")

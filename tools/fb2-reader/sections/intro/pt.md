@@ -13,3 +13,5 @@ O leitor aceita texto FictionBook 2, parágrafos, ênfase, poesia, tabelas e ilu
 Os arquivos compactados devem conter um único livro FB2. Extraia os arquivos que contêm vários livros e abra o livro escolhido separadamente. Arquivos compactados criptografados, XML malformado e documentos que usam declarações de entidades externas não podem ser abertos. Não há um limite fixo de tamanho de arquivo ou de número de seções; a memória disponível no navegador ainda afeta livros muito grandes.
 
 Para salvar o conteúdo legível de um livro compatível como arquivo local TXT ou HTML, use o [Conversor de e-books para TXT / HTML](/tools/ebook-text-html-export/).
+
+Para uma cópia de leitura em EPUB, use o [Conversor de FB2 para EPUB](/tools/fb2-to-epub-converter/). Ele preserva o conteúdo dos capítulos, os metadados e as imagens compatíveis em um layout fluido simples.

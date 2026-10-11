@@ -13,3 +13,5 @@ Okuyucu; FictionBook 2 metinlerini, paragrafları, vurgulamayı, şiirleri, tabl
 Sıkıştırılmış dosyalar tek bir FB2 kitabı içermelidir. Birden fazla kitap içeren arşivleri çıkarın ve seçtiğiniz kitabı ayrı olarak açın. Şifreli arşivler, hatalı XML ve harici varlık bildirimleri kullanan belgeler açılamaz. Sabit bir dosya boyutu veya bölüm sayısı sınırı yoktur; ancak kullanılabilir tarayıcı belleği çok büyük kitapların açılmasını etkiler.
 
 Desteklenen bir kitabın okunabilir içeriğini yerel bir TXT veya HTML dosyası olarak kaydetmek için [E-kitaptan TXT / HTML’ye Dönüştürücü](/tools/ebook-text-html-export/) kullanın.
+
+Bir EPUB okuma kopyası için [FB2’den EPUB’a Dönüştürücü](/tools/fb2-to-epub-converter/) aracını kullanın. Desteklenen bölüm içeriğini, üst verileri ve görselleri, metin akışı ekrana uyarlanan basit bir düzende korur.

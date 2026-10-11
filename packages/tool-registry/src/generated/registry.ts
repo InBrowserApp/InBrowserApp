@@ -10414,6 +10414,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "fb2-to-epub-converter",
+    category: "document",
+    icon: "book-open",
+    tags: ["ebook", "fb2", "fbz", "fictionbook", "epub", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل FB2 إلى EPUB",
+        description:
+          "حوّل كتب FB2 وFBZ المحلية إلى EPUB. احتفظ بالفصول القابلة للقراءة وفهرس المحتويات والبيانات الوصفية والصور المدعومة دون رفع كتابك.",
+      },
+      de: {
+        name: "FB2-zu-EPUB-Konverter",
+        description:
+          "Konvertiere lokale FB2- und FBZ-Bücher in EPUB. Lesbare Kapitel, Inhaltsverzeichnis, Metadaten und unterstützte Bilder bleiben erhalten, ohne dein Buch hochzuladen.",
+      },
+      en: {
+        name: "FB2 to EPUB Converter",
+        description:
+          "Convert local FB2 and FBZ books to EPUB. Keep readable chapters, contents, metadata and supported images without uploading your book.",
+      },
+      es: {
+        name: "Convertidor de FB2 a EPUB",
+        description:
+          "Convierte libros FB2 y FBZ locales a EPUB. Conserva los capítulos legibles, el índice, los metadatos y las imágenes compatibles sin subir tu libro.",
+      },
+      fr: {
+        name: "Convertisseur FB2 en EPUB",
+        description:
+          "Convertissez des livres FB2 et FBZ locaux en EPUB. Conservez les chapitres lisibles, la table des matières, les métadonnées et les images prises en charge sans envoyer votre livre.",
+      },
+      he: {
+        name: "ממיר FB2 ל־EPUB",
+        description:
+          "המרת ספרי FB2 ו־FBZ מקומיים ל־EPUB. פרקים קריאים, תוכן עניינים, מטא־נתונים ותמונות נתמכות נשמרים ללא העלאת הספר.",
+      },
+      hi: {
+        name: "FB2 से EPUB कन्वर्टर",
+        description:
+          "स्थानीय FB2 और FBZ पुस्तकों को EPUB में परिवर्तित करें। पुस्तक अपलोड किए बिना पढ़ने योग्य अध्याय, विषय-सूची, मेटाडेटा और समर्थित चित्र बनाए रखें।",
+      },
+      id: {
+        name: "Konverter FB2 ke EPUB",
+        description:
+          "Konversi buku FB2 dan FBZ lokal ke EPUB. Pertahankan bab yang dapat dibaca, daftar isi, metadata, dan gambar yang didukung tanpa mengunggah buku Anda.",
+      },
+      it: {
+        name: "Convertitore da FB2 a EPUB",
+        description:
+          "Converti libri FB2 e FBZ locali in EPUB. Mantieni capitoli leggibili, indice, metadati e immagini supportate senza caricare il libro.",
+      },
+      ja: {
+        name: "FB2 から EPUB への変換ツール",
+        description:
+          "端末内の FB2 や FBZ の本を EPUB に変換します。本をアップロードせずに、読み取り可能な章、目次、メタデータ、対応する画像を保持します。",
+      },
+      ko: {
+        name: "FB2 EPUB 변환기",
+        description:
+          "기기에 있는 FB2 및 FBZ 책을 EPUB으로 변환하세요. 책을 업로드하지 않고 읽을 수 있는 장, 목차, 메타데이터 및 지원되는 이미지를 유지합니다.",
+      },
+      ms: {
+        name: "Penukar FB2 kepada EPUB",
+        description:
+          "Tukar buku FB2 dan FBZ setempat kepada EPUB. Kekalkan bab yang boleh dibaca, isi kandungan, metadata dan imej yang disokong tanpa memuat naik buku anda.",
+      },
+      nl: {
+        name: "FB2 naar EPUB-converter",
+        description:
+          "Converteer lokale FB2- en FBZ-boeken naar EPUB. Behoud leesbare hoofdstukken, inhoudsopgave, metadata en ondersteunde afbeeldingen zonder je boek te uploaden.",
+      },
+      no: {
+        name: "FB2 til EPUB-konverterer",
+        description:
+          "Konverter lokale FB2- og FBZ-bøker til EPUB. Bevar lesbare kapitler, innholdsfortegnelse, metadata og bilder som støttes, uten å laste opp boken.",
+      },
+      pl: {
+        name: "Konwerter FB2 na EPUB",
+        description:
+          "Konwertuj lokalne książki FB2 i FBZ na EPUB. Zachowaj czytelne rozdziały, spis treści, metadane i obsługiwane obrazy bez przesyłania książki.",
+      },
+      pt: {
+        name: "Conversor de FB2 para EPUB",
+        description:
+          "Converta livros locais em FB2 e FBZ para EPUB. Preserve os capítulos legíveis, o sumário, os metadados e as imagens compatíveis sem enviar seu livro.",
+      },
+      ru: {
+        name: "Конвертер FB2 в EPUB",
+        description:
+          "Преобразуйте локальные книги FB2 и FBZ в EPUB. Сохраните читаемый текст глав, оглавление, метаданные и поддерживаемые изображения без отправки книги на сервер.",
+      },
+      sv: {
+        name: "Konverterare från FB2 till EPUB",
+        description:
+          "Konvertera lokala FB2- och FBZ-böcker till EPUB. Bevara läsbara kapitel, innehållsförteckning, metadata och bilder som stöds utan att ladda upp boken.",
+      },
+      th: {
+        name: "โปรแกรมแปลง FB2 เป็น EPUB",
+        description:
+          "แปลงหนังสือ FB2 และ FBZ ในอุปกรณ์เป็น EPUB โดยคงบทที่อ่านได้ สารบัญ ข้อมูลเมตา และรูปภาพที่รองรับ โดยไม่ต้องอัปโหลดหนังสือ",
+      },
+      tr: {
+        name: "FB2’den EPUB’a Dönüştürücü",
+        description:
+          "Yerel FB2 ve FBZ kitaplarını EPUB’a dönüştürün. Kitabınızı yüklemeden okunabilir bölümleri, içindekileri, üst verileri ve desteklenen görselleri koruyun.",
+      },
+      vi: {
+        name: "Trình chuyển đổi FB2 sang EPUB",
+        description:
+          "Chuyển đổi sách FB2 và FBZ trên thiết bị sang EPUB. Giữ các chương đọc được, mục lục, siêu dữ liệu và hình ảnh được hỗ trợ mà không tải sách lên.",
+      },
+      "zh-CN": {
+        name: "FB2 转 EPUB 转换器",
+        description:
+          "将本地 FB2 和 FBZ 书籍转换为 EPUB。保留可读章节、目录、元数据和受支持的图片，无需上传书籍。",
+      },
+      "zh-TW": {
+        name: "FB2 轉 EPUB 轉換器",
+        description:
+          "將本機 FB2 與 FBZ 書籍轉換為 EPUB。保留可讀取的章節、目錄、中繼資料及支援的圖片，無須上傳書籍。",
+      },
+    },
+  },
+  {
     slug: "file-to-data-uri-converter",
     category: "web",
     icon: "file-text",
@@ -44733,6 +44856,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "FB2 閱讀器",
         description:
           "在本機閱讀 FB2 與 FBZ 書籍，支援章節、插圖、詩歌及註釋。調整文字大小，並從註釋返回原本的閱讀位置。",
+      },
+    },
+  },
+  "fb2-to-epub-converter": {
+    slug: "fb2-to-epub-converter",
+    category: "document",
+    icon: "book-open",
+    tags: ["ebook", "fb2", "fbz", "fictionbook", "epub", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل FB2 إلى EPUB",
+        description:
+          "حوّل كتب FB2 وFBZ المحلية إلى EPUB. احتفظ بالفصول القابلة للقراءة وفهرس المحتويات والبيانات الوصفية والصور المدعومة دون رفع كتابك.",
+      },
+      de: {
+        name: "FB2-zu-EPUB-Konverter",
+        description:
+          "Konvertiere lokale FB2- und FBZ-Bücher in EPUB. Lesbare Kapitel, Inhaltsverzeichnis, Metadaten und unterstützte Bilder bleiben erhalten, ohne dein Buch hochzuladen.",
+      },
+      en: {
+        name: "FB2 to EPUB Converter",
+        description:
+          "Convert local FB2 and FBZ books to EPUB. Keep readable chapters, contents, metadata and supported images without uploading your book.",
+      },
+      es: {
+        name: "Convertidor de FB2 a EPUB",
+        description:
+          "Convierte libros FB2 y FBZ locales a EPUB. Conserva los capítulos legibles, el índice, los metadatos y las imágenes compatibles sin subir tu libro.",
+      },
+      fr: {
+        name: "Convertisseur FB2 en EPUB",
+        description:
+          "Convertissez des livres FB2 et FBZ locaux en EPUB. Conservez les chapitres lisibles, la table des matières, les métadonnées et les images prises en charge sans envoyer votre livre.",
+      },
+      he: {
+        name: "ממיר FB2 ל־EPUB",
+        description:
+          "המרת ספרי FB2 ו־FBZ מקומיים ל־EPUB. פרקים קריאים, תוכן עניינים, מטא־נתונים ותמונות נתמכות נשמרים ללא העלאת הספר.",
+      },
+      hi: {
+        name: "FB2 से EPUB कन्वर्टर",
+        description:
+          "स्थानीय FB2 और FBZ पुस्तकों को EPUB में परिवर्तित करें। पुस्तक अपलोड किए बिना पढ़ने योग्य अध्याय, विषय-सूची, मेटाडेटा और समर्थित चित्र बनाए रखें।",
+      },
+      id: {
+        name: "Konverter FB2 ke EPUB",
+        description:
+          "Konversi buku FB2 dan FBZ lokal ke EPUB. Pertahankan bab yang dapat dibaca, daftar isi, metadata, dan gambar yang didukung tanpa mengunggah buku Anda.",
+      },
+      it: {
+        name: "Convertitore da FB2 a EPUB",
+        description:
+          "Converti libri FB2 e FBZ locali in EPUB. Mantieni capitoli leggibili, indice, metadati e immagini supportate senza caricare il libro.",
+      },
+      ja: {
+        name: "FB2 から EPUB への変換ツール",
+        description:
+          "端末内の FB2 や FBZ の本を EPUB に変換します。本をアップロードせずに、読み取り可能な章、目次、メタデータ、対応する画像を保持します。",
+      },
+      ko: {
+        name: "FB2 EPUB 변환기",
+        description:
+          "기기에 있는 FB2 및 FBZ 책을 EPUB으로 변환하세요. 책을 업로드하지 않고 읽을 수 있는 장, 목차, 메타데이터 및 지원되는 이미지를 유지합니다.",
+      },
+      ms: {
+        name: "Penukar FB2 kepada EPUB",
+        description:
+          "Tukar buku FB2 dan FBZ setempat kepada EPUB. Kekalkan bab yang boleh dibaca, isi kandungan, metadata dan imej yang disokong tanpa memuat naik buku anda.",
+      },
+      nl: {
+        name: "FB2 naar EPUB-converter",
+        description:
+          "Converteer lokale FB2- en FBZ-boeken naar EPUB. Behoud leesbare hoofdstukken, inhoudsopgave, metadata en ondersteunde afbeeldingen zonder je boek te uploaden.",
+      },
+      no: {
+        name: "FB2 til EPUB-konverterer",
+        description:
+          "Konverter lokale FB2- og FBZ-bøker til EPUB. Bevar lesbare kapitler, innholdsfortegnelse, metadata og bilder som støttes, uten å laste opp boken.",
+      },
+      pl: {
+        name: "Konwerter FB2 na EPUB",
+        description:
+          "Konwertuj lokalne książki FB2 i FBZ na EPUB. Zachowaj czytelne rozdziały, spis treści, metadane i obsługiwane obrazy bez przesyłania książki.",
+      },
+      pt: {
+        name: "Conversor de FB2 para EPUB",
+        description:
+          "Converta livros locais em FB2 e FBZ para EPUB. Preserve os capítulos legíveis, o sumário, os metadados e as imagens compatíveis sem enviar seu livro.",
+      },
+      ru: {
+        name: "Конвертер FB2 в EPUB",
+        description:
+          "Преобразуйте локальные книги FB2 и FBZ в EPUB. Сохраните читаемый текст глав, оглавление, метаданные и поддерживаемые изображения без отправки книги на сервер.",
+      },
+      sv: {
+        name: "Konverterare från FB2 till EPUB",
+        description:
+          "Konvertera lokala FB2- och FBZ-böcker till EPUB. Bevara läsbara kapitel, innehållsförteckning, metadata och bilder som stöds utan att ladda upp boken.",
+      },
+      th: {
+        name: "โปรแกรมแปลง FB2 เป็น EPUB",
+        description:
+          "แปลงหนังสือ FB2 และ FBZ ในอุปกรณ์เป็น EPUB โดยคงบทที่อ่านได้ สารบัญ ข้อมูลเมตา และรูปภาพที่รองรับ โดยไม่ต้องอัปโหลดหนังสือ",
+      },
+      tr: {
+        name: "FB2’den EPUB’a Dönüştürücü",
+        description:
+          "Yerel FB2 ve FBZ kitaplarını EPUB’a dönüştürün. Kitabınızı yüklemeden okunabilir bölümleri, içindekileri, üst verileri ve desteklenen görselleri koruyun.",
+      },
+      vi: {
+        name: "Trình chuyển đổi FB2 sang EPUB",
+        description:
+          "Chuyển đổi sách FB2 và FBZ trên thiết bị sang EPUB. Giữ các chương đọc được, mục lục, siêu dữ liệu và hình ảnh được hỗ trợ mà không tải sách lên.",
+      },
+      "zh-CN": {
+        name: "FB2 转 EPUB 转换器",
+        description:
+          "将本地 FB2 和 FBZ 书籍转换为 EPUB。保留可读章节、目录、元数据和受支持的图片，无需上传书籍。",
+      },
+      "zh-TW": {
+        name: "FB2 轉 EPUB 轉換器",
+        description:
+          "將本機 FB2 與 FBZ 書籍轉換為 EPUB。保留可讀取的章節、目錄、中繼資料及支援的圖片，無須上傳書籍。",
       },
     },
   },

@@ -13,3 +13,5 @@ The reader supports FictionBook 2 text, paragraphs, emphasis, poetry, tables, an
 Compressed files must contain one FB2 book. Extract archives containing several books and open your chosen book separately. Encrypted archives, malformed XML, and documents using external entity declarations cannot be opened. There is no fixed file-size or section-count limit; available browser memory still affects very large books.
 
 To save the readable content of a supported book as a local TXT or HTML file, use the [Ebook to TXT / HTML Converter](/tools/ebook-text-html-export/).
+
+For an EPUB reading copy, use the [FB2 to EPUB Converter](/tools/fb2-to-epub-converter/). It keeps supported chapter content, metadata and images in a simple reflowable layout.

@@ -13,3 +13,5 @@ El lector admite texto FictionBook 2, párrafos, énfasis, poesía, tablas e ilu
 Los archivos comprimidos deben contener un solo libro FB2. Extrae los archivos que contengan varios libros y abre el que elijas por separado. No se pueden abrir archivos comprimidos cifrados, XML mal formado ni documentos con declaraciones de entidades externas. No hay un límite fijo de tamaño de archivo ni de número de secciones; la memoria disponible del navegador sigue influyendo en los libros muy grandes.
 
 Para guardar el contenido legible de un libro compatible como archivo TXT o HTML local, usa el [Convertidor de libros electrónicos a TXT / HTML](/tools/ebook-text-html-export/).
+
+Para obtener una copia de lectura EPUB, usa el [Convertidor de FB2 a EPUB](/tools/fb2-to-epub-converter/). Conserva el contenido de los capítulos, los metadatos y las imágenes compatibles en un diseño adaptable sencillo.
