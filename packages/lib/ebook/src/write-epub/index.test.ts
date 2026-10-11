@@ -167,3 +167,29 @@ test("rejects incomplete links and nonlocal resources, and honors cancellation",
     spy.mockRestore()
   }
 })
+
+test("does not append an unlisted title page after the source contents", async () => {
+  const book = sample()
+  book.chapters.unshift({
+    id: "title-page",
+    title: "Title page",
+    html: "<p>Title</p>",
+    supporting: false,
+  })
+  const files = await contents(
+    await writeEpub(book, new AbortController().signal, m)
+  )
+  const nav = xml(files.get("EPUB/nav.xhtml")!)
+  expect(Array.from(nav.querySelectorAll("a"), (a) => a.textContent)).toEqual([
+    "Start",
+    "Nested note",
+  ])
+  expect(nav.querySelector("a")!.getAttribute("href")).toBe(
+    "chapter-2.xhtml#chapter-1"
+  )
+  expect(
+    xml(files.get("EPUB/package.opf")!).querySelector(
+      'itemref[idref="title-page"]'
+    )
+  ).not.toBeNull()
+})

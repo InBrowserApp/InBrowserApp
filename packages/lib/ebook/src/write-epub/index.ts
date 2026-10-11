@@ -102,12 +102,10 @@ export async function writeEpub(
     contents.setAttributeNS(EPUB, "epub:type", "toc")
     contents.append(element(nav.doc, "h1", {}, m.contents))
     const list = element(nav.doc, "ol")
-    const included = new Set<string>()
     function appendContents(parent: Element, entries: ContentsItem[]) {
       for (const entry of entries) {
         const href = targets.get(entry.href.slice(1))
         if (!href) continue
-        included.add(href.split("#")[0]!)
         const item = element(nav.doc, "li")
         item.append(element(nav.doc, "a", { href }, entry.label))
         if (entry.subitems?.length) {
@@ -119,18 +117,21 @@ export async function writeEpub(
       }
     }
     appendContents(list, book.contents || [])
-    for (const chapter of chapters) {
-      if (included.has(chapter.href)) continue
-      const item = element(nav.doc, "li")
-      item.append(
-        element(
-          nav.doc,
-          "a",
-          { href: `${chapter.href}#${chapter.id}` },
-          chapter.title
+    // Preserve the source contents. Adding unlisted title/note pages after it
+    // would put navigation targets out of reading order.
+    if (!list.children.length) {
+      for (const chapter of chapters) {
+        const item = element(nav.doc, "li")
+        item.append(
+          element(
+            nav.doc,
+            "a",
+            { href: `${chapter.href}#${chapter.id}` },
+            chapter.title
+          )
         )
-      )
-      list.append(item)
+        list.append(item)
+      }
     }
     contents.append(list)
     nav.body.append(contents)
