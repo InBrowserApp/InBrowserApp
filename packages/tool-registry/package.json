@@ -89,6 +89,7 @@
     "@tool/exif-viewer": "workspace:*",
     "@tool/favicon-assets-generator": "workspace:*",
     "@tool/fb2-reader": "workspace:*",
+    "@tool/fb2-to-epub-converter": "workspace:*",
     "@tool/file-to-data-uri-converter": "workspace:*",
     "@tool/gif-to-animated-webp-converter": "workspace:*",
     "@tool/gif-to-apng-converter": "workspace:*",

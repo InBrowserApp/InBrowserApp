@@ -13,3 +13,5 @@ Le lecteur prend en charge le texte FictionBook 2, les paragraphes, l’emphase,
 Les fichiers compressés doivent contenir un seul livre FB2. Extrayez les archives contenant plusieurs livres et ouvrez séparément celui de votre choix. Les archives chiffrées, le XML mal formé et les documents utilisant des déclarations d’entités externes ne peuvent pas être ouverts. Il n’y a pas de limite fixe de taille de fichier ni de nombre de sections ; la mémoire disponible du navigateur reste toutefois un facteur pour les très gros livres.
 
 Pour enregistrer le contenu lisible d’un livre pris en charge dans un fichier TXT ou HTML local, utilisez le [Convertisseur de livres numériques en TXT / HTML](/tools/ebook-text-html-export/).
+
+Pour obtenir une copie de lecture EPUB, utilisez le [Convertisseur FB2 en EPUB](/tools/fb2-to-epub-converter/). Il conserve le contenu des chapitres, les métadonnées et les images pris en charge dans une mise en page simple et adaptable.

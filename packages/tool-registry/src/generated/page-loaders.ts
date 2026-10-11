@@ -107,6 +107,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "favicon-assets-generator": () =>
     import("@tool/favicon-assets-generator/page"),
   "fb2-reader": () => import("@tool/fb2-reader/page"),
+  "fb2-to-epub-converter": () => import("@tool/fb2-to-epub-converter/page"),
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
   "gif-to-animated-webp-converter": () =>

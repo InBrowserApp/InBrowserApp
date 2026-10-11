@@ -13,3 +13,5 @@ De lezer ondersteunt FictionBook 2-tekst, alinea's, nadruk, poëzie, tabellen en
 Gecomprimeerde bestanden moeten één FB2-boek bevatten. Pak archieven met meerdere boeken uit en open het gewenste boek afzonderlijk. Versleutelde archieven, ongeldige XML en documenten met externe entiteitsdeclaraties kunnen niet worden geopend. Er is geen vaste limiet voor de bestandsgrootte of het aantal secties; het beschikbare browsergeheugen heeft wel invloed op zeer grote boeken.
 
 Gebruik de [E-book naar TXT / HTML-converter](/tools/ebook-text-html-export/) om de leesbare inhoud van een ondersteund boek als lokaal TXT- of HTML-bestand op te slaan.
+
+Gebruik de [FB2 naar EPUB-converter](/tools/fb2-to-epub-converter/) voor een EPUB-leeskopie. Deze behoudt ondersteunde hoofdstukinhoud, metadata en afbeeldingen in een eenvoudige, aanpasbare indeling.
