@@ -1,7 +1,8 @@
 import { readFileSync } from "node:fs"
 import { describe, expect, test } from "vitest"
 import { parseEmail } from "./parse"
-import { address, cleanLabel, contentId, parseMime } from "./mime"
+import { address, cleanLabel, contentId } from "./content"
+import { parseMime } from "./mime"
 import { failure } from "./failure"
 
 const bytes = (text: string) => new TextEncoder().encode(text)

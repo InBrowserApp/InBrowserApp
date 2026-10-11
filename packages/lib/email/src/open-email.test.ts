@@ -5,6 +5,7 @@ class TestWorker {
   static instances: TestWorker[] = []
   onmessage!: (event: { data: Result }) => void
   onerror!: () => void
+  onmessageerror!: () => void
   postMessage = vi.fn()
   terminate = vi.fn()
   constructor() {
@@ -60,5 +61,12 @@ test("releases worker if file bytes cannot be read", async () => {
   await expect(openEmail(broken, new AbortController().signal)).rejects.toThrow(
     "memory"
   )
+  expect(TestWorker.instances[0]!.terminate).toHaveBeenCalledOnce()
+})
+
+test("rejects undecodable worker replies and releases resources", async () => {
+  const promise = openEmail(file(), new AbortController().signal)
+  TestWorker.instances[0]!.onmessageerror()
+  await expect(promise).rejects.toThrow("invalid")
   expect(TestWorker.instances[0]!.terminate).toHaveBeenCalledOnce()
 })

@@ -13,3 +13,5 @@ EML ve EMLX; MIME iletilerini, kodlanmış adları ve konuları, yaygın karakte
 MSG; Outlook e-posta üstbilgilerini, düz metni, HTML'yi, ek bilgilerini ve dosyaya dahil edilmiş raster görselleri destekler. Yalnızca Outlook zengin metni içeren gövdeler görüntülenmez. Takvim ve kişi öğeleri, şifreli iletiler ve korumalı e-postalar desteklenmez. Karmaşık Outlook biçimlendirmesi özgün uygulamadakinden farklı görünebilir. Kayıtlı zaman damgası, varsa özgün saat dilimi metnini korur; iletim tarihi olmayan MSG zaman damgalarının UTC olduğu açıkça belirtilir.
 
 Bir e-postayı görüntülemek, gönderenin kimliğini veya dijital imzayı doğrulamaz. Eksik veya hatalı biçimlendirilmiş tarih, tahminde bulunulmadan gösterilir. Hangi dosyaların açılabileceğini kullanılabilir bellek ve tarayıcı özellikleri belirler; sabit bir dosya boyutu veya ek sayısı sınırı yoktur.
+
+Kayıtlı üstbilgiler ve ek listesi içeren yazdırılabilir bir okuma kopyası için [E-postadan PDF’ye Dönüştürücü](../email-to-pdf-converter/) aracını kullanın. Eklerin içerikleri dahil edilmez.

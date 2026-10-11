@@ -9020,6 +9020,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "email-to-pdf-converter",
+    category: "document",
+    icon: "mail",
+    tags: ["email", "eml", "emlx", "msg", "pdf", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل البريد الإلكتروني إلى PDF",
+        description:
+          "حوّل رسائل EML وEMLX وMSG المحلية إلى PDF مع الترويسات المحفوظة والمتن القابل للقراءة والصور المضمّنة وقائمة المرفقات. عاين الناتج ونزّله في متصفحك.",
+      },
+      de: {
+        name: "E-Mail-zu-PDF-Konverter",
+        description:
+          "Konvertiere lokale EML-, EMLX- und MSG-E-Mails in PDF mit gespeicherten Kopfzeilen, lesbarem Nachrichtentext, eingebetteten Bildern und einer Anhangliste. Vorschau und Download direkt im Browser.",
+      },
+      en: {
+        name: "Email to PDF Converter",
+        description:
+          "Convert local EML, EMLX and MSG emails to PDF with saved headers, readable body, inline images and an attachment list. Preview and download in your browser.",
+      },
+      es: {
+        name: "Convertidor de correo electrónico a PDF",
+        description:
+          "Convierte correos EML, EMLX y MSG locales a PDF con sus encabezados guardados, cuerpo legible, imágenes insertadas y lista de adjuntos. Previsualiza y descarga en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur d’e-mails en PDF",
+        description:
+          "Convertissez des e-mails locaux EML, EMLX et MSG en PDF avec leurs en-têtes enregistrés, leur corps lisible, leurs images intégrées et la liste de leurs pièces jointes. Prévisualisez et téléchargez dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר דוא״ל ל־PDF",
+        description:
+          "המרת הודעות דוא״ל מקומיות בפורמטים EML, EMLX ו־MSG ל־PDF עם כותרות שמורות, גוף הודעה קריא, תמונות משובצות ורשימת קבצים מצורפים. תצוגה מקדימה והורדה בדפדפן.",
+      },
+      hi: {
+        name: "ईमेल से PDF कनवर्टर",
+        description:
+          "स्थानीय EML, EMLX और MSG ईमेल को सहेजे गए हेडर, पढ़ने योग्य संदेश सामग्री, संदेश में शामिल चित्रों और अटैचमेंट सूची के साथ PDF में बदलें। अपने ब्राउज़र में पूर्वावलोकन करें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Email ke PDF",
+        description:
+          "Konversi email EML, EMLX, dan MSG lokal ke PDF dengan header tersimpan, isi yang dapat dibaca, gambar dalam pesan, dan daftar lampiran. Pratinjau dan unduh di browser Anda.",
+      },
+      it: {
+        name: "Convertitore da email a PDF",
+        description:
+          "Converti email locali EML, EMLX e MSG in PDF con intestazioni salvate, corpo leggibile, immagini incorporate ed elenco degli allegati. Visualizza l’anteprima e scarica nel browser.",
+      },
+      ja: {
+        name: "メールから PDF への変換ツール",
+        description:
+          "端末内の EML、EMLX、MSG メールを、保存されたヘッダー、読み取り可能な本文、埋め込み画像、添付ファイル一覧を含む PDF に変換します。ブラウザーでプレビューしてダウンロードできます。",
+      },
+      ko: {
+        name: "이메일 PDF 변환기",
+        description:
+          "로컬 EML, EMLX 및 MSG 이메일을 저장된 헤더, 읽을 수 있는 본문, 본문 내 이미지 및 첨부 파일 목록과 함께 PDF로 변환하세요. 브라우저에서 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar E-mel kepada PDF",
+        description:
+          "Tukar e-mel EML, EMLX dan MSG setempat kepada PDF dengan pengepala tersimpan, isi yang boleh dibaca, imej sebaris dan senarai lampiran. Pratonton dan muat turun dalam pelayar anda.",
+      },
+      nl: {
+        name: "E-mail naar PDF-converter",
+        description:
+          "Converteer lokale EML-, EMLX- en MSG-e-mails naar PDF met opgeslagen headers, leesbare berichttekst, ingesloten afbeeldingen en een bijlagenlijst. Bekijk de voorvertoning en download in je browser.",
+      },
+      no: {
+        name: "E-post til PDF-konverterer",
+        description:
+          "Konverter lokale EML-, EMLX- og MSG-e-poster til PDF med lagrede meldingshoder, lesbar meldingstekst, innebygde bilder og en vedleggsliste. Forhåndsvis og last ned i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter e-maili na PDF",
+        description:
+          "Konwertuj lokalne e-maile EML, EMLX i MSG na PDF z zapisanymi nagłówkami, czytelną treścią, obrazami w treści i listą załączników. Wyświetl podgląd i pobierz plik w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de e-mail para PDF",
+        description:
+          "Converta e-mails EML, EMLX e MSG locais em PDF com cabeçalhos salvos, corpo legível, imagens incorporadas e uma lista de anexos. Confira a prévia e baixe no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер писем в PDF",
+        description:
+          "Преобразуйте локальные письма EML, EMLX и MSG в PDF с сохранёнными заголовками, читаемым текстом, встроенными изображениями и списком вложений. Просматривайте и скачивайте результат в браузере.",
+      },
+      sv: {
+        name: "E-post till PDF-konverterare",
+        description:
+          "Konvertera lokala EML-, EMLX- och MSG-meddelanden till PDF med sparade meddelandehuvuden, läsbar text, inbäddade bilder och en bilagelista. Förhandsvisa och ladda ner i din webbläsare.",
+      },
+      th: {
+        name: "โปรแกรมแปลงอีเมลเป็น PDF",
+        description:
+          "แปลงอีเมล EML, EMLX และ MSG ในเครื่องเป็น PDF พร้อมส่วนหัวที่บันทึกไว้ เนื้อหาที่อ่านได้ ภาพในข้อความ และรายการไฟล์แนบ ดูตัวอย่างและดาวน์โหลดในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "E-postadan PDF’ye Dönüştürücü",
+        description:
+          "Yerel EML, EMLX ve MSG e-postalarını kayıtlı üstbilgiler, okunabilir gövde, satır içi görseller ve ek listesiyle PDF’ye dönüştürün. Tarayıcınızda önizleyin ve indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi email sang PDF",
+        description:
+          "Chuyển email EML, EMLX và MSG trên thiết bị sang PDF với các trường tiêu đề đã lưu, nội dung đọc được, ảnh nội tuyến và danh sách tệp đính kèm. Xem trước và tải xuống trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "邮件转 PDF 转换器",
+        description:
+          "将本地 EML、EMLX 和 MSG 邮件转换为 PDF，包含保存的邮件头、可读取的正文、内嵌图片和附件列表。在浏览器中预览并下载。",
+      },
+      "zh-TW": {
+        name: "電子郵件轉 PDF 轉換器",
+        description:
+          "將本機 EML、EMLX 與 MSG 郵件轉換為 PDF，包含儲存的標頭、可讀取的本文、內嵌圖片與附件清單。在瀏覽器中預覽並下載。",
+      },
+    },
+  },
+  {
     slug: "email-validator",
     category: "text",
     icon: "file-text",
@@ -42572,6 +42695,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "時長加減計算器",
         description: "在任何時區，從基準時間加減 ISO 8601 時長，精確到毫秒。",
+      },
+    },
+  },
+  "email-to-pdf-converter": {
+    slug: "email-to-pdf-converter",
+    category: "document",
+    icon: "mail",
+    tags: ["email", "eml", "emlx", "msg", "pdf", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل البريد الإلكتروني إلى PDF",
+        description:
+          "حوّل رسائل EML وEMLX وMSG المحلية إلى PDF مع الترويسات المحفوظة والمتن القابل للقراءة والصور المضمّنة وقائمة المرفقات. عاين الناتج ونزّله في متصفحك.",
+      },
+      de: {
+        name: "E-Mail-zu-PDF-Konverter",
+        description:
+          "Konvertiere lokale EML-, EMLX- und MSG-E-Mails in PDF mit gespeicherten Kopfzeilen, lesbarem Nachrichtentext, eingebetteten Bildern und einer Anhangliste. Vorschau und Download direkt im Browser.",
+      },
+      en: {
+        name: "Email to PDF Converter",
+        description:
+          "Convert local EML, EMLX and MSG emails to PDF with saved headers, readable body, inline images and an attachment list. Preview and download in your browser.",
+      },
+      es: {
+        name: "Convertidor de correo electrónico a PDF",
+        description:
+          "Convierte correos EML, EMLX y MSG locales a PDF con sus encabezados guardados, cuerpo legible, imágenes insertadas y lista de adjuntos. Previsualiza y descarga en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur d’e-mails en PDF",
+        description:
+          "Convertissez des e-mails locaux EML, EMLX et MSG en PDF avec leurs en-têtes enregistrés, leur corps lisible, leurs images intégrées et la liste de leurs pièces jointes. Prévisualisez et téléchargez dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר דוא״ל ל־PDF",
+        description:
+          "המרת הודעות דוא״ל מקומיות בפורמטים EML, EMLX ו־MSG ל־PDF עם כותרות שמורות, גוף הודעה קריא, תמונות משובצות ורשימת קבצים מצורפים. תצוגה מקדימה והורדה בדפדפן.",
+      },
+      hi: {
+        name: "ईमेल से PDF कनवर्टर",
+        description:
+          "स्थानीय EML, EMLX और MSG ईमेल को सहेजे गए हेडर, पढ़ने योग्य संदेश सामग्री, संदेश में शामिल चित्रों और अटैचमेंट सूची के साथ PDF में बदलें। अपने ब्राउज़र में पूर्वावलोकन करें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Email ke PDF",
+        description:
+          "Konversi email EML, EMLX, dan MSG lokal ke PDF dengan header tersimpan, isi yang dapat dibaca, gambar dalam pesan, dan daftar lampiran. Pratinjau dan unduh di browser Anda.",
+      },
+      it: {
+        name: "Convertitore da email a PDF",
+        description:
+          "Converti email locali EML, EMLX e MSG in PDF con intestazioni salvate, corpo leggibile, immagini incorporate ed elenco degli allegati. Visualizza l’anteprima e scarica nel browser.",
+      },
+      ja: {
+        name: "メールから PDF への変換ツール",
+        description:
+          "端末内の EML、EMLX、MSG メールを、保存されたヘッダー、読み取り可能な本文、埋め込み画像、添付ファイル一覧を含む PDF に変換します。ブラウザーでプレビューしてダウンロードできます。",
+      },
+      ko: {
+        name: "이메일 PDF 변환기",
+        description:
+          "로컬 EML, EMLX 및 MSG 이메일을 저장된 헤더, 읽을 수 있는 본문, 본문 내 이미지 및 첨부 파일 목록과 함께 PDF로 변환하세요. 브라우저에서 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar E-mel kepada PDF",
+        description:
+          "Tukar e-mel EML, EMLX dan MSG setempat kepada PDF dengan pengepala tersimpan, isi yang boleh dibaca, imej sebaris dan senarai lampiran. Pratonton dan muat turun dalam pelayar anda.",
+      },
+      nl: {
+        name: "E-mail naar PDF-converter",
+        description:
+          "Converteer lokale EML-, EMLX- en MSG-e-mails naar PDF met opgeslagen headers, leesbare berichttekst, ingesloten afbeeldingen en een bijlagenlijst. Bekijk de voorvertoning en download in je browser.",
+      },
+      no: {
+        name: "E-post til PDF-konverterer",
+        description:
+          "Konverter lokale EML-, EMLX- og MSG-e-poster til PDF med lagrede meldingshoder, lesbar meldingstekst, innebygde bilder og en vedleggsliste. Forhåndsvis og last ned i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter e-maili na PDF",
+        description:
+          "Konwertuj lokalne e-maile EML, EMLX i MSG na PDF z zapisanymi nagłówkami, czytelną treścią, obrazami w treści i listą załączników. Wyświetl podgląd i pobierz plik w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de e-mail para PDF",
+        description:
+          "Converta e-mails EML, EMLX e MSG locais em PDF com cabeçalhos salvos, corpo legível, imagens incorporadas e uma lista de anexos. Confira a prévia e baixe no seu navegador.",
+      },
+      ru: {
+        name: "Конвертер писем в PDF",
+        description:
+          "Преобразуйте локальные письма EML, EMLX и MSG в PDF с сохранёнными заголовками, читаемым текстом, встроенными изображениями и списком вложений. Просматривайте и скачивайте результат в браузере.",
+      },
+      sv: {
+        name: "E-post till PDF-konverterare",
+        description:
+          "Konvertera lokala EML-, EMLX- och MSG-meddelanden till PDF med sparade meddelandehuvuden, läsbar text, inbäddade bilder och en bilagelista. Förhandsvisa och ladda ner i din webbläsare.",
+      },
+      th: {
+        name: "โปรแกรมแปลงอีเมลเป็น PDF",
+        description:
+          "แปลงอีเมล EML, EMLX และ MSG ในเครื่องเป็น PDF พร้อมส่วนหัวที่บันทึกไว้ เนื้อหาที่อ่านได้ ภาพในข้อความ และรายการไฟล์แนบ ดูตัวอย่างและดาวน์โหลดในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "E-postadan PDF’ye Dönüştürücü",
+        description:
+          "Yerel EML, EMLX ve MSG e-postalarını kayıtlı üstbilgiler, okunabilir gövde, satır içi görseller ve ek listesiyle PDF’ye dönüştürün. Tarayıcınızda önizleyin ve indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi email sang PDF",
+        description:
+          "Chuyển email EML, EMLX và MSG trên thiết bị sang PDF với các trường tiêu đề đã lưu, nội dung đọc được, ảnh nội tuyến và danh sách tệp đính kèm. Xem trước và tải xuống trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "邮件转 PDF 转换器",
+        description:
+          "将本地 EML、EMLX 和 MSG 邮件转换为 PDF，包含保存的邮件头、可读取的正文、内嵌图片和附件列表。在浏览器中预览并下载。",
+      },
+      "zh-TW": {
+        name: "電子郵件轉 PDF 轉換器",
+        description:
+          "將本機 EML、EMLX 與 MSG 郵件轉換為 PDF，包含儲存的標頭、可讀取的本文、內嵌圖片與附件清單。在瀏覽器中預覽並下載。",
       },
     },
   },

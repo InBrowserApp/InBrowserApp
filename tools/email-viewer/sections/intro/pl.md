@@ -13,3 +13,5 @@ EML i EMLX obsługują wiadomości MIME, kodowane nazwy i tematy, popularne zest
 MSG obsługuje nagłówki e-maili programu Outlook, zwykły tekst, HTML, informacje o załącznikach i dołączone obrazy rastrowe. Treść dostępna wyłącznie jako tekst sformatowany programu Outlook nie jest wyświetlana. Elementy kalendarza, kontakty, zaszyfrowane wiadomości i chroniona poczta nie są obsługiwane. Złożone formatowanie programu Outlook może różnić się od wyglądu w oryginalnej aplikacji. Zapisany znacznik czasu zachowuje oryginalny tekst strefy czasowej, jeśli jest dostępny; znaczniki czasu MSG bez daty z nagłówka transportowego są wyraźnie oznaczone jako UTC.
 
 Wyświetlenie e-maila nie weryfikuje tożsamości nadawcy ani podpisu cyfrowego. Brakująca lub nieprawidłowa data jest przedstawiana bez zgadywania. O tym, które pliki można otworzyć, decydują dostępna pamięć i możliwości przeglądarki; nie ma stałego limitu rozmiaru pliku ani liczby załączników.
+
+Aby utworzyć kopię do czytania i druku z zapisanymi nagłówkami i listą załączników, użyj narzędzia [Konwerter e-maili na PDF](../email-to-pdf-converter/). Zawartość załączników nie jest dołączana.

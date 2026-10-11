@@ -13,3 +13,5 @@ EML e EMLX oferecem suporte a mensagens MIME, nomes e assuntos codificados, conj
 MSG oferece suporte a cabeçalhos de e-mail do Outlook, texto simples, HTML, informações de anexos e imagens rasterizadas incluídas. Corpos de mensagem que contêm apenas texto formatado do Outlook não são renderizados. Itens de calendário e contatos, mensagens criptografadas e e-mails protegidos não são compatíveis. Formatações complexas do Outlook podem diferir do aplicativo original. Uma data e hora salva mantém o texto do fuso horário original quando disponível; datas e horas de MSG sem data de transporte são identificadas explicitamente como UTC.
 
 Visualizar um e-mail não verifica a identidade do remetente nem uma assinatura digital. Datas ausentes ou malformadas são exibidas sem suposições. A memória disponível e os recursos do navegador determinam quais arquivos podem ser abertos; não há limite fixo de tamanho de arquivo ou quantidade de anexos.
+
+Para criar uma cópia de leitura para impressão com cabeçalhos salvos e uma lista de anexos, use o [Conversor de e-mail para PDF](../email-to-pdf-converter/). O conteúdo dos anexos não é incluído.

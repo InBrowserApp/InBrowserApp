@@ -14,7 +14,10 @@ const mock = vi.hoisted(() => ({
   prepare: vi.fn(),
   dispose: vi.fn(),
 }))
-vi.mock("./open-email", () => ({ openEmail: mock.open }))
+vi.mock("@workspace/email", async (original) => ({
+  ...(await original<typeof import("@workspace/email")>()),
+  openEmail: mock.open,
+}))
 vi.mock("./preview", () => ({ preparePreview: mock.prepare }))
 vi.mock("./message-frame", () => ({
   MessageFrame: ({

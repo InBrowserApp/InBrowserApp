@@ -13,3 +13,5 @@ EML und EMLX unterstützen MIME-Nachrichten, kodierte Namen und Betreffzeilen, g
 MSG unterstützt Outlook-E-Mail-Kopfzeilen, reinen Text, HTML, Anhanginformationen und enthaltene Rasterbilder. Nachrichtentexte, die ausschließlich als Outlook-Rich-Text vorliegen, werden nicht dargestellt. Kalender- und Kontaktelemente, verschlüsselte Nachrichten und geschützte E-Mails werden nicht unterstützt. Komplexe Outlook-Formatierungen können von der Originalanwendung abweichen. Ein gespeicherter Zeitstempel behält, soweit vorhanden, seine ursprüngliche Zeitzonenangabe; MSG-Zeitstempel ohne Transportdatum werden ausdrücklich als UTC gekennzeichnet.
 
 Das Anzeigen einer E-Mail überprüft weder die Identität des Absenders noch eine digitale Signatur. Bei einem fehlenden oder fehlerhaften Datum wird nichts ergänzt oder geschätzt. Welche Dateien sich öffnen lassen, hängt vom verfügbaren Speicher und den Fähigkeiten des Browsers ab; es gibt keine feste Grenze für Dateigröße oder Anzahl der Anhänge.
+
+Für eine druckbare Lesekopie mit gespeicherten Kopfzeilen und einer Anhangliste nutze den [E-Mail-zu-PDF-Konverter](../email-to-pdf-converter/). Anhanginhalte sind nicht enthalten.

@@ -21,7 +21,7 @@ export async function openEmail(
         if ("error" in event.data) reject(new Error(event.data.error))
         else resolve(event.data.email)
       }
-      worker.onerror = () => {
+      worker.onmessageerror = worker.onerror = () => {
         finish()
         reject(new Error("invalid"))
       }
