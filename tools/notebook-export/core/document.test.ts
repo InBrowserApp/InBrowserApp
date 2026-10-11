@@ -44,6 +44,7 @@ test("builds offline HTML and Markdown with safe links, notes, headings and cach
   expect(links[1]!.getAttribute("rel")).toBe("noopener noreferrer")
   expect(links[1]!.getAttribute("target")).toBe("_blank")
   expect(result.preview.html).toContain("data-web-link=")
+  expect(result.preview.html).not.toContain(m.safePreview)
   expect(doc.querySelector("[data-web-link]")).toBeNull()
   expect(images.readableImage).toHaveBeenCalledTimes(1)
   expect(result.file.type).toBe("text/html;charset=utf-8")

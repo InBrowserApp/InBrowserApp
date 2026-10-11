@@ -44,6 +44,8 @@ export async function notebookDocument(
   if (preview.notes.remote) notes.push(m.remoteResources)
   if (preview.limited) notes.push(m.limited)
   if (unavailableImage) notes.push(m.imageUnavailable)
+  // The interface already presents these notes outside the reading frame.
+  const html = "<!doctype html>" + doc.documentElement.outerHTML
   const aside = doc.createElement("aside")
   aside.className = "nb-cell nb-notice"
   for (const text of notes) {
@@ -52,7 +54,6 @@ export async function notebookDocument(
     aside.append(paragraph)
   }
   doc.body.prepend(aside)
-  const html = "<!doctype html>" + doc.documentElement.outerHTML
   // These managed destinations were validated by the shared notebook sanitizer.
   for (const link of doc.querySelectorAll("[data-web-link]")) {
     const href = link.getAttribute("data-web-link")!
