@@ -151,6 +151,7 @@
     "@tool/number-base-converter": "workspace:*",
     "@tool/numbers-to-xlsx-converter": "workspace:*",
     "@tool/ods-to-xlsx-converter": "workspace:*",
+    "@tool/odt-to-pdf-converter": "workspace:*",
     "@tool/odt-viewer": "workspace:*",
     "@tool/ofd-to-pdf-converter": "workspace:*",
     "@tool/ofd-viewer": "workspace:*",

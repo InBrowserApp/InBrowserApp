@@ -14,7 +14,7 @@
     "@workspace/pdf-reader": "workspace:*",
     "pdf-lib": "catalog:",
     "cfb": "catalog:",
-    "@matbee/libreoffice-converter": "catalog:"
+    "@workspace/libreoffice": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

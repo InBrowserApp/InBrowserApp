@@ -1,6 +1,6 @@
 # Conversion runtime
 
-This tool uses the unmodified browser WebAssembly binaries from
+The native office converters use the unmodified browser WebAssembly binaries from
 [`@matbee/libreoffice-converter` 2.7.2](https://www.npmjs.com/package/@matbee/libreoffice-converter/v/2.7.2),
 published under the Mozilla Public License 2.0. A copy is included in
 `MPL-2.0.txt`. The dependency lockfile records the package integrity hash.

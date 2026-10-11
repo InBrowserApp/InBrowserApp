@@ -3,6 +3,8 @@ self.onmessage = async ({ data }) => {
   const urls = []
   try {
     const { input, assets, guard } = data
+    const writer = data.format === "writer"
+    const inputPath = writer ? "/tmp/input.odt" : "/tmp/input.ppt"
     const NativeWorker = self.Worker
     self.Worker = class extends NativeWorker {
       constructor(...args) {
@@ -68,18 +70,18 @@ self.onmessage = async ({ data }) => {
     if (!office) throw new Error("Engine initialization failed")
     await new Promise((resolve) => setTimeout(resolve, 0))
     self.postMessage({ type: "progress", stage: "converting" })
-    module.FS.writeFile("/tmp/input.ppt", new Uint8Array(input))
+    module.FS.writeFile(inputPath, new Uint8Array(input))
     const document = call(
       "_lok_documentLoadWithOptions",
       office,
-      "file:///tmp/input.ppt",
+      "file://" + inputPath,
       "Batch=true,EnableMacrosExecution=false"
     )
-    if (!document || call("_lok_documentGetDocumentType", document) !== 2)
-      throw new Error("Unsupported presentation")
-    const pages = call("_lok_documentGetParts", document)
-    if (!Number.isInteger(pages) || pages < 1)
-      throw new Error("Empty presentation")
+    if (
+      !document ||
+      call("_lok_documentGetDocumentType", document) !== (writer ? 0 : 2)
+    )
+      throw new Error("Unsupported document")
     const saved = call(
       "_lok_documentSaveAs",
       document,
@@ -90,11 +92,50 @@ self.onmessage = async ({ data }) => {
         ExportBookmarks: { type: "boolean", value: "false" },
         ExportNotesPages: { type: "boolean", value: "false" },
         ExportFormFields: { type: "boolean", value: "false" },
+        ...(writer
+          ? {
+              IsSkipEmptyPages: { type: "boolean", value: "false" },
+              ExportNotes: { type: "boolean", value: "false" },
+            }
+          : {}),
       })
     )
     if (!saved) throw new Error("PDF export failed")
+    let dimensions
+    if (writer) {
+      // Writer has no parts contract. Its page rectangles are in twips.
+      const pointer = call("_lok_documentGetPartPageRectangles", document)
+      if (!pointer) throw new Error("Missing page information")
+      try {
+        let end = pointer
+        while (end < module.HEAPU8.length && module.HEAPU8[end]) end++
+        const value = new TextDecoder().decode(
+          new Uint8Array(module.HEAPU8.subarray(pointer, end))
+        )
+        dimensions = value.split(";").map((rectangle) => {
+          const parts = rectangle.split(",").map(Number)
+          if (parts.length !== 4 || !parts.every(Number.isFinite))
+            throw new Error("Invalid page information")
+          // Writer exposes automatically inserted blank pages as 0 × 0.
+          // Keep their place; the exported PDF supplies their paper size.
+          if (parts[2] === 0 && parts[3] === 0) return null
+          if (parts[2] <= 0 || parts[3] <= 0)
+            throw new Error("Invalid page information")
+          return { width: parts[2] / 20, height: parts[3] / 20 }
+        })
+      } finally {
+        module._free(pointer)
+      }
+    }
+    const pages = writer
+      ? dimensions.length
+      : call("_lok_documentGetParts", document)
+    if (!Number.isInteger(pages) || pages < 1) throw new Error("Empty document")
     const bytes = module.FS.readFile("/tmp/output.pdf").slice().buffer
-    self.postMessage({ type: "result", bytes, pages }, [bytes])
+    self.postMessage(
+      { type: "result", bytes, pages, ...(writer ? { dimensions } : {}) },
+      [bytes]
+    )
   } catch (error) {
     self.postMessage({
       type: "error",

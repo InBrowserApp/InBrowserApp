@@ -33,7 +33,8 @@ and browser capability failures are reported when the browser can surface them.
 Only this converter's pages require COOP/COEP headers. Entering or leaving them
 uses a full document navigation so the browser applies those headers. The engine
 is loaded after file selection and initially transfers about 90 MB including
-fallback fonts. See `runtime/NOTICE.md` and `fonts/README.md` for pinned sources,
+fallback fonts. See `../../packages/lib/libreoffice/src/NOTICE.md` and
+`../../packages/lib/libreoffice/fonts/README.md` for pinned sources,
 licenses, library-mode initialization and asset packaging.
 
 ## Representative sources
@@ -62,3 +63,6 @@ The owned fixtures are also covered by unit tests for current-edit resolution,
 image references, corruption, worker lifecycle, cancellation, stale results,
 preview failure and download cleanup. Compressed assets are checked for exact
 reassembly and the deployment host's per-file size constraint.
+
+Shared runtime and font notices are also deployed at
+`/licenses/libreoffice-converter.txt`.

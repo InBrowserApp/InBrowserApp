@@ -2,12 +2,20 @@
   Cache-Control: public, max-age=31536000, immutable
   Cross-Origin-Embedder-Policy: require-corp
 
-# Shared WebAssembly memory is isolated only on the legacy PDF converter.
+# Shared WebAssembly memory is isolated only on native office PDF converters.
 /tools/ppt-to-pdf-converter/
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Embedder-Policy: require-corp
 
 /:language/tools/ppt-to-pdf-converter/
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+/tools/odt-to-pdf-converter/
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+/:language/tools/odt-to-pdf-converter/
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Embedder-Policy: require-corp
 

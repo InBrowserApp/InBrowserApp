@@ -3,7 +3,7 @@ import { runInNewContext } from "node:vm"
 import { expect, test, vi } from "vitest"
 
 const source = readFileSync(
-  "tools/ppt-to-pdf-converter/runtime/network-guard.js",
+  "packages/lib/libreoffice/src/network-guard.js",
   "utf8"
 )
 test("blocks document networking in native worker globals and reports the missing resource", () => {

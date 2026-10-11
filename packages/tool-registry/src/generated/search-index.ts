@@ -18092,6 +18092,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "odt-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "odt",
+      "ott",
+      "opendocument",
+      "libreoffice",
+      "pdf",
+      "document",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محول ODT إلى PDF",
+        description:
+          "حوّل مستندات ODT وقوالب OTT إلى PDF محليًا، مع دعم أنماط الصفحات والنص القابل للتحديد، وإمكانية معاينة PDF وتنزيله.",
+      },
+      de: {
+        name: "ODT-zu-PDF-Konverter",
+        description:
+          "Konvertiere ODT-Dokumente und OTT-Vorlagen lokal in PDF, mit Seitenvorlagen, auswählbarem Text, PDF-Vorschau und Download.",
+      },
+      en: {
+        name: "ODT to PDF Converter",
+        description:
+          "Convert ODT documents and OTT templates to PDF locally, with page styles, selectable text, a PDF preview, and download.",
+      },
+      es: {
+        name: "Conversor de ODT a PDF",
+        description:
+          "Convierte documentos ODT y plantillas OTT a PDF localmente, con estilos de página, texto seleccionable, vista previa del PDF y descarga.",
+      },
+      fr: {
+        name: "Convertisseur ODT en PDF",
+        description:
+          "Convertissez localement des documents ODT et des modèles OTT en PDF, avec styles de page, texte sélectionnable, aperçu PDF et téléchargement.",
+      },
+      he: {
+        name: "ממיר ODT ל-PDF",
+        description:
+          "המרת מסמכי ODT ותבניות OTT ל־PDF באופן מקומי, עם סגנונות עמודים, טקסט שניתן לבחור, תצוגה מקדימה של ה־PDF והורדה.",
+      },
+      hi: {
+        name: "ODT से PDF कन्वर्टर",
+        description:
+          "पृष्ठ शैलियों, चुने जा सकने वाले टेक्स्ट, PDF पूर्वावलोकन और डाउनलोड सुविधा के साथ ODT दस्तावेज़ों और OTT टेम्पलेट को स्थानीय रूप से PDF में बदलें।",
+      },
+      id: {
+        name: "Konverter ODT ke PDF",
+        description:
+          "Konversikan dokumen ODT dan templat OTT ke PDF secara lokal, dengan gaya halaman, teks yang dapat dipilih, pratinjau PDF, dan unduhan.",
+      },
+      it: {
+        name: "Convertitore da ODT a PDF",
+        description:
+          "Converti localmente documenti ODT e modelli OTT in PDF, con stili di pagina, testo selezionabile, anteprima PDF e download.",
+      },
+      ja: {
+        name: "ODTからPDFへの変換ツール",
+        description:
+          "ODT文書とOTTテンプレートをローカルでPDFに変換。ページスタイルと選択可能なテキストに対応し、PDFをプレビューしてダウンロードできます。",
+      },
+      ko: {
+        name: "ODT → PDF 변환기",
+        description:
+          "기기에서 ODT 문서와 OTT 서식을 PDF로 변환하세요. 페이지 스타일, 선택 가능한 텍스트, PDF 미리보기 및 다운로드를 지원합니다.",
+      },
+      ms: {
+        name: "Penukar ODT kepada PDF",
+        description:
+          "Tukar dokumen ODT dan templat OTT kepada PDF secara setempat, dengan gaya halaman, teks yang boleh dipilih, pratonton PDF dan muat turun.",
+      },
+      nl: {
+        name: "ODT-naar-PDF-converter",
+        description:
+          "Converteer ODT-documenten en OTT-sjablonen lokaal naar PDF, met paginastijlen, selecteerbare tekst, een PDF-voorvertoning en downloadmogelijkheid.",
+      },
+      no: {
+        name: "Konverterer fra ODT til PDF",
+        description:
+          "Konverter ODT-dokumenter og OTT-maler til PDF lokalt, med sidestiler, tekst som kan merkes, PDF-forhåndsvisning og nedlasting.",
+      },
+      pl: {
+        name: "Konwerter ODT na PDF",
+        description:
+          "Konwertuj lokalnie dokumenty ODT i szablony OTT na PDF ze stylami stron i tekstem, który można zaznaczać. Wyświetl podgląd PDF i pobierz wynik.",
+      },
+      pt: {
+        name: "Conversor de ODT para PDF",
+        description:
+          "Converta documentos ODT e modelos OTT para PDF localmente, com estilos de página, texto selecionável, prévia do PDF e download.",
+      },
+      ru: {
+        name: "Конвертер ODT в PDF",
+        description:
+          "Преобразуйте документы ODT и шаблоны OTT в PDF локально, с поддержкой стилей страниц, выделения текста, предпросмотра PDF и скачивания.",
+      },
+      sv: {
+        name: "Konverterare från ODT till PDF",
+        description:
+          "Konvertera ODT-dokument och OTT-mallar till PDF lokalt, med sidformatmallar, markerbar text, PDF-förhandsvisning och nedladdning.",
+      },
+      th: {
+        name: "โปรแกรมแปลง ODT เป็น PDF",
+        description:
+          "แปลงเอกสาร ODT และแม่แบบ OTT เป็น PDF ในเครื่อง พร้อมสไตล์หน้า ข้อความที่เลือกได้ การดูตัวอย่าง PDF และการดาวน์โหลด",
+      },
+      tr: {
+        name: "ODT’den PDF’ye Dönüştürücü",
+        description:
+          "ODT belgelerini ve OTT şablonlarını sayfa stilleri, seçilebilir metin, PDF önizlemesi ve indirme desteğiyle yerel olarak PDF’ye dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi ODT sang PDF",
+        description:
+          "Chuyển tài liệu ODT và mẫu OTT sang PDF ngay trên thiết bị, với kiểu trang, văn bản có thể chọn, bản xem trước PDF và khả năng tải xuống.",
+      },
+      "zh-CN": {
+        name: "ODT 转 PDF 转换器",
+        description:
+          "在本地将 ODT 文档和 OTT 模板转换为 PDF，支持页面样式、可选择文本、PDF 预览和下载。",
+      },
+      "zh-TW": {
+        name: "ODT 轉 PDF 轉換器",
+        description:
+          "在本機將 ODT 文件與 OTT 範本轉換為 PDF，支援頁面樣式與可選取的文字，並提供 PDF 預覽與下載。",
+      },
+    },
+  },
+  {
     slug: "odt-viewer",
     category: "document",
     icon: "file-text",

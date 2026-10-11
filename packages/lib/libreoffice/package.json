@@ -1,0 +1,16 @@
+{
+  "name": "@workspace/libreoffice",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./load-assets": "./src/load-assets.ts",
+    "./scripts": "./src/scripts.ts"
+  },
+  "dependencies": {
+    "@matbee/libreoffice-converter": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

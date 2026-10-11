@@ -13250,6 +13250,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "odt-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "odt-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "odt-viewer",
     language: "ar",
   },
