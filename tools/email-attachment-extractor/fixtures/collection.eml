@@ -1,0 +1,166 @@
+Subject: Attachment collection =?utf-8?b?5LiW55WM?=
+From: Mina <mina@example.test>
+To: Team <team@example.test>
+Date: Thu, 08 Oct 2026 14:35:00 -0700
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============3721092441635787756=="
+
+--===============3721092441635787756==
+Content-Type: multipart/alternative;
+ boundary="===============7835302925217800164=="
+
+--===============7835302925217800164==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Saved message body. Attachments remain separate.
+
+--===============7835302925217800164==
+MIME-Version: 1.0
+Content-Type: multipart/related;
+ boundary="===============7217450286661472085=="
+
+--===============7217450286661472085==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<p>Saved message body.</p><img src="cid:field-chart" alt="Field chart">
+
+--===============7217450286661472085==
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Disposition: inline; filename="chart.png"
+Content-ID: <field-chart>
+MIME-Version: 1.0
+
+iVBORw0KGgoAAAANSUhEUgAAAPAAAABgCAIAAACsUWiGAAAB4ElEQVR4nO3dwWkgQRAEQTl0tomz
++35CBsgB/W6gISugDNicjv9+/Pv+Msvs4/wLzB4OaEsNaEsNaEsNaEsNaEsNaEsNaEsNaEsNaEsN
+aEsNaPv68/n3fK9agDagrbVzzUDby51rBtpe7lwz0PZy55qBtpc71wy0vdy5ZqDt5c41A20vd64Z
+aHu5c81A28udawbaXu5cM9D2cueagbaXO9cMtL3cuWagHVvj7wN66NgLjUAPHXuhEeihYy80Aj10
+7IVGoIeOvdAI9NCxFxqBHjr2QiPQQ8deaAR66NgLjUAPHXuhEeihYy80Aj107IVGoIeOvdAI9NCx
+FxqBHjr2QiPQQ8deaAR66NgLjUAPHXuhEeihYy80Aj107IVGoIeOvdAI9NCxFxr/C/T5Kzi2RqA1
+lhuB1phqBFpjqhFojalGoDWmGoHWmGoEWmOqEWiNqUagNaYagdaYagRaY6oRaI2pRqA1phqB1phq
+BFpjqhFojalGoDWmGoHWmGoEWmOqEWiNqUagNaYagdaYagRaY6oRaI2pRqA1phqB1phqBFpjqhFo
+jalGoDWmGoHWmGoEWmOqEWiNqUagNaYagdaYavSPFUsNaEsNaEsNaEsNaEsNaEsNaEsNaEsNaEsN
+aEvtBwa02AdKI+jDAAAAAElFTkSuQmCC
+
+--===============7217450286661472085==--
+
+--===============7835302925217800164==--
+
+--===============3721092441635787756==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="report.txt"
+MIME-Version: 1.0
+
+RklSU1QNCg==
+
+--===============3721092441635787756==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="report.txt"
+MIME-Version: 1.0
+
+U0VDT05EDQo=
+
+--===============3721092441635787756==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="REPORT.TXT"
+MIME-Version: 1.0
+
+VEhJUkQNCg==
+
+--===============3721092441635787756==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="report (2).txt"
+MIME-Version: 1.0
+
+RVhQTElDSVQgU1VGRklYDQo=
+
+--===============3721092441635787756==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="../folder\\unsafe:name?.bin"
+MIME-Version: 1.0
+
+AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8gISIjJCUmJygpKissLS4vMDEyMzQ1Njc4
+OTo7PD0+P0BBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWltcXV5fYGFiY2RlZmdoaWprbG1ub3Bx
+cnN0dXZ3eHl6e3x9fn+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqbnJ2en6ChoqOkpaanqKmq
+q6ytrq+wsbKztLW2t7i5uru8vb6/wMHCw8TFxsfIycrLzM3Oz9DR0tPU1dbX2Nna29zd3t/g4eLj
+5OXm5+jp6uvs7e7v8PHy8/T19vf4+fr7/P3+/w==
+
+--===============3721092441635787756==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="CON.txt"
+MIME-Version: 1.0
+
+UkVTRVJWRUQK
+
+--===============3721092441635787756==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="empty.dat"
+MIME-Version: 1.0
+
+
+--===============3721092441635787756==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename*=utf-8''notes%20%E4%B8%96%E7%95%8C.txt
+MIME-Version: 1.0
+
+5pel5pys6KqeINin2YTYudix2KjZitipCg==
+
+--===============3721092441635787756==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename*=utf-8''display%E2%80%AEtxt.exe
+MIME-Version: 1.0
+
+SU5FUlQgQVRUQUNITUVOVCBCWVRFUw==
+
+--===============3721092441635787756==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="active.html"
+MIME-Version: 1.0
+
+PHNjcmlwdD53aW5kb3cuX19hdHRhY2htZW50RXhlY3V0ZWQ9dHJ1ZTwvc2NyaXB0Pg==
+
+--===============3721092441635787756==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="trailing. "
+MIME-Version: 1.0
+
+VFJBSUxJTkc=
+
+--===============3721092441635787756==
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename
+MIME-Version: 1.0
+
+VU5OQU1FRA==
+
+--===============3721092441635787756==
+Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
+Content-Disposition: attachment; filename="forwarded.eml"
+MIME-Version: 1.0
+
+Subject: Forwarded original
+From: Sender <sender@example.test>
+To: mina@example.test
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+NESTED MESSAGE BODY
+
+--===============3721092441635787756==--

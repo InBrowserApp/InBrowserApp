@@ -24,4 +24,12 @@ test("worker returns parsed content or structured failures", async () => {
     data: { buffer: new ArrayBuffer(1), name: "file.eml" },
   })
   expect(scope.postMessage).toHaveBeenLastCalledWith({ error: "resourceLimit" })
+  const buffer = new ArrayBuffer(1)
+  parse.mockResolvedValueOnce({ attachments: [] })
+  await scope.onmessage({
+    data: { buffer, name: "file.msg", options: { attachmentBytes: "all" } },
+  })
+  expect(parse).toHaveBeenLastCalledWith(buffer, "file.msg", {
+    attachmentBytes: "all",
+  })
 })

@@ -1,0 +1,4 @@
+{
+  "name": "Email Attachment Extractor",
+  "description": "Extract embedded files from EML, EMLX and MSG emails in your browser. Download individual attachments or selected files as ZIP, without uploading your email."
+}

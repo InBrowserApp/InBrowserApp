@@ -1,5 +1,5 @@
 import PostalMime from "postal-mime"
-import type { Attachment, Email, Notice } from "./types"
+import type { Attachment, Email, Notice, ParseOptions } from "./types"
 import {
   address,
   checkDate,
@@ -11,7 +11,8 @@ import {
 
 export async function parseMime(
   bytes: Uint8Array,
-  format: "EML" | "EMLX"
+  format: "EML" | "EMLX",
+  options?: ParseOptions
 ): Promise<Email> {
   const notices: Notice[] = []
   if (format === "EMLX") {
@@ -73,7 +74,7 @@ export async function parseMime(
     const cid = contentId(item.contentId || "")
     const image = Boolean(cid && rasterImage.test(item.mimeType))
     const inline =
-      image &&
+      (options?.attachmentBytes === "all" || image) &&
       (item.disposition === "inline" ||
         item.related ||
         referencedImage(parsed.html || "", cid))
@@ -87,7 +88,8 @@ export async function parseMime(
           : inline
             ? "inline"
             : "attachment",
-      ...(image ? { cid, bytes: data } : {}),
+      ...(image ? { cid } : {}),
+      ...(image || options?.attachmentBytes === "all" ? { bytes: data } : {}),
     }
   })
   return {

@@ -17,3 +17,5 @@ Het bekijken van een e-mail verifieert de identiteit van de afzender of een digi
 Gebruik de [E-mail naar PDF-converter](../email-to-pdf-converter/) voor een afdrukbare leeskopie met opgeslagen headers en een bijlagenlijst. De inhoud van bijlagen wordt niet opgenomen.
 
 Gebruik de [E-mail naar HTML / tekst-converter](../email-content-export/) om berichtinhoud opnieuw te gebruiken als offline HTML of kopieerbare UTF-8-tekst, met opgeslagen headers en bijlagegegevens.
+
+Gebruik [E-mailbijlagen uitpakken](/tools/email-attachment-extractor/) om ingesloten bestanden te downloaden. Sla afzonderlijke bijlagen of een ZIP met geselecteerde bestanden op, inclusief ingesloten bronnen als je die selecteert.

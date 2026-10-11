@@ -17,3 +17,5 @@ La visualizzazione di un’email non verifica l’identità del mittente o una f
 Per una copia stampabile per la lettura con intestazioni salvate ed elenco degli allegati, usa il [Convertitore da email a PDF](../email-to-pdf-converter/). Il contenuto degli allegati non è incluso.
 
 Per riutilizzare il contenuto del messaggio, usa il [Convertitore da email a HTML / testo](../email-content-export/) per ottenere HTML offline o testo UTF-8 copiabile, con intestazioni salvate e dettagli degli allegati.
+
+Per scaricare i file incorporati, usa l’[Estrattore di allegati email](/tools/email-attachment-extractor/). Salva singoli allegati oppure uno ZIP con i file selezionati, incluse le risorse incorporate nel messaggio se le scegli.

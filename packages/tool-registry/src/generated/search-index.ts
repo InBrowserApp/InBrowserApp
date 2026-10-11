@@ -9020,6 +9020,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "email-attachment-extractor",
+    category: "document",
+    icon: "mail",
+    tags: ["email", "eml", "emlx", "msg", "attachment", "extract", "zip"],
+    locales: {
+      ar: {
+        name: "مستخرج مرفقات البريد الإلكتروني",
+        description:
+          "استخرج الملفات المضمّنة في رسائل EML وEMLX وMSG في متصفحك. نزّل المرفقات كلًا على حدة أو الملفات المحددة كملف ZIP، دون رفع رسالتك.",
+      },
+      de: {
+        name: "E-Mail-Anhang-Extraktor",
+        description:
+          "Extrahiere eingebettete Dateien aus EML-, EMLX- und MSG-E-Mails in deinem Browser. Lade einzelne Anhänge oder ausgewählte Dateien als ZIP herunter, ohne deine E-Mail hochzuladen.",
+      },
+      en: {
+        name: "Email Attachment Extractor",
+        description:
+          "Extract embedded files from EML, EMLX and MSG emails in your browser. Download individual attachments or selected files as ZIP, without uploading your email.",
+      },
+      es: {
+        name: "Extractor de adjuntos de correo electrónico",
+        description:
+          "Extrae archivos incrustados de correos EML, EMLX y MSG en tu navegador. Descarga adjuntos individuales o los archivos seleccionados como ZIP, sin subir tu correo.",
+      },
+      fr: {
+        name: "Extracteur de pièces jointes d’e-mails",
+        description:
+          "Extrayez les fichiers intégrés aux e-mails EML, EMLX et MSG dans votre navigateur. Téléchargez chaque pièce jointe ou les fichiers sélectionnés dans un ZIP, sans envoyer votre e-mail.",
+      },
+      he: {
+        name: "מחלץ קבצים מצורפים לדוא״ל",
+        description:
+          "חילוץ קבצים מוטמעים מהודעות EML, EMLX ו־MSG בדפדפן. הורדת קבצים מצורפים בנפרד או קבצים נבחרים כ־ZIP, ללא העלאת ההודעה.",
+      },
+      hi: {
+        name: "ईमेल अटैचमेंट निकालने का टूल",
+        description:
+          "अपने ब्राउज़र में EML, EMLX और MSG ईमेल से एम्बेड की गई फ़ाइलें निकालें। ईमेल अपलोड किए बिना अटैचमेंट अलग-अलग डाउनलोड करें या चुनी हुई फ़ाइलों की ZIP डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengekstrak Lampiran Email",
+        description:
+          "Ekstrak file tersemat dari email EML, EMLX, dan MSG di browser Anda. Unduh lampiran satu per satu atau file pilihan sebagai ZIP tanpa mengunggah email Anda.",
+      },
+      it: {
+        name: "Estrattore di allegati email",
+        description:
+          "Estrai file incorporati da email EML, EMLX e MSG nel browser. Scarica singoli allegati o i file selezionati in formato ZIP, senza caricare la tua email.",
+      },
+      ja: {
+        name: "メール添付ファイル抽出ツール",
+        description:
+          "ブラウザー内で EML、EMLX、MSG メールから埋め込みファイルを抽出。メールをアップロードせずに、添付ファイルを個別にダウンロードしたり、選択したファイルを ZIP にまとめたりできます。",
+      },
+      ko: {
+        name: "이메일 첨부 파일 추출기",
+        description:
+          "브라우저에서 EML, EMLX 및 MSG 이메일에 포함된 파일을 추출하세요. 이메일을 업로드하지 않고 첨부 파일을 개별적으로 다운로드하거나 선택한 파일을 ZIP으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengekstrak Lampiran E-mel",
+        description:
+          "Ekstrak fail terbenam daripada e-mel EML, EMLX dan MSG dalam pelayar anda. Muat turun lampiran satu demi satu atau fail pilihan sebagai ZIP tanpa memuat naik e-mel anda.",
+      },
+      nl: {
+        name: "E-mailbijlagen uitpakken",
+        description:
+          "Pak ingesloten bestanden uit EML-, EMLX- en MSG-e-mails uit in je browser. Download afzonderlijke bijlagen of geselecteerde bestanden als ZIP, zonder je e-mail te uploaden.",
+      },
+      no: {
+        name: "Uttrekk av e-postvedlegg",
+        description:
+          "Trekk ut innebygde filer fra EML-, EMLX- og MSG-e-poster i nettleseren. Last ned enkeltvedlegg eller valgte filer som ZIP uten å laste opp e-posten din.",
+      },
+      pl: {
+        name: "Ekstraktor załączników e-mail",
+        description:
+          "Wyodrębnij osadzone pliki z e-maili EML, EMLX i MSG w przeglądarce. Pobierz pojedyncze załączniki lub wybrane pliki jako ZIP, bez przesyłania e-maila.",
+      },
+      pt: {
+        name: "Extrator de anexos de e-mail",
+        description:
+          "Extraia arquivos incorporados de e-mails EML, EMLX e MSG no seu navegador. Baixe anexos individuais ou os arquivos selecionados em ZIP, sem enviar seu e-mail.",
+      },
+      ru: {
+        name: "Извлечение вложений из писем",
+        description:
+          "Извлекайте встроенные файлы из писем EML, EMLX и MSG в браузере. Скачивайте отдельные вложения или выбранные файлы в ZIP без отправки письма на сервер.",
+      },
+      sv: {
+        name: "Extraherare för e-postbilagor",
+        description:
+          "Extrahera inbäddade filer från EML-, EMLX- och MSG-meddelanden i webbläsaren. Ladda ner enskilda bilagor eller valda filer som ZIP utan att ladda upp ditt e-postmeddelande.",
+      },
+      th: {
+        name: "โปรแกรมดึงไฟล์แนบอีเมล",
+        description:
+          "ดึงไฟล์ที่ฝังไว้จากอีเมล EML, EMLX และ MSG ในเบราว์เซอร์ ดาวน์โหลดไฟล์แนบทีละไฟล์หรือรวมไฟล์ที่เลือกเป็น ZIP โดยไม่อัปโหลดอีเมลของคุณ",
+      },
+      tr: {
+        name: "E-posta Eki Çıkarıcı",
+        description:
+          "EML, EMLX ve MSG e-postalarından gömülü dosyaları tarayıcınızda çıkarın. E-postanızı yüklemeden ekleri tek tek veya seçtiğiniz dosyaları ZIP olarak indirin.",
+      },
+      vi: {
+        name: "Trình trích xuất tệp đính kèm email",
+        description:
+          "Trích xuất các tệp được nhúng trong email EML, EMLX và MSG ngay trong trình duyệt. Tải xuống từng tệp đính kèm hoặc các tệp đã chọn dưới dạng ZIP mà không tải email lên.",
+      },
+      "zh-CN": {
+        name: "邮件附件提取器",
+        description:
+          "在浏览器中从 EML、EMLX 和 MSG 邮件提取嵌入文件。逐个下载附件，或将所选文件打包为 ZIP，无需上传邮件。",
+      },
+      "zh-TW": {
+        name: "電子郵件附件擷取器",
+        description:
+          "在瀏覽器中從 EML、EMLX 與 MSG 郵件擷取內嵌檔案。逐一下載附件，或將所選檔案下載為 ZIP，無須上傳郵件。",
+      },
+    },
+  },
+  {
     slug: "email-content-export",
     category: "document",
     icon: "mail",

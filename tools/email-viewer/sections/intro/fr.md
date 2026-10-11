@@ -17,3 +17,5 @@ Afficher un e-mail ne vérifie ni l’identité de l’expéditeur ni une signat
 Pour obtenir une copie de lecture imprimable avec les en-têtes enregistrés et la liste des pièces jointes, utilisez le [Convertisseur d’e-mails en PDF](../email-to-pdf-converter/). Le contenu des pièces jointes n’est pas inclus.
 
 Pour réutiliser le contenu du message, utilisez le [Convertisseur d’e-mails en HTML / texte](../email-content-export/) afin d’obtenir du HTML hors ligne ou du texte UTF-8 à copier, avec les en-têtes enregistrés et les détails des pièces jointes.
+
+Pour télécharger les fichiers intégrés, utilisez l’[Extracteur de pièces jointes d’e-mails](/tools/email-attachment-extractor/). Enregistrez chaque pièce jointe ou un ZIP des fichiers sélectionnés, y compris les ressources intégrées au message si vous les sélectionnez.

@@ -6534,6 +6534,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "email-attachment-extractor",
+    language: "ar",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "de",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "en",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "es",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "fr",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "he",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "hi",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "id",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "it",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "ja",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "ko",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "ms",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "nl",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "no",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "pl",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "pt",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "ru",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "sv",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "th",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "tr",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "vi",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "zh-CN",
+  },
+  {
+    slug: "email-attachment-extractor",
+    language: "zh-TW",
+  },
+  {
     slug: "email-content-export",
     language: "ar",
   },

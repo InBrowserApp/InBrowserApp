@@ -17,3 +17,5 @@ Bir e-postayı görüntülemek, gönderenin kimliğini veya dijital imzayı doğ
 Kayıtlı üstbilgiler ve ek listesi içeren yazdırılabilir bir okuma kopyası için [E-postadan PDF’ye Dönüştürücü](../email-to-pdf-converter/) aracını kullanın. Eklerin içerikleri dahil edilmez.
 
 İleti içeriğini yeniden kullanmak için [E-postadan HTML / Metne Dönüştürücü](../email-content-export/) aracını kullanarak kayıtlı üstbilgiler ve ek ayrıntıları içeren çevrimdışı HTML veya kopyalanabilir UTF-8 metin elde edin.
+
+Gömülü dosyaları indirmek için [E-posta Eki Çıkarıcı](/tools/email-attachment-extractor/) aracını kullanın. Ekleri tek tek veya seçtiğiniz dosyaları ZIP olarak kaydedin; seçerseniz satır içi kaynakları da dahil edebilirsiniz.

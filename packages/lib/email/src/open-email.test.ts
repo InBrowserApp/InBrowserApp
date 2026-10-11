@@ -70,3 +70,17 @@ test("rejects undecodable worker replies and releases resources", async () => {
   await expect(promise).rejects.toThrow("invalid")
   expect(TestWorker.instances[0]!.terminate).toHaveBeenCalledOnce()
 })
+
+test("forwards the explicit attachment extraction mode to the owned worker", async () => {
+  const promise = openEmail(file(), new AbortController().signal, {
+    attachmentBytes: "all",
+  })
+  const worker = TestWorker.instances[0]!
+  await vi.waitFor(() => expect(worker.postMessage).toHaveBeenCalledOnce())
+  expect(worker.postMessage.mock.calls[0]![0].options).toEqual({
+    attachmentBytes: "all",
+  })
+  worker.onmessage({ data: { email: { format: "EML" } as never } })
+  await promise
+  expect(worker.terminate).toHaveBeenCalledOnce()
+})

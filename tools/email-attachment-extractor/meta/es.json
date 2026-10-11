@@ -1,0 +1,4 @@
+{
+  "name": "Extractor de adjuntos de correo electrónico",
+  "description": "Extrae archivos incrustados de correos EML, EMLX y MSG en tu navegador. Descarga adjuntos individuales o los archivos seleccionados como ZIP, sin subir tu correo."
+}

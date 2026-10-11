@@ -1,0 +1,4 @@
+{
+  "name": "Trình trích xuất tệp đính kèm email",
+  "description": "Trích xuất các tệp được nhúng trong email EML, EMLX và MSG ngay trong trình duyệt. Tải xuống từng tệp đính kèm hoặc các tệp đã chọn dưới dạng ZIP mà không tải email lên."
+}

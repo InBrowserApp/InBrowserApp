@@ -17,3 +17,5 @@ Melihat email tidak memverifikasi identitas pengirim atau tanda tangan digital. 
 Untuk membuat salinan baca yang dapat dicetak dengan header tersimpan dan daftar lampiran, gunakan [Konverter Email ke PDF](../email-to-pdf-converter/). Isi lampiran tidak disertakan.
 
 Untuk menggunakan kembali isi pesan, gunakan [Konverter Email ke HTML / Teks](../email-content-export/) untuk HTML offline atau teks UTF-8 yang dapat disalin, beserta header tersimpan dan detail lampiran.
+
+Untuk mengunduh file tersemat, gunakan [Pengekstrak Lampiran Email](/tools/email-attachment-extractor/). Simpan lampiran satu per satu atau sebagai ZIP berisi file pilihan, termasuk sumber daya dalam pesan jika Anda memilihnya.

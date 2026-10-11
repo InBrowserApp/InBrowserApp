@@ -9,9 +9,12 @@ import {
   rasterImage,
   referencedImage,
 } from "./content"
-import type { Attachment, Email, Notice } from "./types"
+import type { Attachment, Email, Notice, ParseOptions } from "./types"
 
-export async function parseMsg(buffer: ArrayBuffer): Promise<Email> {
+export async function parseMsg(
+  buffer: ArrayBuffer,
+  options?: ParseOptions
+): Promise<Email> {
   let reader = new MsgReader(buffer)
   reader.parserConfig = { ansiEncoding: "windows-1252" }
   let data = reader.getFileData()
@@ -90,7 +93,7 @@ export async function parseMsg(buffer: ArrayBuffer): Promise<Email> {
       html = new TextDecoder(encoding).decode(data.html)
     } catch {
       html = new TextDecoder().decode(data.html)
-      notices.push("partial")
+      if (options?.attachmentBytes !== "all") notices.push("partial")
     }
   }
   if (!html && !data.body?.trim() && data.compressedRtf?.length)
@@ -102,18 +105,26 @@ export async function parseMsg(buffer: ArrayBuffer): Promise<Email> {
       (item.innerMsgContent ? "message/rfc822" : "application/octet-stream")
     const image = Boolean(cid && rasterImage.test(type))
     const inline =
-      image && (item.attachmentHidden || referencedImage(html, cid))
+      (image || options?.attachmentBytes === "all") &&
+      (item.attachmentHidden || Boolean(cid && referencedImage(html, cid)))
     const result: Attachment = {
       name: cleanLabel(item.fileName || item.fileNameShort || item.name || ""),
       type,
       size: item.contentLength ?? null,
       kind: item.innerMsgContent ? "nested" : inline ? "inline" : "attachment",
     }
-    if (image) {
+    if (image) result.cid = cid
+    if (image || options?.attachmentBytes === "all") {
       try {
-        result.cid = cid
+        if (
+          options?.attachmentBytes === "all" &&
+          !item.innerMsgContent &&
+          item.dataId === undefined
+        )
+          throw new Error("missing attachment")
         result.bytes = new Uint8Array(reader.getAttachment(item).content)
         result.size = result.bytes.byteLength
+        if (item.innerMsgContent) result.type = "application/vnd.ms-outlook"
       } catch {
         notices.push("attachmentError")
       }
