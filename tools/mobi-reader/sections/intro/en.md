@@ -15,3 +15,5 @@ Your book stays in this browser. Scripts, audio, video, and remote resources are
 There is no preset file-size or chapter-count limit. Large or complex books still depend on your device and browser memory. Reading controls stay separate from the book text, and changing text size keeps your current reading position where possible.
 
 To save the readable content of a supported book as a local TXT or HTML file, use the [Ebook to TXT / HTML Converter](/tools/ebook-text-html-export/).
+
+For an EPUB reading copy, use the [MOBI / AZW3 to EPUB Converter](/tools/mobi-to-epub-converter/). It keeps supported chapter content, metadata and images; it does not remove DRM or reproduce the original pagination.

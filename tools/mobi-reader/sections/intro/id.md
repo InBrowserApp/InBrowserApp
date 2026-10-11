@@ -15,3 +15,5 @@ Buku Anda tetap di browser ini. Skrip, audio, video, dan sumber daya jarak jauh 
 Tidak ada batas ukuran file atau jumlah bab yang ditetapkan sebelumnya. Buku besar atau kompleks tetap bergantung pada perangkat dan memori browser Anda. Kontrol membaca terpisah dari teks buku, dan perubahan ukuran teks mempertahankan posisi baca Anda jika memungkinkan.
 
 Untuk menyimpan konten yang dapat dibaca dari buku yang didukung sebagai file TXT atau HTML lokal, gunakan [Konverter Buku Elektronik ke TXT / HTML](/tools/ebook-text-html-export/).
+
+Untuk membuat salinan baca EPUB, gunakan [Konverter MOBI / AZW3 ke EPUB](/tools/mobi-to-epub-converter/). Alat ini mempertahankan konten bab, metadata, dan gambar yang didukung; alat ini tidak menghapus DRM atau mereproduksi pembagian halaman asli.

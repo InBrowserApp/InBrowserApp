@@ -15,3 +15,5 @@ Tu libro permanece en este navegador. No se cargan scripts, audio, vídeo ni rec
 No hay un límite predefinido de tamaño de archivo ni de número de capítulos. Los libros grandes o complejos siguen dependiendo de la memoria de tu dispositivo y navegador. Los controles de lectura se mantienen separados del texto del libro y, al cambiar el tamaño del texto, se conserva tu posición de lectura siempre que sea posible.
 
 Para guardar el contenido legible de un libro compatible como archivo TXT o HTML local, usa el [Convertidor de libros electrónicos a TXT / HTML](/tools/ebook-text-html-export/).
+
+Para obtener una copia de lectura EPUB, usa el [Convertidor de MOBI / AZW3 a EPUB](/tools/mobi-to-epub-converter/). Conserva el contenido de los capítulos, los metadatos y las imágenes compatibles; no elimina DRM ni reproduce la paginación original.

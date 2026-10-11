@@ -18068,6 +18068,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "mobi-to-epub-converter",
+    category: "document",
+    icon: "book-open",
+    tags: ["ebook", "mobi", "azw", "azw3", "prc", "epub", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل MOBI / AZW3 إلى EPUB",
+        description:
+          "حوّل كتابًا محليًا غير مشفّر بتنسيق MOBI أو AZW3 إلى EPUB. احتفظ بالفصول القابلة للقراءة وفهرس المحتويات والبيانات الوصفية والصور المدعومة دون رفع الكتاب.",
+      },
+      de: {
+        name: "MOBI-/AZW3-zu-EPUB-Konverter",
+        description:
+          "Konvertiere ein lokales, unverschlüsseltes MOBI- oder AZW3-Buch in EPUB. Lesbare Kapitel, Inhaltsverzeichnis, Metadaten und unterstützte Bilder bleiben erhalten, ohne das Buch hochzuladen.",
+      },
+      en: {
+        name: "MOBI / AZW3 to EPUB Converter",
+        description:
+          "Convert a local unencrypted MOBI or AZW3 book to EPUB. Keep readable chapters, contents, metadata and supported images without uploading the book.",
+      },
+      es: {
+        name: "Convertidor de MOBI / AZW3 a EPUB",
+        description:
+          "Convierte un libro MOBI o AZW3 local sin cifrar a EPUB. Conserva los capítulos legibles, el índice, los metadatos y las imágenes compatibles sin subir el libro.",
+      },
+      fr: {
+        name: "Convertisseur MOBI / AZW3 en EPUB",
+        description:
+          "Convertissez un livre local MOBI ou AZW3 non chiffré en EPUB. Conservez les chapitres lisibles, la table des matières, les métadonnées et les images prises en charge sans envoyer le livre.",
+      },
+      he: {
+        name: "ממיר MOBI / AZW3 ל־EPUB",
+        description:
+          "המרת ספר MOBI או AZW3 מקומי ולא מוצפן ל־EPUB. פרקים קריאים, תוכן עניינים, מטא־נתונים ותמונות נתמכות נשמרים ללא העלאת הספר.",
+      },
+      hi: {
+        name: "MOBI / AZW3 से EPUB कन्वर्टर",
+        description:
+          "बिना एन्क्रिप्शन वाली स्थानीय MOBI या AZW3 पुस्तक को EPUB में बदलें। पुस्तक अपलोड किए बिना पढ़ने योग्य अध्याय, विषय-सूची, मेटाडेटा और समर्थित चित्र बनाए रखें।",
+      },
+      id: {
+        name: "Konverter MOBI / AZW3 ke EPUB",
+        description:
+          "Konversi buku MOBI atau AZW3 lokal tanpa enkripsi ke EPUB. Pertahankan bab yang dapat dibaca, daftar isi, metadata, dan gambar yang didukung tanpa mengunggah buku.",
+      },
+      it: {
+        name: "Convertitore da MOBI / AZW3 a EPUB",
+        description:
+          "Converti un libro locale MOBI o AZW3 non crittografato in EPUB. Mantieni i capitoli leggibili, l’indice, i metadati e le immagini supportate senza caricare il libro.",
+      },
+      ja: {
+        name: "MOBI / AZW3 から EPUB への変換ツール",
+        description:
+          "端末内の暗号化されていない MOBI または AZW3 の本を EPUB に変換します。本をアップロードせずに、読み取り可能な章、目次、メタデータ、対応する画像を保持します。",
+      },
+      ko: {
+        name: "MOBI / AZW3 EPUB 변환기",
+        description:
+          "기기에 있는 암호화되지 않은 MOBI 또는 AZW3 책을 EPUB으로 변환하세요. 책을 업로드하지 않고 읽을 수 있는 장, 목차, 메타데이터 및 지원 이미지를 유지합니다.",
+      },
+      ms: {
+        name: "Penukar MOBI / AZW3 kepada EPUB",
+        description:
+          "Tukar buku MOBI atau AZW3 setempat yang tidak disulitkan kepada EPUB. Kekalkan bab yang boleh dibaca, isi kandungan, metadata dan imej yang disokong tanpa memuat naik buku.",
+      },
+      nl: {
+        name: "MOBI / AZW3 naar EPUB-converter",
+        description:
+          "Converteer een lokaal, onversleuteld MOBI- of AZW3-boek naar EPUB. Behoud leesbare hoofdstukken, inhoudsopgave, metadata en ondersteunde afbeeldingen zonder het boek te uploaden.",
+      },
+      no: {
+        name: "MOBI / AZW3 til EPUB-konverterer",
+        description:
+          "Konverter en lokal, ukryptert MOBI- eller AZW3-bok til EPUB. Bevar lesbare kapitler, innholdsfortegnelse, metadata og bilder som støttes, uten å laste opp boken.",
+      },
+      pl: {
+        name: "Konwerter MOBI / AZW3 na EPUB",
+        description:
+          "Konwertuj lokalne, niezaszyfrowane książki MOBI lub AZW3 na EPUB. Zachowaj czytelne rozdziały, spis treści, metadane i obsługiwane obrazy bez przesyłania książki.",
+      },
+      pt: {
+        name: "Conversor de MOBI / AZW3 para EPUB",
+        description:
+          "Converta um livro local em MOBI ou AZW3 sem criptografia para EPUB. Preserve capítulos legíveis, sumário, metadados e imagens compatíveis sem enviar o livro.",
+      },
+      ru: {
+        name: "Конвертер MOBI / AZW3 в EPUB",
+        description:
+          "Преобразуйте локальную незашифрованную книгу MOBI или AZW3 в EPUB. Сохраните читаемый текст глав, оглавление, метаданные и поддерживаемые изображения без отправки книги на сервер.",
+      },
+      sv: {
+        name: "Konverterare från MOBI / AZW3 till EPUB",
+        description:
+          "Konvertera en lokal, okrypterad MOBI- eller AZW3-bok till EPUB. Bevara läsbara kapitel, innehållsförteckning, metadata och bilder som stöds utan att ladda upp boken.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MOBI / AZW3 เป็น EPUB",
+        description:
+          "แปลงหนังสือ MOBI หรือ AZW3 ในอุปกรณ์ที่ไม่เข้ารหัสเป็น EPUB คงบทที่อ่านได้ สารบัญ ข้อมูลเมตา และรูปภาพที่รองรับโดยไม่ต้องอัปโหลดหนังสือ",
+      },
+      tr: {
+        name: "MOBI / AZW3’ten EPUB’a Dönüştürücü",
+        description:
+          "Yerel, şifrelenmemiş bir MOBI veya AZW3 kitabını EPUB’a dönüştürün. Kitabı yüklemeden okunabilir bölümleri, içindekileri, üst verileri ve desteklenen görselleri koruyun.",
+      },
+      vi: {
+        name: "Trình chuyển đổi MOBI / AZW3 sang EPUB",
+        description:
+          "Chuyển đổi sách MOBI hoặc AZW3 không mã hóa trên thiết bị sang EPUB. Giữ các chương đọc được, mục lục, siêu dữ liệu và hình ảnh được hỗ trợ mà không tải sách lên.",
+      },
+      "zh-CN": {
+        name: "MOBI / AZW3 转 EPUB 转换器",
+        description:
+          "将本地未加密的 MOBI 或 AZW3 书籍转换为 EPUB。保留可读章节、目录、元数据和受支持的图片，无需上传书籍。",
+      },
+      "zh-TW": {
+        name: "MOBI／AZW3 轉 EPUB 轉換器",
+        description:
+          "將本機未加密的 MOBI 或 AZW3 書籍轉換為 EPUB。保留可讀取的章節、目錄、中繼資料及支援的圖片，無須上傳書籍。",
+      },
+    },
+  },
+  {
     slug: "morse-code-converter",
     category: "misc",
     icon: "file-text",
@@ -52264,6 +52387,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "MOBI 與 AZW3 閱讀器",
         description:
           "在本機閱讀未加密的 MOBI、AZW、AZW3 與 PRC 書籍，提供目錄、可調整的文字大小與專注閱讀區。",
+      },
+    },
+  },
+  "mobi-to-epub-converter": {
+    slug: "mobi-to-epub-converter",
+    category: "document",
+    icon: "book-open",
+    tags: ["ebook", "mobi", "azw", "azw3", "prc", "epub", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل MOBI / AZW3 إلى EPUB",
+        description:
+          "حوّل كتابًا محليًا غير مشفّر بتنسيق MOBI أو AZW3 إلى EPUB. احتفظ بالفصول القابلة للقراءة وفهرس المحتويات والبيانات الوصفية والصور المدعومة دون رفع الكتاب.",
+      },
+      de: {
+        name: "MOBI-/AZW3-zu-EPUB-Konverter",
+        description:
+          "Konvertiere ein lokales, unverschlüsseltes MOBI- oder AZW3-Buch in EPUB. Lesbare Kapitel, Inhaltsverzeichnis, Metadaten und unterstützte Bilder bleiben erhalten, ohne das Buch hochzuladen.",
+      },
+      en: {
+        name: "MOBI / AZW3 to EPUB Converter",
+        description:
+          "Convert a local unencrypted MOBI or AZW3 book to EPUB. Keep readable chapters, contents, metadata and supported images without uploading the book.",
+      },
+      es: {
+        name: "Convertidor de MOBI / AZW3 a EPUB",
+        description:
+          "Convierte un libro MOBI o AZW3 local sin cifrar a EPUB. Conserva los capítulos legibles, el índice, los metadatos y las imágenes compatibles sin subir el libro.",
+      },
+      fr: {
+        name: "Convertisseur MOBI / AZW3 en EPUB",
+        description:
+          "Convertissez un livre local MOBI ou AZW3 non chiffré en EPUB. Conservez les chapitres lisibles, la table des matières, les métadonnées et les images prises en charge sans envoyer le livre.",
+      },
+      he: {
+        name: "ממיר MOBI / AZW3 ל־EPUB",
+        description:
+          "המרת ספר MOBI או AZW3 מקומי ולא מוצפן ל־EPUB. פרקים קריאים, תוכן עניינים, מטא־נתונים ותמונות נתמכות נשמרים ללא העלאת הספר.",
+      },
+      hi: {
+        name: "MOBI / AZW3 से EPUB कन्वर्टर",
+        description:
+          "बिना एन्क्रिप्शन वाली स्थानीय MOBI या AZW3 पुस्तक को EPUB में बदलें। पुस्तक अपलोड किए बिना पढ़ने योग्य अध्याय, विषय-सूची, मेटाडेटा और समर्थित चित्र बनाए रखें।",
+      },
+      id: {
+        name: "Konverter MOBI / AZW3 ke EPUB",
+        description:
+          "Konversi buku MOBI atau AZW3 lokal tanpa enkripsi ke EPUB. Pertahankan bab yang dapat dibaca, daftar isi, metadata, dan gambar yang didukung tanpa mengunggah buku.",
+      },
+      it: {
+        name: "Convertitore da MOBI / AZW3 a EPUB",
+        description:
+          "Converti un libro locale MOBI o AZW3 non crittografato in EPUB. Mantieni i capitoli leggibili, l’indice, i metadati e le immagini supportate senza caricare il libro.",
+      },
+      ja: {
+        name: "MOBI / AZW3 から EPUB への変換ツール",
+        description:
+          "端末内の暗号化されていない MOBI または AZW3 の本を EPUB に変換します。本をアップロードせずに、読み取り可能な章、目次、メタデータ、対応する画像を保持します。",
+      },
+      ko: {
+        name: "MOBI / AZW3 EPUB 변환기",
+        description:
+          "기기에 있는 암호화되지 않은 MOBI 또는 AZW3 책을 EPUB으로 변환하세요. 책을 업로드하지 않고 읽을 수 있는 장, 목차, 메타데이터 및 지원 이미지를 유지합니다.",
+      },
+      ms: {
+        name: "Penukar MOBI / AZW3 kepada EPUB",
+        description:
+          "Tukar buku MOBI atau AZW3 setempat yang tidak disulitkan kepada EPUB. Kekalkan bab yang boleh dibaca, isi kandungan, metadata dan imej yang disokong tanpa memuat naik buku.",
+      },
+      nl: {
+        name: "MOBI / AZW3 naar EPUB-converter",
+        description:
+          "Converteer een lokaal, onversleuteld MOBI- of AZW3-boek naar EPUB. Behoud leesbare hoofdstukken, inhoudsopgave, metadata en ondersteunde afbeeldingen zonder het boek te uploaden.",
+      },
+      no: {
+        name: "MOBI / AZW3 til EPUB-konverterer",
+        description:
+          "Konverter en lokal, ukryptert MOBI- eller AZW3-bok til EPUB. Bevar lesbare kapitler, innholdsfortegnelse, metadata og bilder som støttes, uten å laste opp boken.",
+      },
+      pl: {
+        name: "Konwerter MOBI / AZW3 na EPUB",
+        description:
+          "Konwertuj lokalne, niezaszyfrowane książki MOBI lub AZW3 na EPUB. Zachowaj czytelne rozdziały, spis treści, metadane i obsługiwane obrazy bez przesyłania książki.",
+      },
+      pt: {
+        name: "Conversor de MOBI / AZW3 para EPUB",
+        description:
+          "Converta um livro local em MOBI ou AZW3 sem criptografia para EPUB. Preserve capítulos legíveis, sumário, metadados e imagens compatíveis sem enviar o livro.",
+      },
+      ru: {
+        name: "Конвертер MOBI / AZW3 в EPUB",
+        description:
+          "Преобразуйте локальную незашифрованную книгу MOBI или AZW3 в EPUB. Сохраните читаемый текст глав, оглавление, метаданные и поддерживаемые изображения без отправки книги на сервер.",
+      },
+      sv: {
+        name: "Konverterare från MOBI / AZW3 till EPUB",
+        description:
+          "Konvertera en lokal, okrypterad MOBI- eller AZW3-bok till EPUB. Bevara läsbara kapitel, innehållsförteckning, metadata och bilder som stöds utan att ladda upp boken.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MOBI / AZW3 เป็น EPUB",
+        description:
+          "แปลงหนังสือ MOBI หรือ AZW3 ในอุปกรณ์ที่ไม่เข้ารหัสเป็น EPUB คงบทที่อ่านได้ สารบัญ ข้อมูลเมตา และรูปภาพที่รองรับโดยไม่ต้องอัปโหลดหนังสือ",
+      },
+      tr: {
+        name: "MOBI / AZW3’ten EPUB’a Dönüştürücü",
+        description:
+          "Yerel, şifrelenmemiş bir MOBI veya AZW3 kitabını EPUB’a dönüştürün. Kitabı yüklemeden okunabilir bölümleri, içindekileri, üst verileri ve desteklenen görselleri koruyun.",
+      },
+      vi: {
+        name: "Trình chuyển đổi MOBI / AZW3 sang EPUB",
+        description:
+          "Chuyển đổi sách MOBI hoặc AZW3 không mã hóa trên thiết bị sang EPUB. Giữ các chương đọc được, mục lục, siêu dữ liệu và hình ảnh được hỗ trợ mà không tải sách lên.",
+      },
+      "zh-CN": {
+        name: "MOBI / AZW3 转 EPUB 转换器",
+        description:
+          "将本地未加密的 MOBI 或 AZW3 书籍转换为 EPUB。保留可读章节、目录、元数据和受支持的图片，无需上传书籍。",
+      },
+      "zh-TW": {
+        name: "MOBI／AZW3 轉 EPUB 轉換器",
+        description:
+          "將本機未加密的 MOBI 或 AZW3 書籍轉換為 EPUB。保留可讀取的章節、目錄、中繼資料及支援的圖片，無須上傳書籍。",
       },
     },
   },

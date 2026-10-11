@@ -1,4 +1,4 @@
-import type { BookSection, ReadingBook } from "./types"
+import type { BookSection, ContentsItem, ReadingBook } from "./types"
 
 export type LoadedChapter = {
   id: string
@@ -61,6 +61,35 @@ export async function bookLinks(
       else unresolved = true
     }
   }
+  async function contents(items: ContentsItem[]): Promise<ContentsItem[]> {
+    const output: ContentsItem[] = []
+    for (const item of items) {
+      signal.throwIfAborted()
+      let id: string | undefined
+      try {
+        const resolved = await book.parsed.resolveHref(item.href)
+        const destination = resolved && indices.get(resolved.index)
+        if (destination) {
+          const anchor = resolved.anchor?.(destination.document)
+          if (!resolved.anchor || anchor === 0) id = destination.id
+          else if (
+            anchor instanceof Element &&
+            destination.document.body.contains(anchor)
+          )
+            id = targetId(anchor)
+        }
+      } catch (error) {
+        signal.throwIfAborted()
+        if (error instanceof RangeError) throw error
+      }
+      const subitems = await contents(item.subitems || [])
+      if (id && item.label.trim())
+        output.push({ label: item.label.trim(), href: `#${id}`, subitems })
+      else output.push(...subitems)
+    }
+    return output
+  }
+  const navigation = await contents(book.parsed.toc || [])
   // Publisher IDs may collide across chapters or with the export's own IDs.
   for (const chapter of chapters) {
     for (const element of chapter.document.querySelectorAll("[id],[name]")) {
@@ -69,7 +98,7 @@ export async function bookLinks(
     }
   }
   for (const [element, id] of targets) element.id = id
-  return unresolved
+  return { unresolved, contents: navigation }
 }
 
 /** MOBI 6 may encode headings as styled paragraphs; use its contents labels. */

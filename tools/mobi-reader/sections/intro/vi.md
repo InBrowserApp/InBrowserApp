@@ -15,3 +15,5 @@ Sách của bạn luôn ở trong trình duyệt này. Tập lệnh, âm thanh, 
 Không có giới hạn đặt trước về kích thước tệp hay số chương. Sách lớn hoặc phức tạp vẫn phụ thuộc vào thiết bị và bộ nhớ trình duyệt. Các nút điều khiển nằm riêng với văn bản sách, và việc đổi cỡ chữ sẽ giữ vị trí đọc hiện tại khi có thể.
 
 Để lưu nội dung đọc được của sách được hỗ trợ thành tệp TXT hoặc HTML trên thiết bị, hãy dùng [Trình chuyển đổi sách điện tử sang TXT / HTML](/tools/ebook-text-html-export/).
+
+Để có bản EPUB dùng để đọc, hãy dùng [Trình chuyển đổi MOBI / AZW3 sang EPUB](/tools/mobi-to-epub-converter/). Công cụ giữ lại nội dung chương, siêu dữ liệu và hình ảnh được hỗ trợ; không gỡ DRM hay tái tạo cách phân trang gốc.

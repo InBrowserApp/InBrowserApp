@@ -13250,6 +13250,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mobi-to-epub-converter",
+    language: "ar",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "de",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "en",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "es",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "fr",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "he",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "hi",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "id",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "it",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "ja",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "ko",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "ms",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "nl",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "no",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "pl",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "pt",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "ru",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "sv",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "th",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "tr",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "vi",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "mobi-to-epub-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "morse-code-converter",
     language: "ar",
   },

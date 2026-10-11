@@ -1,5 +1,6 @@
 export type {
   ReadingBook,
+  BookSnapshot,
   BookSection,
   ContentsItem,
   Destination,

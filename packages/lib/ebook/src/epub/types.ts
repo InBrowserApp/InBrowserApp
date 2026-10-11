@@ -38,6 +38,7 @@ export interface OpenBook {
   parsed: ParsedBook
   title: string
   author: string
+  language?: string
   cover: string | null
   missing: boolean
   incomplete?: boolean

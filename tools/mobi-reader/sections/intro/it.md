@@ -15,3 +15,5 @@ Il libro rimane in questo browser. Script, audio, video e risorse remote non ven
 Non ci sono limiti predefiniti alla dimensione del file o al numero di capitoli. I libri grandi o complessi dipendono comunque dalla memoria del dispositivo e del browser. I controlli di lettura rimangono separati dal testo del libro e, quando possibile, la modifica della dimensione del testo mantiene la posizione di lettura attuale.
 
 Per salvare il contenuto leggibile di un libro supportato come file TXT o HTML locale, usa il [Convertitore da ebook a TXT / HTML](/tools/ebook-text-html-export/).
+
+Per una copia EPUB per la lettura, usa il [Convertitore da MOBI / AZW3 a EPUB](/tools/mobi-to-epub-converter/). Mantiene i contenuti dei capitoli, i metadati e le immagini supportati; non rimuove il DRM né riproduce la paginazione originale.

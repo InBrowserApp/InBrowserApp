@@ -15,3 +15,5 @@ Kitabınız bu tarayıcıda kalır. Betikler, ses, video ve uzak kaynaklar yükl
 Önceden belirlenmiş dosya boyutu veya bölüm sayısı sınırı yoktur. Büyük veya karmaşık kitaplar yine de cihazınızın ve tarayıcınızın belleğine bağlıdır. Okuma kontrolleri kitap metninden ayrı tutulur; yazı boyutu değiştiğinde mevcut okuma konumunuz mümkün olduğunca korunur.
 
 Desteklenen bir kitabın okunabilir içeriğini yerel bir TXT veya HTML dosyası olarak kaydetmek için [E-kitaptan TXT / HTML’ye Dönüştürücü](/tools/ebook-text-html-export/) kullanın.
+
+EPUB okuma kopyası için [MOBI / AZW3’ten EPUB’a Dönüştürücü](/tools/mobi-to-epub-converter/) aracını kullanın. Desteklenen bölüm içeriğini, üst verileri ve görselleri korur; DRM korumasını kaldırmaz ve özgün sayfalamayı yeniden oluşturmaz.

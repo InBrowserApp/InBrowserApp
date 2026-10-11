@@ -15,3 +15,5 @@ Din bok stannar i den här webbläsaren. Skript, ljud, video och externa resurse
 Det finns ingen förinställd gräns för filstorlek eller antal kapitel. Stora eller komplexa böcker är fortfarande beroende av din enhet och webbläsarens minne. Läskontrollerna hålls åtskilda från boktexten, och din läsposition behålls om möjligt när du ändrar textstorleken.
 
 För att spara det läsbara innehållet i en bok som stöds som en lokal TXT- eller HTML-fil använder du [Konverterare från e-bok till TXT / HTML](/tools/ebook-text-html-export/).
+
+För en EPUB-läskopia använder du [Konverterare från MOBI / AZW3 till EPUB](/tools/mobi-to-epub-converter/). Den bevarar kapitelinnehåll, metadata och bilder som stöds; den tar inte bort DRM och återskapar inte den ursprungliga sidindelningen.

@@ -15,3 +15,5 @@ Dein Buch bleibt in diesem Browser. Skripte, Audio, Video und externe Ressourcen
 Es gibt keine vorgegebene Grenze für die Dateigröße oder Kapitelanzahl. Große oder komplexe Bücher sind dennoch von deinem Gerät und dem Browserspeicher abhängig. Die Bedienelemente bleiben vom Buchtext getrennt. Beim Ändern der Schriftgröße bleibt deine aktuelle Leseposition nach Möglichkeit erhalten.
 
 Um den lesbaren Inhalt eines unterstützten Buchs als lokale TXT- oder HTML-Datei zu speichern, nutze den [E-Book-zu-TXT-/HTML-Konverter](/tools/ebook-text-html-export/).
+
+Für eine EPUB-Lesekopie verwende den [MOBI-/AZW3-zu-EPUB-Konverter](/tools/mobi-to-epub-converter/). Er behält unterstützte Kapitelinhalte, Metadaten und Bilder bei; DRM wird nicht entfernt und die ursprüngliche Seiteneinteilung wird nicht nachgebildet.
