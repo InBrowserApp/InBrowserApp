@@ -11,3 +11,5 @@ Przeglądarka rozpoznaje odwołania content-location i content-ID wewnątrz arch
 Ta przeglądarka obsługuje strony HTML w archiwach stron multipart/related, w tym zasoby base64 i quoted-printable oraz popularne kodowania tekstu. W przypadku niekompletnych zapisów wyświetla odzyskaną treść z powiadomieniem. Nietypowe zagnieżdżone struktury wieloczęściowe i wiadomości e-mail otrzymują jasne wyjaśnienie.
 
 Skrypty, formularze, przekierowania, osadzone aplikacje i zagnieżdżone strony są wyłączone. Nieobsługiwane formaty obrazów i złożone układy witryn mogą różnić się od oryginału. Przeglądarka nie może przywrócić sesji witryny ani treści, która nie została zapisana w archiwum. Jeśli plik jest uszkodzony, zapisz nowe archiwum strony w oryginalnej aplikacji.
+
+Aby pobrać statyczny plik PDF kompletnego głównego dokumentu, użyj [Konwertera MHTML na PDF](../mhtml-to-pdf-converter/).

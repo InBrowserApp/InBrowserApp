@@ -11,3 +11,5 @@ Görüntüleyici, arşiv içindeki content-location ve content-ID başvuruların
 Bu görüntüleyici, multipart/related web arşivlerindeki HTML sayfalarını; base64 ve quoted-printable kaynakları ile yaygın metin kodlamaları dahil olmak üzere destekler. Eksik kayıtlarda kurtarılan içerik bir bildirimle birlikte gösterilir. Alışılmadık iç içe çok parçalı yapılar ve e-posta iletileri için anlaşılır bir açıklama sunulur.
 
 Betikler, formlar, yönlendirmeler, gömülü uygulamalar ve iç içe sayfalar devre dışıdır. Desteklenmeyen görsel biçimleri ve karmaşık site düzenleri özgün halinden farklı görünebilir. Görüntüleyici, web sitesi oturumlarını veya arşive kaydedilmemiş içeriği geri getiremez. Hasarlı bir dosya için özgün uygulamada yeni bir web arşivi kaydedin.
+
+Eksiksiz bir ana belgenin indirilebilir statik PDF kopyasını oluşturmak için [MHTML’den PDF’ye Dönüştürücü](../mhtml-to-pdf-converter/) aracını kullanın.

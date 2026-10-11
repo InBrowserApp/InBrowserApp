@@ -57,3 +57,20 @@ test("retains semantic lists and legacy font formatting with child selectors", (
   )
   expect(result.css).toContain("ol > li")
 })
+
+test("collects only embedded raster CSS images for decode validation", () => {
+  const png = "data:image/png;base64,YQ=="
+  const result = prepare({
+    html: `<p style="background:url('${png}')">Text</p>`,
+    css: `p{background:url("${png}")}div{background:url(${png})}`,
+  })
+  expect(result.cssImages).toEqual([png])
+  expect(result.css).toContain(png)
+  for (const css of [
+    `p{background:url(${png}),url(https://example.invalid/tracker)}`,
+    "p{background:url(data:image/svg+xml;base64,YQ==)}",
+    "p{background:image-set(url(data:image/png;base64,YQ==) 1x)}",
+    "p{background:url(data:image/png;base64,YQ==\\)bad)}",
+  ])
+    expect(() => prepare({ html: "<p>Text</p>", css })).toThrow("unsupported")
+})

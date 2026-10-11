@@ -8,7 +8,14 @@ import type { Source, Reply } from "./types"
 async function render(source: Source, reply: (data: Reply) => void) {
   let page = 0
   try {
-    const { fragment, css, text, imageCount } = prepare(source)
+    const { fragment, css, text, imageCount, cssImages } = prepare(source)
+    // CSS backgrounds are not img elements. Validate their bytes explicitly
+    // so an unreadable archived background cannot silently disappear.
+    for (const source of cssImages) {
+      const image = new Image()
+      image.src = source
+      await image.decode()
+    }
     const host = document.createElement("div")
     document.body.append(host)
     const flow = await new Previewer().preview(

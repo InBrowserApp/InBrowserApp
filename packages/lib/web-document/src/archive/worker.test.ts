@@ -1,13 +1,13 @@
 import { expect, test, vi } from "vitest"
 const mock = vi.hoisted(() => ({ convert: vi.fn() }))
-vi.mock("../convert-archive", () => ({
+vi.mock("./convert", () => ({
   convertArchive: mock.convert,
   failure: () => "invalid",
 }))
 
 test("worker reads byte-preserving files and returns converted archives or errors", async () => {
   const post = vi.spyOn(self, "postMessage").mockImplementation(() => {})
-  await import("./archive.worker")
+  await import("./worker")
   const file = { arrayBuffer: async () => new Uint8Array([1, 2]).buffer }
   mock.convert.mockResolvedValueOnce({ source: "safe" })
   await self.onmessage!({ data: file } as unknown as MessageEvent)

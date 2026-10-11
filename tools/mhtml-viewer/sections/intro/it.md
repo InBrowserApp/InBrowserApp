@@ -11,3 +11,5 @@ Il visualizzatore risolve i riferimenti content-location e content-ID all’inte
 Questo visualizzatore supporta pagine HTML all’interno di archivi web multipart/related, incluse risorse base64 e quoted-printable e le codifiche di testo più comuni. Per le acquisizioni incomplete vengono mostrati i contenuti recuperati insieme a un avviso. Le strutture multipart annidate insolite e i messaggi email ricevono una spiegazione chiara.
 
 Script, moduli, reindirizzamenti, app incorporate e pagine annidate sono disattivati. I formati di immagine non supportati e le impaginazioni complesse dei siti potrebbero apparire diversi dall’originale. Il visualizzatore non può ripristinare sessioni di siti web o contenuti non salvati nell’archivio. Se un file è danneggiato, salva un nuovo archivio web nell’applicazione originale.
+
+Per ottenere un PDF statico scaricabile di un documento principale completo, usa il [Convertitore da MHTML a PDF](../mhtml-to-pdf-converter/).

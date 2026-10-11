@@ -11,3 +11,5 @@ Der Betrachter löst content-location- und content-ID-Verweise innerhalb des Arc
 Dieser Betrachter unterstützt HTML-Seiten in multipart/related-Webarchiven, einschließlich base64- und quoted-printable-Ressourcen sowie gängiger Textkodierungen. Bei unvollständigen Archiven werden wiederhergestellte Inhalte mit einem Hinweis angezeigt. Bei ungewöhnlichen verschachtelten Multipart-Strukturen und E-Mails erhältst du eine klare Erklärung.
 
 Skripte, Formulare, Weiterleitungen, eingebettete Apps und verschachtelte Seiten sind deaktiviert. Nicht unterstützte Bildformate und komplexe Website-Layouts können vom Original abweichen. Der Betrachter kann keine Website-Sitzungen oder Inhalte wiederherstellen, die nicht im Archiv gespeichert wurden. Speichere bei einer beschädigten Datei in der ursprünglichen Anwendung ein neues Webarchiv.
+
+Für eine statische PDF eines vollständigen Hauptdokuments zum Herunterladen nutze den [MHTML-zu-PDF-Konverter](../mhtml-to-pdf-converter/).

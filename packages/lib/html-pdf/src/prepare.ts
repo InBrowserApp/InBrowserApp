@@ -5,12 +5,23 @@ const resource = /url\s*\(|@|image(?:-set)?\s*\(|\\|\/\*|</i
 const raster = /^data:image\/(?:png|jpeg|gif|webp|avif|bmp);base64,/i
 
 export function prepare(source: Source) {
-  if (resource.test(source.css)) throw new Error("unsupported")
+  const cssImages = new Set<string>()
+  const unsupportedStyle = (value: string) =>
+    resource.test(
+      value.replace(
+        /url\(\s*(["']?)(data:image\/(?:png|jpeg|gif|webp|avif|bmp);base64,[a-z\d+/=]+)\1\s*\)/gi,
+        (_match, _quote, url: string) => {
+          cssImages.add(url)
+          return ""
+        }
+      )
+    )
+  if (unsupportedStyle(source.css)) throw new Error("unsupported")
   const purifier = createDOMPurify(window)
   let unsafe = false
   purifier.addHook("uponSanitizeAttribute", (_node, data) => {
     if (
-      (data.attrName === "style" && resource.test(data.attrValue)) ||
+      (data.attrName === "style" && unsupportedStyle(data.attrValue)) ||
       (data.attrName === "src" && !raster.test(data.attrValue)) ||
       ["srcset", "background", "poster"].includes(data.attrName)
     ) {
@@ -157,5 +168,5 @@ export function prepare(source: Source) {
   }
   const fragment = document.createDocumentFragment()
   fragment.append(main)
-  return { fragment, css, text, imageCount }
+  return { fragment, css, text, imageCount, cssImages: [...cssImages] }
 }
