@@ -11,3 +11,5 @@ Fon yang tersedia pada peranti anda digunakan. Fon yang tiada digantikan, yang b
 ## Fail yang tidak dapat dibuka
 
 Fail yang dilindungi kata laluan, format PowerPoint sebelum PowerPoint 97 dan varian WPS yang tidak berkaitan atau tidak serasi tidak disokong. Menukar nama sambungan fail tidak mengubah format asasnya. Gunakan Pemapar PPTX untuk pembentangan PowerPoint moden. Fail rosak serta had memori atau kanvas pelayar menyebabkan ralat; tutup atau ganti fail untuk meneruskan.
+
+Untuk mendapatkan PDF yang boleh dimuat turun, gunakan [Penukar PPT / DPS kepada PDF](../ppt-to-pdf-converter/). Semak halaman yang ditukar sebelum memuat turun.

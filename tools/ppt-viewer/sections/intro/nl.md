@@ -11,3 +11,5 @@ Lettertypen op je apparaat worden gebruikt. Ontbrekende lettertypen worden verva
 ## Bestanden die niet kunnen worden geopend
 
 Bestanden die met een wachtwoord zijn beveiligd, PowerPoint-indelingen van vóór PowerPoint 97 en andere of incompatibele WPS-varianten worden niet ondersteund. Het wijzigen van de extensie verandert de onderliggende indeling niet. Gebruik de PPTX-viewer voor moderne PowerPoint-presentaties. Beschadigde bestanden en beperkingen van het browsergeheugen of canvas veroorzaken een fout; sluit of vervang het bestand om verder te gaan.
+
+Gebruik de [PPT/DPS-naar-PDF-converter](../ppt-to-pdf-converter/) voor een downloadbare PDF. Controleer de geconverteerde pagina’s voordat je downloadt.

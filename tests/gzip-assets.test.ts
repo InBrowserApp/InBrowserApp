@@ -86,3 +86,53 @@ test("serves only resolved compressed assets during development", async () => {
     await rm(directory, { recursive: true })
   }
 })
+
+test("splits large compressed streams into host-compatible assets that reassemble losslessly", async () => {
+  const { randomBytes } = await import("node:crypto")
+  const directory = await mkdtemp(join(tmpdir(), "gzip-chunks-"))
+  try {
+    const path = join(directory, "office.wasm")
+    const input = randomBytes(21 * 1024 * 1024)
+    await writeFile(path, input)
+    const plugin = gzipAssets()
+    plugin.configResolved({ command: "build" })
+    const context = {
+      resolve: vi.fn().mockResolvedValue({ id: path }),
+      addWatchFile: vi.fn(),
+      emitFile: vi
+        .fn()
+        .mockReturnValueOnce("first")
+        .mockReturnValueOnce("second"),
+    }
+    const id = await plugin.resolveId.call(
+      context,
+      "office.wasm?gzip-chunks",
+      "entry"
+    )
+    expect(await plugin.load.call(context, id)).toBe(
+      "export default [import.meta.ROLLUP_FILE_URL_first,import.meta.ROLLUP_FILE_URL_second]"
+    )
+    const assets = context.emitFile.mock.calls.map(([asset]) => asset)
+    expect(assets.map((asset) => asset.name)).toEqual([
+      "office.wasm.0.gz",
+      "office.wasm.1.gz",
+    ])
+    expect(
+      assets.every((asset) => asset.source.length <= 20 * 1024 * 1024)
+    ).toBe(true)
+    expect(
+      gunzipSync(Buffer.concat(assets.map((asset) => asset.source))).equals(
+        input
+      )
+    ).toBe(true)
+    plugin.configResolved({ command: "serve" })
+    const code = await plugin.load.call(context, id)
+    const urls = JSON.parse(code.replace("export default ", ""))
+    expect(urls).toHaveLength(2)
+    expect(urls.every((url: string) => url.startsWith("/@gzip-assets/"))).toBe(
+      true
+    )
+  } finally {
+    await rm(directory, { recursive: true })
+  }
+})

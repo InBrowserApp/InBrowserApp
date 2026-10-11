@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions"
+import { isIsolatedToolPath } from "@/lib/browser-isolation"
 import "@/styles/global.css"
 import SiteFooter from "@/components/site-footer.astro"
 import SiteNavbar from "@/components/site-navbar.astro"
@@ -81,7 +82,11 @@ const languageOptions = createLanguageOptions(
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
     <title>{title}</title>
-    <ClientRouter />
+    <script>
+      import { setupIsolationLinks } from "@/lib/isolation-links"
+      setupIsolationLinks()
+    </script>
+    {!isIsolatedToolPath(Astro.url.pathname) && <ClientRouter />}
     <script is:inline>
       ;(function () {
         function applyTheme() {

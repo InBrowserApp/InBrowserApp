@@ -11,3 +11,5 @@ Công cụ dùng phông chữ có sẵn trên thiết bị. Phông chữ bị th
 ## Những tệp không thể mở
 
 Công cụ không hỗ trợ tệp được bảo vệ bằng mật khẩu, định dạng PowerPoint trước PowerPoint 97 và các biến thể WPS không liên quan hoặc không tương thích. Đổi phần mở rộng không làm thay đổi định dạng thực của tệp. Hãy dùng Trình xem PPTX cho bản trình bày PowerPoint hiện đại. Tệp bị hỏng và giới hạn bộ nhớ hoặc canvas của trình duyệt sẽ gây lỗi; hãy đóng hoặc thay tệp để tiếp tục.
+
+Để có tệp PDF tải xuống được, hãy dùng [Trình chuyển đổi PPT / DPS sang PDF](../ppt-to-pdf-converter/). Kiểm tra các trang đã chuyển đổi trước khi tải xuống.

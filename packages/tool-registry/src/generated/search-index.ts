@@ -20181,6 +20181,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "ppt-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: [
+      "ppt",
+      "pps",
+      "pot",
+      "dps",
+      "dpt",
+      "powerpoint",
+      "wps",
+      "pdf",
+      "presentation",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محول PPT / DPS إلى PDF",
+        description:
+          "حوّل عروض PowerPoint وWPS القديمة المدعومة إلى PDF محليًا، مع الحفاظ على ترتيب الشرائح وحجمها والنص والرسومات.",
+      },
+      de: {
+        name: "PPT/DPS-zu-PDF-Konverter",
+        description:
+          "Konvertiere unterstützte ältere PowerPoint- und WPS-Präsentationen lokal in PDF und bewahre dabei Folienreihenfolge, Größe, Text und Grafiken.",
+      },
+      en: {
+        name: "PPT / DPS to PDF Converter",
+        description:
+          "Convert supported legacy PowerPoint and WPS presentations to PDF locally, preserving slide order, size, text, and graphics.",
+      },
+      es: {
+        name: "Conversor de PPT y DPS a PDF",
+        description:
+          "Convierte presentaciones antiguas compatibles de PowerPoint y WPS a PDF de forma local, conservando el orden de las diapositivas, su tamaño, el texto y los gráficos.",
+      },
+      fr: {
+        name: "Convertisseur PPT / DPS en PDF",
+        description:
+          "Convertissez localement les anciennes présentations PowerPoint et WPS prises en charge en PDF, en conservant l’ordre des diapositives, leurs dimensions, leur texte et leurs éléments graphiques.",
+      },
+      he: {
+        name: "ממיר PPT / DPS ל-PDF",
+        description:
+          "המרת מצגות PowerPoint ו־WPS ישנות ונתמכות ל־PDF באופן מקומי, תוך שמירה על סדר השקופיות, גודלן, הטקסט והגרפיקה.",
+      },
+      hi: {
+        name: "PPT और DPS से PDF कन्वर्टर",
+        description:
+          "समर्थित पुराने प्रारूप की PowerPoint और WPS प्रस्तुतियों को स्थानीय रूप से PDF में बदलें और स्लाइडों का क्रम, आकार, टेक्स्ट और ग्राफ़िक्स बनाए रखें।",
+      },
+      id: {
+        name: "Konverter PPT / DPS ke PDF",
+        description:
+          "Konversi presentasi PowerPoint dan WPS format lama yang didukung ke PDF secara lokal, dengan mempertahankan urutan, ukuran, teks, dan elemen grafis slide.",
+      },
+      it: {
+        name: "Convertitore da PPT e DPS a PDF",
+        description:
+          "Converti localmente in PDF le presentazioni PowerPoint e WPS nei formati precedenti supportati, mantenendo l’ordine e le dimensioni delle diapositive, il testo e gli elementi grafici.",
+      },
+      ja: {
+        name: "PPT・DPSからPDFへの変換ツール",
+        description:
+          "対応する旧形式のPowerPointやWPSのプレゼンテーションをローカルでPDFに変換し、スライドの順序、サイズ、テキスト、グラフィックスを保持します。",
+      },
+      ko: {
+        name: "PPT / DPS → PDF 변환기",
+        description:
+          "지원되는 이전 형식의 PowerPoint 및 WPS 프레젠테이션을 로컬에서 PDF로 변환하고 슬라이드 순서, 크기, 텍스트와 그래픽을 유지하세요.",
+      },
+      ms: {
+        name: "Penukar PPT / DPS kepada PDF",
+        description:
+          "Tukar pembentangan PowerPoint dan WPS lama yang disokong kepada PDF secara setempat, sambil mengekalkan urutan, saiz, teks dan grafik slaid.",
+      },
+      nl: {
+        name: "PPT/DPS-naar-PDF-converter",
+        description:
+          "Converteer ondersteunde oudere PowerPoint- en WPS-presentaties lokaal naar PDF met behoud van diavolgorde, formaat, tekst en grafische elementen.",
+      },
+      no: {
+        name: "Konverterer fra PPT og DPS til PDF",
+        description:
+          "Konverter eldre PowerPoint- og WPS-presentasjoner som støttes, til PDF lokalt, og bevar lysbildenes rekkefølge, størrelse, tekst og grafikk.",
+      },
+      pl: {
+        name: "Konwerter PPT / DPS na PDF",
+        description:
+          "Konwertuj obsługiwane starsze prezentacje PowerPoint i WPS lokalnie na PDF, zachowując kolejność i rozmiar slajdów, tekst oraz elementy graficzne.",
+      },
+      pt: {
+        name: "Conversor de PPT / DPS para PDF",
+        description:
+          "Converta apresentações antigas compatíveis do PowerPoint e do WPS em PDF localmente, preservando a ordem dos slides, o tamanho, o texto e os elementos gráficos.",
+      },
+      ru: {
+        name: "Конвертер PPT и DPS в PDF",
+        description:
+          "Преобразуйте поддерживаемые презентации PowerPoint и WPS старых форматов в PDF локально, сохраняя порядок и размер слайдов, текст и графику.",
+      },
+      sv: {
+        name: "Konverterare från PPT och DPS till PDF",
+        description:
+          "Konvertera äldre PowerPoint- och WPS-presentationer som stöds till PDF lokalt och bevara bildernas ordning, storlek, text och grafik.",
+      },
+      th: {
+        name: "โปรแกรมแปลง PPT และ DPS เป็น PDF",
+        description:
+          "แปลงงานนำเสนอ PowerPoint และ WPS รุ่นเก่าที่รองรับเป็น PDF ในเครื่อง โดยคงลำดับ ขนาด ข้อความ และกราฟิกของสไลด์ไว้",
+      },
+      tr: {
+        name: "PPT / DPS’den PDF’ye Dönüştürücü",
+        description:
+          "Desteklenen eski PowerPoint ve WPS sunumlarını, slayt sırasını, boyutunu, metnini ve grafik öğelerini koruyarak yerel olarak PDF’ye dönüştürün.",
+      },
+      vi: {
+        name: "Trình chuyển đổi PPT / DPS sang PDF",
+        description:
+          "Chuyển bản trình bày PowerPoint và WPS định dạng cũ được hỗ trợ sang PDF ngay trên thiết bị, giữ nguyên thứ tự, kích thước trang chiếu, văn bản và đồ họa.",
+      },
+      "zh-CN": {
+        name: "PPT / DPS 转 PDF 转换器",
+        description:
+          "在本地将受支持的旧版 PowerPoint 和 WPS 演示文稿转换为 PDF，保留幻灯片顺序、尺寸、文本和图形。",
+      },
+      "zh-TW": {
+        name: "PPT / DPS 轉 PDF 轉換器",
+        description:
+          "在本機將支援的舊版 PowerPoint 與 WPS 簡報轉換為 PDF，保留投影片順序、尺寸、文字與圖形。",
+      },
+    },
+  },
+  {
     slug: "ppt-viewer",
     category: "document",
     icon: "file-text",

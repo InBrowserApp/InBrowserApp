@@ -11,3 +11,5 @@ Teckensnitt som finns på din enhet används. Saknade teckensnitt ersätts, vilk
 ## Filer som inte kan öppnas
 
 Lösenordsskyddade filer, PowerPoint-format äldre än PowerPoint 97 och orelaterade eller inkompatibla WPS-varianter stöds inte. Att byta filändelse ändrar inte det underliggande formatet. Använd PPTX-visaren för moderna PowerPoint-presentationer. Skadade filer och begränsningar i webbläsarens minne eller canvas ger ett fel. Stäng eller byt fil för att fortsätta.
+
+Använd [Konverterare från PPT och DPS till PDF](../ppt-to-pdf-converter/) för att få en PDF som kan laddas ner. Granska de konverterade sidorna innan du laddar ner.

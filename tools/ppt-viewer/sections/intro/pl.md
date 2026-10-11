@@ -11,3 +11,5 @@ Używane są czcionki dostępne na Twoim urządzeniu. Brakujące czcionki są za
 ## Pliki, których nie można otworzyć
 
 Pliki chronione hasłem, formaty PowerPoint starsze niż PowerPoint 97 oraz inne lub niezgodne warianty WPS nie są obsługiwane. Zmiana rozszerzenia nie zmienia rzeczywistego formatu pliku. Do nowszych prezentacji PowerPoint użyj przeglądarki PPTX. Uszkodzone pliki oraz ograniczenia pamięci przeglądarki lub elementu canvas powodują błąd; zamknij lub zastąp plik, aby kontynuować.
+
+Aby uzyskać PDF do pobrania, użyj narzędzia [Konwerter PPT / DPS na PDF](../ppt-to-pdf-converter/). Przed pobraniem sprawdź przekonwertowane strony.

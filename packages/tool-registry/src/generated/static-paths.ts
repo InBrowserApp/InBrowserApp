@@ -14814,6 +14814,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ppt-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "ppt-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "ppt-viewer",
     language: "ar",
   },

@@ -48,7 +48,8 @@
       "@file-viewer/doc@3.1.2": "patches/@file-viewer__doc@3.1.2.patch",
       "@extend-ai/react-pptx@0.2.2": "patches/@extend-ai__react-pptx@0.2.2.patch",
       "xlsx@0.20.3": "patches/xlsx@0.20.3.patch",
-      "@silurus/ooxml@0.88.0": "patches/@silurus__ooxml@0.88.0.patch"
+      "@silurus/ooxml@0.88.0": "patches/@silurus__ooxml@0.88.0.patch",
+      "@matbee/libreoffice-converter@2.7.2": "patches/@matbee__libreoffice-converter@2.7.2.patch"
     }
   }
 }

@@ -11,3 +11,5 @@ Se usan las fuentes disponibles en tu dispositivo. Las fuentes ausentes se susti
 ## Archivos que no se pueden abrir
 
 No se admiten archivos protegidos con contraseña, formatos de PowerPoint anteriores a PowerPoint 97 ni variantes de WPS de otro tipo o incompatibles. Cambiar la extensión no cambia el formato real. Usa el visor de PPTX para presentaciones de PowerPoint modernas. Los archivos dañados y las limitaciones de memoria o del lienzo del navegador generan un error; cierra o reemplaza el archivo para continuar.
+
+Para obtener un PDF descargable, usa el [Conversor de PPT y DPS a PDF](../ppt-to-pdf-converter/). Revisa las páginas convertidas antes de descargar.
