@@ -11,3 +11,5 @@ Kopteksten, voetteksten, voetnoten, overerving van stijlbladen, sectie-instellin
 ## Lokale bestanden en browsercapaciteit
 
 De documentinhoud blijft in deze browser. Ingesloten toepassingen worden niet uitgevoerd, links worden niet gevolgd en gekoppelde afbeeldingen of andere externe documentbronnen worden niet opgehaald. De viewer stelt geen limieten aan de bestandsgrootte of het aantal pagina’s. Grote documenten en afbeeldingen kunnen nog steeds het beschikbare geheugen of de canvascapaciteit van de browser overschrijden; zoom uit bij een te grote pagina of gebruik een apparaat met meer geheugen.
+
+Gebruik de [RTF-naar-PDF-converter](../rtf-to-pdf-converter/) voor een downloadbare PDF. Lees de opmerkingen over compatibiliteit en bekijk de geëxporteerde pagina’s voordat je downloadt.

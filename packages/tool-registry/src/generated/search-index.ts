@@ -23280,6 +23280,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "rtf-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["rtf", "rich-text", "pdf", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محول RTF إلى PDF",
+        description:
+          "حوّل مستندات RTF المحلية إلى PDF في متصفحك. عاين الصفحات المُصدَّرة ونزّل ملف PDF بنص مدعوم قابل للتحديد.",
+      },
+      de: {
+        name: "RTF-zu-PDF-Konverter",
+        description:
+          "Konvertiere lokale RTF-Dokumente in deinem Browser in PDF. Prüfe die exportierten Seiten in der Vorschau und lade eine PDF mit unterstütztem auswählbarem Text herunter.",
+      },
+      en: {
+        name: "RTF to PDF Converter",
+        description:
+          "Convert local RTF documents to PDF in your browser. Preview the exported pages and download a PDF with supported selectable text.",
+      },
+      es: {
+        name: "Convertidor de RTF a PDF",
+        description:
+          "Convierte documentos RTF locales a PDF en tu navegador. Previsualiza las páginas exportadas y descarga un PDF con texto compatible seleccionable.",
+      },
+      fr: {
+        name: "Convertisseur RTF en PDF",
+        description:
+          "Convertissez des documents RTF locaux en PDF dans votre navigateur. Prévisualisez les pages exportées et téléchargez un PDF dont le texte pris en charge est sélectionnable.",
+      },
+      he: {
+        name: "ממיר RTF ל־PDF",
+        description:
+          "המרת מסמכי RTF מקומיים ל־PDF בדפדפן. ניתן לצפות בעמודים המיוצאים בתצוגה מקדימה ולהוריד קובץ PDF עם טקסט נתמך שניתן לבחור.",
+      },
+      hi: {
+        name: "RTF से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में स्थानीय RTF दस्तावेज़ों को PDF में बदलें। निर्यात किए गए पृष्ठों का पूर्वावलोकन करें और समर्थित, चुने जा सकने वाले टेक्स्ट वाली PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter RTF ke PDF",
+        description:
+          "Konversi dokumen RTF lokal ke PDF di browser Anda. Pratinjau halaman yang diekspor dan unduh PDF dengan teks yang didukung tetap dapat dipilih.",
+      },
+      it: {
+        name: "Convertitore da RTF a PDF",
+        description:
+          "Converti documenti RTF locali in PDF nel browser. Visualizza l’anteprima delle pagine esportate e scarica un PDF con testo selezionabile dove supportato.",
+      },
+      ja: {
+        name: "RTFからPDFへの変換ツール",
+        description:
+          "ローカルのRTF文書をブラウザー内でPDFに変換します。書き出されたページをプレビューし、対応するテキストを選択できるPDFをダウンロードできます。",
+      },
+      ko: {
+        name: "RTF → PDF 변환기",
+        description:
+          "브라우저에서 로컬 RTF 문서를 PDF로 변환하세요. 내보낸 페이지를 미리 확인하고 지원되는 텍스트를 선택할 수 있는 PDF를 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar RTF kepada PDF",
+        description:
+          "Tukar dokumen RTF setempat kepada PDF dalam pelayar anda. Pratonton halaman yang dieksport dan muat turun PDF dengan teks yang disokong yang boleh dipilih.",
+      },
+      nl: {
+        name: "RTF-naar-PDF-converter",
+        description:
+          "Converteer lokale RTF-documenten naar PDF in je browser. Bekijk de geëxporteerde pagina’s en download een PDF met ondersteunde selecteerbare tekst.",
+      },
+      no: {
+        name: "RTF til PDF-konverterer",
+        description:
+          "Konverter lokale RTF-dokumenter til PDF i nettleseren. Forhåndsvis de eksporterte sidene og last ned en PDF der tekst som støttes, kan merkes.",
+      },
+      pl: {
+        name: "Konwerter RTF na PDF",
+        description:
+          "Konwertuj lokalne dokumenty RTF na PDF w przeglądarce. Przeglądaj wyeksportowane strony i pobierz PDF z obsługiwanym tekstem, który można zaznaczać.",
+      },
+      pt: {
+        name: "Conversor de RTF para PDF",
+        description:
+          "Converta documentos RTF locais em PDF no seu navegador. Confira as páginas exportadas e baixe um PDF com texto compatível selecionável.",
+      },
+      ru: {
+        name: "Конвертер RTF в PDF",
+        description:
+          "Преобразуйте локальные документы RTF в PDF в браузере. Просматривайте экспортированные страницы и скачивайте PDF с поддерживаемым текстом, доступным для выделения.",
+      },
+      sv: {
+        name: "Konverterare från RTF till PDF",
+        description:
+          "Konvertera lokala RTF-dokument till PDF i webbläsaren. Förhandsvisa de exporterade sidorna och ladda ner en PDF med markerbar text som stöds.",
+      },
+      th: {
+        name: "ตัวแปลง RTF เป็น PDF",
+        description:
+          "แปลงเอกสาร RTF จากอุปกรณ์เป็น PDF ในเบราว์เซอร์ ดูตัวอย่างหน้าที่ส่งออกและดาวน์โหลด PDF พร้อมข้อความที่รองรับซึ่งเลือกได้",
+      },
+      tr: {
+        name: "RTF’den PDF’ye Dönüştürücü",
+        description:
+          "Yerel RTF belgelerini tarayıcınızda PDF’ye dönüştürün. Dışa aktarılan sayfaları önizleyin ve desteklenen metinleri seçilebilir olan bir PDF indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi RTF sang PDF",
+        description:
+          "Chuyển tài liệu RTF trên thiết bị sang PDF trong trình duyệt. Xem trước các trang đã xuất và tải xuống PDF có văn bản được hỗ trợ vẫn có thể chọn được.",
+      },
+      "zh-CN": {
+        name: "RTF 转 PDF 转换器",
+        description:
+          "在浏览器中将本地 RTF 文档转换为 PDF。预览导出的页面并下载 PDF，其中受支持的文本仍可选择。",
+      },
+      "zh-TW": {
+        name: "RTF 轉 PDF 轉換器",
+        description:
+          "在瀏覽器中將本機 RTF 文件轉換為 PDF。預覽匯出的頁面，並下載支援選取文字的 PDF。",
+      },
+    },
+  },
+  {
     slug: "rtf-viewer",
     category: "document",
     icon: "file-text",

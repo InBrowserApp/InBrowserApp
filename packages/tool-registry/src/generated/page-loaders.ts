@@ -231,6 +231,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "robots-txt-generator": () => import("@tool/robots-txt-generator/page"),
   "roman-numeral-converter": () => import("@tool/roman-numeral-converter/page"),
   "rot-cipher": () => import("@tool/rot-cipher/page"),
+  "rtf-to-pdf-converter": () => import("@tool/rtf-to-pdf-converter/page"),
   "rtf-viewer": () => import("@tool/rtf-viewer/page"),
   "screen-recorder": () => import("@tool/screen-recorder/page"),
   "scrypt-key-derivation": () => import("@tool/scrypt-key-derivation/page"),

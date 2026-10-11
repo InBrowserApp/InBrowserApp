@@ -17022,6 +17022,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "rtf-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "rtf-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "rtf-viewer",
     language: "ar",
   },

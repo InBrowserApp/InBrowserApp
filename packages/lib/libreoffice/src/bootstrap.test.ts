@@ -61,14 +61,17 @@ async function run(
           options: number
         ) => {
           expect(strings(path)).toBe(
-            format === "writer"
-              ? "file:///tmp/input.odt"
-              : "file:///tmp/input.ppt"
+            format === "rtf"
+              ? "file:///tmp/input.rtf"
+              : format === "writer"
+                ? "file:///tmp/input.odt"
+                : "file:///tmp/input.ppt"
           )
           expect(strings(options)).toContain("EnableMacrosExecution=false")
           return 2
         },
-        _lok_documentGetDocumentType: () => (format === "writer" ? 0 : 2),
+        _lok_documentGetDocumentType: () =>
+          ["writer", "rtf"].includes(format ?? "") ? 0 : 2,
         _lok_documentSaveAs: (...args: Parameters<typeof save>) => {
           save(...args)
           return 1
@@ -147,4 +150,18 @@ test("retains legacy presentation export behavior", async () => {
     value: "true",
   })
   expect(result.options).not.toHaveProperty("IsSkipEmptyPages")
+})
+
+test("loads RTF through Writer and checks native page geometry", async () => {
+  const result = await run("rtf")
+  expect(result.post).toHaveBeenLastCalledWith(
+    expect.objectContaining({
+      type: "result",
+      pages: 3,
+      dimensions: expect.anything(),
+    }),
+    [expect.any(ArrayBuffer)]
+  )
+  expect(result.parts).not.toHaveBeenCalled()
+  expect(result.options.IsSkipEmptyPages.value).toBe("false")
 })

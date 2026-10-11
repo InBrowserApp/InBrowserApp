@@ -11,3 +11,5 @@ Kopf- und Fußzeilen, Fußnoten, die Vererbung von Formatvorlagen, Abschnittsein
 ## Lokale Dateien und Browserressourcen
 
 Dokumentinhalte bleiben in diesem Browser. Eingebettete Anwendungen werden nicht ausgeführt, Links nicht aufgerufen und verknüpfte Bilder oder andere entfernte Dokumentressourcen nicht abgerufen. Das Produkt legt keine Grenzen für Dateigröße oder Seitenzahl fest. Große Dokumente und Bilder können dennoch den verfügbaren Arbeitsspeicher oder die Canvas-Kapazität des Browsers überschreiten. Verkleinern Sie bei einer zu großen Seite den Zoom oder verwenden Sie ein Gerät mit mehr Arbeitsspeicher.
+
+Für eine PDF zum Herunterladen verwenden Sie den [RTF-zu-PDF-Konverter](../rtf-to-pdf-converter/). Beachten Sie seine Kompatibilitätshinweise und prüfen Sie die exportierten Seiten vor dem Herunterladen.

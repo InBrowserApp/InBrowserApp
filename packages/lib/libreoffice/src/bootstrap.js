@@ -3,8 +3,13 @@ self.onmessage = async ({ data }) => {
   const urls = []
   try {
     const { input, assets, guard } = data
-    const writer = data.format === "writer"
-    const inputPath = writer ? "/tmp/input.odt" : "/tmp/input.ppt"
+    const writer = ["writer", "rtf"].includes(data.format)
+    const inputPath =
+      data.format === "rtf"
+        ? "/tmp/input.rtf"
+        : writer
+          ? "/tmp/input.odt"
+          : "/tmp/input.ppt"
     const NativeWorker = self.Worker
     self.Worker = class extends NativeWorker {
       constructor(...args) {

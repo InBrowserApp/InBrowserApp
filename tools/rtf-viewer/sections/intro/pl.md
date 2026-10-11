@@ -11,3 +11,5 @@ Obsługa nagłówków, stopek, przypisów dolnych, dziedziczenia arkuszy stylów
 ## Pliki lokalne i zasoby przeglądarki
 
 Treść dokumentu pozostaje w tej przeglądarce. Osadzone aplikacje nie są uruchamiane, linki nie są otwierane, a połączone obrazy i inne zdalne zasoby dokumentu nie są pobierane. Narzędzie nie nakłada limitów rozmiaru pliku ani liczby stron. Duże dokumenty i obrazy mogą jednak przekroczyć dostępną pamięć lub możliwości obszaru rysowania przeglądarki; zmniejsz powiększenie zbyt dużej strony lub użyj urządzenia z większą ilością pamięci.
+
+Aby uzyskać plik PDF do pobrania, użyj [Konwertera RTF na PDF](../rtf-to-pdf-converter/). Zapoznaj się z uwagami dotyczącymi zgodności i sprawdź wyeksportowane strony przed pobraniem.

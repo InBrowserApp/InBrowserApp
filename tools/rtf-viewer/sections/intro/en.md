@@ -11,3 +11,5 @@ Headers, footers, footnotes, stylesheet inheritance, section settings, merged or
 ## Local files and browser resources
 
 Document contents stay in this browser. Embedded applications do not run, links are not followed, and linked pictures or other remote document resources are not fetched. There are no product file-size or page-count limits. Large documents and pictures can still exceed the browser’s memory or canvas capacity; reduce zoom for an oversized page, or use a device with more memory.
+
+For a downloadable PDF, use the [RTF to PDF Converter](../rtf-to-pdf-converter/). Check its compatibility notes and inspect the exported pages before downloading.

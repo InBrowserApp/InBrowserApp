@@ -11,3 +11,5 @@ Görüntüleyici; yaygın paragraf biçimlendirmelerini, vurgulamayı, yazı tip
 ## Yerel dosyalar ve tarayıcı kaynakları
 
 Belge içeriği bu tarayıcıda kalır. Gömülü uygulamalar çalıştırılmaz, bağlantılar izlenmez ve bağlantılı resimler ya da diğer uzak belge kaynakları alınmaz. Ürünün dosya boyutu veya sayfa sayısı sınırı yoktur. Büyük belgeler ve resimler yine de tarayıcının bellek veya çizim alanı kapasitesini aşabilir; aşırı büyük bir sayfa için yakınlaştırmayı azaltın veya daha fazla belleği olan bir cihaz kullanın.
+
+İndirilebilir bir PDF için [RTF’den PDF’ye Dönüştürücü](../rtf-to-pdf-converter/) aracını kullanın. İndirmeden önce uyumluluk notlarını kontrol edin ve dışa aktarılan sayfaları inceleyin.

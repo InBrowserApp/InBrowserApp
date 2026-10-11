@@ -11,3 +11,5 @@ La compatibilidad es incompleta para los encabezados y pies de página, las nota
 ## Archivos locales y recursos del navegador
 
 El contenido del documento permanece en este navegador. Las aplicaciones incrustadas no se ejecutan, los enlaces no se abren y las imágenes vinculadas u otros recursos remotos del documento no se descargan. El producto no impone límites de tamaño de archivo ni de número de páginas. Aun así, los documentos y las imágenes grandes pueden superar la memoria del navegador o su capacidad de dibujo; reduce el zoom si una página es demasiado grande o usa un dispositivo con más memoria.
+
+Para obtener un PDF descargable, usa el [Convertidor de RTF a PDF](../rtf-to-pdf-converter/). Consulta sus notas de compatibilidad e inspecciona las páginas exportadas antes de descargar.
