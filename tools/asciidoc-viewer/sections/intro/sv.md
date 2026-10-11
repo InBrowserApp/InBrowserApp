@@ -11,3 +11,5 @@ Inkluderade filer, dokumentationsprojektets attribut, egna tillägg, diagram och
 ## Lokal visning utan redigering
 
 Filerna stannar på din enhet. När ett dokument öppnas hämtas inga fjärrresurser, inga andra lokala filer läses och inga skript körs. Externa länkar öppnas separat först när du väljer dem. Stäng eller byt fil för att frigöra den aktuella förhandsvisningen. Visaren redigerar, exporterar eller bygger inte dokumentationswebbplatser. Filändelsen .asc godtas inte eftersom den även används för andra filtyper.
+
+För en nedladdningsbar utskriftskopia i A4-format kan du använda [AsciiDoc till PDF-konverteraren](../asciidoc-to-pdf-converter/). Den förhandsvisar den genererade PDF-filen och förklarar vilka källor som stöds och vilka begränsningar resultatet har.

@@ -1,6 +1,6 @@
 import { afterEach, expect, test, vi } from "vitest"
 const mocks = vi.hoisted(() => ({ convert: vi.fn(), decode: vi.fn() }))
-vi.mock("./core/convert", () => mocks)
+vi.mock("./convert", () => mocks)
 afterEach(() => {
   vi.restoreAllMocks()
   vi.clearAllMocks()
@@ -8,7 +8,7 @@ afterEach(() => {
 
 test("the worker reads locally and returns conversion output or a classified failure", async () => {
   const post = vi.spyOn(self, "postMessage").mockImplementation(() => {})
-  await import("./convert.worker")
+  await import("./worker")
   const bytes = new ArrayBuffer(2)
   const event = {
     data: { arrayBuffer: async () => bytes },

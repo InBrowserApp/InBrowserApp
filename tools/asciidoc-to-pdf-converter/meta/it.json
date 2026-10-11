@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da AsciiDoc a PDF",
+  "description": "Converti un documento ADOC o AsciiDoc locale in PDF nel browser. Visualizza in anteprima le pagine di immagini A4 con tema fisso e scarica il risultato senza caricare il file."
+}

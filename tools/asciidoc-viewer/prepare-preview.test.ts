@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { expect, test } from "vitest"
-import { convert } from "./core/convert"
+import { convert } from "../../packages/lib/asciidoc/src/convert"
 import { preparePreview } from "./prepare-preview"
 import m from "./messages/en.json"
 

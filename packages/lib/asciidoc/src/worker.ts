@@ -1,5 +1,5 @@
-import { convert, decode } from "./core/convert"
-import { failure } from "./core/failure"
+import { convert, decode } from "./convert"
+import { failure } from "./failure"
 import type { WorkerResult } from "./types"
 
 self.onmessage = async (event: MessageEvent<File>) => {

@@ -11,3 +11,5 @@ Fail yang disertakan, atribut projek dokumentasi, sambungan tersuai, rajah dan s
 ## Paparan setempat untuk bacaan sahaja
 
 Fail kekal pada peranti anda. Membuka dokumen tidak mengambil sumber jauh, membaca fail setempat lain atau menjalankan skrip. Pautan luar hanya dibuka secara berasingan apabila dipilih. Tutup atau ganti fail untuk melepaskan pratonton semasa. Pemapar ini tidak menyunting, mengeksport atau membina laman dokumentasi. Sambungan .asc tidak diterima kerana ia turut digunakan untuk jenis fail lain yang tidak berkaitan.
+
+Untuk salinan cetakan A4 yang boleh dimuat turun, gunakan [Penukar AsciiDoc kepada PDF](../asciidoc-to-pdf-converter/). Alat ini memaparkan pratonton PDF yang dihasilkan dan menerangkan sumber yang disokong serta batasan hasilnya.

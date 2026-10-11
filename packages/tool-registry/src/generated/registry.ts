@@ -901,6 +901,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "asciidoc-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["asciidoc", "adoc", "pdf", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل AsciiDoc إلى PDF",
+        description:
+          "حوّل مستند ADOC أو AsciiDoc محليًا إلى PDF في متصفحك. عاين صفحات A4 مصوّرة بمظهر ثابت ونزّل النتيجة دون رفع ملفك.",
+      },
+      de: {
+        name: "AsciiDoc-zu-PDF-Konverter",
+        description:
+          "Konvertiere ein lokales ADOC- oder AsciiDoc-Dokument im Browser in PDF. Prüfe A4-Bildseiten mit festem Design in der Vorschau und lade das Ergebnis herunter, ohne deine Datei hochzuladen.",
+      },
+      en: {
+        name: "AsciiDoc to PDF Converter",
+        description:
+          "Convert a local ADOC or AsciiDoc document to PDF in your browser. Preview fixed-theme A4 image pages and download the result without uploading your file.",
+      },
+      es: {
+        name: "Convertidor de AsciiDoc a PDF",
+        description:
+          "Convierte un documento ADOC o AsciiDoc local a PDF en tu navegador. Previsualiza páginas A4 de imágenes con un tema fijo y descarga el resultado sin subir tu archivo.",
+      },
+      fr: {
+        name: "Convertisseur AsciiDoc en PDF",
+        description:
+          "Convertissez un document ADOC ou AsciiDoc local en PDF dans votre navigateur. Prévisualisez les pages A4 sous forme d’images avec un thème fixe et téléchargez le résultat sans envoyer votre fichier.",
+      },
+      he: {
+        name: "ממיר AsciiDoc ל־PDF",
+        description:
+          "המרת מסמך ADOC או AsciiDoc מקומי ל־PDF בדפדפן שלך. אפשר לצפות בתצוגה מקדימה של עמודי תמונה בגודל A4 בעיצוב קבוע ולהוריד את התוצאה ללא העלאת הקובץ.",
+      },
+      hi: {
+        name: "AsciiDoc से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में स्थानीय ADOC या AsciiDoc दस्तावेज़ को PDF में बदलें। निश्चित थीम वाले A4 चित्र पृष्ठों का पूर्वावलोकन देखें और अपनी फ़ाइल अपलोड किए बिना परिणाम डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter AsciiDoc ke PDF",
+        description:
+          "Konversi dokumen ADOC atau AsciiDoc lokal ke PDF di browser Anda. Pratinjau halaman gambar A4 dengan tema tetap dan unduh hasilnya tanpa mengunggah file Anda.",
+      },
+      it: {
+        name: "Convertitore da AsciiDoc a PDF",
+        description:
+          "Converti un documento ADOC o AsciiDoc locale in PDF nel browser. Visualizza in anteprima le pagine di immagini A4 con tema fisso e scarica il risultato senza caricare il file.",
+      },
+      ja: {
+        name: "AsciiDocからPDFへの変換ツール",
+        description:
+          "端末内のADOCまたはAsciiDoc文書をブラウザーでPDFに変換します。固定テーマのA4画像ページをプレビューし、ファイルをアップロードせずに結果をダウンロードできます。",
+      },
+      ko: {
+        name: "AsciiDoc PDF 변환기",
+        description:
+          "기기에 있는 ADOC 또는 AsciiDoc 문서를 브라우저에서 PDF로 변환하세요. 고정된 테마의 A4 이미지 페이지를 미리 보고 파일 업로드 없이 결과를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar AsciiDoc kepada PDF",
+        description:
+          "Tukar dokumen ADOC atau AsciiDoc setempat kepada PDF dalam pelayar anda. Pratonton halaman imej A4 dengan tema tetap dan muat turun hasilnya tanpa memuat naik fail anda.",
+      },
+      nl: {
+        name: "AsciiDoc naar PDF-converter",
+        description:
+          "Converteer een lokaal ADOC- of AsciiDoc-document naar PDF in je browser. Bekijk A4-afbeeldingspagina’s met een vast thema en download het resultaat zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "AsciiDoc til PDF-konverterer",
+        description:
+          "Konverter et lokalt ADOC- eller AsciiDoc-dokument til PDF i nettleseren. Forhåndsvis A4-bildesider med et fast tema og last ned resultatet uten å laste opp filen.",
+      },
+      pl: {
+        name: "Konwerter AsciiDoc na PDF",
+        description:
+          "Konwertuj lokalny dokument ADOC lub AsciiDoc na PDF w przeglądarce. Obejrzyj obrazy stron A4 ze stałym motywem i pobierz wynik bez przesyłania pliku.",
+      },
+      pt: {
+        name: "Conversor de AsciiDoc para PDF",
+        description:
+          "Converta um documento ADOC ou AsciiDoc local para PDF no seu navegador. Confira as páginas A4 geradas como imagens com um tema fixo e baixe o resultado sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Конвертер AsciiDoc в PDF",
+        description:
+          "Преобразуйте локальный документ ADOC или AsciiDoc в PDF в браузере. Просмотрите страницы A4 в виде изображений с фиксированной темой оформления и скачайте результат без отправки файла на сервер.",
+      },
+      sv: {
+        name: "AsciiDoc till PDF-konverterare",
+        description:
+          "Konvertera ett lokalt ADOC- eller AsciiDoc-dokument till PDF i webbläsaren. Förhandsgranska A4-bildsidor med ett fast tema och ladda ner resultatet utan att ladda upp filen.",
+      },
+      th: {
+        name: "โปรแกรมแปลง AsciiDoc เป็น PDF",
+        description:
+          "แปลงเอกสาร ADOC หรือ AsciiDoc บนอุปกรณ์เป็น PDF ในเบราว์เซอร์ ดูตัวอย่างหน้าภาพ A4 ที่ใช้ธีมตายตัวและดาวน์โหลดผลลัพธ์โดยไม่ต้องอัปโหลดไฟล์ของคุณ",
+      },
+      tr: {
+        name: "AsciiDoc’tan PDF’ye Dönüştürücü",
+        description:
+          "Yerel bir ADOC veya AsciiDoc belgesini tarayıcınızda PDF’ye dönüştürün. Sabit temalı A4 görsel sayfalarını önizleyin ve dosyanızı yüklemeden sonucu indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi AsciiDoc sang PDF",
+        description:
+          "Chuyển tài liệu ADOC hoặc AsciiDoc trên thiết bị sang PDF trong trình duyệt. Xem trước các trang hình ảnh A4 với giao diện cố định và tải xuống kết quả mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "AsciiDoc 转 PDF 转换器",
+        description:
+          "在浏览器中将本地 ADOC 或 AsciiDoc 文档转换为 PDF。预览使用固定主题的 A4 图像页面并下载结果，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "AsciiDoc 轉 PDF 轉換器",
+        description:
+          "在瀏覽器中將本機 ADOC 或 AsciiDoc 文件轉換為 PDF。預覽採用固定主題的 A4 圖片頁面，並下載結果，無須上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "asciidoc-viewer",
     category: "document",
     icon: "file-text",
@@ -33961,6 +34084,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "ASCII 藝術產生器",
         description:
           "使用多種 figlet 字型將文字轉換為 ASCII 藝術。輸入文字或短語，選擇字型，然後複製結果。",
+      },
+    },
+  },
+  "asciidoc-to-pdf-converter": {
+    slug: "asciidoc-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["asciidoc", "adoc", "pdf", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل AsciiDoc إلى PDF",
+        description:
+          "حوّل مستند ADOC أو AsciiDoc محليًا إلى PDF في متصفحك. عاين صفحات A4 مصوّرة بمظهر ثابت ونزّل النتيجة دون رفع ملفك.",
+      },
+      de: {
+        name: "AsciiDoc-zu-PDF-Konverter",
+        description:
+          "Konvertiere ein lokales ADOC- oder AsciiDoc-Dokument im Browser in PDF. Prüfe A4-Bildseiten mit festem Design in der Vorschau und lade das Ergebnis herunter, ohne deine Datei hochzuladen.",
+      },
+      en: {
+        name: "AsciiDoc to PDF Converter",
+        description:
+          "Convert a local ADOC or AsciiDoc document to PDF in your browser. Preview fixed-theme A4 image pages and download the result without uploading your file.",
+      },
+      es: {
+        name: "Convertidor de AsciiDoc a PDF",
+        description:
+          "Convierte un documento ADOC o AsciiDoc local a PDF en tu navegador. Previsualiza páginas A4 de imágenes con un tema fijo y descarga el resultado sin subir tu archivo.",
+      },
+      fr: {
+        name: "Convertisseur AsciiDoc en PDF",
+        description:
+          "Convertissez un document ADOC ou AsciiDoc local en PDF dans votre navigateur. Prévisualisez les pages A4 sous forme d’images avec un thème fixe et téléchargez le résultat sans envoyer votre fichier.",
+      },
+      he: {
+        name: "ממיר AsciiDoc ל־PDF",
+        description:
+          "המרת מסמך ADOC או AsciiDoc מקומי ל־PDF בדפדפן שלך. אפשר לצפות בתצוגה מקדימה של עמודי תמונה בגודל A4 בעיצוב קבוע ולהוריד את התוצאה ללא העלאת הקובץ.",
+      },
+      hi: {
+        name: "AsciiDoc से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में स्थानीय ADOC या AsciiDoc दस्तावेज़ को PDF में बदलें। निश्चित थीम वाले A4 चित्र पृष्ठों का पूर्वावलोकन देखें और अपनी फ़ाइल अपलोड किए बिना परिणाम डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter AsciiDoc ke PDF",
+        description:
+          "Konversi dokumen ADOC atau AsciiDoc lokal ke PDF di browser Anda. Pratinjau halaman gambar A4 dengan tema tetap dan unduh hasilnya tanpa mengunggah file Anda.",
+      },
+      it: {
+        name: "Convertitore da AsciiDoc a PDF",
+        description:
+          "Converti un documento ADOC o AsciiDoc locale in PDF nel browser. Visualizza in anteprima le pagine di immagini A4 con tema fisso e scarica il risultato senza caricare il file.",
+      },
+      ja: {
+        name: "AsciiDocからPDFへの変換ツール",
+        description:
+          "端末内のADOCまたはAsciiDoc文書をブラウザーでPDFに変換します。固定テーマのA4画像ページをプレビューし、ファイルをアップロードせずに結果をダウンロードできます。",
+      },
+      ko: {
+        name: "AsciiDoc PDF 변환기",
+        description:
+          "기기에 있는 ADOC 또는 AsciiDoc 문서를 브라우저에서 PDF로 변환하세요. 고정된 테마의 A4 이미지 페이지를 미리 보고 파일 업로드 없이 결과를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar AsciiDoc kepada PDF",
+        description:
+          "Tukar dokumen ADOC atau AsciiDoc setempat kepada PDF dalam pelayar anda. Pratonton halaman imej A4 dengan tema tetap dan muat turun hasilnya tanpa memuat naik fail anda.",
+      },
+      nl: {
+        name: "AsciiDoc naar PDF-converter",
+        description:
+          "Converteer een lokaal ADOC- of AsciiDoc-document naar PDF in je browser. Bekijk A4-afbeeldingspagina’s met een vast thema en download het resultaat zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "AsciiDoc til PDF-konverterer",
+        description:
+          "Konverter et lokalt ADOC- eller AsciiDoc-dokument til PDF i nettleseren. Forhåndsvis A4-bildesider med et fast tema og last ned resultatet uten å laste opp filen.",
+      },
+      pl: {
+        name: "Konwerter AsciiDoc na PDF",
+        description:
+          "Konwertuj lokalny dokument ADOC lub AsciiDoc na PDF w przeglądarce. Obejrzyj obrazy stron A4 ze stałym motywem i pobierz wynik bez przesyłania pliku.",
+      },
+      pt: {
+        name: "Conversor de AsciiDoc para PDF",
+        description:
+          "Converta um documento ADOC ou AsciiDoc local para PDF no seu navegador. Confira as páginas A4 geradas como imagens com um tema fixo e baixe o resultado sem enviar seu arquivo.",
+      },
+      ru: {
+        name: "Конвертер AsciiDoc в PDF",
+        description:
+          "Преобразуйте локальный документ ADOC или AsciiDoc в PDF в браузере. Просмотрите страницы A4 в виде изображений с фиксированной темой оформления и скачайте результат без отправки файла на сервер.",
+      },
+      sv: {
+        name: "AsciiDoc till PDF-konverterare",
+        description:
+          "Konvertera ett lokalt ADOC- eller AsciiDoc-dokument till PDF i webbläsaren. Förhandsgranska A4-bildsidor med ett fast tema och ladda ner resultatet utan att ladda upp filen.",
+      },
+      th: {
+        name: "โปรแกรมแปลง AsciiDoc เป็น PDF",
+        description:
+          "แปลงเอกสาร ADOC หรือ AsciiDoc บนอุปกรณ์เป็น PDF ในเบราว์เซอร์ ดูตัวอย่างหน้าภาพ A4 ที่ใช้ธีมตายตัวและดาวน์โหลดผลลัพธ์โดยไม่ต้องอัปโหลดไฟล์ของคุณ",
+      },
+      tr: {
+        name: "AsciiDoc’tan PDF’ye Dönüştürücü",
+        description:
+          "Yerel bir ADOC veya AsciiDoc belgesini tarayıcınızda PDF’ye dönüştürün. Sabit temalı A4 görsel sayfalarını önizleyin ve dosyanızı yüklemeden sonucu indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi AsciiDoc sang PDF",
+        description:
+          "Chuyển tài liệu ADOC hoặc AsciiDoc trên thiết bị sang PDF trong trình duyệt. Xem trước các trang hình ảnh A4 với giao diện cố định và tải xuống kết quả mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "AsciiDoc 转 PDF 转换器",
+        description:
+          "在浏览器中将本地 ADOC 或 AsciiDoc 文档转换为 PDF。预览使用固定主题的 A4 图像页面并下载结果，无需上传文件。",
+      },
+      "zh-TW": {
+        name: "AsciiDoc 轉 PDF 轉換器",
+        description:
+          "在瀏覽器中將本機 ADOC 或 AsciiDoc 文件轉換為 PDF。預覽採用固定主題的 A4 圖片頁面，並下載結果，無須上傳檔案。",
       },
     },
   },
