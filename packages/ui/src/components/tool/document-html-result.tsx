@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react"
+import type { ReactNode } from "react"
 import { DocumentDownload } from "./document-download"
 import { DocumentFrame } from "./document-frame"
 import { DocumentZoom } from "./document-zoom"
@@ -27,12 +28,14 @@ export function DocumentHtmlResult({
   file,
   filename,
   messages: m,
+  notes,
 }: {
   html: string
   title: string
   file: Blob
   filename: string
   messages: Messages
+  notes?: ReactNode
 }) {
   const [zoom, setZoom] = useState(100)
   const [position, setPosition] = useState(0)
@@ -42,12 +45,16 @@ export function DocumentHtmlResult({
   const onResourceError = useCallback(() => setFailed(true), [])
   return (
     <>
-      <Alert className="shrink-0 rounded-none border-x-0 border-t-0">
-        <AlertTitle>{failed ? m.error : m.notes}</AlertTitle>
-        <AlertDescription>
-          {failed ? m.failed : m.layoutNotice}
-        </AlertDescription>
-      </Alert>
+      {!failed && notes ? (
+        notes
+      ) : (
+        <Alert className="shrink-0 rounded-none border-x-0 border-t-0">
+          <AlertTitle>{failed ? m.error : m.notes}</AlertTitle>
+          <AlertDescription>
+            {failed ? m.failed : m.layoutNotice}
+          </AlertDescription>
+        </Alert>
+      )}
       <div className="flex shrink-0 flex-wrap items-center justify-between gap-2 border-b p-2">
         <p role="status" className="text-sm text-muted-foreground">
           {failed ? m.unsupported : m.ready}

@@ -67,6 +67,7 @@ test("previews the output with zoom, safe navigation and exact HTML download", a
   expect(download.getAttribute("download")).toBe("report.v2.html")
   expect(URL.createObjectURL).toHaveBeenCalledWith(result.file)
   expect(screen.getByText(m.ready)).toBeTruthy()
+  expect(screen.getByText(m.notes).closest("details")!.open).toBe(false)
   expect(screen.getByText(m.layoutNotice)).toBeTruthy()
   fireEvent.click(screen.getByRole("button", { name: m.zoomIn }))
   expect(screen.getByLabelText(m.documentBody).getAttribute("data-zoom")).toBe(

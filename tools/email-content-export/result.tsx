@@ -41,6 +41,14 @@ export function Result({
           file={output.file}
           filename={stem + ".html"}
           messages={{ ...m, layoutNotice: m.styleNotice }}
+          notes={
+            <details className="shrink-0 border-b px-3 py-2 text-sm">
+              <summary className="cursor-pointer font-medium">
+                {m.notes}
+              </summary>
+              <p className="pt-2 text-muted-foreground">{m.styleNotice}</p>
+            </details>
+          }
         />
       </TabsContent>
       <TabsContent
