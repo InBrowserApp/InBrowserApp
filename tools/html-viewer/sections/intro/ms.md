@@ -11,3 +11,5 @@ HTML dipaparkan sebagai dokumen berterusan; susun atur laman web yang rumit mung
 ## Paparan setempat untuk bacaan sahaja
 
 Fail kekal pada peranti anda. Skrip, borang, pengalihan dan bingkai terbenam dinyahdayakan. Memilih pautan luar membukanya secara berasingan. Pemapar ini tidak memuatkan alamat laman web, memulihkan sesi log masuk atau menjalankan aplikasi web. Tutup atau ganti dokumen untuk melepaskan pratonton semasa. Arkib MHTML memerlukan pemapar MHTML.
+
+Untuk memuat turun PDF statik daripada dokumen kendiri, gunakan [Penukar HTML kepada PDF](../html-to-pdf-converter/).

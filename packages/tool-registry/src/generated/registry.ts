@@ -10772,6 +10772,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "html-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["html", "htm", "xhtml", "pdf", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل HTML إلى PDF",
+        description:
+          "حوّل مستند HTML مكتفيًا بذاته إلى PDF محليًا. عاين الصفحات المصوّرة الناتجة بحجم A4 ونزّل ملف PDF نفسه.",
+      },
+      de: {
+        name: "HTML-zu-PDF-Konverter",
+        description:
+          "Konvertiere ein eigenständiges HTML-Dokument lokal in PDF. Sieh dir die erzeugten A4-Bildseiten in der Vorschau an und lade dieselbe PDF herunter.",
+      },
+      en: {
+        name: "HTML to PDF Converter",
+        description:
+          "Convert a self-contained HTML document to PDF locally. Preview the generated A4 image pages and download the same PDF.",
+      },
+      es: {
+        name: "Conversor de HTML a PDF",
+        description:
+          "Convierte un documento HTML autónomo a PDF de forma local. Previsualiza las páginas A4 generadas como imágenes y descarga el mismo PDF.",
+      },
+      fr: {
+        name: "Convertisseur HTML en PDF",
+        description:
+          "Convertissez un document HTML autonome en PDF localement. Prévisualisez les pages A4 générées sous forme d’images et téléchargez ce même PDF.",
+      },
+      he: {
+        name: "ממיר HTML ל־PDF",
+        description:
+          "המרת מסמך HTML עצמאי ל־PDF באופן מקומי. אפשר לצפות בתצוגה מקדימה של עמודי התמונה בגודל A4 שנוצרו ולהוריד את אותו קובץ PDF.",
+      },
+      hi: {
+        name: "HTML से PDF कन्वर्टर",
+        description:
+          "स्वयंपूर्ण HTML दस्तावेज़ को स्थानीय रूप से PDF में बदलें। तैयार हुए A4 चित्र पृष्ठों का पूर्वावलोकन देखें और वही PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter HTML ke PDF",
+        description:
+          "Konversikan dokumen HTML mandiri ke PDF secara lokal. Pratinjau halaman gambar A4 yang dihasilkan dan unduh PDF yang sama.",
+      },
+      it: {
+        name: "Convertitore da HTML a PDF",
+        description:
+          "Converti un documento HTML autonomo in PDF in locale. Visualizza in anteprima le pagine A4 generate come immagini e scarica lo stesso PDF.",
+      },
+      ja: {
+        name: "HTMLからPDFへの変換ツール",
+        description:
+          "必要なリソースをすべて含む単一のHTML文書を、端末内でPDFに変換します。生成されたA4の画像ページをプレビューし、同じPDFをダウンロードできます。",
+      },
+      ko: {
+        name: "HTML PDF 변환기",
+        description:
+          "필요한 리소스가 모두 포함된 HTML 문서를 로컬에서 PDF로 변환하세요. 생성된 A4 이미지 페이지를 미리 보고 동일한 PDF를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar HTML kepada PDF",
+        description:
+          "Tukar dokumen HTML kendiri kepada PDF secara setempat. Pratonton halaman imej A4 yang dihasilkan dan muat turun PDF yang sama.",
+      },
+      nl: {
+        name: "HTML naar PDF-converter",
+        description:
+          "Converteer een zelfstandig HTML-document lokaal naar PDF. Bekijk de gegenereerde A4-afbeeldingspagina’s en download dezelfde PDF.",
+      },
+      no: {
+        name: "HTML til PDF-konverterer",
+        description:
+          "Konverter et selvstendig HTML-dokument til PDF lokalt. Forhåndsvis de genererte A4-bildesidene og last ned den samme PDF-en.",
+      },
+      pl: {
+        name: "Konwerter HTML na PDF",
+        description:
+          "Konwertuj samodzielny dokument HTML na PDF lokalnie. Obejrzyj wygenerowane obrazy stron A4 i pobierz ten sam plik PDF.",
+      },
+      pt: {
+        name: "Conversor de HTML para PDF",
+        description:
+          "Converta um documento HTML autossuficiente para PDF localmente. Confira as páginas A4 geradas como imagens e baixe o mesmo PDF.",
+      },
+      ru: {
+        name: "Конвертер HTML в PDF",
+        description:
+          "Преобразуйте HTML-документ со всеми ресурсами внутри файла в PDF локально. Просмотрите созданные страницы A4 в виде изображений и скачайте тот же PDF.",
+      },
+      sv: {
+        name: "HTML till PDF-konverterare",
+        description:
+          "Konvertera ett fristående HTML-dokument till PDF lokalt. Förhandsgranska de genererade A4-bildsidorna och ladda ner samma PDF.",
+      },
+      th: {
+        name: "โปรแกรมแปลง HTML เป็น PDF",
+        description:
+          "แปลงเอกสาร HTML ที่รวมทุกอย่างไว้ในไฟล์เดียวเป็น PDF ในเครื่อง ดูตัวอย่างหน้าภาพ A4 ที่สร้างขึ้นและดาวน์โหลด PDF เดียวกัน",
+      },
+      tr: {
+        name: "HTML’den PDF’ye Dönüştürücü",
+        description:
+          "Tüm kaynaklarını içinde barındıran bir HTML belgesini yerel olarak PDF’ye dönüştürün. Oluşturulan A4 görsel sayfalarını önizleyin ve aynı PDF’yi indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi HTML sang PDF",
+        description:
+          "Chuyển tài liệu HTML chứa sẵn mọi tài nguyên sang PDF ngay trên thiết bị. Xem trước các trang hình ảnh A4 đã tạo và tải xuống chính tệp PDF đó.",
+      },
+      "zh-CN": {
+        name: "HTML 转 PDF 转换器",
+        description:
+          "在本地将包含全部资源的独立 HTML 文档转换为 PDF。预览生成的 A4 图像页面，并下载同一份 PDF。",
+      },
+      "zh-TW": {
+        name: "HTML 轉 PDF 轉換器",
+        description:
+          "在本機將內容完整的獨立 HTML 文件轉換為 PDF。預覽產生的 A4 圖片頁面，並下載同一份 PDF。",
+      },
+    },
+  },
+  {
     slug: "html-viewer",
     category: "document",
     icon: "file-text",
@@ -43586,6 +43709,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "HTML 轉 Markdown 轉換器",
         description:
           "使用可調整的標題、清單與程式碼區塊樣式，將原始 HTML 轉成 Markdown。貼上標記或匯入檔案，然後複製或下載結果。",
+      },
+    },
+  },
+  "html-to-pdf-converter": {
+    slug: "html-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["html", "htm", "xhtml", "pdf", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل HTML إلى PDF",
+        description:
+          "حوّل مستند HTML مكتفيًا بذاته إلى PDF محليًا. عاين الصفحات المصوّرة الناتجة بحجم A4 ونزّل ملف PDF نفسه.",
+      },
+      de: {
+        name: "HTML-zu-PDF-Konverter",
+        description:
+          "Konvertiere ein eigenständiges HTML-Dokument lokal in PDF. Sieh dir die erzeugten A4-Bildseiten in der Vorschau an und lade dieselbe PDF herunter.",
+      },
+      en: {
+        name: "HTML to PDF Converter",
+        description:
+          "Convert a self-contained HTML document to PDF locally. Preview the generated A4 image pages and download the same PDF.",
+      },
+      es: {
+        name: "Conversor de HTML a PDF",
+        description:
+          "Convierte un documento HTML autónomo a PDF de forma local. Previsualiza las páginas A4 generadas como imágenes y descarga el mismo PDF.",
+      },
+      fr: {
+        name: "Convertisseur HTML en PDF",
+        description:
+          "Convertissez un document HTML autonome en PDF localement. Prévisualisez les pages A4 générées sous forme d’images et téléchargez ce même PDF.",
+      },
+      he: {
+        name: "ממיר HTML ל־PDF",
+        description:
+          "המרת מסמך HTML עצמאי ל־PDF באופן מקומי. אפשר לצפות בתצוגה מקדימה של עמודי התמונה בגודל A4 שנוצרו ולהוריד את אותו קובץ PDF.",
+      },
+      hi: {
+        name: "HTML से PDF कन्वर्टर",
+        description:
+          "स्वयंपूर्ण HTML दस्तावेज़ को स्थानीय रूप से PDF में बदलें। तैयार हुए A4 चित्र पृष्ठों का पूर्वावलोकन देखें और वही PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter HTML ke PDF",
+        description:
+          "Konversikan dokumen HTML mandiri ke PDF secara lokal. Pratinjau halaman gambar A4 yang dihasilkan dan unduh PDF yang sama.",
+      },
+      it: {
+        name: "Convertitore da HTML a PDF",
+        description:
+          "Converti un documento HTML autonomo in PDF in locale. Visualizza in anteprima le pagine A4 generate come immagini e scarica lo stesso PDF.",
+      },
+      ja: {
+        name: "HTMLからPDFへの変換ツール",
+        description:
+          "必要なリソースをすべて含む単一のHTML文書を、端末内でPDFに変換します。生成されたA4の画像ページをプレビューし、同じPDFをダウンロードできます。",
+      },
+      ko: {
+        name: "HTML PDF 변환기",
+        description:
+          "필요한 리소스가 모두 포함된 HTML 문서를 로컬에서 PDF로 변환하세요. 생성된 A4 이미지 페이지를 미리 보고 동일한 PDF를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar HTML kepada PDF",
+        description:
+          "Tukar dokumen HTML kendiri kepada PDF secara setempat. Pratonton halaman imej A4 yang dihasilkan dan muat turun PDF yang sama.",
+      },
+      nl: {
+        name: "HTML naar PDF-converter",
+        description:
+          "Converteer een zelfstandig HTML-document lokaal naar PDF. Bekijk de gegenereerde A4-afbeeldingspagina’s en download dezelfde PDF.",
+      },
+      no: {
+        name: "HTML til PDF-konverterer",
+        description:
+          "Konverter et selvstendig HTML-dokument til PDF lokalt. Forhåndsvis de genererte A4-bildesidene og last ned den samme PDF-en.",
+      },
+      pl: {
+        name: "Konwerter HTML na PDF",
+        description:
+          "Konwertuj samodzielny dokument HTML na PDF lokalnie. Obejrzyj wygenerowane obrazy stron A4 i pobierz ten sam plik PDF.",
+      },
+      pt: {
+        name: "Conversor de HTML para PDF",
+        description:
+          "Converta um documento HTML autossuficiente para PDF localmente. Confira as páginas A4 geradas como imagens e baixe o mesmo PDF.",
+      },
+      ru: {
+        name: "Конвертер HTML в PDF",
+        description:
+          "Преобразуйте HTML-документ со всеми ресурсами внутри файла в PDF локально. Просмотрите созданные страницы A4 в виде изображений и скачайте тот же PDF.",
+      },
+      sv: {
+        name: "HTML till PDF-konverterare",
+        description:
+          "Konvertera ett fristående HTML-dokument till PDF lokalt. Förhandsgranska de genererade A4-bildsidorna och ladda ner samma PDF.",
+      },
+      th: {
+        name: "โปรแกรมแปลง HTML เป็น PDF",
+        description:
+          "แปลงเอกสาร HTML ที่รวมทุกอย่างไว้ในไฟล์เดียวเป็น PDF ในเครื่อง ดูตัวอย่างหน้าภาพ A4 ที่สร้างขึ้นและดาวน์โหลด PDF เดียวกัน",
+      },
+      tr: {
+        name: "HTML’den PDF’ye Dönüştürücü",
+        description:
+          "Tüm kaynaklarını içinde barındıran bir HTML belgesini yerel olarak PDF’ye dönüştürün. Oluşturulan A4 görsel sayfalarını önizleyin ve aynı PDF’yi indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi HTML sang PDF",
+        description:
+          "Chuyển tài liệu HTML chứa sẵn mọi tài nguyên sang PDF ngay trên thiết bị. Xem trước các trang hình ảnh A4 đã tạo và tải xuống chính tệp PDF đó.",
+      },
+      "zh-CN": {
+        name: "HTML 转 PDF 转换器",
+        description:
+          "在本地将包含全部资源的独立 HTML 文档转换为 PDF。预览生成的 A4 图像页面，并下载同一份 PDF。",
+      },
+      "zh-TW": {
+        name: "HTML 轉 PDF 轉換器",
+        description:
+          "在本機將內容完整的獨立 HTML 文件轉換為 PDF。預覽產生的 A4 圖片頁面，並下載同一份 PDF。",
       },
     },
   },

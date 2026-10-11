@@ -11,3 +11,5 @@ HTML ditampilkan sebagai dokumen berkesinambungan; tata letak situs web yang kom
 ## Tampilan lokal hanya baca
 
 File tetap di perangkat Anda. Skrip, formulir, pengalihan, dan bingkai tersemat dinonaktifkan. Memilih tautan eksternal akan membukanya secara terpisah. Penampil ini tidak memuat alamat situs web, memulihkan sesi login, atau menjalankan aplikasi web. Tutup atau ganti dokumen untuk menghapus pratinjau saat ini dari memori. Arsip MHTML memerlukan penampil MHTML.
+
+Untuk mengunduh PDF statis dari dokumen mandiri, gunakan [Konverter HTML ke PDF](../html-to-pdf-converter/).

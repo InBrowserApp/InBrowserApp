@@ -11,3 +11,5 @@ HTML visas som ett sammanhängande dokument. Komplexa webbplatslayouter kan se a
 ## Lokal, skrivskyddad visning
 
 Filerna stannar på din enhet. Skript, formulär, omdirigeringar och inbäddade ramar är inaktiverade. När du väljer en extern länk öppnas den separat. Visaren läser inte in webbadresser, återställer inte inloggningssessioner och kör inte webbappar. Stäng eller byt dokument för att frigöra den aktuella förhandsvisningen. MHTML-arkiv kräver en MHTML-visare.
+
+För att ladda ner en statisk PDF av ett fristående dokument, använd [HTML till PDF-konverteraren](../html-to-pdf-converter/).

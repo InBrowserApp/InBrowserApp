@@ -11,3 +11,5 @@ HTML wordt weergegeven als één doorlopend document; complexe website-indelinge
 ## Lokaal bekijken zonder bewerking
 
 Bestanden blijven op je apparaat. Scripts, formulieren, omleidingen en ingesloten frames zijn uitgeschakeld. Als je een externe link selecteert, wordt deze apart geopend. De viewer laadt geen websiteadressen, herstelt geen inlogsessies en voert geen webtoepassingen uit. Sluit of vervang het document om het huidige voorbeeld vrij te geven. Voor MHTML-archieven is een MHTML-viewer nodig.
+
+Gebruik de [HTML naar PDF-converter](../html-to-pdf-converter/) om een statische PDF van een zelfstandig document te downloaden.

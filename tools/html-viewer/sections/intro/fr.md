@@ -11,3 +11,5 @@ Le HTML s’affiche sous forme de document continu ; les mises en page complexes
 ## Consultation locale en lecture seule
 
 Les fichiers restent sur votre appareil. Les scripts, formulaires, redirections et cadres intégrés sont désactivés. Sélectionner un lien externe l’ouvre séparément. La visionneuse ne charge pas d’adresses de sites web, ne restaure pas les sessions de connexion et n’exécute pas d’applications web. Fermez ou remplacez le document pour libérer l’aperçu actuel. Les archives MHTML nécessitent une visionneuse MHTML.
+
+Pour télécharger un PDF statique d’un document autonome, utilisez le [Convertisseur HTML en PDF](../html-to-pdf-converter/).

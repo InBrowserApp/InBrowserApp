@@ -44,3 +44,16 @@ test("reflows keep constraints without dropping explicit page breaks", () => {
   expect(result.css).toContain("break-before: page")
   expect(result.css).not.toContain("avoid")
 })
+
+test("retains semantic lists and legacy font formatting with child selectors", () => {
+  const result = prepare({
+    html: '<ol start="3"><li><font color="red" face="serif" size="4">Third</font></li></ol><pre><code>Code</code></pre>',
+    css: "ol > li{margin:1em}",
+  })
+  expect(result.text).toBe("ThirdCode")
+  expect(result.fragment.querySelector("ol")?.getAttribute("start")).toBe("3")
+  expect(result.fragment.querySelector("font")?.getAttribute("color")).toBe(
+    "red"
+  )
+  expect(result.css).toContain("ol > li")
+})

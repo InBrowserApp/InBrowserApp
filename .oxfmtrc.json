@@ -19,6 +19,7 @@
     ".playwright-cli/",
     "coverage/",
     "tools/html-viewer/fixtures/",
+    "tools/html-to-pdf-converter/fixtures/",
     "pnpm-lock.yaml",
     ".pnpm-store/",
     "CHANGELOG.md"

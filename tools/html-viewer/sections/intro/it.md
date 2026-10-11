@@ -11,3 +11,5 @@ Il contenuto HTML viene visualizzato come un documento continuo; i layout comple
 ## Visualizzazione locale in sola lettura
 
 I file restano sul tuo dispositivo. Script, moduli, reindirizzamenti e frame incorporati sono disabilitati. Selezionando un link esterno, questo si apre separatamente. Il visualizzatore non carica indirizzi di siti web, non ripristina sessioni di accesso e non esegue applicazioni web. Chiudi o sostituisci il documento per rilasciare l’anteprima corrente. Gli archivi MHTML richiedono un visualizzatore MHTML.
+
+Per scaricare un PDF statico di un documento autonomo, usa il [Convertitore da HTML a PDF](../html-to-pdf-converter/).

@@ -11,3 +11,5 @@ HTML is displayed as a continuous document; complex website layouts may differ. 
 ## Local, read-only viewing
 
 Files stay on your device. Scripts, forms, redirects, and embedded frames are disabled. Selecting an external link opens it separately. The viewer does not load website addresses, restore login sessions, or run web applications. Close or replace the document to release the current preview. MHTML archives require an MHTML viewer.
+
+To download a static PDF of a self-contained document, use the [HTML to PDF Converter](../html-to-pdf-converter/).

@@ -11,3 +11,5 @@ O HTML é exibido como um documento contínuo; layouts complexos de sites podem 
 ## Visualização local, somente leitura
 
 Os arquivos ficam no seu dispositivo. Scripts, formulários, redirecionamentos e quadros incorporados estão desativados. Ao selecionar um link externo, ele é aberto separadamente. O visualizador não carrega endereços de sites, restaura sessões de login nem executa aplicativos da web. Feche ou substitua o documento para liberar a prévia atual. Arquivos MHTML exigem um visualizador de MHTML.
+
+Para baixar um PDF estático de um documento autossuficiente, use o [Conversor de HTML para PDF](../html-to-pdf-converter/).
