@@ -151,14 +151,14 @@ test("rejects incomplete links and nonlocal resources, and honors cancellation",
     writeEpub(sample(), AbortSignal.abort(), m)
   ).rejects.toMatchObject({ name: "AbortError" })
   const controller = new AbortController()
-  const nativeFetch = globalThis.fetch
-  const spy = vi
-    .spyOn(globalThis, "fetch")
-    .mockImplementation(async (...args) => {
-      const response = await nativeFetch(...args)
-      controller.abort()
-      return response
+  const spy = vi.spyOn(globalThis, "fetch").mockImplementation(async () => {
+    // Simulate cancellation after a local image response without retaining
+    // Node/Undici's native data-URL stream across the test boundary.
+    controller.abort()
+    return new Response("image bytes", {
+      headers: { "Content-Type": "image/png" },
     })
+  })
   try {
     await expect(
       writeEpub(sample(), controller.signal, m)
