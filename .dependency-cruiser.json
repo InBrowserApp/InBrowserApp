@@ -14,7 +14,11 @@
       "from": {},
       "to": {
         "couldNotResolve": true,
-        "pathNot": ["^astro:", "^@imagemagick/magick-wasm/magick[.]wasm[?]url$"]
+        "pathNot": [
+          "^astro:",
+          "^@imagemagick/magick-wasm/magick[.]wasm[?]url$",
+          "^@resvg/resvg-wasm/index_bg[.]wasm[?]url$"
+        ]
       }
     },
     {

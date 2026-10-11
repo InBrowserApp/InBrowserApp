@@ -11002,6 +11002,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "hwp-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["hwp", "hwpx", "hangul", "hancom", "pdf", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محول HWP وHWPX إلى PDF",
+        description:
+          "حوّل مستندات HWP 5 وHWPX إلى ملفات PDF قائمة على الصور في متصفحك. عاين النصوص الكورية والجداول والصور المضمّنة قبل التنزيل.",
+      },
+      de: {
+        name: "HWP/HWPX-zu-PDF-Konverter",
+        description:
+          "Konvertiere HWP-5- und HWPX-Dokumente in deinem Browser in bildbasierte PDFs. Prüfe koreanische Texte, Tabellen und eingebettete Bilder vor dem Herunterladen in der Vorschau.",
+      },
+      en: {
+        name: "HWP / HWPX to PDF Converter",
+        description:
+          "Convert HWP 5 and HWPX documents to image-based PDFs in your browser. Preview Korean text, tables, and embedded images before downloading.",
+      },
+      es: {
+        name: "Conversor de HWP / HWPX a PDF",
+        description:
+          "Convierte documentos HWP 5 y HWPX en PDF basados en imágenes en tu navegador. Previsualiza texto en coreano, tablas e imágenes incrustadas antes de descargar.",
+      },
+      fr: {
+        name: "Convertisseur HWP / HWPX en PDF",
+        description:
+          "Convertissez des documents HWP 5 et HWPX en PDF composés d’images dans votre navigateur. Prévisualisez le texte coréen, les tableaux et les images intégrées avant de télécharger.",
+      },
+      he: {
+        name: "ממיר HWP / HWPX ל-PDF",
+        description:
+          "המרת מסמכי HWP 5 ו־HWPX לקובצי PDF מבוססי תמונות בדפדפן. אפשר לצפות בטקסט בקוריאנית, בטבלאות ובתמונות מוטבעות לפני ההורדה.",
+      },
+      hi: {
+        name: "HWP और HWPX से PDF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में HWP 5 और HWPX दस्तावेज़ों को चित्र-आधारित PDF में बदलें। डाउनलोड करने से पहले कोरियाई पाठ, तालिकाओं और एम्बेड किए गए चित्रों का पूर्वावलोकन करें।",
+      },
+      id: {
+        name: "Konverter HWP / HWPX ke PDF",
+        description:
+          "Konversikan dokumen HWP 5 dan HWPX ke PDF berbasis gambar di browser Anda. Lihat pratinjau teks Korea, tabel, dan gambar tertanam sebelum mengunduh.",
+      },
+      it: {
+        name: "Convertitore da HWP / HWPX a PDF",
+        description:
+          "Converti documenti HWP 5 e HWPX in PDF basati su immagini nel browser. Visualizza in anteprima testo coreano, tabelle e immagini incorporate prima di scaricare.",
+      },
+      ja: {
+        name: "HWP / HWPXからPDFへの変換ツール",
+        description:
+          "HWP 5・HWPX文書をブラウザー内で画像ベースのPDFに変換します。ダウンロード前に韓国語のテキスト、表、埋め込み画像をプレビューできます。",
+      },
+      ko: {
+        name: "HWP / HWPX → PDF 변환기",
+        description:
+          "브라우저에서 HWP 5 및 HWPX 문서를 이미지 기반 PDF로 변환하세요. 다운로드하기 전에 한글 텍스트, 표 및 삽입된 이미지를 미리 볼 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar HWP dan HWPX kepada PDF",
+        description:
+          "Tukar dokumen HWP 5 dan HWPX kepada PDF berasaskan imej dalam pelayar anda. Pratonton teks Korea, jadual dan imej terbenam sebelum memuat turun.",
+      },
+      nl: {
+        name: "HWP/HWPX-naar-PDF-converter",
+        description:
+          "Converteer HWP 5- en HWPX-documenten naar PDF’s op basis van afbeeldingen in je browser. Bekijk Koreaanse tekst, tabellen en ingesloten afbeeldingen voordat je downloadt.",
+      },
+      no: {
+        name: "Konverterer fra HWP / HWPX til PDF",
+        description:
+          "Konverter HWP 5- og HWPX-dokumenter til bildebaserte PDF-er i nettleseren. Forhåndsvis koreansk tekst, tabeller og innebygde bilder før du laster ned.",
+      },
+      pl: {
+        name: "Konwerter HWP / HWPX na PDF",
+        description:
+          "Konwertuj dokumenty HWP 5 i HWPX na pliki PDF oparte na obrazach w przeglądarce. Sprawdź koreański tekst, tabele i osadzone obrazy w podglądzie przed pobraniem.",
+      },
+      pt: {
+        name: "Conversor de HWP / HWPX para PDF",
+        description:
+          "Converta documentos HWP 5 e HWPX em PDFs baseados em imagens no navegador. Visualize texto em coreano, tabelas e imagens incorporadas antes de baixar.",
+      },
+      ru: {
+        name: "Конвертер HWP / HWPX в PDF",
+        description:
+          "Преобразуйте документы HWP 5 и HWPX в PDF из изображений в браузере. Перед скачиванием просмотрите корейский текст, таблицы и встроенные изображения.",
+      },
+      sv: {
+        name: "Konverterare från HWP / HWPX till PDF",
+        description:
+          "Konvertera HWP 5- och HWPX-dokument till bildbaserade PDF-filer i webbläsaren. Förhandsvisa koreansk text, tabeller och inbäddade bilder innan du laddar ner.",
+      },
+      th: {
+        name: "โปรแกรมแปลง HWP / HWPX เป็น PDF",
+        description:
+          "แปลงเอกสาร HWP 5 และ HWPX เป็น PDF แบบภาพในเบราว์เซอร์ ดูตัวอย่างข้อความภาษาเกาหลี ตาราง และรูปภาพที่ฝังไว้ก่อนดาวน์โหลด",
+      },
+      tr: {
+        name: "HWP / HWPX’ten PDF’ye Dönüştürücü",
+        description:
+          "HWP 5 ve HWPX belgelerini tarayıcınızda görsel tabanlı PDF’lere dönüştürün. İndirmeden önce Korece metinleri, tabloları ve gömülü resimleri önizleyin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi HWP / HWPX sang PDF",
+        description:
+          "Chuyển tài liệu HWP 5 và HWPX sang PDF dạng hình ảnh trong trình duyệt. Xem trước văn bản tiếng Hàn, bảng và hình ảnh nhúng trước khi tải xuống.",
+      },
+      "zh-CN": {
+        name: "HWP / HWPX 转 PDF 转换器",
+        description:
+          "在浏览器中将 HWP 5 和 HWPX 文档转换为由图像页面组成的 PDF。下载前可预览韩文文本、表格和嵌入图片。",
+      },
+      "zh-TW": {
+        name: "HWP / HWPX 轉 PDF 轉換器",
+        description:
+          "在瀏覽器中將 HWP 5 與 HWPX 文件轉換為圖片式 PDF。下載前可預覽韓文文字、表格與內嵌圖片。",
+      },
+    },
+  },
+  {
     slug: "hwp-viewer",
     category: "document",
     icon: "file-text",

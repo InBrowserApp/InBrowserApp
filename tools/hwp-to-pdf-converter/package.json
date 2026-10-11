@@ -1,0 +1,32 @@
+{
+  "name": "@tool/hwp-to-pdf-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "@workspace/pdf-reader": "workspace:*",
+    "@workspace/hwp": "workspace:*",
+    "@rhwp/core": "catalog:",
+    "@resvg/resvg-wasm": "catalog:",
+    "pdf-lib": "catalog:",
+    "pdfjs-dist": "catalog:",
+    "cfb": "catalog:",
+    "fflate": "catalog:",
+    "saxes": "catalog:"
+  },
+  "peerDependencies": {
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "astro": "catalog:"
+  },
+  "devDependencies": {
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:"
+  }
+}

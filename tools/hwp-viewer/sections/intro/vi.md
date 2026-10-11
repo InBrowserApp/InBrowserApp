@@ -13,3 +13,5 @@ Trình xem sử dụng các phông chữ có trên thiết bị của bạn và 
 Không hỗ trợ tài liệu HWP được bảo vệ bằng mật khẩu, có quản lý quyền, chỉ dành để phân phối hoặc thuộc định dạng cũ. Trước tiên, hãy mở hoặc lưu một bản HWP 5 hoặc HWPX thông thường trong Hangul. Các thành phần điều khiển biểu mẫu ở chế độ chỉ đọc và macro của tài liệu không được chạy.
 
 Không có giới hạn cố định về kích thước tệp hay số trang. Các tệp rất lớn hoặc phức tạp có thể vượt quá tài nguyên khả dụng của trình duyệt. Bạn có thể đóng hoặc thay tài liệu trong lúc đang mở.
+
+Để tạo PDF dạng hình ảnh có thể tải xuống, hãy dùng [Trình chuyển đổi HWP / HWPX sang PDF](../hwp-to-pdf-converter/). Hãy xem các giới hạn về phông chữ và bố cục trước khi sử dụng kết quả.

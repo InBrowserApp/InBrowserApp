@@ -94,6 +94,7 @@
     "@tool/html-to-markdown-converter": "workspace:*",
     "@tool/html-viewer": "workspace:*",
     "@tool/http-status-code-lookup": "workspace:*",
+    "@tool/hwp-to-pdf-converter": "workspace:*",
     "@tool/hwp-viewer": "workspace:*",
     "@tool/iban-validator": "workspace:*",
     "@tool/ical-event-generator": "workspace:*",

@@ -13,3 +13,5 @@ Penampil menggunakan font yang tersedia di perangkat Anda dan tidak mengunduh fo
 Dokumen HWP yang dilindungi kata sandi, dikelola hak aksesnya, khusus distribusi, atau berformat lama tidak didukung. Buka atau simpan salinan HWP 5 atau HWPX biasa di Hangul terlebih dahulu. Kontrol formulir hanya dapat dibaca dan makro dokumen tidak dijalankan.
 
 Tidak ada batas tetap untuk ukuran file atau jumlah halaman. File yang sangat besar atau kompleks dapat melampaui sumber daya browser yang tersedia. Anda dapat menutup atau mengganti dokumen saat sedang dibuka.
+
+Untuk membuat PDF berbasis gambar yang dapat diunduh, gunakan [Konverter HWP / HWPX ke PDF](../hwp-to-pdf-converter/). Periksa batasan font dan tata letaknya sebelum menggunakan hasilnya.

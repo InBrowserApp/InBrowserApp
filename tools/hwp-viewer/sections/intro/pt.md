@@ -13,3 +13,5 @@ O visualizador usa as fontes disponíveis no seu dispositivo e não baixa as fon
 Documentos protegidos por senha, com gerenciamento de direitos, destinados apenas à distribuição e em formatos HWP antigos não são compatíveis. Primeiro, abra ou salve uma cópia comum em HWP 5 ou HWPX no Hangul. Os controles de formulário são somente leitura e as macros do documento não são executadas.
 
 Não há limite fixo de tamanho de arquivo nem de número de páginas. Arquivos muito grandes ou complexos podem exceder os recursos disponíveis no navegador. Você pode fechar ou substituir um documento enquanto ele está sendo aberto.
+
+Para criar um PDF baseado em imagens para download, use o [Conversor de HWP / HWPX para PDF](../hwp-to-pdf-converter/). Confira as limitações de fontes e layout antes de usar o resultado.

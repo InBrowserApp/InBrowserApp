@@ -13,3 +13,5 @@ Der Betrachter verwendet die Schriftarten auf Ihrem Gerät und lädt keine Dokum
 Passwortgeschützte, durch Rechteverwaltung geschützte und ältere HWP-Dokumente sowie Dokumente im Verteilungsformat werden nicht unterstützt. Öffnen oder speichern Sie zunächst eine gewöhnliche HWP-5- oder HWPX-Kopie in Hangul. Formularfelder sind schreibgeschützt und Dokumentmakros werden nicht ausgeführt.
 
 Es gibt keine feste Grenze für Dateigröße oder Seitenzahl. Sehr große oder komplexe Dateien können die verfügbaren Ressourcen Ihres Browsers überschreiten. Sie können ein Dokument während des Öffnens schließen oder ersetzen.
+
+Um eine bildbasierte PDF zum Herunterladen zu erstellen, verwenden Sie den [HWP/HWPX-zu-PDF-Konverter](../hwp-to-pdf-converter/). Prüfen Sie dessen Einschränkungen bei Schriftarten und Layout, bevor Sie das Ergebnis verwenden.

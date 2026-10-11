@@ -1,0 +1,19 @@
+{
+  "name": "@workspace/hwp",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./preflight": "./src/preflight.ts",
+    "./sanitize": "./src/sanitize.ts"
+  },
+  "dependencies": {
+    "cfb": "catalog:",
+    "fflate": "catalog:",
+    "saxes": "catalog:",
+    "dompurify": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

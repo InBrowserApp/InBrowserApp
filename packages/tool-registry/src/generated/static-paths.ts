@@ -8006,6 +8006,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "hwp-to-pdf-converter",
+    language: "ar",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "de",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "en",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "es",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "fr",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "he",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "hi",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "id",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "it",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "ja",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "ko",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "ms",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "nl",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "no",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "pl",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "pt",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "ru",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "sv",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "th",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "tr",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "vi",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "hwp-to-pdf-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "hwp-viewer",
     language: "ar",
   },

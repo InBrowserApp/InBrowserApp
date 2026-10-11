@@ -13,3 +13,5 @@ El visor usa las fuentes disponibles en tu dispositivo y no descarga las fuentes
 No se admiten documentos HWP protegidos con contraseña, sujetos a gestión de derechos, de solo distribución ni de versiones antiguas. Primero abre o guarda una copia HWP 5 o HWPX normal en Hangul. Los controles de formulario son de solo lectura y las macros del documento no se ejecutan.
 
 No hay un límite fijo de tamaño de archivo ni de número de páginas. Los archivos muy grandes o complejos pueden superar los recursos disponibles del navegador. Puedes cerrar o reemplazar un documento mientras se abre.
+
+Para crear un PDF descargable basado en imágenes, usa el [Conversor de HWP / HWPX a PDF](../hwp-to-pdf-converter/). Consulta sus limitaciones de fuentes y diseño antes de usar el resultado.
