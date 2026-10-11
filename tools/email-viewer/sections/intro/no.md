@@ -17,3 +17,5 @@ Visning av en e-post bekrefter ikke avsenderens identitet eller en digital signa
 For en lesekopi som kan skrives ut, med lagrede meldingshoder og en vedleggsliste, bruk [E-post til PDF-konvertereren](../email-to-pdf-converter/). Innholdet i vedlegg tas ikke med.
 
 For å gjenbruke meldingsinnholdet, bruk [E-post til HTML / tekst-konvertereren](../email-content-export/) for HTML som kan åpnes uten nettilkobling eller UTF-8-tekst som kan kopieres, med lagrede meldingshoder og vedleggsdetaljer.
+
+Bruk [Uttrekk av e-postvedlegg](/tools/email-attachment-extractor/) for å laste ned innebygde filer. Lagre vedlegg enkeltvis eller som en ZIP-fil med valgte filer, inkludert innebygde meldingsressurser når du velger dem.

@@ -17,3 +17,5 @@ När du visar ett e-postmeddelande verifieras varken avsändarens identitet elle
 För en utskrivbar läskopia med sparade meddelandehuvuden och en bilagelista kan du använda [E-post till PDF-konverteraren](../email-to-pdf-converter/). Bilagornas innehåll ingår inte.
 
 För att återanvända meddelandeinnehållet kan du använda [konverteraren från e-post till HTML/text](../email-content-export/) för HTML som fungerar offline eller kopierbar UTF-8-text, med sparade meddelandehuvuden och bilageuppgifter.
+
+Använd [Extraheraren för e-postbilagor](/tools/email-attachment-extractor/) för att ladda ner inbäddade filer. Spara enskilda bilagor eller en ZIP-fil med valda filer, inklusive resurser i meddelandet när du väljer dem.

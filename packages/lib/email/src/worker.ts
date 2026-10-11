@@ -1,13 +1,23 @@
 import { parseEmail } from "./parse"
 import { failure } from "./failure"
-import type { Result } from "./types"
+import type { ParseOptions, Result } from "./types"
 
 self.onmessage = async (
-  event: MessageEvent<{ buffer: ArrayBuffer; name: string }>
+  event: MessageEvent<{
+    buffer: ArrayBuffer
+    name: string
+    options?: ParseOptions
+  }>
 ) => {
   let result: Result
   try {
-    result = { email: await parseEmail(event.data.buffer, event.data.name) }
+    result = {
+      email: await parseEmail(
+        event.data.buffer,
+        event.data.name,
+        event.data.options
+      ),
+    }
   } catch (reason) {
     result = { error: failure(reason) }
   }

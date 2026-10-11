@@ -17,3 +17,5 @@ MSG 支持 Outlook 邮件头、纯文本、HTML、附件信息和邮件中包含
 如需生成包含保存的邮件头和附件列表的可打印阅读副本，请使用[邮件转 PDF 转换器](../email-to-pdf-converter/)。转换后的文件不包含附件内容。
 
 如需复用邮件内容，请使用[邮件转 HTML / 文本转换器](../email-content-export/)，生成包含已保存邮件头和附件详情的离线 HTML 或可复制的 UTF-8 文本。
+
+若要下载嵌入文件，请使用[邮件附件提取器](/tools/email-attachment-extractor/)。可逐个保存附件，或将所选文件打包为 ZIP；选中内嵌资源后，也可将其包含在内。

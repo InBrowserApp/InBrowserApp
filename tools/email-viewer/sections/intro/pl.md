@@ -17,3 +17,5 @@ Wyświetlenie e-maila nie weryfikuje tożsamości nadawcy ani podpisu cyfrowego.
 Aby utworzyć kopię do czytania i druku z zapisanymi nagłówkami i listą załączników, użyj narzędzia [Konwerter e-maili na PDF](../email-to-pdf-converter/). Zawartość załączników nie jest dołączana.
 
 Aby ponownie wykorzystać treść wiadomości, użyj narzędzia [Konwerter e-maili na HTML / tekst](../email-content-export/), które tworzy HTML do odczytu offline lub tekst UTF-8 możliwy do skopiowania, z zapisanymi nagłówkami i szczegółami załączników.
+
+Aby pobrać osadzone pliki, użyj [Ekstraktora załączników e-mail](/tools/email-attachment-extractor/). Zapisz pojedyncze załączniki lub ZIP z wybranymi plikami, uwzględniając zasoby w treści, jeśli je wybierzesz.

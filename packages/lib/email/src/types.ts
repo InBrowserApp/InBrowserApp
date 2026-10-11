@@ -1,3 +1,4 @@
+export type ParseOptions = { attachmentBytes?: "all" }
 export type Notice =
   | "partial"
   | "invalidDate"

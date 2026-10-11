@@ -1,9 +1,10 @@
 import { parseMime } from "./mime"
-import type { Email } from "./types"
+import type { Email, ParseOptions } from "./types"
 
 export async function parseEmail(
   buffer: ArrayBuffer,
-  name: string
+  name: string,
+  options?: ParseOptions
 ): Promise<Email> {
   const bytes = new Uint8Array(buffer)
   if (!bytes.length) throw new Error("emptyFile")
@@ -12,7 +13,7 @@ export async function parseEmail(
   )
   if (compound) {
     const { parseMsg } = await import("./msg")
-    return parseMsg(buffer)
+    return parseMsg(buffer, options)
   }
   if (/\.msg$/i.test(name)) throw new Error("invalid")
   return parseMime(
@@ -20,6 +21,7 @@ export async function parseEmail(
     /^\d+\r?\n/.test(new TextDecoder().decode(bytes.subarray(0, 32))) ||
       /\.emlx$/i.test(name)
       ? "EMLX"
-      : "EML"
+      : "EML",
+    options
   )
 }

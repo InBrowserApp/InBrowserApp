@@ -17,3 +17,5 @@ Visualizar um e-mail não verifica a identidade do remetente nem uma assinatura 
 Para criar uma cópia de leitura para impressão com cabeçalhos salvos e uma lista de anexos, use o [Conversor de e-mail para PDF](../email-to-pdf-converter/). O conteúdo dos anexos não é incluído.
 
 Para reutilizar o conteúdo da mensagem, use o [Conversor de e-mail para HTML / texto](../email-content-export/) para obter HTML offline ou texto UTF-8 que pode ser copiado, com cabeçalhos salvos e detalhes dos anexos.
+
+Para baixar arquivos incorporados, use o [Extrator de anexos de e-mail](/tools/email-attachment-extractor/). Salve anexos individuais ou um ZIP dos arquivos selecionados, incluindo os recursos incorporados que você escolher.

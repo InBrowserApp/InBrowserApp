@@ -174,3 +174,39 @@ test("reports unreadable included images while preserving the rest of the messag
   })
   expect((await promise).notices).toContain("attachmentError")
 })
+
+test("extracts normal and nested attachments despite an unsupported body encoding", async () => {
+  mock.data.push({
+    dataType: "msg",
+    subject: "Subject",
+    html: new Uint8Array([65]),
+    internetCodepage: 999999,
+    attachments: [
+      { dataType: "attachment", dataId: 5, fileName: "data.bin" },
+      {
+        dataType: "attachment",
+        innerMsgContent: true,
+        folderId: 6,
+        name: "Nested",
+      },
+      { dataType: "attachment", fileName: "External" },
+      {
+        dataType: "attachment",
+        dataId: 7,
+        attachmentHidden: true,
+        attachMimeTag: "image/svg+xml",
+      },
+    ],
+  })
+  const result = await parseMsg(new ArrayBuffer(8), { attachmentBytes: "all" })
+  expect(result.attachments[0]!.bytes).toEqual(new Uint8Array([1, 2]))
+  expect(result.attachments[1]).toMatchObject({
+    kind: "nested",
+    type: "application/vnd.ms-outlook",
+    size: 2,
+  })
+  expect(result.attachments[2]!.bytes).toBeUndefined()
+  expect(result.attachments[3]!.kind).toBe("inline")
+  expect(result.notices).toContain("attachmentError")
+  expect(result.notices).not.toContain("partial")
+})

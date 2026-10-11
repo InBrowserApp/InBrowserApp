@@ -1,8 +1,9 @@
-import type { Email, Result } from "./types"
+import type { Email, ParseOptions, Result } from "./types"
 
 export async function openEmail(
   file: File,
-  signal: AbortSignal
+  signal: AbortSignal,
+  options?: ParseOptions
 ): Promise<Email> {
   signal.throwIfAborted()
   const worker = new Worker(new URL("./worker.ts", import.meta.url), {
@@ -29,7 +30,7 @@ export async function openEmail(
         .arrayBuffer()
         .then((buffer) => {
           signal.throwIfAborted()
-          worker.postMessage({ buffer, name: file.name }, [buffer])
+          worker.postMessage({ buffer, name: file.name, options }, [buffer])
         })
         .catch((reason) => {
           finish()

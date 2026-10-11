@@ -17,3 +17,5 @@ Viewing an email does not verify the sender’s identity or a digital signature.
 For a printable reading copy with saved headers and an attachment list, use the [Email to PDF Converter](../email-to-pdf-converter/). Attachment contents are not included.
 
 To reuse message content, use the [Email to HTML / Text Converter](../email-content-export/) for offline HTML or copyable UTF-8 text, with saved headers and attachment details.
+
+To download embedded files, use the [Email Attachment Extractor](/tools/email-attachment-extractor/). Save individual attachments or a ZIP of selected files, including inline resources when you choose them.

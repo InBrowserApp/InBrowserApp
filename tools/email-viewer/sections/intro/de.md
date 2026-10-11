@@ -17,3 +17,5 @@ Das Anzeigen einer E-Mail überprüft weder die Identität des Absenders noch ei
 Für eine druckbare Lesekopie mit gespeicherten Kopfzeilen und einer Anhangliste nutze den [E-Mail-zu-PDF-Konverter](../email-to-pdf-converter/). Anhanginhalte sind nicht enthalten.
 
 Um Nachrichteninhalte weiterzuverwenden, nutze den [E-Mail-zu-HTML-/Text-Konverter](../email-content-export/) für Offline-HTML oder kopierbaren UTF-8-Text mit gespeicherten Kopfzeilen und Anhangdetails.
+
+Zum Herunterladen eingebetteter Dateien nutze den [E-Mail-Anhang-Extraktor](/tools/email-attachment-extractor/). Speichere einzelne Anhänge oder eine ZIP-Datei mit ausgewählten Dateien, einschließlich eingebetteter Ressourcen, wenn du sie auswählst.

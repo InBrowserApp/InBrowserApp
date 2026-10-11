@@ -17,3 +17,5 @@ Melihat e-mel tidak mengesahkan identiti pengirim atau tandatangan digital. Tari
 Untuk salinan bacaan yang boleh dicetak dengan pengepala tersimpan dan senarai lampiran, gunakan [Penukar E-mel kepada PDF](../email-to-pdf-converter/). Kandungan lampiran tidak disertakan.
 
 Untuk menggunakan semula kandungan mesej, gunakan [Penukar E-mel kepada HTML / Teks](../email-content-export/) bagi mendapatkan HTML luar talian atau teks UTF-8 yang boleh disalin, bersama pengepala tersimpan dan butiran lampiran.
+
+Untuk memuat turun fail terbenam, gunakan [Pengekstrak Lampiran E-mel](/tools/email-attachment-extractor/). Simpan lampiran satu demi satu atau ZIP bagi fail pilihan, termasuk sumber sebaris jika anda memilihnya.
