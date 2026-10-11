@@ -30,7 +30,7 @@ function decode(bytes: Uint8Array) {
 }
 
 /** Normalize namespaces/encoding before the converter can create resources. */
-export function normalize(bytes: Uint8Array) {
+export function normalize(bytes: Uint8Array, preserveMissingImages = false) {
   const source = new DOMParser().parseFromString(
     decode(bytes),
     "application/xml"
@@ -116,7 +116,11 @@ export function normalize(bytes: Uint8Array) {
   for (const image of doc.querySelectorAll("image")) {
     const href = image.getAttributeNS(XLINK, "href") ?? ""
     if (!href.startsWith("#") || !bins.has(href.slice(1))) {
-      image.remove()
+      // Exporters can retain the position for their localized text fallback.
+      // An absent href becomes a harmless data:, URL in the FB2 renderer.
+      if (preserveMissingImages && image.closest("body"))
+        image.removeAttributeNS(XLINK, "href")
+      else image.remove()
       missing = true
     }
   }

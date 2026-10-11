@@ -47,11 +47,12 @@ function contents(doc: Document) {
 
 export async function openBook(
   file: File,
-  signal: AbortSignal
+  signal: AbortSignal,
+  options?: { preserveMissingImages?: boolean }
 ): Promise<OpenBook> {
   const bytes = await readBook(file, signal)
   signal.throwIfAborted()
-  const normalized = normalize(bytes)
+  const normalized = normalize(bytes, options?.preserveMissingImages)
   let engine: Fb2Book | undefined
   let cover: string | null = null
   try {

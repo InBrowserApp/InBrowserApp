@@ -31,7 +31,9 @@ test("releases all source resources on success, packaging failure and cancellati
   const output = await convert(file, controller.signal, m)
   expect(output.preview.html).toBe("Read")
   expect(output.notes).toEqual(["note"])
-  expect(mock.openBook).toHaveBeenCalledWith(file, controller.signal)
+  expect(mock.openBook).toHaveBeenCalledWith(file, controller.signal, {
+    preserveMissingImages: true,
+  })
   expect(mock.writeEpub).toHaveBeenCalledWith(
     { title: "Book" },
     controller.signal,
