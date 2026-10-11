@@ -1,5 +1,51 @@
 # Changelog
 
+## [2.5.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.4.0...v2.5.0) (2026-10-11)
+
+
+### Features
+
+* add a CSV and TSV to XLSX converter ([#1173](https://github.com/InBrowserApp/InBrowserApp/issues/1173)) ([449cccf](https://github.com/InBrowserApp/InBrowserApp/commit/449cccff359970a98ef0c9888714c8b741e7a0bd))
+* add a DOC and WPS to PDF converter ([#1177](https://github.com/InBrowserApp/InBrowserApp/issues/1177)) ([272be37](https://github.com/InBrowserApp/InBrowserApp/commit/272be373c444ee59a5df8f8123d1ad64016c4a67))
+* add a FB2 to EPUB converter ([#1194](https://github.com/InBrowserApp/InBrowserApp/issues/1194)) ([cc0bce8](https://github.com/InBrowserApp/InBrowserApp/commit/cc0bce81d6cee6f5574ab7de75e56414308877d8))
+* add a local DOCX to PDF converter ([#1175](https://github.com/InBrowserApp/InBrowserApp/issues/1175)) ([34d4d56](https://github.com/InBrowserApp/InBrowserApp/commit/34d4d568a6bf35dd37a881d5973215ec2c626939))
+* add a Markdown to PDF converter ([#1185](https://github.com/InBrowserApp/InBrowserApp/issues/1185)) ([f80f185](https://github.com/InBrowserApp/InBrowserApp/commit/f80f185138fed64d14e34980a81276000bce196c))
+* add a PPTX to PDF converter ([#1176](https://github.com/InBrowserApp/InBrowserApp/issues/1176)) ([39088b5](https://github.com/InBrowserApp/InBrowserApp/commit/39088b5f19816dd77c70e9d6446748e7c365020d))
+* add an AsciiDoc to HTML converter ([#1187](https://github.com/InBrowserApp/InBrowserApp/issues/1187)) ([d5235cb](https://github.com/InBrowserApp/InBrowserApp/commit/d5235cb7abd9296410aec4a658e0cf84da41340c))
+* add an email to PDF converter ([#1188](https://github.com/InBrowserApp/InBrowserApp/issues/1188)) ([50ead84](https://github.com/InBrowserApp/InBrowserApp/commit/50ead8472ca6ab7bb203c11bd032649b1e60f0b2))
+* add an MHTML to HTML converter ([#1186](https://github.com/InBrowserApp/InBrowserApp/issues/1186)) ([1ba3984](https://github.com/InBrowserApp/InBrowserApp/commit/1ba3984241b33bede7904ee6b3cf3c52118df174))
+* add an OFD to PDF converter ([#1174](https://github.com/InBrowserApp/InBrowserApp/issues/1174)) ([cac6320](https://github.com/InBrowserApp/InBrowserApp/commit/cac6320cff9f514657507a7bc7c5819a646d361e))
+* add an XLSX to ODS converter ([#1172](https://github.com/InBrowserApp/InBrowserApp/issues/1172)) ([f99e022](https://github.com/InBrowserApp/InBrowserApp/commit/f99e0225bffbe53d11e4ae3635db84f1a0c38b37))
+* add AsciiDoc to PDF conversion ([#1184](https://github.com/InBrowserApp/InBrowserApp/issues/1184)) ([2daeb00](https://github.com/InBrowserApp/InBrowserApp/commit/2daeb002a7f38991a39c970d6fc7b3bf8b26d9af))
+* add CAJ to PDF converter and viewer export ([#1160](https://github.com/InBrowserApp/InBrowserApp/issues/1160)) ([85be735](https://github.com/InBrowserApp/InBrowserApp/commit/85be73525eef234de4ab4608eade16bef11dc64b))
+* add DOCX to Markdown conversion and viewer export ([#1162](https://github.com/InBrowserApp/InBrowserApp/issues/1162)) ([f401d73](https://github.com/InBrowserApp/InBrowserApp/commit/f401d73aab1f402642df1d201fbe12edd6b9c069))
+* add ebook text and HTML export ([#1192](https://github.com/InBrowserApp/InBrowserApp/issues/1192)) ([9780dd2](https://github.com/InBrowserApp/InBrowserApp/commit/9780dd208e462736aa40fcb261b32c15e0926178))
+* add email HTML and text export ([#1189](https://github.com/InBrowserApp/InBrowserApp/issues/1189)) ([09544f4](https://github.com/InBrowserApp/InBrowserApp/commit/09544f430e6f68ab93d2fd2ff70b438f8c4dd089))
+* add HTML to PDF converter ([#1182](https://github.com/InBrowserApp/InBrowserApp/issues/1182)) ([e7d8f4f](https://github.com/InBrowserApp/InBrowserApp/commit/e7d8f4fd43bc6e29b668d313b3cc5e968822f4f4))
+* add image to JPG conversion and viewer export ([#1167](https://github.com/InBrowserApp/InBrowserApp/issues/1167)) ([cd6084a](https://github.com/InBrowserApp/InBrowserApp/commit/cd6084a408afc859546c7247b191a255ee171aaa))
+* add local email attachment extraction ([#1190](https://github.com/InBrowserApp/InBrowserApp/issues/1190)) ([5220792](https://github.com/InBrowserApp/InBrowserApp/commit/5220792cdc39940c9acffd224dadf771d27fcc69))
+* add local HWP and HWPX to PDF conversion ([#1179](https://github.com/InBrowserApp/InBrowserApp/issues/1179)) ([4b4a2e5](https://github.com/InBrowserApp/InBrowserApp/commit/4b4a2e538b506ce12ba4be200c345535f6c6e64c))
+* add local ODT and OTT to PDF conversion ([#1180](https://github.com/InBrowserApp/InBrowserApp/issues/1180)) ([7f91380](https://github.com/InBrowserApp/InBrowserApp/commit/7f913805ce9ba0ffc811e1fe9766c881f852fb09))
+* add local PPT and DPS to PDF conversion ([#1178](https://github.com/InBrowserApp/InBrowserApp/issues/1178)) ([cc61c36](https://github.com/InBrowserApp/InBrowserApp/commit/cc61c36db17d95b8cf305bcae8713f9a69e8de44))
+* add local RTF to PDF conversion ([#1181](https://github.com/InBrowserApp/InBrowserApp/issues/1181)) ([c6a65d7](https://github.com/InBrowserApp/InBrowserApp/commit/c6a65d7e0452aa5681ab45f687a805b54555451b))
+* add MHTML to PDF conversion ([#1183](https://github.com/InBrowserApp/InBrowserApp/issues/1183)) ([dd9a574](https://github.com/InBrowserApp/InBrowserApp/commit/dd9a5748b74e07b42f3b44cfb8ecb51337e2453c))
+* add MOBI and AZW3 to EPUB conversion ([#1193](https://github.com/InBrowserApp/InBrowserApp/issues/1193)) ([8dac304](https://github.com/InBrowserApp/InBrowserApp/commit/8dac3044f3e9585df6ba1d2be5e5e093200c7e9b))
+* add Numbers to XLSX converter ([#1170](https://github.com/InBrowserApp/InBrowserApp/issues/1170)) ([7266c64](https://github.com/InBrowserApp/InBrowserApp/commit/7266c644df90bad3716e6da8f05e458ce42971d5))
+* add ODS to XLSX converter ([#1171](https://github.com/InBrowserApp/InBrowserApp/issues/1171)) ([b46734c](https://github.com/InBrowserApp/InBrowserApp/commit/b46734c03a646efdce4af5d6b7a734d9efca8032))
+* add PPTX to Markdown conversion and viewer export ([#1163](https://github.com/InBrowserApp/InBrowserApp/issues/1163)) ([cf7bf98](https://github.com/InBrowserApp/InBrowserApp/commit/cf7bf986f1ff7361d61b38beb5b9248d0306eb33))
+* add Typst to PDF conversion ([#1161](https://github.com/InBrowserApp/InBrowserApp/issues/1161)) ([0a0bbe3](https://github.com/InBrowserApp/InBrowserApp/commit/0a0bbe39111188c3c4b5b912004c1458e5fa58fc))
+* add XLS to XLSX converter ([#1169](https://github.com/InBrowserApp/InBrowserApp/issues/1169)) ([0a62056](https://github.com/InBrowserApp/InBrowserApp/commit/0a62056e5b3fd12d331791087650b5690c9d7616))
+* **cbz:** add complete comic PDF conversion ([#1165](https://github.com/InBrowserApp/InBrowserApp/issues/1165)) ([d2cbf58](https://github.com/InBrowserApp/InBrowserApp/commit/d2cbf5835b3f02d8bfd685fb4702351e3d1bc43c))
+* export Jupyter notebooks as HTML, Markdown, and code ([#1191](https://github.com/InBrowserApp/InBrowserApp/issues/1191)) ([c56be7d](https://github.com/InBrowserApp/InBrowserApp/commit/c56be7df041842459498f66d547a6439aa2b5aa2))
+* **image-to-pdf:** support raster formats and page selection ([#1168](https://github.com/InBrowserApp/InBrowserApp/issues/1168)) ([9003c2d](https://github.com/InBrowserApp/InBrowserApp/commit/9003c2d91e2324b43eb599e0083379305a528964))
+* **image:** add selected-image PNG conversion and downloads ([#1166](https://github.com/InBrowserApp/InBrowserApp/issues/1166)) ([1c1058d](https://github.com/InBrowserApp/InBrowserApp/commit/1c1058db8f9c2efca8a25297c26c0129b7567bee))
+* **spreadsheet:** add local worksheet data exports ([#1164](https://github.com/InBrowserApp/InBrowserApp/issues/1164)) ([9a47720](https://github.com/InBrowserApp/InBrowserApp/commit/9a477208682a95cbd0e38af04a57a254d6069800))
+
+
+### Bug Fixes
+
+* **i18n:** align viewer reader and previewer terminology ([#1122](https://github.com/InBrowserApp/InBrowserApp/issues/1122)) ([f5dbe14](https://github.com/InBrowserApp/InBrowserApp/commit/f5dbe145f8a08daca803d0eaf70147508d279ca5))
+
 ## [2.4.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.3.0...v2.4.0) (2026-10-09)
 
 
