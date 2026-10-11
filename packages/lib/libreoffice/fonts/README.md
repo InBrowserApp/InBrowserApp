@@ -6,7 +6,7 @@ These unmodified fonts are distributed under the SIL Open Font License 1.1; the 
 - `NotoSansThai.ttf`: [Noto Sans Thai](https://github.com/google/fonts/tree/bd8f81ddb5c74d5c8897b36ad88b440266245103/ofl/notosansthai), original filename `NotoSansThai[wdth,wght].ttf`.
 - `NotoSansDevanagari.ttf`: [Noto Sans Devanagari](https://github.com/google/fonts/tree/bd8f81ddb5c74d5c8897b36ad88b440266245103/ofl/notosansdevanagari), original filename `NotoSansDevanagari[wdth,wght].ttf`.
 
-The runtime supplies its own Liberation, DejaVu, and additional Noto fonts. These three families fill gaps for the site's supported languages. They are loaded only after a presentation is selected.
+The runtime supplies its own Liberation, DejaVu, and additional Noto fonts. These three families fill gaps for the site's supported languages. They are loaded only after a document is selected.
 
 SHA-256:
 

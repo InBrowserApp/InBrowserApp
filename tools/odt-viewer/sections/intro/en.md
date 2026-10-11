@@ -11,3 +11,5 @@ Use the document outline to jump to headings, change zoom, or enter focus readin
 Documents use a continuous reading layout rather than exact printed pages. Explicit page breaks appear as separators; footnotes appear beside their references. Available default and first-page headers and footers appear in a separate expandable section. They do not repeat on every page. Original page sizes, pagination, complex positioning, and unavailable fonts may change the appearance.
 
 Tracked changes are shown as if accepted: inserted text remains and deleted text is hidden. This does not modify the file. Comments, complex drawings, embedded objects, and some formatting may be omitted. Missing or linked images receive a compatibility notice. Remote content, external links, and macros do not run or load. Password-protected documents must first be saved as an unencrypted copy in an office application. ODS spreadsheets and ODP presentations are outside this viewer’s scope.
+
+To create a printable copy, use the [ODT to PDF Converter](../odt-to-pdf-converter/).

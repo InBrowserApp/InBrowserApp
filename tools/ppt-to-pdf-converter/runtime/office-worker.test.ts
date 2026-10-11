@@ -1,11 +1,11 @@
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
-import { loadAssets } from "./load-assets"
+import { loadAssets } from "@workspace/libreoffice/load-assets"
 import { preflight } from "../core/preflight"
 import { validatePdf } from "../core/validate-pdf"
 import { ConversionError } from "../core/errors"
 import "./office-worker"
 
-vi.mock("./load-assets", () => ({ loadAssets: vi.fn() }))
+vi.mock("@workspace/libreoffice/load-assets", () => ({ loadAssets: vi.fn() }))
 vi.mock("../core/preflight", () => ({ preflight: vi.fn() }))
 vi.mock("../core/validate-pdf", () => ({ validatePdf: vi.fn() }))
 let worker: FakeWorker

@@ -1,6 +1,5 @@
-import bootstrap from "./bootstrap.js?raw"
-import guard from "./network-guard.js?raw"
-import { loadAssets } from "./load-assets"
+import { bootstrap, guard } from "@workspace/libreoffice/scripts"
+import { loadAssets } from "@workspace/libreoffice/load-assets"
 import { checkImages } from "../core/images"
 import { preflight } from "../core/preflight"
 import { validatePdf } from "../core/validate-pdf"

@@ -1,0 +1,29 @@
+{
+  "name": "@tool/odt-to-pdf-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "pdfjs-dist": "catalog:",
+    "@workspace/pdf-reader": "workspace:*",
+    "pdf-lib": "catalog:",
+    "@workspace/libreoffice": "workspace:*",
+    "fflate": "catalog:",
+    "saxes": "catalog:"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:"
+  }
+}
