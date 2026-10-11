@@ -82,6 +82,10 @@ const languageOptions = createLanguageOptions(
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
     <title>{title}</title>
+    <script>
+      import { setupIsolationLinks } from "@/lib/isolation-links"
+      setupIsolationLinks()
+    </script>
     {!isIsolatedToolPath(Astro.url.pathname) && <ClientRouter />}
     <script is:inline>
       ;(function () {
