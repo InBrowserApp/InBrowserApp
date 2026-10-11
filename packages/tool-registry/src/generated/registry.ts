@@ -901,6 +901,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "asciidoc-to-html-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["asciidoc", "adoc", "html", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل AsciiDoc إلى HTML",
+        description:
+          "حوّل مستند ADOC أو AsciiDoc محليًا إلى ملف HTML مستقل مع نص قابل للتحديد وصور مضمّنة ومعاينة آمنة. دون رفع ملفات.",
+      },
+      de: {
+        name: "AsciiDoc-zu-HTML-Konverter",
+        description:
+          "Konvertiere ein lokales ADOC- oder AsciiDoc-Dokument in eine eigenständige HTML-Datei mit auswählbarem Text, eingebetteten Bildern und einer sicheren Vorschau. Keine Uploads.",
+      },
+      en: {
+        name: "AsciiDoc to HTML Converter",
+        description:
+          "Convert a local ADOC or AsciiDoc document into a standalone HTML file with selectable text, embedded images and a safe preview. No uploads.",
+      },
+      es: {
+        name: "Convertidor de AsciiDoc a HTML",
+        description:
+          "Convierte un documento ADOC o AsciiDoc local en un archivo HTML independiente con texto seleccionable, imágenes incrustadas y una vista previa segura. Sin subidas.",
+      },
+      fr: {
+        name: "Convertisseur AsciiDoc en HTML",
+        description:
+          "Convertissez un document local ADOC ou AsciiDoc en un fichier HTML autonome avec du texte sélectionnable, des images intégrées et un aperçu sécurisé. Aucun envoi.",
+      },
+      he: {
+        name: "ממיר AsciiDoc ל־HTML",
+        description:
+          "המרת מסמך ADOC או AsciiDoc מקומי לקובץ HTML עצמאי עם טקסט שניתן לבחור, תמונות מוטמעות ותצוגה מקדימה בטוחה. ללא העלאות.",
+      },
+      hi: {
+        name: "AsciiDoc से HTML कन्वर्टर",
+        description:
+          "स्थानीय ADOC या AsciiDoc दस्तावेज़ को चुने जा सकने वाले टेक्स्ट, एम्बेड किए गए चित्रों और सुरक्षित पूर्वावलोकन वाली स्वतंत्र HTML फ़ाइल में बदलें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Konverter AsciiDoc ke HTML",
+        description:
+          "Konversikan dokumen ADOC atau AsciiDoc lokal menjadi file HTML mandiri dengan teks yang dapat dipilih, gambar tersemat, dan pratinjau yang aman. Tanpa unggahan.",
+      },
+      it: {
+        name: "Convertitore da AsciiDoc a HTML",
+        description:
+          "Converti un documento locale ADOC o AsciiDoc in un file HTML autonomo con testo selezionabile, immagini incorporate e un’anteprima sicura. Nessun caricamento.",
+      },
+      ja: {
+        name: "AsciiDocからHTMLへの変換ツール",
+        description:
+          "端末内のADOCまたはAsciiDoc文書を、選択可能なテキストと埋め込み画像を含む単独のHTMLファイルに変換します。安全なプレビューを利用でき、アップロードは行いません。",
+      },
+      ko: {
+        name: "AsciiDoc HTML 변환기",
+        description:
+          "기기에 있는 ADOC 또는 AsciiDoc 문서를 선택 가능한 텍스트와 포함된 이미지가 있는 독립형 HTML 파일로 변환하고 안전하게 미리 보세요. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Penukar AsciiDoc kepada HTML",
+        description:
+          "Tukar dokumen ADOC atau AsciiDoc setempat kepada fail HTML kendiri dengan teks yang boleh dipilih, imej terbenam dan pratonton yang selamat. Tiada muat naik.",
+      },
+      nl: {
+        name: "AsciiDoc naar HTML-converter",
+        description:
+          "Converteer een lokaal ADOC- of AsciiDoc-document naar een zelfstandig HTML-bestand met selecteerbare tekst, ingesloten afbeeldingen en een veilige voorvertoning. Geen uploads.",
+      },
+      no: {
+        name: "AsciiDoc til HTML-konverterer",
+        description:
+          "Konverter et lokalt ADOC- eller AsciiDoc-dokument til en selvstendig HTML-fil med tekst som kan markeres, innebygde bilder og en trygg forhåndsvisning. Ingen opplasting.",
+      },
+      pl: {
+        name: "Konwerter AsciiDoc na HTML",
+        description:
+          "Konwertuj lokalny dokument ADOC lub AsciiDoc na samodzielny plik HTML z tekstem możliwym do zaznaczenia, osadzonymi obrazami i bezpiecznym podglądem. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Conversor de AsciiDoc para HTML",
+        description:
+          "Converta um documento ADOC ou AsciiDoc local em um arquivo HTML independente com texto selecionável, imagens incorporadas e uma prévia segura. Sem uploads.",
+      },
+      ru: {
+        name: "Конвертер AsciiDoc в HTML",
+        description:
+          "Преобразуйте локальный документ ADOC или AsciiDoc в автономный HTML-файл с выделяемым текстом, встроенными изображениями и безопасным предпросмотром. Без отправки на сервер.",
+      },
+      sv: {
+        name: "AsciiDoc till HTML-konverterare",
+        description:
+          "Konvertera ett lokalt ADOC- eller AsciiDoc-dokument till en fristående HTML-fil med markerbar text, inbäddade bilder och en säker förhandsvisning. Inga uppladdningar.",
+      },
+      th: {
+        name: "โปรแกรมแปลง AsciiDoc เป็น HTML",
+        description:
+          "แปลงเอกสาร ADOC หรือ AsciiDoc บนอุปกรณ์เป็นไฟล์ HTML แบบแยกเดี่ยวพร้อมข้อความที่เลือกได้ รูปภาพที่ฝังไว้ และตัวอย่างที่ปลอดภัย ไม่มีการอัปโหลด",
+      },
+      tr: {
+        name: "AsciiDoc’tan HTML’ye Dönüştürücü",
+        description:
+          "Yerel bir ADOC veya AsciiDoc belgesini, seçilebilir metin, gömülü görseller ve güvenli bir önizlemeyle bağımsız bir HTML dosyasına dönüştürün. Yükleme yapılmaz.",
+      },
+      vi: {
+        name: "Trình chuyển đổi AsciiDoc sang HTML",
+        description:
+          "Chuyển tài liệu ADOC hoặc AsciiDoc trên thiết bị thành tệp HTML độc lập với văn bản có thể chọn, hình ảnh nhúng và bản xem trước an toàn. Không tải lên.",
+      },
+      "zh-CN": {
+        name: "AsciiDoc 转 HTML 转换器",
+        description:
+          "将本地 ADOC 或 AsciiDoc 文档转换为独立的 HTML 文件，保留可选择的文本和嵌入图片，并提供安全预览。无需上传。",
+      },
+      "zh-TW": {
+        name: "AsciiDoc 轉 HTML 轉換器",
+        description:
+          "將本機 ADOC 或 AsciiDoc 文件轉換為獨立的 HTML 檔案，保留可選取的文字與內嵌圖片，並提供安全預覽。檔案不會上傳。",
+      },
+    },
+  },
+  {
     slug: "asciidoc-to-pdf-converter",
     category: "document",
     icon: "file-text",
@@ -34330,6 +34453,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "ASCII 藝術產生器",
         description:
           "使用多種 figlet 字型將文字轉換為 ASCII 藝術。輸入文字或短語，選擇字型，然後複製結果。",
+      },
+    },
+  },
+  "asciidoc-to-html-converter": {
+    slug: "asciidoc-to-html-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["asciidoc", "adoc", "html", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل AsciiDoc إلى HTML",
+        description:
+          "حوّل مستند ADOC أو AsciiDoc محليًا إلى ملف HTML مستقل مع نص قابل للتحديد وصور مضمّنة ومعاينة آمنة. دون رفع ملفات.",
+      },
+      de: {
+        name: "AsciiDoc-zu-HTML-Konverter",
+        description:
+          "Konvertiere ein lokales ADOC- oder AsciiDoc-Dokument in eine eigenständige HTML-Datei mit auswählbarem Text, eingebetteten Bildern und einer sicheren Vorschau. Keine Uploads.",
+      },
+      en: {
+        name: "AsciiDoc to HTML Converter",
+        description:
+          "Convert a local ADOC or AsciiDoc document into a standalone HTML file with selectable text, embedded images and a safe preview. No uploads.",
+      },
+      es: {
+        name: "Convertidor de AsciiDoc a HTML",
+        description:
+          "Convierte un documento ADOC o AsciiDoc local en un archivo HTML independiente con texto seleccionable, imágenes incrustadas y una vista previa segura. Sin subidas.",
+      },
+      fr: {
+        name: "Convertisseur AsciiDoc en HTML",
+        description:
+          "Convertissez un document local ADOC ou AsciiDoc en un fichier HTML autonome avec du texte sélectionnable, des images intégrées et un aperçu sécurisé. Aucun envoi.",
+      },
+      he: {
+        name: "ממיר AsciiDoc ל־HTML",
+        description:
+          "המרת מסמך ADOC או AsciiDoc מקומי לקובץ HTML עצמאי עם טקסט שניתן לבחור, תמונות מוטמעות ותצוגה מקדימה בטוחה. ללא העלאות.",
+      },
+      hi: {
+        name: "AsciiDoc से HTML कन्वर्टर",
+        description:
+          "स्थानीय ADOC या AsciiDoc दस्तावेज़ को चुने जा सकने वाले टेक्स्ट, एम्बेड किए गए चित्रों और सुरक्षित पूर्वावलोकन वाली स्वतंत्र HTML फ़ाइल में बदलें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Konverter AsciiDoc ke HTML",
+        description:
+          "Konversikan dokumen ADOC atau AsciiDoc lokal menjadi file HTML mandiri dengan teks yang dapat dipilih, gambar tersemat, dan pratinjau yang aman. Tanpa unggahan.",
+      },
+      it: {
+        name: "Convertitore da AsciiDoc a HTML",
+        description:
+          "Converti un documento locale ADOC o AsciiDoc in un file HTML autonomo con testo selezionabile, immagini incorporate e un’anteprima sicura. Nessun caricamento.",
+      },
+      ja: {
+        name: "AsciiDocからHTMLへの変換ツール",
+        description:
+          "端末内のADOCまたはAsciiDoc文書を、選択可能なテキストと埋め込み画像を含む単独のHTMLファイルに変換します。安全なプレビューを利用でき、アップロードは行いません。",
+      },
+      ko: {
+        name: "AsciiDoc HTML 변환기",
+        description:
+          "기기에 있는 ADOC 또는 AsciiDoc 문서를 선택 가능한 텍스트와 포함된 이미지가 있는 독립형 HTML 파일로 변환하고 안전하게 미리 보세요. 파일을 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Penukar AsciiDoc kepada HTML",
+        description:
+          "Tukar dokumen ADOC atau AsciiDoc setempat kepada fail HTML kendiri dengan teks yang boleh dipilih, imej terbenam dan pratonton yang selamat. Tiada muat naik.",
+      },
+      nl: {
+        name: "AsciiDoc naar HTML-converter",
+        description:
+          "Converteer een lokaal ADOC- of AsciiDoc-document naar een zelfstandig HTML-bestand met selecteerbare tekst, ingesloten afbeeldingen en een veilige voorvertoning. Geen uploads.",
+      },
+      no: {
+        name: "AsciiDoc til HTML-konverterer",
+        description:
+          "Konverter et lokalt ADOC- eller AsciiDoc-dokument til en selvstendig HTML-fil med tekst som kan markeres, innebygde bilder og en trygg forhåndsvisning. Ingen opplasting.",
+      },
+      pl: {
+        name: "Konwerter AsciiDoc na HTML",
+        description:
+          "Konwertuj lokalny dokument ADOC lub AsciiDoc na samodzielny plik HTML z tekstem możliwym do zaznaczenia, osadzonymi obrazami i bezpiecznym podglądem. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Conversor de AsciiDoc para HTML",
+        description:
+          "Converta um documento ADOC ou AsciiDoc local em um arquivo HTML independente com texto selecionável, imagens incorporadas e uma prévia segura. Sem uploads.",
+      },
+      ru: {
+        name: "Конвертер AsciiDoc в HTML",
+        description:
+          "Преобразуйте локальный документ ADOC или AsciiDoc в автономный HTML-файл с выделяемым текстом, встроенными изображениями и безопасным предпросмотром. Без отправки на сервер.",
+      },
+      sv: {
+        name: "AsciiDoc till HTML-konverterare",
+        description:
+          "Konvertera ett lokalt ADOC- eller AsciiDoc-dokument till en fristående HTML-fil med markerbar text, inbäddade bilder och en säker förhandsvisning. Inga uppladdningar.",
+      },
+      th: {
+        name: "โปรแกรมแปลง AsciiDoc เป็น HTML",
+        description:
+          "แปลงเอกสาร ADOC หรือ AsciiDoc บนอุปกรณ์เป็นไฟล์ HTML แบบแยกเดี่ยวพร้อมข้อความที่เลือกได้ รูปภาพที่ฝังไว้ และตัวอย่างที่ปลอดภัย ไม่มีการอัปโหลด",
+      },
+      tr: {
+        name: "AsciiDoc’tan HTML’ye Dönüştürücü",
+        description:
+          "Yerel bir ADOC veya AsciiDoc belgesini, seçilebilir metin, gömülü görseller ve güvenli bir önizlemeyle bağımsız bir HTML dosyasına dönüştürün. Yükleme yapılmaz.",
+      },
+      vi: {
+        name: "Trình chuyển đổi AsciiDoc sang HTML",
+        description:
+          "Chuyển tài liệu ADOC hoặc AsciiDoc trên thiết bị thành tệp HTML độc lập với văn bản có thể chọn, hình ảnh nhúng và bản xem trước an toàn. Không tải lên.",
+      },
+      "zh-CN": {
+        name: "AsciiDoc 转 HTML 转换器",
+        description:
+          "将本地 ADOC 或 AsciiDoc 文档转换为独立的 HTML 文件，保留可选择的文本和嵌入图片，并提供安全预览。无需上传。",
+      },
+      "zh-TW": {
+        name: "AsciiDoc 轉 HTML 轉換器",
+        description:
+          "將本機 ADOC 或 AsciiDoc 文件轉換為獨立的 HTML 檔案，保留可選取的文字與內嵌圖片，並提供安全預覽。檔案不會上傳。",
       },
     },
   },

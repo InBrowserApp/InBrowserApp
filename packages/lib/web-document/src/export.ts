@@ -55,10 +55,15 @@ async function verifyImage(src: string, signal: AbortSignal) {
 export async function exportWebDocument(
   source: string,
   signal: AbortSignal,
-  headingText: string
+  headingText: string,
+  styles?: string
 ) {
   signal.throwIfAborted()
-  const preview = prepareWebDocument(source, { emptyText: "", headingText })
+  const preview = prepareWebDocument(source, {
+    emptyText: "",
+    headingText,
+    styles,
+  })
   if (preview.empty) throw new Error("invalid")
   if (preview.notes.local || preview.notes.remote)
     throw new Error("unsupported")
@@ -70,6 +75,7 @@ export async function exportWebDocument(
     emptyText: "",
     headingText,
     links: "direct",
+    styles,
   })
   return {
     preview,

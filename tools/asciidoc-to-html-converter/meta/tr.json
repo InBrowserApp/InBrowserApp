@@ -1,0 +1,4 @@
+{
+  "name": "AsciiDoc’tan HTML’ye Dönüştürücü",
+  "description": "Yerel bir ADOC veya AsciiDoc belgesini, seçilebilir metin, gömülü görseller ve güvenli bir önizlemeyle bağımsız bir HTML dosyasına dönüştürün. Yükleme yapılmaz."
+}

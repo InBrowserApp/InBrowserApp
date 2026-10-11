@@ -1,0 +1,4 @@
+{
+  "name": "AsciiDoc til HTML-konverterer",
+  "description": "Konverter et lokalt ADOC- eller AsciiDoc-dokument til en selvstendig HTML-fil med tekst som kan markeres, innebygde bilder og en trygg forhåndsvisning. Ingen opplasting."
+}

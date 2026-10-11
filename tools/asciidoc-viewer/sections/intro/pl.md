@@ -13,3 +13,5 @@ Dołączane pliki, atrybuty projektu dokumentacji, własne rozszerzenia, diagram
 Pliki pozostają na Twoim urządzeniu. Otwarcie dokumentu nie pobiera zasobów zdalnych, nie odczytuje innych lokalnych plików ani nie uruchamia skryptów. Linki zewnętrzne otwierają się osobno tylko po ich wybraniu. Zamknij lub zastąp plik, aby zwolnić bieżący podgląd. Ta przeglądarka nie edytuje ani nie eksportuje dokumentów i nie buduje witryn dokumentacji. Rozszerzenie .asc nie jest akceptowane, ponieważ jest używane także przez niezwiązane z AsciiDoc typy plików.
 
 Aby pobrać kopię do druku w formacie A4, użyj narzędzia [Konwerter AsciiDoc na PDF](../asciidoc-to-pdf-converter/). Udostępnia ono podgląd wygenerowanego pliku PDF i wyjaśnia, jakie źródła są obsługiwane oraz jakie ograniczenia dotyczą wyniku.
+
+Aby uzyskać samodzielny dokument HTML, który otwiera się offline, użyj narzędzia [Konwerter AsciiDoc na HTML](../asciidoc-to-html-converter/).

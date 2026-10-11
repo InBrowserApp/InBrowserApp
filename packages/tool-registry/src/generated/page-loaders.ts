@@ -13,6 +13,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "argon2-hash-password-verifier": () =>
     import("@tool/argon2-hash-password-verifier/page"),
   "ascii-art-generator": () => import("@tool/ascii-art-generator/page"),
+  "asciidoc-to-html-converter": () =>
+    import("@tool/asciidoc-to-html-converter/page"),
   "asciidoc-to-pdf-converter": () =>
     import("@tool/asciidoc-to-pdf-converter/page"),
   "asciidoc-viewer": () => import("@tool/asciidoc-viewer/page"),

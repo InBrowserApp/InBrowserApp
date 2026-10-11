@@ -1,5 +1,5 @@
 import { prepareWebDocument } from "@workspace/web-document"
-import { readerStyle } from "./reader-style"
+import { readerStyle } from "@workspace/asciidoc/styles"
 import type { Conversion, Messages, Preview } from "./types"
 
 export function preparePreview(result: Conversion, m: Messages): Preview {

@@ -1,0 +1,4 @@
+{
+  "name": "AsciiDoc 转 HTML 转换器",
+  "description": "将本地 ADOC 或 AsciiDoc 文档转换为独立的 HTML 文件，保留可选择的文本和嵌入图片，并提供安全预览。无需上传。"
+}
