@@ -9,6 +9,7 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  "@resvg/resvg-wasm": 2.6.2
   "@matbee/libreoffice-converter": 2.7.2
   pagedjs: 0.4.3
   html2canvas: 1.4.1

@@ -13,3 +13,5 @@ De viewer gebruikt lettertypen die beschikbaar zijn op je apparaat en downloadt 
 Oudere HWP-documenten en documenten met wachtwoordbeveiliging, rechtenbeheer of een beperking tot distributie worden niet ondersteund. Open of bewaar eerst een gewone HWP 5- of HWPX-kopie in Hangul. Formulierelementen zijn alleen-lezen en documentmacro’s worden niet uitgevoerd.
 
 Er is geen vaste limiet voor de bestandsgrootte of het aantal pagina’s. Zeer grote of complexe bestanden kunnen de beschikbare systeembronnen van je browser overschrijden. Je kunt een document sluiten of vervangen terwijl het wordt geopend.
+
+Gebruik de [HWP/HWPX-naar-PDF-converter](../hwp-to-pdf-converter/) om een downloadbare PDF op basis van afbeeldingen te maken. Controleer de beperkingen voor lettertypen en indeling voordat je het resultaat gebruikt.

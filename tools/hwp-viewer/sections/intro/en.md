@@ -13,3 +13,5 @@ The viewer uses fonts available on your device and does not download document fo
 Password-protected, rights-managed, distribution-only, and older HWP documents are not supported. Open or save an ordinary HWP 5 or HWPX copy in Hangul first. Form controls are read-only and document macros are not run.
 
 There is no fixed file-size or page-count limit. Very large or complex files can exceed your browser’s available resources. You can close or replace a document while it is opening.
+
+To create a downloadable image-based PDF, use the [HWP / HWPX to PDF Converter](../hwp-to-pdf-converter/). Check its font and layout limitations before using the result.

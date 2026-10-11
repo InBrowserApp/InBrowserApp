@@ -13,3 +13,5 @@ Görüntüleyici cihazınızda bulunan yazı tiplerini kullanır ve belge yazı 
 Parola korumalı, hak yönetimi korumalı, yalnızca dağıtım amaçlı ve eski HWP belgeleri desteklenmez. Önce Hangul uygulamasında normal bir HWP 5 veya HWPX kopyası açın ya da kaydedin. Form denetimleri salt okunurdur ve belge makroları çalıştırılmaz.
 
 Sabit bir dosya boyutu veya sayfa sayısı sınırı yoktur. Çok büyük veya karmaşık dosyalar tarayıcınızın kullanılabilir kaynaklarını aşabilir. Belge açılırken onu kapatabilir veya değiştirebilirsiniz.
+
+İndirilebilir, görsel tabanlı bir PDF oluşturmak için [HWP / HWPX’ten PDF’ye Dönüştürücü](../hwp-to-pdf-converter/) aracını kullanın. Sonucu kullanmadan önce yazı tipi ve düzen sınırlamalarını inceleyin.

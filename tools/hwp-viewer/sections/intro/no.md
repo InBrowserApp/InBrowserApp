@@ -13,3 +13,5 @@ Viseren bruker skrifter som er tilgjengelige på enheten din, og laster ikke ned
 Passordbeskyttede og rettighetsstyrte HWP-dokumenter, dokumenter som kun er ment for distribusjon, og eldre HWP-dokumenter støttes ikke. Åpne eller lagre først en vanlig HWP 5- eller HWPX-kopi i Hangul. Skjemakontroller er skrivebeskyttet, og dokumentmakroer kjøres ikke.
 
 Det er ingen fast grense for filstørrelse eller antall sider. Svært store eller komplekse filer kan overskride nettleserens tilgjengelige ressurser. Du kan lukke eller bytte et dokument mens det åpnes.
+
+Bruk [Konverterer fra HWP / HWPX til PDF](../hwp-to-pdf-converter/) for å lage en bildebasert PDF som kan lastes ned. Les om begrensningene for skrifter og sideoppsett før du bruker resultatet.

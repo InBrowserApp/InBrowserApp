@@ -13,3 +13,5 @@ Przeglądarka używa czcionek dostępnych na Twoim urządzeniu i nie pobiera czc
 Dokumenty HWP chronione hasłem, objęte zarządzaniem prawami, przeznaczone tylko do dystrybucji oraz zapisane w starszych formatach nie są obsługiwane. Najpierw otwórz lub zapisz zwykłą kopię HWP 5 lub HWPX w programie Hangul. Elementy formularzy są tylko do odczytu, a makra dokumentu nie są uruchamiane.
 
 Nie ma stałego limitu rozmiaru pliku ani liczby stron. Bardzo duże lub złożone pliki mogą przekroczyć dostępne zasoby przeglądarki. Dokument można zamknąć lub zastąpić w trakcie otwierania.
+
+Aby utworzyć plik PDF oparty na obrazach i gotowy do pobrania, skorzystaj z narzędzia [Konwerter HWP / HWPX na PDF](../hwp-to-pdf-converter/). Przed użyciem wyniku zapoznaj się z ograniczeniami dotyczącymi czcionek i układu.

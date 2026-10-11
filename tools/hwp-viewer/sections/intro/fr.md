@@ -13,3 +13,5 @@ La visionneuse utilise les polices disponibles sur votre appareil et ne téléch
 Les documents HWP protégés par mot de passe, soumis à une gestion des droits, réservés à la diffusion ou utilisant un ancien format ne sont pas pris en charge. Ouvrez ou enregistrez d’abord une copie HWP 5 ou HWPX ordinaire dans Hangul. Les contrôles de formulaire sont en lecture seule et les macros du document ne sont pas exécutées.
 
 Il n’existe aucune limite fixe de taille de fichier ou de nombre de pages. Les fichiers très volumineux ou complexes peuvent dépasser les ressources disponibles de votre navigateur. Vous pouvez fermer ou remplacer un document pendant son ouverture.
+
+Pour créer un PDF téléchargeable composé d’images, utilisez le [Convertisseur HWP / HWPX en PDF](../hwp-to-pdf-converter/). Consultez ses limites concernant les polices et la mise en page avant d’utiliser le résultat.

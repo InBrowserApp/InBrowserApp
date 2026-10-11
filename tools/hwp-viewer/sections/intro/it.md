@@ -13,3 +13,5 @@ Il visualizzatore usa i caratteri disponibili sul dispositivo e non scarica quel
 I documenti HWP protetti da password, soggetti a gestione dei diritti, destinati alla sola distribuzione o di formati precedenti non sono supportati. Apri o salva prima una normale copia HWP 5 o HWPX in Hangul. I controlli dei moduli sono di sola lettura e le macro dei documenti non vengono eseguite.
 
 Non esiste un limite fisso alla dimensione dei file o al numero di pagine. I file molto grandi o complessi possono superare le risorse disponibili del browser. Puoi chiudere o sostituire un documento durante l’apertura.
+
+Per creare un PDF scaricabile basato su immagini, usa il [Convertitore da HWP / HWPX a PDF](../hwp-to-pdf-converter/). Consulta i limiti relativi ai caratteri tipografici e all’impaginazione prima di usare il risultato.

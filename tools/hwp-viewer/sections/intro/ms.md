@@ -13,3 +13,5 @@ Pemapar menggunakan fon yang tersedia pada peranti anda dan tidak memuat turun f
 Dokumen HWP yang dilindungi kata laluan, dikawal pengurusan hak, untuk pengedaran sahaja atau menggunakan format lama tidak disokong. Buka atau simpan salinan HWP 5 atau HWPX biasa dalam Hangul terlebih dahulu. Kawalan borang adalah baca sahaja dan makro dokumen tidak dijalankan.
 
 Tiada had tetap bagi saiz fail atau bilangan halaman. Fail yang sangat besar atau kompleks boleh melebihi sumber yang tersedia dalam pelayar anda. Anda boleh menutup atau menggantikan dokumen semasa dokumen dibuka.
+
+Untuk menghasilkan PDF berasaskan imej yang boleh dimuat turun, gunakan [Penukar HWP dan HWPX kepada PDF](../hwp-to-pdf-converter/). Semak batasan fon dan susun aturnya sebelum menggunakan hasilnya.

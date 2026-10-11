@@ -11,10 +11,7 @@
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "@rhwp/core": "catalog:",
-    "dompurify": "catalog:",
-    "cfb": "catalog:",
-    "fflate": "catalog:",
-    "saxes": "catalog:"
+    "@workspace/hwp": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",
@@ -23,6 +20,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "fflate": "catalog:"
   }
 }
