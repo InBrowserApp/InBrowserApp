@@ -4,7 +4,7 @@ import { expect, test } from "vitest"
 import { parse } from "./core/parse"
 import { preparePreview } from "./prepare-preview"
 import { fragment } from "./fragment"
-import { staticSvg } from "./static-svg"
+import { staticSvg } from "@workspace/web-document"
 const m = JSON.parse(
   readFileSync("tools/notebook-viewer/messages/en.json", "utf8")
 )

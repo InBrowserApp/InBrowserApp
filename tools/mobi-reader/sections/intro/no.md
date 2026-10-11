@@ -13,3 +13,5 @@ Krypterte eller kopibeskyttede bøker, bøker med fast sideoppsett og nyere Kind
 Boken din forblir i denne nettleseren. Skript, lyd, video og eksterne ressurser lastes ikke inn. Vanlige nettlenker åpnes bare når du aktiverer dem. Ingen konto, opplasting eller konverteringstjeneste er nødvendig, og ressursene frigjøres når du lukker eller bytter bok.
 
 Det finnes ingen forhåndsbestemt grense for filstørrelse eller antall kapitler. Store eller komplekse bøker avhenger likevel av enheten og minnet i nettleseren. Lesekontrollene holdes atskilt fra bokteksten, og leseposisjonen beholdes så langt det er mulig når du endrer tekststørrelsen.
+
+For å lagre det lesbare innholdet i en bok som støttes, som en lokal TXT- eller HTML-fil, kan du bruke [E-bok til TXT / HTML-konverterer](/tools/ebook-text-html-export/).

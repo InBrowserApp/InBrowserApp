@@ -13,3 +13,5 @@ Verschlüsselte oder kopiergeschützte Bücher, Bücher mit festem Layout und ne
 Dein Buch bleibt in diesem Browser. Skripte, Audio, Video und externe Ressourcen werden nicht geladen. Gewöhnliche Weblinks öffnen sich nur, wenn du sie aktivierst. Du benötigst weder ein Konto noch einen Upload- oder Konvertierungsdienst. Beim Schließen oder Ersetzen des Buchs werden seine Ressourcen freigegeben.
 
 Es gibt keine vorgegebene Grenze für die Dateigröße oder Kapitelanzahl. Große oder komplexe Bücher sind dennoch von deinem Gerät und dem Browserspeicher abhängig. Die Bedienelemente bleiben vom Buchtext getrennt. Beim Ändern der Schriftgröße bleibt deine aktuelle Leseposition nach Möglichkeit erhalten.
+
+Um den lesbaren Inhalt eines unterstützten Buchs als lokale TXT- oder HTML-Datei zu speichern, nutze den [E-Book-zu-TXT-/HTML-Konverter](/tools/ebook-text-html-export/).

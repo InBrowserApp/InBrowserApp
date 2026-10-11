@@ -1,0 +1,21 @@
+{
+  "name": "@workspace/ebook",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./epub": "./src/epub/open-book.ts",
+    "./mobi": "./src/mobi/open-book.ts",
+    "./fb2": "./src/fb2/open-book.ts"
+  },
+  "dependencies": {
+    "@workspace/web-document": "workspace:*",
+    "@zip.js/zip.js": "catalog:",
+    "foliate-js": "catalog:",
+    "fflate": "catalog:"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

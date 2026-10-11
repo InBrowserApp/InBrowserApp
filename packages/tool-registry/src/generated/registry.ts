@@ -9020,6 +9020,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "ebook-text-html-export",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "ebook",
+      "epub",
+      "mobi",
+      "azw3",
+      "fb2",
+      "html",
+      "text",
+      "txt",
+      "export",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الكتب الإلكترونية إلى TXT / HTML",
+        description:
+          "صدّر كتب EPUB وMOBI/AZW3 وFB2 المحلية إلى نص قابل للقراءة أو HTML مستقل. احتفظ بترتيب القراءة والمحتوى المدعوم دون رفع كتابك.",
+      },
+      de: {
+        name: "E-Book-zu-TXT-/HTML-Konverter",
+        description:
+          "Exportiere lokale EPUB-, MOBI/AZW3- und FB2-Bücher als lesbaren Text oder eigenständiges HTML. Erhalte die Lesereihenfolge und unterstützte Inhalte, ohne dein Buch hochzuladen.",
+      },
+      en: {
+        name: "Ebook to TXT / HTML Converter",
+        description:
+          "Export local EPUB, MOBI/AZW3 and FB2 books as readable text or standalone HTML. Preserve reading order and supported content without uploading your book.",
+      },
+      es: {
+        name: "Convertidor de libros electrónicos a TXT / HTML",
+        description:
+          "Exporta libros EPUB, MOBI/AZW3 y FB2 locales como texto legible o HTML independiente. Conserva el orden de lectura y el contenido compatible sin subir tu libro.",
+      },
+      fr: {
+        name: "Convertisseur de livres numériques en TXT / HTML",
+        description:
+          "Exportez des livres locaux EPUB, MOBI/AZW3 et FB2 en texte lisible ou en HTML autonome. Conservez l’ordre de lecture et le contenu pris en charge sans envoyer votre livre.",
+      },
+      he: {
+        name: "ממיר ספרים אלקטרוניים ל־TXT / HTML",
+        description:
+          "ייצוא ספרים מקומיים בפורמטים EPUB, MOBI/AZW3 ו־FB2 לטקסט קריא או ל־HTML עצמאי. סדר הקריאה והתוכן הנתמך נשמרים ללא העלאת הספר.",
+      },
+      hi: {
+        name: "ईबुक से TXT / HTML कन्वर्टर",
+        description:
+          "स्थानीय EPUB, MOBI/AZW3 और FB2 पुस्तकों को पढ़ने योग्य टेक्स्ट या स्वतंत्र HTML में निर्यात करें। पुस्तक अपलोड किए बिना पढ़ने का क्रम और समर्थित सामग्री बनाए रखें।",
+      },
+      id: {
+        name: "Konverter Buku Elektronik ke TXT / HTML",
+        description:
+          "Ekspor buku EPUB, MOBI/AZW3, dan FB2 lokal sebagai teks yang dapat dibaca atau HTML mandiri. Pertahankan urutan baca dan konten yang didukung tanpa mengunggah buku Anda.",
+      },
+      it: {
+        name: "Convertitore da ebook a TXT / HTML",
+        description:
+          "Esporta libri EPUB, MOBI/AZW3 e FB2 locali come testo leggibile o HTML autonomo. Mantieni l’ordine di lettura e i contenuti supportati senza caricare il libro.",
+      },
+      ja: {
+        name: "電子書籍から TXT / HTML への変換ツール",
+        description:
+          "端末内の EPUB、MOBI/AZW3、FB2 の本を、読み取り可能なテキストまたは単独で開ける HTML として書き出します。本をアップロードせずに、読む順序と対応する内容を保持します。",
+      },
+      ko: {
+        name: "전자책 TXT / HTML 변환기",
+        description:
+          "기기에 있는 EPUB, MOBI/AZW3 및 FB2 책을 읽을 수 있는 텍스트나 독립형 HTML로 내보내세요. 책을 업로드하지 않고 읽기 순서와 지원되는 내용을 유지합니다.",
+      },
+      ms: {
+        name: "Penukar E-buku kepada TXT / HTML",
+        description:
+          "Eksport buku EPUB, MOBI/AZW3 dan FB2 setempat sebagai teks yang boleh dibaca atau HTML kendiri. Kekalkan susunan bacaan dan kandungan yang disokong tanpa memuat naik buku anda.",
+      },
+      nl: {
+        name: "E-book naar TXT / HTML-converter",
+        description:
+          "Exporteer lokale EPUB-, MOBI/AZW3- en FB2-boeken als leesbare tekst of zelfstandige HTML. Behoud de leesvolgorde en ondersteunde inhoud zonder je boek te uploaden.",
+      },
+      no: {
+        name: "E-bok til TXT / HTML-konverterer",
+        description:
+          "Eksporter lokale EPUB-, MOBI/AZW3- og FB2-bøker som lesbar tekst eller frittstående HTML. Bevar leserekkefølge og innhold som støttes, uten å laste opp boken.",
+      },
+      pl: {
+        name: "Konwerter e-booków na TXT / HTML",
+        description:
+          "Eksportuj lokalne książki EPUB, MOBI/AZW3 i FB2 jako czytelny tekst lub samodzielny plik HTML. Zachowaj kolejność czytania i obsługiwaną treść bez przesyłania książki.",
+      },
+      pt: {
+        name: "Conversor de e-books para TXT / HTML",
+        description:
+          "Exporte livros locais em EPUB, MOBI/AZW3 e FB2 como texto legível ou HTML independente. Preserve a ordem de leitura e o conteúdo compatível sem enviar seu livro.",
+      },
+      ru: {
+        name: "Конвертер электронных книг в TXT / HTML",
+        description:
+          "Экспортируйте локальные книги EPUB, MOBI/AZW3 и FB2 в читаемый текст или автономный HTML. Сохраняйте порядок чтения и поддерживаемое содержимое без отправки книги на сервер.",
+      },
+      sv: {
+        name: "Konverterare från e-bok till TXT / HTML",
+        description:
+          "Exportera lokala EPUB-, MOBI/AZW3- och FB2-böcker som läsbar text eller fristående HTML. Bevara läsordning och innehåll som stöds utan att ladda upp din bok.",
+      },
+      th: {
+        name: "โปรแกรมแปลงอีบุ๊กเป็น TXT / HTML",
+        description:
+          "ส่งออกหนังสือ EPUB, MOBI/AZW3 และ FB2 ในอุปกรณ์เป็นข้อความที่อ่านได้หรือ HTML แบบเปิดอ่านได้ในตัว คงลำดับการอ่านและเนื้อหาที่รองรับโดยไม่ต้องอัปโหลดหนังสือ",
+      },
+      tr: {
+        name: "E-kitaptan TXT / HTML’ye Dönüştürücü",
+        description:
+          "Yerel EPUB, MOBI/AZW3 ve FB2 kitaplarını okunabilir metin veya bağımsız HTML olarak dışa aktarın. Kitabınızı yüklemeden okuma sırasını ve desteklenen içeriği koruyun.",
+      },
+      vi: {
+        name: "Trình chuyển đổi sách điện tử sang TXT / HTML",
+        description:
+          "Xuất sách EPUB, MOBI/AZW3 và FB2 trên thiết bị thành văn bản dễ đọc hoặc HTML độc lập. Giữ nguyên thứ tự đọc và nội dung được hỗ trợ mà không tải sách lên.",
+      },
+      "zh-CN": {
+        name: "电子书转 TXT / HTML 转换器",
+        description:
+          "将本地 EPUB、MOBI/AZW3 和 FB2 书籍导出为可读文本或独立 HTML。保留阅读顺序和受支持的内容，无需上传书籍。",
+      },
+      "zh-TW": {
+        name: "電子書轉 TXT／HTML 轉換器",
+        description:
+          "將本機 EPUB、MOBI/AZW3 及 FB2 書籍匯出為可讀取的文字或獨立 HTML。保留閱讀順序與支援的內容，無須上傳書籍。",
+      },
+    },
+  },
+  {
     slug: "email-attachment-extractor",
     category: "document",
     icon: "mail",
@@ -43082,6 +43216,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "時長加減計算器",
         description: "在任何時區，從基準時間加減 ISO 8601 時長，精確到毫秒。",
+      },
+    },
+  },
+  "ebook-text-html-export": {
+    slug: "ebook-text-html-export",
+    category: "document",
+    icon: "book-open",
+    tags: [
+      "ebook",
+      "epub",
+      "mobi",
+      "azw3",
+      "fb2",
+      "html",
+      "text",
+      "txt",
+      "export",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل الكتب الإلكترونية إلى TXT / HTML",
+        description:
+          "صدّر كتب EPUB وMOBI/AZW3 وFB2 المحلية إلى نص قابل للقراءة أو HTML مستقل. احتفظ بترتيب القراءة والمحتوى المدعوم دون رفع كتابك.",
+      },
+      de: {
+        name: "E-Book-zu-TXT-/HTML-Konverter",
+        description:
+          "Exportiere lokale EPUB-, MOBI/AZW3- und FB2-Bücher als lesbaren Text oder eigenständiges HTML. Erhalte die Lesereihenfolge und unterstützte Inhalte, ohne dein Buch hochzuladen.",
+      },
+      en: {
+        name: "Ebook to TXT / HTML Converter",
+        description:
+          "Export local EPUB, MOBI/AZW3 and FB2 books as readable text or standalone HTML. Preserve reading order and supported content without uploading your book.",
+      },
+      es: {
+        name: "Convertidor de libros electrónicos a TXT / HTML",
+        description:
+          "Exporta libros EPUB, MOBI/AZW3 y FB2 locales como texto legible o HTML independiente. Conserva el orden de lectura y el contenido compatible sin subir tu libro.",
+      },
+      fr: {
+        name: "Convertisseur de livres numériques en TXT / HTML",
+        description:
+          "Exportez des livres locaux EPUB, MOBI/AZW3 et FB2 en texte lisible ou en HTML autonome. Conservez l’ordre de lecture et le contenu pris en charge sans envoyer votre livre.",
+      },
+      he: {
+        name: "ממיר ספרים אלקטרוניים ל־TXT / HTML",
+        description:
+          "ייצוא ספרים מקומיים בפורמטים EPUB, MOBI/AZW3 ו־FB2 לטקסט קריא או ל־HTML עצמאי. סדר הקריאה והתוכן הנתמך נשמרים ללא העלאת הספר.",
+      },
+      hi: {
+        name: "ईबुक से TXT / HTML कन्वर्टर",
+        description:
+          "स्थानीय EPUB, MOBI/AZW3 और FB2 पुस्तकों को पढ़ने योग्य टेक्स्ट या स्वतंत्र HTML में निर्यात करें। पुस्तक अपलोड किए बिना पढ़ने का क्रम और समर्थित सामग्री बनाए रखें।",
+      },
+      id: {
+        name: "Konverter Buku Elektronik ke TXT / HTML",
+        description:
+          "Ekspor buku EPUB, MOBI/AZW3, dan FB2 lokal sebagai teks yang dapat dibaca atau HTML mandiri. Pertahankan urutan baca dan konten yang didukung tanpa mengunggah buku Anda.",
+      },
+      it: {
+        name: "Convertitore da ebook a TXT / HTML",
+        description:
+          "Esporta libri EPUB, MOBI/AZW3 e FB2 locali come testo leggibile o HTML autonomo. Mantieni l’ordine di lettura e i contenuti supportati senza caricare il libro.",
+      },
+      ja: {
+        name: "電子書籍から TXT / HTML への変換ツール",
+        description:
+          "端末内の EPUB、MOBI/AZW3、FB2 の本を、読み取り可能なテキストまたは単独で開ける HTML として書き出します。本をアップロードせずに、読む順序と対応する内容を保持します。",
+      },
+      ko: {
+        name: "전자책 TXT / HTML 변환기",
+        description:
+          "기기에 있는 EPUB, MOBI/AZW3 및 FB2 책을 읽을 수 있는 텍스트나 독립형 HTML로 내보내세요. 책을 업로드하지 않고 읽기 순서와 지원되는 내용을 유지합니다.",
+      },
+      ms: {
+        name: "Penukar E-buku kepada TXT / HTML",
+        description:
+          "Eksport buku EPUB, MOBI/AZW3 dan FB2 setempat sebagai teks yang boleh dibaca atau HTML kendiri. Kekalkan susunan bacaan dan kandungan yang disokong tanpa memuat naik buku anda.",
+      },
+      nl: {
+        name: "E-book naar TXT / HTML-converter",
+        description:
+          "Exporteer lokale EPUB-, MOBI/AZW3- en FB2-boeken als leesbare tekst of zelfstandige HTML. Behoud de leesvolgorde en ondersteunde inhoud zonder je boek te uploaden.",
+      },
+      no: {
+        name: "E-bok til TXT / HTML-konverterer",
+        description:
+          "Eksporter lokale EPUB-, MOBI/AZW3- og FB2-bøker som lesbar tekst eller frittstående HTML. Bevar leserekkefølge og innhold som støttes, uten å laste opp boken.",
+      },
+      pl: {
+        name: "Konwerter e-booków na TXT / HTML",
+        description:
+          "Eksportuj lokalne książki EPUB, MOBI/AZW3 i FB2 jako czytelny tekst lub samodzielny plik HTML. Zachowaj kolejność czytania i obsługiwaną treść bez przesyłania książki.",
+      },
+      pt: {
+        name: "Conversor de e-books para TXT / HTML",
+        description:
+          "Exporte livros locais em EPUB, MOBI/AZW3 e FB2 como texto legível ou HTML independente. Preserve a ordem de leitura e o conteúdo compatível sem enviar seu livro.",
+      },
+      ru: {
+        name: "Конвертер электронных книг в TXT / HTML",
+        description:
+          "Экспортируйте локальные книги EPUB, MOBI/AZW3 и FB2 в читаемый текст или автономный HTML. Сохраняйте порядок чтения и поддерживаемое содержимое без отправки книги на сервер.",
+      },
+      sv: {
+        name: "Konverterare från e-bok till TXT / HTML",
+        description:
+          "Exportera lokala EPUB-, MOBI/AZW3- och FB2-böcker som läsbar text eller fristående HTML. Bevara läsordning och innehåll som stöds utan att ladda upp din bok.",
+      },
+      th: {
+        name: "โปรแกรมแปลงอีบุ๊กเป็น TXT / HTML",
+        description:
+          "ส่งออกหนังสือ EPUB, MOBI/AZW3 และ FB2 ในอุปกรณ์เป็นข้อความที่อ่านได้หรือ HTML แบบเปิดอ่านได้ในตัว คงลำดับการอ่านและเนื้อหาที่รองรับโดยไม่ต้องอัปโหลดหนังสือ",
+      },
+      tr: {
+        name: "E-kitaptan TXT / HTML’ye Dönüştürücü",
+        description:
+          "Yerel EPUB, MOBI/AZW3 ve FB2 kitaplarını okunabilir metin veya bağımsız HTML olarak dışa aktarın. Kitabınızı yüklemeden okuma sırasını ve desteklenen içeriği koruyun.",
+      },
+      vi: {
+        name: "Trình chuyển đổi sách điện tử sang TXT / HTML",
+        description:
+          "Xuất sách EPUB, MOBI/AZW3 và FB2 trên thiết bị thành văn bản dễ đọc hoặc HTML độc lập. Giữ nguyên thứ tự đọc và nội dung được hỗ trợ mà không tải sách lên.",
+      },
+      "zh-CN": {
+        name: "电子书转 TXT / HTML 转换器",
+        description:
+          "将本地 EPUB、MOBI/AZW3 和 FB2 书籍导出为可读文本或独立 HTML。保留阅读顺序和受支持的内容，无需上传书籍。",
+      },
+      "zh-TW": {
+        name: "電子書轉 TXT／HTML 轉換器",
+        description:
+          "將本機 EPUB、MOBI/AZW3 及 FB2 書籍匯出為可讀取的文字或獨立 HTML。保留閱讀順序與支援的內容，無須上傳書籍。",
       },
     },
   },

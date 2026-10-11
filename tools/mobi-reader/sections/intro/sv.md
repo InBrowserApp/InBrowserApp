@@ -13,3 +13,5 @@ Krypterade eller kopieringsskyddade böcker, böcker med fast layout och nyare K
 Din bok stannar i den här webbläsaren. Skript, ljud, video och externa resurser läses inte in. Vanliga webblänkar öppnas bara när du aktiverar dem. Inget konto, ingen uppladdning och ingen konverteringstjänst behövs. När du stänger eller byter bok frigörs dess resurser.
 
 Det finns ingen förinställd gräns för filstorlek eller antal kapitel. Stora eller komplexa böcker är fortfarande beroende av din enhet och webbläsarens minne. Läskontrollerna hålls åtskilda från boktexten, och din läsposition behålls om möjligt när du ändrar textstorleken.
+
+För att spara det läsbara innehållet i en bok som stöds som en lokal TXT- eller HTML-fil använder du [Konverterare från e-bok till TXT / HTML](/tools/ebook-text-html-export/).

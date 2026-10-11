@@ -1,7 +1,7 @@
 import { openEmail } from "@workspace/email"
 import { emailDocument } from "@workspace/email/document"
 import { exportWebDocument } from "@workspace/web-document/export"
-import { readableText } from "./text"
+import { readableText } from "@workspace/web-document"
 import type { Messages } from "../types"
 
 export async function convert(file: File, signal: AbortSignal, m: Messages) {

@@ -9,3 +9,5 @@ Pembaca ini membuka publikasi EPUB 2 dan EPUB 3 biasa dengan tata letak yang men
 File tetap berada di perangkat Anda serta tidak diunggah atau disimpan oleh alat ini. Skrip buku tidak dijalankan, dan gambar, gaya, font, audio, serta video eksternal tidak diambil secara otomatis. Buku yang dilindungi dan tata letak halaman tetap atau campuran tidak dapat ditampilkan. Tulisan vertikal dan gaya penerbit yang tidak lazim dapat berbeda antarbrowser; penggantian font dapat mengubah pemenggalan baris. Bab yang hilang dan sumber daya yang tidak tersedia disertai pemberitahuan yang terlihat, sehingga buku tidak disajikan seolah-olah lengkap.
 
 Tidak ada batas tetap untuk ukuran file atau jumlah bab. Batas memori browser yang sebenarnya tetap berlaku. Menutup atau mengganti buku akan membebaskan sumber daya yang digunakan untuk membacanya. Ini adalah pembaca, tanpa pengeditan, ekspor, sinkronisasi cloud, atau riwayat membaca tersimpan.
+
+Untuk menyimpan konten yang dapat dibaca dari buku yang didukung sebagai file TXT atau HTML lokal, gunakan [Konverter Buku Elektronik ke TXT / HTML](/tools/ebook-text-html-export/).

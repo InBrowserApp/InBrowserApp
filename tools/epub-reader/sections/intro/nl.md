@@ -9,3 +9,5 @@ De lezer opent gewone EPUB 2- en EPUB 3-publicaties met een aanpasbare indeling.
 Bestanden blijven op je apparaat en worden door deze tool niet geüpload of opgeslagen. Scripts in boeken worden niet uitgevoerd en externe afbeeldingen, stijlen, lettertypen, audio en video worden niet automatisch opgehaald. Beveiligde boeken en vaste of gemengde pagina-indelingen kunnen niet worden weergegeven. Verticale tekst en afwijkende uitgeversstijlen kunnen per browser verschillen; vervangende lettertypen kunnen de regelafbreking veranderen. Bij ontbrekende hoofdstukken en niet-beschikbare bronnen verschijnt een melding, zodat het boek niet ten onrechte als volledig wordt weergegeven.
 
 Er is geen vaste limiet voor de bestandsgrootte of het aantal hoofdstukken. De werkelijke geheugenbeperkingen van de browser blijven van toepassing. Als je het boek sluit of vervangt, komen de gebruikte leesbronnen vrij. Dit is een lezer, zonder bewerking, export, cloudsynchronisatie of opgeslagen leesgeschiedenis.
+
+Gebruik de [E-book naar TXT / HTML-converter](/tools/ebook-text-html-export/) om de leesbare inhoud van een ondersteund boek als lokaal TXT- of HTML-bestand op te slaan.

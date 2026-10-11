@@ -4,6 +4,7 @@ import { readableImage } from "./images"
 class TestImage {
   static last: TestImage
   naturalWidth = 2
+  decode = vi.fn().mockResolvedValue(undefined)
   onload: (() => void) | null = null
   onerror: (() => void) | null = null
   removeAttribute = vi.fn()
@@ -61,4 +62,24 @@ test("cancels image decoding and rejects already aborted work", async () => {
   await expect(readableImage("", controller.signal)).rejects.toMatchObject({
     name: "AbortError",
   })
+})
+
+test("rejects pixel decode failures and ignores a decode that finishes after cancellation", async () => {
+  const controller = new AbortController()
+  let pending = readableImage("data:image/png;base64,AA==", controller.signal)
+  TestImage.last.decode.mockRejectedValueOnce(new Error("truncated"))
+  TestImage.last.onload!()
+  expect(await pending).toBe(false)
+  let finish!: () => void
+  pending = readableImage("data:image/png;base64,AA==", controller.signal)
+  TestImage.last.decode.mockImplementationOnce(
+    () =>
+      new Promise<void>((resolve) => {
+        finish = resolve
+      })
+  )
+  TestImage.last.onload!()
+  controller.abort()
+  finish()
+  await expect(pending).rejects.toMatchObject({ name: "AbortError" })
 })

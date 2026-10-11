@@ -239,3 +239,7 @@ export function prepareWebDocument(
     empty,
   }
 }
+
+export { staticSvg } from "./static-svg"
+export { readableText } from "./text"
+export { readableImage } from "./images"

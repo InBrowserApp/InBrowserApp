@@ -11,3 +11,5 @@ Utilisez le sommaire pour parcourir les sections et les titres imbriqués. Ajust
 Le lecteur prend en charge le texte FictionBook 2, les paragraphes, l’emphase, la poésie, les tableaux et les illustrations matricielles intégrées. Les encodages de texte déclarés courants, notamment le cyrillique et l’UTF-16, sont détectés. L’apparence peut différer de celle d’une autre application de lecture. Les images manquantes ou les contenus non pris en charge sont signalés sans masquer le texte disponible.
 
 Les fichiers compressés doivent contenir un seul livre FB2. Extrayez les archives contenant plusieurs livres et ouvrez séparément celui de votre choix. Les archives chiffrées, le XML mal formé et les documents utilisant des déclarations d’entités externes ne peuvent pas être ouverts. Il n’y a pas de limite fixe de taille de fichier ni de nombre de sections ; la mémoire disponible du navigateur reste toutefois un facteur pour les très gros livres.
+
+Pour enregistrer le contenu lisible d’un livre pris en charge dans un fichier TXT ou HTML local, utilisez le [Convertisseur de livres numériques en TXT / HTML](/tools/ebook-text-html-export/).

@@ -9,3 +9,5 @@ Okuyucu, metni ekran boyutuna göre yeniden akan standart EPUB 2 ve EPUB 3 yayı
 Dosyalar cihazınızda kalır; bu araç tarafından sunucuya yüklenmez veya kaydedilmez. Kitaptaki betikler çalıştırılmaz; harici görseller, stiller, yazı tipleri, ses ve video otomatik olarak indirilmez. Korumalı kitaplar ile sabit veya karma sayfa düzenleri görüntülenemez. Dikey yazı ve alışılmadık yayıncı stilleri tarayıcıya göre değişebilir; yazı tipi değişimi satır sonlarını etkileyebilir. Bölüm veya kaynak eksikse kitap eksiksizmiş gibi sunulmaz; görünür bir bildirim gösterilir.
 
 Sabit bir dosya boyutu veya bölüm sayısı sınırı yoktur. Tarayıcının gerçek bellek kısıtlamaları geçerliliğini korur. Kitabı kapatmak veya değiştirmek, okuma için kullanılan kaynakları serbest bırakır. Bu araç bir okuyucudur; düzenleme, dışa aktarma, bulut eşitleme veya kayıtlı okuma geçmişi sunmaz.
+
+Desteklenen bir kitabın okunabilir içeriğini yerel bir TXT veya HTML dosyası olarak kaydetmek için [E-kitaptan TXT / HTML’ye Dönüştürücü](/tools/ebook-text-html-export/) kullanın.

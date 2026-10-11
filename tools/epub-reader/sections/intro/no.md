@@ -9,3 +9,5 @@ Leseren åpner vanlige EPUB 2- og EPUB 3-publikasjoner med flytende tekst. Den b
 Filene forblir på enheten din og blir ikke lastet opp eller lagret av dette verktøyet. Skript i boken kjøres ikke, og eksterne bilder, stiler, skrifter, lyd og video hentes ikke automatisk. Beskyttede bøker og faste eller blandede sideoppsett kan ikke vises. Loddrett skrift og uvanlige utgiverstiler kan variere mellom nettlesere; skrifterstatning kan endre linjeskift. Manglende kapitler og utilgjengelige ressurser varsles tydelig, slik at boken ikke fremstår som fullstendig.
 
 Det er ingen fast grense for filstørrelse eller antall kapitler. Nettleserens faktiske minnebegrensninger gjelder fortsatt. Når du lukker eller bytter bok, frigjøres ressursene som brukes til lesingen. Dette er en leser uten redigering, eksport, skysynkronisering eller lagret lesehistorikk.
+
+For å lagre det lesbare innholdet i en bok som støttes, som en lokal TXT- eller HTML-fil, kan du bruke [E-bok til TXT / HTML-konverterer](/tools/ebook-text-html-export/).

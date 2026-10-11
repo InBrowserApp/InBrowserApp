@@ -6534,6 +6534,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "ebook-text-html-export",
+    language: "ar",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "de",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "en",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "es",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "fr",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "he",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "hi",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "id",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "it",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "ja",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "ko",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "ms",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "nl",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "no",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "pl",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "pt",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "ru",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "sv",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "th",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "tr",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "vi",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "zh-CN",
+  },
+  {
+    slug: "ebook-text-html-export",
+    language: "zh-TW",
+  },
+  {
     slug: "email-attachment-extractor",
     language: "ar",
   },

@@ -13,3 +13,5 @@ No se admiten libros cifrados o protegidos contra copia, libros con diseño fijo
 Tu libro permanece en este navegador. No se cargan scripts, audio, vídeo ni recursos remotos. Los enlaces web normales solo se abren cuando los activas. No se necesita cuenta, subida de archivos ni servicio de conversión; al cerrar o cambiar el libro se liberan sus recursos.
 
 No hay un límite predefinido de tamaño de archivo ni de número de capítulos. Los libros grandes o complejos siguen dependiendo de la memoria de tu dispositivo y navegador. Los controles de lectura se mantienen separados del texto del libro y, al cambiar el tamaño del texto, se conserva tu posición de lectura siempre que sea posible.
+
+Para guardar el contenido legible de un libro compatible como archivo TXT o HTML local, usa el [Convertidor de libros electrónicos a TXT / HTML](/tools/ebook-text-html-export/).

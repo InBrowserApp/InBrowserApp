@@ -13,3 +13,5 @@ Versleutelde of tegen kopiëren beveiligde boeken, boeken met een vaste pagina-i
 Je boek blijft in deze browser. Scripts, audio, video en externe bronnen worden niet geladen. Gewone weblinks openen alleen als je ze activeert. Je hebt geen account, upload of conversiedienst nodig. Als je het boek sluit of vervangt, worden de bijbehorende bronnen vrijgegeven.
 
 Er is geen vooraf ingestelde limiet voor de bestandsgrootte of het aantal hoofdstukken. Grote of complexe boeken blijven afhankelijk van je apparaat en het browsergeheugen. De leesbediening staat los van de boektekst. Als je de tekstgrootte wijzigt, blijft je huidige leespositie waar mogelijk behouden.
+
+Gebruik de [E-book naar TXT / HTML-converter](/tools/ebook-text-html-export/) om de leesbare inhoud van een ondersteund boek als lokaal TXT- of HTML-bestand op te slaan.

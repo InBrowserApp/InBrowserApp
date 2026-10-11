@@ -6,7 +6,10 @@ import type { Notebook } from "@workspace/notebook"
 import m from "../messages/en.json"
 
 const images = vi.hoisted(() => ({ readableImage: vi.fn() }))
-vi.mock("./images", () => images)
+vi.mock("@workspace/web-document", async (original) => ({
+  ...(await original<object>()),
+  ...images,
+}))
 beforeEach(() => images.readableImage.mockReset().mockResolvedValue(true))
 const cell = (html: string): Notebook["cells"][number] => ({
   kind: "markdown",

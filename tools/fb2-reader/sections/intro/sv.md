@@ -11,3 +11,5 @@ Använd innehållsförteckningen för att bläddra mellan avsnitt och underrubri
 Läsaren stöder text, stycken, betoning, poesi, tabeller och inbäddade rasterillustrationer i FictionBook 2. Vanliga angivna teckenkodningar identifieras, däribland kyrilliska kodningar och UTF-16. Utseendet kan skilja sig från andra läsappar. Saknade bilder eller innehåll som inte stöds markeras utan att den tillgängliga texten döljs.
 
 Komprimerade filer måste innehålla en FB2-bok. Packa upp arkiv med flera böcker och öppna den valda boken separat. Krypterade arkiv, felaktigt formad XML och dokument med externa entitetsdeklarationer kan inte öppnas. Det finns ingen fast gräns för filstorlek eller antal avsnitt, men webbläsarens tillgängliga minne påverkar fortfarande mycket stora böcker.
+
+För att spara det läsbara innehållet i en bok som stöds som en lokal TXT- eller HTML-fil använder du [Konverterare från e-bok till TXT / HTML](/tools/ebook-text-html-export/).
