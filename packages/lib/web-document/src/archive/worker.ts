@@ -1,5 +1,5 @@
-import { convertArchive, failure } from "../convert-archive"
-import type { WorkerResult } from "../types"
+import { convertArchive, failure } from "./convert"
+import type { WorkerResult } from "./types"
 
 self.onmessage = async (event: MessageEvent<File>) => {
   let response: WorkerResult

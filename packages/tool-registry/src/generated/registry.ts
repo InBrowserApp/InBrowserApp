@@ -16577,6 +16577,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "mhtml-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["mhtml", "mht", "pdf", "web archive", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل MHTML إلى PDF",
+        description:
+          "حوّل أرشيف ويب محفوظًا بصيغة MHTML أو MHT إلى PDF محليًا. عاين الصفحات المصوّرة الناتجة بحجم A4 ونزّل ملف PDF نفسه.",
+      },
+      de: {
+        name: "MHTML-zu-PDF-Konverter",
+        description:
+          "Konvertiere ein gespeichertes MHTML- oder MHT-Webarchiv lokal in PDF. Sieh dir die erzeugten A4-Bildseiten in der Vorschau an und lade dieselbe PDF herunter.",
+      },
+      en: {
+        name: "MHTML to PDF Converter",
+        description:
+          "Convert a saved MHTML or MHT web archive to PDF locally. Preview the generated A4 image pages and download the same PDF.",
+      },
+      es: {
+        name: "Conversor de MHTML a PDF",
+        description:
+          "Convierte un archivo web MHTML o MHT guardado a PDF de forma local. Previsualiza las páginas A4 generadas como imágenes y descarga el mismo PDF.",
+      },
+      fr: {
+        name: "Convertisseur MHTML en PDF",
+        description:
+          "Convertissez une archive web MHTML ou MHT enregistrée en PDF localement. Prévisualisez les pages A4 générées sous forme d’images et téléchargez ce même PDF.",
+      },
+      he: {
+        name: "ממיר MHTML ל־PDF",
+        description:
+          "המרת ארכיון אינטרנט שמור מסוג MHTML או MHT ל־PDF באופן מקומי. אפשר לצפות בתצוגה מקדימה של עמודי התמונה בגודל A4 שנוצרו ולהוריד את אותו קובץ PDF.",
+      },
+      hi: {
+        name: "MHTML से PDF कन्वर्टर",
+        description:
+          "सहेजे गए MHTML या MHT वेब आर्काइव को स्थानीय रूप से PDF में बदलें। तैयार हुए A4 चित्र पृष्ठों का पूर्वावलोकन देखें और वही PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter MHTML ke PDF",
+        description:
+          "Konversikan arsip web MHTML atau MHT yang disimpan ke PDF secara lokal. Pratinjau halaman gambar A4 yang dihasilkan dan unduh PDF yang sama.",
+      },
+      it: {
+        name: "Convertitore da MHTML a PDF",
+        description:
+          "Converti un archivio web MHTML o MHT salvato in PDF in locale. Visualizza in anteprima le pagine A4 generate come immagini e scarica lo stesso PDF.",
+      },
+      ja: {
+        name: "MHTMLからPDFへの変換ツール",
+        description:
+          "保存したMHTMLまたはMHTのWebアーカイブを、端末内でPDFに変換します。生成されたA4の画像ページをプレビューし、同じPDFをダウンロードできます。",
+      },
+      ko: {
+        name: "MHTML PDF 변환기",
+        description:
+          "저장된 MHTML 또는 MHT 웹 아카이브를 로컬에서 PDF로 변환하세요. 생성된 A4 이미지 페이지를 미리 보고 동일한 PDF를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar MHTML kepada PDF",
+        description:
+          "Tukar arkib web MHTML atau MHT yang disimpan kepada PDF secara setempat. Pratonton halaman imej A4 yang dihasilkan dan muat turun PDF yang sama.",
+      },
+      nl: {
+        name: "MHTML naar PDF-converter",
+        description:
+          "Converteer een opgeslagen MHTML- of MHT-webarchief lokaal naar PDF. Bekijk de gegenereerde A4-afbeeldingspagina’s en download dezelfde PDF.",
+      },
+      no: {
+        name: "MHTML til PDF-konverterer",
+        description:
+          "Konverter et lagret MHTML- eller MHT-nettarkiv til PDF lokalt. Forhåndsvis de genererte A4-bildesidene og last ned den samme PDF-en.",
+      },
+      pl: {
+        name: "Konwerter MHTML na PDF",
+        description:
+          "Konwertuj zapisane archiwum strony MHTML lub MHT na PDF lokalnie. Obejrzyj wygenerowane obrazy stron A4 i pobierz ten sam plik PDF.",
+      },
+      pt: {
+        name: "Conversor de MHTML para PDF",
+        description:
+          "Converta um arquivo da web MHTML ou MHT salvo para PDF localmente. Confira as páginas A4 geradas como imagens e baixe o mesmo PDF.",
+      },
+      ru: {
+        name: "Конвертер MHTML в PDF",
+        description:
+          "Преобразуйте сохранённый веб-архив MHTML или MHT в PDF локально. Просмотрите созданные страницы A4 в виде изображений и скачайте тот же PDF.",
+      },
+      sv: {
+        name: "MHTML till PDF-konverterare",
+        description:
+          "Konvertera ett sparat MHTML- eller MHT-webbarkiv till PDF lokalt. Förhandsgranska de genererade A4-bildsidorna och ladda ner samma PDF.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MHTML เป็น PDF",
+        description:
+          "แปลงไฟล์เก็บถาวรเว็บ MHTML หรือ MHT ที่บันทึกไว้เป็น PDF ในเครื่อง ดูตัวอย่างหน้าภาพ A4 ที่สร้างขึ้นและดาวน์โหลด PDF เดียวกัน",
+      },
+      tr: {
+        name: "MHTML’den PDF’ye Dönüştürücü",
+        description:
+          "Kaydedilmiş bir MHTML veya MHT web arşivini yerel olarak PDF’ye dönüştürün. Oluşturulan A4 görsel sayfalarını önizleyin ve aynı PDF’yi indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi MHTML sang PDF",
+        description:
+          "Chuyển tệp lưu trữ web MHTML hoặc MHT đã lưu sang PDF ngay trên thiết bị. Xem trước các trang hình ảnh A4 đã tạo và tải xuống chính tệp PDF đó.",
+      },
+      "zh-CN": {
+        name: "MHTML 转 PDF 转换器",
+        description:
+          "在本地将保存的 MHTML 或 MHT 网页存档转换为 PDF。预览生成的 A4 图像页面，并下载同一份 PDF。",
+      },
+      "zh-TW": {
+        name: "MHTML 轉 PDF 轉換器",
+        description:
+          "在本機將儲存的 MHTML 或 MHT 網頁封存檔轉換為 PDF。預覽產生的 A4 圖片頁面，並下載同一份 PDF。",
+      },
+    },
+  },
+  {
     slug: "mhtml-viewer",
     category: "document",
     icon: "file-text",
@@ -49514,6 +49637,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "MD5 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 MD5 雜湊值。更適合遺留系統相容與非安全關鍵的完整性檢查。",
+      },
+    },
+  },
+  "mhtml-to-pdf-converter": {
+    slug: "mhtml-to-pdf-converter",
+    category: "document",
+    icon: "file-text",
+    tags: ["mhtml", "mht", "pdf", "web archive", "document", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل MHTML إلى PDF",
+        description:
+          "حوّل أرشيف ويب محفوظًا بصيغة MHTML أو MHT إلى PDF محليًا. عاين الصفحات المصوّرة الناتجة بحجم A4 ونزّل ملف PDF نفسه.",
+      },
+      de: {
+        name: "MHTML-zu-PDF-Konverter",
+        description:
+          "Konvertiere ein gespeichertes MHTML- oder MHT-Webarchiv lokal in PDF. Sieh dir die erzeugten A4-Bildseiten in der Vorschau an und lade dieselbe PDF herunter.",
+      },
+      en: {
+        name: "MHTML to PDF Converter",
+        description:
+          "Convert a saved MHTML or MHT web archive to PDF locally. Preview the generated A4 image pages and download the same PDF.",
+      },
+      es: {
+        name: "Conversor de MHTML a PDF",
+        description:
+          "Convierte un archivo web MHTML o MHT guardado a PDF de forma local. Previsualiza las páginas A4 generadas como imágenes y descarga el mismo PDF.",
+      },
+      fr: {
+        name: "Convertisseur MHTML en PDF",
+        description:
+          "Convertissez une archive web MHTML ou MHT enregistrée en PDF localement. Prévisualisez les pages A4 générées sous forme d’images et téléchargez ce même PDF.",
+      },
+      he: {
+        name: "ממיר MHTML ל־PDF",
+        description:
+          "המרת ארכיון אינטרנט שמור מסוג MHTML או MHT ל־PDF באופן מקומי. אפשר לצפות בתצוגה מקדימה של עמודי התמונה בגודל A4 שנוצרו ולהוריד את אותו קובץ PDF.",
+      },
+      hi: {
+        name: "MHTML से PDF कन्वर्टर",
+        description:
+          "सहेजे गए MHTML या MHT वेब आर्काइव को स्थानीय रूप से PDF में बदलें। तैयार हुए A4 चित्र पृष्ठों का पूर्वावलोकन देखें और वही PDF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter MHTML ke PDF",
+        description:
+          "Konversikan arsip web MHTML atau MHT yang disimpan ke PDF secara lokal. Pratinjau halaman gambar A4 yang dihasilkan dan unduh PDF yang sama.",
+      },
+      it: {
+        name: "Convertitore da MHTML a PDF",
+        description:
+          "Converti un archivio web MHTML o MHT salvato in PDF in locale. Visualizza in anteprima le pagine A4 generate come immagini e scarica lo stesso PDF.",
+      },
+      ja: {
+        name: "MHTMLからPDFへの変換ツール",
+        description:
+          "保存したMHTMLまたはMHTのWebアーカイブを、端末内でPDFに変換します。生成されたA4の画像ページをプレビューし、同じPDFをダウンロードできます。",
+      },
+      ko: {
+        name: "MHTML PDF 변환기",
+        description:
+          "저장된 MHTML 또는 MHT 웹 아카이브를 로컬에서 PDF로 변환하세요. 생성된 A4 이미지 페이지를 미리 보고 동일한 PDF를 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar MHTML kepada PDF",
+        description:
+          "Tukar arkib web MHTML atau MHT yang disimpan kepada PDF secara setempat. Pratonton halaman imej A4 yang dihasilkan dan muat turun PDF yang sama.",
+      },
+      nl: {
+        name: "MHTML naar PDF-converter",
+        description:
+          "Converteer een opgeslagen MHTML- of MHT-webarchief lokaal naar PDF. Bekijk de gegenereerde A4-afbeeldingspagina’s en download dezelfde PDF.",
+      },
+      no: {
+        name: "MHTML til PDF-konverterer",
+        description:
+          "Konverter et lagret MHTML- eller MHT-nettarkiv til PDF lokalt. Forhåndsvis de genererte A4-bildesidene og last ned den samme PDF-en.",
+      },
+      pl: {
+        name: "Konwerter MHTML na PDF",
+        description:
+          "Konwertuj zapisane archiwum strony MHTML lub MHT na PDF lokalnie. Obejrzyj wygenerowane obrazy stron A4 i pobierz ten sam plik PDF.",
+      },
+      pt: {
+        name: "Conversor de MHTML para PDF",
+        description:
+          "Converta um arquivo da web MHTML ou MHT salvo para PDF localmente. Confira as páginas A4 geradas como imagens e baixe o mesmo PDF.",
+      },
+      ru: {
+        name: "Конвертер MHTML в PDF",
+        description:
+          "Преобразуйте сохранённый веб-архив MHTML или MHT в PDF локально. Просмотрите созданные страницы A4 в виде изображений и скачайте тот же PDF.",
+      },
+      sv: {
+        name: "MHTML till PDF-konverterare",
+        description:
+          "Konvertera ett sparat MHTML- eller MHT-webbarkiv till PDF lokalt. Förhandsgranska de genererade A4-bildsidorna och ladda ner samma PDF.",
+      },
+      th: {
+        name: "โปรแกรมแปลง MHTML เป็น PDF",
+        description:
+          "แปลงไฟล์เก็บถาวรเว็บ MHTML หรือ MHT ที่บันทึกไว้เป็น PDF ในเครื่อง ดูตัวอย่างหน้าภาพ A4 ที่สร้างขึ้นและดาวน์โหลด PDF เดียวกัน",
+      },
+      tr: {
+        name: "MHTML’den PDF’ye Dönüştürücü",
+        description:
+          "Kaydedilmiş bir MHTML veya MHT web arşivini yerel olarak PDF’ye dönüştürün. Oluşturulan A4 görsel sayfalarını önizleyin ve aynı PDF’yi indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi MHTML sang PDF",
+        description:
+          "Chuyển tệp lưu trữ web MHTML hoặc MHT đã lưu sang PDF ngay trên thiết bị. Xem trước các trang hình ảnh A4 đã tạo và tải xuống chính tệp PDF đó.",
+      },
+      "zh-CN": {
+        name: "MHTML 转 PDF 转换器",
+        description:
+          "在本地将保存的 MHTML 或 MHT 网页存档转换为 PDF。预览生成的 A4 图像页面，并下载同一份 PDF。",
+      },
+      "zh-TW": {
+        name: "MHTML 轉 PDF 轉換器",
+        description:
+          "在本機將儲存的 MHTML 或 MHT 網頁封存檔轉換為 PDF。預覽產生的 A4 圖片頁面，並下載同一份 PDF。",
       },
     },
   },

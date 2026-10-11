@@ -13,8 +13,7 @@
     "pdfjs-dist": "catalog:",
     "@workspace/pdf-reader": "workspace:*",
     "@workspace/html-pdf": "workspace:*",
-    "@workspace/web-document": "workspace:*",
-    "css-tree": "catalog:"
+    "@workspace/web-document": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",
@@ -23,7 +22,6 @@
   },
   "devDependencies": {
     "@testing-library/react": "catalog:",
-    "vitest": "catalog:",
-    "@types/css-tree": "catalog:"
+    "vitest": "catalog:"
   }
 }

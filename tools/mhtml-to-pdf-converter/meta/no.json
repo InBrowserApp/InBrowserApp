@@ -1,0 +1,4 @@
+{
+  "name": "MHTML til PDF-konverterer",
+  "description": "Konverter et lagret MHTML- eller MHT-nettarkiv til PDF lokalt. Forhåndsvis de genererte A4-bildesidene og last ned den samme PDF-en."
+}

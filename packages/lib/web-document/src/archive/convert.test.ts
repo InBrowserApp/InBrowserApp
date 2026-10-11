@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises"
 import { expect, test, vi } from "vitest"
-import { convertArchive, failure } from "./convert-archive"
+import { convertArchive, failure } from "./convert"
 import { inspectEnvelope } from "./envelope"
 
 function archive(

@@ -10,9 +10,7 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "@workspace/web-document": "workspace:*",
-    "mhtml-to-html": "catalog:",
-    "parse5": "catalog:"
+    "@workspace/web-document": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

@@ -4,12 +4,18 @@
   "private": true,
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./archive": "./src/archive/open.ts",
+    "./print": "./src/print.ts"
   },
   "dependencies": {
-    "dompurify": "catalog:"
+    "dompurify": "catalog:",
+    "mhtml-to-html": "catalog:",
+    "parse5": "catalog:",
+    "css-tree": "catalog:"
   },
   "devDependencies": {
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "@types/css-tree": "catalog:"
   }
 }

@@ -1,0 +1,13 @@
+## Convertir des archives web enregistrées localement
+
+Ouvrez une archive locale `.mhtml` ou `.mht`, examinez les pages générées et téléchargez le PDF affiché dans l’aperçu. Un fichier PDF est généré directement ; aucune boîte de dialogue d’impression n’est nécessaire. Le document principal utilise les images et les styles inclus dans l’archive. Pour lire sans convertir, utilisez la [Visionneuse MHTML](../mhtml-viewer/). Les documents HTML simples nécessitent le [Convertisseur HTML en PDF](../html-to-pdf-converter/) ; les e-mails enregistrés se lisent dans la [Visionneuse d’e-mails](../email-viewer/).
+
+## Résultat d’impression et captures prises en charge
+
+Le document principal archivé est remis en page sur des pages A4 en orientation portrait avec des marges de 18 mm, puis capturé sous forme de pages d’images à 150 DPI. Les titres, paragraphes, listes, tableaux, code, sauts de page explicites, styles de base et images matricielles intégrées pris en charge sont inclus. Les tableaux larges et le code sont remis en page à la largeur des pages. Le texte du PDF n’est pas sélectionnable, et aucune reconnaissance de texte (OCR) ni aucun lien interactif ne sont ajoutés. Les polices, l’espacement et la pagination peuvent différer de la page enregistrée. Vérifiez chaque page avant de vous fier au résultat.
+
+Les archives incomplètes, les encodages de texte non pris en charge, les ressources manquantes, les images illisibles et le contenu d’impression non pris en charge interrompent la conversion sans proposer de téléchargement partiel. Les archives contenant des cadres intégrés ou des pages supplémentaires doivent d’abord être enregistrées sous forme de document principal autonome. Les scripts, les formulaires, les applications intégrées, le SVG et le MathML sont omis. Les mises en page web complexes et les polices intégrées ne sont pas prises en charge. Les styles adaptatifs propres aux écrans ne déterminent pas la mise en page imprimée, et les formats de papier du document source sont remplacés par le format A4 fixe.
+
+## Confidentialité et ressources du navigateur
+
+Votre archive reste dans ce navigateur. Les ressources incluses sont lues dans le fichier ; les contenus manquants ou distants ne sont jamais récupérés, et le site web d’origine n’est pas contacté. Le contenu des fichiers n’est jamais envoyé. Les archives volumineuses peuvent prendre du temps et de la mémoire, car chaque page est rendue sous forme d’image. Vous pouvez annuler, fermer ou remplacer l’archive. Aucune limite fixe de taille de fichier ou de nombre de pages n’est imposée ; les défaillances réelles liées aux ressources du navigateur produisent une erreur lorsqu’elles peuvent être détectées.
