@@ -1,4 +1,4 @@
-export type SortOptions = Readonly<{
+type SortOptions = Readonly<{
   descending: boolean
   ignoreCase: boolean
   trim: boolean
