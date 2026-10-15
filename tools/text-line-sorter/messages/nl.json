@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Invoertekst",
+  "inputPlaceholder": "Plak één item per regel",
+  "outputLabel": "Gesorteerde tekst",
+  "orderLabel": "Sorteervolgorde",
+  "ascendingLabel": "Oplopend",
+  "descendingLabel": "Aflopend",
+  "ignoreCaseLabel": "Hoofdletters negeren",
+  "trimLabel": "Witruimte aan regelranden wissen",
+  "removeBlankLabel": "Lege regels verwijderen",
+  "deduplicateLabel": "Dubbele regels verwijderen",
+  "orderingHelp": "Gebruikt een vaste UTF-16-tekstvolgorde, geen taalspecifieke of numerieke volgorde. Gelijke regels behouden hun oorspronkelijke volgorde. Hoofdletters negeren geldt ook bij het opsporen van dubbele regels; de eerste wordt behouden.",
+  "lineEndingHelp": "CRLF- en CR-regeleinden worden LF. Een afsluitend regeleinde telt als een lege regel en wordt samen met de andere regels gesorteerd. Lege regels verwijderen verwijdert ook regels die alleen uit witruimte bestaan.",
+  "privacyHelp": "Tekst wordt in je browser verwerkt en wordt niet geüpload of opgeslagen.",
+  "resetLabel": "Opnieuw instellen",
+  "copyLabel": "Gesorteerde tekst kopiëren",
+  "copiedLabel": "Gekopieerd"
+}

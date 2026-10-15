@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Testo da ordinare",
+  "inputPlaceholder": "Incolla un elemento per riga",
+  "outputLabel": "Testo ordinato",
+  "orderLabel": "Ordine",
+  "ascendingLabel": "Crescente",
+  "descendingLabel": "Decrescente",
+  "ignoreCaseLabel": "Ignora maiuscole e minuscole",
+  "trimLabel": "Elimina spazi iniziali e finali da ogni riga",
+  "removeBlankLabel": "Rimuovi righe vuote",
+  "deduplicateLabel": "Rimuovi righe duplicate",
+  "orderingHelp": "Usa un ordinamento deterministico del testo UTF-16, non un ordinamento linguistico o numerico. Le righe uguali mantengono l'ordine originale. L'opzione per ignorare maiuscole e minuscole si applica anche al rilevamento dei duplicati; viene mantenuta la prima occorrenza.",
+  "lineEndingHelp": "Le interruzioni di riga CRLF e CR diventano LF. Un'interruzione di riga finale conta come riga vuota e viene ordinata insieme alle altre righe. La rimozione delle righe vuote elimina anche le righe contenenti solo spazi bianchi.",
+  "privacyHelp": "Il testo viene elaborato nel browser e non viene caricato né salvato.",
+  "resetLabel": "Reimposta",
+  "copyLabel": "Copia testo ordinato",
+  "copiedLabel": "Copiato"
+}

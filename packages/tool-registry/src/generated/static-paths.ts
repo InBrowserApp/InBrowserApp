@@ -21162,6 +21162,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "text-line-sorter",
+    language: "ar",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "de",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "en",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "es",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "fr",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "he",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "hi",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "id",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "it",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "ja",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "ko",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "ms",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "nl",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "no",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "pl",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "pt",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "ru",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "sv",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "th",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "tr",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "vi",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "zh-CN",
+  },
+  {
+    slug: "text-line-sorter",
+    language: "zh-TW",
+  },
+  {
     slug: "text-log-viewer",
     language: "ar",
   },

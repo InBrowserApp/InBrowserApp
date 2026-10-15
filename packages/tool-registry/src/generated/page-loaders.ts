@@ -296,6 +296,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
   "svg-viewer": () => import("@tool/svg-viewer/page"),
   "text-diff": () => import("@tool/text-diff/page"),
+  "text-line-sorter": () => import("@tool/text-line-sorter/page"),
   "text-log-viewer": () => import("@tool/text-log-viewer/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),
   "time-diff-calculator": () => import("@tool/time-diff-calculator/page"),

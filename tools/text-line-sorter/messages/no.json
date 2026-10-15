@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Inndatatekst",
+  "inputPlaceholder": "Lim inn ett element per linje",
+  "outputLabel": "Sortert tekst",
+  "orderLabel": "Sorteringsrekkefølge",
+  "ascendingLabel": "Stigende",
+  "descendingLabel": "Synkende",
+  "ignoreCaseLabel": "Ignorer store og små bokstaver",
+  "trimLabel": "Fjern blanktegn i starten og slutten av hver linje",
+  "removeBlankLabel": "Fjern tomme linjer",
+  "deduplicateLabel": "Fjern duplikatlinjer",
+  "orderingHelp": "Bruker deterministisk UTF-16-tekstrekkefølge, ikke språkspesifikk eller numerisk rekkefølge. Like linjer beholder den opprinnelige rekkefølgen. Valget om å ignorere store og små bokstaver gjelder også ved gjenkjenning av duplikater; den første forekomsten beholdes.",
+  "lineEndingHelp": "Linjeskift av typen CRLF og CR blir til LF. Et avsluttende linjeskift regnes som en tom linje og sorteres sammen med de andre linjene. Fjerning av tomme linjer fjerner også linjer som bare inneholder blanktegn.",
+  "privacyHelp": "Teksten behandles i nettleseren din og blir ikke lastet opp eller lagret.",
+  "resetLabel": "Tilbakestill",
+  "copyLabel": "Kopier sortert tekst",
+  "copiedLabel": "Kopiert"
+}

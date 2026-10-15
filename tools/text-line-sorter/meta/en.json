@@ -1,0 +1,4 @@
+{
+  "name": "Text Line Sorter",
+  "description": "Sort text lines in ascending or descending order, with optional case folding, trimming, blank-line removal, and deduplication."
+}

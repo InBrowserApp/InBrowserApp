@@ -1,0 +1,4 @@
+{
+  "name": "Tri des lignes de texte",
+  "description": "Triez les lignes de texte par ordre croissant ou décroissant, avec des options pour ignorer la casse, supprimer les espaces en début et fin de ligne, les lignes vides et les doublons."
+}

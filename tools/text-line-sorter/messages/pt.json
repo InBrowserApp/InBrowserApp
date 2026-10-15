@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Texto de entrada",
+  "inputPlaceholder": "Cole um item por linha",
+  "outputLabel": "Texto ordenado",
+  "orderLabel": "Ordem de classificação",
+  "ascendingLabel": "Crescente",
+  "descendingLabel": "Decrescente",
+  "ignoreCaseLabel": "Ignorar maiúsculas e minúsculas",
+  "trimLabel": "Remover espaços nas extremidades de cada linha",
+  "removeBlankLabel": "Remover linhas em branco",
+  "deduplicateLabel": "Remover linhas duplicadas",
+  "orderingHelp": "Usa a ordem determinística de texto UTF-16, e não uma ordem numérica ou específica de um idioma. Linhas iguais mantêm a ordem original. Ignorar maiúsculas e minúsculas também se aplica à deteção de duplicados; a primeira ocorrência é mantida.",
+  "lineEndingHelp": "As terminações de linha CRLF e CR tornam-se LF. Uma terminação de linha final conta como uma linha em branco e é ordenada com as restantes linhas. A remoção de linhas em branco também remove linhas que contêm apenas espaços em branco.",
+  "privacyHelp": "O texto é processado no seu navegador e não é enviado nem guardado.",
+  "resetLabel": "Repor",
+  "copyLabel": "Copiar texto ordenado",
+  "copiedLabel": "Copiado"
+}

@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Texte à trier",
+  "inputPlaceholder": "Collez un élément par ligne",
+  "outputLabel": "Texte trié",
+  "orderLabel": "Ordre de tri",
+  "ascendingLabel": "Croissant",
+  "descendingLabel": "Décroissant",
+  "ignoreCaseLabel": "Ignorer la casse",
+  "trimLabel": "Supprimer les espaces en début et fin de ligne",
+  "removeBlankLabel": "Supprimer les lignes vides",
+  "deduplicateLabel": "Supprimer les lignes en double",
+  "orderingHelp": "Utilise un ordre de texte UTF-16 déterministe, sans tri linguistique ni numérique. Les lignes identiques conservent leur ordre initial. L’option Ignorer la casse s’applique aussi à la détection des doublons ; la première occurrence est conservée.",
+  "lineEndingHelp": "Les fins de ligne CRLF et CR deviennent LF. Une fin de ligne finale compte comme une ligne vide et est triée avec les autres lignes. La suppression des lignes vides supprime aussi celles qui ne contiennent que des espaces blancs.",
+  "privacyHelp": "Le texte est traité dans votre navigateur et n’est ni envoyé ni enregistré.",
+  "resetLabel": "Réinitialiser",
+  "copyLabel": "Copier le texte trié",
+  "copiedLabel": "Copié"
+}

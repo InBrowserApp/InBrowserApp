@@ -1,0 +1,4 @@
+{
+  "name": "Metin Satırı Sıralayıcı",
+  "description": "Metin satırlarını artan veya azalan sırada sıralayın; isteğe bağlı olarak büyük/küçük harf farkını yok sayın, kenar boşluklarını kırpın, boş ve yinelenen satırları kaldırın."
+}

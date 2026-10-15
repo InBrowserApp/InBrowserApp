@@ -28962,6 +28962,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "text-line-sorter",
+    category: "text",
+    icon: "text",
+    tags: ["text", "lines", "sort", "alphabetical", "deduplicate", "list"],
+    locales: {
+      ar: {
+        name: "مرتب أسطر النص",
+        description:
+          "رتّب أسطر النص تصاعديًا أو تنازليًا، مع خيارات لتجاهل حالة الأحرف وإزالة المسافات من أطراف الأسطر وإزالة الأسطر الفارغة والمكررة.",
+      },
+      de: {
+        name: "Textzeilen sortieren",
+        description:
+          "Textzeilen auf- oder absteigend sortieren, optional ohne Beachtung der Groß- und Kleinschreibung, mit Entfernung von Rand-Leerzeichen, Leerzeilen und Duplikaten.",
+      },
+      en: {
+        name: "Text Line Sorter",
+        description:
+          "Sort text lines in ascending or descending order, with optional case folding, trimming, blank-line removal, and deduplication.",
+      },
+      es: {
+        name: "Ordenador de líneas de texto",
+        description:
+          "Ordena líneas de texto en orden ascendente o descendente, con opciones para ignorar mayúsculas y minúsculas, recortar espacios y eliminar líneas vacías y duplicadas.",
+      },
+      fr: {
+        name: "Tri des lignes de texte",
+        description:
+          "Triez les lignes de texte par ordre croissant ou décroissant, avec des options pour ignorer la casse, supprimer les espaces en début et fin de ligne, les lignes vides et les doublons.",
+      },
+      he: {
+        name: "ממיין שורות טקסט",
+        description:
+          "מיון שורות טקסט בסדר עולה או יורד, עם אפשרות להתעלם מהבדלי אותיות גדולות וקטנות, להסיר רווחים בקצוות, להסיר שורות ריקות ולהסיר כפילויות.",
+      },
+      hi: {
+        name: "टेक्स्ट पंक्ति क्रमबद्धक",
+        description:
+          "टेक्स्ट की पंक्तियों को आरोही या अवरोही क्रम में लगाएँ। चाहें तो बड़े-छोटे अक्षरों का अंतर अनदेखा करें, किनारों के खाली स्थान हटाएँ और खाली या दोहराई गई पंक्तियाँ हटाएँ।",
+      },
+      id: {
+        name: "Pengurut Baris Teks",
+        description:
+          "Urutkan baris teks secara menaik atau menurun, dengan opsi mengabaikan huruf besar/kecil, memangkas spasi, menghapus baris kosong, dan menghapus duplikat.",
+      },
+      it: {
+        name: "Ordinatore di righe di testo",
+        description:
+          "Ordina le righe di testo in ordine crescente o decrescente, con opzioni per ignorare maiuscole e minuscole, eliminare gli spazi iniziali e finali e rimuovere righe vuote e duplicate.",
+      },
+      ja: {
+        name: "テキスト行並べ替え",
+        description:
+          "テキストの行を昇順または降順に並べ替えます。大文字と小文字の区別を無視、各行の前後の空白を除去、空行の削除、重複行の削除も選択できます。",
+      },
+      ko: {
+        name: "텍스트 줄 정렬기",
+        description:
+          "텍스트 줄을 오름차순 또는 내림차순으로 정렬하고, 대소문자 무시, 앞뒤 공백 제거, 빈 줄 제거 및 중복 제거 옵션을 적용하세요.",
+      },
+      ms: {
+        name: "Pengisih Baris Teks",
+        description:
+          "Isih baris teks dalam tertib menaik atau menurun, dengan pilihan mengabaikan huruf besar dan kecil, membuang ruang di awal dan akhir, membuang baris kosong serta pendua.",
+      },
+      nl: {
+        name: "Tekstregels sorteren",
+        description:
+          "Sorteer tekstregels oplopend of aflopend, met opties om hoofdletters te negeren, witruimte aan de randen te wissen en lege of dubbele regels te verwijderen.",
+      },
+      no: {
+        name: "Tekstlinjesortering",
+        description:
+          "Sorter tekstlinjer i stigende eller synkende rekkefølge, med valg for å ignorere store og små bokstaver, fjerne innledende og avsluttende blanktegn, tomme linjer og duplikater.",
+      },
+      pl: {
+        name: "Sortowanie wierszy tekstu",
+        description:
+          "Sortuj wiersze tekstu rosnąco lub malejąco, z opcjami ignorowania wielkości liter, usuwania skrajnych białych znaków, pustych wierszy i duplikatów.",
+      },
+      pt: {
+        name: "Ordenador de linhas de texto",
+        description:
+          "Ordene linhas de texto em ordem crescente ou decrescente, com opções para ignorar maiúsculas e minúsculas, aparar espaços, remover linhas em branco e eliminar duplicados.",
+      },
+      ru: {
+        name: "Сортировка строк текста",
+        description:
+          "Сортируйте строки текста по возрастанию или убыванию, при необходимости игнорируя регистр, обрезая пробелы и удаляя пустые строки и дубликаты.",
+      },
+      sv: {
+        name: "Textradssorterare",
+        description:
+          "Sortera textrader i stigande eller fallande ordning, med alternativ för att ignorera skiftläge, trimma rader samt ta bort tomma rader och dubbletter.",
+      },
+      th: {
+        name: "เครื่องมือเรียงบรรทัดข้อความ",
+        description:
+          "เรียงบรรทัดข้อความจากน้อยไปมากหรือมากไปน้อย พร้อมตัวเลือกไม่แยกตัวพิมพ์เล็กและใหญ่ ตัดช่องว่าง ลบบรรทัดว่าง และลบบรรทัดซ้ำ",
+      },
+      tr: {
+        name: "Metin Satırı Sıralayıcı",
+        description:
+          "Metin satırlarını artan veya azalan sırada sıralayın; isteğe bağlı olarak büyük/küçük harf farkını yok sayın, kenar boşluklarını kırpın, boş ve yinelenen satırları kaldırın.",
+      },
+      vi: {
+        name: "Trình sắp xếp dòng văn bản",
+        description:
+          "Sắp xếp các dòng văn bản theo thứ tự tăng dần hoặc giảm dần, với các tùy chọn bỏ qua chữ hoa chữ thường, xóa khoảng trắng ở hai đầu, xóa dòng trống và loại bỏ dòng trùng lặp.",
+      },
+      "zh-CN": {
+        name: "文本行排序器",
+        description:
+          "按升序或降序排列文本行，可选择忽略大小写、去除行首尾空白、移除空白行及重复行。",
+      },
+      "zh-TW": {
+        name: "文字行排序工具",
+        description:
+          "以遞增或遞減順序排列文字行，並可選擇忽略大小寫、移除行首與行尾空白、移除空白行及重複行。",
+      },
+    },
+  },
+  {
     slug: "text-log-viewer",
     category: "document",
     icon: "file-text",
