@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Teks masukan",
+  "inputPlaceholder": "Tempel satu item per baris",
+  "outputLabel": "Teks terurut",
+  "orderLabel": "Urutan pengurutan",
+  "ascendingLabel": "Menaik",
+  "descendingLabel": "Menurun",
+  "ignoreCaseLabel": "Abaikan huruf besar/kecil",
+  "trimLabel": "Pangkas spasi di tiap baris",
+  "removeBlankLabel": "Hapus baris kosong",
+  "deduplicateLabel": "Hapus baris duplikat",
+  "orderingHelp": "Menggunakan urutan teks UTF-16 yang deterministik, bukan urutan khusus bahasa atau numerik. Baris yang sama tetap dalam urutan aslinya. Pengabaian huruf besar/kecil juga berlaku untuk deteksi duplikat; kemunculan pertama dipertahankan.",
+  "lineEndingHelp": "Akhir baris CRLF dan CR diubah menjadi LF. Akhir baris di ujung teks dihitung sebagai baris kosong dan diurutkan bersama baris lainnya. Penghapusan baris kosong juga menghapus baris yang hanya berisi karakter spasi putih.",
+  "privacyHelp": "Teks diproses di browser Anda dan tidak diunggah atau disimpan.",
+  "resetLabel": "Atur ulang",
+  "copyLabel": "Salin teks terurut",
+  "copiedLabel": "Disalin"
+}

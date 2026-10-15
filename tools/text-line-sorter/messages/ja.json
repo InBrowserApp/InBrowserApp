@@ -1,0 +1,18 @@
+{
+  "inputLabel": "入力テキスト",
+  "inputPlaceholder": "1行に1項目ずつ貼り付けてください",
+  "outputLabel": "並べ替えたテキスト",
+  "orderLabel": "並べ替え順",
+  "ascendingLabel": "昇順",
+  "descendingLabel": "降順",
+  "ignoreCaseLabel": "大文字と小文字を区別しない",
+  "trimLabel": "各行の前後の空白を除去",
+  "removeBlankLabel": "空行を削除",
+  "deduplicateLabel": "重複行を削除",
+  "orderingHelp": "言語固有の順序や数値順ではなく、UTF-16に基づく一定のテキスト順で並べ替えます。同じ行は元の順序を維持します。大文字と小文字を区別しない設定は重複の判定にも適用され、最初に出現した行が残ります。",
+  "lineEndingHelp": "CRLFとCRの改行はLFに変換されます。末尾の改行は空行として数えられ、他の行と一緒に並べ替えられます。空行を削除すると、空白文字だけの行も削除されます。",
+  "privacyHelp": "テキストはブラウザー内で処理され、アップロードや保存はされません。",
+  "resetLabel": "リセット",
+  "copyLabel": "並べ替えたテキストをコピー",
+  "copiedLabel": "コピーしました"
+}

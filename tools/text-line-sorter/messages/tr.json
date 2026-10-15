@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Giriş metni",
+  "inputPlaceholder": "Her satıra bir öğe yapıştırın",
+  "outputLabel": "Sıralanmış metin",
+  "orderLabel": "Sıralama düzeni",
+  "ascendingLabel": "Artan",
+  "descendingLabel": "Azalan",
+  "ignoreCaseLabel": "Büyük/küçük harf farkını yok say",
+  "trimLabel": "Her satırın kenar boşluklarını kırp",
+  "removeBlankLabel": "Boş satırları kaldır",
+  "deduplicateLabel": "Yinelenen satırları kaldır",
+  "orderingHelp": "Dile özgü veya sayısal sıralama yerine deterministik UTF-16 metin sıralaması kullanır. Eşit satırlar özgün sıralarını korur. Büyük/küçük harf farkını yok sayma, yinelenen satırların tespitinde de geçerlidir; ilk bulunan satır korunur.",
+  "lineEndingHelp": "CRLF ve CR satır sonları LF'ye dönüştürülür. Sondaki satır sonu boş bir satır sayılır ve diğer satırlarla birlikte sıralanır. Boş satırları kaldırma, yalnızca boşluk karakterlerinden oluşan satırları da kaldırır.",
+  "privacyHelp": "Metin tarayıcınızda işlenir; yüklenmez veya kaydedilmez.",
+  "resetLabel": "Sıfırla",
+  "copyLabel": "Sıralanmış metni kopyala",
+  "copiedLabel": "Kopyalandı"
+}

@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Văn bản đầu vào",
+  "inputPlaceholder": "Dán mỗi mục trên một dòng",
+  "outputLabel": "Văn bản đã sắp xếp",
+  "orderLabel": "Thứ tự sắp xếp",
+  "ascendingLabel": "Tăng dần",
+  "descendingLabel": "Giảm dần",
+  "ignoreCaseLabel": "Bỏ qua chữ hoa chữ thường",
+  "trimLabel": "Xóa khoảng trắng ở hai đầu mỗi dòng",
+  "removeBlankLabel": "Xóa dòng trống",
+  "deduplicateLabel": "Xóa dòng trùng lặp",
+  "orderingHelp": "Sử dụng thứ tự văn bản UTF-16 cố định, không theo ngôn ngữ hay giá trị số. Các dòng bằng nhau giữ nguyên thứ tự ban đầu. Tùy chọn bỏ qua chữ hoa chữ thường cũng áp dụng khi phát hiện dòng trùng lặp; lần xuất hiện đầu tiên được giữ lại.",
+  "lineEndingHelp": "Ký tự xuống dòng CRLF và CR được chuyển thành LF. Ký tự xuống dòng cuối cùng được tính là một dòng trống và được sắp xếp cùng các dòng khác. Tùy chọn xóa dòng trống cũng xóa các dòng chỉ chứa khoảng trắng.",
+  "privacyHelp": "Văn bản được xử lý trong trình duyệt của bạn và không được tải lên hay lưu lại.",
+  "resetLabel": "Đặt lại",
+  "copyLabel": "Sao chép văn bản đã sắp xếp",
+  "copiedLabel": "Đã sao chép"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Sortowanie wierszy tekstu",
+  "description": "Sortuj wiersze tekstu rosnąco lub malejąco, z opcjami ignorowania wielkości liter, usuwania skrajnych białych znaków, pustych wierszy i duplikatów."
+}

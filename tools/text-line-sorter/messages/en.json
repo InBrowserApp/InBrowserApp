@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Input text",
+  "inputPlaceholder": "Paste one item per line",
+  "outputLabel": "Sorted text",
+  "orderLabel": "Sort order",
+  "ascendingLabel": "Ascending",
+  "descendingLabel": "Descending",
+  "ignoreCaseLabel": "Ignore case",
+  "trimLabel": "Trim each line",
+  "removeBlankLabel": "Remove blank lines",
+  "deduplicateLabel": "Remove duplicate lines",
+  "orderingHelp": "Uses deterministic UTF-16 text order, not language-specific or numeric order. Equal lines keep their original order. Ignore case also applies to duplicate detection; the first occurrence is kept.",
+  "lineEndingHelp": "CRLF and CR line endings become LF. A final line ending counts as a blank line and is sorted with the other lines. Blank-line removal also removes whitespace-only lines.",
+  "privacyHelp": "Text is processed in your browser and is not uploaded or saved.",
+  "resetLabel": "Reset",
+  "copyLabel": "Copy sorted text",
+  "copiedLabel": "Copied"
+}

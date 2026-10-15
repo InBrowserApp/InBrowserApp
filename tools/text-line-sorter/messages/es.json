@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Texto de entrada",
+  "inputPlaceholder": "Pega un elemento por línea",
+  "outputLabel": "Texto ordenado",
+  "orderLabel": "Orden",
+  "ascendingLabel": "Ascendente",
+  "descendingLabel": "Descendente",
+  "ignoreCaseLabel": "Ignorar mayúsculas y minúsculas",
+  "trimLabel": "Recortar espacios de cada línea",
+  "removeBlankLabel": "Eliminar líneas vacías",
+  "deduplicateLabel": "Eliminar líneas duplicadas",
+  "orderingHelp": "Usa el orden de texto UTF-16 determinista, no un orden numérico ni específico de un idioma. Las líneas iguales conservan su orden original. Ignorar mayúsculas y minúsculas también se aplica a la detección de duplicados; se conserva la primera aparición.",
+  "lineEndingHelp": "Los saltos de línea CRLF y CR se convierten en LF. Un salto de línea final cuenta como una línea vacía y se ordena junto con las demás líneas. La eliminación de líneas vacías también elimina las que solo contienen espacios en blanco.",
+  "privacyHelp": "El texto se procesa en tu navegador y no se sube ni se guarda.",
+  "resetLabel": "Restablecer",
+  "copyLabel": "Copiar texto ordenado",
+  "copiedLabel": "Copiado"
+}

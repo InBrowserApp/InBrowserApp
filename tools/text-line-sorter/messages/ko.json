@@ -1,0 +1,18 @@
+{
+  "inputLabel": "입력 텍스트",
+  "inputPlaceholder": "한 줄에 항목 하나씩 붙여넣으세요",
+  "outputLabel": "정렬된 텍스트",
+  "orderLabel": "정렬 순서",
+  "ascendingLabel": "오름차순",
+  "descendingLabel": "내림차순",
+  "ignoreCaseLabel": "대소문자 무시",
+  "trimLabel": "각 줄의 앞뒤 공백 제거",
+  "removeBlankLabel": "빈 줄 제거",
+  "deduplicateLabel": "중복 줄 제거",
+  "orderingHelp": "언어별 정렬이나 숫자 정렬이 아닌, 항상 동일한 UTF-16 텍스트 순서로 정렬합니다. 같은 줄은 원래 순서를 유지합니다. 대소문자 무시 옵션은 중복 확인에도 적용되며, 처음 나타난 줄을 유지합니다.",
+  "lineEndingHelp": "CRLF 및 CR 줄바꿈은 LF로 변환됩니다. 마지막 줄바꿈은 빈 줄로 간주되어 다른 줄과 함께 정렬됩니다. 빈 줄 제거 옵션은 공백 문자만 있는 줄도 제거합니다.",
+  "privacyHelp": "텍스트는 브라우저에서 처리되며 업로드되거나 저장되지 않습니다.",
+  "resetLabel": "초기화",
+  "copyLabel": "정렬된 텍스트 복사",
+  "copiedLabel": "복사됨"
+}

@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Indatatext",
+  "inputPlaceholder": "Klistra in ett objekt per rad",
+  "outputLabel": "Sorterad text",
+  "orderLabel": "Sorteringsordning",
+  "ascendingLabel": "Stigande",
+  "descendingLabel": "Fallande",
+  "ignoreCaseLabel": "Ignorera skiftläge",
+  "trimLabel": "Trimma varje rad",
+  "removeBlankLabel": "Ta bort tomma rader",
+  "deduplicateLabel": "Ta bort dubblettrader",
+  "orderingHelp": "Använder deterministisk textordning enligt UTF-16, inte språkspecifik eller numerisk ordning. Lika rader behåller sin ursprungliga ordning. Att ignorera skiftläge gäller även identifiering av dubbletter; den första förekomsten behålls.",
+  "lineEndingHelp": "Radsluten CRLF och CR omvandlas till LF. Ett avslutande radslut räknas som en tom rad och sorteras med de andra raderna. Borttagning av tomma rader tar även bort rader som bara innehåller blanktecken.",
+  "privacyHelp": "Texten bearbetas i din webbläsare och laddas inte upp eller sparas.",
+  "resetLabel": "Återställ",
+  "copyLabel": "Kopiera sorterad text",
+  "copiedLabel": "Kopierat"
+}

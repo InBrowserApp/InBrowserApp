@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Teks input",
+  "inputPlaceholder": "Tampal satu item setiap baris",
+  "outputLabel": "Teks yang diisih",
+  "orderLabel": "Tertib isihan",
+  "ascendingLabel": "Menaik",
+  "descendingLabel": "Menurun",
+  "ignoreCaseLabel": "Abaikan huruf besar dan kecil",
+  "trimLabel": "Buang ruang di awal dan akhir setiap baris",
+  "removeBlankLabel": "Buang baris kosong",
+  "deduplicateLabel": "Buang baris pendua",
+  "orderingHelp": "Menggunakan tertib teks UTF-16 yang deterministik, bukan tertib khusus bahasa atau angka. Baris yang sama mengekalkan tertib asalnya. Mengabaikan huruf besar dan kecil juga terpakai pada pengesanan pendua; kemunculan pertama dikekalkan.",
+  "lineEndingHelp": "Penghujung baris CRLF dan CR menjadi LF. Penghujung baris terakhir dikira sebagai baris kosong dan diisih bersama baris lain. Pembuangan baris kosong juga membuang baris yang hanya mengandungi ruang kosong.",
+  "privacyHelp": "Teks diproses dalam pelayar anda dan tidak dimuat naik atau disimpan.",
+  "resetLabel": "Tetapkan semula",
+  "copyLabel": "Salin teks yang diisih",
+  "copiedLabel": "Disalin"
+}

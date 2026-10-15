@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Eingabetext",
+  "inputPlaceholder": "Ein Element pro Zeile einfügen",
+  "outputLabel": "Sortierter Text",
+  "orderLabel": "Sortierreihenfolge",
+  "ascendingLabel": "Aufsteigend",
+  "descendingLabel": "Absteigend",
+  "ignoreCaseLabel": "Groß- und Kleinschreibung ignorieren",
+  "trimLabel": "Leerzeichen an Zeilenrändern entfernen",
+  "removeBlankLabel": "Leerzeilen entfernen",
+  "deduplicateLabel": "Doppelte Zeilen entfernen",
+  "orderingHelp": "Verwendet eine deterministische UTF-16-Textreihenfolge, keine sprachabhängige oder numerische Reihenfolge. Gleiche Zeilen behalten ihre ursprüngliche Reihenfolge. Das Ignorieren der Groß- und Kleinschreibung gilt auch für die Erkennung von Duplikaten; das erste Vorkommen bleibt erhalten.",
+  "lineEndingHelp": "CRLF- und CR-Zeilenenden werden zu LF. Ein abschließendes Zeilenende zählt als Leerzeile und wird mit den anderen Zeilen sortiert. Beim Entfernen von Leerzeilen werden auch Zeilen entfernt, die nur Leerraum enthalten.",
+  "privacyHelp": "Der Text wird in Ihrem Browser verarbeitet und weder hochgeladen noch gespeichert.",
+  "resetLabel": "Zurücksetzen",
+  "copyLabel": "Sortierten Text kopieren",
+  "copiedLabel": "Kopiert"
+}

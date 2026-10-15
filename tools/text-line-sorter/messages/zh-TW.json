@@ -1,0 +1,18 @@
+{
+  "inputLabel": "輸入文字",
+  "inputPlaceholder": "貼上內容，每行一個項目",
+  "outputLabel": "排序後的文字",
+  "orderLabel": "排序順序",
+  "ascendingLabel": "遞增",
+  "descendingLabel": "遞減",
+  "ignoreCaseLabel": "忽略大小寫",
+  "trimLabel": "移除每行首尾空白",
+  "removeBlankLabel": "移除空白行",
+  "deduplicateLabel": "移除重複行",
+  "orderingHelp": "使用固定的 UTF-16 文字順序，而非特定語言或數值順序。相同的行會保留原始順序。忽略大小寫也適用於重複行判斷，並保留第一次出現的行。",
+  "lineEndingHelp": "CRLF 和 CR 換行符號會轉換為 LF。結尾的換行符號會視為空白行，並與其他行一起排序。移除空白行時，也會移除僅含空白字元的行。",
+  "privacyHelp": "文字僅在您的瀏覽器中處理，不會上傳或儲存。",
+  "resetLabel": "重設",
+  "copyLabel": "複製排序後的文字",
+  "copiedLabel": "已複製"
+}

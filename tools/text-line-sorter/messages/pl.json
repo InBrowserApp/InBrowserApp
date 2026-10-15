@@ -1,0 +1,18 @@
+{
+  "inputLabel": "Tekst wejściowy",
+  "inputPlaceholder": "Wklej po jednym elemencie w wierszu",
+  "outputLabel": "Posortowany tekst",
+  "orderLabel": "Kolejność sortowania",
+  "ascendingLabel": "Rosnąco",
+  "descendingLabel": "Malejąco",
+  "ignoreCaseLabel": "Ignoruj wielkość liter",
+  "trimLabel": "Usuń skrajne białe znaki z każdego wiersza",
+  "removeBlankLabel": "Usuń puste wiersze",
+  "deduplicateLabel": "Usuń powtarzające się wiersze",
+  "orderingHelp": "Używana jest deterministyczna kolejność tekstu UTF-16, a nie kolejność właściwa dla danego języka ani numeryczna. Równe wiersze zachowują pierwotną kolejność. Ignorowanie wielkości liter dotyczy również wykrywania duplikatów; zachowywane jest pierwsze wystąpienie.",
+  "lineEndingHelp": "Zakończenia wierszy CRLF i CR są zamieniane na LF. Końcowy znak końca wiersza jest traktowany jako pusty wiersz i sortowany razem z pozostałymi. Usuwanie pustych wierszy usuwa również wiersze zawierające wyłącznie białe znaki.",
+  "privacyHelp": "Tekst jest przetwarzany w Twojej przeglądarce i nie jest przesyłany ani zapisywany.",
+  "resetLabel": "Resetuj",
+  "copyLabel": "Kopiuj posortowany tekst",
+  "copiedLabel": "Skopiowano"
+}

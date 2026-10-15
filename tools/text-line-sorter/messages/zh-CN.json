@@ -1,0 +1,18 @@
+{
+  "inputLabel": "输入文本",
+  "inputPlaceholder": "粘贴内容，每行一项",
+  "outputLabel": "排序后的文本",
+  "orderLabel": "排序顺序",
+  "ascendingLabel": "升序",
+  "descendingLabel": "降序",
+  "ignoreCaseLabel": "忽略大小写",
+  "trimLabel": "去除每行首尾空白",
+  "removeBlankLabel": "移除空白行",
+  "deduplicateLabel": "移除重复行",
+  "orderingHelp": "使用固定的 UTF-16 文本顺序排序，不按特定语言或数值顺序排序。相同的行保持原有顺序。忽略大小写也适用于重复行检测，并保留首次出现的行。",
+  "lineEndingHelp": "CRLF 和 CR 换行符会转换为 LF。末尾的换行符会被计为一个空白行，与其他行一起排序。移除空白行也会移除仅含空白字符的行。",
+  "privacyHelp": "文本在浏览器中处理，不会上传或保存。",
+  "resetLabel": "重置",
+  "copyLabel": "复制排序后的文本",
+  "copiedLabel": "已复制"
+}

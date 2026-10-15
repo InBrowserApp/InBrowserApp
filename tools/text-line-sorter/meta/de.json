@@ -1,0 +1,4 @@
+{
+  "name": "Textzeilen sortieren",
+  "description": "Textzeilen auf- oder absteigend sortieren, optional ohne Beachtung der Groß- und Kleinschreibung, mit Entfernung von Rand-Leerzeichen, Leerzeilen und Duplikaten."
+}
