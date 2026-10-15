@@ -1,0 +1,4 @@
+{
+  "name": "Trình tạo ULA IPv6",
+  "description": "Tạo ngay trong trình duyệt một prefix /48 an toàn cho địa chỉ cục bộ duy nhất (ULA) IPv6 theo RFC 4193 và lập kế hoạch các subnet /64 trong dải fd00."
+}
