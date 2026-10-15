@@ -1,4 +1,4 @@
-import { startTransition, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 import { DetailsCard } from "./components/details-card"
 import { PrefixCard } from "./components/prefix-card"
@@ -61,9 +61,7 @@ function Ipv6UlaGeneratorClient({
   )
 
   const regenerate = () => {
-    startTransition(() => {
-      setGeneration(createGenerationState())
-    })
+    setGeneration(createGenerationState())
   }
 
   return (

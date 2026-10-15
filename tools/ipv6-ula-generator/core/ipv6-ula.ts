@@ -4,9 +4,6 @@ const ULA_SUBNET_ID_BITS = 16
 const ULA_INTERFACE_ID_BITS = 64
 const ULA_SUBNET_COUNT = 2 ** ULA_SUBNET_ID_BITS
 const SUBNET_ID_PATTERN = /^[0-9a-f]{1,4}$/iu
-const BYTE_HEX = Array.from({ length: 256 }, (_, value) =>
-  value.toString(16).padStart(2, "0")
-)
 
 type RandomSource = Pick<Crypto, "getRandomValues">
 
@@ -48,7 +45,9 @@ function createIpv6UlaPrefix(bytes: Uint8Array): Ipv6UlaPrefix {
     throw new Error("An IPv6 ULA Global ID requires exactly 5 bytes.")
   }
 
-  const globalId = Array.from(bytes, (byte) => BYTE_HEX[byte]!).join("")
+  const globalId = Array.from(bytes, (byte) =>
+    byte.toString(16).padStart(2, "0")
+  ).join("")
   const networkHextets = [
     0xfd00 | bytes[0]!,
     (bytes[1]! << 8) | bytes[2]!,
