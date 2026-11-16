@@ -147,10 +147,15 @@ catalog:
   vitest: ^4.1.9
   webrtc-ips: ^0.2.0
   wrangler: 4.105.0
-  xlsx: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
+  xlsx: 0.20.3
   xml-js: ^1.6.11
   xxhash-wasm: ^1.1.0
   zod: ^4.4.3
+
+# pnpm 10 catalogs do not support file: specifiers. Resolve the catalog's
+# SheetJS version to the unchanged local distribution through an override.
+overrides:
+  xlsx: file:vendor/xlsx-0.20.3.tgz
 
 onlyBuiltDependencies:
   - esbuild
