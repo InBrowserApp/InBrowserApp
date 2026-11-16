@@ -1,4 +1,4 @@
 {
-  "name": "UUID v5 Generator",
+  "name": "UUID v5-generator",
   "description": "Generera deterministiska namnbaserade UUID v5-identifierare från ett namnrymds-UUID och ett namn, helt i din webbläsare."
 }
