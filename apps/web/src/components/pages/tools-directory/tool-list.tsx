@@ -46,7 +46,7 @@ function ToolList({
             </span>
           </span>
           {showCategory && (
-            <span className="hidden shrink-0 text-[10px] font-medium tracking-[0.12em] text-muted-foreground/80 uppercase md:inline">
+            <span className="hidden shrink-0 text-[10px] font-medium tracking-[0.12em] text-foreground/70 uppercase md:inline">
               {getCategoryLabel(categoryLabels, entry.category)}
             </span>
           )}

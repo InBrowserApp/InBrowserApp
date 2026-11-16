@@ -22,15 +22,9 @@ import {
 
 export type UppercaseVariant = "simplified" | "traditional"
 
-export type NumberParseError =
-  | "invalidFormat"
-  | "tooManyDecimals"
-  | "outOfRange"
+type NumberParseError = "invalidFormat" | "tooManyDecimals" | "outOfRange"
 
-export type UppercaseParseError =
-  | "invalidCharacters"
-  | "invalidFormat"
-  | "outOfRange"
+type UppercaseParseError = "invalidCharacters" | "invalidFormat" | "outOfRange"
 
 export type NumberParseResult = {
   isEmpty: boolean

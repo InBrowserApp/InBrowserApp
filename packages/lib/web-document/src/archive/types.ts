@@ -5,7 +5,7 @@ export type Failure =
   | "structure"
   | "email"
   | "resourceLimit"
-export type ArchiveNotes = {
+type ArchiveNotes = {
   truncated: boolean
   nested: boolean
   encoding: boolean

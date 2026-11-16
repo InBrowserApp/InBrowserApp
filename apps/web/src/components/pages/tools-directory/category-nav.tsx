@@ -74,14 +74,7 @@ function CategorySidebar(props: CategoryNavProps) {
                 )}
               >
                 <span className="truncate">{label}</span>
-                <span
-                  className={cn(
-                    "shrink-0 text-sm font-normal",
-                    isActive
-                      ? "text-muted-foreground"
-                      : "text-muted-foreground/70"
-                  )}
-                >
+                <span className="shrink-0 text-sm font-normal text-foreground/70">
                   {formatCount(count)}
                 </span>
               </a>
@@ -139,9 +132,7 @@ function CategoryChips(props: CategoryNavProps) {
             )}
           >
             {label}
-            <span
-              className={cn(isActive ? "opacity-60" : "text-muted-foreground")}
-            >
+            <span className={isActive ? undefined : "text-muted-foreground"}>
               {formatCount(count)}
             </span>
           </a>

@@ -4,7 +4,8 @@ import {
   GlobalWorkerOptions,
   PasswordResponses,
 } from "pdfjs-dist"
-import * as workerUrl from "pdfjs-dist/build/pdf.worker.min.mjs?url"
+// oxlint-disable-next-line import/default -- Vite creates the default export for ?url assets.
+import workerUrl from "pdfjs-dist/build/pdf.worker.min.mjs?url"
 import { PdfAssets } from "./pdf-assets"
 import { readOutline, renderThumbnail } from "./navigation"
 import type { PDFDocumentProxy } from "pdfjs-dist"
@@ -13,8 +14,8 @@ import type { Reader, ReaderState } from "./types"
 // Isolated pages need a worker response carrying COEP. Keep their URL separate
 // from immutable worker responses cached before that header was introduced.
 GlobalWorkerOptions.workerSrc = globalThis.crossOriginIsolated
-  ? `${workerUrl.default}${workerUrl.default.includes("?") ? "&" : "?"}isolated=1`
-  : workerUrl.default
+  ? `${workerUrl}${workerUrl.includes("?") ? "&" : "?"}isolated=1`
+  : workerUrl
 
 type Options = {
   file: Blob

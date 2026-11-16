@@ -1,3 +1,5 @@
+import "reflect-metadata"
+
 import { PemConverter } from "@peculiar/x509"
 
 import { CsrGeneratorError } from "./errors"

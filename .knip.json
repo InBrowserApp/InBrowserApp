@@ -2,8 +2,7 @@
   "$schema": "./node_modules/knip/schema.json",
   "workspaces": {
     "apps/web": {
-      "astro": true,
-      "ignoreDependencies": ["buffer", "string_decoder"]
+      "astro": true
     },
     "packages/*": {
       "astro": false
@@ -11,14 +10,8 @@
     "tools/*": {
       "astro": false
     },
-    "tools/ascii-art-generator": {
-      "ignoreDependencies": ["@types/figlet"]
-    },
     "tools/bip39-mnemonic-generator": {
       "ignoreDependencies": ["buffer"]
-    },
-    "tools/unicode-punycode-converter": {
-      "ignoreDependencies": ["punycode", "@types/punycode"]
     }
   }
 }

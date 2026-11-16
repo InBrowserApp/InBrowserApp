@@ -26,7 +26,7 @@ function loadPdfDocument(data: Uint8Array): PdfDocumentLoadingTaskLike {
   return getDocument({
     data,
     useSystemFonts: true,
-  }) as PdfDocumentLoadingTaskLike
+  })
 }
 
 export { PDF_IMAGE_PAINT_OPERATIONS, loadPdfDocument }

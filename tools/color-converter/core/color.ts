@@ -1,7 +1,6 @@
 import convert from "color-convert"
 
 import {
-  CSS_KEYWORDS,
   MAX_CHANNEL,
   clampAlpha,
   clampChannel,

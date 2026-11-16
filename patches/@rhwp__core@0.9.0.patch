@@ -1,0 +1,13 @@
+diff --git a/rhwp.js b/rhwp.js
+index 6a2e9b746d5d51a6cf8d31e0efbaf263bb7c93c2..da22eba55cfd5d9d5ba423c6b689366b607619f8 100644
+--- a/rhwp.js
++++ b/rhwp.js
+@@ -15095,7 +15095,7 @@ async function __wbg_init(module_or_path) {
+     }
+ 
+     if (module_or_path === undefined) {
+-        module_or_path = new URL('rhwp_bg.wasm', import.meta.url);
++        throw new TypeError('an explicit WASM source is required');
+     }
+     const imports = __wbg_get_imports();
+ 
