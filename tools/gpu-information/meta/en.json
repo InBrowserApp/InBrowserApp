@@ -1,4 +1,4 @@
 {
   "name": "GPU Information",
-  "description": "View your browser's GPU renderer, WebGL support, graphics limits, shader precision, and extensions locally. Copy or download a diagnostic report."
+  "description": "Find out which graphics processor (GPU) your browser uses and whether WebGL is available for 3D web graphics. Learn what the results mean, then copy or download a report to help troubleshoot graphics problems."
 }

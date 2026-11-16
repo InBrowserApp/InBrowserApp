@@ -1,4 +1,4 @@
 {
   "name": "Informacje o GPU",
-  "description": "Sprawdź lokalnie moduł renderujący GPU przeglądarki, obsługę WebGL, limity grafiki, precyzję shaderów i rozszerzenia. Skopiuj lub pobierz raport diagnostyczny."
+  "description": "Sprawdź, z którego procesora graficznego (GPU) korzysta Twoja przeglądarka i czy WebGL jest dostępny do wyświetlania grafiki 3D na stronach. Dowiedz się, co oznaczają wyniki, a następnie skopiuj lub pobierz raport, który pomoże rozwiązać problemy z grafiką."
 }

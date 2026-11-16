@@ -1,4 +1,4 @@
 {
   "name": "Maklumat GPU",
-  "description": "Lihat perender GPU pelayar anda, sokongan WebGL, had grafik, kepersisan pelorek dan sambungan secara setempat. Salin atau muat turun laporan diagnostik."
+  "description": "Ketahui pemproses grafik (GPU) yang digunakan oleh pelayar anda dan sama ada WebGL tersedia untuk grafik web 3D. Fahami maksud hasil semakan, kemudian salin atau muat turun laporan untuk membantu menyelesaikan masalah grafik."
 }

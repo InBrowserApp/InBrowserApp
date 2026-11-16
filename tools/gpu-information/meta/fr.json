@@ -1,4 +1,4 @@
 {
   "name": "Informations sur le GPU",
-  "description": "Consultez localement le moteur de rendu GPU de votre navigateur, la prise en charge de WebGL, les limites graphiques, la précision des shaders et les extensions. Copiez ou téléchargez un rapport de diagnostic."
+  "description": "Découvrez quel processeur graphique (GPU) votre navigateur utilise et si WebGL est disponible pour les graphismes 3D sur le Web. Apprenez à lire les résultats, puis copiez ou téléchargez un rapport pour vous aider à résoudre les problèmes graphiques."
 }

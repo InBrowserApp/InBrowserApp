@@ -1,4 +1,4 @@
 {
   "name": "GPU-informatie",
-  "description": "Bekijk lokaal de GPU-renderer van je browser, WebGL-ondersteuning, grafische limieten, shaderprecisie en extensies. Kopieer of download een diagnostisch rapport."
+  "description": "Ontdek welke grafische processor (GPU) je browser gebruikt en of WebGL beschikbaar is voor 3D-beelden op het web. Lees wat de resultaten betekenen en kopieer of download een rapport om grafische problemen te helpen oplossen."
 }

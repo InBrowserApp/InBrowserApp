@@ -1,4 +1,4 @@
 {
   "name": "GPU-Informationen",
-  "description": "Sehen Sie den GPU-Renderer Ihres Browsers, die WebGL-Unterstützung, Grafikgrenzwerte, Shader-Präzision und Erweiterungen lokal ein. Kopieren Sie einen Diagnosebericht oder laden Sie ihn herunter."
+  "description": "Finden Sie heraus, welchen Grafikprozessor (GPU) Ihr Browser verwendet und ob WebGL für 3D-Grafiken im Web verfügbar ist. Erfahren Sie, was die Ergebnisse bedeuten, und kopieren Sie einen Bericht oder laden Sie ihn herunter, um Grafikproblemen auf den Grund zu gehen."
 }

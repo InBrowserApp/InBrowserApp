@@ -1,4 +1,4 @@
 {
   "name": "GPU-information",
-  "description": "Visa webbläsarens GPU-renderare, WebGL-stöd, grafikgränser, shaderprecision och tillägg lokalt. Kopiera eller hämta en diagnostikrapport."
+  "description": "Ta reda på vilken grafikprocessor (GPU) din webbläsare använder och om WebGL är tillgängligt för 3D-grafik på webben. Lär dig vad resultaten betyder och kopiera eller hämta sedan en rapport som hjälp vid felsökning av grafikproblem."
 }

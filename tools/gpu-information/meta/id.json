@@ -1,4 +1,4 @@
 {
   "name": "Informasi GPU",
-  "description": "Lihat renderer GPU browser, dukungan WebGL, batas grafis, presisi shader, dan ekstensi secara lokal. Salin atau unduh laporan diagnostik."
+  "description": "Cari tahu prosesor grafis (GPU) yang digunakan browser Anda dan apakah WebGL tersedia untuk grafis web 3D. Pahami arti hasilnya, lalu salin atau unduh laporan untuk membantu mengatasi masalah grafis."
 }

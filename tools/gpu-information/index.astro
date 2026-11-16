@@ -25,10 +25,30 @@ const deviceHref = (lang === "en" ? "" : `/${lang}`) + "/tools/device-informatio
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <GpuInformationClient client:load messages={messages} />
+  <div class="grid min-w-0 gap-3">
+    <a href="#gpu-report-guide" class="w-fit text-sm underline underline-offset-4">
+      {messages.aboutTitle}
+    </a>
+    <GpuInformationClient client:load messages={messages} />
+  </div>
   <ToolArticle>
-    <h2>{messages.aboutTitle}</h2>
+    <h2 id="gpu-report-guide" class="scroll-mt-24">{messages.aboutTitle}</h2>
     <p>{messages.aboutDescription}</p>
+    <h3>{messages.webGlTitle}</h3>
+    <p>{messages.webGlDescription}</p>
+    <h3>{messages.rendererHelpTitle}</h3>
+    <p>{messages.rendererHelpDescription}</p>
+    <h3>{messages.limitsHelpTitle}</h3>
+    <p>{messages.limitsHelpDescription}</p>
+    <h3>{messages.usageTitle}</h3>
+    <ol>
+      <li>{messages.usageStep1}</li>
+      <li>{messages.usageStep2}</li>
+      <li>{messages.usageStep3}</li>
+    </ol>
+    <h3>{messages.troubleshootingTitle}</h3>
+    <p>{messages.troubleshootingDescription}</p>
+    <h3>{messages.monitoringTitle}</h3>
     <p>{messages.monitoringDescription}</p>
     <p>
       <a href={deviceHref}>{messages.deviceInformation}</a>

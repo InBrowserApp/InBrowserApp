@@ -11161,117 +11161,117 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "معلومات GPU",
         description:
-          "اعرض عارض GPU في متصفحك ودعم WebGL وحدود الرسومات ودقة المظلّل والامتدادات محليًا. انسخ تقريرًا تشخيصيًا أو نزّله.",
+          "تعرّف على معالج الرسومات (GPU) الذي يستخدمه متصفحك، وما إذا كان WebGL متاحًا لعرض رسومات الويب ثلاثية الأبعاد. افهم معنى النتائج، ثم انسخ تقريرًا أو نزّله للمساعدة في تشخيص مشكلات الرسومات.",
       },
       de: {
         name: "GPU-Informationen",
         description:
-          "Sehen Sie den GPU-Renderer Ihres Browsers, die WebGL-Unterstützung, Grafikgrenzwerte, Shader-Präzision und Erweiterungen lokal ein. Kopieren Sie einen Diagnosebericht oder laden Sie ihn herunter.",
+          "Finden Sie heraus, welchen Grafikprozessor (GPU) Ihr Browser verwendet und ob WebGL für 3D-Grafiken im Web verfügbar ist. Erfahren Sie, was die Ergebnisse bedeuten, und kopieren Sie einen Bericht oder laden Sie ihn herunter, um Grafikproblemen auf den Grund zu gehen.",
       },
       en: {
         name: "GPU Information",
         description:
-          "View your browser's GPU renderer, WebGL support, graphics limits, shader precision, and extensions locally. Copy or download a diagnostic report.",
+          "Find out which graphics processor (GPU) your browser uses and whether WebGL is available for 3D web graphics. Learn what the results mean, then copy or download a report to help troubleshoot graphics problems.",
       },
       es: {
         name: "Información de GPU",
         description:
-          "Consulta localmente el renderizador de GPU del navegador, la compatibilidad con WebGL, los límites gráficos, la precisión de los sombreadores y las extensiones. Copia o descarga un informe de diagnóstico.",
+          "Averigua qué procesador gráfico (GPU) utiliza tu navegador y si WebGL está disponible para mostrar gráficos 3D en la web. Aprende a interpretar los resultados y copia o descarga un informe que te ayude a solucionar problemas gráficos.",
       },
       fr: {
         name: "Informations sur le GPU",
         description:
-          "Consultez localement le moteur de rendu GPU de votre navigateur, la prise en charge de WebGL, les limites graphiques, la précision des shaders et les extensions. Copiez ou téléchargez un rapport de diagnostic.",
+          "Découvrez quel processeur graphique (GPU) votre navigateur utilise et si WebGL est disponible pour les graphismes 3D sur le Web. Apprenez à lire les résultats, puis copiez ou téléchargez un rapport pour vous aider à résoudre les problèmes graphiques.",
       },
       he: {
         name: "מידע על ה-GPU",
         description:
-          "הצג מקומית את רכיב הרינדור של ה-GPU בדפדפן שלך, תמיכת WebGL, מגבלות גרפיקה, דיוק המצללים וההרחבות. העתק או הורד דוח אבחון.",
+          "בדוק באיזה מעבד גרפי (GPU) הדפדפן שלך משתמש ואם WebGL זמין להצגת גרפיקה תלת־ממדית באינטרנט. למד מה משמעות התוצאות, ואז העתק או הורד דוח שיעזור באבחון בעיות גרפיקה.",
       },
       hi: {
         name: "GPU जानकारी",
         description:
-          "अपने ब्राउज़र का GPU रेंडरर, WebGL समर्थन, ग्राफ़िक्स सीमाएँ, शेडर परिशुद्धता और एक्सटेंशन स्थानीय रूप से देखें। निदान रिपोर्ट कॉपी करें या डाउनलोड करें।",
+          "जानें कि आपका ब्राउज़र किस ग्राफ़िक्स प्रोसेसर (GPU) का उपयोग करता है और 3D वेब ग्राफ़िक्स के लिए WebGL उपलब्ध है या नहीं। परिणामों का मतलब समझें, फिर ग्राफ़िक्स से जुड़ी समस्याओं का कारण ढूँढने में मदद के लिए रिपोर्ट कॉपी करें या डाउनलोड करें।",
       },
       id: {
         name: "Informasi GPU",
         description:
-          "Lihat renderer GPU browser, dukungan WebGL, batas grafis, presisi shader, dan ekstensi secara lokal. Salin atau unduh laporan diagnostik.",
+          "Cari tahu prosesor grafis (GPU) yang digunakan browser Anda dan apakah WebGL tersedia untuk grafis web 3D. Pahami arti hasilnya, lalu salin atau unduh laporan untuk membantu mengatasi masalah grafis.",
       },
       it: {
         name: "Informazioni sulla GPU",
         description:
-          "Visualizza localmente il renderer GPU del browser, il supporto WebGL, i limiti grafici, la precisione degli shader e le estensioni. Copia o scarica un report diagnostico.",
+          "Scopri quale processore grafico (GPU) usa il tuo browser e se WebGL è disponibile per la grafica 3D sul web. Impara a leggere i risultati, poi copia o scarica un report per individuare la causa dei problemi grafici.",
       },
       ja: {
         name: "GPU 情報",
         description:
-          "ブラウザの GPU レンダラー、WebGL 対応状況、グラフィックスの上限値、シェーダー精度、拡張機能をローカルで確認できます。診断レポートのコピーやダウンロードも可能です。",
+          "ブラウザがどのグラフィックス処理装置（GPU）を使っているか、3D グラフィックスを表示するための WebGL が利用できるかを確認できます。結果の意味を知り、レポートをコピーまたはダウンロードして、グラフィックスの問題解決に役立てられます。",
       },
       ko: {
         name: "GPU 정보",
         description:
-          "브라우저의 GPU 렌더러, WebGL 지원 여부, 그래픽 제한값, 셰이더 정밀도, 확장 기능을 로컬에서 확인하세요. 진단 보고서를 복사하거나 다운로드할 수 있습니다.",
+          "브라우저가 사용하는 그래픽 처리 장치(GPU)와 3D 웹 그래픽을 위한 WebGL 지원 여부를 확인하세요. 결과의 의미를 알아보고, 그래픽 문제 해결에 도움이 되도록 보고서를 복사하거나 다운로드하세요.",
       },
       ms: {
         name: "Maklumat GPU",
         description:
-          "Lihat perender GPU pelayar anda, sokongan WebGL, had grafik, kepersisan pelorek dan sambungan secara setempat. Salin atau muat turun laporan diagnostik.",
+          "Ketahui pemproses grafik (GPU) yang digunakan oleh pelayar anda dan sama ada WebGL tersedia untuk grafik web 3D. Fahami maksud hasil semakan, kemudian salin atau muat turun laporan untuk membantu menyelesaikan masalah grafik.",
       },
       nl: {
         name: "GPU-informatie",
         description:
-          "Bekijk lokaal de GPU-renderer van je browser, WebGL-ondersteuning, grafische limieten, shaderprecisie en extensies. Kopieer of download een diagnostisch rapport.",
+          "Ontdek welke grafische processor (GPU) je browser gebruikt en of WebGL beschikbaar is voor 3D-beelden op het web. Lees wat de resultaten betekenen en kopieer of download een rapport om grafische problemen te helpen oplossen.",
       },
       no: {
         name: "GPU-informasjon",
         description:
-          "Se nettleserens GPU-renderer, WebGL-støtte, grafikkgrenser, shaderpresisjon og utvidelser lokalt. Kopier eller last ned en diagnoserapport.",
+          "Finn ut hvilken grafikkprosessor (GPU) nettleseren din bruker, og om WebGL er tilgjengelig for 3D-grafikk på nettet. Lær hva resultatene betyr, og kopier eller last ned en rapport som kan hjelpe deg med å feilsøke grafikkproblemer.",
       },
       pl: {
         name: "Informacje o GPU",
         description:
-          "Sprawdź lokalnie moduł renderujący GPU przeglądarki, obsługę WebGL, limity grafiki, precyzję shaderów i rozszerzenia. Skopiuj lub pobierz raport diagnostyczny.",
+          "Sprawdź, z którego procesora graficznego (GPU) korzysta Twoja przeglądarka i czy WebGL jest dostępny do wyświetlania grafiki 3D na stronach. Dowiedz się, co oznaczają wyniki, a następnie skopiuj lub pobierz raport, który pomoże rozwiązać problemy z grafiką.",
       },
       pt: {
         name: "Informações da GPU",
         description:
-          "Veja localmente o renderizador da GPU do seu navegador, o suporte ao WebGL, os limites gráficos, a precisão dos shaders e as extensões. Copie ou baixe um relatório de diagnóstico.",
+          "Descubra qual processador gráfico (GPU) o seu navegador usa e se o WebGL está disponível para gráficos 3D na web. Entenda o que os resultados significam e copie ou baixe um relatório para ajudar a solucionar problemas gráficos.",
       },
       ru: {
         name: "Информация о GPU",
         description:
-          "Просматривайте рендерер GPU браузера, поддержку WebGL, ограничения графики, точность шейдеров и расширения локально. Копируйте или скачивайте диагностический отчёт.",
+          "Узнайте, какой графический процессор (GPU) использует ваш браузер и доступен ли WebGL для трёхмерной графики на веб-страницах. Разберитесь в результатах, затем скопируйте или скачайте отчёт, который поможет найти причины проблем с графикой.",
       },
       sv: {
         name: "GPU-information",
         description:
-          "Visa webbläsarens GPU-renderare, WebGL-stöd, grafikgränser, shaderprecision och tillägg lokalt. Kopiera eller hämta en diagnostikrapport.",
+          "Ta reda på vilken grafikprocessor (GPU) din webbläsare använder och om WebGL är tillgängligt för 3D-grafik på webben. Lär dig vad resultaten betyder och kopiera eller hämta sedan en rapport som hjälp vid felsökning av grafikproblem.",
       },
       th: {
         name: "ข้อมูล GPU",
         description:
-          "ดูตัวเรนเดอร์ GPU ของเบราว์เซอร์ การรองรับ WebGL ขีดจำกัดกราฟิก ความแม่นยำของเชดเดอร์ และส่วนขยายภายในอุปกรณ์ คัดลอกหรือดาวน์โหลดรายงานการวินิจฉัยได้",
+          "ตรวจสอบว่าเบราว์เซอร์ของคุณใช้หน่วยประมวลผลกราฟิก (GPU) ตัวใด และใช้ WebGL สำหรับแสดงกราฟิก 3 มิติบนเว็บได้หรือไม่ เรียนรู้ความหมายของผลลัพธ์ แล้วคัดลอกหรือดาวน์โหลดรายงานเพื่อช่วยแก้ปัญหาด้านกราฟิก",
       },
       tr: {
         name: "GPU Bilgileri",
         description:
-          "Tarayıcınızın GPU işleyicisini, WebGL desteğini, grafik sınırlarını, gölgelendirici hassasiyetini ve uzantılarını yerel olarak görüntüleyin. Tanılama raporunu kopyalayın veya indirin.",
+          "Tarayıcınızın hangi grafik işlemcisini (GPU) kullandığını ve web sayfalarında 3B grafikler için WebGL’nin kullanılabilir olup olmadığını öğrenin. Sonuçların anlamını öğrenin, ardından grafik sorunlarını gidermeye yardımcı olması için raporu kopyalayın veya indirin.",
       },
       vi: {
         name: "Thông tin GPU",
         description:
-          "Xem bộ kết xuất GPU của trình duyệt, khả năng hỗ trợ WebGL, giới hạn đồ họa, độ chính xác của shader và tiện ích mở rộng ngay trên thiết bị. Sao chép hoặc tải xuống báo cáo chẩn đoán.",
+          "Xem trình duyệt đang dùng bộ xử lý đồ họa (GPU) nào và WebGL có khả dụng để hiển thị đồ họa 3D trên web hay không. Tìm hiểu ý nghĩa của kết quả, rồi sao chép hoặc tải xuống báo cáo để hỗ trợ khắc phục sự cố đồ họa.",
       },
       "zh-CN": {
         name: "GPU 信息",
         description:
-          "在本地查看浏览器的 GPU 渲染器、WebGL 支持情况、图形能力上限、着色器精度和扩展。复制或下载诊断报告。",
+          "查看浏览器使用的图形处理器（GPU，通常称为显卡），以及用于网页三维图形的 WebGL 是否可用。了解检测结果的含义，再复制或下载报告，帮助排查图形显示问题。",
       },
       "zh-TW": {
         name: "GPU 資訊",
         description:
-          "在本機檢視瀏覽器的 GPU 轉譯器、WebGL 支援、繪圖限制、著色器精確度與擴充功能。複製或下載診斷報告。",
+          "查看瀏覽器使用哪個圖形處理器（GPU），以及是否能使用 WebGL 顯示網頁 3D 圖形。了解結果的意義，再複製或下載報告，協助排查繪圖問題。",
       },
     },
   },
