@@ -227,7 +227,7 @@ function PageListCard({
 
             <ol
               aria-describedby={dragHintId}
-              className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,12rem),1fr))] gap-4"
+              className="grid grid-cols-2 gap-4 sm:grid-cols-[repeat(auto-fill,minmax(13rem,1fr))]"
             >
               {pages.map((page, index) => (
                 <PageTile

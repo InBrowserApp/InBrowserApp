@@ -121,7 +121,7 @@ function PageTile({
     <li
       aria-label={`${positionLabel}. ${pageLabel}`}
       className={cn(
-        "group relative flex min-w-0 flex-col gap-2 rounded-lg border p-2 select-none",
+        "group @container relative flex min-w-0 flex-col gap-2 rounded-lg border p-2 select-none",
         !disabled && "hover:bg-muted/40",
         isDragSource && "bg-muted/50 opacity-70",
         disabled && "opacity-75"
@@ -187,7 +187,7 @@ function PageTile({
           </p>
         </div>
 
-        <div className="grid grid-cols-4 gap-1 border-t border-border/60 pt-1">
+        <div className="grid grid-cols-2 place-items-center gap-1 border-t border-border/60 pt-1 @min-[12rem]:grid-cols-4">
           <Button
             aria-label={`${messages.moveUpLabel}: ${pageLabel}`}
             className="size-11"
