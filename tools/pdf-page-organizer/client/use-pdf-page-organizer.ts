@@ -52,13 +52,11 @@ function createPreviewMap(previews: readonly PdfPagePreview[]) {
 
 function usePdfPageOrganizer(messages: PdfPageOrganizerMessages) {
   const runIdRef = useRef(0)
-  const fileRef = useRef<File | null>(null)
-  const pagesRef = useRef<readonly PdfPageEntry[]>([])
-  const originalPagesRef = useRef<readonly PdfPageEntry[]>([])
   const previewAbortRef = useRef<AbortController | null>(null)
   const [file, setFile] = useState<File | null>(null)
   const [pages, setPages] = useState<PdfPageEntry[]>([])
   const [originalPages, setOriginalPages] = useState<PdfPageEntry[]>([])
+  const [history, setHistory] = useState<readonly PdfPageEntry[][]>([])
   const [previews, setPreviews] = useState<
     Readonly<Record<number, PdfPagePreview>>
   >({})
@@ -70,24 +68,19 @@ function usePdfPageOrganizer(messages: PdfPageOrganizerMessages) {
   const [isGenerating, setIsGenerating] = useState(false)
   const canGenerate =
     Boolean(file) && pages.length > 0 && !isGenerating && !isReading
+  const canReset =
+    pages.length !== originalPages.length ||
+    pages.some(
+      (page, index) =>
+        page.id !== originalPages[index]?.id ||
+        page.rotation !== originalPages[index]?.rotation
+    )
 
   useEffect(() => {
     return () => {
       previewAbortRef.current?.abort()
     }
   }, [])
-
-  useEffect(() => {
-    fileRef.current = file
-  }, [file])
-
-  useEffect(() => {
-    pagesRef.current = pages
-  }, [pages])
-
-  useEffect(() => {
-    originalPagesRef.current = originalPages
-  }, [originalPages])
 
   async function renderPreviews(
     nextFile: File,
@@ -129,6 +122,7 @@ function usePdfPageOrganizer(messages: PdfPageOrganizerMessages) {
     setPreviewError("")
     setPreviews({})
     setIsRenderingPreviews(false)
+    setHistory([])
 
     if (!nextFile) {
       setFile(null)
@@ -182,14 +176,15 @@ function usePdfPageOrganizer(messages: PdfPageOrganizerMessages) {
   function updatePages(
     updater: (current: readonly PdfPageEntry[]) => PdfPageEntry[]
   ) {
-    setPages((currentPages) => updater(currentPages))
+    setHistory((previous) => [...previous, pages].slice(-20))
+    setPages(updater(pages))
     setResult(null)
     setError("")
   }
 
   async function generatePdf() {
-    const currentFile = fileRef.current
-    const currentPages = pagesRef.current
+    const currentFile = file
+    const currentPages = pages
 
     if (!currentFile) {
       setError(messages.invalidPdfTypeError)
@@ -221,6 +216,8 @@ function usePdfPageOrganizer(messages: PdfPageOrganizerMessages) {
 
   return {
     canGenerate,
+    canReset,
+    canUndo: history.length > 0,
     error,
     file,
     generatePdf,
@@ -237,13 +234,22 @@ function usePdfPageOrganizer(messages: PdfPageOrganizerMessages) {
       updatePages((currentPages) => movePage(currentPages, index, index - 1))
     },
     pages,
+    originalPageCount: originalPages.length,
     previewError,
     previews,
     removePage: (pageId: string) => {
       updatePages((currentPages) => removePage(currentPages, pageId))
     },
     resetPages: () => {
-      setPages([...originalPagesRef.current])
+      updatePages(() => [...originalPages])
+    },
+    undo: () => {
+      const previous = history.at(-1)
+      if (!previous) {
+        return
+      }
+      setPages(previous)
+      setHistory(history.slice(0, -1))
       setResult(null)
       setError("")
     },
