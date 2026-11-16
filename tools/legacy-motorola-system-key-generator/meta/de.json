@@ -1,0 +1,4 @@
+{
+  "name": "Generator für Motorola-Systemschlüssel im Legacy-Format",
+  "description": "Erstellen Sie Software-Systemschlüsseldateien (.KEY) im Legacy-Format für Motorola direkt im Browser. Dieses Format unterstützt weder ASTRO 25 noch XTS5000, APX oder Advanced System Keys."
+}

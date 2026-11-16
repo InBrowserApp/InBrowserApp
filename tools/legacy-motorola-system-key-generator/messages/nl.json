@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "Alleen het legacyformaat",
+  "compatibilityDescription": "Genereert het op BatLabs gebaseerde formaat voor softwarematige sleutels. Niet compatibel met ASTRO 25 Portable CPS (inclusief XTS5000), APX CPS of Advanced System Keys (ASK).",
+  "inputTitle": "Systeem-ID",
+  "inputDescription": "Voer de ID van een ouder Motorola-trunkingsysteem in.",
+  "systemIdLabel": "Systeem-ID (hex)",
+  "systemIdHelp": "Gebruik 1–4 hexadecimale cijfers (0–9, A–F). Korte ID's worden aangevuld met voorloopnullen.",
+  "invalidSystemId": "Voer 1–4 hexadecimale cijfers (0–9, A–F) in, zonder het voorvoegsel 0x.",
+  "outputTitle": "Legacy-sleutelbestand",
+  "emptyState": "Voer een systeem-ID in om je .KEY-bestand te bekijken en te downloaden.",
+  "normalizedIdLabel": "Genormaliseerde ID",
+  "filenameLabel": "Bestandsnaam",
+  "fileSizeLabel": "Bestandsgrootte",
+  "fileSizeValue": "27 bytes",
+  "hexPreviewLabel": "Hexadecimale voorvertoning",
+  "downloadLabel": "Download .KEY",
+  "sourceLabel": "Referentie-implementatie",
+  "licenseLabel": "ISC-licentie"
+}

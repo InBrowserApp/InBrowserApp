@@ -5621,12 +5621,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["code", "screenshot", "image", "svg", "png", "jpeg", "webp", "html"],
     locales: {
       ar: {
-        name: "Code Screenshot Generator",
+        name: "مولّد لقطات شاشة الكود",
         description:
           "أنشئ لقطات شاشة للكود مع تمييز الصياغة وصدّرها بصيغ SVG أو PNG أو JPEG أو WebP أو HTML.",
       },
       de: {
-        name: "Code Screenshot Generator",
+        name: "Code-Screenshot-Generator",
         description:
           "Erstelle Code-Screenshots mit Syntaxhervorhebung und exportiere sie als SVG, PNG, JPEG, WebP oder HTML.",
       },
@@ -5641,7 +5641,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Genera capturas de código con resaltado de sintaxis y expórtalas como SVG, PNG, JPEG, WebP o HTML.",
       },
       fr: {
-        name: "Code Screenshot Generator",
+        name: "Générateur de captures d'écran de code",
         description:
           "Générez des captures d'écran de code avec coloration syntaxique et exportez-les en SVG, PNG, JPEG, WebP ou HTML.",
       },
@@ -5651,42 +5651,42 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "צרו צילומי מסך של קוד עם הדגשת תחביר וייצאו אותם כ-SVG, PNG, JPEG, WebP או HTML.",
       },
       hi: {
-        name: "Code Screenshot Generator",
+        name: "कोड स्क्रीनशॉट जनरेटर",
         description:
           "सिंटैक्स-हाइलाइट किए गए कोड स्क्रीनशॉट बनाएं और उन्हें SVG, PNG, JPEG, WebP या HTML के रूप में एक्सपोर्ट करें।",
       },
       id: {
-        name: "Code Screenshot Generator",
+        name: "Pembuat Tangkapan Layar Kode",
         description:
           "Buat screenshot kode dengan penyorotan sintaks dan ekspor sebagai SVG, PNG, JPEG, WebP, atau HTML.",
       },
       it: {
-        name: "Code Screenshot Generator",
+        name: "Generatore di screenshot di codice",
         description:
           "Genera screenshot di codice con evidenziazione della sintassi ed esportali come SVG, PNG, JPEG, WebP o HTML.",
       },
       ja: {
-        name: "Code Screenshot Generator",
+        name: "コードスクリーンショット生成ツール",
         description:
           "シンタックスハイライト付きのコードスクリーンショットを生成し、SVG、PNG、JPEG、WebP、HTML として書き出します。",
       },
       ko: {
-        name: "Code Screenshot Generator",
+        name: "코드 스크린샷 생성기",
         description:
           "구문 강조가 적용된 코드 스크린샷을 생성하고 SVG, PNG, JPEG, WebP 또는 HTML로 내보내세요.",
       },
       ms: {
-        name: "Code Screenshot Generator",
+        name: "Penjana Tangkapan Skrin Kod",
         description:
           "Jana tangkapan skrin kod dengan penyerlahan sintaks dan eksport sebagai SVG, PNG, JPEG, WebP, atau HTML.",
       },
       nl: {
-        name: "Code Screenshot Generator",
+        name: "Generator voor codescreenshots",
         description:
           "Genereer code-screenshots met syntaxmarkering en exporteer ze als SVG, PNG, JPEG, WebP of HTML.",
       },
       no: {
-        name: "Code Screenshot Generator",
+        name: "Generator for kodeskjermbilder",
         description:
           "Lag syntaksuthevede kode-skjermbilder og eksporter dem som SVG, PNG, JPEG, WebP eller HTML.",
       },
@@ -5696,42 +5696,42 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Generuj zrzuty ekranu kodu z podświetlaniem składni i eksportuj je jako SVG, PNG, JPEG, WebP lub HTML.",
       },
       pt: {
-        name: "Code Screenshot Generator",
+        name: "Gerador de capturas de tela de código",
         description:
           "Gere capturas de tela de código com realce de sintaxe e exporte-as como SVG, PNG, JPEG, WebP ou HTML.",
       },
       ru: {
-        name: "Code Screenshot Generator",
+        name: "Генератор скриншотов кода",
         description:
           "Создавайте скриншоты кода с подсветкой синтаксиса и экспортируйте их как SVG, PNG, JPEG, WebP или HTML.",
       },
       sv: {
-        name: "Code Screenshot Generator",
+        name: "Generator för kodskärmbilder",
         description:
           "Skapa syntaxmarkerade kodskärmbilder och exportera dem som SVG, PNG, JPEG, WebP eller HTML.",
       },
       th: {
-        name: "Code Screenshot Generator",
+        name: "เครื่องมือสร้างภาพหน้าจอโค้ด",
         description:
           "สร้างภาพหน้าจอโค้ดพร้อมไฮไลต์ไวยากรณ์ และส่งออกเป็น SVG, PNG, JPEG, WebP หรือ HTML",
       },
       tr: {
-        name: "Code Screenshot Generator",
+        name: "Kod Ekran Görüntüsü Oluşturucu",
         description:
           "Sözdizimi vurgulu kod ekran görüntüleri oluşturun ve bunları SVG, PNG, JPEG, WebP veya HTML olarak dışa aktarın.",
       },
       vi: {
-        name: "Code Screenshot Generator",
+        name: "Trình tạo ảnh chụp mã",
         description:
           "Tạo ảnh chụp mã có tô sáng cú pháp và xuất dưới dạng SVG, PNG, JPEG, WebP hoặc HTML.",
       },
       "zh-CN": {
-        name: "Code Screenshot Generator",
+        name: "代码截图生成器",
         description:
           "生成带语法高亮的代码截图，并导出为 SVG、PNG、JPEG、WebP 或 HTML。",
       },
       "zh-TW": {
-        name: "Code Screenshot Generator",
+        name: "程式碼截圖產生器",
         description:
           "產生具語法醒目提示的程式碼截圖，並匯出為 SVG、PNG、JPEG、WebP 或 HTML。",
       },
@@ -16720,6 +16720,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "LaTeX 預覽器",
         description:
           "在本機預覽內容完整獨立的 LaTeX 文件，提供易讀的數學公式、大綱、原始碼檢視及相容性說明。",
+      },
+    },
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "motorola",
+      "legacy",
+      "system key",
+      "syskey",
+      "syskeygen",
+      "skeygen",
+      "key file",
+      "trunking",
+      "radio",
+      "batlabs",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد مفاتيح أنظمة Motorola القديمة",
+        description:
+          "أنشئ ملفات مفاتيح الأنظمة البرمجية القديمة من Motorola (.KEY) في متصفحك. لا تدعم هذه الصيغة ASTRO 25 أو XTS5000 أو APX أو Advanced System Keys.",
+      },
+      de: {
+        name: "Generator für Motorola-Systemschlüssel im Legacy-Format",
+        description:
+          "Erstellen Sie Software-Systemschlüsseldateien (.KEY) im Legacy-Format für Motorola direkt im Browser. Dieses Format unterstützt weder ASTRO 25 noch XTS5000, APX oder Advanced System Keys.",
+      },
+      en: {
+        name: "Legacy Motorola System Key Generator",
+        description:
+          "Generate legacy Motorola software system key (.KEY) files in your browser. This format does not support ASTRO 25, XTS5000, APX, or Advanced System Keys.",
+      },
+      es: {
+        name: "Generador de claves de sistema Motorola de formato antiguo",
+        description:
+          "Genera archivos de clave de sistema por software (.KEY) para sistemas Motorola antiguos en tu navegador. Este formato no es compatible con ASTRO 25, XTS5000, APX ni Advanced System Keys.",
+      },
+      fr: {
+        name: "Générateur de clés système Motorola d’ancienne génération",
+        description:
+          "Générez des fichiers de clés système logicielles Motorola d’ancienne génération (.KEY) dans votre navigateur. Ce format ne prend pas en charge ASTRO 25, XTS5000, APX ni les Advanced System Keys.",
+      },
+      he: {
+        name: "מחולל מפתחות מערכת למערכות Motorola מדור קודם",
+        description:
+          "יצירת קובצי מפתח מערכת תוכנתיים (.KEY) למערכות Motorola מדור קודם, ישירות בדפדפן. פורמט זה אינו תומך ב־ASTRO 25, ב־XTS5000, ב־APX או ב־Advanced System Keys.",
+      },
+      hi: {
+        name: "लेगेसी Motorola सिस्टम कुंजी जनरेटर",
+        description:
+          "अपने ब्राउज़र में लेगेसी Motorola सॉफ़्टवेयर सिस्टम कुंजी (.KEY) फ़ाइलें बनाएँ। यह फ़ॉर्मैट ASTRO 25, XTS5000, APX या Advanced System Keys का समर्थन नहीं करता।",
+      },
+      id: {
+        name: "Generator Kunci Sistem Motorola Lawas",
+        description:
+          "Buat file kunci sistem perangkat lunak Motorola lawas (.KEY) di browser Anda. Format ini tidak mendukung ASTRO 25, XTS5000, APX, atau Advanced System Keys.",
+      },
+      it: {
+        name: "Generatore di chiavi di sistema Motorola legacy",
+        description:
+          "Genera file di chiavi software di sistema Motorola legacy (.KEY) nel browser. Questo formato non supporta ASTRO 25, XTS5000, APX o Advanced System Keys.",
+      },
+      ja: {
+        name: "旧形式の Motorola システムキー生成ツール",
+        description:
+          "ブラウザーで Motorola の旧形式のソフトウェアシステムキー（.KEY）ファイルを生成します。この形式は ASTRO 25、XTS5000、APX、Advanced System Keys に対応していません。",
+      },
+      ko: {
+        name: "레거시 Motorola 시스템 키 생성기",
+        description:
+          "브라우저에서 레거시 Motorola 소프트웨어 시스템 키(.KEY) 파일을 생성하세요. 이 형식은 ASTRO 25, XTS5000, APX 또는 Advanced System Keys를 지원하지 않습니다.",
+      },
+      ms: {
+        name: "Penjana Kunci Sistem Motorola Legasi",
+        description:
+          "Jana fail kunci sistem perisian Motorola legasi (.KEY) dalam pelayar anda. Format ini tidak menyokong ASTRO 25, XTS5000, APX atau Advanced System Keys.",
+      },
+      nl: {
+        name: "Generator voor oudere Motorola-systeemsleutels",
+        description:
+          "Genereer bestanden met softwarematige systeemsleutels (.KEY) voor oudere Motorola-systemen in je browser. Dit formaat ondersteunt geen ASTRO 25, XTS5000, APX of Advanced System Keys.",
+      },
+      no: {
+        name: "Systemnøkkelgenerator for eldre Motorola-systemer",
+        description:
+          "Generer programvarebaserte systemnøkkelfiler (.KEY) for eldre Motorola-systemer i nettleseren. Dette formatet støtter ikke ASTRO 25, XTS5000, APX eller Advanced System Keys.",
+      },
+      pl: {
+        name: "Generator kluczy systemowych dla starszych systemów Motorola",
+        description:
+          "Generuj w przeglądarce pliki programowych kluczy systemowych (.KEY) dla starszych systemów Motorola. Ten format nie obsługuje ASTRO 25, XTS5000, APX ani Advanced System Keys.",
+      },
+      pt: {
+        name: "Gerador de chaves de sistema Motorola legadas",
+        description:
+          "Gere no navegador arquivos de chave de sistema por software (.KEY) para sistemas Motorola legados. Este formato não é compatível com ASTRO 25, XTS5000, APX ou Advanced System Keys.",
+      },
+      ru: {
+        name: "Генератор системных ключей Motorola старого формата",
+        description:
+          "Создавайте файлы программных системных ключей Motorola старого формата (.KEY) в браузере. Этот формат не поддерживает ASTRO 25, XTS5000, APX и Advanced System Keys.",
+      },
+      sv: {
+        name: "Generator för äldre Motorola-systemnycklar",
+        description:
+          "Skapa .KEY-filer med programvarubaserade systemnycklar för äldre Motorola-system i webbläsaren. Formatet stöder inte ASTRO 25, XTS5000, APX eller Advanced System Keys.",
+      },
+      th: {
+        name: "เครื่องมือสร้างคีย์ระบบ Motorola รุ่นเก่า",
+        description:
+          "สร้างไฟล์คีย์ระบบแบบซอฟต์แวร์ Motorola รุ่นเก่า (.KEY) ในเบราว์เซอร์ของคุณ รูปแบบนี้ไม่รองรับ ASTRO 25, XTS5000, APX หรือ Advanced System Keys",
+      },
+      tr: {
+        name: "Eski Nesil Motorola Sistem Anahtarı Oluşturucu",
+        description:
+          "Tarayıcınızda eski nesil Motorola yazılım tabanlı sistem anahtarı (.KEY) dosyaları oluşturun. Bu biçim ASTRO 25, XTS5000, APX veya Advanced System Keys'i desteklemez.",
+      },
+      vi: {
+        name: "Trình tạo khóa hệ thống Motorola đời cũ",
+        description:
+          "Tạo tệp khóa hệ thống phần mềm (.KEY) cho Motorola đời cũ trong trình duyệt. Định dạng này không hỗ trợ ASTRO 25, XTS5000, APX hoặc Advanced System Keys.",
+      },
+      "zh-CN": {
+        name: "旧版 Motorola 系统密钥生成器",
+        description:
+          "在浏览器中生成旧版 Motorola 软件系统密钥（.KEY）文件。此格式不支持 ASTRO 25、XTS5000、APX 或 Advanced System Keys。",
+      },
+      "zh-TW": {
+        name: "舊版 Motorola 系統金鑰產生器",
+        description:
+          "直接在瀏覽器中產生舊版 Motorola 軟體系統金鑰（.KEY）檔案。此格式不支援 ASTRO 25、XTS5000、APX 或 Advanced System Keys。",
       },
     },
   },
@@ -32782,12 +32916,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     ],
     locales: {
       ar: {
-        name: "UUID v5 Generator",
+        name: "مولد UUID v5",
         description:
           "أنشئ معرفات UUID v5 حتمية قائمة على الاسم من UUID لمساحة أسماء واسم، بالكامل داخل متصفحك.",
       },
       de: {
-        name: "UUID v5 Generator",
+        name: "UUID-v5-Generator",
         description:
           "Erzeuge deterministische namensbasierte UUID-v5-Kennungen aus einer Namespace-UUID und einem Namen, vollständig in deinem Browser.",
       },
@@ -32802,97 +32936,97 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Genera identificadores UUID v5 deterministas basados en nombres a partir de un UUID de espacio de nombres y un nombre, íntegramente en tu navegador.",
       },
       fr: {
-        name: "UUID v5 Generator",
+        name: "Générateur d’UUID v5",
         description:
           "Générez des identifiants UUID v5 déterministes basés sur un nom à partir d'un UUID d'espace de noms et d'un nom, entièrement dans votre navigateur.",
       },
       he: {
-        name: "UUID v5 Generator",
+        name: "מחולל UUID v5",
         description:
           "צרו מזהי UUID v5 דטרמיניסטיים מבוססי שם מ-UUID מרחב שמות ומשם, כולו בדפדפן שלכם.",
       },
       hi: {
-        name: "UUID v5 Generator",
+        name: "UUID v5 जनरेटर",
         description:
           "नेमस्पेस UUID और नाम से नियतात्मक नाम-आधारित UUID v5 पहचानकर्ता पूरी तरह अपने ब्राउज़र में बनाएं।",
       },
       id: {
-        name: "UUID v5 Generator",
+        name: "Generator UUID v5",
         description:
           "Buat identifier UUID v5 deterministik berbasis nama dari UUID namespace dan nama, sepenuhnya di browser Anda.",
       },
       it: {
-        name: "UUID v5 Generator",
+        name: "Generatore di UUID v5",
         description:
           "Genera identificatori UUID v5 deterministici basati sul nome da un UUID di namespace e da un nome, interamente nel browser.",
       },
       ja: {
-        name: "UUID v5 Generator",
+        name: "UUID v5 ジェネレーター",
         description:
           "名前空間 UUID と名前から、決定的な名前ベースの UUID v5 識別子を完全にブラウザー内で生成します。",
       },
       ko: {
-        name: "UUID v5 Generator",
+        name: "UUID v5 생성기",
         description:
           "네임스페이스 UUID와 이름으로 결정적 이름 기반 UUID v5 식별자를 브라우저에서만 생성합니다.",
       },
       ms: {
-        name: "UUID v5 Generator",
+        name: "Penjana UUID v5",
         description:
           "Jana pengecam UUID v5 berasaskan nama yang deterministik daripada UUID ruang nama dan nama, sepenuhnya dalam pelayar anda.",
       },
       nl: {
-        name: "UUID v5 Generator",
+        name: "UUID v5-generator",
         description:
           "Genereer deterministische naamgebaseerde UUID v5-identificaties op basis van een namespace-UUID en naam, volledig in je browser.",
       },
       no: {
-        name: "UUID v5 Generator",
+        name: "UUID v5-generator",
         description:
           "Generer deterministiske navnebaserte UUID v5-identifikatorer fra en namespace-UUID og et navn, helt i nettleseren din.",
       },
       pl: {
-        name: "UUID v5 Generator",
+        name: "Generator UUID v5",
         description:
           "Generuj deterministyczne identyfikatory UUID v5 oparte na nazwie z UUID przestrzeni nazw i nazwy, całkowicie w przeglądarce.",
       },
       pt: {
-        name: "UUID v5 Generator",
+        name: "Gerador de UUID v5",
         description:
           "Gere identificadores UUID v5 determinísticos baseados em nome a partir de um UUID de namespace e um nome, inteiramente no seu navegador.",
       },
       ru: {
-        name: "UUID v5 Generator",
+        name: "Генератор UUID v5",
         description:
           "Генерируйте детерминированные идентификаторы UUID v5 на основе имени из UUID пространства имен и имени полностью в браузере.",
       },
       sv: {
-        name: "UUID v5 Generator",
+        name: "UUID v5-generator",
         description:
           "Generera deterministiska namnbaserade UUID v5-identifierare från ett namnrymds-UUID och ett namn, helt i din webbläsare.",
       },
       th: {
-        name: "UUID v5 Generator",
+        name: "เครื่องมือสร้าง UUID v5",
         description:
           "สร้างตัวระบุ UUID v5 แบบอิงชื่อที่ให้ผลคงเดิมจาก namespace UUID และชื่อ ทั้งหมดภายในเบราว์เซอร์ของคุณ",
       },
       tr: {
-        name: "UUID v5 Generator",
+        name: "UUID v5 Oluşturucu",
         description:
           "Bir ad alanı UUID'si ve addan, tamamen tarayıcınızda, deterministik ada dayalı UUID v5 tanımlayıcıları oluşturun.",
       },
       vi: {
-        name: "UUID v5 Generator",
+        name: "Trình tạo UUID v5",
         description:
           "Tạo mã định danh UUID v5 dựa trên tên, có tính xác định, từ UUID không gian tên và tên, hoàn toàn trong trình duyệt của bạn.",
       },
       "zh-CN": {
-        name: "UUID v5 Generator",
+        name: "UUID v5 生成器",
         description:
           "完全在浏览器中，根据命名空间 UUID 和名称生成确定性的基于名称的 UUID v5 标识符。",
       },
       "zh-TW": {
-        name: "UUID v5 Generator",
+        name: "UUID v5 產生器",
         description:
           "完全在瀏覽器中，從命名空間 UUID 和名稱產生確定性的名稱型 UUID v5 識別碼。",
       },

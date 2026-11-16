@@ -1,4 +1,4 @@
 {
-  "name": "UUID v5 Generator",
+  "name": "เครื่องมือสร้าง UUID v5",
   "description": "สร้างตัวระบุ UUID v5 แบบอิงชื่อที่ให้ผลคงเดิมจาก namespace UUID และชื่อ ทั้งหมดภายในเบราว์เซอร์ของคุณ"
 }

@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.6.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.5.0...v2.6.0) (2026-11-16)
+
+
+### Features
+
+* add a text line sorter ([#1197](https://github.com/InBrowserApp/InBrowserApp/issues/1197)) ([d370120](https://github.com/InBrowserApp/InBrowserApp/commit/d370120e81fd8c754741c89ee78942e71045354b))
+* add IPv6 ULA generator ([#1031](https://github.com/InBrowserApp/InBrowserApp/issues/1031)) ([69d5277](https://github.com/InBrowserApp/InBrowserApp/commit/69d5277fcaa6d7da388b825eaf2da805cee0e52f))
+
+
+### Bug Fixes
+
+* make Base64 decoding discoverable on mobile ([#1203](https://github.com/InBrowserApp/InBrowserApp/issues/1203)) ([c7c7b3c](https://github.com/InBrowserApp/InBrowserApp/commit/c7c7b3c2627026d0abbb7ecb085f8220061b4cbe))
+
 ## [2.5.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.4.0...v2.5.0) (2026-10-11)
 
 

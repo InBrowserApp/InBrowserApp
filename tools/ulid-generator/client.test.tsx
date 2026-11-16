@@ -189,7 +189,7 @@ describe("UlidGeneratorClient", () => {
       screen.getByRole("radio", { name: messages.timestampCustomLabel })
     )
     fireEvent.change(screen.getByLabelText(messages.customDateTimeLabel), {
-      target: { value: "1970-01-01T00:00:02.345" },
+      target: { value: "2026-01-01T00:00:02.345" },
     })
     fireEvent.click(screen.getByLabelText(messages.monotonicBatchLabel))
 
@@ -201,7 +201,7 @@ describe("UlidGeneratorClient", () => {
         screen.getByLabelText(messages.customUnixMillisecondsLabel)
       ).toHaveProperty(
         "value",
-        String(new Date(1970, 0, 1, 0, 0, 2, 345).getTime())
+        String(new Date(2026, 0, 1, 0, 0, 2, 345).getTime())
       )
       expect(
         screen

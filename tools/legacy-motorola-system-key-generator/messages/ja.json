@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "旧形式専用",
+  "compatibilityDescription": "BatLabs に基づくソフトウェアキー形式を生成します。ASTRO 25 Portable CPS（XTS5000 を含む）、APX CPS、Advanced System Keys（ASK）とは互換性がありません。",
+  "inputTitle": "システム ID",
+  "inputDescription": "旧型の Motorola トランキングシステムの ID を入力してください。",
+  "systemIdLabel": "システム ID（16進数）",
+  "systemIdHelp": "1–4 桁の16進数（0–9、A–F）を使用してください。短い ID には先頭にゼロが追加されます。",
+  "invalidSystemId": "接頭辞 0x を付けずに、1–4 桁の16進数（0–9、A–F）を入力してください。",
+  "outputTitle": "旧形式のキーファイル",
+  "emptyState": "システム ID を入力すると、.KEY ファイルをプレビューしてダウンロードできます。",
+  "normalizedIdLabel": "正規化済み ID",
+  "filenameLabel": "ファイル名",
+  "fileSizeLabel": "ファイルサイズ",
+  "fileSizeValue": "27 バイト",
+  "hexPreviewLabel": "16進数プレビュー",
+  "downloadLabel": ".KEY をダウンロード",
+  "sourceLabel": "参照実装",
+  "licenseLabel": "ISC ライセンス"
+}

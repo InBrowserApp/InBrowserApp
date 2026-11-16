@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "레거시 형식 전용",
+  "compatibilityDescription": "BatLabs에서 파생된 소프트웨어 키 형식을 생성합니다. ASTRO 25 Portable CPS(XTS5000 포함), APX CPS 또는 Advanced System Keys(ASK)와 호환되지 않습니다.",
+  "inputTitle": "시스템 ID",
+  "inputDescription": "레거시 Motorola 트렁킹 시스템의 ID를 입력하세요.",
+  "systemIdLabel": "시스템 ID(16진수)",
+  "systemIdHelp": "1~4자리 16진수(0–9, A–F)를 사용하세요. 짧은 ID는 앞에 0을 붙여 채웁니다.",
+  "invalidSystemId": "0x 접두사 없이 1~4자리 16진수(0–9, A–F)를 입력하세요.",
+  "outputTitle": "레거시 키 파일",
+  "emptyState": "시스템 ID를 입력하여 .KEY 파일을 미리 보고 다운로드하세요.",
+  "normalizedIdLabel": "정규화된 ID",
+  "filenameLabel": "파일 이름",
+  "fileSizeLabel": "파일 크기",
+  "fileSizeValue": "27바이트",
+  "hexPreviewLabel": "16진수 미리보기",
+  "downloadLabel": ".KEY 다운로드",
+  "sourceLabel": "참조 구현",
+  "licenseLabel": "ISC 라이선스"
+}
