@@ -8,6 +8,12 @@ export default getViteConfig({
   test: {
     include: ["**/*.test.{ts,tsx}"],
     environment: "happy-dom",
+    // Use the DOM environment's storage instead of Node's file-backed storage.
+    execArgv: process.allowedNodeEnvironmentFlags.has(
+      "--no-experimental-webstorage"
+    )
+      ? ["--no-experimental-webstorage"]
+      : [],
     coverage: {
       provider: "v8",
       reporter: ["text", "html", "json-summary", "json"],

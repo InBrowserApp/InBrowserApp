@@ -1,8 +1,10 @@
 {
+  "encodeLabel": "인코딩",
+  "decodeLabel": "디코딩",
   "plainTextLabel": "일반 텍스트",
   "plainTextPlaceholder": "인코딩할 텍스트를 입력하세요…",
   "plainTextDescription": "이모지와 비라틴 문자 등 모든 UTF-8 텍스트를 붙여넣거나 입력할 수 있습니다.",
-  "encodedTextLabel": "Base64 출력",
+  "encodedTextLabel": "Base64",
   "encodedTextPlaceholder": "디코딩할 Base64를 붙여넣으세요…",
   "encodedTextDescription": "Base64 텍스트를 직접 편집하면 일반 텍스트로 디코딩됩니다.",
   "invalidBase64Title": "Base64 값이 아직 유효하지 않습니다.",
