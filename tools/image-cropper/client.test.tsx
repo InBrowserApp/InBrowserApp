@@ -234,6 +234,12 @@ describe("image cropper UI", () => {
     expect(screen.getByRole("alert").textContent).toContain(
       messages.exportError
     )
+    expect(
+      screen
+        .getByText(messages.optionsTitle)
+        .closest("[data-slot=card]")
+        ?.contains(screen.getByRole("alert"))
+    ).toBe(true)
   })
 
   it("surfaces canvas preview failures", async () => {
@@ -244,5 +250,11 @@ describe("image cropper UI", () => {
     expect(screen.getByRole("alert").textContent).toContain(
       messages.previewError
     )
+    expect(
+      screen
+        .getByText(messages.sourceTitle)
+        .closest("[data-slot=card]")
+        ?.contains(screen.getByRole("alert"))
+    ).toBe(true)
   })
 })

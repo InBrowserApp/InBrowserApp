@@ -1,6 +1,6 @@
 ## Cách cắt ảnh
 
-Chọn hoặc thả ảnh từ thiết bị, sau đó kéo vùng chọn hoặc các tay nắm. Dùng Tự do cho hình dạng bất kỳ, Gốc để giữ tỷ lệ của ảnh hoặc tỷ lệ có sẵn như 1:1, 4:3 hay 16:9. Các ô pixel cho phép nhập chính xác vị trí và kích thước vùng chọn. Xoay theo bước 90°, lật ngang hoặc dọc rồi chọn Cắt ảnh để xem trước và tải kết quả xuống.
+Chọn hoặc thả ảnh từ thiết bị, sau đó kéo vùng chọn hoặc các tay nắm. Dùng Tự do để chọn tỷ lệ khung hình bất kỳ, Gốc để giữ tỷ lệ của ảnh hoặc tỷ lệ có sẵn như 1:1, 4:3 hay 16:9. Các ô pixel cho phép nhập chính xác vị trí và kích thước vùng chọn. Xoay theo bước 90°, lật ngang hoặc dọc rồi chọn Cắt ảnh để xem trước và tải kết quả xuống.
 
 ## Chất lượng và quyền riêng tư
 

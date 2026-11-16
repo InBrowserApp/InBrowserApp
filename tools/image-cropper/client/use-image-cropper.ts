@@ -9,6 +9,8 @@ import {
 import { exportImage, loadImage } from "./image"
 import type { CropResult, ImageSource, Messages, OutputFormat } from "./types"
 
+type CropError = { target: "source" | "export"; message: string }
+
 export function useImageCropper(m: Messages) {
   const [file, setFile] = useState<File | null>(null)
   const [source, setSource] = useState<ImageSource | null>(null)
@@ -25,7 +27,7 @@ export function useImageCropper(m: Messages) {
   const [quality, setQuality] = useState(92)
   const [loading, setLoading] = useState(false)
   const [processing, setProcessing] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  const [error, setError] = useState<CropError | null>(null)
   const [result, setResult] = useState<CropResult | null>(null)
   const [resultUrl, setResultUrl] = useState<string | null>(null)
   const revision = useRef(0)
@@ -43,7 +45,7 @@ export function useImageCropper(m: Messages) {
         setCrop(centeredCrop(image))
       })
       .catch(() => {
-        if (!cancelled) setError(m.invalidImage)
+        if (!cancelled) setError({ target: "source", message: m.invalidImage })
       })
       .finally(() => {
         if (!cancelled) setLoading(false)
@@ -143,7 +145,8 @@ export function useImageCropper(m: Messages) {
       )
       if (revision.current === currentRevision) setResult(output)
     } catch {
-      if (revision.current === currentRevision) setError(m.exportError)
+      if (revision.current === currentRevision)
+        setError({ target: "export", message: m.exportError })
     } finally {
       if (revision.current === currentRevision) setProcessing(false)
     }
@@ -160,7 +163,8 @@ export function useImageCropper(m: Messages) {
     quality,
     loading,
     processing,
-    error,
+    error: error?.message ?? null,
+    errorTarget: error?.target,
     result,
     resultUrl,
     changeFile,
@@ -179,7 +183,7 @@ export function useImageCropper(m: Messages) {
     },
     previewError: () => {
       invalidate()
-      setError(m.previewError)
+      setError({ target: "source", message: m.previewError })
     },
   }
 }

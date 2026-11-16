@@ -1,6 +1,6 @@
 ## How to crop an image
 
-Choose or drop a local image, then drag the selection or its handles. Use Free for any shape, Original to keep the image's proportions, or a preset such as 1:1, 4:3, or 16:9. Pixel fields let you enter the selection's position and size precisely. Rotate in 90° steps, flip horizontally or vertically, and select Crop image to preview and download the result.
+Choose or drop a local image, then drag the selection or its handles. Use Free to choose any aspect ratio, Original to keep the image's proportions, or a preset such as 1:1, 4:3, or 16:9. Pixel fields let you enter the selection's position and size precisely. Rotate in 90° steps, flip horizontally or vertically, and select Crop image to preview and download the result.
 
 ## Quality and privacy
 

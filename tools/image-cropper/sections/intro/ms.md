@@ -1,6 +1,6 @@
 ## Cara memangkas imej
 
-Pilih atau lepaskan imej setempat, kemudian seret pilihan atau pemegangnya. Gunakan Bebas untuk sebarang bentuk, Asal untuk mengekalkan perkadaran imej, atau pratetap seperti 1:1, 4:3 atau 16:9. Medan piksel membolehkan anda memasukkan kedudukan dan saiz pilihan dengan tepat. Putar dalam langkah 90°, balikkan secara mendatar atau menegak, dan pilih Pangkas imej untuk mempratonton serta memuat turun hasilnya.
+Pilih atau lepaskan imej setempat, kemudian seret pilihan atau pemegangnya. Gunakan Bebas untuk memilih sebarang nisbah aspek, Asal untuk mengekalkan perkadaran imej, atau pratetap seperti 1:1, 4:3 atau 16:9. Medan piksel membolehkan anda memasukkan kedudukan dan saiz pilihan dengan tepat. Putar dalam langkah 90°, balikkan secara mendatar atau menegak, dan pilih Pangkas imej untuk mempratonton serta memuat turun hasilnya.
 
 ## Kualiti dan privasi
 

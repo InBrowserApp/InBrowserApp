@@ -128,6 +128,7 @@ describe("image cropper lifecycle", () => {
     await waitFor(() =>
       expect(hook.result.current.error).toBe(messages.invalidImage)
     )
+    expect(hook.result.current.errorTarget).toBe("source")
     act(() =>
       hook.result.current.changeFile(
         new File(["image"], "next.png", { type: "image/png" })
@@ -137,12 +138,15 @@ describe("image cropper lifecycle", () => {
     expect(hook.result.current.error).toBeNull()
     act(() => hook.result.current.previewError())
     expect(hook.result.current.error).toBe(messages.previewError)
+    expect(hook.result.current.errorTarget).toBe("source")
     vi.mocked(exportImage).mockRejectedValueOnce(new Error())
     await act(() => hook.result.current.runExport())
     expect(hook.result.current.error).toBe(messages.exportError)
+    expect(hook.result.current.errorTarget).toBe("export")
     expect(hook.result.current.processing).toBe(false)
     act(() => hook.result.current.changeFile(null))
     expect(hook.result.current.error).toBeNull()
+    expect(hook.result.current.errorTarget).toBeUndefined()
     expect(hook.result.current.source).toBeNull()
   })
 

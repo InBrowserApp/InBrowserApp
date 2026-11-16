@@ -1,6 +1,6 @@
 ## Slik beskjærer du et bilde
 
-Velg eller slipp et lokalt bilde, og dra deretter i utvalget eller håndtakene. Bruk Fritt for en valgfri form, Originalt for å beholde bildets proporsjoner, eller en forhåndsinnstilling som 1:1, 4:3 eller 16:9. Pikselfeltene lar deg angi utvalgets posisjon og størrelse nøyaktig. Roter i trinn på 90°, vend vannrett eller loddrett, og velg Beskjær bilde for å forhåndsvise og laste ned resultatet.
+Velg eller slipp et lokalt bilde, og dra deretter i utvalget eller håndtakene. Bruk Fritt for et valgfritt sideforhold, Originalt for å beholde bildets proporsjoner, eller en forhåndsinnstilling som 1:1, 4:3 eller 16:9. Pikselfeltene lar deg angi utvalgets posisjon og størrelse nøyaktig. Roter i trinn på 90°, vend vannrett eller loddrett, og velg Beskjær bilde for å forhåndsvise og laste ned resultatet.
 
 ## Kvalitet og personvern
 

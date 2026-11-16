@@ -1,6 +1,6 @@
 ## Cara memotong gambar
 
-Pilih atau letakkan gambar lokal, lalu seret seleksi atau pegangannya. Gunakan Bebas untuk bentuk apa pun, Asli untuk mempertahankan proporsi gambar, atau prasetel seperti 1:1, 4:3, atau 16:9. Kolom piksel memungkinkan Anda memasukkan posisi dan ukuran seleksi secara tepat. Putar dengan langkah 90°, balik secara horizontal atau vertikal, lalu pilih Potong gambar untuk melihat pratinjau dan mengunduh hasilnya.
+Pilih atau letakkan gambar lokal, lalu seret seleksi atau pegangannya. Gunakan Bebas untuk memilih rasio aspek apa pun, Asli untuk mempertahankan proporsi gambar, atau prasetel seperti 1:1, 4:3, atau 16:9. Kolom piksel memungkinkan Anda memasukkan posisi dan ukuran seleksi secara tepat. Putar dengan langkah 90°, balik secara horizontal atau vertikal, lalu pilih Potong gambar untuk melihat pratinjau dan mengunduh hasilnya.
 
 ## Kualitas dan privasi
 

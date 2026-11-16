@@ -22,6 +22,7 @@ import { cn } from "@workspace/ui/lib/utils"
 import type { Cropper } from "../client/use-image-cropper"
 import type { Messages } from "../client/types"
 import { CropPreview } from "./crop-preview"
+import { CropperError } from "./error-alert"
 
 export function SourceCard({ state, m }: { state: Cropper; m: Messages }) {
   const picker = useRef<HTMLInputElement>(null)
@@ -82,6 +83,10 @@ export function SourceCard({ state, m }: { state: Cropper; m: Messages }) {
             if (file) state.changeFile(file)
             event.target.value = ""
           }}
+        />
+        <CropperError
+          message={state.errorTarget === "source" ? state.error : null}
+          m={m}
         />
         {state.loading ? (
           <div

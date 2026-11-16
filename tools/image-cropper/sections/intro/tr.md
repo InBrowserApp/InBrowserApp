@@ -1,6 +1,6 @@
 ## Bir görüntü nasıl kırpılır?
 
-Yerel bir görüntü seçin veya bırakın, ardından seçimi ya da tutamaçlarını sürükleyin. İstediğiniz şekil için Serbest, görüntünün oranlarını korumak için Özgün veya 1:1, 4:3 ve 16:9 gibi bir hazır oran kullanın. Piksel alanları, seçimin konumunu ve boyutunu tam olarak girmenizi sağlar. 90° adımlarla döndürün, yatay veya dikey çevirin ve sonucu önizleyip indirmek için Görüntüyü kırp'ı seçin.
+Yerel bir görüntü seçin veya bırakın, ardından seçimi ya da tutamaçlarını sürükleyin. İstediğiniz en boy oranını seçmek için Serbest, görüntünün oranlarını korumak için Özgün veya 1:1, 4:3 ve 16:9 gibi bir hazır oran kullanın. Piksel alanları, seçimin konumunu ve boyutunu tam olarak girmenizi sağlar. 90° adımlarla döndürün, yatay veya dikey çevirin ve sonucu önizleyip indirmek için Görüntüyü kırp'ı seçin.
 
 ## Kalite ve gizlilik
 

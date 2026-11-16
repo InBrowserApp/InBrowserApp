@@ -1,6 +1,6 @@
 ## Como recortar uma imagem
 
-Escolha ou solte uma imagem local e arraste a seleção ou suas alças. Use Livre para qualquer formato, Original para manter as proporções da imagem ou uma predefinição como 1:1, 4:3 ou 16:9. Os campos em pixels permitem inserir com precisão a posição e o tamanho da seleção. Gire em passos de 90°, espelhe horizontal ou verticalmente e selecione Recortar imagem para conferir e baixar o resultado.
+Escolha ou solte uma imagem local e arraste a seleção ou suas alças. Use Livre para escolher qualquer proporção, Original para manter as proporções da imagem ou uma predefinição como 1:1, 4:3 ou 16:9. Os campos em pixels permitem inserir com precisão a posição e o tamanho da seleção. Gire em passos de 90°, espelhe horizontal ou verticalmente e selecione Recortar imagem para conferir e baixar o resultado.
 
 ## Qualidade e privacidade
 

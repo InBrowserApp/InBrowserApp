@@ -1,6 +1,6 @@
 ## Een afbeelding bijsnijden
 
-Kies een lokale afbeelding of sleep deze hierheen en versleep vervolgens de selectie of de handgrepen. Gebruik Vrij voor elke gewenste vorm, Origineel om de verhoudingen van de afbeelding te behouden, of een voorinstelling zoals 1:1, 4:3 of 16:9. Met de pixelvelden kun je de positie en afmetingen van de selectie precies invoeren. Draai in stappen van 90°, spiegel horizontaal of verticaal en kies Afbeelding bijsnijden om het resultaat te bekijken en te downloaden.
+Kies een lokale afbeelding of sleep deze hierheen en versleep vervolgens de selectie of de handgrepen. Gebruik Vrij om elke gewenste beeldverhouding te kiezen, Origineel om de verhoudingen van de afbeelding te behouden, of een voorinstelling zoals 1:1, 4:3 of 16:9. Met de pixelvelden kun je de positie en afmetingen van de selectie precies invoeren. Draai in stappen van 90°, spiegel horizontaal of verticaal en kies Afbeelding bijsnijden om het resultaat te bekijken en te downloaden.
 
 ## Kwaliteit en privacy
 

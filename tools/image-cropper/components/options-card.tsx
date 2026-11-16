@@ -41,6 +41,7 @@ import {
 import { pixelCrop, updatePixelCrop } from "../core/crop"
 import type { Cropper } from "../client/use-image-cropper"
 import type { Messages, OutputFormat } from "../client/types"
+import { CropperError } from "./error-alert"
 
 export function OptionsCard({ state: s, m }: { state: Cropper; m: Messages }) {
   const id = useId()
@@ -104,7 +105,7 @@ export function OptionsCard({ state: s, m }: { state: Cropper; m: Messages }) {
         <CardTitle>{m.optionsTitle}</CardTitle>
         <CardDescription>{m.optionsDescription}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex flex-col gap-4">
         <fieldset disabled={disabled}>
           <FieldGroup>
             <Field>
@@ -233,6 +234,10 @@ export function OptionsCard({ state: s, m }: { state: Cropper; m: Messages }) {
             ) : null}
           </FieldGroup>
         </fieldset>
+        <CropperError
+          message={s.errorTarget === "export" ? s.error : null}
+          m={m}
+        />
       </CardContent>
       <CardFooter className="justify-between gap-3">
         <Button variant="ghost" disabled={disabled} onClick={s.reset}>
