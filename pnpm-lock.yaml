@@ -587,9 +587,6 @@ catalogs:
     wrangler:
       specifier: 4.105.0
       version: 4.105.0
-    xlsx:
-      specifier: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
-      version: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
     xml-js:
       specifier: ^1.6.11
       version: 1.6.11
@@ -599,6 +596,9 @@ catalogs:
     zod:
       specifier: ^4.4.3
       version: 4.4.3
+
+overrides:
+  xlsx: file:vendor/xlsx-0.20.3.tgz
 
 patchedDependencies:
   '@extend-ai/react-pptx@0.2.2': bde606e53b22a946dedd6ad4aae1c54fc95d1f338548800b490f5f4c820869cc
@@ -938,8 +938,8 @@ importers:
   packages/lib/spreadsheet-conversion:
     dependencies:
       xlsx:
-        specifier: 'catalog:'
-        version: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        specifier: file:../../../vendor/xlsx-0.20.3.tgz
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
 
   packages/lib/spreadsheet-export:
     dependencies:
@@ -947,8 +947,8 @@ importers:
         specifier: 'catalog:'
         version: 0.8.3
       xlsx:
-        specifier: 'catalog:'
-        version: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        specifier: file:../../../vendor/xlsx-0.20.3.tgz
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
     devDependencies:
       '@types/papaparse':
         specifier: 'catalog:'
@@ -3497,8 +3497,8 @@ importers:
         specifier: 'catalog:'
         version: 19.2.7(react@19.2.7)
       xlsx:
-        specifier: 'catalog:'
-        version: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        specifier: file:../../vendor/xlsx-0.20.3.tgz
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -6401,8 +6401,8 @@ importers:
         specifier: 'catalog:'
         version: 19.2.7(react@19.2.7)
       xlsx:
-        specifier: 'catalog:'
-        version: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        specifier: file:../../vendor/xlsx-0.20.3.tgz
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -6441,8 +6441,8 @@ importers:
         specifier: 'catalog:'
         version: 6.0.0
       xlsx:
-        specifier: 'catalog:'
-        version: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        specifier: file:../../vendor/xlsx-0.20.3.tgz
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -9486,8 +9486,8 @@ importers:
         specifier: 'catalog:'
         version: 19.2.7(react@19.2.7)
       xlsx:
-        specifier: 'catalog:'
-        version: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        specifier: file:../../vendor/xlsx-0.20.3.tgz
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -9526,8 +9526,8 @@ importers:
         specifier: 'catalog:'
         version: 6.0.0
       xlsx:
-        specifier: 'catalog:'
-        version: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        specifier: file:../../vendor/xlsx-0.20.3.tgz
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -9569,8 +9569,8 @@ importers:
         specifier: 'catalog:'
         version: 19.2.7(react@19.2.7)
       xlsx:
-        specifier: 'catalog:'
-        version: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
+        specifier: file:../../vendor/xlsx-0.20.3.tgz
+        version: file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45)
       xml-js:
         specifier: 'catalog:'
         version: 1.6.11
@@ -17277,8 +17277,8 @@ packages:
     resolution: {integrity: sha512-PSNhEJDejZYV7h50BohL09Er9VaIefr2LMAf3OEmpCkjOi34eYyQYAXUTjEQtZJTKcF0E2UKTh+osDLsgNim9Q==}
     engines: {node: '>=8'}
 
-  xlsx@https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz:
-    resolution: {integrity: sha512-oLDq3jw7AcLqKWH2AhCpVTZl8mf6X2YReP+Neh0SJUzV/BdZYjth94tG5toiMB1PPrYtxOCfaoUCkvtuH+3AJA==, tarball: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz}
+  xlsx@file:vendor/xlsx-0.20.3.tgz:
+    resolution: {integrity: sha512-oLDq3jw7AcLqKWH2AhCpVTZl8mf6X2YReP+Neh0SJUzV/BdZYjth94tG5toiMB1PPrYtxOCfaoUCkvtuH+3AJA==, tarball: file:vendor/xlsx-0.20.3.tgz}
     version: 0.20.3
     engines: {node: '>=0.8'}
     hasBin: true
@@ -25349,7 +25349,7 @@ snapshots:
 
   xdg-basedir@4.0.0: {}
 
-  xlsx@https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45): {}
+  xlsx@file:vendor/xlsx-0.20.3.tgz(patch_hash=2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45): {}
 
   xml-js@1.6.11:
     dependencies:
