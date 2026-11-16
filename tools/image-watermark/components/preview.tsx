@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
+import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import {
   Card,
   CardContent,
@@ -35,13 +36,17 @@ export function Preview({
 }) {
   const canvas = useRef<HTMLCanvasElement>(null)
   const [original, setOriginal] = useState(false)
+  const [drawError, setDrawError] = useState(false)
   useEffect(() => {
     if (!source) return
-    const timer = setTimeout(
-      () =>
-        drawWatermark(canvas.current!, source, logo, options, 1200, original),
-      80
-    )
+    const timer = setTimeout(() => {
+      try {
+        drawWatermark(canvas.current!, source, logo, options, 1200, original)
+        setDrawError(false)
+      } catch {
+        setDrawError(true)
+      }
+    }, 80)
     return () => clearTimeout(timer)
   }, [source, logo, options, original])
 
@@ -81,6 +86,11 @@ export function Preview({
                 .replace("{width}", String(source.width))
                 .replace("{height}", String(source.height))}
             </p>
+            {drawError ? (
+              <Alert variant="destructive">
+                <AlertDescription>{m.imageError}</AlertDescription>
+              </Alert>
+            ) : null}
           </>
         ) : (
           <Empty className="min-h-64 border">

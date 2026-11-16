@@ -10,7 +10,7 @@ import { ExportPanel } from "./components/export-panel"
 import { Preview } from "./components/preview"
 import { Settings } from "./components/settings"
 import { Upload } from "./components/upload"
-import { defaultOptions, type Messages } from "./types"
+import { defaultOptions, type Messages, type Options } from "./types"
 import { useImage } from "./use-image"
 
 export default function Client({ messages: m }: { messages: Messages }) {
@@ -30,6 +30,11 @@ export default function Client({ messages: m }: { messages: Messages }) {
     source?.source &&
     (options.kind === "text" ? options.text.trim() : logo?.source)
   )
+
+  function updateOptions(next: Options) {
+    setOptions(next)
+    setStatus("")
+  }
 
   function addFiles(added: File[]) {
     if (!validFiles([...files, ...added])) {
@@ -106,10 +111,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
             messages={m}
             logoName={logoFile?.name}
             options={options}
-            onChange={(next) => {
-              setOptions(next)
-              setStatus("")
-            }}
+            onChange={updateOptions}
             onLogo={(next) => {
               if (next && !validFiles([next])) {
                 setError(m.invalidFile)
@@ -117,16 +119,14 @@ export default function Client({ messages: m }: { messages: Messages }) {
               }
               setLogoFile(next)
               setError("")
-            }}
-            onReset={() => {
-              setOptions(defaultOptions(m.defaultText))
               setStatus("")
             }}
+            onReset={() => updateOptions(defaultOptions(m.defaultText))}
           />
           <ExportPanel
             messages={m}
             options={options}
-            onChange={setOptions}
+            onChange={updateOptions}
             ready={ready}
             busy={busy}
             onExport={(zip) => {

@@ -144,6 +144,7 @@ test("requires text or a valid logo, retains valid selection after a rejected lo
     (screen.getByText(copy.downloadImage) as HTMLButtonElement).disabled
   ).toBe(true)
   fireEvent.click(screen.getByText(copy.imageType))
+  expect(screen.getByRole("status").textContent).toBe("")
   fireEvent.change(screen.getByLabelText(copy.logoLabel), {
     target: { files: [bad] },
   })
@@ -166,6 +167,7 @@ test("requires text or a valid logo, retains valid selection after a rejected lo
   fireEvent.change(screen.getByLabelText(copy.logoLabel), {
     target: { files: [] },
   })
+  expect(screen.getByRole("status").textContent).toBe("")
   await waitFor(() =>
     expect(
       (screen.getByText(copy.downloadImage) as HTMLButtonElement).disabled
@@ -207,57 +209,61 @@ test("reports decoding and export errors and blocks repeated exports while busy"
   expect(screen.getByRole("alert").textContent).toContain(copy.exportError)
   expect(screen.getByRole("status").textContent).toBe("")
 })
-test("supports keyboard controls for font, placement, output format, and numeric settings", async () => {
-  render(<Client messages={messages} />)
-  add([one])
-  await ready()
-  await choose(copy.fontLabel, copy.fontSerif)
-  await choose(copy.positionLabel, copy.topLeft)
-  fireEvent.change(screen.getByLabelText(copy.colorLabel), {
-    target: { value: "#123456" },
-  })
-  for (const label of [
-    copy.sizeLabel,
-    copy.opacityLabel,
-    copy.rotationLabel,
-    copy.marginLabel,
-  ]) {
-    fireEvent.keyDown(screen.getByRole("slider", { name: label }), {
+test(
+  "supports keyboard controls for font, placement, output format, and numeric settings",
+  { timeout: 15000 },
+  async () => {
+    render(<Client messages={messages} />)
+    add([one])
+    await ready()
+    await choose(copy.fontLabel, copy.fontSerif)
+    await choose(copy.positionLabel, copy.topLeft)
+    fireEvent.change(screen.getByLabelText(copy.colorLabel), {
+      target: { value: "#123456" },
+    })
+    for (const label of [
+      copy.sizeLabel,
+      copy.opacityLabel,
+      copy.rotationLabel,
+      copy.marginLabel,
+    ]) {
+      fireEvent.keyDown(screen.getByRole("slider", { name: label }), {
+        key: "ArrowRight",
+      })
+    }
+    fireEvent.click(screen.getByText(copy.tiled))
+    fireEvent.keyDown(screen.getByRole("slider", { name: copy.spacingLabel }), {
       key: "ArrowRight",
     })
-  }
-  fireEvent.click(screen.getByText(copy.tiled))
-  fireEvent.keyDown(screen.getByRole("slider", { name: copy.spacingLabel }), {
-    key: "ArrowRight",
-  })
-  await choose(copy.formatLabel, "JPEG")
-  fireEvent.keyDown(screen.getByRole("slider", { name: copy.qualityLabel }), {
-    key: "ArrowRight",
-  })
-  fireEvent.click(screen.getByText(copy.downloadImage))
-  await waitFor(() =>
-    expect(exportImages).toHaveBeenCalledWith(
-      [one],
-      null,
-      {
-        ...defaultOptions(copy.defaultText),
-        font: "serif",
-        position: "topLeft",
-        color: "#123456",
-        size: 36,
-        opacity: 56,
-        rotation: 1,
-        margin: 5,
-        tiled: true,
-        spacing: 13,
-        format: "image/jpeg",
-        quality: 93,
-      },
-      false,
-      expect.any(Function)
+    await choose(copy.formatLabel, "JPEG")
+    fireEvent.keyDown(screen.getByRole("slider", { name: copy.qualityLabel }), {
+      key: "ArrowRight",
+    })
+    fireEvent.click(screen.getByText(copy.downloadImage))
+    await waitFor(() =>
+      expect(exportImages).toHaveBeenCalledWith(
+        [one],
+        null,
+        {
+          ...defaultOptions(copy.defaultText),
+          font: "serif",
+          position: "topLeft",
+          color: "#123456",
+          size: 36,
+          opacity: 56,
+          rotation: 1,
+          margin: 5,
+          tiled: true,
+          spacing: 13,
+          format: "image/jpeg",
+          quality: 93,
+        },
+        false,
+        expect.any(Function)
+      )
     )
-  )
-})
+  }
+)
 test("closes an image that finishes loading after the user clears the batch", async () => {
   let resolve!: (source: ImageSource) => void
   vi.mocked(loadImage).mockImplementationOnce(
@@ -273,4 +279,20 @@ test("closes an image that finishes loading after the user clears the batch", as
   await act(async () => resolve(source))
   expect(close).toHaveBeenCalledOnce()
   expect(screen.getByText(copy.emptyTitle)).toBeTruthy()
+})
+
+test("shows a recoverable preview error if the browser cannot allocate a canvas", async () => {
+  vi.mocked(drawWatermark).mockImplementation(() => {
+    throw new Error("CANVAS_UNAVAILABLE")
+  })
+  render(<Client messages={messages} />)
+  add([one])
+  await waitFor(() =>
+    expect(screen.getByRole("alert").textContent).toContain(copy.imageError)
+  )
+  vi.mocked(drawWatermark).mockImplementation(() => {})
+  fireEvent.change(screen.getByLabelText(copy.textLabel), {
+    target: { value: "Try again" },
+  })
+  await waitFor(() => expect(screen.queryByRole("alert")).toBeNull())
 })

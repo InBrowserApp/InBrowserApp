@@ -2,6 +2,7 @@ import { useId, useRef } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
@@ -32,18 +33,18 @@ export function Upload({
   const input = useRef<HTMLInputElement>(null)
   return (
     <Card>
-      <CardHeader className="flex-row items-start justify-between gap-4">
-        <div className="flex min-w-0 flex-col gap-1.5">
-          <CardTitle>
-            {m.uploadTitle}
-            {files.length ? ` (${files.length})` : ""}
-          </CardTitle>
-          <CardDescription>{m.uploadDescription}</CardDescription>
-        </div>
+      <CardHeader>
+        <CardTitle className="min-w-0 break-words">
+          {m.uploadTitle}
+          {files.length ? ` (${files.length})` : ""}
+        </CardTitle>
+        <CardDescription>{m.uploadDescription}</CardDescription>
         {files.length ? (
-          <Button variant="ghost" size="sm" onClick={onClear}>
-            {m.clearAll}
-          </Button>
+          <CardAction>
+            <Button variant="ghost" size="sm" onClick={onClear}>
+              {m.clearAll}
+            </Button>
+          </CardAction>
         ) : null}
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
@@ -78,7 +79,9 @@ export function Upload({
             e.target.value = ""
           }}
         />
-        <p className="text-xs text-muted-foreground">{m.uploadHint}</p>
+        <p className="text-xs text-pretty text-muted-foreground">
+          {m.uploadHint}
+        </p>
         {files.length ? (
           <ul className="grid max-h-48 gap-1 overflow-y-auto sm:grid-cols-2">
             {files.map((file, index) => (

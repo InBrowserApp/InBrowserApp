@@ -54,6 +54,7 @@ export function ExportPanel({
             />
           ) : null}
           <Button
+            className="h-auto min-h-8 whitespace-normal"
             disabled={!ready || busy}
             onClick={() => onExport(false)}
             variant="outline"
@@ -61,7 +62,11 @@ export function ExportPanel({
             <Download aria-hidden="true" data-icon="inline-start" />
             {m.downloadImage}
           </Button>
-          <Button disabled={!ready || busy} onClick={() => onExport(true)}>
+          <Button
+            className="h-auto min-h-8 whitespace-normal"
+            disabled={!ready || busy}
+            onClick={() => onExport(true)}
+          >
             {busy ? (
               <LoaderCircle
                 aria-hidden="true"

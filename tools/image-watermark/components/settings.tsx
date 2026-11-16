@@ -2,6 +2,7 @@ import { useId } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
+  CardAction,
   CardContent,
   CardHeader,
   CardTitle,
@@ -43,11 +44,13 @@ export function Settings({
   }
   return (
     <Card>
-      <CardHeader className="flex-row items-center justify-between gap-2">
-        <CardTitle>{m.optionsTitle}</CardTitle>
-        <Button variant="ghost" size="sm" onClick={onReset}>
-          {m.reset}
-        </Button>
+      <CardHeader>
+        <CardTitle className="min-w-0 break-words">{m.optionsTitle}</CardTitle>
+        <CardAction>
+          <Button variant="ghost" size="sm" onClick={onReset}>
+            {m.reset}
+          </Button>
+        </CardAction>
       </CardHeader>
       <CardContent>
         <FieldGroup>
