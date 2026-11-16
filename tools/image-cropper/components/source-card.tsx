@@ -44,11 +44,11 @@ export function SourceCard({ state, m }: { state: Cropper; m: Messages }) {
         if (file) state.changeFile(file)
       }}
     >
-      <CardHeader>
+      <CardHeader className="max-sm:flex max-sm:flex-col">
         <CardTitle>{m.sourceTitle}</CardTitle>
         <CardDescription>{m.sourceDescription}</CardDescription>
         {state.file ? (
-          <CardAction className="flex gap-1 max-sm:col-start-1 max-sm:row-span-1 max-sm:row-start-3 max-sm:justify-self-start">
+          <CardAction className="flex gap-1">
             <Button
               variant="outline"
               size="sm"
@@ -72,6 +72,7 @@ export function SourceCard({ state, m }: { state: Cropper; m: Messages }) {
         <input
           ref={picker}
           type="file"
+          hidden
           accept="image/png,image/jpeg,image/webp,image/avif,image/gif,image/bmp"
           aria-label={m.chooseImage}
           className="sr-only"
