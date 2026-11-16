@@ -1,5 +1,3 @@
-# Ordna PDF-sidor
-
 Med verktyget Ordna PDF-sidor kan du ordna om, rotera och ta bort sidor från en PDF utan att ladda upp dokumentet till en server. Det skapar en ny PDF från den sidordning du väljer och lämnar originalfilen oförändrad.
 
 ## När du ska använda den

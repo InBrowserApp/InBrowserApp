@@ -1,5 +1,3 @@
-# Organizator stron PDF
-
 Organizator stron PDF pozwala zmieniać kolejność, obracać i usuwać strony z PDF bez przesyłania dokumentu na serwer. Tworzy nowy PDF na podstawie wybranej kolejności stron, pozostawiając oryginalny plik bez zmian.
 
 ## Kiedy go używać

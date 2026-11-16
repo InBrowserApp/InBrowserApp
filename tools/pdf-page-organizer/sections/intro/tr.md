@@ -1,5 +1,3 @@
-# PDF Sayfa Düzenleyici
-
 PDF Sayfa Düzenleyici, belgeyi bir sunucuya yüklemeden bir PDF dosyasındaki sayfaları yeniden sıralamanıza, döndürmenize ve kaldırmanıza olanak tanır. Seçtiğiniz sayfa sırasından yeni bir PDF oluşturur ve özgün dosyayı değiştirmez.
 
 ## Ne zaman kullanılmalı

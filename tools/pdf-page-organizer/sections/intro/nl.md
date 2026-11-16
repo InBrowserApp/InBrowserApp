@@ -1,5 +1,3 @@
-# PDF-paginaordener
-
 Met PDF-paginaordener kun je pagina's in een PDF herschikken, draaien en verwijderen zonder het document naar een server te uploaden. De tool maakt een nieuwe PDF op basis van de paginavolgorde die je kiest, terwijl het oorspronkelijke bestand ongewijzigd blijft.
 
 ## Wanneer je het gebruikt

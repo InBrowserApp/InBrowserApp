@@ -1,5 +1,3 @@
-# PDF-sideorganisator
-
 Med PDF-sideorganisator kan du endre rekkefølge på, rotere og fjerne sider fra en PDF uten å laste dokumentet opp til en server. Den oppretter en ny PDF fra siderekkefølgen du velger, uten å endre originalfilen.
 
 ## Når du bør bruke den

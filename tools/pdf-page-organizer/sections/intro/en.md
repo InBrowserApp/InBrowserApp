@@ -1,5 +1,3 @@
-# PDF Page Organizer
-
 PDF Page Organizer lets you reorder, rotate, and remove pages from a PDF without uploading the document to a server. It creates a new PDF from the page order you choose, leaving the original file unchanged.
 
 ## When to use it

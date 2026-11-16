@@ -1,5 +1,3 @@
-# Trình sắp xếp trang PDF
-
 Trình sắp xếp trang PDF cho phép bạn sắp xếp lại, xoay và xóa các trang khỏi PDF mà không cần tải tài liệu lên máy chủ. Công cụ tạo một PDF mới từ thứ tự trang bạn chọn, đồng thời giữ nguyên tệp gốc.
 
 ## Khi nào nên dùng

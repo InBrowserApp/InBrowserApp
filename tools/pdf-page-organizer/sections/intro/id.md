@@ -1,5 +1,3 @@
-# Pengatur Halaman PDF
-
 Pengatur Halaman PDF memungkinkan Anda menyusun ulang, memutar, dan menghapus halaman dari PDF tanpa mengunggah dokumen ke server. Alat ini membuat PDF baru dari urutan halaman yang Anda pilih, sementara file asli tetap tidak berubah.
 
 ## Kapan menggunakannya

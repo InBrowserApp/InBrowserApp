@@ -1,5 +1,3 @@
-# PDF-Seitenorganisator
-
 Mit dem PDF-Seitenorganisator kannst du Seiten in einer PDF neu anordnen, drehen und entfernen, ohne das Dokument auf einen Server hochzuladen. Das Tool erstellt aus der gewählten Seitenreihenfolge eine neue PDF und lässt die Originaldatei unverändert.
 
 ## Wann du es verwenden solltest

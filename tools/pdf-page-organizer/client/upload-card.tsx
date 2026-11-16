@@ -102,20 +102,30 @@ function UploadCard({
         >
           {file ? (
             <div
-              className="flex flex-wrap items-center justify-between gap-4"
+              className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
               aria-live="polite"
               aria-busy={isReading}
             >
               <div className="flex min-w-0 flex-1 items-center gap-3">
-                <FileText
-                  aria-hidden="true"
-                  className="size-8 shrink-0 text-muted-foreground"
-                />
+                {isReading ? (
+                  <LoaderCircle
+                    aria-hidden="true"
+                    className="size-8 shrink-0 text-muted-foreground motion-safe:animate-spin"
+                  />
+                ) : (
+                  <FileText
+                    aria-hidden="true"
+                    className="size-8 shrink-0 text-muted-foreground"
+                  />
+                )}
                 <div className="min-w-0">
                   <p className="text-xs text-muted-foreground">
                     {messages.selectedFileLabel}
                   </p>
-                  <p className="mt-1 text-sm font-medium break-all">
+                  <p
+                    className="mt-1 line-clamp-2 text-sm font-medium break-all"
+                    title={file.name}
+                  >
                     <bdi>{file.name}</bdi>
                   </p>
                   <p className="mt-1 text-xs text-muted-foreground">
@@ -131,12 +141,6 @@ function UploadCard({
                   </p>
                 </div>
               </div>
-              {isReading ? (
-                <LoaderCircle
-                  aria-hidden="true"
-                  className="size-5 motion-safe:animate-spin"
-                />
-              ) : null}
               {chooseButton}
             </div>
           ) : (

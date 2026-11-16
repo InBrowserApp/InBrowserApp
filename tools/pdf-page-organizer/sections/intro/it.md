@@ -1,5 +1,3 @@
-# Organizzatore di pagine PDF
-
 L'organizzatore di pagine PDF ti permette di riordinare, ruotare e rimuovere pagine da un PDF senza caricare il documento su un server. Crea un nuovo PDF dall'ordine delle pagine che scegli, lasciando invariato il file originale.
 
 ## Quando usarlo

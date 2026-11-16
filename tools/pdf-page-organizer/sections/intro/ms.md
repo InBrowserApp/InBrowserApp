@@ -1,5 +1,3 @@
-# Penyusun Halaman PDF
-
 Penyusun Halaman PDF membolehkan anda menyusun semula, memutar dan mengalih keluar halaman daripada PDF tanpa memuat naik dokumen ke pelayan. Ia mencipta PDF baharu daripada susunan halaman yang anda pilih, sambil membiarkan fail asal tidak berubah.
 
 ## Bila menggunakannya
