@@ -98,24 +98,19 @@ function TimeZoneConverterClient({ messages }: TimeZoneConverterClientProps) {
 
   const fromParts = useMemo(() => parseDateTimeInput(fromInput), [fromInput])
   const toParts = useMemo(() => parseDateTimeInput(toInput), [toInput])
-  const fromError = Boolean(fromInput.trim()) && !fromParts
-  const toError = Boolean(toInput.trim()) && !toParts
+  const fromTimestamp = useMemo(
+    () => (fromParts ? toUtcTimestamp(fromParts, fromTimeZone) : null),
+    [fromParts, fromTimeZone]
+  )
+  const toTimestamp = useMemo(
+    () => (toParts ? toUtcTimestamp(toParts, toTimeZone) : null),
+    [toParts, toTimeZone]
+  )
+  const fromError =
+    Boolean(fromInput.trim()) && (!fromParts || fromTimestamp === null)
+  const toError = Boolean(toInput.trim()) && (!toParts || toTimestamp === null)
 
-  const baseTimestamp = useMemo(() => {
-    if (lastEdited === "from") {
-      if (!fromParts) {
-        return null
-      }
-
-      return toUtcTimestamp(fromParts, fromTimeZone)
-    }
-
-    if (!toParts) {
-      return null
-    }
-
-    return toUtcTimestamp(toParts, toTimeZone)
-  }, [fromParts, fromTimeZone, lastEdited, toParts, toTimeZone])
+  const baseTimestamp = lastEdited === "from" ? fromTimestamp : toTimestamp
 
   const referenceTimestamp = baseTimestamp ?? Date.now()
   const fromOffsetLabel = useMemo(
