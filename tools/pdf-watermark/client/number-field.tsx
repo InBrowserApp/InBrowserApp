@@ -1,4 +1,4 @@
-import { useId } from "react"
+import { useEffect, useId, useState } from "react"
 import {
   Field,
   FieldDescription,
@@ -25,9 +25,14 @@ function NumberField({
   onChange: (value: number) => void
 }>) {
   const id = useId()
+  const [draft, setDraft] = useState(String(value))
+  useEffect(() => setDraft(String(value)), [value])
   function update(n: number) {
-    if (Number.isFinite(n))
-      onChange(Math.max(min, Math.min(max, Math.round(n))))
+    const next = Number.isFinite(n)
+      ? Math.max(min, Math.min(max, Math.round(n)))
+      : value
+    setDraft(String(next))
+    onChange(next)
   }
   return (
     <Field className="gap-2">
@@ -35,6 +40,7 @@ function NumberField({
       <div className="flex items-center gap-3">
         <Slider
           aria-label={label}
+          aria-valuetext={`${value} ${unit}`}
           className="min-w-0 flex-1"
           min={min}
           max={max}
@@ -45,15 +51,23 @@ function NumberField({
         <Input
           className="w-20 tabular-nums"
           id={id}
-          name={id}
+          name={label}
           type="number"
           autoComplete="off"
           min={min}
           max={max}
-          value={value}
-          onChange={(event) => update(Number(event.target.value))}
+          value={draft}
+          onChange={(event) => {
+            const raw = event.target.value
+            setDraft(raw)
+            const next = Number(raw)
+            if (raw && Number.isFinite(next) && next >= min && next <= max)
+              onChange(next)
+          }}
+          onBlur={() => update(draft ? Number(draft) : value)}
+          aria-describedby={`${id}-unit`}
         />
-        <span className="w-5 text-xs text-muted-foreground" aria-hidden="true">
+        <span className="w-5 text-xs text-muted-foreground" id={`${id}-unit`}>
           {unit}
         </span>
       </div>
