@@ -1,8 +1,10 @@
 ---
 import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import LegacySystemKeyClient from "./client"
 
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
 import type { LegacySystemKeyMessages } from "./types"
 
@@ -19,10 +21,24 @@ const messages = resolveLocale<LegacySystemKeyMessages>(
   import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
   lang
 )!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.md", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+)
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <LegacySystemKeyClient client:load messages={messages} />
+  {
+    IntroSection ? (
+      <ToolArticle>
+        <IntroSection />
+      </ToolArticle>
+    ) : null
+  }
   <p class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
     <a
       href="https://github.com/k4yt3x/syskey-batlab"
