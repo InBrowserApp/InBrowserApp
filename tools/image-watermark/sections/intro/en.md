@@ -1,6 +1,6 @@
 ## Add a watermark to your images
 
-Choose one or more PNG, JPEG, or WebP images, then enter text or select a local logo. Adjust the size, opacity, rotation, and placement. Use a single watermark for a signature or a tiled watermark for a repeated pattern. Select any image in the batch to check its live preview.
+Choose one or more PNG, JPEG, or WebP images, then enter text or select a local logo. Adjust the size, opacity, rotation, and placement. In Single mode, drag the watermark to move it, drag a corner to resize it proportionally, or drag the round handle to rotate it. Use the position fields and arrow keys for precise adjustments; hold Shift for larger keyboard steps or 15-degree rotation snapping, and press Escape to cancel a drag. Use a tiled watermark for a repeated pattern. Select any image in the batch to check its live preview.
 
 ## Export privately in your browser
 

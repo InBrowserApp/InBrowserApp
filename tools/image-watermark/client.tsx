@@ -77,6 +77,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
     <div className="flex flex-col gap-6" aria-busy={busy}>
       <fieldset
         disabled={busy}
+        inert={busy}
         className="grid min-w-0 gap-6 xl:grid-cols-[minmax(0,1fr)_23rem]"
       >
         <div className="flex min-w-0 flex-col gap-6">
@@ -104,6 +105,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
             options={options}
             file={file}
             error={Boolean(source?.error)}
+            onChange={updateOptions}
           />
         </div>
         <div className="flex min-w-0 flex-col gap-6">

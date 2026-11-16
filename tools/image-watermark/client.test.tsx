@@ -14,6 +14,7 @@ import { drawWatermark } from "./render"
 import copy from "./messages/en.json"
 import meta from "./meta/en.json"
 import { defaultOptions, type ImageSource } from "./types"
+import { watermarkPlan } from "./core/geometry"
 
 vi.mock("./browser", () => ({ loadImage: vi.fn(), download: vi.fn() }))
 vi.mock("./export", () => ({ exportImages: vi.fn() }))
@@ -52,6 +53,7 @@ async function choose(label: string, value: string) {
   fireEvent.click(await screen.findByRole("option", { name: value }))
 }
 beforeEach(() => {
+  vi.mocked(drawWatermark).mockReturnValue(null)
   vi.mocked(loadImage).mockResolvedValue({ ...source })
   vi.mocked(exportImages).mockImplementation(
     async (_files, _logo, _options, _zip, progress) => {
@@ -290,9 +292,73 @@ test("shows a recoverable preview error if the browser cannot allocate a canvas"
   await waitFor(() =>
     expect(screen.getByRole("alert").textContent).toContain(copy.imageError)
   )
-  vi.mocked(drawWatermark).mockImplementation(() => {})
+  vi.mocked(drawWatermark).mockReturnValue(null)
   fireEvent.change(screen.getByLabelText(copy.textLabel), {
     target: { value: "Try again" },
   })
   await waitFor(() => expect(screen.queryByRole("alert")).toBeNull())
+})
+
+test("offers precise custom-position inputs as an alternative to dragging", async () => {
+  render(<Client messages={messages} />)
+  add([one])
+  await ready()
+  await choose(copy.positionLabel, copy.custom)
+  const horizontal = screen.getByLabelText(
+    `${copy.horizontalPosition} (%)`
+  ) as HTMLInputElement
+  const vertical = screen.getByLabelText(
+    `${copy.verticalPosition} (%)`
+  ) as HTMLInputElement
+  expect(horizontal.value).toBe("100")
+  expect(vertical.value).toBe("100")
+  fireEvent.change(horizontal, { target: { value: "25" } })
+  fireEvent.change(vertical, { target: { value: "75" } })
+  fireEvent.change(horizontal, { target: { value: "" } })
+  expect(horizontal.value).toBe("")
+  fireEvent.keyDown(horizontal, { key: "Enter" })
+  expect(horizontal.value).toBe("25")
+  fireEvent.blur(vertical)
+  fireEvent.click(screen.getByText(copy.downloadImage))
+  await waitFor(() =>
+    expect(exportImages).toHaveBeenCalledWith(
+      [one],
+      null,
+      expect.objectContaining({ position: "custom", x: 25, y: 75 }),
+      false,
+      expect.any(Function)
+    )
+  )
+  await ready()
+  await choose(copy.positionLabel, copy.center)
+  await choose(copy.positionLabel, copy.custom)
+  expect(
+    (
+      screen.getByLabelText(
+        `${copy.horizontalPosition} (%)`
+      ) as HTMLInputElement
+    ).value
+  ).toBe("50")
+  fireEvent.click(screen.getByText(copy.tiled))
+  expect(screen.queryByLabelText(`${copy.horizontalPosition} (%)`)).toBeNull()
+})
+
+test("shows editor controls only in Single watermarked view and updates shared options", async () => {
+  vi.mocked(drawWatermark).mockImplementation(
+    (_canvas, image, _logo, o, _max, original) =>
+      original || o.tiled
+        ? null
+        : watermarkPlan(image.width, image.height, 4, o).geometry
+  )
+  render(<Client messages={messages} />)
+  add([one])
+  const handle = await screen.findByRole("button", { name: copy.moveWatermark })
+  fireEvent.keyDown(handle, { key: "ArrowLeft" })
+  expect(screen.getByLabelText(`${copy.horizontalPosition} (%)`)).toBeTruthy()
+  fireEvent.click(screen.getByText(copy.original))
+  expect(screen.queryByRole("button", { name: copy.moveWatermark })).toBeNull()
+  fireEvent.click(screen.getByText(copy.watermarked))
+  await screen.findByRole("button", { name: copy.moveWatermark })
+  fireEvent.click(screen.getByText(copy.tiled))
+  expect(screen.queryByRole("button", { name: copy.moveWatermark })).toBeNull()
 })

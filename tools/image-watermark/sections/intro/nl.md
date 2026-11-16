@@ -1,6 +1,6 @@
 ## Voeg een watermerk toe aan je afbeeldingen
 
-Kies een of meer PNG-, JPEG- of WebP-afbeeldingen en voer tekst in of selecteer een lokaal logo. Pas de grootte, dekking, rotatie en plaatsing aan. Gebruik één watermerk als handtekening of herhaal het watermerk voor een patroon. Selecteer een afbeelding uit de batch om het live voorbeeld te bekijken.
+Kies een of meer PNG-, JPEG- of WebP-afbeeldingen en voer tekst in of selecteer een lokaal logo. Pas de grootte, dekking, rotatie en plaatsing aan. In de modus Enkel kun je het watermerk verslepen, een hoek slepen om het formaat proportioneel aan te passen of de ronde greep slepen om het watermerk te draaien. Gebruik de positievelden en pijltjestoetsen voor nauwkeurige aanpassingen; houd Shift ingedrukt voor grotere toetsenbordstappen of rotatie in stappen van 15 graden en druk op Escape om het slepen te annuleren. Herhaal het watermerk voor een patroon. Selecteer een afbeelding uit de batch om het live voorbeeld te bekijken.
 
 ## Exporteer privé in je browser
 

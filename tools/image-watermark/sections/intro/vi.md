@@ -1,6 +1,6 @@
 ## Thêm dấu bản quyền vào ảnh
 
-Chọn một hoặc nhiều ảnh PNG, JPEG hoặc WebP, rồi nhập văn bản hoặc chọn logo trên thiết bị. Điều chỉnh kích thước, độ đục, góc xoay và vị trí. Dùng dấu bản quyền đơn lẻ làm chữ ký hoặc lặp lại để tạo họa tiết. Chọn bất kỳ ảnh nào trong loạt ảnh để kiểm tra bản xem trước trực tiếp.
+Chọn một hoặc nhiều ảnh PNG, JPEG hoặc WebP, rồi nhập văn bản hoặc chọn logo trên thiết bị. Điều chỉnh kích thước, độ đục, góc xoay và vị trí. Trong chế độ Đơn lẻ, kéo dấu bản quyền để di chuyển, kéo một góc để đổi kích thước theo tỷ lệ hoặc kéo tay nắm tròn để xoay. Dùng các trường vị trí và phím mũi tên để điều chỉnh chính xác; giữ Shift để tăng bước điều chỉnh bằng bàn phím hoặc xoay theo nấc 15 độ, và nhấn Escape để hủy thao tác kéo. Dùng dấu bản quyền lặp lại để tạo họa tiết. Chọn bất kỳ ảnh nào trong loạt ảnh để kiểm tra bản xem trước trực tiếp.
 
 ## Xuất riêng tư trong trình duyệt
 

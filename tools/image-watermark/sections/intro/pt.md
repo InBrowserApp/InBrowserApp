@@ -1,6 +1,6 @@
 ## Adicione uma marca de água às suas imagens
 
-Escolha uma ou mais imagens PNG, JPEG ou WebP e introduza texto ou selecione um logótipo local. Ajuste o tamanho, a opacidade, a rotação e a disposição. Use uma marca de água única como assinatura ou uma marca de água em mosaico para criar um padrão repetido. Selecione qualquer imagem do lote para verificar a pré-visualização em tempo real.
+Escolha uma ou mais imagens PNG, JPEG ou WebP e introduza texto ou selecione um logótipo local. Ajuste o tamanho, a opacidade, a rotação e a disposição. No modo Única, arraste a marca de água para a mover, um canto para a redimensionar proporcionalmente ou a pega redonda para a rodar. Use os campos de posição e as teclas de seta para ajustes precisos; mantenha Shift premido para passos maiores com o teclado ou para rodar em incrementos de 15 graus, e prima Escape para cancelar um arrastamento. Use uma marca de água em mosaico para criar um padrão repetido. Selecione qualquer imagem do lote para verificar a pré-visualização em tempo real.
 
 ## Exporte com privacidade no seu navegador
 

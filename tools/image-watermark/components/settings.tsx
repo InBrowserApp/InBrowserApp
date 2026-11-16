@@ -22,6 +22,7 @@ import {
 import { ACCEPT } from "../core/files"
 import { POSITIONS, type Messages, type Options } from "../types"
 import { RangeField, SelectField } from "./controls"
+import { PositionFields } from "./position-fields"
 
 export function Settings({
   messages: m,
@@ -156,12 +157,27 @@ export function Settings({
             <SelectField
               label={m.positionLabel}
               value={o.position}
-              choices={POSITIONS.map((position) => ({
+              choices={[...POSITIONS, "custom" as const].map((position) => ({
                 value: position,
                 label: m[position],
               }))}
-              onChange={(value) => update("position", value)}
+              onChange={(value) => {
+                const preset = POSITIONS.indexOf(
+                  o.position as (typeof POSITIONS)[number]
+                )
+                if (value === "custom" && preset >= 0)
+                  onChange({
+                    ...o,
+                    position: value,
+                    x: (preset % 3) * 50,
+                    y: Math.floor(preset / 3) * 50,
+                  })
+                else update("position", value)
+              }}
             />
+          ) : null}
+          {!o.tiled && o.position === "custom" ? (
+            <PositionFields messages={m} options={o} onChange={onChange} />
           ) : null}
           <RangeField
             label={m.sizeLabel}

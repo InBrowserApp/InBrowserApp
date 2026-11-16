@@ -1,6 +1,6 @@
 ## Lägg till ett vattenmärke på dina bilder
 
-Välj en eller flera PNG-, JPEG- eller WebP-bilder och skriv sedan in text eller välj en lokal logotyp. Justera storlek, opacitet, rotation och placering. Använd ett enstaka vattenmärke som signatur eller ett upprepat vattenmärke för att skapa ett mönster. Välj valfri bild i gruppen för att kontrollera förhandsgranskningen i realtid.
+Välj en eller flera PNG-, JPEG- eller WebP-bilder och skriv sedan in text eller välj en lokal logotyp. Justera storlek, opacitet, rotation och placering. I läget Enstaka drar du vattenmärket för att flytta det, ett hörn för att ändra storleken proportionellt eller det runda handtaget för att rotera det. Använd positionsfälten och piltangenterna för exakta justeringar; håll Skift för större tangentbordssteg eller rotation i steg om 15 grader och tryck på Escape för att avbryta en dragning. Använd ett upprepat vattenmärke för att skapa ett mönster. Välj valfri bild i gruppen för att kontrollera förhandsgranskningen i realtid.
 
 ## Exportera privat i din webbläsare
 

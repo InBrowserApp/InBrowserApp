@@ -1,6 +1,6 @@
 ## Tambahkan tanda air pada imej anda
 
-Pilih satu atau lebih imej PNG, JPEG atau WebP, kemudian masukkan teks atau pilih logo setempat. Laraskan saiz, kelegapan, putaran dan peletakan. Gunakan tanda air tunggal sebagai tandatangan atau tanda air berulang untuk menghasilkan corak. Pilih mana-mana imej dalam kelompok untuk menyemak pratonton langsungnya.
+Pilih satu atau lebih imej PNG, JPEG atau WebP, kemudian masukkan teks atau pilih logo setempat. Laraskan saiz, kelegapan, putaran dan peletakan. Dalam mod Tunggal, seret tanda air untuk mengalihkannya, seret sudut untuk mengubah saiznya secara berkadar atau seret pemegang bulat untuk memutarnya. Gunakan medan kedudukan dan kekunci anak panah untuk pelarasan tepat; tahan Shift untuk langkah papan kekunci yang lebih besar atau putaran dalam kenaikan 15 darjah, dan tekan Escape untuk membatalkan seretan. Gunakan tanda air berulang untuk menghasilkan corak. Pilih mana-mana imej dalam kelompok untuk menyemak pratonton langsungnya.
 
 ## Eksport secara peribadi dalam pelayar anda
 

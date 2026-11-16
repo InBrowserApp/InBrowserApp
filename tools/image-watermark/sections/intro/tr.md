@@ -1,6 +1,6 @@
 ## Görsellerinize filigran ekleyin
 
-Bir veya daha fazla PNG, JPEG ya da WebP görsel seçin, ardından metin girin veya cihazınızdan bir logo seçin. Boyutu, opaklığı, döndürmeyi ve yerleşimi ayarlayın. İmza için tek bir filigran, tekrarlanan bir desen için döşeli filigran kullanın. Canlı önizlemesini görmek için gruptaki herhangi bir görseli seçin.
+Bir veya daha fazla PNG, JPEG ya da WebP görsel seçin, ardından metin girin veya cihazınızdan bir logo seçin. Boyutu, opaklığı, döndürmeyi ve yerleşimi ayarlayın. Tek modunda filigranı sürükleyerek taşıyabilir, bir köşeyi sürükleyerek orantılı biçimde boyutlandırabilir veya yuvarlak tutamacı sürükleyerek döndürebilirsiniz. Hassas ayarlar için konum alanlarını ve ok tuşlarını kullanın; daha büyük klavye adımları veya 15 derecelik açılara hizalanan döndürme için Shift tuşunu basılı tutun. Sürüklemeyi iptal etmek için Escape tuşuna basın. Tekrarlanan bir desen için döşeli filigran kullanın. Canlı önizlemesini görmek için gruptaki herhangi bir görseli seçin.
 
 ## Tarayıcınızda gizliliğinizi koruyarak dışa aktarın
 

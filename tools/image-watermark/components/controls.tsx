@@ -32,12 +32,13 @@ export function RangeField({
   onChange: (value: number) => void
 }) {
   const id = useId()
+  const displayValue = Math.round(value * 100) / 100
   return (
     <Field>
       <div className="flex items-center justify-between gap-3">
         <FieldLabel id={id}>{label}</FieldLabel>
         <span className="text-sm text-muted-foreground tabular-nums">
-          {value}
+          {displayValue}
           {suffix}
         </span>
       </div>
@@ -46,7 +47,7 @@ export function RangeField({
         min={min}
         max={max}
         step={1}
-        value={[value]}
+        value={[displayValue]}
         onValueChange={([next]) => onChange(next!)}
       />
       {hint ? <FieldDescription>{hint}</FieldDescription> : null}

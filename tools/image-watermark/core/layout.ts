@@ -34,12 +34,20 @@ export function watermarkLayout(
       }
     }
   } else {
-    const position = POSITIONS.indexOf(options.position)
-    const column = position % 3
-    const row = Math.floor(position / 3)
+    const position = POSITIONS.indexOf(
+      options.position as (typeof POSITIONS)[number]
+    )
+    const column =
+      options.position === "custom"
+        ? Math.max(0, Math.min(100, options.x)) / 100
+        : (position % 3) / 2
+    const row =
+      options.position === "custom"
+        ? Math.max(0, Math.min(100, options.y)) / 100
+        : Math.floor(position / 3) / 2
     centers.push({
-      x: margin + boxWidth / 2 + ((width - 2 * margin - boxWidth) * column) / 2,
-      y: margin + boxHeight / 2 + ((height - 2 * margin - boxHeight) * row) / 2,
+      x: margin + boxWidth / 2 + (width - 2 * margin - boxWidth) * column,
+      y: margin + boxHeight / 2 + (height - 2 * margin - boxHeight) * row,
     })
   }
   return { centers, radians, scale }

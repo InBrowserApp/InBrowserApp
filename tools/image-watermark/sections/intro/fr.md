@@ -1,6 +1,6 @@
 ## Ajouter un filigrane à vos images
 
-Choisissez une ou plusieurs images PNG, JPEG ou WebP, puis saisissez du texte ou sélectionnez un logo local. Ajustez la taille, l’opacité, la rotation et le placement. Utilisez un filigrane unique comme signature ou un filigrane en mosaïque pour créer un motif répété. Sélectionnez une image du lot pour vérifier son aperçu en direct.
+Choisissez une ou plusieurs images PNG, JPEG ou WebP, puis saisissez du texte ou sélectionnez un logo local. Ajustez la taille, l’opacité, la rotation et le placement. En mode Unique, faites glisser le filigrane pour le déplacer, un coin pour le redimensionner proportionnellement ou la poignée ronde pour le faire pivoter. Utilisez les champs de position et les touches fléchées pour des ajustements précis ; maintenez Maj pour des pas plus grands au clavier ou une rotation par incréments de 15 degrés, et appuyez sur Échap pour annuler un déplacement. Utilisez un filigrane en mosaïque pour créer un motif répété. Sélectionnez une image du lot pour vérifier son aperçu en direct.
 
 ## Exporter en toute confidentialité dans votre navigateur
 

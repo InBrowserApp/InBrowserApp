@@ -1,6 +1,6 @@
 ## Tambahkan tanda air ke gambar Anda
 
-Pilih satu atau beberapa gambar PNG, JPEG, atau WebP, lalu masukkan teks atau pilih logo lokal. Sesuaikan ukuran, opasitas, rotasi, dan penempatan. Gunakan tanda air tunggal untuk tanda tangan atau tanda air berulang untuk membuat pola. Pilih gambar mana pun dalam kumpulan untuk melihat pratinjau langsungnya.
+Pilih satu atau beberapa gambar PNG, JPEG, atau WebP, lalu masukkan teks atau pilih logo lokal. Sesuaikan ukuran, opasitas, rotasi, dan penempatan. Dalam mode Tunggal, seret tanda air untuk memindahkannya, seret sudut untuk mengubah ukurannya secara proporsional, atau seret gagang bulat untuk memutarnya. Gunakan kolom posisi dan tombol panah untuk penyesuaian yang tepat; tahan Shift untuk langkah keyboard yang lebih besar atau putaran yang mengikuti kelipatan 15 derajat, dan tekan Escape untuk membatalkan penyeretan. Gunakan tanda air berulang untuk membuat pola. Pilih gambar mana pun dalam kumpulan untuk melihat pratinjau langsungnya.
 
 ## Ekspor secara privat di browser Anda
 

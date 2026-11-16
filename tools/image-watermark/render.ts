@@ -1,4 +1,5 @@
-import { watermarkLayout } from "./core/layout"
+import { watermarkPlan } from "./core/geometry"
+import { textDirection } from "./core/text-direction"
 import type { ImageSource, Options } from "./types"
 
 export function drawWatermark(
@@ -21,9 +22,11 @@ export function drawWatermark(
   }
   context.drawImage(source.image, 0, 0, source.width, source.height)
   if (original || (options.kind === "image" ? !logo : !options.text.trim()))
-    return
+    return null
 
   const lines = options.text.trim().split("\n")
+  // Detached export canvases must use the same bidi direction as the preview.
+  context.direction = textDirection(options.text)
   context.font = `600 100px ${options.font}`
   const baseWidth =
     options.kind === "image"
@@ -31,20 +34,13 @@ export function drawWatermark(
       : Math.max(1, ...lines.map((line) => context.measureText(line).width))
   const baseHeight =
     options.kind === "image" ? logo!.height : lines.length * 120
-  const shortSide = Math.min(source.width, source.height)
-  const size = Math.min(
-    (shortSide * options.size) / 100 / baseWidth,
-    (shortSide * 0.8) / baseHeight
-  )
-  const width = baseWidth * size
-  const height = baseHeight * size
-  const layout = watermarkLayout(
+  const { width, height, layout, geometry } = watermarkPlan(
     source.width,
     source.height,
-    width,
-    height,
+    baseWidth / baseHeight,
     options
   )
+  const size = width / baseWidth
   context.globalAlpha = options.opacity / 100
   context.fillStyle = options.color
   context.font = `600 ${100 * size}px ${options.font}`
@@ -64,6 +60,7 @@ export function drawWatermark(
     }
     context.restore()
   }
+  return options.tiled ? null : geometry
 }
 
 export async function encodeImage(canvas: HTMLCanvasElement, options: Options) {

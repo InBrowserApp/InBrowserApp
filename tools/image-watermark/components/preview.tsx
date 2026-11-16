@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import {
@@ -17,7 +17,9 @@ import {
 } from "@workspace/ui/components/ui/empty"
 import { ImageIcon } from "@workspace/ui/icons"
 import { drawWatermark } from "../render"
+import type { WatermarkGeometry } from "../core/geometry"
 import type { ImageSource, Messages, Options } from "../types"
+import { TransformOverlay } from "./transform-overlay"
 
 export function Preview({
   messages: m,
@@ -26,6 +28,7 @@ export function Preview({
   options,
   file,
   error,
+  onChange,
 }: {
   messages: Messages
   source: ImageSource | null
@@ -33,21 +36,26 @@ export function Preview({
   options: Options
   file: File | null
   error: boolean
+  onChange: (options: Options) => void
 }) {
   const canvas = useRef<HTMLCanvasElement>(null)
   const [original, setOriginal] = useState(false)
   const [drawError, setDrawError] = useState(false)
+  const [geometry, setGeometry] = useState<WatermarkGeometry | null>(null)
+  const hintId = useId()
   useEffect(() => {
     if (!source) return
-    const timer = setTimeout(() => {
+    const frame = requestAnimationFrame(() => {
       try {
-        drawWatermark(canvas.current!, source, logo, options, 1200, original)
+        setGeometry(
+          drawWatermark(canvas.current!, source, logo, options, 1200, original)
+        )
         setDrawError(false)
       } catch {
         setDrawError(true)
       }
-    }, 80)
-    return () => clearTimeout(timer)
+    })
+    return () => cancelAnimationFrame(frame)
   }, [source, logo, options, original])
 
   return (
@@ -73,14 +81,43 @@ export function Preview({
       <CardContent className="flex flex-col gap-3">
         {source ? (
           <>
-            <div className="flex min-h-64 items-center justify-center overflow-hidden rounded-lg border bg-muted/30 p-3">
-              <canvas
-                ref={canvas}
-                role="img"
-                aria-label={original ? m.original : m.previewTitle}
-                className="block h-auto max-h-[32rem] max-w-full object-contain"
-              />
+            <div className="flex min-h-64 items-center justify-center rounded-lg border bg-muted/30 p-7">
+              <div
+                className="relative w-full"
+                style={{
+                  aspectRatio: `${source.width} / ${source.height}`,
+                  maxWidth: Math.min(
+                    source.width,
+                    (512 * source.width) / source.height
+                  ),
+                }}
+              >
+                <canvas
+                  ref={canvas}
+                  role="img"
+                  aria-label={original ? m.original : m.previewTitle}
+                  className="absolute inset-0 size-full"
+                />
+                {!original && !options.tiled && !drawError && geometry ? (
+                  <TransformOverlay
+                    canvas={canvas}
+                    geometry={geometry}
+                    options={options}
+                    messages={m}
+                    onChange={onChange}
+                    hintId={hintId}
+                  />
+                ) : null}
+              </div>
             </div>
+            {!original && !options.tiled ? (
+              <p
+                id={hintId}
+                className="text-xs text-pretty text-muted-foreground"
+              >
+                {m.editHint}
+              </p>
+            ) : null}
             <p className="text-xs text-muted-foreground tabular-nums">
               {m.dimensions
                 .replace("{width}", String(source.width))

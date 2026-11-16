@@ -1,6 +1,6 @@
 ## Aggiungi una filigrana alle tue immagini
 
-Scegli una o più immagini PNG, JPEG o WebP, poi inserisci un testo o seleziona un logo dal dispositivo. Regola dimensione, opacità, rotazione e disposizione. Usa una filigrana singola per una firma o una filigrana ripetuta per creare un motivo. Seleziona qualsiasi immagine del gruppo per controllarne l'anteprima in tempo reale.
+Scegli una o più immagini PNG, JPEG o WebP, poi inserisci un testo o seleziona un logo dal dispositivo. Regola dimensione, opacità, rotazione e disposizione. In modalità Singola, trascina la filigrana per spostarla, trascina un angolo per ridimensionarla in proporzione o la maniglia rotonda per ruotarla. Usa i campi della posizione e i tasti freccia per regolazioni precise; tieni premuto Shift per incrementi maggiori con la tastiera o per ruotare a scatti di 15 gradi, e premi Esc per annullare un trascinamento. Usa una filigrana ripetuta per creare un motivo. Seleziona qualsiasi immagine del gruppo per controllarne l'anteprima in tempo reale.
 
 ## Esporta privatamente nel browser
 

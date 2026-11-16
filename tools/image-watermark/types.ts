@@ -2,7 +2,7 @@ import type { ToolMeta } from "@workspace/tool-sdk"
 import type copy from "./messages/en.json"
 
 export type Messages = typeof copy & { meta: ToolMeta }
-export type Position =
+export type PresetPosition =
   | "topLeft"
   | "topCenter"
   | "topRight"
@@ -12,6 +12,7 @@ export type Position =
   | "bottomLeft"
   | "bottomCenter"
   | "bottomRight"
+export type Position = PresetPosition | "custom"
 export type Options = {
   kind: "text" | "image"
   text: string
@@ -19,6 +20,8 @@ export type Options = {
   color: string
   tiled: boolean
   position: Position
+  x: number
+  y: number
   size: number
   opacity: number
   rotation: number
@@ -33,7 +36,7 @@ export type ImageSource = {
   height: number
   close: () => void
 }
-export const POSITIONS: Position[] = [
+export const POSITIONS: PresetPosition[] = [
   "topLeft",
   "topCenter",
   "topRight",
@@ -52,6 +55,8 @@ export function defaultOptions(text: string): Options {
     color: "#ffffff",
     tiled: false,
     position: "bottomRight",
+    x: 50,
+    y: 50,
     size: 35,
     opacity: 55,
     rotation: 0,
