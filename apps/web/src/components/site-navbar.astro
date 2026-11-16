@@ -28,7 +28,7 @@ const navItems = [
 ]
 ---
 
-<nav class="flex items-center justify-between">
+<nav class="flex flex-wrap items-center justify-between gap-2">
   <div class="flex items-center gap-4">
     <a
       href={localizePath("/", language)}
@@ -48,7 +48,7 @@ const navItems = [
       </a>
     ))}
   </div>
-  <div class="flex items-center gap-1">
+  <div class="ms-auto flex items-center gap-1">
     <PwaInstallButton label={catalog.site.installApp} />
     <ThemeToggle
       client:idle
