@@ -7,6 +7,7 @@
   "syntaxTitle": "語法",
   "syntaxDescription": "選擇醒目提示、語言偵測與色彩主題。",
   "languageLabel": "語言",
+  "languageAuto": "自動偵測",
   "renderModeLabel": "算繪",
   "renderHighlight": "醒目提示",
   "renderPlain": "純文字",

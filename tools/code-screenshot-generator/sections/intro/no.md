@@ -1,8 +1,8 @@
-# Code Screenshot Generator
+# Generator for kodeskjermbilder
 
 ## Hva den gjør
 
-Code Screenshot Generator gjør en innlimt kodesnutt om til et polert kodekort som kan eksporteres som SVG, PNG, JPEG, WebP eller frittstående HTML. Den kjører i nettleseren din, bruker syntaksutheving med valgbare temaer og lar deg justere rammen før nedlasting.
+Generator for kodeskjermbilder gjør en innlimt kodesnutt om til et polert kodekort som kan eksporteres som SVG, PNG, JPEG, WebP eller frittstående HTML. Den kjører i nettleseren din, bruker syntaksutheving med valgbare temaer og lar deg justere rammen før nedlasting.
 
 ## Når du bør bruke den
 
