@@ -49,9 +49,6 @@ function Slider({
       </SliderPrimitive.Track>
       {Array.from({ length: _values.length }, (_, index) => (
         <SliderPrimitive.Thumb
-          aria-label={props["aria-label"]}
-          aria-labelledby={props["aria-labelledby"]}
-          aria-describedby={props["aria-describedby"]}
           data-slot="slider-thumb"
           key={index}
           aria-label={ariaLabel}

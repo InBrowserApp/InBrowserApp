@@ -3,6 +3,9 @@ import { toolSearchIndex } from "@workspace/tool-registry"
 import MainLayout from "@/layouts/main.astro"
 import PageBreadcrumbs from "@/components/page-breadcrumbs.astro"
 import { ToolsDirectorySearch } from "@/components/pages/tools-directory/tools-directory-search"
+import { CategoryChips, CategorySidebar } from "@/components/pages/tools-directory/category-nav"
+import { DirectoryEmptyState, ToolList } from "@/components/pages/tools-directory/tool-list"
+import { rankToolEntries } from "@/components/pages/tools-directory/search-core"
 import { formatSiteMessage, loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
 import { countToolsByCategory, getCategoryLabel, toDirectoryEntries } from "@/lib/tool-directory"
@@ -47,11 +50,8 @@ const seo = createPageSeo({
 const entries = toDirectoryEntries(selectedTools, language)
 const toolCount = new Intl.NumberFormat(language).format(entries.length)
 const searchMessages = {
-  categoriesLabel: catalog.tools.categoriesLabel,
-  categoryAll: catalog.tools.categoryAll,
   categoryLabels: catalog.tools.categories,
   clearSearchLabel: catalog.tools.clearSearchLabel,
-  emptyRegistryDescription: catalog.tools.emptyRegistryDescription,
   emptyRegistryTitle: catalog.tools.emptyRegistryTitle,
   emptySearchDescription: catalog.tools.emptySearchDescription,
   emptySearchTitle: catalog.tools.emptySearchTitle,
@@ -64,6 +64,17 @@ const searchMessages = {
   suggestionMatchCountOne: catalog.tools.suggestionMatchCountOne,
   suggestionsHint: catalog.tools.suggestionsHint,
   suggestionsLabel: catalog.tools.suggestionsLabel,
+}
+const numberFormat = new Intl.NumberFormat(language)
+const categoryNavProps = {
+  allLabel: catalog.tools.categoryAll,
+  categoriesLabel: catalog.tools.categoriesLabel,
+  counts: categoryCounts,
+  formatCount: (count: number) => numberFormat.format(count),
+  labels: catalog.tools.categories,
+  language,
+  selected: category ?? null,
+  totalCount: toolSearchIndex.length,
 }
 ---
 
@@ -88,13 +99,25 @@ const searchMessages = {
       <p class="text-base leading-7 text-muted-foreground">{description}</p>
     </header>
 
-    <ToolsDirectorySearch
-      client:load
-      entries={entries}
-      categoryCounts={categoryCounts}
-      category={category}
-      language={language}
-      messages={searchMessages}
-    />
+    <div data-tools-directory class="grid items-start gap-6 lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-10">
+      <CategorySidebar {...categoryNavProps} />
+      <div class="flex min-w-0 flex-col gap-4">
+        <CategoryChips {...categoryNavProps} />
+        <ToolsDirectorySearch client:load language={language} messages={searchMessages} />
+        <ToolList
+          entries={rankToolEntries(entries, "", language)}
+          language={language}
+          categoryLabels={catalog.tools.categories}
+          showCategory={!category}
+        />
+        <div data-tool-empty hidden={entries.length !== 0}>
+          <DirectoryEmptyState
+            icon={entries.length === 0 ? "registry" : "search"}
+            title={entries.length === 0 ? catalog.tools.emptyRegistryTitle : catalog.tools.emptySearchTitle}
+            description={entries.length === 0 ? catalog.tools.emptyRegistryDescription : catalog.tools.emptySearchDescription}
+          />
+        </div>
+      </div>
+    </div>
   </main>
 </MainLayout>

@@ -245,6 +245,8 @@ function SearchCombobox({
           aria-label={messages.clearSearchLabel}
           onMouseDown={(event) => {
             event.preventDefault()
+          }}
+          onClick={() => {
             setQuery("")
             inputRef.current?.focus()
           }}

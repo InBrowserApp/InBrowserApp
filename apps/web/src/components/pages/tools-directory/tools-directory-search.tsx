@@ -1,152 +1,114 @@
-import { useDeferredValue, useEffect, useMemo, useState } from "react"
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react"
 
-import { CategoryChips, CategorySidebar } from "./category-nav"
-import { normalizeQuery, readDirectoryQueryFromLocation } from "./search-core"
-import { rankToolEntries } from "./search-core"
+import {
+  readDirectoryRows,
+  scrollActiveCategory,
+  updateDirectoryRows,
+} from "./directory-dom"
+import {
+  normalizeQuery,
+  readDirectoryQueryFromLocation,
+  rankToolEntries,
+} from "./search-core"
 import { SearchCombobox } from "./search-combobox"
-import { DirectoryEmptyState, ToolList } from "./tool-list"
 
-import type {
-  DirectoryToolEntry,
-  ToolCategoryCount,
-} from "@/lib/tool-directory"
 import type { SiteLanguage } from "@/lib/site"
 import type { SearchComboboxMessages } from "./search-combobox"
 
-type ToolsDirectorySearchMessages = SearchComboboxMessages &
-  Readonly<{
-    resultCountSuffix: string
-    categoriesLabel: string
-    categoryAll: string
-    emptyRegistryTitle: string
-    emptyRegistryDescription: string
-    categoryLabels: Readonly<Record<string, string>>
-  }>
-
 type ToolsDirectorySearchProps = Readonly<{
-  entries: readonly DirectoryToolEntry[]
-  categoryCounts: readonly ToolCategoryCount[]
-  category?: string
   language: SiteLanguage
-  messages: ToolsDirectorySearchMessages
+  messages: SearchComboboxMessages &
+    Readonly<{
+      resultCountSuffix: string
+      emptyRegistryTitle: string
+      categoryLabels: Readonly<Record<string, string>>
+    }>
 }>
 
 function ToolsDirectorySearch({
-  entries,
-  categoryCounts,
-  category,
   language,
   messages,
 }: ToolsDirectorySearchProps) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [rows, setRows] = useState<ReturnType<typeof readDirectoryRows> | null>(
+    null
+  )
   const [query, setQuery] = useState("")
   const deferredQuery = useDeferredValue(query)
-
-  const formatCount = useMemo(() => {
-    const numberFormat = new Intl.NumberFormat(language)
-
-    return (count: number) => numberFormat.format(count)
-  }, [language])
+  const normalizedQuery = normalizeQuery(deferredQuery)
+  const rankedRows = useMemo(
+    () => rankToolEntries(rows ?? [], normalizedQuery, language),
+    [rows, normalizedQuery, language]
+  )
 
   useEffect(() => {
+    const root = containerRef.current!.closest<HTMLElement>(
+      "[data-tools-directory]"
+    )!
+    setRows(readDirectoryRows(root))
+    scrollActiveCategory(root)
+
     const syncQueryFromLocation = () => {
       setQuery(readDirectoryQueryFromLocation())
     }
-
     syncQueryFromLocation()
     window.addEventListener("popstate", syncQueryFromLocation)
-
-    return () => {
-      window.removeEventListener("popstate", syncQueryFromLocation)
-    }
+    return () => window.removeEventListener("popstate", syncQueryFromLocation)
   }, [])
+
+  useEffect(() => {
+    // The first render has not read the static list yet.
+    if (rows === null) return
+    const root = containerRef.current!.closest<HTMLElement>(
+      "[data-tools-directory]"
+    )!
+    updateDirectoryRows(root, rows, rankedRows)
+  }, [rows, rankedRows])
 
   function handleQueryChange(nextQuery: string) {
     setQuery(nextQuery)
-
     const url = new URL(window.location.href)
     const normalized = normalizeQuery(nextQuery)
-
     if (normalized) {
       url.searchParams.set("query", normalized)
     } else {
       url.searchParams.delete("query")
     }
-
     window.history.replaceState(window.history.state, "", url)
   }
 
-  const normalizedQuery = normalizeQuery(deferredQuery)
-  const rankedEntries = rankToolEntries(entries, normalizedQuery, language)
-  const isRegistryEmpty = entries.length === 0
-  const isSearchEmpty = !isRegistryEmpty && rankedEntries.length === 0
-  const categoryNavProps = {
-    allLabel: messages.categoryAll,
-    categoriesLabel: messages.categoriesLabel,
-    counts: categoryCounts,
-    formatCount,
-    labels: messages.categoryLabels,
-    language,
-    selected: category ?? null,
-    totalCount: categoryCounts.reduce((total, entry) => total + entry.count, 0),
-  }
+  const count = new Intl.NumberFormat(language).format(rankedRows.length)
+  const isEmpty = rankedRows.length === 0
 
   return (
-    <div className="grid items-start gap-6 lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-10">
-      <CategorySidebar {...categoryNavProps} />
-
-      <div className="flex min-w-0 flex-col gap-4">
-        <CategoryChips {...categoryNavProps} />
-
-        <SearchCombobox
-          entries={entries}
-          language={language}
-          query={query}
-          onQueryChange={handleQueryChange}
-          categoryLabels={messages.categoryLabels}
-          messages={messages}
-        />
-
-        <p
-          role="status"
-          aria-live="polite"
-          aria-atomic="true"
-          aria-busy={query !== deferredQuery}
-          className={
-            normalizedQuery !== "" && !isRegistryEmpty && !isSearchEmpty
-              ? "text-sm text-muted-foreground"
-              : "sr-only"
-          }
-        >
-          {isRegistryEmpty
+    <div ref={containerRef} className="flex min-w-0 flex-col gap-4">
+      <SearchCombobox
+        entries={rows ?? []}
+        language={language}
+        query={query}
+        onQueryChange={handleQueryChange}
+        categoryLabels={messages.categoryLabels}
+        messages={messages}
+      />
+      <p
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        aria-busy={query !== deferredQuery}
+        className={
+          normalizedQuery !== "" && !isEmpty
+            ? "text-sm text-muted-foreground"
+            : "sr-only"
+        }
+      >
+        {rows === null
+          ? ""
+          : rows.length === 0
             ? messages.emptyRegistryTitle
-            : isSearchEmpty
+            : rankedRows.length === 0
               ? messages.emptySearchTitle
-              : `${formatCount(rankedEntries.length)} ${messages.resultCountSuffix}`}
-        </p>
-
-        <div aria-busy={query !== deferredQuery}>
-          {isRegistryEmpty ? (
-            <DirectoryEmptyState
-              icon="registry"
-              title={messages.emptyRegistryTitle}
-              description={messages.emptyRegistryDescription}
-            />
-          ) : isSearchEmpty ? (
-            <DirectoryEmptyState
-              icon="search"
-              title={messages.emptySearchTitle}
-              description={messages.emptySearchDescription}
-            />
-          ) : (
-            <ToolList
-              entries={rankedEntries}
-              language={language}
-              categoryLabels={messages.categoryLabels}
-              showCategory={!category}
-            />
-          )}
-        </div>
-      </div>
+              : `${count} ${messages.resultCountSuffix}`}
+      </p>
     </div>
   )
 }
