@@ -7003,7 +7003,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
