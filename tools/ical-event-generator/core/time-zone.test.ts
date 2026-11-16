@@ -143,6 +143,8 @@ describe("time zone helpers", () => {
     expect(isTimeZoneSupported("UTC")).toBe(true)
     expect(isTimeZoneSupported("Mars/Olympus")).toBe(false)
     expect(formatOffsetLabel(19_800_000)).toBe("UTC+05:30")
+    expect(formatOffsetLabel(-12_600_000)).toBe("UTC-03:30")
+    expect(formatOffsetLabel(0)).toBe("UTC+00:00")
     expect(getTimeZoneOffsetMs(Date.UTC(2026, 3, 21, 16, 0, 0), "UTC")).toBe(0)
     expect(toUtcTimestamp(parts, "America/Los_Angeles")).toBe(
       Date.UTC(2026, 3, 21, 16, 0, 0)
