@@ -58,7 +58,7 @@ export function SourcePreview({
           rows={7}
           spellCheck={false}
           dir="auto"
-          className="min-h-44 font-mono"
+          className="field-sizing-fixed h-48 min-h-44 resize-y font-mono"
         />
         <FieldDescription>{m.previewNotice}</FieldDescription>
       </Field>

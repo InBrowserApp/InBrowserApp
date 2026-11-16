@@ -127,6 +127,7 @@ export default function Client({
                     options={[["auto", m.autoLabel], ...ENCODINGS]}
                     onChange={(value) => setSource(value as SourceEncoding)}
                     disabled={!file}
+                    invalid={Boolean(sourceError)}
                     dir={dir}
                   />
                   {result ? (
@@ -153,7 +154,7 @@ export default function Client({
                     spellCheck={false}
                     autoComplete="off"
                     dir="auto"
-                    className="min-h-56 font-mono"
+                    className="field-sizing-fixed h-56 min-h-44 resize-y font-mono"
                     aria-describedby={`${id}-text-help`}
                   />
                   <FieldDescription id={`${id}-text-help`}>
@@ -218,6 +219,7 @@ export default function Client({
                 value={target}
                 options={ENCODINGS}
                 onChange={(value) => setTarget(value as Encoding)}
+                invalid={result?.error === "unrepresentable"}
                 dir={dir}
               />
               <SelectField

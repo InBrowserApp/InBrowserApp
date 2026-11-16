@@ -20,6 +20,7 @@ export function SelectField({
   onChange,
   description,
   disabled = false,
+  invalid = false,
   dir,
 }: {
   id: string
@@ -29,10 +30,11 @@ export function SelectField({
   onChange: (value: string) => void
   description?: string
   disabled?: boolean
+  invalid?: boolean
   dir: "ltr" | "rtl"
 }) {
   return (
-    <Field data-disabled={disabled}>
+    <Field data-disabled={disabled} data-invalid={invalid}>
       <FieldLabel htmlFor={id}>{label}</FieldLabel>
       <Select
         value={value}
@@ -42,6 +44,7 @@ export function SelectField({
       >
         <SelectTrigger
           id={id}
+          aria-invalid={invalid}
           className="w-full min-w-0"
           aria-describedby={description ? `${id}-help` : undefined}
         >

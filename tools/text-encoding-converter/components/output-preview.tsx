@@ -51,7 +51,7 @@ export function OutputPreview({
           rows={7}
           spellCheck={false}
           dir="auto"
-          className="min-h-44 font-mono"
+          className="field-sizing-fixed h-48 min-h-44 resize-y font-mono"
         />
         <FieldDescription>{m.previewNotice}</FieldDescription>
       </Field>
@@ -68,7 +68,7 @@ export function OutputPreview({
               {new Intl.NumberFormat(lang).format(blob.size)} {m.bytesLabel}
             </Badge>
           </div>
-          <div className="flex flex-col items-start gap-2">
+          <div className="flex min-w-0 flex-col items-start gap-2 [&_a]:h-auto [&_a]:max-w-full [&_a]:py-2 [&_a]:whitespace-normal">
             <p
               className="max-w-full text-sm break-all text-muted-foreground"
               dir="auto"
