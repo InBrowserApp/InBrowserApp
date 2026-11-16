@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react"
-import { navigate } from "astro:transitions/client"
 
 import { Input } from "@workspace/ui/components/ui/input"
 import { Search, X } from "@workspace/ui/icons"
@@ -97,7 +96,9 @@ function SearchCombobox({
   }
 
   const openSuggestion = (suggestion: ToolSearchSuggestion) => {
-    void navigate(localizePath(`/tools/${suggestion.entry.slug}`, language))
+    window.location.assign(
+      localizePath(`/tools/${suggestion.entry.slug}`, language)
+    )
   }
 
   /**

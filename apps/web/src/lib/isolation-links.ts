@@ -1,10 +1,11 @@
 import { isIsolatedToolPath } from "./browser-isolation"
 
-// Apply before Astro installs hover prefetch listeners. Isolated documents
-// require a full navigation; prefetching across that boundary can fail in WebKit.
+// Apply before Astro installs hover prefetch listeners. Speculative loading
+// across the COOP/COEP boundary can fail in WebKit.
 export function setupIsolationLinks() {
-  const previous = new WeakMap<HTMLAnchorElement, (string | null)[]>()
-  const attributes = ["data-astro-prefetch", "data-astro-reload"]
+  const previous = new WeakMap<HTMLAnchorElement, string | null>()
+  const attribute = "data-astro-prefetch"
+  const isolatedDocument = isIsolatedToolPath(location.pathname)
   function isolatedDestination(href: string) {
     try {
       const target = new URL(href, location.href)
@@ -16,24 +17,15 @@ export function setupIsolationLinks() {
     }
   }
   function configure(anchor: HTMLAnchorElement) {
-    const isolated =
-      isIsolatedToolPath(location.pathname) || isolatedDestination(anchor.href)
+    const isolated = isolatedDocument || isolatedDestination(anchor.href)
     if (isolated) {
       if (!previous.has(anchor))
-        previous.set(
-          anchor,
-          attributes.map((name) => anchor.getAttribute(name))
-        )
-      anchor.setAttribute("data-astro-prefetch", "false")
-      anchor.setAttribute("data-astro-reload", "")
-    } else {
-      const values = previous.get(anchor)
-      if (!values) return
-      attributes.forEach((name, index) => {
-        const value = values[index]
-        if (value == null) anchor.removeAttribute(name)
-        else anchor.setAttribute(name, value)
-      })
+        previous.set(anchor, anchor.getAttribute(attribute))
+      anchor.setAttribute(attribute, "false")
+    } else if (previous.has(anchor)) {
+      const value = previous.get(anchor)
+      if (value == null) anchor.removeAttribute(attribute)
+      else anchor.setAttribute(attribute, value)
       previous.delete(anchor)
     }
   }
@@ -52,20 +44,12 @@ export function setupIsolationLinks() {
       }
     }
   })
-  function refresh() {
-    observer.disconnect()
-    scan(document.body)
-    observer.observe(document.body, {
-      subtree: true,
-      childList: true,
-      attributes: true,
-      attributeFilter: ["href"],
-    })
-  }
-  refresh()
-  document.addEventListener("astro:after-swap", refresh)
-  return () => {
-    observer.disconnect()
-    document.removeEventListener("astro:after-swap", refresh)
-  }
+  scan(document.body)
+  observer.observe(document.body, {
+    subtree: true,
+    childList: true,
+    attributes: true,
+    attributeFilter: ["href"],
+  })
+  return () => observer.disconnect()
 }

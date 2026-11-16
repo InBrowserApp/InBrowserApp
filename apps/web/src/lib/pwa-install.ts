@@ -59,12 +59,10 @@ export function setupPwaInstall() {
   window.addEventListener("beforeinstallprompt", beforeInstall)
   window.addEventListener("appinstalled", installed)
   document.addEventListener("click", install)
-  document.addEventListener("astro:after-swap", refresh)
 
   return () => {
     window.removeEventListener("beforeinstallprompt", beforeInstall)
     window.removeEventListener("appinstalled", installed)
     document.removeEventListener("click", install)
-    document.removeEventListener("astro:after-swap", refresh)
   }
 }
