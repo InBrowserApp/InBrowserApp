@@ -160,6 +160,20 @@ describe("image cropper UI", () => {
         .getByRole("button", { name: messages.flipHorizontal })
         .getAttribute("aria-pressed")
     ).toBe("false")
+    fireEvent.click(
+      screen.getByRole("button", { name: messages.flipHorizontal })
+    )
+    fireEvent.click(screen.getByRole("button", { name: messages.rotateRight }))
+    expect(
+      screen
+        .getByRole("button", { name: messages.flipHorizontal })
+        .getAttribute("aria-pressed")
+    ).toBe("false")
+    expect(
+      screen
+        .getByRole("button", { name: messages.flipVertical })
+        .getAttribute("aria-pressed")
+    ).toBe("true")
   })
 
   it("changes export format/quality, previews, and removes stale downloads after editing", async () => {

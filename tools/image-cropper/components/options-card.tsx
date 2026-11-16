@@ -59,24 +59,23 @@ export function OptionsCard({ state: s, m }: { state: Cropper; m: Messages }) {
     ? pixelCrop(s.crop, s.size)
     : { x: 0, y: 0, width: 0, height: 0 }
   const disabled = !s.source || s.loading || s.processing
+  function rotate(degrees: number) {
+    s.changeTransform({
+      rotation: (s.transform.rotation + degrees) % 360,
+      flipHorizontal: s.transform.flipVertical,
+      flipVertical: s.transform.flipHorizontal,
+    })
+  }
   const actions = [
     {
       label: m.rotateLeft,
       icon: RotateCcw,
-      run: () =>
-        s.changeTransform({
-          ...s.transform,
-          rotation: (s.transform.rotation + 270) % 360,
-        }),
+      run: () => rotate(270),
     },
     {
       label: m.rotateRight,
       icon: RotateCw,
-      run: () =>
-        s.changeTransform({
-          ...s.transform,
-          rotation: (s.transform.rotation + 90) % 360,
-        }),
+      run: () => rotate(90),
     },
     {
       label: m.flipHorizontal,
