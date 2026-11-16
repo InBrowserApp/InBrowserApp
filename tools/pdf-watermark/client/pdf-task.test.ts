@@ -16,7 +16,7 @@ afterEach(() => vi.unstubAllGlobals())
 
 test("disposes workers when transferring a request fails synchronously", async () => {
   class FailingWorker extends MockWorker {
-    postMessage = vi.fn(() => {
+    override postMessage = vi.fn(() => {
       throw new Error("clone failed")
     })
   }
