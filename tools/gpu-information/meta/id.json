@@ -1,0 +1,4 @@
+{
+  "name": "Informasi GPU",
+  "description": "Lihat renderer GPU browser, dukungan WebGL, batas grafis, presisi shader, dan ekstensi secara lokal. Salin atau unduh laporan diagnostik."
+}

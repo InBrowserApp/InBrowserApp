@@ -1,0 +1,4 @@
+{
+  "name": "GPU-Informationen",
+  "description": "Sehen Sie den GPU-Renderer Ihres Browsers, die WebGL-Unterstützung, Grafikgrenzwerte, Shader-Präzision und Erweiterungen lokal ein. Kopieren Sie einen Diagnosebericht oder laden Sie ihn herunter."
+}

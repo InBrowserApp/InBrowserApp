@@ -1,0 +1,4 @@
+{
+  "name": "GPU-informasjon",
+  "description": "Se nettleserens GPU-renderer, WebGL-støtte, grafikkgrenser, shaderpresisjon og utvidelser lokalt. Kopier eller last ned en diagnoserapport."
+}

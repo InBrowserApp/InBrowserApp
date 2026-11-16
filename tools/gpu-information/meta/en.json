@@ -1,0 +1,4 @@
+{
+  "name": "GPU Information",
+  "description": "View your browser's GPU renderer, WebGL support, graphics limits, shader precision, and extensions locally. Copy or download a diagnostic report."
+}

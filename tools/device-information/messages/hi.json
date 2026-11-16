@@ -66,6 +66,7 @@
   "maxTouchPoints": "अधिकतम टच पॉइंट",
   "gpuVendor": "GPU विक्रेता",
   "gpuRenderer": "GPU रेंडरर",
+  "gpuDetails": "GPU का विवरण देखें",
   "connectionType": "कनेक्शन प्रकार",
   "downlink": "डाउनलिंक",
   "roundTripTime": "राउंड ट्रिप समय",

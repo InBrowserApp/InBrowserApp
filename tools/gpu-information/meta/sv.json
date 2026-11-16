@@ -1,0 +1,4 @@
+{
+  "name": "GPU-information",
+  "description": "Visa webbläsarens GPU-renderare, WebGL-stöd, grafikgränser, shaderprecision och tillägg lokalt. Kopiera eller hämta en diagnostikrapport."
+}

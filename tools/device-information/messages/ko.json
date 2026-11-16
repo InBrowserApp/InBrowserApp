@@ -66,6 +66,7 @@
   "maxTouchPoints": "최대 터치 포인트",
   "gpuVendor": "GPU 공급업체",
   "gpuRenderer": "GPU 렌더러",
+  "gpuDetails": "GPU 세부 정보 보기",
   "connectionType": "연결 유형",
   "downlink": "다운링크",
   "roundTripTime": "왕복 시간",

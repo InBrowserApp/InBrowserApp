@@ -66,6 +66,7 @@
   "maxTouchPoints": "Maksimum dokunma noktası",
   "gpuVendor": "GPU üreticisi",
   "gpuRenderer": "GPU işleyicisi",
+  "gpuDetails": "GPU ayrıntılarını görüntüle",
   "connectionType": "Bağlantı türü",
   "downlink": "Downlink",
   "roundTripTime": "Gidiş dönüş süresi",

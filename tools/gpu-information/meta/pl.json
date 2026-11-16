@@ -1,0 +1,4 @@
+{
+  "name": "Informacje o GPU",
+  "description": "Sprawdź lokalnie moduł renderujący GPU przeglądarki, obsługę WebGL, limity grafiki, precyzję shaderów i rozszerzenia. Skopiuj lub pobierz raport diagnostyczny."
+}

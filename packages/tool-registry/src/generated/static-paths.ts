@@ -8098,6 +8098,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "gpu-information",
+    language: "ar",
+  },
+  {
+    slug: "gpu-information",
+    language: "de",
+  },
+  {
+    slug: "gpu-information",
+    language: "en",
+  },
+  {
+    slug: "gpu-information",
+    language: "es",
+  },
+  {
+    slug: "gpu-information",
+    language: "fr",
+  },
+  {
+    slug: "gpu-information",
+    language: "he",
+  },
+  {
+    slug: "gpu-information",
+    language: "hi",
+  },
+  {
+    slug: "gpu-information",
+    language: "id",
+  },
+  {
+    slug: "gpu-information",
+    language: "it",
+  },
+  {
+    slug: "gpu-information",
+    language: "ja",
+  },
+  {
+    slug: "gpu-information",
+    language: "ko",
+  },
+  {
+    slug: "gpu-information",
+    language: "ms",
+  },
+  {
+    slug: "gpu-information",
+    language: "nl",
+  },
+  {
+    slug: "gpu-information",
+    language: "no",
+  },
+  {
+    slug: "gpu-information",
+    language: "pl",
+  },
+  {
+    slug: "gpu-information",
+    language: "pt",
+  },
+  {
+    slug: "gpu-information",
+    language: "ru",
+  },
+  {
+    slug: "gpu-information",
+    language: "sv",
+  },
+  {
+    slug: "gpu-information",
+    language: "th",
+  },
+  {
+    slug: "gpu-information",
+    language: "tr",
+  },
+  {
+    slug: "gpu-information",
+    language: "vi",
+  },
+  {
+    slug: "gpu-information",
+    language: "zh-CN",
+  },
+  {
+    slug: "gpu-information",
+    language: "zh-TW",
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     language: "ar",
   },

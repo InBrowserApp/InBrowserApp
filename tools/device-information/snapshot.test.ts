@@ -238,6 +238,25 @@ describe("device snapshot browser readers", () => {
       webgl2: false,
     })
   })
+
+  it("checks WebGL 2 on a separate canvas after WebGL 1 claims its context", () => {
+    const canvases: object[] = []
+    vi.spyOn(document, "createElement").mockImplementation(() => {
+      let mode: string | undefined
+      const canvas = {
+        getContext: vi.fn((name: string) => {
+          if (mode && mode !== name) return null
+          mode = name
+          return { getExtension: () => null }
+        }),
+      }
+      canvases.push(canvas)
+      return canvas as unknown as HTMLCanvasElement
+    })
+
+    expect(readGpuInfo()).toMatchObject({ webgl: true, webgl2: true })
+    expect(canvases).toHaveLength(2)
+  })
 })
 
 describe("captureDeviceSnapshot", () => {

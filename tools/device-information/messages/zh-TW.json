@@ -66,6 +66,7 @@
   "maxTouchPoints": "最大觸控點數",
   "gpuVendor": "GPU 供應商",
   "gpuRenderer": "GPU 轉譯器",
+  "gpuDetails": "檢視 GPU 詳細資料",
   "connectionType": "連線類型",
   "downlink": "下行速度",
   "roundTripTime": "往返時間",

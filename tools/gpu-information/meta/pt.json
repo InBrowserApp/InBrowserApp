@@ -1,0 +1,4 @@
+{
+  "name": "Informações da GPU",
+  "description": "Veja localmente o renderizador da GPU do seu navegador, o suporte ao WebGL, os limites gráficos, a precisão dos shaders e as extensões. Copie ou baixe um relatório de diagnóstico."
+}
