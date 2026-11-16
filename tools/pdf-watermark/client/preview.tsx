@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef } from "react"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
@@ -9,40 +9,56 @@ import {
   CardTitle,
 } from "@workspace/ui/components/ui/card"
 import { ChevronLeft, ChevronRight } from "@workspace/ui/icons"
-import { visibleSize, watermarkLayout } from "../core/layout"
-import { useObjectUrl } from "./use-watermark"
+import { visibleSize } from "../core/layout"
+import { EditableWatermark } from "./editable-watermark"
+import { WatermarkArt } from "./watermark-art"
 import { usePreview } from "./use-preview"
-import type { Messages, Options, Source, Watermark } from "../types"
+import type {
+  Messages,
+  Options,
+  Source,
+  PreparedLayer,
+  PageGeometry,
+} from "../types"
 
 function Preview({
   messages: m,
   source,
-  options,
-  mark,
-  selected,
+  items,
+  selectedId,
+  page,
+  onPage,
+  geometry,
+  disabled,
+  onSelect,
+  onChange,
+  onStart,
+  onEnd,
+  onDelete,
 }: Readonly<{
   messages: Messages
   source: Source | null
-  options: Options
-  mark: Watermark | null
-  selected: readonly number[]
+  items: readonly PreparedLayer[]
+  selectedId: string
+  page: number
+  onPage: (page: number) => void
+  geometry: PageGeometry
+  disabled: boolean
+  onSelect: (id: string) => void
+  onChange: (id: string, options: Options) => void
+  onStart: () => void
+  onEnd: (cancel?: boolean) => void
+  onDelete: (id: string) => void
 }>) {
-  const [current, setCurrent] = useState(1)
-  const page = Math.min(current, source?.pages.length ?? 1)
-  const geometry = source?.pages[page - 1] ?? {
-    width: 612,
-    height: 792,
-    x: 0,
-    y: 0,
-    rotation: 0,
-  }
+  const frame = useRef<HTMLDivElement>(null)
   const { width, height } = visibleSize(geometry)
   const preview = usePreview(source?.file ?? null, page)
-  const markUrl = useObjectUrl(mark?.blob ?? null)
-  const layout = mark
-    ? watermarkLayout(geometry, mark.width / mark.height, options)
-    : null
-  const active = !source || selected.includes(page)
+  const visible = items.filter(
+    (item) => item.mark && (!source || item.pages.includes(page))
+  )
+  const active = items.find((item) => item.layer.id === selectedId)
+  const missing = source && active && !active.pages.includes(page)
+  const selectedCount = new Set(items.flatMap((item) => [...item.pages])).size
   return (
     <Card className="min-w-0">
       <CardHeader>
@@ -52,10 +68,11 @@ function Preview({
       <CardContent className="space-y-4">
         <div className="rounded-lg bg-muted/40 p-3 sm:p-4">
           <div
+            ref={frame}
             className="relative mx-auto w-full overflow-hidden border bg-white shadow-sm"
             style={{
               aspectRatio: `${width}/${height}`,
-              maxWidth: `min(100%, ${(26 * width) / height}rem)`,
+              maxWidth: `min(100%, calc(min(34rem, 55svh) * ${width / height}))`,
             }}
             data-testid="watermark-preview"
           >
@@ -102,25 +119,46 @@ function Preview({
                 {preview.error ? m.previewError : m.previewLoading}
               </div>
             ) : null}
-            {active && (!source || preview.url) && layout && markUrl ? (
-              <svg
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 size-full"
-                viewBox={`0 0 ${width} ${height}`}
-              >
-                {layout.centers.map((c, i) => (
-                  <image
-                    key={i}
-                    href={markUrl}
-                    width={layout.markWidth}
-                    height={layout.markHeight}
-                    x={-layout.markWidth / 2}
-                    y={-layout.markHeight / 2}
-                    transform={`translate(${c.x} ${height - c.y}) rotate(${options.rotation})`}
-                    opacity={options.opacity / 100}
-                  />
-                ))}
-              </svg>
+            {!source || preview.url ? (
+              <>
+                <svg
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 size-full"
+                  viewBox={`0 0 ${width} ${height}`}
+                >
+                  {visible.map((item) => (
+                    <WatermarkArt
+                      key={item.layer.id}
+                      item={item}
+                      geometry={geometry}
+                      height={height}
+                    />
+                  ))}
+                </svg>
+                {visible
+                  .filter((item) => item.layer.options.layout === "single")
+                  .map((item) => {
+                    const index = items.indexOf(item)
+                    return (
+                      <EditableWatermark
+                        key={item.layer.id}
+                        item={item}
+                        name={m.layerName.replace("{index}", String(index + 1))}
+                        geometry={geometry}
+                        frame={frame}
+                        selected={item.layer.id === selectedId}
+                        index={index}
+                        messages={m}
+                        disabled={disabled}
+                        onSelect={() => onSelect(item.layer.id)}
+                        onChange={(options) => onChange(item.layer.id, options)}
+                        onStart={onStart}
+                        onEnd={onEnd}
+                        onDelete={() => onDelete(item.layer.id)}
+                      />
+                    )
+                  })}
+              </>
             ) : null}
           </div>
         </div>
@@ -131,7 +169,7 @@ function Preview({
             size="icon-sm"
             variant="outline"
             disabled={!source || page <= 1}
-            onClick={() => setCurrent(page - 1)}
+            onClick={() => onPage(page - 1)}
           >
             <ChevronLeft aria-hidden="true" className="rtl:rotate-180" />
           </Button>
@@ -151,7 +189,7 @@ function Preview({
             size="icon-sm"
             variant="outline"
             disabled={!source || page >= source.pages.length}
-            onClick={() => setCurrent(page + 1)}
+            onClick={() => onPage(page + 1)}
           >
             <ChevronRight aria-hidden="true" className="rtl:rotate-180" />
           </Button>
@@ -162,13 +200,38 @@ function Preview({
             aria-live="polite"
           >
             <Badge variant="secondary">
-              {m.selectedPages.replace("{count}", String(selected.length))}
+              {m.selectedPages.replace("{count}", String(selectedCount))}
             </Badge>
-            {!active ? (
+            {!visible.length ? (
               <Badge variant="outline">{m.pageNotSelected}</Badge>
             ) : null}
           </div>
         ) : null}
+        {missing ? (
+          <div
+            className="space-y-1 text-center text-sm text-muted-foreground"
+            role="status"
+          >
+            <p>{m.selectedLayerNotOnPage}</p>
+            {active.pages.length ? (
+              <Button
+                variant="link"
+                type="button"
+                onClick={() => onPage(active.pages[0]!)}
+              >
+                {m.showLayerPage}
+              </Button>
+            ) : null}
+          </div>
+        ) : null}
+        <details className="text-xs text-muted-foreground">
+          <summary className="cursor-pointer rounded-sm focus-visible:outline-2 focus-visible:outline-primary">
+            {m.keyboardControls}
+          </summary>
+          <p id="watermark-keyboard-help" className="mt-2 leading-relaxed">
+            {m.keyboardHint}
+          </p>
+        </details>
       </CardContent>
     </Card>
   )

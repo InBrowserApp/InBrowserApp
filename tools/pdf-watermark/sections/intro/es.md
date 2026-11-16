@@ -1,6 +1,8 @@
 ## Añade una marca de agua a páginas concretas de un PDF
 
-Carga un PDF, introduce texto o elige una imagen PNG o JPEG y ajusta la marca de agua en la vista previa en directo. Elige una única marca de agua o un patrón en mosaico, ajusta su rotación y opacidad e introduce rangos de páginas como `1-3,5`. Deja el rango en blanco para añadir la marca de agua a todas las páginas.
+Carga un PDF y añade marcas de agua de texto o imágenes PNG/JPEG. Selecciona una marca de agua en la vista previa en directo, arrástrala a una posición personalizada, cambia su tamaño con un tirador de esquina o usa el tirador circular para girarla. También puedes introducir valores exactos de posición, tamaño y rotación en los ajustes. Mayús ajusta la rotación en incrementos de 15° y las flechas mueven la marca de agua seleccionada.
+
+Combina hasta 10 marcas de agua independientes, como un logotipo y una etiqueta de confidencialidad. Cada una tiene su propio contenido, opacidad, distribución y rango de páginas. Copia, elimina, reordena, deshaz y rehace los cambios. Elige una única marca de agua o un patrón en mosaico para cada capa. Introduce rangos como `1-3,5` o deja en blanco el rango de una capa para aplicarla a todas las páginas. Las posiciones son relativas a la parte visible de la página, incluidas las páginas giradas o recortadas; las marcas de agua que sobrepasen un borde se recortan al límite de la página.
 
 ## Procesamiento privado que conserva el contenido original
 

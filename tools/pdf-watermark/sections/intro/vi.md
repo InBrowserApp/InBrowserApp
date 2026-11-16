@@ -1,6 +1,8 @@
 ## Thêm hình mờ vào các trang PDF được chọn
 
-Tải PDF lên, nhập văn bản hoặc chọn ảnh PNG hay JPEG rồi điều chỉnh hình mờ trong bản xem trước trực tiếp. Chọn một hình mờ đơn hoặc kiểu lặp lại, đặt góc xoay và độ mờ đục rồi nhập phạm vi trang như `1-3,5`. Để trống phạm vi để thêm hình mờ vào mọi trang.
+Tải PDF lên và thêm hình mờ văn bản hoặc ảnh PNG/JPEG. Chọn hình mờ trong bản xem trước trực tiếp, kéo đến vị trí tùy chỉnh, đổi kích thước bằng nút điều khiển ở góc hoặc xoay bằng nút điều khiển tròn. Bạn cũng có thể nhập chính xác vị trí, kích thước và góc xoay trong cài đặt. Giữ Shift để xoay theo từng 15°, và dùng phím mũi tên để di chuyển hình mờ đang chọn.
+
+Kết hợp tối đa 10 hình mờ độc lập, chẳng hạn như logo và nhãn bảo mật. Mỗi hình mờ có nội dung, độ mờ đục, bố cục và phạm vi trang riêng. Sao chép, xóa, sắp xếp lại, hoàn tác và làm lại các thay đổi. Chọn hình mờ đơn hoặc kiểu lặp cho từng lớp. Nhập phạm vi như `1-3,5` hoặc để trống phạm vi của một lớp để áp dụng cho mọi trang. Vị trí được tính theo phần trang hiển thị, kể cả trang đã xoay hoặc cắt; phần hình mờ vượt qua mép sẽ bị cắt theo trang.
 
 ## Xử lý riêng tư, giữ nguyên nội dung gốc
 

@@ -1,6 +1,8 @@
 ## Ajouter un filigrane aux pages PDF sélectionnées
 
-Importez un PDF, saisissez du texte ou choisissez une image PNG ou JPEG, puis ajustez le filigrane dans l’aperçu en direct. Choisissez un filigrane unique ou un motif en mosaïque, réglez sa rotation et son opacité, et saisissez des plages de pages comme `1-3,5`. Laissez la plage vide pour marquer toutes les pages.
+Importez un PDF et ajoutez des filigranes sous forme de texte ou d’images PNG/JPEG. Sélectionnez un filigrane dans l’aperçu en direct, faites-le glisser vers une position personnalisée, redimensionnez-le avec une poignée d’angle ou utilisez la poignée ronde pour le faire pivoter. Vous pouvez aussi saisir des valeurs précises de position, de taille et de rotation dans les paramètres. Maintenez Maj pour faire pivoter par pas de 15° et utilisez les flèches pour déplacer le filigrane sélectionné.
+
+Combinez jusqu’à 10 filigranes indépendants, par exemple un logo et une mention de confidentialité. Chacun possède son propre contenu, son opacité, sa disposition et sa plage de pages. Copiez, supprimez, réorganisez, annulez et rétablissez vos modifications. Choisissez un filigrane unique ou un motif en mosaïque pour chaque calque. Saisissez des plages comme `1-3,5`, ou laissez la plage d’un calque vide pour l’appliquer à toutes les pages. Les positions sont relatives à la page visible, y compris pour les pages pivotées et recadrées ; les filigranes dépassant d’un bord sont rognés à cet endroit.
 
 ## Traitement privé, contenu original préservé
 

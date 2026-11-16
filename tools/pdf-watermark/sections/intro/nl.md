@@ -1,6 +1,8 @@
 ## Een watermerk toevoegen aan geselecteerde PDF-pagina's
 
-Upload een PDF, voer tekst in of kies een PNG- of JPEG-afbeelding en pas het watermerk aan in het livevoorbeeld. Kies één watermerk of een herhaald patroon, stel de rotatie en dekking in en voer paginabereiken in, zoals `1-3,5`. Laat het bereik leeg om elke pagina van een watermerk te voorzien.
+Upload een PDF en voeg watermerken met tekst of PNG/JPEG-afbeeldingen toe. Selecteer een watermerk in het livevoorbeeld, sleep het naar een aangepaste positie, wijzig het formaat met een hoekgreep of gebruik de ronde greep om het te draaien. Exacte waarden voor positie, formaat en rotatie zijn ook beschikbaar in de instellingen. Met Shift draai je in stappen van 15° en met de pijltjestoetsen verplaats je het geselecteerde watermerk.
+
+Combineer maximaal 10 onafhankelijke watermerken, zoals een logo en een vertrouwelijkheidslabel. Elk watermerk heeft eigen inhoud, dekking, indeling en een eigen paginabereik. Kopieer, verwijder en wijzig de volgorde, maak bewerkingen ongedaan en voer ze opnieuw uit. Kies voor elke laag één watermerk of een herhaald patroon. Voer bereiken in, zoals `1-3,5`, of laat het bereik van een laag leeg om deze op elke pagina toe te passen. Posities zijn relatief ten opzichte van het zichtbare paginagedeelte, ook bij gedraaide en bijgesneden pagina's. Watermerken die over een rand vallen, worden op die rand afgesneden.
 
 ## Lokale verwerking met behoud van de oorspronkelijke inhoud
 

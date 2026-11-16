@@ -1,6 +1,8 @@
 ## Lägg till en vattenstämpel på valda PDF-sidor
 
-Ladda upp en PDF, skriv text eller välj en PNG- eller JPEG-bild och justera vattenstämpeln i direktförhandsvisningen. Välj en enskild vattenstämpel eller ett upprepat mönster, ställ in rotation och opacitet och ange sidintervall som `1-3,5`. Lämna intervallet tomt för att vattenstämpla alla sidor.
+Ladda upp en PDF och lägg till vattenstämplar med text eller PNG-/JPEG-bilder. Välj en vattenstämpel i direktförhandsvisningen, dra den till en anpassad position, ändra storlek med ett hörnhandtag eller rotera med det runda handtaget. Exakta värden för placering, storlek och rotation finns också i inställningarna. Shift ger rotationssteg om 15°, och piltangenterna flyttar den valda vattenstämpeln.
+
+Kombinera upp till 10 oberoende vattenstämplar, till exempel en logotyp och en sekretessmarkering. Var och en har eget innehåll, opacitet, layout och sidintervall. Kopiera, ta bort, ändra ordning, ångra och gör om ändringar. Välj en enskild vattenstämpel eller ett upprepat mönster för varje lager. Ange intervall som `1-3,5`, eller lämna ett lagers intervall tomt för att använda det på alla sidor. Placeringar är relativa till den synliga sidan, även på roterade och beskurna sidor; vattenstämplar som placeras över en kant beskärs till den sidan.
 
 ## Privat bearbetning med originalinnehållet bevarat
 

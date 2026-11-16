@@ -42,7 +42,9 @@ test("inspects crop boxes, rotations, and the visible MediaBox intersection", as
 test("adds a reusable image only to selected pages and preserves source content, geometry, and metadata", async () => {
   const source = await pdfFixture()
   const original = await PDFDocument.load(source)
-  const output = await watermarkPdf(source, PNG, DEFAULT_OPTIONS, [1, 3, 4])
+  const output = await watermarkPdf(source, [
+    { png: PNG, options: DEFAULT_OPTIONS, pages: [1, 3, 4] },
+  ])
   const result = await PDFDocument.load(output)
   expect(result.getTitle()).toBe("Original title")
   expect(result.getAuthor()).toBe("Original author")
@@ -73,17 +75,17 @@ test("adds a reusable image only to selected pages and preserves source content,
 
 test("emits tiled image draws and rejects invalid selections/documents", async () => {
   const source = await pdfFixture()
-  const output = await watermarkPdf(
-    source,
-    PNG,
-    { ...DEFAULT_OPTIONS, layout: "tile" },
-    [2]
-  )
+  await expect(watermarkPdf(source, [])).rejects.toThrow("generateError")
+  const output = await watermarkPdf(source, [
+    { png: PNG, options: { ...DEFAULT_OPTIONS, layout: "tile" }, pages: [2] },
+  ])
   const result = await PDFDocument.load(output)
   expect(streams(result, 1).join("").match(/ Do/g)!.length).toBeGreaterThan(1)
   for (const selected of [[], [0], [5], [1, 1], [1.5]]) {
     await expect(
-      watermarkPdf(source, PNG, DEFAULT_OPTIONS, selected)
+      watermarkPdf(source, [
+        { png: PNG, options: DEFAULT_OPTIONS, pages: selected },
+      ])
     ).rejects.toThrow("rangeBounds")
   }
   await expect(inspectPdf(new ArrayBuffer(0))).rejects.toThrow(
@@ -93,4 +95,33 @@ test("emits tiled image draws and rejects invalid selections/documents", async (
   await expect(
     inspectPdf((await empty.save({ addDefaultPage: false })).slice().buffer)
   ).rejects.toThrow("readError")
+})
+
+test("writes independent layers in order with different page ranges and custom coordinates", async () => {
+  const source = await pdfFixture()
+  const output = await watermarkPdf(source, [
+    {
+      png: PNG,
+      options: { ...DEFAULT_OPTIONS, position: "custom", x: 20, y: 30 },
+      pages: [1, 2],
+    },
+    {
+      png: PNG,
+      options: {
+        ...DEFAULT_OPTIONS,
+        position: "custom",
+        x: 80,
+        y: 75,
+        opacity: 60,
+      },
+      pages: [2, 3],
+    },
+  ])
+  const doc = await PDFDocument.load(output)
+  expect(
+    [0, 1, 2, 3].map(
+      (index) => (streams(doc, index).join("").match(/ Do/g) ?? []).length
+    )
+  ).toEqual([1, 2, 1, 0])
+  expect(doc.getTitle()).toBe("Original title")
 })

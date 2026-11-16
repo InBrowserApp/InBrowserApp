@@ -13,13 +13,15 @@ import {
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
 import { Input } from "@workspace/ui/components/ui/input"
+import { Button } from "@workspace/ui/components/ui/button"
 import {
   ToggleGroup,
   ToggleGroupItem,
 } from "@workspace/ui/components/ui/toggle-group"
 import { ContentFields } from "./content-fields"
 import { NumberField } from "./number-field"
-import type { Messages, Options } from "../types"
+import { customPosition } from "../core/transform"
+import type { Messages, Options, PageGeometry } from "../types"
 
 function Settings({
   options: o,
@@ -32,6 +34,9 @@ function Settings({
   onRange,
   rangeError,
   disabled,
+  geometry,
+  aspect,
+  onBack,
 }: Readonly<{
   options: Options
   onChange: (options: Options) => void
@@ -43,6 +48,9 @@ function Settings({
   onRange: (range: string) => void
   rangeError: string
   disabled: boolean
+  geometry: PageGeometry
+  aspect: number
+  onBack: () => void
 }>) {
   const id = useId()
   function update(key: keyof Options, value: number) {
@@ -119,6 +127,39 @@ function Settings({
                     </ToggleGroupItem>
                   ))}
                 </ToggleGroup>
+                <Button
+                  type="button"
+                  variant={o.position === "custom" ? "secondary" : "outline"}
+                  aria-pressed={o.position === "custom"}
+                  onClick={() => onChange(customPosition(geometry, aspect, o))}
+                >
+                  {m.customPosition}
+                </Button>
+                {o.position === "custom" ? (
+                  <>
+                    <NumberField
+                      label={m.xPosition}
+                      step={0.1}
+                      value={o.x}
+                      min={0}
+                      max={100}
+                      unit="%"
+                      onChange={(value) => update("x", value)}
+                    />
+                    <NumberField
+                      label={m.yPosition}
+                      step={0.1}
+                      value={o.y}
+                      min={0}
+                      max={100}
+                      unit="%"
+                      onChange={(value) => update("y", value)}
+                    />
+                    <FieldDescription>
+                      {m.coordinateDescription}
+                    </FieldDescription>
+                  </>
+                ) : null}
               </Field>
             ) : (
               <NumberField
@@ -134,7 +175,7 @@ function Settings({
               label={m.sizeLabel}
               description={m.sizeDescription}
               value={o.size}
-              min={10}
+              min={1}
               max={100}
               unit="%"
               onChange={(value) => update("size", value)}
@@ -180,6 +221,16 @@ function Settings({
           </FieldGroup>
         </fieldset>
       </CardContent>
+      <div className="px-4 pb-4 lg:hidden">
+        <Button
+          type="button"
+          variant="outline"
+          className="w-full"
+          onClick={onBack}
+        >
+          {m.backToPreview}
+        </Button>
+      </div>
     </Card>
   )
 }

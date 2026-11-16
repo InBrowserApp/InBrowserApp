@@ -1,6 +1,8 @@
 ## Dodaj znak wodny do wybranych stron PDF
 
-Wczytaj PDF, wpisz tekst lub wybierz obraz PNG albo JPEG i dostosuj znak wodny w podglądzie na żywo. Wybierz pojedynczy znak wodny lub wzór kafelkowy, ustaw obrót i krycie oraz wpisz zakresy stron, np. `1-3,5`. Pozostaw zakres pusty, aby dodać znak wodny do wszystkich stron.
+Wczytaj PDF i dodaj tekstowe znaki wodne lub obrazy PNG/JPEG. Wybierz znak wodny w podglądzie na żywo, przeciągnij go w dowolne miejsce, zmień jego rozmiar za pomocą uchwytu w rogu lub obróć go za pomocą okrągłego uchwytu. Dokładne wartości położenia, rozmiaru i obrotu są również dostępne w ustawieniach. Shift pozwala ustawiać obrót co 15°, a klawisze strzałek przesuwają zaznaczony znak wodny.
+
+Połącz do 10 niezależnych znaków wodnych, np. logo i oznaczenie poufności. Każdy ma własną treść, krycie, układ i zakres stron. Kopiuj, usuwaj i zmieniaj kolejność znaków wodnych oraz cofaj i ponawiaj zmiany. Dla każdej warstwy wybierz pojedynczy znak wodny lub wzór kafelkowy. Wpisz zakresy, np. `1-3,5`, lub pozostaw zakres warstwy pusty, aby zastosować ją do każdej strony. Położenie jest określane względem widocznej strony, także po obrocie i przycięciu; znaki wodne wychodzące poza krawędź są przycinane do granic strony.
 
 ## Prywatne przetwarzanie z zachowaniem oryginalnej treści
 

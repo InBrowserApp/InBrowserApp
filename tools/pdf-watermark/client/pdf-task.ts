@@ -35,7 +35,10 @@ function runPdfTask(request: Request, signal: AbortSignal): Promise<Response> {
         request,
         request.type === "inspect"
           ? [request.source]
-          : [request.source, request.png]
+          : [
+              request.source,
+              ...new Set(request.layers.map((layer) => layer.png)),
+            ]
       )
     } catch (error) {
       cleanup()

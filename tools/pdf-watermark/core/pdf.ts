@@ -28,46 +28,51 @@ async function inspectPdf(source: ArrayBuffer) {
   return doc.getPages().map(geometry)
 }
 
-async function watermarkPdf(
-  source: ArrayBuffer,
-  png: ArrayBuffer,
-  options: Options,
-  selected: readonly number[]
-) {
+type PdfLayer = Readonly<{
+  png: ArrayBuffer
+  options: Options
+  pages: readonly number[]
+}>
+
+async function watermarkPdf(source: ArrayBuffer, layers: readonly PdfLayer[]) {
   const doc = await PDFDocument.load(source, { updateMetadata: false })
   const pages = doc.getPages()
-  if (
-    !selected.length ||
-    new Set(selected).size !== selected.length ||
-    selected.some((n) => !Number.isInteger(n) || n < 1 || n > pages.length)
-  )
-    throw new Error("rangeBounds")
-  const image = await doc.embedPng(png)
-  for (const n of selected) {
-    const page = pages[n - 1]!
-    const view = geometry(page)
-    const { centers, markWidth, markHeight, cos, sin } = watermarkLayout(
-      view,
-      image.width / image.height,
-      options
+  if (!layers.length) throw new Error("generateError")
+  for (const { png, options, pages: selected } of layers) {
+    if (
+      !selected.length ||
+      new Set(selected).size !== selected.length ||
+      selected.some((n) => !Number.isInteger(n) || n < 1 || n > pages.length)
     )
-    page.pushOperators(
-      pushGraphicsState(),
-      concatTransformationMatrix(...pageMatrix(view))
-    )
-    for (const center of centers) {
-      page.drawImage(image, {
-        x: center.x - (cos * markWidth) / 2 + (sin * markHeight) / 2,
-        y: center.y - (sin * markWidth) / 2 - (cos * markHeight) / 2,
-        width: markWidth,
-        height: markHeight,
-        rotate: degrees(-options.rotation),
-        opacity: options.opacity / 100,
-      })
+      throw new Error("rangeBounds")
+    const image = await doc.embedPng(png)
+    for (const n of selected) {
+      const page = pages[n - 1]!
+      const view = geometry(page)
+      const { centers, markWidth, markHeight, cos, sin } = watermarkLayout(
+        view,
+        image.width / image.height,
+        options
+      )
+      page.pushOperators(
+        pushGraphicsState(),
+        concatTransformationMatrix(...pageMatrix(view))
+      )
+      for (const center of centers) {
+        page.drawImage(image, {
+          x: center.x - (cos * markWidth) / 2 + (sin * markHeight) / 2,
+          y: center.y - (sin * markWidth) / 2 - (cos * markHeight) / 2,
+          width: markWidth,
+          height: markHeight,
+          rotate: degrees(-options.rotation),
+          opacity: options.opacity / 100,
+        })
+      }
+      page.pushOperators(popGraphicsState())
     }
-    page.pushOperators(popGraphicsState())
   }
   return doc.save({ updateFieldAppearances: false })
 }
 
 export { inspectPdf, watermarkPdf }
+export type { PdfLayer }

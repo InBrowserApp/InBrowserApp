@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { runPdfTask } from "./pdf-task"
-import type { Messages, Options, Result, Source, Watermark } from "../types"
+import type { ExportLayer, Messages, Result, Source } from "../types"
 
 function messageFor(error: unknown, messages: Messages, fallback: string) {
   const key = error instanceof Error ? error.message : ""
@@ -52,11 +52,7 @@ function useDocument(messages: Messages) {
     }
   }
 
-  async function generate(
-    mark: Watermark,
-    options: Options,
-    pages: readonly number[]
-  ) {
+  async function generate(layers: readonly ExportLayer[]) {
     if (!source) return
     const current = new AbortController()
     controller.current?.abort()
@@ -65,12 +61,18 @@ function useDocument(messages: Messages) {
     setError("")
     setStatus("generating")
     try {
-      const [bytes, png] = await Promise.all([
+      const [bytes, requests] = await Promise.all([
         source.file.arrayBuffer(),
-        mark.blob.arrayBuffer(),
+        Promise.all(
+          layers.map(async (layer) => ({
+            png: await layer.mark.blob.arrayBuffer(),
+            options: layer.options,
+            pages: layer.pages,
+          }))
+        ),
       ])
       const response = await runPdfTask(
-        { type: "generate", source: bytes, png, options, pages },
+        { type: "generate", source: bytes, layers: requests },
         current.signal
       )
       if (!current.signal.aborted && response.ok && "bytes" in response) {

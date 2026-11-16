@@ -67,14 +67,12 @@ test("transfers watermark bytes for export and reports export worker failures", 
   const request = {
     type: "generate" as const,
     source: new ArrayBuffer(0),
-    png: new ArrayBuffer(1),
-    options: DEFAULT_OPTIONS,
-    pages: [1],
+    layers: [{ png: new ArrayBuffer(1), options: DEFAULT_OPTIONS, pages: [1] }],
   }
   const pending = runPdfTask(request, new AbortController().signal)
   expect(MockWorker.current.postMessage).toHaveBeenCalledWith(request, [
     request.source,
-    request.png,
+    request.layers[0]!.png,
   ])
   MockWorker.current.onerror!()
   await expect(pending).rejects.toThrow("generateError")

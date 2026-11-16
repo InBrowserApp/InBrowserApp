@@ -1,6 +1,8 @@
 ## Seçili PDF sayfalarına filigran ekleyin
 
-Bir PDF yükleyin, metin girin veya bir PNG ya da JPEG görseli seçin ve filigranı canlı önizlemede ayarlayın. Tek bir filigran veya döşeme deseni seçin, döndürme açısını ve opaklığını ayarlayın ve `1-3,5` gibi sayfa aralıkları girin. Her sayfaya filigran eklemek için aralığı boş bırakın.
+Bir PDF yükleyin ve metin veya PNG/JPEG filigranları ekleyin. Canlı önizlemede bir filigran seçin; özel bir konuma taşımak için sürükleyin, köşe tutamacıyla boyutunu değiştirin veya yuvarlak tutamacıyla döndürün. Ayarlarda tam konum, boyut ve döndürme değerleri de bulunur. Shift, döndürmeyi 15° aralıklara hizalar; ok tuşları ise seçili filigranı taşır.
+
+Logo ve gizlilik etiketi gibi en fazla 10 bağımsız filigranı birleştirin. Her birinin içeriği, opaklığı, düzeni ve sayfa aralığı ayrıdır. Düzenlemeleri kopyalayın, silin, yeniden sıralayın, geri alın ve yineleyin. Her katman için tek filigran veya döşeme deseni seçin. `1-3,5` gibi aralıklar girin veya katmanı tüm sayfalara uygulamak için aralığı boş bırakın. Konumlar, döndürülmüş ve kırpılmış sayfalar da dahil olmak üzere görünür sayfaya göredir; kenarın dışına taşan filigranlar sayfa sınırında kırpılır.
 
 ## Gizli işlem, korunan özgün içerik
 

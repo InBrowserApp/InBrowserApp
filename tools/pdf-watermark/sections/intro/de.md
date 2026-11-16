@@ -1,6 +1,8 @@
 ## Ausgewählten PDF-Seiten ein Wasserzeichen hinzufügen
 
-Laden Sie eine PDF hoch, geben Sie Text ein oder wählen Sie ein PNG- oder JPEG-Bild und passen Sie das Wasserzeichen in der Live-Vorschau an. Wählen Sie ein einzelnes Wasserzeichen oder ein Kachelmuster, legen Sie Drehung und Deckkraft fest und geben Sie Seitenbereiche wie `1-3,5` ein. Lassen Sie den Bereich leer, um alle Seiten mit einem Wasserzeichen zu versehen.
+Laden Sie eine PDF hoch und fügen Sie Text- oder PNG-/JPEG-Wasserzeichen hinzu. Wählen Sie ein Wasserzeichen in der Live-Vorschau aus, ziehen Sie es an eine eigene Position, ändern Sie seine Größe mit einem Eckgriff oder drehen Sie es mit dem runden Griff. Genaue Werte für Position, Größe und Drehung können Sie auch in den Einstellungen eingeben. Mit Umschalt rastet die Drehung in 15°-Schritten ein; mit den Pfeiltasten verschieben Sie das ausgewählte Wasserzeichen.
+
+Kombinieren Sie bis zu 10 unabhängige Wasserzeichen, etwa ein Logo und einen Vertraulichkeitshinweis. Jedes hat einen eigenen Inhalt, eine eigene Deckkraft, Anordnung und einen eigenen Seitenbereich. Sie können Wasserzeichen duplizieren, löschen und umordnen sowie Änderungen rückgängig machen und wiederherstellen. Wählen Sie für jede Ebene ein einzelnes Wasserzeichen oder ein Kachelmuster. Geben Sie Bereiche wie `1-3,5` ein oder lassen Sie den Seitenbereich einer Ebene leer, um sie auf alle Seiten anzuwenden. Die Positionen beziehen sich auf die sichtbare Seite, auch bei gedrehten und zugeschnittenen Seiten; Wasserzeichen, die über einen Rand hinausragen, werden an diesem Rand abgeschnitten.
 
 ## Lokale Verarbeitung, Originalinhalt bleibt erhalten
 

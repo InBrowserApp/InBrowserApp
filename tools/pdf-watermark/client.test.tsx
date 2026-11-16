@@ -82,9 +82,21 @@ test("previews selected and unchanged pages, exports, and invalidates stale down
     name: messages.downloadLabel,
   })
   expect(download.getAttribute("download")).toBe("report-watermarked.pdf")
+  fireEvent.blur(
+    screen.getByLabelText(messages.opacityLabel, { selector: "input" })
+  )
+  expect(screen.getByRole("link", { name: messages.downloadLabel })).toBe(
+    download
+  )
   expect(task.mock.calls.at(-1)?.[0]).toMatchObject({
     type: "generate",
-    pages: [1, 3],
+    layers: [
+      {
+        options: expect.any(Object),
+        png: expect.any(ArrayBuffer),
+        pages: [1, 3],
+      },
+    ],
   })
   fireEvent.change(
     screen.getByLabelText(messages.rotationLabel, { selector: "input" }),
@@ -186,8 +198,13 @@ test("validates page ranges inline and supports an image watermark", async () =>
   await screen.findByRole("link", { name: messages.downloadLabel })
   expect(task.mock.calls.at(-1)?.[0]).toMatchObject({
     type: "generate",
-    pages: [1, 2, 3, 4],
-    options: { kind: "image" },
+    layers: [
+      {
+        options: expect.objectContaining({ kind: "image" }),
+        png: expect.any(ArrayBuffer),
+        pages: [1, 2, 3, 4],
+      },
+    ],
   })
 })
 
@@ -262,4 +279,209 @@ test("shows watermark validation and preview failures explicitly", async () => {
     target: { files: [new File([""], "bad.png")] },
   })
   await screen.findByText(messages.imageError)
+  expect(screen.getByRole("img", { name: messages.imageError })).toBeDefined()
+})
+
+function click(name: string) {
+  fireEvent.click(screen.getByRole("button", { name }))
+}
+function field(name: string, value: string) {
+  fireEvent.change(screen.getByLabelText(name, { selector: "input" }), {
+    target: { value },
+  })
+}
+function layerButtons() {
+  return screen.getAllByRole("button", { name: /^Watermark \d/ })
+}
+
+test("keeps independent page ranges and stacking order through copy, delete, undo, and redo", async () => {
+  const { container } = render(<Client messages={messages} />)
+  await upload()
+  field(messages.pageRangeLabel, "1,3")
+  click(messages.addText)
+  fireEvent.change(screen.getByLabelText(messages.textLabel), {
+    target: { value: "APPROVED" },
+  })
+  field(messages.pageRangeLabel, "2,4")
+  await waitFor(() =>
+    expect(
+      (
+        screen.getByRole("button", {
+          name: messages.generateLabel,
+        }) as HTMLButtonElement
+      ).disabled
+    ).toBe(false)
+  )
+  click(messages.duplicateLayer)
+  expect(layerButtons()).toHaveLength(3)
+  field(messages.xPosition, "99.7")
+  field(messages.yPosition, "88.3")
+  click(messages.deleteLayer)
+  expect(layerButtons()).toHaveLength(2)
+  expect(
+    (screen.getByLabelText(messages.textLabel) as HTMLTextAreaElement).value
+  ).toBe("APPROVED")
+  click(messages.undo)
+  expect(layerButtons()).toHaveLength(3)
+  click(messages.redo)
+  expect(layerButtons()).toHaveLength(2)
+  click(messages.sendBackward)
+  expect(layerButtons().map((button) => button.textContent)).toEqual([
+    "Watermark 2CONFIDENTIAL",
+    "Watermark 1APPROVED",
+  ])
+  click(messages.bringForward)
+  click(messages.generateLabel)
+  await screen.findByRole("link", { name: messages.downloadLabel })
+  expect(task.mock.calls.at(-1)?.[0]).toMatchObject({
+    type: "generate",
+    layers: [{ pages: [1, 3] }, { pages: [2, 4] }],
+  })
+  fireEvent.click(layerButtons()[0]!)
+  expect(
+    screen.queryByRole("link", { name: messages.downloadLabel })
+  ).not.toBeNull()
+  expect(screen.getByText(messages.selectedLayerNotOnPage)).toBeDefined()
+  click(messages.showLayerPage)
+  await waitFor(() =>
+    expect(container.querySelectorAll("[data-watermark-layer]")).toHaveLength(1)
+  )
+  expect(screen.queryByText(messages.selectedLayerNotOnPage)).toBeNull()
+  field(messages.pageRangeLabel, "99")
+  fireEvent.click(layerButtons()[1]!)
+  expect(screen.getByRole("img", { name: messages.rangeBounds })).toBeDefined()
+  expect(
+    (
+      screen.getByRole("button", {
+        name: messages.generateLabel,
+      }) as HTMLButtonElement
+    ).disabled
+  ).toBe(true)
+})
+
+test("adds image layers only after file selection and supports removing all layers with recovery", async () => {
+  const { container } = render(<Client messages={messages} />)
+  await upload()
+  const input = screen.getByLabelText(messages.addImage, { selector: "input" })
+  const choose = vi.spyOn(input as HTMLInputElement, "click")
+  click(messages.addImage)
+  expect(choose).toHaveBeenCalledOnce()
+  fireEvent.change(input, { target: { files: [] } })
+  expect(layerButtons()).toHaveLength(1)
+  const image = new File(["png"], "brand.png", { type: "image/png" })
+  fireEvent.change(input, { target: { files: [image] } })
+  await waitFor(() => expect(readImage).toHaveBeenCalledWith(image))
+  click(messages.generateLabel)
+  await screen.findByRole("link", { name: messages.downloadLabel })
+  expect(task.mock.calls.at(-1)?.[0]).toMatchObject({
+    layers: [expect.anything(), { options: { kind: "image" } }],
+  })
+  click(messages.deleteLayer)
+  click(messages.deleteLayer)
+  expect(screen.getByText(messages.emptyLayers)).toBeDefined()
+  expect(screen.queryByText(messages.settingsTitle)).toBeNull()
+  expect(container.querySelectorAll("[data-layer-id]")).toHaveLength(0)
+  click(messages.undo)
+  expect(layerButtons()).toHaveLength(1)
+  click(messages.addText)
+  for (let index = 2; index < 10; index++) click(messages.addText)
+  expect(layerButtons()).toHaveLength(10)
+  expect(
+    (
+      screen.getByRole("button", {
+        name: messages.addText,
+      }) as HTMLButtonElement
+    ).disabled
+  ).toBe(true)
+  expect(
+    (
+      screen.getByRole("button", {
+        name: messages.duplicateLayer,
+      }) as HTMLButtonElement
+    ).disabled
+  ).toBe(true)
+})
+
+test("supports keyboard editing, accurate numeric positions, history shortcuts, and returning to the canvas", async () => {
+  const { container } = render(<Client messages={messages} />)
+  await upload()
+  const hit = () =>
+    container.querySelector<HTMLButtonElement>('[data-layer-id="initial"]')!
+  const read = (name: string) =>
+    Number(
+      (screen.getByLabelText(name, { selector: "input" }) as HTMLInputElement)
+        .value
+    )
+  fireEvent.keyDown(hit(), { key: "ArrowRight" })
+  expect(read(messages.xPosition)).toBe(51)
+  fireEvent.keyDown(hit(), { key: "ArrowLeft", shiftKey: true })
+  fireEvent.keyDown(hit(), { key: "ArrowDown", shiftKey: true })
+  fireEvent.keyDown(hit(), { key: "ArrowUp" })
+  expect(read(messages.xPosition)).toBe(46)
+  expect(read(messages.yPosition)).toBe(54)
+  fireEvent.keyDown(hit(), { key: "+", shiftKey: true })
+  fireEvent.keyDown(hit(), { key: "-" })
+  expect(read(messages.sizeLabel)).toBe(54)
+  fireEvent.keyDown(hit(), { key: "[", shiftKey: true })
+  fireEvent.keyDown(hit(), { key: "]" })
+  expect(read(messages.rotationLabel)).toBe(-47)
+  fireEvent.keyDown(hit(), { key: "Enter" })
+  field(messages.xPosition, "33.35")
+  fireEvent.blur(
+    screen.getByLabelText(messages.xPosition, { selector: "input" })
+  )
+  expect(read(messages.xPosition)).toBe(33.4)
+  field(messages.yPosition, "25.6")
+  fireEvent.keyDown(
+    screen.getByLabelText(messages.yPosition, { selector: "input" }),
+    { key: "z", ctrlKey: true }
+  )
+  expect(read(messages.yPosition)).toBe(25.6)
+  fireEvent.keyDown(hit(), { key: "z", ctrlKey: true })
+  expect(read(messages.yPosition)).toBe(54)
+  fireEvent.keyDown(hit(), { key: "z", metaKey: true, shiftKey: true })
+  expect(read(messages.yPosition)).toBe(25.6)
+  const scroll = vi.fn()
+  container.querySelector(".scroll-mt-6")!.scrollIntoView = scroll
+  click(messages.backToPreview)
+  expect(scroll).toHaveBeenCalledWith({ block: "start" })
+  expect(document.activeElement).toBe(hit())
+  click(messages.addText)
+  await waitFor(() =>
+    expect(container.querySelectorAll("[data-layer-id]")).toHaveLength(2)
+  )
+  fireEvent.keyDown(hit(), { key: "Delete" })
+  expect(layerButtons()).toHaveLength(1)
+  expect(container.querySelector('[data-layer-id="initial"]')).toBeNull()
+  fireEvent.keyDown(
+    container.querySelector<HTMLButtonElement>("[data-layer-id]")!,
+    { key: "Backspace" }
+  )
+  expect(screen.getByText(messages.emptyLayers)).toBeDefined()
+  fireEvent.keyDown(screen.getByRole("group", { name: messages.layersTitle }), {
+    key: "z",
+    ctrlKey: true,
+  })
+  expect(layerButtons()).toHaveLength(1)
+})
+
+test("converts a preset into custom coordinates without moving it", async () => {
+  render(<Client messages={messages} />)
+  await upload()
+  fireEvent.click(screen.getByText(messages.bottomRight))
+  click(messages.customPosition)
+  expect(
+    Number(
+      (
+        screen.getByLabelText(messages.xPosition, {
+          selector: "input",
+        }) as HTMLInputElement
+      ).value
+    )
+  ).toBeGreaterThan(50)
+  field(messages.yPosition, "10.5")
+  fireEvent.click(screen.getByText(messages.center))
+  expect(
+    screen.queryByLabelText(messages.xPosition, { selector: "input" })
+  ).toBeNull()
 })

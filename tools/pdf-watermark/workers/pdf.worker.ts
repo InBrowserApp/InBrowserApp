@@ -1,13 +1,11 @@
 import { inspectPdf, watermarkPdf } from "../core/pdf"
-import type { Options } from "../types"
+import type { PdfLayer } from "../core/pdf"
 
 type Request = { source: ArrayBuffer } & (
   | { type: "inspect" }
   | {
       type: "generate"
-      png: ArrayBuffer
-      options: Options
-      pages: readonly number[]
+      layers: readonly PdfLayer[]
     }
 )
 type Response =
@@ -19,12 +17,7 @@ async function handleRequest(request: Request): Promise<Response> {
   try {
     if (request.type === "inspect")
       return { ok: true, pages: await inspectPdf(request.source) }
-    const bytes = await watermarkPdf(
-      request.source,
-      request.png,
-      request.options,
-      request.pages
-    )
+    const bytes = await watermarkPdf(request.source, request.layers)
     return { ok: true, bytes: bytes.slice() }
   } catch (error) {
     return {

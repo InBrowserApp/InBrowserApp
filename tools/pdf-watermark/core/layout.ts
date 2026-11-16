@@ -37,6 +37,13 @@ function watermarkLayout(page: PageGeometry, aspect: number, options: Options) {
   boxHeight *= scale
   const centers: { x: number; y: number }[] = []
   if (options.layout === "single") {
+    if (options.position === "custom") {
+      centers.push({
+        x: (width * options.x) / 100,
+        y: height * (1 - options.y / 100),
+      })
+      return { centers, markWidth, markHeight, cos, sin }
+    }
     const col = options.position % 3
     const row = Math.floor(options.position / 3)
     centers.push({

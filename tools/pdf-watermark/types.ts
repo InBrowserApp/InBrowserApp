@@ -17,10 +17,31 @@ type Options = Readonly<{
   rotation: number
   opacity: number
   layout: "single" | "tile"
-  position: number
+  position: number | "custom"
+  x: number
+  y: number
   spacing: number
 }>
 type Watermark = Readonly<{ blob: Blob; width: number; height: number }>
+type WatermarkLayer = Readonly<{
+  id: string
+  options: Options
+  image: Readonly<{ id: string; file: File }> | null
+  range: string
+}>
+type PreparedLayer = Readonly<{
+  layer: WatermarkLayer
+  mark: Watermark | null
+  preparing: boolean
+  error: string
+  pages: readonly number[]
+  rangeError: string
+}>
+type ExportLayer = Readonly<{
+  mark: Watermark
+  options: Options
+  pages: readonly number[]
+}>
 type Source = Readonly<{ file: File; pages: readonly PageGeometry[] }>
 type Result = Readonly<{ blob: Blob; name: string }>
 
@@ -34,8 +55,20 @@ const DEFAULT_OPTIONS: Options = {
   opacity: 25,
   layout: "single",
   position: 4,
+  x: 50,
+  y: 50,
   spacing: 72,
 }
 
 export { DEFAULT_OPTIONS }
-export type { Messages, Options, Watermark, Source, Result, PageGeometry }
+export type {
+  Messages,
+  Options,
+  Watermark,
+  Source,
+  Result,
+  PageGeometry,
+  WatermarkLayer,
+  PreparedLayer,
+  ExportLayer,
+}

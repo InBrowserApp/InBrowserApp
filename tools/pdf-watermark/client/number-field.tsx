@@ -15,6 +15,7 @@ function NumberField({
   unit,
   description,
   onChange,
+  step = 1,
 }: Readonly<{
   label: string
   value: number
@@ -23,13 +24,17 @@ function NumberField({
   unit: string
   description?: string
   onChange: (value: number) => void
+  step?: number
 }>) {
   const id = useId()
   const [draft, setDraft] = useState(String(value))
   useEffect(() => setDraft(String(value)), [value])
   function update(n: number) {
     const next = Number.isFinite(n)
-      ? Math.max(min, Math.min(max, Math.round(n)))
+      ? Math.max(
+          min,
+          Math.min(max, Number((Math.round(n / step) * step).toFixed(2)))
+        )
       : value
     setDraft(String(next))
     onChange(next)
@@ -44,7 +49,7 @@ function NumberField({
           className="min-w-0 flex-1"
           min={min}
           max={max}
-          step={1}
+          step={step}
           value={[value]}
           onValueChange={([n]) => update(n ?? value)}
         />
@@ -57,6 +62,7 @@ function NumberField({
           autoComplete="off"
           min={min}
           max={max}
+          step={step}
           value={draft}
           onChange={(event) => {
             const raw = event.target.value

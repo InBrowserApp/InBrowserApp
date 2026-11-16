@@ -1,6 +1,8 @@
 ## Add a watermark to selected PDF pages
 
-Upload a PDF, enter text or choose a PNG or JPEG image, and adjust the watermark in the live preview. Choose a single watermark or a tiled pattern, set its rotation and opacity, and enter page ranges such as `1-3,5`. Leave the range blank to watermark every page.
+Upload a PDF and add text or PNG/JPEG watermarks. Select a watermark in the live preview, drag it to a custom position, resize it with a corner handle, or use the round handle to rotate it. Exact position, size, and rotation values are also available in the settings. Shift snaps rotation to 15° increments, and arrow keys move the selected watermark.
+
+Combine up to 10 independent watermarks, such as a logo and a confidentiality label. Each has its own content, opacity, layout, and page range. Copy, delete, reorder, undo, and redo edits. Choose a single watermark or tiled pattern for each layer. Enter ranges such as `1-3,5`, or leave a layer's range blank to apply it to every page. Positions are relative to the visible page, including rotated and cropped pages; watermarks placed over an edge are clipped to that page.
 
 ## Private processing, original content preserved
 
