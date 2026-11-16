@@ -1,0 +1,4 @@
+{
+  "name": "File Type Detector",
+  "description": "Identify file formats by their signatures, check extension mismatches, and inspect MIME types and a hex preview locally in your browser."
+}
