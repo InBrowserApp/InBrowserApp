@@ -1,10 +1,4 @@
-import {
-  startTransition,
-  useDeferredValue,
-  useEffect,
-  useId,
-  useState,
-} from "react"
+import { startTransition, useEffect, useId, useState } from "react"
 
 import {
   DEFAULT_FLAGS,
@@ -20,18 +14,16 @@ import { PatternCard } from "./components/pattern-card"
 import { ResultsCard } from "./components/results-card"
 import { SourceInputCard } from "./components/source-input-card"
 import { SummaryCard } from "./components/summary-card"
+import { getExportState } from "./client/export-state"
+import { useRegexAnalysis } from "./client/use-regex-analysis"
 import {
   REGEX_FLAGS,
-  analyzeRegex,
   compileRegex,
-  formatMatchesForExport,
   type RegexFlag,
-  type RegexMatch,
   type RegexResultView,
 } from "./core/regex-tester-replacer"
 
 import type {
-  RegexExportState,
   RegexFlagOption,
   RegexTesterReplacerMessages,
   RegexViewOption,
@@ -57,25 +49,19 @@ function RegexTesterReplacerClient({
     useState<RegexResultView>(DEFAULT_RESULT_VIEW)
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
 
-  const deferredSourceText = useDeferredValue(sourceText)
-  const deferredPattern = useDeferredValue(pattern)
-  const deferredReplacement = useDeferredValue(replacement)
-  const deferredFlags = useDeferredValue(selectedFlags)
-
   const livePatternState = compileRegex(pattern, selectedFlags)
   const patternError = livePatternState.error
   const hasPattern = pattern.trim().length > 0
   const hasSourceText = sourceText.length > 0
-  const analysis = analyzeRegex(
-    deferredSourceText,
-    deferredPattern,
-    deferredFlags,
-    deferredReplacement,
-    {
-      matchLimit: MATCH_LIMIT,
-      previewLimit: PREVIEW_LIMIT,
-    }
-  )
+  const { analysis, isAnalyzing, analysisErrorMessage } = useRegexAnalysis({
+    sourceText,
+    pattern,
+    flags: selectedFlags,
+    replacement,
+    matchLimit: MATCH_LIMIT,
+    previewLimit: PREVIEW_LIMIT,
+    messages,
+  })
 
   const flagOptions: readonly RegexFlagOption[] = [
     { key: "g", label: messages.globalFlagLabel },
@@ -94,7 +80,7 @@ function RegexTesterReplacerClient({
     activeView,
     analysis.replacementOutput,
     analysis.matches,
-    patternError
+    Boolean(patternError || analysisErrorMessage || isAnalyzing)
   )
 
   useEffect(() => {
@@ -253,8 +239,10 @@ function RegexTesterReplacerClient({
       <SummaryCard
         hasPattern={hasPattern}
         hasSourceText={hasSourceText}
+        isAnalyzing={isAnalyzing}
         messages={messages}
         patternError={patternError}
+        analysisErrorMessage={analysisErrorMessage}
         summary={analysis.summary}
       />
 
@@ -263,9 +251,11 @@ function RegexTesterReplacerClient({
         exportState={{ ...exportState, downloadUrl }}
         hasPattern={hasPattern}
         hasSourceText={hasSourceText}
+        isAnalyzing={isAnalyzing}
         matchLimit={MATCH_LIMIT}
         messages={messages}
         patternError={patternError}
+        analysisErrorMessage={analysisErrorMessage}
         previewLimit={PREVIEW_LIMIT}
         result={analysis}
         viewOptions={viewOptions}
@@ -273,39 +263,6 @@ function RegexTesterReplacerClient({
       />
     </div>
   )
-}
-
-function getExportState(
-  activeView: RegexResultView,
-  replacementOutput: string,
-  matches: readonly RegexMatch[],
-  patternError: string | null
-): Omit<RegexExportState, "downloadUrl"> {
-  if (patternError) {
-    return {
-      downloadName: "result.txt",
-      value: "",
-    }
-  }
-
-  if (activeView === "matches") {
-    return {
-      downloadName: "regex-matches.tsv",
-      value: formatMatchesForExport(matches),
-    }
-  }
-
-  if (activeView === "replace") {
-    return {
-      downloadName: "replaced-text.txt",
-      value: replacementOutput,
-    }
-  }
-
-  return {
-    downloadName: "result.txt",
-    value: "",
-  }
 }
 
 export default RegexTesterReplacerClient

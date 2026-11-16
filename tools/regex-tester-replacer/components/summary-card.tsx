@@ -13,19 +13,28 @@ import type { RegexTesterReplacerLocalizedCatalog } from "../types"
 type SummaryCardProps = Readonly<{
   hasPattern: boolean
   hasSourceText: boolean
+  isAnalyzing: boolean
   messages: RegexTesterReplacerLocalizedCatalog
   patternError: string | null
+  analysisErrorMessage: string | null
   summary: RegexAnalysisSummary
 }>
 
 function SummaryCard({
   hasPattern,
   hasSourceText,
+  isAnalyzing,
   messages,
   patternError,
+  analysisErrorMessage,
   summary,
 }: SummaryCardProps) {
-  const canShowCounts = hasPattern && hasSourceText && !patternError
+  const canShowCounts =
+    hasPattern &&
+    hasSourceText &&
+    !patternError &&
+    !analysisErrorMessage &&
+    !isAnalyzing
 
   return (
     <Card>
@@ -57,7 +66,9 @@ function SummaryCard({
           </div>
         ) : (
           <p className="text-sm text-muted-foreground">
-            {messages.summaryEmpty}
+            {isAnalyzing
+              ? messages.analysisLoadingLabel
+              : messages.summaryEmpty}
           </p>
         )}
       </CardContent>
