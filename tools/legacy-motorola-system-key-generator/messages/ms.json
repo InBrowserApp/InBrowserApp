@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "Format Legasi Sahaja",
+  "compatibilityDescription": "Menjana format kunci perisian yang berasaskan BatLabs. Tidak serasi dengan ASTRO 25 Portable CPS (termasuk XTS5000), APX CPS atau Advanced System Keys (ASK).",
+  "inputTitle": "ID Sistem",
+  "inputDescription": "Masukkan ID sistem trunking Motorola legasi.",
+  "systemIdLabel": "ID Sistem (Heks)",
+  "systemIdHelp": "Gunakan 1–4 digit heksadesimal (0–9, A–F). ID pendek ditambah sifar di hadapan.",
+  "invalidSystemId": "Masukkan 1–4 digit heksadesimal (0–9, A–F), tanpa awalan 0x.",
+  "outputTitle": "Fail Kunci Legasi",
+  "emptyState": "Masukkan ID Sistem untuk pratonton dan memuat turun fail .KEY anda.",
+  "normalizedIdLabel": "ID Dinormalkan",
+  "filenameLabel": "Nama Fail",
+  "fileSizeLabel": "Saiz Fail",
+  "fileSizeValue": "27 bait",
+  "hexPreviewLabel": "Pratonton Heksadesimal",
+  "downloadLabel": "Muat Turun .KEY",
+  "sourceLabel": "Pelaksanaan Rujukan",
+  "licenseLabel": "Lesen ISC"
+}
