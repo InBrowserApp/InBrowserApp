@@ -1,31 +1,8 @@
 diff --git a/dist/index.js b/dist/index.js
-index 58ef2c42a6344c58b563732bb09ca2929aca05b5..3cc3c81914f1cd875cf82356fa15c4ffa2e3f66c 100644
+index fcf3c3c..627960e 100644
 --- a/dist/index.js
 +++ b/dist/index.js
-@@ -1,13 +1,6 @@
--import { getRegionMapAtlas, normalizeRegionMapKey, REGION_MAP_US_STATE_ALIASES, REGION_MAP_COUNTRY_ALIASES, loadRegionMapAtlas } from './chunk-YVOPQP3D.js';
- import * as React2 from 'react';
- import { forwardRef, useRef, useState, useCallback, useEffect, useMemo, useImperativeHandle, createElement } from 'react';
- import { useVirtualizer } from '@tanstack/react-virtual';
--import { renderToStaticMarkup } from 'react-dom/server';
--import { hierarchy, partition, treemap, treemapDice, treemapBinary } from 'd3-hierarchy';
--import { geoIdentity, geoMercator, geoNaturalEarth1, geoPath } from 'd3-geo';
--import { scaleBand, scaleLinear, scalePoint } from 'd3-scale';
--import { line, curveLinear, curveCatmullRom, area, curveLinearClosed, pie, arc, symbol, symbolCircle, symbolStar, symbolCross, symbolTriangle, symbolSquare, symbolDiamond } from 'd3-shape';
--import createREGL from 'regl';
- import { jsxs, jsx, Fragment } from 'react/jsx-runtime';
- import { Virtualizer } from '@tanstack/virtual-core';
- 
-@@ -8377,7 +8370,7 @@ function renderChartPlot(chart, palette, layout, chartType, selectedChartElement
-   }
-   return renderUnsupported(chart, palette, layout, chartType);
- }
--var MemoChartSvg = React2.memo(function MemoChartSvg2({
-+var MemoChartSvg = /* @__PURE__ */ React2.memo(function MemoChartSvg2({
-   chart,
-   onChartElementDoubleClick,
-   onChartElementPointerDown,
-@@ -9283,7 +9276,7 @@ var PresentationAssetCache = class {
+@@ -3311,7 +3311,7 @@ var PresentationAssetCache = class {
      const pending = convert(ownedBytes.buffer, 2048, 2048, {
        dpiScale: 2,
        maxCanvasDimension: 4096,
@@ -34,29 +11,7 @@ index 58ef2c42a6344c58b563732bb09ca2929aca05b5..3cc3c81914f1cd875cf82356fa15c4ff
        fontFamilyMap: METAFILE_FONT_MAP
      }).then((url) => url || void 0);
      this.metafileUrls.set(assetId, pending);
-@@ -10178,16 +10171,11 @@ var NormalizedPresentationViewer = class {
-     const master = this.presentation.masters.find((entry) => entry.id === slide?.masterId);
-     return this.presentation.themes.find((entry) => entry.id === master?.themeId) ?? this.presentation.themes[0];
-   }
--  createChart(node) {
--    const container = document.createElement("div");
--    container.style.width = "100%";
--    container.style.height = "100%";
--    container.setAttribute("role", "img");
--    container.setAttribute("aria-label", node.title ?? `${node.chartType} chart`);
--    if (renderChartInto(container, node, this.themeForSlide(this.renderingSlideIndex))) {
--      return container;
--    }
--    return this.createChartFallback(node);
-+  createChart() {
-+    // This package patch is exclusively for the binary PPT viewer. Its native
-+    // parser emits shapes/images, including saved EMF/WMF chart previews, never
-+    // DrawingML chart nodes. Do not reuse this build for modern presentations.
-+    throw new PptxViewerError("render-failed", "DrawingML charts are unavailable in the legacy-only renderer.");
-   }
-   createChartFallback(node) {
-     const chart = document.createElement("div");
-@@ -11188,18 +11176,13 @@ function isPresentationDocument(value) {
+@@ -5759,18 +5759,13 @@ function isPresentationDocument(value) {
  function parserFailure(error) {
    if (error instanceof PptxViewerError) return error;
    const message = error instanceof Error ? error.message : String(error);
@@ -64,7 +19,7 @@ index 58ef2c42a6344c58b563732bb09ca2929aca05b5..3cc3c81914f1cd875cf82356fa15c4ff
 -  if (normalized.includes("encrypted presentation")) {
 -    return new PptxViewerError(
 -      "encrypted-document",
--      "Encrypted PowerPoint presentations are not supported.",
+-      "Encrypted presentations are not supported.",
 -      { cause: error }
 -    );
 -  }
@@ -81,8 +36,9 @@ index 58ef2c42a6344c58b563732bb09ca2929aca05b5..3cc3c81914f1cd875cf82356fa15c4ff
  }
  async function parseWithWasm(bytes, options) {
    try {
-@@ -11228,12 +11211,13 @@ var workerRequestId = 0;
- async function parseInWorker(bytes, signal, wasmSource) {
+@@ -5797,12 +5792,13 @@ async function parseWithWasm(bytes, options) {
+ var workerRequestId = 0;
+ async function parseInWorker(bytes, signal, wasmSource, parserOptions) {
    if (signal?.aborted) throw new DOMException("Parsing was aborted.", "AbortError");
 +  // Allocate before starting a worker so allocation failures cannot leak it.
 +  const owned = bytes.slice().buffer;
@@ -95,8 +51,7 @@ index 58ef2c42a6344c58b563732bb09ca2929aca05b5..3cc3c81914f1cd875cf82356fa15c4ff
    return await new Promise((resolve, reject) => {
      let settled = false;
      const cleanup = () => {
-       signal?.removeEventListener("abort", abort);
-@@ -12635,6 +12619,22 @@ async function serializeSlide(slide, naturalWidth, naturalHeight, width, height, si
+@@ -7297,6 +7293,22 @@ async function serializeSlide(slide, naturalWidth, naturalHeight, width, height,
      }
    });
    await inlineResources(clone, signal);
@@ -119,7 +74,7 @@ index 58ef2c42a6344c58b563732bb09ca2929aca05b5..3cc3c81914f1cd875cf82356fa15c4ff
    const content = new XMLSerializer().serializeToString(clone);
    return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${naturalWidth} ${naturalHeight}"><foreignObject width="${naturalWidth}" height="${naturalHeight}">${content}</foreignObject></svg>`;
  }
-@@ -12781,8 +12781,11 @@ var ThumbnailRenderer = class {
+@@ -7441,8 +7453,11 @@ var ThumbnailRenderer = class {
            handle.element,
            size.naturalWidth,
            size.naturalHeight,

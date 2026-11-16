@@ -1,5 +1,5 @@
 diff --git a/dist/core/cfb.js b/dist/core/cfb.js
-index 7ced727f10e8b7e9da567faf04dade3086858dc9..ead86cb9440d5be0a2acb2c39184364020d08cbc 100644
+index 78008d8..8157e4e 100644
 --- a/dist/core/cfb.js
 +++ b/dist/core/cfb.js
 @@ -5,7 +5,6 @@ const FREESECT = 0xffffffff;
@@ -37,7 +37,7 @@ index 7ced727f10e8b7e9da567faf04dade3086858dc9..ead86cb9440d5be0a2acb2c391843640
      const out = new Uint8Array(chain.length * sectorSize);
      let offset = 0;
      for (const sid of chain) {
-@@ -212,7 +211,7 @@ export function parseCFB(input, _options = {}) {
+@@ -207,7 +206,7 @@ export function parseCFB(input, _options = {}) {
      function readMiniStream(entry) {
          if (entry.startSector < 0)
              return new Uint8Array(0);
