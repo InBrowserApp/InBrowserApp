@@ -117,6 +117,7 @@
     "@tool/image-to-png-converter": "workspace:*",
     "@tool/image-to-webp-converter": "workspace:*",
     "@tool/image-viewer": "workspace:*",
+    "@tool/image-watermark": "workspace:*",
     "@tool/imei-validator": "workspace:*",
     "@tool/ip-cidr-normalizer": "workspace:*",
     "@tool/ip-info-lookup": "workspace:*",
