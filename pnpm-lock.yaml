@@ -4317,10 +4317,10 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       file-type:
         specifier: 'catalog:'
-        version: 21.3.4
+        version: 21.3.4(supports-color@10.2.2)
       mime-db:
         specifier: 'catalog:'
         version: 1.54.0
@@ -5722,7 +5722,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -20305,7 +20305,7 @@ snapshots:
       '@types/react': 19.2.17
       '@types/react-dom': 19.2.3(@types/react@19.2.17)
 
-  '@tokenizer/inflate@0.4.1':
+  '@tokenizer/inflate@0.4.1(supports-color@10.2.2)':
     dependencies:
       debug: 4.4.3(supports-color@10.2.2)
       token-types: 6.2.0
@@ -21954,9 +21954,9 @@ snapshots:
     dependencies:
       is-unicode-supported: 2.1.0
 
-  file-type@21.3.4:
+  file-type@21.3.4(supports-color@10.2.2):
     dependencies:
-      '@tokenizer/inflate': 0.4.1
+      '@tokenizer/inflate': 0.4.1(supports-color@10.2.2)
       strtok3: 10.8.0
       token-types: 6.2.0
       uint8array-extras: 1.6.0
