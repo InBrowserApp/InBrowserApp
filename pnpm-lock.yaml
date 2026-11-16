@@ -1,3 +1,170 @@
+---
+lockfileVersion: '9.0'
+
+importers:
+
+  .:
+    configDependencies: {}
+    packageManagerDependencies:
+      pnpm:
+        specifier: 12.21.0
+        version: 12.21.0
+
+packages:
+
+  '@pnpm/exe.android-arm64@12.21.0':
+    resolution: {integrity: sha512-iaWidxR5B9NUBpwMznCQu1yUpKB6BjTY5BYX2lORj76VsfINdj8Z8XWSzSNrGI8qlxa28Jzdp5fiaspzOaJZlA==}
+    cpu: [arm64]
+    os: [android]
+
+  '@pnpm/exe.android-x64@12.21.0':
+    resolution: {integrity: sha512-35e5v3wlwjIYxDywq+R6/z8CE4gLOEgRxt18yqz1tMRLmx2mnW+CFJI2Q8+srTNjn7gykXUC0x1k195JNikC5A==}
+    cpu: [x64]
+    os: [android]
+
+  '@pnpm/exe.darwin-arm64@12.21.0':
+    resolution: {integrity: sha512-F5OyMX/6zLSowpTZEQRojbCmPS1Pq+fyRaIinslsIe6Glh3qbyQ52u+Fe0eEzSaRuIbWZkXmAAXSWh6Q5Wrlgg==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@pnpm/exe.darwin-x64@12.21.0':
+    resolution: {integrity: sha512-EzpvcsaE6hrrgYeEiAFYd2rSgFybYyxXhkAY7K3y6Hg3loVfcyJ81hHczpFzi8lW5RXtUlFECRPZ8ZAMRFQYYg==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@pnpm/exe.freebsd-x64@12.21.0':
+    resolution: {integrity: sha512-wNjuEnmdLks4aayPu/QZWQ5tQM9Jn+odUp/vwQM8BXRYoulkTZhtZTHoD60N6mUdLWef1hgUeUh8llNGEUsimw==}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@pnpm/exe.linux-arm64-musl@12.21.0':
+    resolution: {integrity: sha512-Ceit9zn4g5ZqCJtx1fV8eJE7p8aeXMrGZ+Dc01vRqZLIUNgNeI+Ur0ruyqxtsnJx6rGADyXzohumxPLHjaJ5AQ==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@pnpm/exe.linux-arm64@12.21.0':
+    resolution: {integrity: sha512-4Oj/iF2TDCe2lcH0n4TupPR5sSdrNLclJB6xBElLMPCUOAvBhdf2rRlSaO5M4erJ6g4Fyy7YTXTpcmfFsKyxEA==}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-ppc64@12.21.0':
+    resolution: {integrity: sha512-s2o7rdSDeUTBFsNqxptpZXlTgT6cojmMVUOvTQvFNSv6Easian02ha4tR32fwwD97Au4YzIIjMCwywCF4D82Sw==}
+    cpu: [ppc64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-riscv64@12.21.0':
+    resolution: {integrity: sha512-EYv3GzxeBTITCuM3yGHHbpRFpUvyulkXpQ6LsjKAQNL3iaba1E6h9iDmlouLb3Io4AMMsfdk0/uG6poQ41uewA==}
+    cpu: [riscv64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-s390x@12.21.0':
+    resolution: {integrity: sha512-8VXGNGVNEfs7pL9GTZOzFxjFEnMt4WL3rLOADR5/kPQ7ROTV9GfpVI2DPO/zArXFSkvfc9Zad/WypHLbvzoaTQ==}
+    cpu: [s390x]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.linux-x64-musl@12.21.0':
+    resolution: {integrity: sha512-MnC5vpIXYubhDZCgCwlfJMg7Cg6HupN2IuouT9gD/tUmOfVdQYqeyYccWbthyo/Jeto8de1oQlxeRN1+1Hl2DQ==}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@pnpm/exe.linux-x64@12.21.0':
+    resolution: {integrity: sha512-8eufCjHXspKbNS/kh8q4Q0gqJoOuvC4Q5pgos6XS8By/nAMtP+jf8F1Cw9er840kfAX+PJ/ts+A9qnLE91rvXQ==}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@pnpm/exe.netbsd-x64@12.21.0':
+    resolution: {integrity: sha512-eyh1M8hQZCkLWxuva7S/fc1SbFbgqg0/5di0dgWmyiuc2Io3dbWVihDun8X+XM8zsR5uhIDvvZpbS9aZQbCovg==}
+    cpu: [x64]
+    os: [netbsd]
+
+  '@pnpm/exe.win32-arm64@12.21.0':
+    resolution: {integrity: sha512-7xTxxUXo/grRLivSeIl6B21gnsz7ooe5EMPcJmQqwxc8WLJVReN8MzrlHru8bqXfVr4X3+6ZGZscntKenlCBqQ==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@pnpm/exe.win32-x64@12.21.0':
+    resolution: {integrity: sha512-9TpkJemVApxJ1Z1w0ZFGN+AuSx4nJOqXSJUqMqDvaXTYwGOzvBiiWdFP9GN0ketiWCQS1Q0/pza2E7I3pP0OBQ==}
+    cpu: [x64]
+    os: [win32]
+
+  pnpm@12.21.0:
+    resolution: {integrity: sha512-Zv2CeO4ok1zpUXktNDZ/869cQyonVkRYIwKVM4NbjaUpu+C+UTCv1W7QcT+4eJ5Hutgtk71a4v5UsVVi1idu8A==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+snapshots:
+
+  '@pnpm/exe.android-arm64@12.21.0':
+    optional: true
+
+  '@pnpm/exe.android-x64@12.21.0':
+    optional: true
+
+  '@pnpm/exe.darwin-arm64@12.21.0':
+    optional: true
+
+  '@pnpm/exe.darwin-x64@12.21.0':
+    optional: true
+
+  '@pnpm/exe.freebsd-x64@12.21.0':
+    optional: true
+
+  '@pnpm/exe.linux-arm64-musl@12.21.0':
+    optional: true
+
+  '@pnpm/exe.linux-arm64@12.21.0':
+    optional: true
+
+  '@pnpm/exe.linux-ppc64@12.21.0':
+    optional: true
+
+  '@pnpm/exe.linux-riscv64@12.21.0':
+    optional: true
+
+  '@pnpm/exe.linux-s390x@12.21.0':
+    optional: true
+
+  '@pnpm/exe.linux-x64-musl@12.21.0':
+    optional: true
+
+  '@pnpm/exe.linux-x64@12.21.0':
+    optional: true
+
+  '@pnpm/exe.netbsd-x64@12.21.0':
+    optional: true
+
+  '@pnpm/exe.win32-arm64@12.21.0':
+    optional: true
+
+  '@pnpm/exe.win32-x64@12.21.0':
+    optional: true
+
+  pnpm@12.21.0:
+    optionalDependencies:
+      '@pnpm/exe.android-arm64': 12.21.0
+      '@pnpm/exe.android-x64': 12.21.0
+      '@pnpm/exe.darwin-arm64': 12.21.0
+      '@pnpm/exe.darwin-x64': 12.21.0
+      '@pnpm/exe.freebsd-x64': 12.21.0
+      '@pnpm/exe.linux-arm64': 12.21.0
+      '@pnpm/exe.linux-arm64-musl': 12.21.0
+      '@pnpm/exe.linux-ppc64': 12.21.0
+      '@pnpm/exe.linux-riscv64': 12.21.0
+      '@pnpm/exe.linux-s390x': 12.21.0
+      '@pnpm/exe.linux-x64': 12.21.0
+      '@pnpm/exe.linux-x64-musl': 12.21.0
+      '@pnpm/exe.netbsd-x64': 12.21.0
+      '@pnpm/exe.win32-arm64': 12.21.0
+      '@pnpm/exe.win32-x64': 12.21.0
+
+---
 lockfileVersion: '9.0'
 
 settings:
@@ -422,7 +589,7 @@ catalogs:
       version: 4.105.0
     xlsx:
       specifier: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
-      version: 0.20.3
+      version: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
     xml-js:
       specifier: ^1.6.11
       version: 1.6.11
@@ -434,33 +601,15 @@ catalogs:
       version: 4.4.3
 
 patchedDependencies:
-  '@extend-ai/react-pptx@0.2.2':
-    hash: bde606e53b22a946dedd6ad4aae1c54fc95d1f338548800b490f5f4c820869cc
-    path: patches/@extend-ai__react-pptx@0.2.2.patch
-  '@file-viewer/doc@3.1.2':
-    hash: e9ec60eab3809b5dada43262fa15902aa67911a6e37b47134db0989557687500
-    path: patches/@file-viewer__doc@3.1.2.patch
-  '@matbee/libreoffice-converter@2.7.2':
-    hash: 952404a2b37db15a156290b4fe621c0fbc76f77277d91ab2d9f09a2145385dde
-    path: patches/@matbee__libreoffice-converter@2.7.2.patch
-  '@silurus/ooxml@0.88.0':
-    hash: 9258ea89fb47657a16ac77502fe8f963b34d3c89a20465d44065fae61ceff3cf
-    path: patches/@silurus__ooxml@0.88.0.patch
-  caj2pdf-rust@0.6.1:
-    hash: 284d32b89a54b2c4cf716b538dda63c896c90a673dadb6a8bf1d35d6228f500d
-    path: patches/caj2pdf-rust@0.6.1.patch
-  curlconverter@4.12.0:
-    hash: c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484
-    path: patches/curlconverter@4.12.0.patch
-  foliate-js@1.0.1:
-    hash: d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236
-    path: patches/foliate-js@1.0.1.patch
-  rtf-viewer@1.3.1:
-    hash: 14297200e40364d833c6168a66aa6ee4945f324712a4629fdc9d18d93becd7a5
-    path: patches/rtf-viewer@1.3.1.patch
-  xlsx@0.20.3:
-    hash: 2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45
-    path: patches/xlsx@0.20.3.patch
+  '@extend-ai/react-pptx@0.2.2': bde606e53b22a946dedd6ad4aae1c54fc95d1f338548800b490f5f4c820869cc
+  '@file-viewer/doc@3.1.2': e9ec60eab3809b5dada43262fa15902aa67911a6e37b47134db0989557687500
+  '@matbee/libreoffice-converter@2.7.2': 952404a2b37db15a156290b4fe621c0fbc76f77277d91ab2d9f09a2145385dde
+  '@silurus/ooxml@0.88.0': 9258ea89fb47657a16ac77502fe8f963b34d3c89a20465d44065fae61ceff3cf
+  caj2pdf-rust@0.6.1: 284d32b89a54b2c4cf716b538dda63c896c90a673dadb6a8bf1d35d6228f500d
+  curlconverter@4.12.0: c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484
+  foliate-js@1.0.1: d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236
+  rtf-viewer@1.3.1: 734830adc8d033bcf48cd7b360822e1850f1818ebbd2c2582a7a52637a3d7f3d
+  xlsx@0.20.3: 2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45
 
 importers:
 
@@ -474,13 +623,13 @@ importers:
         version: 20.5.3
       '@lhci/cli':
         specifier: 'catalog:'
-        version: 0.15.1
+        version: 0.15.1(supports-color@10.2.2)
       '@vitest/coverage-v8':
         specifier: 'catalog:'
         version: 4.1.9(vitest@4.1.9)
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       dependency-cruiser:
         specifier: 'catalog:'
         version: 17.4.3
@@ -516,10 +665,10 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: 'catalog:'
-        version: 4.3.14(astro@6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3))
+        version: 4.3.14(astro@6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3))(supports-color@10.2.2)
       '@astrojs/react':
         specifier: 'catalog:'
-        version: 4.4.2(@types/node@25.9.4)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(jiti@2.7.0)(lightningcss@1.32.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(tsx@4.22.4)(yaml@2.8.3)
+        version: 4.4.2(@types/node@25.9.4)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(jiti@2.7.0)(lightningcss@1.32.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       '@astrojs/sitemap':
         specifier: 'catalog:'
         version: 3.7.3
@@ -540,7 +689,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       buffer:
         specifier: 'catalog:'
         version: 6.0.3
@@ -1681,7 +1830,7 @@ importers:
         version: link:../tool-sdk
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
@@ -1728,7 +1877,7 @@ importers:
         version: 19.2.7(react@19.2.7)
       shadcn:
         specifier: 'catalog:'
-        version: 4.12.0(typescript@5.9.3)
+        version: 4.12.0(supports-color@10.2.2)(typescript@5.9.3)
       tailwind-merge:
         specifier: 'catalog:'
         version: 3.6.0
@@ -1765,7 +1914,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -1790,7 +1939,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -1812,7 +1961,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -1837,7 +1986,7 @@ importers:
         version: 2.8.26
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -1865,7 +2014,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.12.0
@@ -1893,7 +2042,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.12.0
@@ -1921,7 +2070,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       figlet:
         specifier: 'catalog:'
         version: 1.11.3
@@ -1958,7 +2107,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -1995,7 +2144,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -2029,7 +2178,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2054,7 +2203,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2079,7 +2228,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       jsbarcode:
         specifier: 'catalog:'
         version: 3.12.3
@@ -2113,7 +2262,7 @@ importers:
         version: 0.23.0
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2138,7 +2287,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2163,7 +2312,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2188,7 +2337,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2213,7 +2362,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2238,7 +2387,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2263,7 +2412,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2288,7 +2437,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2313,7 +2462,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2338,7 +2487,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2363,7 +2512,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2388,7 +2537,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2413,7 +2562,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       bcrypt-ts:
         specifier: 'catalog:'
         version: 8.0.1
@@ -2441,7 +2590,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       bcrypt-ts:
         specifier: 'catalog:'
         version: 8.0.1
@@ -2469,7 +2618,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2494,7 +2643,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       bip39:
         specifier: 'catalog:'
         version: 3.1.0
@@ -2525,7 +2674,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       blakejs:
         specifier: 'catalog:'
         version: 1.2.1
@@ -2553,7 +2702,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       blakejs:
         specifier: 'catalog:'
         version: 1.2.1
@@ -2581,7 +2730,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       blake3-wasm:
         specifier: 'catalog:'
         version: 2.1.5
@@ -2609,7 +2758,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2640,7 +2789,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -2674,7 +2823,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -2702,7 +2851,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2727,7 +2876,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2752,7 +2901,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2786,7 +2935,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -2817,7 +2966,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2842,7 +2991,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2867,7 +3016,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2892,7 +3041,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2917,7 +3066,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2945,7 +3094,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -2970,7 +3119,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -2995,7 +3144,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       color-convert:
         specifier: 'catalog:'
         version: 3.1.3
@@ -3026,7 +3175,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       color-convert:
         specifier: 'catalog:'
         version: 3.1.3
@@ -3057,7 +3206,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       color-convert:
         specifier: 'catalog:'
         version: 3.1.3
@@ -3085,7 +3234,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -3113,7 +3262,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3138,7 +3287,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3163,7 +3312,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3188,7 +3337,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       cron-parser:
         specifier: 'catalog:'
         version: 5.6.1
@@ -3222,7 +3371,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       is-ip:
         specifier: 'catalog:'
         version: 5.0.1
@@ -3250,7 +3399,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3275,7 +3424,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3300,7 +3449,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -3337,7 +3486,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       papaparse:
         specifier: 'catalog:'
         version: 5.5.4
@@ -3377,7 +3526,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3402,7 +3551,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       curlconverter:
         specifier: 'catalog:'
         version: 4.12.0(patch_hash=c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484)
@@ -3433,7 +3582,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3458,7 +3607,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3483,7 +3632,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3508,7 +3657,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3545,7 +3694,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -3582,7 +3731,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       dompurify:
         specifier: 'catalog:'
         version: 3.4.15
@@ -3613,7 +3762,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -3650,7 +3799,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3684,7 +3833,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -3727,7 +3876,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3752,7 +3901,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3783,7 +3932,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3814,7 +3963,7 @@ importers:
         version: 2.8.26
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3845,7 +3994,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3882,7 +4031,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -3910,7 +4059,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3938,7 +4087,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       dompurify:
         specifier: 'catalog:'
         version: 3.4.15
@@ -3969,7 +4118,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -3994,7 +4143,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4019,7 +4168,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       exifr:
         specifier: 'catalog:'
         version: 7.1.3
@@ -4053,7 +4202,7 @@ importers:
         version: 2.8.26
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4081,7 +4230,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4109,7 +4258,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4134,7 +4283,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4165,7 +4314,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       gifuct-js:
         specifier: 'catalog:'
         version: 2.1.2
@@ -4193,7 +4342,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       gifuct-js:
         specifier: 'catalog:'
         version: 2.1.2
@@ -4224,7 +4373,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -4252,7 +4401,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highwayhasher:
         specifier: 'catalog:'
         version: 0.4.4
@@ -4280,7 +4429,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4305,7 +4454,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       color-name:
         specifier: 'catalog:'
         version: 2.1.0
@@ -4333,7 +4482,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4358,7 +4507,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -4401,7 +4550,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -4432,7 +4581,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4457,7 +4606,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4494,7 +4643,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       cfb:
         specifier: 'catalog:'
         version: 1.2.2
@@ -4540,7 +4689,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4568,7 +4717,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4593,7 +4742,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4618,7 +4767,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4643,7 +4792,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4668,7 +4817,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4696,7 +4845,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4721,7 +4870,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4749,7 +4898,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4777,7 +4926,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -4808,7 +4957,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4833,7 +4982,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4861,7 +5010,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4886,7 +5035,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4911,7 +5060,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4936,7 +5085,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       is-ip:
         specifier: 'catalog:'
         version: 5.0.1
@@ -4964,7 +5113,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -4989,7 +5138,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5014,7 +5163,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5039,7 +5188,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5064,7 +5213,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -5098,7 +5247,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -5126,7 +5275,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -5154,7 +5303,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -5188,7 +5337,7 @@ importers:
         version: 3.0.1(ajv@8.20.0)
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5213,7 +5362,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       papaparse:
         specifier: 'catalog:'
         version: 5.5.4
@@ -5244,7 +5393,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -5275,7 +5424,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -5303,7 +5452,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -5337,7 +5486,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -5371,7 +5520,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5396,7 +5545,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5421,7 +5570,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5446,7 +5595,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       crypto-js:
         specifier: 'catalog:'
         version: 4.2.0
@@ -5477,7 +5626,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5502,7 +5651,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       dompurify:
         specifier: 'catalog:'
         version: 3.4.15
@@ -5533,7 +5682,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5558,7 +5707,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5586,7 +5735,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5611,7 +5760,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5639,7 +5788,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5664,7 +5813,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       dompurify:
         specifier: 'catalog:'
         version: 3.4.15
@@ -5710,7 +5859,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -5738,7 +5887,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.12.0
@@ -5766,7 +5915,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       crypto-js:
         specifier: 'catalog:'
         version: 4.2.0
@@ -5800,7 +5949,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5834,7 +5983,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -5865,7 +6014,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5890,7 +6039,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       mime-db:
         specifier: 'catalog:'
         version: 1.54.0
@@ -5924,7 +6073,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5952,7 +6101,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -5977,7 +6126,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6002,7 +6151,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       murmurhash3js-revisited:
         specifier: 'catalog:'
         version: 3.0.0
@@ -6033,7 +6182,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       murmurhash3js-revisited:
         specifier: 'catalog:'
         version: 3.0.0
@@ -6064,7 +6213,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       murmurhash3js-revisited:
         specifier: 'catalog:'
         version: 3.0.0
@@ -6095,7 +6244,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       is-ip:
         specifier: 'catalog:'
         version: 5.0.1
@@ -6126,7 +6275,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6157,7 +6306,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6191,7 +6340,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6216,7 +6365,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6244,7 +6393,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6278,7 +6427,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -6318,7 +6467,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -6355,7 +6504,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       dompurify:
         specifier: 'catalog:'
         version: 3.4.15
@@ -6398,7 +6547,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -6435,7 +6584,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6463,7 +6612,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -6500,7 +6649,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6525,7 +6674,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6550,7 +6699,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -6578,7 +6727,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -6606,7 +6755,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -6637,7 +6786,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -6668,7 +6817,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -6699,7 +6848,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -6727,7 +6876,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -6758,7 +6907,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -6786,7 +6935,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       openpgp:
         specifier: 'catalog:'
         version: 6.3.1
@@ -6814,7 +6963,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6842,7 +6991,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6867,7 +7016,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6898,7 +7047,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       cfb:
         specifier: 'catalog:'
         version: 1.2.2
@@ -6938,7 +7087,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -6966,7 +7115,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7000,7 +7149,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -7043,7 +7192,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7068,7 +7217,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7096,7 +7245,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -7133,7 +7282,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       qrcode:
         specifier: 'catalog:'
         version: 1.5.4
@@ -7164,7 +7313,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       jsqr:
         specifier: 'catalog:'
         version: 1.4.0
@@ -7192,7 +7341,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7217,7 +7366,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7242,7 +7391,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       bip39:
         specifier: 'catalog:'
         version: 3.1.0
@@ -7270,7 +7419,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7298,7 +7447,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7323,7 +7472,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       is-ip:
         specifier: 'catalog:'
         version: 5.0.1
@@ -7351,7 +7500,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7376,7 +7525,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       crypto-js:
         specifier: 'catalog:'
         version: 4.2.0
@@ -7407,7 +7556,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7432,7 +7581,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7457,7 +7606,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7482,7 +7631,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7507,7 +7656,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7538,7 +7687,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -7569,7 +7718,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7578,7 +7727,7 @@ importers:
         version: 19.2.7(react@19.2.7)
       rtf-viewer:
         specifier: 'catalog:'
-        version: 1.3.1(patch_hash=14297200e40364d833c6168a66aa6ee4945f324712a4629fdc9d18d93becd7a5)
+        version: 1.3.1(patch_hash=734830adc8d033bcf48cd7b360822e1850f1818ebbd2c2582a7a52637a3d7f3d)
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -7597,7 +7746,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7622,7 +7771,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.12.0
@@ -7650,7 +7799,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7675,7 +7824,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       crypto-js:
         specifier: 'catalog:'
         version: 4.2.0
@@ -7706,7 +7855,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7734,7 +7883,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7762,7 +7911,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7790,7 +7939,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7818,7 +7967,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7843,7 +7992,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7871,7 +8020,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7899,7 +8048,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7924,7 +8073,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7952,7 +8101,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -7980,7 +8129,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8005,7 +8154,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8030,7 +8179,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8055,7 +8204,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -8083,7 +8232,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8108,7 +8257,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8139,7 +8288,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8164,7 +8313,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -8195,7 +8344,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8223,7 +8372,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8248,7 +8397,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       crypto-js:
         specifier: 'catalog:'
         version: 4.2.0
@@ -8279,7 +8428,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8304,7 +8453,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8332,7 +8481,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8357,7 +8506,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       css-tree:
         specifier: 'catalog:'
         version: 3.2.1
@@ -8391,7 +8540,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       diff:
         specifier: 'catalog:'
         version: 8.0.4
@@ -8419,7 +8568,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8444,7 +8593,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8469,7 +8618,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8494,7 +8643,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8519,7 +8668,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8544,7 +8693,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8569,7 +8718,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -8600,7 +8749,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -8643,7 +8792,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -8677,7 +8826,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 5.7.284
@@ -8705,7 +8854,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8730,7 +8879,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8755,7 +8904,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8780,7 +8929,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       punycode:
         specifier: 'catalog:'
         version: 2.3.1
@@ -8811,7 +8960,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8836,7 +8985,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8861,7 +9010,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8886,7 +9035,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8911,7 +9060,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -8942,7 +9091,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8967,7 +9116,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -8992,7 +9141,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9017,7 +9166,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9042,7 +9191,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9067,7 +9216,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9092,7 +9241,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       crypto-js:
         specifier: 'catalog:'
         version: 4.2.0
@@ -9123,7 +9272,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9148,7 +9297,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9173,7 +9322,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9198,7 +9347,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9223,7 +9372,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9248,7 +9397,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9273,7 +9422,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9298,7 +9447,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.12.0
@@ -9329,7 +9478,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9363,7 +9512,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -9406,7 +9555,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -9446,7 +9595,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -9477,7 +9626,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.12.0
@@ -9505,7 +9654,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.12.0
@@ -9533,7 +9682,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9561,7 +9710,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.2.7
@@ -9589,7 +9738,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -9623,7 +9772,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -16912,16 +17061,22 @@ packages:
     resolution: {integrity: sha512-IdD13Z9N2Bu8EM6CM0fDV1E69olEYGHDU25X51YXmq8Y0CmJ2LNj6gOiBJgpS5JGUqFzECVhMNBW7R0sPdRTMQ==}
     peerDependencies:
       '@volar/language-service': ~2.4.0
+      typescript: '*'
     peerDependenciesMeta:
       '@volar/language-service':
+        optional: true
+      typescript:
         optional: true
 
   volar-service-typescript@0.0.70:
     resolution: {integrity: sha512-l46Bx4cokkUedTd74ojO5H/zqHZJ8SUuyZ0IB8JN4jfRqUM3bQFBHoOwlZCyZmOeO0A3RQNkMnFclxO4c++gsg==}
     peerDependencies:
       '@volar/language-service': ~2.4.0
+      typescript: '*'
     peerDependenciesMeta:
       '@volar/language-service':
+        optional: true
+      typescript:
         optional: true
 
   volar-service-yaml@0.0.70:
@@ -17288,8 +17443,8 @@ snapshots:
       volar-service-emmet: 0.0.70(@volar/language-service@2.4.28)
       volar-service-html: 0.0.70(@volar/language-service@2.4.28)
       volar-service-prettier: 0.0.70(@volar/language-service@2.4.28)(prettier@3.9.1)
-      volar-service-typescript: 0.0.70(@volar/language-service@2.4.28)
-      volar-service-typescript-twoslash-queries: 0.0.70(@volar/language-service@2.4.28)
+      volar-service-typescript: 0.0.70(@volar/language-service@2.4.28)(typescript@5.9.3)
+      volar-service-typescript-twoslash-queries: 0.0.70(@volar/language-service@2.4.28)(typescript@5.9.3)
       volar-service-yaml: 0.0.70(@volar/language-service@2.4.28)
       vscode-html-languageservice: 5.6.2
       vscode-uri: 3.1.0
@@ -17298,7 +17453,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@astrojs/markdown-remark@6.3.11':
+  '@astrojs/markdown-remark@6.3.11(supports-color@10.2.2)':
     dependencies:
       '@astrojs/internal-helpers': 0.7.6
       '@astrojs/prism': 3.3.0
@@ -17310,8 +17465,8 @@ snapshots:
       mdast-util-definitions: 6.0.0
       rehype-raw: 7.0.0
       rehype-stringify: 10.0.1
-      remark-gfm: 4.0.1
-      remark-parse: 11.0.0
+      remark-gfm: 4.0.1(supports-color@10.2.2)
+      remark-parse: 11.0.0(supports-color@10.2.2)
       remark-rehype: 11.1.2
       remark-smartypants: 3.0.2
       shiki: 3.23.0
@@ -17324,7 +17479,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/markdown-remark@7.2.0':
+  '@astrojs/markdown-remark@7.2.0(supports-color@10.2.2)':
     dependencies:
       '@astrojs/internal-helpers': 0.10.0
       '@astrojs/prism': 4.0.2
@@ -17334,8 +17489,8 @@ snapshots:
       mdast-util-definitions: 6.0.0
       rehype-raw: 7.0.0
       rehype-stringify: 10.0.1
-      remark-gfm: 4.0.1
-      remark-parse: 11.0.0
+      remark-gfm: 4.0.1(supports-color@10.2.2)
+      remark-parse: 11.0.0(supports-color@10.2.2)
       remark-rehype: 11.1.2
       remark-smartypants: 3.0.2
       unified: 11.0.5
@@ -17346,18 +17501,18 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.14(astro@6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3))':
+  '@astrojs/mdx@4.3.14(astro@6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3))(supports-color@10.2.2)':
     dependencies:
-      '@astrojs/markdown-remark': 6.3.11
-      '@mdx-js/mdx': 3.1.1
+      '@astrojs/markdown-remark': 6.3.11(supports-color@10.2.2)
+      '@mdx-js/mdx': 3.1.1(supports-color@10.2.2)
       acorn: 8.16.0
-      astro: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+      astro: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
       piccolore: 0.1.3
       rehype-raw: 7.0.0
-      remark-gfm: 4.0.1
+      remark-gfm: 4.0.1(supports-color@10.2.2)
       remark-smartypants: 3.0.2
       source-map: 0.7.6
       unist-util-visit: 5.1.0
@@ -17373,11 +17528,11 @@ snapshots:
     dependencies:
       prismjs: 1.30.0
 
-  '@astrojs/react@4.4.2(@types/node@25.9.4)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(jiti@2.7.0)(lightningcss@1.32.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(tsx@4.22.4)(yaml@2.8.3)':
+  '@astrojs/react@4.4.2(@types/node@25.9.4)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(jiti@2.7.0)(lightningcss@1.32.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3)':
     dependencies:
       '@types/react': 19.2.17
       '@types/react-dom': 19.2.3(@types/react@19.2.17)
-      '@vitejs/plugin-react': 4.7.0(vite@6.4.1(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.22.4)(yaml@2.8.3))
+      '@vitejs/plugin-react': 4.7.0(supports-color@10.2.2)(vite@6.4.1(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.22.4)(yaml@2.8.3))
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
       ultrahtml: 1.6.0
@@ -17422,16 +17577,16 @@ snapshots:
 
   '@babel/compat-data@7.29.0': {}
 
-  '@babel/core@7.29.0':
+  '@babel/core@7.29.0(supports-color@10.2.2)':
     dependencies:
       '@babel/code-frame': 7.29.7
       '@babel/generator': 7.29.1
       '@babel/helper-compilation-targets': 7.28.6
-      '@babel/helper-module-transforms': 7.28.6(@babel/core@7.29.0)
+      '@babel/helper-module-transforms': 7.28.6(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/helpers': 7.29.2
       '@babel/parser': 7.29.2
       '@babel/template': 7.28.6
-      '@babel/traverse': 7.29.0
+      '@babel/traverse': 7.29.0(supports-color@10.2.2)
       '@babel/types': 7.29.0
       '@jridgewell/remapping': 2.3.5
       convert-source-map: 2.0.0
@@ -17462,41 +17617,41 @@ snapshots:
       lru-cache: 5.1.1
       semver: 6.3.1
 
-  '@babel/helper-create-class-features-plugin@7.28.6(@babel/core@7.29.0)':
+  '@babel/helper-create-class-features-plugin@7.28.6(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@babel/core': 7.29.0
+      '@babel/core': 7.29.0(supports-color@10.2.2)
       '@babel/helper-annotate-as-pure': 7.27.3
-      '@babel/helper-member-expression-to-functions': 7.28.5
+      '@babel/helper-member-expression-to-functions': 7.28.5(supports-color@10.2.2)
       '@babel/helper-optimise-call-expression': 7.27.1
-      '@babel/helper-replace-supers': 7.28.6(@babel/core@7.29.0)
-      '@babel/helper-skip-transparent-expression-wrappers': 7.27.1
-      '@babel/traverse': 7.29.0
+      '@babel/helper-replace-supers': 7.28.6(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)
+      '@babel/helper-skip-transparent-expression-wrappers': 7.27.1(supports-color@10.2.2)
+      '@babel/traverse': 7.29.0(supports-color@10.2.2)
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helper-globals@7.28.0': {}
 
-  '@babel/helper-member-expression-to-functions@7.28.5':
+  '@babel/helper-member-expression-to-functions@7.28.5(supports-color@10.2.2)':
     dependencies:
-      '@babel/traverse': 7.29.0
+      '@babel/traverse': 7.29.0(supports-color@10.2.2)
       '@babel/types': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/helper-module-imports@7.28.6':
+  '@babel/helper-module-imports@7.28.6(supports-color@10.2.2)':
     dependencies:
-      '@babel/traverse': 7.29.0
+      '@babel/traverse': 7.29.0(supports-color@10.2.2)
       '@babel/types': 7.29.0
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/helper-module-transforms@7.28.6(@babel/core@7.29.0)':
+  '@babel/helper-module-transforms@7.28.6(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@babel/core': 7.29.0
-      '@babel/helper-module-imports': 7.28.6
+      '@babel/core': 7.29.0(supports-color@10.2.2)
+      '@babel/helper-module-imports': 7.28.6(supports-color@10.2.2)
       '@babel/helper-validator-identifier': 7.29.7
-      '@babel/traverse': 7.29.0
+      '@babel/traverse': 7.29.0(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -17506,18 +17661,18 @@ snapshots:
 
   '@babel/helper-plugin-utils@7.28.6': {}
 
-  '@babel/helper-replace-supers@7.28.6(@babel/core@7.29.0)':
+  '@babel/helper-replace-supers@7.28.6(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@babel/core': 7.29.0
-      '@babel/helper-member-expression-to-functions': 7.28.5
+      '@babel/core': 7.29.0(supports-color@10.2.2)
+      '@babel/helper-member-expression-to-functions': 7.28.5(supports-color@10.2.2)
       '@babel/helper-optimise-call-expression': 7.27.1
-      '@babel/traverse': 7.29.0
+      '@babel/traverse': 7.29.0(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/helper-skip-transparent-expression-wrappers@7.27.1':
+  '@babel/helper-skip-transparent-expression-wrappers@7.27.1(supports-color@10.2.2)':
     dependencies:
-      '@babel/traverse': 7.29.0
+      '@babel/traverse': 7.29.0(supports-color@10.2.2)
       '@babel/types': 7.29.0
     transitivePeerDependencies:
       - supports-color
@@ -17537,42 +17692,42 @@ snapshots:
     dependencies:
       '@babel/types': 7.29.0
 
-  '@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0)':
+  '@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0(supports-color@10.2.2))':
     dependencies:
-      '@babel/core': 7.29.0
+      '@babel/core': 7.29.0(supports-color@10.2.2)
       '@babel/helper-plugin-utils': 7.28.6
 
-  '@babel/plugin-syntax-typescript@7.28.6(@babel/core@7.29.0)':
+  '@babel/plugin-syntax-typescript@7.28.6(@babel/core@7.29.0(supports-color@10.2.2))':
     dependencies:
-      '@babel/core': 7.29.0
+      '@babel/core': 7.29.0(supports-color@10.2.2)
       '@babel/helper-plugin-utils': 7.28.6
 
-  '@babel/plugin-transform-modules-commonjs@7.28.6(@babel/core@7.29.0)':
+  '@babel/plugin-transform-modules-commonjs@7.28.6(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@babel/core': 7.29.0
-      '@babel/helper-module-transforms': 7.28.6(@babel/core@7.29.0)
+      '@babel/core': 7.29.0(supports-color@10.2.2)
+      '@babel/helper-module-transforms': 7.28.6(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/helper-plugin-utils': 7.28.6
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/plugin-transform-react-jsx-self@7.27.1(@babel/core@7.29.0)':
+  '@babel/plugin-transform-react-jsx-self@7.27.1(@babel/core@7.29.0(supports-color@10.2.2))':
     dependencies:
-      '@babel/core': 7.29.0
+      '@babel/core': 7.29.0(supports-color@10.2.2)
       '@babel/helper-plugin-utils': 7.28.6
 
-  '@babel/plugin-transform-react-jsx-source@7.27.1(@babel/core@7.29.0)':
+  '@babel/plugin-transform-react-jsx-source@7.27.1(@babel/core@7.29.0(supports-color@10.2.2))':
     dependencies:
-      '@babel/core': 7.29.0
+      '@babel/core': 7.29.0(supports-color@10.2.2)
       '@babel/helper-plugin-utils': 7.28.6
 
-  '@babel/plugin-transform-typescript@7.28.6(@babel/core@7.29.0)':
+  '@babel/plugin-transform-typescript@7.28.6(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@babel/core': 7.29.0
+      '@babel/core': 7.29.0(supports-color@10.2.2)
       '@babel/helper-annotate-as-pure': 7.27.3
-      '@babel/helper-create-class-features-plugin': 7.28.6(@babel/core@7.29.0)
+      '@babel/helper-create-class-features-plugin': 7.28.6(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)
       '@babel/helper-plugin-utils': 7.28.6
-      '@babel/helper-skip-transparent-expression-wrappers': 7.27.1
-      '@babel/plugin-syntax-typescript': 7.28.6(@babel/core@7.29.0)
+      '@babel/helper-skip-transparent-expression-wrappers': 7.27.1(supports-color@10.2.2)
+      '@babel/plugin-syntax-typescript': 7.28.6(@babel/core@7.29.0(supports-color@10.2.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -17581,14 +17736,14 @@ snapshots:
       core-js: 2.6.12
       regenerator-runtime: 0.13.11
 
-  '@babel/preset-typescript@7.28.5(@babel/core@7.29.0)':
+  '@babel/preset-typescript@7.28.5(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)':
     dependencies:
-      '@babel/core': 7.29.0
+      '@babel/core': 7.29.0(supports-color@10.2.2)
       '@babel/helper-plugin-utils': 7.28.6
       '@babel/helper-validator-option': 7.27.1
-      '@babel/plugin-syntax-jsx': 7.28.6(@babel/core@7.29.0)
-      '@babel/plugin-transform-modules-commonjs': 7.28.6(@babel/core@7.29.0)
-      '@babel/plugin-transform-typescript': 7.28.6(@babel/core@7.29.0)
+      '@babel/plugin-syntax-jsx': 7.28.6(@babel/core@7.29.0(supports-color@10.2.2))
+      '@babel/plugin-transform-modules-commonjs': 7.28.6(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)
+      '@babel/plugin-transform-typescript': 7.28.6(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -17600,7 +17755,7 @@ snapshots:
       '@babel/parser': 7.29.2
       '@babel/types': 7.29.0
 
-  '@babel/traverse@7.29.0':
+  '@babel/traverse@7.29.0(supports-color@10.2.2)':
     dependencies:
       '@babel/code-frame': 7.29.7
       '@babel/generator': 7.29.1
@@ -18347,19 +18502,19 @@ snapshots:
       '@kenjiuno/decompressrtf': 0.1.4
       iconv-lite: 0.6.3
 
-  '@lhci/cli@0.15.1':
+  '@lhci/cli@0.15.1(supports-color@10.2.2)':
     dependencies:
-      '@lhci/utils': 0.15.1
-      chrome-launcher: 0.13.4
-      compression: 1.8.1
+      '@lhci/utils': 0.15.1(supports-color@10.2.2)
+      chrome-launcher: 0.13.4(supports-color@10.2.2)
+      compression: 1.8.1(supports-color@10.2.2)
       debug: 4.4.3(supports-color@10.2.2)
-      express: 4.22.2
+      express: 4.22.2(supports-color@10.2.2)
       inquirer: 6.5.2
       isomorphic-fetch: 3.0.0
-      lighthouse: 12.6.1
-      lighthouse-logger: 1.2.0
+      lighthouse: 12.6.1(supports-color@10.2.2)
+      lighthouse-logger: 1.2.0(supports-color@10.2.2)
       open: 7.4.2
-      proxy-agent: 6.5.0
+      proxy-agent: 6.5.0(supports-color@10.2.2)
       tmp: 0.1.0
       uuid: 8.3.2
       yargs: 15.4.1
@@ -18373,12 +18528,12 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@lhci/utils@0.15.1':
+  '@lhci/utils@0.15.1(supports-color@10.2.2)':
     dependencies:
       debug: 4.4.3(supports-color@10.2.2)
       isomorphic-fetch: 3.0.0
       js-yaml: 3.15.2
-      lighthouse: 12.6.1
+      lighthouse: 12.6.1(supports-color@10.2.2)
       tree-kill: 1.2.2
     transitivePeerDependencies:
       - bare-abort-controller
@@ -18399,7 +18554,7 @@ snapshots:
     optionalDependencies:
       sharp: 0.34.5
 
-  '@mdx-js/mdx@3.1.1':
+  '@mdx-js/mdx@3.1.1(supports-color@10.2.2)':
     dependencies:
       '@types/estree': 1.0.9
       '@types/estree-jsx': 1.0.5
@@ -18411,14 +18566,14 @@ snapshots:
       estree-util-is-identifier-name: 3.0.0
       estree-util-scope: 1.0.0
       estree-walker: 3.0.3
-      hast-util-to-jsx-runtime: 2.3.6
+      hast-util-to-jsx-runtime: 2.3.6(supports-color@10.2.2)
       markdown-extensions: 2.0.0
       recma-build-jsx: 1.0.0
       recma-jsx: 1.0.1(acorn@8.16.0)
       recma-stringify: 1.0.0
-      rehype-recma: 1.0.0
-      remark-mdx: 3.1.1
-      remark-parse: 11.0.0
+      rehype-recma: 1.0.0(supports-color@10.2.2)
+      remark-mdx: 3.1.1(supports-color@10.2.2)
+      remark-parse: 11.0.0(supports-color@10.2.2)
       remark-rehype: 11.1.2
       source-map: 0.7.6
       unified: 11.0.5
@@ -18431,7 +18586,7 @@ snapshots:
 
   '@mixmark-io/domino@2.2.0': {}
 
-  '@modelcontextprotocol/sdk@1.29.0(zod@3.25.76)':
+  '@modelcontextprotocol/sdk@1.29.0(supports-color@10.2.2)(zod@3.25.76)':
     dependencies:
       '@hono/node-server': 1.19.12(hono@4.12.10)
       ajv: 8.20.0
@@ -18441,8 +18596,8 @@ snapshots:
       cross-spawn: 7.0.6
       eventsource: 3.0.7
       eventsource-parser: 3.0.6
-      express: 5.2.1
-      express-rate-limit: 8.3.2(express@5.2.1)
+      express: 5.2.1(supports-color@10.2.2)
+      express-rate-limit: 8.3.2(express@5.2.1(supports-color@10.2.2))
       hono: 4.12.10
       jose: 6.2.2
       json-schema-typed: 8.0.2
@@ -18947,12 +19102,12 @@ snapshots:
       '@xml-tools/parser': 1.0.11
       prettier: 3.9.1
 
-  '@puppeteer/browsers@2.13.2':
+  '@puppeteer/browsers@2.13.2(supports-color@10.2.2)':
     dependencies:
       debug: 4.4.3(supports-color@10.2.2)
-      extract-zip: 2.0.1
+      extract-zip: 2.0.1(supports-color@10.2.2)
       progress: 2.0.3
-      proxy-agent: 6.5.0
+      proxy-agent: 6.5.0(supports-color@10.2.2)
       semver: 7.8.1
       tar-fs: 3.1.2
       yargs: 17.7.3
@@ -20181,11 +20336,11 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vitejs/plugin-react@4.7.0(vite@6.4.1(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.22.4)(yaml@2.8.3))':
+  '@vitejs/plugin-react@4.7.0(supports-color@10.2.2)(vite@6.4.1(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.22.4)(yaml@2.8.3))':
     dependencies:
-      '@babel/core': 7.29.0
-      '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.29.0)
-      '@babel/plugin-transform-react-jsx-source': 7.27.1(@babel/core@7.29.0)
+      '@babel/core': 7.29.0(supports-color@10.2.2)
+      '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.29.0(supports-color@10.2.2))
+      '@babel/plugin-transform-react-jsx-source': 7.27.1(@babel/core@7.29.0(supports-color@10.2.2))
       '@rolldown/pluginutils': 1.0.0-beta.27
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
@@ -20448,11 +20603,11 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3):
+  astro@6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(tsx@4.22.4)(yaml@2.8.3):
     dependencies:
       '@astrojs/compiler': 4.0.0
       '@astrojs/internal-helpers': 0.10.0
-      '@astrojs/markdown-remark': 7.2.0
+      '@astrojs/markdown-remark': 7.2.0(supports-color@10.2.2)
       '@astrojs/telemetry': 3.3.2
       '@capsizecss/unpack': 4.0.0
       '@clack/prompts': 1.5.1
@@ -20609,11 +20764,11 @@ snapshots:
 
   blakejs@1.2.1: {}
 
-  body-parser@1.20.5:
+  body-parser@1.20.5(supports-color@10.2.2):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@10.2.2)
       depd: 2.0.0
       destroy: 1.2.0
       http-errors: 2.0.1
@@ -20626,7 +20781,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  body-parser@2.2.2:
+  body-parser@2.2.2(supports-color@10.2.2):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
@@ -20748,23 +20903,23 @@ snapshots:
     dependencies:
       readdirp: 5.0.0
 
-  chrome-launcher@0.13.4:
+  chrome-launcher@0.13.4(supports-color@10.2.2):
     dependencies:
       '@types/node': 25.9.4
       escape-string-regexp: 1.0.5
       is-wsl: 2.2.0
-      lighthouse-logger: 1.2.0
+      lighthouse-logger: 1.2.0(supports-color@10.2.2)
       mkdirp: 0.5.6
       rimraf: 3.0.2
     transitivePeerDependencies:
       - supports-color
 
-  chrome-launcher@1.2.1:
+  chrome-launcher@1.2.1(supports-color@10.2.2):
     dependencies:
       '@types/node': 25.9.4
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
-      lighthouse-logger: 2.0.2
+      lighthouse-logger: 2.0.2(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -20865,11 +21020,11 @@ snapshots:
     dependencies:
       mime-db: 1.54.0
 
-  compression@1.8.1:
+  compression@1.8.1(supports-color@10.2.2):
     dependencies:
       bytes: 3.1.2
       compressible: 2.0.18
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@10.2.2)
       negotiator: 0.6.4
       on-headers: 1.1.0
       safe-buffer: 5.2.1
@@ -21072,9 +21227,11 @@ snapshots:
     transitivePeerDependencies:
       - '@noble/hashes'
 
-  debug@2.6.9:
+  debug@2.6.9(supports-color@10.2.2):
     dependencies:
       ms: 2.0.0
+    optionalDependencies:
+      supports-color: 10.2.2
 
   debug@4.4.3(supports-color@10.2.2):
     dependencies:
@@ -21520,26 +21677,26 @@ snapshots:
 
   expect-type@1.3.0: {}
 
-  express-rate-limit@8.3.2(express@5.2.1):
+  express-rate-limit@8.3.2(express@5.2.1(supports-color@10.2.2)):
     dependencies:
-      express: 5.2.1
+      express: 5.2.1(supports-color@10.2.2)
       ip-address: 10.1.0
 
-  express@4.22.2:
+  express@4.22.2(supports-color@10.2.2):
     dependencies:
       accepts: 1.3.8
       array-flatten: 1.1.1
-      body-parser: 1.20.5
+      body-parser: 1.20.5(supports-color@10.2.2)
       content-disposition: 0.5.4
       content-type: 1.0.5
       cookie: 0.7.2
       cookie-signature: 1.0.7
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@10.2.2)
       depd: 2.0.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 1.3.2
+      finalhandler: 1.3.2(supports-color@10.2.2)
       fresh: 0.5.2
       http-errors: 2.0.1
       merge-descriptors: 1.0.3
@@ -21551,8 +21708,8 @@ snapshots:
       qs: 6.15.2
       range-parser: 1.2.1
       safe-buffer: 5.2.1
-      send: 0.19.2
-      serve-static: 1.16.3
+      send: 0.19.2(supports-color@10.2.2)
+      serve-static: 1.16.3(supports-color@10.2.2)
       setprototypeof: 1.2.0
       statuses: 2.0.2
       type-is: 1.6.18
@@ -21561,10 +21718,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  express@5.2.1:
+  express@5.2.1(supports-color@10.2.2):
     dependencies:
       accepts: 2.0.0
-      body-parser: 2.2.2
+      body-parser: 2.2.2(supports-color@10.2.2)
       content-disposition: 1.0.1
       content-type: 1.0.5
       cookie: 0.7.2
@@ -21574,7 +21731,7 @@ snapshots:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 2.1.1
+      finalhandler: 2.1.1(supports-color@10.2.2)
       fresh: 2.0.0
       http-errors: 2.0.1
       merge-descriptors: 2.0.0
@@ -21585,9 +21742,9 @@ snapshots:
       proxy-addr: 2.0.7
       qs: 6.15.2
       range-parser: 1.2.1
-      router: 2.2.0
-      send: 1.2.1
-      serve-static: 2.2.1
+      router: 2.2.0(supports-color@10.2.2)
+      send: 1.2.1(supports-color@10.2.2)
+      serve-static: 2.2.1(supports-color@10.2.2)
       statuses: 2.0.2
       type-is: 2.0.1
       vary: 1.1.2
@@ -21606,7 +21763,7 @@ snapshots:
       iconv-lite: 0.4.24
       tmp: 0.0.33
 
-  extract-zip@2.0.1:
+  extract-zip@2.0.1(supports-color@10.2.2):
     dependencies:
       debug: 4.4.3(supports-color@10.2.2)
       get-stream: 5.2.0
@@ -21676,9 +21833,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  finalhandler@1.3.2:
+  finalhandler@1.3.2(supports-color@10.2.2):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@10.2.2)
       encodeurl: 2.0.0
       escape-html: 1.0.3
       on-finished: 2.4.1
@@ -21688,7 +21845,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  finalhandler@2.1.1:
+  finalhandler@2.1.1(supports-color@10.2.2):
     dependencies:
       debug: 4.4.3(supports-color@10.2.2)
       encodeurl: 2.0.0
@@ -21792,7 +21949,7 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
-  get-uri@6.0.5:
+  get-uri@6.0.5(supports-color@10.2.2):
     dependencies:
       basic-ftp: 5.3.1
       data-uri-to-buffer: 6.0.2
@@ -21929,7 +22086,7 @@ snapshots:
       web-namespaces: 2.0.1
       zwitch: 2.0.4
 
-  hast-util-to-estree@3.1.3:
+  hast-util-to-estree@3.1.3(supports-color@10.2.2):
     dependencies:
       '@types/estree': 1.0.9
       '@types/estree-jsx': 1.0.5
@@ -21939,9 +22096,9 @@ snapshots:
       estree-util-attach-comments: 3.0.0
       estree-util-is-identifier-name: 3.0.0
       hast-util-whitespace: 3.0.0
-      mdast-util-mdx-expression: 2.0.1
-      mdast-util-mdx-jsx: 3.2.0
-      mdast-util-mdxjs-esm: 2.0.1
+      mdast-util-mdx-expression: 2.0.1(supports-color@10.2.2)
+      mdast-util-mdx-jsx: 3.2.0(supports-color@10.2.2)
+      mdast-util-mdxjs-esm: 2.0.1(supports-color@10.2.2)
       property-information: 7.1.0
       space-separated-tokens: 2.0.2
       style-to-js: 1.1.21
@@ -21964,7 +22121,7 @@ snapshots:
       stringify-entities: 4.0.4
       zwitch: 2.0.4
 
-  hast-util-to-jsx-runtime@2.3.6:
+  hast-util-to-jsx-runtime@2.3.6(supports-color@10.2.2):
     dependencies:
       '@types/estree': 1.0.9
       '@types/hast': 3.0.4
@@ -21973,9 +22130,9 @@ snapshots:
       devlop: 1.1.0
       estree-util-is-identifier-name: 3.0.0
       hast-util-whitespace: 3.0.0
-      mdast-util-mdx-expression: 2.0.1
-      mdast-util-mdx-jsx: 3.2.0
-      mdast-util-mdxjs-esm: 2.0.1
+      mdast-util-mdx-expression: 2.0.1(supports-color@10.2.2)
+      mdast-util-mdx-jsx: 3.2.0(supports-color@10.2.2)
+      mdast-util-mdxjs-esm: 2.0.1(supports-color@10.2.2)
       property-information: 7.1.0
       space-separated-tokens: 2.0.2
       style-to-js: 1.1.21
@@ -22051,7 +22208,7 @@ snapshots:
 
   http-link-header@1.1.3: {}
 
-  http-proxy-agent@7.0.2:
+  http-proxy-agent@7.0.2(supports-color@10.2.2):
     dependencies:
       agent-base: 7.1.4
       debug: 4.4.3(supports-color@10.2.2)
@@ -22400,14 +22557,14 @@ snapshots:
     dependencies:
       immediate: 3.0.6
 
-  lighthouse-logger@1.2.0:
+  lighthouse-logger@1.2.0(supports-color@10.2.2):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@10.2.2)
       marky: 1.3.0
     transitivePeerDependencies:
       - supports-color
 
-  lighthouse-logger@2.0.2:
+  lighthouse-logger@2.0.2(supports-color@10.2.2):
     dependencies:
       debug: 4.4.3(supports-color@10.2.2)
       marky: 1.3.0
@@ -22416,12 +22573,12 @@ snapshots:
 
   lighthouse-stack-packs@1.12.2: {}
 
-  lighthouse@12.6.1:
+  lighthouse@12.6.1(supports-color@10.2.2):
     dependencies:
       '@paulirish/trace_engine': 0.0.53
       '@sentry/node': 7.120.4
       axe-core: 4.12.0
-      chrome-launcher: 1.2.1
+      chrome-launcher: 1.2.1(supports-color@10.2.2)
       configstore: 5.0.1
       csp_evaluator: 1.1.5
       devtools-protocol: 0.0.1467305
@@ -22430,14 +22587,14 @@ snapshots:
       intl-messageformat: 10.7.18
       jpeg-js: 0.4.4
       js-library-detector: 6.7.0
-      lighthouse-logger: 2.0.2
+      lighthouse-logger: 2.0.2(supports-color@10.2.2)
       lighthouse-stack-packs: 1.12.2
       lodash-es: 4.18.1
       lookup-closest-locale: 6.2.0
       metaviewport-parser: 0.3.0
       open: 8.4.2
       parse-cache-control: 1.0.1
-      puppeteer-core: 24.43.1
+      puppeteer-core: 24.43.1(supports-color@10.2.2)
       robots-parser: 3.0.1
       semver: 5.7.2
       speedline-core: 1.4.3
@@ -22615,14 +22772,14 @@ snapshots:
       unist-util-is: 6.0.1
       unist-util-visit-parents: 6.0.2
 
-  mdast-util-from-markdown@2.0.3:
+  mdast-util-from-markdown@2.0.3(supports-color@10.2.2):
     dependencies:
       '@types/mdast': 4.0.4
       '@types/unist': 3.0.3
       decode-named-character-reference: 1.3.0
       devlop: 1.1.0
       mdast-util-to-string: 4.0.0
-      micromark: 4.0.2
+      micromark: 4.0.2(supports-color@10.2.2)
       micromark-util-decode-numeric-character-reference: 2.0.2
       micromark-util-decode-string: 2.0.1
       micromark-util-normalize-identifier: 2.0.1
@@ -22640,67 +22797,67 @@ snapshots:
       mdast-util-find-and-replace: 3.0.2
       micromark-util-character: 2.1.1
 
-  mdast-util-gfm-footnote@2.1.0:
+  mdast-util-gfm-footnote@2.1.0(supports-color@10.2.2):
     dependencies:
       '@types/mdast': 4.0.4
       devlop: 1.1.0
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@10.2.2)
       mdast-util-to-markdown: 2.1.2
       micromark-util-normalize-identifier: 2.0.1
     transitivePeerDependencies:
       - supports-color
 
-  mdast-util-gfm-strikethrough@2.0.0:
+  mdast-util-gfm-strikethrough@2.0.0(supports-color@10.2.2):
     dependencies:
       '@types/mdast': 4.0.4
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@10.2.2)
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
 
-  mdast-util-gfm-table@2.0.0:
+  mdast-util-gfm-table@2.0.0(supports-color@10.2.2):
     dependencies:
       '@types/mdast': 4.0.4
       devlop: 1.1.0
       markdown-table: 3.0.4
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@10.2.2)
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
 
-  mdast-util-gfm-task-list-item@2.0.0:
+  mdast-util-gfm-task-list-item@2.0.0(supports-color@10.2.2):
     dependencies:
       '@types/mdast': 4.0.4
       devlop: 1.1.0
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@10.2.2)
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
 
-  mdast-util-gfm@3.1.0:
+  mdast-util-gfm@3.1.0(supports-color@10.2.2):
     dependencies:
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@10.2.2)
       mdast-util-gfm-autolink-literal: 2.0.1
-      mdast-util-gfm-footnote: 2.1.0
-      mdast-util-gfm-strikethrough: 2.0.0
-      mdast-util-gfm-table: 2.0.0
-      mdast-util-gfm-task-list-item: 2.0.0
+      mdast-util-gfm-footnote: 2.1.0(supports-color@10.2.2)
+      mdast-util-gfm-strikethrough: 2.0.0(supports-color@10.2.2)
+      mdast-util-gfm-table: 2.0.0(supports-color@10.2.2)
+      mdast-util-gfm-task-list-item: 2.0.0(supports-color@10.2.2)
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
 
-  mdast-util-mdx-expression@2.0.1:
+  mdast-util-mdx-expression@2.0.1(supports-color@10.2.2):
     dependencies:
       '@types/estree-jsx': 1.0.5
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
       devlop: 1.1.0
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@10.2.2)
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
 
-  mdast-util-mdx-jsx@3.2.0:
+  mdast-util-mdx-jsx@3.2.0(supports-color@10.2.2):
     dependencies:
       '@types/estree-jsx': 1.0.5
       '@types/hast': 3.0.4
@@ -22708,7 +22865,7 @@ snapshots:
       '@types/unist': 3.0.3
       ccount: 2.0.1
       devlop: 1.1.0
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@10.2.2)
       mdast-util-to-markdown: 2.1.2
       parse-entities: 4.0.2
       stringify-entities: 4.0.4
@@ -22717,23 +22874,23 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  mdast-util-mdx@3.0.0:
+  mdast-util-mdx@3.0.0(supports-color@10.2.2):
     dependencies:
-      mdast-util-from-markdown: 2.0.3
-      mdast-util-mdx-expression: 2.0.1
-      mdast-util-mdx-jsx: 3.2.0
-      mdast-util-mdxjs-esm: 2.0.1
+      mdast-util-from-markdown: 2.0.3(supports-color@10.2.2)
+      mdast-util-mdx-expression: 2.0.1(supports-color@10.2.2)
+      mdast-util-mdx-jsx: 3.2.0(supports-color@10.2.2)
+      mdast-util-mdxjs-esm: 2.0.1(supports-color@10.2.2)
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
 
-  mdast-util-mdxjs-esm@2.0.1:
+  mdast-util-mdxjs-esm@2.0.1(supports-color@10.2.2):
     dependencies:
       '@types/estree-jsx': 1.0.5
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
       devlop: 1.1.0
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@10.2.2)
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
@@ -23042,7 +23199,7 @@ snapshots:
 
   micromark-util-types@2.0.2: {}
 
-  micromark@4.0.2:
+  micromark@4.0.2(supports-color@10.2.2):
     dependencies:
       '@types/debug': 4.1.13
       debug: 4.4.3(supports-color@10.2.2)
@@ -23442,16 +23599,16 @@ snapshots:
 
   p-try@2.2.0: {}
 
-  pac-proxy-agent@7.2.0:
+  pac-proxy-agent@7.2.0(supports-color@10.2.2):
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
       agent-base: 7.1.4
       debug: 4.4.3(supports-color@10.2.2)
-      get-uri: 6.0.5
-      http-proxy-agent: 7.0.2
+      get-uri: 6.0.5(supports-color@10.2.2)
+      http-proxy-agent: 7.0.2(supports-color@10.2.2)
       https-proxy-agent: 7.0.6(supports-color@10.2.2)
       pac-resolver: 7.0.1
-      socks-proxy-agent: 8.0.5
+      socks-proxy-agent: 8.0.5(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -23626,16 +23783,16 @@ snapshots:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
 
-  proxy-agent@6.5.0:
+  proxy-agent@6.5.0(supports-color@10.2.2):
     dependencies:
       agent-base: 7.1.4
       debug: 4.4.3(supports-color@10.2.2)
-      http-proxy-agent: 7.0.2
+      http-proxy-agent: 7.0.2(supports-color@10.2.2)
       https-proxy-agent: 7.0.6(supports-color@10.2.2)
       lru-cache: 7.18.3
-      pac-proxy-agent: 7.2.0
+      pac-proxy-agent: 7.2.0(supports-color@10.2.2)
       proxy-from-env: 1.1.0
-      socks-proxy-agent: 8.0.5
+      socks-proxy-agent: 8.0.5(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -23648,9 +23805,9 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@24.43.1:
+  puppeteer-core@24.43.1(supports-color@10.2.2):
     dependencies:
-      '@puppeteer/browsers': 2.13.2
+      '@puppeteer/browsers': 2.13.2(supports-color@10.2.2)
       chromium-bidi: 14.0.0(devtools-protocol@0.0.1608973)
       debug: 4.4.3(supports-color@10.2.2)
       devtools-protocol: 0.0.1608973
@@ -23886,11 +24043,11 @@ snapshots:
       hast-util-raw: 9.1.0
       vfile: 6.0.3
 
-  rehype-recma@1.0.0:
+  rehype-recma@1.0.0(supports-color@10.2.2):
     dependencies:
       '@types/estree': 1.0.9
       '@types/hast': 3.0.4
-      hast-util-to-estree: 3.1.3
+      hast-util-to-estree: 3.1.3(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -23907,28 +24064,28 @@ snapshots:
       rehype-stringify: 10.0.1
       unified: 11.0.5
 
-  remark-gfm@4.0.1:
+  remark-gfm@4.0.1(supports-color@10.2.2):
     dependencies:
       '@types/mdast': 4.0.4
-      mdast-util-gfm: 3.1.0
+      mdast-util-gfm: 3.1.0(supports-color@10.2.2)
       micromark-extension-gfm: 3.0.0
-      remark-parse: 11.0.0
+      remark-parse: 11.0.0(supports-color@10.2.2)
       remark-stringify: 11.0.0
       unified: 11.0.5
     transitivePeerDependencies:
       - supports-color
 
-  remark-mdx@3.1.1:
+  remark-mdx@3.1.1(supports-color@10.2.2):
     dependencies:
-      mdast-util-mdx: 3.0.0
+      mdast-util-mdx: 3.0.0(supports-color@10.2.2)
       micromark-extension-mdxjs: 3.0.0
     transitivePeerDependencies:
       - supports-color
 
-  remark-parse@11.0.0:
+  remark-parse@11.0.0(supports-color@10.2.2):
     dependencies:
       '@types/mdast': 4.0.4
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@10.2.2)
       micromark-util-types: 2.0.2
       unified: 11.0.5
     transitivePeerDependencies:
@@ -24062,7 +24219,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.60.1
       fsevents: 2.3.3
 
-  router@2.2.0:
+  router@2.2.0(supports-color@10.2.2):
     dependencies:
       debug: 4.4.3(supports-color@10.2.2)
       depd: 2.0.0
@@ -24072,7 +24229,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  rtf-viewer@1.3.1(patch_hash=14297200e40364d833c6168a66aa6ee4945f324712a4629fdc9d18d93becd7a5): {}
+  rtf-viewer@1.3.1(patch_hash=734830adc8d033bcf48cd7b360822e1850f1818ebbd2c2582a7a52637a3d7f3d): {}
 
   run-applescript@7.1.0: {}
 
@@ -24108,9 +24265,9 @@ snapshots:
 
   semver@7.8.1: {}
 
-  send@0.19.2:
+  send@0.19.2(supports-color@10.2.2):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@10.2.2)
       depd: 2.0.0
       destroy: 1.2.0
       encodeurl: 2.0.0
@@ -24126,7 +24283,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  send@1.2.1:
+  send@1.2.1(supports-color@10.2.2):
     dependencies:
       debug: 4.4.3(supports-color@10.2.2)
       encodeurl: 2.0.0
@@ -24142,21 +24299,21 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@1.16.3:
+  serve-static@1.16.3(supports-color@10.2.2):
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 0.19.2
+      send: 0.19.2(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@2.2.1:
+  serve-static@2.2.1(supports-color@10.2.2):
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 1.2.1
+      send: 1.2.1(supports-color@10.2.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -24164,14 +24321,14 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  shadcn@4.12.0(typescript@5.9.3):
+  shadcn@4.12.0(supports-color@10.2.2)(typescript@5.9.3):
     dependencies:
-      '@babel/core': 7.29.0
+      '@babel/core': 7.29.0(supports-color@10.2.2)
       '@babel/parser': 7.29.2
-      '@babel/plugin-transform-typescript': 7.28.6(@babel/core@7.29.0)
-      '@babel/preset-typescript': 7.28.5(@babel/core@7.29.0)
+      '@babel/plugin-transform-typescript': 7.28.6(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)
+      '@babel/preset-typescript': 7.28.5(@babel/core@7.29.0(supports-color@10.2.2))(supports-color@10.2.2)
       '@dotenvx/dotenvx': 1.59.1
-      '@modelcontextprotocol/sdk': 1.29.0(zod@3.25.76)
+      '@modelcontextprotocol/sdk': 1.29.0(supports-color@10.2.2)(zod@3.25.76)
       '@types/validate-npm-package-name': 4.0.2
       browserslist: 4.28.2
       commander: 14.0.3
@@ -24324,7 +24481,7 @@ snapshots:
 
   smol-toml@1.7.0: {}
 
-  socks-proxy-agent@8.0.5:
+  socks-proxy-agent@8.0.5(supports-color@10.2.2):
     dependencies:
       agent-base: 7.1.4
       debug: 4.4.3(supports-color@10.2.2)
@@ -24980,13 +25137,14 @@ snapshots:
       '@volar/language-service': 2.4.28
       prettier: 3.9.1
 
-  volar-service-typescript-twoslash-queries@0.0.70(@volar/language-service@2.4.28):
+  volar-service-typescript-twoslash-queries@0.0.70(@volar/language-service@2.4.28)(typescript@5.9.3):
     dependencies:
       vscode-uri: 3.1.0
     optionalDependencies:
       '@volar/language-service': 2.4.28
+      typescript: 5.9.3
 
-  volar-service-typescript@0.0.70(@volar/language-service@2.4.28):
+  volar-service-typescript@0.0.70(@volar/language-service@2.4.28)(typescript@5.9.3):
     dependencies:
       path-browserify: 1.0.1
       semver: 7.8.1
@@ -24996,6 +25154,7 @@ snapshots:
       vscode-uri: 3.1.0
     optionalDependencies:
       '@volar/language-service': 2.4.28
+      typescript: 5.9.3
 
   volar-service-yaml@0.0.70(@volar/language-service@2.4.28):
     dependencies:
