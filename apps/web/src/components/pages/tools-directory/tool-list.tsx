@@ -26,22 +26,35 @@ function ToolList({
   showCategory,
 }: ToolListProps) {
   return (
-    <div className="divide-y divide-border/70 overflow-hidden rounded-xl border border-border">
-      {entries.map((entry) => (
+    <div
+      data-tool-list
+      hidden={entries.length === 0}
+      className="overflow-hidden rounded-xl border border-border"
+    >
+      {entries.map((entry, index) => (
         <a
           key={entry.slug}
+          data-tool-row={entry.slug}
+          data-category={entry.category}
+          data-first-visible={index === 0 ? "" : undefined}
           href={localizePath(`/tools/${entry.slug}`, language)}
-          className="flex items-center gap-3.5 px-4 py-3.5 transition-colors hover:bg-muted/50 sm:px-4.5"
+          className="flex items-center gap-3.5 border-t border-border/70 px-4 py-3.5 transition-colors hover:bg-muted/50 data-first-visible:border-t-0 sm:px-4.5"
         >
           <ToolIcon
             icon={entry.icon}
             className="size-4 shrink-0 text-muted-foreground"
           />
           <span className="flex min-w-0 flex-1 flex-col gap-0.5 md:flex-row md:items-center md:gap-3.5">
-            <span className="truncate text-[15px] font-medium tracking-[-0.02em] md:w-56 md:shrink-0">
+            <span
+              data-tool-name
+              className="truncate text-[15px] font-medium tracking-[-0.02em] md:w-56 md:shrink-0"
+            >
               {entry.name}
             </span>
-            <span className="truncate text-[13px] text-muted-foreground md:min-w-0 md:flex-1">
+            <span
+              data-tool-description
+              className="truncate text-[13px] text-muted-foreground md:min-w-0 md:flex-1"
+            >
               {entry.description}
             </span>
           </span>

@@ -18,7 +18,10 @@ function readDirectoryQueryFromLocation() {
   return normalizeQuery(params.get("query") ?? "")
 }
 
-function getSearchScore(entry: DirectoryToolEntry, query: string) {
+function getSearchScore(
+  entry: Pick<DirectoryToolEntry, "name" | "description">,
+  query: string
+) {
   const normalizedQuery = normalizeQuery(query).toLowerCase()
 
   if (!normalizedQuery) {
@@ -58,11 +61,9 @@ function getSearchScore(entry: DirectoryToolEntry, query: string) {
  * Scores this page's entries against the query and sorts
  * alphabetically when the query is empty or by relevance otherwise.
  */
-function rankToolEntries(
-  entries: readonly DirectoryToolEntry[],
-  normalizedQuery: string,
-  language: SiteLanguage
-) {
+function rankToolEntries<
+  Entry extends Pick<DirectoryToolEntry, "name" | "description">,
+>(entries: readonly Entry[], normalizedQuery: string, language: SiteLanguage) {
   return entries
     .map((entry) => ({
       entry,

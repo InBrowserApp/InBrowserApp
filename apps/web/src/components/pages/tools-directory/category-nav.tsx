@@ -1,5 +1,3 @@
-import { useEffect, useRef } from "react"
-
 import { cn } from "@workspace/ui/lib/utils"
 import { getCategoryLabel } from "@/lib/tool-directory"
 import { localizePath } from "@/lib/site"
@@ -88,27 +86,10 @@ function CategorySidebar(props: CategoryNavProps) {
 
 function CategoryChips(props: CategoryNavProps) {
   const { categoriesLabel, formatCount, language, selected } = props
-  const activeLink = useRef<HTMLAnchorElement>(null)
-
-  useEffect(() => {
-    const link = activeLink.current
-    const container = link?.parentElement
-
-    if (!link || !container) {
-      return
-    }
-
-    const linkBounds = link.getBoundingClientRect()
-    const containerBounds = container.getBoundingClientRect()
-
-    container.scrollLeft +=
-      linkBounds.left -
-      containerBounds.left -
-      (containerBounds.width - linkBounds.width) / 2
-  }, [selected])
 
   return (
     <nav
+      data-category-chips
       aria-label={categoriesLabel}
       className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 lg:hidden"
     >
@@ -118,7 +99,6 @@ function CategoryChips(props: CategoryNavProps) {
         return (
           <a
             key={category ?? "all"}
-            ref={isActive ? activeLink : undefined}
             href={localizePath(
               category ? `/categories/${category}` : "/tools",
               language
