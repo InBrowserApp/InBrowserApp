@@ -76,23 +76,25 @@ const searchMessages = {
   current="tools"
   pathname={pathname}
 >
-  <header class="flex max-w-3xl flex-col gap-3">
-    {category && (
-      <PageBreadcrumbs language={language} items={[
-        { label: catalog.tools.categoryAll, pathname: "/tools" },
-        { label: getCategoryLabel(catalog.tools.categories, category), pathname },
-      ]} />
-    )}
-    <h1 class="font-heading text-3xl leading-tight tracking-[var(--tracking-display)] text-balance sm:text-4xl">{heading}</h1>
-    <p class="text-base leading-7 text-muted-foreground">{description}</p>
-  </header>
+  <main class="flex flex-col gap-8">
+    <header class="flex max-w-3xl flex-col gap-3">
+      {category && (
+        <PageBreadcrumbs language={language} items={[
+          { label: catalog.tools.categoryAll, pathname: "/tools" },
+          { label: getCategoryLabel(catalog.tools.categories, category), pathname },
+        ]} />
+      )}
+      <h1 class="font-heading text-3xl leading-tight tracking-[var(--tracking-display)] text-balance sm:text-4xl">{heading}</h1>
+      <p class="text-base leading-7 text-muted-foreground">{description}</p>
+    </header>
 
-  <ToolsDirectorySearch
-    client:load
-    entries={entries}
-    categoryCounts={categoryCounts}
-    category={category}
-    language={language}
-    messages={searchMessages}
-  />
+    <ToolsDirectorySearch
+      client:load
+      entries={entries}
+      categoryCounts={categoryCounts}
+      category={category}
+      language={language}
+      messages={searchMessages}
+    />
+  </main>
 </MainLayout>
