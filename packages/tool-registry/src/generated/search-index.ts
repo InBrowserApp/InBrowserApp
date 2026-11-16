@@ -29360,6 +29360,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "text-encoding-converter",
+    category: "text",
+    icon: "binary",
+    tags: [
+      "text",
+      "encoding",
+      "utf-8",
+      "gbk",
+      "gb18030",
+      "big5",
+      "bom",
+      "charset",
+      "mojibake",
+      "line-endings",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل ترميز النصوص",
+        description:
+          "حوّل الملفات النصية بين UTF-8 وGBK وBig5 وغيرها من الترميزات. عاين النص المشوّه، واضبط علامة BOM ونهايات الأسطر، ونزّل محليًا دون فقدان المحارف.",
+      },
+      de: {
+        name: "Konverter für Textkodierungen",
+        description:
+          "Konvertiere Textdateien zwischen UTF-8, GBK, Big5 und anderen Kodierungen. Prüfe unleserlichen Text in der Vorschau, steuere BOM und Zeilenenden und lade das Ergebnis lokal ohne Zeichenverlust herunter.",
+      },
+      en: {
+        name: "Text Encoding Converter",
+        description:
+          "Convert text files between UTF-8, GBK, Big5 and other encodings. Preview garbled text, control BOM and line endings, and download locally without losing characters.",
+      },
+      es: {
+        name: "Convertidor de codificación de texto",
+        description:
+          "Convierte archivos de texto entre UTF-8, GBK, Big5 y otras codificaciones. Previsualiza el texto con caracteres ilegibles, configura el BOM y los finales de línea, y descarga localmente sin perder caracteres.",
+      },
+      fr: {
+        name: "Convertisseur d’encodage de texte",
+        description:
+          "Convertissez des fichiers texte entre UTF-8, GBK, Big5 et d’autres encodages. Prévisualisez le texte illisible, réglez la BOM et les fins de ligne, puis téléchargez localement sans perdre de caractères.",
+      },
+      he: {
+        name: "ממיר קידוד טקסט",
+        description:
+          "המירו קובצי טקסט בין UTF-8, GBK, Big5 וקידודים נוספים. צפו בתצוגה מקדימה של טקסט משובש, שלטו ב־BOM ובסיומי שורות והורידו מקומית ללא אובדן תווים.",
+      },
+      hi: {
+        name: "टेक्स्ट एन्कोडिंग परिवर्तक",
+        description:
+          "टेक्स्ट फ़ाइलों को UTF-8, GBK, Big5 और अन्य एन्कोडिंग के बीच बदलें। बिगड़े टेक्स्ट का पूर्वावलोकन देखें, BOM और पंक्ति-अंत नियंत्रित करें और बिना कोई वर्ण खोए स्थानीय रूप से डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Pengodean Teks",
+        description:
+          "Konversi berkas teks antara UTF-8, GBK, Big5, dan pengodean lainnya. Pratinjau teks kacau, atur BOM dan akhir baris, lalu unduh secara lokal tanpa kehilangan karakter.",
+      },
+      it: {
+        name: "Convertitore di codifica del testo",
+        description:
+          "Converti file di testo tra UTF-8, GBK, Big5 e altre codifiche. Visualizza l'anteprima del testo illeggibile, imposta BOM e fine riga e scarica in locale senza perdere caratteri.",
+      },
+      ja: {
+        name: "テキスト文字コード変換ツール",
+        description:
+          "テキストファイルを UTF-8、GBK、Big5 などの文字コード間で変換できます。文字化けをプレビューで確認し、BOM と改行コードを設定して、文字を失わずにローカルでダウンロードできます。",
+      },
+      ko: {
+        name: "텍스트 인코딩 변환기",
+        description:
+          "텍스트 파일을 UTF-8, GBK, Big5 등 다양한 인코딩으로 변환하세요. 깨진 텍스트를 미리 보고, BOM과 줄바꿈을 설정하고, 문자 손실 없이 로컬에서 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Pengekodan Teks",
+        description:
+          "Tukar fail teks antara UTF-8, GBK, Big5 dan pengekodan lain. Pratonton teks bercelaru, kawal BOM dan penghujung baris, serta muat turun secara setempat tanpa kehilangan aksara.",
+      },
+      nl: {
+        name: "Converter voor tekstcodering",
+        description:
+          "Zet tekstbestanden om tussen UTF-8, GBK, Big5 en andere coderingen. Bekijk voorbeelden van onleesbare tekst, stel BOM en regeleinden in en download lokaal zonder tekens te verliezen.",
+      },
+      no: {
+        name: "Konverterer for tekstkoding",
+        description:
+          "Konverter tekstfiler mellom UTF-8, GBK, Big5 og andre kodinger. Forhåndsvis tekst med tegnfeil, styr BOM og linjeskift, og last ned lokalt uten å miste tegn.",
+      },
+      pl: {
+        name: "Konwerter kodowania tekstu",
+        description:
+          "Konwertuj pliki tekstowe między UTF-8, GBK, Big5 i innymi kodowaniami. Sprawdzaj podgląd nieczytelnego tekstu, ustawiaj BOM i zakończenia wierszy oraz pobieraj pliki lokalnie bez utraty znaków.",
+      },
+      pt: {
+        name: "Conversor de codificação de texto",
+        description:
+          "Converta arquivos de texto entre UTF-8, GBK, Big5 e outras codificações. Visualize texto ilegível, controle o BOM e as quebras de linha e baixe localmente sem perder caracteres.",
+      },
+      ru: {
+        name: "Конвертер кодировок текста",
+        description:
+          "Конвертируйте текстовые файлы между UTF-8, GBK, Big5 и другими кодировками. Проверяйте искажённый текст в предпросмотре, управляйте BOM и окончаниями строк и скачивайте результат локально без потери символов.",
+      },
+      sv: {
+        name: "Konverterare för textkodning",
+        description:
+          "Konvertera textfiler mellan UTF-8, GBK, Big5 och andra kodningar. Förhandsgranska förvrängd text, styr BOM och radslut och ladda ner lokalt utan att förlora tecken.",
+      },
+      th: {
+        name: "ตัวแปลงการเข้ารหัสข้อความ",
+        description:
+          "แปลงไฟล์ข้อความระหว่าง UTF-8, GBK, Big5 และการเข้ารหัสอื่นๆ ดูตัวอย่างข้อความเพี้ยน ตั้งค่า BOM และการขึ้นบรรทัดใหม่ แล้วดาวน์โหลดในเครื่องโดยไม่สูญเสียอักขระ",
+      },
+      tr: {
+        name: "Metin Kodlaması Dönüştürücü",
+        description:
+          "Metin dosyalarını UTF-8, GBK, Big5 ve diğer kodlamalar arasında dönüştürün. Bozuk metni önizleyin, BOM ve satır sonlarını ayarlayın ve karakter kaybetmeden yerel olarak indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi bảng mã văn bản",
+        description:
+          "Chuyển đổi tệp văn bản giữa UTF-8, GBK, Big5 và các bảng mã khác. Xem trước văn bản bị lỗi ký tự, điều chỉnh BOM và kiểu xuống dòng, rồi tải xuống ngay trên thiết bị mà không mất ký tự.",
+      },
+      "zh-CN": {
+        name: "文本编码转换器",
+        description:
+          "在 UTF-8、GBK、Big5 等编码之间转换文本文件。预览并排查乱码，设置 BOM 和换行符，在本地下载且不丢失字符。",
+      },
+      "zh-TW": {
+        name: "文字編碼轉換器",
+        description:
+          "將文字檔案在 UTF-8、GBK、Big5 等編碼之間轉換。預覽亂碼文字、設定 BOM 和換行字元，並在本機下載而不遺失字元。",
+      },
+    },
+  },
+  {
     slug: "text-line-sorter",
     category: "text",
     icon: "text",

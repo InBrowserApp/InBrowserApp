@@ -21438,6 +21438,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "text-encoding-converter",
+    language: "ar",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "de",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "en",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "es",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "fr",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "he",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "hi",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "id",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "it",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "ja",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "ko",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "ms",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "nl",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "no",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "pl",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "pt",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "ru",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "sv",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "th",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "tr",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "vi",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "text-line-sorter",
     language: "ar",
   },
