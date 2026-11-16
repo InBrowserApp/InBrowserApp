@@ -63,7 +63,7 @@ describe("BasicAuthGeneratorClient", () => {
     expect(
       screen.getByRole("region", { name: "cURL Example" }).textContent
     ).toBe(
-      'curl -H "Authorization: Basic ZGVtbzpzM2NyM3Q=" https://api.example.com/protected'
+      "curl -H \"Authorization: Basic ZGVtbzpzM2NyM3Q=\" 'https://api.example.com/protected'"
     )
   })
 
@@ -93,7 +93,7 @@ describe("BasicAuthGeneratorClient", () => {
       curlOutput.querySelector('[data-token="header-name"]')?.textContent
     ).toBe("Authorization:")
     expect(curlOutput.querySelector('[data-token="url"]')?.textContent).toBe(
-      "https://api.example.com/protected"
+      "'https://api.example.com/protected'"
     )
   })
 
