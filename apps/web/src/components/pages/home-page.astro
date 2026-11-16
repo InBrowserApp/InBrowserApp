@@ -40,7 +40,7 @@ const seo = createPageSeo({
 
 const toolCount = new Intl.NumberFormat(language).format(toolSearchIndex.length)
 const toolsPath = localizePath("/tools", language)
-const categories = countToolsByCategory(toolSearchIndex).slice(0, 8)
+const categories = countToolsByCategory(toolSearchIndex)
 const popularTools = findToolsBySlugs(toolSearchIndex, POPULAR_TOOL_SLUGS)
 const featuredTools = findToolsBySlugs(toolSearchIndex, FEATURED_TOOL_SLUGS)
 const suggestionEntries = toSuggestionEntries(toolSearchIndex, language)

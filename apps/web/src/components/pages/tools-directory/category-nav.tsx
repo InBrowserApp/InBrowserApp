@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react"
+
 import { cn } from "@workspace/ui/lib/utils"
 import { getCategoryLabel } from "@/lib/tool-directory"
 import { localizePath } from "@/lib/site"
@@ -93,6 +95,11 @@ function CategorySidebar(props: CategoryNavProps) {
 
 function CategoryChips(props: CategoryNavProps) {
   const { categoriesLabel, formatCount, language, selected } = props
+  const activeLink = useRef<HTMLAnchorElement>(null)
+
+  useEffect(() => {
+    activeLink.current?.scrollIntoView({ block: "nearest", inline: "center" })
+  }, [selected])
 
   return (
     <nav
@@ -105,6 +112,7 @@ function CategoryChips(props: CategoryNavProps) {
         return (
           <a
             key={category ?? "all"}
+            ref={isActive ? activeLink : undefined}
             href={localizePath(
               category ? `/categories/${category}` : "/tools",
               language
