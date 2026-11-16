@@ -14014,6 +14014,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "image-watermark",
+    category: "image",
+    icon: "image",
+    tags: ["image", "watermark", "text", "logo", "tile", "batch", "photo"],
+    locales: {
+      ar: {
+        name: "علامة مائية للصور",
+        description:
+          "أضف علامات مائية نصية أو شعارات إلى الصور محليًا. اضبط التكرار والموضع والتعتيم، ثم صدّر صورة واحدة أو مجموعة بصيغة ZIP.",
+      },
+      de: {
+        name: "Bild-Wasserzeichen",
+        description:
+          "Fügen Sie Bildern lokal Text- oder Logo-Wasserzeichen hinzu. Passen Sie Kachelung, Position und Deckkraft an und exportieren Sie ein Bild oder einen Stapel als ZIP.",
+      },
+      en: {
+        name: "Image Watermark",
+        description:
+          "Add text or logo watermarks to images locally. Adjust tiling, position, and opacity, then export one image or a batch ZIP.",
+      },
+      es: {
+        name: "Marca de agua para imágenes",
+        description:
+          "Añade marcas de agua de texto o logotipos a tus imágenes de forma local. Ajusta el mosaico, la posición y la opacidad, y exporta una imagen o un lote en ZIP.",
+      },
+      fr: {
+        name: "Filigrane d’image",
+        description:
+          "Ajoutez du texte ou un logo en filigrane à vos images en local. Ajustez la répétition, la position et l’opacité, puis exportez une image ou un lot en ZIP.",
+      },
+      he: {
+        name: "סימן מים לתמונות",
+        description:
+          "הוספת סימני מים של טקסט או לוגו לתמונות באופן מקומי. אפשר להתאים חזרות, מיקום ואטימות, ולייצא תמונה אחת או את כולן כ-ZIP.",
+      },
+      hi: {
+        name: "इमेज वॉटरमार्क",
+        description:
+          "अपने डिवाइस पर इमेज में टेक्स्ट या लोगो वॉटरमार्क जोड़ें। दोहराव, स्थिति और अपारदर्शिता समायोजित करें, फिर एक इमेज या पूरे बैच को ZIP में एक्सपोर्ट करें।",
+      },
+      id: {
+        name: "Tanda Air Gambar",
+        description:
+          "Tambahkan tanda air teks atau logo ke gambar secara lokal. Sesuaikan pengulangan, posisi, dan opasitas, lalu ekspor satu gambar atau sekumpulan gambar dalam ZIP.",
+      },
+      it: {
+        name: "Filigrana per immagini",
+        description:
+          "Aggiungi filigrane di testo o loghi alle immagini sul tuo dispositivo. Regola ripetizione, posizione e opacità, poi esporta un'immagine o un gruppo in ZIP.",
+      },
+      ja: {
+        name: "画像の透かし",
+        description:
+          "画像にテキストやロゴの透かしをローカルで追加します。タイル配置、位置、不透明度を調整し、1枚の画像または複数の画像をZIPで書き出せます。",
+      },
+      ko: {
+        name: "이미지 워터마크",
+        description:
+          "이미지에 텍스트나 로고 워터마크를 기기에서 추가하세요. 반복 배치, 위치, 불투명도를 조정한 뒤 이미지 한 장 또는 일괄 ZIP으로 내보내세요.",
+      },
+      ms: {
+        name: "Tanda Air Imej",
+        description:
+          "Tambahkan tanda air teks atau logo pada imej secara setempat. Laraskan ulangan, kedudukan dan kelegapan, kemudian eksport satu imej atau satu kelompok ZIP.",
+      },
+      nl: {
+        name: "Afbeeldingswatermerk",
+        description:
+          "Voeg lokaal tekst- of logowatermerken toe aan afbeeldingen. Pas herhaling, positie en dekking aan en exporteer één afbeelding of een batch als ZIP.",
+      },
+      no: {
+        name: "Vannmerke på bilder",
+        description:
+          "Legg til tekst eller logo som vannmerke på bilder lokalt. Juster gjentakelse, posisjon og ugjennomsiktighet, og eksporter ett bilde eller alle som ZIP.",
+      },
+      pl: {
+        name: "Znak wodny na obrazie",
+        description:
+          "Dodawaj lokalnie tekstowe znaki wodne lub logo do obrazów. Dostosuj kafelkowanie, położenie i krycie, a następnie wyeksportuj obraz lub całą partię jako ZIP.",
+      },
+      pt: {
+        name: "Marca de água em imagens",
+        description:
+          "Adicione marcas de água de texto ou logótipos às imagens localmente. Ajuste a repetição, a posição e a opacidade e exporte uma imagem ou um lote em ZIP.",
+      },
+      ru: {
+        name: "Водяной знак для изображений",
+        description:
+          "Добавляйте текст или логотип в качестве водяного знака локально. Настраивайте повторение, положение и непрозрачность, затем экспортируйте одно изображение или группу в ZIP.",
+      },
+      sv: {
+        name: "Vattenmärke för bilder",
+        description:
+          "Lägg till text- eller logotypvattenmärken på bilder lokalt. Justera upprepning, position och opacitet och exportera sedan en bild eller flera som ZIP.",
+      },
+      th: {
+        name: "ลายน้ำรูปภาพ",
+        description:
+          "เพิ่มลายน้ำข้อความหรือโลโก้ลงในรูปภาพบนอุปกรณ์ของคุณ ปรับการแสดงซ้ำ ตำแหน่ง และความทึบ แล้วส่งออกรูปเดียวหรือทั้งชุดเป็น ZIP",
+      },
+      tr: {
+        name: "Görsel Filigranı",
+        description:
+          "Görsellere cihazınızda metin veya logo filigranı ekleyin. Döşeme, konum ve opaklığı ayarlayıp tek bir görseli veya toplu ZIP dosyasını dışa aktarın.",
+      },
+      vi: {
+        name: "Dấu bản quyền cho ảnh",
+        description:
+          "Thêm dấu bản quyền văn bản hoặc logo vào ảnh ngay trên thiết bị. Điều chỉnh cách lặp, vị trí và độ đục, rồi xuất một ảnh hoặc cả loạt dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "图片水印",
+        description:
+          "在本地为图片添加文字或标志水印。调整平铺、位置和不透明度，再导出单张图片或批量 ZIP 文件。",
+      },
+      "zh-TW": {
+        name: "圖片浮水印",
+        description:
+          "在本機為圖片加入文字或標誌浮水印。調整平鋪、位置與不透明度，再匯出單張圖片或整批 ZIP。",
+      },
+    },
+  },
+  {
     slug: "imei-validator",
     category: "text",
     icon: "binary",

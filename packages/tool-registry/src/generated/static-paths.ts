@@ -10214,6 +10214,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-watermark",
+    language: "ar",
+  },
+  {
+    slug: "image-watermark",
+    language: "de",
+  },
+  {
+    slug: "image-watermark",
+    language: "en",
+  },
+  {
+    slug: "image-watermark",
+    language: "es",
+  },
+  {
+    slug: "image-watermark",
+    language: "fr",
+  },
+  {
+    slug: "image-watermark",
+    language: "he",
+  },
+  {
+    slug: "image-watermark",
+    language: "hi",
+  },
+  {
+    slug: "image-watermark",
+    language: "id",
+  },
+  {
+    slug: "image-watermark",
+    language: "it",
+  },
+  {
+    slug: "image-watermark",
+    language: "ja",
+  },
+  {
+    slug: "image-watermark",
+    language: "ko",
+  },
+  {
+    slug: "image-watermark",
+    language: "ms",
+  },
+  {
+    slug: "image-watermark",
+    language: "nl",
+  },
+  {
+    slug: "image-watermark",
+    language: "no",
+  },
+  {
+    slug: "image-watermark",
+    language: "pl",
+  },
+  {
+    slug: "image-watermark",
+    language: "pt",
+  },
+  {
+    slug: "image-watermark",
+    language: "ru",
+  },
+  {
+    slug: "image-watermark",
+    language: "sv",
+  },
+  {
+    slug: "image-watermark",
+    language: "th",
+  },
+  {
+    slug: "image-watermark",
+    language: "tr",
+  },
+  {
+    slug: "image-watermark",
+    language: "vi",
+  },
+  {
+    slug: "image-watermark",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-watermark",
+    language: "zh-TW",
+  },
+  {
     slug: "imei-validator",
     language: "ar",
   },
