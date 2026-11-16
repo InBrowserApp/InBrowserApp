@@ -7,6 +7,7 @@ type SiteMessageCatalog = Readonly<{
     name: string
     description: string
     languageLabel: string
+    installApp: string
     themeLabel: string
     themeLight: string
     themeDark: string

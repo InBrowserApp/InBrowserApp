@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Alat gratis berbasis peramban yang berjalan sepenuhnya di perangkat Anda.",
     "languageLabel": "Bahasa",
+    "installApp": "Pasang aplikasi",
     "themeLabel": "Alihkan tema",
     "themeLight": "Terang",
     "themeDark": "Gelap",

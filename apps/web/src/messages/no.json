@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Gratis nettleserbaserte verktøy som kjører helt på enheten din.",
     "languageLabel": "Språk",
+    "installApp": "Installer app",
     "themeLabel": "Bytt tema",
     "themeLight": "Lyst",
     "themeDark": "Mørkt",

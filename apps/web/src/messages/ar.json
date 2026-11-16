@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "أدوات مجانية تعتمد على المتصفح وتعمل بالكامل على جهازك.",
     "languageLabel": "اللغات",
+    "installApp": "تثبيت التطبيق",
     "themeLabel": "تبديل المظهر",
     "themeLight": "فاتح",
     "themeDark": "داكن",

@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Darmowe narzędzia przeglądarkowe działające w całości na Twoim urządzeniu.",
     "languageLabel": "Języki",
+    "installApp": "Zainstaluj aplikację",
     "themeLabel": "Przełącz motyw",
     "themeLight": "Jasny",
     "themeDark": "Ciemny",

@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Công cụ miễn phí chạy trên trình duyệt, hoạt động hoàn toàn trên thiết bị của bạn.",
     "languageLabel": "Ngôn ngữ",
+    "installApp": "Cài đặt ứng dụng",
     "themeLabel": "Chuyển đổi giao diện",
     "themeLight": "Sáng",
     "themeDark": "Tối",
