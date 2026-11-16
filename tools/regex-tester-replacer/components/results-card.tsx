@@ -43,9 +43,11 @@ type ResultsCardProps = Readonly<{
   exportState: RegexExportState
   hasPattern: boolean
   hasSourceText: boolean
+  isAnalyzing: boolean
   matchLimit: number
   messages: RegexTesterReplacerLocalizedCatalog
   patternError: string | null
+  analysisErrorMessage: string | null
   previewLimit: number
   result: RegexAnalysis
   viewOptions: readonly RegexViewOption[]
@@ -57,9 +59,11 @@ function ResultsCard({
   exportState,
   hasPattern,
   hasSourceText,
+  isAnalyzing,
   matchLimit,
   messages,
   patternError,
+  analysisErrorMessage,
   previewLimit,
   result,
   viewOptions,
@@ -68,6 +72,8 @@ function ResultsCard({
   const hasInput = hasPattern && hasSourceText
   const showExportActions =
     !patternError &&
+    !analysisErrorMessage &&
+    !isAnalyzing &&
     hasInput &&
     activeView !== "preview" &&
     exportState.value.length > 0
@@ -86,6 +92,14 @@ function ResultsCard({
               {messages.invalidPatternLabel.replace("{message}", patternError)}
             </p>
           </div>
+        ) : analysisErrorMessage ? (
+          <div
+            role="alert"
+            className="flex items-start gap-3 rounded-lg border border-destructive/30 bg-destructive/5 p-3 text-sm text-destructive"
+          >
+            <TriangleAlert className="mt-0.5 shrink-0" />
+            <p>{analysisErrorMessage}</p>
+          </div>
         ) : !hasInput ? (
           <Empty className="border-border/80 bg-muted/20">
             <EmptyHeader>
@@ -96,6 +110,13 @@ function ResultsCard({
               <EmptyDescription>{messages.summaryEmpty}</EmptyDescription>
             </EmptyHeader>
           </Empty>
+        ) : isAnalyzing ? (
+          <p
+            role="status"
+            className="rounded-lg border border-border/80 bg-muted/20 p-4 text-sm text-muted-foreground"
+          >
+            {messages.analysisLoadingLabel}
+          </p>
         ) : (
           <>
             <ToggleGroup
