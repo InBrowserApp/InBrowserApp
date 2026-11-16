@@ -56,6 +56,7 @@ function Preview({
   const visible = items.filter(
     (item) => item.mark && (!source || item.pages.includes(page))
   )
+  const applies = items.some((item) => item.pages.includes(page))
   const active = items.find((item) => item.layer.id === selectedId)
   const missing = source && active && !active.pages.includes(page)
   const selectedCount = new Set(items.flatMap((item) => [...item.pages])).size
@@ -202,7 +203,7 @@ function Preview({
             <Badge variant="secondary">
               {m.selectedPages.replace("{count}", String(selectedCount))}
             </Badge>
-            {!visible.length ? (
+            {!applies ? (
               <Badge variant="outline">{m.pageNotSelected}</Badge>
             ) : null}
           </div>

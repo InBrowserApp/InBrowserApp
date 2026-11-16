@@ -173,6 +173,7 @@ test("validates page ranges inline and supports an image watermark", async () =>
   await waitFor(() =>
     expect(screen.queryByText(messages.preparingLabel)).toBeNull()
   )
+  expect(screen.queryByText(messages.pageNotSelected)).toBeNull()
   expect(
     (
       screen.getByRole("button", {
