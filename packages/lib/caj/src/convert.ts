@@ -61,6 +61,7 @@ export async function prepareDocument(
       progress,
       includeBookmarks: true,
       allowDamaged: false,
+      hnc8: { fonts: false },
     }
   )
   signal.throwIfAborted()

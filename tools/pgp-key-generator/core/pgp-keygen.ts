@@ -1,6 +1,6 @@
 import type { KeyOptions, UserID } from "openpgp"
 
-export const RSA_KEY_SIZES = [2048, 3072, 4096] as const
+const RSA_KEY_SIZES = [2048, 3072, 4096] as const
 export const MAX_EXPIRATION_DAYS = 36500
 
 export type KeyAlgorithm = "ecc" | "rsa"

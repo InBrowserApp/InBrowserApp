@@ -47,7 +47,6 @@
     "clearSearchLabel": "Löschen",
     "categoriesLabel": "Kategorien",
     "categoryAll": "Alle Tools",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "Vorschläge",
     "suggestionsHint": "↑↓ navigieren · ↵ öffnen · esc schließen",
     "suggestionMatchCountOne": "{count} Treffer",
@@ -69,6 +68,23 @@
       "text": "Text",
       "time": "Zeit & Datum",
       "web": "Web"
+    }
+  },
+  "categoryPages": {
+    "titleTemplate": "{category} – Tools",
+    "descriptions": {
+      "crypto": "Hashen Sie Texte und Dateien, verschlüsseln Sie Daten und generieren oder prüfen Sie Passwörter und Schlüssel. Entdecken Sie browserbasierte Tools für Prüfsummen, Kryptografie und sichere Zugangsdaten.",
+      "developer": "Prüfen Sie Archive, formatieren Sie Code, generieren Sie Kennungen und konvertieren Sie Konfigurationen für die Entwicklung. Finden Sie browserbasierte Dienstprogramme für alltägliche Entwicklungsaufgaben.",
+      "document": "Lesen und konvertieren Sie Dokumente, E-Books, Präsentationen und Tabellen in Ihrem Browser. Zeigen Sie Dateivorschauen an, extrahieren Sie Inhalte und exportieren Sie Dateien in andere Formate, ohne Ihre Dokumente hochzuladen.",
+      "image": "Konvertieren, skalieren und prüfen Sie Bilder in Ihrem Browser. Optimieren Sie Bilddateien, zeigen Sie Metadaten an, erstellen Sie Barcodes und arbeiten Sie mit animierten Bildformaten.",
+      "json": "Formatieren, validieren, vergleichen und konvertieren Sie strukturierte Daten. Arbeiten Sie mit JSON, YAML, TOML, XML und CSV mithilfe von Tools, die in Ihrem Browser laufen.",
+      "misc": "Nehmen Sie Audio und Video auf, nutzen Sie Ihre Kamera, prüfen Sie Geräteinformationen und konvertieren Sie Zahlen. Entdecken Sie praktische Browser-Tools für alltägliche Aufgaben.",
+      "network": "Fragen Sie DNS- und IP-Informationen ab, berechnen Sie Subnetze und prüfen Sie Zertifikate. Finden Sie Tools für Netzwerkadressen, Protokolle und die Fehlersuche.",
+      "pdf": "Führen Sie PDF-Dateien in Ihrem Browser zusammen, teilen Sie sie auf, prüfen und organisieren Sie sie. Extrahieren Sie Text, konvertieren Sie Seiten in Bilder und fügen Sie Seitenzahlen hinzu, ohne Ihre Dokumente hochzuladen.",
+      "random": "Generieren Sie Zufallszahlen, Passwörter und mnemonische BIP39-Phrasen in Ihrem Browser. Wählen Sie ein Tool und passen Sie dessen Ausgabe an Ihre Aufgabe an.",
+      "text": "Wandeln Sie Texte um, vergleichen und analysieren Sie sie oder validieren Sie gängige Kennungen. Finden Sie Browser-Tools für Kodierungen, das Schreiben, die Textbereinigung und Formatprüfungen.",
+      "time": "Konvertieren Sie Zeitstempel und Zeitzonen, berechnen Sie Zeitspannen und arbeiten Sie mit Cron-Zeitplänen. Planen Sie Ereignisse und vergleichen Sie Datumsangaben mit browserbasierten Zeit-Tools.",
+      "web": "Kodieren und dekodieren Sie Daten, prüfen Sie URLs, generieren Sie QR-Codes und arbeiten Sie mit Webformaten. Entdecken Sie browserbasierte Dienstprogramme für gängige Aufgaben in der Webentwicklung."
     }
   }
 }

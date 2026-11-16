@@ -165,10 +165,10 @@ describe("GifToApngClient", () => {
     expect(screen.getByText("clip.png")).toBeTruthy()
     expect(screen.getByText("clip-2.png")).toBeTruthy()
     expect(
-      screen.getAllByRole("link", { name: messages.downloadApngLabel })
+      await screen.findAllByRole("link", { name: messages.downloadApngLabel })
     ).toHaveLength(2)
     expect(
-      screen.getByRole("link", { name: messages.downloadZipLabel })
+      await screen.findByRole("link", { name: messages.downloadZipLabel })
     ).toBeTruthy()
   })
 

@@ -5,7 +5,7 @@ declare module "foliate-js/epub.js" {
       loadBlob: (path: string) => Promise<Blob | null>
       getSize: (path: string) => number
     })
-    init(): Promise<import("./types").ParsedBook>
+    init(): Promise<import("./types").OpenBook["parsed"]>
     destroy(): void
   }
 }

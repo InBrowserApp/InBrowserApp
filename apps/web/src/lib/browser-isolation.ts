@@ -1,5 +1,4 @@
-// Shared WebAssembly memory requires a new document with COOP/COEP headers.
-// These routes must not be entered or left through a client-side page swap.
+// Shared WebAssembly memory requires COOP/COEP headers on these documents.
 export function isIsolatedToolPath(pathname: string) {
   return /^\/(?:[\w-]+\/)?tools\/(?:ppt|odt|rtf)-to-pdf-converter\/$/.test(
     pathname

@@ -222,7 +222,7 @@ function alteredLegacy(mode: "missing" | "macro" | "chart" | "vba") {
       new TextEncoder().encode("owned fixture, no code")
     )
   } else
-    for (let offset = 0; offset + 4 <= bytes.length; ) {
+    for (let offset = 0; offset + 4 <= bytes.length;) {
       const type = data.getUint16(offset, true)
       const length = data.getUint16(offset + 2, true)
       if (mode === "missing" && type === 6) {

@@ -47,7 +47,6 @@
     "clearSearchLabel": "Limpar",
     "categoriesLabel": "Categorias",
     "categoryAll": "Todas as ferramentas",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "Sugestões",
     "suggestionsHint": "↑↓ navegar · ↵ abrir · esc fechar",
     "suggestionMatchCountOne": "{count} correspondência",
@@ -69,6 +68,23 @@
       "text": "Texto",
       "time": "Data e hora",
       "web": "Web"
+    }
+  },
+  "categoryPages": {
+    "titleTemplate": "Ferramentas de {category}",
+    "descriptions": {
+      "crypto": "Calcule hashes de texto e ficheiros, encripte dados e gere ou verifique palavras-passe e chaves. Explore ferramentas baseadas no navegador para somas de verificação, criptografia e credenciais seguras.",
+      "developer": "Inspecione arquivos, formate código, gere identificadores e converta configurações de desenvolvimento. Encontre utilitários baseados no navegador para tarefas diárias de desenvolvimento.",
+      "document": "Leia e converta documentos, livros eletrónicos, apresentações e folhas de cálculo no seu navegador. Pré-visualize ficheiros, extraia conteúdo e exporte para outros formatos sem enviar os seus documentos.",
+      "image": "Converta, redimensione e inspecione imagens no seu navegador. Otimize ficheiros de imagem, veja metadados, crie códigos de barras e trabalhe com formatos de imagem animada.",
+      "json": "Formate, valide, compare e converta dados estruturados. Trabalhe com JSON, YAML, TOML, XML e CSV usando ferramentas que funcionam no seu navegador.",
+      "misc": "Grave áudio e vídeo, use a sua câmara, consulte informações do dispositivo e converta números. Explore ferramentas práticas no navegador para tarefas do dia a dia.",
+      "network": "Consulte informações de DNS e IP, calcule sub-redes e inspecione certificados. Encontre ferramentas para endereços de rede, protocolos e resolução de problemas.",
+      "pdf": "Junte, divida, inspecione e organize ficheiros PDF no seu navegador. Extraia texto, converta páginas em imagens e adicione números de página sem enviar os seus documentos.",
+      "random": "Gere números aleatórios, palavras-passe e frases mnemónicas BIP39 no seu navegador. Escolha uma ferramenta e personalize os resultados para a sua tarefa.",
+      "text": "Transforme, compare e analise texto ou valide identificadores comuns. Encontre ferramentas no navegador para codificações, escrita, limpeza de texto e verificação de formatos.",
+      "time": "Converta marcas temporais e fusos horários, calcule durações e trabalhe com agendamentos cron. Planeie eventos e compare datas com ferramentas de data e hora baseadas no navegador.",
+      "web": "Codifique e descodifique dados, inspecione URLs, gere códigos QR e trabalhe com formatos Web. Explore utilitários baseados no navegador para tarefas comuns de desenvolvimento Web."
     }
   }
 }
