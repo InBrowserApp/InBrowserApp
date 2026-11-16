@@ -49,6 +49,7 @@ const CONTAINER_EXTENSIONS: Record<string, readonly string[]> = {
   ogg: ["oga", "ogv", "opus", "spx"],
   mp4: ["m4a", "m4b", "m4v", "heic", "heif", "avif"],
   gz: ["tgz", "svgz"],
+  xml: ["svg", "xhtml", "rss", "atom", "xslt", "kml", "gpx", "plist"],
   tif: ["cr2", "nef", "arw", "dng", "orf", "rw2"],
 }
 

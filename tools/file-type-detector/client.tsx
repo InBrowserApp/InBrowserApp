@@ -93,7 +93,8 @@ export default function FileTypeDetectorClient({
             <button
               type="button"
               className={cn(
-                "flex min-h-52 w-full cursor-pointer touch-manipulation flex-col items-center justify-center gap-3 rounded-lg border border-dashed bg-muted/30 px-5 py-8 text-center transition-colors hover:border-foreground/30 hover:bg-muted/50 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none",
+                "flex w-full cursor-pointer touch-manipulation flex-col items-center justify-center rounded-lg border border-dashed bg-muted/30 px-5 text-center transition-colors hover:border-foreground/30 hover:bg-muted/50 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none",
+                file ? "min-h-28 gap-2 py-4" : "min-h-52 gap-3 py-8",
                 dragging && "border-foreground/40 bg-muted/60"
               )}
               onClick={() => input.current?.click()}
@@ -122,12 +123,18 @@ export default function FileTypeDetectorClient({
             </button>
             {file ? (
               <div className="space-y-3 rounded-lg border p-3">
-                <p className="text-sm font-medium break-all" dir="auto">
+                <p
+                  className="line-clamp-2 text-sm font-medium break-all"
+                  dir="auto"
+                  title={file.name}
+                >
                   {file.name}
                 </p>
                 <p className="text-xs text-muted-foreground">
                   {m.fileSize}:{" "}
-                  {new Intl.NumberFormat(language).format(file.size)} B
+                  <bdi dir="ltr">
+                    {new Intl.NumberFormat(language).format(file.size)} B
+                  </bdi>
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Button
@@ -144,13 +151,15 @@ export default function FileTypeDetectorClient({
                 </div>
               </div>
             ) : null}
-            <div className="space-y-1">
-              <Button variant="outline" size="sm" onClick={example}>
-                <Binary aria-hidden="true" />
-                {m.example}
-              </Button>
-              <p className="text-xs text-muted-foreground">{m.exampleHint}</p>
-            </div>
+            {!file ? (
+              <div className="space-y-1">
+                <Button variant="outline" size="sm" onClick={example}>
+                  <Binary aria-hidden="true" />
+                  {m.example}
+                </Button>
+                <p className="text-xs text-muted-foreground">{m.exampleHint}</p>
+              </div>
+            ) : null}
             <p className="text-xs leading-relaxed text-muted-foreground">
               {m.privacy}
             </p>
