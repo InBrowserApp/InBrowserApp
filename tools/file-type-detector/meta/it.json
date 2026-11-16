@@ -1,0 +1,4 @@
+{
+  "name": "Rilevatore del tipo di file",
+  "description": "Identifica i formati tramite le firme, verifica le estensioni non corrispondenti e consulta i tipi MIME e un’anteprima esadecimale in locale nel browser."
+}

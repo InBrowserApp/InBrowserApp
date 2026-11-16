@@ -86,6 +86,10 @@ const languageOptions = createLanguageOptions(
       import { setupIsolationLinks } from "@/lib/isolation-links"
       setupIsolationLinks()
     </script>
+    <script>
+      import { setupPwaInstall } from "@/lib/pwa-install"
+      setupPwaInstall()
+    </script>
     {!isIsolatedToolPath(Astro.url.pathname) && <ClientRouter />}
     <script is:inline>
       ;(function () {

@@ -1,5 +1,3 @@
-# Organizador de páginas PDF
-
 O Organizador de páginas PDF permite reordenar, girar e remover páginas de um PDF sem enviar o documento para um servidor. Ele cria um novo PDF a partir da ordem de páginas que você escolher, deixando o arquivo original intacto.
 
 ## Quando usar
@@ -8,8 +6,11 @@ Use quando precisar corrigir documentos digitalizados, remover páginas em branc
 
 ## Como organizar páginas
 
-Carregue um PDF, revise a lista de páginas e use os controles ao lado de cada página para movê-la para cima ou para baixo, girá-la no sentido horário ou removê-la da exportação. Quando a ordem estiver correta, gere e baixe o novo PDF.
+1. Escolha um PDF ou solte-o na área de arquivos. Cada página aparece como uma prévia numerada.
+2. Arraste a alça de uma página para mudar a ordem ou use os botões de mover. Você também pode dar foco a uma alça e pressionar a tecla de seta para cima ou para baixo. Gire as páginas no sentido horário em incrementos de 90° ou remova as páginas de que não precisa.
+3. Use **Desfazer** para reverter uma alteração recente ou **Redefinir páginas** para restaurar a ordem original, as rotações e as páginas removidas.
+4. Selecione **Gerar PDF** e depois **Baixar PDF**. Os números nas prévias mostram a ordem de saída; os rótulos de página de origem se referem ao documento original.
 
 ## Privacidade e limites
 
-O processamento acontece localmente na sessão do seu navegador. PDFs protegidos por senha ou criptografados não são compatíveis, e documentos muito grandes podem demorar mais para ler ou exportar.
+Seu arquivo é processado no seu dispositivo e nunca é enviado para um servidor. PDFs protegidos por senha ou criptografados devem ser desbloqueados primeiro. Mantenha pelo menos uma página para exportar. Documentos grandes podem demorar mais para exibir as prévias ou ser salvos; você ainda pode organizar as páginas enquanto as prévias carregam. Se uma prévia estiver indisponível, os controles da página e a exportação continuarão disponíveis. Fechar ou recarregar a página limpa esta sessão.

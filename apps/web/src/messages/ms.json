@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Alat percuma berasaskan pelayar yang berjalan sepenuhnya pada peranti anda.",
     "languageLabel": "Bahasa",
+    "installApp": "Pasang aplikasi",
     "themeLabel": "Togol tema",
     "themeLight": "Cerah",
     "themeDark": "Gelap",

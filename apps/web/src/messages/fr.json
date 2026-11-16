@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Outils gratuits basés sur le navigateur qui s'exécutent entièrement sur votre appareil.",
     "languageLabel": "Langues",
+    "installApp": "Installer l’application",
     "themeLabel": "Changer de thème",
     "themeLight": "Clair",
     "themeDark": "Sombre",

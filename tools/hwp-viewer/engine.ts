@@ -1,5 +1,6 @@
 import init, { HwpDocument } from "@rhwp/core"
 import wasmUrl from "@rhwp/core/rhwp_bg.wasm?gzip-url"
+import { loadWasmSource } from "@workspace/hwp/wasm"
 import { preflight } from "./preflight"
 
 export async function openEngine(bytes: Uint8Array) {
@@ -15,13 +16,7 @@ export async function openEngine(bytes: Uint8Array) {
     },
   })
   try {
-    const response = await fetch(wasmUrl)
-    if (!response.ok || !response.body) throw new Error("WASM download failed")
-    const module = new Response(
-      response.body.pipeThrough(new DecompressionStream("gzip")),
-      { headers: { "Content-Type": "application/wasm" } }
-    )
-    await init({ module_or_path: module })
+    await init({ module_or_path: await loadWasmSource(wasmUrl) })
   } catch (cause) {
     throw new Error("engineUnavailable", { cause })
   }

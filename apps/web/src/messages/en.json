@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Free browser-based tools that run entirely on your device.",
     "languageLabel": "Languages",
+    "installApp": "Install app",
     "themeLabel": "Toggle theme",
     "themeLight": "Light",
     "themeDark": "Dark",

@@ -1,0 +1,4 @@
+{
+  "name": "Dateityp-Erkennung",
+  "description": "Dateiformate anhand ihrer Signaturen erkennen, abweichende Dateiendungen prüfen und MIME-Typen sowie eine Hex-Vorschau lokal im Browser ansehen."
+}

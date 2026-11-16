@@ -10,6 +10,8 @@ import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 import PdfPageOrganizerClient from "./client"
 import { renderPdfPagePreviews } from "./client/pdf-preview"
 import { inspectPdf, organizePdf } from "./core/pdf-page-organizer"
+import uiMessages from "./messages/en.json"
+import meta from "./meta/en.json"
 
 import type { PdfPageOrganizerMessages } from "./client/types"
 
@@ -34,57 +36,7 @@ const mockedOrganizePdf = vi.mocked(organizePdf)
 const mockedRenderPdfPagePreviews = vi.mocked(renderPdfPagePreviews)
 const originalElementFromPoint = document.elementFromPoint
 
-const messages: PdfPageOrganizerMessages = {
-  addPdfLabel: "Add PDF",
-  changePdfLabel: "Change PDF",
-  dragPageLabel: "Drag page",
-  dragPagesHint:
-    "Drag page previews to reorder them. Move buttons remain available for keyboard control.",
-  downloadPdfLabel: "Download PDF",
-  emptyPagesDescription: "Upload a PDF to review and organize its pages.",
-  emptyPagesTitle: "No pages loaded",
-  emptyResultDescription: "Organize the pages, then generate a PDF.",
-  emptyResultTitle: "No export yet",
-  encryptedPdfError: "Encrypted PDFs are not supported.",
-  errorTitle: "Unable to organize PDF",
-  exportDescription: "Generate a new PDF from the current page order.",
-  exportFailedError: "The organized PDF could not be generated.",
-  exportTitle: "Export",
-  fileSizeLabel: "File size",
-  generateLabel: "Generate PDF",
-  generatingLabel: "Generating PDF…",
-  invalidPdfError: "This PDF could not be read.",
-  invalidPdfTypeError: "Choose a PDF file.",
-  localOnlyNote: "Your PDF stays in this browser session.",
-  meta: {
-    description: "Reorder PDF pages.",
-    name: "PDF Page Organizer",
-  },
-  moveDownLabel: "Move down",
-  moveUpLabel: "Move up",
-  noPagesError: "Keep at least one page before generating a PDF.",
-  outputFileLabel: "Output file",
-  outputPagesLabel: "Output pages",
-  outputSizeLabel: "Output size",
-  pageCountLabel: "Pages",
-  pageSizeLabel: "Page size",
-  pagesDescription: "Move pages, rotate them, or remove pages.",
-  pagesTitle: "Page order",
-  previewAltLabel: "Preview of source page",
-  previewUnavailableLabel: "Preview unavailable",
-  readingPdfLabel: "Reading PDF…",
-  removePageLabel: "Remove page",
-  renderingPreviewsLabel: "Rendering previews…",
-  resetPagesLabel: "Reset pages",
-  resultReadyTitle: "Organized PDF ready",
-  rotateClockwiseLabel: "Rotate clockwise",
-  rotationLabel: "Rotation",
-  selectedFileLabel: "Selected PDF",
-  sourcePageLabel: "Source page",
-  supportedFormatsLabel: "Supports PDF files only.",
-  uploadDescription: "Choose the PDF whose page order you want to edit.",
-  uploadTitle: "Upload PDF",
-}
+const messages: PdfPageOrganizerMessages = { ...uiMessages, meta }
 
 function createPdfFile(name = "packet.pdf", type = "application/pdf") {
   return new File([new Uint8Array([37, 80, 68, 70])], name, { type })
@@ -95,7 +47,9 @@ function getFileInput(): HTMLInputElement {
 }
 
 async function getEnabledGenerateButton() {
-  const button = screen.getByRole("button", { name: messages.generateLabel })
+  const button = await screen.findByRole("button", {
+    name: messages.generateLabel,
+  })
 
   await waitFor(() => {
     expect(button).toHaveProperty("disabled", false)
@@ -173,16 +127,17 @@ afterEach(() => {
 })
 
 describe("PdfPageOrganizerClient", () => {
-  test("renders the initial upload, page list, and export states", () => {
+  test("starts with one file selection action and reveals editing after upload", () => {
     render(<PdfPageOrganizerClient messages={messages} />)
 
-    expect(screen.getByText(messages.uploadTitle)).toBeTruthy()
-    expect(screen.getByText(messages.emptyPagesTitle)).toBeTruthy()
-    expect(screen.getByText(messages.exportTitle)).toBeTruthy()
-    expect(screen.getByText(messages.emptyResultTitle)).toBeTruthy()
+    expect(screen.getByText(messages.dropPdfLabel)).toBeTruthy()
+    expect(screen.queryByText(messages.emptyPagesTitle)).toBeNull()
     expect(
-      screen.getByRole("button", { name: messages.generateLabel })
-    ).toHaveProperty("disabled", true)
+      screen.queryByRole("button", { name: messages.generateLabel })
+    ).toBeNull()
+    expect(
+      screen.getAllByRole("button", { name: messages.addPdfLabel })
+    ).toHaveLength(1)
   })
 
   test("loads a PDF and exports the current page plan", async () => {
@@ -194,10 +149,10 @@ describe("PdfPageOrganizerClient", () => {
     })
 
     await screen.findByText("packet.pdf")
-    expect(screen.queryByText(messages.uploadTitle)).toBeNull()
+    expect(screen.queryByText(messages.dropPdfLabel)).toBeNull()
     expect(screen.getByText(messages.selectedFileLabel)).toBeTruthy()
     expect(
-      await screen.findByAltText(`${messages.previewAltLabel} 1`)
+      await screen.findByRole("img", { name: `${messages.previewAltLabel} 1` })
     ).toBeTruthy()
     fireEvent.click(await getEnabledGenerateButton())
 
@@ -326,10 +281,123 @@ describe("PdfPageOrganizerClient", () => {
     ])
   })
 
+  test("recovers after removing every page and invalidates an old export", async () => {
+    render(<PdfPageOrganizerClient messages={messages} />)
+    fireEvent.change(getFileInput(), { target: { files: [createPdfFile()] } })
+    fireEvent.click(await getEnabledGenerateButton())
+    await screen.findByRole("link", { name: messages.downloadPdfLabel })
+
+    for (const number of [1, 2, 3]) {
+      fireEvent.click(
+        screen.getByRole("button", {
+          name: `${messages.removePageLabel}: ${messages.sourcePageLabel} ${number}`,
+        })
+      )
+    }
+    expect(screen.getByText(messages.emptyPagesTitle)).toBeTruthy()
+    expect(
+      screen.queryByRole("link", { name: messages.downloadPdfLabel })
+    ).toBeNull()
+    expect(
+      screen.getByRole("button", { name: messages.generateLabel })
+    ).toHaveProperty("disabled", true)
+    fireEvent.click(screen.getByRole("button", { name: messages.undoLabel }))
+    expect(screen.queryByText(messages.emptyPagesTitle)).toBeNull()
+    fireEvent.click(await getEnabledGenerateButton())
+    await screen.findByRole("link", { name: messages.downloadPdfLabel })
+    expect(mockedOrganizePdf.mock.calls[1]?.[1]).toMatchObject([
+      { sourcePageNumber: 3 },
+    ])
+
+    fireEvent.click(
+      screen.getByRole("button", { name: messages.resetPagesLabel })
+    )
+    expect(
+      screen.getAllByRole("listitem", { name: /Source page/ })
+    ).toHaveLength(3)
+    fireEvent.click(screen.getByRole("button", { name: messages.undoLabel }))
+    expect(
+      screen.getAllByRole("listitem", { name: /Source page/ })
+    ).toHaveLength(1)
+  })
+
+  test("supports keyboard reordering while keeping focus on the moved page", async () => {
+    render(<PdfPageOrganizerClient messages={messages} />)
+    fireEvent.change(getFileInput(), { target: { files: [createPdfFile()] } })
+    const handle = await screen.findByRole("button", {
+      name: `${messages.dragPageLabel}: ${messages.sourcePageLabel} 1`,
+    })
+    handle.focus()
+    fireEvent.keyDown(handle, { key: "ArrowDown" })
+    expect(document.activeElement).toBe(handle)
+    expect(
+      screen.getByRole("listitem", {
+        name: `${messages.outputPagesLabel} 2. ${messages.sourcePageLabel} 1`,
+      })
+    ).toBeTruthy()
+    fireEvent.keyDown(handle, { key: "ArrowUp" })
+    fireEvent.click(await getEnabledGenerateButton())
+    await screen.findByRole("link", { name: messages.downloadPdfLabel })
+    expect(mockedOrganizePdf.mock.calls[0]?.[1]).toMatchObject([
+      { sourcePageNumber: 1 },
+      { sourcePageNumber: 2 },
+      { sourcePageNumber: 3 },
+    ])
+  })
+
+  test("keeps reset available after exhausting bounded undo history", async () => {
+    render(<PdfPageOrganizerClient messages={messages} />)
+    fireEvent.change(getFileInput(), { target: { files: [createPdfFile()] } })
+    const rotate = await screen.findByRole("button", {
+      name: `${messages.rotateClockwiseLabel}: ${messages.sourcePageLabel} 1`,
+    })
+    for (let i = 0; i < 21; i++) fireEvent.click(rotate)
+    const undo = screen.getByRole("button", { name: messages.undoLabel })
+    for (let i = 0; i < 20; i++) fireEvent.click(undo)
+    expect(undo).toHaveProperty("disabled", true)
+    const reset = screen.getByRole("button", { name: messages.resetPagesLabel })
+    expect(reset).toHaveProperty("disabled", false)
+    fireEvent.click(reset)
+    expect(reset).toHaveProperty("disabled", true)
+    fireEvent.click(await getEnabledGenerateButton())
+    await screen.findByRole("link", { name: messages.downloadPdfLabel })
+    expect(mockedOrganizePdf.mock.calls[0]?.[1]?.[0]).toMatchObject({
+      rotation: 0,
+    })
+  })
+
+  test("clears undo history for a replacement PDF and exports without previews", async () => {
+    mockedRenderPdfPagePreviews.mockRejectedValue(
+      new Error("CANVAS_UNAVAILABLE")
+    )
+    render(<PdfPageOrganizerClient messages={messages} />)
+    fireEvent.change(getFileInput(), { target: { files: [createPdfFile()] } })
+    fireEvent.click(
+      await screen.findByRole("button", {
+        name: `${messages.removePageLabel}: ${messages.sourcePageLabel} 1`,
+      })
+    )
+    fireEvent.change(getFileInput(), {
+      target: { files: [createPdfFile("replacement.pdf")] },
+    })
+    await getEnabledGenerateButton()
+    expect(
+      screen.getByRole("button", { name: messages.undoLabel })
+    ).toHaveProperty("disabled", true)
+    await waitFor(() =>
+      expect(
+        screen.getAllByText(messages.previewUnavailableLabel).length
+      ).toBeGreaterThan(0)
+    )
+    fireEvent.click(await getEnabledGenerateButton())
+    await screen.findByRole("link", { name: messages.downloadPdfLabel })
+    expect(mockedOrganizePdf.mock.calls[0]?.[1]).toHaveLength(3)
+  })
+
   test("supports drag and drop uploads", async () => {
     render(<PdfPageOrganizerClient messages={messages} />)
 
-    fireEvent.drop(screen.getByLabelText(messages.addPdfLabel), {
+    fireEvent.drop(screen.getByText(messages.dropPdfLabel), {
       dataTransfer: {
         files: [createPdfFile("dropped.pdf")],
       },

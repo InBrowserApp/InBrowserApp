@@ -29,6 +29,13 @@ type HashWasmArgon2Verifier = (params: {
   secret?: string
 }) => Promise<boolean>
 
+// Match the browser limits offered by the companion Argon2 hasher.
+const ARGON2_VERIFY_LIMITS = {
+  memoryCost: 262144,
+  iterations: 12,
+  parallelism: 16,
+} as const
+
 const ARGON2_VARIANTS = new Set<Argon2Variant>([
   "argon2d",
   "argon2i",
@@ -48,6 +55,16 @@ async function verifyArgon2Password(
 ): Promise<Argon2VerifyResult> {
   const hash = normalizeEncodedHash(params.hash)
   const info = parseArgon2EncodedHash(hash)
+
+  for (const parameter of [
+    "memoryCost",
+    "iterations",
+    "parallelism",
+  ] as const) {
+    if (info[parameter] > ARGON2_VERIFY_LIMITS[parameter]) {
+      throw new Argon2HashError("Argon2 parameters exceed the browser limits.")
+    }
+  }
 
   try {
     const verified = await verifier({
@@ -167,6 +184,7 @@ function estimateBase64ByteLength(value: string) {
 }
 
 export {
+  ARGON2_VERIFY_LIMITS,
   Argon2HashError,
   estimateBase64ByteLength,
   parseArgon2EncodedHash,
