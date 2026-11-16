@@ -10,6 +10,8 @@ export function drawWatermark(
   maxSide = Infinity,
   original = false
 ) {
+  // Detached canvases must resolve locale-dependent glyphs like the preview.
+  canvas.lang = document.documentElement.lang
   const ratio = Math.min(1, maxSide / Math.max(source.width, source.height))
   canvas.width = Math.max(1, Math.round(source.width * ratio))
   canvas.height = Math.max(1, Math.round(source.height * ratio))

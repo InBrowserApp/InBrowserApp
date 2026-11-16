@@ -73,6 +73,20 @@ test("rejects unavailable canvas contexts", () => {
     "CANVAS_UNAVAILABLE"
   )
 })
+test("sets the page language before resolving text on a detached canvas", () => {
+  const previous = document.documentElement.lang
+  document.documentElement.lang = "zh-CN"
+  try {
+    vi.mocked(canvas.getContext).mockImplementation(() => {
+      expect(canvas.lang).toBe("zh-CN")
+      return context as unknown as CanvasRenderingContext2D
+    })
+    drawWatermark(canvas, source, null, defaultOptions("© 你的名字"))
+    expect(canvas.getContext).toHaveBeenCalled()
+  } finally {
+    document.documentElement.lang = previous
+  }
+})
 test("encodes the requested format and rejects null or silently substituted output", async () => {
   const options = defaultOptions("Test")
   const blob = new Blob(["image"], { type: "image/png" })
