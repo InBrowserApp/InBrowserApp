@@ -2,6 +2,7 @@
 import { resolveLocale } from "@workspace/tool-sdk"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import { buttonVariants } from "@workspace/ui/components/ui/button"
+import { cn } from "@workspace/ui/lib/utils"
 import ZipCreator from "./client"
 
 import type { ToolMeta } from "@workspace/tool-sdk"
@@ -28,7 +29,7 @@ const viewerHref =
 <ToolPageShell title={meta.name} description={meta.description}>
   <ZipCreator client:load messages={messages} lang={lang} />
   <div class="mt-6">
-    <a href={viewerHref} class={buttonVariants({ variant: "link" })}
+    <a href={viewerHref} class={cn(buttonVariants({ variant: "link" }), "h-auto max-w-full whitespace-normal text-start")}
       >{messages.viewerLink}</a
     >
   </div>

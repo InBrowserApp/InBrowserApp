@@ -1,5 +1,10 @@
 import { useId } from "react"
 
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@workspace/ui/components/ui/alert"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
@@ -25,7 +30,7 @@ import {
   SelectValue,
 } from "@workspace/ui/components/ui/select"
 import { Spinner } from "@workspace/ui/components/ui/spinner"
-import { Download, FileArchive } from "@workspace/ui/icons"
+import { Download, FileArchive, TriangleAlert } from "@workspace/ui/icons"
 
 import { formatBytes } from "../format"
 
@@ -68,13 +73,17 @@ export function CreateCard({
                 value={c.filename}
                 disabled={disabled}
                 aria-invalid={!c.validName}
-                aria-describedby={`${id}-name-help`}
+                aria-describedby={`${id}-name-help ${id}-name-error`}
                 onChange={(event) => c.changeFilename(event.target.value)}
               />
               <FieldDescription id={`${id}-name-help`}>
                 {m.filenameHint}
               </FieldDescription>
-              {!c.validName ? <FieldError>{m.filenameError}</FieldError> : null}
+              {!c.validName ? (
+                <FieldError id={`${id}-name-error`}>
+                  {m.filenameError}
+                </FieldError>
+              ) : null}
             </Field>
             <Field data-disabled={disabled}>
               <FieldLabel htmlFor={`${id}-compression`}>
@@ -133,9 +142,17 @@ export function CreateCard({
               ) : null}
             </div>
           ) : null}
+          {c.error === m.createError ? (
+            <Alert variant="destructive">
+              <TriangleAlert aria-hidden="true" />
+              <AlertTitle>{m.errorTitle}</AlertTitle>
+              <AlertDescription>{c.error}</AlertDescription>
+            </Alert>
+          ) : null}
           <div className="flex flex-wrap gap-2">
             <Button
               type="submit"
+              variant={c.result ? "outline" : "default"}
               disabled={disabled || !c.items.length || !c.validName}
             >
               <FileArchive aria-hidden="true" data-icon="inline-start" />

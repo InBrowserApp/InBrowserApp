@@ -24,7 +24,7 @@ export default function ZipCreator({
   return (
     <div className="flex flex-col gap-6">
       <AddCard creator={creator} messages={m} />
-      {creator.error ? (
+      {creator.error === m.readError ? (
         <Alert variant="destructive">
           <TriangleAlert aria-hidden="true" />
           <AlertTitle>{m.errorTitle}</AlertTitle>
