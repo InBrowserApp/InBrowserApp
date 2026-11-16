@@ -15,9 +15,11 @@ import {
   EmptyHeader,
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
-import { ArrowUp, File, Folder, Trash2, X } from "@workspace/ui/icons"
+import { Trash2 } from "@workspace/ui/icons"
 
 import { formatBytes } from "../format"
+import { ContentsRow } from "./contents-row"
+import { DirectoryNav } from "./directory-nav"
 
 import type { Messages } from "../types"
 import type { Creator } from "../use-zip-creator"
@@ -77,46 +79,19 @@ export function ContentsCard({
             {m.folders}: {number.format(c.index.folders)}
           </Badge>
           <Badge variant="outline">
-            {m.totalSize}: {formatBytes(c.index.bytes, lang)}
+            {m.totalSize}: <bdi>{formatBytes(c.index.bytes, lang)}</bdi>
           </Badge>
         </div>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
         {c.items.length ? (
           <>
-            <nav
-              aria-label={m.contentsTitle}
-              className="flex min-w-0 flex-wrap items-center gap-2 text-sm"
-            >
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                disabled={disabled || !current}
-                onClick={() =>
-                  navigate(
-                    current.slice(0, Math.max(0, current.lastIndexOf("/")))
-                  )
-                }
-                aria-label={m.goUp}
-              >
-                <ArrowUp aria-hidden="true" />
-              </Button>
-              <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                disabled={disabled || !current}
-                onClick={() => navigate("")}
-              >
-                {m.root}
-              </Button>
-              {current ? (
-                <bdi className="min-w-0 break-all" aria-current="location">
-                  / {current}
-                </bdi>
-              ) : null}
-            </nav>
+            <DirectoryNav
+              directory={current}
+              disabled={disabled}
+              messages={m}
+              onNavigate={navigate}
+            />
             {rows.length ? (
               <ul
                 aria-label={m.contentsTitle}
@@ -124,62 +99,17 @@ export function ContentsCard({
               >
                 {rows
                   .slice(currentPage * pageSize, (currentPage + 1) * pageSize)
-                  .map((item) => {
-                    const name = item.path.slice(item.path.lastIndexOf("/") + 1)
-                    return (
-                      <li
-                        key={item.path}
-                        className="flex min-w-0 items-center gap-2 rounded-md px-2 py-1.5 hover:bg-muted/50"
-                      >
-                        {item.file ? (
-                          <File
-                            aria-hidden="true"
-                            className="size-4 shrink-0 text-muted-foreground"
-                          />
-                        ) : (
-                          <Folder
-                            aria-hidden="true"
-                            className="size-4 shrink-0 text-muted-foreground"
-                          />
-                        )}
-                        {item.file ? (
-                          <bdi
-                            className="min-w-0 flex-1 truncate text-sm"
-                            title={name}
-                          >
-                            {name}
-                          </bdi>
-                        ) : (
-                          <Button
-                            type="button"
-                            variant="ghost"
-                            disabled={disabled}
-                            onClick={() => navigate(item.path)}
-                            className="min-w-0 flex-1 justify-start px-1"
-                          >
-                            <bdi className="truncate" title={name}>
-                              {name}
-                            </bdi>
-                          </Button>
-                        )}
-                        <span className="shrink-0 text-xs text-muted-foreground tabular-nums">
-                          {item.file
-                            ? formatBytes(item.file.size, lang)
-                            : m.folder}
-                        </span>
-                        <Button
-                          type="button"
-                          variant="ghost"
-                          size="icon"
-                          disabled={disabled}
-                          aria-label={m.remove.replace("{name}", name)}
-                          onClick={() => c.remove(item.path)}
-                        >
-                          <X aria-hidden="true" />
-                        </Button>
-                      </li>
-                    )
-                  })}
+                  .map((item) => (
+                    <ContentsRow
+                      key={item.path}
+                      item={item}
+                      disabled={disabled}
+                      messages={m}
+                      lang={lang}
+                      onOpen={navigate}
+                      onRemove={c.remove}
+                    />
+                  ))}
               </ul>
             ) : (
               <p className="py-6 text-center text-sm text-muted-foreground">

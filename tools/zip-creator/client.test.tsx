@@ -98,6 +98,25 @@ it("supports a modern folder picker with an entirely empty directory", async () 
   )
 })
 
+it("opens folders from their icon and navigates directly to an ancestor", async () => {
+  mount()
+  const file = source("notes.txt")
+  Object.defineProperty(file, "webkitRelativePath", {
+    value: "Work/sub/deep/notes.txt",
+  })
+  fireEvent.change(folderInput(), { target: { files: [file] } })
+  await screen.findByRole("button", { name: "Work" })
+  fireEvent.click(button("Work").querySelector("svg")!)
+  fireEvent.click(button("sub"))
+  fireEvent.click(button("deep"))
+  expect(screen.getByText("notes.txt")).toBeTruthy()
+  fireEvent.click(button("Work"))
+  expect(button("sub")).toBeTruthy()
+  expect(screen.queryByText("notes.txt")).toBeNull()
+  fireEvent.click(button(m.root))
+  expect(button("Work")).toBeTruthy()
+})
+
 it("keeps drag feedback stable across child enter/leave and accepts another drop after files were added", async () => {
   mount()
   const zone = dropZone()
