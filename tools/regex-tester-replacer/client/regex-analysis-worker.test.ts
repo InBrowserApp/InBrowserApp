@@ -11,7 +11,7 @@ import {
 import type {
   RegexAnalysisWorkerRequest,
   RegexAnalysisWorkerResponse,
-} from "./regex-analysis-worker"
+} from "./regex-analysis-types"
 
 type WorkerListener = (event: MessageEvent<RegexAnalysisWorkerResponse>) => void
 type WorkerErrorListener = (event: ErrorEvent) => void

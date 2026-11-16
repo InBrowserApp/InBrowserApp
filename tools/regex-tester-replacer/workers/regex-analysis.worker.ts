@@ -3,7 +3,7 @@ import { analyzeRegex } from "../core/regex-tester-replacer"
 import type {
   RegexAnalysisWorkerRequest,
   RegexAnalysisWorkerResponse,
-} from "../client/regex-analysis-worker"
+} from "../client/regex-analysis-types"
 
 self.addEventListener(
   "message",

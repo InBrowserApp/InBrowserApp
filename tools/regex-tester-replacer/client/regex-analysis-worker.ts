@@ -1,17 +1,8 @@
-import type { RegexAnalysis, RegexFlag } from "../core/regex-tester-replacer"
-
-type RegexAnalysisWorkerRequest = Readonly<{
-  sourceText: string
-  pattern: string
-  flags: readonly RegexFlag[]
-  replacement: string
-  matchLimit: number
-  previewLimit: number
-}>
-
-type RegexAnalysisWorkerResponse =
-  | Readonly<{ ok: true; analysis: RegexAnalysis }>
-  | Readonly<{ ok: false }>
+import type { RegexAnalysis } from "../core/regex-tester-replacer"
+import type {
+  RegexAnalysisWorkerRequest,
+  RegexAnalysisWorkerResponse,
+} from "./regex-analysis-types"
 
 const REGEX_ANALYSIS_TIMEOUT_MS = 2000
 const REGEX_ANALYSIS_TIMEOUT_ERROR = "REGEX_ANALYSIS_TIMEOUT"
@@ -94,4 +85,3 @@ export {
   REGEX_ANALYSIS_TIMEOUT_ERROR,
   REGEX_ANALYSIS_TIMEOUT_MS,
 }
-export type { RegexAnalysisWorkerRequest, RegexAnalysisWorkerResponse }

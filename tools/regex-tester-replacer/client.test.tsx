@@ -14,7 +14,7 @@ import { STORAGE_KEYS } from "./constants"
 import type {
   RegexAnalysisWorkerRequest,
   RegexAnalysisWorkerResponse,
-} from "./client/regex-analysis-worker"
+} from "./client/regex-analysis-types"
 
 const messages = {
   meta: {
