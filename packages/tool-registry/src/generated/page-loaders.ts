@@ -220,6 +220,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "pdf-text-extractor": () => import("@tool/pdf-text-extractor/page"),
   "pdf-to-image-converter": () => import("@tool/pdf-to-image-converter/page"),
   "pdf-viewer": () => import("@tool/pdf-viewer/page"),
+  "pdf-watermark": () => import("@tool/pdf-watermark/page"),
   "pgp-key-generator": () => import("@tool/pgp-key-generator/page"),
   "placeholder-image-generator": () =>
     import("@tool/placeholder-image-generator/page"),

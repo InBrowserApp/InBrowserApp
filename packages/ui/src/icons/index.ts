@@ -74,5 +74,6 @@ export {
   Wrench,
   Upload,
   Undo2,
+  Redo2,
   X,
 } from "lucide-react"

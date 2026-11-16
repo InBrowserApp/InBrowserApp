@@ -22216,6 +22216,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "pdf-watermark",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "watermark", "text", "image", "tile", "offline"],
+    locales: {
+      ar: {
+        name: "علامة مائية لملفات PDF",
+        description:
+          "أضف علامات مائية نصية أو صورًا إلى صفحات PDF محددة. اضبط التدوير والعتامة والموضع والتكرار بخصوصية في متصفحك.",
+      },
+      de: {
+        name: "PDF-Wasserzeichen",
+        description:
+          "Fügen Sie ausgewählten PDF-Seiten Text- oder Bildwasserzeichen hinzu. Passen Sie Drehung, Deckkraft, Position und Kachelung lokal in Ihrem Browser an.",
+      },
+      en: {
+        name: "PDF Watermark",
+        description:
+          "Add text or image watermarks to selected PDF pages. Adjust rotation, opacity, position, and tiling privately in your browser.",
+      },
+      es: {
+        name: "Marca de agua PDF",
+        description:
+          "Añade marcas de agua de texto o imagen a páginas concretas de un PDF. Ajusta la rotación, opacidad, posición y mosaico de forma privada en tu navegador.",
+      },
+      fr: {
+        name: "Filigrane PDF",
+        description:
+          "Ajoutez des filigranes texte ou image aux pages PDF sélectionnées. Réglez rotation, opacité, position et mosaïque en toute confidentialité dans votre navigateur.",
+      },
+      he: {
+        name: "סימן מים ל-PDF",
+        description:
+          "הוסיפו סימני מים של טקסט או תמונה לעמודי PDF נבחרים. התאימו סיבוב, אטימות, מיקום וריצוף באופן פרטי בדפדפן שלכם.",
+      },
+      hi: {
+        name: "PDF वॉटरमार्क",
+        description:
+          "चुने हुए PDF पृष्ठों पर टेक्स्ट या चित्र वॉटरमार्क जोड़ें। अपने ब्राउज़र में निजी रूप से घुमाव, अपारदर्शिता, स्थिति और दोहराव समायोजित करें।",
+      },
+      id: {
+        name: "Tanda Air PDF",
+        description:
+          "Tambahkan tanda air teks atau gambar ke halaman PDF pilihan. Sesuaikan rotasi, opasitas, posisi, dan pola berulang secara privat di browser Anda.",
+      },
+      it: {
+        name: "Filigrana PDF",
+        description:
+          "Aggiungi filigrane di testo o immagini alle pagine PDF selezionate. Regola rotazione, opacità, posizione e ripetizione in modo privato nel browser.",
+      },
+      ja: {
+        name: "PDF 透かし追加",
+        description:
+          "PDF の指定ページにテキストや画像の透かしを追加できます。回転角度、不透明度、位置、タイル配置をブラウザー内で安全に調整できます。",
+      },
+      ko: {
+        name: "PDF 워터마크",
+        description:
+          "선택한 PDF 페이지에 텍스트 또는 이미지 워터마크를 추가하세요. 브라우저에서 파일을 외부로 보내지 않고 회전, 불투명도, 위치와 반복 배치를 조정할 수 있습니다.",
+      },
+      ms: {
+        name: "Tera Air PDF",
+        description:
+          "Tambah tera air teks atau imej pada halaman PDF terpilih. Laraskan putaran, kelegapan, kedudukan dan corak berulang secara peribadi dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF-watermerk",
+        description:
+          "Voeg tekst- of afbeeldingswatermerken toe aan geselecteerde PDF-pagina's. Pas rotatie, dekking, positie en herhaling privé in je browser aan.",
+      },
+      no: {
+        name: "PDF-vannmerke",
+        description:
+          "Legg til tekst- eller bildevannmerker på valgte PDF-sider. Juster rotasjon, ugjennomsiktighet, plassering og gjentakelse privat i nettleseren.",
+      },
+      pl: {
+        name: "Znak wodny w PDF",
+        description:
+          "Dodawaj tekstowe lub graficzne znaki wodne do wybranych stron PDF. Dostosuj obrót, krycie, położenie i układ kafelkowy prywatnie w przeglądarce.",
+      },
+      pt: {
+        name: "Marca d'água em PDF",
+        description:
+          "Adicione marcas d'água de texto ou imagem às páginas selecionadas de um PDF. Ajuste rotação, opacidade, posição e mosaico com privacidade no navegador.",
+      },
+      ru: {
+        name: "Водяной знак для PDF",
+        description:
+          "Добавляйте текстовые водяные знаки или изображения на выбранные страницы PDF. Настраивайте поворот, непрозрачность, положение и повторение локально в браузере.",
+      },
+      sv: {
+        name: "PDF-vattenstämpel",
+        description:
+          "Lägg till text- eller bildvattenstämplar på valda PDF-sidor. Justera rotation, opacitet, placering och upprepning privat i webbläsaren.",
+      },
+      th: {
+        name: "ลายน้ำ PDF",
+        description:
+          "เพิ่มลายน้ำข้อความหรือรูปภาพลงในหน้า PDF ที่เลือก ปรับมุมหมุน ความทึบ ตำแหน่ง และการเรียงซ้ำได้อย่างเป็นส่วนตัวในเบราว์เซอร์",
+      },
+      tr: {
+        name: "PDF Filigranı",
+        description:
+          "Seçili PDF sayfalarına metin veya görsel filigranları ekleyin. Döndürme, opaklık, konum ve döşeme ayarlarını dosyalarınızı tarayıcınızdan çıkarmadan yapın.",
+      },
+      vi: {
+        name: "Hình mờ PDF",
+        description:
+          "Thêm hình mờ văn bản hoặc hình ảnh vào các trang PDF được chọn. Điều chỉnh góc xoay, độ mờ đục, vị trí và kiểu lặp một cách riêng tư trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 水印",
+        description:
+          "为指定 PDF 页面添加文字或图片水印。在浏览器中私密调整旋转角度、不透明度、位置和平铺效果。",
+      },
+      "zh-TW": {
+        name: "PDF 浮水印",
+        description:
+          "為指定 PDF 頁面加上文字或圖片浮水印。在瀏覽器中私密調整旋轉角度、不透明度、位置及平鋪配置。",
+      },
+    },
+  },
+  {
     slug: "pgp-key-generator",
     category: "network",
     icon: "lock",

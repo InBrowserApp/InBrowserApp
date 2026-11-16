@@ -1,0 +1,9 @@
+## Een watermerk toevoegen aan geselecteerde PDF-pagina's
+
+Upload een PDF en voeg watermerken met tekst of PNG/JPEG-afbeeldingen toe. Selecteer een watermerk in het livevoorbeeld, sleep het naar een aangepaste positie, wijzig het formaat met een hoekgreep of gebruik de ronde greep om het te draaien. Exacte waarden voor positie, formaat en rotatie zijn ook beschikbaar in de instellingen. Met Shift draai je in stappen van 15° en met de pijltjestoetsen verplaats je het geselecteerde watermerk.
+
+Combineer maximaal 10 onafhankelijke watermerken, zoals een logo en een vertrouwelijkheidslabel. Elk watermerk heeft eigen inhoud, dekking, indeling en een eigen paginabereik. Kopieer, verwijder en wijzig de volgorde, maak bewerkingen ongedaan en voer ze opnieuw uit. Kies voor elke laag één watermerk of een herhaald patroon. Voer bereiken in, zoals `1-3,5`, of laat het bereik van een laag leeg om deze op elke pagina toe te passen. Posities zijn relatief ten opzichte van het zichtbare paginagedeelte, ook bij gedraaide en bijgesneden pagina's. Watermerken die over een rand vallen, worden op die rand afgesneden.
+
+## Lokale verwerking met behoud van de oorspronkelijke inhoud
+
+Je PDF en watermerk worden lokaal in je browser verwerkt. Download een nieuwe kopie met het watermerk over de geselecteerde pagina's; andere pagina's behouden hun oorspronkelijke inhoud. Transparante PNG's zijn geschikt voor logo's. Tekst wordt weergegeven als een transparante afbeelding met hoge resolutie met de lettertypen van je browser, inclusief ondersteunde niet-Latijnse schriften. De oorspronkelijke PDF-pagina's worden niet omgezet in afbeeldingen. Watermerken identificeren een document, maar voorkomen kopiëren of bewerken niet. Versleutelde PDF's moeten eerst worden ontgrendeld. Het bewerken van een digitaal ondertekende PDF maakt de handtekening ongeldig.
