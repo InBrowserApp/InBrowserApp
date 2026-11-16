@@ -605,6 +605,7 @@ patchedDependencies:
   '@extend-ai/react-pptx@0.2.2': bde606e53b22a946dedd6ad4aae1c54fc95d1f338548800b490f5f4c820869cc
   '@file-viewer/doc@3.1.2': e9ec60eab3809b5dada43262fa15902aa67911a6e37b47134db0989557687500
   '@matbee/libreoffice-converter@2.7.2': 952404a2b37db15a156290b4fe621c0fbc76f77277d91ab2d9f09a2145385dde
+  '@rhwp/core@0.9.0': 38b71bed4e51265724c430febc998985144ef5ebd2979404eba8d1172d3be5f6
   '@silurus/ooxml@0.88.0': 9258ea89fb47657a16ac77502fe8f963b34d3c89a20465d44065fae61ceff3cf
   caj2pdf-rust@0.6.1: 284d32b89a54b2c4cf716b538dda63c896c90a673dadb6a8bf1d35d6228f500d
   curlconverter@4.12.0: c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484
@@ -4632,7 +4633,7 @@ importers:
         version: 2.6.2
       '@rhwp/core':
         specifier: 'catalog:'
-        version: 0.9.0
+        version: 0.9.0(patch_hash=38b71bed4e51265724c430febc998985144ef5ebd2979404eba8d1172d3be5f6)
       '@workspace/hwp':
         specifier: workspace:*
         version: link:../../packages/lib/hwp
@@ -4681,7 +4682,7 @@ importers:
     dependencies:
       '@rhwp/core':
         specifier: 'catalog:'
-        version: 0.9.0
+        version: 0.9.0(patch_hash=38b71bed4e51265724c430febc998985144ef5ebd2979404eba8d1172d3be5f6)
       '@workspace/hwp':
         specifier: workspace:*
         version: link:../../packages/lib/hwp
@@ -18975,7 +18976,7 @@ snapshots:
 
   '@resvg/resvg-wasm@2.6.2': {}
 
-  '@rhwp/core@0.9.0': {}
+  '@rhwp/core@0.9.0(patch_hash=38b71bed4e51265724c430febc998985144ef5ebd2979404eba8d1172d3be5f6)': {}
 
   '@rolldown/binding-android-arm-eabi@1.2.19':
     optional: true
