@@ -5621,12 +5621,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["code", "screenshot", "image", "svg", "png", "jpeg", "webp", "html"],
     locales: {
       ar: {
-        name: "Code Screenshot Generator",
+        name: "مولّد لقطات شاشة الكود",
         description:
           "أنشئ لقطات شاشة للكود مع تمييز الصياغة وصدّرها بصيغ SVG أو PNG أو JPEG أو WebP أو HTML.",
       },
       de: {
-        name: "Code Screenshot Generator",
+        name: "Code-Screenshot-Generator",
         description:
           "Erstelle Code-Screenshots mit Syntaxhervorhebung und exportiere sie als SVG, PNG, JPEG, WebP oder HTML.",
       },
@@ -5641,7 +5641,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Genera capturas de código con resaltado de sintaxis y expórtalas como SVG, PNG, JPEG, WebP o HTML.",
       },
       fr: {
-        name: "Code Screenshot Generator",
+        name: "Générateur de captures d'écran de code",
         description:
           "Générez des captures d'écran de code avec coloration syntaxique et exportez-les en SVG, PNG, JPEG, WebP ou HTML.",
       },
@@ -5651,42 +5651,42 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "צרו צילומי מסך של קוד עם הדגשת תחביר וייצאו אותם כ-SVG, PNG, JPEG, WebP או HTML.",
       },
       hi: {
-        name: "Code Screenshot Generator",
+        name: "कोड स्क्रीनशॉट जनरेटर",
         description:
           "सिंटैक्स-हाइलाइट किए गए कोड स्क्रीनशॉट बनाएं और उन्हें SVG, PNG, JPEG, WebP या HTML के रूप में एक्सपोर्ट करें।",
       },
       id: {
-        name: "Code Screenshot Generator",
+        name: "Pembuat Tangkapan Layar Kode",
         description:
           "Buat screenshot kode dengan penyorotan sintaks dan ekspor sebagai SVG, PNG, JPEG, WebP, atau HTML.",
       },
       it: {
-        name: "Code Screenshot Generator",
+        name: "Generatore di screenshot di codice",
         description:
           "Genera screenshot di codice con evidenziazione della sintassi ed esportali come SVG, PNG, JPEG, WebP o HTML.",
       },
       ja: {
-        name: "Code Screenshot Generator",
+        name: "コードスクリーンショット生成ツール",
         description:
           "シンタックスハイライト付きのコードスクリーンショットを生成し、SVG、PNG、JPEG、WebP、HTML として書き出します。",
       },
       ko: {
-        name: "Code Screenshot Generator",
+        name: "코드 스크린샷 생성기",
         description:
           "구문 강조가 적용된 코드 스크린샷을 생성하고 SVG, PNG, JPEG, WebP 또는 HTML로 내보내세요.",
       },
       ms: {
-        name: "Code Screenshot Generator",
+        name: "Penjana Tangkapan Skrin Kod",
         description:
           "Jana tangkapan skrin kod dengan penyerlahan sintaks dan eksport sebagai SVG, PNG, JPEG, WebP, atau HTML.",
       },
       nl: {
-        name: "Code Screenshot Generator",
+        name: "Generator voor codescreenshots",
         description:
           "Genereer code-screenshots met syntaxmarkering en exporteer ze als SVG, PNG, JPEG, WebP of HTML.",
       },
       no: {
-        name: "Code Screenshot Generator",
+        name: "Generator for kodeskjermbilder",
         description:
           "Lag syntaksuthevede kode-skjermbilder og eksporter dem som SVG, PNG, JPEG, WebP eller HTML.",
       },
@@ -5696,42 +5696,42 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Generuj zrzuty ekranu kodu z podświetlaniem składni i eksportuj je jako SVG, PNG, JPEG, WebP lub HTML.",
       },
       pt: {
-        name: "Code Screenshot Generator",
+        name: "Gerador de capturas de tela de código",
         description:
           "Gere capturas de tela de código com realce de sintaxe e exporte-as como SVG, PNG, JPEG, WebP ou HTML.",
       },
       ru: {
-        name: "Code Screenshot Generator",
+        name: "Генератор скриншотов кода",
         description:
           "Создавайте скриншоты кода с подсветкой синтаксиса и экспортируйте их как SVG, PNG, JPEG, WebP или HTML.",
       },
       sv: {
-        name: "Code Screenshot Generator",
+        name: "Generator för kodskärmbilder",
         description:
           "Skapa syntaxmarkerade kodskärmbilder och exportera dem som SVG, PNG, JPEG, WebP eller HTML.",
       },
       th: {
-        name: "Code Screenshot Generator",
+        name: "เครื่องมือสร้างภาพหน้าจอโค้ด",
         description:
           "สร้างภาพหน้าจอโค้ดพร้อมไฮไลต์ไวยากรณ์ และส่งออกเป็น SVG, PNG, JPEG, WebP หรือ HTML",
       },
       tr: {
-        name: "Code Screenshot Generator",
+        name: "Kod Ekran Görüntüsü Oluşturucu",
         description:
           "Sözdizimi vurgulu kod ekran görüntüleri oluşturun ve bunları SVG, PNG, JPEG, WebP veya HTML olarak dışa aktarın.",
       },
       vi: {
-        name: "Code Screenshot Generator",
+        name: "Trình tạo ảnh chụp mã",
         description:
           "Tạo ảnh chụp mã có tô sáng cú pháp và xuất dưới dạng SVG, PNG, JPEG, WebP hoặc HTML.",
       },
       "zh-CN": {
-        name: "Code Screenshot Generator",
+        name: "代码截图生成器",
         description:
           "生成带语法高亮的代码截图，并导出为 SVG、PNG、JPEG、WebP 或 HTML。",
       },
       "zh-TW": {
-        name: "Code Screenshot Generator",
+        name: "程式碼截圖產生器",
         description:
           "產生具語法醒目提示的程式碼截圖，並匯出為 SVG、PNG、JPEG、WebP 或 HTML。",
       },

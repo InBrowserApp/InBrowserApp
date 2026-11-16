@@ -58,6 +58,7 @@ function SyntaxCard({ messages, onChange, settings }: ControlCardProps) {
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
+                  <SelectItem value="auto">{messages.languageAuto}</SelectItem>
                   {languageOptions.map((option) => (
                     <SelectItem key={option.value} value={option.value}>
                       {option.label}
