@@ -1,4 +1,4 @@
 {
-  "name": "UUID v5 Generator",
+  "name": "UUID v5 Oluşturucu",
   "description": "Bir ad alanı UUID'si ve addan, tamamen tarayıcınızda, deterministik ada dayalı UUID v5 tanımlayıcıları oluşturun."
 }
