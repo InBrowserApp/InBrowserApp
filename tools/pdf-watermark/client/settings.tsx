@@ -99,6 +99,8 @@ function Settings({
                 <FieldLabel>{m.positionLabel}</FieldLabel>
                 <ToggleGroup
                   className="grid w-full grid-cols-3 gap-1"
+                  spacing={4}
+                  dir="ltr"
                   type="single"
                   variant="outline"
                   value={String(o.position)}

@@ -133,7 +133,7 @@ function Preview({
             disabled={!source || page <= 1}
             onClick={() => setCurrent(page - 1)}
           >
-            <ChevronLeft aria-hidden="true" />
+            <ChevronLeft aria-hidden="true" className="rtl:rotate-180" />
           </Button>
           <p
             aria-live="polite"
@@ -153,7 +153,7 @@ function Preview({
             disabled={!source || page >= source.pages.length}
             onClick={() => setCurrent(page + 1)}
           >
-            <ChevronRight aria-hidden="true" />
+            <ChevronRight aria-hidden="true" className="rtl:rotate-180" />
           </Button>
         </div>
         {source ? (

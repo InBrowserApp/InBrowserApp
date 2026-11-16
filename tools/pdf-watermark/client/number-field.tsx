@@ -53,6 +53,7 @@ function NumberField({
           id={id}
           name={label}
           type="number"
+          dir="ltr"
           autoComplete="off"
           min={min}
           max={max}
