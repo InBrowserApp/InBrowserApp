@@ -144,6 +144,39 @@ describe("AudioRecorderClient", () => {
     ).toBeTruthy()
   })
 
+  test("stops a microphone stream returned after unmount", async () => {
+    let resolveGetUserMedia!: (stream: MediaStream) => void
+    const pendingRequest = new Promise<MediaStream>((resolve) => {
+      resolveGetUserMedia = resolve
+    })
+    const getUserMedia = vi.fn(() => pendingRequest)
+    const trackStop = vi.fn()
+    const stream = {
+      getTracks: () => [{ stop: trackStop }],
+    } as unknown as MediaStream
+
+    Object.defineProperty(navigator, "mediaDevices", {
+      configurable: true,
+      value: { getUserMedia },
+    })
+    vi.stubGlobal("MediaRecorder", MockMediaRecorder)
+
+    const view = render(<AudioRecorderClient messages={messages} />)
+
+    fireEvent.click(screen.getByRole("button", { name: messages.recordButton }))
+    expect(getUserMedia).toHaveBeenCalledWith({ audio: true })
+    view.unmount()
+
+    await act(async () => {
+      resolveGetUserMedia(stream)
+      await pendingRequest
+      await Promise.resolve()
+    })
+
+    expect(trackStop).toHaveBeenCalledTimes(1)
+    expect(MockMediaRecorder.instances).toHaveLength(0)
+  })
+
   test("records, pauses, resumes, previews, downloads, and clears audio", async () => {
     vi.useFakeTimers()
     vi.setSystemTime(new Date(2026, 4, 14, 10, 20, 30))
