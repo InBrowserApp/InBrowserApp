@@ -1,5 +1,5 @@
 ---
-import { buttonVariants } from "@workspace/ui/components/ui/button"
+import { Button } from "@workspace/ui/components/ui/button"
 import { Download } from "@workspace/ui/icons"
 
 interface Props {
@@ -9,14 +9,14 @@ interface Props {
 const { label } = Astro.props
 ---
 
-<button
+<Button
   type="button"
   data-pwa-install
   hidden
-  class={buttonVariants({ variant: "outline" })}
+  variant="outline"
   aria-label={label}
   title={label}
 >
   <Download data-icon="inline-start" />
   <span class="hidden sm:inline">{label}</span>
-</button>
+</Button>
