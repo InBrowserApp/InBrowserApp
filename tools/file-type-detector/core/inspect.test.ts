@@ -14,7 +14,7 @@ afterEach(() => vi.restoreAllMocks())
 
 const png = Uint8Array.from(
   atob(
-    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aOZkAAAAASUVORK5CYII="
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGOo/w8AAgABf//RyUkAAAAASUVORK5CYII="
   ),
   (char) => char.charCodeAt(0)
 )

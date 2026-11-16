@@ -63,7 +63,7 @@ export default function FileTypeDetectorClient({
   function example() {
     const bytes = Uint8Array.from(
       atob(
-        "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aOZkAAAAASUVORK5CYII="
+        "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGOo/w8AAgABf//RyUkAAAAASUVORK5CYII="
       ),
       (char) => char.charCodeAt(0)
     )
@@ -77,7 +77,7 @@ export default function FileTypeDetectorClient({
         type="file"
         name="file"
         aria-label={m.inputTitle}
-        className="sr-only"
+        className="hidden"
         onChange={(event) => {
           const selected = event.target.files?.[0]
           if (selected) void selectFile(selected)
