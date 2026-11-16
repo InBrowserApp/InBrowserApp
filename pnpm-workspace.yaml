@@ -13,8 +13,10 @@ catalog:
   "@matbee/libreoffice-converter": 2.7.2
   pagedjs: 0.4.3
   html2canvas: 1.4.1
+  iconv-lite: 0.7.3
   "@imagemagick/magick-wasm": 0.0.46
   "@asciidoctor/core": 4.2.1
+
   faster-latex: 0.1.0
   "@myriaddreamin/typst.ts": 0.7.0
   "@myriaddreamin/typst-ts-web-compiler": 0.7.0

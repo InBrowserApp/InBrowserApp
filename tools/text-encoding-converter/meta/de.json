@@ -1,0 +1,4 @@
+{
+  "name": "Konverter für Textkodierungen",
+  "description": "Konvertiere Textdateien zwischen UTF-8, GBK, Big5 und anderen Kodierungen. Prüfe unleserlichen Text in der Vorschau, steuere BOM und Zeilenenden und lade das Ergebnis lokal ohne Zeichenverlust herunter."
+}
