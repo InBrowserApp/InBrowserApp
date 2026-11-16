@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Outils gratuits basés sur le navigateur qui s'exécutent entièrement sur votre appareil.",
     "languageLabel": "Langues",
+    "installApp": "Installer l’application",
     "themeLabel": "Changer de thème",
     "themeLight": "Clair",
     "themeDark": "Sombre",
@@ -46,7 +47,6 @@
     "clearSearchLabel": "Effacer",
     "categoriesLabel": "Catégories",
     "categoryAll": "Tous les outils",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "Suggestions",
     "suggestionsHint": "↑↓ naviguer · ↵ ouvrir · esc fermer",
     "suggestionMatchCountOne": "{count} résultat",
@@ -68,6 +68,23 @@
       "text": "Texte",
       "time": "Date et heure",
       "web": "Web"
+    }
+  },
+  "categoryPages": {
+    "titleTemplate": "Outils : {category}",
+    "descriptions": {
+      "crypto": "Calculez le hachage de textes et de fichiers, chiffrez des données et générez ou vérifiez des mots de passe et des clés. Découvrez des outils dans votre navigateur pour les sommes de contrôle, la cryptographie et les identifiants sécurisés.",
+      "developer": "Inspectez des archives, formatez du code, générez des identifiants et convertissez des configurations de développement. Trouvez des utilitaires dans votre navigateur pour vos tâches de développement quotidiennes.",
+      "document": "Lisez et convertissez des documents, des livres numériques, des présentations et des feuilles de calcul dans votre navigateur. Prévisualisez des fichiers, extrayez du contenu et exportez vers d'autres formats sans téléverser vos documents.",
+      "image": "Convertissez, redimensionnez et inspectez des images dans votre navigateur. Optimisez les fichiers image, consultez les métadonnées, créez des codes-barres et travaillez avec des formats d'image animée.",
+      "json": "Formatez, validez, comparez et convertissez des données structurées. Travaillez avec les formats JSON, YAML, TOML, XML et CSV à l'aide d'outils qui s'exécutent dans votre navigateur.",
+      "misc": "Enregistrez de l'audio et de la vidéo, utilisez votre caméra, consultez les informations de votre appareil et convertissez des nombres. Découvrez des outils pratiques dans votre navigateur pour vos tâches quotidiennes.",
+      "network": "Recherchez des informations DNS et IP, calculez des sous-réseaux et inspectez des certificats. Trouvez des outils pour les adresses réseau, les protocoles et le dépannage.",
+      "pdf": "Fusionnez, divisez, inspectez et organisez des fichiers PDF dans votre navigateur. Extrayez du texte, convertissez des pages en images et ajoutez des numéros de page sans téléverser vos documents.",
+      "random": "Générez des nombres aléatoires, des mots de passe et des phrases mnémoniques BIP39 dans votre navigateur. Choisissez un outil et personnalisez ses résultats selon vos besoins.",
+      "text": "Transformez, comparez et analysez du texte, ou validez des identifiants courants. Trouvez des outils dans votre navigateur pour les encodages, la rédaction, le nettoyage de texte et la vérification des formats.",
+      "time": "Convertissez des horodatages et des fuseaux horaires, calculez des durées et travaillez avec des planifications cron. Planifiez des événements et comparez des dates avec des outils de gestion du temps dans votre navigateur.",
+      "web": "Encodez et décodez des données, inspectez des URL, générez des codes QR et travaillez avec les formats web. Découvrez des utilitaires dans votre navigateur pour les tâches courantes de développement web."
     }
   }
 }

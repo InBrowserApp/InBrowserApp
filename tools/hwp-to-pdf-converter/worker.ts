@@ -1,9 +1,10 @@
 import init, { HwpDocument } from "@rhwp/core"
-import hwpWasm from "@rhwp/core/rhwp_bg.wasm?url"
+import hwpWasm from "@rhwp/core/rhwp_bg.wasm?gzip-url"
 import { initWasm, Resvg } from "@resvg/resvg-wasm"
 import svgWasm from "@resvg/resvg-wasm/index_bg.wasm?url"
 import { PDFDocument } from "pdf-lib"
 import { preflight } from "@workspace/hwp/preflight"
+import { loadWasmSource } from "@workspace/hwp/wasm"
 import { binaryResources } from "./core/binary"
 import { xmlResources } from "./core/xml"
 import { failure } from "./core/errors"
@@ -50,7 +51,9 @@ async function convert(bytes: Uint8Array) {
     })
     try {
       await Promise.all([
-        init({ module_or_path: hwpWasm }),
+        loadWasmSource(hwpWasm).then((module) =>
+          init({ module_or_path: module })
+        ),
         initWasm(fetch(svgWasm)),
       ])
     } catch (cause) {

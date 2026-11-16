@@ -4,18 +4,10 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
-import {
-  Empty,
-  EmptyDescription,
-  EmptyHeader,
-  EmptyMedia,
-  EmptyTitle,
-} from "@workspace/ui/components/ui/empty"
-import { Download, FileText, LoaderCircle } from "@workspace/ui/icons"
+import { Check, Download, FileText, LoaderCircle } from "@workspace/ui/icons"
 
 import { formatBytes } from "../core/pdf-page-organizer"
 import { useObjectUrl } from "./object-url"
@@ -27,6 +19,7 @@ type ExportCardProps = Readonly<{
   isGenerating: boolean
   messages: PdfPageOrganizerMessages
   onGenerate: () => void
+  pageCount: number
   result: OrganizerResult | null
 }>
 
@@ -35,87 +28,75 @@ function ExportCard({
   isGenerating,
   messages,
   onGenerate,
+  pageCount,
   result,
 }: ExportCardProps) {
   const resultUrl = useObjectUrl(result?.blob ?? null)
 
   return (
-    <Card className="self-start">
+    <Card>
       <CardHeader>
         <CardTitle>{messages.exportTitle}</CardTitle>
         <CardDescription>{messages.exportDescription}</CardDescription>
       </CardHeader>
-      <CardContent aria-live="polite" className="flex flex-col gap-4">
-        {result ? (
-          <div className="flex flex-col gap-4 border-y border-border/70 py-3">
-            <div>
-              <h3 className="text-base font-medium">
+      <CardContent className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div aria-live="polite" aria-atomic="true" className="min-w-0">
+          {result ? (
+            <div className="flex flex-col gap-2">
+              <p className="flex items-center gap-2 font-medium">
+                <Check aria-hidden="true" className="size-4 shrink-0" />
                 {messages.resultReadyTitle}
-              </h3>
-              <p className="mt-2 text-xs font-medium text-muted-foreground">
-                {messages.outputFileLabel}
               </p>
-              <p className="mt-1 text-sm break-all text-muted-foreground">
-                {result.fileName}
+              <p className="text-sm break-all text-muted-foreground">
+                <bdi>{result.fileName}</bdi>
               </p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <Badge variant="secondary">
+              <p className="text-xs text-muted-foreground">
                 {messages.pageCountLabel}: {result.pageCount}
-              </Badge>
-              <Badge variant="outline">
-                {messages.outputSizeLabel}: {formatBytes(result.blob.size)}
-              </Badge>
+                {" · "}
+                <bdi>{formatBytes(result.blob.size)}</bdi>
+              </p>
             </div>
-          </div>
-        ) : (
-          <Empty className="min-h-48 border border-dashed border-border/80 bg-muted/20">
-            <EmptyHeader>
-              <EmptyMedia variant="icon">
-                {isGenerating ? (
-                  <LoaderCircle className="motion-safe:animate-spin" />
-                ) : (
-                  <FileText />
-                )}
-              </EmptyMedia>
-              <EmptyTitle>
-                {isGenerating
-                  ? messages.generatingLabel
-                  : messages.emptyResultTitle}
-              </EmptyTitle>
-              <EmptyDescription>
-                {messages.emptyResultDescription}
-              </EmptyDescription>
-            </EmptyHeader>
-          </Empty>
-        )}
-      </CardContent>
-      <CardFooter className="flex-wrap justify-end gap-3">
+          ) : (
+            <Badge variant="secondary">
+              {messages.outputPagesLabel}: {pageCount}
+            </Badge>
+          )}
+          {pageCount === 0 ? (
+            <p className="mt-2 text-sm text-muted-foreground">
+              {messages.noPagesError}
+            </p>
+          ) : null}
+        </div>
         {resultUrl && result ? (
-          <Button asChild className="max-w-full text-center whitespace-normal">
+          <Button
+            asChild
+            className="h-auto min-h-11 shrink-0 whitespace-normal"
+          >
             <a download={result.fileName} href={resultUrl}>
-              <Download data-icon="inline-start" />
+              <Download aria-hidden="true" data-icon="inline-start" />
               {messages.downloadPdfLabel}
             </a>
           </Button>
-        ) : null}
-        <Button
-          className="max-w-full text-center whitespace-normal"
-          disabled={!canGenerate}
-          onClick={onGenerate}
-          type="button"
-        >
-          {isGenerating ? (
-            <LoaderCircle
-              className="motion-safe:animate-spin"
-              data-icon="inline-start"
-            />
-          ) : (
-            <FileText data-icon="inline-start" />
-          )}
-          {isGenerating ? messages.generatingLabel : messages.generateLabel}
-        </Button>
-      </CardFooter>
+        ) : (
+          <Button
+            className="h-auto min-h-11 shrink-0 whitespace-normal"
+            disabled={!canGenerate}
+            onClick={onGenerate}
+            type="button"
+          >
+            {isGenerating ? (
+              <LoaderCircle
+                aria-hidden="true"
+                className="motion-safe:animate-spin"
+                data-icon="inline-start"
+              />
+            ) : (
+              <FileText aria-hidden="true" data-icon="inline-start" />
+            )}
+            {isGenerating ? messages.generatingLabel : messages.generateLabel}
+          </Button>
+        )}
+      </CardContent>
     </Card>
   )
 }

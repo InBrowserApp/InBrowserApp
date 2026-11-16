@@ -7730,6 +7730,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "file-type-detector",
+    language: "ar",
+  },
+  {
+    slug: "file-type-detector",
+    language: "de",
+  },
+  {
+    slug: "file-type-detector",
+    language: "en",
+  },
+  {
+    slug: "file-type-detector",
+    language: "es",
+  },
+  {
+    slug: "file-type-detector",
+    language: "fr",
+  },
+  {
+    slug: "file-type-detector",
+    language: "he",
+  },
+  {
+    slug: "file-type-detector",
+    language: "hi",
+  },
+  {
+    slug: "file-type-detector",
+    language: "id",
+  },
+  {
+    slug: "file-type-detector",
+    language: "it",
+  },
+  {
+    slug: "file-type-detector",
+    language: "ja",
+  },
+  {
+    slug: "file-type-detector",
+    language: "ko",
+  },
+  {
+    slug: "file-type-detector",
+    language: "ms",
+  },
+  {
+    slug: "file-type-detector",
+    language: "nl",
+  },
+  {
+    slug: "file-type-detector",
+    language: "no",
+  },
+  {
+    slug: "file-type-detector",
+    language: "pl",
+  },
+  {
+    slug: "file-type-detector",
+    language: "pt",
+  },
+  {
+    slug: "file-type-detector",
+    language: "ru",
+  },
+  {
+    slug: "file-type-detector",
+    language: "sv",
+  },
+  {
+    slug: "file-type-detector",
+    language: "th",
+  },
+  {
+    slug: "file-type-detector",
+    language: "tr",
+  },
+  {
+    slug: "file-type-detector",
+    language: "vi",
+  },
+  {
+    slug: "file-type-detector",
+    language: "zh-CN",
+  },
+  {
+    slug: "file-type-detector",
+    language: "zh-TW",
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     language: "ar",
   },

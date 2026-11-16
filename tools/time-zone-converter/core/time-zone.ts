@@ -208,7 +208,7 @@ function formatInTimeZone(timestamp: number, timeZone: string) {
   return formatDateTimeParts(getZonedParts(timestamp, timeZone))
 }
 
-function toUtcTimestamp(parts: DateTimeParts, timeZone: string) {
+function toUtcTimestamp(parts: DateTimeParts, timeZone: string): number | null {
   const guess = Date.UTC(
     parts.year,
     parts.month - 1,
@@ -226,7 +226,9 @@ function toUtcTimestamp(parts: DateTimeParts, timeZone: string) {
     utc = guess - nextOffset
   }
 
-  return utc
+  return formatInTimeZone(utc, timeZone) === formatDateTimeParts(parts)
+    ? utc
+    : null
 }
 
 function formatOffsetLabel(offsetMs: number) {

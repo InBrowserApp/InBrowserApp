@@ -1,0 +1,4 @@
+{
+  "name": "Wykrywanie typu pliku",
+  "description": "Rozpoznawaj formaty plików na podstawie sygnatur, sprawdzaj niezgodność rozszerzeń oraz przeglądaj typy MIME i podgląd szesnastkowy lokalnie w przeglądarce."
+}

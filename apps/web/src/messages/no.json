@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Gratis nettleserbaserte verktøy som kjører helt på enheten din.",
     "languageLabel": "Språk",
+    "installApp": "Installer app",
     "themeLabel": "Bytt tema",
     "themeLight": "Lyst",
     "themeDark": "Mørkt",
@@ -46,7 +47,6 @@
     "clearSearchLabel": "Tøm",
     "categoriesLabel": "Kategorier",
     "categoryAll": "Alle verktøy",
-    "sortLabel": "A–Å",
     "suggestionsLabel": "Forslag",
     "suggestionsHint": "↑↓ naviger · ↵ åpne · esc lukk",
     "suggestionMatchCountOne": "{count} treff",
@@ -68,6 +68,23 @@
       "text": "Tekst",
       "time": "Tid og dato",
       "web": "Web"
+    }
+  },
+  "categoryPages": {
+    "titleTemplate": "{category} – verktøy",
+    "descriptions": {
+      "crypto": "Beregn hashverdier for tekst og filer, krypter data og generer eller bekreft passord og nøkler. Utforsk nettleserbaserte verktøy for kontrollsummer, kryptografi og sikre påloggingsopplysninger.",
+      "developer": "Undersøk arkiver, formater kode, generer identifikatorer og konverter utviklerkonfigurasjoner. Finn nettleserbaserte verktøy for daglige utviklingsoppgaver.",
+      "document": "Les og konverter dokumenter, e-bøker, presentasjoner og regneark i nettleseren din. Forhåndsvis filer, trekk ut innhold og eksporter til andre formater uten å laste opp dokumentene dine.",
+      "image": "Konverter, endre størrelse på og undersøk bilder i nettleseren din. Optimaliser bildefiler, vis metadata, lag strekkoder og arbeid med animerte bildeformater.",
+      "json": "Formater, valider, sammenlign og konverter strukturerte data. Arbeid med JSON, YAML, TOML, XML og CSV ved hjelp av verktøy som kjører i nettleseren din.",
+      "misc": "Ta opp lyd og video, bruk kameraet ditt, undersøk enhetsinformasjon og konverter tall. Utforsk praktiske nettleserverktøy for hverdagsoppgaver.",
+      "network": "Slå opp DNS- og IP-informasjon, beregn delnett og undersøk sertifikater. Finn verktøy for nettverksadresser, protokoller og feilsøking.",
+      "pdf": "Slå sammen, del opp, undersøk og organiser PDF-filer i nettleseren din. Trekk ut tekst, konverter sider til bilder og legg til sidetall uten å laste opp dokumentene dine.",
+      "random": "Generer tilfeldige tall, passord og BIP39-huskefraser i nettleseren din. Velg et verktøy og tilpass resultatet til oppgaven din.",
+      "text": "Omform, sammenlign og analyser tekst, eller valider vanlige identifikatorer. Finn nettleserverktøy for kodinger, skriving, tekstopprydding og formatkontroll.",
+      "time": "Konverter tidsstempler og tidssoner, beregn varigheter og arbeid med cron-tidsplaner. Planlegg hendelser og sammenlign datoer med nettleserbaserte tidsverktøy.",
+      "web": "Kod og dekod data, undersøk URL-er, generer QR-koder og arbeid med webformater. Utforsk nettleserbaserte verktøy for vanlige webutviklingsoppgaver."
     }
   }
 }

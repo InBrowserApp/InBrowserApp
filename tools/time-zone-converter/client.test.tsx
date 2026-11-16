@@ -102,6 +102,36 @@ describe("TimeZoneConverterClient", () => {
     expect(screen.getAllByText("—")).toHaveLength(4)
   })
 
+  test("rejects a local time skipped by a DST transition", async () => {
+    window.localStorage.setItem(STORAGE_KEYS.fromTimeZone, "America/New_York")
+    window.localStorage.setItem(STORAGE_KEYS.toTimeZone, "UTC")
+    window.localStorage.setItem(
+      STORAGE_KEYS.fromInput,
+      "2024-03-10 01:30:00.000"
+    )
+    window.localStorage.setItem(STORAGE_KEYS.toInput, "2024-03-10 06:30:00.000")
+
+    render(<TimeZoneConverterClient messages={messages} />)
+
+    const fromCard = screen.getByTestId("time-zone-card-from")
+    const input = within(fromCard).getByLabelText("Date & time")
+
+    await waitFor(() => {
+      expect(input).toHaveProperty("value", "2024-03-10 01:30:00.000")
+    })
+
+    fireEvent.change(input, {
+      target: { value: "2024-03-10 02:30:00.000" },
+    })
+
+    await waitFor(() => {
+      expect(screen.getByText("Invalid date/time")).toBeTruthy()
+    })
+
+    expect(input.getAttribute("aria-invalid")).toBe("true")
+    expect(screen.getAllByText("—")).toHaveLength(4)
+  })
+
   test("sets the from time to now and updates the opposite card", async () => {
     vi.spyOn(Date, "now").mockReturnValue(Date.UTC(2024, 0, 2, 8, 4, 5, 6))
     window.localStorage.setItem(STORAGE_KEYS.fromTimeZone, "America/New_York")

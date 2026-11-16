@@ -8,6 +8,7 @@ import {
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import IcalEventGeneratorClient from "./client"
+import * as timeZone from "./core/time-zone"
 
 const messages = {
   meta: {
@@ -103,6 +104,9 @@ const messages = {
 
 beforeEach(() => {
   window.localStorage.clear()
+  vi.spyOn(timeZone, "getSupportedTimeZones").mockReturnValue([
+    ...new Set(["UTC", Intl.DateTimeFormat().resolvedOptions().timeZone]),
+  ])
   vi.spyOn(Date, "now").mockReturnValue(Date.parse("2026-04-21T17:00:00.000Z"))
   vi.spyOn(URL, "createObjectURL").mockReturnValue("blob:ical-event")
   vi.spyOn(URL, "revokeObjectURL").mockImplementation(() => {})

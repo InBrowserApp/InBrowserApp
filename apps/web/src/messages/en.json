@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Free browser-based tools that run entirely on your device.",
     "languageLabel": "Languages",
+    "installApp": "Install app",
     "themeLabel": "Toggle theme",
     "themeLight": "Light",
     "themeDark": "Dark",
@@ -46,7 +47,6 @@
     "clearSearchLabel": "Clear",
     "categoriesLabel": "Categories",
     "categoryAll": "All tools",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "Suggestions",
     "suggestionsHint": "↑↓ navigate · ↵ open · esc close",
     "suggestionMatchCountOne": "{count} match",
@@ -68,6 +68,23 @@
       "text": "Text",
       "time": "Time & Date",
       "web": "Web"
+    }
+  },
+  "categoryPages": {
+    "titleTemplate": "{category} Tools",
+    "descriptions": {
+      "crypto": "Hash text and files, encrypt data, and generate or verify passwords and keys. Explore browser-based tools for checksums, cryptography, and secure credentials.",
+      "developer": "Inspect archives, format code, generate identifiers, and convert developer configurations. Find browser-based utilities for everyday development tasks.",
+      "document": "Read and convert documents, ebooks, presentations, and spreadsheets in your browser. Preview files, extract content, and export to other formats without uploading your documents.",
+      "image": "Convert, resize, and inspect images in your browser. Optimize image files, view metadata, create barcodes, and work with animated image formats.",
+      "json": "Format, validate, compare, and convert structured data. Work with JSON, YAML, TOML, XML, and CSV using tools that run in your browser.",
+      "misc": "Record audio and video, use your camera, inspect device information, and convert numbers. Explore practical browser tools for everyday tasks.",
+      "network": "Look up DNS and IP information, calculate subnets, and inspect certificates. Find tools for network addresses, protocols, and troubleshooting.",
+      "pdf": "Merge, split, inspect, and organize PDF files in your browser. Extract text, convert pages to images, and add page numbers without uploading your documents.",
+      "random": "Generate random numbers, passwords, and BIP39 mnemonic phrases in your browser. Choose a tool and customize its output for your task.",
+      "text": "Transform, compare, and analyze text, or validate common identifiers. Find browser tools for encodings, writing, text cleanup, and format checks.",
+      "time": "Convert timestamps and time zones, calculate durations, and work with cron schedules. Plan events and compare dates with browser-based time tools.",
+      "web": "Encode and decode data, inspect URLs, generate QR codes, and work with web formats. Explore browser-based utilities for common web development tasks."
     }
   }
 }
