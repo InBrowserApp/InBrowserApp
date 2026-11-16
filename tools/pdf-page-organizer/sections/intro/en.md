@@ -8,8 +8,11 @@ Use it when you need to fix scanned documents, remove accidental blank pages, mo
 
 ## How to organize pages
 
-Upload a PDF, review the page list, then use the controls beside each page to move it up or down, rotate it clockwise, or remove it from the export. When the order looks right, generate and download the new PDF.
+1. Choose a PDF or drop it into the file area. Each page appears as a numbered preview.
+2. Drag a page handle to change the order, or use the move buttons. You can also focus a handle and press the up or down arrow key. Rotate pages clockwise in 90° steps or remove pages you do not need.
+3. Use **Undo** to reverse a recent change, or **Reset pages** to restore the original order, rotations, and removed pages.
+4. Select **Generate PDF**, then **Download PDF**. The numbers on the previews show the output order; the source page labels refer to the original document.
 
 ## Privacy and limits
 
-Processing happens locally in your browser session. Password-protected or encrypted PDFs are not supported, and very large documents may take longer to read or export.
+Your file is processed on your device and is never uploaded to a server. Password-protected or encrypted PDFs must be unlocked first. Keep at least one page to export. Large documents may take longer to preview or save; you can still organize pages while previews load. If a preview is unavailable, the page controls and export remain available. Closing or reloading the page clears this session.

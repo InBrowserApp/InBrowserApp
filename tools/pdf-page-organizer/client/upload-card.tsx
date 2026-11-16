@@ -1,12 +1,10 @@
 import { useState, type DragEvent } from "react"
 
-import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/ui/card"
@@ -17,7 +15,13 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
-import { FileText, Plus, RefreshCcw } from "@workspace/ui/icons"
+import {
+  FileText,
+  LoaderCircle,
+  RefreshCcw,
+  Shield,
+  Upload,
+} from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
 import { formatBytes } from "../core/pdf-page-organizer"
@@ -46,94 +50,118 @@ function UploadCard({
   pageCount,
 }: UploadCardProps) {
   const [isDraggingOver, setIsDraggingOver] = useState(false)
-  const title = file ? messages.selectedFileLabel : messages.uploadTitle
-  const description = file ? messages.localOnlyNote : messages.uploadDescription
 
-  function handleDragOver(event: DragEvent<HTMLLabelElement>) {
-    if (disabled) {
-      return
-    }
-
+  function handleDragOver(event: DragEvent<HTMLDivElement>) {
     event.preventDefault()
-    event.dataTransfer.dropEffect = "copy"
-    setIsDraggingOver(true)
+    event.dataTransfer.dropEffect = disabled ? "none" : "copy"
+    if (!disabled) setIsDraggingOver(true)
   }
 
-  function handleDrop(event: DragEvent<HTMLLabelElement>) {
-    if (disabled) {
-      return
-    }
-
+  function handleDrop(event: DragEvent<HTMLDivElement>) {
     event.preventDefault()
     setIsDraggingOver(false)
-    onFileSelected(event.dataTransfer.files?.[0] ?? null)
+    if (!disabled) onFileSelected(event.dataTransfer.files?.[0] ?? null)
   }
+
+  const chooseButton = (
+    <Button
+      className="h-auto min-h-11 shrink-0 whitespace-normal"
+      disabled={disabled}
+      onClick={() => document.getElementById(inputId)?.click()}
+      type="button"
+      variant={file ? "outline" : "default"}
+    >
+      {file ? (
+        <RefreshCcw aria-hidden="true" data-icon="inline-start" />
+      ) : (
+        <Upload aria-hidden="true" data-icon="inline-start" />
+      )}
+      {file ? messages.changePdfLabel : messages.addPdfLabel}
+    </Button>
+  )
 
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-      </CardHeader>
+      {!file ? (
+        <CardHeader>
+          <CardTitle>{messages.uploadTitle}</CardTitle>
+          <CardDescription>{messages.uploadDescription}</CardDescription>
+        </CardHeader>
+      ) : null}
       <CardContent className="flex flex-col gap-4">
-        {file ? (
-          <div className="flex flex-col gap-3 border-y border-border/70 py-3">
-            <div className="flex items-start gap-3">
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-md bg-muted text-muted-foreground">
-                <FileText />
-              </div>
-              <div className="min-w-0">
-                <p className="text-sm font-medium break-all">{file.name}</p>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <Badge variant="secondary">
-                {messages.pageCountLabel}: {pageCount}
-              </Badge>
-              <Badge variant="outline">
-                {messages.fileSizeLabel}: {formatBytes(file.size)}
-              </Badge>
-            </div>
-          </div>
-        ) : (
-          <label
-            aria-label={messages.addPdfLabel}
-            className={cn(
-              "flex",
-              disabled ? "cursor-not-allowed" : "cursor-pointer"
-            )}
-            htmlFor={disabled ? undefined : inputId}
-            onDragLeave={() => {
+        <div
+          className={cn("rounded-lg", isDraggingOver && "ring-2 ring-primary")}
+          onDragLeave={(event) => {
+            if (
+              !event.currentTarget.contains(event.relatedTarget as Node | null)
+            )
               setIsDraggingOver(false)
-            }}
-            onDragOver={handleDragOver}
-            onDrop={handleDrop}
-          >
+          }}
+          onDragOver={handleDragOver}
+          onDrop={handleDrop}
+        >
+          {file ? (
+            <div
+              className="flex flex-wrap items-center justify-between gap-4"
+              aria-live="polite"
+              aria-busy={isReading}
+            >
+              <div className="flex min-w-0 flex-1 items-center gap-3">
+                <FileText
+                  aria-hidden="true"
+                  className="size-8 shrink-0 text-muted-foreground"
+                />
+                <div className="min-w-0">
+                  <p className="text-xs text-muted-foreground">
+                    {messages.selectedFileLabel}
+                  </p>
+                  <p className="mt-1 text-sm font-medium break-all">
+                    <bdi>{file.name}</bdi>
+                  </p>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    {isReading ? (
+                      messages.readingPdfLabel
+                    ) : (
+                      <>
+                        {messages.pageCountLabel}: {pageCount}
+                      </>
+                    )}
+                    {" · "}
+                    <bdi>{formatBytes(file.size)}</bdi>
+                  </p>
+                </div>
+              </div>
+              {isReading ? (
+                <LoaderCircle
+                  aria-hidden="true"
+                  className="size-5 motion-safe:animate-spin"
+                />
+              ) : null}
+              {chooseButton}
+            </div>
+          ) : (
             <Empty
               className={cn(
-                "min-h-52 flex-1 border border-dashed border-border/80 bg-muted/30 transition-colors",
-                !disabled && "hover:border-foreground/20 hover:bg-muted/45",
-                isDraggingOver && "border-primary bg-primary/5",
-                disabled && "opacity-70"
+                "min-h-64 border border-dashed bg-muted/20",
+                isDraggingOver && "bg-primary/5"
               )}
             >
               <EmptyHeader>
                 <EmptyMedia variant="icon">
-                  <FileText />
+                  <Upload aria-hidden="true" />
                 </EmptyMedia>
-                <EmptyTitle>
-                  {isReading ? messages.readingPdfLabel : messages.addPdfLabel}
-                </EmptyTitle>
+                <EmptyTitle>{messages.dropPdfLabel}</EmptyTitle>
                 <EmptyDescription>
                   {messages.supportedFormatsLabel}
                 </EmptyDescription>
               </EmptyHeader>
+              {chooseButton}
             </Empty>
-          </label>
-        )}
-
+          )}
+        </div>
         <input
           accept={PDF_ACCEPT}
+          aria-label={messages.addPdfLabel}
           className="hidden"
           data-testid="pdf-page-organizer-input"
           disabled={disabled}
@@ -145,29 +173,11 @@ function UploadCard({
           }}
           type="file"
         />
-      </CardContent>
-      <CardFooter className="flex-wrap justify-between gap-3">
-        <p className="text-sm text-muted-foreground">
-          {file ? messages.supportedFormatsLabel : messages.localOnlyNote}
+        <p className="flex items-start justify-center gap-2 text-xs leading-5 text-muted-foreground">
+          <Shield aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
+          {messages.localOnlyNote}
         </p>
-        <Button
-          className="max-w-full text-center whitespace-normal"
-          disabled={disabled}
-          onClick={() => {
-            document.getElementById(inputId)?.click()
-          }}
-          size="sm"
-          type="button"
-          variant="outline"
-        >
-          {file ? (
-            <RefreshCcw data-icon="inline-start" />
-          ) : (
-            <Plus data-icon="inline-start" />
-          )}
-          {file ? messages.changePdfLabel : messages.addPdfLabel}
-        </Button>
-      </CardFooter>
+      </CardContent>
     </Card>
   )
 }

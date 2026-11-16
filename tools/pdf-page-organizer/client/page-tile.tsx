@@ -3,15 +3,14 @@ import { Button } from "@workspace/ui/components/ui/button"
 import {
   ArrowDown,
   ArrowUp,
-  FileText,
   GripVertical,
-  LoaderCircle,
-  RefreshCcw,
+  RotateCw,
   Trash2,
 } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
 import { formatPageSize } from "../core/pdf-page-organizer"
+import { PagePreview } from "./page-preview"
 
 import type {
   PdfPageEntry,
@@ -45,55 +44,6 @@ type PageTileProps = Readonly<{
   previewError: string
 }>
 
-function PagePreview({
-  isRenderingPreviews,
-  messages,
-  page,
-  preview,
-  previewError,
-}: Readonly<{
-  isRenderingPreviews: boolean
-  messages: PdfPageOrganizerMessages
-  page: PdfPageEntry
-  preview: PdfPagePreview | undefined
-  previewError: string
-}>) {
-  if (!preview) {
-    const label =
-      previewError ||
-      (isRenderingPreviews
-        ? messages.renderingPreviewsLabel
-        : messages.previewUnavailableLabel)
-
-    return (
-      <div className="flex h-full min-h-44 items-center justify-center rounded-md border border-dashed bg-muted/30 text-muted-foreground">
-        <div className="flex flex-col items-center gap-2 px-3 text-center text-xs">
-          {isRenderingPreviews && !previewError ? (
-            <LoaderCircle className="motion-safe:animate-spin" />
-          ) : (
-            <FileText />
-          )}
-          <span>{label}</span>
-        </div>
-      </div>
-    )
-  }
-
-  return (
-    <div className="flex h-full min-h-44 items-center justify-center overflow-hidden rounded-md border bg-muted/20 p-2">
-      <img
-        alt={`${messages.previewAltLabel} ${page.sourcePageNumber}`}
-        className="max-h-full max-w-full object-contain shadow-sm transition-transform motion-reduce:transition-none"
-        draggable={false}
-        height={preview.height}
-        src={preview.dataUrl}
-        style={{ transform: `rotate(${page.rotation}deg)` }}
-        width={preview.width}
-      />
-    </div>
-  )
-}
-
 function PageTile({
   disabled,
   dragHintId,
@@ -120,7 +70,7 @@ function PageTile({
   const positionLabel = `${messages.outputPagesLabel} ${index + 1}`
 
   function handleDragHandlePointerDown(event: ReactPointerEvent) {
-    if (disabled) {
+    if (disabled || event.button !== 0) {
       return
     }
 
@@ -171,7 +121,7 @@ function PageTile({
     <li
       aria-label={`${positionLabel}. ${pageLabel}`}
       className={cn(
-        "group relative flex min-w-0 flex-col gap-2 rounded-md p-2 transition-colors",
+        "group relative flex min-w-0 flex-col gap-2 rounded-lg border p-2 select-none",
         !disabled && "hover:bg-muted/40",
         isDragSource && "bg-muted/50 opacity-70",
         disabled && "opacity-75"
@@ -202,7 +152,7 @@ function PageTile({
           aria-describedby={dragHintId}
           aria-label={dragLabel}
           className={cn(
-            "absolute end-2 top-2 inline-flex size-8 touch-none items-center justify-center rounded-md border bg-background/95 text-muted-foreground shadow-sm transition-colors",
+            "absolute end-2 top-2 inline-flex size-11 touch-none items-center justify-center rounded-md border bg-background/95 text-muted-foreground shadow-sm",
             "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
             !disabled &&
               "cursor-grab hover:border-foreground/30 hover:text-foreground active:cursor-grabbing",
@@ -221,7 +171,7 @@ function PageTile({
           title={dragLabel}
           type="button"
         >
-          <GripVertical />
+          <GripVertical aria-hidden="true" />
         </button>
       </div>
 
@@ -229,17 +179,18 @@ function PageTile({
         <div className="min-w-0 pe-1">
           <p className="truncate text-sm font-medium">{pageLabel}</p>
           <p className="mt-1 text-xs text-muted-foreground">
-            {messages.pageSizeLabel}: {formatPageSize(page.width, page.height)}
+            {messages.pageSizeLabel}:{" "}
+            <bdi>{formatPageSize(page.width, page.height)}</bdi>
           </p>
           <p className="text-xs text-muted-foreground">
-            {messages.rotationLabel}: {page.rotation} deg
+            {messages.rotationLabel}: <bdi>{page.rotation}°</bdi>
           </p>
         </div>
 
-        <div className="flex items-center justify-end gap-1 border-t border-border/60 pt-1">
+        <div className="grid grid-cols-4 gap-1 border-t border-border/60 pt-1">
           <Button
             aria-label={`${messages.moveUpLabel}: ${pageLabel}`}
-            className="size-8"
+            className="size-11"
             disabled={disabled || index === 0}
             onClick={() => {
               onMoveUp(index)
@@ -249,11 +200,11 @@ function PageTile({
             type="button"
             variant="ghost"
           >
-            <ArrowUp />
+            <ArrowUp aria-hidden="true" />
           </Button>
           <Button
             aria-label={`${messages.moveDownLabel}: ${pageLabel}`}
-            className="size-8"
+            className="size-11"
             disabled={disabled || index === pageCount - 1}
             onClick={() => {
               onMoveDown(index)
@@ -263,11 +214,11 @@ function PageTile({
             type="button"
             variant="ghost"
           >
-            <ArrowDown />
+            <ArrowDown aria-hidden="true" />
           </Button>
           <Button
             aria-label={`${messages.rotateClockwiseLabel}: ${pageLabel}`}
-            className="size-8"
+            className="size-11"
             disabled={disabled}
             onClick={() => {
               onRotateClockwise(page.id)
@@ -277,11 +228,11 @@ function PageTile({
             type="button"
             variant="ghost"
           >
-            <RefreshCcw />
+            <RotateCw aria-hidden="true" />
           </Button>
           <Button
             aria-label={`${messages.removePageLabel}: ${pageLabel}`}
-            className="size-8"
+            className="size-11"
             disabled={disabled}
             onClick={() => {
               onRemove(page.id)
@@ -291,7 +242,7 @@ function PageTile({
             type="button"
             variant="ghost"
           >
-            <Trash2 />
+            <Trash2 aria-hidden="true" />
           </Button>
         </div>
       </div>

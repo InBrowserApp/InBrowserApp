@@ -8,8 +8,11 @@ Utilisez-le lorsque vous devez corriger des documents numérisés, supprimer des
 
 ## Comment organiser les pages
 
-Importez un PDF, vérifiez la liste des pages, puis utilisez les commandes à côté de chaque page pour la déplacer vers le haut ou vers le bas, la faire pivoter dans le sens horaire ou la supprimer de l’exportation. Lorsque l’ordre vous convient, générez et téléchargez le nouveau PDF.
+1. Choisissez un PDF ou déposez-le dans la zone de fichiers. Chaque page apparaît sous forme d’aperçu numéroté.
+2. Faites glisser la poignée d’une page pour modifier l’ordre, ou utilisez les boutons de déplacement. Vous pouvez aussi sélectionner une poignée au clavier et appuyer sur la flèche vers le haut ou vers le bas. Faites pivoter les pages dans le sens horaire par incréments de 90° ou supprimez celles dont vous n’avez pas besoin.
+3. Utilisez **Annuler** pour annuler une modification récente, ou **Réinitialiser les pages** pour rétablir l’ordre et les rotations d’origine et restaurer les pages supprimées.
+4. Sélectionnez **Générer le PDF**, puis **Télécharger le PDF**. Les numéros des aperçus indiquent l’ordre de sortie ; les libellés de page source renvoient au document d’origine.
 
 ## Confidentialité et limites
 
-Le traitement s’effectue localement dans votre session de navigateur. Les PDF protégés par mot de passe ou chiffrés ne sont pas pris en charge, et les documents très volumineux peuvent prendre plus de temps à lire ou à exporter.
+Votre fichier est traité sur votre appareil et n’est jamais envoyé à un serveur. Les PDF protégés par mot de passe ou chiffrés doivent d’abord être déverrouillés. Conservez au moins une page pour l’exportation. L’aperçu ou l’enregistrement de documents volumineux peut prendre plus de temps ; vous pouvez continuer à organiser les pages pendant le chargement des aperçus. Si un aperçu est indisponible, les commandes de la page et l’exportation restent disponibles. Fermer ou recharger la page efface cette session.
