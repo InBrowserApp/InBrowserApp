@@ -1,4 +1,3 @@
-import { File } from "node:buffer"
 import { expect, test } from "vitest"
 import { checkHeader } from "./header"
 
@@ -16,10 +15,9 @@ function book(change?: (view: DataView, bytes: Uint8Array) => void) {
   view.setUint32(128, 65001)
   view.setUint32(136, 6)
   change?.(view, bytes)
-  return new File([bytes], "sample.mobi") as globalThis.File
+  return new File([bytes], "sample.mobi")
 }
-const check = (file: globalThis.File) =>
-  checkHeader(file, new AbortController().signal)
+const check = (file: File) => checkHeader(file, new AbortController().signal)
 function exth(
   view: DataView,
   bytes: Uint8Array,
@@ -67,9 +65,7 @@ test.each([
 })
 
 test("distinguishes protected, empty, unrelated and unsupported books", async () => {
-  await expect(
-    check(new File(["short"], "x.mobi") as globalThis.File)
-  ).rejects.toThrow("invalid")
+  await expect(check(new File(["short"], "x.mobi"))).rejects.toThrow("invalid")
   await expect(check(book((v) => v.setUint16(112, 2)))).rejects.toThrow(
     "protected"
   )
