@@ -1,4 +1,8 @@
 export {
+  Crop,
+  FlipHorizontal2,
+  FlipVertical2,
+  RotateCcw,
   RotateCw,
   ArrowDown,
   AtSign,
@@ -50,6 +54,7 @@ export {
   Paperclip,
   MicOff,
   Moon,
+  MonitorDown,
   Network,
   Pause,
   Play,

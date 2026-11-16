@@ -69,5 +69,16 @@ export function gzipAssets() {
       }
       return `export default ${chunked ? `[${urls.join(",")}]` : urls[0]}`
     },
+    generateBundle(_options, bundle) {
+      for (const [name, item] of Object.entries(bundle)) {
+        const content = item.type === "asset" ? item.source : item.code
+        const size =
+          typeof content === "string"
+            ? Buffer.byteLength(content)
+            : content.byteLength
+        if (size > 25 * 1024 * 1024)
+          this.error(`${name} exceeds the static host's 25 MiB asset limit`)
+      }
+    },
   }
 }

@@ -160,6 +160,88 @@ describe("CameraClient", () => {
     })
   })
 
+  test("stops a camera stream returned after the client unmounts", async () => {
+    let resolveRequest!: (stream: MediaStream) => void
+    const pendingRequest = new Promise<MediaStream>((resolve) => {
+      resolveRequest = resolve
+    })
+    const getUserMedia = vi.fn(() => pendingRequest)
+    setMediaDevices(getUserMedia)
+    setMediaRecorder()
+
+    const view = render(<CameraClient messages={messages} />)
+    fireEvent.click(await screen.findByRole("button", { name: "Start camera" }))
+    await waitFor(() => expect(getUserMedia).toHaveBeenCalledTimes(1))
+    view.unmount()
+
+    const stream = createStream()
+    resolveRequest(stream)
+
+    await waitFor(() => {
+      stream.getTracks().forEach((track) => {
+        expect(track.stop).toHaveBeenCalledTimes(1)
+      })
+    })
+    expect(HTMLMediaElement.prototype.play).not.toHaveBeenCalled()
+  })
+
+  test("does not retry a video request when its initial request rejects after unmount", async () => {
+    let rejectRequest!: (error: DOMException) => void
+    const pendingRequest = new Promise<MediaStream>((_, reject) => {
+      rejectRequest = reject
+    })
+    const getUserMedia = vi.fn(() => pendingRequest)
+    setMediaDevices(getUserMedia)
+    setMediaRecorder()
+
+    const view = render(<CameraClient messages={messages} />)
+    await waitFor(() => {
+      expect(screen.getByText("Video").closest("button")?.disabled).toBe(false)
+    })
+    fireEvent.click(screen.getByText("Video"))
+    fireEvent.click(await screen.findByRole("button", { name: "Start camera" }))
+    await waitFor(() => expect(getUserMedia).toHaveBeenCalledTimes(1))
+    view.unmount()
+
+    rejectRequest(new DOMException("Denied", "NotAllowedError"))
+    await new Promise((resolve) => window.setTimeout(resolve, 0))
+
+    expect(getUserMedia).toHaveBeenCalledTimes(1)
+    expect(HTMLMediaElement.prototype.play).not.toHaveBeenCalled()
+  })
+
+  test("stops the fallback video stream when it resolves after unmount", async () => {
+    let resolveRequest!: (stream: MediaStream) => void
+    const pendingRequest = new Promise<MediaStream>((resolve) => {
+      resolveRequest = resolve
+    })
+    const getUserMedia = vi
+      .fn()
+      .mockRejectedValueOnce(new DOMException("Denied", "NotAllowedError"))
+      .mockImplementationOnce(() => pendingRequest)
+    setMediaDevices(getUserMedia)
+    setMediaRecorder()
+
+    const view = render(<CameraClient messages={messages} />)
+    await waitFor(() => {
+      expect(screen.getByText("Video").closest("button")?.disabled).toBe(false)
+    })
+    fireEvent.click(screen.getByText("Video"))
+    fireEvent.click(await screen.findByRole("button", { name: "Start camera" }))
+    await waitFor(() => expect(getUserMedia).toHaveBeenCalledTimes(2))
+    view.unmount()
+
+    const stream = createStream()
+    resolveRequest(stream)
+
+    await waitFor(() => {
+      stream.getTracks().forEach((track) => {
+        expect(track.stop).toHaveBeenCalledTimes(1)
+      })
+    })
+    expect(HTMLMediaElement.prototype.play).not.toHaveBeenCalled()
+  })
+
   test("starts the camera and captures a photo", async () => {
     setMediaDevices(vi.fn().mockResolvedValue(createStream()))
     setMediaRecorder()

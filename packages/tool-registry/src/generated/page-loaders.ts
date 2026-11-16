@@ -110,6 +110,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "fb2-to-epub-converter": () => import("@tool/fb2-to-epub-converter/page"),
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
+  "file-type-detector": () => import("@tool/file-type-detector/page"),
   "gif-to-animated-webp-converter": () =>
     import("@tool/gif-to-animated-webp-converter/page"),
   "gif-to-apng-converter": () => import("@tool/gif-to-apng-converter/page"),
@@ -129,6 +130,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "hwp-viewer": () => import("@tool/hwp-viewer/page"),
   "iban-validator": () => import("@tool/iban-validator/page"),
   "ical-event-generator": () => import("@tool/ical-event-generator/page"),
+  "image-cropper": () => import("@tool/image-cropper/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-palette-extractor": () => import("@tool/image-palette-extractor/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
@@ -299,6 +301,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
   "svg-viewer": () => import("@tool/svg-viewer/page"),
   "text-diff": () => import("@tool/text-diff/page"),
+  "text-encoding-converter": () => import("@tool/text-encoding-converter/page"),
   "text-line-sorter": () => import("@tool/text-line-sorter/page"),
   "text-log-viewer": () => import("@tool/text-log-viewer/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),

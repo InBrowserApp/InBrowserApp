@@ -66,9 +66,8 @@ async function renderPagePreview(
   const loadingTask = pdfjs.getDocument({
     data: new Uint8Array(await file.arrayBuffer()),
   })
-  const pdfDocument = await loadingTask.promise
-
   try {
+    const pdfDocument = await loadingTask.promise
     const page = await pdfDocument.getPage(Math.max(1, pageNumber))
     const baseViewport = page.getViewport({ scale: 1 })
     const scale = Math.min(
@@ -96,7 +95,7 @@ async function renderPagePreview(
       width: canvas.width,
     }
   } finally {
-    await pdfDocument.destroy()
+    await loadingTask.destroy()
   }
 }
 

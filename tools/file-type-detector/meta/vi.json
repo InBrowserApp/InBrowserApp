@@ -1,0 +1,4 @@
+{
+  "name": "Trình nhận diện loại tệp",
+  "description": "Nhận diện định dạng qua chữ ký tệp, kiểm tra phần mở rộng không khớp, xem loại MIME và bản xem trước hex ngay trong trình duyệt."
+}

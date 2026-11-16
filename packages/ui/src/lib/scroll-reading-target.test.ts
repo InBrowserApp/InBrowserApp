@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import { afterEach, expect, test, vi } from "vitest"
 import { scrollReadingTarget } from "./scroll-reading-target"
 

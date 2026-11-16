@@ -7,6 +7,7 @@ type SiteMessageCatalog = Readonly<{
     name: string
     description: string
     languageLabel: string
+    installApp: string
     themeLabel: string
     themeLight: string
     themeDark: string
@@ -50,7 +51,6 @@ type SiteMessageCatalog = Readonly<{
     clearSearchLabel: string
     categoriesLabel: string
     categoryAll: string
-    sortLabel: string
     suggestionsLabel: string
     suggestionsHint: string
     suggestionMatchCountOne: string
@@ -60,6 +60,10 @@ type SiteMessageCatalog = Readonly<{
     emptySearchTitle: string
     emptySearchDescription: string
     categories: Readonly<Record<string, string>>
+  }>
+  categoryPages: Readonly<{
+    titleTemplate: string
+    descriptions: Readonly<Record<string, string>>
   }>
 }>
 

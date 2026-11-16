@@ -1,13 +1,13 @@
-export type ContentsItem = {
+type ContentsItem = {
   label: string
   href: string
   subitems?: ContentsItem[] | null
 }
-export type Destination = {
+type Destination = {
   index: number
   anchor?: (doc: Document) => Element | Range | number | null
 }
-export interface BookSection {
+interface BookSection {
   id: string
   navigation?: boolean
   linear?: string
@@ -15,7 +15,7 @@ export interface BookSection {
   unload: () => void
   resolveHref: (href: string) => string
 }
-export interface ParsedBook {
+interface ParsedBook {
   sections: BookSection[]
   toc?: ContentsItem[]
   metadata: Record<string, unknown>

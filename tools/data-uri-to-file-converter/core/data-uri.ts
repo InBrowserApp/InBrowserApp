@@ -165,7 +165,7 @@ function decodePercentEncodedBytes(value: string) {
   const bytes: number[] = []
   const encoder = new TextEncoder()
 
-  for (let index = 0; index < value.length; ) {
+  for (let index = 0; index < value.length;) {
     if (value[index] === "%") {
       const hex = value.slice(index + 1, index + 3)
 

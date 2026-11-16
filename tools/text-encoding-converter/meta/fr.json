@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur d’encodage de texte",
+  "description": "Convertissez des fichiers texte entre UTF-8, GBK, Big5 et d’autres encodages. Prévisualisez le texte illisible, réglez la BOM et les fins de ligne, puis téléchargez localement sans perdre de caractères."
+}

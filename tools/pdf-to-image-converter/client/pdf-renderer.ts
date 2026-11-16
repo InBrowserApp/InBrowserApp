@@ -37,6 +37,7 @@ async function canvasToBlob(
 class PdfToImageRenderer {
   private readonly file: File
   private documentPromise: Promise<LoadedPdfDocument> | null = null
+  private loadingTask: ReturnType<PdfJsModule["loadPdfDocument"]> | null = null
   private readonly pageCache = new Map<string, Promise<PdfPageImage>>()
   private fileUrl: string | null = null
 
@@ -52,6 +53,7 @@ class PdfToImageRenderer {
     this.fileUrl = URL.createObjectURL(this.file)
     const { loadPdfDocument } = await import("./pdfjs")
     const loadingTask = loadPdfDocument(this.fileUrl)
+    this.loadingTask = loadingTask
     this.documentPromise = loadingTask.promise.catch((error: unknown) => {
       this.documentPromise = null
       throw error
@@ -121,10 +123,8 @@ class PdfToImageRenderer {
   }
 
   async destroy() {
-    if (this.documentPromise) {
-      const documentProxy = await this.documentPromise.catch(() => null)
-      await documentProxy?.destroy()
-    }
+    await this.loadingTask?.destroy()
+    this.loadingTask = null
 
     if (this.fileUrl) {
       URL.revokeObjectURL(this.fileUrl)

@@ -101,7 +101,9 @@ describe("PlaceholderImageGeneratorClient", () => {
     })
 
     expect(
-      screen.getByRole("link", { name: "PNG" }).getAttribute("download")
+      (await screen.findByRole("link", { name: "PNG" })).getAttribute(
+        "download"
+      )
     ).toBe("placeholder-800x600.png")
     expect(
       screen.getByRole("img", { name: messages.meta.name }).getAttribute("src")

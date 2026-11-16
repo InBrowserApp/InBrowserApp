@@ -10660,6 +10660,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "file-type-detector",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "file",
+      "file-type",
+      "signature",
+      "magic-bytes",
+      "mime",
+      "hex",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "كاشف نوع الملف",
+        description:
+          "تعرّف على صيغ الملفات من تواقيعها، وتحقق من عدم تطابق الامتدادات، وافحص أنواع MIME ومعاينة سداسية عشرية محليًا في متصفحك.",
+      },
+      de: {
+        name: "Dateityp-Erkennung",
+        description:
+          "Dateiformate anhand ihrer Signaturen erkennen, abweichende Dateiendungen prüfen und MIME-Typen sowie eine Hex-Vorschau lokal im Browser ansehen.",
+      },
+      en: {
+        name: "File Type Detector",
+        description:
+          "Identify file formats by their signatures, check extension mismatches, and inspect MIME types and a hex preview locally in your browser.",
+      },
+      es: {
+        name: "Detector de tipo de archivo",
+        description:
+          "Identifica formatos de archivo por sus firmas, comprueba discrepancias de extensión y consulta los tipos MIME y una vista hexadecimal localmente en tu navegador.",
+      },
+      fr: {
+        name: "Détecteur de type de fichier",
+        description:
+          "Identifiez les formats par leur signature, repérez les extensions incohérentes et examinez les types MIME et un aperçu hexadécimal localement dans votre navigateur.",
+      },
+      he: {
+        name: "מזהה סוגי קבצים",
+        description:
+          "זיהוי פורמטים לפי חתימות הקבצים, בדיקת אי־התאמות בסיומות והצגת סוגי MIME ותצוגה הקסדצימלית מקדימה, מקומית בדפדפן.",
+      },
+      hi: {
+        name: "फ़ाइल प्रकार पहचानकर्ता",
+        description:
+          "फ़ाइल सिग्नेचर से फ़ॉर्मैट पहचानें, एक्सटेंशन का मेल जाँचें और अपने ब्राउज़र में स्थानीय रूप से MIME प्रकार व हेक्स प्रीव्यू देखें।",
+      },
+      id: {
+        name: "Pendeteksi Jenis File",
+        description:
+          "Kenali format file melalui tanda tangannya, periksa ketidakcocokan ekstensi, serta lihat jenis MIME dan pratinjau heksadesimal secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Rilevatore del tipo di file",
+        description:
+          "Identifica i formati tramite le firme, verifica le estensioni non corrispondenti e consulta i tipi MIME e un’anteprima esadecimale in locale nel browser.",
+      },
+      ja: {
+        name: "ファイル形式判定ツール",
+        description:
+          "ファイルのシグネチャから形式を判定し、拡張子の不一致、MIME タイプ、16進数プレビューをブラウザー内で確認できます。",
+      },
+      ko: {
+        name: "파일 형식 감지기",
+        description:
+          "브라우저에서 로컬로 파일 시그니처를 통해 형식을 식별하고, 확장자 불일치를 확인하며, MIME 유형과 16진수 미리보기를 살펴보세요.",
+      },
+      ms: {
+        name: "Pengesan Jenis Fail",
+        description:
+          "Kenal pasti format fail melalui tandatangannya, semak ketidakpadanan sambungan, serta periksa jenis MIME dan pratonton heks secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "Bestandstypeherkenner",
+        description:
+          "Herken bestandsformaten aan hun signatuur, controleer afwijkende extensies en bekijk MIME-typen en een hexvoorbeeld lokaal in je browser.",
+      },
+      no: {
+        name: "Filtypedetektor",
+        description:
+          "Identifiser filformater ut fra signaturene, kontroller filendelser som ikke samsvarer, og undersøk MIME-typer og en heksadesimal forhåndsvisning lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Wykrywanie typu pliku",
+        description:
+          "Rozpoznawaj formaty plików na podstawie sygnatur, sprawdzaj niezgodność rozszerzeń oraz przeglądaj typy MIME i podgląd szesnastkowy lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Detector de Tipo de Arquivo",
+        description:
+          "Identifique formatos de arquivo pelas assinaturas, verifique divergências de extensão e inspecione tipos MIME e uma prévia hexadecimal localmente no navegador.",
+      },
+      ru: {
+        name: "Определение типа файла",
+        description:
+          "Определяйте форматы файлов по сигнатурам, проверяйте соответствие расширений и просматривайте MIME-типы и шестнадцатеричные данные локально в браузере.",
+      },
+      sv: {
+        name: "Filtypsidentifierare",
+        description:
+          "Identifiera filformat genom deras signaturer, kontrollera avvikande filändelser och granska MIME-typer och en hex-förhandsvisning lokalt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือตรวจจับประเภทไฟล์",
+        description:
+          "ระบุรูปแบบไฟล์จากลายเซ็น ตรวจสอบนามสกุลที่ไม่ตรงกัน และดูประเภท MIME พร้อมตัวอย่างเลขฐานสิบหกภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Dosya Türü Algılayıcı",
+        description:
+          "Dosya biçimlerini imzalarından belirleyin, uzantı uyuşmazlıklarını kontrol edin, MIME türlerini ve onaltılık önizlemeyi tarayıcınızda yerel olarak inceleyin.",
+      },
+      vi: {
+        name: "Trình nhận diện loại tệp",
+        description:
+          "Nhận diện định dạng qua chữ ký tệp, kiểm tra phần mở rộng không khớp, xem loại MIME và bản xem trước hex ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "文件类型识别",
+        description:
+          "在浏览器本地根据文件签名识别格式，检查扩展名是否匹配，并查看 MIME 类型和十六进制预览。",
+      },
+      "zh-TW": {
+        name: "檔案類型偵測器",
+        description:
+          "根據檔案特徵識別格式、檢查副檔名是否不符，並在瀏覽器本機檢視 MIME 類型與十六進位預覽。",
+      },
+    },
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     category: "image",
     icon: "image",
@@ -12479,6 +12610,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "zh-TW": {
         name: "iCal 事件產生器",
         description: "建立包含時區、重複規則與提醒的 .ics 行事曆事件。",
+      },
+    },
+  },
+  {
+    slug: "image-cropper",
+    category: "image",
+    icon: "image",
+    tags: ["image", "crop", "photo", "rotate", "flip", "aspect-ratio"],
+    locales: {
+      ar: {
+        name: "أداة قص الصور",
+        description:
+          "قص الصور بحرية أو بنسبة أبعاد ثابتة، ودوّرها واقلبها. عاين صور PNG أو JPEG أو WebP ونزّلها محليًا في متصفحك.",
+      },
+      de: {
+        name: "Bild zuschneiden",
+        description:
+          "Bilder frei oder mit festem Seitenverhältnis zuschneiden, drehen und spiegeln. PNG, JPEG oder WebP direkt im Browser ansehen und herunterladen.",
+      },
+      en: {
+        name: "Image Cropper",
+        description:
+          "Crop images freely or to a fixed aspect ratio, rotate, and flip them. Preview and download PNG, JPEG, or WebP locally in your browser.",
+      },
+      es: {
+        name: "Recortador de imágenes",
+        description:
+          "Recorta imágenes libremente o con una relación de aspecto fija, gíralas y voltéalas. Previsualiza y descarga PNG, JPEG o WebP localmente en tu navegador.",
+      },
+      fr: {
+        name: "Recadrage d’images",
+        description:
+          "Recadrez des images librement ou selon un rapport fixe, faites-les pivoter et retournez-les. Prévisualisez et téléchargez en PNG, JPEG ou WebP localement dans votre navigateur.",
+      },
+      he: {
+        name: "כלי חיתוך תמונות",
+        description:
+          "חתוך תמונות באופן חופשי או ביחס ממדים קבוע, סובב והפוך אותן. הצג תצוגה מקדימה והורד PNG, JPEG או WebP מקומית בדפדפן שלך.",
+      },
+      hi: {
+        name: "इमेज क्रॉपर",
+        description:
+          "इमेज को स्वतंत्र रूप से या तय पक्षानुपात में क्रॉप करें, घुमाएँ और पलटें। अपने ब्राउज़र में स्थानीय रूप से PNG, JPEG या WebP का पूर्वावलोकन देखें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pemotong Gambar",
+        description:
+          "Potong gambar secara bebas atau dengan rasio aspek tetap, putar, dan balik. Pratinjau dan unduh PNG, JPEG, atau WebP secara lokal di peramban Anda.",
+      },
+      it: {
+        name: "Ritaglio immagini",
+        description:
+          "Ritaglia le immagini liberamente o con proporzioni fisse, ruotale e capovolgile. Visualizza l'anteprima e scarica PNG, JPEG o WebP localmente nel browser.",
+      },
+      ja: {
+        name: "画像切り抜き",
+        description:
+          "画像を自由な範囲や固定の縦横比で切り抜き、回転・反転できます。ブラウザー内で処理し、PNG、JPEG、WebP のプレビューとダウンロードができます。",
+      },
+      ko: {
+        name: "이미지 자르기",
+        description:
+          "이미지를 자유롭게 또는 고정 비율로 자르고, 회전하거나 뒤집으세요. 브라우저에서 로컬로 PNG, JPEG, WebP를 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemangkas Imej",
+        description:
+          "Pangkas imej secara bebas atau dengan nisbah aspek tetap, putar dan balikkan. Pratonton dan muat turun PNG, JPEG atau WebP secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeelding bijsnijden",
+        description:
+          "Snijd afbeeldingen vrij of met een vaste beeldverhouding bij, draai en spiegel ze. Bekijk en download PNG, JPEG of WebP lokaal in je browser.",
+      },
+      no: {
+        name: "Bildebeskjærer",
+        description:
+          "Beskjær bilder fritt eller med et fast sideforhold, roter og vend dem. Forhåndsvis og last ned PNG, JPEG eller WebP lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Przycinanie obrazów",
+        description:
+          "Przycinaj obrazy dowolnie lub według stałych proporcji, obracaj je i odbijaj. Wyświetlaj podgląd i pobieraj PNG, JPEG lub WebP lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Recortador de imagens",
+        description:
+          "Recorte imagens livremente ou em uma proporção fixa, gire e espelhe. Confira e baixe PNG, JPEG ou WebP localmente no navegador.",
+      },
+      ru: {
+        name: "Обрезка изображений",
+        description:
+          "Обрезайте изображения свободно или с фиксированными пропорциями, поворачивайте и отражайте их. Просматривайте и скачивайте PNG, JPEG или WebP локально в браузере.",
+      },
+      sv: {
+        name: "Bildbeskärare",
+        description:
+          "Beskär bilder fritt eller med ett fast bildförhållande, rotera och spegelvänd dem. Förhandsgranska och ladda ned PNG, JPEG eller WebP lokalt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือครอบตัดรูปภาพ",
+        description:
+          "ครอบตัดรูปภาพอย่างอิสระหรือตามอัตราส่วนที่กำหนด หมุนและพลิกรูปภาพ ดูตัวอย่างและดาวน์โหลดเป็น PNG, JPEG หรือ WebP ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Görüntü Kırpıcı",
+        description:
+          "Görüntüleri serbestçe veya sabit en boy oranıyla kırpın, döndürün ve çevirin. PNG, JPEG veya WebP olarak tarayıcınızda yerel olarak önizleyin ve indirin.",
+      },
+      vi: {
+        name: "Công cụ cắt ảnh",
+        description:
+          "Cắt ảnh tự do hoặc theo tỷ lệ cố định, xoay và lật ảnh. Xem trước và tải xuống PNG, JPEG hoặc WebP ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片裁剪",
+        description:
+          "自由裁剪或按固定宽高比裁剪图片，并进行旋转和翻转。在浏览器本地预览并下载 PNG、JPEG 或 WebP 图片。",
+      },
+      "zh-TW": {
+        name: "圖片裁剪器",
+        description:
+          "自由裁剪圖片或使用固定長寬比，並可旋轉與翻轉。直接在瀏覽器本機預覽及下載 PNG、JPEG 或 WebP。",
       },
     },
   },
@@ -29225,6 +29479,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "文字比對",
         description:
           "在瀏覽器中並排比較兩份文本、查看逐行變更，並匯出乾淨的統一 diff。",
+      },
+    },
+  },
+  {
+    slug: "text-encoding-converter",
+    category: "text",
+    icon: "binary",
+    tags: [
+      "text",
+      "encoding",
+      "utf-8",
+      "gbk",
+      "gb18030",
+      "big5",
+      "bom",
+      "charset",
+      "mojibake",
+      "line-endings",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل ترميز النصوص",
+        description:
+          "حوّل الملفات النصية بين UTF-8 وGBK وBig5 وغيرها من الترميزات. عاين النص المشوّه، واضبط علامة BOM ونهايات الأسطر، ونزّل محليًا دون فقدان المحارف.",
+      },
+      de: {
+        name: "Konverter für Textkodierungen",
+        description:
+          "Konvertiere Textdateien zwischen UTF-8, GBK, Big5 und anderen Kodierungen. Prüfe unleserlichen Text in der Vorschau, steuere BOM und Zeilenenden und lade das Ergebnis lokal ohne Zeichenverlust herunter.",
+      },
+      en: {
+        name: "Text Encoding Converter",
+        description:
+          "Convert text files between UTF-8, GBK, Big5 and other encodings. Preview garbled text, control BOM and line endings, and download locally without losing characters.",
+      },
+      es: {
+        name: "Convertidor de codificación de texto",
+        description:
+          "Convierte archivos de texto entre UTF-8, GBK, Big5 y otras codificaciones. Previsualiza el texto con caracteres ilegibles, configura el BOM y los finales de línea, y descarga localmente sin perder caracteres.",
+      },
+      fr: {
+        name: "Convertisseur d’encodage de texte",
+        description:
+          "Convertissez des fichiers texte entre UTF-8, GBK, Big5 et d’autres encodages. Prévisualisez le texte illisible, réglez la BOM et les fins de ligne, puis téléchargez localement sans perdre de caractères.",
+      },
+      he: {
+        name: "ממיר קידוד טקסט",
+        description:
+          "המירו קובצי טקסט בין UTF-8, GBK, Big5 וקידודים נוספים. צפו בתצוגה מקדימה של טקסט משובש, שלטו ב־BOM ובסיומי שורות והורידו מקומית ללא אובדן תווים.",
+      },
+      hi: {
+        name: "टेक्स्ट एन्कोडिंग परिवर्तक",
+        description:
+          "टेक्स्ट फ़ाइलों को UTF-8, GBK, Big5 और अन्य एन्कोडिंग के बीच बदलें। बिगड़े टेक्स्ट का पूर्वावलोकन देखें, BOM और पंक्ति-अंत नियंत्रित करें और बिना कोई वर्ण खोए स्थानीय रूप से डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Pengodean Teks",
+        description:
+          "Konversi berkas teks antara UTF-8, GBK, Big5, dan pengodean lainnya. Pratinjau teks kacau, atur BOM dan akhir baris, lalu unduh secara lokal tanpa kehilangan karakter.",
+      },
+      it: {
+        name: "Convertitore di codifica del testo",
+        description:
+          "Converti file di testo tra UTF-8, GBK, Big5 e altre codifiche. Visualizza l'anteprima del testo illeggibile, imposta BOM e fine riga e scarica in locale senza perdere caratteri.",
+      },
+      ja: {
+        name: "テキスト文字コード変換ツール",
+        description:
+          "テキストファイルを UTF-8、GBK、Big5 などの文字コード間で変換できます。文字化けをプレビューで確認し、BOM と改行コードを設定して、文字を失わずにローカルでダウンロードできます。",
+      },
+      ko: {
+        name: "텍스트 인코딩 변환기",
+        description:
+          "텍스트 파일을 UTF-8, GBK, Big5 등 다양한 인코딩으로 변환하세요. 깨진 텍스트를 미리 보고, BOM과 줄바꿈을 설정하고, 문자 손실 없이 로컬에서 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Pengekodan Teks",
+        description:
+          "Tukar fail teks antara UTF-8, GBK, Big5 dan pengekodan lain. Pratonton teks bercelaru, kawal BOM dan penghujung baris, serta muat turun secara setempat tanpa kehilangan aksara.",
+      },
+      nl: {
+        name: "Converter voor tekstcodering",
+        description:
+          "Zet tekstbestanden om tussen UTF-8, GBK, Big5 en andere coderingen. Bekijk voorbeelden van onleesbare tekst, stel BOM en regeleinden in en download lokaal zonder tekens te verliezen.",
+      },
+      no: {
+        name: "Konverterer for tekstkoding",
+        description:
+          "Konverter tekstfiler mellom UTF-8, GBK, Big5 og andre kodinger. Forhåndsvis tekst med tegnfeil, styr BOM og linjeskift, og last ned lokalt uten å miste tegn.",
+      },
+      pl: {
+        name: "Konwerter kodowania tekstu",
+        description:
+          "Konwertuj pliki tekstowe między UTF-8, GBK, Big5 i innymi kodowaniami. Sprawdzaj podgląd nieczytelnego tekstu, ustawiaj BOM i zakończenia wierszy oraz pobieraj pliki lokalnie bez utraty znaków.",
+      },
+      pt: {
+        name: "Conversor de codificação de texto",
+        description:
+          "Converta arquivos de texto entre UTF-8, GBK, Big5 e outras codificações. Visualize texto ilegível, controle o BOM e as quebras de linha e baixe localmente sem perder caracteres.",
+      },
+      ru: {
+        name: "Конвертер кодировок текста",
+        description:
+          "Конвертируйте текстовые файлы между UTF-8, GBK, Big5 и другими кодировками. Проверяйте искажённый текст в предпросмотре, управляйте BOM и окончаниями строк и скачивайте результат локально без потери символов.",
+      },
+      sv: {
+        name: "Konverterare för textkodning",
+        description:
+          "Konvertera textfiler mellan UTF-8, GBK, Big5 och andra kodningar. Förhandsgranska förvrängd text, styr BOM och radslut och ladda ner lokalt utan att förlora tecken.",
+      },
+      th: {
+        name: "ตัวแปลงการเข้ารหัสข้อความ",
+        description:
+          "แปลงไฟล์ข้อความระหว่าง UTF-8, GBK, Big5 และการเข้ารหัสอื่นๆ ดูตัวอย่างข้อความเพี้ยน ตั้งค่า BOM และการขึ้นบรรทัดใหม่ แล้วดาวน์โหลดในเครื่องโดยไม่สูญเสียอักขระ",
+      },
+      tr: {
+        name: "Metin Kodlaması Dönüştürücü",
+        description:
+          "Metin dosyalarını UTF-8, GBK, Big5 ve diğer kodlamalar arasında dönüştürün. Bozuk metni önizleyin, BOM ve satır sonlarını ayarlayın ve karakter kaybetmeden yerel olarak indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi bảng mã văn bản",
+        description:
+          "Chuyển đổi tệp văn bản giữa UTF-8, GBK, Big5 và các bảng mã khác. Xem trước văn bản bị lỗi ký tự, điều chỉnh BOM và kiểu xuống dòng, rồi tải xuống ngay trên thiết bị mà không mất ký tự.",
+      },
+      "zh-CN": {
+        name: "文本编码转换器",
+        description:
+          "在 UTF-8、GBK、Big5 等编码之间转换文本文件。预览并排查乱码，设置 BOM 和换行符，在本地下载且不丢失字符。",
+      },
+      "zh-TW": {
+        name: "文字編碼轉換器",
+        description:
+          "將文字檔案在 UTF-8、GBK、Big5 等編碼之間轉換。預覽亂碼文字、設定 BOM 和換行字元，並在本機下載而不遺失字元。",
       },
     },
   },

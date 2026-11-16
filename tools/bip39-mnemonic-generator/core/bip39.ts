@@ -30,7 +30,7 @@ const WORD_COUNTS = [12, 15, 18, 21, 24] as const
 type Bip39WordCount = (typeof WORD_COUNTS)[number]
 type Bip39WordlistName = keyof typeof BIP39_WORDLISTS
 type Bip39Tab = "generate" | "validate" | "convert"
-type FillRandomValues = (values: Uint8Array) => Uint8Array
+type FillRandomValues = (values: Uint8Array<ArrayBuffer>) => Uint8Array
 
 const WORD_COUNT_TO_STRENGTH: Record<Bip39WordCount, number> = {
   12: 128,
@@ -78,7 +78,7 @@ function countMnemonicWords(mnemonic: string) {
   return normalized.split(" ").length
 }
 
-function fillWithSecureRandom(values: Uint8Array) {
+function fillWithSecureRandom(values: Uint8Array<ArrayBuffer>) {
   const getRandomValues = globalThis.crypto?.getRandomValues?.bind(
     globalThis.crypto
   )

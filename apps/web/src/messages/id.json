@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Alat gratis berbasis peramban yang berjalan sepenuhnya di perangkat Anda.",
     "languageLabel": "Bahasa",
+    "installApp": "Pasang aplikasi",
     "themeLabel": "Alihkan tema",
     "themeLight": "Terang",
     "themeDark": "Gelap",
@@ -46,7 +47,6 @@
     "clearSearchLabel": "Hapus",
     "categoriesLabel": "Kategori",
     "categoryAll": "Semua alat",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "Saran",
     "suggestionsHint": "↑↓ navigasi · ↵ buka · esc tutup",
     "suggestionMatchCountOne": "{count} hasil cocok",
@@ -68,6 +68,23 @@
       "text": "Teks",
       "time": "Waktu & Tanggal",
       "web": "Web"
+    }
+  },
+  "categoryPages": {
+    "titleTemplate": "Alat {category}",
+    "descriptions": {
+      "crypto": "Hitung hash teks dan berkas, enkripsi data, serta buat atau verifikasi kata sandi dan kunci. Jelajahi alat berbasis browser untuk checksum, kriptografi, dan kredensial yang aman.",
+      "developer": "Periksa arsip, format kode, buat pengenal, dan konversi konfigurasi pengembang. Temukan utilitas berbasis browser untuk tugas pengembangan sehari-hari.",
+      "document": "Baca dan konversi dokumen, ebook, presentasi, dan spreadsheet di browser Anda. Pratinjau berkas, ekstrak konten, dan ekspor ke format lain tanpa mengunggah dokumen Anda.",
+      "image": "Konversi, ubah ukuran, dan periksa gambar di browser Anda. Optimalkan berkas gambar, lihat metadata, buat kode batang, dan olah format gambar animasi.",
+      "json": "Format, validasi, bandingkan, dan konversi data terstruktur. Olah JSON, YAML, TOML, XML, dan CSV menggunakan alat yang berjalan di browser Anda.",
+      "misc": "Rekam audio dan video, gunakan kamera, periksa informasi perangkat, dan konversi angka. Jelajahi alat browser praktis untuk tugas sehari-hari.",
+      "network": "Cari informasi DNS dan IP, hitung subnet, dan periksa sertifikat. Temukan alat untuk alamat jaringan, protokol, dan pemecahan masalah.",
+      "pdf": "Gabungkan, pisahkan, periksa, dan atur berkas PDF di browser Anda. Ekstrak teks, konversi halaman menjadi gambar, dan tambahkan nomor halaman tanpa mengunggah dokumen Anda.",
+      "random": "Buat angka acak, kata sandi, dan frasa mnemonik BIP39 di browser Anda. Pilih alat dan sesuaikan hasilnya dengan tugas Anda.",
+      "text": "Ubah, bandingkan, dan analisis teks, atau validasi pengenal umum. Temukan alat browser untuk pengodean, penulisan, pembersihan teks, dan pemeriksaan format.",
+      "time": "Konversi stempel waktu dan zona waktu, hitung durasi, dan olah jadwal cron. Rencanakan acara dan bandingkan tanggal dengan alat waktu berbasis browser.",
+      "web": "Kodekan dan dekodekan data, periksa URL, buat kode QR, dan olah format web. Jelajahi utilitas berbasis browser untuk tugas pengembangan web yang umum."
     }
   }
 }
