@@ -98,6 +98,12 @@ test("previews selected and unchanged pages, exports, and invalidates stale down
       .getByLabelText(messages.rotationLabel, { selector: "input" })
       .getAttribute("value")
   ).toBe("45")
+  fireEvent.click(screen.getByRole("button", { name: messages.removeFile }))
+  expect(screen.getByText(messages.sampleLabel)).toBeDefined()
+})
+
+test("updates text style, placement, tiling, and spacing in the sample preview", async () => {
+  render(<Client messages={messages} />)
   fireEvent.change(
     screen.getByLabelText(messages.opacityLabel, { selector: "input" }),
     { target: { value: "80" } }
@@ -126,8 +132,6 @@ test("previews selected and unchanged pages, exports, and invalidates stale down
       color: "#ff0000",
     })
   )
-  fireEvent.click(screen.getByRole("button", { name: messages.removeFile }))
-  expect(screen.getByText(messages.sampleLabel)).toBeDefined()
 })
 
 test("validates page ranges inline and supports an image watermark", async () => {
