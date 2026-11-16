@@ -1,4 +1,8 @@
 export {
+  Crop,
+  FlipHorizontal2,
+  FlipVertical2,
+  RotateCcw,
   RotateCw,
   ArrowDown,
   AtSign,
