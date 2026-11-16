@@ -16102,6 +16102,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-watermark",
+    language: "ar",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "de",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "en",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "es",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "fr",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "he",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "hi",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "id",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "it",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ja",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ko",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ms",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "nl",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "no",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "pl",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "pt",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ru",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "sv",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "th",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "tr",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "vi",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "zh-TW",
+  },
+  {
     slug: "pgp-key-generator",
     language: "ar",
   },
