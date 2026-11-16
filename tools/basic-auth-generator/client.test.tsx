@@ -131,20 +131,31 @@ describe("BasicAuthGeneratorClient", () => {
     )
   })
 
-  test("restores state from localStorage on mount", () => {
-    window.localStorage.setItem("tools:basic-auth-generator:username", "stored")
-    window.localStorage.setItem("tools:basic-auth-generator:password", "value")
+  test("removes legacy credentials and keeps new edits in memory", () => {
+    const usernameKey = "tools:basic-auth-generator:username"
+    const passwordKey = "tools:basic-auth-generator:password"
+    window.localStorage.setItem(usernameKey, "stored")
+    window.localStorage.setItem(passwordKey, "secret")
 
-    render(<BasicAuthGeneratorClient messages={messages} />)
-
+    const view = render(<BasicAuthGeneratorClient messages={messages} />)
     expect((screen.getByLabelText("Username") as HTMLInputElement).value).toBe(
-      "stored"
+      "Aladdin"
     )
     expect((screen.getByLabelText("Password") as HTMLInputElement).value).toBe(
-      "value"
+      "open sesame"
     )
-    expect(
-      screen.getByRole("region", { name: "Authorization Header" }).textContent
-    ).toBe("Basic c3RvcmVkOnZhbHVl")
+    fireEvent.change(screen.getByLabelText("Username"), {
+      target: { value: "new-user" },
+    })
+    fireEvent.change(screen.getByLabelText("Password"), {
+      target: { value: "new-secret" },
+    })
+    expect(window.localStorage.getItem(usernameKey)).toBeNull()
+    expect(window.localStorage.getItem(passwordKey)).toBeNull()
+    view.unmount()
+    render(<BasicAuthGeneratorClient messages={messages} />)
+    expect((screen.getByLabelText("Password") as HTMLInputElement).value).toBe(
+      "open sesame"
+    )
   })
 })
