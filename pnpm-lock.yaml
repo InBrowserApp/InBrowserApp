@@ -198,14 +198,14 @@ catalogs:
       specifier: ^21.2.4
       version: 21.2.4
     '@extend-ai/react-pptx':
-      specifier: 0.2.2
-      version: 0.2.2
+      specifier: 0.6.0
+      version: 0.6.0
     '@faker-js/faker':
       specifier: ^10.6.0
       version: 10.6.0
     '@file-viewer/doc':
-      specifier: 3.1.2
-      version: 3.1.2
+      specifier: 3.3.4
+      version: 3.3.4
     '@imagemagick/magick-wasm':
       specifier: 0.0.46
       version: 0.0.46
@@ -264,8 +264,8 @@ catalogs:
       specifier: 0.9.0
       version: 0.9.0
     '@silurus/ooxml':
-      specifier: 0.88.0
-      version: 0.88.0
+      specifier: 0.89.12
+      version: 0.89.12
     '@tailwindcss/vite':
       specifier: ^4.3.5
       version: 4.3.5
@@ -345,8 +345,8 @@ catalogs:
       specifier: ^6.0.3
       version: 6.0.3
     caj2pdf-rust:
-      specifier: 0.6.1
-      version: 0.6.1
+      specifier: 0.8.1
+      version: 0.8.1
     cfb:
       specifier: 1.2.2
       version: 1.2.2
@@ -608,12 +608,12 @@ overrides:
   minimatch@>=7 <11.0.8: ^11.0.8
 
 patchedDependencies:
-  '@extend-ai/react-pptx@0.2.2': bde606e53b22a946dedd6ad4aae1c54fc95d1f338548800b490f5f4c820869cc
-  '@file-viewer/doc@3.1.2': e9ec60eab3809b5dada43262fa15902aa67911a6e37b47134db0989557687500
+  '@extend-ai/react-pptx@0.6.0': d17f19e4e5a44fcf55c5938db46c36c97a92c20a367089e95a08fa6595a34cc8
+  '@file-viewer/doc@3.3.4': 11f9feb663d021e371fd235095277e21e321dac4509c3b5a3b929d3feaf7b649
   '@matbee/libreoffice-converter@2.7.2': 952404a2b37db15a156290b4fe621c0fbc76f77277d91ab2d9f09a2145385dde
   '@rhwp/core@0.9.0': 38b71bed4e51265724c430febc998985144ef5ebd2979404eba8d1172d3be5f6
-  '@silurus/ooxml@0.88.0': 9258ea89fb47657a16ac77502fe8f963b34d3c89a20465d44065fae61ceff3cf
-  caj2pdf-rust@0.6.1: 284d32b89a54b2c4cf716b538dda63c896c90a673dadb6a8bf1d35d6228f500d
+  '@silurus/ooxml@0.89.12': b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05
+  caj2pdf-rust@0.8.1: a763528bb50bc314154c0378eacd51e5882b88d2f932edd4207a40adb45f9f80
   curlconverter@4.12.0: c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484
   foliate-js@1.0.1: d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236
   rtf-viewer@1.3.1: 734830adc8d033bcf48cd7b360822e1850f1818ebbd2c2582a7a52637a3d7f3d
@@ -744,7 +744,7 @@ importers:
     dependencies:
       caj2pdf-rust:
         specifier: 'catalog:'
-        version: 0.6.1(patch_hash=284d32b89a54b2c4cf716b538dda63c896c90a673dadb6a8bf1d35d6228f500d)
+        version: 0.8.1(patch_hash=a763528bb50bc314154c0378eacd51e5882b88d2f932edd4207a40adb45f9f80)
     devDependencies:
       vitest:
         specifier: 'catalog:'
@@ -777,7 +777,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.88.0(patch_hash=9258ea89fb47657a16ac77502fe8f963b34d3c89a20465d44065fae61ceff3cf)
+        version: 0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -3696,7 +3696,7 @@ importers:
     dependencies:
       '@file-viewer/doc':
         specifier: 'catalog:'
-        version: 3.1.2(patch_hash=e9ec60eab3809b5dada43262fa15902aa67911a6e37b47134db0989557687500)
+        version: 3.3.4(patch_hash=11f9feb663d021e371fd235095277e21e321dac4509c3b5a3b929d3feaf7b649)
       '@workspace/html-pdf':
         specifier: workspace:*
         version: link:../../packages/lib/html-pdf
@@ -3739,7 +3739,7 @@ importers:
     dependencies:
       '@file-viewer/doc':
         specifier: 'catalog:'
-        version: 3.1.2(patch_hash=e9ec60eab3809b5dada43262fa15902aa67911a6e37b47134db0989557687500)
+        version: 3.3.4(patch_hash=11f9feb663d021e371fd235095277e21e321dac4509c3b5a3b929d3feaf7b649)
       '@workspace/legacy-doc':
         specifier: workspace:*
         version: link:../../packages/lib/legacy-doc
@@ -3835,7 +3835,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.88.0(patch_hash=9258ea89fb47657a16ac77502fe8f963b34d3c89a20465d44065fae61ceff3cf)
+        version: 0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -3878,7 +3878,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.88.0(patch_hash=9258ea89fb47657a16ac77502fe8f963b34d3c89a20465d44065fae61ceff3cf)
+        version: 0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -7142,7 +7142,7 @@ importers:
     dependencies:
       '@extend-ai/react-pptx':
         specifier: 'catalog:'
-        version: 0.2.2(patch_hash=bde606e53b22a946dedd6ad4aae1c54fc95d1f338548800b490f5f4c820869cc)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        version: 0.6.0(patch_hash=d17f19e4e5a44fcf55c5938db46c36c97a92c20a367089e95a08fa6595a34cc8)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -7201,7 +7201,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.88.0(patch_hash=9258ea89fb47657a16ac77502fe8f963b34d3c89a20465d44065fae61ceff3cf)
+        version: 0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -7244,7 +7244,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.88.0(patch_hash=9258ea89fb47657a16ac77502fe8f963b34d3c89a20465d44065fae61ceff3cf)
+        version: 0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -9632,7 +9632,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.88.0(patch_hash=9258ea89fb47657a16ac77502fe8f963b34d3c89a20465d44065fae61ceff3cf)
+        version: 0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -10625,8 +10625,8 @@ packages:
       '@noble/hashes':
         optional: true
 
-  '@extend-ai/react-pptx@0.2.2':
-    resolution: {integrity: sha512-N4TsdCkV2jQFDBSGUA5pLw+3QF8sozbydeQKVZ6ztnH4a8PJ7D8S/KOaTbMFGRgunmk3NFtBoDRL9XO1af2rwg==}
+  '@extend-ai/react-pptx@0.6.0':
+    resolution: {integrity: sha512-KZJNPRPq0WMf2gDR0gcthLwNFQOsGZ5s8plkCLARSDZ30blvlcy+YhjWOpoLsULuA8OcVnWUscY9a55ZlMd6Vw==}
     peerDependencies:
       react: '>=18.2 <20'
       react-dom: '>=18.2 <20'
@@ -10635,8 +10635,8 @@ packages:
     resolution: {integrity: sha512-3RQHgEtvL1Frl/d1cSreo7qhJ3Gk1OdNUai/CtZ8G+wYeRQnJih3s9xJ9/kgYekPQRdwgh0HXRPqMlzWGwivIQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || ^23.5.0 || >=24.0.0, npm: '>=10'}
 
-  '@file-viewer/doc@3.1.2':
-    resolution: {integrity: sha512-0goAnumFuyoKatN/WNyZru8f4lF8he9t6fbo2zYm6gYk0ziaFaToKqglDOPNMLWExnEoaj+laXs6MCp8aPsbrw==}
+  '@file-viewer/doc@3.3.4':
+    resolution: {integrity: sha512-T5b+Q/iIWDm6DoMcYLGBRIYP8O6XWdXcpr4T0iyw6TygGkdM0WhZWXEF3YupoxDsBajmFWnDnkud+q/onFyR1w==}
 
   '@floating-ui/core@1.8.0':
     resolution: {integrity: sha512-0CIZ5itps/8x7BG8dEIhs53BvCUH2PCoogtakwRTut+Arm58sJooJ0AuZhLw2HJYIR5cMLNPBSS728sPho2khQ==}
@@ -12690,8 +12690,8 @@ packages:
   '@shikijs/vscode-textmate@10.1.0':
     resolution: {integrity: sha512-cVBuhDQjBZaNMTwBquYfPydrUP+E3hE6oYGasx8h6ZrODIM7/r+gxLDXdd66oszbrggZHEntdE6j+5gYIVyMWQ==}
 
-  '@silurus/ooxml@0.88.0':
-    resolution: {integrity: sha512-dhMs1/U5fB5bh/Hv8BNTgCsHVNOl+qkquohsROblku7jghsmd1BZAE//LR6omB7aCVLGJ3sp4IqzqdkgT5wicQ==}
+  '@silurus/ooxml@0.89.12':
+    resolution: {integrity: sha512-LLYPVh4BPeTNT/le2KDjjtOXw36h3d8WarskxPthSxV1IwooytEDWhDODFBduu+G0IlB6YNfTDOGr9v+K98R2Q==}
 
   '@simple-libs/child-process-utils@2.0.0':
     resolution: {integrity: sha512-dvNoRKLijXnD0XoJAz94pbNuB5GQgDr55UhpSPhffDkTT0Cmcqh9jSCOtwfT2d4H6MI9E7c4SgtMuJXZ6F3c6A==}
@@ -12809,15 +12809,6 @@ packages:
     resolution: {integrity: sha512-BCNiY0a1ZjdOHVqw7kyb7U72BwfMF3dfUuN+tQsLWky/J5JOI/r7abibglXfygrZhVO/3u3V+E25kkKTeMkXaQ==}
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7 || ^8
-
-  '@tanstack/react-virtual@3.14.26':
-    resolution: {integrity: sha512-HUDlfsrYH6ko5xH56L62Mcl/uzT+AGVNMHFuDNqDJMdZWc1AQa2oeVKNUvZ/RWBZQ4TYtyQerFrNvLnp39h65A==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-
-  '@tanstack/virtual-core@3.19.11':
-    resolution: {integrity: sha512-/5iHb0RHBvj8Di59FDs4ESNm45jls33aZAi4zccVXZjc/6ZvwQP6nzEYeT6weXjTf9E6/vrp2JhYWRyO+ZP13A==}
 
   '@testing-library/dom@10.4.2':
     resolution: {integrity: sha512-yzr2S9HyAIdhz2/6qHgbs665Q7PKVcDF05vsOlHPxG1mo36gKVesdYVeDLnXgfjJ03CrKRk08knc6+E/9m8v2Q==}
@@ -13316,8 +13307,8 @@ packages:
     resolution: {integrity: sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==}
     engines: {node: '>= 0.8'}
 
-  caj2pdf-rust@0.6.1:
-    resolution: {integrity: sha512-FhA0uvzAXh06ZlDauRBozVb0NEFfiTXtc6ZHF4cwTuNq2Pwwq+EK4s51DOchoDE89gzoTB2dyphntXq4BaWPMA==}
+  caj2pdf-rust@0.8.1:
+    resolution: {integrity: sha512-9m0g8hGU3GHbq8qfvX5CEsVZkIP7mQp9FJ9VTwcoQ4Fq7LY/lsqhT0aCO7XaNHnI+0nNEplN8mR9vrzKUCjyTA==}
     engines: {node: '>=22'}
 
   call-bind-apply-helpers@1.0.2:
@@ -13624,50 +13615,6 @@ packages:
   curlconverter@4.12.0:
     resolution: {integrity: sha512-NcwPKJgu9DkCH4gQsnjnXuUtPrhLhoNwvIYTTS5rRrsCC/X2flUswtgmeCyV9ePGszXzFReXk5y/CdBxrsAQ8Q==}
     hasBin: true
-
-  d3-array@3.2.5:
-    resolution: {integrity: sha512-Th8qGXoBalmWsstpkuhmBuTsBQIFqYOJtjlBvNVvBfJ8E3uYusBUwUR8HU20U0qKKQkgCvKyR1YjiozWadk5QA==}
-    engines: {node: '>=12'}
-
-  d3-color@3.1.1:
-    resolution: {integrity: sha512-lfab8x0Bj0UO7SNsY8dZSbNIA6ipbkE3X0NG9nqjCu6CfCHZseuDnOSJY7hidKrjpP++i1M2qT+FlAdPKYRilA==}
-    engines: {node: '>=12'}
-
-  d3-format@3.1.3:
-    resolution: {integrity: sha512-+F+/49swqmGuQJmSKnVMIDH/QkEFV5li9QRj0xm/KhyAUBv099O5PrvpQFxBp24PYph17Mnvt9mjKQV0ii0nMA==}
-    engines: {node: '>=12'}
-
-  d3-geo@3.1.2:
-    resolution: {integrity: sha512-5R8ZgDQorIxmauv7R6gpE/ndz+Z0qAZssigq0aXFdvPHdY41RqtW02jrRUQAL724NdPABYXo1+gQEGBBr7uKNg==}
-    engines: {node: '>=12'}
-
-  d3-hierarchy@3.1.3:
-    resolution: {integrity: sha512-GRajN5ZcnEwYFWqqdzhG1qJ3+fDg6WWzk47TJg7ePY7yvYAgRfD2r1mUx+wviBOWuCwamCUzjwMSdato43jbGA==}
-    engines: {node: '>=12'}
-
-  d3-interpolate@3.0.2:
-    resolution: {integrity: sha512-IRzGU62DtxhvsnSTWMQIdnoZ6gA+BCWwBon1EJI6SjoN595799b6z/QRBzXfFhE8iupUPp3042yBNo0STPqnzQ==}
-    engines: {node: '>=12'}
-
-  d3-path@3.1.1:
-    resolution: {integrity: sha512-jsbgV8zIT38ReB9O7X7gcLndTQRONSqNNd+oGIaTBdUug4r5jFmp0N6RY9R5GWbdUDucn0qoTGyfjapT4tDhcg==}
-    engines: {node: '>=12'}
-
-  d3-scale@4.0.3:
-    resolution: {integrity: sha512-66cWobCNzcMvlfoaDHCxuIv9TBUWG1BLOWdv9kHHFuCr1JdqAWPvTmsaEYDD5NRMyWZ5+7u0GqiCDfMXMqh3hg==}
-    engines: {node: '>=12'}
-
-  d3-shape@3.2.1:
-    resolution: {integrity: sha512-dm2o+lbKdzg9tY7GEag/dB9hcbodLfwkE/DkvqbELJXaMz0yKzWWhZqhbI7CKubukA7HnRyz0avdtvi7EPxPvw==}
-    engines: {node: '>=12'}
-
-  d3-time-format@4.1.1:
-    resolution: {integrity: sha512-22XaqjyCjpqgda20erhsOjGmC3vvYwTNYniKAd45W5UWLDF43moeOuV9qYpRqobIlsnK0UhnKZjUUJm3VgORUA==}
-    engines: {node: '>=12'}
-
-  d3-time@3.1.1:
-    resolution: {integrity: sha512-Ze7rjrhMzdeulh0/hjcfFj7XLAHOfowtEMfsoG6DU866HPynQNW7Wfen6hzXcqKTv8XzxvF6Hzr5XD6bMHr2ug==}
-    engines: {node: '>=12'}
 
   d@1.0.2:
     resolution: {integrity: sha512-MOqHvMWF9/9MX6nza0KgvFH4HpMU0EF5uUDXqX/BtxtU8NfB0QzRtJ8Oe/6SuS4kbhyzVJwjd97EA4PKrzJ8bw==}
@@ -14370,10 +14317,6 @@ packages:
   inquirer@8.2.7:
     resolution: {integrity: sha512-UjOaSel/iddGZJ5xP/Eixh6dY1XghiBw4XK13rCCIJcJfyhhoul/7KhLLUGtebEj6GDYM6Vnx/mVsjx2L/mFIA==}
     engines: {node: '>=12.0.0'}
-
-  internmap@2.0.3:
-    resolution: {integrity: sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==}
-    engines: {node: '>=12'}
 
   interpret@3.1.1:
     resolution: {integrity: sha512-6xwYfHbajpoF0xLW+iwLkhwgvLoZDfjYfoFNu8ftMoXINzwuymNLd9u/KmwtdT2GbR+/Cz66otEGEVVUHX9QLQ==}
@@ -15503,9 +15446,6 @@ packages:
     resolution: {integrity: sha512-iETxpjK6YoRWJG5o6hXLwvjYAoW+FEZn9os0PD/b6AP6xQwsa/Y7lCVgIixBbUPMfhu+i2LtdeAqVTgGlQarfA==}
     hasBin: true
 
-  regl@2.1.1:
-    resolution: {integrity: sha512-+IOGrxl3FZ8ZM9ixCWQZzFRiRn7Rzn9bu3iFHwg/yz4tlOUQgbO4PHLgG+1ZT60zcIV8tief6Qrmyl8qcoJP0g==}
-
   request-light@0.5.8:
     resolution: {integrity: sha512-3Zjgh+8b5fhRJBQZoy+zbVKpAQGLyka0MPgW3zruTF4dFFJ8Fqcfu9YsAvi/rvdcaTeWG3MkbZv4WKxAn/84Lg==}
 
@@ -15925,10 +15865,6 @@ packages:
   token-types@6.2.0:
     resolution: {integrity: sha512-s9euYHM//T3loJtbNUYdbAzsMlvKBeRS+XCLFy+UGosMQH19Hwjap5k19i4PPAEJJBsVIpMpVTxl4fIqCuNfUg==}
     engines: {node: '>=14.16'}
-
-  topojson-client@3.1.0:
-    resolution: {integrity: sha512-605uxS6bcYxGXw9qi62XyrV6Q3xwbndjachmNxu8HWTtVPxZfEJN9fd/SZS1Q54Sn2y0TMyMxFj/cJINqGHrKw==}
-    hasBin: true
 
   tough-cookie@6.1.0:
     resolution: {integrity: sha512-FTxc8u8Kl2tz0Lat1u8ksvcy8bwHRyEMawwTWybo51JqaC6O7SvfuhAKg+Ld6VqyIe2QRJBzY9HA7y2WyFRT2w==}
@@ -17442,22 +17378,14 @@ snapshots:
     optionalDependencies:
       '@noble/hashes': 2.4.0
 
-  '@extend-ai/react-pptx@0.2.2(patch_hash=bde606e53b22a946dedd6ad4aae1c54fc95d1f338548800b490f5f4c820869cc)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
+  '@extend-ai/react-pptx@0.6.0(patch_hash=d17f19e4e5a44fcf55c5938db46c36c97a92c20a367089e95a08fa6595a34cc8)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
     dependencies:
-      '@tanstack/react-virtual': 3.14.26(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      '@tanstack/virtual-core': 3.19.11
-      d3-geo: 3.1.2
-      d3-hierarchy: 3.1.3
-      d3-scale: 4.0.3
-      d3-shape: 3.2.1
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
-      regl: 2.1.1
-      topojson-client: 3.1.0
 
   '@faker-js/faker@10.6.0': {}
 
-  '@file-viewer/doc@3.1.2(patch_hash=e9ec60eab3809b5dada43262fa15902aa67911a6e37b47134db0989557687500)':
+  '@file-viewer/doc@3.3.4(patch_hash=11f9feb663d021e371fd235095277e21e321dac4509c3b5a3b929d3feaf7b649)':
     dependencies:
       dompurify: 3.4.18
 
@@ -19246,7 +19174,7 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.1.0': {}
 
-  '@silurus/ooxml@0.88.0(patch_hash=9258ea89fb47657a16ac77502fe8f963b34d3c89a20465d44065fae61ceff3cf)': {}
+  '@silurus/ooxml@0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)': {}
 
   '@simple-libs/child-process-utils@2.0.0':
     dependencies:
@@ -19331,14 +19259,6 @@ snapshots:
       '@tailwindcss/oxide': 4.3.5
       tailwindcss: 4.3.5
       vite: 8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-
-  '@tanstack/react-virtual@3.14.26(react-dom@19.3.1(react@19.3.1))(react@19.3.1)':
-    dependencies:
-      '@tanstack/virtual-core': 3.19.11
-      react: 19.3.1
-      react-dom: 19.3.1(react@19.3.1)
-
-  '@tanstack/virtual-core@3.19.11': {}
 
   '@testing-library/dom@10.4.2':
     dependencies:
@@ -19898,7 +19818,7 @@ snapshots:
 
   bytes@3.1.2: {}
 
-  caj2pdf-rust@0.6.1(patch_hash=284d32b89a54b2c4cf716b538dda63c896c90a673dadb6a8bf1d35d6228f500d): {}
+  caj2pdf-rust@0.8.1(patch_hash=a763528bb50bc314154c0378eacd51e5882b88d2f932edd4207a40adb45f9f80): {}
 
   call-bind-apply-helpers@1.0.2:
     dependencies:
@@ -20195,46 +20115,6 @@ snapshots:
       tree-sitter-bash: 0.23.3(tree-sitter@0.21.1)
       web-tree-sitter: 0.24.7
       yamljs: 0.3.0
-
-  d3-array@3.2.5:
-    dependencies:
-      internmap: 2.0.3
-
-  d3-color@3.1.1: {}
-
-  d3-format@3.1.3: {}
-
-  d3-geo@3.1.2:
-    dependencies:
-      d3-array: 3.2.5
-
-  d3-hierarchy@3.1.3: {}
-
-  d3-interpolate@3.0.2:
-    dependencies:
-      d3-color: 3.1.1
-
-  d3-path@3.1.1: {}
-
-  d3-scale@4.0.3:
-    dependencies:
-      d3-array: 3.2.5
-      d3-format: 3.1.3
-      d3-interpolate: 3.0.2
-      d3-time: 3.1.1
-      d3-time-format: 4.1.1
-
-  d3-shape@3.2.1:
-    dependencies:
-      d3-path: 3.1.1
-
-  d3-time-format@4.1.1:
-    dependencies:
-      d3-time: 3.1.1
-
-  d3-time@3.1.1:
-    dependencies:
-      d3-array: 3.2.5
 
   d@1.0.2:
     dependencies:
@@ -21010,8 +20890,6 @@ snapshots:
       wrap-ansi: 6.2.0
     transitivePeerDependencies:
       - '@types/node'
-
-  internmap@2.0.3: {}
 
   interpret@3.1.1: {}
 
@@ -22180,8 +22058,6 @@ snapshots:
 
   regexp-tree@0.1.27: {}
 
-  regl@2.1.1: {}
-
   request-light@0.5.8: {}
 
   request-light@0.7.0: {}
@@ -22683,10 +22559,6 @@ snapshots:
       '@borewit/text-codec': 0.2.3
       '@tokenizer/token': 0.3.0
       ieee754: 1.2.1
-
-  topojson-client@3.1.0:
-    dependencies:
-      commander: 2.20.3
 
   tough-cookie@6.1.0:
     dependencies:
