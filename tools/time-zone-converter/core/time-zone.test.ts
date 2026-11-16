@@ -213,7 +213,7 @@ describe("time zone conversions", () => {
     expect(utc).toBe(0)
   })
 
-  test("handles DST gap normalization when converting to UTC", () => {
+  test("rejects local times skipped by a DST transition", () => {
     const utc = toUtcTimestamp(
       {
         year: 2024,
@@ -227,7 +227,37 @@ describe("time zone conversions", () => {
       "America/New_York"
     )
 
-    expect(utc).toBe(Date.UTC(2024, 2, 10, 6, 30, 0, 0))
+    expect(utc).toBeNull()
+  })
+
+  test("keeps valid local times on each side of a DST gap", () => {
+    const beforeGap = toUtcTimestamp(
+      {
+        year: 2024,
+        month: 3,
+        day: 10,
+        hour: 1,
+        minute: 30,
+        second: 0,
+        millisecond: 0,
+      },
+      "America/New_York"
+    )
+    const afterGap = toUtcTimestamp(
+      {
+        year: 2024,
+        month: 3,
+        day: 10,
+        hour: 3,
+        minute: 30,
+        second: 0,
+        millisecond: 0,
+      },
+      "America/New_York"
+    )
+
+    expect(beforeGap).toBe(Date.UTC(2024, 2, 10, 6, 30, 0, 0))
+    expect(afterGap).toBe(Date.UTC(2024, 2, 10, 7, 30, 0, 0))
   })
 
   test("converts Asia/Shanghai to the expected UTC time", () => {
@@ -244,7 +274,7 @@ describe("time zone conversions", () => {
       "Asia/Shanghai"
     )
 
-    expect(formatInTimeZone(utc, "UTC")).toBe("2023-12-31 16:00:00.000")
+    expect(formatInTimeZone(utc!, "UTC")).toBe("2023-12-31 16:00:00.000")
   })
 
   test("formats offsets with sign and padding", () => {

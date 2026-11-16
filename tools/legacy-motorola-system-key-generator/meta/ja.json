@@ -1,0 +1,4 @@
+{
+  "name": "旧形式の Motorola システムキー生成ツール",
+  "description": "ブラウザーで Motorola の旧形式のソフトウェアシステムキー（.KEY）ファイルを生成します。この形式は ASTRO 25、XTS5000、APX、Advanced System Keys に対応していません。"
+}

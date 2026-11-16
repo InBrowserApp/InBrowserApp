@@ -112,12 +112,10 @@ function ColorPickerClient({ messages }: ColorPickerClientProps) {
     window.localStorage.setItem(STORAGE_KEYS.showAlpha, String(showAlpha))
   }, [hasLoadedStorage, showAlpha])
 
-  const eyeDropperConstructor = useMemo(
-    () =>
-      (globalThis as typeof globalThis & { EyeDropper?: EyeDropperConstructor })
-        .EyeDropper,
-    []
-  )
+  const eyeDropperConstructor = hasLoadedStorage
+    ? (globalThis as typeof globalThis & { EyeDropper?: EyeDropperConstructor })
+        .EyeDropper
+    : undefined
 
   const values = useMemo(
     () => ({

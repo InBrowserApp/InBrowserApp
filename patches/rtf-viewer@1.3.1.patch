@@ -1,3 +1,4 @@
+diff --git a/dist/shared-6NCHZLKA.js b/dist/shared-6NCHZLKA.js
 --- a/dist/shared-6NCHZLKA.js
 +++ b/dist/shared-6NCHZLKA.js
 @@ -403,8 +403,8 @@
@@ -74,6 +75,7 @@
          );
        }
        const signatureMatches = resource.format === "png" ? bytes[0] === 137 && bytes[1] === 80 : bytes[0] === 255 && bytes[1] === 216;
+diff --git a/dist/types.d.ts b/dist/types.d.ts
 --- a/dist/types.d.ts
 +++ b/dist/types.d.ts
 @@ -16,7 +16,7 @@
@@ -85,6 +87,7 @@
      parseTimeoutMs?: number;
  }
  export interface RenderOptions {
+diff --git a/dist/rtf_parser.js b/dist/rtf_parser.js
 --- a/dist/rtf_parser.js
 +++ b/dist/rtf_parser.js
 @@ -171,7 +171,7 @@

@@ -165,6 +165,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/keccak-hash-text-or-file/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
   "latex-previewer": () => import("@tool/latex-previewer/page"),
+  "legacy-motorola-system-key-generator": () =>
+    import("@tool/legacy-motorola-system-key-generator/page"),
   "list-comparer": () => import("@tool/list-comparer/page"),
   "local-font-book": () => import("@tool/local-font-book/page"),
   "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),

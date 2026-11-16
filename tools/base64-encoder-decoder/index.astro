@@ -8,6 +8,8 @@ import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
 
 type Base64MessagesCatalog = Readonly<{
+  encodeLabel: string
+  decodeLabel: string
   plainTextLabel: string
   plainTextPlaceholder: string
   plainTextDescription: string

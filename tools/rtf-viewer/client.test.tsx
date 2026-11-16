@@ -219,7 +219,7 @@ test("surfaces known omissions and page allocation errors while retaining naviga
       { code: "unsupported-vector-image", offset: 0, message: "private" },
     ],
   })
-  mocks.render.mockRejectedValueOnce(
+  mocks.render.mockRejectedValue(
     new RangeError("Output canvas exceeds 32 million pixels")
   )
   render(<Client messages={m} />)
@@ -227,6 +227,7 @@ test("surfaces known omissions and page allocation errors while retaining naviga
   await screen.findByText(m.canvasLimit)
   expect(screen.getByText(m.imageNote)).toBeTruthy()
   expect(screen.getByText(m.limited)).toBeTruthy()
+  mocks.render.mockResolvedValue(undefined)
   fireEvent.click(screen.getByRole("button", { name: m.next }))
   await waitFor(() => expect(screen.queryByText(m.canvasLimit)).toBeNull())
 })

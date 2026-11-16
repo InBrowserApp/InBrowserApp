@@ -10,6 +10,7 @@ type CodeScreenshotGeneratorMessages = Readonly<{
   syntaxTitle: string
   syntaxDescription: string
   languageLabel: string
+  languageAuto: string
   renderModeLabel: string
   renderHighlight: string
   renderPlain: string

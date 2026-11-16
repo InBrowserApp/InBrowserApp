@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "Chỉ dành cho định dạng đời cũ",
+  "compatibilityDescription": "Tạo định dạng khóa phần mềm có nguồn gốc từ BatLabs. Không tương thích với ASTRO 25 Portable CPS (bao gồm XTS5000), APX CPS hoặc Advanced System Keys (ASK).",
+  "inputTitle": "ID hệ thống",
+  "inputDescription": "Nhập ID của hệ thống vô tuyến trung kế Motorola đời cũ.",
+  "systemIdLabel": "ID hệ thống (Hex)",
+  "systemIdHelp": "Dùng 1–4 chữ số thập lục phân (0–9, A–F). ID ngắn được thêm số 0 ở đầu.",
+  "invalidSystemId": "Nhập 1–4 chữ số thập lục phân (0–9, A–F), không có tiền tố 0x.",
+  "outputTitle": "Tệp khóa đời cũ",
+  "emptyState": "Nhập ID hệ thống để xem trước và tải xuống tệp .KEY.",
+  "normalizedIdLabel": "ID đã chuẩn hóa",
+  "filenameLabel": "Tên tệp",
+  "fileSizeLabel": "Kích thước tệp",
+  "fileSizeValue": "27 byte",
+  "hexPreviewLabel": "Xem trước dạng thập lục phân",
+  "downloadLabel": "Tải xuống .KEY",
+  "sourceLabel": "Bản triển khai tham khảo",
+  "licenseLabel": "Giấy phép ISC"
+}

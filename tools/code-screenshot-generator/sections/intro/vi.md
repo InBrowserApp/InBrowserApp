@@ -1,8 +1,8 @@
-# Code Screenshot Generator
+# Trình tạo ảnh chụp mã
 
 ## Công cụ này làm gì
 
-Code Screenshot Generator biến đoạn mã được dán vào thành một thẻ mã chỉn chu có thể xuất dưới dạng SVG, PNG, JPEG, WebP hoặc HTML độc lập. Công cụ chạy trong trình duyệt của bạn, áp dụng tô sáng cú pháp với các chủ đề có thể chọn, và cho phép bạn tinh chỉnh khung trước khi tải xuống.
+Trình tạo ảnh chụp mã biến đoạn mã được dán vào thành một thẻ mã chỉn chu có thể xuất dưới dạng SVG, PNG, JPEG, WebP hoặc HTML độc lập. Công cụ chạy trong trình duyệt của bạn, áp dụng tô sáng cú pháp với các chủ đề có thể chọn, và cho phép bạn tinh chỉnh khung trước khi tải xuống.
 
 ## Khi nào nên dùng
 

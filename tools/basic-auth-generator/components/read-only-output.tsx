@@ -58,7 +58,7 @@ function renderCurlCommand(value: string) {
     return ""
   }
 
-  const match = value.match(/^curl -H "Authorization: (.+)" (.+)$/)
+  const match = value.match(/^curl -H "Authorization: (.+)" '(.+)'$/)
 
   if (!match) {
     return value
@@ -89,7 +89,7 @@ function renderCurlCommand(value: string) {
         "
       </OutputToken>{" "}
       <OutputToken token="url" className="font-medium text-primary">
-        {url}
+        {`'${url}'`}
       </OutputToken>
     </>
   )

@@ -1,8 +1,10 @@
 {
+  "encodeLabel": "Enkode",
+  "decodeLabel": "Dekode",
   "plainTextLabel": "Teks biasa",
   "plainTextPlaceholder": "Masukkan teks untuk di-encode…",
   "plainTextDescription": "Tempel atau ketik teks UTF-8 apa pun, termasuk emoji dan karakter non-Latin.",
-  "encodedTextLabel": "Output Base64",
+  "encodedTextLabel": "Base64",
   "encodedTextPlaceholder": "Tempel Base64 untuk di-decode…",
   "encodedTextDescription": "Edit teks Base64 secara langsung untuk men-decode-nya kembali menjadi teks biasa.",
   "invalidBase64Title": "Nilai Base64 belum valid.",

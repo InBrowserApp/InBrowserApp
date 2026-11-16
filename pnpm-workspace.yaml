@@ -147,15 +147,25 @@ catalog:
   vitest: ^4.1.9
   webrtc-ips: ^0.2.0
   wrangler: 4.105.0
-  xlsx: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
+  xlsx: 0.20.3
   xml-js: ^1.6.11
   xxhash-wasm: ^1.1.0
   zod: ^4.4.3
 
-onlyBuiltDependencies:
-  - esbuild
-  - msw
-  - sharp
+# pnpm 10 catalogs do not support file: specifiers. Resolve the catalog's
+# SheetJS version to the unchanged local distribution through an override.
+overrides:
+  xlsx: file:vendor/xlsx-0.20.3.tgz
+
+allowBuilds:
+  core-js: false
+  es5-ext: false
+  esbuild: true
+  msw: true
+  sharp: true
+  tree-sitter: false
+  tree-sitter-bash: false
+  workerd: false
 
 # Hoist @types/* to the workspace root so a single root tsc run can resolve
 # types for every package without each one having to redeclare them. The
@@ -163,3 +173,14 @@ onlyBuiltDependencies:
 # actually consumes the runtime dep (e.g. @types/react in apps/web).
 publicHoistPattern:
   - "@types/*"
+
+patchedDependencies:
+  "curlconverter@4.12.0": "patches/curlconverter@4.12.0.patch"
+  "foliate-js@1.0.1": "patches/foliate-js@1.0.1.patch"
+  "caj2pdf-rust@0.6.1": "patches/caj2pdf-rust@0.6.1.patch"
+  "rtf-viewer@1.3.1": "patches/rtf-viewer@1.3.1.patch"
+  "@file-viewer/doc@3.1.2": "patches/@file-viewer__doc@3.1.2.patch"
+  "@extend-ai/react-pptx@0.2.2": "patches/@extend-ai__react-pptx@0.2.2.patch"
+  "xlsx@0.20.3": "patches/xlsx@0.20.3.patch"
+  "@silurus/ooxml@0.88.0": "patches/@silurus__ooxml@0.88.0.patch"
+  "@matbee/libreoffice-converter@2.7.2": "patches/@matbee__libreoffice-converter@2.7.2.patch"

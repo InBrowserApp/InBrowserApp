@@ -113,6 +113,27 @@ describe("collectMatches", () => {
     ])
   })
 
+  test("does not mark the exact match limit as truncated", () => {
+    const result = collectMatches("a".repeat(200), /a/g, 200)
+
+    expect(result.matches).toHaveLength(200)
+    expect(result.truncated).toBe(false)
+  })
+
+  test("marks truncation only when a match exists after the limit", () => {
+    const result = collectMatches("a".repeat(201), /a/g, 200)
+
+    expect(result.matches).toHaveLength(200)
+    expect(result.truncated).toBe(true)
+  })
+
+  test("checks past the limit after advancing a zero-length match", () => {
+    const result = collectMatches("AB", /(?=.)/g, 2)
+
+    expect(result.matches).toHaveLength(2)
+    expect(result.truncated).toBe(false)
+  })
+
   test("falls back when exec returns a sparse array-like match", () => {
     const regex = {
       exec: () => [] as unknown as RegExpExecArray,

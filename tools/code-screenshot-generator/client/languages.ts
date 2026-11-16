@@ -26,7 +26,6 @@ type LanguageOption = Readonly<{
 }>
 
 const languageOptions: readonly LanguageOption[] = [
-  { label: "Auto", value: "auto" },
   { label: "JavaScript", value: "javascript" },
   { label: "TypeScript", value: "typescript" },
   { label: "JSON", value: "json" },

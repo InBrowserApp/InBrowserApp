@@ -11,7 +11,8 @@ const coreMocks = vi.hoisted(() => ({
   verifyArgon2Password: vi.fn(),
 }))
 
-vi.mock("./core/argon2", () => ({
+vi.mock("./core/argon2", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("./core/argon2")>()),
   verifyArgon2Password: coreMocks.verifyArgon2Password,
 }))
 
@@ -101,6 +102,9 @@ describe("Argon2HashPasswordVerifierClient", () => {
     renderClient()
 
     expect(screen.getByText(messages.formLabel)).toBeTruthy()
+    expect(screen.getByText(/Memory cost ≤ 262144 KiB/).textContent).toContain(
+      "Iterations ≤ 12 · Parallelism ≤ 16"
+    )
     expect(screen.getByText(messages.idleTitle)).toBeTruthy()
     expect(
       (
