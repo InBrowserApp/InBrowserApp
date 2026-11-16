@@ -357,6 +357,9 @@ catalogs:
     react-dom:
       specifier: ^19.2.7
       version: 19.2.7
+    react-image-crop:
+      specifier: 11.1.2
+      version: 11.1.2
     rtf-viewer:
       specifier: 1.3.1
       version: 1.3.1
@@ -1148,6 +1151,9 @@ importers:
       '@tool/ical-event-generator':
         specifier: workspace:*
         version: link:../../tools/ical-event-generator
+      '@tool/image-cropper':
+        specifier: workspace:*
+        version: link:../../tools/image-cropper
       '@tool/image-metadata-cleaner':
         specifier: workspace:*
         version: link:../../tools/image-metadata-cleaner
@@ -1726,6 +1732,9 @@ importers:
       react-dom:
         specifier: 'catalog:'
         version: 19.2.7(react@19.2.7)
+      react-image-crop:
+        specifier: 'catalog:'
+        version: 11.1.2(react@19.2.7)
       shadcn:
         specifier: 'catalog:'
         version: 4.12.0(typescript@5.9.3)
@@ -4584,6 +4593,31 @@ importers:
         version: 4.1.9(@types/node@25.9.4)(@vitest/coverage-v8@4.1.9)(happy-dom@20.10.6)(jsdom@29.1.1(@noble/hashes@2.2.0))(msw@2.12.14(@types/node@25.9.4)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.22.4)(yaml@2.8.3))
 
   tools/ical-event-generator:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 6.4.8(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.1)(tsx@4.22.4)(yaml@2.8.3)
+      react:
+        specifier: 'catalog:'
+        version: 19.2.7
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.2.7(react@19.2.7)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      vitest:
+        specifier: 'catalog:'
+        version: 4.1.9(@types/node@25.9.4)(@vitest/coverage-v8@4.1.9)(happy-dom@20.10.6)(jsdom@29.1.1(@noble/hashes@2.2.0))(msw@2.12.14(@types/node@25.9.4)(typescript@5.9.3))(vite@7.3.5(@types/node@25.9.4)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.22.4)(yaml@2.8.3))
+
+  tools/image-cropper:
     dependencies:
       '@workspace/tool-sdk':
         specifier: workspace:*
@@ -15790,6 +15824,11 @@ packages:
     peerDependencies:
       react: ^19.2.7
 
+  react-image-crop@11.1.2:
+    resolution: {integrity: sha512-+0Pc2fxpwKL4u4oLmdKBw8XSwUceFbXbKEHvFOlsl/MGB1OVNic4uBlAPmEHGXYgoJIq+b63xHbc/aJMG0AVkA==}
+    peerDependencies:
+      react: '>=16.13.1'
+
   react-is@17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
 
@@ -23775,6 +23814,10 @@ snapshots:
     dependencies:
       react: 19.2.7
       scheduler: 0.27.0
+
+  react-image-crop@11.1.2(react@19.2.7):
+    dependencies:
+      react: 19.2.7
 
   react-is@17.0.2: {}
 

@@ -9110,6 +9110,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-cropper",
+    language: "ar",
+  },
+  {
+    slug: "image-cropper",
+    language: "de",
+  },
+  {
+    slug: "image-cropper",
+    language: "en",
+  },
+  {
+    slug: "image-cropper",
+    language: "es",
+  },
+  {
+    slug: "image-cropper",
+    language: "fr",
+  },
+  {
+    slug: "image-cropper",
+    language: "he",
+  },
+  {
+    slug: "image-cropper",
+    language: "hi",
+  },
+  {
+    slug: "image-cropper",
+    language: "id",
+  },
+  {
+    slug: "image-cropper",
+    language: "it",
+  },
+  {
+    slug: "image-cropper",
+    language: "ja",
+  },
+  {
+    slug: "image-cropper",
+    language: "ko",
+  },
+  {
+    slug: "image-cropper",
+    language: "ms",
+  },
+  {
+    slug: "image-cropper",
+    language: "nl",
+  },
+  {
+    slug: "image-cropper",
+    language: "no",
+  },
+  {
+    slug: "image-cropper",
+    language: "pl",
+  },
+  {
+    slug: "image-cropper",
+    language: "pt",
+  },
+  {
+    slug: "image-cropper",
+    language: "ru",
+  },
+  {
+    slug: "image-cropper",
+    language: "sv",
+  },
+  {
+    slug: "image-cropper",
+    language: "th",
+  },
+  {
+    slug: "image-cropper",
+    language: "tr",
+  },
+  {
+    slug: "image-cropper",
+    language: "vi",
+  },
+  {
+    slug: "image-cropper",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-cropper",
+    language: "zh-TW",
+  },
+  {
     slug: "image-metadata-cleaner",
     language: "ar",
   },

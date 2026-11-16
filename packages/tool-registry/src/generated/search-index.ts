@@ -12483,6 +12483,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "image-cropper",
+    category: "image",
+    icon: "image",
+    tags: ["image", "crop", "photo", "rotate", "flip", "aspect-ratio"],
+    locales: {
+      ar: {
+        name: "أداة قص الصور",
+        description:
+          "قص الصور بحرية أو بنسبة أبعاد ثابتة، ودوّرها واقلبها. عاين صور PNG أو JPEG أو WebP ونزّلها محليًا في متصفحك.",
+      },
+      de: {
+        name: "Bild zuschneiden",
+        description:
+          "Bilder frei oder mit festem Seitenverhältnis zuschneiden, drehen und spiegeln. PNG, JPEG oder WebP direkt im Browser ansehen und herunterladen.",
+      },
+      en: {
+        name: "Image Cropper",
+        description:
+          "Crop images freely or to a fixed aspect ratio, rotate, and flip them. Preview and download PNG, JPEG, or WebP locally in your browser.",
+      },
+      es: {
+        name: "Recortador de imágenes",
+        description:
+          "Recorta imágenes libremente o con una relación de aspecto fija, gíralas y voltéalas. Previsualiza y descarga PNG, JPEG o WebP localmente en tu navegador.",
+      },
+      fr: {
+        name: "Recadrage d’images",
+        description:
+          "Recadrez des images librement ou selon un rapport fixe, faites-les pivoter et retournez-les. Prévisualisez et téléchargez en PNG, JPEG ou WebP localement dans votre navigateur.",
+      },
+      he: {
+        name: "כלי חיתוך תמונות",
+        description:
+          "חתוך תמונות באופן חופשי או ביחס ממדים קבוע, סובב והפוך אותן. הצג תצוגה מקדימה והורד PNG, JPEG או WebP מקומית בדפדפן שלך.",
+      },
+      hi: {
+        name: "इमेज क्रॉपर",
+        description:
+          "इमेज को स्वतंत्र रूप से या तय पक्षानुपात में क्रॉप करें, घुमाएँ और पलटें। अपने ब्राउज़र में स्थानीय रूप से PNG, JPEG या WebP का पूर्वावलोकन देखें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pemotong Gambar",
+        description:
+          "Potong gambar secara bebas atau dengan rasio aspek tetap, putar, dan balik. Pratinjau dan unduh PNG, JPEG, atau WebP secara lokal di peramban Anda.",
+      },
+      it: {
+        name: "Ritaglio immagini",
+        description:
+          "Ritaglia le immagini liberamente o con proporzioni fisse, ruotale e capovolgile. Visualizza l'anteprima e scarica PNG, JPEG o WebP localmente nel browser.",
+      },
+      ja: {
+        name: "画像切り抜き",
+        description:
+          "画像を自由な範囲や固定の縦横比で切り抜き、回転・反転できます。ブラウザー内で処理し、PNG、JPEG、WebP のプレビューとダウンロードができます。",
+      },
+      ko: {
+        name: "이미지 자르기",
+        description:
+          "이미지를 자유롭게 또는 고정 비율로 자르고, 회전하거나 뒤집으세요. 브라우저에서 로컬로 PNG, JPEG, WebP를 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemangkas Imej",
+        description:
+          "Pangkas imej secara bebas atau dengan nisbah aspek tetap, putar dan balikkan. Pratonton dan muat turun PNG, JPEG atau WebP secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeelding bijsnijden",
+        description:
+          "Snijd afbeeldingen vrij of met een vaste beeldverhouding bij, draai en spiegel ze. Bekijk en download PNG, JPEG of WebP lokaal in je browser.",
+      },
+      no: {
+        name: "Bildebeskjærer",
+        description:
+          "Beskjær bilder fritt eller med et fast sideforhold, roter og vend dem. Forhåndsvis og last ned PNG, JPEG eller WebP lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Przycinanie obrazów",
+        description:
+          "Przycinaj obrazy dowolnie lub według stałych proporcji, obracaj je i odbijaj. Wyświetlaj podgląd i pobieraj PNG, JPEG lub WebP lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Recortador de imagens",
+        description:
+          "Recorte imagens livremente ou em uma proporção fixa, gire e espelhe. Confira e baixe PNG, JPEG ou WebP localmente no navegador.",
+      },
+      ru: {
+        name: "Обрезка изображений",
+        description:
+          "Обрезайте изображения свободно или с фиксированными пропорциями, поворачивайте и отражайте их. Просматривайте и скачивайте PNG, JPEG или WebP локально в браузере.",
+      },
+      sv: {
+        name: "Bildbeskärare",
+        description:
+          "Beskär bilder fritt eller med ett fast bildförhållande, rotera och spegelvänd dem. Förhandsgranska och ladda ned PNG, JPEG eller WebP lokalt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือครอบตัดรูปภาพ",
+        description:
+          "ครอบตัดรูปภาพอย่างอิสระหรือตามอัตราส่วนที่กำหนด หมุนและพลิกรูปภาพ ดูตัวอย่างและดาวน์โหลดเป็น PNG, JPEG หรือ WebP ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Görüntü Kırpıcı",
+        description:
+          "Görüntüleri serbestçe veya sabit en boy oranıyla kırpın, döndürün ve çevirin. PNG, JPEG veya WebP olarak tarayıcınızda yerel olarak önizleyin ve indirin.",
+      },
+      vi: {
+        name: "Công cụ cắt ảnh",
+        description:
+          "Cắt ảnh tự do hoặc theo tỷ lệ cố định, xoay và lật ảnh. Xem trước và tải xuống PNG, JPEG hoặc WebP ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片裁剪",
+        description:
+          "自由裁剪或按固定宽高比裁剪图片，并进行旋转和翻转。在浏览器本地预览并下载 PNG、JPEG 或 WebP 图片。",
+      },
+      "zh-TW": {
+        name: "圖片裁剪器",
+        description:
+          "自由裁剪圖片或使用固定長寬比，並可旋轉與翻轉。直接在瀏覽器本機預覽及下載 PNG、JPEG 或 WebP。",
+      },
+    },
+  },
+  {
     slug: "image-metadata-cleaner",
     category: "image",
     icon: "image",
