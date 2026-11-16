@@ -25,6 +25,13 @@ const add = (...files: File[]) =>
 const dropZone = () =>
   screen.getByText(m.dropTitle).closest("div.border-dashed")!.parentElement!
 const mount = () => render(<ZipCreator messages={m} lang="en" />)
+it.each(["ar", "he"])(
+  "uses RTL direction in compression controls for %s",
+  (lang) => {
+    render(<ZipCreator messages={m} lang={lang} />)
+    expect(screen.getByRole("combobox").getAttribute("dir")).toBe("rtl")
+  }
+)
 beforeEach(() => {
   vi.mocked(createZip)
     .mockReset()

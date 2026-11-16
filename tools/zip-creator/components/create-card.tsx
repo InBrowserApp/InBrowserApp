@@ -90,6 +90,7 @@ export function CreateCard({
                 {m.compression}
               </FieldLabel>
               <Select
+                dir={lang === "ar" || lang === "he" ? "rtl" : "ltr"}
                 value={String(c.level)}
                 onValueChange={c.changeLevel}
                 disabled={disabled}
