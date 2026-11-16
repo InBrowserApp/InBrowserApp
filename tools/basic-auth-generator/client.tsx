@@ -59,29 +59,9 @@ function BasicAuthGeneratorClient({ messages }: BasicAuthGeneratorClientProps) {
   const [password, setPassword] = useState(DEFAULT_PASSWORD)
 
   useEffect(() => {
-    /* v8 ignore next */
-    if (typeof window === "undefined") return
-
-    const storedUsername = window.localStorage.getItem(STORAGE_KEYS.username)
-    const storedPassword = window.localStorage.getItem(STORAGE_KEYS.password)
-
-    setUsername(storedUsername ?? DEFAULT_USERNAME)
-    setPassword(storedPassword ?? DEFAULT_PASSWORD)
+    window.localStorage.removeItem(STORAGE_KEYS.username)
+    window.localStorage.removeItem(STORAGE_KEYS.password)
   }, [])
-
-  useEffect(() => {
-    /* v8 ignore next */
-    if (typeof window === "undefined") return
-
-    window.localStorage.setItem(STORAGE_KEYS.username, username)
-  }, [username])
-
-  useEffect(() => {
-    /* v8 ignore next */
-    if (typeof window === "undefined") return
-
-    window.localStorage.setItem(STORAGE_KEYS.password, password)
-  }, [password])
 
   function handleReset() {
     setUsername(DEFAULT_USERNAME)
