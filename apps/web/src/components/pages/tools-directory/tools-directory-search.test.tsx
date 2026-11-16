@@ -45,6 +45,29 @@ afterEach(() => {
 })
 
 describe("category directory", () => {
+  it("announces a concise result count outside the changing tool list", async () => {
+    render(<ToolsDirectorySearch {...props} />)
+
+    const status = screen.getByRole("status")
+
+    expect(status.getAttribute("aria-live")).toBe("polite")
+    expect(status.getAttribute("aria-atomic")).toBe("true")
+    expect(status.textContent).toBe("2 tools")
+    expect(status.querySelector("a")).toBeNull()
+    expect(
+      screen.getByRole("link", { name: /PDF Merger/ }).closest("[aria-live]")
+    ).toBeNull()
+
+    fireEvent.change(screen.getByRole("combobox"), {
+      target: { value: "merge" },
+    })
+
+    await waitFor(() => {
+      expect(status.textContent).toBe("1 tools")
+    })
+    expect(status.querySelector("a")).toBeNull()
+  })
+
   it("renders its tools and localized category links before JavaScript runs", () => {
     const html = renderToStaticMarkup(
       <ToolsDirectorySearch {...props} language="zh-CN" />

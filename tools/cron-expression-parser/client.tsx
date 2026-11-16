@@ -28,7 +28,7 @@ function CronExpressionParserClient({
   messages,
 }: CronExpressionParserClientProps) {
   const [expression, setExpression] = useState(DEFAULT_EXPRESSION)
-  const [nowMs, setNowMs] = useState(() => Date.now())
+  const [nowMs, setNowMs] = useState<number | null>(null)
   const [timeZoneLabel, setTimeZoneLabel] = useState("local time")
 
   useEffect(() => {
@@ -43,6 +43,7 @@ function CronExpressionParserClient({
       setExpression(storedExpression)
     }
 
+    setNowMs(Date.now())
     setTimeZoneLabel(getBrowserTimeZoneLabel())
   }, [])
 
@@ -71,7 +72,7 @@ function CronExpressionParserClient({
   const fields = isValid ? parseCronFields(expression) : []
   const runTimes = useMemo(
     () =>
-      isValid
+      isValid && nowMs !== null
         ? getNextRunTimes(expression, {
             count: RUN_TIME_COUNT,
             referenceDate: new Date(nowMs),
@@ -104,7 +105,7 @@ function CronExpressionParserClient({
         isValid={isValid}
         language={language}
         messages={messages}
-        nowMs={nowMs}
+        nowMs={nowMs ?? 0}
         runTimes={runTimes}
         timeZoneLabel={timeZoneLabel}
         validation={validation}

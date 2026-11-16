@@ -1,7 +1,7 @@
 import hljs from "highlight.js/lib/core"
 import json from "highlight.js/lib/languages/json"
 
-import { ScrollArea } from "@workspace/ui/components/ui/scroll-area"
+import { ScrollArea, ScrollBar } from "@workspace/ui/components/ui/scroll-area"
 
 if (!hljs.getLanguage("json")) {
   hljs.registerLanguage("json", json)
@@ -27,6 +27,7 @@ function HighlightedJson({ ariaLabel, value }: HighlightedJsonProps) {
         <pre className="json-schema-highlight hljs min-h-full px-2.5 py-2">
           <code dangerouslySetInnerHTML={{ __html: highlightedJson }} />
         </pre>
+        <ScrollBar orientation="horizontal" />
       </ScrollArea>
     </div>
   )

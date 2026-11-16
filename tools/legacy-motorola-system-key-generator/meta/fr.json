@@ -1,0 +1,4 @@
+{
+  "name": "Générateur de clés système Motorola d’ancienne génération",
+  "description": "Générez des fichiers de clés système logicielles Motorola d’ancienne génération (.KEY) dans votre navigateur. Ce format ne prend pas en charge ASTRO 25, XTS5000, APX ni les Advanced System Keys."
+}

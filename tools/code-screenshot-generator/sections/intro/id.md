@@ -1,8 +1,8 @@
-# Code Screenshot Generator
+# Pembuat Tangkapan Layar Kode
 
 ## Fungsinya
 
-Code Screenshot Generator mengubah cuplikan yang ditempel menjadi kartu kode yang rapi dan dapat diekspor sebagai SVG, PNG, JPEG, WebP, atau HTML mandiri. Alat ini berjalan di browser Anda, menerapkan penyorotan sintaks dengan tema yang dapat dipilih, dan memungkinkan Anda menyesuaikan bingkai sebelum mengunduh.
+Pembuat Tangkapan Layar Kode mengubah cuplikan yang ditempel menjadi kartu kode yang rapi dan dapat diekspor sebagai SVG, PNG, JPEG, WebP, atau HTML mandiri. Alat ini berjalan di browser Anda, menerapkan penyorotan sintaks dengan tema yang dapat dipilih, dan memungkinkan Anda menyesuaikan bingkai sebelum mengunduh.
 
 ## Kapan menggunakannya
 

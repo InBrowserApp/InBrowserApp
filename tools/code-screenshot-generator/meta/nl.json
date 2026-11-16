@@ -1,4 +1,4 @@
 {
-  "name": "Code Screenshot Generator",
+  "name": "Generator voor codescreenshots",
   "description": "Genereer code-screenshots met syntaxmarkering en exporteer ze als SVG, PNG, JPEG, WebP of HTML."
 }

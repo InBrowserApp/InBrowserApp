@@ -1,8 +1,8 @@
-# Code Screenshot Generator
+# Gerador de capturas de tela de código
 
 ## O que ele faz
 
-Code Screenshot Generator transforma um trecho colado em um cartão de código refinado que pode ser exportado como SVG, PNG, JPEG, WebP ou HTML independente. Ele roda no seu navegador, aplica realce de sintaxe com temas selecionáveis e permite ajustar a moldura antes de baixar.
+O Gerador de capturas de tela de código transforma um trecho colado em um cartão de código refinado que pode ser exportado como SVG, PNG, JPEG, WebP ou HTML independente. Ele roda no seu navegador, aplica realce de sintaxe com temas selecionáveis e permite ajustar a moldura antes de baixar.
 
 ## Quando usar
 

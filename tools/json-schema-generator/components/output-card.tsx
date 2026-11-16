@@ -72,7 +72,7 @@ function OutputCard({
           </Empty>
         )}
       </ToolPanelCardContent>
-      <ToolPanelCardFooter className="justify-end gap-3 border-t">
+      <ToolPanelCardFooter className="flex-wrap justify-end gap-3 border-t">
         <ToolCopyButton
           value={schemaText}
           copyLabel={messages.copySchemaLabel}

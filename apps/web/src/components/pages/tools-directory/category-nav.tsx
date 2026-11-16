@@ -98,7 +98,20 @@ function CategoryChips(props: CategoryNavProps) {
   const activeLink = useRef<HTMLAnchorElement>(null)
 
   useEffect(() => {
-    activeLink.current?.scrollIntoView({ block: "nearest", inline: "center" })
+    const link = activeLink.current
+    const container = link?.parentElement
+
+    if (!link || !container) {
+      return
+    }
+
+    const linkBounds = link.getBoundingClientRect()
+    const containerBounds = container.getBoundingClientRect()
+
+    container.scrollLeft +=
+      linkBounds.left -
+      containerBounds.left -
+      (containerBounds.width - linkBounds.width) / 2
   }, [selected])
 
   return (

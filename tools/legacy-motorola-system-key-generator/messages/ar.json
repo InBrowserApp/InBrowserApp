@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "الصيغة القديمة فقط",
+  "compatibilityDescription": "يولّد صيغة المفاتيح البرمجية المستمدة من BatLabs. غير متوافق مع ASTRO 25 Portable CPS (بما في ذلك XTS5000) أو APX CPS أو Advanced System Keys (ASK).",
+  "inputTitle": "معرّف النظام",
+  "inputDescription": "أدخل معرّف نظام اتصالات لاسلكية مشترك القنوات قديم من Motorola.",
+  "systemIdLabel": "معرّف النظام (سداسي عشري)",
+  "systemIdHelp": "استخدم 1–4 خانات سداسية عشرية (0–9, A–F). تُستكمل المعرّفات القصيرة بأصفار بادئة.",
+  "invalidSystemId": "أدخل 1–4 خانات سداسية عشرية (0–9, A–F)، بدون البادئة 0x.",
+  "outputTitle": "ملف المفتاح القديم",
+  "emptyState": "أدخل معرّف النظام لمعاينة ملف .KEY وتنزيله.",
+  "normalizedIdLabel": "المعرّف بصيغته الموحّدة",
+  "filenameLabel": "اسم الملف",
+  "fileSizeLabel": "حجم الملف",
+  "fileSizeValue": "27 بايت",
+  "hexPreviewLabel": "معاينة سداسية عشرية",
+  "downloadLabel": "تنزيل .KEY",
+  "sourceLabel": "التنفيذ المرجعي",
+  "licenseLabel": "ترخيص ISC"
+}

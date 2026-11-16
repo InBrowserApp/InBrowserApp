@@ -37,10 +37,13 @@ function CronExpressionGeneratorClient({
   const [formState, setFormState] = useState<CronFormState>(() =>
     createDefaultCronFormState()
   )
-  const [referenceMs, setReferenceMs] = useState(() => Date.now())
+  const [referenceMs, setReferenceMs] = useState<number | null>(null)
   const expression = buildCronExpression(formState)
   const runTimes = useMemo(
-    () => generateNextRunTimes(formState, new Date(referenceMs), 5),
+    () =>
+      referenceMs === null
+        ? []
+        : generateNextRunTimes(formState, new Date(referenceMs), 5),
     [formState, referenceMs]
   )
 
@@ -50,6 +53,7 @@ function CronExpressionGeneratorClient({
       return
     }
 
+    setReferenceMs(Date.now())
     const storedExpression = window.localStorage.getItem(STORAGE_KEY)
 
     if (storedExpression) {
@@ -152,7 +156,7 @@ function CronExpressionGeneratorClient({
             <NextRunsCard
               language={language}
               messages={messages}
-              referenceMs={referenceMs}
+              referenceMs={referenceMs ?? 0}
               runTimes={runTimes}
             />
           </ToolPanelCard>

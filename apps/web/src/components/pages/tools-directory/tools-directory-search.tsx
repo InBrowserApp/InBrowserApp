@@ -94,11 +94,7 @@ function ToolsDirectorySearch({
     <div className="grid items-start gap-6 lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-10">
       <CategorySidebar {...categoryNavProps} />
 
-      <div
-        className="flex min-w-0 flex-col gap-4"
-        aria-busy={query !== deferredQuery}
-        aria-live="polite"
-      >
+      <div className="flex min-w-0 flex-col gap-4">
         <CategoryChips {...categoryNavProps} />
 
         <SearchCombobox
@@ -110,32 +106,46 @@ function ToolsDirectorySearch({
           messages={messages}
         />
 
-        {normalizedQuery !== "" && !isRegistryEmpty && !isSearchEmpty ? (
-          <p className="text-sm text-muted-foreground">
-            {formatCount(rankedEntries.length)} {messages.resultCountSuffix}
-          </p>
-        ) : null}
+        <p
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          aria-busy={query !== deferredQuery}
+          className={
+            normalizedQuery !== "" && !isRegistryEmpty && !isSearchEmpty
+              ? "text-sm text-muted-foreground"
+              : "sr-only"
+          }
+        >
+          {isRegistryEmpty
+            ? messages.emptyRegistryTitle
+            : isSearchEmpty
+              ? messages.emptySearchTitle
+              : `${formatCount(rankedEntries.length)} ${messages.resultCountSuffix}`}
+        </p>
 
-        {isRegistryEmpty ? (
-          <DirectoryEmptyState
-            icon="registry"
-            title={messages.emptyRegistryTitle}
-            description={messages.emptyRegistryDescription}
-          />
-        ) : isSearchEmpty ? (
-          <DirectoryEmptyState
-            icon="search"
-            title={messages.emptySearchTitle}
-            description={messages.emptySearchDescription}
-          />
-        ) : (
-          <ToolList
-            entries={rankedEntries}
-            language={language}
-            categoryLabels={messages.categoryLabels}
-            showCategory={!category}
-          />
-        )}
+        <div aria-busy={query !== deferredQuery}>
+          {isRegistryEmpty ? (
+            <DirectoryEmptyState
+              icon="registry"
+              title={messages.emptyRegistryTitle}
+              description={messages.emptyRegistryDescription}
+            />
+          ) : isSearchEmpty ? (
+            <DirectoryEmptyState
+              icon="search"
+              title={messages.emptySearchTitle}
+              description={messages.emptySearchDescription}
+            />
+          ) : (
+            <ToolList
+              entries={rankedEntries}
+              language={language}
+              categoryLabels={messages.categoryLabels}
+              showCategory={!category}
+            />
+          )}
+        </div>
       </div>
     </div>
   )

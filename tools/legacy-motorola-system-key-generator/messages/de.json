@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "Nur Legacy-Format",
+  "compatibilityDescription": "Erstellt Software-Schlüssel im von BatLabs abgeleiteten Format. Nicht kompatibel mit ASTRO 25 Portable CPS (einschließlich XTS5000), APX CPS oder Advanced System Keys (ASK).",
+  "inputTitle": "System-ID",
+  "inputDescription": "Geben Sie die ID eines älteren Motorola-Bündelfunksystems ein.",
+  "systemIdLabel": "System-ID (Hex)",
+  "systemIdHelp": "Verwenden Sie 1–4 Hexadezimalziffern (0–9, A–F). Kurze IDs werden mit führenden Nullen aufgefüllt.",
+  "invalidSystemId": "Geben Sie 1–4 Hexadezimalziffern (0–9, A–F) ohne das Präfix 0x ein.",
+  "outputTitle": "Schlüsseldatei im Legacy-Format",
+  "emptyState": "Geben Sie eine System-ID ein, um Ihre .KEY-Datei als Vorschau anzuzeigen und herunterzuladen.",
+  "normalizedIdLabel": "Normalisierte ID",
+  "filenameLabel": "Dateiname",
+  "fileSizeLabel": "Dateigröße",
+  "fileSizeValue": "27 Bytes",
+  "hexPreviewLabel": "Hexadezimale Vorschau",
+  "downloadLabel": ".KEY herunterladen",
+  "sourceLabel": "Referenzimplementierung",
+  "licenseLabel": "ISC-Lizenz"
+}

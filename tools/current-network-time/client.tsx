@@ -92,7 +92,7 @@ function CurrentNetworkTimeClient({
 
   const [status, setStatus] = useState<SyncStatus>("syncing")
   const [error, setError] = useState<string | null>(null)
-  const [localTimeMs, setLocalTimeMs] = useState(() => Date.now())
+  const [localTimeMs, setLocalTimeMs] = useState<number | null>(null)
   const [networkTimeMs, setNetworkTimeMs] = useState<number | undefined>(
     undefined
   )
@@ -211,10 +211,14 @@ function CurrentNetworkTimeClient({
 
           <div className="space-y-3">
             <p className="font-mono text-[clamp(3rem,11vw,6.5rem)] font-semibold tracking-tight text-foreground tabular-nums">
-              {formatClockTime(displayedTimeMs, language)}
+              {displayedTimeMs === null
+                ? PLACEHOLDER
+                : formatClockTime(displayedTimeMs, language)}
             </p>
             <p className="text-sm text-muted-foreground sm:text-base">
-              {formatCalendarDate(displayedTimeMs, language)}
+              {displayedTimeMs === null
+                ? PLACEHOLDER
+                : formatCalendarDate(displayedTimeMs, language)}
             </p>
           </div>
         </div>

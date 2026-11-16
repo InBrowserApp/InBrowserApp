@@ -39,7 +39,7 @@ function TimerClient({ messages }: TimerClientProps) {
   const [soundEnabled, setSoundEnabled] = useState(true)
   const [vibrationEnabled, setVibrationEnabled] = useState(true)
   const [notificationEnabled, setNotificationEnabled] = useState(false)
-  const [nowMs, setNowMs] = useState(() => Date.now())
+  const [nowMs, setNowMs] = useState(0)
   const [errorMessage, setErrorMessage] = useState("")
 
   const hasHydrated = useTimerStorage({

@@ -24,6 +24,8 @@ import {
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Eye, EyeOff, LoaderCircle, Lock } from "@workspace/ui/icons"
 
+import { ARGON2_VERIFY_LIMITS } from "../core/argon2"
+
 import type { Argon2HashPasswordVerifierPageMessages } from "../client/types"
 
 type VerificationFormCardProps = Readonly<{
@@ -99,7 +101,17 @@ function VerificationFormCard({
                 onHashChange(event.target.value)
               }}
             />
-            <FieldDescription>{messages.hashDescription}</FieldDescription>
+            <FieldDescription>
+              {messages.hashDescription}
+              <span className="mt-1 block">
+                {messages.memoryCostLabel} ≤ {ARGON2_VERIFY_LIMITS.memoryCost}{" "}
+                KiB
+                {" · "}
+                {messages.iterationsLabel} ≤ {ARGON2_VERIFY_LIMITS.iterations}
+                {" · "}
+                {messages.parallelismLabel} ≤ {ARGON2_VERIFY_LIMITS.parallelism}
+              </span>
+            </FieldDescription>
           </Field>
 
           <SecretField

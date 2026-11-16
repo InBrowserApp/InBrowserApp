@@ -54,16 +54,19 @@ function createResult(diffMilliseconds: number | null): TimeDiffResult | null {
 }
 
 function TimeDiffCalculatorClient({ messages }: TimeDiffCalculatorClientProps) {
-  const defaultTimeZone = useMemo(() => getDefaultTimeZone("UTC"), [])
   const [hasRestoredState, setHasRestoredState] = useState(false)
   const [startInput, setStartInput] = useState("")
   const [endInput, setEndInput] = useState("")
-  const [startTimeZone, setStartTimeZone] = useState(defaultTimeZone)
-  const [endTimeZone, setEndTimeZone] = useState(defaultTimeZone)
+  const [startTimeZone, setStartTimeZone] = useState("UTC")
+  const [endTimeZone, setEndTimeZone] = useState("UTC")
 
-  const timeZoneOptions = useMemo(() => buildTimeZoneOptions(Date.now()), [])
+  const [timeZoneOptions, setTimeZoneOptions] = useState<
+    ReturnType<typeof buildTimeZoneOptions>
+  >([])
 
   useEffect(() => {
+    setTimeZoneOptions(buildTimeZoneOptions(Date.now()))
+    const defaultTimeZone = getDefaultTimeZone("UTC")
     const restoredStartTimeZone = readStoredString(
       STORAGE_KEYS.startTimeZone,
       defaultTimeZone
@@ -95,7 +98,7 @@ function TimeDiffCalculatorClient({ messages }: TimeDiffCalculatorClientProps) {
       )
     )
     setHasRestoredState(true)
-  }, [defaultTimeZone])
+  }, [])
 
   useEffect(() => {
     if (!hasRestoredState) {
