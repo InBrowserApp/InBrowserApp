@@ -10,7 +10,7 @@ export function ImageCrop({
   return (
     <ReactCrop
       className={cn(
-        "max-w-full align-middle motion-reduce:[&_.ReactCrop__crop-selection]:animate-none!",
+        "max-w-full align-middle motion-reduce:[&_*]:animate-none!",
         className
       )}
       {...props}
