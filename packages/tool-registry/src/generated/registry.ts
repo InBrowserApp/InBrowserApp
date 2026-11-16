@@ -10660,6 +10660,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "file-type-detector",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "file",
+      "file-type",
+      "signature",
+      "magic-bytes",
+      "mime",
+      "hex",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "كاشف نوع الملف",
+        description:
+          "تعرّف على صيغ الملفات من تواقيعها، وتحقق من عدم تطابق الامتدادات، وافحص أنواع MIME ومعاينة سداسية عشرية محليًا في متصفحك.",
+      },
+      de: {
+        name: "Dateityp-Erkennung",
+        description:
+          "Dateiformate anhand ihrer Signaturen erkennen, abweichende Dateiendungen prüfen und MIME-Typen sowie eine Hex-Vorschau lokal im Browser ansehen.",
+      },
+      en: {
+        name: "File Type Detector",
+        description:
+          "Identify file formats by their signatures, check extension mismatches, and inspect MIME types and a hex preview locally in your browser.",
+      },
+      es: {
+        name: "Detector de tipo de archivo",
+        description:
+          "Identifica formatos de archivo por sus firmas, comprueba discrepancias de extensión y consulta los tipos MIME y una vista hexadecimal localmente en tu navegador.",
+      },
+      fr: {
+        name: "Détecteur de type de fichier",
+        description:
+          "Identifiez les formats par leur signature, repérez les extensions incohérentes et examinez les types MIME et un aperçu hexadécimal localement dans votre navigateur.",
+      },
+      he: {
+        name: "מזהה סוגי קבצים",
+        description:
+          "זיהוי פורמטים לפי חתימות הקבצים, בדיקת אי־התאמות בסיומות והצגת סוגי MIME ותצוגה הקסדצימלית מקדימה, מקומית בדפדפן.",
+      },
+      hi: {
+        name: "फ़ाइल प्रकार पहचानकर्ता",
+        description:
+          "फ़ाइल सिग्नेचर से फ़ॉर्मैट पहचानें, एक्सटेंशन का मेल जाँचें और अपने ब्राउज़र में स्थानीय रूप से MIME प्रकार व हेक्स प्रीव्यू देखें।",
+      },
+      id: {
+        name: "Pendeteksi Jenis File",
+        description:
+          "Kenali format file melalui tanda tangannya, periksa ketidakcocokan ekstensi, serta lihat jenis MIME dan pratinjau heksadesimal secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Rilevatore del tipo di file",
+        description:
+          "Identifica i formati tramite le firme, verifica le estensioni non corrispondenti e consulta i tipi MIME e un’anteprima esadecimale in locale nel browser.",
+      },
+      ja: {
+        name: "ファイル形式判定ツール",
+        description:
+          "ファイルのシグネチャから形式を判定し、拡張子の不一致、MIME タイプ、16進数プレビューをブラウザー内で確認できます。",
+      },
+      ko: {
+        name: "파일 형식 감지기",
+        description:
+          "브라우저에서 로컬로 파일 시그니처를 통해 형식을 식별하고, 확장자 불일치를 확인하며, MIME 유형과 16진수 미리보기를 살펴보세요.",
+      },
+      ms: {
+        name: "Pengesan Jenis Fail",
+        description:
+          "Kenal pasti format fail melalui tandatangannya, semak ketidakpadanan sambungan, serta periksa jenis MIME dan pratonton heks secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "Bestandstypeherkenner",
+        description:
+          "Herken bestandsformaten aan hun signatuur, controleer afwijkende extensies en bekijk MIME-typen en een hexvoorbeeld lokaal in je browser.",
+      },
+      no: {
+        name: "Filtypedetektor",
+        description:
+          "Identifiser filformater ut fra signaturene, kontroller filendelser som ikke samsvarer, og undersøk MIME-typer og en heksadesimal forhåndsvisning lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Wykrywanie typu pliku",
+        description:
+          "Rozpoznawaj formaty plików na podstawie sygnatur, sprawdzaj niezgodność rozszerzeń oraz przeglądaj typy MIME i podgląd szesnastkowy lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Detector de Tipo de Arquivo",
+        description:
+          "Identifique formatos de arquivo pelas assinaturas, verifique divergências de extensão e inspecione tipos MIME e uma prévia hexadecimal localmente no navegador.",
+      },
+      ru: {
+        name: "Определение типа файла",
+        description:
+          "Определяйте форматы файлов по сигнатурам, проверяйте соответствие расширений и просматривайте MIME-типы и шестнадцатеричные данные локально в браузере.",
+      },
+      sv: {
+        name: "Filtypsidentifierare",
+        description:
+          "Identifiera filformat genom deras signaturer, kontrollera avvikande filändelser och granska MIME-typer och en hex-förhandsvisning lokalt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือตรวจจับประเภทไฟล์",
+        description:
+          "ระบุรูปแบบไฟล์จากลายเซ็น ตรวจสอบนามสกุลที่ไม่ตรงกัน และดูประเภท MIME พร้อมตัวอย่างเลขฐานสิบหกภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Dosya Türü Algılayıcı",
+        description:
+          "Dosya biçimlerini imzalarından belirleyin, uzantı uyuşmazlıklarını kontrol edin, MIME türlerini ve onaltılık önizlemeyi tarayıcınızda yerel olarak inceleyin.",
+      },
+      vi: {
+        name: "Trình nhận diện loại tệp",
+        description:
+          "Nhận diện định dạng qua chữ ký tệp, kiểm tra phần mở rộng không khớp, xem loại MIME và bản xem trước hex ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "文件类型识别",
+        description:
+          "在浏览器本地根据文件签名识别格式，检查扩展名是否匹配，并查看 MIME 类型和十六进制预览。",
+      },
+      "zh-TW": {
+        name: "檔案類型偵測器",
+        description:
+          "根據檔案特徵識別格式、檢查副檔名是否不符，並在瀏覽器本機檢視 MIME 類型與十六進位預覽。",
+      },
+    },
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     category: "image",
     icon: "image",
@@ -45492,6 +45623,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "檔案轉 Data URI 轉換器",
         description:
           "將檔案轉換為 Data URI 字串，方便嵌入 HTML、CSS 或 JSON，完全離線。",
+      },
+    },
+  },
+  "file-type-detector": {
+    slug: "file-type-detector",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "file",
+      "file-type",
+      "signature",
+      "magic-bytes",
+      "mime",
+      "hex",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "كاشف نوع الملف",
+        description:
+          "تعرّف على صيغ الملفات من تواقيعها، وتحقق من عدم تطابق الامتدادات، وافحص أنواع MIME ومعاينة سداسية عشرية محليًا في متصفحك.",
+      },
+      de: {
+        name: "Dateityp-Erkennung",
+        description:
+          "Dateiformate anhand ihrer Signaturen erkennen, abweichende Dateiendungen prüfen und MIME-Typen sowie eine Hex-Vorschau lokal im Browser ansehen.",
+      },
+      en: {
+        name: "File Type Detector",
+        description:
+          "Identify file formats by their signatures, check extension mismatches, and inspect MIME types and a hex preview locally in your browser.",
+      },
+      es: {
+        name: "Detector de tipo de archivo",
+        description:
+          "Identifica formatos de archivo por sus firmas, comprueba discrepancias de extensión y consulta los tipos MIME y una vista hexadecimal localmente en tu navegador.",
+      },
+      fr: {
+        name: "Détecteur de type de fichier",
+        description:
+          "Identifiez les formats par leur signature, repérez les extensions incohérentes et examinez les types MIME et un aperçu hexadécimal localement dans votre navigateur.",
+      },
+      he: {
+        name: "מזהה סוגי קבצים",
+        description:
+          "זיהוי פורמטים לפי חתימות הקבצים, בדיקת אי־התאמות בסיומות והצגת סוגי MIME ותצוגה הקסדצימלית מקדימה, מקומית בדפדפן.",
+      },
+      hi: {
+        name: "फ़ाइल प्रकार पहचानकर्ता",
+        description:
+          "फ़ाइल सिग्नेचर से फ़ॉर्मैट पहचानें, एक्सटेंशन का मेल जाँचें और अपने ब्राउज़र में स्थानीय रूप से MIME प्रकार व हेक्स प्रीव्यू देखें।",
+      },
+      id: {
+        name: "Pendeteksi Jenis File",
+        description:
+          "Kenali format file melalui tanda tangannya, periksa ketidakcocokan ekstensi, serta lihat jenis MIME dan pratinjau heksadesimal secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Rilevatore del tipo di file",
+        description:
+          "Identifica i formati tramite le firme, verifica le estensioni non corrispondenti e consulta i tipi MIME e un’anteprima esadecimale in locale nel browser.",
+      },
+      ja: {
+        name: "ファイル形式判定ツール",
+        description:
+          "ファイルのシグネチャから形式を判定し、拡張子の不一致、MIME タイプ、16進数プレビューをブラウザー内で確認できます。",
+      },
+      ko: {
+        name: "파일 형식 감지기",
+        description:
+          "브라우저에서 로컬로 파일 시그니처를 통해 형식을 식별하고, 확장자 불일치를 확인하며, MIME 유형과 16진수 미리보기를 살펴보세요.",
+      },
+      ms: {
+        name: "Pengesan Jenis Fail",
+        description:
+          "Kenal pasti format fail melalui tandatangannya, semak ketidakpadanan sambungan, serta periksa jenis MIME dan pratonton heks secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "Bestandstypeherkenner",
+        description:
+          "Herken bestandsformaten aan hun signatuur, controleer afwijkende extensies en bekijk MIME-typen en een hexvoorbeeld lokaal in je browser.",
+      },
+      no: {
+        name: "Filtypedetektor",
+        description:
+          "Identifiser filformater ut fra signaturene, kontroller filendelser som ikke samsvarer, og undersøk MIME-typer og en heksadesimal forhåndsvisning lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Wykrywanie typu pliku",
+        description:
+          "Rozpoznawaj formaty plików na podstawie sygnatur, sprawdzaj niezgodność rozszerzeń oraz przeglądaj typy MIME i podgląd szesnastkowy lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Detector de Tipo de Arquivo",
+        description:
+          "Identifique formatos de arquivo pelas assinaturas, verifique divergências de extensão e inspecione tipos MIME e uma prévia hexadecimal localmente no navegador.",
+      },
+      ru: {
+        name: "Определение типа файла",
+        description:
+          "Определяйте форматы файлов по сигнатурам, проверяйте соответствие расширений и просматривайте MIME-типы и шестнадцатеричные данные локально в браузере.",
+      },
+      sv: {
+        name: "Filtypsidentifierare",
+        description:
+          "Identifiera filformat genom deras signaturer, kontrollera avvikande filändelser och granska MIME-typer och en hex-förhandsvisning lokalt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือตรวจจับประเภทไฟล์",
+        description:
+          "ระบุรูปแบบไฟล์จากลายเซ็น ตรวจสอบนามสกุลที่ไม่ตรงกัน และดูประเภท MIME พร้อมตัวอย่างเลขฐานสิบหกภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Dosya Türü Algılayıcı",
+        description:
+          "Dosya biçimlerini imzalarından belirleyin, uzantı uyuşmazlıklarını kontrol edin, MIME türlerini ve onaltılık önizlemeyi tarayıcınızda yerel olarak inceleyin.",
+      },
+      vi: {
+        name: "Trình nhận diện loại tệp",
+        description:
+          "Nhận diện định dạng qua chữ ký tệp, kiểm tra phần mở rộng không khớp, xem loại MIME và bản xem trước hex ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "文件类型识别",
+        description:
+          "在浏览器本地根据文件签名识别格式，检查扩展名是否匹配，并查看 MIME 类型和十六进制预览。",
+      },
+      "zh-TW": {
+        name: "檔案類型偵測器",
+        description:
+          "根據檔案特徵識別格式、檢查副檔名是否不符，並在瀏覽器本機檢視 MIME 類型與十六進位預覽。",
       },
     },
   },

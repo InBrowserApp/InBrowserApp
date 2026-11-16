@@ -1,0 +1,4 @@
+{
+  "name": "Filtypedetektor",
+  "description": "Identifiser filformater ut fra signaturene, kontroller filendelser som ikke samsvarer, og undersøk MIME-typer og en heksadesimal forhåndsvisning lokalt i nettleseren."
+}

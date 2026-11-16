@@ -110,6 +110,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "fb2-to-epub-converter": () => import("@tool/fb2-to-epub-converter/page"),
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
+  "file-type-detector": () => import("@tool/file-type-detector/page"),
   "gif-to-animated-webp-converter": () =>
     import("@tool/gif-to-animated-webp-converter/page"),
   "gif-to-apng-converter": () => import("@tool/gif-to-apng-converter/page"),
