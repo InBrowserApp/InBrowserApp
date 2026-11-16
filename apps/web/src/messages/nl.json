@@ -47,7 +47,6 @@
     "clearSearchLabel": "Wissen",
     "categoriesLabel": "Categorieën",
     "categoryAll": "Alle tools",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "Suggesties",
     "suggestionsHint": "↑↓ navigeren · ↵ openen · esc sluiten",
     "suggestionMatchCountOne": "{count} overeenkomst",
@@ -69,6 +68,23 @@
       "text": "Tekst",
       "time": "Tijd & datum",
       "web": "Web"
+    }
+  },
+  "categoryPages": {
+    "titleTemplate": "{category} – tools",
+    "descriptions": {
+      "crypto": "Bereken hashes van tekst en bestanden, versleutel gegevens en genereer of controleer wachtwoorden en sleutels. Ontdek browsergebaseerde tools voor controlesommen, cryptografie en veilige inloggegevens.",
+      "developer": "Inspecteer archieven, maak code op, genereer identificatoren en converteer ontwikkelaarsconfiguraties. Vind browsergebaseerde hulpmiddelen voor dagelijkse ontwikkeltaken.",
+      "document": "Lees en converteer documenten, e-books, presentaties en spreadsheets in je browser. Bekijk bestandsvoorbeelden, haal inhoud uit bestanden en exporteer naar andere formaten zonder je documenten te uploaden.",
+      "image": "Converteer, verklein of vergroot en inspecteer afbeeldingen in je browser. Optimaliseer afbeeldingsbestanden, bekijk metadata, maak barcodes en werk met geanimeerde afbeeldingsformaten.",
+      "json": "Maak gestructureerde gegevens op, valideer, vergelijk en converteer ze. Werk met JSON, YAML, TOML, XML en CSV met tools die in je browser draaien.",
+      "misc": "Neem audio en video op, gebruik je camera, bekijk apparaatinformatie en converteer getallen. Ontdek praktische browsertools voor dagelijkse taken.",
+      "network": "Zoek DNS- en IP-informatie op, bereken subnetten en inspecteer certificaten. Vind tools voor netwerkadressen, protocollen en het oplossen van problemen.",
+      "pdf": "Voeg PDF-bestanden samen, splits, inspecteer en orden ze in je browser. Haal tekst uit bestanden, converteer pagina’s naar afbeeldingen en voeg paginanummers toe zonder je documenten te uploaden.",
+      "random": "Genereer willekeurige getallen, wachtwoorden en BIP39-herstelzinnen in je browser. Kies een tool en pas de uitvoer aan je taak aan.",
+      "text": "Bewerk, vergelijk en analyseer tekst of valideer veelgebruikte identificatoren. Vind browsertools voor coderingen, schrijven, tekst opschonen en formaatcontroles.",
+      "time": "Converteer tijdstempels en tijdzones, bereken tijdsduren en werk met cron-schema’s. Plan evenementen en vergelijk datums met browsergebaseerde tijdtools.",
+      "web": "Codeer en decodeer gegevens, inspecteer URL’s, genereer QR-codes en werk met webformaten. Ontdek browsergebaseerde hulpmiddelen voor veelvoorkomende webontwikkeltaken."
     }
   }
 }

@@ -39,7 +39,7 @@ const LISTBOX_ID = "tools-search-suggestions"
 
 const VARIANT_CLASSES = {
   directory: {
-    root: "relative flex-1",
+    root: "relative min-w-0",
     icon: "start-3",
     input: "h-10 ps-9.5 text-base md:text-sm",
     inputEmpty: "pe-3 sm:pe-12",
