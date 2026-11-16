@@ -253,7 +253,9 @@ function useAudioRecorder() {
       return
     }
 
-    syncElapsedBeforePauseOrStop()
+    if (recorder.state === "recording") {
+      syncElapsedBeforePauseOrStop()
+    }
     recorder.stop()
   }
 

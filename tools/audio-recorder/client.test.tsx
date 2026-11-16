@@ -212,6 +212,35 @@ describe("AudioRecorderClient", () => {
     expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:audio-recording")
   })
 
+  test("does not count paused time when stopping a recording", async () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date(2026, 4, 14, 10, 20, 30))
+    installSupportedRecorder()
+
+    render(<AudioRecorderClient messages={messages} />)
+
+    await act(async () => {
+      fireEvent.click(
+        screen.getByRole("button", { name: messages.recordButton })
+      )
+      await Promise.resolve()
+    })
+
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(1_000)
+    })
+    fireEvent.click(screen.getByRole("button", { name: messages.pauseButton }))
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(10_000)
+    })
+
+    fireEvent.click(screen.getByRole("button", { name: messages.stopButton }))
+
+    const duration = screen.getByText(messages.durationLabel).parentElement
+    expect(duration?.querySelector("dd")?.textContent).toBe("00:01")
+    expect(screen.queryByText("00:11")).toBeNull()
+  })
+
   test("keeps the latest take when starting another recording is denied", async () => {
     installSupportedRecorder()
 
