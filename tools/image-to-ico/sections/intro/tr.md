@@ -1,26 +1,28 @@
-## What ICO Is
+## ICO Nedir?
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO; klasik tarayıcı site simgeleri, Windows kısayolları ve bazı masaüstü
+uygulama simgeleri için kullanılan simge kapsayıcı biçimidir. Tek bir ICO
+dosyası birden fazla kare boyut içerebilir; böylece her platform en uygun
+boyutu otomatik olarak seçebilir.
 
-## Why Use This Converter
+## Bu Dönüştürücü Neden Kullanılır?
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+Bu araç, cihazınızdaki bir görseli doğrudan tarayıcınızda birden fazla boyut
+içeren bir ICO dosyasına dönüştürür. Hiçbir şey sunucuya yüklenmez; 16×16,
+32×32, 48×48 ve 256×256 gibi yaygın site simgesi boyutlarını tek bir dosyada
+birleştirip indirebilirsiniz.
 
-## How It Works
+## Nasıl Çalışır?
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. Cihazınızdan bir görsel dosyası yükleyin.
+2. ICO paketine dahil etmek istediğiniz simge boyutlarını seçin.
+3. İsterseniz saydam görseller için düz bir arka plan rengi ekleyin.
+4. ICO dosyasını oluşturun ve hemen indirin.
 
-## Tips for Better Results
+## Daha İyi Sonuçlar İçin İpuçları
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- Tercihen 512×512 veya daha büyük, net ve kare bir görselle başlayın.
+- Küçük simgelerde ayrıntılar hızla kaybolduğundan logoları ve temel şekilleri
+  dış kenarlardan uzak tutun.
+- Saydamlık istiyorsanız arka plan dolgusunu kapalı tutun; yalnızca simgenin
+  arkasında düz renkli bir zemin gerektiğinde açın.

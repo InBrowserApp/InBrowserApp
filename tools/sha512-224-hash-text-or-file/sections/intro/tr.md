@@ -1,19 +1,19 @@
-## What is SHA-512/224 (FIPS 180-4)?
+## SHA-512/224 (FIPS 180-4) Nedir?
 
-SHA-512/224 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 224-bit (28-byte) digest, typically rendered as a 56-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/224 (FIPS 180-4), genellikle 56 karakterlik onaltılık bir dize olarak gösterilen 224 bitlik (28 baytlık) bir özet üreten SHA-2 kriptografik özet işlevidir. Farklı başlangıç değerleri ve kısaltılmış bir çıktıyla SHA-512'yi temel alır; SHA-512'nin iç yapısını korurken daha kısa bir özet sağlar.
 
-**Key characteristics:**
+**Temel özellikleri:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **Belirlenimlidir**: Aynı girdi her zaman aynı özeti üretir
+- **Hızlı hesaplanır**: Herhangi bir girdi için hızla hesaplanabilir
+- **Çığ etkisi**: Girdideki küçük değişiklikler çok farklı çıktılar üretir
+- **Geri döndürülemez**: Özeti tersine çevirerek özgün girdiyi bulmak hesaplama açısından uygulanabilir değildir
+- **Çakışmaya dayanıklıdır**: Aynı özeti üreten iki farklı girdi bulmak çok zordur
 
-**Common uses:**
+**Yaygın kullanım alanları:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 224-bit hashes
+- Dijital imzalar ve sertifikalar
+- Bütünlük denetimleri ve sağlama toplamları
+- HMAC yapıları
+- Dosya doğrulama ve veri işleme akışları
+- 224 bitlik özetler gerektiren protokoller

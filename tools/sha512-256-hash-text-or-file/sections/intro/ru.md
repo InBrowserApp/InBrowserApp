@@ -1,19 +1,19 @@
-## What is SHA-512/256 (FIPS 180-4)?
+## Что такое SHA-512/256 (FIPS 180-4)?
 
-SHA-512/256 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 256-bit (32-byte) digest, typically rendered as a 64-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/256 (FIPS 180-4) — криптографическая хеш-функция семейства SHA-2, которая выдаёт дайджест длиной 256 бит (32 байта), обычно представляемый шестнадцатеричной строкой из 64 символов. Она основана на SHA-512, но использует другие начальные значения и усечённый результат, обеспечивая более короткий дайджест с сохранением внутренней структуры SHA-512.
 
-**Key characteristics:**
+**Основные характеристики:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **Детерминированность**: Одни и те же входные данные всегда дают один и тот же хеш
+- **Быстрое вычисление**: Быстро вычисляется для любых входных данных
+- **Лавинный эффект**: Небольшие изменения входных данных приводят к совершенно другим результатам
+- **Необратимость**: Восстановление исходных данных по хешу вычислительно неосуществимо
+- **Устойчивость к коллизиям**: Найти два разных набора входных данных с одинаковым хешем очень сложно
 
-**Common uses:**
+**Типичные применения:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 256-bit hashes
+- Цифровые подписи и сертификаты
+- Проверка целостности и контрольные суммы
+- Схемы HMAC
+- Проверка файлов и обработка потоков данных
+- Протоколы, требующие 256-битных хешей

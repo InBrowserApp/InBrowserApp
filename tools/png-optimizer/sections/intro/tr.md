@@ -1,6 +1,6 @@
-## PNG Optimizer Ne Yapar
+## PNG Optimize Edici Ne Yapar
 
-PNG Optimizer, PNG görsellerini kayıpsız Oxipng optimizasyonuyla sıkıştırır. Görünen pikselleri değiştirmeden, mümkün olduğunda PNG yapısını, sıkıştırma ayarlarını, palet verilerini ve alfa bilgisini yeniden yazar.
+PNG Optimize Edici, PNG görsellerini kayıpsız Oxipng optimizasyonuyla sıkıştırır. Görünen pikselleri değiştirmeden, mümkün olduğunda PNG yapısını, sıkıştırma ayarlarını, palet verilerini ve alfa bilgisini yeniden yazar.
 
 ## Ne Zaman Kullanılır
 

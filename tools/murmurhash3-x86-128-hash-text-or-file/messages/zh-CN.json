@@ -14,5 +14,7 @@
   "seedSectionLabel": "种子",
   "seedLabel": "种子（可选）",
   "seedPlaceholder": "0 或 0x...",
-  "seedInvalid": "请输入十进制数字或 0x 十六进制值。"
+  "seedInvalid": "请输入十进制数字或 0x 十六进制值。",
+  "fileHashError": "文件哈希计算失败。",
+  "textHashError": "文本哈希计算失败。"
 }

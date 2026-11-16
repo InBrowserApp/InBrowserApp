@@ -133,8 +133,8 @@ function HmacGeneratorClient({ messages }: HmacGeneratorClientProps) {
               error instanceof Error
                 ? error.message
                 : selectedFile
-                  ? "Failed to generate HMAC output for the file."
-                  : "Failed to generate HMAC output for the text input.",
+                  ? messages.fileGenerationError
+                  : messages.textGenerationError,
           })
         }
       })
@@ -142,7 +142,14 @@ function HmacGeneratorClient({ messages }: HmacGeneratorClientProps) {
     return () => {
       cancelled = true
     }
-  }, [algorithm, deferredPlainText, deferredSecretKey, selectedFile])
+  }, [
+    messages.fileGenerationError,
+    messages.textGenerationError,
+    algorithm,
+    deferredPlainText,
+    deferredSecretKey,
+    selectedFile,
+  ])
 
   async function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
     const nextFile = event.target.files?.[0]

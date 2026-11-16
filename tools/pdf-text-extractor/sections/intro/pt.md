@@ -1,6 +1,6 @@
 ## O que esta ferramenta faz
 
-PDF Text Extractor lê um PDF no seu navegador e extrai o texto que já é
+O Extrator de texto de PDF lê um PDF no seu navegador e extrai o texto que já é
 selecionável dentro do documento. A saída é texto simples, que você pode copiar
 ou baixar como um arquivo TXT para notas, indexação de busca, revisão de dados
 ou processamento posterior.

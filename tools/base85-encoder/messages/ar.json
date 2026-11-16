@@ -9,9 +9,9 @@
   "download": "تنزيل Base85",
   "readFailed": "فشل في قراءة الملف",
   "invalidBase85": "يتطلب Z85 أن يكون طول الإدخال من مضاعفات 4 بايت.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "تحميل عينة",
+  "clearLabel": "مسح",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ",
   "importFromFileLabel": "استيراد من ملف"
 }

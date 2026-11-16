@@ -1,4 +1,4 @@
 {
-  "name": "Text Diff",
-  "description": "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser."
+  "name": "So sánh văn bản",
+  "description": "So sánh hai bản nháp song song, kiểm tra các dòng đã thay đổi và xuất bản diff hợp nhất rõ ràng ngay trong trình duyệt."
 }

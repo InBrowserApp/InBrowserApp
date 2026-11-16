@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## למה תווים בלתי נראים חשובים
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+קל לפספס תווי Unicode בלתי נראים כי בעורך רגיל הם אינם נראים פגומים. הבעיה מתגלה רק בהמשך: שינויי תוכן נכשלים, מזהים מפסיקים להתאים, שורות נשברות באופן מוזר או שהטקסט מתחיל להתנהג אחרת בהקשר של כתיבה מימין לשמאל.
 
-## What this tool catches
+## מה הכלי מזהה
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+הבודק מחפש ארבע קבוצות נפוצות: סימנים ברוחב אפס, תווי בקרת כיווניות, תווי רווח מיוחדים ותווי בקרת עיצוב. הוא מראה בדיוק היכן הם מופיעים, מספק תצוגה מקדימה עם סימונים ומכין גרסה נקייה שאפשר להעתיק או לייצא.
 
-## When to use it
+## מתי להשתמש בו
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+השתמשו בו אחרי העתקת טקסט ממסמכים, מקובצי PDF, מגיליונות אלקטרוניים, מיישומי צ׳אט, מעורכי CMS או מכלי עיצוב. הוא מועיל במיוחד כשמחרוזת נראית רגילה, אבל השוואות, תצוגה או עיבוד בהמשך ממשיכים להתנהג באופן מוזר.

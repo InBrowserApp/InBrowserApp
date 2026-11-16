@@ -1,6 +1,6 @@
 # PDF-Dateien in Ihrem Browser zusammenfügen
 
-Verwenden Sie diesen PDF Merger, wenn Sie aus mehreren Quell-PDFs ein Dokument erstellen müssen, etwa um gescannte Seiten zu kombinieren, unterschriebene Formulare zusammenzufügen oder Berichte für die Weitergabe zu bündeln. Fügen Sie zwei oder mehr Dateien hinzu, prüfen Sie deren Seitenzahlen und ordnen Sie dann die Warteschlange an, bevor Sie die endgültige PDF erstellen.
+Verwenden Sie dieses Tool zum Zusammenfügen von PDFs, wenn Sie aus mehreren Quell-PDFs ein Dokument erstellen müssen, etwa um gescannte Seiten zu kombinieren, unterschriebene Formulare zusammenzufügen oder Berichte für die Weitergabe zu bündeln. Fügen Sie zwei oder mehr Dateien hinzu, prüfen Sie deren Seitenzahlen und ordnen Sie dann die Warteschlange an, bevor Sie die endgültige PDF erstellen.
 
 ## So funktioniert die Zusammenführungsreihenfolge
 

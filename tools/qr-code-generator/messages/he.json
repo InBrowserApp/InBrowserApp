@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "קוד QR שנוצר"
+  "qrAlt": "קוד QR שנוצר",
+  "renderError": "יצירת קוד ה־QR נכשלה."
 }

@@ -7,7 +7,6 @@
   "useDemoLabel": "デモアイコンを使用",
   "removeImageLabel": "削除",
   "filePreviewAlt": "選択したソース画像のプレビュー",
-
   "siteInfoCardTitle": "サイト情報",
   "siteInfoCardDescription": "manifest、apple-touch-icon、HTML スニペットで使用されます。",
   "appNameLabel": "アプリ名",
@@ -33,7 +32,6 @@
   "backgroundColorDescription": "manifest の background_color。PWA のスプラッシュ画面の描画にブラウザーが使用します。",
   "optimizePngLabel": "PNG 出力を最適化",
   "optimizePngDescription": "出力されるすべての PNG（ICO のコンポーネントを含む）に対して、ロスレスな oxipng パスを実行します。初回生成時には数秒の処理時間と約 150 KB の WASM モジュールのダウンロードが発生しますが、zip のサイズを目に見えて削減できます。",
-
   "desktopCardTitle": "デスクトップブラウザー favicon",
   "desktopCardDescription": "favicon.ico、favicon-16x16.png、favicon-32x32.png、および（ソースが SVG の場合は）favicon.svg を制御します。",
   "useOriginalSvgLabel": "元の SVG を使用",
@@ -48,12 +46,10 @@
   "useDifferentImageDescription": "このプラットフォームに対してのみグローバルなソース画像を上書きします。",
   "uploadDedicatedImageLabel": "専用の画像を選択",
   "removeDedicatedImageLabel": "削除",
-
   "iosCardTitle": "iOS Web クリップ",
   "iosCardDescription": "iOS ホーム画面で使用される 180×180 の apple-touch-icon.png を制御します。",
   "iosBackgroundColorLabel": "背景色",
   "iosBackgroundColorDescription": "Apple のアイコンは不透明である必要があるため、この塗りつぶしは常に適用されます。",
-
   "pwaCardTitle": "PWA アイコン",
   "pwaCardDescription": "pwa-192x192.png、pwa-512x512.png、および maskable バリアントを制御します。",
   "includeMaskableLabel": "maskable バリアントを含める",
@@ -61,7 +57,6 @@
   "maskableBackgroundColorLabel": "Maskable の背景色",
   "maskableMarginLabel": "Maskable のセーフゾーン余白",
   "maskableMarginDescription": "W3C が推奨するセーフエリアは 40% です。どのプラットフォームのマスクの内側でも、ソースコンテンツが表示され続けます。",
-
   "previewGalleryTitle": "プレビュー",
   "previewGalleryDescription": "生成されたアセットが実際のコンテキストでどう見えるかを、ブラウザー、検索結果、ホーム画面のモックアップで確認できます。",
   "previewBeforeGenerateHint": "バンドルを生成すると、下の UI 内で favicon の合成結果を確認できます。",
@@ -70,7 +65,6 @@
   "previewIosHomeScreenLabel": "iOS ホーム画面",
   "previewAndroidLauncherLabel": "Android ランチャー",
   "previewWindowsTaskbarLabel": "Windows タスクバー",
-
   "resultCardTitle": "生成されたバンドル",
   "resultCardDescription": "「生成」をクリックすると、すべてのアセットをレンダリングし、zip を構築して、HTML スニペットをコピーできます。",
   "resultEmptyTitle": "まだバンドルはありません",
@@ -89,7 +83,6 @@
   "copyLabel": "コピー",
   "copiedLabel": "コピー済み",
   "downloadAssetLabel": "アセットをダウンロード",
-
   "invalidImageTitle": "画像を読み取れませんでした",
   "invalidImageDescription": "ブラウザーが読み取れる画像ファイル（PNG、JPEG、WebP、SVG）を選択してもう一度お試しください。",
   "generationFailedTitle": "生成に失敗しました",
@@ -100,6 +93,5 @@
   "needImageDescription": "生成する前に、PNG、JPEG、WebP、SVG を選択するか、デモアイコンを使用してください。",
   "missingDedicatedImageTitle": "専用画像が未指定です",
   "missingDedicatedImageDescription": "「別の画像を使用」が有効になっていてもファイルが選択されていないプラットフォームがあります。上書き画像をアップロードするか、スイッチをオフにしてください。",
-
   "transparentLabel": "透明"
 }

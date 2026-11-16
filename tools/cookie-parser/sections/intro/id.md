@@ -2,7 +2,7 @@
 
 Tempel header Cookie dari permintaan atau satu maupun beberapa baris Set-Cookie dari respons. Pengurai akan mengekstrak nama cookie, nilai, dan fragmen yang salah format menjadi JSON terstruktur untuk inspeksi cepat.
 
-## Cookie vs. Set-Cookie
+## Perbedaan Cookie dan Set-Cookie
 
 Gunakan Cookie untuk header yang dikirim browser kembali ke server. Gunakan Set-Cookie untuk header respons yang menentukan atribut seperti Path, Max-Age, SameSite, Secure, atau HttpOnly.
 

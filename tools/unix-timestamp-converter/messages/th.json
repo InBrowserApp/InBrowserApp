@@ -1,5 +1,5 @@
 {
-  "timestampLabel": "Unix Timestamp",
+  "timestampLabel": "เวลาประทับ Unix",
   "timestampPlaceholder": "ป้อน Unix timestamp...",
   "invalidTimestamp": "Timestamp ไม่ถูกต้อง",
   "nowLabel": "ตอนนี้",

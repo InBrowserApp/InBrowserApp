@@ -10,9 +10,9 @@
   "outputPlaceholder": "ผลลัพธ์ Base58 จะปรากฏที่นี่...",
   "download": "ดาวน์โหลด Base58",
   "readFailed": "อ่านไฟล์ไม่สำเร็จ",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "โหลดตัวอย่าง",
+  "clearLabel": "ล้าง",
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว",
   "importFromFileLabel": "นำเข้าจากไฟล์"
 }

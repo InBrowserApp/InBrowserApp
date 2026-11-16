@@ -8,6 +8,8 @@ type HmacGeneratorMessages = Readonly<{
   plainTextLabel: string
   plainTextDescription: string
   importFromFileLabel: string
+  fileGenerationError: string
+  textGenerationError: string
   hmacOutputLabel: string
   hmacOutputDescription: string
   emptyStateDescription: string

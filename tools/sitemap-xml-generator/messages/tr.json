@@ -19,7 +19,7 @@
   "addUrlEntryLabel": "URL girdisi ekle",
   "sitemapEntriesLabel": "Sitemap dosyaları",
   "sitemapEntriesDescription": "Her satır indekste bir <sitemap> kaydı olur.",
-  "sitemapEntryLabel": "Sitemap {index}",
+  "sitemapEntryLabel": "Site haritası {index}",
   "addSitemapEntryLabel": "Sitemap girdisi ekle",
   "removeEntryLabel": "Kaldır",
   "locationLabel": "Konum",

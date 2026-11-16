@@ -1,11 +1,11 @@
-## Overview
+## Genel Bakış
 
-JSONPath Test Aracı lets you run JSONPath queries against JSON data directly in the browser and inspect both the matched values and the matched paths side by side.
+JSONPath Test Aracı, JSON verileri üzerinde doğrudan tarayıcıda JSONPath sorguları çalıştırmanızı ve hem eşleşen değerleri hem de eşleşen yolları yan yana incelemenizi sağlar.
 
-## When To Use It
+## Ne Zaman Kullanılır?
 
-Use it when you need to prototype a JSONPath query, debug a selector against real payloads, or verify exactly which parts of a JSON document a query is matching.
+Bir JSONPath sorgusunu denemek, gerçek veriler üzerinde seçicinin hatalarını ayıklamak veya sorgunun JSON belgesindeki tam olarak hangi bölümlerle eşleştiğini doğrulamak istediğinizde kullanın.
 
-## How It Works
+## Nasıl Çalışır?
 
-The tool validates the JSON input first, then evaluates the JSONPath query and keeps both result modes available in the same output panel so you can switch between values and paths without rerunning anything.
+Araç önce JSON girdisini doğrular, ardından JSONPath sorgusunu değerlendirir. Her iki sonuç modunu da aynı çıktı panelinde tutar; böylece sorguyu yeniden çalıştırmadan değerler ve yollar arasında geçiş yapabilirsiniz.

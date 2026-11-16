@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "Opcje",
   "optionsDescription": "Wybierz format kodu kreskowego i dostosuj rozmiar, etykiety oraz kolory.",
-  "preview": "Preview",
-  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
-  "download": "Download",
+  "preview": "Podgląd",
+  "previewDescription": "Sprawdź wygenerowany kod kreskowy i wyeksportuj go jako PNG, SVG, JPEG lub WebP.",
+  "download": "Pobierz",
   "text": "Tekst",
   "textPlaceholder": "Wpisz treść...",
   "format": "Format",
@@ -20,5 +20,6 @@
   "center": "Środek",
   "right": "Prawo",
   "top": "Góra",
-  "bottom": "Dół"
+  "bottom": "Dół",
+  "renderError": "Nie udało się wyrenderować kodu kreskowego."
 }

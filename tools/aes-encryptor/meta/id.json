@@ -1,4 +1,4 @@
 {
-  "name": "AES Encryptor",
+  "name": "Pengenkripsi AES",
   "description": "Enkripsi teks atau file di browser Anda dengan AES-GCM, AES-CBC, atau AES-CTR menggunakan kunci turunan kata sandi atau kunci heksadesimal mentah."
 }

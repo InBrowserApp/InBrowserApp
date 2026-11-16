@@ -2,7 +2,7 @@
   "queryTitle": "조회",
   "queryDescription": "도메인을 입력하고 레코드 유형을 선택한 다음 DNS over HTTPS 조회를 실행하세요.",
   "domainLabel": "도메인",
-  "domainPlaceholder": "example.com or https://example.com",
+  "domainPlaceholder": "example.com 또는 https://example.com",
   "recordTypesLabel": "레코드 유형",
   "recordTypesDescription": "병렬로 조회할 DNS 레코드 유형을 하나 이상 선택하세요.",
   "dohServerLabel": "DNS over HTTPS 리졸버",

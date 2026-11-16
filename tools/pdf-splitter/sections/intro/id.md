@@ -1,6 +1,6 @@
 ## Apa fungsi alat ini
 
-PDF Splitter memungkinkan Anda membuka PDF di browser, memilih halaman
+Pemisah PDF memungkinkan Anda membuka PDF di browser, memilih halaman
 berdasarkan rentang atau nomor halaman, dan membuat dokumen yang lebih kecil.
 Anda dapat mengekstrak halaman yang dipilih menjadi satu PDF, memisahkan setiap
 rentang yang diketik menjadi PDF terpisah, atau memisahkan setiap halaman yang

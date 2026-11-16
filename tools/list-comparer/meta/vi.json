@@ -1,4 +1,4 @@
 {
-  "name": "List Comparer",
-  "description": "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup."
+  "name": "Trình so sánh danh sách",
+  "description": "So sánh hai danh sách, tìm phần giao nhau và các mục bị loại, rồi xuất đúng tập bạn cần trước khi đồng bộ hoặc dọn dẹp."
 }

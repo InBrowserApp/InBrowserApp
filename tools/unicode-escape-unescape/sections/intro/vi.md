@@ -1,4 +1,4 @@
-## Unicode Escaping là gì?
+## Mã hóa escape Unicode là gì?
 
 Unicode escaping chuyển đổi các ký tự thành các chuỗi mã hóa đại diện cho điểm mã Unicode của chúng. Điều này rất cần thiết khi mã nguồn, tệp cấu hình hoặc định dạng dữ liệu không thể chứa trực tiếp một số ký tự nhất định.
 

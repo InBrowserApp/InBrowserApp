@@ -19,7 +19,7 @@
   "addUrlEntryLabel": "Lägg till URL-post",
   "sitemapEntriesLabel": "Sitemapfiler",
   "sitemapEntriesDescription": "Varje rad blir en <sitemap>-post i indexet.",
-  "sitemapEntryLabel": "Sitemap {index}",
+  "sitemapEntryLabel": "Webbplatskarta {index}",
   "addSitemapEntryLabel": "Lägg till sitemap-post",
   "removeEntryLabel": "Ta bort",
   "locationLabel": "Plats",

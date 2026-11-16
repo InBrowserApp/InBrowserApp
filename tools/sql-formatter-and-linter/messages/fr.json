@@ -43,7 +43,7 @@
   "issueCountLabel": "{count} problème(s)",
   "errorCountLabel": "{count} erreur(s)",
   "warningCountLabel": "{count} avertissement(s)",
-  "infoCountLabel": "{count} info",
+  "infoCountLabel": "{count} informations",
   "severityLabel": "Gravité",
   "codeLabel": "Code",
   "locationLabel": "Emplacement",

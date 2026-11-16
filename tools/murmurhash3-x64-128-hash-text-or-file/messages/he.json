@@ -14,5 +14,7 @@
   "seedSectionLabel": "Seed",
   "seedLabel": "Seed (אופציונלי)",
   "seedPlaceholder": "0 או 0x...",
-  "seedInvalid": "הזינו מספר עשרוני או ערך הקסדצימלי בתבנית 0x."
+  "seedInvalid": "הזינו מספר עשרוני או ערך הקסדצימלי בתבנית 0x.",
+  "fileHashError": "חישוב הגיבוב של הקובץ נכשל.",
+  "textHashError": "חישוב הגיבוב של הטקסט נכשל."
 }

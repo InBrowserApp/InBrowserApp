@@ -1,6 +1,6 @@
 {
   "use-current": "Bruk min user agent",
-  "input-label": "User Agent",
+  "input-label": "Brukeragent",
   "input-placeholder": "Lim inn en User-Agent-streng her...",
   "input-error": "Skriv inn en User-Agent-streng for å analysere.",
   "json-output": "JSON-utdata",

@@ -16,6 +16,6 @@
   "registeredPortsDesc": "IANA के साथ पंजीकृत अनुप्रयोगों और सेवाओं द्वारा उपयोग किया जाता है, जैसे MySQL (3306), PostgreSQL (5432)।",
   "dynamicPorts": "गतिशील पोर्ट (49152-65535):",
   "dynamicPortsDesc": "\"अस्थायी पोर्ट\" भी कहा जाता है, क्लाइंट अनुप्रयोगों द्वारा अस्थायी कनेक्शन के लिए उपयोग किया जाता है।",
-  "noResultsTitle": "No matching ports found",
-  "noResultsDescription": "Try a different port number, service name, or category."
+  "noResultsTitle": "कोई मेल खाता पोर्ट नहीं मिला",
+  "noResultsDescription": "कोई दूसरा पोर्ट नंबर, सेवा का नाम या श्रेणी आज़माएं।"
 }

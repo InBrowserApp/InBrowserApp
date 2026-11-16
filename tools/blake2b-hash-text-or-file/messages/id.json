@@ -16,5 +16,7 @@
   "keyLabel": "Kunci BLAKE2 (Base64)",
   "keyPlaceholder": "Kunci opsional untuk hashing berkey (dikodekan Base64)",
   "invalidBase64Title": "Nilai Base64 belum valid.",
-  "invalidBase64Description": "Periksa apakah ada padding yang hilang, karakter yang tidak terduga, atau data yang ditempel sebagian."
+  "invalidBase64Description": "Periksa apakah ada padding yang hilang, karakter yang tidak terduga, atau data yang ditempel sebagian.",
+  "fileHashError": "Gagal menghitung hash file.",
+  "textHashError": "Gagal menghitung hash teks."
 }

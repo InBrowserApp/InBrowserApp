@@ -1,18 +1,18 @@
-## What It Does
+## מה הכלי עושה
 
-בודק JMESPath lets you run a JMESPath expression against JSON data directly
-in the browser. You can inspect the matched result, copy it, or download it as
-formatted JSON without leaving the page.
+בודק JMESPath מאפשר להריץ ביטוי JMESPath מול נתוני JSON ישירות
+בדפדפן. אפשר לבדוק את התוצאה התואמת, להעתיק אותה או להוריד אותה
+כ־JSON מעוצב בלי לעזוב את הדף.
 
-## When To Use It
+## מתי להשתמש בו
 
-Use it when you need to prototype a JMESPath query, debug a filter expression,
-or verify exactly which values a JSON query will return before you embed that
-expression somewhere else.
+השתמשו בו כשעליכם לנסות שאילתת JMESPath, לנפות שגיאות בביטוי סינון
+או לוודא בדיוק אילו ערכים תחזיר שאילתת JSON לפני שתטמיעו
+את הביטוי במקום אחר.
 
-## What To Expect
+## למה לצפות
 
-The tool validates the JSON input first, then evaluates the JMESPath
-expression. If either side is invalid, the error is surfaced immediately. When
-the query succeeds, the result is formatted as JSON and the result count is
-shown alongside the output.
+הכלי מאמת תחילה את קלט ה־JSON ואז מחשב את ביטוי ה־JMESPath.
+אם אחד מהם אינו תקין, השגיאה מוצגת מיד. כשהשאילתה
+מצליחה, התוצאה מעוצבת כ־JSON ומספר התוצאות
+מוצג לצד הפלט.

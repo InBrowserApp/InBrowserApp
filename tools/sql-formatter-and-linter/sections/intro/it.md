@@ -1,6 +1,6 @@
-## Cos'è SQL Formatter & Linter?
+## Cos'è il Formattatore e analizzatore SQL?
 
-SQL Formatter & Linter riformatta le query SQL nel browser e le controlla allo stesso tempo per un piccolo insieme di problemi ad alto segnale. È utile quando vuoi un layout della query più pulito, un uso coerente delle maiuscole/minuscole per le parole chiave e un feedback rapido su pattern rischiosi come `SELECT *` o istruzioni `UPDATE` senza clausola `WHERE`.
+Il Formattatore e analizzatore SQL riformatta le query SQL nel browser e le controlla allo stesso tempo per un piccolo insieme di problemi ad alto segnale. È utile quando vuoi un layout della query più pulito, un uso coerente delle maiuscole/minuscole per le parole chiave e un feedback rapido su pattern rischiosi come `SELECT *` o istruzioni `UPDATE` senza clausola `WHERE`.
 
 ## Quando Usarlo
 

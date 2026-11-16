@@ -1,4 +1,4 @@
-## What this tool does
+## Fungsi alat ini
 
 Penambah Nombor Halaman PDF mencipta salinan PDF baharu dengan nombor halaman
 dilukis pada halaman yang anda pilih. Muat naik dokumen, biarkan julat halaman
@@ -7,7 +7,7 @@ dengan julat seperti `1-3,5,8-10`. Anda boleh mengawal nombor permulaan, format
 nombor, kedudukan halaman, keluarga fon, saiz teks, dan jidar sebelum memuat
 turun hasilnya.
 
-## Good use cases
+## Kegunaan yang sesuai
 
 - Menambah nombor halaman ringkas sebelum menghantar draf, paket, kontrak, atau
   lembaran kerja untuk semakan.
@@ -18,14 +18,14 @@ turun hasilnya.
 - Menyeragamkan peletakan dan jidar sebelum mencetak atau menggabungkan dokumen
   dalam aliran kerja lain.
 
-## Privacy notes
+## Nota privasi
 
 PDF dibaca dan ditulis semula secara setempat dalam pelayar anda. Alat ini
 tidak memuat naik fail, tetapi salinan bernombor masih mengandungi kandungan
 dokumen asal dan kebanyakan metadata PDF sedia ada. Semak fail yang dimuat
 turun sebelum berkongsi di luar pasukan anda atau melampirkannya pada isu awam.
 
-## Limitations
+## Batasan
 
 Alat ini menulis teks nombor halaman hitam biasa menggunakan fon PDF standard.
 Ia tidak mengalih keluar kata laluan, membaiki PDF rosak, menyunting keluar

@@ -16,5 +16,5 @@
   "quoteCharLabel": "Guillemet",
   "includeHeaderRowLabel": "Inclure la ligne d’en-tête",
   "escapeFormulaeLabel": "Échapper les formules Excel",
-  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+  "escapeFormulaeTooltip": "Ajoutez des préfixes aux valeurs qui commencent par =, +, - ou @ afin que les applications de tableur les traitent comme du texte plutôt que comme des formules."
 }

@@ -1,4 +1,4 @@
 {
-  "name": "X.509 Certificate & Public Key Parser",
+  "name": "X.509 Sertifika ve Genel Anahtar Ayrıştırıcı",
   "description": "PEM, DER veya base64 DER biçimindeki X.509 sertifikalarını ve genel anahtarları ayrıştırın. Konuları, verenleri, geçerlilik tarihlerini, parmak izlerini, uzantıları ve anahtar ayrıntılarını tarayıcınızda yerel olarak inceleyin."
 }

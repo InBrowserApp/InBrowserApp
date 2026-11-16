@@ -6,6 +6,6 @@ Fail .gitignore menentukan fail yang sengaja tidak dijejaki yang Git harus abaik
 - Fail IDE dan editor (.idea/, .vscode/)
 - Fail sistem pengendalian (.DS_Store, Thumbs.db)
 
-## Template source
+## Sumber templat
 
 Alat ini menggunakan templat dari repositori gitignore rasmi GitHub, meliputi 150+ bahasa, rangka kerja dan persekitaran.

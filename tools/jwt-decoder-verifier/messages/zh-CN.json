@@ -1,15 +1,15 @@
 {
   "token": {
-    "title": "Token",
+    "title": "令牌",
     "description": "粘贴一个紧凑格式的 JWT。在执行任何签名检查之前，会先在本地解码标头和载荷。",
-    "label": "JWT token",
+    "label": "JWT 令牌",
     "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
     "useSample": "使用示例",
     "clear": "清除"
   },
   "decoded": {
-    "title": "已解码的 token",
-    "description": "从 token 片段解码出的格式化 JSON。",
+    "title": "已解码的令牌",
+    "description": "从令牌片段解码出的格式化 JSON。",
     "headerTitle": "标头",
     "payloadTitle": "载荷",
     "copyJson": "复制 JSON",
@@ -25,12 +25,12 @@
     "autoAlgorithm": "从标头自动选择",
     "keyLabel": "密钥或公钥",
     "keyDescription": "HS 算法使用纯文本。RS、PS 和 ES 算法使用 PEM 公钥、JWK 或 JWKS。值不会被保存。",
-    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "keyPlaceholder": "secret\n\n或\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\n或\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
     "waitingTitle": "准备验证",
-    "waitingDescription": "输入有效 token 和验证材料以检查签名。",
+    "waitingDescription": "输入有效令牌和验证材料以检查签名。",
     "pendingTitle": "正在验证签名",
     "verifiedTitle": "签名已验证",
-    "verifiedDescription": "签名与 token 标头、载荷、算法和提供的密钥匹配。",
+    "verifiedDescription": "签名与令牌标头、载荷、算法和提供的密钥匹配。",
     "failedTitle": "验证失败",
     "failedDescription": "签名与提供的密钥和算法不匹配。"
   },

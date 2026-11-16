@@ -1,18 +1,18 @@
-## What It Does
+## Fungsinya
 
-Penguji JMESPath lets you run a JMESPath expression against JSON data directly
-in the browser. You can inspect the matched result, copy it, or download it as
-formatted JSON without leaving the page.
+Penguji JMESPath membolehkan anda menjalankan ungkapan JMESPath pada data JSON
+terus dalam pelayar. Anda boleh memeriksa hasil yang sepadan, menyalinnya atau
+memuat turunnya sebagai JSON berformat tanpa meninggalkan halaman.
 
-## When To Use It
+## Bila Hendak Menggunakannya
 
-Use it when you need to prototype a JMESPath query, debug a filter expression,
-or verify exactly which values a JSON query will return before you embed that
-expression somewhere else.
+Gunakannya apabila anda perlu mencuba pertanyaan JMESPath, menyahpepijat ungkapan
+penapis atau mengesahkan nilai tepat yang akan dikembalikan oleh pertanyaan JSON
+sebelum membenamkan ungkapan itu di tempat lain.
 
-## What To Expect
+## Perkara Yang Boleh Dijangkakan
 
-The tool validates the JSON input first, then evaluates the JMESPath
-expression. If either side is invalid, the error is surfaced immediately. When
-the query succeeds, the result is formatted as JSON and the result count is
-shown alongside the output.
+Alat ini mengesahkan input JSON terlebih dahulu, kemudian menilai ungkapan
+JMESPath. Jika salah satu tidak sah, ralat ditunjukkan serta-merta. Apabila
+pertanyaan berjaya, hasil diformatkan sebagai JSON dan kiraan hasil dipaparkan
+bersama output.

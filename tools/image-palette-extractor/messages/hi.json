@@ -35,7 +35,7 @@
   "exportDescription": "डिजाइन हैंडऑफ या कोड के लिए पैलेट कॉपी या डाउनलोड करें।",
   "exportFormatLabel": "प्रारूप",
   "exportFormatHex": "HEX सूची",
-  "exportFormatCss": "CSS variables",
+  "exportFormatCss": "CSS वेरिएबल",
   "exportFormatJson": "JSON",
   "copyPaletteLabel": "पैलेट कॉपी करें",
   "copiedPaletteLabel": "कॉपी हो गया",

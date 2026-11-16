@@ -1,6 +1,6 @@
 ## Überblick
 
-JSON Diff Path vergleicht zwei JSON-Dokumente und wandelt jede strukturelle Änderung in einen lesbaren Pfadeintrag mit JSONPath- und JSON-Pointer-Ausgabe um.
+Der JSON-Diff-Pfad vergleicht zwei JSON-Dokumente und wandelt jede strukturelle Änderung in einen lesbaren Pfadeintrag mit JSONPath- und JSON-Pointer-Ausgabe um.
 
 ## Wann es sinnvoll ist
 

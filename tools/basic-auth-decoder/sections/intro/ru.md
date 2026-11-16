@@ -1,14 +1,14 @@
-## What It Does
+## Что делает инструмент
 
 Декодируйте заголовок HTTP Basic Authorization, чтобы извлечь имя пользователя и пароль из Base64. Полезно для отладки и тестирования API.
 
-## Accepted Input
+## Поддерживаемые входные данные
 
 Вставьте что-то вроде: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+Инструмент также принимает полную строку `Authorization: Basic ...`.
 
-## Notes
+## Примечания
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- Base64 лишь кодирует учётные данные, но не защищает их.
+- Декодер разделяет строку по первому `:`, а оставшуюся часть сохраняет в пароле.
+- Всё выполняется локально в вашем браузере.

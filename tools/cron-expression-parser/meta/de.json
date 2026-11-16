@@ -1,4 +1,4 @@
 {
-  "name": "Cron Expression Parser",
+  "name": "Cron-Ausdruck-Parser",
   "description": "Analysieren, validieren und erklären Sie Cron-Zeitpläne mit Felddetails und kommenden Ausführungszeiten."
 }

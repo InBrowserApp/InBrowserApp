@@ -45,7 +45,7 @@
   "loadSampleLabel": "تحميل مثال",
   "resetLabel": "إعادة ضبط المُنشئ",
   "protocolPlaceholder": "https",
-  "hostnamePlaceholder": "example.com or api.internal",
+  "hostnamePlaceholder": "example.com أو api.internal",
   "portPlaceholder": "443",
   "pathPlaceholder": "/products/blue mug",
   "fragmentPlaceholder": "reviews",

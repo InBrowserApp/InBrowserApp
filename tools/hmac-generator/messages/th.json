@@ -1,18 +1,20 @@
 {
   "configurationLabel": "การกำหนดค่า",
-  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "configurationDescription": "ตั้งค่าคีย์ลับและอัลกอริทึม HMAC สำหรับลายเซ็นปัจจุบัน",
   "secretKeyLabel": "คีย์ลับ",
   "secretKeyPlaceholder": "ป้อนคีย์ลับของคุณ",
   "algorithmLabel": "อัลกอริทึม",
   "inputLabel": "ข้อมูลเข้า",
   "plainTextLabel": "ข้อความธรรมดา",
-  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "plainTextDescription": "วางหรือพิมพ์ข้อความ UTF-8 ใดๆ รวมถึงเนื้อหาไฟล์หรือเพย์โหลด API",
   "importFromFileLabel": "นำเข้าจากไฟล์",
   "hmacOutputLabel": "เอาต์พุต HMAC",
-  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
-  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hmacOutputDescription": "ผลลัพธ์ HMAC สำหรับข้อความและคีย์ลับปัจจุบัน",
+  "emptyStateDescription": "ป้อนคีย์ลับและข้อความ หรือนำเข้าไฟล์เพื่อสร้างผลลัพธ์ HMAC",
   "hexLabel": "เลขฐานสิบหก",
   "base64Label": "Base64",
   "copyResultLabel": "คัดลอกผลลัพธ์",
-  "copiedLabel": "คัดลอกแล้ว"
+  "copiedLabel": "คัดลอกแล้ว",
+  "fileGenerationError": "สร้างผลลัพธ์ HMAC สำหรับไฟล์ไม่สำเร็จ",
+  "textGenerationError": "สร้างผลลัพธ์ HMAC สำหรับข้อความที่ป้อนไม่สำเร็จ"
 }

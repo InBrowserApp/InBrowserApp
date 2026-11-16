@@ -16,5 +16,5 @@
   "quoteCharLabel": "उद्धरण",
   "includeHeaderRowLabel": "हेडर पंक्ति शामिल करें",
   "escapeFormulaeLabel": "Excel सूत्रों को एस्केप करें",
-  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+  "escapeFormulaeTooltip": "=, +, -, या @ से शुरू होने वाले मानों के आगे एक चिह्न जोड़ता है, ताकि स्प्रेडशीट ऐप उन्हें फ़ॉर्मूला के बजाय टेक्स्ट मानें।"
 }

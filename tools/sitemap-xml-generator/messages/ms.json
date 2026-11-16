@@ -19,7 +19,7 @@
   "addUrlEntryLabel": "Tambah entri URL",
   "sitemapEntriesLabel": "Fail sitemap",
   "sitemapEntriesDescription": "Setiap baris menjadi rekod <sitemap> dalam indeks.",
-  "sitemapEntryLabel": "Sitemap {index}",
+  "sitemapEntryLabel": "Peta laman {index}",
   "addSitemapEntryLabel": "Tambah entri sitemap",
   "removeEntryLabel": "Alih keluar",
   "locationLabel": "Lokasi",

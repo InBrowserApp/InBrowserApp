@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "Seçenekler",
   "optionsDescription": "Bir barkod formatı seçin ve boyutu, etiketleri ve renkleri ayarlayın.",
-  "preview": "Preview",
-  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
-  "download": "Download",
+  "preview": "Önizleme",
+  "previewDescription": "Oluşturulan barkodu inceleyin ve PNG, SVG, JPEG veya WebP olarak dışa aktarın.",
+  "download": "İndir",
   "text": "Metin",
   "textPlaceholder": "İçerik yazın...",
   "format": "Biçim",
@@ -20,5 +20,6 @@
   "center": "Orta",
   "right": "Sağ",
   "top": "Üst",
-  "bottom": "Alt"
+  "bottom": "Alt",
+  "renderError": "Barkod oluşturulamadı."
 }

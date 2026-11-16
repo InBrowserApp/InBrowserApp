@@ -1,6 +1,6 @@
 ## Vad det här verktyget gör
 
-PDF Text Extractor läser en PDF i din webbläsare och hämtar text som redan är
+Textextraherare för PDF läser en PDF i din webbläsare och hämtar text som redan är
 markerbar i dokumentet. Resultatet är oformaterad text som du kan kopiera eller
 ladda ner som en TXT-fil för anteckningar, sökindexering, datagranskning eller
 vidare bearbetning.

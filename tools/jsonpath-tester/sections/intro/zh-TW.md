@@ -1,11 +1,11 @@
-## Overview
+## 概覽
 
-JSONPath 測試器 lets you run JSONPath queries against JSON data directly in the browser and inspect both the matched values and the matched paths side by side.
+JSONPath 測試器讓你直接在瀏覽器中對 JSON 資料執行 JSONPath 查詢，並以並排方式檢視符合的值與路徑。
 
-## When To Use It
+## 適合使用的時機
 
-Use it when you need to prototype a JSONPath query, debug a selector against real payloads, or verify exactly which parts of a JSON document a query is matching.
+需要試寫 JSONPath 查詢、使用實際酬載偵錯選擇器，或確認查詢確切符合 JSON 文件中的哪些部分時，都可以使用此工具。
 
-## How It Works
+## 運作方式
 
-The tool validates the JSON input first, then evaluates the JSONPath query and keeps both result modes available in the same output panel so you can switch between values and paths without rerunning anything.
+此工具會先驗證輸入的 JSON，再執行 JSONPath 查詢，並在同一個輸出面板中提供兩種結果模式，讓你無須重新執行查詢，就能在值與路徑之間切換。

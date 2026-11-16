@@ -13,5 +13,7 @@
   "copiedLabel": "Copied",
   "seedLabel": "Seed (Optional)",
   "seedPlaceholder": "0 or 0x...",
-  "seedInvalid": "Enter a decimal number or a 0x hex value."
+  "seedInvalid": "Enter a decimal number or a 0x hex value.",
+  "fileHashError": "Failed to hash file.",
+  "textHashError": "Failed to hash text."
 }

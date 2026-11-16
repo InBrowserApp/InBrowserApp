@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "यहां बदला हुआ JSON देखने के लिए बाईं ओर मान्य XML पेस्ट करें।",
   "invalidXmlLabel": "अमान्य XML",
   "optionsLabel": "विकल्प",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "रूपांतरित JSON कॉपी या डाउनलोड करने से पहले XML को पार्स करने का तरीका बदलें।",
   "indentSizeLabel": "इंडेंट आकार",
   "indentSizeDescription": "कॉम्पैक्ट आउटपुट के लिए 0 चुनें, या फॉर्मेटेड इंडेंटेशन के लिए 1-8 चुनें।",
   "compactLabel": "कम्पैक्ट",

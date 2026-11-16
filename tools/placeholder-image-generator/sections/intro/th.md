@@ -1,27 +1,27 @@
-## What this tool does
+## เครื่องมือนี้ทำอะไร
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+ตัวสร้างภาพตัวยึดตำแหน่งนี้สร้างภาพจำลองที่ดูสะอาดตา โดยกำหนด
+ขนาด สีทึบหรือสีไล่ระดับ และข้อความตรงกลางได้โดยตรงในเบราว์เซอร์
+คุณสามารถส่งออกภาพแต่ละภาพเป็น PNG, SVG, JPEG หรือ WebP รวมถึง
+เวอร์ชัน 2x และ 3x ที่เหมาะกับจอ Retina
 
-## Why it helps
+## มีประโยชน์อย่างไร
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+ใช้สำหรับแบบจำลองงานออกแบบ เนื้อหาเริ่มต้นใน CMS หน้าจอที่ยังไม่มีข้อมูล การวางแผนเค้าโครง
+โซเชียลมีเดีย หรือภาพแทนชั่วคราวสำหรับ API เหมาะเมื่อคุณต้องการไฟล์ภาพอย่างรวดเร็วที่มี
+ขนาดและรูปแบบตามที่กำหนด โดยไม่ต้องเปิดแอปออกแบบ
 
-## How it works
+## วิธีการทำงาน
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+เลือกขนาดสำเร็จรูปหรือป้อนความกว้างและความสูงเอง เลือกสีทึบหรือ
+สีไล่ระดับ เพิ่มข้อความตามต้องการ แล้วปรับขนาดตัวอักษร สเกลการส่งออก และ
+คุณภาพ ตัวอย่างจะอัปเดตทันที เพื่อให้คุณดาวน์โหลดรูปแบบที่เหมาะกับ
+ขั้นตอนการทำงานของคุณ
 
-## Tips for better placeholders
+## เคล็ดลับสำหรับภาพแทนชั่วคราวที่ดีขึ้น
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- เว้นช่องข้อความว่างไว้หากต้องการให้เครื่องมือแสดงขนาดภาพ
+  โดยอัตโนมัติ
+- ใช้สีไล่ระดับสำหรับแบนเนอร์หลัก และสีทึบสำหรับภาพแทนชั่วคราวทั่วไป
+- ส่งออก SVG เมื่อต้องการภาพที่คมชัดและปรับขนาดได้ หรือใช้ PNG, JPEG และ WebP เมื่อ
+  ต้องการไฟล์แรสเตอร์

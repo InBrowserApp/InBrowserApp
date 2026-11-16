@@ -16,6 +16,6 @@
   "redirection": "Omleiding",
   "clientError": "Clientfout",
   "serverError": "Serverfout",
-  "noResultsTitle": "No matching status codes",
-  "noResultsDescription": "Try a different code, phrase, or category."
+  "noResultsTitle": "Geen overeenkomende statuscodes",
+  "noResultsDescription": "Probeer een andere code, omschrijving of categorie."
 }

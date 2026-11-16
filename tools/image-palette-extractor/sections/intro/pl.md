@@ -1,6 +1,6 @@
 ## Co robi to narzędzie
 
-Image Palette Extractor znajduje dominujące kolory na obrazie bezpośrednio w
+Ekstraktor palety kolorów obrazu znajduje dominujące kolory na obrazie bezpośrednio w
 przeglądarce. Próbkuje obraz, grupuje wizualnie podobne piksele i zwraca
 praktyczną paletę z wartościami HEX, RGB, HSL oraz procentowym udziałem każdego
 koloru.

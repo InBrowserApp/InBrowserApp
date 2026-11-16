@@ -28,7 +28,7 @@
   "algorithm": "Algoritma",
   "copyLabel": "Salin",
   "copiedLabel": "Tersalin",
-  "resetLabel": "Reset",
+  "resetLabel": "Atur ulang",
   "useCurrentTimeLabel": "Gunakan waktu saat ini",
   "versionLabels": {
     "nil": "UUID nil - semua bit bernilai nol",

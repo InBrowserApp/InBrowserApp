@@ -1,6 +1,6 @@
 ## Hva dette verktøyet gjør
 
-PDF Text Extractor leser en PDF i nettleseren din og henter ut tekst som
+PDF-tekstuttrekkeren leser en PDF i nettleseren din og henter ut tekst som
 allerede er markerbar i dokumentet. Resultatet er ren tekst som du kan kopiere
 eller laste ned som en TXT-fil for notater, søkeindeksering, datagjennomgang
 eller videre behandling.

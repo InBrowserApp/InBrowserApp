@@ -14,5 +14,7 @@
   "hexLabel": "Hexadecimal",
   "base64Label": "Base64",
   "copyResultLabel": "Copy result",
-  "copiedLabel": "Copied"
+  "copiedLabel": "Copied",
+  "fileGenerationError": "Failed to generate HMAC output for the file.",
+  "textGenerationError": "Failed to generate HMAC output for the text input."
 }

@@ -1,5 +1,5 @@
 {
-  "valueTitle": "Nil UUID",
+  "valueTitle": "قيمة UUID الصفرية",
   "valueDescription": "انسخ UUID القياسي المكون بالكامل من أصفار بالتمثيل الذي يتوقعه نظامك.",
   "canonicalLabel": "UUID بالصيغة القياسية",
   "rawHexLabel": "ست عشري من 32 رقما",

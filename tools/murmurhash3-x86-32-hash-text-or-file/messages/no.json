@@ -8,11 +8,13 @@
   "hexLabel": "Heksadesimal",
   "base64Label": "Base64",
   "decimalLabel": "Desimal",
-  "binaryLabel": "Bin\u00e6r",
+  "binaryLabel": "Binær",
   "copyResultLabel": "Kopier resultat",
   "copiedLabel": "Kopiert",
   "seedSectionLabel": "Seed",
   "seedLabel": "Seed (valgfritt)",
   "seedPlaceholder": "0 eller 0x...",
-  "seedInvalid": "Skriv inn et desimaltall eller en 0x-hexverdi."
+  "seedInvalid": "Skriv inn et desimaltall eller en 0x-hexverdi.",
+  "fileHashError": "Kunne ikke beregne hashverdien for filen.",
+  "textHashError": "Kunne ikke beregne hashverdien for teksten."
 }

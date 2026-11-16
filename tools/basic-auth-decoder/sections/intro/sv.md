@@ -1,14 +1,14 @@
-## What It Does
+## Vad verktyget gör
 
 Avkoda HTTP Basic Authorization-rubriken för att extrahera användarnamn och lösenord från Base64. Användbart för felsökning och API-testning.
 
-## Accepted Input
+## Indata som stöds
 
 Klistra in något som: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+Verktyget accepterar även en hel `Authorization: Basic ...`-rad.
 
-## Notes
+## Att tänka på
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- Base64 kodar bara inloggningsuppgifter; det skyddar dem inte.
+- Avkodaren delar vid det första `:` och behåller resten i lösenordet.
+- Allt körs lokalt i din webbläsare.

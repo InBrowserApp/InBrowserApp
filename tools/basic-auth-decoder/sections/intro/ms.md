@@ -1,14 +1,14 @@
-## What It Does
+## Fungsinya
 
 Nyahkod pengepala HTTP Basic Authorization untuk mengekstrak nama pengguna dan kata laluan daripada Base64. Berguna untuk penyahpepijatan dan ujian API.
 
-## Accepted Input
+## Input yang Diterima
 
 Tampal sesuatu seperti: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+Alat ini juga menerima baris penuh `Authorization: Basic ...`.
 
-## Notes
+## Nota
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- Base64 hanya mengekodkan kelayakan; ia tidak melindunginya.
+- Penyahkod memisahkan pada `:` pertama dan mengekalkan selebihnya dalam kata laluan.
+- Semuanya berjalan secara setempat dalam pelayar anda.

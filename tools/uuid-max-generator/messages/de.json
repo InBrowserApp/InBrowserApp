@@ -1,5 +1,5 @@
 {
-  "valueTitle": "Max UUID",
+  "valueTitle": "Maximale UUID",
   "valueDescription": "Kopiere die standardisierte UUID mit lauter Einsen in der Darstellung, die dein System erwartet.",
   "canonicalLabel": "Kanonische UUID",
   "rawHexLabel": "32-stelliges Hex",

@@ -1,11 +1,20 @@
-## Why this tool feels different
+## Waarom deze tool anders aanvoelt
 
-Text Statistics should do more than count words. This version treats the page like a live writing desk: it measures length, rhythm, repetition, and structure the moment you paste a draft.
+De tool Tekststatistieken hoort meer te doen dan woorden tellen. Deze versie maakt van
+de pagina een actuele schrijfwerkplek: lengte, ritme, herhaling en structuur
+worden gemeten zodra je een concept plakt.
 
-## What it measures
+## Wat de tool meet
 
-You get the core counts you expect, then the signals that actually help editing: unique words, average sentence length, lexical diversity, longest paragraph, and repeated terms. When the browser supports `Intl.Segmenter`, these numbers are segmented in a way that works better across writing systems.
+Je krijgt de gebruikelijke tellingen en daarnaast de gegevens die helpen bij het
+redigeren: unieke woorden, gemiddelde zinslengte, lexicale diversiteit, langste
+alinea en herhaalde termen. Als de browser `Intl.Segmenter` ondersteunt, worden
+deze tellingen gebaseerd op een segmentatie die beter werkt voor verschillende
+schrijfsystemen.
 
-## When to use it
+## Wanneer je de tool gebruikt
 
-Use it before publishing landing-page copy, product descriptions, scripts, newsletters, bios, or meeting summaries. It is especially useful when something feels too wordy, too repetitive, or too dense, but you need a fast clue about why.
+Gebruik de tool voordat je teksten voor landingspagina’s, productbeschrijvingen,
+scripts, nieuwsbrieven, biografieën of vergaderverslagen publiceert. Vooral
+handig als een tekst te langdradig, te herhalend of te compact aanvoelt en je
+snel wilt weten waarom.

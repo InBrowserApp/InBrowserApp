@@ -25,7 +25,7 @@
     "autoAlgorithm": "Auto fra header",
     "keyLabel": "Hemmelighet eller offentlig nøkkel",
     "keyDescription": "Bruk ren tekst for HS-algoritmer. Bruk en offentlig PEM-nøkkel, JWK eller JWKS for RS-, PS- og ES-algoritmer. Verdier lagres ikke.",
-    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "keyPlaceholder": "secret\n\neller\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\neller\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
     "waitingTitle": "Klar til å verifisere",
     "waitingDescription": "Skriv inn et gyldig token og verifiseringsmateriale for å kontrollere signaturen.",
     "pendingTitle": "Verifiserer signatur",

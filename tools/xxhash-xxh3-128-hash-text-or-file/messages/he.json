@@ -13,5 +13,7 @@
   "copiedLabel": "הועתק",
   "seedLabel": "זרע (אופציונלי)",
   "seedPlaceholder": "0 או 0x...",
-  "seedInvalid": "הזן מספר עשרוני או ערך הקסדצימלי עם ‎0x."
+  "seedInvalid": "הזן מספר עשרוני או ערך הקסדצימלי עם ‎0x.",
+  "fileHashError": "חישוב הגיבוב של הקובץ נכשל.",
+  "textHashError": "חישוב הגיבוב של הטקסט נכשל."
 }

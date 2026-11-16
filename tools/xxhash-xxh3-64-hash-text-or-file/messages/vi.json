@@ -14,5 +14,7 @@
   "seedSectionLabel": "Hạt giống",
   "seedLabel": "Hạt giống (tùy chọn)",
   "seedPlaceholder": "0 hoặc 0x...",
-  "seedInvalid": "Nhập số thập phân hoặc giá trị hex có 0x."
+  "seedInvalid": "Nhập số thập phân hoặc giá trị hex có 0x.",
+  "fileHashError": "Không thể băm tệp.",
+  "textHashError": "Không thể băm văn bản."
 }

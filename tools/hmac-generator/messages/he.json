@@ -1,18 +1,20 @@
 {
   "configurationLabel": "תצורה",
-  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "configurationDescription": "הגדירו את המפתח הסודי ואת אלגוריתם ה־HMAC לחתימה הנוכחית.",
   "secretKeyLabel": "מפתח סודי",
   "secretKeyPlaceholder": "הזן את המפתח הסודי שלך",
   "algorithmLabel": "אלגוריתם",
   "inputLabel": "קלט",
   "plainTextLabel": "טקסט רגיל",
-  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "plainTextDescription": "הדביקו או הקלידו טקסט כלשהו בקידוד UTF-8, כולל תוכן קבצים או מטעני נתונים של API.",
   "importFromFileLabel": "ייבוא מקובץ",
   "hmacOutputLabel": "פלט HMAC",
-  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
-  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hmacOutputDescription": "פלט HMAC לקלט הטקסט הנוכחי ולמפתח הסודי.",
+  "emptyStateDescription": "הזינו מפתח סודי והוסיפו טקסט או ייבאו קובץ כדי ליצור פלט HMAC.",
   "hexLabel": "הקסדצימלי",
   "base64Label": "Base64",
   "copyResultLabel": "העתק תוצאה",
-  "copiedLabel": "הועתק"
+  "copiedLabel": "הועתק",
+  "fileGenerationError": "יצירת פלט HMAC לקובץ נכשלה.",
+  "textGenerationError": "יצירת פלט HMAC לקלט הטקסט נכשלה."
 }

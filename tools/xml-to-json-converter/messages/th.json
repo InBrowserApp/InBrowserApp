@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "วาง XML ที่ถูกต้องทางด้านซ้ายเพื่อดูตัวอย่าง JSON ที่แปลงแล้วที่นี่",
   "invalidXmlLabel": "XML ไม่ถูกต้อง",
   "optionsLabel": "ตัวเลือก",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "ปรับวิธีแยกวิเคราะห์ XML ก่อนคัดลอกหรือดาวน์โหลด JSON ที่แปลงแล้ว",
   "indentSizeLabel": "ขนาดการเยื้อง",
   "indentSizeDescription": "เลือก 0 สำหรับผลลัพธ์แบบกะทัดรัด หรือ 1-8 สำหรับการเยื้องแบบจัดรูปแบบ",
   "compactLabel": "กระชับ",

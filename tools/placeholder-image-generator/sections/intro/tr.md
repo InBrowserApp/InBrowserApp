@@ -1,27 +1,26 @@
-## What this tool does
+## Bu Araç Ne Yapar?
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+Yer Tutucu Görüntü Oluşturucu, özel boyutlar, düz renkler veya renk geçişleri
+ve ortalanmış metinle doğrudan tarayıcınızda sade örnek görseller oluşturur.
+Her yer tutucuyu Retina'ya uygun 2x ve 3x sürümler dahil olmak üzere PNG, SVG,
+JPEG veya WebP olarak dışa aktarabilirsiniz.
 
-## Why it helps
+## Neden Yararlıdır?
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+Tasarım taslakları, CMS başlangıç içeriği, boş durumlar, sosyal medya düzeni
+planlaması veya API yer tutucuları için kullanın. Bir tasarım uygulaması
+açmadan, boyutu ve stili belli bir görsele hızla ihtiyacınız olduğunda yararlıdır.
 
-## How it works
+## Nasıl Çalışır?
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+Bir hazır ayar seçin veya kendi genişlik ve yüksekliğinizi girin. Düz renk
+veya renk geçişi seçin, gerekirse özel metin ekleyin; ardından metin boyutunu,
+dışa aktarma ölçeğini ve kaliteyi ayarlayın. Önizleme anında güncellenir;
+böylece iş akışınıza uygun biçimi indirebilirsiniz.
 
-## Tips for better placeholders
+## Daha İyi Yer Tutucular İçin İpuçları
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- Aracın boyutları otomatik göstermesini istiyorsanız metin alanını boş bırakın.
+- Ana afişlerde renk geçişlerini, genel amaçlı yer tutucularda düz renkleri kullanın.
+- Keskin ve ölçeklenebilir bir görsel için SVG; piksel tabanlı dosyalar gerektiğinde
+  PNG, JPEG veya WebP olarak dışa aktarın.

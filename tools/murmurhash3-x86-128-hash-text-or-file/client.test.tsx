@@ -8,6 +8,7 @@ import {
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import MurmurHash3HashTextOrFileClient from "./client"
+import * as hashCore from "./core/murmurhash3"
 import { DigestSection } from "./components/digest-section"
 
 const messages = {
@@ -21,6 +22,8 @@ const messages = {
   plainTextDescription:
     "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
   importFromFileLabel: "Import from file",
+  fileHashError: "ファイルのハッシュ計算に失敗しました。",
+  textHashError: "テキストのハッシュ計算に失敗しました。",
   seedSectionLabel: "Seed",
   seedLabel: "Seed (Optional)",
   seedPlaceholder: "0 or 0x...",
@@ -41,7 +44,10 @@ beforeEach(() => {
   window.localStorage.clear()
 })
 
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
 
 function getPlainTextInput() {
   return screen.getByRole("textbox", {
@@ -219,7 +225,7 @@ describe("MurmurHash3HashTextOrFileClient", () => {
 
     render(<MurmurHash3HashTextOrFileClient messages={messages} />)
 
-    expect(await screen.findByText("Failed to hash text.")).toBeTruthy()
+    expect(await screen.findByText(messages.textHashError)).toBeTruthy()
     arrayBufferSpy.mockRestore()
   })
 
@@ -240,7 +246,7 @@ describe("MurmurHash3HashTextOrFileClient", () => {
       },
     })
 
-    expect(await screen.findByText("Failed to hash file.")).toBeTruthy()
+    expect(await screen.findByText(messages.fileHashError)).toBeTruthy()
     arrayBufferSpy.mockRestore()
   })
 
@@ -327,5 +333,41 @@ describe("DigestSection", () => {
 
     expect(screen.getByText(messages.plainTextDescription)).toBeTruthy()
     expect(screen.queryByText(messages.hexLabel)).toBeNull()
+  })
+
+  test("uses localized fallbacks for unknown text and file failures", async () => {
+    vi.spyOn(hashCore, "hashMurmurHash3").mockRejectedValue({
+      message: "unknown",
+    })
+    const localizedMessages = {
+      ...messages,
+      fileHashError: "ファイルのハッシュ計算に失敗しました。",
+      textHashError: "テキストのハッシュ計算に失敗しました。",
+    }
+
+    render(<MurmurHash3HashTextOrFileClient messages={localizedMessages} />)
+
+    expect(
+      await screen.findByText(localizedMessages.textHashError)
+    ).toBeTruthy()
+
+    fireEvent.change(getFileInput(), {
+      target: { files: [new File(["content"], "broken.txt")] },
+    })
+
+    expect(
+      await screen.findByText(localizedMessages.fileHashError)
+    ).toBeTruthy()
+    expect(screen.queryByText(localizedMessages.textHashError)).toBeNull()
+  })
+
+  test("preserves Error messages from failed hashing", async () => {
+    vi.spyOn(hashCore, "hashMurmurHash3").mockRejectedValue(
+      new Error("Input read failed")
+    )
+
+    render(<MurmurHash3HashTextOrFileClient messages={messages} />)
+
+    expect(await screen.findByText("Input read failed")).toBeTruthy()
   })
 })

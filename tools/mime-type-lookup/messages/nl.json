@@ -1,7 +1,7 @@
 {
   "searchPlaceholder": "Zoek MIME types, extensies...",
   "all": "Alle",
-  "mimeType": "MIME Type",
+  "mimeType": "MIME-type",
   "extensions": "Extensies",
   "category": "Categorie",
   "source": "Bron",
@@ -19,6 +19,6 @@
   "text": "Tekst",
   "video": "Video",
   "unknown": "Onbekend",
-  "previousPage": "Previous page",
-  "nextPage": "Next page"
+  "previousPage": "Vorige pagina",
+  "nextPage": "Volgende pagina"
 }

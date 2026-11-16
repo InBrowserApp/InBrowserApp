@@ -1,11 +1,11 @@
-## What this tool does
+## Bu araç ne yapar
 
-Bu SVG Optimizer, yerel bir SVG dosyasını veya yapıştırılmış SVG belgesini
+SVG Optimize Edici, yerel bir SVG dosyasını veya yapıştırılmış SVG belgesini
 tarayıcınızda sıkıştırır. Görünür görüntüyü değiştirmeyen yorumları, meta
 verileri, gereksiz öznitelikleri, fazla hassasiyeti ve diğer işaretlemeleri
 kaldırmak için SVGO temizleme geçişlerini kullanır.
 
-## Why it helps
+## Neden yararlıdır
 
 Tasarım araçlarından dışa aktarılan SVG dosyaları genellikle düzenleyici meta
 verileri, ayrıntılı yollar, kullanılmayan ID'ler ve yorumlar içerir. Bunları
@@ -13,7 +13,7 @@ optimize etmek indirme boyutunu azaltabilir, sayfa yüklenmesini iyileştirebili
 ve satır içi SVG kodunu bir web sitesine, uygulamaya, e-postaya veya
 dokümantasyon sayfasına gönderilmeden önce incelemeyi kolaylaştırabilir.
 
-## How it works
+## Nasıl çalışır
 
 Bir `.svg` dosyası yükleyin veya SVG işaretlemesi yapıştırın, güvenli ön ayarı
 seçin ya da tek tek SVGO geçişlerini ayarlayın, ardından optimizasyonu
@@ -21,7 +21,7 @@ seçin ya da tek tek SVGO geçişlerini ayarlayın, ardından optimizasyonu
 indirebilmeniz için orijinal ve optimize edilmiş önizlemeleri, bayt tasarrufunu
 ve son işaretlemeyi gösterir. SVG'nin cihazınızdan ayrılması gerekmez.
 
-## Practical notes
+## Pratik notlar
 
 - SVG, kolayca inceleyemeyeceğiniz harici CSS, betikli ID'ler veya symbol
   başvurularına bağlıysa güvenli ön ayarı koruyun.

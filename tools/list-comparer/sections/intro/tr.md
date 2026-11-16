@@ -1,11 +1,11 @@
-## What this comparer is for
+## Bu Karşılaştırıcı Ne İşe Yarar?
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+İki listenin birbiriyle uyumlu olması gerektiğinde, içe aktarma, eşitleme, mesaj gönderme veya temizlik öncesinde ortak öğeleri, dışarıda kalanları ve tekrarları tam olarak görmek için bu aracı kullanın.
 
-## What you get back
+## Hangi Sonuçları Alırsınız?
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+Karşılaştırma, kullanışlı sonuç kümelerine ayrılır: ortak öğeler, yalnızca A'da bulunanlar, yalnızca B'de bulunanlar, tüm benzersiz değerler ve her kaynaktaki tekrarlar. Her kümeyi ayrı ayrı kopyalayabilir veya indirebilirsiniz.
 
-## Where it helps most
+## En Çok Nerede İşe Yarar?
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+Kişi listeleri, ürün kimlikleri, denetim çıktıları, envanter anlık görüntüleri, kampanya segmentleri ve hatalı bir birleştirmenin sonradan ek iş çıkaracağı her türlü temizlik için yararlıdır.

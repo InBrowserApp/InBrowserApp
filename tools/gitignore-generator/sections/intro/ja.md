@@ -6,6 +6,6 @@
 - IDE およびエディターファイル（.idea/、.vscode/）
 - オペレーティングシステムファイル（.DS_Store、Thumbs.db）
 
-## Template source
+## テンプレートのソース
 
 このツールは、GitHub の公式 gitignore リポジトリのテンプレートを使用し、150 以上の言語、フレームワーク、環境をカバーしています。

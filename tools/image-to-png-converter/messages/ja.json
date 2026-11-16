@@ -44,7 +44,7 @@
   "details": "画像の詳細",
   "detectedFormat": "検出した形式",
   "duration": "フレームの表示時間",
-  "milliseconds": "{value} ms",
+  "milliseconds": "{value}ミリ秒",
   "profile": "埋め込みカラープロファイル",
   "present": "あり",
   "absent": "なし",

@@ -1,26 +1,26 @@
-## What ICO Is
+## ICO คืออะไร
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO เป็นรูปแบบไฟล์ที่ใช้เก็บไอคอนสำหรับ favicon ของเบราว์เซอร์แบบดั้งเดิม ทางลัดของ Windows
+และไอคอนแอปเดสก์ท็อปบางประเภท ไฟล์ ICO หนึ่งไฟล์สามารถรวมภาพสี่เหลี่ยมจัตุรัส
+ได้หลายขนาด เพื่อให้แต่ละแพลตฟอร์มเลือกขนาดที่เหมาะสมที่สุดโดยอัตโนมัติ
 
-## Why Use This Converter
+## ทำไมจึงควรใช้ตัวแปลงนี้
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+เครื่องมือนี้แปลงรูปภาพในเครื่องหนึ่งภาพเป็นไฟล์ ICO ที่มีหลายขนาดได้โดยตรงใน
+เบราว์เซอร์ ไม่มีการอัปโหลดข้อมูล และคุณสามารถรวมขนาด favicon ที่ใช้กันทั่วไป เช่น
+16×16, 32×32, 48×48 และ 256×256 ไว้ในไฟล์ดาวน์โหลดเดียว
 
-## How It Works
+## วิธีการทำงาน
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. อัปโหลดไฟล์รูปภาพในเครื่องหนึ่งไฟล์
+2. เลือกขนาดไอคอนที่ต้องการรวมไว้ในไฟล์ ICO
+3. เพิ่มสีพื้นหลังทึบให้กับภาพที่มีส่วนโปร่งใสได้ตามต้องการ
+4. สร้าง ICO แล้วดาวน์โหลดได้ทันที
 
-## Tips for Better Results
+## เคล็ดลับเพื่อผลลัพธ์ที่ดีขึ้น
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- เริ่มจากภาพสี่เหลี่ยมจัตุรัสที่คมชัด ควรมีขนาด 512×512 ขึ้นไป
+- วางโลโก้และรูปทรงสำคัญให้ห่างจากขอบนอก เพราะไอคอนขนาดเล็กจะสูญเสีย
+  รายละเอียดได้ง่าย
+- ปิดการเติมสีพื้นหลังหากต้องการความโปร่งใส และเปิดเฉพาะเมื่อ
+  ต้องการพื้นหลังสีทึบรองรับไอคอน

@@ -1,9 +1,9 @@
 {
   "inputTitle": "JSON-inmatning",
-  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputDescription": "Klistra in JSON-exempel eller importera en fil för att härleda ett grundschema.",
   "inputPlaceholder": "Klistra in JSON-data här...",
   "outputTitle": "Genererat schema",
-  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputDescription": "Granska det genererade schemat och kopiera eller ladda ner det för vidare bearbetning.",
   "outputEmpty": "Ange giltig JSON-data för att generera ett schema",
   "invalidJson": "Ogiltig JSON",
   "optionsTitle": "Alternativ",

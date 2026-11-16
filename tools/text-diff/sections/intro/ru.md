@@ -1,11 +1,11 @@
-## What this text diff is for
+## Для чего нужно сравнение текстов
 
-Use this tool when you need to compare two versions of copy, code, notes, or configuration before you merge, publish, or send anything out.
+Используйте этот инструмент, чтобы сравнить две версии текста, кода, заметок или конфигурации перед объединением, публикацией или отправкой.
 
-## How to read the result
+## Как читать результат
 
-The side-by-side view helps you scan line numbers and changed fragments quickly. Switch to the unified view when you need a compact patch-style output for review, handoff, or documentation.
+Режим просмотра рядом помогает быстро просмотреть номера строк и изменённые фрагменты. Переключитесь в объединённый режим, если для проверки, передачи коллегам или документации нужен компактный результат в виде патча.
 
-## When the options matter
+## Когда важны параметры
 
-Ignore case when capitalization is noise. Ignore whitespace when indentation or spacing should not count as a real edit. Hide unchanged rows when you only want to inspect what actually moved.
+Отключите учёт регистра, если различия в заглавных и строчных буквах несущественны. Отключите учёт пробелов, если отступы и интервалы не должны считаться правками. Скройте неизменённые строки, если хотите просмотреть только изменения.

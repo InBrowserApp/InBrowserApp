@@ -1,11 +1,11 @@
-## What this text diff is for
+## למה משמשת השוואת טקסטים
 
-Use this tool when you need to compare two versions of copy, code, notes, or configuration before you merge, publish, or send anything out.
+השתמשו בכלי כשעליכם להשוות בין שתי גרסאות של תוכן, קוד, הערות או הגדרות לפני מיזוג, פרסום או שליחה.
 
-## How to read the result
+## איך לקרוא את התוצאה
 
-The side-by-side view helps you scan line numbers and changed fragments quickly. Switch to the unified view when you need a compact patch-style output for review, handoff, or documentation.
+התצוגה זה לצד זה מאפשרת לסקור במהירות את מספרי השורות ואת הקטעים שהשתנו. עברו לתצוגה המאוחדת כשדרוש פלט תמציתי בסגנון תיקון לצורך סקירה, מסירה או תיעוד.
 
-## When the options matter
+## מתי האפשרויות חשובות
 
-Ignore case when capitalization is noise. Ignore whitespace when indentation or spacing should not count as a real edit. Hide unchanged rows when you only want to inspect what actually moved.
+התעלמו מרישיות כשההבדל בין אותיות גדולות לקטנות אינו רלוונטי. התעלמו מרווחים כשהזחה או ריווח אינם אמורים להיחשב לשינוי ממשי. הסתירו שורות שלא השתנו כדי לבדוק רק את השינויים בפועל.

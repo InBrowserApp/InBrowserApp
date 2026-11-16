@@ -1,4 +1,4 @@
 {
-  "name": "List Comparer",
-  "description": "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup."
+  "name": "Listjämförare",
+  "description": "Jämför två listor, hitta gemensamma och uteslutna poster och exportera precis den mängd du behöver före synkronisering eller rensning."
 }

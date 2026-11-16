@@ -10,6 +10,7 @@ import {
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import HmacGeneratorClient from "./client"
+import * as hashCore from "./core/hmac"
 
 const messages = {
   meta: {
@@ -27,6 +28,8 @@ const messages = {
   plainTextDescription:
     "Paste or type any UTF-8 text, including file contents or API payloads.",
   importFromFileLabel: "Import from file",
+  fileGenerationError: "Failed to generate HMAC output for the file.",
+  textGenerationError: "Failed to generate HMAC output for the text input.",
   hmacOutputLabel: "HMAC Output",
   hmacOutputDescription:
     "HMAC output for the current text input and secret key.",
@@ -49,7 +52,10 @@ beforeEach(() => {
   window.localStorage.clear()
 })
 
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
 
 function getPlainTextInput() {
   return screen.getByRole("textbox", {
@@ -168,5 +174,39 @@ describe("HmacGeneratorClient", () => {
       "stored-secret"
     )
     expect(await screen.findByText(expected.hex)).toBeTruthy()
+  })
+
+  test("uses localized fallbacks for unknown text and file failures", async () => {
+    vi.spyOn(hashCore, "generateHmac").mockRejectedValue({ message: "unknown" })
+    const localizedMessages = {
+      ...messages,
+      fileGenerationError: "ファイルからの生成に失敗しました。",
+      textGenerationError: "テキストからの生成に失敗しました。",
+    }
+
+    render(<HmacGeneratorClient messages={localizedMessages} />)
+
+    expect(
+      await screen.findByText(localizedMessages.textGenerationError)
+    ).toBeTruthy()
+
+    fireEvent.change(getFileInput(), {
+      target: { files: [new File(["content"], "broken.txt")] },
+    })
+
+    expect(
+      await screen.findByText(localizedMessages.fileGenerationError)
+    ).toBeTruthy()
+    expect(screen.queryByText(localizedMessages.textGenerationError)).toBeNull()
+  })
+
+  test("preserves Error messages from failed hashing", async () => {
+    vi.spyOn(hashCore, "generateHmac").mockRejectedValue(
+      new Error("Input read failed")
+    )
+
+    render(<HmacGeneratorClient messages={messages} />)
+
+    expect(await screen.findByText("Input read failed")).toBeTruthy()
   })
 })

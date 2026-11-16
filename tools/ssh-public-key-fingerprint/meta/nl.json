@@ -1,4 +1,4 @@
 {
-  "name": "SSH Public Key Fingerprint",
+  "name": "Vingerafdruk van openbare SSH-sleutel",
   "description": "Genereer SHA-256- en MD5-fingerprints voor OpenSSH-public keys, authorized_keys-regels en SSH2-public-key-blokken."
 }

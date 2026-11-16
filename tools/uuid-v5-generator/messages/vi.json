@@ -1,7 +1,7 @@
 {
   "optionsTitle": "Đầu vào",
   "optionsDescription": "Chọn namespace UUID và tên. UUID v5 băm cả hai giá trị, nên cùng một cặp luôn trả về cùng một UUID.",
-  "namespaceLabel": "Namespace UUID",
+  "namespaceLabel": "UUID không gian tên",
   "namespaceDescription": "Dùng một trong các namespace tiêu chuẩn hoặc dán bất kỳ UUID hợp lệ nào.",
   "namespaceInvalid": "Nhập namespace UUID hợp lệ.",
   "namespacePresetLegend": "Namespace tiêu chuẩn",

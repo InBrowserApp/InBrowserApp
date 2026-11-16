@@ -61,7 +61,7 @@
   "errorCorrectionQuartile": "Kwartiel, 25%",
   "errorCorrectionHigh": "Hoog, 30%",
   "sizeLabel": "Grootte",
-  "marginLabel": "Quiet zone",
+  "marginLabel": "Rustzone",
   "darkColorLabel": "Voorgrondkleur",
   "lightColorLabel": "Achtergrondkleur",
   "previewTitle": "Voorvertoning",
@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "Gegenereerde QR-code"
+  "qrAlt": "Gegenereerde QR-code",
+  "renderError": "De QR-code kon niet worden weergegeven."
 }

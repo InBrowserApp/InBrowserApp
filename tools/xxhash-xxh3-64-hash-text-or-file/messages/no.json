@@ -14,5 +14,7 @@
   "seedSectionLabel": "Seed",
   "seedLabel": "Seed (valgfritt)",
   "seedPlaceholder": "0 eller 0x...",
-  "seedInvalid": "Skriv inn et desimaltall eller en 0x-heksverdi."
+  "seedInvalid": "Skriv inn et desimaltall eller en 0x-heksverdi.",
+  "fileHashError": "Kunne ikke beregne hashverdien for filen.",
+  "textHashError": "Kunne ikke beregne hashverdien for teksten."
 }

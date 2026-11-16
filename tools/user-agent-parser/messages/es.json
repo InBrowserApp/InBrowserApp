@@ -1,6 +1,6 @@
 {
   "use-current": "Usar mi user agent",
-  "input-label": "User Agent",
+  "input-label": "Agente de usuario",
   "input-placeholder": "Pega una cadena de user agent aquí...",
   "input-error": "Introduce una cadena de user agent para analizar.",
   "json-output": "Salida JSON",

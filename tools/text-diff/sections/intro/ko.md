@@ -1,11 +1,11 @@
-## What this text diff is for
+## 텍스트 차이 비교의 용도
 
-Use this tool when you need to compare two versions of copy, code, notes, or configuration before you merge, publish, or send anything out.
+병합, 게시, 발송 전에 문구, 코드, 메모, 설정의 두 버전을 비교해야 할 때 텍스트 차이 비교를 사용하세요.
 
-## How to read the result
+## 결과 읽는 방법
 
-The side-by-side view helps you scan line numbers and changed fragments quickly. Switch to the unified view when you need a compact patch-style output for review, handoff, or documentation.
+나란히 보기를 사용하면 줄 번호와 변경된 부분을 빠르게 살펴볼 수 있습니다. 검토, 인수인계, 문서화에 간결한 패치 형식의 출력이 필요하면 통합 보기로 전환하세요.
 
-## When the options matter
+## 옵션을 활용할 때
 
-Ignore case when capitalization is noise. Ignore whitespace when indentation or spacing should not count as a real edit. Hide unchanged rows when you only want to inspect what actually moved.
+대소문자 차이가 중요하지 않으면 대소문자를 무시하세요. 들여쓰기나 간격을 실제 수정으로 간주하지 않아야 할 때는 공백을 무시하세요. 실제로 달라진 부분만 확인하려면 변경되지 않은 행을 숨기세요.

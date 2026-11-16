@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 64)?
+## O que é xxHash (XXH3 64)?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 64 outputs a 64-bit (8-byte) hash value, typically rendered as a 16-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3 é o algoritmo moderno do xxHash projetado para altíssima velocidade e excelente distribuição. XXH3 64 produz um valor de hash de 64 bits (8 bytes), geralmente representado como uma string hexadecimal de 16 caracteres. É um hash não criptográfico e suporta uma semente opcional para cálculos de hash reproduzíveis.
 
-**Key characteristics:**
+**Características principais:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **Extremamente rápido**: Otimizado para desempenho com entradas grandes
+- **Determinístico**: A mesma entrada e a mesma semente sempre produzem o mesmo hash
+- **Não criptográfico**: Inadequado para fins de segurança
+- **Boa distribuição**: Excelente para tabelas de hash e indexação
+- **Com semente**: Semente opcional para diversificar os resultados dos hashes
 
-**Common uses:**
+**Usos comuns:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- Tabelas de hash e estruturas de dados
+- Verificações de integridade de arquivos (sem fins de segurança)
+- Remoção de duplicatas e divisão de dados em blocos
+- Chaves de cache e indexação de bancos de dados
+- Fluxos de processamento de dados com alta taxa de transferência

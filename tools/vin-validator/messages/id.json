@@ -1,5 +1,5 @@
 {
-  "vin": "VIN (Vehicle Identification Number)",
+  "vin": "VIN (Nomor Identifikasi Kendaraan)",
   "placeholder": "Masukkan VIN",
   "valid": "VIN Valid",
   "invalid": "VIN Tidak Valid",

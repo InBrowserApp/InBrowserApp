@@ -1,19 +1,23 @@
-## What is SHA-512/224 (FIPS 180-4)?
+## Wat is SHA-512/224 (FIPS 180-4)?
 
-SHA-512/224 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 224-bit (28-byte) digest, typically rendered as a 56-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/224 (FIPS 180-4) is een cryptografische SHA-2-hashfunctie die een digest
+van 224 bits (28 bytes) oplevert, meestal weergegeven als een hexadecimale reeks
+van 56 tekens. De functie is gebaseerd op SHA-512 met andere beginwaarden en een
+ingekorte uitvoer, waardoor de digest korter is terwijl de interne structuur van
+SHA-512 behouden blijft.
 
-**Key characteristics:**
+**Belangrijkste kenmerken:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **Deterministisch**: Dezelfde invoer levert altijd dezelfde hash op
+- **Snelle berekening**: Snel te berekenen voor elke gegeven invoer
+- **Lawine-effect**: Kleine wijzigingen in de invoer leveren sterk verschillende uitvoer op
+- **Onomkeerbaar**: Het is rekenkundig onhaalbaar om uit de hash de oorspronkelijke invoer terug te halen
+- **Botsingsbestendig**: Het is erg moeilijk om twee verschillende invoeren te vinden die dezelfde hash opleveren
 
-**Common uses:**
+**Veelvoorkomende toepassingen:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 224-bit hashes
+- Digitale handtekeningen en certificaten
+- Integriteitscontroles en controlesommen
+- HMAC-constructies
+- Bestandsverificatie en gegevenspijplijnen
+- Protocollen die hashes van 224 bits vereisen

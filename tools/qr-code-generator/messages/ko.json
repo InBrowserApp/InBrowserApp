@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "생성된 QR 코드"
+  "qrAlt": "생성된 QR 코드",
+  "renderError": "QR 코드를 렌더링하지 못했습니다."
 }

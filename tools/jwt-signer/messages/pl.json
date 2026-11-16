@@ -1,7 +1,7 @@
 {
   "payloadCardTitle": "Payload i nagłówek",
   "payloadCardDescription": "Edytuj deklaracje JSON i opcjonalne pola chronionego nagłówka, które zostaną objęte podpisem w tokenie.",
-  "payloadLabel": "Payload JSON",
+  "payloadLabel": "Dane JSON",
   "payloadPlaceholder": "{\n  \"sub\": \"user_123\",\n  \"role\": \"admin\"\n}",
   "claimsHelperTitle": "Pomocniki zarejestrowanych deklaracji",
   "claimsHelperDescription": "Użyj tych kontrolek, aby zaktualizować typowe deklaracje NumericDate w payloadzie JSON.",

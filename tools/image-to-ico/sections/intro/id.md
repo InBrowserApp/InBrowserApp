@@ -1,26 +1,26 @@
-## What ICO Is
+## Apa Itu ICO
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO adalah format kontainer ikon yang digunakan untuk favicon browser klasik, pintasan
+Windows, dan beberapa ikon aplikasi desktop. Satu file ICO dapat memuat beberapa
+ukuran persegi, sehingga setiap platform dapat memilih ukuran yang paling sesuai secara otomatis.
 
-## Why Use This Converter
+## Mengapa Menggunakan Konverter Ini
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+Alat ini mengubah satu gambar lokal menjadi file ICO dengan beberapa ukuran langsung di
+browser Anda. Tidak ada yang diunggah, dan Anda dapat menyertakan ukuran favicon umum seperti
+16×16, 32×32, 48×48, dan 256×256 dalam satu unduhan.
 
-## How It Works
+## Cara Kerjanya
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. Unggah satu file gambar lokal.
+2. Pilih ukuran ikon yang ingin Anda sertakan dalam file ICO.
+3. Jika perlu, tambahkan warna latar belakang solid untuk gambar transparan.
+4. Buat ICO dan langsung unduh hasilnya.
 
-## Tips for Better Results
+## Tips untuk Hasil yang Lebih Baik
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- Mulai dengan gambar persegi yang tajam, idealnya berukuran 512×512 atau lebih besar.
+- Jauhkan logo dan bentuk utama dari tepi luar karena ikon berukuran kecil mudah kehilangan
+  detail.
+- Nonaktifkan isian latar belakang jika Anda menginginkan transparansi, dan aktifkan hanya saat
+  Anda membutuhkan kanvas solid di belakang ikon.

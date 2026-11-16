@@ -16,7 +16,7 @@
   "speedDescription": "1x จะคงจังหวะเวลาของต้นฉบับไว้ ค่าที่สูงกว่าจะเล่นเร็วขึ้น ส่วนค่าที่ต่ำกว่าจะเล่นช้าลง",
   "loopModeLabel": "ลักษณะการวนซ้ำ",
   "loopDescription": "Follow GIF จะอ่านจำนวนการวนซ้ำจากต้นฉบับ หาก GIF ไม่มีข้อมูลการวนซ้ำ APNG จะเล่นหนึ่งครั้ง",
-  "loopInheritLabel": "Follow GIF",
+  "loopInheritLabel": "ตาม GIF",
   "loopInfiniteLabel": "ไม่จำกัด",
   "loopCustomLabel": "กำหนดเอง",
   "loopCountLabel": "จำนวนรอบการวนซ้ำ",

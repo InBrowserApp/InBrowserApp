@@ -1,4 +1,4 @@
-## What is an X.509 certificate parser?
+## Wat is een X.509-certificaatparser?
 
 Een X.509-certificaat is een ondertekend document dat een openbare sleutel koppelt aan een identiteit, zoals een domein, service, organisatie of persoon. TLS-certificaten, certificaatketenbestanden en veel S/MIME- of ondertekeningsworkflows gebruiken dit formaat.
 

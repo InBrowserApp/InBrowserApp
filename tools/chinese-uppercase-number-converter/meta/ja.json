@@ -1,4 +1,4 @@
 {
-  "name": "Number ↔ Chinese Uppercase Converter",
-  "description": "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places."
+  "name": "数値・中国語大字変換ツール",
+  "description": "数値と中国語の大字を相互変換します。人民元形式の単位と小数点以下2桁までに対応しています。"
 }

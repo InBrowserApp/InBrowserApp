@@ -1,14 +1,14 @@
-## What It Does
+## Co robi to narzędzie
 
 Zdekoduj nagłówek HTTP Basic Authorization, aby wyodrębnić nazwę użytkownika i hasło z Base64. Przydatne do debugowania i testowania API.
 
-## Accepted Input
+## Akceptowane dane wejściowe
 
 Wklej coś w rodzaju: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+To narzędzie akceptuje również pełny wiersz `Authorization: Basic ...`.
 
-## Notes
+## Uwagi
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- Base64 jedynie koduje dane logowania; nie chroni ich.
+- Dekoder dzieli tekst na pierwszym `:`, a resztę pozostawia w haśle.
+- Wszystko działa lokalnie w przeglądarce.

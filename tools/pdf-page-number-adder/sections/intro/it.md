@@ -1,6 +1,6 @@
 ## Cosa fa questo strumento
 
-PDF Page Number Adder crea una nuova copia PDF con numeri di pagina disegnati
+Lo strumento Aggiunta di numeri di pagina ai PDF crea una nuova copia PDF con numeri di pagina disegnati
 sulle pagine che scegli. Carica un documento, lascia vuoto l'intervallo di
 pagine per numerare ogni pagina oppure indica solo pagine selezionate con
 intervalli come `1-3,5,8-10`. Puoi controllare numero iniziale, formato del

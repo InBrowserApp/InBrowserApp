@@ -9,9 +9,9 @@
   "download": "Base85 downloaden",
   "readFailed": "Bestand kon niet worden gelezen",
   "invalidBase85": "Z85 vereist dat de invoerlengte een veelvoud van 4 bytes is.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Voorbeeld laden",
+  "clearLabel": "Wissen",
+  "copyLabel": "Kopiëren",
+  "copiedLabel": "Gekopieerd",
   "importFromFileLabel": "Importeren uit bestand"
 }
