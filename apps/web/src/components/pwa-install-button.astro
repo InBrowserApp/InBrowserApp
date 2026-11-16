@@ -1,0 +1,22 @@
+---
+import { buttonVariants } from "@workspace/ui/components/ui/button"
+import { Download } from "@workspace/ui/icons"
+
+interface Props {
+  label: string
+}
+
+const { label } = Astro.props
+---
+
+<button
+  type="button"
+  data-pwa-install
+  hidden
+  class={buttonVariants({ variant: "outline" })}
+  aria-label={label}
+  title={label}
+>
+  <Download data-icon="inline-start" />
+  <span class="hidden sm:inline">{label}</span>
+</button>

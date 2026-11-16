@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Tamamen cihazınızda çalışan ücretsiz tarayıcı tabanlı araçlar.",
     "languageLabel": "Diller",
+    "installApp": "Uygulamayı yükle",
     "themeLabel": "Temayı değiştir",
     "themeLight": "Açık",
     "themeDark": "Koyu",

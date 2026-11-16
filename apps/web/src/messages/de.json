@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Kostenlose browserbasierte Tools, die vollständig auf Ihrem Gerät laufen.",
     "languageLabel": "Sprachen",
+    "installApp": "App installieren",
     "themeLabel": "Design umschalten",
     "themeLight": "Hell",
     "themeDark": "Dunkel",

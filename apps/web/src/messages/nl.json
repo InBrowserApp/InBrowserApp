@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Gratis browsergebaseerde tools die volledig op je apparaat draaien.",
     "languageLabel": "Talen",
+    "installApp": "App installeren",
     "themeLabel": "Thema wisselen",
     "themeLight": "Licht",
     "themeDark": "Donker",

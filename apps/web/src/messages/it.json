@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Strumenti gratuiti basati sul browser che funzionano interamente sul tuo dispositivo.",
     "languageLabel": "Lingue",
+    "installApp": "Installa app",
     "themeLabel": "Cambia tema",
     "themeLight": "Chiaro",
     "themeDark": "Scuro",

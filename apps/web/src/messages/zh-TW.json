@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "完全在您裝置上執行的免費瀏覽器工具。",
     "languageLabel": "語言",
+    "installApp": "安裝應用程式",
     "themeLabel": "切換主題",
     "themeLight": "淺色",
     "themeDark": "深色",

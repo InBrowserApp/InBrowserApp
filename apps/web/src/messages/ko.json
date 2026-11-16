@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "기기에서 완전히 실행되는 무료 브라우저 기반 도구입니다.",
     "languageLabel": "언어",
+    "installApp": "앱 설치",
     "themeLabel": "테마 전환",
     "themeLight": "라이트",
     "themeDark": "다크",

@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "मुफ़्त ब्राउज़र-आधारित उपकरण जो पूरी तरह आपके डिवाइस पर चलते हैं।",
     "languageLabel": "भाषाएँ",
+    "installApp": "ऐप इंस्टॉल करें",
     "themeLabel": "थीम बदलें",
     "themeLight": "हल्का",
     "themeDark": "गहरा",

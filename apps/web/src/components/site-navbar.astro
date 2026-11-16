@@ -7,6 +7,7 @@ import {
   type SiteLanguage,
 } from "@/lib/site"
 import { loadSiteMessages } from "@/lib/site-messages"
+import PwaInstallButton from "./pwa-install-button.astro"
 
 interface Props {
   language: SiteLanguage
@@ -48,6 +49,7 @@ const navItems = [
     ))}
   </div>
   <div class="flex items-center gap-1">
+    <PwaInstallButton label={catalog.site.installApp} />
     <ThemeToggle
       client:idle
       transition:persist="theme-toggle"

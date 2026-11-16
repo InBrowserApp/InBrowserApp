@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Бесплатные браузерные инструменты, работающие полностью на вашем устройстве.",
     "languageLabel": "Языки",
+    "installApp": "Установить приложение",
     "themeLabel": "Переключить тему",
     "themeLight": "Светлая",
     "themeDark": "Тёмная",

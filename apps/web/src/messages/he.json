@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "כלים חינמיים מבוססי דפדפן הפועלים כולם על המכשיר שלך.",
     "languageLabel": "שפות",
+    "installApp": "התקן אפליקציה",
     "themeLabel": "החלף ערכת נושא",
     "themeLight": "בהיר",
     "themeDark": "כהה",
