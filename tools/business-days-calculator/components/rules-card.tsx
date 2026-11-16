@@ -71,12 +71,12 @@ function RulesCard({
 
   return (
     <ToolPanelCard data-testid="business-days-rules-card">
-      <CardHeader className="grid-cols-1 gap-3 border-b sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-1">
+      <CardHeader className="border-b">
         <div>
           <CardTitle>{messages.rulesTitle}</CardTitle>
           <CardDescription>{selectionHint}</CardDescription>
         </div>
-        <CardAction className="col-start-1 row-start-auto flex flex-wrap justify-start gap-2 justify-self-start sm:col-start-2 sm:row-span-2 sm:row-start-1 sm:justify-end sm:justify-self-end">
+        <CardAction>
           <Badge variant="outline">
             {workingDayCount}/7 {messages.workingDaysLabel}
           </Badge>

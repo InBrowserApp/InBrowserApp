@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "@testing-library/react": "catalog:",
-    "@types/js-yaml": "catalog:",
     "vitest": "catalog:"
   }
 }

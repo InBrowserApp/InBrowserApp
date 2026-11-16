@@ -5,7 +5,8 @@
   "type": "module",
   "exports": {
     "./preflight": "./src/preflight.ts",
-    "./sanitize": "./src/sanitize.ts"
+    "./sanitize": "./src/sanitize.ts",
+    "./wasm": "./src/wasm.ts"
   },
   "dependencies": {
     "cfb": "catalog:",

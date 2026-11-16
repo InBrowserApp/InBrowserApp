@@ -1,4 +1,4 @@
-import { fileTypeFromBuffer } from "file-type/core"
+import { fileTypeFromBuffer } from "file-type"
 import mimeDatabase from "mime-db"
 import type { ExtensionStatus, Inspection } from "../types"
 

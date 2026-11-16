@@ -3,6 +3,7 @@ import { PDFDocument } from "pdf-lib"
 import type { Reply, Request } from "./protocol"
 const mock = vi.hoisted(() => ({
   init: vi.fn(),
+  source: vi.fn(),
   initSvg: vi.fn(),
   fonts: vi.fn(),
   preflight: vi.fn(),
@@ -40,6 +41,10 @@ vi.mock("@resvg/resvg-wasm", () => ({
 }))
 vi.mock("./fonts", () => ({ loadFonts: mock.fonts }))
 vi.mock("@workspace/hwp/preflight", () => ({ preflight: mock.preflight }))
+vi.mock("@workspace/hwp/wasm", () => ({ loadWasmSource: mock.source }))
+vi.mock("@rhwp/core/rhwp_bg.wasm?gzip-url", () => ({
+  default: "/hwp.wasm.gz",
+}))
 vi.mock("./core/binary", () => ({ binaryResources: mock.binary }))
 vi.mock("./core/xml", () => ({ xmlResources: mock.xml }))
 let replies: Reply[]
@@ -47,6 +52,7 @@ let scope: { onmessage: ((e: { data: Request }) => void) | null }
 beforeEach(async () => {
   vi.resetModules()
   vi.resetAllMocks()
+  mock.source.mockResolvedValue(new Response())
   replies = []
   scope = { onmessage: null }
   vi.stubGlobal("self", scope)

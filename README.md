@@ -31,7 +31,7 @@ pnpm install
 pnpm dev          # tool-registry:generate + astro dev (apps/web)
 ```
 
-Node `>=20.20.2`, `pnpm@12.21.0`.
+Node `^22.23.4 || ^24.15.0 || >=26.0.0`, `pnpm@12.21.0`.
 
 ## Working with shadcn/ui
 

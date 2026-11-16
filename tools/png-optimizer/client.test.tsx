@@ -136,7 +136,7 @@ describe("PngOptimizerClient", () => {
     })
     expect(await screen.findByText("Saved: 6 B (60%)")).toBeTruthy()
 
-    const downloadLink = screen.getByRole("link", {
+    const downloadLink = await screen.findByRole("link", {
       name: "Download optimized PNG",
     })
 

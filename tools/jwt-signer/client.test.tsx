@@ -117,7 +117,9 @@ describe("JwtSignerClient", () => {
     )
     expect(screen.getByText("Signature")).toBeTruthy()
     expect(
-      screen.getByRole("link", { name: "Download" }).getAttribute("href")
+      (await screen.findByRole("link", { name: "Download" })).getAttribute(
+        "href"
+      )
     ).toBe("blob:jwt")
   })
 

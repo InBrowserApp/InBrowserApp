@@ -55,18 +55,18 @@ function evaluateJsonpathText(
   try {
     const path = queryText.trim()
     const json = parsedJson.value as JSONPathOptions["json"]
-    const values = JSONPath<unknown[]>({
+    const values = JSONPath({
       path,
       json,
       resultType: "value",
       wrap: true,
-    })
-    const paths = JSONPath<string[]>({
+    }) as unknown[]
+    const paths = JSONPath({
       path,
       json,
       resultType: "path",
       wrap: true,
-    })
+    }) as string[]
 
     return {
       state: "ready",

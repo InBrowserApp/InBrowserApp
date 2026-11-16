@@ -118,7 +118,6 @@ describe("extractPdfText", () => {
     const emptyPage = createPage([], [12])
     const pages = [firstPage, scannedPage, emptyPage]
     const documentProxy: PdfDocumentProxyLike = {
-      destroy: vi.fn(),
       getPage: vi.fn((pageNumber: number) =>
         Promise.resolve(pages[pageNumber - 1]!)
       ),
@@ -175,8 +174,7 @@ describe("extractPdfText", () => {
     expect(firstPage.cleanup).toHaveBeenCalledTimes(1)
     expect(scannedPage.cleanup).toHaveBeenCalledTimes(1)
     expect(emptyPage.cleanup).toHaveBeenCalledTimes(1)
-    expect(documentProxy.destroy).toHaveBeenCalledTimes(1)
-    expect(loadingTask.destroy).not.toHaveBeenCalled()
+    expect(loadingTask.destroy).toHaveBeenCalledTimes(1)
   })
 
   it("cleans up the loading task when the document fails to open", async () => {
@@ -205,7 +203,6 @@ describe("extractPdfText", () => {
       getTextContent: vi.fn().mockRejectedValue(new Error("broken text")),
     }
     const documentProxy: PdfDocumentProxyLike = {
-      destroy: vi.fn(),
       getPage: vi.fn().mockResolvedValue(brokenPage),
       numPages: 1,
     }
@@ -222,6 +219,6 @@ describe("extractPdfText", () => {
     ).rejects.toThrow("broken text")
 
     expect(brokenPage.cleanup).toHaveBeenCalledTimes(1)
-    expect(documentProxy.destroy).toHaveBeenCalledTimes(1)
+    expect(loadingTask.destroy).toHaveBeenCalledTimes(1)
   })
 })

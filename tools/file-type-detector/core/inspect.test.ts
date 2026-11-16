@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, test, vi } from "vitest"
-import * as fileType from "file-type/core"
+import * as fileType from "file-type"
 import {
   compareExtension,
   formatHex,
@@ -8,7 +8,7 @@ import {
   SAMPLE_BYTES,
 } from "./inspect"
 
-vi.mock("file-type/core", { spy: true })
+vi.mock("file-type", { spy: true })
 
 afterEach(() => vi.restoreAllMocks())
 

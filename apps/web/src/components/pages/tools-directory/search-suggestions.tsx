@@ -94,7 +94,7 @@ function SearchSuggestions({
                     {suggestion.post}
                   </span>
                   <span className="flex shrink-0 items-center gap-2">
-                    <span className="text-[10px] font-medium tracking-[0.12em] text-muted-foreground/80 uppercase">
+                    <span className="text-[10px] font-medium tracking-[0.12em] text-foreground/70 uppercase">
                       {getCategoryLabel(
                         categoryLabels,
                         suggestion.entry.category
@@ -113,7 +113,7 @@ function SearchSuggestions({
               )
             })}
           </ul>
-          <div className="mt-1.5 flex items-center justify-between gap-3 border-t border-border/70 px-3 pt-2 pb-1 font-mono text-[11px] text-muted-foreground/80">
+          <div className="mt-1.5 flex items-center justify-between gap-3 border-t border-border/70 px-3 pt-2 pb-1 font-mono text-[11px] text-foreground/70">
             <span>
               {formatSiteMessage(countTemplate, { count: suggestions.length })}
             </span>
