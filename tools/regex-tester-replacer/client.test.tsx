@@ -328,4 +328,19 @@ describe("RegexTesterReplacerClient", () => {
       ).toBe("Order ID:999 Code:XYZ")
     })
   })
+
+  test("shows the analysis error without the empty-input instruction", async () => {
+    MockWorker.autoRespond = false
+    render(<RegexTesterReplacerClient messages={messages} />)
+
+    await waitFor(() => {
+      expect(MockWorker.instances).toHaveLength(1)
+    })
+
+    MockWorker.instances[0]!.emitMessage({ ok: false })
+
+    const alert = await screen.findByRole("alert")
+    expect(alert.textContent).toContain(messages.analysisFailedLabel)
+    expect(screen.queryByText(messages.summaryEmpty)).toBeNull()
+  })
 })

@@ -95,6 +95,7 @@ beforeEach(() => {
 
 afterEach(() => {
   vi.useRealTimers()
+  vi.restoreAllMocks()
   vi.unstubAllGlobals()
 })
 
@@ -142,6 +143,29 @@ describe("analyzeRegexInWorker", () => {
     expect(await result).toMatchObject({ name: "AbortError" })
     expect(worker.terminated).toBe(true)
     worker.emitMessage({ ok: false })
+  })
+
+  it("does not start a worker for an already aborted request", async () => {
+    const controller = new AbortController()
+    controller.abort()
+
+    await expect(
+      analyzeRegexInWorker(request, controller.signal)
+    ).rejects.toMatchObject({ name: "AbortError" })
+    expect(MockWorker.instances).toHaveLength(0)
+  })
+
+  it("terminates the worker when posting the request fails", async () => {
+    vi.spyOn(MockWorker.prototype, "postMessage").mockImplementation(() => {
+      throw new Error("Could not post request")
+    })
+
+    const promise = analyzeRegexInWorker(request, new AbortController().signal)
+    const result = promise.catch((error: unknown) => error)
+    const worker = MockWorker.instances[0]!
+
+    expect(await result).toMatchObject({ message: "Could not post request" })
+    expect(worker.terminated).toBe(true)
   })
 
   it("rejects worker failures and terminates the worker", async () => {

@@ -64,7 +64,7 @@ function SummaryCard({
               )}
             </Badge>
           </div>
-        ) : (
+        ) : analysisErrorMessage ? null : (
           <p className="text-sm text-muted-foreground">
             {isAnalyzing
               ? messages.analysisLoadingLabel

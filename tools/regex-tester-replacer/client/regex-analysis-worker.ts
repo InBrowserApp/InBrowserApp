@@ -22,17 +22,11 @@ function analyzeRegexInWorker(
       new URL("../workers/regex-analysis.worker.ts", import.meta.url),
       { type: "module" }
     )
-    let active = true
     const timeoutId = setTimeout(() => {
       fail(new Error(REGEX_ANALYSIS_TIMEOUT_ERROR))
     }, REGEX_ANALYSIS_TIMEOUT_MS)
 
     function cleanup() {
-      if (!active) {
-        return
-      }
-
-      active = false
       clearTimeout(timeoutId)
       signal.removeEventListener("abort", handleAbort)
       worker.removeEventListener("message", handleMessage)
