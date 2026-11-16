@@ -1,4 +1,4 @@
-import { useEffectEvent, useMemo, useRef, useState } from "react"
+import { useEffect, useEffectEvent, useMemo, useRef, useState } from "react"
 
 import type { NotificationPermissionState, TimerMessages } from "../types"
 
@@ -38,18 +38,16 @@ function useTimerAlerts({
 }: UseTimerAlertsArgs) {
   const audioContextRef = useRef<AudioContext | null>(null)
   const [notificationPermission, setNotificationPermission] =
-    useState<NotificationPermissionState>(getInitialNotificationPermission)
+    useState<NotificationPermissionState>("unsupported")
+  const [soundSupported, setSoundSupported] = useState(false)
+  const [vibrationSupported, setVibrationSupported] = useState(false)
 
-  const soundSupported = useMemo(
-    () => Boolean(getAudioContextConstructor()),
-    []
-  )
-  const vibrationSupported = useMemo(
-    () =>
-      typeof navigator !== "undefined" &&
-      typeof navigator.vibrate === "function",
-    []
-  )
+  useEffect(() => {
+    setNotificationPermission(getInitialNotificationPermission())
+    setSoundSupported(Boolean(getAudioContextConstructor()))
+    setVibrationSupported(typeof navigator.vibrate === "function")
+  }, [])
+
   const notificationSupported = notificationPermission !== "unsupported"
   const showNotificationRequestButton =
     notificationSupported &&

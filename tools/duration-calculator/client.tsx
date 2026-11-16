@@ -49,9 +49,12 @@ function DurationCalculatorClient({ messages }: DurationCalculatorClientProps) {
   const [durationIsoInput, setDurationIsoInput] = useState(DEFAULT_DURATION_ISO)
   const [durationParts, setDurationParts] = useState(DEFAULT_DURATION_PARTS)
 
-  const timeZoneOptions = useMemo(() => buildTimeZoneOptions(Date.now()), [])
+  const [timeZoneOptions, setTimeZoneOptions] = useState<
+    ReturnType<typeof buildTimeZoneOptions>
+  >([])
 
   useEffect(() => {
+    setTimeZoneOptions(buildTimeZoneOptions(Date.now()))
     const restoredTimeZone = readStoredString(
       STORAGE_KEYS.baseTimeZone,
       getDefaultTimeZone(DEFAULT_BASE_TIME_ZONE)

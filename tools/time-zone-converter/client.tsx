@@ -42,17 +42,20 @@ function resolveDefaultTimeZones() {
 }
 
 function TimeZoneConverterClient({ messages }: TimeZoneConverterClientProps) {
-  const defaults = useMemo(() => resolveDefaultTimeZones(), [])
   const [hasRestoredState, setHasRestoredState] = useState(false)
   const [fromInput, setFromInput] = useState("")
   const [toInput, setToInput] = useState("")
-  const [fromTimeZone, setFromTimeZone] = useState<string>(defaults.from)
-  const [toTimeZone, setToTimeZone] = useState<string>(defaults.to)
+  const [fromTimeZone, setFromTimeZone] = useState<string>("UTC")
+  const [toTimeZone, setToTimeZone] = useState<string>("UTC")
   const [lastEdited, setLastEdited] = useState<"from" | "to">("from")
 
-  const timeZoneOptions = useMemo(() => buildTimeZoneOptions(Date.now()), [])
+  const [timeZoneOptions, setTimeZoneOptions] = useState<
+    ReturnType<typeof buildTimeZoneOptions>
+  >([])
 
   useEffect(() => {
+    setTimeZoneOptions(buildTimeZoneOptions(Date.now()))
+    const defaults = resolveDefaultTimeZones()
     const restoredFromTimeZone = readStoredString(
       STORAGE_KEYS.fromTimeZone,
       defaults.from
@@ -83,7 +86,7 @@ function TimeZoneConverterClient({ messages }: TimeZoneConverterClientProps) {
       )
     )
     setHasRestoredState(true)
-  }, [defaults.from, defaults.to])
+  }, [])
 
   useEffect(() => {
     if (!hasRestoredState) {
