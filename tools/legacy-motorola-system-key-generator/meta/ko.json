@@ -1,0 +1,4 @@
+{
+  "name": "레거시 Motorola 시스템 키 생성기",
+  "description": "브라우저에서 레거시 Motorola 소프트웨어 시스템 키(.KEY) 파일을 생성하세요. 이 형식은 ASTRO 25, XTS5000, APX 또는 Advanced System Keys를 지원하지 않습니다."
+}

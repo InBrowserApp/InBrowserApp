@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "Legacy Format Only",
+  "compatibilityDescription": "Generates the BatLabs-derived software key format. Not compatible with ASTRO 25 Portable CPS (including XTS5000), APX CPS, or Advanced System Keys (ASK).",
+  "inputTitle": "System ID",
+  "inputDescription": "Enter the ID of a legacy Motorola trunking system.",
+  "systemIdLabel": "System ID (Hex)",
+  "systemIdHelp": "Use 1–4 hexadecimal digits (0–9, A–F). Short IDs are padded with leading zeros.",
+  "invalidSystemId": "Enter 1–4 hexadecimal digits (0–9, A–F), without a 0x prefix.",
+  "outputTitle": "Legacy Key File",
+  "emptyState": "Enter a System ID to preview and download your .KEY file.",
+  "normalizedIdLabel": "Normalized ID",
+  "filenameLabel": "Filename",
+  "fileSizeLabel": "File Size",
+  "fileSizeValue": "27 bytes",
+  "hexPreviewLabel": "Hexadecimal Preview",
+  "downloadLabel": "Download .KEY",
+  "sourceLabel": "Reference Implementation",
+  "licenseLabel": "ISC License"
+}

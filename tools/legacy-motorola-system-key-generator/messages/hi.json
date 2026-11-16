@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "केवल लेगेसी फ़ॉर्मैट",
+  "compatibilityDescription": "BatLabs पर आधारित सॉफ़्टवेयर कुंजी फ़ॉर्मैट में फ़ाइलें बनाता है। ASTRO 25 Portable CPS (XTS5000 सहित), APX CPS या Advanced System Keys (ASK) के साथ संगत नहीं है।",
+  "inputTitle": "सिस्टम ID",
+  "inputDescription": "पुराने Motorola ट्रंकिंग सिस्टम का ID दर्ज करें।",
+  "systemIdLabel": "सिस्टम ID (हेक्स)",
+  "systemIdHelp": "1–4 हेक्साडेसिमल अंक (0–9, A–F) इस्तेमाल करें। छोटे ID के शुरू में शून्य जोड़े जाते हैं।",
+  "invalidSystemId": "0x उपसर्ग के बिना 1–4 हेक्साडेसिमल अंक (0–9, A–F) दर्ज करें।",
+  "outputTitle": "लेगेसी कुंजी फ़ाइल",
+  "emptyState": "अपनी .KEY फ़ाइल का पूर्वावलोकन करने और उसे डाउनलोड करने के लिए सिस्टम ID दर्ज करें।",
+  "normalizedIdLabel": "मानकीकृत ID",
+  "filenameLabel": "फ़ाइल का नाम",
+  "fileSizeLabel": "फ़ाइल का आकार",
+  "fileSizeValue": "27 बाइट",
+  "hexPreviewLabel": "हेक्साडेसिमल पूर्वावलोकन",
+  "downloadLabel": ".KEY डाउनलोड करें",
+  "sourceLabel": "संदर्भ कार्यान्वयन",
+  "licenseLabel": "ISC लाइसेंस"
+}

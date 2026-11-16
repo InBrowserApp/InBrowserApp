@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "Ancien format uniquement",
+  "compatibilityDescription": "Génère le format de clé logicielle dérivé de BatLabs. Incompatible avec ASTRO 25 Portable CPS (y compris XTS5000), APX CPS et les Advanced System Keys (ASK).",
+  "inputTitle": "Identifiant système",
+  "inputDescription": "Saisissez l’identifiant d’un système radio Motorola à ressources partagées d’ancienne génération.",
+  "systemIdLabel": "Identifiant système (hex.)",
+  "systemIdHelp": "Utilisez 1–4 chiffres hexadécimaux (0–9, A–F). Les identifiants courts sont complétés par des zéros à gauche.",
+  "invalidSystemId": "Saisissez 1–4 chiffres hexadécimaux (0–9, A–F), sans préfixe 0x.",
+  "outputTitle": "Fichier de clé ancien format",
+  "emptyState": "Saisissez un identifiant système pour prévisualiser et télécharger votre fichier .KEY.",
+  "normalizedIdLabel": "Identifiant normalisé",
+  "filenameLabel": "Nom du fichier",
+  "fileSizeLabel": "Taille du fichier",
+  "fileSizeValue": "27 octets",
+  "hexPreviewLabel": "Aperçu hexadécimal",
+  "downloadLabel": "Télécharger .KEY",
+  "sourceLabel": "Implémentation de référence",
+  "licenseLabel": "Licence ISC"
+}

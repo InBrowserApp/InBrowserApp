@@ -265,6 +265,6 @@ Workers Versions:
 
 ## Environment
 
-- Package manager: `pnpm@10.33.0`
-- Node: `>=20`
+- Package manager: `pnpm@12.21.0`
+- Node: `>=20.20.2`
 - TypeScript is strict across the workspace.

@@ -1,4 +1,4 @@
 {
-  "name": "Code Screenshot Generator",
+  "name": "代码截图生成器",
   "description": "生成带语法高亮的代码截图，并导出为 SVG、PNG、JPEG、WebP 或 HTML。"
 }

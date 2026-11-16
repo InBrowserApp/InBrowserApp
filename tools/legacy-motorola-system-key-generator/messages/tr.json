@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "Yalnızca Eski Nesil Biçim",
+  "compatibilityDescription": "BatLabs'ten türetilen yazılım anahtarı biçiminde dosyalar oluşturur. ASTRO 25 Portable CPS (XTS5000 dahil), APX CPS veya Advanced System Keys (ASK) ile uyumlu değildir.",
+  "inputTitle": "Sistem Kimliği",
+  "inputDescription": "Eski nesil bir Motorola trunk telsiz sisteminin kimliğini girin.",
+  "systemIdLabel": "Sistem Kimliği (Hex)",
+  "systemIdHelp": "1–4 onaltılık basamak (0–9, A–F) kullanın. Kısa kimliklerin başına sıfır eklenir.",
+  "invalidSystemId": "0x öneki olmadan 1–4 onaltılık basamak (0–9, A–F) girin.",
+  "outputTitle": "Eski Nesil Anahtar Dosyası",
+  "emptyState": ".KEY dosyanızı önizlemek ve indirmek için bir Sistem Kimliği girin.",
+  "normalizedIdLabel": "Normalleştirilmiş Kimlik",
+  "filenameLabel": "Dosya Adı",
+  "fileSizeLabel": "Dosya Boyutu",
+  "fileSizeValue": "27 bayt",
+  "hexPreviewLabel": "Onaltılık Önizleme",
+  "downloadLabel": ".KEY İndir",
+  "sourceLabel": "Referans Uygulama",
+  "licenseLabel": "ISC Lisansı"
+}

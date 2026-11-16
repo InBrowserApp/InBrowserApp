@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "เฉพาะรูปแบบรุ่นเก่า",
+  "compatibilityDescription": "สร้างคีย์แบบซอฟต์แวร์ในรูปแบบที่อ้างอิงจาก BatLabs ใช้ไม่ได้กับ ASTRO 25 Portable CPS (รวมถึง XTS5000), APX CPS หรือ Advanced System Keys (ASK)",
+  "inputTitle": "ID ระบบ",
+  "inputDescription": "ป้อน ID ของระบบวิทยุทรังก์ Motorola รุ่นเก่า",
+  "systemIdLabel": "ID ระบบ (ฐานสิบหก)",
+  "systemIdHelp": "ใช้เลขฐานสิบหก 1–4 หลัก (0–9, A–F) โดยจะเติมศูนย์ด้านหน้าให้ ID ที่สั้นกว่า",
+  "invalidSystemId": "ป้อนเลขฐานสิบหก 1–4 หลัก (0–9, A–F) โดยไม่มีคำนำหน้า 0x",
+  "outputTitle": "ไฟล์คีย์รุ่นเก่า",
+  "emptyState": "ป้อน ID ระบบเพื่อดูตัวอย่างและดาวน์โหลดไฟล์ .KEY ของคุณ",
+  "normalizedIdLabel": "ID ที่ปรับรูปแบบแล้ว",
+  "filenameLabel": "ชื่อไฟล์",
+  "fileSizeLabel": "ขนาดไฟล์",
+  "fileSizeValue": "27 ไบต์",
+  "hexPreviewLabel": "ตัวอย่างเลขฐานสิบหก",
+  "downloadLabel": "ดาวน์โหลด .KEY",
+  "sourceLabel": "โค้ดอ้างอิง",
+  "licenseLabel": "สัญญาอนุญาต ISC"
+}

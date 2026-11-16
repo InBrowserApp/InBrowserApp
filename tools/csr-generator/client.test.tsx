@@ -132,11 +132,10 @@ describe("CsrGeneratorClient", () => {
       screen.getByRole("button", { name: messages.generateLabel })
     )
 
-    await waitFor(() => {
-      expect(generateMock).toHaveBeenCalledTimes(1)
-    })
+    const csrOutput = await screen.findByLabelText(messages.csrTitle)
 
-    expect(screen.getByLabelText(messages.csrTitle)).toHaveProperty(
+    expect(generateMock).toHaveBeenCalledTimes(1)
+    expect(csrOutput).toHaveProperty(
       "value",
       "-----BEGIN CERTIFICATE REQUEST-----\nMIIBcjCC\n-----END CERTIFICATE REQUEST-----\n"
     )

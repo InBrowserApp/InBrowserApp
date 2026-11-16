@@ -7,6 +7,7 @@
   "syntaxTitle": "Syntax",
   "syntaxDescription": "Choose highlighting, language detection, and color theme.",
   "languageLabel": "Language",
+  "languageAuto": "Auto-detect",
   "renderModeLabel": "Rendering",
   "renderHighlight": "Highlight",
   "renderPlain": "Plain",
