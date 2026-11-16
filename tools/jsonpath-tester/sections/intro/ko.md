@@ -1,11 +1,11 @@
-## Overview
+## 개요
 
-JSONPath 테스트기 lets you run JSONPath queries against JSON data directly in the browser and inspect both the matched values and the matched paths side by side.
+JSONPath 테스트기를 사용하면 브라우저에서 JSON 데이터에 JSONPath 쿼리를 직접 실행하고 일치하는 값과 경로를 나란히 확인할 수 있습니다.
 
-## When To Use It
+## 활용 시점
 
-Use it when you need to prototype a JSONPath query, debug a selector against real payloads, or verify exactly which parts of a JSON document a query is matching.
+JSONPath 쿼리를 시험하거나, 실제 페이로드로 선택자를 디버깅하거나, 쿼리가 JSON 문서의 어느 부분과 정확히 일치하는지 확인해야 할 때 사용하세요.
 
-## How It Works
+## 작동 방식
 
-The tool validates the JSON input first, then evaluates the JSONPath query and keeps both result modes available in the same output panel so you can switch between values and paths without rerunning anything.
+먼저 입력한 JSON을 검증한 다음 JSONPath 쿼리를 평가합니다. 같은 출력 패널에서 두 결과 모드를 모두 제공하므로 쿼리를 다시 실행하지 않고도 값과 경로 사이를 전환할 수 있습니다.

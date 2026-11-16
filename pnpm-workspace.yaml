@@ -135,6 +135,7 @@ catalog:
   reflect-metadata: ^0.2.2
   react: ^19.3.1
   react-dom: ^19.3.1
+  react-image-crop: 11.1.2
   shadcn: ^4.23.0
   sm-crypto: ^0.5.8
   smol-toml: ^1.9.1

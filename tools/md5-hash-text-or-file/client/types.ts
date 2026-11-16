@@ -3,6 +3,8 @@ type Md5HashTextOrFileMessages = Readonly<{
   plainTextLabel: string
   plainTextDescription: string
   importFromFileLabel: string
+  fileHashError: string
+  textHashError: string
   hashResultLabel: string
   hashResultDescription: string
   hexLabel: string

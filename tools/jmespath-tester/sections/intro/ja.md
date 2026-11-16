@@ -1,18 +1,11 @@
-## What It Does
+## 機能
 
-JMESPath テスター lets you run a JMESPath expression against JSON data directly
-in the browser. You can inspect the matched result, copy it, or download it as
-formatted JSON without leaving the page.
+JMESPath テスターでは、ブラウザー内でJSONデータに対してJMESPath式を実行できます。ページを移動せずに、一致した結果を確認し、コピーしたり、整形済みのJSONとしてダウンロードしたりできます。
 
-## When To Use It
+## 使用する場面
 
-Use it when you need to prototype a JMESPath query, debug a filter expression,
-or verify exactly which values a JSON query will return before you embed that
-expression somewhere else.
+JMESPathクエリを試作したいとき、フィルター式をデバッグしたいときや、式を他の場所に組み込む前にJSONクエリがどの値を返すのか正確に確認したいときに使います。
 
-## What To Expect
+## 出力について
 
-The tool validates the JSON input first, then evaluates the JMESPath
-expression. If either side is invalid, the error is surfaced immediately. When
-the query succeeds, the result is formatted as JSON and the result count is
-shown alongside the output.
+このツールはまずJSON入力を検証してから、JMESPath式を評価します。入力または式が無効な場合は、すぐにエラーを表示します。クエリが成功すると、結果をJSONとして整形し、出力とともに結果件数を表示します。

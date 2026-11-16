@@ -1,6 +1,6 @@
 {
   "use-current": "ใช้ User-Agent ของฉัน",
-  "input-label": "User Agent",
+  "input-label": "ตัวแทนผู้ใช้",
   "input-placeholder": "วางสตริง User-Agent ที่นี่...",
   "input-error": "กรุณากรอกสตริง User-Agent เพื่อวิเคราะห์",
   "json-output": "เอาต์พุต JSON",

@@ -1,6 +1,6 @@
 ## Wat deze tool doet
 
-Met PDF Splitter kun je een PDF in je browser openen, pagina's kiezen op bereik
+Met PDF-splitter kun je een PDF in je browser openen, pagina's kiezen op bereik
 of paginanummer, en een kleiner document genereren. Je kunt geselecteerde
 pagina's naar één PDF extraheren, elk ingevoerd bereik naar een aparte PDF
 splitsen, of elke geselecteerde pagina naar een eigen bestand splitsen en de

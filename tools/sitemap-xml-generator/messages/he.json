@@ -19,7 +19,7 @@
   "addUrlEntryLabel": "הוסף רשומת URL",
   "sitemapEntriesLabel": "קובצי sitemap",
   "sitemapEntriesDescription": "כל שורה הופכת לרשומת <sitemap> באינדקס.",
-  "sitemapEntryLabel": "Sitemap {index}",
+  "sitemapEntryLabel": "מפת אתר {index}",
   "addSitemapEntryLabel": "הוסף רשומת sitemap",
   "removeEntryLabel": "הסר",
   "locationLabel": "מיקום",

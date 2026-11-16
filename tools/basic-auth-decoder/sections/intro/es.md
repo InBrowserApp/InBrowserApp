@@ -1,14 +1,14 @@
-## What It Does
+## Qué hace
 
 Decodifica el encabezado HTTP Basic Authorization para extraer usuario y contraseña desde Base64. Útil para depuración y pruebas de API.
 
-## Accepted Input
+## Entradas aceptadas
 
 Pega algo como: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+Esta herramienta también acepta una línea completa `Authorization: Basic ...`.
 
-## Notes
+## Notas
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- Base64 solo codifica las credenciales; no las protege.
+- El decodificador divide el contenido en el primer `:` y conserva el resto en la contraseña.
+- Todo se ejecuta localmente en tu navegador.

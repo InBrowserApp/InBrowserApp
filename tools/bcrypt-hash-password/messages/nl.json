@@ -24,6 +24,6 @@
   "costValueLabel": "Cost",
   "saltLabel": "Salt",
   "checksumLabel": "Checksum",
-  "generatedSummary": "Cost {cost}",
+  "generatedSummary": "Kostenfactor {cost}",
   "privacyNote": "Het wachtwoord wordt nooit opgeslagen en het hashen gebeurt in deze browser."
 }

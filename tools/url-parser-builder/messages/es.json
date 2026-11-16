@@ -45,7 +45,7 @@
   "loadSampleLabel": "Cargar ejemplo",
   "resetLabel": "Restablecer editor",
   "protocolPlaceholder": "https",
-  "hostnamePlaceholder": "example.com or api.internal",
+  "hostnamePlaceholder": "example.com o api.internal",
   "portPlaceholder": "443",
   "pathPlaceholder": "/products/blue mug",
   "fragmentPlaceholder": "reviews",

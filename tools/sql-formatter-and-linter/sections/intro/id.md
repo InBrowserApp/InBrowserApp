@@ -1,6 +1,6 @@
-## Apa Itu SQL Formatter & Linter?
+## Apa Itu Pemformat & Pemeriksa SQL?
 
-SQL Formatter & Linter memformat ulang kueri SQL di browser Anda dan sekaligus memeriksanya untuk sekumpulan kecil masalah yang bernilai tinggi. Ini berguna saat Anda ingin tata letak kueri yang lebih rapi, kapitalisasi kata kunci yang konsisten, dan umpan balik cepat tentang pola berisiko seperti `SELECT *` atau pernyataan `UPDATE` tanpa klausa `WHERE`.
+Pemformat & Pemeriksa SQL memformat ulang kueri SQL di browser Anda dan sekaligus memeriksanya untuk sekumpulan kecil masalah yang bernilai tinggi. Ini berguna saat Anda ingin tata letak kueri yang lebih rapi, kapitalisasi kata kunci yang konsisten, dan umpan balik cepat tentang pola berisiko seperti `SELECT *` atau pernyataan `UPDATE` tanpa klausa `WHERE`.
 
 ## Kapan Menggunakannya
 

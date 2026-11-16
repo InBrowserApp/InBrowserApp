@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "Параметры",
   "optionsDescription": "Выберите формат штрихкода и настройте размер, подписи и цвета.",
   "preview": "Preview",
-  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
-  "download": "Download",
+  "previewDescription": "Проверьте созданный штрихкод и экспортируйте его в PNG, SVG, JPEG или WebP.",
+  "download": "Скачать",
   "text": "Текст",
   "textPlaceholder": "Введите данные...",
   "format": "Формат",
@@ -20,5 +20,6 @@
   "center": "По центру",
   "right": "Справа",
   "top": "Сверху",
-  "bottom": "Снизу"
+  "bottom": "Снизу",
+  "renderError": "Не удалось отобразить штрихкод."
 }

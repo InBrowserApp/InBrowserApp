@@ -1,11 +1,11 @@
-## Overview
+## סקירה כללית
 
-בודק JSONPath lets you run JSONPath queries against JSON data directly in the browser and inspect both the matched values and the matched paths side by side.
+בודק JSONPath מאפשר להריץ שאילתות JSONPath מול נתוני JSON ישירות בדפדפן ולבדוק את הערכים התואמים ואת הנתיבים התואמים זה לצד זה.
 
-## When To Use It
+## מתי להשתמש בו
 
-Use it when you need to prototype a JSONPath query, debug a selector against real payloads, or verify exactly which parts of a JSON document a query is matching.
+השתמשו בו כשעליכם לנסות שאילתת JSONPath, לנפות שגיאות בבורר מול מטעני נתונים אמיתיים או לוודא בדיוק לאילו חלקים במסמך JSON השאילתה מתאימה.
 
-## How It Works
+## איך זה עובד
 
-The tool validates the JSON input first, then evaluates the JSONPath query and keeps both result modes available in the same output panel so you can switch between values and paths without rerunning anything.
+הכלי מאמת תחילה את קלט ה־JSON, ואז מחשב את שאילתת ה־JSONPath ומשאיר את שני מצבי התוצאות זמינים באותו לוח פלט, כך שאפשר לעבור בין ערכים לנתיבים בלי להריץ דבר מחדש.

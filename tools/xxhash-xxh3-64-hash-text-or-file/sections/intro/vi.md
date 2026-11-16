@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 64)?
+## xxHash (XXH3 64) là gì?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 64 outputs a 64-bit (8-byte) hash value, typically rendered as a 16-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3 là thuật toán xxHash hiện đại được thiết kế để có tốc độ rất cao và khả năng phân bố tốt. XXH3 64 tạo giá trị băm 64 bit (8 byte), thường được biểu diễn dưới dạng chuỗi thập lục phân dài 16 ký tự. Đây là hàm băm phi mật mã và hỗ trợ giá trị khởi tạo tùy chọn để có thể lặp lại kết quả băm.
 
-**Key characteristics:**
+**Đặc điểm chính:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **Cực nhanh**: Tối ưu hiệu năng cho đầu vào lớn
+- **Tính xác định**: Cùng đầu vào và giá trị khởi tạo luôn tạo ra cùng mã băm
+- **Phi mật mã**: Không phù hợp cho mục đích bảo mật
+- **Phân bố tốt**: Rất phù hợp cho bảng băm và lập chỉ mục
+- **Có giá trị khởi tạo**: Giá trị khởi tạo tùy chọn giúp đa dạng hóa đầu ra băm
 
-**Common uses:**
+**Ứng dụng phổ biến:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- Bảng băm và cấu trúc dữ liệu
+- Kiểm tra tính toàn vẹn tệp (không phục vụ bảo mật)
+- Loại bỏ dữ liệu trùng lặp và chia khối
+- Khóa bộ nhớ đệm và lập chỉ mục cơ sở dữ liệu
+- Quy trình xử lý dữ liệu thông lượng cao

@@ -9294,6 +9294,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-cropper",
+    language: "ar",
+  },
+  {
+    slug: "image-cropper",
+    language: "de",
+  },
+  {
+    slug: "image-cropper",
+    language: "en",
+  },
+  {
+    slug: "image-cropper",
+    language: "es",
+  },
+  {
+    slug: "image-cropper",
+    language: "fr",
+  },
+  {
+    slug: "image-cropper",
+    language: "he",
+  },
+  {
+    slug: "image-cropper",
+    language: "hi",
+  },
+  {
+    slug: "image-cropper",
+    language: "id",
+  },
+  {
+    slug: "image-cropper",
+    language: "it",
+  },
+  {
+    slug: "image-cropper",
+    language: "ja",
+  },
+  {
+    slug: "image-cropper",
+    language: "ko",
+  },
+  {
+    slug: "image-cropper",
+    language: "ms",
+  },
+  {
+    slug: "image-cropper",
+    language: "nl",
+  },
+  {
+    slug: "image-cropper",
+    language: "no",
+  },
+  {
+    slug: "image-cropper",
+    language: "pl",
+  },
+  {
+    slug: "image-cropper",
+    language: "pt",
+  },
+  {
+    slug: "image-cropper",
+    language: "ru",
+  },
+  {
+    slug: "image-cropper",
+    language: "sv",
+  },
+  {
+    slug: "image-cropper",
+    language: "th",
+  },
+  {
+    slug: "image-cropper",
+    language: "tr",
+  },
+  {
+    slug: "image-cropper",
+    language: "vi",
+  },
+  {
+    slug: "image-cropper",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-cropper",
+    language: "zh-TW",
+  },
+  {
     slug: "image-metadata-cleaner",
     language: "ar",
   },
@@ -10211,6 +10303,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "image-viewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "image-watermark",
+    language: "ar",
+  },
+  {
+    slug: "image-watermark",
+    language: "de",
+  },
+  {
+    slug: "image-watermark",
+    language: "en",
+  },
+  {
+    slug: "image-watermark",
+    language: "es",
+  },
+  {
+    slug: "image-watermark",
+    language: "fr",
+  },
+  {
+    slug: "image-watermark",
+    language: "he",
+  },
+  {
+    slug: "image-watermark",
+    language: "hi",
+  },
+  {
+    slug: "image-watermark",
+    language: "id",
+  },
+  {
+    slug: "image-watermark",
+    language: "it",
+  },
+  {
+    slug: "image-watermark",
+    language: "ja",
+  },
+  {
+    slug: "image-watermark",
+    language: "ko",
+  },
+  {
+    slug: "image-watermark",
+    language: "ms",
+  },
+  {
+    slug: "image-watermark",
+    language: "nl",
+  },
+  {
+    slug: "image-watermark",
+    language: "no",
+  },
+  {
+    slug: "image-watermark",
+    language: "pl",
+  },
+  {
+    slug: "image-watermark",
+    language: "pt",
+  },
+  {
+    slug: "image-watermark",
+    language: "ru",
+  },
+  {
+    slug: "image-watermark",
+    language: "sv",
+  },
+  {
+    slug: "image-watermark",
+    language: "th",
+  },
+  {
+    slug: "image-watermark",
+    language: "tr",
+  },
+  {
+    slug: "image-watermark",
+    language: "vi",
+  },
+  {
+    slug: "image-watermark",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-watermark",
     language: "zh-TW",
   },
   {
@@ -16191,6 +16375,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "pdf-viewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ar",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "de",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "en",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "es",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "fr",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "he",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "hi",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "id",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "it",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ja",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ko",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ms",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "nl",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "no",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "pl",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "pt",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ru",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "sv",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "th",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "tr",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "vi",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-watermark",
     language: "zh-TW",
   },
   {

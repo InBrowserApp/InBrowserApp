@@ -10,9 +10,9 @@
   "outputPlaceholder": "Output Base58 akan dipaparkan di sini...",
   "download": "Muat turun Base58",
   "readFailed": "Gagal membaca fail",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Muatkan contoh",
+  "clearLabel": "Kosongkan",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin",
   "importFromFileLabel": "Import dari fail"
 }

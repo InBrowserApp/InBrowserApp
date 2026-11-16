@@ -10,5 +10,7 @@
   "decimalLabel": "十进制",
   "binaryLabel": "二进制",
   "copyResultLabel": "复制结果",
-  "copiedLabel": "已复制"
+  "copiedLabel": "已复制",
+  "fileHashError": "文件哈希计算失败。",
+  "textHashError": "文本哈希计算失败。"
 }

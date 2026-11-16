@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "生成的二维码"
+  "qrAlt": "生成的二维码",
+  "renderError": "二维码渲染失败。"
 }

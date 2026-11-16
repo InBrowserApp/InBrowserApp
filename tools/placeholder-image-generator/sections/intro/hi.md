@@ -1,27 +1,25 @@
-## What this tool does
+## यह टूल क्या करता है
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+यह प्लेसहोल्डर इमेज जनरेटर सीधे आपके ब्राउज़र में कस्टम आकार, एक समान रंग या
+ग्रेडिएंट और बीच में टेक्स्ट वाली साफ़ नमूना इमेज बनाता है। आप हर प्लेसहोल्डर को
+PNG, SVG, JPEG या WebP में निर्यात कर सकते हैं, जिनमें Retina के अनुकूल 2x और
+3x संस्करण भी शामिल हैं।
 
-## Why it helps
+## यह क्यों उपयोगी है
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+इसे डिज़ाइन मॉकअप, CMS की शुरुआती सामग्री, खाली अवस्थाओं, सोशल मीडिया लेआउट
+की योजना या API प्लेसहोल्डर के लिए इस्तेमाल करें। जब डिज़ाइन ऐप खोले बिना तय
+आकार और शैली वाली इमेज जल्दी चाहिए हो, तब यह उपयोगी है।
 
-## How it works
+## यह कैसे काम करता है
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+प्रीसेट चुनें या अपनी चौड़ाई और ऊंचाई दर्ज करें। एक समान रंग या ग्रेडिएंट चुनें,
+ज़रूरत होने पर अपना टेक्स्ट जोड़ें, फिर टेक्स्ट का आकार, निर्यात स्केल और गुणवत्ता
+बदलें। प्रीव्यू तुरंत अपडेट होता है, ताकि आप अपने काम के लिए उपयुक्त प्रारूप डाउनलोड कर सकें।
 
-## Tips for better placeholders
+## बेहतर प्लेसहोल्डर के लिए सुझाव
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- यदि आप चाहते हैं कि टूल आयाम अपने आप दिखाए, तो टेक्स्ट फ़ील्ड खाली छोड़ दें।
+- मुख्य बैनर के लिए ग्रेडिएंट और सामान्य प्लेसहोल्डर के लिए एक समान रंग इस्तेमाल करें।
+- स्पष्ट और किसी भी आकार में इस्तेमाल की जा सकने वाली इमेज के लिए SVG निर्यात करें।
+  रास्टर फ़ाइल चाहिए हो, तो PNG, JPEG या WebP चुनें।

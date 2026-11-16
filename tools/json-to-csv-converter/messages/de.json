@@ -16,5 +16,5 @@
   "quoteCharLabel": "Anführungszeichen",
   "includeHeaderRowLabel": "Kopfzeile einschließen",
   "escapeFormulaeLabel": "Excel-Formeln maskieren",
-  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+  "escapeFormulaeTooltip": "Stellt Werten, die mit =, +, - oder @ beginnen, ein Präfix voran, damit Tabellenkalkulationen sie als Text statt als Formeln behandeln."
 }

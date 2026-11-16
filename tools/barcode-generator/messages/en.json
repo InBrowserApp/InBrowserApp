@@ -20,5 +20,6 @@
   "center": "Center",
   "right": "Right",
   "top": "Top",
-  "bottom": "Bottom"
+  "bottom": "Bottom",
+  "renderError": "Failed to render barcode."
 }

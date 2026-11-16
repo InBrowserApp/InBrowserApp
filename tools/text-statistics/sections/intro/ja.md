@@ -1,11 +1,11 @@
-## Why this tool feels different
+## このツールの特徴
 
-Text Statistics should do more than count words. This version treats the page like a live writing desk: it measures length, rhythm, repetition, and structure the moment you paste a draft.
+テキスト統計は単語を数えるだけではありません。文章を貼り付けると、長さ、リズム、繰り返し、構成をその場で分析する執筆用ダッシュボードです。
 
-## What it measures
+## 測定項目
 
-You get the core counts you expect, then the signals that actually help editing: unique words, average sentence length, lexical diversity, longest paragraph, and repeated terms. When the browser supports `Intl.Segmenter`, these numbers are segmented in a way that works better across writing systems.
+基本的な文字数などに加え、一意な単語、平均文長、語彙の多様性、最長段落、繰り返し語句など、編集に役立つ指標を表示します。ブラウザーが`Intl.Segmenter`に対応している場合、さまざまな文字体系に適した方法で分割します。
 
-## When to use it
+## 使用する場面
 
-Use it before publishing landing-page copy, product descriptions, scripts, newsletters, bios, or meeting summaries. It is especially useful when something feels too wordy, too repetitive, or too dense, but you need a fast clue about why.
+ランディングページ、商品説明、台本、ニュースレター、プロフィール、会議の要約などを公開する前に使えます。文章が長すぎる、繰り返しが多い、または密度が高いと感じたとき、原因をすばやく把握するのに便利です。

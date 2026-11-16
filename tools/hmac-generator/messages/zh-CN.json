@@ -14,5 +14,7 @@
   "hexLabel": "十六进制",
   "base64Label": "Base64",
   "copyResultLabel": "复制结果",
-  "copiedLabel": "已复制"
+  "copiedLabel": "已复制",
+  "fileGenerationError": "无法为文件生成 HMAC 输出。",
+  "textGenerationError": "无法为输入文本生成 HMAC 输出。"
 }

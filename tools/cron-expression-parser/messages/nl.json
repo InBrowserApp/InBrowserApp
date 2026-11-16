@@ -1,6 +1,6 @@
 {
   "meta": {
-    "name": "Cron Expression Parser",
+    "name": "Cron-expressieparser",
     "description": "Ontleed, valideer en verklaar cron-schema's met velddetails en aankomende uitvoeringstijden."
   },
   "input": {

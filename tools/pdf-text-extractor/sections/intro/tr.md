@@ -1,6 +1,6 @@
 ## Bu araç ne yapar
 
-PDF Text Extractor, bir PDF'yi tarayıcınızda okur ve belgenin içinde zaten
+PDF Metin Çıkarıcı, bir PDF'yi tarayıcınızda okur ve belgenin içinde zaten
 seçilebilir olan metni çıkarır. Çıktı; notlar, arama dizinleme, veri inceleme
 veya sonraki işlemler için kopyalayabileceğiniz ya da TXT dosyası olarak
 indirebileceğiniz düz metindir.

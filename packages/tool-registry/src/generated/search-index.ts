@@ -155,7 +155,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "فكّ تشفير أغلفة JSON الخاصة بـ AES من InBrowser.App باستخدام كلمة المرور الأصلية أو مفتاح سداسي عشري خام.",
       },
       de: {
-        name: "AES Decryptor",
+        name: "AES-Entschlüsselung",
         description:
           "Entschlüsseln Sie AES-JSON-Hüllen von InBrowser.App mit dem ursprünglichen Passwort oder einem rohen hexadezimalen Schlüssel.",
       },
@@ -180,22 +180,22 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "פענחו מעטפות JSON של AES מ-InBrowser.App באמצעות הסיסמה המקורית או מפתח הקסדצימלי גולמי.",
       },
       hi: {
-        name: "AES Decryptor",
+        name: "AES डिक्रिप्टर",
         description:
           "InBrowser.App से मिले AES JSON envelopes को मूल पासवर्ड या कच्ची हेक्साडेसिमल कुंजी से डिक्रिप्ट करें।",
       },
       id: {
-        name: "AES Decryptor",
+        name: "Pendekripsi AES",
         description:
           "Dekripsi envelope JSON AES dari InBrowser.App dengan kata sandi asli atau kunci heksadesimal mentah.",
       },
       it: {
-        name: "AES Decryptor",
+        name: "Decifratore AES",
         description:
           "Decifra envelope JSON AES da InBrowser.App con la password originale o una chiave esadecimale grezza.",
       },
       ja: {
-        name: "AES Decryptor",
+        name: "AES復号ツール",
         description:
           "InBrowser.App の AES JSON エンベロープを、元のパスワードまたは未加工の16進数キーで復号します。",
       },
@@ -210,7 +210,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Nyahsulitkan sampul JSON AES daripada InBrowser.App dengan kata laluan asal atau kunci heksadesimal mentah.",
       },
       nl: {
-        name: "AES Decryptor",
+        name: "AES-ontsleutelaar",
         description:
           "Ontsleutel AES-JSON-enveloppen van InBrowser.App met het oorspronkelijke wachtwoord of een ruwe hexadecimale sleutel.",
       },
@@ -230,7 +230,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Descriptografe envelopes JSON AES do InBrowser.App com a senha original ou uma chave hexadecimal bruta.",
       },
       ru: {
-        name: "AES Decryptor",
+        name: "Расшифрование AES",
         description:
           "Расшифровывайте AES JSON-конверты из InBrowser.App с исходным паролем или необработанным шестнадцатеричным ключом.",
       },
@@ -289,7 +289,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "شفّر النصوص أو الملفات في متصفحك باستخدام AES-GCM أو AES-CBC أو AES-CTR مع مفتاح مشتق من كلمة مرور أو مفتاح خام بالنظام الست عشري.",
       },
       de: {
-        name: "AES Encryptor",
+        name: "AES-Verschlüsselung",
         description:
           "Verschluesseln Sie Text oder Dateien in Ihrem Browser mit AES-GCM, AES-CBC oder AES-CTR und einem aus einem Passwort abgeleiteten Schluessel oder einem rohen hexadezimalen Schluessel.",
       },
@@ -314,12 +314,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "הצפינו טקסט או קבצים בדפדפן שלכם עם AES-GCM, AES-CBC, או AES-CTR באמצעות מפתח שנגזר מסיסמה או מפתח הקסדצימלי גולמי.",
       },
       hi: {
-        name: "AES Encryptor",
+        name: "AES एन्क्रिप्टर",
         description:
           "पासवर्ड से निकाली गई कुंजी या कच्ची हेक्साडेसिमल कुंजी का उपयोग करके अपने ब्राउज़र में AES-GCM, AES-CBC, या AES-CTR से टेक्स्ट या फ़ाइलें एन्क्रिप्ट करें।",
       },
       id: {
-        name: "AES Encryptor",
+        name: "Pengenkripsi AES",
         description:
           "Enkripsi teks atau file di browser Anda dengan AES-GCM, AES-CBC, atau AES-CTR menggunakan kunci turunan kata sandi atau kunci heksadesimal mentah.",
       },
@@ -329,7 +329,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Cifra testo o file nel tuo browser con AES-GCM, AES-CBC o AES-CTR usando una chiave derivata da password o una chiave esadecimale grezza.",
       },
       ja: {
-        name: "AES Encryptor",
+        name: "AES暗号化ツール",
         description:
           "パスワードから導出したキー、または未加工の16進数キーを使って、AES-GCM、AES-CBC、AES-CTRでブラウザー内のテキストやファイルを暗号化します。",
       },
@@ -344,7 +344,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Sulitkan teks atau fail dalam pelayar anda dengan AES-GCM, AES-CBC, atau AES-CTR menggunakan kunci yang diterbitkan daripada kata laluan atau kunci heksadesimal mentah.",
       },
       nl: {
-        name: "AES Encryptor",
+        name: "AES-versleutelaar",
         description:
           "Versleutel tekst of bestanden in je browser met AES-GCM, AES-CBC of AES-CTR met een uit een wachtwoord afgeleide sleutel of een ruwe hexadecimale sleutel.",
       },
@@ -364,7 +364,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Criptografe texto ou arquivos no navegador com AES-GCM, AES-CBC ou AES-CTR usando uma chave derivada de senha ou uma chave hexadecimal bruta.",
       },
       ru: {
-        name: "AES Encryptor",
+        name: "Шифрование AES",
         description:
           "Шифруйте текст или файлы в браузере с помощью AES-GCM, AES-CBC или AES-CTR, используя ключ, полученный из пароля, или необработанный шестнадцатеричный ключ.",
       },
@@ -1588,7 +1588,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Nyahkod kod bar dan QR Code daripada fail imej atau suapan kamera langsung, sepenuhnya dalam pelayar anda.",
       },
       nl: {
-        name: "Barcode Reader",
+        name: "Barcodelezer",
         description:
           "Decodeer barcodes en QR Codes uit afbeeldingsbestanden of een live camerabeeld, volledig in je browser.",
       },
@@ -1628,7 +1628,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Görsel dosyalardan veya canlı kamera akışından barkodları ve QR Code'ları tamamen tarayıcınızda çözün.",
       },
       vi: {
-        name: "Barcode Reader",
+        name: "Trình đọc mã vạch",
         description:
           "Giải mã mã vạch và QR Code từ tệp hình ảnh hoặc luồng camera trực tiếp, hoàn toàn trong trình duyệt của bạn.",
       },
@@ -3121,7 +3121,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "צרו גיבובי סיסמאות מסוג bcrypt באופן מקומי עם עלות ניתנת להגדרה, מלחים אקראיים חדשים ופלט מוכן להעתקה למערכות אימות.",
       },
       hi: {
-        name: "Bcrypt Hash Password Generator",
+        name: "Bcrypt पासवर्ड हैश जनरेटर",
         description:
           "कॉन्फ़िगर करने योग्य cost, नए salts, और authentication systems के लिए copy-ready output के साथ bcrypt password hashes स्थानीय रूप से जनरेट करें.",
       },
@@ -4879,7 +4879,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "حلل شهادات X.509 والمفاتيح العامة بصيغ PEM أو DER أو base64 DER. راجع الموضوعات، والجهات المصدرة، وتواريخ الصلاحية، والبصمات، والامتدادات، وتفاصيل المفاتيح محليا في متصفحك.",
       },
       de: {
-        name: "X.509 Certificate & Public Key Parser",
+        name: "Parser für X.509-Zertifikate und öffentliche Schlüssel",
         description:
           "Analysiere X.509 Zertifikate und Public Keys im Format PEM, DER oder base64 DER. Prüfe Subjects, Issuers, Gültigkeitsdaten, Fingerprints, Erweiterungen und Schlüsseldetails lokal in deinem Browser.",
       },
@@ -4919,12 +4919,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Analizza certificati X.509 e chiavi pubbliche in formato PEM, DER o base64 DER. Esamina soggetti, emittenti, date di validita, fingerprint, estensioni e dettagli della chiave localmente nel browser.",
       },
       ja: {
-        name: "X.509 Certificate & Public Key Parser",
+        name: "X.509証明書・公開鍵パーサー",
         description:
           "PEM、DER、base64 DER 形式の X.509 証明書と公開鍵を解析します。サブジェクト、発行者、有効期間、フィンガープリント、拡張、鍵の詳細をブラウザー内でローカルに確認できます。",
       },
       ko: {
-        name: "X.509 Certificate & Public Key Parser",
+        name: "X.509 인증서 및 공개 키 파서",
         description:
           "PEM, DER 또는 base64 DER 형식의 X.509 인증서와 공개 키를 파싱합니다. 주체, 발급자, 유효 기간, 지문, 확장 필드, 키 세부 정보를 브라우저에서 로컬로 확인하세요.",
       },
@@ -4934,14 +4934,14 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Hurai sijil X.509 dan kunci awam dalam bentuk PEM, DER, atau DER base64. Semak subjek, pengeluar, tarikh kesahan, cap jari, sambungan, dan butiran kunci secara setempat dalam pelayar anda.",
       },
       nl: {
-        name: "X.509 Certificate & Public Key Parser",
+        name: "Parser voor X.509-certificaten en openbare sleutels",
         description:
           "Parseer X.509-certificaten en openbare sleutels in PEM-, DER- of base64 DER-vorm. Bekijk onderwerpen, uitgevers, geldigheidsdatums, fingerprints, extensies en sleutelgegevens lokaal in je browser.",
       },
       no: {
-        name: "X.509 Certificate & Public Key Parser",
+        name: "Parser for X.509-sertifikater og offentlige nøkler",
         description:
-          "Parse X.509-sertifikater og offentlige nøkler i PEM-, DER- eller base64 DER-form. Se gjennom subject, issuer, gyldighetsdatoer, fingerprints, extensions og nøkkeldetaljer lokalt i nettleseren.",
+          "Analyser X.509-sertifikater og offentlige nøkler i PEM-, DER- eller base64 DER-form. Se gjennom innehaver, utsteder, gyldighetsdatoer, fingeravtrykk, utvidelser og nøkkeldetaljer lokalt i nettleseren.",
       },
       pl: {
         name: "Parser certyfikatów X.509 i kluczy publicznych",
@@ -4959,7 +4959,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Разбирайте X.509 сертификаты и открытые ключи в формате PEM, DER или base64 DER. Просматривайте субъекты, издателей, сроки действия, отпечатки, расширения и сведения о ключах локально в браузере.",
       },
       sv: {
-        name: "X.509 Certificate & Public Key Parser",
+        name: "Tolk för X.509-certifikat och publika nycklar",
         description:
           "Parsa X.509-certifikat och publika nycklar i PEM-, DER- eller base64 DER-format. Granska ämnen, utfärdare, giltighetsdatum, fingeravtryck, tillägg och nyckeldetaljer lokalt i din webbläsare.",
       },
@@ -4969,7 +4969,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "แยกวิเคราะห์ใบรับรอง X.509 และกุญแจสาธารณะในรูปแบบ PEM, DER หรือ base64 DER ตรวจสอบ subject, issuer, วันที่มีผล, fingerprints, extensions และรายละเอียดกุญแจได้ภายในเบราว์เซอร์ของคุณ",
       },
       tr: {
-        name: "X.509 Certificate & Public Key Parser",
+        name: "X.509 Sertifika ve Genel Anahtar Ayrıştırıcı",
         description:
           "PEM, DER veya base64 DER biçimindeki X.509 sertifikalarını ve genel anahtarları ayrıştırın. Konuları, verenleri, geçerlilik tarihlerini, parmak izlerini, uzantıları ve anahtar ayrıntılarını tarayıcınızda yerel olarak inceleyin.",
       },
@@ -4984,9 +4984,9 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "解析 PEM、DER 或 base64 DER 形式的 X.509 证书和公钥。在浏览器中本地查看主体、颁发者、有效期、指纹、扩展和密钥详情。",
       },
       "zh-TW": {
-        name: "X.509 Certificate 與 Public Key Parser",
+        name: "X.509 憑證與公開金鑰解析器",
         description:
-          "解析 PEM、DER 或 base64 DER 形式的 X.509 certificates 與 public keys。直接在瀏覽器本機檢視 subjects、issuers、有效日期、fingerprints、extensions 與 key details。",
+          "解析 PEM、DER 或 base64 DER 形式的 X.509 憑證與公開金鑰。直接在瀏覽器本機檢視主體、簽發者、有效日期、指紋、擴充欄位與金鑰詳細資訊。",
       },
     },
   },
@@ -4997,14 +4997,14 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["converter", "number", "chinese", "uppercase", "currency", "rmb"],
     locales: {
       ar: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "محوّل الأعداد ↔ الأرقام الصينية المالية",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "تحويل ثنائي الاتجاه بين الأعداد والمبالغ المكتوبة بالأرقام الصينية المالية. يدعم وحدات الرنمينبي وما يصل إلى منزلتين عشريتين.",
       },
       de: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Zahlenkonverter für chinesische Finanzziffern",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Bidirektionaler Konverter zwischen Zahlen und Beträgen in chinesischer Finanzschreibweise. Unterstützt Einheiten im RMB-Stil und bis zu zwei Nachkommastellen.",
       },
       en: {
         name: "Number ↔ Chinese Uppercase Converter",
@@ -5012,94 +5012,94 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
       },
       es: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Conversor de números ↔ numeración financiera china",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Conversor bidireccional entre números y cantidades en numeración financiera china. Admite unidades de estilo RMB y hasta 2 decimales.",
       },
       fr: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Convertisseur de nombres ↔ chiffres financiers chinois",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Convertisseur bidirectionnel entre nombres et montants en chiffres financiers chinois. Prend en charge les unités monétaires du RMB et jusqu’à 2 décimales.",
       },
       he: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "ממיר מספרים ↔ ספרות סיניות פיננסיות",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "המרה דו־כיוונית בין מספרים לסכומים בספרות סיניות פיננסיות. תומך ביחידות בסגנון RMB ובעד 2 ספרות אחרי הנקודה העשרונית.",
       },
       hi: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "संख्या ↔ चीनी वित्तीय अंक कन्वर्टर",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "संख्याओं और चीनी वित्तीय अंकों में लिखी राशियों के बीच दोनों दिशाओं में रूपांतरण करें। RMB शैली की इकाइयों और अधिकतम 2 दशमलव स्थानों का समर्थन करता है।",
       },
       id: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Konverter Angka ↔ Angka Finansial Tionghoa",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Konverter dua arah antara angka dan jumlah dalam angka finansial Tionghoa. Mendukung satuan bergaya RMB dan hingga 2 angka desimal.",
       },
       it: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Convertitore di numeri ↔ numeri cinesi finanziari",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Convertitore bidirezionale tra numeri e importi nella numerazione cinese finanziaria. Supporta le unità in stile RMB e fino a 2 cifre decimali.",
       },
       ja: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "数値・中国語大字変換ツール",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "数値と中国語の大字を相互変換します。人民元形式の単位と小数点以下2桁までに対応しています。",
       },
       ko: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "숫자 ↔ 중국어 대자 변환기",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "숫자와 중국어 대자 금액을 양방향으로 변환합니다. 위안화 단위와 소수점 이하 2자리까지 지원합니다.",
       },
       ms: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Penukar Nombor ↔ Angka Kewangan Cina",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Penukar dua hala antara nombor dan amaun dalam angka kewangan Cina. Menyokong unit gaya RMB dan sehingga 2 tempat perpuluhan.",
       },
       nl: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Omzetter getal ↔ Chinese financiële cijfers",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Zet getallen om naar bedragen in Chinese financiële cijfers en omgekeerd. Ondersteunt RMB-eenheden en maximaal 2 decimalen.",
       },
       no: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Tall ↔ kinesiske finanstall-konverterer",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Toveis konverterer mellom tall og beløp skrevet med kinesiske finanstall. Støtter enheter i RMB-stil og opptil 2 desimaler.",
       },
       pl: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Konwerter liczb ↔ chiński zapis finansowy",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Dwukierunkowy konwerter liczb i kwot w chińskim zapisie finansowym. Obsługuje jednostki stosowane dla RMB i maksymalnie 2 miejsca po przecinku.",
       },
       pt: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Conversor de números ↔ numeração financeira chinesa",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Conversor bidirecional entre números e valores em numeração financeira chinesa. Suporta unidades no estilo RMB e até 2 casas decimais.",
       },
       ru: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Конвертер: числа ↔ китайская финансовая запись",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Двустороннее преобразование чисел и сумм, записанных китайскими финансовыми иероглифами. Поддерживает единицы RMB и до 2 знаков после точки.",
       },
       sv: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Omvandlare för tal ↔ kinesiska finansiella siffror",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Omvandla mellan tal och belopp skrivna med kinesiska finansiella siffror i båda riktningarna. Stöder RMB-enheter och upp till 2 decimaler.",
       },
       th: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "ตัวแปลงตัวเลข ↔ ตัวเลขจีนแบบการเงิน",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "แปลงตัวเลขและจำนวนเงินที่เขียนด้วยตัวเลขจีนแบบการเงินได้ทั้งสองทิศทาง รองรับหน่วยแบบ RMB และทศนิยมไม่เกิน 2 ตำแหน่ง",
       },
       tr: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Sayı ↔ Çince Finansal Yazım Dönüştürücü",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Sayılar ile Çince finansal rakamlarla yazılan tutarlar arasında çift yönlü dönüştürücü. RMB tarzı birimleri ve en fazla 2 ondalık basamağı destekler.",
       },
       vi: {
-        name: "Number ↔ Chinese Uppercase Converter",
+        name: "Trình chuyển đổi số ↔ chữ số tài chính tiếng Trung",
         description:
-          "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
+          "Chuyển đổi hai chiều giữa số và số tiền bằng chữ số tài chính tiếng Trung. Hỗ trợ đơn vị theo kiểu RMB và tối đa 2 chữ số thập phân.",
       },
       "zh-CN": {
         name: "数字 ↔ 中文大写数字转换器",
@@ -6532,7 +6532,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Crea expresiones cron de cinco campos con controles visuales, preajustes y vistas previas de próximas ejecuciones.",
       },
       fr: {
-        name: "Cron Expression Generator",
+        name: "Générateur d’expressions cron",
         description:
           "Créez des expressions cron à cinq champs avec des contrôles visuels, des préréglages et des aperçus des prochaines exécutions.",
       },
@@ -6542,7 +6542,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "בנה ביטויי cron בני חמישה שדות עם פקדים חזותיים, הגדרות מוכנות ותצוגות מקדימות של ההרצות הבאות.",
       },
       hi: {
-        name: "Cron Expression Generator",
+        name: "Cron एक्सप्रेशन जनरेटर",
         description:
           "दृश्य नियंत्रणों, प्रीसेट और आगामी रन पूर्वावलोकन के साथ पांच-फ़ील्ड cron expressions बनाएं।",
       },
@@ -6552,12 +6552,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Buat ekspresi cron lima bidang dengan kontrol visual, preset, dan pratinjau eksekusi mendatang.",
       },
       it: {
-        name: "Cron Expression Generator",
+        name: "Generatore di espressioni cron",
         description:
           "Crea espressioni cron a cinque campi con controlli visuali, preset e anteprime delle prossime esecuzioni.",
       },
       ja: {
-        name: "Cron Expression Generator",
+        name: "Cron式ジェネレーター",
         description:
           "視覚的なコントロール、プリセット、今後の実行プレビューを使って、5 フィールドの cron 式を作成します。",
       },
@@ -6567,7 +6567,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "시각적 컨트롤, 프리셋, 다음 실행 미리보기로 5개 필드 cron 표현식을 만드세요.",
       },
       ms: {
-        name: "Cron Expression Generator",
+        name: "Penjana Ungkapan Cron",
         description:
           "Bina ungkapan cron lima medan dengan kawalan visual, pratetap, dan pratonton larian akan datang.",
       },
@@ -6602,7 +6602,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Skapa cron-uttryck med fem fält med visuella kontroller, förinställningar och förhandsvisningar av kommande körningar.",
       },
       th: {
-        name: "Cron Expression Generator",
+        name: "ตัวสร้างนิพจน์ Cron",
         description:
           "สร้างนิพจน์ cron แบบห้าฟิลด์ด้วยตัวควบคุมแบบภาพ พรีเซ็ต และตัวอย่างการรันที่จะเกิดขึ้น",
       },
@@ -6612,7 +6612,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Görsel kontroller, ön ayarlar ve yaklaşan çalıştırma önizlemeleriyle beş alanlı cron ifadeleri oluşturun.",
       },
       vi: {
-        name: "Cron Expression Generator",
+        name: "Trình tạo biểu thức cron",
         description:
           "Tạo biểu thức cron năm trường bằng điều khiển trực quan, mẫu có sẵn và bản xem trước các lần chạy sắp tới.",
       },
@@ -6640,7 +6640,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "حلّل جداول Cron وتحقق منها واشرحها مع تفاصيل الحقول وأوقات التشغيل القادمة.",
       },
       de: {
-        name: "Cron Expression Parser",
+        name: "Cron-Ausdruck-Parser",
         description:
           "Analysieren, validieren und erklären Sie Cron-Zeitpläne mit Felddetails und kommenden Ausführungszeiten.",
       },
@@ -6650,7 +6650,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Parse, validate, and explain cron schedules with field details and upcoming run times.",
       },
       es: {
-        name: "Cron Expression Parser",
+        name: "Analizador de expresiones cron",
         description:
           "Analiza, valida y explica programaciones cron con detalles de campos y próximas ejecuciones.",
       },
@@ -6665,22 +6665,22 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "נתח, אמת והסבר לוחות זמנים של Cron עם פרטי שדות וזמני הרצה קרובים.",
       },
       hi: {
-        name: "Cron Expression Parser",
+        name: "Cron एक्सप्रेशन पार्सर",
         description:
           "फ़ील्ड विवरण और आगामी रन समयों के साथ cron शेड्यूल को पार्स, मान्य और समझाएँ।",
       },
       id: {
-        name: "Cron Expression Parser",
+        name: "Pengurai Ekspresi Cron",
         description:
           "Uraikan, validasi, dan jelaskan jadwal cron dengan detail field dan waktu eksekusi berikutnya.",
       },
       it: {
-        name: "Cron Expression Parser",
+        name: "Analizzatore di espressioni cron",
         description:
           "Analizza, convalida e spiega le pianificazioni cron con dettagli sui campi e prossimi orari di esecuzione.",
       },
       ja: {
-        name: "Cron Expression Parser",
+        name: "Cron式パーサー",
         description:
           "cron スケジュールを解析、検証、説明し、フィールドの詳細と今後の実行時刻を確認できます。",
       },
@@ -6695,12 +6695,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Huraikan, sahkan dan jelaskan jadual cron dengan butiran medan dan masa pelaksanaan akan datang.",
       },
       nl: {
-        name: "Cron Expression Parser",
+        name: "Cron-expressieparser",
         description:
           "Ontleed, valideer en verklaar cron-schema's met velddetails en aankomende uitvoeringstijden.",
       },
       no: {
-        name: "Cron Expression Parser",
+        name: "Cron-uttrykkstolker",
         description:
           "Tolk, valider og forklar cron-planer med feltdetaljer og kommende kjøretidspunkter.",
       },
@@ -6710,7 +6710,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Analizuj, waliduj i objaśniaj harmonogramy cron ze szczegółami pól oraz nadchodzącymi czasami uruchomień.",
       },
       pt: {
-        name: "Cron Expression Parser",
+        name: "Analisador de expressões cron",
         description:
           "Analise, valide e explique agendamentos cron com detalhes dos campos e próximos horários de execução.",
       },
@@ -6720,7 +6720,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Разбирайте, проверяйте и объясняйте расписания cron с деталями полей и ближайшими запусками.",
       },
       sv: {
-        name: "Cron Expression Parser",
+        name: "Tolk för cron-uttryck",
         description:
           "Tolka, validera och förklara cron-scheman med fältdetaljer och kommande körningstider.",
       },
@@ -6831,7 +6831,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Jana permintaan penandatanganan sijil PKCS#10 dalam pelayar anda. Cipta kunci baharu atau import kunci peribadi PKCS#8 sedia ada, isi Subject dan SAN, kemudian muat turun CSR.",
       },
       nl: {
-        name: "CSR Generator",
+        name: "CSR-generator",
         description:
           "Genereer PKCS#10-certificaatondertekeningsverzoeken in uw browser. Maak een nieuwe sleutel aan of importeer een bestaande PKCS#8-privésleutel, vul Subject en SAN in en download de CSR.",
       },
@@ -7931,7 +7931,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Periksa detail browser, layar, perangkat keras, jaringan, penyimpanan, dan kapabilitas dari perangkat Anda saat ini tanpa mengunggah apa pun.",
       },
       it: {
-        name: "Device Information",
+        name: "Informazioni sul dispositivo",
         description:
           "Ispeziona dettagli su browser, display, hardware, rete, archiviazione e funzionalità del dispositivo corrente senza caricare nulla.",
       },
@@ -8044,12 +8044,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "שאילתת רשומות DNS מסוג A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS ו-SVCB דרך פותרי DNS over HTTPS.",
       },
       hi: {
-        name: "DNS Lookup",
+        name: "DNS खोज",
         description:
           "DNS over HTTPS resolver के ज़रिए A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, और SVCB DNS रिकॉर्ड क्वेरी करें।",
       },
       id: {
-        name: "DNS Lookup",
+        name: "Pencarian DNS",
         description:
           "Lakukan kueri record DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, dan SVCB melalui resolver DNS over HTTPS.",
       },
@@ -8069,12 +8069,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "DNS over HTTPS 리졸버를 통해 A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, SVCB DNS 레코드를 조회합니다.",
       },
       ms: {
-        name: "DNS Lookup",
+        name: "Carian DNS",
         description:
           "Kueri rekod DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS, dan SVCB melalui penyelesai DNS over HTTPS.",
       },
       nl: {
-        name: "DNS Lookup",
+        name: "DNS-zoektool",
         description:
           "Vraag A-, AAAA-, CNAME-, MX-, TXT-, NS-, SOA-, CAA-, SRV-, HTTPS- en SVCB-DNS-records op via DNS over HTTPS-resolvers.",
       },
@@ -8094,12 +8094,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Consulte registros DNS A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS e SVCB por meio de resolvedores DNS over HTTPS.",
       },
       ru: {
-        name: "DNS Lookup",
+        name: "Поиск DNS-записей",
         description:
           "Запрашивайте DNS-записи A, AAAA, CNAME, MX, TXT, NS, SOA, CAA, SRV, HTTPS и SVCB через резолверы DNS over HTTPS.",
       },
       sv: {
-        name: "DNS Lookup",
+        name: "DNS-uppslagning",
         description:
           "Fråga A-, AAAA-, CNAME-, MX-, TXT-, NS-, SOA-, CAA-, SRV-, HTTPS- och SVCB-DNS-poster via DNS over HTTPS-resolvers.",
       },
@@ -10194,7 +10194,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "צור חבילת favicon מלאה — ICO, קובצי PNG, אייקון Apple touch, אייקוני PWA, web manifest וקטע HTML — באופן מקומי בדפדפן שלך.",
       },
       hi: {
-        name: "Favicon Assets Generator",
+        name: "फ़ेविकॉन एसेट जनरेटर",
         description:
           "एक संपूर्ण favicon बंडल बनाएं — ICO, PNGs, Apple touch icon, PWA icons, web manifest, और HTML स्निपेट — सब कुछ आपके ब्राउज़र में स्थानीय रूप से।",
       },
@@ -11048,7 +11048,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "قم بإنشاء ملفات .gitignore لمشاريعك عن طريق اختيار القوالب",
       },
       de: {
-        name: ".gitignore Generator",
+        name: ".gitignore-Generator",
         description:
           "Generieren Sie .gitignore-Dateien für Ihre Projekte durch Auswahl von Vorlagen",
       },
@@ -11100,12 +11100,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Jana fail .gitignore untuk projek anda dengan memilih templat",
       },
       nl: {
-        name: ".gitignore Generator",
+        name: ".gitignore-generator",
         description:
           "Genereer .gitignore bestanden voor uw projecten door sjablonen te selecteren",
       },
       no: {
-        name: ".gitignore Generator",
+        name: ".gitignore-generator",
         description:
           "Generer .gitignore-filer for prosjektene dine ved å velge maler",
       },
@@ -11125,7 +11125,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Создавайте файлы .gitignore для ваших проектов, выбирая шаблоны",
       },
       sv: {
-        name: ".gitignore Generator",
+        name: ".gitignore-generator",
         description:
           "Generera .gitignore-filer för dina projekt genom att välja mallar",
       },
@@ -11482,7 +11482,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Jana tandatangan HMAC (Kod Pengesahan Mesej berasaskan Hash) untuk teks atau fail. Menyokong algoritma SHA-1, SHA-256, SHA-384, dan SHA-512 dengan format output heksadesimal dan base64.",
       },
       nl: {
-        name: "HMAC Generator",
+        name: "HMAC-generator",
         description:
           "Genereer HMAC (Hash-based Message Authentication Code) handtekeningen voor tekst of bestanden. Ondersteunt SHA-1, SHA-256, SHA-384 en SHA-512 algoritmen met hexadecimale en base64 uitvoerformaten.",
       },
@@ -12737,6 +12737,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "image-cropper",
+    category: "image",
+    icon: "image",
+    tags: ["image", "crop", "photo", "rotate", "flip", "aspect-ratio"],
+    locales: {
+      ar: {
+        name: "أداة قص الصور",
+        description:
+          "قص الصور بحرية أو بنسبة أبعاد ثابتة، ودوّرها واقلبها. عاين صور PNG أو JPEG أو WebP ونزّلها محليًا في متصفحك.",
+      },
+      de: {
+        name: "Bild zuschneiden",
+        description:
+          "Bilder frei oder mit festem Seitenverhältnis zuschneiden, drehen und spiegeln. PNG, JPEG oder WebP direkt im Browser ansehen und herunterladen.",
+      },
+      en: {
+        name: "Image Cropper",
+        description:
+          "Crop images freely or to a fixed aspect ratio, rotate, and flip them. Preview and download PNG, JPEG, or WebP locally in your browser.",
+      },
+      es: {
+        name: "Recortador de imágenes",
+        description:
+          "Recorta imágenes libremente o con una relación de aspecto fija, gíralas y voltéalas. Previsualiza y descarga PNG, JPEG o WebP localmente en tu navegador.",
+      },
+      fr: {
+        name: "Recadrage d’images",
+        description:
+          "Recadrez des images librement ou selon un rapport fixe, faites-les pivoter et retournez-les. Prévisualisez et téléchargez en PNG, JPEG ou WebP localement dans votre navigateur.",
+      },
+      he: {
+        name: "כלי חיתוך תמונות",
+        description:
+          "חתוך תמונות באופן חופשי או ביחס ממדים קבוע, סובב והפוך אותן. הצג תצוגה מקדימה והורד PNG, JPEG או WebP מקומית בדפדפן שלך.",
+      },
+      hi: {
+        name: "इमेज क्रॉपर",
+        description:
+          "इमेज को स्वतंत्र रूप से या तय पक्षानुपात में क्रॉप करें, घुमाएँ और पलटें। अपने ब्राउज़र में स्थानीय रूप से PNG, JPEG या WebP का पूर्वावलोकन देखें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pemotong Gambar",
+        description:
+          "Potong gambar secara bebas atau dengan rasio aspek tetap, putar, dan balik. Pratinjau dan unduh PNG, JPEG, atau WebP secara lokal di peramban Anda.",
+      },
+      it: {
+        name: "Ritaglio immagini",
+        description:
+          "Ritaglia le immagini liberamente o con proporzioni fisse, ruotale e capovolgile. Visualizza l'anteprima e scarica PNG, JPEG o WebP localmente nel browser.",
+      },
+      ja: {
+        name: "画像切り抜き",
+        description:
+          "画像を自由な範囲や固定の縦横比で切り抜き、回転・反転できます。ブラウザー内で処理し、PNG、JPEG、WebP のプレビューとダウンロードができます。",
+      },
+      ko: {
+        name: "이미지 자르기",
+        description:
+          "이미지를 자유롭게 또는 고정 비율로 자르고, 회전하거나 뒤집으세요. 브라우저에서 로컬로 PNG, JPEG, WebP를 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemangkas Imej",
+        description:
+          "Pangkas imej secara bebas atau dengan nisbah aspek tetap, putar dan balikkan. Pratonton dan muat turun PNG, JPEG atau WebP secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeelding bijsnijden",
+        description:
+          "Snijd afbeeldingen vrij of met een vaste beeldverhouding bij, draai en spiegel ze. Bekijk en download PNG, JPEG of WebP lokaal in je browser.",
+      },
+      no: {
+        name: "Bildebeskjærer",
+        description:
+          "Beskjær bilder fritt eller med et fast sideforhold, roter og vend dem. Forhåndsvis og last ned PNG, JPEG eller WebP lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Przycinanie obrazów",
+        description:
+          "Przycinaj obrazy dowolnie lub według stałych proporcji, obracaj je i odbijaj. Wyświetlaj podgląd i pobieraj PNG, JPEG lub WebP lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Recortador de imagens",
+        description:
+          "Recorte imagens livremente ou em uma proporção fixa, gire e espelhe. Confira e baixe PNG, JPEG ou WebP localmente no navegador.",
+      },
+      ru: {
+        name: "Обрезка изображений",
+        description:
+          "Обрезайте изображения свободно или с фиксированными пропорциями, поворачивайте и отражайте их. Просматривайте и скачивайте PNG, JPEG или WebP локально в браузере.",
+      },
+      sv: {
+        name: "Bildbeskärare",
+        description:
+          "Beskär bilder fritt eller med ett fast bildförhållande, rotera och spegelvänd dem. Förhandsgranska och ladda ned PNG, JPEG eller WebP lokalt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือครอบตัดรูปภาพ",
+        description:
+          "ครอบตัดรูปภาพอย่างอิสระหรือตามอัตราส่วนที่กำหนด หมุนและพลิกรูปภาพ ดูตัวอย่างและดาวน์โหลดเป็น PNG, JPEG หรือ WebP ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Görüntü Kırpıcı",
+        description:
+          "Görüntüleri serbestçe veya sabit en boy oranıyla kırpın, döndürün ve çevirin. PNG, JPEG veya WebP olarak tarayıcınızda yerel olarak önizleyin ve indirin.",
+      },
+      vi: {
+        name: "Công cụ cắt ảnh",
+        description:
+          "Cắt ảnh tự do hoặc theo tỷ lệ cố định, xoay và lật ảnh. Xem trước và tải xuống PNG, JPEG hoặc WebP ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片裁剪",
+        description:
+          "自由裁剪或按固定宽高比裁剪图片，并进行旋转和翻转。在浏览器本地预览并下载 PNG、JPEG 或 WebP 图片。",
+      },
+      "zh-TW": {
+        name: "圖片裁剪器",
+        description:
+          "自由裁剪圖片或使用固定長寬比，並可旋轉與翻轉。直接在瀏覽器本機預覽及下載 PNG、JPEG 或 WebP。",
+      },
+    },
+  },
+  {
     slug: "image-metadata-cleaner",
     category: "image",
     icon: "image",
@@ -12904,7 +13027,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Extrae colores dominantes de imágenes y exporta paletas como HEX, variables CSS o JSON.",
       },
       fr: {
-        name: "Image Palette Extractor",
+        name: "Extracteur de palette d’images",
         description:
           "Extrayez les couleurs dominantes d'images et exportez les palettes au format HEX, variables CSS ou JSON.",
       },
@@ -12914,7 +13037,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "חלץ צבעים דומיננטיים מתמונות וייצא פלטות כ‑HEX, כמשתני CSS או כ‑JSON.",
       },
       hi: {
-        name: "Image Palette Extractor",
+        name: "इमेज पैलेट एक्सट्रैक्टर",
         description:
           "इमेज से प्रमुख रंग निकालें और पैलेट को HEX, CSS variables या JSON के रूप में निर्यात करें।",
       },
@@ -12929,7 +13052,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Estrai i colori dominanti dalle immagini ed esporta le palette come HEX, variabili CSS o JSON.",
       },
       ja: {
-        name: "Image Palette Extractor",
+        name: "画像パレット抽出ツール",
         description:
           "画像から主要な色を抽出し、パレットをHEX、CSS変数、JSONとしてエクスポートします。",
       },
@@ -12944,7 +13067,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Ekstrak warna dominan daripada imej dan eksport palet sebagai HEX, pemboleh ubah CSS, atau JSON.",
       },
       nl: {
-        name: "Image Palette Extractor",
+        name: "Paletextractor voor afbeeldingen",
         description:
           "Haal dominante kleuren uit afbeeldingen en exporteer paletten als HEX, CSS-variabelen of JSON.",
       },
@@ -12954,7 +13077,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Hent dominerende farger fra bilder og eksporter paletter som HEX, CSS-variabler eller JSON.",
       },
       pl: {
-        name: "Image Palette Extractor",
+        name: "Ekstraktor palety kolorów obrazu",
         description:
           "Wyodrębniaj dominujące kolory z obrazów i eksportuj palety jako HEX, zmienne CSS lub JSON.",
       },
@@ -12969,7 +13092,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Извлекайте доминирующие цвета из изображений и экспортируйте палитры как HEX, переменные CSS или JSON.",
       },
       sv: {
-        name: "Image Palette Extractor",
+        name: "Palettextraherare för bilder",
         description:
           "Extrahera dominerande färger från bilder och exportera paletter som HEX, CSS-variabler eller JSON.",
       },
@@ -12978,12 +13101,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         description: "ดึงสีหลักจากรูปภาพและส่งออกพาเล็ตเป็น HEX, ตัวแปร CSS หรือ JSON",
       },
       tr: {
-        name: "Image Palette Extractor",
+        name: "Görsel Paleti Çıkarıcı",
         description:
           "Görsellerden baskın renkleri çıkarın ve paletleri HEX, CSS değişkenleri veya JSON olarak dışa aktarın.",
       },
       vi: {
-        name: "Image Palette Extractor",
+        name: "Trình trích xuất bảng màu ảnh",
         description:
           "Trích xuất các màu chủ đạo từ hình ảnh và xuất bảng màu dưới dạng HEX, biến CSS hoặc JSON.",
       },
@@ -14014,6 +14137,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "image-watermark",
+    category: "image",
+    icon: "image",
+    tags: ["image", "watermark", "text", "logo", "tile", "batch", "photo"],
+    locales: {
+      ar: {
+        name: "علامة مائية للصور",
+        description:
+          "أضف علامات مائية نصية أو شعارات إلى الصور محليًا. اضبط التكرار والموضع والتعتيم، ثم صدّر صورة واحدة أو مجموعة بصيغة ZIP.",
+      },
+      de: {
+        name: "Bild-Wasserzeichen",
+        description:
+          "Fügen Sie Bildern lokal Text- oder Logo-Wasserzeichen hinzu. Passen Sie Kachelung, Position und Deckkraft an und exportieren Sie ein Bild oder einen Stapel als ZIP.",
+      },
+      en: {
+        name: "Image Watermark",
+        description:
+          "Add text or logo watermarks to images locally. Adjust tiling, position, and opacity, then export one image or a batch ZIP.",
+      },
+      es: {
+        name: "Marca de agua para imágenes",
+        description:
+          "Añade marcas de agua de texto o logotipos a tus imágenes de forma local. Ajusta el mosaico, la posición y la opacidad, y exporta una imagen o un lote en ZIP.",
+      },
+      fr: {
+        name: "Filigrane d’image",
+        description:
+          "Ajoutez du texte ou un logo en filigrane à vos images en local. Ajustez la répétition, la position et l’opacité, puis exportez une image ou un lot en ZIP.",
+      },
+      he: {
+        name: "סימן מים לתמונות",
+        description:
+          "הוספת סימני מים של טקסט או לוגו לתמונות באופן מקומי. אפשר להתאים חזרות, מיקום ואטימות, ולייצא תמונה אחת או את כולן כ-ZIP.",
+      },
+      hi: {
+        name: "इमेज वॉटरमार्क",
+        description:
+          "अपने डिवाइस पर इमेज में टेक्स्ट या लोगो वॉटरमार्क जोड़ें। दोहराव, स्थिति और अपारदर्शिता समायोजित करें, फिर एक इमेज या पूरे बैच को ZIP में एक्सपोर्ट करें।",
+      },
+      id: {
+        name: "Tanda Air Gambar",
+        description:
+          "Tambahkan tanda air teks atau logo ke gambar secara lokal. Sesuaikan pengulangan, posisi, dan opasitas, lalu ekspor satu gambar atau sekumpulan gambar dalam ZIP.",
+      },
+      it: {
+        name: "Filigrana per immagini",
+        description:
+          "Aggiungi filigrane di testo o loghi alle immagini sul tuo dispositivo. Regola ripetizione, posizione e opacità, poi esporta un'immagine o un gruppo in ZIP.",
+      },
+      ja: {
+        name: "画像の透かし",
+        description:
+          "画像にテキストやロゴの透かしをローカルで追加します。タイル配置、位置、不透明度を調整し、1枚の画像または複数の画像をZIPで書き出せます。",
+      },
+      ko: {
+        name: "이미지 워터마크",
+        description:
+          "이미지에 텍스트나 로고 워터마크를 기기에서 추가하세요. 반복 배치, 위치, 불투명도를 조정한 뒤 이미지 한 장 또는 일괄 ZIP으로 내보내세요.",
+      },
+      ms: {
+        name: "Tanda Air Imej",
+        description:
+          "Tambahkan tanda air teks atau logo pada imej secara setempat. Laraskan ulangan, kedudukan dan kelegapan, kemudian eksport satu imej atau satu kelompok ZIP.",
+      },
+      nl: {
+        name: "Afbeeldingswatermerk",
+        description:
+          "Voeg lokaal tekst- of logowatermerken toe aan afbeeldingen. Pas herhaling, positie en dekking aan en exporteer één afbeelding of een batch als ZIP.",
+      },
+      no: {
+        name: "Vannmerke på bilder",
+        description:
+          "Legg til tekst eller logo som vannmerke på bilder lokalt. Juster gjentakelse, posisjon og ugjennomsiktighet, og eksporter ett bilde eller alle som ZIP.",
+      },
+      pl: {
+        name: "Znak wodny na obrazie",
+        description:
+          "Dodawaj lokalnie tekstowe znaki wodne lub logo do obrazów. Dostosuj kafelkowanie, położenie i krycie, a następnie wyeksportuj obraz lub całą partię jako ZIP.",
+      },
+      pt: {
+        name: "Marca de água em imagens",
+        description:
+          "Adicione marcas de água de texto ou logótipos às imagens localmente. Ajuste a repetição, a posição e a opacidade e exporte uma imagem ou um lote em ZIP.",
+      },
+      ru: {
+        name: "Водяной знак для изображений",
+        description:
+          "Добавляйте текст или логотип в качестве водяного знака локально. Настраивайте повторение, положение и непрозрачность, затем экспортируйте одно изображение или группу в ZIP.",
+      },
+      sv: {
+        name: "Vattenmärke för bilder",
+        description:
+          "Lägg till text- eller logotypvattenmärken på bilder lokalt. Justera upprepning, position och opacitet och exportera sedan en bild eller flera som ZIP.",
+      },
+      th: {
+        name: "ลายน้ำรูปภาพ",
+        description:
+          "เพิ่มลายน้ำข้อความหรือโลโก้ลงในรูปภาพบนอุปกรณ์ของคุณ ปรับการแสดงซ้ำ ตำแหน่ง และความทึบ แล้วส่งออกรูปเดียวหรือทั้งชุดเป็น ZIP",
+      },
+      tr: {
+        name: "Görsel Filigranı",
+        description:
+          "Görsellere cihazınızda metin veya logo filigranı ekleyin. Döşeme, konum ve opaklığı ayarlayıp tek bir görseli veya toplu ZIP dosyasını dışa aktarın.",
+      },
+      vi: {
+        name: "Dấu bản quyền cho ảnh",
+        description:
+          "Thêm dấu bản quyền văn bản hoặc logo vào ảnh ngay trên thiết bị. Điều chỉnh cách lặp, vị trí và độ đục, rồi xuất một ảnh hoặc cả loạt dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "图片水印",
+        description:
+          "在本地为图片添加文字或标志水印。调整平铺、位置和不透明度，再导出单张图片或批量 ZIP 文件。",
+      },
+      "zh-TW": {
+        name: "圖片浮水印",
+        description:
+          "在本機為圖片加入文字或標誌浮水印。調整平鋪、位置與不透明度，再匯出單張圖片或整批 ZIP。",
+      },
+    },
+  },
+  {
     slug: "imei-validator",
     category: "text",
     icon: "binary",
@@ -14195,7 +14441,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Menormalkan alamat IP dan notasi CIDR untuk format IPv4 dan IPv6. Masukkan mana-mana IP atau julat CIDR untuk mendapatkan format piawai dengan serta-merta.",
       },
       nl: {
-        name: "IP/CIDR Normalizer",
+        name: "IP/CIDR-normalisator",
         description:
           "Normaliseert IP-adressen en CIDR-notatie voor IPv4- en IPv6-formaten. Voer een willekeurig IP-adres of CIDR-bereik in om het gestandaardiseerde formaat direct te krijgen.",
       },
@@ -14263,7 +14509,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "ابحث عن الموقع الجغرافي، ومزود خدمة الإنترنت، وASN، وDNS العكسي، وتفاصيل الشبكة لعنوان IP أو نطاق أو URL",
       },
       de: {
-        name: "IP Info Lookup",
+        name: "IP-Info-Abfrage",
         description:
           "Geolokalisierung, ISP, ASN, Reverse DNS und Netzwerkdetails für eine IP-Adresse, Domain oder URL nachschlagen",
       },
@@ -14273,17 +14519,17 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Look up geolocation, ISP, ASN, reverse DNS, and network details for an IP address, domain, or URL",
       },
       es: {
-        name: "IP Info Lookup",
+        name: "Consulta de información IP",
         description:
           "Consulta geolocalización, ISP, ASN, DNS inverso y detalles de red para una dirección IP, dominio o URL",
       },
       fr: {
-        name: "IP Info Lookup",
+        name: "Recherche d’informations IP",
         description:
           "Consultez la géolocalisation, le FAI, l'ASN, le DNS inverse et les détails réseau d'une adresse IP, d'un domaine ou d'une URL",
       },
       he: {
-        name: "IP Info Lookup",
+        name: "בדיקת פרטי IP",
         description:
           "חפשו מיקום גאוגרפי, ספק אינטרנט, ASN, DNS הפוך ופרטי רשת עבור כתובת IP, דומיין או URL",
       },
@@ -14293,7 +14539,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "किसी IP पते, डोमेन या URL के लिए भौगोलिक स्थान, ISP, ASN, reverse DNS और नेटवर्क विवरण देखें",
       },
       id: {
-        name: "IP Info Lookup",
+        name: "Pencarian Info IP",
         description:
           "Cari geolokasi, ISP, ASN, reverse DNS, dan detail jaringan untuk alamat IP, domain, atau URL",
       },
@@ -14318,7 +14564,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Cari geolokasi, ISP, ASN, DNS songsang, dan butiran rangkaian untuk alamat IP, domain, atau URL",
       },
       nl: {
-        name: "IP Info Lookup",
+        name: "IP-informatiezoeker",
         description:
           "Zoek geolocatie, ISP, ASN, reverse DNS en netwerkgegevens op voor een IP-adres, domein of URL",
       },
@@ -14343,7 +14589,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Узнайте геолокацию, ISP, ASN, обратный DNS и сетевые данные для IP-адреса, домена или URL",
       },
       sv: {
-        name: "IP Info Lookup",
+        name: "Uppslagning av IP-information",
         description:
           "Slå upp geolokalisering, ISP, ASN, omvänd DNS och nätverksinformation för en IP-adress, domän eller URL",
       },
@@ -14368,7 +14614,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "查询 IP 地址、域名或 URL 的地理位置、ISP、ASN、反向 DNS 和网络详细信息",
       },
       "zh-TW": {
-        name: "IP Info Lookup",
+        name: "IP 資訊查詢",
         description:
           "查詢 IP 位址、網域或 URL 的地理位置、ISP、ASN、反向 DNS 與網路詳細資訊",
       },
@@ -14986,12 +15232,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["code", "json", "diff", "patch", "pointer", "compare", "jsonpath"],
     locales: {
       ar: {
-        name: "JSON Diff Path",
+        name: "مسارات فروق JSON",
         description:
           "قارن مستندَي JSON وأنشئ فروقًا قائمة على المسارات مع مسارات JSON Pointer ومخرجات JSON Patch وفق RFC 6902.",
       },
       de: {
-        name: "JSON Diff Path",
+        name: "JSON-Diff-Pfad",
         description:
           "Zwei JSON-Dokumente vergleichen und pfadbasierte Diffs mit JSON-Pointer-Pfaden und RFC-6902-JSON-Patch-Ausgabe erzeugen.",
       },
@@ -15006,72 +15252,72 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Compara dos documentos JSON y genera diferencias por ruta con rutas JSON Pointer y salida JSON Patch RFC 6902.",
       },
       fr: {
-        name: "JSON Diff Path",
+        name: "Comparateur JSON par chemins",
         description:
           "Comparez deux documents JSON et générez des diffs basés sur les chemins avec des chemins JSON Pointer et une sortie JSON Patch RFC 6902.",
       },
       he: {
-        name: "JSON Diff Path",
+        name: "השוואת JSON לפי נתיב",
         description:
           "השוואה בין שני מסמכי JSON והפקת הבדלים מבוססי נתיב עם נתיבי JSON Pointer ופלט JSON Patch לפי RFC 6902.",
       },
       hi: {
-        name: "JSON Diff Path",
+        name: "JSON अंतर और पथ",
         description:
           "दो JSON दस्तावेज़ों की तुलना करें और JSON Pointer paths तथा RFC 6902 JSON Patch output के साथ path-based diffs जनरेट करें।",
       },
       id: {
-        name: "JSON Diff Path",
+        name: "Pembanding JSON Berbasis Jalur",
         description:
           "Bandingkan dua dokumen JSON dan hasilkan diff berbasis path dengan path JSON Pointer serta output JSON Patch RFC 6902.",
       },
       it: {
-        name: "JSON Diff Path",
+        name: "Confronto JSON con percorsi",
         description:
           "Confronta due documenti JSON e genera diff basati sui percorsi con percorsi JSON Pointer e output JSON Patch RFC 6902.",
       },
       ja: {
-        name: "JSON Diff Path",
+        name: "JSON差分パス",
         description:
           "2つの JSON ドキュメントを比較し、JSON Pointer パスと RFC 6902 JSON Patch 出力を使ったパスベースの差分を生成します。",
       },
       ko: {
-        name: "JSON Diff Path",
+        name: "JSON 차이 경로",
         description:
           "두 JSON 문서를 비교해 JSON Pointer 경로와 RFC 6902 JSON Patch 출력을 포함한 경로 기반 diff를 생성합니다.",
       },
       ms: {
-        name: "JSON Diff Path",
+        name: "Perbezaan Laluan JSON",
         description:
           "Bandingkan dua dokumen JSON dan jana perbezaan berasaskan laluan dengan laluan JSON Pointer dan output JSON Patch RFC 6902.",
       },
       nl: {
-        name: "JSON Diff Path",
+        name: "JSON-verschillen per pad",
         description:
           "Vergelijk twee JSON-documenten en genereer padgebaseerde verschillen met JSON Pointer-paden en RFC 6902 JSON Patch-uitvoer.",
       },
       no: {
-        name: "JSON Diff Path",
+        name: "JSON-sammenligning med stier",
         description:
           "Sammenlign to JSON-dokumenter og generer sti-baserte diff-resultater med JSON Pointer-stier og RFC 6902 JSON Patch-utdata.",
       },
       pl: {
-        name: "JSON Diff Path",
+        name: "Porównywanie JSON według ścieżek",
         description:
           "Porównuje dwa dokumenty JSON i generuje różnice oparte na ścieżkach z użyciem ścieżek JSON Pointer oraz wyjścia RFC 6902 JSON Patch.",
       },
       pt: {
-        name: "JSON Diff Path",
+        name: "Comparador de JSON por caminho",
         description:
           "Compare dois documentos JSON e gere diffs por caminho com caminhos JSON Pointer e saída JSON Patch RFC 6902.",
       },
       ru: {
-        name: "JSON Diff Path",
+        name: "Сравнение JSON по путям",
         description:
           "Сравнивает два JSON-документа и формирует диффы на основе путей с JSON Pointer-путями и выводом RFC 6902 JSON Patch.",
       },
       sv: {
-        name: "JSON Diff Path",
+        name: "Sökvägsbaserad JSON-jämförelse",
         description:
           "Jämför två JSON-dokument och genererar sökvägsbaserade diffar med JSON Pointer-sökvägar och RFC 6902 JSON Patch-utdata.",
       },
@@ -15081,17 +15327,17 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "เปรียบเทียบเอกสาร JSON สองชุดและสร้าง diff ตามเส้นทาง พร้อมเอาต์พุต JSON Pointer และ JSON Patch ตาม RFC 6902",
       },
       tr: {
-        name: "JSON Diff Path",
+        name: "JSON Fark Yolları",
         description:
           "İki JSON belgesini karşılaştırır ve JSON Pointer yolları ile RFC 6902 JSON Patch çıktısı içeren yola dayalı farklar üretir.",
       },
       vi: {
-        name: "JSON Diff Path",
+        name: "So sánh JSON theo đường dẫn",
         description:
           "So sánh hai tài liệu JSON và tạo diff theo đường dẫn với các đường dẫn JSON Pointer và đầu ra JSON Patch RFC 6902.",
       },
       "zh-CN": {
-        name: "JSON Diff Path",
+        name: "JSON 路径差异对比",
         description:
           "比较两个 JSON 文档，并生成基于路径的差异，同时输出 JSON Pointer 路径和符合 RFC 6902 的 JSON Patch。",
       },
@@ -15394,7 +15640,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Sahkan data JSON terhadap JSON Schema dengan pengesanan draf dan output ralat yang mudah dibaca.",
       },
       nl: {
-        name: "JSON Schema Validator",
+        name: "JSON Schema-validator",
         description:
           "Valideer JSON-gegevens tegen een JSON Schema met draft-bewuste validatie en leesbare foutmeldingen.",
       },
@@ -16243,7 +16489,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "פענחו כותרות ומטענים של JSON Web Token באופן מקומי, בדקו claims רשומים, ואמתו חתימות HS, RS, PS ו-ES בעזרת סוד, מפתח ציבורי PEM,‏ JWK או JWKS.",
       },
       hi: {
-        name: "JWT Decoder and Verifier",
+        name: "JWT डिकोडर और सत्यापक",
         description:
           "JSON Web Token हेडर और पेलोड को स्थानीय रूप से डिकोड करें, registered claims की जांच करें, और secret, PEM public key, JWK, या JWKS से HS, RS, PS, और ES signatures सत्यापित करें।",
       },
@@ -16995,14 +17241,14 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["list", "compare", "diff", "dedupe", "text"],
     locales: {
       ar: {
-        name: "List Comparer",
+        name: "مقارن القوائم",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "قارن قائمتين، واكتشف العناصر المشتركة والمستبعدة، وصدّر المجموعة التي تحتاجها بدقة قبل المزامنة أو التنقيح.",
       },
       de: {
-        name: "List Comparer",
+        name: "Listenvergleich",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Vergleiche zwei Listen, zeige Überschneidungen und Ausschlüsse an und exportiere genau die benötigte Menge vor einem Abgleich oder einer Bereinigung.",
       },
       en: {
         name: "List Comparer",
@@ -17010,94 +17256,94 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
       },
       es: {
-        name: "List Comparer",
+        name: "Comparador de listas",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Compare dos listas, identifique coincidencias y exclusiones, y exporte el conjunto exacto que necesita antes de sincronizar o limpiar los datos.",
       },
       fr: {
-        name: "List Comparer",
+        name: "Comparateur de listes",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Comparez deux listes, identifiez les chevauchements et les exclusions, puis exportez l’ensemble exact dont vous avez besoin avant une synchronisation ou un nettoyage.",
       },
       he: {
-        name: "List Comparer",
+        name: "כלי להשוואת רשימות",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "השוו שתי רשימות, גלו חפיפות ופריטים שאינם משותפים וייצאו בדיוק את הקבוצה הדרושה לפני סנכרון או ניקוי.",
       },
       hi: {
-        name: "List Comparer",
+        name: "सूची तुलना टूल",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "दो सूचियों की तुलना करें, साझा और अलग आइटम पहचानें, और सिंक या सफ़ाई से पहले ज़रूरी सेट निर्यात करें।",
       },
       id: {
-        name: "List Comparer",
+        name: "Pembanding Daftar",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Bandingkan dua daftar, temukan item yang sama dan yang tidak disertakan, lalu ekspor kumpulan yang Anda butuhkan sebelum menyinkronkan atau merapikannya.",
       },
       it: {
-        name: "List Comparer",
+        name: "Confronto elenchi",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Confronta due elenchi, individua elementi in comune ed esclusioni ed esporta esattamente l'insieme che ti serve prima di una sincronizzazione o una pulizia.",
       },
       ja: {
-        name: "List Comparer",
+        name: "リスト比較ツール",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "2つのリストを比較して共通項目と除外項目を確認し、同期や整理の前に必要なセットを書き出します。",
       },
       ko: {
-        name: "List Comparer",
+        name: "목록 비교기",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "두 목록을 비교해 공통 항목과 제외 항목을 확인하고, 동기화나 정리에 필요한 집합만 내보내세요.",
       },
       ms: {
-        name: "List Comparer",
+        name: "Pembanding Senarai",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Bandingkan dua senarai, kenal pasti pertindihan dan pengecualian, serta eksport set yang anda perlukan sebelum penyegerakan atau pembersihan.",
       },
       nl: {
-        name: "List Comparer",
+        name: "Lijstenvergelijker",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Vergelijk twee lijsten, bekijk overlap en uitsluitingen en exporteer precies de verzameling die je nodig hebt voordat je synchroniseert of opschoont.",
       },
       no: {
-        name: "List Comparer",
+        name: "Listesammenligning",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Sammenlign to lister, finn overlapp og utelatelser, og eksporter akkurat det settet du trenger før synkronisering eller opprydding.",
       },
       pl: {
-        name: "List Comparer",
+        name: "Porównywanie list",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Porównuj dwie listy, sprawdzaj ich część wspólną i różnice oraz eksportuj potrzebny zbiór przed synchronizacją lub porządkowaniem.",
       },
       pt: {
-        name: "List Comparer",
+        name: "Comparador de listas",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Compare duas listas, identifique itens em comum e exclusões e exporte o conjunto exato de que precisa antes de sincronizar ou organizar.",
       },
       ru: {
-        name: "List Comparer",
+        name: "Сравнение списков",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Сравнивайте два списка, находите общие и исключённые элементы и экспортируйте нужный набор перед синхронизацией или очисткой.",
       },
       sv: {
-        name: "List Comparer",
+        name: "Listjämförare",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Jämför två listor, hitta gemensamma och uteslutna poster och exportera precis den mängd du behöver före synkronisering eller rensning.",
       },
       th: {
-        name: "List Comparer",
+        name: "เครื่องมือเปรียบเทียบรายการ",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "เปรียบเทียบสองรายการ ดูค่าที่ตรงกันและถูกคัดออก แล้วส่งออกเฉพาะชุดที่ต้องการก่อนซิงค์หรือจัดระเบียบข้อมูล",
       },
       tr: {
-        name: "List Comparer",
+        name: "Liste Karşılaştırıcı",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Eşitleme veya temizlik öncesinde iki listeyi karşılaştırın, ortak ve dışarıda kalan öğeleri bulun ve tam olarak ihtiyacınız olan kümeyi dışa aktarın.",
       },
       vi: {
-        name: "List Comparer",
+        name: "Trình so sánh danh sách",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "So sánh hai danh sách, tìm phần giao nhau và các mục bị loại, rồi xuất đúng tập bạn cần trước khi đồng bộ hoặc dọn dẹp.",
       },
       "zh-CN": {
         name: "列表比较",
@@ -17252,7 +17498,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "أنشئ نص Lorem Ipsum البديل بكلمات أو جمل أو فقرات قابلة للتخصيص. يدعم لغات متعددة.",
       },
       de: {
-        name: "Lorem Ipsum Generator",
+        name: "Lorem-Ipsum-Generator",
         description:
           "Generieren Sie Lorem Ipsum Platzhaltertext mit konfigurierbaren Wörtern, Sätzen oder Absätzen. Unterstützt mehrere Sprachen.",
       },
@@ -17307,7 +17553,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Jana teks pemegang tempat Lorem Ipsum dengan perkataan, ayat atau perenggan yang boleh dikonfigurasikan. Menyokong pelbagai bahasa.",
       },
       nl: {
-        name: "Lorem Ipsum Generator",
+        name: "Lorem Ipsum-generator",
         description:
           "Genereer Lorem Ipsum placeholder tekst met configureerbare woorden, zinnen of alinea's. Ondersteunt meerdere talen.",
       },
@@ -21244,7 +21490,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "ادمج عدة ملفات PDF في مستند واحد يعمل داخل المتصفح فقط، مع معاينات، وعناصر تحكم في الترتيب، واسم ملف مخصص.",
       },
       de: {
-        name: "PDF Merger",
+        name: "PDF-Zusammenfügen",
         description:
           "Führen Sie mehrere PDF-Dateien browserbasiert zu einem Dokument zusammen, mit Vorschau, Sortiersteuerung und eigenem Dateinamen.",
       },
@@ -21284,7 +21530,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Unisci più file PDF in un unico documento solo nel browser, con anteprime, controlli di ordinamento e un nome file personalizzato.",
       },
       ja: {
-        name: "PDF Merger",
+        name: "PDF結合ツール",
         description:
           "プレビュー、並べ替えコントロール、カスタムファイル名を使って、複数のPDFファイルをブラウザー内だけで1つの文書に結合します。",
       },
@@ -21299,7 +21545,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Gabungkan beberapa fail PDF menjadi satu dokumen dalam pelayar sahaja dengan pratonton, kawalan susunan, dan nama fail tersuai.",
       },
       nl: {
-        name: "PDF Merger",
+        name: "PDF-samenvoeger",
         description:
           "Voeg meerdere PDF-bestanden samen tot een browser-only document met voorbeelden, sorteeropties en een aangepaste bestandsnaam.",
       },
@@ -21402,7 +21648,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Tambahkan nomor halaman ke halaman PDF yang dipilih secara lokal di browser Anda dengan format, posisi, font, dan margin yang dapat dikonfigurasi.",
       },
       it: {
-        name: "PDF Page Number Adder",
+        name: "Aggiunta di numeri di pagina ai PDF",
         description:
           "Aggiungi numeri di pagina alle pagine PDF selezionate localmente nel tuo browser, con formato, posizione, font e margini configurabili.",
       },
@@ -21447,7 +21693,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Добавляйте номера на выбранные страницы PDF локально в браузере с настраиваемым форматом, положением, шрифтом и полями.",
       },
       sv: {
-        name: "PDF Page Number Adder",
+        name: "Sidnumrering för PDF",
         description:
           "Lägg till sidnummer på valda PDF-sidor lokalt i din webbläsare med konfigurerbart format, placering, teckensnitt och marginaler.",
       },
@@ -21613,7 +21859,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "قسّم صفحات PDF حسب النطاق، أو استخرج الصفحات المحددة في ملف PDF واحد، أو نزّل عدة ملفات مقسّمة كأرشيف ZIP.",
       },
       de: {
-        name: "PDF Splitter",
+        name: "PDF-Aufteilen",
         description:
           "PDF-Seiten nach Bereich aufteilen, ausgewählte Seiten in eine PDF-Datei extrahieren oder mehrere getrennte Dateien als ZIP-Archiv herunterladen.",
       },
@@ -21638,12 +21884,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "פצלו עמודי PDF לפי טווח, חלצו עמודים נבחרים ל-PDF אחד, או הורידו כמה קבצים מפוצלים כארכיון ZIP.",
       },
       hi: {
-        name: "PDF Splitter",
+        name: "PDF विभाजक",
         description:
           "PDF पेजों को रेंज के अनुसार विभाजित करें, चुने गए पेजों को एक PDF में निकालें, या कई विभाजित फ़ाइलों को ZIP आर्काइव के रूप में डाउनलोड करें।",
       },
       id: {
-        name: "PDF Splitter",
+        name: "Pemisah PDF",
         description:
           "Pisahkan halaman PDF berdasarkan rentang, ekstrak halaman yang dipilih ke dalam satu PDF, atau unduh beberapa file hasil pemisahan sebagai arsip ZIP.",
       },
@@ -21663,12 +21909,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "PDF 페이지를 범위별로 나누고, 선택한 페이지를 하나의 PDF로 추출하거나, 여러 분할 파일을 ZIP 아카이브로 다운로드하세요.",
       },
       ms: {
-        name: "PDF Splitter",
+        name: "Pemisah PDF",
         description:
           "Pisahkan halaman PDF mengikut julat, ekstrak halaman yang dipilih ke dalam satu PDF, atau muat turun beberapa fail pecahan sebagai arkib ZIP.",
       },
       nl: {
-        name: "PDF Splitter",
+        name: "PDF-splitter",
         description:
           "Splits PDF-pagina's op bereik, extraheer geselecteerde pagina's naar één PDF of download meerdere gesplitste bestanden als ZIP-archief.",
       },
@@ -21678,7 +21924,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Del PDF-sider etter område, trekk ut valgte sider til én PDF, eller last ned flere delte filer som et ZIP-arkiv.",
       },
       pl: {
-        name: "PDF Splitter",
+        name: "Narzędzie do dzielenia PDF",
         description:
           "Dziel strony PDF według zakresu, wyodrębniaj wybrane strony do jednego pliku PDF albo pobieraj wiele podzielonych plików jako archiwum ZIP.",
       },
@@ -21698,12 +21944,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Dela PDF-sidor efter intervall, extrahera valda sidor till en PDF eller ladda ned flera delade filer som ett ZIP-arkiv.",
       },
       th: {
-        name: "PDF Splitter",
+        name: "ตัวแยก PDF",
         description:
           "แยกหน้า PDF ตามช่วงหน้า แยกหน้าที่เลือกออกเป็น PDF เดียว หรือดาวน์โหลดไฟล์ที่แยกหลายไฟล์เป็นไฟล์ ZIP",
       },
       tr: {
-        name: "PDF Splitter",
+        name: "PDF Bölücü",
         description:
           "PDF sayfalarını aralığa göre bölün, seçili sayfaları tek bir PDF'ye çıkarın veya birden fazla bölünmüş dosyayı ZIP arşivi olarak indirin.",
       },
@@ -21731,12 +21977,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["pdf", "text", "extractor", "document", "offline"],
     locales: {
       ar: {
-        name: "PDF Text Extractor",
+        name: "مستخرج النصوص من PDF",
         description:
           "استخرج النص القابل للتحديد من ملفات PDF محليا في متصفحك وصدّره كنص عادي.",
       },
       de: {
-        name: "PDF Text Extractor",
+        name: "PDF-Textextraktion",
         description:
           "Extrahiere auswählbaren Text aus PDF-Dateien lokal in deinem Browser und exportiere ihn als reinen Text.",
       },
@@ -21746,92 +21992,92 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Extract selectable text from PDF files locally in your browser and export it as plain text.",
       },
       es: {
-        name: "PDF Text Extractor",
+        name: "Extractor de texto de PDF",
         description:
           "Extrae texto seleccionable de archivos PDF localmente en tu navegador y expórtalo como texto sin formato.",
       },
       fr: {
-        name: "PDF Text Extractor",
+        name: "Extracteur de texte PDF",
         description:
           "Extrayez localement le texte sélectionnable de fichiers PDF dans votre navigateur et exportez-le en texte brut.",
       },
       he: {
-        name: "PDF Text Extractor",
+        name: "מחלץ טקסט מ־PDF",
         description:
           "חלצו טקסט ניתן לבחירה מקובצי PDF באופן מקומי בדפדפן ויצאו אותו כטקסט רגיל.",
       },
       hi: {
-        name: "PDF Text Extractor",
+        name: "PDF टेक्स्ट एक्सट्रैक्टर",
         description:
           "PDF फाइलों से चुनने योग्य टेक्स्ट को अपने ब्राउजर में स्थानीय रूप से निकालें और उसे plain text के रूप में export करें।",
       },
       id: {
-        name: "PDF Text Extractor",
+        name: "Pengekstrak Teks PDF",
         description:
           "Ekstrak teks yang dapat dipilih dari file PDF secara lokal di browser Anda dan ekspor sebagai teks biasa.",
       },
       it: {
-        name: "PDF Text Extractor",
+        name: "Estrattore di testo PDF",
         description:
           "Estrai testo selezionabile dai file PDF localmente nel browser ed esportalo come testo normale.",
       },
       ja: {
-        name: "PDF Text Extractor",
+        name: "PDFテキスト抽出ツール",
         description:
           "PDFファイルから選択可能なテキストをブラウザ内でローカルに抽出し、プレーンテキストとしてエクスポートします。",
       },
       ko: {
-        name: "PDF Text Extractor",
+        name: "PDF 텍스트 추출기",
         description:
           "브라우저에서 PDF 파일의 선택 가능한 텍스트를 로컬로 추출하고 일반 텍스트로 내보냅니다.",
       },
       ms: {
-        name: "PDF Text Extractor",
+        name: "Pengekstrak Teks PDF",
         description:
           "Ekstrak teks boleh dipilih daripada fail PDF secara setempat dalam pelayar anda dan eksportkannya sebagai teks biasa.",
       },
       nl: {
-        name: "PDF Text Extractor",
+        name: "PDF-tekstextractor",
         description:
           "Haal selecteerbare tekst lokaal in je browser uit PDF-bestanden en exporteer die als platte tekst.",
       },
       no: {
-        name: "PDF Text Extractor",
+        name: "PDF-tekstuttrekker",
         description:
           "Trekk ut markerbar tekst fra PDF-filer lokalt i nettleseren din, og eksporter den som ren tekst.",
       },
       pl: {
-        name: "PDF Text Extractor",
+        name: "Ekstraktor tekstu z PDF",
         description:
           "Wyodrębniaj zaznaczalny tekst z plików PDF lokalnie w przeglądarce i eksportuj go jako zwykły tekst.",
       },
       pt: {
-        name: "PDF Text Extractor",
+        name: "Extrator de texto de PDF",
         description:
           "Extraia texto selecionável de arquivos PDF localmente no seu navegador e exporte como texto simples.",
       },
       ru: {
-        name: "PDF Text Extractor",
+        name: "Извлечение текста из PDF",
         description:
           "Извлекайте выделяемый текст из PDF-файлов локально в браузере и экспортируйте его как обычный текст.",
       },
       sv: {
-        name: "PDF Text Extractor",
+        name: "Textextraherare för PDF",
         description:
           "Extrahera markerbar text från PDF-filer lokalt i din webbläsare och exportera den som oformaterad text.",
       },
       th: {
-        name: "PDF Text Extractor",
+        name: "ตัวดึงข้อความจาก PDF",
         description:
           "ดึงข้อความที่เลือกได้จากไฟล์ PDF ภายในเบราว์เซอร์ของคุณ และส่งออกเป็นข้อความล้วน",
       },
       tr: {
-        name: "PDF Text Extractor",
+        name: "PDF Metin Çıkarıcı",
         description:
           "PDF dosyalarından seçilebilir metni tarayıcınızda yerel olarak çıkarın ve düz metin olarak dışa aktarın.",
       },
       vi: {
-        name: "PDF Text Extractor",
+        name: "Trình trích xuất văn bản PDF",
         description:
           "Trích xuất văn bản có thể chọn từ tệp PDF ngay trong trình duyệt của bạn và xuất dưới dạng văn bản thuần túy.",
       },
@@ -22089,6 +22335,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "PDF 檢視器",
         description:
           "在本機閱讀 PDF 檔案，支援頁面導覽、縮放、文字選取與搜尋。文件始終保留在您的瀏覽器中。",
+      },
+    },
+  },
+  {
+    slug: "pdf-watermark",
+    category: "pdf",
+    icon: "file-text",
+    tags: ["pdf", "watermark", "text", "image", "tile", "offline"],
+    locales: {
+      ar: {
+        name: "علامة مائية لملفات PDF",
+        description:
+          "أضف علامات مائية نصية أو صورًا إلى صفحات PDF محددة. اضبط التدوير والعتامة والموضع والتكرار بخصوصية في متصفحك.",
+      },
+      de: {
+        name: "PDF-Wasserzeichen",
+        description:
+          "Fügen Sie ausgewählten PDF-Seiten Text- oder Bildwasserzeichen hinzu. Passen Sie Drehung, Deckkraft, Position und Kachelung lokal in Ihrem Browser an.",
+      },
+      en: {
+        name: "PDF Watermark",
+        description:
+          "Add text or image watermarks to selected PDF pages. Adjust rotation, opacity, position, and tiling privately in your browser.",
+      },
+      es: {
+        name: "Marca de agua PDF",
+        description:
+          "Añade marcas de agua de texto o imagen a páginas concretas de un PDF. Ajusta la rotación, opacidad, posición y mosaico de forma privada en tu navegador.",
+      },
+      fr: {
+        name: "Filigrane PDF",
+        description:
+          "Ajoutez des filigranes texte ou image aux pages PDF sélectionnées. Réglez rotation, opacité, position et mosaïque en toute confidentialité dans votre navigateur.",
+      },
+      he: {
+        name: "סימן מים ל-PDF",
+        description:
+          "הוסיפו סימני מים של טקסט או תמונה לעמודי PDF נבחרים. התאימו סיבוב, אטימות, מיקום וריצוף באופן פרטי בדפדפן שלכם.",
+      },
+      hi: {
+        name: "PDF वॉटरमार्क",
+        description:
+          "चुने हुए PDF पृष्ठों पर टेक्स्ट या चित्र वॉटरमार्क जोड़ें। अपने ब्राउज़र में निजी रूप से घुमाव, अपारदर्शिता, स्थिति और दोहराव समायोजित करें।",
+      },
+      id: {
+        name: "Tanda Air PDF",
+        description:
+          "Tambahkan tanda air teks atau gambar ke halaman PDF pilihan. Sesuaikan rotasi, opasitas, posisi, dan pola berulang secara privat di browser Anda.",
+      },
+      it: {
+        name: "Filigrana PDF",
+        description:
+          "Aggiungi filigrane di testo o immagini alle pagine PDF selezionate. Regola rotazione, opacità, posizione e ripetizione in modo privato nel browser.",
+      },
+      ja: {
+        name: "PDF 透かし追加",
+        description:
+          "PDF の指定ページにテキストや画像の透かしを追加できます。回転角度、不透明度、位置、タイル配置をブラウザー内で安全に調整できます。",
+      },
+      ko: {
+        name: "PDF 워터마크",
+        description:
+          "선택한 PDF 페이지에 텍스트 또는 이미지 워터마크를 추가하세요. 브라우저에서 파일을 외부로 보내지 않고 회전, 불투명도, 위치와 반복 배치를 조정할 수 있습니다.",
+      },
+      ms: {
+        name: "Tera Air PDF",
+        description:
+          "Tambah tera air teks atau imej pada halaman PDF terpilih. Laraskan putaran, kelegapan, kedudukan dan corak berulang secara peribadi dalam pelayar anda.",
+      },
+      nl: {
+        name: "PDF-watermerk",
+        description:
+          "Voeg tekst- of afbeeldingswatermerken toe aan geselecteerde PDF-pagina's. Pas rotatie, dekking, positie en herhaling privé in je browser aan.",
+      },
+      no: {
+        name: "PDF-vannmerke",
+        description:
+          "Legg til tekst- eller bildevannmerker på valgte PDF-sider. Juster rotasjon, ugjennomsiktighet, plassering og gjentakelse privat i nettleseren.",
+      },
+      pl: {
+        name: "Znak wodny w PDF",
+        description:
+          "Dodawaj tekstowe lub graficzne znaki wodne do wybranych stron PDF. Dostosuj obrót, krycie, położenie i układ kafelkowy prywatnie w przeglądarce.",
+      },
+      pt: {
+        name: "Marca d'água em PDF",
+        description:
+          "Adicione marcas d'água de texto ou imagem às páginas selecionadas de um PDF. Ajuste rotação, opacidade, posição e mosaico com privacidade no navegador.",
+      },
+      ru: {
+        name: "Водяной знак для PDF",
+        description:
+          "Добавляйте текстовые водяные знаки или изображения на выбранные страницы PDF. Настраивайте поворот, непрозрачность, положение и повторение локально в браузере.",
+      },
+      sv: {
+        name: "PDF-vattenstämpel",
+        description:
+          "Lägg till text- eller bildvattenstämplar på valda PDF-sidor. Justera rotation, opacitet, placering och upprepning privat i webbläsaren.",
+      },
+      th: {
+        name: "ลายน้ำ PDF",
+        description:
+          "เพิ่มลายน้ำข้อความหรือรูปภาพลงในหน้า PDF ที่เลือก ปรับมุมหมุน ความทึบ ตำแหน่ง และการเรียงซ้ำได้อย่างเป็นส่วนตัวในเบราว์เซอร์",
+      },
+      tr: {
+        name: "PDF Filigranı",
+        description:
+          "Seçili PDF sayfalarına metin veya görsel filigranları ekleyin. Döndürme, opaklık, konum ve döşeme ayarlarını dosyalarınızı tarayıcınızdan çıkarmadan yapın.",
+      },
+      vi: {
+        name: "Hình mờ PDF",
+        description:
+          "Thêm hình mờ văn bản hoặc hình ảnh vào các trang PDF được chọn. Điều chỉnh góc xoay, độ mờ đục, vị trí và kiểu lặp một cách riêng tư trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "PDF 水印",
+        description:
+          "为指定 PDF 页面添加文字或图片水印。在浏览器中私密调整旋转角度、不透明度、位置和平铺效果。",
+      },
+      "zh-TW": {
+        name: "PDF 浮水印",
+        description:
+          "為指定 PDF 頁面加上文字或圖片浮水印。在瀏覽器中私密調整旋轉角度、不透明度、位置及平鋪配置。",
       },
     },
   },
@@ -22366,12 +22735,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["image", "png", "optimizer", "compression", "lossless", "oxipng"],
     locales: {
       ar: {
-        name: "PNG Optimizer",
+        name: "محسّن PNG",
         description:
           "اضغط صور PNG في متصفحك باستخدام تحسين Oxipng بلا فقدان مع الحفاظ على الجودة المرئية.",
       },
       de: {
-        name: "PNG Optimizer",
+        name: "PNG-Optimierer",
         description:
           "Komprimiere PNG-Bilder in deinem Browser mit verlustfreier Oxipng-Optimierung und erhaltener Bildqualität.",
       },
@@ -22386,97 +22755,97 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Comprime imágenes PNG en tu navegador con optimización sin pérdida de Oxipng, preservando la calidad visual.",
       },
       fr: {
-        name: "PNG Optimizer",
+        name: "Optimiseur PNG",
         description:
           "Compressez des images PNG dans votre navigateur avec l'optimisation sans perte d'Oxipng, tout en préservant la qualité visuelle.",
       },
       he: {
-        name: "PNG Optimizer",
+        name: "ממטב PNG",
         description:
           "דחסו תמונות PNG בדפדפן עם אופטימיזציה ללא אובדן של Oxipng, תוך שמירה על האיכות החזותית.",
       },
       hi: {
-        name: "PNG Optimizer",
+        name: "PNG ऑप्टिमाइज़र",
         description:
           "दृश्य गुणवत्ता बनाए रखते हुए lossless Oxipng optimization के साथ अपने browser में PNG images compress करें।",
       },
       id: {
-        name: "PNG Optimizer",
+        name: "Pengoptimal PNG",
         description:
           "Kompres gambar PNG di browser Anda dengan optimasi Oxipng lossless sambil mempertahankan kualitas visual.",
       },
       it: {
-        name: "PNG Optimizer",
+        name: "Ottimizzatore PNG",
         description:
           "Comprimi immagini PNG nel browser con l'ottimizzazione lossless di Oxipng, preservando la qualità visiva.",
       },
       ja: {
-        name: "PNG Optimizer",
+        name: "PNG最適化ツール",
         description:
           "視覚品質を保ったまま、ロスレスな Oxipng 最適化でブラウザー内の PNG 画像を圧縮します。",
       },
       ko: {
-        name: "PNG Optimizer",
+        name: "PNG 최적화 도구",
         description:
           "시각 품질은 유지하면서 무손실 Oxipng 최적화로 브라우저에서 PNG 이미지를 압축합니다.",
       },
       ms: {
-        name: "PNG Optimizer",
+        name: "Pengoptimum PNG",
         description:
           "Mampatkan imej PNG dalam pelayar anda dengan pengoptimuman Oxipng tanpa hilang kualiti sambil mengekalkan kualiti visual.",
       },
       nl: {
-        name: "PNG Optimizer",
+        name: "PNG-optimaliseerder",
         description:
           "Comprimeer PNG-afbeeldingen in je browser met verliesloze Oxipng-optimalisatie, zonder zichtbare kwaliteit te verliezen.",
       },
       no: {
-        name: "PNG Optimizer",
+        name: "PNG-optimalisator",
         description:
           "Komprimer PNG-bilder i nettleseren med tapsfri Oxipng-optimalisering, samtidig som visuell kvalitet bevares.",
       },
       pl: {
-        name: "PNG Optimizer",
+        name: "Optymalizator PNG",
         description:
           "Kompresuj obrazy PNG w przeglądarce dzięki bezstratnej optymalizacji Oxipng, zachowując jakość wizualną.",
       },
       pt: {
-        name: "PNG Optimizer",
+        name: "Otimizador de PNG",
         description:
           "Comprima imagens PNG no navegador com a otimização sem perdas do Oxipng, preservando a qualidade visual.",
       },
       ru: {
-        name: "PNG Optimizer",
+        name: "Оптимизация PNG",
         description:
           "Сжимайте PNG-изображения в браузере с помощью lossless-оптимизации Oxipng, сохраняя визуальное качество.",
       },
       sv: {
-        name: "PNG Optimizer",
+        name: "PNG-optimerare",
         description:
           "Komprimera PNG-bilder i webbläsaren med förlustfri Oxipng-optimering utan att ändra den visuella kvaliteten.",
       },
       th: {
-        name: "PNG Optimizer",
+        name: "ตัวปรับแต่ง PNG",
         description:
           "บีบอัดรูปภาพ PNG ในเบราว์เซอร์ของคุณด้วยการปรับแต่งแบบไม่สูญเสียข้อมูลของ Oxipng พร้อมรักษาคุณภาพภาพไว้",
       },
       tr: {
-        name: "PNG Optimizer",
+        name: "PNG Optimize Edici",
         description:
           "Görsel kaliteyi koruyarak, kayıpsız Oxipng optimizasyonuyla PNG görsellerini tarayıcınızda sıkıştırın.",
       },
       vi: {
-        name: "PNG Optimizer",
+        name: "Trình tối ưu PNG",
         description:
           "Nén ảnh PNG trong trình duyệt bằng tối ưu hóa Oxipng không mất dữ liệu, đồng thời giữ nguyên chất lượng hiển thị.",
       },
       "zh-CN": {
-        name: "PNG Optimizer",
+        name: "PNG 优化器",
         description:
           "在浏览器中使用无损 Oxipng 优化压缩 PNG 图像，同时保持视觉质量。",
       },
       "zh-TW": {
-        name: "PNG Optimizer",
+        name: "PNG 最佳化工具",
         description:
           "在瀏覽器中使用無損 Oxipng 最佳化壓縮 PNG 圖片，同時保留視覺品質。",
       },
@@ -23576,7 +23945,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Genera codici QR per testo, link, credenziali Wi-Fi, contatti, azioni telefoniche, posizioni ed eventi di calendario. Scarica il risultato come PNG, JPG, WebP o SVG.",
       },
       ja: {
-        name: "QR Code Generator",
+        name: "QRコード生成ツール",
         description:
           "テキスト、リンク、Wi-Fi認証情報、連絡先、電話操作、位置情報、カレンダーイベント用のQRコードを生成します。結果はPNG、JPG、WebP、SVGとしてダウンロードできます。",
       },
@@ -24159,14 +24528,14 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["regex", "text", "replace", "match", "pattern"],
     locales: {
       ar: {
-        name: "Regex Tester & Replacer",
+        name: "مختبر ومستبدل التعابير النمطية",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "اختبر التعابير النمطية وافحص المطابقات وعاين الاستبدالات على نصوص فعلية.",
       },
       de: {
-        name: "Regex Tester & Replacer",
+        name: "Regex-Tester und Ersetzer",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Teste reguläre Ausdrücke, prüfe Treffer und sieh Ersetzungen anhand echter Texte in der Vorschau an.",
       },
       en: {
         name: "Regex Tester & Replacer",
@@ -24174,94 +24543,94 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Test regular expressions, inspect matches, and preview replacements against real text.",
       },
       es: {
-        name: "Regex Tester & Replacer",
+        name: "Probador de expresiones regulares y reemplazos",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Pruebe expresiones regulares, examine las coincidencias y previsualice los reemplazos sobre texto real.",
       },
       fr: {
-        name: "Regex Tester & Replacer",
+        name: "Testeur et outil de remplacement d’expressions régulières",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Testez des expressions régulières, examinez les correspondances et prévisualisez les remplacements sur du texte réel.",
       },
       he: {
-        name: "Regex Tester & Replacer",
+        name: "בודק ומחליף ביטויים רגולריים",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "בדקו ביטויים רגולריים, בחנו התאמות וצפו מראש בהחלפות בטקסט אמיתי.",
       },
       hi: {
-        name: "Regex Tester & Replacer",
+        name: "Regex परीक्षक और प्रतिस्थापक",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "वास्तविक टेक्स्ट पर रेगुलर एक्सप्रेशन जांचें, मिलान देखें और प्रतिस्थापन का प्रीव्यू लें।",
       },
       id: {
-        name: "Regex Tester & Replacer",
+        name: "Penguji & Pengganti Regex",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Uji ekspresi reguler, periksa kecocokan, dan pratinjau penggantian pada teks nyata.",
       },
       it: {
-        name: "Regex Tester & Replacer",
+        name: "Test e sostituzione con espressioni regolari",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Prova espressioni regolari, esamina le corrispondenze e visualizza in anteprima le sostituzioni su testo reale.",
       },
       ja: {
-        name: "Regex Tester & Replacer",
+        name: "正規表現テスター・置換ツール",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "実際のテキストで正規表現をテストし、一致箇所を確認して置換結果をプレビューします。",
       },
       ko: {
-        name: "Regex Tester & Replacer",
+        name: "정규식 테스트 및 바꾸기",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "실제 텍스트로 정규 표현식을 테스트하고, 일치 항목을 확인하며, 바꾸기 결과를 미리 확인하세요.",
       },
       ms: {
-        name: "Regex Tester & Replacer",
+        name: "Penguji & Pengganti Regex",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Uji ungkapan nalar, periksa padanan dan pratonton penggantian pada teks sebenar.",
       },
       nl: {
-        name: "Regex Tester & Replacer",
+        name: "Regex-tester en -vervanger",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Test reguliere expressies, inspecteer overeenkomsten en bekijk vervangingen in echte tekst.",
       },
       no: {
-        name: "Regex Tester & Replacer",
+        name: "Tester og erstatter for regulære uttrykk",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Test regulære uttrykk, undersøk treff og forhåndsvis erstatninger i ekte tekst.",
       },
       pl: {
-        name: "Regex Tester & Replacer",
+        name: "Testowanie wyrażeń regularnych i zamiana tekstu",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Testuj wyrażenia regularne, sprawdzaj dopasowania i przeglądaj wynik zamiany na rzeczywistym tekście.",
       },
       pt: {
-        name: "Regex Tester & Replacer",
+        name: "Testador e substituidor de regex",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Teste expressões regulares, examine correspondências e visualize substituições em textos reais.",
       },
       ru: {
-        name: "Regex Tester & Replacer",
+        name: "Проверка регулярных выражений и замена текста",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Проверяйте регулярные выражения, изучайте совпадения и просматривайте результат замены на реальном тексте.",
       },
       sv: {
-        name: "Regex Tester & Replacer",
+        name: "Testare och ersättare för reguljära uttryck",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Testa reguljära uttryck, granska träffar och förhandsgranska ersättningar i riktig text.",
       },
       th: {
-        name: "Regex Tester & Replacer",
+        name: "เครื่องมือทดสอบและแทนที่ Regex",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "ทดสอบนิพจน์ปรกติ ตรวจสอบผลที่ตรงกัน และดูตัวอย่างการแทนที่จากข้อความจริง",
       },
       tr: {
-        name: "Regex Tester & Replacer",
+        name: "Düzenli İfade Test ve Değiştirme Aracı",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Düzenli ifadeleri test edin, eşleşmeleri inceleyin ve gerçek metin üzerinde değiştirmeleri önizleyin.",
       },
       vi: {
-        name: "Regex Tester & Replacer",
+        name: "Trình kiểm thử và thay thế biểu thức chính quy",
         description:
-          "Test regular expressions, inspect matches, and preview replacements against real text.",
+          "Kiểm thử biểu thức chính quy, kiểm tra kết quả khớp và xem trước nội dung thay thế trên văn bản thực tế.",
       },
       "zh-CN": {
         name: "正则测试与替换",
@@ -25120,7 +25489,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Jana fail robots.txt dengan peraturan user-agent, laluan allow/disallow, dan pautan sitemap.",
       },
       nl: {
-        name: "robots.txt Generator",
+        name: "robots.txt-generator",
         description:
           "Genereer robots.txt-bestanden met user-agentregels, allow/disallow-paden en sitemap-links.",
       },
@@ -28056,7 +28425,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Tukar teks kepada slug mesra URL untuk SEO dan pautan kekal",
       },
       nl: {
-        name: "Slug Generator",
+        name: "Slug-generator",
         description:
           "Converteer tekst naar URL-vriendelijke slugs voor SEO en permalinks",
       },
@@ -28412,12 +28781,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "अपने ब्राउज़र में SQL क्वेरी को फ़ॉर्मैट करें, dialect-aware layout rules को समायोजित करें, और परिणाम को कॉपी या डाउनलोड करने से पहले सामान्य lint समस्याएँ पकड़ें।",
       },
       id: {
-        name: "SQL Formatter & Linter",
+        name: "Pemformat & Pemeriksa SQL",
         description:
           "Format kueri SQL di browser Anda, sesuaikan aturan tata letak yang peka terhadap dialek, dan tangkap masalah linting umum sebelum Anda menyalin atau mengunduh hasilnya.",
       },
       it: {
-        name: "SQL Formatter & Linter",
+        name: "Formattatore e analizzatore SQL",
         description:
           "Formatta query SQL nel browser, regola le opzioni di layout in base al dialect e segnala i problemi di lint più comuni prima di copiare o scaricare il risultato.",
       },
@@ -28427,7 +28796,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "ブラウザ内で SQL クエリを整形し、方言に応じたレイアウトルールを調整し、結果をコピーまたはダウンロードする前に一般的な lint の問題を検出します。",
       },
       ko: {
-        name: "SQL Formatter & Linter",
+        name: "SQL 포맷터 및 린터",
         description:
           "브라우저에서 SQL 쿼리를 포맷하고, 방언 인식 레이아웃 규칙을 조정하며, 결과를 복사하거나 다운로드하기 전에 흔한 lint 문제를 찾아냅니다.",
       },
@@ -28437,7 +28806,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Format pertanyaan SQL dalam pelayar anda, laraskan peraturan susun atur yang peka terhadap dialek, dan kesan isu lint biasa sebelum anda menyalin atau memuat turun hasilnya.",
       },
       nl: {
-        name: "SQL Formatter & Linter",
+        name: "SQL-opmaker en -linter",
         description:
           "Formatteer SQL-query's in je browser, stem dialectbewuste lay-outregels af en vang veelvoorkomende lintproblemen op voordat je het resultaat kopieert of downloadt.",
       },
@@ -28447,7 +28816,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Formater SQL-spørringer i nettleseren, juster dialektbevisste oppsettregler, og fang opp vanlige linter-feil før du kopierer eller laster ned resultatet.",
       },
       pl: {
-        name: "SQL Formatter & Linter",
+        name: "Formatowanie i lintowanie SQL",
         description:
           "Formatuj zapytania SQL w przeglądarce, dostosowuj reguły układu zależne od dialektu i wykrywaj typowe problemy lintowania, zanim skopiujesz lub pobierzesz wynik.",
       },
@@ -28457,7 +28826,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Formate consultas SQL no navegador, ajuste regras de layout sensíveis ao dialeto e detecte problemas comuns de lint antes de copiar ou baixar o resultado.",
       },
       ru: {
-        name: "SQL Formatter & Linter",
+        name: "Форматирование и проверка SQL",
         description:
           "Форматируйте SQL-запросы прямо в браузере, настраивайте правила компоновки с учётом диалекта и находите распространённые проблемы lint до копирования или скачивания результата.",
       },
@@ -28467,7 +28836,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Formatera SQL-frågor i webbläsaren, finjustera dialektmedvetna layoutregler och fånga vanliga lint-problem innan du kopierar eller laddar ner resultatet.",
       },
       th: {
-        name: "SQL Formatter & Linter",
+        name: "เครื่องมือจัดรูปแบบและตรวจสอบ SQL",
         description:
           "จัดรูปแบบคำสั่ง SQL ในเบราว์เซอร์ของคุณ ปรับกฎการจัดวางให้เหมาะกับแต่ละ dialect และตรวจจับปัญหา lint ทั่วไปก่อนที่คุณจะคัดลอกหรือดาวน์โหลดผลลัพธ์",
       },
@@ -28477,7 +28846,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "SQL sorgularını tarayıcınızda biçimlendirin, diyalekt farkındalığına sahip yerleşim kurallarını ayarlayın ve sonucu kopyalamadan ya da indirmeden önce yaygın lint hatalarını yakalayın.",
       },
       vi: {
-        name: "SQL Formatter & Linter",
+        name: "Trình định dạng và kiểm tra SQL",
         description:
           "Định dạng truy vấn SQL ngay trong trình duyệt, tinh chỉnh các quy tắc bố cục theo dialect và phát hiện các lỗi lint phổ biến trước khi bạn sao chép hoặc tải xuống kết quả.",
       },
@@ -28570,7 +28939,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Jana hash Subresource Integrity (SRI) untuk sumber web. Cipta hash SHA-256, SHA-384 atau SHA-512 untuk memastikan integriti skrip luaran, stylesheet dan sumber lain",
       },
       nl: {
-        name: "SRI Hash Generator",
+        name: "SRI-hashgenerator",
         description:
           "Genereer Subresource Integrity (SRI) hashes voor webresources. Maak SHA-256, SHA-384 of SHA-512 hashes om de integriteit van externe scripts, stylesheets en andere resources te waarborgen",
       },
@@ -28837,7 +29206,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Jana cap jari SHA-256 dan MD5 untuk kunci awam OpenSSH, baris authorized_keys, dan blok kunci awam SSH2.",
       },
       nl: {
-        name: "SSH Public Key Fingerprint",
+        name: "Vingerafdruk van openbare SSH-sleutel",
         description:
           "Genereer SHA-256- en MD5-fingerprints voor OpenSSH-public keys, authorized_keys-regels en SSH2-public-key-blokken.",
       },
@@ -28862,7 +29231,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Создавайте отпечатки SHA-256 и MD5 для открытых ключей OpenSSH, строк authorized_keys и блоков открытых ключей SSH2.",
       },
       sv: {
-        name: "SSH Public Key Fingerprint",
+        name: "Fingeravtryck för publik SSH-nyckel",
         description:
           "Generera SHA-256- och MD5-fingeravtryck för publika OpenSSH-nycklar, authorized_keys-rader och SSH2-block med publika nycklar.",
       },
@@ -29016,12 +29385,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["image", "svg", "optimizer", "compression", "svgo"],
     locales: {
       ar: {
-        name: "SVG Optimizer",
+        name: "محسّن SVG",
         description:
           "حسّن ملفات SVG باستخدام تنظيف SVGO قابل للتكوين، والضغط، والمعاينة، والنسخ، والتنزيل",
       },
       de: {
-        name: "SVG Optimizer",
+        name: "SVG-Optimierer",
         description:
           "Optimiere SVG-Dateien mit konfigurierbarer SVGO-Bereinigung, Komprimierung, Vorschau, Kopieren und Download",
       },
@@ -29031,92 +29400,92 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Optimize SVG files with configurable SVGO cleanup, compression, preview, copy, and download",
       },
       es: {
-        name: "SVG Optimizer",
+        name: "Optimizador de SVG",
         description:
           "Optimiza archivos SVG con limpieza configurable de SVGO, compresión, vista previa, copia y descarga",
       },
       fr: {
-        name: "SVG Optimizer",
+        name: "Optimiseur SVG",
         description:
           "Optimisez les fichiers SVG avec un nettoyage SVGO configurable, compression, aperçu, copie et téléchargement",
       },
       he: {
-        name: "SVG Optimizer",
+        name: "ממטב SVG",
         description:
           "בצעו אופטימיזציה לקובצי SVG עם ניקוי SVGO ניתן להגדרה, דחיסה, תצוגה מקדימה, העתקה והורדה",
       },
       hi: {
-        name: "SVG Optimizer",
+        name: "SVG ऑप्टिमाइज़र",
         description:
           "कॉन्फ़िगर करने योग्य SVGO cleanup, compression, preview, copy, और download के साथ SVG फ़ाइलों को optimize करें",
       },
       id: {
-        name: "SVG Optimizer",
+        name: "Pengoptimal SVG",
         description:
           "Optimalkan file SVG dengan pembersihan SVGO yang dapat dikonfigurasi, kompresi, pratinjau, salin, dan unduh",
       },
       it: {
-        name: "SVG Optimizer",
+        name: "Ottimizzatore SVG",
         description:
           "Ottimizza file SVG con pulizia SVGO configurabile, compressione, anteprima, copia e download",
       },
       ja: {
-        name: "SVG Optimizer",
+        name: "SVG最適化ツール",
         description:
           "設定可能な SVGO クリーンアップ、圧縮、プレビュー、コピー、ダウンロードで SVG ファイルを最適化します",
       },
       ko: {
-        name: "SVG Optimizer",
+        name: "SVG 최적화 도구",
         description:
           "설정 가능한 SVGO 정리, 압축, 미리보기, 복사, 다운로드 기능으로 SVG 파일 최적화",
       },
       ms: {
-        name: "SVG Optimizer",
+        name: "Pengoptimum SVG",
         description:
           "Optimumkan fail SVG dengan pembersihan SVGO yang boleh dikonfigurasi, pemampatan, pratonton, salin, dan muat turun",
       },
       nl: {
-        name: "SVG Optimizer",
+        name: "SVG-optimaliseerder",
         description:
           "Optimaliseer SVG-bestanden met configureerbare SVGO-opschoning, compressie, voorbeeldweergave, kopiëren en downloaden",
       },
       no: {
-        name: "SVG Optimizer",
+        name: "SVG-optimalisator",
         description:
           "Optimaliser SVG-filer med konfigurerbar SVGO-opprydding, komprimering, forhåndsvisning, kopiering og nedlasting",
       },
       pl: {
-        name: "SVG Optimizer",
+        name: "Optymalizator SVG",
         description:
           "Optymalizuj pliki SVG z konfigurowalnym czyszczeniem SVGO, kompresją, podglądem, kopiowaniem i pobieraniem",
       },
       pt: {
-        name: "SVG Optimizer",
+        name: "Otimizador de SVG",
         description:
           "Otimize arquivos SVG com limpeza SVGO configurável, compactação, pré-visualização, cópia e download",
       },
       ru: {
-        name: "SVG Optimizer",
+        name: "Оптимизация SVG",
         description:
           "Оптимизируйте SVG-файлы с настраиваемой очисткой SVGO, сжатием, предпросмотром, копированием и скачиванием",
       },
       sv: {
-        name: "SVG Optimizer",
+        name: "SVG-optimerare",
         description:
           "Optimera SVG-filer med konfigurerbar SVGO-rensning, komprimering, förhandsvisning, kopiering och nedladdning",
       },
       th: {
-        name: "SVG Optimizer",
+        name: "ตัวปรับแต่ง SVG",
         description:
           "ปรับแต่งไฟล์ SVG ให้เหมาะสมด้วยการล้างข้อมูลผ่าน SVGO ที่กำหนดค่าได้ การบีบอัด การแสดงตัวอย่าง การคัดลอก และการดาวน์โหลด",
       },
       tr: {
-        name: "SVG Optimizer",
+        name: "SVG Optimize Edici",
         description:
           "SVG dosyalarını yapılandırılabilir SVGO temizleme, sıkıştırma, önizleme, kopyalama ve indirme ile optimize edin",
       },
       vi: {
-        name: "SVG Optimizer",
+        name: "Trình tối ưu SVG",
         description:
           "Tối ưu hóa tệp SVG bằng SVGO cleanup có thể cấu hình, nén, xem trước, sao chép và tải xuống",
       },
@@ -29366,14 +29735,14 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     tags: ["text", "diff", "compare", "document", "code", "review"],
     locales: {
       ar: {
-        name: "Text Diff",
+        name: "مقارنة النصوص",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "قارن مسودتين جنبًا إلى جنب، وافحص الأسطر المعدّلة، وصدّر الفروق بتنسيق موحّد وواضح دون مغادرة المتصفح.",
       },
       de: {
-        name: "Text Diff",
+        name: "Text-Diff",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Vergleiche zwei Entwürfe nebeneinander, prüfe geänderte Zeilen und exportiere direkt im Browser einen übersichtlichen Unified-Diff.",
       },
       en: {
         name: "Text Diff",
@@ -29381,94 +29750,94 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
       },
       es: {
-        name: "Text Diff",
+        name: "Comparador de textos",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Compare dos borradores en paralelo, examine las líneas modificadas y exporte las diferencias en formato unificado sin salir del navegador.",
       },
       fr: {
-        name: "Text Diff",
+        name: "Comparateur de textes",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Comparez deux versions côte à côte, examinez les lignes modifiées et exportez les différences au format unifié sans quitter le navigateur.",
       },
       he: {
-        name: "Text Diff",
+        name: "השוואת טקסטים",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "השוו שתי טיוטות זו לצד זו, בדקו שורות שהשתנו וייצאו קובץ הבדלים מאוחד וברור ישירות מהדפדפן.",
       },
       hi: {
-        name: "Text Diff",
+        name: "टेक्स्ट अंतर",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "ब्राउज़र में ही दो ड्राफ़्ट की साथ-साथ तुलना करें, बदली गई पंक्तियां देखें और स्पष्ट एकीकृत डिफ़ निर्यात करें।",
       },
       id: {
-        name: "Text Diff",
+        name: "Pembanding Teks",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Bandingkan dua draf secara berdampingan, periksa baris yang berubah, dan ekspor perbedaan yang rapi dalam format unified diff tanpa meninggalkan browser.",
       },
       it: {
-        name: "Text Diff",
+        name: "Confronto testi",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Confronta due bozze affiancate, esamina le righe modificate ed esporta un diff unificato chiaro senza uscire dal browser.",
       },
       ja: {
-        name: "Text Diff",
+        name: "テキスト差分ツール",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "ブラウザー内で2つの原稿を並べて比較し、変更行を確認して、整った統合差分を書き出せます。",
       },
       ko: {
-        name: "Text Diff",
+        name: "텍스트 차이 비교",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "브라우저에서 두 초안을 나란히 비교하고, 변경된 줄을 확인하며, 깔끔한 통합 차이 파일을 내보내세요.",
       },
       ms: {
-        name: "Text Diff",
+        name: "Perbezaan Teks",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Bandingkan dua draf bersebelahan, periksa baris yang diubah dan eksport perbezaan bersepadu yang kemas tanpa meninggalkan pelayar.",
       },
       nl: {
-        name: "Text Diff",
+        name: "Tekstvergelijker",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Vergelijk twee concepten naast elkaar, bekijk gewijzigde regels en exporteer een overzichtelijke gecombineerde diff zonder de browser te verlaten.",
       },
       no: {
-        name: "Text Diff",
+        name: "Tekstsammenligning",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Sammenlign to utkast side ved side, undersøk endrede linjer og eksporter en ryddig samlet diff uten å forlate nettleseren.",
       },
       pl: {
-        name: "Text Diff",
+        name: "Porównywanie tekstów",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Porównuj dwie wersje tekstu obok siebie, sprawdzaj zmienione wiersze i eksportuj czytelne różnice w formacie unified diff bez opuszczania przeglądarki.",
       },
       pt: {
-        name: "Text Diff",
+        name: "Comparador de textos",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Compare dois rascunhos lado a lado, examine as linhas alteradas e exporte um diff unificado e organizado sem sair do navegador.",
       },
       ru: {
-        name: "Text Diff",
+        name: "Сравнение текстов",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Сравнивайте две версии текста рядом, проверяйте изменённые строки и экспортируйте различия в формате unified diff прямо в браузере.",
       },
       sv: {
-        name: "Text Diff",
+        name: "Textjämförelse",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Jämför två utkast sida vid sida, granska ändrade rader och exportera en tydlig samlad diff direkt i webbläsaren.",
       },
       th: {
-        name: "Text Diff",
+        name: "เครื่องมือเปรียบเทียบข้อความ",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "เปรียบเทียบสองฉบับร่างข้างกัน ตรวจสอบบรรทัดที่เปลี่ยน และส่งออกผลต่างแบบรวมที่อ่านง่ายได้ในเบราว์เซอร์",
       },
       tr: {
-        name: "Text Diff",
+        name: "Metin Farkı",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "Tarayıcıdan ayrılmadan iki taslağı yan yana karşılaştırın, değişen satırları inceleyin ve düzenli bir birleşik fark çıktısı alın.",
       },
       vi: {
-        name: "Text Diff",
+        name: "So sánh văn bản",
         description:
-          "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser.",
+          "So sánh hai bản nháp song song, kiểm tra các dòng đã thay đổi và xuất bản diff hợp nhất rõ ràng ngay trong trình duyệt.",
       },
       "zh-CN": {
         name: "文本对比",
@@ -30913,7 +31282,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Genera nel browser Universally Unique Lexicographically Sortable Identifiers con timestamp personalizzati opzionali.",
       },
       ja: {
-        name: "ULID Generator",
+        name: "ULID生成ツール",
         description:
           "任意のカスタムタイムスタンプにも対応した、辞書順にソート可能な汎用一意識別子をブラウザー内で生成します。",
       },
@@ -30928,7 +31297,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Jana Pengecam Boleh Isih Secara Leksikografi yang Unik Secara Universal dalam pelayar dengan cap masa tersuai pilihan.",
       },
       nl: {
-        name: "ULID Generator",
+        name: "ULID-generator",
         description:
           "Genereer Universally Unique Lexicographically Sortable Identifiers in de browser met optionele aangepaste tijdstempels.",
       },
@@ -30996,7 +31365,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "تحويل أحرف Unicode من وإلى صيغ متعددة بما في ذلك \\uXXXX و \\u{XXXXX} وكيانات HTML وترميز URL وترميز U+XXXX",
       },
       de: {
-        name: "Unicode Escape / Unescape",
+        name: "Unicode-Escaping und -Unescaping",
         description:
           "Unicode-Zeichen in verschiedenen Formaten escapen und unescapen, einschließlich \\uXXXX, \\u{XXXXX}, HTML-Entitäten, URL-Kodierung und U+XXXX-Notation",
       },
@@ -31016,7 +31385,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Échapper et désechapper les caractères Unicode dans divers formats incluant \\uXXXX, \\u{XXXXX}, entités HTML, encodage URL et notation U+XXXX",
       },
       he: {
-        name: "Unicode Escape / Unescape",
+        name: "קידוד ופענוח Unicode",
         description:
           "המרת תווי Unicode לפורמטים שונים כולל \\uXXXX, \\u{XXXXX}, ישויות HTML, קידוד URL וסימון U+XXXX",
       },
@@ -31026,7 +31395,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "\\uXXXX, \\u{XXXXX}, HTML एंटिटी, URL एन्कोडिंग और U+XXXX नोटेशन सहित विभिन्न प्रारूपों में Unicode वर्णों को एस्केप और अनएस्केप करें",
       },
       id: {
-        name: "Unicode Escape / Unescape",
+        name: "Pengodean / Penguraian Escape Unicode",
         description:
           "Escape dan unescape karakter Unicode dalam berbagai format termasuk \\uXXXX, \\u{XXXXX}, entitas HTML, encoding URL, dan notasi U+XXXX",
       },
@@ -31046,22 +31415,22 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "\\uXXXX, \\u{XXXXX}, HTML 엔티티, URL 인코딩, U+XXXX 표기법을 포함한 다양한 형식으로 Unicode 문자를 이스케이프 및 언이스케이프",
       },
       ms: {
-        name: "Unicode Escape / Unescape",
+        name: "Pelepasan / Nyahlepasan Unicode",
         description:
-          "Escape dan unescape aksara Unicode dalam pelbagai format termasuk \\uXXXX, \\u{XXXXX}, entiti HTML, pengekodan URL dan notasi U+XXXX",
+          "Lepaskan dan nyahlepaskan aksara Unicode dalam pelbagai format termasuk \\uXXXX, \\u{XXXXX}, entiti HTML, pengekodan URL dan notasi U+XXXX",
       },
       nl: {
-        name: "Unicode Escape / Unescape",
+        name: "Unicode-escapes coderen / decoderen",
         description:
           "Unicode-tekens escapen en unescapen in verschillende formaten waaronder \\uXXXX, \\u{XXXXX}, HTML-entiteiten, URL-codering en U+XXXX-notatie",
       },
       no: {
-        name: "Unicode Escape / Unescape",
+        name: "Unicode-escaping og -avkoding",
         description:
           "Escape og unescape Unicode-tegn i ulike formater inkludert \\uXXXX, \\u{XXXXX}, HTML-entiteter, URL-koding og U+XXXX-notasjon",
       },
       pl: {
-        name: "Unicode Escape / Unescape",
+        name: "Kodowanie i dekodowanie Unicode",
         description:
           "Kodowanie i dekodowanie znaków Unicode w różnych formatach w tym \\uXXXX, \\u{XXXXX}, encje HTML, kodowanie URL i notacja U+XXXX",
       },
@@ -31076,12 +31445,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Экранирование и деэкранирование символов Unicode в различных форматах, включая \\uXXXX, \\u{XXXXX}, HTML-сущности, URL-кодирование и нотацию U+XXXX",
       },
       sv: {
-        name: "Unicode Escape / Unescape",
+        name: "Omvandlare för Unicode-escape-sekvenser",
         description:
-          "Escape och unescape Unicode-tecken i olika format inklusive \\uXXXX, \\u{XXXXX}, HTML-entiteter, URL-kodning och U+XXXX-notation",
+          "Omvandla Unicode-tecken till och från escape-sekvenser i olika format, inklusive \\uXXXX, \\u{XXXXX}, HTML-entiteter, URL-kodning och U+XXXX-notation",
       },
       th: {
-        name: "Unicode Escape / Unescape",
+        name: "ตัวเข้ารหัส / ถอดรหัส Unicode Escape",
         description:
           "แปลงอักขระ Unicode ไปและกลับในรูปแบบต่างๆ รวมถึง \\uXXXX, \\u{XXXXX}, HTML entities, การเข้ารหัส URL และสัญลักษณ์ U+XXXX",
       },
@@ -31091,7 +31460,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "\\uXXXX, \\u{XXXXX}, HTML varlıkları, URL kodlama ve U+XXXX gösterimi dahil çeşitli formatlarda Unicode karakterlerini kaçış ve kaçış geri alma",
       },
       vi: {
-        name: "Unicode Escape / Unescape",
+        name: "Mã hóa / giải mã escape Unicode",
         description:
           "Chuyển đổi ký tự Unicode sang và từ các định dạng bao gồm \\uXXXX, \\u{XXXXX}, thực thể HTML, mã hóa URL và ký hiệu U+XXXX",
       },
@@ -31293,7 +31662,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         description: "Tukar domain Unicode (IDN) dan ASCII (Punycode) dua hala",
       },
       nl: {
-        name: "Unicode ↔ Punycode Converter",
+        name: "Unicode ↔ Punycode-converter",
         description:
           "Zet Unicode (IDN) en ASCII (Punycode) domeinen in beide richtingen om",
       },
@@ -32033,7 +32402,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "המר UUID-ים אל Base64, הקסדצימלי, עשרוני, אוקטלי וערכים בינאריים של 128 סיביות, ומהם, בדפדפן שלך.",
       },
       hi: {
-        name: "UUID Base64 Hex Decimal Octal Binary Converter",
+        name: "UUID Base64 हेक्स दशमलव अष्टाधारी बाइनरी कन्वर्टर",
         description:
           "अपने ब्राउज़र में UUID को Base64, hexadecimal, decimal, octal, और 128-bit binary मानों में बदलें और वापस परिवर्तित करें.",
       },
@@ -32048,12 +32417,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Converti UUID da e verso valori Base64, esadecimali, decimali, ottali e binari a 128 bit nel browser.",
       },
       ja: {
-        name: "UUID Base64 Hex Decimal Octal Binary Converter",
+        name: "UUIDのBase64・16進数・10進数・8進数・2進数変換ツール",
         description:
           "ブラウザー内で UUID を Base64、16 進数、10 進数、8 進数、128 ビット 2 進数の値に相互変換します。",
       },
       ko: {
-        name: "UUID Base64 Hex Decimal Octal Binary Converter",
+        name: "UUID Base64 16진수 10진수 8진수 2진수 변환기",
         description:
           "브라우저에서 UUID를 Base64, 16진수, 10진수, 8진수, 128비트 이진 값으로 변환하거나 되돌립니다.",
       },
@@ -32139,7 +32508,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "فك ترميز UUID إلى إصداره ومتغيره وحقول الطابع الزمني وتمثيلاته الرقمية.",
       },
       de: {
-        name: "UUID Decoder",
+        name: "UUID-Decoder",
         description:
           "Dekodiere eine UUID in Version, Variante, Zeitstempelfelder und numerische Darstellungen.",
       },
@@ -32149,7 +32518,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Decode a UUID into its version, variant, timestamp fields, and numeric representations.",
       },
       es: {
-        name: "UUID Decoder",
+        name: "Decodificador de UUID",
         description:
           "Decodifica un UUID en su versión, variante, campos de marca temporal y representaciones numéricas.",
       },
@@ -32224,7 +32593,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Avkoda ett UUID till dess version, variant, tidsstämpelfält och numeriska representationer.",
       },
       th: {
-        name: "UUID Decoder",
+        name: "ตัวถอดรหัส UUID",
         description:
           "ถอดรหัส UUID เพื่อดูเวอร์ชัน แวเรียนต์ ฟิลด์เวลา และรูปแบบตัวเลขต่าง ๆ",
       },
@@ -32267,7 +32636,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "أنشئ وانسخ قيمة Max UUID القياسية المكوّنة كلها من آحاد لاستخدامها في الحدود العليا، والقيم الحارسة، واختبارات النطاق.",
       },
       de: {
-        name: "Max UUID Generator",
+        name: "Generator für maximale UUID",
         description:
           "Erzeuge und kopiere die standardisierte Max UUID mit lauter Einsen für obere Grenzen, Sentinel-Werte und Bereichstests.",
       },
@@ -32292,7 +32661,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "צרו והעתיקו את ה-Max UUID התקני שמורכב כולו מאחדות, עבור גבולות עליונים, ערכי sentinel ובדיקות טווח.",
       },
       hi: {
-        name: "Max UUID Generator",
+        name: "Max UUID जनरेटर",
         description:
           "ऊपरी सीमाओं, sentinel values, और range tests के लिए मानकीकृत all-one max UUID जनरेट और कॉपी करें।",
       },
@@ -32307,12 +32676,12 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Genera e copia il max UUID standardizzato composto solo da uno per limiti superiori, sentinelle e test di intervallo.",
       },
       ja: {
-        name: "Max UUID Generator",
+        name: "Max UUID生成ツール",
         description:
           "上限値、センチネル、範囲テスト向けに、標準化された全ビット 1 の max UUID を生成してコピーします。",
       },
       ko: {
-        name: "Max UUID Generator",
+        name: "Max UUID 생성기",
         description:
           "상한, 센티널, 범위 테스트에 사용할 표준 all-one max UUID를 생성하고 복사합니다.",
       },
@@ -32322,14 +32691,14 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Jana dan salin max UUID semua-satu yang diseragamkan untuk batas atas, sentinel, dan ujian julat.",
       },
       nl: {
-        name: "Max UUID Generator",
+        name: "Max UUID-generator",
         description:
           "Genereer en kopieer de gestandaardiseerde max UUID met alleen enen voor bovengrenzen, sentinels en bereiktests.",
       },
       no: {
-        name: "Max UUID Generator",
+        name: "Generator for maksimal UUID",
         description:
-          "Generer og kopier den standardiserte max UUID-en med bare ettall for øvre grenser, sentinelverdier og områdetester.",
+          "Generer og kopier den standardiserte maksimale UUID-en med bare ettall for øvre grenser, sentinelverdier og områdetester.",
       },
       pl: {
         name: "Generator Max UUID",
@@ -32337,7 +32706,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Generuj i kopiuj standaryzowany max UUID z samych jedynek do górnych granic, wartowników i testów zakresów.",
       },
       pt: {
-        name: "Max UUID Generator",
+        name: "Gerador de UUID máximo",
         description:
           "Gere e copie o max UUID padronizado composto só por uns para limites superiores, sentinelas e testes de intervalo.",
       },
@@ -32347,7 +32716,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Создавайте и копируйте стандартизированный max UUID из одних единиц для верхних границ, специальных значений и тестов диапазонов.",
       },
       sv: {
-        name: "Max UUID Generator",
+        name: "Generator för max-UUID",
         description:
           "Generera och kopiera den standardiserade max-UUID:n med enbart ettor för övre gränser, sentinlar och intervalltester.",
       },
@@ -32357,7 +32726,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "สร้างและคัดลอก max UUID มาตรฐานที่เป็นค่า all-one สำหรับขอบเขตบน ค่า sentinel และการทดสอบช่วง",
       },
       tr: {
-        name: "Max UUID Generator",
+        name: "Max UUID Oluşturucu",
         description:
           "Üst sınırlar, sentinel değerler ve aralık testleri için standartlaştırılmış tüm bitleri bir olan max UUID değerini üretin ve kopyalayın.",
       },
@@ -32423,7 +32792,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "צרו והעתיקו את ה-nil UUID התקני שכולו אפסים עבור מצייני מקום, ערכי ברירת מחדל וערכי sentinel.",
       },
       hi: {
-        name: "Nil UUID Generator",
+        name: "Nil UUID जनरेटर",
         description:
           "प्लेसहोल्डर, डिफॉल्ट और सेंटिनल मानों के लिए मानकीकृत सभी-शून्य nil UUID बनाएं और कॉपी करें.",
       },
@@ -32438,7 +32807,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Genera e copia l'UUID nil standardizzato composto solo da zeri per segnaposto, valori predefiniti e valori sentinella.",
       },
       ja: {
-        name: "Nil UUID Generator",
+        name: "Nil UUID生成ツール",
         description:
           "プレースホルダー、デフォルト値、センチネル値に使う、標準化された全ゼロの nil UUID を生成してコピーします。",
       },
@@ -32458,7 +32827,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Genereer en kopieer de gestandaardiseerde nil UUID met alleen nullen voor placeholders, standaardwaarden en sentinelwaarden.",
       },
       no: {
-        name: "Nil UUID Generator",
+        name: "Generator for nil-UUID",
         description:
           "Generer og kopier den standardiserte nil-UUID-en med bare nuller for plassholdere, standardverdier og sentinel-verdier.",
       },
@@ -32532,7 +32901,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "أنشئ معرف UUID v1 واحدًا أو عدة معرفات زمنية داخل المتصفح مع قيم عنوان MAC وتسلسل الساعة القابلة للضبط.",
       },
       de: {
-        name: "UUID v1 Generator",
+        name: "UUID-v1-Generator",
         description:
           "Erzeuge einen oder viele zeitbasierte UUID-v1-Bezeichner im Browser mit konfigurierbarer MAC-Adresse und Clock Sequence.",
       },
@@ -32557,7 +32926,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "צור מזהה UUID v1 אחד או רבים מבוססי זמן בדפדפן עם כתובת MAC ורצף שעון ניתנים להגדרה.",
       },
       hi: {
-        name: "UUID v1 Generator",
+        name: "UUID v1 जनरेटर",
         description:
           "कॉन्फ़िगर करने योग्य MAC पते और clock sequence मानों के साथ ब्राउज़र में एक या कई समय-आधारित UUID v1 पहचानकर्ता बनाएँ।",
       },
@@ -32572,7 +32941,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Genera uno o molti identificatori UUID v1 basati sul tempo nel browser con indirizzo MAC e sequenza di clock configurabili.",
       },
       ja: {
-        name: "UUID v1 Generator",
+        name: "UUID v1生成ツール",
         description:
           "設定可能な MAC アドレスとクロックシーケンスで、時間ベースの UUID v1 識別子をブラウザー内で 1 件または複数件生成します。",
       },
@@ -32587,14 +32956,14 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Jana satu atau banyak pengecam UUID v1 berasaskan masa dalam pelayar dengan alamat MAC dan clock sequence boleh dikonfigurasi.",
       },
       nl: {
-        name: "UUID v1 Generator",
+        name: "UUID v1-generator",
         description:
           "Genereer één of meerdere tijdgebaseerde UUID v1-identifiers in de browser met configureerbaar MAC-adres en clock sequence.",
       },
       no: {
-        name: "UUID v1 Generator",
+        name: "UUID v1-generator",
         description:
-          "Generer én eller mange tidsbaserte UUID v1-identifikatorer i nettleseren med konfigurerbar MAC-adresse og clock sequence.",
+          "Generer én eller mange tidsbaserte UUID v1-identifikatorer i nettleseren med konfigurerbar MAC-adresse og klokkesekvens.",
       },
       pl: {
         name: "Generator UUID v1",
@@ -32794,7 +33163,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "أنشئ معرّفات UUID v3 حتمية مستندة إلى الاسم من UUID مساحة أسماء واسم.",
       },
       de: {
-        name: "UUID v3 Generator",
+        name: "UUID-v3-Generator",
         description:
           "Generieren Sie deterministische, namensbasierte UUID v3-Kennungen aus einer Namespace-UUID und einem Namen.",
       },
@@ -32819,7 +33188,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "צור מזהי UUID v3 דטרמיניסטיים מבוססי שם מתוך UUID של מרחב שמות ושם.",
       },
       hi: {
-        name: "UUID v3 Generator",
+        name: "UUID v3 जनरेटर",
         description:
           "नेमस्पेस UUID और नाम से नियतात्मक नाम-आधारित UUID v3 पहचानकर्ता जेनरेट करें।",
       },
@@ -32839,17 +33208,17 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "名前空間UUIDと名前から、決定論的な名前ベースのUUID v3識別子を生成します。",
       },
       ko: {
-        name: "UUID v3 Generator",
+        name: "UUID v3 생성기",
         description:
           "네임스페이스 UUID와 이름에서 결정론적인 이름 기반 UUID v3 식별자를 생성합니다.",
       },
       ms: {
-        name: "UUID v3 Generator",
+        name: "Penjana UUID v3",
         description:
           "Jana pengecam UUID v3 berasaskan nama yang deterministik daripada UUID ruang nama dan nama.",
       },
       nl: {
-        name: "UUID v3 Generator",
+        name: "UUID v3-generator",
         description:
           "Genereer deterministische op namen gebaseerde UUID v3-ID's op basis van een naamruimte-UUID en naam.",
       },
@@ -32874,7 +33243,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Создавайте детерминированные UUID v3 на основе UUID пространства имен и имени.",
       },
       sv: {
-        name: "UUID v3 Generator",
+        name: "UUID v3-generator",
         description:
           "Generera deterministiska namnbaserade UUID v3-identifierare från ett namnrymds-UUID och ett namn.",
       },
@@ -33007,7 +33376,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "Создавайте пакеты случайных идентификаторов RFC 4122 UUID v4 локально в браузере.",
       },
       sv: {
-        name: "UUID v4 Bulk Generator",
+        name: "Massgenerator för UUID v4",
         description:
           "Generera satser med slumpmässiga RFC 4122 UUID v4-identifierare lokalt i din webbläsare.",
       },
@@ -33058,7 +33427,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "أنشئ UUID v4 عشوائيا وفق RFC 4122/RFC 9562 محليا في متصفحك.",
       },
       de: {
-        name: "UUID v4 Generator",
+        name: "UUID-v4-Generator",
         description:
           "Generieren Sie lokal in Ihrem Browser eine zufällige RFC 4122/RFC 9562 UUID v4.",
       },
@@ -33102,7 +33471,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
           "ブラウザー内でランダムな RFC 4122/RFC 9562 UUID v4 をローカル生成します。",
       },
       ko: {
-        name: "UUID v4 Generator",
+        name: "UUID v4 생성기",
         description:
           "브라우저에서 로컬로 임의의 RFC 4122/RFC 9562 UUID v4를 생성합니다.",
       },

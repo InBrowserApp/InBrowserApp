@@ -1,19 +1,19 @@
-## What is SHA-512/256 (FIPS 180-4)?
+## ما هي SHA-512/256 (FIPS 180-4)؟
 
-SHA-512/256 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 256-bit (32-byte) digest, typically rendered as a 64-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/256 (FIPS 180-4) هي دالة تجزئة تشفيرية من عائلة SHA-2 تنتج ملخصًا بطول 256 بت (32 بايت)، يُعرض عادةً كسلسلة سداسية عشرية من 64 محرفًا. تعتمد على SHA-512 بقيم ابتدائية مختلفة وناتج مقتطع، لتوفر ملخصًا أقصر مع الحفاظ على البنية الداخلية لـ SHA-512.
 
-**Key characteristics:**
+**الخصائص الرئيسية:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **حتمية**: تنتج المدخلات نفسها دائمًا التجزئة نفسها
+- **سرعة الحساب**: يمكن حسابها بسرعة لأي مدخلات
+- **تأثير الانهيار**: تؤدي التغييرات الصغيرة في المدخلات إلى اختلافات كبيرة في الناتج
+- **غير قابلة للعكس**: يتعذر عمليًا عكس التجزئة حسابيًا لاسترجاع المدخلات الأصلية
+- **مقاومة للتصادم**: يصعب جدًا العثور على مدخلين مختلفين ينتجان التجزئة نفسها
 
-**Common uses:**
+**الاستخدامات الشائعة:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 256-bit hashes
+- التوقيعات والشهادات الرقمية
+- فحوصات السلامة والمجاميع الاختبارية
+- إنشاء رموز HMAC
+- التحقق من الملفات ومسارات معالجة البيانات
+- البروتوكولات التي تتطلب تجزئات بطول 256 بت

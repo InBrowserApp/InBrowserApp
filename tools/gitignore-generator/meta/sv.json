@@ -1,4 +1,4 @@
 {
-  "name": ".gitignore Generator",
+  "name": ".gitignore-generator",
   "description": "Generera .gitignore-filer för dina projekt genom att välja mallar"
 }

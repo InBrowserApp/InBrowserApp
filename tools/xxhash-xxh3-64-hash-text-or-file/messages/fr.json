@@ -14,5 +14,7 @@
   "seedSectionLabel": "Graine",
   "seedLabel": "Graine (optionnelle)",
   "seedPlaceholder": "0 ou 0x...",
-  "seedInvalid": "Saisissez un nombre décimal ou une valeur hexadécimale 0x."
+  "seedInvalid": "Saisissez un nombre décimal ou une valeur hexadécimale 0x.",
+  "fileHashError": "Échec du hachage du fichier.",
+  "textHashError": "Échec du hachage du texte."
 }

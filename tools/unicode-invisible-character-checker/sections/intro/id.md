@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## Mengapa karakter tak terlihat perlu diperhatikan
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+Karakter Unicode tak terlihat mudah terlewat karena tidak tampak bermasalah di editor biasa. Masalah baru muncul belakangan: perubahan teks gagal, pengenal tidak lagi cocok, pemenggalan tata letak menjadi aneh, atau perilaku teks berubah dalam konteks RTL.
 
-## What this tool catches
+## Hal yang dideteksi alat ini
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+Pemeriksa ini mencari empat kelompok umum: tanda tanpa lebar, kontrol bidi, karakter spasi khusus, dan kontrol format. Alat ini menunjukkan letaknya secara tepat, menyediakan pratinjau beranotasi, dan menyiapkan versi yang telah dibersihkan untuk disalin atau diekspor.
 
-## When to use it
+## Kapan menggunakannya
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+Gunakan setelah menyalin teks dari dokumen, PDF, spreadsheet, aplikasi chat, editor CMS, atau alat desain. Alat ini sangat berguna saat string tampak normal, tetapi perbandingan, perenderan, atau pemrosesan selanjutnya terus berperilaku aneh.

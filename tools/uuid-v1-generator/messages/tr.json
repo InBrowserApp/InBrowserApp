@@ -10,7 +10,7 @@
   "macAddressLabel": "MAC Adresi",
   "macAddressDescription": "Gerçek donanım adresleri açığa çıkmasın diye varsayılan olarak yerel yönetimli rastgele bir adres kullanılır.",
   "randomMacAddressLabel": "MAC adresini rastgele seç",
-  "clockSequenceLabel": "Clock Sequence",
+  "clockSequenceLabel": "Saat dizisi",
   "clockSequenceDescription": "Çakışmaları önlemek için zaman damgasıyla birlikte kullanılan 14 bitlik bir değer.",
   "randomClockSequenceLabel": "Clock sequence değerini rastgele seç",
   "macAddressRequired": "Bir MAC adresi girin.",

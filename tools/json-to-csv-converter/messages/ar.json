@@ -16,5 +16,5 @@
   "quoteCharLabel": "علامة الاقتباس",
   "includeHeaderRowLabel": "تضمين صف الرأس",
   "escapeFormulaeLabel": "تضمين محارف هروب لصيغ Excel",
-  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+  "escapeFormulaeTooltip": "يضيف بادئة إلى القيم التي تبدأ بـ = أو + أو - أو @ لتتعامل معها تطبيقات جداول البيانات كنصوص بدلًا من صيغ."
 }

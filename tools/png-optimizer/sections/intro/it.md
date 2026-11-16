@@ -1,6 +1,6 @@
-## Cosa fa PNG Optimizer
+## Cosa fa l'Ottimizzatore PNG
 
-PNG Optimizer comprime immagini PNG con l'ottimizzazione lossless di Oxipng. Riscrive la struttura PNG, le impostazioni di compressione, i dati della palette e le informazioni alfa dove possibile, senza modificare i pixel visibili.
+L'Ottimizzatore PNG comprime immagini PNG con l'ottimizzazione lossless di Oxipng. Riscrive la struttura PNG, le impostazioni di compressione, i dati della palette e le informazioni alfa dove possibile, senza modificare i pixel visibili.
 
 ## Quando usarlo
 

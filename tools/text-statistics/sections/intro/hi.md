@@ -1,11 +1,11 @@
-## Why this tool feels different
+## यह टूल अलग क्यों लगता है
 
-Text Statistics should do more than count words. This version treats the page like a live writing desk: it measures length, rhythm, repetition, and structure the moment you paste a draft.
+टेक्स्ट सांख्यिकी का काम केवल शब्द गिनना नहीं होना चाहिए। यह संस्करण पेज को लेखन के ऐसे कार्यस्थल में बदलता है जहां ड्राफ़्ट पेस्ट करते ही उसकी लंबाई, लय, दोहराव और संरचना मापी जाती है।
 
-## What it measures
+## यह क्या मापता है
 
-You get the core counts you expect, then the signals that actually help editing: unique words, average sentence length, lexical diversity, longest paragraph, and repeated terms. When the browser supports `Intl.Segmenter`, these numbers are segmented in a way that works better across writing systems.
+आपको सामान्य गिनतियों के साथ ऐसे संकेत भी मिलते हैं जो संपादन में मदद करते हैं: अद्वितीय शब्द, वाक्य की औसत लंबाई, शब्दावली की विविधता, सबसे लंबा अनुच्छेद और दोहराए गए शब्द। जब ब्राउज़र `Intl.Segmenter` का समर्थन करता है, तो गणना के लिए टेक्स्ट को इस तरह बांटा जाता है जो अलग-अलग लेखन प्रणालियों के लिए बेहतर काम करता है।
 
-## When to use it
+## इसका उपयोग कब करें
 
-Use it before publishing landing-page copy, product descriptions, scripts, newsletters, bios, or meeting summaries. It is especially useful when something feels too wordy, too repetitive, or too dense, but you need a fast clue about why.
+लैंडिंग पेज की सामग्री, उत्पाद विवरण, स्क्रिप्ट, न्यूज़लेटर, परिचय या मीटिंग का सारांश प्रकाशित करने से पहले इसका उपयोग करें। यह खास तौर पर तब उपयोगी है जब लेखन बहुत लंबा, दोहराव वाला या सघन लगे और आप उसका कारण जल्दी समझना चाहें।

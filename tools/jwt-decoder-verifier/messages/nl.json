@@ -25,7 +25,7 @@
     "autoAlgorithm": "Auto uit header",
     "keyLabel": "Secret of public key",
     "keyDescription": "Gebruik platte tekst voor HS-algoritmen. Gebruik een PEM-public key, JWK of JWKS voor RS-, PS- en ES-algoritmen. Waarden worden niet opgeslagen.",
-    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "keyPlaceholder": "secret\n\nof\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nof\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
     "waitingTitle": "Klaar om te verifiëren",
     "waitingDescription": "Voer een geldige token en verificatiemateriaal in om de handtekening te controleren.",
     "pendingTitle": "Handtekening verifiëren",

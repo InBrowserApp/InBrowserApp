@@ -14,5 +14,7 @@
   "seedSectionLabel": "البذرة",
   "seedLabel": "البذرة (اختياري)",
   "seedPlaceholder": "0 أو 0x...",
-  "seedInvalid": "أدخل عددًا عشريًا أو قيمة سداسية عشرية تبدأ بـ 0x."
+  "seedInvalid": "أدخل عددًا عشريًا أو قيمة سداسية عشرية تبدأ بـ 0x.",
+  "fileHashError": "تعذّر حساب تجزئة الملف.",
+  "textHashError": "تعذّر حساب تجزئة النص."
 }

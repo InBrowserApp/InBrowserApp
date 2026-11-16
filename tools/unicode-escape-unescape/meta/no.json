@@ -1,4 +1,4 @@
 {
-  "name": "Unicode Escape / Unescape",
+  "name": "Unicode-escaping og -avkoding",
   "description": "Escape og unescape Unicode-tegn i ulike formater inkludert \\uXXXX, \\u{XXXXX}, HTML-entiteter, URL-koding og U+XXXX-notasjon"
 }

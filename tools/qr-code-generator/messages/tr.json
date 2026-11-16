@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "Oluşturulan QR kodu"
+  "qrAlt": "Oluşturulan QR kodu",
+  "renderError": "QR kodu oluşturulamadı."
 }

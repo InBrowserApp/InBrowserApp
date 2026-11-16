@@ -1,0 +1,9 @@
+## Ajouter un filigrane aux pages PDF sélectionnées
+
+Importez un PDF et ajoutez des filigranes sous forme de texte ou d’images PNG/JPEG. Sélectionnez un filigrane dans l’aperçu en direct, faites-le glisser vers une position personnalisée, redimensionnez-le avec une poignée d’angle ou utilisez la poignée ronde pour le faire pivoter. Vous pouvez aussi saisir des valeurs précises de position, de taille et de rotation dans les paramètres. Maintenez Maj pour faire pivoter par pas de 15° et utilisez les flèches pour déplacer le filigrane sélectionné.
+
+Combinez jusqu’à 10 filigranes indépendants, par exemple un logo et une mention de confidentialité. Chacun possède son propre contenu, son opacité, sa disposition et sa plage de pages. Copiez, supprimez, réorganisez, annulez et rétablissez vos modifications. Choisissez un filigrane unique ou un motif en mosaïque pour chaque calque. Saisissez des plages comme `1-3,5`, ou laissez la plage d’un calque vide pour l’appliquer à toutes les pages. Les positions sont relatives à la page visible, y compris pour les pages pivotées et recadrées ; les filigranes dépassant d’un bord sont rognés à cet endroit.
+
+## Traitement privé, contenu original préservé
+
+Votre PDF et votre filigrane sont traités localement dans votre navigateur. Téléchargez une nouvelle copie avec le filigrane ajouté par-dessus les pages sélectionnées ; les autres pages conservent leur contenu original. Les PNG transparents conviennent bien aux logos. Le texte est rendu sous forme d’image transparente haute résolution avec les polices de votre navigateur, y compris les écritures non latines prises en charge. Les pages PDF originales ne sont pas converties en images. Les filigranes identifient un document, mais n’empêchent ni la copie ni la modification. Les PDF chiffrés doivent d’abord être déverrouillés, et la modification d’un PDF signé numériquement invalide sa signature.

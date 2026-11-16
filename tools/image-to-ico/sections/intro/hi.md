@@ -1,26 +1,26 @@
-## What ICO Is
+## ICO क्या है
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO एक आइकन कंटेनर प्रारूप है, जिसका उपयोग पारंपरिक ब्राउज़र फ़ेविकॉन, Windows
+शॉर्टकट और कुछ डेस्कटॉप ऐप के आइकन के लिए किया जाता है। एक ICO फ़ाइल में कई
+वर्गाकार आकार शामिल हो सकते हैं, ताकि हर प्लेटफ़ॉर्म अपने लिए सबसे उपयुक्त आकार चुन सके।
 
-## Why Use This Converter
+## इस कन्वर्टर का उपयोग क्यों करें
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+यह टूल एक स्थानीय इमेज को सीधे आपके ब्राउज़र में कई आकारों वाली ICO फ़ाइल में
+बदलता है। कुछ भी अपलोड नहीं किया जाता, और आप 16×16, 32×32, 48×48 और 256×256
+जैसे सामान्य फ़ेविकॉन आकारों को एक ही डाउनलोड में शामिल कर सकते हैं।
 
-## How It Works
+## यह कैसे काम करता है
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. एक स्थानीय इमेज फ़ाइल अपलोड करें।
+2. ICO में शामिल करने के लिए आइकन के आकार चुनें।
+3. चाहें तो पारदर्शी चित्र के लिए एक समान बैकग्राउंड रंग जोड़ें।
+4. ICO बनाएं और उसे तुरंत डाउनलोड करें।
 
-## Tips for Better Results
+## बेहतर परिणामों के लिए सुझाव
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- स्पष्ट वर्गाकार इमेज से शुरुआत करें, बेहतर होगा कि उसका आकार 512×512 या अधिक हो।
+- लोगो और मुख्य आकृतियों को बाहरी किनारों से दूर रखें, क्योंकि छोटे आइकन में
+  बारीकियां जल्दी खो जाती हैं।
+- पारदर्शिता के लिए बैकग्राउंड भरने का विकल्प बंद रखें। इसे तभी चालू करें जब
+  आइकन के पीछे एक समान रंग वाला कैनवस चाहिए हो।

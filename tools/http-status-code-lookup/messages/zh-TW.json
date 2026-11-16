@@ -16,6 +16,6 @@
   "redirection": "重新導向",
   "clientError": "用戶端錯誤",
   "serverError": "伺服器錯誤",
-  "noResultsTitle": "No matching status codes",
-  "noResultsDescription": "Try a different code, phrase, or category."
+  "noResultsTitle": "找不到符合的狀態碼",
+  "noResultsDescription": "請嘗試其他狀態碼、詞語或分類。"
 }

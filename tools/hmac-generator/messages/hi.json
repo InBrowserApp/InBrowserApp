@@ -1,18 +1,20 @@
 {
   "configurationLabel": "कॉन्फ़िगरेशन",
-  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "configurationDescription": "वर्तमान हस्ताक्षर के लिए गुप्त कुंजी और HMAC एल्गोरिथम सेट करें।",
   "secretKeyLabel": "गुप्त कुंजी",
   "secretKeyPlaceholder": "अपनी गुप्त कुंजी दर्ज करें",
   "algorithmLabel": "एल्गोरिदम",
   "inputLabel": "इनपुट",
   "plainTextLabel": "सादा टेक्स्ट",
-  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "plainTextDescription": "फ़ाइल की सामग्री या API पेलोड सहित कोई भी UTF-8 टेक्स्ट पेस्ट करें या टाइप करें।",
   "importFromFileLabel": "फ़ाइल से आयात करें",
   "hmacOutputLabel": "HMAC आउटपुट",
-  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
-  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hmacOutputDescription": "वर्तमान टेक्स्ट इनपुट और गुप्त कुंजी का HMAC आउटपुट।",
+  "emptyStateDescription": "HMAC आउटपुट बनाने के लिए गुप्त कुंजी दर्ज करें और टेक्स्ट दें या फ़ाइल आयात करें।",
   "hexLabel": "हेक्साडेसिमल",
   "base64Label": "Base64",
   "copyResultLabel": "परिणाम कॉपी करें",
-  "copiedLabel": "कॉपी किया गया"
+  "copiedLabel": "कॉपी किया गया",
+  "fileGenerationError": "फ़ाइल के लिए HMAC आउटपुट बनाने में विफल।",
+  "textGenerationError": "टेक्स्ट इनपुट के लिए HMAC आउटपुट बनाने में विफल।"
 }

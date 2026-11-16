@@ -1,11 +1,11 @@
-## What this text diff is for
+## Vad textjämförelsen är till för
 
-Use this tool when you need to compare two versions of copy, code, notes, or configuration before you merge, publish, or send anything out.
+Använd verktyget när du behöver jämföra två versioner av text, kod, anteckningar eller konfiguration innan du slår ihop, publicerar eller skickar något.
 
-## How to read the result
+## Så läser du resultatet
 
-The side-by-side view helps you scan line numbers and changed fragments quickly. Switch to the unified view when you need a compact patch-style output for review, handoff, or documentation.
+Vyn sida vid sida hjälper dig att snabbt överblicka radnummer och ändrade textavsnitt. Växla till den samlade vyn när du behöver ett kompakt resultat i patchformat för granskning, överlämning eller dokumentation.
 
-## When the options matter
+## När alternativen spelar roll
 
-Ignore case when capitalization is noise. Ignore whitespace when indentation or spacing should not count as a real edit. Hide unchanged rows when you only want to inspect what actually moved.
+Ignorera skiftläge när skillnader i stora och små bokstäver saknar betydelse. Ignorera blanksteg när indrag eller mellanrum inte ska räknas som en verklig ändring. Dölj oförändrade rader när du bara vill granska det som faktiskt ändrats.

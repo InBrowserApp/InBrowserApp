@@ -1,6 +1,6 @@
 # PDF-bestanden samenvoegen in je browser
 
-Gebruik deze PDF Merger wanneer je een document nodig hebt uit meerdere bron-PDF's, bijvoorbeeld om gescande pagina's te combineren, ondertekende formulieren samen te voegen of rapporten te bundelen om te delen. Voeg twee of meer bestanden toe, controleer het aantal pagina's en rangschik daarna de wachtrij voordat je de definitieve PDF maakt.
+Gebruik deze PDF-samenvoeger wanneer je een document nodig hebt uit meerdere bron-PDF's, bijvoorbeeld om gescande pagina's te combineren, ondertekende formulieren samen te voegen of rapporten te bundelen om te delen. Voeg twee of meer bestanden toe, controleer het aantal pagina's en rangschik daarna de wachtrij voordat je de definitieve PDF maakt.
 
 ## Hoe de samenvoegvolgorde werkt
 

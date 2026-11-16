@@ -1,6 +1,6 @@
 ## Genel Bakış
 
-JSON Diff Path, iki JSON belgesini karşılaştırır ve her yapısal değişikliği hem JSONPath hem de JSON Pointer çıktısı olan okunabilir bir yol kaydına dönüştürür.
+JSON Fark Yolları, iki JSON belgesini karşılaştırır ve her yapısal değişikliği hem JSONPath hem de JSON Pointer çıktısı olan okunabilir bir yol kaydına dönüştürür.
 
 ## Ne Zaman Kullanılır
 

@@ -75,7 +75,7 @@
   "storageUsage": "저장소 사용량",
   "secureContext": "보안 컨텍스트",
   "onlineStatus": "네트워크 상태",
-  "doNotTrack": "Do Not Track",
+  "doNotTrack": "추적 금지",
   "localStorage": "로컬 저장소",
   "sessionStorage": "세션 저장소",
   "serviceWorker": "서비스 워커",

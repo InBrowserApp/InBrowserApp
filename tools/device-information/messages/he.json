@@ -75,7 +75,7 @@
   "storageUsage": "שימוש באחסון",
   "secureContext": "הקשר מאובטח",
   "onlineStatus": "מצב רשת",
-  "doNotTrack": "Do Not Track",
+  "doNotTrack": "מניעת מעקב",
   "localStorage": "אחסון מקומי",
   "sessionStorage": "אחסון הפעלה",
   "serviceWorker": "Service Worker",

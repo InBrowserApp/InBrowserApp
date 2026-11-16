@@ -1,6 +1,6 @@
 ## Was dieses Tool nachschlägt
 
-IP Info Lookup löst eine IPv4-Adresse, IPv6-Adresse, Domain oder URL auf und zeigt die öffentlichen Metadaten an, die Internetdienste für jede Adresse melden können. Das ist hilfreich, wenn du prüfen musst, wohin eine Domain zeigt, welchem Netzwerk eine Adresse gehört, welcher Reverse-DNS-Hostname existiert oder ob IPv4- und IPv6-Einträge zu unterschiedlichen Anbietern führen.
+Die IP-Info-Abfrage löst eine IPv4-Adresse, IPv6-Adresse, Domain oder URL auf und zeigt die öffentlichen Metadaten an, die Internetdienste für jede Adresse melden können. Das ist hilfreich, wenn du prüfen musst, wohin eine Domain zeigt, welchem Netzwerk eine Adresse gehört, welcher Reverse-DNS-Hostname existiert oder ob IPv4- und IPv6-Einträge zu unterschiedlichen Anbietern führen.
 
 ## So funktionieren Domain- und URL-Abfragen
 

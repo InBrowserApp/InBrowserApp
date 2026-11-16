@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## Mengapa aksara tidak kelihatan penting
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+Aksara Unicode tidak kelihatan mudah terlepas pandang kerana kelihatan biasa dalam penyunting lazim. Masalah hanya muncul kemudian: perubahan teks gagal, pengecam tidak lagi sepadan, pemenggalan baris menjadi pelik atau teks mula berkelakuan berbeza dalam konteks RTL.
 
-## What this tool catches
+## Perkara yang dikesan oleh alat ini
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+Pemeriksa aksara tidak kelihatan Unicode ini mencari empat kumpulan lazim: tanda lebar sifar, kawalan dua hala, aksara ruang khas dan kawalan format. Ia menunjukkan lokasi tepat aksara tersebut, menyediakan pratonton beranotasi dan menghasilkan versi bersih yang boleh anda salin atau eksport.
 
-## When to use it
+## Bila hendak menggunakannya
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+Gunakannya selepas menyalin teks daripada dokumen, PDF, hamparan, aplikasi sembang, penyunting CMS atau alat reka bentuk. Alat ini amat berguna apabila rentetan kelihatan biasa tetapi perbandingan, pemaparan atau pemprosesan seterusnya terus menghasilkan kelakuan yang pelik.

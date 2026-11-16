@@ -1,4 +1,4 @@
 {
-  "name": "ULID Generator",
+  "name": "ULID-generator",
   "description": "Genereer Universally Unique Lexicographically Sortable Identifiers in de browser met optionele aangepaste tijdstempels."
 }

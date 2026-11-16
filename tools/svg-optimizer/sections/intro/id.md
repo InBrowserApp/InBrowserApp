@@ -1,6 +1,6 @@
 ## Apa yang dilakukan alat ini
 
-SVG optimizer ini mengompresi satu file SVG lokal atau dokumen SVG yang
+Pengoptimal SVG ini mengompresi satu file SVG lokal atau dokumen SVG yang
 ditempel di browser Anda. Alat ini menggunakan pass pembersihan SVGO untuk
 menghapus komentar, metadata, atribut redundan, presisi yang tidak perlu, dan
 markup lain yang tidak mengubah gambar yang terlihat.

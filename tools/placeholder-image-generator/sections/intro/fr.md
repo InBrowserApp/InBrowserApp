@@ -1,27 +1,30 @@
-## What this tool does
+## Ce que fait cet outil
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+Ce générateur crée des images de remplacement soignées, avec des dimensions
+personnalisées, un fond uni ou dégradé et du texte centré, directement dans votre
+navigateur. Vous pouvez exporter chaque image en PNG, SVG, JPEG ou WebP, y compris
+en versions 2x et 3x adaptées aux écrans Retina.
 
-## Why it helps
+## Pourquoi l’utiliser
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+Utilisez-le pour vos maquettes, le contenu initial d’un CMS, les états vides,
+la préparation de mises en page pour les réseaux sociaux ou les images de
+remplacement d’une API. Il est utile pour créer rapidement une ressource aux
+dimensions et au style prévisibles sans ouvrir d’application de conception.
 
-## How it works
+## Fonctionnement
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+Choisissez un préréglage ou saisissez la largeur et la hauteur de votre choix.
+Sélectionnez une couleur unie ou un dégradé, ajoutez du texte si nécessaire, puis
+réglez la taille du texte, l’échelle d’exportation et la qualité. L’aperçu se met
+à jour instantanément pour vous permettre de télécharger le format adapté à
+votre travail.
 
-## Tips for better placeholders
+## Conseils pour de meilleures images de remplacement
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- Laissez le champ de texte vide pour que l’outil affiche automatiquement les
+  dimensions.
+- Utilisez des dégradés pour les grandes bannières et des fonds unis pour les
+  images de remplacement utilitaires.
+- Exportez en SVG pour obtenir une ressource nette et redimensionnable, ou en
+  PNG, JPEG et WebP si vous avez besoin de fichiers matriciels.

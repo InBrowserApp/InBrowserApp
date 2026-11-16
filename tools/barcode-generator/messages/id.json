@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "Opsi",
   "optionsDescription": "Pilih format kode batang lalu sesuaikan ukuran, label, dan warna.",
   "preview": "Preview",
-  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
-  "download": "Download",
+  "previewDescription": "Periksa kode batang yang dihasilkan dan ekspor sebagai PNG, SVG, JPEG, atau WebP.",
+  "download": "Unduh",
   "text": "Teks",
   "textPlaceholder": "Masukkan konten...",
   "format": "Format",
@@ -20,5 +20,6 @@
   "center": "Tengah",
   "right": "Kanan",
   "top": "Atas",
-  "bottom": "Bawah"
+  "bottom": "Bawah",
+  "renderError": "Gagal merender kode batang."
 }

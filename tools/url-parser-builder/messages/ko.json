@@ -45,7 +45,7 @@
   "loadSampleLabel": "샘플 불러오기",
   "resetLabel": "빌더 재설정",
   "protocolPlaceholder": "https",
-  "hostnamePlaceholder": "example.com or api.internal",
+  "hostnamePlaceholder": "example.com 또는 api.internal",
   "portPlaceholder": "443",
   "pathPlaceholder": "/products/blue mug",
   "fragmentPlaceholder": "reviews",

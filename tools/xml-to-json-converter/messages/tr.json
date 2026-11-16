@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "Dönüştürülen JSON önizlemesini burada görmek için sol tarafa geçerli XML yapıştırın.",
   "invalidXmlLabel": "Geçersiz XML",
   "optionsLabel": "Seçenekler",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "Dönüştürülen JSON'u kopyalamadan veya indirmeden önce XML'in nasıl ayrıştırılacağını ayarlayın.",
   "indentSizeLabel": "Girinti boyutu",
   "indentSizeDescription": "Kompakt çıktı için 0, biçimlendirilmiş girinti için 1-8 seçin.",
   "compactLabel": "Kompakt",

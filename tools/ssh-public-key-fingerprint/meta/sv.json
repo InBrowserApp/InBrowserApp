@@ -1,4 +1,4 @@
 {
-  "name": "SSH Public Key Fingerprint",
+  "name": "Fingeravtryck för publik SSH-nyckel",
   "description": "Generera SHA-256- och MD5-fingeravtryck för publika OpenSSH-nycklar, authorized_keys-rader och SSH2-block med publika nycklar."
 }

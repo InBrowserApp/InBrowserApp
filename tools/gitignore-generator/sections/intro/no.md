@@ -6,6 +6,6 @@ En .gitignore-fil spesifiserer bevisst usporede filer som Git skal ignorere. Fil
 - IDE- og redigeringsfiler (.idea/, .vscode/)
 - Operativsystemfiler (.DS_Store, Thumbs.db)
 
-## Template source
+## Malkilde
 
 Dette verktøyet bruker maler fra det offisielle GitHub gitignore-repositoriet, som dekker 150+ språk, rammeverk og miljøer.

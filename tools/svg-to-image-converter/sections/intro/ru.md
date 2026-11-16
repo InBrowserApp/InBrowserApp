@@ -1,26 +1,27 @@
-## What this tool does
+## Что делает инструмент
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+Конвертер SVG в изображения преобразует один локальный файл SVG в изображение PNG,
+JPEG или WebP прямо в браузере. Вы можете сохранить исходный размер, задать свои
+размеры результата, настроить заливку фона и качество экспорта, если формат
+поддерживает такую настройку.
 
-## Why it helps
+## Чем это полезно
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+Используйте инструмент, когда для передачи макета, работы в CMS, превью в соцсетях или
+ресурса приложения нужно быстро превратить SVG в растровое изображение. Он помогает
+получить предсказуемый растровый результат из векторной графики без запуска
+отдельного графического редактора.
 
-## How it works
+## Как это работает
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+Загрузите один файл SVG, выберите формат результата и настройте ширину, высоту,
+фон и качество. Конвертер отрисует SVG в браузере и подготовит файл изображения
+для скачивания без отправки данных на сервер.
 
-## Tips for better exports
+## Советы по экспорту
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- Включите сохранение пропорций, чтобы менять размер без искажений.
+- Выберите цвет фона для экспорта в JPEG, поскольку JPEG не поддерживает
+  прозрачность.
+- Используйте PNG для чёткого результата без потерь или WebP и JPEG, если меньший
+  размер файла важнее.

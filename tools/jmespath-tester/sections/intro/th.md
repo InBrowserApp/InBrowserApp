@@ -1,18 +1,18 @@
-## What It Does
+## เครื่องมือนี้ทำอะไร
 
-เครื่องมือทดสอบ JMESPath lets you run a JMESPath expression against JSON data directly
-in the browser. You can inspect the matched result, copy it, or download it as
-formatted JSON without leaving the page.
+เครื่องมือทดสอบ JMESPath ให้คุณรันนิพจน์ JMESPath กับข้อมูล JSON ได้โดยตรง
+ในเบราว์เซอร์ คุณสามารถตรวจสอบผลลัพธ์ที่ตรงกัน คัดลอก หรือดาวน์โหลดเป็น
+JSON ที่จัดรูปแบบแล้วได้จากหน้าเดียวกัน
 
-## When To Use It
+## ควรใช้เมื่อใด
 
-Use it when you need to prototype a JMESPath query, debug a filter expression,
-or verify exactly which values a JSON query will return before you embed that
-expression somewhere else.
+ใช้เมื่อต้องการทดลองคิวรี JMESPath แก้ปัญหานิพจน์ตัวกรอง
+หรือตรวจสอบให้แน่ชัดว่าคิวรี JSON จะคืนค่าใดบ้าง ก่อนนำนิพจน์นั้น
+ไปฝังไว้ที่อื่น
 
-## What To Expect
+## สิ่งที่คาดหวังได้
 
-The tool validates the JSON input first, then evaluates the JMESPath
-expression. If either side is invalid, the error is surfaced immediately. When
-the query succeeds, the result is formatted as JSON and the result count is
-shown alongside the output.
+เครื่องมือจะตรวจสอบ JSON ที่ป้อนก่อน แล้วจึงประเมินนิพจน์
+JMESPath หากส่วนใดไม่ถูกต้อง จะแสดงข้อผิดพลาดทันที เมื่อ
+คิวรีสำเร็จ ผลลัพธ์จะถูกจัดรูปแบบเป็น JSON และแสดงจำนวนผลลัพธ์
+ไว้ข้างกัน

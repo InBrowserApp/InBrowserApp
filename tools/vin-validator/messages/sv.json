@@ -1,5 +1,5 @@
 {
-  "vin": "VIN (Vehicle Identification Number)",
+  "vin": "VIN (fordonets identifieringsnummer)",
   "placeholder": "Ange VIN",
   "valid": "Giltigt VIN",
   "invalid": "Ogiltigt VIN",

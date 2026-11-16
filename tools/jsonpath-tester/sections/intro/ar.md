@@ -1,11 +1,11 @@
-## Overview
+## نظرة عامة
 
-مختبر JSONPath lets you run JSONPath queries against JSON data directly in the browser and inspect both the matched values and the matched paths side by side.
+يتيح لك مختبر JSONPath تشغيل استعلامات JSONPath على بيانات JSON مباشرةً في المتصفح وفحص القيم المطابقة والمسارات المطابقة جنبًا إلى جنب.
 
-## When To Use It
+## متى تستخدمها
 
-Use it when you need to prototype a JSONPath query, debug a selector against real payloads, or verify exactly which parts of a JSON document a query is matching.
+استخدمه عندما تحتاج إلى تجربة استعلام JSONPath أو تشخيص أخطاء محدد باستخدام بيانات فعلية، أو التحقق بدقة من أجزاء مستند JSON التي يطابقها الاستعلام.
 
-## How It Works
+## كيف تعمل
 
-The tool validates the JSON input first, then evaluates the JSONPath query and keeps both result modes available in the same output panel so you can switch between values and paths without rerunning anything.
+تتحقق الأداة أولًا من صحة مدخلات JSON، ثم تقيّم استعلام JSONPath وتُبقي وضعي النتائج متاحين في لوحة الناتج نفسها، لتتمكن من التبديل بين القيم والمسارات دون إعادة تشغيل أي شيء.

@@ -16,5 +16,7 @@
   "keyLabel": "BLAKE2 金鑰（Base64）",
   "keyPlaceholder": "可選的金鑰雜湊金鑰（Base64 編碼）",
   "invalidBase64Title": "這個 Base64 值目前無效。",
-  "invalidBase64Description": "請檢查是否缺少填充字元、含有非預期字元，或資料只貼上了一部分。"
+  "invalidBase64Description": "請檢查是否缺少填充字元、含有非預期字元，或資料只貼上了一部分。",
+  "fileHashError": "無法計算檔案的雜湊值。",
+  "textHashError": "無法計算文字的雜湊值。"
 }

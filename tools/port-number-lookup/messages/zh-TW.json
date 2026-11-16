@@ -16,6 +16,6 @@
   "registeredPortsDesc": "由在 IANA 註冊的應用程式和服務使用，如 MySQL (3306)、PostgreSQL (5432)。",
   "dynamicPorts": "動態連接埠 (49152-65535)：",
   "dynamicPortsDesc": "也稱為「臨時連接埠」，由用戶端應用程式用於臨時連線。",
-  "noResultsTitle": "No matching ports found",
-  "noResultsDescription": "Try a different port number, service name, or category."
+  "noResultsTitle": "找不到符合的連接埠",
+  "noResultsDescription": "請嘗試其他連接埠號碼、服務名稱或分類。"
 }

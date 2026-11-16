@@ -1,26 +1,27 @@
-## What ICO Is
+## O que é ICO
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO é o formato de contêiner de ícones usado em favicons clássicos de navegadores,
+atalhos do Windows e alguns ícones de aplicativos de desktop. Um arquivo ICO pode
+incluir vários tamanhos quadrados, permitindo que cada plataforma escolha
+automaticamente o mais adequado.
 
-## Why Use This Converter
+## Por que usar este conversor
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+Esta ferramenta transforma uma imagem local em um arquivo ICO com vários tamanhos
+diretamente no navegador. Nada é enviado a um servidor, e você pode reunir tamanhos
+comuns de favicon, como 16×16, 32×32, 48×48 e 256×256, em um único download.
 
-## How It Works
+## Como funciona
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. Carregue um arquivo de imagem local.
+2. Escolha os tamanhos dos ícones que deseja incluir no arquivo ICO.
+3. Opcionalmente, adicione uma cor de fundo sólida para imagens com transparência.
+4. Gere o ICO e baixe-o imediatamente.
 
-## Tips for Better Results
+## Dicas para melhores resultados
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- Comece com uma imagem quadrada nítida, de preferência com 512×512 ou mais.
+- Mantenha logotipos e formas importantes longe das bordas externas, pois ícones
+  pequenos perdem detalhes rapidamente.
+- Deixe o preenchimento de fundo desativado se quiser transparência e ative-o
+  apenas quando precisar de um fundo sólido atrás do ícone.

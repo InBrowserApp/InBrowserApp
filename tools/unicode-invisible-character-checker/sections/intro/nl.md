@@ -1,11 +1,19 @@
-## Why invisible characters matter
+## Waarom onzichtbare tekens ertoe doen
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+Onzichtbare Unicode-tekens zijn makkelijk over het hoofd te zien, omdat ze in
+een gewone editor niet als fouten opvallen. Het probleem komt pas later aan het
+licht: tekstwijzigingen mislukken, identificatoren komen niet meer overeen,
+regels lopen vreemd om of tekst gedraagt zich anders in RTL-contexten.
 
-## What this tool catches
+## Wat deze tool opspoort
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+Deze controle zoekt naar vier veelvoorkomende groepen: tekens zonder breedte,
+bidi-stuurtekens, speciale spatietekens en opmaakstuurtekens. Je ziet precies waar
+ze staan, krijgt een geannoteerde voorvertoning en kunt een opgeschoonde versie
+kopiëren of exporteren.
 
-## When to use it
+## Wanneer je de tool gebruikt
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+Gebruik de tool nadat je tekst uit documenten, PDF’s, spreadsheets, chatapps,
+CMS-editors of ontwerptools hebt gekopieerd. Vooral handig als een tekst normaal
+lijkt, maar vergelijkingen, weergave of verdere verwerking vreemd blijven werken.

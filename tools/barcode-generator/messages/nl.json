@@ -1,8 +1,8 @@
 {
-  "options": "Options",
+  "options": "Opties",
   "optionsDescription": "Kies een barcodeformaat en pas grootte, labels en kleuren aan.",
   "preview": "Preview",
-  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
+  "previewDescription": "Bekijk de gegenereerde barcode en exporteer deze als PNG, SVG, JPEG of WebP.",
   "download": "Download",
   "text": "Tekst",
   "textPlaceholder": "Voer inhoud in...",
@@ -20,5 +20,6 @@
   "center": "Midden",
   "right": "Rechts",
   "top": "Boven",
-  "bottom": "Onder"
+  "bottom": "Onder",
+  "renderError": "De barcode kon niet worden weergegeven."
 }

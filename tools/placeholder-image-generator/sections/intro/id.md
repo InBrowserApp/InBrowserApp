@@ -1,27 +1,27 @@
-## What this tool does
+## Fungsi alat ini
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+Generator gambar placeholder ini membuat gambar contoh yang rapi dengan
+ukuran kustom, isian solid atau gradien, dan teks di tengah langsung di browser Anda.
+Anda dapat mengekspor setiap placeholder sebagai PNG, SVG, JPEG, atau WebP, termasuk
+versi 2x dan 3x yang cocok untuk layar Retina.
 
-## Why it helps
+## Manfaatnya
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+Gunakan untuk mockup desain, konten awal CMS, tampilan saat belum ada konten, perencanaan tata letak
+media sosial, atau placeholder API. Alat ini berguna saat Anda membutuhkan aset dengan cepat,
+dengan ukuran dan gaya yang dapat dipastikan tanpa membuka aplikasi desain.
 
-## How it works
+## Cara kerjanya
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+Pilih preset atau masukkan lebar dan tinggi Anda sendiri. Pilih warna solid atau
+gradien, tambahkan teks kustom jika diperlukan, lalu sesuaikan ukuran teks, skala ekspor, dan
+kualitas. Pratinjau diperbarui seketika agar Anda dapat mengunduh format yang sesuai
+dengan alur kerja Anda.
 
-## Tips for better placeholders
+## Tips untuk placeholder yang lebih baik
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- Biarkan kolom teks kosong jika Anda ingin alat ini menampilkan dimensi
+  secara otomatis.
+- Gunakan gradien untuk banner utama dan isian solid untuk placeholder fungsional.
+- Ekspor SVG jika Anda menginginkan aset yang tetap tajam saat diubah ukurannya, atau PNG, JPEG, dan WebP saat
+  Anda membutuhkan file raster.

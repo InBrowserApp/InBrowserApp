@@ -3,6 +3,8 @@ type KeccakHashTextOrFileMessages = Readonly<{
   plainTextLabel: string
   plainTextDescription: string
   importFromFileLabel: string
+  fileHashError: string
+  textHashError: string
   outputLengthLabel: string
   hashResultLabel: string
   hashResultDescription: string

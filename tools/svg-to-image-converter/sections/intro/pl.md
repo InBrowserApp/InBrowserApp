@@ -1,26 +1,26 @@
-## What this tool does
+## Co robi to narzędzie
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+Ten konwerter SVG na obraz przekształca jeden lokalny plik SVG w obraz PNG, JPEG lub WebP
+bezpośrednio w przeglądarce. Możesz zachować oryginalny rozmiar, ustawić własne
+wymiary wyjściowe, kontrolować wypełnienie tła i dostosować jakość eksportu, jeśli
+wybrany format to obsługuje.
 
-## Why it helps
+## Dlaczego jest przydatne
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+Użyj go, gdy przekazanie projektu, praca w CMS, podgląd w mediach społecznościowych lub zasoby aplikacji wymagają
+szybkiego przekształcenia SVG w obraz rastrowy. Narzędzie przydaje się do spłaszczania grafiki
+wektorowej do przewidywalnej postaci bitmapowej bez otwierania osobnego edytora grafiki.
 
-## How it works
+## Jak to działa
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+Wczytaj jeden plik SVG, wybierz format wyjściowy, a następnie dostosuj szerokość, wysokość,
+tło i jakość. Konwerter renderuje SVG w przeglądarce
+i przygotowuje plik obrazu do pobrania bez wysyłania czegokolwiek na serwer.
 
-## Tips for better exports
+## Wskazówki dotyczące eksportu
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- Pozostaw zachowanie proporcji włączone, jeśli chcesz zmieniać rozmiar bez zniekształceń.
+- Wybierz kolor tła dla wyniku JPEG, ponieważ JPEG nie obsługuje
+  przezroczystości.
+- Użyj PNG, gdy potrzebujesz ostrego obrazu bez strat, albo WebP i JPEG, gdy mniejszy
+  rozmiar pliku jest ważniejszy.

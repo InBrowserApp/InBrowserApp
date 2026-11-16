@@ -1,11 +1,17 @@
-## What this text diff is for
+## Waarvoor deze tekstvergelijker dient
 
-Use this tool when you need to compare two versions of copy, code, notes, or configuration before you merge, publish, or send anything out.
+Gebruik deze tool om twee versies van tekst, code, notities of configuratie te
+vergelijken voordat je iets samenvoegt, publiceert of verstuurt.
 
-## How to read the result
+## Hoe je het resultaat leest
 
-The side-by-side view helps you scan line numbers and changed fragments quickly. Switch to the unified view when you need a compact patch-style output for review, handoff, or documentation.
+Met de weergave naast elkaar kun je regelnummers en gewijzigde fragmenten snel
+bekijken. Schakel over naar de gecombineerde weergave voor compacte uitvoer in
+patchvorm om te beoordelen, over te dragen of te documenteren.
 
-## When the options matter
+## Wanneer de opties van pas komen
 
-Ignore case when capitalization is noise. Ignore whitespace when indentation or spacing should not count as a real edit. Hide unchanged rows when you only want to inspect what actually moved.
+Negeer hoofdletters wanneer hoofdlettergebruik alleen maar ruis toevoegt. Negeer
+witruimte wanneer inspringing of spatiëring niet als echte wijziging moet tellen.
+Verberg ongewijzigde regels als je alleen wilt bekijken wat daadwerkelijk is
+veranderd.

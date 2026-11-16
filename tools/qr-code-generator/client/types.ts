@@ -64,6 +64,7 @@ type QrCodeGeneratorMessages = Readonly<{
   jpgDownloadLabel: string
   pngDownloadLabel: string
   previewDescription: string
+  renderError: string
   previewTitle: string
   qrAlt: string
   renderErrorTitle: string

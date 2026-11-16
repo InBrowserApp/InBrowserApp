@@ -1,4 +1,4 @@
-DNS Lookup किसी डोमेन नाम के लिए लौटाए गए public DNS records की जाँच करता है। यह तब उपयोगी है जब आप नई साइट launch सत्यापित कर रहे हों, email delivery debug कर रहे हों, CDN या load balancer बदलाव जाँच रहे हों, या यह पुष्टि कर रहे हों कि DNSSEC-संबंधित responses अलग-अलग resolvers में अलग दिखते हैं या नहीं।
+DNS खोज किसी डोमेन नाम के लिए लौटाए गए public DNS records की जाँच करता है। यह तब उपयोगी है जब आप नई साइट launch सत्यापित कर रहे हों, email delivery debug कर रहे हों, CDN या load balancer बदलाव जाँच रहे हों, या यह पुष्टि कर रहे हों कि DNSSEC-संबंधित responses अलग-अलग resolvers में अलग दिखते हैं या नहीं।
 
 ## कब उपयोग करें
 

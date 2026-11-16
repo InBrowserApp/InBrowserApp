@@ -61,7 +61,7 @@
   "errorCorrectionQuartile": "Quartile, 25%",
   "errorCorrectionHigh": "Alta, 30%",
   "sizeLabel": "Dimensione",
-  "marginLabel": "Quiet zone",
+  "marginLabel": "Zona di rispetto",
   "darkColorLabel": "Colore primo piano",
   "lightColorLabel": "Colore sfondo",
   "previewTitle": "Anteprima",
@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "Codice QR generato"
+  "qrAlt": "Codice QR generato",
+  "renderError": "Impossibile generare il codice QR."
 }

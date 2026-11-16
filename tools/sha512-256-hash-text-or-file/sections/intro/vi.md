@@ -1,19 +1,19 @@
-## What is SHA-512/256 (FIPS 180-4)?
+## SHA-512/256 (FIPS 180-4) là gì?
 
-SHA-512/256 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 256-bit (32-byte) digest, typically rendered as a 64-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/256 (FIPS 180-4) là hàm băm mật mã thuộc họ SHA-2, tạo bản tóm lược 256 bit (32 byte), thường được biểu diễn dưới dạng chuỗi thập lục phân dài 64 ký tự. Hàm này dựa trên SHA-512 với các giá trị khởi tạo khác và đầu ra được rút gọn, tạo bản tóm lược ngắn hơn trong khi giữ nguyên cấu trúc nội bộ của SHA-512.
 
-**Key characteristics:**
+**Đặc điểm chính:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **Tính xác định**: Cùng một đầu vào luôn tạo ra cùng một mã băm
+- **Tính toán nhanh**: Tính toán nhanh cho bất kỳ đầu vào nào
+- **Hiệu ứng thác lũ**: Thay đổi nhỏ ở đầu vào tạo ra đầu ra rất khác biệt
+- **Không thể đảo ngược**: Việc đảo ngược mã băm để tìm đầu vào gốc không khả thi về mặt tính toán
+- **Khả năng chống va chạm**: Rất khó tìm hai đầu vào khác nhau tạo ra cùng một mã băm
 
-**Common uses:**
+**Ứng dụng phổ biến:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 256-bit hashes
+- Chữ ký số và chứng chỉ
+- Kiểm tra tính toàn vẹn và tổng kiểm tra
+- Xây dựng HMAC
+- Xác minh tệp và quy trình xử lý dữ liệu
+- Giao thức yêu cầu mã băm 256 bit

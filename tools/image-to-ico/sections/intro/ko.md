@@ -1,26 +1,26 @@
-## What ICO Is
+## ICO란?
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO는 기존 브라우저의 파비콘, Windows 바로가기, 일부 데스크톱 앱 아이콘에
+사용되는 아이콘 컨테이너 형식입니다. ICO 파일 하나에 여러 정사각형 크기를
+포함할 수 있으므로 각 플랫폼에서 가장 적합한 크기를 자동으로 선택할 수 있습니다.
 
-## Why Use This Converter
+## 이 변환기를 사용하는 이유
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+이미지 ICO 변환기는 브라우저에서 로컬 이미지 하나를 여러 크기가 포함된 ICO 파일로
+만듭니다. 파일을 서버에 업로드하지 않으며, 16×16, 32×32, 48×48, 256×256과 같은
+일반적인 파비콘 크기를 파일 하나에 담아 다운로드할 수 있습니다.
 
-## How It Works
+## 사용 방법
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. 로컬 이미지 파일 하나를 업로드하세요.
+2. ICO 파일에 포함할 아이콘 크기를 선택하세요.
+3. 투명한 이미지에 필요에 따라 단색 배경을 추가하세요.
+4. ICO를 생성하고 바로 다운로드하세요.
 
-## Tips for Better Results
+## 더 나은 결과를 위한 팁
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- 선명한 정사각형 이미지로 시작하세요. 가급적 512×512 이상이 좋습니다.
+- 작은 아이콘은 세부 표현이 쉽게 사라지므로 로고와 주요 모양은 바깥쪽 가장자리에서
+  충분히 떨어뜨리세요.
+- 투명도를 유지하려면 배경 채우기를 끄고, 아이콘 뒤에 단색 배경이 필요할 때만
+  켜세요.

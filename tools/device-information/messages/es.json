@@ -68,7 +68,7 @@
   "gpuRenderer": "Renderizador de GPU",
   "gpuDetails": "Ver detalles de la GPU",
   "connectionType": "Tipo de conexión",
-  "downlink": "Downlink",
+  "downlink": "Velocidad de bajada",
   "roundTripTime": "Tiempo de ida y vuelta",
   "saveData": "Ahorro de datos",
   "storageQuota": "Cuota de almacenamiento",

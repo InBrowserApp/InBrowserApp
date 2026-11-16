@@ -9,5 +9,7 @@
   "copiedLabel": "कॉपी किया गया",
   "sha256SriLabel": "SHA-256 SRI",
   "sha384SriLabel": "SHA-384 SRI",
-  "sha512SriLabel": "SHA-512 SRI"
+  "sha512SriLabel": "SHA-512 SRI",
+  "fileGenerationError": "फ़ाइल के लिए SRI हैश बनाने में विफल।",
+  "textGenerationError": "टेक्स्ट इनपुट के लिए SRI हैश बनाने में विफल।"
 }

@@ -1,6 +1,6 @@
 ## Bu araç ne yapar
 
-Image Palette Extractor, bir görseldeki baskın renkleri doğrudan
+Görsel Paleti Çıkarıcı, bir görseldeki baskın renkleri doğrudan
 tarayıcınızda bulur. Resmi örnekler, görsel olarak benzer pikselleri
 gruplar ve her renk için HEX, RGB, HSL ve yüzde değerleri içeren pratik
 bir palet döndürür.

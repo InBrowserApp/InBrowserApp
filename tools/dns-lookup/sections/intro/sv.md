@@ -1,4 +1,4 @@
-DNS Lookup kontrollerar de offentliga DNS-poster som returneras för ett domännamn. Det är användbart när du verifierar lanseringen av en ny webbplats, felsöker e-postleverans, kontrollerar ändringar i CDN eller lastbalanserare, eller bekräftar om DNSSEC-relaterade svar ser olika ut mellan resolvers.
+DNS-uppslagning kontrollerar de offentliga DNS-poster som returneras för ett domännamn. Det är användbart när du verifierar lanseringen av en ny webbplats, felsöker e-postleverans, kontrollerar ändringar i CDN eller lastbalanserare, eller bekräftar om DNSSEC-relaterade svar ser olika ut mellan resolvers.
 
 ## När du ska använda det
 

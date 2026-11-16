@@ -1,7 +1,7 @@
 {
   "payloadCardTitle": "Payload og header",
   "payloadCardDescription": "Rediger JSON-claims og valgfrie beskyttede headerfelt som skal signeres inn i tokenet.",
-  "payloadLabel": "Payload JSON",
+  "payloadLabel": "Nyttelast i JSON",
   "payloadPlaceholder": "{\n  \"sub\": \"user_123\",\n  \"role\": \"admin\"\n}",
   "claimsHelperTitle": "Hjelpere for registrerte claims",
   "claimsHelperDescription": "Bruk disse kontrollene til å oppdatere vanlige NumericDate-claims i payload-JSON-en.",

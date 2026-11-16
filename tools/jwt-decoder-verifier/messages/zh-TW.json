@@ -1,15 +1,15 @@
 {
   "token": {
-    "title": "Token",
+    "title": "權杖",
     "description": "貼上緊湊格式的 JWT。標頭與酬載會先在本機解碼，之後才執行任何簽章檢查。",
-    "label": "JWT token",
+    "label": "JWT 權杖",
     "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
     "useSample": "使用範例",
     "clear": "清除"
   },
   "decoded": {
-    "title": "已解碼的 token",
-    "description": "從 token 片段解碼出的格式化 JSON。",
+    "title": "已解碼的權杖",
+    "description": "從權杖片段解碼出的格式化 JSON。",
     "headerTitle": "標頭",
     "payloadTitle": "酬載",
     "copyJson": "複製 JSON",
@@ -25,12 +25,12 @@
     "autoAlgorithm": "依標頭自動判斷",
     "keyLabel": "密鑰或公開金鑰",
     "keyDescription": "HS 演算法請使用純文字。RS、PS 和 ES 演算法請使用 PEM 公開金鑰、JWK 或 JWKS。數值不會被儲存。",
-    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "keyPlaceholder": "secret\n\n或\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\n或\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
     "waitingTitle": "準備驗證",
-    "waitingDescription": "輸入有效的 token 與驗證材料以檢查簽章。",
+    "waitingDescription": "輸入有效的權杖與驗證材料以檢查簽章。",
     "pendingTitle": "正在驗證簽章",
     "verifiedTitle": "簽章已驗證",
-    "verifiedDescription": "簽章與 token 標頭、酬載、演算法及提供的金鑰相符。",
+    "verifiedDescription": "簽章與權杖標頭、酬載、演算法及提供的金鑰相符。",
     "failedTitle": "驗證失敗",
     "failedDescription": "簽章與提供的金鑰和演算法不相符。"
   },

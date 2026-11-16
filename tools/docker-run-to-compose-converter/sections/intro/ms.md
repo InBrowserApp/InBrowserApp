@@ -1,18 +1,18 @@
-## What It Does
+## Fungsinya
 
-Docker Run to Compose Converter converts one or more `docker run` commands into a
-`docker-compose.yml` file in the browser. You can inspect the generated YAML,
-copy it, or download it before moving it into your project.
+Penukar Docker Run ke Compose menukar satu atau lebih arahan `docker run` kepada
+fail `docker-compose.yml` dalam pelayar. Anda boleh memeriksa YAML yang dijana,
+menyalinnya atau memuat turunnya sebelum memasukkannya ke dalam projek anda.
 
-## When To Use It
+## Bila Hendak Menggunakannya
 
-Use it when you want to turn an ad hoc container command into a repeatable
-Compose service definition, or when you want to see how ports, volumes,
-environment variables, and resource flags map into Compose.
+Gunakannya apabila anda mahu menukar arahan kontena ad hoc kepada takrif
+perkhidmatan Compose yang boleh digunakan berulang kali, atau mahu melihat cara
+port, volum, pemboleh ubah persekitaran dan bendera sumber dipetakan kepada Compose.
 
-## What To Expect
+## Perkara Yang Boleh Dijangkakan
 
-Common options such as ports, environment variables, restart policy,
-healthchecks, mounts, and resource limits are preserved. Unsupported or
-ambiguous flags are surfaced as warnings so you can review the output before
-using it.
+Pilihan lazim seperti port, pemboleh ubah persekitaran, dasar mula semula,
+pemeriksaan kesihatan, pelekap dan had sumber dikekalkan. Bendera yang tidak
+disokong atau kabur ditunjukkan sebagai amaran supaya anda boleh menyemak output
+sebelum menggunakannya.

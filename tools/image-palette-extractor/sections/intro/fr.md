@@ -1,6 +1,6 @@
 ## Ce que fait cet outil
 
-Image Palette Extractor trouve les couleurs dominantes d'une image directement
+L’extracteur de palette d’images trouve les couleurs dominantes d'une image directement
 dans votre navigateur. Il échantillonne l'image, regroupe les pixels
 visuellement similaires et renvoie une palette pratique avec les valeurs HEX,
 RGB, HSL et les pourcentages de chaque couleur.

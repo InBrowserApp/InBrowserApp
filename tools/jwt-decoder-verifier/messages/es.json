@@ -25,7 +25,7 @@
     "autoAlgorithm": "Auto desde encabezado",
     "keyLabel": "Secreto o clave pública",
     "keyDescription": "Usa texto sin formato para algoritmos HS. Usa una clave pública PEM, JWK o JWKS para algoritmos RS, PS y ES. Los valores no se guardan.",
-    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "keyPlaceholder": "secret\n\no\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\no\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
     "waitingTitle": "Listo para verificar",
     "waitingDescription": "Introduce un token válido y material de verificación para comprobar la firma.",
     "pendingTitle": "Verificando firma",

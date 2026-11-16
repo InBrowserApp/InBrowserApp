@@ -1,4 +1,4 @@
 {
-  "name": "Cron Expression Parser",
+  "name": "Cron-uttrykkstolker",
   "description": "Tolk, valider og forklar cron-planer med feltdetaljer og kommende kjøretidspunkter."
 }

@@ -6,6 +6,6 @@ Een .gitignore-bestand specificeert opzettelijk niet-gevolgde bestanden die Git 
 - IDE- en editorbestanden (.idea/, .vscode/)
 - Besturingssysteembestanden (.DS_Store, Thumbs.db)
 
-## Template source
+## Bron van de sjablonen
 
 Deze tool gebruikt sjablonen uit de officiële GitHub gitignore-repository, met dekking voor meer dan 150 talen, frameworks en omgevingen.

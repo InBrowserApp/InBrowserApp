@@ -1,26 +1,27 @@
-## What ICO Is
+## Apakah ICO
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO ialah format bekas ikon yang digunakan untuk favicon pelayar klasik,
+pintasan Windows dan sesetengah ikon aplikasi desktop. Satu fail ICO boleh
+merangkumi beberapa saiz segi empat sama supaya setiap platform boleh memilih
+saiz yang paling sesuai secara automatik.
 
-## Why Use This Converter
+## Mengapa Menggunakan Penukar Ini
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+Alat ini menukar satu imej setempat kepada fail ICO dengan pelbagai saiz terus
+dalam pelayar anda. Tiada apa-apa dimuat naik, dan anda boleh menggabungkan saiz
+favicon lazim seperti 16×16, 32×32, 48×48 dan 256×256 dalam satu muat turun.
 
-## How It Works
+## Cara Ia Berfungsi
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. Muat naik satu fail imej setempat.
+2. Pilih saiz ikon yang hendak disertakan dalam pakej ICO.
+3. Tambahkan warna latar belakang padu untuk grafik lutsinar jika perlu.
+4. Jana ICO dan muat turunnya serta-merta.
 
-## Tips for Better Results
+## Petua untuk Hasil yang Lebih Baik
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- Mulakan dengan imej segi empat sama yang tajam, sebaik-baiknya 512×512 atau lebih besar.
+- Jauhkan logo dan bentuk utama daripada tepi luar kerana ikon kecil cepat
+  kehilangan butiran.
+- Matikan isian latar belakang jika anda mahukan kelutsinaran, dan hidupkannya
+  hanya apabila anda memerlukan kanvas padu di belakang ikon.

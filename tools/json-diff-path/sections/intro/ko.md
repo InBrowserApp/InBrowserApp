@@ -1,6 +1,6 @@
 ## 개요
 
-JSON Diff Path는 두 JSON 문서를 비교해 모든 구조 변경을 JSONPath와 JSON Pointer 출력을 함께 제공하는 읽기 쉬운 경로 기록으로 바꿉니다.
+JSON 차이 경로는 두 JSON 문서를 비교해 모든 구조 변경을 JSONPath와 JSON Pointer 출력을 함께 제공하는 읽기 쉬운 경로 기록으로 바꿉니다.
 
 ## 사용할 때
 

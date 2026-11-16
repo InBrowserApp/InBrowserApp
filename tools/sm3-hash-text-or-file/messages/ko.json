@@ -10,5 +10,7 @@
   "decimalLabel": "10진수",
   "binaryLabel": "2진수",
   "copyResultLabel": "결과 복사",
-  "copiedLabel": "복사됨"
+  "copiedLabel": "복사됨",
+  "fileHashError": "파일의 해시를 계산하지 못했습니다.",
+  "textHashError": "텍스트의 해시를 계산하지 못했습니다."
 }

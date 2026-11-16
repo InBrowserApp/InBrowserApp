@@ -14,5 +14,7 @@
   "hexLabel": "十六進位",
   "base64Label": "Base64",
   "copyResultLabel": "複製結果",
-  "copiedLabel": "已複製"
+  "copiedLabel": "已複製",
+  "fileGenerationError": "無法產生檔案的 HMAC 輸出。",
+  "textGenerationError": "無法產生輸入文字的 HMAC 輸出。"
 }

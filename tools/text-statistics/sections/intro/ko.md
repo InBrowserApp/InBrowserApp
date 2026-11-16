@@ -1,11 +1,11 @@
-## Why this tool feels different
+## 이 도구가 특별한 이유
 
-Text Statistics should do more than count words. This version treats the page like a live writing desk: it measures length, rhythm, repetition, and structure the moment you paste a draft.
+텍스트 통계는 단어 수를 세는 것 이상의 역할을 합니다. 초안을 붙여넣는 즉시 분량, 리듬, 반복, 구조를 측정하여 페이지를 실시간 글쓰기 작업 공간으로 활용할 수 있습니다.
 
-## What it measures
+## 측정 항목
 
-You get the core counts you expect, then the signals that actually help editing: unique words, average sentence length, lexical diversity, longest paragraph, and repeated terms. When the browser supports `Intl.Segmenter`, these numbers are segmented in a way that works better across writing systems.
+기본적인 개수 정보와 함께 고유 단어 수, 평균 문장 길이, 어휘 다양성, 가장 긴 문단, 반복되는 단어처럼 편집에 도움이 되는 지표를 제공합니다. 브라우저가 `Intl.Segmenter`를 지원하면 다양한 문자 체계에 더 적합한 방식으로 텍스트를 나누어 계산합니다.
 
-## When to use it
+## 활용 시점
 
-Use it before publishing landing-page copy, product descriptions, scripts, newsletters, bios, or meeting summaries. It is especially useful when something feels too wordy, too repetitive, or too dense, but you need a fast clue about why.
+랜딩 페이지 문구, 제품 설명, 대본, 뉴스레터, 소개글, 회의 요약을 게시하기 전에 사용하세요. 글이 너무 장황하거나, 반복이 많거나, 빽빽하게 느껴질 때 그 이유를 빠르게 파악하는 데 특히 유용합니다.

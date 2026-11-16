@@ -16,5 +16,7 @@
   "keyLabel": "Klucz BLAKE3 (Base64)",
   "keyPlaceholder": "Opcjonalny 32-bajtowy klucz do hashowania z kluczem (zakodowany w Base64)",
   "invalidBase64Title": "Wartość Base64 nie jest jeszcze prawidłowa.",
-  "invalidBase64Description": "Sprawdź brakujące dopełnienie, nieoczekiwane znaki lub częściowo wklejone dane."
+  "invalidBase64Description": "Sprawdź brakujące dopełnienie, nieoczekiwane znaki lub częściowo wklejone dane.",
+  "fileHashError": "Nie udało się obliczyć skrótu pliku.",
+  "textHashError": "Nie udało się obliczyć skrótu tekstu."
 }

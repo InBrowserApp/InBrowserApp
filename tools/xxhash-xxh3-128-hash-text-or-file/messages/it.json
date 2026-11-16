@@ -13,5 +13,7 @@
   "copiedLabel": "Copiato",
   "seedLabel": "Seme (facoltativo)",
   "seedPlaceholder": "0 o 0x...",
-  "seedInvalid": "Inserisci un numero decimale o un valore esadecimale 0x."
+  "seedInvalid": "Inserisci un numero decimale o un valore esadecimale 0x.",
+  "fileHashError": "Impossibile calcolare l'hash del file.",
+  "textHashError": "Impossibile calcolare l'hash del testo."
 }

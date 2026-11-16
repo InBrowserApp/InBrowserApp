@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "左側に有効な XML を貼り付けると、変換後の JSON をここでプレビューできます。",
   "invalidXmlLabel": "無効なXML",
   "optionsLabel": "オプション",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "変換したJSONをコピーまたはダウンロードする前に、XMLの解析方法を設定します。",
   "indentSizeLabel": "インデント幅",
   "indentSizeDescription": "0 でコンパクト出力、1-8 で整形済みインデントを選べます。",
   "compactLabel": "コンパクト",

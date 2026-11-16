@@ -20,5 +20,6 @@
   "center": "中",
   "right": "右",
   "top": "上",
-  "bottom": "下"
+  "bottom": "下",
+  "renderError": "無法呈現條碼。"
 }

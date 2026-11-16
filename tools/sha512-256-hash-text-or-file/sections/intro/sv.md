@@ -1,19 +1,19 @@
-## What is SHA-512/256 (FIPS 180-4)?
+## Vad är SHA-512/256 (FIPS 180-4)?
 
-SHA-512/256 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 256-bit (32-byte) digest, typically rendered as a 64-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/256 (FIPS 180-4) är en kryptografisk hashfunktion i SHA-2-familjen som ger ett hashvärde på 256 bitar (32 byte), vanligen återgivet som en hexadecimal sträng med 64 tecken. Den bygger på SHA-512 med andra startvärden och ett avkortat resultat, vilket ger ett kortare hashvärde men behåller SHA-512:s interna struktur.
 
-**Key characteristics:**
+**Viktiga egenskaper:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **Deterministisk**: Samma indata ger alltid samma hashvärde
+- **Snabb beräkning**: Går snabbt att beräkna för valfria indata
+- **Lavineffekt**: Små ändringar i indata ger drastiskt annorlunda resultat
+- **Icke reversibel**: Det är beräkningsmässigt ogenomförbart att återskapa ursprungliga indata från hashvärdet
+- **Kollisionsresistent**: Det är mycket svårt att hitta två olika indata som ger samma hashvärde
 
-**Common uses:**
+**Vanliga användningsområden:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 256-bit hashes
+- Digitala signaturer och certifikat
+- Integritetskontroller och kontrollsummor
+- HMAC-konstruktioner
+- Filverifiering och dataflöden
+- Protokoll som kräver hashvärden på 256 bitar

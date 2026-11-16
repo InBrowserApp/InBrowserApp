@@ -16,5 +16,7 @@
   "keyLabel": "Kunci BLAKE2 (Base64)",
   "keyPlaceholder": "Kunci pilihan untuk hashing berkunci (dikodkan Base64)",
   "invalidBase64Title": "Nilai Base64 belum sah lagi.",
-  "invalidBase64Description": "Semak sama ada terdapat pelapik yang hilang, aksara yang tidak dijangka, atau data yang ditampal sebahagian."
+  "invalidBase64Description": "Semak sama ada terdapat pelapik yang hilang, aksara yang tidak dijangka, atau data yang ditampal sebahagian.",
+  "fileHashError": "Gagal menghasilkan hash fail.",
+  "textHashError": "Gagal menghasilkan hash teks."
 }

@@ -1,4 +1,4 @@
 {
-  "name": "Text Diff",
-  "description": "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser."
+  "name": "टेक्स्ट अंतर",
+  "description": "ब्राउज़र में ही दो ड्राफ़्ट की साथ-साथ तुलना करें, बदली गई पंक्तियां देखें और स्पष्ट एकीकृत डिफ़ निर्यात करें।"
 }

@@ -7,7 +7,6 @@
   "useDemoLabel": "Utiliser l'icône de démo",
   "removeImageLabel": "Supprimer",
   "filePreviewAlt": "Aperçu de l'image source sélectionnée",
-
   "siteInfoCardTitle": "Infos du site",
   "siteInfoCardDescription": "Utilisées par le manifeste, l'apple-touch-icon et l'extrait HTML.",
   "appNameLabel": "Nom de l'application",
@@ -33,7 +32,6 @@
   "backgroundColorDescription": "background_color du manifeste. Utilisé par les navigateurs pour peindre les écrans de démarrage des PWA.",
   "optimizePngLabel": "Optimiser la sortie PNG",
   "optimizePngDescription": "Soumet chaque PNG généré (y compris les composants de l'ICO) à une passe oxipng sans perte. Ajoute quelques secondes et télécharge un module WASM d'environ 150 KB lors de la première génération, mais réduit nettement la taille du zip.",
-
   "desktopCardTitle": "Favicon de navigateur de bureau",
   "desktopCardDescription": "Contrôle favicon.ico, favicon-16x16.png, favicon-32x32.png et (lorsque la source est SVG) favicon.svg.",
   "useOriginalSvgLabel": "Utiliser le SVG d'origine",
@@ -48,12 +46,10 @@
   "useDifferentImageDescription": "Remplace l'image source globale uniquement pour cette plateforme.",
   "uploadDedicatedImageLabel": "Choisir une image dédiée",
   "removeDedicatedImageLabel": "Supprimer",
-
   "iosCardTitle": "Web clip iOS",
   "iosCardDescription": "Contrôle l'apple-touch-icon.png 180×180 utilisé sur les écrans d'accueil iOS.",
   "iosBackgroundColorLabel": "Couleur d'arrière-plan",
   "iosBackgroundColorDescription": "Les icônes Apple doivent être opaques, ce remplissage est donc toujours appliqué.",
-
   "pwaCardTitle": "Icônes PWA",
   "pwaCardDescription": "Contrôle pwa-192x192.png, pwa-512x512.png et les variantes maskable.",
   "includeMaskableLabel": "Inclure les variantes maskable",
@@ -61,7 +57,6 @@
   "maskableBackgroundColorLabel": "Couleur d'arrière-plan maskable",
   "maskableMarginLabel": "Marge de zone de sécurité maskable",
   "maskableMarginDescription": "La zone de sécurité recommandée par le W3C est de 40 %. Le contenu source reste visible à l'intérieur de tout masque de plateforme.",
-
   "previewGalleryTitle": "Aperçu",
   "previewGalleryDescription": "Maquettes de navigateur, de recherche et d'écran d'accueil montrant les ressources générées en contexte.",
   "previewBeforeGenerateHint": "Générez le pack pour voir vos favicons intégrés dans les habillages ci-dessous.",
@@ -70,7 +65,6 @@
   "previewIosHomeScreenLabel": "Écran d'accueil iOS",
   "previewAndroidLauncherLabel": "Lanceur Android",
   "previewWindowsTaskbarLabel": "Barre des tâches Windows",
-
   "resultCardTitle": "Pack généré",
   "resultCardDescription": "Cliquez sur Générer pour produire chaque ressource, créer le zip et copier l'extrait HTML.",
   "resultEmptyTitle": "Aucun pack pour l'instant",
@@ -89,7 +83,6 @@
   "copyLabel": "Copier",
   "copiedLabel": "Copié",
   "downloadAssetLabel": "Télécharger la ressource",
-
   "invalidImageTitle": "Impossible de lire l'image",
   "invalidImageDescription": "Choisissez un fichier image lisible par le navigateur (PNG, JPEG, WebP, SVG) et réessayez.",
   "generationFailedTitle": "Échec de la génération",
@@ -100,6 +93,5 @@
   "needImageDescription": "Choisissez un fichier PNG, JPEG, WebP ou SVG (ou utilisez l'icône de démo) avant de générer.",
   "missingDedicatedImageTitle": "Image dédiée manquante",
   "missingDedicatedImageDescription": "Une ou plusieurs plateformes ont l'option « Utiliser une image différente » activée mais aucun fichier sélectionné. Téléversez le remplacement ou désactivez le commutateur.",
-
   "transparentLabel": "Transparent"
 }

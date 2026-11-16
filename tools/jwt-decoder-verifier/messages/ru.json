@@ -25,7 +25,7 @@
     "autoAlgorithm": "Авто из заголовка",
     "keyLabel": "Секрет или открытый ключ",
     "keyDescription": "Используйте обычный текст для алгоритмов HS. Используйте открытый ключ PEM, JWK или JWKS для алгоритмов RS, PS и ES. Значения не сохраняются.",
-    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "keyPlaceholder": "secret\n\nили\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nили\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
     "waitingTitle": "Готово к проверке",
     "waitingDescription": "Введите допустимый токен и материал для проверки, чтобы проверить подпись.",
     "pendingTitle": "Проверка подписи",

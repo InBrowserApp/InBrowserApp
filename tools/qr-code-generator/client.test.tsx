@@ -93,4 +93,27 @@ describe("QrCodeGeneratorClient", () => {
       screen.getByLabelText(messages.payloadPreviewLabel).textContent
     ).toBe("Hello QR")
   })
+
+  it("uses the localized fallback for unknown render failures", async () => {
+    vi.mocked(renderQrImageBlob).mockRejectedValueOnce({ message: "unknown" })
+    const localizedMessages = {
+      ...messages,
+      renderError: "QRコードを描画できませんでした。",
+    }
+
+    render(<QrCodeGeneratorClient messages={localizedMessages} />)
+
+    expect(await screen.findByText(localizedMessages.renderError)).toBeTruthy()
+    expect(screen.queryByAltText(messages.qrAlt)).toBeNull()
+  })
+
+  it("preserves Error messages from failed rendering", async () => {
+    vi.mocked(renderQrImageBlob).mockRejectedValueOnce(
+      new Error("QR rendering failed")
+    )
+
+    render(<QrCodeGeneratorClient messages={messages} />)
+
+    expect(await screen.findByText("QR rendering failed")).toBeTruthy()
+  })
 })

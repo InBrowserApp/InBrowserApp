@@ -1,4 +1,8 @@
 export {
+  Crop,
+  FlipHorizontal2,
+  FlipVertical2,
+  RotateCcw,
   RotateCw,
   ArrowDown,
   AtSign,
@@ -71,5 +75,6 @@ export {
   Wrench,
   Upload,
   Undo2,
+  Redo2,
   X,
 } from "lucide-react"

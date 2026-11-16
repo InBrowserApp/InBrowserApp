@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## Почему невидимые символы важны
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+Невидимые символы Unicode легко пропустить: в обычном редакторе они не выглядят ошибкой. Проблема проявляется позже: правки не применяются, идентификаторы перестают совпадать, строки переносятся необычным образом или текст начинает иначе вести себя в контексте письма справа налево.
 
-## What this tool catches
+## Что обнаруживает инструмент
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+Инструмент ищет четыре распространённые группы: символы нулевой ширины, управляющие символы направления письма, специальные пробелы и управляющие символы форматирования. Он точно показывает их расположение, предоставляет предпросмотр с пометками и готовит очищенную версию для копирования или экспорта.
 
-## When to use it
+## Когда использовать
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+Используйте инструмент после копирования текста из документов, PDF, электронных таблиц, чатов, редакторов CMS или приложений для дизайна. Он особенно полезен, когда строка выглядит нормально, но сравнение, отображение или дальнейшая обработка постоянно дают странные результаты.

@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "オプション",
   "optionsDescription": "バーコード形式を選び、サイズ、ラベル、色を調整します。",
-  "preview": "Preview",
+  "preview": "プレビュー",
   "previewDescription": "生成したバーコードを確認し、PNG、SVG、JPEG、または WebP として書き出します。",
-  "download": "Download",
+  "download": "ダウンロード",
   "text": "テキスト",
   "textPlaceholder": "内容を入力...",
   "format": "フォーマット",
@@ -20,5 +20,6 @@
   "center": "中央",
   "right": "右",
   "top": "上",
-  "bottom": "下"
+  "bottom": "下",
+  "renderError": "バーコードの描画に失敗しました。"
 }

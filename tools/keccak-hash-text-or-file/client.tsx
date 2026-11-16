@@ -111,8 +111,8 @@ function KeccakHashTextOrFileClient({
               error instanceof Error
                 ? error.message
                 : selectedFile
-                  ? "Failed to hash file."
-                  : "Failed to hash text.",
+                  ? messages.fileHashError
+                  : messages.textHashError,
           })
         }
       })
@@ -120,7 +120,13 @@ function KeccakHashTextOrFileClient({
     return () => {
       cancelled = true
     }
-  }, [deferredPlainText, outputLength, selectedFile])
+  }, [
+    messages.fileHashError,
+    messages.textHashError,
+    deferredPlainText,
+    outputLength,
+    selectedFile,
+  ])
 
   async function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
     const nextFile = event.target.files?.[0]

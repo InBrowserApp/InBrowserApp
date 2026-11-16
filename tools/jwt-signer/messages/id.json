@@ -41,7 +41,7 @@
   "signButton": "Tandatangani JWT",
   "signingButton": "Menandatangani",
   "loadSampleButton": "Muat contoh",
-  "resetButton": "Reset",
+  "resetButton": "Atur ulang",
   "resultCardTitle": "Token yang ditandatangani",
   "resultCardDescription": "Salin JWT ringkas atau periksa segmen header, payload, dan signature yang tepat.",
   "emptyResultTitle": "Belum ada token yang ditandatangani",

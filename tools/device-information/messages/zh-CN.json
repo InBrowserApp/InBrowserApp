@@ -75,7 +75,7 @@
   "storageUsage": "存储用量",
   "secureContext": "安全上下文",
   "onlineStatus": "网络状态",
-  "doNotTrack": "Do Not Track",
+  "doNotTrack": "请勿跟踪",
   "localStorage": "localStorage",
   "sessionStorage": "sessionStorage",
   "serviceWorker": "Service Worker",

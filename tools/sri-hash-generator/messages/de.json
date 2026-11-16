@@ -9,5 +9,7 @@
   "copiedLabel": "Kopiert",
   "sha256SriLabel": "SHA-256 SRI",
   "sha384SriLabel": "SHA-384 SRI",
-  "sha512SriLabel": "SHA-512 SRI"
+  "sha512SriLabel": "SHA-512 SRI",
+  "fileGenerationError": "SRI-Hashes für die Datei konnten nicht erzeugt werden.",
+  "textGenerationError": "SRI-Hashes für den eingegebenen Text konnten nicht erzeugt werden."
 }

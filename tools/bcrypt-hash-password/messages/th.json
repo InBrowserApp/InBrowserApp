@@ -24,6 +24,6 @@
   "costValueLabel": "Cost",
   "saltLabel": "Salt",
   "checksumLabel": "Checksum",
-  "generatedSummary": "Cost {cost}",
+  "generatedSummary": "ค่า cost {cost}",
   "privacyNote": "ไม่มีการบันทึกรหัสผ่าน และการ hash ทำงานในเบราว์เซอร์นี้"
 }

@@ -1,11 +1,11 @@
-## Overview
+## Tổng quan
 
-Trình kiểm tra JSONPath lets you run JSONPath queries against JSON data directly in the browser and inspect both the matched values and the matched paths side by side.
+Trình kiểm tra JSONPath cho phép bạn chạy truy vấn JSONPath trên dữ liệu JSON ngay trong trình duyệt và kiểm tra song song các giá trị lẫn đường dẫn khớp.
 
-## When To Use It
+## Khi nào nên dùng
 
-Use it when you need to prototype a JSONPath query, debug a selector against real payloads, or verify exactly which parts of a JSON document a query is matching.
+Dùng công cụ này khi bạn cần thử nghiệm truy vấn JSONPath, gỡ lỗi bộ chọn trên payload thực tế hoặc xác minh chính xác những phần của tài liệu JSON mà truy vấn đang khớp.
 
-## How It Works
+## Cách hoạt động
 
-The tool validates the JSON input first, then evaluates the JSONPath query and keeps both result modes available in the same output panel so you can switch between values and paths without rerunning anything.
+Công cụ xác thực JSON đầu vào trước, rồi đánh giá truy vấn JSONPath và giữ cả hai chế độ kết quả trong cùng bảng đầu ra để bạn chuyển giữa giá trị và đường dẫn mà không phải chạy lại.

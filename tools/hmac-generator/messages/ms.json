@@ -1,18 +1,20 @@
 {
   "configurationLabel": "Konfigurasi",
-  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "configurationDescription": "Tetapkan kunci rahsia dan algoritma HMAC untuk tandatangan semasa.",
   "secretKeyLabel": "Kunci Rahsia",
   "secretKeyPlaceholder": "Masukkan kunci rahsia anda",
   "algorithmLabel": "Algoritma",
   "inputLabel": "Input",
   "plainTextLabel": "Teks biasa",
-  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "plainTextDescription": "Tampal atau taip sebarang teks UTF-8, termasuk kandungan fail atau muatan API.",
   "importFromFileLabel": "Import dari fail",
   "hmacOutputLabel": "Output HMAC",
-  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
-  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hmacOutputDescription": "Output HMAC untuk input teks dan kunci rahsia semasa.",
+  "emptyStateDescription": "Masukkan kunci rahsia dan sediakan teks atau import fail untuk menjana output HMAC.",
   "hexLabel": "Heksadesimal",
   "base64Label": "Base64",
   "copyResultLabel": "Salin hasil",
-  "copiedLabel": "Disalin"
+  "copiedLabel": "Disalin",
+  "fileGenerationError": "Gagal menjana output HMAC untuk fail.",
+  "textGenerationError": "Gagal menjana output HMAC untuk input teks."
 }

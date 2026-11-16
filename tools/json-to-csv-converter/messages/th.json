@@ -16,5 +16,5 @@
   "quoteCharLabel": "อัญประกาศ",
   "includeHeaderRowLabel": "รวมแถวส่วนหัว",
   "escapeFormulaeLabel": "Escape สูตร Excel",
-  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+  "escapeFormulaeTooltip": "เพิ่มอักขระนำหน้าค่าที่ขึ้นต้นด้วย =, +, - หรือ @ เพื่อให้แอปสเปรดชีตตีความเป็นข้อความแทนสูตร"
 }

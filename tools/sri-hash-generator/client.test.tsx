@@ -10,6 +10,7 @@ import {
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import SriHashGeneratorClient from "./client"
+import * as hashCore from "./core/sri"
 
 const messages = {
   meta: {
@@ -21,6 +22,8 @@ const messages = {
   plainTextDescription:
     "Paste or type any UTF-8 text, including file contents or inline scripts.",
   importFromFileLabel: "Import from file",
+  fileGenerationError: "Failed to generate SRI hashes for the file.",
+  textGenerationError: "Failed to generate SRI hashes for the text input.",
   hashResultLabel: "Hash Result",
   hashResultDescription: "Hash result for the current text input.",
   sha256SriLabel: "SHA-256 SRI",
@@ -37,7 +40,10 @@ beforeEach(() => {
   window.localStorage.clear()
 })
 
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
 
 function getPlainTextInput() {
   return screen.getByRole("textbox", {
@@ -166,5 +172,39 @@ describe("SriHashGeneratorClient", () => {
     })
 
     expect(window.localStorage.getItem(STORAGE_KEY)).toBe("persist me")
+  })
+
+  test("uses localized fallbacks for unknown text and file failures", async () => {
+    vi.spyOn(hashCore, "generateSri").mockRejectedValue({ message: "unknown" })
+    const localizedMessages = {
+      ...messages,
+      fileGenerationError: "ファイルからの生成に失敗しました。",
+      textGenerationError: "テキストからの生成に失敗しました。",
+    }
+
+    render(<SriHashGeneratorClient messages={localizedMessages} />)
+
+    expect(
+      await screen.findByText(localizedMessages.textGenerationError)
+    ).toBeTruthy()
+
+    fireEvent.change(getFileInput(), {
+      target: { files: [new File(["content"], "broken.txt")] },
+    })
+
+    expect(
+      await screen.findByText(localizedMessages.fileGenerationError)
+    ).toBeTruthy()
+    expect(screen.queryByText(localizedMessages.textGenerationError)).toBeNull()
+  })
+
+  test("preserves Error messages from failed hashing", async () => {
+    vi.spyOn(hashCore, "generateSri").mockRejectedValue(
+      new Error("Input read failed")
+    )
+
+    render(<SriHashGeneratorClient messages={messages} />)
+
+    expect(await screen.findByText("Input read failed")).toBeTruthy()
   })
 })

@@ -1,6 +1,6 @@
 ## Bu araç ne yapar
 
-PDF Splitter, tarayıcınızda bir PDF açmanızı, sayfaları aralığa veya sayfa
+PDF Bölücü, tarayıcınızda bir PDF açmanızı, sayfaları aralığa veya sayfa
 numarasına göre seçmenizi ve daha küçük bir belge oluşturmanızı sağlar. Seçili
 sayfaları tek bir PDF'ye çıkarabilir, yazdığınız her aralığı ayrı bir PDF'ye
 bölebilir veya seçili her sayfayı kendi dosyasına ayırıp sonuçları ZIP arşivi

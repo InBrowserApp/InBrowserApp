@@ -1,6 +1,6 @@
 {
   "meta": {
-    "name": "Cron Expression Generator",
+    "name": "Generatore di espressioni cron",
     "description": "Crea espressioni cron a cinque campi con controlli visuali, preset e anteprime delle prossime esecuzioni."
   },
   "actions": {

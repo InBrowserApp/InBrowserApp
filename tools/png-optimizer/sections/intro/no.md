@@ -1,6 +1,6 @@
-## Hva PNG Optimizer gjør
+## Hva PNG-optimalisatoren gjør
 
-PNG Optimizer komprimerer PNG-bilder med tapsfri Oxipng-optimalisering. Den skriver om PNG-strukturen, komprimeringsinnstillinger, palettdata og alfainformasjon der det er mulig, uten å endre de synlige pikslene.
+PNG-optimalisatoren komprimerer PNG-bilder med tapsfri Oxipng-optimalisering. Den skriver om PNG-strukturen, komprimeringsinnstillinger, palettdata og alfainformasjon der det er mulig, uten å endre de synlige pikslene.
 
 ## Når du bør bruke den
 

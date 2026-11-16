@@ -1,19 +1,19 @@
-## What is SHA-512/224 (FIPS 180-4)?
+## Was ist SHA-512/224 (FIPS 180-4)?
 
-SHA-512/224 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 224-bit (28-byte) digest, typically rendered as a 56-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/224 (FIPS 180-4) ist eine kryptografische Hashfunktion aus der SHA-2-Familie. Sie erzeugt einen 224-Bit-Digest (28 Byte), der üblicherweise als 56-stellige Hexadezimalzeichenfolge dargestellt wird. Sie basiert auf SHA-512, verwendet jedoch andere Anfangswerte und eine gekürzte Ausgabe. So entsteht ein kürzerer Digest bei gleicher interner Struktur wie SHA-512.
 
-**Key characteristics:**
+**Wichtige Eigenschaften:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **Deterministisch**: Dieselbe Eingabe erzeugt immer denselben Hash.
+- **Schnelle Berechnung**: Lässt sich für jede Eingabe rasch berechnen.
+- **Lawineneffekt**: Kleine Änderungen an der Eingabe führen zu stark veränderten Ausgaben.
+- **Nicht umkehrbar**: Es ist rechnerisch praktisch unmöglich, den Hash umzukehren und die ursprüngliche Eingabe zu finden.
+- **Kollisionsresistent**: Es ist sehr schwierig, zwei verschiedene Eingaben mit demselben Hash zu finden.
 
-**Common uses:**
+**Typische Anwendungen:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 224-bit hashes
+- Digitale Signaturen und Zertifikate
+- Integritätsprüfungen und Prüfsummen
+- HMAC-Konstruktionen
+- Dateiüberprüfung und Datenpipelines
+- Protokolle, die 224-Bit-Hashes erfordern

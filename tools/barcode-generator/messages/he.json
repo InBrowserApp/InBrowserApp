@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "אפשרויות",
   "optionsDescription": "בחר פורמט ברקוד והתאם גודל, תוויות וצבעים.",
-  "preview": "Preview",
+  "preview": "תצוגה מקדימה",
   "previewDescription": "סקור את הברקוד שנוצר וייצא אותו כ‑PNG, SVG, JPEG או WebP.",
-  "download": "Download",
+  "download": "הורדה",
   "text": "טקסט",
   "textPlaceholder": "הזן תוכן...",
   "format": "פורמט",
@@ -20,5 +20,6 @@
   "center": "מרכז",
   "right": "ימין",
   "top": "למעלה",
-  "bottom": "למטה"
+  "bottom": "למטה",
+  "renderError": "יצירת הברקוד נכשלה."
 }

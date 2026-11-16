@@ -1,11 +1,11 @@
-## What this text diff is for
+## Para qué sirve este comparador de textos
 
-Use this tool when you need to compare two versions of copy, code, notes, or configuration before you merge, publish, or send anything out.
+Utilice esta herramienta para comparar dos versiones de un texto, código, notas o configuración antes de fusionar, publicar o enviar el contenido.
 
-## How to read the result
+## Cómo interpretar el resultado
 
-The side-by-side view helps you scan line numbers and changed fragments quickly. Switch to the unified view when you need a compact patch-style output for review, handoff, or documentation.
+La vista en paralelo permite examinar rápidamente los números de línea y los fragmentos modificados. Cambie a la vista unificada cuando necesite un resultado compacto en formato de parche para revisarlo, compartirlo o documentarlo.
 
-## When the options matter
+## Cuándo son útiles las opciones
 
-Ignore case when capitalization is noise. Ignore whitespace when indentation or spacing should not count as a real edit. Hide unchanged rows when you only want to inspect what actually moved.
+Ignore las diferencias entre mayúsculas y minúsculas cuando no sean relevantes. Ignore los espacios en blanco cuando la sangría o el espaciado no deban contar como cambios reales. Oculte las filas sin cambios cuando solo quiera revisar lo que se ha modificado.

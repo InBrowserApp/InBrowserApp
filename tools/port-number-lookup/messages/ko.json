@@ -16,6 +16,6 @@
   "registeredPortsDesc": "IANA에 등록된 애플리케이션 및 서비스에서 사용합니다. 예: MySQL (3306), PostgreSQL (5432).",
   "dynamicPorts": "동적 포트 (49152-65535):",
   "dynamicPortsDesc": "\"임시 포트\"라고도 하며, 클라이언트 애플리케이션의 임시 연결에 사용됩니다.",
-  "noResultsTitle": "No matching ports found",
-  "noResultsDescription": "Try a different port number, service name, or category."
+  "noResultsTitle": "일치하는 포트가 없습니다",
+  "noResultsDescription": "다른 포트 번호, 서비스 이름 또는 범주로 검색해 보세요."
 }

@@ -1,19 +1,19 @@
-## What is SHA-512/256 (FIPS 180-4)?
+## Apa itu SHA-512/256 (FIPS 180-4)?
 
-SHA-512/256 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 256-bit (32-byte) digest, typically rendered as a 64-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/256 (FIPS 180-4) adalah fungsi hash kriptografis SHA-2 yang menghasilkan digest 256-bit (32-byte), biasanya ditampilkan sebagai string heksadesimal sepanjang 64 karakter. Fungsi ini didasarkan pada SHA-512 dengan nilai awal yang berbeda dan keluaran yang dipangkas, sehingga menghasilkan digest yang lebih pendek dengan tetap mempertahankan struktur internal SHA-512.
 
-**Key characteristics:**
+**Karakteristik utama:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **Deterministik**: Masukan yang sama selalu menghasilkan hash yang sama
+- **Perhitungan cepat**: Dapat dihitung dengan cepat untuk masukan apa pun
+- **Efek avalanche**: Perubahan kecil pada masukan menghasilkan keluaran yang sangat berbeda
+- **Tidak dapat dibalik**: Membalik hash untuk menemukan masukan aslinya tidak dapat dilakukan dengan sumber daya komputasi yang wajar
+- **Tahan kolisi**: Sangat sulit menemukan dua masukan berbeda yang menghasilkan hash yang sama
 
-**Common uses:**
+**Penggunaan umum:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 256-bit hashes
+- Tanda tangan dan sertifikat digital
+- Pemeriksaan integritas dan checksum
+- Konstruksi HMAC
+- Verifikasi file dan alur pemrosesan data
+- Protokol yang memerlukan hash 256-bit

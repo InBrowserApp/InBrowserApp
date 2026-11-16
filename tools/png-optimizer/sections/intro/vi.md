@@ -1,6 +1,6 @@
-## PNG Optimizer làm gì
+## Trình tối ưu PNG làm gì
 
-PNG Optimizer nén ảnh PNG bằng tối ưu hóa Oxipng không mất dữ liệu. Công cụ viết lại cấu trúc PNG, thiết lập nén, dữ liệu bảng màu và thông tin alpha khi có thể mà không thay đổi các điểm ảnh hiển thị.
+Trình tối ưu PNG nén ảnh PNG bằng tối ưu hóa Oxipng không mất dữ liệu. Công cụ viết lại cấu trúc PNG, thiết lập nén, dữ liệu bảng màu và thông tin alpha khi có thể mà không thay đổi các điểm ảnh hiển thị.
 
 ## Khi nào nên dùng
 

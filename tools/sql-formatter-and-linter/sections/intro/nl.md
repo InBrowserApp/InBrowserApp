@@ -1,6 +1,6 @@
-## Wat is SQL Formatter & Linter?
+## Wat is SQL-opmaker en -linter?
 
-SQL Formatter & Linter herschrijft SQL-query's in je browser en controleert ze tegelijk op een kleine set signalerende problemen. Dit is handig wanneer je een schonere querylay-out, consistent hoofdlettergebruik voor trefwoorden en snelle feedback wilt op risicovolle patronen zoals `SELECT *` of `UPDATE`-statements zonder `WHERE`-clausule.
+SQL-opmaker en -linter herschrijft SQL-query's in je browser en controleert ze tegelijk op een kleine set signalerende problemen. Dit is handig wanneer je een schonere querylay-out, consistent hoofdlettergebruik voor trefwoorden en snelle feedback wilt op risicovolle patronen zoals `SELECT *` of `UPDATE`-statements zonder `WHERE`-clausule.
 
 ## Wanneer Gebruik Je Het
 

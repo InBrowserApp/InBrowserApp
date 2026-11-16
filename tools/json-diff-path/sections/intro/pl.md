@@ -1,6 +1,6 @@
 ## Omówienie
 
-JSON Diff Path porównuje dwa dokumenty JSON i zamienia każdą zmianę strukturalną na czytelny rekord ścieżki z wyjściem zarówno JSONPath, jak i JSON Pointer.
+Narzędzie „Porównywanie JSON według ścieżek” porównuje dwa dokumenty JSON i zamienia każdą zmianę strukturalną na czytelny rekord ścieżki z wyjściem zarówno JSONPath, jak i JSON Pointer.
 
 ## Kiedy używać
 

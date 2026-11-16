@@ -1,4 +1,4 @@
-## What is an X.509 certificate parser?
+## X.509 प्रमाणपत्र पार्सर क्या है?
 
 X.509 certificate एक signed document है जो public key को domain, service, organization, या person जैसी identity से जोड़ता है। TLS certificates, certificate-chain files, और कई S/MIME या signing workflows इस format का उपयोग करते हैं।
 

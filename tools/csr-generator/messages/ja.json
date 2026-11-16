@@ -24,7 +24,7 @@
   "subjectStateLabel": "State or Province（ST）",
   "subjectLocalityLabel": "Locality（L）",
   "subjectEmailLabel": "メールアドレス",
-  "sanTitle": "Subject Alternative Names",
+  "sanTitle": "サブジェクト代替名",
   "sanDescription": "1 行に 1 エントリ、またはカンマ区切りで入力します。省略する場合はセクションを空欄にしてください。",
   "sanDnsLabel": "DNS 名",
   "sanDnsPlaceholder": "example.com\nwww.example.com",

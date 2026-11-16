@@ -1,26 +1,26 @@
-## What this tool does
+## Hva dette verktøyet gjør
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+Denne SVG-til-bilde-konvertereren gjør én lokal SVG-fil om til et PNG-, JPEG- eller WebP-bilde
+direkte i nettleseren. Du kan beholde den opprinnelige størrelsen, angi egendefinerte
+utdatadimensjoner, styre bakgrunnsfyll og justere eksportkvaliteten når
+formatet støtter det.
 
-## Why it helps
+## Hvorfor det er nyttig
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+Bruk det når en designleveranse, CMS-arbeidsflyt, forhåndsvisning for sosiale medier eller appressurs
+trenger en rask konvertering fra SVG til rasterbilde. Det er nyttig for å gjøre vektorgrafikk
+om til forutsigbare punktgrafikkfiler uten å åpne et eget bildebehandlingsprogram.
 
-## How it works
+## Slik fungerer det
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+Last opp én SVG-fil, velg utdataformatet og juster deretter bredde, høyde,
+bakgrunn og kvalitet. Konvertereren gjengir SVG-bildet i nettleseren
+og klargjør en nedlastbar bildefil uten å sende noe til en server.
 
-## Tips for better exports
+## Tips for bedre eksport
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- Behold sideforhold aktivert hvis du vil endre størrelse uten forvrengning.
+- Velg en bakgrunnsfarge for JPEG-utdata, siden JPEG ikke støtter
+  gjennomsiktighet.
+- Bruk PNG når du vil ha skarpe, tapsfrie utdata, eller WebP og JPEG når mindre
+  filstørrelse er viktigere.

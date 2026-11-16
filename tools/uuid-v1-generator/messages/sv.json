@@ -10,7 +10,7 @@
   "macAddressLabel": "MAC-adress",
   "macAddressDescription": "En lokalt administrerad slumpmässig adress används som standard så att riktiga maskinvaruadresser inte exponeras.",
   "randomMacAddressLabel": "Slumpa MAC-adress",
-  "clockSequenceLabel": "Clock Sequence",
+  "clockSequenceLabel": "Klocksekvens",
   "clockSequenceDescription": "Ett 14-bitarsvärde som används med tidsstämpeln för att undvika kollisioner.",
   "randomClockSequenceLabel": "Slumpa clock sequence",
   "macAddressRequired": "Ange en MAC-adress.",
