@@ -47,7 +47,27 @@ describe("createBasicAuthCurlCommand", () => {
         "open sesame"
       )
     ).toBe(
-      'curl -H "Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==" https://api.example.com/protected'
+      "curl -H \"Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==\" 'https://api.example.com/protected'"
+    )
+  })
+
+  test("quotes URL metacharacters as a single shell argument", () => {
+    expect(
+      createBasicAuthCurlCommand(
+        "https://example.test/a b?a=1&b=$(echo x)#c",
+        "u",
+        "p"
+      )
+    ).toBe(
+      `curl -H "Authorization: Basic dTpw" 'https://example.test/a b?a=1&b=$(echo x)#c'`
+    )
+  })
+
+  test("escapes single quotes in URLs", () => {
+    expect(
+      createBasicAuthCurlCommand("https://example.test/it's", "u", "p")
+    ).toBe(
+      `curl -H "Authorization: Basic dTpw" 'https://example.test/it'\\''s'`
     )
   })
 
