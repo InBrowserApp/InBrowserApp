@@ -106,7 +106,7 @@ function EditableWatermark({
     { x: 1, y: 1, label: m.bottomRight },
   ]
   const handleClass =
-    "absolute z-30 flex size-8 -translate-x-1/2 -translate-y-1/2 touch-none items-center justify-center rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:pointer-events-none"
+    "absolute z-30 flex size-8 -translate-x-1/2 -translate-y-1/2 touch-none items-center justify-center rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:pointer-events-none"
   return (
     <>
       <button
@@ -116,7 +116,7 @@ function EditableWatermark({
         aria-label={m.moveWatermark.replace("{name}", name)}
         aria-pressed={selected}
         aria-describedby="watermark-keyboard-help"
-        className="absolute cursor-move touch-none border-0 bg-transparent p-0 outline-none hover:ring-1 hover:ring-primary/60 focus-visible:ring-2 focus-visible:ring-primary"
+        className="absolute cursor-move touch-none border-0 bg-transparent p-0 outline-none hover:ring-1 hover:ring-blue-600/60 focus-visible:ring-2 focus-visible:ring-blue-600"
         style={{ ...box, zIndex: index + 1 }}
         onClick={onSelect}
         onKeyDown={key}
@@ -126,7 +126,7 @@ function EditableWatermark({
         <>
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute z-20 border-2 border-primary"
+            className="pointer-events-none absolute z-20 border-2 border-blue-600"
             style={box}
           />
           {transform.guides.x ? (
@@ -177,7 +177,7 @@ function EditableWatermark({
               >
                 <span
                   aria-hidden="true"
-                  className="size-3 rounded-sm border-2 border-primary bg-white shadow-sm"
+                  className="size-3 rounded-sm border-2 border-blue-600 bg-white shadow-sm"
                 />
               </button>
             )
@@ -185,7 +185,7 @@ function EditableWatermark({
           <button
             type="button"
             disabled={disabled}
-            className={`${handleClass} cursor-grab rounded-full border border-primary bg-background text-foreground shadow-sm active:cursor-grabbing`}
+            className={`${handleClass} cursor-grab rounded-full border border-blue-600 bg-white text-blue-700 shadow-sm active:cursor-grabbing`}
             data-transform="rotate"
             aria-label={m.rotateWatermark.replace("{name}", name)}
             onKeyDown={key}
