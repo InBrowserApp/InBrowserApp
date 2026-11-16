@@ -1,3 +1,5 @@
+import "reflect-metadata"
+
 import { webcrypto } from "node:crypto"
 
 import { PemConverter } from "@peculiar/x509"

@@ -1,10 +1,6 @@
 import { getViteConfig } from "astro/config"
 
 export default getViteConfig({
-  esbuild: {
-    jsx: "automatic",
-    jsxImportSource: "react",
-  },
   test: {
     include: ["**/*.test.{ts,tsx}"],
     environment: "happy-dom",

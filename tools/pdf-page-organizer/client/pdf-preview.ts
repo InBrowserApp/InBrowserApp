@@ -1,6 +1,6 @@
 import { GlobalWorkerOptions, getDocument } from "pdfjs-dist"
 
-import type { PDFDocumentProxy, PDFPageProxy } from "pdfjs-dist"
+import type { PDFPageProxy } from "pdfjs-dist"
 import type { PdfPagePreview } from "./types"
 
 const PREVIEW_MAX_WIDTH = 220
@@ -75,12 +75,6 @@ async function renderPagePreview(
   return preview
 }
 
-async function destroyDocument(document: PDFDocumentProxy | null) {
-  if (document) {
-    await document.destroy()
-  }
-}
-
 async function renderPdfPagePreviews(
   file: File,
   signal?: AbortSignal
@@ -90,10 +84,9 @@ async function renderPdfPagePreviews(
 
   const data = new Uint8Array(await file.arrayBuffer())
   const loadingTask = getDocument({ data })
-  let document: PDFDocumentProxy | null = null
 
   try {
-    document = await loadingTask.promise
+    const document = await loadingTask.promise
     const previews: PdfPagePreview[] = []
 
     for (let pageNumber = 1; pageNumber <= document.numPages; pageNumber += 1) {
@@ -103,14 +96,8 @@ async function renderPdfPagePreviews(
     }
 
     return previews
-  } catch (error) {
-    if (signal?.aborted) {
-      await loadingTask.destroy()
-    }
-
-    throw error
   } finally {
-    await destroyDocument(document)
+    await loadingTask.destroy()
   }
 }
 

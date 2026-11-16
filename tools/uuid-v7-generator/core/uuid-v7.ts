@@ -49,7 +49,10 @@ function isValidUuidV7TimestampMs(value: number): boolean {
   return normalized >= 0 && normalized <= UUID_V7_MAX_TIMESTAMP_MS
 }
 
-function fillRandomBytes(bytes: Uint8Array, randomBytes?: RandomBytes) {
+function fillRandomBytes(
+  bytes: Uint8Array<ArrayBuffer>,
+  randomBytes?: RandomBytes
+) {
   if (randomBytes) {
     randomBytes(bytes)
     return bytes
