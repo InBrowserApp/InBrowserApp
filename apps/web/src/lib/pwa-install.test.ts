@@ -85,31 +85,11 @@ test("does not offer installation in an installed app window", () => {
   expect(prompt).not.toHaveBeenCalled()
 })
 
-test("keeps the pending prompt across Astro navigation and uses the new button", () => {
+test("ignores clicks outside the install action", () => {
   const { prompt } = offerInstall()
-  const next = control.cloneNode(true) as HTMLDivElement
-  next.hidden = true
-  control.replaceWith(next)
-  document.dispatchEvent(new Event("astro:after-swap"))
-  expect(next.hidden).toBe(false)
   document.body.click()
   document.dispatchEvent(new MouseEvent("click"))
   expect(prompt).not.toHaveBeenCalled()
-  next.querySelector("summary")!.click()
-  expect(prompt).toHaveBeenCalledOnce()
-  expect(next.hidden).toBe(false)
-})
-
-test("keeps the icon visible after consuming a prompt and navigating", () => {
-  offerInstall()
-  trigger.click()
-  const next = control.cloneNode(true) as HTMLDivElement
-  control.replaceWith(next)
-  document.dispatchEvent(new Event("astro:after-swap"))
-  expect(next.hidden).toBe(false)
-  expect(next.querySelector("summary")!.getAttribute("aria-disabled")).toBe(
-    "true"
-  )
 })
 
 test("removes its listeners when disposed", () => {

@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { navigate } from "astro:transitions/client"
 
 import { localizePath } from "@/lib/site"
 import { SearchCombobox } from "./tools-directory/search-combobox"
@@ -34,7 +33,7 @@ function HomeSearch({
       query={query}
       onQueryChange={setQuery}
       onSubmitQuery={(submittedQuery) => {
-        void navigate(
+        window.location.assign(
           `${localizePath("/tools", language)}?query=${encodeURIComponent(submittedQuery)}`
         )
       }}

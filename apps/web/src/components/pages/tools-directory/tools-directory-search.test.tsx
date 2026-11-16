@@ -7,10 +7,9 @@ import {
 } from "@testing-library/react"
 import { renderToStaticMarkup } from "react-dom/server"
 import { afterEach, describe, expect, it, vi } from "vitest"
+import { HomeSearch } from "../home-search"
 import { ToolsDirectorySearch } from "./tools-directory-search"
 import catalog from "../../../messages/en.json"
-
-vi.mock("astro:transitions/client", () => ({ navigate: vi.fn() }))
 
 const entries = [
   {
@@ -41,7 +40,57 @@ const props = {
 
 afterEach(() => {
   cleanup()
+  vi.restoreAllMocks()
   window.history.replaceState(null, "", "/")
+})
+
+describe("search navigation", () => {
+  it("opens a localized tool with browser navigation on Enter", () => {
+    const assign = vi
+      .spyOn(window.location, "assign")
+      .mockImplementation(() => {})
+    render(<ToolsDirectorySearch {...props} language="zh-CN" />)
+    const input = screen.getByRole("combobox")
+    fireEvent.focus(input)
+    fireEvent.change(input, { target: { value: "merge" } })
+    fireEvent.keyDown(input, { key: "Enter" })
+
+    expect(assign).toHaveBeenCalledWith("/zh-CN/tools/pdf-merger/")
+  })
+
+  it("opens a tool with browser navigation when a suggestion is clicked", () => {
+    const assign = vi
+      .spyOn(window.location, "assign")
+      .mockImplementation(() => {})
+    render(<ToolsDirectorySearch {...props} />)
+    const input = screen.getByRole("combobox")
+    fireEvent.focus(input)
+    fireEvent.change(input, { target: { value: "split" } })
+    fireEvent.mouseDown(screen.getByRole("option"))
+
+    expect(assign).toHaveBeenCalledWith("/tools/pdf-splitter/")
+  })
+
+  it("opens the localized directory with an encoded home search query", () => {
+    const assign = vi
+      .spyOn(window.location, "assign")
+      .mockImplementation(() => {})
+    render(
+      <HomeSearch
+        entries={entries}
+        language="zh-CN"
+        categoryLabels={catalog.tools.categories}
+        messages={catalog.tools}
+      />
+    )
+    const input = screen.getByRole("combobox")
+    fireEvent.change(input, { target: { value: "  编码 & text?  " } })
+    fireEvent.keyDown(input, { key: "Enter" })
+
+    expect(assign).toHaveBeenCalledWith(
+      `/zh-CN/tools/?query=${encodeURIComponent("编码 & text?")}`
+    )
+  })
 })
 
 describe("category directory", () => {
