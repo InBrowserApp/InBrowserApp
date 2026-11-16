@@ -1,0 +1,4 @@
+{
+  "name": "Converter voor tekstcodering",
+  "description": "Zet tekstbestanden om tussen UTF-8, GBK, Big5 en andere coderingen. Bekijk voorbeelden van onleesbare tekst, stel BOM en regeleinden in en download lokaal zonder tekens te verliezen."
+}
