@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "Hanya Format Lawas",
+  "compatibilityDescription": "Menghasilkan format kunci perangkat lunak yang berasal dari BatLabs. Tidak kompatibel dengan ASTRO 25 Portable CPS (termasuk XTS5000), APX CPS, atau Advanced System Keys (ASK).",
+  "inputTitle": "ID Sistem",
+  "inputDescription": "Masukkan ID sistem trunking Motorola lawas.",
+  "systemIdLabel": "ID Sistem (Heksadesimal)",
+  "systemIdHelp": "Gunakan 1–4 digit heksadesimal (0–9, A–F). ID pendek akan dilengkapi dengan nol di depan.",
+  "invalidSystemId": "Masukkan 1–4 digit heksadesimal (0–9, A–F), tanpa awalan 0x.",
+  "outputTitle": "File Kunci Lawas",
+  "emptyState": "Masukkan ID Sistem untuk melihat pratinjau dan mengunduh file .KEY Anda.",
+  "normalizedIdLabel": "ID yang Dinormalisasi",
+  "filenameLabel": "Nama File",
+  "fileSizeLabel": "Ukuran File",
+  "fileSizeValue": "27 byte",
+  "hexPreviewLabel": "Pratinjau Heksadesimal",
+  "downloadLabel": "Unduh .KEY",
+  "sourceLabel": "Implementasi Referensi",
+  "licenseLabel": "Lisensi ISC"
+}

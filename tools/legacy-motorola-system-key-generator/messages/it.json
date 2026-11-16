@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "Solo formato legacy",
+  "compatibilityDescription": "Genera chiavi software nel formato derivato da BatLabs. Non compatibile con ASTRO 25 Portable CPS (incluso XTS5000), APX CPS o Advanced System Keys (ASK).",
+  "inputTitle": "ID di sistema",
+  "inputDescription": "Inserisci l'ID di un sistema trunking Motorola legacy.",
+  "systemIdLabel": "ID di sistema (esadecimale)",
+  "systemIdHelp": "Usa 1–4 cifre esadecimali (0–9, A–F). Gli ID brevi vengono completati con zeri iniziali.",
+  "invalidSystemId": "Inserisci 1–4 cifre esadecimali (0–9, A–F), senza il prefisso 0x.",
+  "outputTitle": "File della chiave legacy",
+  "emptyState": "Inserisci un ID di sistema per visualizzare l'anteprima e scaricare il file .KEY.",
+  "normalizedIdLabel": "ID normalizzato",
+  "filenameLabel": "Nome file",
+  "fileSizeLabel": "Dimensione file",
+  "fileSizeValue": "27 byte",
+  "hexPreviewLabel": "Anteprima esadecimale",
+  "downloadLabel": "Scarica .KEY",
+  "sourceLabel": "Implementazione di riferimento",
+  "licenseLabel": "Licenza ISC"
+}

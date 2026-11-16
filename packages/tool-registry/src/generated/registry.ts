@@ -16601,6 +16601,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "legacy-motorola-system-key-generator",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "motorola",
+      "legacy",
+      "system key",
+      "syskey",
+      "syskeygen",
+      "skeygen",
+      "key file",
+      "trunking",
+      "radio",
+      "batlabs",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد مفاتيح أنظمة Motorola القديمة",
+        description:
+          "أنشئ ملفات مفاتيح الأنظمة البرمجية القديمة من Motorola (.KEY) في متصفحك. لا تدعم هذه الصيغة ASTRO 25 أو XTS5000 أو APX أو Advanced System Keys.",
+      },
+      de: {
+        name: "Generator für Motorola-Systemschlüssel im Legacy-Format",
+        description:
+          "Erstellen Sie Software-Systemschlüsseldateien (.KEY) im Legacy-Format für Motorola direkt im Browser. Dieses Format unterstützt weder ASTRO 25 noch XTS5000, APX oder Advanced System Keys.",
+      },
+      en: {
+        name: "Legacy Motorola System Key Generator",
+        description:
+          "Generate legacy Motorola software system key (.KEY) files in your browser. This format does not support ASTRO 25, XTS5000, APX, or Advanced System Keys.",
+      },
+      es: {
+        name: "Generador de claves de sistema Motorola de formato antiguo",
+        description:
+          "Genera archivos de clave de sistema por software (.KEY) para sistemas Motorola antiguos en tu navegador. Este formato no es compatible con ASTRO 25, XTS5000, APX ni Advanced System Keys.",
+      },
+      fr: {
+        name: "Générateur de clés système Motorola d’ancienne génération",
+        description:
+          "Générez des fichiers de clés système logicielles Motorola d’ancienne génération (.KEY) dans votre navigateur. Ce format ne prend pas en charge ASTRO 25, XTS5000, APX ni les Advanced System Keys.",
+      },
+      he: {
+        name: "מחולל מפתחות מערכת למערכות Motorola מדור קודם",
+        description:
+          "יצירת קובצי מפתח מערכת תוכנתיים (.KEY) למערכות Motorola מדור קודם, ישירות בדפדפן. פורמט זה אינו תומך ב־ASTRO 25, ב־XTS5000, ב־APX או ב־Advanced System Keys.",
+      },
+      hi: {
+        name: "लेगेसी Motorola सिस्टम कुंजी जनरेटर",
+        description:
+          "अपने ब्राउज़र में लेगेसी Motorola सॉफ़्टवेयर सिस्टम कुंजी (.KEY) फ़ाइलें बनाएँ। यह फ़ॉर्मैट ASTRO 25, XTS5000, APX या Advanced System Keys का समर्थन नहीं करता।",
+      },
+      id: {
+        name: "Generator Kunci Sistem Motorola Lawas",
+        description:
+          "Buat file kunci sistem perangkat lunak Motorola lawas (.KEY) di browser Anda. Format ini tidak mendukung ASTRO 25, XTS5000, APX, atau Advanced System Keys.",
+      },
+      it: {
+        name: "Generatore di chiavi di sistema Motorola legacy",
+        description:
+          "Genera file di chiavi software di sistema Motorola legacy (.KEY) nel browser. Questo formato non supporta ASTRO 25, XTS5000, APX o Advanced System Keys.",
+      },
+      ja: {
+        name: "旧形式の Motorola システムキー生成ツール",
+        description:
+          "ブラウザーで Motorola の旧形式のソフトウェアシステムキー（.KEY）ファイルを生成します。この形式は ASTRO 25、XTS5000、APX、Advanced System Keys に対応していません。",
+      },
+      ko: {
+        name: "레거시 Motorola 시스템 키 생성기",
+        description:
+          "브라우저에서 레거시 Motorola 소프트웨어 시스템 키(.KEY) 파일을 생성하세요. 이 형식은 ASTRO 25, XTS5000, APX 또는 Advanced System Keys를 지원하지 않습니다.",
+      },
+      ms: {
+        name: "Penjana Kunci Sistem Motorola Legasi",
+        description:
+          "Jana fail kunci sistem perisian Motorola legasi (.KEY) dalam pelayar anda. Format ini tidak menyokong ASTRO 25, XTS5000, APX atau Advanced System Keys.",
+      },
+      nl: {
+        name: "Generator voor oudere Motorola-systeemsleutels",
+        description:
+          "Genereer bestanden met softwarematige systeemsleutels (.KEY) voor oudere Motorola-systemen in je browser. Dit formaat ondersteunt geen ASTRO 25, XTS5000, APX of Advanced System Keys.",
+      },
+      no: {
+        name: "Systemnøkkelgenerator for eldre Motorola-systemer",
+        description:
+          "Generer programvarebaserte systemnøkkelfiler (.KEY) for eldre Motorola-systemer i nettleseren. Dette formatet støtter ikke ASTRO 25, XTS5000, APX eller Advanced System Keys.",
+      },
+      pl: {
+        name: "Generator kluczy systemowych dla starszych systemów Motorola",
+        description:
+          "Generuj w przeglądarce pliki programowych kluczy systemowych (.KEY) dla starszych systemów Motorola. Ten format nie obsługuje ASTRO 25, XTS5000, APX ani Advanced System Keys.",
+      },
+      pt: {
+        name: "Gerador de chaves de sistema Motorola legadas",
+        description:
+          "Gere no navegador arquivos de chave de sistema por software (.KEY) para sistemas Motorola legados. Este formato não é compatível com ASTRO 25, XTS5000, APX ou Advanced System Keys.",
+      },
+      ru: {
+        name: "Генератор системных ключей Motorola старого формата",
+        description:
+          "Создавайте файлы программных системных ключей Motorola старого формата (.KEY) в браузере. Этот формат не поддерживает ASTRO 25, XTS5000, APX и Advanced System Keys.",
+      },
+      sv: {
+        name: "Generator för äldre Motorola-systemnycklar",
+        description:
+          "Skapa .KEY-filer med programvarubaserade systemnycklar för äldre Motorola-system i webbläsaren. Formatet stöder inte ASTRO 25, XTS5000, APX eller Advanced System Keys.",
+      },
+      th: {
+        name: "เครื่องมือสร้างคีย์ระบบ Motorola รุ่นเก่า",
+        description:
+          "สร้างไฟล์คีย์ระบบแบบซอฟต์แวร์ Motorola รุ่นเก่า (.KEY) ในเบราว์เซอร์ของคุณ รูปแบบนี้ไม่รองรับ ASTRO 25, XTS5000, APX หรือ Advanced System Keys",
+      },
+      tr: {
+        name: "Eski Nesil Motorola Sistem Anahtarı Oluşturucu",
+        description:
+          "Tarayıcınızda eski nesil Motorola yazılım tabanlı sistem anahtarı (.KEY) dosyaları oluşturun. Bu biçim ASTRO 25, XTS5000, APX veya Advanced System Keys'i desteklemez.",
+      },
+      vi: {
+        name: "Trình tạo khóa hệ thống Motorola đời cũ",
+        description:
+          "Tạo tệp khóa hệ thống phần mềm (.KEY) cho Motorola đời cũ trong trình duyệt. Định dạng này không hỗ trợ ASTRO 25, XTS5000, APX hoặc Advanced System Keys.",
+      },
+      "zh-CN": {
+        name: "旧版 Motorola 系统密钥生成器",
+        description:
+          "在浏览器中生成旧版 Motorola 软件系统密钥（.KEY）文件。此格式不支持 ASTRO 25、XTS5000、APX 或 Advanced System Keys。",
+      },
+      "zh-TW": {
+        name: "舊版 Motorola 系統金鑰產生器",
+        description:
+          "直接在瀏覽器中產生舊版 Motorola 軟體系統金鑰（.KEY）檔案。此格式不支援 ASTRO 25、XTS5000、APX 或 Advanced System Keys。",
+      },
+    },
+  },
+  {
     slug: "list-comparer",
     category: "text",
     icon: "file-text",
@@ -51299,6 +51433,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "LaTeX 預覽器",
         description:
           "在本機預覽內容完整獨立的 LaTeX 文件，提供易讀的數學公式、大綱、原始碼檢視及相容性說明。",
+      },
+    },
+  },
+  "legacy-motorola-system-key-generator": {
+    slug: "legacy-motorola-system-key-generator",
+    category: "network",
+    icon: "lock",
+    tags: [
+      "motorola",
+      "legacy",
+      "system key",
+      "syskey",
+      "syskeygen",
+      "skeygen",
+      "key file",
+      "trunking",
+      "radio",
+      "batlabs",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد مفاتيح أنظمة Motorola القديمة",
+        description:
+          "أنشئ ملفات مفاتيح الأنظمة البرمجية القديمة من Motorola (.KEY) في متصفحك. لا تدعم هذه الصيغة ASTRO 25 أو XTS5000 أو APX أو Advanced System Keys.",
+      },
+      de: {
+        name: "Generator für Motorola-Systemschlüssel im Legacy-Format",
+        description:
+          "Erstellen Sie Software-Systemschlüsseldateien (.KEY) im Legacy-Format für Motorola direkt im Browser. Dieses Format unterstützt weder ASTRO 25 noch XTS5000, APX oder Advanced System Keys.",
+      },
+      en: {
+        name: "Legacy Motorola System Key Generator",
+        description:
+          "Generate legacy Motorola software system key (.KEY) files in your browser. This format does not support ASTRO 25, XTS5000, APX, or Advanced System Keys.",
+      },
+      es: {
+        name: "Generador de claves de sistema Motorola de formato antiguo",
+        description:
+          "Genera archivos de clave de sistema por software (.KEY) para sistemas Motorola antiguos en tu navegador. Este formato no es compatible con ASTRO 25, XTS5000, APX ni Advanced System Keys.",
+      },
+      fr: {
+        name: "Générateur de clés système Motorola d’ancienne génération",
+        description:
+          "Générez des fichiers de clés système logicielles Motorola d’ancienne génération (.KEY) dans votre navigateur. Ce format ne prend pas en charge ASTRO 25, XTS5000, APX ni les Advanced System Keys.",
+      },
+      he: {
+        name: "מחולל מפתחות מערכת למערכות Motorola מדור קודם",
+        description:
+          "יצירת קובצי מפתח מערכת תוכנתיים (.KEY) למערכות Motorola מדור קודם, ישירות בדפדפן. פורמט זה אינו תומך ב־ASTRO 25, ב־XTS5000, ב־APX או ב־Advanced System Keys.",
+      },
+      hi: {
+        name: "लेगेसी Motorola सिस्टम कुंजी जनरेटर",
+        description:
+          "अपने ब्राउज़र में लेगेसी Motorola सॉफ़्टवेयर सिस्टम कुंजी (.KEY) फ़ाइलें बनाएँ। यह फ़ॉर्मैट ASTRO 25, XTS5000, APX या Advanced System Keys का समर्थन नहीं करता।",
+      },
+      id: {
+        name: "Generator Kunci Sistem Motorola Lawas",
+        description:
+          "Buat file kunci sistem perangkat lunak Motorola lawas (.KEY) di browser Anda. Format ini tidak mendukung ASTRO 25, XTS5000, APX, atau Advanced System Keys.",
+      },
+      it: {
+        name: "Generatore di chiavi di sistema Motorola legacy",
+        description:
+          "Genera file di chiavi software di sistema Motorola legacy (.KEY) nel browser. Questo formato non supporta ASTRO 25, XTS5000, APX o Advanced System Keys.",
+      },
+      ja: {
+        name: "旧形式の Motorola システムキー生成ツール",
+        description:
+          "ブラウザーで Motorola の旧形式のソフトウェアシステムキー（.KEY）ファイルを生成します。この形式は ASTRO 25、XTS5000、APX、Advanced System Keys に対応していません。",
+      },
+      ko: {
+        name: "레거시 Motorola 시스템 키 생성기",
+        description:
+          "브라우저에서 레거시 Motorola 소프트웨어 시스템 키(.KEY) 파일을 생성하세요. 이 형식은 ASTRO 25, XTS5000, APX 또는 Advanced System Keys를 지원하지 않습니다.",
+      },
+      ms: {
+        name: "Penjana Kunci Sistem Motorola Legasi",
+        description:
+          "Jana fail kunci sistem perisian Motorola legasi (.KEY) dalam pelayar anda. Format ini tidak menyokong ASTRO 25, XTS5000, APX atau Advanced System Keys.",
+      },
+      nl: {
+        name: "Generator voor oudere Motorola-systeemsleutels",
+        description:
+          "Genereer bestanden met softwarematige systeemsleutels (.KEY) voor oudere Motorola-systemen in je browser. Dit formaat ondersteunt geen ASTRO 25, XTS5000, APX of Advanced System Keys.",
+      },
+      no: {
+        name: "Systemnøkkelgenerator for eldre Motorola-systemer",
+        description:
+          "Generer programvarebaserte systemnøkkelfiler (.KEY) for eldre Motorola-systemer i nettleseren. Dette formatet støtter ikke ASTRO 25, XTS5000, APX eller Advanced System Keys.",
+      },
+      pl: {
+        name: "Generator kluczy systemowych dla starszych systemów Motorola",
+        description:
+          "Generuj w przeglądarce pliki programowych kluczy systemowych (.KEY) dla starszych systemów Motorola. Ten format nie obsługuje ASTRO 25, XTS5000, APX ani Advanced System Keys.",
+      },
+      pt: {
+        name: "Gerador de chaves de sistema Motorola legadas",
+        description:
+          "Gere no navegador arquivos de chave de sistema por software (.KEY) para sistemas Motorola legados. Este formato não é compatível com ASTRO 25, XTS5000, APX ou Advanced System Keys.",
+      },
+      ru: {
+        name: "Генератор системных ключей Motorola старого формата",
+        description:
+          "Создавайте файлы программных системных ключей Motorola старого формата (.KEY) в браузере. Этот формат не поддерживает ASTRO 25, XTS5000, APX и Advanced System Keys.",
+      },
+      sv: {
+        name: "Generator för äldre Motorola-systemnycklar",
+        description:
+          "Skapa .KEY-filer med programvarubaserade systemnycklar för äldre Motorola-system i webbläsaren. Formatet stöder inte ASTRO 25, XTS5000, APX eller Advanced System Keys.",
+      },
+      th: {
+        name: "เครื่องมือสร้างคีย์ระบบ Motorola รุ่นเก่า",
+        description:
+          "สร้างไฟล์คีย์ระบบแบบซอฟต์แวร์ Motorola รุ่นเก่า (.KEY) ในเบราว์เซอร์ของคุณ รูปแบบนี้ไม่รองรับ ASTRO 25, XTS5000, APX หรือ Advanced System Keys",
+      },
+      tr: {
+        name: "Eski Nesil Motorola Sistem Anahtarı Oluşturucu",
+        description:
+          "Tarayıcınızda eski nesil Motorola yazılım tabanlı sistem anahtarı (.KEY) dosyaları oluşturun. Bu biçim ASTRO 25, XTS5000, APX veya Advanced System Keys'i desteklemez.",
+      },
+      vi: {
+        name: "Trình tạo khóa hệ thống Motorola đời cũ",
+        description:
+          "Tạo tệp khóa hệ thống phần mềm (.KEY) cho Motorola đời cũ trong trình duyệt. Định dạng này không hỗ trợ ASTRO 25, XTS5000, APX hoặc Advanced System Keys.",
+      },
+      "zh-CN": {
+        name: "旧版 Motorola 系统密钥生成器",
+        description:
+          "在浏览器中生成旧版 Motorola 软件系统密钥（.KEY）文件。此格式不支持 ASTRO 25、XTS5000、APX 或 Advanced System Keys。",
+      },
+      "zh-TW": {
+        name: "舊版 Motorola 系統金鑰產生器",
+        description:
+          "直接在瀏覽器中產生舊版 Motorola 軟體系統金鑰（.KEY）檔案。此格式不支援 ASTRO 25、XTS5000、APX 或 Advanced System Keys。",
       },
     },
   },
