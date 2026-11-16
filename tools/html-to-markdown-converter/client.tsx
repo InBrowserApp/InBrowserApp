@@ -22,6 +22,7 @@ import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Download, FileText, RefreshCcw, Sparkles } from "@workspace/ui/icons"
 
 import { DEFAULT_UI_STATE, STORAGE_KEYS } from "./client/constants"
+import type { HtmlToMarkdownMessages } from "./client/types"
 import { FormatOptionsPanel } from "./components/format-options-panel"
 import { HighlightedMarkdown } from "./components/highlighted-markdown"
 import {
@@ -33,35 +34,6 @@ import {
   type CodeBlockStyle,
   type HeadingStyle,
 } from "./core/html-to-markdown"
-
-export type HtmlToMarkdownMessages = Readonly<{
-  toolbarLabel: string
-  importFromFileLabel: string
-  useSampleLabel: string
-  clearLabel: string
-  inputLabel: string
-  inputDescription: string
-  inputPlaceholder: string
-  optionsTitle: string
-  optionsDescription: string
-  headingStyleLabel: string
-  headingStyleAtxLabel: string
-  headingStyleSetextLabel: string
-  bulletStyleLabel: string
-  bulletStyleDashLabel: string
-  bulletStyleAsteriskLabel: string
-  bulletStylePlusLabel: string
-  codeBlockStyleLabel: string
-  codeBlockStyleFencedLabel: string
-  codeBlockStyleIndentedLabel: string
-  outputLabel: string
-  outputDescription: string
-  outputEmptyDescription: string
-  copyMarkdownLabel: string
-  downloadMarkdownLabel: string
-  copiedLabel: string
-  conversionErrorTitle: string
-}>
 
 type HtmlToMarkdownConverterClientProps = Readonly<{
   messages: HtmlToMarkdownMessages
