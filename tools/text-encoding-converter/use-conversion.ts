@@ -14,6 +14,8 @@ type State = {
 export function useConversion(request: ConversionRequest | null) {
   const [state, setState] = useState<State | null>(null)
   useEffect(() => {
+    // Release the previous file and output buffer on replacement or clear.
+    setState(null)
     if (!request) return
     let active = true
     let worker: Worker | undefined
