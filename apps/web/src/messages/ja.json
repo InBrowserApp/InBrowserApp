@@ -46,7 +46,6 @@
     "clearSearchLabel": "クリア",
     "categoriesLabel": "カテゴリ",
     "categoryAll": "すべてのツール",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "検索候補",
     "suggestionsHint": "↑↓ 移動 · ↵ 開く · esc 閉じる",
     "suggestionMatchCountOne": "{count}件",

@@ -46,7 +46,6 @@
     "clearSearchLabel": "清除",
     "categoriesLabel": "分类",
     "categoryAll": "所有工具",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "搜索建议",
     "suggestionsHint": "↑↓ 选择 · ↵ 打开 · esc 关闭",
     "suggestionMatchCountOne": "{count} 个匹配结果",

@@ -46,7 +46,6 @@
     "clearSearchLabel": "지우기",
     "categoriesLabel": "카테고리",
     "categoryAll": "모든 도구",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "제안",
     "suggestionsHint": "↑↓ 이동 · ↵ 열기 · esc 닫기",
     "suggestionMatchCountOne": "{count}개 일치",

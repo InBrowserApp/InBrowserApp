@@ -10,6 +10,7 @@ type ToolListProps = Readonly<{
   entries: readonly DirectoryToolEntry[]
   language: SiteLanguage
   categoryLabels: Readonly<Record<string, string>>
+  showCategory: boolean
 }>
 
 type DirectoryEmptyStateProps = Readonly<{
@@ -18,7 +19,12 @@ type DirectoryEmptyStateProps = Readonly<{
   description: string
 }>
 
-function ToolList({ categoryLabels, entries, language }: ToolListProps) {
+function ToolList({
+  categoryLabels,
+  entries,
+  language,
+  showCategory,
+}: ToolListProps) {
   return (
     <div className="divide-y divide-border/70 overflow-hidden rounded-xl border border-border">
       {entries.map((entry) => (
@@ -39,9 +45,11 @@ function ToolList({ categoryLabels, entries, language }: ToolListProps) {
               {entry.description}
             </span>
           </span>
-          <span className="hidden shrink-0 text-[10px] font-medium tracking-[0.12em] text-muted-foreground/80 uppercase md:inline">
-            {getCategoryLabel(categoryLabels, entry.category)}
-          </span>
+          {showCategory && (
+            <span className="hidden shrink-0 text-[10px] font-medium tracking-[0.12em] text-muted-foreground/80 uppercase md:inline">
+              {getCategoryLabel(categoryLabels, entry.category)}
+            </span>
+          )}
         </a>
       ))}
     </div>

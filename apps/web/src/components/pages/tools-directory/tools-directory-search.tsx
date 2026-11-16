@@ -18,7 +18,6 @@ type ToolsDirectorySearchMessages = SearchComboboxMessages &
     resultCountSuffix: string
     categoriesLabel: string
     categoryAll: string
-    sortLabel: string
     emptyRegistryTitle: string
     emptyRegistryDescription: string
     categoryLabels: Readonly<Record<string, string>>
@@ -102,25 +101,14 @@ function ToolsDirectorySearch({
       >
         <CategoryChips {...categoryNavProps} />
 
-        <div className="flex items-center gap-3">
-          <SearchCombobox
-            entries={entries}
-            language={language}
-            query={query}
-            onQueryChange={handleQueryChange}
-            categoryLabels={messages.categoryLabels}
-            messages={messages}
-          />
-
-          {query ? null : (
-            <span
-              aria-hidden="true"
-              className="shrink-0 text-[13px] text-muted-foreground"
-            >
-              {messages.sortLabel}
-            </span>
-          )}
-        </div>
+        <SearchCombobox
+          entries={entries}
+          language={language}
+          query={query}
+          onQueryChange={handleQueryChange}
+          categoryLabels={messages.categoryLabels}
+          messages={messages}
+        />
 
         {normalizedQuery !== "" && !isRegistryEmpty && !isSearchEmpty ? (
           <p className="text-sm text-muted-foreground">
@@ -145,6 +133,7 @@ function ToolsDirectorySearch({
             entries={rankedEntries}
             language={language}
             categoryLabels={messages.categoryLabels}
+            showCategory={!category}
           />
         )}
       </div>

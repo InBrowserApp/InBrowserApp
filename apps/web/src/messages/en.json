@@ -46,7 +46,6 @@
     "clearSearchLabel": "Clear",
     "categoriesLabel": "Categories",
     "categoryAll": "All tools",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "Suggestions",
     "suggestionsHint": "↑↓ navigate · ↵ open · esc close",
     "suggestionMatchCountOne": "{count} match",
