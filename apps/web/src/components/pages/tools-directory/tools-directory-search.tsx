@@ -1,19 +1,15 @@
-import {
-  useDeferredValue,
-  useEffect,
-  useEffectEvent,
-  useMemo,
-  useState,
-} from "react"
+import { useDeferredValue, useEffect, useMemo, useState } from "react"
 
-import { countToolsByCategory, toSuggestionEntries } from "@/lib/tool-directory"
 import { CategoryChips, CategorySidebar } from "./category-nav"
-import { normalizeQuery, readDirectoryStateFromLocation } from "./search-core"
+import { normalizeQuery, readDirectoryQueryFromLocation } from "./search-core"
 import { rankToolEntries } from "./search-core"
 import { SearchCombobox } from "./search-combobox"
 import { DirectoryEmptyState, ToolList } from "./tool-list"
 
-import type { ToolSearchIndexEntry } from "@workspace/tool-registry"
+import type {
+  DirectoryToolEntry,
+  ToolCategoryCount,
+} from "@/lib/tool-directory"
 import type { SiteLanguage } from "@/lib/site"
 import type { SearchComboboxMessages } from "./search-combobox"
 
@@ -29,94 +25,59 @@ type ToolsDirectorySearchMessages = SearchComboboxMessages &
   }>
 
 type ToolsDirectorySearchProps = Readonly<{
-  entries: readonly ToolSearchIndexEntry[]
+  entries: readonly DirectoryToolEntry[]
+  categoryCounts: readonly ToolCategoryCount[]
+  category?: string
   language: SiteLanguage
   messages: ToolsDirectorySearchMessages
 }>
 
 function ToolsDirectorySearch({
   entries,
+  categoryCounts,
+  category,
   language,
   messages,
 }: ToolsDirectorySearchProps) {
   const [query, setQuery] = useState("")
-  const [category, setCategory] = useState<string | null>(null)
   const deferredQuery = useDeferredValue(query)
 
-  const categoryCounts = useMemo(() => countToolsByCategory(entries), [entries])
-  const suggestionEntries = useMemo(
-    () => toSuggestionEntries(entries, language),
-    [entries, language]
-  )
-  const validCategories = useMemo(
-    () => new Set(categoryCounts.map(({ category: value }) => value)),
-    [categoryCounts]
-  )
   const formatCount = useMemo(() => {
     const numberFormat = new Intl.NumberFormat(language)
 
     return (count: number) => numberFormat.format(count)
   }, [language])
 
-  const syncStateToUrl = useEffectEvent(
-    (nextQuery: string, nextCategory: string | null) => {
-      if (typeof window === "undefined") {
-        return
-      }
-
-      const url = new URL(window.location.href)
-
-      if (nextQuery) {
-        url.searchParams.set("query", nextQuery)
-      } else {
-        url.searchParams.delete("query")
-      }
-
-      if (nextCategory) {
-        url.searchParams.set("category", nextCategory)
-      } else {
-        url.searchParams.delete("category")
-      }
-
-      window.history.replaceState(window.history.state, "", url)
-    }
-  )
-  const syncStateFromLocation = useEffectEvent(() => {
-    const next = readDirectoryStateFromLocation(validCategories)
-
-    setQuery((currentQuery) =>
-      currentQuery === next.query ? currentQuery : next.query
-    )
-    setCategory((currentCategory) =>
-      currentCategory === next.category ? currentCategory : next.category
-    )
-  })
-
   useEffect(() => {
-    syncStateFromLocation()
-
-    const handlePopState = () => {
-      syncStateFromLocation()
+    const syncQueryFromLocation = () => {
+      setQuery(readDirectoryQueryFromLocation())
     }
 
-    window.addEventListener("popstate", handlePopState)
+    syncQueryFromLocation()
+    window.addEventListener("popstate", syncQueryFromLocation)
 
     return () => {
-      window.removeEventListener("popstate", handlePopState)
+      window.removeEventListener("popstate", syncQueryFromLocation)
     }
   }, [])
 
-  useEffect(() => {
-    syncStateToUrl(normalizeQuery(deferredQuery), category)
-  }, [deferredQuery, category])
+  function handleQueryChange(nextQuery: string) {
+    setQuery(nextQuery)
+
+    const url = new URL(window.location.href)
+    const normalized = normalizeQuery(nextQuery)
+
+    if (normalized) {
+      url.searchParams.set("query", normalized)
+    } else {
+      url.searchParams.delete("query")
+    }
+
+    window.history.replaceState(window.history.state, "", url)
+  }
 
   const normalizedQuery = normalizeQuery(deferredQuery)
-  const rankedEntries = rankToolEntries(
-    entries,
-    normalizedQuery,
-    category,
-    language
-  )
+  const rankedEntries = rankToolEntries(entries, normalizedQuery, language)
   const isRegistryEmpty = entries.length === 0
   const isSearchEmpty = !isRegistryEmpty && rankedEntries.length === 0
   const categoryNavProps = {
@@ -125,9 +86,9 @@ function ToolsDirectorySearch({
     counts: categoryCounts,
     formatCount,
     labels: messages.categoryLabels,
-    onSelect: setCategory,
-    selected: category,
-    totalCount: entries.length,
+    language,
+    selected: category ?? null,
+    totalCount: categoryCounts.reduce((total, entry) => total + entry.count, 0),
   }
 
   return (
@@ -143,10 +104,10 @@ function ToolsDirectorySearch({
 
         <div className="flex items-center gap-3">
           <SearchCombobox
-            entries={suggestionEntries}
+            entries={entries}
             language={language}
             query={query}
-            onQueryChange={setQuery}
+            onQueryChange={handleQueryChange}
             categoryLabels={messages.categoryLabels}
             messages={messages}
           />

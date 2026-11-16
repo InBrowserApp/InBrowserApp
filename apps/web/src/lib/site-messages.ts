@@ -61,6 +61,10 @@ type SiteMessageCatalog = Readonly<{
     emptySearchDescription: string
     categories: Readonly<Record<string, string>>
   }>
+  categoryPages: Readonly<{
+    titleTemplate: string
+    descriptions: Readonly<Record<string, string>>
+  }>
 }>
 
 const siteMessageModules = import.meta.glob("../messages/*.json", {

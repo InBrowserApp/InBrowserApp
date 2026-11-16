@@ -1,13 +1,15 @@
 import { cn } from "@workspace/ui/lib/utils"
 import { getCategoryLabel } from "@/lib/tool-directory"
+import { localizePath } from "@/lib/site"
 
 import type { ToolCategoryCount } from "@/lib/tool-directory"
+import type { SiteLanguage } from "@/lib/site"
 
 type CategoryNavProps = Readonly<{
   counts: readonly ToolCategoryCount[]
   totalCount: number
   selected: string | null
-  onSelect: (category: string | null) => void
+  language: SiteLanguage
   labels: Readonly<Record<string, string>>
   allLabel: string
   categoriesLabel: string
@@ -40,7 +42,7 @@ function createCategoryOptions({
 }
 
 function CategorySidebar(props: CategoryNavProps) {
-  const { categoriesLabel, formatCount, onSelect, selected } = props
+  const { categoriesLabel, formatCount, language, selected } = props
 
   return (
     <nav
@@ -56,12 +58,12 @@ function CategorySidebar(props: CategoryNavProps) {
 
           return (
             <li key={category ?? "all"}>
-              <button
-                type="button"
-                aria-pressed={isActive}
-                onClick={() => {
-                  onSelect(category)
-                }}
+              <a
+                href={localizePath(
+                  category ? `/categories/${category}` : "/tools",
+                  language
+                )}
+                aria-current={isActive ? "page" : undefined}
                 className={cn(
                   "flex w-full items-center justify-between gap-2 rounded-lg px-2.5 py-1.5 text-start text-sm transition-colors",
                   isActive
@@ -80,7 +82,7 @@ function CategorySidebar(props: CategoryNavProps) {
                 >
                   {formatCount(count)}
                 </span>
-              </button>
+              </a>
             </li>
           )
         })}
@@ -90,25 +92,24 @@ function CategorySidebar(props: CategoryNavProps) {
 }
 
 function CategoryChips(props: CategoryNavProps) {
-  const { categoriesLabel, formatCount, onSelect, selected } = props
+  const { categoriesLabel, formatCount, language, selected } = props
 
   return (
-    <div
+    <nav
       aria-label={categoriesLabel}
-      role="group"
       className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 lg:hidden"
     >
       {createCategoryOptions(props).map(({ category, count, label }) => {
         const isActive = selected === category
 
         return (
-          <button
+          <a
             key={category ?? "all"}
-            type="button"
-            aria-pressed={isActive}
-            onClick={() => {
-              onSelect(category)
-            }}
+            href={localizePath(
+              category ? `/categories/${category}` : "/tools",
+              language
+            )}
+            aria-current={isActive ? "page" : undefined}
             className={cn(
               "inline-flex h-7.5 shrink-0 items-center gap-1.5 rounded-full border px-3 text-[13px] whitespace-nowrap transition-colors",
               isActive
@@ -122,10 +123,10 @@ function CategoryChips(props: CategoryNavProps) {
             >
               {formatCount(count)}
             </span>
-          </button>
+          </a>
         )
       })}
-    </div>
+    </nav>
   )
 }
 

@@ -1,24 +1,51 @@
 ---
 import { toolSearchIndex } from "@workspace/tool-registry"
 import MainLayout from "@/layouts/main.astro"
+import PageBreadcrumbs from "@/components/page-breadcrumbs.astro"
 import { ToolsDirectorySearch } from "@/components/pages/tools-directory/tools-directory-search"
 import { formatSiteMessage, loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
+import { countToolsByCategory, getCategoryLabel, toDirectoryEntries } from "@/lib/tool-directory"
 import type { SiteLanguage } from "@/lib/site"
 
 interface Props {
   language: SiteLanguage
+  category?: string
 }
 
-const { language } = Astro.props
+const { language, category } = Astro.props
 const { catalog } = loadSiteMessages(language)
+const categoryCounts = countToolsByCategory(toolSearchIndex)
+const selectedTools = category
+  ? toolSearchIndex.filter((entry) => entry.category === category)
+  : toolSearchIndex
+
+if (category && selectedTools.length === 0) {
+  throw new Error(`Unknown or empty tool category '${category}'.`)
+}
+
+const heading = category
+  ? formatSiteMessage(catalog.categoryPages.titleTemplate, {
+      category: getCategoryLabel(catalog.tools.categories, category),
+    })
+  : catalog.tools.title
+const description = category
+  ? catalog.categoryPages.descriptions[category]
+  : catalog.metadata.toolsDescription
+
+if (!description) {
+  throw new Error(`Missing category description for '${category}' in '${language}'.`)
+}
+
+const pathname = category ? `/categories/${category}` : "/tools"
 const seo = createPageSeo({
-  description: catalog.metadata.toolsDescription,
+  description,
   language,
-  pathname: "/tools",
-  title: catalog.metadata.toolsTitle,
+  pathname,
+  title: category ? `${heading} — ${catalog.site.name}` : catalog.metadata.toolsTitle,
 })
-const toolCount = new Intl.NumberFormat(language).format(toolSearchIndex.length)
+const entries = toDirectoryEntries(selectedTools, language)
+const toolCount = new Intl.NumberFormat(language).format(entries.length)
 const searchMessages = {
   categoriesLabel: catalog.tools.categoriesLabel,
   categoryAll: catalog.tools.categoryAll,
@@ -48,13 +75,25 @@ const searchMessages = {
   lang={language}
   title={seo.title}
   current="tools"
-  pathname="/tools"
+  pathname={pathname}
 >
-  <h1 class="sr-only">{catalog.tools.title}</h1>
+  {category ? (
+    <header class="flex max-w-3xl flex-col gap-3">
+      <PageBreadcrumbs language={language} items={[
+        { label: catalog.tools.categoryAll, pathname: "/tools" },
+        { label: getCategoryLabel(catalog.tools.categories, category), pathname },
+      ]} />
+      <h1 class="font-heading text-3xl leading-tight tracking-[var(--tracking-display)] text-balance sm:text-4xl">{heading}</h1>
+      <p class="text-base leading-7 text-muted-foreground">{description}</p>
+      <p class="text-sm text-muted-foreground">{toolCount} {catalog.tools.resultCountSuffix}</p>
+    </header>
+  ) : <h1 class="sr-only">{heading}</h1>}
 
   <ToolsDirectorySearch
     client:load
-    entries={toolSearchIndex}
+    entries={entries}
+    categoryCounts={categoryCounts}
+    category={category}
     language={language}
     messages={searchMessages}
   />

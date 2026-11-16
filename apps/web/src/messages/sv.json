@@ -69,5 +69,22 @@
       "time": "Tid & datum",
       "web": "Webb"
     }
+  },
+  "categoryPages": {
+    "titleTemplate": "{category} – verktyg",
+    "descriptions": {
+      "crypto": "Hasha text och filer, kryptera data och generera eller verifiera lösenord och nycklar. Utforska webbläsarbaserade verktyg för kontrollsummor, kryptografi och säkra inloggningsuppgifter.",
+      "developer": "Granska arkiv, formatera kod, generera identifierare och konvertera utvecklarkonfigurationer. Hitta webbläsarbaserade verktyg för vardagliga utvecklingsuppgifter.",
+      "document": "Läs och konvertera dokument, e-böcker, presentationer och kalkylblad i din webbläsare. Förhandsgranska filer, extrahera innehåll och exportera till andra format utan att ladda upp dina dokument.",
+      "image": "Konvertera, ändra storlek på och granska bilder i din webbläsare. Optimera bildfiler, visa metadata, skapa streckkoder och arbeta med animerade bildformat.",
+      "json": "Formatera, validera, jämför och konvertera strukturerade data. Arbeta med JSON, YAML, TOML, XML och CSV med verktyg som körs i din webbläsare.",
+      "misc": "Spela in ljud och video, använd din kamera, granska enhetsinformation och konvertera tal. Utforska praktiska webbläsarverktyg för vardagliga uppgifter.",
+      "network": "Slå upp DNS- och IP-information, beräkna subnät och granska certifikat. Hitta verktyg för nätverksadresser, protokoll och felsökning.",
+      "pdf": "Slå samman, dela upp, granska och organisera PDF-filer i din webbläsare. Extrahera text, konvertera sidor till bilder och lägg till sidnummer utan att ladda upp dina dokument.",
+      "random": "Generera slumptal, lösenord och BIP39-minnesfraser i din webbläsare. Välj ett verktyg och anpassa resultatet efter din uppgift.",
+      "text": "Omvandla, jämför och analysera text eller validera vanliga identifierare. Hitta webbläsarverktyg för kodningar, skrivande, textrensning och formatkontroller.",
+      "time": "Konvertera tidsstämplar och tidszoner, beräkna tidsintervall och arbeta med cron-scheman. Planera händelser och jämför datum med webbläsarbaserade tidsverktyg.",
+      "web": "Koda och avkoda data, granska URL:er, generera QR-koder och arbeta med webbformat. Utforska webbläsarbaserade verktyg för vanliga webbutvecklingsuppgifter."
+    }
   }
 }

@@ -69,5 +69,22 @@
       "time": "Fecha y hora",
       "web": "Web"
     }
+  },
+  "categoryPages": {
+    "titleTemplate": "{category}: herramientas",
+    "descriptions": {
+      "crypto": "Calcula hashes de texto y archivos, cifra datos y genera o verifica contraseñas y claves. Explora herramientas basadas en el navegador para sumas de verificación, criptografía y credenciales seguras.",
+      "developer": "Inspecciona archivos comprimidos, da formato a código, genera identificadores y convierte configuraciones de desarrollo. Encuentra utilidades basadas en el navegador para las tareas de desarrollo cotidianas.",
+      "document": "Lee y convierte documentos, libros electrónicos, presentaciones y hojas de cálculo en tu navegador. Previsualiza archivos, extrae contenido y exporta a otros formatos sin subir tus documentos.",
+      "image": "Convierte, redimensiona e inspecciona imágenes en tu navegador. Optimiza archivos de imagen, consulta metadatos, crea códigos de barras y trabaja con formatos de imagen animados.",
+      "json": "Da formato, valida, compara y convierte datos estructurados. Trabaja con JSON, YAML, TOML, XML y CSV mediante herramientas que se ejecutan en tu navegador.",
+      "misc": "Graba audio y vídeo, usa tu cámara, consulta información del dispositivo y convierte números. Explora herramientas prácticas del navegador para las tareas cotidianas.",
+      "network": "Consulta información de DNS e IP, calcula subredes e inspecciona certificados. Encuentra herramientas para direcciones de red, protocolos y resolución de problemas.",
+      "pdf": "Combina, divide, inspecciona y organiza archivos PDF en tu navegador. Extrae texto, convierte páginas en imágenes y añade números de página sin subir tus documentos.",
+      "random": "Genera números aleatorios, contraseñas y frases mnemotécnicas BIP39 en tu navegador. Elige una herramienta y personaliza sus resultados para tu tarea.",
+      "text": "Transforma, compara y analiza texto, o valida identificadores comunes. Encuentra herramientas del navegador para codificaciones, escritura, limpieza de texto y comprobaciones de formato.",
+      "time": "Convierte marcas de tiempo y zonas horarias, calcula duraciones y trabaja con programaciones cron. Planifica eventos y compara fechas con herramientas de tiempo basadas en el navegador.",
+      "web": "Codifica y decodifica datos, inspecciona URL, genera códigos QR y trabaja con formatos web. Explora utilidades basadas en el navegador para tareas habituales de desarrollo web."
+    }
   }
 }
