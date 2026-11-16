@@ -2,14 +2,17 @@ import { afterEach, beforeEach, expect, test, vi } from "vitest"
 import { setupPwaInstall } from "./pwa-install"
 
 let dispose: () => void
-let button: HTMLButtonElement
+let control: HTMLDivElement
+let trigger: HTMLElement
 
 beforeEach(() => {
-  button = document.createElement("button")
-  button.dataset.pwaInstall = ""
-  button.hidden = true
-  button.innerHTML = "<span>Install app</span>"
-  document.body.append(button)
+  control = document.createElement("div")
+  control.dataset.pwaInstall = ""
+  control.hidden = true
+  control.innerHTML =
+    '<details><summary role="button" data-pwa-install-trigger><span>Install app</span></summary></details><span aria-hidden="true"></span>'
+  trigger = control.querySelector("summary")!
+  document.body.append(control)
   dispose = setupPwaInstall()
 })
 
@@ -27,20 +30,23 @@ function offerInstall(prompt = vi.fn().mockResolvedValue(undefined)) {
 }
 
 test("stays hidden until the browser offers installation", () => {
-  expect(button.hidden).toBe(true)
-  button.click()
+  expect(control.hidden).toBe(true)
+  trigger.click()
   const { event, prompt } = offerInstall()
   expect(event.defaultPrevented).toBe(true)
-  expect(button.hidden).toBe(false)
+  expect(control.hidden).toBe(false)
   expect(prompt).not.toHaveBeenCalled()
 })
 
 test("opens the native prompt from a click and consumes it only once", () => {
   const { prompt } = offerInstall()
-  button.querySelector("span")!.click()
+  const click = new MouseEvent("click", { bubbles: true, cancelable: true })
+  trigger.querySelector("span")!.dispatchEvent(click)
   expect(prompt).toHaveBeenCalledOnce()
-  expect(button.hidden).toBe(true)
-  button.click()
+  expect(control.hidden).toBe(false)
+  expect(trigger.getAttribute("aria-disabled")).toBe("true")
+  expect(click.defaultPrevented).toBe(true)
+  trigger.click()
   expect(prompt).toHaveBeenCalledOnce()
 })
 
@@ -48,22 +54,24 @@ test("waits for a fresh event after dismissal or failure", async () => {
   const { prompt } = offerInstall(
     vi.fn().mockRejectedValue(new Error("Prompt no longer available"))
   )
-  button.click()
+  trigger.click()
   await Promise.resolve()
   expect(prompt).toHaveBeenCalledOnce()
-  expect(button.hidden).toBe(true)
+  expect(control.hidden).toBe(false)
+  expect(trigger.getAttribute("aria-disabled")).toBe("true")
 
   const next = offerInstall()
-  expect(button.hidden).toBe(false)
-  button.click()
+  expect(control.hidden).toBe(false)
+  expect(trigger.getAttribute("aria-disabled")).toBe("false")
+  trigger.click()
   expect(next.prompt).toHaveBeenCalledOnce()
 })
 
 test("clears the action when the app is installed through the browser", () => {
   const { prompt } = offerInstall()
   window.dispatchEvent(new Event("appinstalled"))
-  expect(button.hidden).toBe(true)
-  button.click()
+  expect(control.hidden).toBe(true)
+  trigger.click()
   expect(prompt).not.toHaveBeenCalled()
 })
 
@@ -72,38 +80,41 @@ test("does not offer installation in an installed app window", () => {
     matches: true,
   } as MediaQueryList)
   const { prompt } = offerInstall()
-  expect(button.hidden).toBe(true)
-  button.click()
+  expect(control.hidden).toBe(true)
+  trigger.click()
   expect(prompt).not.toHaveBeenCalled()
 })
 
 test("keeps the pending prompt across Astro navigation and uses the new button", () => {
   const { prompt } = offerInstall()
-  const next = button.cloneNode(true) as HTMLButtonElement
+  const next = control.cloneNode(true) as HTMLDivElement
   next.hidden = true
-  button.replaceWith(next)
+  control.replaceWith(next)
   document.dispatchEvent(new Event("astro:after-swap"))
   expect(next.hidden).toBe(false)
   document.body.click()
   document.dispatchEvent(new MouseEvent("click"))
   expect(prompt).not.toHaveBeenCalled()
-  next.click()
+  next.querySelector("summary")!.click()
   expect(prompt).toHaveBeenCalledOnce()
-  expect(next.hidden).toBe(true)
+  expect(next.hidden).toBe(false)
 })
 
-test("keeps a consumed prompt hidden after Astro navigation", () => {
+test("keeps the icon visible after consuming a prompt and navigating", () => {
   offerInstall()
-  button.click()
-  const next = button.cloneNode(true) as HTMLButtonElement
-  button.replaceWith(next)
+  trigger.click()
+  const next = control.cloneNode(true) as HTMLDivElement
+  control.replaceWith(next)
   document.dispatchEvent(new Event("astro:after-swap"))
-  expect(next.hidden).toBe(true)
+  expect(next.hidden).toBe(false)
+  expect(next.querySelector("summary")!.getAttribute("aria-disabled")).toBe(
+    "true"
+  )
 })
 
 test("removes its listeners when disposed", () => {
   dispose()
   const { event } = offerInstall()
   expect(event.defaultPrevented).toBe(false)
-  expect(button.hidden).toBe(true)
+  expect(control.hidden).toBe(true)
 })

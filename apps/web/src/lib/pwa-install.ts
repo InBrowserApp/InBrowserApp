@@ -4,31 +4,46 @@ interface BeforeInstallPromptEvent extends Event {
 
 export function setupPwaInstall() {
   let installPrompt: BeforeInstallPromptEvent | null = null
+  let offered = false
 
   function refresh() {
     const standalone = window.matchMedia("(display-mode: standalone)").matches
     document
-      .querySelectorAll<HTMLButtonElement>("[data-pwa-install]")
-      .forEach((button) => {
-        button.hidden = !installPrompt || standalone
+      .querySelectorAll<HTMLElement>("[data-pwa-install]")
+      .forEach((control) => {
+        control.hidden = !offered || standalone
+        control
+          .querySelector("[data-pwa-install-trigger]")
+          ?.setAttribute("aria-disabled", String(!installPrompt))
       })
   }
 
   function beforeInstall(event: Event) {
     event.preventDefault()
     installPrompt = event as BeforeInstallPromptEvent
+    offered = true
     refresh()
   }
 
   function installed() {
     installPrompt = null
+    offered = false
     refresh()
   }
 
   async function install(event: MouseEvent) {
     if (!(event.target instanceof Element)) return
-    const button = event.target.closest<HTMLButtonElement>("[data-pwa-install]")
-    if (!button || button.hidden || !installPrompt) return
+    const trigger = event.target.closest<HTMLElement>(
+      "[data-pwa-install-trigger]"
+    )
+    if (!trigger) return
+    // The summary is an install action; do not toggle a disclosure on click.
+    event.preventDefault()
+    if (
+      trigger.closest<HTMLElement>("[data-pwa-install]")?.hidden ||
+      !installPrompt
+    )
+      return
 
     // Browsers allow each prompt to be used only once, including on dismissal.
     const prompt = installPrompt
@@ -37,7 +52,7 @@ export function setupPwaInstall() {
     try {
       await prompt.prompt()
     } catch {
-      // Keep the action hidden until the browser supplies a fresh prompt.
+      // Keep the icon visible, awaiting a fresh one-use prompt from the browser.
     }
   }
 
