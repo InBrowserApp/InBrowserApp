@@ -32,6 +32,7 @@ function context(api: "webgl" | "webgl2"): AvailableContext {
       { name: "MAX_TEXTURE_SIZE", value: 16384 },
       { name: "MAX_VIEWPORT_DIMS", value: [16384, 16384] },
       { name: "SAMPLES", value: 0 },
+      { name: "ALIASED_POINT_SIZE_RANGE", value: [1, 1023] },
     ],
     attributes: [
       { name: "alpha", value: true },
@@ -84,6 +85,7 @@ describe("GpuInformationClient", () => {
 
     expect(screen.getAllByText("RTX 4070")).toHaveLength(2)
     expect(screen.getByText("16384 × 16384")).toBeTruthy()
+    expect(screen.getByText("1 … 1023")).toBeTruthy()
     expect(screen.getByText("Yes")).toBeTruthy()
     expect(screen.getByText("No")).toBeTruthy()
     expect(
@@ -109,13 +111,21 @@ describe("GpuInformationClient", () => {
       name: messages.searchExtensions,
     })
     fireEvent.change(search, { target: { value: "  EXT_COLOR  " } })
-    expect(screen.getByText("EXT_color_buffer_float")).toBeTruthy()
-    expect(screen.queryByText("OES_texture_float")).toBeNull()
+    const extensions = screen.getByRole("textbox", {
+      name: messages.extensionsTitle,
+    }) as HTMLTextAreaElement
+    expect(extensions.value).toBe("EXT_color_buffer_float")
     expect(screen.getByText("1 / 2")).toBeTruthy()
     fireEvent.change(search, { target: { value: "not-an-extension" } })
     expect(screen.getByText(messages.noMatches)).toBeTruthy()
     fireEvent.change(search, { target: { value: "" } })
-    expect(screen.getByText("OES_texture_float")).toBeTruthy()
+    expect(
+      (
+        screen.getByRole("textbox", {
+          name: messages.extensionsTitle,
+        }) as HTMLTextAreaElement
+      ).value
+    ).toContain("OES_texture_float")
   })
 
   it("switches contexts and refreshes the complete report", () => {

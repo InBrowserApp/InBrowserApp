@@ -63,7 +63,9 @@ function GpuInformationClient({
       <Card>
         <CardHeader className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
           <div className="grid gap-1.5">
-            <CardTitle>{messages.reportTitle}</CardTitle>
+            <CardTitle>
+              <h2>{messages.reportTitle}</h2>
+            </CardTitle>
             <CardDescription>{messages.reportDescription}</CardDescription>
           </div>
           <div className="flex flex-wrap gap-2">

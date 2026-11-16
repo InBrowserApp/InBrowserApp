@@ -1,6 +1,5 @@
 import { useId, useState } from "react"
 
-import { Badge } from "@workspace/ui/components/ui/badge"
 import {
   Card,
   CardContent,
@@ -9,8 +8,9 @@ import {
   CardTitle,
 } from "@workspace/ui/components/ui/card"
 import { Input } from "@workspace/ui/components/ui/input"
+import { Textarea } from "@workspace/ui/components/ui/textarea"
 
-import { ParameterList } from "./parameter-list"
+import { ParameterCard } from "./parameter-card"
 import type { AvailableContext, GpuMessages, GraphicsContext } from "../types"
 
 function ContextDetails({
@@ -24,7 +24,9 @@ function ContextDetails({
     return (
       <Card>
         <CardHeader>
-          <CardTitle>{messages.unavailableTitle}</CardTitle>
+          <CardTitle>
+            <h2>{messages.unavailableTitle}</h2>
+          </CardTitle>
           <CardDescription>{messages.unavailableDescription}</CardDescription>
         </CardHeader>
       </Card>
@@ -33,65 +35,45 @@ function ContextDetails({
 
   return (
     <div className="grid gap-6">
-      <Card className="gap-0 overflow-hidden pb-0">
-        <CardHeader className="border-b pb-4">
-          <CardTitle>{messages.identityTitle}</CardTitle>
-          <CardDescription>{messages.identityDescription}</CardDescription>
-        </CardHeader>
-        <CardContent className="p-0">
-          <ParameterList
-            messages={messages}
-            entries={[
-              { name: messages.gpuVendor, value: context.vendor },
-              { name: messages.gpuRenderer, value: context.renderer },
-              { name: messages.unmaskedVendor, value: context.unmaskedVendor },
-              {
-                name: messages.unmaskedRenderer,
-                value: context.unmaskedRenderer,
-              },
-              { name: messages.version, value: context.version },
-              {
-                name: messages.shadingLanguage,
-                value: context.shadingLanguage,
-              },
-            ]}
-          />
-        </CardContent>
-      </Card>
+      <ParameterCard
+        title={messages.identityTitle}
+        description={messages.identityDescription}
+        messages={messages}
+        entries={[
+          { name: messages.gpuVendor, value: context.vendor },
+          { name: messages.gpuRenderer, value: context.renderer },
+          { name: messages.unmaskedVendor, value: context.unmaskedVendor },
+          {
+            name: messages.unmaskedRenderer,
+            value: context.unmaskedRenderer,
+          },
+          { name: messages.version, value: context.version },
+          {
+            name: messages.shadingLanguage,
+            value: context.shadingLanguage,
+          },
+        ]}
+      />
 
       <div className="grid items-start gap-6 xl:grid-cols-2">
-        <Card className="gap-0 overflow-hidden pb-0">
-          <CardHeader className="border-b pb-4">
-            <CardTitle>{messages.limitsTitle}</CardTitle>
-            <CardDescription>{messages.limitsDescription}</CardDescription>
-          </CardHeader>
-          <CardContent className="p-0">
-            <ParameterList entries={context.limits} messages={messages} />
-          </CardContent>
-        </Card>
+        <ParameterCard
+          title={messages.limitsTitle}
+          description={messages.limitsDescription}
+          entries={context.limits}
+          messages={messages}
+          compact
+        />
 
         <div className="grid min-w-0 gap-6">
           <Extensions context={context} messages={messages} />
-          <Card className="gap-0 overflow-hidden pb-0">
-            <CardHeader className="border-b pb-4">
-              <CardTitle>{messages.attributesTitle}</CardTitle>
-              <CardDescription>
-                {messages.attributesDescription}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="p-0">
-              {context.attributes.length ? (
-                <ParameterList
-                  entries={context.attributes}
-                  messages={messages}
-                />
-              ) : (
-                <p className="p-4 text-sm text-muted-foreground">
-                  {messages.notReported}
-                </p>
-              )}
-            </CardContent>
-          </Card>
+          <ParameterCard
+            title={messages.attributesTitle}
+            description={messages.attributesDescription}
+            entries={context.attributes}
+            messages={messages}
+            compact
+            collapsible
+          />
         </div>
       </div>
 
@@ -116,7 +98,9 @@ function Extensions({
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{messages.extensionsTitle}</CardTitle>
+        <CardTitle>
+          <h2>{messages.extensionsTitle}</h2>
+        </CardTitle>
         <CardDescription>{messages.extensionsDescription}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
@@ -141,18 +125,15 @@ function Extensions({
           {extensions.length} / {context.extensions.length}
         </p>
         {extensions.length ? (
-          <ul className="grid gap-2" dir="ltr">
-            {extensions.map((extension) => (
-              <li key={extension} className="min-w-0">
-                <Badge
-                  variant="secondary"
-                  className="max-w-full rounded-md px-2 py-1 text-start font-mono text-xs [overflow-wrap:anywhere] whitespace-normal"
-                >
-                  {extension}
-                </Badge>
-              </li>
-            ))}
-          </ul>
+          <Textarea
+            readOnly
+            aria-label={messages.extensionsTitle}
+            dir="ltr"
+            spellCheck={false}
+            rows={Math.min(extensions.length, 10)}
+            className="[field-sizing:fixed] max-h-80 min-h-20 resize-y overscroll-contain font-mono text-xs"
+            value={extensions.join("\n")}
+          />
         ) : (
           <p className="text-sm text-muted-foreground">
             {context.extensions.length
@@ -173,62 +154,71 @@ function Precision({
   messages: GpuMessages
 }>) {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>{messages.precisionTitle}</CardTitle>
-        <CardDescription>{messages.precisionDescription}</CardDescription>
-      </CardHeader>
-      <CardContent className="grid gap-6 lg:grid-cols-2">
-        {(["vertex", "fragment"] as const).map((stage) => (
-          <div key={stage} className="min-w-0 overflow-x-auto">
-            <table className="w-full text-start text-xs tabular-nums">
-              <caption className="pb-3 text-start text-sm font-medium text-foreground">
-                {stage === "vertex"
-                  ? messages.vertexShader
-                  : messages.fragmentShader}
-              </caption>
-              <thead className="border-b text-muted-foreground">
-                <tr>
-                  <th scope="col" className="py-2 pe-3 text-start font-medium">
-                    {messages.format}
-                  </th>
-                  <th scope="col" className="p-2 text-start font-medium">
-                    {messages.range}
-                    <code className="block text-[10px]" dir="ltr">
-                      rangeMin / rangeMax
-                    </code>
-                  </th>
-                  <th scope="col" className="py-2 ps-2 text-end font-medium">
-                    {messages.precisionBits}
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y">
-                {context.precision
-                  .filter((entry) => entry.stage === stage)
-                  .map((entry) => (
-                    <tr key={entry.format}>
-                      <th
-                        scope="row"
-                        className="py-2 pe-3 text-start font-mono font-normal"
-                      >
-                        {entry.format}
-                      </th>
-                      <td className="p-2 font-mono" dir="ltr">
-                        {entry.rangeMin === null
-                          ? messages.notReported
-                          : `${entry.rangeMin} / ${entry.rangeMax}`}
-                      </td>
-                      <td className="py-2 ps-2 text-end font-mono">
-                        {entry.precision ?? messages.notReported}
-                      </td>
-                    </tr>
-                  ))}
-              </tbody>
-            </table>
-          </div>
-        ))}
-      </CardContent>
+    <Card className="gap-0 overflow-hidden py-0">
+      <details>
+        <summary className="cursor-pointer p-4 marker:text-muted-foreground hover:bg-muted/40 focus-visible:outline-2 focus-visible:outline-ring">
+          <h2 className="ms-1 inline text-sm font-medium">
+            {messages.precisionTitle}
+          </h2>
+        </summary>
+        <CardHeader className="border-t pt-4">
+          <CardDescription>{messages.precisionDescription}</CardDescription>
+        </CardHeader>
+        <CardContent className="grid gap-6 py-4 lg:grid-cols-2">
+          {(["vertex", "fragment"] as const).map((stage) => (
+            <div key={stage} className="min-w-0 overflow-x-auto">
+              <table className="w-full text-start text-xs tabular-nums">
+                <caption className="pb-3 text-start text-sm font-medium text-foreground">
+                  {stage === "vertex"
+                    ? messages.vertexShader
+                    : messages.fragmentShader}
+                </caption>
+                <thead className="border-b text-muted-foreground">
+                  <tr>
+                    <th
+                      scope="col"
+                      className="py-2 pe-3 text-start font-medium"
+                    >
+                      {messages.format}
+                    </th>
+                    <th scope="col" className="p-2 text-start font-medium">
+                      {messages.range}
+                      <code className="block text-[10px]" dir="ltr">
+                        rangeMin / rangeMax
+                      </code>
+                    </th>
+                    <th scope="col" className="py-2 ps-2 text-end font-medium">
+                      {messages.precisionBits}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y">
+                  {context.precision
+                    .filter((entry) => entry.stage === stage)
+                    .map((entry) => (
+                      <tr key={entry.format}>
+                        <th
+                          scope="row"
+                          className="py-2 pe-3 text-start font-mono font-normal"
+                        >
+                          {entry.format}
+                        </th>
+                        <td className="p-2 font-mono" dir="ltr">
+                          {entry.rangeMin === null
+                            ? messages.notReported
+                            : `${entry.rangeMin} / ${entry.rangeMax}`}
+                        </td>
+                        <td className="py-2 ps-2 text-end font-mono">
+                          {entry.precision ?? messages.notReported}
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
+          ))}
+        </CardContent>
+      </details>
     </Card>
   )
 }
