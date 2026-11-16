@@ -57,9 +57,10 @@ function HtmlToMarkdownConverterClient({
     DEFAULT_UI_STATE.codeBlockStyle
   )
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
+  const [hasMounted, setHasMounted] = useState(false)
 
   const deferredHtmlText = useDeferredValue(htmlText)
-  const result = convertHtmlToMarkdown(deferredHtmlText, {
+  const result = convertHtmlToMarkdown(hasMounted ? deferredHtmlText : "", {
     headingStyle,
     bulletListMarker,
     codeBlockStyle,
@@ -77,6 +78,7 @@ function HtmlToMarkdownConverterClient({
       return
     }
 
+    setHasMounted(true)
     const storedHtmlText = window.localStorage.getItem(STORAGE_KEYS.htmlText)
     const storedHeadingStyle = window.localStorage.getItem(
       STORAGE_KEYS.headingStyle

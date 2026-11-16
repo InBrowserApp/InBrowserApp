@@ -144,6 +144,39 @@ describe("AudioRecorderClient", () => {
     ).toBeTruthy()
   })
 
+  test("stops a microphone stream returned after unmount", async () => {
+    let resolveGetUserMedia!: (stream: MediaStream) => void
+    const pendingRequest = new Promise<MediaStream>((resolve) => {
+      resolveGetUserMedia = resolve
+    })
+    const getUserMedia = vi.fn(() => pendingRequest)
+    const trackStop = vi.fn()
+    const stream = {
+      getTracks: () => [{ stop: trackStop }],
+    } as unknown as MediaStream
+
+    Object.defineProperty(navigator, "mediaDevices", {
+      configurable: true,
+      value: { getUserMedia },
+    })
+    vi.stubGlobal("MediaRecorder", MockMediaRecorder)
+
+    const view = render(<AudioRecorderClient messages={messages} />)
+
+    fireEvent.click(screen.getByRole("button", { name: messages.recordButton }))
+    expect(getUserMedia).toHaveBeenCalledWith({ audio: true })
+    view.unmount()
+
+    await act(async () => {
+      resolveGetUserMedia(stream)
+      await pendingRequest
+      await Promise.resolve()
+    })
+
+    expect(trackStop).toHaveBeenCalledTimes(1)
+    expect(MockMediaRecorder.instances).toHaveLength(0)
+  })
+
   test("records, pauses, resumes, previews, downloads, and clears audio", async () => {
     vi.useFakeTimers()
     vi.setSystemTime(new Date(2026, 4, 14, 10, 20, 30))
@@ -210,6 +243,35 @@ describe("AudioRecorderClient", () => {
 
     expect(screen.getByText(messages.emptyOutputTitle)).toBeTruthy()
     expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:audio-recording")
+  })
+
+  test("does not count paused time when stopping a recording", async () => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date(2026, 4, 14, 10, 20, 30))
+    installSupportedRecorder()
+
+    render(<AudioRecorderClient messages={messages} />)
+
+    await act(async () => {
+      fireEvent.click(
+        screen.getByRole("button", { name: messages.recordButton })
+      )
+      await Promise.resolve()
+    })
+
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(1_000)
+    })
+    fireEvent.click(screen.getByRole("button", { name: messages.pauseButton }))
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(10_000)
+    })
+
+    fireEvent.click(screen.getByRole("button", { name: messages.stopButton }))
+
+    const duration = screen.getByText(messages.durationLabel).parentElement
+    expect(duration?.querySelector("dd")?.textContent).toBe("00:01")
+    expect(screen.queryByText("00:11")).toBeNull()
   })
 
   test("keeps the latest take when starting another recording is denied", async () => {

@@ -12,15 +12,13 @@ import { CsrGeneratorError, type CsrResult } from "./core/csr"
 import type { CsrGeneratorMessages } from "./client/types"
 
 const { generateMock } = vi.hoisted(() => ({
-  generateMock: vi.fn(
-    async (): Promise<CsrResult> => ({
-      csrPem:
-        "-----BEGIN CERTIFICATE REQUEST-----\nMIIBcjCC\n-----END CERTIFICATE REQUEST-----\n",
-      privateKeyPem:
-        "-----BEGIN PRIVATE KEY-----\nMIIE\n-----END PRIVATE KEY-----\n",
-      keyAlgorithmLabel: "RSA 2048 (SHA-256)",
-    })
-  ),
+  generateMock: vi.fn(async (): Promise<CsrResult> => ({
+    csrPem:
+      "-----BEGIN CERTIFICATE REQUEST-----\nMIIBcjCC\n-----END CERTIFICATE REQUEST-----\n",
+    privateKeyPem:
+      "-----BEGIN PRIVATE KEY-----\nMIIE\n-----END PRIVATE KEY-----\n",
+    keyAlgorithmLabel: "RSA 2048 (SHA-256)",
+  })),
 }))
 
 vi.mock("./core/csr", async () => {

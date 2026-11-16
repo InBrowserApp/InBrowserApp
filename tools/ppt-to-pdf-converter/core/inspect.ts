@@ -32,7 +32,7 @@ function record(bytes: Uint8Array, offset: number): Record {
 }
 function children(bytes: Uint8Array) {
   const result: Record[] = []
-  for (let offset = 0; offset < bytes.length; ) {
+  for (let offset = 0; offset < bytes.length;) {
     const next = record(bytes, offset)
     result.push(next)
     offset = next.end
@@ -69,7 +69,7 @@ export function inspect(
     documentId ??= uint(edit.bytes, 16)
     const directory = record(document, uint(edit.bytes, 12))
     if (directory.type !== 6002) throw new ConversionError("unsupported")
-    for (let offset = 0; offset < directory.bytes.length; ) {
+    for (let offset = 0; offset < directory.bytes.length;) {
       const header = uint(directory.bytes, offset)
       const start = header & 0xfffff
       const count = header >>> 20

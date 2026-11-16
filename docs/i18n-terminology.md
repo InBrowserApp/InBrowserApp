@@ -30,7 +30,7 @@ and grammatical inflection in titles and sentences.
 | es     | Visor          | Lector            | Vista previa      |
 | fr     | Visionneuse    | Lecteur           | Aperçu            |
 | he     | מציג           | קורא              | תצוגה מקדימה      |
-| hi     | व्यूअर         | रीडर              | प्रीव्यूअर        |
+| hi     | व्यूअर           | रीडर              | प्रीव्यूअर           |
 | id     | Penampil       | Pembaca           | Pratinjau         |
 | it     | Visualizzatore | Lettore           | Anteprima         |
 | ja     | ビューアー     | リーダー          | プレビューアー    |
@@ -42,7 +42,7 @@ and grammatical inflection in titles and sentences.
 | pt     | Visualizador   | Leitor            | Pré-visualizador  |
 | ru     | Просмотр       | Читалка           | Предпросмотр      |
 | sv     | visare         | läsare            | förhandsgranskare |
-| th     | โปรแกรมดู      | โปรแกรมอ่าน       | โปรแกรมดูตัวอย่าง |
+| th     | โปรแกรมดู       | โปรแกรมอ่าน        | โปรแกรมดูตัวอย่าง    |
 | tr     | Görüntüleyici  | Okuyucu           | Önizleyici        |
 | vi     | Trình xem      | Trình đọc         | Trình xem trước   |
 | zh-CN  | 查看器         | 阅读器            | 预览器            |

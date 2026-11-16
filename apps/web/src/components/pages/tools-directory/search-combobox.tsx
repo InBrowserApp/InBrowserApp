@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react"
-import { navigate } from "astro:transitions/client"
 
 import { Input } from "@workspace/ui/components/ui/input"
 import { Search, X } from "@workspace/ui/icons"
@@ -39,7 +38,7 @@ const LISTBOX_ID = "tools-search-suggestions"
 
 const VARIANT_CLASSES = {
   directory: {
-    root: "relative flex-1",
+    root: "relative min-w-0",
     icon: "start-3",
     input: "h-10 ps-9.5 text-base md:text-sm",
     inputEmpty: "pe-3 sm:pe-12",
@@ -97,7 +96,9 @@ function SearchCombobox({
   }
 
   const openSuggestion = (suggestion: ToolSearchSuggestion) => {
-    void navigate(localizePath(`/tools/${suggestion.entry.slug}`, language))
+    window.location.assign(
+      localizePath(`/tools/${suggestion.entry.slug}`, language)
+    )
   }
 
   /**

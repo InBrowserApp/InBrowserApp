@@ -1,0 +1,4 @@
+{
+  "name": "Detector de Tipo de Arquivo",
+  "description": "Identifique formatos de arquivo pelas assinaturas, verifique divergências de extensão e inspecione tipos MIME e uma prévia hexadecimal localmente no navegador."
+}

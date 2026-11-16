@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi bảng mã văn bản",
+  "description": "Chuyển đổi tệp văn bản giữa UTF-8, GBK, Big5 và các bảng mã khác. Xem trước văn bản bị lỗi ký tự, điều chỉnh BOM và kiểu xuống dòng, rồi tải xuống ngay trên thiết bị mà không mất ký tự."
+}

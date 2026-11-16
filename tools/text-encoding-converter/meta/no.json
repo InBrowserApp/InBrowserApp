@@ -1,0 +1,4 @@
+{
+  "name": "Konverterer for tekstkoding",
+  "description": "Konverter tekstfiler mellom UTF-8, GBK, Big5 og andre kodinger. Forhåndsvis tekst med tegnfeil, styr BOM og linjeskift, og last ned lokalt uten å miste tegn."
+}

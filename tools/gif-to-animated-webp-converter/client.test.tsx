@@ -150,10 +150,10 @@ describe("GifToAnimatedWebpClient", () => {
     expect(screen.getByText("clip.webp")).toBeTruthy()
     expect(screen.getByText("clip-2.webp")).toBeTruthy()
     expect(
-      screen.getByRole("link", { name: messages.downloadZipLabel })
+      await screen.findByRole("link", { name: messages.downloadZipLabel })
     ).toBeTruthy()
     expect(
-      screen.getAllByRole("link", { name: messages.downloadWebpLabel })
+      await screen.findAllByRole("link", { name: messages.downloadWebpLabel })
     ).toHaveLength(2)
   })
 

@@ -1,4 +1,4 @@
-export type ISBNType = "isbn-10" | "isbn-13" | "unknown"
+type ISBNType = "isbn-10" | "isbn-13" | "unknown"
 
 export interface ISBNValidationResult {
   input: string

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@peculiar/x509": "catalog:",
+    "reflect-metadata": "catalog:",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*"
   },

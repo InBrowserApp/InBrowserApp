@@ -5,10 +5,19 @@ type ToolCategoryCount = Readonly<{
   count: number
 }>
 
+type DirectoryToolEntry = Readonly<{
+  slug: string
+  category: string
+  icon: string
+  name: string
+  description: string
+}>
+
 /** Icon identifiers (see ToolIcon) shown on the home category tiles. */
 const CATEGORY_ICONS: Readonly<Record<string, string>> = {
   crypto: "lock",
   developer: "wrench",
+  document: "file-text",
   image: "image",
   json: "braces",
   misc: "layout-grid",
@@ -43,7 +52,7 @@ const POPULAR_TOOL_SLUGS = [
  * (descending) with ties broken alphabetically for a stable order.
  */
 function countToolsByCategory(
-  entries: readonly ToolSearchIndexEntry[]
+  entries: readonly Pick<ToolSearchIndexEntry, "category">[]
 ): readonly ToolCategoryCount[] {
   const counts = new Map<string, number>()
 
@@ -90,6 +99,18 @@ function resolveEntryLocale(entry: ToolSearchIndexEntry, language: string) {
   )
 }
 
+function toDirectoryEntries(
+  entries: readonly ToolSearchIndexEntry[],
+  language: string
+): readonly DirectoryToolEntry[] {
+  return entries.map((entry) => ({
+    slug: entry.slug,
+    category: entry.category,
+    icon: entry.icon,
+    ...resolveEntryLocale(entry, language),
+  }))
+}
+
 /**
  * Minimal per-language projection of the search index used by the
  * suggestion dropdown. Kept slim so the home page can serialize it
@@ -120,6 +141,7 @@ export {
   getCategoryIcon,
   getCategoryLabel,
   resolveEntryLocale,
+  toDirectoryEntries,
   toSuggestionEntries,
 }
-export type { SearchSuggestionEntry, ToolCategoryCount }
+export type { DirectoryToolEntry, SearchSuggestionEntry, ToolCategoryCount }

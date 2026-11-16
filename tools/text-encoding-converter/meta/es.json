@@ -1,0 +1,4 @@
+{
+  "name": "Convertidor de codificación de texto",
+  "description": "Convierte archivos de texto entre UTF-8, GBK, Big5 y otras codificaciones. Previsualiza el texto con caracteres ilegibles, configura el BOM y los finales de línea, y descarga localmente sin perder caracteres."
+}

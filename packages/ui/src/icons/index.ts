@@ -54,6 +54,7 @@ export {
   Paperclip,
   MicOff,
   Moon,
+  MonitorDown,
   Network,
   Pause,
   Play,

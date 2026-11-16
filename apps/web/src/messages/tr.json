@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Tamamen cihazınızda çalışan ücretsiz tarayıcı tabanlı araçlar.",
     "languageLabel": "Diller",
+    "installApp": "Uygulamayı yükle",
     "themeLabel": "Temayı değiştir",
     "themeLight": "Açık",
     "themeDark": "Koyu",
@@ -46,7 +47,6 @@
     "clearSearchLabel": "Temizle",
     "categoriesLabel": "Kategoriler",
     "categoryAll": "Tüm araçlar",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "Öneriler",
     "suggestionsHint": "↑↓ gezinin · ↵ açın · esc kapatın",
     "suggestionMatchCountOne": "{count} eşleşme",
@@ -68,6 +68,23 @@
       "text": "Metin",
       "time": "Zaman ve Tarih",
       "web": "Web"
+    }
+  },
+  "categoryPages": {
+    "titleTemplate": "{category} Araçları",
+    "descriptions": {
+      "crypto": "Metin ve dosyaların özetlerini hesaplayın, verileri şifreleyin, parolalar ve anahtarlar oluşturun veya doğrulayın. Sağlama toplamları, kriptografi ve güvenli kimlik bilgileri için tarayıcı tabanlı araçları keşfedin.",
+      "developer": "Arşivleri inceleyin, kodu biçimlendirin, tanımlayıcılar oluşturun ve geliştirici yapılandırmalarını dönüştürün. Günlük geliştirme görevleri için tarayıcı tabanlı yardımcı araçlar bulun.",
+      "document": "Belgeleri, e-kitapları, sunumları ve elektronik tabloları tarayıcınızda okuyun ve dönüştürün. Belgelerinizi yüklemeden dosyaları önizleyin, içeriklerini çıkarın ve diğer biçimlere aktarın.",
+      "image": "Görselleri tarayıcınızda dönüştürün, yeniden boyutlandırın ve inceleyin. Görsel dosyalarını optimize edin, meta verileri görüntüleyin, barkodlar oluşturun ve animasyonlu görsel biçimleriyle çalışın.",
+      "json": "Yapılandırılmış verileri biçimlendirin, doğrulayın, karşılaştırın ve dönüştürün. Tarayıcınızda çalışan araçlarla JSON, YAML, TOML, XML ve CSV üzerinde çalışın.",
+      "misc": "Ses ve video kaydedin, kameranızı kullanın, cihaz bilgilerini inceleyin ve sayıları dönüştürün. Günlük işler için pratik tarayıcı araçlarını keşfedin.",
+      "network": "DNS ve IP bilgilerini sorgulayın, alt ağları hesaplayın ve sertifikaları inceleyin. Ağ adresleri, protokoller ve sorun giderme için araçlar bulun.",
+      "pdf": "PDF dosyalarını tarayıcınızda birleştirin, bölün, inceleyin ve düzenleyin. Belgelerinizi yüklemeden metin çıkarın, sayfaları görsellere dönüştürün ve sayfa numaraları ekleyin.",
+      "random": "Tarayıcınızda rastgele sayılar, parolalar ve BIP39 anımsatıcı ifadeleri oluşturun. Bir araç seçin ve çıktısını görevinize göre özelleştirin.",
+      "text": "Metinleri dönüştürün, karşılaştırın ve analiz edin veya yaygın tanımlayıcıları doğrulayın. Kodlamalar, yazı yazma, metin temizleme ve biçim kontrolleri için tarayıcı araçları bulun.",
+      "time": "Zaman damgalarını ve saat dilimlerini dönüştürün, süreleri hesaplayın ve cron zamanlamalarıyla çalışın. Tarayıcı tabanlı zaman araçlarıyla etkinlikler planlayın ve tarihleri karşılaştırın.",
+      "web": "Verileri kodlayın ve çözün, URL'leri inceleyin, QR kodları oluşturun ve web biçimleriyle çalışın. Yaygın web geliştirme görevleri için tarayıcı tabanlı yardımcı araçları keşfedin."
     }
   }
 }

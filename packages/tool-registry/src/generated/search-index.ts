@@ -10660,6 +10660,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "file-type-detector",
+    category: "developer",
+    icon: "binary",
+    tags: [
+      "file",
+      "file-type",
+      "signature",
+      "magic-bytes",
+      "mime",
+      "hex",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "كاشف نوع الملف",
+        description:
+          "تعرّف على صيغ الملفات من تواقيعها، وتحقق من عدم تطابق الامتدادات، وافحص أنواع MIME ومعاينة سداسية عشرية محليًا في متصفحك.",
+      },
+      de: {
+        name: "Dateityp-Erkennung",
+        description:
+          "Dateiformate anhand ihrer Signaturen erkennen, abweichende Dateiendungen prüfen und MIME-Typen sowie eine Hex-Vorschau lokal im Browser ansehen.",
+      },
+      en: {
+        name: "File Type Detector",
+        description:
+          "Identify file formats by their signatures, check extension mismatches, and inspect MIME types and a hex preview locally in your browser.",
+      },
+      es: {
+        name: "Detector de tipo de archivo",
+        description:
+          "Identifica formatos de archivo por sus firmas, comprueba discrepancias de extensión y consulta los tipos MIME y una vista hexadecimal localmente en tu navegador.",
+      },
+      fr: {
+        name: "Détecteur de type de fichier",
+        description:
+          "Identifiez les formats par leur signature, repérez les extensions incohérentes et examinez les types MIME et un aperçu hexadécimal localement dans votre navigateur.",
+      },
+      he: {
+        name: "מזהה סוגי קבצים",
+        description:
+          "זיהוי פורמטים לפי חתימות הקבצים, בדיקת אי־התאמות בסיומות והצגת סוגי MIME ותצוגה הקסדצימלית מקדימה, מקומית בדפדפן.",
+      },
+      hi: {
+        name: "फ़ाइल प्रकार पहचानकर्ता",
+        description:
+          "फ़ाइल सिग्नेचर से फ़ॉर्मैट पहचानें, एक्सटेंशन का मेल जाँचें और अपने ब्राउज़र में स्थानीय रूप से MIME प्रकार व हेक्स प्रीव्यू देखें।",
+      },
+      id: {
+        name: "Pendeteksi Jenis File",
+        description:
+          "Kenali format file melalui tanda tangannya, periksa ketidakcocokan ekstensi, serta lihat jenis MIME dan pratinjau heksadesimal secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Rilevatore del tipo di file",
+        description:
+          "Identifica i formati tramite le firme, verifica le estensioni non corrispondenti e consulta i tipi MIME e un’anteprima esadecimale in locale nel browser.",
+      },
+      ja: {
+        name: "ファイル形式判定ツール",
+        description:
+          "ファイルのシグネチャから形式を判定し、拡張子の不一致、MIME タイプ、16進数プレビューをブラウザー内で確認できます。",
+      },
+      ko: {
+        name: "파일 형식 감지기",
+        description:
+          "브라우저에서 로컬로 파일 시그니처를 통해 형식을 식별하고, 확장자 불일치를 확인하며, MIME 유형과 16진수 미리보기를 살펴보세요.",
+      },
+      ms: {
+        name: "Pengesan Jenis Fail",
+        description:
+          "Kenal pasti format fail melalui tandatangannya, semak ketidakpadanan sambungan, serta periksa jenis MIME dan pratonton heks secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "Bestandstypeherkenner",
+        description:
+          "Herken bestandsformaten aan hun signatuur, controleer afwijkende extensies en bekijk MIME-typen en een hexvoorbeeld lokaal in je browser.",
+      },
+      no: {
+        name: "Filtypedetektor",
+        description:
+          "Identifiser filformater ut fra signaturene, kontroller filendelser som ikke samsvarer, og undersøk MIME-typer og en heksadesimal forhåndsvisning lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Wykrywanie typu pliku",
+        description:
+          "Rozpoznawaj formaty plików na podstawie sygnatur, sprawdzaj niezgodność rozszerzeń oraz przeglądaj typy MIME i podgląd szesnastkowy lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Detector de Tipo de Arquivo",
+        description:
+          "Identifique formatos de arquivo pelas assinaturas, verifique divergências de extensão e inspecione tipos MIME e uma prévia hexadecimal localmente no navegador.",
+      },
+      ru: {
+        name: "Определение типа файла",
+        description:
+          "Определяйте форматы файлов по сигнатурам, проверяйте соответствие расширений и просматривайте MIME-типы и шестнадцатеричные данные локально в браузере.",
+      },
+      sv: {
+        name: "Filtypsidentifierare",
+        description:
+          "Identifiera filformat genom deras signaturer, kontrollera avvikande filändelser och granska MIME-typer och en hex-förhandsvisning lokalt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือตรวจจับประเภทไฟล์",
+        description:
+          "ระบุรูปแบบไฟล์จากลายเซ็น ตรวจสอบนามสกุลที่ไม่ตรงกัน และดูประเภท MIME พร้อมตัวอย่างเลขฐานสิบหกภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Dosya Türü Algılayıcı",
+        description:
+          "Dosya biçimlerini imzalarından belirleyin, uzantı uyuşmazlıklarını kontrol edin, MIME türlerini ve onaltılık önizlemeyi tarayıcınızda yerel olarak inceleyin.",
+      },
+      vi: {
+        name: "Trình nhận diện loại tệp",
+        description:
+          "Nhận diện định dạng qua chữ ký tệp, kiểm tra phần mở rộng không khớp, xem loại MIME và bản xem trước hex ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "文件类型识别",
+        description:
+          "在浏览器本地根据文件签名识别格式，检查扩展名是否匹配，并查看 MIME 类型和十六进制预览。",
+      },
+      "zh-TW": {
+        name: "檔案類型偵測器",
+        description:
+          "根據檔案特徵識別格式、檢查副檔名是否不符，並在瀏覽器本機檢視 MIME 類型與十六進位預覽。",
+      },
+    },
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     category: "image",
     icon: "image",
@@ -21356,117 +21487,117 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "منظم صفحات PDF",
         description:
-          "أعد ترتيب صفحات PDF ودوّرها واحذفها محليًا في متصفحك قبل تصدير ملف PDF جديد.",
+          "اسحب صفحات PDF لإعادة ترتيبها، أو دوّر الصفحات الممسوحة ضوئيًا، أو احذف الصفحات غير المرغوب فيها، ثم نزّل ملف PDF جديدًا. أداة مجانية تحافظ على خصوصيتك وتعالج الملفات في متصفحك.",
       },
       de: {
-        name: "PDF Page Organizer",
+        name: "PDF-Seitenorganisator",
         description:
-          "Ordne PDF-Seiten lokal in deinem Browser neu an, drehe oder entferne sie, bevor du eine neue PDF exportierst.",
+          "Ordne PDF-Seiten durch Ziehen neu an, drehe Scans oder entferne unerwünschte Seiten und lade eine neue PDF herunter. Kostenlos, privat und direkt im Browser.",
       },
       en: {
         name: "PDF Page Organizer",
         description:
-          "Reorder, rotate, and remove PDF pages locally in your browser before exporting a new PDF.",
+          "Drag to reorder PDF pages, rotate scans, or remove unwanted pages, then download a new PDF. Free, private, and processed in your browser.",
       },
       es: {
-        name: "PDF Page Organizer",
+        name: "Organizador de páginas PDF",
         description:
-          "Reordena, gira y elimina páginas de un PDF localmente en tu navegador antes de exportar un PDF nuevo.",
+          "Arrastra para reordenar páginas PDF, gira documentos escaneados o elimina páginas innecesarias y descarga un nuevo PDF. Gratis, privado y con procesamiento en tu navegador.",
       },
       fr: {
         name: "Organiseur de pages PDF",
         description:
-          "Réorganisez, faites pivoter et supprimez des pages PDF localement dans votre navigateur avant d’exporter un nouveau PDF.",
+          "Réordonnez les pages PDF par glisser-déposer, faites pivoter les pages numérisées ou supprimez les pages inutiles, puis téléchargez un nouveau PDF. Gratuit, confidentiel et traité dans votre navigateur.",
       },
       he: {
-        name: "PDF Page Organizer",
+        name: "מארגן עמודי PDF",
         description:
-          "סדר מחדש, סובב והסר עמודים מ-PDF באופן מקומי בדפדפן שלך לפני ייצוא PDF חדש.",
+          "גרור כדי לשנות את סדר עמודי ה-PDF, סובב סריקות או הסר עמודים לא רצויים, ואז הורד PDF חדש. העיבוד מתבצע בדפדפן שלך, בחינם ובפרטיות.",
       },
       hi: {
         name: "PDF पेज ऑर्गनाइज़र",
         description:
-          "नया PDF निर्यात करने से पहले अपने ब्राउज़र में ही PDF पेजों का क्रम बदलें, घुमाएँ और हटाएँ।",
+          "खींचकर PDF पेजों का क्रम बदलें, स्कैन किए गए पेजों को घुमाएँ या अनचाहे पेज हटाएँ, फिर नया PDF डाउनलोड करें। यह मुफ़्त और निजी है, और प्रोसेसिंग आपके ब्राउज़र में होती है।",
       },
       id: {
         name: "Pengatur Halaman PDF",
         description:
-          "Susun ulang, putar, dan hapus halaman PDF secara lokal di browser Anda sebelum mengekspor PDF baru.",
+          "Seret untuk mengurutkan ulang halaman PDF, putar hasil pemindaian, atau hapus halaman yang tidak diinginkan, lalu unduh PDF baru. Gratis, menjaga privasi, dan diproses di browser Anda.",
       },
       it: {
-        name: "PDF Page Organizer",
+        name: "Organizzatore di pagine PDF",
         description:
-          "Riordina, ruota e rimuovi le pagine di un PDF localmente nel browser prima di esportare un nuovo PDF.",
+          "Trascina per riordinare le pagine PDF, ruota le scansioni o rimuovi le pagine indesiderate, poi scarica un nuovo PDF. Gratuito, rispetta la privacy ed elabora i file nel browser.",
       },
       ja: {
-        name: "PDF Page Organizer",
+        name: "PDF ページ整理ツール",
         description:
-          "新しい PDF として書き出す前に、PDF のページをブラウザ内でローカルに並べ替え、回転、削除できます。",
+          "PDF のページをドラッグして並べ替え、スキャンしたページを回転し、不要なページを削除して、新しい PDF をダウンロードできます。無料でプライバシーを守りながら、ブラウザ内で処理できます。",
       },
       ko: {
-        name: "PDF Page Organizer",
+        name: "PDF 페이지 정리 도구",
         description:
-          "브라우저에서 로컬로 새 PDF를 내보내기 전에 PDF 페이지 순서를 바꾸고, 회전하고, 제거하세요.",
+          "PDF 페이지를 드래그해 순서를 바꾸고, 스캔한 페이지를 회전하거나 불필요한 페이지를 제거한 뒤 새 PDF를 다운로드하세요. 무료로 이용하며, 파일을 업로드하지 않고 브라우저에서 처리합니다.",
       },
       ms: {
         name: "Penyusun Halaman PDF",
         description:
-          "Susun semula, putar dan alih keluar halaman PDF secara setempat dalam pelayar anda sebelum mengeksport PDF baharu.",
+          "Seret untuk menyusun semula halaman PDF, putar imbasan atau alih keluar halaman yang tidak diingini, kemudian muat turun PDF baharu. Percuma, privasi terpelihara dan diproses dalam pelayar anda.",
       },
       nl: {
-        name: "PDF-pagina-organizer",
+        name: "PDF-paginaordener",
         description:
-          "Herschik, draai en verwijder PDF-pagina's lokaal in je browser voordat je een nieuwe PDF exporteert.",
+          "Versleep PDF-pagina's om ze te herschikken, draai scans of verwijder ongewenste pagina's en download een nieuwe PDF. Gratis, privé en verwerkt in je browser.",
       },
       no: {
-        name: "PDF Page Organizer",
+        name: "PDF-sideorganisator",
         description:
-          "Endre rekkefølge på, roter og fjern PDF-sider lokalt i nettleseren før du eksporterer en ny PDF.",
+          "Dra for å endre rekkefølgen på PDF-sider, roter skannede sider eller fjern uønskede sider, og last ned en ny PDF. Gratis, privat og behandlet i nettleseren.",
       },
       pl: {
-        name: "PDF Page Organizer",
+        name: "Organizator stron PDF",
         description:
-          "Zmieniaj kolejność, obracaj i usuwaj strony PDF lokalnie w przeglądarce przed wyeksportowaniem nowego PDF.",
+          "Przeciągaj strony PDF, aby zmienić ich kolejność, obracaj skany lub usuwaj zbędne strony, a następnie pobierz nowy PDF. Bezpłatnie, prywatnie i w przeglądarce.",
       },
       pt: {
         name: "Organizador de páginas PDF",
         description:
-          "Reordene, gire e remova páginas de um PDF localmente no seu navegador antes de exportar um novo PDF.",
+          "Arraste para reordenar páginas de PDF, gire páginas digitalizadas ou remova páginas indesejadas e baixe um novo PDF. Gratuito, com privacidade e processamento no seu navegador.",
       },
       ru: {
         name: "Организатор страниц PDF",
         description:
-          "Меняйте порядок, поворачивайте и удаляйте страницы PDF локально в браузере перед экспортом нового PDF.",
+          "Меняйте порядок страниц PDF перетаскиванием, поворачивайте сканы или удаляйте ненужные страницы, затем скачайте новый PDF. Бесплатно и конфиденциально, с обработкой в браузере.",
       },
       sv: {
-        name: "PDF Page Organizer",
+        name: "Ordna PDF-sidor",
         description:
-          "Ordna om, rotera och ta bort PDF-sidor lokalt i webbläsaren innan du exporterar en ny PDF.",
+          "Dra för att ordna om PDF-sidor, rotera skannade sidor eller ta bort oönskade sidor och ladda sedan ned en ny PDF. Gratis, privat och direkt i webbläsaren.",
       },
       th: {
-        name: "PDF Page Organizer",
+        name: "เครื่องมือจัดระเบียบหน้า PDF",
         description:
-          "จัดเรียง หมุน และลบหน้าของ PDF ภายในเบราว์เซอร์ของคุณก่อนส่งออกเป็น PDF ใหม่",
+          "ลากเพื่อจัดลำดับหน้า PDF ใหม่ หมุนหน้าที่สแกน หรือลบหน้าที่ไม่ต้องการ แล้วดาวน์โหลด PDF ใหม่ ใช้งานฟรี เป็นส่วนตัว และประมวลผลในเบราว์เซอร์ของคุณ",
       },
       tr: {
-        name: "PDF Page Organizer",
+        name: "PDF Sayfa Düzenleyici",
         description:
-          "Yeni bir PDF dışa aktarmadan önce PDF sayfalarını tarayıcınızda yerel olarak yeniden sıralayın, döndürün ve kaldırın.",
+          "PDF sayfalarını sürükleyerek yeniden sıralayın, taramaları döndürün veya istemediğiniz sayfaları kaldırın, ardından yeni bir PDF indirin. Ücretsizdir, gizliliğinizi korur ve işlemleri tarayıcınızda yapar.",
       },
       vi: {
         name: "Trình sắp xếp trang PDF",
         description:
-          "Sắp xếp lại, xoay và xóa các trang PDF ngay trong trình duyệt của bạn trước khi xuất một PDF mới.",
+          "Kéo để sắp xếp lại các trang PDF, xoay trang quét hoặc xóa trang không cần thiết, rồi tải PDF mới xuống. Miễn phí, riêng tư và xử lý trong trình duyệt.",
       },
       "zh-CN": {
-        name: "PDF Page Organizer",
+        name: "PDF 页面整理器",
         description:
-          "在浏览器本地重新排序、旋转和移除 PDF 页面，然后导出新的 PDF。",
+          "拖动调整 PDF 页面顺序、旋转扫描页面或移除不需要的页面，然后下载新的 PDF。免费、保护隐私，所有处理均在浏览器中完成。",
       },
       "zh-TW": {
         name: "PDF 頁面整理器",
         description:
-          "在瀏覽器本機重新排序、旋轉和移除 PDF 頁面，再匯出新的 PDF。",
+          "拖曳 PDF 頁面以重新排序、旋轉掃描頁面，或移除不需要的頁面，再下載新的 PDF。在瀏覽器中免費處理，保護你的隱私。",
       },
     },
   },
@@ -29348,6 +29479,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "文字比對",
         description:
           "在瀏覽器中並排比較兩份文本、查看逐行變更，並匯出乾淨的統一 diff。",
+      },
+    },
+  },
+  {
+    slug: "text-encoding-converter",
+    category: "text",
+    icon: "binary",
+    tags: [
+      "text",
+      "encoding",
+      "utf-8",
+      "gbk",
+      "gb18030",
+      "big5",
+      "bom",
+      "charset",
+      "mojibake",
+      "line-endings",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل ترميز النصوص",
+        description:
+          "حوّل الملفات النصية بين UTF-8 وGBK وBig5 وغيرها من الترميزات. عاين النص المشوّه، واضبط علامة BOM ونهايات الأسطر، ونزّل محليًا دون فقدان المحارف.",
+      },
+      de: {
+        name: "Konverter für Textkodierungen",
+        description:
+          "Konvertiere Textdateien zwischen UTF-8, GBK, Big5 und anderen Kodierungen. Prüfe unleserlichen Text in der Vorschau, steuere BOM und Zeilenenden und lade das Ergebnis lokal ohne Zeichenverlust herunter.",
+      },
+      en: {
+        name: "Text Encoding Converter",
+        description:
+          "Convert text files between UTF-8, GBK, Big5 and other encodings. Preview garbled text, control BOM and line endings, and download locally without losing characters.",
+      },
+      es: {
+        name: "Convertidor de codificación de texto",
+        description:
+          "Convierte archivos de texto entre UTF-8, GBK, Big5 y otras codificaciones. Previsualiza el texto con caracteres ilegibles, configura el BOM y los finales de línea, y descarga localmente sin perder caracteres.",
+      },
+      fr: {
+        name: "Convertisseur d’encodage de texte",
+        description:
+          "Convertissez des fichiers texte entre UTF-8, GBK, Big5 et d’autres encodages. Prévisualisez le texte illisible, réglez la BOM et les fins de ligne, puis téléchargez localement sans perdre de caractères.",
+      },
+      he: {
+        name: "ממיר קידוד טקסט",
+        description:
+          "המירו קובצי טקסט בין UTF-8, GBK, Big5 וקידודים נוספים. צפו בתצוגה מקדימה של טקסט משובש, שלטו ב־BOM ובסיומי שורות והורידו מקומית ללא אובדן תווים.",
+      },
+      hi: {
+        name: "टेक्स्ट एन्कोडिंग परिवर्तक",
+        description:
+          "टेक्स्ट फ़ाइलों को UTF-8, GBK, Big5 और अन्य एन्कोडिंग के बीच बदलें। बिगड़े टेक्स्ट का पूर्वावलोकन देखें, BOM और पंक्ति-अंत नियंत्रित करें और बिना कोई वर्ण खोए स्थानीय रूप से डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Pengodean Teks",
+        description:
+          "Konversi berkas teks antara UTF-8, GBK, Big5, dan pengodean lainnya. Pratinjau teks kacau, atur BOM dan akhir baris, lalu unduh secara lokal tanpa kehilangan karakter.",
+      },
+      it: {
+        name: "Convertitore di codifica del testo",
+        description:
+          "Converti file di testo tra UTF-8, GBK, Big5 e altre codifiche. Visualizza l'anteprima del testo illeggibile, imposta BOM e fine riga e scarica in locale senza perdere caratteri.",
+      },
+      ja: {
+        name: "テキスト文字コード変換ツール",
+        description:
+          "テキストファイルを UTF-8、GBK、Big5 などの文字コード間で変換できます。文字化けをプレビューで確認し、BOM と改行コードを設定して、文字を失わずにローカルでダウンロードできます。",
+      },
+      ko: {
+        name: "텍스트 인코딩 변환기",
+        description:
+          "텍스트 파일을 UTF-8, GBK, Big5 등 다양한 인코딩으로 변환하세요. 깨진 텍스트를 미리 보고, BOM과 줄바꿈을 설정하고, 문자 손실 없이 로컬에서 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Pengekodan Teks",
+        description:
+          "Tukar fail teks antara UTF-8, GBK, Big5 dan pengekodan lain. Pratonton teks bercelaru, kawal BOM dan penghujung baris, serta muat turun secara setempat tanpa kehilangan aksara.",
+      },
+      nl: {
+        name: "Converter voor tekstcodering",
+        description:
+          "Zet tekstbestanden om tussen UTF-8, GBK, Big5 en andere coderingen. Bekijk voorbeelden van onleesbare tekst, stel BOM en regeleinden in en download lokaal zonder tekens te verliezen.",
+      },
+      no: {
+        name: "Konverterer for tekstkoding",
+        description:
+          "Konverter tekstfiler mellom UTF-8, GBK, Big5 og andre kodinger. Forhåndsvis tekst med tegnfeil, styr BOM og linjeskift, og last ned lokalt uten å miste tegn.",
+      },
+      pl: {
+        name: "Konwerter kodowania tekstu",
+        description:
+          "Konwertuj pliki tekstowe między UTF-8, GBK, Big5 i innymi kodowaniami. Sprawdzaj podgląd nieczytelnego tekstu, ustawiaj BOM i zakończenia wierszy oraz pobieraj pliki lokalnie bez utraty znaków.",
+      },
+      pt: {
+        name: "Conversor de codificação de texto",
+        description:
+          "Converta arquivos de texto entre UTF-8, GBK, Big5 e outras codificações. Visualize texto ilegível, controle o BOM e as quebras de linha e baixe localmente sem perder caracteres.",
+      },
+      ru: {
+        name: "Конвертер кодировок текста",
+        description:
+          "Конвертируйте текстовые файлы между UTF-8, GBK, Big5 и другими кодировками. Проверяйте искажённый текст в предпросмотре, управляйте BOM и окончаниями строк и скачивайте результат локально без потери символов.",
+      },
+      sv: {
+        name: "Konverterare för textkodning",
+        description:
+          "Konvertera textfiler mellan UTF-8, GBK, Big5 och andra kodningar. Förhandsgranska förvrängd text, styr BOM och radslut och ladda ner lokalt utan att förlora tecken.",
+      },
+      th: {
+        name: "ตัวแปลงการเข้ารหัสข้อความ",
+        description:
+          "แปลงไฟล์ข้อความระหว่าง UTF-8, GBK, Big5 และการเข้ารหัสอื่นๆ ดูตัวอย่างข้อความเพี้ยน ตั้งค่า BOM และการขึ้นบรรทัดใหม่ แล้วดาวน์โหลดในเครื่องโดยไม่สูญเสียอักขระ",
+      },
+      tr: {
+        name: "Metin Kodlaması Dönüştürücü",
+        description:
+          "Metin dosyalarını UTF-8, GBK, Big5 ve diğer kodlamalar arasında dönüştürün. Bozuk metni önizleyin, BOM ve satır sonlarını ayarlayın ve karakter kaybetmeden yerel olarak indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi bảng mã văn bản",
+        description:
+          "Chuyển đổi tệp văn bản giữa UTF-8, GBK, Big5 và các bảng mã khác. Xem trước văn bản bị lỗi ký tự, điều chỉnh BOM và kiểu xuống dòng, rồi tải xuống ngay trên thiết bị mà không mất ký tự.",
+      },
+      "zh-CN": {
+        name: "文本编码转换器",
+        description:
+          "在 UTF-8、GBK、Big5 等编码之间转换文本文件。预览并排查乱码，设置 BOM 和换行符，在本地下载且不丢失字符。",
+      },
+      "zh-TW": {
+        name: "文字編碼轉換器",
+        description:
+          "將文字檔案在 UTF-8、GBK、Big5 等編碼之間轉換。預覽亂碼文字、設定 BOM 和換行字元，並在本機下載而不遺失字元。",
       },
     },
   },

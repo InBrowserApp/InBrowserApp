@@ -1,0 +1,4 @@
+{
+  "name": "Metin Kodlaması Dönüştürücü",
+  "description": "Metin dosyalarını UTF-8, GBK, Big5 ve diğer kodlamalar arasında dönüştürün. Bozuk metni önizleyin, BOM ve satır sonlarını ayarlayın ve karakter kaybetmeden yerel olarak indirin."
+}
