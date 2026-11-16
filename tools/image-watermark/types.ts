@@ -12,7 +12,7 @@ export type PresetPosition =
   | "bottomLeft"
   | "bottomCenter"
   | "bottomRight"
-export type Position = PresetPosition | "custom"
+type Position = PresetPosition | "custom"
 export type Options = {
   kind: "text" | "image"
   text: string
