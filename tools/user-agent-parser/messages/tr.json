@@ -1,6 +1,6 @@
 {
   "use-current": "Kendi user agent'ımı kullan",
-  "input-label": "User Agent",
+  "input-label": "Kullanıcı Aracısı",
   "input-placeholder": "User-Agent dizesini buraya yapıştırın...",
   "input-error": "Ayrıştırmak için bir User-Agent dizesi girin.",
   "json-output": "JSON çıktısı",

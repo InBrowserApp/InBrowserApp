@@ -16,7 +16,7 @@
   "importFromFileLabel": "ファイルから読み込む",
   "importFromUrlLabel": "URL から読み込む",
   "hideUrlImportLabel": "URL 読み込みを隠す",
-  "importUrlFieldLabel": "OpenAPI URL",
+  "importUrlFieldLabel": "OpenAPIのURL",
   "importUrlDescription": "この取得処理はブラウザ内で実行されるため、対象 URL は CORS を許可している必要があります。",
   "importUrlPlaceholder": "https://example.com/openapi.yaml",
   "fetchUrlLabel": "取得",

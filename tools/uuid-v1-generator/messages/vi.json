@@ -10,7 +10,7 @@
   "macAddressLabel": "Địa chỉ MAC",
   "macAddressDescription": "Theo mặc định, địa chỉ ngẫu nhiên được quản trị cục bộ sẽ được dùng để không làm lộ địa chỉ phần cứng thật.",
   "randomMacAddressLabel": "Ngẫu nhiên hóa địa chỉ MAC",
-  "clockSequenceLabel": "Clock Sequence",
+  "clockSequenceLabel": "Chuỗi đồng hồ",
   "clockSequenceDescription": "Giá trị 14-bit được dùng cùng timestamp để tránh trùng lặp.",
   "randomClockSequenceLabel": "Ngẫu nhiên hóa clock sequence",
   "macAddressRequired": "Nhập địa chỉ MAC.",

@@ -1,4 +1,4 @@
 {
-  "name": "Image Palette Extractor",
+  "name": "Trình trích xuất bảng màu ảnh",
   "description": "Trích xuất các màu chủ đạo từ hình ảnh và xuất bảng màu dưới dạng HEX, biến CSS hoặc JSON."
 }

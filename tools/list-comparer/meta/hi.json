@@ -1,4 +1,4 @@
 {
-  "name": "List Comparer",
-  "description": "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup."
+  "name": "सूची तुलना टूल",
+  "description": "दो सूचियों की तुलना करें, साझा और अलग आइटम पहचानें, और सिंक या सफ़ाई से पहले ज़रूरी सेट निर्यात करें।"
 }

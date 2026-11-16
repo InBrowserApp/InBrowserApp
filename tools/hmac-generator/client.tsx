@@ -59,13 +59,9 @@ function HmacGeneratorClient({ messages }: HmacGeneratorClientProps) {
     /* v8 ignore next */
     if (typeof window === "undefined") return
 
-    const storedSecretKey = window.localStorage.getItem(STORAGE_KEYS.secretKey)
+    window.localStorage.removeItem(STORAGE_KEYS.secretKey)
     const storedAlgorithm = window.localStorage.getItem(STORAGE_KEYS.algorithm)
     const storedText = window.localStorage.getItem(STORAGE_KEYS.text)
-
-    if (storedSecretKey !== null) {
-      setSecretKey(storedSecretKey)
-    }
 
     if (storedAlgorithm !== null) {
       const nextAlgorithm = HMAC_ALGORITHM_OPTIONS.find(
@@ -81,13 +77,6 @@ function HmacGeneratorClient({ messages }: HmacGeneratorClientProps) {
       setPlainText(storedText)
     }
   }, [])
-
-  useEffect(() => {
-    /* v8 ignore next */
-    if (typeof window === "undefined") return
-
-    window.localStorage.setItem(STORAGE_KEYS.secretKey, secretKey)
-  }, [secretKey])
 
   useEffect(() => {
     /* v8 ignore next */
@@ -133,8 +122,8 @@ function HmacGeneratorClient({ messages }: HmacGeneratorClientProps) {
               error instanceof Error
                 ? error.message
                 : selectedFile
-                  ? "Failed to generate HMAC output for the file."
-                  : "Failed to generate HMAC output for the text input.",
+                  ? messages.fileGenerationError
+                  : messages.textGenerationError,
           })
         }
       })
@@ -142,7 +131,14 @@ function HmacGeneratorClient({ messages }: HmacGeneratorClientProps) {
     return () => {
       cancelled = true
     }
-  }, [algorithm, deferredPlainText, deferredSecretKey, selectedFile])
+  }, [
+    messages.fileGenerationError,
+    messages.textGenerationError,
+    algorithm,
+    deferredPlainText,
+    deferredSecretKey,
+    selectedFile,
+  ])
 
   async function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
     const nextFile = event.target.files?.[0]

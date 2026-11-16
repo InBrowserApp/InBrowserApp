@@ -13,5 +13,7 @@
   "copiedLabel": "Gekopieerd",
   "seedLabel": "Seed (optioneel)",
   "seedPlaceholder": "0 of 0x...",
-  "seedInvalid": "Voer een decimaal getal of een 0x-hexwaarde in."
+  "seedInvalid": "Voer een decimaal getal of een 0x-hexwaarde in.",
+  "fileHashError": "Het bestand kon niet worden gehasht.",
+  "textHashError": "De tekst kon niet worden gehasht."
 }

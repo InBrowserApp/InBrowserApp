@@ -16,6 +16,6 @@
   "redirection": "เปลี่ยนเส้นทาง",
   "clientError": "ข้อผิดพลาดของไคลเอนต์",
   "serverError": "ข้อผิดพลาดของเซิร์ฟเวอร์",
-  "noResultsTitle": "No matching status codes",
-  "noResultsDescription": "Try a different code, phrase, or category."
+  "noResultsTitle": "ไม่พบรหัสสถานะที่ตรงกัน",
+  "noResultsDescription": "ลองใช้รหัส วลี หรือหมวดหมู่อื่น"
 }

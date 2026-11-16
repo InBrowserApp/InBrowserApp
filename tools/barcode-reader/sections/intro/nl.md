@@ -1,6 +1,6 @@
-## Wat Barcode Reader doet
+## Wat Barcodelezer doet
 
-Barcode Reader haalt de waarde op die is opgeslagen in gangbare
+Barcodelezer haalt de waarde op die is opgeslagen in gangbare
 eendimensionale en tweedimensionale codes vanuit een lokale afbeelding of je
 camera. Het ondersteunt QR Code, Data Matrix, PDF417, Aztec, Code 128, Code 39,
 EAN, UPC, ITF, Codabar en andere formaten die door de scanner in de browser

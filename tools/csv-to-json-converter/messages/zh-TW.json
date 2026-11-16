@@ -25,7 +25,7 @@
   "newlineLabel": "換行符號",
   "previewLabel": "預覽行數",
   "commentsLabel": "註解",
-  "commentsPlaceholder": "# or //",
+  "commentsPlaceholder": "# 或 //",
   "fastModeLabel": "快速模式",
   "skipFirstNLinesLabel": "跳過前 N 行",
   "delimitersToGuessLabel": "備用分隔符號",

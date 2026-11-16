@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "Generierter QR-Code"
+  "qrAlt": "Generierter QR-Code",
+  "renderError": "QR-Code konnte nicht gerendert werden."
 }

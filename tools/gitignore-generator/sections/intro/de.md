@@ -6,6 +6,6 @@ Eine .gitignore-Datei gibt absichtlich nicht verfolgte Dateien an, die Git ignor
 - IDE- und Editor-Dateien (.idea/, .vscode/)
 - Betriebssystem-Dateien (.DS_Store, Thumbs.db)
 
-## Template source
+## Vorlagenquelle
 
 Dieses Tool verwendet Vorlagen aus dem offiziellen GitHub gitignore Repository und deckt über 150 Sprachen, Frameworks und Umgebungen ab.

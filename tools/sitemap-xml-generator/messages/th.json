@@ -19,7 +19,7 @@
   "addUrlEntryLabel": "เพิ่มรายการ URL",
   "sitemapEntriesLabel": "ไฟล์ sitemap",
   "sitemapEntriesDescription": "แต่ละแถวจะกลายเป็นเรคคอร์ด <sitemap> ในดัชนี",
-  "sitemapEntryLabel": "Sitemap {index}",
+  "sitemapEntryLabel": "แผนผังเว็บไซต์ {index}",
   "addSitemapEntryLabel": "เพิ่มรายการ sitemap",
   "removeEntryLabel": "ลบ",
   "locationLabel": "ตำแหน่ง",

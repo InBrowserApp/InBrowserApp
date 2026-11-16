@@ -1,4 +1,4 @@
 {
-  "name": "SVG Optimizer",
+  "name": "SVG-optimalisator",
   "description": "Optimaliser SVG-filer med konfigurerbar SVGO-opprydding, komprimering, forhåndsvisning, kopiering og nedlasting"
 }

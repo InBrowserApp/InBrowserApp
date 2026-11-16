@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 64)?
+## xxHash (XXH3 64) क्या है?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 64 outputs a 64-bit (8-byte) hash value, typically rendered as a 16-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3 आधुनिक xxHash एल्गोरिथम है, जिसे बहुत तेज़ गति और बेहतर वितरण के लिए बनाया गया है। XXH3 64 एक 64-बिट (8-बाइट) हैश मान देता है, जिसे आम तौर पर 16 वर्णों की हेक्साडेसिमल स्ट्रिंग के रूप में दिखाया जाता है। यह गैर-क्रिप्टोग्राफ़िक हैश है और दोहराने योग्य हैश गणना के लिए वैकल्पिक सीड का समर्थन करता है।
 
-**Key characteristics:**
+**मुख्य विशेषताएं:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **बहुत तेज़**: बड़े इनपुट पर बेहतर प्रदर्शन के लिए अनुकूलित
+- **निश्चित परिणाम**: एक ही इनपुट और सीड हमेशा एक ही हैश देते हैं
+- **गैर-क्रिप्टोग्राफ़िक**: सुरक्षा के कामों के लिए उपयुक्त नहीं
+- **अच्छा वितरण**: हैश टेबल और इंडेक्सिंग के लिए बढ़िया
+- **सीड का समर्थन**: अलग हैश आउटपुट पाने के लिए वैकल्पिक सीड
 
-**Common uses:**
+**सामान्य उपयोग:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- हैश टेबल और डेटा संरचनाएं
+- फ़ाइल अखंडता की जांच (सुरक्षा से इतर)
+- डेटा से डुप्लिकेट हटाना और उसे खंडों में बांटना
+- कैश कुंजियां और डेटाबेस इंडेक्सिंग
+- अधिक मात्रा में डेटा प्रोसेस करने वाली पाइपलाइन

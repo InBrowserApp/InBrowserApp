@@ -25,7 +25,7 @@
     "autoAlgorithm": "Auto daripada pengepala",
     "keyLabel": "Rahsia atau kunci awam",
     "keyDescription": "Gunakan teks biasa untuk algoritma HS. Gunakan kunci awam PEM, JWK, atau JWKS untuk algoritma RS, PS, dan ES. Nilai tidak disimpan.",
-    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "keyPlaceholder": "secret\n\natau\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\natau\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
     "waitingTitle": "Sedia untuk mengesahkan",
     "waitingDescription": "Masukkan token yang sah dan bahan pengesahan untuk menyemak tandatangan.",
     "pendingTitle": "Mengesahkan tandatangan",

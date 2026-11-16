@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "Klistra in giltig XML till vänster för att förhandsgranska den konverterade JSON:en här.",
   "invalidXmlLabel": "Ogiltig XML",
   "optionsLabel": "Alternativ",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "Justera hur XML tolkas innan du kopierar eller laddar ner den konverterade JSON-filen.",
   "indentSizeLabel": "Indragsstorlek",
   "indentSizeDescription": "Välj 0 för kompakt utdata eller 1-8 för formaterat indrag.",
   "compactLabel": "Kompakt",

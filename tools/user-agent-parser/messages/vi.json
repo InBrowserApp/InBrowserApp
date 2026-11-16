@@ -1,6 +1,6 @@
 {
   "use-current": "Dùng User-Agent của tôi",
-  "input-label": "User Agent",
+  "input-label": "Chuỗi tác nhân người dùng",
   "input-placeholder": "Dán chuỗi User-Agent vào đây...",
   "input-error": "Nhập chuỗi User-Agent để phân tích.",
   "json-output": "Kết quả JSON",

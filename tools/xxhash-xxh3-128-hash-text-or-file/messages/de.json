@@ -13,5 +13,7 @@
   "copiedLabel": "Kopiert",
   "seedLabel": "Seed (optional)",
   "seedPlaceholder": "0 oder 0x...",
-  "seedInvalid": "Gib eine Dezimalzahl oder einen 0x-Hexwert ein."
+  "seedInvalid": "Gib eine Dezimalzahl oder einen 0x-Hexwert ein.",
+  "fileHashError": "Datei konnte nicht gehasht werden.",
+  "textHashError": "Text konnte nicht gehasht werden."
 }

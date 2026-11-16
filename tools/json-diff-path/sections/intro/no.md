@@ -1,6 +1,6 @@
 ## Oversikt
 
-JSON Diff Path sammenligner to JSON-dokumenter og gjør hver strukturelle
+JSON-sammenligning med stier sammenligner to JSON-dokumenter og gjør hver strukturelle
 endring om til en lesbar stioppføring med både JSONPath- og JSON Pointer-utdata.
 
 ## Når Du Skal Bruke Det

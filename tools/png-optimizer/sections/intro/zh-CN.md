@@ -1,6 +1,6 @@
-## PNG Optimizer 的作用
+## PNG 优化器的作用
 
-PNG Optimizer 使用无损 Oxipng 优化来压缩 PNG 图像。它会在不改变可见像素的前提下，尽可能重写 PNG 结构、压缩设置、调色板数据和 Alpha 信息。
+PNG 优化器使用无损 Oxipng 优化来压缩 PNG 图像。它会在不改变可见像素的前提下，尽可能重写 PNG 结构、压缩设置、调色板数据和 Alpha 信息。
 
 ## 适用场景
 

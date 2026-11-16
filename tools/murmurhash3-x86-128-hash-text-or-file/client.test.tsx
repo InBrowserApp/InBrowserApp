@@ -21,6 +21,8 @@ const messages = {
   plainTextDescription:
     "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
   importFromFileLabel: "Import from file",
+  fileHashError: "ファイルのハッシュ計算に失敗しました。",
+  textHashError: "テキストのハッシュ計算に失敗しました。",
   seedSectionLabel: "Seed",
   seedLabel: "Seed (Optional)",
   seedPlaceholder: "0 or 0x...",
@@ -41,7 +43,10 @@ beforeEach(() => {
   window.localStorage.clear()
 })
 
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
 
 function getPlainTextInput() {
   return screen.getByRole("textbox", {
@@ -212,23 +217,14 @@ describe("MurmurHash3HashTextOrFileClient", () => {
     arrayBufferSpy.mockRestore()
   })
 
-  test("shows a text fallback error for unknown read failures", async () => {
-    const arrayBufferSpy = vi
-      .spyOn(Blob.prototype, "arrayBuffer")
-      .mockRejectedValueOnce("read failed")
+  test("uses localized fallbacks for unknown text and file read failures", async () => {
+    vi.spyOn(Blob.prototype, "arrayBuffer").mockRejectedValue({
+      message: "unknown",
+    })
 
     render(<MurmurHash3HashTextOrFileClient messages={messages} />)
 
-    expect(await screen.findByText("Failed to hash text.")).toBeTruthy()
-    arrayBufferSpy.mockRestore()
-  })
-
-  test("shows a file fallback error for unknown read failures", async () => {
-    render(<MurmurHash3HashTextOrFileClient messages={messages} />)
-
-    const arrayBufferSpy = vi
-      .spyOn(Blob.prototype, "arrayBuffer")
-      .mockRejectedValueOnce("read failed")
+    expect(await screen.findByText(messages.textHashError)).toBeTruthy()
 
     fireEvent.change(getFileInput(), {
       target: {
@@ -240,8 +236,8 @@ describe("MurmurHash3HashTextOrFileClient", () => {
       },
     })
 
-    expect(await screen.findByText("Failed to hash file.")).toBeTruthy()
-    arrayBufferSpy.mockRestore()
+    expect(await screen.findByText(messages.fileHashError)).toBeTruthy()
+    expect(screen.queryByText(messages.textHashError)).toBeNull()
   })
 
   test("switches back to text mode after importing a file", async () => {

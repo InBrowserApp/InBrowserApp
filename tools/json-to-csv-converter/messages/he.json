@@ -16,5 +16,5 @@
   "quoteCharLabel": "גרשיים",
   "includeHeaderRowLabel": "כלול שורת כותרת",
   "escapeFormulaeLabel": "בריחת נוסחאות Excel",
-  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+  "escapeFormulaeTooltip": "מוסיף קידומת לערכים שמתחילים ב־=, +, - או @ כדי שיישומי גיליונות אלקטרוניים יתייחסו אליהם כטקסט ולא כנוסחאות."
 }

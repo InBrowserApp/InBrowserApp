@@ -2,7 +2,7 @@
   "token": {
     "title": "Token",
     "description": "Dán một JWT dạng compact. Header và payload được giải mã cục bộ trước khi chạy bất kỳ bước kiểm tra chữ ký nào.",
-    "label": "JWT token",
+    "label": "Token JWT",
     "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
     "useSample": "Dùng mẫu",
     "clear": "Xóa"
@@ -25,7 +25,7 @@
     "autoAlgorithm": "Tự động từ header",
     "keyLabel": "Secret hoặc khóa công khai",
     "keyDescription": "Dùng văn bản thuần cho thuật toán HS. Dùng khóa công khai PEM, JWK, hoặc JWKS cho thuật toán RS, PS, và ES. Các giá trị không được lưu.",
-    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "keyPlaceholder": "secret\n\nhoặc\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nhoặc\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
     "waitingTitle": "Sẵn sàng xác minh",
     "waitingDescription": "Nhập token hợp lệ và vật liệu xác minh để kiểm tra chữ ký.",
     "pendingTitle": "Đang xác minh chữ ký",

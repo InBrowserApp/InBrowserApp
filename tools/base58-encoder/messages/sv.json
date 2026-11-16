@@ -10,9 +10,9 @@
   "outputPlaceholder": "Base58-utdata visas här...",
   "download": "Ladda ner Base58",
   "readFailed": "Kunde inte läsa filen",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Ladda exempel",
+  "clearLabel": "Rensa",
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierat",
   "importFromFileLabel": "Importera från fil"
 }

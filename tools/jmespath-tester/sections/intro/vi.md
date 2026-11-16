@@ -1,18 +1,18 @@
-## What It Does
+## Công cụ này làm gì
 
-Trình kiểm tra JMESPath lets you run a JMESPath expression against JSON data directly
-in the browser. You can inspect the matched result, copy it, or download it as
-formatted JSON without leaving the page.
+Trình kiểm tra JMESPath cho phép bạn chạy biểu thức JMESPath trên dữ liệu JSON
+ngay trong trình duyệt. Bạn có thể kiểm tra kết quả khớp, sao chép hoặc tải xuống
+dưới dạng JSON đã định dạng mà không cần rời trang.
 
-## When To Use It
+## Khi nào nên dùng
 
-Use it when you need to prototype a JMESPath query, debug a filter expression,
-or verify exactly which values a JSON query will return before you embed that
-expression somewhere else.
+Dùng công cụ này khi bạn cần thử nghiệm truy vấn JMESPath, gỡ lỗi biểu thức lọc
+hoặc xác minh chính xác những giá trị mà truy vấn JSON sẽ trả về trước khi nhúng
+biểu thức đó vào nơi khác.
 
-## What To Expect
+## Những gì có thể mong đợi
 
-The tool validates the JSON input first, then evaluates the JMESPath
-expression. If either side is invalid, the error is surfaced immediately. When
-the query succeeds, the result is formatted as JSON and the result count is
-shown alongside the output.
+Công cụ xác thực JSON đầu vào trước, rồi đánh giá biểu thức JMESPath. Nếu một
+trong hai không hợp lệ, lỗi sẽ được hiển thị ngay. Khi truy vấn thành công,
+kết quả được định dạng thành JSON và số lượng kết quả được hiển thị bên cạnh
+đầu ra.

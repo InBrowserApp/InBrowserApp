@@ -1,6 +1,6 @@
 ## Wat deze tool doet
 
-Deze SVG optimizer comprimeert één lokaal SVG-bestand of geplakt SVG-document in
+Deze SVG-optimaliseerder comprimeert één lokaal SVG-bestand of geplakt SVG-document in
 je browser. De tool gebruikt SVGO-opschoningspasses om opmerkingen, metadata,
 overbodige attributen, onnodige precisie en andere markup te verwijderen die de
 zichtbare afbeelding niet verandert.

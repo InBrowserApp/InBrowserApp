@@ -1,10 +1,10 @@
-## What is an X.509 certificate parser?
+## Vad är en tolk för X.509-certifikat?
 
 Ett X.509-certifikat är ett signerat dokument som binder en publik nyckel till en identitet, till exempel en domän, tjänst, organisation eller person. TLS-certifikat, certifikatkedjefiler och många S/MIME- eller signeringsflöden använder detta format.
 
-Den här parsern läser certifikat- och publik nyckel-material direkt i din webbläsare. Den kan granska PEM-block, binära DER-filer och base64 DER-text och sedan visa ämne, utfärdare, serienummer, giltighetsperiod, signaturalgoritm, algoritm för publik nyckel, fingeravtryck och vanliga tillägg.
+Den här tolken läser certifikat- och publik nyckel-material direkt i din webbläsare. Den kan granska PEM-block, binära DER-filer och base64 DER-text och sedan visa ämne, utfärdare, serienummer, giltighetsperiod, signaturalgoritm, algoritm för publik nyckel, fingeravtryck och vanliga tillägg.
 
-Använd den när du behöver jämföra ett certifikats fingeravtryck, kontrollera om ett certifikat gäller den förväntade värden, granska Subject Alternative Names, bekräfta nyckelanvändning eller extrahera detaljer om publik nyckel vid felsökning av TLS- och distributionsproblem.
+Använd den när du behöver jämföra ett certifikats fingeravtryck, kontrollera om ett certifikat gäller den förväntade värden, granska alternativa namn för innehavaren, bekräfta nyckelanvändning eller extrahera detaljer om publik nyckel vid felsökning av TLS- och distributionsproblem.
 
 Verktyget validerar inte betrodda kedjor och kontaktar inte certifikatutfärdare. Det visar vad som är kodat i certifikatet eller den publika nyckel du anger, så använd en särskild TLS-skanner när du behöver validering av spärrstatus, kedja, värdnamn eller aktiv slutpunkt.
 

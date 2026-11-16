@@ -1,4 +1,4 @@
 {
-  "name": "Regex Tester & Replacer",
-  "description": "Test regular expressions, inspect matches, and preview replacements against real text."
+  "name": "Trình kiểm thử và thay thế biểu thức chính quy",
+  "description": "Kiểm thử biểu thức chính quy, kiểm tra kết quả khớp và xem trước nội dung thay thế trên văn bản thực tế."
 }

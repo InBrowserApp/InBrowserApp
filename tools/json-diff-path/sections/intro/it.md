@@ -1,6 +1,6 @@
 ## Panoramica
 
-JSON Diff Path confronta due documenti JSON e trasforma ogni modifica
+Confronto JSON con percorsi confronta due documenti JSON e trasforma ogni modifica
 strutturale in un record di percorso leggibile, con output sia JSONPath sia
 JSON Pointer.
 

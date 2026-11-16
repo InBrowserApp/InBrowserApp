@@ -1,6 +1,6 @@
 {
   "use-current": "Gebruik mijn user agent",
-  "input-label": "User Agent",
+  "input-label": "Useragent",
   "input-placeholder": "Plak hier een User-Agent-string...",
   "input-error": "Voer een User-Agent-string in om te parseren.",
   "json-output": "JSON-uitvoer",

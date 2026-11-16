@@ -1,16 +1,16 @@
-## Test Patterns Before They Ship
+## בדקו תבניות לפני השימוש בהן
 
-Regex is easy to get almost right. This tool gives you one place to validate a pattern, see every match, and confirm the replacement output before you use it in code, content pipelines, or search rules.
+קל לכתוב ביטוי רגולרי שכמעט עובד. הכלי מאפשר לאמת תבנית, לראות כל התאמה ולוודא שפלט ההחלפה נכון במקום אחד, לפני השימוש בקוד, בתהליכי עיבוד תוכן או בכללי חיפוש.
 
-## What You Can Check Here
+## מה אפשר לבדוק כאן
 
-- Paste sample text and watch matches update immediately
-- Toggle common flags like global, multiline, and ignore case
-- Inspect capturing groups and named groups for every match
-- Preview replacement output with `$1` and `$<name>` references
+- הדביקו טקסט לדוגמה וראו את ההתאמות מתעדכנות מיד
+- הפעילו או כבו דגלים נפוצים כמו כל ההתאמות, ריבוי שורות והתעלמות מרישיות
+- בדקו קבוצות לכידה וקבוצות בעלות שם בכל התאמה
+- צפו מראש בפלט ההחלפה עם הפניות מסוג `$1` ו־`$<name>`
 
-## Good Uses
+## שימושים מועילים
 
-- Cleaning IDs, log lines, and exports before import
-- Testing content rewrite rules without touching source data
-- Debugging why a pattern matches too much, too little, or nothing at all
+- ניקוי מזהים, שורות יומן וקובצי ייצוא לפני ייבוא
+- בדיקת כללים לשכתוב תוכן בלי לשנות את נתוני המקור
+- בירור מדוע תבנית מתאימה ליותר מדי, למעט מדי או לאף חלק מהטקסט

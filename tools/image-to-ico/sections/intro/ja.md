@@ -1,26 +1,20 @@
-## What ICO Is
+## ICOとは
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICOは、従来のブラウザーファビコン、Windowsショートカット、一部のデスクトップアプリのアイコンに使われる形式です。1つのICOファイルに複数の正方形サイズを含められるため、各プラットフォームが適切なサイズを自動選択できます。
 
-## Why Use This Converter
+## この変換ツールの用途
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+このツールは、ローカル画像1枚をブラウザー内で複数サイズのICOファイルに変換します。画像はアップロードされません。16×16、32×32、48×48、256×256などのファビコンサイズを1つのファイルにまとめてダウンロードできます。
 
-## How It Works
+## 使い方
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. ローカル画像ファイルを1つアップロードします。
+2. ICOに含めるアイコンサイズを選びます。
+3. 必要に応じて、透過画像に単色の背景を追加します。
+4. ICOを生成してダウンロードします。
 
-## Tips for Better Results
+## きれいに仕上げるコツ
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- 512×512以上の鮮明な正方形画像を使用します。
+- 小さいアイコンでは細部が失われるため、ロゴや重要な形を端に寄せすぎないようにします。
+- 透過を維持するには背景の塗りつぶしをオフにし、単色の背景が必要な場合だけオンにします。

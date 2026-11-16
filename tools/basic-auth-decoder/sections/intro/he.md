@@ -1,14 +1,14 @@
-## What It Does
+## מה הכלי עושה
 
 פענוח כותרת HTTP Basic Authorization כדי לחלץ שם משתמש וסיסמה מ-Base64. שימושי לניפוי שגיאות ובדיקות API.
 
-## Accepted Input
+## קלט נתמך
 
 הדבק משהו כמו: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+הכלי מקבל גם שורה מלאה מסוג `Authorization: Basic ...`.
 
-## Notes
+## הערות
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- Base64 רק מקודד את פרטי ההתחברות; הוא אינו מגן עליהם.
+- המפענח מפצל בנקודת ה־`:` הראשונה ומשאיר את השאר כחלק מהסיסמה.
+- הכול פועל מקומית בדפדפן שלכם.

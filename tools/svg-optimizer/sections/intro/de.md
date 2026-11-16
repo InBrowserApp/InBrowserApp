@@ -1,6 +1,6 @@
 ## Was dieses Tool macht
 
-Dieser SVG Optimizer komprimiert eine lokale SVG-Datei oder ein eingefügtes
+Dieser SVG-Optimierer komprimiert eine lokale SVG-Datei oder ein eingefügtes
 SVG-Dokument in deinem Browser. Er verwendet SVGO-Bereinigungsdurchläufe, um
 Kommentare, Metadaten, redundante Attribute, unnötige Zahlenpräzision und
 anderes Markup zu entfernen, das das sichtbare Bild nicht verändert.

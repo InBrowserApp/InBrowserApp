@@ -1,14 +1,14 @@
-## What It Does
+## यह क्या करता है
 
 HTTP Basic Authorization हेडर को डिकोड कर Base64 से उपयोगकर्ता नाम और पासवर्ड निकालें। डिबगिंग और API परीक्षण के लिए उपयोगी.
 
-## Accepted Input
+## स्वीकार्य इनपुट
 
 ऐसा हेडर पेस्ट करें: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+यह टूल पूरी `Authorization: Basic ...` पंक्ति भी स्वीकार करता है।
 
-## Notes
+## ध्यान देने योग्य बातें
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- Base64 केवल क्रेडेंशियल को एन्कोड करता है; यह उनकी सुरक्षा नहीं करता।
+- डिकोडर पहले `:` पर विभाजित करता है और बाकी हिस्से को पासवर्ड में रखता है।
+- सब कुछ आपके ब्राउज़र में स्थानीय रूप से चलता है।

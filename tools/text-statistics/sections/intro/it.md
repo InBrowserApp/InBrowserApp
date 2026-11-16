@@ -1,11 +1,11 @@
-## Why this tool feels different
+## Perché questo strumento è diverso
 
-Text Statistics should do more than count words. This version treats the page like a live writing desk: it measures length, rhythm, repetition, and structure the moment you paste a draft.
+Lo strumento Statistiche del testo dovrebbe fare più che contare le parole. Questa versione trasforma la pagina in un tavolo di lavoro per la scrittura: misura lunghezza, ritmo, ripetizioni e struttura appena incolli una bozza.
 
-## What it measures
+## Cosa misura
 
-You get the core counts you expect, then the signals that actually help editing: unique words, average sentence length, lexical diversity, longest paragraph, and repeated terms. When the browser supports `Intl.Segmenter`, these numbers are segmented in a way that works better across writing systems.
+Ottieni i conteggi essenziali che ti aspetti, insieme agli indicatori che aiutano davvero nella revisione: parole uniche, lunghezza media delle frasi, diversità lessicale, paragrafo più lungo e termini ripetuti. Quando il browser supporta `Intl.Segmenter`, questi conteggi usano una segmentazione più adatta ai diversi sistemi di scrittura.
 
-## When to use it
+## Quando usarlo
 
-Use it before publishing landing-page copy, product descriptions, scripts, newsletters, bios, or meeting summaries. It is especially useful when something feels too wordy, too repetitive, or too dense, but you need a fast clue about why.
+Usalo prima di pubblicare testi per pagine di presentazione, descrizioni di prodotti, copioni, newsletter, biografie o riepiloghi di riunioni. È particolarmente utile quando un testo sembra troppo prolisso, ripetitivo o denso e vuoi capirne rapidamente il motivo.

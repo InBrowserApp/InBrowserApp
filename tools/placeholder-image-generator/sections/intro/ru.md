@@ -1,27 +1,27 @@
-## What this tool does
+## Что делает инструмент
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+Генератор изображений-заполнителей создаёт аккуратную временную графику с заданными
+размерами, сплошной или градиентной заливкой и текстом по центру прямо в браузере.
+Каждое изображение можно экспортировать в PNG, SVG, JPEG или WebP, в том числе
+в вариантах с масштабом 2x и 3x для экранов Retina.
 
-## Why it helps
+## Чем это полезно
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+Используйте инструмент для макетов, начального наполнения CMS, пустых состояний интерфейса,
+планирования публикаций в соцсетях или заглушек API. Он пригодится, когда нужен
+готовый файл предсказуемого размера и стиля без запуска приложения для дизайна.
 
-## How it works
+## Как это работает
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+Выберите готовый вариант или задайте ширину и высоту. Выберите сплошной цвет или
+градиент, при необходимости добавьте свой текст, затем настройте размер шрифта,
+масштаб экспорта и качество. Предпросмотр обновляется мгновенно, и вы можете
+скачать изображение в подходящем для работы формате.
 
-## Tips for better placeholders
+## Советы по созданию изображений-заполнителей
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- Оставьте поле текста пустым, чтобы инструмент автоматически показывал
+  размеры изображения.
+- Используйте градиенты для главных баннеров и сплошную заливку для служебных изображений.
+- Экспортируйте в SVG, если нужна чёткая масштабируемая графика, или в PNG, JPEG и WebP,
+  если требуются растровые файлы.

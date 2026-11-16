@@ -5,9 +5,10 @@ import {
   screen,
   waitFor,
 } from "@testing-library/react"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import KeccakHashTextOrFileClient from "./client"
+import * as hashCore from "./core/keccak"
 
 const messages = {
   meta: {
@@ -19,6 +20,8 @@ const messages = {
   plainTextDescription:
     "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
   importFromFileLabel: "Import from file",
+  fileHashError: "Failed to hash file.",
+  textHashError: "Failed to hash text.",
   outputLengthLabel: "Output Length",
   hashResultLabel: "Hash Result",
   hashResultDescription: "Hash result for the current text input.",
@@ -46,7 +49,10 @@ beforeEach(() => {
   window.localStorage.clear()
 })
 
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
 
 function getPlainTextInput() {
   return screen.getByRole("textbox", {
@@ -210,5 +216,39 @@ describe("KeccakHashTextOrFileClient", () => {
     })
 
     expect(window.localStorage.getItem(STORAGE_KEY)).toBe("persist me")
+  })
+
+  test("uses localized fallbacks for unknown text and file failures", async () => {
+    vi.spyOn(hashCore, "hashKeccak").mockRejectedValue({ message: "unknown" })
+    const localizedMessages = {
+      ...messages,
+      fileHashError: "ファイルのハッシュ計算に失敗しました。",
+      textHashError: "テキストのハッシュ計算に失敗しました。",
+    }
+
+    render(<KeccakHashTextOrFileClient messages={localizedMessages} />)
+
+    expect(
+      await screen.findByText(localizedMessages.textHashError)
+    ).toBeTruthy()
+
+    fireEvent.change(getFileInput(), {
+      target: { files: [new File(["content"], "broken.txt")] },
+    })
+
+    expect(
+      await screen.findByText(localizedMessages.fileHashError)
+    ).toBeTruthy()
+    expect(screen.queryByText(localizedMessages.textHashError)).toBeNull()
+  })
+
+  test("preserves Error messages from failed hashing", async () => {
+    vi.spyOn(hashCore, "hashKeccak").mockRejectedValue(
+      new Error("Input read failed")
+    )
+
+    render(<KeccakHashTextOrFileClient messages={messages} />)
+
+    expect(await screen.findByText("Input read failed")).toBeTruthy()
   })
 })

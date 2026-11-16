@@ -1,4 +1,4 @@
 {
-  "name": "Unicode Escape / Unescape",
+  "name": "Unicode-Escaping und -Unescaping",
   "description": "Unicode-Zeichen in verschiedenen Formaten escapen und unescapen, einschließlich \\uXXXX, \\u{XXXXX}, HTML-Entitäten, URL-Kodierung und U+XXXX-Notation"
 }

@@ -1,9 +1,9 @@
 {
   "inputTitle": "إدخال JSON",
-  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputDescription": "الصق مثالًا بصيغة JSON أو استورد ملفًا لاستنتاج مخطط أولي.",
   "inputPlaceholder": "الصق بيانات JSON هنا...",
   "outputTitle": "المخطط المُولّد",
-  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputDescription": "راجع المخطط الناتج، ثم انسخه أو نزّله لإجراء مزيد من التحسينات.",
   "outputEmpty": "أدخل بيانات JSON صالحة لتوليد مخطط",
   "invalidJson": "JSON غير صالح",
   "optionsTitle": "الخيارات",

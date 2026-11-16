@@ -1,18 +1,20 @@
 {
   "configurationLabel": "구성",
-  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "configurationDescription": "현재 서명에 사용할 비밀 키와 HMAC 알고리즘을 설정하세요.",
   "secretKeyLabel": "비밀 키",
   "secretKeyPlaceholder": "비밀 키를 입력하세요",
   "algorithmLabel": "알고리즘",
   "inputLabel": "입력",
   "plainTextLabel": "일반 텍스트",
-  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "plainTextDescription": "파일 내용이나 API 페이로드를 포함한 UTF-8 텍스트를 붙여넣거나 입력하세요.",
   "importFromFileLabel": "파일에서 가져오기",
   "hmacOutputLabel": "HMAC 출력",
-  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
-  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hmacOutputDescription": "현재 텍스트 입력과 비밀 키에 대한 HMAC 출력입니다.",
+  "emptyStateDescription": "비밀 키를 입력하고 텍스트를 제공하거나 파일을 가져와 HMAC 출력을 생성하세요.",
   "hexLabel": "16진수",
   "base64Label": "Base64",
   "copyResultLabel": "결과 복사",
-  "copiedLabel": "복사됨"
+  "copiedLabel": "복사됨",
+  "fileGenerationError": "파일의 HMAC 출력을 생성하지 못했습니다.",
+  "textGenerationError": "텍스트 입력의 HMAC 출력을 생성하지 못했습니다."
 }

@@ -16,6 +16,6 @@
   "registeredPortsDesc": "تستخدمها التطبيقات والخدمات المسجلة لدى IANA، مثل MySQL (3306) و PostgreSQL (5432).",
   "dynamicPorts": "المنافذ الديناميكية (49152-65535):",
   "dynamicPortsDesc": "تسمى ايضا \"المنافذ المؤقتة\"، تستخدم للاتصالات المؤقتة بواسطة تطبيقات العميل.",
-  "noResultsTitle": "No matching ports found",
-  "noResultsDescription": "Try a different port number, service name, or category."
+  "noResultsTitle": "لم يُعثر على منافذ مطابقة",
+  "noResultsDescription": "جرّب رقم منفذ أو اسم خدمة أو فئة مختلفة."
 }

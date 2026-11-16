@@ -1,26 +1,25 @@
-## What this tool does
+## Công cụ này làm gì
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+Trình chuyển SVG sang ảnh biến một tệp SVG cục bộ thành ảnh PNG, JPEG hoặc WebP
+ngay trong trình duyệt. Bạn có thể giữ kích thước gốc, đặt kích thước đầu ra
+tùy chỉnh, điều chỉnh tô nền và thay đổi chất lượng xuất khi định dạng hỗ trợ.
 
-## Why it helps
+## Vì sao công cụ hữu ích
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+Dùng công cụ khi cần nhanh chóng chuyển SVG thành ảnh raster để bàn giao thiết
+kế, làm việc trong CMS, xem trước nội dung mạng xã hội hoặc tạo tài nguyên ứng
+dụng. Công cụ hữu ích để chuyển đồ họa vector thành ảnh bitmap có đầu ra xác
+định mà không phải mở trình chỉnh sửa đồ họa riêng.
 
-## How it works
+## Cách hoạt động
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+Tải lên một tệp SVG, chọn định dạng đầu ra, rồi điều chỉnh chiều rộng, chiều cao,
+nền và chất lượng. Trình chuyển đổi kết xuất SVG trong trình duyệt và chuẩn bị
+tệp ảnh để tải xuống mà không gửi dữ liệu đến máy chủ.
 
-## Tips for better exports
+## Mẹo để xuất ảnh tốt hơn
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- Bật tùy chọn giữ tỷ lệ khung hình nếu muốn đổi kích thước mà không làm méo ảnh.
+- Chọn màu nền cho đầu ra JPEG vì JPEG không hỗ trợ độ trong suốt.
+- Dùng PNG khi muốn đầu ra sắc nét không mất dữ liệu, hoặc WebP và JPEG khi ưu
+  tiên kích thước tệp nhỏ hơn.

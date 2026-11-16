@@ -1,11 +1,11 @@
-## What this comparer is for
+## Kegunaan pembanding ini
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+Gunakan alat ini saat dua daftar seharusnya sesuai, tetapi Anda perlu melihat item yang sama, yang tidak disertakan, dan duplikat secara tepat sebelum mengimpor, menyinkronkan, mengirim pesan, atau merapikan apa pun.
 
-## What you get back
+## Hasil yang Anda dapatkan
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+Alat ini membagi perbandingan menjadi kumpulan hasil yang praktis: item di kedua daftar, hanya di A, hanya di B, semua nilai unik, dan duplikat dalam setiap sumber. Anda dapat menyalin atau mengunduh setiap kumpulan secara terpisah.
 
-## Where it helps most
+## Penggunaan yang paling bermanfaat
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+Alat ini berguna untuk daftar kontak, ID produk, ekspor audit, rekaman inventaris, segmen kampanye, dan proses perapian apa pun yang dapat menimbulkan pekerjaan tambahan jika terjadi kesalahan penggabungan.

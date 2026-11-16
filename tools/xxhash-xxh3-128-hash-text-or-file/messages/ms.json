@@ -13,5 +13,7 @@
   "copiedLabel": "Disalin",
   "seedLabel": "Seed (pilihan)",
   "seedPlaceholder": "0 atau 0x...",
-  "seedInvalid": "Masukkan nombor perpuluhan atau nilai heks 0x."
+  "seedInvalid": "Masukkan nombor perpuluhan atau nilai heks 0x.",
+  "fileHashError": "Gagal menghasilkan hash fail.",
+  "textHashError": "Gagal menghasilkan hash teks."
 }

@@ -29,13 +29,13 @@
   "mismatchDescription": "hash वैध है, लेकिन दिया गया पासवर्ड सत्यापित नहीं हुआ।",
   "invalidTitle": "अमान्य Argon2 hash",
   "invalidDescription": "जांचें कि मान पूरी एन्कोड की गई Argon2 hash स्ट्रिंग है और कोई भी secret वही है जिससे इसे बनाया गया था।",
-  "hashDetailsLabel": "Hash parameters",
+  "hashDetailsLabel": "हैश पैरामीटर",
   "variantLabel": "Variant",
   "versionLabel": "Version",
-  "memoryCostLabel": "Memory cost",
+  "memoryCostLabel": "मेमोरी लागत",
   "iterationsLabel": "Iterations",
   "parallelismLabel": "Parallelism",
-  "saltLengthLabel": "Salt length",
-  "digestLengthLabel": "Digest length",
+  "saltLengthLabel": "सॉल्ट की लंबाई",
+  "digestLengthLabel": "डाइजेस्ट की लंबाई",
   "notAvailableLabel": "निर्दिष्ट नहीं"
 }

@@ -1,7 +1,7 @@
 {
   "importFromFileLabel": "Aus Datei importieren",
   "downloadJsonLabel": "JSON herunterladen",
-  "rawJsonLabel": "Raw JSON",
+  "rawJsonLabel": "JSON-Quelltext",
   "formattedJsonLabel": "Formatiertes JSON",
   "jsonPlaceholder": "JSON hier einfügen...",
   "invalidJsonLabel": "Ungültiges JSON",

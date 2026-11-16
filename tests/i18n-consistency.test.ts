@@ -90,6 +90,18 @@ function collectKeyPaths(value: unknown, prefix = ""): string[] {
   )
 }
 
+function collectPlaceholders(value: unknown, prefix = ""): string[] {
+  if (typeof value === "string") {
+    return [...value.matchAll(/\{[A-Za-z_][A-Za-z0-9_]*\}/g)].map(
+      ([placeholder]) => `${prefix}:${placeholder}`
+    )
+  }
+  if (value === null || typeof value !== "object") return []
+  return Object.entries(value).flatMap(([key, child]) =>
+    collectPlaceholders(child, `${prefix}.${key}`)
+  )
+}
+
 /**
  * Extract markdown ATX heading levels in document order, ignoring fenced code
  * blocks. Heading text is intentionally discarded — translated headings are
@@ -155,18 +167,34 @@ describe.each(families)("locale family $relDir/*.$ext", ({ dir, ext }) => {
   })
 
   const enFile = `en.${ext}`
-  const parityKind = ext === "json" ? "JSON key" : "markdown heading structure"
+  const parityKind =
+    ext === "json" ? "JSON key and placeholder" : "markdown heading structure"
   const others = filesInDir.filter((f) => f !== enFile)
   for (const file of others) {
     test(`${file}: ${parityKind} parity with en`, () => {
       if (ext === "json") {
-        const enKeys = collectKeyPaths(loadJson(path.join(dir, enFile)))
-        const keys = collectKeyPaths(loadJson(path.join(dir, file)))
+        const en = loadJson(path.join(dir, enFile))
+        const localized = loadJson(path.join(dir, file))
+        const enKeys = collectKeyPaths(en)
+        const keys = collectKeyPaths(localized)
         expect(diffSets(enKeys, keys)).toEqual({ missing: [], extra: [] })
+        expect(collectPlaceholders(localized).sort()).toEqual(
+          collectPlaceholders(en).sort()
+        )
       } else {
         const enLevels = extractHeadingLevels(loadText(path.join(dir, enFile)))
         const levels = extractHeadingLevels(loadText(path.join(dir, file)))
         expect(levels).toEqual(enLevels)
+      }
+    })
+
+    test(`${file}: content is localized beyond the English baseline`, () => {
+      const enPath = path.join(dir, enFile)
+      const localizedPath = path.join(dir, file)
+      if (ext === "json") {
+        expect(loadJson(localizedPath)).not.toEqual(loadJson(enPath))
+      } else {
+        expect(loadText(localizedPath).trim()).not.toBe(loadText(enPath).trim())
       }
     })
   }

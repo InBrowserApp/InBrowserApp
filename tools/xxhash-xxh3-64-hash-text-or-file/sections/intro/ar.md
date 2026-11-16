@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 64)?
+## ما هي xxHash (XXH3 64)؟
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 64 outputs a 64-bit (8-byte) hash value, typically rendered as a 16-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3 هي خوارزمية xxHash الحديثة المصممة لسرعة فائقة وتوزيع ممتاز. تنتج XXH3 64 قيمة تجزئة بطول 64 بت (8 بايت)، تُعرض عادةً كسلسلة سداسية عشرية من 16 محرفًا. وهي تجزئة غير تشفيرية تدعم قيمة ابتدائية اختيارية لإنتاج نتائج قابلة لإعادة الحساب.
 
-**Key characteristics:**
+**الخصائص الرئيسية:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **سرعة فائقة**: محسّنة للأداء مع المدخلات الكبيرة
+- **حتمية**: تنتج المدخلات والقيمة الابتدائية نفسها دائمًا التجزئة نفسها
+- **غير تشفيرية**: لا تصلح للأغراض الأمنية
+- **توزيع جيد**: مناسبة جدًا لجداول التجزئة والفهرسة
+- **قيمة ابتدائية**: تدعم قيمة ابتدائية اختيارية لتنويع نواتج التجزئة
 
-**Common uses:**
+**الاستخدامات الشائعة:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- جداول التجزئة وهياكل البيانات
+- فحوصات سلامة الملفات للأغراض غير الأمنية
+- إزالة تكرار البيانات وتقسيمها إلى أجزاء
+- مفاتيح التخزين المؤقت وفهرسة قواعد البيانات
+- مسارات معالجة البيانات بمعدلات نقل عالية

@@ -1,16 +1,16 @@
-## Test Patterns Before They Ship
+## Testa mönster innan de tas i bruk
 
-Regex is easy to get almost right. This tool gives you one place to validate a pattern, see every match, and confirm the replacement output before you use it in code, content pipelines, or search rules.
+Det är lätt att få ett reguljärt uttryck nästan rätt. Verktyget ger dig ett ställe där du kan validera ett mönster, se varje träff och bekräfta ersättningsresultatet innan du använder det i kod, innehållsflöden eller sökregler.
 
-## What You Can Check Here
+## Vad du kan kontrollera här
 
-- Paste sample text and watch matches update immediately
-- Toggle common flags like global, multiline, and ignore case
-- Inspect capturing groups and named groups for every match
-- Preview replacement output with `$1` and `$<name>` references
+- Klistra in exempeltext och se träffarna uppdateras direkt
+- Slå på och av vanliga flaggor som global sökning, flerradsläge och ignorering av skiftläge
+- Granska fångstgrupper och namngivna grupper för varje träff
+- Förhandsgranska ersättningsresultatet med referenserna `$1` och `$<name>`
 
-## Good Uses
+## Bra användningsområden
 
-- Cleaning IDs, log lines, and exports before import
-- Testing content rewrite rules without touching source data
-- Debugging why a pattern matches too much, too little, or nothing at all
+- Rensa ID:n, loggrader och exporter före import
+- Testa regler för att skriva om innehåll utan att ändra källdata
+- Felsöka varför ett mönster matchar för mycket, för lite eller ingenting alls

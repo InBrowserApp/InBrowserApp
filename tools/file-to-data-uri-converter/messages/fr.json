@@ -2,7 +2,7 @@
   "file": "Fichier",
   "dragOrClick": "Cliquez ou glissez pour téléverser un fichier",
   "clearFile": "Effacer le fichier",
-  "dataUri": "Data URI",
+  "dataUri": "URI de données",
   "dataUriPlaceholder": "Le Data URI généré apparaîtra ici...",
   "onlyOneFile": "Un seul fichier peut être téléchargé",
   "readFailed": "Échec de la lecture du fichier",

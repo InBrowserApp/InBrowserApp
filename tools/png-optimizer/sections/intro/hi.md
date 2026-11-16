@@ -1,6 +1,6 @@
-## PNG Optimizer क्या करता है
+## PNG ऑप्टिमाइज़र क्या करता है
 
-PNG Optimizer PNG images को lossless Oxipng optimization से compress करता है। यह visible pixels बदले बिना, जहां संभव हो, PNG structure, compression settings, palette data, और alpha information को rewrite करता है।
+PNG ऑप्टिमाइज़र PNG images को lossless Oxipng optimization से compress करता है। यह visible pixels बदले बिना, जहां संभव हो, PNG structure, compression settings, palette data, और alpha information को rewrite करता है।
 
 ## इसे कब उपयोग करें
 
@@ -14,6 +14,6 @@ Compression level नियंत्रित करता है कि Oxipng 
 
 Image आपके browser में locally process होती है। Tool preview और download के लिए temporary browser object URL बनाता है, और PNG को server पर upload नहीं करता।
 
-## Practical Notes
+## व्यावहारिक सुझाव
 
 Lossless PNG optimization से हर file छोटी होगी, इसकी guarantee नहीं है। कुछ images पहले से optimized होती हैं, और कभी-कभी अलग PNG layout same size या थोड़ा बड़ा हो सकता है। ऐसे में original file रखें या lower compression level आजमाएं।

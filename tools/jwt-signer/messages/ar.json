@@ -1,7 +1,7 @@
 {
   "payloadCardTitle": "الحمولة والترويسة",
   "payloadCardDescription": "حرّر مطالبات JSON وحقول الترويسة المحمية الاختيارية التي سيجري توقيعها داخل الرمز.",
-  "payloadLabel": "Payload JSON",
+  "payloadLabel": "الحمولة بصيغة JSON",
   "payloadPlaceholder": "{\n  \"sub\": \"user_123\",\n  \"role\": \"admin\"\n}",
   "claimsHelperTitle": "مساعدات المطالبات المسجلة",
   "claimsHelperDescription": "استخدم عناصر التحكم هذه لتحديث مطالبات NumericDate الشائعة في حمولة JSON.",

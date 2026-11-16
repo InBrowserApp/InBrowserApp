@@ -1,26 +1,26 @@
-## What this tool does
+## เครื่องมือนี้ทำอะไร
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+ตัวแปลง SVG เป็นรูปภาพนี้แปลงไฟล์ SVG ในเครื่องหนึ่งไฟล์เป็นภาพ PNG, JPEG หรือ WebP
+ได้โดยตรงในเบราว์เซอร์ คุณสามารถคงขนาดเดิม กำหนด
+ขนาดผลลัพธ์เอง ควบคุมการเติมสีพื้นหลัง และปรับคุณภาพการส่งออกเมื่อ
+รูปแบบนั้นรองรับ
 
-## Why it helps
+## มีประโยชน์อย่างไร
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+ใช้เมื่อต้องการแปลง SVG เป็นภาพแรสเตอร์อย่างรวดเร็วสำหรับการส่งต่องานออกแบบ ขั้นตอนการทำงานใน CMS
+ภาพตัวอย่างบนโซเชียล หรือไฟล์ภาพของแอป ช่วยแปลงภาพเวกเตอร์
+ให้เป็นบิตแมปตามที่กำหนดได้ โดยไม่ต้องเปิดโปรแกรมแก้ไขกราฟิกแยกต่างหาก
 
-## How it works
+## วิธีการทำงาน
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+อัปโหลดไฟล์ SVG หนึ่งไฟล์ เลือกรูปแบบผลลัพธ์ แล้วปรับความกว้าง ความสูง
+พื้นหลัง และคุณภาพ ตัวแปลงจะเรนเดอร์ SVG ในเบราว์เซอร์
+และเตรียมไฟล์รูปภาพให้ดาวน์โหลด โดยไม่ส่งข้อมูลไปยังเซิร์ฟเวอร์
 
-## Tips for better exports
+## เคล็ดลับเพื่อการส่งออกที่ดีขึ้น
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- เปิดการคงอัตราส่วนภาพไว้หากต้องการปรับขนาดโดยไม่ให้ภาพบิดเบี้ยว
+- เลือกสีพื้นหลังสำหรับผลลัพธ์ JPEG เพราะ JPEG ไม่รองรับ
+  ความโปร่งใส
+- ใช้ PNG เมื่อต้องการผลลัพธ์คมชัดแบบไม่สูญเสียข้อมูล หรือใช้ WebP และ JPEG เมื่อขนาด
+  ไฟล์ที่เล็กลงสำคัญกว่า

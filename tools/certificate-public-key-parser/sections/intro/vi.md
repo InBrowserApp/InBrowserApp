@@ -1,4 +1,4 @@
-## What is an X.509 certificate parser?
+## Trình phân tích chứng chỉ X.509 là gì?
 
 Chứng chỉ X.509 là một tài liệu đã ký liên kết khóa công khai với một danh tính như tên miền, dịch vụ, tổ chức hoặc cá nhân. Chứng chỉ TLS, tệp chuỗi chứng chỉ và nhiều quy trình S/MIME hoặc ký số dùng định dạng này.
 

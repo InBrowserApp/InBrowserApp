@@ -12,7 +12,7 @@
   "copyResultLabel": "Ergebnis kopieren",
   "copiedLabel": "Kopiert",
   "seedSectionLabel": "Seed",
-  "seedLabel": "Seed (optional)",
+  "seedLabel": "Startwert (optional)",
   "seedDescription": "Leer lassen fuer Standard-CityHash64. Geben Sie einen dezimalen oder einen hexadezimalen Seed mit 0x ein, um die Seed-Variante zu berechnen.",
   "seedPlaceholder": "Optionaler dezimaler oder 0x-Hex-Seed",
   "seedInvalid": "Geben Sie eine Dezimalzahl oder einen 0x-Hexwert ein.",

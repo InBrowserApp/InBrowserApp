@@ -19,7 +19,7 @@
   "addUrlEntryLabel": "إضافة إدخال URL",
   "sitemapEntriesLabel": "ملفات sitemap",
   "sitemapEntriesDescription": "يتحول كل صف إلى سجل <sitemap> داخل الفهرس.",
-  "sitemapEntryLabel": "Sitemap {index}",
+  "sitemapEntryLabel": "خريطة الموقع {index}",
   "addSitemapEntryLabel": "إضافة إدخال sitemap",
   "removeEntryLabel": "إزالة",
   "locationLabel": "الموقع",

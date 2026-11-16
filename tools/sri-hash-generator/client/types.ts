@@ -3,6 +3,8 @@ type SriHashGeneratorMessages = Readonly<{
   plainTextLabel: string
   plainTextDescription: string
   importFromFileLabel: string
+  fileGenerationError: string
+  textGenerationError: string
   hashResultLabel: string
   hashResultDescription: string
   sha256SriLabel: string

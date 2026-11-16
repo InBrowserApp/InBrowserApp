@@ -1,6 +1,6 @@
 ## अवलोकन
 
-JSON Diff Path दो JSON दस्तावेज़ों की तुलना करता है और हर संरचनात्मक बदलाव को JSONPath और JSON Pointer output दोनों के साथ एक पढ़ने योग्य path record में बदल देता है।
+JSON अंतर और पथ दो JSON दस्तावेज़ों की तुलना करता है और हर संरचनात्मक बदलाव को JSONPath और JSON Pointer output दोनों के साथ एक पढ़ने योग्य path record में बदल देता है।
 
 ## कब उपयोग करें
 

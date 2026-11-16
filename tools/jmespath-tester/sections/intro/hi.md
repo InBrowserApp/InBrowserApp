@@ -1,18 +1,18 @@
-## What It Does
+## यह क्या करता है
 
-JMESPath परीक्षक lets you run a JMESPath expression against JSON data directly
-in the browser. You can inspect the matched result, copy it, or download it as
-formatted JSON without leaving the page.
+JMESPath परीक्षक आपको सीधे ब्राउज़र में JSON डेटा पर JMESPath एक्सप्रेशन चलाने
+देता है। आप पेज छोड़े बिना मिले हुए परिणाम को देख सकते हैं, कॉपी कर सकते हैं
+या फ़ॉर्मैट किए गए JSON के रूप में डाउनलोड कर सकते हैं।
 
-## When To Use It
+## इसका उपयोग कब करें
 
-Use it when you need to prototype a JMESPath query, debug a filter expression,
-or verify exactly which values a JSON query will return before you embed that
-expression somewhere else.
+जब JMESPath क्वेरी का शुरुआती रूप आज़माना हो, फ़िल्टर एक्सप्रेशन डीबग करना हो
+या किसी एक्सप्रेशन को दूसरी जगह इस्तेमाल करने से पहले यह पक्का करना हो कि JSON
+क्वेरी कौन-से मान लौटाएगी, तब इसका उपयोग करें।
 
-## What To Expect
+## क्या अपेक्षा करें
 
-The tool validates the JSON input first, then evaluates the JMESPath
-expression. If either side is invalid, the error is surfaced immediately. When
-the query succeeds, the result is formatted as JSON and the result count is
-shown alongside the output.
+टूल पहले JSON इनपुट की वैधता जांचता है, फिर JMESPath एक्सप्रेशन का मूल्यांकन
+करता है। इनमें से कुछ भी अमान्य हो, तो त्रुटि तुरंत दिखाई जाती है। क्वेरी सफल
+होने पर परिणाम JSON के रूप में फ़ॉर्मैट किया जाता है और आउटपुट के साथ परिणामों
+की गिनती दिखाई जाती है।

@@ -1,4 +1,4 @@
 {
-  "name": "PDF Text Extractor",
+  "name": "PDFテキスト抽出ツール",
   "description": "PDFファイルから選択可能なテキストをブラウザ内でローカルに抽出し、プレーンテキストとしてエクスポートします。"
 }

@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## Varför osynliga tecken spelar roll
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+Osynliga Unicode-tecken är lätta att missa eftersom de inte ser felaktiga ut i en vanlig textredigerare. Problemen visar sig först senare: textändringar fungerar inte, identifierare slutar matcha, radbrytningen blir märklig eller texten börjar bete sig annorlunda när den skrivs från höger till vänster.
 
-## What this tool catches
+## Vad verktyget hittar
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+Verktyget söker efter fyra vanliga grupper: tecken utan bredd, styrtecken för textriktning, specialblanksteg och formateringsstyrtecken. Det visar exakt var de finns, ger dig en kommenterad förhandsgranskning och förbereder en rensad version som du kan kopiera eller exportera.
 
-## When to use it
+## När det är användbart
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+Använd verktyget när du har kopierat text från dokument, PDF-filer, kalkylblad, chattappar, CMS-redigerare eller designverktyg. Det är särskilt användbart när en sträng ser normal ut men jämförelser, rendering eller efterföljande bearbetning fortsätter att bete sig märkligt.

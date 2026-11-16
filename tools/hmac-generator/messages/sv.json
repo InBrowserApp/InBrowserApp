@@ -1,18 +1,20 @@
 {
   "configurationLabel": "Konfiguration",
-  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "configurationDescription": "Ange den hemliga nyckeln och HMAC-algoritmen för den aktuella signaturen.",
   "secretKeyLabel": "Hemlig Nyckel",
   "secretKeyPlaceholder": "Ange din hemliga nyckel",
   "algorithmLabel": "Algoritm",
   "inputLabel": "Inmatning",
   "plainTextLabel": "Vanlig text",
-  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "plainTextDescription": "Klistra in eller skriv valfri UTF-8-text, inklusive filinnehåll eller API-nyttolaster.",
   "importFromFileLabel": "Importera från fil",
   "hmacOutputLabel": "HMAC-utdata",
-  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
-  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hmacOutputDescription": "HMAC-utdata för den aktuella textinmatningen och hemliga nyckeln.",
+  "emptyStateDescription": "Ange en hemlig nyckel och skriv text eller importera en fil för att generera HMAC-utdata.",
   "hexLabel": "Hexadecimal",
   "base64Label": "Base64",
   "copyResultLabel": "Kopiera resultat",
-  "copiedLabel": "Kopierat"
+  "copiedLabel": "Kopierat",
+  "fileGenerationError": "Det gick inte att generera HMAC-utdata för filen.",
+  "textGenerationError": "Det gick inte att generera HMAC-utdata för textinmatningen."
 }

@@ -1,4 +1,4 @@
 {
-  "name": "Cron Expression Parser",
+  "name": "Analisador de expressões cron",
   "description": "Analise, valide e explique agendamentos cron com detalhes dos campos e próximos horários de execução."
 }

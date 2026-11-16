@@ -1,27 +1,28 @@
-## What this tool does
+## Fungsi alat ini
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+Penjana Imej Pemegang Tempat ini menghasilkan grafik contoh yang kemas dengan
+saiz tersuai, isian padu atau kecerunan dan teks di tengah terus dalam pelayar anda.
+Anda boleh mengeksport setiap imej pemegang tempat sebagai PNG, SVG, JPEG atau
+WebP, termasuk versi 2x dan 3x yang sesuai untuk Retina.
 
-## Why it helps
+## Manfaatnya
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+Gunakannya untuk mockup reka bentuk, kandungan awal CMS, keadaan kosong,
+perancangan susun atur media sosial atau pemegang tempat API. Alat ini berguna
+apabila anda memerlukan aset segera dengan saiz dan gaya yang boleh dijangka
+tanpa membuka aplikasi reka bentuk.
 
-## How it works
+## Cara ia berfungsi
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+Pilih pratetap atau masukkan lebar dan tinggi anda sendiri. Pilih warna padu atau
+kecerunan, tambah teks tersuai jika perlu, kemudian laraskan saiz teks, skala
+eksport dan kualiti. Pratonton dikemas kini serta-merta supaya anda boleh memuat
+turun format yang sesuai dengan aliran kerja anda.
 
-## Tips for better placeholders
+## Petua untuk imej pemegang tempat yang lebih baik
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- Biarkan medan teks kosong jika anda mahu alat ini memaparkan dimensi
+  secara automatik.
+- Gunakan kecerunan untuk sepanduk utama dan isian padu untuk pemegang tempat utiliti.
+- Eksport SVG apabila anda mahukan aset yang tajam dan boleh diskalakan, atau PNG,
+  JPEG dan WebP apabila anda memerlukan fail raster.

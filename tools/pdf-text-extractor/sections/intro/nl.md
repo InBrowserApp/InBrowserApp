@@ -1,6 +1,6 @@
 ## Wat deze tool doet
 
-PDF Text Extractor leest een PDF in je browser en haalt tekst op die al
+PDF-tekstextractor leest een PDF in je browser en haalt tekst op die al
 selecteerbaar is in het document. De uitvoer is platte tekst die je kunt
 kopiëren of downloaden als TXT-bestand voor notities, zoekindexering,
 gegevenscontrole of verdere verwerking.

@@ -1,18 +1,13 @@
-## What It Does
+## Was es macht
 
-JMESPath-Tester lets you run a JMESPath expression against JSON data directly
-in the browser. You can inspect the matched result, copy it, or download it as
-formatted JSON without leaving the page.
+Mit dem JMESPath-Tester kannst du einen JMESPath-Ausdruck direkt im Browser auf
+JSON-Daten anwenden. Du kannst das Ergebnis prüfen, kopieren oder als
+formatiertes JSON herunterladen, ohne die Seite zu verlassen.
 
-## When To Use It
+## Wann man es verwendet
 
-Use it when you need to prototype a JMESPath query, debug a filter expression,
-or verify exactly which values a JSON query will return before you embed that
-expression somewhere else.
+Verwende es, wenn du eine JMESPath-Abfrage entwickeln, einen Filterausdruck untersuchen oder genau prüfen möchtest, welche Werte eine JSON-Abfrage zurückgibt, bevor du den Ausdruck an anderer Stelle einsetzt.
 
-## What To Expect
+## Was dich erwartet
 
-The tool validates the JSON input first, then evaluates the JMESPath
-expression. If either side is invalid, the error is surfaced immediately. When
-the query succeeds, the result is formatted as JSON and the result count is
-shown alongside the output.
+Das Tool prüft zunächst die JSON-Eingabe und wertet dann den JMESPath-Ausdruck aus. Ist eine der Eingaben ungültig, wird der Fehler sofort angezeigt. Bei erfolgreicher Abfrage wird das Ergebnis als JSON formatiert und zusammen mit der Ausgabe die Trefferzahl angezeigt.

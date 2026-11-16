@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "Opciones",
   "optionsDescription": "Elige un formato de código de barras y ajusta tamaño, etiquetas y colores.",
-  "preview": "Preview",
-  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
-  "download": "Download",
+  "preview": "Vista previa",
+  "previewDescription": "Revise el código de barras generado y expórtelo como PNG, SVG, JPEG o WebP.",
+  "download": "Descargar",
   "text": "Texto",
   "textPlaceholder": "Escribe contenido...",
   "format": "Formato",
@@ -20,5 +20,6 @@
   "center": "Centro",
   "right": "Derecha",
   "top": "Arriba",
-  "bottom": "Abajo"
+  "bottom": "Abajo",
+  "renderError": "No se pudo renderizar el código de barras."
 }

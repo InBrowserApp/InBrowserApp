@@ -45,7 +45,7 @@
   "storageFailed": "Lo spazio di archiviazione del browser non è disponibile o è pieno. Puoi continuare a modificare, ma questa bozza potrebbe andare persa ricaricando la pagina.",
   "opening": "Apertura file…",
   "cancel": "Annulla",
-  "rendering": "Rendering Markdown…",
+  "rendering": "Generazione anteprima Markdown…",
   "previewFailed": "Il browser non è riuscito a renderizzare questo documento. Potrebbe superare la memoria disponibile. Riprova, modifica il sorgente o apri un altro file.",
   "retry": "Riprova",
   "missingReference": "Questo link non corrisponde a un titolo o a un segnalibro nel documento.",

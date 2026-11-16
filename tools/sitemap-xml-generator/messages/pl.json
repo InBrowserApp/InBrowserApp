@@ -19,7 +19,7 @@
   "addUrlEntryLabel": "Dodaj wpis URL",
   "sitemapEntriesLabel": "Pliki sitemap",
   "sitemapEntriesDescription": "Każdy wiersz staje się rekordem <sitemap> w indeksie.",
-  "sitemapEntryLabel": "Sitemap {index}",
+  "sitemapEntryLabel": "Mapa witryny {index}",
   "addSitemapEntryLabel": "Dodaj wpis sitemap",
   "removeEntryLabel": "Usuń",
   "locationLabel": "Lokalizacja",

@@ -1,11 +1,11 @@
-## What this comparer is for
+## למה משמש כלי ההשוואה
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+השתמשו בכלי כששתי רשימות אמורות להתאים זו לזו, אבל עליכם לראות בדיוק את החפיפה, הפריטים שאינם משותפים והכפילויות לפני ייבוא, סנכרון, שליחת הודעות או ניקוי.
 
-## What you get back
+## מה מקבלים
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+הכלי מחלק את ההשוואה לקבוצות תוצאות שימושיות: פריטים משותפים, פריטים רק ב־A, פריטים רק ב־B, כל הערכים הייחודיים וכפילויות בכל מקור. אפשר להעתיק או להוריד כל קבוצה בנפרד.
 
-## Where it helps most
+## היכן הוא מועיל במיוחד
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+הכלי שימושי לרשימות אנשי קשר, מזהי מוצרים, קובצי ייצוא לביקורת, תמונות מצב של מלאי, פלחי קמפיינים וכל פעולת ניקוי שבה מיזוג שגוי אחד ייצור עבודה נוספת בהמשך.

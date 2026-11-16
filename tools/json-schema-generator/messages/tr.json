@@ -1,9 +1,9 @@
 {
   "inputTitle": "JSON Girdisi",
-  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputDescription": "Başlangıç şemasını çıkarmak için örnek JSON yapıştırın veya dosya içe aktarın.",
   "inputPlaceholder": "JSON verisini buraya yapıştırın...",
   "outputTitle": "Oluşturulan Şema",
-  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputDescription": "Oluşturulan şemayı inceleyin, ardından geliştirmeye devam etmek için kopyalayın veya indirin.",
   "outputEmpty": "Şema oluşturmak için geçerli JSON verisi sağlayın",
   "invalidJson": "Geçersiz JSON",
   "optionsTitle": "Seçenekler",

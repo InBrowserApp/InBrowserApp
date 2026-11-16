@@ -1,27 +1,30 @@
-## What this tool does
+## O que esta ferramenta faz
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+Este gerador de imagens placeholder cria imagens de exemplo simples com tamanhos
+personalizados, preenchimentos sólidos ou gradientes e texto centralizado
+diretamente no navegador. Você pode exportar cada imagem em PNG, SVG, JPEG ou
+WebP, incluindo versões 2x e 3x adequadas para telas Retina.
 
-## Why it helps
+## Por que é útil
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+Use-o em modelos de design, conteúdo inicial de CMS, estados vazios,
+planejamento de layouts para redes sociais ou imagens de exemplo para APIs.
+É útil quando você precisa de uma imagem rápida com tamanho e estilo
+previsíveis sem abrir um aplicativo de design.
 
-## How it works
+## Como funciona
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+Escolha uma predefinição ou informe a largura e a altura desejadas. Selecione
+uma cor sólida ou um gradiente, adicione texto personalizado se necessário e
+ajuste o tamanho do texto, a escala de exportação e a qualidade. A pré-visualização
+é atualizada instantaneamente para que você possa baixar o formato adequado
+ao seu fluxo de trabalho.
 
-## Tips for better placeholders
+## Dicas para melhores imagens de exemplo
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- Deixe o campo de texto vazio se quiser que a ferramenta mostre as dimensões
+  automaticamente.
+- Use gradientes em banners de destaque e preenchimentos sólidos em imagens
+  de exemplo utilitárias.
+- Exporte em SVG quando quiser uma imagem nítida e escalável, ou em PNG, JPEG
+  e WebP quando precisar de arquivos rasterizados.

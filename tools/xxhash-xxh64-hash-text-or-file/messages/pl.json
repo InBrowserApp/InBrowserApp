@@ -10,5 +10,7 @@
   "decimalLabel": "Dziesiętny",
   "binaryLabel": "Binarny",
   "copyResultLabel": "Kopiuj wynik",
-  "copiedLabel": "Skopiowano"
+  "copiedLabel": "Skopiowano",
+  "fileHashError": "Nie udało się obliczyć skrótu pliku.",
+  "textHashError": "Nie udało się obliczyć skrótu tekstu."
 }

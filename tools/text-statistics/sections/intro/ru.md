@@ -1,11 +1,11 @@
-## Why this tool feels different
+## Чем отличается этот инструмент
 
-Text Statistics should do more than count words. This version treats the page like a live writing desk: it measures length, rhythm, repetition, and structure the moment you paste a draft.
+Статистика Текста — это больше, чем подсчёт слов. Здесь страница работает как интерактивный редакторский стол: сразу после вставки текста она измеряет объём, ритм, повторы и структуру.
 
-## What it measures
+## Что измеряется
 
-You get the core counts you expect, then the signals that actually help editing: unique words, average sentence length, lexical diversity, longest paragraph, and repeated terms. When the browser supports `Intl.Segmenter`, these numbers are segmented in a way that works better across writing systems.
+Помимо привычных счётчиков вы получаете показатели, полезные при редактировании: уникальные слова, среднюю длину предложения, лексическое разнообразие, самый длинный абзац и повторяющиеся слова. Если браузер поддерживает `Intl.Segmenter`, текст разбивается на части с более точным учётом разных систем письма.
 
-## When to use it
+## Когда использовать
 
-Use it before publishing landing-page copy, product descriptions, scripts, newsletters, bios, or meeting summaries. It is especially useful when something feels too wordy, too repetitive, or too dense, but you need a fast clue about why.
+Используйте инструмент перед публикацией текста лендинга, описания товара, сценария, рассылки, биографии или итогов встречи. Он особенно полезен, когда текст кажется слишком многословным, однообразным или плотным, а вам нужно быстро понять причину.

@@ -10,5 +10,7 @@
   "decimalLabel": "Decimaal",
   "binaryLabel": "Binair",
   "copyResultLabel": "Resultaat kopiëren",
-  "copiedLabel": "Gekopieerd"
+  "copiedLabel": "Gekopieerd",
+  "fileHashError": "Het bestand kon niet worden gehasht.",
+  "textHashError": "De tekst kon niet worden gehasht."
 }

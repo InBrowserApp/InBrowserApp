@@ -14,5 +14,7 @@
   "seedSectionLabel": "सीड",
   "seedLabel": "सीड (वैकल्पिक)",
   "seedPlaceholder": "0 या 0x...",
-  "seedInvalid": "दशमलव संख्या या 0x हेक्स मान दर्ज करें।"
+  "seedInvalid": "दशमलव संख्या या 0x हेक्स मान दर्ज करें।",
+  "fileHashError": "फ़ाइल का हैश बनाने में विफल।",
+  "textHashError": "टेक्स्ट का हैश बनाने में विफल।"
 }

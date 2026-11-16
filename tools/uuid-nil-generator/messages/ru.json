@@ -1,5 +1,5 @@
 {
-  "valueTitle": "Nil UUID",
+  "valueTitle": "Нулевой UUID",
   "valueDescription": "Скопируйте стандартизированный UUID из одних нулей в представлении, которое ожидает ваша система.",
   "canonicalLabel": "Канонический UUID",
   "rawHexLabel": "32-значное hex",

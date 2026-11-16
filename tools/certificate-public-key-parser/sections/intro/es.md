@@ -1,4 +1,4 @@
-## What is an X.509 certificate parser?
+## ¿Qué es un analizador de certificados X.509?
 
 Un certificado X.509 es un documento firmado que vincula una clave pública con una identidad, como un dominio, servicio, organización o persona. Los certificados TLS, los archivos de cadenas de certificados y muchos flujos de trabajo de S/MIME o firma usan este formato.
 

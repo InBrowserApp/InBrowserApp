@@ -10,7 +10,7 @@
   "macAddressLabel": "MAC-Adresse",
   "macAddressDescription": "Standardmäßig wird eine lokal verwaltete zufällige Adresse verwendet, damit echte Hardwareadressen nicht offengelegt werden.",
   "randomMacAddressLabel": "MAC-Adresse zufällig wählen",
-  "clockSequenceLabel": "Clock Sequence",
+  "clockSequenceLabel": "Clock-Sequenz",
   "clockSequenceDescription": "Ein 14-Bit-Wert, der zusammen mit dem Zeitstempel Kollisionen vermeidet.",
   "randomClockSequenceLabel": "Clock Sequence zufällig wählen",
   "macAddressRequired": "Gib eine MAC-Adresse ein.",

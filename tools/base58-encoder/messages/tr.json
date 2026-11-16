@@ -10,9 +10,9 @@
   "outputPlaceholder": "Base58 çıktısı burada görünecek...",
   "download": "Base58 İndir",
   "readFailed": "Dosya okunamadı",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Örnek yükle",
+  "clearLabel": "Temizle",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı",
   "importFromFileLabel": "Dosyadan içe aktar"
 }

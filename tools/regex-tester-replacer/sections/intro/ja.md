@@ -1,16 +1,16 @@
-## Test Patterns Before They Ship
+## 公開前に正規表現をテスト
 
-Regex is easy to get almost right. This tool gives you one place to validate a pattern, see every match, and confirm the replacement output before you use it in code, content pipelines, or search rules.
+正規表現は少しの違いで意図しない結果になりがちです。このツールでパターンを検証し、一致箇所を確認して、コードやコンテンツ処理、検索ルールに使う前に置換結果をプレビューできます。
 
-## What You Can Check Here
+## ここで確認できること
 
-- Paste sample text and watch matches update immediately
-- Toggle common flags like global, multiline, and ignore case
-- Inspect capturing groups and named groups for every match
-- Preview replacement output with `$1` and `$<name>` references
+- テスト用テキストを貼り付け、一致箇所をすぐに確認
+- グローバル、複数行、大文字小文字の無視などのフラグを切り替え
+- 各一致のキャプチャグループと名前付きグループを確認
+- `$1`や`$<name>`参照を使った置換結果をプレビュー
 
-## Good Uses
+## 活用例
 
-- Cleaning IDs, log lines, and exports before import
-- Testing content rewrite rules without touching source data
-- Debugging why a pattern matches too much, too little, or nothing at all
+- ID、ログ行、インポート前のデータを整理
+- 元データを変更せずにコンテンツ書き換えルールをテスト
+- パターンが広すぎる、狭すぎる、または何にも一致しない原因を調査

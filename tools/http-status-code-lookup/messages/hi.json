@@ -16,6 +16,6 @@
   "redirection": "पुनर्निर्देशन",
   "clientError": "क्लाइंट त्रुटि",
   "serverError": "सर्वर त्रुटि",
-  "noResultsTitle": "No matching status codes",
-  "noResultsDescription": "Try a different code, phrase, or category."
+  "noResultsTitle": "कोई मेल खाता स्थिति कोड नहीं मिला",
+  "noResultsDescription": "कोई दूसरा कोड, वाक्यांश या श्रेणी आज़माएं।"
 }

@@ -1,4 +1,4 @@
-## What is an SSH public key fingerprint?
+## Czym jest odcisk klucza publicznego SSH?
 
 Odcisk klucza publicznego SSH to krótki skrót bloku klucza publicznego. Daje zwartą wartość do porównania przed zaufaniem kluczowi w `authorized_keys`, inwentarzu serwerów lub procesie wdrożenia.
 

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "name": "Cron Expression Generator",
+    "name": "Trình tạo biểu thức cron",
     "description": "Tạo biểu thức cron năm trường bằng điều khiển trực quan, mẫu có sẵn và bản xem trước các lần chạy sắp tới."
   },
   "actions": {

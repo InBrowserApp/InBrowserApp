@@ -1,11 +1,11 @@
-## What this text diff is for
+## Công cụ so sánh văn bản này dùng để làm gì
 
-Use this tool when you need to compare two versions of copy, code, notes, or configuration before you merge, publish, or send anything out.
+Dùng công cụ So sánh văn bản khi bạn cần so sánh hai phiên bản nội dung, mã, ghi chú hoặc cấu hình trước khi hợp nhất, xuất bản hoặc gửi đi.
 
-## How to read the result
+## Cách đọc kết quả
 
-The side-by-side view helps you scan line numbers and changed fragments quickly. Switch to the unified view when you need a compact patch-style output for review, handoff, or documentation.
+Chế độ xem song song giúp bạn đọc lướt số dòng và các đoạn thay đổi nhanh chóng. Chuyển sang chế độ hợp nhất khi cần đầu ra gọn theo dạng bản vá để rà soát, bàn giao hoặc đưa vào tài liệu.
 
-## When the options matter
+## Khi nào các tùy chọn hữu ích
 
-Ignore case when capitalization is noise. Ignore whitespace when indentation or spacing should not count as a real edit. Hide unchanged rows when you only want to inspect what actually moved.
+Bỏ qua chữ hoa thường khi việc viết hoa không có ý nghĩa. Bỏ qua khoảng trắng khi thụt lề hoặc giãn cách không được tính là chỉnh sửa thực sự. Ẩn các dòng không đổi khi bạn chỉ muốn kiểm tra phần thực sự thay đổi.

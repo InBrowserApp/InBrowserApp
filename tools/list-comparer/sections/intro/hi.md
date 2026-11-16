@@ -1,11 +1,11 @@
-## What this comparer is for
+## यह तुलना टूल किसलिए है
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+जब दो सूचियों का मेल होना चाहिए, लेकिन आयात, सिंक, संदेश भेजने या सफ़ाई करने से पहले आपको साझा, अलग और डुप्लिकेट आइटम ठीक-ठीक देखने हों, तब इस टूल का उपयोग करें।
 
-## What you get back
+## आपको क्या मिलता है
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+यह तुलना को उपयोगी परिणाम सेट में बांटता है: साझा आइटम, केवल A में मौजूद आइटम, केवल B में मौजूद आइटम, सभी अद्वितीय मान और हर स्रोत के डुप्लिकेट। आप हर सेट को अलग से कॉपी या डाउनलोड कर सकते हैं।
 
-## Where it helps most
+## यह सबसे अधिक कहां मदद करता है
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+यह संपर्क सूचियों, उत्पाद ID, ऑडिट निर्यात, इन्वेंटरी स्नैपशॉट, अभियान समूहों और ऐसी किसी भी सफ़ाई में उपयोगी है जहां गलत मर्ज से बाद में अतिरिक्त काम बढ़ सकता है।

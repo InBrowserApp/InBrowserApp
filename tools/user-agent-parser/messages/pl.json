@@ -1,6 +1,6 @@
 {
   "use-current": "Użyj mojego user agenta",
-  "input-label": "User Agent",
+  "input-label": "Identyfikator klienta (User Agent)",
   "input-placeholder": "Wklej tutaj ciąg User-Agent...",
   "input-error": "Wprowadź ciąg User-Agent do analizy.",
   "json-output": "Wyjście JSON",

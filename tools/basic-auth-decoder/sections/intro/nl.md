@@ -1,14 +1,14 @@
-## What It Does
+## Wat deze tool doet
 
 Decodeer de HTTP Basic Authorization-header om gebruikersnaam en wachtwoord uit Base64 te halen. Handig voor debuggen en API-tests.
 
-## Accepted Input
+## Geaccepteerde invoer
 
 Plak iets als: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+Deze tool accepteert ook een volledige `Authorization: Basic ...`-regel.
 
-## Notes
+## Opmerkingen
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- Base64 codeert alleen inloggegevens; het beschermt ze niet.
+- De decoder splitst op de eerste `:` en houdt de rest in het wachtwoord.
+- Alles draait lokaal in je browser.

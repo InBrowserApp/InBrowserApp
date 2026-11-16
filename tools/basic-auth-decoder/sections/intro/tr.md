@@ -1,14 +1,14 @@
-## What It Does
+## Ne Yapar?
 
 HTTP Basic Authorization başlığını çözüp Base64’ten kullanıcı adı ve parolayı çıkarın. Hata ayıklama ve API testi için yararlı.
 
-## Accepted Input
+## Kabul Edilen Girdi
 
 Şunun gibi yapıştırın: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+Bu araç, tam bir `Authorization: Basic ...` satırını da kabul eder.
 
-## Notes
+## Notlar
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- Base64, kimlik bilgilerini yalnızca kodlar; onları korumaz.
+- Çözücü, ilk `:` karakterinden böler ve kalan kısmı parolada tutar.
+- Her şey tarayıcınızda yerel olarak çalışır.

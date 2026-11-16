@@ -2,7 +2,7 @@
   "file": "Archivo",
   "dragOrClick": "Haz clic o arrastra para subir un archivo",
   "clearFile": "Limpiar archivo",
-  "dataUri": "Data URI",
+  "dataUri": "URI de datos",
   "dataUriPlaceholder": "El Data URI generado aparecerá aquí...",
   "onlyOneFile": "Solo se puede subir un archivo",
   "readFailed": "No se pudo leer el archivo",

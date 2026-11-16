@@ -16,6 +16,6 @@
   "redirection": "Chuyen huong",
   "clientError": "Loi May Khach",
   "serverError": "Loi May Chu",
-  "noResultsTitle": "No matching status codes",
-  "noResultsDescription": "Try a different code, phrase, or category."
+  "noResultsTitle": "Không có mã trạng thái phù hợp",
+  "noResultsDescription": "Thử mã, cụm từ hoặc danh mục khác."
 }

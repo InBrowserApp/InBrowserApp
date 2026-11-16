@@ -1,6 +1,6 @@
 ## Perkara yang dilakukan oleh alat ini
 
-PDF Text Extractor membaca PDF dalam pelayar anda dan mengeluarkan teks yang
+Pengekstrak Teks PDF membaca PDF dalam pelayar anda dan mengeluarkan teks yang
 sudah boleh dipilih dalam dokumen. Output ialah teks biasa yang boleh anda
 salin atau muat turun sebagai fail TXT untuk nota, pengindeksan carian, semakan
 data, atau pemprosesan lanjutan.

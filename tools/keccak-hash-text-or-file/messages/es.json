@@ -11,5 +11,7 @@
   "decimalLabel": "Decimal",
   "binaryLabel": "Binario",
   "copyResultLabel": "Copiar resultado",
-  "copiedLabel": "Copiado"
+  "copiedLabel": "Copiado",
+  "fileHashError": "No se pudo calcular el hash del archivo.",
+  "textHashError": "No se pudo calcular el hash del texto."
 }

@@ -97,8 +97,8 @@ function Sm3HashTextOrFileClient({ messages }: Sm3HashTextOrFileClientProps) {
               error instanceof Error
                 ? error.message
                 : selectedFile
-                  ? "Failed to hash file."
-                  : "Failed to hash text.",
+                  ? messages.fileHashError
+                  : messages.textHashError,
           })
         }
       })
@@ -106,7 +106,12 @@ function Sm3HashTextOrFileClient({ messages }: Sm3HashTextOrFileClientProps) {
     return () => {
       cancelled = true
     }
-  }, [deferredPlainText, selectedFile])
+  }, [
+    messages.fileHashError,
+    messages.textHashError,
+    deferredPlainText,
+    selectedFile,
+  ])
 
   async function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
     const nextFile = event.target.files?.[0]

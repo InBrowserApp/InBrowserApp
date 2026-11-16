@@ -10,5 +10,7 @@
   "decimalLabel": "عشري",
   "binaryLabel": "ثنائي",
   "copyResultLabel": "نسخ النتيجة",
-  "copiedLabel": "تم النسخ"
+  "copiedLabel": "تم النسخ",
+  "fileHashError": "تعذّر حساب تجزئة الملف.",
+  "textHashError": "تعذّر حساب تجزئة النص."
 }

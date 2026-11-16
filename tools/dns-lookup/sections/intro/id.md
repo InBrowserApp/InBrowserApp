@@ -1,4 +1,4 @@
-DNS Lookup memeriksa record DNS publik yang dikembalikan untuk sebuah nama domain. Ini berguna saat Anda memverifikasi peluncuran situs baru, memecahkan masalah pengiriman email, memeriksa perubahan CDN atau load balancer, atau memastikan apakah respons terkait DNSSEC terlihat berbeda di berbagai resolver.
+Pencarian DNS memeriksa record DNS publik yang dikembalikan untuk sebuah nama domain. Ini berguna saat Anda memverifikasi peluncuran situs baru, memecahkan masalah pengiriman email, memeriksa perubahan CDN atau load balancer, atau memastikan apakah respons terkait DNSSEC terlihat berbeda di berbagai resolver.
 
 ## Kapan Digunakan
 

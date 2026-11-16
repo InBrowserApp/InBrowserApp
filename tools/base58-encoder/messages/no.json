@@ -10,9 +10,9 @@
   "outputPlaceholder": "Base58-utdata vises her...",
   "download": "Last ned Base58",
   "readFailed": "Kunne ikke lese filen",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Last inn eksempel",
+  "clearLabel": "Tøm",
+  "copyLabel": "Kopier",
+  "copiedLabel": "Kopiert",
   "importFromFileLabel": "Importer fra fil"
 }

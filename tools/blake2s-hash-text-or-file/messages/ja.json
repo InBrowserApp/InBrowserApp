@@ -16,5 +16,7 @@
   "keyLabel": "BLAKE2キー（Base64）",
   "keyPlaceholder": "キー付きハッシュ用のオプションキー（Base64エンコード）",
   "invalidBase64Title": "Base64 の値がまだ有効ではありません。",
-  "invalidBase64Description": "パディングの不足、想定外の文字、データが一部しか貼り付けられていないかを確認してください。"
+  "invalidBase64Description": "パディングの不足、想定外の文字、データが一部しか貼り付けられていないかを確認してください。",
+  "fileHashError": "ファイルのハッシュ計算に失敗しました。",
+  "textHashError": "テキストのハッシュ計算に失敗しました。"
 }

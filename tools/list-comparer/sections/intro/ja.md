@@ -1,11 +1,11 @@
-## What this comparer is for
+## この比較ツールの用途
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+2つのリストを照合し、インポート、同期、連絡、整理の前に共通項目、除外項目、重複を正確に確認したいときに使います。
 
-## What you get back
+## 比較結果
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+共通項目、Aのみにある項目、Bのみにある項目、すべての一意な値、各入力内の重複など、実用的な結果セットに分けて表示します。各セットを個別にコピーまたはダウンロードできます。
 
-## Where it helps most
+## 活用例
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+連絡先リスト、商品ID、監査データ、在庫スナップショット、キャンペーン対象など、誤った統合による手戻りを避けたい場面に便利です。

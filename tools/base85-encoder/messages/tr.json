@@ -9,9 +9,9 @@
   "download": "Base85 İndir",
   "readFailed": "Dosya okunamadı",
   "invalidBase85": "Z85, giriş uzunluğunun 4 baytın katı olmasını gerektirir.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Örnek yükle",
+  "clearLabel": "Temizle",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı",
   "importFromFileLabel": "Dosyadan içe aktar"
 }

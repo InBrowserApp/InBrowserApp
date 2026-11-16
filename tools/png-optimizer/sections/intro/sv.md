@@ -1,6 +1,6 @@
-## Vad PNG Optimizer gör
+## Vad PNG-optimeraren gör
 
-PNG Optimizer komprimerar PNG-bilder med förlustfri Oxipng-optimering. Den skriver om PNG-strukturen, komprimeringsinställningar, palettdata och alfainformation där det är möjligt utan att ändra de synliga pixlarna.
+PNG-optimeraren komprimerar PNG-bilder med förlustfri Oxipng-optimering. Den skriver om PNG-strukturen, komprimeringsinställningar, palettdata och alfainformation där det är möjligt utan att ändra de synliga pixlarna.
 
 ## När du ska använda den
 

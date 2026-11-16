@@ -41,7 +41,7 @@
   "dimensionsLabel": "Marco",
   "contentTypeText": "Texto",
   "contentTypeUrl": "URL",
-  "contentTypeEmail": "Email",
+  "contentTypeEmail": "Correo electrónico",
   "contentTypePhone": "Teléfono",
   "contentTypeSms": "SMS",
   "contentTypeWifi": "Wi-Fi",

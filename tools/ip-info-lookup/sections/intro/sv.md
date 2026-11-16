@@ -1,6 +1,6 @@
 ## Vad verktyget slår upp
 
-IP Info Lookup slår upp en IPv4-adress, IPv6-adress, domän eller URL och visar de offentliga metadata som internettjänster kan rapportera för varje adress. Det är användbart när du behöver granska vart en domän pekar, vilket nätverk som äger en adress, vilket omvänt DNS-värdnamn som finns, eller om IPv4- och IPv6-poster leder till olika leverantörer.
+Verktyget för uppslagning av IP-information slår upp en IPv4-adress, IPv6-adress, domän eller URL och visar de offentliga metadata som internettjänster kan rapportera för varje adress. Det är användbart när du behöver granska vart en domän pekar, vilket nätverk som äger en adress, vilket omvänt DNS-värdnamn som finns, eller om IPv4- och IPv6-poster leder till olika leverantörer.
 
 ## Så fungerar uppslagning av domäner och URL:er
 
