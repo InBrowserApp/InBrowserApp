@@ -351,4 +351,5 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/xxhash-xxh64-hash-text-or-file/page"),
   "yaml-to-json-converter": () => import("@tool/yaml-to-json-converter/page"),
   "yaml-to-toml-converter": () => import("@tool/yaml-to-toml-converter/page"),
+  "zip-creator": () => import("@tool/zip-creator/page"),
 }
