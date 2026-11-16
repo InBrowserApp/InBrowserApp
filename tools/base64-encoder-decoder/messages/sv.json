@@ -1,8 +1,10 @@
 {
+  "encodeLabel": "Koda",
+  "decodeLabel": "Avkoda",
   "plainTextLabel": "Vanlig text",
   "plainTextPlaceholder": "Ange text att koda…",
   "plainTextDescription": "Klistra in eller skriv valfri UTF-8-text, inklusive emoji och icke-latinska tecken.",
-  "encodedTextLabel": "Base64-utdata",
+  "encodedTextLabel": "Base64",
   "encodedTextPlaceholder": "Klistra in Base64 att avkoda…",
   "encodedTextDescription": "Redigera Base64-texten direkt för att avkoda den tillbaka till vanlig text.",
   "invalidBase64Title": "Base64-värdet är inte giltigt än.",
