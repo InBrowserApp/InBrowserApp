@@ -34,6 +34,7 @@ function useAudioRecorder() {
   const timerStartedAtRef = useRef(0)
   const elapsedMsRef = useRef(0)
   const objectUrlRef = useRef<string | null>(null)
+  const startRequestIdRef = useRef(0)
 
   const [isSupported, setIsSupported] = useState(true)
   const [recorderState, setRecorderState] = useState<RecorderState>("idle")
@@ -48,6 +49,7 @@ function useAudioRecorder() {
 
   useEffect(() => {
     return () => {
+      startRequestIdRef.current += 1
       stopTimer()
       discardActiveRecorder()
       cleanupStream()
@@ -187,9 +189,15 @@ function useAudioRecorder() {
     setIsPreparing(true)
     updateElapsedMs(0)
     chunksRef.current = []
+    const startRequestId = ++startRequestIdRef.current
 
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+      if (startRequestId !== startRequestIdRef.current) {
+        stream.getTracks().forEach((track) => track.stop())
+        return
+      }
+
       const supportedMimeType = getSupportedAudioMimeType(
         MediaRecorder.isTypeSupported?.bind(MediaRecorder)
       )
@@ -217,11 +225,17 @@ function useAudioRecorder() {
       )
       recorder.start(1000)
     } catch (caughtError) {
+      if (startRequestId !== startRequestIdRef.current) {
+        return
+      }
+
       discardActiveRecorder()
       cleanupStream()
       setError(isPermissionDeniedError(caughtError) ? "permission" : "failed")
     } finally {
-      setIsPreparing(false)
+      if (startRequestId === startRequestIdRef.current) {
+        setIsPreparing(false)
+      }
     }
   }
 
