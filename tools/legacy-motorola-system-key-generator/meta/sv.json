@@ -1,0 +1,4 @@
+{
+  "name": "Generator för äldre Motorola-systemnycklar",
+  "description": "Skapa .KEY-filer med programvarubaserade systemnycklar för äldre Motorola-system i webbläsaren. Formatet stöder inte ASTRO 25, XTS5000, APX eller Advanced System Keys."
+}

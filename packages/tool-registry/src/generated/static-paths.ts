@@ -12146,6 +12146,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "legacy-motorola-system-key-generator",
+    language: "ar",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "de",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "en",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "es",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "fr",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "he",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "hi",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "id",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "it",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "ja",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "ko",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "ms",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "nl",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "no",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "pl",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "pt",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "ru",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "sv",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "th",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "tr",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "vi",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "list-comparer",
     language: "ar",
   },

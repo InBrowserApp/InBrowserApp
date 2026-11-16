@@ -7,7 +7,7 @@ import {
   SelectValue,
 } from "@workspace/ui/components/ui/select"
 
-import type { HtmlToMarkdownMessages } from "../client"
+import type { HtmlToMarkdownMessages } from "../client/types"
 import type {
   BulletListMarker,
   CodeBlockStyle,

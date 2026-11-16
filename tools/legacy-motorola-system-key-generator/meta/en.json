@@ -1,0 +1,4 @@
+{
+  "name": "Legacy Motorola System Key Generator",
+  "description": "Generate legacy Motorola software system key (.KEY) files in your browser. This format does not support ASTRO 25, XTS5000, APX, or Advanced System Keys."
+}

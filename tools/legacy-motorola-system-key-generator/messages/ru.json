@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "Только старый формат",
+  "compatibilityDescription": "Создаёт программные ключи в формате на основе BatLabs. Несовместим с ASTRO 25 Portable CPS (включая XTS5000), APX CPS и Advanced System Keys (ASK).",
+  "inputTitle": "ID системы",
+  "inputDescription": "Введите ID старой транкинговой системы Motorola.",
+  "systemIdLabel": "ID системы (шестн.)",
+  "systemIdHelp": "Используйте 1–4 шестнадцатеричные цифры (0–9, A–F). Короткие ID дополняются нулями слева.",
+  "invalidSystemId": "Введите 1–4 шестнадцатеричные цифры (0–9, A–F) без префикса 0x.",
+  "outputTitle": "Файл ключа старого формата",
+  "emptyState": "Введите ID системы для предпросмотра и скачивания файла .KEY.",
+  "normalizedIdLabel": "Нормализованный ID",
+  "filenameLabel": "Имя файла",
+  "fileSizeLabel": "Размер файла",
+  "fileSizeValue": "27 байт",
+  "hexPreviewLabel": "Шестнадцатеричный предпросмотр",
+  "downloadLabel": "Скачать .KEY",
+  "sourceLabel": "Эталонная реализация",
+  "licenseLabel": "Лицензия ISC"
+}

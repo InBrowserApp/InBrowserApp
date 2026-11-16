@@ -1,0 +1,4 @@
+{
+  "name": "Gerador de chaves de sistema Motorola legadas",
+  "description": "Gere no navegador arquivos de chave de sistema por software (.KEY) para sistemas Motorola legados. Este formato não é compatível com ASTRO 25, XTS5000, APX ou Advanced System Keys."
+}

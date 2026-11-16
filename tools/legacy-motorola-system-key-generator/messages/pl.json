@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "Tylko starszy format",
+  "compatibilityDescription": "Generuje programowe klucze w formacie opartym na BatLabs. Nie jest zgodny z ASTRO 25 Portable CPS (w tym XTS5000), APX CPS ani Advanced System Keys (ASK).",
+  "inputTitle": "ID systemu",
+  "inputDescription": "Wprowadź identyfikator systemu trankingowego Motorola starszego typu.",
+  "systemIdLabel": "ID systemu (HEX)",
+  "systemIdHelp": "Użyj 1–4 cyfr szesnastkowych (0–9, A–F). Krótsze identyfikatory są uzupełniane zerami z przodu.",
+  "invalidSystemId": "Wprowadź 1–4 cyfry szesnastkowe (0–9, A–F), bez prefiksu 0x.",
+  "outputTitle": "Plik klucza starszego typu",
+  "emptyState": "Wprowadź ID systemu, aby wyświetlić podgląd i pobrać plik .KEY.",
+  "normalizedIdLabel": "ID po normalizacji",
+  "filenameLabel": "Nazwa pliku",
+  "fileSizeLabel": "Rozmiar pliku",
+  "fileSizeValue": "27 bajtów",
+  "hexPreviewLabel": "Podgląd szesnastkowy",
+  "downloadLabel": "Pobierz .KEY",
+  "sourceLabel": "Implementacja referencyjna",
+  "licenseLabel": "Licencja ISC"
+}

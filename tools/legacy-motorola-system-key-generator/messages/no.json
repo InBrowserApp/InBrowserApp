@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "Kun eldre format",
+  "compatibilityDescription": "Genererer programvarebaserte nøkler i formatet avledet fra BatLabs. Ikke kompatibelt med ASTRO 25 Portable CPS (inkludert XTS5000), APX CPS eller Advanced System Keys (ASK).",
+  "inputTitle": "System-ID",
+  "inputDescription": "Angi ID-en til et eldre Motorola-trunkingsystem.",
+  "systemIdLabel": "System-ID (heks.)",
+  "systemIdHelp": "Bruk 1–4 heksadesimale sifre (0–9, A–F). Korte ID-er fylles ut med innledende nuller.",
+  "invalidSystemId": "Angi 1–4 heksadesimale sifre (0–9, A–F), uten prefikset 0x.",
+  "outputTitle": "Nøkkelfil i eldre format",
+  "emptyState": "Angi en system-ID for å forhåndsvise og laste ned .KEY-filen.",
+  "normalizedIdLabel": "Normalisert ID",
+  "filenameLabel": "Filnavn",
+  "fileSizeLabel": "Filstørrelse",
+  "fileSizeValue": "27 byte",
+  "hexPreviewLabel": "Heksadesimal forhåndsvisning",
+  "downloadLabel": "Last ned .KEY",
+  "sourceLabel": "Referanseimplementasjon",
+  "licenseLabel": "ISC-lisens"
+}

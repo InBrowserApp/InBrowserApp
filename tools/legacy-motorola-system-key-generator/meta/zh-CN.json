@@ -1,0 +1,4 @@
+{
+  "name": "旧版 Motorola 系统密钥生成器",
+  "description": "在浏览器中生成旧版 Motorola 软件系统密钥（.KEY）文件。此格式不支持 ASTRO 25、XTS5000、APX 或 Advanced System Keys。"
+}
