@@ -1,4 +1,4 @@
-import { useId, useRef, useState } from "react"
+import { useId, useRef } from "react"
 
 import { Button } from "@workspace/ui/components/ui/button"
 import {
@@ -19,40 +19,27 @@ import {
 import { FileArchive, Folder, Plus } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
-import {
-  captureDrop,
-  readDrop,
-  readFolder,
-  selectFiles,
-} from "../core/selection"
+import { readFolder, selectFiles } from "../core/selection"
 
 import type { FolderHandle } from "../core/selection"
 import type { Messages } from "../types"
 import type { Creator } from "../use-zip-creator"
-import type { DragEvent } from "react"
+import type { ZipDrag } from "../use-zip-drag"
 
 export function AddCard({
   creator: c,
   messages: m,
+  drag,
 }: {
   creator: Creator
   messages: Messages
+  drag: ZipDrag
 }) {
   const filesRef = useRef<HTMLInputElement>(null)
   const folderRef = useRef<HTMLInputElement>(null)
-  const [dragging, setDragging] = useState(false)
-  const depth = useRef(0)
   const id = useId()
   const disabled = c.status !== null
-
-  function drop(event: DragEvent) {
-    event.preventDefault()
-    depth.current = 0
-    setDragging(false)
-    if (disabled) return
-    const sources = captureDrop(event.dataTransfer)
-    void c.add((signal) => readDrop(sources, signal))
-  }
+  const drop = drag.dropTarget(c.directory, "add")
 
   function pickFolder() {
     const picker = (
@@ -75,25 +62,10 @@ export function AddCard({
       </CardHeader>
       <CardContent>
         <div
-          onDragEnter={(event) => {
-            event.preventDefault()
-            if (!disabled && event.dataTransfer.types.includes("Files")) {
-              depth.current++
-              setDragging(true)
-            }
-          }}
-          onDragLeave={() => {
-            depth.current = Math.max(0, depth.current - 1)
-            if (!depth.current) setDragging(false)
-          }}
-          onDragOver={(event) => {
-            event.preventDefault()
-            event.dataTransfer.dropEffect = disabled ? "none" : "copy"
-          }}
-          onDrop={drop}
+          {...drop.props}
           className={cn(
             "rounded-lg border border-dashed border-input bg-muted/20 motion-safe:transition-colors",
-            dragging && "border-primary bg-primary/5"
+            drop.isOver && "border-primary bg-primary/5"
           )}
         >
           <Empty className="min-h-44">
@@ -109,6 +81,7 @@ export function AddCard({
             <div className="flex flex-wrap justify-center gap-2">
               <Button
                 type="button"
+                className="min-h-11"
                 disabled={disabled}
                 onClick={() => filesRef.current?.click()}
               >
@@ -118,6 +91,7 @@ export function AddCard({
               <Button
                 type="button"
                 variant="outline"
+                className="min-h-11"
                 disabled={disabled}
                 onClick={pickFolder}
               >
@@ -160,6 +134,12 @@ export function AddCard({
         />
       </CardContent>
       <CardFooter className="flex-col items-start gap-1 text-sm text-muted-foreground">
+        <p className="flex max-w-full min-w-0 gap-1">
+          <span className="shrink-0">{m.addingTo}:</span>
+          <bdi className="truncate" title={c.directory || m.root}>
+            {c.directory || m.root}
+          </bdi>
+        </p>
         <p>{m.localNote}</p>
         <p>{m.folderNote}</p>
       </CardFooter>

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
@@ -15,14 +15,18 @@ import {
   EmptyHeader,
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
-import { Trash2 } from "@workspace/ui/icons"
+import { FolderPlus, Trash2 } from "@workspace/ui/icons"
+import { cn } from "@workspace/ui/lib/utils"
 
 import { formatBytes } from "../format"
 import { ContentsRow } from "./contents-row"
 import { DirectoryNav } from "./directory-nav"
+import { EntryDialog } from "./entry-dialog"
 
+import type { EntryAction } from "./entry-dialog"
 import type { Messages } from "../types"
 import type { Creator } from "../use-zip-creator"
+import type { ZipDrag } from "../use-zip-drag"
 
 const pageSize = 50
 
@@ -30,25 +34,33 @@ export function ContentsCard({
   creator: c,
   messages: m,
   lang,
+  drag,
 }: {
   creator: Creator
   messages: Messages
   lang: string
+  drag: ZipDrag
 }) {
-  const [directory, setDirectory] = useState("")
+  const [action, setAction] = useState<EntryAction | null>(null)
+  const newFolder = useRef<HTMLButtonElement>(null)
+  const returnFocus = useRef<HTMLButtonElement | null>(null)
   const [page, setPage] = useState(0)
-  const current = c.items.some((item) => item.path === directory && !item.file)
-    ? directory
-    : ""
+  const current = c.directory
   const rows = c.index.directories.get(current) ?? []
   const pages = Math.max(1, Math.ceil(rows.length / pageSize))
   const currentPage = Math.min(page, pages - 1)
   const disabled = c.status !== null
   const number = new Intl.NumberFormat(lang)
+  const drop = drag.dropTarget(current, "contents")
 
   function navigate(path: string) {
-    setDirectory(path)
+    c.navigate(path)
     setPage(0)
+  }
+
+  function openEntry(next: EntryAction, trigger = newFolder.current) {
+    returnFocus.current = trigger
+    setAction(next)
   }
 
   return (
@@ -56,19 +68,33 @@ export function ContentsCard({
       <CardHeader>
         <div className="flex flex-wrap items-center justify-between gap-2">
           <CardTitle>{m.contentsTitle}</CardTitle>
-          <Button
-            type="button"
-            variant="ghost"
-            size="sm"
-            disabled={disabled || !c.items.length}
-            onClick={() => {
-              c.remove()
-              navigate("")
-            }}
-          >
-            <Trash2 aria-hidden="true" data-icon="inline-start" />
-            {m.clear}
-          </Button>
+          <div className="flex flex-wrap gap-1">
+            <Button
+              ref={newFolder}
+              type="button"
+              variant="outline"
+              className="min-h-11"
+              disabled={disabled}
+              onClick={() => openEntry({ kind: "new-folder" })}
+            >
+              <FolderPlus aria-hidden="true" data-icon="inline-start" />
+              {m.newFolder}
+            </Button>
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              className="min-h-11"
+              disabled={disabled || !c.items.length}
+              onClick={() => {
+                c.remove()
+                navigate("")
+              }}
+            >
+              <Trash2 aria-hidden="true" data-icon="inline-start" />
+              {m.clear}
+            </Button>
+          </div>
         </div>
         <CardDescription>{m.contentsDescription}</CardDescription>
         <div className="flex flex-wrap gap-2 pt-2 tabular-nums">
@@ -83,15 +109,22 @@ export function ContentsCard({
           </Badge>
         </div>
       </CardHeader>
-      <CardContent className="flex flex-col gap-3">
+      <CardContent
+        {...drop.props}
+        className={cn(
+          "flex flex-col gap-3 rounded-lg",
+          drop.isOver && "bg-primary/5 ring-2 ring-primary ring-inset"
+        )}
+      >
+        <DirectoryNav
+          directory={current}
+          disabled={disabled}
+          messages={m}
+          onNavigate={navigate}
+          drag={drag}
+        />
         {c.items.length ? (
           <>
-            <DirectoryNav
-              directory={current}
-              disabled={disabled}
-              messages={m}
-              onNavigate={navigate}
-            />
             {rows.length ? (
               <ul
                 aria-label={m.contentsTitle}
@@ -108,6 +141,8 @@ export function ContentsCard({
                       lang={lang}
                       onOpen={navigate}
                       onRemove={c.remove}
+                      onEdit={openEntry}
+                      drag={drag}
                     />
                   ))}
               </ul>
@@ -152,7 +187,26 @@ export function ContentsCard({
             </EmptyHeader>
           </Empty>
         )}
+        {c.items.length ? (
+          <p className="text-sm text-muted-foreground">{m.dragHint}</p>
+        ) : null}
       </CardContent>
+      {action ? (
+        <EntryDialog
+          action={action}
+          creator={c}
+          messages={m}
+          onClose={() => {
+            setAction(null)
+            setPage(0)
+          }}
+          onRestoreFocus={() => {
+            const trigger = returnFocus.current
+            if (trigger?.isConnected) trigger.focus()
+            else newFolder.current?.focus()
+          }}
+        />
+      ) : null}
     </Card>
   )
 }

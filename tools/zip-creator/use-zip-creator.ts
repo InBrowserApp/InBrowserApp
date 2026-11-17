@@ -2,20 +2,32 @@ import { useEffect, useMemo, useRef, useState } from "react"
 
 import {
   addItems,
+  hasDirectory,
   indexItems,
   removeItems,
   zipFilename,
 } from "./core/collection"
+import { editItems } from "./core/edit"
 import { createZip } from "./core/zip"
 
-import type { InputItem, Messages, Progress, ZipItem } from "./types"
+import type {
+  EditAction,
+  InputItem,
+  Messages,
+  Progress,
+  ZipItem,
+} from "./types"
 
 type Result = Readonly<{ url: string; filename: string; bytes: number }>
 type Status = "reading" | "creating" | null
 
 export function useZipCreator(m: Messages) {
   const [items, setItems] = useState<readonly ZipItem[]>([])
-  const [undoItems, setUndoItems] = useState<readonly ZipItem[] | null>(null)
+  const [directory, setDirectory] = useState("")
+  const [undoState, setUndoState] = useState<{
+    items: readonly ZipItem[]
+    directory: string
+  } | null>(null)
   const [filename, setFilename] = useState("archive")
   const [level, setLevel] = useState(6)
   const [status, setStatus] = useState<Status>(null)
@@ -26,6 +38,7 @@ export function useZipCreator(m: Messages) {
   const active = useRef<AbortController | null>(null)
   const resultUrl = useRef<string | null>(null)
   const index = useMemo(() => indexItems(items), [items])
+  const current = hasDirectory(items, directory) ? directory : ""
 
   function clearResult() {
     if (resultUrl.current) URL.revokeObjectURL(resultUrl.current)
@@ -48,7 +61,7 @@ export function useZipCreator(m: Messages) {
     active.current = controller
     setStatus(next)
     setError("")
-    setNotice("")
+    if (!undoState) setNotice("")
     setProgress(null)
     return controller
   }
@@ -61,18 +74,16 @@ export function useZipCreator(m: Messages) {
   }
 
   async function add(
-    read: (signal: AbortSignal) => Promise<readonly InputItem[]>
+    read: (signal: AbortSignal) => Promise<readonly InputItem[]>,
+    destination = current
   ) {
     const controller = start("reading")
     if (!controller) return
     try {
       const incoming = await read(controller.signal)
       controller.signal.throwIfAborted()
-      const merged = addItems(items, incoming)
-      clearResult()
-      setUndoItems(null)
-      setItems(merged.items)
-      if (merged.adjusted) setNotice(m.renamed)
+      const merged = addItems(items, incoming, destination)
+      update(merged.items, merged.adjusted ? m.renamed : m.added)
     } catch (cause) {
       if (
         !controller.signal.aborted &&
@@ -115,18 +126,41 @@ export function useZipCreator(m: Messages) {
   }
 
   function remove(path?: string) {
+    if (active.current) return
+    update(path === undefined ? [] : removeItems(items, path), m.removed)
+  }
+
+  function update(next: readonly ZipItem[], notice: string) {
+    if (next === items) return
     clearResult()
-    setUndoItems(items)
-    setItems(path === undefined ? [] : removeItems(items, path))
-    setNotice(m.removed)
+    setUndoState({ items, directory: current })
+    setItems(next)
+    setNotice(notice)
     setError("")
   }
 
+  function edit(action: EditAction, announceError = false) {
+    if (active.current) return "invalidDestination" as const
+    const result = editItems(items, action)
+    if (!result.error) {
+      update(result.items, m.updated)
+      if (action.kind === "new-folder") setDirectory(result.path)
+    } else if (announceError) {
+      setError(m[result.error])
+    }
+    return result.error
+  }
+
+  function navigate(path: string) {
+    if (!active.current && hasDirectory(items, path)) setDirectory(path)
+  }
+
   function undo() {
-    if (!undoItems) return
+    if (!undoState || active.current) return
     clearResult()
-    setItems(undoItems)
-    setUndoItems(null)
+    setItems(undoState.items)
+    setDirectory(undoState.directory)
+    setUndoState(null)
     setNotice("")
   }
 
@@ -142,6 +176,7 @@ export function useZipCreator(m: Messages) {
 
   return {
     items,
+    directory: current,
     index,
     filename,
     level,
@@ -150,13 +185,15 @@ export function useZipCreator(m: Messages) {
     error,
     notice,
     result,
-    canUndo: undoItems !== null,
+    canUndo: undoState !== null,
     validName: zipFilename(filename) !== null,
     add,
     create,
     cancel,
     remove,
     undo,
+    edit,
+    navigate,
     changeFilename,
     changeLevel,
   }

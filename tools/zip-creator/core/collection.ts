@@ -26,15 +26,17 @@ function uniquePath(path: string, file: boolean, occupied: Set<string>) {
 
 export function addItems(
   previous: readonly ZipItem[],
-  incoming: readonly InputItem[]
+  incoming: readonly InputItem[],
+  directory = ""
 ) {
+  if (!hasDirectory(previous, directory)) throw new Error("Invalid destination")
   const items = [...previous]
   const occupied = new Set(previous.map((item) => item.path.toLowerCase()))
   const folders = new Map<string, string>()
   let adjusted = false
 
   function addFolder(segments: string[], root: number) {
-    let parent = ""
+    let parent = directory
     for (let i = 0; i < segments.length; i++) {
       const original = segments.slice(0, i + 1).join("/")
       const key = `${root}:${original}`
@@ -44,7 +46,8 @@ export function addItems(
         path = uniquePath(parent ? `${parent}/${name}` : name, false, occupied)
         folders.set(key, path)
         items.push({ path, file: null })
-        adjusted ||= path !== original
+        adjusted ||=
+          path !== (directory ? `${directory}/${original}` : original)
       }
       parent = path
     }
@@ -64,9 +67,25 @@ export function addItems(
     const parent = addFolder(segments, item.root ?? 0)
     const path = uniquePath(parent ? `${parent}/${name}` : name, true, occupied)
     items.push({ path, file: item.file })
-    adjusted ||= path !== item.path
+    adjusted ||= path !== (directory ? `${directory}/${item.path}` : item.path)
   }
   return { items, adjusted }
+}
+
+export function hasDirectory(items: readonly ZipItem[], path: string) {
+  return path === "" || items.some((item) => item.path === path && !item.file)
+}
+
+export function parentPath(path: string) {
+  return path.slice(0, Math.max(0, path.lastIndexOf("/")))
+}
+
+export function itemName(path: string) {
+  return path.slice(path.lastIndexOf("/") + 1)
+}
+
+export function validEntryName(name: string) {
+  return name.length > 0 && !name.includes("/") && safeSegment(name) === name
 }
 
 export function indexItems(items: readonly ZipItem[]) {
@@ -75,7 +94,7 @@ export function indexItems(items: readonly ZipItem[]) {
   let folders = 0
   let bytes = 0
   for (const item of items) {
-    const parent = item.path.slice(0, Math.max(0, item.path.lastIndexOf("/")))
+    const parent = parentPath(item.path)
     const children = directories.get(parent) ?? []
     children.push(item)
     directories.set(parent, children)

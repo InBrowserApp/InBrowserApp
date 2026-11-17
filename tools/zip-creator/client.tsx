@@ -10,6 +10,7 @@ import { AddCard } from "./components/add-card"
 import { ContentsCard } from "./components/contents-card"
 import { CreateCard } from "./components/create-card"
 import { useZipCreator } from "./use-zip-creator"
+import { useZipDrag } from "./use-zip-drag"
 
 import type { Messages } from "./types"
 
@@ -21,10 +22,11 @@ export default function ZipCreator({
   lang: string
 }) {
   const creator = useZipCreator(m)
+  const drag = useZipDrag(creator)
   return (
     <div className="flex flex-col gap-6">
-      <AddCard creator={creator} messages={m} />
-      {creator.error === m.readError ? (
+      <AddCard creator={creator} messages={m} drag={drag} />
+      {creator.error && creator.error !== m.createError ? (
         <Alert variant="destructive">
           <TriangleAlert aria-hidden="true" />
           <AlertTitle>{m.errorTitle}</AlertTitle>
@@ -40,6 +42,7 @@ export default function ZipCreator({
                 type="button"
                 variant="outline"
                 size="sm"
+                className="min-h-11"
                 disabled={creator.status !== null}
                 onClick={creator.undo}
               >
@@ -49,7 +52,7 @@ export default function ZipCreator({
           </div>
         ) : null}
       </div>
-      <ContentsCard creator={creator} messages={m} lang={lang} />
+      <ContentsCard creator={creator} messages={m} lang={lang} drag={drag} />
       <CreateCard creator={creator} messages={m} lang={lang} />
     </div>
   )

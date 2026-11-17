@@ -63,7 +63,7 @@ it("withdraws and revokes completed results on input, option, removal, undo and 
   await act(async () => r.current.create())
   await act(async () => r.current.add(async () => [file("b.txt")]))
   expect(r.current.result).toBeNull()
-  expect(r.current.canUndo).toBe(false)
+  expect(r.current.canUndo).toBe(true)
   await act(async () => r.current.create())
   const revokes = vi.mocked(URL.revokeObjectURL).mock.calls.length
   unmount()

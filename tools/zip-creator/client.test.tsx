@@ -1,9 +1,11 @@
 import {
   act,
   cleanup,
+  createEvent,
   fireEvent,
   render,
   screen,
+  within,
   waitFor,
 } from "@testing-library/react"
 import { afterEach, beforeEach, expect, it, vi } from "vitest"
@@ -25,6 +27,12 @@ const add = (...files: File[]) =>
 const dropZone = () =>
   screen.getByText(m.dropTitle).closest("div.border-dashed")!.parentElement!
 const mount = () => render(<ZipCreator messages={m} lang="en" />)
+async function menu(name: string, label: string) {
+  fireEvent.keyDown(button(m.actions.replace("{name}", name)), {
+    key: "ArrowDown",
+  })
+  fireEvent.click(await screen.findByRole("menuitem", { name: label }))
+}
 it.each(["ar", "he"])(
   "uses RTL direction in compression controls for %s",
   (lang) => {
@@ -150,22 +158,24 @@ it("shows read errors and removes complete subtrees with undo and clear", async 
   })
   fireEvent.change(folderInput(), { target: { files: [file] } })
   await screen.findByRole("button", { name: "Work" })
-  fireEvent.click(button(m.remove.replace("{name}", "Work")))
+  await menu("Work", m.remove.replace("{name}", "Work"))
   expect(screen.getByText(m.emptyTitle)).toBeTruthy()
   fireEvent.click(button(m.undo))
   expect(button("Work")).toBeTruthy()
   fireEvent.click(button("Work"))
-  fireEvent.click(button(m.remove.replace("{name}", "report.txt")))
+  await menu("report.txt", m.remove.replace("{name}", "report.txt"))
   expect(screen.getByText(m.emptyFolder)).toBeTruthy()
   fireEvent.click(button(m.undo))
   expect(screen.getByText("report.txt")).toBeTruthy()
   fireEvent.click(button(m.clear))
   expect(screen.getByText(m.emptyTitle)).toBeTruthy()
   fireEvent.click(button(m.undo))
-  fireEvent.drop(dropZone(), { dataTransfer: { items: [], files: [] } })
+  fireEvent.drop(dropZone(), {
+    dataTransfer: { types: ["Files"], items: [], files: [] },
+  })
   await screen.findByRole("alert")
   expect(screen.getByText(m.readError)).toBeTruthy()
-  expect(button("Work")).toBeTruthy()
+  expect(screen.getByText("report.txt")).toBeTruthy()
 })
 
 it("paginates long folders without hiding files from the generated ZIP", async () => {
@@ -275,4 +285,149 @@ it("can cancel a pending directory picker and recover after generation errors", 
     expect(screen.getByRole("link", { name: m.download })).toBeTruthy()
   )
   expect(screen.queryByRole("alert")).toBeNull()
+})
+
+it("creates folders from an empty ZIP, validates names and adds into the current directory", async () => {
+  mount()
+  fireEvent.click(button(m.newFolder))
+  const dialog = await screen.findByRole("dialog")
+  const name = within(dialog).getByLabelText(m.name)
+  fireEvent.change(name, { target: { value: "../bad" } })
+  fireEvent.click(within(dialog).getByRole("button", { name: m.newFolder }))
+  expect(within(dialog).getByRole("alert").textContent).toBe(m.entryNameError)
+  fireEvent.change(name, { target: { value: "Project" } })
+  fireEvent.click(within(dialog).getByRole("button", { name: m.newFolder }))
+  expect(screen.queryByRole("dialog")).toBeNull()
+  expect(screen.getByText(m.emptyFolder)).toBeTruthy()
+  add(source("report.txt"))
+  await screen.findByText("report.txt")
+  fireEvent.click(button(m.create))
+  await screen.findByRole("link", { name: m.download })
+  expect(
+    vi.mocked(createZip).mock.lastCall![0].map((item) => item.path)
+  ).toEqual(["Project", "Project/report.txt"])
+  fireEvent.click(button(m.undo))
+  expect(screen.queryByText("report.txt")).toBeNull()
+  expect(screen.getByText(m.emptyFolder)).toBeTruthy()
+})
+
+it("renames without overwriting, moves via the menu and restores the previous directory on undo", async () => {
+  mount()
+  add(source("a.txt"), source("b.txt"))
+  await screen.findByText("a.txt")
+  await menu("a.txt", m.rename)
+  let dialog = await screen.findByRole("dialog")
+  let input = within(dialog).getByLabelText(m.name)
+  expect(input).toHaveProperty("value", "a.txt")
+  fireEvent.change(input, { target: { value: "B.txt" } })
+  fireEvent.click(within(dialog).getByRole("button", { name: m.save }))
+  expect(within(dialog).getByRole("alert").textContent).toBe(m.nameExists)
+  fireEvent.change(input, { target: { value: "renamed.txt" } })
+  fireEvent.click(within(dialog).getByRole("button", { name: m.save }))
+  expect(screen.getByText("renamed.txt")).toBeTruthy()
+  fireEvent.click(button(m.newFolder))
+  dialog = await screen.findByRole("dialog")
+  input = within(dialog).getByLabelText(m.name)
+  fireEvent.change(input, { target: { value: "Project" } })
+  fireEvent.click(within(dialog).getByRole("button", { name: m.newFolder }))
+  fireEvent.click(button(m.root))
+  await menu("renamed.txt", m.move)
+  dialog = await screen.findByRole("dialog")
+  expect(
+    within(dialog).getByRole("button", { name: m.moveHere })
+  ).toHaveProperty("disabled", true)
+  fireEvent.click(within(dialog).getByRole("button", { name: "Project" }))
+  expect(within(dialog).getByText(m.noFolders)).toBeTruthy()
+  fireEvent.click(within(dialog).getByRole("button", { name: m.moveHere }))
+  expect(screen.queryByText("renamed.txt")).toBeNull()
+  fireEvent.click(button("Project"))
+  expect(screen.getByText("renamed.txt")).toBeTruthy()
+  fireEvent.click(button(m.undo))
+  expect(button("Project")).toBeTruthy()
+  expect(screen.getByText("renamed.txt")).toBeTruthy()
+  expect(screen.getByText("b.txt")).toBeTruthy()
+})
+
+it("accepts external drops onto folders and moves internal entries onto ancestor breadcrumbs", async () => {
+  mount()
+  const nested = source("notes.txt")
+  Object.defineProperty(nested, "webkitRelativePath", {
+    value: "Project/sub/notes.txt",
+  })
+  fireEvent.change(folderInput(), { target: { files: [nested] } })
+  await screen.findByRole("button", { name: "Project" })
+  const folder = button("Project").closest("li")!
+  const external = {
+    types: ["Files"],
+    items: [],
+    files: [source("dropped.txt")],
+  }
+  const externalOver = createEvent.dragOver(folder, { dataTransfer: external })
+  fireEvent(folder, externalOver)
+  expect(externalOver).toHaveProperty("dataTransfer.dropEffect", "copy")
+  fireEvent.drop(folder, { dataTransfer: external })
+  await waitFor(() =>
+    expect(button(m.create)).toHaveProperty("disabled", false)
+  )
+  fireEvent.click(button("Project"))
+  expect(screen.getByText("dropped.txt")).toBeTruthy()
+  const transfer = {
+    types: ["application/x-inbrowser-zip-entry"],
+    files: [],
+    items: [],
+    setData: vi.fn(),
+  }
+  fireEvent.dragStart(screen.getByText("dropped.txt").closest("li")!, {
+    dataTransfer: transfer,
+  })
+  expect(transfer.setData).toHaveBeenCalledWith(
+    "application/x-inbrowser-zip-entry",
+    "Project/dropped.txt"
+  )
+  const root = button(m.root)
+  const internalOver = createEvent.dragOver(root, { dataTransfer: transfer })
+  fireEvent(root, internalOver)
+  expect(internalOver).toHaveProperty("dataTransfer.dropEffect", "move")
+  fireEvent.drop(root, { dataTransfer: transfer })
+  expect(screen.queryByText("dropped.txt")).toBeNull()
+  fireEvent.click(root)
+  expect(screen.getByText("dropped.txt")).toBeTruthy()
+  fireEvent.click(button(m.create))
+  await screen.findByRole("link", { name: m.download })
+  expect(
+    vi.mocked(createZip).mock.lastCall![0].map((item) => item.path)
+  ).toEqual(["Project", "Project/sub", "Project/sub/notes.txt", "dropped.txt"])
+})
+
+it("rejects dragging a folder onto itself, clears cancelled feedback and prevents outside file navigation", async () => {
+  mount()
+  const nested = source("notes.txt")
+  Object.defineProperty(nested, "webkitRelativePath", {
+    value: "Project/notes.txt",
+  })
+  fireEvent.change(folderInput(), { target: { files: [nested] } })
+  await screen.findByRole("button", { name: "Project" })
+  const row = button("Project").closest("li")!
+  const transfer = {
+    types: ["application/x-inbrowser-zip-entry"],
+    setData: vi.fn(),
+  }
+  fireEvent.dragStart(row, { dataTransfer: transfer })
+  const invalidOver = createEvent.dragOver(row, { dataTransfer: transfer })
+  fireEvent(row, invalidOver)
+  expect(invalidOver).toHaveProperty("dataTransfer.dropEffect", "none")
+  fireEvent.drop(row, { dataTransfer: transfer })
+  expect(button("Project")).toBeTruthy()
+  const files = { types: ["Files"], files: [source("ignored.txt")], items: [] }
+  const outsideOver = createEvent.dragOver(document.body, {
+    dataTransfer: files,
+  })
+  expect(fireEvent(document.body, outsideOver)).toBe(false)
+  expect(outsideOver).toHaveProperty("dataTransfer.dropEffect", "none")
+  expect(fireEvent.drop(document.body, { dataTransfer: files })).toBe(false)
+  expect(screen.queryByText("ignored.txt")).toBeNull()
+  fireEvent.dragEnter(dropZone(), { dataTransfer: files })
+  expect(dropZone().className).toContain("border-primary")
+  fireEvent.dragEnd(row)
+  expect(dropZone().className).not.toContain("border-primary")
 })
