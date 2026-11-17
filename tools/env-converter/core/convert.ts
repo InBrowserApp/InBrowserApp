@@ -8,6 +8,19 @@ import type {
   ParseResult,
 } from "../types"
 
+export function jsonErrorLine(message: string, input: string) {
+  const line = message.match(
+    /\bline (\d+) column \d+\)?(?: of the JSON data)?$/
+  )
+  if (line) return Number(line[1])
+  const position = message.match(/\bposition (\d+)$/)
+  if (position)
+    return input.slice(0, Number(position[1])).split(/\r\n?|\n/).length
+  if (message.includes("Unexpected end of JSON input"))
+    return input.split(/\r\n?|\n/).length
+  return undefined
+}
+
 function parseStructured(input: string, format: "json" | "yaml"): ParseResult {
   const values: Record<string, string> = Object.create(null)
   const diagnostics: Diagnostic[] = []
@@ -21,7 +34,9 @@ function parseStructured(input: string, format: "json" | "yaml"): ParseResult {
     const line =
       error instanceof YAMLException && error.mark
         ? error.mark.line + 1
-        : undefined
+        : error instanceof SyntaxError
+          ? jsonErrorLine(error.message, input)
+          : undefined
     return {
       values,
       diagnostics: [
@@ -30,6 +45,7 @@ function parseStructured(input: string, format: "json" | "yaml"): ParseResult {
           severity: "error",
           format: format.toUpperCase(),
           line,
+          detail: error instanceof SyntaxError ? error.message : undefined,
         },
       ],
     }
@@ -59,14 +75,20 @@ function serializeEnv(
 ) {
   return Object.entries(values)
     .map(([key, value]) => {
-      if (value === "" || (!/[\s#]/.test(value) && !/^["'`“”‘’]/.test(value)))
-        return `${key}=${value}`
+      const unquoted =
+        value === value.trim() &&
+        !/[#\r\n]/.test(value) &&
+        !/^["'`“”‘’]/.test(value)
+      if (unquoted && !/\s/.test(value)) return `${key}=${value}`
       for (const quote of ["'", '"', "`"]) {
         if (value.includes(quote)) continue
         if (quote === '"' && /\\[nr]/.test(value)) continue
         if (value.includes("\r") && quote !== '"') continue
-        return `${key}=${quote}${value.replace(/\r/g, "\\r")}${quote}`
+        // Keep dotenv's greedy quoted-value parser from consuming a later key.
+        const boundary = value.endsWith("\\") ? ` # ${quote}${quote}` : ""
+        return `${key}=${quote}${value.replace(/\r/g, "\\r")}${quote}${boundary}`
       }
+      if (unquoted) return `${key}=${value}`
       diagnostics.push({ code: "unrepresentable", severity: "error", key })
       return ""
     })

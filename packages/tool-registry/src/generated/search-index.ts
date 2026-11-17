@@ -9783,7 +9783,7 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
     slug: "env-converter",
     category: "developer",
-    icon: "file-json-2",
+    icon: "file-cog",
     tags: [
       "env",
       "dotenv",

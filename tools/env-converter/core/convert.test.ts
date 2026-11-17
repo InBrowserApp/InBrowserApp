@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest"
 import { load, JSON_SCHEMA } from "js-yaml"
-import { convert } from "./convert"
+import { convert, jsonErrorLine } from "./convert"
 import { parseEnv } from "./parse-env"
 import { interpolate, type Format } from "../types"
 
@@ -75,6 +75,30 @@ describe(".env parsing", () => {
       values: { A: "first  \n   \n  last ", B: " value \nnext  " },
       diagnostics: [],
     })
+  })
+
+  test.each(["'", '"', "`"])(
+    "resolves escaped %s delimiters before comments and across lines",
+    (quote) => {
+      const path = "C:\\path\\"
+      const escaped = `first \\${quote}quoted\\${quote}\nsecond`
+      const result = parseEnv(
+        `  export A = ${quote}${path}${quote} # ${quote}windows${quote}\nB=${quote}${escaped}${quote}\nC=after`
+      )
+      expect(result.diagnostics).toEqual([])
+      expect(result.values).toEqual({ A: path, B: escaped, C: "after" })
+    }
+  )
+
+  test("keeps diagnostics and later assignments on their physical lines", () => {
+    const result = parseEnv(
+      'A="first\nsecond" junk\nB=valid\nC="escaped\\"but unclosed'
+    )
+    expect(result.values).toEqual({ B: "valid" })
+    expect(result.diagnostics.map(({ code, line }) => [code, line])).toEqual([
+      ["trailingText", 1],
+      ["unclosedQuote", 4],
+    ])
   })
 
   test("finds malformed assignments, keys, trailing text and curly quotes", () => {
@@ -201,17 +225,17 @@ describe("conversion", () => {
     ["json", '{"A":"1","\\u0041":"2"}', 1],
     ["yaml", "A: one\nA: two", 2],
     ["yaml", "A: [", 1],
-    ["json", '{"A":1,}', undefined],
-    ["json", "{'A':1}", undefined],
+    ["json", '{"A":1,}', 1],
+    ["json", "{'A':1}", 1],
     ["json", "// comment\n{}", undefined],
-    ["json", "{", undefined],
+    ["json", "{", 1],
   ] as [Format, string, number | undefined][])(
     "rejects invalid or duplicate %s keys",
     (format, input, line) => {
       const result = convert(input, format, "env")
       expect(result.state).toBe("error")
       expect(result.output).toBe("")
-      expect(result.diagnostics).toEqual([
+      expect(result.diagnostics).toMatchObject([
         {
           code: "syntax",
           severity: "error",
@@ -237,6 +261,7 @@ describe("conversion", () => {
       CR: "a\rb",
       NEWLINE: "a\nb",
       TWO: "'\\n #hash",
+      ALL_QUOTES_SPACES: 'He said "it\'s `fine`"',
     }
     const env = convert(JSON.stringify(values), "json", "env")
     expect(env.state).toBe("converted")
@@ -262,6 +287,16 @@ describe("conversion", () => {
     }
   })
 
+  test.each([" #space\\", "it's #space\\", "both'\" #space\\"])(
+    "keeps later assignments after a quoted trailing backslash",
+    (value) => {
+      const values = { A: value, B: "#hash", C: "foo'\"`", D: "next" }
+      const result = convert(JSON.stringify(values), "json", "env")
+      expect(result.state).toBe("converted")
+      expect(parseEnv(result.output)).toEqual({ values, diagnostics: [] })
+    }
+  )
+
   test("keeps special object keys as data through every format", () => {
     const env = "__proto__=safe\nconstructor=also_safe\ntoString=value"
     const json = convert(env, "env", "json").output
@@ -278,5 +313,25 @@ describe("conversion", () => {
     expect(interpolate("{key}, {line}, {missing}", { key: "A", line: 3 })).toBe(
       "A, 3, {missing}"
     )
+  })
+
+  test("locates JSON errors and keeps the parser explanation", () => {
+    const result = convert('{\n  "A": 1\n  "B": 2\n}', "json", "env")
+    expect(result.diagnostics[0]).toMatchObject({ code: "syntax", line: 3 })
+    expect(result.diagnostics[0]?.detail).toContain("JSON")
+    expect(jsonErrorLine("Unexpected token at position 4", "{\r\n A}")).toBe(2)
+    expect(jsonErrorLine("Unexpected end of JSON input", "{\n")).toBe(2)
+    expect(
+      jsonErrorLine("JSON.parse: unexpected character at line 3 column 1", "")
+    ).toBe(3)
+    expect(
+      jsonErrorLine("Unexpected token, input is not valid JSON", "bad")
+    ).toBeUndefined()
+    expect(
+      jsonErrorLine(
+        'Unexpected token, "line 999 column 1" is not valid JSON',
+        "bad"
+      )
+    ).toBeUndefined()
   })
 })

@@ -11,6 +11,7 @@ export type Diagnostic = {
   previousLine?: number
   quote?: string
   format?: string
+  detail?: string
 }
 export type ParseResult = {
   values: Record<string, string>

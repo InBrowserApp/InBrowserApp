@@ -9783,7 +9783,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "env-converter",
     category: "developer",
-    icon: "file-json-2",
+    icon: "file-cog",
     tags: [
       "env",
       "dotenv",
@@ -45763,7 +45763,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "env-converter": {
     slug: "env-converter",
     category: "developer",
-    icon: "file-json-2",
+    icon: "file-cog",
     tags: [
       "env",
       "dotenv",

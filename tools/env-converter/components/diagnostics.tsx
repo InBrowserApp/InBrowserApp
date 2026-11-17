@@ -37,6 +37,9 @@ export function Diagnostics({ diagnostics, messages, onLine, id }: Props) {
                 <p>
                   {interpolate(messages.diagnostics[item.code], { ...item })}
                 </p>
+                {item.detail ? (
+                  <p className="mt-1 font-mono text-xs">{item.detail}</p>
+                ) : null}
               </li>
             ))}
           </ul>

@@ -169,7 +169,8 @@ export default function EnvConverterClient({
           <CardHeader className="border-b">
             <CardTitle>
               <label htmlFor={`${id}-input`}>
-                {messages.inputLabel} · {FORMAT_LABELS[from]}
+                {messages.inputLabel} ·{" "}
+                <bdi dir="ltr">{FORMAT_LABELS[from]}</bdi>
               </label>
             </CardTitle>
             <CardDescription>{messages.inputDescription}</CardDescription>
@@ -253,7 +254,8 @@ export default function EnvConverterClient({
           <CardHeader className="border-b">
             <CardTitle>
               <label htmlFor={`${id}-output`}>
-                {messages.outputLabel} · {FORMAT_LABELS[to]}
+                {messages.outputLabel} ·{" "}
+                <bdi dir="ltr">{FORMAT_LABELS[to]}</bdi>
               </label>
             </CardTitle>
             <CardDescription>{messages.outputDescription}</CardDescription>

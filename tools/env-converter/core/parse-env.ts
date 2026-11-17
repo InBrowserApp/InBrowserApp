@@ -2,8 +2,19 @@ import type { Diagnostic, ParseResult } from "../types"
 
 export const ENV_KEY = /^[A-Za-z_][A-Za-z0-9_]*$/
 
+// Resolve escaped delimiters across the whole assignment, as dotenv does.
+const QUOTED_VALUE =
+  /^(['"`])((?:\\\1|(?!\1)[\s\S])*)\1[^\S\r\n]*(?:#[^\r\n]*)?(?=\n|$)/
+
 export function parseEnv(input: string): ParseResult {
-  const lines = input.replace(/\r\n?/g, "\n").split("\n")
+  const source = input.replace(/\r\n?/g, "\n")
+  const lines = source.split("\n")
+  let offset = 0
+  const offsets = lines.map((text) => {
+    const start = offset
+    offset += text.length + 1
+    return start
+  })
   const values: Record<string, string> = Object.create(null)
   const diagnostics: Diagnostic[] = []
   const firstLines = new Map<string, number>()
@@ -27,15 +38,17 @@ export function parseEnv(input: string): ParseResult {
     const quote = raw[0]
     let value: string
     if (quote === '"' || quote === "'" || quote === "`") {
-      let content = raw.slice(1)
-      let close = closingQuote(content, quote)
-      while (close === -1 && index + 1 < lines.length) {
-        content += `\n${lines[++index]}`
-        close = closingQuote(content, quote)
-      }
-      if (close === -1) {
+      const remaining = source.slice(
+        offsets[index]! + lines[index]!.length - raw.length
+      )
+      const match = QUOTED_VALUE.exec(remaining)
+      if (!match) {
+        const close = closingQuote(remaining.slice(1), quote)
+        const consumed =
+          close === -1 ? remaining : remaining.slice(0, close + 2)
+        index += consumed.split("\n").length - 1
         diagnostics.push({
-          code: "unclosedQuote",
+          code: close === -1 ? "unclosedQuote" : "trailingText",
           severity: "error",
           line,
           key,
@@ -43,12 +56,8 @@ export function parseEnv(input: string): ParseResult {
         })
         continue
       }
-      const trailing = content.slice(close + 1).trim()
-      if (trailing && !trailing.startsWith("#")) {
-        diagnostics.push({ code: "trailingText", severity: "error", line, key })
-        continue
-      }
-      value = content.slice(0, close)
+      index += match[0].split("\n").length - 1
+      value = match[2]!
       if (quote === '"')
         value = value.replace(/\\n/g, "\n").replace(/\\r/g, "\r")
     } else {
@@ -76,11 +85,7 @@ export function parseEnv(input: string): ParseResult {
 
 function closingQuote(content: string, quote: string) {
   for (let index = 0; index < content.length; index++) {
-    if (
-      content[index] === "\\" &&
-      content[index + 1] === quote &&
-      content.indexOf(quote, index + 2) !== -1
-    ) {
+    if (content[index] === "\\" && content[index + 1] === quote) {
       index++
     } else if (content[index] === quote) {
       return index

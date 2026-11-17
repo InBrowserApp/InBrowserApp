@@ -109,6 +109,18 @@ describe(".env converter UI", () => {
     expect(button(messages.copiedLabel)).toBeTruthy()
   })
 
+  test("shows JSON parser feedback and navigates to the error line", () => {
+    render(<EnvConverterClient messages={messages} />)
+    changeDirection("json-env")
+    const text = '{\n  "PORT": "3000"\n  "DEBUG": false\n}'
+    enter(text)
+    expect(output().value).toBe("")
+    expect(screen.getByText(/after property value in JSON/)).toBeTruthy()
+    fireEvent.click(button("Line 3"))
+    expect(input().selectionStart).toBe(text.indexOf('  "DEBUG"'))
+    expect(document.activeElement).toBe(input())
+  })
+
   test("downloads each format and revokes temporary URLs", () => {
     const createObjectURL = vi.fn(() => "blob:download")
     const revokeObjectURL = vi.fn()
