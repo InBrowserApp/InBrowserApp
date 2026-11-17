@@ -1,0 +1,4 @@
+{
+  "name": "Visualizador de Parquet",
+  "description": "Abra arquivos Parquet localmente, inspecione tipos de campos e esquemas aninhados, navegue pelas linhas e exporte CSV ou JSON. Seus dados ficam no navegador."
+}

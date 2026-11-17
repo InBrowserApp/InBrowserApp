@@ -1,0 +1,4 @@
+{
+  "name": "Przeglądarka Parquet",
+  "description": "Otwieraj pliki Parquet lokalnie, sprawdzaj typy pól i zagnieżdżone schematy, przeglądaj wiersze i eksportuj CSV lub JSON. Dane pozostają w przeglądarce."
+}

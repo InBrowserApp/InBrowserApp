@@ -73,6 +73,7 @@ export {
   Shield,
   Sparkles,
   Square,
+  Table2,
   Sun,
   SunMoon,
   Text,

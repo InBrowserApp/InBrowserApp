@@ -21637,6 +21637,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "parquet-viewer",
+    category: "developer",
+    icon: "table-2",
+    tags: [
+      "parquet",
+      "apache",
+      "schema",
+      "data",
+      "table",
+      "csv",
+      "json",
+      "viewer",
+      "export",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض Parquet",
+        description:
+          "افتح ملفات Parquet محليًا، وافحص أنواع الحقول والمخططات المتداخلة، وتصفح الصفوف، وصدّر بصيغة CSV أو JSON. تبقى بياناتك في متصفحك.",
+      },
+      de: {
+        name: "Parquet-Betrachter",
+        description:
+          "Parquet-Dateien lokal öffnen, Feldtypen und verschachtelte Schemas prüfen, Zeilen durchsehen und CSV oder JSON exportieren. Ihre Daten bleiben im Browser.",
+      },
+      en: {
+        name: "Parquet Viewer",
+        description:
+          "Open Parquet files locally, inspect field types and nested schemas, browse rows, and export CSV or JSON. Your data stays in your browser.",
+      },
+      es: {
+        name: "Visor de Parquet",
+        description:
+          "Abre archivos Parquet localmente, inspecciona tipos de campos y esquemas anidados, explora filas y exporta CSV o JSON. Tus datos permanecen en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse Parquet",
+        description:
+          "Ouvrez des fichiers Parquet localement, inspectez les types de champs et les schémas imbriqués, parcourez les lignes et exportez en CSV ou JSON. Vos données restent dans votre navigateur.",
+      },
+      he: {
+        name: "מציג Parquet",
+        description:
+          "פתיחת קובצי Parquet באופן מקומי, בדיקת סוגי שדות וסכמות מקוננות, עיון בשורות וייצוא CSV או JSON. הנתונים נשארים בדפדפן שלך.",
+      },
+      hi: {
+        name: "Parquet व्यूअर",
+        description:
+          "Parquet फ़ाइलें स्थानीय रूप से खोलें, फ़ील्ड के प्रकार और नेस्टेड स्कीमा जाँचें, पंक्तियाँ देखें और CSV या JSON में निर्यात करें। आपका डेटा आपके ब्राउज़र में ही रहता है।",
+      },
+      id: {
+        name: "Penampil Parquet",
+        description:
+          "Buka file Parquet secara lokal, periksa tipe bidang dan skema bertingkat, jelajahi baris, lalu ekspor ke CSV atau JSON. Data Anda tetap di browser.",
+      },
+      it: {
+        name: "Visualizzatore Parquet",
+        description:
+          "Apri file Parquet in locale, esamina i tipi dei campi e gli schemi annidati, sfoglia le righe ed esporta in CSV o JSON. I dati restano nel browser.",
+      },
+      ja: {
+        name: "Parquet ビューアー",
+        description:
+          "Parquet ファイルをローカルで開き、フィールドの型や入れ子のスキーマを確認して、行の閲覧や CSV・JSON へのエクスポートができます。データはブラウザー内に保持されます。",
+      },
+      ko: {
+        name: "Parquet 뷰어",
+        description:
+          "로컬에서 Parquet 파일을 열고 필드 유형과 중첩 스키마를 확인하며, 행을 탐색하고 CSV 또는 JSON으로 내보내세요. 데이터는 브라우저에만 보관됩니다.",
+      },
+      ms: {
+        name: "Pemapar Parquet",
+        description:
+          "Buka fail Parquet secara setempat, periksa jenis medan dan skema bersarang, semak imbas baris serta eksport CSV atau JSON. Data anda kekal dalam pelayar.",
+      },
+      nl: {
+        name: "Parquet-viewer",
+        description:
+          "Open Parquet-bestanden lokaal, inspecteer veldtypen en geneste schema’s, blader door rijen en exporteer CSV of JSON. Je gegevens blijven in je browser.",
+      },
+      no: {
+        name: "Parquet-viser",
+        description:
+          "Åpne Parquet-filer lokalt, undersøk felttyper og nestede skjemaer, bla gjennom rader og eksporter CSV eller JSON. Dataene dine blir i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka Parquet",
+        description:
+          "Otwieraj pliki Parquet lokalnie, sprawdzaj typy pól i zagnieżdżone schematy, przeglądaj wiersze i eksportuj CSV lub JSON. Dane pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de Parquet",
+        description:
+          "Abra arquivos Parquet localmente, inspecione tipos de campos e esquemas aninhados, navegue pelas linhas e exporte CSV ou JSON. Seus dados ficam no navegador.",
+      },
+      ru: {
+        name: "Просмотр Parquet",
+        description:
+          "Открывайте файлы Parquet локально, проверяйте типы полей и вложенные схемы, просматривайте строки и экспортируйте данные в CSV или JSON. Данные остаются в браузере.",
+      },
+      sv: {
+        name: "Parquet-visare",
+        description:
+          "Öppna Parquet-filer lokalt, granska fälttyper och nästlade scheman, bläddra bland rader och exportera CSV eller JSON. Dina data stannar i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู Parquet",
+        description:
+          "เปิดไฟล์ Parquet ในเครื่อง ตรวจสอบชนิดฟิลด์และสคีมาที่ซ้อนกัน เรียกดูแถว และส่งออก CSV หรือ JSON ข้อมูลของคุณจะอยู่ในเบราว์เซอร์เท่านั้น",
+      },
+      tr: {
+        name: "Parquet Görüntüleyici",
+        description:
+          "Parquet dosyalarını yerel olarak açın, alan türlerini ve iç içe şemaları inceleyin, satırlara göz atın ve CSV veya JSON olarak dışa aktarın. Verileriniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem Parquet",
+        description:
+          "Mở tệp Parquet cục bộ, kiểm tra kiểu trường và lược đồ lồng nhau, duyệt các hàng và xuất CSV hoặc JSON. Dữ liệu luôn ở trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "Parquet 查看器",
+        description:
+          "在本地打开 Parquet 文件，查看字段类型和嵌套结构，浏览数据行，并导出 CSV 或 JSON。数据始终保留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "Parquet 檢視器",
+        description:
+          "在本機開啟 Parquet 檔案，檢查欄位型別與巢狀結構、瀏覽資料列，並匯出 CSV 或 JSON。資料全程留在瀏覽器中。",
+      },
+    },
+  },
+  {
     slug: "password-strength-checker",
     category: "text",
     icon: "lock",
@@ -58011,6 +58145,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "OpenAPI 轉 TypeScript 轉換器",
         description:
           "在瀏覽器中，將 OpenAPI 3.x 文件直接轉換為 TypeScript 型別，並支援常見的 openapi-typescript 產生選項。",
+      },
+    },
+  },
+  "parquet-viewer": {
+    slug: "parquet-viewer",
+    category: "developer",
+    icon: "table-2",
+    tags: [
+      "parquet",
+      "apache",
+      "schema",
+      "data",
+      "table",
+      "csv",
+      "json",
+      "viewer",
+      "export",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض Parquet",
+        description:
+          "افتح ملفات Parquet محليًا، وافحص أنواع الحقول والمخططات المتداخلة، وتصفح الصفوف، وصدّر بصيغة CSV أو JSON. تبقى بياناتك في متصفحك.",
+      },
+      de: {
+        name: "Parquet-Betrachter",
+        description:
+          "Parquet-Dateien lokal öffnen, Feldtypen und verschachtelte Schemas prüfen, Zeilen durchsehen und CSV oder JSON exportieren. Ihre Daten bleiben im Browser.",
+      },
+      en: {
+        name: "Parquet Viewer",
+        description:
+          "Open Parquet files locally, inspect field types and nested schemas, browse rows, and export CSV or JSON. Your data stays in your browser.",
+      },
+      es: {
+        name: "Visor de Parquet",
+        description:
+          "Abre archivos Parquet localmente, inspecciona tipos de campos y esquemas anidados, explora filas y exporta CSV o JSON. Tus datos permanecen en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse Parquet",
+        description:
+          "Ouvrez des fichiers Parquet localement, inspectez les types de champs et les schémas imbriqués, parcourez les lignes et exportez en CSV ou JSON. Vos données restent dans votre navigateur.",
+      },
+      he: {
+        name: "מציג Parquet",
+        description:
+          "פתיחת קובצי Parquet באופן מקומי, בדיקת סוגי שדות וסכמות מקוננות, עיון בשורות וייצוא CSV או JSON. הנתונים נשארים בדפדפן שלך.",
+      },
+      hi: {
+        name: "Parquet व्यूअर",
+        description:
+          "Parquet फ़ाइलें स्थानीय रूप से खोलें, फ़ील्ड के प्रकार और नेस्टेड स्कीमा जाँचें, पंक्तियाँ देखें और CSV या JSON में निर्यात करें। आपका डेटा आपके ब्राउज़र में ही रहता है।",
+      },
+      id: {
+        name: "Penampil Parquet",
+        description:
+          "Buka file Parquet secara lokal, periksa tipe bidang dan skema bertingkat, jelajahi baris, lalu ekspor ke CSV atau JSON. Data Anda tetap di browser.",
+      },
+      it: {
+        name: "Visualizzatore Parquet",
+        description:
+          "Apri file Parquet in locale, esamina i tipi dei campi e gli schemi annidati, sfoglia le righe ed esporta in CSV o JSON. I dati restano nel browser.",
+      },
+      ja: {
+        name: "Parquet ビューアー",
+        description:
+          "Parquet ファイルをローカルで開き、フィールドの型や入れ子のスキーマを確認して、行の閲覧や CSV・JSON へのエクスポートができます。データはブラウザー内に保持されます。",
+      },
+      ko: {
+        name: "Parquet 뷰어",
+        description:
+          "로컬에서 Parquet 파일을 열고 필드 유형과 중첩 스키마를 확인하며, 행을 탐색하고 CSV 또는 JSON으로 내보내세요. 데이터는 브라우저에만 보관됩니다.",
+      },
+      ms: {
+        name: "Pemapar Parquet",
+        description:
+          "Buka fail Parquet secara setempat, periksa jenis medan dan skema bersarang, semak imbas baris serta eksport CSV atau JSON. Data anda kekal dalam pelayar.",
+      },
+      nl: {
+        name: "Parquet-viewer",
+        description:
+          "Open Parquet-bestanden lokaal, inspecteer veldtypen en geneste schema’s, blader door rijen en exporteer CSV of JSON. Je gegevens blijven in je browser.",
+      },
+      no: {
+        name: "Parquet-viser",
+        description:
+          "Åpne Parquet-filer lokalt, undersøk felttyper og nestede skjemaer, bla gjennom rader og eksporter CSV eller JSON. Dataene dine blir i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka Parquet",
+        description:
+          "Otwieraj pliki Parquet lokalnie, sprawdzaj typy pól i zagnieżdżone schematy, przeglądaj wiersze i eksportuj CSV lub JSON. Dane pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de Parquet",
+        description:
+          "Abra arquivos Parquet localmente, inspecione tipos de campos e esquemas aninhados, navegue pelas linhas e exporte CSV ou JSON. Seus dados ficam no navegador.",
+      },
+      ru: {
+        name: "Просмотр Parquet",
+        description:
+          "Открывайте файлы Parquet локально, проверяйте типы полей и вложенные схемы, просматривайте строки и экспортируйте данные в CSV или JSON. Данные остаются в браузере.",
+      },
+      sv: {
+        name: "Parquet-visare",
+        description:
+          "Öppna Parquet-filer lokalt, granska fälttyper och nästlade scheman, bläddra bland rader och exportera CSV eller JSON. Dina data stannar i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู Parquet",
+        description:
+          "เปิดไฟล์ Parquet ในเครื่อง ตรวจสอบชนิดฟิลด์และสคีมาที่ซ้อนกัน เรียกดูแถว และส่งออก CSV หรือ JSON ข้อมูลของคุณจะอยู่ในเบราว์เซอร์เท่านั้น",
+      },
+      tr: {
+        name: "Parquet Görüntüleyici",
+        description:
+          "Parquet dosyalarını yerel olarak açın, alan türlerini ve iç içe şemaları inceleyin, satırlara göz atın ve CSV veya JSON olarak dışa aktarın. Verileriniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem Parquet",
+        description:
+          "Mở tệp Parquet cục bộ, kiểm tra kiểu trường và lược đồ lồng nhau, duyệt các hàng và xuất CSV hoặc JSON. Dữ liệu luôn ở trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "Parquet 查看器",
+        description:
+          "在本地打开 Parquet 文件，查看字段类型和嵌套结构，浏览数据行，并导出 CSV 或 JSON。数据始终保留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "Parquet 檢視器",
+        description:
+          "在本機開啟 Parquet 檔案，檢查欄位型別與巢狀結構、瀏覽資料列，並匯出 CSV 或 JSON。資料全程留在瀏覽器中。",
       },
     },
   },

@@ -15826,6 +15826,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "parquet-viewer",
+    language: "ar",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "de",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "en",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "es",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "fr",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "he",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "hi",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "id",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "it",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "ja",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "ko",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "ms",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "nl",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "no",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "pl",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "pt",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "ru",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "sv",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "th",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "tr",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "vi",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "password-strength-checker",
     language: "ar",
   },

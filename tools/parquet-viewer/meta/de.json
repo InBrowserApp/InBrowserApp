@@ -1,0 +1,4 @@
+{
+  "name": "Parquet-Betrachter",
+  "description": "Parquet-Dateien lokal öffnen, Feldtypen und verschachtelte Schemas prüfen, Zeilen durchsehen und CSV oder JSON exportieren. Ihre Daten bleiben im Browser."
+}
