@@ -69,7 +69,7 @@ describe("media reports", () => {
     expect(report.metrics.map((metric) => metric.value)).toEqual([
       "Matroska",
       "00:01:00.123",
-      "1,500 kb/s",
+      "1.5 Mb/s",
       "1920 × 1080",
     ])
     expect(report.sections.map((section) => section.title)).toEqual([

@@ -75,7 +75,10 @@ export function buildReport(
   const video = tracks.find((track) => track["@type"] === "Video")
   const audio = tracks.find((track) => track["@type"] === "Audio")
   const get = (key: string) => (general ? field(general, key) : undefined)
-  const bitrate = (value: unknown) => quantity(value, "kb/s", 1000, language)
+  const bitrate = (value: unknown) =>
+    (positive(value) ?? 0) >= 1000000
+      ? quantity(value, "Mb/s", 1000000, language)
+      : quantity(value, "kb/s", 1000, language)
   const metrics = [
     { label: m.container, value: scalar(get("Format")) },
     { label: m.duration, value: duration(get("Duration")) },

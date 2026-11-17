@@ -52,7 +52,7 @@ export function Results({
             className="min-w-0 rounded-xl border bg-muted/30 p-4"
           >
             <dt className="text-sm text-muted-foreground">{label}</dt>
-            <dd className="mt-2 text-lg font-medium break-words">
+            <dd className="mt-2 text-sm font-medium break-words tabular-nums sm:text-lg">
               <bdi>{value}</bdi>
             </dd>
           </div>
@@ -88,7 +88,7 @@ export function Results({
       </div>
       <div className="grid items-start gap-4 lg:grid-cols-2">
         {sections.map((section) => (
-          <ToolPanelCard key={section.title}>
+          <ToolPanelCard key={section.title} className="h-auto">
             <ToolPanelCardContent className="gap-3">
               <h2 className="font-heading text-base font-medium">
                 {section.title}

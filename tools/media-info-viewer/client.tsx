@@ -78,12 +78,13 @@ export default function MediaInfoViewer({
             }}
             onDragLeave={(event) => {
               event.preventDefault()
-              if (--depth.current <= 0) setDragging(false)
+              depth.current = Math.max(0, depth.current - 1)
+              if (depth.current === 0) setDragging(false)
             }}
             onDrop={(event) => {
               event.preventDefault()
               const dropped = event.dataTransfer.files[0]
-              if (dropped) select(dropped)
+              select(dropped ?? file)
             }}
             className={cn(
               "rounded-lg border border-dashed transition-colors",
