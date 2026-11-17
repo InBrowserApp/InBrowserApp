@@ -21,8 +21,6 @@ import { cn } from "@workspace/ui/lib/utils"
 import { useDocument } from "./use-document"
 import { Overview } from "./components/overview"
 import type { Messages } from "./types"
-import "pdfjs-dist/web/pdf_viewer.css"
-import "@workspace/pdf-reader/viewer.css"
 
 export default function Client({ messages: m }: { messages: Messages }) {
   const [file, setFile] = useState<File | null>(null)

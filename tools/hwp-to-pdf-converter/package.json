@@ -15,7 +15,6 @@
     "@rhwp/core": "catalog:",
     "@resvg/resvg-wasm": "catalog:",
     "pdf-lib": "catalog:",
-    "pdfjs-dist": "catalog:",
     "cfb": "catalog:",
     "fflate": "catalog:",
     "saxes": "catalog:"
