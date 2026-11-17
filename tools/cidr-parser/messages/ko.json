@@ -17,7 +17,7 @@
   "routingTitle": "라우팅 세부 정보",
   "routingDescription": "노트, 스크립트, 방화벽 규칙에 복사할 수 있는 prefix 계산, 마스크, 정수 범위입니다.",
   "familyLabel": "주소 패밀리",
-  "prefixLabel": "Prefix length",
+  "prefixLabel": "접두사 길이",
   "hostBitsLabel": "호스트 비트",
   "totalAddressesLabel": "전체 주소 수",
   "usableAddressesLabel": "사용 가능한 주소 수",

@@ -14,6 +14,7 @@ type BarcodeGeneratorMessages = Readonly<{
   optionsDescription: string
   preview: string
   previewDescription: string
+  renderError: string
   download: string
   text: string
   textPlaceholder: string

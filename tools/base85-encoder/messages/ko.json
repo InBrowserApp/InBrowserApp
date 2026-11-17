@@ -9,9 +9,9 @@
   "download": "Base85 다운로드",
   "readFailed": "파일 읽기에 실패했습니다",
   "invalidBase85": "Z85는 입력 길이가 4바이트의 배수여야 합니다.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "예제 불러오기",
+  "clearLabel": "지우기",
+  "copyLabel": "복사",
+  "copiedLabel": "복사됨",
   "importFromFileLabel": "파일에서 가져오기"
 }

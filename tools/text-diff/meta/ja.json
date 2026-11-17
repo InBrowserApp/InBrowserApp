@@ -1,4 +1,4 @@
 {
-  "name": "Text Diff",
-  "description": "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser."
+  "name": "テキスト差分ツール",
+  "description": "ブラウザー内で2つの原稿を並べて比較し、変更行を確認して、整った統合差分を書き出せます。"
 }

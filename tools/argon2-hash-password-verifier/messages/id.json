@@ -16,7 +16,7 @@
   "hideSecretLabel": "Sembunyikan secret",
   "verifyButtonLabel": "Verifikasi Password",
   "verifyingButtonLabel": "Memverifikasi…",
-  "resetButtonLabel": "Reset",
+  "resetButtonLabel": "Atur ulang",
   "resultLabel": "Hasil Verifikasi",
   "resultDescription": "Hasil mencerminkan password dan hash Argon2 terakhir yang dikirimkan.",
   "idleTitle": "Siap memverifikasi",

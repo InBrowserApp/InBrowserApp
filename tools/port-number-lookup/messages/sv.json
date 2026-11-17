@@ -16,6 +16,6 @@
   "registeredPortsDesc": "Anvands av applikationer och tjanster registrerade hos IANA, sasom MySQL (3306), PostgreSQL (5432).",
   "dynamicPorts": "Dynamiska Portar (49152-65535):",
   "dynamicPortsDesc": "Kallas ocksa \"efemara portar\", anvands for tillfalliga anslutningar av klientapplikationer.",
-  "noResultsTitle": "No matching ports found",
-  "noResultsDescription": "Try a different port number, service name, or category."
+  "noResultsTitle": "Inga matchande portar hittades",
+  "noResultsDescription": "Prova ett annat portnummer, tjänstnamn eller en annan kategori."
 }

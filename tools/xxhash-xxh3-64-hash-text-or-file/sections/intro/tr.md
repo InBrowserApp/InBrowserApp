@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 64)?
+## xxHash (XXH3 64) Nedir?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 64 outputs a 64-bit (8-byte) hash value, typically rendered as a 16-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3, çok yüksek hız ve mükemmel dağılım için tasarlanmış modern xxHash algoritmasıdır. XXH3 64, genellikle 16 karakterlik onaltılık bir dize olarak gösterilen 64 bitlik (8 baytlık) bir özet değeri üretir. Kriptografik olmayan bir özet işlevidir ve tekrarlanabilir özet hesaplamaları için isteğe bağlı tohum değerini destekler.
 
-**Key characteristics:**
+**Temel özellikleri:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **Son derece hızlıdır**: Büyük girdilerde yüksek performans için optimize edilmiştir
+- **Belirlenimlidir**: Aynı girdi ve tohum değeri her zaman aynı özeti üretir
+- **Kriptografik değildir**: Güvenlik amaçları için uygun değildir
+- **İyi dağılım sağlar**: Özet tabloları ve dizinleme için çok uygundur
+- **Tohum değeri kullanır**: Özet çıktılarını çeşitlendirmek için isteğe bağlı tohum değeri alır
 
-**Common uses:**
+**Yaygın kullanım alanları:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- Özet tabloları ve veri yapıları
+- Dosya bütünlüğü denetimleri (güvenlik dışı)
+- Yinelenen verileri kaldırma ve veriyi parçalara ayırma
+- Önbellek anahtarları ve veritabanı dizinleme
+- Yüksek hacimli veri işleme akışları

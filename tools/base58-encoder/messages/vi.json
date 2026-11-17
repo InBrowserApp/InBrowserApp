@@ -10,9 +10,9 @@
   "outputPlaceholder": "Kết quả Base58 sẽ xuất hiện ở đây...",
   "download": "Tải Base58",
   "readFailed": "Không thể đọc tệp",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Tải mẫu",
+  "clearLabel": "Xóa",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép",
   "importFromFileLabel": "Nhập từ tệp"
 }

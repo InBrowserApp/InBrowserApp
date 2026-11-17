@@ -1,5 +1,5 @@
 {
-  "valueTitle": "Nil UUID",
+  "valueTitle": "Nil-UUID",
   "valueDescription": "Kopier den standardiserte UUID-en med bare nuller i representasjonen systemet ditt forventer.",
   "canonicalLabel": "Kanonisk UUID",
   "rawHexLabel": "32-sifret heks",

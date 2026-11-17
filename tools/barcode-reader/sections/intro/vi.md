@@ -1,6 +1,6 @@
-## Barcode Reader làm gì
+## Trình đọc mã vạch làm gì
 
-Barcode Reader trích xuất giá trị được lưu trong các mã một chiều và hai chiều
+Trình đọc mã vạch trích xuất giá trị được lưu trong các mã một chiều và hai chiều
 phổ biến từ hình ảnh cục bộ hoặc từ camera của bạn. Công cụ này hỗ trợ QR
 Code, Data Matrix, PDF417, Aztec, Code 128, Code 39, EAN, UPC, ITF, Codabar
 và các định dạng khác mà trình quét trong trình duyệt xử lý được.

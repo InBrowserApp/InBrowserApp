@@ -10,9 +10,9 @@
   "outputPlaceholder": "פלט Base58 יוצג כאן...",
   "download": "הורד Base58",
   "readFailed": "קריאת הקובץ נכשלה",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "טעינת דוגמה",
+  "clearLabel": "ניקוי",
+  "copyLabel": "העתקה",
+  "copiedLabel": "הועתק",
   "importFromFileLabel": "ייבוא מקובץ"
 }

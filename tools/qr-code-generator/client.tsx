@@ -110,7 +110,7 @@ function QrCodeGeneratorClient({ messages }: QrCodeGeneratorClientProps) {
           setError(
             renderError instanceof Error
               ? renderError.message
-              : "Failed to render QR code."
+              : messages.renderError
           )
         }
       } finally {
@@ -123,7 +123,7 @@ function QrCodeGeneratorClient({ messages }: QrCodeGeneratorClientProps) {
     return () => {
       cancelled = true
     }
-  }, [deferredOptions, deferredPayload])
+  }, [messages.renderError, deferredOptions, deferredPayload])
 
   const svgBlob = useMemo(
     () =>

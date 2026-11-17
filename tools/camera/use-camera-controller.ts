@@ -29,6 +29,7 @@ function useCameraController(messages: CameraMessages) {
   const recordedChunksRef = useRef<Blob[]>([])
   const timerRef = useRef<number | null>(null)
   const recordingStartRef = useRef(0)
+  const startRequestIdRef = useRef(0)
 
   const [supportState, setSupportState] = useState<SupportState>("checking")
   const [mode, setMode] = useState<CameraMode>("photo")
@@ -88,6 +89,7 @@ function useCameraController(messages: CameraMessages) {
 
   const startCamera = useCallback(async () => {
     if (supportState !== "supported" || isPreparing || isRecording) return
+    const startRequestId = ++startRequestIdRef.current
     setIsPreparing(true)
     setPermissionDenied(false)
     setErrorMessage("")
@@ -97,19 +99,29 @@ function useCameraController(messages: CameraMessages) {
       try {
         stream = await requestCameraStream(facingMode, mode)
       } catch (error) {
+        if (startRequestId !== startRequestIdRef.current) return
         if (mode !== "video") throw error
         stream = await requestCameraStream(facingMode, mode, false)
+        if (startRequestId !== startRequestIdRef.current) {
+          stream.getTracks().forEach((track) => track.stop())
+          return
+        }
         setMicEnabled(false)
       }
+      if (startRequestId !== startRequestIdRef.current) {
+        stream.getTracks().forEach((track) => track.stop())
+        return
+      }
       await attachStream(stream)
-      setHasStarted(true)
+      if (startRequestId === startRequestIdRef.current) setHasStarted(true)
     } catch (error) {
+      if (startRequestId !== startRequestIdRef.current) return
       cleanupStream()
       setHasStarted(false)
       if (isPermissionError(error)) setPermissionDenied(true)
       else setErrorMessage(messages.cameraErrorDescription)
     } finally {
-      setIsPreparing(false)
+      if (startRequestId === startRequestIdRef.current) setIsPreparing(false)
     }
   }, [
     attachStream,
@@ -252,6 +264,7 @@ function useCameraController(messages: CameraMessages) {
 
   useEffect(() => {
     return () => {
+      startRequestIdRef.current += 1
       releaseRecorder(recorderRef, recordedChunksRef)
       cleanupStream()
       stopTimer()

@@ -30,7 +30,7 @@
   "lastUsableLabel": "Terakhir yang dapat digunakan",
   "broadcastAddressLabel": "Alamat broadcast",
   "netmaskLabel": "Netmask",
-  "wildcardMaskLabel": "Wildcard mask",
+  "wildcardMaskLabel": "Mask wildcard",
   "startIntegerLabel": "Integer awal",
   "endIntegerLabel": "Integer akhir",
   "ipv4Label": "IPv4",

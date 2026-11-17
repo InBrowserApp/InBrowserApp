@@ -2,6 +2,8 @@ import { beforeEach, expect, test, vi } from "vitest"
 import { openReader } from "./reader"
 
 const mock = vi.hoisted(() => ({
+  loadViewerStyles: vi.fn(),
+  createViewer: vi.fn(),
   getDocument: vi.fn(),
   destroy: vi.fn(),
   setDocument: vi.fn(),
@@ -25,6 +27,9 @@ vi.mock("pdfjs-dist", () => ({
   PasswordResponses: { INCORRECT_PASSWORD: 2 },
 }))
 vi.mock("./pdf-assets", () => ({ PdfAssets: class {} }))
+vi.mock("./viewer-styles", () => ({
+  loadViewerStyles: mock.loadViewerStyles,
+}))
 vi.mock("pdfjs-dist/web/pdf_viewer.mjs", () => ({
   EventBus: class {
     on(name: string, handler: (event?: unknown) => void) {
@@ -40,6 +45,7 @@ vi.mock("pdfjs-dist/web/pdf_viewer.mjs", () => ({
   PDFFindController: class {},
   PDFSinglePageViewer: class {
     constructor() {
+      mock.createViewer()
       return Object.assign(mock.viewer, {
         setDocument: mock.setDocument,
         firstPagePromise: Promise.resolve(),
@@ -69,10 +75,53 @@ function setup(pages = 3) {
 }
 beforeEach(() => {
   vi.clearAllMocks()
+  mock.loadViewerStyles.mockResolvedValue(undefined)
   mock.events.clear()
   mock.destroy.mockResolvedValue(undefined)
   mock.goToDestination.mockResolvedValue(undefined)
   mock.viewer.currentScaleValue = ""
+})
+
+test("waits for viewer styles before creating a viewer or PDF worker", async () => {
+  const { options } = setup()
+  let loaded!: () => void
+  mock.loadViewerStyles.mockReturnValue(
+    new Promise<void>((resolve) => {
+      loaded = resolve
+    })
+  )
+  const opening = openReader(options)
+  await vi.waitFor(() => expect(mock.loadViewerStyles).toHaveBeenCalledOnce())
+  expect(mock.createViewer).not.toHaveBeenCalled()
+  expect(mock.getDocument).not.toHaveBeenCalled()
+  loaded()
+  const reader = await opening
+  expect(mock.createViewer).toHaveBeenCalledOnce()
+  reader.dispose()
+})
+
+test("does not allocate a viewer when styles fail to load", async () => {
+  const { options } = setup()
+  mock.loadViewerStyles.mockRejectedValue(new Error("Styles unavailable"))
+  await expect(openReader(options)).rejects.toThrow("Styles unavailable")
+  expect(mock.createViewer).not.toHaveBeenCalled()
+  expect(mock.getDocument).not.toHaveBeenCalled()
+})
+
+test("cancels while waiting for styles without allocating PDF resources", async () => {
+  const { options, controller } = setup()
+  let loaded!: () => void
+  mock.loadViewerStyles.mockReturnValue(
+    new Promise<void>((resolve) => {
+      loaded = resolve
+    })
+  )
+  const opening = openReader(options)
+  controller.abort()
+  loaded()
+  await expect(opening).rejects.toThrow(/abort/i)
+  expect(mock.createViewer).not.toHaveBeenCalled()
+  expect(mock.getDocument).not.toHaveBeenCalled()
 })
 
 test("wires the local viewer, navigation, search and password events", async () => {

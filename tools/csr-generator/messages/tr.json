@@ -15,7 +15,7 @@
   "importDescription": "Şifrelenmemiş bir PKCS#8 PEM özel anahtarı yapıştırın. Şifrelenmiş, PKCS#1 veya SEC1 anahtarları desteklenmez.",
   "subjectTitle": "Konu (Ayırt Edici Ad)",
   "subjectDescription": "Tüm alanlar isteğe bağlıdır, ancak çoğu CA en az bir Common Name bekler.",
-  "subjectCommonNameLabel": "Common Name (CN)",
+  "subjectCommonNameLabel": "Ortak Ad (CN)",
   "subjectCommonNamePlaceholder": "example.com",
   "subjectOrganizationLabel": "Kuruluş (O)",
   "subjectOrganizationalUnitLabel": "Kuruluş Birimi (OU)",

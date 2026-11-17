@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "פורמט מדור קודם בלבד",
+  "compatibilityDescription": "יוצר מפתח תוכנה בפורמט המבוסס על BatLabs. אינו תואם ל־ASTRO 25 Portable CPS (כולל XTS5000), ל־APX CPS או ל־Advanced System Keys (ASK).",
+  "inputTitle": "מזהה מערכת",
+  "inputDescription": "יש להזין את המזהה של מערכת קשר עורקית מדור קודם של Motorola.",
+  "systemIdLabel": "מזהה מערכת (הקסדצימלי)",
+  "systemIdHelp": "יש להשתמש ב־1–4 ספרות הקסדצימליות (0–9, A–F). למזהים קצרים יתווספו אפסים מובילים.",
+  "invalidSystemId": "יש להזין 1–4 ספרות הקסדצימליות (0–9, A–F), ללא הקידומת 0x.",
+  "outputTitle": "קובץ מפתח מדור קודם",
+  "emptyState": "יש להזין מזהה מערכת לתצוגה מקדימה ולהורדה של קובץ ה־.KEY.",
+  "normalizedIdLabel": "מזהה מנורמל",
+  "filenameLabel": "שם הקובץ",
+  "fileSizeLabel": "גודל הקובץ",
+  "fileSizeValue": "27 בתים",
+  "hexPreviewLabel": "תצוגה מקדימה הקסדצימלית",
+  "downloadLabel": "הורדת .KEY",
+  "sourceLabel": "מימוש ייחוס",
+  "licenseLabel": "רישיון ISC"
+}

@@ -16,5 +16,7 @@
   "keyLabel": "BLAKE2 密钥（Base64）",
   "keyPlaceholder": "可选的密钥散列密钥（Base64 编码）",
   "invalidBase64Title": "当前 Base64 还不是有效值。",
-  "invalidBase64Description": "请检查是否缺少填充字符、包含意外字符，或只粘贴了一部分数据。"
+  "invalidBase64Description": "请检查是否缺少填充字符、包含意外字符，或只粘贴了一部分数据。",
+  "fileHashError": "文件哈希计算失败。",
+  "textHashError": "文本哈希计算失败。"
 }

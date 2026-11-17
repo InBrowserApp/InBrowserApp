@@ -1,4 +1,4 @@
 {
-  "name": "Text Diff",
-  "description": "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser."
+  "name": "Tekstsammenligning",
+  "description": "Sammenlign to utkast side ved side, undersøk endrede linjer og eksporter en ryddig samlet diff uten å forlate nettleseren."
 }

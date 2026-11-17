@@ -1,6 +1,6 @@
-## PNG Optimizer 的功能
+## PNG 最佳化工具的功能
 
-PNG Optimizer 會使用無損 Oxipng 最佳化來壓縮 PNG 圖片。它會在不改變可見像素的前提下，盡可能重寫 PNG 結構、壓縮設定、色盤資料和 Alpha 資訊。
+PNG 最佳化工具會使用無損 Oxipng 最佳化來壓縮 PNG 圖片。它會在不改變可見像素的前提下，盡可能重寫 PNG 結構、壓縮設定、色盤資料和 Alpha 資訊。
 
 ## 適合使用的時機
 

@@ -2,7 +2,7 @@
   "file": "ملف",
   "dragOrClick": "انقر أو اسحب لتحميل ملف",
   "clearFile": "مسح الملف",
-  "dataUri": "Data URI",
+  "dataUri": "معرّف URI للبيانات",
   "dataUriPlaceholder": "سيظهر Data URI المُنشأ هنا...",
   "onlyOneFile": "يمكن تحميل ملف واحد فقط",
   "readFailed": "فشل في قراءة الملف",

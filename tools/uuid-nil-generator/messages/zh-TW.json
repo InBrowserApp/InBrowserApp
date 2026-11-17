@@ -1,5 +1,5 @@
 {
-  "valueTitle": "Nil UUID",
+  "valueTitle": "空值 UUID",
   "valueDescription": "依照系統預期的表示方式，複製標準化的全零 UUID。",
   "canonicalLabel": "標準 UUID",
   "rawHexLabel": "32 位十六進位",
@@ -9,7 +9,7 @@
   "copyUrnLabel": "複製 URN",
   "copiedLabel": "已複製",
   "detailsTitle": "參考資訊",
-  "detailsDescription": "nil UUID 是固定的哨兵值，不是隨機識別碼。",
+  "detailsDescription": "空值 UUID 是固定的哨兵值，不是隨機識別碼。",
   "allBitsLabel": "位元",
   "allBitsValue": "128 個零位元",
   "versionLabel": "版本",

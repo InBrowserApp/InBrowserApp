@@ -1,6 +1,6 @@
 ## Översikt
 
-JSON Diff Path jämför två JSON-dokument och omvandlar varje strukturell ändring till en läsbar sökvägspost med både JSONPath- och JSON Pointer-utdata.
+Sökvägsbaserad JSON-jämförelse jämför två JSON-dokument och omvandlar varje strukturell ändring till en läsbar sökvägspost med både JSONPath- och JSON Pointer-utdata.
 
 ## När det är lämpligt
 

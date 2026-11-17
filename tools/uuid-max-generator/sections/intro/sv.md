@@ -1,4 +1,4 @@
-## Vad Är en Max UUID?
+## Vad är en max-UUID?
 
 En max-UUID är den standardiserade UUID vars 128 bitar alla är satta till ett. Dess kanoniska textform är `ffffffff-ffff-ffff-ffff-ffffffffffff`, och den används ofta för att betyda det högsta möjliga UUID-värdet.
 

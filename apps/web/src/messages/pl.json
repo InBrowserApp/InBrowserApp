@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Darmowe narzędzia przeglądarkowe działające w całości na Twoim urządzeniu.",
     "languageLabel": "Języki",
+    "installApp": "Zainstaluj aplikację",
     "themeLabel": "Przełącz motyw",
     "themeLight": "Jasny",
     "themeDark": "Ciemny",
@@ -46,7 +47,6 @@
     "clearSearchLabel": "Wyczyść",
     "categoriesLabel": "Kategorie",
     "categoryAll": "Wszystkie narzędzia",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "Podpowiedzi",
     "suggestionsHint": "↑↓ nawiguj · ↵ otwórz · esc zamknij",
     "suggestionMatchCountOne": "{count} wynik",
@@ -58,6 +58,7 @@
     "categories": {
       "crypto": "Kryptografia i haszowanie",
       "developer": "Dla programistów",
+      "document": "Dokumenty",
       "image": "Obrazy i multimedia",
       "json": "JSON i dane",
       "misc": "Różne",
@@ -67,6 +68,23 @@
       "text": "Tekst",
       "time": "Czas i data",
       "web": "Web"
+    }
+  },
+  "categoryPages": {
+    "titleTemplate": "{category} — narzędzia",
+    "descriptions": {
+      "crypto": "Obliczaj skróty tekstu i plików, szyfruj dane oraz generuj lub weryfikuj hasła i klucze. Poznaj narzędzia przeglądarkowe do sum kontrolnych, kryptografii i bezpiecznych danych uwierzytelniających.",
+      "developer": "Przeglądaj archiwa, formatuj kod, generuj identyfikatory i konwertuj konfiguracje programistyczne. Znajdź narzędzia przeglądarkowe do codziennych zadań programistycznych.",
+      "document": "Czytaj i konwertuj dokumenty, ebooki, prezentacje i arkusze kalkulacyjne w przeglądarce. Korzystaj z podglądu plików, wyodrębniaj treść i eksportuj do innych formatów bez przesyłania dokumentów.",
+      "image": "Konwertuj obrazy, zmieniaj ich rozmiar i przeglądaj je w przeglądarce. Optymalizuj pliki graficzne, przeglądaj metadane, twórz kody kreskowe i pracuj z animowanymi formatami obrazów.",
+      "json": "Formatuj, sprawdzaj poprawność, porównuj i konwertuj dane strukturalne. Pracuj z formatami JSON, YAML, TOML, XML i CSV za pomocą narzędzi działających w przeglądarce.",
+      "misc": "Nagrywaj dźwięk i wideo, korzystaj z kamery, sprawdzaj informacje o urządzeniu i konwertuj liczby. Poznaj praktyczne narzędzia przeglądarkowe do codziennych zadań.",
+      "network": "Sprawdzaj informacje DNS i IP, obliczaj podsieci i przeglądaj certyfikaty. Znajdź narzędzia do adresów sieciowych, protokołów i rozwiązywania problemów z siecią.",
+      "pdf": "Łącz, dziel, przeglądaj i porządkuj pliki PDF w przeglądarce. Wyodrębniaj tekst, konwertuj strony na obrazy i dodawaj numery stron bez przesyłania dokumentów.",
+      "random": "Generuj liczby losowe, hasła i frazy mnemoniczne BIP39 w przeglądarce. Wybierz narzędzie i dostosuj jego wyniki do swojego zadania.",
+      "text": "Przekształcaj, porównuj i analizuj tekst lub sprawdzaj poprawność popularnych identyfikatorów. Znajdź narzędzia przeglądarkowe do kodowania, pisania, porządkowania tekstu i sprawdzania formatów.",
+      "time": "Konwertuj znaczniki czasu i strefy czasowe, obliczaj czas trwania i pracuj z harmonogramami cron. Planuj wydarzenia i porównuj daty za pomocą przeglądarkowych narzędzi do obsługi czasu.",
+      "web": "Koduj i dekoduj dane, przeglądaj adresy URL, generuj kody QR i pracuj z formatami internetowymi. Poznaj narzędzia przeglądarkowe do typowych zadań związanych z tworzeniem stron internetowych."
     }
   }
 }

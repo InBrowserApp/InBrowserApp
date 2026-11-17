@@ -1,7 +1,7 @@
 {
   "payloadCardTitle": "Payload và header",
   "payloadCardDescription": "Chỉnh sửa các claims JSON và các trường protected header tùy chọn sẽ được ký vào token.",
-  "payloadLabel": "Payload JSON",
+  "payloadLabel": "Nội dung JSON",
   "payloadPlaceholder": "{\n  \"sub\": \"user_123\",\n  \"role\": \"admin\"\n}",
   "claimsHelperTitle": "Công cụ hỗ trợ claim đã đăng ký",
   "claimsHelperDescription": "Dùng các điều khiển này để cập nhật các claim NumericDate phổ biến trong payload JSON.",

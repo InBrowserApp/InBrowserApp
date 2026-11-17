@@ -1,11 +1,11 @@
-## What this comparer is for
+## Для чего нужно сравнение списков
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+Используйте этот инструмент, когда два списка должны совпадать, но перед импортом, синхронизацией, рассылкой или очисткой нужно точно увидеть общие и исключённые элементы, а также дубликаты.
 
-## What you get back
+## Что вы получите
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+Сравнение разбивается на удобные наборы результатов: общие элементы, только в A, только в B, все уникальные значения и дубликаты внутри каждого источника. Каждый набор можно скопировать или скачать отдельно.
 
-## Where it helps most
+## Где это особенно полезно
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+Инструмент подходит для списков контактов, идентификаторов товаров, выгрузок для аудита, снимков складских остатков, сегментов кампаний и любой очистки данных, где неудачное объединение приведёт к лишней работе.

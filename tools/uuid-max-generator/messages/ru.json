@@ -1,5 +1,5 @@
 {
-  "valueTitle": "Max UUID",
+  "valueTitle": "Максимальный UUID",
   "valueDescription": "Скопируйте стандартизированный UUID из одних единиц в представлении, которое ожидает ваша система.",
   "canonicalLabel": "Канонический UUID",
   "rawHexLabel": "32-значный hex",

@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "Tempel XML yang valid di sebelah kiri untuk melihat pratinjau JSON hasil konversi di sini.",
   "invalidXmlLabel": "XML tidak valid",
   "optionsLabel": "Opsi",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "Sesuaikan cara XML diuraikan sebelum menyalin atau mengunduh JSON hasil konversi.",
   "indentSizeLabel": "Ukuran indentasi",
   "indentSizeDescription": "Pilih 0 untuk output ringkas atau 1-8 untuk indentasi berformat.",
   "compactLabel": "Ringkas",

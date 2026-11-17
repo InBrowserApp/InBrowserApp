@@ -10,7 +10,7 @@
   "hide": "Sembunyikan",
   "verifyLabel": "Verifikasi",
   "verifyingLabel": "Memverifikasi",
-  "resetLabel": "Reset",
+  "resetLabel": "Atur ulang",
   "sampleLabel": "Gunakan contoh",
   "resultTitle": "Hasil Verifikasi",
   "resultDescription": "Jalankan verifikasi untuk melihat apakah kata sandi cocok dengan hash.",

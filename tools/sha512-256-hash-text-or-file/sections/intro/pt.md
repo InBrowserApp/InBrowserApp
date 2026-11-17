@@ -1,19 +1,19 @@
-## What is SHA-512/256 (FIPS 180-4)?
+## O que é SHA-512/256 (FIPS 180-4)?
 
-SHA-512/256 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 256-bit (32-byte) digest, typically rendered as a 64-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/256 (FIPS 180-4) é uma função hash criptográfica da família SHA-2 que produz um resumo de 256 bits (32 bytes), geralmente representado como uma string hexadecimal de 64 caracteres. Baseia-se em SHA-512 com valores iniciais diferentes e uma saída truncada, fornecendo um resumo mais curto e mantendo a estrutura interna do SHA-512.
 
-**Key characteristics:**
+**Características principais:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **Determinística**: A mesma entrada sempre produz o mesmo hash
+- **Cálculo rápido**: Rápida de calcular para qualquer entrada
+- **Efeito avalanche**: Pequenas mudanças na entrada produzem saídas drasticamente diferentes
+- **Irreversível**: É computacionalmente inviável reverter o hash para encontrar a entrada original
+- **Resistente a colisões**: É muito difícil encontrar duas entradas diferentes que produzam o mesmo hash
 
-**Common uses:**
+**Usos comuns:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 256-bit hashes
+- Assinaturas digitais e certificados
+- Verificações de integridade e somas de verificação
+- Construções HMAC
+- Verificação de arquivos e fluxos de processamento de dados
+- Protocolos que exigem hashes de 256 bits

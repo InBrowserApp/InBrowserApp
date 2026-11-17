@@ -80,14 +80,26 @@ function Blake2sHashTextOrFileClient({
       })
       .catch((error: unknown) => {
         if (!cancelled) {
-          setDigestState(resolveDigestError(error, selectedFile))
+          setDigestState(
+            resolveDigestError(
+              error,
+              selectedFile ? messages.fileHashError : messages.textHashError
+            )
+          )
         }
       })
 
     return () => {
       cancelled = true
     }
-  }, [deferredPlainText, keyBase64, outputLength, selectedFile])
+  }, [
+    messages.fileHashError,
+    messages.textHashError,
+    deferredPlainText,
+    keyBase64,
+    outputLength,
+    selectedFile,
+  ])
 
   return (
     <div className="grid gap-6">
@@ -126,7 +138,7 @@ function Blake2sHashTextOrFileClient({
 
 function resolveDigestError(
   error: unknown,
-  selectedFile: File | null
+  fallbackMessage: string
 ): Blake2sDigestState {
   if (
     error instanceof Error &&
@@ -141,12 +153,7 @@ function resolveDigestError(
 
   return {
     status: "error",
-    message:
-      error instanceof Error
-        ? error.message
-        : selectedFile
-          ? "Failed to hash file."
-          : "Failed to hash text.",
+    message: error instanceof Error ? error.message : fallbackMessage,
   }
 }
 

@@ -15,7 +15,7 @@
   "regionStatus": "Regiostatus",
   "province": "Provincie",
   "city": "Stad",
-  "district": "District/County",
+  "district": "District/graafschap",
   "birthdate": "Geboortedatum",
   "age": "Leeftijd",
   "gender": "Geslacht",

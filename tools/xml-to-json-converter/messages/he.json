@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "הדבק XML תקין בצד שמאל כדי לצפות כאן בתצוגה מקדימה של ה-JSON שהומר.",
   "invalidXmlLabel": "XML לא תקין",
   "optionsLabel": "אפשרויות",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "התאימו את אופן הפענוח של ה־XML לפני העתקה או הורדה של ה־JSON שהומר.",
   "indentSizeLabel": "גודל הזחה",
   "indentSizeDescription": "בחרו 0 לפלט קומפקטי או 1-8 להזחה מעוצבת.",
   "compactLabel": "קומפקטי",

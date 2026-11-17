@@ -15,7 +15,7 @@
   "errorNoKeys": "Er zijn geen geldige SSH-public keys gevonden.",
   "errorReadFile": "Het geselecteerde bestand kon niet worden gelezen.",
   "errorWebCryptoUnavailable": "Voor SHA-256-fingerprinting is Web Crypto-ondersteuning vereist.",
-  "keyLabel": "Key {index}",
+  "keyLabel": "Sleutel {index}",
   "keyTypeLabel": "Keytype",
   "keySizeLabel": "Keygrootte",
   "curveLabel": "Curve",

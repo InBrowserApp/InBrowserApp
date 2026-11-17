@@ -5,7 +5,7 @@
   "passwordPlaceholder": "해시할 비밀번호를 입력하세요",
   "showPasswordLabel": "비밀번호 표시",
   "hidePasswordLabel": "비밀번호 숨기기",
-  "costLabel": "Cost factor",
+  "costLabel": "비용 계수",
   "costDescription": "cost 값이 높을수록 속도는 느려지고 무차별 대입 공격은 더 어려워집니다. 이 브라우저 도구는 cost를 4-15로 제한합니다.",
   "costInvalidMessage": "4에서 15 사이의 정수를 입력하세요.",
   "generateLabel": "해시 생성",
@@ -24,6 +24,6 @@
   "costValueLabel": "Cost",
   "saltLabel": "Salt",
   "checksumLabel": "Checksum",
-  "generatedSummary": "Cost {cost}",
+  "generatedSummary": "비용 {cost}",
   "privacyNote": "비밀번호는 저장되지 않으며 해싱은 이 브라우저에서 실행됩니다."
 }

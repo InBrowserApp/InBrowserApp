@@ -66,6 +66,7 @@
   "maxTouchPoints": "Max touch points",
   "gpuVendor": "GPU vendor",
   "gpuRenderer": "GPU renderer",
+  "gpuDetails": "View GPU details",
   "connectionType": "Connection type",
   "downlink": "Downlink",
   "roundTripTime": "Round trip time",

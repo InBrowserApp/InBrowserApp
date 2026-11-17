@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## Por que os caracteres invisíveis importam
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+É fácil deixar passar caracteres Unicode invisíveis porque eles não parecem estar incorretos em um editor comum. O problema só aparece depois: alterações no texto falham, identificadores deixam de coincidir, o layout apresenta quebras estranhas ou o texto passa a se comportar de forma diferente em contextos RTL.
 
-## What this tool catches
+## O que esta ferramenta detecta
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+Este verificador procura quatro grupos comuns: marcas de largura zero, controles bidirecionais, caracteres especiais de espaçamento e controles de formatação. Ele informa exatamente onde aparecem, oferece uma pré-visualização anotada e prepara uma versão limpa que você pode copiar ou exportar.
 
-## When to use it
+## Quando usar
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+Use-o depois de copiar texto de documentos, PDFs, planilhas, aplicativos de chat, editores de CMS ou ferramentas de design. É especialmente útil quando uma string parece normal, mas comparações, renderização ou etapas posteriores de processamento continuam apresentando comportamentos estranhos.

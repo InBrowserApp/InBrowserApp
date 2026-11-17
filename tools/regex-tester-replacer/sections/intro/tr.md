@@ -1,16 +1,16 @@
-## Test Patterns Before They Ship
+## Desenleri Kullanıma Almadan Önce Test Edin
 
-Regex is easy to get almost right. This tool gives you one place to validate a pattern, see every match, and confirm the replacement output before you use it in code, content pipelines, or search rules.
+Düzenli ifadelerle doğruya çok yaklaşmak kolaydır. Bu araç; bir deseni kodda, içerik işleme akışlarında veya arama kurallarında kullanmadan önce doğrulamanızı, her eşleşmeyi görmenizi ve değiştirme çıktısını kontrol etmenizi tek bir yerde sağlar.
 
-## What You Can Check Here
+## Burada Neleri Kontrol Edebilirsiniz?
 
-- Paste sample text and watch matches update immediately
-- Toggle common flags like global, multiline, and ignore case
-- Inspect capturing groups and named groups for every match
-- Preview replacement output with `$1` and `$<name>` references
+- Örnek metin yapıştırın ve eşleşmelerin anında güncellenmesini izleyin
+- Genel, çok satırlı ve büyük/küçük harfi yok sayma gibi yaygın bayrakları açıp kapatın
+- Her eşleşme için yakalama gruplarını ve adlandırılmış grupları inceleyin
+- `$1` ve `$<name>` başvurularıyla değiştirme çıktısını önizleyin
 
-## Good Uses
+## Yararlı Kullanım Alanları
 
-- Cleaning IDs, log lines, and exports before import
-- Testing content rewrite rules without touching source data
-- Debugging why a pattern matches too much, too little, or nothing at all
+- İçe aktarmadan önce kimlikleri, günlük satırlarını ve dışa aktarılan verileri temizlemek
+- Kaynak veriye dokunmadan içerik yeniden yazma kurallarını test etmek
+- Bir desenin neden gereğinden fazla, az veya hiç eşleşme bulmadığını araştırmak

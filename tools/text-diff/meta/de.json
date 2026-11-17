@@ -1,4 +1,4 @@
 {
-  "name": "Text Diff",
-  "description": "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser."
+  "name": "Text-Diff",
+  "description": "Vergleiche zwei Entwürfe nebeneinander, prüfe geänderte Zeilen und exportiere direkt im Browser einen übersichtlichen Unified-Diff."
 }

@@ -1,4 +1,5 @@
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
+import { gzipSync } from "fflate"
 const mock = vi.hoisted(() => ({
   init: vi.fn(),
   preflight: vi.fn(),
@@ -18,9 +19,16 @@ vi.mock("@rhwp/core", () => ({
   },
 }))
 vi.mock("./preflight", () => ({ preflight: mock.preflight }))
+vi.mock("@rhwp/core/rhwp_bg.wasm?gzip-url", () => ({
+  default: "/hwp.wasm.gz",
+}))
 import { openEngine } from "./engine"
 beforeEach(() => {
   vi.resetAllMocks()
+  vi.stubGlobal(
+    "fetch",
+    vi.fn(async () => new Response(gzipSync(new Uint8Array([0, 97, 115, 109]))))
+  )
   mock.count.mockReturnValue(2)
   mock.measure.mockReturnValue({ width: 18 })
   vi.stubGlobal(
@@ -37,11 +45,16 @@ afterEach(() => {
   Reflect.deleteProperty(globalThis, "measureTextWidth")
 })
 test("registers worker font measurement before WASM initialization and opens bytes", async () => {
-  mock.init.mockImplementation(() => {
-    expect(
-      Reflect.get(globalThis, "measureTextWidth")("12px serif", "한글")
-    ).toBe(18)
-  })
+  mock.init.mockImplementation(
+    async ({ module_or_path }: { module_or_path: Response }) => {
+      expect(new Uint8Array(await module_or_path.arrayBuffer())).toEqual(
+        new Uint8Array([0, 97, 115, 109])
+      )
+      expect(
+        Reflect.get(globalThis, "measureTextWidth")("12px serif", "한글")
+      ).toBe(18)
+    }
+  )
   const bytes = new Uint8Array([1])
   const result = await openEngine(bytes)
   expect(mock.preflight).toHaveBeenCalledWith(bytes)
@@ -76,3 +89,17 @@ test("distinguishes engine load failure from a document parsing failure", async 
     "engineUnavailable"
   )
 })
+
+test.each([new Response(null, { status: 503 }), new Response(null)])(
+  "rejects unavailable or empty compressed WASM responses",
+  async (response) => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => response)
+    )
+    await expect(openEngine(new Uint8Array())).rejects.toThrow(
+      "engineUnavailable"
+    )
+    expect(mock.init).not.toHaveBeenCalled()
+  }
+)

@@ -1,6 +1,6 @@
 ## Visão geral
 
-JSON Diff Path compara dois documentos JSON e transforma cada alteração
+O Comparador de JSON por caminho compara dois documentos JSON e transforma cada alteração
 estrutural em um registro de caminho legível, com saída em JSONPath e JSON
 Pointer.
 

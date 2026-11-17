@@ -1,4 +1,4 @@
 {
-  "name": "Text Diff",
-  "description": "Compare two drafts side by side, inspect changed lines, and export a clean unified diff without leaving the browser."
+  "name": "텍스트 차이 비교",
+  "description": "브라우저에서 두 초안을 나란히 비교하고, 변경된 줄을 확인하며, 깔끔한 통합 차이 파일을 내보내세요."
 }

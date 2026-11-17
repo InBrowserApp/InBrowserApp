@@ -1,16 +1,16 @@
-## Test Patterns Before They Ship
+## اختبر الأنماط قبل استخدامها
 
-Regex is easy to get almost right. This tool gives you one place to validate a pattern, see every match, and confirm the replacement output before you use it in code, content pipelines, or search rules.
+من السهل كتابة تعبير نمطي يبدو صحيحًا لكنه لا يطابق المطلوب تمامًا. توفر لك هذه الأداة مكانًا واحدًا للتحقق من النمط ورؤية كل مطابقة والتأكد من ناتج الاستبدال قبل استخدامه في الشيفرة أو مسارات معالجة المحتوى أو قواعد البحث.
 
-## What You Can Check Here
+## ما الذي يمكنك فحصه هنا
 
-- Paste sample text and watch matches update immediately
-- Toggle common flags like global, multiline, and ignore case
-- Inspect capturing groups and named groups for every match
-- Preview replacement output with `$1` and `$<name>` references
+- الصق نصًا تجريبيًا وشاهد المطابقات تتجدد فورًا
+- فعّل الأعلام الشائعة أو عطّلها، مثل البحث الشامل وتعدد الأسطر وتجاهل حالة الأحرف
+- افحص مجموعات الالتقاط والمجموعات المسماة لكل مطابقة
+- عاين ناتج الاستبدال باستخدام مراجع `$1` و`$<name>`
 
-## Good Uses
+## استخدامات مفيدة
 
-- Cleaning IDs, log lines, and exports before import
-- Testing content rewrite rules without touching source data
-- Debugging why a pattern matches too much, too little, or nothing at all
+- تنقيح المعرّفات وأسطر السجلات والبيانات المُصدّرة قبل استيرادها
+- اختبار قواعد إعادة كتابة المحتوى دون تعديل البيانات الأصلية
+- تشخيص سبب مطابقة النمط لمحتوى أكثر أو أقل من المطلوب، أو عدم مطابقته لأي شيء

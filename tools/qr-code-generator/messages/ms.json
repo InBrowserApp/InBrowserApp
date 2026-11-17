@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "Kod QR yang dijana"
+  "qrAlt": "Kod QR yang dijana",
+  "renderError": "Gagal memaparkan kod QR."
 }

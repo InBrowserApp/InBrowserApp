@@ -1,0 +1,4 @@
+{
+  "name": "HAR Network Analyzer",
+  "description": "Analyze HAR files locally in your browser. Inspect request waterfalls, timings, headers, and recorded bodies to diagnose slow or failed requests."
+}

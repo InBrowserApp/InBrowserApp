@@ -5,10 +5,16 @@ import {
   screen,
   waitFor,
 } from "@testing-library/react"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import RegexTesterReplacerClient from "./client"
+import { analyzeRegex } from "./core/regex-tester-replacer"
 import { STORAGE_KEYS } from "./constants"
+
+import type {
+  RegexAnalysisWorkerRequest,
+  RegexAnalysisWorkerResponse,
+} from "./client/regex-analysis-types"
 
 const messages = {
   meta: {
@@ -37,6 +43,10 @@ const messages = {
   unicodeFlagLabel: "Unicode",
   stickyFlagLabel: "Sticky",
   invalidPatternLabel: "Invalid pattern: {message}",
+  analysisLoadingLabel: "Checking the pattern…",
+  analysisTimeoutLabel:
+    "The pattern took too long to run. Shorten it or the test text and try again.",
+  analysisFailedLabel: "Could not complete regex analysis. Please try again.",
   summaryTitle: "Summary",
   summaryDescription: "Review what the current pattern is doing.",
   summaryEmpty: "Add both a pattern and some text to see results.",
@@ -65,11 +75,77 @@ const messages = {
   downloadLabel: "Download",
 } as const
 
+type WorkerListener = (event: MessageEvent<RegexAnalysisWorkerResponse>) => void
+
+class MockWorker {
+  static autoRespond = true
+  static instances: MockWorker[] = []
+
+  private readonly messageListeners = new Set<WorkerListener>()
+
+  request: RegexAnalysisWorkerRequest | null = null
+  terminated = false
+
+  constructor(_url: URL, _options: WorkerOptions) {
+    MockWorker.instances.push(this)
+  }
+
+  addEventListener(type: string, listener: WorkerListener) {
+    if (type === "message") {
+      this.messageListeners.add(listener)
+    }
+  }
+
+  removeEventListener(type: string, listener: WorkerListener) {
+    if (type === "message") {
+      this.messageListeners.delete(listener)
+    }
+  }
+
+  postMessage(request: RegexAnalysisWorkerRequest) {
+    this.request = request
+
+    if (MockWorker.autoRespond) {
+      queueMicrotask(() => {
+        this.emitMessage({
+          ok: true,
+          analysis: analyzeRegex(
+            request.sourceText,
+            request.pattern,
+            request.flags,
+            request.replacement,
+            {
+              matchLimit: request.matchLimit,
+              previewLimit: request.previewLimit,
+            }
+          ),
+        })
+      })
+    }
+  }
+
+  terminate() {
+    this.terminated = true
+  }
+
+  emitMessage(data: RegexAnalysisWorkerResponse) {
+    for (const listener of this.messageListeners) {
+      listener({ data } as MessageEvent<RegexAnalysisWorkerResponse>)
+    }
+  }
+}
+
 beforeEach(() => {
+  MockWorker.autoRespond = true
+  MockWorker.instances = []
+  vi.stubGlobal("Worker", MockWorker as unknown as typeof Worker)
   window.localStorage.clear()
 })
 
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.unstubAllGlobals()
+})
 
 describe("RegexTesterReplacerClient", () => {
   test("renders sample defaults and replacement output", async () => {
@@ -82,6 +158,10 @@ describe("RegexTesterReplacerClient", () => {
         }) as HTMLTextAreaElement
       ).value
     ).toContain("Order #123-ABC")
+
+    await waitFor(() => {
+      expect(screen.getByText("Matches: 2")).toBeTruthy()
+    })
 
     fireEvent.click(screen.getByText(messages.replaceTabLabel))
 
@@ -181,5 +261,86 @@ describe("RegexTesterReplacerClient", () => {
         "Article 42"
       )
     })
+  })
+
+  test("ignores a result from a cancelled analysis", async () => {
+    MockWorker.autoRespond = false
+    render(<RegexTesterReplacerClient messages={messages} />)
+
+    await waitFor(() => {
+      expect(MockWorker.instances).toHaveLength(1)
+    })
+
+    const oldWorker = MockWorker.instances[0]!
+    const oldRequest = oldWorker.request!
+
+    fireEvent.change(
+      screen.getByRole("textbox", { name: messages.sourceTextLabel }),
+      { target: { value: "Order #999-XYZ" } }
+    )
+
+    await waitFor(() => {
+      expect(MockWorker.instances).toHaveLength(2)
+    })
+
+    const currentWorker = MockWorker.instances[1]!
+    const currentRequest = currentWorker.request!
+
+    expect(oldWorker.terminated).toBe(true)
+    expect(currentRequest.sourceText).toBe("Order #999-XYZ")
+
+    oldWorker.emitMessage({
+      ok: true,
+      analysis: analyzeRegex(
+        oldRequest.sourceText,
+        oldRequest.pattern,
+        oldRequest.flags,
+        oldRequest.replacement
+      ),
+    })
+    expect(screen.getByRole("status").textContent).toBe(
+      messages.analysisLoadingLabel
+    )
+
+    currentWorker.emitMessage({
+      ok: true,
+      analysis: analyzeRegex(
+        currentRequest.sourceText,
+        currentRequest.pattern,
+        currentRequest.flags,
+        currentRequest.replacement
+      ),
+    })
+
+    await waitFor(() => {
+      expect(screen.getByText("Matches: 1")).toBeTruthy()
+    })
+
+    fireEvent.click(screen.getByText(messages.replaceTabLabel))
+
+    await waitFor(() => {
+      expect(
+        (
+          screen.getByRole("textbox", {
+            name: messages.replaceTabLabel,
+          }) as HTMLTextAreaElement
+        ).value
+      ).toBe("Order ID:999 Code:XYZ")
+    })
+  })
+
+  test("shows the analysis error without the empty-input instruction", async () => {
+    MockWorker.autoRespond = false
+    render(<RegexTesterReplacerClient messages={messages} />)
+
+    await waitFor(() => {
+      expect(MockWorker.instances).toHaveLength(1)
+    })
+
+    MockWorker.instances[0]!.emitMessage({ ok: false })
+
+    const alert = await screen.findByRole("alert")
+    expect(alert.textContent).toContain(messages.analysisFailedLabel)
+    expect(screen.queryByText(messages.summaryEmpty)).toBeNull()
   })
 })

@@ -1,11 +1,11 @@
-## Why this tool feels different
+## สิ่งที่ทำให้เครื่องมือนี้ต่างออกไป
 
-Text Statistics should do more than count words. This version treats the page like a live writing desk: it measures length, rhythm, repetition, and structure the moment you paste a draft.
+สถิติข้อความควรทำได้มากกว่านับคำ เวอร์ชันนี้เปลี่ยนหน้าเว็บให้เป็นโต๊ะทำงานเขียนที่อัปเดตทันที โดยวัดความยาว จังหวะ การใช้คำซ้ำ และโครงสร้างทันทีที่คุณวางฉบับร่าง
 
-## What it measures
+## สิ่งที่วัดได้
 
-You get the core counts you expect, then the signals that actually help editing: unique words, average sentence length, lexical diversity, longest paragraph, and repeated terms. When the browser supports `Intl.Segmenter`, these numbers are segmented in a way that works better across writing systems.
+คุณจะได้จำนวนพื้นฐานตามที่คาดหวัง พร้อมตัวชี้วัดที่ช่วยแก้ไขงานเขียนได้จริง เช่น คำที่ไม่ซ้ำ ความยาวประโยคเฉลี่ย ความหลากหลายของคำศัพท์ ย่อหน้าที่ยาวที่สุด และคำที่ใช้ซ้ำ เมื่อเบราว์เซอร์รองรับ `Intl.Segmenter` การแบ่งหน่วยข้อความเพื่อนับค่าเหล่านี้จะทำงานได้ดีขึ้นกับระบบการเขียนที่หลากหลาย
 
-## When to use it
+## ควรใช้เมื่อใด
 
-Use it before publishing landing-page copy, product descriptions, scripts, newsletters, bios, or meeting summaries. It is especially useful when something feels too wordy, too repetitive, or too dense, but you need a fast clue about why.
+ใช้ก่อนเผยแพร่เนื้อหาหน้าแนะนำสินค้า คำอธิบายสินค้า สคริปต์ จดหมายข่าว ประวัติย่อ หรือสรุปการประชุม มีประโยชน์เป็นพิเศษเมื่อรู้สึกว่าเนื้อหาเยิ่นเย้อ ซ้ำซาก หรือแน่นเกินไป และต้องการหาสาเหตุอย่างรวดเร็ว

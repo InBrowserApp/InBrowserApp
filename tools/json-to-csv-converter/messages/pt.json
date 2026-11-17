@@ -16,5 +16,5 @@
   "quoteCharLabel": "Aspas",
   "includeHeaderRowLabel": "Incluir linha de cabeçalho",
   "escapeFormulaeLabel": "Escapar fórmulas do Excel",
-  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+  "escapeFormulaeTooltip": "Adiciona um prefixo aos valores que começam com =, +, - ou @ para que os aplicativos de planilhas os tratem como texto em vez de fórmulas."
 }

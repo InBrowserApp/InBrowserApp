@@ -1,4 +1,4 @@
-## What is an SSH public key fingerprint?
+## Vân tay khóa công khai SSH là gì?
 
 Vân tay khóa công khai SSH là một bản tóm lược ngắn của blob khóa công khai. Nó cung cấp cho bạn một giá trị gọn để so sánh trước khi tin cậy một khóa trong `authorized_keys`, kho kiểm kê máy chủ hoặc quy trình triển khai.
 

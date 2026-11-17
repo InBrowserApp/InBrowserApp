@@ -10,9 +10,9 @@
   "outputPlaceholder": "سيظهر إخراج Base58 هنا...",
   "download": "تنزيل Base58",
   "readFailed": "فشل في قراءة الملف",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "تحميل عينة",
+  "clearLabel": "مسح",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ",
   "importFromFileLabel": "استيراد من ملف"
 }

@@ -112,10 +112,13 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "fb2-to-epub-converter": () => import("@tool/fb2-to-epub-converter/page"),
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
+  "file-type-detector": () => import("@tool/file-type-detector/page"),
   "gif-to-animated-webp-converter": () =>
     import("@tool/gif-to-animated-webp-converter/page"),
   "gif-to-apng-converter": () => import("@tool/gif-to-apng-converter/page"),
   "gitignore-generator": () => import("@tool/gitignore-generator/page"),
+  "gpu-information": () => import("@tool/gpu-information/page"),
+  "har-analyzer": () => import("@tool/har-analyzer/page"),
   "highwayhash-hash-text-or-file": () =>
     import("@tool/highwayhash-hash-text-or-file/page"),
   "hmac-generator": () => import("@tool/hmac-generator/page"),
@@ -131,6 +134,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "hwp-viewer": () => import("@tool/hwp-viewer/page"),
   "iban-validator": () => import("@tool/iban-validator/page"),
   "ical-event-generator": () => import("@tool/ical-event-generator/page"),
+  "image-cropper": () => import("@tool/image-cropper/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-palette-extractor": () => import("@tool/image-palette-extractor/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
@@ -141,6 +145,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-to-png-converter": () => import("@tool/image-to-png-converter/page"),
   "image-to-webp-converter": () => import("@tool/image-to-webp-converter/page"),
   "image-viewer": () => import("@tool/image-viewer/page"),
+  "image-watermark": () => import("@tool/image-watermark/page"),
   "imei-validator": () => import("@tool/imei-validator/page"),
   "ip-cidr-normalizer": () => import("@tool/ip-cidr-normalizer/page"),
   "ip-info-lookup": () => import("@tool/ip-info-lookup/page"),
@@ -167,6 +172,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/keccak-hash-text-or-file/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
   "latex-previewer": () => import("@tool/latex-previewer/page"),
+  "legacy-motorola-system-key-generator": () =>
+    import("@tool/legacy-motorola-system-key-generator/page"),
   "list-comparer": () => import("@tool/list-comparer/page"),
   "local-font-book": () => import("@tool/local-font-book/page"),
   "lorem-ipsum-generator": () => import("@tool/lorem-ipsum-generator/page"),
@@ -217,6 +224,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "pdf-text-extractor": () => import("@tool/pdf-text-extractor/page"),
   "pdf-to-image-converter": () => import("@tool/pdf-to-image-converter/page"),
   "pdf-viewer": () => import("@tool/pdf-viewer/page"),
+  "pdf-watermark": () => import("@tool/pdf-watermark/page"),
   "pgp-key-generator": () => import("@tool/pgp-key-generator/page"),
   "placeholder-image-generator": () =>
     import("@tool/placeholder-image-generator/page"),
@@ -299,6 +307,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
   "svg-viewer": () => import("@tool/svg-viewer/page"),
   "text-diff": () => import("@tool/text-diff/page"),
+  "text-encoding-converter": () => import("@tool/text-encoding-converter/page"),
   "text-line-sorter": () => import("@tool/text-line-sorter/page"),
   "text-log-viewer": () => import("@tool/text-log-viewer/page"),
   "text-statistics": () => import("@tool/text-statistics/page"),
@@ -353,4 +362,5 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/xxhash-xxh64-hash-text-or-file/page"),
   "yaml-to-json-converter": () => import("@tool/yaml-to-json-converter/page"),
   "yaml-to-toml-converter": () => import("@tool/yaml-to-toml-converter/page"),
+  "zip-creator": () => import("@tool/zip-creator/page"),
 }

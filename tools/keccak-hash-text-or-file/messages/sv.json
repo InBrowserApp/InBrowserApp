@@ -11,5 +11,7 @@
   "decimalLabel": "Decimal",
   "binaryLabel": "Binär",
   "copyResultLabel": "Kopiera resultat",
-  "copiedLabel": "Kopierat"
+  "copiedLabel": "Kopierat",
+  "fileHashError": "Det gick inte att beräkna hashvärdet för filen.",
+  "textHashError": "Det gick inte att beräkna hashvärdet för texten."
 }

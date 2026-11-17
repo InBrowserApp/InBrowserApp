@@ -1,11 +1,11 @@
-## What this comparer is for
+## Trình so sánh này dùng để làm gì
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+Dùng Trình so sánh danh sách khi hai danh sách cần khớp nhau nhưng bạn muốn biết chính xác phần giao nhau, các mục bị loại và mục trùng lặp trước khi nhập, đồng bộ, gửi tin nhắn hoặc dọn dẹp dữ liệu.
 
-## What you get back
+## Kết quả nhận được
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+Công cụ chia phép so sánh thành các tập kết quả thiết thực: mục chung, mục chỉ có trong A, mục chỉ có trong B, tất cả giá trị riêng biệt và mục trùng lặp trong từng nguồn. Bạn có thể sao chép hoặc tải xuống từng tập riêng biệt.
 
-## Where it helps most
+## Những trường hợp hữu ích nhất
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+Công cụ hữu ích cho danh sách liên hệ, ID sản phẩm, dữ liệu kiểm toán đã xuất, bản chụp tồn kho, phân khúc chiến dịch và mọi lần dọn dẹp mà một thao tác hợp nhất sai có thể khiến bạn phải xử lý thêm về sau.

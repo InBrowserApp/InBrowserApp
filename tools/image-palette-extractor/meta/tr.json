@@ -1,4 +1,4 @@
 {
-  "name": "Image Palette Extractor",
+  "name": "Görsel Paleti Çıkarıcı",
   "description": "Görsellerden baskın renkleri çıkarın ve paletleri HEX, CSS değişkenleri veya JSON olarak dışa aktarın."
 }

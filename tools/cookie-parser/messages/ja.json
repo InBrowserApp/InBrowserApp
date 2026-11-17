@@ -1,7 +1,7 @@
 {
   "headerTypeLabel": "ヘッダー種別",
   "cookieHeaderLabel": "Cookie",
-  "setCookieHeaderLabel": "Set-Cookie",
+  "setCookieHeaderLabel": "Set-Cookieヘッダー",
   "inputLabel": "入力",
   "inputPlaceholder": "Cookie または Set-Cookie ヘッダーを貼り付けてください...",
   "parsedJsonLabel": "解析済み JSON",

@@ -14,5 +14,7 @@
   "seedSectionLabel": "Ziarno",
   "seedLabel": "Ziarno (opcjonalnie)",
   "seedPlaceholder": "0 lub 0x...",
-  "seedInvalid": "Wprowadź liczbę dziesiętną albo wartość szesnastkową z prefiksem 0x."
+  "seedInvalid": "Wprowadź liczbę dziesiętną albo wartość szesnastkową z prefiksem 0x.",
+  "fileHashError": "Nie udało się obliczyć skrótu pliku.",
+  "textHashError": "Nie udało się obliczyć skrótu tekstu."
 }

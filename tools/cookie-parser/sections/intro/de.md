@@ -2,7 +2,7 @@
 
 Füge entweder einen Cookie-Request-Header oder eine oder mehrere Set-Cookie-Response-Zeilen ein. Der Parser extrahiert Namen, Werte und fehlerhafte Fragmente als strukturiertes JSON für eine schnelle Prüfung.
 
-## Cookie vs. Set-Cookie
+## Cookie im Vergleich zu Set-Cookie
 
 Verwende Cookie für den Header, den ein Browser an den Server zurücksendet. Verwende Set-Cookie für Response-Header mit Attributen wie Path, Max-Age, SameSite, Secure oder HttpOnly.
 

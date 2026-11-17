@@ -16,6 +16,6 @@
   "redirection": "Yonlendirme",
   "clientError": "Istekci Hatasi",
   "serverError": "Sunucu Hatasi",
-  "noResultsTitle": "No matching status codes",
-  "noResultsDescription": "Try a different code, phrase, or category."
+  "noResultsTitle": "Eşleşen durum kodu yok",
+  "noResultsDescription": "Farklı bir kod, ifade veya kategori deneyin."
 }

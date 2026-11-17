@@ -9,9 +9,9 @@
   "download": "Ladda ner Base85",
   "readFailed": "Kunde inte läsa filen",
   "invalidBase85": "Z85 kräver att inmatningens längd är en multipel av 4 byte.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Ladda exempel",
+  "clearLabel": "Rensa",
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierat",
   "importFromFileLabel": "Importera från fil"
 }

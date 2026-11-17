@@ -1,4 +1,4 @@
 {
-  "name": "Cron Expression Parser",
+  "name": "Cron एक्सप्रेशन पार्सर",
   "description": "फ़ील्ड विवरण और आगामी रन समयों के साथ cron शेड्यूल को पार्स, मान्य और समझाएँ।"
 }

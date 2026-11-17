@@ -1,26 +1,25 @@
-## What this tool does
+## ما الذي تفعله هذه الأداة
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+يحوّل محول SVG إلى صورة ملف SVG محليًا واحدًا إلى صورة PNG أو JPEG أو WebP
+مباشرةً في متصفحك. يمكنك الاحتفاظ بالحجم الأصلي أو تحديد أبعاد مخصصة للناتج،
+والتحكم في تعبئة الخلفية، وضبط جودة التصدير عندما يدعم التنسيق ذلك.
 
-## Why it helps
+## كيف تفيدك
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+استخدمه عندما تحتاج إلى تحويل SVG بسرعة إلى صورة نقطية لتسليم تصميم، أو ضمن
+سير عمل نظام إدارة المحتوى، أو لمعاينة على شبكات التواصل، أو كصورة لتطبيق.
+يساعدك في تحويل الرسومات المتجهة إلى صور نقطية بنتائج محددة دون فتح محرر
+رسومات منفصل.
 
-## How it works
+## كيف يعمل
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+ارفع ملف SVG واحدًا، واختر تنسيق الناتج، ثم اضبط العرض والارتفاع والخلفية
+والجودة. يرسم المحول SVG في متصفحك ويجهّز ملف صورة قابلًا للتنزيل دون إرسال
+أي شيء إلى خادم.
 
-## Tips for better exports
+## نصائح لتصدير أفضل
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- أبقِ خيار الحفاظ على نسبة العرض إلى الارتفاع مفعّلًا لتغيير الحجم دون تشويه.
+- اختر لون خلفية عند التصدير بصيغة JPEG، لأن JPEG لا يدعم الشفافية.
+- استخدم PNG للحصول على صورة واضحة دون فقدان الجودة، أو WebP وJPEG عندما
+  تكون الأولوية لصغر حجم الملف.

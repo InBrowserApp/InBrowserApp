@@ -10,5 +10,7 @@
   "decimalLabel": "Desimal",
   "binaryLabel": "Biner",
   "copyResultLabel": "Salin hasil",
-  "copiedLabel": "Disalin"
+  "copiedLabel": "Disalin",
+  "fileHashError": "Gagal menghitung hash file.",
+  "textHashError": "Gagal menghitung hash teks."
 }

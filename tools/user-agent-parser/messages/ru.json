@@ -1,6 +1,6 @@
 {
   "use-current": "Использовать мой user agent",
-  "input-label": "User Agent",
+  "input-label": "Агент пользователя",
   "input-placeholder": "Вставьте строку User-Agent здесь...",
   "input-error": "Введите строку User-Agent для разбора.",
   "json-output": "Вывод JSON",

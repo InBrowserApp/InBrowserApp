@@ -1,6 +1,6 @@
 ## Gambaran Umum
 
-JSON Diff Path membandingkan dua dokumen JSON dan mengubah setiap perubahan
+Pembanding JSON Berbasis Jalur membandingkan dua dokumen JSON dan mengubah setiap perubahan
 struktural menjadi catatan path yang mudah dibaca, lengkap dengan keluaran
 JSONPath dan JSON Pointer.
 

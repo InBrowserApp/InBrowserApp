@@ -9,9 +9,9 @@
   "download": "Base85 herunterladen",
   "readFailed": "Datei konnte nicht gelesen werden",
   "invalidBase85": "Z85 erfordert eine Eingabelänge, die ein Vielfaches von 4 Byte ist.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Beispiel laden",
+  "clearLabel": "Leeren",
+  "copyLabel": "Kopieren",
+  "copiedLabel": "Kopiert",
   "importFromFileLabel": "Aus Datei importieren"
 }

@@ -1,6 +1,6 @@
 ## Ce que recherche cet outil
 
-IP Info Lookup résout une adresse IPv4, une adresse IPv6, un domaine ou une URL et affiche les métadonnées publiques que les services internet peuvent fournir pour chaque adresse. Il est utile lorsque vous devez vérifier vers où pointe un domaine, quel réseau possède une adresse, quel nom d'hôte de DNS inverse existe, ou si les enregistrements IPv4 et IPv6 mènent à des fournisseurs différents.
+L’outil de recherche d’informations IP résout une adresse IPv4, une adresse IPv6, un domaine ou une URL et affiche les métadonnées publiques que les services internet peuvent fournir pour chaque adresse. Il est utile lorsque vous devez vérifier vers où pointe un domaine, quel réseau possède une adresse, quel nom d'hôte de DNS inverse existe, ou si les enregistrements IPv4 et IPv6 mènent à des fournisseurs différents.
 
 ## Comment fonctionnent les recherches de domaine et d'URL
 

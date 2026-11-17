@@ -9,6 +9,7 @@ vi.mock("hash-wasm", () => ({
 }))
 
 import {
+  ARGON2_VERIFY_LIMITS,
   Argon2HashError,
   estimateBase64ByteLength,
   parseArgon2EncodedHash,
@@ -103,6 +104,40 @@ describe("verifyArgon2Password", () => {
     expect(hashWasmMocks.argon2Verify).toHaveBeenCalledWith({
       password: "wrong password",
       hash: encodedHash,
+      secret: undefined,
+    })
+  })
+
+  test.each([
+    ["m", 262145, "m=65536"],
+    ["t", 13, "t=3"],
+    ["p", 17, "p=4"],
+  ])(
+    "rejects excessive %s before invoking the verifier",
+    async (key, value, original) => {
+      const verifier = vi.fn()
+      const hash = encodedHash.replace(original, `${key}=${value}`)
+
+      await expect(
+        verifyArgon2Password({ password: "secret", hash }, verifier)
+      ).rejects.toThrow("Argon2 parameters exceed the browser limits.")
+      expect(verifier).not.toHaveBeenCalled()
+    }
+  )
+
+  test("accepts costs at the browser limits without changing the hash", async () => {
+    const hash = encodedHash.replace(
+      "m=65536,t=3,p=4",
+      `m=${ARGON2_VERIFY_LIMITS.memoryCost},t=${ARGON2_VERIFY_LIMITS.iterations},p=${ARGON2_VERIFY_LIMITS.parallelism}`
+    )
+    const verifier = vi.fn().mockResolvedValue(false)
+
+    await expect(
+      verifyArgon2Password({ password: "secret", hash }, verifier)
+    ).resolves.toMatchObject({ verified: false, info: ARGON2_VERIFY_LIMITS })
+    expect(verifier).toHaveBeenCalledWith({
+      password: "secret",
+      hash,
       secret: undefined,
     })
   })

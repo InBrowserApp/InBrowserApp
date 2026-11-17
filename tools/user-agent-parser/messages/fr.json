@@ -1,6 +1,6 @@
 {
   "use-current": "Utiliser mon user agent",
-  "input-label": "User Agent",
+  "input-label": "Agent utilisateur",
   "input-placeholder": "Collez une chaîne User-Agent ici...",
   "input-error": "Saisissez une chaîne User-Agent à analyser.",
   "json-output": "Sortie JSON",

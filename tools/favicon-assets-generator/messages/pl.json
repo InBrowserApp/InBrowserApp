@@ -7,7 +7,6 @@
   "useDemoLabel": "Użyj ikony demonstracyjnej",
   "removeImageLabel": "Usuń",
   "filePreviewAlt": "Podgląd wybranego obrazu źródłowego",
-
   "siteInfoCardTitle": "Informacje o witrynie",
   "siteInfoCardDescription": "Używane przez manifest, apple-touch-icon oraz fragment HTML.",
   "appNameLabel": "Nazwa aplikacji",
@@ -33,7 +32,6 @@
   "backgroundColorDescription": "background_color w manifeście. Używany przez przeglądarki do rysowania ekranów powitalnych w PWA.",
   "optimizePngLabel": "Optymalizuj wyjściowe pliki PNG",
   "optimizePngDescription": "Przepuszcza każdy wygenerowany plik PNG (w tym składowe ICO) przez bezstratną optymalizację oxipng. Dodaje kilka sekund i pobiera moduł WASM (~150 KB) przy pierwszym generowaniu, ale zauważalnie zmniejsza rozmiar archiwum zip.",
-
   "desktopCardTitle": "Favicon przeglądarki desktopowej",
   "desktopCardDescription": "Steruje plikami favicon.ico, favicon-16x16.png, favicon-32x32.png oraz (gdy źródłem jest SVG) favicon.svg.",
   "useOriginalSvgLabel": "Użyj oryginalnego SVG",
@@ -48,12 +46,10 @@
   "useDifferentImageDescription": "Nadpisz globalny obraz źródłowy tylko dla tej platformy.",
   "uploadDedicatedImageLabel": "Wybierz dedykowany obraz",
   "removeDedicatedImageLabel": "Usuń",
-
-  "iosCardTitle": "iOS web clip",
+  "iosCardTitle": "Ikona witryny w iOS",
   "iosCardDescription": "Steruje plikiem apple-touch-icon.png 180×180 używanym na ekranach głównych iOS.",
   "iosBackgroundColorLabel": "Kolor tła",
   "iosBackgroundColorDescription": "Ikony Apple muszą być nieprzezroczyste, więc to wypełnienie jest stosowane zawsze.",
-
   "pwaCardTitle": "Ikony PWA",
   "pwaCardDescription": "Steruje plikami pwa-192x192.png, pwa-512x512.png oraz wariantami maskowalnymi.",
   "includeMaskableLabel": "Dołącz warianty maskowalne",
@@ -61,7 +57,6 @@
   "maskableBackgroundColorLabel": "Kolor tła maskowalnego",
   "maskableMarginLabel": "Margines strefy bezpiecznej maskowalnej",
   "maskableMarginDescription": "Strefa bezpieczna zalecana przez W3C to 40%. Zawartość źródłowa pozostaje widoczna w obrębie dowolnej maski platformy.",
-
   "previewGalleryTitle": "Podgląd",
   "previewGalleryDescription": "Makiety przeglądarki, wyszukiwarki i ekranu głównego pokazujące wygenerowane zasoby w kontekście.",
   "previewBeforeGenerateHint": "Wygeneruj pakiet, aby zobaczyć swoje favicony osadzone w poniższych ramkach.",
@@ -70,7 +65,6 @@
   "previewIosHomeScreenLabel": "Ekran główny iOS",
   "previewAndroidLauncherLabel": "Launcher Androida",
   "previewWindowsTaskbarLabel": "Pasek zadań Windows",
-
   "resultCardTitle": "Wygenerowany pakiet",
   "resultCardDescription": "Kliknij Generuj, aby wyrenderować każdy zasób, zbudować archiwum zip i skopiować fragment HTML.",
   "resultEmptyTitle": "Brak pakietu",
@@ -89,7 +83,6 @@
   "copyLabel": "Kopiuj",
   "copiedLabel": "Skopiowano",
   "downloadAssetLabel": "Pobierz zasób",
-
   "invalidImageTitle": "Nie można odczytać obrazu",
   "invalidImageDescription": "Wybierz plik obrazu czytany przez przeglądarkę (PNG, JPEG, WebP, SVG) i spróbuj ponownie.",
   "generationFailedTitle": "Generowanie nie powiodło się",
@@ -100,6 +93,5 @@
   "needImageDescription": "Wybierz plik PNG, JPEG, WebP lub SVG (lub użyj ikony demonstracyjnej) przed generowaniem.",
   "missingDedicatedImageTitle": "Brak dedykowanego obrazu",
   "missingDedicatedImageDescription": "Jedna lub więcej platform ma włączoną opcję „Użyj innego obrazu”, ale nie wybrano pliku. Prześlij nadpisanie lub wyłącz przełącznik.",
-
   "transparentLabel": "Przezroczysty"
 }

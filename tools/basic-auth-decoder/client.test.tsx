@@ -108,23 +108,24 @@ describe("BasicAuthDecoderClient", () => {
     ).toBe("Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==")
   })
 
-  test("restores state from localStorage on mount", () => {
-    window.localStorage.setItem(
-      "tools:basic-auth-decoder:authorization-header",
-      "Authorization: Basic c3RvcmVkOnZhbHVl"
-    )
+  test("removes legacy headers and keeps new edits in memory", () => {
+    const storageKey = "tools:basic-auth-decoder:authorization-header"
+    window.localStorage.setItem(storageKey, "Basic c3RvcmVkOnNlY3JldA==")
 
-    render(<BasicAuthDecoderClient messages={messages} />)
-
+    const view = render(<BasicAuthDecoderClient messages={messages} />)
     expect(
       (screen.getByLabelText("Authorization Header") as HTMLTextAreaElement)
         .value
-    ).toBe("Authorization: Basic c3RvcmVkOnZhbHVl")
-    expect(screen.getByRole("region", { name: "Username" }).textContent).toBe(
-      "stored"
-    )
-    expect(screen.getByRole("region", { name: "Password" }).textContent).toBe(
-      "value"
-    )
+    ).toBe("Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==")
+    fireEvent.change(screen.getByLabelText("Authorization Header"), {
+      target: { value: "Basic bmV3OnNlY3JldA==" },
+    })
+    expect(window.localStorage.getItem(storageKey)).toBeNull()
+    view.unmount()
+    render(<BasicAuthDecoderClient messages={messages} />)
+    expect(
+      (screen.getByLabelText("Authorization Header") as HTMLTextAreaElement)
+        .value
+    ).toBe("Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==")
   })
 })

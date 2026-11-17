@@ -1,5 +1,68 @@
 # Changelog
 
+## [2.7.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.6.0...v2.7.0) (2026-11-17)
+
+
+### Features
+
+* add a browser-only image watermark tool ([#1259](https://github.com/InBrowserApp/InBrowserApp/issues/1259)) ([f71135a](https://github.com/InBrowserApp/InBrowserApp/commit/f71135acc2833a379c283e0ac4ecf480ccb7c06c))
+* add a browser-only text encoding converter ([#1266](https://github.com/InBrowserApp/InBrowserApp/issues/1266)) ([1803025](https://github.com/InBrowserApp/InBrowserApp/commit/18030252145bff7d1a218bdcbcf19740972eca8b))
+* add a browser-only ZIP creator ([#1270](https://github.com/InBrowserApp/InBrowserApp/issues/1270)) ([00d2ca4](https://github.com/InBrowserApp/InBrowserApp/commit/00d2ca4e490db5ed7c43ea332afdf5573e589278)), closes [#1229](https://github.com/InBrowserApp/InBrowserApp/issues/1229)
+* add a WebGL GPU information viewer ([#1284](https://github.com/InBrowserApp/InBrowserApp/issues/1284)) ([c005b84](https://github.com/InBrowserApp/InBrowserApp/commit/c005b84e9910539077a871e698173b4b504002f0))
+* add browser-only file type detector ([#1249](https://github.com/InBrowserApp/InBrowserApp/issues/1249)) ([e0f78e9](https://github.com/InBrowserApp/InBrowserApp/commit/e0f78e94bc14d2d15a21e0ad63778cd6fc74aa4f)), closes [#1222](https://github.com/InBrowserApp/InBrowserApp/issues/1222)
+* add inline PWA install action to navbar ([#1208](https://github.com/InBrowserApp/InBrowserApp/issues/1208)) ([2ea1bfb](https://github.com/InBrowserApp/InBrowserApp/commit/2ea1bfbb61c8feb08473f614ef3eb785fc7907c6))
+* add legacy Motorola system key generator ([#1227](https://github.com/InBrowserApp/InBrowserApp/issues/1227)) ([33f7f4f](https://github.com/InBrowserApp/InBrowserApp/commit/33f7f4fa222e3d18f4ada8f4ada25b7382163f08))
+* add localized category landing pages ([#1237](https://github.com/InBrowserApp/InBrowserApp/issues/1237)) ([9726995](https://github.com/InBrowserApp/InBrowserApp/commit/9726995970932cccf220fdb42deb069dfd24f8ef)), closes [#1219](https://github.com/InBrowserApp/InBrowserApp/issues/1219)
+* enable client prerendering with MPA navigation ([#1281](https://github.com/InBrowserApp/InBrowserApp/issues/1281)) ([bfed88c](https://github.com/InBrowserApp/InBrowserApp/commit/bfed88ce975e4aeb23e281aa8d21c94c7523daa1))
+* **image:** add browser-only image cropper ([#1258](https://github.com/InBrowserApp/InBrowserApp/issues/1258)) ([6161f87](https://github.com/InBrowserApp/InBrowserApp/commit/6161f875c1e120c049a347acf70192c5d62d2082))
+* **pdf:** add interactive text and image watermark editor ([#1261](https://github.com/InBrowserApp/InBrowserApp/issues/1261)) ([4732e11](https://github.com/InBrowserApp/InBrowserApp/commit/4732e11bb2b424a015882ad90e6bcf124e01d608)), closes [#1231](https://github.com/InBrowserApp/InBrowserApp/issues/1231)
+
+
+### Bug Fixes
+
+* **argon2-verifier:** bound PHC resource costs ([#1251](https://github.com/InBrowserApp/InBrowserApp/issues/1251)) ([05f1cb5](https://github.com/InBrowserApp/InBrowserApp/commit/05f1cb5e7e72d6d9b138ab2c3077fa8fcaa9cbb0))
+* **audio-recorder:** exclude paused time from stopped duration ([#1252](https://github.com/InBrowserApp/InBrowserApp/issues/1252)) ([3f5eb78](https://github.com/InBrowserApp/InBrowserApp/commit/3f5eb78d5fe6744fcb5125d1d87f6870a609428a))
+* **audio-recorder:** stop streams returned after unmount ([#1262](https://github.com/InBrowserApp/InBrowserApp/issues/1262)) ([b63e930](https://github.com/InBrowserApp/InBrowserApp/commit/b63e93057d5d163d517ee0acc4faa3a08d153a32))
+* **basic-auth-generator:** quote cURL URL arguments ([#1254](https://github.com/InBrowserApp/InBrowserApp/issues/1254)) ([e2eac81](https://github.com/InBrowserApp/InBrowserApp/commit/e2eac81ee7326defbf03b0ddc45d9f594033861e))
+* **basic-auth:** keep credentials in memory ([#1250](https://github.com/InBrowserApp/InBrowserApp/issues/1250)) ([1b2f0fd](https://github.com/InBrowserApp/InBrowserApp/commit/1b2f0fda7e66df0213d76007e90c0b0d95a23177))
+* **camera:** stop pending streams after unmount ([#1267](https://github.com/InBrowserApp/InBrowserApp/issues/1267)) ([84c5caa](https://github.com/InBrowserApp/InBrowserApp/commit/84c5caab5533ed2321a59100f3e6cefe643686ca))
+* **ci:** publish immutable releases before deploying release assets ([#1295](https://github.com/InBrowserApp/InBrowserApp/issues/1295)) ([474b122](https://github.com/InBrowserApp/InBrowserApp/commit/474b122359ac754c11b83ad59b7093fc0052ca70)), closes [#1294](https://github.com/InBrowserApp/InBrowserApp/issues/1294)
+* complete code screenshot generator localization ([#1225](https://github.com/InBrowserApp/InBrowserApp/issues/1225)) ([1e4d0b8](https://github.com/InBrowserApp/InBrowserApp/commit/1e4d0b8dd9083e3c1e841666b788b4b33db201e7))
+* complete tool translations and keep HMAC keys in memory ([#1287](https://github.com/InBrowserApp/InBrowserApp/issues/1287)) ([8bfb0a2](https://github.com/InBrowserApp/InBrowserApp/commit/8bfb0a2ee10446e386ba6978a09e1cbcc56b0598))
+* **deps:** align Motorola Astro lockfile snapshot ([#1268](https://github.com/InBrowserApp/InBrowserApp/issues/1268)) ([7573fef](https://github.com/InBrowserApp/InBrowserApp/commit/7573fef6ddc08b6e32159a3a398fd55531e9d584))
+* **deps:** vendor SheetJS tarball for reliable installs ([#1209](https://github.com/InBrowserApp/InBrowserApp/issues/1209)) ([bfa061f](https://github.com/InBrowserApp/InBrowserApp/commit/bfa061f159bc0d1243aee727f50bfbc7ad83f2ef))
+* hydrate tool interfaces with deterministic initial state ([#1264](https://github.com/InBrowserApp/InBrowserApp/issues/1264)) ([97b47bf](https://github.com/InBrowserApp/InBrowserApp/commit/97b47bf96ff8443c43eb62d600a97e67b972fab4))
+* **i18n:** localize the document tool category ([#1211](https://github.com/InBrowserApp/InBrowserApp/issues/1211)) ([c60134c](https://github.com/InBrowserApp/InBrowserApp/commit/c60134c21114d49f19e80c3e17ca8addf098a324))
+* **json-schema-generator:** prevent mobile overflow ([#1273](https://github.com/InBrowserApp/InBrowserApp/issues/1273)) ([6d71194](https://github.com/InBrowserApp/InBrowserApp/commit/6d711943473e36e05b1f6e610ec441231c4dd06e))
+* **pdf-page-organizer:** improve workflow and localization ([#1256](https://github.com/InBrowserApp/InBrowserApp/issues/1256)) ([c43e57e](https://github.com/InBrowserApp/InBrowserApp/commit/c43e57e54d33513231431226d754a280629b94b4))
+* provide a main landmark on every page ([#1291](https://github.com/InBrowserApp/InBrowserApp/issues/1291)) ([d53cb8e](https://github.com/InBrowserApp/InBrowserApp/commit/d53cb8e42275622a4fc1c8a12f6af350aa02d63d))
+* **regex-tester:** bound analysis time in a worker ([#1275](https://github.com/InBrowserApp/InBrowserApp/issues/1275)) ([056bd67](https://github.com/InBrowserApp/InBrowserApp/commit/056bd6744c0737e74fbd2a213d523a2dd8b2a0bb))
+* **regex-tester:** correct match truncation at limit ([#1265](https://github.com/InBrowserApp/InBrowserApp/issues/1265)) ([43f9b4e](https://github.com/InBrowserApp/InBrowserApp/commit/43f9b4e7aa686f8aecf513f9c85dd22eb835c102))
+* repair legacy tool Astro lockfile snapshot ([#1260](https://github.com/InBrowserApp/InBrowserApp/issues/1260)) ([06a2fc6](https://github.com/InBrowserApp/InBrowserApp/commit/06a2fc6d61baf2a190a75564d951f0d3c35ba29f))
+* **time-zone:** reject nonexistent DST local times ([#1269](https://github.com/InBrowserApp/InBrowserApp/issues/1269)) ([684f459](https://github.com/InBrowserApp/InBrowserApp/commit/684f459d89b1c8c00c0b00fbfb49cb13196545fd))
+* **tools-directory:** limit live announcements ([#1274](https://github.com/InBrowserApp/InBrowserApp/issues/1274)) ([3cd9567](https://github.com/InBrowserApp/InBrowserApp/commit/3cd9567655c4b7dce4e3b4daf9a5a0b14f6a1abe))
+* **ui:** stack card header actions in narrow panels ([#1283](https://github.com/InBrowserApp/InBrowserApp/issues/1283)) ([f2483f7](https://github.com/InBrowserApp/InBrowserApp/commit/f2483f721299982f1d5656ef57c5acd5ebf843ba))
+* **uuid-v5-generator:** localize titles and introduction headings ([#1221](https://github.com/InBrowserApp/InBrowserApp/issues/1221)) ([4c877ba](https://github.com/InBrowserApp/InBrowserApp/commit/4c877bafb4ecc8c93c534a3170fd9a44f46020ea))
+
+
+### Performance Improvements
+
+* filter tool directories using rendered HTML ([#1289](https://github.com/InBrowserApp/InBrowserApp/issues/1289)) ([592ee71](https://github.com/InBrowserApp/InBrowserApp/commit/592ee71a5a72c080a865146167408ec841f5365c)), closes [#1288](https://github.com/InBrowserApp/InBrowserApp/issues/1288)
+* load PDF viewer styles only when opening documents ([#1293](https://github.com/InBrowserApp/InBrowserApp/issues/1293)) ([f7f7dfa](https://github.com/InBrowserApp/InBrowserApp/commit/f7f7dfa93d422aa3fca91b1e9fa1bd7e6986edbc))
+
+## [2.6.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.5.0...v2.6.0) (2026-11-16)
+
+
+### Features
+
+* add a text line sorter ([#1197](https://github.com/InBrowserApp/InBrowserApp/issues/1197)) ([d370120](https://github.com/InBrowserApp/InBrowserApp/commit/d370120e81fd8c754741c89ee78942e71045354b))
+* add IPv6 ULA generator ([#1031](https://github.com/InBrowserApp/InBrowserApp/issues/1031)) ([69d5277](https://github.com/InBrowserApp/InBrowserApp/commit/69d5277fcaa6d7da388b825eaf2da805cee0e52f))
+
+
+### Bug Fixes
+
+* make Base64 decoding discoverable on mobile ([#1203](https://github.com/InBrowserApp/InBrowserApp/issues/1203)) ([c7c7b3c](https://github.com/InBrowserApp/InBrowserApp/commit/c7c7b3c2627026d0abbb7ecb085f8220061b4cbe))
+
 ## [2.5.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.4.0...v2.5.0) (2026-10-11)
 
 

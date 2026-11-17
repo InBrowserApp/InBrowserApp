@@ -1,26 +1,27 @@
-## What ICO Is
+## ICO là gì
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO là định dạng chứa biểu tượng được dùng cho favicon truyền thống của trình
+duyệt, lối tắt Windows và biểu tượng của một số ứng dụng máy tính. Một tệp ICO có
+thể chứa nhiều kích thước hình vuông để mỗi nền tảng tự động chọn kích thước phù
+hợp nhất.
 
-## Why Use This Converter
+## Vì sao nên dùng trình chuyển đổi này
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+Trình chuyển ảnh sang ICO biến một ảnh cục bộ thành tệp ICO chứa nhiều kích thước
+ngay trong trình duyệt. Không có dữ liệu nào được tải lên và bạn có thể gộp các
+kích thước favicon phổ biến như 16×16, 32×32, 48×48 và 256×256 vào một tệp tải xuống.
 
-## How It Works
+## Cách hoạt động
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. Tải lên một tệp ảnh cục bộ.
+2. Chọn các kích thước biểu tượng bạn muốn đưa vào tệp ICO.
+3. Tùy chọn thêm màu nền đồng nhất cho hình có vùng trong suốt.
+4. Tạo ICO và tải xuống ngay.
 
-## Tips for Better Results
+## Mẹo để có kết quả tốt hơn
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- Bắt đầu với ảnh vuông sắc nét, lý tưởng là 512×512 trở lên.
+- Đặt logo và các hình dạng chính cách xa mép ngoài vì biểu tượng nhỏ rất dễ
+  mất chi tiết.
+- Tắt tùy chọn tô nền nếu bạn muốn giữ độ trong suốt, và chỉ bật khi cần nền
+  màu đồng nhất phía sau biểu tượng.

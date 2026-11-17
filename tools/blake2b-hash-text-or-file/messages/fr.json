@@ -16,5 +16,7 @@
   "keyLabel": "Clé BLAKE2 (Base64)",
   "keyPlaceholder": "Clé optionnelle pour le hachage avec clé (encodée en Base64)",
   "invalidBase64Title": "La valeur Base64 n'est pas encore valide.",
-  "invalidBase64Description": "Vérifiez l'absence de remplissage, la présence de caractères inattendus ou des données collées partiellement."
+  "invalidBase64Description": "Vérifiez l'absence de remplissage, la présence de caractères inattendus ou des données collées partiellement.",
+  "fileHashError": "Échec du calcul du hachage du fichier.",
+  "textHashError": "Échec du calcul du hachage du texte."
 }

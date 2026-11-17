@@ -16,5 +16,7 @@
   "keyLabel": "BLAKE2-Schlüssel (Base64)",
   "keyPlaceholder": "Optionaler Schlüssel für Schlüssel-Hashing (Base64-kodiert)",
   "invalidBase64Title": "Der Base64-Wert ist noch nicht gültig.",
-  "invalidBase64Description": "Prüfen Sie auf fehlendes Padding, unerwartete Zeichen oder unvollständig eingefügte Daten."
+  "invalidBase64Description": "Prüfen Sie auf fehlendes Padding, unerwartete Zeichen oder unvollständig eingefügte Daten.",
+  "fileHashError": "Datei konnte nicht gehasht werden.",
+  "textHashError": "Text konnte nicht gehasht werden."
 }

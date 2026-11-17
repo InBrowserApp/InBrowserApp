@@ -16,5 +16,7 @@
   "keyLabel": "BLAKE2 키 (Base64)",
   "keyPlaceholder": "키 해싱을 위한 선택적 키 (Base64 인코딩)",
   "invalidBase64Title": "Base64 값이 아직 유효하지 않습니다.",
-  "invalidBase64Description": "패딩 누락, 예상치 못한 문자, 일부만 붙여넣어진 데이터 등을 확인하세요."
+  "invalidBase64Description": "패딩 누락, 예상치 못한 문자, 일부만 붙여넣어진 데이터 등을 확인하세요.",
+  "fileHashError": "파일의 해시를 계산하지 못했습니다.",
+  "textHashError": "텍스트의 해시를 계산하지 못했습니다."
 }

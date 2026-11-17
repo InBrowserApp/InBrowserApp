@@ -66,6 +66,7 @@
   "maxTouchPoints": "Max antal beröringspunkter",
   "gpuVendor": "GPU-leverantör",
   "gpuRenderer": "GPU-renderare",
+  "gpuDetails": "Visa GPU-detaljer",
   "connectionType": "Anslutningstyp",
   "downlink": "Nedlänk",
   "roundTripTime": "Tur-och-retur-tid",

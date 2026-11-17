@@ -45,7 +45,7 @@
   "loadSampleLabel": "Ladda exempel",
   "resetLabel": "Återställ byggaren",
   "protocolPlaceholder": "https",
-  "hostnamePlaceholder": "example.com or api.internal",
+  "hostnamePlaceholder": "example.com eller api.internal",
   "portPlaceholder": "443",
   "pathPlaceholder": "/products/blue mug",
   "fragmentPlaceholder": "reviews",

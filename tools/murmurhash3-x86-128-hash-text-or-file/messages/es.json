@@ -14,5 +14,7 @@
   "seedSectionLabel": "Semilla",
   "seedLabel": "Semilla (opcional)",
   "seedPlaceholder": "0 o 0x...",
-  "seedInvalid": "Introduce un número decimal o un valor hexadecimal con prefijo 0x."
+  "seedInvalid": "Introduce un número decimal o un valor hexadecimal con prefijo 0x.",
+  "fileHashError": "No se pudo calcular el hash del archivo.",
+  "textHashError": "No se pudo calcular el hash del texto."
 }

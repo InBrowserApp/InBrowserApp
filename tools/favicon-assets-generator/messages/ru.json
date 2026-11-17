@@ -7,7 +7,6 @@
   "useDemoLabel": "Использовать демо-иконку",
   "removeImageLabel": "Удалить",
   "filePreviewAlt": "Предпросмотр выбранного исходного изображения",
-
   "siteInfoCardTitle": "Информация о сайте",
   "siteInfoCardDescription": "Используется манифестом, apple-touch-icon и HTML-фрагментом.",
   "appNameLabel": "Название приложения",
@@ -33,7 +32,6 @@
   "backgroundColorDescription": "background_color манифеста. Используется браузерами для отрисовки заставок PWA.",
   "optimizePngLabel": "Оптимизировать вывод PNG",
   "optimizePngDescription": "Прогоняет каждый созданный PNG (включая компоненты ICO) через проход oxipng без потерь. Добавляет несколько секунд и при первой генерации загружает WASM-модуль около 150 КБ, но заметно уменьшает размер zip.",
-
   "desktopCardTitle": "Фавикон для настольного браузера",
   "desktopCardDescription": "Управляет favicon.ico, favicon-16x16.png, favicon-32x32.png и (если исходник — SVG) favicon.svg.",
   "useOriginalSvgLabel": "Использовать исходный SVG",
@@ -48,12 +46,10 @@
   "useDifferentImageDescription": "Переопределить глобальное исходное изображение только для этой платформы.",
   "uploadDedicatedImageLabel": "Выбрать отдельное изображение",
   "removeDedicatedImageLabel": "Удалить",
-
-  "iosCardTitle": "iOS web clip",
+  "iosCardTitle": "Веб-значок iOS",
   "iosCardDescription": "Управляет apple-touch-icon.png размером 180×180, используемым на главных экранах iOS.",
   "iosBackgroundColorLabel": "Цвет фона",
   "iosBackgroundColorDescription": "Иконки Apple должны быть непрозрачными, поэтому эта заливка применяется всегда.",
-
   "pwaCardTitle": "Иконки PWA",
   "pwaCardDescription": "Управляет pwa-192x192.png, pwa-512x512.png и маскируемыми вариантами.",
   "includeMaskableLabel": "Включить маскируемые варианты",
@@ -61,7 +57,6 @@
   "maskableBackgroundColorLabel": "Цвет фона маскируемой иконки",
   "maskableMarginLabel": "Отступ безопасной зоны маскируемой иконки",
   "maskableMarginDescription": "Безопасная зона, рекомендованная W3C, — 40%. Содержимое исходника остаётся видимым при любой маске платформы.",
-
   "previewGalleryTitle": "Предпросмотр",
   "previewGalleryDescription": "Макеты браузера, поиска и главного экрана, показывающие созданные ресурсы в контексте.",
   "previewBeforeGenerateHint": "Сгенерируйте комплект, чтобы увидеть ваши фавиконки в окружении ниже.",
@@ -70,7 +65,6 @@
   "previewIosHomeScreenLabel": "Главный экран iOS",
   "previewAndroidLauncherLabel": "Лаунчер Android",
   "previewWindowsTaskbarLabel": "Панель задач Windows",
-
   "resultCardTitle": "Созданный комплект",
   "resultCardDescription": "Нажмите «Сгенерировать», чтобы отрисовать все ресурсы, собрать zip и скопировать HTML-фрагмент.",
   "resultEmptyTitle": "Комплект ещё не создан",
@@ -89,7 +83,6 @@
   "copyLabel": "Копировать",
   "copiedLabel": "Скопировано",
   "downloadAssetLabel": "Скачать ресурс",
-
   "invalidImageTitle": "Не удалось прочитать изображение",
   "invalidImageDescription": "Выберите файл изображения, читаемый браузером (PNG, JPEG, WebP, SVG), и попробуйте снова.",
   "generationFailedTitle": "Не удалось сгенерировать",
@@ -100,6 +93,5 @@
   "needImageDescription": "Выберите PNG, JPEG, WebP или SVG (или используйте демо-иконку) перед генерацией.",
   "missingDedicatedImageTitle": "Отсутствует отдельное изображение",
   "missingDedicatedImageDescription": "На одной или нескольких платформах включено «Использовать другое изображение», но файл не выбран. Загрузите переопределение или отключите переключатель.",
-
   "transparentLabel": "Прозрачный"
 }

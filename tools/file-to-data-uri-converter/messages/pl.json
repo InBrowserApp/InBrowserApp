@@ -2,7 +2,7 @@
   "file": "Plik",
   "dragOrClick": "Kliknij lub przeciągnij, aby przesłać plik",
   "clearFile": "Wyczyść plik",
-  "dataUri": "Data URI",
+  "dataUri": "URI danych",
   "dataUriPlaceholder": "Wygenerowany Data URI pojawi się tutaj...",
   "onlyOneFile": "Można przesłać tylko jeden plik",
   "readFailed": "Nie udało się odczytać pliku",

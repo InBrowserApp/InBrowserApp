@@ -15,7 +15,7 @@
   "levelDescription": "ระดับที่สูงขึ้นจะลองใช้กลยุทธ์มากขึ้นและอาจใช้เวลานานขึ้น",
   "fasterLabel": "เร็วขึ้น",
   "smallerLabel": "เล็กลง",
-  "interlaceLabel": "PNG interlacing",
+  "interlaceLabel": "อินเทอร์เลซ PNG",
   "interlaceDescription": "เขียน PNG แบบ interlaced เพื่อแสดงผลแบบค่อยๆ ชัดในโปรแกรมดูรุ่นเก่า",
   "optimizeAlphaLabel": "ปรับแต่งช่องอัลฟา",
   "optimizeAlphaDescription": "ให้ Oxipng ลดความซับซ้อนของพิกเซลโปร่งใสเมื่อทำได้แบบไม่สูญเสียข้อมูล",

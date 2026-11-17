@@ -14,5 +14,7 @@
   "seedSectionLabel": "シード",
   "seedLabel": "シード（任意）",
   "seedPlaceholder": "0 または 0x...",
-  "seedInvalid": "10進数、または 0x 形式の16進数値を入力してください。"
+  "seedInvalid": "10進数、または 0x 形式の16進数値を入力してください。",
+  "fileHashError": "ファイルのハッシュ計算に失敗しました。",
+  "textHashError": "テキストのハッシュ計算に失敗しました。"
 }

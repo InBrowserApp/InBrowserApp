@@ -1,6 +1,6 @@
 import { GlobalWorkerOptions, getDocument } from "pdfjs-dist"
 
-import type { PDFDocumentProxy, PDFPageProxy } from "pdfjs-dist"
+import type { PDFPageProxy } from "pdfjs-dist"
 import type { PdfPagePreview } from "./types"
 
 const PREVIEW_MAX_WIDTH = 220
@@ -24,7 +24,7 @@ function assertNotAborted(signal?: AbortSignal) {
 }
 
 function getRenderScale(page: PDFPageProxy) {
-  const viewport = page.getViewport({ scale: 1 })
+  const viewport = page.getViewport({ scale: 1, rotation: 0 })
   return Math.min(
     PREVIEW_MAX_WIDTH / viewport.width,
     PREVIEW_MAX_HEIGHT / viewport.height,
@@ -41,7 +41,7 @@ async function renderPagePreview(
 
   const scale = getRenderScale(page)
   const pixelRatio = Math.min(globalThis.devicePixelRatio || 1, MAX_PIXEL_RATIO)
-  const viewport = page.getViewport({ scale: scale * pixelRatio })
+  const viewport = page.getViewport({ scale: scale * pixelRatio, rotation: 0 })
   const canvas = document.createElement("canvas")
   const context = canvas.getContext("2d")
 
@@ -63,7 +63,7 @@ async function renderPagePreview(
   await renderTask.promise
   assertNotAborted(signal)
 
-  const displayViewport = page.getViewport({ scale })
+  const displayViewport = page.getViewport({ scale, rotation: 0 })
   const preview = {
     dataUrl: canvas.toDataURL("image/jpeg", 0.84),
     height: Math.round(displayViewport.height),
@@ -75,12 +75,6 @@ async function renderPagePreview(
   return preview
 }
 
-async function destroyDocument(document: PDFDocumentProxy | null) {
-  if (document) {
-    await document.destroy()
-  }
-}
-
 async function renderPdfPagePreviews(
   file: File,
   signal?: AbortSignal
@@ -90,10 +84,9 @@ async function renderPdfPagePreviews(
 
   const data = new Uint8Array(await file.arrayBuffer())
   const loadingTask = getDocument({ data })
-  let document: PDFDocumentProxy | null = null
 
   try {
-    document = await loadingTask.promise
+    const document = await loadingTask.promise
     const previews: PdfPagePreview[] = []
 
     for (let pageNumber = 1; pageNumber <= document.numPages; pageNumber += 1) {
@@ -103,14 +96,8 @@ async function renderPdfPagePreviews(
     }
 
     return previews
-  } catch (error) {
-    if (signal?.aborted) {
-      await loadingTask.destroy()
-    }
-
-    throw error
   } finally {
-    await destroyDocument(document)
+    await loadingTask.destroy()
   }
 }
 

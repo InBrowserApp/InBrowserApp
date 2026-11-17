@@ -1,27 +1,17 @@
-## What this tool does
+## Was dieses Tool macht
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+Dieser Platzhalterbild-Generator erstellt direkt im Browser schlichte Dummy-Grafiken mit benutzerdefinierten Größen, Volltonfarben oder Farbverläufen und zentriertem Text. Du kannst jeden Platzhalter als PNG, SVG, JPEG oder WebP exportieren, auch in Retina-freundlichen 2x- und 3x-Versionen.
 
-## Why it helps
+## Warum es hilfreich ist
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+Verwende es für Design-Mockups, CMS-Testinhalte, leere Zustände, die Planung von Social-Media-Layouts oder API-Platzhalter. Es ist praktisch, wenn du schnell ein Asset mit vorhersehbarer Größe und Gestaltung brauchst, ohne ein Designprogramm zu öffnen.
 
-## How it works
+## So funktioniert es
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+Wähle eine Voreinstellung oder gib Breite und Höhe selbst ein. Lege eine Volltonfarbe oder einen Farbverlauf fest, füge bei Bedarf eigenen Text hinzu und passe anschließend Schriftgröße, Exportskalierung und Qualität an. Die Vorschau wird sofort aktualisiert, sodass du das passende Format herunterladen kannst.
 
-## Tips for better placeholders
+## Tipps für bessere Platzhalter
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- Lass das Textfeld leer, wenn das Tool automatisch die Abmessungen anzeigen soll.
+- Verwende Farbverläufe für Hero-Banner und Volltonfarben für einfache Platzhalter.
+- Exportiere als SVG, wenn du ein gestochen scharfes, skalierbares Asset brauchst, oder als PNG, JPEG und WebP für Rastergrafiken.

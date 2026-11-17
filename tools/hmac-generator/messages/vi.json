@@ -1,18 +1,20 @@
 {
   "configurationLabel": "Cấu hình",
-  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "configurationDescription": "Đặt khóa bí mật và thuật toán HMAC cho chữ ký hiện tại.",
   "secretKeyLabel": "Khóa Bí mật",
   "secretKeyPlaceholder": "Nhập khóa bí mật của bạn",
   "algorithmLabel": "Thuật toán",
   "inputLabel": "Đầu vào",
   "plainTextLabel": "Văn bản thuần",
-  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "plainTextDescription": "Dán hoặc nhập bất kỳ văn bản UTF-8 nào, bao gồm nội dung tệp hoặc payload API.",
   "importFromFileLabel": "Nhập từ tệp",
   "hmacOutputLabel": "Đầu ra HMAC",
-  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
-  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hmacOutputDescription": "Kết quả HMAC cho văn bản đầu vào và khóa bí mật hiện tại.",
+  "emptyStateDescription": "Nhập khóa bí mật và cung cấp văn bản hoặc nhập tệp để tạo kết quả HMAC.",
   "hexLabel": "Thập lục phân",
   "base64Label": "Base64",
   "copyResultLabel": "Sao chép kết quả",
-  "copiedLabel": "Đã sao chép"
+  "copiedLabel": "Đã sao chép",
+  "fileGenerationError": "Không thể tạo kết quả HMAC cho tệp.",
+  "textGenerationError": "Không thể tạo kết quả HMAC cho văn bản đầu vào."
 }

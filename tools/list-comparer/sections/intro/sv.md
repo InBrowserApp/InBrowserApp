@@ -1,11 +1,11 @@
-## What this comparer is for
+## Vad listjämföraren är till för
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+Använd verktyget när två listor ska stämma överens, men du behöver se exakt vilka poster som är gemensamma, saknas eller är dubbletter innan du importerar, synkroniserar, skickar meddelanden eller rensar något.
 
-## What you get back
+## Vad du får tillbaka
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+Jämförelsen delas upp i praktiska resultatmängder: gemensamma poster, endast i A, endast i B, alla unika värden och dubbletter inom varje källa. Du kan kopiera eller ladda ner varje mängd separat.
 
-## Where it helps most
+## När det är mest användbart
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+Verktyget är användbart för kontaktlistor, produkt-ID:n, granskningsexporter, lageröversikter, kampanjsegment och all rensning där en felaktig sammanslagning skulle skapa merarbete senare.

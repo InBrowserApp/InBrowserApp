@@ -1,4 +1,4 @@
-DNS Lookup controleert de openbare DNS-records die voor een domeinnaam worden teruggegeven. Dit is handig wanneer je een nieuwe site-lancering verifieert, e-mailbezorging debugt, wijzigingen aan een CDN of load balancer controleert, of bevestigt of DNSSEC-gerelateerde antwoorden per resolver verschillen.
+DNS-zoektool controleert de openbare DNS-records die voor een domeinnaam worden teruggegeven. Dit is handig wanneer je een nieuwe site-lancering verifieert, e-mailbezorging debugt, wijzigingen aan een CDN of load balancer controleert, of bevestigt of DNSSEC-gerelateerde antwoorden per resolver verschillen.
 
 ## Wanneer te Gebruiken
 

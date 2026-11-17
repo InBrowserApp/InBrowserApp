@@ -34,6 +34,7 @@ const messages = {
       "Generate barcodes (CODE128, EAN, UPC, etc.) and download as PNG, SVG, JPEG, or WebP.",
   },
   options: "Options",
+  renderError: "Failed to render barcode.",
   optionsDescription:
     "Choose a barcode format and adjust size, labels, and colors.",
   preview: "Preview",
@@ -136,7 +137,7 @@ describe("BarcodeGeneratorClient", () => {
   })
 
   test("shows a preview error when rendering fails", async () => {
-    mockedRenderBarcodeSvgMarkup.mockImplementation(() => {
+    mockedRenderBarcodeSvgMarkup.mockImplementationOnce(() => {
       throw new Error("Invalid barcode contents")
     })
 
@@ -150,5 +151,20 @@ describe("BarcodeGeneratorClient", () => {
     expect(screen.queryByRole("link", { name: "SVG" })).toBeNull()
     expect(screen.queryByRole("link", { name: "JPEG" })).toBeNull()
     expect(screen.queryByRole("link", { name: "WebP" })).toBeNull()
+  })
+
+  test("uses the localized fallback for unknown render failures", async () => {
+    mockedRenderBarcodeSvgMarkup.mockImplementationOnce(() => {
+      throw { message: "unknown" }
+    })
+    const localizedMessages = {
+      ...messages,
+      renderError: "バーコードを描画できませんでした。",
+    }
+
+    render(<BarcodeGeneratorClient messages={localizedMessages} />)
+
+    expect(await screen.findByText(localizedMessages.renderError)).toBeTruthy()
+    expect(screen.queryByRole("link", { name: "SVG" })).toBeNull()
   })
 })

@@ -1,5 +1,5 @@
 {
-  "vin": "VIN (Vehicle Identification Number)",
+  "vin": "VIN (Número de identificação do veículo)",
   "placeholder": "Insira o VIN",
   "valid": "VIN valido",
   "invalid": "VIN invalido",

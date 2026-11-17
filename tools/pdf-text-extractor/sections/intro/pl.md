@@ -1,6 +1,6 @@
 ## Co robi to narzędzie
 
-PDF Text Extractor odczytuje PDF w przeglądarce i pobiera tekst, który jest już
+Ekstraktor tekstu z PDF odczytuje PDF w przeglądarce i pobiera tekst, który jest już
 zaznaczalny w dokumencie. Wynik to zwykły tekst, który możesz skopiować lub
 pobrać jako plik TXT do notatek, indeksowania wyszukiwania, przeglądu danych
 albo dalszego przetwarzania.

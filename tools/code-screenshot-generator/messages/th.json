@@ -7,6 +7,7 @@
   "syntaxTitle": "ไวยากรณ์",
   "syntaxDescription": "เลือกการไฮไลต์ การตรวจจับภาษา และธีมสี",
   "languageLabel": "ภาษา",
+  "languageAuto": "ตรวจจับอัตโนมัติ",
   "renderModeLabel": "การเรนเดอร์",
   "renderHighlight": "ไฮไลต์",
   "renderPlain": "ข้อความล้วน",

@@ -1,4 +1,4 @@
 {
-  "name": "Image Palette Extractor",
+  "name": "Paletextractor voor afbeeldingen",
   "description": "Haal dominante kleuren uit afbeeldingen en exporteer paletten als HEX, CSS-variabelen of JSON."
 }

@@ -10,5 +10,7 @@
   "decimalLabel": "Ondalık",
   "binaryLabel": "İkili",
   "copyResultLabel": "Sonucu kopyala",
-  "copiedLabel": "Kopyalandı"
+  "copiedLabel": "Kopyalandı",
+  "fileHashError": "Dosyanın özeti hesaplanamadı.",
+  "textHashError": "Metnin özeti hesaplanamadı."
 }

@@ -1,26 +1,27 @@
-## What this tool does
+## O que esta ferramenta faz
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+Este conversor de SVG para imagem transforma um arquivo SVG local em uma imagem
+PNG, JPEG ou WebP diretamente no navegador. Você pode manter o tamanho original,
+definir dimensões de saída personalizadas, controlar o preenchimento do fundo
+e ajustar a qualidade da exportação quando o formato permitir.
 
-## Why it helps
+## Por que é útil
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+Use-o quando precisar converter rapidamente um SVG em uma imagem rasterizada
+para entregar um design, trabalhar em um CMS, criar uma prévia para redes
+sociais ou preparar uma imagem para um aplicativo. É útil para transformar
+arte vetorial em uma imagem bitmap previsível sem abrir um editor gráfico separado.
 
-## How it works
+## Como funciona
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+Carregue um arquivo SVG, escolha o formato de saída e ajuste as configurações
+de largura, altura, fundo e qualidade. O conversor renderiza o SVG no navegador
+e prepara um arquivo de imagem para download sem enviar nada a um servidor.
 
-## Tips for better exports
+## Dicas para melhores exportações
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- Mantenha a proporção ativada se quiser redimensionar sem distorção.
+- Escolha uma cor de fundo para a saída em JPEG, pois JPEG não suporta
+  transparência.
+- Use PNG quando quiser um resultado nítido e sem perdas, ou WebP e JPEG quando
+  o tamanho menor do arquivo for mais importante.

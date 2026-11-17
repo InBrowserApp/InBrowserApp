@@ -1,26 +1,27 @@
-## What ICO Is
+## Что такое ICO
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO — это контейнерный формат значков, используемый для классических фавиконов браузера,
+ярлыков Windows и некоторых значков настольных приложений. Один файл ICO может
+содержать несколько квадратных размеров, чтобы каждая платформа автоматически
+выбирала наиболее подходящий.
 
-## Why Use This Converter
+## Зачем использовать этот конвертер
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+Этот инструмент преобразует одно локальное изображение в файл ICO с несколькими размерами
+прямо в браузере. Ничего не отправляется на сервер, а распространённые размеры фавиконов,
+такие как 16×16, 32×32, 48×48 и 256×256, можно объединить в один скачиваемый файл.
 
-## How It Works
+## Как это работает
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. Загрузите один локальный файл изображения.
+2. Выберите размеры значка, которые хотите включить в файл ICO.
+3. При необходимости добавьте сплошной цвет фона для прозрачного изображения.
+4. Создайте ICO и сразу скачайте его.
 
-## Tips for Better Results
+## Советы для лучшего результата
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- Начните с чёткого квадратного изображения, желательно размером 512×512 или больше.
+- Располагайте логотипы и важные элементы подальше от краёв, поскольку на маленьких
+  значках детали быстро теряются.
+- Оставьте заливку фона выключенной, если нужна прозрачность, и включайте её только
+  тогда, когда за значком требуется сплошной фон.

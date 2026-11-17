@@ -1,11 +1,11 @@
-## What this tool does
+## Co robi to narzędzie
 
-Ten SVG optimizer kompresuje jeden lokalny plik SVG albo wklejony dokument SVG w
+Optymalizator SVG kompresuje jeden lokalny plik SVG albo wklejony dokument SVG w
 Twojej przeglądarce. Używa przebiegów czyszczenia SVGO, aby usuwać komentarze,
 metadane, nadmiarowe atrybuty, zbędną precyzję i inne znaczniki, które nie
 zmieniają widocznego obrazu.
 
-## Why it helps
+## Dlaczego jest przydatne
 
 Pliki SVG eksportowane z narzędzi projektowych często zawierają metadane
 edytora, rozwlekłe ścieżki, nieużywane ID i komentarze. Ich optymalizacja może
@@ -13,7 +13,7 @@ zmniejszyć rozmiar pobierania, przyspieszyć ładowanie strony i ułatwić prze
 kodu SVG inline przed użyciem go w witrynie, aplikacji, e-mailu albo stronie
 dokumentacji.
 
-## How it works
+## Jak to działa
 
 Prześlij plik `.svg` albo wklej znaczniki SVG, wybierz bezpieczny preset lub
 dostosuj pojedyncze przebiegi SVGO, a następnie uruchom optymalizację. Narzędzie
@@ -21,7 +21,7 @@ pokazuje oryginalny i zoptymalizowany podgląd, oszczędność bajtów oraz koń
 znaczniki, aby można było je skopiować albo pobrać plik `.optimized.svg`. SVG
 nigdy nie musi opuszczać Twojego urządzenia.
 
-## Practical notes
+## Uwagi praktyczne
 
 - Zachowaj bezpieczny preset, gdy SVG zależy od zewnętrznego CSS, skryptowych ID
   albo odwołań do symboli, których nie możesz łatwo sprawdzić.

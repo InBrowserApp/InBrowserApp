@@ -1,0 +1,58 @@
+---
+import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
+import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import LegacySystemKeyClient from "./client"
+
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
+import type { ToolMeta } from "@workspace/tool-sdk"
+import type { LegacySystemKeyMessages } from "./types"
+
+interface Props {
+  lang: string
+}
+
+const { lang } = Astro.props
+const meta = resolveLocale<ToolMeta>(
+  import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const messages = resolveLocale<LegacySystemKeyMessages>(
+  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
+  lang
+)!
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.md", {
+    eager: true,
+    import: "default",
+  }),
+  lang
+)
+---
+
+<ToolPageShell title={meta.name} description={meta.description}>
+  <LegacySystemKeyClient client:load messages={messages} />
+  {
+    IntroSection ? (
+      <ToolArticle
+        className="rtl:[&_ol]:mr-6 rtl:[&_ol]:ml-0 [&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate]"
+      >
+        <IntroSection />
+      </ToolArticle>
+    ) : null
+  }
+  <p class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
+    <a
+      href="https://github.com/k4yt3x/syskey-batlab"
+      class="underline underline-offset-4 hover:text-foreground"
+    >
+      {messages.sourceLabel}
+    </a>
+    <a
+      href="/licenses/legacy-motorola-system-key-generator.txt"
+      class="underline underline-offset-4 hover:text-foreground"
+    >
+      {messages.licenseLabel}
+    </a>
+  </p>
+</ToolPageShell>

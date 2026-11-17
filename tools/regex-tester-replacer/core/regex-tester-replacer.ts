@@ -117,13 +117,13 @@ function collectMatches(
   while ((result = regex.exec(text)) !== null) {
     matches.push(toRegexMatch(result))
 
-    if (matches.length >= limit) {
-      truncated = true
-      break
-    }
-
     if (result[0].length === 0) {
       regex.lastIndex += 1
+    }
+
+    if (matches.length >= limit) {
+      truncated = regex.exec(text) !== null
+      break
     }
   }
 

@@ -30,7 +30,7 @@
   "sha384Label": "SHA-384",
   "sha512Label": "SHA-512",
   "encryptLabel": "Enkripsi",
-  "resetLabel": "Reset",
+  "resetLabel": "Atur ulang",
   "resultCardTitle": "JSON terenkripsi",
   "resultCardDescription": "JSON menyertakan mode AES, pengaturan derivasi kunci, salt, IV, dan ciphertext. JSON tidak pernah menyertakan kata sandi atau kunci mentah Anda.",
   "emptyResultTitle": "Belum ada output terenkripsi",

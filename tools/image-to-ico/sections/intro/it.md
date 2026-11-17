@@ -1,26 +1,27 @@
-## What ICO Is
+## Che cos'è ICO
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO è il formato contenitore per icone usato per le favicon classiche dei browser,
+i collegamenti di Windows e alcune icone delle applicazioni desktop. Un file ICO
+può includere più dimensioni quadrate, così ogni piattaforma può scegliere
+automaticamente quella più adatta.
 
-## Why Use This Converter
+## Perché usare questo convertitore
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+Questo strumento trasforma un'immagine locale in un file ICO con più dimensioni
+direttamente nel browser. Non viene caricato nulla e puoi riunire le dimensioni
+comuni delle favicon, come 16×16, 32×32, 48×48 e 256×256, in un unico download.
 
-## How It Works
+## Come funziona
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. Carica un file immagine locale.
+2. Scegli le dimensioni delle icone da includere nel file ICO.
+3. Se necessario, aggiungi un colore di sfondo uniforme alle immagini trasparenti.
+4. Genera il file ICO e scaricalo subito.
 
-## Tips for Better Results
+## Suggerimenti per risultati migliori
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- Parti da un'immagine quadrata nitida, idealmente di almeno 512×512 pixel.
+- Tieni loghi e forme principali lontani dai bordi esterni, perché le icone
+  piccole perdono rapidamente i dettagli.
+- Lascia disattivato il riempimento dello sfondo per mantenere la trasparenza e
+  attivalo solo se ti serve uno sfondo uniforme dietro l'icona.

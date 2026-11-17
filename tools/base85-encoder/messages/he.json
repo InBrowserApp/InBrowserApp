@@ -9,9 +9,9 @@
   "download": "הורד Base85",
   "readFailed": "קריאת הקובץ נכשלה",
   "invalidBase85": "Z85 דורש שאורך הקלט יהיה כפולה של 4 בתים.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "טעינת דוגמה",
+  "clearLabel": "ניקוי",
+  "copyLabel": "העתקה",
+  "copiedLabel": "הועתק",
   "importFromFileLabel": "ייבוא מקובץ"
 }

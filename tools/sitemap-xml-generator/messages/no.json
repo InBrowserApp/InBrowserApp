@@ -19,7 +19,7 @@
   "addUrlEntryLabel": "Legg til URL-oppføring",
   "sitemapEntriesLabel": "Sitemapfiler",
   "sitemapEntriesDescription": "Hver rad blir en <sitemap>-oppføring i indeksen.",
-  "sitemapEntryLabel": "Sitemap {index}",
+  "sitemapEntryLabel": "Nettstedskart {index}",
   "addSitemapEntryLabel": "Legg til sitemap-oppføring",
   "removeEntryLabel": "Fjern",
   "locationLabel": "Plassering",

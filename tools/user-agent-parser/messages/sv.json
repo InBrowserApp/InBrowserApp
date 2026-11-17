@@ -1,6 +1,6 @@
 {
   "use-current": "Använd min user agent",
-  "input-label": "User Agent",
+  "input-label": "Användaragent",
   "input-placeholder": "Klistra in en User-Agent-sträng här...",
   "input-error": "Ange en User-Agent-sträng att tolka.",
   "json-output": "JSON-utdata",

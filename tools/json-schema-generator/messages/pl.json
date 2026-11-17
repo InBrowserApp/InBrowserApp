@@ -1,9 +1,9 @@
 {
   "inputTitle": "Wejście JSON",
-  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputDescription": "Wklej przykładowy JSON lub zaimportuj plik, aby wywnioskować wstępny schemat.",
   "inputPlaceholder": "Wklej dane JSON tutaj...",
   "outputTitle": "Wygenerowany schemat",
-  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputDescription": "Sprawdź wygenerowany schemat, a następnie skopiuj lub pobierz go, aby dalej go dopracować.",
   "outputEmpty": "Podaj poprawne dane JSON, aby wygenerować schemat",
   "invalidJson": "Nieprawidłowy JSON",
   "optionsTitle": "Opcje",

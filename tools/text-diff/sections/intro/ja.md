@@ -1,11 +1,11 @@
-## What this text diff is for
+## このテキスト差分ツールの用途
 
-Use this tool when you need to compare two versions of copy, code, notes, or configuration before you merge, publish, or send anything out.
+統合、公開、送信の前に、文章、コード、メモ、設定の2つの版を比較したいときに使います。
 
-## How to read the result
+## 結果の見方
 
-The side-by-side view helps you scan line numbers and changed fragments quickly. Switch to the unified view when you need a compact patch-style output for review, handoff, or documentation.
+左右に並べた表示で行番号と変更箇所をすばやく確認できます。レビューや引き継ぎ、ドキュメント用に簡潔なパッチ形式で見たい場合は、統合表示に切り替えます。
 
-## When the options matter
+## オプションの使いどころ
 
-Ignore case when capitalization is noise. Ignore whitespace when indentation or spacing should not count as a real edit. Hide unchanged rows when you only want to inspect what actually moved.
+大文字小文字の違いが不要な場合は大文字小文字を無視します。インデントや空白を変更として扱わない場合は空白を無視します。実際に変更された箇所だけを確認する場合は、変更のない行を非表示にします。

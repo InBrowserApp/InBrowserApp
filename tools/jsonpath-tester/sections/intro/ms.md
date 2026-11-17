@@ -1,11 +1,11 @@
-## Overview
+## Gambaran Keseluruhan
 
-Penguji JSONPath lets you run JSONPath queries against JSON data directly in the browser and inspect both the matched values and the matched paths side by side.
+Penguji JSONPath membolehkan anda menjalankan pertanyaan JSONPath pada data JSON terus dalam pelayar dan memeriksa nilai yang sepadan serta laluan yang sepadan secara bersebelahan.
 
-## When To Use It
+## Bila Hendak Menggunakannya
 
-Use it when you need to prototype a JSONPath query, debug a selector against real payloads, or verify exactly which parts of a JSON document a query is matching.
+Gunakannya apabila anda perlu mencuba pertanyaan JSONPath, menyahpepijat pemilih pada muatan sebenar atau mengesahkan bahagian tepat dalam dokumen JSON yang dipadankan oleh pertanyaan.
 
-## How It Works
+## Cara Ia Berfungsi
 
-The tool validates the JSON input first, then evaluates the JSONPath query and keeps both result modes available in the same output panel so you can switch between values and paths without rerunning anything.
+Alat ini mengesahkan input JSON terlebih dahulu, kemudian menilai pertanyaan JSONPath dan menyediakan kedua-dua mod hasil dalam panel output yang sama supaya anda boleh bertukar antara nilai dan laluan tanpa menjalankan semula apa-apa.

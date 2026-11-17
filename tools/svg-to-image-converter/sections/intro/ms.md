@@ -1,26 +1,27 @@
-## What this tool does
+## Fungsi alat ini
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+Penukar SVG ke imej ini menukar satu fail SVG setempat kepada imej PNG, JPEG atau
+WebP terus dalam pelayar anda. Anda boleh mengekalkan saiz asal, menetapkan
+dimensi output tersuai, mengawal isian latar belakang dan melaraskan kualiti
+eksport apabila format menyokongnya.
 
-## Why it helps
+## Manfaatnya
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+Gunakannya apabila serahan reka bentuk, aliran kerja CMS, pratonton media sosial
+atau aset aplikasi memerlukan SVG ditukar kepada imej raster dengan cepat. Alat
+ini berguna untuk meratakan grafik vektor menjadi output bitmap yang boleh
+dijangka tanpa membuka penyunting grafik yang berasingan.
 
-## How it works
+## Cara ia berfungsi
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+Muat naik satu fail SVG, pilih format output, kemudian laraskan tetapan lebar,
+tinggi, latar belakang dan kualiti. Penukar ini memaparkan SVG dalam pelayar anda
+dan menyediakan fail imej untuk dimuat turun tanpa menghantar apa-apa ke pelayan.
 
-## Tips for better exports
+## Petua untuk eksport yang lebih baik
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- Kekalkan nisbah bidang dihidupkan jika anda mahu mengubah saiz tanpa herotan.
+- Pilih warna latar belakang untuk output JPEG kerana JPEG tidak menyokong
+  kelutsinaran.
+- Gunakan PNG apabila anda mahukan output tajam tanpa kehilangan data, atau WebP
+  dan JPEG apabila saiz fail yang lebih kecil lebih diutamakan.

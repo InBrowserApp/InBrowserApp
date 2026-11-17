@@ -21,7 +21,7 @@ optimized previews, byte savings, और final markup दिखाता है 
 कर सकें या `.optimized.svg` फ़ाइल download कर सकें। SVG को आपके device से बाहर
 जाने की कभी जरूरत नहीं होती।
 
-## Practical notes
+## व्यावहारिक सुझाव
 
 - जब SVG external CSS, scripted IDs, या ऐसे symbol references पर निर्भर हो
   जिन्हें आप आसानी से inspect नहीं कर सकते, तो safe preset रखें।

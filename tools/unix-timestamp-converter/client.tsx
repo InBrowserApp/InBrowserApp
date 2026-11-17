@@ -38,15 +38,16 @@ function UnixTimestampConverterClient({
   language,
   messages,
 }: UnixTimestampConverterClientProps) {
-  const [timestampInput, setTimestampInput] = useState(() => String(Date.now()))
+  const [timestampInput, setTimestampInput] = useState("")
   const [unit, setUnit] = useState<TimestampUnit>("auto")
-  const [nowMs, setNowMs] = useState(() => Date.now())
+  const [nowMs, setNowMs] = useState(0)
 
   const tickNow = useEffectEvent(() => {
     setNowMs(Date.now())
   })
 
   useEffect(() => {
+    setTimestampInput(String(Date.now()))
     tickNow()
 
     const intervalId = window.setInterval(() => {

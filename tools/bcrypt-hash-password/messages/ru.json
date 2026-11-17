@@ -24,6 +24,6 @@
   "costValueLabel": "Коэффициент cost",
   "saltLabel": "Соль",
   "checksumLabel": "Контрольная сумма",
-  "generatedSummary": "Cost {cost}",
+  "generatedSummary": "Коэффициент cost: {cost}",
   "privacyNote": "Пароль никогда не сохраняется, а хеширование выполняется в этом браузере."
 }

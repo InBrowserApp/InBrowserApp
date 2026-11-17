@@ -1,11 +1,11 @@
-## What this comparer is for
+## 목록 비교기의 용도
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+두 목록을 일치시켜야 할 때 목록 비교기를 사용하세요. 가져오기, 동기화, 메시지 발송, 정리 작업 전에 정확히 어떤 항목이 겹치고, 제외되며, 중복되는지 확인할 수 있습니다.
 
-## What you get back
+## 제공되는 결과
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+비교 결과를 공통 항목, A에만 있는 항목, B에만 있는 항목, 전체 고유 값, 각 원본 내의 중복 항목으로 나누어 제공합니다. 각 집합을 따로 복사하거나 다운로드할 수 있습니다.
 
-## Where it helps most
+## 특히 유용한 작업
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+연락처 목록, 제품 ID, 감사용 내보내기 자료, 재고 현황, 캠페인 대상 그룹에 유용합니다. 한 번의 잘못된 병합으로 나중에 추가 작업이 생길 수 있는 각종 정리 작업에도 도움이 됩니다.

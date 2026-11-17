@@ -1,26 +1,28 @@
-## What ICO Is
+## Qu’est-ce que le format ICO ?
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO est le format de conteneur d’icônes utilisé pour les favicons classiques des
+navigateurs, les raccourcis Windows et certaines icônes d’applications de bureau.
+Un fichier ICO peut contenir plusieurs dimensions carrées, afin que chaque
+plateforme choisisse automatiquement la taille la plus adaptée.
 
-## Why Use This Converter
+## Pourquoi utiliser ce convertisseur ?
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+Cet outil transforme une image locale en un fichier ICO contenant plusieurs
+tailles, directement dans votre navigateur. Rien n’est envoyé à un serveur et
+vous pouvez regrouper des tailles de favicon courantes comme 16×16, 32×32, 48×48
+et 256×256 dans un seul fichier à télécharger.
 
-## How It Works
+## Comment cela fonctionne
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. Importez un fichier image local.
+2. Choisissez les tailles d’icônes à inclure dans le fichier ICO.
+3. Ajoutez éventuellement une couleur d’arrière-plan unie pour les images transparentes.
+4. Générez le fichier ICO et téléchargez-le immédiatement.
 
-## Tips for Better Results
+## Conseils pour de meilleurs résultats
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- Commencez par une image carrée nette, idéalement de 512×512 pixels ou plus.
+- Éloignez les logos et les formes importantes des bords extérieurs, car les
+  petites icônes perdent rapidement leurs détails.
+- Laissez le remplissage d’arrière-plan désactivé pour conserver la transparence.
+  Activez-le uniquement si vous avez besoin d’un fond uni derrière l’icône.

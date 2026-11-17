@@ -9,9 +9,9 @@
   "download": "Base85 डाउनलोड करें",
   "readFailed": "फ़ाइल पढ़ने में विफल",
   "invalidBase85": "Z85 के लिए इनपुट की लंबाई 4 बाइट के गुणज में होनी चाहिए.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "नमूना लोड करें",
+  "clearLabel": "साफ़ करें",
+  "copyLabel": "कॉपी करें",
+  "copiedLabel": "कॉपी किया गया",
   "importFromFileLabel": "फ़ाइल से आयात करें"
 }

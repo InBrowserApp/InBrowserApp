@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "Generated QR code"
+  "qrAlt": "Generated QR code",
+  "renderError": "Failed to render QR code."
 }

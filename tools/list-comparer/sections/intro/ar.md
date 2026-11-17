@@ -1,11 +1,11 @@
-## What this comparer is for
+## ما الغرض من مقارن القوائم
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+استخدم هذه الأداة عندما يُفترض أن تتطابق قائمتان، لكنك تحتاج إلى معرفة العناصر المشتركة والمستبعدة والمكررة بدقة قبل الاستيراد أو المزامنة أو المراسلة أو التنقيح.
 
-## What you get back
+## ما النتائج التي تحصل عليها
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+تقسّم الأداة المقارنة إلى مجموعات نتائج عملية: العناصر المشتركة، والعناصر الموجودة في A فقط، والعناصر الموجودة في B فقط، وجميع القيم الفريدة، والتكرارات داخل كل مصدر. يمكنك نسخ كل مجموعة أو تنزيلها على حدة.
 
-## Where it helps most
+## أين تكون أكثر فائدة
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+تفيد الأداة في قوائم جهات الاتصال ومعرّفات المنتجات وصادرات التدقيق ولقطات المخزون وشرائح الحملات، وفي أي عملية تنقيح قد يؤدي فيها دمج خاطئ إلى عمل إضافي لاحقًا.

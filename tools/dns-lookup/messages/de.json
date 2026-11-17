@@ -2,7 +2,7 @@
   "queryTitle": "Abfrage",
   "queryDescription": "Gib eine Domain ein, wähle Eintragstypen aus und starte eine DNS over HTTPS Abfrage.",
   "domainLabel": "Domain",
-  "domainPlaceholder": "example.com or https://example.com",
+  "domainPlaceholder": "example.com oder https://example.com",
   "recordTypesLabel": "Eintragstypen",
   "recordTypesDescription": "Wähle einen oder mehrere DNS-Eintragstypen aus, die parallel abgefragt werden sollen.",
   "dohServerLabel": "DNS over HTTPS Resolver",

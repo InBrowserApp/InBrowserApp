@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 64)?
+## מהו xxHash (XXH3 64)?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 64 outputs a 64-bit (8-byte) hash value, typically rendered as a 16-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3 הוא אלגוריתם xxHash המודרני, שתוכנן למהירות גבוהה מאוד ולפיזור מעולה. XXH3 64 מפיק ערך גיבוב באורך 64 סיביות (8 בתים), שבדרך כלל מוצג כמחרוזת הקסדצימלית בת 16 תווים. זהו גיבוב שאינו קריפטוגרפי, והוא תומך בערך אתחול אופציונלי לחישוב גיבוב שניתן לשחזור.
 
-**Key characteristics:**
+**מאפיינים עיקריים:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **מהיר במיוחד**: מותאם לביצועים בקלטים גדולים
+- **דטרמיניסטי**: אותו קלט ואותו ערך אתחול מפיקים תמיד את אותו גיבוב
+- **אינו קריפטוגרפי**: אינו מתאים לצורכי אבטחה
+- **פיזור טוב**: מתאים מאוד לטבלאות גיבוב ולאינדוקס
+- **תמיכה בערך אתחול**: ערך אתחול אופציונלי לגיוון פלטי הגיבוב
 
-**Common uses:**
+**שימושים נפוצים:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- טבלאות גיבוב ומבני נתונים
+- בדיקות שלמות קבצים שאינן לצורכי אבטחה
+- הסרת כפילויות בנתונים וחלוקה למקטעים
+- מפתחות מטמון ואינדוקס מסדי נתונים
+- תהליכי עיבוד נתונים בתפוקה גבוהה

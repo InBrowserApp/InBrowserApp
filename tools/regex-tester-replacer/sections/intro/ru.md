@@ -1,16 +1,16 @@
-## Test Patterns Before They Ship
+## Проверяйте шаблоны перед использованием
 
-Regex is easy to get almost right. This tool gives you one place to validate a pattern, see every match, and confirm the replacement output before you use it in code, content pipelines, or search rules.
+В регулярном выражении легко допустить небольшую ошибку. Этот инструмент позволяет в одном месте проверить шаблон, увидеть все совпадения и убедиться в правильности замены перед использованием в коде, обработке контента или правилах поиска.
 
-## What You Can Check Here
+## Что здесь можно проверить
 
-- Paste sample text and watch matches update immediately
-- Toggle common flags like global, multiline, and ignore case
-- Inspect capturing groups and named groups for every match
-- Preview replacement output with `$1` and `$<name>` references
+- Вставьте пример текста и сразу наблюдайте обновление совпадений
+- Переключайте распространённые флаги: глобальный поиск, многострочный режим и поиск без учёта регистра
+- Изучайте захватывающие и именованные группы для каждого совпадения
+- Просматривайте результат замены со ссылками `$1` и `$<name>`
 
-## Good Uses
+## Где пригодится
 
-- Cleaning IDs, log lines, and exports before import
-- Testing content rewrite rules without touching source data
-- Debugging why a pattern matches too much, too little, or nothing at all
+- Очистка идентификаторов, строк журналов и выгрузок перед импортом
+- Проверка правил изменения контента без изменения исходных данных
+- Поиск причин, по которым шаблон находит слишком много, слишком мало или вообще ничего

@@ -16,6 +16,6 @@
   "registeredPortsDesc": "Duoc su dung boi cac ung dung va dich vu da dang ky voi IANA, nhu MySQL (3306), PostgreSQL (5432).",
   "dynamicPorts": "Cong Dong (49152-65535):",
   "dynamicPortsDesc": "Con goi la \"cong tam thoi\", duoc su dung cho cac ket noi tam thoi boi cac ung dung khach.",
-  "noResultsTitle": "No matching ports found",
-  "noResultsDescription": "Try a different port number, service name, or category."
+  "noResultsTitle": "Không tìm thấy cổng phù hợp",
+  "noResultsDescription": "Thử số cổng, tên dịch vụ hoặc danh mục khác."
 }

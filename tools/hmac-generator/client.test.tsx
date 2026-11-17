@@ -10,6 +10,7 @@ import {
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import HmacGeneratorClient from "./client"
+import * as hashCore from "./core/hmac"
 
 const messages = {
   meta: {
@@ -27,6 +28,8 @@ const messages = {
   plainTextDescription:
     "Paste or type any UTF-8 text, including file contents or API payloads.",
   importFromFileLabel: "Import from file",
+  fileGenerationError: "Failed to generate HMAC output for the file.",
+  textGenerationError: "Failed to generate HMAC output for the text input.",
   hmacOutputLabel: "HMAC Output",
   hmacOutputDescription:
     "HMAC output for the current text input and secret key.",
@@ -49,7 +52,10 @@ beforeEach(() => {
   window.localStorage.clear()
 })
 
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
 
 function getPlainTextInput() {
   return screen.getByRole("textbox", {
@@ -150,7 +156,7 @@ describe("HmacGeneratorClient", () => {
     })
   })
 
-  test("restores stored configuration values", async () => {
+  test("removes legacy secrets while restoring text and algorithm preferences", async () => {
     window.localStorage.setItem(STORAGE_KEYS.secretKey, "stored-secret")
     window.localStorage.setItem(STORAGE_KEYS.algorithm, "SHA-512")
     window.localStorage.setItem(STORAGE_KEYS.text, "stored payload")
@@ -158,15 +164,91 @@ describe("HmacGeneratorClient", () => {
     render(<HmacGeneratorClient messages={messages} />)
 
     await waitFor(() => {
-      expect(getSecretKeyInput().value).toBe("stored-secret")
+      expect(getSecretKeyInput().value).toBe("super-secret-key")
       expect(getPlainTextInput().value).toBe("stored payload")
     })
+    expect(window.localStorage.getItem(STORAGE_KEYS.secretKey)).toBeNull()
 
     const expected = createExpectedHmac(
       "sha512",
       "stored payload",
-      "stored-secret"
+      "super-secret-key"
     )
     expect(await screen.findByText(expected.hex)).toBeTruthy()
+  })
+
+  test("keeps secret edits in memory while persisting text and algorithm preferences", async () => {
+    const setItemSpy = vi.spyOn(Storage.prototype, "setItem")
+    const view = render(<HmacGeneratorClient messages={messages} />)
+
+    fireEvent.change(getSecretKeyInput(), {
+      target: { value: "memory-only-secret" },
+    })
+    fireEvent.change(getPlainTextInput(), {
+      target: { value: "saved payload" },
+    })
+    fireEvent.click(
+      screen.getByRole("combobox", { name: messages.algorithmLabel })
+    )
+    fireEvent.click(await screen.findByRole("option", { name: "SHA-384" }))
+
+    const expected = createExpectedHmac(
+      "sha384",
+      "saved payload",
+      "memory-only-secret"
+    )
+    expect(await screen.findByText(expected.hex)).toBeTruthy()
+    expect(window.localStorage.getItem(STORAGE_KEYS.secretKey)).toBeNull()
+    expect(window.localStorage.getItem(STORAGE_KEYS.text)).toBe("saved payload")
+    expect(window.localStorage.getItem(STORAGE_KEYS.algorithm)).toBe("SHA-384")
+    expect(setItemSpy).not.toHaveBeenCalledWith(
+      STORAGE_KEYS.secretKey,
+      expect.anything()
+    )
+
+    view.unmount()
+    render(<HmacGeneratorClient messages={messages} />)
+
+    expect(getSecretKeyInput().value).toBe("super-secret-key")
+    expect(getPlainTextInput().value).toBe("saved payload")
+    expect(
+      await screen.findByText(
+        createExpectedHmac("sha384", "saved payload", "super-secret-key").hex
+      )
+    ).toBeTruthy()
+  })
+
+  test("uses localized fallbacks for unknown text and file failures", async () => {
+    vi.spyOn(hashCore, "generateHmac").mockRejectedValue({ message: "unknown" })
+    const localizedMessages = {
+      ...messages,
+      fileGenerationError: "ファイルからの生成に失敗しました。",
+      textGenerationError: "テキストからの生成に失敗しました。",
+    }
+
+    render(<HmacGeneratorClient messages={localizedMessages} />)
+
+    expect(
+      await screen.findByText(localizedMessages.textGenerationError)
+    ).toBeTruthy()
+
+    fireEvent.change(getFileInput(), {
+      target: { files: [new File(["content"], "broken.txt")] },
+    })
+
+    expect(
+      await screen.findByText(localizedMessages.fileGenerationError)
+    ).toBeTruthy()
+    expect(screen.queryByText(localizedMessages.textGenerationError)).toBeNull()
+  })
+
+  test("preserves Error messages from failed hashing", async () => {
+    vi.spyOn(hashCore, "generateHmac").mockRejectedValue(
+      new Error("Input read failed")
+    )
+
+    render(<HmacGeneratorClient messages={messages} />)
+
+    expect(await screen.findByText("Input read failed")).toBeTruthy()
   })
 })

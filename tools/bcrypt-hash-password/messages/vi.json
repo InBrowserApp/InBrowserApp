@@ -24,6 +24,6 @@
   "costValueLabel": "Cost",
   "saltLabel": "Salt",
   "checksumLabel": "Checksum",
-  "generatedSummary": "Cost {cost}",
+  "generatedSummary": "Hệ số chi phí {cost}",
   "privacyNote": "Mật khẩu không bao giờ được lưu và quá trình hash chạy trong trình duyệt này."
 }

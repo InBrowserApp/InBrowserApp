@@ -1,14 +1,14 @@
-## What It Does
+## เครื่องมือนี้ทำอะไร
 
 ถอดรหัสส่วนหัว HTTP Basic Authorization เพื่อดึงชื่อผู้ใช้และรหัสผ่านจาก Base64 มีประโยชน์สำหรับการดีบักและการทดสอบ API.
 
-## Accepted Input
+## ข้อมูลนำเข้าที่รองรับ
 
 วางข้อความเช่น: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+เครื่องมือนี้ยังรองรับบรรทัด `Authorization: Basic ...` แบบเต็มด้วย
 
-## Notes
+## หมายเหตุ
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- Base64 เป็นเพียงการแปลงรูปแบบข้อมูลรับรอง ไม่ได้ช่วยปกป้องข้อมูลเหล่านั้น
+- ตัวถอดรหัสจะแยกข้อความที่ `:` ตัวแรก และเก็บข้อความที่เหลือไว้ในรหัสผ่าน
+- ทุกอย่างทำงานภายในเบราว์เซอร์ของคุณ

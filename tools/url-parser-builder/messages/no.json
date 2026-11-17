@@ -45,7 +45,7 @@
   "loadSampleLabel": "Last inn eksempel",
   "resetLabel": "Tilbakestill byggeren",
   "protocolPlaceholder": "https",
-  "hostnamePlaceholder": "example.com or api.internal",
+  "hostnamePlaceholder": "example.com eller api.internal",
   "portPlaceholder": "443",
   "pathPlaceholder": "/products/blue mug",
   "fragmentPlaceholder": "reviews",

@@ -1,14 +1,14 @@
-## What It Does
+## 주요 기능
 
 HTTP Basic Authorization 헤더를 디코딩하여 Base64에서 사용자 이름과 비밀번호를 추출합니다. 디버깅 및 API 테스트에 유용.
 
-## Accepted Input
+## 지원하는 입력
 
 다음과 같이 붙여넣기: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+`Authorization: Basic ...` 줄 전체를 입력해도 됩니다.
 
-## Notes
+## 참고 사항
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- Base64는 인증 정보를 인코딩할 뿐 보호하지는 않습니다.
+- 디코더는 첫 번째 `:`에서 나누고 나머지는 비밀번호에 그대로 유지합니다.
+- 모든 처리는 브라우저에서 로컬로 실행됩니다.

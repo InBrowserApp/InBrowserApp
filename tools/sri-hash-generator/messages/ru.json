@@ -9,5 +9,7 @@
   "copiedLabel": "Скопировано",
   "sha256SriLabel": "SHA-256 SRI",
   "sha384SriLabel": "SHA-384 SRI",
-  "sha512SriLabel": "SHA-512 SRI"
+  "sha512SriLabel": "SHA-512 SRI",
+  "fileGenerationError": "Не удалось создать хеши SRI для файла.",
+  "textGenerationError": "Не удалось создать хеши SRI для введённого текста."
 }

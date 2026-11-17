@@ -1,8 +1,10 @@
 {
+  "encodeLabel": "Encode",
+  "decodeLabel": "Decode",
   "plainTextLabel": "Plain text",
   "plainTextPlaceholder": "Enter text to encode…",
   "plainTextDescription": "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
-  "encodedTextLabel": "Base64 output",
+  "encodedTextLabel": "Base64",
   "encodedTextPlaceholder": "Paste Base64 to decode…",
   "encodedTextDescription": "Edit the Base64 text directly to decode it back into plain text.",
   "invalidBase64Title": "The Base64 value is not valid yet.",

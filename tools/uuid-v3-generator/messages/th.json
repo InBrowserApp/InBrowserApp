@@ -1,7 +1,7 @@
 {
   "optionsTitle": "อินพุต",
   "optionsDescription": "เลือก namespace UUID และชื่อ UUID v3 จะแฮชค่าทั้งสอง ดังนั้นคู่เดิมจะให้ UUID เดิมเสมอ",
-  "namespaceLabel": "Namespace UUID",
+  "namespaceLabel": "UUID ของเนมสเปซ",
   "namespaceDescription": "ใช้ namespace มาตรฐานรายการใดรายการหนึ่ง หรือวาง UUID ที่ถูกต้องรายการใดก็ได้",
   "namespaceInvalid": "ป้อน namespace UUID ที่ถูกต้อง",
   "namespacePresetLegend": "namespace มาตรฐาน",

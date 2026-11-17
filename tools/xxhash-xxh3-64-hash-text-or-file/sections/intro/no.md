@@ -1,19 +1,19 @@
-## What is xxHash (XXH3 64)?
+## Hva er xxHash (XXH3 64)?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 64 outputs a 64-bit (8-byte) hash value, typically rendered as a 16-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3 er den moderne xxHash-algoritmen, utviklet for svært høy hastighet og utmerket fordeling. XXH3 64 gir en 64-bits (8-byte) hashverdi, vanligvis vist som en heksadesimal streng på 16 tegn. Den er en ikke-kryptografisk hashfunksjon og støtter en valgfri startverdi for reproduserbar hashing.
 
-**Key characteristics:**
+**Viktige egenskaper:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **Ekstremt rask**: Optimalisert for ytelse med store inndata
+- **Deterministisk**: Samme inndata og startverdi gir alltid samme hashverdi
+- **Ikke-kryptografisk**: Ikke egnet til sikkerhetsformål
+- **God fordeling**: Velegnet til hashtabeller og indeksering
+- **Med startverdi**: Valgfri startverdi for å variere hashverdiene
 
-**Common uses:**
+**Vanlige bruksområder:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- Hashtabeller og datastrukturer
+- Filintegritetskontroller uten sikkerhetsformål
+- Duplikatfjerning og oppdeling av data i blokker
+- Hurtigbuffernøkler og databaseindeksering
+- Databehandlingskjeder med høy gjennomstrømning

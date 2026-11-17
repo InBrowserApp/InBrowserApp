@@ -1,0 +1,4 @@
+{
+  "name": "Pendeteksi Jenis File",
+  "description": "Kenali format file melalui tanda tangannya, periksa ketidakcocokan ekstensi, serta lihat jenis MIME dan pratinjau heksadesimal secara lokal di browser Anda."
+}

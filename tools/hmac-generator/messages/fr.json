@@ -1,18 +1,20 @@
 {
   "configurationLabel": "Configuration",
-  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "configurationDescription": "Définissez la clé secrète et l'algorithme HMAC pour la signature actuelle.",
   "secretKeyLabel": "Clé Secrète",
   "secretKeyPlaceholder": "Entrez votre clé secrète",
   "algorithmLabel": "Algorithme",
   "inputLabel": "Entrée",
   "plainTextLabel": "Texte brut",
-  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "plainTextDescription": "Collez ou saisissez n'importe quel texte UTF-8, y compris le contenu du fichier ou les charges utiles de l'API.",
   "importFromFileLabel": "Importer depuis un fichier",
   "hmacOutputLabel": "Sortie HMAC",
-  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
-  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hmacOutputDescription": "Sortie HMAC pour la saisie de texte actuelle et la clé secrète.",
+  "emptyStateDescription": "Entrez une clé secrète et fournissez du texte ou importez un fichier pour générer une sortie HMAC.",
   "hexLabel": "Hexadécimal",
   "base64Label": "Base64",
   "copyResultLabel": "Copier le résultat",
-  "copiedLabel": "Copié"
+  "copiedLabel": "Copié",
+  "fileGenerationError": "Échec de la génération des hachages HMAC pour le fichier.",
+  "textGenerationError": "Échec de la génération des hachages HMAC pour le texte saisi."
 }

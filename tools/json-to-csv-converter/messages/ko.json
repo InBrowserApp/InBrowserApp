@@ -16,5 +16,5 @@
   "quoteCharLabel": "인용부호",
   "includeHeaderRowLabel": "헤더 행 포함",
   "escapeFormulaeLabel": "Excel 수식 이스케이프",
-  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+  "escapeFormulaeTooltip": "=, +, -, @로 시작하는 값 앞에 접두 문자를 붙여 스프레드시트 앱이 수식 대신 텍스트로 처리하게 합니다."
 }

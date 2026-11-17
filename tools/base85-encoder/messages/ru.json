@@ -9,9 +9,9 @@
   "download": "Скачать Base85",
   "readFailed": "Не удалось прочитать файл",
   "invalidBase85": "Для Z85 длина входных данных должна быть кратна 4 байтам.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Загрузить пример",
+  "clearLabel": "Очистить",
+  "copyLabel": "Копировать",
+  "copiedLabel": "Скопировано",
   "importFromFileLabel": "Импорт из файла"
 }

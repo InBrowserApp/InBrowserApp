@@ -45,7 +45,7 @@
   "loadSampleLabel": "Beispiel laden",
   "resetLabel": "Builder zurücksetzen",
   "protocolPlaceholder": "https",
-  "hostnamePlaceholder": "example.com or api.internal",
+  "hostnamePlaceholder": "example.com oder api.internal",
   "portPlaceholder": "443",
   "pathPlaceholder": "/products/blue mug",
   "fragmentPlaceholder": "reviews",

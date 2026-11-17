@@ -9,10 +9,12 @@
   "base64Label": "Base64",
   "decimalLabel": "Decimaal",
   "binaryLabel": "Binair",
-  "copyResultLabel": "Resultaat kopi\u00ebren",
+  "copyResultLabel": "Resultaat kopiëren",
   "copiedLabel": "Gekopieerd",
   "seedSectionLabel": "Seed",
   "seedLabel": "Seed (optioneel)",
   "seedPlaceholder": "0 of 0x...",
-  "seedInvalid": "Voer een decimaal getal of een 0x-hexwaarde in."
+  "seedInvalid": "Voer een decimaal getal of een 0x-hexwaarde in.",
+  "fileHashError": "Het bestand kon niet worden gehasht.",
+  "textHashError": "De tekst kon niet worden gehasht."
 }

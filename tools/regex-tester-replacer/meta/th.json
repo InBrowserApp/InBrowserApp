@@ -1,4 +1,4 @@
 {
-  "name": "Regex Tester & Replacer",
-  "description": "Test regular expressions, inspect matches, and preview replacements against real text."
+  "name": "เครื่องมือทดสอบและแทนที่ Regex",
+  "description": "ทดสอบนิพจน์ปรกติ ตรวจสอบผลที่ตรงกัน และดูตัวอย่างการแทนที่จากข้อความจริง"
 }

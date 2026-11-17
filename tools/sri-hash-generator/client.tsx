@@ -97,8 +97,8 @@ function SriHashGeneratorClient({ messages }: SriHashGeneratorClientProps) {
               error instanceof Error
                 ? error.message
                 : selectedFile
-                  ? "Failed to generate SRI hashes for the file."
-                  : "Failed to generate SRI hashes for the text input.",
+                  ? messages.fileGenerationError
+                  : messages.textGenerationError,
           })
         }
       })
@@ -106,7 +106,12 @@ function SriHashGeneratorClient({ messages }: SriHashGeneratorClientProps) {
     return () => {
       cancelled = true
     }
-  }, [deferredPlainText, selectedFile])
+  }, [
+    messages.fileGenerationError,
+    messages.textGenerationError,
+    deferredPlainText,
+    selectedFile,
+  ])
 
   async function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
     const nextFile = event.target.files?.[0]

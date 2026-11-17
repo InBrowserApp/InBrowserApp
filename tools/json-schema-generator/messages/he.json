@@ -1,9 +1,9 @@
 {
   "inputTitle": "קלט JSON",
-  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputDescription": "הדביקו JSON לדוגמה או ייבאו קובץ כדי להסיק סכמה ראשונית.",
   "inputPlaceholder": "הדבק נתוני JSON כאן...",
   "outputTitle": "סכימה שנוצרה",
-  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputDescription": "בדקו את הסכמה שנוצרה, ואז העתיקו או הורידו אותה להמשך התאמה.",
   "outputEmpty": "ספק נתוני JSON תקינים כדי ליצור סכימה",
   "invalidJson": "JSON לא תקין",
   "optionsTitle": "אפשרויות",

@@ -1,26 +1,25 @@
-## What this tool does
+## यह टूल क्या करता है
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+यह SVG से इमेज कन्वर्टर एक स्थानीय SVG फ़ाइल को सीधे आपके ब्राउज़र में PNG,
+JPEG या WebP इमेज में बदलता है। आप मूल आकार रख सकते हैं, आउटपुट के कस्टम आयाम
+सेट कर सकते हैं, बैकग्राउंड भरने का विकल्प चुन सकते हैं और प्रारूप में समर्थन होने
+पर निर्यात की गुणवत्ता बदल सकते हैं।
 
-## Why it helps
+## यह क्यों उपयोगी है
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+जब डिज़ाइन सौंपते समय, CMS के काम में, सोशल प्रीव्यू या ऐप के लिए किसी SVG को
+जल्दी रास्टर इमेज में बदलना हो, तब इसका उपयोग करें। अलग ग्राफ़िक्स एडिटर खोले बिना
+वेक्टर चित्र को तय बिटमैप आउटपुट में बदलने के लिए यह उपयोगी है।
 
-## How it works
+## यह कैसे काम करता है
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+एक SVG फ़ाइल अपलोड करें, आउटपुट प्रारूप चुनें, फिर चौड़ाई, ऊंचाई, बैकग्राउंड और
+गुणवत्ता की सेटिंग बदलें। कन्वर्टर आपके ब्राउज़र में SVG रेंडर करता है और सर्वर को
+कुछ भी भेजे बिना डाउनलोड करने योग्य इमेज फ़ाइल तैयार करता है।
 
-## Tips for better exports
+## बेहतर निर्यात के लिए सुझाव
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- बिना विकृति के आकार बदलने के लिए पहलू अनुपात बनाए रखने का विकल्प चालू रखें।
+- JPEG आउटपुट के लिए बैकग्राउंड रंग चुनें, क्योंकि JPEG पारदर्शिता का समर्थन नहीं करता।
+- स्पष्ट और गुणवत्ता में कमी के बिना आउटपुट के लिए PNG चुनें। छोटा फ़ाइल आकार
+  अधिक ज़रूरी हो, तो WebP या JPEG चुनें।

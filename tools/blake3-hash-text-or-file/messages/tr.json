@@ -16,5 +16,7 @@
   "keyLabel": "BLAKE3 Anahtarı (Base64)",
   "keyPlaceholder": "Anahtarlı hash için isteğe bağlı 32 bayt anahtar (Base64 kodlu)",
   "invalidBase64Title": "Base64 değeri henüz geçerli değil.",
-  "invalidBase64Description": "Eksik dolgu, beklenmeyen karakterler veya kısmen yapıştırılmış veri olup olmadığını kontrol edin."
+  "invalidBase64Description": "Eksik dolgu, beklenmeyen karakterler veya kısmen yapıştırılmış veri olup olmadığını kontrol edin.",
+  "fileHashError": "Dosyanın özeti hesaplanamadı.",
+  "textHashError": "Metnin özeti hesaplanamadı."
 }

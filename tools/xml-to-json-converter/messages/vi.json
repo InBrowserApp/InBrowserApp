@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "Dán XML hợp lệ ở bên trái để xem trước JSON đã chuyển đổi tại đây.",
   "invalidXmlLabel": "XML không hợp lệ",
   "optionsLabel": "Tùy chọn",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "Điều chỉnh cách phân tích XML trước khi sao chép hoặc tải xuống JSON đã chuyển đổi.",
   "indentSizeLabel": "Kích thước thụt lề",
   "indentSizeDescription": "Chọn 0 để xuất gọn hoặc 1-8 để có thụt lề định dạng.",
   "compactLabel": "Gọn",
