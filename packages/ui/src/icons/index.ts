@@ -16,6 +16,7 @@ export {
   Camera,
   Car,
   CameraOff,
+  Captions,
   Circle,
   CaseSensitive,
   Check,

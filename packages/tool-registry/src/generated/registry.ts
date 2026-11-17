@@ -30306,6 +30306,146 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "subtitle-converter",
+    category: "text",
+    icon: "captions",
+    tags: [
+      "subtitle",
+      "caption",
+      "converter",
+      "srt",
+      "vtt",
+      "ass",
+      "ssa",
+      "sbv",
+      "sub",
+      "sami",
+      "lrc",
+      "ttml",
+      "dfxp",
+      "youtube",
+      "transcript",
+      "batch",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل ملفات الترجمة",
+        description:
+          "حوّل ملفات الترجمة بصيغ SRT وVTT وASS وTTML وLRC وغيرها محليًا. نزّل عدة ملفات دفعة واحدة، واضبط التوقيت، واختر ترميز النص.",
+      },
+      de: {
+        name: "Untertitelkonverter",
+        description:
+          "Konvertieren Sie SRT, VTT, ASS, TTML, LRC und weitere Untertitel lokal. Laden Sie mehrere Dateien herunter, passen Sie Zeiten an und wählen Sie die Textkodierung.",
+      },
+      en: {
+        name: "Subtitle Converter",
+        description:
+          "Convert SRT, VTT, ASS, TTML, LRC and other subtitles locally. Batch download files, adjust timing, and choose text encoding.",
+      },
+      es: {
+        name: "Conversor de subtítulos",
+        description:
+          "Convierte SRT, VTT, ASS, TTML, LRC y otros subtítulos localmente. Descarga archivos por lotes, ajusta los tiempos y elige la codificación del texto.",
+      },
+      fr: {
+        name: "Convertisseur de sous-titres",
+        description:
+          "Convertissez localement des sous-titres SRT, VTT, ASS, TTML, LRC et d’autres formats. Téléchargez les fichiers par lots, ajustez les temps et choisissez l’encodage du texte.",
+      },
+      he: {
+        name: "ממיר כתוביות",
+        description:
+          "המרה מקומית של כתוביות בפורמטים SRT, VTT, ASS, TTML, LRC ועוד. הורדת קבצים באצווה, התאמת תזמון ובחירת קידוד טקסט.",
+      },
+      hi: {
+        name: "उपशीर्षक कन्वर्टर",
+        description:
+          "SRT, VTT, ASS, TTML, LRC और अन्य उपशीर्षक स्थानीय रूप से बदलें। फ़ाइलें एक साथ डाउनलोड करें, समय समायोजित करें और टेक्स्ट एन्कोडिंग चुनें।",
+      },
+      id: {
+        name: "Konverter Subtitle",
+        description:
+          "Konversi SRT, VTT, ASS, TTML, LRC, dan subtitle lainnya secara lokal. Unduh banyak file sekaligus, sesuaikan waktu, dan pilih enkode karakter teks.",
+      },
+      it: {
+        name: "Convertitore di sottotitoli",
+        description:
+          "Converti SRT, VTT, ASS, TTML, LRC e altri sottotitoli localmente. Scarica più file insieme, regola i tempi e scegli la codifica del testo.",
+      },
+      ja: {
+        name: "字幕コンバーター",
+        description:
+          "SRT、VTT、ASS、TTML、LRC などの字幕を端末内で変換。ファイルの一括ダウンロード、タイミング調整、文字コードの選択ができます。",
+      },
+      ko: {
+        name: "자막 변환기",
+        description:
+          "SRT, VTT, ASS, TTML, LRC 등 다양한 자막을 기기에서 변환하세요. 파일을 일괄 다운로드하고, 시간을 조정하고, 텍스트 인코딩을 선택할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Sari Kata",
+        description:
+          "Tukar SRT, VTT, ASS, TTML, LRC dan sari kata lain secara setempat. Muat turun fail secara kelompok, laraskan pemasaan dan pilih pengekodan teks.",
+      },
+      nl: {
+        name: "Ondertitelconverter",
+        description:
+          "Converteer SRT, VTT, ASS, TTML, LRC en andere ondertitels lokaal. Download meerdere bestanden tegelijk, pas de timing aan en kies de tekstcodering.",
+      },
+      no: {
+        name: "Undertekstkonverterer",
+        description:
+          "Konverter SRT, VTT, ASS, TTML, LRC og andre undertekster lokalt. Last ned flere filer samtidig, juster tidspunkter og velg tegnkoding.",
+      },
+      pl: {
+        name: "Konwerter napisów",
+        description:
+          "Konwertuj lokalnie napisy w formatach SRT, VTT, ASS, TTML, LRC i innych. Pobieraj wiele plików naraz, dostosowuj czas i wybieraj kodowanie tekstu.",
+      },
+      pt: {
+        name: "Conversor de legendas",
+        description:
+          "Converta SRT, VTT, ASS, TTML, LRC e outras legendas localmente. Baixe arquivos em lote, ajuste os tempos e escolha a codificação de texto.",
+      },
+      ru: {
+        name: "Конвертер субтитров",
+        description:
+          "Преобразуйте субтитры SRT, VTT, ASS, TTML, LRC и других форматов на своём устройстве. Скачивайте файлы пакетно, меняйте время показа и выбирайте кодировку текста.",
+      },
+      sv: {
+        name: "Undertextkonverterare",
+        description:
+          "Konvertera SRT, VTT, ASS, TTML, LRC och andra undertextformat lokalt. Ladda ned flera filer samtidigt, justera tider och välj textkodning.",
+      },
+      th: {
+        name: "โปรแกรมแปลงคำบรรยาย",
+        description:
+          "แปลงคำบรรยาย SRT, VTT, ASS, TTML, LRC และรูปแบบอื่น ๆ บนอุปกรณ์ของคุณ ดาวน์โหลดหลายไฟล์พร้อมกัน ปรับเวลา และเลือกการเข้ารหัสข้อความได้",
+      },
+      tr: {
+        name: "Altyazı Dönüştürücü",
+        description:
+          "SRT, VTT, ASS, TTML, LRC ve diğer altyazıları yerel olarak dönüştürün. Dosyaları toplu indirin, zamanlamayı ayarlayın ve metin kodlamasını seçin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi phụ đề",
+        description:
+          "Chuyển đổi SRT, VTT, ASS, TTML, LRC và các phụ đề khác ngay trên thiết bị. Tải tệp xuống hàng loạt, điều chỉnh thời gian và chọn mã hóa văn bản.",
+      },
+      "zh-CN": {
+        name: "字幕转换器",
+        description:
+          "在本地转换 SRT、VTT、ASS、TTML、LRC 等字幕。批量下载文件、调整时间并选择文本编码。",
+      },
+      "zh-TW": {
+        name: "字幕轉換器",
+        description:
+          "在本機轉換 SRT、VTT、ASS、TTML、LRC 等字幕。批次下載檔案、調整時間，並選擇文字編碼。",
+      },
+    },
+  },
+  {
     slug: "svg-optimizer",
     category: "image",
     icon: "image",
@@ -66945,6 +67085,146 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "秒錶",
         description: "使用開始、暫停、計次和重置控制來記錄經過的時間。",
+      },
+    },
+  },
+  "subtitle-converter": {
+    slug: "subtitle-converter",
+    category: "text",
+    icon: "captions",
+    tags: [
+      "subtitle",
+      "caption",
+      "converter",
+      "srt",
+      "vtt",
+      "ass",
+      "ssa",
+      "sbv",
+      "sub",
+      "sami",
+      "lrc",
+      "ttml",
+      "dfxp",
+      "youtube",
+      "transcript",
+      "batch",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل ملفات الترجمة",
+        description:
+          "حوّل ملفات الترجمة بصيغ SRT وVTT وASS وTTML وLRC وغيرها محليًا. نزّل عدة ملفات دفعة واحدة، واضبط التوقيت، واختر ترميز النص.",
+      },
+      de: {
+        name: "Untertitelkonverter",
+        description:
+          "Konvertieren Sie SRT, VTT, ASS, TTML, LRC und weitere Untertitel lokal. Laden Sie mehrere Dateien herunter, passen Sie Zeiten an und wählen Sie die Textkodierung.",
+      },
+      en: {
+        name: "Subtitle Converter",
+        description:
+          "Convert SRT, VTT, ASS, TTML, LRC and other subtitles locally. Batch download files, adjust timing, and choose text encoding.",
+      },
+      es: {
+        name: "Conversor de subtítulos",
+        description:
+          "Convierte SRT, VTT, ASS, TTML, LRC y otros subtítulos localmente. Descarga archivos por lotes, ajusta los tiempos y elige la codificación del texto.",
+      },
+      fr: {
+        name: "Convertisseur de sous-titres",
+        description:
+          "Convertissez localement des sous-titres SRT, VTT, ASS, TTML, LRC et d’autres formats. Téléchargez les fichiers par lots, ajustez les temps et choisissez l’encodage du texte.",
+      },
+      he: {
+        name: "ממיר כתוביות",
+        description:
+          "המרה מקומית של כתוביות בפורמטים SRT, VTT, ASS, TTML, LRC ועוד. הורדת קבצים באצווה, התאמת תזמון ובחירת קידוד טקסט.",
+      },
+      hi: {
+        name: "उपशीर्षक कन्वर्टर",
+        description:
+          "SRT, VTT, ASS, TTML, LRC और अन्य उपशीर्षक स्थानीय रूप से बदलें। फ़ाइलें एक साथ डाउनलोड करें, समय समायोजित करें और टेक्स्ट एन्कोडिंग चुनें।",
+      },
+      id: {
+        name: "Konverter Subtitle",
+        description:
+          "Konversi SRT, VTT, ASS, TTML, LRC, dan subtitle lainnya secara lokal. Unduh banyak file sekaligus, sesuaikan waktu, dan pilih enkode karakter teks.",
+      },
+      it: {
+        name: "Convertitore di sottotitoli",
+        description:
+          "Converti SRT, VTT, ASS, TTML, LRC e altri sottotitoli localmente. Scarica più file insieme, regola i tempi e scegli la codifica del testo.",
+      },
+      ja: {
+        name: "字幕コンバーター",
+        description:
+          "SRT、VTT、ASS、TTML、LRC などの字幕を端末内で変換。ファイルの一括ダウンロード、タイミング調整、文字コードの選択ができます。",
+      },
+      ko: {
+        name: "자막 변환기",
+        description:
+          "SRT, VTT, ASS, TTML, LRC 등 다양한 자막을 기기에서 변환하세요. 파일을 일괄 다운로드하고, 시간을 조정하고, 텍스트 인코딩을 선택할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Sari Kata",
+        description:
+          "Tukar SRT, VTT, ASS, TTML, LRC dan sari kata lain secara setempat. Muat turun fail secara kelompok, laraskan pemasaan dan pilih pengekodan teks.",
+      },
+      nl: {
+        name: "Ondertitelconverter",
+        description:
+          "Converteer SRT, VTT, ASS, TTML, LRC en andere ondertitels lokaal. Download meerdere bestanden tegelijk, pas de timing aan en kies de tekstcodering.",
+      },
+      no: {
+        name: "Undertekstkonverterer",
+        description:
+          "Konverter SRT, VTT, ASS, TTML, LRC og andre undertekster lokalt. Last ned flere filer samtidig, juster tidspunkter og velg tegnkoding.",
+      },
+      pl: {
+        name: "Konwerter napisów",
+        description:
+          "Konwertuj lokalnie napisy w formatach SRT, VTT, ASS, TTML, LRC i innych. Pobieraj wiele plików naraz, dostosowuj czas i wybieraj kodowanie tekstu.",
+      },
+      pt: {
+        name: "Conversor de legendas",
+        description:
+          "Converta SRT, VTT, ASS, TTML, LRC e outras legendas localmente. Baixe arquivos em lote, ajuste os tempos e escolha a codificação de texto.",
+      },
+      ru: {
+        name: "Конвертер субтитров",
+        description:
+          "Преобразуйте субтитры SRT, VTT, ASS, TTML, LRC и других форматов на своём устройстве. Скачивайте файлы пакетно, меняйте время показа и выбирайте кодировку текста.",
+      },
+      sv: {
+        name: "Undertextkonverterare",
+        description:
+          "Konvertera SRT, VTT, ASS, TTML, LRC och andra undertextformat lokalt. Ladda ned flera filer samtidigt, justera tider och välj textkodning.",
+      },
+      th: {
+        name: "โปรแกรมแปลงคำบรรยาย",
+        description:
+          "แปลงคำบรรยาย SRT, VTT, ASS, TTML, LRC และรูปแบบอื่น ๆ บนอุปกรณ์ของคุณ ดาวน์โหลดหลายไฟล์พร้อมกัน ปรับเวลา และเลือกการเข้ารหัสข้อความได้",
+      },
+      tr: {
+        name: "Altyazı Dönüştürücü",
+        description:
+          "SRT, VTT, ASS, TTML, LRC ve diğer altyazıları yerel olarak dönüştürün. Dosyaları toplu indirin, zamanlamayı ayarlayın ve metin kodlamasını seçin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi phụ đề",
+        description:
+          "Chuyển đổi SRT, VTT, ASS, TTML, LRC và các phụ đề khác ngay trên thiết bị. Tải tệp xuống hàng loạt, điều chỉnh thời gian và chọn mã hóa văn bản.",
+      },
+      "zh-CN": {
+        name: "字幕转换器",
+        description:
+          "在本地转换 SRT、VTT、ASS、TTML、LRC 等字幕。批量下载文件、调整时间并选择文本编码。",
+      },
+      "zh-TW": {
+        name: "字幕轉換器",
+        description:
+          "在本機轉換 SRT、VTT、ASS、TTML、LRC 等字幕。批次下載檔案、調整時間，並選擇文字編碼。",
       },
     },
   },
