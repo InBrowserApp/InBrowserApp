@@ -1,0 +1,4 @@
+{
+  "name": "Przeglądarka i zapytania SQLite",
+  "description": "Otwórz lokalną bazę SQLite, sprawdzaj tabele i schemat, wykonuj zapytania SQL tylko do odczytu i eksportuj wyniki do CSV lub JSON. Dane pozostają w przeglądarce."
+}

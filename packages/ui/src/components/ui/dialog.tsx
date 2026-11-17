@@ -48,15 +48,17 @@ function DialogOverlay({
 function DialogContent({
   className,
   children,
+  container,
   closeLabel = "Close",
   showCloseButton = true,
   ...props
 }: React.ComponentProps<typeof DialogPrimitive.Content> & {
+  container?: React.ComponentProps<typeof DialogPrimitive.Portal>["container"]
   closeLabel?: string
   showCloseButton?: boolean
 }) {
   return (
-    <DialogPortal data-slot="dialog-portal">
+    <DialogPortal data-slot="dialog-portal" container={container}>
       <DialogOverlay />
       <DialogPrimitive.Content
         data-slot="dialog-content"

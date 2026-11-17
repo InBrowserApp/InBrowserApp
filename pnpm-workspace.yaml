@@ -9,6 +9,8 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  sql.js: 1.16.0
+  "@types/sql.js": 1.4.11
   "@resvg/resvg-wasm": 2.6.2
   "@matbee/libreoffice-converter": 2.7.2
   pagedjs: 0.4.3

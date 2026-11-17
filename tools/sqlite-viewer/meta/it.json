@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore SQLite e query",
+  "description": "Apri un database SQLite locale, esamina tabelle e schema, esegui SQL in sola lettura ed esporta i risultati in CSV o JSON. I tuoi dati restano nel browser."
+}

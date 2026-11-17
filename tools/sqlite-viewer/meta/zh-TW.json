@@ -1,0 +1,4 @@
+{
+  "name": "SQLite 檢視器與查詢",
+  "description": "開啟本機 SQLite 資料庫，檢視資料表與結構、執行唯讀 SQL，並將結果匯出為 CSV 或 JSON。資料始終留在您的瀏覽器中。"
+}

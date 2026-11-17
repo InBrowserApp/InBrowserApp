@@ -1,0 +1,4 @@
+{
+  "name": "Penampil & Kueri SQLite",
+  "description": "Buka basis data SQLite lokal, periksa tabel dan skema, jalankan SQL hanya baca, lalu ekspor hasil sebagai CSV atau JSON. Data Anda tetap di browser."
+}

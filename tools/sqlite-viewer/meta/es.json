@@ -1,0 +1,4 @@
+{
+  "name": "Visor y consultas de SQLite",
+  "description": "Abre una base de datos SQLite local, inspecciona tablas y su estructura, ejecuta SQL de solo lectura y exporta resultados como CSV o JSON. Tus datos permanecen en tu navegador."
+}
