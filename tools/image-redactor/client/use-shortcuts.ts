@@ -27,10 +27,11 @@ export function useShortcuts(editor: Editor) {
 
 export function editorKeyDown(event: React.KeyboardEvent, editor: Editor) {
   if (
-    event.target instanceof HTMLElement &&
-    event.target.closest(
-      "input,textarea,select,[role=slider],[contenteditable=true]"
-    )
+    event.defaultPrevented ||
+    (event.target instanceof Element &&
+      event.target.closest(
+        "input,textarea,select,[role=combobox],[role=listbox],[role=option],[role=slider],[role=spinbutton],[role=textbox],[role=searchbox],[contenteditable]:not([contenteditable=false])"
+      ))
   )
     return
   const key = event.key.toLowerCase()
@@ -45,15 +46,29 @@ export function editorKeyDown(event: React.KeyboardEvent, editor: Editor) {
   } else if (key === "escape") {
     editor.cancel()
     editor.setSelectedId(null)
-    editor.setTool("select")
+    editor.chooseTool("select")
   } else if (!modifier && !event.altKey) {
     const tools = {
       v: "select",
       r: "rectangle",
       e: "ellipse",
       b: "brush",
+      h: "pan",
     } as const
-    if (key in tools) editor.setTool(tools[key as keyof typeof tools])
+    if (key in tools) {
+      event.preventDefault()
+      editor.chooseTool(tools[key as keyof typeof tools])
+    } else if (
+      key === "enter" &&
+      event.target instanceof Element &&
+      event.target.matches("svg[role=application]")
+    ) {
+      event.preventDefault()
+      editor.addRegion()
+    } else if (key === "[" || key === "]") {
+      event.preventDefault()
+      editor.cycleRegion(key === "]" ? 1 : -1)
+    }
     const step = event.shiftKey ? 10 : 1
     const deltas: Record<string, readonly [number, number]> = {
       arrowleft: [-step, 0],

@@ -13257,7 +13257,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
   {
     slug: "image-redactor",
     category: "image",
-    icon: "image",
+    icon: "eye-off",
     tags: [
       "image",
       "privacy",
@@ -13271,117 +13271,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "أداة إخفاء معلومات الصور",
         description:
-          "أخفِ المعلومات الخاصة بألوان مصمتة أو تمويه أو فسيفساء. ارسم مناطق الإخفاء وحرّكها وغيّر حجمها ودوّرها محليًا في متصفحك.",
+          "موّه الوجوه أو بكسلها، وغطِّ النصوص الخاصة في لقطات الشاشة والصور. عدّل محليًا في متصفحك وصدّر بصيغة PNG أو JPEG أو WebP.",
       },
       de: {
         name: "Bilder schwärzen",
         description:
-          "Verberge private Informationen mit Volltonfarben, Weichzeichnen oder Mosaik. Zeichne, verschiebe, skaliere und drehe Abdeckungen lokal in deinem Browser.",
+          "Zeichne Gesichter weich oder verpixle sie und verdecke private Texte in Screenshots und Fotos. Bearbeite Bilder lokal im Browser und exportiere sie als PNG, JPEG oder WebP.",
       },
       en: {
         name: "Image Redactor",
         description:
-          "Hide private information with solid colors, blur, or mosaic. Draw, move, resize, and rotate redactions locally in your browser.",
+          "Blur or pixelate faces and cover private text in screenshots and photos. Edit locally in your browser and export PNG, JPEG, or WebP.",
       },
       es: {
         name: "Ocultador de información en imágenes",
         description:
-          "Oculta información privada con colores sólidos, desenfoque o mosaico. Dibuja, mueve, cambia el tamaño y gira las zonas de ocultación localmente en tu navegador.",
+          "Desenfoca o pixela rostros y oculta texto privado en capturas de pantalla y fotos. Edita localmente en tu navegador y exporta en PNG, JPEG o WebP.",
       },
       fr: {
         name: "Masquage d’images",
         description:
-          "Masquez les informations privées avec une couleur unie, du flou ou une mosaïque. Dessinez, déplacez, redimensionnez et faites pivoter les zones de masquage localement dans votre navigateur.",
+          "Floutez ou pixellisez les visages et masquez le texte confidentiel dans les captures d’écran et les photos. Modifiez vos images localement dans votre navigateur et exportez-les en PNG, JPEG ou WebP.",
       },
       he: {
         name: "כלי להסתרת מידע בתמונות",
         description:
-          "הסתרת מידע פרטי באמצעות צבעים אחידים, טשטוש או פסיפס. ציור, הזזה, שינוי גודל וסיבוב של אזורי הסתרה, מקומית בדפדפן.",
+          "טשטוש או פיקסול פנים וכיסוי טקסט פרטי בצילומי מסך ובתמונות. עריכה מקומית בדפדפן וייצוא ל־PNG, JPEG או WebP.",
       },
       hi: {
         name: "इमेज में जानकारी छिपाने का टूल",
         description:
-          "ठोस रंग, धुंधलेपन या मोज़ेक से निजी जानकारी छिपाएँ। अपने ब्राउज़र में स्थानीय रूप से क्षेत्र बनाएँ, खिसकाएँ, उनका आकार बदलें और घुमाएँ।",
+          "स्क्रीनशॉट और फ़ोटो में चेहरों को धुंधला या पिक्सेलेट करें और निजी टेक्स्ट ढकें। अपने ब्राउज़र में स्थानीय रूप से संपादित करें और PNG, JPEG या WebP में एक्सपोर्ट करें।",
       },
       id: {
         name: "Penyensor Gambar",
         description:
-          "Sembunyikan informasi pribadi dengan warna solid, buram, atau mosaik. Gambar, pindahkan, ubah ukuran, dan putar area sensor secara lokal di browser Anda.",
+          "Buramkan atau beri efek pikselasi pada wajah dan tutupi teks pribadi dalam tangkapan layar dan foto. Edit secara lokal di browser Anda dan ekspor PNG, JPEG, atau WebP.",
       },
       it: {
         name: "Oscuratore di immagini",
         description:
-          "Nascondi le informazioni private con colori uniformi, sfocatura o mosaico. Disegna, sposta, ridimensiona e ruota le aree oscurate localmente nel browser.",
+          "Sfoca o pixelizza i volti e copri il testo privato in schermate e foto. Modifica localmente nel browser ed esporta in PNG, JPEG o WebP.",
       },
       ja: {
         name: "画像の情報隠しツール",
         description:
-          "単色、ぼかし、モザイクで個人情報を隠せます。ブラウザー内で領域を描画し、移動、サイズ変更、回転ができます。",
+          "スクリーンショットや写真の顔をぼかしやモザイクで隠し、個人情報を含む文字を覆えます。ブラウザー内でローカルに編集し、PNG、JPEG、WebPで書き出せます。",
       },
       ko: {
         name: "이미지 가리기 도구",
         description:
-          "단색, 흐림 또는 모자이크로 개인 정보를 숨기세요. 브라우저에서 기기 내 처리를 통해 가릴 영역을 그리거나 이동하고, 크기를 조절하거나 회전할 수 있습니다.",
+          "스크린샷과 사진 속 얼굴에 흐림이나 픽셀화 효과를 적용하고 민감한 텍스트를 가리세요. 브라우저에서 로컬로 편집하고 PNG, JPEG 또는 WebP로 내보내세요.",
       },
       ms: {
         name: "Penutup Maklumat Imej",
         description:
-          "Sembunyikan maklumat peribadi dengan warna pejal, kabur atau mozek. Lukis, alih, ubah saiz dan putar kawasan penutupan secara setempat dalam pelayar anda.",
+          "Kaburkan atau pikselkan wajah dan tutup teks peribadi dalam tangkapan skrin dan foto. Sunting secara setempat dalam pelayar anda dan eksport PNG, JPEG atau WebP.",
       },
       nl: {
         name: "Afbeeldingen afschermen",
         description:
-          "Verberg privégegevens met effen kleuren, vervaging of mozaïek. Teken, verplaats, vergroot, verklein en draai afschermingen lokaal in je browser.",
+          "Vervaag of pixeleer gezichten en scherm privétekst af in schermafbeeldingen en foto's. Bewerk lokaal in je browser en exporteer als PNG, JPEG of WebP.",
       },
       no: {
         name: "Bildesladding",
         description:
-          "Skjul privat informasjon med ensfarget sladding, uskarphet eller mosaikk. Tegn, flytt, endre størrelse og roter sladdeområder lokalt i nettleseren.",
+          "Gjør ansikter uskarpe eller pikseler dem, og dekk til privat tekst i skjermbilder og bilder. Rediger lokalt i nettleseren og eksporter PNG, JPEG eller WebP.",
       },
       pl: {
         name: "Anonimizator obrazów",
         description:
-          "Ukrywaj poufne informacje jednolitym kolorem, rozmyciem lub mozaiką. Rysuj, przesuwaj, zmieniaj rozmiar i obracaj zasłonięcia lokalnie w przeglądarce.",
+          "Rozmywaj lub pikselizuj twarze i zakrywaj poufny tekst na zrzutach ekranu i zdjęciach. Edytuj lokalnie w przeglądarce i eksportuj do PNG, JPEG lub WebP.",
       },
       pt: {
         name: "Ocultador de informações em imagens",
         description:
-          "Oculte informações privadas com cores sólidas, desfoque ou mosaico. Desenhe, mova, redimensione e gire as regiões de ocultação localmente no navegador.",
+          "Desfoque ou pixelize rostos e oculte textos confidenciais em capturas de tela e fotos. Edite localmente no navegador e exporte em PNG, JPEG ou WebP.",
       },
       ru: {
         name: "Скрытие данных на изображении",
         description:
-          "Скрывайте личные данные сплошным цветом, размытием или мозаикой. Рисуйте, перемещайте, меняйте размер и поворачивайте области локально в браузере.",
+          "Размывайте или пикселизируйте лица и скрывайте конфиденциальный текст на снимках экрана и фото. Редактируйте локально в браузере и экспортируйте в PNG, JPEG или WebP.",
       },
       sv: {
         name: "Bildmaskering",
         description:
-          "Dölj privat information med enfärgade ytor, oskärpa eller mosaik. Rita, flytta, ändra storlek och rotera maskeringar lokalt i webbläsaren.",
+          "Gör ansikten oskarpa eller pixelerade och täck över privat text i skärmbilder och foton. Redigera lokalt i webbläsaren och exportera som PNG, JPEG eller WebP.",
       },
       th: {
         name: "เครื่องมือปิดบังข้อมูลในรูปภาพ",
         description:
-          "ปิดบังข้อมูลส่วนตัวด้วยสีทึบ เบลอ หรือโมเสก วาด ย้าย ปรับขนาด และหมุนบริเวณปิดบังได้ในเบราว์เซอร์ของคุณ",
+          "เบลอหรือทำเป็นพิกเซลบนใบหน้า และปิดบังข้อความส่วนตัวในภาพหน้าจอและภาพถ่าย แก้ไขในเบราว์เซอร์บนอุปกรณ์ของคุณ แล้วส่งออกเป็น PNG, JPEG หรือ WebP",
       },
       tr: {
         name: "Görselde Bilgi Gizleme",
         description:
-          "Özel bilgileri düz renk, bulanıklaştırma veya mozaikle gizleyin. Gizleme alanlarını tarayıcınızda yerel olarak çizin, taşıyın, boyutlandırın ve döndürün.",
+          "Ekran görüntüleri ve fotoğraflarda yüzleri bulanıklaştırın veya pikselleştirin, özel metinlerin üzerini kapatın. Tarayıcınızda yerel olarak düzenleyin ve PNG, JPEG veya WebP olarak dışa aktarın.",
       },
       vi: {
         name: "Công cụ che thông tin trong ảnh",
         description:
-          "Che thông tin riêng tư bằng màu đặc, làm mờ hoặc khảm ô. Vẽ, di chuyển, đổi kích thước và xoay vùng che ngay trên thiết bị trong trình duyệt.",
+          "Làm mờ hoặc điểm ảnh hóa khuôn mặt và che văn bản riêng tư trong ảnh chụp màn hình và ảnh chụp. Chỉnh sửa ngay trên thiết bị bằng trình duyệt rồi xuất PNG, JPEG hoặc WebP.",
       },
       "zh-CN": {
         name: "图片打码器",
         description:
-          "使用纯色、模糊或马赛克隐藏隐私信息。在浏览器本地绘制、移动、调整大小和旋转打码区域。",
+          "为截图和照片中的人脸添加模糊或马赛克，遮盖隐私文字。在浏览器本地编辑，导出为 PNG、JPEG 或 WebP。",
       },
       "zh-TW": {
         name: "圖片隱私遮蔽工具",
         description:
-          "使用純色、模糊或馬賽克隱藏私人資訊。在瀏覽器中本機繪製、移動、調整大小及旋轉遮蔽區域。",
+          "模糊或像素化螢幕截圖與相片中的人臉，並遮住私密文字。在瀏覽器中本機編輯，並匯出為 PNG、JPEG 或 WebP。",
       },
     },
   },
@@ -49236,7 +49236,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
   "image-redactor": {
     slug: "image-redactor",
     category: "image",
-    icon: "image",
+    icon: "eye-off",
     tags: [
       "image",
       "privacy",
@@ -49250,117 +49250,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "أداة إخفاء معلومات الصور",
         description:
-          "أخفِ المعلومات الخاصة بألوان مصمتة أو تمويه أو فسيفساء. ارسم مناطق الإخفاء وحرّكها وغيّر حجمها ودوّرها محليًا في متصفحك.",
+          "موّه الوجوه أو بكسلها، وغطِّ النصوص الخاصة في لقطات الشاشة والصور. عدّل محليًا في متصفحك وصدّر بصيغة PNG أو JPEG أو WebP.",
       },
       de: {
         name: "Bilder schwärzen",
         description:
-          "Verberge private Informationen mit Volltonfarben, Weichzeichnen oder Mosaik. Zeichne, verschiebe, skaliere und drehe Abdeckungen lokal in deinem Browser.",
+          "Zeichne Gesichter weich oder verpixle sie und verdecke private Texte in Screenshots und Fotos. Bearbeite Bilder lokal im Browser und exportiere sie als PNG, JPEG oder WebP.",
       },
       en: {
         name: "Image Redactor",
         description:
-          "Hide private information with solid colors, blur, or mosaic. Draw, move, resize, and rotate redactions locally in your browser.",
+          "Blur or pixelate faces and cover private text in screenshots and photos. Edit locally in your browser and export PNG, JPEG, or WebP.",
       },
       es: {
         name: "Ocultador de información en imágenes",
         description:
-          "Oculta información privada con colores sólidos, desenfoque o mosaico. Dibuja, mueve, cambia el tamaño y gira las zonas de ocultación localmente en tu navegador.",
+          "Desenfoca o pixela rostros y oculta texto privado en capturas de pantalla y fotos. Edita localmente en tu navegador y exporta en PNG, JPEG o WebP.",
       },
       fr: {
         name: "Masquage d’images",
         description:
-          "Masquez les informations privées avec une couleur unie, du flou ou une mosaïque. Dessinez, déplacez, redimensionnez et faites pivoter les zones de masquage localement dans votre navigateur.",
+          "Floutez ou pixellisez les visages et masquez le texte confidentiel dans les captures d’écran et les photos. Modifiez vos images localement dans votre navigateur et exportez-les en PNG, JPEG ou WebP.",
       },
       he: {
         name: "כלי להסתרת מידע בתמונות",
         description:
-          "הסתרת מידע פרטי באמצעות צבעים אחידים, טשטוש או פסיפס. ציור, הזזה, שינוי גודל וסיבוב של אזורי הסתרה, מקומית בדפדפן.",
+          "טשטוש או פיקסול פנים וכיסוי טקסט פרטי בצילומי מסך ובתמונות. עריכה מקומית בדפדפן וייצוא ל־PNG, JPEG או WebP.",
       },
       hi: {
         name: "इमेज में जानकारी छिपाने का टूल",
         description:
-          "ठोस रंग, धुंधलेपन या मोज़ेक से निजी जानकारी छिपाएँ। अपने ब्राउज़र में स्थानीय रूप से क्षेत्र बनाएँ, खिसकाएँ, उनका आकार बदलें और घुमाएँ।",
+          "स्क्रीनशॉट और फ़ोटो में चेहरों को धुंधला या पिक्सेलेट करें और निजी टेक्स्ट ढकें। अपने ब्राउज़र में स्थानीय रूप से संपादित करें और PNG, JPEG या WebP में एक्सपोर्ट करें।",
       },
       id: {
         name: "Penyensor Gambar",
         description:
-          "Sembunyikan informasi pribadi dengan warna solid, buram, atau mosaik. Gambar, pindahkan, ubah ukuran, dan putar area sensor secara lokal di browser Anda.",
+          "Buramkan atau beri efek pikselasi pada wajah dan tutupi teks pribadi dalam tangkapan layar dan foto. Edit secara lokal di browser Anda dan ekspor PNG, JPEG, atau WebP.",
       },
       it: {
         name: "Oscuratore di immagini",
         description:
-          "Nascondi le informazioni private con colori uniformi, sfocatura o mosaico. Disegna, sposta, ridimensiona e ruota le aree oscurate localmente nel browser.",
+          "Sfoca o pixelizza i volti e copri il testo privato in schermate e foto. Modifica localmente nel browser ed esporta in PNG, JPEG o WebP.",
       },
       ja: {
         name: "画像の情報隠しツール",
         description:
-          "単色、ぼかし、モザイクで個人情報を隠せます。ブラウザー内で領域を描画し、移動、サイズ変更、回転ができます。",
+          "スクリーンショットや写真の顔をぼかしやモザイクで隠し、個人情報を含む文字を覆えます。ブラウザー内でローカルに編集し、PNG、JPEG、WebPで書き出せます。",
       },
       ko: {
         name: "이미지 가리기 도구",
         description:
-          "단색, 흐림 또는 모자이크로 개인 정보를 숨기세요. 브라우저에서 기기 내 처리를 통해 가릴 영역을 그리거나 이동하고, 크기를 조절하거나 회전할 수 있습니다.",
+          "스크린샷과 사진 속 얼굴에 흐림이나 픽셀화 효과를 적용하고 민감한 텍스트를 가리세요. 브라우저에서 로컬로 편집하고 PNG, JPEG 또는 WebP로 내보내세요.",
       },
       ms: {
         name: "Penutup Maklumat Imej",
         description:
-          "Sembunyikan maklumat peribadi dengan warna pejal, kabur atau mozek. Lukis, alih, ubah saiz dan putar kawasan penutupan secara setempat dalam pelayar anda.",
+          "Kaburkan atau pikselkan wajah dan tutup teks peribadi dalam tangkapan skrin dan foto. Sunting secara setempat dalam pelayar anda dan eksport PNG, JPEG atau WebP.",
       },
       nl: {
         name: "Afbeeldingen afschermen",
         description:
-          "Verberg privégegevens met effen kleuren, vervaging of mozaïek. Teken, verplaats, vergroot, verklein en draai afschermingen lokaal in je browser.",
+          "Vervaag of pixeleer gezichten en scherm privétekst af in schermafbeeldingen en foto's. Bewerk lokaal in je browser en exporteer als PNG, JPEG of WebP.",
       },
       no: {
         name: "Bildesladding",
         description:
-          "Skjul privat informasjon med ensfarget sladding, uskarphet eller mosaikk. Tegn, flytt, endre størrelse og roter sladdeområder lokalt i nettleseren.",
+          "Gjør ansikter uskarpe eller pikseler dem, og dekk til privat tekst i skjermbilder og bilder. Rediger lokalt i nettleseren og eksporter PNG, JPEG eller WebP.",
       },
       pl: {
         name: "Anonimizator obrazów",
         description:
-          "Ukrywaj poufne informacje jednolitym kolorem, rozmyciem lub mozaiką. Rysuj, przesuwaj, zmieniaj rozmiar i obracaj zasłonięcia lokalnie w przeglądarce.",
+          "Rozmywaj lub pikselizuj twarze i zakrywaj poufny tekst na zrzutach ekranu i zdjęciach. Edytuj lokalnie w przeglądarce i eksportuj do PNG, JPEG lub WebP.",
       },
       pt: {
         name: "Ocultador de informações em imagens",
         description:
-          "Oculte informações privadas com cores sólidas, desfoque ou mosaico. Desenhe, mova, redimensione e gire as regiões de ocultação localmente no navegador.",
+          "Desfoque ou pixelize rostos e oculte textos confidenciais em capturas de tela e fotos. Edite localmente no navegador e exporte em PNG, JPEG ou WebP.",
       },
       ru: {
         name: "Скрытие данных на изображении",
         description:
-          "Скрывайте личные данные сплошным цветом, размытием или мозаикой. Рисуйте, перемещайте, меняйте размер и поворачивайте области локально в браузере.",
+          "Размывайте или пикселизируйте лица и скрывайте конфиденциальный текст на снимках экрана и фото. Редактируйте локально в браузере и экспортируйте в PNG, JPEG или WebP.",
       },
       sv: {
         name: "Bildmaskering",
         description:
-          "Dölj privat information med enfärgade ytor, oskärpa eller mosaik. Rita, flytta, ändra storlek och rotera maskeringar lokalt i webbläsaren.",
+          "Gör ansikten oskarpa eller pixelerade och täck över privat text i skärmbilder och foton. Redigera lokalt i webbläsaren och exportera som PNG, JPEG eller WebP.",
       },
       th: {
         name: "เครื่องมือปิดบังข้อมูลในรูปภาพ",
         description:
-          "ปิดบังข้อมูลส่วนตัวด้วยสีทึบ เบลอ หรือโมเสก วาด ย้าย ปรับขนาด และหมุนบริเวณปิดบังได้ในเบราว์เซอร์ของคุณ",
+          "เบลอหรือทำเป็นพิกเซลบนใบหน้า และปิดบังข้อความส่วนตัวในภาพหน้าจอและภาพถ่าย แก้ไขในเบราว์เซอร์บนอุปกรณ์ของคุณ แล้วส่งออกเป็น PNG, JPEG หรือ WebP",
       },
       tr: {
         name: "Görselde Bilgi Gizleme",
         description:
-          "Özel bilgileri düz renk, bulanıklaştırma veya mozaikle gizleyin. Gizleme alanlarını tarayıcınızda yerel olarak çizin, taşıyın, boyutlandırın ve döndürün.",
+          "Ekran görüntüleri ve fotoğraflarda yüzleri bulanıklaştırın veya pikselleştirin, özel metinlerin üzerini kapatın. Tarayıcınızda yerel olarak düzenleyin ve PNG, JPEG veya WebP olarak dışa aktarın.",
       },
       vi: {
         name: "Công cụ che thông tin trong ảnh",
         description:
-          "Che thông tin riêng tư bằng màu đặc, làm mờ hoặc khảm ô. Vẽ, di chuyển, đổi kích thước và xoay vùng che ngay trên thiết bị trong trình duyệt.",
+          "Làm mờ hoặc điểm ảnh hóa khuôn mặt và che văn bản riêng tư trong ảnh chụp màn hình và ảnh chụp. Chỉnh sửa ngay trên thiết bị bằng trình duyệt rồi xuất PNG, JPEG hoặc WebP.",
       },
       "zh-CN": {
         name: "图片打码器",
         description:
-          "使用纯色、模糊或马赛克隐藏隐私信息。在浏览器本地绘制、移动、调整大小和旋转打码区域。",
+          "为截图和照片中的人脸添加模糊或马赛克，遮盖隐私文字。在浏览器本地编辑，导出为 PNG、JPEG 或 WebP。",
       },
       "zh-TW": {
         name: "圖片隱私遮蔽工具",
         description:
-          "使用純色、模糊或馬賽克隱藏私人資訊。在瀏覽器中本機繪製、移動、調整大小及旋轉遮蔽區域。",
+          "模糊或像素化螢幕截圖與相片中的人臉，並遮住私密文字。在瀏覽器中本機編輯，並匯出為 PNG、JPEG 或 WebP。",
       },
     },
   },

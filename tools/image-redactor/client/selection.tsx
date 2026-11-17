@@ -1,3 +1,4 @@
+import { RotateCw } from "@workspace/ui/icons"
 import {
   center,
   normalizeRotation,
@@ -74,42 +75,59 @@ export function Selection({
         strokeDasharray={`${5 / scale} ${3 / scale}`}
         pointerEvents="none"
       />
-      <line
-        x1={region.width / 2}
-        y1={0}
-        x2={region.width / 2}
-        y2={-gap}
-        pointerEvents="none"
-      />
-      {(["resize", "rotate"] as const).map((mode) => (
-        <foreignObject
-          key={mode}
-          x={(mode === "resize" ? region.width : region.width / 2) - size}
-          y={(mode === "resize" ? region.height : -gap) - size}
-          width={size * 2}
-          height={size * 2}
-        >
-          <button
-            type="button"
-            data-handle={mode}
-            aria-label={
-              mode === "resize" ? messages.resizeHandle : messages.rotateHandle
-            }
-            className="grid size-full place-items-center rounded-sm focus-visible:outline-2 focus-visible:outline-blue-600"
-            style={{ cursor: mode === "resize" ? "nwse-resize" : "grab" }}
-            onKeyDown={(event) => keyDown(event, mode)}
-          >
-            <span
-              style={{
-                width: 12 / scale,
-                height: 12 / scale,
-                borderWidth: 2 / scale,
-              }}
-              className="rounded-full border-blue-600 bg-white shadow-sm"
-            />
-          </button>
-        </foreignObject>
-      ))}
+      {editor.tool === "select" && (
+        <>
+          <line
+            x1={region.width / 2}
+            y1={0}
+            x2={region.width / 2}
+            y2={-gap}
+            pointerEvents="none"
+          />
+          {(["resize", "rotate"] as const).map((mode) => (
+            <foreignObject
+              key={mode}
+              x={(mode === "resize" ? region.width : region.width / 2) - size}
+              y={(mode === "resize" ? region.height : -gap) - size}
+              width={size * 2}
+              height={size * 2}
+            >
+              <button
+                type="button"
+                data-handle={mode}
+                aria-label={
+                  mode === "resize"
+                    ? messages.resizeHandle
+                    : messages.rotateHandle
+                }
+                className="grid size-full touch-none place-items-center rounded-sm focus-visible:outline-2 focus-visible:outline-blue-600"
+                style={{
+                  cursor: mode === "resize" ? "nwse-resize" : "grab",
+                  outlineWidth: 2 / scale,
+                }}
+                onKeyDown={(event) => keyDown(event, mode)}
+              >
+                <span
+                  aria-hidden="true"
+                  style={{
+                    width: (mode === "rotate" ? 22 : 12) / scale,
+                    height: (mode === "rotate" ? 22 : 12) / scale,
+                    borderWidth: 1.5 / scale,
+                    borderRadius: mode === "rotate" ? "50%" : 2 / scale,
+                  }}
+                  className="grid place-items-center border-blue-600 bg-white text-blue-600 shadow-sm"
+                >
+                  {mode === "rotate" && (
+                    <RotateCw
+                      style={{ width: 14 / scale, height: 14 / scale }}
+                    />
+                  )}
+                </span>
+              </button>
+            </foreignObject>
+          ))}
+        </>
+      )}
     </g>
   )
 }

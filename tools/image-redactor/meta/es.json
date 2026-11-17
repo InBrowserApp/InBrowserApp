@@ -1,4 +1,4 @@
 {
   "name": "Ocultador de información en imágenes",
-  "description": "Oculta información privada con colores sólidos, desenfoque o mosaico. Dibuja, mueve, cambia el tamaño y gira las zonas de ocultación localmente en tu navegador."
+  "description": "Desenfoca o pixela rostros y oculta texto privado en capturas de pantalla y fotos. Edita localmente en tu navegador y exporta en PNG, JPEG o WebP."
 }

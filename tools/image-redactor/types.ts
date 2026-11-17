@@ -4,7 +4,7 @@ export type Messages = Readonly<{ [Key in keyof typeof en]: string }>
 export type Point = Readonly<{ x: number; y: number }>
 type Effect = "solid" | "blur" | "pixelate"
 export type Shape = "rectangle" | "ellipse" | "brush"
-export type Tool = Shape | "select"
+export type Tool = Shape | "select" | "pan"
 export type Style = Readonly<{
   effect: Effect
   color: string

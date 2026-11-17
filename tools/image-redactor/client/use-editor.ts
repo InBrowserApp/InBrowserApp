@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { exportImage } from "../render"
+import { createRegion } from "../core/geometry"
 import type { Messages, Region, Source, Style, Tool } from "../types"
 import { exampleSource, loadSource } from "./image-source"
 import { useRegions } from "./use-regions"
@@ -60,6 +61,38 @@ export function useEditor(messages: Messages) {
     request.current++
     setLoading(false)
     open(exampleSource())
+  }
+  function chooseTool(next: Tool) {
+    setTool(next)
+    if (next !== "select") setSelectedId(null)
+  }
+  function addRegion() {
+    if (!source) return
+    const shape = tool === "select" || tool === "pan" ? "rectangle" : tool
+    const region = createRegion(
+      crypto.randomUUID(),
+      shape,
+      { x: source.width * 0.375, y: source.height * 0.425 },
+      { x: source.width * 0.625, y: source.height * 0.575 },
+      style
+    )
+    history.commit([...history.regions, region])
+    setSelectedId(region.id)
+    chooseTool("select")
+  }
+  function cycleRegion(direction: -1 | 1) {
+    if (!history.regions.length) return
+    const index = history.regions.findIndex(
+      (region) => region.id === selectedId
+    )
+    const next =
+      index < 0
+        ? direction > 0
+          ? 0
+          : history.regions.length - 1
+        : (index + direction + history.regions.length) % history.regions.length
+    setSelectedId(history.regions[next]!.id)
+    chooseTool("select")
   }
   function changeStyle(
     patch: Partial<Style & { rotation: number }>,
@@ -127,7 +160,9 @@ export function useEditor(messages: Messages) {
     ...history,
     source,
     tool,
-    setTool,
+    chooseTool,
+    addRegion,
+    cycleRegion,
     selected,
     selectedId,
     setSelectedId,

@@ -14,7 +14,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@workspace/ui/components/ui/select"
-import { Copy, Download, LoaderCircle } from "@workspace/ui/icons"
+import { Check, Copy, Download, LoaderCircle } from "@workspace/ui/icons"
 import type { Messages } from "../types"
 import type { Editor } from "./use-editor"
 import { Range } from "./settings"
@@ -85,7 +85,11 @@ export function ExportCard({
           disabled={!editor.source || editor.busy || editor.loading}
           onClick={() => void editor.save(true)}
         >
-          <Copy aria-hidden="true" />
+          {editor.copied ? (
+            <Check aria-hidden="true" />
+          ) : (
+            <Copy aria-hidden="true" />
+          )}
           {editor.copied ? messages.copied : messages.copy}
         </Button>
         <span className="sr-only" role="status">

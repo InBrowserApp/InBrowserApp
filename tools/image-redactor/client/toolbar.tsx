@@ -1,10 +1,11 @@
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Circle,
+  Hand,
   MousePointer2,
   Paintbrush,
   Redo2,
-  Square,
+  RectangleHorizontal,
   Trash2,
   Undo2,
 } from "@workspace/ui/icons"
@@ -20,9 +21,10 @@ export function Toolbar({
 }) {
   const choices = [
     ["select", MousePointer2],
-    ["rectangle", Square],
+    ["rectangle", RectangleHorizontal],
     ["ellipse", Circle],
     ["brush", Paintbrush],
+    ["pan", Hand],
   ] as const
   return (
     <div className="flex flex-wrap items-center justify-between gap-2 border-b px-3 py-2">
@@ -36,12 +38,10 @@ export function Toolbar({
             key={tool}
             type="button"
             size="sm"
+            className="touch-manipulation pointer-coarse:min-h-10"
             variant={editor.tool === tool ? "secondary" : "ghost"}
             aria-pressed={editor.tool === tool}
-            onClick={() => {
-              editor.setTool(tool)
-              if (tool !== "select") editor.setSelectedId(null)
-            }}
+            onClick={() => editor.chooseTool(tool)}
           >
             <Icon aria-hidden="true" />
             {messages[tool]}
@@ -74,6 +74,7 @@ export function Toolbar({
             type="button"
             variant="ghost"
             size="icon-sm"
+            className="touch-manipulation pointer-coarse:size-10"
             aria-label={label}
             title={label}
             disabled={disabled}

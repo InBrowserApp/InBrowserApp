@@ -46,6 +46,7 @@ export {
   FolderPlus,
   Globe,
   GripVertical,
+  Hand,
   Image as ImageIcon,
   ImageUp,
   Languages,
@@ -69,6 +70,7 @@ export {
   Pencil,
   Printer,
   RefreshCcw,
+  RectangleHorizontal,
   Ruler,
   Search,
   Shield,
@@ -84,4 +86,6 @@ export {
   Undo2,
   Redo2,
   X,
+  ZoomIn,
+  ZoomOut,
 } from "lucide-react"

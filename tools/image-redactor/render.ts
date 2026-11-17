@@ -121,7 +121,7 @@ export function render(
       previousKey = key
     }
     ctx.save()
-    ctx.scale(scale, scale)
+    ctx.scale(scale, output.height / source.height)
     ctx.translate(region.x + region.width / 2, region.y + region.height / 2)
     ctx.rotate((region.rotation * Math.PI) / 180)
     ctx.translate(-region.width / 2, -region.height / 2)
@@ -131,7 +131,11 @@ export function render(
     if (region.effect === "solid") {
       ctx.fillStyle = region.color
       ctx.fillRect(0, 0, output.width, output.height)
-    } else ctx.drawImage(effect!, 0, 0)
+    } else {
+      // Replace transparent effect pixels so the sharp source cannot show through.
+      ctx.globalCompositeOperation = "copy"
+      ctx.drawImage(effect!, 0, 0)
+    }
     ctx.restore()
   }
 }

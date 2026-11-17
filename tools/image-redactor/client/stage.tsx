@@ -1,8 +1,10 @@
 /* oxlint-disable jsx-a11y/no-noninteractive-tabindex -- The canvas supports keyboard editing. */
 import { useEffect, useId, useRef, useState } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
-import { Minus, Plus } from "@workspace/ui/icons"
+import { ZoomIn, ZoomOut } from "@workspace/ui/icons"
+import { cn } from "@workspace/ui/lib/utils"
 import { render } from "../render"
+import { previewDimensions } from "../core/preview"
 import type { Messages } from "../types"
 import type { Editor } from "./use-editor"
 import { Selection } from "./selection"
@@ -16,11 +18,15 @@ export function Stage({
   messages: Messages
 }) {
   const { source } = editor
+  const preview = source && previewDimensions(source.width, source.height)
+  const previewWidth = preview?.width ?? 1
+  const previewHeight = preview?.height ?? 1
   const viewport = useRef<HTMLDivElement>(null)
   const output = useRef<HTMLCanvasElement>(null)
   const [bounds, setBounds] = useState({ width: 640, height: 440 })
   const [zoom, setZoom] = useState(1)
   const hintId = useId()
+  const keyboardHintId = useId()
   const gestures = useGestures(editor)
   useEffect(() => {
     const observer = new ResizeObserver(([entry]) => {
@@ -38,7 +44,7 @@ export function Stage({
   }, [source])
   useEffect(() => {
     if (source && output.current) render(output.current, source, editor.regions)
-  }, [source, editor.regions])
+  }, [source, editor.regions, previewWidth, previewHeight])
   if (!source) return null
   const fit = Math.min(
     1,
@@ -46,22 +52,32 @@ export function Stage({
     Math.max(1, bounds.height - 64) / source.height
   )
   const scale = fit * zoom
-  const previewWidth = Math.min(source.width, 1600)
   const hint =
     editor.tool === "select"
       ? messages.selectHint
-      : editor.tool === "brush"
-        ? messages.brushHint
-        : messages.drawHint
+      : editor.tool === "pan"
+        ? messages.panHint
+        : editor.tool === "brush"
+          ? messages.brushHint
+          : messages.drawHint
   return (
     <>
       <div
         ref={viewport}
-        className="min-h-72 overflow-auto bg-muted/30"
+        className={cn(
+          "min-h-72 overflow-auto bg-muted/30",
+          editor.tool === "pan" &&
+            "cursor-grab touch-none select-none active:cursor-grabbing"
+        )}
         style={{
           height: `min(60vh, ${Math.max(288, Math.min(576, ((bounds.width - 48) * source.height) / source.width + 64))}px)`,
         }}
         dir="ltr"
+        onPointerDown={gestures.panDown}
+        onPointerMove={gestures.panMove}
+        onPointerUp={gestures.panUp}
+        onPointerCancel={gestures.cancel}
+        onLostPointerCapture={gestures.cancel}
       >
         <div className="grid min-h-full w-max min-w-full place-items-center p-6">
           <div
@@ -77,7 +93,7 @@ export function Stage({
             <canvas
               ref={output}
               width={previewWidth}
-              height={Math.round((previewWidth * source.height) / source.width)}
+              height={previewHeight}
               className="pointer-events-none absolute inset-0 size-full"
               aria-hidden="true"
             />
@@ -86,10 +102,15 @@ export function Stage({
               role="application"
               tabIndex={0}
               aria-label={messages.canvasLabel}
-              aria-describedby={hintId}
-              className="absolute inset-0 size-full touch-none overflow-visible focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+              aria-describedby={`${hintId} ${keyboardHintId}`}
+              className="absolute inset-0 size-full touch-none overflow-visible select-none focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
               style={{
-                cursor: editor.tool === "select" ? "default" : "crosshair",
+                cursor:
+                  editor.tool === "pan"
+                    ? "inherit"
+                    : editor.tool === "select"
+                      ? "default"
+                      : "crosshair",
               }}
               onPointerDown={gestures.down}
               onPointerMove={gestures.move}
@@ -128,11 +149,13 @@ export function Stage({
             type="button"
             variant="ghost"
             size="icon-sm"
+            className="touch-manipulation pointer-coarse:size-10"
             aria-label={messages.zoomOut}
+            title={messages.zoomOut}
             disabled={zoom <= 0.5}
             onClick={() => setZoom((z) => Math.max(0.5, z / 1.25))}
           >
-            <Minus aria-hidden="true" />
+            <ZoomOut aria-hidden="true" />
           </Button>
           <span className="min-w-12 text-center text-xs tabular-nums">
             {Math.round(scale * 100)}%
@@ -141,22 +164,29 @@ export function Stage({
             type="button"
             variant="ghost"
             size="icon-sm"
+            className="touch-manipulation pointer-coarse:size-10"
             aria-label={messages.zoomIn}
+            title={messages.zoomIn}
             disabled={zoom >= 8}
             onClick={() => setZoom((z) => Math.min(8, z * 1.25))}
           >
-            <Plus aria-hidden="true" />
+            <ZoomIn aria-hidden="true" />
           </Button>
           <Button
             type="button"
             variant="ghost"
             size="sm"
+            className="touch-manipulation pointer-coarse:min-h-10"
+            title={messages.fit}
             onClick={() => setZoom(1)}
           >
             {messages.fit}
           </Button>
         </div>
       </div>
+      <p id={keyboardHintId} className="sr-only">
+        {messages.canvasKeyboardHint}
+      </p>
     </>
   )
 }

@@ -2,7 +2,7 @@ import { act, cleanup, renderHook } from "@testing-library/react"
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 import messages from "../messages/en.json"
 import { createRegion } from "../core/geometry"
-import type { Source } from "../types"
+import type { Source, Tool } from "../types"
 import { exportImage } from "../render"
 import { exampleSource, loadSource } from "./image-source"
 import { useEditor } from "./use-editor"
@@ -71,9 +71,61 @@ describe("image redactor editor", () => {
       result.current.updateSelected({ x: 1 })
       result.current.remove()
       result.current.commit()
+      result.current.addRegion()
+      result.current.cycleRegion(1)
     })
     expect(loadSource).not.toHaveBeenCalled()
     expect(exportImage).not.toHaveBeenCalled()
+  })
+  it.each(["rectangle", "ellipse", "brush", "pan"] as const)(
+    "clears selection when choosing %s without changing existing regions",
+    (tool) => {
+      const hook = setup()
+      const region = select(hook)
+      act(() => hook.result.current.chooseTool(tool))
+      expect(hook.result.current.tool).toBe(tool)
+      expect(hook.result.current.selected).toBeNull()
+      act(() => hook.result.current.changeStyle({ effect: "blur" }))
+      expect(hook.result.current.regions).toEqual([region])
+    }
+  )
+  it.each<Tool>(["rectangle", "ellipse", "brush", "select", "pan"])(
+    "creates a centered region from %s, ready for keyboard editing",
+    (tool) => {
+      const hook = setup()
+      act(() => hook.result.current.chooseTool(tool))
+      act(() => hook.result.current.addRegion())
+      const region = hook.result.current.selected!
+      expect(region.shape).toBe(
+        tool === "select" || tool === "pan" ? "rectangle" : tool
+      )
+      expect(region.x + region.width / 2).toBe(source.width / 2)
+      expect(region.y + region.height / 2).toBe(source.height / 2)
+      expect(hook.result.current.tool).toBe("select")
+      act(() => hook.result.current.undo())
+      expect(hook.result.current.regions).toEqual([])
+    }
+  )
+  it("cycles regions in both directions without adding history", () => {
+    const hook = setup()
+    const first = select(hook)
+    const second = { ...first, id: "two", x: 120 }
+    act(() => hook.result.current.commit([first, second]))
+    act(() => hook.result.current.chooseTool("pan"))
+    const regions = hook.result.current.regions
+    act(() => hook.result.current.cycleRegion(1))
+    expect(hook.result.current.selected?.id).toBe("one")
+    act(() => hook.result.current.chooseTool("pan"))
+    act(() => hook.result.current.cycleRegion(-1))
+    expect(hook.result.current.selected?.id).toBe("two")
+    expect(hook.result.current.tool).toBe("select")
+    act(() => hook.result.current.cycleRegion(1))
+    expect(hook.result.current.selected?.id).toBe("one")
+    act(() => hook.result.current.cycleRegion(-1))
+    expect(hook.result.current.selected?.id).toBe("two")
+    expect(hook.result.current.regions).toBe(regions)
+    act(() => hook.result.current.undo())
+    expect(hook.result.current.regions).toEqual([first])
   })
   it("makes style previews one undoable edit, and updates the drawing defaults", () => {
     const hook = setup()

@@ -1,4 +1,4 @@
 {
   "name": "Oscuratore di immagini",
-  "description": "Nascondi le informazioni private con colori uniformi, sfocatura o mosaico. Disegna, sposta, ridimensiona e ruota le aree oscurate localmente nel browser."
+  "description": "Sfoca o pixelizza i volti e copri il testo privato in schermate e foto. Modifica localmente nel browser ed esporta in PNG, JPEG o WebP."
 }

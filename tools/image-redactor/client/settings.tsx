@@ -66,7 +66,9 @@ export function Settings({
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{messages.effectTitle}</CardTitle>
+        <CardTitle>
+          {editor.selected ? messages.selectionTitle : messages.effectTitle}
+        </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
         <div
@@ -122,7 +124,9 @@ export function Settings({
           </div>
         ) : (
           <Range
-            label={messages.strength}
+            label={
+              style.effect === "blur" ? messages.blurRadius : messages.pixelSize
+            }
             value={style.strength}
             min={4}
             max={100}
@@ -144,7 +148,6 @@ export function Settings({
           {messages.privacyTip}
         </p>
         <div className="space-y-4 border-t pt-4">
-          <h3 className="text-sm font-medium">{messages.selectionTitle}</h3>
           {editor.selected ? (
             <>
               <Range

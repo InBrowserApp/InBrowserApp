@@ -10,7 +10,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 import ImageRedactor from "./client"
 import messages from "./messages/en.json"
 import { exampleSource, loadSource } from "./client/image-source"
-import { exportImage } from "./render"
+import { exportImage, render as renderImage } from "./render"
 
 vi.mock("./render", () => ({ render: vi.fn(), exportImage: vi.fn() }))
 vi.mock("./client/image-source", () => ({
@@ -54,6 +54,7 @@ beforeEach(() => {
     height: 600,
   } as DOMRect)
   SVGSVGElement.prototype.setPointerCapture = vi.fn()
+  HTMLElement.prototype.setPointerCapture = vi.fn()
   vi.spyOn(URL, "createObjectURL").mockReturnValue("blob:export")
   vi.spyOn(URL, "revokeObjectURL").mockImplementation(() => {})
   vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(() => {})
@@ -69,6 +70,12 @@ function openExample() {
   const result = render(<ImageRedactor messages={messages} />)
   fireEvent.click(screen.getByRole("button", { name: messages.tryExample }))
   return result
+}
+function regions() {
+  return vi.mocked(renderImage).mock.lastCall![2]
+}
+function regionCount(count: number) {
+  return messages.regionCount.replace("{count}", String(count))
 }
 function draw(shape = "rectangle", start = [100, 100], end = [300, 200]) {
   fireEvent.click(
@@ -124,32 +131,35 @@ describe("image redactor workspace", () => {
   it("draws all shapes and makes clear, delete, undo, and redo available", () => {
     openExample()
     draw()
-    expect(screen.getByText("1 regions")).toBeTruthy()
+    expect(screen.getByText(regionCount(1))).toBeTruthy()
     fireEvent.click(screen.getByRole("button", { name: messages.blur }))
-    expect(screen.getByRole("slider", { name: messages.strength })).toBeTruthy()
+    expect(
+      screen.getByRole("slider", { name: messages.blurRadius })
+    ).toBeTruthy()
     draw("ellipse", [350, 100], [450, 200])
     fireEvent.click(screen.getByRole("button", { name: messages.pixelate }))
     draw("brush", [500, 300], [600, 400])
     expect(
       screen.getByRole("slider", { name: messages.brushSize })
     ).toBeTruthy()
-    expect(screen.getByText("3 regions")).toBeTruthy()
+    expect(screen.getByText(regionCount(3))).toBeTruthy()
     fireEvent.click(screen.getByRole("button", { name: messages.undo }))
-    expect(screen.getByText("2 regions")).toBeTruthy()
+    expect(screen.getByText(regionCount(2))).toBeTruthy()
     fireEvent.click(screen.getByRole("button", { name: messages.redo }))
-    expect(screen.getByText("3 regions")).toBeTruthy()
+    expect(screen.getByText(regionCount(3))).toBeTruthy()
     fireEvent.click(
       screen.getAllByRole("button", { name: messages.deleteSelected })[0]!
     )
-    expect(screen.getByText("2 regions")).toBeTruthy()
+    expect(screen.getByText(regionCount(2))).toBeTruthy()
     fireEvent.click(screen.getByRole("button", { name: messages.clearAll }))
-    expect(screen.getByText("0 regions")).toBeTruthy()
+    expect(screen.getByText(regionCount(0))).toBeTruthy()
     fireEvent.click(screen.getByRole("button", { name: messages.undo }))
-    expect(screen.getByText("2 regions")).toBeTruthy()
+    expect(screen.getByText(regionCount(2))).toBeTruthy()
   })
   it("offers keyboard editing, focusable handles, zoom, and format options", async () => {
     openExample()
     draw()
+    fireEvent.click(screen.getByRole("button", { name: messages.select }))
     const svg = screen.getByRole("application")
     fireEvent.keyDown(svg, { key: "ArrowRight", shiftKey: true })
     fireEvent.keyDown(svg, { key: "ArrowDown" })
@@ -234,7 +244,7 @@ describe("image redactor workspace", () => {
     pointer("pointerMove", 180, 180)
     pointer("pointerUp", 180, 180, { pointerId: 2 })
     pointer("pointerUp", 180, 180)
-    expect(screen.getByText("1 regions")).toBeTruthy()
+    expect(screen.getByText(regionCount(1))).toBeTruthy()
     let resize = screen.getByRole("button", { name: messages.resizeHandle })
     fireEvent.pointerDown(resize, {
       button: 0,
@@ -268,12 +278,13 @@ describe("image redactor workspace", () => {
       screen.queryByRole("button", { name: messages.resizeHandle })
     ).toBeNull()
     draw("rectangle", [700, 500], [701, 501])
-    expect(screen.getByText("1 regions")).toBeTruthy()
+    expect(screen.getByText(regionCount(1))).toBeTruthy()
     draw("brush", [800, 500], [800, 500])
-    expect(screen.getByText("2 regions")).toBeTruthy()
+    expect(screen.getByText(regionCount(2))).toBeTruthy()
     fireEvent.keyDown(svg, { key: "Delete" })
-    expect(screen.getByText("1 regions")).toBeTruthy()
+    expect(screen.getByText(regionCount(1))).toBeTruthy()
     draw("ellipse", [500, 400], [600, 500])
+    fireEvent.click(screen.getByRole("button", { name: messages.select }))
     resize = screen.getByRole("button", { name: messages.resizeHandle })
     fireEvent.pointerDown(resize, {
       button: 0,
@@ -283,7 +294,7 @@ describe("image redactor workspace", () => {
     })
     fireEvent.keyDown(svg, { key: "Escape" })
     pointer("pointerUp", 620, 520)
-    expect(screen.getByText("2 regions")).toBeTruthy()
+    expect(screen.getByText(regionCount(2))).toBeTruthy()
   })
   it("updates color, effect size, brush size, and rotation with labeled controls", () => {
     openExample()
@@ -297,9 +308,12 @@ describe("image redactor workspace", () => {
     })
     fireEvent.blur(screen.getByLabelText(messages.color))
     fireEvent.click(screen.getByRole("button", { name: messages.blur }))
-    fireEvent.keyDown(screen.getByRole("slider", { name: messages.strength }), {
-      key: "ArrowRight",
-    })
+    fireEvent.keyDown(
+      screen.getByRole("slider", { name: messages.blurRadius }),
+      {
+        key: "ArrowRight",
+      }
+    )
     fireEvent.keyDown(screen.getByRole("slider", { name: messages.rotation }), {
       key: "ArrowRight",
     })
@@ -314,5 +328,181 @@ describe("image redactor workspace", () => {
         .getByRole("button", { name: messages.brush })
         .getAttribute("aria-pressed")
     ).toBe("true")
+  })
+  it("clears selection for drawing tools consistently from buttons and shortcuts", () => {
+    openExample()
+    draw()
+    const svg = screen.getByRole("application")
+    expect(
+      screen.queryByRole("button", { name: messages.resizeHandle })
+    ).toBeNull()
+    fireEvent.keyDown(svg, { key: "v" })
+    expect(
+      screen.getByRole("button", { name: messages.resizeHandle })
+    ).toBeTruthy()
+    fireEvent.keyDown(svg, { key: "b" })
+    expect(screen.getByText(messages.noSelection)).toBeTruthy()
+    expect(
+      screen.queryByRole("button", { name: messages.resizeHandle })
+    ).toBeNull()
+    fireEvent.click(screen.getByRole("button", { name: messages.blur }))
+    expect(regions()[0]!.effect).toBe("solid")
+    fireEvent.keyDown(svg, { key: "Enter" })
+    expect(regions()[1]!.shape).toBe("brush")
+    expect(regions()[1]!.effect).toBe("blur")
+    fireEvent.click(screen.getByRole("button", { name: messages.rectangle }))
+    expect(screen.getByText(messages.noSelection)).toBeTruthy()
+    fireEvent.click(screen.getByRole("button", { name: messages.pixelate }))
+    expect(regions()[1]!.effect).toBe("blur")
+  })
+  it("creates, cycles, moves, and deletes regions entirely from the keyboard", () => {
+    openExample()
+    const svg = screen.getByRole("application")
+    expect(screen.getByText(messages.canvasKeyboardHint)).toBeTruthy()
+    fireEvent.keyDown(svg, { key: "Enter" })
+    expect(regions()[0]!.shape).toBe("rectangle")
+    expect(
+      screen
+        .getByRole("button", { name: messages.select })
+        .getAttribute("aria-pressed")
+    ).toBe("true")
+    fireEvent.keyDown(svg, { key: "e" })
+    fireEvent.keyDown(svg, { key: "Enter" })
+    const second = regions()[1]!
+    expect(second.shape).toBe("ellipse")
+    fireEvent.keyDown(svg, { key: "[" })
+    fireEvent.keyDown(svg, { key: "ArrowRight", shiftKey: true })
+    expect(regions()[0]!.x).toBe(source.width * 0.375 + 10)
+    expect(regions()[1]).toBe(second)
+    fireEvent.keyDown(svg, { key: "]" })
+    fireEvent.keyDown(svg, { key: "Delete" })
+    expect(regions()).toHaveLength(1)
+    expect(regions()[0]!.shape).toBe("rectangle")
+    fireEvent.keyDown(svg, { key: "z", ctrlKey: true })
+    expect(regions()).toHaveLength(2)
+    expect(fireEvent.keyDown(svg, { key: "Tab" })).toBe(true)
+  })
+  it("leaves prevented keys and custom form controls to their own handlers", () => {
+    openExample()
+    const svg = screen.getByRole("application")
+    fireEvent.keyDown(svg, { key: "Enter" })
+    svg.addEventListener("keydown", (event) => event.preventDefault(), {
+      once: true,
+    })
+    fireEvent.keyDown(svg, { key: "b" })
+    const format = screen.getByRole("combobox", { name: messages.format })
+    fireEvent.keyDown(format, { key: "e" })
+    fireEvent.keyDown(format, { key: "Delete" })
+    expect(
+      screen
+        .getByRole("button", { name: messages.select })
+        .getAttribute("aria-pressed")
+    ).toBe("true")
+    expect(regions()).toHaveLength(1)
+    fireEvent.click(format)
+    const option = screen.getByRole("option", { name: "PNG" })
+    fireEvent.keyDown(option, { key: "r" })
+    fireEvent.keyDown(option, { key: "Delete" })
+    fireEvent.keyDown(option, { key: "Escape" })
+    expect(
+      screen
+        .getByRole("button", { name: messages.select })
+        .getAttribute("aria-pressed")
+    ).toBe("true")
+    expect(regions()).toHaveLength(1)
+  })
+  it.each(["mouse", "touch"])(
+    "pans with %s without changing regions or history",
+    (pointerType) => {
+      openExample()
+      const svg = screen.getByRole("application")
+      fireEvent.keyDown(svg, { key: "Enter" })
+      const before = regions()
+      fireEvent.keyDown(svg, { key: "h" })
+      expect(
+        screen
+          .getByRole("button", { name: messages.pan })
+          .getAttribute("aria-pressed")
+      ).toBe("true")
+      const viewport = svg.parentElement!.parentElement!.parentElement!
+      viewport.scrollLeft = 120
+      viewport.scrollTop = 80
+      fireEvent.pointerDown(svg, {
+        button: 0,
+        pointerId: 1,
+        pointerType,
+        clientX: 200,
+        clientY: 150,
+      })
+      fireEvent.pointerMove(viewport, {
+        pointerId: 2,
+        pointerType,
+        clientX: 100,
+        clientY: 90,
+      })
+      expect(viewport.scrollLeft).toBe(120)
+      fireEvent.pointerMove(viewport, {
+        pointerId: 1,
+        pointerType,
+        clientX: 100,
+        clientY: 90,
+      })
+      expect(viewport.scrollLeft).toBe(220)
+      expect(viewport.scrollTop).toBe(140)
+      fireEvent.pointerUp(viewport, { pointerId: 1, pointerType })
+      fireEvent.pointerMove(viewport, {
+        pointerId: 1,
+        pointerType,
+        clientX: 0,
+        clientY: 0,
+      })
+      expect(viewport.scrollLeft).toBe(220)
+      fireEvent.pointerDown(viewport, {
+        button: 0,
+        pointerId: 3,
+        pointerType,
+        clientX: 200,
+        clientY: 150,
+      })
+      fireEvent.pointerCancel(viewport, { pointerId: 3, pointerType })
+      fireEvent.pointerMove(viewport, {
+        pointerId: 3,
+        pointerType,
+        clientX: 0,
+        clientY: 0,
+      })
+      expect(viewport.scrollLeft).toBe(220)
+      expect(regions()).toBe(before)
+      fireEvent.click(screen.getByRole("button", { name: messages.undo }))
+      expect(regions()).toHaveLength(0)
+    }
+  )
+  it("uses pointer positions outside the image when rotating and moving edge regions", () => {
+    openExample()
+    draw("rectangle", [100, 5], [300, 35])
+    fireEvent.click(screen.getByRole("button", { name: messages.select }))
+    const svg = screen.getByRole("application")
+    fireEvent.pointerDown(
+      screen.getByRole("button", { name: messages.rotateHandle }),
+      {
+        button: 0,
+        pointerId: 1,
+        clientX: 200,
+        clientY: -25,
+      }
+    )
+    fireEvent.pointerMove(svg, { pointerId: 1, clientX: 100, clientY: -80 })
+    fireEvent.pointerUp(svg, { pointerId: 1, clientX: 100, clientY: -80 })
+    expect(regions()[0]!.rotation).toBe(-45)
+    fireEvent.pointerDown(svg, {
+      button: 0,
+      pointerId: 1,
+      clientX: 200,
+      clientY: 20,
+    })
+    fireEvent.pointerMove(svg, { pointerId: 1, clientX: -100, clientY: -80 })
+    fireEvent.pointerUp(svg, { pointerId: 1, clientX: -100, clientY: -80 })
+    expect(regions()[0]!.x).toBe(-200)
+    expect(regions()[0]!.y).toBe(-95)
   })
 })
