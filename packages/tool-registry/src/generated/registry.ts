@@ -11055,6 +11055,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "font-subset-generator",
+    category: "web",
+    icon: "case-sensitive",
+    tags: [
+      "font",
+      "subset",
+      "woff2",
+      "ttf",
+      "otf",
+      "typography",
+      "compression",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد مجموعات الخطوط الفرعية",
+        description:
+          "احتفظ بالأشكال الحرفية اللازمة لنصك وقلّص حجم خطوط TTF وOTF وWOFF وWOFF2. عاين مجموعات الخطوط الفرعية ونزّلها بالكامل داخل متصفحك.",
+      },
+      de: {
+        name: "Generator für Schrift-Teilmengen",
+        description:
+          "Behalte die für deinen Text benötigten Glyphen und verkleinere TTF-, OTF-, WOFF- und WOFF2-Schriften. Erstelle und prüfe Schrift-Teilmengen direkt im Browser und lade sie herunter.",
+      },
+      en: {
+        name: "Font Subset Generator",
+        description:
+          "Keep the glyphs needed for your text and shrink TTF, OTF, WOFF and WOFF2 fonts. Preview and download font subsets entirely in your browser.",
+      },
+      es: {
+        name: "Generador de subconjuntos de fuentes",
+        description:
+          "Conserva los glifos que necesita tu texto y reduce fuentes TTF, OTF, WOFF y WOFF2. Previsualiza y descarga subconjuntos íntegramente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur de sous-ensembles de polices",
+        description:
+          "Conservez les glyphes nécessaires à votre texte et réduisez vos polices TTF, OTF, WOFF et WOFF2. Prévisualisez et téléchargez les sous-ensembles dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל תת־קבוצות גופנים",
+        description:
+          "שמרו את הגליפים הדרושים לטקסט שלכם וצמצמו גופני TTF, OTF, WOFF ו-WOFF2. צפו בתת־קבוצות הגופנים והורידו אותן ישירות בדפדפן.",
+      },
+      hi: {
+        name: "फ़ॉन्ट सबसेट जनरेटर",
+        description:
+          "अपने पाठ के लिए ज़रूरी ग्लिफ़ ही रखें और TTF, OTF, WOFF व WOFF2 फ़ॉन्ट का आकार घटाएँ। पूरी तरह ब्राउज़र में फ़ॉन्ट सबसेट देखें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat Subset Font",
+        description:
+          "Pertahankan glif yang diperlukan teks Anda dan perkecil font TTF, OTF, WOFF, dan WOFF2. Pratinjau dan unduh subset font sepenuhnya di browser.",
+      },
+      it: {
+        name: "Generatore di sottoinsiemi di font",
+        description:
+          "Conserva i glifi necessari al tuo testo e riduci i font TTF, OTF, WOFF e WOFF2. Visualizza e scarica i sottoinsiemi direttamente nel browser.",
+      },
+      ja: {
+        name: "フォントサブセット生成ツール",
+        description:
+          "テキストに必要な字形だけを残し、TTF、OTF、WOFF、WOFF2 フォントを軽量化します。ブラウザー内でフォントサブセットをプレビューしてダウンロードできます。",
+      },
+      ko: {
+        name: "글꼴 서브셋 생성기",
+        description:
+          "텍스트에 필요한 글리프만 남겨 TTF, OTF, WOFF, WOFF2 글꼴의 크기를 줄이세요. 브라우저에서 글꼴 서브셋을 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana Subset Fon",
+        description:
+          "Kekalkan glif yang diperlukan untuk teks anda dan kecilkan fon TTF, OTF, WOFF dan WOFF2. Pratonton dan muat turun subset fon sepenuhnya dalam pelayar anda.",
+      },
+      nl: {
+        name: "Generator voor lettertypesubsets",
+        description:
+          "Bewaar alleen de glyphs die je tekst nodig heeft en verklein TTF-, OTF-, WOFF- en WOFF2-lettertypen. Bekijk en download lettertypesubsets volledig in je browser.",
+      },
+      no: {
+        name: "Generator for skriftdelmengder",
+        description:
+          "Behold glyfene teksten trenger, og reduser størrelsen på TTF-, OTF-, WOFF- og WOFF2-skrifter. Forhåndsvis og last ned skriftdelmengder direkte i nettleseren.",
+      },
+      pl: {
+        name: "Generator podzbiorów fontów",
+        description:
+          "Zachowaj glify potrzebne w tekście i zmniejsz fonty TTF, OTF, WOFF i WOFF2. Podglądaj i pobieraj podzbiory fontów bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de subconjuntos de fontes",
+        description:
+          "Mantenha os glifos necessários para seu texto e reduza fontes TTF, OTF, WOFF e WOFF2. Visualize e baixe subconjuntos de fontes diretamente no navegador.",
+      },
+      ru: {
+        name: "Генератор подмножеств шрифтов",
+        description:
+          "Оставьте глифы, нужные для вашего текста, и уменьшите шрифты TTF, OTF, WOFF и WOFF2. Просматривайте и скачивайте подмножества шрифтов прямо в браузере.",
+      },
+      sv: {
+        name: "Generator för teckensnittsdelmängder",
+        description:
+          "Behåll glyferna som din text behöver och minska storleken på TTF-, OTF-, WOFF- och WOFF2-teckensnitt. Förhandsgranska och ladda ned delmängder direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือสร้างชุดย่อยฟอนต์",
+        description:
+          "เก็บเฉพาะรูปอักษรที่ข้อความต้องใช้และลดขนาดฟอนต์ TTF, OTF, WOFF และ WOFF2 ดูตัวอย่างและดาวน์โหลดชุดย่อยฟอนต์ได้ทั้งหมดในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Yazı Tipi Alt Kümesi Oluşturucu",
+        description:
+          "Metninizin gerektirdiği glifleri koruyarak TTF, OTF, WOFF ve WOFF2 yazı tiplerini küçültün. Alt kümeleri tamamen tarayıcınızda önizleyip indirin.",
+      },
+      vi: {
+        name: "Trình tạo tập con phông chữ",
+        description:
+          "Giữ lại các hình chữ cần cho văn bản và giảm dung lượng phông TTF, OTF, WOFF, WOFF2. Xem trước và tải tập con phông chữ ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "字体子集生成器",
+        description:
+          "仅保留文本所需字形，缩小 TTF、OTF、WOFF 和 WOFF2 字体文件。完全在浏览器中预览并下载字体子集。",
+      },
+      "zh-TW": {
+        name: "字型子集產生器",
+        description:
+          "保留文字所需的字形，縮小 TTF、OTF、WOFF 和 WOFF2 字型檔案。在瀏覽器中完成字型子集的預覽與下載。",
+      },
+    },
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     category: "image",
     icon: "image",
@@ -47429,6 +47560,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "檔案類型偵測器",
         description:
           "根據檔案特徵識別格式、檢查副檔名是否不符，並在瀏覽器本機檢視 MIME 類型與十六進位預覽。",
+      },
+    },
+  },
+  "font-subset-generator": {
+    slug: "font-subset-generator",
+    category: "web",
+    icon: "case-sensitive",
+    tags: [
+      "font",
+      "subset",
+      "woff2",
+      "ttf",
+      "otf",
+      "typography",
+      "compression",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد مجموعات الخطوط الفرعية",
+        description:
+          "احتفظ بالأشكال الحرفية اللازمة لنصك وقلّص حجم خطوط TTF وOTF وWOFF وWOFF2. عاين مجموعات الخطوط الفرعية ونزّلها بالكامل داخل متصفحك.",
+      },
+      de: {
+        name: "Generator für Schrift-Teilmengen",
+        description:
+          "Behalte die für deinen Text benötigten Glyphen und verkleinere TTF-, OTF-, WOFF- und WOFF2-Schriften. Erstelle und prüfe Schrift-Teilmengen direkt im Browser und lade sie herunter.",
+      },
+      en: {
+        name: "Font Subset Generator",
+        description:
+          "Keep the glyphs needed for your text and shrink TTF, OTF, WOFF and WOFF2 fonts. Preview and download font subsets entirely in your browser.",
+      },
+      es: {
+        name: "Generador de subconjuntos de fuentes",
+        description:
+          "Conserva los glifos que necesita tu texto y reduce fuentes TTF, OTF, WOFF y WOFF2. Previsualiza y descarga subconjuntos íntegramente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur de sous-ensembles de polices",
+        description:
+          "Conservez les glyphes nécessaires à votre texte et réduisez vos polices TTF, OTF, WOFF et WOFF2. Prévisualisez et téléchargez les sous-ensembles dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל תת־קבוצות גופנים",
+        description:
+          "שמרו את הגליפים הדרושים לטקסט שלכם וצמצמו גופני TTF, OTF, WOFF ו-WOFF2. צפו בתת־קבוצות הגופנים והורידו אותן ישירות בדפדפן.",
+      },
+      hi: {
+        name: "फ़ॉन्ट सबसेट जनरेटर",
+        description:
+          "अपने पाठ के लिए ज़रूरी ग्लिफ़ ही रखें और TTF, OTF, WOFF व WOFF2 फ़ॉन्ट का आकार घटाएँ। पूरी तरह ब्राउज़र में फ़ॉन्ट सबसेट देखें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat Subset Font",
+        description:
+          "Pertahankan glif yang diperlukan teks Anda dan perkecil font TTF, OTF, WOFF, dan WOFF2. Pratinjau dan unduh subset font sepenuhnya di browser.",
+      },
+      it: {
+        name: "Generatore di sottoinsiemi di font",
+        description:
+          "Conserva i glifi necessari al tuo testo e riduci i font TTF, OTF, WOFF e WOFF2. Visualizza e scarica i sottoinsiemi direttamente nel browser.",
+      },
+      ja: {
+        name: "フォントサブセット生成ツール",
+        description:
+          "テキストに必要な字形だけを残し、TTF、OTF、WOFF、WOFF2 フォントを軽量化します。ブラウザー内でフォントサブセットをプレビューしてダウンロードできます。",
+      },
+      ko: {
+        name: "글꼴 서브셋 생성기",
+        description:
+          "텍스트에 필요한 글리프만 남겨 TTF, OTF, WOFF, WOFF2 글꼴의 크기를 줄이세요. 브라우저에서 글꼴 서브셋을 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana Subset Fon",
+        description:
+          "Kekalkan glif yang diperlukan untuk teks anda dan kecilkan fon TTF, OTF, WOFF dan WOFF2. Pratonton dan muat turun subset fon sepenuhnya dalam pelayar anda.",
+      },
+      nl: {
+        name: "Generator voor lettertypesubsets",
+        description:
+          "Bewaar alleen de glyphs die je tekst nodig heeft en verklein TTF-, OTF-, WOFF- en WOFF2-lettertypen. Bekijk en download lettertypesubsets volledig in je browser.",
+      },
+      no: {
+        name: "Generator for skriftdelmengder",
+        description:
+          "Behold glyfene teksten trenger, og reduser størrelsen på TTF-, OTF-, WOFF- og WOFF2-skrifter. Forhåndsvis og last ned skriftdelmengder direkte i nettleseren.",
+      },
+      pl: {
+        name: "Generator podzbiorów fontów",
+        description:
+          "Zachowaj glify potrzebne w tekście i zmniejsz fonty TTF, OTF, WOFF i WOFF2. Podglądaj i pobieraj podzbiory fontów bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de subconjuntos de fontes",
+        description:
+          "Mantenha os glifos necessários para seu texto e reduza fontes TTF, OTF, WOFF e WOFF2. Visualize e baixe subconjuntos de fontes diretamente no navegador.",
+      },
+      ru: {
+        name: "Генератор подмножеств шрифтов",
+        description:
+          "Оставьте глифы, нужные для вашего текста, и уменьшите шрифты TTF, OTF, WOFF и WOFF2. Просматривайте и скачивайте подмножества шрифтов прямо в браузере.",
+      },
+      sv: {
+        name: "Generator för teckensnittsdelmängder",
+        description:
+          "Behåll glyferna som din text behöver och minska storleken på TTF-, OTF-, WOFF- och WOFF2-teckensnitt. Förhandsgranska och ladda ned delmängder direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือสร้างชุดย่อยฟอนต์",
+        description:
+          "เก็บเฉพาะรูปอักษรที่ข้อความต้องใช้และลดขนาดฟอนต์ TTF, OTF, WOFF และ WOFF2 ดูตัวอย่างและดาวน์โหลดชุดย่อยฟอนต์ได้ทั้งหมดในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Yazı Tipi Alt Kümesi Oluşturucu",
+        description:
+          "Metninizin gerektirdiği glifleri koruyarak TTF, OTF, WOFF ve WOFF2 yazı tiplerini küçültün. Alt kümeleri tamamen tarayıcınızda önizleyip indirin.",
+      },
+      vi: {
+        name: "Trình tạo tập con phông chữ",
+        description:
+          "Giữ lại các hình chữ cần cho văn bản và giảm dung lượng phông TTF, OTF, WOFF, WOFF2. Xem trước và tải tập con phông chữ ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "字体子集生成器",
+        description:
+          "仅保留文本所需字形，缩小 TTF、OTF、WOFF 和 WOFF2 字体文件。完全在浏览器中预览并下载字体子集。",
+      },
+      "zh-TW": {
+        name: "字型子集產生器",
+        description:
+          "保留文字所需的字形，縮小 TTF、OTF、WOFF 和 WOFF2 字型檔案。在瀏覽器中完成字型子集的預覽與下載。",
       },
     },
   },
