@@ -25,7 +25,7 @@
     "autoAlgorithm": "อัตโนมัติจากส่วนหัว",
     "keyLabel": "Secret หรือ public key",
     "keyDescription": "ใช้ข้อความธรรมดาสำหรับอัลกอริทึม HS ใช้ PEM public key, JWK หรือ JWKS สำหรับอัลกอริทึม RS, PS และ ES ค่าจะไม่ถูกบันทึก",
-    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "keyPlaceholder": "secret\n\nหรือ\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nหรือ\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
     "waitingTitle": "พร้อมตรวจสอบ",
     "waitingDescription": "ป้อนโทเค็นที่ถูกต้องและข้อมูลสำหรับตรวจสอบเพื่อตรวจลายเซ็น",
     "pendingTitle": "กำลังตรวจสอบลายเซ็น",
@@ -35,7 +35,7 @@
     "failedDescription": "ลายเซ็นไม่ตรงกับคีย์และอัลกอริทึมที่ให้มา"
   },
   "claims": {
-    "title": "Registered claims",
+    "title": "เคลมที่ลงทะเบียนไว้",
     "description": "ตรวจสอบ JWT claims ตามเวลาที่พบบ่อยอย่างรวดเร็ว",
     "emptyTitle": "ไม่มี time claims ให้ตรวจดู",
     "emptyDescription": "เพย์โหลดนี้ไม่มี claims exp, nbf หรือ iat",

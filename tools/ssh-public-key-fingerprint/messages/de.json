@@ -15,7 +15,7 @@
   "errorNoKeys": "Es wurden keine gültigen SSH-Public-Keys gefunden.",
   "errorReadFile": "Die ausgewählte Datei konnte nicht gelesen werden.",
   "errorWebCryptoUnavailable": "SHA-256-Fingerprinting erfordert Web-Crypto-Unterstützung.",
-  "keyLabel": "Key {index}",
+  "keyLabel": "Schlüssel {index}",
   "keyTypeLabel": "Key-Typ",
   "keySizeLabel": "Key-Größe",
   "curveLabel": "Kurve",

@@ -11,5 +11,7 @@
   "decimalLabel": "Десятичный",
   "binaryLabel": "Двоичный",
   "copyResultLabel": "Скопировать результат",
-  "copiedLabel": "Скопировано"
+  "copiedLabel": "Скопировано",
+  "fileHashError": "Не удалось вычислить хеш файла.",
+  "textHashError": "Не удалось вычислить хеш текста."
 }

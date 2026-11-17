@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "Pilihan",
   "optionsDescription": "Pilih format kod bar dan laraskan saiz, label dan warna.",
   "preview": "Preview",
-  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
-  "download": "Download",
+  "previewDescription": "Semak kod bar yang dijana dan eksport sebagai PNG, SVG, JPEG atau WebP.",
+  "download": "Muat turun",
   "text": "Teks",
   "textPlaceholder": "Masukkan kandungan...",
   "format": "Format",
@@ -20,5 +20,6 @@
   "center": "Tengah",
   "right": "Kanan",
   "top": "Atas",
-  "bottom": "Bawah"
+  "bottom": "Bawah",
+  "renderError": "Gagal memaparkan kod bar."
 }

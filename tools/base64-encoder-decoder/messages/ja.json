@@ -1,8 +1,10 @@
 {
+  "encodeLabel": "エンコード",
+  "decodeLabel": "デコード",
   "plainTextLabel": "プレーンテキスト",
   "plainTextPlaceholder": "エンコードするテキストを入力…",
   "plainTextDescription": "絵文字や非ラテン文字を含む、任意の UTF-8 テキストを貼り付けたり入力したりできます。",
-  "encodedTextLabel": "Base64 出力",
+  "encodedTextLabel": "Base64",
   "encodedTextPlaceholder": "デコードする Base64 を貼り付け…",
   "encodedTextDescription": "Base64 テキストを直接編集すると、プレーンテキストにデコードされます。",
   "invalidBase64Title": "Base64 の値がまだ有効ではありません。",

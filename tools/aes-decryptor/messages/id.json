@@ -31,7 +31,7 @@
   "fileNameLabel": "Nama file asli",
   "fileSizeLabel": "Ukuran asli",
   "decryptLabel": "Dekripsi",
-  "resetLabel": "Reset",
+  "resetLabel": "Atur ulang",
   "resultCardTitle": "Plaintext",
   "resultCardDescription": "Dekripsi yang berhasil memulihkan teks untuk disalin atau byte file untuk diunduh.",
   "emptyResultTitle": "Belum ada plaintext",

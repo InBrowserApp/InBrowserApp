@@ -1,8 +1,10 @@
 {
+  "encodeLabel": "Kodieren",
+  "decodeLabel": "Dekodieren",
   "plainTextLabel": "Klartext",
   "plainTextPlaceholder": "Text zum Kodieren eingeben…",
   "plainTextDescription": "Fügen Sie beliebigen UTF-8-Text ein oder tippen Sie ihn ein, einschließlich Emojis und nicht-lateinischer Zeichen.",
-  "encodedTextLabel": "Base64-Ausgabe",
+  "encodedTextLabel": "Base64",
   "encodedTextPlaceholder": "Base64 zum Dekodieren einfügen…",
   "encodedTextDescription": "Bearbeiten Sie den Base64-Text direkt, um ihn zurück in Klartext zu dekodieren.",
   "invalidBase64Title": "Der Base64-Wert ist noch nicht gültig.",

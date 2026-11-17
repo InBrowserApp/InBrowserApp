@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "옵션",
   "optionsDescription": "바코드 형식을 선택하고 크기, 라벨, 색상을 조정하세요.",
   "preview": "Preview",
   "previewDescription": "생성된 바코드를 확인하고 PNG, SVG, JPEG 또는 WebP로 내보내세요.",
-  "download": "Download",
+  "download": "다운로드",
   "text": "텍스트",
   "textPlaceholder": "내용 입력...",
   "format": "형식",
@@ -20,5 +20,6 @@
   "center": "가운데",
   "right": "오른쪽",
   "top": "위",
-  "bottom": "아래"
+  "bottom": "아래",
+  "renderError": "바코드를 렌더링하지 못했습니다."
 }

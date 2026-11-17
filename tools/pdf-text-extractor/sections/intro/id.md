@@ -1,6 +1,6 @@
 ## Fungsi alat ini
 
-PDF Text Extractor membaca PDF di browser Anda dan mengambil teks yang sudah
+Pengekstrak Teks PDF membaca PDF di browser Anda dan mengambil teks yang sudah
 dapat dipilih di dalam dokumen. Outputnya berupa teks biasa yang dapat Anda
 salin atau unduh sebagai file TXT untuk catatan, pengindeksan pencarian,
 peninjauan data, atau pemrosesan lanjutan.

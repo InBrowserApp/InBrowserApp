@@ -1,8 +1,10 @@
 {
+  "encodeLabel": "編碼",
+  "decodeLabel": "解碼",
   "plainTextLabel": "純文字",
   "plainTextPlaceholder": "輸入要編碼的文字…",
   "plainTextDescription": "貼上或輸入任何 UTF-8 文字，包含表情符號與非拉丁字元。",
-  "encodedTextLabel": "Base64 輸出",
+  "encodedTextLabel": "Base64",
   "encodedTextPlaceholder": "貼上要解碼的 Base64…",
   "encodedTextDescription": "直接編輯 Base64 文字即可將其解碼回純文字。",
   "invalidBase64Title": "這個 Base64 值目前無效。",

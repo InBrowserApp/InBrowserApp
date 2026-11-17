@@ -1,14 +1,14 @@
-## What It Does
+## ماذا تفعل الأداة
 
 فك تشفير ترويسة HTTP Basic Authorization لاستخراج اسم المستخدم وكلمة المرور من Base64. مفيد لاستكشاف الأخطاء وإصلاحها واختبار واجهة برمجة التطبيقات.
 
-## Accepted Input
+## المدخلات المقبولة
 
 الصق شيئًا مثل: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+تقبل هذه الأداة أيضًا سطر `Authorization: Basic ...` كاملًا.
 
-## Notes
+## ملاحظات
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- يرمّز Base64 بيانات الاعتماد فقط، ولا يحميها.
+- تفصل أداة فك الترميز النص عند أول `:`، وتُبقي ما بعده ضمن كلمة المرور.
+- تُنفّذ جميع العمليات محليًا في متصفحك.

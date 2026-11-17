@@ -14,5 +14,7 @@
   "seedSectionLabel": "種子",
   "seedLabel": "種子（選填）",
   "seedPlaceholder": "0 或 0x...",
-  "seedInvalid": "請輸入十進位數字或 0x 十六進位值。"
+  "seedInvalid": "請輸入十進位數字或 0x 十六進位值。",
+  "fileHashError": "無法計算檔案的雜湊值。",
+  "textHashError": "無法計算文字的雜湊值。"
 }

@@ -6,6 +6,6 @@ Un file .gitignore specifica i file intenzionalmente non tracciati che Git deve 
 - File IDE ed editor (.idea/, .vscode/)
 - File del sistema operativo (.DS_Store, Thumbs.db)
 
-## Template source
+## Origine dei modelli
 
 Questo strumento utilizza modelli dal repository ufficiale gitignore di GitHub, coprendo oltre 150 linguaggi, framework e ambienti.

@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "왼쪽에 유효한 XML을 붙여 넣으면 변환된 JSON을 여기에서 미리 볼 수 있습니다.",
   "invalidXmlLabel": "유효하지 않은 XML",
   "optionsLabel": "옵션",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "변환된 JSON을 복사하거나 다운로드하기 전에 XML 파싱 방식을 조정하세요.",
   "indentSizeLabel": "들여쓰기 크기",
   "indentSizeDescription": "0은 압축 출력, 1-8은 보기 좋은 들여쓰기를 의미합니다.",
   "compactLabel": "컴팩트",

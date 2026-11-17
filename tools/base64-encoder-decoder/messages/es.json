@@ -1,8 +1,10 @@
 {
+  "encodeLabel": "Codificar",
+  "decodeLabel": "Decodificar",
   "plainTextLabel": "Texto plano",
   "plainTextPlaceholder": "Introduce el texto a codificar…",
   "plainTextDescription": "Pega o escribe cualquier texto UTF-8, incluyendo emojis y caracteres no latinos.",
-  "encodedTextLabel": "Salida Base64",
+  "encodedTextLabel": "Base64",
   "encodedTextPlaceholder": "Pega Base64 para decodificar…",
   "encodedTextDescription": "Edita el texto Base64 directamente para decodificarlo a texto plano.",
   "invalidBase64Title": "El valor Base64 aún no es válido.",

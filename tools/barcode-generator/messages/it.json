@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "Opzioni",
   "optionsDescription": "Scegli un formato di codice a barre e regola dimensioni, etichette e colori.",
   "preview": "Preview",
-  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
-  "download": "Download",
+  "previewDescription": "Controlla il codice a barre generato ed esportalo in PNG, SVG, JPEG o WebP.",
+  "download": "Scarica",
   "text": "Testo",
   "textPlaceholder": "Scrivi contenuto...",
   "format": "Formato",
@@ -20,5 +20,6 @@
   "center": "Centro",
   "right": "Destra",
   "top": "Alto",
-  "bottom": "Basso"
+  "bottom": "Basso",
+  "renderError": "Impossibile generare il codice a barre."
 }

@@ -1,6 +1,6 @@
 ## Apa yang Dicari Alat Ini
 
-IP Info Lookup menyelesaikan alamat IPv4, alamat IPv6, domain, atau URL dan menampilkan metadata publik yang dapat dilaporkan layanan internet untuk setiap alamat. Ini berguna saat Anda perlu memeriksa ke mana sebuah domain mengarah, jaringan mana yang memiliki suatu alamat, hostname reverse DNS apa yang ada, atau apakah record IPv4 dan IPv6 mengarah ke penyedia yang berbeda.
+Pencarian Info IP menyelesaikan alamat IPv4, alamat IPv6, domain, atau URL dan menampilkan metadata publik yang dapat dilaporkan layanan internet untuk setiap alamat. Ini berguna saat Anda perlu memeriksa ke mana sebuah domain mengarah, jaringan mana yang memiliki suatu alamat, hostname reverse DNS apa yang ada, atau apakah record IPv4 dan IPv6 mengarah ke penyedia yang berbeda.
 
 ## Cara Kerja Pencarian Domain dan URL
 

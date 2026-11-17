@@ -7730,6 +7730,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "file-type-detector",
+    language: "ar",
+  },
+  {
+    slug: "file-type-detector",
+    language: "de",
+  },
+  {
+    slug: "file-type-detector",
+    language: "en",
+  },
+  {
+    slug: "file-type-detector",
+    language: "es",
+  },
+  {
+    slug: "file-type-detector",
+    language: "fr",
+  },
+  {
+    slug: "file-type-detector",
+    language: "he",
+  },
+  {
+    slug: "file-type-detector",
+    language: "hi",
+  },
+  {
+    slug: "file-type-detector",
+    language: "id",
+  },
+  {
+    slug: "file-type-detector",
+    language: "it",
+  },
+  {
+    slug: "file-type-detector",
+    language: "ja",
+  },
+  {
+    slug: "file-type-detector",
+    language: "ko",
+  },
+  {
+    slug: "file-type-detector",
+    language: "ms",
+  },
+  {
+    slug: "file-type-detector",
+    language: "nl",
+  },
+  {
+    slug: "file-type-detector",
+    language: "no",
+  },
+  {
+    slug: "file-type-detector",
+    language: "pl",
+  },
+  {
+    slug: "file-type-detector",
+    language: "pt",
+  },
+  {
+    slug: "file-type-detector",
+    language: "ru",
+  },
+  {
+    slug: "file-type-detector",
+    language: "sv",
+  },
+  {
+    slug: "file-type-detector",
+    language: "th",
+  },
+  {
+    slug: "file-type-detector",
+    language: "tr",
+  },
+  {
+    slug: "file-type-detector",
+    language: "vi",
+  },
+  {
+    slug: "file-type-detector",
+    language: "zh-CN",
+  },
+  {
+    slug: "file-type-detector",
+    language: "zh-TW",
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     language: "ar",
   },
@@ -8003,6 +8095,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "gitignore-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "gpu-information",
+    language: "ar",
+  },
+  {
+    slug: "gpu-information",
+    language: "de",
+  },
+  {
+    slug: "gpu-information",
+    language: "en",
+  },
+  {
+    slug: "gpu-information",
+    language: "es",
+  },
+  {
+    slug: "gpu-information",
+    language: "fr",
+  },
+  {
+    slug: "gpu-information",
+    language: "he",
+  },
+  {
+    slug: "gpu-information",
+    language: "hi",
+  },
+  {
+    slug: "gpu-information",
+    language: "id",
+  },
+  {
+    slug: "gpu-information",
+    language: "it",
+  },
+  {
+    slug: "gpu-information",
+    language: "ja",
+  },
+  {
+    slug: "gpu-information",
+    language: "ko",
+  },
+  {
+    slug: "gpu-information",
+    language: "ms",
+  },
+  {
+    slug: "gpu-information",
+    language: "nl",
+  },
+  {
+    slug: "gpu-information",
+    language: "no",
+  },
+  {
+    slug: "gpu-information",
+    language: "pl",
+  },
+  {
+    slug: "gpu-information",
+    language: "pt",
+  },
+  {
+    slug: "gpu-information",
+    language: "ru",
+  },
+  {
+    slug: "gpu-information",
+    language: "sv",
+  },
+  {
+    slug: "gpu-information",
+    language: "th",
+  },
+  {
+    slug: "gpu-information",
+    language: "tr",
+  },
+  {
+    slug: "gpu-information",
+    language: "vi",
+  },
+  {
+    slug: "gpu-information",
+    language: "zh-CN",
+  },
+  {
+    slug: "gpu-information",
+    language: "zh-TW",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ar",
+  },
+  {
+    slug: "har-analyzer",
+    language: "de",
+  },
+  {
+    slug: "har-analyzer",
+    language: "en",
+  },
+  {
+    slug: "har-analyzer",
+    language: "es",
+  },
+  {
+    slug: "har-analyzer",
+    language: "fr",
+  },
+  {
+    slug: "har-analyzer",
+    language: "he",
+  },
+  {
+    slug: "har-analyzer",
+    language: "hi",
+  },
+  {
+    slug: "har-analyzer",
+    language: "id",
+  },
+  {
+    slug: "har-analyzer",
+    language: "it",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ja",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ko",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ms",
+  },
+  {
+    slug: "har-analyzer",
+    language: "nl",
+  },
+  {
+    slug: "har-analyzer",
+    language: "no",
+  },
+  {
+    slug: "har-analyzer",
+    language: "pl",
+  },
+  {
+    slug: "har-analyzer",
+    language: "pt",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ru",
+  },
+  {
+    slug: "har-analyzer",
+    language: "sv",
+  },
+  {
+    slug: "har-analyzer",
+    language: "th",
+  },
+  {
+    slug: "har-analyzer",
+    language: "tr",
+  },
+  {
+    slug: "har-analyzer",
+    language: "vi",
+  },
+  {
+    slug: "har-analyzer",
+    language: "zh-CN",
+  },
+  {
+    slug: "har-analyzer",
     language: "zh-TW",
   },
   {
@@ -9110,6 +9386,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-cropper",
+    language: "ar",
+  },
+  {
+    slug: "image-cropper",
+    language: "de",
+  },
+  {
+    slug: "image-cropper",
+    language: "en",
+  },
+  {
+    slug: "image-cropper",
+    language: "es",
+  },
+  {
+    slug: "image-cropper",
+    language: "fr",
+  },
+  {
+    slug: "image-cropper",
+    language: "he",
+  },
+  {
+    slug: "image-cropper",
+    language: "hi",
+  },
+  {
+    slug: "image-cropper",
+    language: "id",
+  },
+  {
+    slug: "image-cropper",
+    language: "it",
+  },
+  {
+    slug: "image-cropper",
+    language: "ja",
+  },
+  {
+    slug: "image-cropper",
+    language: "ko",
+  },
+  {
+    slug: "image-cropper",
+    language: "ms",
+  },
+  {
+    slug: "image-cropper",
+    language: "nl",
+  },
+  {
+    slug: "image-cropper",
+    language: "no",
+  },
+  {
+    slug: "image-cropper",
+    language: "pl",
+  },
+  {
+    slug: "image-cropper",
+    language: "pt",
+  },
+  {
+    slug: "image-cropper",
+    language: "ru",
+  },
+  {
+    slug: "image-cropper",
+    language: "sv",
+  },
+  {
+    slug: "image-cropper",
+    language: "th",
+  },
+  {
+    slug: "image-cropper",
+    language: "tr",
+  },
+  {
+    slug: "image-cropper",
+    language: "vi",
+  },
+  {
+    slug: "image-cropper",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-cropper",
+    language: "zh-TW",
+  },
+  {
     slug: "image-metadata-cleaner",
     language: "ar",
   },
@@ -10119,6 +10487,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "image-viewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "image-watermark",
+    language: "ar",
+  },
+  {
+    slug: "image-watermark",
+    language: "de",
+  },
+  {
+    slug: "image-watermark",
+    language: "en",
+  },
+  {
+    slug: "image-watermark",
+    language: "es",
+  },
+  {
+    slug: "image-watermark",
+    language: "fr",
+  },
+  {
+    slug: "image-watermark",
+    language: "he",
+  },
+  {
+    slug: "image-watermark",
+    language: "hi",
+  },
+  {
+    slug: "image-watermark",
+    language: "id",
+  },
+  {
+    slug: "image-watermark",
+    language: "it",
+  },
+  {
+    slug: "image-watermark",
+    language: "ja",
+  },
+  {
+    slug: "image-watermark",
+    language: "ko",
+  },
+  {
+    slug: "image-watermark",
+    language: "ms",
+  },
+  {
+    slug: "image-watermark",
+    language: "nl",
+  },
+  {
+    slug: "image-watermark",
+    language: "no",
+  },
+  {
+    slug: "image-watermark",
+    language: "pl",
+  },
+  {
+    slug: "image-watermark",
+    language: "pt",
+  },
+  {
+    slug: "image-watermark",
+    language: "ru",
+  },
+  {
+    slug: "image-watermark",
+    language: "sv",
+  },
+  {
+    slug: "image-watermark",
+    language: "th",
+  },
+  {
+    slug: "image-watermark",
+    language: "tr",
+  },
+  {
+    slug: "image-watermark",
+    language: "vi",
+  },
+  {
+    slug: "image-watermark",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-watermark",
     language: "zh-TW",
   },
   {
@@ -12235,6 +12695,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "latex-previewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "ar",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "de",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "en",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "es",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "fr",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "he",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "hi",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "id",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "it",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "ja",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "ko",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "ms",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "nl",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "no",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "pl",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "pt",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "ru",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "sv",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "th",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "tr",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "vi",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "legacy-motorola-system-key-generator",
     language: "zh-TW",
   },
   {
@@ -16007,6 +16559,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "pdf-viewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ar",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "de",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "en",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "es",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "fr",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "he",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "hi",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "id",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "it",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ja",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ko",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ms",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "nl",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "no",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "pl",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "pt",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "ru",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "sv",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "th",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "tr",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "vi",
+  },
+  {
+    slug: "pdf-watermark",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-watermark",
     language: "zh-TW",
   },
   {
@@ -21346,6 +21990,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "text-encoding-converter",
+    language: "ar",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "de",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "en",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "es",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "fr",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "he",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "hi",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "id",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "it",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "ja",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "ko",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "ms",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "nl",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "no",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "pl",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "pt",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "ru",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "sv",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "th",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "tr",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "vi",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "text-encoding-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "text-line-sorter",
     language: "ar",
   },
@@ -25391,6 +26127,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "yaml-to-toml-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "zip-creator",
+    language: "ar",
+  },
+  {
+    slug: "zip-creator",
+    language: "de",
+  },
+  {
+    slug: "zip-creator",
+    language: "en",
+  },
+  {
+    slug: "zip-creator",
+    language: "es",
+  },
+  {
+    slug: "zip-creator",
+    language: "fr",
+  },
+  {
+    slug: "zip-creator",
+    language: "he",
+  },
+  {
+    slug: "zip-creator",
+    language: "hi",
+  },
+  {
+    slug: "zip-creator",
+    language: "id",
+  },
+  {
+    slug: "zip-creator",
+    language: "it",
+  },
+  {
+    slug: "zip-creator",
+    language: "ja",
+  },
+  {
+    slug: "zip-creator",
+    language: "ko",
+  },
+  {
+    slug: "zip-creator",
+    language: "ms",
+  },
+  {
+    slug: "zip-creator",
+    language: "nl",
+  },
+  {
+    slug: "zip-creator",
+    language: "no",
+  },
+  {
+    slug: "zip-creator",
+    language: "pl",
+  },
+  {
+    slug: "zip-creator",
+    language: "pt",
+  },
+  {
+    slug: "zip-creator",
+    language: "ru",
+  },
+  {
+    slug: "zip-creator",
+    language: "sv",
+  },
+  {
+    slug: "zip-creator",
+    language: "th",
+  },
+  {
+    slug: "zip-creator",
+    language: "tr",
+  },
+  {
+    slug: "zip-creator",
+    language: "vi",
+  },
+  {
+    slug: "zip-creator",
+    language: "zh-CN",
+  },
+  {
+    slug: "zip-creator",
     language: "zh-TW",
   },
 ]

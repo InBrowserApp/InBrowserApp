@@ -1,5 +1,5 @@
 /* oxlint-disable jsx-a11y/no-noninteractive-tabindex -- The canvas supports keyboard editing. */
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Minus, Plus } from "@workspace/ui/icons"
 import { render } from "../render"
@@ -20,6 +20,7 @@ export function Stage({
   const output = useRef<HTMLCanvasElement>(null)
   const [bounds, setBounds] = useState({ width: 640, height: 440 })
   const [zoom, setZoom] = useState(1)
+  const hintId = useId()
   const gestures = useGestures(editor)
   useEffect(() => {
     const observer = new ResizeObserver(([entry]) => {
@@ -82,6 +83,7 @@ export function Stage({
               role="application"
               tabIndex={0}
               aria-label={messages.canvasLabel}
+              aria-describedby={hintId}
               className="absolute inset-0 size-full touch-none overflow-visible focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
               style={{
                 cursor: editor.tool === "select" ? "default" : "crosshair",
@@ -108,7 +110,10 @@ export function Stage({
         </div>
       </div>
       <div className="flex flex-wrap items-center justify-between gap-3 border-t px-4 py-3">
-        <p className="min-w-0 flex-1 text-xs leading-relaxed text-muted-foreground">
+        <p
+          id={hintId}
+          className="min-w-0 flex-1 text-xs leading-relaxed text-muted-foreground"
+        >
           {hint}
         </p>
         <div

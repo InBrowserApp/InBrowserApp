@@ -1,26 +1,17 @@
-## What this tool does
+## Was dieses Tool macht
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+Dieser SVG-zu-Bild-Konverter wandelt eine lokale SVG-Datei direkt im Browser in ein PNG-, JPEG- oder WebP-Bild um. Du kannst die Originalgröße beibehalten, benutzerdefinierte Ausgabeabmessungen festlegen, die Hintergrundfüllung steuern und die Exportqualität anpassen, sofern das Format dies unterstützt.
 
-## Why it helps
+## Warum es hilfreich ist
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+Verwende das Tool, wenn du eine SVG-Datei für eine Designübergabe, einen CMS-Ablauf, eine Social-Media-Vorschau oder ein App-Asset schnell in ein Rasterbild umwandeln musst. Es eignet sich, um Vektorgrafiken ohne separates Bildbearbeitungsprogramm in vorhersehbare Bitmap-Ausgaben umzuwandeln.
 
-## How it works
+## So funktioniert es
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+Lade eine SVG-Datei hoch, wähle das Ausgabeformat und passe anschließend Breite, Höhe, Hintergrund und Qualität an. Der Konverter rendert die SVG-Datei im Browser und erstellt eine herunterladbare Bilddatei, ohne Daten an einen Server zu senden.
 
-## Tips for better exports
+## Tipps für bessere Exporte
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- Lass das Seitenverhältnis aktiviert, wenn du die Größe ohne Verzerrung ändern möchtest.
+- Wähle für JPEG eine Hintergrundfarbe aus, da JPEG keine Transparenz unterstützt.
+- Verwende PNG für gestochen scharfe verlustfreie Ausgaben oder WebP und JPEG, wenn eine kleinere Dateigröße wichtiger ist.

@@ -1,27 +1,27 @@
-## What this tool does
+## Vad verktyget gör
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+Den här platshållarbildgeneratorn skapar enkla exempelbilder med egna
+mått, enfärgad bakgrund eller färgövertoningar och centrerad text direkt i webbläsaren.
+Du kan exportera varje platshållarbild som PNG, SVG, JPEG eller WebP, inklusive
+Retina-anpassade versioner i 2x och 3x.
 
-## Why it helps
+## Varför det är användbart
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+Använd verktyget för designskisser, exempelinnehåll i CMS, tomma vyer, planering av layouter för
+sociala medier eller platshållare för API:er. Det är användbart när du snabbt behöver en bild med
+förutsägbar storlek och stil utan att öppna ett designprogram.
 
-## How it works
+## Så fungerar det
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+Välj en förinställning eller ange egen bredd och höjd. Välj en enfärgad bakgrund eller
+en färgövertoning, lägg till egen text vid behov och justera sedan teckenstorlek, exportskala och
+kvalitet. Förhandsgranskningen uppdateras direkt så att du kan ladda ner det format som passar
+ditt arbetsflöde.
 
-## Tips for better placeholders
+## Tips för bättre platshållarbilder
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- Lämna textfältet tomt om du vill att verktyget ska visa måtten
+  automatiskt.
+- Använd färgövertoningar för stora huvudbanderoller och enfärgade bakgrunder för enklare platshållarbilder.
+- Exportera SVG när du vill ha en skarp, skalbar bild, eller PNG, JPEG och WebP när
+  du behöver rasterfiler.

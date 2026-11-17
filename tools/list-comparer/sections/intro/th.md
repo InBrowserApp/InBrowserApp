@@ -1,11 +1,11 @@
-## What this comparer is for
+## เครื่องมือเปรียบเทียบนี้มีไว้เพื่ออะไร
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+ใช้เครื่องมือนี้เมื่อสองรายการควรตรงกัน แต่คุณต้องการเห็นค่าที่ตรงกัน ค่าที่ถูกคัดออก และรายการซ้ำอย่างชัดเจนก่อนนำเข้า ซิงค์ ส่งข้อความ หรือจัดระเบียบข้อมูล
 
-## What you get back
+## ผลลัพธ์ที่คุณจะได้รับ
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+เครื่องมือแบ่งผลการเปรียบเทียบเป็นชุดที่นำไปใช้งานได้สะดวก ได้แก่ รายการที่มีร่วมกัน มีเฉพาะใน A มีเฉพาะใน B ค่าที่ไม่ซ้ำทั้งหมด และรายการซ้ำภายในแต่ละแหล่งข้อมูล คุณสามารถคัดลอกหรือดาวน์โหลดแต่ละชุดแยกกันได้
 
-## Where it helps most
+## เหมาะกับงานแบบใดมากที่สุด
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+เหมาะสำหรับรายชื่อผู้ติดต่อ ID สินค้า ข้อมูลส่งออกเพื่อการตรวจสอบ ข้อมูลสินค้าคงคลัง ณ จุดเวลาหนึ่ง กลุ่มเป้าหมายแคมเปญ และการจัดระเบียบข้อมูลที่การผสานผิดเพียงครั้งเดียวอาจสร้างงานเพิ่มในภายหลัง

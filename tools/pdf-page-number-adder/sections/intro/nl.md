@@ -1,4 +1,4 @@
-## What this tool does
+## Wat deze tool doet
 
 PDF-paginanummeraar maakt een nieuwe PDF-kopie met paginanummers op de pagina's
 die je kiest. Upload een document, laat het paginabereik leeg om elke pagina te
@@ -7,7 +7,7 @@ nummeren, of kies alleen geselecteerde pagina's met bereiken zoals
 lettertype, de tekstgrootte en de marges instellen voordat je het resultaat
 downloadt.
 
-## Good use cases
+## Handige toepassingen
 
 - Eenvoudige paginanummers toevoegen voordat je een concept, pakket, contract of
   werkblad ter beoordeling verstuurt.
@@ -18,7 +18,7 @@ downloadt.
 - Plaatsing en marges standaardiseren voordat je documenten afdrukt of in een
   andere workflow combineert.
 
-## Privacy notes
+## Privacyopmerkingen
 
 De PDF wordt lokaal in je browser gelezen en opnieuw geschreven. Deze tool
 uploadt het bestand niet, maar de genummerde kopie bevat nog steeds de
@@ -26,7 +26,7 @@ oorspronkelijke documentinhoud en de meeste bestaande PDF-metadata. Controleer
 het gedownloade bestand voordat je het buiten je team deelt of aan een openbaar
 issue toevoegt.
 
-## Limitations
+## Beperkingen
 
 Deze tool schrijft gewone zwarte paginanummertekst met standaard
 PDF-lettertypen. De tool verwijdert geen wachtwoorden, herstelt geen beschadigde

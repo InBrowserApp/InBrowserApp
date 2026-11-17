@@ -6,7 +6,7 @@
   "targetDescription": "IPv4, IPv6, सीधे डोमेन और URL स्वीकार किए जाते हैं। निजी पतों को क्वेरी किया जा सकता है, लेकिन सार्वजनिक भौगोलिक स्थान डेटा खाली हो सकता है।",
   "invalidTargetTitle": "अमान्य लक्ष्य",
   "invalidTargetDescription": "मान्य IPv4 पता, IPv6 पता, डोमेन नाम या hostname वाला URL दर्ज करें।",
-  "resolverLabel": "DNS resolver",
+  "resolverLabel": "DNS रिज़ॉल्वर",
   "resolverDescription": "इसका उपयोग केवल तब होता है जब लक्ष्य डोमेन या URL हो। IP पते DNS resolution को छोड़ देते हैं।",
   "resolverGroupLabel": "सार्वजनिक resolvers",
   "lookupButton": "IP जानकारी देखें",

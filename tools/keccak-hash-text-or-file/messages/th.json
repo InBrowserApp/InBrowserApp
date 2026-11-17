@@ -11,5 +11,7 @@
   "decimalLabel": "เลขฐานสิบ",
   "binaryLabel": "เลขฐานสอง",
   "copyResultLabel": "คัดลอกผลลัพธ์",
-  "copiedLabel": "คัดลอกแล้ว"
+  "copiedLabel": "คัดลอกแล้ว",
+  "fileHashError": "คำนวณแฮชของไฟล์ไม่สำเร็จ",
+  "textHashError": "คำนวณแฮชของข้อความไม่สำเร็จ"
 }

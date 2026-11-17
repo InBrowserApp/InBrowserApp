@@ -1,0 +1,90 @@
+diff --git a/dist/index.js b/dist/index.js
+index fcf3c3c..627960e 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -3311,7 +3311,7 @@ var PresentationAssetCache = class {
+     const pending = convert(ownedBytes.buffer, 2048, 2048, {
+       dpiScale: 2,
+       maxCanvasDimension: 4096,
+-      maxRecords: 2e5,
++      maxRecords: Number.MAX_SAFE_INTEGER,
+       fontFamilyMap: METAFILE_FONT_MAP
+     }).then((url) => url || void 0);
+     this.metafileUrls.set(assetId, pending);
+@@ -5759,18 +5759,13 @@ function isPresentationDocument(value) {
+ function parserFailure(error) {
+   if (error instanceof PptxViewerError) return error;
+   const message = error instanceof Error ? error.message : String(error);
+-  const normalized = message.toLowerCase();
+-  if (normalized.includes("encrypted presentation")) {
+-    return new PptxViewerError(
+-      "encrypted-document",
+-      "Encrypted presentations are not supported.",
+-      { cause: error }
+-    );
+-  }
+-  if (normalized.includes("resource limit exceeded") || normalized.includes("input exceeds the configured")) {
++  if (/encrypted presentation/i.test(message))
++    return new PptxViewerError("encrypted-document", message, { cause: error });
++  if (/resource limit exceeded|input exceeds the configured|out of memory|allocation|memory access|unreachable/i.test(message))
+     return new PptxViewerError("resource-limit", message, { cause: error });
+-  }
+-  return null;
++  if (/missing \/PowerPoint Document stream|unsupported.*version/i.test(message))
++    return new PptxViewerError("unsupported-format", message, { cause: error });
++  return new PptxViewerError("parse-failed", message, { cause: error });
+ }
+ async function parseWithWasm(bytes, options) {
+   try {
+@@ -5797,12 +5792,13 @@ async function parseWithWasm(bytes, options) {
+ var workerRequestId = 0;
+ async function parseInWorker(bytes, signal, wasmSource, parserOptions) {
+   if (signal?.aborted) throw new DOMException("Parsing was aborted.", "AbortError");
++  // Allocate before starting a worker so allocation failures cannot leak it.
++  const owned = bytes.slice().buffer;
+   const worker = new Worker(new URL("./native-parser-worker.js", import.meta.url), {
+     type: "module",
+     name: "react-pptx-parser"
+   });
+   const id = ++workerRequestId;
+-  const owned = bytes.slice().buffer;
+   return await new Promise((resolve, reject) => {
+     let settled = false;
+     const cleanup = () => {
+@@ -7297,6 +7293,22 @@ async function serializeSlide(slide, naturalWidth, naturalHeight, width, height,
+     }
+   });
+   await inlineResources(clone, signal);
++  // WebKit can omit HTML images on repeated foreignObject snapshots even
++  // after decode(). SVG image elements retain their embedded raster content.
++  for (const source of clone.querySelectorAll("img")) {
++    const namespace = "http://www.w3.org/2000/svg";
++    const box = document.createElementNS(namespace, "svg");
++    box.setAttribute("style", source.getAttribute("style") ?? "");
++    box.setAttribute("width", "100%");
++    box.setAttribute("height", "100%");
++    const image = document.createElementNS(namespace, "image");
++    image.setAttribute("width", "100%");
++    image.setAttribute("height", "100%");
++    image.setAttribute("href", source.src);
++    image.setAttribute("preserveAspectRatio", source.style.objectFit === "contain" ? "xMidYMid meet" : "none");
++    box.append(image);
++    source.replaceWith(box);
++  }
+   const content = new XMLSerializer().serializeToString(clone);
+   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${naturalWidth} ${naturalHeight}"><foreignObject width="${naturalWidth}" height="${naturalHeight}">${content}</foreignObject></svg>`;
+ }
+@@ -7441,8 +7453,11 @@ var ThumbnailRenderer = class {
+           handle.element,
+           size.naturalWidth,
+           size.naturalHeight,
+-          size.width,
+-          size.height,
++          // WebKit clips foreignObject content when the SVG image viewport
++          // scales its viewBox. Decode canvas snapshots at natural dimensions;
++          // the canvas draw below performs the requested output scaling.
++          options.output === "canvas" ? size.naturalWidth : size.width,
++          options.output === "canvas" ? size.naturalHeight : size.height,
+           options.signal
+         );
+         this.record(

@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "ตัวเลือก",
   "optionsDescription": "เลือกรูปแบบบาร์โค้ด แล้วปรับขนาด ป้ายข้อความ และสี",
   "preview": "Preview",
   "previewDescription": "ตรวจสอบบาร์โค้ดที่สร้างแล้ว และส่งออกเป็น PNG, SVG, JPEG หรือ WebP",
-  "download": "Download",
+  "download": "ดาวน์โหลด",
   "text": "ข้อความ",
   "textPlaceholder": "พิมพ์เนื้อหา...",
   "format": "รูปแบบ",
@@ -20,5 +20,6 @@
   "center": "กลาง",
   "right": "ขวา",
   "top": "บน",
-  "bottom": "ล่าง"
+  "bottom": "ล่าง",
+  "renderError": "สร้างภาพบาร์โค้ดไม่สำเร็จ"
 }

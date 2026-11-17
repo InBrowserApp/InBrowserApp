@@ -6,6 +6,6 @@ Plik .gitignore określa celowo nieśledzone pliki, które Git powinien ignorowa
 - Pliki IDE i edytora (.idea/, .vscode/)
 - Pliki systemu operacyjnego (.DS_Store, Thumbs.db)
 
-## Template source
+## Źródło szablonów
 
 To narzędzie używa szablonów z oficjalnego repozytorium gitignore GitHub, obejmującego ponad 150 języków, frameworków i środowisk.

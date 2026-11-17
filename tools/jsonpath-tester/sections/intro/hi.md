@@ -1,11 +1,11 @@
-## Overview
+## परिचय
 
-JSONPath परीक्षक lets you run JSONPath queries against JSON data directly in the browser and inspect both the matched values and the matched paths side by side.
+JSONPath परीक्षक आपको सीधे ब्राउज़र में JSON डेटा पर JSONPath क्वेरी चलाने और मिले हुए मानों तथा पथों को साथ-साथ देखने देता है।
 
-## When To Use It
+## इसका उपयोग कब करें
 
-Use it when you need to prototype a JSONPath query, debug a selector against real payloads, or verify exactly which parts of a JSON document a query is matching.
+जब JSONPath क्वेरी का शुरुआती रूप आज़माना हो, वास्तविक पेलोड पर सेलेक्टर डीबग करना हो या यह पक्का करना हो कि क्वेरी JSON दस्तावेज़ के किन हिस्सों से मेल खा रही है, तब इसका उपयोग करें।
 
-## How It Works
+## यह कैसे काम करता है
 
-The tool validates the JSON input first, then evaluates the JSONPath query and keeps both result modes available in the same output panel so you can switch between values and paths without rerunning anything.
+टूल पहले JSON इनपुट की वैधता जांचता है, फिर JSONPath क्वेरी का मूल्यांकन करता है और एक ही आउटपुट पैनल में परिणाम के दोनों मोड उपलब्ध रखता है। इससे आप क्वेरी दोबारा चलाए बिना मानों और पथों के बीच बदल सकते हैं।

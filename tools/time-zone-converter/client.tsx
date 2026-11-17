@@ -42,17 +42,20 @@ function resolveDefaultTimeZones() {
 }
 
 function TimeZoneConverterClient({ messages }: TimeZoneConverterClientProps) {
-  const defaults = useMemo(() => resolveDefaultTimeZones(), [])
   const [hasRestoredState, setHasRestoredState] = useState(false)
   const [fromInput, setFromInput] = useState("")
   const [toInput, setToInput] = useState("")
-  const [fromTimeZone, setFromTimeZone] = useState<string>(defaults.from)
-  const [toTimeZone, setToTimeZone] = useState<string>(defaults.to)
+  const [fromTimeZone, setFromTimeZone] = useState<string>("UTC")
+  const [toTimeZone, setToTimeZone] = useState<string>("UTC")
   const [lastEdited, setLastEdited] = useState<"from" | "to">("from")
 
-  const timeZoneOptions = useMemo(() => buildTimeZoneOptions(Date.now()), [])
+  const [timeZoneOptions, setTimeZoneOptions] = useState<
+    ReturnType<typeof buildTimeZoneOptions>
+  >([])
 
   useEffect(() => {
+    setTimeZoneOptions(buildTimeZoneOptions(Date.now()))
+    const defaults = resolveDefaultTimeZones()
     const restoredFromTimeZone = readStoredString(
       STORAGE_KEYS.fromTimeZone,
       defaults.from
@@ -83,7 +86,7 @@ function TimeZoneConverterClient({ messages }: TimeZoneConverterClientProps) {
       )
     )
     setHasRestoredState(true)
-  }, [defaults.from, defaults.to])
+  }, [])
 
   useEffect(() => {
     if (!hasRestoredState) {
@@ -98,24 +101,19 @@ function TimeZoneConverterClient({ messages }: TimeZoneConverterClientProps) {
 
   const fromParts = useMemo(() => parseDateTimeInput(fromInput), [fromInput])
   const toParts = useMemo(() => parseDateTimeInput(toInput), [toInput])
-  const fromError = Boolean(fromInput.trim()) && !fromParts
-  const toError = Boolean(toInput.trim()) && !toParts
+  const fromTimestamp = useMemo(
+    () => (fromParts ? toUtcTimestamp(fromParts, fromTimeZone) : null),
+    [fromParts, fromTimeZone]
+  )
+  const toTimestamp = useMemo(
+    () => (toParts ? toUtcTimestamp(toParts, toTimeZone) : null),
+    [toParts, toTimeZone]
+  )
+  const fromError =
+    Boolean(fromInput.trim()) && (!fromParts || fromTimestamp === null)
+  const toError = Boolean(toInput.trim()) && (!toParts || toTimestamp === null)
 
-  const baseTimestamp = useMemo(() => {
-    if (lastEdited === "from") {
-      if (!fromParts) {
-        return null
-      }
-
-      return toUtcTimestamp(fromParts, fromTimeZone)
-    }
-
-    if (!toParts) {
-      return null
-    }
-
-    return toUtcTimestamp(toParts, toTimeZone)
-  }, [fromParts, fromTimeZone, lastEdited, toParts, toTimeZone])
+  const baseTimestamp = lastEdited === "from" ? fromTimestamp : toTimestamp
 
   const referenceTimestamp = baseTimestamp ?? Date.now()
   const fromOffsetLabel = useMemo(

@@ -1,3 +1,5 @@
+import "reflect-metadata"
+
 import { PublicKey, X509Certificate } from "@peculiar/x509"
 
 import {

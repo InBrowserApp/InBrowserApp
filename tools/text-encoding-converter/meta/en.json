@@ -1,0 +1,4 @@
+{
+  "name": "Text Encoding Converter",
+  "description": "Convert text files between UTF-8, GBK, Big5 and other encodings. Preview garbled text, control BOM and line endings, and download locally without losing characters."
+}

@@ -1,19 +1,19 @@
-## What is SHA-512/224 (FIPS 180-4)?
+## Apakah SHA-512/224 (FIPS 180-4)?
 
-SHA-512/224 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 224-bit (28-byte) digest, typically rendered as a 56-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/224 (FIPS 180-4) ialah fungsi hash kriptografi SHA-2 yang menghasilkan ringkasan 224-bit (28-bait), biasanya dipaparkan sebagai rentetan heksadesimal 56 aksara. Ia berasaskan SHA-512 dengan nilai awal yang berbeza dan output yang dipendekkan, lalu memberikan ringkasan lebih pendek sambil mengekalkan struktur dalaman SHA-512.
 
-**Key characteristics:**
+**Ciri utama:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **Deterministik**: Input yang sama sentiasa menghasilkan hash yang sama
+- **Pengiraan pantas**: Cepat dikira untuk sebarang input yang diberikan
+- **Kesan runtuhan**: Perubahan kecil pada input menghasilkan output yang sangat berbeza
+- **Tidak boleh diterbalikkan**: Tidak praktikal dari segi pengiraan untuk membalikkan hash bagi mencari input asal
+- **Tahan perlanggaran**: Sangat sukar untuk mencari dua input berbeza yang menghasilkan hash yang sama
 
-**Common uses:**
+**Kegunaan lazim:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 224-bit hashes
+- Tandatangan digital dan sijil
+- Semakan integriti dan hasil tambah semak
+- Pembinaan HMAC
+- Pengesahan fail dan saluran pemprosesan data
+- Protokol yang memerlukan hash 224-bit

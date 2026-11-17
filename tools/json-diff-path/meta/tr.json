@@ -1,4 +1,4 @@
 {
-  "name": "JSON Diff Path",
+  "name": "JSON Fark Yolları",
   "description": "İki JSON belgesini karşılaştırır ve JSON Pointer yolları ile RFC 6902 JSON Patch çıktısı içeren yola dayalı farklar üretir."
 }

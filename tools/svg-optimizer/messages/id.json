@@ -30,7 +30,7 @@
   "convertColorsDescription": "Normalkan warna ke bentuk ekuivalen yang lebih pendek jika memungkinkan.",
   "removeDimensionsLabel": "Hapus dimensi",
   "removeDimensionsDescription": "Hapus atribut width dan height jika viewBox dapat mempertahankan penskalaan.",
-  "inlineStylesLabel": "Inline styles",
+  "inlineStylesLabel": "Gaya inline",
   "inlineStylesDescription": "Masukkan style yang cocok langsung ke elemen. Ini dapat mengecilkan ekspor sederhana, tetapi mungkin mengubah styling yang kompleks.",
   "resetOptionsLabel": "Atur ulang opsi",
   "optimizeLabel": "Optimalkan SVG",

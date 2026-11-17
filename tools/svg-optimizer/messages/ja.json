@@ -10,7 +10,7 @@
   "changeFileLabel": "SVG を変更",
   "removeSourceLabel": "ソースを削除",
   "sourcePreviewLabel": "ソース SVG プレビュー",
-  "codeLabel": "SVG markup",
+  "codeLabel": "SVGマークアップ",
   "codePlaceholder": "ここに SVG コードを貼り付け…",
   "loadSampleLabel": "サンプルを読み込む",
   "optionsTitle": "最適化オプション",

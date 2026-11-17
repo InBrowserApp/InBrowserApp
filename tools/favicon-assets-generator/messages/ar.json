@@ -7,7 +7,6 @@
   "useDemoLabel": "استخدم الأيقونة التجريبية",
   "removeImageLabel": "إزالة",
   "filePreviewAlt": "معاينة الصورة المصدر المختارة",
-
   "siteInfoCardTitle": "معلومات الموقع",
   "siteInfoCardDescription": "تُستخدم في الـ manifest وفي apple-touch-icon ومقتطف HTML.",
   "appNameLabel": "اسم التطبيق",
@@ -33,7 +32,6 @@
   "backgroundColorDescription": "قيمة background_color في الـ manifest. تستخدمها المتصفحات لرسم شاشات البداية في تطبيقات الـ PWA.",
   "optimizePngLabel": "تحسين مخرجات PNG",
   "optimizePngDescription": "يُمرّر كل ملف PNG مُولَّد (بما في ذلك مكوّنات ICO) عبر تمريرة oxipng بلا فقدان. يضيف بضع ثوانٍ ويُنزّل وحدة WASM بحجم ‎~150 ك.ب في المرة الأولى التي تُولّد فيها، لكنه يُقلّص حجم ملف الـ zip بشكل ملحوظ.",
-
   "desktopCardTitle": "أيقونة متصفح سطح المكتب",
   "desktopCardDescription": "تتحكّم في favicon.ico وfavicon-16x16.png وfavicon-32x32.png و(عندما يكون المصدر SVG) favicon.svg.",
   "useOriginalSvgLabel": "استخدم ملف SVG الأصلي",
@@ -48,12 +46,10 @@
   "useDifferentImageDescription": "تجاوز الصورة المصدر العامة لهذه المنصة فقط.",
   "uploadDedicatedImageLabel": "اختر صورة مخصّصة",
   "removeDedicatedImageLabel": "إزالة",
-
   "iosCardTitle": "أيقونة iOS web clip",
   "iosCardDescription": "تتحكّم في apple-touch-icon.png بحجم 180×180 المستخدمة على الشاشات الرئيسية لنظام iOS.",
   "iosBackgroundColorLabel": "لون الخلفية",
   "iosBackgroundColorDescription": "يجب أن تكون أيقونات Apple معتمة، لذلك يُطبَّق هذا التعبئة دائماً.",
-
   "pwaCardTitle": "أيقونات PWA",
   "pwaCardDescription": "تتحكّم في pwa-192x192.png وpwa-512x512.png والنسخ القابلة للقَنْع (maskable).",
   "includeMaskableLabel": "تضمين النسخ القابلة للقَنْع",
@@ -61,7 +57,6 @@
   "maskableBackgroundColorLabel": "لون خلفية النسخة القابلة للقَنْع",
   "maskableMarginLabel": "هامش المنطقة الآمنة للنسخة القابلة للقَنْع",
   "maskableMarginDescription": "المنطقة الآمنة التي يوصي بها W3C هي 40%. يظل محتوى المصدر مرئياً داخل أي قناع تستخدمه المنصّة.",
-
   "previewGalleryTitle": "المعاينة",
   "previewGalleryDescription": "نماذج للمتصفح ومحرك البحث والشاشة الرئيسية تُظهر الأصول المولَّدة في سياقها.",
   "previewBeforeGenerateHint": "ولّد الحزمة لرؤية أيقوناتك مدمجة داخل واجهات النظام أدناه.",
@@ -70,7 +65,6 @@
   "previewIosHomeScreenLabel": "الشاشة الرئيسية لنظام iOS",
   "previewAndroidLauncherLabel": "مشغّل تطبيقات Android",
   "previewWindowsTaskbarLabel": "شريط مهام Windows",
-
   "resultCardTitle": "الحزمة المولَّدة",
   "resultCardDescription": "اضغط على ”توليد“ لعرض كل الأصول وبناء ملف zip ونسخ مقتطف HTML.",
   "resultEmptyTitle": "لا توجد حزمة بعد",
@@ -89,7 +83,6 @@
   "copyLabel": "نسخ",
   "copiedLabel": "تم النسخ",
   "downloadAssetLabel": "تنزيل الأصل",
-
   "invalidImageTitle": "تعذّر قراءة الصورة",
   "invalidImageDescription": "اختر ملف صورة يدعمه المتصفح (PNG أو JPEG أو WebP أو SVG) وأعد المحاولة.",
   "generationFailedTitle": "فشل التوليد",
@@ -100,6 +93,5 @@
   "needImageDescription": "اختر ملف PNG أو JPEG أو WebP أو SVG (أو استخدم الأيقونة التجريبية) قبل التوليد.",
   "missingDedicatedImageTitle": "صورة مخصّصة مفقودة",
   "missingDedicatedImageDescription": "إحدى المنصّات أو أكثر مفعَّل فيها خيار ”استخدم صورة مختلفة“ دون اختيار ملف. ارفع الصورة البديلة أو أوقف التبديل.",
-
   "transparentLabel": "شفّاف"
 }

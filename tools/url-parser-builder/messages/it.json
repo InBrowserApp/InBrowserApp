@@ -45,7 +45,7 @@
   "loadSampleLabel": "Carica esempio",
   "resetLabel": "Reimposta builder",
   "protocolPlaceholder": "https",
-  "hostnamePlaceholder": "example.com or api.internal",
+  "hostnamePlaceholder": "example.com o api.internal",
   "portPlaceholder": "443",
   "pathPlaceholder": "/products/blue mug",
   "fragmentPlaceholder": "reviews",

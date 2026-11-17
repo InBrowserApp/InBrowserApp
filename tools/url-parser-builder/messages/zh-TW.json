@@ -45,7 +45,7 @@
   "loadSampleLabel": "載入範例",
   "resetLabel": "重設建構器",
   "protocolPlaceholder": "https",
-  "hostnamePlaceholder": "example.com or api.internal",
+  "hostnamePlaceholder": "example.com 或 api.internal",
   "portPlaceholder": "443",
   "pathPlaceholder": "/products/blue mug",
   "fragmentPlaceholder": "reviews",

@@ -1,6 +1,6 @@
 ## Perkara yang dilakukan oleh alat ini
 
-PDF Splitter membolehkan anda membuka PDF dalam pelayar anda, memilih halaman
+Pemisah PDF membolehkan anda membuka PDF dalam pelayar anda, memilih halaman
 mengikut julat atau nombor halaman, dan menjana dokumen yang lebih kecil. Anda
 boleh mengekstrak halaman yang dipilih ke dalam satu PDF, memisahkan setiap
 julat yang ditaip ke dalam PDF berasingan, atau memisahkan setiap halaman yang

@@ -1,11 +1,11 @@
-## Why this tool feels different
+## Mengapa alat ini berbeza
 
-Text Statistics should do more than count words. This version treats the page like a live writing desk: it measures length, rhythm, repetition, and structure the moment you paste a draft.
+Statistik Teks sepatutnya melakukan lebih daripada mengira perkataan. Versi ini menjadikan halaman sebagai meja penulisan langsung: ia mengukur panjang, irama, pengulangan dan struktur sebaik sahaja anda menampal draf.
 
-## What it measures
+## Perkara yang diukur
 
-You get the core counts you expect, then the signals that actually help editing: unique words, average sentence length, lexical diversity, longest paragraph, and repeated terms. When the browser supports `Intl.Segmenter`, these numbers are segmented in a way that works better across writing systems.
+Anda mendapat kiraan asas yang dijangka serta petunjuk yang benar-benar membantu penyuntingan: perkataan unik, purata panjang ayat, kepelbagaian leksikal, perenggan terpanjang dan istilah berulang. Apabila pelayar menyokong `Intl.Segmenter`, pengiraan ini menggunakan pembahagian teks yang lebih sesuai merentas sistem tulisan.
 
-## When to use it
+## Bila hendak menggunakannya
 
-Use it before publishing landing-page copy, product descriptions, scripts, newsletters, bios, or meeting summaries. It is especially useful when something feels too wordy, too repetitive, or too dense, but you need a fast clue about why.
+Gunakannya sebelum menerbitkan teks halaman pendaratan, penerangan produk, skrip, surat berita, biografi atau ringkasan mesyuarat. Alat ini amat berguna apabila penulisan terasa terlalu panjang, berulang atau padat dan anda memerlukan petunjuk segera tentang sebabnya.

@@ -1,27 +1,25 @@
-## What this tool does
+## ما الذي تفعله هذه الأداة
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+ينشئ مولد الصور النائبة رسومات تجريبية واضحة بأحجام مخصصة، وتعبئة بلون موحد
+أو متدرج، ونص في المنتصف مباشرةً في متصفحك. يمكنك تصدير كل صورة نائبة
+بصيغة PNG أو SVG أو JPEG أو WebP، بما في ذلك نسخ بمقياس 2x و3x
+ملائمة لشاشات Retina.
 
-## Why it helps
+## كيف تفيدك
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+استخدمه لنماذج التصميم، أو المحتوى التجريبي في أنظمة إدارة المحتوى، أو حالات
+المحتوى الفارغ، أو تخطيط منشورات التواصل الاجتماعي، أو الصور النائبة في API.
+يفيدك عندما تحتاج بسرعة إلى صورة بحجم ومظهر محددين دون فتح تطبيق تصميم.
 
-## How it works
+## كيف يعمل
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+اختر إعدادًا مسبقًا أو أدخل العرض والارتفاع بنفسك. اختر لونًا موحدًا أو تدرجًا،
+وأضف نصًا مخصصًا عند الحاجة، ثم اضبط حجم النص ومقياس التصدير والجودة.
+تتجدد المعاينة فورًا لتتمكن من تنزيل التنسيق الذي يناسب سير عملك.
 
-## Tips for better placeholders
+## نصائح لصور نائبة أفضل
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- اترك حقل النص فارغًا إذا أردت أن تعرض الأداة الأبعاد تلقائيًا.
+- استخدم التدرجات للافتات الرئيسية والألوان الموحدة للصور النائبة الوظيفية.
+- صدّر بصيغة SVG للحصول على صورة واضحة قابلة لتغيير الحجم، أو بصيغ PNG
+  وJPEG وWebP عندما تحتاج إلى ملفات صور نقطية.

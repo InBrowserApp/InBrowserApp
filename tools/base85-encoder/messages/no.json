@@ -9,9 +9,9 @@
   "download": "Last ned Base85",
   "readFailed": "Kunne ikke lese filen",
   "invalidBase85": "Z85 krever at inndatalengden er et multiplum av 4 byte.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Last inn eksempel",
+  "clearLabel": "Tøm",
+  "copyLabel": "Kopier",
+  "copiedLabel": "Kopiert",
   "importFromFileLabel": "Importer fra fil"
 }

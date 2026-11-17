@@ -1,7 +1,7 @@
 {
   "payloadCardTitle": "Payload 및 header",
   "payloadCardDescription": "토큰에 서명될 JSON claims와 선택적 보호 header 필드를 편집하세요.",
-  "payloadLabel": "Payload JSON",
+  "payloadLabel": "페이로드 JSON",
   "payloadPlaceholder": "{\n  \"sub\": \"user_123\",\n  \"role\": \"admin\"\n}",
   "claimsHelperTitle": "등록된 클레임 도우미",
   "claimsHelperDescription": "이 컨트롤을 사용해 payload JSON의 일반적인 NumericDate 클레임을 업데이트하세요.",
@@ -46,7 +46,7 @@
   "resultCardDescription": "compact JWT를 복사하거나 정확한 header, payload, signature 세그먼트를 검사하세요.",
   "emptyResultTitle": "아직 서명된 토큰이 없습니다",
   "emptyResultDescription": "유효한 JSON payload와 서명 키를 추가한 다음 서명하여 compact JWT를 만드세요.",
-  "tokenLabel": "Compact JWT",
+  "tokenLabel": "압축형 JWT",
   "copyTokenLabel": "토큰 복사",
   "copiedLabel": "복사됨",
   "downloadTokenLabel": "다운로드",

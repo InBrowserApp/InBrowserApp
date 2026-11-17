@@ -1,12 +1,12 @@
-## Çince büyük yazım sayıları nelerdir?
+## Çince finansal sayı yazımı nedir?
 
-Çince büyük tutarlar, tahrifatı azaltmak için fatura, makbuz ve banka
+Çince finansal sayı yazımı, tahrifatı azaltmak için fatura, makbuz ve banka
 belgelerinde kullanılan resmî yazım biçimidir. Normal rakamların yerine
 壹, 贰, 叁, 拾, 佰 ve 仟 gibi finansal karakterler kullanılır.
 
-Bu dönüştürücü iki yönlü çalışır: normal bir sayıyı RMB tarzı büyük
-yazımlı tutara çevirebilir veya büyük yazımlı tutarı tekrar sayıya
-çevirebilir. Negatif değerleri, sabit 元/角/分 birimlerini ve en fazla
+Bu dönüştürücü iki yönlü çalışır: normal bir sayıyı RMB tarzı finansal
+rakamlarla yazılan tutara veya finansal rakamlarla yazılan tutarı tekrar
+sayıya çevirebilir. Negatif değerleri, sabit 元/角/分 birimlerini ve en fazla
 iki ondalık basamağı destekler.
 
 ### Yaygın yazım kuralları

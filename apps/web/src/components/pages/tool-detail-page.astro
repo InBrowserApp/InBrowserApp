@@ -1,8 +1,10 @@
 ---
 import MainLayout from "@/layouts/main.astro"
+import PageBreadcrumbs from "@/components/page-breadcrumbs.astro"
 import { createPageSeo } from "@/lib/seo"
 import { loadSiteMessages } from "@/lib/site-messages"
 import { loadToolPageData } from "@/lib/tool-pages"
+import { getCategoryLabel } from "@/lib/tool-directory"
 
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { SiteLanguage } from "@/lib/site"
@@ -40,6 +42,11 @@ const Page = pageData.Page as AstroComponentFactory | null
   pathname={`/tools/${slug}`}
   availableLanguages={pageData.availableLanguages}
 >
+  <PageBreadcrumbs language={language} items={[
+    { label: catalog.tools.categoryAll, pathname: "/tools" },
+    { label: getCategoryLabel(catalog.tools.categories, pageData.tool.category), pathname: `/categories/${pageData.tool.category}` },
+    { label: pageData.meta.name, pathname: `/tools/${slug}` },
+  ]} />
   {
     Page ? (
       <Page lang={language} />

@@ -2,8 +2,8 @@
 
 Ein cURL-Konverter wandelt einen cURL-Befehl in sofort nutzbaren Code für viele Sprachen und HTTP-Clients um. Das ist hilfreich, wenn API-Dokumentation, Browser-Devtools oder die Terminal-Historie bereits eine funktionierende Anfrage liefern und du sie in Anwendungscode übernehmen möchtest, ohne Methode, URL, Header, Cookies oder Body manuell neu zusammenzubauen.
 
-**Credit**
-Powered by [curlconverter](https://curlconverter.com) von Nick Carneiro.
+**Quellenhinweis**
+Basiert auf [curlconverter](https://curlconverter.com) von Nick Carneiro.
 
 ## Wann dieses Tool nützlich ist
 

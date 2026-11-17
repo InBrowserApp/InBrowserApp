@@ -30,7 +30,7 @@
   "convertColorsDescription": "Chuẩn hóa màu sang dạng tương đương ngắn hơn khi có thể.",
   "removeDimensionsLabel": "Xóa kích thước",
   "removeDimensionsDescription": "Xóa thuộc tính width và height khi viewBox vẫn có thể giữ nguyên khả năng co giãn.",
-  "inlineStylesLabel": "Inline styles",
+  "inlineStylesLabel": "Kiểu nội tuyến",
   "inlineStylesDescription": "Đưa các style khớp vào trực tiếp trong phần tử. Việc này có thể thu nhỏ các bản xuất đơn giản nhưng có thể thay đổi cách tạo kiểu phức tạp.",
   "resetOptionsLabel": "Đặt lại tùy chọn",
   "optimizeLabel": "Tối ưu hóa SVG",

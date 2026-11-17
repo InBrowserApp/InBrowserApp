@@ -10,7 +10,7 @@
   "costInvalidMessage": "Masukkan bilangan bulat dari 4 sampai 15.",
   "generateLabel": "Buat hash",
   "generatingLabel": "Membuat...",
-  "resetLabel": "Reset",
+  "resetLabel": "Atur ulang",
   "outputTitle": "Hash bcrypt",
   "outputDescription": "Output menyertakan versi bcrypt, cost, salt, dan checksum dalam string hash standar.",
   "emptyTitle": "Belum ada hash yang dibuat",
@@ -24,6 +24,6 @@
   "costValueLabel": "Cost",
   "saltLabel": "Salt",
   "checksumLabel": "Checksum",
-  "generatedSummary": "Cost {cost}",
+  "generatedSummary": "Faktor kerja {cost}",
   "privacyNote": "Password tidak pernah disimpan dan hashing berjalan di browser ini."
 }

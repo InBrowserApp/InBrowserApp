@@ -1,6 +1,6 @@
 ## Cosa mostra questo strumento
 
-Device Information raccoglie i dettagli visibili al browser per il dispositivo che stai usando in questo momento. Raggruppa i risultati in sezioni dedicate a browser, display, hardware, rete, archiviazione e funzionalità, così puoi vedere rapidamente che cosa può rilevare un sito web senza installare software di diagnostica.
+Informazioni sul dispositivo raccoglie i dettagli visibili al browser per il dispositivo che stai usando in questo momento. Raggruppa i risultati in sezioni dedicate a browser, display, hardware, rete, archiviazione e funzionalità, così puoi vedere rapidamente che cosa può rilevare un sito web senza installare software di diagnostica.
 
 ## Quando è utile
 

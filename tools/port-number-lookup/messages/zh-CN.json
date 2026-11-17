@@ -16,6 +16,6 @@
   "registeredPortsDesc": "由在 IANA 注册的应用程序和服务使用，如 MySQL (3306)、PostgreSQL (5432)。",
   "dynamicPorts": "动态端口 (49152-65535)：",
   "dynamicPortsDesc": "也称为\"临时端口\"，由客户端应用程序用于临时连接。",
-  "noResultsTitle": "No matching ports found",
-  "noResultsDescription": "Try a different port number, service name, or category."
+  "noResultsTitle": "未找到匹配的端口",
+  "noResultsDescription": "请尝试其他端口号、服务名称或分类。"
 }

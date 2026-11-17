@@ -118,8 +118,8 @@ function XxHashXxh3128HashTextOrFileClient({
               error instanceof Error
                 ? error.message
                 : selectedFile
-                  ? "Failed to hash file."
-                  : "Failed to hash text.",
+                  ? messages.fileHashError
+                  : messages.textHashError,
           })
         }
       })
@@ -127,7 +127,14 @@ function XxHashXxh3128HashTextOrFileClient({
     return () => {
       cancelled = true
     }
-  }, [deferredPlainText, messages.seedInvalid, seedInput, selectedFile])
+  }, [
+    messages.fileHashError,
+    messages.textHashError,
+    deferredPlainText,
+    messages.seedInvalid,
+    seedInput,
+    selectedFile,
+  ])
 
   async function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
     const nextFile = event.target.files?.[0]

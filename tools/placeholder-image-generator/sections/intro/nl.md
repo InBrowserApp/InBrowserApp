@@ -1,27 +1,28 @@
-## What this tool does
+## Wat deze tool doet
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+Deze generator voor plaatshouderafbeeldingen maakt overzichtelijke tijdelijke
+afbeeldingen met aangepaste afmetingen, effen kleuren of kleurverlopen en
+gecentreerde tekst, rechtstreeks in je browser. Je kunt elke plaatshouderafbeelding
+exporteren als PNG, SVG, JPEG of WebP, inclusief Retina-geschikte 2x- en 3x-versies.
 
-## Why it helps
+## Waarom dit handig is
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+Gebruik de tool voor ontwerpmodellen, voorbeeldinhoud voor een CMS, lege
+weergaven, het plannen van sociale-medialay-outs of API-plaatshouders. Handig als
+je snel een afbeelding met voorspelbare afmetingen en stijl nodig hebt zonder een
+ontwerpapp te openen.
 
-## How it works
+## Hoe het werkt
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+Kies een voorinstelling of voer je eigen breedte en hoogte in. Kies een effen
+kleur of kleurverloop, voeg eventueel eigen tekst toe en pas daarna de
+tekstgrootte, exportschaal en kwaliteit aan. De voorvertoning wordt direct
+bijgewerkt, zodat je het formaat kunt downloaden dat bij je werkwijze past.
 
-## Tips for better placeholders
+## Tips voor betere plaatshouderafbeeldingen
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- Laat het tekstveld leeg als je wilt dat de tool automatisch de afmetingen toont.
+- Gebruik kleurverlopen voor grote openingsbanners en effen kleuren voor
+  functionele plaatshouderafbeeldingen.
+- Exporteer SVG voor een scherpe, schaalbare afbeelding, of PNG, JPEG en WebP
+  wanneer je rasterbestanden nodig hebt.

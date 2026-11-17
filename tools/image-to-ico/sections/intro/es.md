@@ -1,26 +1,28 @@
-## What ICO Is
+## Qué es ICO
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO es el formato contenedor de iconos utilizado para los favicons clásicos de
+los navegadores, los accesos directos de Windows y algunos iconos de aplicaciones
+de escritorio. Un archivo ICO puede incluir varios tamaños cuadrados para que
+cada plataforma elija automáticamente el más adecuado.
 
-## Why Use This Converter
+## Por qué utilizar este convertidor
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+Esta herramienta convierte una imagen local en un archivo ICO con varios
+tamaños directamente en su navegador. No se sube ningún archivo y puede incluir
+tamaños habituales de favicon, como 16×16, 32×32, 48×48 y 256×256, en una sola
+descarga.
 
-## How It Works
+## Cómo funciona
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. Cargue un archivo de imagen local.
+2. Elija los tamaños de icono que desea incluir en el archivo ICO.
+3. Si lo desea, añada un color de fondo sólido a las imágenes con transparencia.
+4. Genere el ICO y descárguelo inmediatamente.
 
-## Tips for Better Results
+## Consejos para obtener mejores resultados
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- Comience con una imagen cuadrada nítida, preferiblemente de 512×512 o más.
+- Mantenga los logotipos y las formas principales alejados de los bordes, ya que
+  los iconos pequeños pierden detalle rápidamente.
+- Deje desactivado el relleno de fondo si desea conservar la transparencia y
+  actívelo solo cuando necesite un fondo sólido detrás del icono.

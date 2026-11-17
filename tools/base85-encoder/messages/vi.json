@@ -9,9 +9,9 @@
   "download": "Tải Base85",
   "readFailed": "Không thể đọc tệp",
   "invalidBase85": "Z85 yêu cầu độ dài đầu vào phải là bội số của 4 byte.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Tải mẫu",
+  "clearLabel": "Xóa",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép",
   "importFromFileLabel": "Nhập từ tệp"
 }

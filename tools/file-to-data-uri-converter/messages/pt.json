@@ -2,7 +2,7 @@
   "file": "Arquivo",
   "dragOrClick": "Clique ou arraste para enviar um arquivo",
   "clearFile": "Limpar arquivo",
-  "dataUri": "Data URI",
+  "dataUri": "URI de dados",
   "dataUriPlaceholder": "O Data URI gerado aparecerá aqui...",
   "onlyOneFile": "Apenas um arquivo pode ser enviado",
   "readFailed": "Falha ao ler o arquivo",

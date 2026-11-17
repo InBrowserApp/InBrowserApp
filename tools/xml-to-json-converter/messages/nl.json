@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "Plak links geldige XML om hier een voorbeeld van de geconverteerde JSON te bekijken.",
   "invalidXmlLabel": "Ongeldige XML",
   "optionsLabel": "Opties",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "Pas aan hoe XML wordt geparseerd voordat je de geconverteerde JSON kopieert of downloadt.",
   "indentSizeLabel": "Inspringing",
   "indentSizeDescription": "Kies 0 voor compacte uitvoer of 1-8 voor opgemaakte inspringing.",
   "compactLabel": "Compact",

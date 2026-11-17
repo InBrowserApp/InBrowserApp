@@ -1,11 +1,11 @@
-## Why this tool feels different
+## Điều gì làm công cụ này khác biệt
 
-Text Statistics should do more than count words. This version treats the page like a live writing desk: it measures length, rhythm, repetition, and structure the moment you paste a draft.
+Thống Kê Văn Bản cần làm được nhiều hơn việc đếm từ. Phiên bản này biến trang thành bàn viết trực tiếp: đo độ dài, nhịp điệu, độ lặp và cấu trúc ngay khi bạn dán bản nháp.
 
-## What it measures
+## Công cụ đo những gì
 
-You get the core counts you expect, then the signals that actually help editing: unique words, average sentence length, lexical diversity, longest paragraph, and repeated terms. When the browser supports `Intl.Segmenter`, these numbers are segmented in a way that works better across writing systems.
+Bạn có các số đếm cơ bản quen thuộc, rồi đến những chỉ số thực sự giúp ích cho việc biên tập: số từ khác nhau, độ dài câu trung bình, độ đa dạng từ vựng, đoạn dài nhất và các từ lặp lại. Khi trình duyệt hỗ trợ `Intl.Segmenter`, các số liệu này được phân đoạn theo cách phù hợp hơn với nhiều hệ chữ viết.
 
-## When to use it
+## Khi nào nên dùng
 
-Use it before publishing landing-page copy, product descriptions, scripts, newsletters, bios, or meeting summaries. It is especially useful when something feels too wordy, too repetitive, or too dense, but you need a fast clue about why.
+Dùng công cụ trước khi xuất bản nội dung trang đích, mô tả sản phẩm, kịch bản, bản tin, tiểu sử hoặc tóm tắt cuộc họp. Công cụ đặc biệt hữu ích khi bạn cảm thấy nội dung quá dài dòng, lặp lại hoặc dày đặc nhưng cần nhanh chóng tìm ra lý do.

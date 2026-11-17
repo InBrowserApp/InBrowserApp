@@ -1,26 +1,20 @@
-## What ICO Is
+## Was ICO ist
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO ist ein Symbolcontainerformat für klassische Browser-Favicons, Windows-Verknüpfungen und manche Desktop-App-Symbole. Eine ICO-Datei kann mehrere quadratische Größen enthalten, sodass jede Plattform automatisch die am besten passende auswählen kann.
 
-## Why Use This Converter
+## Warum du diesen Konverter verwenden solltest
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+Dieses Tool wandelt ein lokales Bild direkt im Browser in eine ICO-Datei mit mehreren Größen um. Es wird nichts hochgeladen. Du kannst gängige Favicon-Größen wie 16×16, 32×32, 48×48 und 256×256 in einem einzigen Download bündeln.
 
-## How It Works
+## So funktioniert es
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. Lade eine lokale Bilddatei hoch.
+2. Wähle die Symbolgrößen aus, die das ICO-Paket enthalten soll.
+3. Füge bei Bedarf eine Vollton-Hintergrundfarbe für transparente Grafiken hinzu.
+4. Erzeuge die ICO-Datei und lade sie sofort herunter.
 
-## Tips for Better Results
+## Tipps für bessere Ergebnisse
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- Verwende ein scharfes quadratisches Bild, idealerweise mit mindestens 512×512 Pixeln.
+- Halte Logos und wichtige Formen von den Außenkanten fern, da kleine Symbole schnell Details verlieren.
+- Lass die Hintergrundfüllung deaktiviert, wenn du Transparenz möchtest, und aktiviere sie nur, wenn du einen einfarbigen Hintergrund brauchst.

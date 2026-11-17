@@ -1,6 +1,6 @@
 ## Công cụ này làm gì
 
-SVG Optimizer này nén một tệp SVG cục bộ hoặc tài liệu SVG được dán trực tiếp
+Trình tối ưu SVG này nén một tệp SVG cục bộ hoặc tài liệu SVG được dán trực tiếp
 trong trình duyệt của bạn. Công cụ dùng các lượt SVGO cleanup để xóa nhận xét,
 metadata, thuộc tính dư thừa, độ chính xác không cần thiết và các markup khác
 không làm thay đổi hình ảnh hiển thị.

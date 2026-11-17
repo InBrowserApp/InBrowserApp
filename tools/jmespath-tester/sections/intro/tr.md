@@ -1,18 +1,17 @@
-## What It Does
+## Ne Yapar?
 
-JMESPath Test Aracı lets you run a JMESPath expression against JSON data directly
-in the browser. You can inspect the matched result, copy it, or download it as
-formatted JSON without leaving the page.
+JMESPath Test Aracı, JSON verileri üzerinde doğrudan tarayıcıda JMESPath
+ifadeleri çalıştırmanızı sağlar. Sayfadan ayrılmadan eşleşen sonucu
+inceleyebilir, kopyalayabilir veya biçimlendirilmiş JSON olarak indirebilirsiniz.
 
-## When To Use It
+## Ne Zaman Kullanılır?
 
-Use it when you need to prototype a JMESPath query, debug a filter expression,
-or verify exactly which values a JSON query will return before you embed that
-expression somewhere else.
+Bir JMESPath sorgusunu denemek, filtre ifadesindeki hataları ayıklamak veya
+ifadeyi başka bir yere eklemeden önce JSON sorgusunun tam olarak hangi
+değerleri döndüreceğini doğrulamak istediğinizde kullanın.
 
-## What To Expect
+## Neler Bekleyebilirsiniz?
 
-The tool validates the JSON input first, then evaluates the JMESPath
-expression. If either side is invalid, the error is surfaced immediately. When
-the query succeeds, the result is formatted as JSON and the result count is
-shown alongside the output.
+Araç önce JSON girdisini doğrular, ardından JMESPath ifadesini değerlendirir.
+İkisinden biri geçersizse hata hemen gösterilir. Sorgu başarılı olduğunda
+sonuç JSON olarak biçimlendirilir ve sonuç sayısı çıktının yanında gösterilir.

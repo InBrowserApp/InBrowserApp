@@ -1,192 +1,114 @@
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react"
+
 import {
-  useDeferredValue,
-  useEffect,
-  useEffectEvent,
-  useMemo,
-  useState,
-} from "react"
-
-import { countToolsByCategory, toSuggestionEntries } from "@/lib/tool-directory"
-import { CategoryChips, CategorySidebar } from "./category-nav"
-import { normalizeQuery, readDirectoryStateFromLocation } from "./search-core"
-import { rankToolEntries } from "./search-core"
+  readDirectoryRows,
+  scrollActiveCategory,
+  updateDirectoryRows,
+} from "./directory-dom"
+import {
+  normalizeQuery,
+  readDirectoryQueryFromLocation,
+  rankToolEntries,
+} from "./search-core"
 import { SearchCombobox } from "./search-combobox"
-import { DirectoryEmptyState, ToolList } from "./tool-list"
 
-import type { ToolSearchIndexEntry } from "@workspace/tool-registry"
 import type { SiteLanguage } from "@/lib/site"
 import type { SearchComboboxMessages } from "./search-combobox"
 
-type ToolsDirectorySearchMessages = SearchComboboxMessages &
-  Readonly<{
-    resultCountSuffix: string
-    categoriesLabel: string
-    categoryAll: string
-    sortLabel: string
-    emptyRegistryTitle: string
-    emptyRegistryDescription: string
-    categoryLabels: Readonly<Record<string, string>>
-  }>
-
 type ToolsDirectorySearchProps = Readonly<{
-  entries: readonly ToolSearchIndexEntry[]
   language: SiteLanguage
-  messages: ToolsDirectorySearchMessages
+  messages: SearchComboboxMessages &
+    Readonly<{
+      resultCountSuffix: string
+      emptyRegistryTitle: string
+      categoryLabels: Readonly<Record<string, string>>
+    }>
 }>
 
 function ToolsDirectorySearch({
-  entries,
   language,
   messages,
 }: ToolsDirectorySearchProps) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [rows, setRows] = useState<ReturnType<typeof readDirectoryRows> | null>(
+    null
+  )
   const [query, setQuery] = useState("")
-  const [category, setCategory] = useState<string | null>(null)
   const deferredQuery = useDeferredValue(query)
-
-  const categoryCounts = useMemo(() => countToolsByCategory(entries), [entries])
-  const suggestionEntries = useMemo(
-    () => toSuggestionEntries(entries, language),
-    [entries, language]
+  const normalizedQuery = normalizeQuery(deferredQuery)
+  const rankedRows = useMemo(
+    () => rankToolEntries(rows ?? [], normalizedQuery, language),
+    [rows, normalizedQuery, language]
   )
-  const validCategories = useMemo(
-    () => new Set(categoryCounts.map(({ category: value }) => value)),
-    [categoryCounts]
-  )
-  const formatCount = useMemo(() => {
-    const numberFormat = new Intl.NumberFormat(language)
-
-    return (count: number) => numberFormat.format(count)
-  }, [language])
-
-  const syncStateToUrl = useEffectEvent(
-    (nextQuery: string, nextCategory: string | null) => {
-      if (typeof window === "undefined") {
-        return
-      }
-
-      const url = new URL(window.location.href)
-
-      if (nextQuery) {
-        url.searchParams.set("query", nextQuery)
-      } else {
-        url.searchParams.delete("query")
-      }
-
-      if (nextCategory) {
-        url.searchParams.set("category", nextCategory)
-      } else {
-        url.searchParams.delete("category")
-      }
-
-      window.history.replaceState(window.history.state, "", url)
-    }
-  )
-  const syncStateFromLocation = useEffectEvent(() => {
-    const next = readDirectoryStateFromLocation(validCategories)
-
-    setQuery((currentQuery) =>
-      currentQuery === next.query ? currentQuery : next.query
-    )
-    setCategory((currentCategory) =>
-      currentCategory === next.category ? currentCategory : next.category
-    )
-  })
 
   useEffect(() => {
-    syncStateFromLocation()
+    const root = containerRef.current!.closest<HTMLElement>(
+      "[data-tools-directory]"
+    )!
+    setRows(readDirectoryRows(root))
+    scrollActiveCategory(root)
 
-    const handlePopState = () => {
-      syncStateFromLocation()
+    const syncQueryFromLocation = () => {
+      setQuery(readDirectoryQueryFromLocation())
     }
-
-    window.addEventListener("popstate", handlePopState)
-
-    return () => {
-      window.removeEventListener("popstate", handlePopState)
-    }
+    syncQueryFromLocation()
+    window.addEventListener("popstate", syncQueryFromLocation)
+    return () => window.removeEventListener("popstate", syncQueryFromLocation)
   }, [])
 
   useEffect(() => {
-    syncStateToUrl(normalizeQuery(deferredQuery), category)
-  }, [deferredQuery, category])
+    // The first render has not read the static list yet.
+    if (rows === null) return
+    const root = containerRef.current!.closest<HTMLElement>(
+      "[data-tools-directory]"
+    )!
+    updateDirectoryRows(root, rows, rankedRows)
+  }, [rows, rankedRows])
 
-  const normalizedQuery = normalizeQuery(deferredQuery)
-  const rankedEntries = rankToolEntries(
-    entries,
-    normalizedQuery,
-    category,
-    language
-  )
-  const isRegistryEmpty = entries.length === 0
-  const isSearchEmpty = !isRegistryEmpty && rankedEntries.length === 0
-  const categoryNavProps = {
-    allLabel: messages.categoryAll,
-    categoriesLabel: messages.categoriesLabel,
-    counts: categoryCounts,
-    formatCount,
-    labels: messages.categoryLabels,
-    onSelect: setCategory,
-    selected: category,
-    totalCount: entries.length,
+  function handleQueryChange(nextQuery: string) {
+    setQuery(nextQuery)
+    const url = new URL(window.location.href)
+    const normalized = normalizeQuery(nextQuery)
+    if (normalized) {
+      url.searchParams.set("query", normalized)
+    } else {
+      url.searchParams.delete("query")
+    }
+    window.history.replaceState(window.history.state, "", url)
   }
 
+  const count = new Intl.NumberFormat(language).format(rankedRows.length)
+  const isEmpty = rankedRows.length === 0
+
   return (
-    <div className="grid items-start gap-6 lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-10">
-      <CategorySidebar {...categoryNavProps} />
-
-      <div
-        className="flex min-w-0 flex-col gap-4"
-        aria-busy={query !== deferredQuery}
+    <div ref={containerRef} className="flex min-w-0 flex-col gap-4">
+      <SearchCombobox
+        entries={rows ?? []}
+        language={language}
+        query={query}
+        onQueryChange={handleQueryChange}
+        categoryLabels={messages.categoryLabels}
+        messages={messages}
+      />
+      <p
+        role="status"
         aria-live="polite"
+        aria-atomic="true"
+        aria-busy={query !== deferredQuery}
+        className={
+          normalizedQuery !== "" && !isEmpty
+            ? "text-sm text-muted-foreground"
+            : "sr-only"
+        }
       >
-        <CategoryChips {...categoryNavProps} />
-
-        <div className="flex items-center gap-3">
-          <SearchCombobox
-            entries={suggestionEntries}
-            language={language}
-            query={query}
-            onQueryChange={setQuery}
-            categoryLabels={messages.categoryLabels}
-            messages={messages}
-          />
-
-          {query ? null : (
-            <span
-              aria-hidden="true"
-              className="shrink-0 text-[13px] text-muted-foreground"
-            >
-              {messages.sortLabel}
-            </span>
-          )}
-        </div>
-
-        {normalizedQuery !== "" && !isRegistryEmpty && !isSearchEmpty ? (
-          <p className="text-sm text-muted-foreground">
-            {formatCount(rankedEntries.length)} {messages.resultCountSuffix}
-          </p>
-        ) : null}
-
-        {isRegistryEmpty ? (
-          <DirectoryEmptyState
-            icon="registry"
-            title={messages.emptyRegistryTitle}
-            description={messages.emptyRegistryDescription}
-          />
-        ) : isSearchEmpty ? (
-          <DirectoryEmptyState
-            icon="search"
-            title={messages.emptySearchTitle}
-            description={messages.emptySearchDescription}
-          />
-        ) : (
-          <ToolList
-            entries={rankedEntries}
-            language={language}
-            categoryLabels={messages.categoryLabels}
-          />
-        )}
-      </div>
+        {rows === null
+          ? ""
+          : rows.length === 0
+            ? messages.emptyRegistryTitle
+            : rankedRows.length === 0
+              ? messages.emptySearchTitle
+              : `${count} ${messages.resultCountSuffix}`}
+      </p>
     </div>
   )
 }

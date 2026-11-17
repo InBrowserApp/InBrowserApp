@@ -1,6 +1,6 @@
 ## Was dieses Tool macht
 
-PDF Splitter öffnet eine PDF im Browser, lässt Seiten per Bereich oder
+Das Tool zum Aufteilen von PDFs öffnet eine PDF im Browser, lässt Seiten per Bereich oder
 Seitennummer auswählen und erstellt ein kleineres Dokument. Ausgewählte Seiten
 lassen sich in eine einzelne PDF-Datei extrahieren, jeder eingegebene Bereich
 kann in eine eigene PDF-Datei aufgeteilt werden, oder jede ausgewählte Seite

@@ -6,14 +6,14 @@ export type Failure =
   | "binary"
   | "resourceLimit"
   | "readError"
-export type Row = {
+type Row = {
   line: number
   offset: number
   text: string
   continued: boolean
 }
 export type Section = { index: number; start: number; end: number; rows: Row[] }
-export type Metadata = { encoding: string; lines: number; sections: number }
+type Metadata = { encoding: string; lines: number; sections: number }
 export type Match = {
   offset: number
   length: number

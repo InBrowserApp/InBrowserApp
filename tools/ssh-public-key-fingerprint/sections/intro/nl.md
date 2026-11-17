@@ -1,6 +1,6 @@
-## Wat is een SSH-public-key-fingerprint?
+## Wat is een vingerafdruk van een openbare SSH-sleutel?
 
-Een SSH-public-key-fingerprint is een korte digest van de public-key-blob. Deze geeft je een compacte waarde om te vergelijken voordat je een key vertrouwt in `authorized_keys`, een serverinventaris of een deploymentworkflow.
+Een vingerafdruk van een openbare SSH-sleutel is een korte digest van de public-key-blob. Deze geeft je een compacte waarde om te vergelijken voordat je een key vertrouwt in `authorized_keys`, een serverinventaris of een deploymentworkflow.
 
 OpenSSH toont vaak SHA-256-fingerprints zoals `SHA256:...`. Oudere documentatie en sommige audits gebruiken nog steeds MD5-fingerprints met dubbele punten. Deze tool toont beide, zodat je moderne SSH-uitvoer en oudere registraties kunt vergelijken zonder de key ergens naartoe te sturen.
 

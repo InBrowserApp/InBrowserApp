@@ -2,16 +2,16 @@ name: CI
 
 on:
   pull_request:
-  push:
-    branches:
-      - main
-  release:
-    types: [published]
-  workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: Commit to check and build
+        type: string
+        required: true
 
 concurrency:
-  group: ci-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+  group: ci-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   code-check:
@@ -21,15 +21,17 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: lts/*
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v5
+        uses: pnpm/action-setup@v6
         with:
           cache: true
           run_install: true
@@ -65,24 +67,32 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
+          ref: ${{ inputs.ref }}
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: lts/*
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v5
+        uses: pnpm/action-setup@v6
         with:
           cache: true
           run_install: true
 
       - name: Run tests (changed + coverage)
         if: github.event_name == 'pull_request'
-        run: pnpm vitest run --changed "origin/${{ github.base_ref }}" --coverage
+        env:
+          BASE_REF: origin/${{ github.base_ref }}
+        run: |
+          if git diff --quiet "$BASE_REF...HEAD" -- package.json pnpm-lock.yaml pnpm-workspace.yaml 'vitest.config.*' .github/workflows; then
+            pnpm vitest run --changed "$BASE_REF" --coverage
+          else
+            pnpm test:coverage
+          fi
 
       - name: Run tests (full + coverage)
         if: github.event_name != 'pull_request'
@@ -103,15 +113,17 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: lts/*
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v5
+        uses: pnpm/action-setup@v6
         with:
           cache: true
           run_install: true
@@ -123,7 +135,7 @@ jobs:
         run: pnpm build
 
       - name: Upload web artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: web-dist
           path: apps/web/dist
@@ -137,10 +149,12 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Download web artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: web-dist
           path: apps/web/dist
@@ -166,21 +180,23 @@ jobs:
     continue-on-error: true
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: lts/*
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v5
+        uses: pnpm/action-setup@v6
         with:
           cache: true
           run_install: true
 
       - name: Download web artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: web-dist
           path: apps/web/dist
@@ -193,93 +209,13 @@ jobs:
           LHCI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: pnpm lighthouse
 
-  upload-release-asset:
-    name: Upload Release Asset
-    runs-on: ubuntu-latest
-    needs:
-      - code-check
-      - test
-      - build-web
-      - html-check
-    if: github.event_name == 'release'
-    permissions:
-      contents: write
-      id-token: write
-      attestations: write
-    steps:
-      - name: Download web artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: web-dist
-          path: apps/web/dist
-
-      - name: Create tar.zstd archive
-        run: tar --zstd -cf "web-dist-${{ github.event.release.tag_name }}.tar.zstd" -C apps/web/dist .
-
-      - name: Attest build provenance
-        uses: actions/attest-build-provenance@v4
-        with:
-          subject-path: web-dist-${{ github.event.release.tag_name }}.tar.zstd
-
-      - name: Upload to release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload "${{ github.event.release.tag_name }}" "web-dist-${{ github.event.release.tag_name }}.tar.zstd" --repo "${{ github.repository }}" --clobber
-
-  deploy-production:
-    name: Deploy Production
-    runs-on: ubuntu-latest
-    needs:
-      - code-check
-      - test
-      - build-web
-      - html-check
-    # Published prereleases still build and receive assets, but never go live.
-    if: github.event_name == 'release' && github.event.release.prerelease == false
-    permissions:
-      contents: read
-    environment:
-      name: cloudflare-workers
-      url: ${{ steps.deploy.outputs.deployment-url }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: lts/*
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v5
-        with:
-          cache: true
-          run_install: true
-
-      - name: Download web artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: web-dist
-          path: apps/web/dist
-
-      - name: Deploy to Cloudflare Workers production
-        id: deploy
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: apps/web
-          command: deploy
-
   deploy-staging:
     name: Upload Workers Version
     runs-on: ubuntu-latest
     needs:
       - build-web
       - html-check
-    if: |
-      (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
-      || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
     permissions:
       contents: read
     environment:
@@ -287,28 +223,30 @@ jobs:
       url: ${{ steps.deploy.outputs.deployment-url }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: lts/*
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v5
+        uses: pnpm/action-setup@v6
         with:
           cache: true
           run_install: true
 
       - name: Download web artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: web-dist
           path: apps/web/dist
 
       - name: Upload Worker Version
         id: deploy
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

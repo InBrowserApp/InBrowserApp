@@ -13,5 +13,7 @@
   "copiedLabel": "Kopyalandı",
   "seedLabel": "Tohum (isteğe bağlı)",
   "seedPlaceholder": "0 veya 0x...",
-  "seedInvalid": "Ondalık bir sayı veya 0x onaltılık değer girin."
+  "seedInvalid": "Ondalık bir sayı veya 0x onaltılık değer girin.",
+  "fileHashError": "Dosyanın özeti hesaplanamadı.",
+  "textHashError": "Metnin özeti hesaplanamadı."
 }

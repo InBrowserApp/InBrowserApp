@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## 不可視文字が問題になる理由
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+不可視のUnicode文字は通常のエディターでは見た目に現れず、気づきにくいものです。後になって、文言の変更が反映されない、識別子が一致しない、レイアウトが不自然に折り返される、右から左へ書く文章で表示が変わるなどの問題を引き起こします。
 
-## What this tool catches
+## 検出できる文字
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+このチェッカーは、ゼロ幅文字、双方向制御文字、特殊な空白、書式制御文字の4種類を検出します。出現位置を示し、注釈付きプレビューを表示して、除去済みテキストをコピーまたは書き出せるようにします。
 
-## When to use it
+## 使用する場面
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+ドキュメント、PDF、スプレッドシート、チャットアプリ、CMSエディター、デザインツールからテキストをコピーした後に使います。文字列は普通に見えるのに、比較、表示、後続処理が不自然な場合に便利です。

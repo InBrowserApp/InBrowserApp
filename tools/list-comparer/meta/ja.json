@@ -1,4 +1,4 @@
 {
-  "name": "List Comparer",
-  "description": "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup."
+  "name": "リスト比較ツール",
+  "description": "2つのリストを比較して共通項目と除外項目を確認し、同期や整理の前に必要なセットを書き出します。"
 }

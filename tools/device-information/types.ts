@@ -68,6 +68,7 @@ type DeviceInformationLocaleMessages = Readonly<{
   maxTouchPoints: string
   gpuVendor: string
   gpuRenderer: string
+  gpuDetails: string
   connectionType: string
   downlink: string
   roundTripTime: string

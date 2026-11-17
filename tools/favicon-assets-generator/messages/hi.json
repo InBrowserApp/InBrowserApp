@@ -7,7 +7,6 @@
   "useDemoLabel": "डेमो आइकन का उपयोग करें",
   "removeImageLabel": "हटाएं",
   "filePreviewAlt": "चयनित स्रोत छवि का पूर्वावलोकन",
-
   "siteInfoCardTitle": "साइट जानकारी",
   "siteInfoCardDescription": "manifest, apple-touch-icon, और HTML स्निपेट द्वारा उपयोग किया जाता है।",
   "appNameLabel": "ऐप का नाम",
@@ -33,7 +32,6 @@
   "backgroundColorDescription": "Manifest background_color। ब्राउज़र द्वारा PWAs पर स्प्लैश स्क्रीन रंगने के लिए उपयोग किया जाता है।",
   "optimizePngLabel": "PNG आउटपुट को ऑप्टिमाइज़ करें",
   "optimizePngDescription": "हर उत्सर्जित PNG (ICO घटकों सहित) को लॉसलेस oxipng पास के माध्यम से चलाता है। पहली बार जनरेट करने पर कुछ सेकंड जोड़ता है और ~150 KB WASM मॉड्यूल डाउनलोड करता है, लेकिन zip को उल्लेखनीय रूप से छोटा करता है।",
-
   "desktopCardTitle": "डेस्कटॉप ब्राउज़र favicon",
   "desktopCardDescription": "favicon.ico, favicon-16x16.png, favicon-32x32.png, और (जब स्रोत SVG हो) favicon.svg को नियंत्रित करता है।",
   "useOriginalSvgLabel": "मूल SVG का उपयोग करें",
@@ -48,12 +46,10 @@
   "useDifferentImageDescription": "केवल इस प्लेटफ़ॉर्म के लिए वैश्विक स्रोत छवि को ओवरराइड करें।",
   "uploadDedicatedImageLabel": "एक समर्पित छवि चुनें",
   "removeDedicatedImageLabel": "हटाएं",
-
   "iosCardTitle": "iOS वेब क्लिप",
   "iosCardDescription": "iOS होम स्क्रीन पर उपयोग किए जाने वाले 180×180 apple-touch-icon.png को नियंत्रित करता है।",
   "iosBackgroundColorLabel": "पृष्ठभूमि रंग",
   "iosBackgroundColorDescription": "Apple आइकन अपारदर्शी होने चाहिए, इसलिए यह भराव हमेशा लागू किया जाता है।",
-
   "pwaCardTitle": "PWA आइकन",
   "pwaCardDescription": "pwa-192x192.png, pwa-512x512.png, और maskable वेरिएंट को नियंत्रित करता है।",
   "includeMaskableLabel": "maskable वेरिएंट शामिल करें",
@@ -61,7 +57,6 @@
   "maskableBackgroundColorLabel": "Maskable पृष्ठभूमि रंग",
   "maskableMarginLabel": "Maskable सुरक्षित-क्षेत्र मार्जिन",
   "maskableMarginDescription": "W3C-अनुशंसित सुरक्षित क्षेत्र 40% है। किसी भी प्लेटफ़ॉर्म मास्क के अंदर स्रोत सामग्री दृश्यमान रहती है।",
-
   "previewGalleryTitle": "पूर्वावलोकन",
   "previewGalleryDescription": "ब्राउज़र, खोज, और होम-स्क्रीन मॉकअप जो उत्पन्न एसेट्स को संदर्भ में दिखाते हैं।",
   "previewBeforeGenerateHint": "अपने favicons को नीचे क्रोम में संयोजित देखने के लिए बंडल उत्पन्न करें।",
@@ -70,7 +65,6 @@
   "previewIosHomeScreenLabel": "iOS होम स्क्रीन",
   "previewAndroidLauncherLabel": "Android लॉन्चर",
   "previewWindowsTaskbarLabel": "Windows टास्कबार",
-
   "resultCardTitle": "उत्पन्न बंडल",
   "resultCardDescription": "हर एसेट को रेंडर करने, zip बनाने, और HTML स्निपेट कॉपी करने के लिए Generate पर क्लिक करें।",
   "resultEmptyTitle": "अभी कोई बंडल नहीं",
@@ -89,7 +83,6 @@
   "copyLabel": "कॉपी करें",
   "copiedLabel": "कॉपी किया गया",
   "downloadAssetLabel": "एसेट डाउनलोड करें",
-
   "invalidImageTitle": "छवि पढ़ी नहीं जा सकी",
   "invalidImageDescription": "एक ब्राउज़र-पठनीय छवि फ़ाइल (PNG, JPEG, WebP, SVG) चुनें और पुनः प्रयास करें।",
   "generationFailedTitle": "उत्पादन विफल",
@@ -100,6 +93,5 @@
   "needImageDescription": "उत्पन्न करने से पहले एक PNG, JPEG, WebP, या SVG चुनें (या डेमो आइकन का उपयोग करें)।",
   "missingDedicatedImageTitle": "समर्पित छवि गायब है",
   "missingDedicatedImageDescription": "एक या अधिक प्लेटफ़ॉर्म पर \"एक अलग छवि का उपयोग करें\" चालू है लेकिन कोई फ़ाइल नहीं चुनी गई। ओवरराइड अपलोड करें या टॉगल बंद करें।",
-
   "transparentLabel": "पारदर्शी"
 }

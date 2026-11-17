@@ -188,9 +188,9 @@ describe("SvgToImageConverterClient", () => {
     })
 
     expect(
-      screen
-        .getByRole("link", { name: messages.downloadLabel })
-        .getAttribute("download")
+      (
+        await screen.findByRole("link", { name: messages.downloadLabel })
+      ).getAttribute("download")
     ).toBe("logo.webp")
   })
 

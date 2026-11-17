@@ -81,21 +81,8 @@ function BasicAuthDecoderClient({ messages }: BasicAuthDecoderClientProps) {
   )
 
   useEffect(() => {
-    /* v8 ignore next */
-    if (typeof window === "undefined") return
-
-    const storedAuthorizationHeader = window.localStorage.getItem(STORAGE_KEY)
-    setAuthorizationHeader(
-      storedAuthorizationHeader ?? DEFAULT_AUTHORIZATION_HEADER
-    )
+    window.localStorage.removeItem(STORAGE_KEY)
   }, [])
-
-  useEffect(() => {
-    /* v8 ignore next */
-    if (typeof window === "undefined") return
-
-    window.localStorage.setItem(STORAGE_KEY, authorizationHeader)
-  }, [authorizationHeader])
 
   function handleReset() {
     setAuthorizationHeader(DEFAULT_AUTHORIZATION_HEADER)

@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "Вставьте слева корректный XML, чтобы увидеть здесь предварительный просмотр преобразованного JSON.",
   "invalidXmlLabel": "Недопустимый XML",
   "optionsLabel": "Параметры",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "Настройте разбор XML, прежде чем копировать или скачивать преобразованный JSON.",
   "indentSizeLabel": "Размер отступа",
   "indentSizeDescription": "Выберите 0 для компактного вывода или 1-8 для форматированных отступов.",
   "compactLabel": "Компактный",

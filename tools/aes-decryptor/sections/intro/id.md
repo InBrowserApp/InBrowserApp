@@ -1,10 +1,10 @@
-Dekripsi AES memulihkan plaintext dari data yang dienkripsi dengan materi kunci AES yang sama. Alat ini dirancang untuk envelope JSON yang dihasilkan oleh AES Encryptor InBrowser.App. Envelope menyimpan algoritma, pengaturan derivasi kunci, salt, IV, ciphertext, dan metadata plaintext bersama-sama, sementara kata sandi atau kunci mentah tetap terpisah.
+Dekripsi AES memulihkan plaintext dari data yang dienkripsi dengan materi kunci AES yang sama. Alat ini dirancang untuk envelope JSON yang dihasilkan oleh Pengenkripsi AES InBrowser.App. Envelope menyimpan algoritma, pengaturan derivasi kunci, salt, IV, ciphertext, dan metadata plaintext bersama-sama, sementara kata sandi atau kunci mentah tetap terpisah.
 
 Semua proses berlangsung secara lokal dengan Web Crypto API di browser. JSON terenkripsi, kata sandi, kunci mentah, dan hasil dekripsi tidak diunggah.
 
 ## Kapan Menggunakan Alat Ini
 
-Gunakan saat seseorang memberi Anda envelope JSON `inbrowser-aes-v1` atau saat Anda perlu memulihkan catatan, token, cuplikan konfigurasi, atau file yang sebelumnya Anda enkripsi dengan halaman AES Encryptor yang sesuai.
+Gunakan saat seseorang memberi Anda envelope JSON `inbrowser-aes-v1` atau saat Anda perlu memulihkan catatan, token, cuplikan konfigurasi, atau file yang sebelumnya Anda enkripsi dengan halaman Pengenkripsi AES yang sesuai.
 
 Jika envelope dibuat dengan kata sandi, masukkan kata sandi yang sama dan alat ini akan menggunakan kembali hash PBKDF2, jumlah iterasi, salt, mode AES, dan panjang kunci yang tersimpan. Jika envelope dibuat dengan kunci mentah, tempel kunci heksadesimal persis sesuai panjang yang tercatat di envelope.
 

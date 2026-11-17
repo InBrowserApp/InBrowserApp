@@ -31,7 +31,7 @@
   "pageLabel": "Seite",
   "pageInputLabel": "Seitennummer",
   "pageSummary": "Seite {page} / {total}",
-  "imageDetails": "{width} x {height}px - {dpi} DPI - {size}",
+  "imageDetails": "{width} × {height}px – {dpi} DPI – {size}",
   "downloadCurrentLabel": "Seite herunterladen",
   "exportAllLabel": "Alle Seiten exportieren",
   "exportingAllLabel": "Seiten werden exportiert...",

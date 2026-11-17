@@ -16,6 +16,6 @@
   "registeredPortsDesc": "Utilises par les applications et services enregistres aupres de l'IANA, tels que MySQL (3306), PostgreSQL (5432).",
   "dynamicPorts": "Ports Dynamiques (49152-65535) :",
   "dynamicPortsDesc": "Egalement appeles \"ports ephemeres\", utilises pour les connexions temporaires par les applications clientes.",
-  "noResultsTitle": "No matching ports found",
-  "noResultsDescription": "Try a different port number, service name, or category."
+  "noResultsTitle": "Aucun port correspondant trouvé",
+  "noResultsDescription": "Essayez un autre numéro de port, un autre nom de service ou une autre catégorie."
 }

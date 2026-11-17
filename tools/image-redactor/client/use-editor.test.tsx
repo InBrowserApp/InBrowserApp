@@ -177,11 +177,11 @@ describe("image redactor editor", () => {
     const hook = setup()
     select(hook)
     const clicked: string[] = []
-    vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(
-      function (this: HTMLAnchorElement) {
-        clicked.push(this.download)
-      }
-    )
+    vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(function (
+      this: HTMLAnchorElement
+    ) {
+      clicked.push(this.download)
+    })
     vi.mocked(exportImage).mockResolvedValue(
       new Blob(["result"], { type: `image/${format}` })
     )

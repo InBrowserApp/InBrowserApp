@@ -6,6 +6,6 @@
 - IDE 및 편집기 파일 (.idea/, .vscode/)
 - 운영 체제 파일 (.DS_Store, Thumbs.db)
 
-## Template source
+## 템플릿 출처
 
 이 도구는 150개 이상의 언어, 프레임워크 및 환경을 다루는 공식 GitHub gitignore 저장소의 템플릿을 사용합니다.

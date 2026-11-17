@@ -2,13 +2,13 @@
   "token": {
     "title": "Token",
     "description": "एक compact JWT पेस्ट करें। किसी भी signature check के चलने से पहले header और payload स्थानीय रूप से डिकोड किए जाते हैं।",
-    "label": "JWT token",
+    "label": "JWT टोकन",
     "placeholder": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
     "useSample": "Sample उपयोग करें",
     "clear": "साफ करें"
   },
   "decoded": {
-    "title": "Decoded token",
+    "title": "डिकोड किया गया टोकन",
     "description": "Token segment से डिकोड किया गया pretty-printed JSON।",
     "headerTitle": "Header",
     "payloadTitle": "Payload",
@@ -18,31 +18,31 @@
     "emptyDescription": "यह टूल compact three-part JWT format अपेक्षित करता है: header.payload.signature."
   },
   "verification": {
-    "title": "Signature verification",
+    "title": "हस्ताक्षर सत्यापन",
     "description": "Shared secret, PEM public key, JWK, या JWKS से JWS signature सत्यापित करें।",
     "algorithmLabel": "Algorithm",
     "algorithmDescription": "Auto JWT header से alg value का उपयोग करता है। Manual selection को फिर भी header से match करना चाहिए।",
     "autoAlgorithm": "Header से auto",
     "keyLabel": "Secret या public key",
     "keyDescription": "HS algorithms के लिए plain text उपयोग करें। RS, PS, और ES algorithms के लिए PEM public key, JWK, या JWKS उपयोग करें। Values saved नहीं होतीं।",
-    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "keyPlaceholder": "secret\n\nया\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nया\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
     "waitingTitle": "Verify करने के लिए ready",
     "waitingDescription": "Signature check करने के लिए valid token और verification material दर्ज करें।",
     "pendingTitle": "Signature verify हो रहा है",
-    "verifiedTitle": "Signature verified",
+    "verifiedTitle": "हस्ताक्षर सत्यापित",
     "verifiedDescription": "Signature token header, payload, algorithm, और supplied key से match करता है।",
-    "failedTitle": "Verification failed",
+    "failedTitle": "सत्यापन विफल",
     "failedDescription": "Signature supplied key और algorithm से match नहीं करता।"
   },
   "claims": {
-    "title": "Registered claims",
+    "title": "पंजीकृत क्लेम",
     "description": "सामान्य time-based JWT claims के लिए quick checks।",
     "emptyTitle": "जांचने के लिए कोई time claims नहीं",
     "emptyDescription": "इस payload में exp, nbf, या iat claims शामिल नहीं हैं।",
     "severities": {
       "danger": "समस्या",
       "warning": "चेतावनी",
-      "success": "Valid",
+      "success": "मान्य",
       "neutral": "Info"
     },
     "messages": {

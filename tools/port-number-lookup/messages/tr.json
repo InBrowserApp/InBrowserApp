@@ -16,6 +16,6 @@
   "registeredPortsDesc": "IANA'ya kayitli uygulamalar ve hizmetler tarafindan kullanilir, ornegin MySQL (3306), PostgreSQL (5432).",
   "dynamicPorts": "Dinamik Portlar (49152-65535):",
   "dynamicPortsDesc": "\"Gecici portlar\" olarak da adlandirilir, istemci uygulamalari tarafindan gecici baglantilar icin kullanilir.",
-  "noResultsTitle": "No matching ports found",
-  "noResultsDescription": "Try a different port number, service name, or category."
+  "noResultsTitle": "Eşleşen port bulunamadı",
+  "noResultsDescription": "Farklı bir port numarası, hizmet adı veya kategori deneyin."
 }

@@ -1,12 +1,12 @@
-## Wat zijn Chinese hoofdletterbedragen?
+## Wat zijn bedragen in Chinese financiële cijfers?
 
-Chinese hoofdletterbedragen zijn de formele schrijfwijze die op
+Bedragen in Chinese financiële cijfers vormen de formele schrijfwijze die op
 facturen, kwitanties en bankdocumenten wordt gebruikt om vervalsing
 moeilijker te maken. Gewone cijfers worden vervangen door financiële
 tekens zoals 壹, 贰, 叁, 拾, 佰 en 仟.
 
 Deze converter werkt in twee richtingen: hij kan een gewoon getal
-omzetten naar een RMB-achtige hoofdlettersom, of een hoofdlettersom weer
+omzetten naar een RMB-bedrag in financiële cijfers, of zo’n bedrag weer
 teruglezen als getal. Negatieve waarden, vaste eenheden 元/角/分 en
 maximaal twee decimalen worden ondersteund.
 

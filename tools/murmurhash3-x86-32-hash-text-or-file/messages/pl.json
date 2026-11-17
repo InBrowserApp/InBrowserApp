@@ -1,18 +1,20 @@
 {
-  "inputLabel": "Wej\u015bcie",
-  "plainTextLabel": "Zwyk\u0142y tekst",
-  "plainTextDescription": "Wklej lub wpisz dowolny tekst UTF-8, w tym emoji i znaki nie\u0142aci\u0144skie.",
+  "inputLabel": "Wejście",
+  "plainTextLabel": "Zwykły tekst",
+  "plainTextDescription": "Wklej lub wpisz dowolny tekst UTF-8, w tym emoji i znaki niełacińskie.",
   "importFromFileLabel": "Importuj z pliku",
   "hashResultLabel": "Wynik Hash",
-  "hashResultDescription": "Wynik haszowania dla bie\u017c\u0105cego tekstu wej\u015bciowego.",
+  "hashResultDescription": "Wynik haszowania dla bieżącego tekstu wejściowego.",
   "hexLabel": "Szesnastkowy",
   "base64Label": "Base64",
-  "decimalLabel": "Dziesi\u0119tny",
+  "decimalLabel": "Dziesiętny",
   "binaryLabel": "Binarny",
   "copyResultLabel": "Kopiuj wynik",
   "copiedLabel": "Skopiowano",
   "seedSectionLabel": "Seed",
   "seedLabel": "Seed (opcjonalnie)",
   "seedPlaceholder": "0 lub 0x...",
-  "seedInvalid": "Wprowad\u017a liczb\u0119 dziesi\u0119tn\u0105 lub warto\u015b\u0107 szesnastkow\u0105 z 0x."
+  "seedInvalid": "Wprowadź liczbę dziesiętną lub wartość szesnastkową z 0x.",
+  "fileHashError": "Nie udało się obliczyć skrótu pliku.",
+  "textHashError": "Nie udało się obliczyć skrótu tekstu."
 }

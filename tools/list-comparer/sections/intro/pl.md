@@ -1,11 +1,11 @@
-## What this comparer is for
+## Do czego służy porównywanie list
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+Użyj tego narzędzia, gdy dwie listy powinny być zgodne, ale przed importem, synchronizacją, wysłaniem wiadomości lub porządkowaniem chcesz dokładnie sprawdzić ich część wspólną, różnice i duplikaty.
 
-## What you get back
+## Jakie wyniki otrzymasz
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+Porównanie jest podzielone na przydatne zbiory wynikowe: elementy wspólne, występujące tylko na liście A, tylko na liście B, wszystkie unikalne wartości oraz duplikaty w każdym źródle. Każdy zbiór możesz osobno skopiować lub pobrać.
 
-## Where it helps most
+## Gdzie przydaje się najbardziej
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+Narzędzie przydaje się do list kontaktów, identyfikatorów produktów, eksportów audytowych, zestawień stanów magazynowych, segmentów kampanii i wszelkich prac porządkowych, w których błędne scalenie oznaczałoby później dodatkową pracę.

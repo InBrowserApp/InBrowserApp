@@ -1,18 +1,20 @@
 {
   "configurationLabel": "Configuratie",
-  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "configurationDescription": "Stel de geheime sleutel en het HMAC-algoritme voor de huidige handtekening in.",
   "secretKeyLabel": "Geheime Sleutel",
   "secretKeyPlaceholder": "Voer uw geheime sleutel in",
   "algorithmLabel": "Algoritme",
   "inputLabel": "Invoer",
   "plainTextLabel": "Platte tekst",
-  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "plainTextDescription": "Plak of typ UTF-8-tekst, waaronder bestandsinhoud of API-payloads.",
   "importFromFileLabel": "Importeren uit bestand",
   "hmacOutputLabel": "HMAC-uitvoer",
-  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
-  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hmacOutputDescription": "HMAC-uitvoer voor de huidige tekstinvoer en geheime sleutel.",
+  "emptyStateDescription": "Voer een geheime sleutel in en geef tekst op of importeer een bestand om HMAC-uitvoer te genereren.",
   "hexLabel": "Hexadecimaal",
   "base64Label": "Base64",
   "copyResultLabel": "Resultaat kopiëren",
-  "copiedLabel": "Gekopieerd"
+  "copiedLabel": "Gekopieerd",
+  "fileGenerationError": "De HMAC-uitvoer voor het bestand kon niet worden gegenereerd.",
+  "textGenerationError": "De HMAC-uitvoer voor de tekstinvoer kon niet worden gegenereerd."
 }

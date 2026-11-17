@@ -6,6 +6,6 @@
 - IDE 和編輯器檔案（.idea/、.vscode/）
 - 作業系統檔案（.DS_Store、Thumbs.db）
 
-## Template source
+## 範本來源
 
 此工具使用來自官方 GitHub gitignore 儲存庫的模板，涵蓋 150 多種語言、框架和環境。

@@ -16,6 +16,6 @@
   "redirection": "Reindirizzamento",
   "clientError": "Errore Client",
   "serverError": "Errore Server",
-  "noResultsTitle": "No matching status codes",
-  "noResultsDescription": "Try a different code, phrase, or category."
+  "noResultsTitle": "Nessun codice di stato corrispondente",
+  "noResultsDescription": "Prova un codice, una frase o una categoria diversi."
 }

@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## Görünmez Karakterler Neden Önemlidir?
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+Görünmez Unicode karakterleri normal bir düzenleyicide bozuk görünmediğinden kolayca gözden kaçar. Sorun daha sonra ortaya çıkar: Metin değişiklikleri başarısız olur, tanımlayıcılar eşleşmez, satırlar tuhaf biçimde kayar veya metin sağdan sola (RTL) bağlamlarda farklı davranmaya başlar.
 
-## What this tool catches
+## Bu Araç Neleri Yakalar?
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+Bu denetleyici dört yaygın grubu arar: sıfır genişlikli işaretler, çift yönlü metin denetimleri, özel boşluk karakterleri ve biçim denetimleri. Bunların tam olarak nerede bulunduğunu gösterir, açıklamalı bir önizleme sunar ve kopyalayabileceğiniz veya dışa aktarabileceğiniz temizlenmiş bir sürüm hazırlar.
 
-## When to use it
+## Ne Zaman Kullanılır?
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+Belgelerden, PDF'lerden, elektronik tablolardan, sohbet uygulamalarından, CMS düzenleyicilerinden veya tasarım araçlarından metin kopyaladıktan sonra kullanın. Özellikle bir dize normal göründüğü halde karşılaştırma, görüntüleme veya sonraki işleme adımları tuhaf davranmaya devam ediyorsa yararlıdır.

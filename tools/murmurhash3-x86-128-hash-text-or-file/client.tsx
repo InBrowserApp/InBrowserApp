@@ -97,8 +97,8 @@ function MurmurHash3HashTextOrFileClient({
               error instanceof Error
                 ? error.message
                 : selectedFile
-                  ? "Failed to hash file."
-                  : "Failed to hash text.",
+                  ? messages.fileHashError
+                  : messages.textHashError,
           })
         }
       })
@@ -107,6 +107,8 @@ function MurmurHash3HashTextOrFileClient({
       cancelled = true
     }
   }, [
+    messages.fileHashError,
+    messages.textHashError,
     deferredPlainText,
     messages.seedInvalid,
     seedState.isValid,

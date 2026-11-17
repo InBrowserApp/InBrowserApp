@@ -1,4 +1,4 @@
-DNS Lookup menyemak rekod DNS awam yang dikembalikan untuk nama domain. Ia berguna apabila anda mengesahkan pelancaran laman baharu, menyahpepijat penghantaran e-mel, menyemak perubahan CDN atau load balancer, atau mengesahkan sama ada respons berkaitan DNSSEC kelihatan berbeza antara penyelesai.
+Carian DNS menyemak rekod DNS awam yang dikembalikan untuk nama domain. Ia berguna apabila anda mengesahkan pelancaran laman baharu, menyahpepijat penghantaran e-mel, menyemak perubahan CDN atau load balancer, atau mengesahkan sama ada respons berkaitan DNSSEC kelihatan berbeza antara penyelesai.
 
 ## Bila Digunakan
 

@@ -1,18 +1,17 @@
-## What It Does
+## ماذا تفعل الأداة
 
-مختبر JMESPath lets you run a JMESPath expression against JSON data directly
-in the browser. You can inspect the matched result, copy it, or download it as
-formatted JSON without leaving the page.
+يتيح لك مختبر JMESPath تشغيل تعبير JMESPath على بيانات JSON مباشرةً
+في المتصفح. يمكنك فحص النتيجة المطابقة ونسخها أو تنزيلها بصيغة JSON
+منسقة دون مغادرة الصفحة.
 
-## When To Use It
+## متى تستخدمها
 
-Use it when you need to prototype a JMESPath query, debug a filter expression,
-or verify exactly which values a JSON query will return before you embed that
-expression somewhere else.
+استخدمه عندما تحتاج إلى تجربة استعلام JMESPath أو تشخيص أخطاء تعبير تصفية،
+أو التحقق بدقة من القيم التي سيعيدها استعلام JSON قبل تضمين التعبير
+في مكان آخر.
 
-## What To Expect
+## ما الذي تتوقعه
 
-The tool validates the JSON input first, then evaluates the JMESPath
-expression. If either side is invalid, the error is surfaced immediately. When
-the query succeeds, the result is formatted as JSON and the result count is
-shown alongside the output.
+تتحقق الأداة أولًا من صحة مدخلات JSON، ثم تقيّم تعبير JMESPath. إذا كانت
+المدخلات أو التعبير غير صالحين، يظهر الخطأ فورًا. وعندما ينجح الاستعلام،
+تُنسّق النتيجة بصيغة JSON ويظهر عدد النتائج بجانب الناتج.

@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "Wklej po lewej poprawny XML, aby zobaczyć tutaj podgląd przekonwertowanego JSON.",
   "invalidXmlLabel": "Nieprawidłowy XML",
   "optionsLabel": "Opcje",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "Dostosuj sposób analizowania XML przed skopiowaniem lub pobraniem przekonwertowanego JSON.",
   "indentSizeLabel": "Rozmiar wcięcia",
   "indentSizeDescription": "Wybierz 0 dla zwartego wyniku lub 1-8 dla formatowanego wcięcia.",
   "compactLabel": "Kompaktowy",

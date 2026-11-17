@@ -1,4 +1,4 @@
-export { toolPageLoaders } from "./generated/page-loaders"
+// Keep discovery imports independent of tool pages and their styles.
 export { toolRegistry, toolRegistryBySlug } from "./generated/registry"
 export { toolSearchIndex } from "./generated/search-index"
 export { toolStaticPaths } from "./generated/static-paths"

@@ -1,11 +1,11 @@
-## Overview
+## Oversikt
 
-JSONPath-tester lets you run JSONPath queries against JSON data directly in the browser and inspect both the matched values and the matched paths side by side.
+JSONPath-testeren lar deg kjøre JSONPath-spørringer mot JSON-data direkte i nettleseren og undersøke både samsvarende verdier og stier side ved side.
 
-## When To Use It
+## Når du bør bruke det
 
-Use it when you need to prototype a JSONPath query, debug a selector against real payloads, or verify exactly which parts of a JSON document a query is matching.
+Bruk det når du trenger å prøve ut en JSONPath-spørring, feilsøke en selektor mot ekte nyttelaster eller kontrollere nøyaktig hvilke deler av et JSON-dokument en spørring finner treff i.
 
-## How It Works
+## Slik fungerer det
 
-The tool validates the JSON input first, then evaluates the JSONPath query and keeps both result modes available in the same output panel so you can switch between values and paths without rerunning anything.
+Verktøyet validerer JSON-inndataene først, evaluerer deretter JSONPath-spørringen og holder begge resultatmodusene tilgjengelige i samme utdatapanel, slik at du kan bytte mellom verdier og stier uten å kjøre noe på nytt.

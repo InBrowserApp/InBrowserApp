@@ -1,6 +1,6 @@
-## Perkara yang Dilakukan oleh PNG Optimizer
+## Perkara yang Dilakukan oleh Pengoptimum PNG
 
-PNG Optimizer memampatkan imej PNG dengan pengoptimuman Oxipng tanpa hilang kualiti. Ia menulis semula struktur PNG, tetapan pemampatan, data palet, dan maklumat alfa jika boleh tanpa mengubah piksel yang kelihatan.
+Pengoptimum PNG memampatkan imej PNG dengan pengoptimuman Oxipng tanpa hilang kualiti. Ia menulis semula struktur PNG, tetapan pemampatan, data palet, dan maklumat alfa jika boleh tanpa mengubah piksel yang kelihatan.
 
 ## Bila Perlu Menggunakannya
 

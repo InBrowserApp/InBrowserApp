@@ -1,19 +1,19 @@
-## What is SHA-512/256 (FIPS 180-4)?
+## Czym jest SHA-512/256 (FIPS 180-4)?
 
-SHA-512/256 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 256-bit (32-byte) digest, typically rendered as a 64-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/256 (FIPS 180-4) to kryptograficzna funkcja skrótu z rodziny SHA-2, która zwraca 256-bitowy (32-bajtowy) skrót, zwykle przedstawiany jako 64-znakowy ciąg szesnastkowy. Opiera się na SHA-512, ale używa innych wartości początkowych i skraca wynik, zapewniając krótszy skrót przy zachowaniu wewnętrznej struktury SHA-512.
 
-**Key characteristics:**
+**Główne cechy:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **Deterministyczność**: Te same dane wejściowe zawsze dają ten sam skrót
+- **Szybkie obliczanie**: Skrót można szybko obliczyć dla dowolnych danych wejściowych
+- **Efekt lawinowy**: Małe zmiany danych wejściowych prowadzą do radykalnie różnych wyników
+- **Nieodwracalność**: Odtworzenie oryginalnych danych wejściowych na podstawie skrótu jest obliczeniowo niewykonalne
+- **Odporność na kolizje**: Bardzo trudno znaleźć dwa różne zestawy danych wejściowych dające ten sam skrót
 
-**Common uses:**
+**Typowe zastosowania:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 256-bit hashes
+- Podpisy cyfrowe i certyfikaty
+- Kontrola integralności i sumy kontrolne
+- Konstrukcje HMAC
+- Weryfikacja plików i potoki przetwarzania danych
+- Protokoły wymagające 256-bitowych skrótów

@@ -1,7 +1,7 @@
 {
   "valueTitle": "Nil UUID",
   "valueDescription": "मानकीकृत सभी-शून्य UUID को उस रूप में कॉपी करें जिसकी आपके सिस्टम को अपेक्षा है.",
-  "canonicalLabel": "Canonical UUID",
+  "canonicalLabel": "मानक UUID",
   "rawHexLabel": "32-अंकीय hex",
   "urnLabel": "UUID URN",
   "copyUuidLabel": "UUID कॉपी करें",

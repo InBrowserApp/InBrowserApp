@@ -1,26 +1,27 @@
-## What ICO Is
+## Wat ICO is
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO is het containerformaat voor pictogrammen dat wordt gebruikt voor klassieke
+browserfavicons, Windows-snelkoppelingen en sommige pictogrammen van desktopapps.
+Eén ICO-bestand kan meerdere vierkante formaten bevatten, zodat elk platform
+automatisch het meest geschikte formaat kan kiezen.
 
-## Why Use This Converter
+## Waarom deze converter gebruiken
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+Deze tool zet één lokale afbeelding rechtstreeks in je browser om naar een
+ICO-bestand met meerdere formaten. Er wordt niets geüpload en je kunt gangbare
+faviconformaten zoals 16×16, 32×32, 48×48 en 256×256 bundelen in één download.
 
-## How It Works
+## Hoe het werkt
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. Upload één lokaal afbeeldingsbestand.
+2. Kies de pictogramformaten die je in de ICO-bundel wilt opnemen.
+3. Voeg eventueel een effen achtergrondkleur toe voor transparante afbeeldingen.
+4. Genereer de ICO en download deze meteen.
 
-## Tips for Better Results
+## Tips voor betere resultaten
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- Begin met een scherpe vierkante afbeelding, bij voorkeur 512×512 of groter.
+- Houd logo’s en belangrijke vormen weg van de buitenranden, omdat kleine
+  pictogrammen snel details verliezen.
+- Laat achtergrondvulling uitgeschakeld als je transparantie wilt en schakel deze
+  alleen in wanneer je een effen achtergrond achter het pictogram nodig hebt.

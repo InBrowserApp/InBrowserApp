@@ -1,4 +1,4 @@
 {
-  "name": "Cron Expression Parser",
+  "name": "Cron式パーサー",
   "description": "cron スケジュールを解析、検証、説明し、フィールドの詳細と今後の実行時刻を確認できます。"
 }

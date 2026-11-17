@@ -1,6 +1,6 @@
 ## Công cụ này làm gì
 
-Image Palette Extractor tìm các màu chủ đạo trong ảnh ngay trong trình duyệt
+Trình trích xuất bảng màu ảnh tìm các màu chủ đạo trong ảnh ngay trong trình duyệt
 của bạn. Công cụ lấy mẫu ảnh, nhóm các điểm ảnh trông tương tự nhau, rồi trả
 về một bảng màu thiết thực với giá trị HEX, RGB, HSL và tỷ lệ
 phần trăm cho từng màu.

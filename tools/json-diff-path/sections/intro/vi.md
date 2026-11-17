@@ -1,6 +1,6 @@
 ## Tổng quan
 
-JSON Diff Path so sánh hai tài liệu JSON và biến mọi thay đổi cấu trúc thành bản ghi đường dẫn dễ đọc, đồng thời xuất cả JSONPath lẫn JSON Pointer.
+So sánh JSON theo đường dẫn so sánh hai tài liệu JSON và biến mọi thay đổi cấu trúc thành bản ghi đường dẫn dễ đọc, đồng thời xuất cả JSONPath lẫn JSON Pointer.
 
 ## Khi Nào Dùng
 

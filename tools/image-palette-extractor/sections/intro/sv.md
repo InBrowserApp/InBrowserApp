@@ -1,6 +1,6 @@
 ## Vad verktyget gör
 
-Image Palette Extractor hittar de dominerande färgerna i en bild direkt i
+Palettextraherare för bilder hittar de dominerande färgerna i en bild direkt i
 webbläsaren. Verktyget samplar bilden, grupperar visuellt liknande pixlar och
 returnerar en praktisk palett med HEX-, RGB-, HSL- och procentvärden för
 varje färg.

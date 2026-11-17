@@ -31,7 +31,7 @@
   "pageLabel": "Страница",
   "pageInputLabel": "Номер страницы",
   "pageSummary": "Страница {page} / {total}",
-  "imageDetails": "{width} x {height}px - {dpi} DPI - {size}",
+  "imageDetails": "{width} x {height}пкс - {dpi} DPI - {size}",
   "downloadCurrentLabel": "Скачать страницу",
   "exportAllLabel": "Экспортировать все страницы",
   "exportingAllLabel": "Экспорт страниц...",

@@ -4,9 +4,9 @@
 
 **例：**
 
-- "Hello World!" → `hello-world`
-- "My Blog Post Title" → `my-blog-post-title`
-- "Product: iPhone 15 Pro" → `product-iphone-15-pro`
+- 「Hello World!」 → `hello-world`
+- 「My Blog Post Title」 → `my-blog-post-title`
+- 「Product: iPhone 15 Pro」 → `product-iphone-15-pro`
 
 ## スラッグを使う理由
 

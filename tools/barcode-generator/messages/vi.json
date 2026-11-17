@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "Tùy chọn",
   "optionsDescription": "Chọn định dạng mã vạch rồi điều chỉnh kích thước, nhãn và màu sắc.",
   "preview": "Preview",
-  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
-  "download": "Download",
+  "previewDescription": "Xem lại mã vạch đã tạo và xuất dưới dạng PNG, SVG, JPEG hoặc WebP.",
+  "download": "Tải xuống",
   "text": "Văn bản",
   "textPlaceholder": "Nhập nội dung...",
   "format": "Định dạng",
@@ -20,5 +20,6 @@
   "center": "Giữa",
   "right": "Phải",
   "top": "Trên",
-  "bottom": "Dưới"
+  "bottom": "Dưới",
+  "renderError": "Không thể hiển thị mã vạch."
 }

@@ -16,5 +16,5 @@
   "quoteCharLabel": "Aanhalingsteken",
   "includeHeaderRowLabel": "Koprij opnemen",
   "escapeFormulaeLabel": "Excel-formules escapen",
-  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+  "escapeFormulaeTooltip": "Voegt een voorvoegsel toe aan waarden die beginnen met =, +, - of @, zodat spreadsheetprogramma’s ze behandelen als tekst in plaats van formules."
 }

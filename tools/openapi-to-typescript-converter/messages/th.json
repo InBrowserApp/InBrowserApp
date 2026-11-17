@@ -16,7 +16,7 @@
   "importFromFileLabel": "นำเข้าจากไฟล์",
   "importFromUrlLabel": "นำเข้าจาก URL",
   "hideUrlImportLabel": "ซ่อนการนำเข้าจาก URL",
-  "importUrlFieldLabel": "OpenAPI URL",
+  "importUrlFieldLabel": "URL ของ OpenAPI",
   "importUrlDescription": "การดึงข้อมูลนี้ทำงานในเบราว์เซอร์ จึงต้องเป็น URL ที่อนุญาต CORS",
   "importUrlPlaceholder": "https://example.com/openapi.yaml",
   "fetchUrlLabel": "ดึง",

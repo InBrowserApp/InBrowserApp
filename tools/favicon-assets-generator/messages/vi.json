@@ -7,7 +7,6 @@
   "useDemoLabel": "Dùng biểu tượng mẫu",
   "removeImageLabel": "Xóa",
   "filePreviewAlt": "Xem trước ảnh nguồn đã chọn",
-
   "siteInfoCardTitle": "Thông tin trang",
   "siteInfoCardDescription": "Được dùng cho manifest, apple-touch-icon và đoạn mã HTML.",
   "appNameLabel": "Tên ứng dụng",
@@ -33,7 +32,6 @@
   "backgroundColorDescription": "background_color của manifest. Được trình duyệt dùng để vẽ màn hình chờ cho PWA.",
   "optimizePngLabel": "Tối ưu hóa đầu ra PNG",
   "optimizePngDescription": "Chạy mọi tệp PNG được tạo ra (bao gồm cả các thành phần ICO) qua một lượt oxipng không mất dữ liệu. Mất thêm vài giây và tải về module WASM khoảng 150 KB trong lần tạo đầu tiên, nhưng giảm đáng kể kích thước tệp zip.",
-
   "desktopCardTitle": "Favicon trình duyệt máy tính",
   "desktopCardDescription": "Điều khiển favicon.ico, favicon-16x16.png, favicon-32x32.png và (khi nguồn là SVG) favicon.svg.",
   "useOriginalSvgLabel": "Dùng SVG gốc",
@@ -48,12 +46,10 @@
   "useDifferentImageDescription": "Ghi đè ảnh nguồn chung chỉ cho nền tảng này.",
   "uploadDedicatedImageLabel": "Chọn ảnh riêng",
   "removeDedicatedImageLabel": "Xóa",
-
-  "iosCardTitle": "iOS web clip",
+  "iosCardTitle": "Biểu tượng web clip iOS",
   "iosCardDescription": "Điều khiển apple-touch-icon.png 180×180 dùng trên màn hình chính iOS.",
   "iosBackgroundColorLabel": "Màu nền",
   "iosBackgroundColorDescription": "Biểu tượng Apple phải mờ đục, vì vậy phần tô nền này luôn được áp dụng.",
-
   "pwaCardTitle": "Biểu tượng PWA",
   "pwaCardDescription": "Điều khiển pwa-192x192.png, pwa-512x512.png và các biến thể maskable.",
   "includeMaskableLabel": "Kèm biến thể maskable",
@@ -61,7 +57,6 @@
   "maskableBackgroundColorLabel": "Màu nền maskable",
   "maskableMarginLabel": "Lề vùng an toàn maskable",
   "maskableMarginDescription": "Vùng an toàn do W3C khuyến nghị là 40%. Nội dung nguồn vẫn hiển thị bên trong mọi mặt nạ nền tảng.",
-
   "previewGalleryTitle": "Xem trước",
   "previewGalleryDescription": "Mô phỏng trình duyệt, kết quả tìm kiếm và màn hình chính hiển thị tài nguyên đã tạo trong ngữ cảnh thực.",
   "previewBeforeGenerateHint": "Tạo bộ tệp để xem favicon của bạn được ghép vào giao diện bên dưới.",
@@ -70,7 +65,6 @@
   "previewIosHomeScreenLabel": "Màn hình chính iOS",
   "previewAndroidLauncherLabel": "Trình khởi chạy Android",
   "previewWindowsTaskbarLabel": "Thanh tác vụ Windows",
-
   "resultCardTitle": "Bộ tệp đã tạo",
   "resultCardDescription": "Nhấn Tạo để dựng mọi tài nguyên, đóng gói zip và sao chép đoạn mã HTML.",
   "resultEmptyTitle": "Chưa có bộ tệp",
@@ -89,7 +83,6 @@
   "copyLabel": "Sao chép",
   "copiedLabel": "Đã sao chép",
   "downloadAssetLabel": "Tải tài nguyên",
-
   "invalidImageTitle": "Không đọc được ảnh",
   "invalidImageDescription": "Chọn một tệp ảnh mà trình duyệt đọc được (PNG, JPEG, WebP, SVG) rồi thử lại.",
   "generationFailedTitle": "Tạo thất bại",
@@ -100,6 +93,5 @@
   "needImageDescription": "Chọn một tệp PNG, JPEG, WebP hoặc SVG (hoặc dùng biểu tượng mẫu) trước khi tạo.",
   "missingDedicatedImageTitle": "Thiếu ảnh riêng",
   "missingDedicatedImageDescription": "Một hoặc nhiều nền tảng đã bật \"Dùng ảnh khác\" nhưng chưa chọn tệp. Tải lên ảnh ghi đè hoặc tắt công tắc.",
-
   "transparentLabel": "Trong suốt"
 }

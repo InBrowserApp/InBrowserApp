@@ -1,19 +1,23 @@
-## What is xxHash (XXH3 64)?
+## Wat is xxHash (XXH3 64)?
 
-XXH3 is the modern xxHash algorithm designed for very high speed and excellent distribution. XXH3 64 outputs a 64-bit (8-byte) hash value, typically rendered as a 16-character hexadecimal string. It is a non-cryptographic hash and supports optional seeding for reproducible hashing.
+XXH3 is het moderne xxHash-algoritme, ontworpen voor zeer hoge snelheid en een
+uitstekende verdeling. XXH3 64 levert een hashwaarde van 64 bits (8 bytes) op,
+meestal weergegeven als een hexadecimale reeks van 16 tekens. Het is een
+niet-cryptografische hash met ondersteuning voor een optionele seed voor
+reproduceerbare hashing.
 
-**Key characteristics:**
+**Belangrijkste kenmerken:**
 
-- **Extremely fast**: Optimized for performance on large inputs
-- **Deterministic**: The same input and seed always produce the same hash
-- **Non-cryptographic**: Not suitable for security purposes
-- **Good distribution**: Great for hash tables and indexing
-- **Seeded**: Optional seed to diversify hash outputs
+- **Extreem snel**: Geoptimaliseerd voor prestaties bij grote invoer
+- **Deterministisch**: Dezelfde invoer en seed leveren altijd dezelfde hash op
+- **Niet-cryptografisch**: Niet geschikt voor beveiligingsdoeleinden
+- **Goede verdeling**: Zeer geschikt voor hashtabellen en indexering
+- **Met seed**: Een optionele seed om verschillende hashuitvoer te verkrijgen
 
-**Common uses:**
+**Veelvoorkomende toepassingen:**
 
-- Hash tables and data structures
-- File integrity checks (non-security)
-- Data deduplication and chunking
-- Cache keys and database indexing
-- High-throughput data pipelines
+- Hashtabellen en gegevensstructuren
+- Bestandsintegriteitscontroles (zonder beveiligingsdoel)
+- Gegevens ontdubbelen en in blokken verdelen
+- Cachesleutels en database-indexering
+- Gegevenspijplijnen met een hoge doorvoer

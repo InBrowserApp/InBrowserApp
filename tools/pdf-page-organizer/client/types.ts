@@ -22,10 +22,9 @@ type PdfPageOrganizerMessages = Readonly<{
   dragPageLabel: string
   dragPagesHint: string
   downloadPdfLabel: string
+  dropPdfLabel: string
   emptyPagesDescription: string
   emptyPagesTitle: string
-  emptyResultDescription: string
-  emptyResultTitle: string
   encryptedPdfError: string
   errorTitle: string
   exportDescription: string
@@ -62,6 +61,7 @@ type PdfPageOrganizerMessages = Readonly<{
   supportedFormatsLabel: string
   uploadDescription: string
   uploadTitle: string
+  undoLabel: string
 }>
 
 export { PDF_PAGE_ORGANIZER_TOOL_ID }

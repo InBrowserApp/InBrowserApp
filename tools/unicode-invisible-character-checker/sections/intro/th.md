@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## ทำไมอักขระที่มองไม่เห็นจึงสำคัญ
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+อักขระ Unicode ที่มองไม่เห็นมักถูกมองข้าม เพราะดูไม่ผิดปกติในโปรแกรมแก้ไขข้อความทั่วไป ปัญหาจะปรากฏในภายหลัง เช่น การแก้ไขข้อความไม่สำเร็จ ตัวระบุไม่ตรงกันอีกต่อไป เค้าโครงตัดบรรทัดผิดปกติ หรือข้อความเริ่มทำงานต่างออกไปในบริบท RTL
 
-## What this tool catches
+## เครื่องมือนี้ตรวจพบอะไรบ้าง
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+ตัวตรวจสอบนี้ค้นหาอักขระสี่กลุ่มที่พบบ่อย ได้แก่ อักขระความกว้างศูนย์ อักขระควบคุมทิศทางข้อความ อักขระช่องว่างพิเศษ และอักขระควบคุมการจัดรูปแบบ โดยแสดงตำแหน่งที่พบอย่างชัดเจน ให้ตัวอย่างพร้อมคำอธิบายประกอบ และเตรียมข้อความที่ล้างแล้วสำหรับคัดลอกหรือส่งออก
 
-## When to use it
+## ควรใช้เมื่อใด
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+ใช้หลังจากคัดลอกข้อความจากเอกสาร PDF สเปรดชีต แอปแชต โปรแกรมแก้ไขใน CMS หรือเครื่องมือออกแบบ มีประโยชน์เป็นพิเศษเมื่อสตริงดูปกติ แต่การเปรียบเทียบ การแสดงผล หรือการประมวลผลในขั้นตอนถัดไปยังทำงานผิดปกติ

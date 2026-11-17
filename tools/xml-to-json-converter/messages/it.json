@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "Incolla a sinistra un XML valido per visualizzare qui l'anteprima del JSON convertito.",
   "invalidXmlLabel": "XML non valido",
   "optionsLabel": "Opzioni",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "Regola come viene analizzato il codice XML prima di copiare o scaricare il JSON convertito.",
   "indentSizeLabel": "Dimensione rientro",
   "indentSizeDescription": "Scegli 0 per un output compatto oppure 1-8 per un rientro formattato.",
   "compactLabel": "Compatto",

@@ -6,6 +6,6 @@ File .gitignore menentukan file yang sengaja tidak dilacak yang harus diabaikan 
 - File IDE dan editor (.idea/, .vscode/)
 - File sistem operasi (.DS_Store, Thumbs.db)
 
-## Template source
+## Sumber template
 
 Alat ini menggunakan template dari repositori gitignore resmi GitHub, mencakup 150+ bahasa, framework, dan lingkungan.

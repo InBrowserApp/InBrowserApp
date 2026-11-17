@@ -1,4 +1,4 @@
 {
-  "name": "UUID v1 Generator",
+  "name": "UUID v1生成ツール",
   "description": "設定可能な MAC アドレスとクロックシーケンスで、時間ベースの UUID v1 識別子をブラウザー内で 1 件または複数件生成します。"
 }

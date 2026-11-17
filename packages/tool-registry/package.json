@@ -91,9 +91,12 @@
     "@tool/fb2-reader": "workspace:*",
     "@tool/fb2-to-epub-converter": "workspace:*",
     "@tool/file-to-data-uri-converter": "workspace:*",
+    "@tool/file-type-detector": "workspace:*",
     "@tool/gif-to-animated-webp-converter": "workspace:*",
     "@tool/gif-to-apng-converter": "workspace:*",
     "@tool/gitignore-generator": "workspace:*",
+    "@tool/gpu-information": "workspace:*",
+    "@tool/har-analyzer": "workspace:*",
     "@tool/highwayhash-hash-text-or-file": "workspace:*",
     "@tool/hmac-generator": "workspace:*",
     "@tool/html-color-names": "workspace:*",
@@ -106,6 +109,7 @@
     "@tool/hwp-viewer": "workspace:*",
     "@tool/iban-validator": "workspace:*",
     "@tool/ical-event-generator": "workspace:*",
+    "@tool/image-cropper": "workspace:*",
     "@tool/image-metadata-cleaner": "workspace:*",
     "@tool/image-palette-extractor": "workspace:*",
     "@tool/image-redactor": "workspace:*",
@@ -117,6 +121,7 @@
     "@tool/image-to-png-converter": "workspace:*",
     "@tool/image-to-webp-converter": "workspace:*",
     "@tool/image-viewer": "workspace:*",
+    "@tool/image-watermark": "workspace:*",
     "@tool/imei-validator": "workspace:*",
     "@tool/ip-cidr-normalizer": "workspace:*",
     "@tool/ip-info-lookup": "workspace:*",
@@ -140,6 +145,7 @@
     "@tool/keccak-hash-text-or-file": "workspace:*",
     "@tool/ksuid-generator": "workspace:*",
     "@tool/latex-previewer": "workspace:*",
+    "@tool/legacy-motorola-system-key-generator": "workspace:*",
     "@tool/list-comparer": "workspace:*",
     "@tool/local-font-book": "workspace:*",
     "@tool/lorem-ipsum-generator": "workspace:*",
@@ -181,6 +187,7 @@
     "@tool/pdf-text-extractor": "workspace:*",
     "@tool/pdf-to-image-converter": "workspace:*",
     "@tool/pdf-viewer": "workspace:*",
+    "@tool/pdf-watermark": "workspace:*",
     "@tool/pgp-key-generator": "workspace:*",
     "@tool/placeholder-image-generator": "workspace:*",
     "@tool/png-optimizer": "workspace:*",
@@ -239,6 +246,7 @@
     "@tool/svg-to-image-converter": "workspace:*",
     "@tool/svg-viewer": "workspace:*",
     "@tool/text-diff": "workspace:*",
+    "@tool/text-encoding-converter": "workspace:*",
     "@tool/text-line-sorter": "workspace:*",
     "@tool/text-log-viewer": "workspace:*",
     "@tool/text-statistics": "workspace:*",
@@ -283,6 +291,7 @@
     "@tool/xxhash-xxh64-hash-text-or-file": "workspace:*",
     "@tool/yaml-to-json-converter": "workspace:*",
     "@tool/yaml-to-toml-converter": "workspace:*",
+    "@tool/zip-creator": "workspace:*",
     "@workspace/tool-sdk": "workspace:*"
   },
   "peerDependencies": {
@@ -294,6 +303,7 @@
   },
   "exports": {
     ".": "./src/index.ts",
+    "./page-loaders": "./src/generated/page-loaders.ts",
     "./generate": "./src/generate.ts"
   }
 }

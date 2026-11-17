@@ -1,6 +1,4 @@
 ---
-import { ClientRouter } from "astro:transitions"
-import { isIsolatedToolPath } from "@/lib/browser-isolation"
 import "@/styles/global.css"
 import SiteFooter from "@/components/site-footer.astro"
 import SiteNavbar from "@/components/site-navbar.astro"
@@ -48,7 +46,7 @@ const languageOptions = createLanguageOptions(
 )
 ---
 
-<html lang={lang} dir={dir} data-theme="system" transition:animate="none">
+<html lang={lang} dir={dir} data-theme="system">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -86,20 +84,19 @@ const languageOptions = createLanguageOptions(
       import { setupIsolationLinks } from "@/lib/isolation-links"
       setupIsolationLinks()
     </script>
-    {!isIsolatedToolPath(Astro.url.pathname) && <ClientRouter />}
+    <script>
+      import { setupPwaInstall } from "@/lib/pwa-install"
+      setupPwaInstall()
+    </script>
     <script is:inline>
       ;(function () {
-        function applyTheme() {
-          var theme = localStorage.getItem("theme") || "system"
-          var isDark =
-            theme === "dark" ||
-            (theme === "system" &&
-              window.matchMedia("(prefers-color-scheme: dark)").matches)
-          document.documentElement.classList[isDark ? "add" : "remove"]("dark")
-          document.documentElement.dataset.theme = theme
-        }
-        applyTheme()
-        document.addEventListener("astro:after-swap", applyTheme)
+        var theme = localStorage.getItem("theme") || "system"
+        var isDark =
+          theme === "dark" ||
+          (theme === "system" &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+        document.documentElement.dataset.theme = theme
       })()
     </script>
   </head>
@@ -112,7 +109,9 @@ const languageOptions = createLanguageOptions(
           pathname={pathname}
           availableLanguages={availableLanguages}
         />
-        <slot />
+        <main class="flex flex-col gap-8">
+          <slot />
+        </main>
         <SiteFooter language={language} />
       </div>
     </div>

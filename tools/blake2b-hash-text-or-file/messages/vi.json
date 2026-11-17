@@ -16,5 +16,7 @@
   "keyLabel": "Khóa BLAKE2 (Base64)",
   "keyPlaceholder": "Khóa tùy chọn cho băm có khóa (mã hóa Base64)",
   "invalidBase64Title": "Giá trị Base64 chưa hợp lệ.",
-  "invalidBase64Description": "Kiểm tra phần đệm bị thiếu, ký tự không mong đợi hoặc dữ liệu chỉ được dán một phần."
+  "invalidBase64Description": "Kiểm tra phần đệm bị thiếu, ký tự không mong đợi hoặc dữ liệu chỉ được dán một phần.",
+  "fileHashError": "Không thể băm tệp.",
+  "textHashError": "Không thể băm văn bản."
 }

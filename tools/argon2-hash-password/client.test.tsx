@@ -208,7 +208,13 @@ describe("Argon2HashPasswordClient", () => {
 
     renderClient()
 
-    expect(await screen.findByText("Argon2d")).toBeTruthy()
+    expect(
+      (
+        await screen.findByRole("combobox", {
+          name: messages.algorithmLabel,
+        })
+      ).textContent
+    ).toContain("Argon2d")
     expect(
       (screen.getByLabelText(messages.iterationsLabel) as HTMLInputElement)
         .value

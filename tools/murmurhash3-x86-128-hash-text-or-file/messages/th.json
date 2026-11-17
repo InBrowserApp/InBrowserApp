@@ -14,5 +14,7 @@
   "seedSectionLabel": "Seed",
   "seedLabel": "Seed (ไม่บังคับ)",
   "seedPlaceholder": "0 หรือ 0x...",
-  "seedInvalid": "ป้อนเลขฐานสิบหรือค่าเลขฐานสิบหกที่ขึ้นต้นด้วย 0x"
+  "seedInvalid": "ป้อนเลขฐานสิบหรือค่าเลขฐานสิบหกที่ขึ้นต้นด้วย 0x",
+  "fileHashError": "คำนวณแฮชของไฟล์ไม่สำเร็จ",
+  "textHashError": "คำนวณแฮชของข้อความไม่สำเร็จ"
 }

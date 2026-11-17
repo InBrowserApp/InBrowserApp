@@ -36,7 +36,8 @@ function createBasicAuthCurlCommand(
   password: string
 ) {
   const header = createBasicAuthHeader(username, password)
-  return header === "" ? "" : `curl -H "Authorization: ${header}" ${url}`
+  const quotedUrl = `'${url.replaceAll("'", "'\\''")}'`
+  return header === "" ? "" : `curl -H "Authorization: ${header}" ${quotedUrl}`
 }
 
 export {

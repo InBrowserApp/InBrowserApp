@@ -3,7 +3,7 @@ export type History<T> = Readonly<{
   present: T
   future: readonly T[]
 }>
-export type HistoryAction<T> =
+type HistoryAction<T> =
   | { type: "commit"; value: T }
   | { type: "undo" | "redo" }
   | { type: "reset"; value: T }

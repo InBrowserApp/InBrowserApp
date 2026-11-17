@@ -114,7 +114,7 @@ function BarcodeGeneratorClient({ messages }: BarcodeGeneratorClientProps) {
         setError(
           renderError instanceof Error
             ? renderError.message
-            : "Failed to render barcode."
+            : messages.renderError
         )
       } finally {
         if (!cancelled) {
@@ -126,7 +126,7 @@ function BarcodeGeneratorClient({ messages }: BarcodeGeneratorClientProps) {
     return () => {
       cancelled = true
     }
-  }, [deferredOptions])
+  }, [messages.renderError, deferredOptions])
 
   const svgBlob = useMemo(
     () =>

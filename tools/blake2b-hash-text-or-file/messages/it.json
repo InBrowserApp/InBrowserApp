@@ -16,5 +16,7 @@
   "keyLabel": "Chiave BLAKE2 (Base64)",
   "keyPlaceholder": "Chiave opzionale per hash con chiave (codificata in Base64)",
   "invalidBase64Title": "Il valore Base64 non è ancora valido.",
-  "invalidBase64Description": "Verifica la presenza di padding mancante, caratteri inattesi o dati incollati parzialmente."
+  "invalidBase64Description": "Verifica la presenza di padding mancante, caratteri inattesi o dati incollati parzialmente.",
+  "fileHashError": "Impossibile calcolare l'hash del file.",
+  "textHashError": "Impossibile calcolare l'hash del testo."
 }

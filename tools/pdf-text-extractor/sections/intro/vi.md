@@ -1,6 +1,6 @@
 ## Công cụ này làm gì
 
-PDF Text Extractor đọc PDF trong trình duyệt của bạn và lấy ra văn bản đã có
+Trình trích xuất văn bản PDF đọc PDF trong trình duyệt của bạn và lấy ra văn bản đã có
 thể chọn bên trong tài liệu. Kết quả là văn bản thuần túy mà bạn có thể sao
 chép hoặc tải xuống dưới dạng tệp TXT để ghi chú, lập chỉ mục tìm kiếm, rà soát
 dữ liệu, hoặc xử lý tiếp theo.

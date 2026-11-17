@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "رمز QR مُنشأ"
+  "qrAlt": "رمز QR مُنشأ",
+  "renderError": "تعذّر إنشاء الباركود."
 }

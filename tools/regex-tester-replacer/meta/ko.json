@@ -1,4 +1,4 @@
 {
-  "name": "Regex Tester & Replacer",
-  "description": "Test regular expressions, inspect matches, and preview replacements against real text."
+  "name": "정규식 테스트 및 바꾸기",
+  "description": "실제 텍스트로 정규 표현식을 테스트하고, 일치 항목을 확인하며, 바꾸기 결과를 미리 확인하세요."
 }

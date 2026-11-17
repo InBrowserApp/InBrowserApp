@@ -23,6 +23,9 @@ type RegexTesterReplacerLocalizedCatalog = Readonly<{
   unicodeFlagLabel: string
   stickyFlagLabel: string
   invalidPatternLabel: string
+  analysisLoadingLabel: string
+  analysisTimeoutLabel: string
+  analysisFailedLabel: string
   summaryTitle: string
   summaryDescription: string
   summaryEmpty: string

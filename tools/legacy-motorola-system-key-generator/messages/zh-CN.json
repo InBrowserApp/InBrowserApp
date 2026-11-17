@@ -1,0 +1,19 @@
+{
+  "compatibilityTitle": "仅限旧版格式",
+  "compatibilityDescription": "生成源自 BatLabs 的软件密钥格式。不兼容 ASTRO 25 Portable CPS（包括 XTS5000）、APX CPS 或 Advanced System Keys（ASK）。",
+  "inputTitle": "系统 ID",
+  "inputDescription": "输入旧版 Motorola 集群系统的 ID。",
+  "systemIdLabel": "系统 ID（十六进制）",
+  "systemIdHelp": "使用 1–4 位十六进制数字（0–9、A–F）。较短的 ID 会在前面补零。",
+  "invalidSystemId": "请输入 1–4 位十六进制数字（0–9、A–F），不要包含 0x 前缀。",
+  "outputTitle": "旧版密钥文件",
+  "emptyState": "输入系统 ID 以预览和下载 .KEY 文件。",
+  "normalizedIdLabel": "规范化 ID",
+  "filenameLabel": "文件名",
+  "fileSizeLabel": "文件大小",
+  "fileSizeValue": "27 字节",
+  "hexPreviewLabel": "十六进制预览",
+  "downloadLabel": "下载 .KEY",
+  "sourceLabel": "参考实现",
+  "licenseLabel": "ISC 许可证"
+}

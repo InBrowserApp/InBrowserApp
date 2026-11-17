@@ -1,18 +1,20 @@
 {
   "configurationLabel": "التكوين",
-  "configurationDescription": "Set the secret key and HMAC algorithm for the current signature.",
+  "configurationDescription": "اضبط المفتاح السري وخوارزمية HMAC للتوقيع الحالي.",
   "secretKeyLabel": "المفتاح السري",
   "secretKeyPlaceholder": "أدخل مفتاحك السري",
   "algorithmLabel": "الخوارزمية",
   "inputLabel": "الإدخال",
   "plainTextLabel": "نص عادي",
-  "plainTextDescription": "Paste or type any UTF-8 text, including file contents or API payloads.",
+  "plainTextDescription": "الصق أو اكتب أي نص بترميز UTF-8، بما في ذلك محتوى الملفات أو بيانات API.",
   "importFromFileLabel": "استيراد من ملف",
   "hmacOutputLabel": "إخراج HMAC",
-  "hmacOutputDescription": "HMAC output for the current text input and secret key.",
-  "emptyStateDescription": "Enter a secret key and provide text or import a file to generate HMAC output.",
+  "hmacOutputDescription": "ناتج HMAC للنص الحالي والمفتاح السري.",
+  "emptyStateDescription": "أدخل مفتاحًا سريًا ونصًا أو استورد ملفًا لإنشاء ناتج HMAC.",
   "hexLabel": "سداسي عشري",
   "base64Label": "Base64",
   "copyResultLabel": "نسخ النتيجة",
-  "copiedLabel": "تم النسخ"
+  "copiedLabel": "تم النسخ",
+  "fileGenerationError": "تعذّر إنشاء ناتج HMAC للملف.",
+  "textGenerationError": "تعذّر إنشاء ناتج HMAC للنص."
 }
