@@ -22,13 +22,15 @@ export async function encodeNative(
   const channels = Math.max(...clips.map((clip) => clip.channels.length))
   const config = nativeConfig(format, { channels, quality: settings.quality })
   const target = new BufferTarget()
-  const formats = {
-    m4a: Mp4OutputFormat,
-    webm: WebMOutputFormat,
-    mp3: Mp3OutputFormat,
-    ogg: OggOutputFormat,
-  }
-  const output = new Output({ format: new formats[format](), target })
+  const container =
+    format === "m4a"
+      ? new Mp4OutputFormat()
+      : format === "webm"
+        ? new WebMOutputFormat()
+        : format === "mp3"
+          ? new Mp3OutputFormat()
+          : new OggOutputFormat()
+  const output = new Output({ format: container, target })
   const source = new AudioSampleSource({
     codec: CODECS[format],
     fullCodecString: config.codec,
