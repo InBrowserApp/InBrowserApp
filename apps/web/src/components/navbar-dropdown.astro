@@ -28,6 +28,38 @@ const { label } = Astro.props
   .dropdown-content {
     max-height: min(32rem, 70dvh);
     max-width: calc(100vw - 2rem);
+    opacity: 0;
+    transform: translateY(-0.5rem) scale(0.95);
+    transform-origin: top right;
+    transition: opacity 100ms ease-out, transform 100ms ease-out;
+  }
+
+  /* Keep the native disclosure visible until the exit transition finishes. */
+  details::details-content {
+    transition: content-visibility 100ms allow-discrete;
+  }
+
+  details[open] .dropdown-content {
+    opacity: 1;
+    transform: none;
+  }
+
+  .dropdown-content:dir(rtl) {
+    transform-origin: top left;
+  }
+
+  @starting-style {
+    details[open] .dropdown-content {
+      opacity: 0;
+      transform: translateY(-0.5rem) scale(0.95);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    details::details-content,
+    .dropdown-content {
+      transition: none;
+    }
   }
 
   .dropdown-content :global([data-dropdown-item]) {
@@ -59,7 +91,7 @@ const { label } = Astro.props
     if (restoreFocus) dropdown.querySelector("summary")?.focus()
   }
 
-  document.addEventListener("click", (event) => {
+  function dismissDropdowns(event: Event) {
     const target = event.target
     if (!(target instanceof Element)) return
 
@@ -67,21 +99,14 @@ const { label } = Astro.props
       .querySelectorAll<HTMLDetailsElement>(`${selector}[open]`)
       .forEach((dropdown) => {
         if (!dropdown.contains(target)) closeDropdown(dropdown)
-        else if (target.closest("[data-dropdown-item]")) {
+        else if (event.type === "click" && target.closest("[data-dropdown-item]")) {
           closeDropdown(dropdown, true)
         }
       })
-  })
+  }
 
-  document.addEventListener("focusin", (event) => {
-    document
-      .querySelectorAll<HTMLDetailsElement>(`${selector}[open]`)
-      .forEach((dropdown) => {
-        if (event.target instanceof Node && !dropdown.contains(event.target)) {
-          closeDropdown(dropdown)
-        }
-      })
-  })
+  document.addEventListener("click", dismissDropdowns)
+  document.addEventListener("focusin", dismissDropdowns)
 
   document.addEventListener("keydown", (event) => {
     if (!(event.target instanceof Element)) return

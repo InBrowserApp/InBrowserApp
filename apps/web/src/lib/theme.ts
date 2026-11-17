@@ -44,12 +44,10 @@ export function setupThemeControls() {
 
   applyTheme()
   document.addEventListener("click", onClick)
-  document.addEventListener("astro:page-load", applyTheme)
   media.addEventListener("change", applyTheme)
 
   return () => {
     document.removeEventListener("click", onClick)
-    document.removeEventListener("astro:page-load", applyTheme)
     media.removeEventListener("change", applyTheme)
   }
 }

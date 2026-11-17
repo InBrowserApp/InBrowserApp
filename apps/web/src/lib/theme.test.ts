@@ -88,17 +88,3 @@ test("continues switching when persistence is blocked", () => {
   expect(document.documentElement.dataset.theme).toBe("dark")
   expect(document.documentElement.classList.contains("dark")).toBe(true)
 })
-
-test("refreshes controls after Astro navigation without retaining the old DOM", () => {
-  dispose = setupThemeControls()
-  choose("dark")
-  renderControls()
-  document.dispatchEvent(new Event("astro:page-load"))
-  expect(
-    document
-      .querySelector('[data-theme-option="dark"]')
-      ?.getAttribute("aria-pressed")
-  ).toBe("true")
-  choose("light")
-  expect(document.documentElement.classList.contains("dark")).toBe(false)
-})
