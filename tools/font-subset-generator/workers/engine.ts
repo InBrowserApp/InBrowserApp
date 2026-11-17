@@ -6,6 +6,10 @@ import { characters, subsetCharacters } from "../core/subset"
 import { decodeWoff } from "../core/woff"
 import type { SubsetOutput, SubsetRequest } from "../types"
 
+function isDefaultIgnorable(cp: number) {
+  return /\p{Default_Ignorable_Code_Point}/u.test(String.fromCodePoint(cp))
+}
+
 export async function generateSubset(
   { input, text, format }: SubsetRequest,
   wasm: Parameters<typeof init>[0]
@@ -16,12 +20,15 @@ export async function generateSubset(
   if (kind === "woff2") bytes = new Uint8Array(await decompress(bytes))
   if (kind === "woff") bytes = decodeWoff(bytes)
   const source = readFont(bytes)
-  const unicodes = subsetCharacters(text).filter(source.hasCharacter)
-  if (!unicodes.length) throw new Error("NO_CHARACTERS")
+  const requested = subsetCharacters(text)
+  if (!requested.some(source.hasCharacter)) throw new Error("NO_CHARACTERS")
+  // Variation selectors live in cmap format 14 rather than the nominal cmap.
+  // HarfBuzz needs them in the Unicode set to preserve variation sequences.
+  const unicodes = requested.filter(
+    (cp) => source.hasCharacter(cp) || isDefaultIgnorable(cp)
+  )
   const missing = characters(text).filter(
-    (cp) =>
-      !source.hasCharacter(cp) &&
-      !/\p{Default_Ignorable_Code_Point}/u.test(String.fromCodePoint(cp))
+    (cp) => !source.hasCharacter(cp) && !isDefaultIgnorable(cp)
   )
   await init(wasm)
   const sfnt = await subset(bytes, { unicodes, layoutFeatures: "*" })

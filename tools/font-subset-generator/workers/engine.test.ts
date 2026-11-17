@@ -63,14 +63,66 @@ describe("real HarfBuzz and WOFF2 processing", () => {
       wasm
     )
     expect(result.missing).toEqual([0x4e2d])
-    expect(result.unicodes).toEqual([65])
+    expect(result.unicodes).toEqual([65, 0x200d, 0xfe0f])
   })
+  it.each(["sfnt", "woff2"] as const)(
+    "preserves CJK and emoji variation sequences in %s output",
+    async (format) => {
+      const result = await generateSubset(
+        request("variations.ttf", "一\u{E0100}❤\ufe0f", format),
+        wasm
+      )
+      expect(result.unicodes).toEqual([0x2764, 0x4e00, 0xfe0f, 0xe0100])
+      expect(result.missing).toEqual([])
+      const sfnt =
+        format === "woff2"
+          ? await decompress(result.output)
+          : new Uint8Array(result.output)
+      const view = new DataView(sfnt.buffer, sfnt.byteOffset, sfnt.byteLength)
+      const entries = Array.from(
+        { length: view.getUint16(4) },
+        (_, i) => 12 + i * 16
+      )
+      const cmapEntry = entries.find(
+        (offset) => view.getUint32(offset) === 0x636d6170
+      )!
+      const cmap = view.getUint32(cmapEntry + 8)
+      const subtables = Array.from(
+        { length: view.getUint16(cmap + 2) },
+        (_, i) => cmap + view.getUint32(cmap + 8 + i * 8)
+      )
+      const variation = subtables.find(
+        (offset) => view.getUint16(offset) === 14
+      )
+      expect(variation).toBeDefined()
+      const offset = variation!
+      const records = Array.from(
+        { length: view.getUint32(offset + 6) },
+        (_, i) => offset + 10 + i * 11
+      )
+      const uint24 = (at: number) =>
+        view.getUint8(at) * 65536 + view.getUint16(at + 1)
+      const mappings = records.map((at) => {
+        const nonDefault = offset + view.getUint32(at + 7)
+        expect(view.getUint32(nonDefault)).toBe(1)
+        expect(view.getUint16(nonDefault + 7)).toBeGreaterThan(0)
+        return [uint24(at), uint24(nonDefault + 4)]
+      })
+      expect(mappings).toEqual([
+        [0xfe0f, 0x2764],
+        [0xe0100, 0x4e00],
+      ])
+    }
+  )
   it("rejects empty, unsupported and malformed inputs without a partial result", async () => {
     await expect(
       generateSubset(request("static.ttf", " \n\t"), wasm)
     ).rejects.toThrow("EMPTY_TEXT")
     await expect(
       generateSubset(request("static.ttf", "中文"), wasm)
+    ).rejects.toThrow("NO_CHARACTERS")
+    await expect(
+      generateSubset(request("static.ttf", "\u200d\ufe0f"), wasm)
     ).rejects.toThrow("NO_CHARACTERS")
     await expect(
       generateSubset(

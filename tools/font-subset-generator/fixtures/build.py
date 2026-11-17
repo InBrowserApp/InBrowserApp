@@ -4,6 +4,7 @@ from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.pens.t2CharStringPen import T2CharStringPen
 from fontTools.feaLib.builder import addOpenTypeFeaturesFromString
+from fontTools.ttLib.tables._c_m_a_p import CmapSubtable
 
 root = Path(__file__).parent
 order = ['.notdef', 'space', 'A', 'B', 'C', 'e', 'acute', 'eacute', 'f', 'i', 'fi', 'A.alt', 'smile']
@@ -32,13 +33,30 @@ def build(cff=False):
     addOpenTypeFeaturesFromString(fb.font, 'feature liga { sub f i by fi; } liga; feature ss01 { sub A by A.alt; } ss01;')
     return fb
 
-static = build()
-static.save(root / 'static.ttf')
-for flavor in ['woff', 'woff2']:
-    static.font.flavor = flavor
-    static.font.save(root / f'static.{flavor}')
-variable = build()
-variable.setupFvar([('wght', 100, 400, 900, 'Weight'), ('wdth', 75, 100, 125, 'Width')], [])
-variable.setupGvar({name: [] for name in order})
-variable.save(root / 'variable.ttf')
-build(cff=True).save(root / 'cff.otf')
+def build_variations():
+    fb = build()
+    for table in fb.font['cmap'].tables:
+        if table.isUnicode():
+            table.cmap[0x4e00] = 'A'
+            table.cmap[0x2764] = 'B'
+    variations = CmapSubtable.newSubtable(14)
+    variations.platformID = 0
+    variations.platEncID = 5
+    variations.language = 0
+    variations.cmap = {}
+    variations.uvsDict = {0xfe0f: [(0x2764, 'C')], 0xe0100: [(0x4e00, 'A.alt')]}
+    fb.font['cmap'].tables.append(variations)
+    return fb
+
+if __name__ == '__main__':
+    static = build()
+    static.save(root / 'static.ttf')
+    for flavor in ['woff', 'woff2']:
+        static.font.flavor = flavor
+        static.font.save(root / f'static.{flavor}')
+    variable = build()
+    variable.setupFvar([('wght', 100, 400, 900, 'Weight'), ('wdth', 75, 100, 125, 'Width')], [])
+    variable.setupGvar({name: [] for name in order})
+    variable.save(root / 'variable.ttf')
+    build(cff=True).save(root / 'cff.otf')
+    build_variations().save(root / 'variations.ttf')
