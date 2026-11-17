@@ -11,7 +11,7 @@ export const FORMATS = [
   { id: "ttml", label: "Timed Text · TTML", extension: "ttml" },
   {
     id: "dfxp",
-    label: "Distribution Format Exchange · DFXP",
+    label: "Distribution Format Exchange Profile · DFXP",
     extension: "dfxp",
   },
   { id: "srv3", label: "YouTube · SRV3", extension: "srv3" },

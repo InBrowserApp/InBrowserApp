@@ -8,7 +8,14 @@ import {
   CardFooter,
 } from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
-import { Upload, X } from "@workspace/ui/icons"
+import {
+  ArrowLeftRight,
+  FileText,
+  LoaderCircle,
+  Trash2,
+  Upload,
+  X,
+} from "@workspace/ui/icons"
 import type { Messages } from "../types"
 
 export function SubtitleInput({
@@ -60,10 +67,11 @@ export function SubtitleInput({
             disabled={busy}
             onClick={() => fileInput.current!.click()}
           >
-            <Upload data-icon="inline-start" />
+            <Upload data-icon="inline-start" aria-hidden="true" />
             {m.open}
           </Button>
           <Button variant="ghost" size="sm" disabled={busy} onClick={onExample}>
+            <FileText data-icon="inline-start" aria-hidden="true" />
             {m.example}
           </Button>
           <Button
@@ -72,6 +80,7 @@ export function SubtitleInput({
             disabled={busy || (!input && !files.length)}
             onClick={onClear}
           >
+            <Trash2 data-icon="inline-start" aria-hidden="true" />
             {m.clear}
           </Button>
           <input
@@ -131,6 +140,15 @@ export function SubtitleInput({
           disabled={busy || (!input.trim() && !files.length)}
           onClick={onConvert}
         >
+          {busy ? (
+            <LoaderCircle
+              data-icon="inline-start"
+              aria-hidden="true"
+              className="animate-spin"
+            />
+          ) : (
+            <ArrowLeftRight data-icon="inline-start" aria-hidden="true" />
+          )}
           {busy ? m.converting : m.convert}
         </Button>
       </CardFooter>

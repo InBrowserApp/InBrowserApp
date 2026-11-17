@@ -11,7 +11,13 @@ import {
 } from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { SelectItem } from "@workspace/ui/components/ui/select"
-import { ArrowRight, Code, Eye, TriangleAlert } from "@workspace/ui/icons"
+import {
+  ArrowRight,
+  Code,
+  Download,
+  Eye,
+  TriangleAlert,
+} from "@workspace/ui/icons"
 import { FORMATS } from "../core/formats"
 import { clock } from "../core/time"
 import { plainText } from "../core/text"
@@ -234,7 +240,10 @@ export function SubtitleOutput({
             label={m.download}
           />
         ) : (
-          <Button disabled>{m.download}</Button>
+          <Button disabled>
+            <Download data-icon="inline-start" aria-hidden="true" />
+            {m.download}
+          </Button>
         )}
         {zip ? (
           <DocumentDownload
