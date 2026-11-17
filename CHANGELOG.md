@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.9.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.8.0...v2.9.0) (2026-11-17)
+
+
+### Features
+
+* add a browser-only audio trimmer and merger ([#1315](https://github.com/InBrowserApp/InBrowserApp/issues/1315)) ([53f1ba9](https://github.com/InBrowserApp/InBrowserApp/commit/53f1ba9a18116a66c6888f91e5ae97f9d77bb393)), closes [#1312](https://github.com/InBrowserApp/InBrowserApp/issues/1312)
+
+
+### Performance Improvements
+
+* **ci:** compress release archives with zstd long matching ([#1335](https://github.com/InBrowserApp/InBrowserApp/issues/1335)) ([ffd6354](https://github.com/InBrowserApp/InBrowserApp/commit/ffd63543e52ec064be696fa7c12f43a909b3a1f3))
+* lazy-load localized home search suggestions ([#1323](https://github.com/InBrowserApp/InBrowserApp/issues/1323)) ([dc036a4](https://github.com/InBrowserApp/InBrowserApp/commit/dc036a478cd087476854c700a547a44bb85d926f)), closes [#1322](https://github.com/InBrowserApp/InBrowserApp/issues/1322)
+* replace home search hydration with native Astro ([#1333](https://github.com/InBrowserApp/InBrowserApp/issues/1333)) ([b107bd3](https://github.com/InBrowserApp/InBrowserApp/commit/b107bd3362ac10bc14c1a974a35069432e9c2d4f)), closes [#1332](https://github.com/InBrowserApp/InBrowserApp/issues/1332)
+* replace language suggestion island with an Astro template ([#1328](https://github.com/InBrowserApp/InBrowserApp/issues/1328)) ([430d658](https://github.com/InBrowserApp/InBrowserApp/commit/430d6585fec198b3c79c5eab756a4fabf644fe5d))
+* replace navbar islands with native Astro menus ([#1329](https://github.com/InBrowserApp/InBrowserApp/issues/1329)) ([57231f4](https://github.com/InBrowserApp/InBrowserApp/commit/57231f46ab920d392f5df6423509e7e27f5f4504))
+* **web:** replace directory search island with native Astro ([#1331](https://github.com/InBrowserApp/InBrowserApp/issues/1331)) ([95f74a6](https://github.com/InBrowserApp/InBrowserApp/commit/95f74a6bffa1c93c5a8c1c2e1afc8ac290744c86))
+
 ## [2.8.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.7.0...v2.8.0) (2026-11-17)
 
 
