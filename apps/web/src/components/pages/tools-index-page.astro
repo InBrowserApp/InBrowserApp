@@ -87,37 +87,35 @@ const categoryNavProps = {
   current="tools"
   pathname={pathname}
 >
-  <main class="flex flex-col gap-8">
-    <header class="flex max-w-3xl flex-col gap-3">
-      {category && (
-        <PageBreadcrumbs language={language} items={[
-          { label: catalog.tools.categoryAll, pathname: "/tools" },
-          { label: getCategoryLabel(catalog.tools.categories, category), pathname },
-        ]} />
-      )}
-      <h1 class="font-heading text-3xl leading-tight tracking-[var(--tracking-display)] text-balance sm:text-4xl">{heading}</h1>
-      <p class="text-base leading-7 text-muted-foreground">{description}</p>
-    </header>
+  <header class="flex max-w-3xl flex-col gap-3">
+    {category && (
+      <PageBreadcrumbs language={language} items={[
+        { label: catalog.tools.categoryAll, pathname: "/tools" },
+        { label: getCategoryLabel(catalog.tools.categories, category), pathname },
+      ]} />
+    )}
+    <h1 class="font-heading text-3xl leading-tight tracking-[var(--tracking-display)] text-balance sm:text-4xl">{heading}</h1>
+    <p class="text-base leading-7 text-muted-foreground">{description}</p>
+  </header>
 
-    <div data-tools-directory class="grid items-start gap-6 lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-10">
-      <CategorySidebar {...categoryNavProps} />
-      <div class="flex min-w-0 flex-col gap-4">
-        <CategoryChips {...categoryNavProps} />
-        <ToolsDirectorySearch client:load language={language} messages={searchMessages} />
-        <ToolList
-          entries={rankToolEntries(entries, "", language)}
-          language={language}
-          categoryLabels={catalog.tools.categories}
-          showCategory={!category}
+  <div data-tools-directory class="grid items-start gap-6 lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-10">
+    <CategorySidebar {...categoryNavProps} />
+    <div class="flex min-w-0 flex-col gap-4">
+      <CategoryChips {...categoryNavProps} />
+      <ToolsDirectorySearch client:load language={language} messages={searchMessages} />
+      <ToolList
+        entries={rankToolEntries(entries, "", language)}
+        language={language}
+        categoryLabels={catalog.tools.categories}
+        showCategory={!category}
+      />
+      <div data-tool-empty hidden={entries.length !== 0}>
+        <DirectoryEmptyState
+          icon={entries.length === 0 ? "registry" : "search"}
+          title={entries.length === 0 ? catalog.tools.emptyRegistryTitle : catalog.tools.emptySearchTitle}
+          description={entries.length === 0 ? catalog.tools.emptyRegistryDescription : catalog.tools.emptySearchDescription}
         />
-        <div data-tool-empty hidden={entries.length !== 0}>
-          <DirectoryEmptyState
-            icon={entries.length === 0 ? "registry" : "search"}
-            title={entries.length === 0 ? catalog.tools.emptyRegistryTitle : catalog.tools.emptySearchTitle}
-            description={entries.length === 0 ? catalog.tools.emptyRegistryDescription : catalog.tools.emptySearchDescription}
-          />
-        </div>
       </div>
     </div>
-  </main>
+  </div>
 </MainLayout>
