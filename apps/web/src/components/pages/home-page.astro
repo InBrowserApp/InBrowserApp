@@ -9,7 +9,7 @@ import {
   Shield,
 } from "@workspace/ui/icons"
 import MainLayout from "@/layouts/main.astro"
-import { HomeSearch } from "@/components/pages/home-search"
+import HomeSearch from "@/components/pages/home-search.astro"
 import { localizePath } from "@/lib/site"
 import { formatSiteMessage, loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
@@ -101,7 +101,6 @@ const privacyFeatures = [
     <div class="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center">
       <div class="w-full sm:max-w-[32.5rem]">
         <HomeSearch
-          client:load
           language={language}
           categoryLabels={catalog.tools.categories}
           messages={searchMessages}

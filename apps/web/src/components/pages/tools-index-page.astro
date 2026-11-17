@@ -3,8 +3,9 @@ import { toolSearchIndex } from "@workspace/tool-registry"
 import MainLayout from "@/layouts/main.astro"
 import PageBreadcrumbs from "@/components/page-breadcrumbs.astro"
 import ToolsDirectorySearch from "@/components/pages/tools-directory/tools-directory-search.astro"
-import { CategoryChips, CategorySidebar } from "@/components/pages/tools-directory/category-nav"
-import { DirectoryEmptyState, ToolList } from "@/components/pages/tools-directory/tool-list"
+import CategoryNav from "@/components/pages/tools-directory/category-nav.astro"
+import DirectoryEmptyState from "@/components/pages/tools-directory/directory-empty-state.astro"
+import ToolList from "@/components/pages/tools-directory/tool-list.astro"
 import { rankToolEntries } from "@/components/pages/tools-directory/search-core"
 import { formatSiteMessage, loadSiteMessages } from "@/lib/site-messages"
 import { createPageSeo } from "@/lib/seo"
@@ -65,12 +66,10 @@ const searchMessages = {
   suggestionsHint: catalog.tools.suggestionsHint,
   suggestionsLabel: catalog.tools.suggestionsLabel,
 }
-const numberFormat = new Intl.NumberFormat(language)
 const categoryNavProps = {
   allLabel: catalog.tools.categoryAll,
   categoriesLabel: catalog.tools.categoriesLabel,
   counts: categoryCounts,
-  formatCount: (count: number) => numberFormat.format(count),
   labels: catalog.tools.categories,
   language,
   selected: category ?? null,
@@ -99,9 +98,9 @@ const categoryNavProps = {
   </header>
 
   <div data-tools-directory class="grid items-start gap-6 lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-10">
-    <CategorySidebar {...categoryNavProps} />
+    <CategoryNav {...categoryNavProps} variant="sidebar" />
     <div class="flex min-w-0 flex-col gap-4">
-      <CategoryChips {...categoryNavProps} />
+      <CategoryNav {...categoryNavProps} variant="chips" />
       <ToolsDirectorySearch language={language} messages={searchMessages} />
       <ToolList
         entries={rankToolEntries(entries, "", language)}

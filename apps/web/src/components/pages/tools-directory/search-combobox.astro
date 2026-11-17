@@ -1,0 +1,70 @@
+---
+import { localizePath, type SiteLanguage } from "@/lib/site"
+import type { SearchMessages } from "./search-types"
+
+interface Props {
+  id: string
+  language: SiteLanguage
+  categoryLabels: Readonly<Record<string, string>>
+  messages: SearchMessages
+  variant?: "hero" | "directory"
+}
+
+const { id, language, categoryLabels, messages, variant = "directory" } = Astro.props
+const hero = variant === "hero"
+---
+
+<form
+  role="search"
+  action={localizePath("/tools", language)}
+  method="get"
+  data-search-form
+  data-category-labels={JSON.stringify(categoryLabels)}
+  class="relative min-w-0"
+>
+  <label for={id} class="sr-only">{messages.searchLabel}</label>
+  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class:list={["pointer-events-none absolute top-1/2 z-10 size-4 -translate-y-1/2 text-muted-foreground", hero ? "start-3.5" : "start-3"]}>
+    <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
+  </svg>
+  <input
+    id={id}
+    name="query"
+    type="search"
+    role="combobox"
+    autocomplete="off"
+    aria-expanded="false"
+    aria-controls={`${id}-suggestions`}
+    aria-autocomplete="list"
+    placeholder={messages.searchPlaceholder}
+    class:list={[
+      "w-full min-w-0 border border-input bg-transparent py-1 pe-12 text-base transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 md:text-sm dark:bg-input/30 [&::-webkit-search-cancel-button]:appearance-none",
+      hero ? "h-12 rounded-xl ps-10.5 shadow-xs" : "h-10 rounded-lg ps-9.5",
+    ]}
+  />
+  <button data-search-clear type="button" hidden aria-label={messages.clearSearchLabel} class:list={["absolute top-1/2 inline-flex size-6 -translate-y-1/2 items-center justify-center rounded-[7px] bg-muted text-muted-foreground transition-colors hover:bg-border hover:text-foreground", hero ? "end-2.5" : "end-2"]}>
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" class="size-3"><path d="m18 6-12 12M6 6l12 12" /></svg>
+  </button>
+  <kbd data-search-shortcut aria-hidden="true" class="absolute end-3 top-1/2 -translate-y-1/2 rounded-md border border-border px-1.5 py-0.5 font-mono text-[11px] text-muted-foreground max-sm:hidden">Ctrl K</kbd>
+  <div data-search-panel hidden class="absolute inset-x-0 top-[calc(100%+0.5rem)] z-10 rounded-xl border border-border bg-popover p-1.5 shadow-[0_10px_40px_color-mix(in_oklab,var(--foreground)_12%,transparent)]">
+    <ul role="listbox" id={`${id}-suggestions`} aria-label={messages.suggestionsLabel} class="m-0 flex list-none flex-col p-0"></ul>
+    <div data-search-empty hidden class="px-3 py-4 text-center">
+      <p class="text-[13px] font-medium text-popover-foreground">{messages.emptySearchTitle}</p>
+      <p class="mt-1 text-xs text-muted-foreground">{messages.emptySearchDescription}</p>
+    </div>
+    <div data-search-footer class="mt-1.5 flex items-center justify-between gap-3 border-t border-border/70 px-3 pt-2 pb-1 font-mono text-[11px] text-foreground/70">
+      <span data-search-count data-one={messages.suggestionMatchCountOne} data-many={messages.suggestionMatchCount}></span>
+      <span class="truncate">{messages.suggestionsHint}</span>
+    </div>
+  </div>
+  <template data-search-option>
+    <li role="presentation">
+      <a role="option" tabindex="-1" aria-selected="false" data-astro-prefetch="false" class="group/option flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-[9px] aria-selected:bg-muted">
+        <span class="min-w-0 truncate text-sm text-popover-foreground"><span data-pre></span><mark data-match class="rounded-[3px] bg-muted font-semibold text-inherit group-aria-selected/option:bg-border/70"></mark><span data-post></span></span>
+        <span class="flex shrink-0 items-center gap-2">
+          <span data-category class="text-[10px] font-medium tracking-[0.12em] text-foreground/70 uppercase"></span>
+          <kbd aria-hidden="true" class="invisible rounded-[5px] border border-border px-1 font-mono text-[10px] font-medium text-muted-foreground group-aria-selected/option:visible">↵</kbd>
+        </span>
+      </a>
+    </li>
+  </template>
+</form>

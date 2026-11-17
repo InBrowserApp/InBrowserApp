@@ -1,9 +1,32 @@
 import { getViteConfig } from "astro/config"
+import { configDefaults } from "vitest/config"
+
+const astroDomTests = [
+  "apps/web/src/components/pages/tools-directory/*-client.test.ts",
+]
 
 export default getViteConfig({
   test: {
-    include: ["**/*.test.{ts,tsx}"],
     environment: "happy-dom",
+    // Define includes per project: Vite merges inherited include arrays.
+    projects: [
+      {
+        extends: true,
+        test: {
+          name: "default",
+          include: ["**/*.test.{ts,tsx}"],
+          exclude: [...configDefaults.exclude, ...astroDomTests],
+        },
+      },
+      {
+        extends: true,
+        test: {
+          name: "astro-dom",
+          environment: "./tests/astro-dom-environment.ts",
+          include: astroDomTests,
+        },
+      },
+    ],
     // Use the DOM environment's storage instead of Node's file-backed storage.
     execArgv: process.allowedNodeEnvironmentFlags.has(
       "--no-experimental-webstorage"
