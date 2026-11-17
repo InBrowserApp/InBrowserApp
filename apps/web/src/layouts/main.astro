@@ -2,9 +2,8 @@
 import "@/styles/global.css"
 import SiteFooter from "@/components/site-footer.astro"
 import SiteNavbar from "@/components/site-navbar.astro"
-import { LanguageSuggestion } from "@/components/language-suggestion/language-suggestion"
+import LanguageSuggestion from "@/components/language-suggestion/language-suggestion.astro"
 import {
-  createLanguageOptions,
   getSiteLanguageDirection,
   resolveSiteLanguage,
   type SiteLanguage,
@@ -39,11 +38,6 @@ const {
 
 const language = resolveSiteLanguage(lang)
 const dir = getSiteLanguageDirection(language)
-const languageOptions = createLanguageOptions(
-  pathname,
-  language,
-  availableLanguages
-)
 ---
 
 <html lang={lang} dir={dir} data-theme="system">
@@ -111,10 +105,6 @@ const languageOptions = createLanguageOptions(
         <SiteFooter language={language} />
       </div>
     </div>
-    <LanguageSuggestion
-      client:only="react"
-      options={languageOptions}
-      currentLanguage={language}
-    />
+    <LanguageSuggestion />
   </body>
 </html>

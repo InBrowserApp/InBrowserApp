@@ -1,0 +1,53 @@
+---
+import { buttonVariants } from "@workspace/ui/components/ui/button"
+import { X } from "@workspace/ui/icons"
+import { cn } from "@workspace/ui/lib/utils"
+---
+
+<!-- Inert, untranslated markup; only populated when a suggestion is needed. -->
+<template id="language-suggestion-template">
+  <div
+    class="fixed end-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-50 max-w-[min(20rem,calc(100vw-2rem))] motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4"
+    role="status"
+    aria-live="polite"
+  >
+    <div
+      data-content
+      class="flex flex-col gap-3 rounded-lg border border-border bg-popover p-4 text-popover-foreground shadow-lg"
+    >
+      <div class="flex items-start justify-between gap-2">
+        <p data-message class="text-sm font-medium"></p>
+        <button
+          data-close
+          type="button"
+          class="-m-1 shrink-0 rounded-sm p-1 text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <X className="size-4" />
+        </button>
+      </div>
+      <div class="flex items-center justify-end gap-2">
+        <button
+          data-dismiss
+          type="button"
+          data-slot="button"
+          data-variant="ghost"
+          data-size="sm"
+          class={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
+        ></button>
+        <a
+          data-switch
+          data-slot="button"
+          data-variant="default"
+          data-size="sm"
+          class={cn(buttonVariants({ size: "sm" }))}
+        ></a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  import { setupLanguageSuggestion } from "./language-suggestion"
+
+  setupLanguageSuggestion()
+</script>
