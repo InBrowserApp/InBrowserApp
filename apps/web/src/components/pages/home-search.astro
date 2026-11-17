@@ -1,0 +1,25 @@
+---
+import SearchCombobox from "./tools-directory/search-combobox.astro"
+import type { SiteLanguage } from "@/lib/site"
+import type { SearchMessages } from "./tools-directory/search-types"
+
+interface Props {
+  language: SiteLanguage
+  categoryLabels: Readonly<Record<string, string>>
+  messages: SearchMessages
+}
+---
+
+<home-search lang={Astro.props.language} class="block w-full">
+  <SearchCombobox {...Astro.props} id="home-search" variant="hero" />
+</home-search>
+
+<script>
+  import { loadToolSearchSuggestions } from "@workspace/tool-registry/search-suggestions"
+  import { defineSearchElement, setupSearch } from "./tools-directory/search-client"
+
+  defineSearchElement("home-search", (root) => setupSearch(root, {
+    entries: null,
+    loadEntries: () => loadToolSearchSuggestions(root.lang),
+  }).destroy)
+</script>

@@ -1,0 +1,17 @@
+---
+import { LayoutGrid, Search } from "@workspace/ui/icons"
+
+interface Props {
+  icon: "registry" | "search"
+  title: string
+  description: string
+}
+const { icon, title, description } = Astro.props
+const Icon = icon === "registry" ? LayoutGrid : Search
+---
+
+<div class="rounded-xl border border-dashed border-border/80 bg-muted/30 px-6 py-12 text-center">
+  <Icon className="mx-auto size-6 text-muted-foreground" aria-hidden="true" />
+  <h3 class="mt-3 font-medium">{title}</h3>
+  <p class="mt-1 text-sm text-muted-foreground">{description}</p>
+</div>
