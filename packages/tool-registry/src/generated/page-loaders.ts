@@ -131,6 +131,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ical-event-generator": () => import("@tool/ical-event-generator/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-palette-extractor": () => import("@tool/image-palette-extractor/page"),
+  "image-redactor": () => import("@tool/image-redactor/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
   "image-to-avif-converter": () => import("@tool/image-to-avif-converter/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),

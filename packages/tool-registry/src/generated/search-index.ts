@@ -12746,6 +12746,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "image-redactor",
+    category: "image",
+    icon: "image",
+    tags: [
+      "image",
+      "privacy",
+      "redact",
+      "blur",
+      "mosaic",
+      "pixelate",
+      "censor",
+    ],
+    locales: {
+      ar: {
+        name: "أداة إخفاء معلومات الصور",
+        description:
+          "أخفِ المعلومات الخاصة بألوان مصمتة أو تمويه أو فسيفساء. ارسم مناطق الإخفاء وحرّكها وغيّر حجمها ودوّرها محليًا في متصفحك.",
+      },
+      de: {
+        name: "Bilder schwärzen",
+        description:
+          "Verberge private Informationen mit Volltonfarben, Weichzeichnen oder Mosaik. Zeichne, verschiebe, skaliere und drehe Abdeckungen lokal in deinem Browser.",
+      },
+      en: {
+        name: "Image Redactor",
+        description:
+          "Hide private information with solid colors, blur, or mosaic. Draw, move, resize, and rotate redactions locally in your browser.",
+      },
+      es: {
+        name: "Ocultador de información en imágenes",
+        description:
+          "Oculta información privada con colores sólidos, desenfoque o mosaico. Dibuja, mueve, cambia el tamaño y gira las zonas de ocultación localmente en tu navegador.",
+      },
+      fr: {
+        name: "Masquage d’images",
+        description:
+          "Masquez les informations privées avec une couleur unie, du flou ou une mosaïque. Dessinez, déplacez, redimensionnez et faites pivoter les zones de masquage localement dans votre navigateur.",
+      },
+      he: {
+        name: "כלי להסתרת מידע בתמונות",
+        description:
+          "הסתרת מידע פרטי באמצעות צבעים אחידים, טשטוש או פסיפס. ציור, הזזה, שינוי גודל וסיבוב של אזורי הסתרה, מקומית בדפדפן.",
+      },
+      hi: {
+        name: "इमेज में जानकारी छिपाने का टूल",
+        description:
+          "ठोस रंग, धुंधलेपन या मोज़ेक से निजी जानकारी छिपाएँ। अपने ब्राउज़र में स्थानीय रूप से क्षेत्र बनाएँ, खिसकाएँ, उनका आकार बदलें और घुमाएँ।",
+      },
+      id: {
+        name: "Penyensor Gambar",
+        description:
+          "Sembunyikan informasi pribadi dengan warna solid, buram, atau mosaik. Gambar, pindahkan, ubah ukuran, dan putar area sensor secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Oscuratore di immagini",
+        description:
+          "Nascondi le informazioni private con colori uniformi, sfocatura o mosaico. Disegna, sposta, ridimensiona e ruota le aree oscurate localmente nel browser.",
+      },
+      ja: {
+        name: "画像の情報隠しツール",
+        description:
+          "単色、ぼかし、モザイクで個人情報を隠せます。ブラウザー内で領域を描画し、移動、サイズ変更、回転ができます。",
+      },
+      ko: {
+        name: "이미지 가리기 도구",
+        description:
+          "단색, 흐림 또는 모자이크로 개인 정보를 숨기세요. 브라우저에서 기기 내 처리를 통해 가릴 영역을 그리거나 이동하고, 크기를 조절하거나 회전할 수 있습니다.",
+      },
+      ms: {
+        name: "Penutup Maklumat Imej",
+        description:
+          "Sembunyikan maklumat peribadi dengan warna pejal, kabur atau mozek. Lukis, alih, ubah saiz dan putar kawasan penutupan secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeeldingen afschermen",
+        description:
+          "Verberg privégegevens met effen kleuren, vervaging of mozaïek. Teken, verplaats, vergroot, verklein en draai afschermingen lokaal in je browser.",
+      },
+      no: {
+        name: "Bildesladding",
+        description:
+          "Skjul privat informasjon med ensfarget sladding, uskarphet eller mosaikk. Tegn, flytt, endre størrelse og roter sladdeområder lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Anonimizator obrazów",
+        description:
+          "Ukrywaj poufne informacje jednolitym kolorem, rozmyciem lub mozaiką. Rysuj, przesuwaj, zmieniaj rozmiar i obracaj zasłonięcia lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Ocultador de informações em imagens",
+        description:
+          "Oculte informações privadas com cores sólidas, desfoque ou mosaico. Desenhe, mova, redimensione e gire as regiões de ocultação localmente no navegador.",
+      },
+      ru: {
+        name: "Скрытие данных на изображении",
+        description:
+          "Скрывайте личные данные сплошным цветом, размытием или мозаикой. Рисуйте, перемещайте, меняйте размер и поворачивайте области локально в браузере.",
+      },
+      sv: {
+        name: "Bildmaskering",
+        description:
+          "Dölj privat information med enfärgade ytor, oskärpa eller mosaik. Rita, flytta, ändra storlek och rotera maskeringar lokalt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือปิดบังข้อมูลในรูปภาพ",
+        description:
+          "ปิดบังข้อมูลส่วนตัวด้วยสีทึบ เบลอ หรือโมเสก วาด ย้าย ปรับขนาด และหมุนบริเวณปิดบังได้ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Görselde Bilgi Gizleme",
+        description:
+          "Özel bilgileri düz renk, bulanıklaştırma veya mozaikle gizleyin. Gizleme alanlarını tarayıcınızda yerel olarak çizin, taşıyın, boyutlandırın ve döndürün.",
+      },
+      vi: {
+        name: "Công cụ che thông tin trong ảnh",
+        description:
+          "Che thông tin riêng tư bằng màu đặc, làm mờ hoặc khảm ô. Vẽ, di chuyển, đổi kích thước và xoay vùng che ngay trên thiết bị trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片打码器",
+        description:
+          "使用纯色、模糊或马赛克隐藏隐私信息。在浏览器本地绘制、移动、调整大小和旋转打码区域。",
+      },
+      "zh-TW": {
+        name: "圖片隱私遮蔽工具",
+        description:
+          "使用純色、模糊或馬賽克隱藏私人資訊。在瀏覽器中本機繪製、移動、調整大小及旋轉遮蔽區域。",
+      },
+    },
+  },
+  {
     slug: "image-resizer",
     category: "image",
     icon: "image",
