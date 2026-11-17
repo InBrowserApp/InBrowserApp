@@ -1,0 +1,49 @@
+---
+import { Check, Languages } from "@workspace/ui/icons"
+import { getLanguageNativeName } from "@workspace/ui/lib/language-native-names"
+import NavbarDropdown from "./navbar-dropdown.astro"
+
+interface Props {
+  label: string
+  options: readonly {
+    code: string
+    href: string
+    label?: string
+    current?: boolean
+  }[]
+}
+
+const { label, options } = Astro.props
+const sortedOptions = [...options].sort(
+  (a, b) => Number(!!b.current) - Number(!!a.current)
+)
+---
+
+<NavbarDropdown label={label}>
+  <Languages slot="icon" className="size-4" />
+  <div data-language-options>
+    {
+      sortedOptions.map((option) => (
+        <a
+          data-dropdown-item
+          href={option.href}
+          hreflang={option.code}
+          lang={option.code}
+          aria-current={option.current ? "true" : undefined}
+        >
+          {option.label ?? getLanguageNativeName(option.code)}
+          {option.current && (
+            <Check className="pointer-events-none absolute end-2 size-4" />
+          )}
+        </a>
+      ))
+    }
+  </div>
+</NavbarDropdown>
+
+<script>
+  import { setupLanguageSwitcher } from "@/lib/language-switcher"
+
+  const container = document.querySelector<HTMLElement>("[data-language-options]")
+  if (container) setupLanguageSwitcher(container)
+</script>

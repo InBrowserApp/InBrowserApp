@@ -1,6 +1,6 @@
 ---
-import { LanguageSwitcher } from "@workspace/ui/components/app/language-switcher"
-import { ThemeToggle } from "@workspace/ui/components/app/theme-toggle"
+import LanguageSwitcher from "./language-switcher.astro"
+import ThemeToggle from "./theme-toggle.astro"
 import {
   createLanguageOptions,
   localizePath,
@@ -51,7 +51,6 @@ const navItems = [
   <div class="ms-auto flex items-center gap-1">
     <PwaInstallButton label={catalog.site.installApp} />
     <ThemeToggle
-      client:idle
       labelLight={catalog.site.themeLight}
       labelDark={catalog.site.themeDark}
       labelSystem={catalog.site.themeSystem}
@@ -59,7 +58,6 @@ const navItems = [
     />
     <div class="mx-1 h-4 w-px bg-border" aria-hidden="true" />
     <LanguageSwitcher
-      client:idle
       label={catalog.site.languageLabel}
       options={languageOptions}
     />

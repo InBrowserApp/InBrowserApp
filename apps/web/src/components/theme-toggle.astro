@@ -1,0 +1,54 @@
+---
+import { Check, Moon, Sun, SunMoon } from "@workspace/ui/icons"
+import NavbarDropdown from "./navbar-dropdown.astro"
+
+interface Props {
+  labelLight: string
+  labelDark: string
+  labelSystem: string
+  srLabel: string
+}
+
+const { labelLight, labelDark, labelSystem, srLabel } = Astro.props
+const options = [
+  { value: "light", label: labelLight, Icon: Sun },
+  { value: "dark", label: labelDark, Icon: Moon },
+  { value: "system", label: labelSystem, Icon: SunMoon },
+]
+---
+
+<NavbarDropdown label={srLabel}>
+  <span slot="icon" class="flex items-center justify-center">
+    <Sun className="hidden size-4 [[data-theme=light]_&]:block" />
+    <Moon className="hidden size-4 [[data-theme=dark]_&]:block" />
+    <SunMoon className="hidden size-4 [[data-theme=system]_&]:block" />
+  </span>
+  <div role="group" aria-label={srLabel}>
+    {
+      options.map(({ value, label, Icon }) => (
+        <button
+          type="button"
+          data-dropdown-item
+          data-theme-option={value}
+          aria-pressed={value === "system"}
+        >
+          <Icon className="size-4" />
+          {label}
+          <Check className="theme-check pointer-events-none absolute end-2 hidden size-4" />
+        </button>
+      ))
+    }
+  </div>
+</NavbarDropdown>
+
+<style>
+  button[aria-pressed="true"] :global(.theme-check) {
+    display: block;
+  }
+</style>
+
+<script>
+  import { setupThemeControls } from "@/lib/theme"
+
+  setupThemeControls()
+</script>
