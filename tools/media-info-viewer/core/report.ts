@@ -1,8 +1,8 @@
 import type { MediaInfoResult, Track } from "mediainfo.js"
 import type { Messages } from "../types"
 
-export type Row = { label: string; value: string }
-export type Section = { title: string; rows: Row[] }
+type Row = { label: string; value: string }
+type Section = { title: string; rows: Row[] }
 
 export function scalar(value: unknown): string {
   return typeof value === "string" || typeof value === "number"
