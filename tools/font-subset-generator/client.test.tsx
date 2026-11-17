@@ -161,6 +161,25 @@ describe("Font Subset Generator interactions", () => {
     generate()
     await ready()
   })
+  it("keeps downloads available when the browser cannot construct a preview face", async () => {
+    vi.stubGlobal(
+      "FontFace",
+      class {
+        constructor() {
+          throw new Error("Unsupported font descriptor")
+        }
+      }
+    )
+    open()
+    choose()
+    enter()
+    generate()
+    await ready()
+    expect(await screen.findByText(messages.previewError)).toBeTruthy()
+    expect(
+      screen.getByRole("link", { name: messages.downloadCss })
+    ).toBeTruthy()
+  })
   it("aborts on replacement and unmount, and does not surface canceled errors", async () => {
     let reject!: (reason: unknown) => void
     process.mockImplementationOnce(

@@ -31,7 +31,8 @@ export function createResult(
   format: OutputFormat
 ): SubsetResult {
   const stem =
-    file.name.replace(/\.[^.]*$/, "").replace(/[^a-zA-Z0-9_-]/g, "_") || "font"
+    file.name.replace(/\.[^.]*$/, "").replace(/[^\p{L}\p{N}_-]/gu, "_") ||
+    "font"
   const extension = format === "woff2" ? "woff2" : result.extension
   const filename = `${stem}.subset.${extension}`
   const family = `${stem} Subset`

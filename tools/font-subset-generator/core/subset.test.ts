@@ -51,6 +51,17 @@ describe("Unicode text and CSS", () => {
     expect(result.originalSize).toBe(200)
     expect(result.text).toBe("ABC")
   })
+  it("preserves Unicode font filenames in downloads and CSS", () => {
+    const result = createResult(
+      output,
+      { name: "思源黑体-粗体.otf", size: 200 },
+      "A",
+      "woff2"
+    )
+    expect(result.filename).toBe("思源黑体-粗体.subset.woff2")
+    expect(result.css).toContain("font-family: '思源黑体-粗体 Subset'")
+    expect(result.css).toContain("url('./思源黑体-粗体.subset.woff2')")
+  })
   it("keeps SFNT outline flavor and falls back for an empty basename", () => {
     expect(
       createResult(output, { name: ".ttf", size: 40 }, "A", "sfnt").css

@@ -1,4 +1,4 @@
-import { useEffect, useId, useState } from "react"
+import { useEffect, useId, useMemo, useState } from "react"
 import {
   Alert,
   AlertDescription,
@@ -38,11 +38,13 @@ export function SubsetResultPanel({
   lang: string
   formatBytes: (bytes: number) => string
 }) {
-  const [fontBlob] = useState(
-    () => new Blob([result.output], { type: result.mime })
+  const fontBlob = useMemo(
+    () => new Blob([result.output], { type: result.mime }),
+    [result.output, result.mime]
   )
-  const [cssBlob] = useState(
-    () => new Blob([result.css], { type: "text/css;charset=utf-8" })
+  const cssBlob = useMemo(
+    () => new Blob([result.css], { type: "text/css;charset=utf-8" }),
+    [result.css]
   )
   const fontUrl = useBlobUrl(fontBlob)
   const cssUrl = useBlobUrl(cssBlob)
@@ -52,24 +54,26 @@ export function SubsetResultPanel({
   >("loading")
   useEffect(() => {
     let active = true
-    const face = new FontFace(family, result.output, {
-      weight: result.weight,
-      style: result.style,
-    })
-    void face
-      .load()
-      .then(() => {
+    let face: FontFace | undefined
+    async function loadPreview() {
+      try {
+        face = new FontFace(family, result.output, {
+          weight: result.weight,
+          style: result.style,
+        })
+        await face.load()
         if (active) {
           document.fonts.add(face)
           setPreviewState("ready")
         }
-      })
-      .catch(() => {
+      } catch {
         if (active) setPreviewState("error")
-      })
+      }
+    }
+    void loadPreview()
     return () => {
       active = false
-      document.fonts.delete(face)
+      if (face) document.fonts.delete(face)
     }
   }, [family, result])
   const percent = 1 - result.output.byteLength / result.originalSize
