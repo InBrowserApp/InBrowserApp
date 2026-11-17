@@ -1,0 +1,4 @@
+{
+  "name": "CBOR / MessagePack कन्वर्टर",
+  "description": "API की डीबगिंग के लिए JSON को CBOR या MessagePack में बदलें। Hex, Base64, Base64URL या बाइनरी फ़ाइलें डिकोड करें, फिर परिणाम अपने ब्राउज़र में स्थानीय रूप से कॉपी या डाउनलोड करें।"
+}

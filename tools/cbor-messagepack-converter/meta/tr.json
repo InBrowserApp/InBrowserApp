@@ -1,0 +1,4 @@
+{
+  "name": "CBOR / MessagePack Dönüştürücü",
+  "description": "API hata ayıklama için JSON'u CBOR veya MessagePack'e dönüştürün. Hex, Base64, Base64URL veya ikili dosyaları çözün; sonuçları tarayıcınızda yerel olarak kopyalayın ya da indirin."
+}

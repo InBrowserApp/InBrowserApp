@@ -1,0 +1,4 @@
+{
+  "name": "CBOR / MessagePack 変換ツール",
+  "description": "API のデバッグ用に JSON を CBOR または MessagePack に変換します。16 進数、Base64、Base64URL、バイナリファイルをデコードし、ブラウザー内で結果をコピーまたはダウンロードできます。"
+}

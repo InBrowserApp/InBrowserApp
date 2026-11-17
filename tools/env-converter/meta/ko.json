@@ -1,0 +1,4 @@
+{
+  "name": ".env 변환기",
+  "description": ".env 파일을 JSON 또는 YAML로 상호 변환하고 중복 키와 따옴표 문제를 검사합니다."
+}
