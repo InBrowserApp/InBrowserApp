@@ -84,6 +84,7 @@
     "@tool/email-to-pdf-converter": "workspace:*",
     "@tool/email-validator": "workspace:*",
     "@tool/email-viewer": "workspace:*",
+    "@tool/env-converter": "workspace:*",
     "@tool/epub-reader": "workspace:*",
     "@tool/eu-vat-number-validator": "workspace:*",
     "@tool/exif-viewer": "workspace:*",

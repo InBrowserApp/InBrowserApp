@@ -1,0 +1,4 @@
+{
+  "name": ".env 转换器",
+  "description": "在 .env 与 JSON 或 YAML 之间转换，并检查重复键和引号问题。"
+}

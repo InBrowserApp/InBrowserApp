@@ -1,0 +1,4 @@
+{
+  "name": ".env Dönüştürücü",
+  "description": ".env dosyalarını JSON veya YAML biçimine ve geri dönüştürün; yinelenen anahtarları ve tırnak sorunlarını kontrol edin."
+}

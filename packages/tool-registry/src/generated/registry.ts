@@ -9781,6 +9781,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "env-converter",
+    category: "developer",
+    icon: "file-cog",
+    tags: [
+      "env",
+      "dotenv",
+      "json",
+      "yaml",
+      "converter",
+      "environment",
+      "config",
+      "devops",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل .env",
+        description:
+          "حوّل ملفات .env إلى JSON أو YAML والعكس، مع فحص المفاتيح المكررة وعلامات الاقتباس.",
+      },
+      de: {
+        name: ".env-Konverter",
+        description:
+          "Konvertieren Sie .env-Dateien in JSON oder YAML und zurück, mit Prüfung auf doppelte Schlüssel und fehlerhafte Anführungszeichen.",
+      },
+      en: {
+        name: ".env Converter",
+        description:
+          "Convert .env files to JSON or YAML and back, with duplicate key and quote checks.",
+      },
+      es: {
+        name: "Conversor de .env",
+        description:
+          "Convierte archivos .env a JSON o YAML y viceversa, con comprobaciones de claves duplicadas y comillas.",
+      },
+      fr: {
+        name: "Convertisseur .env",
+        description:
+          "Convertissez des fichiers .env en JSON ou YAML et inversement, avec vérification des clés en double et des guillemets.",
+      },
+      he: {
+        name: "ממיר .env",
+        description:
+          "המרת קובצי .env ל־JSON או YAML ובחזרה, עם בדיקת מפתחות כפולים ובעיות במירכאות.",
+      },
+      hi: {
+        name: ".env कन्वर्टर",
+        description:
+          "दोहराई गई कुंजियों और उद्धरण चिह्नों की जाँच के साथ .env फ़ाइलों को JSON या YAML में और वापस बदलें।",
+      },
+      id: {
+        name: "Konverter .env",
+        description:
+          "Konversi file .env ke JSON atau YAML dan sebaliknya, dengan pemeriksaan kunci duplikat dan masalah tanda kutip.",
+      },
+      it: {
+        name: "Convertitore .env",
+        description:
+          "Converti file .env in JSON o YAML e viceversa, con controlli sulle chiavi duplicate e sulle virgolette.",
+      },
+      ja: {
+        name: ".env 変換ツール",
+        description:
+          ".env と JSON または YAML を相互変換し、キーの重複や引用符の問題をチェックします。",
+      },
+      ko: {
+        name: ".env 변환기",
+        description:
+          ".env 파일을 JSON 또는 YAML로 상호 변환하고 중복 키와 따옴표 문제를 검사합니다.",
+      },
+      ms: {
+        name: "Penukar .env",
+        description:
+          "Tukar fail .env kepada JSON atau YAML dan sebaliknya, dengan semakan kunci pendua dan tanda petik.",
+      },
+      nl: {
+        name: ".env-converter",
+        description:
+          "Converteer .env-bestanden naar JSON of YAML en terug, met controles op dubbele sleutels en aanhalingstekens.",
+      },
+      no: {
+        name: ".env-konverterer",
+        description:
+          "Konverter .env-filer til JSON eller YAML og tilbake, med kontroll av dupliserte nøkler og anførselstegn.",
+      },
+      pl: {
+        name: "Konwerter .env",
+        description:
+          "Konwertuj pliki .env na JSON lub YAML i odwrotnie, ze sprawdzaniem powtórzonych kluczy i cudzysłowów.",
+      },
+      pt: {
+        name: "Conversor .env",
+        description:
+          "Converta arquivos .env para JSON ou YAML e vice-versa, com verificação de chaves duplicadas e aspas.",
+      },
+      ru: {
+        name: "Конвертер .env",
+        description:
+          "Преобразуйте файлы .env в JSON или YAML и обратно с проверкой повторяющихся ключей и кавычек.",
+      },
+      sv: {
+        name: ".env-konverterare",
+        description:
+          "Konvertera .env-filer till JSON eller YAML och tillbaka, med kontroll av duplicerade nycklar och citattecken.",
+      },
+      th: {
+        name: "ตัวแปลง .env",
+        description:
+          "แปลงไฟล์ .env เป็น JSON หรือ YAML และแปลงกลับ พร้อมตรวจสอบคีย์ซ้ำและเครื่องหมายคำพูด",
+      },
+      tr: {
+        name: ".env Dönüştürücü",
+        description:
+          ".env dosyalarını JSON veya YAML biçimine ve geri dönüştürün; yinelenen anahtarları ve tırnak sorunlarını kontrol edin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi .env",
+        description:
+          "Chuyển đổi tệp .env sang JSON hoặc YAML và ngược lại, đồng thời kiểm tra khóa trùng và lỗi dấu nháy.",
+      },
+      "zh-CN": {
+        name: ".env 转换器",
+        description:
+          "在 .env 与 JSON 或 YAML 之间转换，并检查重复键和引号问题。",
+      },
+      "zh-TW": {
+        name: ".env 轉換器",
+        description:
+          "將 .env 檔案與 JSON 或 YAML 相互轉換，並檢查重複鍵名和引號問題。",
+      },
+    },
+  },
+  {
     slug: "epub-reader",
     category: "document",
     icon: "book-open",
@@ -45760,6 +45892,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "電子郵件檢視器",
         description:
           "在本機閱讀 EML、EMLX 與 MSG 郵件檔案，檢視郵件標頭、HTML 或純文字內容、內嵌圖片及附件詳細資訊。",
+      },
+    },
+  },
+  "env-converter": {
+    slug: "env-converter",
+    category: "developer",
+    icon: "file-cog",
+    tags: [
+      "env",
+      "dotenv",
+      "json",
+      "yaml",
+      "converter",
+      "environment",
+      "config",
+      "devops",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل .env",
+        description:
+          "حوّل ملفات .env إلى JSON أو YAML والعكس، مع فحص المفاتيح المكررة وعلامات الاقتباس.",
+      },
+      de: {
+        name: ".env-Konverter",
+        description:
+          "Konvertieren Sie .env-Dateien in JSON oder YAML und zurück, mit Prüfung auf doppelte Schlüssel und fehlerhafte Anführungszeichen.",
+      },
+      en: {
+        name: ".env Converter",
+        description:
+          "Convert .env files to JSON or YAML and back, with duplicate key and quote checks.",
+      },
+      es: {
+        name: "Conversor de .env",
+        description:
+          "Convierte archivos .env a JSON o YAML y viceversa, con comprobaciones de claves duplicadas y comillas.",
+      },
+      fr: {
+        name: "Convertisseur .env",
+        description:
+          "Convertissez des fichiers .env en JSON ou YAML et inversement, avec vérification des clés en double et des guillemets.",
+      },
+      he: {
+        name: "ממיר .env",
+        description:
+          "המרת קובצי .env ל־JSON או YAML ובחזרה, עם בדיקת מפתחות כפולים ובעיות במירכאות.",
+      },
+      hi: {
+        name: ".env कन्वर्टर",
+        description:
+          "दोहराई गई कुंजियों और उद्धरण चिह्नों की जाँच के साथ .env फ़ाइलों को JSON या YAML में और वापस बदलें।",
+      },
+      id: {
+        name: "Konverter .env",
+        description:
+          "Konversi file .env ke JSON atau YAML dan sebaliknya, dengan pemeriksaan kunci duplikat dan masalah tanda kutip.",
+      },
+      it: {
+        name: "Convertitore .env",
+        description:
+          "Converti file .env in JSON o YAML e viceversa, con controlli sulle chiavi duplicate e sulle virgolette.",
+      },
+      ja: {
+        name: ".env 変換ツール",
+        description:
+          ".env と JSON または YAML を相互変換し、キーの重複や引用符の問題をチェックします。",
+      },
+      ko: {
+        name: ".env 변환기",
+        description:
+          ".env 파일을 JSON 또는 YAML로 상호 변환하고 중복 키와 따옴표 문제를 검사합니다.",
+      },
+      ms: {
+        name: "Penukar .env",
+        description:
+          "Tukar fail .env kepada JSON atau YAML dan sebaliknya, dengan semakan kunci pendua dan tanda petik.",
+      },
+      nl: {
+        name: ".env-converter",
+        description:
+          "Converteer .env-bestanden naar JSON of YAML en terug, met controles op dubbele sleutels en aanhalingstekens.",
+      },
+      no: {
+        name: ".env-konverterer",
+        description:
+          "Konverter .env-filer til JSON eller YAML og tilbake, med kontroll av dupliserte nøkler og anførselstegn.",
+      },
+      pl: {
+        name: "Konwerter .env",
+        description:
+          "Konwertuj pliki .env na JSON lub YAML i odwrotnie, ze sprawdzaniem powtórzonych kluczy i cudzysłowów.",
+      },
+      pt: {
+        name: "Conversor .env",
+        description:
+          "Converta arquivos .env para JSON ou YAML e vice-versa, com verificação de chaves duplicadas e aspas.",
+      },
+      ru: {
+        name: "Конвертер .env",
+        description:
+          "Преобразуйте файлы .env в JSON или YAML и обратно с проверкой повторяющихся ключей и кавычек.",
+      },
+      sv: {
+        name: ".env-konverterare",
+        description:
+          "Konvertera .env-filer till JSON eller YAML och tillbaka, med kontroll av duplicerade nycklar och citattecken.",
+      },
+      th: {
+        name: "ตัวแปลง .env",
+        description:
+          "แปลงไฟล์ .env เป็น JSON หรือ YAML และแปลงกลับ พร้อมตรวจสอบคีย์ซ้ำและเครื่องหมายคำพูด",
+      },
+      tr: {
+        name: ".env Dönüştürücü",
+        description:
+          ".env dosyalarını JSON veya YAML biçimine ve geri dönüştürün; yinelenen anahtarları ve tırnak sorunlarını kontrol edin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi .env",
+        description:
+          "Chuyển đổi tệp .env sang JSON hoặc YAML và ngược lại, đồng thời kiểm tra khóa trùng và lỗi dấu nháy.",
+      },
+      "zh-CN": {
+        name: ".env 转换器",
+        description:
+          "在 .env 与 JSON 或 YAML 之间转换，并检查重复键和引号问题。",
+      },
+      "zh-TW": {
+        name: ".env 轉換器",
+        description:
+          "將 .env 檔案與 JSON 或 YAML 相互轉換，並檢查重複鍵名和引號問題。",
       },
     },
   },
