@@ -42,3 +42,18 @@ Node `^22.23.4 || ^24.15.0 || >=26.0.0`, `pnpm@12.21.0`.
 - Conventional Commits, enforced by commitlint via Husky. PR titles are checked in CI and become the squash-merge subject.
 - Linter and formatter are `oxlint` and `oxfmt`. Don't introduce ESLint or Prettier.
 - See [CLAUDE.md](./CLAUDE.md) and [AGENTS.md](./AGENTS.md) for agent-facing guidance.
+
+Release Please maintains a release PR using the existing release token. Merging
+that PR creates a draft release and runs the main-branch checks and build. The
+same workflow uploads the web archive and provenance before publishing the
+immutable release, then explicitly calls production deploy. Production downloads
+the published archive and runs `wrangler deploy` without rebuilding the app.
+
+For a deployment retry or rollback, deploy an existing stable release:
+
+```bash
+gh workflow run deploy.yml --ref main -f release_tag=vX.Y.Z
+```
+
+Build or publication failures can be retried with **Re-run failed jobs** in
+GitHub Actions. Release immutability must be enabled in repository settings.

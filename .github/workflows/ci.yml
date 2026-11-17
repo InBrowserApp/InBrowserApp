@@ -2,16 +2,17 @@ name: CI
 
 on:
   pull_request:
-  push:
-    branches:
-      - main
-  release:
-    types: [published]
+  workflow_call:
+    inputs:
+      ref:
+        description: Commit to check and build
+        type: string
+        required: true
   workflow_dispatch:
 
 concurrency:
-  group: ci-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+  group: ci-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   code-check:
@@ -22,6 +23,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -67,6 +70,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
+          ref: ${{ inputs.ref }}
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -111,6 +115,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -133,7 +139,9 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: web-dist
-          path: apps/web/dist
+          path: |
+            apps/web/dist
+            apps/web/wrangler.jsonc
 
   html-check:
     name: HTML Link Check
@@ -145,12 +153,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Download web artifact
         uses: actions/download-artifact@v8
         with:
           name: web-dist
-          path: apps/web/dist
+          path: apps/web
 
       - name: Check internal links in built HTML
         uses: wjdp/htmltest-action@master
@@ -174,6 +184,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -190,7 +202,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: web-dist
-          path: apps/web/dist
+          path: apps/web
 
       - name: Run Lighthouse CI
         # Posts a per-URL commit status with the Lighthouse scores using the
@@ -200,93 +212,13 @@ jobs:
           LHCI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: pnpm lighthouse
 
-  upload-release-asset:
-    name: Upload Release Asset
-    runs-on: ubuntu-latest
-    needs:
-      - code-check
-      - test
-      - build-web
-      - html-check
-    if: github.event_name == 'release'
-    permissions:
-      contents: write
-      id-token: write
-      attestations: write
-    steps:
-      - name: Download web artifact
-        uses: actions/download-artifact@v8
-        with:
-          name: web-dist
-          path: apps/web/dist
-
-      - name: Create tar.zstd archive
-        run: tar --zstd -cf "web-dist-${{ github.event.release.tag_name }}.tar.zstd" -C apps/web/dist .
-
-      - name: Attest build provenance
-        uses: actions/attest-build-provenance@v4
-        with:
-          subject-path: web-dist-${{ github.event.release.tag_name }}.tar.zstd
-
-      - name: Upload to release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload "${{ github.event.release.tag_name }}" "web-dist-${{ github.event.release.tag_name }}.tar.zstd" --repo "${{ github.repository }}" --clobber
-
-  deploy-production:
-    name: Deploy Production
-    runs-on: ubuntu-latest
-    needs:
-      - code-check
-      - test
-      - build-web
-      - html-check
-    # Published prereleases still build and receive assets, but never go live.
-    if: github.event_name == 'release' && github.event.release.prerelease == false
-    permissions:
-      contents: read
-    environment:
-      name: cloudflare-workers
-      url: ${{ steps.deploy.outputs.deployment-url }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version: lts/*
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v6
-        with:
-          cache: true
-          run_install: true
-
-      - name: Download web artifact
-        uses: actions/download-artifact@v8
-        with:
-          name: web-dist
-          path: apps/web/dist
-
-      - name: Deploy to Cloudflare Workers production
-        id: deploy
-        uses: cloudflare/wrangler-action@v4
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: apps/web
-          command: deploy
-
   deploy-staging:
     name: Upload Workers Version
     runs-on: ubuntu-latest
     needs:
       - build-web
       - html-check
-    if: |
-      (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
-      || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
     permissions:
       contents: read
     environment:
@@ -295,6 +227,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -311,7 +245,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: web-dist
-          path: apps/web/dist
+          path: apps/web
 
       - name: Upload Worker Version
         id: deploy

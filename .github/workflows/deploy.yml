@@ -1,0 +1,83 @@
+name: Deploy
+
+on:
+  workflow_call:
+    inputs:
+      release_tag:
+        description: Published release to deploy
+        type: string
+        required: true
+    secrets:
+      CLOUDFLARE_API_TOKEN:
+        required: true
+      CLOUDFLARE_ACCOUNT_ID:
+        required: true
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Published release to deploy or roll back to
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy Production
+    runs-on: ubuntu-latest
+    environment:
+      name: cloudflare-workers
+      url: ${{ steps.deploy.outputs.deployment-url }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_TAG: ${{ inputs.release_tag }}
+    steps:
+      - name: Checkout release tool configuration
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.release_tag }}
+          sparse-checkout: |
+            pnpm-workspace.yaml
+            apps/web/wrangler.jsonc
+          sparse-checkout-cone-mode: false
+
+      - name: Download published release
+        run: |
+          test "$(gh release view "$RELEASE_TAG" --json isDraft,isPrerelease --jq '.isDraft or .isPrerelease')" = false
+          gh release download "$RELEASE_TAG" --pattern "web-dist-${RELEASE_TAG}.tar.zstd"
+          mkdir deployment
+          tar --zstd -xf "web-dist-${RELEASE_TAG}.tar.zstd" -C deployment
+          # Older release archives contain dist files without a wrapper directory.
+          if [ ! -f deployment/wrangler.jsonc ]; then
+            mv deployment legacy-dist
+            mkdir deployment
+            mv legacy-dist deployment/dist
+            cp apps/web/wrangler.jsonc deployment/wrangler.jsonc
+          fi
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+
+      - name: Read Wrangler version from release catalog
+        id: wrangler
+        run: |
+          echo "version=$(sed -n 's/^  wrangler: //p' pnpm-workspace.yaml)" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Cloudflare Workers
+        id: deploy
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: deployment
+          packageManager: npm
+          wranglerVersion: ${{ steps.wrangler.outputs.version }}
+          command: deploy
