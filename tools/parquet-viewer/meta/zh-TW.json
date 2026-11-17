@@ -1,0 +1,4 @@
+{
+  "name": "Parquet 檢視器",
+  "description": "在本機開啟 Parquet 檔案，檢查欄位型別與巢狀結構、瀏覽資料列，並匯出 CSV 或 JSON。資料全程留在瀏覽器中。"
+}

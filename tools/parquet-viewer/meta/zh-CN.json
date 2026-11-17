@@ -1,0 +1,4 @@
+{
+  "name": "Parquet 查看器",
+  "description": "在本地打开 Parquet 文件，查看字段类型和嵌套结构，浏览数据行，并导出 CSV 或 JSON。数据始终保留在浏览器中。"
+}

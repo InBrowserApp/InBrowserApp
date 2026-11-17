@@ -216,6 +216,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ofd-viewer": () => import("@tool/ofd-viewer/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
+  "parquet-viewer": () => import("@tool/parquet-viewer/page"),
   "password-strength-checker": () =>
     import("@tool/password-strength-checker/page"),
   "pbkdf2-key-derivation": () => import("@tool/pbkdf2-key-derivation/page"),

@@ -1,0 +1,4 @@
+{
+  "name": "Parquet-viewer",
+  "description": "Open Parquet-bestanden lokaal, inspecteer veldtypen en geneste schema’s, blader door rijen en exporteer CSV of JSON. Je gegevens blijven in je browser."
+}

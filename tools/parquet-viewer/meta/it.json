@@ -1,0 +1,4 @@
+{
+  "name": "Visualizzatore Parquet",
+  "description": "Apri file Parquet in locale, esamina i tipi dei campi e gli schemi annidati, sfoglia le righe ed esporta in CSV o JSON. I dati restano nel browser."
+}

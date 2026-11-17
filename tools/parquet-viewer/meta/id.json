@@ -1,0 +1,4 @@
+{
+  "name": "Penampil Parquet",
+  "description": "Buka file Parquet secara lokal, periksa tipe bidang dan skema bertingkat, jelajahi baris, lalu ekspor ke CSV atau JSON. Data Anda tetap di browser."
+}

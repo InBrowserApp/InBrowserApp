@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse Parquet",
+  "description": "Ouvrez des fichiers Parquet localement, inspectez les types de champs et les schémas imbriqués, parcourez les lignes et exportez en CSV ou JSON. Vos données restent dans votre navigateur."
+}
