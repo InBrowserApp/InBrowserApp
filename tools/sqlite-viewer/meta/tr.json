@@ -1,4 +1,4 @@
 {
-  "name": "SQLite Görüntüleyici ve Sorgu",
-  "description": "Yerel bir SQLite veritabanını açın, tabloları ve şemayı inceleyin, salt okunur SQL çalıştırın ve sonuçları CSV veya JSON olarak dışa aktarın. Verileriniz tarayıcınızda kalır."
+  "name": "SQLite Görüntüleyici",
+  "description": "SQLite veritabanlarını tarayıcınızda açın, tabloları ve şemayı inceleyin, salt okunur SQL sorgusu çalıştırın ve sonuçları CSV veya JSON olarak dışa aktarın. Yükleme yapılmaz."
 }

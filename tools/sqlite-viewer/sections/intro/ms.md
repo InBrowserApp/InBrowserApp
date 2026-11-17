@@ -1,13 +1,15 @@
-## Periksa fail SQLite secara setempat
+## Terokai pangkalan data SQLite dalam pelayar anda
 
-Buka pangkalan data SQLite 3 untuk melayari jadual dan paparannya, memeriksa takrif lajur, indeks, kunci asing dan pernyataan CREATE, atau menjalankan pertanyaan SQL baca sahaja. Cuba pangkalan data contoh untuk menerokai ruang kerja tanpa memilih fail. Fail dan pertanyaan kekal dalam pelayar anda dan tidak disimpan secara automatik.
+Buka pangkalan data SQLite 3 untuk melayari jadual dan paparan, memeriksa lajur, indeks, kunci asing dan pernyataan CREATE, atau menjalankan pertanyaan SQL baca sahaja. Cuba pangkalan data contoh untuk menerokai ruang kerja. Fail anda diproses secara setempat dan tidak pernah diubah.
 
 ## Jalankan pertanyaan dan eksport hasil
 
-Pilih jadual untuk melihat pratonton barisnya. Edit SQL dan gunakan **Jalankan pertanyaan** atau **Ctrl/⌘ + Enter** untuk menjalankan satu pernyataan SELECT, WITH atau EXPLAIN. Had hasil mengehadkan bilangan baris yang dimuatkan; penomboran halaman memaparkan 50 baris pada satu masa. Pertanyaan juga boleh dihentikan apabila mencapai had hasil 5 MiB atau selepas 10 saat. Pembatalan memastikan antara muka kekal responsif dan memuatkan semula petikan pangkalan data pada pertanyaan seterusnya.
+Pilih jadual atau paparan untuk memuatkan barisnya, kemudian edit SQL untuk menapis, mengisih atau menggabungkan data. Jalankan satu pernyataan SELECT, WITH atau EXPLAIN dengan **Jalankan pertanyaan** atau **Ctrl/⌘ + Enter**. Klik sel untuk memeriksa dan menyalin nilai penuhnya.
 
-Eksport CSV dan JSON mengandungi hasil yang dimuatkan, termasuk baris pada halaman lain. JSON menyimpan nama lajur dan tatasusunan baris secara berasingan, mengekalkan nama pendua dan nilai NULL. Integer SQLite menjadi rentetan perpuluhan tepat dan BLOB menjadi objek dengan nilai perenambelasan `$blob`. CSV menggunakan medan kosong untuk NULL, mengapit aksara khas dengan tanda petikan dan menambah apostrof di hadapan teks yang menyerupai formula untuk penggunaan hamparan yang lebih selamat.
+Pilih had hasil 100, 1,000 atau 10,000 baris dan layari hasil 50 baris pada satu masa. Pertanyaan mempunyai had masa 10 saat dan had saiz hasil 5 MiB. Eksport CSV dan JSON merangkumi semua baris yang dimuatkan daripada semua halaman.
 
-## Pangkalan data yang disokong dan had
+JSON menggunakan nama lajur dan tatasusunan baris yang berasingan untuk mengekalkan nama pendua dan nilai NULL. Integer ialah rentetan perpuluhan tepat dan BLOB mengandungi nilai perenambelasan `$blob`. CSV merangkumi baris pengepala, menggunakan medan kosong untuk NULL dan menambah apostrof di hadapan teks yang menyerupai formula.
 
-Buka fail `.db`, `.sqlite` atau `.sqlite3` yang tidak disulitkan sehingga 50 MiB. Fail asal tidak pernah diubah. Alat ini memuatkan petikan dalam memori, jadi penggunaan memori boleh melebihi saiz fail. Fail iringan WAL dan journal tidak diimport; cipta salinan bersih yang telah melalui titik semak menggunakan aplikasi pangkalan data anda sebelum membukanya di sini. Pangkalan data disulitkan, sambungan SQLite tersuai dan penyuntingan pangkalan data tidak disokong.
+## Fail SQLite yang disokong
+
+Buka fail `.db`, `.sqlite` atau `.sqlite3` yang tidak disulitkan sehingga 50 MiB. Untuk pangkalan data yang menggunakan WAL, cipta salinan yang telah melalui titik semak sebelum membukanya; fail iringan WAL dan journal tidak dimuatkan. Sambungan SQLite tersuai tidak disokong. Fail dan pertanyaan tidak disimpan secara automatik.

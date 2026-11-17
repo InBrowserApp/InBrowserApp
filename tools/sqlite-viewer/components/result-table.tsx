@@ -1,5 +1,5 @@
 /* oxlint-disable jsx-a11y/no-noninteractive-tabindex -- Scrollable result regions need keyboard access. */
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
 import { Alert, AlertDescription } from "@workspace/ui/components/ui/alert"
 import {
@@ -37,6 +37,7 @@ export function ResultTable({
   messages: Messages
   lang: string
 }) {
+  const inspectionHint = useId()
   const [page, setPage] = useState(0)
   const [value, setValue] = useState<string | null>(null)
   const [exportError, setExportError] = useState(false)
@@ -117,11 +118,14 @@ export function ResultTable({
       ) : null}
       <div
         dir="ltr"
-        className="max-h-[32rem] min-w-0 overflow-auto rounded-lg border"
+        className="max-h-[32rem] min-w-0 overflow-auto rounded-lg border [&>[data-slot=table-container]]:overflow-visible"
         tabIndex={0}
         role="region"
         aria-label={title}
       >
+        <span id={inspectionHint} className="sr-only">
+          {m.inspectValue}
+        </span>
         <Table dir="ltr">
           <TableHeader>
             <TableRow>
@@ -151,7 +155,8 @@ export function ResultTable({
                       >
                         <button
                           type="button"
-                          aria-label={`${m.inspectValue}: ${result.columns[columnIndex]}`}
+                          aria-label={text.trim() ? undefined : m.inspectValue}
+                          aria-describedby={inspectionHint}
                           onClick={(event) => {
                             lastCell.current = event.currentTarget
                             setValue(cellText(cell))
@@ -194,9 +199,7 @@ export function ResultTable({
       ) : null}
       {filename ? (
         <details className="text-xs text-muted-foreground">
-          <summary className="cursor-pointer">
-            {m.csv} / {m.json}
-          </summary>
+          <summary className="cursor-pointer">{m.exportDetails}</summary>
           <p className="mt-2">{m.exportNote}</p>
         </details>
       ) : null}
@@ -208,7 +211,7 @@ export function ResultTable({
       >
         <DialogContent
           container={portal}
-          closeLabel={m.cancel}
+          closeLabel={m.close}
           onCloseAutoFocus={(event) => {
             event.preventDefault()
             lastCell.current?.focus()

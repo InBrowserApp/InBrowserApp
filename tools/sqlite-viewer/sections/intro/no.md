@@ -1,13 +1,15 @@
-## Undersøk SQLite-filer lokalt
+## Utforsk SQLite-databaser i nettleseren
 
-Åpne en SQLite 3-database for å bla gjennom tabeller og visninger, undersøke kolonnedefinisjoner, indekser, fremmednøkler og CREATE-setninger eller kjøre en SQL-spørring med kun lesetilgang. Prøv eksempeldatabasen for å utforske arbeidsområdet uten å velge en fil. Filer og spørringer blir i nettleseren og lagres ikke automatisk.
+Åpne en SQLite 3-database for å bla gjennom tabeller og visninger, undersøke kolonner, indekser, fremmednøkler og CREATE-setninger eller kjøre en SQL-spørring med kun lesetilgang. Prøv eksempeldatabasen for å utforske arbeidsområdet. Filen behandles lokalt og endres aldri.
 
 ## Kjør spørringer og eksporter resultater
 
-Velg en tabell for å forhåndsvise radene. Rediger SQL-koden og bruk **Kjør spørring** eller **Ctrl/⌘ + Enter** for å kjøre én SELECT-, WITH- eller EXPLAIN-setning. Resultatgrensen begrenser antallet innlastede rader; hver side viser 50 rader. En spørring kan også stoppe når resultatene når 5 MiB eller etter 10 sekunder. Avbryting holder grensesnittet responsivt og laster inn databasens øyeblikksbilde på nytt ved neste spørring.
+Velg en tabell eller visning for å laste inn radene, og rediger deretter SQL-koden for å filtrere, sortere eller koble sammen data. Kjør én SELECT-, WITH- eller EXPLAIN-setning med **Kjør spørring** eller **Ctrl/⌘ + Enter**. Klikk på en celle for å undersøke og kopiere hele verdien.
 
-CSV- og JSON-eksporter inneholder det innlastede resultatet, inkludert rader på andre sider. JSON lagrer kolonnenavn og radmatriser hver for seg, slik at dupliserte navn og NULL-verdier bevares. SQLite-heltall blir nøyaktige desimalstrenger, og BLOB-er blir objekter med en heksadesimal `$blob`-verdi. CSV bruker tomme felt for NULL, setter anførselstegn rundt spesialtegn og setter en apostrof foran tekst som ligner formler, for tryggere bruk i regneark.
+Velg en resultatgrense på 100, 1000 eller 10 000 rader, og bla gjennom resultatet med 50 rader per side. Spørringer har en grense på 10 sekunder, og resultatstørrelsen er begrenset til 5 MiB. CSV- og JSON-eksporter inkluderer alle innlastede rader fra alle sider.
 
-## Støttede databaser og begrensninger
+JSON bruker separate kolonnenavn og radmatriser for å bevare dupliserte navn og NULL-verdier. Heltall er nøyaktige desimalstrenger, og BLOB-er inneholder en heksadesimal `$blob`-verdi. CSV inkluderer en overskriftsrad, bruker tomme felt for NULL og setter en apostrof foran tekst som ligner formler.
 
-Åpne en ukryptert `.db`-, `.sqlite`- eller `.sqlite3`-fil på opptil 50 MiB. Originalfilen endres aldri. Verktøyet laster inn et øyeblikksbilde i minnet, så minnebruken kan overstige filstørrelsen. Tilhørende WAL- og journalfiler importeres ikke; lag en ren kopi etter et sjekkpunkt i databaseprogrammet før du åpner den her. Krypterte databaser, egendefinerte SQLite-utvidelser og redigering av databaser støttes ikke.
+## Støttede SQLite-filer
+
+Åpne en ukryptert `.db`-, `.sqlite`- eller `.sqlite3`-fil på opptil 50 MiB. For en database som bruker WAL, lag en kopi etter et sjekkpunkt før du åpner den; tilhørende WAL- og journalfiler lastes ikke inn. Egendefinerte SQLite-utvidelser støttes ikke. Filer og spørringer lagres ikke automatisk.

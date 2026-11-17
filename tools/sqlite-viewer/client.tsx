@@ -48,6 +48,7 @@ export default function Client({
   const epoch = useRef(0)
   const db = useDatabase(file)
   const direction = lang === "ar" || lang === "he" ? "rtl" : "ltr"
+  const cancelled = db.error?.key === "cancelled"
 
   function changeFile(next: File | null) {
     epoch.current++
@@ -100,7 +101,14 @@ export default function Client({
       fitContent
       messages={m}
     >
-      {db.error || sampleError ? (
+      {cancelled ? (
+        <p
+          role="status"
+          className="border-b px-4 py-3 text-sm text-muted-foreground"
+        >
+          {m.cancelled}
+        </p>
+      ) : db.error || sampleError ? (
         <Alert
           variant="destructive"
           className="rounded-none border-x-0 border-t-0"
@@ -109,7 +117,7 @@ export default function Client({
           <AlertTitle>{m.errorTitle}</AlertTitle>
           <AlertDescription>
             {!db.error?.detail ? (
-              <p>{db.error ? m[db.error.key] : m.workerError}</p>
+              <p>{db.error ? m[db.error.key] : m.sampleError}</p>
             ) : null}
             {db.error?.detail ? (
               <pre
@@ -157,7 +165,6 @@ export default function Client({
       {db.metadata ? (
         <div className="grid min-h-0 min-w-0 flex-1 overflow-auto lg:grid-cols-[14rem_minmax(0,1fr)]">
           <ObjectBrowser
-            key={file?.name}
             objects={db.metadata.objects}
             selected={selected}
             onSelect={select}
@@ -209,7 +216,15 @@ export default function Client({
                   onRun={() => void db.request({ kind: "query", sql, limit })}
                   onCancel={db.cancel}
                   busy={Boolean(db.busy)}
-                  invalid={Boolean(db.error)}
+                  invalid={Boolean(
+                    db.error &&
+                    [
+                      "readOnlyError",
+                      "singleStatement",
+                      "emptyQuery",
+                      "queryTooLarge",
+                    ].includes(db.error.key)
+                  )}
                   messages={m}
                   lang={lang}
                 />

@@ -19,7 +19,10 @@ export function useDatabase(file: File | null) {
   const session = useRef<Session | null>(null)
   const serial = useRef(0)
   const currentFile = useRef(file)
-  const [metadata, setMetadata] = useState<Metadata | null>(null)
+  const [loaded, setLoaded] = useState<{
+    file: File
+    metadata: Metadata
+  } | null>(null)
   const [result, setResult] = useState<QueryResult | null>(null)
   const [structure, setStructure] = useState<Structure | null>(null)
   const [busy, setBusy] = useState<Command["kind"] | null>(null)
@@ -84,7 +87,7 @@ export function useDatabase(file: File | null) {
           setError({ key: response.error, detail: response.detail })
         else if (response.kind === "open") {
           opened = true
-          setMetadata(response.metadata)
+          setLoaded({ file: source, metadata: response.metadata })
         } else if (response.kind === "query") setResult(response.result)
         else setStructure(response.structure)
         resolve(response)
@@ -106,7 +109,7 @@ export function useDatabase(file: File | null) {
   // pending work; late replies from an old worker cannot affect the new file.
   useEffect(() => {
     currentFile.current = file
-    setMetadata(null)
+    setLoaded(null)
     setResult(null)
     setStructure(null)
     setError(null)
@@ -127,7 +130,7 @@ export function useDatabase(file: File | null) {
   )
 
   return {
-    metadata,
+    metadata: loaded?.file === file ? loaded.metadata : null,
     result,
     structure,
     busy,

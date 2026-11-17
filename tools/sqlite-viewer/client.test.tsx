@@ -130,7 +130,7 @@ test("loads the local sample and recovers from failed sample downloads", async (
   await act(async () =>
     fireEvent.click(screen.getByRole("button", { name: m.sample }))
   )
-  expect(screen.getByRole("alert").textContent).toContain(m.workerError)
+  expect(screen.getByRole("alert").textContent).toContain(m.sampleError)
   await act(async () =>
     fireEvent.click(screen.getByRole("button", { name: m.sample }))
   )
@@ -140,6 +140,30 @@ test("loads the local sample and recovers from failed sample downloads", async (
   )
   expect(screen.getByText("sample.sqlite")).toBeTruthy()
   expect(screen.queryByText(m.drop)).toBeNull()
+})
+
+test("treats cancellation as a status and marks only query validation errors as invalid", () => {
+  const { rerender } = render(<Client {...props} />)
+  fireEvent.change(screen.getByLabelText(m.open), { target: { files: [file] } })
+  state.metadata = { objects: [], version: "3.53" }
+  state.error = { key: "cancelled" }
+  rerender(<Client {...props} />)
+  expect(screen.getByText(m.cancelled).getAttribute("role")).toBe("status")
+  expect(screen.queryByRole("alert")).toBeNull()
+  expect(
+    screen.getByRole("textbox", { name: m.sql }).getAttribute("aria-invalid")
+  ).toBe("false")
+  state.error = { key: "emptyQuery" }
+  rerender(<Client {...props} />)
+  expect(screen.getByRole("alert").textContent).toContain(m.emptyQuery)
+  expect(
+    screen.getByRole("textbox", { name: m.sql }).getAttribute("aria-invalid")
+  ).toBe("true")
+  state.error = { key: "timeout" }
+  rerender(<Client {...props} />)
+  expect(
+    screen.getByRole("textbox", { name: m.sql }).getAttribute("aria-invalid")
+  ).toBe("false")
 })
 
 test("does not replace a chosen local file when an earlier sample finishes loading", async () => {

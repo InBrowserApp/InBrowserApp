@@ -1,6 +1,7 @@
 import { act, cleanup, renderHook } from "@testing-library/react"
 import { afterEach, beforeEach, expect, test, vi } from "vitest"
 import { useDatabase } from "./use-database"
+import { useEffect } from "react"
 import type { Request, ResponsePayload } from "./types"
 
 class FakeWorker {
@@ -31,6 +32,47 @@ afterEach(() => {
   vi.useRealTimers()
   vi.unstubAllGlobals()
   vi.restoreAllMocks()
+})
+
+test("does not preview previous tables when replacing a database with the same filename", () => {
+  const previews: string[] = []
+  const { rerender } = renderHook(
+    ({ source }) => {
+      const db = useDatabase(source)
+      useEffect(() => {
+        if (db.metadata) previews.push(db.metadata.objects[0]!.name)
+      }, [source, db.metadata])
+      return db
+    },
+    { initialProps: { source: file } }
+  )
+  const first = FakeWorker.all[0]!
+  act(() =>
+    first.reply({
+      kind: "open",
+      metadata: {
+        ...metadata,
+        objects: [
+          { name: "projects", type: "table", sql: "CREATE TABLE projects(id)" },
+        ],
+      },
+    })
+  )
+  expect(previews).toEqual(["projects"])
+  rerender({ source: new File(["replacement"], file.name) })
+  expect(previews).toEqual(["projects"])
+  act(() =>
+    FakeWorker.all[1]!.reply({
+      kind: "open",
+      metadata: {
+        ...metadata,
+        objects: [
+          { name: "people", type: "table", sql: "CREATE TABLE people(id)" },
+        ],
+      },
+    })
+  )
+  expect(previews).toEqual(["projects", "people"])
 })
 
 test("owns a worker per file, ignores stale replies and releases workers on close", async () => {

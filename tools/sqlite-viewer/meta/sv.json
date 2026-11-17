@@ -1,4 +1,4 @@
 {
-  "name": "SQLite-visare och frågor",
-  "description": "Öppna en lokal SQLite-databas, granska tabeller och schema, kör skrivskyddad SQL och exportera resultat som CSV eller JSON. Dina data stannar i webbläsaren."
+  "name": "SQLite-visare",
+  "description": "Öppna SQLite-databaser i webbläsaren, bläddra bland tabeller och schema, kör en skrivskyddad SQL-fråga och exportera resultat som CSV eller JSON. Ingen uppladdning."
 }

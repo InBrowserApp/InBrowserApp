@@ -1,4 +1,4 @@
 {
-  "name": "Trình xem & truy vấn SQLite",
-  "description": "Mở cơ sở dữ liệu SQLite cục bộ, kiểm tra bảng và lược đồ, chạy SQL chỉ đọc và xuất kết quả sang CSV hoặc JSON. Dữ liệu của bạn luôn ở trong trình duyệt."
+  "name": "Trình xem SQLite",
+  "description": "Mở cơ sở dữ liệu SQLite trong trình duyệt, duyệt bảng và lược đồ, chạy truy vấn SQL chỉ đọc và xuất kết quả sang CSV hoặc JSON. Không tải tệp lên."
 }

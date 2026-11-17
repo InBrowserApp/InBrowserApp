@@ -25,7 +25,11 @@ self.onmessage = async (event: MessageEvent<Request>) => {
       database?.close()
       database = null
       initializing = true
-      const SQL = await initSqlJs({ locateFile: () => wasmUrl })
+      const config = {
+        locateFile: () => wasmUrl,
+        useOldExtensionFunctions: false,
+      }
+      const SQL = await initSqlJs(config)
       initializing = false
       const { db, metadata } = await openDatabase(SQL, request.file)
       database = db

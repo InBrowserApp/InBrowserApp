@@ -28881,119 +28881,119 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     ],
     locales: {
       ar: {
-        name: "عارض SQLite والاستعلامات",
+        name: "عارض SQLite",
         description:
-          "افتح قاعدة بيانات SQLite محلية، وافحص الجداول والمخطط، ونفّذ استعلامات SQL للقراءة فقط، وصدّر النتائج بصيغة CSV أو JSON. تبقى بياناتك في متصفحك.",
+          "افتح قواعد بيانات SQLite في متصفحك، وتصفّح الجداول والمخطط، ونفّذ استعلام SQL للقراءة فقط، وصدّر النتائج بصيغة CSV أو JSON. دون رفع الملفات.",
       },
       de: {
-        name: "SQLite-Betrachter & Abfragen",
+        name: "SQLite-Betrachter",
         description:
-          "Öffnen Sie eine lokale SQLite-Datenbank, prüfen Sie Tabellen und Schema, führen Sie schreibgeschützte SQL-Abfragen aus und exportieren Sie Ergebnisse als CSV oder JSON. Ihre Daten bleiben im Browser.",
+          "Öffnen Sie SQLite-Datenbanken im Browser, durchsuchen Sie Tabellen und Schema, führen Sie eine schreibgeschützte SQL-Abfrage aus und exportieren Sie Ergebnisse als CSV oder JSON. Keine Uploads.",
       },
       en: {
-        name: "SQLite Viewer & Query",
+        name: "SQLite Viewer",
         description:
-          "Open a local SQLite database, inspect tables and schema, run read-only SQL, and export results as CSV or JSON. Your data stays in your browser.",
+          "Open SQLite databases in your browser, browse tables and schema, run a read-only SQL query, and export results as CSV or JSON. No uploads.",
       },
       es: {
-        name: "Visor y consultas de SQLite",
+        name: "Visor de SQLite",
         description:
-          "Abre una base de datos SQLite local, inspecciona tablas y su estructura, ejecuta SQL de solo lectura y exporta resultados como CSV o JSON. Tus datos permanecen en tu navegador.",
+          "Abre bases de datos SQLite en tu navegador, explora tablas y su estructura, ejecuta consultas SQL de solo lectura y exporta resultados como CSV o JSON. Sin subidas.",
       },
       fr: {
-        name: "Visionneuse et requêtes SQLite",
+        name: "Visionneuse SQLite",
         description:
-          "Ouvrez une base SQLite locale, examinez ses tables et son schéma, exécutez des requêtes SQL en lecture seule et exportez les résultats en CSV ou JSON. Vos données restent dans votre navigateur.",
+          "Ouvrez des bases SQLite dans votre navigateur, parcourez les tables et le schéma, exécutez une requête SQL en lecture seule et exportez les résultats en CSV ou JSON. Aucun envoi.",
       },
       he: {
-        name: "מציג SQLite ושאילתות",
+        name: "מציג SQLite",
         description:
-          "פתיחת מסד נתונים מקומי של SQLite, בדיקת טבלאות וסכמה, הרצת SQL לקריאה בלבד וייצוא התוצאות ל־CSV או ל־JSON. הנתונים נשארים בדפדפן שלך.",
+          "פתיחת מסדי נתונים של SQLite בדפדפן, עיון בטבלאות ובסכמה, הרצת שאילתת SQL לקריאה בלבד וייצוא התוצאות ל־CSV או ל־JSON. ללא העלאות.",
       },
       hi: {
-        name: "SQLite व्यूअर और क्वेरी",
+        name: "SQLite व्यूअर",
         description:
-          "स्थानीय SQLite डेटाबेस खोलें, टेबल और स्कीमा जाँचें, केवल पढ़ने वाली SQL चलाएँ और परिणाम CSV या JSON में निर्यात करें। आपका डेटा ब्राउज़र में ही रहता है।",
+          "अपने ब्राउज़र में SQLite डेटाबेस खोलें, टेबल और स्कीमा देखें, केवल पढ़ने वाली SQL क्वेरी चलाएँ और परिणाम CSV या JSON में निर्यात करें। कोई अपलोड नहीं।",
       },
       id: {
-        name: "Penampil & Kueri SQLite",
+        name: "Penampil SQLite",
         description:
-          "Buka basis data SQLite lokal, periksa tabel dan skema, jalankan SQL hanya baca, lalu ekspor hasil sebagai CSV atau JSON. Data Anda tetap di browser.",
+          "Buka basis data SQLite di browser, telusuri tabel dan skema, jalankan kueri SQL hanya baca, lalu ekspor hasil sebagai CSV atau JSON. Tanpa unggahan.",
       },
       it: {
-        name: "Visualizzatore SQLite e query",
+        name: "Visualizzatore SQLite",
         description:
-          "Apri un database SQLite locale, esamina tabelle e schema, esegui SQL in sola lettura ed esporta i risultati in CSV o JSON. I tuoi dati restano nel browser.",
+          "Apri database SQLite nel browser, esplora tabelle e schema, esegui una query SQL in sola lettura ed esporta i risultati in CSV o JSON. Nessun caricamento.",
       },
       ja: {
-        name: "SQLite ビューアー＆クエリ",
+        name: "SQLite ビューアー",
         description:
-          "ローカルの SQLite データベースを開き、テーブルや構造の確認、読み取り専用 SQL の実行、CSV・JSON 形式での結果のエクスポートができます。データはブラウザー内に留まります。",
+          "ブラウザーで SQLite データベースを開き、テーブルや構造の確認、読み取り専用 SQL クエリの実行、CSV・JSON 形式での結果のエクスポートができます。アップロードは不要です。",
       },
       ko: {
-        name: "SQLite 뷰어 및 쿼리",
+        name: "SQLite 뷰어",
         description:
-          "로컬 SQLite 데이터베이스를 열어 테이블과 구조를 살펴보고, 읽기 전용 SQL을 실행하고, 결과를 CSV 또는 JSON으로 내보내세요. 데이터는 브라우저에만 남습니다.",
+          "브라우저에서 SQLite 데이터베이스를 열어 테이블과 구조를 살펴보고, 읽기 전용 SQL 쿼리를 실행하고, 결과를 CSV 또는 JSON으로 내보내세요. 업로드하지 않습니다.",
       },
       ms: {
-        name: "Pemapar dan Pertanyaan SQLite",
+        name: "Pemapar SQLite",
         description:
-          "Buka pangkalan data SQLite setempat, periksa jadual dan skema, jalankan SQL baca sahaja dan eksport hasil sebagai CSV atau JSON. Data anda kekal dalam pelayar anda.",
+          "Buka pangkalan data SQLite dalam pelayar anda, layari jadual dan skema, jalankan pertanyaan SQL baca sahaja dan eksport hasil sebagai CSV atau JSON. Tiada muat naik.",
       },
       nl: {
-        name: "SQLite-viewer en query's",
+        name: "SQLite-viewer",
         description:
-          "Open een lokale SQLite-database, bekijk tabellen en het schema, voer alleen-lezen SQL uit en exporteer resultaten als CSV of JSON. Je gegevens blijven in je browser.",
+          "Open SQLite-databases in je browser, bekijk tabellen en het schema, voer een alleen-lezen SQL-query uit en exporteer resultaten als CSV of JSON. Geen uploads.",
       },
       no: {
-        name: "SQLite-viser og spørringer",
+        name: "SQLite-viser",
         description:
-          "Åpne en lokal SQLite-database, undersøk tabeller og skjema, kjør SQL med lesetilgang og eksporter resultater som CSV eller JSON. Dataene blir i nettleseren.",
+          "Åpne SQLite-databaser i nettleseren, bla gjennom tabeller og skjema, kjør en SQL-spørring med kun lesetilgang og eksporter resultater som CSV eller JSON. Ingen opplasting.",
       },
       pl: {
-        name: "Przeglądarka i zapytania SQLite",
+        name: "Przeglądarka SQLite",
         description:
-          "Otwórz lokalną bazę SQLite, sprawdzaj tabele i schemat, wykonuj zapytania SQL tylko do odczytu i eksportuj wyniki do CSV lub JSON. Dane pozostają w przeglądarce.",
+          "Otwieraj bazy SQLite w przeglądarce, przeglądaj tabele i schemat, wykonuj zapytania SQL tylko do odczytu i eksportuj wyniki do CSV lub JSON. Bez przesyłania plików.",
       },
       pt: {
-        name: "Visualizador e consultas SQLite",
+        name: "Visualizador SQLite",
         description:
-          "Abra um banco SQLite local, examine tabelas e esquema, execute SQL somente leitura e exporte resultados em CSV ou JSON. Seus dados ficam no navegador.",
+          "Abra bancos SQLite no navegador, explore tabelas e esquemas, execute uma consulta SQL somente leitura e exporte resultados em CSV ou JSON. Sem envio de arquivos.",
       },
       ru: {
-        name: "Просмотр и запросы SQLite",
+        name: "Просмотр SQLite",
         description:
-          "Откройте локальную базу данных SQLite, изучайте таблицы и структуру, выполняйте SQL-запросы только для чтения и экспортируйте результаты в CSV или JSON. Ваши данные остаются в браузере.",
+          "Открывайте базы данных SQLite в браузере, изучайте таблицы и структуру, выполняйте SQL-запросы только для чтения и экспортируйте результаты в CSV или JSON. Без загрузки на сервер.",
       },
       sv: {
-        name: "SQLite-visare och frågor",
+        name: "SQLite-visare",
         description:
-          "Öppna en lokal SQLite-databas, granska tabeller och schema, kör skrivskyddad SQL och exportera resultat som CSV eller JSON. Dina data stannar i webbläsaren.",
+          "Öppna SQLite-databaser i webbläsaren, bläddra bland tabeller och schema, kör en skrivskyddad SQL-fråga och exportera resultat som CSV eller JSON. Ingen uppladdning.",
       },
       th: {
-        name: "โปรแกรมดูและสืบค้น SQLite",
+        name: "โปรแกรมดู SQLite",
         description:
-          "เปิดฐานข้อมูล SQLite ในเครื่อง ตรวจสอบตารางและสคีมา รัน SQL แบบอ่านอย่างเดียว และส่งออกผลลัพธ์เป็น CSV หรือ JSON ข้อมูลของคุณจะอยู่ในเบราว์เซอร์",
+          "เปิดฐานข้อมูล SQLite ในเบราว์เซอร์ สำรวจตารางและสคีมา รันคำสั่ง SQL แบบอ่านอย่างเดียว และส่งออกผลลัพธ์เป็น CSV หรือ JSON โดยไม่ต้องอัปโหลด",
       },
       tr: {
-        name: "SQLite Görüntüleyici ve Sorgu",
+        name: "SQLite Görüntüleyici",
         description:
-          "Yerel bir SQLite veritabanını açın, tabloları ve şemayı inceleyin, salt okunur SQL çalıştırın ve sonuçları CSV veya JSON olarak dışa aktarın. Verileriniz tarayıcınızda kalır.",
+          "SQLite veritabanlarını tarayıcınızda açın, tabloları ve şemayı inceleyin, salt okunur SQL sorgusu çalıştırın ve sonuçları CSV veya JSON olarak dışa aktarın. Yükleme yapılmaz.",
       },
       vi: {
-        name: "Trình xem & truy vấn SQLite",
+        name: "Trình xem SQLite",
         description:
-          "Mở cơ sở dữ liệu SQLite cục bộ, kiểm tra bảng và lược đồ, chạy SQL chỉ đọc và xuất kết quả sang CSV hoặc JSON. Dữ liệu của bạn luôn ở trong trình duyệt.",
+          "Mở cơ sở dữ liệu SQLite trong trình duyệt, duyệt bảng và lược đồ, chạy truy vấn SQL chỉ đọc và xuất kết quả sang CSV hoặc JSON. Không tải tệp lên.",
       },
       "zh-CN": {
-        name: "SQLite 查看器与查询工具",
+        name: "SQLite 查看器",
         description:
-          "打开本地 SQLite 数据库，查看表和结构，执行只读 SQL，并将结果导出为 CSV 或 JSON。数据始终保留在浏览器中。",
+          "在浏览器中打开 SQLite 数据库，浏览表和结构，执行只读 SQL 查询，并将结果导出为 CSV 或 JSON。无需上传。",
       },
       "zh-TW": {
-        name: "SQLite 檢視器與查詢",
+        name: "SQLite 檢視器",
         description:
-          "開啟本機 SQLite 資料庫，檢視資料表與結構、執行唯讀 SQL，並將結果匯出為 CSV 或 JSON。資料始終留在您的瀏覽器中。",
+          "在瀏覽器中開啟 SQLite 資料庫、瀏覽資料表與結構、執行唯讀 SQL 查詢，並將結果匯出為 CSV 或 JSON。無須上傳。",
       },
     },
   },

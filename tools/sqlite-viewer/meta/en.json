@@ -1,4 +1,4 @@
 {
-  "name": "SQLite Viewer & Query",
-  "description": "Open a local SQLite database, inspect tables and schema, run read-only SQL, and export results as CSV or JSON. Your data stays in your browser."
+  "name": "SQLite Viewer",
+  "description": "Open SQLite databases in your browser, browse tables and schema, run a read-only SQL query, and export results as CSV or JSON. No uploads."
 }

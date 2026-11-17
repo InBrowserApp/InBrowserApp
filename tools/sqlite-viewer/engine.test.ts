@@ -8,11 +8,13 @@ const require = createRequire(import.meta.url)
 let SQL: SqlJsStatic
 let db: Database | undefined
 beforeAll(async () => {
-  SQL = await initSqlJs({
+  const config = {
+    useOldExtensionFunctions: false,
     wasmBinary: Uint8Array.from(
       readFileSync(require.resolve("sql.js/dist/sql-wasm.wasm"))
     ).buffer,
-  })
+  }
+  SQL = await initSqlJs(config)
 })
 afterEach(() => {
   db?.close()
@@ -47,6 +49,34 @@ describe("SQLite engine with real WASM", () => {
     expect(
       queryDatabase(db!, "SELECT * FROM project_summary", 100).rows
     ).toHaveLength(3)
+  })
+  it("opens generated math columns and uses native math functions in views", async () => {
+    const source = new SQL.Database()
+    source.run(`
+      CREATE TABLE measurements (
+        value REAL,
+        root REAL GENERATED ALWAYS AS (sqrt(value)) STORED
+      );
+      INSERT INTO measurements(value) VALUES (100);
+      CREATE VIEW calculations AS
+        SELECT sqrt(value) AS root, log(value) AS logarithm FROM measurements;
+    `)
+    const bytes = source.export()
+    source.close()
+    const opened = await openDatabase(
+      SQL,
+      new File([bytes as Uint8Array<ArrayBuffer>], "math.sqlite")
+    )
+    db = opened.db
+    expect(
+      queryDatabase(db, "SELECT root FROM measurements", 100).rows
+    ).toEqual([[10]])
+    expect(queryDatabase(db, "SELECT * FROM calculations", 100).rows).toEqual([
+      [10, 2],
+    ])
+    expect(
+      inspectDatabase(db, "calculations").columns.rows.map((row) => row[1])
+    ).toEqual(["root", "logarithm"])
   })
   it("retains 64-bit integers, BLOB, NULL, duplicate columns and floating point", async () => {
     await open()

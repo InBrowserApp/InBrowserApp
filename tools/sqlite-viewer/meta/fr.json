@@ -1,4 +1,4 @@
 {
-  "name": "Visionneuse et requêtes SQLite",
-  "description": "Ouvrez une base SQLite locale, examinez ses tables et son schéma, exécutez des requêtes SQL en lecture seule et exportez les résultats en CSV ou JSON. Vos données restent dans votre navigateur."
+  "name": "Visionneuse SQLite",
+  "description": "Ouvrez des bases SQLite dans votre navigateur, parcourez les tables et le schéma, exécutez une requête SQL en lecture seule et exportez les résultats en CSV ou JSON. Aucun envoi."
 }

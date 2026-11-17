@@ -49,9 +49,20 @@ describe("SQLite exports", () => {
   })
   it("shows readable values without changing their data", () => {
     expect(cellText(null)).toBe("NULL")
+    expect(cellText(new Uint8Array())).toBe("X''")
     expect(cellText(new Uint8Array([1, 16, 255]))).toBe("X'0110ff'")
     expect(cellText(9007199254740993n)).toBe("9007199254740993")
     expect(cellText(0)).toBe("0")
     expect(cellText("")).toBe("")
+  })
+  it("encodes a BLOB near the result budget with exact lowercase hex", () => {
+    const pattern = new Uint8Array([0, 1, 15, 16, 127, 128, 254, 255])
+    const blob = new Uint8Array(5 * 1024 * 1024 - 8)
+    for (let offset = 0; offset < blob.length; offset += pattern.length) {
+      blob.set(pattern, offset)
+    }
+    expect(cellText(blob)).toBe(
+      `X'${"00010f107f80feff".repeat(blob.length / pattern.length)}'`
+    )
   })
 })

@@ -1,9 +1,14 @@
 import type { Cell, QueryResult } from "../types"
 
 function hex(value: Uint8Array) {
-  return Array.from(value, (byte) => byte.toString(16).padStart(2, "0")).join(
-    ""
-  )
+  const digits = "0123456789abcdef"
+  const encoded = new Uint8Array(value.length * 2)
+  for (let index = 0; index < value.length; index++) {
+    const byte = value[index]!
+    encoded[index * 2] = digits.charCodeAt(byte >> 4)
+    encoded[index * 2 + 1] = digits.charCodeAt(byte & 15)
+  }
+  return new TextDecoder().decode(encoded)
 }
 
 function cellText(value: Cell) {

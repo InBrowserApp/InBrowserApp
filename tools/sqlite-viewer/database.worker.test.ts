@@ -42,6 +42,10 @@ test("reports an unopened connection, then handles open, query, structure and re
   state.open.mockResolvedValue({ db: { close: state.close }, metadata })
   const file = new File(["db"], "test.db")
   await send({ id: 2, kind: "open", file })
+  expect(state.init).toHaveBeenCalledWith({
+    locateFile: expect.any(Function),
+    useOldExtensionFunctions: false,
+  })
   expect(state.reply).toHaveBeenLastCalledWith({
     id: 2,
     kind: "open",
@@ -63,6 +67,9 @@ test("reports an unopened connection, then handles open, query, structure and re
 })
 
 test("returns known failures and bounded SQL errors without leaking non-error objects", async () => {
+  state.init.mockResolvedValue({})
+  state.open.mockResolvedValue({ db: { close: state.close }, metadata })
+  await send({ id: 0, kind: "open", file: new File(["db"], "test.db") })
   state.query.mockImplementationOnce(() => {
     throw new Error("readOnlyError")
   })

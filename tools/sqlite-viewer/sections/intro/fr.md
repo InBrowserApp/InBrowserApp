@@ -1,13 +1,15 @@
-## Examiner des fichiers SQLite localement
+## Explorer des bases SQLite dans votre navigateur
 
-Ouvrez une base SQLite 3 pour parcourir ses tables et ses vues, examiner les définitions de colonnes, les index, les clés étrangères et les instructions CREATE, ou exécuter une requête SQL en lecture seule. Essayez la base d’exemple pour explorer l’espace de travail sans choisir de fichier. Les fichiers et les requêtes restent dans votre navigateur et ne sont pas enregistrés automatiquement.
+Ouvrez une base SQLite 3 pour parcourir les tables et les vues, examiner les colonnes, les index, les clés étrangères et les instructions CREATE, ou exécuter une requête SQL en lecture seule. Essayez la base d’exemple pour explorer l’espace de travail. Votre fichier est traité localement et n’est jamais modifié.
 
 ## Interroger et exporter les résultats
 
-Sélectionnez une table pour afficher ses lignes. Modifiez le SQL et utilisez **Exécuter la requête** ou **Ctrl/⌘ + Entrée** pour exécuter une seule instruction SELECT, WITH ou EXPLAIN. La limite de résultats borne le nombre de lignes chargées ; la pagination affiche 50 lignes à la fois. Une requête peut également s’arrêter lorsque les résultats atteignent 5 Mio ou après 10 secondes. L’annulation garde l’interface réactive et recharge l’instantané de la base lors de la requête suivante.
+Sélectionnez une table ou une vue pour charger ses lignes, puis modifiez le SQL pour filtrer, trier ou joindre les données. Exécutez une seule instruction SELECT, WITH ou EXPLAIN avec **Exécuter la requête** ou **Ctrl/⌘ + Entrée**. Cliquez sur une cellule pour examiner et copier sa valeur complète.
 
-Les exports CSV et JSON contiennent le résultat chargé, y compris les lignes des autres pages. Le JSON conserve les noms de colonnes et les lignes dans des tableaux distincts, préservant ainsi les noms en double et les valeurs NULL. Les entiers SQLite deviennent des chaînes décimales exactes et les BLOB deviennent des objets avec une valeur hexadécimale `$blob`. Le CSV utilise des champs vides pour NULL, encadre les caractères spéciaux de guillemets et préfixe les textes ressemblant à des formules par une apostrophe pour une utilisation plus sûre dans un tableur.
+Choisissez une limite de résultats de 100, 1 000 ou 10 000 lignes et parcourez le résultat à raison de 50 lignes par page. Les requêtes sont limitées à 10 secondes et les résultats à 5 Mio. Les exports CSV et JSON comprennent toutes les lignes chargées, sur toutes les pages.
 
-## Bases prises en charge et limites
+Le JSON utilise des tableaux distincts pour les noms de colonnes et les lignes afin de préserver les noms en double et les valeurs NULL. Les entiers sont des chaînes décimales exactes et les BLOB contiennent une valeur hexadécimale `$blob`. Le CSV comprend une ligne d’en-tête, utilise des champs vides pour NULL et préfixe les textes ressemblant à des formules par une apostrophe.
 
-Ouvrez un fichier `.db`, `.sqlite` ou `.sqlite3` non chiffré de 50 Mio maximum. Le fichier d’origine n’est jamais modifié. Cet outil charge un instantané en mémoire : la mémoire utilisée peut donc dépasser la taille du fichier. Les fichiers annexes WAL et journal ne sont pas importés ; créez une copie propre après un checkpoint dans votre application de base de données avant de l’ouvrir ici. Les bases chiffrées, les extensions SQLite personnalisées et la modification de bases ne sont pas prises en charge.
+## Fichiers SQLite pris en charge
+
+Ouvrez un fichier `.db`, `.sqlite` ou `.sqlite3` non chiffré de 50 Mio maximum. Si la base utilise WAL, créez une copie après un checkpoint avant de l’ouvrir ; les fichiers annexes WAL et journal ne sont pas chargés. Les extensions SQLite personnalisées ne sont pas prises en charge. Les fichiers et les requêtes ne sont pas enregistrés automatiquement.

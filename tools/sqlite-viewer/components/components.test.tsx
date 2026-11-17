@@ -135,27 +135,38 @@ test("paginates results, inspects exact values and exports all loaded rows", asy
     .spyOn(HTMLAnchorElement.prototype, "click")
     .mockImplementation(() => {})
   render(
-    <ResultTable
-      result={result}
-      title={m.results}
-      filename="test.db"
-      {...props}
-    />
+    <dialog open aria-label={m.reader}>
+      <ResultTable
+        result={result}
+        title={m.results}
+        filename="test.db"
+        {...props}
+      />
+    </dialog>
   )
+  const workspace = screen.getByRole("dialog", { name: m.reader })
   expect(screen.getAllByRole("row")).toHaveLength(51)
   expect(screen.getByText(m.truncated)).toBeTruthy()
+  expect(screen.getByRole("button", { name: "0" })).toBeTruthy()
+  expect(screen.getByRole("button", { name: "1" })).toBeTruthy()
+  expect(screen.getByRole("button", { name: m.inspectValue })).toBeTruthy()
   fireEvent.click(screen.getByRole("button", { name: m.next }))
   expect(screen.getAllByRole("row")).toHaveLength(6)
   fireEvent.click(screen.getByRole("button", { name: m.previous }))
-  fireEvent.click(
-    screen.getAllByRole("button", { name: `${m.inspectValue}: blob` })[0]!
-  )
-  const dialog = screen.getByRole("dialog")
+  const cell = screen.getAllByRole("button", {
+    name: m.blob.replace("{bytes}", "2"),
+    description: m.inspectValue,
+  })[0]!
+  cell.focus()
+  fireEvent.click(cell)
+  const dialog = within(workspace).getByRole("dialog", { name: m.value })
   expect(
     (within(dialog).getByRole("textbox") as HTMLTextAreaElement).value
   ).toBe("X'00ff'")
-  fireEvent.click(within(dialog).getByRole("button", { name: m.cancel }))
-  expect(screen.queryByRole("dialog")).toBeNull()
+  fireEvent.click(within(dialog).getByRole("button", { name: m.close }))
+  expect(screen.queryByRole("dialog", { name: m.value })).toBeNull()
+  act(() => vi.advanceTimersByTime(0))
+  expect(document.activeElement).toBe(cell)
   fireEvent.click(screen.getByRole("button", { name: m.json }))
   fireEvent.click(screen.getByRole("button", { name: m.csv }))
   expect(JSON.parse(await blobs[0]!.text()).rows).toHaveLength(55)

@@ -1,13 +1,15 @@
-## Esamina i file SQLite in locale
+## Esplora database SQLite nel browser
 
-Apri un database SQLite 3 per esplorarne tabelle e viste, esaminare definizioni delle colonne, indici, chiavi esterne e istruzioni CREATE oppure eseguire una query SQL in sola lettura. Prova il database di esempio per esplorare l’area di lavoro senza scegliere un file. File e query restano nel browser e non vengono salvati automaticamente.
+Apri un database SQLite 3 per esplorare tabelle e viste, esaminare colonne, indici, chiavi esterne e istruzioni CREATE oppure eseguire una query SQL in sola lettura. Prova il database di esempio per esplorare l’area di lavoro. Il file viene elaborato localmente e non viene mai modificato.
 
 ## Esegui query ed esporta i risultati
 
-Seleziona una tabella per visualizzarne le righe. Modifica il codice SQL e usa **Esegui query** o **Ctrl/⌘ + Invio** per eseguire una sola istruzione SELECT, WITH o EXPLAIN. Il limite dei risultati stabilisce il numero massimo di righe caricate; ogni pagina mostra 50 righe. Una query può interrompersi anche al raggiungimento del limite di 5 MiB per i risultati o dopo 10 secondi. L’annullamento mantiene reattiva l’interfaccia e ricarica l’istantanea del database alla query successiva.
+Seleziona una tabella o una vista per caricarne le righe, poi modifica il codice SQL per filtrare, ordinare o unire i dati. Esegui una sola istruzione SELECT, WITH o EXPLAIN con **Esegui query** o **Ctrl/⌘ + Invio**. Fai clic su una cella per esaminarne e copiarne il valore completo.
 
-Le esportazioni CSV e JSON contengono il risultato caricato, comprese le righe nelle altre pagine. JSON memorizza separatamente i nomi delle colonne e gli array delle righe, conservando nomi duplicati e valori NULL. Gli interi SQLite diventano stringhe decimali esatte e i BLOB diventano oggetti con un valore esadecimale `$blob`. CSV usa campi vuoti per NULL, racchiude tra virgolette i caratteri speciali e aggiunge un apostrofo davanti al testo che può essere interpretato come formula, per un uso più sicuro nei fogli di calcolo.
+Scegli un limite di 100, 1.000 o 10.000 righe e sfoglia il risultato 50 righe alla volta. Le query hanno un limite di 10 secondi e di 5 MiB per le dimensioni dei risultati. Le esportazioni CSV e JSON includono tutte le righe caricate, in tutte le pagine.
 
-## Database supportati e limiti
+JSON usa nomi di colonna e array di righe separati per conservare nomi duplicati e valori NULL. Gli interi sono stringhe decimali esatte e i BLOB contengono un valore esadecimale `$blob`. CSV include una riga di intestazione, usa campi vuoti per NULL e aggiunge un apostrofo davanti al testo che può essere interpretato come formula.
 
-Apri un file `.db`, `.sqlite` o `.sqlite3` non crittografato fino a 50 MiB. Il file originale non viene mai modificato. Questo strumento carica un’istantanea in memoria, quindi l’uso della memoria può superare le dimensioni del file. I file ausiliari WAL e journal non vengono importati; prima di aprire il database qui, crea una copia integra con la tua applicazione per database dopo aver eseguito un checkpoint. I database crittografati, le estensioni SQLite personalizzate e la modifica dei database non sono supportati.
+## File SQLite supportati
+
+Apri un file `.db`, `.sqlite` o `.sqlite3` non crittografato fino a 50 MiB. Per un database che usa WAL, crea una copia su cui è stato eseguito un checkpoint prima di aprirla; i file ausiliari WAL e journal non vengono caricati. Le estensioni SQLite personalizzate non sono supportate. File e query non vengono salvati automaticamente.

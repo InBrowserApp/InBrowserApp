@@ -1,4 +1,4 @@
 {
-  "name": "Pemapar dan Pertanyaan SQLite",
-  "description": "Buka pangkalan data SQLite setempat, periksa jadual dan skema, jalankan SQL baca sahaja dan eksport hasil sebagai CSV atau JSON. Data anda kekal dalam pelayar anda."
+  "name": "Pemapar SQLite",
+  "description": "Buka pangkalan data SQLite dalam pelayar anda, layari jadual dan skema, jalankan pertanyaan SQL baca sahaja dan eksport hasil sebagai CSV atau JSON. Tiada muat naik."
 }

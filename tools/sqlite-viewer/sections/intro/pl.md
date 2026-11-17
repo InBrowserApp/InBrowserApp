@@ -1,13 +1,15 @@
-## Sprawdzaj pliki SQLite lokalnie
+## Przeglądaj bazy SQLite w przeglądarce
 
-Otwórz bazę SQLite 3, aby przeglądać jej tabele i widoki, sprawdzać definicje kolumn, indeksy, klucze obce oraz instrukcje CREATE lub wykonać zapytanie SQL tylko do odczytu. Wypróbuj przykładową bazę, aby poznać obszar roboczy bez wybierania pliku. Pliki i zapytania pozostają w przeglądarce i nie są automatycznie zapisywane.
+Otwórz bazę SQLite 3, aby przeglądać tabele i widoki, sprawdzać kolumny, indeksy, klucze obce oraz instrukcje CREATE lub wykonać zapytanie SQL tylko do odczytu. Wypróbuj przykładową bazę, aby poznać obszar roboczy. Plik jest przetwarzany lokalnie i nigdy nie jest modyfikowany.
 
 ## Wykonuj zapytania i eksportuj wyniki
 
-Wybierz tabelę, aby wyświetlić jej wiersze. Edytuj SQL i użyj przycisku **Wykonaj zapytanie** lub skrótu **Ctrl/⌘ + Enter**, aby wykonać jedną instrukcję SELECT, WITH lub EXPLAIN. Limit wyników ogranicza liczbę załadowanych wierszy; każda strona wyświetla 50 wierszy. Zapytanie może też zostać zatrzymane po osiągnięciu limitu 5 MiB wyników lub po 10 sekundach. Anulowanie pozwala zachować płynność interfejsu i powoduje ponowne załadowanie migawki bazy przy następnym zapytaniu.
+Wybierz tabelę lub widok, aby załadować wiersze, a następnie edytuj SQL, by filtrować, sortować lub łączyć dane. Wykonaj jedną instrukcję SELECT, WITH lub EXPLAIN przyciskiem **Wykonaj zapytanie** lub skrótem **Ctrl/⌘ + Enter**. Kliknij komórkę, aby sprawdzić i skopiować jej pełną wartość.
 
-Eksport CSV i JSON zawiera załadowany wynik, w tym wiersze z innych stron. JSON przechowuje nazwy kolumn i tablice wierszy oddzielnie, zachowując powtarzające się nazwy oraz wartości NULL. Liczby całkowite SQLite stają się dokładnymi ciągami dziesiętnymi, a wartości BLOB — obiektami z szesnastkową wartością `$blob`. CSV używa pustych pól dla NULL, ujmuje znaki specjalne w cudzysłowy i dodaje apostrof przed tekstem przypominającym formuły, aby bezpieczniej otwierać dane w arkuszu kalkulacyjnym.
+Wybierz limit wyników wynoszący 100, 1000 lub 10 000 wierszy i przeglądaj wynik po 50 wierszy na stronie. Zapytania mają limit 10 sekund, a wyniki — limit rozmiaru 5 MiB. Eksport CSV i JSON obejmuje wszystkie załadowane wiersze ze wszystkich stron.
 
-## Obsługiwane bazy i limity
+JSON używa oddzielnych tablic nazw kolumn i wierszy, aby zachować powtarzające się nazwy i wartości NULL. Liczby całkowite są dokładnymi ciągami dziesiętnymi, a wartości BLOB zawierają szesnastkową wartość `$blob`. CSV zawiera wiersz nagłówka, zapisuje NULL jako puste pola i dodaje apostrof przed tekstem przypominającym formuły.
 
-Otwórz nieszyfrowany plik `.db`, `.sqlite` lub `.sqlite3` o rozmiarze do 50 MiB. Oryginalny plik nigdy nie jest modyfikowany. Narzędzie ładuje migawkę do pamięci, więc zużycie pamięci może przekraczać rozmiar pliku. Pliki pomocnicze WAL i journal nie są importowane; przed otwarciem bazy tutaj utwórz w swojej aplikacji bazodanowej czystą kopię po wykonaniu checkpointu. Szyfrowane bazy, niestandardowe rozszerzenia SQLite i edycja baz nie są obsługiwane.
+## Obsługiwane pliki SQLite
+
+Otwórz nieszyfrowany plik `.db`, `.sqlite` lub `.sqlite3` o rozmiarze do 50 MiB. W przypadku bazy używającej WAL utwórz kopię po wykonaniu checkpointu przed jej otwarciem; pliki pomocnicze WAL i journal nie są ładowane. Niestandardowe rozszerzenia SQLite nie są obsługiwane. Pliki i zapytania nie są automatycznie zapisywane.

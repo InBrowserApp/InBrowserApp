@@ -1,13 +1,15 @@
-## Kiểm tra tệp SQLite cục bộ
+## Khám phá cơ sở dữ liệu SQLite trong trình duyệt
 
-Mở cơ sở dữ liệu SQLite 3 để duyệt các bảng và khung nhìn, kiểm tra định nghĩa cột, chỉ mục, khóa ngoại và câu lệnh CREATE, hoặc chạy truy vấn SQL chỉ đọc. Thử cơ sở dữ liệu mẫu để khám phá không gian làm việc mà không cần chọn tệp. Tệp và truy vấn luôn ở trong trình duyệt của bạn và không được tự động lưu.
+Mở cơ sở dữ liệu SQLite 3 để duyệt bảng và khung nhìn, kiểm tra cột, chỉ mục, khóa ngoại và câu lệnh CREATE, hoặc chạy truy vấn SQL chỉ đọc. Thử cơ sở dữ liệu mẫu để khám phá không gian làm việc. Tệp của bạn được xử lý cục bộ và không bao giờ bị sửa đổi.
 
 ## Truy vấn và xuất kết quả
 
-Chọn một bảng để xem trước các hàng. Chỉnh sửa SQL rồi dùng **Chạy truy vấn** hoặc **Ctrl/⌘ + Enter** để thực thi một câu lệnh SELECT, WITH hoặc EXPLAIN. Giới hạn kết quả hạn chế số hàng được tải; mỗi trang hiển thị 50 hàng. Truy vấn cũng có thể dừng khi đạt mức dung lượng kết quả 5 MiB hoặc sau 10 giây. Thao tác hủy giúp giao diện tiếp tục phản hồi và tải lại bản chụp cơ sở dữ liệu khi chạy truy vấn tiếp theo.
+Chọn một bảng hoặc khung nhìn để tải các hàng, sau đó chỉnh sửa SQL để lọc, sắp xếp hoặc kết hợp dữ liệu. Chạy một câu lệnh SELECT, WITH hoặc EXPLAIN bằng **Chạy truy vấn** hoặc **Ctrl/⌘ + Enter**. Nhấp vào một ô để kiểm tra và sao chép toàn bộ giá trị.
 
-Bản xuất CSV và JSON chứa kết quả đã tải, bao gồm cả các hàng trên trang khác. JSON lưu riêng tên cột và mảng hàng, giữ nguyên tên trùng lặp và giá trị NULL. Số nguyên SQLite được chuyển thành chuỗi thập phân chính xác, còn BLOB được chuyển thành đối tượng có giá trị `$blob` dạng thập lục phân. CSV dùng trường trống cho NULL, đặt các ký tự đặc biệt trong dấu nháy và thêm dấu nháy đơn trước văn bản giống công thức để sử dụng an toàn hơn trong bảng tính.
+Chọn giới hạn kết quả là 100, 1.000 hoặc 10.000 hàng và duyệt kết quả với 50 hàng mỗi trang. Truy vấn có giới hạn thời gian 10 giây và giới hạn kích thước kết quả 5 MiB. Bản xuất CSV và JSON bao gồm tất cả các hàng đã tải trên mọi trang.
 
-## Cơ sở dữ liệu được hỗ trợ và giới hạn
+JSON dùng tên cột và mảng hàng riêng biệt để giữ nguyên tên trùng lặp và giá trị NULL. Số nguyên là chuỗi thập phân chính xác, còn BLOB chứa giá trị `$blob` dạng thập lục phân. CSV bao gồm hàng tiêu đề, dùng trường trống cho NULL và thêm dấu nháy đơn trước văn bản giống công thức.
 
-Mở tệp `.db`, `.sqlite` hoặc `.sqlite3` không mã hóa, tối đa 50 MiB. Tệp gốc không bao giờ bị sửa đổi. Công cụ này tải bản chụp vào bộ nhớ, vì vậy mức sử dụng bộ nhớ có thể lớn hơn kích thước tệp. Các tệp WAL và journal đi kèm không được nhập; hãy tạo một bản sao sạch đã được tạo điểm kiểm tra bằng ứng dụng cơ sở dữ liệu trước khi mở ở đây. Không hỗ trợ cơ sở dữ liệu mã hóa, phần mở rộng SQLite tùy chỉnh và chỉnh sửa cơ sở dữ liệu.
+## Tệp SQLite được hỗ trợ
+
+Mở tệp `.db`, `.sqlite` hoặc `.sqlite3` không mã hóa, tối đa 50 MiB. Với cơ sở dữ liệu dùng WAL, hãy tạo bản sao đã được tạo điểm kiểm tra trước khi mở; các tệp WAL và journal đi kèm không được tải. Không hỗ trợ phần mở rộng SQLite tùy chỉnh. Tệp và truy vấn không được tự động lưu.

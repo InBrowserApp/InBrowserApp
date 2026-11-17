@@ -1,13 +1,15 @@
-## Examinar arquivos SQLite localmente
+## Explore bancos SQLite no navegador
 
-Abra um banco SQLite 3 para navegar pelas tabelas e visualizações, examinar definições de colunas, índices, chaves estrangeiras e instruções CREATE ou executar uma consulta SQL somente leitura. Experimente o banco de exemplo para explorar a área de trabalho sem escolher um arquivo. Arquivos e consultas ficam no navegador e não são salvos automaticamente.
+Abra um banco SQLite 3 para explorar tabelas e visualizações, examinar colunas, índices, chaves estrangeiras e instruções CREATE ou executar uma consulta SQL somente leitura. Experimente o banco de exemplo para explorar a área de trabalho. Seu arquivo é processado localmente e nunca é modificado.
 
 ## Consultar e exportar resultados
 
-Selecione uma tabela para visualizar suas linhas. Edite o SQL e use **Executar consulta** ou **Ctrl/⌘ + Enter** para executar uma instrução SELECT, WITH ou EXPLAIN. O limite de resultados restringe o número de linhas carregadas; a paginação exibe 50 linhas por vez. Uma consulta também pode parar ao atingir o limite de 5 MiB de resultados ou após 10 segundos. O cancelamento mantém a interface responsiva e recarrega a cópia instantânea do banco na próxima consulta.
+Selecione uma tabela ou visualização para carregar suas linhas e edite o SQL para filtrar, ordenar ou juntar dados. Execute uma instrução SELECT, WITH ou EXPLAIN com **Executar consulta** ou **Ctrl/⌘ + Enter**. Clique em uma célula para examinar e copiar seu valor completo.
 
-As exportações CSV e JSON contêm o resultado carregado, incluindo linhas de outras páginas. O JSON armazena nomes de colunas e matrizes de linhas separadamente, preservando nomes duplicados e valores NULL. Inteiros SQLite tornam-se strings decimais exatas e BLOBs tornam-se objetos com um valor hexadecimal `$blob`. O CSV usa campos vazios para NULL, coloca caracteres especiais entre aspas e adiciona um apóstrofo antes de textos semelhantes a fórmulas para um uso mais seguro em planilhas.
+Escolha um limite de resultados de 100, 1.000 ou 10.000 linhas e navegue pelo resultado com 50 linhas por página. As consultas têm um limite de 10 segundos e os resultados são limitados a 5 MiB. As exportações CSV e JSON incluem todas as linhas carregadas, de todas as páginas.
 
-## Bancos compatíveis e limites
+O JSON usa matrizes separadas de nomes de colunas e linhas para preservar nomes duplicados e valores NULL. Inteiros são strings decimais exatas e BLOBs contêm um valor hexadecimal `$blob`. O CSV inclui uma linha de cabeçalho, usa campos vazios para NULL e adiciona um apóstrofo antes de textos semelhantes a fórmulas.
 
-Abra um arquivo `.db`, `.sqlite` ou `.sqlite3` não criptografado de até 50 MiB. O arquivo original nunca é modificado. Esta ferramenta carrega uma cópia instantânea em memória, então o uso de memória pode exceder o tamanho do arquivo. Arquivos auxiliares WAL e journal não são importados; crie uma cópia limpa após um checkpoint no seu aplicativo de banco de dados antes de abri-la aqui. Bancos criptografados, extensões SQLite personalizadas e edição de bancos não são compatíveis.
+## Arquivos SQLite compatíveis
+
+Abra um arquivo `.db`, `.sqlite` ou `.sqlite3` não criptografado de até 50 MiB. Para um banco que usa WAL, crie uma cópia após um checkpoint antes de abri-lo; arquivos auxiliares WAL e journal não são carregados. Extensões SQLite personalizadas não são compatíveis. Arquivos e consultas não são salvos automaticamente.
