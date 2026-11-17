@@ -56,17 +56,17 @@ export function ExportCard({
         <CardDescription>{m.exportDescription}</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-5">
-        <dl className="grid grid-cols-2 gap-3 rounded-lg bg-muted/40 p-4">
-          <div>
+        <div className="grid grid-cols-2 gap-3 rounded-lg bg-muted/40 p-4">
+          <dl>
             <dt className="text-xs text-muted-foreground">{m.totalLabel}</dt>
             <dd className="mt-1 font-mono tabular-nums">
               <bdi>{formatDuration(duration)}</bdi>
             </dd>
-          </div>
-          <div className="flex items-center justify-end text-sm">
+          </dl>
+          <p className="flex items-center justify-end text-sm">
             {m.clipCount.replace("{count}", String(count))}
-          </div>
-        </dl>
+          </p>
+        </div>
         <FieldGroup>
           <Field>
             <FieldLabel htmlFor={`${id}-name`}>{m.outputNameLabel}</FieldLabel>
