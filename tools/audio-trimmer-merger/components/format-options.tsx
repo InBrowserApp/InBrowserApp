@@ -117,9 +117,12 @@ export function FormatOptions({
                         high: m.qualityHigh,
                       }[quality]
                     }
-                    {settings.format !== "ogg" && settings.format !== "wav"
-                      ? ` · ${bitrate(settings.format, quality)} kbps`
-                      : ""}
+                    {settings.format !== "ogg" && settings.format !== "wav" ? (
+                      <bdi dir="ltr">
+                        {" "}
+                        · {bitrate(settings.format, quality)} kbps
+                      </bdi>
+                    ) : null}
                   </SelectItem>
                 ))}
               </SelectGroup>
