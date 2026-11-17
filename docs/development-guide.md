@@ -182,7 +182,7 @@ overwrite manual edits on the next run.
 - Tool UI copy lives in each tool's `messages/<lang>.json`.
 - Tool markdown content usually lives in `sections/<section>/<lang>.md`.
 - Native language names for the language picker live in
-  `packages/ui/src/components/app/language-switcher.tsx`, not in message files.
+  `packages/ui/src/lib/language-native-names.ts`, not in message files.
 - The sitemap emits an `x-default` hreflang for multilingual entries
   (`apps/web/src/lib/sitemap-serialize.ts`; see #910).
 
