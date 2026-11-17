@@ -2177,9 +2177,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2822,9 +2819,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2856,9 +2850,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2968,9 +2959,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3733,9 +3721,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3875,9 +3860,6 @@ importers:
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4067,9 +4049,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4642,9 +4621,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4744,9 +4720,6 @@ importers:
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6026,9 +5999,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6150,9 +6120,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6640,9 +6607,6 @@ importers:
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6720,9 +6684,6 @@ importers:
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7071,9 +7032,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7248,9 +7206,6 @@ importers:
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7350,9 +7305,6 @@ importers:
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7885,9 +7837,6 @@ importers:
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9012,9 +8961,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9046,9 +8992,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
-      pdfjs-dist:
-        specifier: 'catalog:'
-        version: 6.5.438
       react:
         specifier: 'catalog:'
         version: 19.3.1

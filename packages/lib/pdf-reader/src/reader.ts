@@ -8,6 +8,7 @@ import {
 import workerUrl from "pdfjs-dist/build/pdf.worker.min.mjs?url"
 import { PdfAssets } from "./pdf-assets"
 import { readOutline, renderThumbnail } from "./navigation"
+import { loadViewerStyles } from "./viewer-styles"
 import type { PDFDocumentProxy } from "pdfjs-dist"
 import type { Reader, ReaderState } from "./types"
 
@@ -34,11 +35,15 @@ export async function openReader({
   onPassword,
   onError,
 }: Options): Promise<Reader> {
+  callerSignal.throwIfAborted()
   const lifetime = new AbortController()
   const signal = AbortSignal.any([callerSignal, lifetime.signal])
   // pdf_viewer reads pdfjsLib from the core module's initialized global.
-  const { EventBus, PDFSinglePageViewer, PDFLinkService, PDFFindController } =
-    await import("pdfjs-dist/web/pdf_viewer.mjs")
+  const [{ EventBus, PDFSinglePageViewer, PDFLinkService, PDFFindController }] =
+    await Promise.all([
+      import("pdfjs-dist/web/pdf_viewer.mjs"),
+      loadViewerStyles(),
+    ])
   signal.throwIfAborted()
   const data = new Uint8Array(await file.arrayBuffer())
   signal.throwIfAborted()

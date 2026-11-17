@@ -300,6 +300,7 @@
   },
   "exports": {
     ".": "./src/index.ts",
+    "./page-loaders": "./src/generated/page-loaders.ts",
     "./generate": "./src/generate.ts"
   }
 }

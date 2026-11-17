@@ -1,4 +1,5 @@
-import { toolPageLoaders, toolRegistryBySlug } from "@workspace/tool-registry"
+import { toolRegistryBySlug } from "@workspace/tool-registry"
+import { toolPageLoaders } from "@workspace/tool-registry/page-loaders"
 
 import {
   DEFAULT_SITE_LANGUAGE,
