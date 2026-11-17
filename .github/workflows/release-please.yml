@@ -66,7 +66,7 @@ jobs:
           path: dist
 
       - name: Create release archive
-        run: tar --zstd -cf "web-dist-${RELEASE_TAG}.tar.zstd" -C dist .
+        run: tar -I 'zstd -T4 -15 --long=27' -cf "web-dist-${RELEASE_TAG}.tar.zstd" -C dist .
 
       - name: Attest build provenance
         uses: actions/attest-build-provenance@v4
