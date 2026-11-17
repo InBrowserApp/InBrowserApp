@@ -18348,6 +18348,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "media-info-viewer",
+    category: "misc",
+    icon: "file-text",
+    tags: [
+      "audio",
+      "video",
+      "media",
+      "metadata",
+      "codec",
+      "bitrate",
+      "mediainfo",
+    ],
+    locales: {
+      ar: {
+        name: "عارض معلومات الوسائط",
+        description:
+          "اعرض ترميز الصوت والفيديو ومعدل البت والمدة والدقة ومعدل الإطارات وتفاصيل المسارات محليًا في متصفحك.",
+      },
+      de: {
+        name: "Medieninfo-Betrachter",
+        description:
+          "Audio- und Video-Codecs, Bitrate, Dauer, Auflösung, Bildrate und Spurdetails lokal im Browser anzeigen.",
+      },
+      en: {
+        name: "Media Info Viewer",
+        description:
+          "View audio and video codecs, bitrate, duration, resolution, frame rate, and track details locally in your browser.",
+      },
+      es: {
+        name: "Visor de información multimedia",
+        description:
+          "Consulta códecs de audio y vídeo, tasa de bits, duración, resolución, frecuencia de fotogramas y detalles de las pistas localmente en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse d’informations multimédias",
+        description:
+          "Consultez les codecs audio et vidéo, le débit, la durée, la résolution, la fréquence d’images et les détails des pistes localement dans votre navigateur.",
+      },
+      he: {
+        name: "מציג פרטי מדיה",
+        description:
+          "צפייה בקודקי שמע ווידאו, קצב סיביות, משך, רזולוציה, קצב פריימים ופרטי רצועות באופן מקומי בדפדפן.",
+      },
+      hi: {
+        name: "मीडिया जानकारी व्यूअर",
+        description:
+          "अपने ब्राउज़र में स्थानीय रूप से ऑडियो और वीडियो कोडेक, बिटरेट, अवधि, रिज़ॉल्यूशन, फ़्रेम दर और ट्रैक विवरण देखें।",
+      },
+      id: {
+        name: "Penampil Info Media",
+        description:
+          "Lihat codec audio dan video, bitrate, durasi, resolusi, laju bingkai, dan detail trek secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Visualizzatore di informazioni audio e video",
+        description:
+          "Visualizza codec audio e video, bitrate, durata, risoluzione, frequenza fotogrammi e dettagli delle tracce localmente nel browser.",
+      },
+      ja: {
+        name: "音声・動画情報ビューアー",
+        description:
+          "音声・動画のコーデック、ビットレート、再生時間、解像度、フレームレート、トラック情報をブラウザー内で確認できます。",
+      },
+      ko: {
+        name: "미디어 정보 뷰어",
+        description:
+          "브라우저에서 로컬로 오디오 및 비디오의 코덱, 비트레이트, 재생 시간, 해상도, 프레임 레이트와 트랙 정보를 확인하세요.",
+      },
+      ms: {
+        name: "Pemapar Maklumat Media",
+        description:
+          "Lihat kodek audio dan video, kadar bit, tempoh, resolusi, kadar bingkai dan butiran trek secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "Media-informatieviewer",
+        description:
+          "Bekijk audio- en videocodecs, bitrate, duur, resolutie, beeldsnelheid en spoorgegevens lokaal in je browser.",
+      },
+      no: {
+        name: "Medieinformasjonsviser",
+        description:
+          "Se lyd- og videokodeker, bithastighet, varighet, oppløsning, bildefrekvens og spordetaljer lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka informacji o multimediach",
+        description:
+          "Sprawdzaj kodeki audio i wideo, przepływność, czas trwania, rozdzielczość, liczbę klatek na sekundę i szczegóły ścieżek lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de informações de mídia",
+        description:
+          "Veja codecs de áudio e vídeo, taxa de bits, duração, resolução, taxa de quadros e detalhes das faixas localmente no navegador.",
+      },
+      ru: {
+        name: "Просмотр информации о медиафайлах",
+        description:
+          "Просматривайте кодеки аудио и видео, битрейт, длительность, разрешение, частоту кадров и сведения о дорожках локально в браузере.",
+      },
+      sv: {
+        name: "Visare för medieinformation",
+        description:
+          "Visa kodekar för ljud och video, bithastighet, längd, upplösning, bildfrekvens och spårinformation lokalt i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดูข้อมูลเสียงและวิดีโอ",
+        description:
+          "ดูตัวแปลงสัญญาณเสียงและวิดีโอ บิตเรต ระยะเวลา ความละเอียด อัตราเฟรม และรายละเอียดแทร็กภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Medya Bilgisi Görüntüleyici",
+        description:
+          "Ses ve video kodeklerini, bit hızını, süreyi, çözünürlüğü, kare hızını ve iz ayrıntılarını tarayıcınızda yerel olarak görüntüleyin.",
+      },
+      vi: {
+        name: "Trình xem thông tin đa phương tiện",
+        description:
+          "Xem bộ mã hóa âm thanh và video, tốc độ bit, thời lượng, độ phân giải, tốc độ khung hình và chi tiết các luồng ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "音视频信息查看器",
+        description:
+          "在浏览器本地查看音视频编码、码率、时长、分辨率、帧率及轨道信息。",
+      },
+      "zh-TW": {
+        name: "影音資訊檢視器",
+        description:
+          "在瀏覽器本機檢視音訊與影片的編解碼器、位元率、長度、解析度、影格率及軌道詳細資訊。",
+      },
+    },
+  },
+  {
     slug: "mhtml-to-html-converter",
     category: "document",
     icon: "file-text",
