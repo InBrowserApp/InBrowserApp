@@ -1,0 +1,4 @@
+{
+  "name": "CBOR / MessagePack-converter",
+  "description": "Zet JSON om naar CBOR of MessagePack om API’s te debuggen. Decodeer Hex, Base64, Base64URL of binaire bestanden en kopieer of download de resultaten lokaal in je browser."
+}

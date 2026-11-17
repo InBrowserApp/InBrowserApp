@@ -37,6 +37,7 @@ export {
   Minus,
   File,
   FileArchive,
+  FileCog,
   FileJson2,
   FileText,
   Flashlight,

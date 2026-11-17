@@ -3314,6 +3314,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cbor-messagepack-converter",
+    language: "ar",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "de",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "en",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "es",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "fr",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "he",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "hi",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "id",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "it",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "ja",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "ko",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "ms",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "nl",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "no",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "pl",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "pt",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "ru",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "sv",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "th",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "tr",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "vi",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "cbz-reader",
     language: "ar",
   },
@@ -7083,6 +7175,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "email-viewer",
+    language: "zh-TW",
+  },
+  {
+    slug: "env-converter",
+    language: "ar",
+  },
+  {
+    slug: "env-converter",
+    language: "de",
+  },
+  {
+    slug: "env-converter",
+    language: "en",
+  },
+  {
+    slug: "env-converter",
+    language: "es",
+  },
+  {
+    slug: "env-converter",
+    language: "fr",
+  },
+  {
+    slug: "env-converter",
+    language: "he",
+  },
+  {
+    slug: "env-converter",
+    language: "hi",
+  },
+  {
+    slug: "env-converter",
+    language: "id",
+  },
+  {
+    slug: "env-converter",
+    language: "it",
+  },
+  {
+    slug: "env-converter",
+    language: "ja",
+  },
+  {
+    slug: "env-converter",
+    language: "ko",
+  },
+  {
+    slug: "env-converter",
+    language: "ms",
+  },
+  {
+    slug: "env-converter",
+    language: "nl",
+  },
+  {
+    slug: "env-converter",
+    language: "no",
+  },
+  {
+    slug: "env-converter",
+    language: "pl",
+  },
+  {
+    slug: "env-converter",
+    language: "pt",
+  },
+  {
+    slug: "env-converter",
+    language: "ru",
+  },
+  {
+    slug: "env-converter",
+    language: "sv",
+  },
+  {
+    slug: "env-converter",
+    language: "th",
+  },
+  {
+    slug: "env-converter",
+    language: "tr",
+  },
+  {
+    slug: "env-converter",
+    language: "vi",
+  },
+  {
+    slug: "env-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "env-converter",
     language: "zh-TW",
   },
   {
@@ -21251,6 +21435,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "sql-formatter-and-linter",
+    language: "zh-TW",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ar",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "de",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "en",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "es",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "fr",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "he",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "hi",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "id",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "it",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ja",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ko",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ms",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "nl",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "no",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "pl",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "pt",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ru",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "sv",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "th",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "tr",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "vi",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "sqlite-viewer",
     language: "zh-TW",
   },
   {

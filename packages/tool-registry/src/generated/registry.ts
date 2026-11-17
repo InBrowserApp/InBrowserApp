@@ -4613,6 +4613,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "cbor-messagepack-converter",
+    category: "json",
+    icon: "binary",
+    tags: [
+      "cbor",
+      "messagepack",
+      "msgpack",
+      "json",
+      "binary",
+      "hex",
+      "base64",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل CBOR / MessagePack",
+        description:
+          "حوّل JSON إلى CBOR أو MessagePack لتصحيح أخطاء API. فك ترميز Hex أو Base64 أو Base64URL أو الملفات الثنائية، ثم انسخ النتائج أو نزّلها محليًا في متصفحك.",
+      },
+      de: {
+        name: "CBOR- / MessagePack-Konverter",
+        description:
+          "JSON für die API-Fehlersuche in CBOR oder MessagePack umwandeln. Hex, Base64, Base64URL oder Binärdateien dekodieren und Ergebnisse lokal im Browser kopieren oder herunterladen.",
+      },
+      en: {
+        name: "CBOR / MessagePack Converter",
+        description:
+          "Convert JSON to CBOR or MessagePack for API debugging. Decode Hex, Base64, Base64URL or binary files, then copy or download results locally in your browser.",
+      },
+      es: {
+        name: "Conversor CBOR / MessagePack",
+        description:
+          "Convierte JSON a CBOR o MessagePack para depurar API. Decodifica Hex, Base64, Base64URL o archivos binarios y copia o descarga los resultados localmente en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur CBOR / MessagePack",
+        description:
+          "Convertissez du JSON en CBOR ou MessagePack pour déboguer vos API. Décodez Hex, Base64, Base64URL ou des fichiers binaires, puis copiez ou téléchargez les résultats localement dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר CBOR / MessagePack",
+        description:
+          "המרת JSON ל-CBOR או ל-MessagePack לצורך ניפוי שגיאות ב-API. פענוח Hex, Base64, Base64URL או קבצים בינריים, והעתקה או הורדה של התוצאות מקומית בדפדפן.",
+      },
+      hi: {
+        name: "CBOR / MessagePack कन्वर्टर",
+        description:
+          "API की डीबगिंग के लिए JSON को CBOR या MessagePack में बदलें। Hex, Base64, Base64URL या बाइनरी फ़ाइलें डिकोड करें, फिर परिणाम अपने ब्राउज़र में स्थानीय रूप से कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter CBOR / MessagePack",
+        description:
+          "Konversi JSON ke CBOR atau MessagePack untuk debugging API. Dekode Hex, Base64, Base64URL, atau berkas biner, lalu salin atau unduh hasilnya secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Convertitore CBOR / MessagePack",
+        description:
+          "Converti JSON in CBOR o MessagePack per il debug delle API. Decodifica Hex, Base64, Base64URL o file binari, poi copia o scarica i risultati localmente nel browser.",
+      },
+      ja: {
+        name: "CBOR / MessagePack 変換ツール",
+        description:
+          "API のデバッグ用に JSON を CBOR または MessagePack に変換します。16 進数、Base64、Base64URL、バイナリファイルをデコードし、ブラウザー内で結果をコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "CBOR / MessagePack 변환기",
+        description:
+          "API 디버깅을 위해 JSON을 CBOR 또는 MessagePack으로 변환하세요. Hex, Base64, Base64URL 또는 바이너리 파일을 디코딩하고 브라우저에서 로컬로 결과를 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar CBOR / MessagePack",
+        description:
+          "Tukar JSON kepada CBOR atau MessagePack untuk menyahpepijat API. Nyahkod Hex, Base64, Base64URL atau fail binari, kemudian salin atau muat turun hasil secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "CBOR / MessagePack-converter",
+        description:
+          "Zet JSON om naar CBOR of MessagePack om API’s te debuggen. Decodeer Hex, Base64, Base64URL of binaire bestanden en kopieer of download de resultaten lokaal in je browser.",
+      },
+      no: {
+        name: "CBOR / MessagePack-konverterer",
+        description:
+          "Konverter JSON til CBOR eller MessagePack for API-feilsøking. Dekod Hex, Base64, Base64URL eller binærfiler, og kopier eller last ned resultatene lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter CBOR / MessagePack",
+        description:
+          "Konwertuj JSON na CBOR lub MessagePack do debugowania API. Dekoduj Hex, Base64, Base64URL lub pliki binarne, a następnie kopiuj lub pobieraj wyniki lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de CBOR / MessagePack",
+        description:
+          "Converta JSON para CBOR ou MessagePack para depurar APIs. Decodifique Hex, Base64, Base64URL ou arquivos binários e copie ou baixe os resultados localmente no navegador.",
+      },
+      ru: {
+        name: "Конвертер CBOR / MessagePack",
+        description:
+          "Преобразуйте JSON в CBOR или MessagePack для отладки API. Декодируйте Hex, Base64, Base64URL или двоичные файлы, затем копируйте или скачивайте результаты локально в браузере.",
+      },
+      sv: {
+        name: "CBOR / MessagePack-konverterare",
+        description:
+          "Konvertera JSON till CBOR eller MessagePack för API-felsökning. Avkoda Hex, Base64, Base64URL eller binära filer och kopiera eller ladda ned resultat lokalt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลง CBOR / MessagePack",
+        description:
+          "แปลง JSON เป็น CBOR หรือ MessagePack เพื่อดีบัก API ถอดรหัส Hex, Base64, Base64URL หรือไฟล์ไบนารี แล้วคัดลอกหรือดาวน์โหลดผลลัพธ์ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "CBOR / MessagePack Dönüştürücü",
+        description:
+          "API hata ayıklama için JSON'u CBOR veya MessagePack'e dönüştürün. Hex, Base64, Base64URL veya ikili dosyaları çözün; sonuçları tarayıcınızda yerel olarak kopyalayın ya da indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CBOR / MessagePack",
+        description:
+          "Chuyển JSON sang CBOR hoặc MessagePack để gỡ lỗi API. Giải mã Hex, Base64, Base64URL hoặc tệp nhị phân, rồi sao chép hoặc tải kết quả xuống ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "CBOR / MessagePack 转换器",
+        description:
+          "将 JSON 转换为 CBOR 或 MessagePack，辅助接口调试。解码 Hex、Base64、Base64URL 或二进制文件，然后在浏览器本地复制或下载结果。",
+      },
+      "zh-TW": {
+        name: "CBOR / MessagePack 轉換器",
+        description:
+          "將 JSON 轉換為 CBOR 或 MessagePack，協助 API 除錯。解碼 Hex、Base64、Base64URL 或二進位檔案，並在瀏覽器本機複製或下載結果。",
+      },
+    },
+  },
+  {
     slug: "cbz-reader",
     category: "image",
     icon: "image",
@@ -9777,6 +9909,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "電子郵件檢視器",
         description:
           "在本機閱讀 EML、EMLX 與 MSG 郵件檔案，檢視郵件標頭、HTML 或純文字內容、內嵌圖片及附件詳細資訊。",
+      },
+    },
+  },
+  {
+    slug: "env-converter",
+    category: "developer",
+    icon: "file-cog",
+    tags: [
+      "env",
+      "dotenv",
+      "json",
+      "yaml",
+      "converter",
+      "environment",
+      "config",
+      "devops",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل .env",
+        description:
+          "حوّل ملفات .env إلى JSON أو YAML والعكس، مع فحص المفاتيح المكررة وعلامات الاقتباس.",
+      },
+      de: {
+        name: ".env-Konverter",
+        description:
+          "Konvertieren Sie .env-Dateien in JSON oder YAML und zurück, mit Prüfung auf doppelte Schlüssel und fehlerhafte Anführungszeichen.",
+      },
+      en: {
+        name: ".env Converter",
+        description:
+          "Convert .env files to JSON or YAML and back, with duplicate key and quote checks.",
+      },
+      es: {
+        name: "Conversor de .env",
+        description:
+          "Convierte archivos .env a JSON o YAML y viceversa, con comprobaciones de claves duplicadas y comillas.",
+      },
+      fr: {
+        name: "Convertisseur .env",
+        description:
+          "Convertissez des fichiers .env en JSON ou YAML et inversement, avec vérification des clés en double et des guillemets.",
+      },
+      he: {
+        name: "ממיר .env",
+        description:
+          "המרת קובצי .env ל־JSON או YAML ובחזרה, עם בדיקת מפתחות כפולים ובעיות במירכאות.",
+      },
+      hi: {
+        name: ".env कन्वर्टर",
+        description:
+          "दोहराई गई कुंजियों और उद्धरण चिह्नों की जाँच के साथ .env फ़ाइलों को JSON या YAML में और वापस बदलें।",
+      },
+      id: {
+        name: "Konverter .env",
+        description:
+          "Konversi file .env ke JSON atau YAML dan sebaliknya, dengan pemeriksaan kunci duplikat dan masalah tanda kutip.",
+      },
+      it: {
+        name: "Convertitore .env",
+        description:
+          "Converti file .env in JSON o YAML e viceversa, con controlli sulle chiavi duplicate e sulle virgolette.",
+      },
+      ja: {
+        name: ".env 変換ツール",
+        description:
+          ".env と JSON または YAML を相互変換し、キーの重複や引用符の問題をチェックします。",
+      },
+      ko: {
+        name: ".env 변환기",
+        description:
+          ".env 파일을 JSON 또는 YAML로 상호 변환하고 중복 키와 따옴표 문제를 검사합니다.",
+      },
+      ms: {
+        name: "Penukar .env",
+        description:
+          "Tukar fail .env kepada JSON atau YAML dan sebaliknya, dengan semakan kunci pendua dan tanda petik.",
+      },
+      nl: {
+        name: ".env-converter",
+        description:
+          "Converteer .env-bestanden naar JSON of YAML en terug, met controles op dubbele sleutels en aanhalingstekens.",
+      },
+      no: {
+        name: ".env-konverterer",
+        description:
+          "Konverter .env-filer til JSON eller YAML og tilbake, med kontroll av dupliserte nøkler og anførselstegn.",
+      },
+      pl: {
+        name: "Konwerter .env",
+        description:
+          "Konwertuj pliki .env na JSON lub YAML i odwrotnie, ze sprawdzaniem powtórzonych kluczy i cudzysłowów.",
+      },
+      pt: {
+        name: "Conversor .env",
+        description:
+          "Converta arquivos .env para JSON ou YAML e vice-versa, com verificação de chaves duplicadas e aspas.",
+      },
+      ru: {
+        name: "Конвертер .env",
+        description:
+          "Преобразуйте файлы .env в JSON или YAML и обратно с проверкой повторяющихся ключей и кавычек.",
+      },
+      sv: {
+        name: ".env-konverterare",
+        description:
+          "Konvertera .env-filer till JSON eller YAML och tillbaka, med kontroll av duplicerade nycklar och citattecken.",
+      },
+      th: {
+        name: "ตัวแปลง .env",
+        description:
+          "แปลงไฟล์ .env เป็น JSON หรือ YAML และแปลงกลับ พร้อมตรวจสอบคีย์ซ้ำและเครื่องหมายคำพูด",
+      },
+      tr: {
+        name: ".env Dönüştürücü",
+        description:
+          ".env dosyalarını JSON veya YAML biçimine ve geri dönüştürün; yinelenen anahtarları ve tırnak sorunlarını kontrol edin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi .env",
+        description:
+          "Chuyển đổi tệp .env sang JSON hoặc YAML và ngược lại, đồng thời kiểm tra khóa trùng và lỗi dấu nháy.",
+      },
+      "zh-CN": {
+        name: ".env 转换器",
+        description:
+          "在 .env 与 JSON 或 YAML 之间转换，并检查重复键和引号问题。",
+      },
+      "zh-TW": {
+        name: ".env 轉換器",
+        description:
+          "將 .env 檔案與 JSON 或 YAML 相互轉換，並檢查重複鍵名和引號問題。",
       },
     },
   },
@@ -29126,6 +29390,141 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "sqlite-viewer",
+    category: "developer",
+    icon: "layout-grid",
+    tags: [
+      "sqlite",
+      "sql",
+      "db",
+      "database",
+      "query",
+      "table",
+      "schema",
+      "csv",
+      "json",
+      "viewer",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض SQLite",
+        description:
+          "افتح قواعد بيانات SQLite في متصفحك، وتصفّح الجداول والمخطط، ونفّذ استعلام SQL للقراءة فقط، وصدّر النتائج بصيغة CSV أو JSON. دون رفع الملفات.",
+      },
+      de: {
+        name: "SQLite-Betrachter",
+        description:
+          "Öffnen Sie SQLite-Datenbanken im Browser, durchsuchen Sie Tabellen und Schema, führen Sie eine schreibgeschützte SQL-Abfrage aus und exportieren Sie Ergebnisse als CSV oder JSON. Keine Uploads.",
+      },
+      en: {
+        name: "SQLite Viewer",
+        description:
+          "Open SQLite databases in your browser, browse tables and schema, run a read-only SQL query, and export results as CSV or JSON. No uploads.",
+      },
+      es: {
+        name: "Visor de SQLite",
+        description:
+          "Abre bases de datos SQLite en tu navegador, explora tablas y su estructura, ejecuta consultas SQL de solo lectura y exporta resultados como CSV o JSON. Sin subidas.",
+      },
+      fr: {
+        name: "Visionneuse SQLite",
+        description:
+          "Ouvrez des bases SQLite dans votre navigateur, parcourez les tables et le schéma, exécutez une requête SQL en lecture seule et exportez les résultats en CSV ou JSON. Aucun envoi.",
+      },
+      he: {
+        name: "מציג SQLite",
+        description:
+          "פתיחת מסדי נתונים של SQLite בדפדפן, עיון בטבלאות ובסכמה, הרצת שאילתת SQL לקריאה בלבד וייצוא התוצאות ל־CSV או ל־JSON. ללא העלאות.",
+      },
+      hi: {
+        name: "SQLite व्यूअर",
+        description:
+          "अपने ब्राउज़र में SQLite डेटाबेस खोलें, टेबल और स्कीमा देखें, केवल पढ़ने वाली SQL क्वेरी चलाएँ और परिणाम CSV या JSON में निर्यात करें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Penampil SQLite",
+        description:
+          "Buka basis data SQLite di browser, telusuri tabel dan skema, jalankan kueri SQL hanya baca, lalu ekspor hasil sebagai CSV atau JSON. Tanpa unggahan.",
+      },
+      it: {
+        name: "Visualizzatore SQLite",
+        description:
+          "Apri database SQLite nel browser, esplora tabelle e schema, esegui una query SQL in sola lettura ed esporta i risultati in CSV o JSON. Nessun caricamento.",
+      },
+      ja: {
+        name: "SQLite ビューアー",
+        description:
+          "ブラウザーで SQLite データベースを開き、テーブルや構造の確認、読み取り専用 SQL クエリの実行、CSV・JSON 形式での結果のエクスポートができます。アップロードは不要です。",
+      },
+      ko: {
+        name: "SQLite 뷰어",
+        description:
+          "브라우저에서 SQLite 데이터베이스를 열어 테이블과 구조를 살펴보고, 읽기 전용 SQL 쿼리를 실행하고, 결과를 CSV 또는 JSON으로 내보내세요. 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Pemapar SQLite",
+        description:
+          "Buka pangkalan data SQLite dalam pelayar anda, layari jadual dan skema, jalankan pertanyaan SQL baca sahaja dan eksport hasil sebagai CSV atau JSON. Tiada muat naik.",
+      },
+      nl: {
+        name: "SQLite-viewer",
+        description:
+          "Open SQLite-databases in je browser, bekijk tabellen en het schema, voer een alleen-lezen SQL-query uit en exporteer resultaten als CSV of JSON. Geen uploads.",
+      },
+      no: {
+        name: "SQLite-viser",
+        description:
+          "Åpne SQLite-databaser i nettleseren, bla gjennom tabeller og skjema, kjør en SQL-spørring med kun lesetilgang og eksporter resultater som CSV eller JSON. Ingen opplasting.",
+      },
+      pl: {
+        name: "Przeglądarka SQLite",
+        description:
+          "Otwieraj bazy SQLite w przeglądarce, przeglądaj tabele i schemat, wykonuj zapytania SQL tylko do odczytu i eksportuj wyniki do CSV lub JSON. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Visualizador SQLite",
+        description:
+          "Abra bancos SQLite no navegador, explore tabelas e esquemas, execute uma consulta SQL somente leitura e exporte resultados em CSV ou JSON. Sem envio de arquivos.",
+      },
+      ru: {
+        name: "Просмотр SQLite",
+        description:
+          "Открывайте базы данных SQLite в браузере, изучайте таблицы и структуру, выполняйте SQL-запросы только для чтения и экспортируйте результаты в CSV или JSON. Без загрузки на сервер.",
+      },
+      sv: {
+        name: "SQLite-visare",
+        description:
+          "Öppna SQLite-databaser i webbläsaren, bläddra bland tabeller och schema, kör en skrivskyddad SQL-fråga och exportera resultat som CSV eller JSON. Ingen uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมดู SQLite",
+        description:
+          "เปิดฐานข้อมูล SQLite ในเบราว์เซอร์ สำรวจตารางและสคีมา รันคำสั่ง SQL แบบอ่านอย่างเดียว และส่งออกผลลัพธ์เป็น CSV หรือ JSON โดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "SQLite Görüntüleyici",
+        description:
+          "SQLite veritabanlarını tarayıcınızda açın, tabloları ve şemayı inceleyin, salt okunur SQL sorgusu çalıştırın ve sonuçları CSV veya JSON olarak dışa aktarın. Yükleme yapılmaz.",
+      },
+      vi: {
+        name: "Trình xem SQLite",
+        description:
+          "Mở cơ sở dữ liệu SQLite trong trình duyệt, duyệt bảng và lược đồ, chạy truy vấn SQL chỉ đọc và xuất kết quả sang CSV hoặc JSON. Không tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "SQLite 查看器",
+        description:
+          "本地打开 SQLite 数据库，查看表结构、执行只读 SQL 查询，并导出 CSV 或 JSON，无需上传。",
+      },
+      "zh-TW": {
+        name: "SQLite 檢視器",
+        description:
+          "在瀏覽器中開啟 SQLite 資料庫、瀏覽資料表與結構、執行唯讀 SQL 查詢，並將結果匯出為 CSV 或 JSON。無須上傳。",
+      },
+    },
+  },
+  {
     slug: "sri-hash-generator",
     category: "crypto",
     icon: "lock",
@@ -40591,6 +40990,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "cbor-messagepack-converter": {
+    slug: "cbor-messagepack-converter",
+    category: "json",
+    icon: "binary",
+    tags: [
+      "cbor",
+      "messagepack",
+      "msgpack",
+      "json",
+      "binary",
+      "hex",
+      "base64",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل CBOR / MessagePack",
+        description:
+          "حوّل JSON إلى CBOR أو MessagePack لتصحيح أخطاء API. فك ترميز Hex أو Base64 أو Base64URL أو الملفات الثنائية، ثم انسخ النتائج أو نزّلها محليًا في متصفحك.",
+      },
+      de: {
+        name: "CBOR- / MessagePack-Konverter",
+        description:
+          "JSON für die API-Fehlersuche in CBOR oder MessagePack umwandeln. Hex, Base64, Base64URL oder Binärdateien dekodieren und Ergebnisse lokal im Browser kopieren oder herunterladen.",
+      },
+      en: {
+        name: "CBOR / MessagePack Converter",
+        description:
+          "Convert JSON to CBOR or MessagePack for API debugging. Decode Hex, Base64, Base64URL or binary files, then copy or download results locally in your browser.",
+      },
+      es: {
+        name: "Conversor CBOR / MessagePack",
+        description:
+          "Convierte JSON a CBOR o MessagePack para depurar API. Decodifica Hex, Base64, Base64URL o archivos binarios y copia o descarga los resultados localmente en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur CBOR / MessagePack",
+        description:
+          "Convertissez du JSON en CBOR ou MessagePack pour déboguer vos API. Décodez Hex, Base64, Base64URL ou des fichiers binaires, puis copiez ou téléchargez les résultats localement dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר CBOR / MessagePack",
+        description:
+          "המרת JSON ל-CBOR או ל-MessagePack לצורך ניפוי שגיאות ב-API. פענוח Hex, Base64, Base64URL או קבצים בינריים, והעתקה או הורדה של התוצאות מקומית בדפדפן.",
+      },
+      hi: {
+        name: "CBOR / MessagePack कन्वर्टर",
+        description:
+          "API की डीबगिंग के लिए JSON को CBOR या MessagePack में बदलें। Hex, Base64, Base64URL या बाइनरी फ़ाइलें डिकोड करें, फिर परिणाम अपने ब्राउज़र में स्थानीय रूप से कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter CBOR / MessagePack",
+        description:
+          "Konversi JSON ke CBOR atau MessagePack untuk debugging API. Dekode Hex, Base64, Base64URL, atau berkas biner, lalu salin atau unduh hasilnya secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Convertitore CBOR / MessagePack",
+        description:
+          "Converti JSON in CBOR o MessagePack per il debug delle API. Decodifica Hex, Base64, Base64URL o file binari, poi copia o scarica i risultati localmente nel browser.",
+      },
+      ja: {
+        name: "CBOR / MessagePack 変換ツール",
+        description:
+          "API のデバッグ用に JSON を CBOR または MessagePack に変換します。16 進数、Base64、Base64URL、バイナリファイルをデコードし、ブラウザー内で結果をコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "CBOR / MessagePack 변환기",
+        description:
+          "API 디버깅을 위해 JSON을 CBOR 또는 MessagePack으로 변환하세요. Hex, Base64, Base64URL 또는 바이너리 파일을 디코딩하고 브라우저에서 로컬로 결과를 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar CBOR / MessagePack",
+        description:
+          "Tukar JSON kepada CBOR atau MessagePack untuk menyahpepijat API. Nyahkod Hex, Base64, Base64URL atau fail binari, kemudian salin atau muat turun hasil secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "CBOR / MessagePack-converter",
+        description:
+          "Zet JSON om naar CBOR of MessagePack om API’s te debuggen. Decodeer Hex, Base64, Base64URL of binaire bestanden en kopieer of download de resultaten lokaal in je browser.",
+      },
+      no: {
+        name: "CBOR / MessagePack-konverterer",
+        description:
+          "Konverter JSON til CBOR eller MessagePack for API-feilsøking. Dekod Hex, Base64, Base64URL eller binærfiler, og kopier eller last ned resultatene lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter CBOR / MessagePack",
+        description:
+          "Konwertuj JSON na CBOR lub MessagePack do debugowania API. Dekoduj Hex, Base64, Base64URL lub pliki binarne, a następnie kopiuj lub pobieraj wyniki lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de CBOR / MessagePack",
+        description:
+          "Converta JSON para CBOR ou MessagePack para depurar APIs. Decodifique Hex, Base64, Base64URL ou arquivos binários e copie ou baixe os resultados localmente no navegador.",
+      },
+      ru: {
+        name: "Конвертер CBOR / MessagePack",
+        description:
+          "Преобразуйте JSON в CBOR или MessagePack для отладки API. Декодируйте Hex, Base64, Base64URL или двоичные файлы, затем копируйте или скачивайте результаты локально в браузере.",
+      },
+      sv: {
+        name: "CBOR / MessagePack-konverterare",
+        description:
+          "Konvertera JSON till CBOR eller MessagePack för API-felsökning. Avkoda Hex, Base64, Base64URL eller binära filer och kopiera eller ladda ned resultat lokalt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลง CBOR / MessagePack",
+        description:
+          "แปลง JSON เป็น CBOR หรือ MessagePack เพื่อดีบัก API ถอดรหัส Hex, Base64, Base64URL หรือไฟล์ไบนารี แล้วคัดลอกหรือดาวน์โหลดผลลัพธ์ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "CBOR / MessagePack Dönüştürücü",
+        description:
+          "API hata ayıklama için JSON'u CBOR veya MessagePack'e dönüştürün. Hex, Base64, Base64URL veya ikili dosyaları çözün; sonuçları tarayıcınızda yerel olarak kopyalayın ya da indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CBOR / MessagePack",
+        description:
+          "Chuyển JSON sang CBOR hoặc MessagePack để gỡ lỗi API. Giải mã Hex, Base64, Base64URL hoặc tệp nhị phân, rồi sao chép hoặc tải kết quả xuống ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "CBOR / MessagePack 转换器",
+        description:
+          "将 JSON 转换为 CBOR 或 MessagePack，辅助接口调试。解码 Hex、Base64、Base64URL 或二进制文件，然后在浏览器本地复制或下载结果。",
+      },
+      "zh-TW": {
+        name: "CBOR / MessagePack 轉換器",
+        description:
+          "將 JSON 轉換為 CBOR 或 MessagePack，協助 API 除錯。解碼 Hex、Base64、Base64URL 或二進位檔案，並在瀏覽器本機複製或下載結果。",
+      },
+    },
+  },
   "cbz-reader": {
     slug: "cbz-reader",
     category: "image",
@@ -45756,6 +46287,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "電子郵件檢視器",
         description:
           "在本機閱讀 EML、EMLX 與 MSG 郵件檔案，檢視郵件標頭、HTML 或純文字內容、內嵌圖片及附件詳細資訊。",
+      },
+    },
+  },
+  "env-converter": {
+    slug: "env-converter",
+    category: "developer",
+    icon: "file-cog",
+    tags: [
+      "env",
+      "dotenv",
+      "json",
+      "yaml",
+      "converter",
+      "environment",
+      "config",
+      "devops",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل .env",
+        description:
+          "حوّل ملفات .env إلى JSON أو YAML والعكس، مع فحص المفاتيح المكررة وعلامات الاقتباس.",
+      },
+      de: {
+        name: ".env-Konverter",
+        description:
+          "Konvertieren Sie .env-Dateien in JSON oder YAML und zurück, mit Prüfung auf doppelte Schlüssel und fehlerhafte Anführungszeichen.",
+      },
+      en: {
+        name: ".env Converter",
+        description:
+          "Convert .env files to JSON or YAML and back, with duplicate key and quote checks.",
+      },
+      es: {
+        name: "Conversor de .env",
+        description:
+          "Convierte archivos .env a JSON o YAML y viceversa, con comprobaciones de claves duplicadas y comillas.",
+      },
+      fr: {
+        name: "Convertisseur .env",
+        description:
+          "Convertissez des fichiers .env en JSON ou YAML et inversement, avec vérification des clés en double et des guillemets.",
+      },
+      he: {
+        name: "ממיר .env",
+        description:
+          "המרת קובצי .env ל־JSON או YAML ובחזרה, עם בדיקת מפתחות כפולים ובעיות במירכאות.",
+      },
+      hi: {
+        name: ".env कन्वर्टर",
+        description:
+          "दोहराई गई कुंजियों और उद्धरण चिह्नों की जाँच के साथ .env फ़ाइलों को JSON या YAML में और वापस बदलें।",
+      },
+      id: {
+        name: "Konverter .env",
+        description:
+          "Konversi file .env ke JSON atau YAML dan sebaliknya, dengan pemeriksaan kunci duplikat dan masalah tanda kutip.",
+      },
+      it: {
+        name: "Convertitore .env",
+        description:
+          "Converti file .env in JSON o YAML e viceversa, con controlli sulle chiavi duplicate e sulle virgolette.",
+      },
+      ja: {
+        name: ".env 変換ツール",
+        description:
+          ".env と JSON または YAML を相互変換し、キーの重複や引用符の問題をチェックします。",
+      },
+      ko: {
+        name: ".env 변환기",
+        description:
+          ".env 파일을 JSON 또는 YAML로 상호 변환하고 중복 키와 따옴표 문제를 검사합니다.",
+      },
+      ms: {
+        name: "Penukar .env",
+        description:
+          "Tukar fail .env kepada JSON atau YAML dan sebaliknya, dengan semakan kunci pendua dan tanda petik.",
+      },
+      nl: {
+        name: ".env-converter",
+        description:
+          "Converteer .env-bestanden naar JSON of YAML en terug, met controles op dubbele sleutels en aanhalingstekens.",
+      },
+      no: {
+        name: ".env-konverterer",
+        description:
+          "Konverter .env-filer til JSON eller YAML og tilbake, med kontroll av dupliserte nøkler og anførselstegn.",
+      },
+      pl: {
+        name: "Konwerter .env",
+        description:
+          "Konwertuj pliki .env na JSON lub YAML i odwrotnie, ze sprawdzaniem powtórzonych kluczy i cudzysłowów.",
+      },
+      pt: {
+        name: "Conversor .env",
+        description:
+          "Converta arquivos .env para JSON ou YAML e vice-versa, com verificação de chaves duplicadas e aspas.",
+      },
+      ru: {
+        name: "Конвертер .env",
+        description:
+          "Преобразуйте файлы .env в JSON или YAML и обратно с проверкой повторяющихся ключей и кавычек.",
+      },
+      sv: {
+        name: ".env-konverterare",
+        description:
+          "Konvertera .env-filer till JSON eller YAML och tillbaka, med kontroll av duplicerade nycklar och citattecken.",
+      },
+      th: {
+        name: "ตัวแปลง .env",
+        description:
+          "แปลงไฟล์ .env เป็น JSON หรือ YAML และแปลงกลับ พร้อมตรวจสอบคีย์ซ้ำและเครื่องหมายคำพูด",
+      },
+      tr: {
+        name: ".env Dönüştürücü",
+        description:
+          ".env dosyalarını JSON veya YAML biçimine ve geri dönüştürün; yinelenen anahtarları ve tırnak sorunlarını kontrol edin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi .env",
+        description:
+          "Chuyển đổi tệp .env sang JSON hoặc YAML và ngược lại, đồng thời kiểm tra khóa trùng và lỗi dấu nháy.",
+      },
+      "zh-CN": {
+        name: ".env 转换器",
+        description:
+          "在 .env 与 JSON 或 YAML 之间转换，并检查重复键和引号问题。",
+      },
+      "zh-TW": {
+        name: ".env 轉換器",
+        description:
+          "將 .env 檔案與 JSON 或 YAML 相互轉換，並檢查重複鍵名和引號問題。",
       },
     },
   },
@@ -65101,6 +65764,141 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "SQL 格式化與 Linter",
         description:
           "在瀏覽器中格式化 SQL 查詢，調整符合方言的版面規則，並在複製或下載結果前找出常見的 Lint 問題。",
+      },
+    },
+  },
+  "sqlite-viewer": {
+    slug: "sqlite-viewer",
+    category: "developer",
+    icon: "layout-grid",
+    tags: [
+      "sqlite",
+      "sql",
+      "db",
+      "database",
+      "query",
+      "table",
+      "schema",
+      "csv",
+      "json",
+      "viewer",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض SQLite",
+        description:
+          "افتح قواعد بيانات SQLite في متصفحك، وتصفّح الجداول والمخطط، ونفّذ استعلام SQL للقراءة فقط، وصدّر النتائج بصيغة CSV أو JSON. دون رفع الملفات.",
+      },
+      de: {
+        name: "SQLite-Betrachter",
+        description:
+          "Öffnen Sie SQLite-Datenbanken im Browser, durchsuchen Sie Tabellen und Schema, führen Sie eine schreibgeschützte SQL-Abfrage aus und exportieren Sie Ergebnisse als CSV oder JSON. Keine Uploads.",
+      },
+      en: {
+        name: "SQLite Viewer",
+        description:
+          "Open SQLite databases in your browser, browse tables and schema, run a read-only SQL query, and export results as CSV or JSON. No uploads.",
+      },
+      es: {
+        name: "Visor de SQLite",
+        description:
+          "Abre bases de datos SQLite en tu navegador, explora tablas y su estructura, ejecuta consultas SQL de solo lectura y exporta resultados como CSV o JSON. Sin subidas.",
+      },
+      fr: {
+        name: "Visionneuse SQLite",
+        description:
+          "Ouvrez des bases SQLite dans votre navigateur, parcourez les tables et le schéma, exécutez une requête SQL en lecture seule et exportez les résultats en CSV ou JSON. Aucun envoi.",
+      },
+      he: {
+        name: "מציג SQLite",
+        description:
+          "פתיחת מסדי נתונים של SQLite בדפדפן, עיון בטבלאות ובסכמה, הרצת שאילתת SQL לקריאה בלבד וייצוא התוצאות ל־CSV או ל־JSON. ללא העלאות.",
+      },
+      hi: {
+        name: "SQLite व्यूअर",
+        description:
+          "अपने ब्राउज़र में SQLite डेटाबेस खोलें, टेबल और स्कीमा देखें, केवल पढ़ने वाली SQL क्वेरी चलाएँ और परिणाम CSV या JSON में निर्यात करें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Penampil SQLite",
+        description:
+          "Buka basis data SQLite di browser, telusuri tabel dan skema, jalankan kueri SQL hanya baca, lalu ekspor hasil sebagai CSV atau JSON. Tanpa unggahan.",
+      },
+      it: {
+        name: "Visualizzatore SQLite",
+        description:
+          "Apri database SQLite nel browser, esplora tabelle e schema, esegui una query SQL in sola lettura ed esporta i risultati in CSV o JSON. Nessun caricamento.",
+      },
+      ja: {
+        name: "SQLite ビューアー",
+        description:
+          "ブラウザーで SQLite データベースを開き、テーブルや構造の確認、読み取り専用 SQL クエリの実行、CSV・JSON 形式での結果のエクスポートができます。アップロードは不要です。",
+      },
+      ko: {
+        name: "SQLite 뷰어",
+        description:
+          "브라우저에서 SQLite 데이터베이스를 열어 테이블과 구조를 살펴보고, 읽기 전용 SQL 쿼리를 실행하고, 결과를 CSV 또는 JSON으로 내보내세요. 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Pemapar SQLite",
+        description:
+          "Buka pangkalan data SQLite dalam pelayar anda, layari jadual dan skema, jalankan pertanyaan SQL baca sahaja dan eksport hasil sebagai CSV atau JSON. Tiada muat naik.",
+      },
+      nl: {
+        name: "SQLite-viewer",
+        description:
+          "Open SQLite-databases in je browser, bekijk tabellen en het schema, voer een alleen-lezen SQL-query uit en exporteer resultaten als CSV of JSON. Geen uploads.",
+      },
+      no: {
+        name: "SQLite-viser",
+        description:
+          "Åpne SQLite-databaser i nettleseren, bla gjennom tabeller og skjema, kjør en SQL-spørring med kun lesetilgang og eksporter resultater som CSV eller JSON. Ingen opplasting.",
+      },
+      pl: {
+        name: "Przeglądarka SQLite",
+        description:
+          "Otwieraj bazy SQLite w przeglądarce, przeglądaj tabele i schemat, wykonuj zapytania SQL tylko do odczytu i eksportuj wyniki do CSV lub JSON. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Visualizador SQLite",
+        description:
+          "Abra bancos SQLite no navegador, explore tabelas e esquemas, execute uma consulta SQL somente leitura e exporte resultados em CSV ou JSON. Sem envio de arquivos.",
+      },
+      ru: {
+        name: "Просмотр SQLite",
+        description:
+          "Открывайте базы данных SQLite в браузере, изучайте таблицы и структуру, выполняйте SQL-запросы только для чтения и экспортируйте результаты в CSV или JSON. Без загрузки на сервер.",
+      },
+      sv: {
+        name: "SQLite-visare",
+        description:
+          "Öppna SQLite-databaser i webbläsaren, bläddra bland tabeller och schema, kör en skrivskyddad SQL-fråga och exportera resultat som CSV eller JSON. Ingen uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมดู SQLite",
+        description:
+          "เปิดฐานข้อมูล SQLite ในเบราว์เซอร์ สำรวจตารางและสคีมา รันคำสั่ง SQL แบบอ่านอย่างเดียว และส่งออกผลลัพธ์เป็น CSV หรือ JSON โดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "SQLite Görüntüleyici",
+        description:
+          "SQLite veritabanlarını tarayıcınızda açın, tabloları ve şemayı inceleyin, salt okunur SQL sorgusu çalıştırın ve sonuçları CSV veya JSON olarak dışa aktarın. Yükleme yapılmaz.",
+      },
+      vi: {
+        name: "Trình xem SQLite",
+        description:
+          "Mở cơ sở dữ liệu SQLite trong trình duyệt, duyệt bảng và lược đồ, chạy truy vấn SQL chỉ đọc và xuất kết quả sang CSV hoặc JSON. Không tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "SQLite 查看器",
+        description:
+          "本地打开 SQLite 数据库，查看表结构、执行只读 SQL 查询，并导出 CSV 或 JSON，无需上传。",
+      },
+      "zh-TW": {
+        name: "SQLite 檢視器",
+        description:
+          "在瀏覽器中開啟 SQLite 資料庫、瀏覽資料表與結構、執行唯讀 SQL 查詢，並將結果匯出為 CSV 或 JSON。無須上傳。",
       },
     },
   },

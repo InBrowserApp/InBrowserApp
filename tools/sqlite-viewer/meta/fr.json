@@ -1,0 +1,4 @@
+{
+  "name": "Visionneuse SQLite",
+  "description": "Ouvrez des bases SQLite dans votre navigateur, parcourez les tables et le schéma, exécutez une requête SQL en lecture seule et exportez les résultats en CSV ou JSON. Aucun envoi."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi .env",
+  "description": "Chuyển đổi tệp .env sang JSON hoặc YAML và ngược lại, đồng thời kiểm tra khóa trùng và lỗi dấu nháy."
+}

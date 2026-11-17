@@ -1,0 +1,4 @@
+{
+  "name": "SQLite-viser",
+  "description": "Åpne SQLite-databaser i nettleseren, bla gjennom tabeller og skjema, kjør en SQL-spørring med kun lesetilgang og eksporter resultater som CSV eller JSON. Ingen opplasting."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Visualizador SQLite",
+  "description": "Abra bancos SQLite no navegador, explore tabelas e esquemas, execute uma consulta SQL somente leitura e exporte resultados em CSV ou JSON. Sem envio de arquivos."
+}
