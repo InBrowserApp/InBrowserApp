@@ -1,0 +1,73 @@
+{
+  "lookup": "Consulta de direcciones MAC",
+  "blocks": "Consulta de bloques de direcciones MAC",
+  "vendors": "Consulta de direcciones MAC por proveedor",
+  "navigationLabel": "Herramientas relacionadas",
+  "queryLabel": "Dirección MAC o prefijo",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefijo, organización o dirección postal…",
+  "vendorPlaceholder": "Nombre de organización o dirección postal…",
+  "blockSearchLabel": "Buscar bloques registrados",
+  "vendorSearchLabel": "Buscar organizaciones",
+  "registry": "Registro",
+  "allRegistries": "Todos los registros",
+  "prefix": "Prefijo",
+  "organization": "Organización",
+  "address": "Dirección registrada",
+  "range": "Rango de direcciones",
+  "capacity": "Direcciones en el bloque",
+  "share": "Copiar enlace",
+  "copied": "Enlace copiado",
+  "loading": "Cargando el registro IEEE…",
+  "loadError": "No se pudo cargar el registro. Vuelve a intentarlo.",
+  "retry": "Reintentar",
+  "noResults": "No hay registros coincidentes",
+  "noResultsHint": "Prueba con otro prefijo, nombre de organización o registro.",
+  "emptyLookupHint": "Los resultados aparecen aquí.",
+  "invalidAddress": "Introduce una dirección MAC completa o un prefijo válido de 24, 28 o 36 bits.",
+  "noAssignment": "No se encontró ninguna organización registrada",
+  "previous": "Anterior",
+  "next": "Siguiente",
+  "pageSummary": "{start}–{end} de {total}",
+  "assignmentCount": "Bloques registrados: {count}",
+  "organizationCount": "Organizaciones: {count}",
+  "source": "Registro público de IEEE",
+  "updated": "Copia del registro: {date}",
+  "clearOrganization": "Todas las organizaciones",
+  "examples": "Ejemplos",
+  "copyAddress": "Copiar dirección",
+  "addressCopied": "Dirección copiada",
+  "types": {
+    "universal": "Administrada universalmente",
+    "local": "Administrada localmente",
+    "multicast": "Multidifusión",
+    "broadcast": "Difusión",
+    "zero": "Dirección formada solo por ceros",
+    "prefix": "Prefijo IEEE"
+  },
+  "typeHints": {
+    "local": "Se usa habitualmente para direcciones Wi-Fi privadas.",
+    "multicast": "Dirección de grupo utilizada para enviar datos a varios dispositivos.",
+    "broadcast": "Llega a todos los dispositivos de la red local.",
+    "zero": "Una dirección sin especificar."
+  },
+  "cidHint": "Identificador de empresa para direcciones asignadas localmente.",
+  "about": {
+    "title": "Encuentra los bloques de direcciones MAC de una organización",
+    "intro": "Las organizaciones suelen tener varias asignaciones IEEE obtenidas a lo largo del tiempo o a través de distintos productos y negocios. Busca por nombre de organización o dirección postal registrada para reunir estos registros y abre una organización para explorar sus asignaciones en los distintos registros.",
+    "sections": [
+      {
+        "title": "Busca nombres y direcciones registradas",
+        "body": "La búsqueda encuentra coincidencias en cualquier parte del nombre o la dirección postal de una organización, sin distinguir mayúsculas de minúsculas. El nombre de una empresa, una ciudad o una calle pueden ayudar a localizar un registro. Cada resultado incluye la dirección postal registrada coincidente y un recuento de bloques. Selecciona la organización para centrarte en ese nombre exacto y ver todas sus asignaciones."
+      },
+      {
+        "title": "Interpreta las asignaciones de una organización",
+        "body": "La vista de organización agrupa sus bloques en una lista compacta de prefijos y tipos de registro. Si comparten dirección postal, esta aparece una sola vez encima de la lista; las direcciones registradas que difieren se mantienen junto a sus bloques. Filtra por MA-L, MA-M, MA-S, IAB o CID y abre un prefijo para examinar su rango y capacidad en la herramienta de consulta de bloques. Los nombres de las organizaciones siguen los listados de IEEE, incluidos los nombres históricos de las empresas."
+      },
+      {
+        "title": "Comparte una organización o una búsqueda",
+        "body": "«Copiar enlace» guarda la organización seleccionada, el término de búsqueda, el filtro de registro y la página en la URL. Puedes volver a abrir la misma vista, enviarla a un compañero o cambiar el idioma del sitio manteniendo la selección. La búsqueda y los filtros se ejecutan en tu navegador después de cargar la copia compartida del registro. El enlace a la fuente y la fecha de la copia, debajo de la herramienta, identifican los datos de IEEE utilizados en los resultados."
+      }
+    ]
+  }
+}

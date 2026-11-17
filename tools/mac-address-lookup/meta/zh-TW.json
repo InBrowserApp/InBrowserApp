@@ -1,0 +1,4 @@
+{
+  "name": "MAC 位址查詢",
+  "description": "查詢 MAC 位址或 IEEE 前綴所屬的組織與登記區塊。"
+}

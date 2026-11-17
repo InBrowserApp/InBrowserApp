@@ -1,0 +1,73 @@
+{
+  "lookup": "Carian Alamat MAC",
+  "blocks": "Carian Blok Alamat MAC",
+  "vendors": "Carian Pembekal Alamat MAC",
+  "navigationLabel": "Alat berkaitan",
+  "queryLabel": "Alamat MAC atau awalan",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Awalan, organisasi atau alamat…",
+  "vendorPlaceholder": "Nama atau alamat organisasi…",
+  "blockSearchLabel": "Cari blok berdaftar",
+  "vendorSearchLabel": "Cari organisasi",
+  "registry": "Daftar",
+  "allRegistries": "Semua daftar",
+  "prefix": "Awalan",
+  "organization": "Organisasi",
+  "address": "Alamat berdaftar",
+  "range": "Julat alamat",
+  "capacity": "Alamat dalam blok",
+  "share": "Salin pautan",
+  "copied": "Pautan disalin",
+  "loading": "Memuatkan daftar IEEE…",
+  "loadError": "Daftar tidak dapat dimuatkan. Cuba lagi.",
+  "retry": "Cuba lagi",
+  "noResults": "Tiada rekod yang sepadan",
+  "noResultsHint": "Cuba awalan, nama organisasi atau daftar yang lain.",
+  "emptyLookupHint": "Hasil carian dipaparkan di sini.",
+  "invalidAddress": "Masukkan alamat MAC yang lengkap atau awalan 24, 28 atau 36 bit yang sah.",
+  "noAssignment": "Tiada organisasi berdaftar ditemui",
+  "previous": "Sebelumnya",
+  "next": "Seterusnya",
+  "pageSummary": "{start}–{end} daripada {total}",
+  "assignmentCount": "{count} blok berdaftar",
+  "organizationCount": "{count} organisasi",
+  "source": "Daftar awam IEEE",
+  "updated": "Salinan data: {date}",
+  "clearOrganization": "Semua organisasi",
+  "examples": "Contoh",
+  "copyAddress": "Salin alamat",
+  "addressCopied": "Alamat disalin",
+  "types": {
+    "universal": "Ditadbir secara sejagat",
+    "local": "Ditadbir secara setempat",
+    "multicast": "Multisiar",
+    "broadcast": "Siaran",
+    "zero": "Alamat semua sifar",
+    "prefix": "Awalan IEEE"
+  },
+  "typeHints": {
+    "local": "Kerap digunakan untuk alamat Wi-Fi peribadi.",
+    "multicast": "Alamat kumpulan yang digunakan untuk menghubungi beberapa peranti.",
+    "broadcast": "Menghantar data kepada setiap peranti pada rangkaian setempat.",
+    "zero": "Alamat yang tidak ditentukan."
+  },
+  "cidHint": "Pengecam syarikat untuk alamat yang ditetapkan secara setempat.",
+  "about": {
+    "title": "Cari blok alamat MAC sesebuah organisasi",
+    "intro": "Organisasi sering memiliki beberapa peruntukan IEEE yang diperoleh dari semasa ke semasa atau melalui produk dan perniagaan yang berbeza. Cari mengikut nama organisasi atau alamat berdaftar untuk mengumpulkan rekod ini, kemudian buka organisasi untuk meneroka peruntukannya merentas daftar.",
+    "sections": [
+      {
+        "title": "Cari nama dan alamat berdaftar",
+        "body": "Carian memadankan mana-mana bahagian nama atau alamat organisasi tanpa mengira huruf besar atau kecil. Nama syarikat, bandar atau jalan boleh membantu anda mencari rekod. Setiap hasil menyertakan alamat berdaftar yang sepadan dan bilangan blok. Pilih organisasi untuk memfokuskan carian pada nama yang tepat itu dan melihat semua peruntukannya."
+      },
+      {
+        "title": "Baca peruntukan sesebuah organisasi",
+        "body": "Paparan organisasi mengumpulkan bloknya dalam senarai ringkas awalan dan jenis daftar. Alamat yang dikongsi dipaparkan sekali di atas senarai; alamat berdaftar yang berbeza kekal bersama blok masing-masing. Tapis mengikut MA-L, MA-M, MA-S, IAB atau CID, dan buka awalan untuk memeriksa julat dan kapasitinya dalam alat carian blok. Nama organisasi mengikut senarai IEEE, termasuk nama syarikat terdahulu."
+      },
+      {
+        "title": "Kongsi organisasi atau carian",
+        "body": "Salin pautan menyimpan organisasi yang dipilih, istilah carian, penapis daftar dan halaman dalam URL. Anda boleh membuka semula paparan yang sama, menghantarnya kepada rakan sekerja atau menukar bahasa laman sambil mengekalkan pilihan. Carian dan penapisan dijalankan dalam pelayar anda selepas salinan data daftar bersama dimuatkan. Pautan sumber dan tarikh salinan data di bawah alat mengenal pasti data IEEE yang digunakan untuk hasil carian."
+      }
+    ]
+  }
+}

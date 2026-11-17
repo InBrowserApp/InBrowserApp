@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC 주소 조회",
+  "blocks": "MAC 주소 블록 조회",
+  "vendors": "MAC 주소 제조사 조회",
+  "navigationLabel": "관련 도구",
+  "queryLabel": "MAC 주소 또는 접두사",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "접두사, 조직 또는 등록 주소…",
+  "vendorPlaceholder": "조직 이름 또는 등록 주소…",
+  "blockSearchLabel": "등록 블록 검색",
+  "vendorSearchLabel": "조직 검색",
+  "registry": "등록부",
+  "allRegistries": "모든 등록부",
+  "prefix": "접두사",
+  "organization": "조직",
+  "address": "등록 주소",
+  "range": "주소 범위",
+  "capacity": "블록 내 주소 수",
+  "share": "링크 복사",
+  "copied": "링크 복사됨",
+  "loading": "IEEE 등록부 불러오는 중…",
+  "loadError": "등록부를 불러오지 못했습니다. 다시 시도하세요.",
+  "retry": "다시 시도",
+  "noResults": "일치하는 기록 없음",
+  "noResultsHint": "다른 접두사, 조직 이름 또는 등록부로 검색해 보세요.",
+  "emptyLookupHint": "결과가 여기에 표시됩니다.",
+  "invalidAddress": "전체 MAC 주소 또는 유효한 24, 28, 36비트 접두사를 입력하세요.",
+  "noAssignment": "등록 조직을 찾을 수 없음",
+  "previous": "이전",
+  "next": "다음",
+  "pageSummary": "{start}–{end} / 총 {total}개",
+  "assignmentCount": "{count}개 등록 블록",
+  "organizationCount": "{count}개 조직",
+  "source": "IEEE 공개 등록부",
+  "updated": "스냅샷: {date}",
+  "clearOrganization": "모든 조직",
+  "examples": "예시",
+  "copyAddress": "주소 복사",
+  "addressCopied": "주소 복사됨",
+  "types": {
+    "universal": "전역 관리",
+    "local": "로컬 관리",
+    "multicast": "멀티캐스트",
+    "broadcast": "브로드캐스트",
+    "zero": "모두 0인 주소",
+    "prefix": "IEEE 접두사"
+  },
+  "typeHints": {
+    "local": "주로 비공개 Wi-Fi 주소에 사용됩니다.",
+    "multicast": "여러 장치에 전송하는 데 사용하는 그룹 주소입니다.",
+    "broadcast": "로컬 네트워크의 모든 장치에 전송합니다.",
+    "zero": "지정되지 않은 주소입니다."
+  },
+  "cidHint": "로컬로 할당된 주소를 위한 회사 식별자입니다.",
+  "about": {
+    "title": "MAC 주소 이해하기",
+    "intro": "MAC 주소는 Ethernet 또는 Wi-Fi 네트워크의 네트워크 인터페이스를 식별합니다. 이 도구에서 주소의 IEEE 등록 정보를 조회하세요. 라우터의 클라이언트 목록, ARP 테이블 또는 장치 라벨에 있는 주소를 사용할 수 있습니다.",
+    "sections": [
+      {
+        "title": "주소 또는 접두사 입력하기",
+        "body": "콜론, 하이픈, 점으로 구분하거나 구분자 없이 전체 48비트 MAC 주소를 붙여넣으세요. 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6, 001B638445E6은 모두 같은 주소입니다. 001B63 또는 8C1F64001 같은 IEEE 접두사도 입력할 수 있으며, /24, /28, /36 표기도 지원합니다."
+      },
+      {
+        "title": "등록 블록 확인하기",
+        "body": "결과에는 등록 조직, 해당 주소, 일치하는 접두사가 표시됩니다. 가장 긴 접두사부터 확인하므로 36비트 할당은 상위 28비트 또는 24비트 할당보다 우선합니다. 블록의 첫 주소, 마지막 주소, 주소 수로 할당 규모를 알 수 있습니다. 오래된 접두사에 등록 기록이 여러 개 있으면 일치하는 모든 조직이 함께 표시됩니다."
+      },
+      {
+        "title": "결과 살펴보고 공유하기",
+        "body": "정규화된 주소를 복사하거나 접두사를 열어 블록을 확인하고, 조직 이름을 눌러 다른 할당 기록을 탐색할 수 있습니다. ‘링크 복사’를 누르면 조회 조건이 URL에 저장되어 공유하거나 나중에 다시 열 수 있습니다. 로컬 관리, 멀티캐스트, 브로드캐스트, 모두 0인 주소에는 각각 별도의 주소 유형 결과가 표시됩니다. 데이터는 포함된 IEEE 스냅샷에서 가져오며, 출처 링크와 스냅샷 날짜는 도구 아래에 표시됩니다."
+      }
+    ]
+  }
+}

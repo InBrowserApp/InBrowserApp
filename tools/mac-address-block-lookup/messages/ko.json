@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC 주소 조회",
+  "blocks": "MAC 주소 블록 조회",
+  "vendors": "MAC 주소 제조사 조회",
+  "navigationLabel": "관련 도구",
+  "queryLabel": "MAC 주소 또는 접두사",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "접두사, 조직 또는 등록 주소…",
+  "vendorPlaceholder": "조직 이름 또는 등록 주소…",
+  "blockSearchLabel": "등록 블록 검색",
+  "vendorSearchLabel": "조직 검색",
+  "registry": "등록부",
+  "allRegistries": "모든 등록부",
+  "prefix": "접두사",
+  "organization": "조직",
+  "address": "등록 주소",
+  "range": "주소 범위",
+  "capacity": "블록 내 주소 수",
+  "share": "링크 복사",
+  "copied": "링크 복사됨",
+  "loading": "IEEE 등록부 불러오는 중…",
+  "loadError": "등록부를 불러오지 못했습니다. 다시 시도하세요.",
+  "retry": "다시 시도",
+  "noResults": "일치하는 기록 없음",
+  "noResultsHint": "다른 접두사, 조직 이름 또는 등록부로 검색해 보세요.",
+  "emptyLookupHint": "결과가 여기에 표시됩니다.",
+  "invalidAddress": "전체 MAC 주소 또는 유효한 24, 28, 36비트 접두사를 입력하세요.",
+  "noAssignment": "등록 조직을 찾을 수 없음",
+  "previous": "이전",
+  "next": "다음",
+  "pageSummary": "{start}–{end} / 총 {total}개",
+  "assignmentCount": "{count}개 등록 블록",
+  "organizationCount": "{count}개 조직",
+  "source": "IEEE 공개 등록부",
+  "updated": "스냅샷: {date}",
+  "clearOrganization": "모든 조직",
+  "examples": "예시",
+  "copyAddress": "주소 복사",
+  "addressCopied": "주소 복사됨",
+  "types": {
+    "universal": "전역 관리",
+    "local": "로컬 관리",
+    "multicast": "멀티캐스트",
+    "broadcast": "브로드캐스트",
+    "zero": "모두 0인 주소",
+    "prefix": "IEEE 접두사"
+  },
+  "typeHints": {
+    "local": "주로 비공개 Wi-Fi 주소에 사용됩니다.",
+    "multicast": "여러 장치에 전송하는 데 사용하는 그룹 주소입니다.",
+    "broadcast": "로컬 네트워크의 모든 장치에 전송합니다.",
+    "zero": "지정되지 않은 주소입니다."
+  },
+  "cidHint": "로컬로 할당된 주소를 위한 회사 식별자입니다.",
+  "about": {
+    "title": "IEEE MAC 주소 할당 살펴보기",
+    "intro": "IEEE 주소 블록은 조직에 고정된 접두사와 그 아래의 나머지 주소 공간을 할당합니다. 등록부를 검색하여 알고 있는 접두사를 확인하거나 더 큰 접두사에 포함된 소규모 할당을 살펴보고, 조직에 등록된 블록을 찾을 수 있습니다.",
+    "sections": [
+      {
+        "title": "등록부 선택하기",
+        "body": "MA-L은 24비트 접두사를 사용하며 16,777,216개 주소를 포함합니다. MA-M은 28비트를 사용하며 1,048,576개 주소를 포함합니다. MA-S와 이전 IAB 등록부는 36비트 접두사를 사용하며 각각 4,096개 주소를 포함합니다. CID 기록은 로컬 주소 지정 시 회사를 식별하는 데 사용됩니다. 등록부 필터를 사용하면 한 가지 할당 유형만 목록에 표시할 수 있습니다."
+      },
+      {
+        "title": "접두사 검색하고 범위 확인하기",
+        "body": "구분자 없이 입력하거나 콜론, 하이픈, 점으로 구분하여 접두사를 입력할 수 있으며 CIDR 표기도 지원합니다. 접두사 일부를 입력하면 일치하는 할당을 찾고, 전체 MAC 주소를 입력하면 해당 주소를 포함하는 접두사를 찾습니다. 조직 이름과 등록 주소로도 검색할 수 있습니다. 접두사를 열면 일치하는 등록 기록과 함께 첫 주소, 마지막 주소, 주소 수를 확인할 수 있습니다."
+      },
+      {
+        "title": "등록부 전체의 할당 기록 살펴보기",
+        "body": "조직 이름을 선택하면 조직 조회 도구에서 해당 조직의 전체 할당 목록이 열립니다. 결과는 페이지로 나뉘어 표시되며, ‘링크 복사’는 검색어, 등록부, 페이지를 URL에 저장합니다. 이름, 주소, 할당 기록은 공통 스냅샷에 저장된 IEEE 공개 목록 다섯 개에서 가져옵니다. 출처 링크와 스냅샷 날짜로 사용된 데이터셋을 식별할 수 있어 결과를 비교하기 쉽습니다."
+      }
+    ]
+  }
+}

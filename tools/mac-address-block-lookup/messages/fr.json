@@ -1,0 +1,73 @@
+{
+  "lookup": "Recherche d’adresses MAC",
+  "blocks": "Recherche de blocs d’adresses MAC",
+  "vendors": "Recherche de fabricants MAC",
+  "navigationLabel": "Outils associés",
+  "queryLabel": "Adresse MAC ou préfixe",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Préfixe, organisation ou adresse postale…",
+  "vendorPlaceholder": "Nom ou adresse postale de l’organisation…",
+  "blockSearchLabel": "Rechercher des blocs enregistrés",
+  "vendorSearchLabel": "Rechercher des organisations",
+  "registry": "Registre",
+  "allRegistries": "Tous les registres",
+  "prefix": "Préfixe",
+  "organization": "Organisation",
+  "address": "Adresse enregistrée",
+  "range": "Plage d’adresses",
+  "capacity": "Adresses dans le bloc",
+  "share": "Copier le lien",
+  "copied": "Lien copié",
+  "loading": "Chargement du registre IEEE…",
+  "loadError": "Impossible de charger le registre. Réessayez.",
+  "retry": "Réessayer",
+  "noResults": "Aucun enregistrement correspondant",
+  "noResultsHint": "Essayez un autre préfixe, nom d’organisation ou registre.",
+  "emptyLookupHint": "Les résultats s’affichent ici.",
+  "invalidAddress": "Saisissez une adresse MAC complète ou un préfixe valide de 24, 28 ou 36 bits.",
+  "noAssignment": "Aucune organisation enregistrée trouvée",
+  "previous": "Précédent",
+  "next": "Suivant",
+  "pageSummary": "{start}–{end} sur {total}",
+  "assignmentCount": "Blocs enregistrés : {count}",
+  "organizationCount": "Organisations : {count}",
+  "source": "Registre public IEEE",
+  "updated": "Instantané : {date}",
+  "clearOrganization": "Toutes les organisations",
+  "examples": "Exemples",
+  "copyAddress": "Copier l’adresse",
+  "addressCopied": "Adresse copiée",
+  "types": {
+    "universal": "Administration universelle",
+    "local": "Administration locale",
+    "multicast": "Multidiffusion",
+    "broadcast": "Diffusion générale",
+    "zero": "Adresse entièrement nulle",
+    "prefix": "Préfixe IEEE"
+  },
+  "typeHints": {
+    "local": "Souvent utilisée pour les adresses Wi-Fi privées.",
+    "multicast": "Adresse de groupe permettant de joindre plusieurs appareils.",
+    "broadcast": "Permet de joindre tous les appareils du réseau local.",
+    "zero": "Adresse non spécifiée."
+  },
+  "cidHint": "Identifiant d’entreprise pour les adresses attribuées localement.",
+  "about": {
+    "title": "Explorer les attributions IEEE d’adresses MAC",
+    "intro": "Un bloc d’adresses IEEE attribue à une organisation un préfixe fixe et l’espace d’adressage restant sous ce préfixe. Recherchez dans le registre pour examiner un préfixe connu, explorer les attributions plus petites au sein d’un préfixe plus large ou trouver les blocs enregistrés au nom d’une organisation.",
+    "sections": [
+      {
+        "title": "Choisir un registre",
+        "body": "MA-L utilise un préfixe de 24 bits et contient 16,777,216 adresses. MA-M utilise 28 bits et contient 1,048,576 adresses. MA-S et l’ancien registre IAB utilisent des préfixes de 36 bits, avec 4,096 adresses par bloc. Les enregistrements CID identifient les entreprises pour l’adressage local. Le filtre de registre limite la liste à un seul type d’attribution."
+      },
+      {
+        "title": "Rechercher des préfixes et examiner les plages",
+        "body": "Saisissez un préfixe sans séparateurs, avec des deux-points, des tirets, des points ou en notation CIDR. Un préfixe partiel trouve les attributions correspondantes ; une adresse MAC complète trouve les préfixes qui la contiennent. Vous pouvez aussi rechercher les noms d’organisations et les adresses enregistrées. Ouvrez un préfixe pour voir sa première adresse, sa dernière adresse et sa capacité, ainsi que les enregistrements correspondants."
+      },
+      {
+        "title": "Suivre les attributions dans le registre",
+        "body": "Sélectionnez le nom d’une organisation pour ouvrir la liste complète de ses attributions dans l’outil de recherche d’organisations. Les résultats sont paginés et « Copier le lien » conserve la recherche, le registre et la page dans l’URL. Les noms, adresses et attributions proviennent de cinq listes publiques IEEE stockées dans un instantané partagé. Le lien vers la source et la date de l’instantané permettent d’identifier facilement le jeu de données lors de la comparaison des résultats."
+      }
+    ]
+  }
+}

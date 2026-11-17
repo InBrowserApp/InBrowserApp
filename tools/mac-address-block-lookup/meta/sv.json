@@ -1,0 +1,4 @@
+{
+  "name": "Sökning efter MAC-adressblock",
+  "description": "Sök efter IEEE-adressblock utifrån prefix, organisation eller registrerad adress."
+}

@@ -1,0 +1,73 @@
+{
+  "lookup": "Pencarian alamat MAC",
+  "blocks": "Pencarian blok alamat MAC",
+  "vendors": "Pencarian alamat MAC berdasarkan vendor",
+  "navigationLabel": "Alat terkait",
+  "queryLabel": "Alamat MAC atau prefiks",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefiks, organisasi, atau alamat pos…",
+  "vendorPlaceholder": "Nama organisasi atau alamat pos…",
+  "blockSearchLabel": "Cari blok terdaftar",
+  "vendorSearchLabel": "Cari organisasi",
+  "registry": "Registri",
+  "allRegistries": "Semua registri",
+  "prefix": "Prefiks",
+  "organization": "Organisasi",
+  "address": "Alamat terdaftar",
+  "range": "Rentang alamat",
+  "capacity": "Jumlah alamat dalam blok",
+  "share": "Salin tautan",
+  "copied": "Tautan disalin",
+  "loading": "Memuat registri IEEE…",
+  "loadError": "Registri tidak dapat dimuat. Coba lagi.",
+  "retry": "Coba lagi",
+  "noResults": "Tidak ada entri yang cocok",
+  "noResultsHint": "Coba prefiks, nama organisasi, atau registri lain.",
+  "emptyLookupHint": "Hasil ditampilkan di sini.",
+  "invalidAddress": "Masukkan alamat MAC lengkap atau prefiks 24, 28, atau 36 bit yang valid.",
+  "noAssignment": "Organisasi terdaftar tidak ditemukan",
+  "previous": "Sebelumnya",
+  "next": "Berikutnya",
+  "pageSummary": "{start}–{end} dari {total}",
+  "assignmentCount": "{count} blok terdaftar",
+  "organizationCount": "{count} organisasi",
+  "source": "Registri publik IEEE",
+  "updated": "Salinan data: {date}",
+  "clearOrganization": "Semua organisasi",
+  "examples": "Contoh",
+  "copyAddress": "Salin alamat",
+  "addressCopied": "Alamat disalin",
+  "types": {
+    "universal": "Dikelola secara universal",
+    "local": "Dikelola secara lokal",
+    "multicast": "Multisiar",
+    "broadcast": "Siaran",
+    "zero": "Alamat seluruhnya nol",
+    "prefix": "Prefiks IEEE"
+  },
+  "typeHints": {
+    "local": "Sering digunakan untuk alamat Wi-Fi privat.",
+    "multicast": "Alamat grup untuk menjangkau beberapa perangkat.",
+    "broadcast": "Menjangkau semua perangkat di jaringan lokal.",
+    "zero": "Alamat yang tidak ditentukan."
+  },
+  "cidHint": "Pengenal perusahaan untuk alamat yang ditetapkan secara lokal.",
+  "about": {
+    "title": "Memahami alamat MAC",
+    "intro": "Alamat MAC mengidentifikasi antarmuka jaringan pada jaringan Ethernet atau Wi-Fi. Gunakan pencarian ini untuk menemukan detail pendaftaran IEEE bagi alamat dari daftar klien router, tabel ARP, atau label perangkat.",
+    "sections": [
+      {
+        "title": "Masukkan alamat atau prefiks",
+        "body": "Tempel alamat MAC 48 bit lengkap dengan titik dua, tanda hubung, titik, atau tanpa pemisah: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6, dan 001B638445E6 semuanya menunjukkan alamat yang sama. Anda juga dapat memasukkan prefiks IEEE seperti 001B63 atau 8C1F64001, termasuk notasi /24, /28, atau /36."
+      },
+      {
+        "title": "Baca blok terdaftar",
+        "body": "Hasil menampilkan organisasi terdaftar, alamatnya, dan prefiks yang cocok. Pencarian memeriksa prefiks terpanjang terlebih dahulu: alokasi 36 bit diutamakan dibandingkan alokasi induk 28 atau 24 bit. Alamat pertama, alamat terakhir, dan kapasitas blok menunjukkan ukuran alokasi. Jika prefiks lama memiliki beberapa pendaftaran, semua organisasi yang cocok ditampilkan bersama."
+      },
+      {
+        "title": "Jelajahi dan bagikan hasil",
+        "body": "Salin alamat yang dinormalisasi, buka prefiksnya untuk memeriksa blok, atau ikuti nama organisasi untuk menelusuri alokasi lainnya. Salin tautan menyimpan kueri Anda di URL agar dapat dibagikan atau dibuka kembali. Alamat lokal, multisiar, siaran, dan seluruhnya nol memiliki hasil jenis alamat tersendiri. Data berasal dari salinan data IEEE yang disertakan; tautan sumber dan tanggal salinan data ditampilkan di bawah alat."
+      }
+    ]
+  }
+}

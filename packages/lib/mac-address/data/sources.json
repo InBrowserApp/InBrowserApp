@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-11-17T07:25:40.000Z",
+  "totalRecords": 59284,
+  "totalOrganizations": 34209,
+  "duplicatePrefixCount": 2,
+  "sources": [
+    {
+      "registry": "MA-L",
+      "url": "https://standards-oui.ieee.org/oui/oui.csv",
+      "sha256": "15e580207f73b9ea87221ffc9360c09aa23e5db6b53ca744a29ecb6866c91cda",
+      "records": 40512,
+      "lastModified": null,
+      "etag": null
+    },
+    {
+      "registry": "MA-M",
+      "url": "https://standards-oui.ieee.org/oui28/mam.csv",
+      "sha256": "6e853da4476b1eaea64691a1bd368f853c71e320ce084c34653e43a24316a31e",
+      "records": 6688,
+      "lastModified": null,
+      "etag": null
+    },
+    {
+      "registry": "MA-S",
+      "url": "https://standards-oui.ieee.org/oui36/oui36.csv",
+      "sha256": "51606911b87ae288f01939320ef1e60a4cf8b2210fd2271220bc83b96f6684b3",
+      "records": 7284,
+      "lastModified": null,
+      "etag": null
+    },
+    {
+      "registry": "IAB",
+      "url": "https://standards-oui.ieee.org/iab/iab.csv",
+      "sha256": "6e71aa3d47f00f19d09cb3b31ce1038de1834703420f0ce4ce111da586f1a533",
+      "records": 4575,
+      "lastModified": null,
+      "etag": null
+    },
+    {
+      "registry": "CID",
+      "url": "https://standards-oui.ieee.org/cid/cid.csv",
+      "sha256": "33d0130a9c91cb6851a0e2193f0dac8ab522ebe15420bec57ca0a6258df857b4",
+      "records": 225,
+      "lastModified": null,
+      "etag": null
+    }
+  ]
+}

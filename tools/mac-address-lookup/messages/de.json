@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC-Adresssuche",
+  "blocks": "MAC-Adressblock-Suche",
+  "vendors": "MAC-Herstellersuche",
+  "navigationLabel": "Verwandte Tools",
+  "queryLabel": "MAC-Adresse oder Präfix",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Präfix, Organisation oder Anschrift…",
+  "vendorPlaceholder": "Name oder Anschrift der Organisation…",
+  "blockSearchLabel": "Registrierte Blöcke suchen",
+  "vendorSearchLabel": "Organisationen suchen",
+  "registry": "Register",
+  "allRegistries": "Alle Register",
+  "prefix": "Präfix",
+  "organization": "Organisation",
+  "address": "Registrierte Anschrift",
+  "range": "Adressbereich",
+  "capacity": "Adressen im Block",
+  "share": "Link kopieren",
+  "copied": "Link kopiert",
+  "loading": "IEEE-Register wird geladen…",
+  "loadError": "Das Register konnte nicht geladen werden. Versuchen Sie es erneut.",
+  "retry": "Erneut versuchen",
+  "noResults": "Keine passenden Einträge",
+  "noResultsHint": "Versuchen Sie ein anderes Präfix, einen anderen Organisationsnamen oder ein anderes Register.",
+  "emptyLookupHint": "Hier erscheinen die Ergebnisse.",
+  "invalidAddress": "Geben Sie eine vollständige MAC-Adresse oder ein gültiges Präfix mit 24, 28 oder 36 Bit ein.",
+  "noAssignment": "Keine registrierte Organisation gefunden",
+  "previous": "Zurück",
+  "next": "Weiter",
+  "pageSummary": "{start}–{end} von {total}",
+  "assignmentCount": "Registrierte Blöcke: {count}",
+  "organizationCount": "Organisationen: {count}",
+  "source": "Öffentliches IEEE-Register",
+  "updated": "Datenstand: {date}",
+  "clearOrganization": "Alle Organisationen",
+  "examples": "Beispiele",
+  "copyAddress": "Adresse kopieren",
+  "addressCopied": "Adresse kopiert",
+  "types": {
+    "universal": "Universell verwaltet",
+    "local": "Lokal verwaltet",
+    "multicast": "Multicast",
+    "broadcast": "Broadcast",
+    "zero": "Adresse aus Nullen",
+    "prefix": "IEEE-Präfix"
+  },
+  "typeHints": {
+    "local": "Wird oft für private WLAN-Adressen verwendet.",
+    "multicast": "Eine Gruppenadresse, mit der mehrere Geräte erreicht werden.",
+    "broadcast": "Erreicht alle Geräte im lokalen Netzwerk.",
+    "zero": "Eine nicht spezifizierte Adresse."
+  },
+  "cidHint": "Unternehmenskennung für lokal zugewiesene Adressen.",
+  "about": {
+    "title": "Eine MAC-Adresse verstehen",
+    "intro": "Eine MAC-Adresse identifiziert eine Netzwerkschnittstelle in einem Ethernet- oder WLAN-Netzwerk. Mit dieser Suche finden Sie IEEE-Registrierungsdetails zu einer Adresse aus der Clientliste eines Routers, einer ARP-Tabelle oder von einem Geräteetikett.",
+    "sections": [
+      {
+        "title": "Adresse oder Präfix eingeben",
+        "body": "Fügen Sie eine vollständige 48-Bit-MAC-Adresse mit Doppelpunkten, Bindestrichen, Punkten oder ohne Trennzeichen ein: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 und 001B638445E6 bezeichnen alle dieselbe Adresse. Sie können auch ein IEEE-Präfix wie 001B63 oder 8C1F64001 eingeben, auch in der Schreibweise /24, /28 oder /36."
+      },
+      {
+        "title": "Registrierten Block verstehen",
+        "body": "Das Ergebnis zeigt die registrierte Organisation, ihre Anschrift und das passende Präfix. Die Suche prüft zuerst das längste Präfix: Eine 36-Bit-Zuteilung hat Vorrang vor einem übergeordneten 28-Bit- oder 24-Bit-Block. Die erste und letzte Adresse sowie die Kapazität des Blocks zeigen die Größe der Zuteilung. Hat ein älteres Präfix mehrere Registrierungen, erscheinen alle passenden Organisationen gemeinsam."
+      },
+      {
+        "title": "Ergebnis erkunden und teilen",
+        "body": "Kopieren Sie die normalisierte Adresse, öffnen Sie das Präfix, um den Block zu prüfen, oder folgen Sie dem Organisationsnamen zu weiteren Zuteilungen. „Link kopieren“ speichert Ihre Anfrage zum Teilen oder späteren Aufrufen in der URL. Für lokal verwaltete, Multicast-, Broadcast- und reine Nulladressen zeigt die Suche jeweils den passenden Adresstyp an. Die Daten stammen aus einem mitgelieferten IEEE-Datenbestand; den Quellenlink und den Datenstand finden Sie unter dem Tool."
+      }
+    ]
+  }
+}

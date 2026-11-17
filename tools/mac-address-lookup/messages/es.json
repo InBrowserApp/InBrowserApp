@@ -1,0 +1,73 @@
+{
+  "lookup": "Consulta de direcciones MAC",
+  "blocks": "Consulta de bloques de direcciones MAC",
+  "vendors": "Consulta de direcciones MAC por proveedor",
+  "navigationLabel": "Herramientas relacionadas",
+  "queryLabel": "Dirección MAC o prefijo",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefijo, organización o dirección postal…",
+  "vendorPlaceholder": "Nombre de organización o dirección postal…",
+  "blockSearchLabel": "Buscar bloques registrados",
+  "vendorSearchLabel": "Buscar organizaciones",
+  "registry": "Registro",
+  "allRegistries": "Todos los registros",
+  "prefix": "Prefijo",
+  "organization": "Organización",
+  "address": "Dirección registrada",
+  "range": "Rango de direcciones",
+  "capacity": "Direcciones en el bloque",
+  "share": "Copiar enlace",
+  "copied": "Enlace copiado",
+  "loading": "Cargando el registro IEEE…",
+  "loadError": "No se pudo cargar el registro. Vuelve a intentarlo.",
+  "retry": "Reintentar",
+  "noResults": "No hay registros coincidentes",
+  "noResultsHint": "Prueba con otro prefijo, nombre de organización o registro.",
+  "emptyLookupHint": "Los resultados aparecen aquí.",
+  "invalidAddress": "Introduce una dirección MAC completa o un prefijo válido de 24, 28 o 36 bits.",
+  "noAssignment": "No se encontró ninguna organización registrada",
+  "previous": "Anterior",
+  "next": "Siguiente",
+  "pageSummary": "{start}–{end} de {total}",
+  "assignmentCount": "Bloques registrados: {count}",
+  "organizationCount": "Organizaciones: {count}",
+  "source": "Registro público de IEEE",
+  "updated": "Copia del registro: {date}",
+  "clearOrganization": "Todas las organizaciones",
+  "examples": "Ejemplos",
+  "copyAddress": "Copiar dirección",
+  "addressCopied": "Dirección copiada",
+  "types": {
+    "universal": "Administrada universalmente",
+    "local": "Administrada localmente",
+    "multicast": "Multidifusión",
+    "broadcast": "Difusión",
+    "zero": "Dirección formada solo por ceros",
+    "prefix": "Prefijo IEEE"
+  },
+  "typeHints": {
+    "local": "Se usa habitualmente para direcciones Wi-Fi privadas.",
+    "multicast": "Dirección de grupo utilizada para enviar datos a varios dispositivos.",
+    "broadcast": "Llega a todos los dispositivos de la red local.",
+    "zero": "Una dirección sin especificar."
+  },
+  "cidHint": "Identificador de empresa para direcciones asignadas localmente.",
+  "about": {
+    "title": "Cómo interpretar una dirección MAC",
+    "intro": "Una dirección MAC identifica una interfaz de red en una red Ethernet o Wi-Fi. Usa esta consulta para encontrar los datos de registro IEEE de una dirección que aparezca en la lista de clientes de un enrutador, una tabla ARP o la etiqueta de un dispositivo.",
+    "sections": [
+      {
+        "title": "Introduce una dirección o un prefijo",
+        "body": "Pega una dirección MAC completa de 48 bits con dos puntos, guiones, puntos o sin separadores: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 y 001B638445E6 representan la misma dirección. También puedes introducir un prefijo IEEE como 001B63 u 8C1F64001, incluida la notación /24, /28 o /36."
+      },
+      {
+        "title": "Interpreta el bloque registrado",
+        "body": "El resultado muestra la organización registrada, su dirección postal y el prefijo coincidente. La consulta comprueba primero el prefijo más largo: una asignación de 36 bits tiene prioridad sobre la asignación de 28 o 24 bits que la contiene. La primera y la última dirección del bloque, junto con su capacidad, indican el tamaño de la asignación. Si un prefijo antiguo tiene varios registros, todas las organizaciones coincidentes aparecen juntas."
+      },
+      {
+        "title": "Explora y comparte el resultado",
+        "body": "Copia la dirección normalizada, abre su prefijo para examinar el bloque o sigue el nombre de la organización para explorar sus demás asignaciones. «Copiar enlace» conserva la consulta en la URL para compartirla o retomarla más tarde. Las direcciones administradas localmente, de multidifusión, de difusión y formadas solo por ceros muestran sus propios resultados de tipo de dirección. Los datos proceden de una copia del registro IEEE incluida en la herramienta; el enlace a la fuente y la fecha de la copia aparecen debajo de la herramienta."
+      }
+    ]
+  }
+}

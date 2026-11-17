@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC 地址查询",
+  "blocks": "MAC 地址区块查询",
+  "vendors": "MAC 地址厂商查询",
+  "navigationLabel": "相关工具",
+  "queryLabel": "MAC 地址或前缀",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "前缀、组织或登记地址…",
+  "vendorPlaceholder": "组织名称或登记地址…",
+  "blockSearchLabel": "搜索已登记的区块",
+  "vendorSearchLabel": "搜索组织",
+  "registry": "登记库",
+  "allRegistries": "所有登记库",
+  "prefix": "前缀",
+  "organization": "组织",
+  "address": "登记地址",
+  "range": "地址范围",
+  "capacity": "区块内地址数",
+  "share": "复制链接",
+  "copied": "链接已复制",
+  "loading": "正在加载 IEEE 登记库…",
+  "loadError": "无法加载登记库，请重试。",
+  "retry": "重试",
+  "noResults": "没有匹配记录",
+  "noResultsHint": "请尝试其他前缀、组织名称或登记库。",
+  "emptyLookupHint": "结果将在此处显示。",
+  "invalidAddress": "请输入完整的 MAC 地址，或有效的 24、28、36 位前缀。",
+  "noAssignment": "未找到登记组织",
+  "previous": "上一页",
+  "next": "下一页",
+  "pageSummary": "{start}–{end}，共 {total} 条",
+  "assignmentCount": "{count} 个已登记区块",
+  "organizationCount": "{count} 个组织",
+  "source": "IEEE 公开登记库",
+  "updated": "数据快照：{date}",
+  "clearOrganization": "所有组织",
+  "examples": "示例",
+  "copyAddress": "复制地址",
+  "addressCopied": "地址已复制",
+  "types": {
+    "universal": "全局管理地址",
+    "local": "本地管理地址",
+    "multicast": "组播地址",
+    "broadcast": "广播地址",
+    "zero": "全零地址",
+    "prefix": "IEEE 前缀"
+  },
+  "typeHints": {
+    "local": "常用于 Wi-Fi 私有地址。",
+    "multicast": "用于向多个设备发送数据的组地址。",
+    "broadcast": "可发送至本地网络中的所有设备。",
+    "zero": "未指定的地址。"
+  },
+  "cidHint": "用于本地分配地址的公司标识符。",
+  "about": {
+    "title": "了解 MAC 地址",
+    "intro": "MAC 地址用于标识以太网或 Wi-Fi 网络上的网络接口。使用此查询工具，可查看 IEEE 登记信息，所查地址可来自路由器客户端列表、ARP 表或设备标签。",
+    "sections": [
+      {
+        "title": "输入地址或前缀",
+        "body": "粘贴完整的 48 位 MAC 地址，可使用冒号、连字符、点分或无分隔符格式：00:1B:63:84:45:E6、00-1B-63-84-45-E6、001B.6384.45E6 和 001B638445E6 均表示同一个地址。也可以输入 IEEE 前缀，例如 001B63 或 8C1F64001，也支持 /24、/28 或 /36 表示法。"
+      },
+      {
+        "title": "查看登记区块",
+        "body": "结果会显示登记组织、组织地址以及匹配的前缀。查询时优先检查最长前缀：36 位分配记录优先于其上级的 28 位或 24 位前缀。区块的首个地址、末个地址和容量表明该分配的规模。如果某个旧前缀有多条登记记录，所有匹配的组织会一并显示。"
+      },
+      {
+        "title": "浏览和分享结果",
+        "body": "复制规范化地址，打开其前缀查看区块，或点击组织名称浏览该组织的其他分配记录。“复制链接”会将查询内容保存在 URL 中，方便分享或稍后返回。本地管理地址、组播地址、广播地址和全零地址各有对应的地址类型结果。数据来自随工具提供的 IEEE 数据快照；来源链接和快照日期显示在工具下方。"
+      }
+    ]
+  }
+}

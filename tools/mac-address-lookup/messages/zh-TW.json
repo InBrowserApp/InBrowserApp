@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC 位址查詢",
+  "blocks": "MAC 位址區塊查詢",
+  "vendors": "MAC 位址廠商查詢",
+  "navigationLabel": "相關工具",
+  "queryLabel": "MAC 位址或前綴",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "前綴、組織或登記地址…",
+  "vendorPlaceholder": "組織名稱或登記地址…",
+  "blockSearchLabel": "搜尋已登記區塊",
+  "vendorSearchLabel": "搜尋組織",
+  "registry": "登記資料庫",
+  "allRegistries": "所有登記資料庫",
+  "prefix": "前綴",
+  "organization": "組織",
+  "address": "登記地址",
+  "range": "位址範圍",
+  "capacity": "區塊內位址數",
+  "share": "複製連結",
+  "copied": "已複製連結",
+  "loading": "正在載入 IEEE 登記資料庫…",
+  "loadError": "無法載入登記資料庫。請再試一次。",
+  "retry": "再試一次",
+  "noResults": "沒有相符的紀錄",
+  "noResultsHint": "請嘗試其他前綴、組織名稱或登記資料庫。",
+  "emptyLookupHint": "結果會顯示在這裡。",
+  "invalidAddress": "請輸入完整的 MAC 位址，或有效的 24、28 或 36 位元前綴。",
+  "noAssignment": "找不到登記組織",
+  "previous": "上一頁",
+  "next": "下一頁",
+  "pageSummary": "{start}–{end}，共 {total} 筆",
+  "assignmentCount": "{count} 個已登記區塊",
+  "organizationCount": "{count} 個組織",
+  "source": "IEEE 公開登記資料庫",
+  "updated": "快照：{date}",
+  "clearOrganization": "所有組織",
+  "examples": "範例",
+  "copyAddress": "複製位址",
+  "addressCopied": "已複製位址",
+  "types": {
+    "universal": "全域管理",
+    "local": "本機管理",
+    "multicast": "群播",
+    "broadcast": "廣播",
+    "zero": "全零位址",
+    "prefix": "IEEE 前綴"
+  },
+  "typeHints": {
+    "local": "常用於私密 Wi-Fi 位址。",
+    "multicast": "用於傳送至多台裝置的群組位址。",
+    "broadcast": "傳送至區域網路上的每台裝置。",
+    "zero": "未指定的位址。"
+  },
+  "cidHint": "用於本機配發位址的公司識別碼。",
+  "about": {
+    "title": "了解 MAC 位址",
+    "intro": "MAC 位址可識別 Ethernet 或 Wi-Fi 網路上的網路介面。使用此工具查詢位址的 IEEE 登記詳情；位址可取自路由器的用戶端清單、ARP 表格或裝置標籤。",
+    "sections": [
+      {
+        "title": "輸入位址或前綴",
+        "body": "貼上完整的 48 位元 MAC 位址，可使用冒號、連字號、點分隔或不使用分隔符號：00:1B:63:84:45:E6、00-1B-63-84-45-E6、001B.6384.45E6 和 001B638445E6 都代表同一個位址。您也可以輸入 IEEE 前綴，例如 001B63 或 8C1F64001，也支援 /24、/28 或 /36 表示法。"
+      },
+      {
+        "title": "查看登記區塊",
+        "body": "結果會顯示登記組織、其地址及相符的前綴。查詢時會先檢查最長的前綴：36 位元的配發紀錄會優先於其 28 位元或 24 位元的上層前綴。區塊的起始位址、結束位址與位址數量可呈現配發範圍的大小。若舊有前綴有多筆登記，所有相符的組織會一併顯示。"
+      },
+      {
+        "title": "探索與分享結果",
+        "body": "複製標準化位址、開啟其前綴以檢視區塊，或點選組織名稱以瀏覽其他配發紀錄。「複製連結」會將查詢條件保留在 URL 中，方便分享或日後再次開啟。本機管理、群播、廣播及全零位址各有對應的位址類型結果。資料來自隨附的 IEEE 快照；來源連結與快照日期顯示於工具下方。"
+      }
+    ]
+  }
+}

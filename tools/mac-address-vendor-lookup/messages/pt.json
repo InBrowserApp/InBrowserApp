@@ -1,0 +1,73 @@
+{
+  "lookup": "Consulta de endereços MAC",
+  "blocks": "Consulta de blocos de endereços MAC",
+  "vendors": "Consulta de fabricantes MAC",
+  "navigationLabel": "Ferramentas relacionadas",
+  "queryLabel": "Endereço MAC ou prefixo",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefixo, organização ou endereço postal…",
+  "vendorPlaceholder": "Nome ou endereço postal da organização…",
+  "blockSearchLabel": "Pesquisar blocos registrados",
+  "vendorSearchLabel": "Pesquisar organizações",
+  "registry": "Registro",
+  "allRegistries": "Todos os registros",
+  "prefix": "Prefixo",
+  "organization": "Organização",
+  "address": "Endereço registrado",
+  "range": "Intervalo de endereços",
+  "capacity": "Endereços no bloco",
+  "share": "Copiar link",
+  "copied": "Link copiado",
+  "loading": "Carregando registro IEEE…",
+  "loadError": "Não foi possível carregar o registro. Tente novamente.",
+  "retry": "Tentar novamente",
+  "noResults": "Nenhum registro correspondente",
+  "noResultsHint": "Tente outro prefixo, nome de organização ou registro.",
+  "emptyLookupHint": "Os resultados aparecem aqui.",
+  "invalidAddress": "Digite um endereço MAC completo ou um prefixo válido de 24, 28 ou 36 bits.",
+  "noAssignment": "Nenhuma organização registrada encontrada",
+  "previous": "Anterior",
+  "next": "Próximo",
+  "pageSummary": "{start}–{end} de {total}",
+  "assignmentCount": "Blocos registrados: {count}",
+  "organizationCount": "Organizações: {count}",
+  "source": "Registro público do IEEE",
+  "updated": "Cópia dos dados: {date}",
+  "clearOrganization": "Todas as organizações",
+  "examples": "Exemplos",
+  "copyAddress": "Copiar endereço",
+  "addressCopied": "Endereço copiado",
+  "types": {
+    "universal": "Administrado universalmente",
+    "local": "Administrado localmente",
+    "multicast": "Multidifusão",
+    "broadcast": "Difusão",
+    "zero": "Endereço com todos os bits zerados",
+    "prefix": "Prefixo IEEE"
+  },
+  "typeHints": {
+    "local": "Usado com frequência em endereços Wi-Fi privados.",
+    "multicast": "Um endereço de grupo usado para alcançar vários dispositivos.",
+    "broadcast": "Alcança todos os dispositivos da rede local.",
+    "zero": "Um endereço não especificado."
+  },
+  "cidHint": "Identificador de empresa para endereços atribuídos localmente.",
+  "about": {
+    "title": "Encontre os blocos de endereços MAC de uma organização",
+    "intro": "As organizações costumam ter várias alocações do IEEE obtidas ao longo do tempo ou por meio de diferentes produtos e negócios. Pesquise pelo nome da organização ou endereço registrado para reunir esses registros e abra uma organização para explorar suas alocações nos diferentes registros.",
+    "sections": [
+      {
+        "title": "Pesquise nomes e endereços registrados",
+        "body": "A pesquisa encontra qualquer parte do nome ou endereço de uma organização, sem diferenciar maiúsculas de minúsculas. Um nome de empresa, cidade ou rua pode ajudar a localizar um registro. Cada resultado inclui o endereço registrado correspondente e a quantidade de blocos. Selecione a organização para restringir a consulta a esse nome exato e ver todas as suas alocações."
+      },
+      {
+        "title": "Confira as alocações de uma organização",
+        "body": "A visualização da organização reúne seus blocos em uma lista compacta de prefixos e tipos de registro. Um endereço compartilhado aparece uma vez acima da lista; endereços registrados diferentes continuam junto aos respectivos blocos. Filtre por MA-L, MA-M, MA-S, IAB ou CID e abra um prefixo para examinar seu intervalo e sua capacidade na ferramenta de consulta de blocos. Os nomes das organizações seguem as listagens do IEEE, incluindo nomes antigos de empresas."
+      },
+      {
+        "title": "Compartilhe uma organização ou pesquisa",
+        "body": "“Copiar link” salva a organização selecionada, o termo de pesquisa, o filtro de registro e a página na URL. Você pode reabrir a mesma visualização, enviá-la a um colega ou mudar o idioma do site mantendo a seleção. A pesquisa e a filtragem são executadas no navegador após o carregamento da cópia compartilhada do registro. O link da fonte e a data da cópia abaixo da ferramenta identificam os dados do IEEE usados nos resultados."
+      }
+    ]
+  }
+}

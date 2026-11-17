@@ -1,0 +1,4 @@
+{
+  "name": "MAC Address Block Lookup",
+  "description": "Search IEEE address blocks by prefix, organization, or registered address."
+}

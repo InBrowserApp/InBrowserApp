@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC Adresi Sorgulama",
+  "blocks": "MAC Adres Bloğu Sorgulama",
+  "vendors": "MAC Adresi Üretici Sorgulama",
+  "navigationLabel": "İlgili araçlar",
+  "queryLabel": "MAC adresi veya önek",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Önek, kuruluş veya kayıtlı adres…",
+  "vendorPlaceholder": "Kuruluş adı veya kayıtlı adres…",
+  "blockSearchLabel": "Kayıtlı blokları ara",
+  "vendorSearchLabel": "Kuruluşları ara",
+  "registry": "Kayıt veritabanı",
+  "allRegistries": "Tüm kayıt veritabanları",
+  "prefix": "Önek",
+  "organization": "Kuruluş",
+  "address": "Kayıtlı adres",
+  "range": "Adres aralığı",
+  "capacity": "Bloktaki adres sayısı",
+  "share": "Bağlantıyı kopyala",
+  "copied": "Bağlantı kopyalandı",
+  "loading": "IEEE kayıt veritabanı yükleniyor…",
+  "loadError": "Kayıt veritabanı yüklenemedi. Tekrar deneyin.",
+  "retry": "Tekrar dene",
+  "noResults": "Eşleşen kayıt yok",
+  "noResultsHint": "Farklı bir önek, kuruluş adı veya kayıt veritabanı deneyin.",
+  "emptyLookupHint": "Sonuçlar burada görünür.",
+  "invalidAddress": "Tam bir MAC adresi veya geçerli bir 24, 28 ya da 36 bitlik önek girin.",
+  "noAssignment": "Kayıtlı kuruluş bulunamadı",
+  "previous": "Önceki",
+  "next": "Sonraki",
+  "pageSummary": "{start}–{end} / toplam {total}",
+  "assignmentCount": "{count} kayıtlı blok",
+  "organizationCount": "{count} kuruluş",
+  "source": "Herkese açık IEEE kayıt veritabanı",
+  "updated": "Anlık görüntü: {date}",
+  "clearOrganization": "Tüm kuruluşlar",
+  "examples": "Örnekler",
+  "copyAddress": "Adresi kopyala",
+  "addressCopied": "Adres kopyalandı",
+  "types": {
+    "universal": "Evrensel olarak yönetilen",
+    "local": "Yerel olarak yönetilen",
+    "multicast": "Çoklu yayın",
+    "broadcast": "Genel yayın",
+    "zero": "Tümü sıfır olan adres",
+    "prefix": "IEEE öneki"
+  },
+  "typeHints": {
+    "local": "Genellikle özel Wi-Fi adresleri için kullanılır.",
+    "multicast": "Birden fazla cihaza ulaşmak için kullanılan grup adresi.",
+    "broadcast": "Yerel ağdaki tüm cihazlara ulaşır.",
+    "zero": "Belirtilmemiş bir adres."
+  },
+  "cidHint": "Yerel olarak atanan adresler için şirket tanımlayıcısı.",
+  "about": {
+    "title": "MAC adresini anlayın",
+    "intro": "MAC adresi, Ethernet veya Wi-Fi ağındaki bir ağ arayüzünü tanımlar. Bir yönlendiricinin istemci listesinden, ARP tablosundan veya cihaz etiketinden aldığınız adresin IEEE kayıt ayrıntılarını bulmak için bu sorgulamayı kullanın.",
+    "sections": [
+      {
+        "title": "Adres veya önek girin",
+        "body": "İki nokta üst üste, tire veya nokta ile ayrılmış ya da ayraçsız, 48 bitlik tam bir MAC adresi yapıştırın: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 ve 001B638445E6 aynı adresi belirtir. 001B63 veya 8C1F64001 gibi bir IEEE öneki de girebilir, /24, /28 veya /36 gösterimini kullanabilirsiniz."
+      },
+      {
+        "title": "Kayıtlı bloğu yorumlayın",
+        "body": "Sonuçta kayıtlı kuruluş, adresi ve eşleşen önek gösterilir. Sorgulama önce en uzun öneği kontrol eder: 36 bitlik bir tahsis, 28 veya 24 bitlik bir üst tahsise göre önceliklidir. Bloğun ilk adresi, son adresi ve kapasitesi tahsisin boyutunu gösterir. Eski bir öneğin birden fazla kaydı varsa eşleşen tüm kuruluşlar birlikte görünür."
+      },
+      {
+        "title": "Sonucu inceleyin ve paylaşın",
+        "body": "Normalleştirilmiş adresi kopyalayın, bloğu incelemek için önekini açın veya diğer tahsislerine göz atmak için kuruluş adına tıklayın. Bağlantıyı kopyala seçeneği, paylaşmak veya daha sonra geri dönmek için sorgunuzu URL içinde saklar. Yerel, çoklu yayın, genel yayın ve tümü sıfır olan adreslerin kendi adres türü sonuçları vardır. Veriler uygulamayla birlikte gelen bir IEEE anlık görüntüsünden alınır; kaynak bağlantısı ve anlık görüntü tarihi aracın altında görünür."
+      }
+    ]
+  }
+}

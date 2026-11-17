@@ -1,0 +1,73 @@
+{
+  "lookup": "Wyszukiwanie adresów MAC",
+  "blocks": "Wyszukiwanie bloków adresów MAC",
+  "vendors": "Wyszukiwanie organizacji w rejestrze adresów MAC",
+  "navigationLabel": "Powiązane narzędzia",
+  "queryLabel": "Adres MAC lub prefiks",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefiks, organizacja lub adres…",
+  "vendorPlaceholder": "Nazwa lub adres organizacji…",
+  "blockSearchLabel": "Wyszukaj zarejestrowane bloki",
+  "vendorSearchLabel": "Wyszukaj organizacje",
+  "registry": "Rejestr",
+  "allRegistries": "Wszystkie rejestry",
+  "prefix": "Prefiks",
+  "organization": "Organizacja",
+  "address": "Adres w rejestrze",
+  "range": "Zakres adresów",
+  "capacity": "Liczba adresów w bloku",
+  "share": "Kopiuj link",
+  "copied": "Link skopiowany",
+  "loading": "Wczytywanie rejestru IEEE…",
+  "loadError": "Nie udało się wczytać rejestru. Spróbuj ponownie.",
+  "retry": "Spróbuj ponownie",
+  "noResults": "Brak pasujących wpisów",
+  "noResultsHint": "Wypróbuj inny prefiks, nazwę organizacji lub rejestr.",
+  "emptyLookupHint": "Tutaj pojawią się wyniki.",
+  "invalidAddress": "Wpisz pełny adres MAC lub prawidłowy 24-, 28- lub 36-bitowy prefiks.",
+  "noAssignment": "Nie znaleziono zarejestrowanej organizacji",
+  "previous": "Poprzednia",
+  "next": "Następna",
+  "pageSummary": "{start}–{end} z {total}",
+  "assignmentCount": "Zarejestrowane bloki: {count}",
+  "organizationCount": "Organizacje: {count}",
+  "source": "Publiczny rejestr IEEE",
+  "updated": "Migawka: {date}",
+  "clearOrganization": "Wszystkie organizacje",
+  "examples": "Przykłady",
+  "copyAddress": "Kopiuj adres",
+  "addressCopied": "Adres skopiowany",
+  "types": {
+    "universal": "Administrowany globalnie",
+    "local": "Administrowany lokalnie",
+    "multicast": "Grupowy",
+    "broadcast": "Rozgłoszeniowy",
+    "zero": "Adres złożony z samych zer",
+    "prefix": "Prefiks IEEE"
+  },
+  "typeHints": {
+    "local": "Często używany jako prywatny adres Wi-Fi.",
+    "multicast": "Adres grupowy do wysyłania danych do wielu urządzeń.",
+    "broadcast": "Dane trafiają do wszystkich urządzeń w sieci lokalnej.",
+    "zero": "Adres nieokreślony."
+  },
+  "cidHint": "Identyfikator firmy dla adresów przydzielanych lokalnie.",
+  "about": {
+    "title": "Poznaj adres MAC",
+    "intro": "Adres MAC identyfikuje interfejs sieciowy w sieci Ethernet lub Wi-Fi. Wyszukiwarka pozwala znaleźć szczegóły rejestracji w IEEE dla adresu z listy klientów routera, tabeli ARP lub etykiety urządzenia.",
+    "sections": [
+      {
+        "title": "Wpisz adres lub prefiks",
+        "body": "Wklej pełny 48-bitowy adres MAC z dwukropkami, łącznikami, kropkami lub bez separatorów: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 i 001B638445E6 oznaczają ten sam adres. Możesz też wpisać prefiks IEEE, na przykład 001B63 lub 8C1F64001, także w zapisie /24, /28 lub /36."
+      },
+      {
+        "title": "Odczytaj zarejestrowany blok",
+        "body": "Wynik pokazuje zarejestrowaną organizację, jej adres i pasujący prefiks. Wyszukiwarka najpierw sprawdza najdłuższy prefiks: przydział 36-bitowy ma pierwszeństwo przed nadrzędnym przydziałem 28-bitowym lub 24-bitowym. Pierwszy i ostatni adres bloku oraz liczba adresów pokazują rozmiar przydziału. Jeśli starszy prefiks ma kilka rejestracji, wszystkie pasujące organizacje pojawiają się razem."
+      },
+      {
+        "title": "Przeglądaj i udostępnij wynik",
+        "body": "Skopiuj znormalizowany adres, otwórz jego prefiks, aby sprawdzić blok, lub wybierz nazwę organizacji, aby przejrzeć jej pozostałe przydziały. Przycisk „Kopiuj link” zachowuje zapytanie w URL, aby ułatwić udostępnienie lub powrót do wyniku. Dla adresów administrowanych lokalnie, grupowych, rozgłoszeniowych i złożonych z samych zer wyświetlane są odrębne wyniki wskazujące typ adresu. Dane pochodzą z dołączonej migawki rejestru IEEE; link do źródła i data migawki znajdują się pod narzędziem."
+      }
+    ]
+  }
+}

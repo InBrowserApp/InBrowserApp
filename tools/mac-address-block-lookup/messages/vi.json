@@ -1,0 +1,73 @@
+{
+  "lookup": "Tra cứu địa chỉ MAC",
+  "blocks": "Tra cứu khối địa chỉ MAC",
+  "vendors": "Tra cứu nhà sản xuất MAC",
+  "navigationLabel": "Công cụ liên quan",
+  "queryLabel": "Địa chỉ MAC hoặc tiền tố",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Tiền tố, tổ chức hoặc địa chỉ bưu chính…",
+  "vendorPlaceholder": "Tên tổ chức hoặc địa chỉ bưu chính…",
+  "blockSearchLabel": "Tìm khối đã đăng ký",
+  "vendorSearchLabel": "Tìm tổ chức",
+  "registry": "Sổ đăng ký",
+  "allRegistries": "Tất cả các sổ đăng ký",
+  "prefix": "Tiền tố",
+  "organization": "Tổ chức",
+  "address": "Địa chỉ đã đăng ký",
+  "range": "Dải địa chỉ",
+  "capacity": "Số địa chỉ trong khối",
+  "share": "Sao chép liên kết",
+  "copied": "Đã sao chép liên kết",
+  "loading": "Đang tải sổ đăng ký IEEE…",
+  "loadError": "Không thể tải sổ đăng ký. Hãy thử lại.",
+  "retry": "Thử lại",
+  "noResults": "Không có bản ghi phù hợp",
+  "noResultsHint": "Hãy thử tiền tố, tên tổ chức hoặc sổ đăng ký khác.",
+  "emptyLookupHint": "Kết quả hiển thị tại đây.",
+  "invalidAddress": "Nhập địa chỉ MAC đầy đủ hoặc tiền tố hợp lệ dài 24, 28 hoặc 36 bit.",
+  "noAssignment": "Không tìm thấy tổ chức đã đăng ký",
+  "previous": "Trang trước",
+  "next": "Trang sau",
+  "pageSummary": "{start}–{end} trên {total}",
+  "assignmentCount": "{count} khối đã đăng ký",
+  "organizationCount": "{count} tổ chức",
+  "source": "Sổ đăng ký công khai của IEEE",
+  "updated": "Bản chụp dữ liệu: {date}",
+  "clearOrganization": "Tất cả tổ chức",
+  "examples": "Ví dụ",
+  "copyAddress": "Sao chép địa chỉ",
+  "addressCopied": "Đã sao chép địa chỉ",
+  "types": {
+    "universal": "Được quản lý toàn cục",
+    "local": "Được quản lý cục bộ",
+    "multicast": "Truyền đa hướng",
+    "broadcast": "Quảng bá",
+    "zero": "Địa chỉ chỉ gồm số không",
+    "prefix": "Tiền tố IEEE"
+  },
+  "typeHints": {
+    "local": "Thường dùng cho địa chỉ Wi-Fi riêng tư.",
+    "multicast": "Địa chỉ nhóm dùng để gửi đến nhiều thiết bị.",
+    "broadcast": "Gửi đến mọi thiết bị trên mạng cục bộ.",
+    "zero": "Địa chỉ chưa xác định."
+  },
+  "cidHint": "Mã định danh công ty cho địa chỉ được gán cục bộ.",
+  "about": {
+    "title": "Khám phá các khối địa chỉ MAC do IEEE cấp phát",
+    "intro": "Mỗi khối địa chỉ IEEE cấp cho một tổ chức tiền tố cố định và phần không gian địa chỉ còn lại trong khối. Tìm trong sổ đăng ký để kiểm tra một tiền tố đã biết, khám phá các khối cấp phát nhỏ hơn trong một tiền tố lớn hơn hoặc tìm các khối đã đăng ký cho một tổ chức.",
+    "sections": [
+      {
+        "title": "Chọn sổ đăng ký",
+        "body": "MA-L dùng tiền tố 24 bit và chứa 16,777,216 địa chỉ. MA-M dùng 28 bit và chứa 1,048,576 địa chỉ. MA-S và sổ đăng ký IAB cũ dùng tiền tố 36 bit với 4,096 địa chỉ mỗi khối. Các bản ghi CID xác định công ty để dùng cho định địa chỉ cục bộ. Bộ lọc sổ đăng ký giới hạn danh sách theo một loại cấp phát."
+      },
+      {
+        "title": "Tìm tiền tố và kiểm tra dải địa chỉ",
+        "body": "Nhập tiền tố dạng liền, phân tách bằng dấu hai chấm, gạch nối, dấu chấm hoặc ký hiệu CIDR. Tiền tố chưa đầy đủ tìm các khối cấp phát khớp; địa chỉ MAC đầy đủ tìm các tiền tố chứa địa chỉ đó. Bạn cũng có thể tìm theo tên tổ chức và địa chỉ đã đăng ký. Mở một tiền tố để xem địa chỉ đầu, địa chỉ cuối và số địa chỉ trong khối cùng các bản ghi đăng ký khớp."
+      },
+      {
+        "title": "Theo dõi các bản ghi cấp phát trong sổ đăng ký",
+        "body": "Chọn tên tổ chức để mở toàn bộ danh sách cấp phát của tổ chức đó trong công cụ tra cứu tổ chức. Kết quả được phân trang, và Sao chép liên kết lưu nội dung tìm kiếm, sổ đăng ký và trang trong URL. Tên, địa chỉ và bản ghi cấp phát lấy từ năm danh sách công khai của IEEE được lưu trong một bản chụp dữ liệu dùng chung. Liên kết nguồn và ngày chụp dữ liệu giúp xác định tập dữ liệu khi so sánh kết quả."
+      }
+    ]
+  }
+}

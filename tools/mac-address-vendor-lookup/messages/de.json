@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC-Adresssuche",
+  "blocks": "MAC-Adressblock-Suche",
+  "vendors": "MAC-Herstellersuche",
+  "navigationLabel": "Verwandte Tools",
+  "queryLabel": "MAC-Adresse oder Präfix",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Präfix, Organisation oder Anschrift…",
+  "vendorPlaceholder": "Name oder Anschrift der Organisation…",
+  "blockSearchLabel": "Registrierte Blöcke suchen",
+  "vendorSearchLabel": "Organisationen suchen",
+  "registry": "Register",
+  "allRegistries": "Alle Register",
+  "prefix": "Präfix",
+  "organization": "Organisation",
+  "address": "Registrierte Anschrift",
+  "range": "Adressbereich",
+  "capacity": "Adressen im Block",
+  "share": "Link kopieren",
+  "copied": "Link kopiert",
+  "loading": "IEEE-Register wird geladen…",
+  "loadError": "Das Register konnte nicht geladen werden. Versuchen Sie es erneut.",
+  "retry": "Erneut versuchen",
+  "noResults": "Keine passenden Einträge",
+  "noResultsHint": "Versuchen Sie ein anderes Präfix, einen anderen Organisationsnamen oder ein anderes Register.",
+  "emptyLookupHint": "Hier erscheinen die Ergebnisse.",
+  "invalidAddress": "Geben Sie eine vollständige MAC-Adresse oder ein gültiges Präfix mit 24, 28 oder 36 Bit ein.",
+  "noAssignment": "Keine registrierte Organisation gefunden",
+  "previous": "Zurück",
+  "next": "Weiter",
+  "pageSummary": "{start}–{end} von {total}",
+  "assignmentCount": "Registrierte Blöcke: {count}",
+  "organizationCount": "Organisationen: {count}",
+  "source": "Öffentliches IEEE-Register",
+  "updated": "Datenstand: {date}",
+  "clearOrganization": "Alle Organisationen",
+  "examples": "Beispiele",
+  "copyAddress": "Adresse kopieren",
+  "addressCopied": "Adresse kopiert",
+  "types": {
+    "universal": "Universell verwaltet",
+    "local": "Lokal verwaltet",
+    "multicast": "Multicast",
+    "broadcast": "Broadcast",
+    "zero": "Adresse aus Nullen",
+    "prefix": "IEEE-Präfix"
+  },
+  "typeHints": {
+    "local": "Wird oft für private WLAN-Adressen verwendet.",
+    "multicast": "Eine Gruppenadresse, mit der mehrere Geräte erreicht werden.",
+    "broadcast": "Erreicht alle Geräte im lokalen Netzwerk.",
+    "zero": "Eine nicht spezifizierte Adresse."
+  },
+  "cidHint": "Unternehmenskennung für lokal zugewiesene Adressen.",
+  "about": {
+    "title": "MAC-Adressblöcke einer Organisation finden",
+    "intro": "Organisationen verfügen oft über mehrere IEEE-Zuteilungen, die sie im Laufe der Zeit oder über verschiedene Produkte und Unternehmen erhalten haben. Suchen Sie nach dem Organisationsnamen oder der registrierten Anschrift, um diese Einträge zusammenzuführen. Öffnen Sie dann eine Organisation, um ihre Zuteilungen in den Registern zu erkunden.",
+    "sections": [
+      {
+        "title": "Namen und registrierte Anschriften suchen",
+        "body": "Die Suche findet beliebige Teile eines Organisationsnamens oder einer Anschrift, unabhängig von der Groß- und Kleinschreibung. Ein Firmenname, eine Stadt oder eine Straße kann helfen, einen Eintrag zu finden. Jedes Ergebnis enthält die passende registrierte Anschrift und die Anzahl der Blöcke. Wählen Sie die Organisation aus, um die Ansicht auf genau diesen Namen zu beschränken und alle ihre Zuteilungen zu sehen."
+      },
+      {
+        "title": "Zuteilungen einer Organisation lesen",
+        "body": "Die Organisationsansicht zeigt ihre Blöcke in einer kompakten Liste aus Präfixen und Registertypen. Eine gemeinsame Anschrift erscheint einmal über der Liste; abweichende registrierte Anschriften stehen bei den jeweiligen Blöcken. Filtern Sie nach MA-L, MA-M, MA-S, IAB oder CID und öffnen Sie ein Präfix, um seinen Bereich und seine Kapazität in der MAC-Adressblock-Suche zu prüfen. Die Organisationsnamen entsprechen den IEEE-Listen, einschließlich historischer Firmennamen."
+      },
+      {
+        "title": "Organisation oder Suche teilen",
+        "body": "„Link kopieren“ speichert die ausgewählte Organisation, den Suchbegriff, den Registerfilter und die Seite in der URL. Sie können dieselbe Ansicht erneut öffnen, an Kollegen senden oder die Sprache der Website wechseln und dabei die Auswahl behalten. Suche und Filterung laufen in Ihrem Browser, sobald der gemeinsame Registerdatenbestand geladen ist. Der Quellenlink und der Datenstand unter dem Tool zeigen, welche IEEE-Daten für die Ergebnisse verwendet werden."
+      }
+    ]
+  }
+}

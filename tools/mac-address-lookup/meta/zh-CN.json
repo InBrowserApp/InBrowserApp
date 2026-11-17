@@ -1,0 +1,4 @@
+{
+  "name": "MAC 地址查询",
+  "description": "查找 MAC 地址或 IEEE 前缀对应的组织和登记区块。"
+}

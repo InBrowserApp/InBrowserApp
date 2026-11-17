@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC Address Lookup",
+  "blocks": "MAC Address Block Lookup",
+  "vendors": "MAC Address Vendor Lookup",
+  "navigationLabel": "Related tools",
+  "queryLabel": "MAC address or prefix",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefix, organization, or address…",
+  "vendorPlaceholder": "Organization name or address…",
+  "blockSearchLabel": "Search registered blocks",
+  "vendorSearchLabel": "Search organizations",
+  "registry": "Registry",
+  "allRegistries": "All registries",
+  "prefix": "Prefix",
+  "organization": "Organization",
+  "address": "Registered address",
+  "range": "Address range",
+  "capacity": "Addresses in block",
+  "share": "Copy link",
+  "copied": "Link copied",
+  "loading": "Loading IEEE registry…",
+  "loadError": "The registry could not be loaded. Try again.",
+  "retry": "Try again",
+  "noResults": "No matching records",
+  "noResultsHint": "Try a different prefix, organization name, or registry.",
+  "emptyLookupHint": "Results appear here.",
+  "invalidAddress": "Enter a complete MAC address or a valid 24-, 28-, or 36-bit prefix.",
+  "noAssignment": "No registered organization found",
+  "previous": "Previous",
+  "next": "Next",
+  "pageSummary": "{start}–{end} of {total}",
+  "assignmentCount": "Registered blocks: {count}",
+  "organizationCount": "Organizations: {count}",
+  "source": "IEEE public registry",
+  "updated": "Snapshot: {date}",
+  "clearOrganization": "All organizations",
+  "examples": "Examples",
+  "copyAddress": "Copy address",
+  "addressCopied": "Address copied",
+  "types": {
+    "universal": "Universally administered",
+    "local": "Locally administered",
+    "multicast": "Multicast",
+    "broadcast": "Broadcast",
+    "zero": "All-zero address",
+    "prefix": "IEEE prefix"
+  },
+  "typeHints": {
+    "local": "Often used for private Wi-Fi addresses.",
+    "multicast": "A group address used to reach multiple devices.",
+    "broadcast": "Reaches every device on the local network.",
+    "zero": "An unspecified address."
+  },
+  "cidHint": "Company identifier for locally assigned addresses.",
+  "about": {
+    "title": "Explore IEEE MAC address allocations",
+    "intro": "An IEEE address block assigns an organization a fixed prefix and the remaining address space beneath it. Search the registry to inspect a known prefix, explore smaller assignments within a larger prefix, or find blocks registered to an organization.",
+    "sections": [
+      {
+        "title": "Choose a registry",
+        "body": "MA-L uses a 24-bit prefix and contains 16,777,216 addresses. MA-M uses 28 bits and contains 1,048,576 addresses. MA-S and the older IAB registry use 36-bit prefixes with 4,096 addresses each. CID records identify companies for local addressing. The registry filter narrows the list to one assignment type."
+      },
+      {
+        "title": "Search prefixes and inspect ranges",
+        "body": "Enter a prefix in plain, colon, hyphen, dotted, or CIDR notation. A partial prefix finds matching allocations; a complete MAC address finds the prefixes that contain it. You can also search organization names and registered addresses. Open a prefix to see its first address, last address, and capacity alongside the matching registrations."
+      },
+      {
+        "title": "Follow allocations across the registry",
+        "body": "Select an organization name to open its full list of assignments in the organization lookup tool. Results are paginated, and Copy link preserves the search, registry, and page in the URL. Names, addresses, and assignments come from five public IEEE listings stored in a shared snapshot. The source link and snapshot date make the dataset easy to identify when comparing results."
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC 地址查询",
+  "blocks": "MAC 地址区块查询",
+  "vendors": "MAC 地址厂商查询",
+  "navigationLabel": "相关工具",
+  "queryLabel": "MAC 地址或前缀",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "前缀、组织或登记地址…",
+  "vendorPlaceholder": "组织名称或登记地址…",
+  "blockSearchLabel": "搜索已登记的区块",
+  "vendorSearchLabel": "搜索组织",
+  "registry": "登记库",
+  "allRegistries": "所有登记库",
+  "prefix": "前缀",
+  "organization": "组织",
+  "address": "登记地址",
+  "range": "地址范围",
+  "capacity": "区块内地址数",
+  "share": "复制链接",
+  "copied": "链接已复制",
+  "loading": "正在加载 IEEE 登记库…",
+  "loadError": "无法加载登记库，请重试。",
+  "retry": "重试",
+  "noResults": "没有匹配记录",
+  "noResultsHint": "请尝试其他前缀、组织名称或登记库。",
+  "emptyLookupHint": "结果将在此处显示。",
+  "invalidAddress": "请输入完整的 MAC 地址，或有效的 24、28、36 位前缀。",
+  "noAssignment": "未找到登记组织",
+  "previous": "上一页",
+  "next": "下一页",
+  "pageSummary": "{start}–{end}，共 {total} 条",
+  "assignmentCount": "{count} 个已登记区块",
+  "organizationCount": "{count} 个组织",
+  "source": "IEEE 公开登记库",
+  "updated": "数据快照：{date}",
+  "clearOrganization": "所有组织",
+  "examples": "示例",
+  "copyAddress": "复制地址",
+  "addressCopied": "地址已复制",
+  "types": {
+    "universal": "全局管理地址",
+    "local": "本地管理地址",
+    "multicast": "组播地址",
+    "broadcast": "广播地址",
+    "zero": "全零地址",
+    "prefix": "IEEE 前缀"
+  },
+  "typeHints": {
+    "local": "常用于 Wi-Fi 私有地址。",
+    "multicast": "用于向多个设备发送数据的组地址。",
+    "broadcast": "可发送至本地网络中的所有设备。",
+    "zero": "未指定的地址。"
+  },
+  "cidHint": "用于本地分配地址的公司标识符。",
+  "about": {
+    "title": "查找组织的 MAC 地址区块",
+    "intro": "组织通常会在不同时间，或通过不同产品和业务获得多项 IEEE 地址分配。按组织名称或登记地址搜索，可将这些记录汇总，再打开组织，查看其在各登记库中的分配情况。",
+    "sections": [
+      {
+        "title": "搜索名称和登记地址",
+        "body": "搜索可匹配组织名称或地址的任意部分，不区分字母大小写。公司名称、城市或街道都可以帮助找到记录。每条结果包含匹配的登记地址和区块数量。选择组织后，即可按该确切名称查看其所有分配记录。"
+      },
+      {
+        "title": "查看组织的分配记录",
+        "body": "组织视图将其区块汇总为紧凑的前缀和登记库类型列表。共用地址只在列表上方显示一次；不同的登记地址仍显示在各自区块中。按 MA-L、MA-M、MA-S、IAB 或 CID 筛选，打开前缀可在区块查询工具中查看其范围和容量。组织名称沿用 IEEE 登记信息，包括历史公司名称。"
+      },
+      {
+        "title": "分享组织或搜索结果",
+        "body": "“复制链接”会将所选组织、搜索词、登记库筛选条件和页码保存在 URL 中。可重新打开相同视图、将其发给同事，或在切换网站语言时保留选择。共用登记库快照加载完成后，搜索和筛选都在浏览器中运行。工具下方的来源链接和快照日期表明结果所用的 IEEE 数据。"
+      }
+    ]
+  }
+}

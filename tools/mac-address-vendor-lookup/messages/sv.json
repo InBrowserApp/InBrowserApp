@@ -1,0 +1,73 @@
+{
+  "lookup": "Sökning efter MAC-adresser",
+  "blocks": "Sökning efter MAC-adressblock",
+  "vendors": "Sökning efter MAC-tillverkare",
+  "navigationLabel": "Relaterade verktyg",
+  "queryLabel": "MAC-adress eller prefix",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefix, organisation eller postadress…",
+  "vendorPlaceholder": "Organisationens namn eller postadress…",
+  "blockSearchLabel": "Sök registrerade block",
+  "vendorSearchLabel": "Sök organisationer",
+  "registry": "Register",
+  "allRegistries": "Alla register",
+  "prefix": "Prefix",
+  "organization": "Organisation",
+  "address": "Registrerad adress",
+  "range": "Adressintervall",
+  "capacity": "Adresser i blocket",
+  "share": "Kopiera länk",
+  "copied": "Länken kopierad",
+  "loading": "Läser in IEEE-registret…",
+  "loadError": "Registret kunde inte läsas in. Försök igen.",
+  "retry": "Försök igen",
+  "noResults": "Inga matchande poster",
+  "noResultsHint": "Prova ett annat prefix, organisationsnamn eller register.",
+  "emptyLookupHint": "Resultaten visas här.",
+  "invalidAddress": "Ange en fullständig MAC-adress eller ett giltigt prefix på 24, 28 eller 36 bitar.",
+  "noAssignment": "Ingen registrerad organisation hittades",
+  "previous": "Föregående",
+  "next": "Nästa",
+  "pageSummary": "{start}–{end} av {total}",
+  "assignmentCount": "Registrerade block: {count}",
+  "organizationCount": "Organisationer: {count}",
+  "source": "IEEE:s offentliga register",
+  "updated": "Ögonblicksbild: {date}",
+  "clearOrganization": "Alla organisationer",
+  "examples": "Exempel",
+  "copyAddress": "Kopiera adress",
+  "addressCopied": "Adressen kopierad",
+  "types": {
+    "universal": "Universellt administrerad",
+    "local": "Lokalt administrerad",
+    "multicast": "Gruppsändning",
+    "broadcast": "Rundsändning",
+    "zero": "Adress med enbart nollor",
+    "prefix": "IEEE-prefix"
+  },
+  "typeHints": {
+    "local": "Används ofta för privata Wi-Fi-adresser.",
+    "multicast": "En gruppadress som används för att nå flera enheter.",
+    "broadcast": "Når alla enheter i det lokala nätverket.",
+    "zero": "En ospecificerad adress."
+  },
+  "cidHint": "Företagsidentifierare för lokalt tilldelade adresser.",
+  "about": {
+    "title": "Hitta en organisations MAC-adressblock",
+    "intro": "Organisationer har ofta flera IEEE-tilldelningar som de fått över tid eller genom olika produkter och verksamheter. Sök efter organisationsnamn eller registrerad adress för att samla dessa poster och öppna sedan en organisation för att utforska dess tilldelningar i registren.",
+    "sections": [
+      {
+        "title": "Sök efter namn och registrerade adresser",
+        "body": "Sökningen hittar träffar i alla delar av en organisations namn eller adress och skiljer inte på stora och små bokstäver. Ett företagsnamn, en ort eller en gata kan hjälpa dig att hitta en post. Varje resultat innehåller den matchande registrerade adressen och antalet block. Välj organisationen för att avgränsa till exakt det namnet och se alla dess tilldelningar."
+      },
+      {
+        "title": "Tolka en organisations tilldelningar",
+        "body": "Organisationsvyn samlar dess block i en kompakt lista över prefix och registertyper. En gemensam adress visas en gång ovanför listan; avvikande registrerade adresser visas tillsammans med respektive block. Filtrera på MA-L, MA-M, MA-S, IAB eller CID och öppna ett prefix för att granska dess intervall och kapacitet i verktyget för blocksökning. Organisationsnamnen följer IEEE-listorna, inklusive historiska företagsnamn."
+      },
+      {
+        "title": "Dela en organisation eller sökning",
+        "body": "Kopiera länk sparar vald organisation, sökterm, registerfilter och sida i webbadressen. Du kan öppna samma vy igen, skicka den till en kollega eller byta språk på webbplatsen och behålla ditt val. Sökning och filtrering körs i din webbläsare när den gemensamma ögonblicksbilden av registret har lästs in. Källänken och datumet för ögonblicksbilden under verktyget identifierar de IEEE-data som används för resultaten."
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC 位址查詢",
+  "blocks": "MAC 位址區塊查詢",
+  "vendors": "MAC 位址廠商查詢",
+  "navigationLabel": "相關工具",
+  "queryLabel": "MAC 位址或前綴",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "前綴、組織或登記地址…",
+  "vendorPlaceholder": "組織名稱或登記地址…",
+  "blockSearchLabel": "搜尋已登記區塊",
+  "vendorSearchLabel": "搜尋組織",
+  "registry": "登記資料庫",
+  "allRegistries": "所有登記資料庫",
+  "prefix": "前綴",
+  "organization": "組織",
+  "address": "登記地址",
+  "range": "位址範圍",
+  "capacity": "區塊內位址數",
+  "share": "複製連結",
+  "copied": "已複製連結",
+  "loading": "正在載入 IEEE 登記資料庫…",
+  "loadError": "無法載入登記資料庫。請再試一次。",
+  "retry": "再試一次",
+  "noResults": "沒有相符的紀錄",
+  "noResultsHint": "請嘗試其他前綴、組織名稱或登記資料庫。",
+  "emptyLookupHint": "結果會顯示在這裡。",
+  "invalidAddress": "請輸入完整的 MAC 位址，或有效的 24、28 或 36 位元前綴。",
+  "noAssignment": "找不到登記組織",
+  "previous": "上一頁",
+  "next": "下一頁",
+  "pageSummary": "{start}–{end}，共 {total} 筆",
+  "assignmentCount": "{count} 個已登記區塊",
+  "organizationCount": "{count} 個組織",
+  "source": "IEEE 公開登記資料庫",
+  "updated": "快照：{date}",
+  "clearOrganization": "所有組織",
+  "examples": "範例",
+  "copyAddress": "複製位址",
+  "addressCopied": "已複製位址",
+  "types": {
+    "universal": "全域管理",
+    "local": "本機管理",
+    "multicast": "群播",
+    "broadcast": "廣播",
+    "zero": "全零位址",
+    "prefix": "IEEE 前綴"
+  },
+  "typeHints": {
+    "local": "常用於私密 Wi-Fi 位址。",
+    "multicast": "用於傳送至多台裝置的群組位址。",
+    "broadcast": "傳送至區域網路上的每台裝置。",
+    "zero": "未指定的位址。"
+  },
+  "cidHint": "用於本機配發位址的公司識別碼。",
+  "about": {
+    "title": "尋找組織的 MAC 位址區塊",
+    "intro": "組織通常持有多筆 IEEE 配發紀錄，可能是在不同時期，或透過不同產品與業務取得。依組織名稱或登記地址搜尋，將這些紀錄彙整在一起，再開啟組織即可探索其在各登記資料庫中的配發資訊。",
+    "sections": [
+      {
+        "title": "搜尋名稱與登記地址",
+        "body": "搜尋可比對組織名稱或地址的任意部分，不區分字母大小寫。公司名稱、城市或街道可協助找出紀錄。每筆結果會顯示相符的登記地址與區塊數量。選取組織後，即可鎖定該確切名稱並查看其所有配發紀錄。"
+      },
+      {
+        "title": "查看組織的配發紀錄",
+        "body": "組織頁面會將其區塊整理成精簡的前綴與登記資料庫類型清單。共用地址只會在清單上方顯示一次；不同的登記地址則會保留在各自的區塊旁。可依 MA-L、MA-M、MA-S、IAB 或 CID 篩選，並開啟前綴，在區塊查詢工具中檢視範圍與位址數量。組織名稱依 IEEE 名錄顯示，包括歷史公司名稱。"
+      },
+      {
+        "title": "分享組織或搜尋結果",
+        "body": "「複製連結」會將選取的組織、搜尋字詞、登記資料庫篩選條件與頁碼儲存在 URL 中。您可以重新開啟相同畫面、傳給同事，或切換網站語言並保留選取項目。共用登記資料庫快照載入後，搜尋與篩選會在您的瀏覽器中執行。工具下方的來源連結與快照日期可識別結果所用的 IEEE 資料。"
+      }
+    ]
+  }
+}

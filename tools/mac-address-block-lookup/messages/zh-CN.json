@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC 地址查询",
+  "blocks": "MAC 地址区块查询",
+  "vendors": "MAC 地址厂商查询",
+  "navigationLabel": "相关工具",
+  "queryLabel": "MAC 地址或前缀",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "前缀、组织或登记地址…",
+  "vendorPlaceholder": "组织名称或登记地址…",
+  "blockSearchLabel": "搜索已登记的区块",
+  "vendorSearchLabel": "搜索组织",
+  "registry": "登记库",
+  "allRegistries": "所有登记库",
+  "prefix": "前缀",
+  "organization": "组织",
+  "address": "登记地址",
+  "range": "地址范围",
+  "capacity": "区块内地址数",
+  "share": "复制链接",
+  "copied": "链接已复制",
+  "loading": "正在加载 IEEE 登记库…",
+  "loadError": "无法加载登记库，请重试。",
+  "retry": "重试",
+  "noResults": "没有匹配记录",
+  "noResultsHint": "请尝试其他前缀、组织名称或登记库。",
+  "emptyLookupHint": "结果将在此处显示。",
+  "invalidAddress": "请输入完整的 MAC 地址，或有效的 24、28、36 位前缀。",
+  "noAssignment": "未找到登记组织",
+  "previous": "上一页",
+  "next": "下一页",
+  "pageSummary": "{start}–{end}，共 {total} 条",
+  "assignmentCount": "{count} 个已登记区块",
+  "organizationCount": "{count} 个组织",
+  "source": "IEEE 公开登记库",
+  "updated": "数据快照：{date}",
+  "clearOrganization": "所有组织",
+  "examples": "示例",
+  "copyAddress": "复制地址",
+  "addressCopied": "地址已复制",
+  "types": {
+    "universal": "全局管理地址",
+    "local": "本地管理地址",
+    "multicast": "组播地址",
+    "broadcast": "广播地址",
+    "zero": "全零地址",
+    "prefix": "IEEE 前缀"
+  },
+  "typeHints": {
+    "local": "常用于 Wi-Fi 私有地址。",
+    "multicast": "用于向多个设备发送数据的组地址。",
+    "broadcast": "可发送至本地网络中的所有设备。",
+    "zero": "未指定的地址。"
+  },
+  "cidHint": "用于本地分配地址的公司标识符。",
+  "about": {
+    "title": "浏览 IEEE MAC 地址分配记录",
+    "intro": "IEEE 地址区块为组织分配固定前缀，以及该前缀下的剩余地址空间。搜索登记库，可查看已知前缀、探索较大前缀内的较小分配区块，或查找登记在某个组织名下的区块。",
+    "sections": [
+      {
+        "title": "选择登记库",
+        "body": "MA-L 使用 24 位前缀，包含 16,777,216 个地址。MA-M 使用 28 位前缀，包含 1,048,576 个地址。MA-S 和较早的 IAB 登记库使用 36 位前缀，每个区块包含 4,096 个地址。CID 记录用于标识使用本地寻址的公司。登记库筛选可将列表限定为一种分配类型。"
+      },
+      {
+        "title": "搜索前缀并查看范围",
+        "body": "输入无分隔符、冒号分隔、连字符分隔、点分或 CIDR 格式的前缀。部分前缀可找到匹配的分配记录；完整的 MAC 地址可找到包含该地址的前缀。也可以搜索组织名称和登记地址。打开前缀，即可查看首个地址、末个地址和容量，以及匹配的登记信息。"
+      },
+      {
+        "title": "跨登记库查看分配记录",
+        "body": "选择组织名称，可在组织查询工具中打开该组织的完整分配列表。结果采用分页显示，“复制链接”会将搜索内容、登记库和页码保存在 URL 中。名称、地址和分配记录来自存储在共用快照中的五份 IEEE 公开登记数据。对比结果时，可通过来源链接和快照日期轻松辨识所用的数据集。"
+      }
+    ]
+  }
+}

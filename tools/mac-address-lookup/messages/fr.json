@@ -1,0 +1,73 @@
+{
+  "lookup": "Recherche d’adresses MAC",
+  "blocks": "Recherche de blocs d’adresses MAC",
+  "vendors": "Recherche de fabricants MAC",
+  "navigationLabel": "Outils associés",
+  "queryLabel": "Adresse MAC ou préfixe",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Préfixe, organisation ou adresse postale…",
+  "vendorPlaceholder": "Nom ou adresse postale de l’organisation…",
+  "blockSearchLabel": "Rechercher des blocs enregistrés",
+  "vendorSearchLabel": "Rechercher des organisations",
+  "registry": "Registre",
+  "allRegistries": "Tous les registres",
+  "prefix": "Préfixe",
+  "organization": "Organisation",
+  "address": "Adresse enregistrée",
+  "range": "Plage d’adresses",
+  "capacity": "Adresses dans le bloc",
+  "share": "Copier le lien",
+  "copied": "Lien copié",
+  "loading": "Chargement du registre IEEE…",
+  "loadError": "Impossible de charger le registre. Réessayez.",
+  "retry": "Réessayer",
+  "noResults": "Aucun enregistrement correspondant",
+  "noResultsHint": "Essayez un autre préfixe, nom d’organisation ou registre.",
+  "emptyLookupHint": "Les résultats s’affichent ici.",
+  "invalidAddress": "Saisissez une adresse MAC complète ou un préfixe valide de 24, 28 ou 36 bits.",
+  "noAssignment": "Aucune organisation enregistrée trouvée",
+  "previous": "Précédent",
+  "next": "Suivant",
+  "pageSummary": "{start}–{end} sur {total}",
+  "assignmentCount": "Blocs enregistrés : {count}",
+  "organizationCount": "Organisations : {count}",
+  "source": "Registre public IEEE",
+  "updated": "Instantané : {date}",
+  "clearOrganization": "Toutes les organisations",
+  "examples": "Exemples",
+  "copyAddress": "Copier l’adresse",
+  "addressCopied": "Adresse copiée",
+  "types": {
+    "universal": "Administration universelle",
+    "local": "Administration locale",
+    "multicast": "Multidiffusion",
+    "broadcast": "Diffusion générale",
+    "zero": "Adresse entièrement nulle",
+    "prefix": "Préfixe IEEE"
+  },
+  "typeHints": {
+    "local": "Souvent utilisée pour les adresses Wi-Fi privées.",
+    "multicast": "Adresse de groupe permettant de joindre plusieurs appareils.",
+    "broadcast": "Permet de joindre tous les appareils du réseau local.",
+    "zero": "Adresse non spécifiée."
+  },
+  "cidHint": "Identifiant d’entreprise pour les adresses attribuées localement.",
+  "about": {
+    "title": "Comprendre une adresse MAC",
+    "intro": "Une adresse MAC identifie une interface réseau sur un réseau Ethernet ou Wi-Fi. Utilisez cet outil pour trouver les informations d’enregistrement IEEE d’une adresse issue de la liste des clients d’un routeur, d’une table ARP ou de l’étiquette d’un appareil.",
+    "sections": [
+      {
+        "title": "Saisir une adresse ou un préfixe",
+        "body": "Collez une adresse MAC complète de 48 bits, avec des deux-points, des tirets, des points ou sans séparateurs : 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 et 001B638445E6 désignent la même adresse. Vous pouvez aussi saisir un préfixe IEEE tel que 001B63 ou 8C1F64001, y compris avec la notation /24, /28 ou /36."
+      },
+      {
+        "title": "Consulter le bloc enregistré",
+        "body": "Le résultat indique l’organisation enregistrée, son adresse et le préfixe correspondant. La recherche vérifie d’abord le préfixe le plus long : une attribution de 36 bits est prioritaire sur un préfixe parent de 28 ou 24 bits. La première adresse, la dernière adresse et la capacité du bloc indiquent la taille de l’attribution. Si un ancien préfixe comporte plusieurs enregistrements, toutes les organisations correspondantes sont affichées ensemble."
+      },
+      {
+        "title": "Explorer et partager le résultat",
+        "body": "Copiez l’adresse normalisée, ouvrez son préfixe pour inspecter le bloc ou suivez le nom de l’organisation pour parcourir ses autres attributions. « Copier le lien » conserve votre recherche dans l’URL pour la partager ou y revenir plus tard. Un résultat propre à chaque type est affiché pour les adresses locales, de multidiffusion, de diffusion générale et entièrement nulles. Les données proviennent d’un instantané IEEE intégré ; le lien vers la source et la date de l’instantané figurent sous l’outil."
+      }
+    ]
+  }
+}

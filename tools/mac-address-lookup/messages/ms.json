@@ -1,0 +1,73 @@
+{
+  "lookup": "Carian Alamat MAC",
+  "blocks": "Carian Blok Alamat MAC",
+  "vendors": "Carian Pembekal Alamat MAC",
+  "navigationLabel": "Alat berkaitan",
+  "queryLabel": "Alamat MAC atau awalan",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Awalan, organisasi atau alamat…",
+  "vendorPlaceholder": "Nama atau alamat organisasi…",
+  "blockSearchLabel": "Cari blok berdaftar",
+  "vendorSearchLabel": "Cari organisasi",
+  "registry": "Daftar",
+  "allRegistries": "Semua daftar",
+  "prefix": "Awalan",
+  "organization": "Organisasi",
+  "address": "Alamat berdaftar",
+  "range": "Julat alamat",
+  "capacity": "Alamat dalam blok",
+  "share": "Salin pautan",
+  "copied": "Pautan disalin",
+  "loading": "Memuatkan daftar IEEE…",
+  "loadError": "Daftar tidak dapat dimuatkan. Cuba lagi.",
+  "retry": "Cuba lagi",
+  "noResults": "Tiada rekod yang sepadan",
+  "noResultsHint": "Cuba awalan, nama organisasi atau daftar yang lain.",
+  "emptyLookupHint": "Hasil carian dipaparkan di sini.",
+  "invalidAddress": "Masukkan alamat MAC yang lengkap atau awalan 24, 28 atau 36 bit yang sah.",
+  "noAssignment": "Tiada organisasi berdaftar ditemui",
+  "previous": "Sebelumnya",
+  "next": "Seterusnya",
+  "pageSummary": "{start}–{end} daripada {total}",
+  "assignmentCount": "{count} blok berdaftar",
+  "organizationCount": "{count} organisasi",
+  "source": "Daftar awam IEEE",
+  "updated": "Salinan data: {date}",
+  "clearOrganization": "Semua organisasi",
+  "examples": "Contoh",
+  "copyAddress": "Salin alamat",
+  "addressCopied": "Alamat disalin",
+  "types": {
+    "universal": "Ditadbir secara sejagat",
+    "local": "Ditadbir secara setempat",
+    "multicast": "Multisiar",
+    "broadcast": "Siaran",
+    "zero": "Alamat semua sifar",
+    "prefix": "Awalan IEEE"
+  },
+  "typeHints": {
+    "local": "Kerap digunakan untuk alamat Wi-Fi peribadi.",
+    "multicast": "Alamat kumpulan yang digunakan untuk menghubungi beberapa peranti.",
+    "broadcast": "Menghantar data kepada setiap peranti pada rangkaian setempat.",
+    "zero": "Alamat yang tidak ditentukan."
+  },
+  "cidHint": "Pengecam syarikat untuk alamat yang ditetapkan secara setempat.",
+  "about": {
+    "title": "Fahami alamat MAC",
+    "intro": "Alamat MAC mengenal pasti antara muka rangkaian pada rangkaian Ethernet atau Wi-Fi. Gunakan carian ini untuk mendapatkan butiran pendaftaran IEEE bagi alamat daripada senarai klien penghala, jadual ARP atau label peranti.",
+    "sections": [
+      {
+        "title": "Masukkan alamat atau awalan",
+        "body": "Tampal alamat MAC 48 bit yang lengkap dengan titik bertindih, sempang, titik atau tanpa pemisah: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 dan 001B638445E6 semuanya merujuk kepada alamat yang sama. Anda juga boleh memasukkan awalan IEEE seperti 001B63 atau 8C1F64001, termasuk notasi /24, /28 atau /36."
+      },
+      {
+        "title": "Baca maklumat blok berdaftar",
+        "body": "Hasil carian memaparkan organisasi berdaftar, alamatnya dan awalan yang sepadan. Carian menyemak awalan terpanjang dahulu: peruntukan 36 bit diberi keutamaan berbanding awalan induk 28 bit atau 24 bit. Alamat pertama, alamat terakhir dan kapasiti blok menunjukkan saiz peruntukan. Jika awalan lama mempunyai beberapa pendaftaran, semua organisasi yang sepadan dipaparkan bersama."
+      },
+      {
+        "title": "Terokai dan kongsi hasil carian",
+        "body": "Salin alamat yang dinormalkan, buka awalannya untuk memeriksa blok atau ikuti nama organisasi untuk menyemak peruntukannya yang lain. Salin pautan mengekalkan pertanyaan anda dalam URL untuk dikongsi atau dibuka semula kemudian. Alamat setempat, multisiar, siaran dan semua sifar mempunyai hasil jenis alamat tersendiri. Data diambil daripada salinan data IEEE yang disertakan; pautan sumber dan tarikh salinan data dipaparkan di bawah alat."
+      }
+    ]
+  }
+}

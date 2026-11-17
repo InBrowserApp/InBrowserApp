@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC-adres opzoeken",
+  "blocks": "MAC-adresblokken opzoeken",
+  "vendors": "Leverancier van een MAC-adres opzoeken",
+  "navigationLabel": "Gerelateerde hulpmiddelen",
+  "queryLabel": "MAC-adres of prefix",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefix, organisatie of adres…",
+  "vendorPlaceholder": "Naam of adres van de organisatie…",
+  "blockSearchLabel": "Geregistreerde blokken zoeken",
+  "vendorSearchLabel": "Organisaties zoeken",
+  "registry": "Register",
+  "allRegistries": "Alle registers",
+  "prefix": "Prefix",
+  "organization": "Organisatie",
+  "address": "Geregistreerd adres",
+  "range": "Adresbereik",
+  "capacity": "Adressen in blok",
+  "share": "Link kopiëren",
+  "copied": "Link gekopieerd",
+  "loading": "IEEE-register laden…",
+  "loadError": "Het register kon niet worden geladen. Probeer het opnieuw.",
+  "retry": "Opnieuw proberen",
+  "noResults": "Geen overeenkomende registraties",
+  "noResultsHint": "Probeer een ander prefix, een andere organisatienaam of een ander register.",
+  "emptyLookupHint": "Resultaten verschijnen hier.",
+  "invalidAddress": "Voer een volledig MAC-adres of een geldig prefix van 24, 28 of 36 bits in.",
+  "noAssignment": "Geen geregistreerde organisatie gevonden",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "pageSummary": "{start}–{end} van {total}",
+  "assignmentCount": "Geregistreerde blokken: {count}",
+  "organizationCount": "Organisaties: {count}",
+  "source": "Openbaar IEEE-register",
+  "updated": "Momentopname: {date}",
+  "clearOrganization": "Alle organisaties",
+  "examples": "Voorbeelden",
+  "copyAddress": "Adres kopiëren",
+  "addressCopied": "Adres gekopieerd",
+  "types": {
+    "universal": "Universeel beheerd",
+    "local": "Lokaal beheerd",
+    "multicast": "Multicast",
+    "broadcast": "Broadcast",
+    "zero": "Adres met alleen nullen",
+    "prefix": "IEEE-prefix"
+  },
+  "typeHints": {
+    "local": "Vaak gebruikt voor privé-Wi-Fi-adressen.",
+    "multicast": "Een groepsadres om meerdere apparaten te bereiken.",
+    "broadcast": "Bereikt elk apparaat op het lokale netwerk.",
+    "zero": "Een niet-gespecificeerd adres."
+  },
+  "cidHint": "Bedrijfsidentificatie voor lokaal toegewezen adressen.",
+  "about": {
+    "title": "Een MAC-adres begrijpen",
+    "intro": "Een MAC-adres identificeert een netwerkinterface op een Ethernet- of Wi-Fi-netwerk. Gebruik deze zoekfunctie om IEEE-registratiegegevens te vinden voor een adres uit de clientlijst van een router, een ARP-tabel of het etiket op een apparaat.",
+    "sections": [
+      {
+        "title": "Voer een adres of prefix in",
+        "body": "Plak een volledig MAC-adres van 48 bits met dubbele punten, koppeltekens, punten of zonder scheidingstekens: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 en 001B638445E6 beschrijven allemaal hetzelfde adres. Je kunt ook een IEEE-prefix invoeren, zoals 001B63 of 8C1F64001, eventueel met de notatie /24, /28 of /36."
+      },
+      {
+        "title": "Bekijk het geregistreerde blok",
+        "body": "Het resultaat toont de geregistreerde organisatie, het adres ervan en het overeenkomende prefix. De zoekfunctie controleert het langste prefix eerst: een toewijzing van 36 bits krijgt voorrang op een bovenliggend prefix van 28 of 24 bits. Het eerste en laatste adres van het blok en de capaciteit tonen de omvang van de toewijzing. Als een ouder prefix meerdere registraties heeft, worden alle overeenkomende organisaties samen weergegeven."
+      },
+      {
+        "title": "Verken en deel het resultaat",
+        "body": "Kopieer het genormaliseerde adres, open het prefix om het blok te bekijken of volg de organisatienaam om de andere toewijzingen te verkennen. Link kopiëren bewaart je zoekopdracht in de URL om deze te delen of later opnieuw te openen. Lokaal beheerde adressen, multicastadressen, broadcastadressen en adressen met alleen nullen krijgen elk een resultaat voor hun eigen adrestype. De gegevens komen uit een meegeleverde momentopname van het IEEE-register; de bronlink en datum van de momentopname staan onder het hulpmiddel."
+      }
+    ]
+  }
+}

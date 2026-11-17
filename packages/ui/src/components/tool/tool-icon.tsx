@@ -3,8 +3,10 @@ import type { ComponentType } from "react"
 
 import {
   Binary,
+  Blocks,
   BookOpen,
   Braces,
+  Building2,
   Camera,
   Captions,
   Car,
@@ -36,8 +38,10 @@ import {
 const iconMap: Record<string, ComponentType<LucideProps>> = {
   archive: FileArchive,
   binary: Binary,
+  blocks: Blocks,
   "book-open": BookOpen,
   braces: Braces,
+  "building-2": Building2,
   camera: Camera,
   captions: Captions,
   car: Car,

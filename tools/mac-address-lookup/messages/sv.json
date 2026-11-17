@@ -1,0 +1,73 @@
+{
+  "lookup": "Sökning efter MAC-adresser",
+  "blocks": "Sökning efter MAC-adressblock",
+  "vendors": "Sökning efter MAC-tillverkare",
+  "navigationLabel": "Relaterade verktyg",
+  "queryLabel": "MAC-adress eller prefix",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefix, organisation eller postadress…",
+  "vendorPlaceholder": "Organisationens namn eller postadress…",
+  "blockSearchLabel": "Sök registrerade block",
+  "vendorSearchLabel": "Sök organisationer",
+  "registry": "Register",
+  "allRegistries": "Alla register",
+  "prefix": "Prefix",
+  "organization": "Organisation",
+  "address": "Registrerad adress",
+  "range": "Adressintervall",
+  "capacity": "Adresser i blocket",
+  "share": "Kopiera länk",
+  "copied": "Länken kopierad",
+  "loading": "Läser in IEEE-registret…",
+  "loadError": "Registret kunde inte läsas in. Försök igen.",
+  "retry": "Försök igen",
+  "noResults": "Inga matchande poster",
+  "noResultsHint": "Prova ett annat prefix, organisationsnamn eller register.",
+  "emptyLookupHint": "Resultaten visas här.",
+  "invalidAddress": "Ange en fullständig MAC-adress eller ett giltigt prefix på 24, 28 eller 36 bitar.",
+  "noAssignment": "Ingen registrerad organisation hittades",
+  "previous": "Föregående",
+  "next": "Nästa",
+  "pageSummary": "{start}–{end} av {total}",
+  "assignmentCount": "Registrerade block: {count}",
+  "organizationCount": "Organisationer: {count}",
+  "source": "IEEE:s offentliga register",
+  "updated": "Ögonblicksbild: {date}",
+  "clearOrganization": "Alla organisationer",
+  "examples": "Exempel",
+  "copyAddress": "Kopiera adress",
+  "addressCopied": "Adressen kopierad",
+  "types": {
+    "universal": "Universellt administrerad",
+    "local": "Lokalt administrerad",
+    "multicast": "Gruppsändning",
+    "broadcast": "Rundsändning",
+    "zero": "Adress med enbart nollor",
+    "prefix": "IEEE-prefix"
+  },
+  "typeHints": {
+    "local": "Används ofta för privata Wi-Fi-adresser.",
+    "multicast": "En gruppadress som används för att nå flera enheter.",
+    "broadcast": "Når alla enheter i det lokala nätverket.",
+    "zero": "En ospecificerad adress."
+  },
+  "cidHint": "Företagsidentifierare för lokalt tilldelade adresser.",
+  "about": {
+    "title": "Förstå en MAC-adress",
+    "intro": "En MAC-adress identifierar ett nätverksgränssnitt i ett Ethernet- eller Wi-Fi-nätverk. Använd sökningen för att hitta IEEE:s registreringsuppgifter för en adress från en routers klientlista, en ARP-tabell eller en enhetsetikett.",
+    "sections": [
+      {
+        "title": "Ange en adress eller ett prefix",
+        "body": "Klistra in en fullständig MAC-adress på 48 bitar med kolon, bindestreck, punkter eller utan avgränsare: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 och 001B638445E6 beskriver alla samma adress. Du kan också ange ett IEEE-prefix som 001B63 eller 8C1F64001, även med notation som /24, /28 eller /36."
+      },
+      {
+        "title": "Tolka det registrerade blocket",
+        "body": "Resultatet visar den registrerade organisationen, dess adress och det matchande prefixet. Sökningen kontrollerar det längsta prefixet först: en tilldelning på 36 bitar prioriteras framför ett överordnat prefix på 28 eller 24 bitar. Blockets första adress, sista adress och kapacitet visar tilldelningens storlek. Om ett äldre prefix har flera registreringar visas alla matchande organisationer tillsammans."
+      },
+      {
+        "title": "Utforska och dela resultatet",
+        "body": "Kopiera den normaliserade adressen, öppna dess prefix för att granska blocket eller följ organisationsnamnet för att bläddra bland dess övriga tilldelningar. Kopiera länk sparar din sökning i webbadressen så att du kan dela den eller återvända senare. För lokalt administrerade adresser, gruppadresser, rundsändningsadresser och adresser med enbart nollor visas resultat för respektive adresstyp. Uppgifterna kommer från en medföljande ögonblicksbild av IEEE-registret; källänken och datumet för ögonblicksbilden visas under verktyget."
+      }
+    ]
+  }
+}

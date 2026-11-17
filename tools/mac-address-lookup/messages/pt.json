@@ -1,0 +1,73 @@
+{
+  "lookup": "Consulta de endereços MAC",
+  "blocks": "Consulta de blocos de endereços MAC",
+  "vendors": "Consulta de fabricantes MAC",
+  "navigationLabel": "Ferramentas relacionadas",
+  "queryLabel": "Endereço MAC ou prefixo",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefixo, organização ou endereço postal…",
+  "vendorPlaceholder": "Nome ou endereço postal da organização…",
+  "blockSearchLabel": "Pesquisar blocos registrados",
+  "vendorSearchLabel": "Pesquisar organizações",
+  "registry": "Registro",
+  "allRegistries": "Todos os registros",
+  "prefix": "Prefixo",
+  "organization": "Organização",
+  "address": "Endereço registrado",
+  "range": "Intervalo de endereços",
+  "capacity": "Endereços no bloco",
+  "share": "Copiar link",
+  "copied": "Link copiado",
+  "loading": "Carregando registro IEEE…",
+  "loadError": "Não foi possível carregar o registro. Tente novamente.",
+  "retry": "Tentar novamente",
+  "noResults": "Nenhum registro correspondente",
+  "noResultsHint": "Tente outro prefixo, nome de organização ou registro.",
+  "emptyLookupHint": "Os resultados aparecem aqui.",
+  "invalidAddress": "Digite um endereço MAC completo ou um prefixo válido de 24, 28 ou 36 bits.",
+  "noAssignment": "Nenhuma organização registrada encontrada",
+  "previous": "Anterior",
+  "next": "Próximo",
+  "pageSummary": "{start}–{end} de {total}",
+  "assignmentCount": "Blocos registrados: {count}",
+  "organizationCount": "Organizações: {count}",
+  "source": "Registro público do IEEE",
+  "updated": "Cópia dos dados: {date}",
+  "clearOrganization": "Todas as organizações",
+  "examples": "Exemplos",
+  "copyAddress": "Copiar endereço",
+  "addressCopied": "Endereço copiado",
+  "types": {
+    "universal": "Administrado universalmente",
+    "local": "Administrado localmente",
+    "multicast": "Multidifusão",
+    "broadcast": "Difusão",
+    "zero": "Endereço com todos os bits zerados",
+    "prefix": "Prefixo IEEE"
+  },
+  "typeHints": {
+    "local": "Usado com frequência em endereços Wi-Fi privados.",
+    "multicast": "Um endereço de grupo usado para alcançar vários dispositivos.",
+    "broadcast": "Alcança todos os dispositivos da rede local.",
+    "zero": "Um endereço não especificado."
+  },
+  "cidHint": "Identificador de empresa para endereços atribuídos localmente.",
+  "about": {
+    "title": "Entenda um endereço MAC",
+    "intro": "Um endereço MAC identifica uma interface de rede em uma rede Ethernet ou Wi-Fi. Use esta consulta para encontrar informações de registro no IEEE para um endereço da lista de clientes de um roteador, de uma tabela ARP ou da etiqueta de um dispositivo.",
+    "sections": [
+      {
+        "title": "Digite um endereço ou prefixo",
+        "body": "Cole um endereço MAC completo de 48 bits com dois-pontos, hífens, pontos ou sem separadores: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 e 001B638445E6 representam o mesmo endereço. Você também pode digitar um prefixo IEEE, como 001B63 ou 8C1F64001, inclusive na notação /24, /28 ou /36."
+      },
+      {
+        "title": "Confira o bloco registrado",
+        "body": "O resultado mostra a organização registrada, seu endereço e o prefixo correspondente. A consulta verifica primeiro o prefixo mais longo: uma alocação de 36 bits tem prioridade sobre um prefixo pai de 28 ou 24 bits. O primeiro endereço, o último endereço e a capacidade do bloco mostram o tamanho da alocação. Se um prefixo antigo tiver vários registros, todas as organizações correspondentes aparecem juntas."
+      },
+      {
+        "title": "Explore e compartilhe o resultado",
+        "body": "Copie o endereço normalizado, abra seu prefixo para examinar o bloco ou siga o nome da organização para navegar por suas outras alocações. “Copiar link” preserva sua consulta na URL para compartilhar ou voltar mais tarde. Há resultados específicos por tipo para endereços locais, de multidifusão, de difusão e com todos os bits zerados. Os dados vêm de uma cópia dos dados do IEEE incluída na ferramenta; o link da fonte e a data da cópia aparecem abaixo da ferramenta."
+      }
+    ]
+  }
+}

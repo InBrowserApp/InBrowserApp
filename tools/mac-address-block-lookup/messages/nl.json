@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC-adres opzoeken",
+  "blocks": "MAC-adresblokken opzoeken",
+  "vendors": "Leverancier van een MAC-adres opzoeken",
+  "navigationLabel": "Gerelateerde hulpmiddelen",
+  "queryLabel": "MAC-adres of prefix",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefix, organisatie of adres…",
+  "vendorPlaceholder": "Naam of adres van de organisatie…",
+  "blockSearchLabel": "Geregistreerde blokken zoeken",
+  "vendorSearchLabel": "Organisaties zoeken",
+  "registry": "Register",
+  "allRegistries": "Alle registers",
+  "prefix": "Prefix",
+  "organization": "Organisatie",
+  "address": "Geregistreerd adres",
+  "range": "Adresbereik",
+  "capacity": "Adressen in blok",
+  "share": "Link kopiëren",
+  "copied": "Link gekopieerd",
+  "loading": "IEEE-register laden…",
+  "loadError": "Het register kon niet worden geladen. Probeer het opnieuw.",
+  "retry": "Opnieuw proberen",
+  "noResults": "Geen overeenkomende registraties",
+  "noResultsHint": "Probeer een ander prefix, een andere organisatienaam of een ander register.",
+  "emptyLookupHint": "Resultaten verschijnen hier.",
+  "invalidAddress": "Voer een volledig MAC-adres of een geldig prefix van 24, 28 of 36 bits in.",
+  "noAssignment": "Geen geregistreerde organisatie gevonden",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "pageSummary": "{start}–{end} van {total}",
+  "assignmentCount": "Geregistreerde blokken: {count}",
+  "organizationCount": "Organisaties: {count}",
+  "source": "Openbaar IEEE-register",
+  "updated": "Momentopname: {date}",
+  "clearOrganization": "Alle organisaties",
+  "examples": "Voorbeelden",
+  "copyAddress": "Adres kopiëren",
+  "addressCopied": "Adres gekopieerd",
+  "types": {
+    "universal": "Universeel beheerd",
+    "local": "Lokaal beheerd",
+    "multicast": "Multicast",
+    "broadcast": "Broadcast",
+    "zero": "Adres met alleen nullen",
+    "prefix": "IEEE-prefix"
+  },
+  "typeHints": {
+    "local": "Vaak gebruikt voor privé-Wi-Fi-adressen.",
+    "multicast": "Een groepsadres om meerdere apparaten te bereiken.",
+    "broadcast": "Bereikt elk apparaat op het lokale netwerk.",
+    "zero": "Een niet-gespecificeerd adres."
+  },
+  "cidHint": "Bedrijfsidentificatie voor lokaal toegewezen adressen.",
+  "about": {
+    "title": "Verken IEEE-toewijzingen van MAC-adressen",
+    "intro": "Een IEEE-adresblok wijst een organisatie een vast prefix toe, samen met de resterende adresruimte eronder. Doorzoek het register om een bekend prefix te bekijken, kleinere toewijzingen binnen een groter prefix te verkennen of blokken te vinden die op naam van een organisatie staan.",
+    "sections": [
+      {
+        "title": "Kies een register",
+        "body": "MA-L gebruikt een prefix van 24 bits en bevat 16,777,216 adressen. MA-M gebruikt 28 bits en bevat 1,048,576 adressen. MA-S en het oudere IAB-register gebruiken prefixen van 36 bits met elk 4,096 adressen. CID-registraties identificeren bedrijven voor lokale adressering. Het registerfilter beperkt de lijst tot één toewijzingstype."
+      },
+      {
+        "title": "Zoek prefixen en bekijk bereiken",
+        "body": "Voer een prefix in zonder scheidingstekens, met dubbele punten, koppeltekens of punten, of in CIDR-notatie. Met een gedeeltelijk prefix vind je overeenkomende toewijzingen; met een volledig MAC-adres vind je de prefixen die het bevatten. Je kunt ook op organisatienamen en geregistreerde adressen zoeken. Open een prefix om het eerste en laatste adres en de capaciteit te bekijken, samen met de overeenkomende registraties."
+      },
+      {
+        "title": "Volg toewijzingen door het register",
+        "body": "Selecteer een organisatienaam om de volledige lijst met toewijzingen te openen in het hulpmiddel voor het opzoeken van organisaties. Resultaten zijn verdeeld over pagina’s en Link kopiëren bewaart de zoekopdracht, het register en de pagina in de URL. Namen, adressen en toewijzingen komen uit vijf openbare IEEE-lijsten die in een gedeelde momentopname zijn opgeslagen. De bronlink en datum van de momentopname maken duidelijk welke gegevens zijn gebruikt wanneer je resultaten vergelijkt."
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC Adresi Sorgulama",
+  "blocks": "MAC Adres Bloğu Sorgulama",
+  "vendors": "MAC Adresi Üretici Sorgulama",
+  "navigationLabel": "İlgili araçlar",
+  "queryLabel": "MAC adresi veya önek",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Önek, kuruluş veya kayıtlı adres…",
+  "vendorPlaceholder": "Kuruluş adı veya kayıtlı adres…",
+  "blockSearchLabel": "Kayıtlı blokları ara",
+  "vendorSearchLabel": "Kuruluşları ara",
+  "registry": "Kayıt veritabanı",
+  "allRegistries": "Tüm kayıt veritabanları",
+  "prefix": "Önek",
+  "organization": "Kuruluş",
+  "address": "Kayıtlı adres",
+  "range": "Adres aralığı",
+  "capacity": "Bloktaki adres sayısı",
+  "share": "Bağlantıyı kopyala",
+  "copied": "Bağlantı kopyalandı",
+  "loading": "IEEE kayıt veritabanı yükleniyor…",
+  "loadError": "Kayıt veritabanı yüklenemedi. Tekrar deneyin.",
+  "retry": "Tekrar dene",
+  "noResults": "Eşleşen kayıt yok",
+  "noResultsHint": "Farklı bir önek, kuruluş adı veya kayıt veritabanı deneyin.",
+  "emptyLookupHint": "Sonuçlar burada görünür.",
+  "invalidAddress": "Tam bir MAC adresi veya geçerli bir 24, 28 ya da 36 bitlik önek girin.",
+  "noAssignment": "Kayıtlı kuruluş bulunamadı",
+  "previous": "Önceki",
+  "next": "Sonraki",
+  "pageSummary": "{start}–{end} / toplam {total}",
+  "assignmentCount": "{count} kayıtlı blok",
+  "organizationCount": "{count} kuruluş",
+  "source": "Herkese açık IEEE kayıt veritabanı",
+  "updated": "Anlık görüntü: {date}",
+  "clearOrganization": "Tüm kuruluşlar",
+  "examples": "Örnekler",
+  "copyAddress": "Adresi kopyala",
+  "addressCopied": "Adres kopyalandı",
+  "types": {
+    "universal": "Evrensel olarak yönetilen",
+    "local": "Yerel olarak yönetilen",
+    "multicast": "Çoklu yayın",
+    "broadcast": "Genel yayın",
+    "zero": "Tümü sıfır olan adres",
+    "prefix": "IEEE öneki"
+  },
+  "typeHints": {
+    "local": "Genellikle özel Wi-Fi adresleri için kullanılır.",
+    "multicast": "Birden fazla cihaza ulaşmak için kullanılan grup adresi.",
+    "broadcast": "Yerel ağdaki tüm cihazlara ulaşır.",
+    "zero": "Belirtilmemiş bir adres."
+  },
+  "cidHint": "Yerel olarak atanan adresler için şirket tanımlayıcısı.",
+  "about": {
+    "title": "Bir kuruluşun MAC adres bloklarını bulun",
+    "intro": "Kuruluşların genellikle zaman içinde veya farklı ürünler ve işletmeler aracılığıyla edindikleri birden fazla IEEE tahsisi bulunur. Bu kayıtları bir araya getirmek için kuruluş adı veya kayıtlı adres ile arama yapın, ardından kayıt veritabanlarındaki tahsislerini incelemek için bir kuruluşu açın.",
+    "sections": [
+      {
+        "title": "Adları ve kayıtlı adresleri arayın",
+        "body": "Arama, büyük/küçük harf ayrımı yapmadan kuruluş adının veya adresinin herhangi bir bölümüyle eşleşir. Şirket adı, şehir veya sokak bir kaydı bulmanıza yardımcı olabilir. Her sonuçta eşleşen kayıtlı adres ve blok sayısı yer alır. Tam olarak o ada odaklanmak ve tüm tahsislerini görmek için kuruluşu seçin."
+      },
+      {
+        "title": "Bir kuruluşun tahsislerini yorumlayın",
+        "body": "Kuruluş görünümü, blokları önekler ve kayıt veritabanı türlerinden oluşan kısa bir listede toplar. Ortak adres listenin üstünde bir kez gösterilir; farklı kayıtlı adresler ise ilgili blokların yanında kalır. MA-L, MA-M, MA-S, IAB veya CID ile filtreleyin ve bir öneki açarak aralığını ve kapasitesini MAC Adres Bloğu Sorgulama aracında inceleyin. Kuruluş adları, eski şirket adları da dahil olmak üzere IEEE listeleriyle aynıdır."
+      },
+      {
+        "title": "Bir kuruluşu veya aramayı paylaşın",
+        "body": "Bağlantıyı kopyala seçeneği, seçili kuruluşu, arama terimini, kayıt veritabanı filtresini ve sayfayı URL içinde saklar. Aynı görünümü yeniden açabilir, bir iş arkadaşınıza gönderebilir veya seçimi koruyarak sitenin dilini değiştirebilirsiniz. Ortak kayıt veritabanı anlık görüntüsü yüklendikten sonra arama ve filtreleme tarayıcınızda çalışır. Aracın altındaki kaynak bağlantısı ve anlık görüntü tarihi, sonuçlar için kullanılan IEEE verilerini belirtir."
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "lookup": "Oppslag av MAC-adresser",
+  "blocks": "Oppslag av MAC-adresseblokker",
+  "vendors": "Organisasjonssøk i MAC-adresseregisteret",
+  "navigationLabel": "Relaterte verktøy",
+  "queryLabel": "MAC-adresse eller prefiks",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefiks, organisasjon eller adresse…",
+  "vendorPlaceholder": "Organisasjonsnavn eller adresse…",
+  "blockSearchLabel": "Søk i registrerte blokker",
+  "vendorSearchLabel": "Søk etter organisasjoner",
+  "registry": "Register",
+  "allRegistries": "Alle registre",
+  "prefix": "Prefiks",
+  "organization": "Organisasjon",
+  "address": "Registrert adresse",
+  "range": "Adresseområde",
+  "capacity": "Adresser i blokken",
+  "share": "Kopier lenke",
+  "copied": "Lenke kopiert",
+  "loading": "Laster inn IEEE-registeret…",
+  "loadError": "Registeret kunne ikke lastes inn. Prøv igjen.",
+  "retry": "Prøv igjen",
+  "noResults": "Ingen treff",
+  "noResultsHint": "Prøv et annet prefiks, organisasjonsnavn eller register.",
+  "emptyLookupHint": "Resultatene vises her.",
+  "invalidAddress": "Skriv inn en fullstendig MAC-adresse eller et gyldig 24-, 28- eller 36-biters prefiks.",
+  "noAssignment": "Ingen registrert organisasjon funnet",
+  "previous": "Forrige",
+  "next": "Neste",
+  "pageSummary": "{start}–{end} av {total}",
+  "assignmentCount": "Registrerte blokker: {count}",
+  "organizationCount": "Organisasjoner: {count}",
+  "source": "Det offentlige IEEE-registeret",
+  "updated": "Registerkopi: {date}",
+  "clearOrganization": "Alle organisasjoner",
+  "examples": "Eksempler",
+  "copyAddress": "Kopier adresse",
+  "addressCopied": "Adresse kopiert",
+  "types": {
+    "universal": "Universelt administrert",
+    "local": "Lokalt administrert",
+    "multicast": "Gruppeadresse",
+    "broadcast": "Kringkastingsadresse",
+    "zero": "Adresse med bare nuller",
+    "prefix": "IEEE-prefiks"
+  },
+  "typeHints": {
+    "local": "Brukes ofte til private Wi-Fi-adresser.",
+    "multicast": "En gruppeadresse som brukes til å nå flere enheter.",
+    "broadcast": "Brukes til å nå alle enheter i det lokale nettverket.",
+    "zero": "En uspesifisert adresse."
+  },
+  "cidHint": "Firmaidentifikator for lokalt tildelte adresser.",
+  "about": {
+    "title": "Finn en organisasjons MAC-adresseblokker",
+    "intro": "Organisasjoner har ofte flere IEEE-tildelinger som de har fått over tid eller gjennom ulike produkter og virksomheter. Søk etter organisasjonsnavn eller registrert adresse for å samle disse oppføringene, og åpne deretter en organisasjon for å utforske tildelingene på tvers av registrene.",
+    "sections": [
+      {
+        "title": "Søk etter navn og registrerte adresser",
+        "body": "Søket finner treff i alle deler av organisasjonens navn eller adresse, uavhengig av store og små bokstaver. Et firmanavn, en by eller en gate kan hjelpe deg med å finne en oppføring. Hvert resultat viser den samsvarende registrerte adressen og antall blokker. Velg organisasjonen for å avgrense søket til akkurat det navnet og se alle tildelingene."
+      },
+      {
+        "title": "Se en organisasjons tildelinger",
+        "body": "Organisasjonsvisningen samler blokkene i en kompakt liste med prefikser og registertyper. En felles adresse vises én gang over listen; ulike registrerte adresser vises fortsatt ved de tilhørende blokkene. Filtrer etter MA-L, MA-M, MA-S, IAB eller CID, og åpne et prefiks for å undersøke adresseområdet og antall adresser i verktøyet for blokkoppslag. Organisasjonsnavnene følger IEEE-registrene, også historiske firmanavn."
+      },
+      {
+        "title": "Del en lenke til en organisasjon eller et søk",
+        "body": "«Kopier lenke» lagrer den valgte organisasjonen, søkeordet, registerfilteret og siden i URL-en. Du kan åpne samme visning igjen, sende lenken til en kollega eller bytte språk på nettstedet og beholde valget. Søk og filtrering kjøres i nettleseren etter at den felles registerkopien er lastet inn. Kildelenken og datoen for registerkopien under verktøyet viser hvilke IEEE-data som brukes i resultatene."
+      }
+    ]
+  }
+}

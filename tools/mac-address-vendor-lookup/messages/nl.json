@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC-adres opzoeken",
+  "blocks": "MAC-adresblokken opzoeken",
+  "vendors": "Leverancier van een MAC-adres opzoeken",
+  "navigationLabel": "Gerelateerde hulpmiddelen",
+  "queryLabel": "MAC-adres of prefix",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefix, organisatie of adres…",
+  "vendorPlaceholder": "Naam of adres van de organisatie…",
+  "blockSearchLabel": "Geregistreerde blokken zoeken",
+  "vendorSearchLabel": "Organisaties zoeken",
+  "registry": "Register",
+  "allRegistries": "Alle registers",
+  "prefix": "Prefix",
+  "organization": "Organisatie",
+  "address": "Geregistreerd adres",
+  "range": "Adresbereik",
+  "capacity": "Adressen in blok",
+  "share": "Link kopiëren",
+  "copied": "Link gekopieerd",
+  "loading": "IEEE-register laden…",
+  "loadError": "Het register kon niet worden geladen. Probeer het opnieuw.",
+  "retry": "Opnieuw proberen",
+  "noResults": "Geen overeenkomende registraties",
+  "noResultsHint": "Probeer een ander prefix, een andere organisatienaam of een ander register.",
+  "emptyLookupHint": "Resultaten verschijnen hier.",
+  "invalidAddress": "Voer een volledig MAC-adres of een geldig prefix van 24, 28 of 36 bits in.",
+  "noAssignment": "Geen geregistreerde organisatie gevonden",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "pageSummary": "{start}–{end} van {total}",
+  "assignmentCount": "Geregistreerde blokken: {count}",
+  "organizationCount": "Organisaties: {count}",
+  "source": "Openbaar IEEE-register",
+  "updated": "Momentopname: {date}",
+  "clearOrganization": "Alle organisaties",
+  "examples": "Voorbeelden",
+  "copyAddress": "Adres kopiëren",
+  "addressCopied": "Adres gekopieerd",
+  "types": {
+    "universal": "Universeel beheerd",
+    "local": "Lokaal beheerd",
+    "multicast": "Multicast",
+    "broadcast": "Broadcast",
+    "zero": "Adres met alleen nullen",
+    "prefix": "IEEE-prefix"
+  },
+  "typeHints": {
+    "local": "Vaak gebruikt voor privé-Wi-Fi-adressen.",
+    "multicast": "Een groepsadres om meerdere apparaten te bereiken.",
+    "broadcast": "Bereikt elk apparaat op het lokale netwerk.",
+    "zero": "Een niet-gespecificeerd adres."
+  },
+  "cidHint": "Bedrijfsidentificatie voor lokaal toegewezen adressen.",
+  "about": {
+    "title": "Vind de MAC-adresblokken van een organisatie",
+    "intro": "Organisaties hebben vaak meerdere IEEE-toewijzingen die ze in de loop van de tijd of via verschillende producten en bedrijven hebben verkregen. Zoek op organisatienaam of geregistreerd adres om deze registraties samen te brengen en open vervolgens een organisatie om de toewijzingen in de verschillende registers te verkennen.",
+    "sections": [
+      {
+        "title": "Zoek op namen en geregistreerde adressen",
+        "body": "Je kunt zoeken op elk deel van de naam of het adres van een organisatie, zonder onderscheid tussen hoofdletters en kleine letters. Een bedrijfsnaam, plaats of straat kan helpen een registratie te vinden. Elk resultaat bevat het overeenkomende geregistreerde adres en het aantal blokken. Selecteer de organisatie om alleen die exacte naam en alle bijbehorende toewijzingen te bekijken."
+      },
+      {
+        "title": "Bekijk de toewijzingen van een organisatie",
+        "body": "De organisatieweergave groepeert de blokken in een compacte lijst met prefixen en registertypen. Een gedeeld adres verschijnt één keer boven de lijst; afwijkende geregistreerde adressen blijven bij de betreffende blokken staan. Filter op MA-L, MA-M, MA-S, IAB of CID en open een prefix om het bereik en de capaciteit te bekijken in het hulpmiddel voor het opzoeken van blokken. Organisatienamen volgen de IEEE-lijsten, inclusief historische bedrijfsnamen."
+      },
+      {
+        "title": "Deel een organisatie of zoekopdracht",
+        "body": "Link kopiëren slaat de geselecteerde organisatie, de zoekterm, het registerfilter en de pagina op in de URL. Je kunt dezelfde weergave opnieuw openen, naar een collega sturen of de taal van de site wijzigen met behoud van de selectie. De zoek- en filterfuncties worden in je browser uitgevoerd nadat de gedeelde momentopname van het register is geladen. De bronlink en datum van de momentopname onder het hulpmiddel geven aan welke IEEE-gegevens voor de resultaten zijn gebruikt."
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "lookup": "Oppslag av MAC-adresser",
+  "blocks": "Oppslag av MAC-adresseblokker",
+  "vendors": "Organisasjonssøk i MAC-adresseregisteret",
+  "navigationLabel": "Relaterte verktøy",
+  "queryLabel": "MAC-adresse eller prefiks",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefiks, organisasjon eller adresse…",
+  "vendorPlaceholder": "Organisasjonsnavn eller adresse…",
+  "blockSearchLabel": "Søk i registrerte blokker",
+  "vendorSearchLabel": "Søk etter organisasjoner",
+  "registry": "Register",
+  "allRegistries": "Alle registre",
+  "prefix": "Prefiks",
+  "organization": "Organisasjon",
+  "address": "Registrert adresse",
+  "range": "Adresseområde",
+  "capacity": "Adresser i blokken",
+  "share": "Kopier lenke",
+  "copied": "Lenke kopiert",
+  "loading": "Laster inn IEEE-registeret…",
+  "loadError": "Registeret kunne ikke lastes inn. Prøv igjen.",
+  "retry": "Prøv igjen",
+  "noResults": "Ingen treff",
+  "noResultsHint": "Prøv et annet prefiks, organisasjonsnavn eller register.",
+  "emptyLookupHint": "Resultatene vises her.",
+  "invalidAddress": "Skriv inn en fullstendig MAC-adresse eller et gyldig 24-, 28- eller 36-biters prefiks.",
+  "noAssignment": "Ingen registrert organisasjon funnet",
+  "previous": "Forrige",
+  "next": "Neste",
+  "pageSummary": "{start}–{end} av {total}",
+  "assignmentCount": "Registrerte blokker: {count}",
+  "organizationCount": "Organisasjoner: {count}",
+  "source": "Det offentlige IEEE-registeret",
+  "updated": "Registerkopi: {date}",
+  "clearOrganization": "Alle organisasjoner",
+  "examples": "Eksempler",
+  "copyAddress": "Kopier adresse",
+  "addressCopied": "Adresse kopiert",
+  "types": {
+    "universal": "Universelt administrert",
+    "local": "Lokalt administrert",
+    "multicast": "Gruppeadresse",
+    "broadcast": "Kringkastingsadresse",
+    "zero": "Adresse med bare nuller",
+    "prefix": "IEEE-prefiks"
+  },
+  "typeHints": {
+    "local": "Brukes ofte til private Wi-Fi-adresser.",
+    "multicast": "En gruppeadresse som brukes til å nå flere enheter.",
+    "broadcast": "Brukes til å nå alle enheter i det lokale nettverket.",
+    "zero": "En uspesifisert adresse."
+  },
+  "cidHint": "Firmaidentifikator for lokalt tildelte adresser.",
+  "about": {
+    "title": "Forstå en MAC-adresse",
+    "intro": "En MAC-adresse identifiserer et nettverksgrensesnitt i et Ethernet- eller Wi-Fi-nettverk. Bruk oppslaget til å finne registreringsopplysninger hos IEEE for en adresse fra ruterens klientliste, en ARP-tabell eller enhetens etikett.",
+    "sections": [
+      {
+        "title": "Skriv inn en adresse eller et prefiks",
+        "body": "Lim inn en fullstendig 48-biters MAC-adresse med kolon, bindestreker, punktum eller uten skilletegn: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 og 001B638445E6 beskriver alle samme adresse. Du kan også skrive inn et IEEE-prefiks som 001B63 eller 8C1F64001, eventuelt med /24, /28 eller /36."
+      },
+      {
+        "title": "Se den registrerte blokken",
+        "body": "Resultatet viser den registrerte organisasjonen, adressen dens og det samsvarende prefikset. Oppslaget sjekker det lengste prefikset først: en 36-biters tildeling prioriteres foran en overordnet 28-biters eller 24-biters tildeling. Blokkens første adresse, siste adresse og antall adresser viser størrelsen på tildelingen. Hvis et eldre prefiks har flere registreringer, vises alle samsvarende organisasjoner samlet."
+      },
+      {
+        "title": "Utforsk og del resultatet",
+        "body": "Kopier den normaliserte adressen, åpne prefikset for å undersøke blokken, eller følg organisasjonsnavnet for å bla gjennom organisasjonens andre tildelinger. «Kopier lenke» lagrer søket i URL-en, slik at du kan dele det eller komme tilbake senere. Lokalt administrerte adresser, gruppeadresser, kringkastingsadresser og adresser med bare nuller får egne resultater som viser adressetypen. Dataene kommer fra en medfølgende kopi av IEEE-registeret; kildelenken og datoen for registerkopien vises under verktøyet."
+      }
+    ]
+  }
+}

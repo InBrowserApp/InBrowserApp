@@ -1,0 +1,73 @@
+{
+  "lookup": "Ricerca di indirizzi MAC",
+  "blocks": "Ricerca di blocchi di indirizzi MAC",
+  "vendors": "Ricerca del fornitore tramite indirizzo MAC",
+  "navigationLabel": "Strumenti correlati",
+  "queryLabel": "Indirizzo MAC o prefisso",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefisso, organizzazione o indirizzo…",
+  "vendorPlaceholder": "Nome o indirizzo dell’organizzazione…",
+  "blockSearchLabel": "Cerca nei blocchi registrati",
+  "vendorSearchLabel": "Cerca organizzazioni",
+  "registry": "Registro",
+  "allRegistries": "Tutti i registri",
+  "prefix": "Prefisso",
+  "organization": "Organizzazione",
+  "address": "Indirizzo registrato",
+  "range": "Intervallo di indirizzi",
+  "capacity": "Indirizzi nel blocco",
+  "share": "Copia link",
+  "copied": "Link copiato",
+  "loading": "Caricamento del registro IEEE…",
+  "loadError": "Impossibile caricare il registro. Riprova.",
+  "retry": "Riprova",
+  "noResults": "Nessun record corrispondente",
+  "noResultsHint": "Prova un altro prefisso, nome di organizzazione o registro.",
+  "emptyLookupHint": "I risultati appariranno qui.",
+  "invalidAddress": "Inserisci un indirizzo MAC completo o un prefisso valido di 24, 28 o 36 bit.",
+  "noAssignment": "Nessuna organizzazione registrata trovata",
+  "previous": "Precedente",
+  "next": "Successiva",
+  "pageSummary": "{start}–{end} di {total}",
+  "assignmentCount": "Blocchi registrati: {count}",
+  "organizationCount": "Organizzazioni: {count}",
+  "source": "Registro pubblico IEEE",
+  "updated": "Copia del registro: {date}",
+  "clearOrganization": "Tutte le organizzazioni",
+  "examples": "Esempi",
+  "copyAddress": "Copia indirizzo",
+  "addressCopied": "Indirizzo copiato",
+  "types": {
+    "universal": "Amministrato universalmente",
+    "local": "Amministrato localmente",
+    "multicast": "Multicast",
+    "broadcast": "Broadcast",
+    "zero": "Indirizzo composto da soli zeri",
+    "prefix": "Prefisso IEEE"
+  },
+  "typeHints": {
+    "local": "Spesso usato per gli indirizzi Wi-Fi privati.",
+    "multicast": "Un indirizzo di gruppo usato per raggiungere più dispositivi.",
+    "broadcast": "Raggiunge tutti i dispositivi della rete locale.",
+    "zero": "Un indirizzo non specificato."
+  },
+  "cidHint": "Identificativo aziendale per indirizzi assegnati localmente.",
+  "about": {
+    "title": "Trova i blocchi di indirizzi MAC di un’organizzazione",
+    "intro": "Le organizzazioni spesso possiedono più assegnazioni IEEE acquisite nel tempo o tramite prodotti e attività diverse. Cerca per nome dell’organizzazione o indirizzo registrato per riunire questi record, quindi apri un’organizzazione per esplorare le sue assegnazioni nei vari registri.",
+    "sections": [
+      {
+        "title": "Cerca nomi e indirizzi registrati",
+        "body": "La ricerca trova corrispondenze in qualsiasi parte del nome o dell’indirizzo di un’organizzazione, senza distinguere tra maiuscole e minuscole. Il nome di un’azienda, una città o una via possono aiutare a trovare un record. Ogni risultato include l’indirizzo registrato corrispondente e il numero di blocchi. Seleziona l’organizzazione per limitare la vista a quel nome esatto e vedere tutte le sue assegnazioni."
+      },
+      {
+        "title": "Leggi le assegnazioni di un’organizzazione",
+        "body": "La vista dell’organizzazione raggruppa i suoi blocchi in un elenco compatto di prefissi e tipi di registro. Un indirizzo comune viene mostrato una sola volta sopra l’elenco; gli indirizzi registrati diversi restano associati ai rispettivi blocchi. Filtra per MA-L, MA-M, MA-S, IAB o CID e apri un prefisso per esaminarne l’intervallo e la capacità nello strumento di ricerca dei blocchi. I nomi delle organizzazioni seguono gli elenchi IEEE, compresi i nomi storici delle aziende."
+      },
+      {
+        "title": "Condividi un’organizzazione o una ricerca",
+        "body": "Copia link salva nell’URL l’organizzazione selezionata, il termine di ricerca, il filtro del registro e la pagina. Puoi riaprire la stessa vista, inviarla a un collega o cambiare la lingua del sito mantenendo la selezione. La ricerca e i filtri vengono eseguiti nel browser dopo il caricamento della copia condivisa del registro. Il link alla fonte e la data della copia sotto lo strumento identificano i dati IEEE usati per i risultati."
+      }
+    ]
+  }
+}

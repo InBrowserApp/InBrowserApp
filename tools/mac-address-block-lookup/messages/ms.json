@@ -1,0 +1,73 @@
+{
+  "lookup": "Carian Alamat MAC",
+  "blocks": "Carian Blok Alamat MAC",
+  "vendors": "Carian Pembekal Alamat MAC",
+  "navigationLabel": "Alat berkaitan",
+  "queryLabel": "Alamat MAC atau awalan",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Awalan, organisasi atau alamat…",
+  "vendorPlaceholder": "Nama atau alamat organisasi…",
+  "blockSearchLabel": "Cari blok berdaftar",
+  "vendorSearchLabel": "Cari organisasi",
+  "registry": "Daftar",
+  "allRegistries": "Semua daftar",
+  "prefix": "Awalan",
+  "organization": "Organisasi",
+  "address": "Alamat berdaftar",
+  "range": "Julat alamat",
+  "capacity": "Alamat dalam blok",
+  "share": "Salin pautan",
+  "copied": "Pautan disalin",
+  "loading": "Memuatkan daftar IEEE…",
+  "loadError": "Daftar tidak dapat dimuatkan. Cuba lagi.",
+  "retry": "Cuba lagi",
+  "noResults": "Tiada rekod yang sepadan",
+  "noResultsHint": "Cuba awalan, nama organisasi atau daftar yang lain.",
+  "emptyLookupHint": "Hasil carian dipaparkan di sini.",
+  "invalidAddress": "Masukkan alamat MAC yang lengkap atau awalan 24, 28 atau 36 bit yang sah.",
+  "noAssignment": "Tiada organisasi berdaftar ditemui",
+  "previous": "Sebelumnya",
+  "next": "Seterusnya",
+  "pageSummary": "{start}–{end} daripada {total}",
+  "assignmentCount": "{count} blok berdaftar",
+  "organizationCount": "{count} organisasi",
+  "source": "Daftar awam IEEE",
+  "updated": "Salinan data: {date}",
+  "clearOrganization": "Semua organisasi",
+  "examples": "Contoh",
+  "copyAddress": "Salin alamat",
+  "addressCopied": "Alamat disalin",
+  "types": {
+    "universal": "Ditadbir secara sejagat",
+    "local": "Ditadbir secara setempat",
+    "multicast": "Multisiar",
+    "broadcast": "Siaran",
+    "zero": "Alamat semua sifar",
+    "prefix": "Awalan IEEE"
+  },
+  "typeHints": {
+    "local": "Kerap digunakan untuk alamat Wi-Fi peribadi.",
+    "multicast": "Alamat kumpulan yang digunakan untuk menghubungi beberapa peranti.",
+    "broadcast": "Menghantar data kepada setiap peranti pada rangkaian setempat.",
+    "zero": "Alamat yang tidak ditentukan."
+  },
+  "cidHint": "Pengecam syarikat untuk alamat yang ditetapkan secara setempat.",
+  "about": {
+    "title": "Terokai peruntukan alamat MAC IEEE",
+    "intro": "Blok alamat IEEE memperuntukkan awalan tetap dan baki ruang alamat di bawahnya kepada sesebuah organisasi. Cari dalam daftar untuk memeriksa awalan yang diketahui, meneroka peruntukan yang lebih kecil dalam awalan yang lebih besar atau mencari blok yang didaftarkan kepada sesebuah organisasi.",
+    "sections": [
+      {
+        "title": "Pilih daftar",
+        "body": "MA-L menggunakan awalan 24 bit dan mengandungi 16,777,216 alamat. MA-M menggunakan 28 bit dan mengandungi 1,048,576 alamat. MA-S dan daftar IAB yang lebih lama menggunakan awalan 36 bit dengan 4,096 alamat setiap satu. Rekod CID mengenal pasti syarikat untuk pengalamatan setempat. Penapis daftar mengehadkan senarai kepada satu jenis peruntukan."
+      },
+      {
+        "title": "Cari awalan dan periksa julat",
+        "body": "Masukkan awalan tanpa pemisah atau dalam notasi titik bertindih, sempang, titik atau CIDR. Awalan separa mencari peruntukan yang sepadan; alamat MAC yang lengkap mencari awalan yang merangkuminya. Anda juga boleh mencari nama organisasi dan alamat berdaftar. Buka awalan untuk melihat alamat pertama, alamat terakhir dan kapasitinya bersama pendaftaran yang sepadan."
+      },
+      {
+        "title": "Jejaki peruntukan merentas daftar",
+        "body": "Pilih nama organisasi untuk membuka senarai penuh peruntukannya dalam alat carian organisasi. Hasil carian dibahagikan kepada halaman, dan Salin pautan mengekalkan carian, daftar dan halaman dalam URL. Nama, alamat dan peruntukan diambil daripada lima senarai awam IEEE yang disimpan dalam salinan data bersama. Pautan sumber dan tarikh salinan data memudahkan anda mengenal pasti set data apabila membandingkan hasil carian."
+      }
+    ]
+  }
+}

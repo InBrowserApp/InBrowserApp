@@ -1,0 +1,73 @@
+{
+  "lookup": "Recherche d’adresses MAC",
+  "blocks": "Recherche de blocs d’adresses MAC",
+  "vendors": "Recherche de fabricants MAC",
+  "navigationLabel": "Outils associés",
+  "queryLabel": "Adresse MAC ou préfixe",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Préfixe, organisation ou adresse postale…",
+  "vendorPlaceholder": "Nom ou adresse postale de l’organisation…",
+  "blockSearchLabel": "Rechercher des blocs enregistrés",
+  "vendorSearchLabel": "Rechercher des organisations",
+  "registry": "Registre",
+  "allRegistries": "Tous les registres",
+  "prefix": "Préfixe",
+  "organization": "Organisation",
+  "address": "Adresse enregistrée",
+  "range": "Plage d’adresses",
+  "capacity": "Adresses dans le bloc",
+  "share": "Copier le lien",
+  "copied": "Lien copié",
+  "loading": "Chargement du registre IEEE…",
+  "loadError": "Impossible de charger le registre. Réessayez.",
+  "retry": "Réessayer",
+  "noResults": "Aucun enregistrement correspondant",
+  "noResultsHint": "Essayez un autre préfixe, nom d’organisation ou registre.",
+  "emptyLookupHint": "Les résultats s’affichent ici.",
+  "invalidAddress": "Saisissez une adresse MAC complète ou un préfixe valide de 24, 28 ou 36 bits.",
+  "noAssignment": "Aucune organisation enregistrée trouvée",
+  "previous": "Précédent",
+  "next": "Suivant",
+  "pageSummary": "{start}–{end} sur {total}",
+  "assignmentCount": "Blocs enregistrés : {count}",
+  "organizationCount": "Organisations : {count}",
+  "source": "Registre public IEEE",
+  "updated": "Instantané : {date}",
+  "clearOrganization": "Toutes les organisations",
+  "examples": "Exemples",
+  "copyAddress": "Copier l’adresse",
+  "addressCopied": "Adresse copiée",
+  "types": {
+    "universal": "Administration universelle",
+    "local": "Administration locale",
+    "multicast": "Multidiffusion",
+    "broadcast": "Diffusion générale",
+    "zero": "Adresse entièrement nulle",
+    "prefix": "Préfixe IEEE"
+  },
+  "typeHints": {
+    "local": "Souvent utilisée pour les adresses Wi-Fi privées.",
+    "multicast": "Adresse de groupe permettant de joindre plusieurs appareils.",
+    "broadcast": "Permet de joindre tous les appareils du réseau local.",
+    "zero": "Adresse non spécifiée."
+  },
+  "cidHint": "Identifiant d’entreprise pour les adresses attribuées localement.",
+  "about": {
+    "title": "Trouver les blocs d’adresses MAC d’une organisation",
+    "intro": "Les organisations détiennent souvent plusieurs attributions IEEE obtenues au fil du temps ou dans le cadre de différents produits et activités. Recherchez par nom d’organisation ou adresse enregistrée pour regrouper ces enregistrements, puis ouvrez une organisation pour explorer ses attributions dans les différents registres.",
+    "sections": [
+      {
+        "title": "Rechercher des noms et des adresses enregistrées",
+        "body": "La recherche porte sur toute partie du nom ou de l’adresse d’une organisation, sans tenir compte de la casse. Un nom d’entreprise, une ville ou une rue peut aider à trouver un enregistrement. Chaque résultat inclut l’adresse enregistrée correspondante et le nombre de blocs. Sélectionnez l’organisation pour vous limiter à ce nom exact et voir toutes ses attributions."
+      },
+      {
+        "title": "Consulter les attributions d’une organisation",
+        "body": "La vue de l’organisation regroupe ses blocs dans une liste compacte de préfixes et de types de registres. Une adresse commune apparaît une seule fois au-dessus de la liste ; les adresses enregistrées différentes restent associées à leurs blocs. Filtrez par MA-L, MA-M, MA-S, IAB ou CID, puis ouvrez un préfixe pour examiner sa plage et sa capacité dans l’outil de recherche de blocs. Les noms d’organisations suivent les listes IEEE, y compris les anciens noms d’entreprises."
+      },
+      {
+        "title": "Partager une organisation ou une recherche",
+        "body": "« Copier le lien » enregistre l’organisation sélectionnée, le terme recherché, le filtre de registre et la page dans l’URL. Vous pouvez rouvrir la même vue, l’envoyer à un collègue ou changer la langue du site tout en conservant la sélection. La recherche et le filtrage s’exécutent dans votre navigateur après le chargement de l’instantané partagé du registre. Le lien vers la source et la date de l’instantané sous l’outil identifient les données IEEE utilisées pour les résultats."
+      }
+    ]
+  }
+}

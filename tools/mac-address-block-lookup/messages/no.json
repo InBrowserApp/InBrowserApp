@@ -1,0 +1,73 @@
+{
+  "lookup": "Oppslag av MAC-adresser",
+  "blocks": "Oppslag av MAC-adresseblokker",
+  "vendors": "Organisasjonssøk i MAC-adresseregisteret",
+  "navigationLabel": "Relaterte verktøy",
+  "queryLabel": "MAC-adresse eller prefiks",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefiks, organisasjon eller adresse…",
+  "vendorPlaceholder": "Organisasjonsnavn eller adresse…",
+  "blockSearchLabel": "Søk i registrerte blokker",
+  "vendorSearchLabel": "Søk etter organisasjoner",
+  "registry": "Register",
+  "allRegistries": "Alle registre",
+  "prefix": "Prefiks",
+  "organization": "Organisasjon",
+  "address": "Registrert adresse",
+  "range": "Adresseområde",
+  "capacity": "Adresser i blokken",
+  "share": "Kopier lenke",
+  "copied": "Lenke kopiert",
+  "loading": "Laster inn IEEE-registeret…",
+  "loadError": "Registeret kunne ikke lastes inn. Prøv igjen.",
+  "retry": "Prøv igjen",
+  "noResults": "Ingen treff",
+  "noResultsHint": "Prøv et annet prefiks, organisasjonsnavn eller register.",
+  "emptyLookupHint": "Resultatene vises her.",
+  "invalidAddress": "Skriv inn en fullstendig MAC-adresse eller et gyldig 24-, 28- eller 36-biters prefiks.",
+  "noAssignment": "Ingen registrert organisasjon funnet",
+  "previous": "Forrige",
+  "next": "Neste",
+  "pageSummary": "{start}–{end} av {total}",
+  "assignmentCount": "Registrerte blokker: {count}",
+  "organizationCount": "Organisasjoner: {count}",
+  "source": "Det offentlige IEEE-registeret",
+  "updated": "Registerkopi: {date}",
+  "clearOrganization": "Alle organisasjoner",
+  "examples": "Eksempler",
+  "copyAddress": "Kopier adresse",
+  "addressCopied": "Adresse kopiert",
+  "types": {
+    "universal": "Universelt administrert",
+    "local": "Lokalt administrert",
+    "multicast": "Gruppeadresse",
+    "broadcast": "Kringkastingsadresse",
+    "zero": "Adresse med bare nuller",
+    "prefix": "IEEE-prefiks"
+  },
+  "typeHints": {
+    "local": "Brukes ofte til private Wi-Fi-adresser.",
+    "multicast": "En gruppeadresse som brukes til å nå flere enheter.",
+    "broadcast": "Brukes til å nå alle enheter i det lokale nettverket.",
+    "zero": "En uspesifisert adresse."
+  },
+  "cidHint": "Firmaidentifikator for lokalt tildelte adresser.",
+  "about": {
+    "title": "Utforsk IEEE-tildelinger av MAC-adresser",
+    "intro": "En IEEE-adresseblokk gir en organisasjon et fast prefiks og adresserommet som hører til. Søk i registeret for å undersøke et kjent prefiks, utforske mindre tildelinger innenfor et større prefiks eller finne blokker registrert på en organisasjon.",
+    "sections": [
+      {
+        "title": "Velg et register",
+        "body": "MA-L bruker et 24-biters prefiks og inneholder 16,777,216 adresser. MA-M bruker 28 biter og inneholder 1,048,576 adresser. MA-S og det eldre IAB-registeret bruker 36-biters prefikser med 4,096 adresser hver. CID-oppføringer identifiserer selskaper for lokal adressering. Registerfilteret begrenser listen til én tildelingstype."
+      },
+      {
+        "title": "Søk etter prefikser og undersøk adresseområder",
+        "body": "Skriv inn et prefiks uten skilletegn, med kolon, bindestreker eller punktum, eller i CIDR-notasjon. Søk med deler av et prefiks for å finne samsvarende tildelinger, eller med en fullstendig MAC-adresse for å finne prefiksene som inneholder den. Du kan også søke etter organisasjonsnavn og registrerte adresser. Åpne et prefiks for å se første og siste adresse og antall adresser sammen med de samsvarende registreringene."
+      },
+      {
+        "title": "Følg tildelinger gjennom registeret",
+        "body": "Velg et organisasjonsnavn for å åpne den fullstendige listen over organisasjonens tildelinger i verktøyet for organisasjonssøk. Resultatene er delt inn i sider, og «Kopier lenke» lagrer søket, registeret og siden i URL-en. Navn, adresser og tildelinger kommer fra fem offentlige IEEE-registre som er lagret i en felles registerkopi. Kildelenken og datoen for registerkopien gjør det enkelt å identifisere datasettet når du sammenligner resultater."
+      }
+    ]
+  }
+}

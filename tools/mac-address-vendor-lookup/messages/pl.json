@@ -1,0 +1,73 @@
+{
+  "lookup": "Wyszukiwanie adresów MAC",
+  "blocks": "Wyszukiwanie bloków adresów MAC",
+  "vendors": "Wyszukiwanie organizacji w rejestrze adresów MAC",
+  "navigationLabel": "Powiązane narzędzia",
+  "queryLabel": "Adres MAC lub prefiks",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefiks, organizacja lub adres…",
+  "vendorPlaceholder": "Nazwa lub adres organizacji…",
+  "blockSearchLabel": "Wyszukaj zarejestrowane bloki",
+  "vendorSearchLabel": "Wyszukaj organizacje",
+  "registry": "Rejestr",
+  "allRegistries": "Wszystkie rejestry",
+  "prefix": "Prefiks",
+  "organization": "Organizacja",
+  "address": "Adres w rejestrze",
+  "range": "Zakres adresów",
+  "capacity": "Liczba adresów w bloku",
+  "share": "Kopiuj link",
+  "copied": "Link skopiowany",
+  "loading": "Wczytywanie rejestru IEEE…",
+  "loadError": "Nie udało się wczytać rejestru. Spróbuj ponownie.",
+  "retry": "Spróbuj ponownie",
+  "noResults": "Brak pasujących wpisów",
+  "noResultsHint": "Wypróbuj inny prefiks, nazwę organizacji lub rejestr.",
+  "emptyLookupHint": "Tutaj pojawią się wyniki.",
+  "invalidAddress": "Wpisz pełny adres MAC lub prawidłowy 24-, 28- lub 36-bitowy prefiks.",
+  "noAssignment": "Nie znaleziono zarejestrowanej organizacji",
+  "previous": "Poprzednia",
+  "next": "Następna",
+  "pageSummary": "{start}–{end} z {total}",
+  "assignmentCount": "Zarejestrowane bloki: {count}",
+  "organizationCount": "Organizacje: {count}",
+  "source": "Publiczny rejestr IEEE",
+  "updated": "Migawka: {date}",
+  "clearOrganization": "Wszystkie organizacje",
+  "examples": "Przykłady",
+  "copyAddress": "Kopiuj adres",
+  "addressCopied": "Adres skopiowany",
+  "types": {
+    "universal": "Administrowany globalnie",
+    "local": "Administrowany lokalnie",
+    "multicast": "Grupowy",
+    "broadcast": "Rozgłoszeniowy",
+    "zero": "Adres złożony z samych zer",
+    "prefix": "Prefiks IEEE"
+  },
+  "typeHints": {
+    "local": "Często używany jako prywatny adres Wi-Fi.",
+    "multicast": "Adres grupowy do wysyłania danych do wielu urządzeń.",
+    "broadcast": "Dane trafiają do wszystkich urządzeń w sieci lokalnej.",
+    "zero": "Adres nieokreślony."
+  },
+  "cidHint": "Identyfikator firmy dla adresów przydzielanych lokalnie.",
+  "about": {
+    "title": "Znajdź bloki adresów MAC organizacji",
+    "intro": "Organizacje często mają kilka przydziałów IEEE uzyskanych w różnym czasie lub związanych z różnymi produktami i obszarami działalności. Wyszukaj nazwę organizacji lub adres z rejestru, aby zebrać te wpisy, a następnie otwórz organizację i przejrzyj jej przydziały w różnych rejestrach.",
+    "sections": [
+      {
+        "title": "Wyszukuj nazwy i adresy z rejestru",
+        "body": "Wyszukiwanie dopasowuje dowolny fragment nazwy lub adresu organizacji bez rozróżniania wielkości liter. Nazwa firmy, miasto lub ulica mogą pomóc znaleźć wpis. Każdy wynik zawiera pasujący adres z rejestru i liczbę bloków. Wybierz organizację, aby ograniczyć wyniki do dokładnie tej nazwy i zobaczyć wszystkie jej przydziały."
+      },
+      {
+        "title": "Odczytaj przydziały organizacji",
+        "body": "Widok organizacji grupuje jej bloki w zwięzłą listę prefiksów i typów rejestrów. Wspólny adres pojawia się raz nad listą; różniące się adresy z rejestru pozostają przy swoich blokach. Filtruj według MA-L, MA-M, MA-S, IAB lub CID i otwórz prefiks, aby sprawdzić jego zakres i liczbę adresów w narzędziu do wyszukiwania bloków. Nazwy organizacji odpowiadają wykazom IEEE, w tym historycznym nazwom firm."
+      },
+      {
+        "title": "Udostępnij link do organizacji lub wyszukiwania",
+        "body": "Przycisk „Kopiuj link” zapisuje wybraną organizację, zapytanie, filtr rejestru i stronę w URL. Możesz ponownie otworzyć ten sam widok, wysłać link współpracownikowi lub zmienić język witryny z zachowaniem wyboru. Wyszukiwanie i filtrowanie działają w przeglądarce po wczytaniu wspólnej migawki rejestru. Link do źródła i data migawki pod narzędziem wskazują dane IEEE wykorzystane w wynikach."
+      }
+    ]
+  }
+}

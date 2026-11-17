@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC Address Lookup",
+  "blocks": "MAC Address Block Lookup",
+  "vendors": "MAC Address Vendor Lookup",
+  "navigationLabel": "Related tools",
+  "queryLabel": "MAC address or prefix",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefix, organization, or address…",
+  "vendorPlaceholder": "Organization name or address…",
+  "blockSearchLabel": "Search registered blocks",
+  "vendorSearchLabel": "Search organizations",
+  "registry": "Registry",
+  "allRegistries": "All registries",
+  "prefix": "Prefix",
+  "organization": "Organization",
+  "address": "Registered address",
+  "range": "Address range",
+  "capacity": "Addresses in block",
+  "share": "Copy link",
+  "copied": "Link copied",
+  "loading": "Loading IEEE registry…",
+  "loadError": "The registry could not be loaded. Try again.",
+  "retry": "Try again",
+  "noResults": "No matching records",
+  "noResultsHint": "Try a different prefix, organization name, or registry.",
+  "emptyLookupHint": "Results appear here.",
+  "invalidAddress": "Enter a complete MAC address or a valid 24-, 28-, or 36-bit prefix.",
+  "noAssignment": "No registered organization found",
+  "previous": "Previous",
+  "next": "Next",
+  "pageSummary": "{start}–{end} of {total}",
+  "assignmentCount": "Registered blocks: {count}",
+  "organizationCount": "Organizations: {count}",
+  "source": "IEEE public registry",
+  "updated": "Snapshot: {date}",
+  "clearOrganization": "All organizations",
+  "examples": "Examples",
+  "copyAddress": "Copy address",
+  "addressCopied": "Address copied",
+  "types": {
+    "universal": "Universally administered",
+    "local": "Locally administered",
+    "multicast": "Multicast",
+    "broadcast": "Broadcast",
+    "zero": "All-zero address",
+    "prefix": "IEEE prefix"
+  },
+  "typeHints": {
+    "local": "Often used for private Wi-Fi addresses.",
+    "multicast": "A group address used to reach multiple devices.",
+    "broadcast": "Reaches every device on the local network.",
+    "zero": "An unspecified address."
+  },
+  "cidHint": "Company identifier for locally assigned addresses.",
+  "about": {
+    "title": "Understand a MAC address",
+    "intro": "A MAC address identifies a network interface on an Ethernet or Wi-Fi network. Use this lookup to find IEEE registration details for an address from a router’s client list, an ARP table, or a device label.",
+    "sections": [
+      {
+        "title": "Enter an address or prefix",
+        "body": "Paste a full 48-bit MAC address with colons, hyphens, dots, or no separators: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6, and 001B638445E6 all describe the same address. You can also enter an IEEE prefix such as 001B63 or 8C1F64001, including /24, /28, or /36 notation."
+      },
+      {
+        "title": "Read the registered block",
+        "body": "The result shows the registered organization, its address, and the matching prefix. The lookup checks the longest prefix first: a 36-bit assignment takes priority over a 28-bit or 24-bit parent. The block’s first address, last address, and capacity show the allocation’s size. If a legacy prefix has several registrations, all matching organizations appear together."
+      },
+      {
+        "title": "Explore and share the result",
+        "body": "Copy the normalized address, open its prefix to inspect the block, or follow the organization name to browse its other assignments. Copy link preserves your query in the URL for sharing or returning later. Local, multicast, broadcast, and all-zero addresses have their own address-type results. The data comes from a bundled IEEE snapshot; the source link and snapshot date appear below the tool."
+      }
+    ]
+  }
+}

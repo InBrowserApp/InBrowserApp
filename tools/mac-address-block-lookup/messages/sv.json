@@ -1,0 +1,73 @@
+{
+  "lookup": "Sökning efter MAC-adresser",
+  "blocks": "Sökning efter MAC-adressblock",
+  "vendors": "Sökning efter MAC-tillverkare",
+  "navigationLabel": "Relaterade verktyg",
+  "queryLabel": "MAC-adress eller prefix",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefix, organisation eller postadress…",
+  "vendorPlaceholder": "Organisationens namn eller postadress…",
+  "blockSearchLabel": "Sök registrerade block",
+  "vendorSearchLabel": "Sök organisationer",
+  "registry": "Register",
+  "allRegistries": "Alla register",
+  "prefix": "Prefix",
+  "organization": "Organisation",
+  "address": "Registrerad adress",
+  "range": "Adressintervall",
+  "capacity": "Adresser i blocket",
+  "share": "Kopiera länk",
+  "copied": "Länken kopierad",
+  "loading": "Läser in IEEE-registret…",
+  "loadError": "Registret kunde inte läsas in. Försök igen.",
+  "retry": "Försök igen",
+  "noResults": "Inga matchande poster",
+  "noResultsHint": "Prova ett annat prefix, organisationsnamn eller register.",
+  "emptyLookupHint": "Resultaten visas här.",
+  "invalidAddress": "Ange en fullständig MAC-adress eller ett giltigt prefix på 24, 28 eller 36 bitar.",
+  "noAssignment": "Ingen registrerad organisation hittades",
+  "previous": "Föregående",
+  "next": "Nästa",
+  "pageSummary": "{start}–{end} av {total}",
+  "assignmentCount": "Registrerade block: {count}",
+  "organizationCount": "Organisationer: {count}",
+  "source": "IEEE:s offentliga register",
+  "updated": "Ögonblicksbild: {date}",
+  "clearOrganization": "Alla organisationer",
+  "examples": "Exempel",
+  "copyAddress": "Kopiera adress",
+  "addressCopied": "Adressen kopierad",
+  "types": {
+    "universal": "Universellt administrerad",
+    "local": "Lokalt administrerad",
+    "multicast": "Gruppsändning",
+    "broadcast": "Rundsändning",
+    "zero": "Adress med enbart nollor",
+    "prefix": "IEEE-prefix"
+  },
+  "typeHints": {
+    "local": "Används ofta för privata Wi-Fi-adresser.",
+    "multicast": "En gruppadress som används för att nå flera enheter.",
+    "broadcast": "Når alla enheter i det lokala nätverket.",
+    "zero": "En ospecificerad adress."
+  },
+  "cidHint": "Företagsidentifierare för lokalt tilldelade adresser.",
+  "about": {
+    "title": "Utforska IEEE:s tilldelningar av MAC-adresser",
+    "intro": "Ett IEEE-adressblock ger en organisation ett fast prefix och det återstående adressutrymmet inom prefixet. Sök i registret för att granska ett känt prefix, utforska mindre tilldelningar inom ett större prefix eller hitta block registrerade på en organisation.",
+    "sections": [
+      {
+        "title": "Välj ett register",
+        "body": "MA-L använder ett prefix på 24 bitar och innehåller 16,777,216 adresser. MA-M använder 28 bitar och innehåller 1,048,576 adresser. MA-S och det äldre IAB-registret använder prefix på 36 bitar med 4,096 adresser vardera. CID-poster identifierar företag för lokal adressering. Registerfiltret begränsar listan till en tilldelningstyp."
+      },
+      {
+        "title": "Sök efter prefix och granska intervall",
+        "body": "Ange ett prefix utan avgränsare, med kolon, bindestreck eller punkter, eller i CIDR-notation. Ett partiellt prefix hittar matchande tilldelningar; en fullständig MAC-adress hittar de prefix som innehåller den. Du kan också söka efter organisationsnamn och registrerade adresser. Öppna ett prefix för att se dess första adress, sista adress och kapacitet tillsammans med de matchande registreringarna."
+      },
+      {
+        "title": "Följ tilldelningar i registret",
+        "body": "Välj ett organisationsnamn för att öppna dess fullständiga lista över tilldelningar i verktyget för organisationssökning. Resultaten är uppdelade på sidor, och Kopiera länk sparar sökningen, registret och sidan i webbadressen. Namn, adresser och tilldelningar kommer från fem offentliga IEEE-listor som lagras i en gemensam ögonblicksbild. Källänken och datumet för ögonblicksbilden gör det enkelt att identifiera datamängden när du jämför resultat."
+      }
+    ]
+  }
+}

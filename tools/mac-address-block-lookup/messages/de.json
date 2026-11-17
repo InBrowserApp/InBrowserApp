@@ -1,0 +1,73 @@
+{
+  "lookup": "MAC-Adresssuche",
+  "blocks": "MAC-Adressblock-Suche",
+  "vendors": "MAC-Herstellersuche",
+  "navigationLabel": "Verwandte Tools",
+  "queryLabel": "MAC-Adresse oder Präfix",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Präfix, Organisation oder Anschrift…",
+  "vendorPlaceholder": "Name oder Anschrift der Organisation…",
+  "blockSearchLabel": "Registrierte Blöcke suchen",
+  "vendorSearchLabel": "Organisationen suchen",
+  "registry": "Register",
+  "allRegistries": "Alle Register",
+  "prefix": "Präfix",
+  "organization": "Organisation",
+  "address": "Registrierte Anschrift",
+  "range": "Adressbereich",
+  "capacity": "Adressen im Block",
+  "share": "Link kopieren",
+  "copied": "Link kopiert",
+  "loading": "IEEE-Register wird geladen…",
+  "loadError": "Das Register konnte nicht geladen werden. Versuchen Sie es erneut.",
+  "retry": "Erneut versuchen",
+  "noResults": "Keine passenden Einträge",
+  "noResultsHint": "Versuchen Sie ein anderes Präfix, einen anderen Organisationsnamen oder ein anderes Register.",
+  "emptyLookupHint": "Hier erscheinen die Ergebnisse.",
+  "invalidAddress": "Geben Sie eine vollständige MAC-Adresse oder ein gültiges Präfix mit 24, 28 oder 36 Bit ein.",
+  "noAssignment": "Keine registrierte Organisation gefunden",
+  "previous": "Zurück",
+  "next": "Weiter",
+  "pageSummary": "{start}–{end} von {total}",
+  "assignmentCount": "Registrierte Blöcke: {count}",
+  "organizationCount": "Organisationen: {count}",
+  "source": "Öffentliches IEEE-Register",
+  "updated": "Datenstand: {date}",
+  "clearOrganization": "Alle Organisationen",
+  "examples": "Beispiele",
+  "copyAddress": "Adresse kopieren",
+  "addressCopied": "Adresse kopiert",
+  "types": {
+    "universal": "Universell verwaltet",
+    "local": "Lokal verwaltet",
+    "multicast": "Multicast",
+    "broadcast": "Broadcast",
+    "zero": "Adresse aus Nullen",
+    "prefix": "IEEE-Präfix"
+  },
+  "typeHints": {
+    "local": "Wird oft für private WLAN-Adressen verwendet.",
+    "multicast": "Eine Gruppenadresse, mit der mehrere Geräte erreicht werden.",
+    "broadcast": "Erreicht alle Geräte im lokalen Netzwerk.",
+    "zero": "Eine nicht spezifizierte Adresse."
+  },
+  "cidHint": "Unternehmenskennung für lokal zugewiesene Adressen.",
+  "about": {
+    "title": "IEEE-MAC-Adresszuteilungen erkunden",
+    "intro": "Ein IEEE-Adressblock weist einer Organisation ein festes Präfix und den darunterliegenden Adressraum zu. Durchsuchen Sie das Register, um ein bekanntes Präfix zu prüfen, kleinere Zuteilungen innerhalb eines größeren Präfixes zu erkunden oder die registrierten Blöcke einer Organisation zu finden.",
+    "sections": [
+      {
+        "title": "Register auswählen",
+        "body": "MA-L verwendet ein 24-Bit-Präfix und umfasst 16,777,216 Adressen. MA-M verwendet 28 Bit und umfasst 1,048,576 Adressen. MA-S und das ältere IAB-Register verwenden 36-Bit-Präfixe mit jeweils 4,096 Adressen. CID-Einträge kennzeichnen Unternehmen für die lokale Adressierung. Der Registerfilter beschränkt die Liste auf einen Zuteilungstyp."
+      },
+      {
+        "title": "Präfixe suchen und Bereiche prüfen",
+        "body": "Geben Sie ein Präfix ohne Trennzeichen, mit Doppelpunkten, Bindestrichen, Punkten oder in CIDR-Schreibweise ein. Ein Teilpräfix findet passende Zuteilungen; eine vollständige MAC-Adresse findet die Präfixe, die sie enthalten. Sie können auch nach Organisationsnamen und registrierten Anschriften suchen. Öffnen Sie ein Präfix, um neben den passenden Registrierungen die erste und letzte Adresse sowie die Kapazität anzuzeigen."
+      },
+      {
+        "title": "Zuteilungen im Register verfolgen",
+        "body": "Wählen Sie einen Organisationsnamen, um die vollständige Liste seiner Zuteilungen in der MAC-Herstellersuche zu öffnen. Die Ergebnisse sind auf Seiten verteilt. „Link kopieren“ speichert Suche, Register und Seite in der URL. Namen, Anschriften und Zuteilungen stammen aus fünf öffentlichen IEEE-Listen in einem gemeinsamen Datenbestand. Mit dem Quellenlink und dem Datenstand lässt sich beim Vergleichen von Ergebnissen leicht erkennen, welcher Datenbestand verwendet wird."
+      }
+    ]
+  }
+}

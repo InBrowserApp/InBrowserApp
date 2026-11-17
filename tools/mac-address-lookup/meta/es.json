@@ -1,0 +1,4 @@
+{
+  "name": "Consulta de direcciones MAC",
+  "description": "Encuentra la organización y el bloque registrado de una dirección MAC o un prefijo IEEE."
+}

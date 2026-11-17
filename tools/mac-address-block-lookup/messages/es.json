@@ -1,0 +1,73 @@
+{
+  "lookup": "Consulta de direcciones MAC",
+  "blocks": "Consulta de bloques de direcciones MAC",
+  "vendors": "Consulta de direcciones MAC por proveedor",
+  "navigationLabel": "Herramientas relacionadas",
+  "queryLabel": "Dirección MAC o prefijo",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefijo, organización o dirección postal…",
+  "vendorPlaceholder": "Nombre de organización o dirección postal…",
+  "blockSearchLabel": "Buscar bloques registrados",
+  "vendorSearchLabel": "Buscar organizaciones",
+  "registry": "Registro",
+  "allRegistries": "Todos los registros",
+  "prefix": "Prefijo",
+  "organization": "Organización",
+  "address": "Dirección registrada",
+  "range": "Rango de direcciones",
+  "capacity": "Direcciones en el bloque",
+  "share": "Copiar enlace",
+  "copied": "Enlace copiado",
+  "loading": "Cargando el registro IEEE…",
+  "loadError": "No se pudo cargar el registro. Vuelve a intentarlo.",
+  "retry": "Reintentar",
+  "noResults": "No hay registros coincidentes",
+  "noResultsHint": "Prueba con otro prefijo, nombre de organización o registro.",
+  "emptyLookupHint": "Los resultados aparecen aquí.",
+  "invalidAddress": "Introduce una dirección MAC completa o un prefijo válido de 24, 28 o 36 bits.",
+  "noAssignment": "No se encontró ninguna organización registrada",
+  "previous": "Anterior",
+  "next": "Siguiente",
+  "pageSummary": "{start}–{end} de {total}",
+  "assignmentCount": "Bloques registrados: {count}",
+  "organizationCount": "Organizaciones: {count}",
+  "source": "Registro público de IEEE",
+  "updated": "Copia del registro: {date}",
+  "clearOrganization": "Todas las organizaciones",
+  "examples": "Ejemplos",
+  "copyAddress": "Copiar dirección",
+  "addressCopied": "Dirección copiada",
+  "types": {
+    "universal": "Administrada universalmente",
+    "local": "Administrada localmente",
+    "multicast": "Multidifusión",
+    "broadcast": "Difusión",
+    "zero": "Dirección formada solo por ceros",
+    "prefix": "Prefijo IEEE"
+  },
+  "typeHints": {
+    "local": "Se usa habitualmente para direcciones Wi-Fi privadas.",
+    "multicast": "Dirección de grupo utilizada para enviar datos a varios dispositivos.",
+    "broadcast": "Llega a todos los dispositivos de la red local.",
+    "zero": "Una dirección sin especificar."
+  },
+  "cidHint": "Identificador de empresa para direcciones asignadas localmente.",
+  "about": {
+    "title": "Explora las asignaciones de IEEE para direcciones MAC",
+    "intro": "Un bloque de direcciones IEEE asigna a una organización un prefijo fijo y el espacio de direcciones restante bajo ese prefijo. Busca en el registro para examinar un prefijo conocido, explorar asignaciones más pequeñas dentro de un prefijo mayor o encontrar bloques registrados a nombre de una organización.",
+    "sections": [
+      {
+        "title": "Elige un registro",
+        "body": "MA-L utiliza un prefijo de 24 bits y contiene 16,777,216 direcciones. MA-M utiliza 28 bits y contiene 1,048,576 direcciones. MA-S y el antiguo registro IAB utilizan prefijos de 36 bits con 4,096 direcciones cada uno. Los registros CID identifican empresas para el direccionamiento local. El filtro de registro limita la lista a un tipo de asignación."
+      },
+      {
+        "title": "Busca prefijos y examina los rangos",
+        "body": "Introduce un prefijo sin separadores, con dos puntos, guiones o puntos, o en notación CIDR. Un prefijo parcial permite encontrar asignaciones coincidentes; una dirección MAC completa permite encontrar los prefijos que la contienen. También puedes buscar por nombres de organizaciones y direcciones postales registradas. Abre un prefijo para ver su primera dirección, la última y su capacidad junto a los registros coincidentes."
+      },
+      {
+        "title": "Sigue las asignaciones en el registro",
+        "body": "Selecciona el nombre de una organización para abrir su lista completa de asignaciones en la herramienta de consulta por organización. Los resultados se dividen en páginas y «Copiar enlace» conserva la búsqueda, el registro y la página en la URL. Los nombres, las direcciones postales y las asignaciones proceden de cinco listados públicos de IEEE guardados en una copia compartida del registro. El enlace a la fuente y la fecha de la copia permiten identificar fácilmente el conjunto de datos al comparar resultados."
+      }
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo } from "react"
+import { useMemo, useState } from "react"
 
 import { Button } from "@workspace/ui/components/ui/button"
 import {
@@ -62,9 +62,16 @@ function useSortedOptions(options: readonly LanguageOption[]) {
 
 function LanguageSwitcher({ label, options }: LanguageSwitcherProps) {
   const sortedOptions = useSortedOptions(options)
+  const [locationSuffix, setLocationSuffix] = useState("")
 
   return (
-    <DropdownMenu>
+    <DropdownMenu
+      onOpenChange={(open) => {
+        if (open) {
+          setLocationSuffix(window.location.search + window.location.hash)
+        }
+      }}
+    >
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon-sm">
           <Languages className="size-4" />
@@ -75,7 +82,7 @@ function LanguageSwitcher({ label, options }: LanguageSwitcherProps) {
         {sortedOptions.map((option) => (
           <DropdownMenuItem key={option.code} asChild className="relative pr-8">
             <a
-              href={option.href}
+              href={option.href + locationSuffix}
               hrefLang={option.code}
               lang={option.code}
               onClick={() => snoozeLanguageSuggestion()}

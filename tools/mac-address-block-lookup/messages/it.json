@@ -1,0 +1,73 @@
+{
+  "lookup": "Ricerca di indirizzi MAC",
+  "blocks": "Ricerca di blocchi di indirizzi MAC",
+  "vendors": "Ricerca del fornitore tramite indirizzo MAC",
+  "navigationLabel": "Strumenti correlati",
+  "queryLabel": "Indirizzo MAC o prefisso",
+  "lookupPlaceholder": "00:1B:63:84:45:E6…",
+  "blockPlaceholder": "Prefisso, organizzazione o indirizzo…",
+  "vendorPlaceholder": "Nome o indirizzo dell’organizzazione…",
+  "blockSearchLabel": "Cerca nei blocchi registrati",
+  "vendorSearchLabel": "Cerca organizzazioni",
+  "registry": "Registro",
+  "allRegistries": "Tutti i registri",
+  "prefix": "Prefisso",
+  "organization": "Organizzazione",
+  "address": "Indirizzo registrato",
+  "range": "Intervallo di indirizzi",
+  "capacity": "Indirizzi nel blocco",
+  "share": "Copia link",
+  "copied": "Link copiato",
+  "loading": "Caricamento del registro IEEE…",
+  "loadError": "Impossibile caricare il registro. Riprova.",
+  "retry": "Riprova",
+  "noResults": "Nessun record corrispondente",
+  "noResultsHint": "Prova un altro prefisso, nome di organizzazione o registro.",
+  "emptyLookupHint": "I risultati appariranno qui.",
+  "invalidAddress": "Inserisci un indirizzo MAC completo o un prefisso valido di 24, 28 o 36 bit.",
+  "noAssignment": "Nessuna organizzazione registrata trovata",
+  "previous": "Precedente",
+  "next": "Successiva",
+  "pageSummary": "{start}–{end} di {total}",
+  "assignmentCount": "Blocchi registrati: {count}",
+  "organizationCount": "Organizzazioni: {count}",
+  "source": "Registro pubblico IEEE",
+  "updated": "Copia del registro: {date}",
+  "clearOrganization": "Tutte le organizzazioni",
+  "examples": "Esempi",
+  "copyAddress": "Copia indirizzo",
+  "addressCopied": "Indirizzo copiato",
+  "types": {
+    "universal": "Amministrato universalmente",
+    "local": "Amministrato localmente",
+    "multicast": "Multicast",
+    "broadcast": "Broadcast",
+    "zero": "Indirizzo composto da soli zeri",
+    "prefix": "Prefisso IEEE"
+  },
+  "typeHints": {
+    "local": "Spesso usato per gli indirizzi Wi-Fi privati.",
+    "multicast": "Un indirizzo di gruppo usato per raggiungere più dispositivi.",
+    "broadcast": "Raggiunge tutti i dispositivi della rete locale.",
+    "zero": "Un indirizzo non specificato."
+  },
+  "cidHint": "Identificativo aziendale per indirizzi assegnati localmente.",
+  "about": {
+    "title": "Esplora le assegnazioni di indirizzi MAC IEEE",
+    "intro": "Un blocco di indirizzi IEEE assegna a un’organizzazione un prefisso fisso e lo spazio di indirizzi rimanente al suo interno. Cerca nel registro per esaminare un prefisso noto, esplorare assegnazioni più piccole all’interno di un prefisso più ampio o trovare i blocchi registrati a un’organizzazione.",
+    "sections": [
+      {
+        "title": "Scegli un registro",
+        "body": "MA-L usa un prefisso di 24 bit e contiene 16,777,216 indirizzi. MA-M usa 28 bit e contiene 1,048,576 indirizzi. MA-S e il precedente registro IAB usano prefissi di 36 bit con 4,096 indirizzi ciascuno. I record CID identificano le aziende per l’indirizzamento locale. Il filtro del registro limita l’elenco a un solo tipo di assegnazione."
+      },
+      {
+        "title": "Cerca prefissi ed esamina gli intervalli",
+        "body": "Inserisci un prefisso senza separatori, con due punti, trattini o punti, oppure nella notazione CIDR. Un prefisso parziale trova le assegnazioni corrispondenti; un indirizzo MAC completo trova i prefissi che lo contengono. Puoi anche cercare i nomi delle organizzazioni e gli indirizzi registrati. Apri un prefisso per vedere il suo primo e ultimo indirizzo e la capacità, insieme alle registrazioni corrispondenti."
+      },
+      {
+        "title": "Segui le assegnazioni nel registro",
+        "body": "Seleziona il nome di un’organizzazione per aprire l’elenco completo delle sue assegnazioni nello strumento di ricerca per organizzazione. I risultati sono suddivisi in pagine e Copia link conserva la ricerca, il registro e la pagina nell’URL. Nomi, indirizzi e assegnazioni provengono da cinque elenchi pubblici IEEE conservati in una copia condivisa dei dati. Il link alla fonte e la data della copia permettono di identificare facilmente i dati quando si confrontano i risultati."
+      }
+    ]
+  }
+}
