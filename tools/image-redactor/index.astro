@@ -4,6 +4,7 @@ import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import ImageRedactor from "./client"
 import type { Messages } from "./types"
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 
 interface Props { lang: string }
 const { lang } = Astro.props
@@ -13,13 +14,12 @@ const meta = resolveLocale<ToolMeta>(
 const messages = resolveLocale<Messages>(
   import.meta.glob("./messages/*.json", { eager: true, import: "default" }), lang
 )!
+const Intro = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.md", { eager: true, import: "default" }), lang
+)
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <ImageRedactor client:load messages={messages} />
-  <ToolArticle>
-    <h2>{messages.howTitle}</h2>
-    <p>{messages.howDescription}</p>
-    <p>{messages.exportNote}</p>
-  </ToolArticle>
+  {Intro ? <ToolArticle><Intro /></ToolArticle> : null}
 </ToolPageShell>

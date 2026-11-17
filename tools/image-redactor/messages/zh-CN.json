@@ -54,8 +54,5 @@
   "canvasLabel": "图片打码画布",
   "resizeHandle": "调整所选区域大小",
   "rotateHandle": "旋转所选区域",
-  "shortcuts": "V 选择 · H 平移 · R 矩形 · E 椭圆 · B 画笔 · Enter 添加 · [ / ] 选择区域 · Delete 删除 · Ctrl/⌘ Z 撤销 · Shift Ctrl/⌘ Z 重做 · 方向键移动（Shift ×10）。",
-  "howTitle": "如何给图片打码",
-  "howDescription": "打开图片，选择效果，然后覆盖隐私信息。使用“选择与移动”调整已有区域的大小或角度，完成后下载图片。",
-  "exportNote": "PNG 可保留清晰边缘和透明区域。JPEG 会将透明区域填充为白色。导出文件不包含原图元数据。"
+  "shortcuts": "V 选择 · H 平移 · R 矩形 · E 椭圆 · B 画笔 · Enter 添加 · [ / ] 选择区域 · Delete 删除 · Ctrl/⌘ Z 撤销 · Shift Ctrl/⌘ Z 重做 · 方向键移动（Shift ×10）。"
 }

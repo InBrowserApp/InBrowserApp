@@ -54,8 +54,5 @@
   "canvasLabel": "이미지 가리기 캔버스",
   "resizeHandle": "선택한 영역 크기 조절",
   "rotateHandle": "선택한 영역 회전",
-  "shortcuts": "V 선택 · H 화면 이동 · R 사각형 · E 타원 · B 브러시 · Enter 추가 · [ / ] 영역 선택 · Delete 삭제 · Ctrl/⌘ Z 실행 취소 · Shift Ctrl/⌘ Z 다시 실행 · 방향키 이동 (Shift ×10).",
-  "howTitle": "이미지에서 정보를 가리는 방법",
-  "howDescription": "이미지를 열고 효과를 선택한 다음 개인 정보를 가리도록 그리세요. 선택 및 이동으로 기존 영역의 크기를 조절하거나 회전한 후 결과를 다운로드하세요.",
-  "exportNote": "PNG는 선명한 가장자리와 투명도를 유지합니다. JPEG는 투명한 영역을 흰색으로 채웁니다. 원본 메타데이터는 포함되지 않습니다."
+  "shortcuts": "V 선택 · H 화면 이동 · R 사각형 · E 타원 · B 브러시 · Enter 추가 · [ / ] 영역 선택 · Delete 삭제 · Ctrl/⌘ Z 실행 취소 · Shift Ctrl/⌘ Z 다시 실행 · 방향키 이동 (Shift ×10)."
 }

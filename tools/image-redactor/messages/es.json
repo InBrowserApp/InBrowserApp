@@ -54,8 +54,5 @@
   "canvasLabel": "Lienzo para ocultar información de la imagen",
   "resizeHandle": "Cambiar tamaño de la zona seleccionada",
   "rotateHandle": "Girar zona seleccionada",
-  "shortcuts": "V Seleccionar · H Desplazar · R Rectángulo · E Elipse · B Pincel · Enter Añadir · [ / ] Seleccionar zona · Delete Eliminar · Ctrl/⌘ Z Deshacer · Shift Ctrl/⌘ Z Rehacer · Flechas Mover (Shift ×10).",
-  "howTitle": "Cómo ocultar información en una imagen",
-  "howDescription": "Abre una imagen, elige un efecto y dibuja sobre la información privada. Usa Seleccionar y mover para cambiar el tamaño o girar zonas existentes y descarga el resultado.",
-  "exportNote": "PNG conserva los bordes nítidos y la transparencia. JPEG rellena las zonas transparentes de blanco. No se incluyen los metadatos originales."
+  "shortcuts": "V Seleccionar · H Desplazar · R Rectángulo · E Elipse · B Pincel · Enter Añadir · [ / ] Seleccionar zona · Delete Eliminar · Ctrl/⌘ Z Deshacer · Shift Ctrl/⌘ Z Rehacer · Flechas Mover (Shift ×10)."
 }

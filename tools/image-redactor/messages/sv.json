@@ -54,8 +54,5 @@
   "canvasLabel": "Arbetsyta för bildmaskering",
   "resizeHandle": "Ändra storlek på markerat område",
   "rotateHandle": "Rotera markerat område",
-  "shortcuts": "V markera · H panorera · R rektangel · E ellips · B pensel · Enter lägg till · [ / ] markera område · Delete ta bort · Ctrl/⌘ Z ångra · Shift Ctrl/⌘ Z gör om · Piltangenter flytta (Shift ×10).",
-  "howTitle": "Så maskerar du en bild",
-  "howDescription": "Öppna en bild, välj en effekt och rita över privata detaljer. Använd Markera och flytta för att ändra storlek på eller rotera befintliga områden och ladda sedan ner resultatet.",
-  "exportNote": "PNG bevarar skarpa kanter och genomskinlighet. JPEG fyller genomskinliga områden med vitt. Källans metadata tas inte med."
+  "shortcuts": "V markera · H panorera · R rektangel · E ellips · B pensel · Enter lägg till · [ / ] markera område · Delete ta bort · Ctrl/⌘ Z ångra · Shift Ctrl/⌘ Z gör om · Piltangenter flytta (Shift ×10)."
 }

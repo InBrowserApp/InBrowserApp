@@ -54,8 +54,5 @@
   "canvasLabel": "Arbeitsfläche zum Schwärzen von Bildern",
   "resizeHandle": "Größe des ausgewählten Bereichs ändern",
   "rotateHandle": "Ausgewählten Bereich drehen",
-  "shortcuts": "V Auswählen · H Ansicht verschieben · R Rechteck · E Ellipse · B Pinsel · Enter Hinzufügen · [ / ] Bereich auswählen · Delete Entfernen · Ctrl/⌘ Z Rückgängig · Shift Ctrl/⌘ Z Wiederholen · Pfeiltasten Verschieben (Shift ×10).",
-  "howTitle": "So schwärzt du ein Bild",
-  "howDescription": "Öffne ein Bild, wähle einen Effekt und überdecke private Details. Mit „Auswählen & verschieben“ kannst du vorhandene Bereiche vergrößern, verkleinern oder drehen. Lade anschließend das Ergebnis herunter.",
-  "exportNote": "PNG erhält scharfe Kanten und Transparenz. JPEG füllt transparente Bereiche mit Weiß. Die ursprünglichen Metadaten werden nicht übernommen."
+  "shortcuts": "V Auswählen · H Ansicht verschieben · R Rechteck · E Ellipse · B Pinsel · Enter Hinzufügen · [ / ] Bereich auswählen · Delete Entfernen · Ctrl/⌘ Z Rückgängig · Shift Ctrl/⌘ Z Wiederholen · Pfeiltasten Verschieben (Shift ×10)."
 }

@@ -54,8 +54,5 @@
   "canvasLabel": "Kanvas sensor gambar",
   "resizeHandle": "Ubah ukuran area terpilih",
   "rotateHandle": "Putar area terpilih",
-  "shortcuts": "V Pilih · H Geser · R Persegi panjang · E Elips · B Kuas · Enter Tambah · [ / ] Pilih area · Delete Hapus · Ctrl/⌘ Z Urungkan · Shift Ctrl/⌘ Z Ulangi · Panah Pindahkan (Shift ×10).",
-  "howTitle": "Cara menyensor gambar",
-  "howDescription": "Buka gambar, pilih efek, lalu gambar di atas informasi pribadi. Gunakan Pilih & pindahkan untuk mengubah ukuran atau memutar area yang ada, lalu unduh hasilnya.",
-  "exportNote": "PNG mempertahankan tepi yang tajam dan transparansi. JPEG mengisi area transparan dengan warna putih. Metadata sumber tidak disertakan."
+  "shortcuts": "V Pilih · H Geser · R Persegi panjang · E Elips · B Kuas · Enter Tambah · [ / ] Pilih area · Delete Hapus · Ctrl/⌘ Z Urungkan · Shift Ctrl/⌘ Z Ulangi · Panah Pindahkan (Shift ×10)."
 }

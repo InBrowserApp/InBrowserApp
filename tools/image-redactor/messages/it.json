@@ -54,8 +54,5 @@
   "canvasLabel": "Area di oscuramento dell’immagine",
   "resizeHandle": "Ridimensiona area selezionata",
   "rotateHandle": "Ruota area selezionata",
-  "shortcuts": "V Seleziona · H Sposta vista · R Rettangolo · E Ellisse · B Pennello · Enter Aggiungi · [ / ] Seleziona area · Delete Elimina · Ctrl/⌘ Z Annulla · Shift Ctrl/⌘ Z Ripeti · Frecce Sposta (Shift ×10).",
-  "howTitle": "Come oscurare un’immagine",
-  "howDescription": "Apri un’immagine, scegli un effetto e disegna sulle informazioni private. Usa Seleziona e sposta per ridimensionare o ruotare le aree esistenti, poi scarica il risultato.",
-  "exportNote": "PNG conserva i bordi nitidi e la trasparenza. JPEG riempie di bianco le aree trasparenti. I metadati originali non sono inclusi."
+  "shortcuts": "V Seleziona · H Sposta vista · R Rettangolo · E Ellisse · B Pennello · Enter Aggiungi · [ / ] Seleziona area · Delete Elimina · Ctrl/⌘ Z Annulla · Shift Ctrl/⌘ Z Ripeti · Frecce Sposta (Shift ×10)."
 }

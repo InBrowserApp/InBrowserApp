@@ -54,8 +54,5 @@
   "canvasLabel": "Görselde bilgi gizleme tuvali",
   "resizeHandle": "Seçili alanı boyutlandır",
   "rotateHandle": "Seçili alanı döndür",
-  "shortcuts": "V Seç · H Kaydır · R Dikdörtgen · E Elips · B Fırça · Enter Ekle · [ / ] Alan seç · Delete Sil · Ctrl/⌘ Z Geri al · Shift Ctrl/⌘ Z Yinele · Ok tuşları Taşı (Shift ×10).",
-  "howTitle": "Görselde bilgiler nasıl gizlenir?",
-  "howDescription": "Bir görsel açın, efekt seçin ve özel bilgilerin üzerini çizin. Mevcut alanları boyutlandırmak veya döndürmek için Seç ve taşı aracını kullanın, ardından sonucu indirin.",
-  "exportNote": "PNG, keskin kenarları ve saydamlığı korur. JPEG, saydam alanları beyazla doldurur. Kaynak üst verileri dahil edilmez."
+  "shortcuts": "V Seç · H Kaydır · R Dikdörtgen · E Elips · B Fırça · Enter Ekle · [ / ] Alan seç · Delete Sil · Ctrl/⌘ Z Geri al · Shift Ctrl/⌘ Z Yinele · Ok tuşları Taşı (Shift ×10)."
 }

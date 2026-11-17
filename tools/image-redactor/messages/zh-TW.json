@@ -54,8 +54,5 @@
   "canvasLabel": "圖片隱私遮蔽畫布",
   "resizeHandle": "調整選取區域大小",
   "rotateHandle": "旋轉選取區域",
-  "shortcuts": "V 選取 · H 平移 · R 矩形 · E 橢圓 · B 畫筆 · Enter 新增 · [ / ] 選取區域 · Delete 刪除 · Ctrl/⌘ Z 復原 · Shift Ctrl/⌘ Z 重做 · 方向鍵移動（Shift ×10）。",
-  "howTitle": "如何遮蔽圖片中的隱私資訊",
-  "howDescription": "開啟圖片，選擇效果，再繪製區域遮住私人資訊。使用「選取與移動」調整現有區域的大小或旋轉角度，然後下載結果。",
-  "exportNote": "PNG 可保留清晰邊緣與透明度。JPEG 會以白色填滿透明區域。匯出內容不含來源中繼資料。"
+  "shortcuts": "V 選取 · H 平移 · R 矩形 · E 橢圓 · B 畫筆 · Enter 新增 · [ / ] 選取區域 · Delete 刪除 · Ctrl/⌘ Z 復原 · Shift Ctrl/⌘ Z 重做 · 方向鍵移動（Shift ×10）。"
 }

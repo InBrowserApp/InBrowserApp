@@ -54,8 +54,5 @@
   "canvasLabel": "Kanvas penutupan maklumat imej",
   "resizeHandle": "Ubah saiz kawasan dipilih",
   "rotateHandle": "Putar kawasan dipilih",
-  "shortcuts": "V Pilih · H Alih paparan · R Segi empat tepat · E Elips · B Berus · Enter Tambah · [ / ] Pilih kawasan · Delete Padam · Ctrl/⌘ Z Buat asal · Shift Ctrl/⌘ Z Buat semula · Anak panah Alih (Shift ×10).",
-  "howTitle": "Cara menutup maklumat pada imej",
-  "howDescription": "Buka imej, pilih kesan dan lukis di atas butiran peribadi. Gunakan Pilih & alih untuk mengubah saiz atau memutar kawasan sedia ada, kemudian muat turun hasilnya.",
-  "exportNote": "PNG mengekalkan tepi yang tajam dan ketelusan. JPEG mengisi kawasan telus dengan warna putih. Metadata sumber tidak disertakan."
+  "shortcuts": "V Pilih · H Alih paparan · R Segi empat tepat · E Elips · B Berus · Enter Tambah · [ / ] Pilih kawasan · Delete Padam · Ctrl/⌘ Z Buat asal · Shift Ctrl/⌘ Z Buat semula · Anak panah Alih (Shift ×10)."
 }

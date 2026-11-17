@@ -54,8 +54,5 @@
   "canvasLabel": "画像の情報を隠すキャンバス",
   "resizeHandle": "選択した領域のサイズを変更",
   "rotateHandle": "選択した領域を回転",
-  "shortcuts": "V 選択 · H パン · R 長方形 · E 楕円 · B ブラシ · Enter 追加 · [ / ] 領域を選択 · Delete 削除 · Ctrl/⌘ Z 元に戻す · Shift Ctrl/⌘ Z やり直す · 矢印キー 移動（Shift ×10）。",
-  "howTitle": "画像の情報を隠す方法",
-  "howDescription": "画像を開き、効果を選んで個人情報の上に描画します。「選択・移動」で既存の領域のサイズ変更や回転を行い、仕上がった画像をダウンロードしてください。",
-  "exportNote": "PNGは鮮明な輪郭と透明部分を保持します。JPEGでは透明部分が白くなります。元のメタデータは含まれません。"
+  "shortcuts": "V 選択 · H パン · R 長方形 · E 楕円 · B ブラシ · Enter 追加 · [ / ] 領域を選択 · Delete 削除 · Ctrl/⌘ Z 元に戻す · Shift Ctrl/⌘ Z やり直す · 矢印キー 移動（Shift ×10）。"
 }

@@ -54,8 +54,5 @@
   "canvasLabel": "Zone de masquage de l’image",
   "resizeHandle": "Redimensionner la zone sélectionnée",
   "rotateHandle": "Faire pivoter la zone sélectionnée",
-  "shortcuts": "V Sélectionner · H Déplacer la vue · R Rectangle · E Ellipse · B Pinceau · Enter Ajouter · [ / ] Sélectionner une zone · Delete Supprimer · Ctrl/⌘ Z Annuler · Shift Ctrl/⌘ Z Rétablir · Flèches Déplacer (Shift ×10).",
-  "howTitle": "Comment masquer des informations sur une image",
-  "howDescription": "Ouvrez une image, choisissez un effet et dessinez sur les informations privées. Utilisez Sélectionner et déplacer pour redimensionner ou faire pivoter les zones existantes, puis téléchargez le résultat.",
-  "exportNote": "PNG préserve la netteté des contours et la transparence. JPEG remplit les zones transparentes de blanc. Les métadonnées d’origine ne sont pas incluses."
+  "shortcuts": "V Sélectionner · H Déplacer la vue · R Rectangle · E Ellipse · B Pinceau · Enter Ajouter · [ / ] Sélectionner une zone · Delete Supprimer · Ctrl/⌘ Z Annuler · Shift Ctrl/⌘ Z Rétablir · Flèches Déplacer (Shift ×10)."
 }

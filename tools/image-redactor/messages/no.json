@@ -54,8 +54,5 @@
   "canvasLabel": "Lerret for bildesladding",
   "resizeHandle": "Endre størrelsen på valgt område",
   "rotateHandle": "Roter valgt område",
-  "shortcuts": "V Velg · H Panorer · R Rektangel · E Ellipse · B Pensel · Enter Legg til · [ / ] Velg område · Delete Fjern · Ctrl/⌘ Z Angre · Shift Ctrl/⌘ Z Gjør om · Piltaster Flytt (Shift ×10).",
-  "howTitle": "Slik sladder du et bilde",
-  "howDescription": "Åpne et bilde, velg en effekt og tegn over private detaljer. Bruk Velg og flytt for å endre størrelse på eller rotere eksisterende områder, og last deretter ned resultatet.",
-  "exportNote": "PNG bevarer skarpe kanter og gjennomsiktighet. JPEG fyller gjennomsiktige områder med hvitt. Metadata fra originalen tas ikke med."
+  "shortcuts": "V Velg · H Panorer · R Rektangel · E Ellipse · B Pensel · Enter Legg til · [ / ] Velg område · Delete Fjern · Ctrl/⌘ Z Angre · Shift Ctrl/⌘ Z Gjør om · Piltaster Flytt (Shift ×10)."
 }

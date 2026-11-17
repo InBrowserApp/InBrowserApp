@@ -54,8 +54,5 @@
   "canvasLabel": "Área de ocultação de informações na imagem",
   "resizeHandle": "Redimensionar região selecionada",
   "rotateHandle": "Girar região selecionada",
-  "shortcuts": "V Selecionar · H Deslocar · R Retângulo · E Elipse · B Pincel · Enter Adicionar · [ / ] Selecionar região · Delete Remover · Ctrl/⌘ Z Desfazer · Shift Ctrl/⌘ Z Refazer · Setas Mover (Shift ×10).",
-  "howTitle": "Como ocultar informações em uma imagem",
-  "howDescription": "Abra uma imagem, escolha um efeito e desenhe sobre as informações privadas. Use Selecionar e mover para redimensionar ou girar as regiões existentes e baixe o resultado.",
-  "exportNote": "PNG preserva bordas nítidas e transparência. JPEG preenche as áreas transparentes com branco. Os metadados de origem não são incluídos."
+  "shortcuts": "V Selecionar · H Deslocar · R Retângulo · E Elipse · B Pincel · Enter Adicionar · [ / ] Selecionar região · Delete Remover · Ctrl/⌘ Z Desfazer · Shift Ctrl/⌘ Z Refazer · Setas Mover (Shift ×10)."
 }

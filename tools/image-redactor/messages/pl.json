@@ -54,8 +54,5 @@
   "canvasLabel": "Obszar roboczy anonimizacji obrazu",
   "resizeHandle": "Zmień rozmiar zaznaczonego obszaru",
   "rotateHandle": "Obróć zaznaczony obszar",
-  "shortcuts": "V Zaznacz · H Przesuń widok · R Prostokąt · E Elipsa · B Pędzel · Enter Dodaj · [ / ] Wybierz obszar · Delete Usuń · Ctrl/⌘ Z Cofnij · Shift Ctrl/⌘ Z Ponów · Strzałki Przesuń (Shift ×10).",
-  "howTitle": "Jak anonimizować obraz",
-  "howDescription": "Otwórz obraz, wybierz efekt i rysuj po poufnych szczegółach. Użyj narzędzia „Zaznacz i przesuń”, aby zmieniać rozmiar lub obracać istniejące obszary, a następnie pobierz wynik.",
-  "exportNote": "PNG zachowuje ostre krawędzie i przezroczystość. JPEG wypełnia przezroczyste obszary bielą. Metadane źródłowe nie są dołączane."
+  "shortcuts": "V Zaznacz · H Przesuń widok · R Prostokąt · E Elipsa · B Pędzel · Enter Dodaj · [ / ] Wybierz obszar · Delete Usuń · Ctrl/⌘ Z Cofnij · Shift Ctrl/⌘ Z Ponów · Strzałki Przesuń (Shift ×10)."
 }

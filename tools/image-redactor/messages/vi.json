@@ -54,8 +54,5 @@
   "canvasLabel": "Khung che thông tin trong ảnh",
   "resizeHandle": "Đổi kích thước vùng đã chọn",
   "rotateHandle": "Xoay vùng đã chọn",
-  "shortcuts": "V Chọn · H Dịch khung nhìn · R Hình chữ nhật · E Hình elip · B Cọ vẽ · Enter Thêm · [ / ] Chọn vùng · Delete Xóa · Ctrl/⌘ Z Hoàn tác · Shift Ctrl/⌘ Z Làm lại · Phím mũi tên Di chuyển (Shift ×10).",
-  "howTitle": "Cách che thông tin trong ảnh",
-  "howDescription": "Mở ảnh, chọn hiệu ứng rồi vẽ lên thông tin riêng tư. Dùng Chọn và di chuyển để đổi kích thước hoặc xoay các vùng đã vẽ, rồi tải kết quả xuống.",
-  "exportNote": "PNG giữ các đường nét sắc và độ trong suốt. JPEG tô trắng vùng trong suốt. Siêu dữ liệu nguồn không được đưa vào ảnh xuất."
+  "shortcuts": "V Chọn · H Dịch khung nhìn · R Hình chữ nhật · E Hình elip · B Cọ vẽ · Enter Thêm · [ / ] Chọn vùng · Delete Xóa · Ctrl/⌘ Z Hoàn tác · Shift Ctrl/⌘ Z Làm lại · Phím mũi tên Di chuyển (Shift ×10)."
 }

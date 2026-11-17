@@ -54,8 +54,5 @@
   "canvasLabel": "Image redaction canvas",
   "resizeHandle": "Resize selected region",
   "rotateHandle": "Rotate selected region",
-  "shortcuts": "V Select · H Pan · R Rectangle · E Ellipse · B Brush · Enter Add · [ / ] Select region · Delete Remove · Ctrl/⌘ Z Undo · Shift Ctrl/⌘ Z Redo · Arrows Move (Shift ×10).",
-  "howTitle": "How to redact an image",
-  "howDescription": "Open an image, choose an effect, and draw over private details. Use Select & move to resize or rotate existing regions, then download the result.",
-  "exportNote": "PNG preserves sharp edges and transparency. JPEG fills transparent areas with white. Source metadata is not included."
+  "shortcuts": "V Select · H Pan · R Rectangle · E Ellipse · B Brush · Enter Add · [ / ] Select region · Delete Remove · Ctrl/⌘ Z Undo · Shift Ctrl/⌘ Z Redo · Arrows Move (Shift ×10)."
 }

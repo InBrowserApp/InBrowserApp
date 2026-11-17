@@ -54,8 +54,5 @@
   "canvasLabel": "Canvas voor het afschermen van afbeeldingen",
   "resizeHandle": "Formaat van geselecteerd gebied aanpassen",
   "rotateHandle": "Geselecteerd gebied draaien",
-  "shortcuts": "V Selecteren · H Verschuiven · R Rechthoek · E Ellips · B Penseel · Enter Toevoegen · [ / ] Gebied selecteren · Delete Verwijderen · Ctrl/⌘ Z Ongedaan maken · Shift Ctrl/⌘ Z Opnieuw uitvoeren · Pijltoetsen Verplaatsen (Shift ×10).",
-  "howTitle": "Een afbeelding afschermen",
-  "howDescription": "Open een afbeelding, kies een effect en teken over privégegevens. Gebruik Selecteren en verplaatsen om het formaat van bestaande gebieden aan te passen of ze te draaien en download daarna het resultaat.",
-  "exportNote": "PNG behoudt scherpe randen en transparantie. JPEG vult transparante gebieden met wit. Bronmetadata worden niet opgenomen."
+  "shortcuts": "V Selecteren · H Verschuiven · R Rechthoek · E Ellips · B Penseel · Enter Toevoegen · [ / ] Gebied selecteren · Delete Verwijderen · Ctrl/⌘ Z Ongedaan maken · Shift Ctrl/⌘ Z Opnieuw uitvoeren · Pijltoetsen Verplaatsen (Shift ×10)."
 }
