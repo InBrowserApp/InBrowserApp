@@ -8,6 +8,7 @@ export type {
   ToolRegistryEntrySource,
   ToolRegistryGenerationOptions,
   ToolSearchIndexEntry,
+  ToolSearchSuggestionEntry,
   ToolSearchLocaleEntry,
   ToolStaticPathEntry,
 } from "./types"

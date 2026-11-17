@@ -24,6 +24,8 @@ type SearchComboboxProps = Readonly<{
   language: SiteLanguage
   query: string
   onQueryChange: (query: string) => void
+  onFocus?: () => void
+  suggestionsReady?: boolean
   /**
    * Called when Enter is pressed while the dropdown is dismissed or has
    * no suggestion to open (the home hero uses this to jump to /tools).
@@ -73,6 +75,8 @@ function SearchCombobox({
   language,
   messages,
   onQueryChange,
+  onFocus,
+  suggestionsReady = true,
   onSubmitQuery,
   query,
   variant = "directory",
@@ -87,7 +91,11 @@ function SearchCombobox({
   const styles = VARIANT_CLASSES[variant]
   const suggestions = buildSearchSuggestions(entries, query, language)
   const hasQuery = query.length > 0
-  const isOpen = isFocused && normalizeQuery(query) !== "" && !isDismissed
+  const isOpen =
+    isFocused &&
+    suggestionsReady &&
+    normalizeQuery(query) !== "" &&
+    !isDismissed
 
   const setQuery = (nextQuery: string) => {
     setIsDismissed(false)
@@ -233,6 +241,7 @@ function SearchCombobox({
         onKeyDown={handleInputKeyDown}
         onFocus={() => {
           setIsFocused(true)
+          onFocus?.()
         }}
         onBlur={() => {
           setIsFocused(false)

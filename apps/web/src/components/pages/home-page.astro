@@ -21,7 +21,6 @@ import {
   getCategoryIcon,
   getCategoryLabel,
   resolveEntryLocale,
-  toSuggestionEntries,
 } from "@/lib/tool-directory"
 import type { SiteLanguage } from "@/lib/site"
 
@@ -43,7 +42,6 @@ const toolsPath = localizePath("/tools", language)
 const categories = countToolsByCategory(toolSearchIndex)
 const popularTools = findToolsBySlugs(toolSearchIndex, POPULAR_TOOL_SLUGS)
 const featuredTools = findToolsBySlugs(toolSearchIndex, FEATURED_TOOL_SLUGS)
-const suggestionEntries = toSuggestionEntries(toolSearchIndex, language)
 const searchMessages = {
   clearSearchLabel: catalog.tools.clearSearchLabel,
   emptySearchDescription: catalog.tools.emptySearchDescription,
@@ -104,7 +102,6 @@ const privacyFeatures = [
       <div class="w-full sm:max-w-[32.5rem]">
         <HomeSearch
           client:load
-          entries={suggestionEntries}
           language={language}
           categoryLabels={catalog.tools.categories}
           messages={searchMessages}
