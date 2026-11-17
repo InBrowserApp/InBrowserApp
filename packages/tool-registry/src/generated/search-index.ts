@@ -11276,6 +11276,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "har-analyzer",
+    category: "network",
+    icon: "network",
+    tags: [
+      "har",
+      "http",
+      "network",
+      "waterfall",
+      "debug",
+      "request",
+      "response",
+      "performance",
+    ],
+    locales: {
+      ar: {
+        name: "محلل شبكة HAR",
+        description:
+          "حلّل ملفات HAR محليًا في متصفحك. افحص المخططات الزمنية للطلبات وتوقيتها وترويساتها والمحتوى المسجّل لتشخيص أسباب بطء الطلبات أو فشلها.",
+      },
+      de: {
+        name: "HAR-Netzwerkanalyse",
+        description:
+          "Analysiere HAR-Dateien lokal im Browser. Prüfe Anfrage-Wasserfälle, Zeitabläufe, Header und aufgezeichnete Inhalte, um langsame oder fehlgeschlagene Anfragen zu untersuchen.",
+      },
+      en: {
+        name: "HAR Network Analyzer",
+        description:
+          "Analyze HAR files locally in your browser. Inspect request waterfalls, timings, headers, and recorded bodies to diagnose slow or failed requests.",
+      },
+      es: {
+        name: "Analizador de red HAR",
+        description:
+          "Analiza archivos HAR localmente en tu navegador. Inspecciona cascadas de solicitudes, tiempos, encabezados y cuerpos registrados para diagnosticar solicitudes lentas o fallidas.",
+      },
+      fr: {
+        name: "Analyseur réseau HAR",
+        description:
+          "Analysez les fichiers HAR localement dans votre navigateur : cascades de requêtes, délais, en-têtes et corps enregistrés pour diagnostiquer les lenteurs et les échecs.",
+      },
+      he: {
+        name: "מנתח תעבורת רשת HAR",
+        description:
+          "ניתוח קובצי HAR מקומית בדפדפן. בדיקת תרשימי מפל של בקשות, תזמונים, כותרות וגופי הודעות שתועדו לאבחון בקשות איטיות או כושלות.",
+      },
+      hi: {
+        name: "HAR नेटवर्क विश्लेषक",
+        description:
+          "अपने ब्राउज़र में स्थानीय रूप से HAR फ़ाइलों का विश्लेषण करें। धीमे या विफल अनुरोधों की समस्याएँ पहचानने के लिए अनुरोध वॉटरफ़ॉल, समय विवरण, हेडर और रिकॉर्ड की गई बॉडी जाँचें।",
+      },
+      id: {
+        name: "Penganalisis Jaringan HAR",
+        description:
+          "Analisis file HAR secara lokal di browser Anda. Periksa waterfall permintaan, rincian waktu, header, dan isi yang tercatat untuk mendiagnosis permintaan lambat atau gagal.",
+      },
+      it: {
+        name: "Analizzatore di rete HAR",
+        description:
+          "Analizza file HAR localmente nel browser. Esamina diagrammi a cascata, tempi, intestazioni e corpi registrati per diagnosticare richieste lente o non riuscite.",
+      },
+      ja: {
+        name: "HARネットワーク解析ツール",
+        description:
+          "ブラウザー内でHARファイルをローカル解析。リクエストのウォーターフォール、タイミング、ヘッダー、記録されたボディを確認し、リクエストの遅延や失敗の原因を調べられます。",
+      },
+      ko: {
+        name: "HAR 네트워크 분석기",
+        description:
+          "브라우저에서 HAR 파일을 로컬로 분석하세요. 요청 워터폴, 소요 시간, 헤더, 기록된 본문을 살펴보며 느리거나 실패한 요청의 원인을 파악할 수 있습니다.",
+      },
+      ms: {
+        name: "Penganalisis Rangkaian HAR",
+        description:
+          "Analisis fail HAR secara setempat dalam pelayar anda. Periksa carta air terjun permintaan, pemasaan, pengepala dan badan yang direkodkan untuk mendiagnosis permintaan lambat atau gagal.",
+      },
+      nl: {
+        name: "HAR-netwerkanalysator",
+        description:
+          "Analyseer HAR-bestanden lokaal in je browser. Inspecteer watervaldiagrammen, tijdsverloop, headers en vastgelegde body's om trage of mislukte verzoeken te onderzoeken.",
+      },
+      no: {
+        name: "HAR-nettverksanalysator",
+        description:
+          "Analyser HAR-filer lokalt i nettleseren din. Undersøk fossefalldiagrammer, tidsmålinger, HTTP-hoder og registrert meldingsinnhold for å finne årsaker til trege eller mislykkede forespørsler.",
+      },
+      pl: {
+        name: "Analizator ruchu sieciowego HAR",
+        description:
+          "Analizuj pliki HAR lokalnie w przeglądarce. Przeglądaj wykresy kaskadowe żądań, czasy, nagłówki i zarejestrowane treści, aby diagnozować powolne lub nieudane żądania.",
+      },
+      pt: {
+        name: "Analisador de rede HAR",
+        description:
+          "Analise arquivos HAR localmente no navegador. Inspecione cascatas de requisições, tempos, cabeçalhos e corpos registrados para diagnosticar requisições lentas ou com falha.",
+      },
+      ru: {
+        name: "Анализатор сетевых журналов HAR",
+        description:
+          "Анализируйте файлы HAR локально в браузере. Изучайте каскадные диаграммы запросов, временные показатели, заголовки и записанные тела, чтобы выявлять причины задержек и ошибок запросов.",
+      },
+      sv: {
+        name: "HAR-nätverksanalysator",
+        description:
+          "Analysera HAR-filer lokalt i webbläsaren. Granska vattenfallsdiagram, tider, HTTP-huvuden och registrerade meddelandekroppar för att felsöka långsamma eller misslyckade begäranden.",
+      },
+      th: {
+        name: "เครื่องมือวิเคราะห์เครือข่าย HAR",
+        description:
+          "วิเคราะห์ไฟล์ HAR ในเบราว์เซอร์ของคุณ ตรวจสอบแผนภูมิวอเตอร์ฟอลล์ของคำขอ ระยะเวลา ส่วนหัว และเนื้อหาที่บันทึกไว้ เพื่อหาสาเหตุที่คำขอช้าหรือล้มเหลว",
+      },
+      tr: {
+        name: "HAR Ağ Analizörü",
+        description:
+          "HAR dosyalarını tarayıcınızda yerel olarak analiz edin. Yavaş veya başarısız isteklerdeki sorunları belirlemek için istek şelalelerini, zamanlamaları, üstbilgileri ve kaydedilmiş gövdeleri inceleyin.",
+      },
+      vi: {
+        name: "Trình phân tích mạng HAR",
+        description:
+          "Phân tích tệp HAR cục bộ trong trình duyệt. Kiểm tra biểu đồ thác nước yêu cầu, thời gian xử lý, tiêu đề HTTP và nội dung đã ghi lại để chẩn đoán yêu cầu chậm hoặc thất bại.",
+      },
+      "zh-CN": {
+        name: "HAR 网络分析器",
+        description:
+          "在浏览器中本地分析 HAR 文件。查看请求瀑布图、耗时、标头和已记录的正文，排查缓慢或失败的请求。",
+      },
+      "zh-TW": {
+        name: "HAR 網路分析器",
+        description:
+          "直接在瀏覽器中分析 HAR 檔案。檢視請求瀑布圖、耗時、標頭及已記錄的本文，排查緩慢或失敗的請求。",
+      },
+    },
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -28990,6 +29122,141 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "SQL 格式化與 Linter",
         description:
           "在瀏覽器中格式化 SQL 查詢，調整符合方言的版面規則，並在複製或下載結果前找出常見的 Lint 問題。",
+      },
+    },
+  },
+  {
+    slug: "sqlite-viewer",
+    category: "developer",
+    icon: "layout-grid",
+    tags: [
+      "sqlite",
+      "sql",
+      "db",
+      "database",
+      "query",
+      "table",
+      "schema",
+      "csv",
+      "json",
+      "viewer",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض SQLite",
+        description:
+          "افتح قواعد بيانات SQLite في متصفحك، وتصفّح الجداول والمخطط، ونفّذ استعلام SQL للقراءة فقط، وصدّر النتائج بصيغة CSV أو JSON. دون رفع الملفات.",
+      },
+      de: {
+        name: "SQLite-Betrachter",
+        description:
+          "Öffnen Sie SQLite-Datenbanken im Browser, durchsuchen Sie Tabellen und Schema, führen Sie eine schreibgeschützte SQL-Abfrage aus und exportieren Sie Ergebnisse als CSV oder JSON. Keine Uploads.",
+      },
+      en: {
+        name: "SQLite Viewer",
+        description:
+          "Open SQLite databases in your browser, browse tables and schema, run a read-only SQL query, and export results as CSV or JSON. No uploads.",
+      },
+      es: {
+        name: "Visor de SQLite",
+        description:
+          "Abre bases de datos SQLite en tu navegador, explora tablas y su estructura, ejecuta consultas SQL de solo lectura y exporta resultados como CSV o JSON. Sin subidas.",
+      },
+      fr: {
+        name: "Visionneuse SQLite",
+        description:
+          "Ouvrez des bases SQLite dans votre navigateur, parcourez les tables et le schéma, exécutez une requête SQL en lecture seule et exportez les résultats en CSV ou JSON. Aucun envoi.",
+      },
+      he: {
+        name: "מציג SQLite",
+        description:
+          "פתיחת מסדי נתונים של SQLite בדפדפן, עיון בטבלאות ובסכמה, הרצת שאילתת SQL לקריאה בלבד וייצוא התוצאות ל־CSV או ל־JSON. ללא העלאות.",
+      },
+      hi: {
+        name: "SQLite व्यूअर",
+        description:
+          "अपने ब्राउज़र में SQLite डेटाबेस खोलें, टेबल और स्कीमा देखें, केवल पढ़ने वाली SQL क्वेरी चलाएँ और परिणाम CSV या JSON में निर्यात करें। कोई अपलोड नहीं।",
+      },
+      id: {
+        name: "Penampil SQLite",
+        description:
+          "Buka basis data SQLite di browser, telusuri tabel dan skema, jalankan kueri SQL hanya baca, lalu ekspor hasil sebagai CSV atau JSON. Tanpa unggahan.",
+      },
+      it: {
+        name: "Visualizzatore SQLite",
+        description:
+          "Apri database SQLite nel browser, esplora tabelle e schema, esegui una query SQL in sola lettura ed esporta i risultati in CSV o JSON. Nessun caricamento.",
+      },
+      ja: {
+        name: "SQLite ビューアー",
+        description:
+          "ブラウザーで SQLite データベースを開き、テーブルや構造の確認、読み取り専用 SQL クエリの実行、CSV・JSON 形式での結果のエクスポートができます。アップロードは不要です。",
+      },
+      ko: {
+        name: "SQLite 뷰어",
+        description:
+          "브라우저에서 SQLite 데이터베이스를 열어 테이블과 구조를 살펴보고, 읽기 전용 SQL 쿼리를 실행하고, 결과를 CSV 또는 JSON으로 내보내세요. 업로드하지 않습니다.",
+      },
+      ms: {
+        name: "Pemapar SQLite",
+        description:
+          "Buka pangkalan data SQLite dalam pelayar anda, layari jadual dan skema, jalankan pertanyaan SQL baca sahaja dan eksport hasil sebagai CSV atau JSON. Tiada muat naik.",
+      },
+      nl: {
+        name: "SQLite-viewer",
+        description:
+          "Open SQLite-databases in je browser, bekijk tabellen en het schema, voer een alleen-lezen SQL-query uit en exporteer resultaten als CSV of JSON. Geen uploads.",
+      },
+      no: {
+        name: "SQLite-viser",
+        description:
+          "Åpne SQLite-databaser i nettleseren, bla gjennom tabeller og skjema, kjør en SQL-spørring med kun lesetilgang og eksporter resultater som CSV eller JSON. Ingen opplasting.",
+      },
+      pl: {
+        name: "Przeglądarka SQLite",
+        description:
+          "Otwieraj bazy SQLite w przeglądarce, przeglądaj tabele i schemat, wykonuj zapytania SQL tylko do odczytu i eksportuj wyniki do CSV lub JSON. Bez przesyłania plików.",
+      },
+      pt: {
+        name: "Visualizador SQLite",
+        description:
+          "Abra bancos SQLite no navegador, explore tabelas e esquemas, execute uma consulta SQL somente leitura e exporte resultados em CSV ou JSON. Sem envio de arquivos.",
+      },
+      ru: {
+        name: "Просмотр SQLite",
+        description:
+          "Открывайте базы данных SQLite в браузере, изучайте таблицы и структуру, выполняйте SQL-запросы только для чтения и экспортируйте результаты в CSV или JSON. Без загрузки на сервер.",
+      },
+      sv: {
+        name: "SQLite-visare",
+        description:
+          "Öppna SQLite-databaser i webbläsaren, bläddra bland tabeller och schema, kör en skrivskyddad SQL-fråga och exportera resultat som CSV eller JSON. Ingen uppladdning.",
+      },
+      th: {
+        name: "โปรแกรมดู SQLite",
+        description:
+          "เปิดฐานข้อมูล SQLite ในเบราว์เซอร์ สำรวจตารางและสคีมา รันคำสั่ง SQL แบบอ่านอย่างเดียว และส่งออกผลลัพธ์เป็น CSV หรือ JSON โดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "SQLite Görüntüleyici",
+        description:
+          "SQLite veritabanlarını tarayıcınızda açın, tabloları ve şemayı inceleyin, salt okunur SQL sorgusu çalıştırın ve sonuçları CSV veya JSON olarak dışa aktarın. Yükleme yapılmaz.",
+      },
+      vi: {
+        name: "Trình xem SQLite",
+        description:
+          "Mở cơ sở dữ liệu SQLite trong trình duyệt, duyệt bảng và lược đồ, chạy truy vấn SQL chỉ đọc và xuất kết quả sang CSV hoặc JSON. Không tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "SQLite 查看器",
+        description:
+          "本地打开 SQLite 数据库，查看表结构、执行只读 SQL 查询，并导出 CSV 或 JSON，无需上传。",
+      },
+      "zh-TW": {
+        name: "SQLite 檢視器",
+        description:
+          "在瀏覽器中開啟 SQLite 資料庫、瀏覽資料表與結構、執行唯讀 SQL 查詢，並將結果匯出為 CSV 或 JSON。無須上傳。",
       },
     },
   },

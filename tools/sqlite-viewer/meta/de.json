@@ -1,0 +1,4 @@
+{
+  "name": "SQLite-Betrachter",
+  "description": "Öffnen Sie SQLite-Datenbanken im Browser, durchsuchen Sie Tabellen und Schema, führen Sie eine schreibgeschützte SQL-Abfrage aus und exportieren Sie Ergebnisse als CSV oder JSON. Keine Uploads."
+}

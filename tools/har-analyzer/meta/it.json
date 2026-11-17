@@ -1,0 +1,4 @@
+{
+  "name": "Analizzatore di rete HAR",
+  "description": "Analizza file HAR localmente nel browser. Esamina diagrammi a cascata, tempi, intestazioni e corpi registrati per diagnosticare richieste lente o non riuscite."
+}

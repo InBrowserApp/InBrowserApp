@@ -8190,6 +8190,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "har-analyzer",
+    language: "ar",
+  },
+  {
+    slug: "har-analyzer",
+    language: "de",
+  },
+  {
+    slug: "har-analyzer",
+    language: "en",
+  },
+  {
+    slug: "har-analyzer",
+    language: "es",
+  },
+  {
+    slug: "har-analyzer",
+    language: "fr",
+  },
+  {
+    slug: "har-analyzer",
+    language: "he",
+  },
+  {
+    slug: "har-analyzer",
+    language: "hi",
+  },
+  {
+    slug: "har-analyzer",
+    language: "id",
+  },
+  {
+    slug: "har-analyzer",
+    language: "it",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ja",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ko",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ms",
+  },
+  {
+    slug: "har-analyzer",
+    language: "nl",
+  },
+  {
+    slug: "har-analyzer",
+    language: "no",
+  },
+  {
+    slug: "har-analyzer",
+    language: "pl",
+  },
+  {
+    slug: "har-analyzer",
+    language: "pt",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ru",
+  },
+  {
+    slug: "har-analyzer",
+    language: "sv",
+  },
+  {
+    slug: "har-analyzer",
+    language: "th",
+  },
+  {
+    slug: "har-analyzer",
+    language: "tr",
+  },
+  {
+    slug: "har-analyzer",
+    language: "vi",
+  },
+  {
+    slug: "har-analyzer",
+    language: "zh-CN",
+  },
+  {
+    slug: "har-analyzer",
+    language: "zh-TW",
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     language: "ar",
   },
@@ -21159,6 +21251,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "sql-formatter-and-linter",
+    language: "zh-TW",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ar",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "de",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "en",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "es",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "fr",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "he",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "hi",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "id",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "it",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ja",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ko",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ms",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "nl",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "no",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "pl",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "pt",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ru",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "sv",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "th",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "tr",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "vi",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "sqlite-viewer",
     language: "zh-TW",
   },
   {
