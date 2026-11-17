@@ -1,0 +1,4 @@
+{
+  "name": "Penampil Info Media",
+  "description": "Lihat codec, bitrate, durasi, resolusi, dan laju bingkai untuk MP4, MOV, MKV, WebM, AVI, MP3, FLAC, dan WAV. Periksa bahasa audio, kanal, dan laju sampel, serta trek subtitel. Salin laporan atau ekspor JSON secara lokal."
+}

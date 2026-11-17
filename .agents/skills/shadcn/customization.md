@@ -81,7 +81,9 @@ Or edit CSS variables directly in `globals.css`.
 
 ## Adding Custom Colors
 
-Add variables to the file at `tailwindCssFile` from `npx shadcn@latest info` (typically `globals.css`). Never create a new CSS file for this.
+Shared theme variables belong in the configured `tailwindCssFile` (typically
+`globals.css`). Component- or tool-specific styles can live in an appropriate
+local stylesheet when they are not shared theme tokens.
 
 ```css
 /* 1. Define in the global CSS file. */
@@ -201,4 +203,4 @@ npx shadcn@latest add button --dry-run        # see all affected files
 npx shadcn@latest add button --diff button.tsx # see the diff for a specific file
 ```
 
-See [Updating Components in SKILL.md](./SKILL.md#updating-components) for the full smart merge workflow.
+See [Component updates in SKILL.md](./SKILL.md#add-update-or-change-presets) for the full smart merge workflow.

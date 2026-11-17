@@ -6,6 +6,7 @@ import {
   BookOpen,
   Braces,
   Camera,
+  Car,
   CaseSensitive,
   Clock3,
   CreditCard,
@@ -22,8 +23,11 @@ import {
   Mail,
   Network,
   Ruler,
+  Search,
   Sparkles,
   Scissors,
+  Text,
+  Video,
   Wrench,
 } from "@workspace/ui/icons"
 
@@ -33,6 +37,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   "book-open": BookOpen,
   braces: Braces,
   camera: Camera,
+  car: Car,
   "case-sensitive": CaseSensitive,
   clock3: Clock3,
   "credit-card": CreditCard,
@@ -48,8 +53,11 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   mail: Mail,
   network: Network,
   ruler: Ruler,
+  search: Search,
   sparkles: Sparkles,
   scissors: Scissors,
+  text: Text,
+  video: Video,
   wrench: Wrench,
 }
 
@@ -62,4 +70,4 @@ function ToolIcon({ icon, ...props }: ToolIconProps) {
   return <Icon {...props} />
 }
 
-export { ToolIcon }
+export { ToolIcon, iconMap as toolIconMap }

@@ -9,6 +9,7 @@ type ToolCopyButtonProps = Readonly<{
   value: string
   copyLabel: string
   copiedLabel: string
+  failedLabel?: string
   ariaLabel?: string
   className?: string
   disabled?: boolean
@@ -22,34 +23,44 @@ function ToolCopyButton({
   value,
   copyLabel,
   copiedLabel,
+  failedLabel = copyLabel,
   disabled = false,
   size = "sm",
   variant = "outline",
 }: ToolCopyButtonProps) {
-  const [copied, setCopied] = useState(false)
-  const statusLabel = copied ? copiedLabel : copyLabel
+  const [status, setStatus] = useState<"idle" | "copied" | "failed">("idle")
+  const copied = status === "copied"
+  const statusLabel = copied
+    ? copiedLabel
+    : status === "failed"
+      ? failedLabel
+      : copyLabel
 
   useEffect(() => {
-    if (!copied) {
+    if (status === "idle") {
       return
     }
 
     const timeout = window.setTimeout(() => {
-      setCopied(false)
+      setStatus("idle")
     }, 1200)
 
     return () => {
       window.clearTimeout(timeout)
     }
-  }, [copied])
+  }, [status])
 
   async function handleCopy() {
     if (disabled || value.length === 0) {
       return
     }
 
-    await navigator.clipboard.writeText(value)
-    setCopied(true)
+    try {
+      await navigator.clipboard.writeText(value)
+      setStatus("copied")
+    } catch {
+      setStatus("failed")
+    }
   }
 
   return (
@@ -59,8 +70,8 @@ function ToolCopyButton({
       size={size}
       aria-label={
         ariaLabel
-          ? copied
-            ? `${copiedLabel}: ${ariaLabel}`
+          ? status !== "idle"
+            ? `${statusLabel}: ${ariaLabel}`
             : ariaLabel
           : undefined
       }

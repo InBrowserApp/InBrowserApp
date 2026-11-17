@@ -18867,6 +18867,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "media-info-viewer",
+    category: "misc",
+    icon: "file-text",
+    tags: [
+      "audio",
+      "video",
+      "media",
+      "metadata",
+      "codec",
+      "bitrate",
+      "mediainfo",
+    ],
+    locales: {
+      ar: {
+        name: "عارض معلومات الوسائط",
+        description:
+          "اعرض أنواع الترميز ومعدل البت والمدة والدقة ومعدل الإطارات لملفات MP4 وMOV وMKV وWebM وAVI وMP3 وFLAC وWAV. افحص لغات المسارات الصوتية وقنواتها ومعدلات أخذ العينات، إلى جانب مسارات الترجمة. انسخ التقارير أو صدّر JSON محليًا.",
+      },
+      de: {
+        name: "Medieninfo-Betrachter",
+        description:
+          "Codecs, Bitrate, Dauer, Auflösung und Bildrate von MP4, MOV, MKV, WebM, AVI, MP3, FLAC und WAV anzeigen. Sprachangaben von Audiospuren, Kanäle, Abtastraten und Untertitelspuren prüfen. Berichte kopieren oder JSON lokal exportieren.",
+      },
+      en: {
+        name: "Media Info Viewer",
+        description:
+          "View codecs, bitrate, duration, resolution and frame rate for MP4, MOV, MKV, WebM, AVI, MP3, FLAC and WAV. Inspect audio languages, channels and sample rates, plus subtitle tracks. Copy reports or export JSON locally.",
+      },
+      es: {
+        name: "Visor de información multimedia",
+        description:
+          "Consulta los códecs, la tasa de bits, la duración, la resolución y los fotogramas por segundo de archivos MP4, MOV, MKV, WebM, AVI, MP3, FLAC y WAV. Examina los idiomas, los canales y las frecuencias de muestreo del audio, así como las pistas de subtítulos. Copia informes o exporta JSON de forma local.",
+      },
+      fr: {
+        name: "Visionneuse d’informations multimédias",
+        description:
+          "Consultez les codecs, le débit, la durée, la résolution et la fréquence d’images des fichiers MP4, MOV, MKV, WebM, AVI, MP3, FLAC et WAV. Examinez les langues, les canaux et les fréquences d’échantillonnage des pistes audio, ainsi que les pistes de sous-titres. Copiez les rapports ou exportez le JSON localement.",
+      },
+      he: {
+        name: "מציג פרטי מדיה",
+        description:
+          "צפייה בקודקים, קצב סיביות, משך, רזולוציה וקצב פריימים של MP4, MOV, MKV, WebM, AVI, MP3, FLAC ו-WAV. בדיקת שפות רצועות שמע, ערוצים וקצבי דגימה, לצד רצועות כתוביות. העתקת דוחות או ייצוא JSON באופן מקומי.",
+      },
+      hi: {
+        name: "मीडिया जानकारी व्यूअर",
+        description:
+          "MP4, MOV, MKV, WebM, AVI, MP3, FLAC और WAV के कोडेक, बिटरेट, अवधि, रिज़ॉल्यूशन और फ़्रेम दर देखें। ऑडियो के भाषा टैग, चैनल और सैंपल दर के साथ उपशीर्षक ट्रैक की जाँच करें। रिपोर्ट कॉपी करें या स्थानीय रूप से JSON निर्यात करें।",
+      },
+      id: {
+        name: "Penampil Info Media",
+        description:
+          "Lihat codec, bitrate, durasi, resolusi, dan laju bingkai untuk MP4, MOV, MKV, WebM, AVI, MP3, FLAC, dan WAV. Periksa bahasa audio, kanal, dan laju sampel, serta trek subtitel. Salin laporan atau ekspor JSON secara lokal.",
+      },
+      it: {
+        name: "Visualizzatore di informazioni audio e video",
+        description:
+          "Visualizza codec, bitrate, durata, risoluzione e frequenza fotogrammi di file MP4, MOV, MKV, WebM, AVI, MP3, FLAC e WAV. Esamina lingue, canali e frequenze di campionamento delle tracce audio, oltre alle tracce di sottotitoli. Copia i rapporti o esporta JSON in locale.",
+      },
+      ja: {
+        name: "音声・動画情報ビューアー",
+        description:
+          "MP4、MOV、MKV、WebM、AVI、MP3、FLAC、WAV のコーデック、ビットレート、再生時間、解像度、フレームレートを確認できます。音声の言語、チャンネル数、サンプリングレートや字幕トラックも確認でき、端末内でレポートのコピーや JSON の書き出しができます。",
+      },
+      ko: {
+        name: "미디어 정보 뷰어",
+        description:
+          "MP4, MOV, MKV, WebM, AVI, MP3, FLAC, WAV 파일의 코덱, 비트레이트, 재생 시간, 해상도, 프레임 레이트를 확인하세요. 오디오 트랙의 언어, 채널 수, 샘플링 레이트와 자막 트랙도 살펴볼 수 있습니다. 기기에서 보고서를 복사하거나 JSON으로 내보내세요.",
+      },
+      ms: {
+        name: "Pemapar Maklumat Media",
+        description:
+          "Lihat kodek, kadar bit, tempoh, resolusi dan kadar bingkai untuk MP4, MOV, MKV, WebM, AVI, MP3, FLAC dan WAV. Periksa bahasa audio, saluran dan kadar pensampelan serta trek sari kata. Salin laporan atau eksport JSON secara setempat.",
+      },
+      nl: {
+        name: "Media-informatieviewer",
+        description:
+          "Bekijk codecs, bitrate, duur, resolutie en beeldsnelheid van MP4, MOV, MKV, WebM, AVI, MP3, FLAC en WAV. Controleer audiotalen, kanalen, samplefrequenties en ondertitelsporen. Kopieer rapporten of exporteer JSON lokaal.",
+      },
+      no: {
+        name: "Medieinformasjonsviser",
+        description:
+          "Se kodeker, bithastighet, varighet, oppløsning og bildefrekvens for MP4, MOV, MKV, WebM, AVI, MP3, FLAC og WAV. Undersøk lydsporenes språk, kanaler og samplingsfrekvenser samt undertekstspor. Kopier rapporter eller eksporter JSON lokalt.",
+      },
+      pl: {
+        name: "Przeglądarka informacji o multimediach",
+        description:
+          "Sprawdzaj kodeki, przepływność, czas trwania, rozdzielczość i liczbę klatek na sekundę w plikach MP4, MOV, MKV, WebM, AVI, MP3, FLAC i WAV. Sprawdzaj języki, kanały i częstotliwość próbkowania ścieżek audio oraz ścieżki napisów. Kopiuj raporty lub eksportuj JSON lokalnie.",
+      },
+      pt: {
+        name: "Visualizador de informações de mídia",
+        description:
+          "Veja codecs, taxa de bits, duração, resolução e taxa de quadros de arquivos MP4, MOV, MKV, WebM, AVI, MP3, FLAC e WAV. Inspecione idiomas, canais e taxas de amostragem de áudio, além das faixas de legenda. Copie relatórios ou exporte JSON localmente.",
+      },
+      ru: {
+        name: "Просмотр информации о медиафайлах",
+        description:
+          "Просматривайте кодеки, битрейт, длительность, разрешение и частоту кадров в MP4, MOV, MKV, WebM, AVI, MP3, FLAC и WAV. Изучайте языки, каналы и частоту дискретизации аудиодорожек, а также дорожки субтитров. Копируйте отчёты или сохраняйте JSON локально.",
+      },
+      sv: {
+        name: "Visare för medieinformation",
+        description:
+          "Visa kodekar, bithastighet, längd, upplösning och bildfrekvens för MP4, MOV, MKV, WebM, AVI, MP3, FLAC och WAV. Granska ljudspårens språk, kanaler och samplingsfrekvenser samt undertextspår. Kopiera rapporter eller exportera JSON lokalt.",
+      },
+      th: {
+        name: "โปรแกรมดูข้อมูลเสียงและวิดีโอ",
+        description:
+          "ดูตัวแปลงสัญญาณ บิตเรต ระยะเวลา ความละเอียด และอัตราเฟรมของไฟล์ MP4, MOV, MKV, WebM, AVI, MP3, FLAC และ WAV ตรวจสอบภาษา ช่องสัญญาณ และอัตราสุ่มตัวอย่างของเสียง รวมถึงแทร็กคำบรรยาย คัดลอกรายงานหรือส่งออก JSON ภายในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "Medya Bilgisi Görüntüleyici",
+        description:
+          "MP4, MOV, MKV, WebM, AVI, MP3, FLAC ve WAV dosyalarının kodeklerini, bit hızını, süresini, çözünürlüğünü ve kare hızını görüntüleyin. Ses izlerinin dil bilgilerini, kanallarını ve örnekleme hızlarını, ayrıca altyazı izlerini inceleyin. Raporları kopyalayın veya JSON olarak cihazınıza indirin.",
+      },
+      vi: {
+        name: "Trình xem thông tin đa phương tiện",
+        description:
+          "Xem bộ mã hóa/giải mã, tốc độ bit, thời lượng, độ phân giải và tốc độ khung hình của MP4, MOV, MKV, WebM, AVI, MP3, FLAC và WAV. Kiểm tra ngôn ngữ, số kênh và tần số lấy mẫu của âm thanh, cùng các luồng phụ đề. Sao chép báo cáo hoặc xuất JSON ngay trên thiết bị.",
+      },
+      "zh-CN": {
+        name: "音视频信息查看器",
+        description:
+          "查看 MP4、MOV、MKV、WebM、AVI、MP3、FLAC 和 WAV 的编码格式（编解码器）、码率、时长、分辨率及帧率。检查音轨的语言标签、声道数和采样率，以及字幕轨道信息。浏览器本地分析，无需上传；可复制报告或在本地导出 JSON。",
+      },
+      "zh-TW": {
+        name: "影音資訊檢視器",
+        description:
+          "檢視 MP4、MOV、MKV、WebM、AVI、MP3、FLAC 和 WAV 的編解碼器、位元率、長度、解析度與影格率。查看音軌的語言標記、聲道數、取樣率及字幕軌資訊。可在本機複製報告或匯出 JSON。",
+      },
+    },
+  },
+  {
     slug: "mhtml-to-html-converter",
     category: "document",
     icon: "file-text",
