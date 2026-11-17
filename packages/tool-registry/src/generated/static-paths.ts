@@ -3314,6 +3314,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cbor-messagepack-converter",
+    language: "ar",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "de",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "en",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "es",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "fr",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "he",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "hi",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "id",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "it",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "ja",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "ko",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "ms",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "nl",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "no",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "pl",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "pt",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "ru",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "sv",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "th",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "tr",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "vi",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "cbz-reader",
     language: "ar",
   },
@@ -7086,6 +7178,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "env-converter",
+    language: "ar",
+  },
+  {
+    slug: "env-converter",
+    language: "de",
+  },
+  {
+    slug: "env-converter",
+    language: "en",
+  },
+  {
+    slug: "env-converter",
+    language: "es",
+  },
+  {
+    slug: "env-converter",
+    language: "fr",
+  },
+  {
+    slug: "env-converter",
+    language: "he",
+  },
+  {
+    slug: "env-converter",
+    language: "hi",
+  },
+  {
+    slug: "env-converter",
+    language: "id",
+  },
+  {
+    slug: "env-converter",
+    language: "it",
+  },
+  {
+    slug: "env-converter",
+    language: "ja",
+  },
+  {
+    slug: "env-converter",
+    language: "ko",
+  },
+  {
+    slug: "env-converter",
+    language: "ms",
+  },
+  {
+    slug: "env-converter",
+    language: "nl",
+  },
+  {
+    slug: "env-converter",
+    language: "no",
+  },
+  {
+    slug: "env-converter",
+    language: "pl",
+  },
+  {
+    slug: "env-converter",
+    language: "pt",
+  },
+  {
+    slug: "env-converter",
+    language: "ru",
+  },
+  {
+    slug: "env-converter",
+    language: "sv",
+  },
+  {
+    slug: "env-converter",
+    language: "th",
+  },
+  {
+    slug: "env-converter",
+    language: "tr",
+  },
+  {
+    slug: "env-converter",
+    language: "vi",
+  },
+  {
+    slug: "env-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "env-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "epub-reader",
     language: "ar",
   },
@@ -9659,6 +9843,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "image-palette-extractor",
+    language: "zh-TW",
+  },
+  {
+    slug: "image-redactor",
+    language: "ar",
+  },
+  {
+    slug: "image-redactor",
+    language: "de",
+  },
+  {
+    slug: "image-redactor",
+    language: "en",
+  },
+  {
+    slug: "image-redactor",
+    language: "es",
+  },
+  {
+    slug: "image-redactor",
+    language: "fr",
+  },
+  {
+    slug: "image-redactor",
+    language: "he",
+  },
+  {
+    slug: "image-redactor",
+    language: "hi",
+  },
+  {
+    slug: "image-redactor",
+    language: "id",
+  },
+  {
+    slug: "image-redactor",
+    language: "it",
+  },
+  {
+    slug: "image-redactor",
+    language: "ja",
+  },
+  {
+    slug: "image-redactor",
+    language: "ko",
+  },
+  {
+    slug: "image-redactor",
+    language: "ms",
+  },
+  {
+    slug: "image-redactor",
+    language: "nl",
+  },
+  {
+    slug: "image-redactor",
+    language: "no",
+  },
+  {
+    slug: "image-redactor",
+    language: "pl",
+  },
+  {
+    slug: "image-redactor",
+    language: "pt",
+  },
+  {
+    slug: "image-redactor",
+    language: "ru",
+  },
+  {
+    slug: "image-redactor",
+    language: "sv",
+  },
+  {
+    slug: "image-redactor",
+    language: "th",
+  },
+  {
+    slug: "image-redactor",
+    language: "tr",
+  },
+  {
+    slug: "image-redactor",
+    language: "vi",
+  },
+  {
+    slug: "image-redactor",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-redactor",
     language: "zh-TW",
   },
   {
@@ -13523,6 +13799,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "md5-hash-text-or-file",
+    language: "zh-TW",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "ar",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "de",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "en",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "es",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "fr",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "he",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "hi",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "id",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "it",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "ja",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "ko",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "ms",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "nl",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "no",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "pl",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "pt",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "ru",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "sv",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "th",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "tr",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "vi",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "media-info-viewer",
     language: "zh-TW",
   },
   {

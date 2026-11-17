@@ -21,10 +21,29 @@ describe("ToolIcon", () => {
     expect(screen.getByTestId("icon")).toBeTruthy()
   })
 
+  test("renders the privacy icon for 'eye-off'", () => {
+    render(<ToolIcon icon="eye-off" data-testid="icon" />)
+    expect(
+      screen.getByTestId("icon").classList.contains("lucide-eye-off")
+    ).toBe(true)
+  })
+
   test("renders fallback Wrench icon for unknown icon name", () => {
     render(<ToolIcon icon="unknown-icon" data-testid="icon" />)
-    expect(screen.getByTestId("icon")).toBeTruthy()
+    expect(screen.getByTestId("icon").classList.contains("lucide-wrench")).toBe(
+      true
+    )
   })
+
+  test.each(["car", "search", "text", "video"])(
+    "renders %s without using the generic fallback",
+    (icon) => {
+      render(<ToolIcon icon={icon} data-testid="icon" />)
+      expect(
+        screen.getByTestId("icon").classList.contains("lucide-wrench")
+      ).toBe(false)
+    }
+  )
 
   test("passes className to the icon", () => {
     render(<ToolIcon icon="binary" data-testid="icon" className="size-6" />)

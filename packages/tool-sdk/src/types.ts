@@ -30,6 +30,7 @@ type ToolIcon =
   | "binary"
   | "braces"
   | "credit-card"
+  | "eye-off"
   | "file-text"
   | "globe"
   | "image"

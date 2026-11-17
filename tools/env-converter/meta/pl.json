@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter .env",
+  "description": "Konwertuj pliki .env na JSON lub YAML i odwrotnie, ze sprawdzaniem powtórzonych kluczy i cudzysłowów."
+}

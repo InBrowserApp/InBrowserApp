@@ -13,6 +13,7 @@
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
     "prepare": "husky",
+    "quality:check": "vitest run tests/tool-presentation.test.ts tests/i18n-consistency.test.ts --silent",
     "tool-registry:generate": "pnpm --filter @workspace/tool-registry generate",
     "test": "vitest run --silent",
     "test:coverage": "vitest run --silent --coverage",

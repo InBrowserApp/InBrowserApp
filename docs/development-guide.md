@@ -1,0 +1,302 @@
+# Development guide
+
+Operational reference for the repository. Read `AGENTS.md` first.
+
+## What this repo is
+
+InBrowser.App is the multilingual `Astro + React + shadcn/ui` application that
+hosts browser-only utilities at [inbrowser.app](https://inbrowser.app).
+`main` is the live product — shipped as v2.0.0 in #919. The legacy Vue 3 / Vite
+implementation is preserved on the `legacy/vue` branch; reach for it only when
+porting an asset or piece of copy that has not already made it across, and
+prefer `git show origin/legacy/vue:<path>` over checking the branch out.
+
+## Working set
+
+- Treat the repo root as the source of truth.
+- Ignore generated or disposable directories unless the task explicitly targets
+  them: `apps/web/dist`, `apps/web/.astro`, `coverage`, `node_modules`.
+- `packages/tool-registry/src/generated/*` is different: those generated files
+  are committed and should be updated when manifests or locales change. CI
+  fails if a fresh `pnpm tool-registry:generate` produces a diff under that
+  directory.
+- `.claude/worktrees/*` contains side worktrees and mirrors. Do not edit them
+  unless the user explicitly asks you to work inside one of them.
+
+## Common commands
+
+```bash
+pnpm dev                     # tool-registry:generate + astro dev (apps/web)
+pnpm build                   # tool-registry:generate + astro build
+pnpm tool-registry:generate  # regenerate packages/tool-registry/src/generated/*
+pnpm quality:check           # all catalog contracts + actual tool icon mappings
+pnpm test                    # vitest run --silent
+pnpm test:coverage           # vitest with v8 coverage thresholds
+pnpm typecheck               # tool-registry:generate + root tsc + astro check
+pnpm lint                    # oxlint
+pnpm lint:fix                # oxlint --fix
+pnpm format                  # oxfmt
+pnpm format:check            # oxfmt --check
+pnpm depcruise               # workspace boundary enforcement
+pnpm knip                    # unused exports / files
+pnpm dedupe --check          # lockfile dedupe check used in CI
+```
+
+Run a single test file or pattern from the repo root:
+
+```bash
+pnpm exec vitest run path/to/file.test.ts
+pnpm exec vitest run -t "regex on test name"
+pnpm exec vitest
+```
+
+If `astro build` fails with `Cannot find module '<...>/dist/renderers.mjs'`,
+clear the stale caches and rebuild:
+
+```bash
+rm -rf apps/web/dist apps/web/.astro
+pnpm build
+```
+
+## Architecture
+
+### Workspace shape
+
+```text
+apps/web               # the only deployable app: routes, layouts, SEO, deploy config
+packages/ui            # shared design system and shadcn/ui ownership
+packages/tool-sdk      # framework-agnostic tool contract
+packages/tool-registry # manifest discovery + generated registry/search/static paths
+packages/lib/<domain>  # promoted, framework-free shared domain logic
+tools/<slug>           # self-contained tool packages, each named @tool/<slug>
+tests/                 # repo-level tests such as i18n consistency checks
+```
+
+Tools are private workspace packages. Each `tools/<slug>/package.json` must be
+named `@tool/<slug>`, and the slug must match the directory name.
+
+### Dependency and version rules
+
+- All external dependency versions live in the `catalog:` block of
+  `pnpm-workspace.yaml`.
+- Every workspace `package.json` should reference external packages as
+  `"catalog:"`, including `peerDependencies`.
+- Never inline external versions in package manifests.
+- `react`, `react-dom`, and `astro` belong in tool `peerDependencies`, satisfied
+  by `apps/web`.
+
+### Import boundaries
+
+The boundary rules are enforced by `.dependency-cruiser.json`.
+
+- `apps/web` may import `@workspace/ui`, `@workspace/tool-sdk`,
+  `@workspace/tool-registry`, and generated registry data. It must not import
+  tool-local internals directly.
+- `packages/ui` is presentation-only. It must not import from `apps/web`,
+  `tools/*`, or `packages/tool-registry`.
+- `packages/tool-sdk` stays framework-agnostic. It must not depend on app, UI,
+  registry, shared libs, or tool implementations.
+- `packages/tool-registry` may depend on `@workspace/tool-sdk`, and only
+  `src/generated/` may directly import `@tool/*`.
+- `packages/lib/*` is reserved for framework-free shared domain logic.
+- `tools/*` may depend on `@workspace/tool-sdk`, `@workspace/ui`, and
+  `packages/lib/*`, but must not import from `apps/web` or
+  `packages/tool-registry`.
+- Tools must not import third-party UI packages like `lucide-react`,
+  `@radix-ui/*`, or `shadcn` directly. Go through `@workspace/ui`.
+
+Default to tool-local code. Promote framework-free domain logic when actual
+reuse, correctness, or maintenance benefits justify shared ownership. Reuse
+count informs that choice without acting as a threshold. See the boundary guide
+for the distinction between shared domain logic and shared presentation.
+
+### App and package conventions
+
+- `apps/web` is the only deployable artifact.
+- The `@/*` path alias maps to `apps/web/src/*` only. Do not use it from
+  packages or tools.
+- `packages/ui` owns `components.json`, shared tokens, app/tool UI shells, and
+  icon re-exports. Import icons from `@workspace/ui/icons`, not `lucide-react`.
+- Internal packages are source-only; there is no package build pipeline.
+- Root scripts orchestrate the workspace directly; there is no active Turborepo
+  task graph to route normal builds through.
+
+### Tool contract
+
+Every tool follows this minimum contract:
+
+```text
+tools/<slug>/
+  package.json
+  manifest.ts
+  index.astro
+  meta/en.json
+```
+
+Common optional files stay tool-local:
+
+- `client.tsx`
+- `messages/<lang>.json`
+- `sections/intro/<lang>.md`
+- `components/`
+- `core/`
+- `workers/`
+- `*.test.ts` / `*.test.tsx`
+
+Tool rules:
+
+- `manifest.ts` exports a named `tool` created with `defineTool()` from
+  `@workspace/tool-sdk`.
+- `index.astro` is the composition root. It receives `lang` from the app shell
+  and should load tool-local copy with `resolveLocale(...)`.
+- Tools do not ship their own `tsconfig.json`.
+- Tools do not define their own `lint`, `format`, or `typecheck` scripts.
+
+### Adding or changing tools
+
+When adding a new tool:
+
+1. Create `tools/<slug>/` with the required files.
+2. Run `pnpm tool-registry:generate`.
+3. If the generator reports that `packages/tool-registry/package.json` was out
+   of sync, it has already rewritten the `@tool/*` dependency block to match
+   the discovered tools — run `pnpm install` and rerun
+   `pnpm tool-registry:generate`.
+4. Commit both `packages/tool-registry/package.json` and
+   `packages/tool-registry/src/generated/*` when they change.
+
+Do not hand-edit the `@tool/*` dependency list in
+`packages/tool-registry/package.json`. The generator
+(`syncRegistryPackageDependencies` in
+`packages/tool-registry/src/generate/io.ts`) is the source of truth and will
+overwrite manual edits on the next run.
+
+## i18n
+
+- Supported site languages live in `apps/web/src/lib/site.ts`.
+- Default language is `en`.
+- RTL handling also lives in `apps/web/src/lib/site.ts` and is wired into
+  `apps/web/src/layouts/main.astro`.
+- Site copy lives in `apps/web/src/messages/<lang>.json`.
+- Tool discovery metadata lives in each tool's `meta/<lang>.json`.
+- Tool UI copy lives in each tool's `messages/<lang>.json`.
+- Tool markdown content usually lives in `sections/<section>/<lang>.md`.
+- Native language names for the language picker live in
+  `packages/ui/src/components/app/language-switcher.tsx`, not in message files.
+- The sitemap emits an `x-default` hreflang for multilingual entries
+  (`apps/web/src/lib/sitemap-serialize.ts`; see #910).
+
+Important repo-wide rule: `tests/i18n-consistency.test.ts` walks the entire repo
+and treats every directory containing `en.json` or `en.md` as a locale family.
+For each such family:
+
+- every file must exist for every supported language
+- JSON files must keep the exact same key structure as `en.json`
+- Markdown files must keep the same heading outline as `en.md`
+- localized files must contain content beyond a complete copy of English
+
+For multi-language translation work, use the workflow in
+`.claude/agents/i18n-translator.md`. Group related metadata, UI messages, and
+sections for consistency. Language-focused workers with bounded parallelism are
+useful for larger batches; small repairs or a direct multi-language assignment
+can be simpler in one agent. Coordinate shared checks after the affected writes.
+
+The SDK validates a reusable minimum English catalog. This application requires
+all supported site languages; runtime fallback is resilience, not completion.
+Catalog checks also preserve JSON value types and named interpolation tokens.
+
+## Testing and quality gates
+
+See `docs/product-quality.md` for gate ownership, user-flow review, and which
+checks apply to a change. CI runs `pnpm quality:check` explicitly because
+filesystem-discovered catalogs are not reliably selected by `vitest --changed`.
+
+- Vitest runs from the repo root with `happy-dom`.
+- Coverage thresholds are strict:
+  - `packages/tool-sdk/src/**`: 100% lines, branches, functions, statements
+  - `tools/*/core/**`: 100% lines, branches, functions, statements
+  - `tools/*` overall: 90% lines/statements, 85% branches/functions
+- Test files use `*.test.ts` or `*.test.tsx`.
+- Keep correctness-sensitive logic in pure modules where possible and test it
+  directly.
+
+Lint and formatting:
+
+- `oxlint` is the linter. Do not introduce ESLint.
+- `oxfmt` is the formatter. Do not introduce Prettier.
+- Formatting style is semicolon-free, 2-space indentation, 80-column width.
+- `oxlint` enforces `max-lines` at 300 for normal source files. Tests and
+  generated registry files are exempt.
+
+## Build and generated artifacts
+
+- `pnpm build`, `pnpm dev`, and `pnpm typecheck` all run
+  `pnpm tool-registry:generate` first.
+- The generator writes committed source files into
+  `packages/tool-registry/src/generated/`.
+- `apps/web/dist` is a build output and should not be edited manually or
+  committed unless the user explicitly asks for built artifacts.
+- The web app is built from source packages directly via Astro aliases; there is
+  no separate package compilation step.
+
+## CI, hosting, and releases
+
+Workflows live in `.github/workflows/`:
+
+- `ci.yml` — `code-check` (lint, format, registry-up-to-date check, typecheck,
+  depcruise, knip), `test` (tests + coverage), `build-web` (Astro build),
+  `html-check` (internal links in built HTML), Lighthouse, and version previews.
+  Runs on PRs and through `workflow_call` from the main-branch release workflow.
+- `pr-title.yml` — enforces Conventional Commits on PR titles.
+- `release-please.yml` — on push to `main`, maintains release PRs with the
+  existing `RELEASE_PLEASE_TOKEN`, creates draft releases, calls CI, uploads
+  release assets/provenance, publishes, and explicitly calls production deploy.
+- `deploy.yml` — deploys a published stable release with `wrangler deploy`.
+  Supports both `workflow_call` and manual `workflow_dispatch(release_tag)` for
+  deployment retries and rollback, without rebuilding the application.
+- `actionlint.yml` — lints workflow YAML when `.github/workflows/**` changes.
+
+The GitHub **Protect Default** ruleset requires these GitHub Actions checks
+before merging into `main`: `Code Check`, `Test`, `Build Web`,
+`HTML Link Check`, and `Conventional Commits`. These names match job display
+names, not job IDs. When renaming or splitting a required job, update the
+live repository ruleset as well; workflow edits alone do not update it.
+
+Cloudflare Workers with static assets. There is no
+separate `staging` environment in `apps/web/wrangler.jsonc`; previews are
+Workers Versions:
+
+- **Same-repo PRs** — `deploy-staging` runs
+  `wrangler versions upload --tag <ref>` against the
+  `cloudflare-workers-staging` environment, exposing the version through the
+  job's `deployment-url`.
+- **Release PR merge** — release-please creates a draft and provides its source
+  SHA to reusable CI. After CI passes, the same run archives the contents of
+  `dist`, attests provenance, uploads the archive, and publishes. The archive
+  contains only static web files; deployment configuration stays in the repo.
+  Enable release immutability in repository settings so publication locks the
+  tag and assets. Draft uploads may be replaced when retrying a failed job.
+- **Production** — publication explicitly calls `deploy.yml` for stable
+  releases. Deploy downloads the release archive and runs one `wrangler deploy`
+  with the CLI installed by `cloudflare/wrangler-action`. Only
+  `apps/web/wrangler.jsonc` is checked out from the release tag; there is no
+  application build or workspace dependency installation during deploy.
+  Prereleases receive release assets but do not deploy to production.
+
+Draft creation and publication do not trigger the next stage. Dependencies use
+`needs` and `workflow_call`, so publication can use the built-in `GITHUB_TOKEN`.
+Use **Re-run failed jobs** for build/publication failures. To deploy an existing
+version, run `gh workflow run deploy.yml --ref main -f release_tag=vX.Y.Z`.
+
+## Git and PR conventions
+
+- Use Conventional Commits for commit messages.
+- PR titles must also follow Conventional Commits; CI checks this.
+- The PR base branch is `main`. Do not target `legacy/vue` unless the user
+  explicitly asks for it.
+
+## Environment
+
+- Package manager and Node requirements: read `packageManager` and `engines`
+  in the root `package.json`; do not duplicate version numbers in instructions.
+- TypeScript is strict across the workspace.

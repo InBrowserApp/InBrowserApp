@@ -1,0 +1,4 @@
+{
+  "name": "Media Info Viewer",
+  "description": "View codecs, bitrate, duration, resolution and frame rate for MP4, MOV, MKV, WebM, AVI, MP3, FLAC and WAV. Inspect audio languages, channels and sample rates, plus subtitle tracks. Copy reports or export JSON locally."
+}

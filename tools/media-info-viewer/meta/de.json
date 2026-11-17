@@ -1,0 +1,4 @@
+{
+  "name": "Medieninfo-Betrachter",
+  "description": "Codecs, Bitrate, Dauer, Auflösung und Bildrate von MP4, MOV, MKV, WebM, AVI, MP3, FLAC und WAV anzeigen. Sprachangaben von Audiospuren, Kanäle, Abtastraten und Untertitelspuren prüfen. Berichte kopieren oder JSON lokal exportieren."
+}

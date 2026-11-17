@@ -70,14 +70,18 @@ tools/
 
 ## Tool-local vs shared code
 
-Default to tool-local code. Promote logic into `packages/lib/*` only when all of the following are true:
+Default to tool-local code. Consider promoting logic into `packages/lib/*` when
+shared ownership improves correctness or maintenance. Evaluate:
 
-1. The code is used by at least three tools, or it is correctness-sensitive enough to justify central ownership.
+1. Actual reuse, likely divergence, or correctness-sensitive behavior that benefits from central ownership. Reuse count is evidence, not a fixed threshold.
 2. The code is framework-free and UI-free.
 3. The code has a clear domain boundary such as `image`, `dns`, `uuid`, or `encoding`.
 4. Central ownership lowers long-term maintenance cost more than duplication does.
 
-Anything that is primarily page composition, copy loading, markdown section layout, form state, interaction flow, or one-off helper logic should stay inside the tool directory.
+Tool-specific composition, copy loading, form state, and interaction logic
+usually stay local. A recurring presentation pattern may belong in `packages/ui`;
+framework-free domain logic belongs in `packages/lib/*`. Choose ownership for
+the actual responsibility while preserving the enforced import boundaries.
 
 ## Enforcement
 

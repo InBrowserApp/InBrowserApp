@@ -1,0 +1,4 @@
+{
+  "name": ".env-converter",
+  "description": "Converteer .env-bestanden naar JSON of YAML en terug, met controles op dubbele sleutels en aanhalingstekens."
+}

@@ -2,9 +2,13 @@
 
 Configuration is read from `components.json`.
 
-> **IMPORTANT:** Always run commands using the project's package runner: `npx shadcn@latest`, `pnpm dlx shadcn@latest`, or `bunx --bun shadcn@latest`. Check `packageManager` from project context to choose the right one. Examples below use `npx shadcn@latest` but substitute the correct runner for the project.
+> Use the project package manager and a CLI version appropriate to the task.
+> In this repo, start with `pnpm exec shadcn` from `packages/ui`. The upstream
+> `npx shadcn@latest` examples below illustrate command syntax.
 
-> **IMPORTANT:** Only use the flags documented below. Do not invent or guess flags — if a flag isn't listed here, it doesn't exist. The CLI auto-detects the package manager from the project's lockfile; there is no `--package-manager` flag.
+> This reference is a snapshot. Check the installed CLI help for current flags
+> when uncertain; absence from this document does not establish that a flag is
+> unavailable. The CLI normally detects the package manager from the lockfile.
 
 ## Contents
 
@@ -44,7 +48,9 @@ Initializes shadcn/ui in an existing project or creates a new project (when `--n
 
 ### `add` — Add components
 
-> **IMPORTANT:** To compare local components against upstream or to preview changes, ALWAYS use `npx shadcn@latest add <component> --dry-run`, `--diff`, or `--view`. NEVER fetch raw files from GitHub or other sources manually. The CLI handles registry resolution, file paths, and CSS diffing automatically.
+> CLI `add --dry-run`, `--diff`, and `--view` are useful for project-aware
+> previews because they resolve registry paths and CSS changes. Direct source
+> inspection is also useful when troubleshooting or comparing a specific version.
 
 ```bash
 npx shadcn@latest add [components...] [options]
@@ -99,11 +105,11 @@ npx shadcn@latest add button --diff globals.css
 - When checking what CSS changes would be made to `globals.css` — use `--diff globals.css`.
 - When the user asks to review or audit third-party registry code before installing — use `--view` to inspect the source.
 
-> **`npx shadcn@latest add --dry-run` vs `npx shadcn@latest view`:** Prefer `npx shadcn@latest add --dry-run/--diff/--view` over `npx shadcn@latest view` when the user wants to preview changes to their project. `npx shadcn@latest view` only shows raw registry metadata. `npx shadcn@latest add --dry-run` shows exactly what would happen in the user's project: resolved file paths, diffs against existing files, and CSS updates. Use `npx shadcn@latest view` only when the user wants to browse registry info without a project context.
+> **`npx shadcn@latest add --dry-run` vs `npx shadcn@latest view`:** Prefer `npx shadcn@latest add --dry-run/--diff/--view` over `npx shadcn@latest view` when the user wants to preview changes to their project. `npx shadcn@latest view` only shows raw registry metadata. `npx shadcn@latest add --dry-run` shows exactly what would happen in the user's project: resolved file paths, diffs against existing files, and CSS updates. `view` is useful for browsing registry metadata, with or without a project context.
 
 #### Smart Merge from Upstream
 
-See [Updating Components in SKILL.md](./SKILL.md#updating-components) for the full workflow.
+See [Component updates in SKILL.md](./SKILL.md#add-update-or-change-presets) for the full workflow.
 
 ### `search` — Search registries
 
@@ -154,7 +160,8 @@ Some components include an `api` link to the underlying library (e.g. `cmdk` for
 
 ### `diff` — Check for updates
 
-Do not use this command. Use `npx shadcn@latest add --diff` instead.
+Prefer `add --diff` for project-aware comparisons. Check the installed CLI help
+if another command is needed for a particular version or workflow.
 
 ### `info` — Project information
 
@@ -244,14 +251,20 @@ Three ways to specify a preset via `--preset`:
 2. **Code:** `--preset a2r6bw` (base62 string, starts with lowercase `a`)
 3. **URL:** `--preset "https://ui.shadcn.com/init?base=radix&style=nova&..."`
 
-> **IMPORTANT:** Never try to decode, fetch, or resolve preset codes manually. Preset codes are opaque — pass them directly to `npx shadcn@latest init --preset <code>` and let the CLI handle resolution.
+> Preset codes are opaque inputs to `init --preset <code>`. CLI resolution is
+> the supported starting point; inspect its output or source when diagnosing a
+> resolution problem rather than guessing what a code means.
 
 ## Switching Presets
 
-Ask the user first: **reinstall**, **merge**, or **skip** existing components?
+Compare **reinstall**, **merge**, or **skip** against the requested outcome and
+local customizations. Make routine choices within existing authorization; ask
+about a concrete unresolved loss of local work after inspecting the diff.
 
 - **Re-install** → `npx shadcn@latest init --preset <code> --force --reinstall`. Overwrites all component files with the new preset styles. Use when the user hasn't customized components.
-- **Merge** → `npx shadcn@latest init --preset <code> --force --no-reinstall`, then run `npx shadcn@latest info` to get the list of installed components and use the [smart merge workflow](./SKILL.md#updating-components) to update them one by one, preserving local changes. Use when the user has customized components.
+- **Merge** → `npx shadcn@latest init --preset <code> --force --no-reinstall`, then run `npx shadcn@latest info` to get the list of installed components and use the [smart merge workflow](./SKILL.md#add-update-or-change-presets) to update them one by one, preserving local changes. Use when the user has customized components.
 - **Skip** → `npx shadcn@latest init --preset <code> --force --no-reinstall`. Only updates config and CSS variables, leaves existing components as-is.
 
-Always run preset commands inside the user's project directory. The CLI automatically preserves the current base (`base` vs `radix`) from `components.json`. If you must use a scratch/temp directory (e.g. for `--dry-run` comparisons), pass `--base <current-base>` explicitly — preset codes do not encode the base.
+Run preset changes in the intended project so the CLI reads its configuration.
+For a scratch comparison, provide the relevant base explicitly: preset codes
+do not encode whether the project uses Base or Radix.

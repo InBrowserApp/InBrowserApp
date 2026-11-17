@@ -4613,6 +4613,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "cbor-messagepack-converter",
+    category: "json",
+    icon: "binary",
+    tags: [
+      "cbor",
+      "messagepack",
+      "msgpack",
+      "json",
+      "binary",
+      "hex",
+      "base64",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل CBOR / MessagePack",
+        description:
+          "حوّل JSON إلى CBOR أو MessagePack لتصحيح أخطاء API. فك ترميز Hex أو Base64 أو Base64URL أو الملفات الثنائية، ثم انسخ النتائج أو نزّلها محليًا في متصفحك.",
+      },
+      de: {
+        name: "CBOR- / MessagePack-Konverter",
+        description:
+          "JSON für die API-Fehlersuche in CBOR oder MessagePack umwandeln. Hex, Base64, Base64URL oder Binärdateien dekodieren und Ergebnisse lokal im Browser kopieren oder herunterladen.",
+      },
+      en: {
+        name: "CBOR / MessagePack Converter",
+        description:
+          "Convert JSON to CBOR or MessagePack for API debugging. Decode Hex, Base64, Base64URL or binary files, then copy or download results locally in your browser.",
+      },
+      es: {
+        name: "Conversor CBOR / MessagePack",
+        description:
+          "Convierte JSON a CBOR o MessagePack para depurar API. Decodifica Hex, Base64, Base64URL o archivos binarios y copia o descarga los resultados localmente en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur CBOR / MessagePack",
+        description:
+          "Convertissez du JSON en CBOR ou MessagePack pour déboguer vos API. Décodez Hex, Base64, Base64URL ou des fichiers binaires, puis copiez ou téléchargez les résultats localement dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר CBOR / MessagePack",
+        description:
+          "המרת JSON ל-CBOR או ל-MessagePack לצורך ניפוי שגיאות ב-API. פענוח Hex, Base64, Base64URL או קבצים בינריים, והעתקה או הורדה של התוצאות מקומית בדפדפן.",
+      },
+      hi: {
+        name: "CBOR / MessagePack कन्वर्टर",
+        description:
+          "API की डीबगिंग के लिए JSON को CBOR या MessagePack में बदलें। Hex, Base64, Base64URL या बाइनरी फ़ाइलें डिकोड करें, फिर परिणाम अपने ब्राउज़र में स्थानीय रूप से कॉपी या डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter CBOR / MessagePack",
+        description:
+          "Konversi JSON ke CBOR atau MessagePack untuk debugging API. Dekode Hex, Base64, Base64URL, atau berkas biner, lalu salin atau unduh hasilnya secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Convertitore CBOR / MessagePack",
+        description:
+          "Converti JSON in CBOR o MessagePack per il debug delle API. Decodifica Hex, Base64, Base64URL o file binari, poi copia o scarica i risultati localmente nel browser.",
+      },
+      ja: {
+        name: "CBOR / MessagePack 変換ツール",
+        description:
+          "API のデバッグ用に JSON を CBOR または MessagePack に変換します。16 進数、Base64、Base64URL、バイナリファイルをデコードし、ブラウザー内で結果をコピーまたはダウンロードできます。",
+      },
+      ko: {
+        name: "CBOR / MessagePack 변환기",
+        description:
+          "API 디버깅을 위해 JSON을 CBOR 또는 MessagePack으로 변환하세요. Hex, Base64, Base64URL 또는 바이너리 파일을 디코딩하고 브라우저에서 로컬로 결과를 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Penukar CBOR / MessagePack",
+        description:
+          "Tukar JSON kepada CBOR atau MessagePack untuk menyahpepijat API. Nyahkod Hex, Base64, Base64URL atau fail binari, kemudian salin atau muat turun hasil secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "CBOR / MessagePack-converter",
+        description:
+          "Zet JSON om naar CBOR of MessagePack om API’s te debuggen. Decodeer Hex, Base64, Base64URL of binaire bestanden en kopieer of download de resultaten lokaal in je browser.",
+      },
+      no: {
+        name: "CBOR / MessagePack-konverterer",
+        description:
+          "Konverter JSON til CBOR eller MessagePack for API-feilsøking. Dekod Hex, Base64, Base64URL eller binærfiler, og kopier eller last ned resultatene lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter CBOR / MessagePack",
+        description:
+          "Konwertuj JSON na CBOR lub MessagePack do debugowania API. Dekoduj Hex, Base64, Base64URL lub pliki binarne, a następnie kopiuj lub pobieraj wyniki lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de CBOR / MessagePack",
+        description:
+          "Converta JSON para CBOR ou MessagePack para depurar APIs. Decodifique Hex, Base64, Base64URL ou arquivos binários e copie ou baixe os resultados localmente no navegador.",
+      },
+      ru: {
+        name: "Конвертер CBOR / MessagePack",
+        description:
+          "Преобразуйте JSON в CBOR или MessagePack для отладки API. Декодируйте Hex, Base64, Base64URL или двоичные файлы, затем копируйте или скачивайте результаты локально в браузере.",
+      },
+      sv: {
+        name: "CBOR / MessagePack-konverterare",
+        description:
+          "Konvertera JSON till CBOR eller MessagePack för API-felsökning. Avkoda Hex, Base64, Base64URL eller binära filer och kopiera eller ladda ned resultat lokalt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลง CBOR / MessagePack",
+        description:
+          "แปลง JSON เป็น CBOR หรือ MessagePack เพื่อดีบัก API ถอดรหัส Hex, Base64, Base64URL หรือไฟล์ไบนารี แล้วคัดลอกหรือดาวน์โหลดผลลัพธ์ภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "CBOR / MessagePack Dönüştürücü",
+        description:
+          "API hata ayıklama için JSON'u CBOR veya MessagePack'e dönüştürün. Hex, Base64, Base64URL veya ikili dosyaları çözün; sonuçları tarayıcınızda yerel olarak kopyalayın ya da indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CBOR / MessagePack",
+        description:
+          "Chuyển JSON sang CBOR hoặc MessagePack để gỡ lỗi API. Giải mã Hex, Base64, Base64URL hoặc tệp nhị phân, rồi sao chép hoặc tải kết quả xuống ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "CBOR / MessagePack 转换器",
+        description:
+          "将 JSON 转换为 CBOR 或 MessagePack，辅助接口调试。解码 Hex、Base64、Base64URL 或二进制文件，然后在浏览器本地复制或下载结果。",
+      },
+      "zh-TW": {
+        name: "CBOR / MessagePack 轉換器",
+        description:
+          "將 JSON 轉換為 CBOR 或 MessagePack，協助 API 除錯。解碼 Hex、Base64、Base64URL 或二進位檔案，並在瀏覽器本機複製或下載結果。",
+      },
+    },
+  },
+  {
     slug: "cbz-reader",
     category: "image",
     icon: "image",
@@ -9781,6 +9913,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "env-converter",
+    category: "developer",
+    icon: "file-cog",
+    tags: [
+      "env",
+      "dotenv",
+      "json",
+      "yaml",
+      "converter",
+      "environment",
+      "config",
+      "devops",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل .env",
+        description:
+          "حوّل ملفات .env إلى JSON أو YAML والعكس، مع فحص المفاتيح المكررة وعلامات الاقتباس.",
+      },
+      de: {
+        name: ".env-Konverter",
+        description:
+          "Konvertieren Sie .env-Dateien in JSON oder YAML und zurück, mit Prüfung auf doppelte Schlüssel und fehlerhafte Anführungszeichen.",
+      },
+      en: {
+        name: ".env Converter",
+        description:
+          "Convert .env files to JSON or YAML and back, with duplicate key and quote checks.",
+      },
+      es: {
+        name: "Conversor de .env",
+        description:
+          "Convierte archivos .env a JSON o YAML y viceversa, con comprobaciones de claves duplicadas y comillas.",
+      },
+      fr: {
+        name: "Convertisseur .env",
+        description:
+          "Convertissez des fichiers .env en JSON ou YAML et inversement, avec vérification des clés en double et des guillemets.",
+      },
+      he: {
+        name: "ממיר .env",
+        description:
+          "המרת קובצי .env ל־JSON או YAML ובחזרה, עם בדיקת מפתחות כפולים ובעיות במירכאות.",
+      },
+      hi: {
+        name: ".env कन्वर्टर",
+        description:
+          "दोहराई गई कुंजियों और उद्धरण चिह्नों की जाँच के साथ .env फ़ाइलों को JSON या YAML में और वापस बदलें।",
+      },
+      id: {
+        name: "Konverter .env",
+        description:
+          "Konversi file .env ke JSON atau YAML dan sebaliknya, dengan pemeriksaan kunci duplikat dan masalah tanda kutip.",
+      },
+      it: {
+        name: "Convertitore .env",
+        description:
+          "Converti file .env in JSON o YAML e viceversa, con controlli sulle chiavi duplicate e sulle virgolette.",
+      },
+      ja: {
+        name: ".env 変換ツール",
+        description:
+          ".env と JSON または YAML を相互変換し、キーの重複や引用符の問題をチェックします。",
+      },
+      ko: {
+        name: ".env 변환기",
+        description:
+          ".env 파일을 JSON 또는 YAML로 상호 변환하고 중복 키와 따옴표 문제를 검사합니다.",
+      },
+      ms: {
+        name: "Penukar .env",
+        description:
+          "Tukar fail .env kepada JSON atau YAML dan sebaliknya, dengan semakan kunci pendua dan tanda petik.",
+      },
+      nl: {
+        name: ".env-converter",
+        description:
+          "Converteer .env-bestanden naar JSON of YAML en terug, met controles op dubbele sleutels en aanhalingstekens.",
+      },
+      no: {
+        name: ".env-konverterer",
+        description:
+          "Konverter .env-filer til JSON eller YAML og tilbake, med kontroll av dupliserte nøkler og anførselstegn.",
+      },
+      pl: {
+        name: "Konwerter .env",
+        description:
+          "Konwertuj pliki .env na JSON lub YAML i odwrotnie, ze sprawdzaniem powtórzonych kluczy i cudzysłowów.",
+      },
+      pt: {
+        name: "Conversor .env",
+        description:
+          "Converta arquivos .env para JSON ou YAML e vice-versa, com verificação de chaves duplicadas e aspas.",
+      },
+      ru: {
+        name: "Конвертер .env",
+        description:
+          "Преобразуйте файлы .env в JSON или YAML и обратно с проверкой повторяющихся ключей и кавычек.",
+      },
+      sv: {
+        name: ".env-konverterare",
+        description:
+          "Konvertera .env-filer till JSON eller YAML och tillbaka, med kontroll av duplicerade nycklar och citattecken.",
+      },
+      th: {
+        name: "ตัวแปลง .env",
+        description:
+          "แปลงไฟล์ .env เป็น JSON หรือ YAML และแปลงกลับ พร้อมตรวจสอบคีย์ซ้ำและเครื่องหมายคำพูด",
+      },
+      tr: {
+        name: ".env Dönüştürücü",
+        description:
+          ".env dosyalarını JSON veya YAML biçimine ve geri dönüştürün; yinelenen anahtarları ve tırnak sorunlarını kontrol edin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi .env",
+        description:
+          "Chuyển đổi tệp .env sang JSON hoặc YAML và ngược lại, đồng thời kiểm tra khóa trùng và lỗi dấu nháy.",
+      },
+      "zh-CN": {
+        name: ".env 转换器",
+        description:
+          "在 .env 与 JSON 或 YAML 之间转换，并检查重复键和引号问题。",
+      },
+      "zh-TW": {
+        name: ".env 轉換器",
+        description:
+          "將 .env 檔案與 JSON 或 YAML 相互轉換，並檢查重複鍵名和引號問題。",
+      },
+    },
+  },
+  {
     slug: "epub-reader",
     category: "document",
     icon: "book-open",
@@ -13251,6 +13515,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "圖片調色盤擷取器",
         description:
           "從圖片擷取主要色彩，並將調色盤匯出為 HEX、CSS 變數或 JSON。",
+      },
+    },
+  },
+  {
+    slug: "image-redactor",
+    category: "image",
+    icon: "eye-off",
+    tags: [
+      "image",
+      "privacy",
+      "redact",
+      "blur",
+      "mosaic",
+      "pixelate",
+      "censor",
+    ],
+    locales: {
+      ar: {
+        name: "أداة إخفاء معلومات الصور",
+        description:
+          "موّه الوجوه أو بكسلها، وغطِّ النصوص الخاصة في لقطات الشاشة والصور. عدّل محليًا في متصفحك وصدّر بصيغة PNG أو JPEG أو WebP.",
+      },
+      de: {
+        name: "Bilder schwärzen",
+        description:
+          "Zeichne Gesichter weich oder verpixle sie und verdecke private Texte in Screenshots und Fotos. Bearbeite Bilder lokal im Browser und exportiere sie als PNG, JPEG oder WebP.",
+      },
+      en: {
+        name: "Image Redactor",
+        description:
+          "Blur or pixelate faces and cover private text in screenshots and photos. Edit locally in your browser and export PNG, JPEG, or WebP.",
+      },
+      es: {
+        name: "Ocultador de información en imágenes",
+        description:
+          "Desenfoca o pixela rostros y oculta texto privado en capturas de pantalla y fotos. Edita localmente en tu navegador y exporta en PNG, JPEG o WebP.",
+      },
+      fr: {
+        name: "Masquage d’images",
+        description:
+          "Floutez ou pixellisez les visages et masquez le texte confidentiel dans les captures d’écran et les photos. Modifiez vos images localement dans votre navigateur et exportez-les en PNG, JPEG ou WebP.",
+      },
+      he: {
+        name: "כלי להסתרת מידע בתמונות",
+        description:
+          "טשטוש או פיקסול פנים וכיסוי טקסט פרטי בצילומי מסך ובתמונות. עריכה מקומית בדפדפן וייצוא ל־PNG, JPEG או WebP.",
+      },
+      hi: {
+        name: "इमेज में जानकारी छिपाने का टूल",
+        description:
+          "स्क्रीनशॉट और फ़ोटो में चेहरों को धुंधला या पिक्सेलेट करें और निजी टेक्स्ट ढकें। अपने ब्राउज़र में स्थानीय रूप से संपादित करें और PNG, JPEG या WebP में एक्सपोर्ट करें।",
+      },
+      id: {
+        name: "Penyensor Gambar",
+        description:
+          "Buramkan atau beri efek pikselasi pada wajah dan tutupi teks pribadi dalam tangkapan layar dan foto. Edit secara lokal di browser Anda dan ekspor PNG, JPEG, atau WebP.",
+      },
+      it: {
+        name: "Oscuratore di immagini",
+        description:
+          "Sfoca o pixelizza i volti e copri il testo privato in schermate e foto. Modifica localmente nel browser ed esporta in PNG, JPEG o WebP.",
+      },
+      ja: {
+        name: "画像の情報隠しツール",
+        description:
+          "スクリーンショットや写真の顔をぼかしやモザイクで隠し、個人情報を含む文字を覆えます。ブラウザー内でローカルに編集し、PNG、JPEG、WebPで書き出せます。",
+      },
+      ko: {
+        name: "이미지 가리기 도구",
+        description:
+          "스크린샷과 사진 속 얼굴에 흐림이나 픽셀화 효과를 적용하고 민감한 텍스트를 가리세요. 브라우저에서 로컬로 편집하고 PNG, JPEG 또는 WebP로 내보내세요.",
+      },
+      ms: {
+        name: "Penutup Maklumat Imej",
+        description:
+          "Kaburkan atau pikselkan wajah dan tutup teks peribadi dalam tangkapan skrin dan foto. Sunting secara setempat dalam pelayar anda dan eksport PNG, JPEG atau WebP.",
+      },
+      nl: {
+        name: "Afbeeldingen afschermen",
+        description:
+          "Vervaag of pixeleer gezichten en scherm privétekst af in schermafbeeldingen en foto's. Bewerk lokaal in je browser en exporteer als PNG, JPEG of WebP.",
+      },
+      no: {
+        name: "Bildesladding",
+        description:
+          "Gjør ansikter uskarpe eller pikseler dem, og dekk til privat tekst i skjermbilder og bilder. Rediger lokalt i nettleseren og eksporter PNG, JPEG eller WebP.",
+      },
+      pl: {
+        name: "Anonimizator obrazów",
+        description:
+          "Rozmywaj lub pikselizuj twarze i zakrywaj poufny tekst na zrzutach ekranu i zdjęciach. Edytuj lokalnie w przeglądarce i eksportuj do PNG, JPEG lub WebP.",
+      },
+      pt: {
+        name: "Ocultador de informações em imagens",
+        description:
+          "Desfoque ou pixelize rostos e oculte textos confidenciais em capturas de tela e fotos. Edite localmente no navegador e exporte em PNG, JPEG ou WebP.",
+      },
+      ru: {
+        name: "Скрытие данных на изображении",
+        description:
+          "Размывайте или пикселизируйте лица и скрывайте конфиденциальный текст на снимках экрана и фото. Редактируйте локально в браузере и экспортируйте в PNG, JPEG или WebP.",
+      },
+      sv: {
+        name: "Bildmaskering",
+        description:
+          "Gör ansikten oskarpa eller pixelerade och täck över privat text i skärmbilder och foton. Redigera lokalt i webbläsaren och exportera som PNG, JPEG eller WebP.",
+      },
+      th: {
+        name: "เครื่องมือปิดบังข้อมูลในรูปภาพ",
+        description:
+          "เบลอหรือทำเป็นพิกเซลบนใบหน้า และปิดบังข้อความส่วนตัวในภาพหน้าจอและภาพถ่าย แก้ไขในเบราว์เซอร์บนอุปกรณ์ของคุณ แล้วส่งออกเป็น PNG, JPEG หรือ WebP",
+      },
+      tr: {
+        name: "Görselde Bilgi Gizleme",
+        description:
+          "Ekran görüntüleri ve fotoğraflarda yüzleri bulanıklaştırın veya pikselleştirin, özel metinlerin üzerini kapatın. Tarayıcınızda yerel olarak düzenleyin ve PNG, JPEG veya WebP olarak dışa aktarın.",
+      },
+      vi: {
+        name: "Công cụ che thông tin trong ảnh",
+        description:
+          "Làm mờ hoặc điểm ảnh hóa khuôn mặt và che văn bản riêng tư trong ảnh chụp màn hình và ảnh chụp. Chỉnh sửa ngay trên thiết bị bằng trình duyệt rồi xuất PNG, JPEG hoặc WebP.",
+      },
+      "zh-CN": {
+        name: "图片打码器",
+        description:
+          "为截图和照片中的人脸添加模糊或马赛克，遮盖隐私文字。在浏览器本地编辑，导出为 PNG、JPEG 或 WebP。",
+      },
+      "zh-TW": {
+        name: "圖片隱私遮蔽工具",
+        description:
+          "模糊或像素化螢幕截圖與相片中的人臉，並遮住私密文字。在瀏覽器中本機編輯，並匯出為 PNG、JPEG 或 WebP。",
       },
     },
   },
@@ -18476,6 +18871,137 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
         name: "MD5 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 MD5 雜湊值。更適合遺留系統相容與非安全關鍵的完整性檢查。",
+      },
+    },
+  },
+  {
+    slug: "media-info-viewer",
+    category: "misc",
+    icon: "file-text",
+    tags: [
+      "audio",
+      "video",
+      "media",
+      "metadata",
+      "codec",
+      "bitrate",
+      "mediainfo",
+    ],
+    locales: {
+      ar: {
+        name: "عارض معلومات الوسائط",
+        description:
+          "اعرض أنواع الترميز ومعدل البت والمدة والدقة ومعدل الإطارات لملفات MP4 وMOV وMKV وWebM وAVI وMP3 وFLAC وWAV. افحص لغات المسارات الصوتية وقنواتها ومعدلات أخذ العينات، إلى جانب مسارات الترجمة. انسخ التقارير أو صدّر JSON محليًا.",
+      },
+      de: {
+        name: "Medieninfo-Betrachter",
+        description:
+          "Codecs, Bitrate, Dauer, Auflösung und Bildrate von MP4, MOV, MKV, WebM, AVI, MP3, FLAC und WAV anzeigen. Sprachangaben von Audiospuren, Kanäle, Abtastraten und Untertitelspuren prüfen. Berichte kopieren oder JSON lokal exportieren.",
+      },
+      en: {
+        name: "Media Info Viewer",
+        description:
+          "View codecs, bitrate, duration, resolution and frame rate for MP4, MOV, MKV, WebM, AVI, MP3, FLAC and WAV. Inspect audio languages, channels and sample rates, plus subtitle tracks. Copy reports or export JSON locally.",
+      },
+      es: {
+        name: "Visor de información multimedia",
+        description:
+          "Consulta los códecs, la tasa de bits, la duración, la resolución y los fotogramas por segundo de archivos MP4, MOV, MKV, WebM, AVI, MP3, FLAC y WAV. Examina los idiomas, los canales y las frecuencias de muestreo del audio, así como las pistas de subtítulos. Copia informes o exporta JSON de forma local.",
+      },
+      fr: {
+        name: "Visionneuse d’informations multimédias",
+        description:
+          "Consultez les codecs, le débit, la durée, la résolution et la fréquence d’images des fichiers MP4, MOV, MKV, WebM, AVI, MP3, FLAC et WAV. Examinez les langues, les canaux et les fréquences d’échantillonnage des pistes audio, ainsi que les pistes de sous-titres. Copiez les rapports ou exportez le JSON localement.",
+      },
+      he: {
+        name: "מציג פרטי מדיה",
+        description:
+          "צפייה בקודקים, קצב סיביות, משך, רזולוציה וקצב פריימים של MP4, MOV, MKV, WebM, AVI, MP3, FLAC ו-WAV. בדיקת שפות רצועות שמע, ערוצים וקצבי דגימה, לצד רצועות כתוביות. העתקת דוחות או ייצוא JSON באופן מקומי.",
+      },
+      hi: {
+        name: "मीडिया जानकारी व्यूअर",
+        description:
+          "MP4, MOV, MKV, WebM, AVI, MP3, FLAC और WAV के कोडेक, बिटरेट, अवधि, रिज़ॉल्यूशन और फ़्रेम दर देखें। ऑडियो के भाषा टैग, चैनल और सैंपल दर के साथ उपशीर्षक ट्रैक की जाँच करें। रिपोर्ट कॉपी करें या स्थानीय रूप से JSON निर्यात करें।",
+      },
+      id: {
+        name: "Penampil Info Media",
+        description:
+          "Lihat codec, bitrate, durasi, resolusi, dan laju bingkai untuk MP4, MOV, MKV, WebM, AVI, MP3, FLAC, dan WAV. Periksa bahasa audio, kanal, dan laju sampel, serta trek subtitel. Salin laporan atau ekspor JSON secara lokal.",
+      },
+      it: {
+        name: "Visualizzatore di informazioni audio e video",
+        description:
+          "Visualizza codec, bitrate, durata, risoluzione e frequenza fotogrammi di file MP4, MOV, MKV, WebM, AVI, MP3, FLAC e WAV. Esamina lingue, canali e frequenze di campionamento delle tracce audio, oltre alle tracce di sottotitoli. Copia i rapporti o esporta JSON in locale.",
+      },
+      ja: {
+        name: "音声・動画情報ビューアー",
+        description:
+          "MP4、MOV、MKV、WebM、AVI、MP3、FLAC、WAV のコーデック、ビットレート、再生時間、解像度、フレームレートを確認できます。音声の言語、チャンネル数、サンプリングレートや字幕トラックも確認でき、端末内でレポートのコピーや JSON の書き出しができます。",
+      },
+      ko: {
+        name: "미디어 정보 뷰어",
+        description:
+          "MP4, MOV, MKV, WebM, AVI, MP3, FLAC, WAV 파일의 코덱, 비트레이트, 재생 시간, 해상도, 프레임 레이트를 확인하세요. 오디오 트랙의 언어, 채널 수, 샘플링 레이트와 자막 트랙도 살펴볼 수 있습니다. 기기에서 보고서를 복사하거나 JSON으로 내보내세요.",
+      },
+      ms: {
+        name: "Pemapar Maklumat Media",
+        description:
+          "Lihat kodek, kadar bit, tempoh, resolusi dan kadar bingkai untuk MP4, MOV, MKV, WebM, AVI, MP3, FLAC dan WAV. Periksa bahasa audio, saluran dan kadar pensampelan serta trek sari kata. Salin laporan atau eksport JSON secara setempat.",
+      },
+      nl: {
+        name: "Media-informatieviewer",
+        description:
+          "Bekijk codecs, bitrate, duur, resolutie en beeldsnelheid van MP4, MOV, MKV, WebM, AVI, MP3, FLAC en WAV. Controleer audiotalen, kanalen, samplefrequenties en ondertitelsporen. Kopieer rapporten of exporteer JSON lokaal.",
+      },
+      no: {
+        name: "Medieinformasjonsviser",
+        description:
+          "Se kodeker, bithastighet, varighet, oppløsning og bildefrekvens for MP4, MOV, MKV, WebM, AVI, MP3, FLAC og WAV. Undersøk lydsporenes språk, kanaler og samplingsfrekvenser samt undertekstspor. Kopier rapporter eller eksporter JSON lokalt.",
+      },
+      pl: {
+        name: "Przeglądarka informacji o multimediach",
+        description:
+          "Sprawdzaj kodeki, przepływność, czas trwania, rozdzielczość i liczbę klatek na sekundę w plikach MP4, MOV, MKV, WebM, AVI, MP3, FLAC i WAV. Sprawdzaj języki, kanały i częstotliwość próbkowania ścieżek audio oraz ścieżki napisów. Kopiuj raporty lub eksportuj JSON lokalnie.",
+      },
+      pt: {
+        name: "Visualizador de informações de mídia",
+        description:
+          "Veja codecs, taxa de bits, duração, resolução e taxa de quadros de arquivos MP4, MOV, MKV, WebM, AVI, MP3, FLAC e WAV. Inspecione idiomas, canais e taxas de amostragem de áudio, além das faixas de legenda. Copie relatórios ou exporte JSON localmente.",
+      },
+      ru: {
+        name: "Просмотр информации о медиафайлах",
+        description:
+          "Просматривайте кодеки, битрейт, длительность, разрешение и частоту кадров в MP4, MOV, MKV, WebM, AVI, MP3, FLAC и WAV. Изучайте языки, каналы и частоту дискретизации аудиодорожек, а также дорожки субтитров. Копируйте отчёты или сохраняйте JSON локально.",
+      },
+      sv: {
+        name: "Visare för medieinformation",
+        description:
+          "Visa kodekar, bithastighet, längd, upplösning och bildfrekvens för MP4, MOV, MKV, WebM, AVI, MP3, FLAC och WAV. Granska ljudspårens språk, kanaler och samplingsfrekvenser samt undertextspår. Kopiera rapporter eller exportera JSON lokalt.",
+      },
+      th: {
+        name: "โปรแกรมดูข้อมูลเสียงและวิดีโอ",
+        description:
+          "ดูตัวแปลงสัญญาณ บิตเรต ระยะเวลา ความละเอียด และอัตราเฟรมของไฟล์ MP4, MOV, MKV, WebM, AVI, MP3, FLAC และ WAV ตรวจสอบภาษา ช่องสัญญาณ และอัตราสุ่มตัวอย่างของเสียง รวมถึงแทร็กคำบรรยาย คัดลอกรายงานหรือส่งออก JSON ภายในอุปกรณ์ของคุณ",
+      },
+      tr: {
+        name: "Medya Bilgisi Görüntüleyici",
+        description:
+          "MP4, MOV, MKV, WebM, AVI, MP3, FLAC ve WAV dosyalarının kodeklerini, bit hızını, süresini, çözünürlüğünü ve kare hızını görüntüleyin. Ses izlerinin dil bilgilerini, kanallarını ve örnekleme hızlarını, ayrıca altyazı izlerini inceleyin. Raporları kopyalayın veya JSON olarak cihazınıza indirin.",
+      },
+      vi: {
+        name: "Trình xem thông tin đa phương tiện",
+        description:
+          "Xem bộ mã hóa/giải mã, tốc độ bit, thời lượng, độ phân giải và tốc độ khung hình của MP4, MOV, MKV, WebM, AVI, MP3, FLAC và WAV. Kiểm tra ngôn ngữ, số kênh và tần số lấy mẫu của âm thanh, cùng các luồng phụ đề. Sao chép báo cáo hoặc xuất JSON ngay trên thiết bị.",
+      },
+      "zh-CN": {
+        name: "音视频信息查看器",
+        description:
+          "查看 MP4、MOV、MKV、WebM、AVI、MP3、FLAC 和 WAV 的编码格式（编解码器）、码率、时长、分辨率及帧率。检查音轨的语言标签、声道数和采样率，以及字幕轨道信息。浏览器本地分析，无需上传；可复制报告或在本地导出 JSON。",
+      },
+      "zh-TW": {
+        name: "影音資訊檢視器",
+        description:
+          "檢視 MP4、MOV、MKV、WebM、AVI、MP3、FLAC 和 WAV 的編解碼器、位元率、長度、解析度與影格率。查看音軌的語言標記、聲道數、取樣率及字幕軌資訊。可在本機複製報告或匯出 JSON。",
       },
     },
   },

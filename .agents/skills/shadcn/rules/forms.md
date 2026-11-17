@@ -1,19 +1,24 @@
 # Forms & Inputs
 
+Choose controls for the user task and the installed component API. The examples
+illustrate common patterns; a simpler accessible composition may fit better.
+Adapt upstream import examples to `@workspace/ui` in this repository.
+
 ## Contents
 
-- Forms use FieldGroup + Field
+- Consider FieldGroup + Field for structured forms
 - InputGroup requires InputGroupInput/InputGroupTextarea
 - Buttons inside inputs use InputGroup + InputGroupAddon
-- Option sets (2–7 choices) use ToggleGroup
+- Choose option controls by their semantics
 - FieldSet + FieldLegend for grouping related fields
 - Field validation and disabled states
 
 ---
 
-## Forms use FieldGroup + Field
+## Consider FieldGroup + Field for structured forms
 
-Always use `FieldGroup` + `Field` — never raw `div` with `space-y-*`:
+`FieldGroup` + `Field` are useful when labels, hints, and validation need consistent
+layout. A simple labeled input or specialized editor may need less structure:
 
 ```tsx
 <FieldGroup>
@@ -28,7 +33,7 @@ Always use `FieldGroup` + `Field` — never raw `div` with `space-y-*`:
 </FieldGroup>
 ```
 
-Use `Field orientation="horizontal"` for settings pages. Use `FieldLabel className="sr-only"` for visually hidden labels.
+Consider `Field orientation="horizontal"` where labels and controls fit side by side. Use `FieldLabel className="sr-only"` for visually hidden labels.
 
 **Choosing form controls:**
 
@@ -38,7 +43,7 @@ Use `Field orientation="horizontal"` for settings pages. Use `FieldLabel classNa
 - Native HTML select (no JS) → `native-select`
 - Boolean toggle → `Switch` (for settings) or `Checkbox` (for forms)
 - Single choice from few options → `RadioGroup`
-- Toggle between 2–5 options → `ToggleGroup` + `ToggleGroupItem`
+- Compact toggle selection → consider `ToggleGroup` + `ToggleGroupItem`
 - OTP/verification code → `InputOTP`
 - Multi-line text → `Textarea`
 
@@ -46,9 +51,11 @@ Use `Field orientation="horizontal"` for settings pages. Use `FieldLabel classNa
 
 ## InputGroup requires InputGroupInput/InputGroupTextarea
 
-Never use raw `Input` or `Textarea` inside an `InputGroup`.
+The provided group inputs supply the slots and styles used by the group for
+focus, borders, and spacing. Use them as the default; a custom control needs
+to preserve the relevant behavior of the installed implementation.
 
-**Incorrect:**
+**Example to evaluate:**
 
 ```tsx
 <InputGroup>
@@ -56,7 +63,7 @@ Never use raw `Input` or `Textarea` inside an `InputGroup`.
 </InputGroup>
 ```
 
-**Correct:**
+**Common alternative:**
 
 ```tsx
 import { InputGroup, InputGroupInput } from "@/components/ui/input-group"
@@ -70,9 +77,11 @@ import { InputGroup, InputGroupInput } from "@/components/ui/input-group"
 
 ## Buttons inside inputs use InputGroup + InputGroupAddon
 
-Never place a `Button` directly inside or adjacent to an `Input` with custom positioning.
+An `InputGroup` keeps inline actions aligned with input spacing and focus states.
+Separate adjacent buttons or custom positioning can also work; check label
+length, keyboard operation, and overlap at narrow widths.
 
-**Incorrect:**
+**Example to evaluate:**
 
 ```tsx
 <div className="relative">
@@ -83,7 +92,7 @@ Never place a `Button` directly inside or adjacent to an `Input` with custom pos
 </div>
 ```
 
-**Correct:**
+**Common alternative:**
 
 ```tsx
 import {
@@ -104,11 +113,15 @@ import {
 
 ---
 
-## Option sets (2–7 choices) use ToggleGroup
+## Choose option controls by their semantics
 
-Don't manually loop `Button` components with active state.
+A `ToggleGroup` provides selection semantics and keyboard behavior for compact
+options. Radios, a select, tabs, or independent buttons may be more suitable
+depending on whether the user chooses a value, switches views, or takes actions.
+If implementing selection with buttons, account for pressed state and keyboard
+behavior rather than relying only on color.
 
-**Incorrect:**
+**Example to evaluate:**
 
 ```tsx
 const [selected, setSelected] = useState("daily")
@@ -126,7 +139,7 @@ const [selected, setSelected] = useState("daily")
 </div>
 ```
 
-**Correct:**
+**Common alternative:**
 
 ```tsx
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
@@ -157,7 +170,8 @@ Combine with `Field` for labelled toggle groups:
 
 ## FieldSet + FieldLegend for grouping related fields
 
-Use `FieldSet` + `FieldLegend` for related checkboxes, radios, or switches — not `div` with a heading:
+`FieldSet` + `FieldLegend` provide semantic grouping for related controls. Native
+`fieldset`/`legend` or another correctly named group can also fit:
 
 ```tsx
 <FieldSet>
@@ -178,7 +192,10 @@ Use `FieldSet` + `FieldLegend` for related checkboxes, radios, or switches — n
 
 ## Field validation and disabled states
 
-Both attributes are needed — `data-invalid`/`data-disabled` styles the field (label, description), while `aria-invalid`/`disabled` styles the control.
+With this field component, `data-invalid`/`data-disabled` controls presentation.
+`aria-invalid` communicates validity and native `disabled` affects interaction.
+Apply the states that reflect actual behavior, and associate useful error text
+with the control. Other compositions may use different styling hooks.
 
 ```tsx
 // Invalid.

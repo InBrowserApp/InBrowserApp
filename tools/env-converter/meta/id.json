@@ -1,0 +1,4 @@
+{
+  "name": "Konverter .env",
+  "description": "Konversi file .env ke JSON atau YAML dan sebaliknya, dengan pemeriksaan kunci duplikat dan masalah tanda kutip."
+}

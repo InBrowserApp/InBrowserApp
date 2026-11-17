@@ -1,28 +1,34 @@
 # Component Composition
 
+Choose the parts that serve the interface. Examples assume particular component
+APIs; inspect the installed source for required context and accepted props.
+Adapt upstream imports through `@workspace/ui` in tool code.
+
 ## Contents
 
-- Items always inside their Group component
-- Callouts use Alert
-- Empty states use Empty component
-- Toast notifications use sonner
+- Group related items when useful or required by their labels
+- Consider Alert for a callout
+- Choose an empty state proportional to the task
+- Choose feedback near the action
 - Choosing between overlay components
-- Dialog, Sheet, and Drawer always need a Title
+- Give overlays accessible names
 - Card structure
 - Button has no isPending or isLoading prop
 - TabsTrigger must be inside TabsList
-- Avatar always needs AvatarFallback
+- Plan for an unavailable avatar image
 - Use Separator instead of raw hr or border divs
 - Use Skeleton for loading placeholders
 - Use Badge instead of custom styled spans
 
 ---
 
-## Items always inside their Group component
+## Group related items when useful or required by their labels
 
-Never render items directly inside the content container.
+Groups are useful for section labels and related options. Some primitives
+require group context for their label component, while ungrouped items may be
+valid. Check the actual primitive instead of wrapping every list automatically.
 
-**Incorrect:**
+**Example to evaluate:**
 
 ```tsx
 <SelectContent>
@@ -31,7 +37,7 @@ Never render items directly inside the content container.
 </SelectContent>
 ```
 
-**Correct:**
+**Common alternative:**
 
 ```tsx
 <SelectContent>
@@ -42,7 +48,7 @@ Never render items directly inside the content container.
 </SelectContent>
 ```
 
-This applies to all group-based components:
+Common grouping relationships to consider:
 
 | Item                                                       | Group               |
 | ---------------------------------------------------------- | ------------------- |
@@ -54,7 +60,7 @@ This applies to all group-based components:
 
 ---
 
-## Callouts use Alert
+## Consider Alert for a callout
 
 ```tsx
 <Alert>
@@ -65,7 +71,7 @@ This applies to all group-based components:
 
 ---
 
-## Empty states use Empty component
+## Choose an empty state proportional to the task
 
 ```tsx
 <Empty>
@@ -84,7 +90,11 @@ This applies to all group-based components:
 
 ---
 
-## Toast notifications use sonner
+## Choose feedback near the action
+
+Inline feedback or a status region is often sufficient. If toasts serve the
+interaction, use an existing shared UI facility or integrate one there. The
+following is an upstream API example, not a tool-level import recommendation:
 
 ```tsx
 import { toast } from "sonner"
@@ -111,9 +121,12 @@ toast("File deleted.", {
 
 ---
 
-## Dialog, Sheet, and Drawer always need a Title
+## Give overlays accessible names
 
-`DialogTitle`, `SheetTitle`, `DrawerTitle` are required for accessibility. Use `className="sr-only"` if visually hidden.
+Dialogs need an accessible name. `DialogTitle`, `SheetTitle`, and `DrawerTitle`
+are the usual way to supply one with these components; a visually hidden title
+can use `className="sr-only"`. If using another naming mechanism, verify it
+against the installed primitive's accessibility and labeling behavior.
 
 ```tsx
 <DialogContent>
@@ -129,7 +142,9 @@ toast("File deleted.", {
 
 ## Card structure
 
-Use full composition — don't dump everything into `CardContent`:
+Use the card parts that have actual content. A header, description, and footer
+are useful when the task calls for them; a content-only card or no card can be
+appropriate. This example shows a fully composed case:
 
 ```tsx
 <Card>
@@ -161,7 +176,9 @@ Compose with `Spinner` + `data-icon` + `disabled`:
 
 ## TabsTrigger must be inside TabsList
 
-Never render `TabsTrigger` directly inside `Tabs` — always wrap in `TabsList`:
+In the Radix composition used here, `TabsList` provides the keyboard-focus group
+context needed by `TabsTrigger`. This is a component dependency, distinct from
+the choice of whether tabs suit a particular tool:
 
 ```tsx
 <Tabs defaultValue="account">
@@ -175,9 +192,11 @@ Never render `TabsTrigger` directly inside `Tabs` — always wrap in `TabsList`:
 
 ---
 
-## Avatar always needs AvatarFallback
+## Plan for an unavailable avatar image
 
-Always include `AvatarFallback` for when the image fails to load:
+`AvatarFallback` is a useful way to preserve an identity cue when the image
+fails. Choose an appropriate text/icon fallback, or a simpler presentation if
+the image is decorative:
 
 ```tsx
 <Avatar>
@@ -188,7 +207,7 @@ Always include `AvatarFallback` for when the image fails to load:
 
 ---
 
-## Use existing components instead of custom markup
+## Consider existing components alongside semantic markup
 
 | Instead of                                         | Use                                  |
 | -------------------------------------------------- | ------------------------------------ |

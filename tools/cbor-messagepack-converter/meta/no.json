@@ -1,0 +1,4 @@
+{
+  "name": "CBOR / MessagePack-konverterer",
+  "description": "Konverter JSON til CBOR eller MessagePack for API-feilsøking. Dekod Hex, Base64, Base64URL eller binærfiler, og kopier eller last ned resultatene lokalt i nettleseren."
+}

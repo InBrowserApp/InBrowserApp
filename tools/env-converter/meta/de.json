@@ -1,0 +1,4 @@
+{
+  "name": ".env-Konverter",
+  "description": "Konvertieren Sie .env-Dateien in JSON oder YAML und zurück, mit Prüfung auf doppelte Schlüssel und fehlerhafte Anführungszeichen."
+}
