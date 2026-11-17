@@ -262,15 +262,14 @@ Workers Versions:
   tag and assets. Draft uploads may be replaced when retrying a failed job.
 - **Production** — publication explicitly calls `deploy.yml` for stable
   releases. Deploy downloads the release archive and runs one `wrangler deploy`
-  using the Wrangler version from that release's catalog. No application build
-  or workspace dependency installation runs during deploy. Prereleases receive
-  release assets but do not deploy to production.
+  with the CLI installed by `cloudflare/wrangler-action`. No source checkout,
+  application build, or workspace dependency installation runs during deploy.
+  Prereleases receive release assets but do not deploy to production.
 
 Draft creation and publication do not trigger the next stage. Dependencies use
 `needs` and `workflow_call`, so publication can use the built-in `GITHUB_TOKEN`.
 Use **Re-run failed jobs** for build/publication failures. To deploy an existing
 version, run `gh workflow run deploy.yml --ref main -f release_tag=vX.Y.Z`.
-Deploy also accepts older archives that contain only the contents of `dist`.
 
 ## Git and PR conventions
 
