@@ -27,6 +27,7 @@ export default function HarAnalyzer({
         onOpen={state.open}
         onExample={() => state.example(m.exampleName)}
         onClear={state.clear}
+        onCancel={state.cancel}
       />
       <div
         aria-live="polite"

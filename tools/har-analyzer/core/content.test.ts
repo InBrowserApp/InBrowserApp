@@ -19,9 +19,9 @@ it("distinguishes missing and empty captured bodies", () => {
     truncated: false,
   })
 })
-it("formats JSON while preserving invalid JSON, plain text, and encoded content", () => {
+it("preserves JSON, invalid JSON, plain text, and encoded content", () => {
   expect(bodyPreview(body('{"ok":true}', "application/json")).text).toBe(
-    '{\n  "ok": true\n}'
+    '{"ok":true}'
   )
   expect(bodyPreview(body("{", "application/json")).text).toBe("{")
   expect(bodyPreview(body("<script>alert(1)</script>")).text).toBe(
@@ -33,15 +33,29 @@ it("formats JSON while preserving invalid JSON, plain text, and encoded content"
     truncated: false,
   })
 })
-it("bounds huge bodies before JSON parsing and after pretty-print expansion", () => {
+it.each([
+  '{"id":9223372036854775807}',
+  '{"fraction":0.10000000000000001,"zero":-0}',
+  '{"key":1,"key":2}',
+  '{"escaped":"\\u003c\\/script\\u003e"}',
+])("preserves the exact recorded JSON text %s", (text) => {
+  expect(bodyPreview(body(text, "application/json"))).toEqual({
+    text,
+    state: "text",
+    truncated: false,
+  })
+})
+it("bounds huge bodies and preserves deeply nested JSON without expansion", () => {
   const huge = "x".repeat(PREVIEW_LIMIT + 1)
   expect(bodyPreview(body(huge, "application/json"))).toEqual({
     text: huge.slice(0, PREVIEW_LIMIT),
     state: "text",
     truncated: true,
   })
-  expect(
-    bodyPreview(body(JSON.stringify(Array(20_000).fill(1)), "application/json"))
-      .truncated
-  ).toBe(true)
+  const nested = "[".repeat(4_000) + "1" + "]".repeat(4_000)
+  expect(bodyPreview(body(nested, "application/json"))).toEqual({
+    text: nested,
+    state: "text",
+    truncated: false,
+  })
 })

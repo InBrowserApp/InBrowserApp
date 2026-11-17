@@ -3,12 +3,14 @@ import type messages from "./messages/en.json"
 export type Messages = typeof messages
 export type ImportError = keyof Messages["errors"]
 export type Pair = Readonly<{ name: string; value: string }>
+export type FormParameter = Pair &
+  Readonly<{ fileName?: string; contentType?: string }>
 export type Phase = keyof Messages["phases"]
 export type Body = Readonly<{
   text: string | null
   mimeType: string
   encoding: string
-  params: readonly Pair[]
+  params: readonly FormParameter[]
 }>
 export type Entry = Readonly<{
   id: number

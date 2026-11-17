@@ -1,4 +1,4 @@
 {
   "name": "HAR-nettverksanalysator",
-  "description": "Undersøk HAR-nettverkslogger lokalt: utforsk fossefalldiagrammer, tidsmålinger, HTTP-hoder og meldingsinnhold i forespørsler og svar for å feilsøke trege eller mislykkede forespørsler."
+  "description": "Analyser HAR-filer lokalt i nettleseren din. Undersøk fossefalldiagrammer, tidsmålinger, HTTP-hoder og registrert meldingsinnhold for å finne årsaker til trege eller mislykkede forespørsler."
 }

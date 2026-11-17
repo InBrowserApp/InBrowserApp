@@ -29,6 +29,7 @@ type Props = {
   onOpen: (file: File) => void
   onExample: () => void
   onClear: () => void
+  onCancel: () => void
 }
 
 export function ImportCard({
@@ -38,6 +39,7 @@ export function ImportCard({
   onOpen,
   onExample,
   onClear,
+  onCancel,
 }: Props) {
   const input = useRef<HTMLInputElement>(null)
   const id = useId()
@@ -56,6 +58,7 @@ export function ImportCard({
           accept=".har,.json,application/json"
           aria-label={m.chooseFile}
           className="sr-only"
+          tabIndex={-1}
           disabled={loading}
           onChange={(event) => {
             const file = event.target.files?.[0]
@@ -129,7 +132,15 @@ export function ImportCard({
             <Play aria-hidden="true" data-icon="inline-start" />
             {m.loadExample}
           </Button>
+          {loading ? (
+            <Button type="button" variant="outline" onClick={onCancel}>
+              {m.cancelImport}
+            </Button>
+          ) : null}
         </div>
+        <p role="status" className="sr-only">
+          {loading ? m.loading : ""}
+        </p>
         <p className="text-sm text-muted-foreground">{m.privacy}</p>
       </ToolPanelCardContent>
     </ToolPanelCard>

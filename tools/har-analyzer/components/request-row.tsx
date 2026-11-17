@@ -1,23 +1,11 @@
-import { Badge } from "@workspace/ui/components/ui/badge"
+import { memo } from "react"
 import { TableRow, TableCell } from "@workspace/ui/components/ui/table"
-import {
-  formatBytes,
-  formatTime,
-  isFailure,
-  requestName,
-} from "../core/analysis"
+import { formatBytes, formatTime, requestName } from "../core/analysis"
+import { StatusBadge } from "./status-badge"
 import { Waterfall } from "./timing"
 import type { Capture, Entry, Messages } from "../types"
 
-function Status({ entry }: { entry: Entry }) {
-  return (
-    <Badge variant={isFailure(entry) ? "destructive" : "secondary"}>
-      {entry.status}
-    </Badge>
-  )
-}
-
-export function RequestRow({
+export const RequestRow = memo(function RequestRow({
   entry,
   capture,
   lang,
@@ -54,13 +42,14 @@ export function RequestRow({
           </span>
           <span className="flex w-full flex-wrap items-center gap-2 font-mono text-[10px] tabular-nums sm:hidden">
             <span>{entry.method}</span>
-            <Status entry={entry} />
+            <StatusBadge entry={entry} />
             <span>{formatTime(entry.duration, lang, "—")}</span>
+            <span>{formatBytes(entry.transferSize, lang, "—")}</span>
           </span>
         </button>
       </TableCell>
       <TableCell className="hidden sm:table-cell">
-        <Status entry={entry} />
+        <StatusBadge entry={entry} />
       </TableCell>
       <TableCell
         title={entry.transferSize === null ? m.unknown : undefined}
@@ -79,4 +68,4 @@ export function RequestRow({
       </TableCell>
     </TableRow>
   )
-}
+})

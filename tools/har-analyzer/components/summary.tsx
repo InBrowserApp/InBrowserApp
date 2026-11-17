@@ -19,8 +19,10 @@ export function Summary({
   let transferred = 0
   let knownSizes = 0
   let failures = 0
+  let completeTimings = true
   for (const item of capture.entries) {
     if (isFailure(item)) failures++
+    if (item.duration === null) completeTimings = false
     if (item.transferSize !== null) {
       transferred += item.transferSize
       knownSizes++
@@ -33,7 +35,10 @@ export function Summary({
       m.transferred,
       formatBytes(knownSizes ? transferred : null, lang, m.unknown),
     ],
-    [m.duration, formatTime(capture.span, lang, m.unknown)],
+    [
+      m.duration,
+      formatTime(completeTimings ? capture.span : null, lang, m.unknown),
+    ],
   ]
   return (
     <div className="flex flex-col gap-3">

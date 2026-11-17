@@ -1,4 +1,4 @@
 {
   "name": "HAR-nätverksanalysator",
-  "description": "Granska HAR-nätverksloggar lokalt: utforska vattenfallsdiagram, tider, HTTP-huvuden och meddelandekroppar i begäranden och svar för att felsöka långsamma eller misslyckade begäranden."
+  "description": "Analysera HAR-filer lokalt i webbläsaren. Granska vattenfallsdiagram, tider, HTTP-huvuden och registrerade meddelandekroppar för att felsöka långsamma eller misslyckade begäranden."
 }

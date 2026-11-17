@@ -13,14 +13,11 @@ import {
 } from "@workspace/ui/components/ui/tabs"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
-import {
-  formatBytes,
-  formatTime,
-  isFailure,
-  requestName,
-} from "../core/analysis"
-import { BodyView, Pairs } from "./fields"
+import { formatBytes, formatTime, requestName } from "../core/analysis"
+import { BodyView } from "./fields"
+import { Pairs } from "./pair-list"
 import { TimingDetails } from "./timing"
+import { StatusBadge } from "./status-badge"
 import type { Capture, Entry, Messages } from "../types"
 
 export function Details({
@@ -71,9 +68,7 @@ export function Details({
           </DialogDescription>
         </DialogHeader>
         <div className="flex min-w-0 flex-wrap items-center gap-2">
-          <Badge variant={isFailure(entry) ? "destructive" : "secondary"}>
-            {entry.status}
-          </Badge>
+          <StatusBadge entry={entry} />
           <Badge variant="outline">{entry.method}</Badge>
           <ToolCopyButton
             value={entry.url}
@@ -120,27 +115,36 @@ export function Details({
               title={m.headers}
               values={entry.request.headers}
               messages={m}
+              lang={lang}
             />
-            <Pairs title={m.query} values={entry.request.query} messages={m} />
+            <Pairs
+              title={m.query}
+              values={entry.request.query}
+              messages={m}
+              lang={lang}
+            />
             <Pairs
               title={m.cookies}
               values={entry.request.cookies}
               messages={m}
+              lang={lang}
             />
-            <BodyView body={entry.request.body} messages={m} />
+            <BodyView body={entry.request.body} messages={m} lang={lang} />
           </TabsContent>
           <TabsContent value="response" className="flex flex-col gap-5 pt-3">
             <Pairs
               title={m.headers}
               values={entry.response.headers}
               messages={m}
+              lang={lang}
             />
             <Pairs
               title={m.cookies}
               values={entry.response.cookies}
               messages={m}
+              lang={lang}
             />
-            <BodyView body={entry.response.body} messages={m} />
+            <BodyView body={entry.response.body} messages={m} lang={lang} />
           </TabsContent>
           <TabsContent value="timing" className="pt-3">
             <TimingDetails entry={entry} messages={m} lang={lang} />

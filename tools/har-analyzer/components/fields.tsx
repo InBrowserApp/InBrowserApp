@@ -1,49 +1,17 @@
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { bodyPreview } from "../core/content"
-import type { Body, Messages, Pair } from "../types"
-
-export function Pairs({
-  title,
-  values,
-  messages: m,
-}: {
-  title: string
-  values: readonly Pair[]
-  messages: Messages
-}) {
-  return (
-    <section className="flex min-w-0 flex-col gap-2">
-      <h3 className="font-medium">{title}</h3>
-      {values.length ? (
-        <dl className="divide-y rounded-lg border text-xs">
-          {values.map((pair, i) => (
-            <div
-              key={i}
-              className="grid gap-1 p-3 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] sm:gap-4"
-            >
-              <dt className="font-mono break-all" dir="auto">
-                {pair.name}
-              </dt>
-              <dd className="break-all whitespace-pre-wrap" dir="auto">
-                {pair.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      ) : (
-        <p className="text-xs text-muted-foreground">{m.none}</p>
-      )}
-    </section>
-  )
-}
+import { Pairs } from "./pair-list"
+import type { Body, Messages } from "../types"
 
 export function BodyView({
   body,
   messages: m,
+  lang,
 }: {
   body: Body
   messages: Messages
+  lang: string
 }) {
   const preview = bodyPreview(body)
   return (
@@ -51,7 +19,12 @@ export function BodyView({
       <div className="flex flex-wrap items-center gap-2">
         <h3 className="font-medium">{m.body}</h3>
         {body.mimeType ? (
-          <Badge variant="outline">{body.mimeType}</Badge>
+          <Badge
+            variant="outline"
+            className="h-auto max-w-full min-w-0 whitespace-normal"
+          >
+            <span className="break-all">{body.mimeType}</span>
+          </Badge>
         ) : null}
         <ToolCopyButton
           value={preview.text}
@@ -78,7 +51,12 @@ export function BodyView({
         <p className="text-xs text-muted-foreground">{m.bodyTruncated}</p>
       ) : null}
       {body.params.length ? (
-        <Pairs title={m.parameters} values={body.params} messages={m} />
+        <Pairs
+          title={m.parameters}
+          values={body.params}
+          messages={m}
+          lang={lang}
+        />
       ) : null}
     </section>
   )

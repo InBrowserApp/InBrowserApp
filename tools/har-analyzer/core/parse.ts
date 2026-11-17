@@ -1,4 +1,4 @@
-import type { Body, Capture, Entry, Pair, Phase } from "../types"
+import type { Body, Capture, Entry, FormParameter, Pair, Phase } from "../types"
 
 export const MAX_FILE_SIZE = 20 * 1024 * 1024
 export const MAX_ENTRIES = 20_000
@@ -37,13 +37,37 @@ function pairs(value: unknown): Pair[] {
   })
 }
 
+function parameters(value: unknown): FormParameter[] {
+  if (!Array.isArray(value)) return []
+  return value.flatMap((item) => {
+    const parameter = record(item)
+    const fileName =
+      typeof parameter.fileName === "string" ? parameter.fileName : undefined
+    const contentType =
+      typeof parameter.contentType === "string"
+        ? parameter.contentType
+        : undefined
+    const value =
+      typeof parameter.value === "string" ? parameter.value : fileName
+    if (typeof parameter.name !== "string" || value === undefined) return []
+    return [
+      {
+        name: parameter.name,
+        value,
+        ...(fileName === undefined ? {} : { fileName }),
+        ...(contentType === undefined ? {} : { contentType }),
+      },
+    ]
+  })
+}
+
 function body(value: unknown): Body {
   const data = record(value)
   return {
     text: typeof data.text === "string" ? data.text : null,
     mimeType: text(data.mimeType),
     encoding: text(data.encoding),
-    params: pairs(data.params),
+    params: parameters(data.params),
   }
 }
 

@@ -1,4 +1,4 @@
 {
   "name": "HAR-netwerkanalysator",
-  "description": "Inspecteer HAR-netwerklogboeken lokaal: bekijk watervaldiagrammen, tijdsverloop, headers en de body van verzoeken en antwoorden om trage of mislukte verzoeken te onderzoeken."
+  "description": "Analyseer HAR-bestanden lokaal in je browser. Inspecteer watervaldiagrammen, tijdsverloop, headers en vastgelegde body's om trage of mislukte verzoeken te onderzoeken."
 }

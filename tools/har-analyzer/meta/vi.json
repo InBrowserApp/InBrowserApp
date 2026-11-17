@@ -1,4 +1,4 @@
 {
   "name": "Trình phân tích mạng HAR",
-  "description": "Kiểm tra nhật ký mạng HAR ngay trên máy: khám phá biểu đồ thác nước yêu cầu, thời gian xử lý, tiêu đề HTTP và nội dung yêu cầu, phản hồi để khắc phục yêu cầu chậm hoặc thất bại."
+  "description": "Phân tích tệp HAR cục bộ trong trình duyệt. Kiểm tra biểu đồ thác nước yêu cầu, thời gian xử lý, tiêu đề HTTP và nội dung đã ghi lại để chẩn đoán yêu cầu chậm hoặc thất bại."
 }

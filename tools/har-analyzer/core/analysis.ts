@@ -42,13 +42,29 @@ export function requestName(url: string): string {
   }
 }
 
+const numberFormatters = new Map<string, Intl.NumberFormat>()
+
+function formatNumber(
+  value: number,
+  lang: string,
+  maximumFractionDigits: number
+) {
+  const key = `${lang}:${maximumFractionDigits}`
+  let formatter = numberFormatters.get(key)
+  if (!formatter) {
+    formatter = new Intl.NumberFormat(lang, { maximumFractionDigits })
+    numberFormatters.set(key, formatter)
+  }
+  return formatter.format(value)
+}
+
 export function formatTime(
   value: number | null,
   lang: string,
   unknown: string
 ) {
   if (value === null) return unknown
-  return `${new Intl.NumberFormat(lang, { maximumFractionDigits: value >= 1000 ? 2 : 1 }).format(value >= 1000 ? value / 1000 : value)}\u00a0${value >= 1000 ? "s" : "ms"}`
+  return `${formatNumber(value >= 1000 ? value / 1000 : value, lang, value >= 1000 ? 2 : 1)}\u00a0${value >= 1000 ? "s" : "ms"}`
 }
 
 export function formatBytes(
@@ -58,5 +74,5 @@ export function formatBytes(
 ) {
   if (value === null) return unknown
   const unit = value >= 1024 * 1024 ? 2 : value >= 1024 ? 1 : 0
-  return `${new Intl.NumberFormat(lang, { maximumFractionDigits: unit ? 1 : 0 }).format(value / 1024 ** unit)}\u00a0${["B", "KiB", "MiB"][unit]}`
+  return `${formatNumber(value / 1024 ** unit, lang, unit ? 1 : 0)}\u00a0${["B", "KiB", "MiB"][unit]}`
 }

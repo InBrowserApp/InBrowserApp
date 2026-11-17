@@ -66,3 +66,13 @@ it("formats milliseconds, seconds, bytes, and unknowns with locale-aware numbers
   expect(formatBytes(1536, "en", "?")).toBe("1.5\u00a0KiB")
   expect(formatBytes(1048576, "en", "?")).toBe("1\u00a0MiB")
 })
+
+it("preserves locale and precision when time and byte formatting are interleaved", () => {
+  for (let i = 0; i < 2; i++) {
+    expect(formatTime(1234, "de", "?")).toBe("1,23\u00a0s")
+    expect(formatBytes(123, "de", "?")).toBe("123\u00a0B")
+    expect(formatBytes(1536, "en", "?")).toBe("1.5\u00a0KiB")
+    expect(formatTime(1.25, "de", "?")).toBe("1,3\u00a0ms")
+    expect(formatTime(1234, "en", "?")).toBe("1.23\u00a0s")
+  }
+})

@@ -78,5 +78,15 @@ export function useHarImport() {
       setError("readFailed")
     }
   }
-  return { capture, name, loading, error, revision, clear, example, open }
+  return {
+    capture,
+    name,
+    loading,
+    error,
+    revision,
+    clear,
+    cancel,
+    example,
+    open,
+  }
 }

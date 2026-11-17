@@ -19,7 +19,7 @@ import type { Body } from "./types"
 
 const capture = parseHar(exampleHar())
 class FakeWorker {
-  static latest: FakeWorker
+  static latest?: FakeWorker
   onmessage: ((event: { data: unknown }) => void) | null = null
   onerror = null
   postMessage = vi.fn()
@@ -37,6 +37,7 @@ const tab = (name: string) =>
     ctrlKey: false,
   })
 beforeEach(() => {
+  FakeWorker.latest = undefined
   vi.stubGlobal("Worker", FakeWorker)
 })
 afterEach(() => {
@@ -116,7 +117,7 @@ it("opens request details, inspects query and JSON response, and restores focus 
   await vi.waitFor(() => expect(document.activeElement).toBe(trigger))
   fireEvent.click(button(/search https/))
   tab(m.request)
-  expect(screen.getByText(/"query": "network"/)).toBeTruthy()
+  expect(screen.getByText('{"query":"network"}')).toBeTruthy()
 })
 
 it("bounds the rendered list and supports paging both ways", () => {
@@ -154,11 +155,11 @@ it("accepts dropped files, handles empty drops, and displays parse errors and sk
     "disabled",
     true
   )
-  act(() => FakeWorker.latest.onmessage!({ data: { error: "invalidHar" } }))
+  act(() => FakeWorker.latest!.onmessage!({ data: { error: "invalidHar" } }))
   expect(screen.getByRole("alert").textContent).toContain(m.errors.invalidHar)
   fireEvent.change(input(), { target: { files: [file] } })
   act(() =>
-    FakeWorker.latest.onmessage!({
+    FakeWorker.latest!.onmessage!({
       data: { capture: { ...capture, skipped: 2 } },
     })
   )
@@ -166,7 +167,7 @@ it("accepts dropped files, handles empty drops, and displays parse errors and sk
   fireEvent.change(input(), { target: { files: [] } })
   fireEvent.change(input(), { target: { files: [file] } })
   act(() =>
-    FakeWorker.latest.onmessage!({
+    FakeWorker.latest!.onmessage!({
       data: { capture: parseHar('{"log":{"entries":[]}}') },
     })
   )
@@ -195,7 +196,9 @@ it.each(["ar", "he"])(
 
 it("shows missing, empty, encoded and truncated bodies without executing captured HTML", () => {
   const base: Body = { text: "", mimeType: "", encoding: "", params: [] }
-  const { rerender, container } = render(<BodyView body={base} messages={m} />)
+  const { rerender, container } = render(
+    <BodyView body={base} messages={m} lang="en" />
+  )
   expect(screen.getByText(m.bodyEmpty)).toBeTruthy()
   rerender(
     <BodyView
@@ -206,13 +209,18 @@ it("shows missing, empty, encoded and truncated bodies without executing capture
         params: [{ name: "form-key", value: "form-value" }],
       }}
       messages={m}
+      lang="en"
     />
   )
   expect(screen.getByText(m.bodyEncoded)).toBeTruthy()
   expect(screen.getByText("form-value")).toBeTruthy()
   expect(container.querySelector("script")).toBeNull()
   rerender(
-    <BodyView body={{ ...base, text: "x".repeat(100_001) }} messages={m} />
+    <BodyView
+      body={{ ...base, text: "x".repeat(100_001) }}
+      messages={m}
+      lang="en"
+    />
   )
   expect(screen.getByText(m.bodyTruncated)).toBeTruthy()
 })
@@ -239,8 +247,58 @@ it("handles unknown totals and timings without manufacturing transferred bytes",
       <Waterfall entry={entry} capture={empty} messages={m} lang="en" />
     </>
   )
-  expect(screen.getByText(m.unknown)).toBeTruthy()
+  expect(screen.getAllByText(m.unknown)).toHaveLength(2)
   expect(screen.getByRole("img").getAttribute("aria-label")).toContain(
     m.unknown
   )
+})
+
+it("cancels an import and keeps file selection reachable through visible controls", () => {
+  mount()
+  expect(input()).toHaveProperty("tabIndex", -1)
+  fireEvent.change(input(), {
+    target: { files: [new File(["{}"], "network.har")] },
+  })
+  const worker = FakeWorker.latest!
+  expect(screen.getByRole("status").textContent).toBe(m.loading)
+  fireEvent.click(button(m.cancelImport))
+  expect(worker.terminate).toHaveBeenCalledOnce()
+  expect(screen.queryByRole("button", { name: m.cancelImport })).toBeNull()
+  expect(button(m.chooseFile)).toHaveProperty("disabled", false)
+  expect(screen.getByRole("status").textContent).toBe("")
+})
+
+it("copies the recorded JSON text without changing large numeric identifiers", async () => {
+  const text = '{"id":9223372036854775807,"value":0.12345678901234567890}'
+  const write = vi.spyOn(navigator.clipboard, "writeText").mockResolvedValue()
+  render(
+    <BodyView
+      body={{ text, mimeType: "application/json", encoding: "", params: [] }}
+      messages={m}
+      lang="en"
+    />
+  )
+  expect(screen.getByText(text)).toBeTruthy()
+  fireEvent.click(button(m.copy))
+  await vi.waitFor(() => expect(write).toHaveBeenCalledWith(text))
+})
+
+it("does not report a complete capture span when one request duration is missing", () => {
+  render(
+    <Summary
+      capture={{
+        ...capture,
+        entries: [
+          capture.entries[0]!,
+          { ...capture.entries[1]!, duration: null },
+        ],
+      }}
+      messages={m}
+      lang="en"
+    />
+  )
+  const span = screen
+    .getByText(m.duration)
+    .closest<HTMLElement>('[data-slot="card"]')!
+  expect(within(span).getByText(m.unknown)).toBeTruthy()
 })

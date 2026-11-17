@@ -1,4 +1,4 @@
-import { useDeferredValue, useMemo, useRef, useState } from "react"
+import { useCallback, useDeferredValue, useMemo, useRef, useState } from "react"
 import {
   ToolPanelCard,
   ToolPanelCardContent,
@@ -46,6 +46,10 @@ export function Requests({
   const [page, setPage] = useState(0)
   const [selected, setSelected] = useState<Entry | null>(null)
   const triggerRef = useRef<HTMLButtonElement | null>(null)
+  const inspect = useCallback((entry: Entry, trigger: HTMLButtonElement) => {
+    triggerRef.current = trigger
+    setSelected(entry)
+  }, [])
   const entries = useMemo(
     () =>
       selectEntries(
@@ -128,10 +132,7 @@ export function Requests({
                       capture={capture}
                       lang={lang}
                       messages={m}
-                      onInspect={(item, trigger) => {
-                        triggerRef.current = trigger
-                        setSelected(item)
-                      }}
+                      onInspect={inspect}
                     />
                   ))}
               </TableBody>
@@ -142,7 +143,11 @@ export function Requests({
                 <EmptyTitle>
                   {capture.entries.length ? m.noMatches : m.emptyCapture}
                 </EmptyTitle>
-                <EmptyDescription>{m.noMatchesHint}</EmptyDescription>
+                <EmptyDescription>
+                  {capture.entries.length
+                    ? m.noMatchesHint
+                    : m.importDescription}
+                </EmptyDescription>
               </EmptyHeader>
             </Empty>
           )}

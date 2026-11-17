@@ -1,9 +1,11 @@
 ---
 import { resolveLocale, type ToolMeta } from "@workspace/tool-sdk"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import HarAnalyzer from "./client"
 import "./style.css"
 import type { Messages } from "./types"
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 
 interface Props { lang: string }
 const { lang } = Astro.props
@@ -13,8 +15,12 @@ const meta = resolveLocale<ToolMeta>(
 const messages = resolveLocale<Messages>(
   import.meta.glob("./messages/*.json", { eager: true, import: "default" }), lang
 )!
+const Intro = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.md", { eager: true, import: "default" }), lang
+)!
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <HarAnalyzer client:load messages={messages} lang={lang} />
+  <ToolArticle><Intro /></ToolArticle>
 </ToolPageShell>

@@ -131,6 +131,65 @@ describe("HAR parsing", () => {
     expect(result.request.cookies).toEqual([{ name: "a", value: "1" }])
     expect(result.response.cookies).toEqual([{ name: "b", value: "2" }])
   })
+  it("preserves multipart file parameters and their metadata without requiring values", () => {
+    const result = parseHar(
+      har([
+        rawEntry({
+          request: {
+            method: "POST",
+            url: "https://example.com/upload",
+            postData: {
+              mimeType: "multipart/form-data",
+              params: [
+                { name: "caption", value: "profile photo" },
+                { name: "empty", value: "" },
+                {
+                  name: "upload",
+                  fileName: "photo.jpg",
+                  contentType: "image/jpeg",
+                },
+                {
+                  name: "explicit",
+                  value: "stored content",
+                  fileName: "source.txt",
+                  contentType: "text/plain",
+                },
+                { name: "empty-file", fileName: "" },
+                {
+                  name: "bad-metadata",
+                  value: "retained",
+                  fileName: 3,
+                  contentType: 4,
+                },
+                null,
+                { name: 4, value: "invalid" },
+                { name: "missing" },
+                { name: "bad-value", value: 4 },
+              ],
+            },
+          },
+        }),
+      ])
+    ).entries[0]!
+    expect(result.request.body.params).toEqual([
+      { name: "caption", value: "profile photo" },
+      { name: "empty", value: "" },
+      {
+        name: "upload",
+        value: "photo.jpg",
+        fileName: "photo.jpg",
+        contentType: "image/jpeg",
+      },
+      {
+        name: "explicit",
+        value: "stored content",
+        fileName: "source.txt",
+        contentType: "text/plain",
+      },
+      { name: "empty-file", value: "", fileName: "" },
+      { name: "bad-metadata", value: "retained" },
+    ])
+  })
   it("skips invalid entries while preserving their original indices", () => {
     const invalid = [
       null,

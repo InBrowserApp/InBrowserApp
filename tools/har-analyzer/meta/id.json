@@ -1,4 +1,4 @@
 {
   "name": "Penganalisis Jaringan HAR",
-  "description": "Periksa log jaringan HAR secara lokal: jelajahi waterfall permintaan, rincian waktu, header, serta isi permintaan dan respons untuk mengatasi permintaan lambat atau gagal."
+  "description": "Analisis file HAR secara lokal di browser Anda. Periksa waterfall permintaan, rincian waktu, header, dan isi yang tercatat untuk mendiagnosis permintaan lambat atau gagal."
 }
