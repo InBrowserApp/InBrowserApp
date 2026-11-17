@@ -109,7 +109,9 @@ const languageOptions = createLanguageOptions(
           pathname={pathname}
           availableLanguages={availableLanguages}
         />
-        <slot />
+        <main class="flex flex-col gap-8">
+          <slot />
+        </main>
         <SiteFooter language={language} />
       </div>
     </div>
