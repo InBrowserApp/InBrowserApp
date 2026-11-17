@@ -8098,6 +8098,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "font-subset-generator",
+    language: "ar",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "de",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "en",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "es",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "fr",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "he",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "hi",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "id",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "it",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "ja",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "ko",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "ms",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "nl",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "no",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "pl",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "pt",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "ru",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "sv",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "th",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "tr",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "vi",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     language: "ar",
   },
@@ -16010,6 +16102,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "parquet-viewer",
+    language: "ar",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "de",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "en",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "es",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "fr",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "he",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "hi",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "id",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "it",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "ja",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "ko",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "ms",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "nl",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "no",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "pl",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "pt",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "ru",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "sv",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "th",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "tr",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "vi",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "parquet-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "password-strength-checker",
     language: "ar",
   },
@@ -22079,6 +22263,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "stopwatch",
+    language: "zh-TW",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "ar",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "de",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "en",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "es",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "fr",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "he",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "hi",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "id",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "it",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "ja",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "ko",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "ms",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "nl",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "no",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "pl",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "pt",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "ru",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "sv",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "th",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "tr",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "vi",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "subtitle-converter",
     language: "zh-TW",
   },
   {

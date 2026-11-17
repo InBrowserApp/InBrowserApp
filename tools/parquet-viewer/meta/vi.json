@@ -1,0 +1,4 @@
+{
+  "name": "Trình xem Parquet",
+  "description": "Mở tệp Parquet cục bộ, kiểm tra kiểu trường và lược đồ lồng nhau, duyệt các hàng và xuất CSV hoặc JSON. Dữ liệu luôn ở trong trình duyệt của bạn."
+}

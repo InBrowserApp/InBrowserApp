@@ -1,0 +1,4 @@
+{
+  "name": "Parquet-visare",
+  "description": "Öppna Parquet-filer lokalt, granska fälttyper och nästlade scheman, bläddra bland rader och exportera CSV eller JSON. Dina data stannar i webbläsaren."
+}

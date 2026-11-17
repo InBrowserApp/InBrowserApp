@@ -1,0 +1,4 @@
+{
+  "name": "字幕转换器",
+  "description": "在本地转换 SRT、VTT、ASS、TTML、LRC 等字幕。批量下载文件、调整时间并选择文本编码。"
+}

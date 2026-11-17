@@ -115,6 +115,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "file-to-data-uri-converter": () =>
     import("@tool/file-to-data-uri-converter/page"),
   "file-type-detector": () => import("@tool/file-type-detector/page"),
+  "font-subset-generator": () => import("@tool/font-subset-generator/page"),
   "gif-to-animated-webp-converter": () =>
     import("@tool/gif-to-animated-webp-converter/page"),
   "gif-to-apng-converter": () => import("@tool/gif-to-apng-converter/page"),
@@ -217,6 +218,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ofd-viewer": () => import("@tool/ofd-viewer/page"),
   "openapi-to-typescript-converter": () =>
     import("@tool/openapi-to-typescript-converter/page"),
+  "parquet-viewer": () => import("@tool/parquet-viewer/page"),
   "password-strength-checker": () =>
     import("@tool/password-strength-checker/page"),
   "pbkdf2-key-derivation": () => import("@tool/pbkdf2-key-derivation/page"),
@@ -308,6 +310,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "ssh-public-key-fingerprint": () =>
     import("@tool/ssh-public-key-fingerprint/page"),
   stopwatch: () => import("@tool/stopwatch/page"),
+  "subtitle-converter": () => import("@tool/subtitle-converter/page"),
   "svg-optimizer": () => import("@tool/svg-optimizer/page"),
   "svg-to-image-converter": () => import("@tool/svg-to-image-converter/page"),
   "svg-viewer": () => import("@tool/svg-viewer/page"),

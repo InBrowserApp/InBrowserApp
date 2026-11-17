@@ -1,0 +1,4 @@
+{
+  "name": "Parquet Görüntüleyici",
+  "description": "Parquet dosyalarını yerel olarak açın, alan türlerini ve iç içe şemaları inceleyin, satırlara göz atın ve CSV veya JSON olarak dışa aktarın. Verileriniz tarayıcınızda kalır."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Generator für Schrift-Teilmengen",
+  "description": "Behalte die für deinen Text benötigten Glyphen und verkleinere TTF-, OTF-, WOFF- und WOFF2-Schriften. Erstelle und prüfe Schrift-Teilmengen direkt im Browser und lade sie herunter."
+}

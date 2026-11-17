@@ -1,0 +1,139 @@
+diff --git a/src/assemble.js b/src/assemble.js
+index 5520198e9e3cf60621ffb1ba9c52a932a2baa813..dbaeb7f3a35a2c9b548cf580cb65beeac59adbb3 100644
+--- a/src/assemble.js
++++ b/src/assemble.js
+@@ -113,7 +113,7 @@ export function assembleLists(output, definitionLevels, repetitionLevels, values
+  * @param {number} [depth] depth of nested structure
+  */
+ export function assembleNested(subcolumnData, schema, parsers, depth = 0) {
+-  const path = schema.path.join('.')
++  const path = JSON.stringify(schema.path)
+   const optional = schema.element.repetition_type === 'OPTIONAL'
+   const nextDepth = optional ? depth + 1 : depth
+ 
+@@ -126,7 +126,7 @@ export function assembleNested(subcolumnData, schema, parsers, depth = 0) {
+     }
+     assembleNested(subcolumnData, sublist, parsers, subDepth)
+ 
+-    const subcolumn = sublist.path.join('.')
++    const subcolumn = JSON.stringify(sublist.path)
+     const values = subcolumnData.get(subcolumn)
+     if (!values) throw new Error('parquet list column missing values')
+     if (optional) flattenAtDepth(values, depth)
+@@ -142,8 +142,8 @@ export function assembleNested(subcolumnData, schema, parsers, depth = 0) {
+     assembleNested(subcolumnData, schema.children[0].children[0], parsers, nextDepth + 1)
+     assembleNested(subcolumnData, schema.children[0].children[1], parsers, nextDepth + 1)
+ 
+-    const keys = subcolumnData.get(`${path}.${mapName}.key`)
+-    const values = subcolumnData.get(`${path}.${mapName}.value`)
++    const keys = subcolumnData.get(JSON.stringify([...schema.path, mapName, 'key']))
++    const values = subcolumnData.get(JSON.stringify([...schema.path, mapName, 'value']))
+ 
+     if (!keys) throw new Error('parquet map column missing keys')
+     if (!values) throw new Error('parquet map column missing values')
+@@ -154,8 +154,8 @@ export function assembleNested(subcolumnData, schema, parsers, depth = 0) {
+     const out = assembleMaps(keys, values, nextDepth)
+     if (optional) flattenAtDepth(out, depth)
+ 
+-    subcolumnData.delete(`${path}.${mapName}.key`)
+-    subcolumnData.delete(`${path}.${mapName}.value`)
++    subcolumnData.delete(JSON.stringify([...schema.path, mapName, 'key']))
++    subcolumnData.delete(JSON.stringify([...schema.path, mapName, 'value']))
+     subcolumnData.set(path, out)
+     return
+   }
+@@ -165,16 +165,16 @@ export function assembleNested(subcolumnData, schema, parsers, depth = 0) {
+     // construct a meta struct and then invert
+     const invertDepth = schema.element.repetition_type === 'REQUIRED' ? depth : depth + 1
+     /** @type {Record<string, any>} */
+-    const struct = {}
++    const struct = Object.create(null)
+     for (const child of schema.children) {
+       assembleNested(subcolumnData, child, parsers, invertDepth)
+-      const childData = subcolumnData.get(child.path.join('.'))
++      const childData = subcolumnData.get(JSON.stringify(child.path))
+       if (!childData) throw new Error('parquet struct missing child data')
+       struct[child.element.name] = childData
+     }
+     // remove children
+     for (const child of schema.children) {
+-      subcolumnData.delete(child.path.join('.'))
++      subcolumnData.delete(JSON.stringify(child.path))
+     }
+ 
+     // invert struct by depth
+@@ -215,11 +215,11 @@ function assembleMaps(keys, values, depth) {
+       out.push(assembleMaps(keys[i], values[i], depth - 1)) // go deeper
+     } else {
+       if (keys[i]) {
+-        /** @type {Record<string, any>} */
+-        const obj = {}
++        /** @type {Map<any, any>} */
++        const obj = new Map()
+         for (let j = 0; j < keys[i].length; j++) {
+           const value = values[i][j]
+-          obj[keys[i][j]] = value === undefined ? null : value
++          obj.set(keys[i][j], value === undefined ? null : value)
+         }
+         out.push(obj)
+       } else {
+@@ -243,7 +243,7 @@ function invertStruct(struct, depth) {
+   const out = []
+   for (let i = 0; i < length; i++) {
+     /** @type {Record<string, any>} */
+-    const obj = {}
++    const obj = Object.create(null)
+     for (const key of keys) {
+       if (struct[key].length !== length) throw new Error('parquet struct parsing error')
+       obj[key] = struct[key][i]
+diff --git a/src/rowgroup.js b/src/rowgroup.js
+index 61838e18a4cdb998462d4b5805c3b60524fbf214..c0fccc75da4c0f369245c29530e8df4a2fef1a5c 100644
+--- a/src/rowgroup.js
++++ b/src/rowgroup.js
+@@ -187,7 +187,7 @@ export async function asyncGroupToRows({ asyncColumns }, selectStart, selectEnd,
+     for (let selectRow = 0; selectRow < selectCount; selectRow++) {
+       // return each row as an object
+       /** @type {Record<string, any>} */
+-      const rowData = {}
++      const rowData = Object.create(null)
+       for (let i = 0; i < asyncColumns.length; i++) {
+         const { data, skipped } = asyncPages[i]
+         rowData[asyncColumns[i].pathInSchema[0]] = data[selectStart + selectRow - skipped]
+@@ -258,13 +258,13 @@ export function assembleAsync(asyncRowGroup, schemaTree, parsers) {
+             const start = skipped - resolved[i].skipped
+             const length = Math.max(0, end - skipped)
+             subcolumnData.set(
+-              childColumns[i].pathInSchema.join('.'),
++              JSON.stringify(childColumns[i].pathInSchema),
+               flattened[i].slice(start, start + length)
+             )
+           }
+           // assemble the column
+           assembleNested(subcolumnData, child, allParsers)
+-          const assembled = subcolumnData.get(child.element.name)
++          const assembled = subcolumnData.get(JSON.stringify(child.path))
+           if (!assembled) throw new Error('parquet column data not assembled')
+           return { data: [assembled], skipped }
+         })(),
+diff --git a/src/variant.js b/src/variant.js
+index 7a127b561d4326c1c353f09b79a4ea9a0b0c1e3d..1fe0fc603220df109e3a71cc3c1abe6a7794b140 100644
+--- a/src/variant.js
++++ b/src/variant.js
+@@ -65,7 +65,7 @@ function decodeTypedValue(typedValue, metadata, parsers) {
+     }
+     // Shredded object: each field value gets decoded
+     /** @type {Record<string, any>} */
+-    const result = {}
++    const result = Object.create(null)
+     for (const [key, field] of Object.entries(typedValue)) {
+       if (!metadata.dictionary.includes(key)) continue
+       result[key] = decodeTypedValue(field, metadata, parsers)
+@@ -283,7 +283,7 @@ function readVariantObject(reader, header, metadata, parsers) {
+   }
+ 
+   /** @type {Record<string, any>} */
+-  const out = {}
++  const out = Object.create(null)
+   for (let i = 0; i < numElements; i++) {
+     const key = metadata.dictionary[fieldIds[i]]
+     // Read value at the given offset

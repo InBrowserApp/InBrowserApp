@@ -1,0 +1,4 @@
+{
+  "name": "Parquet-viser",
+  "description": "Åpne Parquet-filer lokalt, undersøk felttyper og nestede skjemaer, bla gjennom rader og eksporter CSV eller JSON. Dataene dine blir i nettleseren."
+}

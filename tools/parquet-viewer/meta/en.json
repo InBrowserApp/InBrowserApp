@@ -1,0 +1,4 @@
+{
+  "name": "Parquet Viewer",
+  "description": "Open Parquet files locally, inspect field types and nested schemas, browse rows, and export CSV or JSON. Your data stays in your browser."
+}

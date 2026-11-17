@@ -422,6 +422,9 @@ catalogs:
     hash-wasm:
       specifier: ^4.13.0
       version: 4.13.0
+    hb-subset-wasm:
+      specifier: 0.5.0
+      version: 0.5.0
     highlight.js:
       specifier: ^11.12.0
       version: 11.12.0
@@ -434,6 +437,12 @@ catalogs:
     husky:
       specifier: ^9.1.7
       version: 9.1.7
+    hyparquet:
+      specifier: 1.33.0
+      version: 1.33.0
+    hyparquet-compressors:
+      specifier: 1.1.3
+      version: 1.1.3
     iconv-lite:
       specifier: 0.7.3
       version: 0.7.3
@@ -614,6 +623,9 @@ catalogs:
     webrtc-ips:
       specifier: ^0.2.0
       version: 0.2.0
+    woff2-encoder:
+      specifier: 2.0.0
+      version: 2.0.0
     wrangler:
       specifier: 4.162.0
       version: 4.162.0
@@ -643,6 +655,7 @@ patchedDependencies:
   caj2pdf-rust@0.8.1: a763528bb50bc314154c0378eacd51e5882b88d2f932edd4207a40adb45f9f80
   curlconverter@4.12.0: c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484
   foliate-js@1.0.1: d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236
+  hyparquet@1.33.0: 9663de269690a8af3235e71a697729f19da2f2c8dd5a7d877a6a31366df7223a
   rtf-viewer@1.3.1: 734830adc8d033bcf48cd7b360822e1850f1818ebbd2c2582a7a52637a3d7f3d
   xlsx@0.20.3: 2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45
 
@@ -1299,6 +1312,9 @@ importers:
       '@tool/file-type-detector':
         specifier: workspace:*
         version: link:../../tools/file-type-detector
+      '@tool/font-subset-generator':
+        specifier: workspace:*
+        version: link:../../tools/font-subset-generator
       '@tool/gif-to-animated-webp-converter':
         specifier: workspace:*
         version: link:../../tools/gif-to-animated-webp-converter
@@ -1557,6 +1573,9 @@ importers:
       '@tool/openapi-to-typescript-converter':
         specifier: workspace:*
         version: link:../../tools/openapi-to-typescript-converter
+      '@tool/parquet-viewer':
+        specifier: workspace:*
+        version: link:../../tools/parquet-viewer
       '@tool/password-strength-checker':
         specifier: workspace:*
         version: link:../../tools/password-strength-checker
@@ -1755,6 +1774,9 @@ importers:
       '@tool/stopwatch':
         specifier: workspace:*
         version: link:../../tools/stopwatch
+      '@tool/subtitle-converter':
+        specifier: workspace:*
+        version: link:../../tools/subtitle-converter
       '@tool/svg-optimizer':
         specifier: workspace:*
         version: link:../../tools/svg-optimizer
@@ -4484,6 +4506,40 @@ importers:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
+  tools/font-subset-generator:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      fflate:
+        specifier: 'catalog:'
+        version: 0.8.3
+      hb-subset-wasm:
+        specifier: 'catalog:'
+        version: 0.5.0
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+      woff2-encoder:
+        specifier: 'catalog:'
+        version: 2.0.0
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
   tools/gif-to-animated-webp-converter:
     dependencies:
       '@libwebp-wasm/gif2webp':
@@ -6982,6 +7038,37 @@ importers:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
+  tools/parquet-viewer:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      hyparquet:
+        specifier: 'catalog:'
+        version: 1.33.0(patch_hash=9663de269690a8af3235e71a697729f19da2f2c8dd5a7d877a6a31366df7223a)
+      hyparquet-compressors:
+        specifier: 'catalog:'
+        version: 1.1.3
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
   tools/password-strength-checker:
     dependencies:
       '@workspace/tool-sdk':
@@ -8832,6 +8919,40 @@ importers:
       '@testing-library/react':
         specifier: 'catalog:'
         version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/subtitle-converter:
+    dependencies:
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      fflate:
+        specifier: 'catalog:'
+        version: 0.8.3
+      papaparse:
+        specifier: 'catalog:'
+        version: 5.7.1
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      '@types/papaparse':
+        specifier: 'catalog:'
+        version: 5.5.2
       vitest:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
@@ -14468,6 +14589,9 @@ packages:
   fuzzysort@3.1.0:
     resolution: {integrity: sha512-sR9BNCjBg6LNgwvxlBd0sBABvQitkLzoVY9MYYROQVX/FvfJ4Mai9LsGhDgd8qYdds0bY77VzYd5iuB+v5rwQQ==}
 
+  fzstd@0.1.1:
+    resolution: {integrity: sha512-dkuVSOKKwh3eas5VkJy1AW1vFpet8TA/fGmVA5krThl8YcOVE/8ZIoEA1+U1vEn5ckxxhLirSdY837azmbaNHA==}
+
   gensync@1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
     engines: {node: '>=6.9.0'}
@@ -14576,6 +14700,10 @@ packages:
   hast-util-whitespace@3.0.0:
     resolution: {integrity: sha512-88JUN06ipLwsnv+dVn+OIYOvAuvBMy/Qoi6O7mQHxdPXpjy+Cd6xRkWwux7DKO+4sYILtLBRIKgsdpS2gQc7qw==}
 
+  hb-subset-wasm@0.5.0:
+    resolution: {integrity: sha512-goroLAcLW5cPBRgRxE4N/bJhfZMFu8KNyLYBYYlPMG+BU4tIUEvcVryNM6bOgprKC2dCrG7iI64cuxH+oNWlww==}
+    engines: {node: '>=18'}
+
   highlight.js@11.12.0:
     resolution: {integrity: sha512-nbfWpyRMcMrPMmDwJB+dhX/eiaPKtc2RB+0QZskqJ3WjRA/FDS0e9hZrx8EC/lbEv8gXy98FcDbNa/dspAaJMg==}
     engines: {node: '>=12.0.0'}
@@ -14632,6 +14760,15 @@ packages:
     resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
     engines: {node: '>=18'}
     hasBin: true
+
+  hyparquet-compressors@1.1.3:
+    resolution: {integrity: sha512-QqObpH8Vu1NKF5qzv7yWwgVso8sQE6irx0L5+WZ5QQ+xXnCQE5/X9K8hzYD6Z4wVjTmsMnZUO1vbutXLhU9AFQ==}
+
+  hyparquet@1.33.0:
+    resolution: {integrity: sha512-8EKLe73vRIMEKVEOe5y+kIzFxo6AvbLvd5ukd7P+yv3RvG0+TZM4qO8imbqxU6zds5pV+OeWRTMwy95mhHUheg==}
+
+  hysnappy@1.1.1:
+    resolution: {integrity: sha512-/V9XcN2NtRyWjR4LYMfvnvasVVF8jbT/ej0eofBQjZel91E3D813FQ3mQC6gDSMMTCq/FJh28XHeyqr3I/oBRw==}
 
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
@@ -16838,6 +16975,10 @@ packages:
     resolution: {integrity: sha512-Tb2FUhB4vUsGQlfSquQLYkApkuPAFQXGFzxWKHHumVz2dK+X1RUm/HnID4+TfIGYJ1kTcwOaCk/buYCEJr6YjQ==}
     engines: {node: '>=20.11'}
     hasBin: true
+
+  woff2-encoder@2.0.0:
+    resolution: {integrity: sha512-wH1rcskczCP5+BJABM88aM3hoEX1VUW6U+Ksx/7bmXvctWGqF+O/YQdC6vWQ7lJS7ny21a0MkAqcZyOP2O8CAg==}
+    engines: {node: '>= 18.x'}
 
   workerd@1.20261113.1:
     resolution: {integrity: sha512-FJP8Bm1jiiJTE2xpSIhT9JkMaKzU54y9Jk0q7n3BLWyWdUNsn35QGCqARcqXGwO3FGkvahhYqUEG2bJzlgcfhw==}
@@ -21166,6 +21307,8 @@ snapshots:
 
   fuzzysort@3.1.0: {}
 
+  fzstd@0.1.1: {}
+
   gensync@1.0.0-beta.2: {}
 
   get-caller-file@2.0.5: {}
@@ -21307,6 +21450,8 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.5
 
+  hb-subset-wasm@0.5.0: {}
+
   highlight.js@11.12.0: {}
 
   highwayhasher@0.4.4: {}
@@ -21368,6 +21513,15 @@ snapshots:
   human-signals@8.0.1: {}
 
   husky@9.1.7: {}
+
+  hyparquet-compressors@1.1.3:
+    dependencies:
+      fzstd: 0.1.1
+      hysnappy: 1.1.1
+
+  hyparquet@1.33.0(patch_hash=9663de269690a8af3235e71a697729f19da2f2c8dd5a7d877a6a31366df7223a): {}
+
+  hysnappy@1.1.1: {}
 
   iconv-lite@0.4.24:
     dependencies:
@@ -23606,6 +23760,8 @@ snapshots:
       isexe: 3.1.5
 
   why-is-node-running@3.2.1: {}
+
+  woff2-encoder@2.0.0: {}
 
   workerd@1.20261113.1:
     optionalDependencies:

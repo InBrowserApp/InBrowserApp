@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de subtítulos",
+  "description": "Convierte SRT, VTT, ASS, TTML, LRC y otros subtítulos localmente. Descarga archivos por lotes, ajusta los tiempos y elige la codificación del texto."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Pemapar Parquet",
+  "description": "Buka fail Parquet secara setempat, periksa jenis medan dan skema bersarang, semak imbas baris serta eksport CSV atau JSON. Data anda kekal dalam pelayar."
+}

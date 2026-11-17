@@ -11189,6 +11189,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "font-subset-generator",
+    category: "web",
+    icon: "case-sensitive",
+    tags: [
+      "font",
+      "subset",
+      "woff2",
+      "ttf",
+      "otf",
+      "typography",
+      "compression",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد مجموعات الخطوط الفرعية",
+        description:
+          "احتفظ بالأشكال الحرفية اللازمة لنصك وقلّص حجم خطوط TTF وOTF وWOFF وWOFF2. عاين مجموعات الخطوط الفرعية ونزّلها بالكامل داخل متصفحك.",
+      },
+      de: {
+        name: "Generator für Schrift-Teilmengen",
+        description:
+          "Behalte die für deinen Text benötigten Glyphen und verkleinere TTF-, OTF-, WOFF- und WOFF2-Schriften. Erstelle und prüfe Schrift-Teilmengen direkt im Browser und lade sie herunter.",
+      },
+      en: {
+        name: "Font Subset Generator",
+        description:
+          "Keep the glyphs needed for your text and shrink TTF, OTF, WOFF and WOFF2 fonts. Preview and download font subsets entirely in your browser.",
+      },
+      es: {
+        name: "Generador de subconjuntos de fuentes",
+        description:
+          "Conserva los glifos que necesita tu texto y reduce fuentes TTF, OTF, WOFF y WOFF2. Previsualiza y descarga subconjuntos íntegramente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur de sous-ensembles de polices",
+        description:
+          "Conservez les glyphes nécessaires à votre texte et réduisez vos polices TTF, OTF, WOFF et WOFF2. Prévisualisez et téléchargez les sous-ensembles dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל תת־קבוצות גופנים",
+        description:
+          "שמרו את הגליפים הדרושים לטקסט שלכם וצמצמו גופני TTF, OTF, WOFF ו-WOFF2. צפו בתת־קבוצות הגופנים והורידו אותן ישירות בדפדפן.",
+      },
+      hi: {
+        name: "फ़ॉन्ट सबसेट जनरेटर",
+        description:
+          "अपने पाठ के लिए ज़रूरी ग्लिफ़ ही रखें और TTF, OTF, WOFF व WOFF2 फ़ॉन्ट का आकार घटाएँ। पूरी तरह ब्राउज़र में फ़ॉन्ट सबसेट देखें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat Subset Font",
+        description:
+          "Pertahankan glif yang diperlukan teks Anda dan perkecil font TTF, OTF, WOFF, dan WOFF2. Pratinjau dan unduh subset font sepenuhnya di browser.",
+      },
+      it: {
+        name: "Generatore di sottoinsiemi di font",
+        description:
+          "Conserva i glifi necessari al tuo testo e riduci i font TTF, OTF, WOFF e WOFF2. Visualizza e scarica i sottoinsiemi direttamente nel browser.",
+      },
+      ja: {
+        name: "フォントサブセット生成ツール",
+        description:
+          "テキストに必要な字形だけを残し、TTF、OTF、WOFF、WOFF2 フォントを軽量化します。ブラウザー内でフォントサブセットをプレビューしてダウンロードできます。",
+      },
+      ko: {
+        name: "글꼴 서브셋 생성기",
+        description:
+          "텍스트에 필요한 글리프만 남겨 TTF, OTF, WOFF, WOFF2 글꼴의 크기를 줄이세요. 브라우저에서 글꼴 서브셋을 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana Subset Fon",
+        description:
+          "Kekalkan glif yang diperlukan untuk teks anda dan kecilkan fon TTF, OTF, WOFF dan WOFF2. Pratonton dan muat turun subset fon sepenuhnya dalam pelayar anda.",
+      },
+      nl: {
+        name: "Generator voor lettertypesubsets",
+        description:
+          "Bewaar alleen de glyphs die je tekst nodig heeft en verklein TTF-, OTF-, WOFF- en WOFF2-lettertypen. Bekijk en download lettertypesubsets volledig in je browser.",
+      },
+      no: {
+        name: "Generator for skriftdelmengder",
+        description:
+          "Behold glyfene teksten trenger, og reduser størrelsen på TTF-, OTF-, WOFF- og WOFF2-skrifter. Forhåndsvis og last ned skriftdelmengder direkte i nettleseren.",
+      },
+      pl: {
+        name: "Generator podzbiorów fontów",
+        description:
+          "Zachowaj glify potrzebne w tekście i zmniejsz fonty TTF, OTF, WOFF i WOFF2. Podglądaj i pobieraj podzbiory fontów bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de subconjuntos de fontes",
+        description:
+          "Mantenha os glifos necessários para seu texto e reduza fontes TTF, OTF, WOFF e WOFF2. Visualize e baixe subconjuntos de fontes diretamente no navegador.",
+      },
+      ru: {
+        name: "Генератор подмножеств шрифтов",
+        description:
+          "Оставьте глифы, нужные для вашего текста, и уменьшите шрифты TTF, OTF, WOFF и WOFF2. Просматривайте и скачивайте подмножества шрифтов прямо в браузере.",
+      },
+      sv: {
+        name: "Generator för teckensnittsdelmängder",
+        description:
+          "Behåll glyferna som din text behöver och minska storleken på TTF-, OTF-, WOFF- och WOFF2-teckensnitt. Förhandsgranska och ladda ned delmängder direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือสร้างชุดย่อยฟอนต์",
+        description:
+          "เก็บเฉพาะรูปอักษรที่ข้อความต้องใช้และลดขนาดฟอนต์ TTF, OTF, WOFF และ WOFF2 ดูตัวอย่างและดาวน์โหลดชุดย่อยฟอนต์ได้ทั้งหมดในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Yazı Tipi Alt Kümesi Oluşturucu",
+        description:
+          "Metninizin gerektirdiği glifleri koruyarak TTF, OTF, WOFF ve WOFF2 yazı tiplerini küçültün. Alt kümeleri tamamen tarayıcınızda önizleyip indirin.",
+      },
+      vi: {
+        name: "Trình tạo tập con phông chữ",
+        description:
+          "Giữ lại các hình chữ cần cho văn bản và giảm dung lượng phông TTF, OTF, WOFF, WOFF2. Xem trước và tải tập con phông chữ ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "字体子集生成器",
+        description:
+          "仅保留文本所需字形，缩小 TTF、OTF、WOFF 和 WOFF2 字体文件。完全在浏览器中预览并下载字体子集。",
+      },
+      "zh-TW": {
+        name: "字型子集產生器",
+        description:
+          "保留文字所需的字形，縮小 TTF、OTF、WOFF 和 WOFF2 字型檔案。在瀏覽器中完成字型子集的預覽與下載。",
+      },
+    },
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     category: "image",
     icon: "image",
@@ -21902,6 +22033,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "parquet-viewer",
+    category: "developer",
+    icon: "table-2",
+    tags: [
+      "parquet",
+      "apache",
+      "schema",
+      "data",
+      "table",
+      "csv",
+      "json",
+      "viewer",
+      "export",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض Parquet",
+        description:
+          "افتح ملفات Parquet محليًا، وافحص أنواع الحقول والمخططات المتداخلة، وتصفح الصفوف، وصدّر بصيغة CSV أو JSON. تبقى بياناتك في متصفحك.",
+      },
+      de: {
+        name: "Parquet-Betrachter",
+        description:
+          "Parquet-Dateien lokal öffnen, Feldtypen und verschachtelte Schemas prüfen, Zeilen durchsehen und CSV oder JSON exportieren. Ihre Daten bleiben im Browser.",
+      },
+      en: {
+        name: "Parquet Viewer",
+        description:
+          "Open Parquet files locally, inspect field types and nested schemas, browse rows, and export CSV or JSON. Your data stays in your browser.",
+      },
+      es: {
+        name: "Visor de Parquet",
+        description:
+          "Abre archivos Parquet localmente, inspecciona tipos de campos y esquemas anidados, explora filas y exporta CSV o JSON. Tus datos permanecen en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse Parquet",
+        description:
+          "Ouvrez des fichiers Parquet localement, inspectez les types de champs et les schémas imbriqués, parcourez les lignes et exportez en CSV ou JSON. Vos données restent dans votre navigateur.",
+      },
+      he: {
+        name: "מציג Parquet",
+        description:
+          "פתיחת קובצי Parquet באופן מקומי, בדיקת סוגי שדות וסכמות מקוננות, עיון בשורות וייצוא CSV או JSON. הנתונים נשארים בדפדפן שלך.",
+      },
+      hi: {
+        name: "Parquet व्यूअर",
+        description:
+          "Parquet फ़ाइलें स्थानीय रूप से खोलें, फ़ील्ड के प्रकार और नेस्टेड स्कीमा जाँचें, पंक्तियाँ देखें और CSV या JSON में निर्यात करें। आपका डेटा आपके ब्राउज़र में ही रहता है।",
+      },
+      id: {
+        name: "Penampil Parquet",
+        description:
+          "Buka file Parquet secara lokal, periksa tipe bidang dan skema bertingkat, jelajahi baris, lalu ekspor ke CSV atau JSON. Data Anda tetap di browser.",
+      },
+      it: {
+        name: "Visualizzatore Parquet",
+        description:
+          "Apri file Parquet in locale, esamina i tipi dei campi e gli schemi annidati, sfoglia le righe ed esporta in CSV o JSON. I dati restano nel browser.",
+      },
+      ja: {
+        name: "Parquet ビューアー",
+        description:
+          "Parquet ファイルをローカルで開き、フィールドの型や入れ子のスキーマを確認して、行の閲覧や CSV・JSON へのエクスポートができます。データはブラウザー内に保持されます。",
+      },
+      ko: {
+        name: "Parquet 뷰어",
+        description:
+          "로컬에서 Parquet 파일을 열고 필드 유형과 중첩 스키마를 확인하며, 행을 탐색하고 CSV 또는 JSON으로 내보내세요. 데이터는 브라우저에만 보관됩니다.",
+      },
+      ms: {
+        name: "Pemapar Parquet",
+        description:
+          "Buka fail Parquet secara setempat, periksa jenis medan dan skema bersarang, semak imbas baris serta eksport CSV atau JSON. Data anda kekal dalam pelayar.",
+      },
+      nl: {
+        name: "Parquet-viewer",
+        description:
+          "Open Parquet-bestanden lokaal, inspecteer veldtypen en geneste schema’s, blader door rijen en exporteer CSV of JSON. Je gegevens blijven in je browser.",
+      },
+      no: {
+        name: "Parquet-viser",
+        description:
+          "Åpne Parquet-filer lokalt, undersøk felttyper og nestede skjemaer, bla gjennom rader og eksporter CSV eller JSON. Dataene dine blir i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka Parquet",
+        description:
+          "Otwieraj pliki Parquet lokalnie, sprawdzaj typy pól i zagnieżdżone schematy, przeglądaj wiersze i eksportuj CSV lub JSON. Dane pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de Parquet",
+        description:
+          "Abra arquivos Parquet localmente, inspecione tipos de campos e esquemas aninhados, navegue pelas linhas e exporte CSV ou JSON. Seus dados ficam no navegador.",
+      },
+      ru: {
+        name: "Просмотр Parquet",
+        description:
+          "Открывайте файлы Parquet локально, проверяйте типы полей и вложенные схемы, просматривайте строки и экспортируйте данные в CSV или JSON. Данные остаются в браузере.",
+      },
+      sv: {
+        name: "Parquet-visare",
+        description:
+          "Öppna Parquet-filer lokalt, granska fälttyper och nästlade scheman, bläddra bland rader och exportera CSV eller JSON. Dina data stannar i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู Parquet",
+        description:
+          "เปิดไฟล์ Parquet ในเครื่อง ตรวจสอบชนิดฟิลด์และสคีมาที่ซ้อนกัน เรียกดูแถว และส่งออก CSV หรือ JSON ข้อมูลของคุณจะอยู่ในเบราว์เซอร์เท่านั้น",
+      },
+      tr: {
+        name: "Parquet Görüntüleyici",
+        description:
+          "Parquet dosyalarını yerel olarak açın, alan türlerini ve iç içe şemaları inceleyin, satırlara göz atın ve CSV veya JSON olarak dışa aktarın. Verileriniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem Parquet",
+        description:
+          "Mở tệp Parquet cục bộ, kiểm tra kiểu trường và lược đồ lồng nhau, duyệt các hàng và xuất CSV hoặc JSON. Dữ liệu luôn ở trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "Parquet 查看器",
+        description:
+          "在本地打开 Parquet 文件，查看字段类型和嵌套结构，浏览数据行，并导出 CSV 或 JSON。数据始终保留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "Parquet 檢視器",
+        description:
+          "在本機開啟 Parquet 檔案，檢查欄位型別與巢狀結構、瀏覽資料列，並匯出 CSV 或 JSON。資料全程留在瀏覽器中。",
+      },
+    },
+  },
+  {
     slug: "password-strength-checker",
     category: "text",
     icon: "lock",
@@ -30302,6 +30567,146 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       "zh-TW": {
         name: "秒錶",
         description: "使用開始、暫停、計次和重置控制來記錄經過的時間。",
+      },
+    },
+  },
+  {
+    slug: "subtitle-converter",
+    category: "text",
+    icon: "captions",
+    tags: [
+      "subtitle",
+      "caption",
+      "converter",
+      "srt",
+      "vtt",
+      "ass",
+      "ssa",
+      "sbv",
+      "sub",
+      "sami",
+      "lrc",
+      "ttml",
+      "dfxp",
+      "youtube",
+      "transcript",
+      "batch",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل ملفات الترجمة",
+        description:
+          "حوّل ملفات الترجمة بصيغ SRT وVTT وASS وTTML وLRC وغيرها محليًا. نزّل عدة ملفات دفعة واحدة، واضبط التوقيت، واختر ترميز النص.",
+      },
+      de: {
+        name: "Untertitelkonverter",
+        description:
+          "Konvertieren Sie SRT, VTT, ASS, TTML, LRC und weitere Untertitel lokal. Laden Sie mehrere Dateien herunter, passen Sie Zeiten an und wählen Sie die Textkodierung.",
+      },
+      en: {
+        name: "Subtitle Converter",
+        description:
+          "Convert SRT, VTT, ASS, TTML, LRC and other subtitles locally. Batch download files, adjust timing, and choose text encoding.",
+      },
+      es: {
+        name: "Conversor de subtítulos",
+        description:
+          "Convierte SRT, VTT, ASS, TTML, LRC y otros subtítulos localmente. Descarga archivos por lotes, ajusta los tiempos y elige la codificación del texto.",
+      },
+      fr: {
+        name: "Convertisseur de sous-titres",
+        description:
+          "Convertissez localement des sous-titres SRT, VTT, ASS, TTML, LRC et d’autres formats. Téléchargez les fichiers par lots, ajustez les temps et choisissez l’encodage du texte.",
+      },
+      he: {
+        name: "ממיר כתוביות",
+        description:
+          "המרה מקומית של כתוביות בפורמטים SRT, VTT, ASS, TTML, LRC ועוד. הורדת קבצים באצווה, התאמת תזמון ובחירת קידוד טקסט.",
+      },
+      hi: {
+        name: "उपशीर्षक कन्वर्टर",
+        description:
+          "SRT, VTT, ASS, TTML, LRC और अन्य उपशीर्षक स्थानीय रूप से बदलें। फ़ाइलें एक साथ डाउनलोड करें, समय समायोजित करें और टेक्स्ट एन्कोडिंग चुनें।",
+      },
+      id: {
+        name: "Konverter Subtitle",
+        description:
+          "Konversi SRT, VTT, ASS, TTML, LRC, dan subtitle lainnya secara lokal. Unduh banyak file sekaligus, sesuaikan waktu, dan pilih enkode karakter teks.",
+      },
+      it: {
+        name: "Convertitore di sottotitoli",
+        description:
+          "Converti SRT, VTT, ASS, TTML, LRC e altri sottotitoli localmente. Scarica più file insieme, regola i tempi e scegli la codifica del testo.",
+      },
+      ja: {
+        name: "字幕コンバーター",
+        description:
+          "SRT、VTT、ASS、TTML、LRC などの字幕を端末内で変換。ファイルの一括ダウンロード、タイミング調整、文字コードの選択ができます。",
+      },
+      ko: {
+        name: "자막 변환기",
+        description:
+          "SRT, VTT, ASS, TTML, LRC 등 다양한 자막을 기기에서 변환하세요. 파일을 일괄 다운로드하고, 시간을 조정하고, 텍스트 인코딩을 선택할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Sari Kata",
+        description:
+          "Tukar SRT, VTT, ASS, TTML, LRC dan sari kata lain secara setempat. Muat turun fail secara kelompok, laraskan pemasaan dan pilih pengekodan teks.",
+      },
+      nl: {
+        name: "Ondertitelconverter",
+        description:
+          "Converteer SRT, VTT, ASS, TTML, LRC en andere ondertitels lokaal. Download meerdere bestanden tegelijk, pas de timing aan en kies de tekstcodering.",
+      },
+      no: {
+        name: "Undertekstkonverterer",
+        description:
+          "Konverter SRT, VTT, ASS, TTML, LRC og andre undertekster lokalt. Last ned flere filer samtidig, juster tidspunkter og velg tegnkoding.",
+      },
+      pl: {
+        name: "Konwerter napisów",
+        description:
+          "Konwertuj lokalnie napisy w formatach SRT, VTT, ASS, TTML, LRC i innych. Pobieraj wiele plików naraz, dostosowuj czas i wybieraj kodowanie tekstu.",
+      },
+      pt: {
+        name: "Conversor de legendas",
+        description:
+          "Converta SRT, VTT, ASS, TTML, LRC e outras legendas localmente. Baixe arquivos em lote, ajuste os tempos e escolha a codificação de texto.",
+      },
+      ru: {
+        name: "Конвертер субтитров",
+        description:
+          "Преобразуйте субтитры SRT, VTT, ASS, TTML, LRC и других форматов на своём устройстве. Скачивайте файлы пакетно, меняйте время показа и выбирайте кодировку текста.",
+      },
+      sv: {
+        name: "Undertextkonverterare",
+        description:
+          "Konvertera SRT, VTT, ASS, TTML, LRC och andra undertextformat lokalt. Ladda ned flera filer samtidigt, justera tider och välj textkodning.",
+      },
+      th: {
+        name: "โปรแกรมแปลงคำบรรยาย",
+        description:
+          "แปลงคำบรรยาย SRT, VTT, ASS, TTML, LRC และรูปแบบอื่น ๆ บนอุปกรณ์ของคุณ ดาวน์โหลดหลายไฟล์พร้อมกัน ปรับเวลา และเลือกการเข้ารหัสข้อความได้",
+      },
+      tr: {
+        name: "Altyazı Dönüştürücü",
+        description:
+          "SRT, VTT, ASS, TTML, LRC ve diğer altyazıları yerel olarak dönüştürün. Dosyaları toplu indirin, zamanlamayı ayarlayın ve metin kodlamasını seçin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi phụ đề",
+        description:
+          "Chuyển đổi SRT, VTT, ASS, TTML, LRC và các phụ đề khác ngay trên thiết bị. Tải tệp xuống hàng loạt, điều chỉnh thời gian và chọn mã hóa văn bản.",
+      },
+      "zh-CN": {
+        name: "字幕转换器",
+        description:
+          "在本地转换 SRT、VTT、ASS、TTML、LRC 等字幕。批量下载文件、调整时间并选择文本编码。",
+      },
+      "zh-TW": {
+        name: "字幕轉換器",
+        description:
+          "在本機轉換 SRT、VTT、ASS、TTML、LRC 等字幕。批次下載檔案、調整時間，並選擇文字編碼。",
       },
     },
   },
@@ -47831,6 +48236,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "font-subset-generator": {
+    slug: "font-subset-generator",
+    category: "web",
+    icon: "case-sensitive",
+    tags: [
+      "font",
+      "subset",
+      "woff2",
+      "ttf",
+      "otf",
+      "typography",
+      "compression",
+    ],
+    locales: {
+      ar: {
+        name: "مولّد مجموعات الخطوط الفرعية",
+        description:
+          "احتفظ بالأشكال الحرفية اللازمة لنصك وقلّص حجم خطوط TTF وOTF وWOFF وWOFF2. عاين مجموعات الخطوط الفرعية ونزّلها بالكامل داخل متصفحك.",
+      },
+      de: {
+        name: "Generator für Schrift-Teilmengen",
+        description:
+          "Behalte die für deinen Text benötigten Glyphen und verkleinere TTF-, OTF-, WOFF- und WOFF2-Schriften. Erstelle und prüfe Schrift-Teilmengen direkt im Browser und lade sie herunter.",
+      },
+      en: {
+        name: "Font Subset Generator",
+        description:
+          "Keep the glyphs needed for your text and shrink TTF, OTF, WOFF and WOFF2 fonts. Preview and download font subsets entirely in your browser.",
+      },
+      es: {
+        name: "Generador de subconjuntos de fuentes",
+        description:
+          "Conserva los glifos que necesita tu texto y reduce fuentes TTF, OTF, WOFF y WOFF2. Previsualiza y descarga subconjuntos íntegramente en tu navegador.",
+      },
+      fr: {
+        name: "Générateur de sous-ensembles de polices",
+        description:
+          "Conservez les glyphes nécessaires à votre texte et réduisez vos polices TTF, OTF, WOFF et WOFF2. Prévisualisez et téléchargez les sous-ensembles dans votre navigateur.",
+      },
+      he: {
+        name: "מחולל תת־קבוצות גופנים",
+        description:
+          "שמרו את הגליפים הדרושים לטקסט שלכם וצמצמו גופני TTF, OTF, WOFF ו-WOFF2. צפו בתת־קבוצות הגופנים והורידו אותן ישירות בדפדפן.",
+      },
+      hi: {
+        name: "फ़ॉन्ट सबसेट जनरेटर",
+        description:
+          "अपने पाठ के लिए ज़रूरी ग्लिफ़ ही रखें और TTF, OTF, WOFF व WOFF2 फ़ॉन्ट का आकार घटाएँ। पूरी तरह ब्राउज़र में फ़ॉन्ट सबसेट देखें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat Subset Font",
+        description:
+          "Pertahankan glif yang diperlukan teks Anda dan perkecil font TTF, OTF, WOFF, dan WOFF2. Pratinjau dan unduh subset font sepenuhnya di browser.",
+      },
+      it: {
+        name: "Generatore di sottoinsiemi di font",
+        description:
+          "Conserva i glifi necessari al tuo testo e riduci i font TTF, OTF, WOFF e WOFF2. Visualizza e scarica i sottoinsiemi direttamente nel browser.",
+      },
+      ja: {
+        name: "フォントサブセット生成ツール",
+        description:
+          "テキストに必要な字形だけを残し、TTF、OTF、WOFF、WOFF2 フォントを軽量化します。ブラウザー内でフォントサブセットをプレビューしてダウンロードできます。",
+      },
+      ko: {
+        name: "글꼴 서브셋 생성기",
+        description:
+          "텍스트에 필요한 글리프만 남겨 TTF, OTF, WOFF, WOFF2 글꼴의 크기를 줄이세요. 브라우저에서 글꼴 서브셋을 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penjana Subset Fon",
+        description:
+          "Kekalkan glif yang diperlukan untuk teks anda dan kecilkan fon TTF, OTF, WOFF dan WOFF2. Pratonton dan muat turun subset fon sepenuhnya dalam pelayar anda.",
+      },
+      nl: {
+        name: "Generator voor lettertypesubsets",
+        description:
+          "Bewaar alleen de glyphs die je tekst nodig heeft en verklein TTF-, OTF-, WOFF- en WOFF2-lettertypen. Bekijk en download lettertypesubsets volledig in je browser.",
+      },
+      no: {
+        name: "Generator for skriftdelmengder",
+        description:
+          "Behold glyfene teksten trenger, og reduser størrelsen på TTF-, OTF-, WOFF- og WOFF2-skrifter. Forhåndsvis og last ned skriftdelmengder direkte i nettleseren.",
+      },
+      pl: {
+        name: "Generator podzbiorów fontów",
+        description:
+          "Zachowaj glify potrzebne w tekście i zmniejsz fonty TTF, OTF, WOFF i WOFF2. Podglądaj i pobieraj podzbiory fontów bezpośrednio w przeglądarce.",
+      },
+      pt: {
+        name: "Gerador de subconjuntos de fontes",
+        description:
+          "Mantenha os glifos necessários para seu texto e reduza fontes TTF, OTF, WOFF e WOFF2. Visualize e baixe subconjuntos de fontes diretamente no navegador.",
+      },
+      ru: {
+        name: "Генератор подмножеств шрифтов",
+        description:
+          "Оставьте глифы, нужные для вашего текста, и уменьшите шрифты TTF, OTF, WOFF и WOFF2. Просматривайте и скачивайте подмножества шрифтов прямо в браузере.",
+      },
+      sv: {
+        name: "Generator för teckensnittsdelmängder",
+        description:
+          "Behåll glyferna som din text behöver och minska storleken på TTF-, OTF-, WOFF- och WOFF2-teckensnitt. Förhandsgranska och ladda ned delmängder direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือสร้างชุดย่อยฟอนต์",
+        description:
+          "เก็บเฉพาะรูปอักษรที่ข้อความต้องใช้และลดขนาดฟอนต์ TTF, OTF, WOFF และ WOFF2 ดูตัวอย่างและดาวน์โหลดชุดย่อยฟอนต์ได้ทั้งหมดในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Yazı Tipi Alt Kümesi Oluşturucu",
+        description:
+          "Metninizin gerektirdiği glifleri koruyarak TTF, OTF, WOFF ve WOFF2 yazı tiplerini küçültün. Alt kümeleri tamamen tarayıcınızda önizleyip indirin.",
+      },
+      vi: {
+        name: "Trình tạo tập con phông chữ",
+        description:
+          "Giữ lại các hình chữ cần cho văn bản và giảm dung lượng phông TTF, OTF, WOFF, WOFF2. Xem trước và tải tập con phông chữ ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "字体子集生成器",
+        description:
+          "仅保留文本所需字形，缩小 TTF、OTF、WOFF 和 WOFF2 字体文件。完全在浏览器中预览并下载字体子集。",
+      },
+      "zh-TW": {
+        name: "字型子集產生器",
+        description:
+          "保留文字所需的字形，縮小 TTF、OTF、WOFF 和 WOFF2 字型檔案。在瀏覽器中完成字型子集的預覽與下載。",
+      },
+    },
+  },
   "gif-to-animated-webp-converter": {
     slug: "gif-to-animated-webp-converter",
     category: "image",
@@ -58544,6 +59080,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "parquet-viewer": {
+    slug: "parquet-viewer",
+    category: "developer",
+    icon: "table-2",
+    tags: [
+      "parquet",
+      "apache",
+      "schema",
+      "data",
+      "table",
+      "csv",
+      "json",
+      "viewer",
+      "export",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "عارض Parquet",
+        description:
+          "افتح ملفات Parquet محليًا، وافحص أنواع الحقول والمخططات المتداخلة، وتصفح الصفوف، وصدّر بصيغة CSV أو JSON. تبقى بياناتك في متصفحك.",
+      },
+      de: {
+        name: "Parquet-Betrachter",
+        description:
+          "Parquet-Dateien lokal öffnen, Feldtypen und verschachtelte Schemas prüfen, Zeilen durchsehen und CSV oder JSON exportieren. Ihre Daten bleiben im Browser.",
+      },
+      en: {
+        name: "Parquet Viewer",
+        description:
+          "Open Parquet files locally, inspect field types and nested schemas, browse rows, and export CSV or JSON. Your data stays in your browser.",
+      },
+      es: {
+        name: "Visor de Parquet",
+        description:
+          "Abre archivos Parquet localmente, inspecciona tipos de campos y esquemas anidados, explora filas y exporta CSV o JSON. Tus datos permanecen en tu navegador.",
+      },
+      fr: {
+        name: "Visionneuse Parquet",
+        description:
+          "Ouvrez des fichiers Parquet localement, inspectez les types de champs et les schémas imbriqués, parcourez les lignes et exportez en CSV ou JSON. Vos données restent dans votre navigateur.",
+      },
+      he: {
+        name: "מציג Parquet",
+        description:
+          "פתיחת קובצי Parquet באופן מקומי, בדיקת סוגי שדות וסכמות מקוננות, עיון בשורות וייצוא CSV או JSON. הנתונים נשארים בדפדפן שלך.",
+      },
+      hi: {
+        name: "Parquet व्यूअर",
+        description:
+          "Parquet फ़ाइलें स्थानीय रूप से खोलें, फ़ील्ड के प्रकार और नेस्टेड स्कीमा जाँचें, पंक्तियाँ देखें और CSV या JSON में निर्यात करें। आपका डेटा आपके ब्राउज़र में ही रहता है।",
+      },
+      id: {
+        name: "Penampil Parquet",
+        description:
+          "Buka file Parquet secara lokal, periksa tipe bidang dan skema bertingkat, jelajahi baris, lalu ekspor ke CSV atau JSON. Data Anda tetap di browser.",
+      },
+      it: {
+        name: "Visualizzatore Parquet",
+        description:
+          "Apri file Parquet in locale, esamina i tipi dei campi e gli schemi annidati, sfoglia le righe ed esporta in CSV o JSON. I dati restano nel browser.",
+      },
+      ja: {
+        name: "Parquet ビューアー",
+        description:
+          "Parquet ファイルをローカルで開き、フィールドの型や入れ子のスキーマを確認して、行の閲覧や CSV・JSON へのエクスポートができます。データはブラウザー内に保持されます。",
+      },
+      ko: {
+        name: "Parquet 뷰어",
+        description:
+          "로컬에서 Parquet 파일을 열고 필드 유형과 중첩 스키마를 확인하며, 행을 탐색하고 CSV 또는 JSON으로 내보내세요. 데이터는 브라우저에만 보관됩니다.",
+      },
+      ms: {
+        name: "Pemapar Parquet",
+        description:
+          "Buka fail Parquet secara setempat, periksa jenis medan dan skema bersarang, semak imbas baris serta eksport CSV atau JSON. Data anda kekal dalam pelayar.",
+      },
+      nl: {
+        name: "Parquet-viewer",
+        description:
+          "Open Parquet-bestanden lokaal, inspecteer veldtypen en geneste schema’s, blader door rijen en exporteer CSV of JSON. Je gegevens blijven in je browser.",
+      },
+      no: {
+        name: "Parquet-viser",
+        description:
+          "Åpne Parquet-filer lokalt, undersøk felttyper og nestede skjemaer, bla gjennom rader og eksporter CSV eller JSON. Dataene dine blir i nettleseren.",
+      },
+      pl: {
+        name: "Przeglądarka Parquet",
+        description:
+          "Otwieraj pliki Parquet lokalnie, sprawdzaj typy pól i zagnieżdżone schematy, przeglądaj wiersze i eksportuj CSV lub JSON. Dane pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Visualizador de Parquet",
+        description:
+          "Abra arquivos Parquet localmente, inspecione tipos de campos e esquemas aninhados, navegue pelas linhas e exporte CSV ou JSON. Seus dados ficam no navegador.",
+      },
+      ru: {
+        name: "Просмотр Parquet",
+        description:
+          "Открывайте файлы Parquet локально, проверяйте типы полей и вложенные схемы, просматривайте строки и экспортируйте данные в CSV или JSON. Данные остаются в браузере.",
+      },
+      sv: {
+        name: "Parquet-visare",
+        description:
+          "Öppna Parquet-filer lokalt, granska fälttyper och nästlade scheman, bläddra bland rader och exportera CSV eller JSON. Dina data stannar i webbläsaren.",
+      },
+      th: {
+        name: "โปรแกรมดู Parquet",
+        description:
+          "เปิดไฟล์ Parquet ในเครื่อง ตรวจสอบชนิดฟิลด์และสคีมาที่ซ้อนกัน เรียกดูแถว และส่งออก CSV หรือ JSON ข้อมูลของคุณจะอยู่ในเบราว์เซอร์เท่านั้น",
+      },
+      tr: {
+        name: "Parquet Görüntüleyici",
+        description:
+          "Parquet dosyalarını yerel olarak açın, alan türlerini ve iç içe şemaları inceleyin, satırlara göz atın ve CSV veya JSON olarak dışa aktarın. Verileriniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Trình xem Parquet",
+        description:
+          "Mở tệp Parquet cục bộ, kiểm tra kiểu trường và lược đồ lồng nhau, duyệt các hàng và xuất CSV hoặc JSON. Dữ liệu luôn ở trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "Parquet 查看器",
+        description:
+          "在本地打开 Parquet 文件，查看字段类型和嵌套结构，浏览数据行，并导出 CSV 或 JSON。数据始终保留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "Parquet 檢視器",
+        description:
+          "在本機開啟 Parquet 檔案，檢查欄位型別與巢狀結構、瀏覽資料列，並匯出 CSV 或 JSON。資料全程留在瀏覽器中。",
+      },
+    },
+  },
   "password-strength-checker": {
     slug: "password-strength-checker",
     category: "text",
@@ -66945,6 +67615,146 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "秒錶",
         description: "使用開始、暫停、計次和重置控制來記錄經過的時間。",
+      },
+    },
+  },
+  "subtitle-converter": {
+    slug: "subtitle-converter",
+    category: "text",
+    icon: "captions",
+    tags: [
+      "subtitle",
+      "caption",
+      "converter",
+      "srt",
+      "vtt",
+      "ass",
+      "ssa",
+      "sbv",
+      "sub",
+      "sami",
+      "lrc",
+      "ttml",
+      "dfxp",
+      "youtube",
+      "transcript",
+      "batch",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل ملفات الترجمة",
+        description:
+          "حوّل ملفات الترجمة بصيغ SRT وVTT وASS وTTML وLRC وغيرها محليًا. نزّل عدة ملفات دفعة واحدة، واضبط التوقيت، واختر ترميز النص.",
+      },
+      de: {
+        name: "Untertitelkonverter",
+        description:
+          "Konvertieren Sie SRT, VTT, ASS, TTML, LRC und weitere Untertitel lokal. Laden Sie mehrere Dateien herunter, passen Sie Zeiten an und wählen Sie die Textkodierung.",
+      },
+      en: {
+        name: "Subtitle Converter",
+        description:
+          "Convert SRT, VTT, ASS, TTML, LRC and other subtitles locally. Batch download files, adjust timing, and choose text encoding.",
+      },
+      es: {
+        name: "Conversor de subtítulos",
+        description:
+          "Convierte SRT, VTT, ASS, TTML, LRC y otros subtítulos localmente. Descarga archivos por lotes, ajusta los tiempos y elige la codificación del texto.",
+      },
+      fr: {
+        name: "Convertisseur de sous-titres",
+        description:
+          "Convertissez localement des sous-titres SRT, VTT, ASS, TTML, LRC et d’autres formats. Téléchargez les fichiers par lots, ajustez les temps et choisissez l’encodage du texte.",
+      },
+      he: {
+        name: "ממיר כתוביות",
+        description:
+          "המרה מקומית של כתוביות בפורמטים SRT, VTT, ASS, TTML, LRC ועוד. הורדת קבצים באצווה, התאמת תזמון ובחירת קידוד טקסט.",
+      },
+      hi: {
+        name: "उपशीर्षक कन्वर्टर",
+        description:
+          "SRT, VTT, ASS, TTML, LRC और अन्य उपशीर्षक स्थानीय रूप से बदलें। फ़ाइलें एक साथ डाउनलोड करें, समय समायोजित करें और टेक्स्ट एन्कोडिंग चुनें।",
+      },
+      id: {
+        name: "Konverter Subtitle",
+        description:
+          "Konversi SRT, VTT, ASS, TTML, LRC, dan subtitle lainnya secara lokal. Unduh banyak file sekaligus, sesuaikan waktu, dan pilih enkode karakter teks.",
+      },
+      it: {
+        name: "Convertitore di sottotitoli",
+        description:
+          "Converti SRT, VTT, ASS, TTML, LRC e altri sottotitoli localmente. Scarica più file insieme, regola i tempi e scegli la codifica del testo.",
+      },
+      ja: {
+        name: "字幕コンバーター",
+        description:
+          "SRT、VTT、ASS、TTML、LRC などの字幕を端末内で変換。ファイルの一括ダウンロード、タイミング調整、文字コードの選択ができます。",
+      },
+      ko: {
+        name: "자막 변환기",
+        description:
+          "SRT, VTT, ASS, TTML, LRC 등 다양한 자막을 기기에서 변환하세요. 파일을 일괄 다운로드하고, 시간을 조정하고, 텍스트 인코딩을 선택할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Sari Kata",
+        description:
+          "Tukar SRT, VTT, ASS, TTML, LRC dan sari kata lain secara setempat. Muat turun fail secara kelompok, laraskan pemasaan dan pilih pengekodan teks.",
+      },
+      nl: {
+        name: "Ondertitelconverter",
+        description:
+          "Converteer SRT, VTT, ASS, TTML, LRC en andere ondertitels lokaal. Download meerdere bestanden tegelijk, pas de timing aan en kies de tekstcodering.",
+      },
+      no: {
+        name: "Undertekstkonverterer",
+        description:
+          "Konverter SRT, VTT, ASS, TTML, LRC og andre undertekster lokalt. Last ned flere filer samtidig, juster tidspunkter og velg tegnkoding.",
+      },
+      pl: {
+        name: "Konwerter napisów",
+        description:
+          "Konwertuj lokalnie napisy w formatach SRT, VTT, ASS, TTML, LRC i innych. Pobieraj wiele plików naraz, dostosowuj czas i wybieraj kodowanie tekstu.",
+      },
+      pt: {
+        name: "Conversor de legendas",
+        description:
+          "Converta SRT, VTT, ASS, TTML, LRC e outras legendas localmente. Baixe arquivos em lote, ajuste os tempos e escolha a codificação de texto.",
+      },
+      ru: {
+        name: "Конвертер субтитров",
+        description:
+          "Преобразуйте субтитры SRT, VTT, ASS, TTML, LRC и других форматов на своём устройстве. Скачивайте файлы пакетно, меняйте время показа и выбирайте кодировку текста.",
+      },
+      sv: {
+        name: "Undertextkonverterare",
+        description:
+          "Konvertera SRT, VTT, ASS, TTML, LRC och andra undertextformat lokalt. Ladda ned flera filer samtidigt, justera tider och välj textkodning.",
+      },
+      th: {
+        name: "โปรแกรมแปลงคำบรรยาย",
+        description:
+          "แปลงคำบรรยาย SRT, VTT, ASS, TTML, LRC และรูปแบบอื่น ๆ บนอุปกรณ์ของคุณ ดาวน์โหลดหลายไฟล์พร้อมกัน ปรับเวลา และเลือกการเข้ารหัสข้อความได้",
+      },
+      tr: {
+        name: "Altyazı Dönüştürücü",
+        description:
+          "SRT, VTT, ASS, TTML, LRC ve diğer altyazıları yerel olarak dönüştürün. Dosyaları toplu indirin, zamanlamayı ayarlayın ve metin kodlamasını seçin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi phụ đề",
+        description:
+          "Chuyển đổi SRT, VTT, ASS, TTML, LRC và các phụ đề khác ngay trên thiết bị. Tải tệp xuống hàng loạt, điều chỉnh thời gian và chọn mã hóa văn bản.",
+      },
+      "zh-CN": {
+        name: "字幕转换器",
+        description:
+          "在本地转换 SRT、VTT、ASS、TTML、LRC 等字幕。批量下载文件、调整时间并选择文本编码。",
+      },
+      "zh-TW": {
+        name: "字幕轉換器",
+        description:
+          "在本機轉換 SRT、VTT、ASS、TTML、LRC 等字幕。批次下載檔案、調整時間，並選擇文字編碼。",
       },
     },
   },
