@@ -15,7 +15,7 @@ export const SAMPLE_ENV =
   '# Application settings\nAPP_NAME="My app"\nPORT=3000\nDEBUG=false\nCODE=0012\nAPI_URL=https://example.com/api\nGREETING="Hello #world"'
 export const FORMAT_LABELS = { env: ".env", json: "JSON", yaml: "YAML" }
 export const FILE_TYPES = {
-  env: ".env,.local,.development,.production,.txt,text/plain",
+  env: "",
   json: ".json,.txt,application/json,text/plain",
   yaml: ".yaml,.yml,.txt,application/yaml,text/yaml,text/plain",
 }
