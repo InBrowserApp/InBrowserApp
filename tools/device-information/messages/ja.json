@@ -66,6 +66,7 @@
   "maxTouchPoints": "最大タッチポイント数",
   "gpuVendor": "GPU ベンダー",
   "gpuRenderer": "GPU レンダラー",
+  "gpuDetails": "GPU の詳細を表示",
   "connectionType": "接続タイプ",
   "downlink": "ダウンリンク",
   "roundTripTime": "ラウンドトリップ時間",

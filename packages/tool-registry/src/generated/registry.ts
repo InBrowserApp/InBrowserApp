@@ -11153,6 +11153,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "gpu-information",
+    category: "web",
+    icon: "cpu",
+    tags: ["gpu", "graphics", "webgl", "hardware", "device", "diagnostics"],
+    locales: {
+      ar: {
+        name: "معلومات GPU",
+        description:
+          "تعرّف على معالج الرسومات (GPU) الذي يستخدمه متصفحك، وما إذا كان WebGL متاحًا لعرض رسومات الويب ثلاثية الأبعاد. افهم معنى النتائج، ثم انسخ تقريرًا أو نزّله للمساعدة في تشخيص مشكلات الرسومات.",
+      },
+      de: {
+        name: "GPU-Informationen",
+        description:
+          "Finden Sie heraus, welchen Grafikprozessor (GPU) Ihr Browser verwendet und ob WebGL für 3D-Grafiken im Web verfügbar ist. Erfahren Sie, was die Ergebnisse bedeuten, und kopieren Sie einen Bericht oder laden Sie ihn herunter, um Grafikproblemen auf den Grund zu gehen.",
+      },
+      en: {
+        name: "GPU Information",
+        description:
+          "Find out which graphics processor (GPU) your browser uses and whether WebGL is available for 3D web graphics. Learn what the results mean, then copy or download a report to help troubleshoot graphics problems.",
+      },
+      es: {
+        name: "Información de GPU",
+        description:
+          "Averigua qué procesador gráfico (GPU) utiliza tu navegador y si WebGL está disponible para mostrar gráficos 3D en la web. Aprende a interpretar los resultados y copia o descarga un informe que te ayude a solucionar problemas gráficos.",
+      },
+      fr: {
+        name: "Informations sur le GPU",
+        description:
+          "Découvrez quel processeur graphique (GPU) votre navigateur utilise et si WebGL est disponible pour les graphismes 3D sur le Web. Apprenez à lire les résultats, puis copiez ou téléchargez un rapport pour vous aider à résoudre les problèmes graphiques.",
+      },
+      he: {
+        name: "מידע על ה-GPU",
+        description:
+          "בדוק באיזה מעבד גרפי (GPU) הדפדפן שלך משתמש ואם WebGL זמין להצגת גרפיקה תלת־ממדית באינטרנט. למד מה משמעות התוצאות, ואז העתק או הורד דוח שיעזור באבחון בעיות גרפיקה.",
+      },
+      hi: {
+        name: "GPU जानकारी",
+        description:
+          "जानें कि आपका ब्राउज़र किस ग्राफ़िक्स प्रोसेसर (GPU) का उपयोग करता है और 3D वेब ग्राफ़िक्स के लिए WebGL उपलब्ध है या नहीं। परिणामों का मतलब समझें, फिर ग्राफ़िक्स से जुड़ी समस्याओं का कारण ढूँढने में मदद के लिए रिपोर्ट कॉपी करें या डाउनलोड करें।",
+      },
+      id: {
+        name: "Informasi GPU",
+        description:
+          "Cari tahu prosesor grafis (GPU) yang digunakan browser Anda dan apakah WebGL tersedia untuk grafis web 3D. Pahami arti hasilnya, lalu salin atau unduh laporan untuk membantu mengatasi masalah grafis.",
+      },
+      it: {
+        name: "Informazioni sulla GPU",
+        description:
+          "Scopri quale processore grafico (GPU) usa il tuo browser e se WebGL è disponibile per la grafica 3D sul web. Impara a leggere i risultati, poi copia o scarica un report per individuare la causa dei problemi grafici.",
+      },
+      ja: {
+        name: "GPU 情報",
+        description:
+          "ブラウザがどのグラフィックス処理装置（GPU）を使っているか、3D グラフィックスを表示するための WebGL が利用できるかを確認できます。結果の意味を知り、レポートをコピーまたはダウンロードして、グラフィックスの問題解決に役立てられます。",
+      },
+      ko: {
+        name: "GPU 정보",
+        description:
+          "브라우저가 사용하는 그래픽 처리 장치(GPU)와 3D 웹 그래픽을 위한 WebGL 지원 여부를 확인하세요. 결과의 의미를 알아보고, 그래픽 문제 해결에 도움이 되도록 보고서를 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Maklumat GPU",
+        description:
+          "Ketahui pemproses grafik (GPU) yang digunakan oleh pelayar anda dan sama ada WebGL tersedia untuk grafik web 3D. Fahami maksud hasil semakan, kemudian salin atau muat turun laporan untuk membantu menyelesaikan masalah grafik.",
+      },
+      nl: {
+        name: "GPU-informatie",
+        description:
+          "Ontdek welke grafische processor (GPU) je browser gebruikt en of WebGL beschikbaar is voor 3D-beelden op het web. Lees wat de resultaten betekenen en kopieer of download een rapport om grafische problemen te helpen oplossen.",
+      },
+      no: {
+        name: "GPU-informasjon",
+        description:
+          "Finn ut hvilken grafikkprosessor (GPU) nettleseren din bruker, og om WebGL er tilgjengelig for 3D-grafikk på nettet. Lær hva resultatene betyr, og kopier eller last ned en rapport som kan hjelpe deg med å feilsøke grafikkproblemer.",
+      },
+      pl: {
+        name: "Informacje o GPU",
+        description:
+          "Sprawdź, z którego procesora graficznego (GPU) korzysta Twoja przeglądarka i czy WebGL jest dostępny do wyświetlania grafiki 3D na stronach. Dowiedz się, co oznaczają wyniki, a następnie skopiuj lub pobierz raport, który pomoże rozwiązać problemy z grafiką.",
+      },
+      pt: {
+        name: "Informações da GPU",
+        description:
+          "Descubra qual processador gráfico (GPU) o seu navegador usa e se o WebGL está disponível para gráficos 3D na web. Entenda o que os resultados significam e copie ou baixe um relatório para ajudar a solucionar problemas gráficos.",
+      },
+      ru: {
+        name: "Информация о GPU",
+        description:
+          "Узнайте, какой графический процессор (GPU) использует ваш браузер и доступен ли WebGL для трёхмерной графики на веб-страницах. Разберитесь в результатах, затем скопируйте или скачайте отчёт, который поможет найти причины проблем с графикой.",
+      },
+      sv: {
+        name: "GPU-information",
+        description:
+          "Ta reda på vilken grafikprocessor (GPU) din webbläsare använder och om WebGL är tillgängligt för 3D-grafik på webben. Lär dig vad resultaten betyder och kopiera eller hämta sedan en rapport som hjälp vid felsökning av grafikproblem.",
+      },
+      th: {
+        name: "ข้อมูล GPU",
+        description:
+          "ตรวจสอบว่าเบราว์เซอร์ของคุณใช้หน่วยประมวลผลกราฟิก (GPU) ตัวใด และใช้ WebGL สำหรับแสดงกราฟิก 3 มิติบนเว็บได้หรือไม่ เรียนรู้ความหมายของผลลัพธ์ แล้วคัดลอกหรือดาวน์โหลดรายงานเพื่อช่วยแก้ปัญหาด้านกราฟิก",
+      },
+      tr: {
+        name: "GPU Bilgileri",
+        description:
+          "Tarayıcınızın hangi grafik işlemcisini (GPU) kullandığını ve web sayfalarında 3B grafikler için WebGL’nin kullanılabilir olup olmadığını öğrenin. Sonuçların anlamını öğrenin, ardından grafik sorunlarını gidermeye yardımcı olması için raporu kopyalayın veya indirin.",
+      },
+      vi: {
+        name: "Thông tin GPU",
+        description:
+          "Xem trình duyệt đang dùng bộ xử lý đồ họa (GPU) nào và WebGL có khả dụng để hiển thị đồ họa 3D trên web hay không. Tìm hiểu ý nghĩa của kết quả, rồi sao chép hoặc tải xuống báo cáo để hỗ trợ khắc phục sự cố đồ họa.",
+      },
+      "zh-CN": {
+        name: "GPU 信息",
+        description:
+          "查看浏览器使用的图形处理器（GPU，通常称为显卡），以及用于网页三维图形的 WebGL 是否可用。了解检测结果的含义，再复制或下载报告，帮助排查图形显示问题。",
+      },
+      "zh-TW": {
+        name: "GPU 資訊",
+        description:
+          "查看瀏覽器使用哪個圖形處理器（GPU），以及是否能使用 WebGL 顯示網頁 3D 圖形。了解結果的意義，再複製或下載報告，協助排查繪圖問題。",
+      },
+    },
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     category: "crypto",
     icon: "lock",
@@ -46619,6 +46742,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: ".gitignore 產生器",
         description: "透過選擇模板為您的專案產生 .gitignore 檔案",
+      },
+    },
+  },
+  "gpu-information": {
+    slug: "gpu-information",
+    category: "web",
+    icon: "cpu",
+    tags: ["gpu", "graphics", "webgl", "hardware", "device", "diagnostics"],
+    locales: {
+      ar: {
+        name: "معلومات GPU",
+        description:
+          "تعرّف على معالج الرسومات (GPU) الذي يستخدمه متصفحك، وما إذا كان WebGL متاحًا لعرض رسومات الويب ثلاثية الأبعاد. افهم معنى النتائج، ثم انسخ تقريرًا أو نزّله للمساعدة في تشخيص مشكلات الرسومات.",
+      },
+      de: {
+        name: "GPU-Informationen",
+        description:
+          "Finden Sie heraus, welchen Grafikprozessor (GPU) Ihr Browser verwendet und ob WebGL für 3D-Grafiken im Web verfügbar ist. Erfahren Sie, was die Ergebnisse bedeuten, und kopieren Sie einen Bericht oder laden Sie ihn herunter, um Grafikproblemen auf den Grund zu gehen.",
+      },
+      en: {
+        name: "GPU Information",
+        description:
+          "Find out which graphics processor (GPU) your browser uses and whether WebGL is available for 3D web graphics. Learn what the results mean, then copy or download a report to help troubleshoot graphics problems.",
+      },
+      es: {
+        name: "Información de GPU",
+        description:
+          "Averigua qué procesador gráfico (GPU) utiliza tu navegador y si WebGL está disponible para mostrar gráficos 3D en la web. Aprende a interpretar los resultados y copia o descarga un informe que te ayude a solucionar problemas gráficos.",
+      },
+      fr: {
+        name: "Informations sur le GPU",
+        description:
+          "Découvrez quel processeur graphique (GPU) votre navigateur utilise et si WebGL est disponible pour les graphismes 3D sur le Web. Apprenez à lire les résultats, puis copiez ou téléchargez un rapport pour vous aider à résoudre les problèmes graphiques.",
+      },
+      he: {
+        name: "מידע על ה-GPU",
+        description:
+          "בדוק באיזה מעבד גרפי (GPU) הדפדפן שלך משתמש ואם WebGL זמין להצגת גרפיקה תלת־ממדית באינטרנט. למד מה משמעות התוצאות, ואז העתק או הורד דוח שיעזור באבחון בעיות גרפיקה.",
+      },
+      hi: {
+        name: "GPU जानकारी",
+        description:
+          "जानें कि आपका ब्राउज़र किस ग्राफ़िक्स प्रोसेसर (GPU) का उपयोग करता है और 3D वेब ग्राफ़िक्स के लिए WebGL उपलब्ध है या नहीं। परिणामों का मतलब समझें, फिर ग्राफ़िक्स से जुड़ी समस्याओं का कारण ढूँढने में मदद के लिए रिपोर्ट कॉपी करें या डाउनलोड करें।",
+      },
+      id: {
+        name: "Informasi GPU",
+        description:
+          "Cari tahu prosesor grafis (GPU) yang digunakan browser Anda dan apakah WebGL tersedia untuk grafis web 3D. Pahami arti hasilnya, lalu salin atau unduh laporan untuk membantu mengatasi masalah grafis.",
+      },
+      it: {
+        name: "Informazioni sulla GPU",
+        description:
+          "Scopri quale processore grafico (GPU) usa il tuo browser e se WebGL è disponibile per la grafica 3D sul web. Impara a leggere i risultati, poi copia o scarica un report per individuare la causa dei problemi grafici.",
+      },
+      ja: {
+        name: "GPU 情報",
+        description:
+          "ブラウザがどのグラフィックス処理装置（GPU）を使っているか、3D グラフィックスを表示するための WebGL が利用できるかを確認できます。結果の意味を知り、レポートをコピーまたはダウンロードして、グラフィックスの問題解決に役立てられます。",
+      },
+      ko: {
+        name: "GPU 정보",
+        description:
+          "브라우저가 사용하는 그래픽 처리 장치(GPU)와 3D 웹 그래픽을 위한 WebGL 지원 여부를 확인하세요. 결과의 의미를 알아보고, 그래픽 문제 해결에 도움이 되도록 보고서를 복사하거나 다운로드하세요.",
+      },
+      ms: {
+        name: "Maklumat GPU",
+        description:
+          "Ketahui pemproses grafik (GPU) yang digunakan oleh pelayar anda dan sama ada WebGL tersedia untuk grafik web 3D. Fahami maksud hasil semakan, kemudian salin atau muat turun laporan untuk membantu menyelesaikan masalah grafik.",
+      },
+      nl: {
+        name: "GPU-informatie",
+        description:
+          "Ontdek welke grafische processor (GPU) je browser gebruikt en of WebGL beschikbaar is voor 3D-beelden op het web. Lees wat de resultaten betekenen en kopieer of download een rapport om grafische problemen te helpen oplossen.",
+      },
+      no: {
+        name: "GPU-informasjon",
+        description:
+          "Finn ut hvilken grafikkprosessor (GPU) nettleseren din bruker, og om WebGL er tilgjengelig for 3D-grafikk på nettet. Lær hva resultatene betyr, og kopier eller last ned en rapport som kan hjelpe deg med å feilsøke grafikkproblemer.",
+      },
+      pl: {
+        name: "Informacje o GPU",
+        description:
+          "Sprawdź, z którego procesora graficznego (GPU) korzysta Twoja przeglądarka i czy WebGL jest dostępny do wyświetlania grafiki 3D na stronach. Dowiedz się, co oznaczają wyniki, a następnie skopiuj lub pobierz raport, który pomoże rozwiązać problemy z grafiką.",
+      },
+      pt: {
+        name: "Informações da GPU",
+        description:
+          "Descubra qual processador gráfico (GPU) o seu navegador usa e se o WebGL está disponível para gráficos 3D na web. Entenda o que os resultados significam e copie ou baixe um relatório para ajudar a solucionar problemas gráficos.",
+      },
+      ru: {
+        name: "Информация о GPU",
+        description:
+          "Узнайте, какой графический процессор (GPU) использует ваш браузер и доступен ли WebGL для трёхмерной графики на веб-страницах. Разберитесь в результатах, затем скопируйте или скачайте отчёт, который поможет найти причины проблем с графикой.",
+      },
+      sv: {
+        name: "GPU-information",
+        description:
+          "Ta reda på vilken grafikprocessor (GPU) din webbläsare använder och om WebGL är tillgängligt för 3D-grafik på webben. Lär dig vad resultaten betyder och kopiera eller hämta sedan en rapport som hjälp vid felsökning av grafikproblem.",
+      },
+      th: {
+        name: "ข้อมูล GPU",
+        description:
+          "ตรวจสอบว่าเบราว์เซอร์ของคุณใช้หน่วยประมวลผลกราฟิก (GPU) ตัวใด และใช้ WebGL สำหรับแสดงกราฟิก 3 มิติบนเว็บได้หรือไม่ เรียนรู้ความหมายของผลลัพธ์ แล้วคัดลอกหรือดาวน์โหลดรายงานเพื่อช่วยแก้ปัญหาด้านกราฟิก",
+      },
+      tr: {
+        name: "GPU Bilgileri",
+        description:
+          "Tarayıcınızın hangi grafik işlemcisini (GPU) kullandığını ve web sayfalarında 3B grafikler için WebGL’nin kullanılabilir olup olmadığını öğrenin. Sonuçların anlamını öğrenin, ardından grafik sorunlarını gidermeye yardımcı olması için raporu kopyalayın veya indirin.",
+      },
+      vi: {
+        name: "Thông tin GPU",
+        description:
+          "Xem trình duyệt đang dùng bộ xử lý đồ họa (GPU) nào và WebGL có khả dụng để hiển thị đồ họa 3D trên web hay không. Tìm hiểu ý nghĩa của kết quả, rồi sao chép hoặc tải xuống báo cáo để hỗ trợ khắc phục sự cố đồ họa.",
+      },
+      "zh-CN": {
+        name: "GPU 信息",
+        description:
+          "查看浏览器使用的图形处理器（GPU，通常称为显卡），以及用于网页三维图形的 WebGL 是否可用。了解检测结果的含义，再复制或下载报告，帮助排查图形显示问题。",
+      },
+      "zh-TW": {
+        name: "GPU 資訊",
+        description:
+          "查看瀏覽器使用哪個圖形處理器（GPU），以及是否能使用 WebGL 顯示網頁 3D 圖形。了解結果的意義，再複製或下載報告，協助排查繪圖問題。",
       },
     },
   },

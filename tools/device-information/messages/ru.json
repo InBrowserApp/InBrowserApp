@@ -66,6 +66,7 @@
   "maxTouchPoints": "Макс. точек касания",
   "gpuVendor": "Производитель GPU",
   "gpuRenderer": "Рендерер GPU",
+  "gpuDetails": "Посмотреть сведения о GPU",
   "connectionType": "Тип соединения",
   "downlink": "Входящая скорость",
   "roundTripTime": "Время кругового обмена",

@@ -66,6 +66,7 @@
   "maxTouchPoints": "מספר נקודות מגע מרבי",
   "gpuVendor": "ספק GPU",
   "gpuRenderer": "רכיב רינדור GPU",
+  "gpuDetails": "הצג פרטי GPU",
   "connectionType": "סוג חיבור",
   "downlink": "קצב הורדה",
   "roundTripTime": "זמן הלוך-חזור",

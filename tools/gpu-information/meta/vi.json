@@ -1,0 +1,4 @@
+{
+  "name": "Thông tin GPU",
+  "description": "Xem trình duyệt đang dùng bộ xử lý đồ họa (GPU) nào và WebGL có khả dụng để hiển thị đồ họa 3D trên web hay không. Tìm hiểu ý nghĩa của kết quả, rồi sao chép hoặc tải xuống báo cáo để hỗ trợ khắc phục sự cố đồ họa."
+}

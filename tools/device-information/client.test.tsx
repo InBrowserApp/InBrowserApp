@@ -106,6 +106,11 @@ describe("DeviceInformationClient", () => {
     expect(screen.getByText("16 GB")).toBeTruthy()
     expect(screen.getByText("25 Mbps")).toBeTruthy()
     expect(screen.getByText("1 GB")).toBeTruthy()
+    expect(
+      screen
+        .getByRole("link", { name: messages.gpuDetails })
+        .getAttribute("href")
+    ).toBe("/tools/gpu-information/")
   })
 
   it("copies the JSON snapshot", async () => {

@@ -25,6 +25,7 @@ export {
   Clock3,
   Code,
   CreditCard,
+  Cpu,
   Copy,
   Download,
   Eye,

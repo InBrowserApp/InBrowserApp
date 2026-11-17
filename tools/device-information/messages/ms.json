@@ -66,6 +66,7 @@
   "maxTouchPoints": "Titik sentuh maksimum",
   "gpuVendor": "Pembekal GPU",
   "gpuRenderer": "Perender GPU",
+  "gpuDetails": "Lihat butiran GPU",
   "connectionType": "Jenis sambungan",
   "downlink": "Downlink",
   "roundTripTime": "Masa ulang-alik",

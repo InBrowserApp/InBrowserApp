@@ -66,6 +66,7 @@
   "maxTouchPoints": "Số điểm chạm tối đa",
   "gpuVendor": "Nhà cung cấp GPU",
   "gpuRenderer": "Bộ kết xuất GPU",
+  "gpuDetails": "Xem chi tiết GPU",
   "connectionType": "Loại kết nối",
   "downlink": "Downlink",
   "roundTripTime": "Thời gian khứ hồi",
