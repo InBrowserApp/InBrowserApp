@@ -7086,6 +7086,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "env-converter",
+    language: "ar",
+  },
+  {
+    slug: "env-converter",
+    language: "de",
+  },
+  {
+    slug: "env-converter",
+    language: "en",
+  },
+  {
+    slug: "env-converter",
+    language: "es",
+  },
+  {
+    slug: "env-converter",
+    language: "fr",
+  },
+  {
+    slug: "env-converter",
+    language: "he",
+  },
+  {
+    slug: "env-converter",
+    language: "hi",
+  },
+  {
+    slug: "env-converter",
+    language: "id",
+  },
+  {
+    slug: "env-converter",
+    language: "it",
+  },
+  {
+    slug: "env-converter",
+    language: "ja",
+  },
+  {
+    slug: "env-converter",
+    language: "ko",
+  },
+  {
+    slug: "env-converter",
+    language: "ms",
+  },
+  {
+    slug: "env-converter",
+    language: "nl",
+  },
+  {
+    slug: "env-converter",
+    language: "no",
+  },
+  {
+    slug: "env-converter",
+    language: "pl",
+  },
+  {
+    slug: "env-converter",
+    language: "pt",
+  },
+  {
+    slug: "env-converter",
+    language: "ru",
+  },
+  {
+    slug: "env-converter",
+    language: "sv",
+  },
+  {
+    slug: "env-converter",
+    language: "th",
+  },
+  {
+    slug: "env-converter",
+    language: "tr",
+  },
+  {
+    slug: "env-converter",
+    language: "vi",
+  },
+  {
+    slug: "env-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "env-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "epub-reader",
     language: "ar",
   },

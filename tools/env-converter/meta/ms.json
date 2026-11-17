@@ -1,0 +1,4 @@
+{
+  "name": "Penukar .env",
+  "description": "Tukar fail .env kepada JSON atau YAML dan sebaliknya, dengan semakan kunci pendua dan tanda petik."
+}

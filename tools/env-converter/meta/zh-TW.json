@@ -1,0 +1,4 @@
+{
+  "name": ".env 轉換器",
+  "description": "將 .env 檔案與 JSON 或 YAML 相互轉換，並檢查重複鍵名和引號問題。"
+}

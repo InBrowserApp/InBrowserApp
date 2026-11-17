@@ -1,0 +1,4 @@
+{
+  "name": ".env-konverterare",
+  "description": "Konvertera .env-filer till JSON eller YAML och tillbaka, med kontroll av duplicerade nycklar och citattecken."
+}
