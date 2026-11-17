@@ -78,6 +78,13 @@ test("encodes, copies and downloads raw binary; reverses to JSON", async () => {
     value: { writeText },
   })
   render(<Client messages={messages} />)
+  expect(
+    screen.getByRole("combobox", { name: messages.direction })
+  ).toBeTruthy()
+  expect(screen.getByRole("combobox", { name: messages.format })).toBeTruthy()
+  expect(
+    screen.getByRole("combobox", { name: messages.representation })
+  ).toBeTruthy()
   expect(output().value).toBe("")
   expect(
     screen

@@ -35,11 +35,10 @@ export function Controls({
     <Card>
       <CardContent className="space-y-4">
         <div className="grid gap-4 sm:grid-cols-3">
-          <label
-            className="space-y-2 text-sm font-medium"
-            htmlFor={`${id}-format`}
-          >
-            <span className="block">{m.format}</span>
+          <div className="space-y-2 text-sm font-medium">
+            <label className="block" htmlFor={`${id}-format`}>
+              {m.format}
+            </label>
             <select
               id={`${id}-format`}
               name="format"
@@ -50,12 +49,11 @@ export function Controls({
               <option value="cbor">CBOR</option>
               <option value="msgpack">MessagePack</option>
             </select>
-          </label>
-          <label
-            className="space-y-2 text-sm font-medium"
-            htmlFor={`${id}-direction`}
-          >
-            <span className="block">{m.direction}</span>
+          </div>
+          <div className="space-y-2 text-sm font-medium">
+            <label className="block" htmlFor={`${id}-direction`}>
+              {m.direction}
+            </label>
             <select
               id={`${id}-direction`}
               name="direction"
@@ -68,12 +66,11 @@ export function Controls({
               <option value="encode">{m.encode}</option>
               <option value="decode">{m.decode}</option>
             </select>
-          </label>
-          <label
-            className="space-y-2 text-sm font-medium"
-            htmlFor={`${id}-representation`}
-          >
-            <span className="block">{m.representation}</span>
+          </div>
+          <div className="space-y-2 text-sm font-medium">
+            <label className="block" htmlFor={`${id}-representation`}>
+              {m.representation}
+            </label>
             <select
               id={`${id}-representation`}
               name="representation"
@@ -87,7 +84,7 @@ export function Controls({
               <option value="base64">Base64</option>
               <option value="base64url">Base64URL</option>
             </select>
-          </label>
+          </div>
         </div>
         <label
           aria-label={m.extended}
