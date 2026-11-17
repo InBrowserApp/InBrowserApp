@@ -51,6 +51,8 @@
   "rawData": "完整元数据（JSON）",
   "helpTitle": "关于此查看器",
   "helpDescription": "选择文件即可查看其实际封装格式和流信息，即使浏览器无法播放也能分析。每条视频、音频和字幕轨道都会单独列出。可复制易读的报告，或下载 JSON 格式的完整元数据。",
-  "helpNotes": "总码率包含所有流及封装开销。缺失字段表示文件未提供相应信息。",
-  "poweredBy": "由 MediaInfo 提供支持"
+  "helpNotes": "总码率包含所有轨道和封装开销。可显示的字段取决于文件格式及其元数据。",
+  "poweredBy": "由 MediaInfo 提供支持",
+  "technicalDetails": "技术详情",
+  "copyFailed": "复制失败"
 }

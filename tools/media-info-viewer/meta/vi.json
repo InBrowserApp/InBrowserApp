@@ -1,4 +1,4 @@
 {
   "name": "Trình xem thông tin đa phương tiện",
-  "description": "Xem bộ mã hóa âm thanh và video, tốc độ bit, thời lượng, độ phân giải, tốc độ khung hình và chi tiết các luồng ngay trong trình duyệt."
+  "description": "Kiểm tra MP4, MKV, MP3 và các tệp đa phương tiện khác: bộ mã hóa, tốc độ bit, thời lượng, độ phân giải, tốc độ khung hình, luồng âm thanh và phụ đề. Tệp luôn ở trên thiết bị của bạn."
 }

@@ -51,6 +51,8 @@
   "rawData": "Tüm meta veriler (JSON)",
   "helpTitle": "Bu görüntüleyici hakkında",
   "helpDescription": "Tarayıcınız oynatamasa bile dosyanın gerçek kapsayıcısını ve akışlarını incelemek için bir dosya seçin. Her video, ses ve altyazı izi ayrı ayrı listelenir. Okunabilir bir rapor kopyalayın veya tüm meta verileri JSON olarak indirin.",
-  "helpNotes": "Toplam bit hızı, tüm akışları ve kapsayıcı ek yükünü içerir. Eksik alanlar dosya tarafından bildirilmemiştir.",
-  "poweredBy": "MediaInfo ile çalışır"
+  "helpNotes": "Toplam bit hızı, tüm akışları ve kapsayıcı ek yükünü içerir. Görüntülenebilen alanlar dosya biçimine ve meta verilerine bağlıdır.",
+  "poweredBy": "MediaInfo ile çalışır",
+  "technicalDetails": "Teknik ayrıntılar",
+  "copyFailed": "Kopyalanamadı"
 }

@@ -51,6 +51,8 @@
   "rawData": "Toàn bộ siêu dữ liệu (JSON)",
   "helpTitle": "Giới thiệu trình xem này",
   "helpDescription": "Chọn một tệp để kiểm tra vùng chứa và các luồng thực tế, ngay cả khi trình duyệt không thể phát tệp đó. Mỗi luồng video, âm thanh và phụ đề được liệt kê riêng. Sao chép báo cáo dễ đọc hoặc tải toàn bộ siêu dữ liệu dưới dạng JSON.",
-  "helpNotes": "Tổng tốc độ bit bao gồm tất cả các luồng và phần dữ liệu phụ của vùng chứa. Các trường bị thiếu là những thông tin tệp không cung cấp.",
-  "poweredBy": "Sử dụng MediaInfo"
+  "helpNotes": "Tổng tốc độ bit bao gồm tất cả các luồng và phần dữ liệu phụ của vùng chứa. Các trường có thể hiển thị tùy thuộc vào định dạng tệp và siêu dữ liệu của tệp.",
+  "poweredBy": "Sử dụng MediaInfo",
+  "technicalDetails": "Chi tiết kỹ thuật",
+  "copyFailed": "Sao chép thất bại"
 }

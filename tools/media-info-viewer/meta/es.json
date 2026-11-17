@@ -1,4 +1,4 @@
 {
   "name": "Visor de información multimedia",
-  "description": "Consulta códecs de audio y vídeo, tasa de bits, duración, resolución, frecuencia de fotogramas y detalles de las pistas localmente en tu navegador."
+  "description": "Examina MP4, MKV, MP3 y otros archivos multimedia: códecs, tasa de bits, duración, resolución, fotogramas por segundo, pistas de audio y subtítulos. Los archivos permanecen en tu dispositivo."
 }

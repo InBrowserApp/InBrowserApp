@@ -51,6 +51,8 @@
   "rawData": "Fullständiga metadata (JSON)",
   "helpTitle": "Om den här visaren",
   "helpDescription": "Välj en fil för att granska dess faktiska behållare och strömmar, även om webbläsaren inte kan spela upp den. Varje video-, ljud- och undertextspår visas separat. Kopiera en läsbar rapport eller ladda ner fullständiga metadata som JSON.",
-  "helpNotes": "Den totala bithastigheten omfattar alla strömmar och behållarens overhead. Saknade fält rapporteras inte av filen.",
-  "poweredBy": "Drivs av MediaInfo"
+  "helpNotes": "Den totala bithastigheten omfattar alla strömmar och behållarens overhead. Vilka fält som är tillgängliga beror på filformatet och dess metadata.",
+  "poweredBy": "Drivs av MediaInfo",
+  "technicalDetails": "Tekniska detaljer",
+  "copyFailed": "Kopieringen misslyckades"
 }

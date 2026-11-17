@@ -34,7 +34,13 @@ const result: Reply = {
       "@ref": "",
       track: [
         { "@type": "General", Format: "MPEG-4", Duration: 1.5 },
-        { "@type": "Video", Format: "AVC", Width: 1920, Height: 1080 },
+        {
+          "@type": "Video",
+          Format: "AVC",
+          CodecID: "avc1",
+          Width: 1920,
+          Height: 1080,
+        },
         { "@type": "Audio", Format: "AAC", Channels: 2, SamplingRate: 48000 },
       ],
     },
@@ -90,6 +96,15 @@ describe("media viewer", () => {
     expect(screen.getByRole("heading", { name: "Audio 1" })).toBeTruthy()
     expect(screen.getAllByText("1920 × 1080")).toHaveLength(2)
     expect(screen.getByText("48 kHz")).toBeTruthy()
+    expect(screen.getByText("avc1").closest("details")?.open).toBe(false)
+    expect(screen.getByText("AVC").closest("details")).toBeNull()
+    expect(
+      screen.getByRole("link", { name: "Audio: 1" }).getAttribute("href")
+    ).toBe("#media-audio-1")
+    expect(container.querySelector("#media-audio-1 h2")?.textContent).toBe(
+      "Audio 1"
+    )
+    expect(screen.queryByRole("link", { name: "Subtitles: 0" })).toBeNull()
     fireEvent.click(screen.getByRole("button", { name: m.copyReport }))
     await act(async () => {})
     expect(clipboard).toHaveBeenCalledWith(
@@ -182,6 +197,55 @@ describe("analysis lifecycle", () => {
       expect(workers[0]!.terminate).toHaveBeenCalledTimes(2)
     }
   )
+  it("never pairs a completed result with a replacement or removed file", () => {
+    const renders: { file: File | null; reply: Reply | null }[] = []
+    const hook = renderHook(
+      ({ selected }: { selected: File | null }) => {
+        const state = useAnalysis(selected)
+        renders.push({ file: selected, reply: state.reply })
+        return state
+      },
+      { initialProps: { selected: file as File | null } }
+    )
+    complete()
+    expect(hook.result.current.reply).toEqual(result)
+    hook.rerender({ selected: other })
+    expect(
+      renders
+        .filter((render) => render.file === other)
+        .every((render) => render.reply === null)
+    ).toBe(true)
+    expect(hook.result.current.busy).toBe(true)
+    complete(0)
+    expect(hook.result.current.reply).toBeNull()
+    const next: Reply = {
+      result: {
+        media: { "@ref": "", track: [{ "@type": "Audio", Format: "FLAC" }] },
+      },
+    }
+    complete(1, next)
+    expect(hook.result.current).toEqual({ reply: next, busy: false })
+    hook.rerender({ selected: null })
+    expect(
+      renders
+        .filter((render) => render.file === null)
+        .every((render) => render.reply === null)
+    ).toBe(true)
+    expect(hook.result.current).toEqual({ reply: null, busy: false })
+  })
+  it("shows localized clipboard failure feedback and allows retry", async () => {
+    render(<Client messages={m} language="en" />)
+    choose()
+    complete()
+    clipboard.mockRejectedValueOnce(new Error("Write permission denied"))
+    fireEvent.click(screen.getByRole("button", { name: m.copyReport }))
+    await act(async () => {})
+    expect(screen.getByRole("button", { name: m.copyFailed })).toBeTruthy()
+    expect(screen.getByRole("link", { name: m.downloadJson })).toBeTruthy()
+    fireEvent.click(screen.getByRole("button", { name: m.copyFailed }))
+    await act(async () => {})
+    expect(screen.getByRole("button", { name: m.copied })).toBeTruthy()
+  })
   it("cleans up a failed postMessage", () => {
     postFails = true
     const { result } = renderHook(() => useAnalysis(file))

@@ -1,4 +1,4 @@
 {
   "name": "Media Info Viewer",
-  "description": "View audio and video codecs, bitrate, duration, resolution, frame rate, and track details locally in your browser."
+  "description": "Inspect MP4, MKV, MP3 and other media: codecs, bitrate, duration, resolution, frame rate, audio tracks and subtitles. Files stay on your device."
 }

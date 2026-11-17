@@ -51,6 +51,8 @@
   "rawData": "Metadata penuh (JSON)",
   "helpTitle": "Tentang pemapar ini",
   "helpDescription": "Pilih fail untuk memeriksa bekas dan strim sebenarnya, walaupun pelayar anda tidak dapat memainkannya. Setiap trek video, audio dan sari kata disenaraikan secara berasingan. Salin laporan yang mudah dibaca atau muat turun metadata penuh sebagai JSON.",
-  "helpNotes": "Kadar bit keseluruhan merangkumi semua strim dan data tambahan bekas. Medan yang tiada tidak dilaporkan oleh fail.",
-  "poweredBy": "Dikuasakan oleh MediaInfo"
+  "helpNotes": "Kadar bit keseluruhan merangkumi semua strim dan data tambahan bekas. Medan yang tersedia bergantung pada format fail dan metadatanya.",
+  "poweredBy": "Dikuasakan oleh MediaInfo",
+  "technicalDetails": "Butiran teknikal",
+  "copyFailed": "Gagal menyalin"
 }

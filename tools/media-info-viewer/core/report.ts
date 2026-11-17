@@ -1,8 +1,8 @@
 import type { MediaInfoResult, Track } from "mediainfo.js"
 import type { Messages } from "../types"
 
-type Row = { label: string; value: string }
-type Section = { title: string; rows: Row[] }
+export type Row = { label: string; value: string; advanced: boolean }
+type Section = { id: string; title: string; rows: Row[] }
 
 export function scalar(value: unknown): string {
   return typeof value === "string" || typeof value === "number"
@@ -58,10 +58,10 @@ function resolution(track: Track) {
   return width && height ? `${width} × ${height}` : ""
 }
 
-function rows(values: [string, string][]): Row[] {
+function rows(values: [string, string, boolean?][]): Row[] {
   return values
     .filter(([, value]) => value !== "")
-    .map(([label, value]) => ({ label, value }))
+    .map(([label, value, advanced = false]) => ({ label, value, advanced }))
 }
 
 export function buildReport(
@@ -94,6 +94,7 @@ export function buildReport(
   ].map((metric) => ({ ...metric, value: metric.value || m.notAvailable }))
   const sections: Section[] = [
     {
+      id: "media-overview",
       title: m.overview,
       rows: rows([
         [m.fileName, file.name],
@@ -118,42 +119,43 @@ export function buildReport(
     const flag = (key: string) =>
       get(key) === "Yes" ? m.yes : get(key) === "No" ? m.no : text(key)
     sections.push({
-      title: `${title} ${++counts[type]}`,
+      id: `media-${type.toLowerCase()}-${++counts[type]}`,
+      title: `${title} ${counts[type]}`,
       rows: rows([
         [m.codec, text("Format")],
-        [m.profile, text("Format_Profile")],
-        [m.codecId, text("CodecID")],
+        [m.profile, text("Format_Profile"), true],
+        [m.codecId, text("CodecID"), true],
         [m.title, text("Title")],
         [m.language, text("Language")],
         [m.duration, duration(get("Duration"))],
         [m.bitrate, bitrate(get("BitRate"))],
-        [m.bitrateMode, text("BitRate_Mode")],
+        [m.bitrateMode, text("BitRate_Mode"), true],
         ...(type === "Video"
           ? ([
               [m.resolution, resolution(track)],
               [m.frameRate, quantity(get("FrameRate"), "fps", 1, language)],
-              [m.frameRateMode, text("FrameRate_Mode")],
-              [m.aspectRatio, text("DisplayAspectRatio")],
-              [m.rotation, text("Rotation")],
-              [m.colorSpace, text("ColorSpace")],
-              [m.chromaSubsampling, text("ChromaSubsampling")],
+              [m.frameRateMode, text("FrameRate_Mode"), true],
+              [m.aspectRatio, text("DisplayAspectRatio"), true],
+              [m.rotation, text("Rotation"), true],
+              [m.colorSpace, text("ColorSpace"), true],
+              [m.chromaSubsampling, text("ChromaSubsampling"), true],
               [m.hdr, text("HDR_Format")],
-            ] as [string, string][])
+            ] as [string, string, boolean?][])
           : []),
         ...(type === "Audio"
           ? ([
               [m.channels, text("Channels")],
-              [m.channelLayout, text("ChannelLayout")],
+              [m.channelLayout, text("ChannelLayout"), true],
               [
                 m.sampleRate,
                 quantity(get("SamplingRate"), "kHz", 1000, language),
               ],
-            ] as [string, string][])
+            ] as [string, string, boolean?][])
           : []),
-        [m.bitDepth, text("BitDepth")],
-        [m.defaultTrack, flag("Default")],
-        [m.forcedTrack, flag("Forced")],
-        [m.encoder, text("Encoded_Library")],
+        [m.bitDepth, text("BitDepth"), true],
+        [m.defaultTrack, flag("Default"), type === "Video"],
+        [m.forcedTrack, flag("Forced"), type === "Video"],
+        [m.encoder, text("Encoded_Library"), true],
       ]),
     })
   }

@@ -51,6 +51,8 @@
   "rawData": "Metadati completi (JSON)",
   "helpTitle": "Informazioni sul visualizzatore",
   "helpDescription": "Seleziona un file per esaminarne il contenitore e i flussi effettivi, anche se il browser non può riprodurlo. Ogni traccia video, audio e di sottotitoli è elencata separatamente. Copia un rapporto leggibile o scarica tutti i metadati in formato JSON.",
-  "helpNotes": "Il bitrate complessivo include tutti i flussi e i dati aggiuntivi del contenitore. I campi mancanti non sono riportati dal file.",
-  "poweredBy": "Basato su MediaInfo"
+  "helpNotes": "Il bitrate complessivo include tutti i flussi e i dati aggiuntivi del contenitore. I campi disponibili dipendono dal formato del file e dai suoi metadati.",
+  "poweredBy": "Basato su MediaInfo",
+  "technicalDetails": "Dettagli tecnici",
+  "copyFailed": "Copia non riuscita"
 }

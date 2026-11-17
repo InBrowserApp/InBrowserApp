@@ -1,34 +1,33 @@
 import { useEffect, useState } from "react"
 import type { Reply } from "./types"
 
+type CompletedAnalysis = { file: File; reply: Reply }
+
 export function useAnalysis(file: File | null) {
-  const [reply, setReply] = useState<Reply | null>(null)
-  const [busy, setBusy] = useState(false)
+  const [completed, setCompleted] = useState<CompletedAnalysis | null>(null)
+  const reply = completed?.file === file ? completed.reply : null
+  const busy = file !== null && file.size > 0 && reply === null
   useEffect(() => {
-    setReply(null)
-    setBusy(false)
+    setCompleted(null)
     if (!file) return
     if (file.size === 0) {
-      setReply({ error: "parseError" })
+      setCompleted({ file, reply: { error: "parseError" } })
       return
     }
     let active = true
     let worker: Worker | undefined
     const fail = () => {
       if (!active) return
-      setReply({ error: "loadError" })
-      setBusy(false)
+      setCompleted({ file, reply: { error: "loadError" } })
       worker?.terminate()
     }
-    setBusy(true)
     try {
       worker = new Worker(new URL("./worker.ts", import.meta.url), {
         type: "module",
       })
       worker.onmessage = (event: MessageEvent<Reply>) => {
         if (!active) return
-        setReply(event.data)
-        setBusy(false)
+        setCompleted({ file, reply: event.data })
         worker?.terminate()
       }
       worker.onerror = fail

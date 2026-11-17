@@ -1,4 +1,4 @@
 {
   "name": "Przeglądarka informacji o multimediach",
-  "description": "Sprawdzaj kodeki audio i wideo, przepływność, czas trwania, rozdzielczość, liczbę klatek na sekundę i szczegóły ścieżek lokalnie w przeglądarce."
+  "description": "Sprawdzaj pliki MP4, MKV, MP3 i inne multimedia: kodeki, przepływność, czas trwania, rozdzielczość, liczbę klatek na sekundę, ścieżki audio i napisy. Pliki pozostają na Twoim urządzeniu."
 }

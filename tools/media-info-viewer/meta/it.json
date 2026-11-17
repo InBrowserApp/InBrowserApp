@@ -1,4 +1,4 @@
 {
   "name": "Visualizzatore di informazioni audio e video",
-  "description": "Visualizza codec audio e video, bitrate, durata, risoluzione, frequenza fotogrammi e dettagli delle tracce localmente nel browser."
+  "description": "Esamina MP4, MKV, MP3 e altri file multimediali: codec, bitrate, durata, risoluzione, frequenza fotogrammi, tracce audio e sottotitoli. I file restano sul tuo dispositivo."
 }

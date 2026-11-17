@@ -51,6 +51,8 @@
   "rawData": "Métadonnées complètes (JSON)",
   "helpTitle": "À propos de cette visionneuse",
   "helpDescription": "Sélectionnez un fichier pour examiner son conteneur réel et ses flux, même si votre navigateur ne peut pas le lire. Chaque piste vidéo, audio et de sous-titres est affichée séparément. Copiez un rapport lisible ou téléchargez les métadonnées complètes au format JSON.",
-  "helpNotes": "Le débit global comprend tous les flux et les données supplémentaires du conteneur. Les champs absents ne sont pas renseignés dans le fichier.",
-  "poweredBy": "Propulsé par MediaInfo"
+  "helpNotes": "Le débit global comprend tous les flux et les données supplémentaires du conteneur. Les champs disponibles dépendent du format du fichier et de ses métadonnées.",
+  "poweredBy": "Propulsé par MediaInfo",
+  "technicalDetails": "Détails techniques",
+  "copyFailed": "Échec de la copie"
 }

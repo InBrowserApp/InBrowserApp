@@ -51,6 +51,8 @@
   "rawData": "Metadados completos (JSON)",
   "helpTitle": "Sobre este visualizador",
   "helpDescription": "Selecione um arquivo para inspecionar seu contêiner e fluxos reais, mesmo que o navegador não consiga reproduzi-lo. Cada faixa de vídeo, áudio e legenda é listada separadamente. Copie um relatório legível ou baixe os metadados completos em JSON.",
-  "helpNotes": "A taxa de bits total inclui todos os fluxos e os dados adicionais do contêiner. Campos ausentes não são informados pelo arquivo.",
-  "poweredBy": "Desenvolvido com MediaInfo"
+  "helpNotes": "A taxa de bits total inclui todos os fluxos e os dados adicionais do contêiner. Os campos disponíveis dependem do formato do arquivo e de seus metadados.",
+  "poweredBy": "Desenvolvido com MediaInfo",
+  "technicalDetails": "Detalhes técnicos",
+  "copyFailed": "Falha ao copiar"
 }

@@ -51,6 +51,8 @@
   "rawData": "完整中繼資料（JSON）",
   "helpTitle": "關於此檢視器",
   "helpDescription": "選擇檔案即可檢查實際的容器格式與串流，即使瀏覽器無法播放也能檢視。每條視訊軌、音軌與字幕軌會分別列出。您可以複製易讀的報告，或將完整中繼資料下載為 JSON。",
-  "helpNotes": "總位元率包含所有串流與容器的額外資料。缺少的欄位表示檔案未提供該資訊。",
-  "poweredBy": "採用 MediaInfo"
+  "helpNotes": "總位元率包含所有串流與容器的額外資料。可顯示的欄位取決於檔案格式及其中繼資料。",
+  "poweredBy": "採用 MediaInfo",
+  "technicalDetails": "技術詳細資訊",
+  "copyFailed": "複製失敗"
 }

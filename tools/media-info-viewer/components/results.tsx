@@ -8,6 +8,7 @@ import {
 } from "@workspace/ui/components/tool/tool-panel-card"
 import { Download } from "@workspace/ui/icons"
 import { buildReport } from "../core/report"
+import { InfoRows } from "./info-rows"
 import type { MediaInfoResult } from "mediainfo.js"
 import type { Messages } from "../types"
 
@@ -60,24 +61,50 @@ export function Results({
       </dl>
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap gap-2">
-          <Badge variant="secondary">
-            {m.video}: {counts.Video}
-          </Badge>
-          <Badge variant="secondary">
-            {m.audio}: {counts.Audio}
-          </Badge>
-          <Badge variant="secondary">
-            {m.text}: {counts.Text}
-          </Badge>
+          {(
+            [
+              ["Video", m.video],
+              ["Audio", m.audio],
+              ["Text", m.text],
+            ] as const
+          ).map(([type, label]) =>
+            counts[type] > 0 ? (
+              <Badge
+                key={type}
+                asChild
+                variant="secondary"
+                className="min-h-11 px-3 sm:min-h-0 sm:px-2"
+              >
+                <a href={`#media-${type.toLowerCase()}-1`}>
+                  {label}: {counts[type]}
+                </a>
+              </Badge>
+            ) : (
+              <Badge
+                key={type}
+                variant="secondary"
+                className="min-h-11 px-3 sm:min-h-0 sm:px-2"
+              >
+                {label}: 0
+              </Badge>
+            )
+          )}
         </div>
         <div className="flex flex-wrap gap-2">
           <ToolCopyButton
             value={report}
             copyLabel={m.copyReport}
             copiedLabel={m.copied}
+            failedLabel={m.copyFailed}
+            className="min-h-11 sm:min-h-0"
           />
           {url ? (
-            <Button asChild size="sm" variant="outline">
+            <Button
+              asChild
+              size="sm"
+              variant="outline"
+              className="min-h-11 sm:min-h-0"
+            >
               <a href={url} download={`${file.name}.mediainfo.json`}>
                 <Download />
                 {m.downloadJson}
@@ -91,26 +118,28 @@ export function Results({
           .slice(1)
           .concat(sections.slice(0, 1))
           .map((section) => (
-            <ToolPanelCard key={section.title} className="h-auto">
+            <ToolPanelCard
+              key={section.id}
+              id={section.id}
+              className="h-auto scroll-mt-6"
+            >
               <ToolPanelCardContent className="gap-3">
                 <h2 className="font-heading text-base font-medium">
                   {section.title}
                 </h2>
-                <dl className="divide-y text-sm">
-                  {section.rows.map(({ label, value }) => (
-                    <div
-                      key={label}
-                      className="grid grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-4 py-2.5 first:pt-0 last:pb-0"
-                    >
-                      <dt className="break-words text-muted-foreground">
-                        {label}
-                      </dt>
-                      <dd className="min-w-0 break-words">
-                        <bdi>{value}</bdi>
-                      </dd>
+                <InfoRows rows={section.rows.filter((row) => !row.advanced)} />
+                {section.rows.some((row) => row.advanced) ? (
+                  <details className="border-t pt-3">
+                    <summary className="cursor-pointer py-3 text-sm font-medium sm:py-1">
+                      {m.technicalDetails}
+                    </summary>
+                    <div className="mt-3">
+                      <InfoRows
+                        rows={section.rows.filter((row) => row.advanced)}
+                      />
                     </div>
-                  ))}
-                </dl>
+                  </details>
+                ) : null}
               </ToolPanelCardContent>
             </ToolPanelCard>
           ))}

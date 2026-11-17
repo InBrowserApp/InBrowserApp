@@ -1,9 +1,12 @@
-import { cleanup, fireEvent, render, screen } from "@testing-library/react"
+import { act, cleanup, fireEvent, render, screen } from "@testing-library/react"
 import { afterEach, describe, expect, test, vi } from "vitest"
 
 import { ToolCopyButton } from "./tool-copy-button"
 
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.useRealTimers()
+})
 
 describe("ToolCopyButton", () => {
   test("renders with copy label", () => {
@@ -132,5 +135,48 @@ describe("ToolCopyButton", () => {
 
     fireEvent.click(screen.getByRole("button"))
     expect(writeText).not.toHaveBeenCalled()
+  })
+  test("announces clipboard rejection without an unhandled error, then resets", async () => {
+    vi.useFakeTimers()
+    const writeText = vi.fn().mockRejectedValue(new Error("Denied"))
+    Object.defineProperty(navigator, "clipboard", {
+      value: { writeText },
+      writable: true,
+      configurable: true,
+    })
+    render(
+      <ToolCopyButton
+        value="hello"
+        copyLabel="Copy"
+        copiedLabel="Copied"
+        failedLabel="Copy failed"
+        ariaLabel="Copy report"
+      />
+    )
+    fireEvent.click(screen.getByRole("button", { name: "Copy report" }))
+    await act(async () => {})
+    expect(
+      screen.getByRole("button", { name: "Copy failed: Copy report" })
+    ).toBeTruthy()
+    expect(screen.getByText("Copy failed").getAttribute("aria-live")).toBe(
+      "polite"
+    )
+    act(() => {
+      vi.advanceTimersByTime(1200)
+    })
+    expect(screen.getByRole("button", { name: "Copy report" })).toBeTruthy()
+  })
+  test("handles a missing clipboard API with the existing label when no failure label is supplied", async () => {
+    Object.defineProperty(navigator, "clipboard", {
+      value: undefined,
+      writable: true,
+      configurable: true,
+    })
+    render(
+      <ToolCopyButton value="hello" copyLabel="Copy" copiedLabel="Copied" />
+    )
+    fireEvent.click(screen.getByRole("button", { name: "Copy" }))
+    await act(async () => {})
+    expect(screen.getByRole("button", { name: "Copy" })).toBeTruthy()
   })
 })

@@ -5,7 +5,7 @@
   "privacy": "Files stay on your device. Nothing is uploaded.",
   "changeFile": "Change file",
   "removeFile": "Remove file",
-  "reading": "Reading media information…",
+  "reading": "Reading media information\u2026",
   "readingHint": "You can change or remove the file while it is being analyzed.",
   "errorTitle": "Could not read this file",
   "parseError": "Choose a valid audio or video file. The file may be unsupported or damaged.",
@@ -51,6 +51,8 @@
   "rawData": "Full metadata (JSON)",
   "helpTitle": "About this viewer",
   "helpDescription": "Select a file to inspect its actual container and streams, even if your browser cannot play it. Each video, audio, and subtitle track is listed separately. Copy a readable report or download the full metadata as JSON.",
-  "helpNotes": "Overall bitrate includes all streams and container overhead. Missing fields are not reported by the file.",
-  "poweredBy": "Powered by MediaInfo"
+  "helpNotes": "Overall bitrate includes all streams and container overhead. Available fields depend on the file format and its metadata.",
+  "poweredBy": "Powered by MediaInfo",
+  "technicalDetails": "Technical details",
+  "copyFailed": "Copy failed"
 }

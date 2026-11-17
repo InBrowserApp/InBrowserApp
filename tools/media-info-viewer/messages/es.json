@@ -51,6 +51,8 @@
   "rawData": "Metadatos completos (JSON)",
   "helpTitle": "Acerca de este visor",
   "helpDescription": "Selecciona un archivo para examinar su contenedor y sus flujos reales, aunque tu navegador no pueda reproducirlo. Cada pista de vídeo, audio y subtítulos aparece por separado. Copia un informe legible o descarga todos los metadatos en JSON.",
-  "helpNotes": "La tasa de bits total incluye todos los flujos y la sobrecarga del contenedor. Los campos ausentes no se indican en el archivo.",
-  "poweredBy": "Con tecnología de MediaInfo"
+  "helpNotes": "La tasa de bits total incluye todos los flujos y la sobrecarga del contenedor. Los campos disponibles dependen del formato del archivo y de sus metadatos.",
+  "poweredBy": "Con tecnología de MediaInfo",
+  "technicalDetails": "Detalles técnicos",
+  "copyFailed": "No se pudo copiar"
 }

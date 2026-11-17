@@ -23,7 +23,7 @@ import { useAnalysis } from "./use-analysis"
 import type { Messages } from "./types"
 
 const ACCEPT =
-  "audio/*,video/*,.mkv,.flac,.ogg,.opus,.m4a,.m4v,.mov,.avi,.webm,.mts,.m2ts,.ts,.vob,.wmv,.wma,.aiff,.aif,.ac3,.dts"
+  "audio/*,video/*,.mp4,.mp3,.wav,.mkv,.flac,.ogg,.opus,.m4a,.m4v,.mov,.avi,.webm,.mts,.m2ts,.ts,.vob,.wmv,.wma,.aiff,.aif,.ac3,.dts"
 
 export default function MediaInfoViewer({
   messages: m,
@@ -54,6 +54,7 @@ export default function MediaInfoViewer({
       <input
         ref={input}
         aria-label={m.chooseFile}
+        aria-hidden="true"
         className="sr-only"
         tabIndex={-1}
         type="file"
@@ -105,6 +106,7 @@ export default function MediaInfoViewer({
                 <Button
                   variant="outline"
                   size="sm"
+                  className="min-h-11 sm:min-h-0"
                   onClick={() => input.current?.click()}
                 >
                   {m.changeFile}
@@ -112,6 +114,7 @@ export default function MediaInfoViewer({
                 <Button
                   variant="ghost"
                   size="icon-sm"
+                  className="size-11 sm:size-7"
                   aria-label={m.removeFile}
                   onClick={() => select(null)}
                 >
