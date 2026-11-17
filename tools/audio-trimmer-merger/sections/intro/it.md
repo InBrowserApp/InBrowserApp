@@ -8,7 +8,11 @@ Usa le maniglie sulla forma d’onda o inserisci i tempi di inizio e fine in sec
 
 ## Formati e qualità audio
 
-I formati di ingresso supportati dipendono dal browser e dal codec del file. I formati comuni includono MP3, WAV, M4A, OGG, FLAC e WebM. Esporta in MP3 per condividere l’audio, in WAV per il PCM a 16 bit non compresso o in OGG Vorbis per l’audio compresso in formato aperto. MP3 e OGG offrono impostazioni per file più piccoli, qualità bilanciata e qualità superiore. Le dimensioni stimate ti aiutano a scegliere; OGG usa un bitrate variabile, quindi le dimensioni effettive dipendono dall’audio. L’audio viene decodificato ed esportato a 48 kHz. L’audio mono resta mono; le clip mono e stereo combinate vengono esportate in stereo. Il WAV evita un’ulteriore compressione con perdita, ma non ripristina i dettagli persi nella sorgente.
+I formati di ingresso supportati dipendono dal browser e dal codec del file. I formati comuni includono MP3, WAV, M4A, OGG, FLAC e WebM. Esporta in MP3 per condividere l’audio, in WAV per il PCM a 16 bit non compresso o in OGG Vorbis per l’audio compresso in formato aperto.
+
+Se il browser supporta la codifica nativa, puoi anche esportare AAC in un file M4A oppure Opus in un file WebM. Inizialmente viene selezionato un formato nativo disponibile; i formati non disponibili sono disattivati. La possibilità di riprodurre un formato non garantisce che il browser possa codificarlo. Verifica che l’app che riceverà il file ne supporti il formato, soprattutto per WebM o OGG.
+
+I formati compressi offrono impostazioni per file più piccoli, qualità bilanciata e qualità superiore. Le dimensioni stimate ti aiutano a scegliere; AAC, Opus e OGG usano un bitrate variabile, quindi le dimensioni effettive variano. L’audio viene decodificato ed esportato a 48 kHz. L’audio mono resta mono; le clip mono e stereo combinate vengono esportate in stereo. Il WAV evita un’ulteriore compressione con perdita, ma non ripristina i dettagli persi nella sorgente.
 
 ## Suggerimenti per tagli puliti
 

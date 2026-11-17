@@ -32,7 +32,7 @@
   "outputNote": "48 kHz。單聲道保持單聲道；混合單聲道與立體聲片段時，會匯出為立體聲。",
   "errorTitle": "無法處理音訊",
   "readError": "無法讀取「{name}」。請嘗試 MP3 或 WAV 等支援的音訊檔案。",
-  "exportError": "無法建立音訊檔案。請嘗試縮短片段或減少檔案數量。",
+  "exportError": "無法建立音訊檔案。請嘗試其他輸出格式、較短的片段或較少的檔案。",
   "unsupportedError": "此瀏覽器無法解碼音訊。請嘗試最新版的 Chrome、Firefox 或 Safari。",
   "rangeError": "請在片段長度內輸入開始與結束時間，且開始時間必須早於結束時間。",
   "channelError": "「{name}」有超過兩個聲道。請使用單聲道或立體聲音訊檔案。",
@@ -60,5 +60,10 @@
   "joinCrossfade": "交叉淡化",
   "joinSecondsLabel": "轉場長度（秒）",
   "joinNote": "交叉淡化會讓片段重疊，縮短合併後的總長度。每段重疊範圍不超過相鄰任一片段長度的一半。",
-  "joinError": "請輸入 0 到 5 秒的轉場長度。"
+  "joinError": "請輸入 0 到 5 秒的轉場長度。",
+  "formatM4aNote": "M4A 檔案中的 AAC：檔案小，播放相容性廣。",
+  "formatWebmNote": "WebM 檔案中的 Opus：能有效壓縮語音和音樂。請確認接收應用程式支援 WebM。",
+  "nativeFormatsNote": "AAC 和 Opus 使用瀏覽器原生編碼器。不支援的格式無法選取。",
+  "checkingFormats": "正在偵測可用格式…",
+  "formatUnavailable": "此瀏覽器無法依目前設定編碼此格式。請選擇其他格式或品質。"
 }

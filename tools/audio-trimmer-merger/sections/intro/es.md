@@ -8,7 +8,11 @@ Usa los controles de la forma de onda o introduce los tiempos de inicio y fin en
 
 ## Formatos y calidad de audio
 
-La compatibilidad de entrada depende de tu navegador y del códec del archivo. Los formatos habituales incluyen MP3, WAV, M4A, OGG, FLAC y WebM. Exporta en MP3 para compartir, en WAV para obtener PCM de 16 bits sin comprimir o en OGG Vorbis para obtener audio comprimido en formato abierto. MP3 y OGG ofrecen ajustes para archivos más pequeños, calidad equilibrada y mayor calidad. Las estimaciones de tamaño te ayudan a elegir; OGG usa una tasa de bits variable, por lo que su tamaño real depende del audio. El audio se decodifica y se exporta a 48 kHz. El audio mono se mantiene en mono; al combinar clips mono y estéreo, se exportan en estéreo. WAV evita otra compresión con pérdida, pero no recupera los detalles perdidos en el original.
+La compatibilidad de entrada depende de tu navegador y del códec del archivo. Los formatos habituales incluyen MP3, WAV, M4A, OGG, FLAC y WebM. Exporta en MP3 para compartir, en WAV para obtener PCM de 16 bits sin comprimir o en OGG Vorbis para obtener audio comprimido en formato abierto.
+
+Si tu navegador admite codificación nativa, también puedes exportar AAC en un archivo M4A u Opus en un archivo WebM. Se selecciona inicialmente un formato nativo disponible; los formatos no disponibles están desactivados. Que tu navegador pueda reproducir un formato no garantiza que pueda codificarlo. Comprueba que la aplicación en la que usarás el archivo admita su formato, especialmente si es WebM u OGG.
+
+Los formatos comprimidos ofrecen ajustes para archivos más pequeños, calidad equilibrada y mayor calidad. Las estimaciones de tamaño te ayudan a elegir; AAC, Opus y OGG usan una tasa de bits variable, por lo que los tamaños reales varían. El audio se decodifica y se exporta a 48 kHz. El audio mono se mantiene en mono; al combinar clips mono y estéreo, se exportan en estéreo. WAV evita otra compresión con pérdida, pero no recupera los detalles perdidos en el original.
 
 ## Consejos para cortes limpios
 

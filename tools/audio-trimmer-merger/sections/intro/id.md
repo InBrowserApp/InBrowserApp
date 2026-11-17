@@ -8,7 +8,11 @@ Gunakan pegangan pada bentuk gelombang atau masukkan waktu awal dan akhir dalam 
 
 ## Format dan Kualitas Audio
 
-Dukungan input bergantung pada browser dan codec file. Format umum meliputi MP3, WAV, M4A, OGG, FLAC, dan WebM. Ekspor MP3 untuk berbagi, WAV untuk PCM 16-bit tanpa kompresi, atau OGG Vorbis untuk audio terkompresi dengan format terbuka. MP3 dan OGG menyediakan pengaturan file lebih kecil, seimbang, dan kualitas lebih tinggi. Perkiraan ukuran membantu Anda memilih; OGG menggunakan bitrate variabel, sehingga ukuran sebenarnya bergantung pada audio. Audio didekode dan diekspor pada 48 kHz. Mono tetap mono; campuran klip mono dan stereo diekspor sebagai stereo. WAV menghindari tahap kompresi lossy tambahan, tetapi tidak dapat memulihkan detail yang hilang dari sumber.
+Dukungan input bergantung pada browser dan codec file. Format umum meliputi MP3, WAV, M4A, OGG, FLAC, dan WebM. Ekspor MP3 untuk berbagi, WAV untuk PCM 16-bit tanpa kompresi, atau OGG Vorbis untuk audio terkompresi dengan format terbuka.
+
+Jika browser Anda mendukung pengodean bawaan, Anda juga dapat mengekspor AAC dalam file M4A atau Opus dalam file WebM. Saat pertama dibuka, format bawaan yang tersedia akan dipilih; format yang tidak tersedia dinonaktifkan. Kemampuan memutar suatu format tidak menjamin browser Anda dapat mengodekannya. Pastikan aplikasi penerima file mendukung formatnya, terutama WebM atau OGG.
+
+Format terkompresi menyediakan pengaturan file lebih kecil, seimbang, dan kualitas lebih tinggi. Perkiraan ukuran membantu Anda memilih; AAC, Opus, dan OGG menggunakan bitrate variabel, sehingga ukuran sebenarnya bervariasi. Audio didekode dan diekspor pada 48 kHz. Mono tetap mono; campuran klip mono dan stereo diekspor sebagai stereo. WAV menghindari tahap kompresi lossy tambahan, tetapi tidak dapat memulihkan detail yang hilang dari sumber.
 
 ## Tips untuk Potongan yang Bersih
 

@@ -8,7 +8,11 @@ Bruk håndtakene i bølgeformen eller angi start- og sluttider i sekunder. Spill
 
 ## Formater og lydkvalitet
 
-Støtten for inndata avhenger av nettleseren og filens kodek. Vanlige formater er MP3, WAV, M4A, OGG, FLAC og WebM. Eksporter MP3 for deling, WAV for ukomprimert 16-bit PCM eller OGG Vorbis for komprimert lyd i et åpent format. MP3 og OGG har innstillinger for mindre fil, balansert kvalitet og høyere kvalitet. Størrelsesanslag hjelper deg å velge; OGG bruker variabel bitrate, så den faktiske størrelsen avhenger av lyden. Lyden dekodes og eksporteres ved 48 kHz. Mono forblir mono; blandede mono- og stereoklipp eksporteres som stereo. WAV unngår et nytt trinn med tapsbasert komprimering, men kan ikke gjenopprette detaljer som er gått tapt i kilden.
+Støtten for inndata avhenger av nettleseren og filens kodek. Vanlige formater er MP3, WAV, M4A, OGG, FLAC og WebM. Eksporter MP3 for deling, WAV for ukomprimert 16-bit PCM eller OGG Vorbis for komprimert lyd i et åpent format.
+
+Når nettleseren støtter innebygd koding, kan du også eksportere AAC i en M4A-fil eller Opus i en WebM-fil. Et tilgjengelig innebygd format velges i utgangspunktet; utilgjengelige formater er deaktivert. At et format kan spilles av, betyr ikke at nettleseren kan kode det. Kontroller at appen som mottar filen, støtter formatet, særlig WebM eller OGG.
+
+Komprimerte formater har innstillinger for mindre fil, balansert kvalitet og høyere kvalitet. Størrelsesanslag hjelper deg å velge; AAC, Opus og OGG bruker variabel bitrate, så de faktiske størrelsene varierer. Lyden dekodes og eksporteres ved 48 kHz. Mono forblir mono; blandede mono- og stereoklipp eksporteres som stereo. WAV unngår et nytt trinn med tapsbasert komprimering, men kan ikke gjenopprette detaljer som er gått tapt i kilden.
 
 ## Tips for rene kutt
 

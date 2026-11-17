@@ -20,7 +20,12 @@ import { formatDuration } from "../core/audio"
 import { downloadName, formatBytes, FORMATS } from "../core/settings"
 import { FormatOptions } from "./format-options"
 import { JoinOptions } from "./join-options"
-import type { AudioEditorMessages, AudioResult, ExportSettings } from "../types"
+import type {
+  AudioEditorMessages,
+  AudioResult,
+  ExportSettings,
+  NativeSupport,
+} from "../types"
 
 export function ExportCard({
   messages: m,
@@ -30,6 +35,7 @@ export function ExportCard({
   count,
   name,
   settings,
+  nativeSupport,
   onSettings,
   progress,
   onCancel,
@@ -49,6 +55,7 @@ export function ExportCard({
   count: number
   name: string
   settings: ExportSettings
+  nativeSupport: NativeSupport | null
   onSettings: (settings: ExportSettings) => void
   progress: number
   onCancel: () => void
@@ -85,6 +92,7 @@ export function ExportCard({
           <FormatOptions
             messages={m}
             settings={settings}
+            nativeSupport={nativeSupport}
             disabled={exporting}
             onChange={onSettings}
           />

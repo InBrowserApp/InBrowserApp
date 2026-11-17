@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { frameRange, SAMPLE_RATE, validRange, waveform } from "../core/audio"
 import { usePreview } from "./use-preview"
 import { useAudioExport } from "./use-audio-export"
+import { useNativeSupport } from "./use-native-support"
 import { audioLayout, validJoin } from "../core/mix"
 import { DEFAULT_SETTINGS, estimateBytes } from "../core/settings"
 import type { AudioClip, AudioEditorMessages, ExportSettings } from "../types"
@@ -16,6 +17,7 @@ export function useAudioEditor(messages: AudioEditorMessages) {
   const [error, setError] = useState("")
   const [name, setName] = useState("audio")
   const [settings, setSettings] = useState<ExportSettings>(DEFAULT_SETTINGS)
+  const defaultApplied = useRef(false)
   const mounted = useRef(true)
   const locked = useRef(false)
   const preview = usePreview(() => setError(messages.playError))
@@ -41,6 +43,22 @@ export function useAudioEditor(messages: AudioEditorMessages) {
     1,
     ...clips.map((clip) => clip.buffer.numberOfChannels)
   )
+  const nativeSupport = useNativeSupport({
+    channels,
+    quality: settings.quality,
+  })
+  const formatAvailable =
+    nativeSupport !== null &&
+    ((settings.format !== "m4a" && settings.format !== "webm") ||
+      nativeSupport[settings.format])
+  useEffect(() => {
+    if (!nativeSupport || defaultApplied.current) return
+    defaultApplied.current = true
+    setSettings((previous) => ({
+      ...previous,
+      format: nativeSupport.m4a ? "m4a" : nativeSupport.webm ? "webm" : "mp3",
+    }))
+  }, [nativeSupport])
   const estimatedBytes = estimateBytes(
     frames,
     channels,
@@ -163,12 +181,13 @@ export function useAudioEditor(messages: AudioEditorMessages) {
   }
 
   function exportAudio() {
-    if (locked.current || !valid) return
+    if (locked.current || !valid || !formatAvailable) return
     invalidate()
     output.start(clips, settings)
   }
 
   function changeSettings(value: ExportSettings) {
+    if (value.format !== settings.format) defaultApplied.current = true
     invalidate()
     setSettings(value)
   }
@@ -184,10 +203,11 @@ export function useAudioEditor(messages: AudioEditorMessages) {
     estimatedBytes,
     name,
     settings,
+    nativeSupport,
     setSettings: changeSettings,
     duplicate,
     duration,
-    valid,
+    valid: valid && formatAvailable,
     preview,
     addFiles,
     update,

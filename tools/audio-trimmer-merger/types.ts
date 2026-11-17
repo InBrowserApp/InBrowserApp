@@ -14,7 +14,14 @@ export type AudioClip = {
 
 export type PcmClip = { channels: Float32Array[] }
 
-export type OutputFormat = "mp3" | "wav" | "ogg"
+export type OutputFormat = "mp3" | "wav" | "ogg" | "m4a" | "webm"
+export type NativeFormat = Exclude<OutputFormat, "wav">
+export type NativeSupport = Record<NativeFormat, boolean>
+export type CapabilityRequest = {
+  channels: number
+  quality: CompressionQuality
+}
+export type CapabilityResponse = { capabilities: NativeSupport }
 export type CompressionQuality = "small" | "standard" | "high"
 export type JoinSettings = {
   mode: "none" | "gap" | "crossfade"

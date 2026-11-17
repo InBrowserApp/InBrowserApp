@@ -8,7 +8,11 @@ Nutze die Ziehpunkte an der Wellenform oder gib Anfang und Ende in Sekunden ein.
 
 ## Formate und Audioqualität
 
-Welche Dateien unterstützt werden, hängt von deinem Browser und dem Codec der Datei ab. Gängige Formate sind MP3, WAV, M4A, OGG, FLAC und WebM. Exportiere MP3 zum Teilen, WAV für unkomprimiertes 16-Bit-PCM oder OGG Vorbis für komprimiertes Audio in einem offenen Format. MP3 und OGG bieten Einstellungen für kleinere Dateien, ausgewogene Kompression und höhere Qualität. Größenschätzungen helfen bei der Auswahl; OGG verwendet eine variable Bitrate, daher hängt die tatsächliche Größe vom Audio ab. Audio wird mit 48 kHz dekodiert und exportiert. Mono bleibt mono; gemischte Mono- und Stereo-Clips werden als Stereo exportiert. WAV vermeidet einen weiteren verlustbehafteten Kompressionsschritt, kann aber keine bereits verlorenen Details wiederherstellen.
+Welche Dateien unterstützt werden, hängt von deinem Browser und dem Codec der Datei ab. Gängige Formate sind MP3, WAV, M4A, OGG, FLAC und WebM. Exportiere MP3 zum Teilen, WAV für unkomprimiertes 16-Bit-PCM oder OGG Vorbis für komprimiertes Audio in einem offenen Format.
+
+Wenn dein Browser die native Kodierung unterstützt, kannst du außerdem AAC in einer M4A-Datei oder Opus in einer WebM-Datei exportieren. Anfangs ist ein verfügbares natives Format ausgewählt; nicht verfügbare Formate sind deaktiviert. Dass dein Browser ein Format abspielen kann, bedeutet nicht, dass er es auch kodieren kann. Prüfe, ob die App, in der du die Datei verwenden möchtest, das Format unterstützt, besonders bei WebM oder OGG.
+
+Komprimierte Formate bieten Einstellungen für kleinere Dateien, ausgewogene Kompression und höhere Qualität. Größenschätzungen helfen bei der Auswahl; AAC, Opus und OGG verwenden eine variable Bitrate, daher variiert die tatsächliche Größe. Audio wird mit 48 kHz dekodiert und exportiert. Mono bleibt mono; gemischte Mono- und Stereo-Clips werden als Stereo exportiert. WAV vermeidet einen weiteren verlustbehafteten Kompressionsschritt, kann aber keine bereits verlorenen Details wiederherstellen.
 
 ## Tipps für saubere Schnitte
 

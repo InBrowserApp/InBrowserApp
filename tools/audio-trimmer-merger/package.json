@@ -10,6 +10,7 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
+    "mediabunny": "catalog:",
     "wasm-media-encoders": "catalog:"
   },
   "peerDependencies": {

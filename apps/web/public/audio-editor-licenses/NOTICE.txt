@@ -1,5 +1,9 @@
 Audio encoder notices
 
+Mediabunny 1.66.0 is licensed under the Mozilla Public License 2.0.
+See Mediabunny-MPL.txt. Unmodified source: https://github.com/Vanilagy/mediabunny/tree/v1.66.0
+Native AAC and Opus encoding uses the browser's WebCodecs implementation.
+
 Source and build instructions: https://github.com/arseneyr/wasm-media-encoders/tree/4a45333baadbab312d1cc0911151dfad23157c51
 Unmodified encoder binaries are served as separate assets.
 

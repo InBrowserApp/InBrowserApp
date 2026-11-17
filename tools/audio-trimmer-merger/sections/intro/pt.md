@@ -8,7 +8,11 @@ Utilize os controlos na forma de onda ou introduza os instantes de início e fim
 
 ## Formatos e Qualidade do Áudio
 
-O suporte de entrada depende do navegador e do codec do ficheiro. Os formatos comuns incluem MP3, WAV, M4A, OGG, FLAC e WebM. Exporte em MP3 para partilhar, WAV para PCM de 16 bits sem compressão ou OGG Vorbis para áudio comprimido num formato aberto. O MP3 e o OGG oferecem opções de ficheiro menor, qualidade equilibrada e maior qualidade. As estimativas de tamanho ajudam a escolher; o OGG utiliza uma taxa de bits variável, pelo que o tamanho real depende do áudio. O áudio é descodificado e exportado a 48 kHz. O áudio mono mantém-se mono; excertos mono e estéreo combinados são exportados em estéreo. O WAV evita uma nova etapa de compressão com perdas, mas não recupera os detalhes perdidos na origem.
+O suporte de entrada depende do navegador e do codec do ficheiro. Os formatos comuns incluem MP3, WAV, M4A, OGG, FLAC e WebM. Exporte em MP3 para partilhar, WAV para PCM de 16 bits sem compressão ou OGG Vorbis para áudio comprimido num formato aberto.
+
+Quando o navegador suporta codificação nativa, também pode exportar AAC num ficheiro M4A ou Opus num ficheiro WebM. É selecionado inicialmente um formato nativo disponível; os formatos indisponíveis ficam desativados. Conseguir reproduzir um formato não garante que o navegador o consiga codificar. Confirme que a aplicação que recebe o ficheiro suporta o formato, sobretudo WebM ou OGG.
+
+Os formatos comprimidos oferecem opções de ficheiro menor, qualidade equilibrada e maior qualidade. As estimativas de tamanho ajudam a escolher; AAC, Opus e OGG utilizam uma taxa de bits variável, pelo que os tamanhos reais variam. O áudio é descodificado e exportado a 48 kHz. O áudio mono mantém-se mono; excertos mono e estéreo combinados são exportados em estéreo. O WAV evita uma nova etapa de compressão com perdas, mas não recupera os detalhes perdidos na origem.
 
 ## Sugestões para Cortes Limpos
 

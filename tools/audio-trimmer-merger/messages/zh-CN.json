@@ -32,7 +32,7 @@
   "outputNote": "48 kHz。单声道保持不变；混合单声道和立体声片段时导出为立体声。",
   "errorTitle": "无法处理音频",
   "readError": "无法读取“{name}”。请尝试 MP3 或 WAV 等受支持的音频文件。",
-  "exportError": "无法生成音频文件。请尝试缩短片段或减少文件数量。",
+  "exportError": "无法生成音频文件。请尝试其他输出格式、较短的片段或较少的文件。",
   "unsupportedError": "此浏览器无法解码音频。请使用最新版本的 Chrome、Firefox 或 Safari。",
   "rangeError": "开始时间必须早于结束时间，且均在片段时长范围内。",
   "channelError": "“{name}”超过两个声道。请使用单声道或立体声音频文件。",
@@ -60,5 +60,10 @@
   "joinCrossfade": "交叉淡化",
   "joinSecondsLabel": "过渡时长（秒）",
   "joinNote": "交叉淡化会让片段重叠，缩短总时长。每次重叠时长最多为相邻两个片段中较短片段的一半。",
-  "joinError": "请输入 0 到 5 秒之间的过渡时长。"
+  "joinError": "请输入 0 到 5 秒之间的过渡时长。",
+  "formatM4aNote": "M4A 文件中的 AAC：体积小，播放兼容性广。",
+  "formatWebmNote": "WebM 文件中的 Opus：适合高效压缩语音和音乐。请确认接收应用支持 WebM。",
+  "nativeFormatsNote": "AAC 和 Opus 使用浏览器原生编码器。不支持的格式不可选。",
+  "checkingFormats": "正在检测可用格式…",
+  "formatUnavailable": "此浏览器无法按当前设置编码此格式。请选择其他格式或音质。"
 }

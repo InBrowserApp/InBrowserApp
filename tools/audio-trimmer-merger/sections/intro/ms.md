@@ -8,7 +8,11 @@ Gunakan pemegang bentuk gelombang atau masukkan masa mula dan tamat dalam saat. 
 
 ## Format dan Kualiti Audio
 
-Sokongan input bergantung pada pelayar dan codec fail anda. Format lazim termasuk MP3, WAV, M4A, OGG, FLAC dan WebM. Eksport MP3 untuk perkongsian, WAV untuk PCM 16 bit tanpa pemampatan, atau OGG Vorbis untuk audio termampat dalam format terbuka. MP3 dan OGG menawarkan tetapan fail lebih kecil, seimbang dan kualiti lebih tinggi. Anggaran saiz membantu anda memilih; OGG menggunakan kadar bit berubah, jadi saiz sebenar bergantung pada audio. Audio dinyahkod dan dieksport pada 48 kHz. Mono kekal mono; gabungan klip mono dan stereo dieksport sebagai stereo. WAV mengelakkan satu lagi langkah pemampatan berkehilangan tetapi tidak dapat memulihkan butiran yang hilang daripada sumber.
+Sokongan input bergantung pada pelayar dan codec fail anda. Format lazim termasuk MP3, WAV, M4A, OGG, FLAC dan WebM. Eksport MP3 untuk perkongsian, WAV untuk PCM 16 bit tanpa pemampatan, atau OGG Vorbis untuk audio termampat dalam format terbuka.
+
+Jika pelayar anda menyokong pengekodan terbina dalam, anda juga boleh mengeksport AAC dalam fail M4A atau Opus dalam fail WebM. Format terbina dalam yang tersedia dipilih pada mulanya; format yang tidak tersedia dinyahdayakan. Keupayaan memainkan sesuatu format tidak menjamin bahawa pelayar anda boleh mengekodnya. Pastikan aplikasi yang menerima fail anda menyokong formatnya, terutamanya WebM atau OGG.
+
+Format termampat menawarkan tetapan fail lebih kecil, seimbang dan kualiti lebih tinggi. Anggaran saiz membantu anda memilih; AAC, Opus dan OGG menggunakan kadar bit berubah, jadi saiz sebenar berbeza-beza. Audio dinyahkod dan dieksport pada 48 kHz. Mono kekal mono; gabungan klip mono dan stereo dieksport sebagai stereo. WAV mengelakkan satu lagi langkah pemampatan berkehilangan tetapi tidak dapat memulihkan butiran yang hilang daripada sumber.
 
 ## Petua untuk Potongan yang Kemas
 

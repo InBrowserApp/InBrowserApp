@@ -5,10 +5,6 @@ import {
   FieldLabel,
 } from "@workspace/ui/components/ui/field"
 import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@workspace/ui/components/ui/toggle-group"
-import {
   Select,
   SelectContent,
   SelectGroup,
@@ -16,22 +12,25 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@workspace/ui/components/ui/select"
-import { FORMATS, MP3_BITRATES } from "../core/settings"
+import { bitrate, FORMATS } from "../core/settings"
 import type {
   AudioEditorMessages,
   CompressionQuality,
   ExportSettings,
   OutputFormat,
+  NativeSupport,
 } from "../types"
 
 export function FormatOptions({
   messages: m,
   settings,
+  nativeSupport,
   disabled,
   onChange,
 }: {
   messages: AudioEditorMessages
   settings: ExportSettings
+  nativeSupport: NativeSupport | null
   disabled: boolean
   onChange: (value: ExportSettings) => void
 }) {
@@ -39,33 +38,60 @@ export function FormatOptions({
   return (
     <>
       <Field>
-        <FieldLabel id={`${id}-format`}>{m.formatLabel}</FieldLabel>
-        <ToggleGroup
-          type="single"
-          variant="outline"
-          className="w-full"
+        <FieldLabel htmlFor={`${id}-format`}>{m.formatLabel}</FieldLabel>
+        <Select
           value={settings.format}
-          disabled={disabled}
-          aria-labelledby={`${id}-format`}
+          disabled={disabled || nativeSupport === null}
           onValueChange={(value) => {
             if (value) onChange({ ...settings, format: value as OutputFormat })
           }}
         >
-          {Object.entries(FORMATS).map(([value, format]) => (
-            <ToggleGroupItem key={value} value={value} className="flex-1">
-              {format.label}
-            </ToggleGroupItem>
-          ))}
-        </ToggleGroup>
-        <FieldDescription>
+          <SelectTrigger
+            id={`${id}-format`}
+            className="w-full"
+            aria-describedby={`${id}-format-help`}
+          >
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              {Object.entries(FORMATS).map(([value, format]) => (
+                <SelectItem
+                  key={value}
+                  value={value}
+                  disabled={
+                    (value === "m4a" || value === "webm") &&
+                    !nativeSupport?.[value]
+                  }
+                >
+                  {format.label}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+        <FieldDescription id={`${id}-format-help`}>
           {
             {
               mp3: m.formatMp3Note,
               wav: m.formatWavNote,
               ogg: m.formatOggNote,
+              m4a: m.formatM4aNote,
+              webm: m.formatWebmNote,
             }[settings.format]
           }
         </FieldDescription>
+        <FieldDescription>{m.nativeFormatsNote}</FieldDescription>
+        {nativeSupport === null ? (
+          <p role="status" className="text-sm text-muted-foreground">
+            {m.checkingFormats}
+          </p>
+        ) : (settings.format === "m4a" || settings.format === "webm") &&
+          !nativeSupport[settings.format] ? (
+          <p role="status" className="text-sm text-destructive">
+            {m.formatUnavailable}
+          </p>
+        ) : null}
       </Field>
       {settings.format !== "wav" ? (
         <Field>
@@ -91,15 +117,15 @@ export function FormatOptions({
                         high: m.qualityHigh,
                       }[quality]
                     }
-                    {settings.format === "mp3"
-                      ? ` · ${MP3_BITRATES[quality]} kbps`
+                    {settings.format !== "ogg" && settings.format !== "wav"
+                      ? ` · ${bitrate(settings.format, quality)} kbps`
                       : ""}
                   </SelectItem>
                 ))}
               </SelectGroup>
             </SelectContent>
           </Select>
-          {settings.format === "ogg" ? (
+          {settings.format !== "mp3" ? (
             <FieldDescription>{m.oggQualityNote}</FieldDescription>
           ) : null}
         </Field>

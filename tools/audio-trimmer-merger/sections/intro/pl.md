@@ -8,7 +8,11 @@ Użyj uchwytów na przebiegu fali lub podaj czas początku i końca w sekundach.
 
 ## Formaty i jakość dźwięku
 
-Obsługa plików wejściowych zależy od przeglądarki i kodeka pliku. Popularne formaty to MP3, WAV, M4A, OGG, FLAC i WebM. Eksportuj MP3 do udostępniania, WAV jako nieskompresowany 16-bitowy PCM lub OGG Vorbis jako skompresowane audio w otwartym formacie. MP3 i OGG oferują ustawienia zapewniające mniejszy plik, zrównoważoną jakość lub wyższą jakość. Szacowany rozmiar pomaga w wyborze; OGG używa zmiennej przepływności, więc jego rzeczywisty rozmiar zależy od dźwięku. Audio jest dekodowane i eksportowane z częstotliwością 48 kHz. Mono pozostaje mono; połączenie klipów mono i stereo jest eksportowane w stereo. Format WAV pozwala uniknąć kolejnego etapu kompresji stratnej, ale nie przywraca szczegółów utraconych w źródle.
+Obsługa plików wejściowych zależy od przeglądarki i kodeka pliku. Popularne formaty to MP3, WAV, M4A, OGG, FLAC i WebM. Eksportuj MP3 do udostępniania, WAV jako nieskompresowany 16-bitowy PCM lub OGG Vorbis jako skompresowane audio w otwartym formacie.
+
+Jeśli przeglądarka obsługuje natywne kodowanie, możesz też eksportować AAC w pliku M4A lub Opus w pliku WebM. Początkowo wybrany jest dostępny format natywny; niedostępne formaty są wyłączone. Możliwość odtwarzania formatu nie gwarantuje, że przeglądarka potrafi go zakodować. Sprawdź, czy aplikacja odbierająca plik obsługuje jego format, szczególnie WebM lub OGG.
+
+Formaty skompresowane oferują ustawienia zapewniające mniejszy plik, zrównoważoną jakość lub wyższą jakość. Szacowany rozmiar pomaga w wyborze; AAC, Opus i OGG używają zmiennej przepływności, więc rzeczywisty rozmiar może się różnić. Audio jest dekodowane i eksportowane z częstotliwością 48 kHz. Mono pozostaje mono; połączenie klipów mono i stereo jest eksportowane w stereo. Format WAV pozwala uniknąć kolejnego etapu kompresji stratnej, ale nie przywraca szczegółów utraconych w źródle.
 
 ## Wskazówki dotyczące czystych cięć
 

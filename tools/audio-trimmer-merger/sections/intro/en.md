@@ -8,7 +8,11 @@ Use the waveform handles or enter start and end times in seconds. Play each sele
 
 ## Formats and Audio Quality
 
-Input support depends on your browser and the file’s codec. Common formats include MP3, WAV, M4A, OGG, FLAC, and WebM. Export MP3 for sharing, WAV for uncompressed 16-bit PCM, or OGG Vorbis for open-format compressed audio. MP3 and OGG offer smaller-file, balanced, and higher-quality settings. Size estimates help you choose; OGG uses variable bitrate, so its actual size depends on the audio. Audio is decoded and exported at 48 kHz. Mono stays mono; mixed mono and stereo clips export as stereo. WAV avoids another lossy compression step but cannot restore detail lost in the source.
+Input support depends on your browser and the file’s codec. Common formats include MP3, WAV, M4A, OGG, FLAC, and WebM. Export MP3 for sharing, WAV for uncompressed 16-bit PCM, or OGG Vorbis for open-format compressed audio.
+
+When your browser supports native encoding, you can also export AAC in an M4A file or Opus in a WebM file. An available native format is selected initially; unavailable formats are disabled. Being able to play a format does not guarantee that your browser can encode it. Check that the app receiving your file supports its format, especially WebM or OGG.
+
+Compressed formats offer smaller-file, balanced, and higher-quality settings. Size estimates help you choose; AAC, Opus, and OGG use variable bitrate, so actual sizes vary. Audio is decoded and exported at 48 kHz. Mono stays mono; mixed mono and stereo clips export as stereo. WAV avoids another lossy compression step but cannot restore detail lost in the source.
 
 ## Tips for Clean Cuts
 

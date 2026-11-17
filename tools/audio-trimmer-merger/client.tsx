@@ -125,6 +125,7 @@ export default function AudioEditorClient({
             count={state.clips.length}
             name={state.name}
             settings={state.settings}
+            nativeSupport={state.nativeSupport}
             onSettings={state.setSettings}
             progress={state.progress}
             onCancel={state.cancelExport}

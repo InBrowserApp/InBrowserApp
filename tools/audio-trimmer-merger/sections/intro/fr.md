@@ -8,7 +8,11 @@ Utilisez les poignées de la forme d’onde ou saisissez les temps de début et 
 
 ## Formats et qualité audio
 
-La prise en charge des fichiers dépend de votre navigateur et du codec du fichier. Les formats courants comprennent MP3, WAV, M4A, OGG, FLAC et WebM. Exportez en MP3 pour partager l’audio, en WAV pour du PCM 16 bits non compressé ou en OGG Vorbis pour de l’audio compressé dans un format ouvert. MP3 et OGG proposent des réglages privilégiant un fichier plus petit, un équilibre ou une qualité supérieure. Les estimations de taille vous aident à choisir ; OGG utilise un débit variable, donc sa taille réelle dépend de l’audio. L’audio est décodé et exporté à 48 kHz. Le mono reste mono ; un mélange d’extraits mono et stéréo est exporté en stéréo. Le WAV évite une nouvelle compression avec perte, mais ne restaure pas les détails perdus dans la source.
+La prise en charge des fichiers dépend de votre navigateur et du codec du fichier. Les formats courants comprennent MP3, WAV, M4A, OGG, FLAC et WebM. Exportez en MP3 pour partager l’audio, en WAV pour du PCM 16 bits non compressé ou en OGG Vorbis pour de l’audio compressé dans un format ouvert.
+
+Si votre navigateur prend en charge l’encodage natif, vous pouvez également exporter en AAC dans un fichier M4A ou en Opus dans un fichier WebM. Un format natif disponible est sélectionné au départ ; les formats indisponibles sont désactivés. La capacité à lire un format ne garantit pas que votre navigateur puisse l’encoder. Vérifiez que l’application dans laquelle vous utiliserez le fichier prend en charge son format, notamment pour WebM ou OGG.
+
+Les formats compressés proposent des réglages privilégiant un fichier plus petit, un équilibre ou une qualité supérieure. Les estimations de taille vous aident à choisir ; AAC, Opus et OGG utilisent un débit variable, donc les tailles réelles varient. L’audio est décodé et exporté à 48 kHz. Le mono reste mono ; un mélange d’extraits mono et stéréo est exporté en stéréo. Le WAV évite une nouvelle compression avec perte, mais ne restaure pas les détails perdus dans la source.
 
 ## Conseils pour des coupes propres
 

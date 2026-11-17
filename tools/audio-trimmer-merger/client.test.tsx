@@ -15,7 +15,7 @@ import { encodeWav } from "./core/audio"
 import copy from "./messages/en.json"
 import { DEFAULT_SETTINGS } from "./core/settings"
 import meta from "./meta/en.json"
-import type { AudioClip } from "./types"
+import type { AudioClip, NativeSupport } from "./types"
 
 const messages = { ...copy, meta }
 const buffer = (channels = 1) =>
@@ -26,6 +26,7 @@ const buffer = (channels = 1) =>
     getChannelData: () => new Float32Array(96000).fill(0.5),
   }) as unknown as AudioBuffer
 let decode: ReturnType<typeof vi.fn>
+let capabilities: NativeSupport
 const encoders: FakeWorker[] = []
 const currentWorker = () => encoders.at(-1)!
 let source: {
@@ -44,19 +45,26 @@ class FakeWorker {
   onmessage: ((event: { data: object }) => void) | null = null
   onerror: (() => void) | null = null
   terminate = vi.fn()
-  postMessage = vi.fn((data) =>
+  probe(data: object) {
+    if ("clips" in data) return false
+    this.onmessage?.({ data: { capabilities } })
+    return true
+  }
+  postMessage = vi.fn((data) => {
+    if (this.probe(data)) return
     this.onmessage?.({
       data: {
         buffer: encodeWav(data.clips, data.settings.smooth, data.settings.join),
       },
     })
-  )
+  })
   constructor() {
     encoders.push(this)
   }
 }
 
 beforeEach(() => {
+  capabilities = { m4a: false, webm: false, mp3: false, ogg: false }
   encoders.length = 0
   decode = vi.fn(async () => buffer())
   resume = vi.fn(async () => {})
@@ -238,7 +246,9 @@ describe("audio editor workflow", () => {
     vi.stubGlobal(
       "Worker",
       class extends FakeWorker {
-        override postMessage = vi.fn()
+        override postMessage = vi.fn((data) => {
+          this.probe(data)
+        })
       }
     )
     act(() => result.current.exportAudio())
@@ -308,7 +318,9 @@ describe("audio editor workflow", () => {
     vi.stubGlobal(
       "Worker",
       class extends FakeWorker {
-        override postMessage = vi.fn()
+        override postMessage = vi.fn((data) => {
+          this.probe(data)
+        })
       }
     )
     act(() => second.result.current.exportAudio())
@@ -432,7 +444,7 @@ test("format and transition settings update downloads, durations and estimates",
   await chooseOption(copy.joinLabel, copy.joinGap)
   expect(screen.getAllByText("0:04.500").length).toBeGreaterThan(0)
   await chooseOption(copy.joinLabel, copy.joinNone)
-  fireEvent.click(screen.getByText("WAV", { exact: true }))
+  await chooseOption(copy.formatLabel, "WAV")
   expect(screen.queryByLabelText(copy.qualityLabel)).toBeNull()
   fireEvent.click(screen.getByText(copy.exportButton))
   expect(
@@ -443,11 +455,11 @@ test("format and transition settings update downloads, durations and estimates",
       .getByText(copy.downloadButton.replace("{format}", "WAV"))
       .getAttribute("download")
   ).toBe("voice.wav")
-  fireEvent.click(screen.getByText("OGG", { exact: true }))
+  await chooseOption(copy.formatLabel, "OGG")
   expect(screen.queryByText(copy.outputTitle)).toBeNull()
   expect(screen.getByText(copy.oggQualityNote)).toBeTruthy()
   await chooseOption(copy.qualityLabel, copy.qualityHigh)
-  fireEvent.click(screen.getByText("OGG", { exact: true }))
+  await chooseOption(copy.formatLabel, "OGG")
   expect(screen.getByText(copy.formatOggNote)).toBeTruthy()
   fireEvent.click(screen.getByText(copy.exportButton))
   expect(
@@ -459,7 +471,9 @@ test("export progress and cancellation preserve clips and ignore late worker mes
   vi.stubGlobal(
     "Worker",
     class extends FakeWorker {
-      override postMessage = vi.fn()
+      override postMessage = vi.fn((data) => {
+        this.probe(data)
+      })
     }
   )
   render(<AudioEditorClient messages={messages} />)
@@ -496,4 +510,56 @@ test("a single remaining clip can export even after an invalid join duration", a
   expect(result.current.valid).toBe(false)
   act(() => result.current.remove(1))
   expect(result.current.valid).toBe(true)
+})
+
+test.each(["m4a", "webm"] as const)(
+  "initially selects supported native %s and preserves an explicit format choice",
+  async (format) => {
+    capabilities[format] = true
+    const { result } = renderHook(() => useAudioEditor(messages))
+    await act(() => result.current.addFiles([file()]))
+    expect(result.current.settings.format).toBe(format)
+    act(() =>
+      result.current.setSettings({ ...result.current.settings, format: "mp3" })
+    )
+    act(() =>
+      result.current.setSettings({
+        ...result.current.settings,
+        quality: "high",
+      })
+    )
+    expect(result.current.settings.format).toBe("mp3")
+    expect(result.current.valid).toBe(true)
+  }
+)
+
+test("rechecks native settings, preserves an unavailable selection, and lets users recover", async () => {
+  capabilities.m4a = true
+  render(<AudioEditorClient messages={messages} />)
+  await inputFiles([file()])
+  expect(screen.getByLabelText(copy.formatLabel).textContent).toContain("M4A")
+  capabilities.m4a = false
+  await chooseOption(copy.qualityLabel, `${copy.qualityHigh} · 192 kbps`)
+  expect(screen.getByText(copy.formatUnavailable)).toBeTruthy()
+  expect(
+    (screen.getByText(copy.exportButton) as HTMLButtonElement).disabled
+  ).toBe(true)
+  await chooseOption(copy.formatLabel, "MP3")
+  expect(screen.queryByText(copy.formatUnavailable)).toBeNull()
+  fireEvent.click(screen.getByText(copy.exportButton))
+  expect(await screen.findByText(copy.outputTitle)).toBeTruthy()
+})
+
+test("capability worker errors keep compatible formats available", async () => {
+  vi.stubGlobal(
+    "Worker",
+    class extends FakeWorker {
+      override postMessage = vi.fn(() => this.onerror?.())
+    }
+  )
+  const { result } = renderHook(() => useAudioEditor(messages))
+  await act(() => result.current.addFiles([file()]))
+  expect(result.current.nativeSupport?.m4a).toBe(false)
+  expect(result.current.valid).toBe(true)
+  expect(result.current.settings.format).toBe("mp3")
 })

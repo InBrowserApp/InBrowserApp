@@ -8,7 +8,11 @@ Gebruik de handgrepen in de golfvorm of voer begin- en eindtijden in seconden in
 
 ## Formaten en audiokwaliteit
 
-Ondersteuning van invoerbestanden hangt af van je browser en de codec van het bestand. Veelgebruikte formaten zijn MP3, WAV, M4A, OGG, FLAC en WebM. Exporteer MP3 om audio te delen, WAV voor ongecomprimeerde 16-bits PCM of OGG Vorbis voor gecomprimeerde audio in een open formaat. MP3 en OGG bieden instellingen voor kleinere bestanden, een gebalanceerd resultaat en hogere kwaliteit. Schattingen van de bestandsgrootte helpen je kiezen; OGG gebruikt een variabele bitsnelheid, dus de werkelijke grootte hangt af van de audio. Audio wordt gedecodeerd en geëxporteerd op 48 kHz. Mono blijft mono; een combinatie van mono- en stereofragmenten wordt als stereo geëxporteerd. WAV voorkomt een nieuwe compressiestap met kwaliteitsverlies, maar herstelt geen details die in het bronbestand verloren zijn gegaan.
+Ondersteuning van invoerbestanden hangt af van je browser en de codec van het bestand. Veelgebruikte formaten zijn MP3, WAV, M4A, OGG, FLAC en WebM. Exporteer MP3 om audio te delen, WAV voor ongecomprimeerde 16-bits PCM of OGG Vorbis voor gecomprimeerde audio in een open formaat.
+
+Als je browser native codering ondersteunt, kun je ook AAC in een M4A-bestand of Opus in een WebM-bestand exporteren. Een beschikbaar native formaat wordt aanvankelijk geselecteerd; niet-beschikbare formaten zijn uitgeschakeld. Een formaat kunnen afspelen betekent niet automatisch dat je browser het ook kan coderen. Controleer of de app die je bestand ontvangt het formaat ondersteunt, vooral bij WebM of OGG.
+
+Gecomprimeerde formaten bieden instellingen voor kleinere bestanden, een gebalanceerd resultaat en hogere kwaliteit. Schattingen van de bestandsgrootte helpen je kiezen; AAC, Opus en OGG gebruiken een variabele bitsnelheid, dus de werkelijke grootte varieert. Audio wordt gedecodeerd en geëxporteerd op 48 kHz. Mono blijft mono; een combinatie van mono- en stereofragmenten wordt als stereo geëxporteerd. WAV voorkomt een nieuwe compressiestap met kwaliteitsverlies, maar herstelt geen details die in het bronbestand verloren zijn gegaan.
 
 ## Tips voor nette knippunten
 

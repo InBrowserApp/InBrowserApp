@@ -8,7 +8,11 @@ Dalga biçimi tutamaçlarını kullanın veya başlangıç ve bitiş zamanların
 
 ## Biçimler ve Ses Kalitesi
 
-Giriş desteği, tarayıcınıza ve dosyanın codec'ine bağlıdır. Yaygın biçimler arasında MP3, WAV, M4A, OGG, FLAC ve WebM bulunur. Paylaşım için MP3, sıkıştırılmamış 16 bit PCM için WAV veya açık biçimli sıkıştırılmış ses için OGG Vorbis olarak dışa aktarın. MP3 ve OGG için daha küçük dosya, dengeli ve daha yüksek kalite ayarları sunulur. Boyut tahminleri seçim yapmanıza yardımcı olur; OGG değişken bit hızı kullandığı için gerçek boyut sese bağlıdır. Sesin kodu 48 kHz'de çözülür ve ses aynı örnekleme hızında dışa aktarılır. Mono ses mono kalır; mono ve stereo klipler birlikte stereo olarak dışa aktarılır. WAV, kayıplı sıkıştırmanın yeniden uygulanmasını önler; ancak kaynakta kaybolan ayrıntıları geri getirmez.
+Giriş desteği, tarayıcınıza ve dosyanın codec’ine bağlıdır. Yaygın biçimler arasında MP3, WAV, M4A, OGG, FLAC ve WebM bulunur. Paylaşım için MP3, sıkıştırılmamış 16 bit PCM için WAV veya açık biçimli sıkıştırılmış ses için OGG Vorbis olarak dışa aktarın.
+
+Tarayıcınız yerel kodlamayı destekliyorsa M4A dosyasında AAC veya WebM dosyasında Opus olarak da dışa aktarabilirsiniz. Kullanılabilir bir yerel biçim başlangıçta seçilir; kullanılamayan biçimler devre dışıdır. Bir biçimi oynatabilmeniz, tarayıcınızın onu kodlayabileceği anlamına gelmez. Özellikle WebM veya OGG kullanırken, dosyayı alacak uygulamanın bu biçimi desteklediğini kontrol edin.
+
+Sıkıştırılmış biçimler için daha küçük dosya, dengeli ve daha yüksek kalite ayarları sunulur. Boyut tahminleri seçim yapmanıza yardımcı olur; AAC, Opus ve OGG değişken bit hızı kullandığından gerçek boyutlar değişir. Sesin kodu 48 kHz’de çözülür ve ses aynı örnekleme hızında dışa aktarılır. Mono ses mono kalır; mono ve stereo klipler birlikte stereo olarak dışa aktarılır. WAV, kayıplı sıkıştırmanın yeniden uygulanmasını önler; ancak kaynakta kaybolan ayrıntıları geri getirmez.
 
 ## Temiz Kesimler İçin İpuçları
 
