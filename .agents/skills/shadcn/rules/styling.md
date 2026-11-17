@@ -1,24 +1,27 @@
 # Styling & Customization
 
+These examples show consistency and maintenance tradeoffs, not universal bans
+on CSS utilities. Choose styling for the tool, content, and existing theme.
+
 See [customization.md](../customization.md) for theming, CSS variables, and adding custom colors.
 
 ## Contents
 
 - Semantic colors
 - Built-in variants first
-- className for layout only
-- No space-x-_ / space-y-_
+- Use className with component ownership in mind
+- Choose spacing for the layout
 - Prefer size-_ over w-_ h-\* when equal
 - Prefer truncate shorthand
-- No manual dark: color overrides
+- Theme-aware color choices
 - Use cn() for conditional classes
-- No manual z-index on overlay components
+- Diagnose overlay stacking before adjusting it
 
 ---
 
 ## Semantic colors
 
-**Incorrect:**
+**Example to evaluate:**
 
 ```tsx
 <div className="bg-blue-500 text-white">
@@ -26,7 +29,7 @@ See [customization.md](../customization.md) for theming, CSS variables, and addi
 </div>
 ```
 
-**Correct:**
+**Common alternative:**
 
 ```tsx
 <div className="bg-primary text-primary-foreground">
@@ -36,11 +39,13 @@ See [customization.md](../customization.md) for theming, CSS variables, and addi
 
 ---
 
-## No raw color values for status/state indicators
+## Color meaning and theme consistency
 
-For positive, negative, or status indicators, use Badge variants, semantic tokens like `text-destructive`, or define custom CSS variables — don't reach for raw Tailwind colors.
+Shared status colors usually benefit from semantic tokens or variants. A chart,
+color editor, or other domain-specific visualization may need explicit colors.
+Check contrast, themes, and a cue beyond color for important status.
 
-**Incorrect:**
+**Example to evaluate:**
 
 ```tsx
 <span className="text-emerald-600">+20.1%</span>
@@ -48,7 +53,7 @@ For positive, negative, or status indicators, use Badge variants, semantic token
 <span className="text-red-600">-3.2%</span>
 ```
 
-**Correct:**
+**Common alternative:**
 
 ```tsx
 <Badge variant="secondary">+20.1%</Badge>
@@ -56,13 +61,16 @@ For positive, negative, or status indicators, use Badge variants, semantic token
 <span className="text-destructive">-3.2%</span>
 ```
 
-If you need a success/positive color that doesn't exist as a semantic token, use a Badge variant or ask the user about adding a custom CSS variable to the theme (see [customization.md](../customization.md)).
+If a repeated semantic role needs a new token, add it through the shared theme
+with appropriate light/dark values. A local domain color may stay local. This is
+a routine design choice unless the intended product direction remains unclear
+(see [customization.md](../customization.md)).
 
 ---
 
 ## Built-in variants first
 
-**Incorrect:**
+**Example to evaluate:**
 
 ```tsx
 <Button className="border border-input bg-transparent hover:bg-accent">
@@ -70,7 +78,7 @@ If you need a success/positive color that doesn't exist as a semantic token, use
 </Button>
 ```
 
-**Correct:**
+**Common alternative:**
 
 ```tsx
 <Button variant="outline">Click me</Button>
@@ -78,11 +86,14 @@ If you need a success/positive color that doesn't exist as a semantic token, use
 
 ---
 
-## className for layout only
+## Use className with component ownership in mind
 
-Use `className` for layout (e.g. `max-w-md`, `mx-auto`, `mt-4`), **not** for overriding component colors or typography. To change colors, use semantic tokens, built-in variants, or CSS variables.
+`className` is useful for layout and contextual customization. Shared variants
+and tokens make recurring styles easier to maintain; a local color or typography
+adjustment can be appropriate when the component API supports it. Check the
+effect on themes, interaction states, and neighboring instances.
 
-**Incorrect:**
+**Example to evaluate:**
 
 ```tsx
 <Card className="bg-blue-100 text-blue-900 font-bold">
@@ -90,7 +101,7 @@ Use `className` for layout (e.g. `max-w-md`, `mx-auto`, `mt-4`), **not** for ove
 </Card>
 ```
 
-**Correct:**
+**Common alternative:**
 
 ```tsx
 <Card className="max-w-md mx-auto">
@@ -98,7 +109,7 @@ Use `className` for layout (e.g. `max-w-md`, `mx-auto`, `mt-4`), **not** for ove
 </Card>
 ```
 
-To customize a component's appearance, prefer these approaches in order:
+Useful customization options include:
 
 1. **Built-in variants** — `variant="outline"`, `variant="destructive"`, etc.
 2. **Semantic color tokens** — `bg-primary`, `text-muted-foreground`.
@@ -106,9 +117,11 @@ To customize a component's appearance, prefer these approaches in order:
 
 ---
 
-## No space-x-_ / space-y-_
+## Choose spacing for the layout
 
-Use `gap-*` instead. `space-y-4` → `flex flex-col gap-4`. `space-x-2` → `flex gap-2`.
+`gap-*` works well for flex/grid layouts, especially wrapping content. Margin or
+`space-*` utilities can fit normal flow. Choose the approach whose behavior
+matches the layout rather than rewriting working spacing solely for style.
 
 ```tsx
 <div className="flex flex-col gap-4">
@@ -122,33 +135,38 @@ Use `gap-*` instead. `space-y-4` → `flex flex-col gap-4`. `space-x-2` → `fle
 
 ## Prefer size-_ over w-_ h-\* when equal
 
-`size-10` not `w-10 h-10`. Applies to icons, avatars, skeletons, etc.
+`size-10` is concise for equal dimensions. Separate width and height utilities
+are useful when sizing changes independently.
 
 ---
 
 ## Prefer truncate shorthand
 
-`truncate` not `overflow-hidden text-ellipsis whitespace-nowrap`.
+`truncate` is concise when all three truncation behaviors are wanted. Use the
+individual utilities when wrapping or overflow behavior differs.
 
 ---
 
-## No manual dark: color overrides
+## Theme-aware color choices
 
-Use semantic tokens — they handle light/dark via CSS variables. `bg-background text-foreground` not `bg-white dark:bg-gray-950`.
+Semantic tokens handle shared light/dark colors through CSS variables. Explicit
+`dark:` styles can be useful for a specific surface or domain visualization;
+verify contrast and consistency in both modes.
 
 ---
 
 ## Use cn() for conditional classes
 
-Use the `cn()` utility from the project for conditional or merged class names. Don't write manual ternaries in className strings.
+`cn()` is useful for conditional classes and Tailwind conflict merging. A simple
+expression can also be clear when no merging is needed.
 
-**Incorrect:**
+**Example to evaluate:**
 
 ```tsx
 <div className={`flex items-center ${isActive ? "bg-primary text-primary-foreground" : "bg-muted"}`}>
 ```
 
-**Correct:**
+**Common alternative:**
 
 ```tsx
 import { cn } from "@/lib/utils"
@@ -158,6 +176,8 @@ import { cn } from "@/lib/utils"
 
 ---
 
-## No manual z-index on overlay components
+## Diagnose overlay stacking before adjusting it
 
-`Dialog`, `Sheet`, `Drawer`, `AlertDialog`, `DropdownMenu`, `Popover`, `Tooltip`, `HoverCard` handle their own stacking. Never add `z-50` or `z-[999]`.
+Existing overlays handle their normal stacking. For an actual conflict, inspect
+portal placement and stacking contexts, then make a targeted adjustment and
+verify focus, dismissal, and nested overlay behavior.

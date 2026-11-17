@@ -45,6 +45,10 @@ jobs:
       - name: Format check
         run: pnpm format:check
 
+      # Catalogs are read from disk; --changed alone can miss locale regressions.
+      - name: Product contract checks
+        run: pnpm quality:check
+
       - name: Verify generated tool registry is up to date
         run: |
           pnpm tool-registry:generate
