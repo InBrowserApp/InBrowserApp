@@ -4,12 +4,12 @@ import { cn } from "@workspace/ui/lib/utils"
 import type { Capture, Entry, Messages } from "../types"
 
 const colors = {
-  blocked: "bg-muted-foreground",
-  dns: "bg-chart-4",
-  connect: "bg-chart-3",
-  send: "bg-chart-5",
-  wait: "bg-chart-2",
-  receive: "bg-chart-1",
+  blocked: "bg-(--har-blocked)",
+  dns: "bg-(--har-dns)",
+  connect: "bg-(--har-connect)",
+  send: "bg-(--har-send)",
+  wait: "bg-(--har-wait)",
+  receive: "bg-(--har-receive)",
 }
 
 export function Legend({ messages: m }: { messages: Messages }) {
@@ -48,7 +48,7 @@ export function Waterfall({
   return (
     <div
       dir="ltr"
-      className="relative h-5 w-full min-w-48 bg-muted/40"
+      className="relative h-5 w-full min-w-0 bg-muted/40 sm:min-w-48"
       role="img"
       aria-label={`${m.start}: ${formatTime(entry.started - capture.started, lang, m.unknown)}; ${m.time}: ${formatTime(entry.duration, lang, m.unknown)}`}
     >

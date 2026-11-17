@@ -19,7 +19,7 @@ export default function HarAnalyzer({
 }) {
   const state = useHarImport()
   return (
-    <div className="flex min-w-0 flex-col gap-6">
+    <div className="har-analyzer flex min-w-0 flex-col gap-6">
       <ImportCard
         messages={m}
         name={state.name}

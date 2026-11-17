@@ -9,7 +9,6 @@ import {
   CardTitle,
   CardDescription,
 } from "@workspace/ui/components/ui/card"
-import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Empty,
@@ -23,17 +22,11 @@ import {
   TableHead,
   TableRow,
   TableBody,
-  TableCell,
 } from "@workspace/ui/components/ui/table"
-import {
-  formatTime,
-  formatBytes,
-  selectEntries,
-  requestName,
-  isFailure,
-} from "../core/analysis"
+import { formatTime, selectEntries } from "../core/analysis"
 import { Filters, DEFAULT_FILTERS, type FiltersState } from "./filters"
-import { Legend, Waterfall } from "./timing"
+import { Legend } from "./timing"
+import { RequestRow } from "./request-row"
 import { Details } from "./details"
 import type { Capture, Entry, Messages } from "../types"
 
@@ -96,16 +89,24 @@ export function Requests({
             <Legend messages={m} />
           </div>
           {entries.length ? (
-            <Table className="min-w-[850px] table-fixed">
+            <Table className="table-fixed sm:min-w-[850px]">
               <caption className="sr-only">{m.waterfallHint}</caption>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="w-16">{m.method}</TableHead>
-                  <TableHead className="w-[30%]">{m.url}</TableHead>
-                  <TableHead className="w-16">{m.status}</TableHead>
-                  <TableHead className="w-24">{m.size}</TableHead>
-                  <TableHead className="w-24">{m.time}</TableHead>
-                  <TableHead className="w-[30%]">
+                  <TableHead className="hidden w-16 sm:table-cell">
+                    {m.method}
+                  </TableHead>
+                  <TableHead className="w-[55%] sm:w-[30%]">{m.url}</TableHead>
+                  <TableHead className="hidden w-16 sm:table-cell">
+                    {m.status}
+                  </TableHead>
+                  <TableHead className="hidden w-24 sm:table-cell">
+                    {m.size}
+                  </TableHead>
+                  <TableHead className="hidden w-24 sm:table-cell">
+                    {m.time}
+                  </TableHead>
+                  <TableHead className="w-[45%] sm:w-[30%]">
                     <span>{m.waterfall}</span>
                     <div
                       className="mt-1 flex justify-between font-mono text-[10px] text-muted-foreground"
@@ -121,59 +122,17 @@ export function Requests({
                 {entries
                   .slice(currentPage * PAGE_SIZE, (currentPage + 1) * PAGE_SIZE)
                   .map((entry) => (
-                    <TableRow key={entry.id}>
-                      <TableCell className="font-mono text-xs">
-                        {entry.method}
-                      </TableCell>
-                      <TableCell>
-                        <button
-                          type="button"
-                          onClick={(event) => {
-                            triggerRef.current = event.currentTarget
-                            setSelected(entry)
-                          }}
-                          aria-haspopup="dialog"
-                          title={entry.url}
-                          className="flex min-h-9 w-full min-w-0 flex-col justify-center gap-1 rounded-sm text-start hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
-                        >
-                          <span
-                            dir="ltr"
-                            className="block w-full truncate font-medium"
-                          >
-                            {requestName(entry.url)}
-                          </span>
-                          <span
-                            dir="ltr"
-                            className="block w-full truncate font-mono text-[10px] text-muted-foreground"
-                          >
-                            {entry.url}
-                          </span>
-                        </button>
-                      </TableCell>
-                      <TableCell>
-                        <Badge
-                          variant={
-                            isFailure(entry) ? "destructive" : "secondary"
-                          }
-                        >
-                          {entry.status}
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="font-mono text-xs tabular-nums">
-                        {formatBytes(entry.transferSize, lang, "—")}
-                      </TableCell>
-                      <TableCell className="font-mono text-xs tabular-nums">
-                        {formatTime(entry.duration, lang, "—")}
-                      </TableCell>
-                      <TableCell>
-                        <Waterfall
-                          entry={entry}
-                          capture={capture}
-                          lang={lang}
-                          messages={m}
-                        />
-                      </TableCell>
-                    </TableRow>
+                    <RequestRow
+                      key={entry.id}
+                      entry={entry}
+                      capture={capture}
+                      lang={lang}
+                      messages={m}
+                      onInspect={(item, trigger) => {
+                        triggerRef.current = trigger
+                        setSelected(item)
+                      }}
+                    />
                   ))}
               </TableBody>
             </Table>

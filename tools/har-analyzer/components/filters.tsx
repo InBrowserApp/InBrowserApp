@@ -41,8 +41,8 @@ export function Filters({
 }) {
   const id = useId()
   return (
-    <FieldGroup className="grid items-end gap-3 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_auto_auto_auto]">
-      <Field>
+    <FieldGroup className="grid grid-cols-2 items-end gap-3 lg:grid-cols-[minmax(0,1fr)_auto_auto_auto]">
+      <Field className="col-span-2 lg:col-span-1">
         <FieldLabel htmlFor={`${id}-search`}>{m.search}</FieldLabel>
         <Input
           id={`${id}-search`}
@@ -104,6 +104,7 @@ export function Filters({
       <Button
         type="button"
         variant="ghost"
+        className="col-span-2 lg:col-span-1"
         onClick={() => onChange(DEFAULT_FILTERS)}
         disabled={
           !value.search && value.status === "all" && value.sort === "start"

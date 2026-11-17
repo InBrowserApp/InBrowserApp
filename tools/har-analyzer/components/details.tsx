@@ -62,9 +62,9 @@ export function Details({
           event.preventDefault()
           onRestoreFocus()
         }}
-        className="max-h-[90dvh] min-w-0 overflow-y-auto sm:max-w-3xl"
+        className="max-h-[90dvh] min-w-0 overflow-y-auto sm:max-w-3xl rtl:[&>[data-slot=dialog-close]]:right-auto rtl:[&>[data-slot=dialog-close]]:left-4"
       >
-        <DialogHeader className="min-w-0 pe-7 text-start">
+        <DialogHeader className="min-w-0 pe-7 text-start sm:text-start">
           <DialogTitle>{m.details}</DialogTitle>
           <DialogDescription className="break-all" dir="auto">
             {requestName(entry.url)}
