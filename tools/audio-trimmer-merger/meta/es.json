@@ -1,0 +1,4 @@
+{
+  "name": "Recortador y unificador de audio",
+  "description": "Recorta audio seleccionando regiones en la forma de onda, ordena clips, escucha el resultado y únelos en un archivo WAV. Todo queda en tu navegador."
+}

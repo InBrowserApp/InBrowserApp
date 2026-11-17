@@ -23,6 +23,7 @@ import {
   Network,
   Ruler,
   Sparkles,
+  Scissors,
   Wrench,
 } from "@workspace/ui/icons"
 
@@ -48,6 +49,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   network: Network,
   ruler: Ruler,
   sparkles: Sparkles,
+  scissors: Scissors,
   wrench: Wrench,
 }
 

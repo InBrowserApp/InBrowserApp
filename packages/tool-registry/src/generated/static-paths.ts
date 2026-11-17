@@ -1014,6 +1014,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "audio-trimmer-merger",
+    language: "ar",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "de",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "en",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "es",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "fr",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "he",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "hi",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "id",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "it",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "ja",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "ko",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "ms",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "nl",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "no",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "pl",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "pt",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "ru",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "sv",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "th",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "tr",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "vi",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "zh-CN",
+  },
+  {
+    slug: "audio-trimmer-merger",
+    language: "zh-TW",
+  },
+  {
     slug: "barcode-generator",
     language: "ar",
   },

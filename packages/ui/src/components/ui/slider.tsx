@@ -7,6 +7,7 @@ function Slider({
   className,
   defaultValue,
   value,
+  thumbLabels,
   min = 0,
   max = 100,
   "aria-label": ariaLabel,
@@ -14,7 +15,9 @@ function Slider({
   "aria-describedby": ariaDescribedBy,
   "aria-valuetext": ariaValueText,
   ...props
-}: React.ComponentProps<typeof SliderPrimitive.Root>) {
+}: React.ComponentProps<typeof SliderPrimitive.Root> & {
+  thumbLabels?: readonly string[]
+}) {
   const _values = React.useMemo(
     () =>
       Array.isArray(value)
@@ -51,7 +54,7 @@ function Slider({
         <SliderPrimitive.Thumb
           data-slot="slider-thumb"
           key={index}
-          aria-label={ariaLabel}
+          aria-label={thumbLabels?.[index] ?? ariaLabel}
           aria-labelledby={ariaLabelledBy}
           aria-describedby={ariaDescribedBy}
           aria-valuetext={ariaValueText}

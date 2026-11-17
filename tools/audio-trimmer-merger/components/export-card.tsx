@@ -1,0 +1,146 @@
+import { useId, type RefObject } from "react"
+import { Button } from "@workspace/ui/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@workspace/ui/components/ui/card"
+import {
+  Field,
+  FieldDescription,
+  FieldGroup,
+  FieldLabel,
+} from "@workspace/ui/components/ui/field"
+import { Input } from "@workspace/ui/components/ui/input"
+import { Switch } from "@workspace/ui/components/ui/switch"
+import { Download, LoaderCircle, Scissors } from "@workspace/ui/icons"
+import { formatDuration } from "../core/audio"
+import type { AudioEditorMessages } from "../types"
+
+export function ExportCard({
+  messages: m,
+  disabled,
+  exporting,
+  duration,
+  count,
+  name,
+  smooth,
+  result,
+  onName,
+  onSmooth,
+  onExport,
+  onPlay,
+  audioRef,
+}: {
+  audioRef: RefObject<HTMLAudioElement | null>
+  messages: AudioEditorMessages
+  disabled: boolean
+  exporting: boolean
+  duration: number
+  count: number
+  name: string
+  smooth: boolean
+  result: { url: string } | null
+  onName: (name: string) => void
+  onSmooth: (smooth: boolean) => void
+  onExport: () => void
+  onPlay: () => void
+}) {
+  const id = useId()
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>{m.exportTitle}</CardTitle>
+        <CardDescription>{m.exportDescription}</CardDescription>
+      </CardHeader>
+      <CardContent className="flex flex-col gap-5">
+        <dl className="grid grid-cols-2 gap-3 rounded-lg bg-muted/40 p-4">
+          <div>
+            <dt className="text-xs text-muted-foreground">{m.totalLabel}</dt>
+            <dd className="mt-1 font-mono tabular-nums">
+              <bdi>{formatDuration(duration)}</bdi>
+            </dd>
+          </div>
+          <div className="flex items-center justify-end text-sm">
+            {m.clipCount.replace("{count}", String(count))}
+          </div>
+        </dl>
+        <FieldGroup>
+          <Field>
+            <FieldLabel htmlFor={`${id}-name`}>{m.outputNameLabel}</FieldLabel>
+            <Input
+              id={`${id}-name`}
+              name="output-name"
+              autoComplete="off"
+              value={name}
+              disabled={exporting}
+              onChange={(event) => onName(event.target.value)}
+            />
+          </Field>
+          <Field orientation="horizontal">
+            <div className="flex min-w-0 flex-1 flex-col gap-1">
+              <FieldLabel htmlFor={`${id}-smooth`}>{m.smoothLabel}</FieldLabel>
+              <FieldDescription id={`${id}-smooth-help`}>
+                {m.smoothDescription}
+              </FieldDescription>
+            </div>
+            <Switch
+              id={`${id}-smooth`}
+              checked={smooth}
+              disabled={exporting}
+              aria-describedby={`${id}-smooth-help`}
+              onCheckedChange={onSmooth}
+            />
+          </Field>
+        </FieldGroup>
+        <Button
+          type="button"
+          className="w-full"
+          disabled={disabled}
+          onClick={onExport}
+        >
+          {exporting ? (
+            <LoaderCircle
+              data-icon="inline-start"
+              className="motion-safe:animate-spin"
+              aria-hidden="true"
+            />
+          ) : (
+            <Scissors data-icon="inline-start" aria-hidden="true" />
+          )}
+          {exporting ? m.exporting : m.exportButton}
+        </Button>
+        <p className="text-xs leading-relaxed text-muted-foreground">
+          {m.outputNote}
+        </p>
+        {result ? (
+          <div className="flex flex-col gap-3 rounded-lg border p-4">
+            <p role="status" className="text-sm font-medium">
+              {m.outputTitle}
+            </p>
+            {/* oxlint-disable-next-line jsx-a11y/media-has-caption */}
+            <audio
+              ref={audioRef}
+              controls
+              className="w-full min-w-0"
+              src={result.url}
+              aria-label={m.outputPreviewLabel}
+              onPlay={onPlay}
+            />
+            <Button asChild>
+              <a
+                href={result.url}
+                download={`${name.trim().replace(/\.wav$/i, "") || "audio"}.wav`}
+              >
+                <Download data-icon="inline-start" aria-hidden="true" />
+                {m.downloadButton}
+              </a>
+            </Button>
+          </div>
+        ) : null}
+      </CardContent>
+    </Card>
+  )
+}

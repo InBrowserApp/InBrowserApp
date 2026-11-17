@@ -69,6 +69,7 @@ export {
   RefreshCcw,
   Ruler,
   Search,
+  Scissors,
   Shield,
   Sparkles,
   Square,
