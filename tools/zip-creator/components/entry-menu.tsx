@@ -26,10 +26,12 @@ export function EntryMenu({
   messages: m,
   onEdit,
   onRemove,
+  lang,
 }: {
   path: string
   disabled: boolean
   messages: Messages
+  lang: string
   onEdit: (action: EntryAction, trigger?: HTMLButtonElement | null) => void
   onRemove: (path: string) => void
 }) {
@@ -41,7 +43,7 @@ export function EntryMenu({
     onEdit({ kind, path }, trigger.current)
   }
   return (
-    <DropdownMenu>
+    <DropdownMenu dir={lang === "ar" || lang === "he" ? "rtl" : "ltr"}>
       <DropdownMenuTrigger asChild>
         <Button
           ref={trigger}

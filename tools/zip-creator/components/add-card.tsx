@@ -25,6 +25,7 @@ import type { FolderHandle } from "../core/selection"
 import type { Messages } from "../types"
 import type { Creator } from "../use-zip-creator"
 import type { ZipDrag } from "../use-zip-drag"
+import type { ChangeEvent } from "react"
 
 export function AddCard({
   creator: c,
@@ -40,6 +41,12 @@ export function AddCard({
   const id = useId()
   const disabled = c.status !== null
   const drop = drag.dropTarget(c.directory, "add")
+
+  function selected(event: ChangeEvent<HTMLInputElement>) {
+    const files = Array.from(event.target.files ?? [])
+    event.target.value = ""
+    if (files.length) void c.add(async () => selectFiles(files))
+  }
 
   function pickFolder() {
     const picker = (
@@ -110,11 +117,7 @@ export function AddCard({
           hidden
           aria-label={m.addFiles}
           disabled={disabled}
-          onChange={(event) => {
-            const files = Array.from(event.target.files ?? [])
-            event.target.value = ""
-            if (files.length) void c.add(async () => selectFiles(files))
-          }}
+          onChange={selected}
         />
         <input
           ref={folderRef}
@@ -126,11 +129,7 @@ export function AddCard({
           hidden
           aria-label={m.addFolder}
           disabled={disabled}
-          onChange={(event) => {
-            const files = Array.from(event.target.files ?? [])
-            event.target.value = ""
-            if (files.length) void c.add(async () => selectFiles(files))
-          }}
+          onChange={selected}
         />
       </CardContent>
       <CardFooter className="flex-col items-start gap-1 text-sm text-muted-foreground">

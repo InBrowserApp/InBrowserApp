@@ -199,6 +199,42 @@ it("paginates long folders without hiding files from the generated ZIP", async (
   expect(vi.mocked(createZip).mock.calls[0]![0]).toHaveLength(105)
 })
 
+it("keeps the current page and trigger focus when canceling a dialog, and starts new directories on page one", async () => {
+  mount()
+  add(
+    ...Array.from({ length: 101 }, (_, i) =>
+      source(`file-${String(i).padStart(3, "0")}.txt`)
+    )
+  )
+  await screen.findByText("file-000.txt")
+  fireEvent.click(button(m.next))
+  await menu("file-050.txt", m.rename)
+  const dialog = await screen.findByRole("dialog")
+  const input = within(dialog).getByLabelText(m.name)
+  await waitFor(() => expect(document.activeElement).toBe(input))
+  fireEvent.click(within(dialog).getAllByRole("button", { name: m.cancel })[0]!)
+  expect(screen.getByText("file-050.txt")).toBeTruthy()
+  expect(screen.queryByText("file-000.txt")).toBeNull()
+  await waitFor(() =>
+    expect(document.activeElement).toBe(
+      button(m.actions.replace("{name}", "file-050.txt"))
+    )
+  )
+  fireEvent.click(button(m.newFolder))
+  const create = await screen.findByRole("dialog")
+  fireEvent.change(within(create).getByLabelText(m.name), {
+    target: { value: "New" },
+  })
+  fireEvent.click(within(create).getByRole("button", { name: m.newFolder }))
+  add(
+    ...Array.from({ length: 101 }, (_, i) =>
+      source(`new-${String(i).padStart(3, "0")}.txt`)
+    )
+  )
+  await screen.findByText("new-000.txt")
+  expect(screen.queryByText("new-050.txt")).toBeNull()
+})
+
 it("names downloads, validates filenames inline and withdraws stale results", async () => {
   mount()
   add(source("file.txt"))

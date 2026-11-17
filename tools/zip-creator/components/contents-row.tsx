@@ -85,6 +85,7 @@ export function ContentsRow({
       </bdi>
       <EntryMenu
         path={item.path}
+        lang={lang}
         disabled={disabled}
         messages={m}
         onEdit={onEdit}

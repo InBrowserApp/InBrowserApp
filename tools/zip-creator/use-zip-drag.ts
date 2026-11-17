@@ -14,14 +14,14 @@ function isFileDrag(event: { dataTransfer: DataTransfer | null }) {
 }
 
 export function useZipDrag(creator: Creator) {
-  const [source, setSource] = useState<string | null>(null)
+  const source = useRef<string | null>(null)
   const [target, setTarget] = useState<string | null>(null)
   const depths = useRef(new Map<string, number>())
   const disabled = creator.status !== null
 
   function clear() {
     depths.current.clear()
-    setSource(null)
+    source.current = null
     setTarget(null)
   }
 
@@ -48,10 +48,10 @@ export function useZipDrag(creator: Creator) {
     function accepts(event: ReactDragEvent) {
       return (
         !disabled &&
-        (source !== null
+        (source.current !== null
           ? event.dataTransfer.types.includes(entryType) &&
-            parentPath(source) !== directory &&
-            canMove(source, directory)
+            parentPath(source.current) !== directory &&
+            canMove(source.current, directory)
           : isFileDrag(event))
       )
     }
@@ -76,7 +76,7 @@ export function useZipDrag(creator: Creator) {
           event.stopPropagation()
           const allowed = accepts(event)
           event.dataTransfer.dropEffect = allowed
-            ? source === null
+            ? source.current === null
               ? "copy"
               : "move"
             : "none"
@@ -86,10 +86,11 @@ export function useZipDrag(creator: Creator) {
           event.preventDefault()
           event.stopPropagation()
           const allowed = accepts(event)
+          const path = source.current
           clear()
           if (!allowed) return
-          if (source !== null) {
-            creator.edit({ kind: "move", path: source, directory }, true)
+          if (path !== null) {
+            creator.edit({ kind: "move", path, directory }, true)
           } else {
             const entries = captureDrop(event.dataTransfer)
             void creator.add((signal) => readDrop(entries, signal), directory)
@@ -109,7 +110,7 @@ export function useZipDrag(creator: Creator) {
         }
         event.dataTransfer.setData(entryType, path)
         event.dataTransfer.effectAllowed = "move"
-        setSource(path)
+        source.current = path
       },
       onDragEnd: clear,
     }

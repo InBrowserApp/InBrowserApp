@@ -44,18 +44,21 @@ export function ContentsCard({
   const [action, setAction] = useState<EntryAction | null>(null)
   const newFolder = useRef<HTMLButtonElement>(null)
   const returnFocus = useRef<HTMLButtonElement | null>(null)
-  const [page, setPage] = useState(0)
+  const [pagination, setPagination] = useState({ directory: "", page: 0 })
   const current = c.directory
   const rows = c.index.directories.get(current) ?? []
   const pages = Math.max(1, Math.ceil(rows.length / pageSize))
-  const currentPage = Math.min(page, pages - 1)
+  const currentPage = Math.min(
+    pagination.directory === current ? pagination.page : 0,
+    pages - 1
+  )
   const disabled = c.status !== null
   const number = new Intl.NumberFormat(lang)
   const drop = drag.dropTarget(current, "contents")
 
   function navigate(path: string) {
     c.navigate(path)
-    setPage(0)
+    setPagination({ directory: path, page: 0 })
   }
 
   function openEntry(next: EntryAction, trigger = newFolder.current) {
@@ -158,7 +161,9 @@ export function ContentsCard({
                   variant="outline"
                   size="sm"
                   disabled={disabled || currentPage === 0}
-                  onClick={() => setPage(currentPage - 1)}
+                  onClick={() =>
+                    setPagination({ directory: current, page: currentPage - 1 })
+                  }
                 >
                   {m.previous}
                 </Button>
@@ -172,7 +177,9 @@ export function ContentsCard({
                   variant="outline"
                   size="sm"
                   disabled={disabled || currentPage === pages - 1}
-                  onClick={() => setPage(currentPage + 1)}
+                  onClick={() =>
+                    setPagination({ directory: current, page: currentPage + 1 })
+                  }
                 >
                   {m.next}
                 </Button>
@@ -188,7 +195,9 @@ export function ContentsCard({
           </Empty>
         )}
         {c.items.length ? (
-          <p className="text-sm text-muted-foreground">{m.dragHint}</p>
+          <p className="text-sm text-muted-foreground pointer-coarse:hidden">
+            {m.dragHint}
+          </p>
         ) : null}
       </CardContent>
       {action ? (
@@ -198,7 +207,6 @@ export function ContentsCard({
           messages={m}
           onClose={() => {
             setAction(null)
-            setPage(0)
           }}
           onRestoreFocus={() => {
             const trigger = returnFocus.current

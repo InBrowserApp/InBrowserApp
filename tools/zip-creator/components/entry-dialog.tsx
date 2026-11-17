@@ -78,8 +78,10 @@ export function EntryDialog({
           if (window.matchMedia("(pointer: coarse)").matches) {
             event.preventDefault()
             content.current?.focus()
-          } else {
-            input.current?.select()
+          } else if (input.current) {
+            event.preventDefault()
+            input.current.focus()
+            input.current.select()
           }
         }}
       >
@@ -99,7 +101,7 @@ export function EntryDialog({
             else onClose()
           }}
         >
-          <DialogHeader>
+          <DialogHeader className="text-start sm:text-start">
             <DialogTitle>{title}</DialogTitle>
             <DialogDescription>{m.editDescription}</DialogDescription>
           </DialogHeader>
