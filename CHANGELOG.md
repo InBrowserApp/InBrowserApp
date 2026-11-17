@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.8.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.7.0...v2.8.0) (2026-11-17)
+
+
+### Features
+
+* add a browser-only font subset generator ([#1320](https://github.com/InBrowserApp/InBrowserApp/issues/1320)) ([268b277](https://github.com/InBrowserApp/InBrowserApp/commit/268b2774bd5dd9b8d292ce77140b9ba62ac8993f))
+* add a browser-only HAR network analyzer ([#1298](https://github.com/InBrowserApp/InBrowserApp/issues/1298)) ([95c9f4f](https://github.com/InBrowserApp/InBrowserApp/commit/95c9f4f67c78dc8c33902e61265639ce7aa3b256)), closes [#1296](https://github.com/InBrowserApp/InBrowserApp/issues/1296)
+* add a browser-only media info viewer ([#1306](https://github.com/InBrowserApp/InBrowserApp/issues/1306)) ([2c70090](https://github.com/InBrowserApp/InBrowserApp/commit/2c70090cf83d760d2c8090cfa1d08c730f1413a4))
+* add a browser-only SQLite viewer ([#1299](https://github.com/InBrowserApp/InBrowserApp/issues/1299)) ([fb3f660](https://github.com/InBrowserApp/InBrowserApp/commit/fb3f660e166439161f21f5d0ed78641c00ec3130)), closes [#1297](https://github.com/InBrowserApp/InBrowserApp/issues/1297)
+* add adaptive tool workflows and product quality checks ([#1317](https://github.com/InBrowserApp/InBrowserApp/issues/1317)) ([c741cc3](https://github.com/InBrowserApp/InBrowserApp/commit/c741cc3274ac59250d22e42c972cfaecc617426b))
+* add browser-only image redactor ([#1307](https://github.com/InBrowserApp/InBrowserApp/issues/1307)) ([578d3be](https://github.com/InBrowserApp/InBrowserApp/commit/578d3be060673810d34ef56e3f9a49fdd38612a2))
+* add CBOR and MessagePack JSON converter ([#1308](https://github.com/InBrowserApp/InBrowserApp/issues/1308)) ([f72cf91](https://github.com/InBrowserApp/InBrowserApp/commit/f72cf91ec86f8b82b47e3fc795300141197f8b09)), closes [#1305](https://github.com/InBrowserApp/InBrowserApp/issues/1305)
+* add env JSON and YAML converter ([#1309](https://github.com/InBrowserApp/InBrowserApp/issues/1309)) ([8fd784a](https://github.com/InBrowserApp/InBrowserApp/commit/8fd784a0e39f143adcb39cdd6a8178f99be5f408))
+* add MAC address lookup and IEEE registry browsers ([#1319](https://github.com/InBrowserApp/InBrowserApp/issues/1319)) ([c22d6e5](https://github.com/InBrowserApp/InBrowserApp/commit/c22d6e50a1220094fd75ba85f2970cc87ab1e4c0))
+* add multi-format subtitle converter ([#1310](https://github.com/InBrowserApp/InBrowserApp/issues/1310)) ([f27b9f8](https://github.com/InBrowserApp/InBrowserApp/commit/f27b9f83d48069cea2883bb3de36019594434fda))
+* add Parquet viewer with schema and CSV/JSON export ([#1318](https://github.com/InBrowserApp/InBrowserApp/issues/1318)) ([a4dfe94](https://github.com/InBrowserApp/InBrowserApp/commit/a4dfe942c6953587eb4ec81ea5aae734d6ad3596))
+
 ## [2.7.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.6.0...v2.7.0) (2026-11-17)
 
 
