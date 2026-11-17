@@ -9846,6 +9846,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-redactor",
+    language: "ar",
+  },
+  {
+    slug: "image-redactor",
+    language: "de",
+  },
+  {
+    slug: "image-redactor",
+    language: "en",
+  },
+  {
+    slug: "image-redactor",
+    language: "es",
+  },
+  {
+    slug: "image-redactor",
+    language: "fr",
+  },
+  {
+    slug: "image-redactor",
+    language: "he",
+  },
+  {
+    slug: "image-redactor",
+    language: "hi",
+  },
+  {
+    slug: "image-redactor",
+    language: "id",
+  },
+  {
+    slug: "image-redactor",
+    language: "it",
+  },
+  {
+    slug: "image-redactor",
+    language: "ja",
+  },
+  {
+    slug: "image-redactor",
+    language: "ko",
+  },
+  {
+    slug: "image-redactor",
+    language: "ms",
+  },
+  {
+    slug: "image-redactor",
+    language: "nl",
+  },
+  {
+    slug: "image-redactor",
+    language: "no",
+  },
+  {
+    slug: "image-redactor",
+    language: "pl",
+  },
+  {
+    slug: "image-redactor",
+    language: "pt",
+  },
+  {
+    slug: "image-redactor",
+    language: "ru",
+  },
+  {
+    slug: "image-redactor",
+    language: "sv",
+  },
+  {
+    slug: "image-redactor",
+    language: "th",
+  },
+  {
+    slug: "image-redactor",
+    language: "tr",
+  },
+  {
+    slug: "image-redactor",
+    language: "vi",
+  },
+  {
+    slug: "image-redactor",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-redactor",
+    language: "zh-TW",
+  },
+  {
     slug: "image-resizer",
     language: "ar",
   },
