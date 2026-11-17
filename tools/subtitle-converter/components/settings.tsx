@@ -22,12 +22,14 @@ export function Settings({
   onChange,
   onEncoding,
   messages: m,
+  direction,
 }: {
   options: Options
   encoding: string
   onChange: (options: Options) => void
   onEncoding: (encoding: string) => void
   messages: Messages
+  direction: "ltr" | "rtl"
 }) {
   const id = useId()
   return (
@@ -35,6 +37,7 @@ export function Settings({
       <CardContent className="grid gap-4">
         <div className="grid gap-4 sm:grid-cols-2">
           <SubtitleSelect
+            direction={direction}
             label={m.source}
             value={options.source}
             onChange={(source) =>
@@ -49,6 +52,7 @@ export function Settings({
             ))}
           </SubtitleSelect>
           <SubtitleSelect
+            direction={direction}
             label={m.target}
             value={options.target}
             onChange={(target) =>
@@ -68,6 +72,7 @@ export function Settings({
           </summary>
           <div className="mt-4 grid items-start gap-4 md:grid-cols-3">
             <SubtitleSelect
+              direction={direction}
               label={m.encoding}
               value={encoding}
               onChange={onEncoding}

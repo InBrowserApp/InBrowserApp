@@ -42,6 +42,20 @@ async function convert() {
 }
 
 describe("subtitle conversion interface", () => {
+  it("keeps shared select menus in the page direction", async () => {
+    render(<Client messages={m} direction="rtl" />)
+    fireEvent.keyDown(screen.getByRole("combobox", { name: m.source }), {
+      key: "ArrowDown",
+    })
+    expect(screen.getByRole("listbox").getAttribute("dir")).toBe("rtl")
+    fireEvent.click(screen.getByRole("option", { name: "SubRip · SRT" }))
+    paste()
+    await convert()
+    expect(
+      screen.getByRole("link", { name: m.download }).getAttribute("download")
+    ).toBe("subtitles.vtt")
+  })
+
   it("converts pasted text, previews, copies and downloads a file, clears stale results", async () => {
     render(<Client messages={m} />)
     expect(

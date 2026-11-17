@@ -9,7 +9,13 @@ import type { Messages } from "./types"
 const EXAMPLE =
   "1\n00:00:01,250 --> 00:00:03,500\nHello, world!\n你好，世界！\n\n2\n00:00:04,000 --> 00:00:06,000\n<i>Subtitles, in your browser.</i>\n"
 
-export default function Client({ messages: m }: { messages: Messages }) {
+export default function Client({
+  messages: m,
+  direction = "ltr",
+}: {
+  messages: Messages
+  direction?: "ltr" | "rtl"
+}) {
   const [input, setInput] = useState("")
   const [files, setFiles] = useState<File[]>([])
   const [options, setOptions] = useState<Options>({
@@ -31,13 +37,14 @@ export default function Client({ messages: m }: { messages: Messages }) {
     setBusy(false)
   }
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-6" dir={direction}>
       <p className="text-sm text-muted-foreground">{m.privacy}</p>
       <fieldset disabled={busy} className="min-w-0">
         <Settings
           options={options}
           encoding={encoding}
           messages={m}
+          direction={direction}
           onChange={(value) => {
             setOptions(value)
             reset()
@@ -78,7 +85,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
             void convert()
           }}
         />
-        <SubtitleOutput results={results} messages={m} />
+        <SubtitleOutput results={results} messages={m} direction={direction} />
       </div>
       <details className="text-sm text-muted-foreground">
         <summary className="cursor-pointer font-medium">{m.formats}</summary>

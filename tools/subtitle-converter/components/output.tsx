@@ -11,7 +11,7 @@ import {
 } from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { SelectItem } from "@workspace/ui/components/ui/select"
-import { ArrowRight, Code, Eye } from "@workspace/ui/icons"
+import { ArrowRight, Code, Eye, TriangleAlert } from "@workspace/ui/icons"
 import { FORMATS } from "../core/formats"
 import { clock } from "../core/time"
 import { plainText } from "../core/text"
@@ -22,9 +22,11 @@ import { SubtitleSelect } from "./subtitle-select"
 export function SubtitleOutput({
   results,
   messages: m,
+  direction,
 }: {
   results: Conversion[]
   messages: Messages
+  direction: "ltr" | "rtl"
 }) {
   const [selected, setSelected] = useState(0)
   const [mode, setMode] = useState("preview")
@@ -57,15 +59,29 @@ export function SubtitleOutput({
         </CardTitle>
         {results.length > 1 ? (
           <SubtitleSelect
+            direction={direction}
             label={m.output}
             hiddenLabel
             value={String(Math.min(selected, results.length - 1))}
             onChange={(value) => setSelected(Number(value))}
           >
             {results.map((entry, index) => (
-              <SelectItem key={index} value={String(index)}>
-                {entry.name}
-                {entry.error ? ` — ${m[entry.error as keyof Messages]}` : ""}
+              <SelectItem
+                key={index}
+                value={String(index)}
+                aria-label={
+                  entry.error
+                    ? `${entry.name}: ${m[entry.error as keyof Messages]}`
+                    : undefined
+                }
+              >
+                <span className="min-w-0 truncate">{entry.name}</span>
+                {entry.error ? (
+                  <TriangleAlert
+                    aria-hidden="true"
+                    className="text-destructive"
+                  />
+                ) : null}
               </SelectItem>
             ))}
           </SubtitleSelect>

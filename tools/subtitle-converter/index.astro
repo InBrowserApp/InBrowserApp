@@ -11,5 +11,5 @@ const meta = resolveLocale<ToolMeta>(import.meta.glob("./meta/*.json", { eager: 
 const messages = resolveLocale<Messages>(import.meta.glob("./messages/*.json", { eager: true, import: "default" }), lang)!
 ---
 <ToolPageShell title={meta.name} description={meta.description}>
-  <Client client:load messages={messages} />
+  <Client client:load messages={messages} direction={lang === "ar" || lang === "he" ? "rtl" : "ltr"} />
 </ToolPageShell>

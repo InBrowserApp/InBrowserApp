@@ -18,6 +18,7 @@ export function SubtitleSelect({
   hint,
   hiddenLabel = false,
   children,
+  direction,
 }: {
   label: string
   value: string
@@ -25,6 +26,7 @@ export function SubtitleSelect({
   hint?: string
   hiddenLabel?: boolean
   children: ReactNode
+  direction: "ltr" | "rtl"
 }) {
   const id = useId()
   return (
@@ -32,7 +34,7 @@ export function SubtitleSelect({
       <FieldLabel htmlFor={id} className={hiddenLabel ? "sr-only" : undefined}>
         {label}
       </FieldLabel>
-      <Select value={value} onValueChange={onChange}>
+      <Select value={value} onValueChange={onChange} dir={direction}>
         <SelectTrigger
           id={id}
           className="w-full min-w-0 text-base data-[size=default]:h-10 md:text-sm"
@@ -40,7 +42,12 @@ export function SubtitleSelect({
         >
           <SelectValue />
         </SelectTrigger>
-        <SelectContent position="popper">{children}</SelectContent>
+        <SelectContent
+          position="popper"
+          className="w-(--radix-select-trigger-width) max-w-[calc(100vw-2rem)]"
+        >
+          {children}
+        </SelectContent>
       </Select>
       {hint ? (
         <FieldDescription id={`${id}-hint`} className="text-start text-xs">
