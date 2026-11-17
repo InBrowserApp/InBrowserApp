@@ -8006,6 +8006,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "font-subset-generator",
+    language: "ar",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "de",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "en",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "es",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "fr",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "he",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "hi",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "id",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "it",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "ja",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "ko",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "ms",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "nl",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "no",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "pl",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "pt",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "ru",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "sv",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "th",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "tr",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "vi",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "zh-CN",
+  },
+  {
+    slug: "font-subset-generator",
+    language: "zh-TW",
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     language: "ar",
   },
