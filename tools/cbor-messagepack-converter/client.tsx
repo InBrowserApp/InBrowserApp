@@ -1,4 +1,4 @@
-import { useId, useRef, useState, type ChangeEvent } from "react"
+import { useEffect, useId, useRef, useState, type ChangeEvent } from "react"
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
@@ -34,6 +34,9 @@ export default function Client({ messages: m }: { messages: Messages }) {
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const revision = useRef(0)
   const { result, error, busy, reset, fail, run } = useConversion(m)
+  useEffect(() => {
+    if (error) inputRef.current?.focus()
+  }, [error])
   function invalidate() {
     revision.current += 1
     reset()
@@ -150,6 +153,24 @@ export default function Client({ messages: m }: { messages: Messages }) {
               />
             </CardContent>
             <CardFooter className="flex-wrap gap-2 border-t">
+              <div className="flex w-full flex-wrap items-center gap-3">
+                <Button type="submit" disabled={busy || !input.trim()}>
+                  <ArrowRight aria-hidden="true" />
+                  {busy ? m.converting : m.convert}
+                </Button>
+                {busy && (
+                  <Button type="button" variant="outline" onClick={invalidate}>
+                    {m.cancel}
+                  </Button>
+                )}
+                <p
+                  id={`${id}-limits`}
+                  className="text-sm text-muted-foreground"
+                >
+                  {m.limits}
+                </p>
+              </div>
+
               <Button
                 type="button"
                 variant="outline"
@@ -247,20 +268,6 @@ export default function Client({ messages: m }: { messages: Messages }) {
               </Button>
             </CardFooter>
           </Card>
-        </div>
-        <div className="flex flex-wrap items-center gap-3">
-          <Button type="submit" disabled={busy || !input.trim()}>
-            <ArrowRight aria-hidden="true" />
-            {busy ? m.converting : m.convert}
-          </Button>
-          {busy && (
-            <Button type="button" variant="outline" onClick={invalidate}>
-              {m.cancel}
-            </Button>
-          )}
-          <p id={`${id}-limits`} className="text-sm text-muted-foreground">
-            {m.limits}
-          </p>
         </div>
         <div aria-live="polite">
           {error && (

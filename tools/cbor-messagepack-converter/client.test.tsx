@@ -145,7 +145,10 @@ test("cancels, ignores stale worker messages and handles invalid input", () => {
   const old = last()
   fireEvent.click(screen.getByRole("button", { name: messages.cancel }))
   expect(old.terminate).toHaveBeenCalled()
-  act(() => old.finish())
+  act(() => {
+    old.finish()
+    old.onerror?.()
+  })
   expect(output().value).toBe("")
   fireEvent.change(input(), { target: { value: "{" } })
   fireEvent.click(convertButton())
