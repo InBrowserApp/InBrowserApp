@@ -35,7 +35,7 @@ export function SubtitleInput({
   const fileInput = useRef<HTMLInputElement>(null)
   return (
     <Card
-      className="min-w-0"
+      className="min-w-0 xl:row-span-3 xl:grid xl:grid-rows-subgrid"
       onDragOver={(e) => {
         e.preventDefault()
         e.dataTransfer.dropEffect = "copy"
@@ -47,10 +47,12 @@ export function SubtitleInput({
       }}
     >
       <CardHeader>
-        <CardTitle>{m.input}</CardTitle>
+        <CardTitle>
+          <h2>{m.input}</h2>
+        </CardTitle>
         <p className="text-sm text-muted-foreground">{m.inputHint}</p>
       </CardHeader>
-      <CardContent className="grid flex-1 gap-4">
+      <CardContent className="grid flex-1 content-start gap-4">
         <div className="flex flex-wrap gap-2">
           <Button
             variant="outline"
@@ -76,7 +78,7 @@ export function SubtitleInput({
             ref={fileInput}
             type="file"
             multiple
-            className="sr-only"
+            hidden
             aria-label={m.open}
             accept=".srt,.vtt,.ass,.ssa,.sbv,.sub,.smi,.sami,.lrc,.ttml,.dfxp,.itt,.xml,.srv3,.mpl,.mpl2,.stl,.txt,.json,.csv,.tsv"
             onChange={(e) => {
@@ -88,7 +90,7 @@ export function SubtitleInput({
         {files.length ? (
           <ul
             aria-label={m.files}
-            className="max-h-80 min-h-64 space-y-2 overflow-y-auto"
+            className="max-h-80 space-y-2 overflow-y-auto xl:h-80"
           >
             {files.map((file, index) => (
               <li
@@ -117,7 +119,7 @@ export function SubtitleInput({
             rows={11}
             spellCheck={false}
             dir="auto"
-            className="min-h-64 font-mono text-sm"
+            className="h-64 min-h-64 resize-y overflow-y-auto font-mono text-base md:text-sm xl:h-80"
             value={input}
             disabled={busy}
             onChange={(e) => onInput(e.target.value)}

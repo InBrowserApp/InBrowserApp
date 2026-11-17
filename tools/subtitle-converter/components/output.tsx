@@ -10,12 +10,14 @@ import {
   CardFooter,
 } from "@workspace/ui/components/ui/card"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
+import { SelectItem } from "@workspace/ui/components/ui/select"
+import { ArrowRight, Code, Eye } from "@workspace/ui/icons"
 import { FORMATS } from "../core/formats"
 import { clock } from "../core/time"
 import { plainText } from "../core/text"
 import { batchZip, type Conversion } from "../batch"
 import type { Messages } from "../types"
-import { selectClass } from "./settings"
+import { SubtitleSelect } from "./subtitle-select"
 
 export function SubtitleOutput({
   results,
@@ -40,28 +42,50 @@ export function SubtitleOutput({
     [results]
   )
   return (
-    <Card className="min-w-0">
+    <Card className="min-w-0 xl:row-span-3 xl:grid xl:grid-rows-subgrid">
       <CardHeader>
-        <CardTitle>{m.output}</CardTitle>
+        <CardTitle className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+          <h2>{m.output}</h2>
+          {item ? (
+            <span
+              className="min-w-0 truncate text-sm font-normal text-muted-foreground"
+              title={item.name}
+            >
+              {item.name}
+            </span>
+          ) : null}
+        </CardTitle>
         {results.length > 1 ? (
-          <select
-            aria-label={m.output}
-            className={selectClass}
-            value={Math.min(selected, results.length - 1)}
-            onChange={(e) => setSelected(Number(e.target.value))}
+          <SubtitleSelect
+            label={m.output}
+            hiddenLabel
+            value={String(Math.min(selected, results.length - 1))}
+            onChange={(value) => setSelected(Number(value))}
           >
             {results.map((entry, index) => (
-              <option key={index} value={index}>
+              <SelectItem key={index} value={String(index)}>
                 {entry.name}
                 {entry.error ? ` — ${m[entry.error as keyof Messages]}` : ""}
-              </option>
+              </SelectItem>
             ))}
-          </select>
+          </SubtitleSelect>
         ) : null}
         {result ? (
-          <p role="status" className="text-sm text-muted-foreground">
-            {m.detected}: {FORMATS.find((f) => f.id === result.format)!.label} ·{" "}
-            {result.cues.length} {m.cues}
+          <p
+            role="status"
+            className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground"
+          >
+            {FORMATS.find(
+              (f) => f.id === result.format
+            )!.extension.toUpperCase()}
+            <ArrowRight
+              aria-hidden="true"
+              className="size-3.5 rtl:rotate-180"
+            />
+            {FORMATS.find(
+              (f) => f.id === result.target
+            )!.extension.toUpperCase()}{" "}
+            · {result.cues.length} {m.cues}
           </p>
         ) : null}
         {result && results.some((entry) => entry.error) ? (
@@ -78,7 +102,7 @@ export function SubtitleOutput({
       </CardHeader>
       <CardContent className="grid flex-1 content-start gap-4">
         {!item ? (
-          <p className="flex min-h-64 items-center justify-center text-center text-sm text-muted-foreground">
+          <p className="flex min-h-32 items-center justify-center text-center text-sm text-muted-foreground xl:min-h-64">
             {m.emptyOutput}
           </p>
         ) : item.error ? (
@@ -91,25 +115,33 @@ export function SubtitleOutput({
         ) : null}
         {result ? (
           <>
-            <div className="flex gap-2">
-              <Button
-                variant={mode === "preview" ? "secondary" : "ghost"}
-                size="sm"
-                aria-pressed={mode === "preview"}
-                onClick={() => setMode("preview")}
-              >
-                {m.preview}
-              </Button>
-              <Button
-                variant={mode === "code" ? "secondary" : "ghost"}
-                size="sm"
-                aria-pressed={mode === "code"}
-                onClick={() => setMode("code")}
-              >
-                {m.code}
-              </Button>
-            </div>
-            {mode === "code" ? (
+            {result.target === "txt" ? (
+              <p className="flex h-7 items-center text-sm text-muted-foreground">
+                {m.text} · TXT
+              </p>
+            ) : (
+              <div className="flex gap-2">
+                <Button
+                  variant={mode === "preview" ? "secondary" : "ghost"}
+                  size="sm"
+                  aria-pressed={mode === "preview"}
+                  onClick={() => setMode("preview")}
+                >
+                  <Eye data-icon="inline-start" aria-hidden="true" />
+                  {m.preview}
+                </Button>
+                <Button
+                  variant={mode === "code" ? "secondary" : "ghost"}
+                  size="sm"
+                  aria-pressed={mode === "code"}
+                  onClick={() => setMode("code")}
+                >
+                  <Code data-icon="inline-start" aria-hidden="true" />
+                  {m.code}
+                </Button>
+              </div>
+            )}
+            {mode === "code" || result.target === "txt" ? (
               <Textarea
                 aria-label={m.code}
                 readOnly
@@ -117,10 +149,10 @@ export function SubtitleOutput({
                 rows={10}
                 spellCheck={false}
                 dir="auto"
-                className="min-h-64 font-mono text-sm"
+                className="h-64 min-h-64 resize-y overflow-y-auto font-mono text-base md:text-sm xl:h-80"
               />
             ) : (
-              <div className="max-h-80 min-h-64 overflow-auto rounded-md border">
+              <div className="max-h-80 overflow-auto rounded-md border xl:h-80">
                 <table className="w-full text-start text-sm">
                   <thead className="sticky top-0 bg-muted">
                     <tr>
@@ -156,7 +188,9 @@ export function SubtitleOutput({
                 </table>
               </div>
             )}
-            {result.cues.length > 100 ? (
+            {mode === "preview" &&
+            result.target !== "txt" &&
+            result.cues.length > 100 ? (
               <p className="text-xs text-muted-foreground">{m.previewLimit}</p>
             ) : null}
             {result.notes
@@ -175,6 +209,7 @@ export function SubtitleOutput({
           copyLabel={m.copy}
           copiedLabel={m.copied}
           disabled={!result}
+          size="default"
         />
         {file ? (
           <DocumentDownload

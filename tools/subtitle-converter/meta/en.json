@@ -1,4 +1,4 @@
 {
   "name": "Subtitle Converter",
-  "description": "Convert SRT, VTT, ASS, SSA, TTML, LRC and more subtitle formats. Batch convert, adjust timing, and download locally in your browser."
+  "description": "Convert SRT, VTT, ASS, TTML, LRC and other subtitles locally. Batch download files, adjust timing, and choose text encoding."
 }

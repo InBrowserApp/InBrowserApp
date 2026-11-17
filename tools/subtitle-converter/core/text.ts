@@ -77,7 +77,7 @@ export function assText(text: string) {
     text
       .split(/(\{[^}]*\})/g)
       .map((part) => {
-        if (!part.startsWith("{")) return drawing ? "" : part
+        if (!part.startsWith("{")) return drawing ? "" : escapeXml(part)
         const mode = /\\p(\d+)/.exec(part)
         if (mode) drawing = Number(mode[1]) > 0
         if (drawing) return ""

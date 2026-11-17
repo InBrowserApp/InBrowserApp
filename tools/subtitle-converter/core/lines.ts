@@ -1,5 +1,5 @@
 import { SubtitleError, type Cue } from "./formats"
-import { cleanMarkup } from "./text"
+import { cleanMarkup, escapeXml } from "./text"
 import { parseTime } from "./time"
 
 export function parseFrameLines(
@@ -27,7 +27,7 @@ export function parseFrameLines(
       cues.push({
         start: parseTime(match[1]!, fps),
         end: parseTime(match[2]!, fps),
-        text: cleanMarkup(match[3]!.replace(/\|/g, "\n")),
+        text: cleanMarkup(escapeXml(match[3]!.replace(/\|/g, "\n"))),
       })
       continue
     }
@@ -53,8 +53,8 @@ export function parseFrameLines(
       .split("|")
       .map((part) =>
         format === "mpl2" && part.startsWith("/")
-          ? `<i>${part.slice(1)}</i>`
-          : part
+          ? `<i>${escapeXml(part.slice(1))}</i>`
+          : escapeXml(part)
       )
       .join("\n")
     cues.push({
@@ -80,9 +80,11 @@ export function parseLrc(text: string): Cue[] {
     const matches = [...line.matchAll(/\[(\d+:\d{2}(?:\.\d{1,3})?)\]/g)]
     if (!matches.length) throw new SubtitleError("invalid")
     const body = cleanMarkup(
-      line
-        .replace(/\[\d+:\d{2}(?:\.\d{1,3})?\]/g, "")
-        .replace(/<\d+:\d{2}(?:\.\d{1,3})?>/g, "")
+      escapeXml(
+        line
+          .replace(/\[\d+:\d{2}(?:\.\d{1,3})?\]/g, "")
+          .replace(/<\d+:\d{2}(?:\.\d{1,3})?>/g, "")
+      )
     )
     for (const match of matches)
       entries.push({ start: parseTime(match[1]!), text: body })
@@ -108,7 +110,7 @@ export function parseQt(text: string): Cue[] {
     ),
   ]
   return matches.flatMap((match, index) => {
-    const body = cleanMarkup(match[2]!.replace(/\{[^}]*\}/g, ""))
+    const body = cleanMarkup(escapeXml(match[2]!.replace(/\{[^}]*\}/g, "")))
     const start = parseTime(match[1]!)
     return body
       ? [

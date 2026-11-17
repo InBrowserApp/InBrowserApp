@@ -80,10 +80,10 @@ export default function Client({ messages: m }: { messages: Messages }) {
         />
         <SubtitleOutput results={results} messages={m} />
       </div>
-      <p className="text-xs text-muted-foreground">{m.fidelity}</p>
       <details className="text-sm text-muted-foreground">
         <summary className="cursor-pointer font-medium">{m.formats}</summary>
         <div className="mt-3 grid gap-3">
+          <p>{m.fidelity}</p>
           <p>{m.formatsHint}</p>
           <p>{FORMATS.map((format) => format.label).join(" · ")}</p>
           <p>{m.jsonHint}</p>

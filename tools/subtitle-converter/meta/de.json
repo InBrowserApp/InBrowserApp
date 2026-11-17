@@ -1,4 +1,4 @@
 {
   "name": "Untertitelkonverter",
-  "description": "Konvertieren Sie SRT, VTT, ASS, SSA, TTML, LRC und weitere Untertitelformate. Verarbeiten Sie mehrere Dateien, passen Sie Zeiten an und laden Sie Ergebnisse lokal im Browser herunter."
+  "description": "Konvertieren Sie SRT, VTT, ASS, TTML, LRC und weitere Untertitel lokal. Laden Sie mehrere Dateien herunter, passen Sie Zeiten an und wählen Sie die Textkodierung."
 }

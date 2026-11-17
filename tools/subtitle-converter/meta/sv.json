@@ -1,4 +1,4 @@
 {
   "name": "Undertextkonverterare",
-  "description": "Konvertera SRT, VTT, ASS, SSA, TTML, LRC och fler undertextformat. Konvertera flera filer, justera tider och ladda ned lokalt i webbläsaren."
+  "description": "Konvertera SRT, VTT, ASS, TTML, LRC och andra undertextformat lokalt. Ladda ned flera filer samtidigt, justera tider och välj textkodning."
 }

@@ -22,6 +22,11 @@ export function convertSubtitle(input: string, options: Options) {
       end: cue.end + options.offset,
     }))
   if (!cues.length) throw new SubtitleError("noCues")
+  const output = serialize(cues, options.target, options.fps)
+  const previewCues =
+    options.target === "txt"
+      ? cues
+      : parseSubtitle(output, options.target, options.fps).cues
   const notes = ["fidelity"]
   if (options.target === "txt") notes.push("transcriptNote")
   if (
@@ -39,8 +44,9 @@ export function convertSubtitle(input: string, options: Options) {
     notes.push("precisionNote")
   return {
     format: parsed.format,
-    cues,
-    output: serialize(cues, options.target, options.fps),
+    cues: previewCues,
+    target: options.target,
+    output,
     mime:
       options.target === "vtt"
         ? "text/vtt;charset=utf-8"

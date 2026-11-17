@@ -15,14 +15,14 @@ export const FORMATS = [
     extension: "dfxp",
   },
   { id: "srv3", label: "YouTube · SRV3", extension: "srv3" },
-  { id: "youtube", label: "YouTube transcript · XML", extension: "xml" },
+  { id: "youtube", label: "YouTube · XML", extension: "xml" },
   { id: "mpl2", label: "MPL2 · MPL", extension: "mpl" },
   { id: "spruce", label: "Spruce Subtitle · STL (text)", extension: "stl" },
   { id: "qt", label: "QuickTime Text · QT.TXT", extension: "qt.txt" },
-  { id: "json", label: "JSON · milliseconds", extension: "json" },
+  { id: "json", label: "JSON · ms", extension: "json" },
   { id: "csv", label: "CSV", extension: "csv" },
   { id: "tsv", label: "TSV", extension: "tsv" },
-  { id: "txt", label: "Plain text · TXT", extension: "txt" },
+  { id: "txt", label: "TXT", extension: "txt" },
 ] as const
 
 export type Format = (typeof FORMATS)[number]["id"]

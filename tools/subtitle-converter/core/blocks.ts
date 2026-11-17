@@ -1,5 +1,5 @@
 import { SubtitleError, type Cue } from "./formats"
-import { assText, cleanMarkup } from "./text"
+import { assText, cleanMarkup, escapeXml, plainText } from "./text"
 import { parseTime } from "./time"
 
 export function parseBlocks(
@@ -36,11 +36,19 @@ export function parseBlocks(
     const start = parseTime(times[0]!)
     const end = parseTime(times[1]!.trim().split(/\s+/)[0]!)
     const body = lines.slice(index + 1).join("\n")
+    const caption =
+      format === "vtt"
+        ? body.replace(/<(?:\d{2,}:)?\d{2}:\d{2}\.\d{3}>/g, "")
+        : body
     cues.push({
       start,
       end,
       text: cleanMarkup(
-        format === "subviewer" ? body.replace(/\[br\]/gi, "\n") : body
+        format === "subviewer"
+          ? escapeXml(caption.replace(/\[br\]/gi, "\n"))
+          : format === "sbv"
+            ? escapeXml(caption)
+            : caption
       ),
     })
   }
@@ -71,10 +79,12 @@ export function parseAss(content: string): Cue[] {
       data.length < fields.length
     )
       throw new SubtitleError("invalid")
+    const text = assText(data.slice(textIndex).join(","))
+    if (!plainText(text).trim()) continue
     cues.push({
       start: parseTime(data[startIndex]!),
       end: parseTime(data[endIndex]!),
-      text: assText(data.slice(textIndex).join(",")),
+      text,
     })
   }
   return cues

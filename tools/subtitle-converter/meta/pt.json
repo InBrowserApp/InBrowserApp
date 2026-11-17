@@ -1,4 +1,4 @@
 {
   "name": "Conversor de legendas",
-  "description": "Converta SRT, VTT, ASS, SSA, TTML, LRC e outros formatos de legendas. Converta em lote, ajuste os tempos e baixe os arquivos localmente no navegador."
+  "description": "Converta SRT, VTT, ASS, TTML, LRC e outras legendas localmente. Baixe arquivos em lote, ajuste os tempos e escolha a codificação de texto."
 }

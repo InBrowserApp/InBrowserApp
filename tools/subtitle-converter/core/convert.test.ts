@@ -309,6 +309,80 @@ describe("time, text and encoding", () => {
 })
 
 describe("parser diagnostics and timing boundaries", () => {
+  it("ignores ASS drawing events while retaining readable dialogue", () => {
+    const header =
+      "[Script Info]\nScriptType: v4.00+\n[Events]\nFormat: Start, End, Text\n"
+    const drawing = "Dialogue: 0:00:01.00,0:00:02.00,{\\p1}m 0 0 l 1 1\n"
+    const result = convertSubtitle(
+      header + drawing + "Dialogue: 0:00:01.00,0:00:02.00,Readable",
+      options
+    )
+    expect(result.cues).toEqual([{ start: 1000, end: 2000, text: "Readable" }])
+    expect(() => convertSubtitle(header + drawing, options)).toThrow("noCues")
+  })
+
+  it("drops WebVTT inline timing markers without dropping escaped literals", () => {
+    const input =
+      "WEBVTT\n\n00:00:01.000 --> 00:00:03.000\nHello <00:00:02.000>world\n&lt;00:00:02.000&gt;"
+    expect(convertSubtitle(input, { ...options, target: "txt" }).output).toBe(
+      "Hello world\n<00:00:02.000>\n"
+    )
+  })
+
+  it("honors the earliest TTML end, duration and parent boundary", () => {
+    const xml =
+      '<tt><body end="5s"><p begin="1s" end="10s" dur="2s">Duration</p><p begin="1s" end="2s" dur="10s">End</p><p begin="1s" end="10s" dur="10s">Parent</p></body></tt>'
+    expect(convertSubtitle(xml, options).cues.map((cue) => cue.end)).toEqual([
+      3000, 2000, 5000,
+    ])
+  })
+
+  it("reads legal TTML sub-millisecond fractions and exports millisecond timing", () => {
+    const xml =
+      '<tt><body><p begin="00:00:01.123456" end="00:00:02.123456">Precise</p></body></tt>'
+    expect(parseSubtitle(xml, "ttml", 25).cues[0]!.start).toBeCloseTo(1123.456)
+    const converted = convertSubtitle(xml, options)
+    expect(converted.cues[0]!.start).toBe(1123)
+    expect(converted.output).toContain("00:00:01.123 --> 00:00:02.123")
+  })
+
+  it("previews the timing and text represented by the output format", () => {
+    const result = convertSubtitle(
+      "1\n00:00:01,250 --> 00:00:03,500\nOne\nTwo",
+      { ...options, target: "mpl2" }
+    )
+    expect(result.target).toBe("mpl2")
+    expect(result.cues[0]).toEqual({ start: 1300, end: 3500, text: "One\nTwo" })
+    const lyrics = convertSubtitle(
+      "1\n00:00:01,250 --> 00:00:03,500\nOne\nTwo",
+      { ...options, target: "lrc" }
+    )
+    expect(lyrics.cues[0]!.text).toBe("One Two")
+  })
+
+  it.each([
+    "ass",
+    "ssa",
+    "sbv",
+    "subviewer",
+    "lrc",
+    "microdvd",
+    "mpl2",
+    "spruce",
+    "qt",
+  ] as const)(
+    "preserves literal angle brackets in %s exports and previews",
+    (target) => {
+      const input =
+        "1\n00:00:01,000 --> 00:00:02,000\n&lt;hello&gt; Use &lt;b&gt;bold&lt;/b&gt; tags &amp;amp; text"
+      const result = convertSubtitle(input, { ...options, target })
+      expect(result.output).toContain("<hello> Use <b>bold</b> tags &amp; text")
+      expect(plainText(result.cues[0]!.text)).toBe(
+        "<hello> Use <b>bold</b> tags &amp; text"
+      )
+    }
+  )
+
   it.each([
     ["srt", "00:01.000 --> 00:02.000 --> 00:03.000\nHi"],
     ["srt", "one\ntwo\n00:01.000 --> 00:02.000\nHi"],

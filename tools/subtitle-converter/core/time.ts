@@ -14,7 +14,7 @@ export function parseTime(value: string, fps = 25, tickRate = 1): number {
     }
     return (Number(offset[1]!) * 1000) / scales[offset[2]!]!
   }
-  const clock = /^(?:(\d+):)?(\d+):(\d{2})(?:\.(\d{1,3})|:(\d{2}))?$/.exec(text)
+  const clock = /^(?:(\d+):)?(\d+):(\d{2})(?:\.(\d+)|:(\d{2}))?$/.exec(text)
   if (
     !clock ||
     (clock[1] !== undefined && Number(clock[2]) > 59) ||
@@ -27,7 +27,7 @@ export function parseTime(value: string, fps = 25, tickRate = 1): number {
     Number(clock[2]) * 60000 +
     Number(clock[3]) * 1000 +
     (clock[5] === undefined
-      ? Number((clock[4] ?? "").padEnd(3, "0"))
+      ? Number(`0.${clock[4] ?? "0"}`) * 1000
       : (Number(clock[5]) * 1000) / fps)
   )
 }

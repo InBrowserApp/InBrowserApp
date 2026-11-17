@@ -12,7 +12,7 @@ type ToolCopyButtonProps = Readonly<{
   ariaLabel?: string
   className?: string
   disabled?: boolean
-  size?: "sm" | "icon-sm"
+  size?: "default" | "sm" | "icon-sm"
   variant?: "default" | "outline" | "secondary" | "ghost"
 }>
 

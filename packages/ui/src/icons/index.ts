@@ -15,6 +15,7 @@ export {
   Braces,
   Camera,
   CameraOff,
+  Captions,
   CaseSensitive,
   Check,
   ChevronDown,

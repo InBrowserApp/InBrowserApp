@@ -86,11 +86,8 @@ export function parseXml(text: string, fps: number): Cue[] {
     const duration = attribute(node, "dur")
     const end = Math.min(
       parentEnd,
-      endAttr
-        ? parentStart + parseTime(endAttr, fps, tickRate)
-        : duration
-          ? start + parseTime(duration, fps, tickRate)
-          : parentEnd
+      endAttr ? parentStart + parseTime(endAttr, fps, tickRate) : Infinity,
+      duration ? start + parseTime(duration, fps, tickRate) : Infinity
     )
     if (node.localName === "p") {
       cues.push({ start, end, text: cleanMarkup(xmlText(node)) })
