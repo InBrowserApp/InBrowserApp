@@ -1,0 +1,4 @@
+{
+  "name": "Penganalisis Jaringan HAR",
+  "description": "Analisis file HAR secara lokal di browser Anda. Periksa waterfall permintaan, rincian waktu, header, dan isi yang tercatat untuk mendiagnosis permintaan lambat atau gagal."
+}
