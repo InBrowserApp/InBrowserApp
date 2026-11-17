@@ -3314,6 +3314,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "cbor-messagepack-converter",
+    language: "ar",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "de",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "en",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "es",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "fr",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "he",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "hi",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "id",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "it",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "ja",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "ko",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "ms",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "nl",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "no",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "pl",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "pt",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "ru",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "sv",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "th",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "tr",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "vi",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "cbor-messagepack-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "cbz-reader",
     language: "ar",
   },

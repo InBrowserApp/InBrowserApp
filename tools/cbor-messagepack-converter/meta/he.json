@@ -1,0 +1,4 @@
+{
+  "name": "ממיר CBOR / MessagePack",
+  "description": "המרת JSON ל-CBOR או ל-MessagePack לצורך ניפוי שגיאות ב-API. פענוח Hex, Base64, Base64URL או קבצים בינריים, והעתקה או הורדה של התוצאות מקומית בדפדפן."
+}

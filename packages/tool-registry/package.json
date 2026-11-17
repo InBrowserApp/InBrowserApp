@@ -43,6 +43,7 @@
     "@tool/caj-viewer": "workspace:*",
     "@tool/camera": "workspace:*",
     "@tool/case-converter": "workspace:*",
+    "@tool/cbor-messagepack-converter": "workspace:*",
     "@tool/cbz-reader": "workspace:*",
     "@tool/cbz-to-pdf-converter": "workspace:*",
     "@tool/certificate-public-key-parser": "workspace:*",

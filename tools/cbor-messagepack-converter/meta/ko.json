@@ -1,0 +1,4 @@
+{
+  "name": "CBOR / MessagePack 변환기",
+  "description": "API 디버깅을 위해 JSON을 CBOR 또는 MessagePack으로 변환하세요. Hex, Base64, Base64URL 또는 바이너리 파일을 디코딩하고 브라우저에서 로컬로 결과를 복사하거나 다운로드하세요."
+}
