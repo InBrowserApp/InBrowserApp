@@ -144,6 +144,7 @@ describe("subtitle conversion interface", () => {
     expect(
       screen.getByRole("link", { name: m.downloadAll }).getAttribute("download")
     ).toBe("subtitles.zip")
+    expect(screen.getByRole("alert").textContent).toContain("bad.vtt")
     fireEvent.change(screen.getByRole("combobox", { name: m.output }), {
       target: { value: "1" },
     })

@@ -64,6 +64,17 @@ export function SubtitleOutput({
             {result.cues.length} {m.cues}
           </p>
         ) : null}
+        {result && results.some((entry) => entry.error) ? (
+          <ul role="alert" className="space-y-1 text-sm text-destructive">
+            {results
+              .filter((entry) => entry.error)
+              .map((entry) => (
+                <li key={entry.name} className="break-words">
+                  {entry.name}: {m[entry.error as keyof Messages]}
+                </li>
+              ))}
+          </ul>
+        ) : null}
       </CardHeader>
       <CardContent className="grid flex-1 content-start gap-4">
         {!item ? (
