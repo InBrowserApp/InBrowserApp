@@ -2,7 +2,7 @@ import type en from "./messages/en.json"
 
 export type Messages = Readonly<{ [Key in keyof typeof en]: string }>
 export type Point = Readonly<{ x: number; y: number }>
-export type Effect = "solid" | "blur" | "pixelate"
+type Effect = "solid" | "blur" | "pixelate"
 export type Shape = "rectangle" | "ellipse" | "brush"
 export type Tool = Shape | "select"
 export type Style = Readonly<{

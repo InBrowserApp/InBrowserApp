@@ -57,7 +57,10 @@ export function Stage({
     <>
       <div
         ref={viewport}
-        className="h-[min(60vh,36rem)] min-h-72 overflow-auto bg-muted/30"
+        className="min-h-72 overflow-auto bg-muted/30"
+        style={{
+          height: `min(60vh, ${Math.max(288, Math.min(576, ((bounds.width - 48) * source.height) / source.width + 64))}px)`,
+        }}
         dir="ltr"
       >
         <div className="grid min-h-full w-max min-w-full place-items-center p-6">
