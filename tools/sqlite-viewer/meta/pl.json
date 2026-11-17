@@ -1,0 +1,4 @@
+{
+  "name": "Przeglądarka SQLite",
+  "description": "Otwieraj bazy SQLite w przeglądarce, przeglądaj tabele i schemat, wykonuj zapytania SQL tylko do odczytu i eksportuj wyniki do CSV lub JSON. Bez przesyłania plików."
+}

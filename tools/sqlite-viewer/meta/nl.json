@@ -1,0 +1,4 @@
+{
+  "name": "SQLite-viewer",
+  "description": "Open SQLite-databases in je browser, bekijk tabellen en het schema, voer een alleen-lezen SQL-query uit en exporteer resultaten als CSV of JSON. Geen uploads."
+}

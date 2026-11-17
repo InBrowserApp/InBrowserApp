@@ -21162,6 +21162,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "sqlite-viewer",
+    language: "ar",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "de",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "en",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "es",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "fr",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "he",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "hi",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "id",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "it",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ja",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ko",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ms",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "nl",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "no",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "pl",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "pt",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "ru",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "sv",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "th",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "tr",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "vi",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "sqlite-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "sri-hash-generator",
     language: "ar",
   },

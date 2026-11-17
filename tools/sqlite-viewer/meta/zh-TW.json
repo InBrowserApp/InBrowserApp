@@ -1,0 +1,4 @@
+{
+  "name": "SQLite 檢視器",
+  "description": "在瀏覽器中開啟 SQLite 資料庫、瀏覽資料表與結構、執行唯讀 SQL 查詢，並將結果匯出為 CSV 或 JSON。無須上傳。"
+}
