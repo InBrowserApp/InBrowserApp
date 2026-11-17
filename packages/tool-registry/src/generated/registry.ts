@@ -28988,7 +28988,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       "zh-CN": {
         name: "SQLite 查看器",
         description:
-          "在浏览器中打开 SQLite 数据库，浏览表和结构，执行只读 SQL 查询，并将结果导出为 CSV 或 JSON。无需上传。",
+          "本地打开 SQLite 数据库，查看表结构、执行只读 SQL 查询，并导出 CSV 或 JSON，无需上传。",
       },
       "zh-TW": {
         name: "SQLite 檢視器",
@@ -64839,7 +64839,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-CN": {
         name: "SQLite 查看器",
         description:
-          "在浏览器中打开 SQLite 数据库，浏览表和结构，执行只读 SQL 查询，并将结果导出为 CSV 或 JSON。无需上传。",
+          "本地打开 SQLite 数据库，查看表结构、执行只读 SQL 查询，并导出 CSV 或 JSON，无需上传。",
       },
       "zh-TW": {
         name: "SQLite 檢視器",

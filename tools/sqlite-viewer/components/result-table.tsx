@@ -224,6 +224,7 @@ export function ResultTable({
           <Textarea
             dir="ltr"
             readOnly
+            wrap="off"
             aria-label={m.value}
             value={value ?? ""}
             className="[field-sizing:fixed] max-h-96 min-h-40 font-mono text-sm"
