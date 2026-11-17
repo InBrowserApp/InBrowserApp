@@ -49,10 +49,8 @@
   "copied": "Disalin",
   "downloadJson": "Unduh JSON",
   "rawData": "Metadata lengkap (JSON)",
-  "noVideo": "Tidak ada trek video",
-  "noAudio": "Tidak ada trek audio",
   "helpTitle": "Tentang penampil ini",
   "helpDescription": "Pilih file untuk memeriksa kontainer dan aliran media sebenarnya, meskipun browser Anda tidak dapat memutarnya. Setiap trek video, audio, dan subtitel ditampilkan secara terpisah. Salin laporan yang mudah dibaca atau unduh metadata lengkap sebagai JSON.",
-  "helpNotes": "Bitrate keseluruhan mencakup semua aliran media dan overhead kontainer. Kolom yang kosong tidak dilaporkan oleh file. Metadata menjelaskan file; metadata tidak memverifikasi kompatibilitas pemutaran atau kualitas yang dirasakan.",
+  "helpNotes": "Bitrate keseluruhan mencakup semua aliran media dan overhead kontainer. Kolom yang kosong tidak dilaporkan oleh file.",
   "poweredBy": "Didukung oleh MediaInfo"
 }

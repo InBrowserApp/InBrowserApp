@@ -49,10 +49,8 @@
   "copied": "Disalin",
   "downloadJson": "Muat turun JSON",
   "rawData": "Metadata penuh (JSON)",
-  "noVideo": "Tiada trek video",
-  "noAudio": "Tiada trek audio",
   "helpTitle": "Tentang pemapar ini",
   "helpDescription": "Pilih fail untuk memeriksa bekas dan strim sebenarnya, walaupun pelayar anda tidak dapat memainkannya. Setiap trek video, audio dan sari kata disenaraikan secara berasingan. Salin laporan yang mudah dibaca atau muat turun metadata penuh sebagai JSON.",
-  "helpNotes": "Kadar bit keseluruhan merangkumi semua strim dan data tambahan bekas. Medan yang tiada tidak dilaporkan oleh fail. Metadata menerangkan fail; ia tidak mengesahkan keserasian main balik atau kualiti yang dirasai.",
+  "helpNotes": "Kadar bit keseluruhan merangkumi semua strim dan data tambahan bekas. Medan yang tiada tidak dilaporkan oleh fail.",
   "poweredBy": "Dikuasakan oleh MediaInfo"
 }

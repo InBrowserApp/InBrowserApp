@@ -49,10 +49,8 @@
   "copied": "Kopiert",
   "downloadJson": "JSON herunterladen",
   "rawData": "Vollständige Metadaten (JSON)",
-  "noVideo": "Keine Videospur",
-  "noAudio": "Keine Audiospur",
   "helpTitle": "Über diesen Betrachter",
   "helpDescription": "Wähle eine Datei aus, um ihren tatsächlichen Container und ihre Streams zu prüfen – auch wenn dein Browser sie nicht abspielen kann. Jede Video-, Audio- und Untertitelspur wird einzeln aufgeführt. Kopiere einen lesbaren Bericht oder lade die vollständigen Metadaten als JSON herunter.",
-  "helpNotes": "Die Gesamtbitrate umfasst alle Streams und den Container-Overhead. Fehlende Felder sind in der Datei nicht angegeben. Die Metadaten beschreiben die Datei; sie bestätigen weder die Wiedergabekompatibilität noch die wahrgenommene Qualität.",
+  "helpNotes": "Die Gesamtbitrate umfasst alle Streams und den Container-Overhead. Fehlende Felder sind in der Datei nicht angegeben.",
   "poweredBy": "Unterstützt durch MediaInfo"
 }

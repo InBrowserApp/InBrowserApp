@@ -49,10 +49,8 @@
   "copied": "Skopiowano",
   "downloadJson": "Pobierz JSON",
   "rawData": "Pełne metadane (JSON)",
-  "noVideo": "Brak ścieżki wideo",
-  "noAudio": "Brak ścieżki audio",
   "helpTitle": "O przeglądarce",
   "helpDescription": "Wybierz plik, aby sprawdzić jego rzeczywisty kontener i strumienie, nawet jeśli przeglądarka nie potrafi go odtworzyć. Każda ścieżka wideo, audio i napisów jest wyświetlana osobno. Skopiuj czytelny raport lub pobierz pełne metadane w formacie JSON.",
-  "helpNotes": "Całkowita przepływność obejmuje wszystkie strumienie i narzut kontenera. Brakujące pola nie są podane w pliku. Metadane opisują plik; nie potwierdzają zgodności odtwarzania ani odczuwanej jakości.",
+  "helpNotes": "Całkowita przepływność obejmuje wszystkie strumienie i narzut kontenera. Brakujące pola nie są podane w pliku.",
   "poweredBy": "Korzysta z MediaInfo"
 }
