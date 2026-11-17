@@ -137,6 +137,29 @@ describe("Astro search", () => {
     expect(load).toHaveBeenCalledTimes(2)
   })
 
+  it("waits for IME confirmation when the index arrives during composition", async () => {
+    let resolve!: (value: readonly SearchSuggestionEntry[]) => void
+    load.mockReturnValue(
+      new Promise((done) => {
+        resolve = done
+      })
+    )
+    const { input, panel } = await renderSearch()
+    input.focus()
+    fireEvent.compositionStart(input)
+    fireEvent.input(input, { target: { value: "json" } })
+    resolve(entries)
+    await Promise.resolve()
+    expect(input.value).toBe("json")
+    expect(panel.hidden).toBe(true)
+    expect(input.getAttribute("aria-expanded")).toBe("false")
+    expect(screen.queryByRole("option")).toBeNull()
+    fireEvent.keyDown(input, { key: "Enter", isComposing: true })
+    expect(navigate).not.toHaveBeenCalled()
+    fireEvent.compositionEnd(input)
+    expect(screen.getAllByRole("option")).toHaveLength(2)
+  })
+
   it("shows a real empty result after loading and clears without losing focus", async () => {
     load.mockResolvedValue([])
     const { input, panel, root } = await renderSearch()

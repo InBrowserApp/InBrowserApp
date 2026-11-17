@@ -5,7 +5,6 @@ function renderSuggestions(
   suggestions: readonly ToolSearchSuggestion[]
 ) {
   const form = root.querySelector<HTMLFormElement>("[data-search-form]")!
-  const input = form.querySelector<HTMLInputElement>("input")!
   const list = form.querySelector<HTMLUListElement>("[role=listbox]")!
   const template = form.querySelector<HTMLTemplateElement>(
     "[data-search-option]"
@@ -43,7 +42,6 @@ function renderSuggestions(
     /\{count\}/g,
     new Intl.NumberFormat(root.lang).format(suggestions.length)
   )
-  input.removeAttribute("aria-activedescendant")
 }
 
 function highlightSuggestion(root: HTMLElement, index: number, open: boolean) {

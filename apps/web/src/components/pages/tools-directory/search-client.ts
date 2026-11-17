@@ -25,6 +25,7 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
   const shortcut = form.querySelector<HTMLElement>("[data-search-shortcut]")!
   const panel = form.querySelector<HTMLElement>("[data-search-panel]")!
   const language = root.lang as SiteLanguage
+  let query = input.value
   let entries = options.entries
   let loading = false
   let composing = false
@@ -35,37 +36,36 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
     return (
       document.activeElement === input &&
       entries !== null &&
-      normalizeQuery(input.value) !== "" &&
+      normalizeQuery(query) !== "" &&
       !dismissed
     )
   }
 
   function refresh() {
-    const suggestions = buildSearchSuggestions(
-      entries ?? [],
-      input.value,
-      language
-    )
+    const suggestions = buildSearchSuggestions(entries ?? [], query, language)
     active = Math.min(active, Math.max(0, suggestions.length - 1))
     renderSuggestions(root, suggestions)
-    panel.hidden = !isOpen()
-    input.setAttribute("aria-expanded", String(isOpen()))
-    highlightSuggestion(root, active, isOpen())
-    clear.hidden = input.value.length === 0
+    const open = isOpen()
+    panel.hidden = !open
+    input.setAttribute("aria-expanded", String(open))
+    highlightSuggestion(root, active, open)
+    clear.hidden = query.length === 0
     shortcut.hidden = !clear.hidden
   }
 
-  function setQuery(query: string) {
-    input.value = query
+  function setQuery(value: string) {
+    query = value
+    input.value = value
     dismissed = false
     active = 0
     refresh()
   }
 
   function changed() {
+    query = input.value
     dismissed = false
     active = 0
-    options.onQueryChange?.(input.value)
+    options.onQueryChange?.(query)
     refresh()
   }
 
