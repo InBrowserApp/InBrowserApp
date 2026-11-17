@@ -1,4 +1,7 @@
-import type { ToolSearchIndexEntry } from "@workspace/tool-registry"
+import type {
+  ToolSearchIndexEntry,
+  ToolSearchSuggestionEntry,
+} from "@workspace/tool-registry"
 
 type ToolCategoryCount = Readonly<{
   category: string
@@ -111,27 +114,7 @@ function toDirectoryEntries(
   }))
 }
 
-/**
- * Minimal per-language projection of the search index used by the
- * suggestion dropdown. Kept slim so the home page can serialize it
- * into its island props without shipping every locale.
- */
-type SearchSuggestionEntry = Readonly<{
-  slug: string
-  category: string
-  name: string
-}>
-
-function toSuggestionEntries(
-  entries: readonly ToolSearchIndexEntry[],
-  language: string
-): readonly SearchSuggestionEntry[] {
-  return entries.map((entry) => ({
-    category: entry.category,
-    name: resolveEntryLocale(entry, language).name,
-    slug: entry.slug,
-  }))
-}
+type SearchSuggestionEntry = ToolSearchSuggestionEntry
 
 export {
   FEATURED_TOOL_SLUGS,
@@ -142,6 +125,5 @@ export {
   getCategoryLabel,
   resolveEntryLocale,
   toDirectoryEntries,
-  toSuggestionEntries,
 }
 export type { DirectoryToolEntry, SearchSuggestionEntry, ToolCategoryCount }

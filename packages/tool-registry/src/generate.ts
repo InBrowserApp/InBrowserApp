@@ -15,6 +15,7 @@ import {
   writeFileIfChanged,
 } from "./generate/io"
 import { discoverToolManifestSources, loadToolManifests } from "./generate/load"
+import { createSearchSuggestionSources } from "./generate/search-suggestions"
 import type { ToolRegistryGenerationOptions } from "./types"
 
 async function generateToolRegistryArtifacts(
@@ -37,7 +38,14 @@ async function generateToolRegistryArtifacts(
 
   await mkdir(paths.generatedRoot, { recursive: true })
 
+  const suggestionSources = createSearchSuggestionSources(
+    manifests.map(({ searchIndexEntry }) => searchIndexEntry)
+  )
+
   await Promise.all([
+    ...Object.entries(suggestionSources).map(([filename, source]) =>
+      writeFileIfChanged(resolve(paths.generatedRoot, filename), source)
+    ),
     writeFileIfChanged(paths.registryFile, createRegistrySource(manifests)),
     writeFileIfChanged(
       paths.staticPathsFile,

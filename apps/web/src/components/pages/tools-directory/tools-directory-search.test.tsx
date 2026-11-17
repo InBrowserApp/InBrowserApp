@@ -139,7 +139,6 @@ describe("search navigation", () => {
       .mockImplementation(() => {})
     render(
       <HomeSearch
-        entries={entries}
         language="zh-CN"
         categoryLabels={catalog.tools.categories}
         messages={catalog.tools}

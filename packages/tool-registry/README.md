@@ -15,6 +15,8 @@
 - `registry.ts` — generated tool registry keyed by slug
 - `static-paths.ts` — language-aware static path entries
 - `search-index.ts` — localized search records based on tool metadata
+- `search-suggestions.<lang>.ts` — name, slug, and category for each tool in one language, generated from the same metadata; do not edit these files by hand
+- `search-suggestions.ts` — asynchronous locale loaders, exposed through `@workspace/tool-registry/search-suggestions`. The home search loads one locale on focus; Vite emits separate chunks with content hashes.
 - `page-loaders.ts` — `Record<slug, () => Promise<{ default: AstroComponentFactory }>>` of explicit `import("@tool/<slug>/page")` calls. The app shell uses this map; there is no `import.meta.glob` of tools anywhere in `apps/web`.
 
 The generator only writes a file when its contents change (`writeFileIfChanged`), so a no-op run produces no diff.

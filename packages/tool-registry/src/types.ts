@@ -24,6 +24,12 @@ type ToolRegistryEntry = Readonly<{
 
 type ToolSearchIndexEntry = ToolRegistryEntry
 
+type ToolSearchSuggestionEntry = Readonly<{
+  slug: string
+  category: string
+  name: string
+}>
+
 type ToolRegistryArtifactPaths = Readonly<{
   repoRoot: string
   toolsRoot: string
@@ -54,6 +60,7 @@ export type {
   ToolRegistryEntrySource,
   ToolRegistryGenerationOptions,
   ToolSearchIndexEntry,
+  ToolSearchSuggestionEntry,
   ToolSearchLocaleEntry,
   ToolStaticPathEntry,
 }
