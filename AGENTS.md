@@ -230,10 +230,15 @@ Workflows live in `.github/workflows/`:
 
 - `ci.yml` — `code-check` (lint, format, registry-up-to-date check, typecheck,
   depcruise, knip), `test` (tests + coverage), `build-web` (Astro build),
-  `html-check` (internal links in built HTML), and the deploy jobs below. Runs
-  on PRs, on push to `main`, and on release publish.
+  `html-check` (internal links in built HTML), Lighthouse, and version previews.
+  Runs on PRs and through `workflow_call` from the main-branch release workflow.
 - `pr-title.yml` — enforces Conventional Commits on PR titles.
-- `release-please.yml` — opens release PRs and publishes GitHub releases.
+- `release-please.yml` — on push to `main`, maintains release PRs with the
+  existing `RELEASE_PLEASE_TOKEN`, creates draft releases, calls CI, uploads
+  release assets/provenance, publishes, and explicitly calls production deploy.
+- `deploy.yml` — deploys a published stable release with `wrangler deploy`.
+  Supports both `workflow_call` and manual `workflow_dispatch(release_tag)` for
+  deployment retries and rollback, without rebuilding the application.
 - `actionlint.yml` — lints workflow YAML when `.github/workflows/**` changes.
 
 The GitHub **Protect Default** ruleset requires these GitHub Actions checks
@@ -242,19 +247,31 @@ before merging into `main`: `Code Check`, `Test`, `Build Web`,
 names, not job IDs. When renaming or splitting a required job, update the
 live repository ruleset as well; workflow edits alone do not update it.
 
-Cloudflare Workers (static assets via the Workers Sites model). There is no
+Cloudflare Workers with static assets. There is no
 separate `staging` environment in `apps/web/wrangler.jsonc`; previews are
 Workers Versions:
 
-- **Same-repo PRs and pushes to `main`** — `deploy-staging` runs
+- **Same-repo PRs** — `deploy-staging` runs
   `wrangler versions upload --tag <ref>` against the
   `cloudflare-workers-staging` environment, exposing the version through the
   job's `deployment-url`.
-- **Release publish** — `upload-release-asset` attaches the built
-  `apps/web/dist` as a `.tar.zstd` archive on the GitHub release (#924).
-  `deploy-production` runs `wrangler deploy` against production only when
-  `release.prerelease` is `false`. Prereleases run validation and receive
-  release assets, but do not deploy to production.
+- **Release PR merge** — release-please creates a draft and provides its source
+  SHA to reusable CI. After CI passes, the same run archives the contents of
+  `dist`, attests provenance, uploads the archive, and publishes. The archive
+  contains only static web files; deployment configuration stays in the repo.
+  Enable release immutability in repository settings so publication locks the
+  tag and assets. Draft uploads may be replaced when retrying a failed job.
+- **Production** — publication explicitly calls `deploy.yml` for stable
+  releases. Deploy downloads the release archive and runs one `wrangler deploy`
+  with the CLI installed by `cloudflare/wrangler-action`. Only
+  `apps/web/wrangler.jsonc` is checked out from the release tag; there is no
+  application build or workspace dependency installation during deploy.
+  Prereleases receive release assets but do not deploy to production.
+
+Draft creation and publication do not trigger the next stage. Dependencies use
+`needs` and `workflow_call`, so publication can use the built-in `GITHUB_TOKEN`.
+Use **Re-run failed jobs** for build/publication failures. To deploy an existing
+version, run `gh workflow run deploy.yml --ref main -f release_tag=vX.Y.Z`.
 
 ## Git and PR conventions
 
