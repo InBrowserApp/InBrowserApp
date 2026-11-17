@@ -35591,6 +35591,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       },
     },
   },
+  {
+    slug: "zip-creator",
+    category: "developer",
+    icon: "archive",
+    tags: ["zip", "archive", "compress", "pack", "folder", "offline"],
+    locales: {
+      ar: {
+        name: "منشئ ZIP",
+        description:
+          "اجمع الملفات والمجلدات في ملف ZIP محليًا داخل متصفحك. اسحب المجلدات وأفلتها، واحتفظ ببنيتها، واختر الضغط، ثم نزّل الملف دون رفع أي شيء.",
+      },
+      de: {
+        name: "ZIP-Ersteller",
+        description:
+          "Packe Dateien und Ordner lokal in deinem Browser in eine ZIP-Datei. Füge Ordner per Drag-and-drop hinzu, behalte ihre Struktur bei, wähle die Komprimierung und lade das Archiv ohne Upload herunter.",
+      },
+      en: {
+        name: "ZIP Creator",
+        description:
+          "Pack files and folders into a ZIP locally in your browser. Drag and drop folders, keep their structure, choose compression, and download without uploading.",
+      },
+      es: {
+        name: "Creador de ZIP",
+        description:
+          "Empaqueta archivos y carpetas en un ZIP localmente en tu navegador. Arrastra y suelta carpetas, conserva su estructura, elige la compresión y descarga sin subir nada.",
+      },
+      fr: {
+        name: "Créateur de ZIP",
+        description:
+          "Regroupez fichiers et dossiers dans un ZIP localement dans votre navigateur. Glissez-déposez des dossiers, conservez leur arborescence, choisissez la compression et téléchargez sans envoi sur un serveur.",
+      },
+      he: {
+        name: "יוצר ZIP",
+        description:
+          "ארזו קבצים ותיקיות בקובץ ZIP מקומית בדפדפן. גררו תיקיות, שמרו על המבנה שלהן, בחרו דחיסה והורידו בלי להעלות קבצים לשרת.",
+      },
+      hi: {
+        name: "ZIP निर्माता",
+        description:
+          "अपने ब्राउज़र में ही फ़ाइलों और फ़ोल्डरों को ZIP में पैक करें। फ़ोल्डर खींचकर छोड़ें, उनकी संरचना बनाए रखें, संपीड़न चुनें और बिना अपलोड किए डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat ZIP",
+        description:
+          "Kemas file dan folder menjadi ZIP secara lokal di browser. Seret dan lepas folder, pertahankan strukturnya, pilih kompresi, lalu unduh tanpa mengunggah.",
+      },
+      it: {
+        name: "Creatore di ZIP",
+        description:
+          "Crea uno ZIP da file e cartelle direttamente nel browser. Trascina le cartelle, mantieni la loro struttura, scegli la compressione e scarica senza caricare nulla.",
+      },
+      ja: {
+        name: "ZIP作成ツール",
+        description:
+          "ファイルやフォルダーをブラウザー内でZIPにまとめます。フォルダーをドラッグ＆ドロップし、構成を保ったまま圧縮方法を選び、アップロードせずにダウンロードできます。",
+      },
+      ko: {
+        name: "ZIP 생성기",
+        description:
+          "브라우저에서 파일과 폴더를 ZIP으로 묶으세요. 폴더를 끌어다 놓고, 폴더 구조를 유지하며 압축 방식을 선택하고, 업로드 없이 다운로드하세요.",
+      },
+      ms: {
+        name: "Pencipta ZIP",
+        description:
+          "Bungkus fail dan folder ke dalam ZIP secara setempat dalam pelayar anda. Seret dan lepas folder, kekalkan strukturnya, pilih pemampatan dan muat turun tanpa memuat naik.",
+      },
+      nl: {
+        name: "ZIP-maker",
+        description:
+          "Bundel bestanden en mappen lokaal in je browser in een ZIP. Sleep mappen, behoud hun structuur, kies de compressie en download zonder te uploaden.",
+      },
+      no: {
+        name: "ZIP-oppretter",
+        description:
+          "Pakk filer og mapper i en ZIP-fil lokalt i nettleseren. Dra og slipp mapper, behold strukturen, velg komprimering og last ned uten å laste opp.",
+      },
+      pl: {
+        name: "Kreator ZIP",
+        description:
+          "Pakuj pliki i foldery do archiwum ZIP lokalnie w przeglądarce. Przeciągaj foldery, zachowuj ich strukturę, wybieraj kompresję i pobieraj bez wysyłania plików na serwer.",
+      },
+      pt: {
+        name: "Criador de ZIP",
+        description:
+          "Empacote arquivos e pastas em um ZIP localmente no navegador. Arraste e solte pastas, mantenha sua estrutura, escolha a compactação e baixe sem enviar seus arquivos a um servidor.",
+      },
+      ru: {
+        name: "Создание ZIP",
+        description:
+          "Упаковывайте файлы и папки в ZIP локально в браузере. Перетаскивайте папки, сохраняйте их структуру, выбирайте сжатие и скачивайте архив без отправки файлов на сервер.",
+      },
+      sv: {
+        name: "ZIP-skapare",
+        description:
+          "Packa filer och mappar i en ZIP-fil lokalt i webbläsaren. Dra och släpp mappar, behåll strukturen, välj komprimering och ladda ned utan att ladda upp.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง ZIP",
+        description:
+          "รวมไฟล์และโฟลเดอร์เป็น ZIP ภายในเบราว์เซอร์ ลากและวางโฟลเดอร์ คงโครงสร้างเดิม เลือกการบีบอัด และดาวน์โหลดได้โดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "ZIP Oluşturucu",
+        description:
+          "Dosya ve klasörleri tarayıcınızda yerel olarak bir ZIP dosyasında paketleyin. Klasörleri sürükleyip bırakın, yapılarını koruyun, sıkıştırmayı seçin ve yüklemeden indirin.",
+      },
+      vi: {
+        name: "Trình tạo ZIP",
+        description:
+          "Đóng gói tệp và thư mục thành ZIP ngay trong trình duyệt. Kéo thả thư mục, giữ nguyên cấu trúc, chọn mức nén và tải xuống mà không cần tải lên.",
+      },
+      "zh-CN": {
+        name: "ZIP 打包工具",
+        description:
+          "在浏览器本地将文件和文件夹打包为 ZIP。支持拖放文件夹、保留目录结构、选择压缩方式并下载，全程无需上传。",
+      },
+      "zh-TW": {
+        name: "ZIP 建立器",
+        description:
+          "直接在瀏覽器中將檔案與資料夾打包成 ZIP。拖放資料夾、保留目錄結構、選擇壓縮方式，無須上傳即可下載。",
+      },
+    },
+  },
 ]
 
 export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
@@ -71181,6 +71304,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "YAML 轉 TOML 轉換器",
         description:
           "將 YAML 轉為 TOML。貼上 YAML 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  "zip-creator": {
+    slug: "zip-creator",
+    category: "developer",
+    icon: "archive",
+    tags: ["zip", "archive", "compress", "pack", "folder", "offline"],
+    locales: {
+      ar: {
+        name: "منشئ ZIP",
+        description:
+          "اجمع الملفات والمجلدات في ملف ZIP محليًا داخل متصفحك. اسحب المجلدات وأفلتها، واحتفظ ببنيتها، واختر الضغط، ثم نزّل الملف دون رفع أي شيء.",
+      },
+      de: {
+        name: "ZIP-Ersteller",
+        description:
+          "Packe Dateien und Ordner lokal in deinem Browser in eine ZIP-Datei. Füge Ordner per Drag-and-drop hinzu, behalte ihre Struktur bei, wähle die Komprimierung und lade das Archiv ohne Upload herunter.",
+      },
+      en: {
+        name: "ZIP Creator",
+        description:
+          "Pack files and folders into a ZIP locally in your browser. Drag and drop folders, keep their structure, choose compression, and download without uploading.",
+      },
+      es: {
+        name: "Creador de ZIP",
+        description:
+          "Empaqueta archivos y carpetas en un ZIP localmente en tu navegador. Arrastra y suelta carpetas, conserva su estructura, elige la compresión y descarga sin subir nada.",
+      },
+      fr: {
+        name: "Créateur de ZIP",
+        description:
+          "Regroupez fichiers et dossiers dans un ZIP localement dans votre navigateur. Glissez-déposez des dossiers, conservez leur arborescence, choisissez la compression et téléchargez sans envoi sur un serveur.",
+      },
+      he: {
+        name: "יוצר ZIP",
+        description:
+          "ארזו קבצים ותיקיות בקובץ ZIP מקומית בדפדפן. גררו תיקיות, שמרו על המבנה שלהן, בחרו דחיסה והורידו בלי להעלות קבצים לשרת.",
+      },
+      hi: {
+        name: "ZIP निर्माता",
+        description:
+          "अपने ब्राउज़र में ही फ़ाइलों और फ़ोल्डरों को ZIP में पैक करें। फ़ोल्डर खींचकर छोड़ें, उनकी संरचना बनाए रखें, संपीड़न चुनें और बिना अपलोड किए डाउनलोड करें।",
+      },
+      id: {
+        name: "Pembuat ZIP",
+        description:
+          "Kemas file dan folder menjadi ZIP secara lokal di browser. Seret dan lepas folder, pertahankan strukturnya, pilih kompresi, lalu unduh tanpa mengunggah.",
+      },
+      it: {
+        name: "Creatore di ZIP",
+        description:
+          "Crea uno ZIP da file e cartelle direttamente nel browser. Trascina le cartelle, mantieni la loro struttura, scegli la compressione e scarica senza caricare nulla.",
+      },
+      ja: {
+        name: "ZIP作成ツール",
+        description:
+          "ファイルやフォルダーをブラウザー内でZIPにまとめます。フォルダーをドラッグ＆ドロップし、構成を保ったまま圧縮方法を選び、アップロードせずにダウンロードできます。",
+      },
+      ko: {
+        name: "ZIP 생성기",
+        description:
+          "브라우저에서 파일과 폴더를 ZIP으로 묶으세요. 폴더를 끌어다 놓고, 폴더 구조를 유지하며 압축 방식을 선택하고, 업로드 없이 다운로드하세요.",
+      },
+      ms: {
+        name: "Pencipta ZIP",
+        description:
+          "Bungkus fail dan folder ke dalam ZIP secara setempat dalam pelayar anda. Seret dan lepas folder, kekalkan strukturnya, pilih pemampatan dan muat turun tanpa memuat naik.",
+      },
+      nl: {
+        name: "ZIP-maker",
+        description:
+          "Bundel bestanden en mappen lokaal in je browser in een ZIP. Sleep mappen, behoud hun structuur, kies de compressie en download zonder te uploaden.",
+      },
+      no: {
+        name: "ZIP-oppretter",
+        description:
+          "Pakk filer og mapper i en ZIP-fil lokalt i nettleseren. Dra og slipp mapper, behold strukturen, velg komprimering og last ned uten å laste opp.",
+      },
+      pl: {
+        name: "Kreator ZIP",
+        description:
+          "Pakuj pliki i foldery do archiwum ZIP lokalnie w przeglądarce. Przeciągaj foldery, zachowuj ich strukturę, wybieraj kompresję i pobieraj bez wysyłania plików na serwer.",
+      },
+      pt: {
+        name: "Criador de ZIP",
+        description:
+          "Empacote arquivos e pastas em um ZIP localmente no navegador. Arraste e solte pastas, mantenha sua estrutura, escolha a compactação e baixe sem enviar seus arquivos a um servidor.",
+      },
+      ru: {
+        name: "Создание ZIP",
+        description:
+          "Упаковывайте файлы и папки в ZIP локально в браузере. Перетаскивайте папки, сохраняйте их структуру, выбирайте сжатие и скачивайте архив без отправки файлов на сервер.",
+      },
+      sv: {
+        name: "ZIP-skapare",
+        description:
+          "Packa filer och mappar i en ZIP-fil lokalt i webbläsaren. Dra och släpp mappar, behåll strukturen, välj komprimering och ladda ned utan att ladda upp.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง ZIP",
+        description:
+          "รวมไฟล์และโฟลเดอร์เป็น ZIP ภายในเบราว์เซอร์ ลากและวางโฟลเดอร์ คงโครงสร้างเดิม เลือกการบีบอัด และดาวน์โหลดได้โดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "ZIP Oluşturucu",
+        description:
+          "Dosya ve klasörleri tarayıcınızda yerel olarak bir ZIP dosyasında paketleyin. Klasörleri sürükleyip bırakın, yapılarını koruyun, sıkıştırmayı seçin ve yüklemeden indirin.",
+      },
+      vi: {
+        name: "Trình tạo ZIP",
+        description:
+          "Đóng gói tệp và thư mục thành ZIP ngay trong trình duyệt. Kéo thả thư mục, giữ nguyên cấu trúc, chọn mức nén và tải xuống mà không cần tải lên.",
+      },
+      "zh-CN": {
+        name: "ZIP 打包工具",
+        description:
+          "在浏览器本地将文件和文件夹打包为 ZIP。支持拖放文件夹、保留目录结构、选择压缩方式并下载，全程无需上传。",
+      },
+      "zh-TW": {
+        name: "ZIP 建立器",
+        description:
+          "直接在瀏覽器中將檔案與資料夾打包成 ZIP。拖放資料夾、保留目錄結構、選擇壓縮方式，無須上傳即可下載。",
       },
     },
   },

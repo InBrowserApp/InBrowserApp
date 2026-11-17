@@ -25945,4 +25945,96 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     slug: "yaml-to-toml-converter",
     language: "zh-TW",
   },
+  {
+    slug: "zip-creator",
+    language: "ar",
+  },
+  {
+    slug: "zip-creator",
+    language: "de",
+  },
+  {
+    slug: "zip-creator",
+    language: "en",
+  },
+  {
+    slug: "zip-creator",
+    language: "es",
+  },
+  {
+    slug: "zip-creator",
+    language: "fr",
+  },
+  {
+    slug: "zip-creator",
+    language: "he",
+  },
+  {
+    slug: "zip-creator",
+    language: "hi",
+  },
+  {
+    slug: "zip-creator",
+    language: "id",
+  },
+  {
+    slug: "zip-creator",
+    language: "it",
+  },
+  {
+    slug: "zip-creator",
+    language: "ja",
+  },
+  {
+    slug: "zip-creator",
+    language: "ko",
+  },
+  {
+    slug: "zip-creator",
+    language: "ms",
+  },
+  {
+    slug: "zip-creator",
+    language: "nl",
+  },
+  {
+    slug: "zip-creator",
+    language: "no",
+  },
+  {
+    slug: "zip-creator",
+    language: "pl",
+  },
+  {
+    slug: "zip-creator",
+    language: "pt",
+  },
+  {
+    slug: "zip-creator",
+    language: "ru",
+  },
+  {
+    slug: "zip-creator",
+    language: "sv",
+  },
+  {
+    slug: "zip-creator",
+    language: "th",
+  },
+  {
+    slug: "zip-creator",
+    language: "tr",
+  },
+  {
+    slug: "zip-creator",
+    language: "vi",
+  },
+  {
+    slug: "zip-creator",
+    language: "zh-CN",
+  },
+  {
+    slug: "zip-creator",
+    language: "zh-TW",
+  },
 ]
