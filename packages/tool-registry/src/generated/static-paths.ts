@@ -13710,6 +13710,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "media-info-viewer",
+    language: "ar",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "de",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "en",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "es",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "fr",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "he",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "hi",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "id",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "it",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "ja",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "ko",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "ms",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "nl",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "no",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "pl",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "pt",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "ru",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "sv",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "th",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "tr",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "vi",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "zh-CN",
+  },
+  {
+    slug: "media-info-viewer",
+    language: "zh-TW",
+  },
+  {
     slug: "mhtml-to-html-converter",
     language: "ar",
   },
