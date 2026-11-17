@@ -1,6 +1,6 @@
 ---
 name: vercel-react-best-practices
-description: React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.
+description: React and Next.js performance optimization guidelines from Vercel Engineering. Use for relevant performance work in React components, data loading, rendering, or bundles. Select patterns for the actual runtime and evidence; routine React changes need not trigger a broad optimization pass.
 license: MIT
 metadata:
   author: vercel
@@ -10,6 +10,20 @@ metadata:
 # Vercel React Best Practices
 
 Comprehensive performance optimization guide for React and Next.js applications, maintained by Vercel. Contains 69 rules across 8 categories, prioritized by impact to guide automated refactoring and code generation.
+
+## Application in this repository
+
+This is a reference catalog, including the compiled `AGENTS.md` and individual
+`rules/` files. Impact ratings and incorrect/correct examples assume the stated
+scenario; they are not repository-wide gates or evidence of a local bottleneck.
+Select relevant patterns and check their assumptions before applying them.
+
+InBrowser.App uses Astro and React islands. Next.js/RSC examples apply when that
+runtime is actually involved. Keep imports through the workspace boundaries;
+barrel-import advice does not override `@workspace/ui/icons`. Choose caching,
+memoization, lazy loading, and state patterns for the actual workload and user
+experience. Simple working code can remain simple. Verify meaningful behavior
+and performance when the change claims an improvement.
 
 ## When to Apply
 

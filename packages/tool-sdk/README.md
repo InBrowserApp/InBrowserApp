@@ -48,4 +48,7 @@ The following stay tool-local and are discovered only by the tool's own `index.a
 
 ## Required languages
 
-The default baseline requires `en` localized meta. Additional languages may be added tool by tool.
+The reusable SDK baseline requires `en` localized meta. InBrowser.App requires
+every language in `SUPPORTED_SITE_LANGUAGES` for each locale family, enforced
+by `pnpm quality:check`. Runtime fallback does not replace translated catalogs.
+See `docs/product-quality.md` for the application policy.

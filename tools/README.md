@@ -1,5 +1,9 @@
 # Tools Directory
 
+Start with `AGENTS.md` and `docs/product-quality.md` for the user-flow,
+description, icon, localization, and verification requirements. The file layout
+below is a code contract; it does not by itself establish a usable tool.
+
 Each leaf tool lives under `tools/<tool-slug>/` as a self-contained workspace package named `@tool/<tool-slug>`. The package name **must** match the directory name; the registry generator refuses to run otherwise.
 
 The shell relies on these hard conventions:
@@ -48,6 +52,10 @@ Tools may depend on `@workspace/tool-sdk`, `@workspace/ui`, and `packages/lib/*`
 **All external dependency versions go through the pnpm catalog** in `pnpm-workspace.yaml`. New deps get added to the catalog first, then referenced from the tool's `package.json` as `"foo": "catalog:"` — never inline a version. This includes `peerDependencies`.
 
 ## Adding a new tool
+
+For the complete user-flow, implementation, localization, and verification
+workflow, use [add-tool](../.agents/skills/add-tool/SKILL.md). The steps below
+describe package creation and registry integration.
 
 1. Create `tools/<slug>/` with the files above.
 2. Use this minimal `package.json`:

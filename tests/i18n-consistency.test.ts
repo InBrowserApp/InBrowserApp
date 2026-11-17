@@ -71,35 +71,33 @@ function loadText(filePath: string): string {
   return fs.readFileSync(filePath, "utf8")
 }
 
-/**
- * Recursively collect every leaf path in a JSON value. Two locale files must
- * produce the same set of paths to be structurally equivalent.
- */
-function collectKeyPaths(value: unknown, prefix = ""): string[] {
-  if (value === null || typeof value !== "object") {
-    return [prefix || "<root>"]
-  }
-  if (Array.isArray(value)) {
-    if (value.length === 0) return [`${prefix}[]`]
-    return value.flatMap((item, i) => collectKeyPaths(item, `${prefix}[${i}]`))
-  }
-  const entries = Object.entries(value as Record<string, unknown>)
-  if (entries.length === 0) return [`${prefix}{}`]
-  return entries.flatMap(([k, v]) =>
-    collectKeyPaths(v, prefix ? `${prefix}.${k}` : k)
-  )
+// Named interpolation tokens used by the catalogs. Compare occurrences, not
+// position: natural translations can reorder placeholders. This is not an ICU
+// parser; add format-aware validation if the app adopts ICU messages.
+function placeholders(value: string): string[] {
+  return (value.match(/\{\{[A-Za-z_]\w*\}\}|\{[A-Za-z_]\w*\}/gu) ?? []).sort()
 }
 
-function collectPlaceholders(value: unknown, prefix = ""): string[] {
-  if (typeof value === "string") {
-    return [...value.matchAll(/\{[A-Za-z_][A-Za-z0-9_]*\}/g)].map(
-      ([placeholder]) => `${prefix}:${placeholder}`
-    )
+function localeContract(value: unknown): unknown {
+  if (value === null) return { type: "null" }
+  if (Array.isArray(value)) {
+    return { type: "array", items: value.map(localeContract) }
   }
-  if (value === null || typeof value !== "object") return []
-  return Object.entries(value).flatMap(([key, child]) =>
-    collectPlaceholders(child, `${prefix}.${key}`)
-  )
+  if (typeof value === "object") {
+    return {
+      type: "object",
+      entries: Object.fromEntries(
+        Object.entries(value).map(([key, child]) => [
+          key,
+          localeContract(child),
+        ])
+      ),
+    }
+  }
+  return {
+    type: typeof value,
+    ...(typeof value === "string" ? { placeholders: placeholders(value) } : {}),
+  }
 }
 
 /**
@@ -122,25 +120,40 @@ function extractHeadingLevels(md: string): number[] {
   return out
 }
 
-interface SetDiff<T> {
-  missing: T[]
-  extra: T[]
-}
-
-function diffSets<T>(base: T[], other: T[]): SetDiff<T> {
-  const baseSet = new Set(base)
-  const otherSet = new Set(other)
-  return {
-    missing: base.filter((x) => !otherSet.has(x)),
-    extra: other.filter((x) => !baseSet.has(x)),
-  }
-}
-
 function langCodeFromFilename(file: string, ext: LocaleExt): string {
   return file.slice(0, -(ext.length + 1))
 }
 
 const families = discoverLocaleFamilies()
+
+describe("localized value contracts", () => {
+  test("allows natural word order and object key order", () => {
+    expect(
+      localeContract({
+        label: "{total} insgesamt, Seite {page}",
+        action: "Kopieren",
+      })
+    ).toEqual(
+      localeContract({
+        action: "Copy",
+        label: "Page {page} of {total}",
+      })
+    )
+  })
+
+  test.each([
+    ["Base {base}", "आधार {आधार}"],
+    ["{name} and {name}", "{name}"],
+    ["{{count}} files", "{count} files"],
+    [{ label: "Count" }, { label: 3 }],
+    [{ label: null }, { label: {} }],
+    [{ label: "Text" }, { other: "Text" }],
+    [["One", "Two"], ["One"]],
+    [{ "a.b": "Text" }, { a: { b: "Text" } }],
+  ])("rejects changed value contracts: %j → %j", (source, target) => {
+    expect(localeContract(target)).not.toEqual(localeContract(source))
+  })
+})
 
 describe("locale family discovery", () => {
   test("at least one en.json or en.md exists in the repo", () => {
@@ -168,19 +181,16 @@ describe.each(families)("locale family $relDir/*.$ext", ({ dir, ext }) => {
 
   const enFile = `en.${ext}`
   const parityKind =
-    ext === "json" ? "JSON key and placeholder" : "markdown heading structure"
+    ext === "json"
+      ? "JSON structure, type, and placeholder"
+      : "markdown heading structure"
   const others = filesInDir.filter((f) => f !== enFile)
   for (const file of others) {
     test(`${file}: ${parityKind} parity with en`, () => {
       if (ext === "json") {
         const en = loadJson(path.join(dir, enFile))
         const localized = loadJson(path.join(dir, file))
-        const enKeys = collectKeyPaths(en)
-        const keys = collectKeyPaths(localized)
-        expect(diffSets(enKeys, keys)).toEqual({ missing: [], extra: [] })
-        expect(collectPlaceholders(localized).sort()).toEqual(
-          collectPlaceholders(en).sort()
-        )
+        expect(localeContract(localized)).toEqual(localeContract(en))
       } else {
         const enLevels = extractHeadingLevels(loadText(path.join(dir, enFile)))
         const levels = extractHeadingLevels(loadText(path.join(dir, file)))
