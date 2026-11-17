@@ -1,0 +1,4 @@
+{
+  "name": "MAC アドレスブロック検索",
+  "description": "IEEE MA-L、MA-M、MA-S、IAB、CID のレコードを閲覧・検索。登録プレフィックス、アドレス範囲、組織を確認できます。"
+}

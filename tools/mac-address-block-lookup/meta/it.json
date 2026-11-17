@@ -1,0 +1,4 @@
+{
+  "name": "Ricerca di blocchi di indirizzi MAC",
+  "description": "Sfoglia e cerca i record IEEE MA-L, MA-M, MA-S, IAB e CID. Esamina i prefissi registrati, gli intervalli di indirizzi e le organizzazioni."
+}

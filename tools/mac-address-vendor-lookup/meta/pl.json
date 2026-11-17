@@ -1,0 +1,4 @@
+{
+  "name": "Wyszukiwanie organizacji w rejestrze adresów MAC",
+  "description": "Wyszukuj organizacje w rejestrze IEEE według nazwy lub adresu i przeglądaj wszystkie zarejestrowane na nie bloki adresów MAC."
+}

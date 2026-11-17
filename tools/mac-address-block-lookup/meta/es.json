@@ -1,0 +1,4 @@
+{
+  "name": "Consulta de bloques de direcciones MAC",
+  "description": "Explora y busca registros IEEE MA-L, MA-M, MA-S, IAB y CID. Examina los prefijos registrados, los rangos de direcciones y las organizaciones."
+}

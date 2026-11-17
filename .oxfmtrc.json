@@ -21,6 +21,7 @@
     "tools/html-viewer/fixtures/",
     "tools/html-to-pdf-converter/fixtures/",
     "pnpm-lock.yaml",
+    "packages/lib/mac-address/data/registry.json",
     ".pnpm-store/",
     "CHANGELOG.md"
   ]

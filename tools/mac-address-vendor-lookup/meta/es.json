@@ -1,0 +1,4 @@
+{
+  "name": "Consulta de direcciones MAC por proveedor",
+  "description": "Busca organizaciones en el registro IEEE por nombre o dirección postal y explora todos los bloques de direcciones MAC registrados a su nombre."
+}

@@ -1,0 +1,18 @@
+This snapshot contains public assignment records published by the IEEE
+Registration Authority. IEEE is the authoritative source of these records.
+
+Sources:
+https://standards-oui.ieee.org/oui/oui.csv
+https://standards-oui.ieee.org/oui28/mam.csv
+https://standards-oui.ieee.org/oui36/oui36.csv
+https://standards-oui.ieee.org/iab/iab.csv
+https://standards-oui.ieee.org/cid/cid.csv
+
+Source URLs, retrieval date, SHA-256 checksums and record counts are recorded in
+sources.json. The code license of this repository does not relicense IEEE's
+registry data. IEEE's names and registry designations remain their respective
+owners' marks.
+
+The records identify registered assignees. They do not establish the manufacturer
+of a particular device, its present owner, or its physical location. CID records
+are company identifiers and do not allocate universally unique MAC addresses.

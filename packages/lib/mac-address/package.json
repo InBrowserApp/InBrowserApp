@@ -1,0 +1,17 @@
+{
+  "name": "@workspace/mac-address",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./load": "./src/load.ts"
+  },
+  "scripts": {
+    "update-data": "node scripts/update-registry.mjs",
+    "test:data": "node --test scripts/registry-data.test.mjs"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  }
+}

@@ -13158,6 +13158,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mac-address-block-lookup",
+    language: "ar",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "de",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "en",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "es",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "fr",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "he",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "hi",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "id",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "it",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "ja",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "ko",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "ms",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "nl",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "no",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "pl",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "pt",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "ru",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "sv",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "th",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "tr",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "vi",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "mac-address-block-lookup",
+    language: "zh-TW",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "ar",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "de",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "en",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "es",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "fr",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "he",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "hi",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "id",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "it",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "ja",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "ko",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "ms",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "nl",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "no",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "pl",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "pt",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "ru",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "sv",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "th",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "tr",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "vi",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "mac-address-lookup",
+    language: "zh-TW",
+  },
+  {
     slug: "mac-address-to-ipv6-link-local-address-converter",
     language: "ar",
   },
@@ -13247,6 +13431,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "mac-address-to-ipv6-link-local-address-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "ar",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "de",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "en",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "es",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "fr",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "he",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "hi",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "id",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "it",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "ja",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "ko",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "ms",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "nl",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "no",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "pl",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "pt",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "ru",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "sv",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "th",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "tr",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "vi",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
+    language: "zh-CN",
+  },
+  {
+    slug: "mac-address-vendor-lookup",
     language: "zh-TW",
   },
   {
