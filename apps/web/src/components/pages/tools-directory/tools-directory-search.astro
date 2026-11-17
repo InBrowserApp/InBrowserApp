@@ -1,0 +1,121 @@
+---
+import { Input } from "@workspace/ui/components/ui/input"
+import { Search, X } from "@workspace/ui/icons"
+import type { SiteLanguage } from "@/lib/site"
+import type { SearchComboboxMessages } from "./search-combobox"
+
+interface Props {
+  language: SiteLanguage
+  messages: SearchComboboxMessages & {
+    resultCountSuffix: string
+    emptyRegistryTitle: string
+    categoryLabels: Readonly<Record<string, string>>
+  }
+}
+
+const { language, messages } = Astro.props
+---
+
+<div
+  data-directory-search
+  data-language={language}
+  data-category-labels={JSON.stringify(messages.categoryLabels)}
+  class="flex min-w-0 flex-col gap-4"
+>
+  <div class="relative min-w-0">
+    <Search className="pointer-events-none absolute start-3 top-1/2 z-10 size-4 -translate-y-1/2 text-muted-foreground" />
+    <Input
+      data-search-input
+      role="combobox"
+      aria-label={messages.searchLabel}
+      aria-expanded="false"
+      aria-controls="tools-search-suggestions"
+      aria-autocomplete="list"
+      placeholder={messages.searchPlaceholder}
+      className="h-10 ps-9.5 pe-3 text-base md:text-sm sm:pe-12 data-[filled]:pe-10"
+    />
+    <button
+      data-search-clear
+      type="button"
+      hidden
+      aria-label={messages.clearSearchLabel}
+      class="absolute end-2 top-1/2 inline-flex size-6 -translate-y-1/2 items-center justify-center rounded-[7px] bg-muted text-muted-foreground transition-colors hover:bg-border hover:text-foreground"
+    >
+      <X className="size-3" strokeWidth={2.5} />
+    </button>
+    <kbd
+      data-search-shortcut
+      aria-hidden="true"
+      class="pointer-events-none absolute end-3 top-1/2 hidden -translate-y-1/2 rounded-md border border-border px-1.5 py-0.5 font-mono text-[11px] font-medium text-muted-foreground sm:inline-flex"
+    >⌘K</kbd>
+    <div
+      data-search-popup
+      hidden
+      class="absolute inset-x-0 top-[calc(100%+0.5rem)] z-10 rounded-xl border border-border bg-popover p-1.5 shadow-[0_10px_40px_color-mix(in_oklab,var(--foreground)_12%,transparent)]"
+    >
+      <div data-search-no-suggestions class="px-3 py-4 text-center">
+        <p class="text-[13px] font-medium text-popover-foreground">{messages.emptySearchTitle}</p>
+        <p class="mt-1 text-xs text-muted-foreground">{messages.emptySearchDescription}</p>
+      </div>
+      <div data-search-matches>
+        <ul
+          role="listbox"
+          id="tools-search-suggestions"
+          aria-label={messages.suggestionsLabel}
+          class="m-0 flex list-none flex-col p-0"
+        ></ul>
+        <div class="mt-1.5 flex items-center justify-between gap-3 border-t border-border/70 px-3 pt-2 pb-1 font-mono text-[11px] text-foreground/70">
+          <span
+            data-suggestion-count
+            data-one={messages.suggestionMatchCountOne}
+            data-many={messages.suggestionMatchCount}
+          ></span>
+          <span class="truncate">{messages.suggestionsHint}</span>
+        </div>
+      </div>
+    </div>
+    <template data-search-option>
+      <li
+        role="option"
+        aria-selected="false"
+        class="group flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-[9px] aria-selected:bg-muted"
+      >
+        <span class="min-w-0 truncate text-sm text-popover-foreground"><span data-pre></span><span data-match class="rounded-[3px] bg-muted font-semibold group-aria-selected:bg-border/70"></span><span data-post></span></span>
+        <span class="flex shrink-0 items-center gap-2">
+          <span data-category class="text-[10px] font-medium tracking-[0.12em] text-foreground/70 uppercase"></span>
+          <kbd aria-hidden="true" class="hidden rounded-[5px] border border-border px-1 font-mono text-[10px] font-medium text-muted-foreground group-aria-selected:block">↵</kbd>
+        </span>
+      </li>
+    </template>
+  </div>
+  <p
+    data-search-status
+    data-suffix={messages.resultCountSuffix}
+    data-empty-registry={messages.emptyRegistryTitle}
+    data-empty-search={messages.emptySearchTitle}
+    role="status"
+    aria-live="polite"
+    aria-atomic="true"
+    aria-busy="false"
+    class="sr-only text-sm text-muted-foreground"
+  ></p>
+</div>
+
+<!-- Set the platform hint before paint, without waiting for the module graph. -->
+<script is:inline>
+  ;(function () {
+    var hint = document.querySelector("[data-search-shortcut]")
+    if (hint) {
+      hint.textContent = /Mac|iPhone|iPad|iPod/i.test(navigator.userAgent)
+        ? "⌘K"
+        : "Ctrl K"
+    }
+  })()
+</script>
+
+<script>
+  import { setupDirectorySearch } from "./tools-directory-search"
+
+  const root = document.querySelector<HTMLElement>("[data-directory-search]")
+  if (root) setupDirectorySearch(root)
+</script>

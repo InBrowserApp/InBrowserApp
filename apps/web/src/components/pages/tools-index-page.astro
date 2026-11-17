@@ -2,7 +2,7 @@
 import { toolSearchIndex } from "@workspace/tool-registry"
 import MainLayout from "@/layouts/main.astro"
 import PageBreadcrumbs from "@/components/page-breadcrumbs.astro"
-import { ToolsDirectorySearch } from "@/components/pages/tools-directory/tools-directory-search"
+import ToolsDirectorySearch from "@/components/pages/tools-directory/tools-directory-search.astro"
 import { CategoryChips, CategorySidebar } from "@/components/pages/tools-directory/category-nav"
 import { DirectoryEmptyState, ToolList } from "@/components/pages/tools-directory/tool-list"
 import { rankToolEntries } from "@/components/pages/tools-directory/search-core"
@@ -102,7 +102,7 @@ const categoryNavProps = {
     <CategorySidebar {...categoryNavProps} />
     <div class="flex min-w-0 flex-col gap-4">
       <CategoryChips {...categoryNavProps} />
-      <ToolsDirectorySearch client:load language={language} messages={searchMessages} />
+      <ToolsDirectorySearch language={language} messages={searchMessages} />
       <ToolList
         entries={rankToolEntries(entries, "", language)}
         language={language}
