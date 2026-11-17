@@ -16,6 +16,6 @@
   "redirection": "리디렉션",
   "clientError": "클라이언트 오류",
   "serverError": "서버 오류",
-  "noResultsTitle": "No matching status codes",
-  "noResultsDescription": "Try a different code, phrase, or category."
+  "noResultsTitle": "일치하는 상태 코드가 없습니다",
+  "noResultsDescription": "다른 코드, 문구 또는 범주로 검색해 보세요."
 }

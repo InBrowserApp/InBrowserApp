@@ -1,6 +1,6 @@
-## Apa yang Dilakukan PNG Optimizer
+## Apa yang Dilakukan Pengoptimal PNG
 
-PNG Optimizer mengompres gambar PNG dengan optimasi Oxipng lossless. Alat ini menulis ulang struktur PNG, pengaturan kompresi, data palet, dan informasi alfa jika memungkinkan tanpa mengubah piksel yang terlihat.
+Pengoptimal PNG mengompres gambar PNG dengan optimasi Oxipng lossless. Alat ini menulis ulang struktur PNG, pengaturan kompresi, data palet, dan informasi alfa jika memungkinkan tanpa mengubah piksel yang terlihat.
 
 ## Kapan Menggunakannya
 

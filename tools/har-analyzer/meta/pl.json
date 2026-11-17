@@ -1,0 +1,4 @@
+{
+  "name": "Analizator ruchu sieciowego HAR",
+  "description": "Analizuj pliki HAR lokalnie w przeglądarce. Przeglądaj wykresy kaskadowe żądań, czasy, nagłówki i zarejestrowane treści, aby diagnozować powolne lub nieudane żądania."
+}

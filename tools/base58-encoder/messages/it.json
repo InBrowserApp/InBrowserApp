@@ -10,9 +10,9 @@
   "outputPlaceholder": "L'output Base58 apparirà qui...",
   "download": "Scarica Base58",
   "readFailed": "Impossibile leggere il file",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Carica esempio",
+  "clearLabel": "Cancella",
+  "copyLabel": "Copia",
+  "copiedLabel": "Copiato",
   "importFromFileLabel": "Importa da file"
 }

@@ -16,5 +16,7 @@
   "keyLabel": "BLAKE3 Sleutel (Base64)",
   "keyPlaceholder": "Optionele sleutel van 32 bytes voor sleutel-hashing (Base64 gecodeerd)",
   "invalidBase64Title": "De Base64-waarde is nog niet geldig.",
-  "invalidBase64Description": "Controleer op ontbrekende padding, onverwachte tekens of gedeeltelijk geplakte gegevens."
+  "invalidBase64Description": "Controleer op ontbrekende padding, onverwachte tekens of gedeeltelijk geplakte gegevens.",
+  "fileHashError": "Het bestand kon niet worden gehasht.",
+  "textHashError": "De tekst kon niet worden gehasht."
 }

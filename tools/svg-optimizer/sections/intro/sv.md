@@ -1,6 +1,6 @@
 ## Vad verktyget gör
 
-Denna SVG optimizer komprimerar en lokal SVG-fil eller ett inklistrat
+Denna SVG-optimerare komprimerar en lokal SVG-fil eller ett inklistrat
 SVG-dokument i din webbläsare. Den använder SVGO-rensningspass för att ta bort
 kommentarer, metadata, redundanta attribut, onödig precision och annan kod som
 inte ändrar den synliga bilden.

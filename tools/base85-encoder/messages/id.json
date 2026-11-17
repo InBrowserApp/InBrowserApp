@@ -9,9 +9,9 @@
   "download": "Unduh Base85",
   "readFailed": "Gagal membaca file",
   "invalidBase85": "Z85 mengharuskan panjang input merupakan kelipatan 4 byte.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Muat contoh",
+  "clearLabel": "Hapus",
+  "copyLabel": "Salin",
+  "copiedLabel": "Tersalin",
   "importFromFileLabel": "Impor dari file"
 }

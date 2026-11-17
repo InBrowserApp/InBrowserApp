@@ -1,26 +1,26 @@
-## What ICO Is
+## ما هو ICO
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO هو تنسيق حاوية للأيقونات يُستخدم لأيقونات المواقع التقليدية في المتصفحات،
+واختصارات Windows، وبعض أيقونات تطبيقات سطح المكتب. يمكن أن يتضمن ملف ICO
+واحد عدة أحجام مربعة، لتختار كل منصة الحجم الأقرب لاحتياجاتها تلقائيًا.
 
-## Why Use This Converter
+## لماذا تستخدم هذا المحول
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+تحوّل هذه الأداة صورة محلية واحدة إلى ملف ICO متعدد الأحجام مباشرةً في متصفحك.
+لا تُرفع أي بيانات، ويمكنك جمع أحجام أيقونات المواقع الشائعة مثل
+16×16 و32×32 و48×48 و256×256 في ملف واحد قابل للتنزيل.
 
-## How It Works
+## كيف يعمل
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. ارفع ملف صورة محليًا واحدًا.
+2. اختر أحجام الأيقونات التي تريد تضمينها في حزمة ICO.
+3. أضف لون خلفية موحدًا للصور الشفافة إذا أردت.
+4. أنشئ ملف ICO ونزّله فورًا.
 
-## Tips for Better Results
+## نصائح للحصول على نتائج أفضل
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- ابدأ بصورة مربعة واضحة، ويُفضّل أن تكون بأبعاد 512×512 أو أكبر.
+- أبقِ الشعارات والأشكال الأساسية بعيدًا عن الحواف الخارجية، لأن الأيقونات
+  الصغيرة تفقد التفاصيل بسرعة.
+- اترك تعبئة الخلفية معطلة إذا أردت الحفاظ على الشفافية، وفعّلها فقط عندما
+  تحتاج إلى خلفية بلون موحد وراء الأيقونة.

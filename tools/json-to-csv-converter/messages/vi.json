@@ -16,5 +16,5 @@
   "quoteCharLabel": "Dấu ngoặc kép",
   "includeHeaderRowLabel": "Bao gồm hàng tiêu đề",
   "escapeFormulaeLabel": "Escape công thức Excel",
-  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+  "escapeFormulaeTooltip": "Thêm tiền tố vào các giá trị bắt đầu bằng =, +, - hoặc @ để ứng dụng bảng tính coi chúng là văn bản thay vì công thức."
 }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "name": "Cron Expression Parser",
+    "name": "Analizador de expresiones cron",
     "description": "Analiza, valida y explica programaciones cron con detalles de campos y próximas ejecuciones."
   },
   "input": {

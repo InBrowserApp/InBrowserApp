@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "Alternativ",
   "optionsDescription": "Välj ett streckkodsformat och justera storlek, etiketter och färger.",
-  "preview": "Preview",
-  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
-  "download": "Download",
+  "preview": "Förhandsgranskning",
+  "previewDescription": "Granska den genererade streckkoden och exportera den som PNG, SVG, JPEG eller WebP.",
+  "download": "Ladda ner",
   "text": "Text",
   "textPlaceholder": "Ange innehåll...",
   "format": "Format",
@@ -20,5 +20,6 @@
   "center": "Mitten",
   "right": "Höger",
   "top": "Topp",
-  "bottom": "Botten"
+  "bottom": "Botten",
+  "renderError": "Det gick inte att rendera streckkoden."
 }

@@ -11,5 +11,7 @@
   "decimalLabel": "Thập phân",
   "binaryLabel": "Nhị phân",
   "copyResultLabel": "Sao chép kết quả",
-  "copiedLabel": "Đã sao chép"
+  "copiedLabel": "Đã sao chép",
+  "fileHashError": "Không thể băm tệp.",
+  "textHashError": "Không thể băm văn bản."
 }

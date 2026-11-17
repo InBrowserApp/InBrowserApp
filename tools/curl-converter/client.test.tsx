@@ -230,7 +230,9 @@ describe("CurlConverterClient", () => {
     })
 
     expect(
-      screen.getByRole("link", { name: "Download" }).getAttribute("download")
+      (await screen.findByRole("link", { name: "Download" })).getAttribute(
+        "download"
+      )
     ).toBe("converted.py")
   })
 

@@ -9,7 +9,7 @@
   "jsonEmptyDescription": "Pega XML válido a la izquierda para previsualizar aquí el JSON convertido.",
   "invalidXmlLabel": "XML no válido",
   "optionsLabel": "Opciones",
-  "optionsDescription": "Adjust how XML is parsed before you copy or download the converted JSON.",
+  "optionsDescription": "Ajuste cómo se analiza el XML antes de copiar o descargar el JSON convertido.",
   "indentSizeLabel": "Tamaño de sangría",
   "indentSizeDescription": "Elige 0 para salida compacta o 1-8 para sangría con formato.",
   "compactLabel": "Compacto",

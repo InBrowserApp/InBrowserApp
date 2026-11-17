@@ -1,6 +1,6 @@
 ## Cosa fa questo strumento
 
-PDF Text Extractor legge un PDF nel browser ed estrae il testo che è già
+L'Estrattore di testo PDF legge un PDF nel browser ed estrae il testo che è già
 selezionabile all'interno del documento. L'output è testo normale che puoi
 copiare o scaricare come file TXT per note, indicizzazione di ricerca, revisione
 dei dati o elaborazioni successive.

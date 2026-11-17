@@ -1,16 +1,16 @@
-## Test Patterns Before They Ship
+## Uji Corak Sebelum Digunakan
 
-Regex is easy to get almost right. This tool gives you one place to validate a pattern, see every match, and confirm the replacement output before you use it in code, content pipelines, or search rules.
+Regex mudah ditulis sehingga hampir betul sahaja. Alat ini menyediakan satu tempat untuk mengesahkan corak, melihat setiap padanan dan memastikan output penggantian betul sebelum anda menggunakannya dalam kod, saluran pemprosesan kandungan atau peraturan carian.
 
-## What You Can Check Here
+## Perkara yang Boleh Anda Semak di Sini
 
-- Paste sample text and watch matches update immediately
-- Toggle common flags like global, multiline, and ignore case
-- Inspect capturing groups and named groups for every match
-- Preview replacement output with `$1` and `$<name>` references
+- Tampal teks contoh dan lihat padanan dikemas kini serta-merta
+- Hidupkan atau matikan bendera lazim seperti global, berbilang baris dan abaikan huruf besar dan kecil
+- Periksa kumpulan tangkapan dan kumpulan bernama bagi setiap padanan
+- Pratonton output penggantian dengan rujukan `$1` dan `$<name>`
 
-## Good Uses
+## Kegunaan yang Sesuai
 
-- Cleaning IDs, log lines, and exports before import
-- Testing content rewrite rules without touching source data
-- Debugging why a pattern matches too much, too little, or nothing at all
+- Membersihkan ID, baris log dan eksport sebelum diimport
+- Menguji peraturan penulisan semula kandungan tanpa mengubah data sumber
+- Menyahpepijat sebab corak memadankan terlalu banyak, terlalu sedikit atau tiada langsung

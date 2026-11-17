@@ -11,5 +11,7 @@
   "decimalLabel": "十進数",
   "binaryLabel": "二進数",
   "copyResultLabel": "結果をコピー",
-  "copiedLabel": "コピーしました"
+  "copiedLabel": "コピーしました",
+  "fileHashError": "ファイルのハッシュ計算に失敗しました。",
+  "textHashError": "テキストのハッシュ計算に失敗しました。"
 }

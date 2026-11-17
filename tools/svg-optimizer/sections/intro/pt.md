@@ -1,6 +1,6 @@
 ## O que esta ferramenta faz
 
-Este SVG Optimizer compacta um arquivo SVG local ou um documento SVG colado no
+Este Otimizador de SVG compacta um arquivo SVG local ou um documento SVG colado no
 seu navegador. Ele usa passagens de limpeza SVGO para remover comentários,
 metadados, atributos redundantes, precisão desnecessária e outras marcações que
 não alteram a imagem visível.

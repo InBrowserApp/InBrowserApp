@@ -66,6 +66,7 @@
   "maxTouchPoints": "الحد الأقصى لنقاط اللمس",
   "gpuVendor": "مورّد GPU",
   "gpuRenderer": "عارض GPU",
+  "gpuDetails": "عرض تفاصيل GPU",
   "connectionType": "نوع الاتصال",
   "downlink": "سرعة التنزيل",
   "roundTripTime": "زمن الذهاب والإياب",

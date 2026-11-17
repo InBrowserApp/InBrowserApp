@@ -16,5 +16,5 @@
   "quoteCharLabel": "Tanda kutip",
   "includeHeaderRowLabel": "Sertakan baris header",
   "escapeFormulaeLabel": "Escape rumus Excel",
-  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+  "escapeFormulaeTooltip": "Menambahkan awalan pada nilai yang diawali =, +, -, atau @ agar aplikasi spreadsheet memperlakukannya sebagai teks, bukan rumus."
 }

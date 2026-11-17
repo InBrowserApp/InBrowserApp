@@ -1,0 +1,12 @@
+---
+import ToolsIndexPage from "@/components/pages/tools-index-page.astro"
+import { DEFAULT_SITE_LANGUAGE } from "@/lib/site"
+import { getDefaultCategoryStaticPaths } from "@/lib/static-paths"
+
+export { getDefaultCategoryStaticPaths as getStaticPaths }
+---
+
+<ToolsIndexPage
+  language={DEFAULT_SITE_LANGUAGE}
+  category={Astro.params.category}
+/>

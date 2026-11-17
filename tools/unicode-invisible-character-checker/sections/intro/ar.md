@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## لماذا تهم المحارف غير المرئية
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+يسهل إغفال محارف يونيكود غير المرئية لأنها لا تبدو معطوبة في المحررات العادية. ولا تظهر المشكلة إلا لاحقًا: تفشل تغييرات النص، أو تتوقف المعرّفات عن التطابق، أو تلتف الأسطر بشكل غريب، أو يبدأ النص بالتصرف بشكل مختلف عند عرضه من اليمين إلى اليسار.
 
-## What this tool catches
+## ما الذي تكشفه هذه الأداة
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+تبحث الأداة عن أربع مجموعات شائعة: علامات العرض الصفري، ومحارف التحكم ثنائي الاتجاه، ومحارف المسافات الخاصة، ومحارف التحكم بالتنسيق. وتوضح مواضعها بدقة، وتعرض معاينة مشروحة، وتجهّز نسخة منقّحة يمكنك نسخها أو تصديرها.
 
-## When to use it
+## متى تستخدمها
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+استخدمها بعد نسخ نص من المستندات أو ملفات PDF أو جداول البيانات أو تطبيقات المحادثة أو محررات أنظمة إدارة المحتوى أو أدوات التصميم. تفيد خصوصًا عندما يبدو النص عاديًا، لكن المقارنات أو العرض أو المعالجة اللاحقة تظل تعطي نتائج غريبة.

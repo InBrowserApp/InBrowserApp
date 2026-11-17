@@ -1,5 +1,5 @@
 {
-  "valueTitle": "Max UUID",
+  "valueTitle": "أقصى قيمة UUID",
   "valueDescription": "انسخ UUID القياسي المكوّن كله من آحاد بالتمثيل الذي يتوقعه نظامك.",
   "canonicalLabel": "UUID القياسي",
   "rawHexLabel": "Hex من 32 خانة",

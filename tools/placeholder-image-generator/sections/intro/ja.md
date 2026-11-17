@@ -1,27 +1,17 @@
-## What this tool does
+## このツールの機能
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+プレースホルダー画像生成ツールでは、サイズ、単色またはグラデーション背景、中央のテキストを指定して、ブラウザー内で仮画像を作成できます。PNG、SVG、JPEG、WebPで書き出せ、Retina向けの2倍・3倍サイズにも対応します。
 
-## Why it helps
+## 便利な場面
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+デザインのモックアップ、CMSの仮コンテンツ、空状態の画面、SNSのレイアウト案、API用の仮画像などに使えます。デザインアプリを開かず、サイズとスタイルが決まった素材をすばやく用意できます。
 
-## How it works
+## 使い方
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+プリセットを選ぶか幅と高さを入力します。単色またはグラデーションを選び、必要に応じてテキストを追加して、文字サイズ、書き出し倍率、品質を調整します。プレビューはすぐに更新され、用途に合った形式でダウンロードできます。
 
-## Tips for better placeholders
+## プレースホルダー作成のヒント
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- 寸法を自動表示する場合は、テキスト欄を空のままにします。
+- ヒーローバナーにはグラデーション、実用的な仮画像には単色を使います。
+- 拡大縮小しても鮮明さを保つにはSVGを、ラスター画像にはPNG、JPEG、WebPを選びます。

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react"
+import type { ReactNode } from "react"
 
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import { Badge } from "@workspace/ui/components/ui/badge"
@@ -138,7 +139,16 @@ function DeviceInformationClient({
             key={section.id}
             section={section}
             unavailableLabel={messages.unavailable}
-          />
+          >
+            {section.id === "hardware" ? (
+              <a
+                className="block border-t px-4 py-3 text-sm text-primary underline underline-offset-4"
+                href={`${language === "en" ? "" : `/${language}`}/tools/gpu-information/`}
+              >
+                {messages.gpuDetails}
+              </a>
+            ) : null}
+          </InfoSectionCard>
         ))}
       </div>
     </div>
@@ -148,9 +158,11 @@ function DeviceInformationClient({
 function InfoSectionCard({
   section,
   unavailableLabel,
+  children,
 }: Readonly<{
   section: InfoSection
   unavailableLabel: string
+  children?: ReactNode
 }>) {
   return (
     <Card className="gap-0 pb-0">
@@ -168,6 +180,7 @@ function InfoSectionCard({
             />
           ))}
         </dl>
+        {children}
       </CardContent>
     </Card>
   )

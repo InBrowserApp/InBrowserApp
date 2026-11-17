@@ -1,0 +1,4 @@
+{
+  "name": "Generator voor oudere Motorola-systeemsleutels",
+  "description": "Genereer bestanden met softwarematige systeemsleutels (.KEY) voor oudere Motorola-systemen in je browser. Dit formaat ondersteunt geen ASTRO 25, XTS5000, APX of Advanced System Keys."
+}

@@ -16,6 +16,6 @@
   "redirection": "اعادة توجيه",
   "clientError": "خطأ العميل",
   "serverError": "خطأ الخادم",
-  "noResultsTitle": "No matching status codes",
-  "noResultsDescription": "Try a different code, phrase, or category."
+  "noResultsTitle": "لا توجد رموز حالة مطابقة",
+  "noResultsDescription": "جرّب رمزًا أو عبارة أو فئة مختلفة."
 }

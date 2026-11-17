@@ -11,5 +11,7 @@
   "decimalLabel": "עשרוני",
   "binaryLabel": "בינארי",
   "copyResultLabel": "העתק תוצאה",
-  "copiedLabel": "הועתק"
+  "copiedLabel": "הועתק",
+  "fileHashError": "חישוב הגיבוב של הקובץ נכשל.",
+  "textHashError": "חישוב הגיבוב של הטקסט נכשל."
 }

@@ -6,6 +6,6 @@ Bir .gitignore dosyası, Git'in yoksayması gereken kasıtlı olarak izlenmeyen 
 - IDE ve editör dosyaları (.idea/, .vscode/)
 - İşletim sistemi dosyaları (.DS_Store, Thumbs.db)
 
-## Template source
+## Şablon kaynağı
 
 Bu araç, 150'den fazla dili, çerçeveyi ve ortamı kapsayan resmi GitHub gitignore deposundan şablonlar kullanır.

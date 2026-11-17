@@ -1,19 +1,19 @@
-## What is SHA-512/224 (FIPS 180-4)?
+## SHA-512/224（FIPS 180-4）とは
 
-SHA-512/224 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 224-bit (28-byte) digest, typically rendered as a 56-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/224（FIPS 180-4）はSHA-2暗号学的ハッシュ関数で、224ビット（28バイト）のダイジェストを出力します。通常は56文字の16進数文字列で表します。初期値を変更したSHA-512を基に出力を切り詰め、SHA-512の内部構造を保ちながら短いダイジェストを生成します。
 
-**Key characteristics:**
+**主な特徴：**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **決定的**：同じ入力から常に同じハッシュが得られます
+- **高速**：入力をすばやく計算できます
+- **アバランチ効果**：入力のわずかな変化で出力が大きく変わります
+- **不可逆**：ハッシュから元の入力を復元することは計算上きわめて困難です
+- **衝突耐性**：同じハッシュになる異なる入力を見つけるのは非常に困難です
 
-**Common uses:**
+**主な用途：**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 224-bit hashes
+- デジタル署名と証明書
+- 整合性検査とチェックサム
+- HMACの構成
+- ファイル検証とデータ処理パイプライン
+- 224ビットハッシュを必要とするプロトコル

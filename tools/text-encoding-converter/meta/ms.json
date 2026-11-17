@@ -1,0 +1,4 @@
+{
+  "name": "Penukar Pengekodan Teks",
+  "description": "Tukar fail teks antara UTF-8, GBK, Big5 dan pengekodan lain. Pratonton teks bercelaru, kawal BOM dan penghujung baris, serta muat turun secara setempat tanpa kehilangan aksara."
+}

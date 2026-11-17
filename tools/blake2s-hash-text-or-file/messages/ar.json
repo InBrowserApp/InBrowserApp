@@ -16,5 +16,7 @@
   "keyLabel": "مفتاح BLAKE2 (Base64)",
   "keyPlaceholder": "مفتاح اختياري للتشفير بالمفتاح (مُرمز بـ Base64)",
   "invalidBase64Title": "قيمة Base64 ليست صالحة بعد.",
-  "invalidBase64Description": "تحقق من وجود حشو مفقود أو أحرف غير متوقعة أو بيانات مُلصقة جزئيًا."
+  "invalidBase64Description": "تحقق من وجود حشو مفقود أو أحرف غير متوقعة أو بيانات مُلصقة جزئيًا.",
+  "fileHashError": "تعذّر حساب تجزئة الملف.",
+  "textHashError": "تعذّر حساب تجزئة النص."
 }

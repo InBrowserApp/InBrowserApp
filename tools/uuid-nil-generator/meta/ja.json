@@ -1,4 +1,4 @@
 {
-  "name": "Nil UUID Generator",
+  "name": "Nil UUID生成ツール",
   "description": "プレースホルダー、デフォルト値、センチネル値に使う、標準化された全ゼロの nil UUID を生成してコピーします。"
 }

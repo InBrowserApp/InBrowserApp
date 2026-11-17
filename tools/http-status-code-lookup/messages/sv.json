@@ -16,6 +16,6 @@
   "redirection": "Omdirigering",
   "clientError": "Klientfel",
   "serverError": "Serverfel",
-  "noResultsTitle": "No matching status codes",
-  "noResultsDescription": "Try a different code, phrase, or category."
+  "noResultsTitle": "Inga matchande statuskoder",
+  "noResultsDescription": "Prova en annan kod, fras eller kategori."
 }

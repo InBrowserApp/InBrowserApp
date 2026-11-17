@@ -4,12 +4,16 @@
 [caj2pdf-rust v0.6.1](https://github.com/rwv/caj2pdf-rust/tree/6349d660bdc04c34753a5d108c25c651929b7bc8)
 (commit `6349d660bdc04c34753a5d108c25c651929b7bc8`) with
 `jpeg-orientation.patch`. The JavaScript worker wrapper is the catalog-pinned
-`caj2pdf-rust` 0.6.1 package. Its conversion and worker code are unchanged.
-The repository's `patches/caj2pdf-rust@0.6.1.patch` makes the unused browser
+`caj2pdf-rust` 0.8.1 package. Actual-WASM fixture tests verify that its
+worker protocol remains compatible with this patched engine.
+The repository's `patches/caj2pdf-rust@0.8.1.patch` makes the unused browser
 `loadModule` helper require an explicit URL, removing its default reference
 to the original WASM. Otherwise Vite emits the original asset even after
 discarding that unused helper. The application fetches and compiles this
-patched WASM directly with cancellation support.
+patched WASM directly with cancellation support. Native external fonts remain
+disabled explicitly. The patch also removes the unused automatic font-pack
+URL, avoiding a 58 MiB asset that exceeds the static host limit. Callers
+that enable that internal helper must provide an explicit pack URL.
 
 The upstream HN/C8 composer corrected top-first decoded bilevel rows but
 left JPEG streams under a negative-height image transform. This vertically

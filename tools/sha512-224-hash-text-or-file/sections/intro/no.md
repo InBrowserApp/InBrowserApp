@@ -1,19 +1,19 @@
-## What is SHA-512/224 (FIPS 180-4)?
+## Hva er SHA-512/224 (FIPS 180-4)?
 
-SHA-512/224 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 224-bit (28-byte) digest, typically rendered as a 56-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/224 (FIPS 180-4) er en kryptografisk hashfunksjon i SHA-2-familien som gir en 224-bits (28-byte) hashverdi, vanligvis vist som en heksadesimal streng på 56 tegn. Den er basert på SHA-512 med andre startverdier og avkortede utdata, noe som gir en kortere hashverdi samtidig som den interne strukturen til SHA-512 beholdes.
 
-**Key characteristics:**
+**Viktige egenskaper:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **Deterministisk**: Samme inndata gir alltid samme hashverdi
+- **Rask beregning**: Rask å beregne for alle typer inndata
+- **Skredeffekt**: Små endringer i inndata gir svært forskjellige utdata
+- **Irreversibel**: Det er beregningsmessig ugjennomførbart å reversere hashverdien for å finne de opprinnelige inndataene
+- **Kollisjonsbestandig**: Svært vanskelig å finne to forskjellige inndata som gir samme hashverdi
 
-**Common uses:**
+**Vanlige bruksområder:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 224-bit hashes
+- Digitale signaturer og sertifikater
+- Integritetskontroller og kontrollsummer
+- HMAC-konstruksjoner
+- Filverifisering og databehandlingskjeder
+- Protokoller som krever 224-bits hashverdier

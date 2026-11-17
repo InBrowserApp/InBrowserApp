@@ -1,0 +1,39 @@
+---
+import { getCanonicalUrl, localizePath } from "@/lib/site"
+import type { SiteLanguage } from "@/lib/site"
+
+interface Props {
+  language: SiteLanguage
+  items: readonly { label: string; pathname: string }[]
+}
+
+const { language, items } = Astro.props
+const structuredData = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.label,
+    item: getCanonicalUrl(item.pathname, language),
+  })),
+}).replace(/</g, "\\u003c")
+---
+
+<nav aria-label={items.map((item) => item.label).join(" / ")} class="text-sm text-muted-foreground">
+  <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
+    {items.map((item, index) => (
+      <li class="flex items-center gap-2">
+        {index > 0 && <span aria-hidden="true">/</span>}
+        {index === items.length - 1 ? (
+          <span aria-current="page">{item.label}</span>
+        ) : (
+          <a href={localizePath(item.pathname, language)} class="underline-offset-4 hover:text-foreground hover:underline">
+            {item.label}
+          </a>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+<script is:inline type="application/ld+json" set:html={structuredData} />

@@ -19,7 +19,7 @@
   "addUrlEntryLabel": "Добавить URL",
   "sitemapEntriesLabel": "Файлы sitemap",
   "sitemapEntriesDescription": "Каждая строка становится записью <sitemap> в индексе.",
-  "sitemapEntryLabel": "Sitemap {index}",
+  "sitemapEntryLabel": "Карта сайта {index}",
   "addSitemapEntryLabel": "Добавить sitemap",
   "removeEntryLabel": "Удалить",
   "locationLabel": "Адрес",

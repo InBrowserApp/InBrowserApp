@@ -45,7 +45,7 @@
   "loadSampleLabel": "Örnek yükle",
   "resetLabel": "Oluşturucuyu sıfırla",
   "protocolPlaceholder": "https",
-  "hostnamePlaceholder": "example.com or api.internal",
+  "hostnamePlaceholder": "example.com veya api.internal",
   "portPlaceholder": "443",
   "pathPlaceholder": "/products/blue mug",
   "fragmentPlaceholder": "reviews",

@@ -27,7 +27,7 @@
   "bottomRightPosition": "มุมขวาล่าง",
   "fontFamilyLabel": "ฟอนต์",
   "serifFont": "Serif",
-  "sansSerifFont": "Sans serif",
+  "sansSerifFont": "ไม่มีเชิง",
   "fontSizeLabel": "ขนาดฟอนต์",
   "fontSizeDescription": "ควบคุมขนาดข้อความเลขหน้าที่พิมพ์ลงในเอกสาร",
   "horizontalMarginLabel": "ระยะขอบแนวนอน",

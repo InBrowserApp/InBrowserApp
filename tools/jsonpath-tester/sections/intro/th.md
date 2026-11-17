@@ -1,11 +1,11 @@
-## Overview
+## ภาพรวม
 
-เครื่องมือทดสอบ JSONPath lets you run JSONPath queries against JSON data directly in the browser and inspect both the matched values and the matched paths side by side.
+เครื่องมือทดสอบ JSONPath ให้คุณรันคิวรี JSONPath กับข้อมูล JSON ได้โดยตรงในเบราว์เซอร์ และตรวจสอบทั้งค่ากับเส้นทางที่ตรงกันข้างกันได้
 
-## When To Use It
+## ควรใช้เมื่อใด
 
-Use it when you need to prototype a JSONPath query, debug a selector against real payloads, or verify exactly which parts of a JSON document a query is matching.
+ใช้เมื่อต้องการทดลองคิวรี JSONPath แก้ปัญหาตัวเลือกข้อมูลด้วยเพย์โหลดจริง หรือตรวจสอบให้แน่ชัดว่าคิวรีตรงกับส่วนใดของเอกสาร JSON บ้าง
 
-## How It Works
+## วิธีการทำงาน
 
-The tool validates the JSON input first, then evaluates the JSONPath query and keeps both result modes available in the same output panel so you can switch between values and paths without rerunning anything.
+เครื่องมือจะตรวจสอบ JSON ที่ป้อนก่อน แล้วจึงประเมินคิวรี JSONPath โดยแสดงผลลัพธ์ทั้งสองโหมดในแผงเดียวกัน เพื่อให้คุณสลับดูค่ากับเส้นทางได้โดยไม่ต้องรันใหม่

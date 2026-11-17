@@ -11,6 +11,7 @@ import {
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import Md4HashTextOrFileClient from "./client"
+import * as hashCore from "./core/md4"
 
 const messages = {
   meta: {
@@ -22,6 +23,8 @@ const messages = {
   plainTextDescription:
     "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
   importFromFileLabel: "Import from file",
+  fileHashError: "Failed to hash file.",
+  textHashError: "Failed to hash text.",
   hashResultLabel: "Hash Result",
   hashResultDescription: "Hash result for the current text input.",
   hexLabel: "Hexadecimal",
@@ -39,7 +42,10 @@ beforeEach(() => {
   window.localStorage.clear()
 })
 
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
 
 function getPlainTextInput() {
   return screen.getByRole("textbox", {
@@ -143,5 +149,39 @@ describe("Md4HashTextOrFileClient", () => {
     })
 
     expect(window.localStorage.getItem(STORAGE_KEY)).toBe("persist me")
+  })
+
+  test("uses localized fallbacks for unknown text and file failures", async () => {
+    vi.spyOn(hashCore, "hashMd4").mockRejectedValue({ message: "unknown" })
+    const localizedMessages = {
+      ...messages,
+      fileHashError: "ファイルのハッシュ計算に失敗しました。",
+      textHashError: "テキストのハッシュ計算に失敗しました。",
+    }
+
+    render(<Md4HashTextOrFileClient messages={localizedMessages} />)
+
+    expect(
+      await screen.findByText(localizedMessages.textHashError)
+    ).toBeTruthy()
+
+    fireEvent.change(getFileInput(), {
+      target: { files: [new File(["content"], "broken.txt")] },
+    })
+
+    expect(
+      await screen.findByText(localizedMessages.fileHashError)
+    ).toBeTruthy()
+    expect(screen.queryByText(localizedMessages.textHashError)).toBeNull()
+  })
+
+  test("preserves Error messages from failed hashing", async () => {
+    vi.spyOn(hashCore, "hashMd4").mockRejectedValue(
+      new Error("Input read failed")
+    )
+
+    render(<Md4HashTextOrFileClient messages={messages} />)
+
+    expect(await screen.findByText("Input read failed")).toBeTruthy()
   })
 })

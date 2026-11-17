@@ -1,6 +1,6 @@
 ## यह tool क्या करता है
 
-PDF Text Extractor आपके ब्राउजर में PDF पढ़ता है और document के अंदर पहले से
+PDF टेक्स्ट एक्सट्रैक्टर आपके ब्राउजर में PDF पढ़ता है और document के अंदर पहले से
 चुनने योग्य टेक्स्ट को निकालता है। output plain text होता है, जिसे आप notes,
 search indexing, data review, या downstream processing के लिए TXT file के रूप
 में copy या download कर सकते हैं।
@@ -17,7 +17,7 @@ search indexing, data review, या downstream processing के लिए TXT 
 - ऐसे pages पहचानना जो scan हो सकते हैं, क्योंकि उनमें image content है लेकिन
   चुनने योग्य टेक्स्ट नहीं है।
 
-## Privacy notes
+## गोपनीयता से जुड़ी बातें
 
 PDF आपके ब्राउजर में स्थानीय रूप से process होता है और इस tool द्वारा upload
 नहीं किया जाता। निकाले गए टेक्स्ट में फिर भी personal data, contract terms,

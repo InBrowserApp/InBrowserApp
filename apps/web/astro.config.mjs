@@ -24,6 +24,7 @@ import { addXDefaultHreflang } from "./src/lib/sitemap-serialize.ts"
 export default defineConfig({
   site: "https://inbrowser.app",
   trailingSlash: "always",
+  compressHTML: true,
   markdown: {
     shikiConfig: {
       themes: {
@@ -33,6 +34,14 @@ export default defineConfig({
     },
   },
   vite: {
+    build: {
+      rolldownOptions: {
+        output: {
+          // Initialize the reflection polyfill before shared X.509 modules.
+          strictExecutionOrder: true,
+        },
+      },
+    },
     optimizeDeps: { exclude: ["@silurus/ooxml"] },
     resolve: {
       alias: {
@@ -66,5 +75,8 @@ export default defineConfig({
   prefetch: {
     prefetchAll: true,
     defaultStrategy: "hover",
+  },
+  experimental: {
+    clientPrerender: true,
   },
 })

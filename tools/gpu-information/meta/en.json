@@ -1,0 +1,4 @@
+{
+  "name": "GPU Information",
+  "description": "Find out which graphics processor (GPU) your browser uses and whether WebGL is available for 3D web graphics. Learn what the results mean, then copy or download a report to help troubleshoot graphics problems."
+}

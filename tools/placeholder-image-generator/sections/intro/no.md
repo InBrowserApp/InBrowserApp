@@ -1,27 +1,27 @@
-## What this tool does
+## Hva dette verktøyet gjør
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+Denne plassholderbildegeneratoren lager enkel eksempelgrafikk med egendefinerte
+størrelser, ensfarget bakgrunn eller fargeoverganger og midtstilt tekst direkte i nettleseren.
+Du kan eksportere hvert plassholderbilde som PNG, SVG, JPEG eller WebP, også i
+Retina-tilpassede 2x- og 3x-versjoner.
 
-## Why it helps
+## Hvorfor det er nyttig
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+Bruk det til designskisser, eksempelinnhold i CMS-er, tomme visninger, planlegging av
+oppsett for sosiale medier eller plassholdere for API-er. Det er nyttig når du trenger
+et raskt bilde med forutsigbar størrelse og stil uten å åpne et designprogram.
 
-## How it works
+## Slik fungerer det
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+Velg en forhåndsinnstilling eller skriv inn egen bredde og høyde. Velg en ensfarget
+bakgrunn eller en fargeovergang, legg til egen tekst ved behov, og juster deretter
+tekststørrelse, eksportskalering og kvalitet. Forhåndsvisningen oppdateres umiddelbart,
+slik at du kan laste ned formatet som passer arbeidsflyten din.
 
-## Tips for better placeholders
+## Tips for bedre plassholderbilder
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- La tekstfeltet stå tomt hvis du vil at verktøyet skal vise dimensjonene
+  automatisk.
+- Bruk fargeoverganger til store toppbannere og ensfargede bakgrunner til enklere plassholderbilder.
+- Eksporter SVG når du vil ha et skarpt, skalerbart bilde, eller PNG, JPEG og WebP når
+  du trenger rasterfiler.

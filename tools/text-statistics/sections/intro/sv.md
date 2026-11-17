@@ -1,11 +1,11 @@
-## Why this tool feels different
+## Varför verktyget känns annorlunda
 
-Text Statistics should do more than count words. This version treats the page like a live writing desk: it measures length, rhythm, repetition, and structure the moment you paste a draft.
+Textstatistik ska göra mer än att räkna ord. Den här versionen fungerar som ett skrivbord som uppdateras direkt: den mäter längd, rytm, upprepning och struktur så snart du klistrar in ett utkast.
 
-## What it measures
+## Vad som mäts
 
-You get the core counts you expect, then the signals that actually help editing: unique words, average sentence length, lexical diversity, longest paragraph, and repeated terms. When the browser supports `Intl.Segmenter`, these numbers are segmented in a way that works better across writing systems.
+Du får de grundläggande antalen du förväntar dig och sedan måtten som hjälper dig att redigera: unika ord, genomsnittlig meningslängd, lexikal variation, längsta stycke och upprepade ord. När webbläsaren stöder `Intl.Segmenter` delas texten upp på ett sätt som fungerar bättre för olika skriftsystem.
 
-## When to use it
+## När det är användbart
 
-Use it before publishing landing-page copy, product descriptions, scripts, newsletters, bios, or meeting summaries. It is especially useful when something feels too wordy, too repetitive, or too dense, but you need a fast clue about why.
+Använd verktyget innan du publicerar texter till landningssidor, produktbeskrivningar, manus, nyhetsbrev, biografier eller mötessammanfattningar. Det är särskilt användbart när något känns för ordrikt, repetitivt eller kompakt och du snabbt behöver en ledtråd till varför.

@@ -1,26 +1,29 @@
-## What this tool does
+## Wat deze tool doet
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+Deze SVG-naar-afbeelding converter zet één lokaal SVG-bestand rechtstreeks in je
+browser om naar een PNG-, JPEG- of WebP-afbeelding. Je kunt de oorspronkelijke
+grootte behouden, aangepaste uitvoerafmetingen instellen, de achtergrondvulling
+bepalen en de exportkwaliteit aanpassen wanneer het formaat dat ondersteunt.
 
-## Why it helps
+## Waarom dit handig is
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+Gebruik de tool wanneer je snel een SVG naar een rasterafbeelding wilt omzetten
+voor een ontwerpoverdracht, CMS-werkstroom, sociale-mediavoorbeeld of appbestand.
+Handig om vectortekeningen om te zetten naar voorspelbare bitmapuitvoer zonder
+een aparte grafische editor te openen.
 
-## How it works
+## Hoe het werkt
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+Upload één SVG-bestand, kies het uitvoerformaat en pas daarna de breedte, hoogte,
+achtergrond en kwaliteit aan. De converter geeft de SVG weer in je browser en
+bereidt een downloadbaar afbeeldingsbestand voor zonder iets naar een server te
+versturen.
 
-## Tips for better exports
+## Tips voor betere exports
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- Houd beeldverhouding behouden ingeschakeld als je de grootte zonder vervorming
+  wilt aanpassen.
+- Kies een achtergrondkleur voor JPEG-uitvoer, omdat JPEG geen transparantie
+  ondersteunt.
+- Gebruik PNG voor scherpe uitvoer zonder kwaliteitsverlies, of WebP en JPEG
+  wanneer een kleiner bestand belangrijker is.

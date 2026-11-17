@@ -1,5 +1,6 @@
 import init, { HwpDocument } from "@rhwp/core"
-import wasmUrl from "@rhwp/core/rhwp_bg.wasm?url"
+import wasmUrl from "@rhwp/core/rhwp_bg.wasm?gzip-url"
+import { loadWasmSource } from "@workspace/hwp/wasm"
 import { preflight } from "./preflight"
 
 export async function openEngine(bytes: Uint8Array) {
@@ -15,7 +16,7 @@ export async function openEngine(bytes: Uint8Array) {
     },
   })
   try {
-    await init({ module_or_path: wasmUrl })
+    await init({ module_or_path: await loadWasmSource(wasmUrl) })
   } catch (cause) {
     throw new Error("engineUnavailable", { cause })
   }

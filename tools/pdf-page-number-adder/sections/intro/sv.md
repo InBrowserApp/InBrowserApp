@@ -1,6 +1,6 @@
 ## Vad det här verktyget gör
 
-PDF Page Number Adder skapar en ny PDF-kopia med sidnummer ritade på de sidor du
+Sidnumrering för PDF skapar en ny PDF-kopia med sidnummer ritade på de sidor du
 väljer. Ladda upp ett dokument, lämna sidintervallet tomt för att numrera varje
 sida, eller rikta in dig på endast valda sidor med intervall som `1-3,5,8-10`.
 Du kan styra startnummer, nummerformat, placering på sidan, teckensnitt,

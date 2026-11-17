@@ -13,5 +13,7 @@
   "copiedLabel": "Disalin",
   "seedLabel": "Seed (opsional)",
   "seedPlaceholder": "0 atau 0x...",
-  "seedInvalid": "Masukkan angka desimal atau nilai hex 0x."
+  "seedInvalid": "Masukkan angka desimal atau nilai hex 0x.",
+  "fileHashError": "Gagal menghitung hash file.",
+  "textHashError": "Gagal menghitung hash teks."
 }

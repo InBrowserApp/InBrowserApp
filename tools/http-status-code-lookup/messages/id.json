@@ -16,6 +16,6 @@
   "redirection": "Pengalihan",
   "clientError": "Kesalahan Klien",
   "serverError": "Kesalahan Server",
-  "noResultsTitle": "No matching status codes",
-  "noResultsDescription": "Try a different code, phrase, or category."
+  "noResultsTitle": "Tidak ada kode status yang cocok",
+  "noResultsDescription": "Coba kode, frasa, atau kategori lain."
 }

@@ -1,6 +1,6 @@
 ## Wat deze tool doet
 
-Image Palette Extractor vindt de dominante kleuren in een afbeelding direct in
+Paletextractor voor afbeeldingen vindt de dominante kleuren in een afbeelding direct in
 je browser. De tool bemonstert de afbeelding, groepeert visueel vergelijkbare
 pixels en geeft een praktisch palet terug met HEX-, RGB-, HSL- en
 percentagewaarden voor elke kleur.

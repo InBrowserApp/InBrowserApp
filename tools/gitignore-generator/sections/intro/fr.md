@@ -6,6 +6,6 @@ Un fichier .gitignore spécifie les fichiers intentionnellement non suivis que G
 - Fichiers IDE et éditeur (.idea/, .vscode/)
 - Fichiers du système d'exploitation (.DS_Store, Thumbs.db)
 
-## Template source
+## Source des modèles
 
 Cet outil utilise des modèles du dépôt officiel gitignore de GitHub, couvrant plus de 150 langages, frameworks et environnements.

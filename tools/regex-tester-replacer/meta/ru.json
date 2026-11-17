@@ -1,4 +1,4 @@
 {
-  "name": "Regex Tester & Replacer",
-  "description": "Test regular expressions, inspect matches, and preview replacements against real text."
+  "name": "Проверка регулярных выражений и замена текста",
+  "description": "Проверяйте регулярные выражения, изучайте совпадения и просматривайте результат замены на реальном тексте."
 }

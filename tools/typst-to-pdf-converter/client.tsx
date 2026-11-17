@@ -20,8 +20,6 @@ import { FileText, Maximize2 } from "@workspace/ui/icons"
 import { useDocument } from "./use-document"
 import { ReadingNotes } from "./reading-notes"
 import type { Messages } from "./types"
-import "pdfjs-dist/web/pdf_viewer.css"
-import "@workspace/pdf-reader/viewer.css"
 
 export default function Client({ messages: m }: { messages: Messages }) {
   const [file, setFile] = useState<File | null>(null)

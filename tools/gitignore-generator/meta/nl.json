@@ -1,4 +1,4 @@
 {
-  "name": ".gitignore Generator",
+  "name": ".gitignore-generator",
   "description": "Genereer .gitignore bestanden voor uw projecten door sjablonen te selecteren"
 }

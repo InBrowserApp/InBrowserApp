@@ -9,9 +9,9 @@
   "download": "Muat turun Base85",
   "readFailed": "Gagal membaca fail",
   "invalidBase85": "Z85 memerlukan panjang input ialah gandaan 4 bait.",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Muatkan contoh",
+  "clearLabel": "Kosongkan",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin",
   "importFromFileLabel": "Import dari fail"
 }

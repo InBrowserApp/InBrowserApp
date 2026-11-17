@@ -1,19 +1,19 @@
-## What is SHA-512/224 (FIPS 180-4)?
+## מהו SHA-512/224 (FIPS 180-4)?
 
-SHA-512/224 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 224-bit (28-byte) digest, typically rendered as a 56-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/224 (FIPS 180-4) היא פונקציית גיבוב קריפטוגרפית ממשפחת SHA-2, המפיקה תקציר באורך 224 סיביות (28 בתים), שבדרך כלל מוצג כמחרוזת הקסדצימלית בת 56 תווים. היא מבוססת על SHA-512 עם ערכי התחלה שונים ופלט מקוצר, ומספק תקציר קצר יותר תוך שמירה על המבנה הפנימי של SHA-512.
 
-**Key characteristics:**
+**מאפיינים עיקריים:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **דטרמיניסטית**: אותו קלט מפיק תמיד את אותו גיבוב
+- **חישוב מהיר**: מהיר לחישוב עבור כל קלט נתון
+- **אפקט מפולת**: שינויים קטנים בקלט מפיקים פלטים שונים מאוד
+- **בלתי הפיכה**: היפוך הגיבוב כדי למצוא את הקלט המקורי אינו מעשי מבחינה חישובית
+- **עמידה להתנגשויות**: קשה מאוד למצוא שני קלטים שונים שמפיקים את אותו גיבוב
 
-**Common uses:**
+**שימושים נפוצים:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 224-bit hashes
+- חתימות דיגיטליות ותעודות
+- בדיקות שלמות וסכומי ביקורת
+- מבני HMAC
+- אימות קבצים ותהליכי עיבוד נתונים
+- פרוטוקולים שדורשים גיבובים באורך 224 סיביות

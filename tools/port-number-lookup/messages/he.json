@@ -16,6 +16,6 @@
   "registeredPortsDesc": "משמשים יישומים ושירותים הרשומים ב-IANA, כגון MySQL (3306), PostgreSQL (5432).",
   "dynamicPorts": "פורטים דינמיים (49152-65535):",
   "dynamicPortsDesc": "נקראים גם \"פורטים זמניים\", משמשים לחיבורים זמניים על ידי יישומי לקוח.",
-  "noResultsTitle": "No matching ports found",
-  "noResultsDescription": "Try a different port number, service name, or category."
+  "noResultsTitle": "לא נמצאו יציאות תואמות",
+  "noResultsDescription": "נסו מספר יציאה, שם שירות או קטגוריה אחרים."
 }

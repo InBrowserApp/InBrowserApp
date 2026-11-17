@@ -21,7 +21,6 @@ type PdfPageProxyLike = Readonly<{
 }>
 
 type PdfDocumentProxyLike = Readonly<{
-  destroy: () => Promise<void> | void
   getPage: (pageNumber: number) => Promise<PdfPageProxyLike>
   numPages: number
 }>
@@ -175,10 +174,8 @@ async function extractPdfText(
 ): Promise<PdfTextExtractionResult> {
   const pdfData = new Uint8Array(await file.arrayBuffer())
   const loadingTask = loadPdfDocument(pdfData)
-  let documentProxy: PdfDocumentProxyLike | null = null
-
   try {
-    documentProxy = await loadingTask.promise
+    const documentProxy = await loadingTask.promise
     const pages: PdfTextPage[] = []
 
     for (
@@ -221,11 +218,7 @@ async function extractPdfText(
       wordCount: countWords(text),
     }
   } finally {
-    if (documentProxy) {
-      await documentProxy.destroy()
-    } else {
-      await loadingTask.destroy()
-    }
+    await loadingTask.destroy()
   }
 }
 

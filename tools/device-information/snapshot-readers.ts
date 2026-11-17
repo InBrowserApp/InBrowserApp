@@ -77,7 +77,7 @@ function readGpuInfo(): GpuInfo {
     const webgl =
       canvas.getContext("webgl") ??
       (canvas.getContext("experimental-webgl") as WebGLRenderingContext | null)
-    const webgl2 = canvas.getContext("webgl2")
+    const webgl2 = document.createElement("canvas").getContext("webgl2")
     const debugInfo = webgl?.getExtension("WEBGL_debug_renderer_info")
 
     return {

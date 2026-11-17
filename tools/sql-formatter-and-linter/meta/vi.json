@@ -1,4 +1,4 @@
 {
-  "name": "SQL Formatter & Linter",
+  "name": "Trình định dạng và kiểm tra SQL",
   "description": "Định dạng truy vấn SQL ngay trong trình duyệt, tinh chỉnh các quy tắc bố cục theo dialect và phát hiện các lỗi lint phổ biến trước khi bạn sao chép hoặc tải xuống kết quả."
 }

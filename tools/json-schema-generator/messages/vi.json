@@ -1,9 +1,9 @@
 {
   "inputTitle": "Đầu vào JSON",
-  "inputDescription": "Paste example JSON or import a file to infer a starting schema.",
+  "inputDescription": "Dán JSON mẫu hoặc nhập tệp để suy ra lược đồ ban đầu.",
   "inputPlaceholder": "Dán dữ liệu JSON ở đây...",
   "outputTitle": "Schema được tạo",
-  "outputDescription": "Review the generated schema, then copy or download it for further refinement.",
+  "outputDescription": "Xem lại lược đồ đã tạo, rồi sao chép hoặc tải xuống để tiếp tục tinh chỉnh.",
   "outputEmpty": "Cung cấp dữ liệu JSON hợp lệ để tạo schema",
   "invalidJson": "JSON không hợp lệ",
   "optionsTitle": "Tùy chọn",

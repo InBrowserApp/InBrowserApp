@@ -3,6 +3,8 @@ type MurmurHash3HashTextOrFileMessages = Readonly<{
   plainTextLabel: string
   plainTextDescription: string
   importFromFileLabel: string
+  fileHashError: string
+  textHashError: string
   seedSectionLabel: string
   seedLabel: string
   seedPlaceholder: string

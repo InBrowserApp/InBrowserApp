@@ -16,5 +16,7 @@
   "keyLabel": "BLAKE2 Nøkkel (Base64)",
   "keyPlaceholder": "Valgfri nøkkel for nøkkel-hashing (Base64-kodet)",
   "invalidBase64Title": "Base64-verdien er ikke gyldig ennå.",
-  "invalidBase64Description": "Sjekk om det mangler utfylling, finnes uventede tegn eller om data er limt inn delvis."
+  "invalidBase64Description": "Sjekk om det mangler utfylling, finnes uventede tegn eller om data er limt inn delvis.",
+  "fileHashError": "Kunne ikke beregne hashverdien for filen.",
+  "textHashError": "Kunne ikke beregne hashverdien for teksten."
 }

@@ -2,8 +2,8 @@
   "options": "Options",
   "optionsDescription": "Choisissez un format de code-barres et ajustez la taille, les libellés et les couleurs.",
   "preview": "Preview",
-  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
-  "download": "Download",
+  "previewDescription": "Examinez le code-barres généré et exportez-le au format PNG, SVG, JPEG ou WebP.",
+  "download": "Télécharger",
   "text": "Texte",
   "textPlaceholder": "Saisir le contenu...",
   "format": "Format",
@@ -20,5 +20,6 @@
   "center": "Centre",
   "right": "Droite",
   "top": "Haut",
-  "bottom": "Bas"
+  "bottom": "Bas",
+  "renderError": "Échec du rendu du code-barres."
 }

@@ -1,11 +1,11 @@
-## What this text diff is for
+## टेक्स्ट अंतर देखने वाला यह टूल किसलिए है
 
-Use this tool when you need to compare two versions of copy, code, notes, or configuration before you merge, publish, or send anything out.
+जब मर्ज करने, प्रकाशित करने या भेजने से पहले सामग्री, कोड, नोट्स या कॉन्फ़िगरेशन के दो संस्करणों की तुलना करनी हो, तब इस टूल का उपयोग करें।
 
-## How to read the result
+## परिणाम कैसे पढ़ें
 
-The side-by-side view helps you scan line numbers and changed fragments quickly. Switch to the unified view when you need a compact patch-style output for review, handoff, or documentation.
+साथ-साथ वाला दृश्य पंक्ति संख्याओं और बदले हुए हिस्सों को जल्दी देखने में मदद करता है। समीक्षा, काम सौंपने या दस्तावेज़ तैयार करने के लिए संक्षिप्त पैच जैसा आउटपुट चाहिए हो, तो एकीकृत दृश्य चुनें।
 
-## When the options matter
+## विकल्प कब उपयोगी होते हैं
 
-Ignore case when capitalization is noise. Ignore whitespace when indentation or spacing should not count as a real edit. Hide unchanged rows when you only want to inspect what actually moved.
+जब बड़े-छोटे अक्षरों का अंतर मायने न रखता हो, तो उसे अनदेखा करें। जब इंडेंट या रिक्त स्थान को वास्तविक बदलाव नहीं गिनना हो, तो रिक्त स्थान अनदेखा करें। केवल बदले हुए हिस्से जांचने हों, तो अपरिवर्तित पंक्तियां छिपाएं।

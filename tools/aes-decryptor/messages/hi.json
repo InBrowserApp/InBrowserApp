@@ -1,7 +1,7 @@
 {
   "inputCardTitle": "एन्क्रिप्टेड JSON",
   "inputCardDescription": "एन्क्रिप्टर से मिला AES JSON envelope पेस्ट करें या स्थानीय .json फ़ाइल चुनें। इस ब्राउज़र से कुछ भी बाहर नहीं जाता।",
-  "jsonInputLabel": "AES JSON envelope",
+  "jsonInputLabel": "AES JSON एनवेलप",
   "jsonInputPlaceholder": "inbrowser-aes-v1 JSON envelope यहां पेस्ट करें...",
   "fileInputLabel": "JSON फ़ाइल",
   "fileInputDescription": "पेस्ट करने के बजाय डाउनलोड की गई AES encryptor JSON फ़ाइल चुनें।",

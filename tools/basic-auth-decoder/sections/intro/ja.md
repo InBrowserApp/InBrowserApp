@@ -1,14 +1,14 @@
-## What It Does
+## 機能
 
-HTTP Basic Authorization ヘッダーをデコードして、Base64 からユーザー名とパスワードを抽出します。デバッグや API テストに有用.
+HTTP Basic Authorization ヘッダーをデコードして、Base64 からユーザー名とパスワードを抽出します。デバッグや API テストに役立ちます。
 
-## Accepted Input
+## 対応する入力
 
-次のように貼り付け: Basic dXNlcjpwYXNz
-This tool also accepts a full `Authorization: Basic ...` line.
+次のようなヘッダーを貼り付けます：Basic dXNlcjpwYXNz
+`Authorization: Basic ...` の行全体を貼り付けることもできます。
 
-## Notes
+## 注意点
 
-- Base64 only encodes credentials; it does not protect them.
-- The decoder splits on the first `:` and keeps the rest in the password.
-- Everything runs locally in your browser.
+- Base64は認証情報をエンコードするだけで、保護するものではありません。
+- 最初の `:` でユーザー名とパスワードを区切り、それ以降の文字はすべてパスワードに含めます。
+- すべての処理はブラウザー内でローカルに実行されます。

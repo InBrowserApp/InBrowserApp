@@ -45,7 +45,7 @@
   "loadSampleLabel": "טען דוגמה",
   "resetLabel": "אפס את הבונה",
   "protocolPlaceholder": "https",
-  "hostnamePlaceholder": "example.com or api.internal",
+  "hostnamePlaceholder": "example.com או api.internal",
   "portPlaceholder": "443",
   "pathPlaceholder": "/products/blue mug",
   "fragmentPlaceholder": "reviews",

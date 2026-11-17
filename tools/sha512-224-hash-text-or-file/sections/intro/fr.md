@@ -1,19 +1,23 @@
-## What is SHA-512/224 (FIPS 180-4)?
+## Qu’est-ce que SHA-512/224 (FIPS 180-4) ?
 
-SHA-512/224 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 224-bit (28-byte) digest, typically rendered as a 56-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/224 (FIPS 180-4) est une fonction de hachage cryptographique de la famille
+SHA-2 qui produit une empreinte de 224 bits (28 octets), généralement représentée
+par une chaîne hexadécimale de 56 caractères. Elle repose sur SHA-512, avec des
+valeurs initiales différentes et un résultat tronqué, afin de fournir une
+empreinte plus courte tout en conservant la structure interne de SHA-512.
 
-**Key characteristics:**
+**Principales caractéristiques :**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **Déterministe** : une même entrée produit toujours la même empreinte
+- **Calcul rapide** : l’empreinte se calcule rapidement pour toute entrée donnée
+- **Effet d’avalanche** : une légère modification de l’entrée produit un résultat radicalement différent
+- **Irréversible** : retrouver l’entrée d’origine à partir de l’empreinte est irréalisable en pratique par le calcul
+- **Résistance aux collisions** : il est très difficile de trouver deux entrées différentes produisant la même empreinte
 
-**Common uses:**
+**Utilisations courantes :**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 224-bit hashes
+- Signatures numériques et certificats
+- Vérifications d’intégrité et sommes de contrôle
+- Constructions HMAC
+- Vérification de fichiers et chaînes de traitement des données
+- Protocoles nécessitant des empreintes de 224 bits

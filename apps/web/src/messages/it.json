@@ -3,6 +3,7 @@
     "name": "InBrowser.App",
     "description": "Strumenti gratuiti basati sul browser che funzionano interamente sul tuo dispositivo.",
     "languageLabel": "Lingue",
+    "installApp": "Installa app",
     "themeLabel": "Cambia tema",
     "themeLight": "Chiaro",
     "themeDark": "Scuro",
@@ -46,7 +47,6 @@
     "clearSearchLabel": "Cancella",
     "categoriesLabel": "Categorie",
     "categoryAll": "Tutti gli strumenti",
-    "sortLabel": "A–Z",
     "suggestionsLabel": "Suggerimenti",
     "suggestionsHint": "↑↓ naviga · ↵ apri · esc chiudi",
     "suggestionMatchCountOne": "{count} corrispondenza",
@@ -58,6 +58,7 @@
     "categories": {
       "crypto": "Crittografia e hashing",
       "developer": "Sviluppatori",
+      "document": "Documenti",
       "image": "Immagini e media",
       "json": "JSON e dati",
       "misc": "Varie",
@@ -67,6 +68,23 @@
       "text": "Testo",
       "time": "Data e ora",
       "web": "Web"
+    }
+  },
+  "categoryPages": {
+    "titleTemplate": "Strumenti per {category}",
+    "descriptions": {
+      "crypto": "Calcola l'hash di testi e file, crittografa i dati e genera o verifica password e chiavi. Scopri strumenti basati sul browser per checksum, crittografia e credenziali sicure.",
+      "developer": "Esamina archivi, formatta il codice, genera identificatori e converti configurazioni per lo sviluppo. Trova utilità basate sul browser per le attività di sviluppo quotidiane.",
+      "document": "Leggi e converti documenti, ebook, presentazioni e fogli di calcolo nel tuo browser. Visualizza l'anteprima dei file, estrai contenuti ed esporta in altri formati senza caricare i tuoi documenti.",
+      "image": "Converti, ridimensiona ed esamina immagini nel tuo browser. Ottimizza i file immagine, visualizza i metadati, crea codici a barre e lavora con formati di immagini animate.",
+      "json": "Formatta, convalida, confronta e converti dati strutturati. Lavora con JSON, YAML, TOML, XML e CSV usando strumenti che funzionano nel tuo browser.",
+      "misc": "Registra audio e video, usa la fotocamera, esamina le informazioni sul dispositivo e converti numeri. Scopri strumenti pratici per le attività quotidiane, direttamente nel browser.",
+      "network": "Cerca informazioni su DNS e IP, calcola sottoreti ed esamina certificati. Trova strumenti per indirizzi di rete, protocolli e risoluzione dei problemi.",
+      "pdf": "Unisci, dividi, esamina e organizza file PDF nel tuo browser. Estrai testo, converti pagine in immagini e aggiungi numeri di pagina senza caricare i tuoi documenti.",
+      "random": "Genera numeri casuali, password e frasi mnemoniche BIP39 nel tuo browser. Scegli uno strumento e personalizza il risultato in base alle tue esigenze.",
+      "text": "Trasforma, confronta e analizza testi oppure convalida identificatori comuni. Trova strumenti nel browser per codifiche, scrittura, pulizia del testo e verifica dei formati.",
+      "time": "Converti timestamp e fusi orari, calcola durate e lavora con pianificazioni cron. Pianifica eventi e confronta date con strumenti per il tempo basati sul browser.",
+      "web": "Codifica e decodifica dati, esamina URL, genera codici QR e lavora con formati web. Scopri utilità basate sul browser per le comuni attività di sviluppo web."
     }
   }
 }

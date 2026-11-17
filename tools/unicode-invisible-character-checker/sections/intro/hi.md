@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## अदृश्य वर्ण क्यों मायने रखते हैं
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+अदृश्य Unicode वर्ण आसानी से छूट जाते हैं, क्योंकि सामान्य एडिटर में वे गलत नहीं दिखते। समस्या बाद में सामने आती है: टेक्स्ट में बदलाव विफल होते हैं, पहचानकर्ता मेल नहीं खाते, लेआउट में पंक्तियां अजीब तरह से टूटती हैं या दाएं से बाएं (RTL) लिखे टेक्स्ट में व्यवहार बदल जाता है।
 
-## What this tool catches
+## यह टूल क्या पहचानता है
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+यह टूल चार सामान्य समूहों की जांच करता है: शून्य चौड़ाई वाले चिह्न, द्विदिश नियंत्रण, विशेष रिक्त स्थान वाले वर्ण और प्रारूप नियंत्रण। यह उनकी सटीक जगह बताता है, टिप्पणी वाला प्रीव्यू दिखाता है और साफ़ किया गया संस्करण तैयार करता है जिसे आप कॉपी या निर्यात कर सकते हैं।
 
-## When to use it
+## इसका उपयोग कब करें
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+दस्तावेज़, PDF, स्प्रेडशीट, चैट ऐप, CMS एडिटर या डिज़ाइन टूल से टेक्स्ट कॉपी करने के बाद इसका उपयोग करें। यह खास तौर पर तब उपयोगी है जब कोई स्ट्रिंग सामान्य दिखे, लेकिन तुलना, रेंडरिंग या आगे की प्रोसेसिंग बार-बार अजीब व्यवहार करे।

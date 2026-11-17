@@ -6,6 +6,6 @@ Um arquivo .gitignore especifica arquivos intencionalmente não rastreados que o
 - Arquivos de IDE e editor (.idea/, .vscode/)
 - Arquivos do sistema operacional (.DS_Store, Thumbs.db)
 
-## Template source
+## Origem dos modelos
 
 Esta ferramenta usa modelos do repositório oficial gitignore do GitHub, cobrindo mais de 150 linguagens, frameworks e ambientes.

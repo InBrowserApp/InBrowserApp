@@ -1,11 +1,11 @@
-## What this text diff is for
+## เครื่องมือเปรียบเทียบข้อความนี้มีไว้เพื่ออะไร
 
-Use this tool when you need to compare two versions of copy, code, notes, or configuration before you merge, publish, or send anything out.
+ใช้เครื่องมือนี้เมื่อต้องการเปรียบเทียบเนื้อหา โค้ด บันทึก หรือการตั้งค่าสองเวอร์ชัน ก่อนผสาน เผยแพร่ หรือส่งต่อ
 
-## How to read the result
+## วิธีอ่านผลลัพธ์
 
-The side-by-side view helps you scan line numbers and changed fragments quickly. Switch to the unified view when you need a compact patch-style output for review, handoff, or documentation.
+มุมมองเทียบข้างกันช่วยให้คุณดูเลขบรรทัดและส่วนที่เปลี่ยนได้อย่างรวดเร็ว สลับไปใช้มุมมองแบบรวมเมื่อต้องการผลลัพธ์แบบแพตช์ที่กะทัดรัดสำหรับตรวจทาน ส่งต่องาน หรือจัดทำเอกสาร
 
-## When the options matter
+## ตัวเลือกเหล่านี้มีประโยชน์เมื่อใด
 
-Ignore case when capitalization is noise. Ignore whitespace when indentation or spacing should not count as a real edit. Hide unchanged rows when you only want to inspect what actually moved.
+เลือกไม่สนใจตัวพิมพ์ใหญ่และเล็กเมื่อความต่างด้านตัวพิมพ์ไม่สำคัญ เลือกไม่สนใจช่องว่างเมื่อการเยื้องหรือระยะห่างไม่ควรนับเป็นการแก้ไขจริง ซ่อนแถวที่ไม่เปลี่ยนแปลงเมื่อต้องการตรวจสอบเฉพาะส่วนที่เปลี่ยนไป

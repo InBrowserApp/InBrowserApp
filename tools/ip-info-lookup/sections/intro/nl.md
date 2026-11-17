@@ -1,6 +1,6 @@
 ## Wat deze tool opzoekt
 
-IP Info Lookup lost een IPv4-adres, IPv6-adres, domein of URL op en toont de openbare metadata die internetdiensten voor elk adres kunnen rapporteren. Dit is handig wanneer je wilt controleren waar een domein naar verwijst, welk netwerk eigenaar is van een adres, welke reverse-DNS-hostnaam bestaat, of of IPv4- en IPv6-records naar verschillende providers leiden.
+IP-informatiezoeker lost een IPv4-adres, IPv6-adres, domein of URL op en toont de openbare metadata die internetdiensten voor elk adres kunnen rapporteren. Dit is handig wanneer je wilt controleren waar een domein naar verwijst, welk netwerk eigenaar is van een adres, welke reverse-DNS-hostnaam bestaat, of of IPv4- en IPv6-records naar verschillende providers leiden.
 
 ## Hoe domein- en URL-lookups werken
 

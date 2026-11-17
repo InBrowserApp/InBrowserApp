@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest"
+import { load } from "js-yaml"
 
 import { convertDockerRunToCompose } from "./convert-docker-run-to-compose"
 
@@ -15,16 +16,18 @@ describe("docker-run-to-compose-converter", () => {
     )
 
     expect(result.error).toBeUndefined()
-    expect(result.output).toContain("services:")
-    expect(result.output).toContain("api:")
-    expect(result.output).toContain("image: node:20-alpine")
-    expect(result.output).toContain("ports:")
-    expect(result.output).toContain("- '8080:8080'")
-    expect(result.output).toContain("environment:")
-    expect(result.output).toContain("- NODE_ENV=production")
-    expect(result.output).toContain("volumes:")
-    expect(result.output).toContain("- ./data:/data")
-    expect(result.output).not.toContain("version:")
+    expect(load(result.output)).toEqual({
+      services: {
+        api: {
+          image: "node:20-alpine",
+          container_name: "api",
+          ports: ["8080:8080"],
+          environment: ["NODE_ENV=production"],
+          volumes: ["./data:/data"],
+          command: ["node", "server.js"],
+        },
+      },
+    })
   })
 
   it("supports multiple docker run commands", () => {

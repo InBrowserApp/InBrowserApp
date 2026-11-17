@@ -1,26 +1,27 @@
-## What this tool does
+## Bu Araç Ne Yapar?
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+SVG'den Görüntü Dönüştürücü, cihazınızdaki bir SVG dosyasını doğrudan tarayıcınızda
+PNG, JPEG veya WebP görseline dönüştürür. Özgün boyutu koruyabilir, özel çıktı
+boyutları belirleyebilir, arka plan dolgusunu kontrol edebilir ve biçim
+destekliyorsa dışa aktarma kalitesini ayarlayabilirsiniz.
 
-## Why it helps
+## Neden Yararlıdır?
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+Tasarım teslimi, CMS iş akışı, sosyal medya önizlemesi veya uygulama varlığı
+için bir SVG'yi hızla piksel tabanlı bir görsele dönüştürmeniz gerektiğinde
+kullanın. Ayrı bir grafik düzenleyicisi açmadan vektör çizimlerini boyutları
+belli bir bitmap çıktısına dönüştürmek için yararlıdır.
 
-## How it works
+## Nasıl Çalışır?
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+Bir SVG dosyası yükleyin, çıktı biçimini seçin; ardından genişlik, yükseklik,
+arka plan ve kalite ayarlarını düzenleyin. Dönüştürücü, SVG'yi tarayıcınızda
+işler ve sunucuya hiçbir şey göndermeden indirilebilir bir görsel dosyası hazırlar.
 
-## Tips for better exports
+## Daha İyi Çıktılar İçin İpuçları
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- Bozulma olmadan yeniden boyutlandırmak istiyorsanız en boy oranını koruma
+  seçeneğini açık tutun.
+- JPEG saydamlığı desteklemediğinden JPEG çıktısı için bir arka plan rengi seçin.
+- Net ve kayıpsız çıktı için PNG; küçük dosya boyutu daha önemli olduğunda
+  WebP veya JPEG kullanın.

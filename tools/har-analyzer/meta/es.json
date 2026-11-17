@@ -1,0 +1,4 @@
+{
+  "name": "Analizador de red HAR",
+  "description": "Analiza archivos HAR localmente en tu navegador. Inspecciona cascadas de solicitudes, tiempos, encabezados y cuerpos registrados para diagnosticar solicitudes lentas o fallidas."
+}

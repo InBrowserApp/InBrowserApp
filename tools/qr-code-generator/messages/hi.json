@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "जनरेट किया गया QR कोड"
+  "qrAlt": "जनरेट किया गया QR कोड",
+  "renderError": "QR कोड रेंडर करने में विफल।"
 }

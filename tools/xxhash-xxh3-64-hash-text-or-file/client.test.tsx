@@ -5,9 +5,10 @@ import {
   screen,
   waitFor,
 } from "@testing-library/react"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import XxHashHashTextOrFileClient from "./client"
+import * as hashCore from "./core/xxhash"
 
 const messages = {
   meta: {
@@ -20,6 +21,8 @@ const messages = {
   plainTextDescription:
     "Paste or type any UTF-8 text, including emoji and non-Latin characters.",
   importFromFileLabel: "Import from file",
+  fileHashError: "Failed to hash file.",
+  textHashError: "Failed to hash text.",
   seedSectionLabel: "Seed",
   seedLabel: "Seed (Optional)",
   seedPlaceholder: "0 or 0x...",
@@ -40,7 +43,10 @@ beforeEach(() => {
   window.localStorage.clear()
 })
 
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
 
 function getPlainTextInput() {
   return screen.getByRole("textbox", {
@@ -194,5 +200,39 @@ describe("XxHashHashTextOrFileClient", () => {
         0
       )
     })
+  })
+
+  test("uses localized fallbacks for unknown text and file failures", async () => {
+    vi.spyOn(hashCore, "hashXxHash").mockRejectedValue({ message: "unknown" })
+    const localizedMessages = {
+      ...messages,
+      fileHashError: "ファイルのハッシュ計算に失敗しました。",
+      textHashError: "テキストのハッシュ計算に失敗しました。",
+    }
+
+    render(<XxHashHashTextOrFileClient messages={localizedMessages} />)
+
+    expect(
+      await screen.findByText(localizedMessages.textHashError)
+    ).toBeTruthy()
+
+    fireEvent.change(getFileInput(), {
+      target: { files: [new File(["content"], "broken.txt")] },
+    })
+
+    expect(
+      await screen.findByText(localizedMessages.fileHashError)
+    ).toBeTruthy()
+    expect(screen.queryByText(localizedMessages.textHashError)).toBeNull()
+  })
+
+  test("preserves Error messages from failed hashing", async () => {
+    vi.spyOn(hashCore, "hashXxHash").mockRejectedValue(
+      new Error("Input read failed")
+    )
+
+    render(<XxHashHashTextOrFileClient messages={messages} />)
+
+    expect(await screen.findByText("Input read failed")).toBeTruthy()
   })
 })

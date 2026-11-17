@@ -157,10 +157,10 @@ describe("ImageToAvifClient", () => {
     expect(screen.getByText("photo.avif")).toBeTruthy()
     expect(screen.getByText("photo-2.avif")).toBeTruthy()
     expect(
-      screen.getByRole("link", { name: messages.downloadZipLabel })
+      await screen.findByRole("link", { name: messages.downloadZipLabel })
     ).toBeTruthy()
     expect(
-      screen.getAllByRole("link", { name: messages.downloadAvifLabel })
+      await screen.findAllByRole("link", { name: messages.downloadAvifLabel })
     ).toHaveLength(2)
   })
 

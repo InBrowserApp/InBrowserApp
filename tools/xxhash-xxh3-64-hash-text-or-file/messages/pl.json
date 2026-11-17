@@ -14,5 +14,7 @@
   "seedSectionLabel": "Seed",
   "seedLabel": "Seed (opcjonalnie)",
   "seedPlaceholder": "0 lub 0x...",
-  "seedInvalid": "Wprowadź liczbę dziesiętną lub wartość szesnastkową z 0x."
+  "seedInvalid": "Wprowadź liczbę dziesiętną lub wartość szesnastkową z 0x.",
+  "fileHashError": "Nie udało się obliczyć skrótu pliku.",
+  "textHashError": "Nie udało się obliczyć skrótu tekstu."
 }

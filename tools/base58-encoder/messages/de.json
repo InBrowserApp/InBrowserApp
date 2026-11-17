@@ -10,9 +10,9 @@
   "outputPlaceholder": "Base58-Ausgabe erscheint hier...",
   "download": "Base58 herunterladen",
   "readFailed": "Datei konnte nicht gelesen werden",
-  "loadSample": "Load sample",
-  "clearLabel": "Clear",
-  "copyLabel": "Copy",
-  "copiedLabel": "Copied",
+  "loadSample": "Beispiel laden",
+  "clearLabel": "Leeren",
+  "copyLabel": "Kopieren",
+  "copiedLabel": "Kopiert",
   "importFromFileLabel": "Aus Datei importieren"
 }

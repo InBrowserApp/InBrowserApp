@@ -1,26 +1,26 @@
-## What this tool does
+## Vad verktyget gör
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+Den här SVG-till-bild-konverteraren omvandlar en lokal SVG-fil till en PNG-, JPEG- eller WebP-bild
+direkt i webbläsaren. Du kan behålla originalstorleken, ange egna
+utdatamått, styra bakgrundsfyllningen och justera exportkvaliteten när
+formatet stöder det.
 
-## Why it helps
+## Varför det är användbart
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+Använd verktyget när en designöverlämning, ett CMS-flöde, en förhandsvisning för sociala medier eller en appresurs kräver
+att en SVG snabbt omvandlas till en rasterbild. Det är användbart för att omvandla vektorgrafik
+till en förutsägbar bitmappsbild utan att öppna ett separat grafikprogram.
 
-## How it works
+## Så fungerar det
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+Ladda upp en SVG-fil, välj utdataformat och justera sedan bredd, höjd,
+bakgrund och kvalitetsinställningar. Konverteraren renderar SVG-bilden i webbläsaren
+och förbereder en bildfil för nedladdning utan att skicka något till en server.
 
-## Tips for better exports
+## Tips för bättre export
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- Behåll bildförhållandet aktiverat om du vill ändra storlek utan förvrängning.
+- Välj en bakgrundsfärg för JPEG-export eftersom JPEG inte stöder
+  genomskinlighet.
+- Använd PNG när du vill ha ett skarpt, förlustfritt resultat, eller WebP och JPEG när mindre
+  filstorlek är viktigare.

@@ -14,5 +14,7 @@
   "seedSectionLabel": "\u7a2e\u5b50",
   "seedLabel": "\u7a2e\u5b50\uff08\u53ef\u9078\uff09",
   "seedPlaceholder": "0 \u6216 0x...",
-  "seedInvalid": "\u8acb\u8f38\u5165\u5341\u9032\u4f4d\u6578\u5b57\u6216 0x \u5341\u516d\u9032\u4f4d\u6578\u3002"
+  "seedInvalid": "\u8acb\u8f38\u5165\u5341\u9032\u4f4d\u6578\u5b57\u6216 0x \u5341\u516d\u9032\u4f4d\u6578\u3002",
+  "fileHashError": "無法計算檔案的雜湊值。",
+  "textHashError": "無法計算文字的雜湊值。"
 }

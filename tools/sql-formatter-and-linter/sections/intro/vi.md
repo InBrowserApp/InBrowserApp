@@ -1,6 +1,6 @@
-## SQL Formatter & Linter là gì?
+## Trình định dạng và kiểm tra SQL là gì?
 
-SQL Formatter & Linter định dạng lại các truy vấn SQL ngay trong trình duyệt và đồng thời kiểm tra chúng theo một bộ nhỏ các vấn đề có tín hiệu cao. Công cụ này hữu ích khi bạn muốn bố cục truy vấn gọn hơn, cách viết hoa từ khóa nhất quán và phản hồi nhanh về các mẫu rủi ro như `SELECT *` hoặc câu lệnh `UPDATE` không có mệnh đề `WHERE`.
+Trình định dạng và kiểm tra SQL định dạng lại các truy vấn SQL ngay trong trình duyệt và đồng thời kiểm tra chúng theo một bộ nhỏ các vấn đề có tín hiệu cao. Công cụ này hữu ích khi bạn muốn bố cục truy vấn gọn hơn, cách viết hoa từ khóa nhất quán và phản hồi nhanh về các mẫu rủi ro như `SELECT *` hoặc câu lệnh `UPDATE` không có mệnh đề `WHERE`.
 
 ## Khi Nào Nên Dùng
 

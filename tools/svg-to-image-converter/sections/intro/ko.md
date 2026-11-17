@@ -1,26 +1,25 @@
-## What this tool does
+## 주요 기능
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+SVG 이미지 변환기는 브라우저에서 로컬 SVG 파일 하나를 PNG, JPEG 또는 WebP
+이미지로 변환합니다. 원본 크기를 유지하거나 원하는 출력 크기를 설정할 수 있고,
+배경 채우기를 조정할 수 있으며, 해당 형식이 지원하는 경우 내보내기 품질도
+조정할 수 있습니다.
 
-## Why it helps
+## 활용 용도
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+디자인 전달, CMS 작업, 소셜 미디어 미리보기, 앱 리소스를 위해 SVG를 래스터
+이미지로 빠르게 변환해야 할 때 사용하세요. 별도의 그래픽 편집기를 열지 않고도
+벡터 이미지를 예측 가능한 비트맵 출력으로 바꿀 수 있습니다.
 
-## How it works
+## 사용 방법
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+SVG 파일 하나를 업로드하고 출력 형식을 선택한 다음 너비, 높이, 배경, 품질 설정을
+조정하세요. 변환기는 브라우저에서 SVG를 렌더링하고 서버로 아무것도 보내지 않은 채
+다운로드할 수 있는 이미지 파일을 준비합니다.
 
-## Tips for better exports
+## 더 나은 내보내기를 위한 팁
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- 왜곡 없이 크기를 조정하려면 가로세로 비율 유지를 켜 두세요.
+- JPEG는 투명도를 지원하지 않으므로 JPEG 출력에는 배경색을 선택하세요.
+- 선명한 무손실 출력이 필요하면 PNG를, 더 작은 파일 크기가 중요하면 WebP나
+  JPEG를 사용하세요.

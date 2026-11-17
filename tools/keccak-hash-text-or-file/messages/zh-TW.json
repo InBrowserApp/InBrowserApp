@@ -11,5 +11,7 @@
   "decimalLabel": "十進制",
   "binaryLabel": "二進制",
   "copyResultLabel": "複製結果",
-  "copiedLabel": "已複製"
+  "copiedLabel": "已複製",
+  "fileHashError": "無法計算檔案的雜湊值。",
+  "textHashError": "無法計算文字的雜湊值。"
 }

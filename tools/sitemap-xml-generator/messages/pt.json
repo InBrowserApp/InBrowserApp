@@ -19,7 +19,7 @@
   "addUrlEntryLabel": "Adicionar entrada de URL",
   "sitemapEntriesLabel": "Arquivos sitemap",
   "sitemapEntriesDescription": "Cada linha vira um registro <sitemap> no índice.",
-  "sitemapEntryLabel": "Sitemap {index}",
+  "sitemapEntryLabel": "Mapa do site {index}",
   "addSitemapEntryLabel": "Adicionar entrada sitemap",
   "removeEntryLabel": "Remover",
   "locationLabel": "Localização",

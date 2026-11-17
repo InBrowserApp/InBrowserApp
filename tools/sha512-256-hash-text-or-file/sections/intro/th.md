@@ -1,19 +1,19 @@
-## What is SHA-512/256 (FIPS 180-4)?
+## SHA-512/256 (FIPS 180-4) คืออะไร?
 
-SHA-512/256 (FIPS 180-4) is a SHA-2 cryptographic hash function that outputs a 256-bit (32-byte) digest, typically rendered as a 64-character hexadecimal string. It is based on SHA-512 with different initial values and a truncated output, providing a shorter digest while keeping SHA-512's internal structure.
+SHA-512/256 (FIPS 180-4) เป็นฟังก์ชันแฮชเข้ารหัสในตระกูล SHA-2 ที่ให้ไดเจสต์ขนาด 256 บิต (32 ไบต์) โดยทั่วไปแสดงเป็นสตริงเลขฐานสิบหกยาว 64 อักขระ ฟังก์ชันนี้ใช้ SHA-512 เป็นพื้นฐาน โดยเปลี่ยนค่าเริ่มต้นและตัดผลลัพธ์ให้สั้นลง จึงได้ไดเจสต์ที่สั้นกว่าโดยยังคงโครงสร้างภายในของ SHA-512
 
-**Key characteristics:**
+**คุณสมบัติสำคัญ:**
 
-- **Deterministic**: The same input always produces the same hash
-- **Fast computation**: Quick to compute for any given input
-- **Avalanche effect**: Small changes in input produce drastically different outputs
-- **Irreversible**: Computationally infeasible to reverse the hash to find the original input
-- **Collision resistant**: Very difficult to find two different inputs that produce the same hash
+- **ให้ผลแน่นอน**: ข้อมูลนำเข้าเดียวกันจะได้ค่าแฮชเดียวกันเสมอ
+- **คำนวณได้รวดเร็ว**: คำนวณค่าแฮชของข้อมูลนำเข้าได้อย่างรวดเร็ว
+- **ผลกระทบแบบถล่มทลาย**: การเปลี่ยนข้อมูลนำเข้าเพียงเล็กน้อยทำให้ผลลัพธ์ต่างไปอย่างมาก
+- **ย้อนกลับไม่ได้**: การคำนวณย้อนกลับจากค่าแฮชเพื่อหาข้อมูลต้นฉบับทำได้ยากจนไม่สามารถทำได้ในทางปฏิบัติ
+- **ทนต่อการชนกัน**: หาข้อมูลนำเข้าที่ต่างกันสองชุดแต่ได้ค่าแฮชเดียวกันได้ยากมาก
 
-**Common uses:**
+**การใช้งานที่พบบ่อย:**
 
-- Digital signatures and certificates
-- Integrity checks and checksums
-- HMAC constructions
-- File verification and data pipelines
-- Protocols that require 256-bit hashes
+- ลายเซ็นดิจิทัลและใบรับรอง
+- การตรวจสอบความสมบูรณ์ของข้อมูลและเช็กซัม
+- การสร้าง HMAC
+- การตรวจสอบไฟล์และกระบวนการประมวลผลข้อมูล
+- โปรโตคอลที่ต้องการแฮชขนาด 256 บิต

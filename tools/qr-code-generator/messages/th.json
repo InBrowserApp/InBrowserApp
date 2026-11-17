@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "QR code ที่สร้างแล้ว"
+  "qrAlt": "QR code ที่สร้างแล้ว",
+  "renderError": "สร้างภาพคิวอาร์โค้ดไม่สำเร็จ"
 }

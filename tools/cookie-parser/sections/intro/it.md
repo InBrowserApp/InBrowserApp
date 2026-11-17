@@ -2,7 +2,7 @@
 
 Incolla un header Cookie di richiesta oppure una o più righe Set-Cookie di risposta. Il parser estrae nomi, valori e frammenti non validi in JSON strutturato per controllarli rapidamente.
 
-## Cookie vs. Set-Cookie
+## Confronto tra Cookie e Set-Cookie
 
 Usa Cookie per l’header che il browser rimanda al server. Usa Set-Cookie per gli header di risposta che definiscono attributi come Path, Max-Age, SameSite, Secure o HttpOnly.
 

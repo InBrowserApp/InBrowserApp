@@ -1,6 +1,6 @@
 {
   "meta": {
-    "name": "Cron Expression Generator",
+    "name": "ตัวสร้างนิพจน์ Cron",
     "description": "สร้างนิพจน์ cron แบบห้าฟิลด์ด้วยตัวควบคุมแบบภาพ พรีเซ็ต และตัวอย่างการรันที่จะเกิดขึ้น"
   },
   "actions": {

@@ -7,7 +7,7 @@
   "hashLabel": "Kodierter Argon2-Hash",
   "hashPlaceholder": "$argon2id$v=19$m=65536,t=3,p=4$…",
   "hashDescription": "Verwende den vollständigen kodierten Hash-String einschließlich Argon2-Variante, Parametern, Salt und Digest.",
-  "secretLabel": "Secret / pepper (optional)",
+  "secretLabel": "Geheimer Wert / Pepper (optional)",
   "secretPlaceholder": "Gib dasselbe secret ein, das beim Hashing verwendet wurde",
   "secretDescription": "Fülle dies nur aus, wenn der ursprüngliche Hash mit einem Argon2-secret-Wert erzeugt wurde.",
   "showPasswordLabel": "Passwort anzeigen",

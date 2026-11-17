@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## Vì sao ký tự ẩn quan trọng
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+Ký tự Unicode ẩn rất dễ bị bỏ sót vì chúng không trông như lỗi trong trình soạn thảo thông thường. Vấn đề chỉ xuất hiện về sau: thay đổi nội dung không thành công, định danh không còn khớp, bố cục xuống dòng kỳ lạ hoặc văn bản bắt đầu hoạt động khác trong ngữ cảnh từ phải sang trái (RTL).
 
-## What this tool catches
+## Công cụ này phát hiện những gì
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+Trình kiểm tra ký tự ẩn Unicode tìm bốn nhóm phổ biến: dấu có độ rộng bằng 0, ký tự điều khiển hai chiều, khoảng trắng đặc biệt và ký tự điều khiển định dạng. Công cụ chỉ ra chính xác vị trí của chúng, cung cấp bản xem trước có chú thích và chuẩn bị bản đã làm sạch để bạn sao chép hoặc xuất.
 
-## When to use it
+## Khi nào nên dùng
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+Dùng công cụ sau khi sao chép văn bản từ tài liệu, PDF, bảng tính, ứng dụng trò chuyện, trình biên tập CMS hoặc công cụ thiết kế. Công cụ đặc biệt hữu ích khi một chuỗi trông bình thường nhưng việc so sánh, hiển thị hoặc xử lý tiếp theo liên tục có biểu hiện bất thường.

@@ -1,26 +1,26 @@
-## What ICO Is
+## מהו ICO
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO הוא פורמט מכולה לסמלים המשמש לסמלי אתרים קלאסיים בדפדפן, לקיצורי דרך
+ב־Windows ולחלק מסמלי יישומי שולחן העבודה. קובץ ICO אחד יכול לכלול כמה
+גדלים ריבועיים, כך שכל פלטפורמה תוכל לבחור אוטומטית את הגודל המתאים ביותר.
 
-## Why Use This Converter
+## למה להשתמש בממיר הזה
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+הכלי הופך תמונה מקומית אחת לקובץ ICO הכולל כמה גדלים, ישירות
+בדפדפן. שום דבר אינו מועלה לשרת, ואפשר לאגד גדלים נפוצים של סמלי אתרים כמו
+16×16, 32×32, 48×48 ו־256×256 בהורדה אחת.
 
-## How It Works
+## איך זה עובד
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. העלו קובץ תמונה מקומי אחד.
+2. בחרו את גדלי הסמל שברצונכם לכלול בקובץ ה־ICO.
+3. הוסיפו צבע רקע אחיד לתמונה שקופה, לפי הצורך.
+4. צרו את ה־ICO והורידו אותו מיד.
 
-## Tips for Better Results
+## טיפים לתוצאות טובות יותר
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- התחילו בתמונה ריבועית חדה, רצוי בגודל 512×512 ומעלה.
+- הרחיקו סמלים וצורות חשובות מהקצוות החיצוניים, כי סמלים זעירים מאבדים
+  פרטים במהירות.
+- השאירו את מילוי הרקע כבוי אם תרצו שקיפות, והפעילו אותו רק כשדרוש
+  רקע אחיד מאחורי הסמל.

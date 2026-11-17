@@ -1,16 +1,16 @@
-## Test Patterns Before They Ship
+## Kiểm thử mẫu trước khi đưa vào sử dụng
 
-Regex is easy to get almost right. This tool gives you one place to validate a pattern, see every match, and confirm the replacement output before you use it in code, content pipelines, or search rules.
+Biểu thức chính quy rất dễ chỉ gần đúng. Trình kiểm thử và thay thế biểu thức chính quy giúp bạn xác thực mẫu, xem mọi kết quả khớp và xác nhận văn bản sau thay thế ở cùng một nơi trước khi dùng trong mã, quy trình xử lý nội dung hoặc quy tắc tìm kiếm.
 
-## What You Can Check Here
+## Những gì bạn có thể kiểm tra tại đây
 
-- Paste sample text and watch matches update immediately
-- Toggle common flags like global, multiline, and ignore case
-- Inspect capturing groups and named groups for every match
-- Preview replacement output with `$1` and `$<name>` references
+- Dán văn bản mẫu và xem các kết quả khớp cập nhật ngay
+- Bật tắt các cờ phổ biến như toàn bộ, nhiều dòng và không phân biệt hoa thường
+- Kiểm tra nhóm bắt và nhóm có tên của từng kết quả khớp
+- Xem trước văn bản sau thay thế với tham chiếu `$1` và `$<name>`
 
-## Good Uses
+## Trường hợp sử dụng phù hợp
 
-- Cleaning IDs, log lines, and exports before import
-- Testing content rewrite rules without touching source data
-- Debugging why a pattern matches too much, too little, or nothing at all
+- Làm sạch ID, dòng nhật ký và dữ liệu đã xuất trước khi nhập
+- Kiểm thử quy tắc viết lại nội dung mà không tác động đến dữ liệu nguồn
+- Gỡ lỗi khi mẫu khớp quá nhiều, quá ít hoặc không khớp gì

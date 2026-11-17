@@ -1,6 +1,6 @@
 ## Förstå cron-scheman innan du driftsätter dem
 
-Cron-uttryck är kompakta, men ett litet fältfel kan köra ett jobb mycket oftare, eller mycket mer sällan, än avsett. Den här parsern validerar uttrycket i din webbläsare, förklarar schemat på vanligt språk, delar upp varje fält och förhandsvisar kommande körningstider.
+Cron-uttryck är kompakta, men ett litet fältfel kan köra ett jobb mycket oftare, eller mycket mer sällan, än avsett. Den här tolken validerar uttrycket i din webbläsare, förklarar schemat på vanligt språk, delar upp varje fält och förhandsvisar kommande körningstider.
 
 ### När du ska använda det
 

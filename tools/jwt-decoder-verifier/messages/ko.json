@@ -25,7 +25,7 @@
     "autoAlgorithm": "헤더에서 자동",
     "keyLabel": "비밀값 또는 공개 키",
     "keyDescription": "HS 알고리즘에는 일반 텍스트를 사용하세요. RS, PS, ES 알고리즘에는 PEM 공개 키, JWK 또는 JWKS를 사용하세요. 값은 저장되지 않습니다.",
-    "keyPlaceholder": "secret\n\nor\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\nor\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
+    "keyPlaceholder": "secret\n\n또는\n\n-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----\n\n또는\n\n{\"keys\":[{\"kty\":\"RSA\",\"kid\":\"main\",...}]}",
     "waitingTitle": "검증 준비 완료",
     "waitingDescription": "서명을 확인하려면 유효한 토큰과 검증 자료를 입력하세요.",
     "pendingTitle": "서명 검증 중",

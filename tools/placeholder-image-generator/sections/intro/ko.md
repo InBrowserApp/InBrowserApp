@@ -1,27 +1,25 @@
-## What this tool does
+## 주요 기능
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+플레이스홀더 이미지 생성기는 브라우저에서 원하는 크기, 단색 또는 그라데이션 배경,
+중앙 텍스트를 넣은 깔끔한 임시 이미지를 만듭니다. 각 플레이스홀더를 PNG, SVG,
+JPEG 또는 WebP로 내보낼 수 있으며, Retina 화면에 적합한 2배 및 3배 버전도
+지원합니다.
 
-## Why it helps
+## 활용 용도
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+디자인 목업, CMS 초기 콘텐츠, 빈 상태 화면, 소셜 미디어 레이아웃 구상, API용
+플레이스홀더에 사용하세요. 디자인 앱을 열지 않고도 일정한 크기와 스타일의 이미지를
+빠르게 준비해야 할 때 유용합니다.
 
-## How it works
+## 사용 방법
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+프리셋을 선택하거나 너비와 높이를 직접 입력하세요. 단색이나 그라데이션을 선택하고,
+필요하면 원하는 문구를 추가한 다음 텍스트 크기, 내보내기 배율, 품질을 조정하세요.
+미리보기가 즉시 업데이트되므로 작업에 적합한 형식으로 다운로드할 수 있습니다.
 
-## Tips for better placeholders
+## 더 나은 플레이스홀더를 위한 팁
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- 크기가 자동으로 표시되게 하려면 텍스트 입력란을 비워 두세요.
+- 히어로 배너에는 그라데이션을, 일반적인 임시 이미지에는 단색을 사용하세요.
+- 크기를 조절해도 선명한 이미지가 필요하면 SVG로, 래스터 파일이 필요하면 PNG,
+  JPEG 또는 WebP로 내보내세요.

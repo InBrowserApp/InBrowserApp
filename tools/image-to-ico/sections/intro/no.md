@@ -1,26 +1,26 @@
-## What ICO Is
+## Hva ICO er
 
-ICO is the icon container format used for classic browser favicons, Windows
-shortcuts, and some desktop app icons. One ICO file can include multiple
-square sizes, so each platform can choose the closest fit automatically.
+ICO er ikonbeholderformatet som brukes til klassiske favikoner i nettlesere,
+Windows-snarveier og enkelte ikoner for skrivebordsapper. Én ICO-fil kan inneholde flere
+kvadratiske størrelser, slik at hver plattform automatisk kan velge den som passer best.
 
-## Why Use This Converter
+## Hvorfor bruke denne konvertereren
 
-This tool turns one local image into a multi-size ICO file directly in your
-browser. Nothing is uploaded, and you can bundle common favicon sizes like
-16×16, 32×32, 48×48, and 256×256 into a single download.
+Dette verktøyet gjør ett lokalt bilde om til en ICO-fil med flere størrelser direkte i
+nettleseren. Ingenting lastes opp, og du kan samle vanlige favikonstørrelser som
+16×16, 32×32, 48×48 og 256×256 i én nedlasting.
 
-## How It Works
+## Slik fungerer det
 
-1. Upload one local image file.
-2. Choose the icon sizes you want to include in the ICO bundle.
-3. Optionally add a solid background color for transparent artwork.
-4. Generate the ICO and download it immediately.
+1. Last opp én lokal bildefil.
+2. Velg ikonstørrelsene du vil inkludere i ICO-filen.
+3. Legg eventuelt til en ensfarget bakgrunn for gjennomsiktig grafikk.
+4. Generer ICO-filen og last den ned med en gang.
 
-## Tips for Better Results
+## Tips for bedre resultater
 
-- Start with a sharp square image, ideally 512×512 or larger.
-- Keep logos and key shapes away from the outer edges because tiny icons lose
-  detail quickly.
-- Leave background fill off if you want transparency, and turn it on only when
-  you need a solid canvas behind the icon.
+- Start med et skarpt, kvadratisk bilde, helst 512×512 eller større.
+- Hold logoer og viktige former unna ytterkantene, siden små ikoner raskt mister
+  detaljer.
+- La bakgrunnsfyll være slått av hvis du ønsker gjennomsiktighet, og slå det bare på
+  når du trenger en ensfarget flate bak ikonet.

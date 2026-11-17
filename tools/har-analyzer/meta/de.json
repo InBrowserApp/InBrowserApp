@@ -1,0 +1,4 @@
+{
+  "name": "HAR-Netzwerkanalyse",
+  "description": "Analysiere HAR-Dateien lokal im Browser. Prüfe Anfrage-Wasserfälle, Zeitabläufe, Header und aufgezeichnete Inhalte, um langsame oder fehlgeschlagene Anfragen zu untersuchen."
+}

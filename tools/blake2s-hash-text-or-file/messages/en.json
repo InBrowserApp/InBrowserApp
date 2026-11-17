@@ -16,5 +16,7 @@
   "keyLabel": "BLAKE2 Key (Base64)",
   "keyPlaceholder": "Optional key for keyed hashing (Base64 encoded)",
   "invalidBase64Title": "The Base64 value is not valid yet.",
-  "invalidBase64Description": "Check for missing padding, unexpected characters, or partially pasted data."
+  "invalidBase64Description": "Check for missing padding, unexpected characters, or partially pasted data.",
+  "fileHashError": "Failed to hash file.",
+  "textHashError": "Failed to hash text."
 }

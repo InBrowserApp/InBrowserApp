@@ -1,26 +1,26 @@
-## What this tool does
+## מה הכלי עושה
 
-This SVG to image converter turns one local SVG file into a PNG, JPEG, or WebP
-image directly in your browser. You can keep the original size, set custom
-output dimensions, control background fill, and adjust export quality when the
-format supports it.
+ממיר SVG לתמונה הופך קובץ SVG מקומי אחד לתמונת PNG, JPEG או WebP
+ישירות בדפדפן. אפשר לשמור על הגודל המקורי, להגדיר מידות פלט
+מותאמות אישית, לשלוט במילוי הרקע ולהתאים את איכות הייצוא כשהפורמט
+תומך בכך.
 
-## Why it helps
+## איך הוא עוזר
 
-Use it when a design handoff, CMS workflow, social preview, or app asset needs
-an SVG turned into a raster image quickly. It is useful for flattening vector
-art into predictable bitmap output without opening a separate graphics editor.
+השתמשו בו כשמסירת עיצוב, תהליך עבודה ב־CMS, תצוגה מקדימה לרשת חברתית או
+משאב ליישום דורשים המרה מהירה של SVG לתמונת רסטר. הוא שימושי להפיכת גרפיקה
+וקטורית לפלט מפת סיביות צפוי, בלי לפתוח עורך גרפי נפרד.
 
-## How it works
+## איך זה עובד
 
-Upload one SVG file, choose the output format, then adjust width, height,
-background, and quality settings. The converter renders the SVG in your browser
-and prepares a downloadable image file without sending anything to a server.
+העלו קובץ SVG אחד, בחרו את פורמט הפלט ואז התאימו את הרוחב, הגובה,
+הרקע והאיכות. הממיר מצייר את ה־SVG בדפדפן
+ומכין קובץ תמונה להורדה בלי לשלוח דבר לשרת.
 
-## Tips for better exports
+## טיפים לייצוא מוצלח יותר
 
-- Keep aspect ratio enabled if you want to resize without distortion.
-- Choose a background color for JPEG output because JPEG does not support
-  transparency.
-- Use PNG when you want crisp lossless output, or WebP and JPEG when smaller
-  file size matters more.
+- השאירו את שמירת יחס הגובה־רוחב פעילה כדי לשנות גודל ללא עיוות.
+- בחרו צבע רקע לפלט JPEG, כי JPEG אינו תומך
+  בשקיפות.
+- השתמשו ב־PNG לפלט חד ללא אובדן מידע, או ב־WebP וב־JPEG כשגודל
+  קובץ קטן חשוב יותר.

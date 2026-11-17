@@ -45,7 +45,7 @@
   "loadSampleLabel": "Charger un exemple",
   "resetLabel": "Réinitialiser l’éditeur",
   "protocolPlaceholder": "https",
-  "hostnamePlaceholder": "example.com or api.internal",
+  "hostnamePlaceholder": "example.com ou api.internal",
   "portPlaceholder": "443",
   "pathPlaceholder": "/products/blue mug",
   "fragmentPlaceholder": "reviews",

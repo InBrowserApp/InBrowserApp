@@ -16,5 +16,5 @@
   "quoteCharLabel": "Comillas",
   "includeHeaderRowLabel": "Incluir fila de encabezados",
   "escapeFormulaeLabel": "Escapar fórmulas de Excel",
-  "escapeFormulaeTooltip": "Prefixes values that start with =, +, -, or @ so spreadsheet apps treat them as text instead of formulas."
+  "escapeFormulaeTooltip": "Añade un prefijo a los valores que empiezan por =, +, - o @ para que las aplicaciones de hojas de cálculo los traten como texto en lugar de fórmulas."
 }

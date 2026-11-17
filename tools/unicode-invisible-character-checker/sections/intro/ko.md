@@ -1,11 +1,11 @@
-## Why invisible characters matter
+## 보이지 않는 문자가 중요한 이유
 
-Invisible Unicode characters are easy to miss because they do not look broken in a normal editor. The problem only shows up later: copy changes fail, identifiers stop matching, layout wraps oddly, or text starts behaving differently in RTL contexts.
+보이지 않는 유니코드 문자는 일반 편집기에서 이상해 보이지 않아 놓치기 쉽습니다. 문구 수정이 실패하거나, 식별자가 더 이상 일치하지 않거나, 줄바꿈이 이상해지거나, 오른쪽에서 왼쪽으로 쓰는 RTL 환경에서 텍스트가 다르게 동작하는 등 문제가 나중에 드러납니다.
 
-## What this tool catches
+## 감지하는 항목
 
-This checker looks for four common groups: zero-width marks, bidi controls, special spacing characters, and format controls. It tells you exactly where they appear, gives you an annotated preview, and prepares a cleaned version you can copy or export.
+유니코드 보이지 않는 문자 검사기는 제로 폭 문자, 양방향 제어 문자, 특수 공백 문자, 서식 제어 문자라는 네 가지 일반적인 범주를 검사합니다. 정확한 위치를 알려주고 주석이 달린 미리보기를 제공하며, 복사하거나 내보낼 수 있는 정리된 버전을 준비합니다.
 
-## When to use it
+## 활용 시점
 
-Use it after copying text from docs, PDFs, spreadsheets, chat apps, CMS editors, or design tools. It is especially useful when a string looks normal but comparisons, rendering, or downstream processing keep behaving strangely.
+문서, PDF, 스프레드시트, 채팅 앱, CMS 편집기, 디자인 도구에서 텍스트를 복사한 뒤 사용하세요. 문자열이 정상으로 보이지만 비교, 렌더링, 후속 처리에서 계속 이상하게 동작할 때 특히 유용합니다.

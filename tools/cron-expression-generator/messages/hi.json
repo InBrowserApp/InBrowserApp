@@ -1,6 +1,6 @@
 {
   "meta": {
-    "name": "Cron Expression Generator",
+    "name": "Cron एक्सप्रेशन जनरेटर",
     "description": "दृश्य नियंत्रणों, प्रीसेट और आगामी रन पूर्वावलोकन के साथ पांच-फ़ील्ड cron expressions बनाएं।"
   },
   "actions": {
@@ -9,7 +9,7 @@
     "reset": "रीसेट करें"
   },
   "output": {
-    "title": "Cron expression",
+    "title": "Cron एक्सप्रेशन",
     "description": "जनरेट की गई पांच-फ़ील्ड expression को ऐसे शेड्यूलर में कॉपी करें जो मानक minute hour day month weekday सिंटैक्स का उपयोग करता हो।",
     "expressionLabel": "जनरेट की गई expression",
     "summaryLabel": "सरल सारांश",

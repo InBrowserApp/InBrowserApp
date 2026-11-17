@@ -1,4 +1,4 @@
 {
-  "name": "JSON Diff Path",
+  "name": "JSON-Diff-Pfad",
   "description": "Zwei JSON-Dokumente vergleichen und pfadbasierte Diffs mit JSON-Pointer-Pfaden und RFC-6902-JSON-Patch-Ausgabe erzeugen."
 }

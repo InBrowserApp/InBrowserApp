@@ -1,8 +1,10 @@
 {
+  "encodeLabel": "Mã hóa",
+  "decodeLabel": "Giải mã",
   "plainTextLabel": "Văn bản thuần",
   "plainTextPlaceholder": "Nhập văn bản để mã hóa…",
   "plainTextDescription": "Dán hoặc nhập bất kỳ văn bản UTF-8 nào, bao gồm cả biểu tượng cảm xúc và ký tự không phải Latinh.",
-  "encodedTextLabel": "Đầu ra Base64",
+  "encodedTextLabel": "Base64",
   "encodedTextPlaceholder": "Dán Base64 để giải mã…",
   "encodedTextDescription": "Chỉnh sửa trực tiếp văn bản Base64 để giải mã nó trở lại văn bản thuần.",
   "invalidBase64Title": "Giá trị Base64 chưa hợp lệ.",

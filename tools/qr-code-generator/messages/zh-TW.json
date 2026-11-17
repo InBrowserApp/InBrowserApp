@@ -73,5 +73,6 @@
   "jpgDownloadLabel": "JPG",
   "svgDownloadLabel": "SVG",
   "webpDownloadLabel": "WebP",
-  "qrAlt": "產生的 QR Code"
+  "qrAlt": "產生的 QR Code",
+  "renderError": "無法呈現 QR Code。"
 }

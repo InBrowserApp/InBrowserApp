@@ -1,11 +1,11 @@
-## What this text diff is for
+## Kegunaan pembanding teks ini
 
-Use this tool when you need to compare two versions of copy, code, notes, or configuration before you merge, publish, or send anything out.
+Gunakan alat ini saat Anda perlu membandingkan dua versi teks, kode, catatan, atau konfigurasi sebelum menggabungkan, menerbitkan, atau mengirimkannya.
 
-## How to read the result
+## Cara membaca hasil
 
-The side-by-side view helps you scan line numbers and changed fragments quickly. Switch to the unified view when you need a compact patch-style output for review, handoff, or documentation.
+Tampilan berdampingan membantu Anda memeriksa nomor baris dan bagian yang berubah dengan cepat. Beralihlah ke tampilan gabungan saat Anda membutuhkan keluaran ringkas bergaya patch untuk peninjauan, serah terima, atau dokumentasi.
 
-## When the options matter
+## Kapan opsi diperlukan
 
-Ignore case when capitalization is noise. Ignore whitespace when indentation or spacing should not count as a real edit. Hide unchanged rows when you only want to inspect what actually moved.
+Abaikan huruf besar/kecil saat kapitalisasi tidak penting. Abaikan spasi saat indentasi atau jarak seharusnya tidak dianggap sebagai suntingan. Sembunyikan baris yang tidak berubah saat Anda hanya ingin memeriksa bagian yang benar-benar berubah.

@@ -1,6 +1,6 @@
 ## Co robi to narzędzie
 
-PDF Splitter pozwala otworzyć plik PDF w przeglądarce, wybrać strony według
+Narzędzie do dzielenia PDF pozwala otworzyć plik PDF w przeglądarce, wybrać strony według
 zakresu albo numeru strony i wygenerować mniejszy dokument. Możesz wyodrębnić
 wybrane strony do jednego pliku PDF, podzielić każdy wpisany zakres na osobny
 plik PDF albo podzielić każdą wybraną stronę do osobnego pliku i pobrać wyniki

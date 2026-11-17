@@ -19,7 +19,7 @@
   "addUrlEntryLabel": "Ajouter une URL",
   "sitemapEntriesLabel": "Fichiers sitemap",
   "sitemapEntriesDescription": "Chaque ligne devient un enregistrement <sitemap> dans l’index.",
-  "sitemapEntryLabel": "Sitemap {index}",
+  "sitemapEntryLabel": "Plan de site {index}",
   "addSitemapEntryLabel": "Ajouter un sitemap",
   "removeEntryLabel": "Supprimer",
   "locationLabel": "Emplacement",

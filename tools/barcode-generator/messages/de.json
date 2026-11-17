@@ -1,9 +1,9 @@
 {
-  "options": "Options",
+  "options": "Optionen",
   "optionsDescription": "Wählen Sie ein Barcode-Format und passen Sie Größe, Beschriftung und Farben an.",
   "preview": "Preview",
-  "previewDescription": "Review the generated barcode and export it as PNG, SVG, JPEG, or WebP.",
-  "download": "Download",
+  "previewDescription": "Prüfe den erzeugten Barcode und exportiere ihn als PNG, SVG, JPEG oder WebP.",
+  "download": "Herunterladen",
   "text": "Text",
   "textPlaceholder": "Geben Sie Inhalt ein...",
   "format": "Format",
@@ -20,5 +20,6 @@
   "center": "Mitte",
   "right": "Rechts",
   "top": "Oben",
-  "bottom": "Unten"
+  "bottom": "Unten",
+  "renderError": "Barcode konnte nicht gerendert werden."
 }

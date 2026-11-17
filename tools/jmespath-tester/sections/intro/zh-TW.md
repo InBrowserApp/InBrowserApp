@@ -1,18 +1,11 @@
-## What It Does
+## 工具功能
 
-JMESPath 測試器 lets you run a JMESPath expression against JSON data directly
-in the browser. You can inspect the matched result, copy it, or download it as
-formatted JSON without leaving the page.
+JMESPath 測試器讓你直接在瀏覽器中對 JSON 資料執行 JMESPath 表達式。你可以檢視符合的結果、複製結果，或將結果下載為格式化的 JSON，無須離開頁面。
 
-## When To Use It
+## 適合使用的時機
 
-Use it when you need to prototype a JMESPath query, debug a filter expression,
-or verify exactly which values a JSON query will return before you embed that
-expression somewhere else.
+需要試寫 JMESPath 查詢、偵錯篩選表達式，或在將表達式嵌入其他地方前，確認 JSON 查詢確切會傳回哪些值時，都可以使用此工具。
 
-## What To Expect
+## 處理流程
 
-The tool validates the JSON input first, then evaluates the JMESPath
-expression. If either side is invalid, the error is surfaced immediately. When
-the query succeeds, the result is formatted as JSON and the result count is
-shown alongside the output.
+此工具會先驗證輸入的 JSON，再計算 JMESPath 表達式的結果。任一項無效時，都會立即顯示錯誤。查詢成功後，結果會格式化為 JSON，並在輸出旁顯示結果數量。

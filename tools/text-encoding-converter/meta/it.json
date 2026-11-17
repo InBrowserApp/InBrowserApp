@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore di codifica del testo",
+  "description": "Converti file di testo tra UTF-8, GBK, Big5 e altre codifiche. Visualizza l'anteprima del testo illeggibile, imposta BOM e fine riga e scarica in locale senza perdere caratteri."
+}

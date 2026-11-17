@@ -1,27 +1,27 @@
-## What this tool does
+## מה הכלי עושה
 
-This placeholder image generator creates clean dummy graphics with custom
-sizes, solid fills or gradients, and centered text directly in your browser.
-You can export each placeholder as PNG, SVG, JPEG, or WebP, including
-Retina-friendly 2x and 3x versions.
+מחולל תמונות שומר מקום זה יוצר גרפיקת דמה נקייה עם מידות מותאמות אישית,
+מילוי אחיד או מעברי צבע וטקסט ממורכז, ישירות בדפדפן.
+אפשר לייצא כל תמונה כ־PNG, SVG, JPEG או WebP, כולל
+גרסאות בגודל 2x ו־3x המתאימות למסכי Retina.
 
-## Why it helps
+## איך הוא עוזר
 
-Use it for design mockups, CMS seed content, empty states, social media layout
-planning, or API placeholders. It is useful when you need a quick asset with a
-predictable size and style without opening a design app.
+השתמשו בו להדמיות עיצוב, לתוכן התחלתי במערכות CMS, למצבים ריקים, לתכנון
+פריסות ברשתות חברתיות או למצייני מקום ב־API. הוא שימושי כשדרוש משאב מהיר
+בגודל ובסגנון צפויים, בלי לפתוח יישום עיצוב.
 
-## How it works
+## איך זה עובד
 
-Choose a preset or enter your own width and height. Pick a solid color or
-gradient, add custom copy if needed, then adjust text size, export scale, and
-quality. The preview updates instantly so you can download the format that fits
-your workflow.
+בחרו הגדרה מוכנה או הזינו רוחב וגובה משלכם. בחרו צבע אחיד או
+מעבר צבע, הוסיפו טקסט לפי הצורך ואז התאימו את גודל הטקסט, קנה המידה לייצוא
+והאיכות. התצוגה המקדימה מתעדכנת מיד כדי שתוכלו להוריד את הפורמט המתאים
+לתהליך העבודה שלכם.
 
-## Tips for better placeholders
+## טיפים לתמונות שומר מקום טובות יותר
 
-- Leave the text field empty if you want the tool to show the dimensions
-  automatically.
-- Use gradients for hero banners and solid fills for utility placeholders.
-- Export SVG when you want a crisp scalable asset, or PNG, JPEG, and WebP when
-  you need raster files.
+- השאירו את שדה הטקסט ריק אם תרצו שהכלי יציג את המידות
+  אוטומטית.
+- השתמשו במעברי צבע לבאנרים ראשיים ובמילוי אחיד לתמונות שומר מקום שימושיות.
+- ייצאו SVG כשדרוש משאב חד שניתן לשינוי גודל, או PNG, JPEG ו־WebP כשדרושים
+  קובצי רסטר.

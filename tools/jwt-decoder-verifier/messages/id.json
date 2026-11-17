@@ -35,7 +35,7 @@
     "failedDescription": "Tanda tangan tidak cocok dengan kunci dan algoritma yang diberikan."
   },
   "claims": {
-    "title": "Registered claims",
+    "title": "Klaim terdaftar",
     "description": "Pemeriksaan cepat untuk klaim JWT umum berbasis waktu.",
     "emptyTitle": "Tidak ada klaim waktu untuk diperiksa",
     "emptyDescription": "Payload ini tidak menyertakan klaim exp, nbf, atau iat.",

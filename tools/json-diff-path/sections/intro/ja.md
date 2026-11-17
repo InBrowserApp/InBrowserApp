@@ -1,6 +1,6 @@
 ## 概要
 
-JSON Diff Path は、2つの JSON ドキュメントを比較し、すべての構造変更を JSONPath と JSON Pointer の両方で読めるパス記録に変換します。
+JSON差分パス は、2つの JSON ドキュメントを比較し、すべての構造変更を JSONPath と JSON Pointer の両方で読めるパス記録に変換します。
 
 ## こんなときに使う
 

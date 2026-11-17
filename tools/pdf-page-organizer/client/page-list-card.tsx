@@ -4,7 +4,6 @@ import { Badge } from "@workspace/ui/components/ui/badge"
 import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
@@ -17,7 +16,7 @@ import {
   EmptyMedia,
   EmptyTitle,
 } from "@workspace/ui/components/ui/empty"
-import { FileText, RefreshCcw } from "@workspace/ui/icons"
+import { FileText, RefreshCcw, Undo2 } from "@workspace/ui/icons"
 
 import { PageTile } from "./page-tile"
 
@@ -29,6 +28,8 @@ import type {
 import type { PointerEvent as ReactPointerEvent } from "react"
 
 type PageListCardProps = Readonly<{
+  canReset: boolean
+  canUndo: boolean
   disabled: boolean
   isRenderingPreviews: boolean
   messages: PdfPageOrganizerMessages
@@ -37,6 +38,7 @@ type PageListCardProps = Readonly<{
   onMoveUp: (index: number) => void
   onRemove: (pageId: string) => void
   onReset: () => void
+  onUndo: () => void
   onRotateClockwise: (pageId: string) => void
   pages: readonly PdfPageEntry[]
   previewError: string
@@ -63,6 +65,8 @@ function getPageIndexFromPoint(clientX: number, clientY: number) {
 }
 
 function PageListCard({
+  canReset,
+  canUndo,
   disabled,
   isRenderingPreviews,
   messages,
@@ -71,6 +75,7 @@ function PageListCard({
   onMoveUp,
   onRemove,
   onReset,
+  onUndo,
   onRotateClockwise,
   pages,
   previewError,
@@ -87,6 +92,7 @@ function PageListCard({
   }
 
   function handlePointerDragStart(index: number, event: ReactPointerEvent) {
+    if (disabled) return
     setPointerDrag({ fromIndex: index, pointerId: event.pointerId })
     setDragOverIndex(index)
   }
@@ -111,7 +117,7 @@ function PageListCard({
     const toIndex =
       getPageIndexFromPoint(event.clientX, event.clientY) ?? dragOverIndex
 
-    if (toIndex !== null && pointerDrag.fromIndex !== toIndex) {
+    if (!disabled && toIndex !== null && pointerDrag.fromIndex !== toIndex) {
       announceMove(pointerDrag.fromIndex, toIndex)
       onMovePage(pointerDrag.fromIndex, toIndex)
     }
@@ -164,30 +170,41 @@ function PageListCard({
 
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="flex flex-wrap items-start justify-between gap-4">
         <div className="min-w-0">
           <CardTitle>{messages.pagesTitle}</CardTitle>
           <CardDescription>{messages.pagesDescription}</CardDescription>
         </div>
-        <CardAction>
+        <div className="flex max-w-full flex-wrap gap-2">
           <Button
-            className="max-w-full text-center whitespace-normal"
-            disabled={disabled || pages.length === 0}
+            className="h-auto min-h-11 whitespace-normal"
+            disabled={disabled || !canUndo}
+            onClick={onUndo}
+            size="sm"
+            type="button"
+            variant="outline"
+          >
+            <Undo2 aria-hidden="true" data-icon="inline-start" />
+            {messages.undoLabel}
+          </Button>
+          <Button
+            className="h-auto min-h-11 whitespace-normal"
+            disabled={disabled || !canReset}
             onClick={onReset}
             size="sm"
             type="button"
             variant="outline"
           >
-            <RefreshCcw data-icon="inline-start" />
+            <RefreshCcw aria-hidden="true" data-icon="inline-start" />
             {messages.resetPagesLabel}
           </Button>
-        </CardAction>
+        </div>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
         {pages.length ? (
           <>
             <div className="flex flex-wrap items-center gap-2">
-              <Badge variant="secondary">
+              <Badge variant="secondary" role="status">
                 {messages.outputPagesLabel}: {pages.length}
               </Badge>
               {isRenderingPreviews ? (
@@ -210,7 +227,7 @@ function PageListCard({
 
             <ol
               aria-describedby={dragHintId}
-              className="grid gap-3 sm:grid-cols-2 2xl:grid-cols-3"
+              className="grid grid-cols-2 gap-4 sm:grid-cols-[repeat(auto-fill,minmax(13rem,1fr))]"
             >
               {pages.map((page, index) => (
                 <PageTile
@@ -242,7 +259,7 @@ function PageListCard({
           <Empty className="min-h-64 border border-dashed border-border/80 bg-muted/20">
             <EmptyHeader>
               <EmptyMedia variant="icon">
-                <FileText />
+                <FileText aria-hidden="true" />
               </EmptyMedia>
               <EmptyTitle>{messages.emptyPagesTitle}</EmptyTitle>
               <EmptyDescription>

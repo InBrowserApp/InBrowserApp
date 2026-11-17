@@ -1,11 +1,11 @@
-## What this text diff is for
+## ما الغرض من مقارنة النصوص
 
-Use this tool when you need to compare two versions of copy, code, notes, or configuration before you merge, publish, or send anything out.
+استخدم هذه الأداة عندما تحتاج إلى مقارنة نسختين من محتوى أو شيفرة أو ملاحظات أو إعدادات قبل دمجها أو نشرها أو إرسالها.
 
-## How to read the result
+## كيف تقرأ النتيجة
 
-The side-by-side view helps you scan line numbers and changed fragments quickly. Switch to the unified view when you need a compact patch-style output for review, handoff, or documentation.
+يساعدك العرض جنبًا إلى جنب على مراجعة أرقام الأسطر والمقاطع المعدّلة بسرعة. انتقل إلى العرض الموحّد عندما تحتاج إلى ناتج موجز بتنسيق رقعة تغييرات للمراجعة أو التسليم أو التوثيق.
 
-## When the options matter
+## متى تفيد الخيارات
 
-Ignore case when capitalization is noise. Ignore whitespace when indentation or spacing should not count as a real edit. Hide unchanged rows when you only want to inspect what actually moved.
+تجاهل حالة الأحرف عندما لا يكون الاختلاف بين الأحرف الكبيرة والصغيرة مهمًا. وتجاهل المسافات البيضاء عندما لا ينبغي احتساب تغييرات المسافة البادئة أو التباعد كتعديلات فعلية. أخفِ الصفوف التي لم تتغير عندما تريد فحص ما تغيّر فقط.
