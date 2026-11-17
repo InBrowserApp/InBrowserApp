@@ -74,7 +74,6 @@ function draw(shape = "rectangle", start = [100, 100], end = [300, 200]) {
   fireEvent.click(
     screen.getByRole("button", {
       name: messages[shape as "rectangle" | "brush" | "ellipse"],
-      exact: true,
     })
   )
   const svg = screen.getByRole("application")
@@ -126,14 +125,10 @@ describe("image redactor workspace", () => {
     openExample()
     draw()
     expect(screen.getByText("1 regions")).toBeTruthy()
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.blur, exact: true })
-    )
+    fireEvent.click(screen.getByRole("button", { name: messages.blur }))
     expect(screen.getByRole("slider", { name: messages.strength })).toBeTruthy()
     draw("ellipse", [350, 100], [450, 200])
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.pixelate, exact: true })
-    )
+    fireEvent.click(screen.getByRole("button", { name: messages.pixelate }))
     draw("brush", [500, 300], [600, 400])
     expect(
       screen.getByRole("slider", { name: messages.brushSize })
@@ -179,12 +174,8 @@ describe("image redactor workspace", () => {
       fireEvent.click(screen.getByRole("button", { name: messages.zoomOut }))
     for (let i = 0; i < 16; i++)
       fireEvent.click(screen.getByRole("button", { name: messages.zoomIn }))
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.fit, exact: true })
-    )
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.download, exact: true })
-    )
+    fireEvent.click(screen.getByRole("button", { name: messages.fit }))
+    fireEvent.click(screen.getByRole("button", { name: messages.download }))
     await waitFor(() => expect(exportImage).toHaveBeenCalled())
     fireEvent.click(screen.getByRole("combobox", { name: messages.format }))
     fireEvent.click(screen.getByRole("option", { name: "JPEG" }))
@@ -194,7 +185,7 @@ describe("image redactor workspace", () => {
     })
     expect(
       screen
-        .getByRole("button", { name: messages.brush, exact: true })
+        .getByRole("button", { name: messages.brush })
         .getAttribute("aria-pressed")
     ).toBe("false")
   })
@@ -209,13 +200,9 @@ describe("image redactor workspace", () => {
     expect(screen.getByText(messages.imageError)).toBeTruthy()
     fireEvent.click(screen.getByRole("button", { name: messages.tryExample }))
     vi.mocked(exportImage).mockRejectedValueOnce(new Error("encode"))
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.download, exact: true })
-    )
+    fireEvent.click(screen.getByRole("button", { name: messages.download }))
     expect(await screen.findByText(messages.exportError)).toBeTruthy()
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.copy, exact: true })
-    )
+    fireEvent.click(screen.getByRole("button", { name: messages.copy }))
     expect(
       await screen.findByRole("button", { name: messages.copied })
     ).toBeTruthy()
@@ -224,9 +211,7 @@ describe("image redactor workspace", () => {
   it("moves, resizes, rotates, and cancels pointer gestures without adding history", () => {
     openExample()
     draw()
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.select, exact: true })
-    )
+    fireEvent.click(screen.getByRole("button", { name: messages.select }))
     const svg = screen.getByRole("application")
     const pointer = (
       type: "pointerDown" | "pointerMove" | "pointerUp",
@@ -311,9 +296,7 @@ describe("image redactor workspace", () => {
       target: { value: "#00ff00" },
     })
     fireEvent.blur(screen.getByLabelText(messages.color))
-    fireEvent.click(
-      screen.getByRole("button", { name: messages.blur, exact: true })
-    )
+    fireEvent.click(screen.getByRole("button", { name: messages.blur }))
     fireEvent.keyDown(screen.getByRole("slider", { name: messages.strength }), {
       key: "ArrowRight",
     })
@@ -328,7 +311,7 @@ describe("image redactor workspace", () => {
     fireEvent.keyDown(screen.getByLabelText(messages.chooseImage), { key: "b" })
     expect(
       screen
-        .getByRole("button", { name: messages.brush, exact: true })
+        .getByRole("button", { name: messages.brush })
         .getAttribute("aria-pressed")
     ).toBe("true")
   })
