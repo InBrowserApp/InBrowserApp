@@ -14,6 +14,6 @@ const Intro = resolveLocale<AstroComponentFactory>(import.meta.glob("./sections/
 ---
 <ToolPageShell title={meta.name} description={meta.description}>
   <Client client:load messages={messages} lang={lang} />
-  <ToolArticle><Intro /></ToolArticle>
+  <ToolArticle className="[&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate]"><Intro /></ToolArticle>
   <p class="text-xs text-muted-foreground"><a href="/licenses/sql-js.txt">sql.js · MIT</a></p>
 </ToolPageShell>
