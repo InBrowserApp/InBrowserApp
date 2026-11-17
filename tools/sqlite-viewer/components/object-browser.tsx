@@ -59,8 +59,8 @@ export function ObjectBrowser({
             onClick={() => onSelect(object)}
             title={object.name}
           >
-            <span dir="auto" className="min-w-0 flex-1 truncate text-start">
-              {object.name}
+            <span className="min-w-0 flex-1 truncate text-start">
+              <bdi>{object.name}</bdi>
             </span>
             <span className="text-xs text-muted-foreground">
               {m[object.type]}

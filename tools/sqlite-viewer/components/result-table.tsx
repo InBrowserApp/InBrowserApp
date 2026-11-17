@@ -116,6 +116,7 @@ export function ResultTable({
         </p>
       ) : null}
       <div
+        dir="ltr"
         className="max-h-[32rem] min-w-0 overflow-auto rounded-lg border"
         tabIndex={0}
         role="region"
