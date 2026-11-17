@@ -102,7 +102,6 @@ describe("MAC address organization browser", () => {
     ).toBe("/tools/mac-address-vendor-lookup/?org=Example+Devices")
     expect(screen.getByText("Test City US")).toBeTruthy()
     expect(screen.getByRole("status").textContent).toBe("1–20 of 30")
-    expect(screen.getByText("31 assignments · 30 organizations")).toBeTruthy()
     expect(screen.getByText("Snapshot: Nov 17, 2026")).toBeTruthy()
   })
 
@@ -188,7 +187,6 @@ describe("MAC address organization browser", () => {
     expect(
       screen.getByText(messages.assignmentCount.replace("{count}", "5"))
     ).toBeTruthy()
-    expect(screen.getByText("7 assignments · 2 organizations")).toBeTruthy()
 
     fireEvent.change(
       screen.getByRole("searchbox", { name: messages.vendorSearchLabel }),
@@ -202,7 +200,6 @@ describe("MAC address organization browser", () => {
     expect(
       screen.getByText(messages.assignmentCount.replace("{count}", "6"))
     ).toBeTruthy()
-    expect(screen.getByText("7 assignments · 2 organizations")).toBeTruthy()
   })
 
   test("opens the exact organization and avoids similarly named organizations", async () => {
@@ -214,7 +211,7 @@ describe("MAC address organization browser", () => {
     render(<Client language="en" messages={messages} />)
 
     await screen.findByRole("heading", {
-      name: "Blocks registered to Example Devices",
+      name: "Example Devices",
     })
     expect(screen.getAllByRole("row")).toHaveLength(3)
     expect(screen.queryByText("Example Devices Limited")).toBeNull()
@@ -339,15 +336,11 @@ describe("MAC address organization browser", () => {
     expect(
       screen.getByRole("link", { name: messages.previous }).getAttribute("href")
     ).toBe("/tools/mac-address-vendor-lookup/?org=Bulk+Devices")
+    expect(screen.getByText("London GB")).toBeTruthy()
+    expect(screen.queryByRole("link", { name: "Bulk Devices" })).toBeNull()
     expect(
-      screen
-        .getAllByRole("link", { name: "Bulk Devices" })
-        .every(
-          (link) =>
-            link.getAttribute("href") ===
-            "/tools/mac-address-vendor-lookup/?org=Bulk+Devices"
-        )
-    ).toBe(true)
+      screen.getAllByRole("columnheader").map((cell) => cell.textContent)
+    ).toEqual([messages.prefix, messages.registry])
   })
 
   test("shows an empty state for an organization without assignments in the selected registry", async () => {
@@ -430,7 +423,7 @@ describe("MAC address organization browser", () => {
     expect(window.location.search).toBe("?org=Example+Devices")
   })
 
-  test("copies an exact organization link and localizes navigation", async () => {
+  test("copies an exact organization link and localizes allocation links", async () => {
     const writeText = vi.fn().mockResolvedValue(undefined)
     Object.defineProperty(navigator, "clipboard", {
       configurable: true,
@@ -450,10 +443,7 @@ describe("MAC address organization browser", () => {
     expect(copied.pathname).toBe("/zh-CN/tools/mac-address-vendor-lookup/")
     expect(copied.searchParams.get("org")).toBe("Local & Company")
     expect(
-      screen.getByRole("link", { name: messages.blocks }).getAttribute("href")
-    ).toBe("/zh-CN/tools/mac-address-block-lookup/")
-    expect(
-      screen.getByRole("link", { name: messages.lookup }).getAttribute("href")
-    ).toBe("/zh-CN/tools/mac-address-lookup/")
+      screen.getByRole("link", { name: "AA:11:22/24" }).getAttribute("href")
+    ).toBe("/zh-CN/tools/mac-address-block-lookup/?q=AA1122&registry=CID")
   })
 })

@@ -1,24 +1,21 @@
 {
-  "lookup": "MAC 查询",
-  "blocks": "按区块",
-  "vendors": "按组织",
-  "navigationLabel": "MAC 地址工具",
+  "lookup": "MAC 地址查询",
+  "blocks": "MAC 地址区块查询",
+  "vendors": "MAC 地址厂商查询",
+  "navigationLabel": "相关工具",
   "queryLabel": "MAC 地址或前缀",
   "lookupPlaceholder": "00:1B:63:84:45:E6…",
   "blockPlaceholder": "前缀、组织或登记地址…",
   "vendorPlaceholder": "组织名称或登记地址…",
-  "lookupHint": "输入 MAC 地址，或 24、28、36 位 IEEE 前缀。支持冒号、连字符、点分和无分隔符格式。",
   "blockSearchLabel": "搜索已登记的区块",
   "vendorSearchLabel": "搜索组织",
   "registry": "登记库",
   "allRegistries": "所有登记库",
   "prefix": "前缀",
-  "organization": "登记组织",
-  "address": "组织登记地址",
+  "organization": "组织",
+  "address": "登记地址",
   "range": "地址范围",
   "capacity": "区块内地址数",
-  "normalized": "规范化地址",
-  "addressType": "地址类型",
   "share": "复制链接",
   "copied": "链接已复制",
   "loading": "正在加载 IEEE 登记库…",
@@ -26,11 +23,9 @@
   "retry": "重试",
   "noResults": "没有匹配记录",
   "noResultsHint": "请尝试其他前缀、组织名称或登记库。",
-  "emptyLookup": "查询 MAC 地址",
-  "emptyLookupHint": "在上方输入地址，或尝试示例，查看其登记组织和所属区块。",
+  "emptyLookupHint": "结果将在此处显示。",
   "invalidAddress": "请输入完整的 MAC 地址，或有效的 24、28、36 位前缀。",
   "noAssignment": "未找到登记组织",
-  "noAssignmentHint": "此地址与这份 IEEE 数据快照中的分配记录均不匹配。",
   "previous": "上一页",
   "next": "下一页",
   "pageSummary": "{start}–{end}，共 {total} 条",
@@ -38,10 +33,7 @@
   "organizationCount": "{count} 个组织",
   "source": "IEEE 公开登记库",
   "updated": "数据快照：{date}",
-  "dataSummary": "{assignments} 条分配记录 · {organizations} 个组织",
-  "sourceHint": "查询使用随工具提供的 IEEE 数据快照，在浏览器中运行。",
   "clearOrganization": "所有组织",
-  "organizationBlocks": "登记在 {organization} 名下的区块",
   "examples": "示例",
   "copyAddress": "复制地址",
   "addressCopied": "地址已复制",
@@ -54,19 +46,28 @@
     "prefix": "IEEE 前缀"
   },
   "typeHints": {
-    "universal": "登记组织表明该地址的分配归属，可能与设备品牌不同。",
-    "local": "此地址由本地管理，可能经过随机化。其前缀无法可靠地识别设备厂商。",
-    "multicast": "这是一个组地址，无法根据 IEEE 单播地址分配记录推断其厂商。",
-    "broadcast": "此地址向本地网络中的所有设备发送数据，不对应某个厂商。",
-    "zero": "全零地址是未指定地址，无法用于识别设备厂商。",
-    "prefix": "前缀用于识别已登记的区块。查询完整 MAC 地址时，优先匹配较长的分配前缀。"
+    "local": "常用于 Wi-Fi 私有地址。",
+    "multicast": "用于向多个设备发送数据的组地址。",
+    "broadcast": "可发送至本地网络中的所有设备。",
+    "zero": "未指定的地址。"
   },
-  "cidHint": "CID 用于标识使用本地寻址的组织，不代表全球唯一的 MAC 地址分配。",
-  "registrySizes": "MA-L：/24 · MA-M：/28 · MA-S 和 IAB：/36 · CID：公司标识符",
-  "lookupAboutTitle": "MAC 地址查询的工作原理",
-  "lookupAboutBody": "MAC 地址共有 48 位。IEEE 向组织分配 24、28 或 36 位的前缀。本工具匹配最长的已登记前缀，并显示获配组织、地址范围和所属登记库。本地管理地址和组地址会单独标识。",
-  "blocksAboutTitle": "浏览 IEEE 地址区块",
-  "blocksAboutBody": "浏览全部五个 IEEE 公开登记库。搜索前缀、组织或登记地址，然后打开区块查看其地址范围和容量。MA-L 分配 16,777,216 个地址，MA-M 分配 1,048,576 个，MA-S 或 IAB 分配 4,096 个。CID 是用于本地寻址的公司标识符。",
-  "vendorsAboutTitle": "查找组织登记的区块",
-  "vendorsAboutBody": "搜索组织名称及其登记的邮政地址，然后选择组织，查看其所有分配记录。名称和地址来自 IEEE 登记信息，按登记内容显示。获配组织不一定是设备的品牌方，这些地址也不表示设备的位置。"
+  "cidHint": "用于本地分配地址的公司标识符。",
+  "about": {
+    "title": "浏览 IEEE MAC 地址分配记录",
+    "intro": "IEEE 地址区块为组织分配固定前缀，以及该前缀下的剩余地址空间。搜索登记库，可查看已知前缀、探索较大前缀内的较小分配区块，或查找登记在某个组织名下的区块。",
+    "sections": [
+      {
+        "title": "选择登记库",
+        "body": "MA-L 使用 24 位前缀，包含 16,777,216 个地址。MA-M 使用 28 位前缀，包含 1,048,576 个地址。MA-S 和较早的 IAB 登记库使用 36 位前缀，每个区块包含 4,096 个地址。CID 记录用于标识使用本地寻址的公司。登记库筛选可将列表限定为一种分配类型。"
+      },
+      {
+        "title": "搜索前缀并查看范围",
+        "body": "输入无分隔符、冒号分隔、连字符分隔、点分或 CIDR 格式的前缀。部分前缀可找到匹配的分配记录；完整的 MAC 地址可找到包含该地址的前缀。也可以搜索组织名称和登记地址。打开前缀，即可查看首个地址、末个地址和容量，以及匹配的登记信息。"
+      },
+      {
+        "title": "跨登记库查看分配记录",
+        "body": "选择组织名称，可在组织查询工具中打开该组织的完整分配列表。结果采用分页显示，“复制链接”会将搜索内容、登记库和页码保存在 URL 中。名称、地址和分配记录来自存储在共用快照中的五份 IEEE 公开登记数据。对比结果时，可通过来源链接和快照日期轻松辨识所用的数据集。"
+      }
+    ]
+  }
 }

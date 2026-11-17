@@ -1,4 +1,5 @@
 ---
+import { makeToolHref } from "@workspace/mac-address"
 import { resolveLocale } from "@workspace/tool-sdk"
 import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
@@ -19,7 +20,23 @@ const messages = resolveLocale<typeof EnglishMessages>(
 <ToolPageShell title={meta.name} description={meta.description}>
   <Client client:load language={lang} messages={messages} />
   <ToolArticle>
-    <h2>{messages.lookupAboutTitle}</h2>
-    <p>{messages.lookupAboutBody}</p>
+    <h2>{messages.about.title}</h2>
+    <p>{messages.about.intro}</p>
+    {messages.about.sections.map((section) => (
+      <section>
+        <h3>{section.title}</h3>
+        <p>{section.body}</p>
+      </section>
+    ))}
   </ToolArticle>
+  <nav aria-label={messages.navigationLabel} class="border-t pt-6">
+    <ul class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+      <li>
+        <a class="rounded-sm underline underline-offset-4 hover:text-muted-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring" href={makeToolHref(lang, "mac-address-block-lookup")}>{messages.blocks}</a>
+      </li>
+      <li>
+        <a class="rounded-sm underline underline-offset-4 hover:text-muted-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring" href={makeToolHref(lang, "mac-address-vendor-lookup")}>{messages.vendors}</a>
+      </li>
+    </ul>
+  </nav>
 </ToolPageShell>

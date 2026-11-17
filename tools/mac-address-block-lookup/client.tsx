@@ -11,14 +11,12 @@ import {
 } from "@workspace/mac-address"
 import { loadDatabase } from "@workspace/mac-address/load"
 import { MacAddressDataStatus } from "@workspace/ui/components/tool/mac-address-data-status"
-import { MacAddressNavigation } from "@workspace/ui/components/tool/mac-address-navigation"
 import { MacAddressPagination } from "@workspace/ui/components/tool/mac-address-pagination"
 import { MacAddressRecords } from "@workspace/ui/components/tool/mac-address-records"
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -73,11 +71,6 @@ function MacAddressBlockLookupClient({
       }),
     [data, deferredQuery, query.registry]
   )
-  const organizationTotal = useMemo(
-    () =>
-      new Set((data?.records ?? []).map((record) => record.organization)).size,
-    [data]
-  )
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
   const page = Math.min(query.page, pageCount)
   const start = (page - 1) * PAGE_SIZE
@@ -89,50 +82,36 @@ function MacAddressBlockLookupClient({
   const parsed = parseMacInput(deferredQuery)
   const exact =
     parsed && filtered.find((record) => record.assignment === parsed.hex)
-  const navItems = [
-    {
-      key: "lookup" as const,
-      label: messages.lookup,
-      href: makeToolHref(language, "mac-address-lookup"),
-    },
-    {
-      key: "blocks" as const,
-      label: messages.blocks,
-      href: makeToolHref(language, SLUG),
-    },
-    {
-      key: "vendors" as const,
-      label: messages.vendors,
-      href: makeToolHref(language, "mac-address-vendor-lookup"),
-    },
-  ]
+  const showAllocation =
+    !exact ||
+    filtered.some(
+      (record) =>
+        record.assignment !== exact.assignment ||
+        record.registry !== exact.registry
+    )
 
   return (
     <div className="flex min-w-0 flex-col gap-6">
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <MacAddressNavigation active="blocks" items={navItems} />
-        <ToolCopyButton
-          value={shareUrl}
-          copyLabel={messages.share}
-          copiedLabel={messages.copied}
-        />
-      </div>
       <Card>
-        <CardHeader>
-          <CardTitle>{messages.blocks}</CardTitle>
-          <CardDescription dir="auto">{messages.registrySizes}</CardDescription>
-        </CardHeader>
         <CardContent>
           <FieldGroup>
             <Field>
-              <FieldLabel htmlFor={searchId}>
-                {messages.blockSearchLabel}
-              </FieldLabel>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <FieldLabel htmlFor={searchId}>
+                  {messages.blockSearchLabel}
+                </FieldLabel>
+                <ToolCopyButton
+                  value={shareUrl}
+                  copyLabel={messages.share}
+                  copiedLabel={messages.copied}
+                />
+              </div>
               <InputGroup className="h-11">
                 <InputGroupInput
                   id={searchId}
                   name="mac-block-search"
                   type="search"
+                  dir="auto"
                   autoComplete="off"
                   spellCheck={false}
                   placeholder={messages.blockPlaceholder}
@@ -187,9 +166,6 @@ function MacAddressBlockLookupClient({
           </FieldGroup>
         </CardContent>
       </Card>
-      {exact ? (
-        <BlockDetails record={exact} language={language} messages={messages} />
-      ) : null}
       {data ? (
         <Card aria-busy={query.q !== deferredQuery}>
           <CardHeader>
@@ -201,6 +177,13 @@ function MacAddressBlockLookupClient({
                 )}
               </h2>
             </CardTitle>
+            {exact ? (
+              <BlockDetails
+                record={exact}
+                language={language}
+                messages={messages}
+              />
+            ) : null}
           </CardHeader>
           <CardContent className="px-0">
             {filtered.length === 0 ? (
@@ -216,6 +199,7 @@ function MacAddressBlockLookupClient({
             ) : (
               <MacAddressRecords
                 labels={messages}
+                showAllocation={showAllocation}
                 rows={pageRecords.map((record) => ({
                   key: `${record.registry}-${record.assignment}-${record.organization}-${record.address}`,
                   prefix: getBlockRange(record).prefix,
@@ -264,13 +248,6 @@ function MacAddressBlockLookupClient({
                   timeZone: "UTC",
                 }).format(new Date(data.updatedAt))
               )
-            : undefined
-        }
-        summary={
-          data
-            ? messages.dataSummary
-                .replace("{assignments}", formatNumber(data.records.length))
-                .replace("{organizations}", formatNumber(organizationTotal))
             : undefined
         }
       />

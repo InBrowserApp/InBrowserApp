@@ -1,24 +1,21 @@
 {
-  "lookup": "Consulta MAC",
-  "blocks": "Por bloco",
-  "vendors": "Por organização",
-  "navigationLabel": "Ferramentas de endereços MAC",
+  "lookup": "Consulta de endereços MAC",
+  "blocks": "Consulta de blocos de endereços MAC",
+  "vendors": "Consulta de fabricantes MAC",
+  "navigationLabel": "Ferramentas relacionadas",
   "queryLabel": "Endereço MAC ou prefixo",
   "lookupPlaceholder": "00:1B:63:84:45:E6…",
   "blockPlaceholder": "Prefixo, organização ou endereço postal…",
   "vendorPlaceholder": "Nome ou endereço postal da organização…",
-  "lookupHint": "Digite um endereço MAC ou um prefixo IEEE de 24, 28 ou 36 bits. São aceitos formatos com dois-pontos, hífens, pontos ou sem separadores.",
   "blockSearchLabel": "Pesquisar blocos registrados",
   "vendorSearchLabel": "Pesquisar organizações",
   "registry": "Registro",
   "allRegistries": "Todos os registros",
   "prefix": "Prefixo",
-  "organization": "Organização registrada",
-  "address": "Endereço postal da organização",
+  "organization": "Organização",
+  "address": "Endereço registrado",
   "range": "Intervalo de endereços",
   "capacity": "Endereços no bloco",
-  "normalized": "Endereço normalizado",
-  "addressType": "Tipo de endereço",
   "share": "Copiar link",
   "copied": "Link copiado",
   "loading": "Carregando registro IEEE…",
@@ -26,11 +23,9 @@
   "retry": "Tentar novamente",
   "noResults": "Nenhum registro correspondente",
   "noResultsHint": "Tente outro prefixo, nome de organização ou registro.",
-  "emptyLookup": "Consultar um endereço MAC",
-  "emptyLookupHint": "Digite um endereço acima ou experimente um exemplo para ver a organização e o bloco registrados.",
+  "emptyLookupHint": "Os resultados aparecem aqui.",
   "invalidAddress": "Digite um endereço MAC completo ou um prefixo válido de 24, 28 ou 36 bits.",
   "noAssignment": "Nenhuma organização registrada encontrada",
-  "noAssignmentHint": "Este endereço não corresponde a nenhuma alocação nesta cópia dos dados do IEEE.",
   "previous": "Anterior",
   "next": "Próximo",
   "pageSummary": "{start}–{end} de {total}",
@@ -38,10 +33,7 @@
   "organizationCount": "Organizações: {count}",
   "source": "Registro público do IEEE",
   "updated": "Cópia dos dados: {date}",
-  "dataSummary": "{assignments} alocações · {organizations} organizações",
-  "sourceHint": "A consulta é feita no navegador usando uma cópia dos dados do IEEE incluída na ferramenta.",
   "clearOrganization": "Todas as organizações",
-  "organizationBlocks": "Blocos registrados em nome de {organization}",
   "examples": "Exemplos",
   "copyAddress": "Copiar endereço",
   "addressCopied": "Endereço copiado",
@@ -54,19 +46,28 @@
     "prefix": "Prefixo IEEE"
   },
   "typeHints": {
-    "universal": "A organização registrada identifica o titular da alocação de endereços, que pode ser diferente da marca do dispositivo.",
-    "local": "Este endereço é administrado localmente e pode ser aleatório. Seu prefixo não permite identificar com segurança o fabricante de um dispositivo.",
-    "multicast": "Este é um endereço de grupo. Não é possível deduzir um fabricante a partir de uma alocação IEEE de endereços de destino único.",
-    "broadcast": "Este endereço envia dados a todos os dispositivos da rede local; não está associado a um fabricante específico.",
-    "zero": "O endereço com todos os bits zerados é um endereço não especificado; ele não identifica o fabricante de um dispositivo.",
-    "prefix": "Um prefixo identifica um bloco registrado. Na consulta de um endereço MAC completo, as alocações com prefixos mais longos têm prioridade."
+    "local": "Usado com frequência em endereços Wi-Fi privados.",
+    "multicast": "Um endereço de grupo usado para alcançar vários dispositivos.",
+    "broadcast": "Alcança todos os dispositivos da rede local.",
+    "zero": "Um endereço não especificado."
   },
-  "cidHint": "O CID identifica uma organização para endereçamento local. Não é uma alocação de endereços MAC globalmente únicos.",
-  "registrySizes": "MA-L: /24 · MA-M: /28 · MA-S e IAB: /36 · CID: identificador de empresa",
-  "lookupAboutTitle": "Como funciona a consulta de endereços MAC",
-  "lookupAboutBody": "Um endereço MAC tem 48 bits. O IEEE atribui às organizações prefixos de 24, 28 ou 36 bits. Esta ferramenta encontra o prefixo registrado mais longo e mostra o titular da alocação, o intervalo de endereços e o registro. Endereços administrados localmente e endereços de grupo são identificados separadamente.",
-  "blocksAboutTitle": "Explore blocos de endereços IEEE",
-  "blocksAboutBody": "Navegue pelos cinco registros públicos do IEEE. Pesquise um prefixo, organização ou endereço postal registrado e abra um bloco para ver seu intervalo e sua capacidade. MA-L aloca 16.777.216 endereços, MA-M aloca 1.048.576 e MA-S ou IAB aloca 4.096. CID é um identificador de empresa para endereçamento local.",
-  "vendorsAboutTitle": "Encontre os blocos registrados de uma organização",
-  "vendorsAboutBody": "Pesquise nomes de organizações e seus endereços postais registrados e selecione uma organização para ver todas as suas alocações. Os nomes e endereços vêm da listagem do IEEE e são exibidos conforme registrados. O titular de uma alocação não é necessariamente a marca de um dispositivo, e esses endereços não indicam a localização do dispositivo."
+  "cidHint": "Identificador de empresa para endereços atribuídos localmente.",
+  "about": {
+    "title": "Entenda um endereço MAC",
+    "intro": "Um endereço MAC identifica uma interface de rede em uma rede Ethernet ou Wi-Fi. Use esta consulta para encontrar informações de registro no IEEE para um endereço da lista de clientes de um roteador, de uma tabela ARP ou da etiqueta de um dispositivo.",
+    "sections": [
+      {
+        "title": "Digite um endereço ou prefixo",
+        "body": "Cole um endereço MAC completo de 48 bits com dois-pontos, hífens, pontos ou sem separadores: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 e 001B638445E6 representam o mesmo endereço. Você também pode digitar um prefixo IEEE, como 001B63 ou 8C1F64001, inclusive na notação /24, /28 ou /36."
+      },
+      {
+        "title": "Confira o bloco registrado",
+        "body": "O resultado mostra a organização registrada, seu endereço e o prefixo correspondente. A consulta verifica primeiro o prefixo mais longo: uma alocação de 36 bits tem prioridade sobre um prefixo pai de 28 ou 24 bits. O primeiro endereço, o último endereço e a capacidade do bloco mostram o tamanho da alocação. Se um prefixo antigo tiver vários registros, todas as organizações correspondentes aparecem juntas."
+      },
+      {
+        "title": "Explore e compartilhe o resultado",
+        "body": "Copie o endereço normalizado, abra seu prefixo para examinar o bloco ou siga o nome da organização para navegar por suas outras alocações. “Copiar link” preserva sua consulta na URL para compartilhar ou voltar mais tarde. Há resultados específicos por tipo para endereços locais, de multidifusão, de difusão e com todos os bits zerados. Os dados vêm de uma cópia dos dados do IEEE incluída na ferramenta; o link da fonte e a data da cópia aparecem abaixo da ferramenta."
+      }
+    ]
+  }
 }

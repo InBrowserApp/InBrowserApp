@@ -24,22 +24,31 @@ type MacAddressRecordsProps = Readonly<{
     organization: string
     address: string
   }>
+  showAllocation?: boolean
 }>
 
 const recordLinkClassName =
   "rounded-sm underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
 
-function MacAddressRecords({ rows, labels }: MacAddressRecordsProps) {
+function MacAddressRecords({
+  rows,
+  labels,
+  showAllocation = true,
+}: MacAddressRecordsProps) {
   return (
     <Table className="block table-fixed md:table">
       <TableHeader className="sr-only md:not-sr-only md:table-header-group">
         <TableRow>
-          <TableHead scope="col" className="px-4 text-start md:w-44">
-            {labels.prefix}
-          </TableHead>
-          <TableHead scope="col" className="px-4 text-start md:w-24">
-            {labels.registry}
-          </TableHead>
+          {showAllocation ? (
+            <>
+              <TableHead scope="col" className="px-4 text-start md:w-44">
+                {labels.prefix}
+              </TableHead>
+              <TableHead scope="col" className="px-4 text-start md:w-24">
+                {labels.registry}
+              </TableHead>
+            </>
+          ) : null}
           <TableHead scope="col" className="px-4 text-start md:w-[30%]">
             {labels.organization}
           </TableHead>
@@ -54,39 +63,31 @@ function MacAddressRecords({ rows, labels }: MacAddressRecordsProps) {
             key={row.key}
             className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-x-4 gap-y-3 p-4 md:table-row md:p-0"
           >
-            <TableCell className="min-w-0 p-0 align-top whitespace-normal md:p-4">
-              <span className="mb-1 block text-xs text-muted-foreground md:hidden">
-                {labels.prefix}
-              </span>
-              <a
-                href={row.blockHref}
-                dir="ltr"
-                translate="no"
-                className={`${recordLinkClassName} inline-block font-mono text-sm break-all tabular-nums`}
-              >
-                {row.prefix}
-              </a>
-            </TableCell>
-            <TableCell className="p-0 align-top md:p-4">
-              <span className="mb-1 block text-xs text-muted-foreground md:hidden">
-                {labels.registry}
-              </span>
-              <Badge variant="outline" dir="ltr" translate="no">
-                {row.registry}
-              </Badge>
-            </TableCell>
+            {showAllocation ? (
+              <>
+                <TableCell className="min-w-0 p-0 align-top whitespace-normal md:p-4">
+                  <a
+                    href={row.blockHref}
+                    dir="ltr"
+                    translate="no"
+                    className={`${recordLinkClassName} inline-block font-mono text-sm break-all tabular-nums`}
+                  >
+                    {row.prefix}
+                  </a>
+                </TableCell>
+                <TableCell className="p-0 align-top md:p-4">
+                  <Badge variant="outline" dir="ltr" translate="no">
+                    {row.registry}
+                  </Badge>
+                </TableCell>
+              </>
+            ) : null}
             <TableCell className="col-span-2 min-w-0 p-0 align-top wrap-anywhere whitespace-normal md:p-4">
-              <span className="mb-1 block text-xs text-muted-foreground md:hidden">
-                {labels.organization}
-              </span>
               <a href={row.organizationHref} className={recordLinkClassName}>
                 <bdi translate="no">{row.organization}</bdi>
               </a>
             </TableCell>
             <TableCell className="col-span-2 min-w-0 p-0 align-top wrap-anywhere whitespace-normal text-muted-foreground md:p-4">
-              <span className="mb-1 block text-xs md:hidden">
-                {labels.address}
-              </span>
               <bdi translate="no">{row.address || "—"}</bdi>
             </TableCell>
           </TableRow>

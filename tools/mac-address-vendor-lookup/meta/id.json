@@ -1,4 +1,4 @@
 {
   "name": "Pencarian alamat MAC berdasarkan vendor",
-  "description": "Cari organisasi di registri IEEE berdasarkan nama atau alamat pos dan jelajahi semua blok alamat MAC yang terdaftar atas nama mereka."
+  "description": "Temukan pendaftaran IEEE suatu organisasi dan jelajahi blok alamat MAC-nya."
 }

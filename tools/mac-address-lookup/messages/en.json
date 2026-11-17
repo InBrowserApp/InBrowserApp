@@ -1,24 +1,21 @@
 {
-  "lookup": "MAC lookup",
-  "blocks": "By block",
-  "vendors": "By organization",
-  "navigationLabel": "MAC address tools",
+  "lookup": "MAC Address Lookup",
+  "blocks": "MAC Address Block Lookup",
+  "vendors": "MAC Address Vendor Lookup",
+  "navigationLabel": "Related tools",
   "queryLabel": "MAC address or prefix",
   "lookupPlaceholder": "00:1B:63:84:45:E6…",
   "blockPlaceholder": "Prefix, organization, or address…",
   "vendorPlaceholder": "Organization name or address…",
-  "lookupHint": "Enter a MAC address, or a 24-, 28-, or 36-bit IEEE prefix. Colons, hyphens, dotted and plain formats are supported.",
   "blockSearchLabel": "Search registered blocks",
   "vendorSearchLabel": "Search organizations",
   "registry": "Registry",
   "allRegistries": "All registries",
   "prefix": "Prefix",
-  "organization": "Registered organization",
-  "address": "Organization address",
+  "organization": "Organization",
+  "address": "Registered address",
   "range": "Address range",
   "capacity": "Addresses in block",
-  "normalized": "Normalized address",
-  "addressType": "Address type",
   "share": "Copy link",
   "copied": "Link copied",
   "loading": "Loading IEEE registry…",
@@ -26,11 +23,9 @@
   "retry": "Try again",
   "noResults": "No matching records",
   "noResultsHint": "Try a different prefix, organization name, or registry.",
-  "emptyLookup": "Look up a MAC address",
-  "emptyLookupHint": "Enter an address above, or try an example to see its registered organization and block.",
+  "emptyLookupHint": "Results appear here.",
   "invalidAddress": "Enter a complete MAC address or a valid 24-, 28-, or 36-bit prefix.",
   "noAssignment": "No registered organization found",
-  "noAssignmentHint": "This address does not match an allocation in this IEEE snapshot.",
   "previous": "Previous",
   "next": "Next",
   "pageSummary": "{start}–{end} of {total}",
@@ -38,10 +33,7 @@
   "organizationCount": "Organizations: {count}",
   "source": "IEEE public registry",
   "updated": "Snapshot: {date}",
-  "dataSummary": "{assignments} assignments · {organizations} organizations",
-  "sourceHint": "Lookup runs in your browser using a bundled IEEE snapshot.",
   "clearOrganization": "All organizations",
-  "organizationBlocks": "Blocks registered to {organization}",
   "examples": "Examples",
   "copyAddress": "Copy address",
   "addressCopied": "Address copied",
@@ -54,19 +46,28 @@
     "prefix": "IEEE prefix"
   },
   "typeHints": {
-    "universal": "The registered organization identifies the address allocation, which may differ from the device brand.",
-    "local": "This address is locally administered and may be randomized. Its prefix cannot reliably identify a device vendor.",
-    "multicast": "This is a group address. A vendor cannot be inferred from an IEEE unicast allocation.",
-    "broadcast": "This address sends to every device on the local network; it has no individual vendor.",
-    "zero": "The all-zero address is an unspecified address; it does not identify a device vendor.",
-    "prefix": "A prefix identifies a registered block. Longer allocations take priority when looking up a full MAC address."
+    "local": "Often used for private Wi-Fi addresses.",
+    "multicast": "A group address used to reach multiple devices.",
+    "broadcast": "Reaches every device on the local network.",
+    "zero": "An unspecified address."
   },
-  "cidHint": "CID identifies an organization for local addressing. It is not a globally unique MAC address allocation.",
-  "registrySizes": "MA-L: /24 · MA-M: /28 · MA-S and IAB: /36 · CID: company identifier",
-  "lookupAboutTitle": "How MAC address lookup works",
-  "lookupAboutBody": "A MAC address has 48 bits. The IEEE assigns organizations prefixes of 24, 28, or 36 bits. This tool matches the longest registered prefix and shows the allocation owner, address range, and registry. Locally administered and group addresses are identified separately.",
-  "blocksAboutTitle": "Explore IEEE address blocks",
-  "blocksAboutBody": "Browse all five public IEEE registries. Search a prefix, organization, or registered address, then open a block to see its range and capacity. MA-L allocates 16,777,216 addresses, MA-M allocates 1,048,576, and MA-S or IAB allocates 4,096. CID is a company identifier for local addressing.",
-  "vendorsAboutTitle": "Find an organization’s registered blocks",
-  "vendorsAboutBody": "Search organization names and their registered postal addresses, then select an organization to see all its assignments. Names and addresses come from the IEEE listing and are shown as registered. An allocation owner is not necessarily the brand of a device, and these addresses do not locate the device."
+  "cidHint": "Company identifier for locally assigned addresses.",
+  "about": {
+    "title": "Understand a MAC address",
+    "intro": "A MAC address identifies a network interface on an Ethernet or Wi-Fi network. Use this lookup to find IEEE registration details for an address from a router’s client list, an ARP table, or a device label.",
+    "sections": [
+      {
+        "title": "Enter an address or prefix",
+        "body": "Paste a full 48-bit MAC address with colons, hyphens, dots, or no separators: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6, and 001B638445E6 all describe the same address. You can also enter an IEEE prefix such as 001B63 or 8C1F64001, including /24, /28, or /36 notation."
+      },
+      {
+        "title": "Read the registered block",
+        "body": "The result shows the registered organization, its address, and the matching prefix. The lookup checks the longest prefix first: a 36-bit assignment takes priority over a 28-bit or 24-bit parent. The block’s first address, last address, and capacity show the allocation’s size. If a legacy prefix has several registrations, all matching organizations appear together."
+      },
+      {
+        "title": "Explore and share the result",
+        "body": "Copy the normalized address, open its prefix to inspect the block, or follow the organization name to browse its other assignments. Copy link preserves your query in the URL for sharing or returning later. Local, multicast, broadcast, and all-zero addresses have their own address-type results. The data comes from a bundled IEEE snapshot; the source link and snapshot date appear below the tool."
+      }
+    ]
+  }
 }

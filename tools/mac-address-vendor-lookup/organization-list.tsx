@@ -1,4 +1,3 @@
-import { Badge } from "@workspace/ui/components/ui/badge"
 import type English from "./messages/en.json"
 
 function OrganizationList({
@@ -27,12 +26,17 @@ function OrganizationList({
               <bdi translate="no" className="min-w-0 font-medium wrap-anywhere">
                 {organization.name}
               </bdi>
-              <Badge variant="secondary">
-                {messages.assignmentCount.replace(
-                  "{count}",
-                  formatNumber(organization.count)
-                )}
-              </Badge>
+              <span className="text-sm text-muted-foreground tabular-nums">
+                <span aria-hidden="true">
+                  {formatNumber(organization.count)}
+                </span>
+                <span className="sr-only">
+                  {messages.assignmentCount.replace(
+                    "{count}",
+                    formatNumber(organization.count)
+                  )}
+                </span>
+              </span>
             </span>
             <bdi
               translate="no"

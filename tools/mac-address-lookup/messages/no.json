@@ -1,24 +1,21 @@
 {
-  "lookup": "MAC-oppslag",
-  "blocks": "Etter blokk",
-  "vendors": "Etter organisasjon",
-  "navigationLabel": "Verktøy for MAC-adresser",
+  "lookup": "Oppslag av MAC-adresser",
+  "blocks": "Oppslag av MAC-adresseblokker",
+  "vendors": "Organisasjonssøk i MAC-adresseregisteret",
+  "navigationLabel": "Relaterte verktøy",
   "queryLabel": "MAC-adresse eller prefiks",
   "lookupPlaceholder": "00:1B:63:84:45:E6…",
   "blockPlaceholder": "Prefiks, organisasjon eller adresse…",
   "vendorPlaceholder": "Organisasjonsnavn eller adresse…",
-  "lookupHint": "Skriv inn en MAC-adresse eller et 24-, 28- eller 36-biters IEEE-prefiks. Formater med kolon, bindestreker og punktum samt uten skilletegn støttes.",
   "blockSearchLabel": "Søk i registrerte blokker",
   "vendorSearchLabel": "Søk etter organisasjoner",
   "registry": "Register",
   "allRegistries": "Alle registre",
   "prefix": "Prefiks",
-  "organization": "Registrert organisasjon",
-  "address": "Organisasjonens adresse",
+  "organization": "Organisasjon",
+  "address": "Registrert adresse",
   "range": "Adresseområde",
   "capacity": "Adresser i blokken",
-  "normalized": "Normalisert adresse",
-  "addressType": "Adressetype",
   "share": "Kopier lenke",
   "copied": "Lenke kopiert",
   "loading": "Laster inn IEEE-registeret…",
@@ -26,11 +23,9 @@
   "retry": "Prøv igjen",
   "noResults": "Ingen treff",
   "noResultsHint": "Prøv et annet prefiks, organisasjonsnavn eller register.",
-  "emptyLookup": "Slå opp en MAC-adresse",
-  "emptyLookupHint": "Skriv inn en adresse ovenfor, eller prøv et eksempel for å se den registrerte organisasjonen og blokken.",
+  "emptyLookupHint": "Resultatene vises her.",
   "invalidAddress": "Skriv inn en fullstendig MAC-adresse eller et gyldig 24-, 28- eller 36-biters prefiks.",
   "noAssignment": "Ingen registrert organisasjon funnet",
-  "noAssignmentHint": "Adressen samsvarer ikke med noen tildeling i denne kopien av IEEE-registeret.",
   "previous": "Forrige",
   "next": "Neste",
   "pageSummary": "{start}–{end} av {total}",
@@ -38,10 +33,7 @@
   "organizationCount": "Organisasjoner: {count}",
   "source": "Det offentlige IEEE-registeret",
   "updated": "Registerkopi: {date}",
-  "dataSummary": "Tildelinger: {assignments} · organisasjoner: {organizations}",
-  "sourceHint": "Oppslaget kjøres i nettleseren med en medfølgende kopi av IEEE-registeret.",
   "clearOrganization": "Alle organisasjoner",
-  "organizationBlocks": "Blokker registrert på {organization}",
   "examples": "Eksempler",
   "copyAddress": "Kopier adresse",
   "addressCopied": "Adresse kopiert",
@@ -54,19 +46,28 @@
     "prefix": "IEEE-prefiks"
   },
   "typeHints": {
-    "universal": "Den registrerte organisasjonen viser hvem adresseblokken er tildelt, og kan være en annen enn selskapet bak enhetens merke.",
-    "local": "Denne adressen administreres lokalt og kan være tilfeldig generert. Prefikset kan ikke brukes til å identifisere enhetens produsent pålitelig.",
-    "multicast": "Dette er en gruppeadresse. Produsenten kan ikke utledes fra en IEEE-tildeling av individuelle adresser.",
-    "broadcast": "Denne adressen brukes til å sende til alle enheter i det lokale nettverket; den har ingen egen produsent.",
-    "zero": "En adresse med bare nuller er en uspesifisert adresse; den identifiserer ikke produsenten av en enhet.",
-    "prefix": "Et prefiks identifiserer en registrert blokk. Tildelinger med lengre prefikser prioriteres ved oppslag av en fullstendig MAC-adresse."
+    "local": "Brukes ofte til private Wi-Fi-adresser.",
+    "multicast": "En gruppeadresse som brukes til å nå flere enheter.",
+    "broadcast": "Brukes til å nå alle enheter i det lokale nettverket.",
+    "zero": "En uspesifisert adresse."
   },
-  "cidHint": "CID identifiserer en organisasjon for lokal adressering. Det er ikke en tildeling av globalt unike MAC-adresser.",
-  "registrySizes": "MA-L: /24 · MA-M: /28 · MA-S og IAB: /36 · CID: firmaidentifikator",
-  "lookupAboutTitle": "Slik fungerer oppslag av MAC-adresser",
-  "lookupAboutBody": "En MAC-adresse består av 48 biter. IEEE tildeler organisasjoner prefikser på 24, 28 eller 36 biter. Verktøyet finner det lengste registrerte prefikset som samsvarer, og viser hvem blokken er tildelt, adresseområdet og registeret. Lokalt administrerte adresser og gruppeadresser identifiseres separat.",
-  "blocksAboutTitle": "Utforsk IEEE-adresseblokker",
-  "blocksAboutBody": "Bla gjennom alle de fem offentlige IEEE-registrene. Søk etter et prefiks, en organisasjon eller en registrert adresse, og åpne deretter en blokk for å se adresseområdet og antall adresser. MA-L tildeler 16,777,216 adresser, MA-M tildeler 1,048,576, og MA-S eller IAB tildeler 4,096. CID er en firmaidentifikator for lokal adressering.",
-  "vendorsAboutTitle": "Finn en organisasjons registrerte blokker",
-  "vendorsAboutBody": "Søk etter organisasjonsnavn og registrerte postadresser, og velg deretter en organisasjon for å se alle tildelingene dens. Navn og adresser kommer fra IEEE-registeret og vises slik de er registrert. Organisasjonen som har fått tildelt blokken, kan være en annen enn selskapet bak enhetens merke, og disse adressene viser ikke hvor enheten befinner seg."
+  "cidHint": "Firmaidentifikator for lokalt tildelte adresser.",
+  "about": {
+    "title": "Forstå en MAC-adresse",
+    "intro": "En MAC-adresse identifiserer et nettverksgrensesnitt i et Ethernet- eller Wi-Fi-nettverk. Bruk oppslaget til å finne registreringsopplysninger hos IEEE for en adresse fra ruterens klientliste, en ARP-tabell eller enhetens etikett.",
+    "sections": [
+      {
+        "title": "Skriv inn en adresse eller et prefiks",
+        "body": "Lim inn en fullstendig 48-biters MAC-adresse med kolon, bindestreker, punktum eller uten skilletegn: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 og 001B638445E6 beskriver alle samme adresse. Du kan også skrive inn et IEEE-prefiks som 001B63 eller 8C1F64001, eventuelt med /24, /28 eller /36."
+      },
+      {
+        "title": "Se den registrerte blokken",
+        "body": "Resultatet viser den registrerte organisasjonen, adressen dens og det samsvarende prefikset. Oppslaget sjekker det lengste prefikset først: en 36-biters tildeling prioriteres foran en overordnet 28-biters eller 24-biters tildeling. Blokkens første adresse, siste adresse og antall adresser viser størrelsen på tildelingen. Hvis et eldre prefiks har flere registreringer, vises alle samsvarende organisasjoner samlet."
+      },
+      {
+        "title": "Utforsk og del resultatet",
+        "body": "Kopier den normaliserte adressen, åpne prefikset for å undersøke blokken, eller følg organisasjonsnavnet for å bla gjennom organisasjonens andre tildelinger. «Kopier lenke» lagrer søket i URL-en, slik at du kan dele det eller komme tilbake senere. Lokalt administrerte adresser, gruppeadresser, kringkastingsadresser og adresser med bare nuller får egne resultater som viser adressetypen. Dataene kommer fra en medfølgende kopi av IEEE-registeret; kildelenken og datoen for registerkopien vises under verktøyet."
+      }
+    ]
+  }
 }

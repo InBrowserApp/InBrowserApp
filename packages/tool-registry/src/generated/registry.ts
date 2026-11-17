@@ -18014,117 +18014,113 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "البحث عن كتل عناوين MAC",
         description:
-          "تصفّح سجلات IEEE من فئات MA-L وMA-M وMA-S وIAB وCID وابحث فيها. افحص البادئات المسجّلة ونطاقات العناوين والمؤسسات.",
+          "ابحث في كتل عناوين IEEE حسب البادئة أو المؤسسة أو العنوان المسجّل.",
       },
       de: {
         name: "MAC-Adressblock-Suche",
         description:
-          "Durchsuchen Sie IEEE-Einträge zu MA-L, MA-M, MA-S, IAB und CID. Prüfen Sie registrierte Präfixe, Adressbereiche und Organisationen.",
+          "Suchen Sie IEEE-Adressblöcke nach Präfix, Organisation oder registrierter Anschrift.",
       },
       en: {
         name: "MAC Address Block Lookup",
         description:
-          "Browse and search IEEE MA-L, MA-M, MA-S, IAB, and CID records. Inspect registered prefixes, address ranges, and organizations.",
+          "Search IEEE address blocks by prefix, organization, or registered address.",
       },
       es: {
         name: "Consulta de bloques de direcciones MAC",
         description:
-          "Explora y busca registros IEEE MA-L, MA-M, MA-S, IAB y CID. Examina los prefijos registrados, los rangos de direcciones y las organizaciones.",
+          "Busca bloques de direcciones IEEE por prefijo, organización o dirección postal registrada.",
       },
       fr: {
         name: "Recherche de blocs d’adresses MAC",
         description:
-          "Parcourez et recherchez les enregistrements IEEE MA-L, MA-M, MA-S, IAB et CID. Consultez les préfixes enregistrés, les plages d’adresses et les organisations.",
+          "Recherchez des blocs d’adresses IEEE par préfixe, organisation ou adresse enregistrée.",
       },
       he: {
         name: "חיפוש בלוקים של כתובות MAC",
         description:
-          "עיינו וחפשו ברשומות IEEE מסוג MA-L, MA-M, MA-S, IAB ו-CID. בדקו קידומות רשומות, טווחי כתובות וארגונים.",
+          "חפשו בלוקי כתובות של IEEE לפי קידומת, ארגון או כתובת רשומה.",
       },
       hi: {
         name: "MAC पतों के ब्लॉक की खोज",
-        description:
-          "IEEE के MA-L, MA-M, MA-S, IAB और CID रिकॉर्ड देखें और खोजें। पंजीकृत प्रीफ़िक्स, पतों की सीमाएँ और संगठन जाँचें।",
+        description: "प्रीफ़िक्स, संगठन या पंजीकृत पते से IEEE पतों के ब्लॉक खोजें।",
       },
       id: {
         name: "Pencarian blok alamat MAC",
         description:
-          "Telusuri dan cari entri IEEE MA-L, MA-M, MA-S, IAB, dan CID. Periksa prefiks terdaftar, rentang alamat, dan organisasi.",
+          "Cari blok alamat IEEE berdasarkan prefiks, organisasi, atau alamat terdaftar.",
       },
       it: {
         name: "Ricerca di blocchi di indirizzi MAC",
         description:
-          "Sfoglia e cerca i record IEEE MA-L, MA-M, MA-S, IAB e CID. Esamina i prefissi registrati, gli intervalli di indirizzi e le organizzazioni.",
+          "Cerca blocchi di indirizzi IEEE per prefisso, organizzazione o indirizzo registrato.",
       },
       ja: {
         name: "MAC アドレスブロック検索",
         description:
-          "IEEE MA-L、MA-M、MA-S、IAB、CID のレコードを閲覧・検索。登録プレフィックス、アドレス範囲、組織を確認できます。",
+          "プレフィックス、組織、登録住所から IEEE アドレスブロックを検索できます。",
       },
       ko: {
         name: "MAC 주소 블록 조회",
         description:
-          "IEEE MA-L, MA-M, MA-S, IAB, CID 기록을 탐색하고 검색하세요. 등록된 접두사, 주소 범위, 조직을 확인할 수 있습니다.",
+          "접두사, 조직 또는 등록 주소로 IEEE 주소 블록을 검색하세요.",
       },
       ms: {
         name: "Carian Blok Alamat MAC",
         description:
-          "Semak dan cari rekod IEEE MA-L, MA-M, MA-S, IAB dan CID. Periksa awalan berdaftar, julat alamat dan organisasi.",
+          "Cari blok alamat IEEE mengikut awalan, organisasi atau alamat berdaftar.",
       },
       nl: {
         name: "MAC-adresblokken opzoeken",
         description:
-          "Blader en zoek in IEEE-registraties voor MA-L, MA-M, MA-S, IAB en CID. Bekijk geregistreerde prefixen, adresbereiken en organisaties.",
+          "Zoek IEEE-adresblokken op prefix, organisatie of geregistreerd adres.",
       },
       no: {
         name: "Oppslag av MAC-adresseblokker",
         description:
-          "Bla gjennom og søk i IEEE-registrene MA-L, MA-M, MA-S, IAB og CID. Se registrerte prefikser, adresseområder og organisasjoner.",
+          "Søk etter IEEE-adresseblokker basert på prefiks, organisasjon eller registrert adresse.",
       },
       pl: {
         name: "Wyszukiwanie bloków adresów MAC",
         description:
-          "Przeglądaj i wyszukuj wpisy IEEE MA-L, MA-M, MA-S, IAB i CID. Sprawdzaj zarejestrowane prefiksy, zakresy adresów i organizacje.",
+          "Wyszukuj bloki adresów IEEE według prefiksu, organizacji lub adresu z rejestru.",
       },
       pt: {
         name: "Consulta de blocos de endereços MAC",
         description:
-          "Navegue e pesquise registros IEEE MA-L, MA-M, MA-S, IAB e CID. Confira prefixos registrados, intervalos de endereços e organizações.",
+          "Pesquise blocos de endereços IEEE por prefixo, organização ou endereço registrado.",
       },
       ru: {
         name: "Поиск блоков MAC-адресов",
         description:
-          "Просматривайте и ищите записи IEEE MA-L, MA-M, MA-S, IAB и CID. Изучайте зарегистрированные префиксы, диапазоны адресов и организации.",
+          "Ищите блоки адресов IEEE по префиксу, организации или адресу в реестре.",
       },
       sv: {
         name: "Sökning efter MAC-adressblock",
         description:
-          "Bläddra och sök i IEEE-registren MA-L, MA-M, MA-S, IAB och CID. Granska registrerade prefix, adressintervall och organisationer.",
+          "Sök efter IEEE-adressblock utifrån prefix, organisation eller registrerad adress.",
       },
       th: {
         name: "ค้นหาบล็อกที่อยู่ MAC",
-        description:
-          "เรียกดูและค้นหารายการ IEEE MA-L, MA-M, MA-S, IAB และ CID ตรวจสอบพรีฟิกซ์ที่ลงทะเบียน ช่วงที่อยู่ และองค์กร",
+        description: "ค้นหาบล็อกที่อยู่ IEEE ด้วยพรีฟิกซ์ องค์กร หรือที่อยู่ที่ลงทะเบียน",
       },
       tr: {
         name: "MAC Adres Bloğu Sorgulama",
         description:
-          "IEEE MA-L, MA-M, MA-S, IAB ve CID kayıtlarına göz atın ve arama yapın. Kayıtlı önekleri, adres aralıklarını ve kuruluşları inceleyin.",
+          "IEEE adres bloklarını önek, kuruluş veya kayıtlı adrese göre arayın.",
       },
       vi: {
         name: "Tra cứu khối địa chỉ MAC",
         description:
-          "Duyệt và tìm bản ghi IEEE MA-L, MA-M, MA-S, IAB và CID. Xem tiền tố đã đăng ký, dải địa chỉ và tổ chức.",
+          "Tìm khối địa chỉ IEEE theo tiền tố, tổ chức hoặc địa chỉ đã đăng ký.",
       },
       "zh-CN": {
         name: "MAC 地址区块查询",
-        description:
-          "浏览和搜索 IEEE MA-L、MA-M、MA-S、IAB 和 CID 记录。查看已登记前缀、地址范围和组织。",
+        description: "按前缀、组织或登记地址搜索 IEEE 地址区块。",
       },
       "zh-TW": {
         name: "MAC 位址區塊查詢",
-        description:
-          "瀏覽與搜尋 IEEE MA-L、MA-M、MA-S、IAB 和 CID 紀錄。檢視已登記的前綴、位址範圍與組織。",
+        description: "依前綴、組織或登記地址搜尋 IEEE 位址區塊。",
       },
     },
   },
@@ -18137,117 +18133,114 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "البحث عن عنوان MAC",
         description:
-          "اعثر على المؤسسة المسجّلة المرتبطة بعنوان MAC أو بادئة IEEE. تحقّق من أنواع العناوين وتفاصيل التخصيص محليًا في متصفحك.",
+          "اعثر على المؤسسة والكتلة المسجّلة لعنوان MAC أو بادئة IEEE.",
       },
       de: {
         name: "MAC-Adresssuche",
         description:
-          "Finden Sie die registrierte Organisation zu einer MAC-Adresse oder einem IEEE-Präfix. Prüfen Sie Adresstypen und Zuteilungsdetails lokal in Ihrem Browser.",
+          "Finden Sie die Organisation und den registrierten Block zu einer MAC-Adresse oder einem IEEE-Präfix.",
       },
       en: {
         name: "MAC Address Lookup",
         description:
-          "Find the registered organization behind a MAC address or IEEE prefix. Check address types and allocation details locally in your browser.",
+          "Find the organization and registered block for a MAC address or IEEE prefix.",
       },
       es: {
         name: "Consulta de direcciones MAC",
         description:
-          "Encuentra la organización registrada que corresponde a una dirección MAC o a un prefijo IEEE. Comprueba los tipos de dirección y los detalles de la asignación de forma local en tu navegador.",
+          "Encuentra la organización y el bloque registrado de una dirección MAC o un prefijo IEEE.",
       },
       fr: {
         name: "Recherche d’adresses MAC",
         description:
-          "Trouvez l’organisation enregistrée pour une adresse MAC ou un préfixe IEEE. Consultez les types d’adresses et les détails d’attribution localement dans votre navigateur.",
+          "Trouvez l’organisation et le bloc enregistré pour une adresse MAC ou un préfixe IEEE.",
       },
       he: {
         name: "חיפוש כתובת MAC",
         description:
-          "מצאו את הארגון הרשום המשויך לכתובת MAC או לקידומת IEEE. בדקו סוגי כתובות ופרטי הקצאה באופן מקומי בדפדפן.",
+          "מצאו את הארגון ואת הבלוק הרשום של כתובת MAC או קידומת IEEE.",
       },
       hi: {
         name: "MAC पते की खोज",
         description:
-          "MAC पते या IEEE प्रीफ़िक्स से जुड़े पंजीकृत संगठन का पता लगाएँ। अपने ब्राउज़र में स्थानीय रूप से पते के प्रकार और आवंटन का विवरण जाँचें।",
+          "MAC पते या IEEE प्रीफ़िक्स से जुड़े संगठन और पंजीकृत ब्लॉक का पता लगाएँ।",
       },
       id: {
         name: "Pencarian alamat MAC",
         description:
-          "Temukan organisasi terdaftar yang terkait dengan alamat MAC atau prefiks IEEE. Periksa jenis alamat dan detail alokasi secara lokal di peramban.",
+          "Temukan organisasi dan blok terdaftar untuk alamat MAC atau prefiks IEEE.",
       },
       it: {
         name: "Ricerca di indirizzi MAC",
         description:
-          "Trova l’organizzazione registrata associata a un indirizzo MAC o a un prefisso IEEE. Verifica i tipi di indirizzo e i dettagli delle assegnazioni localmente nel browser.",
+          "Trova l’organizzazione e il blocco registrato per un indirizzo MAC o un prefisso IEEE.",
       },
       ja: {
         name: "MAC アドレス検索",
         description:
-          "MAC アドレスや IEEE プレフィックスに対応する登録組織を検索。ブラウザー内でローカルにアドレスの種類や割り当ての詳細を確認できます。",
+          "MAC アドレスや IEEE プレフィックスに対応する組織と登録ブロックを検索できます。",
       },
       ko: {
         name: "MAC 주소 조회",
         description:
-          "MAC 주소 또는 IEEE 접두사의 등록 조직을 찾으세요. 브라우저에서 로컬로 주소 유형과 할당 세부 정보를 확인할 수 있습니다.",
+          "MAC 주소 또는 IEEE 접두사에 해당하는 조직과 등록 블록을 찾으세요.",
       },
       ms: {
         name: "Carian Alamat MAC",
         description:
-          "Cari organisasi berdaftar yang berkaitan dengan alamat MAC atau awalan IEEE. Semak jenis alamat dan butiran peruntukan secara setempat dalam pelayar anda.",
+          "Cari organisasi dan blok berdaftar bagi alamat MAC atau awalan IEEE.",
       },
       nl: {
         name: "MAC-adres opzoeken",
         description:
-          "Vind de geregistreerde organisatie achter een MAC-adres of IEEE-prefix. Controleer adrestypen en toewijzingsgegevens lokaal in je browser.",
+          "Vind de organisatie en het geregistreerde blok voor een MAC-adres of IEEE-prefix.",
       },
       no: {
         name: "Oppslag av MAC-adresser",
         description:
-          "Finn organisasjonen som er registrert for en MAC-adresse eller et IEEE-prefiks. Sjekk adressetyper og tildelingsdetaljer lokalt i nettleseren.",
+          "Finn organisasjonen og den registrerte blokken for en MAC-adresse eller et IEEE-prefiks.",
       },
       pl: {
         name: "Wyszukiwanie adresów MAC",
         description:
-          "Znajdź organizację, na którą zarejestrowano adres MAC lub prefiks IEEE. Sprawdzaj typy adresów i szczegóły przydziałów lokalnie w przeglądarce.",
+          "Znajdź organizację i zarejestrowany blok dla adresu MAC lub prefiksu IEEE.",
       },
       pt: {
         name: "Consulta de endereços MAC",
         description:
-          "Encontre a organização registrada de um endereço MAC ou prefixo IEEE. Confira os tipos de endereço e os detalhes de alocação localmente no navegador.",
+          "Encontre a organização e o bloco registrado de um endereço MAC ou prefixo IEEE.",
       },
       ru: {
         name: "Поиск по MAC-адресу",
         description:
-          "Найдите организацию, на которую зарегистрирован MAC-адрес или префикс IEEE. Проверяйте типы адресов и сведения о выделенных блоках локально в браузере.",
+          "Найдите организацию и зарегистрированный блок по MAC-адресу или префиксу IEEE.",
       },
       sv: {
         name: "Sökning efter MAC-adresser",
         description:
-          "Hitta den registrerade organisationen bakom en MAC-adress eller ett IEEE-prefix. Kontrollera adresstyper och tilldelningsdetaljer lokalt i webbläsaren.",
+          "Hitta organisationen och det registrerade blocket för en MAC-adress eller ett IEEE-prefix.",
       },
       th: {
         name: "ค้นหาที่อยู่ MAC",
-        description:
-          "ค้นหาองค์กรที่ลงทะเบียนสำหรับที่อยู่ MAC หรือพรีฟิกซ์ IEEE ตรวจสอบประเภทที่อยู่และรายละเอียดการจัดสรรภายในเบราว์เซอร์ของคุณ",
+        description: "ค้นหาองค์กรและบล็อกที่ลงทะเบียนสำหรับที่อยู่ MAC หรือพรีฟิกซ์ IEEE",
       },
       tr: {
         name: "MAC Adresi Sorgulama",
         description:
-          "Bir MAC adresine veya IEEE önekine ait kayıtlı kuruluşu bulun. Adres türlerini ve tahsis ayrıntılarını doğrudan tarayıcınızda yerel olarak kontrol edin.",
+          "Bir MAC adresi veya IEEE öneki için kuruluşu ve kayıtlı bloğu bulun.",
       },
       vi: {
         name: "Tra cứu địa chỉ MAC",
         description:
-          "Tìm tổ chức đã đăng ký tương ứng với địa chỉ MAC hoặc tiền tố IEEE. Kiểm tra loại địa chỉ và chi tiết cấp phát ngay trong trình duyệt.",
+          "Tìm tổ chức và khối đã đăng ký tương ứng với địa chỉ MAC hoặc tiền tố IEEE.",
       },
       "zh-CN": {
         name: "MAC 地址查询",
-        description:
-          "查找 MAC 地址或 IEEE 前缀对应的登记组织。在浏览器本地查看地址类型和分配详情。",
+        description: "查找 MAC 地址或 IEEE 前缀对应的组织和登记区块。",
       },
       "zh-TW": {
         name: "MAC 位址查詢",
-        description:
-          "查詢 MAC 位址或 IEEE 前綴的登記組織。直接在您的瀏覽器中檢查位址類型與配發詳情。",
+        description: "查詢 MAC 位址或 IEEE 前綴所屬的組織與登記區塊。",
       },
     },
   },
@@ -18383,117 +18376,113 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "البحث عن مورّدي عناوين MAC",
         description:
-          "ابحث عن المؤسسات في سجل IEEE بالاسم أو العنوان البريدي واستكشف جميع كتل عناوين MAC المسجّلة باسمها.",
+          "اعثر على تسجيلات مؤسسة لدى IEEE واستكشف كتل عناوين MAC الخاصة بها.",
       },
       de: {
         name: "MAC-Herstellersuche",
         description:
-          "Suchen Sie IEEE-Organisationen nach Name oder Anschrift und erkunden Sie alle ihre registrierten MAC-Adressblöcke.",
+          "Finden Sie die IEEE-Registrierungen einer Organisation und erkunden Sie ihre MAC-Adressblöcke.",
       },
       en: {
         name: "MAC Address Vendor Lookup",
         description:
-          "Search IEEE organizations by name or address and explore all their registered MAC address blocks.",
+          "Find an organization’s IEEE registrations and explore its MAC address blocks.",
       },
       es: {
         name: "Consulta de direcciones MAC por proveedor",
         description:
-          "Busca organizaciones en el registro IEEE por nombre o dirección postal y explora todos los bloques de direcciones MAC registrados a su nombre.",
+          "Encuentra los registros IEEE de una organización y explora sus bloques de direcciones MAC.",
       },
       fr: {
         name: "Recherche de fabricants MAC",
         description:
-          "Recherchez les organisations IEEE par nom ou adresse postale et explorez tous leurs blocs d’adresses MAC enregistrés.",
+          "Trouvez les enregistrements IEEE d’une organisation et explorez ses blocs d’adresses MAC.",
       },
       he: {
         name: "חיפוש כתובות MAC לפי ספק",
         description:
-          "חפשו ארגונים ברשימת IEEE לפי שם או כתובת דואר ועיינו בכל הבלוקים של כתובות MAC הרשומים על שמם.",
+          "מצאו את רישומי IEEE של ארגון ועיינו בבלוקי כתובות ה-MAC שלו.",
       },
       hi: {
         name: "विक्रेता के अनुसार MAC पतों की खोज",
-        description:
-          "IEEE में दर्ज संगठनों को नाम या डाक पते से खोजें और उनके नाम पंजीकृत MAC पतों के सभी ब्लॉक देखें।",
+        description: "संगठन के IEEE पंजीकरण खोजें और उसके MAC पतों के ब्लॉक देखें।",
       },
       id: {
         name: "Pencarian alamat MAC berdasarkan vendor",
         description:
-          "Cari organisasi di registri IEEE berdasarkan nama atau alamat pos dan jelajahi semua blok alamat MAC yang terdaftar atas nama mereka.",
+          "Temukan pendaftaran IEEE suatu organisasi dan jelajahi blok alamat MAC-nya.",
       },
       it: {
         name: "Ricerca del fornitore tramite indirizzo MAC",
         description:
-          "Cerca le organizzazioni IEEE per nome o indirizzo ed esplora tutti i blocchi di indirizzi MAC a loro registrati.",
+          "Trova le registrazioni IEEE di un’organizzazione ed esplora i suoi blocchi di indirizzi MAC.",
       },
       ja: {
         name: "MAC アドレスベンダー検索",
         description:
-          "名称や登録住所から IEEE の組織を検索し、その組織が登録したすべての MAC アドレスブロックを確認できます。",
+          "組織の IEEE 登録情報を検索し、その MAC アドレスブロックを調べられます。",
       },
       ko: {
         name: "MAC 주소 제조사 조회",
-        description:
-          "이름이나 주소로 IEEE 등록 조직을 검색하고 해당 조직에 등록된 모든 MAC 주소 블록을 살펴보세요.",
+        description: "조직의 IEEE 등록 기록을 찾고 MAC 주소 블록을 살펴보세요.",
       },
       ms: {
         name: "Carian Pembekal Alamat MAC",
         description:
-          "Cari organisasi IEEE mengikut nama atau alamat dan terokai semua blok alamat MAC yang didaftarkan kepada mereka.",
+          "Cari pendaftaran IEEE sesebuah organisasi dan terokai blok alamat MAC miliknya.",
       },
       nl: {
         name: "Leverancier van een MAC-adres opzoeken",
         description:
-          "Zoek IEEE-organisaties op naam of adres en verken al hun geregistreerde MAC-adresblokken.",
+          "Vind de IEEE-registraties van een organisatie en verken de bijbehorende MAC-adresblokken.",
       },
       no: {
         name: "Organisasjonssøk i MAC-adresseregisteret",
         description:
-          "Søk etter IEEE-registrerte organisasjoner med navn eller adresse, og utforsk alle MAC-adresseblokkene som er registrert på dem.",
+          "Finn en organisasjons IEEE-registreringer og utforsk MAC-adresseblokkene dens.",
       },
       pl: {
         name: "Wyszukiwanie organizacji w rejestrze adresów MAC",
         description:
-          "Wyszukuj organizacje w rejestrze IEEE według nazwy lub adresu i przeglądaj wszystkie zarejestrowane na nie bloki adresów MAC.",
+          "Znajdź wpisy organizacji w rejestrach IEEE i przeglądaj jej bloki adresów MAC.",
       },
       pt: {
         name: "Consulta de fabricantes MAC",
         description:
-          "Pesquise organizações do IEEE por nome ou endereço postal e explore todos os seus blocos de endereços MAC registrados.",
+          "Encontre os registros IEEE de uma organização e explore seus blocos de endereços MAC.",
       },
       ru: {
         name: "Поиск организаций в реестре MAC-адресов",
         description:
-          "Ищите организации в реестре IEEE по названию или адресу и изучайте все зарегистрированные на них блоки MAC-адресов.",
+          "Найдите записи организации в реестре IEEE и изучите её блоки MAC-адресов.",
       },
       sv: {
         name: "Sökning efter MAC-tillverkare",
         description:
-          "Sök organisationer i IEEE:s register utifrån namn eller postadress och utforska alla deras registrerade MAC-adressblock.",
+          "Hitta en organisations IEEE-registreringar och utforska dess MAC-adressblock.",
       },
       th: {
         name: "ค้นหาผู้ผลิตตามที่อยู่ MAC",
         description:
-          "ค้นหาองค์กรในทะเบียน IEEE ด้วยชื่อหรือที่อยู่ แล้วสำรวจบล็อกที่อยู่ MAC ทั้งหมดที่องค์กรนั้นลงทะเบียนไว้",
+          "ค้นหารายการลงทะเบียน IEEE ขององค์กรและสำรวจบล็อกที่อยู่ MAC ขององค์กรนั้น",
       },
       tr: {
         name: "MAC Adresi Üretici Sorgulama",
         description:
-          "IEEE kayıtlarındaki kuruluşları ad veya adrese göre arayın ve kayıtlı tüm MAC adres bloklarını keşfedin.",
+          "Bir kuruluşun IEEE kayıtlarını bulun ve MAC adres bloklarını keşfedin.",
       },
       vi: {
         name: "Tra cứu nhà sản xuất MAC",
         description:
-          "Tìm tổ chức trong sổ đăng ký IEEE theo tên hoặc địa chỉ bưu chính và khám phá tất cả các khối địa chỉ MAC đã đăng ký của tổ chức đó.",
+          "Tìm các bản ghi đăng ký IEEE của tổ chức và khám phá các khối địa chỉ MAC của tổ chức đó.",
       },
       "zh-CN": {
         name: "MAC 地址厂商查询",
-        description:
-          "按名称或登记地址搜索 IEEE 登记组织，查看其登记的所有 MAC 地址区块。",
+        description: "查找组织的 IEEE 登记记录，浏览其 MAC 地址区块。",
       },
       "zh-TW": {
         name: "MAC 位址廠商查詢",
-        description:
-          "依名稱或地址搜尋 IEEE 登記組織，並探索其所有已登記的 MAC 位址區塊。",
+        description: "查詢組織的 IEEE 登記紀錄，並探索其 MAC 位址區塊。",
       },
     },
   },
@@ -54630,117 +54619,113 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "البحث عن كتل عناوين MAC",
         description:
-          "تصفّح سجلات IEEE من فئات MA-L وMA-M وMA-S وIAB وCID وابحث فيها. افحص البادئات المسجّلة ونطاقات العناوين والمؤسسات.",
+          "ابحث في كتل عناوين IEEE حسب البادئة أو المؤسسة أو العنوان المسجّل.",
       },
       de: {
         name: "MAC-Adressblock-Suche",
         description:
-          "Durchsuchen Sie IEEE-Einträge zu MA-L, MA-M, MA-S, IAB und CID. Prüfen Sie registrierte Präfixe, Adressbereiche und Organisationen.",
+          "Suchen Sie IEEE-Adressblöcke nach Präfix, Organisation oder registrierter Anschrift.",
       },
       en: {
         name: "MAC Address Block Lookup",
         description:
-          "Browse and search IEEE MA-L, MA-M, MA-S, IAB, and CID records. Inspect registered prefixes, address ranges, and organizations.",
+          "Search IEEE address blocks by prefix, organization, or registered address.",
       },
       es: {
         name: "Consulta de bloques de direcciones MAC",
         description:
-          "Explora y busca registros IEEE MA-L, MA-M, MA-S, IAB y CID. Examina los prefijos registrados, los rangos de direcciones y las organizaciones.",
+          "Busca bloques de direcciones IEEE por prefijo, organización o dirección postal registrada.",
       },
       fr: {
         name: "Recherche de blocs d’adresses MAC",
         description:
-          "Parcourez et recherchez les enregistrements IEEE MA-L, MA-M, MA-S, IAB et CID. Consultez les préfixes enregistrés, les plages d’adresses et les organisations.",
+          "Recherchez des blocs d’adresses IEEE par préfixe, organisation ou adresse enregistrée.",
       },
       he: {
         name: "חיפוש בלוקים של כתובות MAC",
         description:
-          "עיינו וחפשו ברשומות IEEE מסוג MA-L, MA-M, MA-S, IAB ו-CID. בדקו קידומות רשומות, טווחי כתובות וארגונים.",
+          "חפשו בלוקי כתובות של IEEE לפי קידומת, ארגון או כתובת רשומה.",
       },
       hi: {
         name: "MAC पतों के ब्लॉक की खोज",
-        description:
-          "IEEE के MA-L, MA-M, MA-S, IAB और CID रिकॉर्ड देखें और खोजें। पंजीकृत प्रीफ़िक्स, पतों की सीमाएँ और संगठन जाँचें।",
+        description: "प्रीफ़िक्स, संगठन या पंजीकृत पते से IEEE पतों के ब्लॉक खोजें।",
       },
       id: {
         name: "Pencarian blok alamat MAC",
         description:
-          "Telusuri dan cari entri IEEE MA-L, MA-M, MA-S, IAB, dan CID. Periksa prefiks terdaftar, rentang alamat, dan organisasi.",
+          "Cari blok alamat IEEE berdasarkan prefiks, organisasi, atau alamat terdaftar.",
       },
       it: {
         name: "Ricerca di blocchi di indirizzi MAC",
         description:
-          "Sfoglia e cerca i record IEEE MA-L, MA-M, MA-S, IAB e CID. Esamina i prefissi registrati, gli intervalli di indirizzi e le organizzazioni.",
+          "Cerca blocchi di indirizzi IEEE per prefisso, organizzazione o indirizzo registrato.",
       },
       ja: {
         name: "MAC アドレスブロック検索",
         description:
-          "IEEE MA-L、MA-M、MA-S、IAB、CID のレコードを閲覧・検索。登録プレフィックス、アドレス範囲、組織を確認できます。",
+          "プレフィックス、組織、登録住所から IEEE アドレスブロックを検索できます。",
       },
       ko: {
         name: "MAC 주소 블록 조회",
         description:
-          "IEEE MA-L, MA-M, MA-S, IAB, CID 기록을 탐색하고 검색하세요. 등록된 접두사, 주소 범위, 조직을 확인할 수 있습니다.",
+          "접두사, 조직 또는 등록 주소로 IEEE 주소 블록을 검색하세요.",
       },
       ms: {
         name: "Carian Blok Alamat MAC",
         description:
-          "Semak dan cari rekod IEEE MA-L, MA-M, MA-S, IAB dan CID. Periksa awalan berdaftar, julat alamat dan organisasi.",
+          "Cari blok alamat IEEE mengikut awalan, organisasi atau alamat berdaftar.",
       },
       nl: {
         name: "MAC-adresblokken opzoeken",
         description:
-          "Blader en zoek in IEEE-registraties voor MA-L, MA-M, MA-S, IAB en CID. Bekijk geregistreerde prefixen, adresbereiken en organisaties.",
+          "Zoek IEEE-adresblokken op prefix, organisatie of geregistreerd adres.",
       },
       no: {
         name: "Oppslag av MAC-adresseblokker",
         description:
-          "Bla gjennom og søk i IEEE-registrene MA-L, MA-M, MA-S, IAB og CID. Se registrerte prefikser, adresseområder og organisasjoner.",
+          "Søk etter IEEE-adresseblokker basert på prefiks, organisasjon eller registrert adresse.",
       },
       pl: {
         name: "Wyszukiwanie bloków adresów MAC",
         description:
-          "Przeglądaj i wyszukuj wpisy IEEE MA-L, MA-M, MA-S, IAB i CID. Sprawdzaj zarejestrowane prefiksy, zakresy adresów i organizacje.",
+          "Wyszukuj bloki adresów IEEE według prefiksu, organizacji lub adresu z rejestru.",
       },
       pt: {
         name: "Consulta de blocos de endereços MAC",
         description:
-          "Navegue e pesquise registros IEEE MA-L, MA-M, MA-S, IAB e CID. Confira prefixos registrados, intervalos de endereços e organizações.",
+          "Pesquise blocos de endereços IEEE por prefixo, organização ou endereço registrado.",
       },
       ru: {
         name: "Поиск блоков MAC-адресов",
         description:
-          "Просматривайте и ищите записи IEEE MA-L, MA-M, MA-S, IAB и CID. Изучайте зарегистрированные префиксы, диапазоны адресов и организации.",
+          "Ищите блоки адресов IEEE по префиксу, организации или адресу в реестре.",
       },
       sv: {
         name: "Sökning efter MAC-adressblock",
         description:
-          "Bläddra och sök i IEEE-registren MA-L, MA-M, MA-S, IAB och CID. Granska registrerade prefix, adressintervall och organisationer.",
+          "Sök efter IEEE-adressblock utifrån prefix, organisation eller registrerad adress.",
       },
       th: {
         name: "ค้นหาบล็อกที่อยู่ MAC",
-        description:
-          "เรียกดูและค้นหารายการ IEEE MA-L, MA-M, MA-S, IAB และ CID ตรวจสอบพรีฟิกซ์ที่ลงทะเบียน ช่วงที่อยู่ และองค์กร",
+        description: "ค้นหาบล็อกที่อยู่ IEEE ด้วยพรีฟิกซ์ องค์กร หรือที่อยู่ที่ลงทะเบียน",
       },
       tr: {
         name: "MAC Adres Bloğu Sorgulama",
         description:
-          "IEEE MA-L, MA-M, MA-S, IAB ve CID kayıtlarına göz atın ve arama yapın. Kayıtlı önekleri, adres aralıklarını ve kuruluşları inceleyin.",
+          "IEEE adres bloklarını önek, kuruluş veya kayıtlı adrese göre arayın.",
       },
       vi: {
         name: "Tra cứu khối địa chỉ MAC",
         description:
-          "Duyệt và tìm bản ghi IEEE MA-L, MA-M, MA-S, IAB và CID. Xem tiền tố đã đăng ký, dải địa chỉ và tổ chức.",
+          "Tìm khối địa chỉ IEEE theo tiền tố, tổ chức hoặc địa chỉ đã đăng ký.",
       },
       "zh-CN": {
         name: "MAC 地址区块查询",
-        description:
-          "浏览和搜索 IEEE MA-L、MA-M、MA-S、IAB 和 CID 记录。查看已登记前缀、地址范围和组织。",
+        description: "按前缀、组织或登记地址搜索 IEEE 地址区块。",
       },
       "zh-TW": {
         name: "MAC 位址區塊查詢",
-        description:
-          "瀏覽與搜尋 IEEE MA-L、MA-M、MA-S、IAB 和 CID 紀錄。檢視已登記的前綴、位址範圍與組織。",
+        description: "依前綴、組織或登記地址搜尋 IEEE 位址區塊。",
       },
     },
   },
@@ -54753,117 +54738,114 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "البحث عن عنوان MAC",
         description:
-          "اعثر على المؤسسة المسجّلة المرتبطة بعنوان MAC أو بادئة IEEE. تحقّق من أنواع العناوين وتفاصيل التخصيص محليًا في متصفحك.",
+          "اعثر على المؤسسة والكتلة المسجّلة لعنوان MAC أو بادئة IEEE.",
       },
       de: {
         name: "MAC-Adresssuche",
         description:
-          "Finden Sie die registrierte Organisation zu einer MAC-Adresse oder einem IEEE-Präfix. Prüfen Sie Adresstypen und Zuteilungsdetails lokal in Ihrem Browser.",
+          "Finden Sie die Organisation und den registrierten Block zu einer MAC-Adresse oder einem IEEE-Präfix.",
       },
       en: {
         name: "MAC Address Lookup",
         description:
-          "Find the registered organization behind a MAC address or IEEE prefix. Check address types and allocation details locally in your browser.",
+          "Find the organization and registered block for a MAC address or IEEE prefix.",
       },
       es: {
         name: "Consulta de direcciones MAC",
         description:
-          "Encuentra la organización registrada que corresponde a una dirección MAC o a un prefijo IEEE. Comprueba los tipos de dirección y los detalles de la asignación de forma local en tu navegador.",
+          "Encuentra la organización y el bloque registrado de una dirección MAC o un prefijo IEEE.",
       },
       fr: {
         name: "Recherche d’adresses MAC",
         description:
-          "Trouvez l’organisation enregistrée pour une adresse MAC ou un préfixe IEEE. Consultez les types d’adresses et les détails d’attribution localement dans votre navigateur.",
+          "Trouvez l’organisation et le bloc enregistré pour une adresse MAC ou un préfixe IEEE.",
       },
       he: {
         name: "חיפוש כתובת MAC",
         description:
-          "מצאו את הארגון הרשום המשויך לכתובת MAC או לקידומת IEEE. בדקו סוגי כתובות ופרטי הקצאה באופן מקומי בדפדפן.",
+          "מצאו את הארגון ואת הבלוק הרשום של כתובת MAC או קידומת IEEE.",
       },
       hi: {
         name: "MAC पते की खोज",
         description:
-          "MAC पते या IEEE प्रीफ़िक्स से जुड़े पंजीकृत संगठन का पता लगाएँ। अपने ब्राउज़र में स्थानीय रूप से पते के प्रकार और आवंटन का विवरण जाँचें।",
+          "MAC पते या IEEE प्रीफ़िक्स से जुड़े संगठन और पंजीकृत ब्लॉक का पता लगाएँ।",
       },
       id: {
         name: "Pencarian alamat MAC",
         description:
-          "Temukan organisasi terdaftar yang terkait dengan alamat MAC atau prefiks IEEE. Periksa jenis alamat dan detail alokasi secara lokal di peramban.",
+          "Temukan organisasi dan blok terdaftar untuk alamat MAC atau prefiks IEEE.",
       },
       it: {
         name: "Ricerca di indirizzi MAC",
         description:
-          "Trova l’organizzazione registrata associata a un indirizzo MAC o a un prefisso IEEE. Verifica i tipi di indirizzo e i dettagli delle assegnazioni localmente nel browser.",
+          "Trova l’organizzazione e il blocco registrato per un indirizzo MAC o un prefisso IEEE.",
       },
       ja: {
         name: "MAC アドレス検索",
         description:
-          "MAC アドレスや IEEE プレフィックスに対応する登録組織を検索。ブラウザー内でローカルにアドレスの種類や割り当ての詳細を確認できます。",
+          "MAC アドレスや IEEE プレフィックスに対応する組織と登録ブロックを検索できます。",
       },
       ko: {
         name: "MAC 주소 조회",
         description:
-          "MAC 주소 또는 IEEE 접두사의 등록 조직을 찾으세요. 브라우저에서 로컬로 주소 유형과 할당 세부 정보를 확인할 수 있습니다.",
+          "MAC 주소 또는 IEEE 접두사에 해당하는 조직과 등록 블록을 찾으세요.",
       },
       ms: {
         name: "Carian Alamat MAC",
         description:
-          "Cari organisasi berdaftar yang berkaitan dengan alamat MAC atau awalan IEEE. Semak jenis alamat dan butiran peruntukan secara setempat dalam pelayar anda.",
+          "Cari organisasi dan blok berdaftar bagi alamat MAC atau awalan IEEE.",
       },
       nl: {
         name: "MAC-adres opzoeken",
         description:
-          "Vind de geregistreerde organisatie achter een MAC-adres of IEEE-prefix. Controleer adrestypen en toewijzingsgegevens lokaal in je browser.",
+          "Vind de organisatie en het geregistreerde blok voor een MAC-adres of IEEE-prefix.",
       },
       no: {
         name: "Oppslag av MAC-adresser",
         description:
-          "Finn organisasjonen som er registrert for en MAC-adresse eller et IEEE-prefiks. Sjekk adressetyper og tildelingsdetaljer lokalt i nettleseren.",
+          "Finn organisasjonen og den registrerte blokken for en MAC-adresse eller et IEEE-prefiks.",
       },
       pl: {
         name: "Wyszukiwanie adresów MAC",
         description:
-          "Znajdź organizację, na którą zarejestrowano adres MAC lub prefiks IEEE. Sprawdzaj typy adresów i szczegóły przydziałów lokalnie w przeglądarce.",
+          "Znajdź organizację i zarejestrowany blok dla adresu MAC lub prefiksu IEEE.",
       },
       pt: {
         name: "Consulta de endereços MAC",
         description:
-          "Encontre a organização registrada de um endereço MAC ou prefixo IEEE. Confira os tipos de endereço e os detalhes de alocação localmente no navegador.",
+          "Encontre a organização e o bloco registrado de um endereço MAC ou prefixo IEEE.",
       },
       ru: {
         name: "Поиск по MAC-адресу",
         description:
-          "Найдите организацию, на которую зарегистрирован MAC-адрес или префикс IEEE. Проверяйте типы адресов и сведения о выделенных блоках локально в браузере.",
+          "Найдите организацию и зарегистрированный блок по MAC-адресу или префиксу IEEE.",
       },
       sv: {
         name: "Sökning efter MAC-adresser",
         description:
-          "Hitta den registrerade organisationen bakom en MAC-adress eller ett IEEE-prefix. Kontrollera adresstyper och tilldelningsdetaljer lokalt i webbläsaren.",
+          "Hitta organisationen och det registrerade blocket för en MAC-adress eller ett IEEE-prefix.",
       },
       th: {
         name: "ค้นหาที่อยู่ MAC",
-        description:
-          "ค้นหาองค์กรที่ลงทะเบียนสำหรับที่อยู่ MAC หรือพรีฟิกซ์ IEEE ตรวจสอบประเภทที่อยู่และรายละเอียดการจัดสรรภายในเบราว์เซอร์ของคุณ",
+        description: "ค้นหาองค์กรและบล็อกที่ลงทะเบียนสำหรับที่อยู่ MAC หรือพรีฟิกซ์ IEEE",
       },
       tr: {
         name: "MAC Adresi Sorgulama",
         description:
-          "Bir MAC adresine veya IEEE önekine ait kayıtlı kuruluşu bulun. Adres türlerini ve tahsis ayrıntılarını doğrudan tarayıcınızda yerel olarak kontrol edin.",
+          "Bir MAC adresi veya IEEE öneki için kuruluşu ve kayıtlı bloğu bulun.",
       },
       vi: {
         name: "Tra cứu địa chỉ MAC",
         description:
-          "Tìm tổ chức đã đăng ký tương ứng với địa chỉ MAC hoặc tiền tố IEEE. Kiểm tra loại địa chỉ và chi tiết cấp phát ngay trong trình duyệt.",
+          "Tìm tổ chức và khối đã đăng ký tương ứng với địa chỉ MAC hoặc tiền tố IEEE.",
       },
       "zh-CN": {
         name: "MAC 地址查询",
-        description:
-          "查找 MAC 地址或 IEEE 前缀对应的登记组织。在浏览器本地查看地址类型和分配详情。",
+        description: "查找 MAC 地址或 IEEE 前缀对应的组织和登记区块。",
       },
       "zh-TW": {
         name: "MAC 位址查詢",
-        description:
-          "查詢 MAC 位址或 IEEE 前綴的登記組織。直接在您的瀏覽器中檢查位址類型與配發詳情。",
+        description: "查詢 MAC 位址或 IEEE 前綴所屬的組織與登記區塊。",
       },
     },
   },
@@ -54999,117 +54981,113 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "البحث عن مورّدي عناوين MAC",
         description:
-          "ابحث عن المؤسسات في سجل IEEE بالاسم أو العنوان البريدي واستكشف جميع كتل عناوين MAC المسجّلة باسمها.",
+          "اعثر على تسجيلات مؤسسة لدى IEEE واستكشف كتل عناوين MAC الخاصة بها.",
       },
       de: {
         name: "MAC-Herstellersuche",
         description:
-          "Suchen Sie IEEE-Organisationen nach Name oder Anschrift und erkunden Sie alle ihre registrierten MAC-Adressblöcke.",
+          "Finden Sie die IEEE-Registrierungen einer Organisation und erkunden Sie ihre MAC-Adressblöcke.",
       },
       en: {
         name: "MAC Address Vendor Lookup",
         description:
-          "Search IEEE organizations by name or address and explore all their registered MAC address blocks.",
+          "Find an organization’s IEEE registrations and explore its MAC address blocks.",
       },
       es: {
         name: "Consulta de direcciones MAC por proveedor",
         description:
-          "Busca organizaciones en el registro IEEE por nombre o dirección postal y explora todos los bloques de direcciones MAC registrados a su nombre.",
+          "Encuentra los registros IEEE de una organización y explora sus bloques de direcciones MAC.",
       },
       fr: {
         name: "Recherche de fabricants MAC",
         description:
-          "Recherchez les organisations IEEE par nom ou adresse postale et explorez tous leurs blocs d’adresses MAC enregistrés.",
+          "Trouvez les enregistrements IEEE d’une organisation et explorez ses blocs d’adresses MAC.",
       },
       he: {
         name: "חיפוש כתובות MAC לפי ספק",
         description:
-          "חפשו ארגונים ברשימת IEEE לפי שם או כתובת דואר ועיינו בכל הבלוקים של כתובות MAC הרשומים על שמם.",
+          "מצאו את רישומי IEEE של ארגון ועיינו בבלוקי כתובות ה-MAC שלו.",
       },
       hi: {
         name: "विक्रेता के अनुसार MAC पतों की खोज",
-        description:
-          "IEEE में दर्ज संगठनों को नाम या डाक पते से खोजें और उनके नाम पंजीकृत MAC पतों के सभी ब्लॉक देखें।",
+        description: "संगठन के IEEE पंजीकरण खोजें और उसके MAC पतों के ब्लॉक देखें।",
       },
       id: {
         name: "Pencarian alamat MAC berdasarkan vendor",
         description:
-          "Cari organisasi di registri IEEE berdasarkan nama atau alamat pos dan jelajahi semua blok alamat MAC yang terdaftar atas nama mereka.",
+          "Temukan pendaftaran IEEE suatu organisasi dan jelajahi blok alamat MAC-nya.",
       },
       it: {
         name: "Ricerca del fornitore tramite indirizzo MAC",
         description:
-          "Cerca le organizzazioni IEEE per nome o indirizzo ed esplora tutti i blocchi di indirizzi MAC a loro registrati.",
+          "Trova le registrazioni IEEE di un’organizzazione ed esplora i suoi blocchi di indirizzi MAC.",
       },
       ja: {
         name: "MAC アドレスベンダー検索",
         description:
-          "名称や登録住所から IEEE の組織を検索し、その組織が登録したすべての MAC アドレスブロックを確認できます。",
+          "組織の IEEE 登録情報を検索し、その MAC アドレスブロックを調べられます。",
       },
       ko: {
         name: "MAC 주소 제조사 조회",
-        description:
-          "이름이나 주소로 IEEE 등록 조직을 검색하고 해당 조직에 등록된 모든 MAC 주소 블록을 살펴보세요.",
+        description: "조직의 IEEE 등록 기록을 찾고 MAC 주소 블록을 살펴보세요.",
       },
       ms: {
         name: "Carian Pembekal Alamat MAC",
         description:
-          "Cari organisasi IEEE mengikut nama atau alamat dan terokai semua blok alamat MAC yang didaftarkan kepada mereka.",
+          "Cari pendaftaran IEEE sesebuah organisasi dan terokai blok alamat MAC miliknya.",
       },
       nl: {
         name: "Leverancier van een MAC-adres opzoeken",
         description:
-          "Zoek IEEE-organisaties op naam of adres en verken al hun geregistreerde MAC-adresblokken.",
+          "Vind de IEEE-registraties van een organisatie en verken de bijbehorende MAC-adresblokken.",
       },
       no: {
         name: "Organisasjonssøk i MAC-adresseregisteret",
         description:
-          "Søk etter IEEE-registrerte organisasjoner med navn eller adresse, og utforsk alle MAC-adresseblokkene som er registrert på dem.",
+          "Finn en organisasjons IEEE-registreringer og utforsk MAC-adresseblokkene dens.",
       },
       pl: {
         name: "Wyszukiwanie organizacji w rejestrze adresów MAC",
         description:
-          "Wyszukuj organizacje w rejestrze IEEE według nazwy lub adresu i przeglądaj wszystkie zarejestrowane na nie bloki adresów MAC.",
+          "Znajdź wpisy organizacji w rejestrach IEEE i przeglądaj jej bloki adresów MAC.",
       },
       pt: {
         name: "Consulta de fabricantes MAC",
         description:
-          "Pesquise organizações do IEEE por nome ou endereço postal e explore todos os seus blocos de endereços MAC registrados.",
+          "Encontre os registros IEEE de uma organização e explore seus blocos de endereços MAC.",
       },
       ru: {
         name: "Поиск организаций в реестре MAC-адресов",
         description:
-          "Ищите организации в реестре IEEE по названию или адресу и изучайте все зарегистрированные на них блоки MAC-адресов.",
+          "Найдите записи организации в реестре IEEE и изучите её блоки MAC-адресов.",
       },
       sv: {
         name: "Sökning efter MAC-tillverkare",
         description:
-          "Sök organisationer i IEEE:s register utifrån namn eller postadress och utforska alla deras registrerade MAC-adressblock.",
+          "Hitta en organisations IEEE-registreringar och utforska dess MAC-adressblock.",
       },
       th: {
         name: "ค้นหาผู้ผลิตตามที่อยู่ MAC",
         description:
-          "ค้นหาองค์กรในทะเบียน IEEE ด้วยชื่อหรือที่อยู่ แล้วสำรวจบล็อกที่อยู่ MAC ทั้งหมดที่องค์กรนั้นลงทะเบียนไว้",
+          "ค้นหารายการลงทะเบียน IEEE ขององค์กรและสำรวจบล็อกที่อยู่ MAC ขององค์กรนั้น",
       },
       tr: {
         name: "MAC Adresi Üretici Sorgulama",
         description:
-          "IEEE kayıtlarındaki kuruluşları ad veya adrese göre arayın ve kayıtlı tüm MAC adres bloklarını keşfedin.",
+          "Bir kuruluşun IEEE kayıtlarını bulun ve MAC adres bloklarını keşfedin.",
       },
       vi: {
         name: "Tra cứu nhà sản xuất MAC",
         description:
-          "Tìm tổ chức trong sổ đăng ký IEEE theo tên hoặc địa chỉ bưu chính và khám phá tất cả các khối địa chỉ MAC đã đăng ký của tổ chức đó.",
+          "Tìm các bản ghi đăng ký IEEE của tổ chức và khám phá các khối địa chỉ MAC của tổ chức đó.",
       },
       "zh-CN": {
         name: "MAC 地址厂商查询",
-        description:
-          "按名称或登记地址搜索 IEEE 登记组织，查看其登记的所有 MAC 地址区块。",
+        description: "查找组织的 IEEE 登记记录，浏览其 MAC 地址区块。",
       },
       "zh-TW": {
         name: "MAC 位址廠商查詢",
-        description:
-          "依名稱或地址搜尋 IEEE 登記組織，並探索其所有已登記的 MAC 位址區塊。",
+        description: "查詢組織的 IEEE 登記紀錄，並探索其 MAC 位址區塊。",
       },
     },
   },

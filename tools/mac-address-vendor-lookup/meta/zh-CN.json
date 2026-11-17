@@ -1,4 +1,4 @@
 {
   "name": "MAC 地址厂商查询",
-  "description": "按名称或登记地址搜索 IEEE 登记组织，查看其登记的所有 MAC 地址区块。"
+  "description": "查找组织的 IEEE 登记记录，浏览其 MAC 地址区块。"
 }

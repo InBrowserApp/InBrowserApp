@@ -1,4 +1,4 @@
 {
   "name": "Ricerca del fornitore tramite indirizzo MAC",
-  "description": "Cerca le organizzazioni IEEE per nome o indirizzo ed esplora tutti i blocchi di indirizzi MAC a loro registrati."
+  "description": "Trova le registrazioni IEEE di un’organizzazione ed esplora i suoi blocchi di indirizzi MAC."
 }

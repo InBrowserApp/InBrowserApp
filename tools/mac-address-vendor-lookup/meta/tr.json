@@ -1,4 +1,4 @@
 {
   "name": "MAC Adresi Üretici Sorgulama",
-  "description": "IEEE kayıtlarındaki kuruluşları ad veya adrese göre arayın ve kayıtlı tüm MAC adres bloklarını keşfedin."
+  "description": "Bir kuruluşun IEEE kayıtlarını bulun ve MAC adres bloklarını keşfedin."
 }

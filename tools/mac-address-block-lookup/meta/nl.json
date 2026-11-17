@@ -1,4 +1,4 @@
 {
   "name": "MAC-adresblokken opzoeken",
-  "description": "Blader en zoek in IEEE-registraties voor MA-L, MA-M, MA-S, IAB en CID. Bekijk geregistreerde prefixen, adresbereiken en organisaties."
+  "description": "Zoek IEEE-adresblokken op prefix, organisatie of geregistreerd adres."
 }

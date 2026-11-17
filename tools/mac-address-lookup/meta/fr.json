@@ -1,4 +1,4 @@
 {
   "name": "Recherche d’adresses MAC",
-  "description": "Trouvez l’organisation enregistrée pour une adresse MAC ou un préfixe IEEE. Consultez les types d’adresses et les détails d’attribution localement dans votre navigateur."
+  "description": "Trouvez l’organisation et le bloc enregistré pour une adresse MAC ou un préfixe IEEE."
 }

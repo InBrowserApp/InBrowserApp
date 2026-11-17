@@ -1,4 +1,4 @@
 {
   "name": "MAC Adres Bloğu Sorgulama",
-  "description": "IEEE MA-L, MA-M, MA-S, IAB ve CID kayıtlarına göz atın ve arama yapın. Kayıtlı önekleri, adres aralıklarını ve kuruluşları inceleyin."
+  "description": "IEEE adres bloklarını önek, kuruluş veya kayıtlı adrese göre arayın."
 }

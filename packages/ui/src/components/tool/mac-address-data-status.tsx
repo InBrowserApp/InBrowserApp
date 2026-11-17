@@ -7,13 +7,11 @@ type MacAddressDataStatusProps = Readonly<{
   error: boolean
   onRetry: () => void
   updatedLabel?: string
-  summary?: string
   labels: Readonly<{
     loading: string
     loadError: string
     retry: string
     source: string
-    sourceHint: string
   }>
 }>
 
@@ -22,7 +20,6 @@ function MacAddressDataStatus({
   error,
   onRetry,
   updatedLabel,
-  summary,
   labels,
 }: MacAddressDataStatusProps) {
   if (loading) {
@@ -55,18 +52,14 @@ function MacAddressDataStatus({
   }
 
   return (
-    <footer className="flex flex-col gap-1 text-xs text-muted-foreground">
-      <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
-        <a
-          href="https://standards.ieee.org/products-programs/regauth/"
-          className="rounded-sm underline underline-offset-4 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-        >
-          {labels.source}
-        </a>
-        {updatedLabel ? <span>{updatedLabel}</span> : null}
-        {summary ? <span>{summary}</span> : null}
-      </p>
-      <p>{labels.sourceHint}</p>
+    <footer className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+      <a
+        href="https://standards.ieee.org/products-programs/regauth/"
+        className="rounded-sm underline underline-offset-4 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+      >
+        {labels.source}
+      </a>
+      {updatedLabel ? <span>{updatedLabel}</span> : null}
     </footer>
   )
 }

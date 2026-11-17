@@ -1,24 +1,21 @@
 {
-  "lookup": "Pencarian MAC",
-  "blocks": "Berdasarkan blok",
-  "vendors": "Berdasarkan organisasi",
-  "navigationLabel": "Alat alamat MAC",
+  "lookup": "Pencarian alamat MAC",
+  "blocks": "Pencarian blok alamat MAC",
+  "vendors": "Pencarian alamat MAC berdasarkan vendor",
+  "navigationLabel": "Alat terkait",
   "queryLabel": "Alamat MAC atau prefiks",
   "lookupPlaceholder": "00:1B:63:84:45:E6…",
   "blockPlaceholder": "Prefiks, organisasi, atau alamat pos…",
   "vendorPlaceholder": "Nama organisasi atau alamat pos…",
-  "lookupHint": "Masukkan alamat MAC atau prefiks IEEE sepanjang 24, 28, atau 36 bit. Format dengan titik dua, tanda hubung, titik, maupun tanpa pemisah didukung.",
   "blockSearchLabel": "Cari blok terdaftar",
   "vendorSearchLabel": "Cari organisasi",
   "registry": "Registri",
   "allRegistries": "Semua registri",
   "prefix": "Prefiks",
-  "organization": "Organisasi terdaftar",
-  "address": "Alamat pos organisasi",
+  "organization": "Organisasi",
+  "address": "Alamat terdaftar",
   "range": "Rentang alamat",
   "capacity": "Jumlah alamat dalam blok",
-  "normalized": "Alamat yang dinormalisasi",
-  "addressType": "Jenis alamat",
   "share": "Salin tautan",
   "copied": "Tautan disalin",
   "loading": "Memuat registri IEEE…",
@@ -26,11 +23,9 @@
   "retry": "Coba lagi",
   "noResults": "Tidak ada entri yang cocok",
   "noResultsHint": "Coba prefiks, nama organisasi, atau registri lain.",
-  "emptyLookup": "Cari alamat MAC",
-  "emptyLookupHint": "Masukkan alamat di atas atau coba contoh untuk melihat organisasi terdaftar dan bloknya.",
+  "emptyLookupHint": "Hasil ditampilkan di sini.",
   "invalidAddress": "Masukkan alamat MAC lengkap atau prefiks 24, 28, atau 36 bit yang valid.",
   "noAssignment": "Organisasi terdaftar tidak ditemukan",
-  "noAssignmentHint": "Alamat ini tidak cocok dengan alokasi dalam salinan data IEEE ini.",
   "previous": "Sebelumnya",
   "next": "Berikutnya",
   "pageSummary": "{start}–{end} dari {total}",
@@ -38,10 +33,7 @@
   "organizationCount": "{count} organisasi",
   "source": "Registri publik IEEE",
   "updated": "Salinan data: {date}",
-  "dataSummary": "{assignments} alokasi · {organizations} organisasi",
-  "sourceHint": "Pencarian berjalan di peramban menggunakan salinan registri IEEE yang disertakan.",
   "clearOrganization": "Semua organisasi",
-  "organizationBlocks": "Blok yang terdaftar atas nama {organization}",
   "examples": "Contoh",
   "copyAddress": "Salin alamat",
   "addressCopied": "Alamat disalin",
@@ -54,19 +46,28 @@
     "prefix": "Prefiks IEEE"
   },
   "typeHints": {
-    "universal": "Organisasi terdaftar menunjukkan penerima alokasi alamat dan dapat berbeda dari merek perangkat.",
-    "local": "Alamat ini dikelola secara lokal dan mungkin dibuat secara acak. Prefiksnya tidak dapat diandalkan untuk mengidentifikasi vendor perangkat.",
-    "multicast": "Ini adalah alamat grup. Vendor tidak dapat ditentukan dari alokasi IEEE untuk pengiriman ke satu penerima.",
-    "broadcast": "Alamat ini mengirim data ke semua perangkat di jaringan lokal; tidak terkait dengan satu vendor tertentu.",
-    "zero": "Alamat yang seluruhnya nol adalah alamat yang tidak ditentukan; alamat ini tidak mengidentifikasi vendor perangkat.",
-    "prefix": "Prefiks mengidentifikasi blok terdaftar. Alokasi dengan prefiks lebih panjang diutamakan saat mencari alamat MAC lengkap."
+    "local": "Sering digunakan untuk alamat Wi-Fi privat.",
+    "multicast": "Alamat grup untuk menjangkau beberapa perangkat.",
+    "broadcast": "Menjangkau semua perangkat di jaringan lokal.",
+    "zero": "Alamat yang tidak ditentukan."
   },
-  "cidHint": "CID mengidentifikasi organisasi untuk pengalamatan lokal. Ini bukan alokasi alamat MAC yang unik secara global.",
-  "registrySizes": "MA-L: /24 · MA-M: /28 · MA-S dan IAB: /36 · CID: pengenal perusahaan",
-  "lookupAboutTitle": "Cara kerja pencarian alamat MAC",
-  "lookupAboutBody": "Alamat MAC terdiri dari 48 bit. IEEE menetapkan prefiks sepanjang 24, 28, atau 36 bit kepada organisasi. Alat ini mencocokkan prefiks terdaftar terpanjang dan menampilkan pemegang alokasi, rentang alamat, serta registri. Alamat yang dikelola secara lokal dan alamat grup diidentifikasi secara terpisah.",
-  "blocksAboutTitle": "Jelajahi blok alamat IEEE",
-  "blocksAboutBody": "Jelajahi kelima registri publik IEEE. Cari prefiks, organisasi, atau alamat pos terdaftar, lalu buka blok untuk melihat rentang dan kapasitasnya. MA-L mengalokasikan 16,777,216 alamat, MA-M mengalokasikan 1,048,576, dan MA-S atau IAB mengalokasikan 4,096. CID adalah pengenal perusahaan untuk pengalamatan lokal.",
-  "vendorsAboutTitle": "Temukan blok terdaftar suatu organisasi",
-  "vendorsAboutBody": "Cari nama organisasi dan alamat pos terdaftarnya, lalu pilih organisasi untuk melihat seluruh alokasinya. Nama dan alamat berasal dari daftar IEEE dan ditampilkan sesuai yang didaftarkan. Pemegang alokasi belum tentu sama dengan merek perangkat, dan alamat pos ini tidak menunjukkan lokasi perangkat."
+  "cidHint": "Pengenal perusahaan untuk alamat yang ditetapkan secara lokal.",
+  "about": {
+    "title": "Jelajahi alokasi alamat MAC IEEE",
+    "intro": "Blok alamat IEEE memberikan prefiks tetap beserta ruang alamat di bawahnya kepada organisasi. Cari di registri untuk memeriksa prefiks yang diketahui, menjelajahi alokasi yang lebih kecil di dalam prefiks yang lebih besar, atau menemukan blok yang terdaftar atas nama organisasi.",
+    "sections": [
+      {
+        "title": "Pilih registri",
+        "body": "MA-L menggunakan prefiks 24 bit dan berisi 16,777,216 alamat. MA-M menggunakan 28 bit dan berisi 1,048,576 alamat. MA-S dan registri IAB yang lebih lama menggunakan prefiks 36 bit dengan masing-masing 4,096 alamat. Entri CID mengidentifikasi perusahaan untuk pengalamatan lokal. Filter registri membatasi daftar ke satu jenis alokasi."
+      },
+      {
+        "title": "Cari prefiks dan periksa rentang",
+        "body": "Masukkan prefiks tanpa pemisah, dengan titik dua, tanda hubung, titik, atau dalam notasi CIDR. Prefiks parsial menemukan alokasi yang cocok; alamat MAC lengkap menemukan prefiks yang mencakupnya. Anda juga dapat mencari nama organisasi dan alamat terdaftar. Buka prefiks untuk melihat alamat pertama, alamat terakhir, dan kapasitasnya beserta pendaftaran yang cocok."
+      },
+      {
+        "title": "Telusuri alokasi di seluruh registri",
+        "body": "Pilih nama organisasi untuk membuka daftar lengkap alokasinya di alat pencarian organisasi. Hasil dibagi menjadi beberapa halaman, dan Salin tautan menyimpan pencarian, registri, dan halaman di URL. Nama, alamat, dan alokasi berasal dari lima daftar publik IEEE yang disimpan dalam salinan data bersama. Tautan sumber dan tanggal salinan data memudahkan identifikasi kumpulan data saat membandingkan hasil."
+      }
+    ]
+  }
 }

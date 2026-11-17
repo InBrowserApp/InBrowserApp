@@ -1,4 +1,4 @@
 {
   "name": "Pencarian blok alamat MAC",
-  "description": "Telusuri dan cari entri IEEE MA-L, MA-M, MA-S, IAB, dan CID. Periksa prefiks terdaftar, rentang alamat, dan organisasi."
+  "description": "Cari blok alamat IEEE berdasarkan prefiks, organisasi, atau alamat terdaftar."
 }

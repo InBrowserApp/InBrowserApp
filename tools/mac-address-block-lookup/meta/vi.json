@@ -1,4 +1,4 @@
 {
   "name": "Tra cứu khối địa chỉ MAC",
-  "description": "Duyệt và tìm bản ghi IEEE MA-L, MA-M, MA-S, IAB và CID. Xem tiền tố đã đăng ký, dải địa chỉ và tổ chức."
+  "description": "Tìm khối địa chỉ IEEE theo tiền tố, tổ chức hoặc địa chỉ đã đăng ký."
 }

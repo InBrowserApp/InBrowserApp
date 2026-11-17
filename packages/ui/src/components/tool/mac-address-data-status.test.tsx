@@ -8,7 +8,6 @@ const labels = {
   loadError: "The registry could not be loaded.",
   retry: "Retry",
   source: "IEEE Registration Authority",
-  sourceHint: "Queries are processed in your browser.",
 }
 
 afterEach(cleanup)
@@ -52,14 +51,13 @@ describe("MacAddressDataStatus", () => {
     expect(screen.getByRole("status").textContent).toBe(labels.loading)
   })
 
-  test("attributes the dataset and displays the localized update and summary", () => {
+  test("attributes the dataset and displays the localized update", () => {
     render(
       <MacAddressDataStatus
         loading={false}
         error={false}
         onRetry={vi.fn()}
         updatedLabel="Updated November 17, 2026"
-        summary="58,804 assignments"
         labels={labels}
       />
     )
@@ -68,8 +66,6 @@ describe("MacAddressDataStatus", () => {
       screen.getByRole("link", { name: labels.source }).getAttribute("href")
     ).toBe("https://standards.ieee.org/products-programs/regauth/")
     expect(screen.getByText("Updated November 17, 2026")).toBeTruthy()
-    expect(screen.getByText("58,804 assignments")).toBeTruthy()
-    expect(screen.getByText(labels.sourceHint)).toBeTruthy()
     expect(screen.queryByRole("button")).toBeNull()
   })
 
@@ -84,7 +80,6 @@ describe("MacAddressDataStatus", () => {
     )
 
     expect(screen.getByRole("link", { name: labels.source })).toBeTruthy()
-    expect(screen.getByText(labels.sourceHint)).toBeTruthy()
     expect(screen.queryByRole("alert")).toBeNull()
     expect(screen.queryByRole("status")).toBeNull()
   })

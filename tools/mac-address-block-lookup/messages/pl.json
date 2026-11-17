@@ -1,24 +1,21 @@
 {
-  "lookup": "Wyszukiwanie MAC",
-  "blocks": "Według bloku",
-  "vendors": "Według organizacji",
-  "navigationLabel": "Narzędzia do adresów MAC",
+  "lookup": "Wyszukiwanie adresów MAC",
+  "blocks": "Wyszukiwanie bloków adresów MAC",
+  "vendors": "Wyszukiwanie organizacji w rejestrze adresów MAC",
+  "navigationLabel": "Powiązane narzędzia",
   "queryLabel": "Adres MAC lub prefiks",
   "lookupPlaceholder": "00:1B:63:84:45:E6…",
   "blockPlaceholder": "Prefiks, organizacja lub adres…",
   "vendorPlaceholder": "Nazwa lub adres organizacji…",
-  "lookupHint": "Wpisz adres MAC albo 24-, 28- lub 36-bitowy prefiks IEEE. Obsługiwane są formaty z dwukropkami, łącznikami, kropkami i bez separatorów.",
   "blockSearchLabel": "Wyszukaj zarejestrowane bloki",
   "vendorSearchLabel": "Wyszukaj organizacje",
   "registry": "Rejestr",
   "allRegistries": "Wszystkie rejestry",
   "prefix": "Prefiks",
-  "organization": "Zarejestrowana organizacja",
-  "address": "Adres organizacji",
+  "organization": "Organizacja",
+  "address": "Adres w rejestrze",
   "range": "Zakres adresów",
   "capacity": "Liczba adresów w bloku",
-  "normalized": "Znormalizowany adres",
-  "addressType": "Typ adresu",
   "share": "Kopiuj link",
   "copied": "Link skopiowany",
   "loading": "Wczytywanie rejestru IEEE…",
@@ -26,11 +23,9 @@
   "retry": "Spróbuj ponownie",
   "noResults": "Brak pasujących wpisów",
   "noResultsHint": "Wypróbuj inny prefiks, nazwę organizacji lub rejestr.",
-  "emptyLookup": "Wyszukaj adres MAC",
-  "emptyLookupHint": "Wpisz adres powyżej lub wybierz przykład, aby zobaczyć zarejestrowaną organizację i blok.",
+  "emptyLookupHint": "Tutaj pojawią się wyniki.",
   "invalidAddress": "Wpisz pełny adres MAC lub prawidłowy 24-, 28- lub 36-bitowy prefiks.",
   "noAssignment": "Nie znaleziono zarejestrowanej organizacji",
-  "noAssignmentHint": "Ten adres nie pasuje do żadnego przydziału w tej migawce rejestru IEEE.",
   "previous": "Poprzednia",
   "next": "Następna",
   "pageSummary": "{start}–{end} z {total}",
@@ -38,10 +33,7 @@
   "organizationCount": "Organizacje: {count}",
   "source": "Publiczny rejestr IEEE",
   "updated": "Migawka: {date}",
-  "dataSummary": "Przydziały: {assignments} · organizacje: {organizations}",
-  "sourceHint": "Wyszukiwanie działa w przeglądarce i korzysta z dołączonej migawki rejestru IEEE.",
   "clearOrganization": "Wszystkie organizacje",
-  "organizationBlocks": "Bloki zarejestrowane na {organization}",
   "examples": "Przykłady",
   "copyAddress": "Kopiuj adres",
   "addressCopied": "Adres skopiowany",
@@ -54,19 +46,28 @@
     "prefix": "Prefiks IEEE"
   },
   "typeHints": {
-    "universal": "Zarejestrowana organizacja wskazuje, komu przydzielono adresy, i może różnić się od marki urządzenia.",
-    "local": "Ten adres jest administrowany lokalnie i może być losowy. Jego prefiks nie pozwala wiarygodnie ustalić producenta urządzenia.",
-    "multicast": "To adres grupowy. Nie można ustalić producenta na podstawie przydziału adresów jednostkowych IEEE.",
-    "broadcast": "Ten adres służy do wysyłania danych do wszystkich urządzeń w sieci lokalnej; nie ma przypisanego pojedynczego producenta.",
-    "zero": "Adres złożony z samych zer jest adresem nieokreślonym; nie wskazuje producenta urządzenia.",
-    "prefix": "Prefiks wskazuje zarejestrowany blok. Przy wyszukiwaniu pełnego adresu MAC pierwszeństwo mają przydziały z dłuższym prefiksem."
+    "local": "Często używany jako prywatny adres Wi-Fi.",
+    "multicast": "Adres grupowy do wysyłania danych do wielu urządzeń.",
+    "broadcast": "Dane trafiają do wszystkich urządzeń w sieci lokalnej.",
+    "zero": "Adres nieokreślony."
   },
-  "cidHint": "CID identyfikuje organizację na potrzeby adresowania lokalnego. Nie stanowi przydziału globalnie unikalnych adresów MAC.",
-  "registrySizes": "MA-L: /24 · MA-M: /28 · MA-S i IAB: /36 · CID: identyfikator firmy",
-  "lookupAboutTitle": "Jak działa wyszukiwanie adresów MAC",
-  "lookupAboutBody": "Adres MAC ma 48 bitów. IEEE przydziela organizacjom prefiksy o długości 24, 28 lub 36 bitów. Narzędzie dopasowuje najdłuższy zarejestrowany prefiks i pokazuje organizację, której przydzielono blok, zakres adresów i rejestr. Adresy administrowane lokalnie i adresy grupowe są oznaczane oddzielnie.",
-  "blocksAboutTitle": "Przeglądaj bloki adresów IEEE",
-  "blocksAboutBody": "Przeglądaj wszystkie pięć publicznych rejestrów IEEE. Wyszukaj prefiks, organizację lub zarejestrowany adres, a następnie otwórz blok, aby zobaczyć jego zakres i liczbę adresów. MA-L przydziela 16,777,216 adresów, MA-M — 1,048,576, a MA-S lub IAB — 4,096. CID to identyfikator firmy do adresowania lokalnego.",
-  "vendorsAboutTitle": "Znajdź bloki zarejestrowane na organizację",
-  "vendorsAboutBody": "Wyszukuj organizacje według nazw i zarejestrowanych adresów pocztowych, a następnie wybierz organizację, aby zobaczyć wszystkie jej przydziały. Nazwy i adresy pochodzą z wykazu IEEE i są wyświetlane w zarejestrowanej postaci. Organizacja, której przydzielono blok, nie musi być marką urządzenia, a podane adresy nie wskazują lokalizacji urządzenia."
+  "cidHint": "Identyfikator firmy dla adresów przydzielanych lokalnie.",
+  "about": {
+    "title": "Przeglądaj przydziały adresów MAC IEEE",
+    "intro": "Blok adresów IEEE to stały prefiks przydzielony organizacji wraz z pozostałą przestrzenią adresową objętą tym prefiksem. Przeszukaj rejestr, aby sprawdzić znany prefiks, przejrzeć mniejsze przydziały w ramach większego prefiksu lub znaleźć bloki zarejestrowane na organizację.",
+    "sections": [
+      {
+        "title": "Wybierz rejestr",
+        "body": "MA-L używa prefiksu 24-bitowego i zawiera 16,777,216 adresów. MA-M używa 28 bitów i zawiera 1,048,576 adresów. MA-S i starszy rejestr IAB używają prefiksów 36-bitowych z 4,096 adresami w każdym bloku. Wpisy CID identyfikują firmy na potrzeby adresowania lokalnego. Filtr rejestru ogranicza listę do jednego typu przydziału."
+      },
+      {
+        "title": "Wyszukuj prefiksy i sprawdzaj zakresy",
+        "body": "Wpisz prefiks bez separatorów, z dwukropkami, łącznikami, kropkami lub w zapisie CIDR. Wyszukiwanie po części prefiksu zwraca pasujące przydziały, a po pełnym adresie MAC — prefiksy, które go obejmują. Możesz też wyszukiwać według nazw organizacji i adresów z rejestru. Otwórz prefiks, aby zobaczyć pierwszy i ostatni adres bloku oraz liczbę adresów wraz z pasującymi wpisami rejestru."
+      },
+      {
+        "title": "Śledź przydziały w rejestrze",
+        "body": "Wybierz nazwę organizacji, aby otworzyć pełną listę jej przydziałów w narzędziu do wyszukiwania organizacji. Wyniki są podzielone na strony, a przycisk „Kopiuj link” zachowuje zapytanie, rejestr i stronę w URL. Nazwy, adresy i przydziały pochodzą z pięciu publicznych wykazów IEEE zapisanych we wspólnej migawce. Link do źródła i data migawki ułatwiają identyfikację zbioru danych podczas porównywania wyników."
+      }
+    ]
+  }
 }

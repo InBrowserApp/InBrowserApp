@@ -2,7 +2,6 @@ import { useDeferredValue, useId, useMemo } from "react"
 
 import {
   filterAssignments,
-  getBlockRange,
   getOrganizations,
   makeToolHref,
   readQuery,
@@ -10,11 +9,8 @@ import {
 } from "@workspace/mac-address"
 import { loadDatabase } from "@workspace/mac-address/load"
 import { MacAddressDataStatus } from "@workspace/ui/components/tool/mac-address-data-status"
-import { MacAddressNavigation } from "@workspace/ui/components/tool/mac-address-navigation"
 import { MacAddressPagination } from "@workspace/ui/components/tool/mac-address-pagination"
-import { MacAddressRecords } from "@workspace/ui/components/tool/mac-address-records"
 import { ToolCopyButton } from "@workspace/ui/components/tool/tool-copy-button"
-import { Button } from "@workspace/ui/components/ui/button"
 import {
   Card,
   CardContent,
@@ -44,6 +40,7 @@ import { Building2, Search } from "@workspace/ui/icons"
 import { useToolQuery } from "@workspace/ui/lib/use-tool-query"
 import { useToolResource } from "@workspace/ui/lib/use-tool-resource"
 import OrganizationList from "./organization-list"
+import OrganizationBlocks from "./organization-blocks"
 import RegistryFilter from "./registry-filter"
 import type English from "./messages/en.json"
 
@@ -90,10 +87,6 @@ function MacAddressVendorLookupClient({
     }
     return addresses
   }, [registryRecords, deferredQuery])
-  const organizationTotal = useMemo(() => {
-    return new Set((data?.records ?? []).map((record) => record.organization))
-      .size
-  }, [data])
   const total = query.org ? organizationRecords.length : organizations.length
   const pageCount = Math.max(1, Math.ceil(total / PAGE_SIZE))
   const page = Math.min(query.page, pageCount)
@@ -102,50 +95,29 @@ function MacAddressVendorLookupClient({
     .replace("{start}", formatNumber(total === 0 ? 0 : start + 1))
     .replace("{end}", formatNumber(Math.min(start + PAGE_SIZE, total)))
     .replace("{total}", formatNumber(total))
-  const navItems = [
-    {
-      key: "lookup" as const,
-      label: messages.lookup,
-      href: makeToolHref(language, "mac-address-lookup"),
-    },
-    {
-      key: "blocks" as const,
-      label: messages.blocks,
-      href: makeToolHref(language, "mac-address-block-lookup"),
-    },
-    {
-      key: "vendors" as const,
-      label: messages.vendors,
-      href: makeToolHref(language, SLUG),
-    },
-  ]
 
   return (
     <div className="flex min-w-0 flex-col gap-6">
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <MacAddressNavigation active="vendors" items={navItems} />
-        <ToolCopyButton
-          value={shareUrl}
-          copyLabel={messages.share}
-          copiedLabel={messages.copied}
-        />
-      </div>
       <Card>
-        <CardHeader>
-          <CardTitle>{messages.vendors}</CardTitle>
-          <CardDescription dir="auto">{messages.registrySizes}</CardDescription>
-        </CardHeader>
         <CardContent>
           <FieldGroup>
             <Field>
-              <FieldLabel htmlFor={searchId}>
-                {messages.vendorSearchLabel}
-              </FieldLabel>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <FieldLabel htmlFor={searchId}>
+                  {messages.vendorSearchLabel}
+                </FieldLabel>
+                <ToolCopyButton
+                  value={shareUrl}
+                  copyLabel={messages.share}
+                  copiedLabel={messages.copied}
+                />
+              </div>
               <InputGroup className="h-11">
                 <InputGroupInput
                   id={searchId}
                   name="mac-organization-search"
                   type="search"
+                  dir="auto"
                   autoComplete="off"
                   spellCheck={false}
                   placeholder={messages.vendorPlaceholder}
@@ -177,15 +149,14 @@ function MacAddressVendorLookupClient({
           <CardHeader>
             <CardTitle>
               <h2 className="wrap-anywhere">
-                {query.org
-                  ? messages.organizationBlocks.replace(
-                      "{organization}",
-                      query.org
-                    )
-                  : messages.organizationCount.replace(
-                      "{count}",
-                      formatNumber(total)
-                    )}
+                {query.org ? (
+                  <bdi translate="no">{query.org}</bdi>
+                ) : (
+                  messages.organizationCount.replace(
+                    "{count}",
+                    formatNumber(total)
+                  )
+                )}
               </h2>
             </CardTitle>
             {query.org ? (
@@ -196,11 +167,12 @@ function MacAddressVendorLookupClient({
                     formatNumber(total)
                   )}
                 </span>
-                <Button asChild variant="outline">
-                  <a href={makeHref({ ...query, org: "", page: 1 })}>
-                    {messages.clearOrganization}
-                  </a>
-                </Button>
+                <a
+                  className="rounded-sm underline underline-offset-4 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+                  href={makeHref({ ...query, org: "", page: 1 })}
+                >
+                  {messages.clearOrganization}
+                </a>
               </CardDescription>
             ) : null}
           </CardHeader>
@@ -216,28 +188,10 @@ function MacAddressVendorLookupClient({
                 </EmptyHeader>
               </Empty>
             ) : query.org ? (
-              <MacAddressRecords
-                labels={messages}
-                rows={organizationRecords
-                  .slice(start, start + PAGE_SIZE)
-                  .map((record) => ({
-                    key: `${record.registry}-${record.assignment}-${record.organization}-${record.address}`,
-                    prefix: getBlockRange(record).prefix,
-                    registry: record.registry,
-                    organization: record.organization,
-                    address: record.address,
-                    blockHref: makeToolHref(
-                      language,
-                      "mac-address-block-lookup",
-                      { q: record.assignment, registry: record.registry }
-                    ),
-                    organizationHref: makeHref({
-                      ...query,
-                      org: record.organization,
-                      q: "",
-                      page: 1,
-                    }),
-                  }))}
+              <OrganizationBlocks
+                records={organizationRecords.slice(start, start + PAGE_SIZE)}
+                language={language}
+                messages={messages}
               />
             ) : (
               <OrganizationList
@@ -280,13 +234,6 @@ function MacAddressVendorLookupClient({
                   timeZone: "UTC",
                 }).format(new Date(data.updatedAt))
               )
-            : undefined
-        }
-        summary={
-          data
-            ? messages.dataSummary
-                .replace("{assignments}", formatNumber(data.records.length))
-                .replace("{organizations}", formatNumber(organizationTotal))
             : undefined
         }
       />

@@ -1,24 +1,21 @@
 {
-  "lookup": "MAC 查詢",
-  "blocks": "依區塊",
-  "vendors": "依組織",
-  "navigationLabel": "MAC 位址工具",
+  "lookup": "MAC 位址查詢",
+  "blocks": "MAC 位址區塊查詢",
+  "vendors": "MAC 位址廠商查詢",
+  "navigationLabel": "相關工具",
   "queryLabel": "MAC 位址或前綴",
   "lookupPlaceholder": "00:1B:63:84:45:E6…",
   "blockPlaceholder": "前綴、組織或登記地址…",
   "vendorPlaceholder": "組織名稱或登記地址…",
-  "lookupHint": "輸入 MAC 位址，或 24、28 或 36 位元的 IEEE 前綴。支援冒號、連字號、點分隔及無分隔符號的格式。",
   "blockSearchLabel": "搜尋已登記區塊",
   "vendorSearchLabel": "搜尋組織",
   "registry": "登記資料庫",
   "allRegistries": "所有登記資料庫",
   "prefix": "前綴",
-  "organization": "登記組織",
-  "address": "組織地址",
+  "organization": "組織",
+  "address": "登記地址",
   "range": "位址範圍",
   "capacity": "區塊內位址數",
-  "normalized": "標準化位址",
-  "addressType": "位址類型",
   "share": "複製連結",
   "copied": "已複製連結",
   "loading": "正在載入 IEEE 登記資料庫…",
@@ -26,11 +23,9 @@
   "retry": "再試一次",
   "noResults": "沒有相符的紀錄",
   "noResultsHint": "請嘗試其他前綴、組織名稱或登記資料庫。",
-  "emptyLookup": "查詢 MAC 位址",
-  "emptyLookupHint": "在上方輸入位址，或嘗試範例以查看其登記組織與區塊。",
+  "emptyLookupHint": "結果會顯示在這裡。",
   "invalidAddress": "請輸入完整的 MAC 位址，或有效的 24、28 或 36 位元前綴。",
   "noAssignment": "找不到登記組織",
-  "noAssignmentHint": "此位址未符合這份 IEEE 快照中的任何配發紀錄。",
   "previous": "上一頁",
   "next": "下一頁",
   "pageSummary": "{start}–{end}，共 {total} 筆",
@@ -38,10 +33,7 @@
   "organizationCount": "{count} 個組織",
   "source": "IEEE 公開登記資料庫",
   "updated": "快照：{date}",
-  "dataSummary": "{assignments} 筆配發紀錄 · {organizations} 個組織",
-  "sourceHint": "查詢使用隨附的 IEEE 快照，在您的瀏覽器中執行。",
   "clearOrganization": "所有組織",
-  "organizationBlocks": "登記於 {organization} 的區塊",
   "examples": "範例",
   "copyAddress": "複製位址",
   "addressCopied": "已複製位址",
@@ -54,19 +46,28 @@
     "prefix": "IEEE 前綴"
   },
   "typeHints": {
-    "universal": "登記組織代表位址的配發對象，可能與裝置品牌不同。",
-    "local": "此位址由本機管理，可能是隨機產生的。無法透過其前綴可靠地識別裝置廠商。",
-    "multicast": "這是群組位址，無法根據 IEEE 單播位址的配發紀錄推斷廠商。",
-    "broadcast": "此位址會傳送至區域網路上的每台裝置，並無對應的個別廠商。",
-    "zero": "全零位址是未指定的位址，無法用來識別裝置廠商。",
-    "prefix": "前綴可識別已登記的區塊。查詢完整 MAC 位址時，會優先採用較長的已配發前綴。"
+    "local": "常用於私密 Wi-Fi 位址。",
+    "multicast": "用於傳送至多台裝置的群組位址。",
+    "broadcast": "傳送至區域網路上的每台裝置。",
+    "zero": "未指定的位址。"
   },
-  "cidHint": "CID 用於識別採用本機定址的組織，並非全球唯一的 MAC 位址配發紀錄。",
-  "registrySizes": "MA-L：/24 · MA-M：/28 · MA-S 和 IAB：/36 · CID：公司識別碼",
-  "lookupAboutTitle": "MAC 位址查詢的運作方式",
-  "lookupAboutBody": "MAC 位址的長度為 48 位元。IEEE 會將 24、28 或 36 位元的前綴配發給組織。此工具會比對最長的已登記前綴，並顯示配發對象、位址範圍及登記資料庫。本機管理位址與群組位址會另行識別。",
-  "blocksAboutTitle": "探索 IEEE 位址區塊",
-  "blocksAboutBody": "瀏覽全部五個 IEEE 公開登記資料庫。搜尋前綴、組織或登記地址，再開啟區塊以查看其範圍與位址數量。MA-L 配發 16,777,216 個位址，MA-M 配發 1,048,576 個位址，MA-S 或 IAB 則配發 4,096 個位址。CID 是用於本機定址的公司識別碼。",
-  "vendorsAboutTitle": "尋找組織登記的區塊",
-  "vendorsAboutBody": "搜尋組織名稱及其登記的郵寄地址，再選取組織以查看其所有配發紀錄。名稱與地址取自 IEEE 名錄，並依登記內容顯示。獲配組織不一定是裝置品牌，這些地址也無法用來定位裝置。"
+  "cidHint": "用於本機配發位址的公司識別碼。",
+  "about": {
+    "title": "了解 MAC 位址",
+    "intro": "MAC 位址可識別 Ethernet 或 Wi-Fi 網路上的網路介面。使用此工具查詢位址的 IEEE 登記詳情；位址可取自路由器的用戶端清單、ARP 表格或裝置標籤。",
+    "sections": [
+      {
+        "title": "輸入位址或前綴",
+        "body": "貼上完整的 48 位元 MAC 位址，可使用冒號、連字號、點分隔或不使用分隔符號：00:1B:63:84:45:E6、00-1B-63-84-45-E6、001B.6384.45E6 和 001B638445E6 都代表同一個位址。您也可以輸入 IEEE 前綴，例如 001B63 或 8C1F64001，也支援 /24、/28 或 /36 表示法。"
+      },
+      {
+        "title": "查看登記區塊",
+        "body": "結果會顯示登記組織、其地址及相符的前綴。查詢時會先檢查最長的前綴：36 位元的配發紀錄會優先於其 28 位元或 24 位元的上層前綴。區塊的起始位址、結束位址與位址數量可呈現配發範圍的大小。若舊有前綴有多筆登記，所有相符的組織會一併顯示。"
+      },
+      {
+        "title": "探索與分享結果",
+        "body": "複製標準化位址、開啟其前綴以檢視區塊，或點選組織名稱以瀏覽其他配發紀錄。「複製連結」會將查詢條件保留在 URL 中，方便分享或日後再次開啟。本機管理、群播、廣播及全零位址各有對應的位址類型結果。資料來自隨附的 IEEE 快照；來源連結與快照日期顯示於工具下方。"
+      }
+    ]
+  }
 }

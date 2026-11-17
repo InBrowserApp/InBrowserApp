@@ -1,24 +1,21 @@
 {
-  "lookup": "MAC-sökning",
-  "blocks": "Efter block",
-  "vendors": "Efter organisation",
-  "navigationLabel": "Verktyg för MAC-adresser",
+  "lookup": "Sökning efter MAC-adresser",
+  "blocks": "Sökning efter MAC-adressblock",
+  "vendors": "Sökning efter MAC-tillverkare",
+  "navigationLabel": "Relaterade verktyg",
   "queryLabel": "MAC-adress eller prefix",
   "lookupPlaceholder": "00:1B:63:84:45:E6…",
   "blockPlaceholder": "Prefix, organisation eller postadress…",
   "vendorPlaceholder": "Organisationens namn eller postadress…",
-  "lookupHint": "Ange en MAC-adress eller ett IEEE-prefix på 24, 28 eller 36 bitar. Format med kolon, bindestreck, punkter eller utan avgränsare stöds.",
   "blockSearchLabel": "Sök registrerade block",
   "vendorSearchLabel": "Sök organisationer",
   "registry": "Register",
   "allRegistries": "Alla register",
   "prefix": "Prefix",
-  "organization": "Registrerad organisation",
-  "address": "Organisationens postadress",
+  "organization": "Organisation",
+  "address": "Registrerad adress",
   "range": "Adressintervall",
   "capacity": "Adresser i blocket",
-  "normalized": "Normaliserad adress",
-  "addressType": "Adresstyp",
   "share": "Kopiera länk",
   "copied": "Länken kopierad",
   "loading": "Läser in IEEE-registret…",
@@ -26,11 +23,9 @@
   "retry": "Försök igen",
   "noResults": "Inga matchande poster",
   "noResultsHint": "Prova ett annat prefix, organisationsnamn eller register.",
-  "emptyLookup": "Sök efter en MAC-adress",
-  "emptyLookupHint": "Ange en adress ovan eller prova ett exempel för att se dess registrerade organisation och block.",
+  "emptyLookupHint": "Resultaten visas här.",
   "invalidAddress": "Ange en fullständig MAC-adress eller ett giltigt prefix på 24, 28 eller 36 bitar.",
   "noAssignment": "Ingen registrerad organisation hittades",
-  "noAssignmentHint": "Adressen matchar ingen tilldelning i den här ögonblicksbilden av IEEE-registret.",
   "previous": "Föregående",
   "next": "Nästa",
   "pageSummary": "{start}–{end} av {total}",
@@ -38,10 +33,7 @@
   "organizationCount": "Organisationer: {count}",
   "source": "IEEE:s offentliga register",
   "updated": "Ögonblicksbild: {date}",
-  "dataSummary": "{assignments} tilldelningar · {organizations} organisationer",
-  "sourceHint": "Sökningen körs i din webbläsare med en medföljande ögonblicksbild av IEEE-registret.",
   "clearOrganization": "Alla organisationer",
-  "organizationBlocks": "Block registrerade på {organization}",
   "examples": "Exempel",
   "copyAddress": "Kopiera adress",
   "addressCopied": "Adressen kopierad",
@@ -54,19 +46,28 @@
     "prefix": "IEEE-prefix"
   },
   "typeHints": {
-    "universal": "Den registrerade organisationen visar vem som tilldelats adresserna och kan skilja sig från enhetens varumärke.",
-    "local": "Den här adressen administreras lokalt och kan vara slumpmässigt genererad. Prefixet kan inte pålitligt identifiera enhetens tillverkare.",
-    "multicast": "Det här är en gruppadress. En tillverkare kan inte härledas från en IEEE-tilldelning för enkelsändning.",
-    "broadcast": "Den här adressen används för att skicka till alla enheter i det lokala nätverket och saknar koppling till en viss tillverkare.",
-    "zero": "Adressen med enbart nollor är en ospecificerad adress och identifierar ingen enhetstillverkare.",
-    "prefix": "Ett prefix identifierar ett registrerat block. Tilldelningar med längre prefix prioriteras vid sökning efter en fullständig MAC-adress."
+    "local": "Används ofta för privata Wi-Fi-adresser.",
+    "multicast": "En gruppadress som används för att nå flera enheter.",
+    "broadcast": "Når alla enheter i det lokala nätverket.",
+    "zero": "En ospecificerad adress."
   },
-  "cidHint": "CID identifierar en organisation för lokal adressering. Det är inte en tilldelning av globalt unika MAC-adresser.",
-  "registrySizes": "MA-L: /24 · MA-M: /28 · MA-S och IAB: /36 · CID: företagsidentifierare",
-  "lookupAboutTitle": "Så fungerar sökning efter MAC-adresser",
-  "lookupAboutBody": "En MAC-adress har 48 bitar. IEEE tilldelar organisationer prefix på 24, 28 eller 36 bitar. Verktyget matchar det längsta registrerade prefixet och visar vem som tilldelats adresserna, adressintervallet och registret. Lokalt administrerade adresser och gruppadresser identifieras separat.",
-  "blocksAboutTitle": "Utforska IEEE-adressblock",
-  "blocksAboutBody": "Bläddra i alla fem offentliga IEEE-register. Sök efter ett prefix, en organisation eller en registrerad postadress och öppna sedan ett block för att se dess intervall och kapacitet. MA-L tilldelar 16 777 216 adresser, MA-M tilldelar 1 048 576 och MA-S eller IAB tilldelar 4 096. CID är en företagsidentifierare för lokal adressering.",
-  "vendorsAboutTitle": "Hitta en organisations registrerade block",
-  "vendorsAboutBody": "Sök efter organisationsnamn och registrerade postadresser. Välj sedan en organisation för att se alla dess tilldelningar. Namn och adresser kommer från IEEE:s register och visas som de är registrerade. Organisationen som tilldelats adresserna motsvarar inte nödvändigtvis enhetens varumärke, och postadresserna visar inte var enheten finns."
+  "cidHint": "Företagsidentifierare för lokalt tilldelade adresser.",
+  "about": {
+    "title": "Utforska IEEE:s tilldelningar av MAC-adresser",
+    "intro": "Ett IEEE-adressblock ger en organisation ett fast prefix och det återstående adressutrymmet inom prefixet. Sök i registret för att granska ett känt prefix, utforska mindre tilldelningar inom ett större prefix eller hitta block registrerade på en organisation.",
+    "sections": [
+      {
+        "title": "Välj ett register",
+        "body": "MA-L använder ett prefix på 24 bitar och innehåller 16,777,216 adresser. MA-M använder 28 bitar och innehåller 1,048,576 adresser. MA-S och det äldre IAB-registret använder prefix på 36 bitar med 4,096 adresser vardera. CID-poster identifierar företag för lokal adressering. Registerfiltret begränsar listan till en tilldelningstyp."
+      },
+      {
+        "title": "Sök efter prefix och granska intervall",
+        "body": "Ange ett prefix utan avgränsare, med kolon, bindestreck eller punkter, eller i CIDR-notation. Ett partiellt prefix hittar matchande tilldelningar; en fullständig MAC-adress hittar de prefix som innehåller den. Du kan också söka efter organisationsnamn och registrerade adresser. Öppna ett prefix för att se dess första adress, sista adress och kapacitet tillsammans med de matchande registreringarna."
+      },
+      {
+        "title": "Följ tilldelningar i registret",
+        "body": "Välj ett organisationsnamn för att öppna dess fullständiga lista över tilldelningar i verktyget för organisationssökning. Resultaten är uppdelade på sidor, och Kopiera länk sparar sökningen, registret och sidan i webbadressen. Namn, adresser och tilldelningar kommer från fem offentliga IEEE-listor som lagras i en gemensam ögonblicksbild. Källänken och datumet för ögonblicksbilden gör det enkelt att identifiera datamängden när du jämför resultat."
+      }
+    ]
+  }
 }

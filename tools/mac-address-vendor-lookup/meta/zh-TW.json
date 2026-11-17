@@ -1,4 +1,4 @@
 {
   "name": "MAC 位址廠商查詢",
-  "description": "依名稱或地址搜尋 IEEE 登記組織，並探索其所有已登記的 MAC 位址區塊。"
+  "description": "查詢組織的 IEEE 登記紀錄，並探索其 MAC 位址區塊。"
 }

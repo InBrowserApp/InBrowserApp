@@ -1,24 +1,21 @@
 {
-  "lookup": "Consulta MAC",
-  "blocks": "Por bloque",
-  "vendors": "Por organización",
-  "navigationLabel": "Herramientas de direcciones MAC",
+  "lookup": "Consulta de direcciones MAC",
+  "blocks": "Consulta de bloques de direcciones MAC",
+  "vendors": "Consulta de direcciones MAC por proveedor",
+  "navigationLabel": "Herramientas relacionadas",
   "queryLabel": "Dirección MAC o prefijo",
   "lookupPlaceholder": "00:1B:63:84:45:E6…",
   "blockPlaceholder": "Prefijo, organización o dirección postal…",
   "vendorPlaceholder": "Nombre de organización o dirección postal…",
-  "lookupHint": "Introduce una dirección MAC o un prefijo IEEE de 24, 28 o 36 bits. Se admiten los formatos con dos puntos, guiones o puntos y sin separadores.",
   "blockSearchLabel": "Buscar bloques registrados",
   "vendorSearchLabel": "Buscar organizaciones",
   "registry": "Registro",
   "allRegistries": "Todos los registros",
   "prefix": "Prefijo",
-  "organization": "Organización registrada",
-  "address": "Dirección postal de la organización",
+  "organization": "Organización",
+  "address": "Dirección registrada",
   "range": "Rango de direcciones",
   "capacity": "Direcciones en el bloque",
-  "normalized": "Dirección normalizada",
-  "addressType": "Tipo de dirección",
   "share": "Copiar enlace",
   "copied": "Enlace copiado",
   "loading": "Cargando el registro IEEE…",
@@ -26,11 +23,9 @@
   "retry": "Reintentar",
   "noResults": "No hay registros coincidentes",
   "noResultsHint": "Prueba con otro prefijo, nombre de organización o registro.",
-  "emptyLookup": "Consulta una dirección MAC",
-  "emptyLookupHint": "Introduce una dirección arriba o prueba un ejemplo para ver su organización registrada y su bloque.",
+  "emptyLookupHint": "Los resultados aparecen aquí.",
   "invalidAddress": "Introduce una dirección MAC completa o un prefijo válido de 24, 28 o 36 bits.",
   "noAssignment": "No se encontró ninguna organización registrada",
-  "noAssignmentHint": "Esta dirección no coincide con ninguna asignación de esta copia del registro IEEE.",
   "previous": "Anterior",
   "next": "Siguiente",
   "pageSummary": "{start}–{end} de {total}",
@@ -38,10 +33,7 @@
   "organizationCount": "Organizaciones: {count}",
   "source": "Registro público de IEEE",
   "updated": "Copia del registro: {date}",
-  "dataSummary": "{assignments} asignaciones · {organizations} organizaciones",
-  "sourceHint": "La consulta se realiza en tu navegador con una copia del registro IEEE incluida en la herramienta.",
   "clearOrganization": "Todas las organizaciones",
-  "organizationBlocks": "Bloques registrados a nombre de {organization}",
   "examples": "Ejemplos",
   "copyAddress": "Copiar dirección",
   "addressCopied": "Dirección copiada",
@@ -54,19 +46,28 @@
     "prefix": "Prefijo IEEE"
   },
   "typeHints": {
-    "universal": "La organización registrada indica a quién se asignó la dirección y puede diferir de la marca del dispositivo.",
-    "local": "Esta dirección se administra localmente y puede haberse generado aleatoriamente. Su prefijo no permite identificar de forma fiable al proveedor del dispositivo.",
-    "multicast": "Esta es una dirección de grupo. No se puede deducir el proveedor a partir de una asignación IEEE de unidifusión.",
-    "broadcast": "Esta dirección envía datos a todos los dispositivos de la red local; no corresponde a un proveedor concreto.",
-    "zero": "La dirección formada solo por ceros es una dirección sin especificar; no identifica al proveedor de un dispositivo.",
-    "prefix": "Un prefijo identifica un bloque registrado. Las asignaciones con prefijos más largos tienen prioridad al consultar una dirección MAC completa."
+    "local": "Se usa habitualmente para direcciones Wi-Fi privadas.",
+    "multicast": "Dirección de grupo utilizada para enviar datos a varios dispositivos.",
+    "broadcast": "Llega a todos los dispositivos de la red local.",
+    "zero": "Una dirección sin especificar."
   },
-  "cidHint": "CID identifica a una organización para el direccionamiento local. No es una asignación de direcciones MAC únicas a nivel mundial.",
-  "registrySizes": "MA-L: /24 · MA-M: /28 · MA-S e IAB: /36 · CID: identificador de empresa",
-  "lookupAboutTitle": "Cómo funciona la consulta de direcciones MAC",
-  "lookupAboutBody": "Una dirección MAC tiene 48 bits. IEEE asigna a las organizaciones prefijos de 24, 28 o 36 bits. Esta herramienta busca la coincidencia con el prefijo registrado más largo y muestra el titular de la asignación, el rango de direcciones y el registro. Las direcciones de administración local y las de grupo se identifican por separado.",
-  "blocksAboutTitle": "Explora los bloques de direcciones IEEE",
-  "blocksAboutBody": "Explora los cinco registros públicos de IEEE. Busca un prefijo, una organización o una dirección postal registrada y abre un bloque para ver su rango y capacidad. MA-L asigna 16,777,216 direcciones; MA-M, 1,048,576; y MA-S o IAB, 4,096. CID es un identificador de empresa para el direccionamiento local.",
-  "vendorsAboutTitle": "Encuentra los bloques registrados de una organización",
-  "vendorsAboutBody": "Busca nombres de organizaciones y sus direcciones postales registradas; después, selecciona una organización para ver todas sus asignaciones. Los nombres y las direcciones proceden del listado de IEEE y se muestran tal como se registraron. El titular de una asignación no tiene por qué coincidir con la marca de un dispositivo, y estas direcciones no indican dónde está el dispositivo."
+  "cidHint": "Identificador de empresa para direcciones asignadas localmente.",
+  "about": {
+    "title": "Cómo interpretar una dirección MAC",
+    "intro": "Una dirección MAC identifica una interfaz de red en una red Ethernet o Wi-Fi. Usa esta consulta para encontrar los datos de registro IEEE de una dirección que aparezca en la lista de clientes de un enrutador, una tabla ARP o la etiqueta de un dispositivo.",
+    "sections": [
+      {
+        "title": "Introduce una dirección o un prefijo",
+        "body": "Pega una dirección MAC completa de 48 bits con dos puntos, guiones, puntos o sin separadores: 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 y 001B638445E6 representan la misma dirección. También puedes introducir un prefijo IEEE como 001B63 u 8C1F64001, incluida la notación /24, /28 o /36."
+      },
+      {
+        "title": "Interpreta el bloque registrado",
+        "body": "El resultado muestra la organización registrada, su dirección postal y el prefijo coincidente. La consulta comprueba primero el prefijo más largo: una asignación de 36 bits tiene prioridad sobre la asignación de 28 o 24 bits que la contiene. La primera y la última dirección del bloque, junto con su capacidad, indican el tamaño de la asignación. Si un prefijo antiguo tiene varios registros, todas las organizaciones coincidentes aparecen juntas."
+      },
+      {
+        "title": "Explora y comparte el resultado",
+        "body": "Copia la dirección normalizada, abre su prefijo para examinar el bloque o sigue el nombre de la organización para explorar sus demás asignaciones. «Copiar enlace» conserva la consulta en la URL para compartirla o retomarla más tarde. Las direcciones administradas localmente, de multidifusión, de difusión y formadas solo por ceros muestran sus propios resultados de tipo de dirección. Los datos proceden de una copia del registro IEEE incluida en la herramienta; el enlace a la fuente y la fecha de la copia aparecen debajo de la herramienta."
+      }
+    ]
+  }
 }

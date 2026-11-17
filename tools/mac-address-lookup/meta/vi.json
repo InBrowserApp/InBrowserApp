@@ -1,4 +1,4 @@
 {
   "name": "Tra cứu địa chỉ MAC",
-  "description": "Tìm tổ chức đã đăng ký tương ứng với địa chỉ MAC hoặc tiền tố IEEE. Kiểm tra loại địa chỉ và chi tiết cấp phát ngay trong trình duyệt."
+  "description": "Tìm tổ chức và khối đã đăng ký tương ứng với địa chỉ MAC hoặc tiền tố IEEE."
 }

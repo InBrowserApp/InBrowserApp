@@ -69,9 +69,9 @@ afterEach(() => {
 describe("MAC lookup", () => {
   test("starts empty and shows registry provenance", async () => {
     render(<Client language="en" messages={messages} />)
-    expect(screen.getByText(messages.emptyLookup)).toBeTruthy()
+    expect(screen.getByText(messages.emptyLookupHint)).toBeTruthy()
     expect(
-      await screen.findByText("6 assignments · 6 organizations")
+      await screen.findByRole("link", { name: messages.source })
     ).toBeTruthy()
     expect(
       screen.getByRole("link", { name: messages.source }).getAttribute("href")
@@ -123,8 +123,10 @@ describe("MAC lookup", () => {
   test("validates on blur, supports edits and clearing", async () => {
     render(<Client language="en" messages={messages} />)
     const input = screen.getByRole("textbox", { name: messages.queryLabel })
-    fireEvent.change(input, { target: { value: "not-a-mac" } })
+    fireEvent.change(input, { target: { value: "001B638445" } })
+    expect(screen.queryByText(messages.invalidAddress)).toBeNull()
     fireEvent.blur(input)
+    expect(screen.getAllByText(messages.invalidAddress)).toHaveLength(1)
     expect(input.getAttribute("aria-invalid")).toBe("true")
     fireEvent.change(input, { target: { value: "001B63" } })
     expect(input.getAttribute("aria-invalid")).toBe("false")
@@ -142,7 +144,7 @@ describe("MAC lookup", () => {
     expect(await screen.findByText(messages.loadError)).toBeTruthy()
     fireEvent.click(screen.getByRole("button", { name: messages.retry }))
     expect(
-      await screen.findByText("6 assignments · 6 organizations")
+      await screen.findByRole("link", { name: messages.source })
     ).toBeTruthy()
     expect(loadDatabase).toHaveBeenCalledTimes(2)
   })
@@ -158,7 +160,6 @@ describe("address results", () => {
     render(
       <LookupResult
         result={lookupMac(records, address)}
-        hasQuery
         ready
         language="en"
         messages={messages}
@@ -173,7 +174,6 @@ describe("address results", () => {
     render(
       <LookupResult
         result={lookupMac([], "001B638445E6")}
-        hasQuery
         ready={false}
         language="en"
         messages={messages}
@@ -188,7 +188,6 @@ describe("address results", () => {
       render(
         <LookupResult
           result={lookupMac(records, address)}
-          hasQuery
           ready
           language="en"
           messages={messages}
@@ -205,7 +204,6 @@ describe("address results", () => {
     render(
       <LookupResult
         result={lookupMac(records, "080030112233")}
-        hasQuery
         ready
         language="en"
         messages={messages}

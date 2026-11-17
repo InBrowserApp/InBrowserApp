@@ -70,4 +70,19 @@ describe("MacAddressRecords", () => {
 
     expect(screen.getByText("—")).toBeTruthy()
   })
+
+  test("keeps only organizations and addresses when the surrounding view identifies the allocation", () => {
+    render(
+      <MacAddressRecords rows={[row]} labels={labels} showAllocation={false} />
+    )
+    expect(
+      screen.getAllByRole("columnheader").map((cell) => cell.textContent)
+    ).toEqual([labels.organization, labels.address])
+    expect(screen.queryByRole("link", { name: row.prefix })).toBeNull()
+    expect(screen.queryByText(row.registry)).toBeNull()
+    expect(
+      screen.getByRole("link", { name: row.organization }).getAttribute("href")
+    ).toBe(row.organizationHref)
+    expect(screen.getByText(row.address)).toBeTruthy()
+  })
 })

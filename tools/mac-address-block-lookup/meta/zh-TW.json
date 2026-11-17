@@ -1,4 +1,4 @@
 {
   "name": "MAC 位址區塊查詢",
-  "description": "瀏覽與搜尋 IEEE MA-L、MA-M、MA-S、IAB 和 CID 紀錄。檢視已登記的前綴、位址範圍與組織。"
+  "description": "依前綴、組織或登記地址搜尋 IEEE 位址區塊。"
 }

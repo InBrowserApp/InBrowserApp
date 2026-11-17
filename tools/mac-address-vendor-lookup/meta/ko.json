@@ -1,4 +1,4 @@
 {
   "name": "MAC 주소 제조사 조회",
-  "description": "이름이나 주소로 IEEE 등록 조직을 검색하고 해당 조직에 등록된 모든 MAC 주소 블록을 살펴보세요."
+  "description": "조직의 IEEE 등록 기록을 찾고 MAC 주소 블록을 살펴보세요."
 }

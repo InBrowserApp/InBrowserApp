@@ -82,7 +82,6 @@ describe("MAC address block browser", () => {
         .hasAttribute("disabled")
     ).toBe(true)
     expect(screen.getByText("Snapshot: Nov 17, 2026")).toBeTruthy()
-    expect(screen.getByText("30 assignments · 29 organizations")).toBeTruthy()
 
     history.pushState(null, "", next.getAttribute("href")!)
     fireEvent.popState(window)
@@ -180,7 +179,13 @@ describe("MAC address block browser", () => {
     expect(screen.getByRole("link", { name: "Organization A" })).toBeTruthy()
     expect(screen.getByRole("link", { name: "Organization B" })).toBeTruthy()
     expect(screen.getByRole("link", { name: "Organization C" })).toBeTruthy()
-    expect(screen.getAllByRole("link", { name: "08:00:30/24" })).toHaveLength(3)
+    expect(
+      screen.getByRole("heading", { name: "08:00:30/24 MA-L" })
+    ).toBeTruthy()
+    expect(screen.queryByRole("link", { name: "08:00:30/24" })).toBeNull()
+    expect(
+      screen.getAllByRole("columnheader").map((cell) => cell.textContent)
+    ).toEqual([messages.organization, messages.address])
     expect(screen.getByText("16,777,216")).toBeTruthy()
   })
 
@@ -277,7 +282,7 @@ describe("MAC address block browser", () => {
     expect(window.location.search).toBe("?q=Taipei")
   })
 
-  test("copies the current URL and localizes cross-tool navigation", async () => {
+  test("copies the current URL and localizes organization links", async () => {
     const writeText = vi.fn().mockResolvedValue(undefined)
     Object.defineProperty(navigator, "clipboard", {
       configurable: true,
@@ -297,10 +302,7 @@ describe("MAC address block browser", () => {
     expect(copied.pathname).toBe("/zh-CN/tools/mac-address-block-lookup/")
     expect(copied.search).toBe("?registry=MA-S&page=2")
     expect(
-      screen.getByRole("link", { name: messages.lookup }).getAttribute("href")
-    ).toBe("/zh-CN/tools/mac-address-lookup/")
-    expect(
-      screen.getByRole("link", { name: messages.vendors }).getAttribute("href")
-    ).toBe("/zh-CN/tools/mac-address-vendor-lookup/")
+      screen.getByRole("link", { name: "Small Devices" }).getAttribute("href")
+    ).toBe("/zh-CN/tools/mac-address-vendor-lookup/?org=Small+Devices")
   })
 })

@@ -1,24 +1,21 @@
 {
-  "lookup": "Ricerca MAC",
-  "blocks": "Per blocco",
-  "vendors": "Per organizzazione",
-  "navigationLabel": "Strumenti per indirizzi MAC",
+  "lookup": "Ricerca di indirizzi MAC",
+  "blocks": "Ricerca di blocchi di indirizzi MAC",
+  "vendors": "Ricerca del fornitore tramite indirizzo MAC",
+  "navigationLabel": "Strumenti correlati",
   "queryLabel": "Indirizzo MAC o prefisso",
   "lookupPlaceholder": "00:1B:63:84:45:E6…",
   "blockPlaceholder": "Prefisso, organizzazione o indirizzo…",
   "vendorPlaceholder": "Nome o indirizzo dell’organizzazione…",
-  "lookupHint": "Inserisci un indirizzo MAC o un prefisso IEEE di 24, 28 o 36 bit. Sono supportati i formati con due punti, trattini, punti e senza separatori.",
   "blockSearchLabel": "Cerca nei blocchi registrati",
   "vendorSearchLabel": "Cerca organizzazioni",
   "registry": "Registro",
   "allRegistries": "Tutti i registri",
   "prefix": "Prefisso",
-  "organization": "Organizzazione registrata",
-  "address": "Indirizzo dell’organizzazione",
+  "organization": "Organizzazione",
+  "address": "Indirizzo registrato",
   "range": "Intervallo di indirizzi",
   "capacity": "Indirizzi nel blocco",
-  "normalized": "Indirizzo normalizzato",
-  "addressType": "Tipo di indirizzo",
   "share": "Copia link",
   "copied": "Link copiato",
   "loading": "Caricamento del registro IEEE…",
@@ -26,11 +23,9 @@
   "retry": "Riprova",
   "noResults": "Nessun record corrispondente",
   "noResultsHint": "Prova un altro prefisso, nome di organizzazione o registro.",
-  "emptyLookup": "Cerca un indirizzo MAC",
-  "emptyLookupHint": "Inserisci un indirizzo qui sopra o prova un esempio per vedere l’organizzazione e il blocco a cui è registrato.",
+  "emptyLookupHint": "I risultati appariranno qui.",
   "invalidAddress": "Inserisci un indirizzo MAC completo o un prefisso valido di 24, 28 o 36 bit.",
   "noAssignment": "Nessuna organizzazione registrata trovata",
-  "noAssignmentHint": "Questo indirizzo non corrisponde ad alcuna assegnazione in questa copia del registro IEEE.",
   "previous": "Precedente",
   "next": "Successiva",
   "pageSummary": "{start}–{end} di {total}",
@@ -38,10 +33,7 @@
   "organizationCount": "Organizzazioni: {count}",
   "source": "Registro pubblico IEEE",
   "updated": "Copia del registro: {date}",
-  "dataSummary": "{assignments} assegnazioni · {organizations} organizzazioni",
-  "sourceHint": "La ricerca avviene nel browser utilizzando una copia del registro IEEE inclusa nello strumento.",
   "clearOrganization": "Tutte le organizzazioni",
-  "organizationBlocks": "Blocchi registrati a {organization}",
   "examples": "Esempi",
   "copyAddress": "Copia indirizzo",
   "addressCopied": "Indirizzo copiato",
@@ -54,19 +46,28 @@
     "prefix": "Prefisso IEEE"
   },
   "typeHints": {
-    "universal": "L’organizzazione registrata identifica il titolare dell’assegnazione dell’indirizzo, che può essere diverso dal marchio del dispositivo.",
-    "local": "Questo indirizzo è amministrato localmente e può essere casuale. Il suo prefisso non consente di identificare in modo affidabile il produttore del dispositivo.",
-    "multicast": "Questo è un indirizzo di gruppo. Non è possibile dedurre il produttore da un’assegnazione unicast IEEE.",
-    "broadcast": "Questo indirizzo invia dati a tutti i dispositivi della rete locale; non corrisponde a un singolo produttore.",
-    "zero": "L’indirizzo composto da soli zeri è un indirizzo non specificato; non identifica il produttore di un dispositivo.",
-    "prefix": "Un prefisso identifica un blocco registrato. Nella ricerca di un indirizzo MAC completo, le assegnazioni con prefissi più lunghi hanno la precedenza."
+    "local": "Spesso usato per gli indirizzi Wi-Fi privati.",
+    "multicast": "Un indirizzo di gruppo usato per raggiungere più dispositivi.",
+    "broadcast": "Raggiunge tutti i dispositivi della rete locale.",
+    "zero": "Un indirizzo non specificato."
   },
-  "cidHint": "Il CID identifica un’organizzazione per l’indirizzamento locale. Non è un’assegnazione di indirizzi MAC univoci a livello globale.",
-  "registrySizes": "MA-L: /24 · MA-M: /28 · MA-S e IAB: /36 · CID: identificativo aziendale",
-  "lookupAboutTitle": "Come funziona la ricerca di indirizzi MAC",
-  "lookupAboutBody": "Un indirizzo MAC è composto da 48 bit. L’IEEE assegna alle organizzazioni prefissi di 24, 28 o 36 bit. Questo strumento trova il prefisso registrato più lungo corrispondente e mostra il titolare dell’assegnazione, l’intervallo di indirizzi e il registro. Gli indirizzi amministrati localmente e quelli di gruppo vengono identificati separatamente.",
-  "blocksAboutTitle": "Esplora i blocchi di indirizzi IEEE",
-  "blocksAboutBody": "Sfoglia tutti e cinque i registri pubblici IEEE. Cerca un prefisso, un’organizzazione o un indirizzo registrato, quindi apri un blocco per vederne l’intervallo e la capacità. MA-L assegna 16.777.216 indirizzi, MA-M ne assegna 1.048.576 e MA-S o IAB ne assegna 4.096. Il CID è un identificativo aziendale per l’indirizzamento locale.",
-  "vendorsAboutTitle": "Trova i blocchi registrati a un’organizzazione",
-  "vendorsAboutBody": "Cerca i nomi delle organizzazioni e i loro indirizzi postali registrati, quindi seleziona un’organizzazione per vedere tutte le sue assegnazioni. I nomi e gli indirizzi provengono dall’elenco IEEE e vengono mostrati come registrati. Il titolare di un’assegnazione non coincide necessariamente con il marchio di un dispositivo e questi indirizzi non indicano la posizione del dispositivo."
+  "cidHint": "Identificativo aziendale per indirizzi assegnati localmente.",
+  "about": {
+    "title": "Trova i blocchi di indirizzi MAC di un’organizzazione",
+    "intro": "Le organizzazioni spesso possiedono più assegnazioni IEEE acquisite nel tempo o tramite prodotti e attività diverse. Cerca per nome dell’organizzazione o indirizzo registrato per riunire questi record, quindi apri un’organizzazione per esplorare le sue assegnazioni nei vari registri.",
+    "sections": [
+      {
+        "title": "Cerca nomi e indirizzi registrati",
+        "body": "La ricerca trova corrispondenze in qualsiasi parte del nome o dell’indirizzo di un’organizzazione, senza distinguere tra maiuscole e minuscole. Il nome di un’azienda, una città o una via possono aiutare a trovare un record. Ogni risultato include l’indirizzo registrato corrispondente e il numero di blocchi. Seleziona l’organizzazione per limitare la vista a quel nome esatto e vedere tutte le sue assegnazioni."
+      },
+      {
+        "title": "Leggi le assegnazioni di un’organizzazione",
+        "body": "La vista dell’organizzazione raggruppa i suoi blocchi in un elenco compatto di prefissi e tipi di registro. Un indirizzo comune viene mostrato una sola volta sopra l’elenco; gli indirizzi registrati diversi restano associati ai rispettivi blocchi. Filtra per MA-L, MA-M, MA-S, IAB o CID e apri un prefisso per esaminarne l’intervallo e la capacità nello strumento di ricerca dei blocchi. I nomi delle organizzazioni seguono gli elenchi IEEE, compresi i nomi storici delle aziende."
+      },
+      {
+        "title": "Condividi un’organizzazione o una ricerca",
+        "body": "Copia link salva nell’URL l’organizzazione selezionata, il termine di ricerca, il filtro del registro e la pagina. Puoi riaprire la stessa vista, inviarla a un collega o cambiare la lingua del sito mantenendo la selezione. La ricerca e i filtri vengono eseguiti nel browser dopo il caricamento della copia condivisa del registro. Il link alla fonte e la data della copia sotto lo strumento identificano i dati IEEE usati per i risultati."
+      }
+    ]
+  }
 }

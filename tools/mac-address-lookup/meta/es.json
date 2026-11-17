@@ -1,4 +1,4 @@
 {
   "name": "Consulta de direcciones MAC",
-  "description": "Encuentra la organización registrada que corresponde a una dirección MAC o a un prefijo IEEE. Comprueba los tipos de dirección y los detalles de la asignación de forma local en tu navegador."
+  "description": "Encuentra la organización y el bloque registrado de una dirección MAC o un prefijo IEEE."
 }

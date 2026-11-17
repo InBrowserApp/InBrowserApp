@@ -1,24 +1,21 @@
 {
-  "lookup": "Recherche MAC",
-  "blocks": "Par bloc",
-  "vendors": "Par organisation",
-  "navigationLabel": "Outils d’adresses MAC",
+  "lookup": "Recherche d’adresses MAC",
+  "blocks": "Recherche de blocs d’adresses MAC",
+  "vendors": "Recherche de fabricants MAC",
+  "navigationLabel": "Outils associés",
   "queryLabel": "Adresse MAC ou préfixe",
   "lookupPlaceholder": "00:1B:63:84:45:E6…",
   "blockPlaceholder": "Préfixe, organisation ou adresse postale…",
   "vendorPlaceholder": "Nom ou adresse postale de l’organisation…",
-  "lookupHint": "Saisissez une adresse MAC ou un préfixe IEEE de 24, 28 ou 36 bits. Les formats avec deux-points, tirets, points ou sans séparateurs sont acceptés.",
   "blockSearchLabel": "Rechercher des blocs enregistrés",
   "vendorSearchLabel": "Rechercher des organisations",
   "registry": "Registre",
   "allRegistries": "Tous les registres",
   "prefix": "Préfixe",
-  "organization": "Organisation enregistrée",
-  "address": "Adresse postale de l’organisation",
+  "organization": "Organisation",
+  "address": "Adresse enregistrée",
   "range": "Plage d’adresses",
   "capacity": "Adresses dans le bloc",
-  "normalized": "Adresse normalisée",
-  "addressType": "Type d’adresse",
   "share": "Copier le lien",
   "copied": "Lien copié",
   "loading": "Chargement du registre IEEE…",
@@ -26,11 +23,9 @@
   "retry": "Réessayer",
   "noResults": "Aucun enregistrement correspondant",
   "noResultsHint": "Essayez un autre préfixe, nom d’organisation ou registre.",
-  "emptyLookup": "Rechercher une adresse MAC",
-  "emptyLookupHint": "Saisissez une adresse ci-dessus ou essayez un exemple pour voir l’organisation et le bloc enregistrés.",
+  "emptyLookupHint": "Les résultats s’affichent ici.",
   "invalidAddress": "Saisissez une adresse MAC complète ou un préfixe valide de 24, 28 ou 36 bits.",
   "noAssignment": "Aucune organisation enregistrée trouvée",
-  "noAssignmentHint": "Cette adresse ne correspond à aucune attribution dans cet instantané IEEE.",
   "previous": "Précédent",
   "next": "Suivant",
   "pageSummary": "{start}–{end} sur {total}",
@@ -38,10 +33,7 @@
   "organizationCount": "Organisations : {count}",
   "source": "Registre public IEEE",
   "updated": "Instantané : {date}",
-  "dataSummary": "{assignments} attributions · {organizations} organisations",
-  "sourceHint": "La recherche s’effectue dans votre navigateur à partir d’un instantané IEEE intégré.",
   "clearOrganization": "Toutes les organisations",
-  "organizationBlocks": "Blocs enregistrés au nom de {organization}",
   "examples": "Exemples",
   "copyAddress": "Copier l’adresse",
   "addressCopied": "Adresse copiée",
@@ -54,19 +46,28 @@
     "prefix": "Préfixe IEEE"
   },
   "typeHints": {
-    "universal": "L’organisation enregistrée indique le titulaire de l’attribution d’adresses, qui peut différer de la marque de l’appareil.",
-    "local": "Cette adresse est administrée localement et peut être aléatoire. Son préfixe ne permet pas d’identifier de manière fiable le fabricant d’un appareil.",
-    "multicast": "Il s’agit d’une adresse de groupe. Une attribution IEEE d’adresses de monodiffusion ne permet pas d’en déduire un fabricant.",
-    "broadcast": "Cette adresse envoie des données à tous les appareils du réseau local ; elle n’est associée à aucun fabricant particulier.",
-    "zero": "L’adresse entièrement nulle est une adresse non spécifiée ; elle n’identifie pas le fabricant d’un appareil.",
-    "prefix": "Un préfixe identifie un bloc enregistré. Les préfixes d’attribution les plus longs sont prioritaires lors de la recherche d’une adresse MAC complète."
+    "local": "Souvent utilisée pour les adresses Wi-Fi privées.",
+    "multicast": "Adresse de groupe permettant de joindre plusieurs appareils.",
+    "broadcast": "Permet de joindre tous les appareils du réseau local.",
+    "zero": "Adresse non spécifiée."
   },
-  "cidHint": "Un CID identifie une organisation pour l’adressage local. Il ne s’agit pas d’une attribution d’adresses MAC uniques à l’échelle mondiale.",
-  "registrySizes": "MA-L : /24 · MA-M : /28 · MA-S et IAB : /36 · CID : identifiant d’entreprise",
-  "lookupAboutTitle": "Comment fonctionne la recherche d’adresses MAC",
-  "lookupAboutBody": "Une adresse MAC comporte 48 bits. L’IEEE attribue aux organisations des préfixes de 24, 28 ou 36 bits. Cet outil recherche le préfixe enregistré le plus long et affiche le titulaire de l’attribution, la plage d’adresses et le registre. Les adresses administrées localement et les adresses de groupe sont identifiées séparément.",
-  "blocksAboutTitle": "Explorer les blocs d’adresses IEEE",
-  "blocksAboutBody": "Parcourez les cinq registres publics IEEE. Recherchez un préfixe, une organisation ou une adresse postale enregistrée, puis ouvrez un bloc pour voir sa plage et sa capacité. MA-L attribue 16 777 216 adresses, MA-M en attribue 1 048 576 et MA-S ou IAB en attribue 4 096. CID est un identifiant d’entreprise destiné à l’adressage local.",
-  "vendorsAboutTitle": "Trouver les blocs enregistrés d’une organisation",
-  "vendorsAboutBody": "Recherchez des organisations par leur nom ou leur adresse postale enregistrée, puis sélectionnez-en une pour voir toutes ses attributions. Les noms et adresses proviennent du registre IEEE et sont affichés tels qu’enregistrés. Le titulaire d’une attribution ne correspond pas forcément à la marque d’un appareil, et ces adresses ne permettent pas de localiser l’appareil."
+  "cidHint": "Identifiant d’entreprise pour les adresses attribuées localement.",
+  "about": {
+    "title": "Comprendre une adresse MAC",
+    "intro": "Une adresse MAC identifie une interface réseau sur un réseau Ethernet ou Wi-Fi. Utilisez cet outil pour trouver les informations d’enregistrement IEEE d’une adresse issue de la liste des clients d’un routeur, d’une table ARP ou de l’étiquette d’un appareil.",
+    "sections": [
+      {
+        "title": "Saisir une adresse ou un préfixe",
+        "body": "Collez une adresse MAC complète de 48 bits, avec des deux-points, des tirets, des points ou sans séparateurs : 00:1B:63:84:45:E6, 00-1B-63-84-45-E6, 001B.6384.45E6 et 001B638445E6 désignent la même adresse. Vous pouvez aussi saisir un préfixe IEEE tel que 001B63 ou 8C1F64001, y compris avec la notation /24, /28 ou /36."
+      },
+      {
+        "title": "Consulter le bloc enregistré",
+        "body": "Le résultat indique l’organisation enregistrée, son adresse et le préfixe correspondant. La recherche vérifie d’abord le préfixe le plus long : une attribution de 36 bits est prioritaire sur un préfixe parent de 28 ou 24 bits. La première adresse, la dernière adresse et la capacité du bloc indiquent la taille de l’attribution. Si un ancien préfixe comporte plusieurs enregistrements, toutes les organisations correspondantes sont affichées ensemble."
+      },
+      {
+        "title": "Explorer et partager le résultat",
+        "body": "Copiez l’adresse normalisée, ouvrez son préfixe pour inspecter le bloc ou suivez le nom de l’organisation pour parcourir ses autres attributions. « Copier le lien » conserve votre recherche dans l’URL pour la partager ou y revenir plus tard. Un résultat propre à chaque type est affiché pour les adresses locales, de multidiffusion, de diffusion générale et entièrement nulles. Les données proviennent d’un instantané IEEE intégré ; le lien vers la source et la date de l’instantané figurent sous l’outil."
+      }
+    ]
+  }
 }
