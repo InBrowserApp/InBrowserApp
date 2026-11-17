@@ -13,6 +13,7 @@ import { useAudioEditor } from "./client/use-audio-editor"
 import { usePreview } from "./client/use-preview"
 import { encodeWav } from "./core/audio"
 import copy from "./messages/en.json"
+import { DEFAULT_SETTINGS } from "./core/settings"
 import meta from "./meta/en.json"
 import type { AudioClip } from "./types"
 
@@ -44,7 +45,11 @@ class FakeWorker {
   onerror: (() => void) | null = null
   terminate = vi.fn()
   postMessage = vi.fn((data) =>
-    this.onmessage?.({ data: { buffer: encodeWav(data.clips, data.smooth) } })
+    this.onmessage?.({
+      data: {
+        buffer: encodeWav(data.clips, data.settings.smooth, data.settings.join),
+      },
+    })
   )
   constructor() {
     encoders.push(this)
@@ -129,22 +134,28 @@ describe("audio editor workflow", () => {
     })
     fireEvent.click(screen.getByText(copy.exportButton))
     expect(await screen.findByText(copy.outputTitle)).toBeTruthy()
-    expect(screen.getByText(copy.downloadButton).getAttribute("download")).toBe(
-      "joined.wav"
-    )
+    expect(
+      screen
+        .getByText(copy.downloadButton.replace("{format}", "MP3"))
+        .getAttribute("download")
+    ).toBe("joined.mp3")
     expect(currentWorker().terminate).toHaveBeenCalledOnce()
     fireEvent.change(screen.getByLabelText(copy.outputNameLabel), {
       target: { value: " " },
     })
-    expect(screen.getByText(copy.downloadButton).getAttribute("download")).toBe(
-      "audio.wav"
-    )
+    expect(
+      screen
+        .getByText(copy.downloadButton.replace("{format}", "MP3"))
+        .getAttribute("download")
+    ).toBe("audio.mp3")
     fireEvent.play(screen.getByLabelText(copy.outputPreviewLabel))
     fireEvent.change(
       screen.getAllByLabelText(copy.startLabel, { selector: "input" })[0]!,
       { target: { value: "0.2" } }
     )
-    expect(screen.queryByText(copy.downloadButton)).toBeNull()
+    expect(
+      screen.queryByText(copy.downloadButton.replace("{format}", "MP3"))
+    ).toBeNull()
     expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:audio")
   })
   test("invalid and empty times show inline errors and disable export, reset recovers", async () => {
@@ -320,7 +331,7 @@ describe("audio editor workflow", () => {
     act(() => result.current.setName(" "))
     act(() => result.current.exportAudio())
     expect(result.current.result?.url).toBe("blob:audio")
-    act(() => result.current.setSmooth(true))
+    act(() => result.current.setSettings({ ...DEFAULT_SETTINGS, smooth: true }))
     expect(result.current.result).toBeNull()
   })
 })
@@ -390,4 +401,99 @@ describe("preview lifecycle", () => {
     expect(source.stop).toHaveBeenCalled()
     expect(source.onended).toBeNull()
   })
+})
+
+async function chooseOption(label: string, option: string) {
+  fireEvent.keyDown(screen.getByLabelText(label), { key: "ArrowDown" })
+  fireEvent.click(await screen.findByRole("option", { name: option }))
+}
+
+test("format and transition settings update downloads, durations and estimates", async () => {
+  render(<AudioEditorClient messages={messages} language="de" />)
+  await inputFiles([file()])
+  fireEvent.click(screen.getByLabelText(copy.duplicateButton))
+  expect(screen.getAllByRole("spinbutton")).toHaveLength(4)
+  await chooseOption(copy.joinLabel, copy.joinCrossfade)
+  expect(screen.getAllByText("0:03.500").length).toBeGreaterThan(0)
+  fireEvent.change(screen.getByLabelText(copy.joinSecondsLabel), {
+    target: { value: "5" },
+  })
+  expect(screen.getAllByText("0:03.000").length).toBeGreaterThan(0)
+  fireEvent.change(screen.getByLabelText(copy.joinSecondsLabel), {
+    target: { value: "" },
+  })
+  expect(screen.getByText(copy.joinError)).toBeTruthy()
+  expect(
+    (screen.getByText(copy.exportButton) as HTMLButtonElement).disabled
+  ).toBe(true)
+  fireEvent.change(screen.getByLabelText(copy.joinSecondsLabel), {
+    target: { value: "0.5" },
+  })
+  await chooseOption(copy.joinLabel, copy.joinGap)
+  expect(screen.getAllByText("0:04.500").length).toBeGreaterThan(0)
+  await chooseOption(copy.joinLabel, copy.joinNone)
+  fireEvent.click(screen.getByText("WAV", { exact: true }))
+  expect(screen.queryByLabelText(copy.qualityLabel)).toBeNull()
+  fireEvent.click(screen.getByText(copy.exportButton))
+  expect(
+    await screen.findByText(copy.downloadButton.replace("{format}", "WAV"))
+  ).toBeTruthy()
+  expect(
+    screen
+      .getByText(copy.downloadButton.replace("{format}", "WAV"))
+      .getAttribute("download")
+  ).toBe("voice.wav")
+  fireEvent.click(screen.getByText("OGG", { exact: true }))
+  expect(screen.queryByText(copy.outputTitle)).toBeNull()
+  expect(screen.getByText(copy.oggQualityNote)).toBeTruthy()
+  await chooseOption(copy.qualityLabel, copy.qualityHigh)
+  fireEvent.click(screen.getByText("OGG", { exact: true }))
+  expect(screen.getByText(copy.formatOggNote)).toBeTruthy()
+  fireEvent.click(screen.getByText(copy.exportButton))
+  expect(
+    await screen.findByText(copy.downloadButton.replace("{format}", "OGG"))
+  ).toBeTruthy()
+})
+
+test("export progress and cancellation preserve clips and ignore late worker messages", async () => {
+  vi.stubGlobal(
+    "Worker",
+    class extends FakeWorker {
+      override postMessage = vi.fn()
+    }
+  )
+  render(<AudioEditorClient messages={messages} />)
+  await inputFiles([file()])
+  fireEvent.click(screen.getByText(copy.exportButton))
+  const worker = currentWorker()
+  act(() => worker.onmessage?.({ data: { progress: 42 } }))
+  expect(
+    (screen.getByLabelText(copy.progressLabel) as HTMLProgressElement).value
+  ).toBe(42)
+  expect(screen.getByText("42%")).toBeTruthy()
+  fireEvent.click(screen.getByText(copy.cancelButton))
+  expect(worker.terminate).toHaveBeenCalledOnce()
+  act(() => {
+    worker.onmessage?.({ data: { buffer: new ArrayBuffer(4) } })
+    worker.onerror?.()
+  })
+  expect(screen.queryByText(copy.outputTitle)).toBeNull()
+  expect(screen.queryByRole("alert")).toBeNull()
+  expect(screen.getByText("voice.wav")).toBeTruthy()
+  fireEvent.click(screen.getByText(copy.exportButton))
+  expect(screen.getByText(copy.cancelButton)).toBeTruthy()
+})
+
+test("a single remaining clip can export even after an invalid join duration", async () => {
+  const { result } = renderHook(() => useAudioEditor(messages))
+  await act(() => result.current.addFiles([file(), file("next.wav")]))
+  act(() =>
+    result.current.setSettings({
+      ...DEFAULT_SETTINGS,
+      join: { mode: "gap", seconds: NaN },
+    })
+  )
+  expect(result.current.valid).toBe(false)
+  act(() => result.current.remove(1))
+  expect(result.current.valid).toBe(true)
 })

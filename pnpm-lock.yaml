@@ -602,6 +602,9 @@ catalogs:
     vitest:
       specifier: ^5.1.0
       version: 5.1.0
+    wasm-media-encoders:
+      specifier: 0.7.0
+      version: 0.7.0
     webrtc-ips:
       specifier: ^0.2.0
       version: 0.2.0
@@ -2297,6 +2300,9 @@ importers:
       react-dom:
         specifier: 'catalog:'
         version: 19.3.1(react@19.3.1)
+      wasm-media-encoders:
+        specifier: 'catalog:'
+        version: 0.7.0
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -12995,6 +13001,9 @@ packages:
     peerDependencies:
       acorn: ^8.9.0
 
+  '@swc/helpers@0.5.24':
+    resolution: {integrity: sha512-6tcXo4kA8HgGO7AVmawB57RYi/piBPYVHVcO6dXjX+SZw8GoHmi262sp4v2Ha2kNP9Cx84qei27yT+fjS1lxgg==}
+
   '@tailwindcss/node@4.3.5':
     resolution: {integrity: sha512-yT53FzV4ke0cr/BguDxhWMpm5MJu1O2muzk+tKw6lKHjODAsYArBbWwFbJiaksfzFv1tpkO9QHGzmfs1hJT66g==}
 
@@ -16681,6 +16690,10 @@ packages:
   wasm-feature-detect@1.10.1:
     resolution: {integrity: sha512-+wz9+WpMKgQ7H1tm41nJbFwAvwX4DqY0jNY8Blw5Qe6hHg1yhCJ+AqU0R4lgX7p3pyo8irYIl1+mMNoBwSj2Zg==}
 
+  wasm-media-encoders@0.7.0:
+    resolution: {integrity: sha512-Sp4wUasgxOK/IFfNhpon6LQQgYGwtpxyV4isjGIe1rvhnJL3w2KYr4f+CdqDNtGPDcgCDRY+uBanVfSx6Si0WQ==}
+    engines: {node: '>= 10'}
+
   watskeburt@6.0.0:
     resolution: {integrity: sha512-jfiuDABaxSkC71T6oZ3vCS99roYkSHm/+As+G0Dz8taAHQb+SJBvLEm5RlsgG71XdfAj3rv7eudUBTgwcQUPlQ==}
     engines: {node: ^22.13||^24||>=26}
@@ -19502,6 +19515,8 @@ snapshots:
   '@sveltejs/acorn-typescript@1.0.13(acorn@8.19.0)':
     dependencies:
       acorn: 8.19.0
+
+  '@swc/helpers@0.5.24': {}
 
   '@tailwindcss/node@4.3.5':
     dependencies:
@@ -23439,6 +23454,10 @@ snapshots:
   walk-up-path@4.0.0: {}
 
   wasm-feature-detect@1.10.1: {}
+
+  wasm-media-encoders@0.7.0:
+    dependencies:
+      '@swc/helpers': 0.5.24
 
   watskeburt@6.0.0: {}
 

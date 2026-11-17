@@ -4,12 +4,12 @@ Behold delen du trenger fra et talenotat, en sang eller et opptak. Legg til én 
 
 ## Velg, ordne og forhåndslytt
 
-Bruk håndtakene i bølgeformen eller angi start- og sluttider i sekunder. Spill av hvert utvalg, flytt klipp tidligere eller senere, og opprett en WAV-fil for å forhåndslytte til hele resultatet før nedlasting. Tilbakestill en beskjæring for å gjenopprette hele klippet, eller angre en utilsiktet fjerning.
+Bruk håndtakene i bølgeformen eller angi start- og sluttider i sekunder. Spill av hvert utvalg, flytt klipp tidligere eller senere, og dupliser et klipp for å beholde flere deler av samme opptak. Tilbakestill en beskjæring for å gjenopprette hele klippet, eller angre en utilsiktet fjerning. Sett sammen klipp direkte, legg inn en stille pause, eller la dem overlappe med en krysstoning. Hver krysstoning begrenses til halve lengden av hvert tilstøtende klipp, slik at korte klipp fortsatt kan brukes. Opprett resultatet for å forhåndslytte til hele lyden før nedlasting; du kan avbryte eksporten og fortsette redigeringen.
 
 ## Formater og lydkvalitet
 
-Støtten for inndata avhenger av nettleseren og filens kodek. Vanlige formater er MP3, WAV, M4A, OGG, FLAC og WebM. Mono- og stereolyd dekodes ved 48 kHz og eksporteres som 16-bit PCM WAV. WAV unngår et nytt trinn med tapsbasert komprimering, men gjenoppretter ikke detaljer som er gått tapt i kilden, og kan være større enn komprimerte filer. Blandede mono- og stereoklipp eksporteres som stereo.
+Støtten for inndata avhenger av nettleseren og filens kodek. Vanlige formater er MP3, WAV, M4A, OGG, FLAC og WebM. Eksporter MP3 for deling, WAV for ukomprimert 16-bit PCM eller OGG Vorbis for komprimert lyd i et åpent format. MP3 og OGG har innstillinger for mindre fil, balansert kvalitet og høyere kvalitet. Størrelsesanslag hjelper deg å velge; OGG bruker variabel bitrate, så den faktiske størrelsen avhenger av lyden. Lyden dekodes og eksporteres ved 48 kHz. Mono forblir mono; blandede mono- og stereoklipp eksporteres som stereo. WAV unngår et nytt trinn med tapsbasert komprimering, men kan ikke gjenopprette detaljer som er gått tapt i kilden.
 
 ## Tips for rene kutt
 
-Lytt rundt starten og slutten av hvert utvalg. Aktiver utjevning av klippkantene for å legge til en kort inn- og uttoning på 10 ms ved hvert kutt og redusere klikkelyder. Klippene settes sammen direkte uten overlapping. Store opptak bruker mer av nettleserens minne; arbeid med kortere klipp hvis enheten sliter. Hold denne siden åpen til du har lastet ned resultatet.
+Lytt rundt starten og slutten av hvert utvalg. Aktiver utjevning av klippkantene for å legge til en kort inn- og uttoning på 10 ms ved frie kuttkanter og redusere klikkelyder. Krysstoninger blander tilstøtende klipp; stille pauser er nyttige mellom talte deler. Store opptak bruker mer av nettleserens minne; arbeid med kortere klipp hvis enheten sliter. Hold denne siden åpen til du har lastet ned resultatet.

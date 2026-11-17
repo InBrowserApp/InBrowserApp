@@ -1,6 +1,8 @@
-import type { PcmClip } from "../types"
+import { audioLayout, mixBlocks } from "./mix"
+import { SAMPLE_RATE } from "./settings"
+import type { JoinSettings, PcmClip } from "../types"
 
-export const SAMPLE_RATE = 48000
+export { SAMPLE_RATE } from "./settings"
 
 export function frameRange(start: number, end: number, length: number) {
   const first = Math.max(0, Math.min(length, Math.round(start * SAMPLE_RATE)))
@@ -39,11 +41,16 @@ export function formatDuration(seconds: number) {
   return `${Math.floor(millis / 60000)}:${(Math.floor(millis / 1000) % 60).toString().padStart(2, "0")}.${(millis % 1000).toString().padStart(3, "0")}`
 }
 
-export function encodeWav(clips: PcmClip[], smooth: boolean) {
+export function encodeWav(
+  clips: PcmClip[],
+  smooth: boolean,
+  join: JoinSettings = { mode: "none", seconds: 0 },
+  onProgress?: (progress: number) => void
+) {
   const channels = Math.max(...clips.map((clip) => clip.channels.length))
-  const frames = clips.reduce(
-    (total, clip) => total + clip.channels[0]!.length,
-    0
+  const { frames } = audioLayout(
+    clips.map((clip) => clip.channels[0]!.length),
+    join
   )
   const bytes = frames * channels * 2
   if (!frames || channels > 2 || bytes > 0xffffffff - 36) {
@@ -68,15 +75,10 @@ export function encodeWav(clips: PcmClip[], smooth: boolean) {
   text(36, "data")
   view.setUint32(40, bytes, true)
   let offset = 44
-  for (const clip of clips) {
-    const length = clip.channels[0]!.length
-    const fade = smooth ? Math.min(480, Math.floor(length / 2)) : 0
-    for (let i = 0; i < length; i++) {
-      const gain = fade ? Math.min(1, i / fade, (length - 1 - i) / fade) : 1
+  for (const block of mixBlocks(clips, smooth, join)) {
+    for (let i = 0; i < block[0]!.length; i++) {
       for (let channel = 0; channel < channels; channel++) {
-        const samples =
-          clip.channels[Math.min(channel, clip.channels.length - 1)]
-        const sample = Math.max(-1, Math.min(1, samples![i]! * gain))
+        const sample = block[channel]![i]!
         view.setInt16(
           offset,
           Math.round(sample * (sample < 0 ? 32768 : 32767)),
@@ -85,6 +87,7 @@ export function encodeWav(clips: PcmClip[], smooth: boolean) {
         offset += 2
       }
     }
+    onProgress?.(Math.round(((offset - 44) / bytes) * 100))
   }
   return buffer
 }

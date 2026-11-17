@@ -22,6 +22,7 @@ import {
   Square,
   Trash2,
   Undo2,
+  Copy,
 } from "@workspace/ui/icons"
 import {
   formatDuration,
@@ -41,6 +42,7 @@ export function ClipCard({
   onRange,
   onMove,
   onRemove,
+  onDuplicate,
   onPlay,
   onStop,
 }: {
@@ -53,6 +55,7 @@ export function ClipCard({
   onRange: (range: { start: number; end: number }) => void
   onMove: (direction: number) => void
   onRemove: () => void
+  onDuplicate: () => void
   onPlay: () => void
   onStop: () => void
 }) {
@@ -67,14 +70,17 @@ export function ClipCard({
   const end = position(clip.end)
   return (
     <Card>
-      <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-3">
+      <CardHeader className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex min-w-0 flex-1 items-center gap-3">
           <Badge variant="secondary">{index + 1}</Badge>
-          <CardTitle className="min-w-0 truncate" title={clip.name}>
+          <CardTitle
+            className="min-w-0 [overflow-wrap:anywhere] break-words"
+            title={clip.name}
+          >
             <bdi>{clip.name}</bdi>
           </CardTitle>
         </div>
-        <div className="flex gap-1">
+        <div className="flex shrink-0 gap-1 self-end">
           <Button
             variant="ghost"
             size="icon"
@@ -96,6 +102,17 @@ export function ClipCard({
             onClick={() => onMove(1)}
           >
             <ArrowDown aria-hidden="true" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            type="button"
+            disabled={disabled}
+            aria-label={m.duplicateButton}
+            title={m.duplicateDescription}
+            onClick={onDuplicate}
+          >
+            <Copy aria-hidden="true" />
           </Button>
           <Button
             variant="ghost"

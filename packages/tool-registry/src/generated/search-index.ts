@@ -1397,117 +1397,117 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "أداة قص الصوت ودمجه",
         description:
-          "قص الصوت بتحديد مناطق من الشكل الموجي، ورتّب المقاطع وعاينها وادمجها في ملف WAV. يبقى كل شيء في متصفحك.",
+          "قص الصوت بتحديد مناطق من الشكل الموجي، ورتّب المقاطع وأضف تلاشيًا متداخلًا وصدّر بصيغة MP3 أو WAV أو OGG. يبقى كل شيء في متصفحك.",
       },
       de: {
         name: "Audio schneiden & zusammenfügen",
         description:
-          "Audio per Wellenformauswahl schneiden, Clips anordnen, vorhören und zu einer WAV-Datei zusammenfügen. Alles bleibt in deinem Browser.",
+          "Audio per Wellenformauswahl schneiden, Clips anordnen, Überblendungen hinzufügen und als MP3, WAV oder OGG exportieren. Alles bleibt in deinem Browser.",
       },
       en: {
         name: "Audio Trimmer & Merger",
         description:
-          "Trim audio with waveform selections, arrange clips, preview, and merge into a WAV file. Everything stays in your browser.",
+          "Trim audio with waveform selections, arrange clips, add crossfades, and export MP3, WAV, or OGG. Everything stays in your browser.",
       },
       es: {
         name: "Recortador y unificador de audio",
         description:
-          "Recorta audio seleccionando regiones en la forma de onda, ordena clips, escucha el resultado y únelos en un archivo WAV. Todo queda en tu navegador.",
+          "Recorta audio seleccionando regiones en la forma de onda, ordena clips, añade fundidos cruzados y exporta en MP3, WAV u OGG. Todo queda en tu navegador.",
       },
       fr: {
         name: "Découpe et fusion audio",
         description:
-          "Découpez l’audio à l’aide de la forme d’onde, réorganisez les extraits, écoutez le résultat et fusionnez-les en un fichier WAV. Tout reste dans votre navigateur.",
+          "Découpez l’audio à l’aide de la forme d’onde, réorganisez les extraits, ajoutez des fondus enchaînés et exportez en MP3, WAV ou OGG. Tout reste dans votre navigateur.",
       },
       he: {
         name: "חיתוך ומיזוג אודיו",
         description:
-          "חתכו אודיו באמצעות בחירה בצורת הגל, סדרו קטעים, האזינו ומזגו לקובץ WAV. הכול נשאר בדפדפן שלכם.",
+          "חתכו אודיו באמצעות בחירה בצורת הגל, סדרו קטעים, הוסיפו מעברים מדורגים וייצאו MP3, WAV או OGG. הכול נשאר בדפדפן שלכם.",
       },
       hi: {
         name: "ऑडियो काटें और जोड़ें",
         description:
-          "वेवफ़ॉर्म पर चयन करके ऑडियो काटें, क्लिप का क्रम बदलें, पूर्वावलोकन करें और WAV फ़ाइल में जोड़ें। सब कुछ आपके ब्राउज़र में रहता है।",
+          "वेवफ़ॉर्म पर चयन करके ऑडियो काटें, क्लिप का क्रम बदलें, क्रॉसफ़ेड जोड़ें और MP3, WAV या OGG निर्यात करें। सब कुछ आपके ब्राउज़र में रहता है।",
       },
       id: {
         name: "Pemotong & Penggabung Audio",
         description:
-          "Potong audio dengan seleksi bentuk gelombang, atur klip, pratinjau, dan gabungkan menjadi file WAV. Semuanya tetap di browser Anda.",
+          "Potong audio dengan seleksi bentuk gelombang, atur klip, tambahkan crossfade, dan ekspor MP3, WAV, atau OGG. Semuanya tetap di browser Anda.",
       },
       it: {
         name: "Ritaglia e unisci audio",
         description:
-          "Ritaglia l’audio selezionando la forma d’onda, riordina le clip, ascolta l’anteprima e uniscile in un file WAV. Tutto resta nel browser.",
+          "Ritaglia l’audio selezionando la forma d’onda, riordina le clip, aggiungi dissolvenze incrociate ed esporta in MP3, WAV o OGG. Tutto resta nel browser.",
       },
       ja: {
         name: "音声トリミング・結合",
         description:
-          "波形で音声の範囲を選択し、クリップの並べ替え、試聴、WAVファイルへの結合ができます。すべてブラウザー内で処理します。",
+          "波形で音声の範囲を選択し、クリップの並べ替えやクロスフェードを加えて、MP3、WAV、OGGで書き出せます。すべてブラウザー内で処理します。",
       },
       ko: {
         name: "오디오 자르기 및 합치기",
         description:
-          "파형에서 구간을 선택해 오디오를 자르고, 클립 순서를 정하고, 미리 들은 뒤 WAV 파일로 합치세요. 모든 작업은 브라우저에서 처리됩니다.",
+          "파형에서 구간을 선택해 오디오를 자르고, 클립 순서를 정하고, 크로스페이드를 추가한 뒤 MP3, WAV 또는 OGG로 내보내세요. 모든 작업은 브라우저에서 처리됩니다.",
       },
       ms: {
         name: "Pemangkas & Penggabung Audio",
         description:
-          "Pangkas audio menggunakan pilihan bentuk gelombang, susun klip, pratonton dan gabungkan menjadi fail WAV. Semuanya kekal dalam pelayar anda.",
+          "Pangkas audio menggunakan pilihan bentuk gelombang, susun klip, tambah pudar silang dan eksport MP3, WAV atau OGG. Semuanya kekal dalam pelayar anda.",
       },
       nl: {
         name: "Audio bijsnijden en samenvoegen",
         description:
-          "Snijd audio bij met selecties in de golfvorm, orden fragmenten, beluister het resultaat en voeg alles samen tot een WAV-bestand. Alles blijft in je browser.",
+          "Snijd audio bij met selecties in de golfvorm, orden fragmenten, voeg crossfades toe en exporteer MP3, WAV of OGG. Alles blijft in je browser.",
       },
       no: {
         name: "Beskjær og slå sammen lyd",
         description:
-          "Beskjær lyd med bølgeformutvalg, ordne klipp, forhåndslytt og slå sammen til en WAV-fil. Alt forblir i nettleseren.",
+          "Beskjær lyd med bølgeformutvalg, ordne klipp, legg til krysstoninger og eksporter MP3, WAV eller OGG. Alt forblir i nettleseren.",
       },
       pl: {
         name: "Przycinanie i łączenie audio",
         description:
-          "Przycinaj audio za pomocą zaznaczeń na przebiegu fali, układaj klipy, odsłuchuj je i łącz w plik WAV. Wszystko pozostaje w przeglądarce.",
+          "Przycinaj audio za pomocą zaznaczeń na przebiegu fali, układaj klipy, dodawaj płynne przejścia i eksportuj MP3, WAV lub OGG. Wszystko pozostaje w przeglądarce.",
       },
       pt: {
         name: "Cortador e combinador de áudio",
         description:
-          "Corte áudio através de seleções na forma de onda, organize excertos, pré-visualize e combine tudo num ficheiro WAV. Tudo fica no seu navegador.",
+          "Corte áudio através de seleções na forma de onda, organize excertos, adicione transições cruzadas e exporte MP3, WAV ou OGG. Tudo fica no seu navegador.",
       },
       ru: {
         name: "Обрезка и объединение аудио",
         description:
-          "Обрезайте аудио по звуковой волне, меняйте порядок фрагментов, прослушивайте и объединяйте их в WAV. Всё остаётся в браузере.",
+          "Обрезайте аудио по звуковой волне, меняйте порядок фрагментов, добавляйте плавные переходы и экспортируйте в MP3, WAV или OGG. Всё остаётся в браузере.",
       },
       sv: {
         name: "Ljudtrimning och sammanslagning",
         description:
-          "Trimma ljud med vågformsmarkeringar, ordna klipp, förhandslyssna och slå ihop till en WAV-fil. Allt stannar i din webbläsare.",
+          "Trimma ljud med vågformsmarkeringar, ordna klipp, lägg till övertoningar och exportera MP3, WAV eller OGG. Allt stannar i din webbläsare.",
       },
       th: {
         name: "เครื่องมือตัดและรวมเสียง",
         description:
-          "ตัดเสียงด้วยการเลือกช่วงบนรูปคลื่น จัดเรียงคลิป ฟังตัวอย่าง และรวมเป็นไฟล์ WAV ทุกอย่างทำงานในเบราว์เซอร์ของคุณ",
+          "ตัดเสียงด้วยการเลือกช่วงบนรูปคลื่น จัดเรียงคลิป เพิ่มการเฟดเสียงซ้อนกัน และส่งออกเป็น MP3, WAV หรือ OGG ทุกอย่างทำงานในเบราว์เซอร์ของคุณ",
       },
       tr: {
         name: "Ses Kırpıcı ve Birleştirici",
         description:
-          "Dalga biçiminden seçim yaparak sesi kırpın, klipleri sıralayın, önizleyin ve bir WAV dosyasında birleştirin. Her şey tarayıcınızda kalır.",
+          "Dalga biçiminden seçim yaparak sesi kırpın, klipleri sıralayın, çapraz geçişler ekleyin ve MP3, WAV veya OGG olarak dışa aktarın. Her şey tarayıcınızda kalır.",
       },
       vi: {
         name: "Cắt và ghép âm thanh",
         description:
-          "Cắt âm thanh bằng vùng chọn trên dạng sóng, sắp xếp các đoạn, nghe thử và ghép thành tệp WAV. Mọi thao tác đều diễn ra trong trình duyệt.",
+          "Cắt âm thanh bằng vùng chọn trên dạng sóng, sắp xếp các đoạn, thêm chuyển tiếp chéo và xuất MP3, WAV hoặc OGG. Mọi thao tác đều diễn ra trong trình duyệt.",
       },
       "zh-CN": {
         name: "音频裁剪与合并",
         description:
-          "通过波形选区裁剪音频、调整片段顺序、试听并合并为 WAV 文件。所有操作均在浏览器中完成。",
+          "通过波形选区裁剪音频、调整片段顺序、添加交叉淡化，并导出 MP3、WAV 或 OGG。所有操作均在浏览器中完成。",
       },
       "zh-TW": {
         name: "音訊裁剪與合併",
         description:
-          "透過波形選取範圍裁剪音訊、排列片段、試聽，並合併為 WAV 檔案。所有處理都在瀏覽器中完成。",
+          "透過波形選取範圍裁剪音訊、排列片段、加入交叉淡化，並匯出 MP3、WAV 或 OGG。所有處理都在瀏覽器中完成。",
       },
     },
   },

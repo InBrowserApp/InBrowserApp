@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
-    "@workspace/ui": "workspace:*"
+    "@workspace/ui": "workspace:*",
+    "wasm-media-encoders": "catalog:"
   },
   "peerDependencies": {
     "astro": "catalog:",

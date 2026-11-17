@@ -4,12 +4,12 @@ Pertahankan bagian yang Anda perlukan dari catatan suara, lagu, atau rekaman. Ta
 
 ## Pilih, Atur, dan Pratinjau
 
-Gunakan pegangan pada bentuk gelombang atau masukkan waktu awal dan akhir dalam detik. Putar setiap pilihan, pindahkan klip lebih awal atau lebih akhir, lalu buat WAV untuk mempratinjau hasil lengkap sebelum mengunduh. Atur ulang potongan untuk mengembalikan klip utuh, atau urungkan penghapusan yang tidak disengaja.
+Gunakan pegangan pada bentuk gelombang atau masukkan waktu awal dan akhir dalam detik. Putar setiap pilihan, pindahkan klip lebih awal atau lebih akhir, dan duplikasikan klip untuk mempertahankan beberapa bagian dari rekaman yang sama. Atur ulang potongan untuk mengembalikan klip utuh, atau urungkan penghapusan yang tidak disengaja. Gabungkan klip langsung, sisipkan jeda hening, atau tumpangtindihkan dengan crossfade. Setiap crossfade dibatasi hingga separuh durasi masing-masing klip yang bersebelahan agar klip pendek tetap dapat digunakan. Buat hasilnya untuk mempratinjau audio lengkap sebelum mengunduh; Anda dapat membatalkan ekspor dan melanjutkan pengeditan.
 
 ## Format dan Kualitas Audio
 
-Dukungan input bergantung pada browser dan codec file. Format umum meliputi MP3, WAV, M4A, OGG, FLAC, dan WebM. Audio mono dan stereo didekode pada 48 kHz dan diekspor sebagai WAV PCM 16-bit. WAV menghindari tahap kompresi lossy tambahan, tetapi tidak memulihkan detail yang hilang dari sumber dan ukurannya bisa lebih besar daripada file terkompresi. Campuran klip mono dan stereo diekspor sebagai stereo.
+Dukungan input bergantung pada browser dan codec file. Format umum meliputi MP3, WAV, M4A, OGG, FLAC, dan WebM. Ekspor MP3 untuk berbagi, WAV untuk PCM 16-bit tanpa kompresi, atau OGG Vorbis untuk audio terkompresi dengan format terbuka. MP3 dan OGG menyediakan pengaturan file lebih kecil, seimbang, dan kualitas lebih tinggi. Perkiraan ukuran membantu Anda memilih; OGG menggunakan bitrate variabel, sehingga ukuran sebenarnya bergantung pada audio. Audio didekode dan diekspor pada 48 kHz. Mono tetap mono; campuran klip mono dan stereo diekspor sebagai stereo. WAV menghindari tahap kompresi lossy tambahan, tetapi tidak dapat memulihkan detail yang hilang dari sumber.
 
 ## Tips untuk Potongan yang Bersih
 
-Dengarkan bagian di sekitar awal dan akhir setiap pilihan. Aktifkan penghalusan tepi klip untuk menerapkan efek pudar singkat 10 ms pada setiap potongan dan mengurangi bunyi klik. Klip digabungkan langsung tanpa tumpang tindih. Rekaman besar menggunakan lebih banyak memori browser; gunakan klip yang lebih pendek jika perangkat Anda kesulitan. Biarkan halaman ini terbuka sampai Anda selesai mengunduh hasilnya.
+Dengarkan bagian di sekitar awal dan akhir setiap pilihan. Aktifkan penghalusan tepi klip untuk menerapkan efek pudar singkat 10 ms pada tepi potongan yang terbuka dan mengurangi bunyi klik. Crossfade membaurkan klip yang bersebelahan; jeda hening berguna di antara bagian ucapan. Rekaman besar menggunakan lebih banyak memori browser; gunakan klip yang lebih pendek jika perangkat Anda kesulitan. Biarkan halaman ini terbuka sampai Anda selesai mengunduh hasilnya.

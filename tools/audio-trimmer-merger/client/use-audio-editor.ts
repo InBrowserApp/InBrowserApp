@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react"
 import { frameRange, SAMPLE_RATE, validRange, waveform } from "../core/audio"
 import { usePreview } from "./use-preview"
-import type { AudioClip, AudioEditorMessages } from "../types"
+import { useAudioExport } from "./use-audio-export"
+import { audioLayout, validJoin } from "../core/mix"
+import { DEFAULT_SETTINGS, estimateBytes } from "../core/settings"
+import type { AudioClip, AudioEditorMessages, ExportSettings } from "../types"
 
 export function useAudioEditor(messages: AudioEditorMessages) {
   const [clips, setClips] = useState<AudioClip[]>([])
@@ -9,43 +12,52 @@ export function useAudioEditor(messages: AudioEditorMessages) {
     clip: AudioClip
     index: number
   } | null>(null)
-  const [busy, setBusy] = useState<"reading" | "exporting" | null>(null)
+  const [reading, setReading] = useState(false)
   const [error, setError] = useState("")
-  const [result, setResult] = useState<{ url: string } | null>(null)
   const [name, setName] = useState("audio")
-  const [smooth, setSmooth] = useState(false)
-  const worker = useRef<Worker | null>(null)
+  const [settings, setSettings] = useState<ExportSettings>(DEFAULT_SETTINGS)
   const mounted = useRef(true)
   const locked = useRef(false)
   const preview = usePreview(() => setError(messages.playError))
+  const output = useAudioExport(locked, () => setError(messages.exportError))
+  const busy = reading ? "reading" : output.exporting ? "exporting" : null
   const valid =
     clips.length > 0 &&
+    (clips.length < 2 || validJoin(settings.join)) &&
     clips.every((clip) =>
       validRange(clip.start, clip.end, clip.buffer.duration)
     )
-  const duration = clips.reduce((total, clip) => {
-    if (!validRange(clip.start, clip.end, clip.buffer.duration)) return total
-    const [start, end] = frameRange(clip.start, clip.end, clip.buffer.length)
-    return total + (end - start) / SAMPLE_RATE
-  }, 0)
+  const lengths = clips.map((clip) => {
+    if (!validRange(clip.start, clip.end, clip.buffer.duration)) return 0
+    const [first, last] = frameRange(clip.start, clip.end, clip.buffer.length)
+    return last - first
+  })
+  const { frames } = audioLayout(
+    lengths,
+    validJoin(settings.join) ? settings.join : DEFAULT_SETTINGS.join
+  )
+  const duration = frames / SAMPLE_RATE
+  const channels = Math.max(
+    1,
+    ...clips.map((clip) => clip.buffer.numberOfChannels)
+  )
+  const estimatedBytes = estimateBytes(
+    frames,
+    channels,
+    settings.format,
+    settings.quality
+  )
 
   useEffect(() => {
     mounted.current = true
     return () => {
       mounted.current = false
-      worker.current?.terminate()
     }
   }, [])
-  useEffect(
-    () => () => {
-      if (result) URL.revokeObjectURL(result.url)
-    },
-    [result]
-  )
 
   function invalidate() {
     preview.stop()
-    setResult(null)
+    output.clear()
     setError("")
   }
 
@@ -53,7 +65,7 @@ export function useAudioEditor(messages: AudioEditorMessages) {
     if (locked.current || !files.length) return
     locked.current = true
     invalidate()
-    setBusy("reading")
+    setReading(true)
     const added: AudioClip[] = []
     const errors: string[] = []
     try {
@@ -87,13 +99,19 @@ export function useAudioEditor(messages: AudioEditorMessages) {
         }
         if (!mounted.current) return
       }
+      if (!clips.length && added.length)
+        setName((previous) =>
+          previous === "audio"
+            ? added[0]!.name.replace(/\.[^.]+$/, "")
+            : previous
+        )
       setClips((previous) => [...previous, ...added])
       setError(errors.join(" "))
     } catch {
       if (mounted.current) setError(messages.unsupportedError)
     } finally {
       locked.current = false
-      if (mounted.current) setBusy(null)
+      if (mounted.current) setReading(false)
     }
   }
 
@@ -132,59 +150,27 @@ export function useAudioEditor(messages: AudioEditorMessages) {
     setRemoved(null)
   }
 
+  function duplicate(index: number) {
+    invalidate()
+    setClips((previous) => {
+      const next = [...previous]
+      next.splice(index + 1, 0, {
+        ...previous[index]!,
+        id: crypto.randomUUID(),
+      })
+      return next
+    })
+  }
+
   function exportAudio() {
     if (locked.current || !valid) return
-    locked.current = true
     invalidate()
-    setBusy("exporting")
-    const finish = () => {
-      worker.current?.terminate()
-      worker.current = null
-      locked.current = false
-      setBusy(null)
-    }
-    try {
-      const encoder = new Worker(
-        new URL("../workers/encode.ts", import.meta.url),
-        { type: "module" }
-      )
-      worker.current = encoder
-      encoder.onmessage = (event: MessageEvent<{ buffer?: ArrayBuffer }>) => {
-        if (event.data.buffer) {
-          const blob = new Blob([event.data.buffer], { type: "audio/wav" })
-          setResult({
-            url: URL.createObjectURL(blob),
-          })
-        } else setError(messages.exportError)
-        finish()
-      }
-      encoder.onerror = () => {
-        setError(messages.exportError)
-        finish()
-      }
-      const selected = clips.map((clip) => {
-        const [start, end] = frameRange(
-          clip.start,
-          clip.end,
-          clip.buffer.length
-        )
-        return {
-          channels: Array.from(
-            { length: clip.buffer.numberOfChannels },
-            (_, i) => clip.buffer.getChannelData(i).slice(start, end)
-          ),
-        }
-      })
-      encoder.postMessage(
-        { clips: selected, smooth },
-        selected.flatMap((clip) =>
-          clip.channels.map((channel) => channel.buffer)
-        )
-      )
-    } catch {
-      setError(messages.exportError)
-      finish()
-    }
+    output.start(clips, settings)
+  }
+
+  function changeSettings(value: ExportSettings) {
+    invalidate()
+    setSettings(value)
   }
 
   return {
@@ -192,9 +178,14 @@ export function useAudioEditor(messages: AudioEditorMessages) {
     removed,
     busy,
     error,
-    result,
+    result: output.result,
+    progress: output.progress,
+    cancelExport: output.cancel,
+    estimatedBytes,
     name,
-    smooth,
+    settings,
+    setSettings: changeSettings,
+    duplicate,
     duration,
     valid,
     preview,
@@ -205,9 +196,5 @@ export function useAudioEditor(messages: AudioEditorMessages) {
     undo,
     exportAudio,
     setName,
-    setSmooth: (value: boolean) => {
-      invalidate()
-      setSmooth(value)
-    },
   }
 }

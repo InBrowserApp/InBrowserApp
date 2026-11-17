@@ -26,8 +26,10 @@ import type { AudioEditorMessages } from "./types"
 
 export default function AudioEditorClient({
   messages: m,
+  language = "en",
 }: {
   messages: AudioEditorMessages
+  language?: string
 }) {
   const state = useAudioEditor(m)
   const outputAudio = useRef<HTMLAudioElement>(null)
@@ -93,6 +95,7 @@ export default function AudioEditorClient({
                 onRange={(range) => state.update(clip.id, range)}
                 onMove={(direction) => state.move(index, direction)}
                 onRemove={() => state.remove(index)}
+                onDuplicate={() => state.duplicate(index)}
                 onPlay={() => {
                   outputAudio.current?.pause()
                   void state.preview.play(clip)
@@ -121,10 +124,14 @@ export default function AudioEditorClient({
             duration={state.duration}
             count={state.clips.length}
             name={state.name}
-            smooth={state.smooth}
+            settings={state.settings}
+            onSettings={state.setSettings}
+            progress={state.progress}
+            onCancel={state.cancelExport}
+            estimatedBytes={state.estimatedBytes}
+            language={language}
             result={state.result}
             onName={state.setName}
-            onSmooth={state.setSmooth}
             onExport={state.exportAudio}
             onPlay={state.preview.stop}
           />

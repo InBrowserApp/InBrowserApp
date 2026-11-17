@@ -13,3 +13,22 @@ export type AudioClip = {
 }
 
 export type PcmClip = { channels: Float32Array[] }
+
+export type OutputFormat = "mp3" | "wav" | "ogg"
+export type CompressionQuality = "small" | "standard" | "high"
+export type JoinSettings = {
+  mode: "none" | "gap" | "crossfade"
+  seconds: number
+}
+export type ExportSettings = {
+  format: OutputFormat
+  quality: CompressionQuality
+  smooth: boolean
+  join: JoinSettings
+}
+export type AudioResult = { url: string; format: OutputFormat; bytes: number }
+export type EncodeRequest = { clips: PcmClip[]; settings: ExportSettings }
+export type EncodeResponse =
+  | { progress: number }
+  | { buffer: ArrayBuffer }
+  | { error: true }
