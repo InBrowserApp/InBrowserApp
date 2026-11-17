@@ -149,8 +149,20 @@ export default function Client({ messages: m }: { messages: Messages }) {
                 value={input}
                 onChange={(event) => changeInput(event.target.value)}
                 placeholder={m.placeholder}
-                className="h-80 resize-y font-mono text-sm"
+                className="h-80 resize-y font-mono"
               />
+              <div aria-live="polite">
+                {error && (
+                  <p
+                    id={`${id}-error`}
+                    role="alert"
+                    className="text-sm break-words text-destructive"
+                  >
+                    {m.invalid}: {error}
+                  </p>
+                )}
+                {busy && <span className="sr-only">{m.converting}</span>}
+              </div>
             </CardContent>
             <CardFooter className="flex-wrap gap-2 border-t">
               <div className="flex w-full flex-wrap items-center gap-3">
@@ -235,7 +247,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
                 spellCheck={false}
                 value={result?.text || ""}
                 placeholder={m.empty}
-                className="h-80 resize-y font-mono text-sm"
+                className="h-80 resize-y font-mono"
               />
               {result && (
                 <p
@@ -268,18 +280,6 @@ export default function Client({ messages: m }: { messages: Messages }) {
               </Button>
             </CardFooter>
           </Card>
-        </div>
-        <div aria-live="polite">
-          {error && (
-            <p
-              id={`${id}-error`}
-              role="alert"
-              className="text-sm break-words text-destructive"
-            >
-              {m.invalid}: {error}
-            </p>
-          )}
-          {busy && <span className="sr-only">{m.converting}</span>}
         </div>
       </form>
       <p className="text-sm text-muted-foreground">{m.privacy}</p>

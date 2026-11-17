@@ -4,7 +4,7 @@ import type { Representation } from "./core/bytes"
 import type { Messages } from "./types"
 
 const SELECT_CLASS =
-  "h-10 w-full min-w-0 rounded-md border border-input bg-background px-3 text-sm shadow-xs focus-visible:outline-2 focus-visible:outline-ring"
+  "h-10 w-full min-w-0 rounded-md border border-input bg-background px-3 text-base shadow-xs sm:text-sm focus-visible:outline-2 focus-visible:outline-ring"
 
 type Props = {
   id: string
