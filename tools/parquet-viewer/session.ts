@@ -42,11 +42,19 @@ function fields(tree: SchemaTree, depth = 0): Field[] {
   })
 }
 
+function hasDuplicateNames(tree: SchemaTree): boolean {
+  const names = new Set(tree.children.map((child) => child.element.name))
+  return (
+    names.size !== tree.children.length || tree.children.some(hasDuplicateNames)
+  )
+}
+
 export class Session {
   private constructor(
     private file: AsyncBuffer,
     private metadata: FileMetaData,
-    readonly info: Info
+    readonly info: Info,
+    private ambiguousNames: boolean
   ) {}
 
   static async open(blob: Blob) {
@@ -75,11 +83,15 @@ export class Session {
       ],
       createdBy: metadata.created_by ?? "",
     }
-    return new Session(file, metadata, info)
+    return new Session(file, metadata, info, hasDuplicateNames(tree))
   }
 
   async page(start: number, end: number): Promise<Row[]> {
     if (start === end) return []
+    if (this.ambiguousNames)
+      throw new Error(
+        "Duplicate Parquet field names cannot be represented as JSON objects"
+      )
     const rows = await parquetReadObjects({
       file: this.file,
       metadata: this.metadata,

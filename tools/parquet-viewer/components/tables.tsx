@@ -1,5 +1,5 @@
 /* oxlint-disable jsx-a11y/no-noninteractive-tabindex -- Scrollable table regions need keyboard access. */
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { DocumentIconButton } from "@workspace/ui/components/tool/document-icon-button"
 import { X } from "@workspace/ui/icons"
 import { cellText } from "../values"
@@ -33,8 +33,11 @@ export function SchemaTable({
           </tr>
         </thead>
         <tbody>
-          {info.fields.map((field) => (
-            <tr key={field.path} className="border-b hover:bg-muted/40">
+          {info.fields.map((field, index) => (
+            <tr
+              key={`${field.path}:${index}`}
+              className="border-b hover:bg-muted/40"
+            >
               <th
                 scope="row"
                 className="px-3 py-2 text-start font-mono font-normal whitespace-nowrap"
@@ -89,6 +92,7 @@ export function DataTable({
     column: string
     text: string
   } | null>(null)
+  const lastCell = useRef<HTMLButtonElement | null>(null)
   const number = new Intl.NumberFormat(lang)
   return (
     <>
@@ -130,7 +134,10 @@ export function DataTable({
                         className={`block w-full max-w-72 min-w-24 truncate px-3 py-2 text-start font-mono text-xs tabular-nums hover:bg-muted focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring ${value == null ? "text-muted-foreground italic" : ""}`}
                         dir="auto"
                         aria-label={`${column}: ${text}`}
-                        onClick={() => setSelected({ column, text })}
+                        onClick={(event) => {
+                          lastCell.current = event.currentTarget
+                          setSelected({ column, text })
+                        }}
                       >
                         {text || "\u00a0"}
                       </button>
@@ -153,7 +160,10 @@ export function DataTable({
             </span>
             <DocumentIconButton
               label={m.closeDetails}
-              onClick={() => setSelected(null)}
+              onClick={() => {
+                setSelected(null)
+                lastCell.current?.focus({ preventScroll: true })
+              }}
             >
               <X aria-hidden="true" />
             </DocumentIconButton>

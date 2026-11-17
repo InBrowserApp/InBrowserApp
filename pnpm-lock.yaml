@@ -643,6 +643,7 @@ patchedDependencies:
   caj2pdf-rust@0.8.1: a763528bb50bc314154c0378eacd51e5882b88d2f932edd4207a40adb45f9f80
   curlconverter@4.12.0: c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484
   foliate-js@1.0.1: d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236
+  hyparquet@1.33.0: 9663de269690a8af3235e71a697729f19da2f2c8dd5a7d877a6a31366df7223a
   rtf-viewer@1.3.1: 734830adc8d033bcf48cd7b360822e1850f1818ebbd2c2582a7a52637a3d7f3d
   xlsx@0.20.3: 2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45
 
@@ -6936,7 +6937,7 @@ importers:
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       hyparquet:
         specifier: 'catalog:'
-        version: 1.33.0
+        version: 1.33.0(patch_hash=9663de269690a8af3235e71a697729f19da2f2c8dd5a7d877a6a31366df7223a)
       hyparquet-compressors:
         specifier: 'catalog:'
         version: 1.1.3
@@ -21336,7 +21337,7 @@ snapshots:
       fzstd: 0.1.1
       hysnappy: 1.1.1
 
-  hyparquet@1.33.0: {}
+  hyparquet@1.33.0(patch_hash=9663de269690a8af3235e71a697729f19da2f2c8dd5a7d877a6a31366df7223a): {}
 
   hysnappy@1.1.1: {}
 

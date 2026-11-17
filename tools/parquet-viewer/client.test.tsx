@@ -173,12 +173,16 @@ describe("Parquet Viewer interactions", () => {
     fireEvent.click(screen.getByText(m.sample))
     await screen.findByText("row 1")
     expect(screen.getByText("9007199254740993")).toBeTruthy()
-    fireEvent.click(screen.getByRole("button", { name: "name: row 1" }))
+    const cell = screen.getByRole("button", { name: "name: row 1" })
+    fireEvent.click(cell)
     expect(
       screen.getByRole("region", { name: m.cellDetails }).textContent
     ).toContain("row 1")
-    fireEvent.click(screen.getByRole("button", { name: m.closeDetails }))
+    const close = screen.getByRole("button", { name: m.closeDetails })
+    close.focus()
+    fireEvent.click(close)
     expect(screen.queryByRole("region", { name: m.cellDetails })).toBeNull()
+    expect(document.activeElement).toBe(cell)
     switchTab(m.schema)
     await screen.findByText("INT64")
     expect(screen.getByText(m.required)).toBeTruthy()
