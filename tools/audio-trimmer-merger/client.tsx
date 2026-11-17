@@ -115,7 +115,7 @@ export default function AudioEditorClient({
             </Empty>
           )}
         </section>
-        <div className="min-w-0 xl:sticky xl:top-6">
+        <div className="min-w-0">
           <ExportCard
             audioRef={outputAudio}
             messages={m}

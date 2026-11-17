@@ -75,7 +75,10 @@ export function ExportCard({
             </dd>
           </dl>
           <p className="flex items-center justify-end text-sm">
-            {m.clipCount.replace("{count}", String(count))}
+            {m.clipCount.replace(
+              "{count}",
+              new Intl.NumberFormat(language).format(count)
+            )}
           </p>
         </div>
         <FieldGroup>
