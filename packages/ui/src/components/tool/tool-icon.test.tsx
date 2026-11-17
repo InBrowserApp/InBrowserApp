@@ -21,6 +21,13 @@ describe("ToolIcon", () => {
     expect(screen.getByTestId("icon")).toBeTruthy()
   })
 
+  test("renders the privacy icon for 'eye-off'", () => {
+    render(<ToolIcon icon="eye-off" data-testid="icon" />)
+    expect(
+      screen.getByTestId("icon").classList.contains("lucide-eye-off")
+    ).toBe(true)
+  })
+
   test("renders fallback Wrench icon for unknown icon name", () => {
     render(<ToolIcon icon="unknown-icon" data-testid="icon" />)
     expect(screen.getByTestId("icon").classList.contains("lucide-wrench")).toBe(
