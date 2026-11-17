@@ -3,6 +3,7 @@
   "draft": true,
   "force-tag-creation": true,
   "include-component-in-tag": false,
+  "separate-pull-requests": true,
   "packages": {
     ".": {
       "release-type": "node"

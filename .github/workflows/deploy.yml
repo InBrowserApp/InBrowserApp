@@ -38,12 +38,19 @@ jobs:
       GH_REPO: ${{ github.repository }}
       RELEASE_TAG: ${{ inputs.release_tag }}
     steps:
+      - name: Checkout Cloudflare deployment configuration
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.release_tag }}
+          sparse-checkout: apps/web/wrangler.jsonc
+          sparse-checkout-cone-mode: false
+
       - name: Download published release
         run: |
           test "$(gh release view "$RELEASE_TAG" --json isDraft,isPrerelease --jq '.isDraft or .isPrerelease')" = false
           gh release download "$RELEASE_TAG" --pattern "web-dist-${RELEASE_TAG}.tar.zstd"
-          mkdir deployment
-          tar --zstd -xf "web-dist-${RELEASE_TAG}.tar.zstd" -C deployment
+          mkdir -p apps/web/dist
+          tar --zstd -xf "web-dist-${RELEASE_TAG}.tar.zstd" -C apps/web/dist
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -56,6 +63,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: deployment
+          workingDirectory: apps/web
           packageManager: npm
           command: deploy

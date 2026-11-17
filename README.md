@@ -48,6 +48,8 @@ that PR creates a draft release and runs the main-branch checks and build. The
 same workflow uploads the web archive and provenance before publishing the
 immutable release, then explicitly calls production deploy. Production downloads
 the published archive and runs `wrangler deploy` without rebuilding the app.
+The archive contains only the contents of `dist`; Cloudflare configuration stays
+in the repository and is read from the selected release tag during deployment.
 
 For a deployment retry or rollback, deploy an existing stable release:
 

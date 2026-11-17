@@ -256,14 +256,16 @@ Workers Versions:
   `cloudflare-workers-staging` environment, exposing the version through the
   job's `deployment-url`.
 - **Release PR merge** — release-please creates a draft and provides its source
-  SHA to reusable CI. After CI passes, the same run archives `dist` and
-  `wrangler.jsonc`, attests provenance, uploads the archive, and publishes.
+  SHA to reusable CI. After CI passes, the same run archives the contents of
+  `dist`, attests provenance, uploads the archive, and publishes. The archive
+  contains only static web files; deployment configuration stays in the repo.
   Enable release immutability in repository settings so publication locks the
   tag and assets. Draft uploads may be replaced when retrying a failed job.
 - **Production** — publication explicitly calls `deploy.yml` for stable
   releases. Deploy downloads the release archive and runs one `wrangler deploy`
-  with the CLI installed by `cloudflare/wrangler-action`. No source checkout,
-  application build, or workspace dependency installation runs during deploy.
+  with the CLI installed by `cloudflare/wrangler-action`. Only
+  `apps/web/wrangler.jsonc` is checked out from the release tag; there is no
+  application build or workspace dependency installation during deploy.
   Prereleases receive release assets but do not deploy to production.
 
 Draft creation and publication do not trigger the next stage. Dependencies use

@@ -63,10 +63,10 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: web-dist
-          path: deployment
+          path: dist
 
       - name: Create release archive
-        run: tar --zstd -cf "web-dist-${RELEASE_TAG}.tar.zstd" -C deployment .
+        run: tar --zstd -cf "web-dist-${RELEASE_TAG}.tar.zstd" -C dist .
 
       - name: Attest build provenance
         uses: actions/attest-build-provenance@v4

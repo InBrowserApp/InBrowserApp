@@ -8,7 +8,6 @@ on:
         description: Commit to check and build
         type: string
         required: true
-  workflow_dispatch:
 
 concurrency:
   group: ci-${{ github.event.pull_request.number || github.run_id }}
@@ -139,9 +138,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: web-dist
-          path: |
-            apps/web/dist
-            apps/web/wrangler.jsonc
+          path: apps/web/dist
 
   html-check:
     name: HTML Link Check
@@ -160,7 +157,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: web-dist
-          path: apps/web
+          path: apps/web/dist
 
       - name: Check internal links in built HTML
         uses: wjdp/htmltest-action@master
@@ -202,7 +199,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: web-dist
-          path: apps/web
+          path: apps/web/dist
 
       - name: Run Lighthouse CI
         # Posts a per-URL commit status with the Lighthouse scores using the
@@ -245,7 +242,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: web-dist
-          path: apps/web
+          path: apps/web/dist
 
       - name: Upload Worker Version
         id: deploy
