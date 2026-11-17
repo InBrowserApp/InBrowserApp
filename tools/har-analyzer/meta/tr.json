@@ -1,0 +1,4 @@
+{
+  "name": "HAR Ağ Analizörü",
+  "description": "HAR ağ günlüklerini yerel olarak inceleyin: yavaş veya başarısız isteklerdeki sorunları gidermek için istek şelalelerini, zamanlamaları, üstbilgileri, istek ve yanıt gövdelerini keşfedin."
+}

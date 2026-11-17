@@ -1,0 +1,4 @@
+{
+  "name": "Penganalisis Jaringan HAR",
+  "description": "Periksa log jaringan HAR secara lokal: jelajahi waterfall permintaan, rincian waktu, header, serta isi permintaan dan respons untuk mengatasi permintaan lambat atau gagal."
+}

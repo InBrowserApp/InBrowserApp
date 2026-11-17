@@ -1,0 +1,4 @@
+{
+  "name": "Analizzatore di rete HAR",
+  "description": "Esamina localmente i log di rete HAR: esplora diagrammi a cascata, tempi, intestazioni e corpi delle richieste e delle risposte per risolvere i problemi di richieste lente o non riuscite."
+}

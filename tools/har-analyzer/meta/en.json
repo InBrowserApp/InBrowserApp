@@ -1,0 +1,4 @@
+{
+  "name": "HAR Network Analyzer",
+  "description": "Inspect HAR network logs locally: explore request waterfalls, timings, headers, and request and response bodies to troubleshoot slow or failed requests."
+}

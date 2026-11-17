@@ -1,0 +1,4 @@
+{
+  "name": "Analizator ruchu sieciowego HAR",
+  "description": "Przeglądaj lokalnie dzienniki ruchu sieciowego HAR: analizuj wykresy kaskadowe żądań, czasy, nagłówki oraz treści żądań i odpowiedzi, aby diagnozować powolne lub nieudane żądania."
+}

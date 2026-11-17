@@ -11276,6 +11276,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "har-analyzer",
+    category: "network",
+    icon: "network",
+    tags: [
+      "har",
+      "http",
+      "network",
+      "waterfall",
+      "debug",
+      "request",
+      "response",
+      "performance",
+    ],
+    locales: {
+      ar: {
+        name: "محلل شبكة HAR",
+        description:
+          "افحص سجلات شبكة HAR محليًا: استعرض المخططات الزمنية للطلبات وتوقيتها وترويساتها ومحتوى الطلبات والاستجابات لاستكشاف أسباب بطء الطلبات أو فشلها.",
+      },
+      de: {
+        name: "HAR-Netzwerkanalyse",
+        description:
+          "Untersuche HAR-Netzwerkprotokolle lokal: Prüfe Anfrage-Wasserfälle, Zeitabläufe, Header sowie Anfrage- und Antwortinhalte, um langsame oder fehlgeschlagene Anfragen zu analysieren.",
+      },
+      en: {
+        name: "HAR Network Analyzer",
+        description:
+          "Inspect HAR network logs locally: explore request waterfalls, timings, headers, and request and response bodies to troubleshoot slow or failed requests.",
+      },
+      es: {
+        name: "Analizador de red HAR",
+        description:
+          "Inspecciona registros de red HAR localmente: explora cascadas de solicitudes, tiempos, encabezados y cuerpos de solicitudes y respuestas para diagnosticar solicitudes lentas o fallidas.",
+      },
+      fr: {
+        name: "Analyseur réseau HAR",
+        description:
+          "Examinez les journaux réseau HAR localement : explorez les cascades de requêtes, les délais, les en-têtes et les corps des requêtes et des réponses pour diagnostiquer les requêtes lentes ou échouées.",
+      },
+      he: {
+        name: "מנתח תעבורת רשת HAR",
+        description:
+          "בדיקת יומני רשת בפורמט HAR באופן מקומי: בחינת תרשימי מפל של בקשות, תזמונים, כותרות וגופי בקשות ותגובות לאיתור תקלות בבקשות איטיות או כושלות.",
+      },
+      hi: {
+        name: "HAR नेटवर्क विश्लेषक",
+        description:
+          "HAR नेटवर्क लॉग स्थानीय रूप से जाँचें: अनुरोध वॉटरफ़ॉल, समय विवरण, हेडर और अनुरोध व प्रतिक्रिया की बॉडी देखकर धीमे या विफल अनुरोधों की समस्याएँ हल करें।",
+      },
+      id: {
+        name: "Penganalisis Jaringan HAR",
+        description:
+          "Periksa log jaringan HAR secara lokal: jelajahi waterfall permintaan, rincian waktu, header, serta isi permintaan dan respons untuk mengatasi permintaan lambat atau gagal.",
+      },
+      it: {
+        name: "Analizzatore di rete HAR",
+        description:
+          "Esamina localmente i log di rete HAR: esplora diagrammi a cascata, tempi, intestazioni e corpi delle richieste e delle risposte per risolvere i problemi di richieste lente o non riuscite.",
+      },
+      ja: {
+        name: "HARネットワーク解析ツール",
+        description:
+          "HARネットワークログをローカルで解析。リクエストのウォーターフォール、タイミング、ヘッダー、リクエストとレスポンスのボディを確認し、遅延や失敗の原因を調べられます。",
+      },
+      ko: {
+        name: "HAR 네트워크 분석기",
+        description:
+          "HAR 네트워크 로그를 로컬에서 분석하세요. 요청 워터폴, 소요 시간, 헤더, 요청 및 응답 본문을 살펴보며 느리거나 실패한 요청의 원인을 파악할 수 있습니다.",
+      },
+      ms: {
+        name: "Penganalisis Rangkaian HAR",
+        description:
+          "Periksa log rangkaian HAR secara setempat: terokai carta air terjun permintaan, pemasaan, pengepala serta badan permintaan dan respons untuk menyelesaikan masalah permintaan lambat atau gagal.",
+      },
+      nl: {
+        name: "HAR-netwerkanalysator",
+        description:
+          "Inspecteer HAR-netwerklogboeken lokaal: bekijk watervaldiagrammen, tijdsverloop, headers en de body van verzoeken en antwoorden om trage of mislukte verzoeken te onderzoeken.",
+      },
+      no: {
+        name: "HAR-nettverksanalysator",
+        description:
+          "Undersøk HAR-nettverkslogger lokalt: utforsk fossefalldiagrammer, tidsmålinger, HTTP-hoder og meldingsinnhold i forespørsler og svar for å feilsøke trege eller mislykkede forespørsler.",
+      },
+      pl: {
+        name: "Analizator ruchu sieciowego HAR",
+        description:
+          "Przeglądaj lokalnie dzienniki ruchu sieciowego HAR: analizuj wykresy kaskadowe żądań, czasy, nagłówki oraz treści żądań i odpowiedzi, aby diagnozować powolne lub nieudane żądania.",
+      },
+      pt: {
+        name: "Analisador de rede HAR",
+        description:
+          "Inspecione registros de rede HAR localmente: explore cascatas de requisições, tempos, cabeçalhos e corpos de requisições e respostas para diagnosticar requisições lentas ou com falha.",
+      },
+      ru: {
+        name: "Анализатор сетевых журналов HAR",
+        description:
+          "Анализируйте сетевые журналы HAR локально: изучайте каскадные диаграммы запросов, временные показатели, заголовки и тела запросов и ответов, чтобы выявлять причины задержек и ошибок.",
+      },
+      sv: {
+        name: "HAR-nätverksanalysator",
+        description:
+          "Granska HAR-nätverksloggar lokalt: utforska vattenfallsdiagram, tider, HTTP-huvuden och meddelandekroppar i begäranden och svar för att felsöka långsamma eller misslyckade begäranden.",
+      },
+      th: {
+        name: "เครื่องมือวิเคราะห์เครือข่าย HAR",
+        description:
+          "ตรวจสอบบันทึกเครือข่าย HAR ในเครื่อง: สำรวจแผนภูมิวอเตอร์ฟอลล์ ระยะเวลา ส่วนหัว และเนื้อหาของคำขอและการตอบกลับ เพื่อแก้ปัญหาคำขอที่ช้าหรือล้มเหลว",
+      },
+      tr: {
+        name: "HAR Ağ Analizörü",
+        description:
+          "HAR ağ günlüklerini yerel olarak inceleyin: yavaş veya başarısız isteklerdeki sorunları gidermek için istek şelalelerini, zamanlamaları, üstbilgileri, istek ve yanıt gövdelerini keşfedin.",
+      },
+      vi: {
+        name: "Trình phân tích mạng HAR",
+        description:
+          "Kiểm tra nhật ký mạng HAR ngay trên máy: khám phá biểu đồ thác nước yêu cầu, thời gian xử lý, tiêu đề HTTP và nội dung yêu cầu, phản hồi để khắc phục yêu cầu chậm hoặc thất bại.",
+      },
+      "zh-CN": {
+        name: "HAR 网络分析器",
+        description:
+          "在本地检查 HAR 网络日志：查看请求瀑布图、耗时、标头以及请求和响应正文，排查缓慢或失败的请求。",
+      },
+      "zh-TW": {
+        name: "HAR 網路分析器",
+        description:
+          "在本機檢視 HAR 網路記錄：探索請求瀑布圖、耗時、標頭及請求與回應本文，排查緩慢或失敗的請求。",
+      },
+    },
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     category: "crypto",
     icon: "lock",

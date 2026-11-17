@@ -8190,6 +8190,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "har-analyzer",
+    language: "ar",
+  },
+  {
+    slug: "har-analyzer",
+    language: "de",
+  },
+  {
+    slug: "har-analyzer",
+    language: "en",
+  },
+  {
+    slug: "har-analyzer",
+    language: "es",
+  },
+  {
+    slug: "har-analyzer",
+    language: "fr",
+  },
+  {
+    slug: "har-analyzer",
+    language: "he",
+  },
+  {
+    slug: "har-analyzer",
+    language: "hi",
+  },
+  {
+    slug: "har-analyzer",
+    language: "id",
+  },
+  {
+    slug: "har-analyzer",
+    language: "it",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ja",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ko",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ms",
+  },
+  {
+    slug: "har-analyzer",
+    language: "nl",
+  },
+  {
+    slug: "har-analyzer",
+    language: "no",
+  },
+  {
+    slug: "har-analyzer",
+    language: "pl",
+  },
+  {
+    slug: "har-analyzer",
+    language: "pt",
+  },
+  {
+    slug: "har-analyzer",
+    language: "ru",
+  },
+  {
+    slug: "har-analyzer",
+    language: "sv",
+  },
+  {
+    slug: "har-analyzer",
+    language: "th",
+  },
+  {
+    slug: "har-analyzer",
+    language: "tr",
+  },
+  {
+    slug: "har-analyzer",
+    language: "vi",
+  },
+  {
+    slug: "har-analyzer",
+    language: "zh-CN",
+  },
+  {
+    slug: "har-analyzer",
+    language: "zh-TW",
+  },
+  {
     slug: "highwayhash-hash-text-or-file",
     language: "ar",
   },
