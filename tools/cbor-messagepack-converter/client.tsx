@@ -167,7 +167,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
             <CardFooter className="flex-wrap gap-2 border-t">
               <div className="flex w-full flex-wrap items-center gap-3">
                 <Button type="submit" disabled={busy || !input.trim()}>
-                  <ArrowRight aria-hidden="true" />
+                  <ArrowRight aria-hidden="true" className="rtl:rotate-180" />
                   {busy ? m.converting : m.convert}
                 </Button>
                 {busy && (
@@ -194,7 +194,7 @@ export default function Client({ messages: m }: { messages: Messages }) {
               </Button>
               <input
                 ref={fileInput}
-                className="sr-only"
+                hidden
                 type="file"
                 aria-label={m.import}
                 accept={

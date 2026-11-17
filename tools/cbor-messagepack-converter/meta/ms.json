@@ -1,4 +1,4 @@
 {
   "name": "Penukar CBOR / MessagePack",
-  "description": "Tukar JSON kepada CBOR atau MessagePack dan nyahkod data binari daripada Hex, Base64, Base64URL atau fail. Semua pemprosesan dilakukan secara setempat dalam pelayar anda."
+  "description": "Tukar JSON kepada CBOR atau MessagePack untuk menyahpepijat API. Nyahkod Hex, Base64, Base64URL atau fail binari, kemudian salin atau muat turun hasil secara setempat dalam pelayar anda."
 }

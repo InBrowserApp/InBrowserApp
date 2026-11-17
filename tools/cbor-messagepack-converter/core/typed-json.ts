@@ -28,7 +28,10 @@ export function parseJson(text: string): unknown {
         : Number(source)
     }
     const number = Number(source)
-    if (!Number.isFinite(number) || (number === 0 && /[1-9]/.test(source))) {
+    if (
+      !Number.isFinite(number) ||
+      (number === 0 && /[1-9]/.test(source.split(/[eE]/)[0]!))
+    ) {
       throw new Error("JSON number overflows or underflows IEEE 754.")
     }
     return number
@@ -127,38 +130,52 @@ export function fromJson(
   )
 }
 
-export function toJson(value: unknown, depth = 0): unknown {
-  depthCheck(depth)
-  const visit = (item: unknown) => toJson(item, depth + 1)
-  if (typeof value === "bigint") return { $integer: value.toString() }
-  if (
-    typeof value === "number" &&
-    (!Number.isFinite(value) || Object.is(value, -0))
-  )
-    return { $float: Object.is(value, -0) ? "-0" : String(value) }
-  if (value === undefined) return { $undefined: true }
-  if (value instanceof Uint8Array)
-    return { $binary: formatBytes(value, "base64") }
-  if (value instanceof Tagged)
-    return { $cborTag: [value.tag, visit(value.value)] }
-  if (value instanceof ExtData)
-    return {
-      $msgpackExt: [
+export function projectJson(value: unknown, depth = 0) {
+  const traits = { typed: false, negativeZero: false }
+  function wrap(key: string, item: unknown) {
+    traits.typed = true
+    return { [key]: item }
+  }
+  function visit(value: unknown, depth: number): unknown {
+    depthCheck(depth)
+    const child = (item: unknown) => visit(item, depth + 1)
+    if (typeof value === "bigint") return wrap("$integer", value.toString())
+    if (
+      typeof value === "number" &&
+      (!Number.isFinite(value) || Object.is(value, -0))
+    ) {
+      const negativeZero = Object.is(value, -0)
+      if (negativeZero) traits.negativeZero = true
+      return wrap("$float", negativeZero ? "-0" : String(value))
+    }
+    if (value === undefined) return wrap("$undefined", true)
+    if (value instanceof Uint8Array)
+      return wrap("$binary", formatBytes(value, "base64"))
+    if (value instanceof Tagged)
+      return wrap("$cborTag", [value.tag, child(value.value)])
+    if (value instanceof ExtData)
+      return wrap("$msgpackExt", [
         value.type,
         formatBytes(value.data as Uint8Array, "base64"),
-      ],
+      ])
+    if (Array.isArray(value)) return value.map(child)
+    if (value !== null && typeof value === "object") {
+      const entries =
+        value instanceof Map ? [...value.entries()] : Object.entries(value)
+      if (
+        entries.some(([key]) => typeof key !== "string") ||
+        (entries.length === 1 && WRAPPERS.has(entries[0]![0]))
+      ) {
+        return wrap(
+          "$map",
+          entries.map(([key, item]) => [child(key), child(item)])
+        )
+      }
+      return Object.fromEntries(
+        entries.map(([key, item]) => [key, child(item)])
+      )
     }
-  if (Array.isArray(value)) return value.map(visit)
-  if (value !== null && typeof value === "object") {
-    const entries =
-      value instanceof Map ? [...value.entries()] : Object.entries(value)
-    if (
-      entries.some(([key]) => typeof key !== "string") ||
-      (entries.length === 1 && WRAPPERS.has(entries[0]![0]))
-    ) {
-      return { $map: entries.map(([key, item]) => [visit(key), visit(item)]) }
-    }
-    return Object.fromEntries(entries.map(([key, item]) => [key, visit(item)]))
+    return value
   }
-  return value
+  return { value: visit(value, depth), ...traits }
 }

@@ -7,7 +7,7 @@ import {
   parseBytes,
   type Representation,
 } from "./bytes"
-import { fromJson, parseJson, toJson } from "./typed-json"
+import { fromJson, parseJson, projectJson } from "./typed-json"
 
 const request: Request = {
   input: "null",
@@ -88,6 +88,36 @@ describe("binary JSON conversion", () => {
       ).toThrow(/repeat|Duplicate/)
     })
   }
+  test("literal wrapper-named fields do not change encoding traits", () => {
+    const input = '{"$float":"-0","literal":true,"id":7}'
+    const value = JSON.parse(input)
+    expect(projectJson(value)).toEqual({
+      value,
+      typed: false,
+      negativeZero: false,
+    })
+    const result = encode(input, { format: "msgpack" })
+    expect(result.typed).toBe(false)
+    expect(result.text.endsWith("a2 69 64 07")).toBe(true)
+    expect(decode(result.text, { format: "msgpack" }).typed).toBe(false)
+    expect(
+      encode('{"literal":{"$float":"-0"},"id":7}', {
+        format: "msgpack",
+      }).text.endsWith("a2 69 64 07")
+    ).toBe(true)
+  })
+  test("actual nested negative zero is detected while projecting once", () => {
+    expect(projectJson({ items: [-0, Infinity] })).toEqual({
+      value: { items: [{ $float: "-0" }, { $float: "Infinity" }] },
+      typed: true,
+      negativeZero: true,
+    })
+    const encoded = encode('{"items":[-0,1]}', { format: "msgpack" })
+    expect(encoded.typed).toBe(true)
+    expect(
+      JSON.parse(decode(encoded.text, { format: "msgpack" }).text)
+    ).toEqual({ items: [{ $float: "-0" }, 1] })
+  })
   test("CBOR known RFC vector", () => {
     expect(encode('{"a":1,"b":[2,3]}').text).toBe("a2 61 61 01 61 62 82 02 03")
     expect(decode("9f 01 02 ff").text).toBe("[\n  1,\n  2\n]")
@@ -216,7 +246,7 @@ describe("binary JSON conversion", () => {
     expect(() =>
       decode("91 ".repeat(102) + "00", { format: "msgpack" })
     ).toThrow(/100/)
-    expect(() => toJson([0], 101)).toThrow(/100/)
+    expect(() => projectJson([0], 101)).toThrow(/100/)
     expect(() => fromJson(0, "cbor", false, 101)).toThrow(/100/)
   })
 })

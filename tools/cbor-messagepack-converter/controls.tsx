@@ -69,7 +69,9 @@ export function Controls({
           </div>
           <div className="space-y-2 text-sm font-medium">
             <label className="block" htmlFor={`${id}-representation`}>
-              {m.representation}
+              {direction === "decode"
+                ? m.inputRepresentation
+                : m.outputRepresentation}
             </label>
             <select
               id={`${id}-representation`}

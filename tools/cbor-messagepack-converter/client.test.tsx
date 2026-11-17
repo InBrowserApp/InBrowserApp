@@ -83,7 +83,7 @@ test("encodes, copies and downloads raw binary; reverses to JSON", async () => {
   ).toBeTruthy()
   expect(screen.getByRole("combobox", { name: messages.format })).toBeTruthy()
   expect(
-    screen.getByRole("combobox", { name: messages.representation })
+    screen.getByRole("combobox", { name: messages.outputRepresentation })
   ).toBeTruthy()
   expect(output().value).toBe("")
   expect(
@@ -112,7 +112,7 @@ test("encodes, copies and downloads raw binary; reverses to JSON", async () => {
 test("switches formats, representations, examples and clears stale results", () => {
   render(<Client messages={messages} />)
   change(messages.format, "msgpack")
-  change(messages.representation, "base64url")
+  change(messages.outputRepresentation, "base64url")
   fireEvent.click(convertButton())
   finish()
   expect(output().value).toMatch(/^[\w-]+$/)
