@@ -19,6 +19,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/asciidoc-to-pdf-converter/page"),
   "asciidoc-viewer": () => import("@tool/asciidoc-viewer/page"),
   "audio-recorder": () => import("@tool/audio-recorder/page"),
+  "audio-trimmer-merger": () => import("@tool/audio-trimmer-merger/page"),
   "barcode-generator": () => import("@tool/barcode-generator/page"),
   "barcode-reader": () => import("@tool/barcode-reader/page"),
   "base16-decoder": () => import("@tool/base16-decoder/page"),

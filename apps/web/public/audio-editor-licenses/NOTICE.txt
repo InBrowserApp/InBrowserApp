@@ -1,0 +1,43 @@
+Audio encoder notices
+
+Mediabunny 1.66.0 is licensed under the Mozilla Public License 2.0.
+See Mediabunny-MPL.txt. Unmodified source: https://github.com/Vanilagy/mediabunny/tree/v1.66.0
+Native AAC and Opus encoding uses the browser's WebCodecs implementation.
+
+Source and build instructions: https://github.com/arseneyr/wasm-media-encoders/tree/4a45333baadbab312d1cc0911151dfad23157c51
+Unmodified encoder binaries are served as separate assets.
+
+MIT License
+
+Copyright (c) 2020-2024 arseneyr
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+## License
+
+This project is licensed under the terms of the **MIT** license.
+
+
+LAME is licensed under the GNU Lesser General Public License, version 2 or later.
+See LAME-LGPL.txt. Corresponding source: https://github.com/arseneyr/lame
+Build integration and source revisions: https://github.com/arseneyr/wasm-media-encoders/tree/4a45333baadbab312d1cc0911151dfad23157c51
+
+Ogg and Vorbis are licensed under BSD licenses; see Ogg-BSD.txt and Vorbis-BSD.txt.
+Sources: https://github.com/xiph/ogg and https://github.com/xiph/vorbis

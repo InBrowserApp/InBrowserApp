@@ -1389,6 +1389,140 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "audio-trimmer-merger",
+    category: "misc",
+    icon: "scissors",
+    tags: [
+      "audio",
+      "trim",
+      "cut",
+      "merge",
+      "join",
+      "wav",
+      "mp3",
+      "aac",
+      "opus",
+      "sound",
+    ],
+    locales: {
+      ar: {
+        name: "أداة قص الصوت ودمجه",
+        description:
+          "قص الصوت بتحديد مناطق من الشكل الموجي، ورتّب المقاطع وأضف تلاشيًا متداخلًا واختر صيغة التصدير. يبقى كل شيء في متصفحك.",
+      },
+      de: {
+        name: "Audio schneiden & zusammenfügen",
+        description:
+          "Audio per Wellenformauswahl schneiden, Clips anordnen, Überblendungen hinzufügen und das Exportformat wählen. Alles bleibt in deinem Browser.",
+      },
+      en: {
+        name: "Audio Trimmer & Merger",
+        description:
+          "Trim audio with waveform selections, arrange clips, add crossfades, and choose your export format. Everything stays in your browser.",
+      },
+      es: {
+        name: "Recortador y unificador de audio",
+        description:
+          "Recorta audio seleccionando regiones en la forma de onda, ordena clips, añade fundidos cruzados y elige el formato de exportación. Todo queda en tu navegador.",
+      },
+      fr: {
+        name: "Découpe et fusion audio",
+        description:
+          "Découpez l’audio à l’aide de la forme d’onde, réorganisez les extraits, ajoutez des fondus enchaînés et choisissez le format d’export. Tout reste dans votre navigateur.",
+      },
+      he: {
+        name: "חיתוך ומיזוג אודיו",
+        description:
+          "חתכו אודיו באמצעות בחירה בצורת הגל, סדרו קטעים, הוסיפו מעברים מדורגים ובחרו את פורמט הייצוא. הכול נשאר בדפדפן שלכם.",
+      },
+      hi: {
+        name: "ऑडियो काटें और जोड़ें",
+        description:
+          "वेवफ़ॉर्म पर चयन करके ऑडियो काटें, क्लिप का क्रम बदलें, क्रॉसफ़ेड जोड़ें और निर्यात का फ़ॉर्मैट चुनें। सब कुछ आपके ब्राउज़र में रहता है।",
+      },
+      id: {
+        name: "Pemotong & Penggabung Audio",
+        description:
+          "Potong audio dengan seleksi bentuk gelombang, atur klip, tambahkan crossfade, dan pilih format ekspor. Semuanya tetap di browser Anda.",
+      },
+      it: {
+        name: "Ritaglia e unisci audio",
+        description:
+          "Ritaglia l’audio selezionando la forma d’onda, riordina le clip, aggiungi dissolvenze incrociate e scegli il formato di esportazione. Tutto resta nel browser.",
+      },
+      ja: {
+        name: "音声トリミング・結合",
+        description:
+          "波形で範囲を選んで音声をトリミングし、クリップの並べ替えやクロスフェード、出力形式の選択ができます。すべてブラウザー内で処理します。",
+      },
+      ko: {
+        name: "오디오 자르기 및 합치기",
+        description:
+          "파형에서 구간을 선택해 오디오를 자르고, 클립 순서 변경과 크로스페이드를 적용한 뒤 내보낼 형식을 선택하세요. 모든 처리는 브라우저에서 이루어집니다.",
+      },
+      ms: {
+        name: "Pemangkas & Penggabung Audio",
+        description:
+          "Pangkas audio menggunakan pilihan bentuk gelombang, susun klip, tambah pudar silang dan pilih format eksport anda. Semuanya kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Audio bijsnijden en samenvoegen",
+        description:
+          "Snijd audio bij met selecties in de golfvorm, orden fragmenten, voeg crossfades toe en kies je exportformaat. Alles blijft in je browser.",
+      },
+      no: {
+        name: "Beskjær og slå sammen lyd",
+        description:
+          "Beskjær lyd med bølgeformutvalg, ordne klipp, legg til krysstoninger og velg eksportformat. Alt forblir i nettleseren.",
+      },
+      pl: {
+        name: "Przycinanie i łączenie audio",
+        description:
+          "Przycinaj audio za pomocą zaznaczeń na przebiegu fali, układaj klipy, dodawaj płynne przejścia i wybieraj format eksportu. Wszystko pozostaje w przeglądarce.",
+      },
+      pt: {
+        name: "Cortador e combinador de áudio",
+        description:
+          "Corte áudio através de seleções na forma de onda, organize excertos, adicione transições cruzadas e escolha o formato de exportação. Tudo fica no seu navegador.",
+      },
+      ru: {
+        name: "Обрезка и объединение аудио",
+        description:
+          "Обрезайте аудио по звуковой волне, меняйте порядок фрагментов, добавляйте плавные переходы и выбирайте формат экспорта. Всё остаётся в браузере.",
+      },
+      sv: {
+        name: "Ljudtrimning och sammanslagning",
+        description:
+          "Trimma ljud med vågformsmarkeringar, ordna klipp, lägg till övertoningar och välj exportformat. Allt stannar i din webbläsare.",
+      },
+      th: {
+        name: "เครื่องมือตัดและรวมเสียง",
+        description:
+          "ตัดเสียงด้วยการเลือกช่วงบนรูปคลื่น จัดเรียงคลิป เพิ่มการเฟดเสียงซ้อนกัน และเลือกรูปแบบที่ต้องการส่งออก ทุกอย่างทำงานในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Ses Kırpıcı ve Birleştirici",
+        description:
+          "Dalga biçiminden seçim yaparak sesi kırpın, klipleri sıralayın, çapraz geçişler ekleyin ve dışa aktarma biçimini seçin. Her şey tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Cắt và ghép âm thanh",
+        description:
+          "Cắt âm thanh bằng vùng chọn trên dạng sóng, sắp xếp các đoạn, thêm chuyển tiếp chéo và chọn định dạng xuất. Mọi thao tác đều diễn ra trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "音频裁剪与合并",
+        description:
+          "通过波形选区裁剪音频、排列片段、添加交叉淡化，并选择导出格式。所有处理都在浏览器中完成。",
+      },
+      "zh-TW": {
+        name: "音訊裁剪與合併",
+        description:
+          "透過波形選取範圍裁剪音訊、排列片段、加入交叉淡化，並選擇匯出格式。所有處理都在瀏覽器中完成。",
+      },
+    },
+  },
+  {
     slug: "barcode-generator",
     category: "image",
     icon: "image",

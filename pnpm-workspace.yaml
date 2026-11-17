@@ -9,6 +9,8 @@ packages:
 # in the relevant package.json. Tool-local runtime deps belong here too —
 # the catalog is the version registry, not just a "shared deps" list.
 catalog:
+  mediabunny: 1.66.0
+  wasm-media-encoders: 0.7.0
   mediainfo.js: 0.3.9
   hb-subset-wasm: 0.5.0
   woff2-encoder: 2.0.0

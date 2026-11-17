@@ -78,6 +78,7 @@ export {
   RectangleHorizontal,
   Ruler,
   Search,
+  Scissors,
   Shield,
   Sparkles,
   Square,
