@@ -1,4 +1,4 @@
 {
   "name": "Visare för medieinformation",
-  "description": "Granska MP4, MKV, MP3 och andra mediefiler: kodekar, bithastighet, längd, upplösning, bildfrekvens, ljudspår och undertexter. Filerna stannar på din enhet."
+  "description": "Visa kodekar, bithastighet, längd, upplösning och bildfrekvens för MP4, MOV, MKV, WebM, AVI, MP3, FLAC och WAV. Granska ljudspårens språk, kanaler och samplingsfrekvenser samt undertextspår. Kopiera rapporter eller exportera JSON lokalt."
 }

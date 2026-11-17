@@ -49,9 +49,6 @@
   "copied": "Disalin",
   "downloadJson": "Unduh JSON",
   "rawData": "Metadata lengkap (JSON)",
-  "helpTitle": "Tentang penampil ini",
-  "helpDescription": "Pilih file untuk memeriksa kontainer dan aliran media sebenarnya, meskipun browser Anda tidak dapat memutarnya. Setiap trek video, audio, dan subtitel ditampilkan secara terpisah. Salin laporan yang mudah dibaca atau unduh metadata lengkap sebagai JSON.",
-  "helpNotes": "Bitrate keseluruhan mencakup semua aliran media dan overhead kontainer. Kolom yang tersedia bergantung pada format file dan metadatanya.",
   "poweredBy": "Didukung oleh MediaInfo",
   "technicalDetails": "Detail teknis",
   "copyFailed": "Gagal menyalin"

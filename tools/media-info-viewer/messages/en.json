@@ -49,9 +49,6 @@
   "copied": "Copied",
   "downloadJson": "Download JSON",
   "rawData": "Full metadata (JSON)",
-  "helpTitle": "About this viewer",
-  "helpDescription": "Select a file to inspect its actual container and streams, even if your browser cannot play it. Each video, audio, and subtitle track is listed separately. Copy a readable report or download the full metadata as JSON.",
-  "helpNotes": "Overall bitrate includes all streams and container overhead. Available fields depend on the file format and its metadata.",
   "poweredBy": "Powered by MediaInfo",
   "technicalDetails": "Technical details",
   "copyFailed": "Copy failed"

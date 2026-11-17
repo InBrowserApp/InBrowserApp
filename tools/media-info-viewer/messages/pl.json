@@ -27,7 +27,7 @@
   "profile": "Profil",
   "bitrate": "Przepływność",
   "bitrateMode": "Tryb przepływności",
-  "frameRateMode": "Tryb liczby klatek",
+  "frameRateMode": "Tryb liczby klatek na sekundę",
   "language": "Język",
   "channels": "Kanały",
   "channelLayout": "Układ kanałów",
@@ -49,9 +49,6 @@
   "copied": "Skopiowano",
   "downloadJson": "Pobierz JSON",
   "rawData": "Pełne metadane (JSON)",
-  "helpTitle": "O przeglądarce",
-  "helpDescription": "Wybierz plik, aby sprawdzić jego rzeczywisty kontener i strumienie, nawet jeśli przeglądarka nie potrafi go odtworzyć. Każda ścieżka wideo, audio i napisów jest wyświetlana osobno. Skopiuj czytelny raport lub pobierz pełne metadane w formacie JSON.",
-  "helpNotes": "Całkowita przepływność obejmuje wszystkie strumienie i narzut kontenera. Dostępne pola zależą od formatu pliku i jego metadanych.",
   "poweredBy": "Korzysta z MediaInfo",
   "technicalDetails": "Szczegóły techniczne",
   "copyFailed": "Nie udało się skopiować"

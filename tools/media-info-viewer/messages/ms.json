@@ -1,6 +1,6 @@
 {
   "chooseFile": "Pilih fail audio atau video",
-  "dropHint": "Lepaskan fail di sini, atau klik untuk melayari",
+  "dropHint": "Lepaskan fail di sini, atau klik untuk memilih fail",
   "formats": "MP4, MOV, MKV, WebM, AVI, MP3, FLAC, WAV dan banyak lagi",
   "privacy": "Fail kekal pada peranti anda. Tiada apa-apa dimuat naik.",
   "changeFile": "Tukar fail",
@@ -31,7 +31,7 @@
   "language": "Bahasa",
   "channels": "Saluran",
   "channelLayout": "Susun atur saluran",
-  "sampleRate": "Kadar sampel",
+  "sampleRate": "Kadar pensampelan",
   "bitDepth": "Kedalaman bit",
   "title": "Tajuk",
   "defaultTrack": "Trek lalai",
@@ -49,9 +49,6 @@
   "copied": "Disalin",
   "downloadJson": "Muat turun JSON",
   "rawData": "Metadata penuh (JSON)",
-  "helpTitle": "Tentang pemapar ini",
-  "helpDescription": "Pilih fail untuk memeriksa bekas dan strim sebenarnya, walaupun pelayar anda tidak dapat memainkannya. Setiap trek video, audio dan sari kata disenaraikan secara berasingan. Salin laporan yang mudah dibaca atau muat turun metadata penuh sebagai JSON.",
-  "helpNotes": "Kadar bit keseluruhan merangkumi semua strim dan data tambahan bekas. Medan yang tersedia bergantung pada format fail dan metadatanya.",
   "poweredBy": "Dikuasakan oleh MediaInfo",
   "technicalDetails": "Butiran teknikal",
   "copyFailed": "Gagal menyalin"

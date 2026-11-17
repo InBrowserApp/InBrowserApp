@@ -1,4 +1,4 @@
 {
   "name": "Media Info Viewer",
-  "description": "Inspect MP4, MKV, MP3 and other media: codecs, bitrate, duration, resolution, frame rate, audio tracks and subtitles. Files stay on your device."
+  "description": "View codecs, bitrate, duration, resolution and frame rate for MP4, MOV, MKV, WebM, AVI, MP3, FLAC and WAV. Inspect audio languages, channels and sample rates, plus subtitle tracks. Copy reports or export JSON locally."
 }

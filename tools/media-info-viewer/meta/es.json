@@ -1,4 +1,4 @@
 {
   "name": "Visor de información multimedia",
-  "description": "Examina MP4, MKV, MP3 y otros archivos multimedia: códecs, tasa de bits, duración, resolución, fotogramas por segundo, pistas de audio y subtítulos. Los archivos permanecen en tu dispositivo."
+  "description": "Consulta los códecs, la tasa de bits, la duración, la resolución y los fotogramas por segundo de archivos MP4, MOV, MKV, WebM, AVI, MP3, FLAC y WAV. Examina los idiomas, los canales y las frecuencias de muestreo del audio, así como las pistas de subtítulos. Copia informes o exporta JSON de forma local."
 }

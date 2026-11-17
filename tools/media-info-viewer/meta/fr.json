@@ -1,4 +1,4 @@
 {
   "name": "Visionneuse d’informations multimédias",
-  "description": "Inspectez les fichiers MP4, MKV, MP3 et autres médias : codecs, débit, durée, résolution, fréquence d’images, pistes audio et sous-titres. Les fichiers restent sur votre appareil."
+  "description": "Consultez les codecs, le débit, la durée, la résolution et la fréquence d’images des fichiers MP4, MOV, MKV, WebM, AVI, MP3, FLAC et WAV. Examinez les langues, les canaux et les fréquences d’échantillonnage des pistes audio, ainsi que les pistes de sous-titres. Copiez les rapports ou exportez le JSON localement."
 }

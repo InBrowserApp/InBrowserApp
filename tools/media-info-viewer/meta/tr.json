@@ -1,4 +1,4 @@
 {
   "name": "Medya Bilgisi Görüntüleyici",
-  "description": "MP4, MKV, MP3 ve diğer medya dosyalarını inceleyin: kodekler, bit hızı, süre, çözünürlük, kare hızı, ses izleri ve altyazılar. Dosyalar cihazınızda kalır."
+  "description": "MP4, MOV, MKV, WebM, AVI, MP3, FLAC ve WAV dosyalarının kodeklerini, bit hızını, süresini, çözünürlüğünü ve kare hızını görüntüleyin. Ses izlerinin dil bilgilerini, kanallarını ve örnekleme hızlarını, ayrıca altyazı izlerini inceleyin. Raporları kopyalayın veya JSON olarak cihazınıza indirin."
 }

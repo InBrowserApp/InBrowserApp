@@ -49,9 +49,6 @@
   "copied": "Gekopieerd",
   "downloadJson": "JSON downloaden",
   "rawData": "Volledige metadata (JSON)",
-  "helpTitle": "Over deze viewer",
-  "helpDescription": "Selecteer een bestand om de daadwerkelijke container en streams te bekijken, ook als je browser het niet kan afspelen. Elk video-, audio- en ondertitelspoor wordt afzonderlijk vermeld. Kopieer een leesbaar rapport of download de volledige metadata als JSON.",
-  "helpNotes": "De totale bitrate omvat alle streams en de containeroverhead. De beschikbare velden hangen af van het bestandsformaat en de metadata.",
   "poweredBy": "Mogelijk gemaakt door MediaInfo",
   "technicalDetails": "Technische details",
   "copyFailed": "Kopiëren mislukt"

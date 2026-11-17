@@ -1,4 +1,4 @@
 {
   "name": "Media-informatieviewer",
-  "description": "Bekijk MP4, MKV, MP3 en andere media: codecs, bitrate, duur, resolutie, beeldsnelheid, audiosporen en ondertitels. Bestanden blijven op je apparaat."
+  "description": "Bekijk codecs, bitrate, duur, resolutie en beeldsnelheid van MP4, MOV, MKV, WebM, AVI, MP3, FLAC en WAV. Controleer audiotalen, kanalen, samplefrequenties en ondertitelsporen. Kopieer rapporten of exporteer JSON lokaal."
 }

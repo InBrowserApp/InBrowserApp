@@ -1,4 +1,4 @@
 {
   "name": "Trình xem thông tin đa phương tiện",
-  "description": "Kiểm tra MP4, MKV, MP3 và các tệp đa phương tiện khác: bộ mã hóa, tốc độ bit, thời lượng, độ phân giải, tốc độ khung hình, luồng âm thanh và phụ đề. Tệp luôn ở trên thiết bị của bạn."
+  "description": "Xem bộ mã hóa/giải mã, tốc độ bit, thời lượng, độ phân giải và tốc độ khung hình của MP4, MOV, MKV, WebM, AVI, MP3, FLAC và WAV. Kiểm tra ngôn ngữ, số kênh và tần số lấy mẫu của âm thanh, cùng các luồng phụ đề. Sao chép báo cáo hoặc xuất JSON ngay trên thiết bị."
 }

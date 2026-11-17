@@ -1,4 +1,4 @@
 {
   "name": "Visualizzatore di informazioni audio e video",
-  "description": "Esamina MP4, MKV, MP3 e altri file multimediali: codec, bitrate, durata, risoluzione, frequenza fotogrammi, tracce audio e sottotitoli. I file restano sul tuo dispositivo."
+  "description": "Visualizza codec, bitrate, durata, risoluzione e frequenza fotogrammi di file MP4, MOV, MKV, WebM, AVI, MP3, FLAC e WAV. Esamina lingue, canali e frequenze di campionamento delle tracce audio, oltre alle tracce di sottotitoli. Copia i rapporti o esporta JSON in locale."
 }

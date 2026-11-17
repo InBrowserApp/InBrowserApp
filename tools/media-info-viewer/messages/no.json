@@ -37,7 +37,7 @@
   "defaultTrack": "Standardspor",
   "forcedTrack": "Tvunget spor",
   "rotation": "Rotasjon",
-  "aspectRatio": "Visningsformat",
+  "aspectRatio": "Sideforhold ved visning",
   "colorSpace": "Fargerom",
   "chromaSubsampling": "Fargeundersampling",
   "hdr": "HDR-format",
@@ -49,9 +49,6 @@
   "copied": "Kopiert",
   "downloadJson": "Last ned JSON",
   "rawData": "Fullstendige metadata (JSON)",
-  "helpTitle": "Om denne viseren",
-  "helpDescription": "Velg en fil for å undersøke dens faktiske container og strømmer, selv om nettleseren ikke kan spille den av. Hvert video-, lyd- og undertekstspor vises separat. Kopier en lesbar rapport eller last ned alle metadata som JSON.",
-  "helpNotes": "Samlet bithastighet inkluderer alle strømmer og containerens ekstra data. Tilgjengelige felt avhenger av filformatet og metadataene.",
   "poweredBy": "Drevet av MediaInfo",
   "technicalDetails": "Tekniske detaljer",
   "copyFailed": "Kopiering mislyktes"
