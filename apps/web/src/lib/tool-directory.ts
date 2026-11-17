@@ -114,22 +114,7 @@ function toDirectoryEntries(
   }))
 }
 
-/**
- * Minimal per-language projection used by the directory's suggestion dropdown.
- * The home page loads the equivalent generated locale module on focus.
- */
 type SearchSuggestionEntry = ToolSearchSuggestionEntry
-
-function toSuggestionEntries(
-  entries: readonly ToolSearchIndexEntry[],
-  language: string
-): readonly SearchSuggestionEntry[] {
-  return entries.map((entry) => ({
-    category: entry.category,
-    name: resolveEntryLocale(entry, language).name,
-    slug: entry.slug,
-  }))
-}
 
 export {
   FEATURED_TOOL_SLUGS,
@@ -140,6 +125,5 @@ export {
   getCategoryLabel,
   resolveEntryLocale,
   toDirectoryEntries,
-  toSuggestionEntries,
 }
 export type { DirectoryToolEntry, SearchSuggestionEntry, ToolCategoryCount }
