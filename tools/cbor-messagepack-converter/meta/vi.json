@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi CBOR / MessagePack",
+  "description": "Chuyển JSON sang CBOR hoặc MessagePack và giải mã dữ liệu nhị phân từ Hex, Base64, Base64URL hoặc tệp. Mọi dữ liệu đều được xử lý cục bộ trong trình duyệt của bạn."
+}

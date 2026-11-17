@@ -1,0 +1,4 @@
+{
+  "name": "CBOR / MessagePack 변환기",
+  "description": "JSON을 CBOR 또는 MessagePack으로 변환하고 Hex, Base64, Base64URL 또는 파일의 바이너리 페이로드를 디코딩하세요. 모든 처리는 브라우저에서 로컬로 이루어집니다."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "ממיר CBOR / MessagePack",
+  "description": "המרת JSON ל-CBOR או ל-MessagePack ופענוח נתונים בינריים מ-Hex, מ-Base64, מ-Base64URL או מקבצים. כל העיבוד מתבצע מקומית בדפדפן."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "CBOR / MessagePack कन्वर्टर",
+  "description": "JSON को CBOR या MessagePack में बदलें और Hex, Base64, Base64URL या फ़ाइलों से बाइनरी पेलोड डिकोड करें। सारी प्रोसेसिंग आपके ब्राउज़र में स्थानीय रूप से होती है।"
+}

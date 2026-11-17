@@ -1,0 +1,4 @@
+{
+  "name": "CBOR / MessagePack Dönüştürücü",
+  "description": "JSON'u CBOR veya MessagePack'e dönüştürün; Hex, Base64, Base64URL veya dosyalardaki ikili verileri çözün. Her şey tarayıcınızda yerel olarak işlenir."
+}

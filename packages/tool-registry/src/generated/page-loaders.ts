@@ -50,6 +50,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "caj-viewer": () => import("@tool/caj-viewer/page"),
   camera: () => import("@tool/camera/page"),
   "case-converter": () => import("@tool/case-converter/page"),
+  "cbor-messagepack-converter": () =>
+    import("@tool/cbor-messagepack-converter/page"),
   "cbz-reader": () => import("@tool/cbz-reader/page"),
   "cbz-to-pdf-converter": () => import("@tool/cbz-to-pdf-converter/page"),
   "certificate-public-key-parser": () =>

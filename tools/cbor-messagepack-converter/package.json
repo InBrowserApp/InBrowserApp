@@ -1,0 +1,26 @@
+{
+  "name": "@tool/cbor-messagepack-converter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./manifest": "./manifest.ts",
+    "./page": "./index.astro"
+  },
+  "dependencies": {
+    "@workspace/tool-sdk": "workspace:*",
+    "@workspace/ui": "workspace:*",
+    "@msgpack/msgpack": "catalog:",
+    "cborg": "catalog:",
+    "lossless-json": "catalog:"
+  },
+  "peerDependencies": {
+    "astro": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@testing-library/react": "catalog:",
+    "vitest": "catalog:"
+  }
+}

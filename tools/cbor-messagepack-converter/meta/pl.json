@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter CBOR / MessagePack",
+  "description": "Konwertuj JSON na CBOR lub MessagePack i dekoduj dane binarne z Hex, Base64, Base64URL lub plików. Wszystko jest przetwarzane lokalnie w przeglądarce."
+}

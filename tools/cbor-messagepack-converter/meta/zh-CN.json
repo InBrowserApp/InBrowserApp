@@ -1,0 +1,4 @@
+{
+  "name": "CBOR / MessagePack 转换器",
+  "description": "将 JSON 转换为 CBOR 或 MessagePack，并从 Hex、Base64、Base64URL 或文件解码二进制数据。所有处理均在浏览器本地完成。"
+}

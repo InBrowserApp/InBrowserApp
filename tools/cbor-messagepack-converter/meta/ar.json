@@ -1,0 +1,4 @@
+{
+  "name": "محوّل CBOR / MessagePack",
+  "description": "حوّل JSON إلى CBOR أو MessagePack وفك ترميز البيانات الثنائية من Hex أو Base64 أو Base64URL أو الملفات. تُعالج جميع البيانات محليًا في متصفحك."
+}

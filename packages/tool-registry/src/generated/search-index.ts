@@ -4613,6 +4613,138 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "cbor-messagepack-converter",
+    category: "json",
+    icon: "binary",
+    tags: [
+      "cbor",
+      "messagepack",
+      "msgpack",
+      "json",
+      "binary",
+      "hex",
+      "base64",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل CBOR / MessagePack",
+        description:
+          "حوّل JSON إلى CBOR أو MessagePack وفك ترميز البيانات الثنائية من Hex أو Base64 أو Base64URL أو الملفات. تُعالج جميع البيانات محليًا في متصفحك.",
+      },
+      de: {
+        name: "CBOR- / MessagePack-Konverter",
+        description:
+          "JSON in CBOR oder MessagePack umwandeln und binäre Nutzdaten aus Hex, Base64, Base64URL oder Dateien dekodieren. Alles wird lokal in Ihrem Browser verarbeitet.",
+      },
+      en: {
+        name: "CBOR / MessagePack Converter",
+        description:
+          "Convert JSON to CBOR or MessagePack and decode binary payloads from Hex, Base64, Base64URL, or files. Process everything locally in your browser.",
+      },
+      es: {
+        name: "Conversor CBOR / MessagePack",
+        description:
+          "Convierte JSON a CBOR o MessagePack y decodifica datos binarios desde Hex, Base64, Base64URL o archivos. Todo se procesa localmente en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur CBOR / MessagePack",
+        description:
+          "Convertissez du JSON en CBOR ou MessagePack et décodez des données binaires depuis Hex, Base64, Base64URL ou des fichiers. Tout est traité localement dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר CBOR / MessagePack",
+        description:
+          "המרת JSON ל-CBOR או ל-MessagePack ופענוח נתונים בינריים מ-Hex, מ-Base64, מ-Base64URL או מקבצים. כל העיבוד מתבצע מקומית בדפדפן.",
+      },
+      hi: {
+        name: "CBOR / MessagePack कन्वर्टर",
+        description:
+          "JSON को CBOR या MessagePack में बदलें और Hex, Base64, Base64URL या फ़ाइलों से बाइनरी पेलोड डिकोड करें। सारी प्रोसेसिंग आपके ब्राउज़र में स्थानीय रूप से होती है।",
+      },
+      id: {
+        name: "Konverter CBOR / MessagePack",
+        description:
+          "Konversi JSON ke CBOR atau MessagePack dan dekode data biner dari Hex, Base64, Base64URL, atau berkas. Semuanya diproses secara lokal di browser Anda.",
+      },
+      it: {
+        name: "Convertitore CBOR / MessagePack",
+        description:
+          "Converti JSON in CBOR o MessagePack e decodifica dati binari da Hex, Base64, Base64URL o file. Tutto viene elaborato localmente nel browser.",
+      },
+      ja: {
+        name: "CBOR / MessagePack 変換ツール",
+        description:
+          "JSON を CBOR または MessagePack に変換し、16 進数、Base64、Base64URL、ファイルからバイナリデータをデコードします。すべてブラウザー内で処理します。",
+      },
+      ko: {
+        name: "CBOR / MessagePack 변환기",
+        description:
+          "JSON을 CBOR 또는 MessagePack으로 변환하고 Hex, Base64, Base64URL 또는 파일의 바이너리 페이로드를 디코딩하세요. 모든 처리는 브라우저에서 로컬로 이루어집니다.",
+      },
+      ms: {
+        name: "Penukar CBOR / MessagePack",
+        description:
+          "Tukar JSON kepada CBOR atau MessagePack dan nyahkod data binari daripada Hex, Base64, Base64URL atau fail. Semua pemprosesan dilakukan secara setempat dalam pelayar anda.",
+      },
+      nl: {
+        name: "CBOR / MessagePack-converter",
+        description:
+          "Zet JSON om naar CBOR of MessagePack en decodeer binaire gegevens uit Hex, Base64, Base64URL of bestanden. Alles wordt lokaal in je browser verwerkt.",
+      },
+      no: {
+        name: "CBOR / MessagePack-konverterer",
+        description:
+          "Konverter JSON til CBOR eller MessagePack og dekod binære data fra Hex, Base64, Base64URL eller filer. Alt behandles lokalt i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter CBOR / MessagePack",
+        description:
+          "Konwertuj JSON na CBOR lub MessagePack i dekoduj dane binarne z Hex, Base64, Base64URL lub plików. Wszystko jest przetwarzane lokalnie w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de CBOR / MessagePack",
+        description:
+          "Converta JSON para CBOR ou MessagePack e decodifique dados binários em Hex, Base64, Base64URL ou arquivos. Todo o processamento é feito localmente no navegador.",
+      },
+      ru: {
+        name: "Конвертер CBOR / MessagePack",
+        description:
+          "Преобразуйте JSON в CBOR или MessagePack и декодируйте двоичные данные из Hex, Base64, Base64URL или файлов. Все операции выполняются локально в браузере.",
+      },
+      sv: {
+        name: "CBOR / MessagePack-konverterare",
+        description:
+          "Konvertera JSON till CBOR eller MessagePack och avkoda binära data från Hex, Base64, Base64URL eller filer. Allt bearbetas lokalt i webbläsaren.",
+      },
+      th: {
+        name: "ตัวแปลง CBOR / MessagePack",
+        description:
+          "แปลง JSON เป็น CBOR หรือ MessagePack และถอดรหัสข้อมูลไบนารีจาก Hex, Base64, Base64URL หรือไฟล์ ประมวลผลทั้งหมดภายในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "CBOR / MessagePack Dönüştürücü",
+        description:
+          "JSON'u CBOR veya MessagePack'e dönüştürün; Hex, Base64, Base64URL veya dosyalardaki ikili verileri çözün. Her şey tarayıcınızda yerel olarak işlenir.",
+      },
+      vi: {
+        name: "Trình chuyển đổi CBOR / MessagePack",
+        description:
+          "Chuyển JSON sang CBOR hoặc MessagePack và giải mã dữ liệu nhị phân từ Hex, Base64, Base64URL hoặc tệp. Mọi dữ liệu đều được xử lý cục bộ trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "CBOR / MessagePack 转换器",
+        description:
+          "将 JSON 转换为 CBOR 或 MessagePack，并从 Hex、Base64、Base64URL 或文件解码二进制数据。所有处理均在浏览器本地完成。",
+      },
+      "zh-TW": {
+        name: "CBOR / MessagePack 轉換器",
+        description:
+          "將 JSON 轉換為 CBOR 或 MessagePack，或從 Hex、Base64、Base64URL 及檔案解碼二進位資料。所有處理都在瀏覽器本機完成。",
+      },
+    },
+  },
+  {
     slug: "cbz-reader",
     category: "image",
     icon: "image",

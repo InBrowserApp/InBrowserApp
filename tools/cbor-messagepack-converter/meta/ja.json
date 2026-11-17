@@ -1,0 +1,4 @@
+{
+  "name": "CBOR / MessagePack 変換ツール",
+  "description": "JSON を CBOR または MessagePack に変換し、16 進数、Base64、Base64URL、ファイルからバイナリデータをデコードします。すべてブラウザー内で処理します。"
+}
