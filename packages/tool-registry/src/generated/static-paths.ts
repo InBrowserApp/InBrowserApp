@@ -20886,6 +20886,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "subtitle-converter",
+    language: "ar",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "de",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "en",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "es",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "fr",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "he",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "hi",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "id",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "it",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "ja",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "ko",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "ms",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "nl",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "no",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "pl",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "pt",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "ru",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "sv",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "th",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "tr",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "vi",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "subtitle-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "svg-optimizer",
     language: "ar",
   },

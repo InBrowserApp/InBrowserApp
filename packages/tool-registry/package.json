@@ -234,6 +234,7 @@
     "@tool/ssh-key-generator": "workspace:*",
     "@tool/ssh-public-key-fingerprint": "workspace:*",
     "@tool/stopwatch": "workspace:*",
+    "@tool/subtitle-converter": "workspace:*",
     "@tool/svg-optimizer": "workspace:*",
     "@tool/svg-to-image-converter": "workspace:*",
     "@tool/svg-viewer": "workspace:*",

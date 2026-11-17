@@ -1,0 +1,4 @@
+{
+  "name": "字幕轉換器",
+  "description": "轉換 SRT、VTT、ASS、SSA、TTML、LRC 等字幕格式。在瀏覽器本機批次轉換、調整時間並下載檔案。"
+}
