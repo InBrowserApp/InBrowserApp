@@ -31,6 +31,7 @@ function xmlText(node: Node, preserve = false): string {
 }
 
 export function parseXml(text: string, fps: number): Cue[] {
+  // Parse inert XML data. Parsed nodes are never inserted into the page.
   const doc = new DOMParser().parseFromString(text, "application/xml")
   if (doc.querySelector("parsererror")) throw new SubtitleError("invalid")
   const root = doc.documentElement

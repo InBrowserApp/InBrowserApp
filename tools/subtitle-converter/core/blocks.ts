@@ -30,8 +30,8 @@ export function parseBlocks(
     )
     if (index < 0) throw new SubtitleError("invalid")
     const times = lines[index]!.split(
-      format === "srt" || format === "vtt" ? /\s*-->\s*/ : ","
-    )
+      format === "srt" || format === "vtt" ? "-->" : ","
+    ).map((time) => time.trim())
     if (times.length !== 2 || index > 1) throw new SubtitleError("invalid")
     const start = parseTime(times[0]!)
     const end = parseTime(times[1]!.trim().split(/\s+/)[0]!)

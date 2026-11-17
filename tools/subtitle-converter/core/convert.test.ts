@@ -110,6 +110,18 @@ describe("subtitle formats", () => {
     ])
   })
 
+  it("keeps XML-encoded tags as literal subtitle text through a round trip", () => {
+    const xml =
+      '<tt><body><p begin="1s" end="2s">&lt;img src="x" onerror="alert(1)"&gt;</p></body></tt>'
+    const output = convertSubtitle(xml, { ...options, target: "ttml" }).output
+    const doc = new DOMParser().parseFromString(output, "application/xml")
+    expect(doc.getElementsByTagName("img")).toHaveLength(0)
+    expect(doc.getElementsByTagName("p")[0]!.textContent).toBe(
+      '<img src="x" onerror="alert(1)">'
+    )
+    expect(parseSubtitle(output, "ttml", 25).cues[0]!.text).toContain("&lt;img")
+  })
+
   it("reads TTML inherited ends, frameRateMultiplier, ticks and sequence timing", () => {
     const text =
       '<tt xmlns:ttp="http://www.w3.org/ns/ttml#parameter" ttp:frameRate="30" ttp:frameRateMultiplier="1 2" ttp:tickRate="100"><body><div timeContainer="seq"><p begin="15f" dur="1s">one</p><p begin="50t" dur="1s">two</p></div><div end="10s"><p begin="5s">three</p></div></body></tt>'
