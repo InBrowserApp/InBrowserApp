@@ -4,7 +4,7 @@ Sambungkan alat kawalan melalui USB atau Bluetooth, biarkan tab ini terbuka dan 
 
 ## Bagaimanakah saya tahu jika stik mengalami hanyutan?
 
-Gerakkan setiap stik ke beberapa arah dan lepaskannya untuk kembali sendiri. Apabila tidak disentuh, stik sepatutnya berhenti berhampiran titik tengah, tempat X dan Y kedua-duanya bernilai sifar. Pilih **Semak hanyutan stik** dan jangan sentuh kedua-dua stik selama tiga saat. Sisihan purata ialah purata jarak dari titik tengah semasa ujian, manakala sisihan maksimum ialah jarak terbesar yang direkodkan.
+Gerakkan setiap stik ke beberapa arah dan lepaskannya untuk kembali sendiri. Apabila tidak disentuh, stik sepatutnya berhenti berhampiran titik tengah, tempat X dan Y kedua-duanya bernilai sifar. Apabila graf kedudukan stik dipaparkan, pilih **Semak hanyutan stik** dan jangan sentuh kedua-dua stik selama tiga saat. Sisihan purata ialah purata jarak dari titik tengah semasa ujian, manakala sisihan maksimum ialah jarak terbesar yang direkodkan.
 
 Contohnya, jika X bernilai 0.030 dan Y bernilai 0.040, stik berada pada jarak 0.050 dari titik tengah. Jika ujian berulang menunjukkan sisihan yang hampir sama selepas stik dilepaskan, stik mungkin mengalami hanyutan. Sisihan maksimum yang jauh melebihi purata boleh menunjukkan lonjakan seketika. Jika masalah hanya berlaku dalam satu permainan, semak tetapan zon mati permainan itu. Zon mati ialah julat pergerakan kecil berhampiran titik tengah yang diabaikan oleh permainan.
 

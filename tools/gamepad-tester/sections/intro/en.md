@@ -4,7 +4,7 @@ Connect your controller by USB or Bluetooth, keep this tab open, and press any b
 
 ## How can I tell if a stick is drifting?
 
-Move each stick in a few directions and let it return on its own. An untouched stick should rest near the center, where both X and Y are zero. Select **Check stick drift** and leave both sticks untouched for three seconds. The average offset is the mean distance from center during that check, while the peak offset is the largest distance recorded.
+Move each stick in a few directions and let it return on its own. An untouched stick should rest near the center, where both X and Y are zero. When stick plots are displayed, select **Check stick drift** and leave both sticks untouched for three seconds. The average offset is the mean distance from center during that check, while the peak offset is the largest distance recorded.
 
 For example, X at 0.030 and Y at 0.040 put a stick 0.050 from center. If repeated checks show about the same offset after you release it, the stick may be drifting. A peak much larger than the average can indicate a brief jump. If the problem shows up in only one game, check its dead zone setting. The dead zone is the range of small movements near center that the game ignores.
 

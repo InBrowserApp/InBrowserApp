@@ -4,7 +4,7 @@ Kumandanızı USB veya Bluetooth ile bağlayın, bu sekmeyi açık tutun ve kuma
 
 ## Analog çubuğun kaydığını nasıl anlarım?
 
-Her çubuğu birkaç farklı yöne oynatıp kendi kendine dönmesi için bırakın. Serbest duran çubuk, X ve Y değerlerinin sıfır olduğu merkezin yakınında durmalıdır. **Çubuk kaymasını test et** seçeneğine tıklayın ve üç saniye boyunca çubuklara dokunmayın. Ortalama sapma, test boyunca merkeze olan uzaklığın ortalamasıdır. En büyük sapma ise ölçülen en yüksek uzaklıktır.
+Her çubuğu birkaç farklı yöne oynatıp kendi kendine dönmesi için bırakın. Serbest duran çubuk, X ve Y değerlerinin sıfır olduğu merkezin yakınında durmalıdır. Çubuk grafikleri görünüyorsa **Çubuk kaymasını test et** seçeneğine tıklayın ve üç saniye boyunca çubuklara dokunmayın. Ortalama sapma, test boyunca merkeze olan uzaklığın ortalamasıdır. En büyük sapma ise ölçülen en yüksek uzaklıktır.
 
 Örneğin X = 0,030 ve Y = 0,040 olduğunda çubuğun merkeze uzaklığı 0,050 olur. Çubuğu bıraktıktan sonra tekrarlanan testlerde benzer sapmalar görüyorsanız çubuk kayıyor olabilir. En büyük sapma ortalamanın çok üzerindeyse kısa bir sıçrama yaşanmış olabilir. Sorun yalnızca bir oyunda görülüyorsa oyunun ölü bölge ayarına bakın. Ölü bölge, merkezin çevresinde oyunun küçük hareketleri yok saydığı alandır.
 

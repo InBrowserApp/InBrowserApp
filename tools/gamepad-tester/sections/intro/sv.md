@@ -4,7 +4,7 @@ Anslut handkontrollen via USB eller Bluetooth, låt fliken vara öppen och tryck
 
 ## Hur ser jag om en spak driver?
 
-För varje spak åt några olika håll och låt den återgå av sig själv. I vila ska spaken vara nära mitten, där både X och Y är noll. Välj **Testa spakdrift** och låt båda spakarna vila i tre sekunder. Det genomsnittliga avståndet visar hur långt från mitten spaken låg i genomsnitt under testet. Det största avståndet är det högsta uppmätta värdet.
+För varje spak åt några olika håll och låt den återgå av sig själv. I vila ska spaken vara nära mitten, där både X och Y är noll. Om diagrammen för spakarna visas väljer du **Testa spakdrift** och låter båda spakarna vila i tre sekunder. Det genomsnittliga avståndet visar hur långt från mitten spaken låg i genomsnitt under testet. Det största avståndet är det högsta uppmätta värdet.
 
 Om X är 0,030 och Y är 0,040 är avståndet från mitten 0,050. Om avståndet är ungefär detsamma i flera tester efter att du har släppt spaken kan den ha spakdrift. Om det största avståndet ligger långt över genomsnittet kan spaken ha gjort ett kort utslag. Om problemet bara märks i ett spel kan du kontrollera spelets inställning för den döda zonen. Det är området nära mitten där spelet ignorerar små rörelser.
 

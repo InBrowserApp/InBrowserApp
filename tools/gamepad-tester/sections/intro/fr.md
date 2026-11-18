@@ -4,7 +4,7 @@ Connectez la manette en USB ou en Bluetooth, gardez cet onglet actif et appuyez 
 
 ## Comment savoir si un stick a du drift ?
 
-Bougez chaque stick dans plusieurs directions, puis relâchez-le pour qu’il revienne de lui-même au repos. Il devrait s’arrêter près du centre, où X et Y valent zéro. Sélectionnez **Tester le drift** et laissez les deux sticks au repos pendant trois secondes. L’écart moyen indique la distance habituelle au centre pendant le test. L’écart maximal est la plus grande distance relevée.
+Bougez chaque stick dans plusieurs directions, puis relâchez-le pour qu’il revienne de lui-même au repos. Il devrait s’arrêter près du centre, où X et Y valent zéro. Si les graphiques des sticks sont affichés, sélectionnez **Tester le drift** et laissez les deux sticks au repos pendant trois secondes. L’écart moyen indique la distance habituelle au centre pendant le test. L’écart maximal est la plus grande distance relevée.
 
 Par exemple, si X vaut 0,030 et Y vaut 0,040, le stick se trouve à 0,050 du centre. Si vous retrouvez un écart similaire après avoir relâché le stick lors de plusieurs tests, il peut s’agir de drift. Un écart maximal nettement supérieur à la moyenne peut révéler un saut bref. Si le problème se manifeste dans un seul jeu, vérifiez le réglage de la zone morte. C’est la plage de petits mouvements autour du centre que le jeu ignore.
 

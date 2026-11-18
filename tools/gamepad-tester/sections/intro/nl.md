@@ -4,7 +4,7 @@ Sluit je gamepad aan via USB of Bluetooth, laat dit tabblad open en druk op een 
 
 ## Hoe herken ik stickdrift?
 
-Beweeg elke stick in een paar richtingen en laat hem vanzelf terugveren. In rust hoort de stick dicht bij het midden te staan, waar X en Y allebei nul zijn. Kies **Test op stickdrift** en raak beide sticks drie seconden lang niet aan. De gemiddelde afstand geeft aan hoever de stick tijdens de test gemiddeld van het midden stond. De grootste afstand is de hoogste gemeten waarde.
+Beweeg elke stick in een paar richtingen en laat hem vanzelf terugveren. In rust hoort de stick dicht bij het midden te staan, waar X en Y allebei nul zijn. Als je grafieken voor de sticks ziet, kies dan **Test op stickdrift** en raak beide sticks drie seconden lang niet aan. De gemiddelde afstand geeft aan hoever de stick tijdens de test gemiddeld van het midden stond. De grootste afstand is de hoogste gemeten waarde.
 
 Bij X = 0,030 en Y = 0,040 is de afstand tot het midden 0,050. Zie je na het loslaten bij meerdere tests ongeveer dezelfde afwijking, dan kan dat op stickdrift wijzen. Een piek die veel hoger ligt dan het gemiddelde kan wijzen op een korte uitschieter. Treedt het probleem alleen in één game op, controleer dan de instelling van de dode zone. Dat is het bereik rond het midden waarin de game kleine bewegingen negeert.
 

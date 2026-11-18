@@ -4,7 +4,7 @@ Verbinde dein Gamepad per USB oder Bluetooth, lass diesen Tab geöffnet und drü
 
 ## Wie erkenne ich Stick-Drift?
 
-Bewege jeden Stick in mehrere Richtungen und lass ihn von allein zurückkehren. In Ruhe sollte er nahe der Mitte stehen, wo X und Y beide null sind. Wähle **Stick-Drift prüfen** und berühre die Sticks drei Sekunden lang nicht. Der mittlere Abstand zeigt, wie weit der Stick während des Tests im Durchschnitt von der Mitte entfernt war. Der größte Abstand ist der höchste gemessene Wert.
+Bewege jeden Stick in mehrere Richtungen und lass ihn von allein zurückkehren. In Ruhe sollte er nahe der Mitte stehen, wo X und Y beide null sind. Wenn die Stick-Diagramme angezeigt werden, wähle **Stick-Drift prüfen** und berühre die Sticks drei Sekunden lang nicht. Der mittlere Abstand zeigt, wie weit der Stick während des Tests im Durchschnitt von der Mitte entfernt war. Der größte Abstand ist der höchste gemessene Wert.
 
 Bei X = 0,030 und Y = 0,040 beträgt der Abstand zur Mitte 0,050. Zeigen mehrere Tests nach dem Loslassen etwa denselben Abstand, kann das auf Stick-Drift hindeuten. Ist der größte Abstand viel höher als der mittlere Abstand, kann ein kurzer Ausschlag die Ursache sein. Tritt das Problem nur in einem Spiel auf, prüfe dort die Einstellung der Totzone. Sie legt fest, welche kleinen Bewegungen um die Mitte das Spiel ignoriert.
 

@@ -4,7 +4,7 @@ Sambungkan gamepad lewat USB atau Bluetooth, biarkan tab ini terbuka, lalu tekan
 
 ## Bagaimana cara mengetahui apakah stik mengalami drift?
 
-Gerakkan tiap stik ke beberapa arah, lalu lepaskan agar kembali sendiri. Saat tidak disentuh, stik semestinya berhenti di dekat titik tengah, tempat X dan Y bernilai nol. Pilih **Periksa drift stik**, lalu jangan sentuh kedua stik selama tiga detik. Simpangan rata-rata menunjukkan jarak rata-rata dari titik tengah selama pemeriksaan, sedangkan simpangan maksimum adalah jarak terbesar yang tercatat.
+Gerakkan tiap stik ke beberapa arah, lalu lepaskan agar kembali sendiri. Saat tidak disentuh, stik semestinya berhenti di dekat titik tengah, tempat X dan Y bernilai nol. Saat grafik posisi stik ditampilkan, pilih **Periksa drift stik**, lalu jangan sentuh kedua stik selama tiga detik. Simpangan rata-rata menunjukkan jarak rata-rata dari titik tengah selama pemeriksaan, sedangkan simpangan maksimum adalah jarak terbesar yang tercatat.
 
 Contohnya, jika X bernilai 0,030 dan Y bernilai 0,040, jarak stik dari titik tengah adalah 0,050. Jika beberapa pemeriksaan menunjukkan simpangan yang hampir sama setelah stik dilepas, stik mungkin mengalami drift. Simpangan maksimum yang jauh melebihi rata-rata bisa menandakan lonjakan sesaat. Jika masalah hanya muncul di satu gim, periksa pengaturan zona mati di gim tersebut. Zona mati adalah rentang gerakan kecil di dekat titik tengah yang diabaikan gim.
 

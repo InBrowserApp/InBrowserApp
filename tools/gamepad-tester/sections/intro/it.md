@@ -4,7 +4,7 @@ Collega il controller via USB o Bluetooth, mantieni attiva questa scheda e premi
 
 ## Come riconosco il drift di una levetta?
 
-Muovi ogni levetta in più direzioni e rilasciala perché torni da sola in posizione di riposo. Dovrebbe fermarsi vicino al centro, dove X e Y valgono zero. Seleziona **Verifica il drift** e lascia a riposo entrambe le levette per tre secondi. Lo scostamento medio indica la distanza tipica dal centro durante il test. Lo scostamento massimo è la distanza più grande rilevata.
+Muovi ogni levetta in più direzioni e rilasciala perché torni da sola in posizione di riposo. Dovrebbe fermarsi vicino al centro, dove X e Y valgono zero. Se sono visibili i grafici delle levette, seleziona **Verifica il drift** e lascia a riposo entrambe le levette per tre secondi. Lo scostamento medio indica la distanza tipica dal centro durante il test. Lo scostamento massimo è la distanza più grande rilevata.
 
 Per esempio, se X vale 0,030 e Y vale 0,040, la levetta si trova a 0,050 dal centro. Se dopo averla rilasciata ottieni uno scostamento simile in più prove, potrebbe esserci un problema di drift. Un valore massimo molto più alto della media può indicare un salto momentaneo. Se il problema si presenta in un solo gioco, controlla l’impostazione della zona morta. È l’intervallo di piccoli movimenti vicino al centro che il gioco ignora.
 

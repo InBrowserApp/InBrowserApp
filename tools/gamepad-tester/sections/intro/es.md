@@ -4,7 +4,7 @@ Conecta el mando por USB o Bluetooth, mantén esta pestaña activa y pulsa cualq
 
 ## ¿Cómo sé si una palanca se desvía sola?
 
-Mueve cada palanca en varias direcciones y suéltala para que vuelva sola a su posición de reposo. Debería quedar cerca del centro, donde X e Y valen cero. Selecciona **Comprobar el desvío** y deja las dos palancas en reposo durante tres segundos. La distancia media indica cuánto se alejó normalmente la palanca del centro durante la prueba. La distancia máxima es el valor más alto registrado.
+Mueve cada palanca en varias direcciones y suéltala para que vuelva sola a su posición de reposo. Debería quedar cerca del centro, donde X e Y valen cero. Si ves los gráficos de las palancas, selecciona **Comprobar el desvío** y deja las dos palancas en reposo durante tres segundos. La distancia media indica cuánto se alejó normalmente la palanca del centro durante la prueba. La distancia máxima es el valor más alto registrado.
 
 Por ejemplo, si X vale 0,030 e Y vale 0,040, la distancia al centro es de 0,050. Si al repetir la prueba la palanca queda a una distancia parecida después de soltarla, puede que tenga drift. Una distancia máxima mucho mayor que la media puede indicar un salto breve. Si el problema aparece solo en un juego, revisa el ajuste de zona muerta. Es el rango de movimientos pequeños cerca del centro que el juego ignora.
 

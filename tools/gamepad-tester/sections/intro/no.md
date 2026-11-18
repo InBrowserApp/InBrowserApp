@@ -4,7 +4,7 @@ Koble til spillkontrolleren via USB eller Bluetooth, la fanen stå åpen og tryk
 
 ## Hvordan ser jeg om en spak har drift?
 
-Beveg hver spak i noen ulike retninger og la den gå tilbake av seg selv. I hvile skal spaken stå nær midten, der både X og Y er null. Velg **Test for spakdrift** og la begge spakene være i ro i tre sekunder. Den gjennomsnittlige avstanden viser hvor langt fra midten spaken sto i snitt under testen. Den største avstanden er den høyeste målte verdien.
+Beveg hver spak i noen ulike retninger og la den gå tilbake av seg selv. I hvile skal spaken stå nær midten, der både X og Y er null. Hvis du ser diagrammer for spakene, velger du **Test for spakdrift** og lar begge spakene være i ro i tre sekunder. Den gjennomsnittlige avstanden viser hvor langt fra midten spaken sto i snitt under testen. Den største avstanden er den høyeste målte verdien.
 
 Hvis X er 0,030 og Y er 0,040, er avstanden fra midten 0,050. Hvis flere tester viser omtrent samme avstand etter at du har sluppet spaken, kan det tyde på spakdrift. En maksimalavstand langt over gjennomsnittet kan skyldes et kort utslag. Hvis problemet bare oppstår i ett spill, kan du sjekke dødsonen i spillets innstillinger. Dødsonen er området rundt midten der spillet ignorerer små bevegelser.
 

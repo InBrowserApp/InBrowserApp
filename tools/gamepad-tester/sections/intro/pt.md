@@ -4,7 +4,7 @@ Conecte o controle via USB ou Bluetooth, mantenha esta aba ativa e pressione qua
 
 ## Como sei se um analógico está com drift?
 
-Mova cada analógico em algumas direções e solte-o para que volte sozinho à posição de repouso. Ele deve parar perto do centro, onde X e Y valem zero. Selecione **Verificar o drift** e deixe os dois analógicos em repouso por três segundos. O desvio médio indica a distância típica até o centro durante o teste. O desvio máximo é a maior distância registrada.
+Mova cada analógico em algumas direções e solte-o para que volte sozinho à posição de repouso. Ele deve parar perto do centro, onde X e Y valem zero. Se os gráficos dos analógicos estiverem visíveis, selecione **Verificar o drift** e deixe os dois analógicos em repouso por três segundos. O desvio médio indica a distância típica até o centro durante o teste. O desvio máximo é a maior distância registrada.
 
 Por exemplo, se X vale 0,030 e Y vale 0,040, o analógico está a 0,050 do centro. Se o desvio for parecido após soltar o analógico em vários testes, pode ser drift. Um desvio máximo muito maior que a média pode indicar um salto breve. Se o problema aparecer em apenas um jogo, confira o ajuste da zona morta. É a faixa de pequenos movimentos perto do centro que o jogo ignora.
 

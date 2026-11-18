@@ -4,7 +4,7 @@ Kết nối tay cầm qua USB hoặc Bluetooth, giữ thẻ này mở rồi nh�
 
 ## Làm sao để biết cần analog có bị trôi?
 
-Đẩy từng cần theo vài hướng rồi thả cho cần tự trở về. Khi không chạm, cần thường dừng gần tâm, nơi X và Y đều bằng 0. Chọn **Kiểm tra trôi cần** và để yên cả hai cần trong ba giây. Độ lệch trung bình cho biết khoảng cách trung bình đến tâm trong lần đo, còn độ lệch lớn nhất là khoảng cách lớn nhất ghi được.
+Đẩy từng cần theo vài hướng rồi thả cho cần tự trở về. Khi không chạm, cần thường dừng gần tâm, nơi X và Y đều bằng 0. Khi có biểu đồ vị trí cần, chọn **Kiểm tra trôi cần** và để yên cả hai cần trong ba giây. Độ lệch trung bình cho biết khoảng cách trung bình đến tâm trong lần đo, còn độ lệch lớn nhất là khoảng cách lớn nhất ghi được.
 
 Ví dụ, nếu X là 0,030 và Y là 0,040 thì cần cách tâm 0,050. Nếu các lần kiểm tra đều cho thấy độ lệch tương tự sau khi thả tay, cần có thể bị trôi. Nếu độ lệch lớn nhất cao hơn nhiều so với trung bình, cần có thể đã nhảy vị trí trong chốc lát. Nếu vấn đề chỉ xảy ra trong một trò chơi, hãy xem cài đặt vùng chết của trò chơi đó. Vùng chết là khoảng chuyển động nhỏ gần tâm mà trò chơi bỏ qua.
 

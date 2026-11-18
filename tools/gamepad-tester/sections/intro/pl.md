@@ -4,7 +4,7 @@ Podłącz pada przez USB lub Bluetooth, pozostaw tę kartę otwartą i naciśnij
 
 ## Jak rozpoznać dryf drążka?
 
-Porusz każdym drążkiem w kilku kierunkach i puść go, aby sam wrócił do pozycji spoczynkowej. Powinien zatrzymać się blisko środka, gdzie X i Y są równe zeru. Wybierz **Sprawdź dryf drążków** i przez trzy sekundy nie dotykaj żadnego drążka. Średnie odchylenie to średnia odległość od środka, a maksymalne odchylenie to największa odległość zarejestrowana w trakcie testu.
+Porusz każdym drążkiem w kilku kierunkach i puść go, aby sam wrócił do pozycji spoczynkowej. Powinien zatrzymać się blisko środka, gdzie X i Y są równe zeru. Jeśli widzisz wykresy ruchu drążków, wybierz **Sprawdź dryf drążków** i przez trzy sekundy nie dotykaj żadnego drążka. Średnie odchylenie to średnia odległość od środka, a maksymalne odchylenie to największa odległość zarejestrowana w trakcie testu.
 
 Na przykład przy X = 0,030 i Y = 0,040 odległość drążka od środka wynosi 0,050. Jeśli kolejne testy po puszczeniu drążka pokazują podobne odchylenie, drążek może dryfować. Maksimum znacznie wyższe od średniej może świadczyć o krótkim skoku. Jeśli problem występuje tylko w jednej grze, sprawdź jej ustawienie martwej strefy. To obszar wokół środka, w którym gra ignoruje drobne ruchy.
 
