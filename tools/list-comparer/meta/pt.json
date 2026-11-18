@@ -1,4 +1,4 @@
 {
   "name": "Comparador de listas",
-  "description": "Compare duas listas, identifique itens em comum e exclusões e exporte o conjunto exato de que precisa antes de sincronizar ou organizar."
+  "description": "Compare duas listas para localizar itens em comum, exclusivos de A ou B e duplicados. Cole linhas ou texto delimitado e copie ou baixe os resultados."
 }

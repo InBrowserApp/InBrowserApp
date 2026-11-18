@@ -1,4 +1,4 @@
 {
   "name": "Konwerter Unicode ↔ Punycode",
-  "description": "Dwukierunkowa konwersja domen Unicode (IDN) i ASCII (Punycode)"
+  "description": "Konwertuj nazwy domen Unicode na ASCII w formacie Punycode i odczytuj domeny z prefiksem xn--. Obsługuje konwersję domen międzynarodowych (IDN) w obie strony."
 }

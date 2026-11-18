@@ -1,4 +1,4 @@
 {
   "name": "Bộ Chuyển Đổi Dấu Thời Gian Unix",
-  "description": "Chuyển đổi dấu thời gian Unix thành ngày tháng dễ đọc và ngược lại. Hỗ trợ tự động phát hiện giây, mili giây và nano giây."
+  "description": "Chuyển dấu thời gian Unix sang giờ địa phương, UTC hoặc ISO 8601, rồi chuyển ngày giờ ngược lại sang giây, mili giây hoặc nano giây."
 }

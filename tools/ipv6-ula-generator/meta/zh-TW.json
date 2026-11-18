@@ -1,4 +1,4 @@
 {
   "name": "IPv6 ULA 產生器",
-  "description": "在瀏覽器中安全產生 RFC 4193 IPv6 唯一本地位址（ULA）/48 前綴，並規劃其 fd00 /64 子網路。"
+  "description": "產生符合 RFC 4193 的 IPv6 唯一本地位址（ULA）/48 前綴，並為家庭網路、實驗環境或 VPN 計算 /64 子網路。"
 }

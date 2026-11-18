@@ -1,4 +1,4 @@
 {
   "name": "Listjämförare",
-  "description": "Jämför två listor, hitta gemensamma och uteslutna poster och exportera precis den mängd du behöver före synkronisering eller rensning."
+  "description": "Jämför två listor för att hitta gemensamma poster, poster som bara finns i A eller B och dubbletter. Klistra in rader eller avgränsad text. Kopiera eller ladda ned resultatet."
 }

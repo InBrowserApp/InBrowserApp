@@ -1,4 +1,4 @@
 {
   "name": "Penukar Unicode ↔ Punycode",
-  "description": "Tukar domain Unicode (IDN) dan ASCII (Punycode) dua hala"
+  "description": "Kodkan nama domain Unicode kepada Punycode ASCII atau nyahkod domain xn-- kepada teks yang mudah dibaca. Tukar nama domain antarabangsa (IDN) dalam kedua-dua arah."
 }

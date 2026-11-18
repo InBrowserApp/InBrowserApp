@@ -1,4 +1,4 @@
 {
   "name": "Convertidor de Marca de Tiempo Unix",
-  "description": "Convierte marcas de tiempo Unix a fechas legibles y viceversa. Soporta detección automática de segundos, milisegundos y nanosegundos."
+  "description": "Convierte marcas de tiempo Unix a hora local, UTC o ISO 8601 y convierte fechas a marcas Unix en segundos, milisegundos o nanosegundos."
 }

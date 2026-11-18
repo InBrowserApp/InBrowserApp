@@ -1,4 +1,4 @@
 {
   "name": "Ordenador de linhas de texto",
-  "description": "Ordene linhas de texto em ordem crescente ou decrescente, com opções para ignorar maiúsculas e minúsculas, aparar espaços, remover linhas em branco e eliminar duplicados."
+  "description": "Ordene linhas de texto de A a Z ou de Z a A. Ignore maiúsculas e minúsculas e remova espaços nas extremidades, linhas em branco ou duplicados."
 }

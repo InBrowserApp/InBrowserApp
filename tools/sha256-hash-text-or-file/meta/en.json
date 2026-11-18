@@ -1,4 +1,4 @@
 {
   "name": "SHA-256 Hash Text or File",
-  "description": "Generate SHA-256 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes"
+  "description": "Calculate the SHA-256 checksum of a file or UTF-8 text in your browser. Copy the hash in hexadecimal, Base64, decimal, or binary."
 }

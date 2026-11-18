@@ -1,19 +1,9 @@
-## SHA-256 là gì?
+## Tính tổng kiểm tra SHA-256 cho văn bản hoặc tệp
 
-SHA-256 (Secure Hash Algorithm 256-bit) là một hàm băm mật mã tạo ra giá trị băm 256-bit (32-byte), thường được hiển thị dưới dạng số thập lục phân 64 ký tự. Nó là một phần của họ hàm băm SHA-2 được thiết kế bởi NSA và xuất bản bởi NIST.
+Dán văn bản UTF-8 hoặc chọn **Nhập từ tệp** để băm các byte gốc của tệp. Sao chép kết quả ở dạng thập lục phân để đối chiếu với tổng kiểm tra đã công bố. SHA-256 tạo mã băm 256 bit, tương ứng với 64 ký tự thập lục phân.
 
-**Đặc điểm chính:**
+Để kiểm tra tệp tải xuống, hãy băm tệp đó và so sánh toàn bộ giá trị thập lục phân với giá trị do nguồn cung cấp. Với văn bản, khoảng trắng, chữ hoa chữ thường và ký tự xuống dòng đều làm thay đổi mã băm. Bạn có thể thử với văn bản `abc` không có ký tự xuống dòng ở cuối để nhận kết quả sau.
 
-- **Xác định**: Cùng một đầu vào luôn tạo ra cùng một băm
-- **Tính toán nhanh**: Nhanh chóng tính toán cho bất kỳ đầu vào nào
-- **Hiệu ứng tuyết lở**: Những thay đổi nhỏ trong đầu vào tạo ra đầu ra hoàn toàn khác biệt
-- **Không thể đảo ngược**: Không thể tính toán để đảo ngược băm để tìm đầu vào gốc
-- **Chống va chạm**: Rất khó tìm hai đầu vào khác nhau tạo ra cùng một băm
-
-**Sử dụng phổ biến:**
-
-- Chữ ký số và chứng chỉ
-- Blockchain và tiền điện tử (Bitcoin sử dụng SHA-256)
-- Lưu trữ mật khẩu (với muối thích hợp)
-- Xác minh tính toàn vẹn tệp
-- Thuật toán proof-of-work
+```text
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+```

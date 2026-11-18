@@ -1,4 +1,4 @@
 {
   "name": "Hash SHA-256 de Texto o Archivo",
-  "description": "Genera hash SHA-256 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad"
+  "description": "Calcula la suma de verificación SHA-256 de un archivo o texto UTF-8 en tu navegador. Copia el hash en hexadecimal, Base64, decimal o binario."
 }

@@ -1,11 +1,11 @@
-## Tujuan pembanding ini
+## Bandingkan dua senarai untuk mencari padanan dan perbezaan
 
-Gunakan alat ini apabila dua senarai sepatutnya sepadan, tetapi anda perlu melihat pertindihan, pengecualian dan pendua dengan tepat sebelum mengimport, menyegerakkan, menghantar mesej atau membersihkan apa-apa.
+Tampal kedua-dua senarai ke dalam **Senarai A** dan **Senarai B**. Letakkan satu item pada setiap baris, atau gunakan koma, tab atau pemisah tersuai. Hidupkan pilihan untuk membuang ruang di tepi atau mengabaikan huruf besar dan kecil jika format berbeza antara sumber.
 
-## Hasil yang anda dapat
+## Baca hasil perbandingan
 
-Alat ini membahagikan perbandingan kepada set hasil yang praktikal: item yang dikongsi, hanya dalam A, hanya dalam B, semua nilai unik dan pendua dalam setiap sumber. Anda boleh menyalin atau memuat turun setiap set secara berasingan.
+Jika A mengandungi `A101`, `B202`, `B202` dan B mengandungi `B202`, `C303`, maka **Dikongsi** mengandungi `B202`, **Hanya dalam A** mengandungi `A101`, dan **Hanya dalam B** mengandungi `C303`. **Pendua A** menunjukkan bahawa `B202` muncul dua kali dalam A. **Semua yang unik** menggabungkan kedua-dua senarai dan memaparkan setiap item sekali sahaja.
 
-## Kegunaan utamanya
+## Salin atau muat turun senarai yang diperlukan
 
-Alat ini berguna untuk senarai kenalan, ID produk, eksport audit, rekod inventori pada sesuatu masa, segmen kempen dan sebarang pembersihan yang boleh menambah kerja kemudian jika penggabungan dilakukan dengan salah.
+Pilih satu set hasil, kemudian salin atau muat turun senarai itu. Contohnya, bandingkan inventori sumber dengan inventori destinasi, kemudian gunakan **Hanya dalam A** untuk mendapatkan ID produk yang tiada dalam inventori destinasi.

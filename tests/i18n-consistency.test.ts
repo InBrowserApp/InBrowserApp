@@ -159,6 +159,19 @@ describe("locale family discovery", () => {
   test("at least one en.json or en.md exists in the repo", () => {
     expect(families.length).toBeGreaterThan(0)
   })
+
+  test.each([
+    "text-line-sorter",
+    "unicode-punycode-converter",
+    "unix-timestamp-converter",
+  ])("%s ships a non-empty guide for every supported language", (slug) => {
+    const introDir = path.join(repoRoot, "tools", slug, "sections", "intro")
+    const missing = SUPPORTED_SORTED.filter((lang) => {
+      const file = path.join(introDir, `${lang}.md`)
+      return !fs.existsSync(file) || !loadText(file).trim()
+    })
+    expect(missing).toEqual([])
+  })
 })
 
 describe.each(families)("locale family $relDir/*.$ext", ({ dir, ext }) => {

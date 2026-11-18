@@ -1,23 +1,15 @@
-## Hva er en unik lokal IPv6-adresse?
+## Generer et /48-prefiks for IPv6 ULA
 
-En unik lokal IPv6-adresse (ULA) er beregnet på kommunikasjon innenfor steder, private nettverk og sammenkoblede organisasjoner. Hele ULA-adresserommet er `fc00::/7`. Den åttende biten er **L-biten**: verdien `1` velger det lokalt tildelte `fd00::/8`-området som denne generatoren bruker, mens `fc00::/8`-halvdelen forblir reservert for en annen tildelingsmetode.
+Kopier det genererte `fd`-prefikset til hjemmenettverket, testmiljøet eller VPN-et ditt. Lagre det valgte `/48`-prefikset sammen med nettverkskonfigurasjonen, så kan du bruke det igjen når du legger til subnett. Velg **Generer nytt prefiks** når du trenger et nytt prefiks.
 
-ULA-er er ikke globalt nåbare som standard, men «lokal» betyr ikke hemmelig eller automatisk sikker. De kan krysse rutede stedsgrenser, VPN-er og private sammenkoblinger når operatører konfigurerer disse rutene.
+## Beregn et /64-subnett
 
-## Slik bygger denne RFC 4193-generatoren et /48-prefiks
+Skriv inn en heksadesimal **Subnett-ID** fra `0000` til `ffff`. For eksempel gir ID-en `00a0` innenfor `fd12:3456:789a::/48` subnettet `fd12:3456:789a:a0::/64`. Et `/48`-prefiks gir 65 536 mulige `/64`-subnett, slik at du kan tildele egne prefikser til lokalnett, trådløst gjestenett eller VPN.
 
-Denne RFC 4193-generatoren ber Web Crypto API om nøyaktig 40 tilfeldige biter og kombinerer dem med `fd`. Resultatet er et statistisk unikt 48-bits stedsprefiks, for eksempel `fd12:3456:789a::/48`. Genereringen skjer i nettleseren: verktøyet samler ikke inn MAC-adresse, tidsstempel, enhetsidentifikator eller serversvar.
+## Hvor fd-prefikset kommer fra
 
-Det finnes `2^40` mulige globale ID-er – omtrent 1,1 billioner. Sikker tilfeldighet gjør utilsiktet gjenbruk lite sannsynlig, men kan ikke garantere at to uavhengig genererte prefikser aldri kolliderer. Registrer det valgte `/48`-prefikset i nettverksdokumentasjonen, og gjenbruk det konsekvent.
+RFC 4193 definerer unike lokale adresser i `fc00::/7`. Halvparten som tildeles lokalt, `fd00::/8`, begynner med `fd`. Generatoren legger til en tilfeldig global ID på 40 biter fra nettleserens Web Crypto API for å lage `/48`-prefikset.
 
-## Planlegging av de 65 536 tilgjengelige /64-subnettene
+## Når du bruker en unik lokal adresse
 
-Etter `/48`-stedsprefikset kommer en 16-bits subnett-ID. Verdier fra `0000` til `ffff` gir 65 536 mulige `/64`-nettverk. Med subnett-ID-en `00a0` blir for eksempel `fd12:3456:789a::/48` til det kanoniske nettverket `fd12:3456:789a:a0::/64`.
-
-De resterende 64 bitene er grensesnitt-ID-en. Dette verktøyet planlegger bare nettverksprefikser; det genererer ikke vertsadresser med `/128` eller avleder grensesnittidentifikatorer fra MAC-adresser.
-
-## Hvor ULA-er hører hjemme – og hvor de ikke gjør det
-
-ULA-er egner seg godt til stabil intern adressering, VPN-tilkoblede steder, laboratorienettverk og tjenester som bør beholde et internt prefiks samtidig som de bruker global unicast IPv6. De er ikke en brannmur eller en iboende sikkerhetsgrense. Bruk vanlige tilgangskontroller, filtrer uønsket ULA-trafikk ved stedsgrenser, og hold interne ULA-oppføringer utenfor offentlig DNS.
-
-En vert kan bruke en ULA og en global unicast-adresse samtidig. Bruk den globale adressen for å nå Internett, og det varige ULA-prefikset for de private rutene som trenger det.
+Bruk ULA for stabile IPv6-adresser i et nettverk eller mellom lokasjoner som er koblet sammen med VPN. En enhet kan også bruke en global IPv6-adresse til offentlig Internett-trafikk og beholde ULA-adressen til interne tjenester.

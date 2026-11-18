@@ -88,17 +88,16 @@ when the tool's complexity or the user's request calls for it.
 
 ## 4. Explain the tool where it helps
 
-Use `tool-content` to choose the explanation the page needs: perhaps a concise
-example, result interpretation, a walkthrough, or a more detailed FAQ/article.
-The workflow also covers search intent, metadata, relevant links, and rendered
-content. Let the actual tool determine depth and structure. Revisit copy when
-implementation changes a capability or the meaning of a result.
+Ship a localized guide below the interactive tool alongside the description in
+`meta/<lang>.json`. Use `tool-content` to choose its depth and structure. A
+concise worked example can be enough for a simple tool. Revisit the guide when
+the implementation changes a capability or the meaning of a result.
 
 ## 5. Complete localization
 
 Use `SUPPORTED_SITE_LANGUAGES` from `apps/web/src/lib/site.ts`; do not hardcode a
-language count. Complete metadata and each UI/article locale family you create.
-Choose which content families to create based on the tool's actual copy needs.
+language count. Complete metadata, the guide, and any UI locale families for
+every supported language.
 
 For substantial translation batches, follow `.claude/agents/i18n-translator.md`:
 group related files per language and use bounded parallelism when available.
@@ -130,6 +129,8 @@ Verify that the new tool appears in discovery and its localized routes resolve.
 - Exercise a realistic input, usable output, and a correction/retry in the
   browser. Check narrow layout, keyboard access, a long-text locale, and RTL
   where applicable. Use `tool-ux-review` for the detailed review workflow.
+- Verify the localized description and guide in the rendered page. The guide
+  should fill the same content width as the interactive tool.
 - Fix regressions caused by the change. Report pre-existing failures or unavailable
   checks precisely, distinguishing completed verification from planned checks.
 

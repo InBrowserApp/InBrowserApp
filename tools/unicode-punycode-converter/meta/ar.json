@@ -1,4 +1,4 @@
 {
   "name": "محول Unicode ↔ Punycode",
-  "description": "حوّل نطاقات Unicode (IDN) وASCII (Punycode) في كلا الاتجاهين"
+  "description": "حوّل أسماء نطاقات Unicode إلى Punycode بصيغة ASCII، أو فك ترميز نطاقات xn-- إلى نص مقروء. يدعم المحوّل أسماء النطاقات الدولية (IDN) في الاتجاهين."
 }

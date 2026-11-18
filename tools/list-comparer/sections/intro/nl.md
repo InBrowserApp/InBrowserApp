@@ -1,17 +1,11 @@
-## Waarvoor deze lijstenvergelijker dient
+## Twee lijsten vergelijken op overeenkomsten en verschillen
 
-Gebruik deze tool wanneer twee lijsten op elkaar moeten aansluiten, maar je de
-precieze overlap, uitsluitingen en duplicaten wilt zien voordat je iets
-importeert, synchroniseert, verstuurt of opschoont.
+Plak de lijsten in **Lijst A** en **Lijst B**. Gebruik één item per regel of kies een komma, tab of eigen scheidingsteken. Je kunt witruimte aan het begin en einde van items weghalen of hoofdletters negeren als de lijsten anders zijn opgemaakt.
 
-## Welke resultaten je krijgt
+## De resultaten lezen
 
-De vergelijking wordt opgedeeld in praktische resultaatverzamelingen:
-gemeenschappelijke items, alleen-in-A, alleen-in-B, alle unieke waarden en
-duplicaten binnen elke bron. Je kunt elke verzameling apart kopiëren of downloaden.
+Als A de items `A101`, `B202`, `B202` bevat en B de items `B202`, `C303`, staat bij **Gemeenschappelijk** het item `B202`, bij **Alleen in A** het item `A101` en bij **Alleen in B** het item `C303`. Bij **Duplicaten in A** zie je dat `B202` twee keer voorkomt in A. **Alle unieke items** voegt de lijsten samen en toont elk item één keer.
 
-## Waar de tool het meest helpt
+## De juiste lijst kopiëren of downloaden
 
-De tool is handig voor contactlijsten, product-ID’s, auditexports,
-voorraadoverzichten, campagnesegmenten en elke opschoonronde waarbij één verkeerde
-samenvoeging later extra werk zou opleveren.
+Kies welk resultaat je nodig hebt en kopieer of download die lijst. Vergelijk bijvoorbeeld twee voorraadlijsten en gebruik **Alleen in A** om te zien welke product-ID's wel in de eerste lijst staan en in de tweede ontbreken.

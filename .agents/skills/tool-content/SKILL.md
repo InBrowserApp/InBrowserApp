@@ -109,10 +109,11 @@ fact can be checked, qualified precisely, or left out until established.
 
 ## Integrate and localize at the appropriate scope
 
-Existing articles usually live in `tools/<slug>/sections/intro/<lang>.md`, loaded
-with `resolveLocale` in `index.astro` and rendered with `ToolArticle`. Inspect
-the actual entrypoint: writing a Markdown file alone does not make it visible.
-Use this pattern as the default, adapting composition when the content benefits.
+Store the guide in `tools/<slug>/sections/intro/<lang>.md` by default. Load it
+with `resolveLocale` in `index.astro` and place a plain `ToolArticle` directly
+below the interactive tool. This renders it in the page HTML at the full width
+of the tool content area. Follow the existing entrypoint when updating a tool
+that keeps its guide in a localized message catalog.
 Changes to shared UI or app SEO should respect their existing ownership boundaries.
 
 When publishing repository content, complete the affected locale families using

@@ -1,19 +1,9 @@
-## Hva er SHA-256?
+## Beregn SHA-256-sjekksummen for tekst eller en fil
 
-SHA-256 (Secure Hash Algorithm 256-bit) er en kryptografisk hash-funksjon som produserer en 256-bits (32-byte) hash-verdi, vanligvis gjengitt som et 64-tegn heksadesimalt tall. Det er en del av SHA-2-familien av hash-funksjoner designet av NSA og publisert av NIST.
+Lim inn UTF-8-tekst eller velg **Importer fra fil** for å beregne hashen av de opprinnelige bytene i filen. Kopier den heksadesimale verdien for å sammenligne med en publisert sjekksum. SHA-256 gir en hash på 256 biter, som vises med 64 heksadesimale tegn.
 
-**Nøkkelegenskaper:**
+For å kontrollere en nedlasting beregner du hashen av den nedlastede filen og sammenligner hele den heksadesimale verdien med sjekksummen kilden har publisert. For tekst påvirker mellomrom, store og små bokstaver og linjeskift resultatet. Prøv med teksten `abc` uten avsluttende linjeskift. Den gir denne verdien.
 
-- **Deterministisk**: Samme inndata produserer alltid samme hash
-- **Rask beregning**: Rask å beregne for enhver gitt inndata
-- **Snøskredeffekt**: Små endringer i inndata produserer drastisk forskjellige utdata
-- **Irreversibel**: Beregningsmessig umulig å reversere hashen for å finne opprinnelig inndata
-- **Kollisjonsresistent**: Svært vanskelig å finne to forskjellige inndata som produserer samme hash
-
-**Vanlige bruksområder:**
-
-- Digitale signaturer og sertifikater
-- Blokkjede og kryptovalutaer (Bitcoin bruker SHA-256)
-- Passordlagring (med passende salting)
-- Filintegritetsverifisering
-- Proof-of-work algoritmer
+```text
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+```

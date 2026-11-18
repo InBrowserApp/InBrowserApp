@@ -1,4 +1,4 @@
 {
   "name": "Penjana ULA IPv6",
-  "description": "Jana awalan /48 Alamat Setempat Unik (ULA) IPv6 yang selamat mengikut RFC 4193 dalam pelayar dan rancang subnet /64 dalam ruang fd00."
+  "description": "Jana awalan /48 Alamat Setempat Unik (ULA) IPv6 mengikut RFC 4193 dan kira subnet /64 untuk rangkaian rumah, makmal atau VPN."
 }

@@ -1,4 +1,4 @@
 {
   "name": "Unicode ↔ Punycode 转换器",
-  "description": "双向转换 Unicode（IDN）与 ASCII（Punycode）域名"
+  "description": "将 Unicode 域名编码为 ASCII Punycode，或将以 xn-- 开头的域名解码为可读文本。支持国际化域名（IDN）双向转换。"
 }

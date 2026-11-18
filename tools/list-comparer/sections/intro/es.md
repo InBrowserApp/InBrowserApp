@@ -1,11 +1,11 @@
-## Para qué sirve este comparador
+## Comparar dos listas para ver coincidencias y diferencias
 
-Utilice esta herramienta cuando dos listas deban coincidir y necesite conocer las coincidencias exactas, las exclusiones y los duplicados antes de importar, sincronizar, enviar mensajes o limpiar los datos.
+Pega las dos listas en **Lista A** y **Lista B**. Usa un elemento por línea o elige una coma, una tabulación o un delimitador personalizado. Si las fuentes usan formatos distintos, puedes recortar espacios o ignorar las diferencias entre mayúsculas y minúsculas.
 
-## Qué resultados obtiene
+## Leer los resultados de la comparación
 
-La comparación se divide en conjuntos de resultados útiles: elementos compartidos, exclusivos de A, exclusivos de B, todos los valores únicos y duplicados de cada fuente. Puede copiar o descargar cada conjunto por separado.
+Si A contiene `A101`, `B202`, `B202` y B contiene `B202`, `C303`, **Compartidos** muestra `B202`, **Sólo en A** muestra `A101` y **Sólo en B** muestra `C303`. **Duplicados en A** indica que `B202` aparece dos veces en A. **Todos los valores únicos** combina ambas listas sin repetir elementos.
 
-## Dónde resulta más útil
+## Copiar o descargar la lista que necesitas
 
-Es útil para listas de contactos, identificadores de productos, exportaciones de auditoría, instantáneas de inventario, segmentos de campañas y cualquier limpieza de datos en la que una fusión incorrecta pueda generar trabajo adicional más adelante.
+Selecciona un conjunto de resultados y copia o descarga solo esa lista. Por ejemplo, compara el inventario de origen con el de destino y usa **Sólo en A** para obtener los identificadores de los productos que faltan en el destino.

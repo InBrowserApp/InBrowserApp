@@ -1,19 +1,9 @@
-## Cos'è SHA-256?
+## Calcolare il checksum SHA-256 di un testo o di un file
 
-SHA-256 (Secure Hash Algorithm 256-bit) è una funzione hash crittografica che produce un valore hash di 256 bit (32 byte), tipicamente rappresentato come un numero esadecimale di 64 caratteri. Fa parte della famiglia di funzioni hash SHA-2 progettate dalla NSA e pubblicate dal NIST.
+Incolla un testo UTF-8 oppure scegli **Importa da file** per calcolare l’hash sui byte originali del file. Copia il risultato esadecimale per confrontarlo con un checksum pubblicato. SHA-256 produce un’impronta di 256 bit, rappresentata da 64 caratteri esadecimali.
 
-**Caratteristiche chiave:**
+Per verificare un download, calcola l’hash del file scaricato e confronta l’intero valore esadecimale con quello pubblicato dalla fonte. Nel testo, spazi, maiuscole e interruzioni di riga cambiano l’hash. Per una prova rapida, il testo `abc` senza un a capo finale produce il valore seguente.
 
-- **Deterministico**: Lo stesso input produce sempre lo stesso hash
-- **Calcolo veloce**: Veloce da calcolare per qualsiasi input dato
-- **Effetto valanga**: Piccoli cambiamenti nell'input producono output drasticamente diversi
-- **Irreversibile**: Computazionalmente impossibile invertire l'hash per trovare l'input originale
-- **Resistente alle collisioni**: Molto difficile trovare due input diversi che producano lo stesso hash
-
-**Usi comuni:**
-
-- Firme digitali e certificati
-- Blockchain e criptovalute (Bitcoin usa SHA-256)
-- Archiviazione password (con salting appropriato)
-- Verifica dell'integrità dei file
-- Algoritmi proof-of-work
+```text
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+```

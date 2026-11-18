@@ -1,4 +1,4 @@
 {
   "name": "Tekstregels sorteren",
-  "description": "Sorteer tekstregels oplopend of aflopend, met opties om hoofdletters te negeren, witruimte aan de randen te wissen en lege of dubbele regels te verwijderen."
+  "description": "Sorteer tekstregels van A tot Z of van Z tot A. Negeer hoofdletters, haal witruimte weg of verwijder lege en dubbele regels voordat je de lijst kopieert."
 }

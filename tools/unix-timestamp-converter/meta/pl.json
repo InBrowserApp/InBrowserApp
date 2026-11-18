@@ -1,4 +1,4 @@
 {
   "name": "Konwerter Znacznika Czasu Unix",
-  "description": "Konwertuj znaczniki czasu Unix na czytelne daty i odwrotnie. Obsługuje automatyczne wykrywanie sekund, milisekund i nanosekund."
+  "description": "Konwertuj znaczniki czasu Unix na czas lokalny, UTC lub ISO 8601, a daty na sekundy, milisekundy lub nanosekundy od początku epoki Unix."
 }

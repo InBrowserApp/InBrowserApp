@@ -1,19 +1,9 @@
-## Czym jest SHA-256?
+## Obliczanie sumy kontrolnej SHA-256 tekstu lub pliku
 
-SHA-256 (Secure Hash Algorithm 256-bit) to kryptograficzna funkcja skrótu, która produkuje 256-bitową (32-bajtową) wartość skrótu, zazwyczaj przedstawianą jako 64-znakową liczbę szesnastkową. Jest częścią rodziny funkcji skrótu SHA-2 zaprojektowanych przez NSA i opublikowanych przez NIST.
+Wklej tekst UTF-8 lub wybierz **Importuj z pliku**, aby obliczyć skrót z oryginalnych bajtów pliku. Skopiuj wynik szesnastkowy, aby porównać go z opublikowaną sumą kontrolną. SHA-256 daje 256-bitowy skrót zapisany jako 64 znaki szesnastkowe.
 
-**Kluczowe cechy:**
+Aby sprawdzić pobrany plik, oblicz jego skrót i porównaj całą wartość szesnastkową z wartością podaną przez źródło. W tekście spacje, wielkość liter i znaki nowego wiersza wpływają na skrót. W ramach szybkiej próby wpisz `abc` bez znaku nowego wiersza na końcu. Otrzymasz taki wynik.
 
-- **Deterministyczna**: To samo wejście zawsze produkuje ten sam skrót
-- **Szybkie obliczenia**: Szybkie do obliczenia dla dowolnego danego wejścia
-- **Efekt lawiny**: Małe zmiany w wejściu powodują drastycznie różne wyjścia
-- **Nieodwracalna**: Obliczeniowo niemożliwe do odwrócenia skrótu w celu znalezienia oryginalnego wejścia
-- **Odporna na kolizje**: Bardzo trudno znaleźć dwa różne wejścia, które produkują ten sam skrót
-
-**Powszechne zastosowania:**
-
-- Podpisy cyfrowe i certyfikaty
-- Blockchain i kryptowaluty (Bitcoin używa SHA-256)
-- Przechowywanie haseł (z odpowiednim soleniem)
-- Weryfikacja integralności plików
-- Algorytmy proof-of-work
+```text
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+```

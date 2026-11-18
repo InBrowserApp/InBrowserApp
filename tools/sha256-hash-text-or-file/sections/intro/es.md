@@ -1,19 +1,9 @@
-## ¿Qué es SHA-256?
+## Calcular la suma de verificación SHA-256 de un texto o archivo
 
-SHA-256 (Algoritmo de Hash Seguro de 256 bits) es una función hash criptográfica que produce un valor hash de 256 bits (32 bytes), típicamente representado como un número hexadecimal de 64 caracteres. Es parte de la familia de funciones hash SHA-2 diseñadas por la NSA y publicadas por el NIST.
+Pega texto UTF-8 o selecciona **Importar desde archivo** para calcular el hash de los bytes originales del archivo. Copia el resultado hexadecimal para compararlo con una suma de verificación publicada. SHA-256 genera un hash de 256 bits que se muestra con 64 caracteres hexadecimales.
 
-**Características clave:**
+Para verificar una descarga, calcula el hash del archivo descargado y compara el valor hexadecimal completo con el publicado por la fuente. En el caso del texto, los espacios, las mayúsculas y los saltos de línea cambian el hash. Como prueba, el texto `abc` sin un salto de línea al final produce el siguiente resultado.
 
-- **Determinístico**: La misma entrada siempre produce el mismo hash
-- **Computación rápida**: Rápido de calcular para cualquier entrada dada
-- **Efecto avalancha**: Pequeños cambios en la entrada producen salidas drásticamente diferentes
-- **Irreversible**: Es computacionalmente inviable revertir el hash para encontrar la entrada original
-- **Resistente a colisiones**: Muy difícil encontrar dos entradas diferentes que produzcan el mismo hash
-
-**Usos comunes:**
-
-- Firmas digitales y certificados
-- Blockchain y criptomonedas (Bitcoin usa SHA-256)
-- Almacenamiento de contraseñas (con salado apropiado)
-- Verificación de integridad de archivos
-- Algoritmos de prueba de trabajo
+```text
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+```

@@ -1,4 +1,4 @@
 {
   "name": "Unix Tidsstempel Konverterer",
-  "description": "Konverter Unix-tidsstempler til lesbare datoer og omvendt. Støtter automatisk deteksjon av sekunder, millisekunder og nanosekunder."
+  "description": "Konverter Unix-tidsstempler til lokal tid, UTC eller ISO 8601, og konverter datoer tilbake til sekunder, millisekunder eller nanosekunder."
 }

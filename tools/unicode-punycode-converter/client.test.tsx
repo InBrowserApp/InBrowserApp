@@ -4,14 +4,8 @@ import { afterEach, describe, expect, test } from "vitest"
 import UnicodePunycodeConverterClient from "./client"
 
 const messages = {
-  meta: {
-    name: "Unicode ↔ Punycode Converter",
-    description: "Convert domains both ways",
-  },
   asciiDomainLabel: "ASCII Domain",
   unicodeDomainLabel: "Unicode Domain",
-  whatIsPunycodeTitle: "What is Punycode?",
-  whatIsPunycodeDescription: "Punycode explanation.",
   copyLabel: "Copy",
   copiedLabel: "Copied",
   resetLabel: "Reset example",
