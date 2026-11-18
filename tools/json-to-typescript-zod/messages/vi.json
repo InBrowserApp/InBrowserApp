@@ -1,0 +1,14 @@
+{
+  "inputLabel": "Đầu vào JSON",
+  "inputPlaceholder": "Dán một phản hồi API mẫu…",
+  "sampleLabel": "Dùng mẫu",
+  "openFileLabel": "Mở tệp JSON",
+  "fileReadError": "Không đọc được tệp. Hãy thử mở lại.",
+  "invalidJson": "JSON không hợp lệ. Hãy kiểm tra cú pháp rồi thử lại.",
+  "outputLabel": "Mã đã tạo",
+  "emptyOutput": "Nhập JSON hợp lệ để tạo mã.",
+  "copyLabel": "Sao chép mã",
+  "copiedLabel": "Đã sao chép",
+  "downloadLabel": "Tải tệp .ts",
+  "zodHelp": "Khi phân tích dữ liệu, Zod 4 loại bỏ các trường không được khai báo trong lược đồ."
+}

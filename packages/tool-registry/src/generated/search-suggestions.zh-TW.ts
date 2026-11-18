@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "遊戲控制器測試器",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "GIF 製作器",
     slug: "gif-maker",
@@ -671,6 +676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "JSON 轉 TOML 轉換器",
     slug: "json-to-toml-converter",
+  },
+  {
+    category: "json",
+    name: "JSON 轉 TypeScript / Zod",
+    slug: "json-to-typescript-zod",
   },
   {
     category: "json",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID 驗證器",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "影片影格擷取器",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

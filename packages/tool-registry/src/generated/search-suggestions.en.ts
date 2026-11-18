@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Gamepad Tester",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "GIF Maker",
     slug: "gif-maker",
@@ -671,6 +676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "JSON → TOML Converter",
     slug: "json-to-toml-converter",
+  },
+  {
+    category: "json",
+    name: "JSON to TypeScript / Zod",
+    slug: "json-to-typescript-zod",
   },
   {
     category: "json",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID Validator",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Video Frame Extractor",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "게임패드 테스터",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "GIF 만들기",
     slug: "gif-maker",
@@ -671,6 +676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "JSON → TOML 변환기",
     slug: "json-to-toml-converter",
+  },
+  {
+    category: "json",
+    name: "JSON → TypeScript / Zod 변환기",
+    slug: "json-to-typescript-zod",
   },
   {
     category: "json",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID 검증기",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "동영상 프레임 추출기",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

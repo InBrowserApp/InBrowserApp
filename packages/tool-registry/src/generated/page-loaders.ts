@@ -116,6 +116,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/file-to-data-uri-converter/page"),
   "file-type-detector": () => import("@tool/file-type-detector/page"),
   "font-subset-generator": () => import("@tool/font-subset-generator/page"),
+  "gamepad-tester": () => import("@tool/gamepad-tester/page"),
   "gif-maker": () => import("@tool/gif-maker/page"),
   "gif-to-animated-webp-converter": () =>
     import("@tool/gif-to-animated-webp-converter/page"),
@@ -167,6 +168,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "json-schema-validator": () => import("@tool/json-schema-validator/page"),
   "json-to-csv-converter": () => import("@tool/json-to-csv-converter/page"),
   "json-to-toml-converter": () => import("@tool/json-to-toml-converter/page"),
+  "json-to-typescript-zod": () => import("@tool/json-to-typescript-zod/page"),
   "json-to-xml-converter": () => import("@tool/json-to-xml-converter/page"),
   "json-to-yaml-converter": () => import("@tool/json-to-yaml-converter/page"),
   "jsonpath-tester": () => import("@tool/jsonpath-tester/page"),
@@ -359,6 +361,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "uuid-v6-generator": () => import("@tool/uuid-v6-generator/page"),
   "uuid-v7-generator": () => import("@tool/uuid-v7-generator/page"),
   "uuid-validator": () => import("@tool/uuid-validator/page"),
+  "video-frame-extractor": () => import("@tool/video-frame-extractor/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),

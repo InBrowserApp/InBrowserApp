@@ -1,0 +1,4 @@
+{
+  "name": "Teste de controle de jogo",
+  "description": "Teste os botões, gatilhos e analógicos do controle em tempo real no navegador. Veja a distância de cada analógico até o centro ao soltá-lo para identificar possíveis desvios (drift)."
+}

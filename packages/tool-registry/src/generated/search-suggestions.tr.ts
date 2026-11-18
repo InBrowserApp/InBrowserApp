@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Oyun Kumandası Testi",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "GIF Oluşturucu",
     slug: "gif-maker",
@@ -671,6 +676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "JSON → TOML Dönüştürücü",
     slug: "json-to-toml-converter",
+  },
+  {
+    category: "json",
+    name: "JSON’dan TypeScript ve Zod’a Dönüştürücü",
+    slug: "json-to-typescript-zod",
   },
   {
     category: "json",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID Doğrulayıcı",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Videodan Kare Çıkarma",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

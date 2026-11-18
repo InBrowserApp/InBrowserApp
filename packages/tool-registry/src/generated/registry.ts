@@ -11320,6 +11320,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "gamepad-tester",
+    category: "misc",
+    icon: "gamepad-2",
+    tags: [
+      "gamepad",
+      "controller",
+      "joystick",
+      "stick drift",
+      "hardware",
+      "buttons",
+      "triggers",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار يد التحكم",
+        description:
+          "اختبر أزرار يد التحكم وزناداتها وعصيها مباشرةً في متصفحك. قِس بُعد كل عصا عن المركز بعد إفلاتها للمساعدة في رصد الانحراف.",
+      },
+      de: {
+        name: "Gamepad-Test",
+        description:
+          "Teste Tasten, Trigger und Analogsticks deines Gamepads live im Browser. Prüfe, wie weit jeder Stick nach dem Loslassen von der Mitte abweicht, um Stick-Drift zu erkennen.",
+      },
+      en: {
+        name: "Gamepad Tester",
+        description:
+          "Test gamepad buttons, triggers, and sticks live in your browser. Check how far each stick rests from center to help spot stick drift.",
+      },
+      es: {
+        name: "Prueba de mandos",
+        description:
+          "Prueba en tiempo real los botones, gatillos y palancas de tu mando desde el navegador. Comprueba a qué distancia del centro queda cada palanca al soltarla para detectar posibles desvíos (drift).",
+      },
+      fr: {
+        name: "Test de manette",
+        description:
+          "Testez les boutons, les gâchettes et les sticks de votre manette en direct dans votre navigateur. Mesurez l’écart entre le centre et la position au repos de chaque stick pour repérer un éventuel drift.",
+      },
+      he: {
+        name: "בדיקת בקר משחק",
+        description:
+          "בדקו בזמן אמת את הכפתורים, ההדקים והסטיקים של בקר המשחק בדפדפן. מדדו כמה רחוק כל סטיק נשאר מהמרכז אחרי השחרור כדי לזהות סטייה.",
+      },
+      hi: {
+        name: "गेमपैड टेस्टर",
+        description:
+          "ब्राउज़र में गेमपैड के बटन, ट्रिगर और स्टिक लाइव जाँचें। स्टिक छोड़ने पर देखें कि वह केंद्र से कितनी दूर ठहरती है, ताकि संभावित स्टिक ड्रिफ़्ट पहचान सकें।",
+      },
+      id: {
+        name: "Penguji Gamepad",
+        description:
+          "Uji tombol, pemicu, dan stik gamepad secara langsung di browser. Lihat jarak tiap stik dari titik tengah saat dilepas untuk membantu mendeteksi drift stik.",
+      },
+      it: {
+        name: "Test del controller",
+        description:
+          "Prova in tempo reale pulsanti, grilletti e levette del controller nel browser. Controlla a che distanza dal centro si ferma ogni levetta quando la rilasci, per individuare eventuali problemi di drift.",
+      },
+      ja: {
+        name: "ゲームパッドテスター",
+        description:
+          "ゲームパッドのボタン、トリガー、スティックの入力をブラウザーでリアルタイムに確認できます。手を離したときのスティックの中心からのずれを測り、ドリフトの目安にできます。",
+      },
+      ko: {
+        name: "게임패드 테스터",
+        description:
+          "브라우저에서 게임패드의 버튼, 트리거, 스틱 입력을 실시간으로 확인하세요. 손을 뗀 스틱이 중앙에서 얼마나 벗어나는지 확인해 쏠림 여부를 판단할 수 있습니다.",
+      },
+      ms: {
+        name: "Penguji Alat Kawalan Permainan",
+        description:
+          "Uji butang, picu dan stik alat kawalan permainan secara langsung dalam pelayar. Ukur jarak setiap stik dari titik tengah selepas dilepaskan untuk mengesan tanda hanyutan stik.",
+      },
+      nl: {
+        name: "Gamepadtester",
+        description:
+          "Test de knoppen, triggers en sticks van je gamepad live in je browser. Bekijk hoever elke stick na het loslaten van het midden afwijkt om stickdrift op te sporen.",
+      },
+      no: {
+        name: "Test av spillkontroller",
+        description:
+          "Test knappene, avtrekkerne og spakene på spillkontrolleren i sanntid i nettleseren. Se hvor langt hver spak blir stående fra midten når du slipper den, for å oppdage spakdrift.",
+      },
+      pl: {
+        name: "Tester pada",
+        description:
+          "Sprawdź przyciski, spusty i drążki pada na żywo w przeglądarce. Zobacz, jak daleko od środka zatrzymują się drążki, aby wykryć możliwy dryf.",
+      },
+      pt: {
+        name: "Teste de controle de jogo",
+        description:
+          "Teste os botões, gatilhos e analógicos do controle em tempo real no navegador. Veja a distância de cada analógico até o centro ao soltá-lo para identificar possíveis desvios (drift).",
+      },
+      ru: {
+        name: "Тест геймпада",
+        description:
+          "Проверяйте кнопки, курки и стики геймпада в браузере в реальном времени. Измерьте отклонение стиков от центра в покое, чтобы заметить возможный дрейф.",
+      },
+      sv: {
+        name: "Test av handkontroll",
+        description:
+          "Testa handkontrollens knappar, avtryckare och spakar i realtid i webbläsaren. Se hur långt varje spak hamnar från mitten när du släpper den för att upptäcka spakdrift.",
+      },
+      th: {
+        name: "ทดสอบจอยเกม",
+        description:
+          "ดูการตอบสนองของปุ่ม ทริกเกอร์ และก้านอนาล็อกแบบเรียลไทม์ในเบราว์เซอร์ วัดว่าก้านแต่ละข้างเยื้องจากจุดกึ่งกลางเท่าไรเมื่อปล่อยมือ เพื่อช่วยสังเกตอาการดริฟต์",
+      },
+      tr: {
+        name: "Oyun Kumandası Testi",
+        description:
+          "Kumandanızın düğmelerini, tetiklerini ve analog çubuklarını tarayıcıda anlık olarak test edin. Kaymayı fark etmek için çubukların serbestken merkeze uzaklığını ölçün.",
+      },
+      vi: {
+        name: "Kiểm tra tay cầm chơi game",
+        description:
+          "Xem phản hồi trực tiếp của các nút, cò và cần analog ngay trong trình duyệt. Đo độ lệch tâm khi thả từng cần để phát hiện dấu hiệu trôi cần.",
+      },
+      "zh-CN": {
+        name: "游戏手柄测试器",
+        description:
+          "在浏览器中实时测试手柄的按键、扳机和摇杆。查看松手后摇杆偏离中心的程度，辅助判断是否存在漂移。",
+      },
+      "zh-TW": {
+        name: "遊戲控制器測試器",
+        description:
+          "在瀏覽器即時測試遊戲控制器的按鍵、扳機和搖桿。查看放開後搖桿偏離中心的程度，協助判斷是否有飄移。",
+      },
+    },
+  },
+  {
     slug: "gif-maker",
     category: "image",
     icon: "film",
@@ -16854,6 +16985,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "JSON 轉 TOML 轉換器",
         description:
           "將 JSON 轉為 TOML。貼上 JSON 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  {
+    slug: "json-to-typescript-zod",
+    category: "json",
+    icon: "braces",
+    tags: ["json", "typescript", "zod", "api", "type", "schema", "validation"],
+    locales: {
+      ar: {
+        name: "محول JSON إلى TypeScript أو Zod",
+        description:
+          "ولّد أنواع TypeScript أو مخطط تحقق باستخدام Zod 4 من مثال لاستجابة API بصيغة JSON.",
+      },
+      de: {
+        name: "JSON-zu-TypeScript-/Zod-Konverter",
+        description:
+          "Leite TypeScript-Typen oder ein Zod-4-Validierungsschema aus einer JSON-API-Beispielantwort ab.",
+      },
+      en: {
+        name: "JSON to TypeScript / Zod",
+        description:
+          "Generate TypeScript types or a Zod 4 validation schema from a sample JSON API response.",
+      },
+      es: {
+        name: "Convertidor de JSON a TypeScript / Zod",
+        description:
+          "Genera tipos de TypeScript o un esquema de validación de Zod 4 a partir de una respuesta JSON de ejemplo de una API.",
+      },
+      fr: {
+        name: "Convertisseur JSON vers TypeScript / Zod",
+        description:
+          "Générez des types TypeScript ou un schéma de validation Zod 4 à partir d’un exemple de réponse d’API au format JSON.",
+      },
+      he: {
+        name: "ממיר JSON ל-TypeScript או ל-Zod",
+        description:
+          "צרו טיפוסי TypeScript או סכמת אימות של Zod 4 מתגובת API לדוגמה בפורמט JSON.",
+      },
+      hi: {
+        name: "JSON से TypeScript या Zod कन्वर्टर",
+        description:
+          "JSON में दिए गए API रिस्पॉन्स के उदाहरण से TypeScript टाइप या Zod 4 का वैलिडेशन स्कीमा बनाएँ।",
+      },
+      id: {
+        name: "Konverter JSON ke TypeScript / Zod",
+        description:
+          "Hasilkan tipe TypeScript atau skema validasi Zod 4 dari contoh respons API berformat JSON.",
+      },
+      it: {
+        name: "Convertitore da JSON a TypeScript / Zod",
+        description:
+          "Genera tipi TypeScript o uno schema di validazione Zod 4 da una risposta JSON di esempio di un’API.",
+      },
+      ja: {
+        name: "JSON → TypeScript / Zod",
+        description:
+          "JSON 形式の API レスポンスのサンプルから、TypeScript の型や Zod 4 の検証スキーマを生成します。",
+      },
+      ko: {
+        name: "JSON → TypeScript / Zod 변환기",
+        description:
+          "JSON API 응답 예시에서 TypeScript 타입이나 Zod 4 검증 스키마를 생성합니다.",
+      },
+      ms: {
+        name: "Penukar JSON kepada TypeScript / Zod",
+        description:
+          "Jana jenis TypeScript atau skema pengesahan Zod 4 daripada contoh respons API dalam format JSON.",
+      },
+      nl: {
+        name: "JSON naar TypeScript of Zod",
+        description:
+          "Genereer TypeScript-types of een Zod 4-validatieschema op basis van een voorbeeld van een API-respons in JSON.",
+      },
+      no: {
+        name: "JSON til TypeScript / Zod",
+        description:
+          "Generer TypeScript-typer eller et valideringsskjema for Zod 4 fra et eksempel på et API-svar i JSON.",
+      },
+      pl: {
+        name: "Konwerter JSON na TypeScript i Zod",
+        description:
+          "Generuj typy TypeScript lub schemat walidacji Zod 4 na podstawie przykładowej odpowiedzi API w formacie JSON.",
+      },
+      pt: {
+        name: "Conversor de JSON para TypeScript / Zod",
+        description:
+          "Gere tipos TypeScript ou um esquema de validação Zod 4 a partir de um exemplo de resposta de API em JSON.",
+      },
+      ru: {
+        name: "Конвертер JSON в TypeScript и Zod",
+        description:
+          "Создавайте типы TypeScript или схему валидации Zod 4 по примеру ответа API в формате JSON.",
+      },
+      sv: {
+        name: "JSON till TypeScript / Zod",
+        description:
+          "Generera TypeScript-typer eller ett valideringsschema för Zod 4 från ett exempel på ett API-svar i JSON.",
+      },
+      th: {
+        name: "ตัวแปลง JSON เป็น TypeScript / Zod",
+        description:
+          "สร้างชนิดข้อมูล TypeScript หรือสคีมา Zod 4 สำหรับตรวจสอบข้อมูลจากตัวอย่างผลตอบกลับ API ในรูปแบบ JSON",
+      },
+      tr: {
+        name: "JSON’dan TypeScript ve Zod’a Dönüştürücü",
+        description:
+          "JSON biçimindeki örnek bir API yanıtından TypeScript türleri veya bir Zod 4 doğrulama şeması oluşturun.",
+      },
+      vi: {
+        name: "Chuyển JSON sang TypeScript / Zod",
+        description:
+          "Tạo kiểu TypeScript hoặc lược đồ kiểm tra dữ liệu bằng Zod 4 từ một phản hồi API mẫu ở định dạng JSON.",
+      },
+      "zh-CN": {
+        name: "JSON 转 TypeScript / Zod",
+        description:
+          "从 JSON 接口响应示例生成 TypeScript 类型或 Zod 4 校验代码。",
+      },
+      "zh-TW": {
+        name: "JSON 轉 TypeScript / Zod",
+        description:
+          "從 JSON API 回應範例產生 TypeScript 型別或 Zod 4 驗證程式碼。",
       },
     },
   },
@@ -35875,6 +36129,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "video-frame-extractor",
+    category: "image",
+    icon: "film",
+    tags: [
+      "video",
+      "frame",
+      "screenshot",
+      "timestamp",
+      "interval",
+      "mp4",
+      "webm",
+      "jpg",
+      "png",
+      "zip",
+    ],
+    locales: {
+      ar: {
+        name: "أداة استخراج إطارات الفيديو",
+        description:
+          "استخرج صورًا ثابتة من فيديو في أوقات محددة أو على فترات منتظمة. عاين الإطارات ونزّلها بصيغة JPG أو PNG، كل صورة على حدة أو كلها في ملف ZIP.",
+      },
+      de: {
+        name: "Video-Einzelbilder extrahieren",
+        description:
+          "Extrahiere Einzelbilder aus einem Video an bestimmten Zeitpunkten oder in regelmäßigen Abständen. Sieh dir die Bilder an und lade sie einzeln als JPG oder PNG oder gesammelt als ZIP herunter.",
+      },
+      en: {
+        name: "Video Frame Extractor",
+        description:
+          "Extract still images from a video at specific timestamps or regular intervals. Preview and download JPG or PNG frames individually or as a ZIP.",
+      },
+      es: {
+        name: "Extractor de fotogramas de video",
+        description:
+          "Extrae fotogramas de un video en marcas de tiempo específicas o a intervalos regulares. Previsualiza y descarga las imágenes JPG o PNG por separado o en un ZIP.",
+      },
+      fr: {
+        name: "Extracteur d’images vidéo",
+        description:
+          "Extrayez des images fixes d’une vidéo à des instants précis ou à intervalles réguliers. Prévisualisez les images JPG ou PNG et téléchargez-les à l’unité ou dans un ZIP.",
+      },
+      he: {
+        name: "חילוץ פריימים מווידאו",
+        description:
+          "חלצו תמונות מתוך סרטון בנקודות זמן מסוימות או במרווחי זמן קבועים. אפשר לצפות בתמונות ולהוריד אותן בנפרד כקובצי JPG או PNG, או יחד בקובץ ZIP.",
+      },
+      hi: {
+        name: "वीडियो फ़्रेम एक्सट्रैक्टर",
+        description:
+          "वीडियो में चुने हुए समय बिंदुओं या नियमित अंतराल पर स्थिर चित्र निकालें। JPG या PNG फ़्रेम देखें और उन्हें अलग-अलग या एक ZIP में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengekstrak Bingkai Video",
+        description:
+          "Ambil gambar diam dari video pada waktu tertentu atau dengan interval tetap. Pratinjau dan unduh bingkai JPG atau PNG satu per satu atau sekaligus sebagai ZIP.",
+      },
+      it: {
+        name: "Estrattore di fotogrammi video",
+        description:
+          "Estrai immagini da un video in punti specifici o a intervalli regolari. Visualizza in anteprima e scarica i fotogrammi in JPG o PNG, singolarmente o in un archivio ZIP.",
+      },
+      ja: {
+        name: "動画フレーム抽出",
+        description:
+          "動画から指定した再生時刻や一定の間隔で静止画を抽出します。JPG または PNG でプレビューし、個別または ZIP にまとめてダウンロードできます。",
+      },
+      ko: {
+        name: "동영상 프레임 추출기",
+        description:
+          "동영상의 특정 시점이나 일정한 간격에서 정지 이미지를 추출합니다. JPG 또는 PNG 프레임을 미리 보고 개별 파일이나 ZIP으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengekstrak Bingkai Video",
+        description:
+          "Ekstrak imej pegun daripada video pada cap masa tertentu atau pada selang tetap. Pratonton dan muat turun bingkai JPG atau PNG satu demi satu atau sebagai fail ZIP.",
+      },
+      nl: {
+        name: "Videoframes extraheren",
+        description:
+          "Haal stilstaande beelden uit een video op specifieke tijdstippen of met vaste tussenpozen. Bekijk de frames en download ze afzonderlijk als JPG of PNG, of samen als ZIP.",
+      },
+      no: {
+        name: "Stillbilder fra video",
+        description:
+          "Hent ut stillbilder fra en video på bestemte tidspunkter eller med jevne mellomrom. Se en forhåndsvisning og last ned JPG- eller PNG-bildene enkeltvis eller som en ZIP-fil.",
+      },
+      pl: {
+        name: "Wyodrębnianie klatek wideo",
+        description:
+          "Wyodrębniaj klatki wideo w wybranych momentach lub w regularnych odstępach. Wyświetl podgląd obrazów JPG lub PNG i pobierz je pojedynczo albo w archiwum ZIP.",
+      },
+      pt: {
+        name: "Extrator de quadros de vídeo",
+        description:
+          "Extraia imagens de um vídeo em momentos específicos ou em intervalos regulares. Pré-visualize os quadros em JPG ou PNG e baixe-os individualmente ou em um arquivo ZIP.",
+      },
+      ru: {
+        name: "Извлечение кадров из видео",
+        description:
+          "Извлекайте кадры из видео по отметкам времени или через равные интервалы. Просматривайте и скачивайте изображения JPG или PNG по одному или в ZIP-архиве.",
+      },
+      sv: {
+        name: "Extrahera bildrutor från video",
+        description:
+          "Extrahera stillbilder från en video vid valda tidpunkter eller med jämna mellanrum. Förhandsgranska och ladda ner JPG- eller PNG-bilder enskilt eller i en ZIP-fil.",
+      },
+      th: {
+        name: "เครื่องมือดึงเฟรมวิดีโอ",
+        description:
+          "ดึงภาพนิ่งจากวิดีโอตามเวลาที่ระบุหรือเป็นช่วงเวลาคงที่ ดูตัวอย่างและดาวน์โหลดภาพ JPG หรือ PNG ทีละภาพหรือรวมเป็นไฟล์ ZIP",
+      },
+      tr: {
+        name: "Videodan Kare Çıkarma",
+        description:
+          "Videodan belirli zamanlarda veya sabit aralıklarla kareler çıkarın. JPG veya PNG kareleri önizleyin, tek tek ya da ZIP olarak topluca indirin.",
+      },
+      vi: {
+        name: "Trình trích xuất khung hình từ video",
+        description:
+          "Trích xuất ảnh tĩnh từ video tại các mốc thời gian đã chọn hoặc theo khoảng cách đều. Xem trước và tải từng khung hình JPG hoặc PNG, hoặc tải tất cả dưới dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "视频截帧器",
+        description:
+          "按指定时间点或固定间隔从视频中提取画面，预览 JPG 或 PNG 图片，并逐张下载或打包为 ZIP。",
+      },
+      "zh-TW": {
+        name: "影片影格擷取器",
+        description:
+          "依指定時間點或固定間隔從影片擷取靜態圖片。可預覽 JPG 或 PNG 影格，並逐張下載或打包成 ZIP。",
+      },
+    },
+  },
+  {
     slug: "vin-validator",
     category: "text",
     icon: "car",
@@ -48848,6 +49236,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "gamepad-tester": {
+    slug: "gamepad-tester",
+    category: "misc",
+    icon: "gamepad-2",
+    tags: [
+      "gamepad",
+      "controller",
+      "joystick",
+      "stick drift",
+      "hardware",
+      "buttons",
+      "triggers",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار يد التحكم",
+        description:
+          "اختبر أزرار يد التحكم وزناداتها وعصيها مباشرةً في متصفحك. قِس بُعد كل عصا عن المركز بعد إفلاتها للمساعدة في رصد الانحراف.",
+      },
+      de: {
+        name: "Gamepad-Test",
+        description:
+          "Teste Tasten, Trigger und Analogsticks deines Gamepads live im Browser. Prüfe, wie weit jeder Stick nach dem Loslassen von der Mitte abweicht, um Stick-Drift zu erkennen.",
+      },
+      en: {
+        name: "Gamepad Tester",
+        description:
+          "Test gamepad buttons, triggers, and sticks live in your browser. Check how far each stick rests from center to help spot stick drift.",
+      },
+      es: {
+        name: "Prueba de mandos",
+        description:
+          "Prueba en tiempo real los botones, gatillos y palancas de tu mando desde el navegador. Comprueba a qué distancia del centro queda cada palanca al soltarla para detectar posibles desvíos (drift).",
+      },
+      fr: {
+        name: "Test de manette",
+        description:
+          "Testez les boutons, les gâchettes et les sticks de votre manette en direct dans votre navigateur. Mesurez l’écart entre le centre et la position au repos de chaque stick pour repérer un éventuel drift.",
+      },
+      he: {
+        name: "בדיקת בקר משחק",
+        description:
+          "בדקו בזמן אמת את הכפתורים, ההדקים והסטיקים של בקר המשחק בדפדפן. מדדו כמה רחוק כל סטיק נשאר מהמרכז אחרי השחרור כדי לזהות סטייה.",
+      },
+      hi: {
+        name: "गेमपैड टेस्टर",
+        description:
+          "ब्राउज़र में गेमपैड के बटन, ट्रिगर और स्टिक लाइव जाँचें। स्टिक छोड़ने पर देखें कि वह केंद्र से कितनी दूर ठहरती है, ताकि संभावित स्टिक ड्रिफ़्ट पहचान सकें।",
+      },
+      id: {
+        name: "Penguji Gamepad",
+        description:
+          "Uji tombol, pemicu, dan stik gamepad secara langsung di browser. Lihat jarak tiap stik dari titik tengah saat dilepas untuk membantu mendeteksi drift stik.",
+      },
+      it: {
+        name: "Test del controller",
+        description:
+          "Prova in tempo reale pulsanti, grilletti e levette del controller nel browser. Controlla a che distanza dal centro si ferma ogni levetta quando la rilasci, per individuare eventuali problemi di drift.",
+      },
+      ja: {
+        name: "ゲームパッドテスター",
+        description:
+          "ゲームパッドのボタン、トリガー、スティックの入力をブラウザーでリアルタイムに確認できます。手を離したときのスティックの中心からのずれを測り、ドリフトの目安にできます。",
+      },
+      ko: {
+        name: "게임패드 테스터",
+        description:
+          "브라우저에서 게임패드의 버튼, 트리거, 스틱 입력을 실시간으로 확인하세요. 손을 뗀 스틱이 중앙에서 얼마나 벗어나는지 확인해 쏠림 여부를 판단할 수 있습니다.",
+      },
+      ms: {
+        name: "Penguji Alat Kawalan Permainan",
+        description:
+          "Uji butang, picu dan stik alat kawalan permainan secara langsung dalam pelayar. Ukur jarak setiap stik dari titik tengah selepas dilepaskan untuk mengesan tanda hanyutan stik.",
+      },
+      nl: {
+        name: "Gamepadtester",
+        description:
+          "Test de knoppen, triggers en sticks van je gamepad live in je browser. Bekijk hoever elke stick na het loslaten van het midden afwijkt om stickdrift op te sporen.",
+      },
+      no: {
+        name: "Test av spillkontroller",
+        description:
+          "Test knappene, avtrekkerne og spakene på spillkontrolleren i sanntid i nettleseren. Se hvor langt hver spak blir stående fra midten når du slipper den, for å oppdage spakdrift.",
+      },
+      pl: {
+        name: "Tester pada",
+        description:
+          "Sprawdź przyciski, spusty i drążki pada na żywo w przeglądarce. Zobacz, jak daleko od środka zatrzymują się drążki, aby wykryć możliwy dryf.",
+      },
+      pt: {
+        name: "Teste de controle de jogo",
+        description:
+          "Teste os botões, gatilhos e analógicos do controle em tempo real no navegador. Veja a distância de cada analógico até o centro ao soltá-lo para identificar possíveis desvios (drift).",
+      },
+      ru: {
+        name: "Тест геймпада",
+        description:
+          "Проверяйте кнопки, курки и стики геймпада в браузере в реальном времени. Измерьте отклонение стиков от центра в покое, чтобы заметить возможный дрейф.",
+      },
+      sv: {
+        name: "Test av handkontroll",
+        description:
+          "Testa handkontrollens knappar, avtryckare och spakar i realtid i webbläsaren. Se hur långt varje spak hamnar från mitten när du släpper den för att upptäcka spakdrift.",
+      },
+      th: {
+        name: "ทดสอบจอยเกม",
+        description:
+          "ดูการตอบสนองของปุ่ม ทริกเกอร์ และก้านอนาล็อกแบบเรียลไทม์ในเบราว์เซอร์ วัดว่าก้านแต่ละข้างเยื้องจากจุดกึ่งกลางเท่าไรเมื่อปล่อยมือ เพื่อช่วยสังเกตอาการดริฟต์",
+      },
+      tr: {
+        name: "Oyun Kumandası Testi",
+        description:
+          "Kumandanızın düğmelerini, tetiklerini ve analog çubuklarını tarayıcıda anlık olarak test edin. Kaymayı fark etmek için çubukların serbestken merkeze uzaklığını ölçün.",
+      },
+      vi: {
+        name: "Kiểm tra tay cầm chơi game",
+        description:
+          "Xem phản hồi trực tiếp của các nút, cò và cần analog ngay trong trình duyệt. Đo độ lệch tâm khi thả từng cần để phát hiện dấu hiệu trôi cần.",
+      },
+      "zh-CN": {
+        name: "游戏手柄测试器",
+        description:
+          "在浏览器中实时测试手柄的按键、扳机和摇杆。查看松手后摇杆偏离中心的程度，辅助判断是否存在漂移。",
+      },
+      "zh-TW": {
+        name: "遊戲控制器測試器",
+        description:
+          "在瀏覽器即時測試遊戲控制器的按鍵、扳機和搖桿。查看放開後搖桿偏離中心的程度，協助判斷是否有飄移。",
+      },
+    },
+  },
   "gif-maker": {
     slug: "gif-maker",
     category: "image",
@@ -54383,6 +54902,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "JSON 轉 TOML 轉換器",
         description:
           "將 JSON 轉為 TOML。貼上 JSON 或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  "json-to-typescript-zod": {
+    slug: "json-to-typescript-zod",
+    category: "json",
+    icon: "braces",
+    tags: ["json", "typescript", "zod", "api", "type", "schema", "validation"],
+    locales: {
+      ar: {
+        name: "محول JSON إلى TypeScript أو Zod",
+        description:
+          "ولّد أنواع TypeScript أو مخطط تحقق باستخدام Zod 4 من مثال لاستجابة API بصيغة JSON.",
+      },
+      de: {
+        name: "JSON-zu-TypeScript-/Zod-Konverter",
+        description:
+          "Leite TypeScript-Typen oder ein Zod-4-Validierungsschema aus einer JSON-API-Beispielantwort ab.",
+      },
+      en: {
+        name: "JSON to TypeScript / Zod",
+        description:
+          "Generate TypeScript types or a Zod 4 validation schema from a sample JSON API response.",
+      },
+      es: {
+        name: "Convertidor de JSON a TypeScript / Zod",
+        description:
+          "Genera tipos de TypeScript o un esquema de validación de Zod 4 a partir de una respuesta JSON de ejemplo de una API.",
+      },
+      fr: {
+        name: "Convertisseur JSON vers TypeScript / Zod",
+        description:
+          "Générez des types TypeScript ou un schéma de validation Zod 4 à partir d’un exemple de réponse d’API au format JSON.",
+      },
+      he: {
+        name: "ממיר JSON ל-TypeScript או ל-Zod",
+        description:
+          "צרו טיפוסי TypeScript או סכמת אימות של Zod 4 מתגובת API לדוגמה בפורמט JSON.",
+      },
+      hi: {
+        name: "JSON से TypeScript या Zod कन्वर्टर",
+        description:
+          "JSON में दिए गए API रिस्पॉन्स के उदाहरण से TypeScript टाइप या Zod 4 का वैलिडेशन स्कीमा बनाएँ।",
+      },
+      id: {
+        name: "Konverter JSON ke TypeScript / Zod",
+        description:
+          "Hasilkan tipe TypeScript atau skema validasi Zod 4 dari contoh respons API berformat JSON.",
+      },
+      it: {
+        name: "Convertitore da JSON a TypeScript / Zod",
+        description:
+          "Genera tipi TypeScript o uno schema di validazione Zod 4 da una risposta JSON di esempio di un’API.",
+      },
+      ja: {
+        name: "JSON → TypeScript / Zod",
+        description:
+          "JSON 形式の API レスポンスのサンプルから、TypeScript の型や Zod 4 の検証スキーマを生成します。",
+      },
+      ko: {
+        name: "JSON → TypeScript / Zod 변환기",
+        description:
+          "JSON API 응답 예시에서 TypeScript 타입이나 Zod 4 검증 스키마를 생성합니다.",
+      },
+      ms: {
+        name: "Penukar JSON kepada TypeScript / Zod",
+        description:
+          "Jana jenis TypeScript atau skema pengesahan Zod 4 daripada contoh respons API dalam format JSON.",
+      },
+      nl: {
+        name: "JSON naar TypeScript of Zod",
+        description:
+          "Genereer TypeScript-types of een Zod 4-validatieschema op basis van een voorbeeld van een API-respons in JSON.",
+      },
+      no: {
+        name: "JSON til TypeScript / Zod",
+        description:
+          "Generer TypeScript-typer eller et valideringsskjema for Zod 4 fra et eksempel på et API-svar i JSON.",
+      },
+      pl: {
+        name: "Konwerter JSON na TypeScript i Zod",
+        description:
+          "Generuj typy TypeScript lub schemat walidacji Zod 4 na podstawie przykładowej odpowiedzi API w formacie JSON.",
+      },
+      pt: {
+        name: "Conversor de JSON para TypeScript / Zod",
+        description:
+          "Gere tipos TypeScript ou um esquema de validação Zod 4 a partir de um exemplo de resposta de API em JSON.",
+      },
+      ru: {
+        name: "Конвертер JSON в TypeScript и Zod",
+        description:
+          "Создавайте типы TypeScript или схему валидации Zod 4 по примеру ответа API в формате JSON.",
+      },
+      sv: {
+        name: "JSON till TypeScript / Zod",
+        description:
+          "Generera TypeScript-typer eller ett valideringsschema för Zod 4 från ett exempel på ett API-svar i JSON.",
+      },
+      th: {
+        name: "ตัวแปลง JSON เป็น TypeScript / Zod",
+        description:
+          "สร้างชนิดข้อมูล TypeScript หรือสคีมา Zod 4 สำหรับตรวจสอบข้อมูลจากตัวอย่างผลตอบกลับ API ในรูปแบบ JSON",
+      },
+      tr: {
+        name: "JSON’dan TypeScript ve Zod’a Dönüştürücü",
+        description:
+          "JSON biçimindeki örnek bir API yanıtından TypeScript türleri veya bir Zod 4 doğrulama şeması oluşturun.",
+      },
+      vi: {
+        name: "Chuyển JSON sang TypeScript / Zod",
+        description:
+          "Tạo kiểu TypeScript hoặc lược đồ kiểm tra dữ liệu bằng Zod 4 từ một phản hồi API mẫu ở định dạng JSON.",
+      },
+      "zh-CN": {
+        name: "JSON 转 TypeScript / Zod",
+        description:
+          "从 JSON 接口响应示例生成 TypeScript 类型或 Zod 4 校验代码。",
+      },
+      "zh-TW": {
+        name: "JSON 轉 TypeScript / Zod",
+        description:
+          "從 JSON API 回應範例產生 TypeScript 型別或 Zod 4 驗證程式碼。",
       },
     },
   },
@@ -73400,6 +74042,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "UUID 驗證器",
         description:
           "驗證 UUID 字串、檢查其版本與變體，並確認識別碼使用符合 RFC 的標準格式。",
+      },
+    },
+  },
+  "video-frame-extractor": {
+    slug: "video-frame-extractor",
+    category: "image",
+    icon: "film",
+    tags: [
+      "video",
+      "frame",
+      "screenshot",
+      "timestamp",
+      "interval",
+      "mp4",
+      "webm",
+      "jpg",
+      "png",
+      "zip",
+    ],
+    locales: {
+      ar: {
+        name: "أداة استخراج إطارات الفيديو",
+        description:
+          "استخرج صورًا ثابتة من فيديو في أوقات محددة أو على فترات منتظمة. عاين الإطارات ونزّلها بصيغة JPG أو PNG، كل صورة على حدة أو كلها في ملف ZIP.",
+      },
+      de: {
+        name: "Video-Einzelbilder extrahieren",
+        description:
+          "Extrahiere Einzelbilder aus einem Video an bestimmten Zeitpunkten oder in regelmäßigen Abständen. Sieh dir die Bilder an und lade sie einzeln als JPG oder PNG oder gesammelt als ZIP herunter.",
+      },
+      en: {
+        name: "Video Frame Extractor",
+        description:
+          "Extract still images from a video at specific timestamps or regular intervals. Preview and download JPG or PNG frames individually or as a ZIP.",
+      },
+      es: {
+        name: "Extractor de fotogramas de video",
+        description:
+          "Extrae fotogramas de un video en marcas de tiempo específicas o a intervalos regulares. Previsualiza y descarga las imágenes JPG o PNG por separado o en un ZIP.",
+      },
+      fr: {
+        name: "Extracteur d’images vidéo",
+        description:
+          "Extrayez des images fixes d’une vidéo à des instants précis ou à intervalles réguliers. Prévisualisez les images JPG ou PNG et téléchargez-les à l’unité ou dans un ZIP.",
+      },
+      he: {
+        name: "חילוץ פריימים מווידאו",
+        description:
+          "חלצו תמונות מתוך סרטון בנקודות זמן מסוימות או במרווחי זמן קבועים. אפשר לצפות בתמונות ולהוריד אותן בנפרד כקובצי JPG או PNG, או יחד בקובץ ZIP.",
+      },
+      hi: {
+        name: "वीडियो फ़्रेम एक्सट्रैक्टर",
+        description:
+          "वीडियो में चुने हुए समय बिंदुओं या नियमित अंतराल पर स्थिर चित्र निकालें। JPG या PNG फ़्रेम देखें और उन्हें अलग-अलग या एक ZIP में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengekstrak Bingkai Video",
+        description:
+          "Ambil gambar diam dari video pada waktu tertentu atau dengan interval tetap. Pratinjau dan unduh bingkai JPG atau PNG satu per satu atau sekaligus sebagai ZIP.",
+      },
+      it: {
+        name: "Estrattore di fotogrammi video",
+        description:
+          "Estrai immagini da un video in punti specifici o a intervalli regolari. Visualizza in anteprima e scarica i fotogrammi in JPG o PNG, singolarmente o in un archivio ZIP.",
+      },
+      ja: {
+        name: "動画フレーム抽出",
+        description:
+          "動画から指定した再生時刻や一定の間隔で静止画を抽出します。JPG または PNG でプレビューし、個別または ZIP にまとめてダウンロードできます。",
+      },
+      ko: {
+        name: "동영상 프레임 추출기",
+        description:
+          "동영상의 특정 시점이나 일정한 간격에서 정지 이미지를 추출합니다. JPG 또는 PNG 프레임을 미리 보고 개별 파일이나 ZIP으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengekstrak Bingkai Video",
+        description:
+          "Ekstrak imej pegun daripada video pada cap masa tertentu atau pada selang tetap. Pratonton dan muat turun bingkai JPG atau PNG satu demi satu atau sebagai fail ZIP.",
+      },
+      nl: {
+        name: "Videoframes extraheren",
+        description:
+          "Haal stilstaande beelden uit een video op specifieke tijdstippen of met vaste tussenpozen. Bekijk de frames en download ze afzonderlijk als JPG of PNG, of samen als ZIP.",
+      },
+      no: {
+        name: "Stillbilder fra video",
+        description:
+          "Hent ut stillbilder fra en video på bestemte tidspunkter eller med jevne mellomrom. Se en forhåndsvisning og last ned JPG- eller PNG-bildene enkeltvis eller som en ZIP-fil.",
+      },
+      pl: {
+        name: "Wyodrębnianie klatek wideo",
+        description:
+          "Wyodrębniaj klatki wideo w wybranych momentach lub w regularnych odstępach. Wyświetl podgląd obrazów JPG lub PNG i pobierz je pojedynczo albo w archiwum ZIP.",
+      },
+      pt: {
+        name: "Extrator de quadros de vídeo",
+        description:
+          "Extraia imagens de um vídeo em momentos específicos ou em intervalos regulares. Pré-visualize os quadros em JPG ou PNG e baixe-os individualmente ou em um arquivo ZIP.",
+      },
+      ru: {
+        name: "Извлечение кадров из видео",
+        description:
+          "Извлекайте кадры из видео по отметкам времени или через равные интервалы. Просматривайте и скачивайте изображения JPG или PNG по одному или в ZIP-архиве.",
+      },
+      sv: {
+        name: "Extrahera bildrutor från video",
+        description:
+          "Extrahera stillbilder från en video vid valda tidpunkter eller med jämna mellanrum. Förhandsgranska och ladda ner JPG- eller PNG-bilder enskilt eller i en ZIP-fil.",
+      },
+      th: {
+        name: "เครื่องมือดึงเฟรมวิดีโอ",
+        description:
+          "ดึงภาพนิ่งจากวิดีโอตามเวลาที่ระบุหรือเป็นช่วงเวลาคงที่ ดูตัวอย่างและดาวน์โหลดภาพ JPG หรือ PNG ทีละภาพหรือรวมเป็นไฟล์ ZIP",
+      },
+      tr: {
+        name: "Videodan Kare Çıkarma",
+        description:
+          "Videodan belirli zamanlarda veya sabit aralıklarla kareler çıkarın. JPG veya PNG kareleri önizleyin, tek tek ya da ZIP olarak topluca indirin.",
+      },
+      vi: {
+        name: "Trình trích xuất khung hình từ video",
+        description:
+          "Trích xuất ảnh tĩnh từ video tại các mốc thời gian đã chọn hoặc theo khoảng cách đều. Xem trước và tải từng khung hình JPG hoặc PNG, hoặc tải tất cả dưới dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "视频截帧器",
+        description:
+          "按指定时间点或固定间隔从视频中提取画面，预览 JPG 或 PNG 图片，并逐张下载或打包为 ZIP。",
+      },
+      "zh-TW": {
+        name: "影片影格擷取器",
+        description:
+          "依指定時間點或固定間隔從影片擷取靜態圖片。可預覽 JPG 或 PNG 影格，並逐張下載或打包成 ZIP。",
       },
     },
   },

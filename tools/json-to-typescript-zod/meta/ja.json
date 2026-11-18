@@ -1,0 +1,4 @@
+{
+  "name": "JSON → TypeScript / Zod",
+  "description": "JSON 形式の API レスポンスのサンプルから、TypeScript の型や Zod 4 の検証スキーマを生成します。"
+}

@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Kiểm tra tay cầm chơi game",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "Trình tạo GIF",
     slug: "gif-maker",
@@ -671,6 +676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "Trình chuyển JSON → TOML",
     slug: "json-to-toml-converter",
+  },
+  {
+    category: "json",
+    name: "Chuyển JSON sang TypeScript / Zod",
+    slug: "json-to-typescript-zod",
   },
   {
     category: "json",
@@ -1421,6 +1431,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Trình xác thực UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Trình trích xuất khung hình từ video",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

@@ -1,0 +1,11 @@
+.json-typescript-code :is(.hljs-keyword, .hljs-operator) {
+  color: color-mix(in oklab, var(--destructive) 62%, var(--foreground));
+}
+
+.json-typescript-code :is(.hljs-title, .hljs-built_in, .hljs-type) {
+  color: color-mix(in oklab, var(--chart-3) 42%, var(--foreground));
+}
+
+.json-typescript-code :is(.hljs-string, .hljs-literal) {
+  color: color-mix(in oklab, var(--chart-2) 42%, var(--foreground));
+}

@@ -1,0 +1,14 @@
+{
+  "inputLabel": "JSON 入力",
+  "inputPlaceholder": "API レスポンスのサンプルを貼り付け…",
+  "sampleLabel": "サンプルを使用",
+  "openFileLabel": "JSON ファイルを開く",
+  "fileReadError": "ファイルを読み込めませんでした。もう一度開いてください。",
+  "invalidJson": "無効な JSON です。構文を確認してから再試行してください。",
+  "outputLabel": "生成されたコード",
+  "emptyOutput": "有効な JSON を入力するとコードが生成されます。",
+  "copyLabel": "コードをコピー",
+  "copiedLabel": "コピーしました",
+  "downloadLabel": ".ts をダウンロード",
+  "zodHelp": "Zod 4 のスキーマは、解析時にスキーマに定義されていないフィールドを取り除きます。"
+}

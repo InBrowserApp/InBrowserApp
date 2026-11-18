@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter JSON na TypeScript i Zod",
+  "description": "Generuj typy TypeScript lub schemat walidacji Zod 4 na podstawie przykładowej odpowiedzi API w formacie JSON."
+}
