@@ -19,7 +19,7 @@ schrijfwijze duidelijk te houden.
 
 Bijvoorbeeld, `1024.50` kan in vereenvoudigde uitvoer worden geschreven
 als `壹仟零贰拾肆元伍角`, of in traditionele uitvoer als
-`壹仟零貳拾肆元伍角`.
+`壹仟零貳拾肆圓伍角`.
 
 ### Vereenvoudigd versus traditioneel
 

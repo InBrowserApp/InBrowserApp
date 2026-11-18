@@ -18,7 +18,7 @@ ofta med 整, och nollor läggs bara in där de behövs för att
 formuleringen ska vara tydlig.
 
 Till exempel kan `1024.50` skrivas som `壹仟零贰拾肆元伍角` i
-förenklad utmatning, eller som `壹仟零貳拾肆元伍角` i traditionell
+förenklad utmatning, eller som `壹仟零貳拾肆圓伍角` i traditionell
 utmatning.
 
 ### Förenklad kontra traditionell

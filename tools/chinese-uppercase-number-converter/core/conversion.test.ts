@@ -29,15 +29,34 @@ describe("parseNumberInput", () => {
     expect(result.fraction).toBe("50")
   })
 
-  it("tracks negative values", () => {
+  it("keeps the sign in the normalized number", () => {
     const result = parseNumberInput("-12")
     expect(result.isValid).toBe(true)
     expect(result.isNegative).toBe(true)
-    expect(result.normalized).toBe("12")
+    expect(result.normalized).toBe("-12")
   })
 
-  it("rejects invalid formats", () => {
-    const result = parseNumberInput("12.3.4")
+  it.each([
+    ["－１，２３４．５０", "-1234.50"],
+    ["＋１２", "12"],
+    ["−.5", "-0.5"],
+    ["1_234_567", "1234567"],
+    ["1\u00a0234\u00a0567", "1234567"],
+  ])("normalizes %s to %s", (input, normalized) => {
+    expect(parseNumberInput(input).normalized).toBe(normalized)
+  })
+
+  it.each(["12.3.4", "1,2", "1.2,3", "1,234_567", "12 34", "1\n234"])(
+    "rejects malformed amounts such as %j",
+    (input) => {
+      const result = parseNumberInput(input)
+      expect(result.isValid).toBe(false)
+      expect(result.error).toBe("invalidFormat")
+    }
+  )
+
+  it("rejects malformed decimal endings", () => {
+    const result = parseNumberInput("12.")
     expect(result.isValid).toBe(false)
     expect(result.error).toBe("invalidFormat")
   })

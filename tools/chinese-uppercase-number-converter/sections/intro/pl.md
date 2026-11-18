@@ -18,7 +18,7 @@ kończą się znakiem 整, a zera są dodawane tylko tam, gdzie są potrzebne
 dla jednoznaczności.
 
 Na przykład `1024.50` może zostać zapisane jako `壹仟零贰拾肆元伍角` w
-wersji uproszczonej albo jako `壹仟零貳拾肆元伍角` w wersji
+wersji uproszczonej albo jako `壹仟零貳拾肆圓伍角` w wersji
 tradycyjnej.
 
 ### Uproszczony a tradycyjny

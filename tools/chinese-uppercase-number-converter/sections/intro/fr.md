@@ -18,7 +18,7 @@ montants entiers se terminent souvent par 整, et les zéros ne sont
 ajoutés qu'aux endroits nécessaires pour éviter toute ambiguïté.
 
 Par exemple, `1024.50` peut être rendu comme `壹仟零贰拾肆元伍角` en
-sortie simplifiée, ou `壹仟零貳拾肆元伍角` en sortie traditionnelle.
+sortie simplifiée, ou `壹仟零貳拾肆圓伍角` en sortie traditionnelle.
 
 ### Simplifié ou traditionnel
 

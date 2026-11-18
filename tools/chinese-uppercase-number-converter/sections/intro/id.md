@@ -18,7 +18,7 @@ sering diakhiri dengan 整, dan nol hanya disisipkan di tempat yang
 diperlukan agar penulisannya tetap jelas.
 
 Misalnya, `1024.50` dapat ditulis sebagai `壹仟零贰拾肆元伍角` pada
-keluaran Sederhana, atau `壹仟零貳拾肆元伍角` pada keluaran
+keluaran Sederhana, atau `壹仟零貳拾肆圓伍角` pada keluaran
 Tradisional.
 
 ### Sederhana vs Tradisional

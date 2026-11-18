@@ -18,7 +18,7 @@ costumam terminar com 整, e os zeros só são inseridos onde são
 necessários para manter a leitura clara.
 
 Por exemplo, `1024.50` pode ser representado como `壹仟零贰拾肆元伍角`
-na saída simplificada ou como `壹仟零貳拾肆元伍角` na saída
+na saída simplificada ou como `壹仟零貳拾肆圓伍角` na saída
 tradicional.
 
 ### Simplificado vs. Tradicional

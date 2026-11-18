@@ -18,7 +18,7 @@ enden oft mit 整, und Nullen werden nur dort eingefügt, wo sie für eine
 eindeutige Schreibweise nötig sind.
 
 Zum Beispiel kann `1024.50` als `壹仟零贰拾肆元伍角` in der
-vereinfachten Ausgabe oder als `壹仟零貳拾肆元伍角` in der
+vereinfachten Ausgabe oder als `壹仟零貳拾肆圓伍角` in der
 traditionellen Ausgabe erscheinen.
 
 ### Vereinfacht vs. Traditionell

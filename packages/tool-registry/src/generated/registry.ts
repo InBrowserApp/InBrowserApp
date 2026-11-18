@@ -5375,7 +5375,7 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       "zh-TW": {
         name: "國字大寫轉換器",
         description:
-          "將數字轉成繁體國字大寫金額，也能轉回數字。12 → 壹拾貳圓整。支援簡體、負數與兩位小數。",
+          "數字轉中文大寫金額，也可將國字大寫轉回數字。12 → 壹拾貳圓整。支援繁體、簡體、負數與兩位小數。",
       },
     },
   },
@@ -42781,7 +42781,7 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "國字大寫轉換器",
         description:
-          "將數字轉成繁體國字大寫金額，也能轉回數字。12 → 壹拾貳圓整。支援簡體、負數與兩位小數。",
+          "數字轉中文大寫金額，也可將國字大寫轉回數字。12 → 壹拾貳圓整。支援繁體、簡體、負數與兩位小數。",
       },
     },
   },

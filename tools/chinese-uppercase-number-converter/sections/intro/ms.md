@@ -18,7 +18,7 @@ berakhir dengan 整, dan sifar hanya dimasukkan di tempat yang diperlukan
 supaya frasa kekal jelas.
 
 Contohnya, `1024.50` boleh ditulis sebagai `壹仟零贰拾肆元伍角` dalam
-output Ringkas, atau `壹仟零貳拾肆元伍角` dalam output Tradisional.
+output Ringkas, atau `壹仟零貳拾肆圓伍角` dalam output Tradisional.
 
 ### Ringkas vs Tradisional
 
