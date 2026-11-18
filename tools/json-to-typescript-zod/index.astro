@@ -28,7 +28,7 @@ const Intro = resolveLocale<AstroComponentFactory>(
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <JsonToTypescriptZodClient client:load messages={messages} dir={lang === "ar" || lang === "he" ? "rtl" : "ltr"} />
-  <ToolArticle className="min-w-0 max-w-3xl [&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate] [&_pre]:wrap-anywhere [&_pre]:whitespace-pre-wrap [&_pre]:text-left [&_pre]:[direction:ltr] sm:[&_pre]:whitespace-pre">
+  <ToolArticle className="min-w-0 [&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate] [&_pre]:wrap-anywhere [&_pre]:whitespace-pre-wrap [&_pre]:text-left [&_pre]:[direction:ltr] sm:[&_pre]:whitespace-pre">
     <Intro />
   </ToolArticle>
 </ToolPageShell>
