@@ -147,7 +147,7 @@ export default function JsonToTypescriptZodClient({
   return (
     <div className="grid gap-4">
       <div className="grid items-start gap-4 lg:grid-cols-2">
-        <ToolPanelCard className="min-w-0">
+        <ToolPanelCard className="h-auto min-w-0">
           <CardHeader className="flex min-h-16 items-center border-b">
             <CardTitle>
               <label htmlFor={inputId}>{messages.inputLabel}</label>
@@ -203,7 +203,7 @@ export default function JsonToTypescriptZodClient({
           </ToolPanelCardFooter>
         </ToolPanelCard>
 
-        <ToolPanelCard className="min-w-0">
+        <ToolPanelCard className="h-auto min-w-0">
           <Tabs
             value={formatId}
             onValueChange={setFormatId}
