@@ -1,4 +1,4 @@
 {
   "name": "JSON 轉 TypeScript / Zod",
-  "description": "從 JSON API 回應產生 TypeScript 型別或 Zod 驗證 Schema。貼上範例或開啟 JSON 檔案，即可複製或下載產生的程式碼。"
+  "description": "從 JSON API 回應範例產生 TypeScript 型別或 Zod 4 驗證程式碼。"
 }

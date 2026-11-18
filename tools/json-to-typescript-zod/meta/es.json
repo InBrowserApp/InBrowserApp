@@ -1,4 +1,4 @@
 {
   "name": "Convertidor de JSON a TypeScript / Zod",
-  "description": "Genera tipos de TypeScript o esquemas de validación de Zod a partir de una respuesta JSON de una API. Pega un ejemplo o abre un archivo JSON y luego copia o descarga el código generado."
+  "description": "Genera tipos de TypeScript o un esquema de validación de Zod 4 a partir de una respuesta JSON de ejemplo de una API."
 }

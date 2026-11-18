@@ -10,6 +10,5 @@
   "copyLabel": "Code kopiëren",
   "copiedLabel": "Gekopieerd",
   "downloadLabel": ".ts downloaden",
-  "inferenceHelp": "De gegenereerde code is gebaseerd op de velden en waarden uit het voorbeeld. Voeg meer records toe aan een array om optionele velden en verschillende waardetypes mee te nemen.",
   "zodHelp": "Bij het parsen laat Zod 4 velden die niet in het schema staan weg uit het resultaat."
 }

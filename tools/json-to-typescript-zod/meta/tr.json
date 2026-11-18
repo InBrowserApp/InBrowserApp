@@ -1,4 +1,4 @@
 {
   "name": "JSON’dan TypeScript ve Zod’a Dönüştürücü",
-  "description": "JSON biçimindeki bir API yanıtından TypeScript türleri veya Zod doğrulama şemaları oluşturun. Bir örnek yapıştırın ya da JSON dosyası açın, ardından oluşturulan kodu kopyalayın veya indirin."
+  "description": "JSON biçimindeki örnek bir API yanıtından TypeScript türleri veya bir Zod 4 doğrulama şeması oluşturun."
 }

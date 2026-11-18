@@ -10,6 +10,5 @@
   "copyLabel": "Kopier kode",
   "copiedLabel": "Kopiert",
   "downloadLabel": "Last ned .ts",
-  "inferenceHelp": "Den genererte koden bygger på feltene og verdiene i eksemplet. Ta med flere poster i en array for å fange opp valgfrie felt og blandede typer.",
   "zodHelp": "Ved parsing utelater Zod 4 felt som ikke er definert i skjemaet."
 }

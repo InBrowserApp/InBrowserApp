@@ -10,6 +10,5 @@
   "copyLabel": "複製程式碼",
   "copiedLabel": "已複製",
   "downloadLabel": "下載 .ts",
-  "inferenceHelp": "程式碼依據範例中的欄位和值推斷。在陣列中加入更多筆資料，有助於推斷選用欄位和混合型別。",
   "zodHelp": "Zod 4 Schema會在解析時移除未宣告的欄位。"
 }

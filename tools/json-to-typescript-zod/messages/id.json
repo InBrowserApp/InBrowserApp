@@ -10,6 +10,5 @@
   "copyLabel": "Salin kode",
   "copiedLabel": "Disalin",
   "downloadLabel": "Unduh .ts",
-  "inferenceHelp": "Kode yang dihasilkan mencerminkan properti dan nilai dalam contoh. Sertakan lebih banyak entri dalam array agar properti opsional dan beragam tipe data ikut tercakup.",
   "zodHelp": "Skema Zod 4 membuang properti yang tidak dideklarasikan dari hasil penguraian."
 }

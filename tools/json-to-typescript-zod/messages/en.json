@@ -10,6 +10,5 @@
   "copyLabel": "Copy code",
   "copiedLabel": "Copied",
   "downloadLabel": "Download .ts",
-  "inferenceHelp": "The generated code reflects the sample fields and values. Include more records in an array to capture optional fields and mixed types.",
   "zodHelp": "The Zod 4 schema drops fields it does not declare when parsing."
 }

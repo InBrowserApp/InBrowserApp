@@ -1,4 +1,4 @@
 {
   "name": "JSON till TypeScript / Zod",
-  "description": "Generera TypeScript-typer eller valideringsscheman för Zod från ett API-svar i JSON. Klistra in ett exempel eller öppna en JSON-fil och kopiera eller ladda sedan ner koden."
+  "description": "Generera TypeScript-typer eller ett valideringsschema för Zod 4 från ett exempel på ett API-svar i JSON."
 }

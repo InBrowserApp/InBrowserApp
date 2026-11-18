@@ -10,6 +10,5 @@
   "copyLabel": "Kopiera kod",
   "copiedLabel": "Kopierat",
   "downloadLabel": "Ladda ner .ts",
-  "inferenceHelp": "Den genererade koden utgår från fälten och värdena i exemplet. Ta med fler poster i en array för att fånga upp valfria fält och blandade typer.",
   "zodHelp": "Vid tolkning utelämnar Zod 4 fält som inte är definierade i schemat."
 }

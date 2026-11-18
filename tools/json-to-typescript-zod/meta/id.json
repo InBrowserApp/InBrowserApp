@@ -1,4 +1,4 @@
 {
   "name": "Konverter JSON ke TypeScript / Zod",
-  "description": "Hasilkan tipe TypeScript atau skema validasi Zod dari respons API berformat JSON. Tempel contoh atau buka file JSON, lalu salin atau unduh kode yang dihasilkan."
+  "description": "Hasilkan tipe TypeScript atau skema validasi Zod 4 dari contoh respons API berformat JSON."
 }

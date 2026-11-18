@@ -1,4 +1,4 @@
 {
   "name": "ממיר JSON ל-TypeScript או ל-Zod",
-  "description": "צרו טיפוסי TypeScript או סכמות אימות של Zod מתגובת API בפורמט JSON. הדביקו דוגמה או פתחו קובץ JSON, ואז העתיקו או הורידו את הקוד שנוצר."
+  "description": "צרו טיפוסי TypeScript או סכמת אימות של Zod 4 מתגובת API לדוגמה בפורמט JSON."
 }

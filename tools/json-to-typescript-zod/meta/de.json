@@ -1,4 +1,4 @@
 {
   "name": "JSON-zu-TypeScript-/Zod-Konverter",
-  "description": "Leite TypeScript-Typen oder Zod-Validierungsschemas aus einer JSON-API-Antwort ab. Füge ein Beispiel ein oder öffne eine JSON-Datei. Kopiere dann den generierten Code oder lade ihn herunter."
+  "description": "Leite TypeScript-Typen oder ein Zod-4-Validierungsschema aus einer JSON-API-Beispielantwort ab."
 }

@@ -10,6 +10,5 @@
   "copyLabel": "Copier le code",
   "copiedLabel": "Copié",
   "downloadLabel": "Télécharger le .ts",
-  "inferenceHelp": "Le code généré reflète les champs et les valeurs de l’exemple. Ajoutez des éléments au tableau pour tenir compte des champs facultatifs et des types mixtes.",
   "zodHelp": "Lors de l’analyse, le schéma Zod 4 retire du résultat les champs qu’il ne déclare pas."
 }

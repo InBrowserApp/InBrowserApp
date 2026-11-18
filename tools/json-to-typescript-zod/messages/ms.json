@@ -10,6 +10,5 @@
   "copyLabel": "Salin kod",
   "copiedLabel": "Disalin",
   "downloadLabel": "Muat turun .ts",
-  "inferenceHelp": "Kod yang dijana mencerminkan medan dan nilai dalam contoh. Sertakan lebih banyak rekod dalam tatasusunan supaya medan yang mungkin tiada dan campuran jenis data dapat dikenal pasti.",
   "zodHelp": "Skema Zod 4 menggugurkan medan yang tidak diisytiharkan daripada hasil penghuraian."
 }

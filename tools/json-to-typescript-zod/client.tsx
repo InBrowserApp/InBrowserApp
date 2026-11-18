@@ -239,12 +239,11 @@ export default function JsonToTypescriptZodClient({
           </Tabs>
         </ToolPanelCard>
       </div>
-      <div className="space-y-1 text-sm text-muted-foreground">
-        <p>{messages.inferenceHelp}</p>
-        {formatId === "zod" && (
-          <p id={`${inputId}-zod-help`}>{messages.zodHelp}</p>
-        )}
-      </div>
+      {formatId === "zod" && (
+        <p id={`${inputId}-zod-help`} className="text-sm text-muted-foreground">
+          {messages.zodHelp}
+        </p>
+      )}
     </div>
   )
 }

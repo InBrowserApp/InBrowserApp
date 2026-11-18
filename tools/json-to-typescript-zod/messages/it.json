@@ -10,6 +10,5 @@
   "copyLabel": "Copia codice",
   "copiedLabel": "Copiato",
   "downloadLabel": "Scarica .ts",
-  "inferenceHelp": "Il codice generato rispecchia i campi e i valori dell’esempio. Includi più record nell’array per rilevare i campi facoltativi e i tipi misti.",
   "zodHelp": "Durante il parsing, lo schema Zod 4 rimuove i campi che non dichiara."
 }

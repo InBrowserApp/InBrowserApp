@@ -16743,117 +16743,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "محول JSON إلى TypeScript أو Zod",
         description:
-          "ولّد أنواع TypeScript أو مخططات التحقق من صحة البيانات باستخدام Zod انطلاقًا من استجابة API بصيغة JSON. الصق مثالًا أو افتح ملف JSON، ثم انسخ الشيفرة الناتجة أو نزّلها.",
+          "ولّد أنواع TypeScript أو مخطط تحقق باستخدام Zod 4 من مثال لاستجابة API بصيغة JSON.",
       },
       de: {
         name: "JSON-zu-TypeScript-/Zod-Konverter",
         description:
-          "Leite TypeScript-Typen oder Zod-Validierungsschemas aus einer JSON-API-Antwort ab. Füge ein Beispiel ein oder öffne eine JSON-Datei. Kopiere dann den generierten Code oder lade ihn herunter.",
+          "Leite TypeScript-Typen oder ein Zod-4-Validierungsschema aus einer JSON-API-Beispielantwort ab.",
       },
       en: {
         name: "JSON to TypeScript / Zod",
         description:
-          "Generate TypeScript types or Zod validation schemas from a JSON API response. Paste a sample or open a JSON file, then copy or download the generated code.",
+          "Generate TypeScript types or a Zod 4 validation schema from a sample JSON API response.",
       },
       es: {
         name: "Convertidor de JSON a TypeScript / Zod",
         description:
-          "Genera tipos de TypeScript o esquemas de validación de Zod a partir de una respuesta JSON de una API. Pega un ejemplo o abre un archivo JSON y luego copia o descarga el código generado.",
+          "Genera tipos de TypeScript o un esquema de validación de Zod 4 a partir de una respuesta JSON de ejemplo de una API.",
       },
       fr: {
         name: "Convertisseur JSON vers TypeScript / Zod",
         description:
-          "Générez des types TypeScript ou des schémas de validation Zod à partir d’une réponse d’API au format JSON. Collez un exemple ou ouvrez un fichier JSON, puis copiez ou téléchargez le code généré.",
+          "Générez des types TypeScript ou un schéma de validation Zod 4 à partir d’un exemple de réponse d’API au format JSON.",
       },
       he: {
         name: "ממיר JSON ל-TypeScript או ל-Zod",
         description:
-          "צרו טיפוסי TypeScript או סכמות אימות של Zod מתגובת API בפורמט JSON. הדביקו דוגמה או פתחו קובץ JSON, ואז העתיקו או הורידו את הקוד שנוצר.",
+          "צרו טיפוסי TypeScript או סכמת אימות של Zod 4 מתגובת API לדוגמה בפורמט JSON.",
       },
       hi: {
         name: "JSON से TypeScript या Zod कन्वर्टर",
         description:
-          "JSON फ़ॉर्मेट में मिले API रिस्पॉन्स से TypeScript टाइप या Zod का वैलिडेशन स्कीमा बनाएँ। एक उदाहरण पेस्ट करें या JSON फ़ाइल खोलें, फिर बना हुआ कोड कॉपी या डाउनलोड करें।",
+          "JSON में दिए गए API रिस्पॉन्स के उदाहरण से TypeScript टाइप या Zod 4 का वैलिडेशन स्कीमा बनाएँ।",
       },
       id: {
         name: "Konverter JSON ke TypeScript / Zod",
         description:
-          "Hasilkan tipe TypeScript atau skema validasi Zod dari respons API berformat JSON. Tempel contoh atau buka file JSON, lalu salin atau unduh kode yang dihasilkan.",
+          "Hasilkan tipe TypeScript atau skema validasi Zod 4 dari contoh respons API berformat JSON.",
       },
       it: {
         name: "Convertitore da JSON a TypeScript / Zod",
         description:
-          "Genera tipi TypeScript o schemi di validazione Zod da una risposta JSON di un’API. Incolla un esempio o apri un file JSON, quindi copia o scarica il codice generato.",
+          "Genera tipi TypeScript o uno schema di validazione Zod 4 da una risposta JSON di esempio di un’API.",
       },
       ja: {
         name: "JSON → TypeScript / Zod",
         description:
-          "JSON 形式の API レスポンスから TypeScript の型や Zod の検証スキーマを生成します。サンプルを貼り付けるか JSON ファイルを開き、生成したコードをコピーまたはダウンロードできます。",
+          "JSON 形式の API レスポンスのサンプルから、TypeScript の型や Zod 4 の検証スキーマを生成します。",
       },
       ko: {
         name: "JSON → TypeScript / Zod 변환기",
         description:
-          "JSON API 응답에서 TypeScript 타입 또는 Zod 검증 스키마를 생성합니다. 예시를 붙여넣거나 JSON 파일을 열어 생성된 코드를 복사하거나 다운로드하세요.",
+          "JSON API 응답 예시에서 TypeScript 타입이나 Zod 4 검증 스키마를 생성합니다.",
       },
       ms: {
         name: "Penukar JSON kepada TypeScript / Zod",
         description:
-          "Jana jenis TypeScript atau skema pengesahan Zod daripada respons API dalam format JSON. Tampal contoh atau buka fail JSON, kemudian salin atau muat turun kod yang dijana.",
+          "Jana jenis TypeScript atau skema pengesahan Zod 4 daripada contoh respons API dalam format JSON.",
       },
       nl: {
         name: "JSON naar TypeScript of Zod",
         description:
-          "Genereer TypeScript-types of Zod-validatieschema’s uit een API-respons in JSON. Plak een voorbeeld of open een JSON-bestand en kopieer of download de code.",
+          "Genereer TypeScript-types of een Zod 4-validatieschema op basis van een voorbeeld van een API-respons in JSON.",
       },
       no: {
         name: "JSON til TypeScript / Zod",
         description:
-          "Generer TypeScript-typer eller valideringsskjemaer for Zod fra et API-svar i JSON. Lim inn et eksempel eller åpne en JSON-fil, og kopier eller last ned koden.",
+          "Generer TypeScript-typer eller et valideringsskjema for Zod 4 fra et eksempel på et API-svar i JSON.",
       },
       pl: {
         name: "Konwerter JSON na TypeScript i Zod",
         description:
-          "Generuj typy TypeScript lub schematy walidacji Zod na podstawie odpowiedzi API w formacie JSON. Wklej przykład lub otwórz plik JSON, a następnie skopiuj lub pobierz kod.",
+          "Generuj typy TypeScript lub schemat walidacji Zod 4 na podstawie przykładowej odpowiedzi API w formacie JSON.",
       },
       pt: {
         name: "Conversor de JSON para TypeScript / Zod",
         description:
-          "Gere tipos TypeScript ou esquemas de validação Zod a partir de uma resposta de API em JSON. Cole um exemplo ou abra um arquivo JSON e copie ou baixe o código gerado.",
+          "Gere tipos TypeScript ou um esquema de validação Zod 4 a partir de um exemplo de resposta de API em JSON.",
       },
       ru: {
         name: "Конвертер JSON в TypeScript и Zod",
         description:
-          "Создавайте типы TypeScript или схемы валидации Zod по ответу API в формате JSON. Вставьте пример или откройте JSON-файл, затем скопируйте или скачайте код.",
+          "Создавайте типы TypeScript или схему валидации Zod 4 по примеру ответа API в формате JSON.",
       },
       sv: {
         name: "JSON till TypeScript / Zod",
         description:
-          "Generera TypeScript-typer eller valideringsscheman för Zod från ett API-svar i JSON. Klistra in ett exempel eller öppna en JSON-fil och kopiera eller ladda sedan ner koden.",
+          "Generera TypeScript-typer eller ett valideringsschema för Zod 4 från ett exempel på ett API-svar i JSON.",
       },
       th: {
         name: "ตัวแปลง JSON เป็น TypeScript / Zod",
         description:
-          "สร้างชนิดข้อมูล TypeScript หรือสคีมา Zod สำหรับตรวจสอบข้อมูลจากผลตอบกลับ API ในรูปแบบ JSON วางตัวอย่างหรือเปิดไฟล์ JSON แล้วคัดลอกหรือดาวน์โหลดโค้ดที่สร้างขึ้น",
+          "สร้างชนิดข้อมูล TypeScript หรือสคีมา Zod 4 สำหรับตรวจสอบข้อมูลจากตัวอย่างผลตอบกลับ API ในรูปแบบ JSON",
       },
       tr: {
         name: "JSON’dan TypeScript ve Zod’a Dönüştürücü",
         description:
-          "JSON biçimindeki bir API yanıtından TypeScript türleri veya Zod doğrulama şemaları oluşturun. Bir örnek yapıştırın ya da JSON dosyası açın, ardından oluşturulan kodu kopyalayın veya indirin.",
+          "JSON biçimindeki örnek bir API yanıtından TypeScript türleri veya bir Zod 4 doğrulama şeması oluşturun.",
       },
       vi: {
         name: "Chuyển JSON sang TypeScript / Zod",
         description:
-          "Tạo kiểu TypeScript hoặc lược đồ kiểm tra dữ liệu bằng Zod từ phản hồi API dạng JSON. Dán một mẫu hoặc mở tệp JSON, sau đó sao chép hoặc tải mã xuống.",
+          "Tạo kiểu TypeScript hoặc lược đồ kiểm tra dữ liệu bằng Zod 4 từ một phản hồi API mẫu ở định dạng JSON.",
       },
       "zh-CN": {
         name: "JSON 转 TypeScript / Zod",
         description:
-          "从 JSON API 响应生成 TypeScript 类型或 Zod 校验 Schema。粘贴示例或打开 JSON 文件，即可复制或下载生成的代码。",
+          "从 JSON 接口响应示例生成 TypeScript 类型或 Zod 4 校验代码。",
       },
       "zh-TW": {
         name: "JSON 轉 TypeScript / Zod",
         description:
-          "從 JSON API 回應產生 TypeScript 型別或 Zod 驗證 Schema。貼上範例或開啟 JSON 檔案，即可複製或下載產生的程式碼。",
+          "從 JSON API 回應範例產生 TypeScript 型別或 Zod 4 驗證程式碼。",
       },
     },
   },
@@ -54272,117 +54272,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "محول JSON إلى TypeScript أو Zod",
         description:
-          "ولّد أنواع TypeScript أو مخططات التحقق من صحة البيانات باستخدام Zod انطلاقًا من استجابة API بصيغة JSON. الصق مثالًا أو افتح ملف JSON، ثم انسخ الشيفرة الناتجة أو نزّلها.",
+          "ولّد أنواع TypeScript أو مخطط تحقق باستخدام Zod 4 من مثال لاستجابة API بصيغة JSON.",
       },
       de: {
         name: "JSON-zu-TypeScript-/Zod-Konverter",
         description:
-          "Leite TypeScript-Typen oder Zod-Validierungsschemas aus einer JSON-API-Antwort ab. Füge ein Beispiel ein oder öffne eine JSON-Datei. Kopiere dann den generierten Code oder lade ihn herunter.",
+          "Leite TypeScript-Typen oder ein Zod-4-Validierungsschema aus einer JSON-API-Beispielantwort ab.",
       },
       en: {
         name: "JSON to TypeScript / Zod",
         description:
-          "Generate TypeScript types or Zod validation schemas from a JSON API response. Paste a sample or open a JSON file, then copy or download the generated code.",
+          "Generate TypeScript types or a Zod 4 validation schema from a sample JSON API response.",
       },
       es: {
         name: "Convertidor de JSON a TypeScript / Zod",
         description:
-          "Genera tipos de TypeScript o esquemas de validación de Zod a partir de una respuesta JSON de una API. Pega un ejemplo o abre un archivo JSON y luego copia o descarga el código generado.",
+          "Genera tipos de TypeScript o un esquema de validación de Zod 4 a partir de una respuesta JSON de ejemplo de una API.",
       },
       fr: {
         name: "Convertisseur JSON vers TypeScript / Zod",
         description:
-          "Générez des types TypeScript ou des schémas de validation Zod à partir d’une réponse d’API au format JSON. Collez un exemple ou ouvrez un fichier JSON, puis copiez ou téléchargez le code généré.",
+          "Générez des types TypeScript ou un schéma de validation Zod 4 à partir d’un exemple de réponse d’API au format JSON.",
       },
       he: {
         name: "ממיר JSON ל-TypeScript או ל-Zod",
         description:
-          "צרו טיפוסי TypeScript או סכמות אימות של Zod מתגובת API בפורמט JSON. הדביקו דוגמה או פתחו קובץ JSON, ואז העתיקו או הורידו את הקוד שנוצר.",
+          "צרו טיפוסי TypeScript או סכמת אימות של Zod 4 מתגובת API לדוגמה בפורמט JSON.",
       },
       hi: {
         name: "JSON से TypeScript या Zod कन्वर्टर",
         description:
-          "JSON फ़ॉर्मेट में मिले API रिस्पॉन्स से TypeScript टाइप या Zod का वैलिडेशन स्कीमा बनाएँ। एक उदाहरण पेस्ट करें या JSON फ़ाइल खोलें, फिर बना हुआ कोड कॉपी या डाउनलोड करें।",
+          "JSON में दिए गए API रिस्पॉन्स के उदाहरण से TypeScript टाइप या Zod 4 का वैलिडेशन स्कीमा बनाएँ।",
       },
       id: {
         name: "Konverter JSON ke TypeScript / Zod",
         description:
-          "Hasilkan tipe TypeScript atau skema validasi Zod dari respons API berformat JSON. Tempel contoh atau buka file JSON, lalu salin atau unduh kode yang dihasilkan.",
+          "Hasilkan tipe TypeScript atau skema validasi Zod 4 dari contoh respons API berformat JSON.",
       },
       it: {
         name: "Convertitore da JSON a TypeScript / Zod",
         description:
-          "Genera tipi TypeScript o schemi di validazione Zod da una risposta JSON di un’API. Incolla un esempio o apri un file JSON, quindi copia o scarica il codice generato.",
+          "Genera tipi TypeScript o uno schema di validazione Zod 4 da una risposta JSON di esempio di un’API.",
       },
       ja: {
         name: "JSON → TypeScript / Zod",
         description:
-          "JSON 形式の API レスポンスから TypeScript の型や Zod の検証スキーマを生成します。サンプルを貼り付けるか JSON ファイルを開き、生成したコードをコピーまたはダウンロードできます。",
+          "JSON 形式の API レスポンスのサンプルから、TypeScript の型や Zod 4 の検証スキーマを生成します。",
       },
       ko: {
         name: "JSON → TypeScript / Zod 변환기",
         description:
-          "JSON API 응답에서 TypeScript 타입 또는 Zod 검증 스키마를 생성합니다. 예시를 붙여넣거나 JSON 파일을 열어 생성된 코드를 복사하거나 다운로드하세요.",
+          "JSON API 응답 예시에서 TypeScript 타입이나 Zod 4 검증 스키마를 생성합니다.",
       },
       ms: {
         name: "Penukar JSON kepada TypeScript / Zod",
         description:
-          "Jana jenis TypeScript atau skema pengesahan Zod daripada respons API dalam format JSON. Tampal contoh atau buka fail JSON, kemudian salin atau muat turun kod yang dijana.",
+          "Jana jenis TypeScript atau skema pengesahan Zod 4 daripada contoh respons API dalam format JSON.",
       },
       nl: {
         name: "JSON naar TypeScript of Zod",
         description:
-          "Genereer TypeScript-types of Zod-validatieschema’s uit een API-respons in JSON. Plak een voorbeeld of open een JSON-bestand en kopieer of download de code.",
+          "Genereer TypeScript-types of een Zod 4-validatieschema op basis van een voorbeeld van een API-respons in JSON.",
       },
       no: {
         name: "JSON til TypeScript / Zod",
         description:
-          "Generer TypeScript-typer eller valideringsskjemaer for Zod fra et API-svar i JSON. Lim inn et eksempel eller åpne en JSON-fil, og kopier eller last ned koden.",
+          "Generer TypeScript-typer eller et valideringsskjema for Zod 4 fra et eksempel på et API-svar i JSON.",
       },
       pl: {
         name: "Konwerter JSON na TypeScript i Zod",
         description:
-          "Generuj typy TypeScript lub schematy walidacji Zod na podstawie odpowiedzi API w formacie JSON. Wklej przykład lub otwórz plik JSON, a następnie skopiuj lub pobierz kod.",
+          "Generuj typy TypeScript lub schemat walidacji Zod 4 na podstawie przykładowej odpowiedzi API w formacie JSON.",
       },
       pt: {
         name: "Conversor de JSON para TypeScript / Zod",
         description:
-          "Gere tipos TypeScript ou esquemas de validação Zod a partir de uma resposta de API em JSON. Cole um exemplo ou abra um arquivo JSON e copie ou baixe o código gerado.",
+          "Gere tipos TypeScript ou um esquema de validação Zod 4 a partir de um exemplo de resposta de API em JSON.",
       },
       ru: {
         name: "Конвертер JSON в TypeScript и Zod",
         description:
-          "Создавайте типы TypeScript или схемы валидации Zod по ответу API в формате JSON. Вставьте пример или откройте JSON-файл, затем скопируйте или скачайте код.",
+          "Создавайте типы TypeScript или схему валидации Zod 4 по примеру ответа API в формате JSON.",
       },
       sv: {
         name: "JSON till TypeScript / Zod",
         description:
-          "Generera TypeScript-typer eller valideringsscheman för Zod från ett API-svar i JSON. Klistra in ett exempel eller öppna en JSON-fil och kopiera eller ladda sedan ner koden.",
+          "Generera TypeScript-typer eller ett valideringsschema för Zod 4 från ett exempel på ett API-svar i JSON.",
       },
       th: {
         name: "ตัวแปลง JSON เป็น TypeScript / Zod",
         description:
-          "สร้างชนิดข้อมูล TypeScript หรือสคีมา Zod สำหรับตรวจสอบข้อมูลจากผลตอบกลับ API ในรูปแบบ JSON วางตัวอย่างหรือเปิดไฟล์ JSON แล้วคัดลอกหรือดาวน์โหลดโค้ดที่สร้างขึ้น",
+          "สร้างชนิดข้อมูล TypeScript หรือสคีมา Zod 4 สำหรับตรวจสอบข้อมูลจากตัวอย่างผลตอบกลับ API ในรูปแบบ JSON",
       },
       tr: {
         name: "JSON’dan TypeScript ve Zod’a Dönüştürücü",
         description:
-          "JSON biçimindeki bir API yanıtından TypeScript türleri veya Zod doğrulama şemaları oluşturun. Bir örnek yapıştırın ya da JSON dosyası açın, ardından oluşturulan kodu kopyalayın veya indirin.",
+          "JSON biçimindeki örnek bir API yanıtından TypeScript türleri veya bir Zod 4 doğrulama şeması oluşturun.",
       },
       vi: {
         name: "Chuyển JSON sang TypeScript / Zod",
         description:
-          "Tạo kiểu TypeScript hoặc lược đồ kiểm tra dữ liệu bằng Zod từ phản hồi API dạng JSON. Dán một mẫu hoặc mở tệp JSON, sau đó sao chép hoặc tải mã xuống.",
+          "Tạo kiểu TypeScript hoặc lược đồ kiểm tra dữ liệu bằng Zod 4 từ một phản hồi API mẫu ở định dạng JSON.",
       },
       "zh-CN": {
         name: "JSON 转 TypeScript / Zod",
         description:
-          "从 JSON API 响应生成 TypeScript 类型或 Zod 校验 Schema。粘贴示例或打开 JSON 文件，即可复制或下载生成的代码。",
+          "从 JSON 接口响应示例生成 TypeScript 类型或 Zod 4 校验代码。",
       },
       "zh-TW": {
         name: "JSON 轉 TypeScript / Zod",
         description:
-          "從 JSON API 回應產生 TypeScript 型別或 Zod 驗證 Schema。貼上範例或開啟 JSON 檔案，即可複製或下載產生的程式碼。",
+          "從 JSON API 回應範例產生 TypeScript 型別或 Zod 4 驗證程式碼。",
       },
     },
   },

@@ -10,6 +10,5 @@
   "copyLabel": "Sao chép mã",
   "copiedLabel": "Đã sao chép",
   "downloadLabel": "Tải tệp .ts",
-  "inferenceHelp": "Mã được tạo dựa trên các trường và giá trị trong mẫu. Thêm nhiều bản ghi vào một mảng để nhận diện các trường không bắt buộc và kiểu dữ liệu hỗn hợp.",
   "zodHelp": "Khi phân tích dữ liệu, Zod 4 loại bỏ các trường không được khai báo trong lược đồ."
 }

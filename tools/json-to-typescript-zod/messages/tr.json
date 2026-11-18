@@ -10,6 +10,5 @@
   "copyLabel": "Kodu kopyala",
   "copiedLabel": "Kopyalandı",
   "downloadLabel": ".ts dosyasını indir",
-  "inferenceHelp": "Oluşturulan kod, örnekteki alanları ve değerleri yansıtır. İsteğe bağlı alanları ve farklı değer türlerini kapsamak için diziye daha fazla kayıt ekleyin.",
   "zodHelp": "Zod 4, verileri ayrıştırırken şemada tanımlanmayan alanları sonuçtan çıkarır."
 }

@@ -10,6 +10,5 @@
   "copyLabel": "Code kopieren",
   "copiedLabel": "Kopiert",
   "downloadLabel": ".ts herunterladen",
-  "inferenceHelp": "Der generierte Code orientiert sich an den Feldern und Werten im Beispiel. Füge dem Array weitere Datensätze hinzu, um optionale Felder und gemischte Typen zu erfassen.",
   "zodHelp": "Beim Parsen entfernt das Zod-4-Schema alle Felder, die es nicht definiert."
 }

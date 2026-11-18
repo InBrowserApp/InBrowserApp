@@ -10,6 +10,5 @@
   "copyLabel": "Copiar código",
   "copiedLabel": "Copiado",
   "downloadLabel": "Descargar .ts",
-  "inferenceHelp": "El código generado refleja los campos y valores del ejemplo. Incluye más registros en el array para detectar campos opcionales y tipos mixtos.",
   "zodHelp": "Al analizar los datos, el esquema de Zod 4 elimina los campos que no declara."
 }
