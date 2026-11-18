@@ -17636,6 +17636,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "keyboard-tester",
+    category: "misc",
+    icon: "keyboard",
+    tags: [
+      "keyboard",
+      "hardware",
+      "diagnostics",
+      "shortcut",
+      "rollover",
+      "ghosting",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار لوحة المفاتيح",
+        description:
+          "اختبر لوحة مفاتيح جهازك في المتصفح. تحقق من المفاتيح ومفاتيح التعديل التي يستجيب لها المتصفح، وجرّب تركيبات المفاتيح واعرف عدد المفاتيح التي يرصدها في الوقت نفسه.",
+      },
+      de: {
+        name: "Tastaturtest",
+        description:
+          "Teste deine physische Tastatur im Browser. Prüfe Tasten und Modifikatortasten, teste Tastenkombinationen und sieh, wie viele Tasten gleichzeitig erkannt werden.",
+      },
+      en: {
+        name: "Keyboard Tester",
+        description:
+          "Test your physical keyboard in your browser. See which keys and modifiers register, check key combinations, and find how many keys register at once.",
+      },
+      es: {
+        name: "Probador de teclado",
+        description:
+          "Prueba tu teclado físico en el navegador. Comprueba qué teclas, modificadores y combinaciones se detectan y cuántas teclas se registran a la vez.",
+      },
+      fr: {
+        name: "Test de clavier",
+        description:
+          "Testez votre clavier physique dans votre navigateur. Voyez quelles touches, quels modificateurs et quelles combinaisons sont détectés, et combien de touches sont reconnues en même temps.",
+      },
+      he: {
+        name: "בדיקת מקלדת",
+        description:
+          "בדקו את המקלדת הפיזית בדפדפן. ראו אילו מקשים ומקשי שינוי מזוהים, בדקו שילובי מקשים וגלו כמה מקשים מזוהים בו־זמנית.",
+      },
+      hi: {
+        name: "कीबोर्ड टेस्टर",
+        description:
+          "अपने फ़िज़िकल कीबोर्ड को ब्राउज़र में जाँचें। देखें कि कौन-सी कुंजियाँ और मॉडिफ़ायर कुंजियाँ दर्ज होती हैं, कुंजी संयोजन आज़माएँ और जानें कि एक साथ कितनी कुंजियाँ दर्ज होती हैं।",
+      },
+      id: {
+        name: "Tes Keyboard",
+        description:
+          "Uji keyboard fisik Anda di browser. Lihat tombol yang terdeteksi, termasuk tombol pengubah, uji kombinasi tombol, dan lihat berapa banyak tombol yang terdeteksi sekaligus.",
+      },
+      it: {
+        name: "Test della tastiera",
+        description:
+          "Prova la tua tastiera fisica nel browser. Verifica quali tasti, modificatori e combinazioni vengono rilevati e quanti tasti vengono riconosciuti contemporaneamente.",
+      },
+      ja: {
+        name: "キーボードテスター",
+        description:
+          "物理キーボードをブラウザーでテストします。反応するキーや修飾キーを確認し、キーの組み合わせや、同時に何個のキーを認識できるかを調べられます。",
+      },
+      ko: {
+        name: "키보드 테스터",
+        description:
+          "브라우저에서 물리 키보드를 테스트하세요. 어떤 키와 보조 키가 인식되는지 확인하고, 키 조합과 한 번에 인식되는 최대 키 개수를 테스트할 수 있습니다.",
+      },
+      ms: {
+        name: "Penguji Papan Kekunci",
+        description:
+          "Uji papan kekunci fizikal anda dalam pelayar. Lihat kekunci yang dikesan, termasuk kekunci pengubah suai, uji gabungan kekunci dan ketahui jumlah kekunci yang dikesan serentak.",
+      },
+      nl: {
+        name: "Toetsenbordtest",
+        description:
+          "Test je fysieke toetsenbord in je browser. Bekijk welke toetsen en modificatietoetsen worden herkend, probeer toetscombinaties en ontdek hoeveel toetsen tegelijk worden geregistreerd.",
+      },
+      no: {
+        name: "Tastaturtest",
+        description:
+          "Test det fysiske tastaturet ditt i nettleseren. Se hvilke taster og modifikatortaster som registreres, prøv tastekombinasjoner og sjekk hvor mange taster som registreres samtidig.",
+      },
+      pl: {
+        name: "Tester klawiatury",
+        description:
+          "Przetestuj fizyczną klawiaturę w przeglądarce. Sprawdź, które klawisze, modyfikatory i kombinacje są wykrywane oraz ile klawiszy można wykryć jednocześnie.",
+      },
+      pt: {
+        name: "Teste de teclado",
+        description:
+          "Teste seu teclado físico no navegador. Veja quais teclas, modificadores e combinações são detectados e quantas teclas são reconhecidas ao mesmo tempo.",
+      },
+      ru: {
+        name: "Тест клавиатуры",
+        description:
+          "Проверьте физическую клавиатуру в браузере. Узнайте, какие клавиши, модификаторы и сочетания срабатывают и сколько клавиш распознаётся одновременно.",
+      },
+      sv: {
+        name: "Tangentbordstest",
+        description:
+          "Testa ditt fysiska tangentbord i webbläsaren. Se vilka tangenter och modifierartangenter som registreras, prova tangentkombinationer och se hur många tangenter som registreras samtidigt.",
+      },
+      th: {
+        name: "เครื่องมือทดสอบแป้นพิมพ์",
+        description:
+          "ทดสอบแป้นพิมพ์จริงผ่านเบราว์เซอร์ ดูว่าเบราว์เซอร์ตรวจพบปุ่มใดบ้าง รวมถึงปุ่มปรับเปลี่ยนอย่าง Shift ทดสอบชุดปุ่มที่กดร่วมกันและดูว่าเบราว์เซอร์รับได้กี่ปุ่มพร้อมกัน",
+      },
+      tr: {
+        name: "Klavye Testi",
+        description:
+          "Fiziksel klavyenizi tarayıcıda test edin. Hangi tuşların ve değiştirici tuşların algılandığını görün, tuş kombinasyonlarını deneyin ve aynı anda kaç tuşun algılandığını öğrenin.",
+      },
+      vi: {
+        name: "Công cụ kiểm tra bàn phím",
+        description:
+          "Kiểm tra bàn phím vật lý ngay trong trình duyệt. Xem phím nào được nhận, kể cả phím bổ trợ, thử các tổ hợp và xem có bao nhiêu phím được nhận cùng lúc.",
+      },
+      "zh-CN": {
+        name: "键盘测试器",
+        description:
+          "在浏览器中测试实体键盘。查看哪些按键和修饰键能被识别，测试组合键，并查看浏览器最多能同时识别多少个按键。",
+      },
+      "zh-TW": {
+        name: "鍵盤測試器",
+        description:
+          "在瀏覽器中測試實體鍵盤。查看哪些按鍵和修飾鍵能被偵測，測試組合鍵，並查看瀏覽器最多能同時偵測幾個按鍵。",
+      },
+    },
+  },
+  {
     slug: "ksuid-generator",
     category: "developer",
     icon: "lock",
@@ -55038,6 +55168,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Keccak 雜湊文字或檔案",
         description:
           "為文字輸入或檔案上傳產生 Keccak 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+      },
+    },
+  },
+  "keyboard-tester": {
+    slug: "keyboard-tester",
+    category: "misc",
+    icon: "keyboard",
+    tags: [
+      "keyboard",
+      "hardware",
+      "diagnostics",
+      "shortcut",
+      "rollover",
+      "ghosting",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار لوحة المفاتيح",
+        description:
+          "اختبر لوحة مفاتيح جهازك في المتصفح. تحقق من المفاتيح ومفاتيح التعديل التي يستجيب لها المتصفح، وجرّب تركيبات المفاتيح واعرف عدد المفاتيح التي يرصدها في الوقت نفسه.",
+      },
+      de: {
+        name: "Tastaturtest",
+        description:
+          "Teste deine physische Tastatur im Browser. Prüfe Tasten und Modifikatortasten, teste Tastenkombinationen und sieh, wie viele Tasten gleichzeitig erkannt werden.",
+      },
+      en: {
+        name: "Keyboard Tester",
+        description:
+          "Test your physical keyboard in your browser. See which keys and modifiers register, check key combinations, and find how many keys register at once.",
+      },
+      es: {
+        name: "Probador de teclado",
+        description:
+          "Prueba tu teclado físico en el navegador. Comprueba qué teclas, modificadores y combinaciones se detectan y cuántas teclas se registran a la vez.",
+      },
+      fr: {
+        name: "Test de clavier",
+        description:
+          "Testez votre clavier physique dans votre navigateur. Voyez quelles touches, quels modificateurs et quelles combinaisons sont détectés, et combien de touches sont reconnues en même temps.",
+      },
+      he: {
+        name: "בדיקת מקלדת",
+        description:
+          "בדקו את המקלדת הפיזית בדפדפן. ראו אילו מקשים ומקשי שינוי מזוהים, בדקו שילובי מקשים וגלו כמה מקשים מזוהים בו־זמנית.",
+      },
+      hi: {
+        name: "कीबोर्ड टेस्टर",
+        description:
+          "अपने फ़िज़िकल कीबोर्ड को ब्राउज़र में जाँचें। देखें कि कौन-सी कुंजियाँ और मॉडिफ़ायर कुंजियाँ दर्ज होती हैं, कुंजी संयोजन आज़माएँ और जानें कि एक साथ कितनी कुंजियाँ दर्ज होती हैं।",
+      },
+      id: {
+        name: "Tes Keyboard",
+        description:
+          "Uji keyboard fisik Anda di browser. Lihat tombol yang terdeteksi, termasuk tombol pengubah, uji kombinasi tombol, dan lihat berapa banyak tombol yang terdeteksi sekaligus.",
+      },
+      it: {
+        name: "Test della tastiera",
+        description:
+          "Prova la tua tastiera fisica nel browser. Verifica quali tasti, modificatori e combinazioni vengono rilevati e quanti tasti vengono riconosciuti contemporaneamente.",
+      },
+      ja: {
+        name: "キーボードテスター",
+        description:
+          "物理キーボードをブラウザーでテストします。反応するキーや修飾キーを確認し、キーの組み合わせや、同時に何個のキーを認識できるかを調べられます。",
+      },
+      ko: {
+        name: "키보드 테스터",
+        description:
+          "브라우저에서 물리 키보드를 테스트하세요. 어떤 키와 보조 키가 인식되는지 확인하고, 키 조합과 한 번에 인식되는 최대 키 개수를 테스트할 수 있습니다.",
+      },
+      ms: {
+        name: "Penguji Papan Kekunci",
+        description:
+          "Uji papan kekunci fizikal anda dalam pelayar. Lihat kekunci yang dikesan, termasuk kekunci pengubah suai, uji gabungan kekunci dan ketahui jumlah kekunci yang dikesan serentak.",
+      },
+      nl: {
+        name: "Toetsenbordtest",
+        description:
+          "Test je fysieke toetsenbord in je browser. Bekijk welke toetsen en modificatietoetsen worden herkend, probeer toetscombinaties en ontdek hoeveel toetsen tegelijk worden geregistreerd.",
+      },
+      no: {
+        name: "Tastaturtest",
+        description:
+          "Test det fysiske tastaturet ditt i nettleseren. Se hvilke taster og modifikatortaster som registreres, prøv tastekombinasjoner og sjekk hvor mange taster som registreres samtidig.",
+      },
+      pl: {
+        name: "Tester klawiatury",
+        description:
+          "Przetestuj fizyczną klawiaturę w przeglądarce. Sprawdź, które klawisze, modyfikatory i kombinacje są wykrywane oraz ile klawiszy można wykryć jednocześnie.",
+      },
+      pt: {
+        name: "Teste de teclado",
+        description:
+          "Teste seu teclado físico no navegador. Veja quais teclas, modificadores e combinações são detectados e quantas teclas são reconhecidas ao mesmo tempo.",
+      },
+      ru: {
+        name: "Тест клавиатуры",
+        description:
+          "Проверьте физическую клавиатуру в браузере. Узнайте, какие клавиши, модификаторы и сочетания срабатывают и сколько клавиш распознаётся одновременно.",
+      },
+      sv: {
+        name: "Tangentbordstest",
+        description:
+          "Testa ditt fysiska tangentbord i webbläsaren. Se vilka tangenter och modifierartangenter som registreras, prova tangentkombinationer och se hur många tangenter som registreras samtidigt.",
+      },
+      th: {
+        name: "เครื่องมือทดสอบแป้นพิมพ์",
+        description:
+          "ทดสอบแป้นพิมพ์จริงผ่านเบราว์เซอร์ ดูว่าเบราว์เซอร์ตรวจพบปุ่มใดบ้าง รวมถึงปุ่มปรับเปลี่ยนอย่าง Shift ทดสอบชุดปุ่มที่กดร่วมกันและดูว่าเบราว์เซอร์รับได้กี่ปุ่มพร้อมกัน",
+      },
+      tr: {
+        name: "Klavye Testi",
+        description:
+          "Fiziksel klavyenizi tarayıcıda test edin. Hangi tuşların ve değiştirici tuşların algılandığını görün, tuş kombinasyonlarını deneyin ve aynı anda kaç tuşun algılandığını öğrenin.",
+      },
+      vi: {
+        name: "Công cụ kiểm tra bàn phím",
+        description:
+          "Kiểm tra bàn phím vật lý ngay trong trình duyệt. Xem phím nào được nhận, kể cả phím bổ trợ, thử các tổ hợp và xem có bao nhiêu phím được nhận cùng lúc.",
+      },
+      "zh-CN": {
+        name: "键盘测试器",
+        description:
+          "在浏览器中测试实体键盘。查看哪些按键和修饰键能被识别，测试组合键，并查看浏览器最多能同时识别多少个按键。",
+      },
+      "zh-TW": {
+        name: "鍵盤測試器",
+        description:
+          "在瀏覽器中測試實體鍵盤。查看哪些按鍵和修飾鍵能被偵測，測試組合鍵，並查看瀏覽器最多能同時偵測幾個按鍵。",
       },
     },
   },

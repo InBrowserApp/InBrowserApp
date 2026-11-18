@@ -1,0 +1,15 @@
+{
+  "start": "Testi başlat",
+  "reset": "Sıfırla",
+  "layout": "Tam boyutlu ANSI klavye",
+  "ready": "Testi başlatın, ardından tek bir tuşa basın veya Shift + A gibi birkaç tuşu aynı anda basılı tutun.",
+  "capturing": "Test etmek istediğiniz tuşlara basın. Tab odağı değiştirir, Esc tuş algılamayı durdurur.",
+  "held": "Basılı",
+  "tested": "Test edilen",
+  "peak": "En çok basılı tuş",
+  "combination": "Geçerli tuş kombinasyonu",
+  "lastKey": "Son tuş",
+  "noneHeld": "Basılı tuş yok",
+  "scroll": "Klavyenin tamamını görmek için yatay kaydırın.",
+  "note": "Şema, tuşların klavye üzerindeki fiziksel konumlarını gösterir. “Son tuş” alanında klavye düzeninizin ürettiği değer ve tarayıcının tuş kodu görünür. Bazı sistem kısayolları ve Fn gibi donanım tuşları tarayıcıya ulaşmayabilir."
+}

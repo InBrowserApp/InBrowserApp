@@ -1,0 +1,15 @@
+{
+  "start": "Test starten",
+  "reset": "Zurücksetzen",
+  "layout": "ANSI-Tastatur in voller Größe",
+  "ready": "Starte den Test und drücke eine einzelne Taste oder mehrere gleichzeitig, etwa Shift + A.",
+  "capturing": "Drücke eine Taste zum Testen. Mit Tab wechselst du den Fokus, mit Esc beendest du die Erfassung.",
+  "held": "Gedrückt",
+  "tested": "Getestet",
+  "peak": "Max. gleichzeitig",
+  "combination": "Aktuelle Tastenkombination",
+  "lastKey": "Letzte Taste",
+  "noneHeld": "Keine Taste gedrückt",
+  "scroll": "Scrolle seitwärts, um die ganze Tastatur zu sehen.",
+  "note": "Die Abbildung zeigt die physischen Tastenpositionen. Bei der letzten Taste siehst du den Wert für deine Tastaturbelegung und den Tastencode des Browsers. Manche Systemtastenkürzel und Hardwaretasten wie Fn erreichen den Browser möglicherweise nicht."
+}

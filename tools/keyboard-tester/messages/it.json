@@ -1,0 +1,15 @@
+{
+  "start": "Avvia il test",
+  "reset": "Reimposta",
+  "layout": "Tastiera ANSI in formato completo",
+  "ready": "Avvia il test, quindi premi un tasto o tienine premuti più di uno, ad esempio Shift + A.",
+  "capturing": "Premi i tasti per provarli. Tab sposta il focus ed Esc termina il rilevamento.",
+  "held": "Premuti",
+  "tested": "Testati",
+  "peak": "Max simultanei",
+  "combination": "Combinazione attuale",
+  "lastKey": "Ultimo tasto",
+  "noneHeld": "Nessun tasto premuto",
+  "scroll": "Scorri in orizzontale per vedere tutta la tastiera.",
+  "note": "Lo schema mostra la posizione fisica dei tasti. In «Ultimo tasto» trovi il valore prodotto dal layout della tastiera e il codice ricevuto dal browser. Alcune scorciatoie di sistema e alcuni tasti, come Fn, potrebbero non essere rilevati dal browser."
+}

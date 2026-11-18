@@ -1,0 +1,15 @@
+{
+  "start": "Mulai tes",
+  "reset": "Atur ulang",
+  "layout": "Keyboard ANSI ukuran penuh",
+  "ready": "Mulai tes, lalu tekan satu tombol atau tahan beberapa tombol sekaligus, misalnya Shift + A.",
+  "capturing": "Tekan tombol untuk mengujinya. Gunakan Tab untuk memindahkan fokus atau Esc untuk menghentikan deteksi tombol.",
+  "held": "Sedang ditahan",
+  "tested": "Sudah diuji",
+  "peak": "Terbanyak sekaligus",
+  "combination": "Kombinasi saat ini",
+  "lastKey": "Tombol terakhir",
+  "noneHeld": "Tidak ada tombol yang ditahan",
+  "scroll": "Gulir ke samping untuk melihat seluruh keyboard.",
+  "note": "Diagram menunjukkan posisi fisik tiap tombol. Bagian Tombol terakhir menampilkan nilai dari tata letak yang Anda gunakan dan kode tombol yang diterima browser. Beberapa pintasan sistem dan tombol fisik, seperti Fn, mungkin tidak terdeteksi oleh browser."
+}

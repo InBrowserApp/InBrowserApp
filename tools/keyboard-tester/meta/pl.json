@@ -1,0 +1,4 @@
+{
+  "name": "Tester klawiatury",
+  "description": "Przetestuj fizyczną klawiaturę w przeglądarce. Sprawdź, które klawisze, modyfikatory i kombinacje są wykrywane oraz ile klawiszy można wykryć jednocześnie."
+}

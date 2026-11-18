@@ -1,0 +1,15 @@
+{
+  "start": "Lancer le test",
+  "reset": "Réinitialiser",
+  "layout": "Clavier ANSI avec pavé numérique",
+  "ready": "Lancez le test, puis appuyez sur une touche ou maintenez-en plusieurs à la fois, par exemple Shift + A.",
+  "capturing": "Appuyez sur les touches à tester. Tab déplace le focus et Esc arrête la capture.",
+  "held": "Maintenues",
+  "tested": "Testées",
+  "peak": "Max. simultanées",
+  "combination": "Combinaison actuelle",
+  "lastKey": "Dernière touche",
+  "noneHeld": "Aucune touche maintenue",
+  "scroll": "Faites défiler horizontalement pour voir tout le clavier.",
+  "note": "Le schéma montre la position physique des touches. Sous « Dernière touche », vous verrez la valeur produite selon la disposition de votre clavier et le code reçu par le navigateur. Certains raccourcis système et certaines touches, comme Fn, peuvent ne jamais parvenir au navigateur."
+}

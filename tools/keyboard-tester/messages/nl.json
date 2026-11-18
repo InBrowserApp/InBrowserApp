@@ -1,0 +1,15 @@
+{
+  "start": "Test starten",
+  "reset": "Opnieuw instellen",
+  "layout": "Volledig ANSI-toetsenbord",
+  "ready": "Start de test en druk op één toets of op meerdere tegelijk, bijvoorbeeld Shift + A.",
+  "capturing": "Druk op de toetsen die je wilt testen. Met Tab verplaats je de focus en met Esc stop je de registratie.",
+  "held": "Ingedrukt",
+  "tested": "Getest",
+  "peak": "Max. tegelijk",
+  "combination": "Huidige toetscombinatie",
+  "lastKey": "Laatste toets",
+  "noneHeld": "Geen toetsen ingedrukt",
+  "scroll": "Scrol zijwaarts om het hele toetsenbord te zien.",
+  "note": "De afbeelding toont de fysieke posities van de toetsen. Bij de laatste toets zie je de waarde volgens jouw toetsenbordindeling en de toetscode van de browser. Sommige systeemsneltoetsen en hardwaretoetsen, zoals Fn, bereiken de browser mogelijk niet."
+}
