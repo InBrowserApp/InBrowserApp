@@ -1,0 +1,4 @@
+{
+  "name": "Test av spillkontroller",
+  "description": "Test knappene, avtrekkerne og spakene på spillkontrolleren i sanntid i nettleseren. Se hvor langt hver spak blir stående fra midten når du slipper den, for å oppdage spakdrift."
+}

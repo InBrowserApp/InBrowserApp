@@ -50,6 +50,7 @@ export {
   Folder,
   FolderInput,
   FolderPlus,
+  Gamepad2,
   Globe,
   GripVertical,
   Hand,

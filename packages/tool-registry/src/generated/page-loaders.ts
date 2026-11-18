@@ -116,6 +116,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/file-to-data-uri-converter/page"),
   "file-type-detector": () => import("@tool/file-type-detector/page"),
   "font-subset-generator": () => import("@tool/font-subset-generator/page"),
+  "gamepad-tester": () => import("@tool/gamepad-tester/page"),
   "gif-to-animated-webp-converter": () =>
     import("@tool/gif-to-animated-webp-converter/page"),
   "gif-to-apng-converter": () => import("@tool/gif-to-apng-converter/page"),

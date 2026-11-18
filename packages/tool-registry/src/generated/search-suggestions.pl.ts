@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Tester pada",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "Konwerter GIF do animowanego WebP",
     slug: "gif-to-animated-webp-converter",

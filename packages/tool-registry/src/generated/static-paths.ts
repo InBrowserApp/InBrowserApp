@@ -8190,6 +8190,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "gamepad-tester",
+    language: "ar",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "de",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "en",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "es",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "fr",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "he",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "hi",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "id",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "it",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "ja",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "ko",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "ms",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "nl",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "no",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "pl",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "pt",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "ru",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "sv",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "th",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "tr",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "vi",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "zh-CN",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "zh-TW",
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     language: "ar",
   },

@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "遊戲控制器測試器",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "GIF 轉動態 WebP 轉換器",
     slug: "gif-to-animated-webp-converter",
