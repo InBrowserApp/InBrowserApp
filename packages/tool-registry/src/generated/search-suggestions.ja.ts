@@ -459,6 +459,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "GIF 作成ツール",
+    slug: "gif-maker",
+  },
+  {
+    category: "image",
     name: "GIFからAnimated WebPへの変換ツール",
     slug: "gif-to-animated-webp-converter",
   },

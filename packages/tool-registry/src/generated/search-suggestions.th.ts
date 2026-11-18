@@ -459,6 +459,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "เครื่องมือสร้าง GIF",
+    slug: "gif-maker",
+  },
+  {
+    category: "image",
     name: "ตัวแปลง GIF เป็น WebP แบบเคลื่อนไหว",
     slug: "gif-to-animated-webp-converter",
   },

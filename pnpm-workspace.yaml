@@ -110,6 +110,7 @@ catalog:
   exifr: ^7.1.3
   figlet: ^1.12.0
   file-type: 22.3.0
+  gifenc: 1.0.3
   gifuct-js: ^2.1.2
   glob: ^14.0.6
   happy-dom: ^21.0.4
