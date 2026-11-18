@@ -1,4 +1,4 @@
 {
   "name": "Conversor de Timestamp Unix",
-  "description": "Converte timestamps Unix em datas legíveis e vice-versa. Suporta detecção automática de segundos, milissegundos e nanossegundos."
+  "description": "Converta timestamps Unix para hora local, UTC ou ISO 8601, e datas para timestamps em segundos, milissegundos ou nanossegundos."
 }

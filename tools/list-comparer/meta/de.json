@@ -1,4 +1,4 @@
 {
   "name": "Listenvergleich",
-  "description": "Vergleiche zwei Listen, zeige Überschneidungen und Ausschlüsse an und exportiere genau die benötigte Menge vor einem Abgleich oder einer Bereinigung."
+  "description": "Zwei Listen vergleichen und gemeinsame Einträge, Unterschiede und Duplikate finden. Zeilen oder getrennte Werte einfügen und Ergebnisse kopieren oder herunterladen."
 }

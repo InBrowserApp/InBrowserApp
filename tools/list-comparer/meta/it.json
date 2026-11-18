@@ -1,4 +1,4 @@
 {
   "name": "Confronto elenchi",
-  "description": "Confronta due elenchi, individua elementi in comune ed esclusioni ed esporta esattamente l'insieme che ti serve prima di una sincronizzazione o una pulizia."
+  "description": "Confronta due elenchi per trovare elementi in comune, voci presenti solo in A o B e duplicati. Incolla righe o testo delimitato e copia o scarica i risultati."
 }

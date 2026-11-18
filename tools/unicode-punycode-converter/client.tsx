@@ -19,19 +19,9 @@ import {
   isValidUnicodeDomain,
 } from "./core/punycode"
 
-type UnicodePunycodeMessages = Readonly<{
-  meta: {
-    name: string
-    description: string
-  }
-  asciiDomainLabel: string
-  unicodeDomainLabel: string
-  whatIsPunycodeTitle: string
-  whatIsPunycodeDescription: string
-  copyLabel: string
-  copiedLabel: string
-  resetLabel: string
-}>
+import type EnglishMessages from "./messages/en.json"
+
+export type UnicodePunycodeMessages = Readonly<typeof EnglishMessages>
 
 type UnicodePunycodeConverterClientProps = Readonly<{
   messages: UnicodePunycodeMessages
@@ -143,17 +133,6 @@ function UnicodePunycodeConverterClient({
             variant="ghost"
           />
         </CardFooter>
-      </Card>
-
-      <Card className="lg:col-span-2">
-        <CardHeader className="border-b">
-          <CardTitle>{messages.whatIsPunycodeTitle}</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="max-w-3xl text-sm leading-7 text-muted-foreground">
-            {messages.whatIsPunycodeDescription}
-          </p>
-        </CardContent>
       </Card>
     </div>
   )

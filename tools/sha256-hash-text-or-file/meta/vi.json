@@ -1,4 +1,4 @@
 {
   "name": "Hash SHA-256 văn bản hoặc tệp",
-  "description": "Tạo hash SHA-256 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật"
+  "description": "Tính tổng kiểm tra SHA-256 cho tệp hoặc văn bản UTF-8 ngay trong trình duyệt. Sao chép mã băm ở dạng thập lục phân, Base64, thập phân hoặc nhị phân."
 }

@@ -1,4 +1,4 @@
 {
   "name": "Textradssorterare",
-  "description": "Sortera textrader i stigande eller fallande ordning, med alternativ för att ignorera skiftläge, trimma rader samt ta bort tomma rader och dubbletter."
+  "description": "Sortera textrader från A till Z eller Z till A. Ignorera skiftläge, trimma blanksteg eller ta bort tomma rader och dubbletter innan du kopierar listan."
 }

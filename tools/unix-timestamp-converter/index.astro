@@ -1,8 +1,10 @@
 ---
 import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import UnixTimestampConverterClient from "./client"
 
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
 import type { UnixTimestampConverterMessages } from "./types"
 
@@ -24,8 +26,15 @@ const localizedMessages = resolveLocale<UnixTimestampConverterMessages>(
   lang
 )!
 const messages = { meta, ...localizedMessages }
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.md", { eager: true, import: "default" }),
+  lang
+)!
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <UnixTimestampConverterClient client:load language={lang} messages={messages} />
+  <ToolArticle>
+    <IntroSection />
+  </ToolArticle>
 </ToolPageShell>

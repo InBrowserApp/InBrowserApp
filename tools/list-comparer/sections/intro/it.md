@@ -1,11 +1,11 @@
-## A cosa serve il confronto elenchi
+## Confrontare due elenchi per trovare corrispondenze e differenze
 
-Usa questo strumento quando due elenchi dovrebbero corrispondere, ma devi individuare con precisione elementi in comune, esclusioni e duplicati prima di importare, sincronizzare, inviare messaggi o ripulire i dati.
+Incolla i due elenchi in **Elenco A** e **Elenco B**. Usa un elemento per riga oppure scegli una virgola, una tabulazione o un separatore personalizzato. Se le fonti usano formati diversi, puoi eliminare gli spazi ai bordi delle voci o ignorare le differenze tra maiuscole e minuscole.
 
-## Quali risultati ottieni
+## Leggere i risultati del confronto
 
-Il confronto viene suddiviso in insiemi pratici: elementi in comune, presenti solo in A, presenti solo in B, tutti i valori unici e duplicati all'interno di ciascuna fonte. Puoi copiare o scaricare ogni insieme separatamente.
+Se A contiene `A101`, `B202`, `B202` e B contiene `B202`, `C303`, in **In comune** trovi `B202`, in **Solo in A** trovi `A101` e in **Solo in B** trovi `C303`. **Duplicati in A** mostra che `B202` compare due volte in A. **Tutti gli elementi unici** unisce i due elenchi mostrando ogni elemento una sola volta.
 
-## Dove è più utile
+## Copiare o scaricare l’elenco che ti serve
 
-È utile per elenchi di contatti, ID di prodotti, esportazioni per verifiche, istantanee di inventario, segmenti di campagne e qualsiasi operazione di pulizia in cui un'unione errata potrebbe creare lavoro aggiuntivo in seguito.
+Seleziona un gruppo di risultati e copia o scarica solo quell’elenco. Per esempio, confronta un inventario di origine con uno di destinazione e usa **Solo in A** per ricavare i codici dei prodotti che mancano nell’inventario di destinazione.

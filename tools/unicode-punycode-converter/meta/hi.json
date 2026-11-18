@@ -1,4 +1,4 @@
 {
   "name": "Unicode ↔ Punycode परिवर्तक",
-  "description": "Unicode (IDN) और ASCII (Punycode) डोमेन को दोनों दिशाओं में बदलें"
+  "description": "Unicode डोमेन नामों को ASCII Punycode में बदलें या xn-- डोमेन को पढ़ने योग्य Unicode में बदलें। अंतरराष्ट्रीय डोमेन नाम (IDN) दोनों दिशाओं में बदलें।"
 }

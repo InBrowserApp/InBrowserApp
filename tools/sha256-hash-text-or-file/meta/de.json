@@ -1,4 +1,4 @@
 {
   "name": "SHA-256-Hash für Text oder Datei",
-  "description": "Generieren Sie SHA-256-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke"
+  "description": "SHA-256-Prüfsumme einer Datei oder eines UTF-8-Texts im Browser berechnen. Den Hash hexadezimal, in Base64, dezimal oder binär kopieren."
 }

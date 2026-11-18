@@ -1,4 +1,4 @@
 {
   "name": "Tekstlinjesortering",
-  "description": "Sorter tekstlinjer i stigende eller synkende rekkefølge, med valg for å ignorere store og små bokstaver, fjerne innledende og avsluttende blanktegn, tomme linjer og duplikater."
+  "description": "Sorter tekstlinjer fra A til Z eller Z til A. Ignorer forskjellen på store og små bokstaver, fjern blanktegn, tomme linjer eller duplikater, og kopier listen."
 }

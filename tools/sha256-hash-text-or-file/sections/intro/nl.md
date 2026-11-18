@@ -1,19 +1,9 @@
-## Wat is SHA-256?
+## De SHA-256-checksum van tekst of een bestand berekenen
 
-SHA-256 (Secure Hash Algorithm 256-bit) is een cryptografische hashfunctie die een 256-bit (32-byte) hashwaarde produceert, doorgaans weergegeven als een 64-karakter hexadecimaal getal. Het is onderdeel van de SHA-2 familie van hashfuncties ontworpen door de NSA en gepubliceerd door NIST.
+Plak UTF-8-tekst of kies **Importeren uit bestand** om de oorspronkelijke bytes van een bestand te hashen. Kopieer het hexadecimale resultaat om het te vergelijken met een gepubliceerde checksum. SHA-256 levert een hash van 256 bits op, weergegeven als 64 hexadecimale tekens.
 
-**Belangrijkste kenmerken:**
+Wil je een download controleren? Bereken de hash van het gedownloade bestand en vergelijk de volledige hexadecimale waarde met die van de bron. Bij tekst beïnvloeden spaties, hoofdletters en regeleinden de hash. Je kunt het uitproberen met `abc` zonder regeleinde aan het eind. Je krijgt dan deze hash.
 
-- **Deterministisch**: Dezelfde invoer produceert altijd dezelfde hash
-- **Snelle berekening**: Snel te berekenen voor elke gegeven invoer
-- **Lawine-effect**: Kleine veranderingen in invoer produceren drastisch verschillende uitvoer
-- **Onomkeerbaar**: Computationeel onhaalbaar om de hash om te keren om de oorspronkelijke invoer te vinden
-- **Botsingsbestendig**: Zeer moeilijk om twee verschillende invoeren te vinden die dezelfde hash produceren
-
-**Veelvoorkomende toepassingen:**
-
-- Digitale handtekeningen en certificaten
-- Blockchain en cryptocurrency (Bitcoin gebruikt SHA-256)
-- Wachtwoordopslag (met juiste zouting)
-- Bestandsintegriteitsverificatie
-- Proof-of-work algoritmes
+```text
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+```

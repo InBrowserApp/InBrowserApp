@@ -1,4 +1,4 @@
 {
   "name": "IPv6 ULA Generator",
-  "description": "Generate a secure RFC 4193 IPv6 Unique Local Address (ULA) /48 prefix in the browser and plan its fd00 /64 subnets."
+  "description": "Generate an RFC 4193 IPv6 Unique Local Address (ULA) /48 prefix and calculate /64 subnets for a home network, lab, or VPN."
 }

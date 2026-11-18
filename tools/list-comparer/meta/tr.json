@@ -1,4 +1,4 @@
 {
   "name": "Liste Karşılaştırıcı",
-  "description": "Eşitleme veya temizlik öncesinde iki listeyi karşılaştırın, ortak ve dışarıda kalan öğeleri bulun ve tam olarak ihtiyacınız olan kümeyi dışa aktarın."
+  "description": "İki listeyi karşılaştırın. Ortak, yalnızca bir listede bulunan veya yinelenen öğeleri görün. Satırları ya da ayraçlı metni yapıştırın, sonucu kopyalayın veya indirin."
 }

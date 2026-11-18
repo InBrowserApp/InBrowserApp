@@ -1,4 +1,4 @@
 {
   "name": "Unix-Zeitstempel-Konverter",
-  "description": "Konvertiert Unix-Zeitstempel in lesbare Daten und umgekehrt. Unterstützt automatische Erkennung von Sekunden, Millisekunden und Nanosekunden."
+  "description": "Unix-Zeitstempel in Ortszeit, UTC oder ISO 8601 umrechnen und Datum und Uhrzeit in Sekunden, Millisekunden oder Nanosekunden zurückrechnen."
 }

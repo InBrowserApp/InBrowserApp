@@ -1,19 +1,9 @@
-## SHA-256 nedir?
+## Metnin veya dosyanın SHA-256 sağlama toplamını hesaplayın
 
-SHA-256 (Güvenli Hash Algoritması 256-bit), tipik olarak 64 karakterlik onaltılık sayı olarak gösterilen 256-bit (32-bayt) hash değeri üreten kriptografik bir hash fonksiyonudur. NSA tarafından tasarlanan ve NIST tarafından yayınlanan SHA-2 hash fonksiyon ailesinin bir parçasıdır.
+UTF-8 metnini yapıştırın veya dosyanın özgün baytlarından hash hesaplamak için **Dosyadan içe aktar** seçeneğini kullanın. Yayımlanmış bir sağlama toplamıyla karşılaştırmak için onaltılık sonucu kopyalayın. SHA-256, 64 onaltılık karakterle gösterilen 256 bitlik bir hash üretir.
 
-**Temel özellikler:**
+Bir indirmeyi doğrulamak için indirilen dosyanın hash değerini hesaplayıp onaltılık değerin tamamını kaynağın yayımladığı değerle karşılaştırın. Metinde boşluklar, büyük/küçük harfler ve satır sonları hash değerini değiştirir. Hızlıca denemek için sonunda satır sonu olmadan `abc` yazın. Aşağıdaki sonucu alırsınız.
 
-- **Deterministik**: Aynı girdi her zaman aynı hash'i üretir
-- **Hızlı hesaplama**: Herhangi bir verilen girdi için hızla hesaplanır
-- **Çığ etkisi**: Girdideki küçük değişiklikler büyük ölçüde farklı çıktılar üretir
-- **Geri döndürülemez**: Hash'i tersine çevirerek orijinal girdiyi bulmak hesaplamalı olarak mümkün değildir
-- **Çarpışma dirençli**: Aynı hash'i üreten iki farklı girdi bulmak çok zordur
-
-**Yaygın kullanımlar:**
-
-- Dijital imzalar ve sertifikalar
-- Blok zinciri ve kripto para birimleri (Bitcoin SHA-256 kullanır)
-- Şifre depolama (uygun tuzlama ile)
-- Dosya bütünlüğü doğrulama
-- İş kanıtı algoritmaları
+```text
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+```

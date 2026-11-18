@@ -1,11 +1,11 @@
-## Bu Karşılaştırıcı Ne İşe Yarar?
+## İki listeyi karşılaştırarak ortak ve farklı öğeleri bulun
 
-İki listenin birbiriyle uyumlu olması gerektiğinde, içe aktarma, eşitleme, mesaj gönderme veya temizlik öncesinde ortak öğeleri, dışarıda kalanları ve tekrarları tam olarak görmek için bu aracı kullanın.
+Listeleri **Liste A** ve **Liste B** alanlarına yapıştırın. Her satıra bir öğe yazın veya ayraç olarak virgül, sekme ya da özel bir ayraç seçin. Kaynaklarda biçim farklılıkları varsa öğelerin başındaki ve sonundaki boşlukları kırpma veya büyük/küçük harf farkını yok sayma seçeneklerini açın.
 
-## Hangi Sonuçları Alırsınız?
+## Karşılaştırma sonuçlarını okuyun
 
-Karşılaştırma, kullanışlı sonuç kümelerine ayrılır: ortak öğeler, yalnızca A'da bulunanlar, yalnızca B'de bulunanlar, tüm benzersiz değerler ve her kaynaktaki tekrarlar. Her kümeyi ayrı ayrı kopyalayabilir veya indirebilirsiniz.
+A listesinde `A101`, `B202`, `B202`, B listesinde ise `B202`, `C303` varsa **Ortak** altında `B202`, **Yalnızca A'da** altında `A101` ve **Yalnızca B'de** altında `C303` görünür. **A'daki tekrarlar**, `B202` öğesinin A listesinde iki kez geçtiğini gösterir. **Tüm benzersiz öğeler** iki listeyi birleştirir ve her öğeyi bir kez gösterir.
 
-## En Çok Nerede İşe Yarar?
+## İhtiyacınız olan listeyi kopyalayın veya indirin
 
-Kişi listeleri, ürün kimlikleri, denetim çıktıları, envanter anlık görüntüleri, kampanya segmentleri ve hatalı bir birleştirmenin sonradan ek iş çıkaracağı her türlü temizlik için yararlıdır.
+Bir sonuç grubu seçin ve o listeyi kopyalayın veya indirin. Örneğin kaynak envanteri hedef envanterle karşılaştırıp **Yalnızca A'da** grubundan hedefte eksik olan ürün kimliklerini alabilirsiniz.

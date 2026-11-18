@@ -1,19 +1,9 @@
-## Was ist SHA-256?
+## SHA-256-Prüfsumme für Text oder Dateien berechnen
 
-SHA-256 (Secure Hash Algorithm 256-Bit) ist eine kryptographische Hash-Funktion, die einen 256-Bit (32-Byte) Hash-Wert erzeugt, der typischerweise als 64-stellige Hexadezimalzahl dargestellt wird. Es ist Teil der SHA-2-Familie von Hash-Funktionen, die von der NSA entworfen und vom NIST veröffentlicht wurden.
+Fügen Sie UTF-8-Text ein oder wählen Sie **Aus Datei importieren**, um den Hash aus den unveränderten Dateibytes zu berechnen. Kopieren Sie das hexadezimale Ergebnis, um es mit einer veröffentlichten Prüfsumme zu vergleichen. SHA-256 liefert einen 256-Bit-Hash, der als 64 Hexadezimalzeichen angezeigt wird.
 
-**Hauptmerkmale:**
+Um einen Download zu prüfen, berechnen Sie den Hash der heruntergeladenen Datei und vergleichen Sie den vollständigen Hexadezimalwert mit dem Wert der Quelle. Bei Text ändern Leerzeichen, Groß- und Kleinschreibung und Zeilenumbrüche den Hash. Für einen schnellen Test ergibt der Text `abc` ohne abschließenden Zeilenumbruch diesen Wert:
 
-- **Deterministisch**: Dieselbe Eingabe erzeugt immer denselben Hash
-- **Schnelle Berechnung**: Schnell zu berechnen für jede gegebene Eingabe
-- **Lawineneffekt**: Kleine Änderungen in der Eingabe erzeugen drastisch unterschiedliche Ausgaben
-- **Irreversibel**: Rechnerisch nicht machbar, den Hash umzukehren, um die ursprüngliche Eingabe zu finden
-- **Kollisionsresistent**: Sehr schwierig, zwei verschiedene Eingaben zu finden, die denselben Hash erzeugen
-
-**Häufige Verwendungen:**
-
-- Digitale Signaturen und Zertifikate
-- Blockchain und Kryptowährungen (Bitcoin verwendet SHA-256)
-- Passwort-Speicherung (mit angemessenem Salting)
-- Datei-Integritätsprüfung
-- Proof-of-Work-Algorithmen
+```text
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+```

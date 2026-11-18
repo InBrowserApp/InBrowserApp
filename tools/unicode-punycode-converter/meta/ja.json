@@ -1,4 +1,4 @@
 {
   "name": "Unicode ↔ Punycode 変換ツール",
-  "description": "Unicode（IDN）と ASCII（Punycode）のドメイン名を双方向に変換"
+  "description": "Unicode のドメイン名を ASCII の Punycode に変換し、xn-- で始まるドメイン名を元の表記に戻します。国際化ドメイン名（IDN）の双方向変換に対応します。"
 }
