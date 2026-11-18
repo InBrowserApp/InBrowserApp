@@ -34,6 +34,7 @@
     "@tool/basic-auth-generator": "workspace:*",
     "@tool/bcrypt-hash-password": "workspace:*",
     "@tool/bcrypt-hash-password-verifier": "workspace:*",
+    "@tool/bibliography-converter": "workspace:*",
     "@tool/bic-swift-validator": "workspace:*",
     "@tool/bip39-mnemonic-generator": "workspace:*",
     "@tool/blake2b-hash-text-or-file": "workspace:*",

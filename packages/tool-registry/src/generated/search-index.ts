@@ -3473,6 +3473,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "bibliography-converter",
+    category: "text",
+    icon: "book-open",
+    tags: [
+      "bibliography",
+      "citation",
+      "references",
+      "bibtex",
+      "ris",
+      "csl json",
+      "doi",
+      "duplicates",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل صيغ المراجع",
+        description:
+          "حوّل المراجع بين صيغ BibTeX وRIS وCSL JSON واكتشف السجلات التي يُحتمل تكرارها. الصق النص أو افتح ملفًا لتحويله في متصفحك.",
+      },
+      de: {
+        name: "Literaturangaben konvertieren",
+        description:
+          "Konvertieren Sie Literaturangaben zwischen BibTeX, RIS und CSL JSON und finden Sie mögliche Duplikate. Fügen Sie Text ein oder öffnen Sie eine Datei, um sie im Browser zu konvertieren.",
+      },
+      en: {
+        name: "Bibliography Converter",
+        description:
+          "Convert references between BibTeX, RIS, and CSL JSON, and find possible duplicate entries. Paste text or open a file to convert it in your browser.",
+      },
+      es: {
+        name: "Conversor de referencias bibliográficas",
+        description:
+          "Convierte referencias entre BibTeX, RIS y CSL JSON y detecta posibles duplicados. Pega texto o abre un archivo para convertirlo en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de références bibliographiques",
+        description:
+          "Convertissez vos références entre BibTeX, RIS et CSL JSON et repérez les doublons possibles. Collez du texte ou ouvrez un fichier pour le convertir dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר רשומות ביבליוגרפיות",
+        description:
+          "המרת מקורות ביבליוגרפיים בין הפורמטים BibTeX, RIS ו-CSL JSON ואיתור כפילויות אפשריות. אפשר להדביק טקסט או לפתוח קובץ ולהמיר אותו בדפדפן.",
+      },
+      hi: {
+        name: "संदर्भ सूची कन्वर्टर",
+        description:
+          "संदर्भों को BibTeX, RIS और CSL JSON के बीच बदलें और संभावित डुप्लिकेट प्रविष्टियाँ ढूँढें। ब्राउज़र में बदलने के लिए टेक्स्ट पेस्ट करें या फ़ाइल खोलें।",
+      },
+      id: {
+        name: "Konverter Format Referensi",
+        description:
+          "Konversi referensi dari dan ke format BibTeX, RIS, atau CSL JSON, sekaligus temukan entri yang mungkin duplikat. Tempel teks atau buka file untuk mengonversinya di browser.",
+      },
+      it: {
+        name: "Convertitore di riferimenti bibliografici",
+        description:
+          "Converti i riferimenti tra BibTeX, RIS e CSL JSON e individua i possibili duplicati. Incolla il testo o apri un file per convertirlo nel browser.",
+      },
+      ja: {
+        name: "参考文献コンバーター",
+        description:
+          "BibTeX、RIS、CSL JSON の間で参考文献を変換し、重複の可能性がある項目を検出できます。テキストを貼り付けるかファイルを開くと、ブラウザーで変換できます。",
+      },
+      ko: {
+        name: "참고문헌 형식 변환기",
+        description:
+          "BibTeX, RIS, CSL JSON 간에 참고문헌을 변환하고 중복 가능성이 있는 항목을 찾으세요. 텍스트를 붙여넣거나 파일을 열어 브라우저에서 변환할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Format Rujukan",
+        description:
+          "Tukar format rujukan antara BibTeX, RIS dan CSL JSON serta cari entri yang mungkin pendua. Tampal teks atau buka fail untuk menukarnya dalam pelayar anda.",
+      },
+      nl: {
+        name: "Bibliografieconverter",
+        description:
+          "Converteer referenties tussen BibTeX, RIS en CSL JSON en spoor mogelijke dubbele vermeldingen op. Plak tekst of open een bestand om het in je browser te converteren.",
+      },
+      no: {
+        name: "Referansekonverterer",
+        description:
+          "Konverter referanser mellom BibTeX, RIS og CSL JSON, og finn mulige duplikater. Lim inn tekst eller åpne en fil for å konvertere den i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter bibliografii",
+        description:
+          "Konwertuj pozycje bibliograficzne między formatami BibTeX, RIS i CSL JSON oraz wykrywaj możliwe duplikaty. Wklej tekst lub otwórz plik, aby przekonwertować go w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de referências bibliográficas",
+        description:
+          "Converta referências entre BibTeX, RIS e CSL JSON e encontre possíveis duplicatas. Cole o texto ou abra um arquivo para convertê-lo no navegador.",
+      },
+      ru: {
+        name: "Конвертер библиографии",
+        description:
+          "Преобразуйте библиографические записи между форматами BibTeX, RIS и CSL JSON и находите возможные дубликаты. Вставьте текст или откройте файл для конвертации в браузере.",
+      },
+      sv: {
+        name: "Referenskonverterare",
+        description:
+          "Konvertera referenser mellan BibTeX, RIS och CSL JSON och hitta möjliga dubbletter. Klistra in text eller öppna en fil och konvertera direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแปลงรูปแบบรายการอ้างอิง",
+        description:
+          "แปลงรายการอ้างอิงระหว่าง BibTeX, RIS และ CSL JSON พร้อมค้นหารายการที่อาจซ้ำกัน วางข้อความหรือเปิดไฟล์เพื่อแปลงในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Kaynakça Dönüştürücüsü",
+        description:
+          "Kaynakça kayıtlarını BibTeX, RIS ve CSL JSON biçimleri arasında dönüştürün ve olası yinelenen kayıtları bulun. Tarayıcınızda dönüştürmek için metni yapıştırın veya bir dosya açın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi tài liệu tham khảo",
+        description:
+          "Chuyển đổi tài liệu tham khảo giữa BibTeX, RIS và CSL JSON, đồng thời tìm các mục có thể trùng lặp. Dán văn bản hoặc mở tệp để chuyển đổi ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "参考文献格式转换器",
+        description:
+          "在 BibTeX、RIS 和 CSL JSON 之间转换参考文献，并查找疑似重复条目。粘贴文本或打开文件，即可在浏览器中转换。",
+      },
+      "zh-TW": {
+        name: "參考文獻格式轉換器",
+        description:
+          "在 BibTeX、RIS 和 CSL JSON 之間轉換參考文獻，並找出可能重複的項目。貼上文字或開啟檔案，即可在瀏覽器中轉換。",
+      },
+    },
+  },
+  {
     slug: "bic-swift-validator",
     category: "text",
     icon: "file-text",

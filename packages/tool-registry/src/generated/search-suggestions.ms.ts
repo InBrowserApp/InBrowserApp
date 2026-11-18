@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Penukar Format Rujukan",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "Pengesah BIC/SWIFT",
     slug: "bic-swift-validator",
   },

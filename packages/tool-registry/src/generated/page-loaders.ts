@@ -36,6 +36,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "bcrypt-hash-password": () => import("@tool/bcrypt-hash-password/page"),
   "bcrypt-hash-password-verifier": () =>
     import("@tool/bcrypt-hash-password-verifier/page"),
+  "bibliography-converter": () => import("@tool/bibliography-converter/page"),
   "bic-swift-validator": () => import("@tool/bic-swift-validator/page"),
   "bip39-mnemonic-generator": () =>
     import("@tool/bip39-mnemonic-generator/page"),

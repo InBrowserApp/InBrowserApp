@@ -2486,6 +2486,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bibliography-converter",
+    language: "ar",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "de",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "en",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "es",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "fr",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "he",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "hi",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "id",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "it",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "ja",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "ko",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "ms",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "nl",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "no",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "pl",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "pt",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "ru",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "sv",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "th",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "tr",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "vi",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "bibliography-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "bic-swift-validator",
     language: "ar",
   },

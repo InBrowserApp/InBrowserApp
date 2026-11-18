@@ -1,0 +1,4 @@
+{
+  "name": "Literaturangaben konvertieren",
+  "description": "Konvertieren Sie Literaturangaben zwischen BibTeX, RIS und CSL JSON und finden Sie mögliche Duplikate. Fügen Sie Text ein oder öffnen Sie eine Datei, um sie im Browser zu konvertieren."
+}
