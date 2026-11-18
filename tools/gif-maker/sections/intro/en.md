@@ -21,15 +21,15 @@ as a single file.
 ## Choose frame duration and loop count
 
 Duration is how long a frame stays visible, in milliseconds. The default is
-200 ms, which shows five evenly timed frames per second. Use shorter durations
+200 ms, which shows five evenly timed frames per second. Use shorter durations
 for quick motion and a longer duration when viewers need time to read text.
-Set durations in 10 ms increments, starting at 20 ms.
+Set durations in 10 ms increments, starting at 20 ms.
 
 The loop count is the total number of times the animation plays. Enter
 **0** to repeat indefinitely, **1** to play once, or a number such as **3** to
 play the whole sequence three times.
 
-For a three-step tutorial, try **200 ms**, **200 ms**, and **600 ms**. Each play
+For a three-step tutorial, try **200 ms**, **200 ms**, and **600 ms**. Each play
 lasts one second, with a longer pause on the final screenshot. Set the loop
 count to **3** for a three-second animation.
 
