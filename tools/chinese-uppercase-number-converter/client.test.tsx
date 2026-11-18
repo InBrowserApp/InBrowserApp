@@ -37,6 +37,8 @@ const messages = {
   resetLabel: "Reset",
 } as const
 
+const props = { lang: "en", messages }
+
 const STORAGE_KEYS = {
   variant: "tools:chinese-uppercase-number-converter:variant",
   number: "tools:chinese-uppercase-number-converter:number",
@@ -62,7 +64,7 @@ afterEach(cleanup)
 
 describe("ChineseUppercaseNumberConverterClient", () => {
   test("renders the default number and uppercase value", async () => {
-    render(<ChineseUppercaseNumberConverterClient messages={messages} />)
+    render(<ChineseUppercaseNumberConverterClient {...props} />)
 
     await waitFor(() => {
       expect(getNumberInput().value).toBe("1234.56")
@@ -71,8 +73,23 @@ describe("ChineseUppercaseNumberConverterClient", () => {
     expect(getUppercaseInput().value).toBe("壹仟贰佰叁拾肆元伍角陆分")
   })
 
+  test("defaults to traditional on zh-TW without saving a preference", () => {
+    const { unmount } = render(
+      <ChineseUppercaseNumberConverterClient {...props} lang="zh-TW" />
+    )
+
+    expect(getUppercaseInput().value).toBe("壹仟貳佰參拾肆圓伍角陸分")
+    fireEvent.change(getNumberInput(), { target: { value: "12" } })
+    expect(getUppercaseInput().value).toBe("壹拾貳圓整")
+    expect(window.localStorage.getItem(STORAGE_KEYS.variant)).toBeNull()
+
+    unmount()
+    render(<ChineseUppercaseNumberConverterClient {...props} />)
+    expect(getUppercaseInput().value).toBe("壹拾贰元整")
+  })
+
   test("updates the uppercase field when the number changes", async () => {
-    render(<ChineseUppercaseNumberConverterClient messages={messages} />)
+    render(<ChineseUppercaseNumberConverterClient {...props} />)
 
     fireEvent.change(getNumberInput(), {
       target: { value: "12.03" },
@@ -84,7 +101,7 @@ describe("ChineseUppercaseNumberConverterClient", () => {
   })
 
   test("updates the number field when the uppercase text changes", async () => {
-    render(<ChineseUppercaseNumberConverterClient messages={messages} />)
+    render(<ChineseUppercaseNumberConverterClient {...props} />)
 
     fireEvent.change(getUppercaseInput(), {
       target: { value: "壹元叁角伍分" },
@@ -96,7 +113,7 @@ describe("ChineseUppercaseNumberConverterClient", () => {
   })
 
   test("switches to traditional output", async () => {
-    render(<ChineseUppercaseNumberConverterClient messages={messages} />)
+    render(<ChineseUppercaseNumberConverterClient {...props} />)
 
     fireEvent.click(
       screen.getByRole("radio", { name: messages.traditionalLabel })
@@ -105,10 +122,13 @@ describe("ChineseUppercaseNumberConverterClient", () => {
     await waitFor(() => {
       expect(getUppercaseInput().value).toBe("壹仟貳佰參拾肆圓伍角陸分")
     })
+    expect(window.localStorage.getItem(STORAGE_KEYS.variant)).toBe(
+      "traditional"
+    )
   })
 
   test("shows validation feedback for invalid numbers", async () => {
-    render(<ChineseUppercaseNumberConverterClient messages={messages} />)
+    render(<ChineseUppercaseNumberConverterClient {...props} />)
 
     fireEvent.change(getNumberInput(), {
       target: { value: "12.345" },
@@ -122,7 +142,7 @@ describe("ChineseUppercaseNumberConverterClient", () => {
   })
 
   test("shows validation feedback for invalid uppercase text", async () => {
-    render(<ChineseUppercaseNumberConverterClient messages={messages} />)
+    render(<ChineseUppercaseNumberConverterClient {...props} />)
 
     fireEvent.change(getUppercaseInput(), {
       target: { value: "ABC" },
@@ -135,21 +155,26 @@ describe("ChineseUppercaseNumberConverterClient", () => {
     expect(getNumberInput().value).toBe("")
   })
 
-  test("restores the last saved variant and number from local storage", async () => {
-    window.localStorage.setItem(STORAGE_KEYS.variant, "traditional")
-    window.localStorage.setItem(STORAGE_KEYS.number, "12.5")
+  test.each([
+    ["en", "traditional", "壹拾貳圓伍角"],
+    ["zh-TW", "simplified", "壹拾贰元伍角"],
+  ])(
+    "restores the %s page's saved %s preference and number",
+    (lang, variant, output) => {
+      window.localStorage.setItem(STORAGE_KEYS.variant, variant)
+      window.localStorage.setItem(STORAGE_KEYS.number, "12.5")
 
-    render(<ChineseUppercaseNumberConverterClient messages={messages} />)
+      render(<ChineseUppercaseNumberConverterClient {...props} lang={lang} />)
 
-    await waitFor(() => {
       expect(getNumberInput().value).toBe("12.5")
-    })
-
-    expect(getUppercaseInput().value).toBe("壹拾貳圓伍角")
-  })
+      expect(getUppercaseInput().value).toBe(output)
+      expect(window.localStorage.getItem(STORAGE_KEYS.variant)).toBe(variant)
+    }
+  )
 
   test("persists number edits and resets to defaults", async () => {
-    render(<ChineseUppercaseNumberConverterClient messages={messages} />)
+    window.localStorage.setItem(STORAGE_KEYS.variant, "simplified")
+    render(<ChineseUppercaseNumberConverterClient {...props} lang="zh-TW" />)
 
     fireEvent.change(getNumberInput(), {
       target: { value: "99" },
@@ -165,7 +190,7 @@ describe("ChineseUppercaseNumberConverterClient", () => {
       expect(getNumberInput().value).toBe("1234.56")
     })
 
-    expect(getUppercaseInput().value).toBe("壹仟贰佰叁拾肆元伍角陆分")
-    expect(window.localStorage.getItem(STORAGE_KEYS.variant)).toBe("simplified")
+    expect(getUppercaseInput().value).toBe("壹仟貳佰參拾肆圓伍角陸分")
+    expect(window.localStorage.getItem(STORAGE_KEYS.variant)).toBeNull()
   })
 })

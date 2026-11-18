@@ -29,7 +29,7 @@ const messages = { meta, ...localizedMessages }
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <ChineseUppercaseNumberConverterClient client:load messages={messages} />
+  <ChineseUppercaseNumberConverterClient client:load lang={lang} messages={messages} />
 
   {
     IntroSection ? (

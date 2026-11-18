@@ -63,6 +63,7 @@ type ChineseUppercaseNumberConverterMessages = Readonly<{
 }>
 
 type ChineseUppercaseNumberConverterClientProps = Readonly<{
+  lang: string
   messages: ChineseUppercaseNumberConverterMessages
 }>
 
@@ -71,19 +72,20 @@ const STORAGE_KEYS = {
   number: "tools:chinese-uppercase-number-converter:number",
 } as const
 
-const DEFAULT_VARIANT: UppercaseVariant = "simplified"
 const DEFAULT_NUMBER = "1234.56"
 
 function ChineseUppercaseNumberConverterClient({
+  lang,
   messages,
 }: ChineseUppercaseNumberConverterClientProps) {
   const numberInputId = useId()
   const uppercaseInputId = useId()
+  const defaultVariant = lang === "zh-TW" ? "traditional" : "simplified"
 
-  const [variant, setVariant] = useState<UppercaseVariant>(DEFAULT_VARIANT)
+  const [variant, setVariant] = useState<UppercaseVariant>(defaultVariant)
   const [numberInput, setNumberInput] = useState(DEFAULT_NUMBER)
   const [uppercaseInput, setUppercaseInput] = useState(
-    () => convertNumberToUppercase(DEFAULT_NUMBER, DEFAULT_VARIANT).value
+    () => convertNumberToUppercase(DEFAULT_NUMBER, defaultVariant).value
   )
 
   const numberState = parseNumberInput(numberInput)
@@ -97,21 +99,14 @@ function ChineseUppercaseNumberConverterClient({
     const storedNumber = window.localStorage.getItem(STORAGE_KEYS.number)
     const nextVariant = isUppercaseVariant(storedVariant)
       ? storedVariant
-      : DEFAULT_VARIANT
+      : defaultVariant
     const nextNumber = storedNumber ?? DEFAULT_NUMBER
     const nextUppercase = convertNumberToUppercase(nextNumber, nextVariant)
 
     setVariant(nextVariant)
     setNumberInput(nextNumber)
     setUppercaseInput(nextUppercase.isValid ? nextUppercase.value : "")
-  }, [])
-
-  useEffect(() => {
-    /* v8 ignore next */
-    if (typeof window === "undefined") return
-
-    window.localStorage.setItem(STORAGE_KEYS.variant, variant)
-  }, [variant])
+  }, [defaultVariant])
 
   useEffect(() => {
     /* v8 ignore next */
@@ -140,16 +135,18 @@ function ChineseUppercaseNumberConverterClient({
     }
 
     setVariant(nextValue)
+    window.localStorage.setItem(STORAGE_KEYS.variant, nextValue)
 
     const result = convertNumberToUppercase(numberInput, nextValue)
     setUppercaseInput(result.isValid ? result.value : "")
   }
 
   function handleReset() {
-    setVariant(DEFAULT_VARIANT)
+    window.localStorage.removeItem(STORAGE_KEYS.variant)
+    setVariant(defaultVariant)
     setNumberInput(DEFAULT_NUMBER)
     setUppercaseInput(
-      convertNumberToUppercase(DEFAULT_NUMBER, DEFAULT_VARIANT).value
+      convertNumberToUppercase(DEFAULT_NUMBER, defaultVariant).value
     )
   }
 
