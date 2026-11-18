@@ -16,7 +16,7 @@ viết bằng 角 và 分. Các số tiền tròn thường kết thúc bằng �
 chỉ được chèn vào những vị trí cần thiết để câu chữ rõ ràng.
 
 Ví dụ, `1024.50` có thể được viết là `壹仟零贰拾肆元伍角` ở đầu ra
-giản thể, hoặc `壹仟零貳拾肆元伍角` ở đầu ra phồn thể.
+giản thể, hoặc `壹仟零貳拾肆圓伍角` ở đầu ra phồn thể.
 
 ### Giản thể và phồn thể
 

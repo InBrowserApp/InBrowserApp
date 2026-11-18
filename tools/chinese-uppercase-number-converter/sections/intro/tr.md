@@ -17,7 +17,7 @@ olarak 角 ile 分 kullanılarak yazılan kesirli kısmı içerir. Tam tutarlar
 gereken yerlere eklenir.
 
 Örneğin `1024.50`, sadeleştirilmiş çıktıda `壹仟零贰拾肆元伍角`,
-geleneksel çıktıda ise `壹仟零貳拾肆元伍角` olarak yazılabilir.
+geleneksel çıktıda ise `壹仟零貳拾肆圓伍角` olarak yazılabilir.
 
 ### Basitleştirilmiş ve Geleneksel
 

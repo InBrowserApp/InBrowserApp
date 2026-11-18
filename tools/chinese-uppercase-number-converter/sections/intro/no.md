@@ -17,7 +17,7 @@ valgfri brøkdel skrevet med 角 og 分. Hele beløp slutter ofte med 整, og
 nuller settes bare inn der de trengs for å gjøre skrivemåten tydelig.
 
 For eksempel kan `1024.50` skrives som `壹仟零贰拾肆元伍角` i forenklet
-utdata, eller som `壹仟零貳拾肆元伍角` i tradisjonell utdata.
+utdata, eller som `壹仟零貳拾肆圓伍角` i tradisjonell utdata.
 
 ### Forenklet vs. tradisjonell
 

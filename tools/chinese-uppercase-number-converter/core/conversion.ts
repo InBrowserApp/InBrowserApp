@@ -69,21 +69,20 @@ export function parseNumberInput(input: string): NumberParseResult {
     }
   }
 
-  let cleaned = trimmed.replace(/[,_\s，]/g, "")
-  let isNegative = false
+  const amount = trimmed
+    .replace(/[０-９＋－．，]/g, (char) =>
+      String.fromCharCode(char.charCodeAt(0) - 0xfee0)
+    )
+    .replace(/^−/, "-")
+  const isNegative = amount.startsWith("-")
 
-  if (cleaned.startsWith("-")) {
-    isNegative = true
-    cleaned = cleaned.slice(1)
-  } else if (cleaned.startsWith("+")) {
-    cleaned = cleaned.slice(1)
-  }
-
-  if (cleaned.startsWith(".")) {
-    cleaned = `0${cleaned}`
-  }
-
-  if (!cleaned || cleaned === ".") {
+  // A grouped integer uses the same separator between groups of three digits.
+  const match =
+    /^[-+]?(?<whole>\d*|\d{1,3}(?<separator>[,_ \u00a0\u202f])\d{3}(?:\k<separator>\d{3})*)(?:\.(?<decimal>\d+))?$/.exec(
+      amount
+    )
+  const { whole, decimal } = match?.groups ?? {}
+  if (!whole && !decimal) {
     return {
       isEmpty: false,
       isValid: false,
@@ -96,20 +95,7 @@ export function parseNumberInput(input: string): NumberParseResult {
     }
   }
 
-  if (!/^\d+(\.\d+)?$/.test(cleaned)) {
-    return {
-      isEmpty: false,
-      isValid: false,
-      normalized: "",
-      integer: "",
-      fraction: "",
-      fractionRaw: "",
-      isNegative,
-      error: "invalidFormat",
-    }
-  }
-
-  const [rawInteger = "", rawFraction = ""] = cleaned.split(".")
+  const rawFraction = decimal ?? ""
 
   if (rawFraction.length > 2) {
     return {
@@ -124,7 +110,9 @@ export function parseNumberInput(input: string): NumberParseResult {
     }
   }
 
-  const integer = rawInteger.replace(/^0+(?=\d)/, "")
+  const integer = (whole || "0")
+    .replace(/[,_ \u00a0\u202f]/g, "")
+    .replace(/^0+(?=\d)/, "")
 
   if (integer.length > MAX_INTEGER_LENGTH) {
     return {
@@ -140,7 +128,8 @@ export function parseNumberInput(input: string): NumberParseResult {
   }
 
   const fraction = rawFraction.padEnd(2, "0")
-  const normalized = rawFraction ? `${integer}.${rawFraction}` : integer
+  const unsigned = rawFraction ? `${integer}.${rawFraction}` : integer
+  const normalized = isNegative ? `-${unsigned}` : unsigned
 
   return {
     isEmpty: false,
@@ -160,19 +149,9 @@ export function convertNumberToUppercase(
 ): ConversionResult {
   const parsed = parseNumberInput(input)
 
-  if (parsed.isEmpty) {
-    return {
-      isEmpty: true,
-      isValid: false,
-      normalized: "",
-      value: "",
-      error: null,
-    }
-  }
-
   if (!parsed.isValid) {
     return {
-      isEmpty: false,
+      isEmpty: parsed.isEmpty,
       isValid: false,
       normalized: parsed.normalized,
       value: "",
@@ -340,33 +319,7 @@ export function parseUppercaseInput(input: string): UppercaseParseResult {
 }
 
 export function convertUppercaseToNumber(input: string): ConversionResult {
-  const parsed = parseUppercaseInput(input)
-
-  if (parsed.isEmpty) {
-    return {
-      isEmpty: true,
-      isValid: false,
-      normalized: "",
-      value: "",
-      error: null,
-    }
-  }
-
-  if (!parsed.isValid) {
-    return {
-      isEmpty: false,
-      isValid: false,
-      normalized: parsed.normalized,
-      value: "",
-      error: parsed.error,
-    }
-  }
-
-  return {
-    isEmpty: false,
-    isValid: true,
-    normalized: parsed.normalized,
-    value: parsed.value,
-    error: null,
-  }
+  const { isEmpty, isValid, normalized, value, error } =
+    parseUppercaseInput(input)
+  return { isEmpty, isValid, normalized, value, error }
 }

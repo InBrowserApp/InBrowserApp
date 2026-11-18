@@ -5,37 +5,10 @@ import {
   screen,
   waitFor,
 } from "@testing-library/react"
-import { afterEach, beforeEach, describe, expect, test } from "vitest"
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest"
 
 import ChineseUppercaseNumberConverterClient from "./client"
-
-const messages = {
-  meta: {
-    name: "Number ↔ Chinese Uppercase Converter",
-    description:
-      "Bidirectional converter between numbers and Chinese uppercase amounts. Supports RMB-style units and up to 2 decimal places.",
-  },
-  styleTitle: "Uppercase Style",
-  simplifiedLabel: "Simplified",
-  traditionalLabel: "Traditional",
-  numberLabel: "Number",
-  numberPlaceholder: "Enter number (e.g., 1234.56)",
-  numberValid: "Valid number",
-  numberInvalidFormat: "Only digits and one decimal point are allowed.",
-  numberTooManyDecimals: "Use up to 2 decimal places.",
-  numberOutOfRange: "Value exceeds the maximum range.",
-  uppercaseLabel: "Chinese Uppercase",
-  uppercasePlaceholder: "Enter Chinese uppercase amount",
-  uppercaseValid: "Valid uppercase",
-  uppercaseInvalidCharacters:
-    "Only Chinese uppercase digits and units are allowed.",
-  uppercaseInvalidFormat: "Invalid uppercase format.",
-  uppercaseOutOfRange: "Value exceeds the maximum range.",
-  copyNumberLabel: "Copy number",
-  copyUppercaseLabel: "Copy uppercase",
-  copiedLabel: "Copied",
-  resetLabel: "Reset",
-} as const
+import messages from "./messages/en.json"
 
 const props = { lang: "en", messages }
 
@@ -60,7 +33,10 @@ beforeEach(() => {
   window.localStorage.clear()
 })
 
-afterEach(cleanup)
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
 
 describe("ChineseUppercaseNumberConverterClient", () => {
   test("renders the default number and uppercase value", async () => {
@@ -100,16 +76,48 @@ describe("ChineseUppercaseNumberConverterClient", () => {
     })
   })
 
-  test("updates the number field when the uppercase text changes", async () => {
-    render(<ChineseUppercaseNumberConverterClient {...props} />)
+  test("keeps pasted uppercase text until the user changes its style", () => {
+    render(<ChineseUppercaseNumberConverterClient {...props} lang="zh-TW" />)
 
+    const original = "  負壹圓參角伍分  "
     fireEvent.change(getUppercaseInput(), {
-      target: { value: "壹元叁角伍分" },
+      target: { value: original },
+    })
+    expect(getNumberInput().value).toBe("-1.35")
+    expect(getUppercaseInput().value).toBe(original)
+    expect(window.localStorage.getItem(STORAGE_KEYS.number)).toBe("-1.35")
+
+    fireEvent.click(
+      screen.getByRole("radio", { name: messages.simplifiedLabel })
+    )
+    expect(getNumberInput().value).toBe("-1.35")
+    expect(getUppercaseInput().value).toBe("负壹元叁角伍分")
+  })
+
+  test("copies and restores a signed amount without rewriting the input", async () => {
+    const writeText = vi
+      .spyOn(navigator.clipboard, "writeText")
+      .mockResolvedValue()
+    const { unmount } = render(
+      <ChineseUppercaseNumberConverterClient {...props} lang="zh-TW" />
+    )
+    fireEvent.change(getNumberInput(), { target: { value: "-1,234.50" } })
+    expect(getNumberInput().value).toBe("-1,234.50")
+    expect(getUppercaseInput().value).toBe("負壹仟貳佰參拾肆圓伍角")
+    fireEvent.click(
+      screen.getByRole("button", { name: messages.copyNumberLabel })
+    )
+    await waitFor(() => {
+      expect(writeText).toHaveBeenCalledWith("-1234.50")
+      expect(
+        screen.getByRole("button", { name: messages.copiedLabel })
+      ).toBeTruthy()
     })
 
-    await waitFor(() => {
-      expect(getNumberInput().value).toBe("1.35")
-    })
+    unmount()
+    render(<ChineseUppercaseNumberConverterClient {...props} lang="zh-TW" />)
+    expect(getNumberInput().value).toBe("-1,234.50")
+    expect(getUppercaseInput().value).toBe("負壹仟貳佰參拾肆圓伍角")
   })
 
   test("switches to traditional output", async () => {
@@ -141,6 +149,31 @@ describe("ChineseUppercaseNumberConverterClient", () => {
     expect(getUppercaseInput().value).toBe("")
   })
 
+  test("keeps incorrectly grouped input and clears both copy actions", () => {
+    render(<ChineseUppercaseNumberConverterClient {...props} />)
+
+    fireEvent.change(getNumberInput(), { target: { value: "1,2" } })
+
+    expect(getNumberInput().value).toBe("1,2")
+    expect(getUppercaseInput().value).toBe("")
+    expect(screen.getByRole("alert").textContent).toBe(
+      messages.numberInvalidFormat
+    )
+    expect(getNumberInput().getAttribute("aria-invalid")).toBe("true")
+    for (const name of [
+      messages.copyNumberLabel,
+      messages.copyUppercaseLabel,
+    ]) {
+      expect(
+        screen.getByRole<HTMLButtonElement>("button", { name }).disabled
+      ).toBe(true)
+    }
+
+    fireEvent.change(getNumberInput(), { target: { value: "1,200" } })
+    expect(screen.queryByRole("alert")).toBeNull()
+    expect(getUppercaseInput().value).toBe("壹仟贰佰元整")
+  })
+
   test("shows validation feedback for invalid uppercase text", async () => {
     render(<ChineseUppercaseNumberConverterClient {...props} />)
 
@@ -153,6 +186,11 @@ describe("ChineseUppercaseNumberConverterClient", () => {
     })
 
     expect(getNumberInput().value).toBe("")
+
+    fireEvent.click(
+      screen.getByRole("radio", { name: messages.traditionalLabel })
+    )
+    expect(getUppercaseInput().value).toBe("ABC")
   })
 
   test.each([

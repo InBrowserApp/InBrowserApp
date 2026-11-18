@@ -17,7 +17,7 @@ with 整, while zeroes are inserted only where they are needed to keep the
 wording clear.
 
 For example, `1024.50` can be rendered as `壹仟零贰拾肆元伍角` in
-Simplified output, or `壹仟零貳拾肆元伍角` in Traditional output.
+Simplified output, or `壹仟零貳拾肆圓伍角` in Traditional output.
 
 ### Simplified vs Traditional
 

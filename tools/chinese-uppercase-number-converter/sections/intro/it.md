@@ -18,7 +18,7 @@ spesso terminano con 整, mentre gli zeri vengono inseriti solo dove
 servono per evitare ambiguità.
 
 Per esempio, `1024.50` può essere reso come `壹仟零贰拾肆元伍角`
-nell'output semplificato, oppure come `壹仟零貳拾肆元伍角`
+nell'output semplificato, oppure come `壹仟零貳拾肆圓伍角`
 nell'output tradizionale.
 
 ### Semplificato vs Tradizionale
