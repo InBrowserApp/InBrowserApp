@@ -12330,6 +12330,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "json-to-typescript-zod",
+    language: "ar",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "de",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "en",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "es",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "fr",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "he",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "hi",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "id",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "it",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "ja",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "ko",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "ms",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "nl",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "no",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "pl",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "pt",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "ru",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "sv",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "th",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "tr",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "vi",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "zh-CN",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "zh-TW",
+  },
+  {
     slug: "json-to-xml-converter",
     language: "ar",
   },

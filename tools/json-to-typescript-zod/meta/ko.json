@@ -1,0 +1,4 @@
+{
+  "name": "JSON → TypeScript / Zod 변환기",
+  "description": "JSON API 응답 예시에서 TypeScript 타입이나 Zod 4 검증 스키마를 생성합니다."
+}

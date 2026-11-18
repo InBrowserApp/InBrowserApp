@@ -1,0 +1,14 @@
+{
+  "inputLabel": "JSON 输入",
+  "inputPlaceholder": "粘贴 API 响应示例…",
+  "sampleLabel": "使用示例",
+  "openFileLabel": "打开 JSON 文件",
+  "fileReadError": "无法读取文件，请重新打开。",
+  "invalidJson": "JSON 无效，请检查语法后重试。",
+  "outputLabel": "生成的代码",
+  "emptyOutput": "输入有效的 JSON 即可生成代码。",
+  "copyLabel": "复制代码",
+  "copiedLabel": "已复制",
+  "downloadLabel": "下载 .ts",
+  "zodHelp": "Zod 4 在解析时会移除 Schema 未声明的字段。"
+}

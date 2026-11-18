@@ -674,6 +674,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "JSON’dan TypeScript ve Zod’a Dönüştürücü",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "JSON → XML Dönüştürücü",
     slug: "json-to-xml-converter",
   },

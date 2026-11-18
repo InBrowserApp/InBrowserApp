@@ -1,0 +1,14 @@
+{
+  "inputLabel": "JSON-inmatning",
+  "inputPlaceholder": "Klistra in ett exempel på ett API-svar…",
+  "sampleLabel": "Använd exempel",
+  "openFileLabel": "Öppna JSON-fil",
+  "fileReadError": "Det gick inte att läsa filen. Försök öppna den igen.",
+  "invalidJson": "Ogiltig JSON. Kontrollera syntaxen och försök igen.",
+  "outputLabel": "Genererad kod",
+  "emptyOutput": "Ange giltig JSON för att generera kod.",
+  "copyLabel": "Kopiera kod",
+  "copiedLabel": "Kopierat",
+  "downloadLabel": "Ladda ner .ts",
+  "zodHelp": "Vid tolkning utelämnar Zod 4 fält som inte är definierade i schemat."
+}

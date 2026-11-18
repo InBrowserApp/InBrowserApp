@@ -1,0 +1,4 @@
+{
+  "name": "JSON से TypeScript या Zod कन्वर्टर",
+  "description": "JSON में दिए गए API रिस्पॉन्स के उदाहरण से TypeScript टाइप या Zod 4 का वैलिडेशन स्कीमा बनाएँ।"
+}

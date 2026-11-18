@@ -1,0 +1,4 @@
+{
+  "name": "Конвертер JSON в TypeScript и Zod",
+  "description": "Создавайте типы TypeScript или схему валидации Zod 4 по примеру ответа API в формате JSON."
+}
