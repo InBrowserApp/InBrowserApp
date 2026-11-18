@@ -1,4 +1,5 @@
 type Key = readonly [code: string, label: string, width?: number]
+type KeyRow = readonly [Key, ...Key[]]
 
 function numberedKeys(prefix: string, numbers: readonly number[]): Key[] {
   return numbers.map((number) => [
@@ -11,14 +12,17 @@ function letters(row: string): Key[] {
   return Array.from(row, (letter) => ["Key" + letter, letter])
 }
 
+const functionBlocks = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+]
 const functions: readonly (readonly Key[])[] = [
   [["Escape", "Esc"]],
-  numberedKeys("F", [1, 2, 3, 4]),
-  numberedKeys("F", [5, 6, 7, 8]),
-  numberedKeys("F", [9, 10, 11, 12]),
+  ...functionBlocks.map((numbers) => numberedKeys("F", numbers)),
 ]
 
-const main: readonly (readonly Key[])[] = [
+const main: readonly KeyRow[] = [
   [
     ["Backquote", "`"],
     ...numberedKeys("Digit", [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]),
@@ -142,9 +146,9 @@ function Keyboard({ held, tested }: KeyboardProps) {
     >
       <div className="grid auto-rows-10 gap-1">
         <div className="flex gap-3">
-          {functions.map((group) => (
+          {functions.map((group, index) => (
             <div
-              key={group[0][0]}
+              key={index}
               className="flex basis-0 gap-1"
               style={{ flexGrow: group.length }}
             >
