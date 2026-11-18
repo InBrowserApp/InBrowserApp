@@ -1,0 +1,14 @@
+{
+  "inputLabel": "إدخال JSON",
+  "inputPlaceholder": "الصق مثالًا لاستجابة API…",
+  "sampleLabel": "استخدم مثالًا",
+  "openFileLabel": "فتح ملف JSON",
+  "fileReadError": "تعذّرت قراءة الملف. جرّب فتحه مجددًا.",
+  "invalidJson": "JSON غير صالح. تحقّق من الصياغة وحاول مجددًا.",
+  "outputLabel": "الشيفرة الناتجة",
+  "emptyOutput": "أدخل JSON صالحًا لتوليد الشيفرة.",
+  "copyLabel": "نسخ الشيفرة",
+  "copiedLabel": "تم النسخ",
+  "downloadLabel": "تنزيل \u2066.ts\u2069",
+  "zodHelp": "يستبعد مخطط Zod 4 الحقول غير المعرّفة فيه عند تحليل البيانات."
+}

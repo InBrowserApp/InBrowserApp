@@ -8190,6 +8190,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "gamepad-tester",
+    language: "ar",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "de",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "en",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "es",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "fr",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "he",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "hi",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "id",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "it",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "ja",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "ko",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "ms",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "nl",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "no",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "pl",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "pt",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "ru",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "sv",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "th",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "tr",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "vi",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "zh-CN",
+  },
+  {
+    slug: "gamepad-tester",
+    language: "zh-TW",
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     language: "ar",
   },
@@ -9751,6 +9843,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "ical-event-generator",
+    language: "zh-TW",
+  },
+  {
+    slug: "image-comparator",
+    language: "ar",
+  },
+  {
+    slug: "image-comparator",
+    language: "de",
+  },
+  {
+    slug: "image-comparator",
+    language: "en",
+  },
+  {
+    slug: "image-comparator",
+    language: "es",
+  },
+  {
+    slug: "image-comparator",
+    language: "fr",
+  },
+  {
+    slug: "image-comparator",
+    language: "he",
+  },
+  {
+    slug: "image-comparator",
+    language: "hi",
+  },
+  {
+    slug: "image-comparator",
+    language: "id",
+  },
+  {
+    slug: "image-comparator",
+    language: "it",
+  },
+  {
+    slug: "image-comparator",
+    language: "ja",
+  },
+  {
+    slug: "image-comparator",
+    language: "ko",
+  },
+  {
+    slug: "image-comparator",
+    language: "ms",
+  },
+  {
+    slug: "image-comparator",
+    language: "nl",
+  },
+  {
+    slug: "image-comparator",
+    language: "no",
+  },
+  {
+    slug: "image-comparator",
+    language: "pl",
+  },
+  {
+    slug: "image-comparator",
+    language: "pt",
+  },
+  {
+    slug: "image-comparator",
+    language: "ru",
+  },
+  {
+    slug: "image-comparator",
+    language: "sv",
+  },
+  {
+    slug: "image-comparator",
+    language: "th",
+  },
+  {
+    slug: "image-comparator",
+    language: "tr",
+  },
+  {
+    slug: "image-comparator",
+    language: "vi",
+  },
+  {
+    slug: "image-comparator",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-comparator",
     language: "zh-TW",
   },
   {
@@ -12235,6 +12419,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "json-to-toml-converter",
+    language: "zh-TW",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "ar",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "de",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "en",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "es",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "fr",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "he",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "hi",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "id",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "it",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "ja",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "ko",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "ms",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "nl",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "no",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "pl",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "pt",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "ru",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "sv",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "th",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "tr",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "vi",
+  },
+  {
+    slug: "json-to-typescript-zod",
+    language: "zh-CN",
+  },
+  {
+    slug: "json-to-typescript-zod",
     language: "zh-TW",
   },
   {
@@ -26127,6 +26403,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "uuid-validator",
+    language: "zh-TW",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "ar",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "de",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "en",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "es",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "fr",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "he",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "hi",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "id",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "it",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "ja",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "ko",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "ms",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "nl",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "no",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "pl",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "pt",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "ru",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "sv",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "th",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "tr",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "vi",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "zh-CN",
+  },
+  {
+    slug: "video-frame-extractor",
     language: "zh-TW",
   },
   {

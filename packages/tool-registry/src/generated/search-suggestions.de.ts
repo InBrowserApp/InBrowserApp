@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Gamepad-Test",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "GIF-zu-animiertem-WebP-Konverter",
     slug: "gif-to-animated-webp-converter",
@@ -531,6 +536,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal-Ereignisgenerator",
     slug: "ical-event-generator",
+  },
+  {
+    category: "image",
+    name: "Bildvergleich",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -666,6 +676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "JSON → TOML Konverter",
     slug: "json-to-toml-converter",
+  },
+  {
+    category: "json",
+    name: "JSON-zu-TypeScript-/Zod-Konverter",
+    slug: "json-to-typescript-zod",
   },
   {
     category: "json",
@@ -1421,6 +1436,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID-Validator",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Video-Einzelbilder extrahieren",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

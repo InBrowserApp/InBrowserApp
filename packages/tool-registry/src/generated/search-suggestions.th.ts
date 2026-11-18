@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "ทดสอบจอยเกม",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "ตัวแปลง GIF เป็น WebP แบบเคลื่อนไหว",
     slug: "gif-to-animated-webp-converter",
@@ -531,6 +536,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "ตัวสร้างอีเวนต์ iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "image",
+    name: "เครื่องมือเปรียบเทียบรูปภาพ",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -666,6 +676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "ตัวแปลง JSON → TOML",
     slug: "json-to-toml-converter",
+  },
+  {
+    category: "json",
+    name: "ตัวแปลง JSON เป็น TypeScript / Zod",
+    slug: "json-to-typescript-zod",
   },
   {
     category: "json",
@@ -1421,6 +1436,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "ตัวตรวจสอบ UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "เครื่องมือดึงเฟรมวิดีโอ",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

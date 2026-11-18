@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "游戏手柄测试器",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "GIF 转动态 WebP 转换器",
     slug: "gif-to-animated-webp-converter",
@@ -531,6 +536,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "iCal 事件生成器",
     slug: "ical-event-generator",
+  },
+  {
+    category: "image",
+    name: "图片对比器",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -666,6 +676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "JSON 转 TOML 转换器",
     slug: "json-to-toml-converter",
+  },
+  {
+    category: "json",
+    name: "JSON 转 TypeScript / Zod",
+    slug: "json-to-typescript-zod",
   },
   {
     category: "json",
@@ -1421,6 +1436,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID 验证器",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "视频截帧器",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

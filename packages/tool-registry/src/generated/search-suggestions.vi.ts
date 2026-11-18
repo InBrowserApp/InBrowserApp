@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Kiểm tra tay cầm chơi game",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "Bộ chuyển đổi GIF sang WebP động",
     slug: "gif-to-animated-webp-converter",
@@ -531,6 +536,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Trình tạo sự kiện iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "image",
+    name: "So sánh ảnh",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -666,6 +676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "Trình chuyển JSON → TOML",
     slug: "json-to-toml-converter",
+  },
+  {
+    category: "json",
+    name: "Chuyển JSON sang TypeScript / Zod",
+    slug: "json-to-typescript-zod",
   },
   {
     category: "json",
@@ -1421,6 +1436,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Trình xác thực UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Trình trích xuất khung hình từ video",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

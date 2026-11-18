@@ -1,0 +1,14 @@
+{
+  "inputLabel": "JSON girdisi",
+  "inputPlaceholder": "Örnek bir API yanıtı yapıştırın…",
+  "sampleLabel": "Örnek kullan",
+  "openFileLabel": "JSON dosyası aç",
+  "fileReadError": "Dosya okunamadı. Yeniden açmayı deneyin.",
+  "invalidJson": "Geçersiz JSON. Sözdizimini kontrol edip tekrar deneyin.",
+  "outputLabel": "Oluşturulan kod",
+  "emptyOutput": "Kod oluşturmak için geçerli JSON girin.",
+  "copyLabel": "Kodu kopyala",
+  "copiedLabel": "Kopyalandı",
+  "downloadLabel": ".ts dosyasını indir",
+  "zodHelp": "Zod 4, verileri ayrıştırırken şemada tanımlanmayan alanları sonuçtan çıkarır."
+}

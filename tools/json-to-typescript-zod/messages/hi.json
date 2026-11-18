@@ -1,0 +1,14 @@
+{
+  "inputLabel": "JSON इनपुट",
+  "inputPlaceholder": "API रिस्पॉन्स का उदाहरण पेस्ट करें…",
+  "sampleLabel": "उदाहरण इस्तेमाल करें",
+  "openFileLabel": "JSON फ़ाइल खोलें",
+  "fileReadError": "फ़ाइल पढ़ी नहीं जा सकी। उसे दोबारा खोलकर देखें।",
+  "invalidJson": "अमान्य JSON। सिंटैक्स जाँचें और दोबारा कोशिश करें।",
+  "outputLabel": "बना हुआ कोड",
+  "emptyOutput": "कोड बनाने के लिए मान्य JSON डालें।",
+  "copyLabel": "कोड कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "downloadLabel": ".ts डाउनलोड करें",
+  "zodHelp": "डेटा पार्स करते समय Zod 4 का स्कीमा उन फ़ील्ड को हटा देता है जो उसमें परिभाषित नहीं हैं।"
+}

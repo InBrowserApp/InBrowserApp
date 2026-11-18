@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Penguji Gamepad",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "Konverter GIF ke WebP Animasi",
     slug: "gif-to-animated-webp-converter",
@@ -531,6 +536,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "time",
     name: "Generator acara iCal",
     slug: "ical-event-generator",
+  },
+  {
+    category: "image",
+    name: "Pembanding Gambar",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -666,6 +676,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "json",
     name: "Pengonversi JSON → TOML",
     slug: "json-to-toml-converter",
+  },
+  {
+    category: "json",
+    name: "Konverter JSON ke TypeScript / Zod",
+    slug: "json-to-typescript-zod",
   },
   {
     category: "json",
@@ -1421,6 +1436,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Validator UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Pengekstrak Bingkai Video",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

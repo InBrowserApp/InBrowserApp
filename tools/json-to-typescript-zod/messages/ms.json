@@ -1,0 +1,14 @@
+{
+  "inputLabel": "Input JSON",
+  "inputPlaceholder": "Tampal contoh respons API…",
+  "sampleLabel": "Guna contoh",
+  "openFileLabel": "Buka fail JSON",
+  "fileReadError": "Fail tidak dapat dibaca. Cuba buka semula.",
+  "invalidJson": "JSON tidak sah. Semak sintaks dan cuba lagi.",
+  "outputLabel": "Kod yang dijana",
+  "emptyOutput": "Masukkan JSON yang sah untuk menjana kod.",
+  "copyLabel": "Salin kod",
+  "copiedLabel": "Disalin",
+  "downloadLabel": "Muat turun .ts",
+  "zodHelp": "Skema Zod 4 menggugurkan medan yang tidak diisytiharkan daripada hasil penghuraian."
+}

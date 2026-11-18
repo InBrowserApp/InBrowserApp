@@ -1,0 +1,4 @@
+{
+  "name": "JSON 转 TypeScript / Zod",
+  "description": "从 JSON 接口响应示例生成 TypeScript 类型或 Zod 4 校验代码。"
+}
