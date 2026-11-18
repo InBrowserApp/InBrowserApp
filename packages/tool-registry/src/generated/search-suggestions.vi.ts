@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Trình chuyển đổi tài liệu tham khảo",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "Trình xác thực BIC/SWIFT",
     slug: "bic-swift-validator",
   },
@@ -448,6 +453,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Kiểm tra tay cầm chơi game",
+    slug: "gamepad-tester",
+  },
+  {
+    category: "image",
+    name: "Trình tạo GIF",
+    slug: "gif-maker",
+  },
+  {
     category: "image",
     name: "Bộ chuyển đổi GIF sang WebP động",
     slug: "gif-to-animated-webp-converter",
@@ -536,6 +551,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Công cụ ghép ảnh",
     slug: "image-combiner",
+  },
+  {
+    category: "image",
+    name: "So sánh ảnh",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -674,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "Chuyển JSON sang TypeScript / Zod",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "Trình chuyển JSON → XML",
     slug: "json-to-xml-converter",
   },
@@ -706,6 +731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Hash Keccak văn bản hoặc tệp",
     slug: "keccak-hash-text-or-file",
+  },
+  {
+    category: "misc",
+    name: "Công cụ kiểm tra bàn phím",
+    slug: "keyboard-tester",
   },
   {
     category: "developer",
@@ -1421,6 +1451,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Trình xác thực UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Trình trích xuất khung hình từ video",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

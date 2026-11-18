@@ -3473,6 +3473,139 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "bibliography-converter",
+    category: "text",
+    icon: "book-open",
+    tags: [
+      "bibliography",
+      "citation",
+      "references",
+      "bibtex",
+      "ris",
+      "csl json",
+      "doi",
+      "duplicates",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل صيغ المراجع",
+        description:
+          "حوّل المراجع بين صيغ BibTeX وRIS وCSL JSON واكتشف السجلات التي يُحتمل تكرارها. الصق النص أو افتح ملفًا لتحويله في متصفحك.",
+      },
+      de: {
+        name: "Literaturangaben konvertieren",
+        description:
+          "Konvertieren Sie Literaturangaben zwischen BibTeX, RIS und CSL JSON und finden Sie mögliche Duplikate. Fügen Sie Text ein oder öffnen Sie eine Datei, um sie im Browser zu konvertieren.",
+      },
+      en: {
+        name: "Bibliography Converter",
+        description:
+          "Convert references between BibTeX, RIS, and CSL JSON, and find possible duplicate entries. Paste text or open a file to convert it in your browser.",
+      },
+      es: {
+        name: "Conversor de referencias bibliográficas",
+        description:
+          "Convierte referencias entre BibTeX, RIS y CSL JSON y detecta posibles duplicados. Pega texto o abre un archivo para convertirlo en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de références bibliographiques",
+        description:
+          "Convertissez vos références entre BibTeX, RIS et CSL JSON et repérez les doublons possibles. Collez du texte ou ouvrez un fichier pour le convertir dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר רשומות ביבליוגרפיות",
+        description:
+          "המרת מקורות ביבליוגרפיים בין הפורמטים BibTeX, RIS ו-CSL JSON ואיתור כפילויות אפשריות. אפשר להדביק טקסט או לפתוח קובץ ולהמיר אותו בדפדפן.",
+      },
+      hi: {
+        name: "संदर्भ सूची कन्वर्टर",
+        description:
+          "संदर्भों को BibTeX, RIS और CSL JSON के बीच बदलें और संभावित डुप्लिकेट प्रविष्टियाँ ढूँढें। ब्राउज़र में बदलने के लिए टेक्स्ट पेस्ट करें या फ़ाइल खोलें।",
+      },
+      id: {
+        name: "Konverter Format Referensi",
+        description:
+          "Konversi referensi dari dan ke format BibTeX, RIS, atau CSL JSON, sekaligus temukan entri yang mungkin duplikat. Tempel teks atau buka file untuk mengonversinya di browser.",
+      },
+      it: {
+        name: "Convertitore di riferimenti bibliografici",
+        description:
+          "Converti i riferimenti tra BibTeX, RIS e CSL JSON e individua i possibili duplicati. Incolla il testo o apri un file per convertirlo nel browser.",
+      },
+      ja: {
+        name: "参考文献コンバーター",
+        description:
+          "BibTeX、RIS、CSL JSON の間で参考文献を変換し、重複の可能性がある項目を検出できます。テキストを貼り付けるかファイルを開くと、ブラウザーで変換できます。",
+      },
+      ko: {
+        name: "참고문헌 형식 변환기",
+        description:
+          "BibTeX, RIS, CSL JSON 간에 참고문헌을 변환하고 중복 가능성이 있는 항목을 찾으세요. 텍스트를 붙여넣거나 파일을 열어 브라우저에서 변환할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Format Rujukan",
+        description:
+          "Tukar format rujukan antara BibTeX, RIS dan CSL JSON serta cari entri yang mungkin pendua. Tampal teks atau buka fail untuk menukarnya dalam pelayar anda.",
+      },
+      nl: {
+        name: "Bibliografieconverter",
+        description:
+          "Converteer referenties tussen BibTeX, RIS en CSL JSON en spoor mogelijke dubbele vermeldingen op. Plak tekst of open een bestand om het in je browser te converteren.",
+      },
+      no: {
+        name: "Referansekonverterer",
+        description:
+          "Konverter referanser mellom BibTeX, RIS og CSL JSON, og finn mulige duplikater. Lim inn tekst eller åpne en fil for å konvertere den i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter bibliografii",
+        description:
+          "Konwertuj pozycje bibliograficzne między formatami BibTeX, RIS i CSL JSON oraz wykrywaj możliwe duplikaty. Wklej tekst lub otwórz plik, aby przekonwertować go w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de referências bibliográficas",
+        description:
+          "Converta referências entre BibTeX, RIS e CSL JSON e encontre possíveis duplicatas. Cole o texto ou abra um arquivo para convertê-lo no navegador.",
+      },
+      ru: {
+        name: "Конвертер библиографии",
+        description:
+          "Преобразуйте библиографические записи между форматами BibTeX, RIS и CSL JSON и находите возможные дубликаты. Вставьте текст или откройте файл для конвертации в браузере.",
+      },
+      sv: {
+        name: "Referenskonverterare",
+        description:
+          "Konvertera referenser mellan BibTeX, RIS och CSL JSON och hitta möjliga dubbletter. Klistra in text eller öppna en fil och konvertera direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแปลงรูปแบบรายการอ้างอิง",
+        description:
+          "แปลงรายการอ้างอิงระหว่าง BibTeX, RIS และ CSL JSON พร้อมค้นหารายการที่อาจซ้ำกัน วางข้อความหรือเปิดไฟล์เพื่อแปลงในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Kaynakça Dönüştürücüsü",
+        description:
+          "Kaynakça kayıtlarını BibTeX, RIS ve CSL JSON biçimleri arasında dönüştürün ve olası yinelenen kayıtları bulun. Tarayıcınızda dönüştürmek için metni yapıştırın veya bir dosya açın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi tài liệu tham khảo",
+        description:
+          "Chuyển đổi tài liệu tham khảo giữa BibTeX, RIS và CSL JSON, đồng thời tìm các mục có thể trùng lặp. Dán văn bản hoặc mở tệp để chuyển đổi ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "参考文献格式转换器",
+        description:
+          "在 BibTeX、RIS 和 CSL JSON 之间转换参考文献，并查找疑似重复条目。粘贴文本或打开文件，即可在浏览器中转换。",
+      },
+      "zh-TW": {
+        name: "參考文獻格式轉換器",
+        description:
+          "在 BibTeX、RIS 和 CSL JSON 之間轉換參考文獻，並找出可能重複的項目。貼上文字或開啟檔案，即可在瀏覽器中轉換。",
+      },
+    },
+  },
+  {
     slug: "bic-swift-validator",
     category: "text",
     icon: "file-text",
@@ -11320,6 +11453,260 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "gamepad-tester",
+    category: "misc",
+    icon: "gamepad-2",
+    tags: [
+      "gamepad",
+      "controller",
+      "joystick",
+      "stick drift",
+      "hardware",
+      "buttons",
+      "triggers",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار يد التحكم",
+        description:
+          "اختبر أزرار يد التحكم وزناداتها وعصيها مباشرةً في متصفحك. قِس بُعد كل عصا عن المركز بعد إفلاتها للمساعدة في رصد الانحراف.",
+      },
+      de: {
+        name: "Gamepad-Test",
+        description:
+          "Teste Tasten, Trigger und Analogsticks deines Gamepads live im Browser. Prüfe, wie weit jeder Stick nach dem Loslassen von der Mitte abweicht, um Stick-Drift zu erkennen.",
+      },
+      en: {
+        name: "Gamepad Tester",
+        description:
+          "Test gamepad buttons, triggers, and sticks live in your browser. Check how far each stick rests from center to help spot stick drift.",
+      },
+      es: {
+        name: "Prueba de mandos",
+        description:
+          "Prueba en tiempo real los botones, gatillos y palancas de tu mando desde el navegador. Comprueba a qué distancia del centro queda cada palanca al soltarla para detectar posibles desvíos (drift).",
+      },
+      fr: {
+        name: "Test de manette",
+        description:
+          "Testez les boutons, les gâchettes et les sticks de votre manette en direct dans votre navigateur. Mesurez l’écart entre le centre et la position au repos de chaque stick pour repérer un éventuel drift.",
+      },
+      he: {
+        name: "בדיקת בקר משחק",
+        description:
+          "בדקו בזמן אמת את הכפתורים, ההדקים והסטיקים של בקר המשחק בדפדפן. מדדו כמה רחוק כל סטיק נשאר מהמרכז אחרי השחרור כדי לזהות סטייה.",
+      },
+      hi: {
+        name: "गेमपैड टेस्टर",
+        description:
+          "ब्राउज़र में गेमपैड के बटन, ट्रिगर और स्टिक लाइव जाँचें। स्टिक छोड़ने पर देखें कि वह केंद्र से कितनी दूर ठहरती है, ताकि संभावित स्टिक ड्रिफ़्ट पहचान सकें।",
+      },
+      id: {
+        name: "Penguji Gamepad",
+        description:
+          "Uji tombol, pemicu, dan stik gamepad secara langsung di browser. Lihat jarak tiap stik dari titik tengah saat dilepas untuk membantu mendeteksi drift stik.",
+      },
+      it: {
+        name: "Test del controller",
+        description:
+          "Prova in tempo reale pulsanti, grilletti e levette del controller nel browser. Controlla a che distanza dal centro si ferma ogni levetta quando la rilasci, per individuare eventuali problemi di drift.",
+      },
+      ja: {
+        name: "ゲームパッドテスター",
+        description:
+          "ゲームパッドのボタン、トリガー、スティックの入力をブラウザーでリアルタイムに確認できます。手を離したときのスティックの中心からのずれを測り、ドリフトの目安にできます。",
+      },
+      ko: {
+        name: "게임패드 테스터",
+        description:
+          "브라우저에서 게임패드의 버튼, 트리거, 스틱 입력을 실시간으로 확인하세요. 손을 뗀 스틱이 중앙에서 얼마나 벗어나는지 확인해 쏠림 여부를 판단할 수 있습니다.",
+      },
+      ms: {
+        name: "Penguji Alat Kawalan Permainan",
+        description:
+          "Uji butang, picu dan stik alat kawalan permainan secara langsung dalam pelayar. Ukur jarak setiap stik dari titik tengah selepas dilepaskan untuk mengesan tanda hanyutan stik.",
+      },
+      nl: {
+        name: "Gamepadtester",
+        description:
+          "Test de knoppen, triggers en sticks van je gamepad live in je browser. Bekijk hoever elke stick na het loslaten van het midden afwijkt om stickdrift op te sporen.",
+      },
+      no: {
+        name: "Test av spillkontroller",
+        description:
+          "Test knappene, avtrekkerne og spakene på spillkontrolleren i sanntid i nettleseren. Se hvor langt hver spak blir stående fra midten når du slipper den, for å oppdage spakdrift.",
+      },
+      pl: {
+        name: "Tester pada",
+        description:
+          "Sprawdź przyciski, spusty i drążki pada na żywo w przeglądarce. Zobacz, jak daleko od środka zatrzymują się drążki, aby wykryć możliwy dryf.",
+      },
+      pt: {
+        name: "Teste de controle de jogo",
+        description:
+          "Teste os botões, gatilhos e analógicos do controle em tempo real no navegador. Veja a distância de cada analógico até o centro ao soltá-lo para identificar possíveis desvios (drift).",
+      },
+      ru: {
+        name: "Тест геймпада",
+        description:
+          "Проверяйте кнопки, курки и стики геймпада в браузере в реальном времени. Измерьте отклонение стиков от центра в покое, чтобы заметить возможный дрейф.",
+      },
+      sv: {
+        name: "Test av handkontroll",
+        description:
+          "Testa handkontrollens knappar, avtryckare och spakar i realtid i webbläsaren. Se hur långt varje spak hamnar från mitten när du släpper den för att upptäcka spakdrift.",
+      },
+      th: {
+        name: "ทดสอบจอยเกม",
+        description:
+          "ดูการตอบสนองของปุ่ม ทริกเกอร์ และก้านอนาล็อกแบบเรียลไทม์ในเบราว์เซอร์ วัดว่าก้านแต่ละข้างเยื้องจากจุดกึ่งกลางเท่าไรเมื่อปล่อยมือ เพื่อช่วยสังเกตอาการดริฟต์",
+      },
+      tr: {
+        name: "Oyun Kumandası Testi",
+        description:
+          "Kumandanızın düğmelerini, tetiklerini ve analog çubuklarını tarayıcıda anlık olarak test edin. Kaymayı fark etmek için çubukların serbestken merkeze uzaklığını ölçün.",
+      },
+      vi: {
+        name: "Kiểm tra tay cầm chơi game",
+        description:
+          "Xem phản hồi trực tiếp của các nút, cò và cần analog ngay trong trình duyệt. Đo độ lệch tâm khi thả từng cần để phát hiện dấu hiệu trôi cần.",
+      },
+      "zh-CN": {
+        name: "游戏手柄测试器",
+        description:
+          "在浏览器中实时测试手柄的按键、扳机和摇杆。查看松手后摇杆偏离中心的程度，辅助判断是否存在漂移。",
+      },
+      "zh-TW": {
+        name: "遊戲控制器測試器",
+        description:
+          "在瀏覽器即時測試遊戲控制器的按鍵、扳機和搖桿。查看放開後搖桿偏離中心的程度，協助判斷是否有飄移。",
+      },
+    },
+  },
+  {
+    slug: "gif-maker",
+    category: "image",
+    icon: "film",
+    tags: ["image", "gif", "animation", "frames", "maker", "offline"],
+    locales: {
+      ar: {
+        name: "أداة إنشاء GIF",
+        description:
+          "حوّل صورك إلى ملف GIF متحرك. أعد ترتيب الإطارات واضبط مدة عرض كل إطار وعدد مرات التشغيل في متصفحك.",
+      },
+      de: {
+        name: "GIF-Ersteller",
+        description:
+          "Erstelle aus Bildern ein animiertes GIF. Ändere die Reihenfolge und Anzeigedauer der Einzelbilder und lege die Anzahl der Wiedergaben fest. Alles läuft im Browser.",
+      },
+      en: {
+        name: "GIF Maker",
+        description:
+          "Turn images into an animated GIF. Reorder frames, adjust how long each frame appears, and set the loop count in your browser.",
+      },
+      es: {
+        name: "Creador de GIF",
+        description:
+          "Convierte imágenes en un GIF animado desde tu navegador. Ordena los fotogramas, ajusta la duración de cada uno y elige cuántas veces se reproduce la animación.",
+      },
+      fr: {
+        name: "Créateur de GIF",
+        description:
+          "Créez un GIF animé à partir d’images dans votre navigateur. Réorganisez les images, réglez la durée de chacune et choisissez le nombre de boucles.",
+      },
+      he: {
+        name: "יוצר GIF",
+        description:
+          "יצירת GIF מונפש מתמונות, ישירות בדפדפן. אפשר לשנות את סדר הפריימים, את משך התצוגה של כל פריים ואת מספר הלולאות.",
+      },
+      hi: {
+        name: "GIF मेकर",
+        description:
+          "इमेज से एनिमेटेड GIF बनाएँ। अपने ब्राउज़र में फ़्रेम का क्रम, हर फ़्रेम की अवधि और लूप की संख्या तय करें।",
+      },
+      id: {
+        name: "Pembuat GIF",
+        description:
+          "Buat GIF animasi dari rangkaian gambar. Atur urutan dan durasi tiap frame serta jumlah putaran langsung di browser.",
+      },
+      it: {
+        name: "Creatore di GIF",
+        description:
+          "Crea una GIF animata a partire da immagini nel browser. Riordina i fotogrammi, regola la durata di ciascuno e scegli quante volte riprodurre l’animazione.",
+      },
+      ja: {
+        name: "GIF 作成ツール",
+        description:
+          "画像からアニメーション GIF を作成します。フレームの順序や表示時間、ループ回数をブラウザーで調整できます。",
+      },
+      ko: {
+        name: "GIF 만들기",
+        description:
+          "이미지를 모아 움직이는 GIF를 만드세요. 브라우저에서 프레임 순서, 프레임별 표시 시간, 반복 횟수를 조절할 수 있습니다.",
+      },
+      ms: {
+        name: "Pembuat GIF",
+        description:
+          "Cipta GIF animasi daripada beberapa imej terus dalam pelayar. Susun bingkai, laraskan tempoh setiap bingkai dan tetapkan bilangan kali GIF dimainkan.",
+      },
+      nl: {
+        name: "GIF-maker",
+        description:
+          "Maak een geanimeerde GIF van afbeeldingen. Wijzig de volgorde en weergaveduur van elk frame en stel in hoe vaak de GIF afspeelt. Alles werkt in je browser.",
+      },
+      no: {
+        name: "Lag GIF",
+        description:
+          "Lag en animert GIF av bilder i nettleseren. Endre rekkefølgen og visningstiden for hver bilderute, og velg hvor mange ganger GIF-en skal spilles av.",
+      },
+      pl: {
+        name: "Kreator GIF-ów",
+        description:
+          "Utwórz animowany GIF z obrazów w przeglądarce. Zmień kolejność klatek, ustaw czas wyświetlania każdej z nich i wybierz liczbę odtworzeń.",
+      },
+      pt: {
+        name: "Criador de GIF",
+        description:
+          "Transforme imagens em um GIF animado no navegador. Reordene os quadros, ajuste a duração de cada um e escolha quantas vezes a animação será reproduzida.",
+      },
+      ru: {
+        name: "Создание GIF",
+        description:
+          "Создайте анимированный GIF из изображений в браузере. Меняйте порядок кадров, задавайте длительность каждого кадра и число воспроизведений.",
+      },
+      sv: {
+        name: "GIF-skapare",
+        description:
+          "Skapa en animerad GIF av bilder. Ändra ordningen och visningstiden för varje bildruta och välj hur många gånger GIF-filen ska spelas upp. Allt sker i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง GIF",
+        description:
+          "สร้าง GIF แบบเคลื่อนไหวจากชุดรูปภาพได้ในเบราว์เซอร์ พร้อมจัดลำดับเฟรม ปรับเวลาแสดงแต่ละเฟรม และกำหนดจำนวนรอบที่เล่น",
+      },
+      tr: {
+        name: "GIF Oluşturucu",
+        description:
+          "Görsellerden tarayıcınızda animasyonlu GIF oluşturun. Kareleri sıralayın, her karenin ekranda kalma süresini ve döngü sayısını ayarlayın.",
+      },
+      vi: {
+        name: "Trình tạo GIF",
+        description:
+          "Tạo ảnh GIF động từ một chuỗi ảnh. Sắp xếp các khung hình, chỉnh thời lượng hiển thị từng khung và đặt số lượt phát ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "GIF 制作器",
+        description:
+          "在浏览器中将图片合成 GIF 动画，自由调整帧顺序、每帧时长和循环次数。",
+      },
+      "zh-TW": {
+        name: "GIF 製作器",
+        description:
+          "在瀏覽器中將圖片合成 GIF 動畫，自訂影格順序、每個影格的顯示時間和循環次數。",
+      },
+    },
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     category: "image",
     icon: "image",
@@ -13517,6 +13904,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "圖片拼接器",
         description:
           "將多張圖片橫向並排、縱向堆疊或排成格狀。調整間距、背景及圖片尺寸，再下載為 PNG，無須上傳檔案。",
+      },
+    },
+  },
+  {
+    slug: "image-comparator",
+    category: "image",
+    icon: "columns-2",
+    tags: [
+      "image",
+      "compare",
+      "before-after",
+      "overlay",
+      "pixel diff",
+      "screenshot",
+    ],
+    locales: {
+      ar: {
+        name: "أداة مقارنة الصور",
+        description:
+          "قارِن صورتين بفاصل قابل للسحب، أو بتراكب قابل لضبط العتامة، أو بخريطة لفروق البكسلات. تبقى صورك في متصفحك.",
+      },
+      de: {
+        name: "Bildvergleich",
+        description:
+          "Vergleiche zwei Bilder mit einer verschiebbaren Trennlinie, durch Überlagern oder anhand markierter Pixelunterschiede. Deine Bilder bleiben im Browser.",
+      },
+      en: {
+        name: "Image Comparator",
+        description:
+          "Compare two images with a draggable divider, an opacity overlay, or a pixel difference map. Your images stay in your browser.",
+      },
+      es: {
+        name: "Comparador de imágenes",
+        description:
+          "Compara dos imágenes con un separador deslizante, una superposición ajustable o un mapa de diferencias por píxel. Tus imágenes permanecen en el navegador.",
+      },
+      fr: {
+        name: "Comparateur d’images",
+        description:
+          "Comparez deux images avec un curseur, une superposition à opacité réglable ou une carte des écarts par pixel. Vos images restent dans votre navigateur.",
+      },
+      he: {
+        name: "השוואת תמונות",
+        description:
+          "השוו שתי תמונות בעזרת קו הפרדה שניתן לגרור, שכבת־על עם אטימות מתכווננת או מפת הבדלים בין פיקסלים. התמונות נשארות בדפדפן.",
+      },
+      hi: {
+        name: "इमेज तुलना टूल",
+        description:
+          "दो इमेज की तुलना करने के लिए विभाजक रेखा खिसकाएँ, एक इमेज को दूसरी पर रखकर अपारदर्शिता बदलें या पिक्सेल अंतर देखें। इमेज आपके ब्राउज़र में ही रहती हैं।",
+      },
+      id: {
+        name: "Pembanding Gambar",
+        description:
+          "Bandingkan dua gambar dengan menggeser garis pembatas, menumpuk gambar dengan opasitas yang dapat diatur, atau melihat peta perbedaan piksel. Gambar tetap berada di browser Anda.",
+      },
+      it: {
+        name: "Confronto immagini",
+        description:
+          "Confronta due immagini con un divisore scorrevole, una sovrapposizione a opacità regolabile o una mappa delle differenze per pixel. Le immagini restano nel browser.",
+      },
+      ja: {
+        name: "画像比較ツール",
+        description:
+          "区切り線をドラッグしたり、透明度を調整して画像を重ねたり、ピクセル差分を表示したりして、2 枚の画像を比較できます。画像はブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "이미지 비교",
+        description:
+          "구분선을 움직이거나, 불투명도를 조절해 두 이미지를 겹치거나, 픽셀 차이 지도로 비교할 수 있습니다. 이미지는 브라우저 안에서만 처리됩니다.",
+      },
+      ms: {
+        name: "Pembanding Imej",
+        description:
+          "Bandingkan dua imej menggunakan pemisah yang boleh diseret, tindihan dengan kelegapan boleh laras atau peta perbezaan piksel. Imej kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeeldingen vergelijken",
+        description:
+          "Vergelijk twee afbeeldingen met een schuifregelaar, leg ze over elkaar of laat pixelverschillen markeren. Je afbeeldingen blijven in je browser.",
+      },
+      no: {
+        name: "Bildesammenligning",
+        description:
+          "Sammenlign to bilder med en flyttbar skillelinje, legg dem over hverandre eller marker pikselforskjellene. Bildene dine blir i nettleseren.",
+      },
+      pl: {
+        name: "Porównywanie obrazów",
+        description:
+          "Porównuj dwa obrazy za pomocą suwaka, nakładki z regulowanym kryciem lub mapy różnic pikseli. Obrazy pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Comparador de imagens",
+        description:
+          "Compare duas imagens com um divisor deslizante, uma sobreposição com opacidade ajustável ou um mapa de diferenças por pixel. Suas imagens ficam no navegador.",
+      },
+      ru: {
+        name: "Сравнение изображений",
+        description:
+          "Сравнивайте два изображения с помощью подвижного разделителя, наложения с настройкой непрозрачности или карты попиксельных различий. Изображения остаются в вашем браузере.",
+      },
+      sv: {
+        name: "Bildjämförelse",
+        description:
+          "Jämför två bilder med en flyttbar skiljelinje, en överlagring eller markerade pixelskillnader. Dina bilder stannar i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือเปรียบเทียบรูปภาพ",
+        description:
+          "เปรียบเทียบรูปภาพสองรูปด้วยเส้นแบ่งที่ลากได้ การซ้อนภาพแบบปรับความทึบ หรือภาพแสดงความแตกต่างของพิกเซล รูปภาพจะถูกประมวลผลในเบราว์เซอร์ของคุณเท่านั้น",
+      },
+      tr: {
+        name: "Görüntü Karşılaştırma",
+        description:
+          "İki görüntüyü sürüklenebilir bir ayırıcı, opaklığı ayarlanabilir bir katman veya piksel farkı haritasıyla karşılaştırın. Görüntüleriniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "So sánh ảnh",
+        description:
+          "So sánh hai ảnh bằng vạch chia kéo được, chế độ chồng ảnh điều chỉnh độ đục hoặc bản đồ chênh lệch pixel. Ảnh chỉ được xử lý trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片对比器",
+        description:
+          "拖动分隔线、调节叠加不透明度，或查看像素差异图来对比两张图片。图片只在浏览器中处理。",
+      },
+      "zh-TW": {
+        name: "圖片比對器",
+        description:
+          "透過滑動分隔線、調整疊加不透明度或查看像素差異圖，比對兩張圖片。圖片只在瀏覽器中處理。",
       },
     },
   },
@@ -15800,117 +16317,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "مولّد IPv6 ULA",
         description:
-          "أنشئ في المتصفح بادئة /48 آمنة لعنوان IPv6 محلي فريد (ULA) وفق RFC 4193، وخطّط لشبكات /64 الفرعية ضمن نطاق fd00.",
+          "أنشئ بادئة ‎/48 لعنوان IPv6 محلي فريد (ULA) وفق RFC 4193، واحسب شبكات ‎/64 الفرعية لشبكة منزلية أو مختبر أو شبكة VPN.",
       },
       de: {
         name: "IPv6-ULA-Generator",
         description:
-          "Erzeuge im Browser ein sicheres /48-Präfix für eine IPv6 Unique Local Address (ULA) gemäß RFC 4193 und plane die zugehörigen /64-Subnetze im fd00-Bereich.",
+          "Ein IPv6-ULA-Präfix (/48) gemäß RFC 4193 erzeugen und /64-Subnetze für ein Heimnetz, eine Testumgebung oder ein VPN berechnen.",
       },
       en: {
         name: "IPv6 ULA Generator",
         description:
-          "Generate a secure RFC 4193 IPv6 Unique Local Address (ULA) /48 prefix in the browser and plan its fd00 /64 subnets.",
+          "Generate an RFC 4193 IPv6 Unique Local Address (ULA) /48 prefix and calculate /64 subnets for a home network, lab, or VPN.",
       },
       es: {
         name: "Generador de ULA IPv6",
         description:
-          "Genera en el navegador un prefijo /48 seguro de dirección local única (ULA) IPv6 según RFC 4193 y planifica sus subredes /64 dentro de fd00.",
+          "Genera un prefijo IPv6 /48 de dirección local única (ULA) según RFC 4193 y calcula subredes /64 para redes domésticas, laboratorios o VPN.",
       },
       fr: {
         name: "Générateur d’ULA IPv6",
         description:
-          "Générez dans le navigateur un préfixe /48 sécurisé d’adresse locale unique IPv6 (ULA) conforme à la RFC 4193, puis planifiez ses sous-réseaux fd00 en /64.",
+          "Générez un préfixe /48 d’adresse locale unique IPv6 (ULA) conforme à la RFC 4193 et calculez les sous-réseaux /64 de votre réseau domestique, de test ou VPN.",
       },
       he: {
         name: "מחולל ULA ל-IPv6",
         description:
-          "צור בדפדפן קידומת /48 מאובטחת של כתובת IPv6 מקומית ייחודית (ULA) לפי RFC 4193, ותכנן את תת-הרשתות שלה מסוג /64 במרחב fd00.",
+          "צרו קידומת IPv6 ‎/48 לכתובת מקומית ייחודית (ULA) לפי RFC 4193 וחשבו תת-רשתות ‎/64 לרשת ביתית, למעבדה או ל-VPN.",
       },
       hi: {
         name: "IPv6 ULA जनरेटर",
         description:
-          "ब्राउज़र में RFC 4193 के अनुरूप IPv6 अद्वितीय स्थानीय पते (ULA) का सुरक्षित /48 प्रीफ़िक्स जनरेट करें और उसके fd00 क्षेत्र के /64 सबनेट की योजना बनाएं।",
+          "RFC 4193 के अनुसार IPv6 अद्वितीय स्थानीय पते (ULA) का /48 प्रीफ़िक्स जनरेट करें और होम नेटवर्क, लैब या VPN के लिए /64 सबनेट निकालें।",
       },
       id: {
         name: "Generator ULA IPv6",
         description:
-          "Buat prefiks /48 Alamat Lokal Unik (ULA) IPv6 RFC 4193 yang aman di browser serta rencanakan subnet fd00 /64 untuk prefiks tersebut.",
+          "Buat prefiks /48 Alamat Lokal Unik IPv6 (ULA) sesuai RFC 4193 dan hitung subnet /64 untuk jaringan rumah, lab, atau VPN.",
       },
       it: {
         name: "Generatore di ULA IPv6",
         description:
-          "Genera nel browser un prefisso /48 sicuro RFC 4193 per un indirizzo locale univoco IPv6 (ULA) e pianifica le relative subnet /64 nello spazio fd00.",
+          "Genera un prefisso IPv6 ULA /48 secondo la RFC 4193 e calcola le subnet /64 per una rete domestica, un laboratorio o una VPN.",
       },
       ja: {
         name: "IPv6 ULA 生成ツール",
         description:
-          "ブラウザー内で安全な RFC 4193 IPv6 ユニークローカルアドレス（ULA）の /48 プレフィックスを生成し、その fd00 /64 サブネットを計画します。",
+          "RFC 4193 に基づく IPv6 ユニークローカルアドレス（ULA）の /48 プレフィックスを生成し、自宅のネットワーク、検証環境、VPN 用の /64 サブネットを計算します。",
       },
       ko: {
         name: "IPv6 ULA 생성기",
         description:
-          "브라우저에서 안전한 RFC 4193 IPv6 고유 로컬 주소(ULA) /48 프리픽스를 생성하고 fd00 /64 서브넷을 계획하세요.",
+          "RFC 4193에 따른 IPv6 고유 로컬 주소(ULA) /48 프리픽스를 생성하고 가정, 실험실 또는 VPN에 쓸 /64 서브넷을 계산하세요.",
       },
       ms: {
         name: "Penjana ULA IPv6",
         description:
-          "Jana awalan /48 Alamat Setempat Unik (ULA) IPv6 yang selamat mengikut RFC 4193 dalam pelayar dan rancang subnet /64 dalam ruang fd00.",
+          "Jana awalan /48 Alamat Setempat Unik (ULA) IPv6 mengikut RFC 4193 dan kira subnet /64 untuk rangkaian rumah, makmal atau VPN.",
       },
       nl: {
         name: "IPv6 ULA-generator",
         description:
-          "Genereer in de browser een veilig /48-prefix voor een IPv6 Unique Local Address (ULA) volgens RFC 4193 en plan de bijbehorende /64-subnetten binnen fd00.",
+          "Genereer een IPv6 Unique Local Address (ULA) /48-prefix volgens RFC 4193 en bereken /64-subnetten voor je thuisnetwerk, testomgeving of VPN.",
       },
       no: {
         name: "IPv6 ULA-generator",
         description:
-          "Generer et sikkert RFC 4193-prefiks /48 for en unik lokal IPv6-adresse (ULA) i nettleseren, og planlegg tilhørende fd00 /64-subnett.",
+          "Generer et /48-prefiks for unike lokale IPv6-adresser (ULA) etter RFC 4193, og beregn /64-subnett for hjemmenettverk, testmiljø eller VPN.",
       },
       pl: {
         name: "Generator ULA IPv6",
         description:
-          "Generuj w przeglądarce bezpieczny prefiks /48 unikalnego adresu lokalnego IPv6 (ULA) zgodny z RFC 4193 i planuj jego podsieci fd00 /64.",
+          "Wygeneruj prefiks /48 unikalnego adresu lokalnego IPv6 (ULA) zgodny z RFC 4193 i oblicz podsieci /64 dla sieci domowej, laboratorium lub VPN.",
       },
       pt: {
         name: "Gerador de ULA IPv6",
         description:
-          "Gere no navegador um prefixo /48 seguro de endereço local único (ULA) IPv6 conforme a RFC 4193 e planeje suas sub-redes fd00 /64.",
+          "Gere um prefixo /48 de endereço local único (ULA) IPv6 conforme a RFC 4193 e calcule sub-redes /64 para uma rede doméstica, laboratório ou VPN.",
       },
       ru: {
         name: "Генератор ULA IPv6",
         description:
-          "Создавайте в браузере безопасный /48-префикс уникального локального IPv6-адреса (ULA) по RFC 4193 и планируйте его подсети /64 в диапазоне fd00.",
+          "Сгенерируйте префикс /48 для уникального локального IPv6-адреса (ULA) по RFC 4193 и рассчитайте подсети /64 для домашней сети, лаборатории или VPN.",
       },
       sv: {
         name: "IPv6 ULA-generator",
         description:
-          "Generera ett säkert /48-prefix för en unik lokal IPv6-adress (ULA) enligt RFC 4193 i webbläsaren och planera dess /64-subnät i fd00-rymden.",
+          "Generera ett /48-prefix för en unik lokal IPv6-adress (ULA) enligt RFC 4193 och beräkna /64-subnät för hemnätverk, labb eller VPN.",
       },
       th: {
         name: "ตัวสร้าง IPv6 ULA",
         description:
-          "สร้างพรีฟิกซ์ /48 ของที่อยู่ IPv6 เฉพาะภายใน (ULA) ตาม RFC 4193 อย่างปลอดภัยในเบราว์เซอร์ และวางแผนซับเน็ต /64 ภายในช่วง fd00",
+          "สร้างพรีฟิกซ์ IPv6 Unique Local Address (ULA) ขนาด /48 ตาม RFC 4193 และคำนวณซับเน็ต /64 สำหรับเครือข่ายในบ้าน ห้องทดลอง หรือ VPN",
       },
       tr: {
         name: "IPv6 ULA Oluşturucu",
         description:
-          "RFC 4193'e uygun güvenli bir IPv6 Benzersiz Yerel Adres (ULA) /48 önekini tarayıcıda oluşturun ve fd00 /64 alt ağlarını planlayın.",
+          "RFC 4193 uyumlu IPv6 Benzersiz Yerel Adres (ULA) /48 öneki oluşturun. Ev ağı, laboratuvar veya VPN için /64 alt ağlarını hesaplayın.",
       },
       vi: {
         name: "Trình tạo ULA IPv6",
         description:
-          "Tạo ngay trong trình duyệt một prefix /48 an toàn cho địa chỉ cục bộ duy nhất (ULA) IPv6 theo RFC 4193 và lập kế hoạch các subnet /64 trong dải fd00.",
+          "Tạo prefix /48 cho địa chỉ cục bộ duy nhất (ULA) IPv6 theo RFC 4193 và tính mạng con /64 cho mạng gia đình, mạng thử nghiệm hoặc VPN.",
       },
       "zh-CN": {
         name: "IPv6 ULA 生成器",
         description:
-          "在浏览器中安全生成 RFC 4193 IPv6 唯一本地地址（ULA）/48 前缀，并规划其 fd00 /64 子网。",
+          "生成符合 RFC 4193 的 IPv6 唯一本地地址（ULA）/48 前缀，并为家庭网络、实验环境或 VPN 计算 /64 子网。",
       },
       "zh-TW": {
         name: "IPv6 ULA 產生器",
         description:
-          "在瀏覽器中安全產生 RFC 4193 IPv6 唯一本地位址（ULA）/48 前綴，並規劃其 fd00 /64 子網路。",
+          "產生符合 RFC 4193 的 IPv6 唯一本地位址（ULA）/48 前綴，並為家庭網路、實驗環境或 VPN 計算 /64 子網路。",
       },
     },
   },
@@ -16858,6 +17375,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "json-to-typescript-zod",
+    category: "json",
+    icon: "braces",
+    tags: ["json", "typescript", "zod", "api", "type", "schema", "validation"],
+    locales: {
+      ar: {
+        name: "محول JSON إلى TypeScript أو Zod",
+        description:
+          "ولّد أنواع TypeScript أو مخطط تحقق باستخدام Zod 4 من مثال لاستجابة API بصيغة JSON.",
+      },
+      de: {
+        name: "JSON-zu-TypeScript-/Zod-Konverter",
+        description:
+          "Leite TypeScript-Typen oder ein Zod-4-Validierungsschema aus einer JSON-API-Beispielantwort ab.",
+      },
+      en: {
+        name: "JSON to TypeScript / Zod",
+        description:
+          "Generate TypeScript types or a Zod 4 validation schema from a sample JSON API response.",
+      },
+      es: {
+        name: "Convertidor de JSON a TypeScript / Zod",
+        description:
+          "Genera tipos de TypeScript o un esquema de validación de Zod 4 a partir de una respuesta JSON de ejemplo de una API.",
+      },
+      fr: {
+        name: "Convertisseur JSON vers TypeScript / Zod",
+        description:
+          "Générez des types TypeScript ou un schéma de validation Zod 4 à partir d’un exemple de réponse d’API au format JSON.",
+      },
+      he: {
+        name: "ממיר JSON ל-TypeScript או ל-Zod",
+        description:
+          "צרו טיפוסי TypeScript או סכמת אימות של Zod 4 מתגובת API לדוגמה בפורמט JSON.",
+      },
+      hi: {
+        name: "JSON से TypeScript या Zod कन्वर्टर",
+        description:
+          "JSON में दिए गए API रिस्पॉन्स के उदाहरण से TypeScript टाइप या Zod 4 का वैलिडेशन स्कीमा बनाएँ।",
+      },
+      id: {
+        name: "Konverter JSON ke TypeScript / Zod",
+        description:
+          "Hasilkan tipe TypeScript atau skema validasi Zod 4 dari contoh respons API berformat JSON.",
+      },
+      it: {
+        name: "Convertitore da JSON a TypeScript / Zod",
+        description:
+          "Genera tipi TypeScript o uno schema di validazione Zod 4 da una risposta JSON di esempio di un’API.",
+      },
+      ja: {
+        name: "JSON → TypeScript / Zod",
+        description:
+          "JSON 形式の API レスポンスのサンプルから、TypeScript の型や Zod 4 の検証スキーマを生成します。",
+      },
+      ko: {
+        name: "JSON → TypeScript / Zod 변환기",
+        description:
+          "JSON API 응답 예시에서 TypeScript 타입이나 Zod 4 검증 스키마를 생성합니다.",
+      },
+      ms: {
+        name: "Penukar JSON kepada TypeScript / Zod",
+        description:
+          "Jana jenis TypeScript atau skema pengesahan Zod 4 daripada contoh respons API dalam format JSON.",
+      },
+      nl: {
+        name: "JSON naar TypeScript of Zod",
+        description:
+          "Genereer TypeScript-types of een Zod 4-validatieschema op basis van een voorbeeld van een API-respons in JSON.",
+      },
+      no: {
+        name: "JSON til TypeScript / Zod",
+        description:
+          "Generer TypeScript-typer eller et valideringsskjema for Zod 4 fra et eksempel på et API-svar i JSON.",
+      },
+      pl: {
+        name: "Konwerter JSON na TypeScript i Zod",
+        description:
+          "Generuj typy TypeScript lub schemat walidacji Zod 4 na podstawie przykładowej odpowiedzi API w formacie JSON.",
+      },
+      pt: {
+        name: "Conversor de JSON para TypeScript / Zod",
+        description:
+          "Gere tipos TypeScript ou um esquema de validação Zod 4 a partir de um exemplo de resposta de API em JSON.",
+      },
+      ru: {
+        name: "Конвертер JSON в TypeScript и Zod",
+        description:
+          "Создавайте типы TypeScript или схему валидации Zod 4 по примеру ответа API в формате JSON.",
+      },
+      sv: {
+        name: "JSON till TypeScript / Zod",
+        description:
+          "Generera TypeScript-typer eller ett valideringsschema för Zod 4 från ett exempel på ett API-svar i JSON.",
+      },
+      th: {
+        name: "ตัวแปลง JSON เป็น TypeScript / Zod",
+        description:
+          "สร้างชนิดข้อมูล TypeScript หรือสคีมา Zod 4 สำหรับตรวจสอบข้อมูลจากตัวอย่างผลตอบกลับ API ในรูปแบบ JSON",
+      },
+      tr: {
+        name: "JSON’dan TypeScript ve Zod’a Dönüştürücü",
+        description:
+          "JSON biçimindeki örnek bir API yanıtından TypeScript türleri veya bir Zod 4 doğrulama şeması oluşturun.",
+      },
+      vi: {
+        name: "Chuyển JSON sang TypeScript / Zod",
+        description:
+          "Tạo kiểu TypeScript hoặc lược đồ kiểm tra dữ liệu bằng Zod 4 từ một phản hồi API mẫu ở định dạng JSON.",
+      },
+      "zh-CN": {
+        name: "JSON 转 TypeScript / Zod",
+        description:
+          "从 JSON 接口响应示例生成 TypeScript 类型或 Zod 4 校验代码。",
+      },
+      "zh-TW": {
+        name: "JSON 轉 TypeScript / Zod",
+        description:
+          "從 JSON API 回應範例產生 TypeScript 型別或 Zod 4 驗證程式碼。",
+      },
+    },
+  },
+  {
     slug: "json-to-xml-converter",
     category: "json",
     icon: "file-json-2",
@@ -17759,6 +18399,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "keyboard-tester",
+    category: "misc",
+    icon: "keyboard",
+    tags: [
+      "keyboard",
+      "hardware",
+      "diagnostics",
+      "shortcut",
+      "rollover",
+      "ghosting",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار لوحة المفاتيح",
+        description:
+          "اختبر لوحة مفاتيح جهازك في المتصفح. تحقق من المفاتيح ومفاتيح التعديل التي يستجيب لها المتصفح، وجرّب تركيبات المفاتيح واعرف عدد المفاتيح التي يرصدها في الوقت نفسه.",
+      },
+      de: {
+        name: "Tastaturtest",
+        description:
+          "Teste deine physische Tastatur im Browser. Prüfe Tasten und Modifikatortasten, teste Tastenkombinationen und sieh, wie viele Tasten gleichzeitig erkannt werden.",
+      },
+      en: {
+        name: "Keyboard Tester",
+        description:
+          "Test your physical keyboard in your browser. See which keys and modifiers register, check key combinations, and find how many keys register at once.",
+      },
+      es: {
+        name: "Probador de teclado",
+        description:
+          "Prueba tu teclado físico en el navegador. Comprueba qué teclas, modificadores y combinaciones se detectan y cuántas teclas se registran a la vez.",
+      },
+      fr: {
+        name: "Test de clavier",
+        description:
+          "Testez votre clavier physique dans votre navigateur. Voyez quelles touches, quels modificateurs et quelles combinaisons sont détectés, et combien de touches sont reconnues en même temps.",
+      },
+      he: {
+        name: "בדיקת מקלדת",
+        description:
+          "בדקו את המקלדת הפיזית בדפדפן. ראו אילו מקשים ומקשי שינוי מזוהים, בדקו שילובי מקשים וגלו כמה מקשים מזוהים בו־זמנית.",
+      },
+      hi: {
+        name: "कीबोर्ड टेस्टर",
+        description:
+          "अपने फ़िज़िकल कीबोर्ड को ब्राउज़र में जाँचें। देखें कि कौन-सी कुंजियाँ और मॉडिफ़ायर कुंजियाँ दर्ज होती हैं, कुंजी संयोजन आज़माएँ और जानें कि एक साथ कितनी कुंजियाँ दर्ज होती हैं।",
+      },
+      id: {
+        name: "Tes Keyboard",
+        description:
+          "Uji keyboard fisik Anda di browser. Lihat tombol yang terdeteksi, termasuk tombol pengubah, uji kombinasi tombol, dan lihat berapa banyak tombol yang terdeteksi sekaligus.",
+      },
+      it: {
+        name: "Test della tastiera",
+        description:
+          "Prova la tua tastiera fisica nel browser. Verifica quali tasti, modificatori e combinazioni vengono rilevati e quanti tasti vengono riconosciuti contemporaneamente.",
+      },
+      ja: {
+        name: "キーボードテスター",
+        description:
+          "物理キーボードをブラウザーでテストします。反応するキーや修飾キーを確認し、キーの組み合わせや、同時に何個のキーを認識できるかを調べられます。",
+      },
+      ko: {
+        name: "키보드 테스터",
+        description:
+          "브라우저에서 물리 키보드를 테스트하세요. 어떤 키와 보조 키가 인식되는지 확인하고, 키 조합과 한 번에 인식되는 최대 키 개수를 테스트할 수 있습니다.",
+      },
+      ms: {
+        name: "Penguji Papan Kekunci",
+        description:
+          "Uji papan kekunci fizikal anda dalam pelayar. Lihat kekunci yang dikesan, termasuk kekunci pengubah suai, uji gabungan kekunci dan ketahui jumlah kekunci yang dikesan serentak.",
+      },
+      nl: {
+        name: "Toetsenbordtest",
+        description:
+          "Test je fysieke toetsenbord in je browser. Bekijk welke toetsen en modificatietoetsen worden herkend, probeer toetscombinaties en ontdek hoeveel toetsen tegelijk worden geregistreerd.",
+      },
+      no: {
+        name: "Tastaturtest",
+        description:
+          "Test det fysiske tastaturet ditt i nettleseren. Se hvilke taster og modifikatortaster som registreres, prøv tastekombinasjoner og sjekk hvor mange taster som registreres samtidig.",
+      },
+      pl: {
+        name: "Tester klawiatury",
+        description:
+          "Przetestuj fizyczną klawiaturę w przeglądarce. Sprawdź, które klawisze, modyfikatory i kombinacje są wykrywane oraz ile klawiszy można wykryć jednocześnie.",
+      },
+      pt: {
+        name: "Teste de teclado",
+        description:
+          "Teste seu teclado físico no navegador. Veja quais teclas, modificadores e combinações são detectados e quantas teclas são reconhecidas ao mesmo tempo.",
+      },
+      ru: {
+        name: "Тест клавиатуры",
+        description:
+          "Проверьте физическую клавиатуру в браузере. Узнайте, какие клавиши, модификаторы и сочетания срабатывают и сколько клавиш распознаётся одновременно.",
+      },
+      sv: {
+        name: "Tangentbordstest",
+        description:
+          "Testa ditt fysiska tangentbord i webbläsaren. Se vilka tangenter och modifierartangenter som registreras, prova tangentkombinationer och se hur många tangenter som registreras samtidigt.",
+      },
+      th: {
+        name: "เครื่องมือทดสอบแป้นพิมพ์",
+        description:
+          "ทดสอบแป้นพิมพ์จริงผ่านเบราว์เซอร์ ดูว่าเบราว์เซอร์ตรวจพบปุ่มใดบ้าง รวมถึงปุ่มปรับเปลี่ยนอย่าง Shift ทดสอบชุดปุ่มที่กดร่วมกันและดูว่าเบราว์เซอร์รับได้กี่ปุ่มพร้อมกัน",
+      },
+      tr: {
+        name: "Klavye Testi",
+        description:
+          "Fiziksel klavyenizi tarayıcıda test edin. Hangi tuşların ve değiştirici tuşların algılandığını görün, tuş kombinasyonlarını deneyin ve aynı anda kaç tuşun algılandığını öğrenin.",
+      },
+      vi: {
+        name: "Công cụ kiểm tra bàn phím",
+        description:
+          "Kiểm tra bàn phím vật lý ngay trong trình duyệt. Xem phím nào được nhận, kể cả phím bổ trợ, thử các tổ hợp và xem có bao nhiêu phím được nhận cùng lúc.",
+      },
+      "zh-CN": {
+        name: "键盘测试器",
+        description:
+          "实时查看实体键盘的按键、修饰键和组合键，测试浏览器能同时识别多少个按键。",
+      },
+      "zh-TW": {
+        name: "鍵盤測試器",
+        description:
+          "即時查看實體鍵盤的按鍵、修飾鍵與組合鍵，測試瀏覽器能同時偵測多少個按鍵。",
+      },
+    },
+  },
+  {
     slug: "ksuid-generator",
     category: "developer",
     icon: "lock",
@@ -18158,117 +18928,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "مقارن القوائم",
         description:
-          "قارن قائمتين، واكتشف العناصر المشتركة والمستبعدة، وصدّر المجموعة التي تحتاجها بدقة قبل المزامنة أو التنقيح.",
+          "قارن بين قائمتين للعثور على العناصر المشتركة والفريدة لكل قائمة والعناصر المكررة. ألصق أسطرًا أو نصًا مفصولًا بعلامات، ثم انسخ النتائج أو نزّلها.",
       },
       de: {
         name: "Listenvergleich",
         description:
-          "Vergleiche zwei Listen, zeige Überschneidungen und Ausschlüsse an und exportiere genau die benötigte Menge vor einem Abgleich oder einer Bereinigung.",
+          "Zwei Listen vergleichen und gemeinsame Einträge, Unterschiede und Duplikate finden. Zeilen oder getrennte Werte einfügen und Ergebnisse kopieren oder herunterladen.",
       },
       en: {
         name: "List Comparer",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Compare two lists to find shared items, entries only in A or B, and duplicates. Paste lines or delimited text, then copy or download the results.",
       },
       es: {
         name: "Comparador de listas",
         description:
-          "Compare dos listas, identifique coincidencias y exclusiones, y exporte el conjunto exacto que necesita antes de sincronizar o limpiar los datos.",
+          "Compara dos listas para encontrar elementos en común, entradas exclusivas de A o B y duplicados. Pega líneas o texto delimitado y copia o descarga los resultados.",
       },
       fr: {
         name: "Comparateur de listes",
         description:
-          "Comparez deux listes, identifiez les chevauchements et les exclusions, puis exportez l’ensemble exact dont vous avez besoin avant une synchronisation ou un nettoyage.",
+          "Comparez deux listes pour trouver les éléments communs, les entrées propres à A ou à B et les doublons. Collez vos listes, puis copiez ou téléchargez le résultat.",
       },
       he: {
         name: "כלי להשוואת רשימות",
         description:
-          "השוו שתי רשימות, גלו חפיפות ופריטים שאינם משותפים וייצאו בדיוק את הקבוצה הדרושה לפני סנכרון או ניקוי.",
+          "השוו שתי רשימות כדי למצוא פריטים משותפים, פריטים שמופיעים רק ברשימה A או B וכפילויות. הדביקו שורות או טקסט עם מפרידים והעתיקו או הורידו את התוצאות.",
       },
       hi: {
         name: "सूची तुलना टूल",
         description:
-          "दो सूचियों की तुलना करें, साझा और अलग आइटम पहचानें, और सिंक या सफ़ाई से पहले ज़रूरी सेट निर्यात करें।",
+          "दो सूचियों की तुलना करके साझा आइटम, केवल A या B में मौजूद आइटम और दोहराव खोजें। अलग-अलग पंक्तियों या विभाजक वाले टेक्स्ट को पेस्ट करें, फिर नतीजे कॉपी या डाउनलोड करें।",
       },
       id: {
         name: "Pembanding Daftar",
         description:
-          "Bandingkan dua daftar, temukan item yang sama dan yang tidak disertakan, lalu ekspor kumpulan yang Anda butuhkan sebelum menyinkronkan atau merapikannya.",
+          "Bandingkan dua daftar untuk menemukan item yang sama, item yang hanya ada di A atau B, dan duplikat. Tempel teks, lalu salin atau unduh hasilnya.",
       },
       it: {
         name: "Confronto elenchi",
         description:
-          "Confronta due elenchi, individua elementi in comune ed esclusioni ed esporta esattamente l'insieme che ti serve prima di una sincronizzazione o una pulizia.",
+          "Confronta due elenchi per trovare elementi in comune, voci presenti solo in A o B e duplicati. Incolla righe o testo delimitato e copia o scarica i risultati.",
       },
       ja: {
         name: "リスト比較ツール",
         description:
-          "2つのリストを比較して共通項目と除外項目を確認し、同期や整理の前に必要なセットを書き出します。",
+          "2 つのリストを比較して、共通項目、A または B にだけある項目、重複を抽出します。改行や区切り文字で分けたテキストを貼り付け、結果をコピーまたはダウンロードできます。",
       },
       ko: {
         name: "목록 비교기",
         description:
-          "두 목록을 비교해 공통 항목과 제외 항목을 확인하고, 동기화나 정리에 필요한 집합만 내보내세요.",
+          "두 목록을 비교해 공통 항목, 한쪽에만 있는 항목, 중복 항목을 찾으세요. 줄이나 구분자로 나뉜 텍스트를 붙여넣고 결과를 복사하거나 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pembanding Senarai",
         description:
-          "Bandingkan dua senarai, kenal pasti pertindihan dan pengecualian, serta eksport set yang anda perlukan sebelum penyegerakan atau pembersihan.",
+          "Bandingkan dua senarai untuk mencari item sepadan, item yang hanya ada dalam A atau B, dan pendua. Tampal baris atau teks dengan pemisah, kemudian salin atau muat turun hasil.",
       },
       nl: {
         name: "Lijstenvergelijker",
         description:
-          "Vergelijk twee lijsten, bekijk overlap en uitsluitingen en exporteer precies de verzameling die je nodig hebt voordat je synchroniseert of opschoont.",
+          "Vergelijk twee lijsten en vind overeenkomsten, items die alleen in A of B staan en dubbele items. Plak regels of gescheiden tekst en kopieer of download het resultaat.",
       },
       no: {
         name: "Listesammenligning",
         description:
-          "Sammenlign to lister, finn overlapp og utelatelser, og eksporter akkurat det settet du trenger før synkronisering eller opprydding.",
+          "Sammenlign to lister og finn felles oppføringer, oppføringer som bare finnes i A eller B, og duplikater. Lim inn linjer eller tekst med skilletegn, og kopier eller last ned resultatet.",
       },
       pl: {
         name: "Porównywanie list",
         description:
-          "Porównuj dwie listy, sprawdzaj ich część wspólną i różnice oraz eksportuj potrzebny zbiór przed synchronizacją lub porządkowaniem.",
+          "Porównaj dwie listy, aby znaleźć wspólne pozycje, różnice i duplikaty. Wklej tekst w wierszach lub z separatorem, a potem skopiuj albo pobierz wynik.",
       },
       pt: {
         name: "Comparador de listas",
         description:
-          "Compare duas listas, identifique itens em comum e exclusões e exporte o conjunto exato de que precisa antes de sincronizar ou organizar.",
+          "Compare duas listas para localizar itens em comum, exclusivos de A ou B e duplicados. Cole linhas ou texto delimitado e copie ou baixe os resultados.",
       },
       ru: {
         name: "Сравнение списков",
         description:
-          "Сравнивайте два списка, находите общие и исключённые элементы и экспортируйте нужный набор перед синхронизацией или очисткой.",
+          "Сравните два списка и найдите совпадения, элементы только в списке A или B и дубликаты. Вставьте строки или текст с разделителями, затем скопируйте или скачайте результат.",
       },
       sv: {
         name: "Listjämförare",
         description:
-          "Jämför två listor, hitta gemensamma och uteslutna poster och exportera precis den mängd du behöver före synkronisering eller rensning.",
+          "Jämför två listor för att hitta gemensamma poster, poster som bara finns i A eller B och dubbletter. Klistra in rader eller avgränsad text. Kopiera eller ladda ned resultatet.",
       },
       th: {
         name: "เครื่องมือเปรียบเทียบรายการ",
         description:
-          "เปรียบเทียบสองรายการ ดูค่าที่ตรงกันและถูกคัดออก แล้วส่งออกเฉพาะชุดที่ต้องการก่อนซิงค์หรือจัดระเบียบข้อมูล",
+          "เปรียบเทียบสองรายการเพื่อหาค่าที่มีทั้งสองฝั่ง ค่าที่อยู่เฉพาะใน A หรือ B และค่าซ้ำ วางข้อความทีละบรรทัดหรือใช้ตัวคั่น แล้วคัดลอกหรือดาวน์โหลดผลลัพธ์",
       },
       tr: {
         name: "Liste Karşılaştırıcı",
         description:
-          "Eşitleme veya temizlik öncesinde iki listeyi karşılaştırın, ortak ve dışarıda kalan öğeleri bulun ve tam olarak ihtiyacınız olan kümeyi dışa aktarın.",
+          "İki listeyi karşılaştırın. Ortak, yalnızca bir listede bulunan veya yinelenen öğeleri görün. Satırları ya da ayraçlı metni yapıştırın, sonucu kopyalayın veya indirin.",
       },
       vi: {
         name: "Trình so sánh danh sách",
         description:
-          "So sánh hai danh sách, tìm phần giao nhau và các mục bị loại, rồi xuất đúng tập bạn cần trước khi đồng bộ hoặc dọn dẹp.",
+          "So sánh hai danh sách để tìm mục chung, mục chỉ có trong A hoặc B và mục trùng lặp. Dán dữ liệu theo dòng hoặc dấu phân cách, rồi sao chép hay tải kết quả.",
       },
       "zh-CN": {
         name: "列表比较",
         description:
-          "比较两份列表，找出重合项、差异项和重复项，并导出你真正要处理的结果集。",
+          "比较两份列表，找出共同项、仅在 A 或 B 中出现的项目，以及重复项。粘贴多行或带分隔符的文本后，即可复制或下载结果。",
       },
       "zh-TW": {
         name: "列表比較",
         description:
-          "比較兩份列表，找出重疊項、差異項與重複項，並匯出你真正要處理的結果集。",
+          "比較兩份清單，找出共同項、只出現在 A 或 B 的項目，以及重複項。貼上逐行排列或有分隔符號的文字，即可複製或下載結果。",
       },
     },
   },
@@ -28092,117 +28862,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "تجزئة SHA-256 للنص أو الملف",
         description:
-          "إنشاء تجزئة SHA-256 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+          "احسب مجموع التحقق SHA-256 لملف أو نص بترميز UTF-8 في متصفحك. انسخ قيمة التجزئة بالصيغة السداسية العشرية أو Base64 أو العشرية أو الثنائية.",
       },
       de: {
         name: "SHA-256-Hash für Text oder Datei",
         description:
-          "Generieren Sie SHA-256-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+          "SHA-256-Prüfsumme einer Datei oder eines UTF-8-Texts im Browser berechnen. Den Hash hexadezimal, in Base64, dezimal oder binär kopieren.",
       },
       en: {
         name: "SHA-256 Hash Text or File",
         description:
-          "Generate SHA-256 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+          "Calculate the SHA-256 checksum of a file or UTF-8 text in your browser. Copy the hash in hexadecimal, Base64, decimal, or binary.",
       },
       es: {
         name: "Hash SHA-256 de Texto o Archivo",
         description:
-          "Genera hash SHA-256 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+          "Calcula la suma de verificación SHA-256 de un archivo o texto UTF-8 en tu navegador. Copia el hash en hexadecimal, Base64, decimal o binario.",
       },
       fr: {
         name: "Hash SHA-256 de Texte ou Fichier",
         description:
-          "Générez un hash SHA-256 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+          "Calculez la somme de contrôle SHA-256 d’un fichier ou d’un texte UTF-8 dans votre navigateur. Copiez le résultat en hexadécimal, Base64, décimal ou binaire.",
       },
       he: {
         name: "האש SHA-256 טקסט או קובץ",
         description:
-          "צור האש SHA-256 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+          "חשבו סכום בדיקה SHA-256 לקובץ או לטקסט ב-UTF-8 בדפדפן. העתיקו את ערך הגיבוב בפורמט הקסדצימלי, Base64, עשרוני או בינארי.",
       },
       hi: {
         name: "SHA-256 हैश टेक्स्ट या फ़ाइल",
         description:
-          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-256 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+          "ब्राउज़र में फ़ाइल या UTF-8 टेक्स्ट का SHA-256 चेकसम निकालें। हैश को हेक्साडेसिमल, Base64, दशमलव या बाइनरी में कॉपी करें।",
       },
       id: {
         name: "Hash SHA-256 Teks atau File",
         description:
-          "Buat hash SHA-256 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+          "Hitung checksum SHA-256 untuk file atau teks UTF-8 di browser Anda. Salin hash dalam format heksadesimal, Base64, desimal, atau biner.",
       },
       it: {
         name: "Hash SHA-256 di Testo o File",
         description:
-          "Genera hash SHA-256 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+          "Calcola nel browser il checksum SHA-256 di un file o di un testo UTF-8. Copia l’hash in formato esadecimale, Base64, decimale o binario.",
       },
       ja: {
         name: "SHA-256 ハッシュ テキストまたはファイル",
         description:
-          "テキスト入力またはファイルアップロードのSHA-256ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+          "ファイルや UTF-8 テキストの SHA-256 チェックサムをブラウザーで計算します。ハッシュは十六進数、Base64、十進数、二進数でコピーできます。",
       },
       ko: {
         name: "SHA-256 해시 텍스트 또는 파일",
         description:
-          "텍스트 입력 또는 파일 업로드에 대한 SHA-256 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+          "브라우저에서 파일 또는 UTF-8 텍스트의 SHA-256 체크섬을 계산하세요. 해시 값을 16진수, Base64, 10진수 또는 2진수로 복사할 수 있습니다.",
       },
       ms: {
         name: "Hash SHA-256 Teks atau Fail",
         description:
-          "Jana hash SHA-256 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+          "Kira checksum SHA-256 untuk fail atau teks UTF-8 dalam pelayar anda. Salin hash dalam format heksadesimal, Base64, perpuluhan atau binari.",
       },
       nl: {
         name: "SHA-256-hash tekst of bestand",
         description:
-          "Genereer SHA-256-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+          "Bereken de SHA-256-checksum van een bestand of UTF-8-tekst in je browser. Kopieer de hash in hexadecimale, Base64-, decimale of binaire notatie.",
       },
       no: {
         name: "SHA-256-hash tekst eller fil",
         description:
-          "Generer SHA-256-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+          "Beregn SHA-256-sjekksummen for en fil eller UTF-8-tekst i nettleseren. Kopier hashen i heksadesimal, Base64, desimal eller binær form.",
       },
       pl: {
         name: "Hash SHA-256 tekstu lub pliku",
         description:
-          "Generuj hash SHA-256 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+          "Oblicz sumę kontrolną SHA-256 pliku lub tekstu UTF-8 w przeglądarce. Skopiuj skrót w zapisie szesnastkowym, Base64, dziesiętnym lub binarnym.",
       },
       pt: {
         name: "Hash SHA-256 de Texto ou Arquivo",
         description:
-          "Gere hash SHA-256 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+          "Calcule o checksum SHA-256 de um arquivo ou texto UTF-8 no navegador. Copie o hash em hexadecimal, Base64, decimal ou binário.",
       },
       ru: {
         name: "SHA-256-хеш текста или файла",
         description:
-          "Генерируйте SHA-256-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+          "Вычислите контрольную сумму SHA-256 файла или текста в UTF-8 прямо в браузере. Скопируйте хеш в шестнадцатеричном, двоичном, десятичном формате или в Base64.",
       },
       sv: {
         name: "SHA-256-hash text eller fil",
         description:
-          "Generera SHA-256-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+          "Beräkna SHA-256-kontrollsumman för en fil eller UTF-8-text i webbläsaren. Kopiera hashvärdet i hexadecimal form, Base64, decimal eller binär form.",
       },
       th: {
         name: "แฮช SHA-256 ข้อความหรือไฟล์",
         description:
-          "สร้างแฮช SHA-256 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+          "คำนวณเช็กซัม SHA-256 ของไฟล์หรือข้อความ UTF-8 ในเบราว์เซอร์ แล้วคัดลอกค่าแฮชในรูปเลขฐานสิบหก Base64 เลขฐานสิบ หรือเลขฐานสอง",
       },
       tr: {
         name: "SHA-256 Hash Metin veya Dosya",
         description:
-          "Metin girişi veya dosya yükleme için SHA-256 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+          "Dosyanın veya UTF-8 metninin SHA-256 sağlama toplamını tarayıcınızda hesaplayın. Hash değerini onaltılık, Base64, ondalık veya ikili biçimde kopyalayın.",
       },
       vi: {
         name: "Hash SHA-256 văn bản hoặc tệp",
         description:
-          "Tạo hash SHA-256 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+          "Tính tổng kiểm tra SHA-256 cho tệp hoặc văn bản UTF-8 ngay trong trình duyệt. Sao chép mã băm ở dạng thập lục phân, Base64, thập phân hoặc nhị phân.",
       },
       "zh-CN": {
         name: "SHA-256 哈希文本或文件",
         description:
-          "为文本输入或文件上传生成 SHA-256 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+          "在浏览器中计算文件或 UTF-8 文本的 SHA-256 校验和。支持复制十六进制、Base64、十进制或二进制哈希值。",
       },
       "zh-TW": {
         name: "SHA-256 雜湊文字或檔案",
         description:
-          "為文字輸入或檔案上傳產生 SHA-256 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+          "在瀏覽器中計算檔案或 UTF-8 文字的 SHA-256 校驗碼。可複製十六進位、Base64、十進位或二進位格式的雜湊值。",
       },
     },
   },
@@ -31807,117 +32577,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "مرتب أسطر النص",
         description:
-          "رتّب أسطر النص تصاعديًا أو تنازليًا، مع خيارات لتجاهل حالة الأحرف وإزالة المسافات من أطراف الأسطر وإزالة الأسطر الفارغة والمكررة.",
+          "رتّب أسطر النص تصاعديًا أو تنازليًا من A إلى Z أو بالعكس. تجاهل حالة الأحرف أو أزل المسافات والأسطر الفارغة والمكررة قبل نسخ القائمة.",
       },
       de: {
         name: "Textzeilen sortieren",
         description:
-          "Textzeilen auf- oder absteigend sortieren, optional ohne Beachtung der Groß- und Kleinschreibung, mit Entfernung von Rand-Leerzeichen, Leerzeilen und Duplikaten.",
+          "Textzeilen von A bis Z oder Z bis A sortieren. Groß- und Kleinschreibung ignorieren, Leerzeichen, Leerzeilen oder Duplikate entfernen und Ergebnis kopieren.",
       },
       en: {
         name: "Text Line Sorter",
         description:
-          "Sort text lines in ascending or descending order, with optional case folding, trimming, blank-line removal, and deduplication.",
+          "Sort text lines A to Z or Z to A. Ignore case, trim spaces, remove blank lines, or delete duplicates before copying the sorted list.",
       },
       es: {
         name: "Ordenador de líneas de texto",
         description:
-          "Ordena líneas de texto en orden ascendente o descendente, con opciones para ignorar mayúsculas y minúsculas, recortar espacios y eliminar líneas vacías y duplicadas.",
+          "Ordena líneas de texto de A a Z o de Z a A. Ignora mayúsculas y minúsculas, recorta espacios o elimina líneas vacías y duplicadas antes de copiar la lista.",
       },
       fr: {
         name: "Tri des lignes de texte",
         description:
-          "Triez les lignes de texte par ordre croissant ou décroissant, avec des options pour ignorer la casse, supprimer les espaces en début et fin de ligne, les lignes vides et les doublons.",
+          "Triez des lignes de texte de A à Z ou de Z à A. Ignorez la casse et supprimez les espaces superflus, les lignes vides ou les doublons avant de copier le résultat.",
       },
       he: {
         name: "ממיין שורות טקסט",
         description:
-          "מיון שורות טקסט בסדר עולה או יורד, עם אפשרות להתעלם מהבדלי אותיות גדולות וקטנות, להסיר רווחים בקצוות, להסיר שורות ריקות ולהסיר כפילויות.",
+          "מיינו שורות טקסט מ-A עד Z או בסדר הפוך. אפשר להתעלם מהבדלי אותיות גדולות וקטנות, להסיר רווחים בקצוות, שורות ריקות וכפילויות, ואז להעתיק את הרשימה הממוינת.",
       },
       hi: {
         name: "टेक्स्ट पंक्ति क्रमबद्धक",
         description:
-          "टेक्स्ट की पंक्तियों को आरोही या अवरोही क्रम में लगाएँ। चाहें तो बड़े-छोटे अक्षरों का अंतर अनदेखा करें, किनारों के खाली स्थान हटाएँ और खाली या दोहराई गई पंक्तियाँ हटाएँ।",
+          "टेक्स्ट की पंक्तियों को A से Z या Z से A क्रम में लगाएँ। कॉपी करने से पहले बड़े-छोटे अक्षरों का अंतर अनदेखा करें और अतिरिक्त खाली जगह, खाली पंक्तियाँ या दोहराव हटाएँ।",
       },
       id: {
         name: "Pengurut Baris Teks",
         description:
-          "Urutkan baris teks secara menaik atau menurun, dengan opsi mengabaikan huruf besar/kecil, memangkas spasi, menghapus baris kosong, dan menghapus duplikat.",
+          "Urutkan baris teks dari A ke Z atau Z ke A. Abaikan huruf besar/kecil, pangkas spasi, atau hapus baris kosong dan duplikat sebelum menyalin hasil.",
       },
       it: {
         name: "Ordinatore di righe di testo",
         description:
-          "Ordina le righe di testo in ordine crescente o decrescente, con opzioni per ignorare maiuscole e minuscole, eliminare gli spazi iniziali e finali e rimuovere righe vuote e duplicate.",
+          "Ordina le righe di testo dalla A alla Z o dalla Z alla A. Ignora maiuscole e minuscole, elimina gli spazi ai bordi delle righe e rimuovi righe vuote o duplicate.",
       },
       ja: {
         name: "テキスト行並べ替え",
         description:
-          "テキストの行を昇順または降順に並べ替えます。大文字と小文字の区別を無視、各行の前後の空白を除去、空行の削除、重複行の削除も選択できます。",
+          "テキストの行を A〜Z または Z〜A の順に並べ替えます。大文字と小文字の区別、行の前後の空白、空行、重複行を調整して、並べ替えたリストをコピーできます。",
       },
       ko: {
         name: "텍스트 줄 정렬기",
         description:
-          "텍스트 줄을 오름차순 또는 내림차순으로 정렬하고, 대소문자 무시, 앞뒤 공백 제거, 빈 줄 제거 및 중복 제거 옵션을 적용하세요.",
+          "텍스트를 줄 단위로 A부터 Z까지 또는 역순으로 정렬하세요. 대소문자를 무시하거나 앞뒤 공백, 빈 줄, 중복 줄을 제거한 뒤 결과를 복사할 수 있습니다.",
       },
       ms: {
         name: "Pengisih Baris Teks",
         description:
-          "Isih baris teks dalam tertib menaik atau menurun, dengan pilihan mengabaikan huruf besar dan kecil, membuang ruang di awal dan akhir, membuang baris kosong serta pendua.",
+          "Isih baris teks dari A ke Z atau Z ke A. Abaikan huruf besar dan kecil, buang ruang di awal dan akhir, baris kosong atau pendua sebelum menyalin hasil.",
       },
       nl: {
         name: "Tekstregels sorteren",
         description:
-          "Sorteer tekstregels oplopend of aflopend, met opties om hoofdletters te negeren, witruimte aan de randen te wissen en lege of dubbele regels te verwijderen.",
+          "Sorteer tekstregels van A tot Z of van Z tot A. Negeer hoofdletters, haal witruimte weg of verwijder lege en dubbele regels voordat je de lijst kopieert.",
       },
       no: {
         name: "Tekstlinjesortering",
         description:
-          "Sorter tekstlinjer i stigende eller synkende rekkefølge, med valg for å ignorere store og små bokstaver, fjerne innledende og avsluttende blanktegn, tomme linjer og duplikater.",
+          "Sorter tekstlinjer fra A til Z eller Z til A. Ignorer forskjellen på store og små bokstaver, fjern blanktegn, tomme linjer eller duplikater, og kopier listen.",
       },
       pl: {
         name: "Sortowanie wierszy tekstu",
         description:
-          "Sortuj wiersze tekstu rosnąco lub malejąco, z opcjami ignorowania wielkości liter, usuwania skrajnych białych znaków, pustych wierszy i duplikatów.",
+          "Sortuj wiersze tekstu od A do Z lub od Z do A. Przed skopiowaniem listy możesz zignorować wielkość liter oraz usunąć zbędne spacje, puste wiersze i duplikaty.",
       },
       pt: {
         name: "Ordenador de linhas de texto",
         description:
-          "Ordene linhas de texto em ordem crescente ou decrescente, com opções para ignorar maiúsculas e minúsculas, aparar espaços, remover linhas em branco e eliminar duplicados.",
+          "Ordene linhas de texto de A a Z ou de Z a A. Ignore maiúsculas e minúsculas e remova espaços nas extremidades, linhas em branco ou duplicados.",
       },
       ru: {
         name: "Сортировка строк текста",
         description:
-          "Сортируйте строки текста по возрастанию или убыванию, при необходимости игнорируя регистр, обрезая пробелы и удаляя пустые строки и дубликаты.",
+          "Сортируйте строки текста по возрастанию или убыванию. Перед копированием можно убрать пробелы по краям, пустые строки и дубликаты или отключить учёт регистра.",
       },
       sv: {
         name: "Textradssorterare",
         description:
-          "Sortera textrader i stigande eller fallande ordning, med alternativ för att ignorera skiftläge, trimma rader samt ta bort tomma rader och dubbletter.",
+          "Sortera textrader från A till Z eller Z till A. Ignorera skiftläge, trimma blanksteg eller ta bort tomma rader och dubbletter innan du kopierar listan.",
       },
       th: {
         name: "เครื่องมือเรียงบรรทัดข้อความ",
         description:
-          "เรียงบรรทัดข้อความจากน้อยไปมากหรือมากไปน้อย พร้อมตัวเลือกไม่แยกตัวพิมพ์เล็กและใหญ่ ตัดช่องว่าง ลบบรรทัดว่าง และลบบรรทัดซ้ำ",
+          "เรียงบรรทัดข้อความจาก A ถึง Z หรือ Z ถึง A เลือกไม่แยกตัวพิมพ์เล็กและใหญ่ ตัดช่องว่าง ลบบรรทัดว่างหรือลบบรรทัดซ้ำก่อนคัดลอกผลลัพธ์",
       },
       tr: {
         name: "Metin Satırı Sıralayıcı",
         description:
-          "Metin satırlarını artan veya azalan sırada sıralayın; isteğe bağlı olarak büyük/küçük harf farkını yok sayın, kenar boşluklarını kırpın, boş ve yinelenen satırları kaldırın.",
+          "Satırları A'dan Z'ye veya Z'den A'ya sıralayın. Büyük/küçük harf farkını yok sayın, kenar boşluklarını kırpın, boş ve yinelenen satırları kaldırın.",
       },
       vi: {
         name: "Trình sắp xếp dòng văn bản",
         description:
-          "Sắp xếp các dòng văn bản theo thứ tự tăng dần hoặc giảm dần, với các tùy chọn bỏ qua chữ hoa chữ thường, xóa khoảng trắng ở hai đầu, xóa dòng trống và loại bỏ dòng trùng lặp.",
+          "Sắp xếp các dòng văn bản từ A đến Z hoặc từ Z đến A. Bỏ qua chữ hoa chữ thường, xóa khoảng trắng ở hai đầu, dòng trống và dòng trùng trước khi sao chép.",
       },
       "zh-CN": {
         name: "文本行排序器",
         description:
-          "按升序或降序排列文本行，可选择忽略大小写、去除行首尾空白、移除空白行及重复行。",
+          "按 A 到 Z 或 Z 到 A 对文本逐行排序。复制结果前，可忽略大小写、去除行首尾空白，并删除空白行或重复行。",
       },
       "zh-TW": {
         name: "文字行排序工具",
         description:
-          "以遞增或遞減順序排列文字行，並可選擇忽略大小寫、移除行首與行尾空白、移除空白行及重複行。",
+          "將文字逐行依 A 到 Z 或 Z 到 A 排序。複製結果前，可選擇忽略大小寫、移除行首尾空白、刪除空白行或去除重複行。",
       },
     },
   },
@@ -33419,112 +34189,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "محول Unicode ↔ Punycode",
         description:
-          "حوّل نطاقات Unicode (IDN) وASCII (Punycode) في كلا الاتجاهين",
+          "حوّل أسماء نطاقات Unicode إلى Punycode بصيغة ASCII، أو فك ترميز نطاقات xn-- إلى نص مقروء. يدعم المحوّل أسماء النطاقات الدولية (IDN) في الاتجاهين.",
       },
       de: {
         name: "Unicode ↔ Punycode Konverter",
         description:
-          "Konvertieren Sie Unicode- (IDN) und ASCII- (Punycode) Domains in beide Richtungen",
+          "Unicode-Domains in ASCII-Punycode umwandeln und xn--Domains wieder lesbar machen. Internationalisierte Domainnamen (IDNs) in beide Richtungen konvertieren.",
       },
       en: {
         name: "Unicode ↔ Punycode Converter",
         description:
-          "Convert Unicode (IDN) and ASCII (Punycode) domains both ways",
+          "Encode Unicode domain names as ASCII Punycode or decode xn-- domains back to readable text. Convert internationalized domains (IDNs) in either direction.",
       },
       es: {
         name: "Convertidor Unicode ↔ Punycode",
         description:
-          "Convierte dominios Unicode (IDN) y ASCII (Punycode) en ambos sentidos",
+          "Convierte dominios Unicode a Punycode ASCII y decodifica dominios con prefijo xn--. Convierte nombres de dominio internacionalizados (IDN) en ambos sentidos.",
       },
       fr: {
         name: "Convertisseur Unicode ↔ Punycode",
         description:
-          "Convertissez les domaines Unicode (IDN) et ASCII (Punycode) dans les deux sens",
+          "Encodez un nom de domaine Unicode en Punycode ASCII ou décodez un domaine xn--. Convertissez vos noms de domaine internationalisés (IDN) dans les deux sens.",
       },
       he: {
         name: "ממיר Unicode ↔ Punycode",
         description:
-          "המרת דומיינים של Unicode (IDN) ו‑ASCII (Punycode) בשני הכיוונים",
+          "המירו שמות מתחם ב-Unicode ל-Punycode ב-ASCII, או פענחו דומיינים שמתחילים ב-xn-- לטקסט קריא. המרת שמות מתחם בינלאומיים (IDN) בשני הכיוונים.",
       },
       hi: {
         name: "Unicode ↔ Punycode परिवर्तक",
         description:
-          "Unicode (IDN) और ASCII (Punycode) डोमेन को दोनों दिशाओं में बदलें",
+          "Unicode डोमेन नामों को ASCII Punycode में बदलें या xn-- डोमेन को पढ़ने योग्य Unicode में बदलें। अंतरराष्ट्रीय डोमेन नाम (IDN) दोनों दिशाओं में बदलें।",
       },
       id: {
         name: "Pengonversi Unicode ↔ Punycode",
         description:
-          "Konversi domain Unicode (IDN) dan ASCII (Punycode) dua arah",
+          "Ubah nama domain Unicode menjadi Punycode ASCII atau baca domain xn-- sebagai teks Unicode. Konversi nama domain internasional (IDN) dua arah.",
       },
       it: {
         name: "Convertitore Unicode ↔ Punycode",
         description:
-          "Converte domini Unicode (IDN) e ASCII (Punycode) in entrambe le direzioni",
+          "Converti i domini Unicode in Punycode ASCII o decodifica quelli che iniziano con xn--. Il convertitore funziona in entrambe le direzioni per i domini internazionalizzati (IDN).",
       },
       ja: {
         name: "Unicode ↔ Punycode 変換ツール",
         description:
-          "Unicode（IDN）と ASCII（Punycode）のドメイン名を双方向に変換",
+          "Unicode のドメイン名を ASCII の Punycode に変換し、xn-- で始まるドメイン名を元の表記に戻します。国際化ドメイン名（IDN）の双方向変換に対応します。",
       },
       ko: {
         name: "Unicode ↔ Punycode 변환기",
-        description: "Unicode(IDN)와 ASCII(Punycode) 도메인을 양방향으로 변환",
+        description:
+          "유니코드 도메인을 ASCII Punycode로 인코딩하거나 xn-- 도메인을 읽기 쉬운 문자로 디코딩하세요. 국제화 도메인 이름(IDN)을 양방향으로 변환할 수 있습니다.",
       },
       ms: {
         name: "Penukar Unicode ↔ Punycode",
-        description: "Tukar domain Unicode (IDN) dan ASCII (Punycode) dua hala",
+        description:
+          "Kodkan nama domain Unicode kepada Punycode ASCII atau nyahkod domain xn-- kepada teks yang mudah dibaca. Tukar nama domain antarabangsa (IDN) dalam kedua-dua arah.",
       },
       nl: {
         name: "Unicode ↔ Punycode-converter",
         description:
-          "Zet Unicode (IDN) en ASCII (Punycode) domeinen in beide richtingen om",
+          "Zet Unicode-domeinnamen om naar ASCII-Punycode of decodeer xn--domeinen naar leesbare tekst. Converteer internationale domeinnamen (IDN's) in beide richtingen.",
       },
       no: {
         name: "Unicode ↔ Punycode‑konverter",
         description:
-          "Konverter Unicode‑ (IDN) og ASCII‑ (Punycode) domener begge veier",
+          "Konverter Unicode-domenenavn til ASCII i Punycode-format, eller gjør xn--domener lesbare igjen. Konverter internasjonaliserte domenenavn (IDN) begge veier.",
       },
       pl: {
         name: "Konwerter Unicode ↔ Punycode",
         description:
-          "Dwukierunkowa konwersja domen Unicode (IDN) i ASCII (Punycode)",
+          "Konwertuj nazwy domen Unicode na ASCII w formacie Punycode i odczytuj domeny z prefiksem xn--. Obsługuje konwersję domen międzynarodowych (IDN) w obie strony.",
       },
       pt: {
         name: "Conversor Unicode ↔ Punycode",
         description:
-          "Converta domínios Unicode (IDN) e ASCII (Punycode) nos dois sentidos",
+          "Converta domínios internacionalizados (IDNs) em Unicode para Punycode ASCII ou decodifique domínios com xn-- para ler seus caracteres originais.",
       },
       ru: {
         name: "Конвертер Unicode ↔ Punycode",
         description:
-          "Двустороннее преобразование доменов Unicode (IDN) и ASCII (Punycode)",
+          "Преобразуйте домены Unicode в ASCII (Punycode) и обратно. Декодируйте домены с префиксом xn--, чтобы прочитать интернационализированное доменное имя (IDN).",
       },
       sv: {
         name: "Unicode ↔ Punycode‑omvandlare",
         description:
-          "Omvandla Unicode (IDN) och ASCII (Punycode) domäner i båda riktningarna",
+          "Omvandla Unicode-domännamn till ASCII med Punycode eller avkoda xn--domäner till läsbar text. Konvertera internationaliserade domännamn (IDN) åt båda hållen.",
       },
       th: {
         name: "ตัวแปลง Unicode ↔ Punycode",
-        description: "แปลงโดเมน Unicode (IDN) และ ASCII (Punycode) ได้สองทิศทาง",
+        description:
+          "แปลงชื่อโดเมน Unicode เป็น ASCII Punycode หรือถอดรหัสโดเมนที่ขึ้นต้นด้วย xn-- กลับเป็นข้อความที่อ่านได้ รองรับการแปลงโดเมนสากล (IDN) ทั้งสองทาง",
       },
       tr: {
         name: "Unicode ↔ Punycode Dönüştürücü",
         description:
-          "Unicode (IDN) ve ASCII (Punycode) alan adlarını çift yönlü dönüştürün",
+          "Uluslararası alan adlarını (IDN) Unicode'dan ASCII Punycode'a dönüştürün veya xn-- ile başlayan alan adlarını okunur metne çevirin.",
       },
       vi: {
         name: "Bộ chuyển đổi Unicode ↔ Punycode",
         description:
-          "Chuyển đổi tên miền Unicode (IDN) và ASCII (Punycode) hai chiều",
+          "Mã hóa tên miền Unicode sang Punycode ASCII hoặc giải mã tên miền xn-- về dạng dễ đọc. Chuyển đổi hai chiều tên miền quốc tế hóa (IDN).",
       },
       "zh-CN": {
         name: "Unicode ↔ Punycode 转换器",
-        description: "双向转换 Unicode（IDN）与 ASCII（Punycode）域名",
+        description:
+          "将 Unicode 域名编码为 ASCII Punycode，或将以 xn-- 开头的域名解码为可读文本。支持国际化域名（IDN）双向转换。",
       },
       "zh-TW": {
         name: "Unicode ↔ Punycode 轉換器",
-        description: "雙向轉換 Unicode（IDN）與 ASCII（Punycode）網域",
+        description:
+          "將 Unicode 網域名稱編碼為 ASCII Punycode，或將 xn-- 網域解碼為可讀文字。支援國際化網域名稱（IDN）雙向轉換。",
       },
     },
   },
@@ -33677,117 +34452,117 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
       ar: {
         name: "محول الطابع الزمني Unix",
         description:
-          "تحويل الطوابع الزمنية Unix إلى تواريخ قابلة للقراءة والعكس. يدعم الكشف التلقائي عن الثواني والمللي ثانية والنانو ثانية.",
+          "حوّل طابع Unix الزمني إلى الوقت المحلي أو UTC أو صيغة ISO 8601، وحوّل التاريخ في الاتجاه العكسي إلى ثوانٍ أو ملي ثانية أو نانو ثانية.",
       },
       de: {
         name: "Unix-Zeitstempel-Konverter",
         description:
-          "Konvertiert Unix-Zeitstempel in lesbare Daten und umgekehrt. Unterstützt automatische Erkennung von Sekunden, Millisekunden und Nanosekunden.",
+          "Unix-Zeitstempel in Ortszeit, UTC oder ISO 8601 umrechnen und Datum und Uhrzeit in Sekunden, Millisekunden oder Nanosekunden zurückrechnen.",
       },
       en: {
         name: "Unix Timestamp Converter",
         description:
-          "Convert Unix timestamps to human-readable dates and vice versa. Supports auto-detection of seconds, milliseconds, and nanoseconds.",
+          "Convert Unix epoch timestamps to local time, UTC, or ISO 8601, and convert dates back to seconds, milliseconds, or nanoseconds.",
       },
       es: {
         name: "Convertidor de Marca de Tiempo Unix",
         description:
-          "Convierte marcas de tiempo Unix a fechas legibles y viceversa. Soporta detección automática de segundos, milisegundos y nanosegundos.",
+          "Convierte marcas de tiempo Unix a hora local, UTC o ISO 8601 y convierte fechas a marcas Unix en segundos, milisegundos o nanosegundos.",
       },
       fr: {
         name: "Convertisseur de Timestamp Unix",
         description:
-          "Convertit les timestamps Unix en dates lisibles et vice versa. Prend en charge la détection automatique des secondes, millisecondes et nanosecondes.",
+          "Convertissez un timestamp Unix en heure locale, UTC ou ISO 8601, et une date en timestamp Unix en secondes, millisecondes ou nanosecondes.",
       },
       he: {
         name: "ממיר חותמת זמן Unix",
         description:
-          "המר חותמות זמן Unix לתאריכים קריאים ולהיפך. תומך בזיהוי אוטומטי של שניות, אלפיות שנייה וננושניות.",
+          "המירו חותמות זמן Unix (Epoch) לזמן מקומי, UTC או ISO 8601, והמירו תאריכים בחזרה לשניות, אלפיות שנייה או ננושניות.",
       },
       hi: {
         name: "Unix टाइमस्टैम्प कनवर्टर",
         description:
-          "Unix टाइमस्टैम्प को पढ़ने योग्य तिथियों में बदलें और इसके विपरीत। सेकंड, मिलीसेकंड और नैनोसेकंड की स्वचालित पहचान का समर्थन करता है।",
+          "Unix epoch टाइमस्टैम्प को स्थानीय समय, UTC या ISO 8601 में देखें। तिथि और समय को सेकंड, मिलीसेकंड या नैनोसेकंड के टाइमस्टैम्प में बदलें।",
       },
       id: {
         name: "Konverter Timestamp Unix",
         description:
-          "Konversi timestamp Unix ke tanggal yang dapat dibaca dan sebaliknya. Mendukung deteksi otomatis detik, milidetik, dan nanodetik.",
+          "Konversi timestamp epoch Unix ke waktu lokal, UTC, atau ISO 8601, dan ubah tanggal kembali menjadi detik, milidetik, atau nanodetik.",
       },
       it: {
         name: "Convertitore Timestamp Unix",
         description:
-          "Converte i timestamp Unix in date leggibili e viceversa. Supporta il rilevamento automatico di secondi, millisecondi e nanosecondi.",
+          "Converti i timestamp Unix in ora locale, UTC o ISO 8601 e ricava da una data il timestamp in secondi, millisecondi o nanosecondi.",
       },
       ja: {
         name: "Unixタイムスタンプ変換",
         description:
-          "Unixタイムスタンプを読みやすい日付に変換し、その逆も可能。秒、ミリ秒、ナノ秒の自動検出に対応。",
+          "Unix エポックからのタイムスタンプを現地時刻、UTC、ISO 8601 に変換します。日時から秒、ミリ秒、ナノ秒のタイムスタンプも求められます。",
       },
       ko: {
         name: "Unix 타임스탬프 변환기",
         description:
-          "Unix 타임스탬프를 읽기 쉬운 날짜로 변환하고 그 반대도 가능합니다. 초, 밀리초, 나노초 자동 감지를 지원합니다.",
+          "Unix 타임스탬프를 현지 시간, UTC, ISO 8601로 변환하고, 날짜와 시간을 다시 초, 밀리초 또는 나노초 단위 타임스탬프로 바꾸세요.",
       },
       ms: {
         name: "Penukar Cap Masa Unix",
         description:
-          "Tukar cap masa Unix kepada tarikh yang boleh dibaca dan sebaliknya. Menyokong pengesanan automatik saat, milisaat dan nanosaat.",
+          "Tukar cap masa epok Unix kepada waktu tempatan, UTC atau ISO 8601, dan tukar tarikh kepada cap masa dalam saat, milisaat atau nanosaat.",
       },
       nl: {
         name: "Unix Tijdstempel Converter",
         description:
-          "Converteer Unix-tijdstempels naar leesbare datums en omgekeerd. Ondersteunt automatische detectie van seconden, milliseconden en nanoseconden.",
+          "Zet Unix-tijdstempels om naar lokale tijd, UTC of ISO 8601. Zet datums terug om naar seconden, milliseconden of nanoseconden sinds de Unix-epoch.",
       },
       no: {
         name: "Unix Tidsstempel Konverterer",
         description:
-          "Konverter Unix-tidsstempler til lesbare datoer og omvendt. Støtter automatisk deteksjon av sekunder, millisekunder og nanosekunder.",
+          "Konverter Unix-tidsstempler til lokal tid, UTC eller ISO 8601, og konverter datoer tilbake til sekunder, millisekunder eller nanosekunder.",
       },
       pl: {
         name: "Konwerter Znacznika Czasu Unix",
         description:
-          "Konwertuj znaczniki czasu Unix na czytelne daty i odwrotnie. Obsługuje automatyczne wykrywanie sekund, milisekund i nanosekund.",
+          "Konwertuj znaczniki czasu Unix na czas lokalny, UTC lub ISO 8601, a daty na sekundy, milisekundy lub nanosekundy od początku epoki Unix.",
       },
       pt: {
         name: "Conversor de Timestamp Unix",
         description:
-          "Converte timestamps Unix em datas legíveis e vice-versa. Suporta detecção automática de segundos, milissegundos e nanossegundos.",
+          "Converta timestamps Unix para hora local, UTC ou ISO 8601, e datas para timestamps em segundos, milissegundos ou nanossegundos.",
       },
       ru: {
         name: "Конвертер Unix-меток времени",
         description:
-          "Преобразует метки времени Unix в читаемые даты и обратно. Поддерживает автоматическое определение секунд, миллисекунд и наносекунд.",
+          "Преобразуйте метку времени Unix в местное время, UTC или ISO 8601, а дату и время — в метку в секундах, миллисекундах или наносекундах.",
       },
       sv: {
         name: "Unix Tidsstämpel Konverterare",
         description:
-          "Konvertera Unix-tidsstämplar till läsbara datum och vice versa. Stödjer automatisk detektering av sekunder, millisekunder och nanosekunder.",
+          "Konvertera Unix-tidsstämplar till lokal tid, UTC eller ISO 8601 och omvandla datum till sekunder, millisekunder eller nanosekunder sedan Unixepoken.",
       },
       th: {
         name: "ตัวแปลง Unix Timestamp",
         description:
-          "แปลง Unix timestamp เป็นวันที่ที่อ่านได้และในทางกลับกัน รองรับการตรวจจับอัตโนมัติของวินาที มิลลิวินาที และนาโนวินาที",
+          "แปลง Unix timestamp เป็นเวลาท้องถิ่น UTC หรือ ISO 8601 และแปลงวันที่กลับเป็น Unix timestamp หน่วยวินาที มิลลิวินาที หรือนาโนวินาที",
       },
       tr: {
         name: "Unix Zaman Damgası Dönüştürücü",
         description:
-          "Unix zaman damgalarını okunabilir tarihlere dönüştürün ve tam tersi. Saniye, milisaniye ve nanosaniye otomatik algılamayı destekler.",
+          "Unix zaman damgasını yerel saat, UTC veya ISO 8601 olarak görün. Tarihi saniye, milisaniye veya nanosaniye cinsinden zaman damgasına çevirin.",
       },
       vi: {
         name: "Bộ Chuyển Đổi Dấu Thời Gian Unix",
         description:
-          "Chuyển đổi dấu thời gian Unix thành ngày tháng dễ đọc và ngược lại. Hỗ trợ tự động phát hiện giây, mili giây và nano giây.",
+          "Chuyển dấu thời gian Unix sang giờ địa phương, UTC hoặc ISO 8601, rồi chuyển ngày giờ ngược lại sang giây, mili giây hoặc nano giây.",
       },
       "zh-CN": {
         name: "Unix 时间戳转换器",
         description:
-          "将 Unix 时间戳转换为可读日期，或将日期转换为时间戳。支持自动检测秒、毫秒和纳秒。",
+          "将 Unix 时间戳转换为本地时间、UTC 或 ISO 8601 日期，也可将日期转换为以秒、毫秒或纳秒计的时间戳。",
       },
       "zh-TW": {
         name: "Unix 時間戳記轉換器",
         description:
-          "將 Unix 時間戳記轉換為可讀日期，或將日期轉換為時間戳記。支援自動偵測秒、毫秒和奈秒。",
+          "將 Unix 時間戳記轉換成當地時間、UTC 或 ISO 8601，也能將日期轉回以秒、毫秒或奈秒表示的時間戳記。",
       },
     },
   },
@@ -35871,6 +36646,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "UUID 驗證器",
         description:
           "驗證 UUID 字串、檢查其版本與變體，並確認識別碼使用符合 RFC 的標準格式。",
+      },
+    },
+  },
+  {
+    slug: "video-frame-extractor",
+    category: "image",
+    icon: "film",
+    tags: [
+      "video",
+      "frame",
+      "screenshot",
+      "timestamp",
+      "interval",
+      "mp4",
+      "webm",
+      "jpg",
+      "png",
+      "zip",
+    ],
+    locales: {
+      ar: {
+        name: "أداة استخراج إطارات الفيديو",
+        description:
+          "استخرج صورًا ثابتة من فيديو في أوقات محددة أو على فترات منتظمة. عاين الإطارات ونزّلها بصيغة JPG أو PNG، كل صورة على حدة أو كلها في ملف ZIP.",
+      },
+      de: {
+        name: "Video-Einzelbilder extrahieren",
+        description:
+          "Extrahiere Einzelbilder aus einem Video an bestimmten Zeitpunkten oder in regelmäßigen Abständen. Sieh dir die Bilder an und lade sie einzeln als JPG oder PNG oder gesammelt als ZIP herunter.",
+      },
+      en: {
+        name: "Video Frame Extractor",
+        description:
+          "Extract still images from a video at specific timestamps or regular intervals. Preview and download JPG or PNG frames individually or as a ZIP.",
+      },
+      es: {
+        name: "Extractor de fotogramas de video",
+        description:
+          "Extrae fotogramas de un video en marcas de tiempo específicas o a intervalos regulares. Previsualiza y descarga las imágenes JPG o PNG por separado o en un ZIP.",
+      },
+      fr: {
+        name: "Extracteur d’images vidéo",
+        description:
+          "Extrayez des images fixes d’une vidéo à des instants précis ou à intervalles réguliers. Prévisualisez les images JPG ou PNG et téléchargez-les à l’unité ou dans un ZIP.",
+      },
+      he: {
+        name: "חילוץ פריימים מווידאו",
+        description:
+          "חלצו תמונות מתוך סרטון בנקודות זמן מסוימות או במרווחי זמן קבועים. אפשר לצפות בתמונות ולהוריד אותן בנפרד כקובצי JPG או PNG, או יחד בקובץ ZIP.",
+      },
+      hi: {
+        name: "वीडियो फ़्रेम एक्सट्रैक्टर",
+        description:
+          "वीडियो में चुने हुए समय बिंदुओं या नियमित अंतराल पर स्थिर चित्र निकालें। JPG या PNG फ़्रेम देखें और उन्हें अलग-अलग या एक ZIP में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengekstrak Bingkai Video",
+        description:
+          "Ambil gambar diam dari video pada waktu tertentu atau dengan interval tetap. Pratinjau dan unduh bingkai JPG atau PNG satu per satu atau sekaligus sebagai ZIP.",
+      },
+      it: {
+        name: "Estrattore di fotogrammi video",
+        description:
+          "Estrai immagini da un video in punti specifici o a intervalli regolari. Visualizza in anteprima e scarica i fotogrammi in JPG o PNG, singolarmente o in un archivio ZIP.",
+      },
+      ja: {
+        name: "動画フレーム抽出",
+        description:
+          "動画から指定した再生時刻や一定の間隔で静止画を抽出します。JPG または PNG でプレビューし、個別または ZIP にまとめてダウンロードできます。",
+      },
+      ko: {
+        name: "동영상 프레임 추출기",
+        description:
+          "동영상의 특정 시점이나 일정한 간격에서 정지 이미지를 추출합니다. JPG 또는 PNG 프레임을 미리 보고 개별 파일이나 ZIP으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengekstrak Bingkai Video",
+        description:
+          "Ekstrak imej pegun daripada video pada cap masa tertentu atau pada selang tetap. Pratonton dan muat turun bingkai JPG atau PNG satu demi satu atau sebagai fail ZIP.",
+      },
+      nl: {
+        name: "Videoframes extraheren",
+        description:
+          "Haal stilstaande beelden uit een video op specifieke tijdstippen of met vaste tussenpozen. Bekijk de frames en download ze afzonderlijk als JPG of PNG, of samen als ZIP.",
+      },
+      no: {
+        name: "Stillbilder fra video",
+        description:
+          "Hent ut stillbilder fra en video på bestemte tidspunkter eller med jevne mellomrom. Se en forhåndsvisning og last ned JPG- eller PNG-bildene enkeltvis eller som en ZIP-fil.",
+      },
+      pl: {
+        name: "Wyodrębnianie klatek wideo",
+        description:
+          "Wyodrębniaj klatki wideo w wybranych momentach lub w regularnych odstępach. Wyświetl podgląd obrazów JPG lub PNG i pobierz je pojedynczo albo w archiwum ZIP.",
+      },
+      pt: {
+        name: "Extrator de quadros de vídeo",
+        description:
+          "Extraia imagens de um vídeo em momentos específicos ou em intervalos regulares. Pré-visualize os quadros em JPG ou PNG e baixe-os individualmente ou em um arquivo ZIP.",
+      },
+      ru: {
+        name: "Извлечение кадров из видео",
+        description:
+          "Извлекайте кадры из видео по отметкам времени или через равные интервалы. Просматривайте и скачивайте изображения JPG или PNG по одному или в ZIP-архиве.",
+      },
+      sv: {
+        name: "Extrahera bildrutor från video",
+        description:
+          "Extrahera stillbilder från en video vid valda tidpunkter eller med jämna mellanrum. Förhandsgranska och ladda ner JPG- eller PNG-bilder enskilt eller i en ZIP-fil.",
+      },
+      th: {
+        name: "เครื่องมือดึงเฟรมวิดีโอ",
+        description:
+          "ดึงภาพนิ่งจากวิดีโอตามเวลาที่ระบุหรือเป็นช่วงเวลาคงที่ ดูตัวอย่างและดาวน์โหลดภาพ JPG หรือ PNG ทีละภาพหรือรวมเป็นไฟล์ ZIP",
+      },
+      tr: {
+        name: "Videodan Kare Çıkarma",
+        description:
+          "Videodan belirli zamanlarda veya sabit aralıklarla kareler çıkarın. JPG veya PNG kareleri önizleyin, tek tek ya da ZIP olarak topluca indirin.",
+      },
+      vi: {
+        name: "Trình trích xuất khung hình từ video",
+        description:
+          "Trích xuất ảnh tĩnh từ video tại các mốc thời gian đã chọn hoặc theo khoảng cách đều. Xem trước và tải từng khung hình JPG hoặc PNG, hoặc tải tất cả dưới dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "视频截帧器",
+        description:
+          "按指定时间点或固定间隔从视频中提取画面，预览 JPG 或 PNG 图片，并逐张下载或打包为 ZIP。",
+      },
+      "zh-TW": {
+        name: "影片影格擷取器",
+        description:
+          "依指定時間點或固定間隔從影片擷取靜態圖片。可預覽 JPG 或 PNG 影格，並逐張下載或打包成 ZIP。",
       },
     },
   },
@@ -40998,6 +41907,139 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "Bcrypt 密碼雜湊驗證器",
         description:
           "在瀏覽器中本機驗證純文字密碼是否符合 bcrypt 雜湊。適合用來偵錯驗證流程並檢查密碼遷移",
+      },
+    },
+  },
+  "bibliography-converter": {
+    slug: "bibliography-converter",
+    category: "text",
+    icon: "book-open",
+    tags: [
+      "bibliography",
+      "citation",
+      "references",
+      "bibtex",
+      "ris",
+      "csl json",
+      "doi",
+      "duplicates",
+      "converter",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل صيغ المراجع",
+        description:
+          "حوّل المراجع بين صيغ BibTeX وRIS وCSL JSON واكتشف السجلات التي يُحتمل تكرارها. الصق النص أو افتح ملفًا لتحويله في متصفحك.",
+      },
+      de: {
+        name: "Literaturangaben konvertieren",
+        description:
+          "Konvertieren Sie Literaturangaben zwischen BibTeX, RIS und CSL JSON und finden Sie mögliche Duplikate. Fügen Sie Text ein oder öffnen Sie eine Datei, um sie im Browser zu konvertieren.",
+      },
+      en: {
+        name: "Bibliography Converter",
+        description:
+          "Convert references between BibTeX, RIS, and CSL JSON, and find possible duplicate entries. Paste text or open a file to convert it in your browser.",
+      },
+      es: {
+        name: "Conversor de referencias bibliográficas",
+        description:
+          "Convierte referencias entre BibTeX, RIS y CSL JSON y detecta posibles duplicados. Pega texto o abre un archivo para convertirlo en tu navegador.",
+      },
+      fr: {
+        name: "Convertisseur de références bibliographiques",
+        description:
+          "Convertissez vos références entre BibTeX, RIS et CSL JSON et repérez les doublons possibles. Collez du texte ou ouvrez un fichier pour le convertir dans votre navigateur.",
+      },
+      he: {
+        name: "ממיר רשומות ביבליוגרפיות",
+        description:
+          "המרת מקורות ביבליוגרפיים בין הפורמטים BibTeX, RIS ו-CSL JSON ואיתור כפילויות אפשריות. אפשר להדביק טקסט או לפתוח קובץ ולהמיר אותו בדפדפן.",
+      },
+      hi: {
+        name: "संदर्भ सूची कन्वर्टर",
+        description:
+          "संदर्भों को BibTeX, RIS और CSL JSON के बीच बदलें और संभावित डुप्लिकेट प्रविष्टियाँ ढूँढें। ब्राउज़र में बदलने के लिए टेक्स्ट पेस्ट करें या फ़ाइल खोलें।",
+      },
+      id: {
+        name: "Konverter Format Referensi",
+        description:
+          "Konversi referensi dari dan ke format BibTeX, RIS, atau CSL JSON, sekaligus temukan entri yang mungkin duplikat. Tempel teks atau buka file untuk mengonversinya di browser.",
+      },
+      it: {
+        name: "Convertitore di riferimenti bibliografici",
+        description:
+          "Converti i riferimenti tra BibTeX, RIS e CSL JSON e individua i possibili duplicati. Incolla il testo o apri un file per convertirlo nel browser.",
+      },
+      ja: {
+        name: "参考文献コンバーター",
+        description:
+          "BibTeX、RIS、CSL JSON の間で参考文献を変換し、重複の可能性がある項目を検出できます。テキストを貼り付けるかファイルを開くと、ブラウザーで変換できます。",
+      },
+      ko: {
+        name: "참고문헌 형식 변환기",
+        description:
+          "BibTeX, RIS, CSL JSON 간에 참고문헌을 변환하고 중복 가능성이 있는 항목을 찾으세요. 텍스트를 붙여넣거나 파일을 열어 브라우저에서 변환할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Format Rujukan",
+        description:
+          "Tukar format rujukan antara BibTeX, RIS dan CSL JSON serta cari entri yang mungkin pendua. Tampal teks atau buka fail untuk menukarnya dalam pelayar anda.",
+      },
+      nl: {
+        name: "Bibliografieconverter",
+        description:
+          "Converteer referenties tussen BibTeX, RIS en CSL JSON en spoor mogelijke dubbele vermeldingen op. Plak tekst of open een bestand om het in je browser te converteren.",
+      },
+      no: {
+        name: "Referansekonverterer",
+        description:
+          "Konverter referanser mellom BibTeX, RIS og CSL JSON, og finn mulige duplikater. Lim inn tekst eller åpne en fil for å konvertere den i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter bibliografii",
+        description:
+          "Konwertuj pozycje bibliograficzne między formatami BibTeX, RIS i CSL JSON oraz wykrywaj możliwe duplikaty. Wklej tekst lub otwórz plik, aby przekonwertować go w przeglądarce.",
+      },
+      pt: {
+        name: "Conversor de referências bibliográficas",
+        description:
+          "Converta referências entre BibTeX, RIS e CSL JSON e encontre possíveis duplicatas. Cole o texto ou abra um arquivo para convertê-lo no navegador.",
+      },
+      ru: {
+        name: "Конвертер библиографии",
+        description:
+          "Преобразуйте библиографические записи между форматами BibTeX, RIS и CSL JSON и находите возможные дубликаты. Вставьте текст или откройте файл для конвертации в браузере.",
+      },
+      sv: {
+        name: "Referenskonverterare",
+        description:
+          "Konvertera referenser mellan BibTeX, RIS och CSL JSON och hitta möjliga dubbletter. Klistra in text eller öppna en fil och konvertera direkt i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือแปลงรูปแบบรายการอ้างอิง",
+        description:
+          "แปลงรายการอ้างอิงระหว่าง BibTeX, RIS และ CSL JSON พร้อมค้นหารายการที่อาจซ้ำกัน วางข้อความหรือเปิดไฟล์เพื่อแปลงในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "Kaynakça Dönüştürücüsü",
+        description:
+          "Kaynakça kayıtlarını BibTeX, RIS ve CSL JSON biçimleri arasında dönüştürün ve olası yinelenen kayıtları bulun. Tarayıcınızda dönüştürmek için metni yapıştırın veya bir dosya açın.",
+      },
+      vi: {
+        name: "Trình chuyển đổi tài liệu tham khảo",
+        description:
+          "Chuyển đổi tài liệu tham khảo giữa BibTeX, RIS và CSL JSON, đồng thời tìm các mục có thể trùng lặp. Dán văn bản hoặc mở tệp để chuyển đổi ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "参考文献格式转换器",
+        description:
+          "在 BibTeX、RIS 和 CSL JSON 之间转换参考文献，并查找疑似重复条目。粘贴文本或打开文件，即可在浏览器中转换。",
+      },
+      "zh-TW": {
+        name: "參考文獻格式轉換器",
+        description:
+          "在 BibTeX、RIS 和 CSL JSON 之間轉換參考文獻，並找出可能重複的項目。貼上文字或開啟檔案，即可在瀏覽器中轉換。",
       },
     },
   },
@@ -48848,6 +49890,260 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "gamepad-tester": {
+    slug: "gamepad-tester",
+    category: "misc",
+    icon: "gamepad-2",
+    tags: [
+      "gamepad",
+      "controller",
+      "joystick",
+      "stick drift",
+      "hardware",
+      "buttons",
+      "triggers",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار يد التحكم",
+        description:
+          "اختبر أزرار يد التحكم وزناداتها وعصيها مباشرةً في متصفحك. قِس بُعد كل عصا عن المركز بعد إفلاتها للمساعدة في رصد الانحراف.",
+      },
+      de: {
+        name: "Gamepad-Test",
+        description:
+          "Teste Tasten, Trigger und Analogsticks deines Gamepads live im Browser. Prüfe, wie weit jeder Stick nach dem Loslassen von der Mitte abweicht, um Stick-Drift zu erkennen.",
+      },
+      en: {
+        name: "Gamepad Tester",
+        description:
+          "Test gamepad buttons, triggers, and sticks live in your browser. Check how far each stick rests from center to help spot stick drift.",
+      },
+      es: {
+        name: "Prueba de mandos",
+        description:
+          "Prueba en tiempo real los botones, gatillos y palancas de tu mando desde el navegador. Comprueba a qué distancia del centro queda cada palanca al soltarla para detectar posibles desvíos (drift).",
+      },
+      fr: {
+        name: "Test de manette",
+        description:
+          "Testez les boutons, les gâchettes et les sticks de votre manette en direct dans votre navigateur. Mesurez l’écart entre le centre et la position au repos de chaque stick pour repérer un éventuel drift.",
+      },
+      he: {
+        name: "בדיקת בקר משחק",
+        description:
+          "בדקו בזמן אמת את הכפתורים, ההדקים והסטיקים של בקר המשחק בדפדפן. מדדו כמה רחוק כל סטיק נשאר מהמרכז אחרי השחרור כדי לזהות סטייה.",
+      },
+      hi: {
+        name: "गेमपैड टेस्टर",
+        description:
+          "ब्राउज़र में गेमपैड के बटन, ट्रिगर और स्टिक लाइव जाँचें। स्टिक छोड़ने पर देखें कि वह केंद्र से कितनी दूर ठहरती है, ताकि संभावित स्टिक ड्रिफ़्ट पहचान सकें।",
+      },
+      id: {
+        name: "Penguji Gamepad",
+        description:
+          "Uji tombol, pemicu, dan stik gamepad secara langsung di browser. Lihat jarak tiap stik dari titik tengah saat dilepas untuk membantu mendeteksi drift stik.",
+      },
+      it: {
+        name: "Test del controller",
+        description:
+          "Prova in tempo reale pulsanti, grilletti e levette del controller nel browser. Controlla a che distanza dal centro si ferma ogni levetta quando la rilasci, per individuare eventuali problemi di drift.",
+      },
+      ja: {
+        name: "ゲームパッドテスター",
+        description:
+          "ゲームパッドのボタン、トリガー、スティックの入力をブラウザーでリアルタイムに確認できます。手を離したときのスティックの中心からのずれを測り、ドリフトの目安にできます。",
+      },
+      ko: {
+        name: "게임패드 테스터",
+        description:
+          "브라우저에서 게임패드의 버튼, 트리거, 스틱 입력을 실시간으로 확인하세요. 손을 뗀 스틱이 중앙에서 얼마나 벗어나는지 확인해 쏠림 여부를 판단할 수 있습니다.",
+      },
+      ms: {
+        name: "Penguji Alat Kawalan Permainan",
+        description:
+          "Uji butang, picu dan stik alat kawalan permainan secara langsung dalam pelayar. Ukur jarak setiap stik dari titik tengah selepas dilepaskan untuk mengesan tanda hanyutan stik.",
+      },
+      nl: {
+        name: "Gamepadtester",
+        description:
+          "Test de knoppen, triggers en sticks van je gamepad live in je browser. Bekijk hoever elke stick na het loslaten van het midden afwijkt om stickdrift op te sporen.",
+      },
+      no: {
+        name: "Test av spillkontroller",
+        description:
+          "Test knappene, avtrekkerne og spakene på spillkontrolleren i sanntid i nettleseren. Se hvor langt hver spak blir stående fra midten når du slipper den, for å oppdage spakdrift.",
+      },
+      pl: {
+        name: "Tester pada",
+        description:
+          "Sprawdź przyciski, spusty i drążki pada na żywo w przeglądarce. Zobacz, jak daleko od środka zatrzymują się drążki, aby wykryć możliwy dryf.",
+      },
+      pt: {
+        name: "Teste de controle de jogo",
+        description:
+          "Teste os botões, gatilhos e analógicos do controle em tempo real no navegador. Veja a distância de cada analógico até o centro ao soltá-lo para identificar possíveis desvios (drift).",
+      },
+      ru: {
+        name: "Тест геймпада",
+        description:
+          "Проверяйте кнопки, курки и стики геймпада в браузере в реальном времени. Измерьте отклонение стиков от центра в покое, чтобы заметить возможный дрейф.",
+      },
+      sv: {
+        name: "Test av handkontroll",
+        description:
+          "Testa handkontrollens knappar, avtryckare och spakar i realtid i webbläsaren. Se hur långt varje spak hamnar från mitten när du släpper den för att upptäcka spakdrift.",
+      },
+      th: {
+        name: "ทดสอบจอยเกม",
+        description:
+          "ดูการตอบสนองของปุ่ม ทริกเกอร์ และก้านอนาล็อกแบบเรียลไทม์ในเบราว์เซอร์ วัดว่าก้านแต่ละข้างเยื้องจากจุดกึ่งกลางเท่าไรเมื่อปล่อยมือ เพื่อช่วยสังเกตอาการดริฟต์",
+      },
+      tr: {
+        name: "Oyun Kumandası Testi",
+        description:
+          "Kumandanızın düğmelerini, tetiklerini ve analog çubuklarını tarayıcıda anlık olarak test edin. Kaymayı fark etmek için çubukların serbestken merkeze uzaklığını ölçün.",
+      },
+      vi: {
+        name: "Kiểm tra tay cầm chơi game",
+        description:
+          "Xem phản hồi trực tiếp của các nút, cò và cần analog ngay trong trình duyệt. Đo độ lệch tâm khi thả từng cần để phát hiện dấu hiệu trôi cần.",
+      },
+      "zh-CN": {
+        name: "游戏手柄测试器",
+        description:
+          "在浏览器中实时测试手柄的按键、扳机和摇杆。查看松手后摇杆偏离中心的程度，辅助判断是否存在漂移。",
+      },
+      "zh-TW": {
+        name: "遊戲控制器測試器",
+        description:
+          "在瀏覽器即時測試遊戲控制器的按鍵、扳機和搖桿。查看放開後搖桿偏離中心的程度，協助判斷是否有飄移。",
+      },
+    },
+  },
+  "gif-maker": {
+    slug: "gif-maker",
+    category: "image",
+    icon: "film",
+    tags: ["image", "gif", "animation", "frames", "maker", "offline"],
+    locales: {
+      ar: {
+        name: "أداة إنشاء GIF",
+        description:
+          "حوّل صورك إلى ملف GIF متحرك. أعد ترتيب الإطارات واضبط مدة عرض كل إطار وعدد مرات التشغيل في متصفحك.",
+      },
+      de: {
+        name: "GIF-Ersteller",
+        description:
+          "Erstelle aus Bildern ein animiertes GIF. Ändere die Reihenfolge und Anzeigedauer der Einzelbilder und lege die Anzahl der Wiedergaben fest. Alles läuft im Browser.",
+      },
+      en: {
+        name: "GIF Maker",
+        description:
+          "Turn images into an animated GIF. Reorder frames, adjust how long each frame appears, and set the loop count in your browser.",
+      },
+      es: {
+        name: "Creador de GIF",
+        description:
+          "Convierte imágenes en un GIF animado desde tu navegador. Ordena los fotogramas, ajusta la duración de cada uno y elige cuántas veces se reproduce la animación.",
+      },
+      fr: {
+        name: "Créateur de GIF",
+        description:
+          "Créez un GIF animé à partir d’images dans votre navigateur. Réorganisez les images, réglez la durée de chacune et choisissez le nombre de boucles.",
+      },
+      he: {
+        name: "יוצר GIF",
+        description:
+          "יצירת GIF מונפש מתמונות, ישירות בדפדפן. אפשר לשנות את סדר הפריימים, את משך התצוגה של כל פריים ואת מספר הלולאות.",
+      },
+      hi: {
+        name: "GIF मेकर",
+        description:
+          "इमेज से एनिमेटेड GIF बनाएँ। अपने ब्राउज़र में फ़्रेम का क्रम, हर फ़्रेम की अवधि और लूप की संख्या तय करें।",
+      },
+      id: {
+        name: "Pembuat GIF",
+        description:
+          "Buat GIF animasi dari rangkaian gambar. Atur urutan dan durasi tiap frame serta jumlah putaran langsung di browser.",
+      },
+      it: {
+        name: "Creatore di GIF",
+        description:
+          "Crea una GIF animata a partire da immagini nel browser. Riordina i fotogrammi, regola la durata di ciascuno e scegli quante volte riprodurre l’animazione.",
+      },
+      ja: {
+        name: "GIF 作成ツール",
+        description:
+          "画像からアニメーション GIF を作成します。フレームの順序や表示時間、ループ回数をブラウザーで調整できます。",
+      },
+      ko: {
+        name: "GIF 만들기",
+        description:
+          "이미지를 모아 움직이는 GIF를 만드세요. 브라우저에서 프레임 순서, 프레임별 표시 시간, 반복 횟수를 조절할 수 있습니다.",
+      },
+      ms: {
+        name: "Pembuat GIF",
+        description:
+          "Cipta GIF animasi daripada beberapa imej terus dalam pelayar. Susun bingkai, laraskan tempoh setiap bingkai dan tetapkan bilangan kali GIF dimainkan.",
+      },
+      nl: {
+        name: "GIF-maker",
+        description:
+          "Maak een geanimeerde GIF van afbeeldingen. Wijzig de volgorde en weergaveduur van elk frame en stel in hoe vaak de GIF afspeelt. Alles werkt in je browser.",
+      },
+      no: {
+        name: "Lag GIF",
+        description:
+          "Lag en animert GIF av bilder i nettleseren. Endre rekkefølgen og visningstiden for hver bilderute, og velg hvor mange ganger GIF-en skal spilles av.",
+      },
+      pl: {
+        name: "Kreator GIF-ów",
+        description:
+          "Utwórz animowany GIF z obrazów w przeglądarce. Zmień kolejność klatek, ustaw czas wyświetlania każdej z nich i wybierz liczbę odtworzeń.",
+      },
+      pt: {
+        name: "Criador de GIF",
+        description:
+          "Transforme imagens em um GIF animado no navegador. Reordene os quadros, ajuste a duração de cada um e escolha quantas vezes a animação será reproduzida.",
+      },
+      ru: {
+        name: "Создание GIF",
+        description:
+          "Создайте анимированный GIF из изображений в браузере. Меняйте порядок кадров, задавайте длительность каждого кадра и число воспроизведений.",
+      },
+      sv: {
+        name: "GIF-skapare",
+        description:
+          "Skapa en animerad GIF av bilder. Ändra ordningen och visningstiden för varje bildruta och välj hur många gånger GIF-filen ska spelas upp. Allt sker i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง GIF",
+        description:
+          "สร้าง GIF แบบเคลื่อนไหวจากชุดรูปภาพได้ในเบราว์เซอร์ พร้อมจัดลำดับเฟรม ปรับเวลาแสดงแต่ละเฟรม และกำหนดจำนวนรอบที่เล่น",
+      },
+      tr: {
+        name: "GIF Oluşturucu",
+        description:
+          "Görsellerden tarayıcınızda animasyonlu GIF oluşturun. Kareleri sıralayın, her karenin ekranda kalma süresini ve döngü sayısını ayarlayın.",
+      },
+      vi: {
+        name: "Trình tạo GIF",
+        description:
+          "Tạo ảnh GIF động từ một chuỗi ảnh. Sắp xếp các khung hình, chỉnh thời lượng hiển thị từng khung và đặt số lượt phát ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "GIF 制作器",
+        description:
+          "在浏览器中将图片合成 GIF 动画，自由调整帧顺序、每帧时长和循环次数。",
+      },
+      "zh-TW": {
+        name: "GIF 製作器",
+        description:
+          "在瀏覽器中將圖片合成 GIF 動畫，自訂影格順序、每個影格的顯示時間和循環次數。",
+      },
+    },
+  },
   "gif-to-animated-webp-converter": {
     slug: "gif-to-animated-webp-converter",
     category: "image",
@@ -51046,6 +52342,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "圖片拼接器",
         description:
           "將多張圖片橫向並排、縱向堆疊或排成格狀。調整間距、背景及圖片尺寸，再下載為 PNG，無須上傳檔案。",
+      },
+    },
+  },
+  "image-comparator": {
+    slug: "image-comparator",
+    category: "image",
+    icon: "columns-2",
+    tags: [
+      "image",
+      "compare",
+      "before-after",
+      "overlay",
+      "pixel diff",
+      "screenshot",
+    ],
+    locales: {
+      ar: {
+        name: "أداة مقارنة الصور",
+        description:
+          "قارِن صورتين بفاصل قابل للسحب، أو بتراكب قابل لضبط العتامة، أو بخريطة لفروق البكسلات. تبقى صورك في متصفحك.",
+      },
+      de: {
+        name: "Bildvergleich",
+        description:
+          "Vergleiche zwei Bilder mit einer verschiebbaren Trennlinie, durch Überlagern oder anhand markierter Pixelunterschiede. Deine Bilder bleiben im Browser.",
+      },
+      en: {
+        name: "Image Comparator",
+        description:
+          "Compare two images with a draggable divider, an opacity overlay, or a pixel difference map. Your images stay in your browser.",
+      },
+      es: {
+        name: "Comparador de imágenes",
+        description:
+          "Compara dos imágenes con un separador deslizante, una superposición ajustable o un mapa de diferencias por píxel. Tus imágenes permanecen en el navegador.",
+      },
+      fr: {
+        name: "Comparateur d’images",
+        description:
+          "Comparez deux images avec un curseur, une superposition à opacité réglable ou une carte des écarts par pixel. Vos images restent dans votre navigateur.",
+      },
+      he: {
+        name: "השוואת תמונות",
+        description:
+          "השוו שתי תמונות בעזרת קו הפרדה שניתן לגרור, שכבת־על עם אטימות מתכווננת או מפת הבדלים בין פיקסלים. התמונות נשארות בדפדפן.",
+      },
+      hi: {
+        name: "इमेज तुलना टूल",
+        description:
+          "दो इमेज की तुलना करने के लिए विभाजक रेखा खिसकाएँ, एक इमेज को दूसरी पर रखकर अपारदर्शिता बदलें या पिक्सेल अंतर देखें। इमेज आपके ब्राउज़र में ही रहती हैं।",
+      },
+      id: {
+        name: "Pembanding Gambar",
+        description:
+          "Bandingkan dua gambar dengan menggeser garis pembatas, menumpuk gambar dengan opasitas yang dapat diatur, atau melihat peta perbedaan piksel. Gambar tetap berada di browser Anda.",
+      },
+      it: {
+        name: "Confronto immagini",
+        description:
+          "Confronta due immagini con un divisore scorrevole, una sovrapposizione a opacità regolabile o una mappa delle differenze per pixel. Le immagini restano nel browser.",
+      },
+      ja: {
+        name: "画像比較ツール",
+        description:
+          "区切り線をドラッグしたり、透明度を調整して画像を重ねたり、ピクセル差分を表示したりして、2 枚の画像を比較できます。画像はブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "이미지 비교",
+        description:
+          "구분선을 움직이거나, 불투명도를 조절해 두 이미지를 겹치거나, 픽셀 차이 지도로 비교할 수 있습니다. 이미지는 브라우저 안에서만 처리됩니다.",
+      },
+      ms: {
+        name: "Pembanding Imej",
+        description:
+          "Bandingkan dua imej menggunakan pemisah yang boleh diseret, tindihan dengan kelegapan boleh laras atau peta perbezaan piksel. Imej kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeeldingen vergelijken",
+        description:
+          "Vergelijk twee afbeeldingen met een schuifregelaar, leg ze over elkaar of laat pixelverschillen markeren. Je afbeeldingen blijven in je browser.",
+      },
+      no: {
+        name: "Bildesammenligning",
+        description:
+          "Sammenlign to bilder med en flyttbar skillelinje, legg dem over hverandre eller marker pikselforskjellene. Bildene dine blir i nettleseren.",
+      },
+      pl: {
+        name: "Porównywanie obrazów",
+        description:
+          "Porównuj dwa obrazy za pomocą suwaka, nakładki z regulowanym kryciem lub mapy różnic pikseli. Obrazy pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Comparador de imagens",
+        description:
+          "Compare duas imagens com um divisor deslizante, uma sobreposição com opacidade ajustável ou um mapa de diferenças por pixel. Suas imagens ficam no navegador.",
+      },
+      ru: {
+        name: "Сравнение изображений",
+        description:
+          "Сравнивайте два изображения с помощью подвижного разделителя, наложения с настройкой непрозрачности или карты попиксельных различий. Изображения остаются в вашем браузере.",
+      },
+      sv: {
+        name: "Bildjämförelse",
+        description:
+          "Jämför två bilder med en flyttbar skiljelinje, en överlagring eller markerade pixelskillnader. Dina bilder stannar i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือเปรียบเทียบรูปภาพ",
+        description:
+          "เปรียบเทียบรูปภาพสองรูปด้วยเส้นแบ่งที่ลากได้ การซ้อนภาพแบบปรับความทึบ หรือภาพแสดงความแตกต่างของพิกเซล รูปภาพจะถูกประมวลผลในเบราว์เซอร์ของคุณเท่านั้น",
+      },
+      tr: {
+        name: "Görüntü Karşılaştırma",
+        description:
+          "İki görüntüyü sürüklenebilir bir ayırıcı, opaklığı ayarlanabilir bir katman veya piksel farkı haritasıyla karşılaştırın. Görüntüleriniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "So sánh ảnh",
+        description:
+          "So sánh hai ảnh bằng vạch chia kéo được, chế độ chồng ảnh điều chỉnh độ đục hoặc bản đồ chênh lệch pixel. Ảnh chỉ được xử lý trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片对比器",
+        description:
+          "拖动分隔线、调节叠加不透明度，或查看像素差异图来对比两张图片。图片只在浏览器中处理。",
+      },
+      "zh-TW": {
+        name: "圖片比對器",
+        description:
+          "透過滑動分隔線、調整疊加不透明度或查看像素差異圖，比對兩張圖片。圖片只在瀏覽器中處理。",
       },
     },
   },
@@ -53329,117 +54755,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "مولّد IPv6 ULA",
         description:
-          "أنشئ في المتصفح بادئة /48 آمنة لعنوان IPv6 محلي فريد (ULA) وفق RFC 4193، وخطّط لشبكات /64 الفرعية ضمن نطاق fd00.",
+          "أنشئ بادئة ‎/48 لعنوان IPv6 محلي فريد (ULA) وفق RFC 4193، واحسب شبكات ‎/64 الفرعية لشبكة منزلية أو مختبر أو شبكة VPN.",
       },
       de: {
         name: "IPv6-ULA-Generator",
         description:
-          "Erzeuge im Browser ein sicheres /48-Präfix für eine IPv6 Unique Local Address (ULA) gemäß RFC 4193 und plane die zugehörigen /64-Subnetze im fd00-Bereich.",
+          "Ein IPv6-ULA-Präfix (/48) gemäß RFC 4193 erzeugen und /64-Subnetze für ein Heimnetz, eine Testumgebung oder ein VPN berechnen.",
       },
       en: {
         name: "IPv6 ULA Generator",
         description:
-          "Generate a secure RFC 4193 IPv6 Unique Local Address (ULA) /48 prefix in the browser and plan its fd00 /64 subnets.",
+          "Generate an RFC 4193 IPv6 Unique Local Address (ULA) /48 prefix and calculate /64 subnets for a home network, lab, or VPN.",
       },
       es: {
         name: "Generador de ULA IPv6",
         description:
-          "Genera en el navegador un prefijo /48 seguro de dirección local única (ULA) IPv6 según RFC 4193 y planifica sus subredes /64 dentro de fd00.",
+          "Genera un prefijo IPv6 /48 de dirección local única (ULA) según RFC 4193 y calcula subredes /64 para redes domésticas, laboratorios o VPN.",
       },
       fr: {
         name: "Générateur d’ULA IPv6",
         description:
-          "Générez dans le navigateur un préfixe /48 sécurisé d’adresse locale unique IPv6 (ULA) conforme à la RFC 4193, puis planifiez ses sous-réseaux fd00 en /64.",
+          "Générez un préfixe /48 d’adresse locale unique IPv6 (ULA) conforme à la RFC 4193 et calculez les sous-réseaux /64 de votre réseau domestique, de test ou VPN.",
       },
       he: {
         name: "מחולל ULA ל-IPv6",
         description:
-          "צור בדפדפן קידומת /48 מאובטחת של כתובת IPv6 מקומית ייחודית (ULA) לפי RFC 4193, ותכנן את תת-הרשתות שלה מסוג /64 במרחב fd00.",
+          "צרו קידומת IPv6 ‎/48 לכתובת מקומית ייחודית (ULA) לפי RFC 4193 וחשבו תת-רשתות ‎/64 לרשת ביתית, למעבדה או ל-VPN.",
       },
       hi: {
         name: "IPv6 ULA जनरेटर",
         description:
-          "ब्राउज़र में RFC 4193 के अनुरूप IPv6 अद्वितीय स्थानीय पते (ULA) का सुरक्षित /48 प्रीफ़िक्स जनरेट करें और उसके fd00 क्षेत्र के /64 सबनेट की योजना बनाएं।",
+          "RFC 4193 के अनुसार IPv6 अद्वितीय स्थानीय पते (ULA) का /48 प्रीफ़िक्स जनरेट करें और होम नेटवर्क, लैब या VPN के लिए /64 सबनेट निकालें।",
       },
       id: {
         name: "Generator ULA IPv6",
         description:
-          "Buat prefiks /48 Alamat Lokal Unik (ULA) IPv6 RFC 4193 yang aman di browser serta rencanakan subnet fd00 /64 untuk prefiks tersebut.",
+          "Buat prefiks /48 Alamat Lokal Unik IPv6 (ULA) sesuai RFC 4193 dan hitung subnet /64 untuk jaringan rumah, lab, atau VPN.",
       },
       it: {
         name: "Generatore di ULA IPv6",
         description:
-          "Genera nel browser un prefisso /48 sicuro RFC 4193 per un indirizzo locale univoco IPv6 (ULA) e pianifica le relative subnet /64 nello spazio fd00.",
+          "Genera un prefisso IPv6 ULA /48 secondo la RFC 4193 e calcola le subnet /64 per una rete domestica, un laboratorio o una VPN.",
       },
       ja: {
         name: "IPv6 ULA 生成ツール",
         description:
-          "ブラウザー内で安全な RFC 4193 IPv6 ユニークローカルアドレス（ULA）の /48 プレフィックスを生成し、その fd00 /64 サブネットを計画します。",
+          "RFC 4193 に基づく IPv6 ユニークローカルアドレス（ULA）の /48 プレフィックスを生成し、自宅のネットワーク、検証環境、VPN 用の /64 サブネットを計算します。",
       },
       ko: {
         name: "IPv6 ULA 생성기",
         description:
-          "브라우저에서 안전한 RFC 4193 IPv6 고유 로컬 주소(ULA) /48 프리픽스를 생성하고 fd00 /64 서브넷을 계획하세요.",
+          "RFC 4193에 따른 IPv6 고유 로컬 주소(ULA) /48 프리픽스를 생성하고 가정, 실험실 또는 VPN에 쓸 /64 서브넷을 계산하세요.",
       },
       ms: {
         name: "Penjana ULA IPv6",
         description:
-          "Jana awalan /48 Alamat Setempat Unik (ULA) IPv6 yang selamat mengikut RFC 4193 dalam pelayar dan rancang subnet /64 dalam ruang fd00.",
+          "Jana awalan /48 Alamat Setempat Unik (ULA) IPv6 mengikut RFC 4193 dan kira subnet /64 untuk rangkaian rumah, makmal atau VPN.",
       },
       nl: {
         name: "IPv6 ULA-generator",
         description:
-          "Genereer in de browser een veilig /48-prefix voor een IPv6 Unique Local Address (ULA) volgens RFC 4193 en plan de bijbehorende /64-subnetten binnen fd00.",
+          "Genereer een IPv6 Unique Local Address (ULA) /48-prefix volgens RFC 4193 en bereken /64-subnetten voor je thuisnetwerk, testomgeving of VPN.",
       },
       no: {
         name: "IPv6 ULA-generator",
         description:
-          "Generer et sikkert RFC 4193-prefiks /48 for en unik lokal IPv6-adresse (ULA) i nettleseren, og planlegg tilhørende fd00 /64-subnett.",
+          "Generer et /48-prefiks for unike lokale IPv6-adresser (ULA) etter RFC 4193, og beregn /64-subnett for hjemmenettverk, testmiljø eller VPN.",
       },
       pl: {
         name: "Generator ULA IPv6",
         description:
-          "Generuj w przeglądarce bezpieczny prefiks /48 unikalnego adresu lokalnego IPv6 (ULA) zgodny z RFC 4193 i planuj jego podsieci fd00 /64.",
+          "Wygeneruj prefiks /48 unikalnego adresu lokalnego IPv6 (ULA) zgodny z RFC 4193 i oblicz podsieci /64 dla sieci domowej, laboratorium lub VPN.",
       },
       pt: {
         name: "Gerador de ULA IPv6",
         description:
-          "Gere no navegador um prefixo /48 seguro de endereço local único (ULA) IPv6 conforme a RFC 4193 e planeje suas sub-redes fd00 /64.",
+          "Gere um prefixo /48 de endereço local único (ULA) IPv6 conforme a RFC 4193 e calcule sub-redes /64 para uma rede doméstica, laboratório ou VPN.",
       },
       ru: {
         name: "Генератор ULA IPv6",
         description:
-          "Создавайте в браузере безопасный /48-префикс уникального локального IPv6-адреса (ULA) по RFC 4193 и планируйте его подсети /64 в диапазоне fd00.",
+          "Сгенерируйте префикс /48 для уникального локального IPv6-адреса (ULA) по RFC 4193 и рассчитайте подсети /64 для домашней сети, лаборатории или VPN.",
       },
       sv: {
         name: "IPv6 ULA-generator",
         description:
-          "Generera ett säkert /48-prefix för en unik lokal IPv6-adress (ULA) enligt RFC 4193 i webbläsaren och planera dess /64-subnät i fd00-rymden.",
+          "Generera ett /48-prefix för en unik lokal IPv6-adress (ULA) enligt RFC 4193 och beräkna /64-subnät för hemnätverk, labb eller VPN.",
       },
       th: {
         name: "ตัวสร้าง IPv6 ULA",
         description:
-          "สร้างพรีฟิกซ์ /48 ของที่อยู่ IPv6 เฉพาะภายใน (ULA) ตาม RFC 4193 อย่างปลอดภัยในเบราว์เซอร์ และวางแผนซับเน็ต /64 ภายในช่วง fd00",
+          "สร้างพรีฟิกซ์ IPv6 Unique Local Address (ULA) ขนาด /48 ตาม RFC 4193 และคำนวณซับเน็ต /64 สำหรับเครือข่ายในบ้าน ห้องทดลอง หรือ VPN",
       },
       tr: {
         name: "IPv6 ULA Oluşturucu",
         description:
-          "RFC 4193'e uygun güvenli bir IPv6 Benzersiz Yerel Adres (ULA) /48 önekini tarayıcıda oluşturun ve fd00 /64 alt ağlarını planlayın.",
+          "RFC 4193 uyumlu IPv6 Benzersiz Yerel Adres (ULA) /48 öneki oluşturun. Ev ağı, laboratuvar veya VPN için /64 alt ağlarını hesaplayın.",
       },
       vi: {
         name: "Trình tạo ULA IPv6",
         description:
-          "Tạo ngay trong trình duyệt một prefix /48 an toàn cho địa chỉ cục bộ duy nhất (ULA) IPv6 theo RFC 4193 và lập kế hoạch các subnet /64 trong dải fd00.",
+          "Tạo prefix /48 cho địa chỉ cục bộ duy nhất (ULA) IPv6 theo RFC 4193 và tính mạng con /64 cho mạng gia đình, mạng thử nghiệm hoặc VPN.",
       },
       "zh-CN": {
         name: "IPv6 ULA 生成器",
         description:
-          "在浏览器中安全生成 RFC 4193 IPv6 唯一本地地址（ULA）/48 前缀，并规划其 fd00 /64 子网。",
+          "生成符合 RFC 4193 的 IPv6 唯一本地地址（ULA）/48 前缀，并为家庭网络、实验环境或 VPN 计算 /64 子网。",
       },
       "zh-TW": {
         name: "IPv6 ULA 產生器",
         description:
-          "在瀏覽器中安全產生 RFC 4193 IPv6 唯一本地位址（ULA）/48 前綴，並規劃其 fd00 /64 子網路。",
+          "產生符合 RFC 4193 的 IPv6 唯一本地位址（ULA）/48 前綴，並為家庭網路、實驗環境或 VPN 計算 /64 子網路。",
       },
     },
   },
@@ -54386,6 +55812,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "json-to-typescript-zod": {
+    slug: "json-to-typescript-zod",
+    category: "json",
+    icon: "braces",
+    tags: ["json", "typescript", "zod", "api", "type", "schema", "validation"],
+    locales: {
+      ar: {
+        name: "محول JSON إلى TypeScript أو Zod",
+        description:
+          "ولّد أنواع TypeScript أو مخطط تحقق باستخدام Zod 4 من مثال لاستجابة API بصيغة JSON.",
+      },
+      de: {
+        name: "JSON-zu-TypeScript-/Zod-Konverter",
+        description:
+          "Leite TypeScript-Typen oder ein Zod-4-Validierungsschema aus einer JSON-API-Beispielantwort ab.",
+      },
+      en: {
+        name: "JSON to TypeScript / Zod",
+        description:
+          "Generate TypeScript types or a Zod 4 validation schema from a sample JSON API response.",
+      },
+      es: {
+        name: "Convertidor de JSON a TypeScript / Zod",
+        description:
+          "Genera tipos de TypeScript o un esquema de validación de Zod 4 a partir de una respuesta JSON de ejemplo de una API.",
+      },
+      fr: {
+        name: "Convertisseur JSON vers TypeScript / Zod",
+        description:
+          "Générez des types TypeScript ou un schéma de validation Zod 4 à partir d’un exemple de réponse d’API au format JSON.",
+      },
+      he: {
+        name: "ממיר JSON ל-TypeScript או ל-Zod",
+        description:
+          "צרו טיפוסי TypeScript או סכמת אימות של Zod 4 מתגובת API לדוגמה בפורמט JSON.",
+      },
+      hi: {
+        name: "JSON से TypeScript या Zod कन्वर्टर",
+        description:
+          "JSON में दिए गए API रिस्पॉन्स के उदाहरण से TypeScript टाइप या Zod 4 का वैलिडेशन स्कीमा बनाएँ।",
+      },
+      id: {
+        name: "Konverter JSON ke TypeScript / Zod",
+        description:
+          "Hasilkan tipe TypeScript atau skema validasi Zod 4 dari contoh respons API berformat JSON.",
+      },
+      it: {
+        name: "Convertitore da JSON a TypeScript / Zod",
+        description:
+          "Genera tipi TypeScript o uno schema di validazione Zod 4 da una risposta JSON di esempio di un’API.",
+      },
+      ja: {
+        name: "JSON → TypeScript / Zod",
+        description:
+          "JSON 形式の API レスポンスのサンプルから、TypeScript の型や Zod 4 の検証スキーマを生成します。",
+      },
+      ko: {
+        name: "JSON → TypeScript / Zod 변환기",
+        description:
+          "JSON API 응답 예시에서 TypeScript 타입이나 Zod 4 검증 스키마를 생성합니다.",
+      },
+      ms: {
+        name: "Penukar JSON kepada TypeScript / Zod",
+        description:
+          "Jana jenis TypeScript atau skema pengesahan Zod 4 daripada contoh respons API dalam format JSON.",
+      },
+      nl: {
+        name: "JSON naar TypeScript of Zod",
+        description:
+          "Genereer TypeScript-types of een Zod 4-validatieschema op basis van een voorbeeld van een API-respons in JSON.",
+      },
+      no: {
+        name: "JSON til TypeScript / Zod",
+        description:
+          "Generer TypeScript-typer eller et valideringsskjema for Zod 4 fra et eksempel på et API-svar i JSON.",
+      },
+      pl: {
+        name: "Konwerter JSON na TypeScript i Zod",
+        description:
+          "Generuj typy TypeScript lub schemat walidacji Zod 4 na podstawie przykładowej odpowiedzi API w formacie JSON.",
+      },
+      pt: {
+        name: "Conversor de JSON para TypeScript / Zod",
+        description:
+          "Gere tipos TypeScript ou um esquema de validação Zod 4 a partir de um exemplo de resposta de API em JSON.",
+      },
+      ru: {
+        name: "Конвертер JSON в TypeScript и Zod",
+        description:
+          "Создавайте типы TypeScript или схему валидации Zod 4 по примеру ответа API в формате JSON.",
+      },
+      sv: {
+        name: "JSON till TypeScript / Zod",
+        description:
+          "Generera TypeScript-typer eller ett valideringsschema för Zod 4 från ett exempel på ett API-svar i JSON.",
+      },
+      th: {
+        name: "ตัวแปลง JSON เป็น TypeScript / Zod",
+        description:
+          "สร้างชนิดข้อมูล TypeScript หรือสคีมา Zod 4 สำหรับตรวจสอบข้อมูลจากตัวอย่างผลตอบกลับ API ในรูปแบบ JSON",
+      },
+      tr: {
+        name: "JSON’dan TypeScript ve Zod’a Dönüştürücü",
+        description:
+          "JSON biçimindeki örnek bir API yanıtından TypeScript türleri veya bir Zod 4 doğrulama şeması oluşturun.",
+      },
+      vi: {
+        name: "Chuyển JSON sang TypeScript / Zod",
+        description:
+          "Tạo kiểu TypeScript hoặc lược đồ kiểm tra dữ liệu bằng Zod 4 từ một phản hồi API mẫu ở định dạng JSON.",
+      },
+      "zh-CN": {
+        name: "JSON 转 TypeScript / Zod",
+        description:
+          "从 JSON 接口响应示例生成 TypeScript 类型或 Zod 4 校验代码。",
+      },
+      "zh-TW": {
+        name: "JSON 轉 TypeScript / Zod",
+        description:
+          "從 JSON API 回應範例產生 TypeScript 型別或 Zod 4 驗證程式碼。",
+      },
+    },
+  },
   "json-to-xml-converter": {
     slug: "json-to-xml-converter",
     category: "json",
@@ -55287,6 +56836,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "keyboard-tester": {
+    slug: "keyboard-tester",
+    category: "misc",
+    icon: "keyboard",
+    tags: [
+      "keyboard",
+      "hardware",
+      "diagnostics",
+      "shortcut",
+      "rollover",
+      "ghosting",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار لوحة المفاتيح",
+        description:
+          "اختبر لوحة مفاتيح جهازك في المتصفح. تحقق من المفاتيح ومفاتيح التعديل التي يستجيب لها المتصفح، وجرّب تركيبات المفاتيح واعرف عدد المفاتيح التي يرصدها في الوقت نفسه.",
+      },
+      de: {
+        name: "Tastaturtest",
+        description:
+          "Teste deine physische Tastatur im Browser. Prüfe Tasten und Modifikatortasten, teste Tastenkombinationen und sieh, wie viele Tasten gleichzeitig erkannt werden.",
+      },
+      en: {
+        name: "Keyboard Tester",
+        description:
+          "Test your physical keyboard in your browser. See which keys and modifiers register, check key combinations, and find how many keys register at once.",
+      },
+      es: {
+        name: "Probador de teclado",
+        description:
+          "Prueba tu teclado físico en el navegador. Comprueba qué teclas, modificadores y combinaciones se detectan y cuántas teclas se registran a la vez.",
+      },
+      fr: {
+        name: "Test de clavier",
+        description:
+          "Testez votre clavier physique dans votre navigateur. Voyez quelles touches, quels modificateurs et quelles combinaisons sont détectés, et combien de touches sont reconnues en même temps.",
+      },
+      he: {
+        name: "בדיקת מקלדת",
+        description:
+          "בדקו את המקלדת הפיזית בדפדפן. ראו אילו מקשים ומקשי שינוי מזוהים, בדקו שילובי מקשים וגלו כמה מקשים מזוהים בו־זמנית.",
+      },
+      hi: {
+        name: "कीबोर्ड टेस्टर",
+        description:
+          "अपने फ़िज़िकल कीबोर्ड को ब्राउज़र में जाँचें। देखें कि कौन-सी कुंजियाँ और मॉडिफ़ायर कुंजियाँ दर्ज होती हैं, कुंजी संयोजन आज़माएँ और जानें कि एक साथ कितनी कुंजियाँ दर्ज होती हैं।",
+      },
+      id: {
+        name: "Tes Keyboard",
+        description:
+          "Uji keyboard fisik Anda di browser. Lihat tombol yang terdeteksi, termasuk tombol pengubah, uji kombinasi tombol, dan lihat berapa banyak tombol yang terdeteksi sekaligus.",
+      },
+      it: {
+        name: "Test della tastiera",
+        description:
+          "Prova la tua tastiera fisica nel browser. Verifica quali tasti, modificatori e combinazioni vengono rilevati e quanti tasti vengono riconosciuti contemporaneamente.",
+      },
+      ja: {
+        name: "キーボードテスター",
+        description:
+          "物理キーボードをブラウザーでテストします。反応するキーや修飾キーを確認し、キーの組み合わせや、同時に何個のキーを認識できるかを調べられます。",
+      },
+      ko: {
+        name: "키보드 테스터",
+        description:
+          "브라우저에서 물리 키보드를 테스트하세요. 어떤 키와 보조 키가 인식되는지 확인하고, 키 조합과 한 번에 인식되는 최대 키 개수를 테스트할 수 있습니다.",
+      },
+      ms: {
+        name: "Penguji Papan Kekunci",
+        description:
+          "Uji papan kekunci fizikal anda dalam pelayar. Lihat kekunci yang dikesan, termasuk kekunci pengubah suai, uji gabungan kekunci dan ketahui jumlah kekunci yang dikesan serentak.",
+      },
+      nl: {
+        name: "Toetsenbordtest",
+        description:
+          "Test je fysieke toetsenbord in je browser. Bekijk welke toetsen en modificatietoetsen worden herkend, probeer toetscombinaties en ontdek hoeveel toetsen tegelijk worden geregistreerd.",
+      },
+      no: {
+        name: "Tastaturtest",
+        description:
+          "Test det fysiske tastaturet ditt i nettleseren. Se hvilke taster og modifikatortaster som registreres, prøv tastekombinasjoner og sjekk hvor mange taster som registreres samtidig.",
+      },
+      pl: {
+        name: "Tester klawiatury",
+        description:
+          "Przetestuj fizyczną klawiaturę w przeglądarce. Sprawdź, które klawisze, modyfikatory i kombinacje są wykrywane oraz ile klawiszy można wykryć jednocześnie.",
+      },
+      pt: {
+        name: "Teste de teclado",
+        description:
+          "Teste seu teclado físico no navegador. Veja quais teclas, modificadores e combinações são detectados e quantas teclas são reconhecidas ao mesmo tempo.",
+      },
+      ru: {
+        name: "Тест клавиатуры",
+        description:
+          "Проверьте физическую клавиатуру в браузере. Узнайте, какие клавиши, модификаторы и сочетания срабатывают и сколько клавиш распознаётся одновременно.",
+      },
+      sv: {
+        name: "Tangentbordstest",
+        description:
+          "Testa ditt fysiska tangentbord i webbläsaren. Se vilka tangenter och modifierartangenter som registreras, prova tangentkombinationer och se hur många tangenter som registreras samtidigt.",
+      },
+      th: {
+        name: "เครื่องมือทดสอบแป้นพิมพ์",
+        description:
+          "ทดสอบแป้นพิมพ์จริงผ่านเบราว์เซอร์ ดูว่าเบราว์เซอร์ตรวจพบปุ่มใดบ้าง รวมถึงปุ่มปรับเปลี่ยนอย่าง Shift ทดสอบชุดปุ่มที่กดร่วมกันและดูว่าเบราว์เซอร์รับได้กี่ปุ่มพร้อมกัน",
+      },
+      tr: {
+        name: "Klavye Testi",
+        description:
+          "Fiziksel klavyenizi tarayıcıda test edin. Hangi tuşların ve değiştirici tuşların algılandığını görün, tuş kombinasyonlarını deneyin ve aynı anda kaç tuşun algılandığını öğrenin.",
+      },
+      vi: {
+        name: "Công cụ kiểm tra bàn phím",
+        description:
+          "Kiểm tra bàn phím vật lý ngay trong trình duyệt. Xem phím nào được nhận, kể cả phím bổ trợ, thử các tổ hợp và xem có bao nhiêu phím được nhận cùng lúc.",
+      },
+      "zh-CN": {
+        name: "键盘测试器",
+        description:
+          "实时查看实体键盘的按键、修饰键和组合键，测试浏览器能同时识别多少个按键。",
+      },
+      "zh-TW": {
+        name: "鍵盤測試器",
+        description:
+          "即時查看實體鍵盤的按鍵、修飾鍵與組合鍵，測試瀏覽器能同時偵測多少個按鍵。",
+      },
+    },
+  },
   "ksuid-generator": {
     slug: "ksuid-generator",
     category: "developer",
@@ -55687,117 +57366,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "مقارن القوائم",
         description:
-          "قارن قائمتين، واكتشف العناصر المشتركة والمستبعدة، وصدّر المجموعة التي تحتاجها بدقة قبل المزامنة أو التنقيح.",
+          "قارن بين قائمتين للعثور على العناصر المشتركة والفريدة لكل قائمة والعناصر المكررة. ألصق أسطرًا أو نصًا مفصولًا بعلامات، ثم انسخ النتائج أو نزّلها.",
       },
       de: {
         name: "Listenvergleich",
         description:
-          "Vergleiche zwei Listen, zeige Überschneidungen und Ausschlüsse an und exportiere genau die benötigte Menge vor einem Abgleich oder einer Bereinigung.",
+          "Zwei Listen vergleichen und gemeinsame Einträge, Unterschiede und Duplikate finden. Zeilen oder getrennte Werte einfügen und Ergebnisse kopieren oder herunterladen.",
       },
       en: {
         name: "List Comparer",
         description:
-          "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup.",
+          "Compare two lists to find shared items, entries only in A or B, and duplicates. Paste lines or delimited text, then copy or download the results.",
       },
       es: {
         name: "Comparador de listas",
         description:
-          "Compare dos listas, identifique coincidencias y exclusiones, y exporte el conjunto exacto que necesita antes de sincronizar o limpiar los datos.",
+          "Compara dos listas para encontrar elementos en común, entradas exclusivas de A o B y duplicados. Pega líneas o texto delimitado y copia o descarga los resultados.",
       },
       fr: {
         name: "Comparateur de listes",
         description:
-          "Comparez deux listes, identifiez les chevauchements et les exclusions, puis exportez l’ensemble exact dont vous avez besoin avant une synchronisation ou un nettoyage.",
+          "Comparez deux listes pour trouver les éléments communs, les entrées propres à A ou à B et les doublons. Collez vos listes, puis copiez ou téléchargez le résultat.",
       },
       he: {
         name: "כלי להשוואת רשימות",
         description:
-          "השוו שתי רשימות, גלו חפיפות ופריטים שאינם משותפים וייצאו בדיוק את הקבוצה הדרושה לפני סנכרון או ניקוי.",
+          "השוו שתי רשימות כדי למצוא פריטים משותפים, פריטים שמופיעים רק ברשימה A או B וכפילויות. הדביקו שורות או טקסט עם מפרידים והעתיקו או הורידו את התוצאות.",
       },
       hi: {
         name: "सूची तुलना टूल",
         description:
-          "दो सूचियों की तुलना करें, साझा और अलग आइटम पहचानें, और सिंक या सफ़ाई से पहले ज़रूरी सेट निर्यात करें।",
+          "दो सूचियों की तुलना करके साझा आइटम, केवल A या B में मौजूद आइटम और दोहराव खोजें। अलग-अलग पंक्तियों या विभाजक वाले टेक्स्ट को पेस्ट करें, फिर नतीजे कॉपी या डाउनलोड करें।",
       },
       id: {
         name: "Pembanding Daftar",
         description:
-          "Bandingkan dua daftar, temukan item yang sama dan yang tidak disertakan, lalu ekspor kumpulan yang Anda butuhkan sebelum menyinkronkan atau merapikannya.",
+          "Bandingkan dua daftar untuk menemukan item yang sama, item yang hanya ada di A atau B, dan duplikat. Tempel teks, lalu salin atau unduh hasilnya.",
       },
       it: {
         name: "Confronto elenchi",
         description:
-          "Confronta due elenchi, individua elementi in comune ed esclusioni ed esporta esattamente l'insieme che ti serve prima di una sincronizzazione o una pulizia.",
+          "Confronta due elenchi per trovare elementi in comune, voci presenti solo in A o B e duplicati. Incolla righe o testo delimitato e copia o scarica i risultati.",
       },
       ja: {
         name: "リスト比較ツール",
         description:
-          "2つのリストを比較して共通項目と除外項目を確認し、同期や整理の前に必要なセットを書き出します。",
+          "2 つのリストを比較して、共通項目、A または B にだけある項目、重複を抽出します。改行や区切り文字で分けたテキストを貼り付け、結果をコピーまたはダウンロードできます。",
       },
       ko: {
         name: "목록 비교기",
         description:
-          "두 목록을 비교해 공통 항목과 제외 항목을 확인하고, 동기화나 정리에 필요한 집합만 내보내세요.",
+          "두 목록을 비교해 공통 항목, 한쪽에만 있는 항목, 중복 항목을 찾으세요. 줄이나 구분자로 나뉜 텍스트를 붙여넣고 결과를 복사하거나 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pembanding Senarai",
         description:
-          "Bandingkan dua senarai, kenal pasti pertindihan dan pengecualian, serta eksport set yang anda perlukan sebelum penyegerakan atau pembersihan.",
+          "Bandingkan dua senarai untuk mencari item sepadan, item yang hanya ada dalam A atau B, dan pendua. Tampal baris atau teks dengan pemisah, kemudian salin atau muat turun hasil.",
       },
       nl: {
         name: "Lijstenvergelijker",
         description:
-          "Vergelijk twee lijsten, bekijk overlap en uitsluitingen en exporteer precies de verzameling die je nodig hebt voordat je synchroniseert of opschoont.",
+          "Vergelijk twee lijsten en vind overeenkomsten, items die alleen in A of B staan en dubbele items. Plak regels of gescheiden tekst en kopieer of download het resultaat.",
       },
       no: {
         name: "Listesammenligning",
         description:
-          "Sammenlign to lister, finn overlapp og utelatelser, og eksporter akkurat det settet du trenger før synkronisering eller opprydding.",
+          "Sammenlign to lister og finn felles oppføringer, oppføringer som bare finnes i A eller B, og duplikater. Lim inn linjer eller tekst med skilletegn, og kopier eller last ned resultatet.",
       },
       pl: {
         name: "Porównywanie list",
         description:
-          "Porównuj dwie listy, sprawdzaj ich część wspólną i różnice oraz eksportuj potrzebny zbiór przed synchronizacją lub porządkowaniem.",
+          "Porównaj dwie listy, aby znaleźć wspólne pozycje, różnice i duplikaty. Wklej tekst w wierszach lub z separatorem, a potem skopiuj albo pobierz wynik.",
       },
       pt: {
         name: "Comparador de listas",
         description:
-          "Compare duas listas, identifique itens em comum e exclusões e exporte o conjunto exato de que precisa antes de sincronizar ou organizar.",
+          "Compare duas listas para localizar itens em comum, exclusivos de A ou B e duplicados. Cole linhas ou texto delimitado e copie ou baixe os resultados.",
       },
       ru: {
         name: "Сравнение списков",
         description:
-          "Сравнивайте два списка, находите общие и исключённые элементы и экспортируйте нужный набор перед синхронизацией или очисткой.",
+          "Сравните два списка и найдите совпадения, элементы только в списке A или B и дубликаты. Вставьте строки или текст с разделителями, затем скопируйте или скачайте результат.",
       },
       sv: {
         name: "Listjämförare",
         description:
-          "Jämför två listor, hitta gemensamma och uteslutna poster och exportera precis den mängd du behöver före synkronisering eller rensning.",
+          "Jämför två listor för att hitta gemensamma poster, poster som bara finns i A eller B och dubbletter. Klistra in rader eller avgränsad text. Kopiera eller ladda ned resultatet.",
       },
       th: {
         name: "เครื่องมือเปรียบเทียบรายการ",
         description:
-          "เปรียบเทียบสองรายการ ดูค่าที่ตรงกันและถูกคัดออก แล้วส่งออกเฉพาะชุดที่ต้องการก่อนซิงค์หรือจัดระเบียบข้อมูล",
+          "เปรียบเทียบสองรายการเพื่อหาค่าที่มีทั้งสองฝั่ง ค่าที่อยู่เฉพาะใน A หรือ B และค่าซ้ำ วางข้อความทีละบรรทัดหรือใช้ตัวคั่น แล้วคัดลอกหรือดาวน์โหลดผลลัพธ์",
       },
       tr: {
         name: "Liste Karşılaştırıcı",
         description:
-          "Eşitleme veya temizlik öncesinde iki listeyi karşılaştırın, ortak ve dışarıda kalan öğeleri bulun ve tam olarak ihtiyacınız olan kümeyi dışa aktarın.",
+          "İki listeyi karşılaştırın. Ortak, yalnızca bir listede bulunan veya yinelenen öğeleri görün. Satırları ya da ayraçlı metni yapıştırın, sonucu kopyalayın veya indirin.",
       },
       vi: {
         name: "Trình so sánh danh sách",
         description:
-          "So sánh hai danh sách, tìm phần giao nhau và các mục bị loại, rồi xuất đúng tập bạn cần trước khi đồng bộ hoặc dọn dẹp.",
+          "So sánh hai danh sách để tìm mục chung, mục chỉ có trong A hoặc B và mục trùng lặp. Dán dữ liệu theo dòng hoặc dấu phân cách, rồi sao chép hay tải kết quả.",
       },
       "zh-CN": {
         name: "列表比较",
         description:
-          "比较两份列表，找出重合项、差异项和重复项，并导出你真正要处理的结果集。",
+          "比较两份列表，找出共同项、仅在 A 或 B 中出现的项目，以及重复项。粘贴多行或带分隔符的文本后，即可复制或下载结果。",
       },
       "zh-TW": {
         name: "列表比較",
         description:
-          "比較兩份列表，找出重疊項、差異項與重複項，並匯出你真正要處理的結果集。",
+          "比較兩份清單，找出共同項、只出現在 A 或 B 的項目，以及重複項。貼上逐行排列或有分隔符號的文字，即可複製或下載結果。",
       },
     },
   },
@@ -65621,117 +67300,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "تجزئة SHA-256 للنص أو الملف",
         description:
-          "إنشاء تجزئة SHA-256 لإدخال النص أو تحميل الملف. احسب مجاميع التحقق المشفرة الآمنة للتحقق من سلامة البيانات وأغراض الأمان",
+          "احسب مجموع التحقق SHA-256 لملف أو نص بترميز UTF-8 في متصفحك. انسخ قيمة التجزئة بالصيغة السداسية العشرية أو Base64 أو العشرية أو الثنائية.",
       },
       de: {
         name: "SHA-256-Hash für Text oder Datei",
         description:
-          "Generieren Sie SHA-256-Hash für Texteingabe oder Datei-Upload. Berechnen Sie sichere kryptographische Prüfsummen zur Datenintegritätsprüfung und für Sicherheitszwecke",
+          "SHA-256-Prüfsumme einer Datei oder eines UTF-8-Texts im Browser berechnen. Den Hash hexadezimal, in Base64, dezimal oder binär kopieren.",
       },
       en: {
         name: "SHA-256 Hash Text or File",
         description:
-          "Generate SHA-256 hash for text input or file upload. Calculate secure cryptographic checksums for data integrity verification and security purposes",
+          "Calculate the SHA-256 checksum of a file or UTF-8 text in your browser. Copy the hash in hexadecimal, Base64, decimal, or binary.",
       },
       es: {
         name: "Hash SHA-256 de Texto o Archivo",
         description:
-          "Genera hash SHA-256 para entrada de texto o carga de archivo. Calcula sumas de verificación criptográficas seguras para verificación de integridad de datos y propósitos de seguridad",
+          "Calcula la suma de verificación SHA-256 de un archivo o texto UTF-8 en tu navegador. Copia el hash en hexadecimal, Base64, decimal o binario.",
       },
       fr: {
         name: "Hash SHA-256 de Texte ou Fichier",
         description:
-          "Générez un hash SHA-256 pour la saisie de texte ou le téléchargement de fichier. Calculez des sommes de contrôle cryptographiques sécurisées pour la vérification de l'intégrité des données et à des fins de sécurité",
+          "Calculez la somme de contrôle SHA-256 d’un fichier ou d’un texte UTF-8 dans votre navigateur. Copiez le résultat en hexadécimal, Base64, décimal ou binaire.",
       },
       he: {
         name: "האש SHA-256 טקסט או קובץ",
         description:
-          "צור האש SHA-256 עבור קלט טקסט או העלאת קובץ. חשב סכומי בדיקה קריפטוגרפיים בטוחים לאימות שלמות נתונים ומטרות אבטחה",
+          "חשבו סכום בדיקה SHA-256 לקובץ או לטקסט ב-UTF-8 בדפדפן. העתיקו את ערך הגיבוב בפורמט הקסדצימלי, Base64, עשרוני או בינארי.",
       },
       hi: {
         name: "SHA-256 हैश टेक्स्ट या फ़ाइल",
         description:
-          "टेक्स्ट इनपुट या फ़ाइल अपलोड के लिए SHA-256 हैश जेनरेट करें। डेटा अखंडता सत्यापन और सुरक्षा उद्देश्यों के लिए सुरक्षित क्रिप्टोग्राफिक चेकसम की गणना करें",
+          "ब्राउज़र में फ़ाइल या UTF-8 टेक्स्ट का SHA-256 चेकसम निकालें। हैश को हेक्साडेसिमल, Base64, दशमलव या बाइनरी में कॉपी करें।",
       },
       id: {
         name: "Hash SHA-256 Teks atau File",
         description:
-          "Buat hash SHA-256 untuk input teks atau upload file. Hitung checksum kriptografi yang aman untuk verifikasi integritas data dan tujuan keamanan",
+          "Hitung checksum SHA-256 untuk file atau teks UTF-8 di browser Anda. Salin hash dalam format heksadesimal, Base64, desimal, atau biner.",
       },
       it: {
         name: "Hash SHA-256 di Testo o File",
         description:
-          "Genera hash SHA-256 per input di testo o caricamento file. Calcola checksum crittografici sicuri per la verifica dell'integrità dei dati e scopi di sicurezza",
+          "Calcola nel browser il checksum SHA-256 di un file o di un testo UTF-8. Copia l’hash in formato esadecimale, Base64, decimale o binario.",
       },
       ja: {
         name: "SHA-256 ハッシュ テキストまたはファイル",
         description:
-          "テキスト入力またはファイルアップロードのSHA-256ハッシュを生成します。データ整合性検証とセキュリティ目的のための安全な暗号化チェックサムを計算",
+          "ファイルや UTF-8 テキストの SHA-256 チェックサムをブラウザーで計算します。ハッシュは十六進数、Base64、十進数、二進数でコピーできます。",
       },
       ko: {
         name: "SHA-256 해시 텍스트 또는 파일",
         description:
-          "텍스트 입력 또는 파일 업로드에 대한 SHA-256 해시를 생성합니다. 데이터 무결성 검증 및 보안 목적을 위한 안전한 암호화 체크섬을 계산하세요",
+          "브라우저에서 파일 또는 UTF-8 텍스트의 SHA-256 체크섬을 계산하세요. 해시 값을 16진수, Base64, 10진수 또는 2진수로 복사할 수 있습니다.",
       },
       ms: {
         name: "Hash SHA-256 Teks atau Fail",
         description:
-          "Jana hash SHA-256 untuk input teks atau muat naik fail. Kira checksum kriptografi selamat untuk pengesahan integriti data dan tujuan keselamatan",
+          "Kira checksum SHA-256 untuk fail atau teks UTF-8 dalam pelayar anda. Salin hash dalam format heksadesimal, Base64, perpuluhan atau binari.",
       },
       nl: {
         name: "SHA-256-hash tekst of bestand",
         description:
-          "Genereer SHA-256-hash voor tekstinvoer of bestandsupload. Bereken veilige cryptografische checksums voor gegevensintegriteitsverificatie en beveiligingsdoeleinden",
+          "Bereken de SHA-256-checksum van een bestand of UTF-8-tekst in je browser. Kopieer de hash in hexadecimale, Base64-, decimale of binaire notatie.",
       },
       no: {
         name: "SHA-256-hash tekst eller fil",
         description:
-          "Generer SHA-256-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål",
+          "Beregn SHA-256-sjekksummen for en fil eller UTF-8-tekst i nettleseren. Kopier hashen i heksadesimal, Base64, desimal eller binær form.",
       },
       pl: {
         name: "Hash SHA-256 tekstu lub pliku",
         description:
-          "Generuj hash SHA-256 dla wprowadzania tekstu lub przesyłania pliku. Obliczaj bezpieczne sumy kontrolne kryptograficzne do weryfikacji integralności danych i celów bezpieczeństwa",
+          "Oblicz sumę kontrolną SHA-256 pliku lub tekstu UTF-8 w przeglądarce. Skopiuj skrót w zapisie szesnastkowym, Base64, dziesiętnym lub binarnym.",
       },
       pt: {
         name: "Hash SHA-256 de Texto ou Arquivo",
         description:
-          "Gere hash SHA-256 para entrada de texto ou upload de arquivo. Calcule checksums criptográficos seguros para verificação de integridade de dados e propósitos de segurança",
+          "Calcule o checksum SHA-256 de um arquivo ou texto UTF-8 no navegador. Copie o hash em hexadecimal, Base64, decimal ou binário.",
       },
       ru: {
         name: "SHA-256-хеш текста или файла",
         description:
-          "Генерируйте SHA-256-хеш для текстового ввода или загрузки файла. Вычисляйте безопасные криптографические контрольные суммы для проверки целостности данных и целей безопасности",
+          "Вычислите контрольную сумму SHA-256 файла или текста в UTF-8 прямо в браузере. Скопируйте хеш в шестнадцатеричном, двоичном, десятичном формате или в Base64.",
       },
       sv: {
         name: "SHA-256-hash text eller fil",
         description:
-          "Generera SHA-256-hash för textinmatning eller filuppladdning. Beräkna säkra kryptografiska kontrollsummor för dataintegritetsverifiering och säkerhetsändamål",
+          "Beräkna SHA-256-kontrollsumman för en fil eller UTF-8-text i webbläsaren. Kopiera hashvärdet i hexadecimal form, Base64, decimal eller binär form.",
       },
       th: {
         name: "แฮช SHA-256 ข้อความหรือไฟล์",
         description:
-          "สร้างแฮช SHA-256 สำหรับการป้อนข้อความหรือการอัปโหลดไฟล์ คำนวณเช็คซัมเข้ารหัสที่ปลอดภัยสำหรับการตรวจสอบความสมบูรณ์ของข้อมูลและวัตถุประสงค์ด้านความปลอดภัย",
+          "คำนวณเช็กซัม SHA-256 ของไฟล์หรือข้อความ UTF-8 ในเบราว์เซอร์ แล้วคัดลอกค่าแฮชในรูปเลขฐานสิบหก Base64 เลขฐานสิบ หรือเลขฐานสอง",
       },
       tr: {
         name: "SHA-256 Hash Metin veya Dosya",
         description:
-          "Metin girişi veya dosya yükleme için SHA-256 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın",
+          "Dosyanın veya UTF-8 metninin SHA-256 sağlama toplamını tarayıcınızda hesaplayın. Hash değerini onaltılık, Base64, ondalık veya ikili biçimde kopyalayın.",
       },
       vi: {
         name: "Hash SHA-256 văn bản hoặc tệp",
         description:
-          "Tạo hash SHA-256 cho đầu vào văn bản hoặc tải lên tệp. Tính toán checksum mã hóa an toàn để xác minh tính toàn vẹn dữ liệu và mục đích bảo mật",
+          "Tính tổng kiểm tra SHA-256 cho tệp hoặc văn bản UTF-8 ngay trong trình duyệt. Sao chép mã băm ở dạng thập lục phân, Base64, thập phân hoặc nhị phân.",
       },
       "zh-CN": {
         name: "SHA-256 哈希文本或文件",
         description:
-          "为文本输入或文件上传生成 SHA-256 哈希值。计算安全的加密校验和，用于数据完整性验证和安全目的",
+          "在浏览器中计算文件或 UTF-8 文本的 SHA-256 校验和。支持复制十六进制、Base64、十进制或二进制哈希值。",
       },
       "zh-TW": {
         name: "SHA-256 雜湊文字或檔案",
         description:
-          "為文字輸入或檔案上傳產生 SHA-256 雜湊值。計算安全的加密校驗和，用於資料完整性驗證和安全目的",
+          "在瀏覽器中計算檔案或 UTF-8 文字的 SHA-256 校驗碼。可複製十六進位、Base64、十進位或二進位格式的雜湊值。",
       },
     },
   },
@@ -69336,117 +71015,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "مرتب أسطر النص",
         description:
-          "رتّب أسطر النص تصاعديًا أو تنازليًا، مع خيارات لتجاهل حالة الأحرف وإزالة المسافات من أطراف الأسطر وإزالة الأسطر الفارغة والمكررة.",
+          "رتّب أسطر النص تصاعديًا أو تنازليًا من A إلى Z أو بالعكس. تجاهل حالة الأحرف أو أزل المسافات والأسطر الفارغة والمكررة قبل نسخ القائمة.",
       },
       de: {
         name: "Textzeilen sortieren",
         description:
-          "Textzeilen auf- oder absteigend sortieren, optional ohne Beachtung der Groß- und Kleinschreibung, mit Entfernung von Rand-Leerzeichen, Leerzeilen und Duplikaten.",
+          "Textzeilen von A bis Z oder Z bis A sortieren. Groß- und Kleinschreibung ignorieren, Leerzeichen, Leerzeilen oder Duplikate entfernen und Ergebnis kopieren.",
       },
       en: {
         name: "Text Line Sorter",
         description:
-          "Sort text lines in ascending or descending order, with optional case folding, trimming, blank-line removal, and deduplication.",
+          "Sort text lines A to Z or Z to A. Ignore case, trim spaces, remove blank lines, or delete duplicates before copying the sorted list.",
       },
       es: {
         name: "Ordenador de líneas de texto",
         description:
-          "Ordena líneas de texto en orden ascendente o descendente, con opciones para ignorar mayúsculas y minúsculas, recortar espacios y eliminar líneas vacías y duplicadas.",
+          "Ordena líneas de texto de A a Z o de Z a A. Ignora mayúsculas y minúsculas, recorta espacios o elimina líneas vacías y duplicadas antes de copiar la lista.",
       },
       fr: {
         name: "Tri des lignes de texte",
         description:
-          "Triez les lignes de texte par ordre croissant ou décroissant, avec des options pour ignorer la casse, supprimer les espaces en début et fin de ligne, les lignes vides et les doublons.",
+          "Triez des lignes de texte de A à Z ou de Z à A. Ignorez la casse et supprimez les espaces superflus, les lignes vides ou les doublons avant de copier le résultat.",
       },
       he: {
         name: "ממיין שורות טקסט",
         description:
-          "מיון שורות טקסט בסדר עולה או יורד, עם אפשרות להתעלם מהבדלי אותיות גדולות וקטנות, להסיר רווחים בקצוות, להסיר שורות ריקות ולהסיר כפילויות.",
+          "מיינו שורות טקסט מ-A עד Z או בסדר הפוך. אפשר להתעלם מהבדלי אותיות גדולות וקטנות, להסיר רווחים בקצוות, שורות ריקות וכפילויות, ואז להעתיק את הרשימה הממוינת.",
       },
       hi: {
         name: "टेक्स्ट पंक्ति क्रमबद्धक",
         description:
-          "टेक्स्ट की पंक्तियों को आरोही या अवरोही क्रम में लगाएँ। चाहें तो बड़े-छोटे अक्षरों का अंतर अनदेखा करें, किनारों के खाली स्थान हटाएँ और खाली या दोहराई गई पंक्तियाँ हटाएँ।",
+          "टेक्स्ट की पंक्तियों को A से Z या Z से A क्रम में लगाएँ। कॉपी करने से पहले बड़े-छोटे अक्षरों का अंतर अनदेखा करें और अतिरिक्त खाली जगह, खाली पंक्तियाँ या दोहराव हटाएँ।",
       },
       id: {
         name: "Pengurut Baris Teks",
         description:
-          "Urutkan baris teks secara menaik atau menurun, dengan opsi mengabaikan huruf besar/kecil, memangkas spasi, menghapus baris kosong, dan menghapus duplikat.",
+          "Urutkan baris teks dari A ke Z atau Z ke A. Abaikan huruf besar/kecil, pangkas spasi, atau hapus baris kosong dan duplikat sebelum menyalin hasil.",
       },
       it: {
         name: "Ordinatore di righe di testo",
         description:
-          "Ordina le righe di testo in ordine crescente o decrescente, con opzioni per ignorare maiuscole e minuscole, eliminare gli spazi iniziali e finali e rimuovere righe vuote e duplicate.",
+          "Ordina le righe di testo dalla A alla Z o dalla Z alla A. Ignora maiuscole e minuscole, elimina gli spazi ai bordi delle righe e rimuovi righe vuote o duplicate.",
       },
       ja: {
         name: "テキスト行並べ替え",
         description:
-          "テキストの行を昇順または降順に並べ替えます。大文字と小文字の区別を無視、各行の前後の空白を除去、空行の削除、重複行の削除も選択できます。",
+          "テキストの行を A〜Z または Z〜A の順に並べ替えます。大文字と小文字の区別、行の前後の空白、空行、重複行を調整して、並べ替えたリストをコピーできます。",
       },
       ko: {
         name: "텍스트 줄 정렬기",
         description:
-          "텍스트 줄을 오름차순 또는 내림차순으로 정렬하고, 대소문자 무시, 앞뒤 공백 제거, 빈 줄 제거 및 중복 제거 옵션을 적용하세요.",
+          "텍스트를 줄 단위로 A부터 Z까지 또는 역순으로 정렬하세요. 대소문자를 무시하거나 앞뒤 공백, 빈 줄, 중복 줄을 제거한 뒤 결과를 복사할 수 있습니다.",
       },
       ms: {
         name: "Pengisih Baris Teks",
         description:
-          "Isih baris teks dalam tertib menaik atau menurun, dengan pilihan mengabaikan huruf besar dan kecil, membuang ruang di awal dan akhir, membuang baris kosong serta pendua.",
+          "Isih baris teks dari A ke Z atau Z ke A. Abaikan huruf besar dan kecil, buang ruang di awal dan akhir, baris kosong atau pendua sebelum menyalin hasil.",
       },
       nl: {
         name: "Tekstregels sorteren",
         description:
-          "Sorteer tekstregels oplopend of aflopend, met opties om hoofdletters te negeren, witruimte aan de randen te wissen en lege of dubbele regels te verwijderen.",
+          "Sorteer tekstregels van A tot Z of van Z tot A. Negeer hoofdletters, haal witruimte weg of verwijder lege en dubbele regels voordat je de lijst kopieert.",
       },
       no: {
         name: "Tekstlinjesortering",
         description:
-          "Sorter tekstlinjer i stigende eller synkende rekkefølge, med valg for å ignorere store og små bokstaver, fjerne innledende og avsluttende blanktegn, tomme linjer og duplikater.",
+          "Sorter tekstlinjer fra A til Z eller Z til A. Ignorer forskjellen på store og små bokstaver, fjern blanktegn, tomme linjer eller duplikater, og kopier listen.",
       },
       pl: {
         name: "Sortowanie wierszy tekstu",
         description:
-          "Sortuj wiersze tekstu rosnąco lub malejąco, z opcjami ignorowania wielkości liter, usuwania skrajnych białych znaków, pustych wierszy i duplikatów.",
+          "Sortuj wiersze tekstu od A do Z lub od Z do A. Przed skopiowaniem listy możesz zignorować wielkość liter oraz usunąć zbędne spacje, puste wiersze i duplikaty.",
       },
       pt: {
         name: "Ordenador de linhas de texto",
         description:
-          "Ordene linhas de texto em ordem crescente ou decrescente, com opções para ignorar maiúsculas e minúsculas, aparar espaços, remover linhas em branco e eliminar duplicados.",
+          "Ordene linhas de texto de A a Z ou de Z a A. Ignore maiúsculas e minúsculas e remova espaços nas extremidades, linhas em branco ou duplicados.",
       },
       ru: {
         name: "Сортировка строк текста",
         description:
-          "Сортируйте строки текста по возрастанию или убыванию, при необходимости игнорируя регистр, обрезая пробелы и удаляя пустые строки и дубликаты.",
+          "Сортируйте строки текста по возрастанию или убыванию. Перед копированием можно убрать пробелы по краям, пустые строки и дубликаты или отключить учёт регистра.",
       },
       sv: {
         name: "Textradssorterare",
         description:
-          "Sortera textrader i stigande eller fallande ordning, med alternativ för att ignorera skiftläge, trimma rader samt ta bort tomma rader och dubbletter.",
+          "Sortera textrader från A till Z eller Z till A. Ignorera skiftläge, trimma blanksteg eller ta bort tomma rader och dubbletter innan du kopierar listan.",
       },
       th: {
         name: "เครื่องมือเรียงบรรทัดข้อความ",
         description:
-          "เรียงบรรทัดข้อความจากน้อยไปมากหรือมากไปน้อย พร้อมตัวเลือกไม่แยกตัวพิมพ์เล็กและใหญ่ ตัดช่องว่าง ลบบรรทัดว่าง และลบบรรทัดซ้ำ",
+          "เรียงบรรทัดข้อความจาก A ถึง Z หรือ Z ถึง A เลือกไม่แยกตัวพิมพ์เล็กและใหญ่ ตัดช่องว่าง ลบบรรทัดว่างหรือลบบรรทัดซ้ำก่อนคัดลอกผลลัพธ์",
       },
       tr: {
         name: "Metin Satırı Sıralayıcı",
         description:
-          "Metin satırlarını artan veya azalan sırada sıralayın; isteğe bağlı olarak büyük/küçük harf farkını yok sayın, kenar boşluklarını kırpın, boş ve yinelenen satırları kaldırın.",
+          "Satırları A'dan Z'ye veya Z'den A'ya sıralayın. Büyük/küçük harf farkını yok sayın, kenar boşluklarını kırpın, boş ve yinelenen satırları kaldırın.",
       },
       vi: {
         name: "Trình sắp xếp dòng văn bản",
         description:
-          "Sắp xếp các dòng văn bản theo thứ tự tăng dần hoặc giảm dần, với các tùy chọn bỏ qua chữ hoa chữ thường, xóa khoảng trắng ở hai đầu, xóa dòng trống và loại bỏ dòng trùng lặp.",
+          "Sắp xếp các dòng văn bản từ A đến Z hoặc từ Z đến A. Bỏ qua chữ hoa chữ thường, xóa khoảng trắng ở hai đầu, dòng trống và dòng trùng trước khi sao chép.",
       },
       "zh-CN": {
         name: "文本行排序器",
         description:
-          "按升序或降序排列文本行，可选择忽略大小写、去除行首尾空白、移除空白行及重复行。",
+          "按 A 到 Z 或 Z 到 A 对文本逐行排序。复制结果前，可忽略大小写、去除行首尾空白，并删除空白行或重复行。",
       },
       "zh-TW": {
         name: "文字行排序工具",
         description:
-          "以遞增或遞減順序排列文字行，並可選擇忽略大小寫、移除行首與行尾空白、移除空白行及重複行。",
+          "將文字逐行依 A 到 Z 或 Z 到 A 排序。複製結果前，可選擇忽略大小寫、移除行首尾空白、刪除空白行或去除重複行。",
       },
     },
   },
@@ -70948,112 +72627,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "محول Unicode ↔ Punycode",
         description:
-          "حوّل نطاقات Unicode (IDN) وASCII (Punycode) في كلا الاتجاهين",
+          "حوّل أسماء نطاقات Unicode إلى Punycode بصيغة ASCII، أو فك ترميز نطاقات xn-- إلى نص مقروء. يدعم المحوّل أسماء النطاقات الدولية (IDN) في الاتجاهين.",
       },
       de: {
         name: "Unicode ↔ Punycode Konverter",
         description:
-          "Konvertieren Sie Unicode- (IDN) und ASCII- (Punycode) Domains in beide Richtungen",
+          "Unicode-Domains in ASCII-Punycode umwandeln und xn--Domains wieder lesbar machen. Internationalisierte Domainnamen (IDNs) in beide Richtungen konvertieren.",
       },
       en: {
         name: "Unicode ↔ Punycode Converter",
         description:
-          "Convert Unicode (IDN) and ASCII (Punycode) domains both ways",
+          "Encode Unicode domain names as ASCII Punycode or decode xn-- domains back to readable text. Convert internationalized domains (IDNs) in either direction.",
       },
       es: {
         name: "Convertidor Unicode ↔ Punycode",
         description:
-          "Convierte dominios Unicode (IDN) y ASCII (Punycode) en ambos sentidos",
+          "Convierte dominios Unicode a Punycode ASCII y decodifica dominios con prefijo xn--. Convierte nombres de dominio internacionalizados (IDN) en ambos sentidos.",
       },
       fr: {
         name: "Convertisseur Unicode ↔ Punycode",
         description:
-          "Convertissez les domaines Unicode (IDN) et ASCII (Punycode) dans les deux sens",
+          "Encodez un nom de domaine Unicode en Punycode ASCII ou décodez un domaine xn--. Convertissez vos noms de domaine internationalisés (IDN) dans les deux sens.",
       },
       he: {
         name: "ממיר Unicode ↔ Punycode",
         description:
-          "המרת דומיינים של Unicode (IDN) ו‑ASCII (Punycode) בשני הכיוונים",
+          "המירו שמות מתחם ב-Unicode ל-Punycode ב-ASCII, או פענחו דומיינים שמתחילים ב-xn-- לטקסט קריא. המרת שמות מתחם בינלאומיים (IDN) בשני הכיוונים.",
       },
       hi: {
         name: "Unicode ↔ Punycode परिवर्तक",
         description:
-          "Unicode (IDN) और ASCII (Punycode) डोमेन को दोनों दिशाओं में बदलें",
+          "Unicode डोमेन नामों को ASCII Punycode में बदलें या xn-- डोमेन को पढ़ने योग्य Unicode में बदलें। अंतरराष्ट्रीय डोमेन नाम (IDN) दोनों दिशाओं में बदलें।",
       },
       id: {
         name: "Pengonversi Unicode ↔ Punycode",
         description:
-          "Konversi domain Unicode (IDN) dan ASCII (Punycode) dua arah",
+          "Ubah nama domain Unicode menjadi Punycode ASCII atau baca domain xn-- sebagai teks Unicode. Konversi nama domain internasional (IDN) dua arah.",
       },
       it: {
         name: "Convertitore Unicode ↔ Punycode",
         description:
-          "Converte domini Unicode (IDN) e ASCII (Punycode) in entrambe le direzioni",
+          "Converti i domini Unicode in Punycode ASCII o decodifica quelli che iniziano con xn--. Il convertitore funziona in entrambe le direzioni per i domini internazionalizzati (IDN).",
       },
       ja: {
         name: "Unicode ↔ Punycode 変換ツール",
         description:
-          "Unicode（IDN）と ASCII（Punycode）のドメイン名を双方向に変換",
+          "Unicode のドメイン名を ASCII の Punycode に変換し、xn-- で始まるドメイン名を元の表記に戻します。国際化ドメイン名（IDN）の双方向変換に対応します。",
       },
       ko: {
         name: "Unicode ↔ Punycode 변환기",
-        description: "Unicode(IDN)와 ASCII(Punycode) 도메인을 양방향으로 변환",
+        description:
+          "유니코드 도메인을 ASCII Punycode로 인코딩하거나 xn-- 도메인을 읽기 쉬운 문자로 디코딩하세요. 국제화 도메인 이름(IDN)을 양방향으로 변환할 수 있습니다.",
       },
       ms: {
         name: "Penukar Unicode ↔ Punycode",
-        description: "Tukar domain Unicode (IDN) dan ASCII (Punycode) dua hala",
+        description:
+          "Kodkan nama domain Unicode kepada Punycode ASCII atau nyahkod domain xn-- kepada teks yang mudah dibaca. Tukar nama domain antarabangsa (IDN) dalam kedua-dua arah.",
       },
       nl: {
         name: "Unicode ↔ Punycode-converter",
         description:
-          "Zet Unicode (IDN) en ASCII (Punycode) domeinen in beide richtingen om",
+          "Zet Unicode-domeinnamen om naar ASCII-Punycode of decodeer xn--domeinen naar leesbare tekst. Converteer internationale domeinnamen (IDN's) in beide richtingen.",
       },
       no: {
         name: "Unicode ↔ Punycode‑konverter",
         description:
-          "Konverter Unicode‑ (IDN) og ASCII‑ (Punycode) domener begge veier",
+          "Konverter Unicode-domenenavn til ASCII i Punycode-format, eller gjør xn--domener lesbare igjen. Konverter internasjonaliserte domenenavn (IDN) begge veier.",
       },
       pl: {
         name: "Konwerter Unicode ↔ Punycode",
         description:
-          "Dwukierunkowa konwersja domen Unicode (IDN) i ASCII (Punycode)",
+          "Konwertuj nazwy domen Unicode na ASCII w formacie Punycode i odczytuj domeny z prefiksem xn--. Obsługuje konwersję domen międzynarodowych (IDN) w obie strony.",
       },
       pt: {
         name: "Conversor Unicode ↔ Punycode",
         description:
-          "Converta domínios Unicode (IDN) e ASCII (Punycode) nos dois sentidos",
+          "Converta domínios internacionalizados (IDNs) em Unicode para Punycode ASCII ou decodifique domínios com xn-- para ler seus caracteres originais.",
       },
       ru: {
         name: "Конвертер Unicode ↔ Punycode",
         description:
-          "Двустороннее преобразование доменов Unicode (IDN) и ASCII (Punycode)",
+          "Преобразуйте домены Unicode в ASCII (Punycode) и обратно. Декодируйте домены с префиксом xn--, чтобы прочитать интернационализированное доменное имя (IDN).",
       },
       sv: {
         name: "Unicode ↔ Punycode‑omvandlare",
         description:
-          "Omvandla Unicode (IDN) och ASCII (Punycode) domäner i båda riktningarna",
+          "Omvandla Unicode-domännamn till ASCII med Punycode eller avkoda xn--domäner till läsbar text. Konvertera internationaliserade domännamn (IDN) åt båda hållen.",
       },
       th: {
         name: "ตัวแปลง Unicode ↔ Punycode",
-        description: "แปลงโดเมน Unicode (IDN) และ ASCII (Punycode) ได้สองทิศทาง",
+        description:
+          "แปลงชื่อโดเมน Unicode เป็น ASCII Punycode หรือถอดรหัสโดเมนที่ขึ้นต้นด้วย xn-- กลับเป็นข้อความที่อ่านได้ รองรับการแปลงโดเมนสากล (IDN) ทั้งสองทาง",
       },
       tr: {
         name: "Unicode ↔ Punycode Dönüştürücü",
         description:
-          "Unicode (IDN) ve ASCII (Punycode) alan adlarını çift yönlü dönüştürün",
+          "Uluslararası alan adlarını (IDN) Unicode'dan ASCII Punycode'a dönüştürün veya xn-- ile başlayan alan adlarını okunur metne çevirin.",
       },
       vi: {
         name: "Bộ chuyển đổi Unicode ↔ Punycode",
         description:
-          "Chuyển đổi tên miền Unicode (IDN) và ASCII (Punycode) hai chiều",
+          "Mã hóa tên miền Unicode sang Punycode ASCII hoặc giải mã tên miền xn-- về dạng dễ đọc. Chuyển đổi hai chiều tên miền quốc tế hóa (IDN).",
       },
       "zh-CN": {
         name: "Unicode ↔ Punycode 转换器",
-        description: "双向转换 Unicode（IDN）与 ASCII（Punycode）域名",
+        description:
+          "将 Unicode 域名编码为 ASCII Punycode，或将以 xn-- 开头的域名解码为可读文本。支持国际化域名（IDN）双向转换。",
       },
       "zh-TW": {
         name: "Unicode ↔ Punycode 轉換器",
-        description: "雙向轉換 Unicode（IDN）與 ASCII（Punycode）網域",
+        description:
+          "將 Unicode 網域名稱編碼為 ASCII Punycode，或將 xn-- 網域解碼為可讀文字。支援國際化網域名稱（IDN）雙向轉換。",
       },
     },
   },
@@ -71206,117 +72890,117 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       ar: {
         name: "محول الطابع الزمني Unix",
         description:
-          "تحويل الطوابع الزمنية Unix إلى تواريخ قابلة للقراءة والعكس. يدعم الكشف التلقائي عن الثواني والمللي ثانية والنانو ثانية.",
+          "حوّل طابع Unix الزمني إلى الوقت المحلي أو UTC أو صيغة ISO 8601، وحوّل التاريخ في الاتجاه العكسي إلى ثوانٍ أو ملي ثانية أو نانو ثانية.",
       },
       de: {
         name: "Unix-Zeitstempel-Konverter",
         description:
-          "Konvertiert Unix-Zeitstempel in lesbare Daten und umgekehrt. Unterstützt automatische Erkennung von Sekunden, Millisekunden und Nanosekunden.",
+          "Unix-Zeitstempel in Ortszeit, UTC oder ISO 8601 umrechnen und Datum und Uhrzeit in Sekunden, Millisekunden oder Nanosekunden zurückrechnen.",
       },
       en: {
         name: "Unix Timestamp Converter",
         description:
-          "Convert Unix timestamps to human-readable dates and vice versa. Supports auto-detection of seconds, milliseconds, and nanoseconds.",
+          "Convert Unix epoch timestamps to local time, UTC, or ISO 8601, and convert dates back to seconds, milliseconds, or nanoseconds.",
       },
       es: {
         name: "Convertidor de Marca de Tiempo Unix",
         description:
-          "Convierte marcas de tiempo Unix a fechas legibles y viceversa. Soporta detección automática de segundos, milisegundos y nanosegundos.",
+          "Convierte marcas de tiempo Unix a hora local, UTC o ISO 8601 y convierte fechas a marcas Unix en segundos, milisegundos o nanosegundos.",
       },
       fr: {
         name: "Convertisseur de Timestamp Unix",
         description:
-          "Convertit les timestamps Unix en dates lisibles et vice versa. Prend en charge la détection automatique des secondes, millisecondes et nanosecondes.",
+          "Convertissez un timestamp Unix en heure locale, UTC ou ISO 8601, et une date en timestamp Unix en secondes, millisecondes ou nanosecondes.",
       },
       he: {
         name: "ממיר חותמת זמן Unix",
         description:
-          "המר חותמות זמן Unix לתאריכים קריאים ולהיפך. תומך בזיהוי אוטומטי של שניות, אלפיות שנייה וננושניות.",
+          "המירו חותמות זמן Unix (Epoch) לזמן מקומי, UTC או ISO 8601, והמירו תאריכים בחזרה לשניות, אלפיות שנייה או ננושניות.",
       },
       hi: {
         name: "Unix टाइमस्टैम्प कनवर्टर",
         description:
-          "Unix टाइमस्टैम्प को पढ़ने योग्य तिथियों में बदलें और इसके विपरीत। सेकंड, मिलीसेकंड और नैनोसेकंड की स्वचालित पहचान का समर्थन करता है।",
+          "Unix epoch टाइमस्टैम्प को स्थानीय समय, UTC या ISO 8601 में देखें। तिथि और समय को सेकंड, मिलीसेकंड या नैनोसेकंड के टाइमस्टैम्प में बदलें।",
       },
       id: {
         name: "Konverter Timestamp Unix",
         description:
-          "Konversi timestamp Unix ke tanggal yang dapat dibaca dan sebaliknya. Mendukung deteksi otomatis detik, milidetik, dan nanodetik.",
+          "Konversi timestamp epoch Unix ke waktu lokal, UTC, atau ISO 8601, dan ubah tanggal kembali menjadi detik, milidetik, atau nanodetik.",
       },
       it: {
         name: "Convertitore Timestamp Unix",
         description:
-          "Converte i timestamp Unix in date leggibili e viceversa. Supporta il rilevamento automatico di secondi, millisecondi e nanosecondi.",
+          "Converti i timestamp Unix in ora locale, UTC o ISO 8601 e ricava da una data il timestamp in secondi, millisecondi o nanosecondi.",
       },
       ja: {
         name: "Unixタイムスタンプ変換",
         description:
-          "Unixタイムスタンプを読みやすい日付に変換し、その逆も可能。秒、ミリ秒、ナノ秒の自動検出に対応。",
+          "Unix エポックからのタイムスタンプを現地時刻、UTC、ISO 8601 に変換します。日時から秒、ミリ秒、ナノ秒のタイムスタンプも求められます。",
       },
       ko: {
         name: "Unix 타임스탬프 변환기",
         description:
-          "Unix 타임스탬프를 읽기 쉬운 날짜로 변환하고 그 반대도 가능합니다. 초, 밀리초, 나노초 자동 감지를 지원합니다.",
+          "Unix 타임스탬프를 현지 시간, UTC, ISO 8601로 변환하고, 날짜와 시간을 다시 초, 밀리초 또는 나노초 단위 타임스탬프로 바꾸세요.",
       },
       ms: {
         name: "Penukar Cap Masa Unix",
         description:
-          "Tukar cap masa Unix kepada tarikh yang boleh dibaca dan sebaliknya. Menyokong pengesanan automatik saat, milisaat dan nanosaat.",
+          "Tukar cap masa epok Unix kepada waktu tempatan, UTC atau ISO 8601, dan tukar tarikh kepada cap masa dalam saat, milisaat atau nanosaat.",
       },
       nl: {
         name: "Unix Tijdstempel Converter",
         description:
-          "Converteer Unix-tijdstempels naar leesbare datums en omgekeerd. Ondersteunt automatische detectie van seconden, milliseconden en nanoseconden.",
+          "Zet Unix-tijdstempels om naar lokale tijd, UTC of ISO 8601. Zet datums terug om naar seconden, milliseconden of nanoseconden sinds de Unix-epoch.",
       },
       no: {
         name: "Unix Tidsstempel Konverterer",
         description:
-          "Konverter Unix-tidsstempler til lesbare datoer og omvendt. Støtter automatisk deteksjon av sekunder, millisekunder og nanosekunder.",
+          "Konverter Unix-tidsstempler til lokal tid, UTC eller ISO 8601, og konverter datoer tilbake til sekunder, millisekunder eller nanosekunder.",
       },
       pl: {
         name: "Konwerter Znacznika Czasu Unix",
         description:
-          "Konwertuj znaczniki czasu Unix na czytelne daty i odwrotnie. Obsługuje automatyczne wykrywanie sekund, milisekund i nanosekund.",
+          "Konwertuj znaczniki czasu Unix na czas lokalny, UTC lub ISO 8601, a daty na sekundy, milisekundy lub nanosekundy od początku epoki Unix.",
       },
       pt: {
         name: "Conversor de Timestamp Unix",
         description:
-          "Converte timestamps Unix em datas legíveis e vice-versa. Suporta detecção automática de segundos, milissegundos e nanossegundos.",
+          "Converta timestamps Unix para hora local, UTC ou ISO 8601, e datas para timestamps em segundos, milissegundos ou nanossegundos.",
       },
       ru: {
         name: "Конвертер Unix-меток времени",
         description:
-          "Преобразует метки времени Unix в читаемые даты и обратно. Поддерживает автоматическое определение секунд, миллисекунд и наносекунд.",
+          "Преобразуйте метку времени Unix в местное время, UTC или ISO 8601, а дату и время — в метку в секундах, миллисекундах или наносекундах.",
       },
       sv: {
         name: "Unix Tidsstämpel Konverterare",
         description:
-          "Konvertera Unix-tidsstämplar till läsbara datum och vice versa. Stödjer automatisk detektering av sekunder, millisekunder och nanosekunder.",
+          "Konvertera Unix-tidsstämplar till lokal tid, UTC eller ISO 8601 och omvandla datum till sekunder, millisekunder eller nanosekunder sedan Unixepoken.",
       },
       th: {
         name: "ตัวแปลง Unix Timestamp",
         description:
-          "แปลง Unix timestamp เป็นวันที่ที่อ่านได้และในทางกลับกัน รองรับการตรวจจับอัตโนมัติของวินาที มิลลิวินาที และนาโนวินาที",
+          "แปลง Unix timestamp เป็นเวลาท้องถิ่น UTC หรือ ISO 8601 และแปลงวันที่กลับเป็น Unix timestamp หน่วยวินาที มิลลิวินาที หรือนาโนวินาที",
       },
       tr: {
         name: "Unix Zaman Damgası Dönüştürücü",
         description:
-          "Unix zaman damgalarını okunabilir tarihlere dönüştürün ve tam tersi. Saniye, milisaniye ve nanosaniye otomatik algılamayı destekler.",
+          "Unix zaman damgasını yerel saat, UTC veya ISO 8601 olarak görün. Tarihi saniye, milisaniye veya nanosaniye cinsinden zaman damgasına çevirin.",
       },
       vi: {
         name: "Bộ Chuyển Đổi Dấu Thời Gian Unix",
         description:
-          "Chuyển đổi dấu thời gian Unix thành ngày tháng dễ đọc và ngược lại. Hỗ trợ tự động phát hiện giây, mili giây và nano giây.",
+          "Chuyển dấu thời gian Unix sang giờ địa phương, UTC hoặc ISO 8601, rồi chuyển ngày giờ ngược lại sang giây, mili giây hoặc nano giây.",
       },
       "zh-CN": {
         name: "Unix 时间戳转换器",
         description:
-          "将 Unix 时间戳转换为可读日期，或将日期转换为时间戳。支持自动检测秒、毫秒和纳秒。",
+          "将 Unix 时间戳转换为本地时间、UTC 或 ISO 8601 日期，也可将日期转换为以秒、毫秒或纳秒计的时间戳。",
       },
       "zh-TW": {
         name: "Unix 時間戳記轉換器",
         description:
-          "將 Unix 時間戳記轉換為可讀日期，或將日期轉換為時間戳記。支援自動偵測秒、毫秒和奈秒。",
+          "將 Unix 時間戳記轉換成當地時間、UTC 或 ISO 8601，也能將日期轉回以秒、毫秒或奈秒表示的時間戳記。",
       },
     },
   },
@@ -73400,6 +75084,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "UUID 驗證器",
         description:
           "驗證 UUID 字串、檢查其版本與變體，並確認識別碼使用符合 RFC 的標準格式。",
+      },
+    },
+  },
+  "video-frame-extractor": {
+    slug: "video-frame-extractor",
+    category: "image",
+    icon: "film",
+    tags: [
+      "video",
+      "frame",
+      "screenshot",
+      "timestamp",
+      "interval",
+      "mp4",
+      "webm",
+      "jpg",
+      "png",
+      "zip",
+    ],
+    locales: {
+      ar: {
+        name: "أداة استخراج إطارات الفيديو",
+        description:
+          "استخرج صورًا ثابتة من فيديو في أوقات محددة أو على فترات منتظمة. عاين الإطارات ونزّلها بصيغة JPG أو PNG، كل صورة على حدة أو كلها في ملف ZIP.",
+      },
+      de: {
+        name: "Video-Einzelbilder extrahieren",
+        description:
+          "Extrahiere Einzelbilder aus einem Video an bestimmten Zeitpunkten oder in regelmäßigen Abständen. Sieh dir die Bilder an und lade sie einzeln als JPG oder PNG oder gesammelt als ZIP herunter.",
+      },
+      en: {
+        name: "Video Frame Extractor",
+        description:
+          "Extract still images from a video at specific timestamps or regular intervals. Preview and download JPG or PNG frames individually or as a ZIP.",
+      },
+      es: {
+        name: "Extractor de fotogramas de video",
+        description:
+          "Extrae fotogramas de un video en marcas de tiempo específicas o a intervalos regulares. Previsualiza y descarga las imágenes JPG o PNG por separado o en un ZIP.",
+      },
+      fr: {
+        name: "Extracteur d’images vidéo",
+        description:
+          "Extrayez des images fixes d’une vidéo à des instants précis ou à intervalles réguliers. Prévisualisez les images JPG ou PNG et téléchargez-les à l’unité ou dans un ZIP.",
+      },
+      he: {
+        name: "חילוץ פריימים מווידאו",
+        description:
+          "חלצו תמונות מתוך סרטון בנקודות זמן מסוימות או במרווחי זמן קבועים. אפשר לצפות בתמונות ולהוריד אותן בנפרד כקובצי JPG או PNG, או יחד בקובץ ZIP.",
+      },
+      hi: {
+        name: "वीडियो फ़्रेम एक्सट्रैक्टर",
+        description:
+          "वीडियो में चुने हुए समय बिंदुओं या नियमित अंतराल पर स्थिर चित्र निकालें। JPG या PNG फ़्रेम देखें और उन्हें अलग-अलग या एक ZIP में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengekstrak Bingkai Video",
+        description:
+          "Ambil gambar diam dari video pada waktu tertentu atau dengan interval tetap. Pratinjau dan unduh bingkai JPG atau PNG satu per satu atau sekaligus sebagai ZIP.",
+      },
+      it: {
+        name: "Estrattore di fotogrammi video",
+        description:
+          "Estrai immagini da un video in punti specifici o a intervalli regolari. Visualizza in anteprima e scarica i fotogrammi in JPG o PNG, singolarmente o in un archivio ZIP.",
+      },
+      ja: {
+        name: "動画フレーム抽出",
+        description:
+          "動画から指定した再生時刻や一定の間隔で静止画を抽出します。JPG または PNG でプレビューし、個別または ZIP にまとめてダウンロードできます。",
+      },
+      ko: {
+        name: "동영상 프레임 추출기",
+        description:
+          "동영상의 특정 시점이나 일정한 간격에서 정지 이미지를 추출합니다. JPG 또는 PNG 프레임을 미리 보고 개별 파일이나 ZIP으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengekstrak Bingkai Video",
+        description:
+          "Ekstrak imej pegun daripada video pada cap masa tertentu atau pada selang tetap. Pratonton dan muat turun bingkai JPG atau PNG satu demi satu atau sebagai fail ZIP.",
+      },
+      nl: {
+        name: "Videoframes extraheren",
+        description:
+          "Haal stilstaande beelden uit een video op specifieke tijdstippen of met vaste tussenpozen. Bekijk de frames en download ze afzonderlijk als JPG of PNG, of samen als ZIP.",
+      },
+      no: {
+        name: "Stillbilder fra video",
+        description:
+          "Hent ut stillbilder fra en video på bestemte tidspunkter eller med jevne mellomrom. Se en forhåndsvisning og last ned JPG- eller PNG-bildene enkeltvis eller som en ZIP-fil.",
+      },
+      pl: {
+        name: "Wyodrębnianie klatek wideo",
+        description:
+          "Wyodrębniaj klatki wideo w wybranych momentach lub w regularnych odstępach. Wyświetl podgląd obrazów JPG lub PNG i pobierz je pojedynczo albo w archiwum ZIP.",
+      },
+      pt: {
+        name: "Extrator de quadros de vídeo",
+        description:
+          "Extraia imagens de um vídeo em momentos específicos ou em intervalos regulares. Pré-visualize os quadros em JPG ou PNG e baixe-os individualmente ou em um arquivo ZIP.",
+      },
+      ru: {
+        name: "Извлечение кадров из видео",
+        description:
+          "Извлекайте кадры из видео по отметкам времени или через равные интервалы. Просматривайте и скачивайте изображения JPG или PNG по одному или в ZIP-архиве.",
+      },
+      sv: {
+        name: "Extrahera bildrutor från video",
+        description:
+          "Extrahera stillbilder från en video vid valda tidpunkter eller med jämna mellanrum. Förhandsgranska och ladda ner JPG- eller PNG-bilder enskilt eller i en ZIP-fil.",
+      },
+      th: {
+        name: "เครื่องมือดึงเฟรมวิดีโอ",
+        description:
+          "ดึงภาพนิ่งจากวิดีโอตามเวลาที่ระบุหรือเป็นช่วงเวลาคงที่ ดูตัวอย่างและดาวน์โหลดภาพ JPG หรือ PNG ทีละภาพหรือรวมเป็นไฟล์ ZIP",
+      },
+      tr: {
+        name: "Videodan Kare Çıkarma",
+        description:
+          "Videodan belirli zamanlarda veya sabit aralıklarla kareler çıkarın. JPG veya PNG kareleri önizleyin, tek tek ya da ZIP olarak topluca indirin.",
+      },
+      vi: {
+        name: "Trình trích xuất khung hình từ video",
+        description:
+          "Trích xuất ảnh tĩnh từ video tại các mốc thời gian đã chọn hoặc theo khoảng cách đều. Xem trước và tải từng khung hình JPG hoặc PNG, hoặc tải tất cả dưới dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "视频截帧器",
+        description:
+          "按指定时间点或固定间隔从视频中提取画面，预览 JPG 或 PNG 图片，并逐张下载或打包为 ZIP。",
+      },
+      "zh-TW": {
+        name: "影片影格擷取器",
+        description:
+          "依指定時間點或固定間隔從影片擷取靜態圖片。可預覽 JPG 或 PNG 影格，並逐張下載或打包成 ZIP。",
       },
     },
   },

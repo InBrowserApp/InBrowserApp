@@ -1,4 +1,4 @@
 {
   "name": "SHA-256 Hash Metin veya Dosya",
-  "description": "Metin girişi veya dosya yükleme için SHA-256 hash oluşturun. Veri bütünlüğü doğrulaması ve güvenlik amaçları için güvenli kriptografik sağlama toplamları hesaplayın"
+  "description": "Dosyanın veya UTF-8 metninin SHA-256 sağlama toplamını tarayıcınızda hesaplayın. Hash değerini onaltılık, Base64, ondalık veya ikili biçimde kopyalayın."
 }

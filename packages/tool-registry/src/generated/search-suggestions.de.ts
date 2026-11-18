@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Literaturangaben konvertieren",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "BIC/SWIFT-Validator",
     slug: "bic-swift-validator",
   },
@@ -448,6 +453,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Gamepad-Test",
+    slug: "gamepad-tester",
+  },
+  {
+    category: "image",
+    name: "GIF-Ersteller",
+    slug: "gif-maker",
+  },
+  {
     category: "image",
     name: "GIF-zu-animiertem-WebP-Konverter",
     slug: "gif-to-animated-webp-converter",
@@ -536,6 +551,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Bilder zusammenfügen",
     slug: "image-combiner",
+  },
+  {
+    category: "image",
+    name: "Bildvergleich",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -674,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "JSON-zu-TypeScript-/Zod-Konverter",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "JSON → XML Konverter",
     slug: "json-to-xml-converter",
   },
@@ -706,6 +731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Keccak-Hash für Text oder Datei",
     slug: "keccak-hash-text-or-file",
+  },
+  {
+    category: "misc",
+    name: "Tastaturtest",
+    slug: "keyboard-tester",
   },
   {
     category: "developer",
@@ -1421,6 +1451,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID-Validator",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Video-Einzelbilder extrahieren",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

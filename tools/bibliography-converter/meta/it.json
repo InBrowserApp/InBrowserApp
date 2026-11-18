@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore di riferimenti bibliografici",
+  "description": "Converti i riferimenti tra BibTeX, RIS e CSL JSON e individua i possibili duplicati. Incolla il testo o apri un file per convertirlo nel browser."
+}

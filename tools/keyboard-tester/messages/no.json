@@ -1,0 +1,15 @@
+{
+  "start": "Start testen",
+  "reset": "Tilbakestill",
+  "layout": "ANSI-tastatur i full størrelse",
+  "ready": "Start testen og trykk på én tast eller hold flere nede samtidig, for eksempel Shift + A.",
+  "capturing": "Trykk på tastene du vil teste. Tab flytter fokus, og Esc avslutter registreringen.",
+  "held": "Holdt nede",
+  "tested": "Testet",
+  "peak": "Flest samtidig",
+  "combination": "Gjeldende tastekombinasjon",
+  "lastKey": "Siste tast",
+  "noneHeld": "Ingen taster holdes nede",
+  "scroll": "Bla sidelengs for å se hele tastaturet.",
+  "note": "Bildet viser hvor tastene sitter fysisk. For den siste tasten vises verdien fra tastaturoppsettet ditt og nettleserens tastekode. Enkelte systemsnarveier og maskinvaretaster som Fn når kanskje ikke nettleseren."
+}

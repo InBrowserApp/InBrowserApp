@@ -1,0 +1,4 @@
+{
+  "name": "Extractor de fotogramas de video",
+  "description": "Extrae fotogramas de un video en marcas de tiempo específicas o a intervalos regulares. Previsualiza y descarga las imágenes JPG o PNG por separado o en un ZIP."
+}

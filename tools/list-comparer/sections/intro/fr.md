@@ -1,11 +1,11 @@
-## À quoi sert ce comparateur ?
+## Comparer deux listes pour trouver les points communs et les différences
 
-Utilisez cet outil lorsque deux listes doivent être alignées, mais que vous devez voir le chevauchement exact, les exclusions et les doublons avant d’importer, de synchroniser, d’envoyer des messages ou de nettoyer quoi que ce soit.
+Collez les deux listes dans **Liste A** et **Liste B**. Utilisez un élément par ligne ou choisissez une virgule, une tabulation ou un séparateur personnalisé. Si le format diffère d’une source à l’autre, retirez les espaces aux extrémités ou activez la comparaison sans distinction de casse.
 
-## Ce dont vous bénéficiez
+## Lire les résultats de la comparaison
 
-Il décompose la comparaison en ensembles de résultats pratiques : éléments communs, uniquement dans A, uniquement dans B, toutes les valeurs uniques et les doublons au sein de chaque source. Vous pouvez copier ou télécharger chaque ensemble séparément.
+Si A contient `A101`, `B202`, `B202` et B contient `B202`, `C303`, alors **Éléments communs** contient `B202`, **Uniquement en A** contient `A101` et **Uniquement en B** contient `C303`. **Doublons dans A** indique que `B202` apparaît deux fois dans A. **Tous uniques** réunit les deux listes en affichant chaque élément une seule fois.
 
-## Là où cela est utile
+## Copier ou télécharger la liste qui vous intéresse
 
-C’est utile pour les listes de contacts, les identifiants de produits, les exportations d’audit, les instantanés d’inventaire, les segments de campagne et toute opération de nettoyage où une mauvaise fusion entraînerait un travail supplémentaire ultérieurement.
+Sélectionnez le résultat voulu, puis copiez ou téléchargez cette liste. Par exemple, comparez un inventaire source à un inventaire de destination et utilisez **Uniquement en A** pour obtenir les références produits manquantes dans le second.

@@ -1,0 +1,4 @@
+{
+  "name": "Penguji Gamepad",
+  "description": "Uji tombol, pemicu, dan stik gamepad secara langsung di browser. Lihat jarak tiap stik dari titik tengah saat dilepas untuk membantu mendeteksi drift stik."
+}

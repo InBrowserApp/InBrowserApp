@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "संदर्भ सूची कन्वर्टर",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "BIC/SWIFT सत्यापनकर्ता",
     slug: "bic-swift-validator",
   },
@@ -448,6 +453,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "गेमपैड टेस्टर",
+    slug: "gamepad-tester",
+  },
+  {
+    category: "image",
+    name: "GIF मेकर",
+    slug: "gif-maker",
+  },
+  {
     category: "image",
     name: "GIF से Animated WebP कन्वर्टर",
     slug: "gif-to-animated-webp-converter",
@@ -536,6 +551,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "इमेज कंबाइनर",
     slug: "image-combiner",
+  },
+  {
+    category: "image",
+    name: "इमेज तुलना टूल",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -674,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "JSON से TypeScript या Zod कन्वर्टर",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "JSON → XML परिवर्तक",
     slug: "json-to-xml-converter",
   },
@@ -706,6 +731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Keccak हैश टेक्स्ट या फ़ाइल",
     slug: "keccak-hash-text-or-file",
+  },
+  {
+    category: "misc",
+    name: "कीबोर्ड टेस्टर",
+    slug: "keyboard-tester",
   },
   {
     category: "developer",
@@ -1421,6 +1451,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID वैलिडेटर",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "वीडियो फ़्रेम एक्सट्रैक्टर",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

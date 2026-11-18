@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Kaynakça Dönüştürücüsü",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "BIC/SWIFT Doğrulayıcı",
     slug: "bic-swift-validator",
   },
@@ -448,6 +453,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Oyun Kumandası Testi",
+    slug: "gamepad-tester",
+  },
+  {
+    category: "image",
+    name: "GIF Oluşturucu",
+    slug: "gif-maker",
+  },
+  {
     category: "image",
     name: "GIF'ten Animasyonlu WebP'ye Dönüştürücü",
     slug: "gif-to-animated-webp-converter",
@@ -536,6 +551,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Görsel Birleştirici",
     slug: "image-combiner",
+  },
+  {
+    category: "image",
+    name: "Görüntü Karşılaştırma",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -674,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "JSON’dan TypeScript ve Zod’a Dönüştürücü",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "JSON → XML Dönüştürücü",
     slug: "json-to-xml-converter",
   },
@@ -706,6 +731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Keccak Hash Metin veya Dosya",
     slug: "keccak-hash-text-or-file",
+  },
+  {
+    category: "misc",
+    name: "Klavye Testi",
+    slug: "keyboard-tester",
   },
   {
     category: "developer",
@@ -1421,6 +1451,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID Doğrulayıcı",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Videodan Kare Çıkarma",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

@@ -1,0 +1,14 @@
+{
+  "inputLabel": "Wejście JSON",
+  "inputPlaceholder": "Wklej przykładową odpowiedź API…",
+  "sampleLabel": "Użyj przykładu",
+  "openFileLabel": "Otwórz plik JSON",
+  "fileReadError": "Nie udało się odczytać pliku. Spróbuj otworzyć go ponownie.",
+  "invalidJson": "Nieprawidłowy JSON. Sprawdź składnię i spróbuj ponownie.",
+  "outputLabel": "Wygenerowany kod",
+  "emptyOutput": "Podaj poprawny JSON, aby wygenerować kod.",
+  "copyLabel": "Kopiuj kod",
+  "copiedLabel": "Skopiowano",
+  "downloadLabel": "Pobierz .ts",
+  "zodHelp": "Podczas parsowania Zod 4 pomija w wyniku pola, których nie ma w schemacie."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Conversor de referencias bibliográficas",
+  "description": "Convierte referencias entre BibTeX, RIS y CSL JSON y detecta posibles duplicados. Pega texto o abre un archivo para convertirlo en tu navegador."
+}

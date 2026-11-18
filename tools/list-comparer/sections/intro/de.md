@@ -1,11 +1,11 @@
-## Wofür dieser Listenvergleich gedacht ist
+## Zwei Listen auf Übereinstimmungen und Unterschiede prüfen
 
-Verwende dieses Tool, wenn zwei Listen zusammenpassen sollen, du aber vor dem Import, Abgleich, Versand oder Bereinigen die genauen Überschneidungen, Ausschlüsse und Duplikate sehen möchtest.
+Fügen Sie die Listen in **Liste A** und **Liste B** ein. Verwenden Sie einen Eintrag pro Zeile oder wählen Sie Komma, Tabulator oder ein eigenes Trennzeichen. Wenn die Quellen unterschiedlich formatiert sind, aktivieren Sie bei Bedarf **Leerraum am Anfang und Ende jedes Eintrags entfernen** oder **Groß-/Kleinschreibung ignorieren**.
 
-## Was du erhältst
+## Die Vergleichsergebnisse lesen
 
-Der Vergleich wird in praktische Ergebnismengen aufgeteilt: gemeinsame Einträge, nur in A, nur in B, alle unterschiedlichen Werte und Duplikate in jeder Quelle. Du kannst jede Menge einzeln kopieren oder herunterladen.
+Enthält A die Einträge `A101`, `B202`, `B202` und B die Einträge `B202`, `C303`, dann zeigt **Gemeinsame Einträge** den Eintrag `B202`, **Nur in A** den Eintrag `A101` und **Nur in B** den Eintrag `C303`. **Duplikate in A** zeigt, dass `B202` in A zweimal vorkommt. **Alle unterschiedlichen Einträge** führt beide Listen zusammen und zeigt jeden Eintrag einmal.
 
-## Wo es besonders hilfreich ist
+## Das gewünschte Ergebnis kopieren oder herunterladen
 
-Es eignet sich für Kontaktlisten, Produkt-IDs, Prüfexporte, Inventarstände, Kampagnensegmente und alle Bereinigungen, bei denen ein fehlerhafter Abgleich später zusätzlichen Aufwand verursachen würde.
+Wählen Sie ein Ergebnis aus und kopieren Sie es oder laden Sie es herunter. Vergleichen Sie zum Beispiel den Quellbestand mit dem Zielbestand und wählen Sie **Nur in A**, um die Produkt-IDs zu erhalten, die im Ziel fehlen.

@@ -1,4 +1,4 @@
 {
   "name": "Generator ULA IPv6",
-  "description": "Generuj w przeglądarce bezpieczny prefiks /48 unikalnego adresu lokalnego IPv6 (ULA) zgodny z RFC 4193 i planuj jego podsieci fd00 /64."
+  "description": "Wygeneruj prefiks /48 unikalnego adresu lokalnego IPv6 (ULA) zgodny z RFC 4193 i oblicz podsieci /64 dla sieci domowej, laboratorium lub VPN."
 }

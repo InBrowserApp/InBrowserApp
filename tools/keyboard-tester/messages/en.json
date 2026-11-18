@@ -1,0 +1,15 @@
+{
+  "start": "Start test",
+  "reset": "Reset",
+  "layout": "Full-size ANSI keyboard",
+  "ready": "Start the test, then press one key or hold several together, such as Shift + A.",
+  "capturing": "Press keys to test them. Tab moves focus and Esc ends capture.",
+  "held": "Held",
+  "tested": "Tested",
+  "peak": "Peak held",
+  "combination": "Current combination",
+  "lastKey": "Last key",
+  "noneHeld": "No keys held",
+  "scroll": "Scroll sideways to see the full keyboard.",
+  "note": "The diagram shows physical key positions. The last key shows what your layout produces and the browser’s key code. Some system shortcuts and hardware keys, such as Fn, may never reach the browser."
+}

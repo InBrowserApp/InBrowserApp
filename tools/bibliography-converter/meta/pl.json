@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter bibliografii",
+  "description": "Konwertuj pozycje bibliograficzne między formatami BibTeX, RIS i CSL JSON oraz wykrywaj możliwe duplikaty. Wklej tekst lub otwórz plik, aby przekonwertować go w przeglądarce."
+}

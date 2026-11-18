@@ -1,4 +1,4 @@
 {
   "name": "SHA-256-hash tekst eller fil",
-  "description": "Generer SHA-256-hash for tekstinndata eller filopplasting. Beregn sikre kryptografiske sjekksummer for dataintegritetsverifisering og sikkerhetsformål"
+  "description": "Beregn SHA-256-sjekksummen for en fil eller UTF-8-tekst i nettleseren. Kopier hashen i heksadesimal, Base64, desimal eller binær form."
 }

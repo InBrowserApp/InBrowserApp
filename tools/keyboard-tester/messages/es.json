@@ -1,0 +1,15 @@
+{
+  "start": "Iniciar prueba",
+  "reset": "Restablecer",
+  "layout": "Teclado ANSI de tamaño completo",
+  "ready": "Inicia la prueba y pulsa una tecla o mantén varias pulsadas a la vez, como Shift + A.",
+  "capturing": "Pulsa las teclas para probarlas. Tab cambia el foco y Esc termina la captura.",
+  "held": "Pulsadas",
+  "tested": "Probadas",
+  "peak": "Máx. simultáneas",
+  "combination": "Combinación actual",
+  "lastKey": "Última tecla",
+  "noneHeld": "Ninguna tecla pulsada",
+  "scroll": "Desplázate horizontalmente para ver todo el teclado.",
+  "note": "El diagrama muestra la posición física de las teclas. En «Última tecla» verás el valor que produce la distribución de tu teclado y el código que detecta el navegador. Es posible que el navegador no reciba algunos atajos del sistema ni ciertas teclas, como Fn."
+}

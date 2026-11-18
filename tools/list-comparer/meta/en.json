@@ -1,4 +1,4 @@
 {
   "name": "List Comparer",
-  "description": "Compare two lists, surface overlap and exclusions, and export the exact set you need before a sync or cleanup."
+  "description": "Compare two lists to find shared items, entries only in A or B, and duplicates. Paste lines or delimited text, then copy or download the results."
 }

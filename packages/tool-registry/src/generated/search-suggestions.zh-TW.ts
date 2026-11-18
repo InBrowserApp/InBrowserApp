@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "參考文獻格式轉換器",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "BIC/SWIFT 驗證器",
     slug: "bic-swift-validator",
   },
@@ -448,6 +453,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "遊戲控制器測試器",
+    slug: "gamepad-tester",
+  },
+  {
+    category: "image",
+    name: "GIF 製作器",
+    slug: "gif-maker",
+  },
+  {
     category: "image",
     name: "GIF 轉動態 WebP 轉換器",
     slug: "gif-to-animated-webp-converter",
@@ -536,6 +551,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "圖片拼接器",
     slug: "image-combiner",
+  },
+  {
+    category: "image",
+    name: "圖片比對器",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -674,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "JSON 轉 TypeScript / Zod",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "JSON 轉 XML 轉換器",
     slug: "json-to-xml-converter",
   },
@@ -706,6 +731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Keccak 雜湊文字或檔案",
     slug: "keccak-hash-text-or-file",
+  },
+  {
+    category: "misc",
+    name: "鍵盤測試器",
+    slug: "keyboard-tester",
   },
   {
     category: "developer",
@@ -1421,6 +1451,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID 驗證器",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "影片影格擷取器",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

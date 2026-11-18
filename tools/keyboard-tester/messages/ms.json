@@ -1,0 +1,15 @@
+{
+  "start": "Mulakan ujian",
+  "reset": "Tetapkan semula",
+  "layout": "Papan kekunci ANSI bersaiz penuh",
+  "ready": "Mulakan ujian, kemudian tekan satu kekunci atau tahan beberapa kekunci serentak, seperti Shift + A.",
+  "capturing": "Tekan kekunci untuk mengujinya. Gunakan Tab untuk mengalih fokus atau Esc untuk menghentikan pengesanan input.",
+  "held": "Sedang ditahan",
+  "tested": "Sudah diuji",
+  "peak": "Terbanyak serentak",
+  "combination": "Gabungan semasa",
+  "lastKey": "Kekunci terakhir",
+  "noneHeld": "Tiada kekunci ditahan",
+  "scroll": "Tatal ke sisi untuk melihat seluruh papan kekunci.",
+  "note": "Rajah menunjukkan kedudukan fizikal setiap kekunci. Bahagian Kekunci terakhir memaparkan nilai mengikut susun atur yang anda gunakan dan kod kekunci yang diterima pelayar. Sesetengah pintasan sistem dan kekunci perkakasan, seperti Fn, mungkin tidak dikesan oleh pelayar."
+}

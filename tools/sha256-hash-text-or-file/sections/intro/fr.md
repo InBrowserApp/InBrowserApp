@@ -1,19 +1,9 @@
-## Qu'est-ce que SHA-256 ?
+## Calculer la somme de contrôle SHA-256 d’un texte ou d’un fichier
 
-SHA-256 (Algorithme de Hachage Sécurisé 256-bit) est une fonction de hachage cryptographique qui produit une valeur de hachage de 256 bits (32 octets), généralement rendue sous forme d'un nombre hexadécimal de 64 caractères. Il fait partie de la famille des fonctions de hachage SHA-2 conçues par la NSA et publiées par le NIST.
+Collez un texte UTF-8 ou sélectionnez **Importer depuis un fichier** pour hacher les octets d’origine du fichier. Copiez le résultat hexadécimal pour le comparer à une somme de contrôle publiée. SHA-256 produit une empreinte de 256 bits qui s’affiche sous la forme de 64 caractères hexadécimaux.
 
-**Caractéristiques clés :**
+Pour vérifier un téléchargement, calculez l’empreinte du fichier téléchargé et comparez la valeur hexadécimale dans son intégralité avec celle publiée par la source. Pour un texte, les espaces, les majuscules et les sauts de ligne modifient l’empreinte. Pour un essai rapide, le texte `abc` sans saut de ligne final donne l’empreinte suivante.
 
-- **Déterministe** : La même entrée produit toujours le même hachage
-- **Calcul rapide** : Rapide à calculer pour toute entrée donnée
-- **Effet d'avalanche** : De petits changements dans l'entrée produisent des sorties drastiquement différentes
-- **Irréversible** : Il est informatiquement impossible d'inverser le hachage pour trouver l'entrée originale
-- **Résistant aux collisions** : Très difficile de trouver deux entrées différentes qui produisent le même hachage
-
-**Utilisations courantes :**
-
-- Signatures numériques et certificats
-- Blockchain et cryptomonnaies (Bitcoin utilise SHA-256)
-- Stockage de mots de passe (avec salage approprié)
-- Vérification d'intégrité de fichiers
-- Algorithmes de preuve de travail
+```text
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+```

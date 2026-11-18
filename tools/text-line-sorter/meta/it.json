@@ -1,4 +1,4 @@
 {
   "name": "Ordinatore di righe di testo",
-  "description": "Ordina le righe di testo in ordine crescente o decrescente, con opzioni per ignorare maiuscole e minuscole, eliminare gli spazi iniziali e finali e rimuovere righe vuote e duplicate."
+  "description": "Ordina le righe di testo dalla A alla Z o dalla Z alla A. Ignora maiuscole e minuscole, elimina gli spazi ai bordi delle righe e rimuovi righe vuote o duplicate."
 }

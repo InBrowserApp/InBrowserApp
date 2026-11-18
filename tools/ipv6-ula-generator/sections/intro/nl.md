@@ -1,23 +1,15 @@
-## Wat is een IPv6 Unique Local Address?
+## Een IPv6 ULA /48-prefix genereren
 
-Een IPv6 Unique Local Address (ULA) is bedoeld voor communicatie binnen sites, privénetwerken en onderling verbonden organisaties. De volledige ULA-ruimte is `fc00::/7`. De achtste bit is de **L-bit**: de waarde `1` selecteert het lokaal toegewezen bereik `fd00::/8` dat deze generator gebruikt, terwijl de helft `fc00::/8` gereserveerd blijft voor een andere toewijzingsmethode.
+Kopieer het gegenereerde `fd`-prefix voor je thuisnetwerk, testomgeving of VPN. Sla het gekozen `/48` op bij je netwerkconfiguratie, zodat je het kunt hergebruiken als je subnetten toevoegt. Kies **Nieuw prefix genereren** als je een nieuw prefix nodig hebt.
 
-ULA's zijn standaard niet wereldwijd bereikbaar, maar ‘lokaal’ betekent niet geheim of automatisch veilig. Ze kunnen gerouteerde sitegrenzen, VPN's en private interconnecties doorkruisen wanneer beheerders die routes configureren.
+## Een /64-subnet berekenen
 
-## Hoe deze RFC 4193-generator een /48 opbouwt
+Vul een hexadecimale **Subnet-ID** in van `0000` tot en met `ffff`. Zo levert ID `00a0` binnen `fd12:3456:789a::/48` het subnet `fd12:3456:789a:a0::/64` op. Een `/48` biedt 65.536 mogelijke `/64`-subnetten. Zo kun je aparte prefixen toewijzen aan bijvoorbeeld je LAN, gastwifi of VPN.
 
-Deze RFC 4193-generator vraagt de Web Crypto API om precies 40 willekeurige bits en combineert die met `fd`. Het resultaat is een statistisch uniek 48-bits siteprefix, zoals `fd12:3456:789a::/48`. De generatie blijft in de browser: er wordt geen MAC-adres, tijdstempel, apparaat-ID of serverrespons verzameld.
+## Waar komt het fd-prefix vandaan?
 
-Er zijn `2^40` mogelijke Global ID's — ongeveer 1,1 biljoen. Veilige willekeur maakt onbedoeld hergebruik onwaarschijnlijk, maar kan niet garanderen dat twee onafhankelijk gegenereerde prefixen nooit botsen. Leg de gekozen `/48` vast in je netwerkdocumentatie en hergebruik deze consequent.
+RFC 4193 definieert Unique Local Addresses binnen `fc00::/7`. De helft voor lokale toewijzing, `fd00::/8`, begint met `fd`. De generator voegt een willekeurige Global ID van 40 bits toe via de Web Crypto API van je browser en maakt zo het `/48`.
 
-## De 65.536 beschikbare /64-subnetten plannen
+## Wanneer gebruik je een Unique Local Address?
 
-Na het `/48`-siteprefix volgt een 16-bits Subnet-ID. Waarden van `0000` tot en met `ffff` leveren 65.536 mogelijke `/64`-netwerken op. Zo verandert Subnet-ID `00a0` het prefix `fd12:3456:789a::/48` in het canonieke netwerk `fd12:3456:789a:a0::/64`.
-
-De overige 64 bits vormen de Interface-ID. Deze tool plant alleen netwerkprefixen; de tool genereert geen `/128`-hostadressen en leidt geen interface-ID's af van MAC-adressen.
-
-## Waar ULA's thuishoren — en waar niet
-
-ULA's zijn geschikt voor stabiele interne adressering, via VPN verbonden sites, labnetwerken en diensten die een intern prefix moeten behouden en tegelijk globale unicast-IPv6-adressen gebruiken. Ze zijn geen firewall of inherente beveiligingsgrens. Pas normale toegangscontroles toe, filter ongepast ULA-verkeer aan sitegrenzen en houd interne ULA-records uit openbare DNS.
-
-Een host kan tegelijk een ULA en een globaal unicastadres gebruiken. Gebruik het globale adres voor internetbereikbaarheid en het duurzame ULA-prefix voor de private routes die dit nodig hebben.
+Gebruik een ULA voor stabiele IPv6-adressen binnen een netwerk of tussen locaties die via een VPN zijn verbonden. Een apparaat kan tegelijk een globaal IPv6-adres gebruiken voor openbaar internetverkeer en zijn ULA behouden voor interne diensten.

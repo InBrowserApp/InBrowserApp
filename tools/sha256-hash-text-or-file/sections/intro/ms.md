@@ -1,19 +1,9 @@
-## Apakah SHA-256?
+## Kira checksum SHA-256 untuk teks atau fail
 
-SHA-256 (Secure Hash Algorithm 256-bit) adalah fungsi hash kriptografi yang menghasilkan nilai hash 256-bit (32-byte), biasanya dipaparkan sebagai nombor heksadesimal 64 aksara. Ia adalah sebahagian daripada keluarga fungsi hash SHA-2 yang direka oleh NSA dan diterbitkan oleh NIST.
+Tampal teks UTF-8 atau pilih **Import dari fail** untuk mengira hash daripada bait asal fail. Salin hasil heksadesimal untuk dibandingkan dengan checksum yang diterbitkan. SHA-256 menghasilkan hash 256 bit yang dipaparkan sebagai 64 aksara heksadesimal.
 
-**Ciri-ciri utama:**
+Untuk menyemak muat turun, kira hash fail yang dimuat turun dan bandingkan keseluruhan nilai heksadesimal dengan nilai yang diterbitkan oleh sumber. Untuk teks, ruang, penggunaan huruf besar atau kecil, dan pemisah baris mengubah hash. Sebagai ujian ringkas, teks `abc` tanpa pemisah baris di hujung menghasilkan hash berikut.
 
-- **Deterministik**: Input yang sama sentiasa menghasilkan hash yang sama
-- **Pengiraan pantas**: Pantas dikira untuk sebarang input yang diberikan
-- **Kesan runtuhan salji**: Perubahan kecil dalam input menghasilkan output yang sangat berbeza
-- **Tidak boleh dibalik**: Mustahil secara pengiraan untuk membalikkan hash untuk mencari input asal
-- **Tahan perlanggaran**: Sangat sukar untuk mencari dua input berbeza yang menghasilkan hash yang sama
-
-**Kegunaan biasa:**
-
-- Tandatangan digital dan sijil
-- Blockchain dan mata wang kripto (Bitcoin menggunakan SHA-256)
-- Penyimpanan kata laluan (dengan penggaraman yang sesuai)
-- Pengesahan integriti fail
-- Algoritma bukti kerja
+```text
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+```

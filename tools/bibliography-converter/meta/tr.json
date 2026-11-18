@@ -1,0 +1,4 @@
+{
+  "name": "Kaynakça Dönüştürücüsü",
+  "description": "Kaynakça kayıtlarını BibTeX, RIS ve CSL JSON biçimleri arasında dönüştürün ve olası yinelenen kayıtları bulun. Tarayıcınızda dönüştürmek için metni yapıştırın veya bir dosya açın."
+}

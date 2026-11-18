@@ -1,19 +1,9 @@
-## Apa itu SHA-256?
+## Menghitung checksum SHA-256 untuk teks atau file
 
-SHA-256 (Secure Hash Algorithm 256-bit) adalah fungsi hash kriptografi yang menghasilkan nilai hash 256-bit (32-byte), biasanya ditampilkan sebagai angka heksadesimal 64 karakter. Ini adalah bagian dari keluarga fungsi hash SHA-2 yang dirancang oleh NSA dan diterbitkan oleh NIST.
+Tempel teks UTF-8 atau pilih **Impor dari file** untuk membuat hash dari bita asli file. Salin hasil heksadesimal untuk dibandingkan dengan checksum yang dipublikasikan. SHA-256 menghasilkan ringkasan 256 bit yang ditampilkan sebagai 64 karakter heksadesimal.
 
-**Karakteristik utama:**
+Untuk memeriksa unduhan, hitung hash file yang diunduh dan bandingkan seluruh nilai heksadesimalnya dengan nilai yang dipublikasikan oleh sumber. Untuk teks, spasi, huruf besar/kecil, dan pemisah baris memengaruhi hasil hash. Sebagai uji cepat, teks `abc` tanpa pemisah baris di akhir menghasilkan:
 
-- **Deterministik**: Input yang sama selalu menghasilkan hash yang sama
-- **Komputasi cepat**: Cepat dihitung untuk input apa pun
-- **Efek longsor**: Perubahan kecil pada input menghasilkan output yang sangat berbeda
-- **Tidak dapat dibalik**: Secara komputasi tidak mungkin membalik hash untuk menemukan input asli
-- **Tahan collision**: Sangat sulit menemukan dua input berbeda yang menghasilkan hash yang sama
-
-**Penggunaan umum:**
-
-- Tanda tangan digital dan sertifikat
-- Blockchain dan cryptocurrency (Bitcoin menggunakan SHA-256)
-- Penyimpanan kata sandi (dengan salting yang tepat)
-- Verifikasi integritas file
-- Algoritma proof-of-work
+```text
+ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+```

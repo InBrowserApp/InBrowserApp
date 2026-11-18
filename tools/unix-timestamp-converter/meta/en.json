@@ -1,4 +1,4 @@
 {
   "name": "Unix Timestamp Converter",
-  "description": "Convert Unix timestamps to human-readable dates and vice versa. Supports auto-detection of seconds, milliseconds, and nanoseconds."
+  "description": "Convert Unix epoch timestamps to local time, UTC, or ISO 8601, and convert dates back to seconds, milliseconds, or nanoseconds."
 }

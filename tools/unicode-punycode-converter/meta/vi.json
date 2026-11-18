@@ -1,4 +1,4 @@
 {
   "name": "Bộ chuyển đổi Unicode ↔ Punycode",
-  "description": "Chuyển đổi tên miền Unicode (IDN) và ASCII (Punycode) hai chiều"
+  "description": "Mã hóa tên miền Unicode sang Punycode ASCII hoặc giải mã tên miền xn-- về dạng dễ đọc. Chuyển đổi hai chiều tên miền quốc tế hóa (IDN)."
 }

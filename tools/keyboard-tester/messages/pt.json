@@ -1,0 +1,15 @@
+{
+  "start": "Iniciar teste",
+  "reset": "Redefinir",
+  "layout": "Teclado ANSI de tamanho completo",
+  "ready": "Inicie o teste e pressione uma tecla ou mantenha várias pressionadas ao mesmo tempo, como Shift + A.",
+  "capturing": "Pressione as teclas para testá-las. Tab muda o foco e Esc encerra a captura.",
+  "held": "Pressionadas",
+  "tested": "Testadas",
+  "peak": "Máx. simultâneas",
+  "combination": "Combinação atual",
+  "lastKey": "Última tecla",
+  "noneHeld": "Nenhuma tecla pressionada",
+  "scroll": "Role para os lados para ver todo o teclado.",
+  "note": "O diagrama mostra a posição física das teclas. Em “Última tecla”, você vê o valor gerado pelo layout do seu teclado e o código detectado pelo navegador. Alguns atalhos do sistema e algumas teclas, como Fn, podem não chegar ao navegador."
+}

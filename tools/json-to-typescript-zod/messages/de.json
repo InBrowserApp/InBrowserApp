@@ -1,0 +1,14 @@
+{
+  "inputLabel": "JSON-Eingabe",
+  "inputPlaceholder": "Beispiel einer API-Antwort einfügen…",
+  "sampleLabel": "Beispiel verwenden",
+  "openFileLabel": "JSON-Datei öffnen",
+  "fileReadError": "Die Datei konnte nicht gelesen werden. Versuche, sie erneut zu öffnen.",
+  "invalidJson": "Ungültiges JSON. Prüfe die Syntax und versuche es erneut.",
+  "outputLabel": "Generierter Code",
+  "emptyOutput": "Gib gültiges JSON ein, um Code zu generieren.",
+  "copyLabel": "Code kopieren",
+  "copiedLabel": "Kopiert",
+  "downloadLabel": ".ts herunterladen",
+  "zodHelp": "Beim Parsen entfernt das Zod-4-Schema alle Felder, die es nicht definiert."
+}

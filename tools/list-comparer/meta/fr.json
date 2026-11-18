@@ -1,4 +1,4 @@
 {
   "name": "Comparateur de listes",
-  "description": "Comparez deux listes, identifiez les chevauchements et les exclusions, puis exportez l’ensemble exact dont vous avez besoin avant une synchronisation ou un nettoyage."
+  "description": "Comparez deux listes pour trouver les éléments communs, les entrées propres à A ou à B et les doublons. Collez vos listes, puis copiez ou téléchargez le résultat."
 }

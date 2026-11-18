@@ -1,4 +1,4 @@
 {
   "name": "Penukar Cap Masa Unix",
-  "description": "Tukar cap masa Unix kepada tarikh yang boleh dibaca dan sebaliknya. Menyokong pengesanan automatik saat, milisaat dan nanosaat."
+  "description": "Tukar cap masa epok Unix kepada waktu tempatan, UTC atau ISO 8601, dan tukar tarikh kepada cap masa dalam saat, milisaat atau nanosaat."
 }

@@ -1,4 +1,4 @@
 {
   "name": "Trình so sánh danh sách",
-  "description": "So sánh hai danh sách, tìm phần giao nhau và các mục bị loại, rồi xuất đúng tập bạn cần trước khi đồng bộ hoặc dọn dẹp."
+  "description": "So sánh hai danh sách để tìm mục chung, mục chỉ có trong A hoặc B và mục trùng lặp. Dán dữ liệu theo dòng hoặc dấu phân cách, rồi sao chép hay tải kết quả."
 }

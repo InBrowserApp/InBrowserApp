@@ -1,4 +1,4 @@
 {
   "name": "Unicode ↔ Punycode Dönüştürücü",
-  "description": "Unicode (IDN) ve ASCII (Punycode) alan adlarını çift yönlü dönüştürün"
+  "description": "Uluslararası alan adlarını (IDN) Unicode'dan ASCII Punycode'a dönüştürün veya xn-- ile başlayan alan adlarını okunur metne çevirin."
 }

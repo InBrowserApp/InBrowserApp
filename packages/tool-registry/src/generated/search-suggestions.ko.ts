@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "참고문헌 형식 변환기",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "BIC/SWIFT 검증기",
     slug: "bic-swift-validator",
   },
@@ -448,6 +453,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "게임패드 테스터",
+    slug: "gamepad-tester",
+  },
+  {
+    category: "image",
+    name: "GIF 만들기",
+    slug: "gif-maker",
+  },
+  {
     category: "image",
     name: "GIF to Animated WebP 변환기",
     slug: "gif-to-animated-webp-converter",
@@ -536,6 +551,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "이미지 합치기",
     slug: "image-combiner",
+  },
+  {
+    category: "image",
+    name: "이미지 비교",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -674,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "JSON → TypeScript / Zod 변환기",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "JSON → XML 변환기",
     slug: "json-to-xml-converter",
   },
@@ -706,6 +731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Keccak 해시 텍스트 또는 파일",
     slug: "keccak-hash-text-or-file",
+  },
+  {
+    category: "misc",
+    name: "키보드 테스터",
+    slug: "keyboard-tester",
   },
   {
     category: "developer",
@@ -1421,6 +1451,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID 검증기",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "동영상 프레임 추출기",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

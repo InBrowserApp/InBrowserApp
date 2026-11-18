@@ -1,4 +1,4 @@
 {
   "name": "Tri des lignes de texte",
-  "description": "Triez les lignes de texte par ordre croissant ou décroissant, avec des options pour ignorer la casse, supprimer les espaces en début et fin de ligne, les lignes vides et les doublons."
+  "description": "Triez des lignes de texte de A à Z ou de Z à A. Ignorez la casse et supprimez les espaces superflus, les lignes vides ou les doublons avant de copier le résultat."
 }

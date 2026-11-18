@@ -1,4 +1,4 @@
 {
   "name": "Unicode ↔ Punycode 변환기",
-  "description": "Unicode(IDN)와 ASCII(Punycode) 도메인을 양방향으로 변환"
+  "description": "유니코드 도메인을 ASCII Punycode로 인코딩하거나 xn-- 도메인을 읽기 쉬운 문자로 디코딩하세요. 국제화 도메인 이름(IDN)을 양방향으로 변환할 수 있습니다."
 }

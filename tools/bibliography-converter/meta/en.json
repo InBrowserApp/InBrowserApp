@@ -1,0 +1,4 @@
+{
+  "name": "Bibliography Converter",
+  "description": "Convert references between BibTeX, RIS, and CSL JSON, and find possible duplicate entries. Paste text or open a file to convert it in your browser."
+}

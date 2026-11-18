@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Referenskonverterare",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "BIC/SWIFT-validerare",
     slug: "bic-swift-validator",
   },
@@ -448,6 +453,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Test av handkontroll",
+    slug: "gamepad-tester",
+  },
+  {
+    category: "image",
+    name: "GIF-skapare",
+    slug: "gif-maker",
+  },
+  {
     category: "image",
     name: "GIF till animerad WebP-konverterare",
     slug: "gif-to-animated-webp-converter",
@@ -536,6 +551,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Slå ihop bilder",
     slug: "image-combiner",
+  },
+  {
+    category: "image",
+    name: "Bildjämförelse",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -674,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "JSON till TypeScript / Zod",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "JSON → XML-omvandlare",
     slug: "json-to-xml-converter",
   },
@@ -706,6 +731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Keccak-hash text eller fil",
     slug: "keccak-hash-text-or-file",
+  },
+  {
+    category: "misc",
+    name: "Tangentbordstest",
+    slug: "keyboard-tester",
   },
   {
     category: "developer",
@@ -1421,6 +1451,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID-validator",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Extrahera bildrutor från video",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

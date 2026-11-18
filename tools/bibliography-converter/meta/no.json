@@ -1,0 +1,4 @@
+{
+  "name": "Referansekonverterer",
+  "description": "Konverter referanser mellom BibTeX, RIS og CSL JSON, og finn mulige duplikater. Lim inn tekst eller åpne en fil for å konvertere den i nettleseren."
+}

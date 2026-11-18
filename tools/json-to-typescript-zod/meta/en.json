@@ -1,0 +1,4 @@
+{
+  "name": "JSON to TypeScript / Zod",
+  "description": "Generate TypeScript types or a Zod 4 validation schema from a sample JSON API response."
+}

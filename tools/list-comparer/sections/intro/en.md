@@ -1,11 +1,11 @@
-## What this comparer is for
+## Compare two lists for matches and differences
 
-Use this tool when two lists should line up, but you need to see the exact overlap, exclusions, and duplicates before you import, sync, message, or clean anything.
+Paste the two lists into **List A** and **List B**. Use one item per line, or choose a comma, tab, or custom delimiter. Turn on trimming or case-insensitive matching if formatting varies between the sources.
 
-## What you get back
+## Read the comparison results
 
-It breaks the comparison into practical result sets: shared items, only-in-A, only-in-B, all unique values, and duplicates inside each source. You can copy or download each set separately.
+If A contains `A101`, `B202`, `B202` and B contains `B202`, `C303`, then **Shared** contains `B202`, **Only in A** contains `A101`, and **Only in B** contains `C303`. **A duplicates** shows that `B202` occurs twice in A. **All unique** combines both lists with each item shown once.
 
-## Where it helps most
+## Copy or download the list you need
 
-It is useful for contact lists, product IDs, audit exports, inventory snapshots, campaign segments, and any cleanup pass where one bad merge would create extra work later.
+Select a result set, then copy or download just that list. For example, compare a source inventory against a destination inventory and use **Only in A** to get the product IDs missing from the destination.

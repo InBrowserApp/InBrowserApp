@@ -1,4 +1,4 @@
 {
   "name": "Unicode ↔ Punycode 轉換器",
-  "description": "雙向轉換 Unicode（IDN）與 ASCII（Punycode）網域"
+  "description": "將 Unicode 網域名稱編碼為 ASCII Punycode，或將 xn-- 網域解碼為可讀文字。支援國際化網域名稱（IDN）雙向轉換。"
 }

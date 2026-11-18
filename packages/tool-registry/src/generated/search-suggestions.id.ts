@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Konverter Format Referensi",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "Validator BIC/SWIFT",
     slug: "bic-swift-validator",
   },
@@ -448,6 +453,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Penguji Gamepad",
+    slug: "gamepad-tester",
+  },
+  {
+    category: "image",
+    name: "Pembuat GIF",
+    slug: "gif-maker",
+  },
+  {
     category: "image",
     name: "Konverter GIF ke WebP Animasi",
     slug: "gif-to-animated-webp-converter",
@@ -536,6 +551,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Penggabung Gambar",
     slug: "image-combiner",
+  },
+  {
+    category: "image",
+    name: "Pembanding Gambar",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -674,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "Konverter JSON ke TypeScript / Zod",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "Pengonversi JSON → XML",
     slug: "json-to-xml-converter",
   },
@@ -706,6 +731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Hash Keccak Teks atau File",
     slug: "keccak-hash-text-or-file",
+  },
+  {
+    category: "misc",
+    name: "Tes Keyboard",
+    slug: "keyboard-tester",
   },
   {
     category: "developer",
@@ -1421,6 +1451,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Validator UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Pengekstrak Bingkai Video",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

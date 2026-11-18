@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Bibliography Converter",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "BIC/SWIFT Validator",
     slug: "bic-swift-validator",
   },
@@ -448,6 +453,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Gamepad Tester",
+    slug: "gamepad-tester",
+  },
+  {
+    category: "image",
+    name: "GIF Maker",
+    slug: "gif-maker",
+  },
+  {
     category: "image",
     name: "GIF to Animated WebP Converter",
     slug: "gif-to-animated-webp-converter",
@@ -536,6 +551,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Image Combiner",
     slug: "image-combiner",
+  },
+  {
+    category: "image",
+    name: "Image Comparator",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -674,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "JSON to TypeScript / Zod",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "JSON → XML Converter",
     slug: "json-to-xml-converter",
   },
@@ -706,6 +731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Keccak Hash Text or File",
     slug: "keccak-hash-text-or-file",
+  },
+  {
+    category: "misc",
+    name: "Keyboard Tester",
+    slug: "keyboard-tester",
   },
   {
     category: "developer",
@@ -1421,6 +1451,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "UUID Validator",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Video Frame Extractor",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

@@ -1,0 +1,14 @@
+{
+  "inputLabel": "קלט JSON",
+  "inputPlaceholder": "הדביקו תגובת API לדוגמה…",
+  "sampleLabel": "שימוש בדוגמה",
+  "openFileLabel": "פתיחת קובץ JSON",
+  "fileReadError": "לא ניתן לקרוא את הקובץ. נסו לפתוח אותו שוב.",
+  "invalidJson": "ה-JSON לא תקין. בדקו את התחביר ונסו שוב.",
+  "outputLabel": "הקוד שנוצר",
+  "emptyOutput": "הזינו JSON תקין כדי ליצור קוד.",
+  "copyLabel": "העתקת קוד",
+  "copiedLabel": "הועתק",
+  "downloadLabel": "הורדת \u2066.ts\u2069",
+  "zodHelp": "בעת ניתוח הנתונים, סכמת Zod 4 משמיטה שדות שאינם מוגדרים בה."
+}

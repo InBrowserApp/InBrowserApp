@@ -1,4 +1,4 @@
 {
   "name": "Porównywanie list",
-  "description": "Porównuj dwie listy, sprawdzaj ich część wspólną i różnice oraz eksportuj potrzebny zbiór przed synchronizacją lub porządkowaniem."
+  "description": "Porównaj dwie listy, aby znaleźć wspólne pozycje, różnice i duplikaty. Wklej tekst w wierszach lub z separatorem, a potem skopiuj albo pobierz wynik."
 }

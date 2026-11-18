@@ -1,4 +1,4 @@
 {
   "name": "Unicode ↔ Punycode‑konverter",
-  "description": "Konverter Unicode‑ (IDN) og ASCII‑ (Punycode) domener begge veier"
+  "description": "Konverter Unicode-domenenavn til ASCII i Punycode-format, eller gjør xn--domener lesbare igjen. Konverter internasjonaliserte domenenavn (IDN) begge veier."
 }

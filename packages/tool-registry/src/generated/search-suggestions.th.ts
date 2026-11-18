@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "เครื่องมือแปลงรูปแบบรายการอ้างอิง",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "ตัวตรวจสอบ BIC/SWIFT",
     slug: "bic-swift-validator",
   },
@@ -448,6 +453,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "ทดสอบจอยเกม",
+    slug: "gamepad-tester",
+  },
+  {
+    category: "image",
+    name: "เครื่องมือสร้าง GIF",
+    slug: "gif-maker",
+  },
+  {
     category: "image",
     name: "ตัวแปลง GIF เป็น WebP แบบเคลื่อนไหว",
     slug: "gif-to-animated-webp-converter",
@@ -536,6 +551,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "เครื่องมือรวมรูปภาพ",
     slug: "image-combiner",
+  },
+  {
+    category: "image",
+    name: "เครื่องมือเปรียบเทียบรูปภาพ",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -674,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "ตัวแปลง JSON เป็น TypeScript / Zod",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "ตัวแปลง JSON → XML",
     slug: "json-to-xml-converter",
   },
@@ -706,6 +731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "แฮช Keccak ข้อความหรือไฟล์",
     slug: "keccak-hash-text-or-file",
+  },
+  {
+    category: "misc",
+    name: "เครื่องมือทดสอบแป้นพิมพ์",
+    slug: "keyboard-tester",
   },
   {
     category: "developer",
@@ -1421,6 +1451,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "ตัวตรวจสอบ UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "เครื่องมือดึงเฟรมวิดีโอ",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",

@@ -1,0 +1,4 @@
+{
+  "name": "Prueba de mandos",
+  "description": "Prueba en tiempo real los botones, gatillos y palancas de tu mando desde el navegador. Comprueba a qué distancia del centro queda cada palanca al soltarla para detectar posibles desvíos (drift)."
+}

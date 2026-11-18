@@ -1,19 +1,12 @@
 ---
 import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import UnicodePunycodeConverterClient from "./client"
 
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
-
-type UnicodePunycodeMessagesCatalog = Readonly<{
-  asciiDomainLabel: string
-  unicodeDomainLabel: string
-  whatIsPunycodeTitle: string
-  whatIsPunycodeDescription: string
-  copyLabel: string
-  copiedLabel: string
-  resetLabel: string
-}>
+import type { UnicodePunycodeMessages } from "./client"
 
 interface Props {
   lang: string
@@ -25,13 +18,19 @@ const meta = resolveLocale<ToolMeta>(
   import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
   lang
 )!
-const localizedMessages = resolveLocale<UnicodePunycodeMessagesCatalog>(
+const messages = resolveLocale<UnicodePunycodeMessages>(
   import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
   lang
 )!
-const messages = { meta, ...localizedMessages }
+const IntroSection = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.md", { eager: true, import: "default" }),
+  lang
+)!
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <UnicodePunycodeConverterClient client:load messages={messages} />
+  <ToolArticle>
+    <IntroSection />
+  </ToolArticle>
 </ToolPageShell>

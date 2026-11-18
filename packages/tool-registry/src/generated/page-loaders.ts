@@ -36,6 +36,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "bcrypt-hash-password": () => import("@tool/bcrypt-hash-password/page"),
   "bcrypt-hash-password-verifier": () =>
     import("@tool/bcrypt-hash-password-verifier/page"),
+  "bibliography-converter": () => import("@tool/bibliography-converter/page"),
   "bic-swift-validator": () => import("@tool/bic-swift-validator/page"),
   "bip39-mnemonic-generator": () =>
     import("@tool/bip39-mnemonic-generator/page"),
@@ -116,6 +117,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/file-to-data-uri-converter/page"),
   "file-type-detector": () => import("@tool/file-type-detector/page"),
   "font-subset-generator": () => import("@tool/font-subset-generator/page"),
+  "gamepad-tester": () => import("@tool/gamepad-tester/page"),
+  "gif-maker": () => import("@tool/gif-maker/page"),
   "gif-to-animated-webp-converter": () =>
     import("@tool/gif-to-animated-webp-converter/page"),
   "gif-to-apng-converter": () => import("@tool/gif-to-apng-converter/page"),
@@ -138,6 +141,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "iban-validator": () => import("@tool/iban-validator/page"),
   "ical-event-generator": () => import("@tool/ical-event-generator/page"),
   "image-combiner": () => import("@tool/image-combiner/page"),
+  "image-comparator": () => import("@tool/image-comparator/page"),
   "image-cropper": () => import("@tool/image-cropper/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
   "image-palette-extractor": () => import("@tool/image-palette-extractor/page"),
@@ -167,6 +171,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "json-schema-validator": () => import("@tool/json-schema-validator/page"),
   "json-to-csv-converter": () => import("@tool/json-to-csv-converter/page"),
   "json-to-toml-converter": () => import("@tool/json-to-toml-converter/page"),
+  "json-to-typescript-zod": () => import("@tool/json-to-typescript-zod/page"),
   "json-to-xml-converter": () => import("@tool/json-to-xml-converter/page"),
   "json-to-yaml-converter": () => import("@tool/json-to-yaml-converter/page"),
   "jsonpath-tester": () => import("@tool/jsonpath-tester/page"),
@@ -175,6 +180,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "jwt-signer": () => import("@tool/jwt-signer/page"),
   "keccak-hash-text-or-file": () =>
     import("@tool/keccak-hash-text-or-file/page"),
+  "keyboard-tester": () => import("@tool/keyboard-tester/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
   "latex-previewer": () => import("@tool/latex-previewer/page"),
   "legacy-motorola-system-key-generator": () =>
@@ -359,6 +365,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "uuid-v6-generator": () => import("@tool/uuid-v6-generator/page"),
   "uuid-v7-generator": () => import("@tool/uuid-v7-generator/page"),
   "uuid-validator": () => import("@tool/uuid-validator/page"),
+  "video-frame-extractor": () => import("@tool/video-frame-extractor/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),

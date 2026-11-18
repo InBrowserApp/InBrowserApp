@@ -1,0 +1,4 @@
+{
+  "name": "Bibliografieconverter",
+  "description": "Converteer referenties tussen BibTeX, RIS en CSL JSON en spoor mogelijke dubbele vermeldingen op. Plak tekst of open een bestand om het in je browser te converteren."
+}

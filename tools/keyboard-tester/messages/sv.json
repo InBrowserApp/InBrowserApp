@@ -1,0 +1,15 @@
+{
+  "start": "Starta testet",
+  "reset": "Återställ",
+  "layout": "Fullstort ANSI-tangentbord",
+  "ready": "Starta testet och tryck på en tangent eller håll ned flera samtidigt, till exempel Shift + A.",
+  "capturing": "Tryck på tangenterna du vill testa. Tab flyttar fokus och Esc avslutar registreringen.",
+  "held": "Nedtryckta",
+  "tested": "Testade",
+  "peak": "Flest samtidigt",
+  "combination": "Aktuell tangentkombination",
+  "lastKey": "Senaste tangent",
+  "noneHeld": "Inga tangenter nedtryckta",
+  "scroll": "Rulla i sidled för att se hela tangentbordet.",
+  "note": "Bilden visar tangenternas fysiska placering. För den senaste tangenten visas värdet från din tangentbordslayout och webbläsarens tangentkod. Vissa systemgenvägar och hårdvarutangenter som Fn kanske aldrig når webbläsaren."
+}

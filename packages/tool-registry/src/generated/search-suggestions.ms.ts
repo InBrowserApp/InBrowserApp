@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Penukar Format Rujukan",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "Pengesah BIC/SWIFT",
     slug: "bic-swift-validator",
   },
@@ -448,6 +453,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "Penguji Alat Kawalan Permainan",
+    slug: "gamepad-tester",
+  },
+  {
+    category: "image",
+    name: "Pembuat GIF",
+    slug: "gif-maker",
+  },
+  {
     category: "image",
     name: "Penukar GIF kepada WebP Beranimasi",
     slug: "gif-to-animated-webp-converter",
@@ -536,6 +551,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "image",
     name: "Penggabung Imej",
     slug: "image-combiner",
+  },
+  {
+    category: "image",
+    name: "Pembanding Imej",
+    slug: "image-comparator",
   },
   {
     category: "image",
@@ -674,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "Penukar JSON kepada TypeScript / Zod",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "Penukar JSON → XML",
     slug: "json-to-xml-converter",
   },
@@ -706,6 +731,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "crypto",
     name: "Hash Keccak Teks atau Fail",
     slug: "keccak-hash-text-or-file",
+  },
+  {
+    category: "misc",
+    name: "Penguji Papan Kekunci",
+    slug: "keyboard-tester",
   },
   {
     category: "developer",
@@ -1421,6 +1451,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "developer",
     name: "Pengesah UUID",
     slug: "uuid-validator",
+  },
+  {
+    category: "image",
+    name: "Pengekstrak Bingkai Video",
+    slug: "video-frame-extractor",
   },
   {
     category: "text",
