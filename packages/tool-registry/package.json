@@ -290,6 +290,7 @@
     "@tool/uuid-v6-generator": "workspace:*",
     "@tool/uuid-v7-generator": "workspace:*",
     "@tool/uuid-validator": "workspace:*",
+    "@tool/video-frame-extractor": "workspace:*",
     "@tool/vin-validator": "workspace:*",
     "@tool/whirlpool-hash-text-or-file": "workspace:*",
     "@tool/xls-to-xlsx-converter": "workspace:*",

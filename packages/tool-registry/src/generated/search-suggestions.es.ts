@@ -1418,6 +1418,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "image",
+    name: "Extractor de fotogramas de video",
+    slug: "video-frame-extractor",
+  },
+  {
     category: "text",
     name: "Validador de VIN",
     slug: "vin-validator",

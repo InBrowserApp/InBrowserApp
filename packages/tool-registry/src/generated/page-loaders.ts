@@ -358,6 +358,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "uuid-v6-generator": () => import("@tool/uuid-v6-generator/page"),
   "uuid-v7-generator": () => import("@tool/uuid-v7-generator/page"),
   "uuid-validator": () => import("@tool/uuid-validator/page"),
+  "video-frame-extractor": () => import("@tool/video-frame-extractor/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),
