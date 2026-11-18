@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur de références bibliographiques",
+  "description": "Convertissez vos références entre BibTeX, RIS et CSL JSON et repérez les doublons possibles. Collez du texte ou ouvrez un fichier pour le convertir dans votre navigateur."
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi tài liệu tham khảo",
+  "description": "Chuyển đổi tài liệu tham khảo giữa BibTeX, RIS và CSL JSON, đồng thời tìm các mục có thể trùng lặp. Dán văn bản hoặc mở tệp để chuyển đổi ngay trong trình duyệt."
+}

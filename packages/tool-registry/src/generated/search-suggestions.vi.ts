@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "Trình chuyển đổi tài liệu tham khảo",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "Trình xác thực BIC/SWIFT",
     slug: "bic-swift-validator",
   },

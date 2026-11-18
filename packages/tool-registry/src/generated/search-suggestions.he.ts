@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "ממיר רשומות ביבליוגרפיות",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "מאמת BIC/SWIFT",
     slug: "bic-swift-validator",
   },

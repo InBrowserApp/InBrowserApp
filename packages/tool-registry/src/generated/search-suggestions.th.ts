@@ -139,6 +139,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "text",
+    name: "เครื่องมือแปลงรูปแบบรายการอ้างอิง",
+    slug: "bibliography-converter",
+  },
+  {
+    category: "text",
     name: "ตัวตรวจสอบ BIC/SWIFT",
     slug: "bic-swift-validator",
   },
