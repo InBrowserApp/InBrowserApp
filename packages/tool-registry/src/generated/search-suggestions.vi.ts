@@ -549,6 +549,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Công cụ ghép ảnh",
+    slug: "image-combiner",
+  },
+  {
+    category: "image",
     name: "So sánh ảnh",
     slug: "image-comparator",
   },

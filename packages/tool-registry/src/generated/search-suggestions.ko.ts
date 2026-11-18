@@ -549,6 +549,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "이미지 합치기",
+    slug: "image-combiner",
+  },
+  {
+    category: "image",
     name: "이미지 비교",
     slug: "image-comparator",
   },

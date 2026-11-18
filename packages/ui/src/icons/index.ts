@@ -82,6 +82,7 @@ export {
   RefreshCcw,
   RectangleHorizontal,
   Ruler,
+  Rows2,
   ScanLine,
   Search,
   Scissors,

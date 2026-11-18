@@ -10030,6 +10030,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-combiner",
+    language: "ar",
+  },
+  {
+    slug: "image-combiner",
+    language: "de",
+  },
+  {
+    slug: "image-combiner",
+    language: "en",
+  },
+  {
+    slug: "image-combiner",
+    language: "es",
+  },
+  {
+    slug: "image-combiner",
+    language: "fr",
+  },
+  {
+    slug: "image-combiner",
+    language: "he",
+  },
+  {
+    slug: "image-combiner",
+    language: "hi",
+  },
+  {
+    slug: "image-combiner",
+    language: "id",
+  },
+  {
+    slug: "image-combiner",
+    language: "it",
+  },
+  {
+    slug: "image-combiner",
+    language: "ja",
+  },
+  {
+    slug: "image-combiner",
+    language: "ko",
+  },
+  {
+    slug: "image-combiner",
+    language: "ms",
+  },
+  {
+    slug: "image-combiner",
+    language: "nl",
+  },
+  {
+    slug: "image-combiner",
+    language: "no",
+  },
+  {
+    slug: "image-combiner",
+    language: "pl",
+  },
+  {
+    slug: "image-combiner",
+    language: "pt",
+  },
+  {
+    slug: "image-combiner",
+    language: "ru",
+  },
+  {
+    slug: "image-combiner",
+    language: "sv",
+  },
+  {
+    slug: "image-combiner",
+    language: "th",
+  },
+  {
+    slug: "image-combiner",
+    language: "tr",
+  },
+  {
+    slug: "image-combiner",
+    language: "vi",
+  },
+  {
+    slug: "image-combiner",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-combiner",
+    language: "zh-TW",
+  },
+  {
     slug: "image-comparator",
     language: "ar",
   },

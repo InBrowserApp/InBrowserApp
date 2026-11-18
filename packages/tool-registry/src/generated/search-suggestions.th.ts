@@ -549,6 +549,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "เครื่องมือรวมรูปภาพ",
+    slug: "image-combiner",
+  },
+  {
+    category: "image",
     name: "เครื่องมือเปรียบเทียบรูปภาพ",
     slug: "image-comparator",
   },

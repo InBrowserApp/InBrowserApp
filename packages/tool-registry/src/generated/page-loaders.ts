@@ -140,6 +140,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "hwp-viewer": () => import("@tool/hwp-viewer/page"),
   "iban-validator": () => import("@tool/iban-validator/page"),
   "ical-event-generator": () => import("@tool/ical-event-generator/page"),
+  "image-combiner": () => import("@tool/image-combiner/page"),
   "image-comparator": () => import("@tool/image-comparator/page"),
   "image-cropper": () => import("@tool/image-cropper/page"),
   "image-metadata-cleaner": () => import("@tool/image-metadata-cleaner/page"),
