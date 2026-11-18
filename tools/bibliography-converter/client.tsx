@@ -231,6 +231,7 @@ export default function Client({
             </span>
             <div className="flex flex-wrap justify-end gap-2">
               <ToolCopyButton
+                key={result ? "result" : "empty"}
                 size="default"
                 value={result?.output ?? ""}
                 copyLabel={m.copy}

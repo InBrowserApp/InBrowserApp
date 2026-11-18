@@ -65,6 +65,7 @@ describe("Bibliography Converter", () => {
 
     fireEvent.change(target, { target: { value: "json" } })
     expect(output.value).toBe("")
+    expect(screen.queryByText(messages.copied)).toBeNull()
     expect(screen.queryByText(messages.duplicates)).toBeNull()
     fireEvent.click(convert)
     await screen.findByText("Entries: 3")
