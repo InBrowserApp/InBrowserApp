@@ -78,7 +78,10 @@ it("reads multiple images in order, reports a bad file, and releases removed sou
   upload()
   upload(wide, broken, tall, empty)
 
-  expect(await screen.findByText("wide.png")).toBeTruthy()
+  await waitFor(() =>
+    expect([composite().width, composite().height]).toEqual([268, 120])
+  )
+  expect(screen.getByText("wide.png")).toBeTruthy()
   expect(
     screen.getByText(messages.unreadable.replace("{name}", broken.name))
   ).toBeTruthy()
@@ -88,7 +91,6 @@ it("reads multiple images in order, reports a bad file, and releases removed sou
       .slice(-2)
       .map((item) => item.querySelector("bdi")?.textContent)
   ).toEqual([wide.name, tall.name])
-  expect([composite().width, composite().height]).toEqual([268, 120])
   expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:local/broken.png/1")
   expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:local/empty.svg/3")
 
