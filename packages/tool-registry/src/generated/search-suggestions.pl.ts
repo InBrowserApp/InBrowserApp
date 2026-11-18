@@ -1423,6 +1423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "image",
+    name: "Wyodrębnianie klatek wideo",
+    slug: "video-frame-extractor",
+  },
+  {
     category: "text",
     name: "Walidator VIN",
     slug: "vin-validator",

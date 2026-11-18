@@ -1423,6 +1423,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "image",
+    name: "Pengekstrak Bingkai Video",
+    slug: "video-frame-extractor",
+  },
+  {
     category: "text",
     name: "Pengesah VIN",
     slug: "vin-validator",

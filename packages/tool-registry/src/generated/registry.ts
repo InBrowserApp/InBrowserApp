@@ -35883,6 +35883,140 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "video-frame-extractor",
+    category: "image",
+    icon: "film",
+    tags: [
+      "video",
+      "frame",
+      "screenshot",
+      "timestamp",
+      "interval",
+      "mp4",
+      "webm",
+      "jpg",
+      "png",
+      "zip",
+    ],
+    locales: {
+      ar: {
+        name: "أداة استخراج إطارات الفيديو",
+        description:
+          "استخرج صورًا ثابتة من فيديو في أوقات محددة أو على فترات منتظمة. عاين الإطارات ونزّلها بصيغة JPG أو PNG، كل صورة على حدة أو كلها في ملف ZIP.",
+      },
+      de: {
+        name: "Video-Einzelbilder extrahieren",
+        description:
+          "Extrahiere Einzelbilder aus einem Video an bestimmten Zeitpunkten oder in regelmäßigen Abständen. Sieh dir die Bilder an und lade sie einzeln als JPG oder PNG oder gesammelt als ZIP herunter.",
+      },
+      en: {
+        name: "Video Frame Extractor",
+        description:
+          "Extract still images from a video at specific timestamps or regular intervals. Preview and download JPG or PNG frames individually or as a ZIP.",
+      },
+      es: {
+        name: "Extractor de fotogramas de video",
+        description:
+          "Extrae fotogramas de un video en marcas de tiempo específicas o a intervalos regulares. Previsualiza y descarga las imágenes JPG o PNG por separado o en un ZIP.",
+      },
+      fr: {
+        name: "Extracteur d’images vidéo",
+        description:
+          "Extrayez des images fixes d’une vidéo à des instants précis ou à intervalles réguliers. Prévisualisez les images JPG ou PNG et téléchargez-les à l’unité ou dans un ZIP.",
+      },
+      he: {
+        name: "חילוץ פריימים מווידאו",
+        description:
+          "חלצו תמונות מתוך סרטון בנקודות זמן מסוימות או במרווחי זמן קבועים. אפשר לצפות בתמונות ולהוריד אותן בנפרד כקובצי JPG או PNG, או יחד בקובץ ZIP.",
+      },
+      hi: {
+        name: "वीडियो फ़्रेम एक्सट्रैक्टर",
+        description:
+          "वीडियो में चुने हुए समय बिंदुओं या नियमित अंतराल पर स्थिर चित्र निकालें। JPG या PNG फ़्रेम देखें और उन्हें अलग-अलग या एक ZIP में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengekstrak Bingkai Video",
+        description:
+          "Ambil gambar diam dari video pada waktu tertentu atau dengan interval tetap. Pratinjau dan unduh bingkai JPG atau PNG satu per satu atau sekaligus sebagai ZIP.",
+      },
+      it: {
+        name: "Estrattore di fotogrammi video",
+        description:
+          "Estrai immagini da un video in punti specifici o a intervalli regolari. Visualizza in anteprima e scarica i fotogrammi in JPG o PNG, singolarmente o in un archivio ZIP.",
+      },
+      ja: {
+        name: "動画フレーム抽出",
+        description:
+          "動画から指定した再生時刻や一定の間隔で静止画を抽出します。JPG または PNG でプレビューし、個別または ZIP にまとめてダウンロードできます。",
+      },
+      ko: {
+        name: "동영상 프레임 추출기",
+        description:
+          "동영상의 특정 시점이나 일정한 간격에서 정지 이미지를 추출합니다. JPG 또는 PNG 프레임을 미리 보고 개별 파일이나 ZIP으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengekstrak Bingkai Video",
+        description:
+          "Ekstrak imej pegun daripada video pada cap masa tertentu atau pada selang tetap. Pratonton dan muat turun bingkai JPG atau PNG satu demi satu atau sebagai fail ZIP.",
+      },
+      nl: {
+        name: "Videoframes extraheren",
+        description:
+          "Haal stilstaande beelden uit een video op specifieke tijdstippen of met vaste tussenpozen. Bekijk de frames en download ze afzonderlijk als JPG of PNG, of samen als ZIP.",
+      },
+      no: {
+        name: "Stillbilder fra video",
+        description:
+          "Hent ut stillbilder fra en video på bestemte tidspunkter eller med jevne mellomrom. Se en forhåndsvisning og last ned JPG- eller PNG-bildene enkeltvis eller som en ZIP-fil.",
+      },
+      pl: {
+        name: "Wyodrębnianie klatek wideo",
+        description:
+          "Wyodrębniaj klatki wideo w wybranych momentach lub w regularnych odstępach. Wyświetl podgląd obrazów JPG lub PNG i pobierz je pojedynczo albo w archiwum ZIP.",
+      },
+      pt: {
+        name: "Extrator de quadros de vídeo",
+        description:
+          "Extraia imagens de um vídeo em momentos específicos ou em intervalos regulares. Pré-visualize os quadros em JPG ou PNG e baixe-os individualmente ou em um arquivo ZIP.",
+      },
+      ru: {
+        name: "Извлечение кадров из видео",
+        description:
+          "Извлекайте кадры из видео по отметкам времени или через равные интервалы. Просматривайте и скачивайте изображения JPG или PNG по одному или в ZIP-архиве.",
+      },
+      sv: {
+        name: "Extrahera bildrutor från video",
+        description:
+          "Extrahera stillbilder från en video vid valda tidpunkter eller med jämna mellanrum. Förhandsgranska och ladda ner JPG- eller PNG-bilder enskilt eller i en ZIP-fil.",
+      },
+      th: {
+        name: "เครื่องมือดึงเฟรมวิดีโอ",
+        description:
+          "ดึงภาพนิ่งจากวิดีโอตามเวลาที่ระบุหรือเป็นช่วงเวลาคงที่ ดูตัวอย่างและดาวน์โหลดภาพ JPG หรือ PNG ทีละภาพหรือรวมเป็นไฟล์ ZIP",
+      },
+      tr: {
+        name: "Videodan Kare Çıkarma",
+        description:
+          "Videodan belirli zamanlarda veya sabit aralıklarla kareler çıkarın. JPG veya PNG kareleri önizleyin, tek tek ya da ZIP olarak topluca indirin.",
+      },
+      vi: {
+        name: "Trình trích xuất khung hình từ video",
+        description:
+          "Trích xuất ảnh tĩnh từ video tại các mốc thời gian đã chọn hoặc theo khoảng cách đều. Xem trước và tải từng khung hình JPG hoặc PNG, hoặc tải tất cả dưới dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "视频截帧器",
+        description:
+          "按指定时间点或固定间隔从视频中提取画面，预览 JPG 或 PNG 图片，并逐张下载或打包为 ZIP。",
+      },
+      "zh-TW": {
+        name: "影片影格擷取器",
+        description:
+          "依指定時間點或固定間隔從影片擷取靜態圖片。可預覽 JPG 或 PNG 影格，並逐張下載或打包成 ZIP。",
+      },
+    },
+  },
+  {
     slug: "vin-validator",
     category: "text",
     icon: "car",
@@ -73416,6 +73550,140 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "UUID 驗證器",
         description:
           "驗證 UUID 字串、檢查其版本與變體，並確認識別碼使用符合 RFC 的標準格式。",
+      },
+    },
+  },
+  "video-frame-extractor": {
+    slug: "video-frame-extractor",
+    category: "image",
+    icon: "film",
+    tags: [
+      "video",
+      "frame",
+      "screenshot",
+      "timestamp",
+      "interval",
+      "mp4",
+      "webm",
+      "jpg",
+      "png",
+      "zip",
+    ],
+    locales: {
+      ar: {
+        name: "أداة استخراج إطارات الفيديو",
+        description:
+          "استخرج صورًا ثابتة من فيديو في أوقات محددة أو على فترات منتظمة. عاين الإطارات ونزّلها بصيغة JPG أو PNG، كل صورة على حدة أو كلها في ملف ZIP.",
+      },
+      de: {
+        name: "Video-Einzelbilder extrahieren",
+        description:
+          "Extrahiere Einzelbilder aus einem Video an bestimmten Zeitpunkten oder in regelmäßigen Abständen. Sieh dir die Bilder an und lade sie einzeln als JPG oder PNG oder gesammelt als ZIP herunter.",
+      },
+      en: {
+        name: "Video Frame Extractor",
+        description:
+          "Extract still images from a video at specific timestamps or regular intervals. Preview and download JPG or PNG frames individually or as a ZIP.",
+      },
+      es: {
+        name: "Extractor de fotogramas de video",
+        description:
+          "Extrae fotogramas de un video en marcas de tiempo específicas o a intervalos regulares. Previsualiza y descarga las imágenes JPG o PNG por separado o en un ZIP.",
+      },
+      fr: {
+        name: "Extracteur d’images vidéo",
+        description:
+          "Extrayez des images fixes d’une vidéo à des instants précis ou à intervalles réguliers. Prévisualisez les images JPG ou PNG et téléchargez-les à l’unité ou dans un ZIP.",
+      },
+      he: {
+        name: "חילוץ פריימים מווידאו",
+        description:
+          "חלצו תמונות מתוך סרטון בנקודות זמן מסוימות או במרווחי זמן קבועים. אפשר לצפות בתמונות ולהוריד אותן בנפרד כקובצי JPG או PNG, או יחד בקובץ ZIP.",
+      },
+      hi: {
+        name: "वीडियो फ़्रेम एक्सट्रैक्टर",
+        description:
+          "वीडियो में चुने हुए समय बिंदुओं या नियमित अंतराल पर स्थिर चित्र निकालें। JPG या PNG फ़्रेम देखें और उन्हें अलग-अलग या एक ZIP में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pengekstrak Bingkai Video",
+        description:
+          "Ambil gambar diam dari video pada waktu tertentu atau dengan interval tetap. Pratinjau dan unduh bingkai JPG atau PNG satu per satu atau sekaligus sebagai ZIP.",
+      },
+      it: {
+        name: "Estrattore di fotogrammi video",
+        description:
+          "Estrai immagini da un video in punti specifici o a intervalli regolari. Visualizza in anteprima e scarica i fotogrammi in JPG o PNG, singolarmente o in un archivio ZIP.",
+      },
+      ja: {
+        name: "動画フレーム抽出",
+        description:
+          "動画から指定した再生時刻や一定の間隔で静止画を抽出します。JPG または PNG でプレビューし、個別または ZIP にまとめてダウンロードできます。",
+      },
+      ko: {
+        name: "동영상 프레임 추출기",
+        description:
+          "동영상의 특정 시점이나 일정한 간격에서 정지 이미지를 추출합니다. JPG 또는 PNG 프레임을 미리 보고 개별 파일이나 ZIP으로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pengekstrak Bingkai Video",
+        description:
+          "Ekstrak imej pegun daripada video pada cap masa tertentu atau pada selang tetap. Pratonton dan muat turun bingkai JPG atau PNG satu demi satu atau sebagai fail ZIP.",
+      },
+      nl: {
+        name: "Videoframes extraheren",
+        description:
+          "Haal stilstaande beelden uit een video op specifieke tijdstippen of met vaste tussenpozen. Bekijk de frames en download ze afzonderlijk als JPG of PNG, of samen als ZIP.",
+      },
+      no: {
+        name: "Stillbilder fra video",
+        description:
+          "Hent ut stillbilder fra en video på bestemte tidspunkter eller med jevne mellomrom. Se en forhåndsvisning og last ned JPG- eller PNG-bildene enkeltvis eller som en ZIP-fil.",
+      },
+      pl: {
+        name: "Wyodrębnianie klatek wideo",
+        description:
+          "Wyodrębniaj klatki wideo w wybranych momentach lub w regularnych odstępach. Wyświetl podgląd obrazów JPG lub PNG i pobierz je pojedynczo albo w archiwum ZIP.",
+      },
+      pt: {
+        name: "Extrator de quadros de vídeo",
+        description:
+          "Extraia imagens de um vídeo em momentos específicos ou em intervalos regulares. Pré-visualize os quadros em JPG ou PNG e baixe-os individualmente ou em um arquivo ZIP.",
+      },
+      ru: {
+        name: "Извлечение кадров из видео",
+        description:
+          "Извлекайте кадры из видео по отметкам времени или через равные интервалы. Просматривайте и скачивайте изображения JPG или PNG по одному или в ZIP-архиве.",
+      },
+      sv: {
+        name: "Extrahera bildrutor från video",
+        description:
+          "Extrahera stillbilder från en video vid valda tidpunkter eller med jämna mellanrum. Förhandsgranska och ladda ner JPG- eller PNG-bilder enskilt eller i en ZIP-fil.",
+      },
+      th: {
+        name: "เครื่องมือดึงเฟรมวิดีโอ",
+        description:
+          "ดึงภาพนิ่งจากวิดีโอตามเวลาที่ระบุหรือเป็นช่วงเวลาคงที่ ดูตัวอย่างและดาวน์โหลดภาพ JPG หรือ PNG ทีละภาพหรือรวมเป็นไฟล์ ZIP",
+      },
+      tr: {
+        name: "Videodan Kare Çıkarma",
+        description:
+          "Videodan belirli zamanlarda veya sabit aralıklarla kareler çıkarın. JPG veya PNG kareleri önizleyin, tek tek ya da ZIP olarak topluca indirin.",
+      },
+      vi: {
+        name: "Trình trích xuất khung hình từ video",
+        description:
+          "Trích xuất ảnh tĩnh từ video tại các mốc thời gian đã chọn hoặc theo khoảng cách đều. Xem trước và tải từng khung hình JPG hoặc PNG, hoặc tải tất cả dưới dạng ZIP.",
+      },
+      "zh-CN": {
+        name: "视频截帧器",
+        description:
+          "按指定时间点或固定间隔从视频中提取画面，预览 JPG 或 PNG 图片，并逐张下载或打包为 ZIP。",
+      },
+      "zh-TW": {
+        name: "影片影格擷取器",
+        description:
+          "依指定時間點或固定間隔從影片擷取靜態圖片。可預覽 JPG 或 PNG 影格，並逐張下載或打包成 ZIP。",
       },
     },
   },

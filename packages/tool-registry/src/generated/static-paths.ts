@@ -26130,6 +26130,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "video-frame-extractor",
+    language: "ar",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "de",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "en",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "es",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "fr",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "he",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "hi",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "id",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "it",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "ja",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "ko",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "ms",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "nl",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "no",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "pl",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "pt",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "ru",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "sv",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "th",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "tr",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "vi",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "zh-CN",
+  },
+  {
+    slug: "video-frame-extractor",
+    language: "zh-TW",
+  },
+  {
     slug: "vin-validator",
     language: "ar",
   },

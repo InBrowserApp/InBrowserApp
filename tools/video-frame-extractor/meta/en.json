@@ -1,0 +1,4 @@
+{
+  "name": "Video Frame Extractor",
+  "description": "Extract still images from a video at specific timestamps or regular intervals. Preview and download JPG or PNG frames individually or as a ZIP."
+}
