@@ -80,6 +80,7 @@ export function TimingFields({
             <Input
               id="frame-interval"
               type="number"
+              className="min-h-11 sm:min-h-0"
               inputMode="decimal"
               min="0.001"
               step="0.001"
@@ -98,6 +99,7 @@ export function TimingFields({
               <Input
                 id="frame-start"
                 type="number"
+                className="min-h-11 sm:min-h-0"
                 inputMode="decimal"
                 min="0"
                 step="0.001"
@@ -115,6 +117,7 @@ export function TimingFields({
               <Input
                 id="frame-end"
                 type="number"
+                className="min-h-11 sm:min-h-0"
                 inputMode="decimal"
                 min="0"
                 step="0.001"

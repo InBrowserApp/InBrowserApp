@@ -77,7 +77,7 @@ export default function VideoFrameExtractor({
                   className="size-5 shrink-0 text-muted-foreground"
                   aria-hidden="true"
                 />
-                <p className="min-w-0 flex-1 basis-36 font-medium break-all">
+                <p className="min-w-0 flex-1 basis-24 font-medium break-all">
                   <bdi>{source.file.name}</bdi>
                 </p>
                 <Button
@@ -92,6 +92,8 @@ export default function VideoFrameExtractor({
             ) : (
               <button
                 type="button"
+                aria-labelledby="frame-picker-label"
+                aria-describedby="frame-picker-hint frame-picker-formats"
                 className="flex min-h-48 w-full cursor-pointer flex-col items-center justify-center gap-2 rounded-lg px-4 py-6 text-center hover:bg-muted/50 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                 onClick={() => input.current?.click()}
               >
@@ -99,11 +101,19 @@ export default function VideoFrameExtractor({
                   className="mb-1 size-7 text-muted-foreground"
                   aria-hidden="true"
                 />
-                <span className="font-medium">{m.chooseVideo}</span>
-                <span className="text-sm text-muted-foreground">
+                <span id="frame-picker-label" className="font-medium">
+                  {m.chooseVideo}
+                </span>
+                <span
+                  id="frame-picker-hint"
+                  className="text-sm text-muted-foreground"
+                >
                   {m.dropHint}
                 </span>
-                <span className="text-xs text-muted-foreground">
+                <span
+                  id="frame-picker-formats"
+                  className="text-xs text-muted-foreground"
+                >
                   {m.formats}
                 </span>
               </button>

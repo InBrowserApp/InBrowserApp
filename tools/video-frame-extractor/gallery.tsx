@@ -5,6 +5,7 @@ import {
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
 import { Download, FileArchive } from "@workspace/ui/icons"
+import { cn } from "@workspace/ui/lib/utils"
 import { formatTime } from "./core/timeline"
 import { createZip } from "./zip"
 import type { Frame, Messages } from "./types"
@@ -12,11 +13,13 @@ import type { Frame, Messages } from "./types"
 export function Gallery({
   frames,
   basename,
+  portrait,
   messages: m,
   language,
 }: {
   frames: Frame[]
   basename: string
+  portrait: boolean
   messages: Messages
   language: string
 }) {
@@ -64,7 +67,7 @@ export function Gallery({
     <ToolPanelCard>
       <ToolPanelCardContent className="gap-4">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <h2 aria-live="polite" className="font-semibold">
+          <h2 className="font-semibold">
             {m.results}{" "}
             <span className="ms-1 text-sm font-normal text-muted-foreground">
               ({new Intl.NumberFormat(language).format(frames.length)})
@@ -100,7 +103,10 @@ export function Gallery({
                     alt={m.frameAlt.replace("{time}", time)}
                     loading="lazy"
                     decoding="async"
-                    className="aspect-video w-full bg-muted object-contain"
+                    className={cn(
+                      "w-full bg-muted object-contain",
+                      portrait ? "aspect-[4/3]" : "aspect-video"
+                    )}
                   />
                   <div className="flex min-w-0 items-center justify-between gap-1 px-2 py-1">
                     <bdi className="font-mono text-xs tabular-nums">{time}</bdi>

@@ -21,7 +21,7 @@
   "cancel": "Batalkan",
   "frameCount": "Bingkai yang akan diekstrak: {count}",
   "progress": "Mengekstrak bingkai: {done} / {total}",
-  "timestampError": "Masukkan waktu yang valid mulai dari 0 hingga sebelum video berakhir ({duration}).",
+  "timestampError": "Masukkan waktu yang valid mulai dari 0 hingga akhir video ({duration}).",
   "intervalError": "Masukkan interval lebih dari 0 serta waktu mulai dan akhir dalam durasi video ({duration}). Waktu akhir harus setelah waktu mulai.",
   "limitError": "Pilih paling banyak {limit} bingkai sekali proses. Perbesar interval, persingkat rentang, atau kurangi jumlah waktu yang dimasukkan.",
   "extractError": "Bingkai tidak dapat diekstrak. Coba waktu lain atau video lain.",

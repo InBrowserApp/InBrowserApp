@@ -6,6 +6,7 @@ import {
   ToolPanelCardContent,
 } from "@workspace/ui/components/tool/tool-panel-card"
 import { Film } from "@workspace/ui/icons"
+import { cn } from "@workspace/ui/lib/utils"
 import { FRAME_LIMIT, formatTime, planFrames } from "./core/timeline"
 import { extractFrames, videoBasename } from "./extract"
 import { Gallery } from "./gallery"
@@ -38,6 +39,7 @@ export function Workspace({
     height: number
   }>()
   const duration = metadata?.duration
+  const portrait = Boolean(metadata && metadata.height > metadata.width)
   const [videoError, setVideoError] = useState(false)
   const [timing, setTiming] = useState(initialTiming)
   const [format, setFormat] = useState<ImageFormat>("image/jpeg")
@@ -111,11 +113,11 @@ export function Workspace({
             playsInline
             preload="auto"
             aria-label={source.file.name}
-            className={
-              videoError
-                ? "hidden"
-                : "aspect-video max-h-[55vh] w-full rounded-xl bg-black object-contain"
-            }
+            className={cn(
+              "max-h-[55vh] w-full rounded-xl bg-black object-contain",
+              portrait ? "aspect-[4/3]" : "aspect-video",
+              videoError && "hidden"
+            )}
             onLoadedData={(event) => {
               const element = event.currentTarget
               if (
@@ -267,10 +269,14 @@ export function Workspace({
           </ToolPanelCard>
         )}
       </div>
+      <p role="status" className="sr-only">
+        {frames.length > 0 && `${m.results} (${number.format(frames.length)})`}
+      </p>
       {frames.length > 0 && (
         <Gallery
           frames={frames}
           basename={basename}
+          portrait={portrait}
           messages={m}
           language={language}
         />

@@ -80,7 +80,7 @@ it("previews, captures, names, and downloads frames and ZIP from one tool", asyn
   fireEvent.click(screen.getByRole("button", { name: /Choose a video/ }))
   expect(picker).toHaveBeenCalledOnce()
   choose()
-  expect(screen.getByRole("status").textContent).toBe(m.loading)
+  expect(screen.getByText(m.loading).getAttribute("role")).toBe("status")
   ready(video()).currentTime = 2
   fireEvent.click(screen.getByRole("button", { name: m.useCurrentTime }))
   expect(screen.getByText("Frames to extract: 2")).toBeTruthy()

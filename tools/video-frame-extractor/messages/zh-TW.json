@@ -21,7 +21,7 @@
   "cancel": "取消",
   "frameCount": "預計擷取 {count} 張",
   "progress": "正在擷取影格：{done} / {total}",
-  "timestampError": "請輸入有效的時間點，從 0 到影片結尾（{duration}）之前。",
+  "timestampError": "請輸入從 0 秒到影片結尾（{duration}）之間的有效時間點。",
   "intervalError": "請輸入大於 0 的間隔，並將開始和結束時間設在影片範圍內（{duration}）。結束時間須晚於開始時間。",
   "limitError": "每批最多擷取 {limit} 張。請拉長間隔、縮短時間範圍，或減少指定的時間點。",
   "extractError": "無法擷取影格。請試試其他時間點或影片。",
