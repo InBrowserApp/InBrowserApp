@@ -129,7 +129,7 @@ function Keyboard({ held, tested }: KeyboardProps) {
           gridColumn: width === 2 ? "span 2" : undefined,
           gridRow: tall ? "span 2" : undefined,
         }}
-        className="relative flex min-w-0 basis-0 items-center justify-center rounded-md border border-border bg-background font-mono text-[11px] font-medium select-none data-[state=held]:translate-y-px data-[state=held]:border-primary data-[state=held]:bg-primary data-[state=held]:text-primary-foreground data-[state=tested]:border-primary/40 data-[state=tested]:bg-primary/10"
+        className="relative flex min-w-0 basis-0 items-center justify-center rounded-md border border-border bg-background font-mono text-[11px] font-medium whitespace-nowrap select-none data-[state=held]:translate-y-px data-[state=held]:border-primary data-[state=held]:bg-primary data-[state=held]:text-primary-foreground data-[state=tested]:border-primary/40 data-[state=tested]:bg-primary/10"
       >
         {label}
         {wasTested && !isHeld ? (

@@ -1,6 +1,6 @@
 {
   "start": "Test starten",
-  "reset": "Opnieuw instellen",
+  "reset": "Resetten",
   "layout": "Volledig ANSI-toetsenbord",
   "ready": "Start de test en druk op één toets of op meerdere tegelijk, bijvoorbeeld Shift + A.",
   "capturing": "Druk op de toetsen die je wilt testen. Met Tab verplaats je de focus en met Esc stop je de registratie.",

@@ -179,7 +179,10 @@ function KeyboardTester({
           <dt className="text-sm font-medium">{messages.combination}</dt>
           <dd className="mt-1 min-h-6">
             {combination.length ? (
-              <div className="flex flex-wrap items-center gap-1" dir="ltr">
+              <div
+                className="inline-flex max-w-full flex-wrap items-center gap-1"
+                dir="ltr"
+              >
                 {combination.map(([id, label], index) => (
                   <span className="inline-flex items-center gap-1" key={id}>
                     {index > 0 ? (
@@ -204,7 +207,7 @@ function KeyboardTester({
           <dd className="mt-1 min-h-6" aria-live="polite" aria-atomic="true">
             {state.last ? (
               <div
-                className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs"
+                className="inline-flex max-w-full flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs"
                 dir="ltr"
               >
                 <kbd className="rounded border border-border bg-muted px-1.5 py-0.5">
