@@ -24,8 +24,13 @@ function doiOf(entry: CSL) {
   return /^10\.\d{4,}\/\S+$/.test(doi) ? doi : ""
 }
 
+function plainTitle(title: string) {
+  // CSL titles can include these inline formatting tags.
+  return title.split(/<\/?(?:i|b|u|sub|sup|span)(?:\s+[^>]*)?>/gi).join("")
+}
+
 function metadataOf(entry: CSL) {
-  const title = normalize(entry.title?.replace(/<\/?[a-z][^>]*>/gi, "") ?? "")
+  const title = normalize(plainTitle(entry.title ?? ""))
   const year = entry.issued?.["date-parts"]?.[0]?.[0]
   const author = entry.author?.[0]
   const family = normalize(author?.family ?? "")
@@ -57,7 +62,9 @@ export function findDuplicates(entries: CSL[]): Duplicate[] {
     duplicates.push({
       reason,
       entries: indexes.map((index) => index + 1),
-      title: indexes.map((index) => entries[index]!.title).find(Boolean),
+      title: indexes
+        .map((index) => plainTitle(entries[index]!.title ?? ""))
+        .find(Boolean),
     })
   }
 

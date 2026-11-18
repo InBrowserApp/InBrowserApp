@@ -17,7 +17,7 @@ describe("findDuplicates", () => {
         { ...base, title: undefined, DOI: " DOI: 10.1234/PAPER " },
         {
           ...base,
-          title: "Another title",
+          title: "<i>Another title</i>",
           DOI: "https://dx.doi.org/10.1234/paper",
         },
         {
