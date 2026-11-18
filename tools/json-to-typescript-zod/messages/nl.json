@@ -1,0 +1,15 @@
+{
+  "inputLabel": "JSON-invoer",
+  "inputPlaceholder": "Plak een voorbeeld van een API-respons…",
+  "sampleLabel": "Voorbeeld gebruiken",
+  "openFileLabel": "JSON-bestand openen",
+  "fileReadError": "Kan het bestand niet lezen. Probeer het opnieuw te openen.",
+  "invalidJson": "Ongeldige JSON. Controleer de syntaxis en probeer het opnieuw.",
+  "outputLabel": "Gegenereerde code",
+  "emptyOutput": "Voer geldige JSON in om code te genereren.",
+  "copyLabel": "Code kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "downloadLabel": ".ts downloaden",
+  "inferenceHelp": "De gegenereerde code is gebaseerd op de velden en waarden uit het voorbeeld. Voeg meer records toe aan een array om optionele velden en verschillende waardetypes mee te nemen.",
+  "zodHelp": "Bij het parsen laat Zod 4 velden die niet in het schema staan weg uit het resultaat."
+}

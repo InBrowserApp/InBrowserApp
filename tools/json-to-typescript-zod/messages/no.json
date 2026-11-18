@@ -1,0 +1,15 @@
+{
+  "inputLabel": "JSON-inndata",
+  "inputPlaceholder": "Lim inn et eksempel på et API-svar…",
+  "sampleLabel": "Bruk eksempel",
+  "openFileLabel": "Åpne JSON-fil",
+  "fileReadError": "Kunne ikke lese filen. Prøv å åpne den på nytt.",
+  "invalidJson": "Ugyldig JSON. Kontroller syntaksen og prøv på nytt.",
+  "outputLabel": "Generert kode",
+  "emptyOutput": "Oppgi gyldig JSON for å generere kode.",
+  "copyLabel": "Kopier kode",
+  "copiedLabel": "Kopiert",
+  "downloadLabel": "Last ned .ts",
+  "inferenceHelp": "Den genererte koden bygger på feltene og verdiene i eksemplet. Ta med flere poster i en array for å fange opp valgfrie felt og blandede typer.",
+  "zodHelp": "Ved parsing utelater Zod 4 felt som ikke er definert i skjemaet."
+}

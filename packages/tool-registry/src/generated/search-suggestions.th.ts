@@ -669,6 +669,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "ตัวแปลง JSON เป็น TypeScript / Zod",
+    slug: "json-to-typescript-zod",
+  },
+  {
+    category: "json",
     name: "ตัวแปลง JSON → XML",
     slug: "json-to-xml-converter",
   },

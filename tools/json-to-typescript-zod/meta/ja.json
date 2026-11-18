@@ -1,0 +1,4 @@
+{
+  "name": "JSON → TypeScript / Zod",
+  "description": "JSON 形式の API レスポンスから TypeScript の型や Zod の検証スキーマを生成します。サンプルを貼り付けるか JSON ファイルを開き、生成したコードをコピーまたはダウンロードできます。"
+}

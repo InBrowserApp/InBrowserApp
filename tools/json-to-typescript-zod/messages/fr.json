@@ -1,0 +1,15 @@
+{
+  "inputLabel": "Entrée JSON",
+  "inputPlaceholder": "Collez un exemple de réponse d’API…",
+  "sampleLabel": "Utiliser l’exemple",
+  "openFileLabel": "Ouvrir un fichier JSON",
+  "fileReadError": "Impossible de lire le fichier. Essayez de le rouvrir.",
+  "invalidJson": "JSON invalide. Vérifiez la syntaxe et réessayez.",
+  "outputLabel": "Code généré",
+  "emptyOutput": "Saisissez un JSON valide pour générer du code.",
+  "copyLabel": "Copier le code",
+  "copiedLabel": "Copié",
+  "downloadLabel": "Télécharger le .ts",
+  "inferenceHelp": "Le code généré reflète les champs et les valeurs de l’exemple. Ajoutez des éléments au tableau pour tenir compte des champs facultatifs et des types mixtes.",
+  "zodHelp": "Lors de l’analyse, le schéma Zod 4 retire du résultat les champs qu’il ne déclare pas."
+}

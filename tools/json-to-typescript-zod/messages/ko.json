@@ -1,0 +1,15 @@
+{
+  "inputLabel": "JSON 입력",
+  "inputPlaceholder": "API 응답 예시를 붙여넣으세요…",
+  "sampleLabel": "예시 사용",
+  "openFileLabel": "JSON 파일 열기",
+  "fileReadError": "파일을 읽을 수 없습니다. 다시 열어 주세요.",
+  "invalidJson": "유효하지 않은 JSON입니다. 문법을 확인한 뒤 다시 시도해 주세요.",
+  "outputLabel": "생성된 코드",
+  "emptyOutput": "코드를 생성하려면 유효한 JSON을 입력하세요.",
+  "copyLabel": "코드 복사",
+  "copiedLabel": "복사됨",
+  "downloadLabel": ".ts 다운로드",
+  "inferenceHelp": "코드는 예시의 필드와 값을 바탕으로 생성됩니다. 배열에 레코드를 더 추가하면 선택적 필드와 여러 타입이 섞인 경우를 추론하는 데 도움이 됩니다.",
+  "zodHelp": "Zod 4 스키마는 파싱할 때 선언되지 않은 필드를 제거합니다."
+}

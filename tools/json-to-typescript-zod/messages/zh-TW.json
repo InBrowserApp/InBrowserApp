@@ -1,0 +1,15 @@
+{
+  "inputLabel": "JSON 輸入",
+  "inputPlaceholder": "貼上 API 回應範例…",
+  "sampleLabel": "使用範例",
+  "openFileLabel": "開啟 JSON 檔案",
+  "fileReadError": "無法讀取檔案，請重新開啟。",
+  "invalidJson": "JSON 無效，請檢查語法後再試一次。",
+  "outputLabel": "產生的程式碼",
+  "emptyOutput": "輸入有效的 JSON 即可產生程式碼。",
+  "copyLabel": "複製程式碼",
+  "copiedLabel": "已複製",
+  "downloadLabel": "下載 .ts",
+  "inferenceHelp": "程式碼依據範例中的欄位和值推斷。在陣列中加入更多筆資料，有助於推斷選用欄位和混合型別。",
+  "zodHelp": "Zod 4 Schema會在解析時移除未宣告的欄位。"
+}

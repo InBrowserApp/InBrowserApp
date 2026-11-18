@@ -1,0 +1,4 @@
+{
+  "name": "Chuyển JSON sang TypeScript / Zod",
+  "description": "Tạo kiểu TypeScript hoặc lược đồ kiểm tra dữ liệu bằng Zod từ phản hồi API dạng JSON. Dán một mẫu hoặc mở tệp JSON, sau đó sao chép hoặc tải mã xuống."
+}
