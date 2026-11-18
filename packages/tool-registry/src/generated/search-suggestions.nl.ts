@@ -539,6 +539,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Afbeeldingen vergelijken",
+    slug: "image-comparator",
+  },
+  {
+    category: "image",
     name: "Afbeelding bijsnijden",
     slug: "image-cropper",
   },

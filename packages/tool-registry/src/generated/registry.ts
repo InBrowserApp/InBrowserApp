@@ -13529,6 +13529,136 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "image-comparator",
+    category: "image",
+    icon: "columns-2",
+    tags: [
+      "image",
+      "compare",
+      "before-after",
+      "overlay",
+      "pixel diff",
+      "screenshot",
+    ],
+    locales: {
+      ar: {
+        name: "أداة مقارنة الصور",
+        description:
+          "قارِن صورتين بفاصل قابل للسحب، أو بتراكب قابل لضبط العتامة، أو بخريطة لفروق البكسلات. تبقى صورك في متصفحك.",
+      },
+      de: {
+        name: "Bildvergleich",
+        description:
+          "Vergleiche zwei Bilder mit einer verschiebbaren Trennlinie, durch Überlagern oder anhand markierter Pixelunterschiede. Deine Bilder bleiben im Browser.",
+      },
+      en: {
+        name: "Image Comparator",
+        description:
+          "Compare two images with a draggable divider, an opacity overlay, or a pixel difference map. Your images stay in your browser.",
+      },
+      es: {
+        name: "Comparador de imágenes",
+        description:
+          "Compara dos imágenes con un separador deslizante, una superposición ajustable o un mapa de diferencias por píxel. Tus imágenes permanecen en el navegador.",
+      },
+      fr: {
+        name: "Comparateur d’images",
+        description:
+          "Comparez deux images avec un curseur, une superposition à opacité réglable ou une carte des écarts par pixel. Vos images restent dans votre navigateur.",
+      },
+      he: {
+        name: "השוואת תמונות",
+        description:
+          "השוו שתי תמונות בעזרת קו הפרדה שניתן לגרור, שכבת־על עם אטימות מתכווננת או מפת הבדלים בין פיקסלים. התמונות נשארות בדפדפן.",
+      },
+      hi: {
+        name: "इमेज तुलना टूल",
+        description:
+          "दो इमेज की तुलना करने के लिए विभाजक रेखा खिसकाएँ, एक इमेज को दूसरी पर रखकर अपारदर्शिता बदलें या पिक्सेल अंतर देखें। इमेज आपके ब्राउज़र में ही रहती हैं।",
+      },
+      id: {
+        name: "Pembanding Gambar",
+        description:
+          "Bandingkan dua gambar dengan menggeser garis pembatas, menumpuk gambar dengan opasitas yang dapat diatur, atau melihat peta perbedaan piksel. Gambar tetap berada di browser Anda.",
+      },
+      it: {
+        name: "Confronto immagini",
+        description:
+          "Confronta due immagini con un divisore scorrevole, una sovrapposizione a opacità regolabile o una mappa delle differenze per pixel. Le immagini restano nel browser.",
+      },
+      ja: {
+        name: "画像比較ツール",
+        description:
+          "区切り線をドラッグしたり、透明度を調整して画像を重ねたり、ピクセル差分を表示したりして、2 枚の画像を比較できます。画像はブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "이미지 비교",
+        description:
+          "구분선을 움직이거나, 불투명도를 조절해 두 이미지를 겹치거나, 픽셀 차이 지도로 비교할 수 있습니다. 이미지는 브라우저 안에서만 처리됩니다.",
+      },
+      ms: {
+        name: "Pembanding Imej",
+        description:
+          "Bandingkan dua imej menggunakan pemisah yang boleh diseret, tindihan dengan kelegapan boleh laras atau peta perbezaan piksel. Imej kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeeldingen vergelijken",
+        description:
+          "Vergelijk twee afbeeldingen met een schuifregelaar, leg ze over elkaar of laat pixelverschillen markeren. Je afbeeldingen blijven in je browser.",
+      },
+      no: {
+        name: "Bildesammenligning",
+        description:
+          "Sammenlign to bilder med en flyttbar skillelinje, legg dem over hverandre eller marker pikselforskjellene. Bildene dine blir i nettleseren.",
+      },
+      pl: {
+        name: "Porównywanie obrazów",
+        description:
+          "Porównuj dwa obrazy za pomocą suwaka, nakładki z regulowanym kryciem lub mapy różnic pikseli. Obrazy pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Comparador de imagens",
+        description:
+          "Compare duas imagens com um divisor deslizante, uma sobreposição com opacidade ajustável ou um mapa de diferenças por pixel. Suas imagens ficam no navegador.",
+      },
+      ru: {
+        name: "Сравнение изображений",
+        description:
+          "Сравнивайте два изображения с помощью подвижного разделителя, наложения с настройкой непрозрачности или карты попиксельных различий. Изображения остаются в вашем браузере.",
+      },
+      sv: {
+        name: "Bildjämförelse",
+        description:
+          "Jämför två bilder med en flyttbar skiljelinje, en överlagring eller markerade pixelskillnader. Dina bilder stannar i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือเปรียบเทียบรูปภาพ",
+        description:
+          "เปรียบเทียบรูปภาพสองรูปด้วยเส้นแบ่งที่ลากได้ การซ้อนภาพแบบปรับความทึบ หรือภาพแสดงความแตกต่างของพิกเซล รูปภาพจะถูกประมวลผลในเบราว์เซอร์ของคุณเท่านั้น",
+      },
+      tr: {
+        name: "Görüntü Karşılaştırma",
+        description:
+          "İki görüntüyü sürüklenebilir bir ayırıcı, opaklığı ayarlanabilir bir katman veya piksel farkı haritasıyla karşılaştırın. Görüntüleriniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "So sánh ảnh",
+        description:
+          "So sánh hai ảnh bằng vạch chia kéo được, chế độ chồng ảnh điều chỉnh độ đục hoặc bản đồ chênh lệch pixel. Ảnh chỉ được xử lý trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片对比器",
+        description:
+          "拖动分隔线、调节叠加不透明度，或查看像素差异图来对比两张图片。图片只在浏览器中处理。",
+      },
+      "zh-TW": {
+        name: "圖片比對器",
+        description:
+          "透過滑動分隔線、調整疊加不透明度或查看像素差異圖，比對兩張圖片。圖片只在瀏覽器中處理。",
+      },
+    },
+  },
+  {
     slug: "image-cropper",
     category: "image",
     icon: "image",
@@ -51319,6 +51449,136 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "iCal 事件產生器",
         description: "建立包含時區、重複規則與提醒的 .ics 行事曆事件。",
+      },
+    },
+  },
+  "image-comparator": {
+    slug: "image-comparator",
+    category: "image",
+    icon: "columns-2",
+    tags: [
+      "image",
+      "compare",
+      "before-after",
+      "overlay",
+      "pixel diff",
+      "screenshot",
+    ],
+    locales: {
+      ar: {
+        name: "أداة مقارنة الصور",
+        description:
+          "قارِن صورتين بفاصل قابل للسحب، أو بتراكب قابل لضبط العتامة، أو بخريطة لفروق البكسلات. تبقى صورك في متصفحك.",
+      },
+      de: {
+        name: "Bildvergleich",
+        description:
+          "Vergleiche zwei Bilder mit einer verschiebbaren Trennlinie, durch Überlagern oder anhand markierter Pixelunterschiede. Deine Bilder bleiben im Browser.",
+      },
+      en: {
+        name: "Image Comparator",
+        description:
+          "Compare two images with a draggable divider, an opacity overlay, or a pixel difference map. Your images stay in your browser.",
+      },
+      es: {
+        name: "Comparador de imágenes",
+        description:
+          "Compara dos imágenes con un separador deslizante, una superposición ajustable o un mapa de diferencias por píxel. Tus imágenes permanecen en el navegador.",
+      },
+      fr: {
+        name: "Comparateur d’images",
+        description:
+          "Comparez deux images avec un curseur, une superposition à opacité réglable ou une carte des écarts par pixel. Vos images restent dans votre navigateur.",
+      },
+      he: {
+        name: "השוואת תמונות",
+        description:
+          "השוו שתי תמונות בעזרת קו הפרדה שניתן לגרור, שכבת־על עם אטימות מתכווננת או מפת הבדלים בין פיקסלים. התמונות נשארות בדפדפן.",
+      },
+      hi: {
+        name: "इमेज तुलना टूल",
+        description:
+          "दो इमेज की तुलना करने के लिए विभाजक रेखा खिसकाएँ, एक इमेज को दूसरी पर रखकर अपारदर्शिता बदलें या पिक्सेल अंतर देखें। इमेज आपके ब्राउज़र में ही रहती हैं।",
+      },
+      id: {
+        name: "Pembanding Gambar",
+        description:
+          "Bandingkan dua gambar dengan menggeser garis pembatas, menumpuk gambar dengan opasitas yang dapat diatur, atau melihat peta perbedaan piksel. Gambar tetap berada di browser Anda.",
+      },
+      it: {
+        name: "Confronto immagini",
+        description:
+          "Confronta due immagini con un divisore scorrevole, una sovrapposizione a opacità regolabile o una mappa delle differenze per pixel. Le immagini restano nel browser.",
+      },
+      ja: {
+        name: "画像比較ツール",
+        description:
+          "区切り線をドラッグしたり、透明度を調整して画像を重ねたり、ピクセル差分を表示したりして、2 枚の画像を比較できます。画像はブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "이미지 비교",
+        description:
+          "구분선을 움직이거나, 불투명도를 조절해 두 이미지를 겹치거나, 픽셀 차이 지도로 비교할 수 있습니다. 이미지는 브라우저 안에서만 처리됩니다.",
+      },
+      ms: {
+        name: "Pembanding Imej",
+        description:
+          "Bandingkan dua imej menggunakan pemisah yang boleh diseret, tindihan dengan kelegapan boleh laras atau peta perbezaan piksel. Imej kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "Afbeeldingen vergelijken",
+        description:
+          "Vergelijk twee afbeeldingen met een schuifregelaar, leg ze over elkaar of laat pixelverschillen markeren. Je afbeeldingen blijven in je browser.",
+      },
+      no: {
+        name: "Bildesammenligning",
+        description:
+          "Sammenlign to bilder med en flyttbar skillelinje, legg dem over hverandre eller marker pikselforskjellene. Bildene dine blir i nettleseren.",
+      },
+      pl: {
+        name: "Porównywanie obrazów",
+        description:
+          "Porównuj dwa obrazy za pomocą suwaka, nakładki z regulowanym kryciem lub mapy różnic pikseli. Obrazy pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Comparador de imagens",
+        description:
+          "Compare duas imagens com um divisor deslizante, uma sobreposição com opacidade ajustável ou um mapa de diferenças por pixel. Suas imagens ficam no navegador.",
+      },
+      ru: {
+        name: "Сравнение изображений",
+        description:
+          "Сравнивайте два изображения с помощью подвижного разделителя, наложения с настройкой непрозрачности или карты попиксельных различий. Изображения остаются в вашем браузере.",
+      },
+      sv: {
+        name: "Bildjämförelse",
+        description:
+          "Jämför två bilder med en flyttbar skiljelinje, en överlagring eller markerade pixelskillnader. Dina bilder stannar i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือเปรียบเทียบรูปภาพ",
+        description:
+          "เปรียบเทียบรูปภาพสองรูปด้วยเส้นแบ่งที่ลากได้ การซ้อนภาพแบบปรับความทึบ หรือภาพแสดงความแตกต่างของพิกเซล รูปภาพจะถูกประมวลผลในเบราว์เซอร์ของคุณเท่านั้น",
+      },
+      tr: {
+        name: "Görüntü Karşılaştırma",
+        description:
+          "İki görüntüyü sürüklenebilir bir ayırıcı, opaklığı ayarlanabilir bir katman veya piksel farkı haritasıyla karşılaştırın. Görüntüleriniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "So sánh ảnh",
+        description:
+          "So sánh hai ảnh bằng vạch chia kéo được, chế độ chồng ảnh điều chỉnh độ đục hoặc bản đồ chênh lệch pixel. Ảnh chỉ được xử lý trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "图片对比器",
+        description:
+          "拖动分隔线、调节叠加不透明度，或查看像素差异图来对比两张图片。图片只在浏览器中处理。",
+      },
+      "zh-TW": {
+        name: "圖片比對器",
+        description:
+          "透過滑動分隔線、調整疊加不透明度或查看像素差異圖，比對兩張圖片。圖片只在瀏覽器中處理。",
       },
     },
   },

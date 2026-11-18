@@ -9846,6 +9846,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-comparator",
+    language: "ar",
+  },
+  {
+    slug: "image-comparator",
+    language: "de",
+  },
+  {
+    slug: "image-comparator",
+    language: "en",
+  },
+  {
+    slug: "image-comparator",
+    language: "es",
+  },
+  {
+    slug: "image-comparator",
+    language: "fr",
+  },
+  {
+    slug: "image-comparator",
+    language: "he",
+  },
+  {
+    slug: "image-comparator",
+    language: "hi",
+  },
+  {
+    slug: "image-comparator",
+    language: "id",
+  },
+  {
+    slug: "image-comparator",
+    language: "it",
+  },
+  {
+    slug: "image-comparator",
+    language: "ja",
+  },
+  {
+    slug: "image-comparator",
+    language: "ko",
+  },
+  {
+    slug: "image-comparator",
+    language: "ms",
+  },
+  {
+    slug: "image-comparator",
+    language: "nl",
+  },
+  {
+    slug: "image-comparator",
+    language: "no",
+  },
+  {
+    slug: "image-comparator",
+    language: "pl",
+  },
+  {
+    slug: "image-comparator",
+    language: "pt",
+  },
+  {
+    slug: "image-comparator",
+    language: "ru",
+  },
+  {
+    slug: "image-comparator",
+    language: "sv",
+  },
+  {
+    slug: "image-comparator",
+    language: "th",
+  },
+  {
+    slug: "image-comparator",
+    language: "tr",
+  },
+  {
+    slug: "image-comparator",
+    language: "vi",
+  },
+  {
+    slug: "image-comparator",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-comparator",
+    language: "zh-TW",
+  },
+  {
     slug: "image-cropper",
     language: "ar",
   },
