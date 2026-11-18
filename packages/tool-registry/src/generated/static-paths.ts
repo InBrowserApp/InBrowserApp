@@ -8190,6 +8190,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "gif-maker",
+    language: "ar",
+  },
+  {
+    slug: "gif-maker",
+    language: "de",
+  },
+  {
+    slug: "gif-maker",
+    language: "en",
+  },
+  {
+    slug: "gif-maker",
+    language: "es",
+  },
+  {
+    slug: "gif-maker",
+    language: "fr",
+  },
+  {
+    slug: "gif-maker",
+    language: "he",
+  },
+  {
+    slug: "gif-maker",
+    language: "hi",
+  },
+  {
+    slug: "gif-maker",
+    language: "id",
+  },
+  {
+    slug: "gif-maker",
+    language: "it",
+  },
+  {
+    slug: "gif-maker",
+    language: "ja",
+  },
+  {
+    slug: "gif-maker",
+    language: "ko",
+  },
+  {
+    slug: "gif-maker",
+    language: "ms",
+  },
+  {
+    slug: "gif-maker",
+    language: "nl",
+  },
+  {
+    slug: "gif-maker",
+    language: "no",
+  },
+  {
+    slug: "gif-maker",
+    language: "pl",
+  },
+  {
+    slug: "gif-maker",
+    language: "pt",
+  },
+  {
+    slug: "gif-maker",
+    language: "ru",
+  },
+  {
+    slug: "gif-maker",
+    language: "sv",
+  },
+  {
+    slug: "gif-maker",
+    language: "th",
+  },
+  {
+    slug: "gif-maker",
+    language: "tr",
+  },
+  {
+    slug: "gif-maker",
+    language: "vi",
+  },
+  {
+    slug: "gif-maker",
+    language: "zh-CN",
+  },
+  {
+    slug: "gif-maker",
+    language: "zh-TW",
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     language: "ar",
   },

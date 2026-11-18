@@ -449,6 +449,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Trình tạo GIF",
+    slug: "gif-maker",
+  },
+  {
+    category: "image",
     name: "Bộ chuyển đổi GIF sang WebP động",
     slug: "gif-to-animated-webp-converter",
   },

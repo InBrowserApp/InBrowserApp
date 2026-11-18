@@ -11320,6 +11320,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "gif-maker",
+    category: "image",
+    icon: "film",
+    tags: ["image", "gif", "animation", "frames", "maker", "offline"],
+    locales: {
+      ar: {
+        name: "أداة إنشاء GIF",
+        description:
+          "حوّل صورك إلى ملف GIF متحرك. أعد ترتيب الإطارات واضبط مدة عرض كل إطار وعدد مرات التشغيل في متصفحك.",
+      },
+      de: {
+        name: "GIF-Ersteller",
+        description:
+          "Erstelle aus Bildern ein animiertes GIF. Ändere die Reihenfolge und Anzeigedauer der Einzelbilder und lege die Anzahl der Wiedergaben fest. Alles läuft im Browser.",
+      },
+      en: {
+        name: "GIF Maker",
+        description:
+          "Turn images into an animated GIF. Reorder frames, adjust how long each frame appears, and set the loop count in your browser.",
+      },
+      es: {
+        name: "Creador de GIF",
+        description:
+          "Convierte imágenes en un GIF animado desde tu navegador. Ordena los fotogramas, ajusta la duración de cada uno y elige cuántas veces se reproduce la animación.",
+      },
+      fr: {
+        name: "Créateur de GIF",
+        description:
+          "Créez un GIF animé à partir d’images dans votre navigateur. Réorganisez les images, réglez la durée de chacune et choisissez le nombre de boucles.",
+      },
+      he: {
+        name: "יוצר GIF",
+        description:
+          "יצירת GIF מונפש מתמונות, ישירות בדפדפן. אפשר לשנות את סדר הפריימים, את משך התצוגה של כל פריים ואת מספר הלולאות.",
+      },
+      hi: {
+        name: "GIF मेकर",
+        description:
+          "इमेज से एनिमेटेड GIF बनाएँ। अपने ब्राउज़र में फ़्रेम का क्रम, हर फ़्रेम की अवधि और लूप की संख्या तय करें।",
+      },
+      id: {
+        name: "Pembuat GIF",
+        description:
+          "Buat GIF animasi dari rangkaian gambar. Atur urutan dan durasi tiap frame serta jumlah putaran langsung di browser.",
+      },
+      it: {
+        name: "Creatore di GIF",
+        description:
+          "Crea una GIF animata a partire da immagini nel browser. Riordina i fotogrammi, regola la durata di ciascuno e scegli quante volte riprodurre l’animazione.",
+      },
+      ja: {
+        name: "GIF 作成ツール",
+        description:
+          "画像からアニメーション GIF を作成します。フレームの順序や表示時間、ループ回数をブラウザーで調整できます。",
+      },
+      ko: {
+        name: "GIF 만들기",
+        description:
+          "이미지를 모아 움직이는 GIF를 만드세요. 브라우저에서 프레임 순서, 프레임별 표시 시간, 반복 횟수를 조절할 수 있습니다.",
+      },
+      ms: {
+        name: "Pembuat GIF",
+        description:
+          "Cipta GIF animasi daripada beberapa imej terus dalam pelayar. Susun bingkai, laraskan tempoh setiap bingkai dan tetapkan bilangan kali GIF dimainkan.",
+      },
+      nl: {
+        name: "GIF-maker",
+        description:
+          "Maak een geanimeerde GIF van afbeeldingen. Wijzig de volgorde en weergaveduur van elk frame en stel in hoe vaak de GIF afspeelt. Alles werkt in je browser.",
+      },
+      no: {
+        name: "Lag GIF",
+        description:
+          "Lag en animert GIF av bilder i nettleseren. Endre rekkefølgen og visningstiden for hver bilderute, og velg hvor mange ganger GIF-en skal spilles av.",
+      },
+      pl: {
+        name: "Kreator GIF-ów",
+        description:
+          "Utwórz animowany GIF z obrazów w przeglądarce. Zmień kolejność klatek, ustaw czas wyświetlania każdej z nich i wybierz liczbę odtworzeń.",
+      },
+      pt: {
+        name: "Criador de GIF",
+        description:
+          "Transforme imagens em um GIF animado no navegador. Reordene os quadros, ajuste a duração de cada um e escolha quantas vezes a animação será reproduzida.",
+      },
+      ru: {
+        name: "Создание GIF",
+        description:
+          "Создайте анимированный GIF из изображений в браузере. Меняйте порядок кадров, задавайте длительность каждого кадра и число воспроизведений.",
+      },
+      sv: {
+        name: "GIF-skapare",
+        description:
+          "Skapa en animerad GIF av bilder. Ändra ordningen och visningstiden för varje bildruta och välj hur många gånger GIF-filen ska spelas upp. Allt sker i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง GIF",
+        description:
+          "สร้าง GIF แบบเคลื่อนไหวจากชุดรูปภาพได้ในเบราว์เซอร์ พร้อมจัดลำดับเฟรม ปรับเวลาแสดงแต่ละเฟรม และกำหนดจำนวนรอบที่เล่น",
+      },
+      tr: {
+        name: "GIF Oluşturucu",
+        description:
+          "Görsellerden tarayıcınızda animasyonlu GIF oluşturun. Kareleri sıralayın, her karenin ekranda kalma süresini ve döngü sayısını ayarlayın.",
+      },
+      vi: {
+        name: "Trình tạo GIF",
+        description:
+          "Tạo ảnh GIF động từ một chuỗi ảnh. Sắp xếp các khung hình, chỉnh thời lượng hiển thị từng khung và đặt số lượt phát ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "GIF 制作器",
+        description:
+          "在浏览器中将图片合成 GIF 动画，自由调整帧顺序、每帧时长和循环次数。",
+      },
+      "zh-TW": {
+        name: "GIF 製作器",
+        description:
+          "在瀏覽器中將圖片合成 GIF 動畫，自訂影格順序、每個影格的顯示時間和循環次數。",
+      },
+    },
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     category: "image",
     icon: "image",
@@ -48722,6 +48845,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "字型子集產生器",
         description:
           "保留文字所需的字形，縮小 TTF、OTF、WOFF 和 WOFF2 字型檔案。在瀏覽器中完成字型子集的預覽與下載。",
+      },
+    },
+  },
+  "gif-maker": {
+    slug: "gif-maker",
+    category: "image",
+    icon: "film",
+    tags: ["image", "gif", "animation", "frames", "maker", "offline"],
+    locales: {
+      ar: {
+        name: "أداة إنشاء GIF",
+        description:
+          "حوّل صورك إلى ملف GIF متحرك. أعد ترتيب الإطارات واضبط مدة عرض كل إطار وعدد مرات التشغيل في متصفحك.",
+      },
+      de: {
+        name: "GIF-Ersteller",
+        description:
+          "Erstelle aus Bildern ein animiertes GIF. Ändere die Reihenfolge und Anzeigedauer der Einzelbilder und lege die Anzahl der Wiedergaben fest. Alles läuft im Browser.",
+      },
+      en: {
+        name: "GIF Maker",
+        description:
+          "Turn images into an animated GIF. Reorder frames, adjust how long each frame appears, and set the loop count in your browser.",
+      },
+      es: {
+        name: "Creador de GIF",
+        description:
+          "Convierte imágenes en un GIF animado desde tu navegador. Ordena los fotogramas, ajusta la duración de cada uno y elige cuántas veces se reproduce la animación.",
+      },
+      fr: {
+        name: "Créateur de GIF",
+        description:
+          "Créez un GIF animé à partir d’images dans votre navigateur. Réorganisez les images, réglez la durée de chacune et choisissez le nombre de boucles.",
+      },
+      he: {
+        name: "יוצר GIF",
+        description:
+          "יצירת GIF מונפש מתמונות, ישירות בדפדפן. אפשר לשנות את סדר הפריימים, את משך התצוגה של כל פריים ואת מספר הלולאות.",
+      },
+      hi: {
+        name: "GIF मेकर",
+        description:
+          "इमेज से एनिमेटेड GIF बनाएँ। अपने ब्राउज़र में फ़्रेम का क्रम, हर फ़्रेम की अवधि और लूप की संख्या तय करें।",
+      },
+      id: {
+        name: "Pembuat GIF",
+        description:
+          "Buat GIF animasi dari rangkaian gambar. Atur urutan dan durasi tiap frame serta jumlah putaran langsung di browser.",
+      },
+      it: {
+        name: "Creatore di GIF",
+        description:
+          "Crea una GIF animata a partire da immagini nel browser. Riordina i fotogrammi, regola la durata di ciascuno e scegli quante volte riprodurre l’animazione.",
+      },
+      ja: {
+        name: "GIF 作成ツール",
+        description:
+          "画像からアニメーション GIF を作成します。フレームの順序や表示時間、ループ回数をブラウザーで調整できます。",
+      },
+      ko: {
+        name: "GIF 만들기",
+        description:
+          "이미지를 모아 움직이는 GIF를 만드세요. 브라우저에서 프레임 순서, 프레임별 표시 시간, 반복 횟수를 조절할 수 있습니다.",
+      },
+      ms: {
+        name: "Pembuat GIF",
+        description:
+          "Cipta GIF animasi daripada beberapa imej terus dalam pelayar. Susun bingkai, laraskan tempoh setiap bingkai dan tetapkan bilangan kali GIF dimainkan.",
+      },
+      nl: {
+        name: "GIF-maker",
+        description:
+          "Maak een geanimeerde GIF van afbeeldingen. Wijzig de volgorde en weergaveduur van elk frame en stel in hoe vaak de GIF afspeelt. Alles werkt in je browser.",
+      },
+      no: {
+        name: "Lag GIF",
+        description:
+          "Lag en animert GIF av bilder i nettleseren. Endre rekkefølgen og visningstiden for hver bilderute, og velg hvor mange ganger GIF-en skal spilles av.",
+      },
+      pl: {
+        name: "Kreator GIF-ów",
+        description:
+          "Utwórz animowany GIF z obrazów w przeglądarce. Zmień kolejność klatek, ustaw czas wyświetlania każdej z nich i wybierz liczbę odtworzeń.",
+      },
+      pt: {
+        name: "Criador de GIF",
+        description:
+          "Transforme imagens em um GIF animado no navegador. Reordene os quadros, ajuste a duração de cada um e escolha quantas vezes a animação será reproduzida.",
+      },
+      ru: {
+        name: "Создание GIF",
+        description:
+          "Создайте анимированный GIF из изображений в браузере. Меняйте порядок кадров, задавайте длительность каждого кадра и число воспроизведений.",
+      },
+      sv: {
+        name: "GIF-skapare",
+        description:
+          "Skapa en animerad GIF av bilder. Ändra ordningen och visningstiden för varje bildruta och välj hur många gånger GIF-filen ska spelas upp. Allt sker i webbläsaren.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง GIF",
+        description:
+          "สร้าง GIF แบบเคลื่อนไหวจากชุดรูปภาพได้ในเบราว์เซอร์ พร้อมจัดลำดับเฟรม ปรับเวลาแสดงแต่ละเฟรม และกำหนดจำนวนรอบที่เล่น",
+      },
+      tr: {
+        name: "GIF Oluşturucu",
+        description:
+          "Görsellerden tarayıcınızda animasyonlu GIF oluşturun. Kareleri sıralayın, her karenin ekranda kalma süresini ve döngü sayısını ayarlayın.",
+      },
+      vi: {
+        name: "Trình tạo GIF",
+        description:
+          "Tạo ảnh GIF động từ một chuỗi ảnh. Sắp xếp các khung hình, chỉnh thời lượng hiển thị từng khung và đặt số lượt phát ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "GIF 制作器",
+        description:
+          "在浏览器中将图片合成 GIF 动画，自由调整帧顺序、每帧时长和循环次数。",
+      },
+      "zh-TW": {
+        name: "GIF 製作器",
+        description:
+          "在瀏覽器中將圖片合成 GIF 動畫，自訂影格順序、每個影格的顯示時間和循環次數。",
       },
     },
   },

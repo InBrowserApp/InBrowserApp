@@ -449,6 +449,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "GIF 만들기",
+    slug: "gif-maker",
+  },
+  {
+    category: "image",
     name: "GIF to Animated WebP 변환기",
     slug: "gif-to-animated-webp-converter",
   },

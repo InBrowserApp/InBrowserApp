@@ -44,6 +44,7 @@ export {
   FileCog,
   FileJson2,
   FileText,
+  Film,
   Flashlight,
   FlashlightOff,
   Folder,
