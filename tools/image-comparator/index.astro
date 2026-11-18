@@ -27,7 +27,7 @@ const Intro = resolveLocale<AstroComponentFactory>(
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <ImageComparator client:load {lang} {messages} />
-  <ToolArticle className="max-w-3xl rtl:[&_ul]:mr-6 rtl:[&_ul]:ml-0">
+  <ToolArticle className="rtl:[&_ul]:mr-6 rtl:[&_ul]:ml-0">
     <Intro />
   </ToolArticle>
 </ToolPageShell>
