@@ -1,0 +1,4 @@
+{
+  "name": "Gamepad Tester",
+  "description": "Test gamepad buttons, triggers, and sticks live in your browser. Check how far each stick rests from center to help spot stick drift."
+}

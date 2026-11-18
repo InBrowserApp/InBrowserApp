@@ -1,0 +1,4 @@
+{
+  "name": "Gamepad-Test",
+  "description": "Teste Tasten, Trigger und Analogsticks deines Gamepads live im Browser. Prüfe, wie weit jeder Stick nach dem Loslassen von der Mitte abweicht, um Stick-Drift zu erkennen."
+}

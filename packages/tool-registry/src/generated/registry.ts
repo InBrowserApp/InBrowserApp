@@ -11320,6 +11320,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "gamepad-tester",
+    category: "misc",
+    icon: "gamepad-2",
+    tags: [
+      "gamepad",
+      "controller",
+      "joystick",
+      "stick drift",
+      "hardware",
+      "buttons",
+      "triggers",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار يد التحكم",
+        description:
+          "اختبر أزرار يد التحكم وزناداتها وعصيها مباشرةً في متصفحك. قِس بُعد كل عصا عن المركز بعد إفلاتها للمساعدة في رصد الانحراف.",
+      },
+      de: {
+        name: "Gamepad-Test",
+        description:
+          "Teste Tasten, Trigger und Analogsticks deines Gamepads live im Browser. Prüfe, wie weit jeder Stick nach dem Loslassen von der Mitte abweicht, um Stick-Drift zu erkennen.",
+      },
+      en: {
+        name: "Gamepad Tester",
+        description:
+          "Test gamepad buttons, triggers, and sticks live in your browser. Check how far each stick rests from center to help spot stick drift.",
+      },
+      es: {
+        name: "Prueba de mandos",
+        description:
+          "Prueba en tiempo real los botones, gatillos y palancas de tu mando desde el navegador. Comprueba a qué distancia del centro queda cada palanca al soltarla para detectar posibles desvíos (drift).",
+      },
+      fr: {
+        name: "Test de manette",
+        description:
+          "Testez les boutons, les gâchettes et les sticks de votre manette en direct dans votre navigateur. Mesurez l’écart entre le centre et la position au repos de chaque stick pour repérer un éventuel drift.",
+      },
+      he: {
+        name: "בדיקת בקר משחק",
+        description:
+          "בדקו בזמן אמת את הכפתורים, ההדקים והסטיקים של בקר המשחק בדפדפן. מדדו כמה רחוק כל סטיק נשאר מהמרכז אחרי השחרור כדי לזהות סטייה.",
+      },
+      hi: {
+        name: "गेमपैड टेस्टर",
+        description:
+          "ब्राउज़र में गेमपैड के बटन, ट्रिगर और स्टिक लाइव जाँचें। स्टिक छोड़ने पर देखें कि वह केंद्र से कितनी दूर ठहरती है, ताकि संभावित स्टिक ड्रिफ़्ट पहचान सकें।",
+      },
+      id: {
+        name: "Penguji Gamepad",
+        description:
+          "Uji tombol, pemicu, dan stik gamepad secara langsung di browser. Lihat jarak tiap stik dari titik tengah saat dilepas untuk membantu mendeteksi drift stik.",
+      },
+      it: {
+        name: "Test del controller",
+        description:
+          "Prova in tempo reale pulsanti, grilletti e levette del controller nel browser. Controlla a che distanza dal centro si ferma ogni levetta quando la rilasci, per individuare eventuali problemi di drift.",
+      },
+      ja: {
+        name: "ゲームパッドテスター",
+        description:
+          "ゲームパッドのボタン、トリガー、スティックの入力をブラウザーでリアルタイムに確認できます。手を離したときのスティックの中心からのずれを測り、ドリフトの目安にできます。",
+      },
+      ko: {
+        name: "게임패드 테스터",
+        description:
+          "브라우저에서 게임패드의 버튼, 트리거, 스틱 입력을 실시간으로 확인하세요. 손을 뗀 스틱이 중앙에서 얼마나 벗어나는지 확인해 쏠림 여부를 판단할 수 있습니다.",
+      },
+      ms: {
+        name: "Penguji Alat Kawalan Permainan",
+        description:
+          "Uji butang, picu dan stik alat kawalan permainan secara langsung dalam pelayar. Ukur jarak setiap stik dari titik tengah selepas dilepaskan untuk mengesan tanda hanyutan stik.",
+      },
+      nl: {
+        name: "Gamepadtester",
+        description:
+          "Test de knoppen, triggers en sticks van je gamepad live in je browser. Bekijk hoever elke stick na het loslaten van het midden afwijkt om stickdrift op te sporen.",
+      },
+      no: {
+        name: "Test av spillkontroller",
+        description:
+          "Test knappene, avtrekkerne og spakene på spillkontrolleren i sanntid i nettleseren. Se hvor langt hver spak blir stående fra midten når du slipper den, for å oppdage spakdrift.",
+      },
+      pl: {
+        name: "Tester pada",
+        description:
+          "Sprawdź przyciski, spusty i drążki pada na żywo w przeglądarce. Zobacz, jak daleko od środka zatrzymują się drążki, aby wykryć możliwy dryf.",
+      },
+      pt: {
+        name: "Teste de controle de jogo",
+        description:
+          "Teste os botões, gatilhos e analógicos do controle em tempo real no navegador. Veja a distância de cada analógico até o centro ao soltá-lo para identificar possíveis desvios (drift).",
+      },
+      ru: {
+        name: "Тест геймпада",
+        description:
+          "Проверяйте кнопки, курки и стики геймпада в браузере в реальном времени. Измерьте отклонение стиков от центра в покое, чтобы заметить возможный дрейф.",
+      },
+      sv: {
+        name: "Test av handkontroll",
+        description:
+          "Testa handkontrollens knappar, avtryckare och spakar i realtid i webbläsaren. Se hur långt varje spak hamnar från mitten när du släpper den för att upptäcka spakdrift.",
+      },
+      th: {
+        name: "ทดสอบจอยเกม",
+        description:
+          "ดูการตอบสนองของปุ่ม ทริกเกอร์ และก้านอนาล็อกแบบเรียลไทม์ในเบราว์เซอร์ วัดว่าก้านแต่ละข้างเยื้องจากจุดกึ่งกลางเท่าไรเมื่อปล่อยมือ เพื่อช่วยสังเกตอาการดริฟต์",
+      },
+      tr: {
+        name: "Oyun Kumandası Testi",
+        description:
+          "Kumandanızın düğmelerini, tetiklerini ve analog çubuklarını tarayıcıda anlık olarak test edin. Kaymayı fark etmek için çubukların serbestken merkeze uzaklığını ölçün.",
+      },
+      vi: {
+        name: "Kiểm tra tay cầm chơi game",
+        description:
+          "Xem phản hồi trực tiếp của các nút, cò và cần analog ngay trong trình duyệt. Đo độ lệch tâm khi thả từng cần để phát hiện dấu hiệu trôi cần.",
+      },
+      "zh-CN": {
+        name: "游戏手柄测试器",
+        description:
+          "在浏览器中实时测试手柄的按键、扳机和摇杆。查看松手后摇杆偏离中心的程度，辅助判断是否存在漂移。",
+      },
+      "zh-TW": {
+        name: "遊戲控制器測試器",
+        description:
+          "在瀏覽器即時測試遊戲控制器的按鍵、扳機和搖桿。查看放開後搖桿偏離中心的程度，協助判斷是否有飄移。",
+      },
+    },
+  },
+  {
     slug: "gif-to-animated-webp-converter",
     category: "image",
     icon: "image",
@@ -48722,6 +48853,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "字型子集產生器",
         description:
           "保留文字所需的字形，縮小 TTF、OTF、WOFF 和 WOFF2 字型檔案。在瀏覽器中完成字型子集的預覽與下載。",
+      },
+    },
+  },
+  "gamepad-tester": {
+    slug: "gamepad-tester",
+    category: "misc",
+    icon: "gamepad-2",
+    tags: [
+      "gamepad",
+      "controller",
+      "joystick",
+      "stick drift",
+      "hardware",
+      "buttons",
+      "triggers",
+    ],
+    locales: {
+      ar: {
+        name: "اختبار يد التحكم",
+        description:
+          "اختبر أزرار يد التحكم وزناداتها وعصيها مباشرةً في متصفحك. قِس بُعد كل عصا عن المركز بعد إفلاتها للمساعدة في رصد الانحراف.",
+      },
+      de: {
+        name: "Gamepad-Test",
+        description:
+          "Teste Tasten, Trigger und Analogsticks deines Gamepads live im Browser. Prüfe, wie weit jeder Stick nach dem Loslassen von der Mitte abweicht, um Stick-Drift zu erkennen.",
+      },
+      en: {
+        name: "Gamepad Tester",
+        description:
+          "Test gamepad buttons, triggers, and sticks live in your browser. Check how far each stick rests from center to help spot stick drift.",
+      },
+      es: {
+        name: "Prueba de mandos",
+        description:
+          "Prueba en tiempo real los botones, gatillos y palancas de tu mando desde el navegador. Comprueba a qué distancia del centro queda cada palanca al soltarla para detectar posibles desvíos (drift).",
+      },
+      fr: {
+        name: "Test de manette",
+        description:
+          "Testez les boutons, les gâchettes et les sticks de votre manette en direct dans votre navigateur. Mesurez l’écart entre le centre et la position au repos de chaque stick pour repérer un éventuel drift.",
+      },
+      he: {
+        name: "בדיקת בקר משחק",
+        description:
+          "בדקו בזמן אמת את הכפתורים, ההדקים והסטיקים של בקר המשחק בדפדפן. מדדו כמה רחוק כל סטיק נשאר מהמרכז אחרי השחרור כדי לזהות סטייה.",
+      },
+      hi: {
+        name: "गेमपैड टेस्टर",
+        description:
+          "ब्राउज़र में गेमपैड के बटन, ट्रिगर और स्टिक लाइव जाँचें। स्टिक छोड़ने पर देखें कि वह केंद्र से कितनी दूर ठहरती है, ताकि संभावित स्टिक ड्रिफ़्ट पहचान सकें।",
+      },
+      id: {
+        name: "Penguji Gamepad",
+        description:
+          "Uji tombol, pemicu, dan stik gamepad secara langsung di browser. Lihat jarak tiap stik dari titik tengah saat dilepas untuk membantu mendeteksi drift stik.",
+      },
+      it: {
+        name: "Test del controller",
+        description:
+          "Prova in tempo reale pulsanti, grilletti e levette del controller nel browser. Controlla a che distanza dal centro si ferma ogni levetta quando la rilasci, per individuare eventuali problemi di drift.",
+      },
+      ja: {
+        name: "ゲームパッドテスター",
+        description:
+          "ゲームパッドのボタン、トリガー、スティックの入力をブラウザーでリアルタイムに確認できます。手を離したときのスティックの中心からのずれを測り、ドリフトの目安にできます。",
+      },
+      ko: {
+        name: "게임패드 테스터",
+        description:
+          "브라우저에서 게임패드의 버튼, 트리거, 스틱 입력을 실시간으로 확인하세요. 손을 뗀 스틱이 중앙에서 얼마나 벗어나는지 확인해 쏠림 여부를 판단할 수 있습니다.",
+      },
+      ms: {
+        name: "Penguji Alat Kawalan Permainan",
+        description:
+          "Uji butang, picu dan stik alat kawalan permainan secara langsung dalam pelayar. Ukur jarak setiap stik dari titik tengah selepas dilepaskan untuk mengesan tanda hanyutan stik.",
+      },
+      nl: {
+        name: "Gamepadtester",
+        description:
+          "Test de knoppen, triggers en sticks van je gamepad live in je browser. Bekijk hoever elke stick na het loslaten van het midden afwijkt om stickdrift op te sporen.",
+      },
+      no: {
+        name: "Test av spillkontroller",
+        description:
+          "Test knappene, avtrekkerne og spakene på spillkontrolleren i sanntid i nettleseren. Se hvor langt hver spak blir stående fra midten når du slipper den, for å oppdage spakdrift.",
+      },
+      pl: {
+        name: "Tester pada",
+        description:
+          "Sprawdź przyciski, spusty i drążki pada na żywo w przeglądarce. Zobacz, jak daleko od środka zatrzymują się drążki, aby wykryć możliwy dryf.",
+      },
+      pt: {
+        name: "Teste de controle de jogo",
+        description:
+          "Teste os botões, gatilhos e analógicos do controle em tempo real no navegador. Veja a distância de cada analógico até o centro ao soltá-lo para identificar possíveis desvios (drift).",
+      },
+      ru: {
+        name: "Тест геймпада",
+        description:
+          "Проверяйте кнопки, курки и стики геймпада в браузере в реальном времени. Измерьте отклонение стиков от центра в покое, чтобы заметить возможный дрейф.",
+      },
+      sv: {
+        name: "Test av handkontroll",
+        description:
+          "Testa handkontrollens knappar, avtryckare och spakar i realtid i webbläsaren. Se hur långt varje spak hamnar från mitten när du släpper den för att upptäcka spakdrift.",
+      },
+      th: {
+        name: "ทดสอบจอยเกม",
+        description:
+          "ดูการตอบสนองของปุ่ม ทริกเกอร์ และก้านอนาล็อกแบบเรียลไทม์ในเบราว์เซอร์ วัดว่าก้านแต่ละข้างเยื้องจากจุดกึ่งกลางเท่าไรเมื่อปล่อยมือ เพื่อช่วยสังเกตอาการดริฟต์",
+      },
+      tr: {
+        name: "Oyun Kumandası Testi",
+        description:
+          "Kumandanızın düğmelerini, tetiklerini ve analog çubuklarını tarayıcıda anlık olarak test edin. Kaymayı fark etmek için çubukların serbestken merkeze uzaklığını ölçün.",
+      },
+      vi: {
+        name: "Kiểm tra tay cầm chơi game",
+        description:
+          "Xem phản hồi trực tiếp của các nút, cò và cần analog ngay trong trình duyệt. Đo độ lệch tâm khi thả từng cần để phát hiện dấu hiệu trôi cần.",
+      },
+      "zh-CN": {
+        name: "游戏手柄测试器",
+        description:
+          "在浏览器中实时测试手柄的按键、扳机和摇杆。查看松手后摇杆偏离中心的程度，辅助判断是否存在漂移。",
+      },
+      "zh-TW": {
+        name: "遊戲控制器測試器",
+        description:
+          "在瀏覽器即時測試遊戲控制器的按鍵、扳機和搖桿。查看放開後搖桿偏離中心的程度，協助判斷是否有飄移。",
       },
     },
   },

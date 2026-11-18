@@ -1,0 +1,4 @@
+{
+  "name": "Test del controller",
+  "description": "Prova in tempo reale pulsanti, grilletti e levette del controller nel browser. Controlla a che distanza dal centro si ferma ogni levetta quando la rilasci, per individuare eventuali problemi di drift."
+}

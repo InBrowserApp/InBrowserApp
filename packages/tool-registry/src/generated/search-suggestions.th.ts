@@ -448,6 +448,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "font-subset-generator",
   },
   {
+    category: "misc",
+    name: "ทดสอบจอยเกม",
+    slug: "gamepad-tester",
+  },
+  {
     category: "image",
     name: "ตัวแปลง GIF เป็น WebP แบบเคลื่อนไหว",
     slug: "gif-to-animated-webp-converter",

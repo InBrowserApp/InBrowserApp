@@ -1,0 +1,4 @@
+{
+  "name": "Test av handkontroll",
+  "description": "Testa handkontrollens knappar, avtryckare och spakar i realtid i webbläsaren. Se hur långt varje spak hamnar från mitten när du släpper den för att upptäcka spakdrift."
+}
