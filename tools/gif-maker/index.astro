@@ -30,7 +30,7 @@ const Intro = resolveLocale<AstroComponentFactory>(
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <GifMaker client:load language={lang} messages={messages} />
-  <ToolArticle className="max-w-prose rtl:[&_ol]:mr-6 rtl:[&_ol]:ml-0">
+  <ToolArticle className="rtl:[&_ol]:mr-6 rtl:[&_ol]:ml-0">
     <Intro />
   </ToolArticle>
 </ToolPageShell>
