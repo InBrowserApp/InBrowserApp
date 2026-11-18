@@ -534,6 +534,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Unisci immagini",
+    slug: "image-combiner",
+  },
+  {
+    category: "image",
     name: "Ritaglio immagini",
     slug: "image-cropper",
   },

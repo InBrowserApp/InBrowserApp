@@ -534,6 +534,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Penggabung Imej",
+    slug: "image-combiner",
+  },
+  {
+    category: "image",
     name: "Pemangkas Imej",
     slug: "image-cropper",
   },

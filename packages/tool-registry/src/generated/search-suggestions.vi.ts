@@ -534,6 +534,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Công cụ ghép ảnh",
+    slug: "image-combiner",
+  },
+  {
+    category: "image",
     name: "Công cụ cắt ảnh",
     slug: "image-cropper",
   },

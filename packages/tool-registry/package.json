@@ -113,6 +113,7 @@
     "@tool/hwp-viewer": "workspace:*",
     "@tool/iban-validator": "workspace:*",
     "@tool/ical-event-generator": "workspace:*",
+    "@tool/image-combiner": "workspace:*",
     "@tool/image-cropper": "workspace:*",
     "@tool/image-metadata-cleaner": "workspace:*",
     "@tool/image-palette-extractor": "workspace:*",

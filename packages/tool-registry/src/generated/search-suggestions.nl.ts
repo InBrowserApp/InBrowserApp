@@ -534,6 +534,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Afbeeldingen combineren",
+    slug: "image-combiner",
+  },
+  {
+    category: "image",
     name: "Afbeelding bijsnijden",
     slug: "image-cropper",
   },

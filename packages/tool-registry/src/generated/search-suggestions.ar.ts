@@ -534,6 +534,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "دمج الصور",
+    slug: "image-combiner",
+  },
+  {
+    category: "image",
     name: "أداة قص الصور",
     slug: "image-cropper",
   },

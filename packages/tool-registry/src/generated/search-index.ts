@@ -13398,6 +13398,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "image-combiner",
+    category: "image",
+    icon: "layout-grid",
+    tags: ["image", "combine", "merge", "join", "stitch", "photo", "collage"],
+    locales: {
+      ar: {
+        name: "دمج الصور",
+        description:
+          "ادمج الصور جنبًا إلى جنب أو فوق بعضها أو في شبكة. اضبط التباعد والخلفية وأبعاد الصور، ثم نزّل النتيجة بصيغة PNG من دون رفع ملفاتك.",
+      },
+      de: {
+        name: "Bilder zusammenfügen",
+        description:
+          "Füge Bilder nebeneinander, untereinander oder in einem Raster zusammen. Wähle Abstand, Hintergrund und Bildgrößen und lade das Ergebnis als PNG herunter. Deine Dateien bleiben im Browser.",
+      },
+      en: {
+        name: "Image Combiner",
+        description:
+          "Join images side by side, stack them vertically, or arrange them in a grid. Set the spacing, background, and image sizes, then download a PNG without uploading your files.",
+      },
+      es: {
+        name: "Combinador de imágenes",
+        description:
+          "Une imágenes en horizontal, en vertical o en una cuadrícula. Ajusta la separación, el fondo y el tamaño de las imágenes, y descarga un PNG sin subir tus archivos.",
+      },
+      fr: {
+        name: "Assemblage d’images",
+        description:
+          "Assemblez des images côte à côte, de haut en bas ou en grille. Réglez l’espacement, le fond et les dimensions, puis téléchargez un PNG. Vos fichiers restent dans votre navigateur.",
+      },
+      he: {
+        name: "כלי לחיבור תמונות",
+        description:
+          "חברו תמונות זו לצד זו, זו מתחת לזו או ברשת. בחרו את המרווח, הרקע וממדי התמונות והורידו קובץ PNG ישירות מהדפדפן, בלי להעלות קבצים.",
+      },
+      hi: {
+        name: "इमेज कंबाइनर",
+        description:
+          "इमेज को अगल-बगल, ऊपर-नीचे या ग्रिड में जोड़ें। उनके बीच की दूरी, पृष्ठभूमि और आकार तय करें, फिर फ़ाइलें अपलोड किए बिना PNG डाउनलोड करें।",
+      },
+      id: {
+        name: "Penggabung Gambar",
+        description:
+          "Gabungkan gambar secara horizontal, vertikal, atau dalam kisi. Atur jarak, latar belakang, dan ukuran gambar, lalu unduh PNG tanpa mengunggah file.",
+      },
+      it: {
+        name: "Unisci immagini",
+        description:
+          "Affianca le immagini, disponile in verticale o crea una griglia. Regola la spaziatura, lo sfondo e le dimensioni, poi scarica un PNG senza caricare i file online.",
+      },
+      ja: {
+        name: "画像結合ツール",
+        description:
+          "複数の画像を横一列、縦一列、またはグリッドに並べて結合します。間隔、背景、画像サイズを調整し、ファイルをアップロードせずに PNG をダウンロードできます。",
+      },
+      ko: {
+        name: "이미지 합치기",
+        description:
+          "이미지를 가로로 나란히, 세로로 쌓거나 격자로 배치하세요. 간격, 배경, 이미지 크기를 조절한 뒤 파일 업로드 없이 PNG로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penggabung Imej",
+        description:
+          "Gabungkan imej secara bersebelahan, bertindan menegak atau dalam grid. Tetapkan jarak, latar belakang dan saiz imej, kemudian muat turun hasil sebagai PNG tanpa memuat naik fail anda.",
+      },
+      nl: {
+        name: "Afbeeldingen combineren",
+        description:
+          "Zet afbeeldingen naast elkaar, onder elkaar of in een raster. Pas de tussenruimte, achtergrond en afmetingen aan en download het resultaat als PNG zonder bestanden te uploaden.",
+      },
+      no: {
+        name: "Sett sammen bilder",
+        description:
+          "Sett sammen bilder side om side, under hverandre eller i et rutenett. Juster avstand, bakgrunn og bildestørrelser, og last ned en PNG uten å laste opp filene.",
+      },
+      pl: {
+        name: "Łączenie obrazów",
+        description:
+          "Połącz obrazy obok siebie, jeden pod drugim lub w siatce. Ustaw odstępy, tło i wymiary obrazów, a następnie pobierz plik PNG bez przesyłania obrazów na serwer.",
+      },
+      pt: {
+        name: "Combinador de imagens",
+        description:
+          "Junte imagens lado a lado, uma abaixo da outra ou em uma grade. Ajuste o espaçamento, o fundo e as dimensões e baixe o PNG sem enviar seus arquivos.",
+      },
+      ru: {
+        name: "Объединение изображений",
+        description:
+          "Объединяйте изображения по горизонтали, по вертикали или в сетку. Настройте интервалы, фон и размеры изображений и скачайте PNG без отправки файлов.",
+      },
+      sv: {
+        name: "Slå ihop bilder",
+        description:
+          "Lägg bilder bredvid eller under varandra, eller ordna dem i ett rutnät. Ställ in mellanrum, bakgrund och bildstorlek och ladda ned en PNG utan att ladda upp några filer.",
+      },
+      th: {
+        name: "เครื่องมือรวมรูปภาพ",
+        description:
+          "รวมรูปภาพโดยเรียงแนวนอน แนวตั้ง หรือแบบตาราง ปรับระยะห่าง พื้นหลัง และขนาดภาพ แล้วดาวน์โหลดเป็น PNG โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "Görsel Birleştirici",
+        description:
+          "Görselleri yan yana, alt alta veya ızgara düzeninde birleştirin. Aralıkları, arka planı ve görsel boyutlarını ayarlayıp dosyalarınızı yüklemeden sonucu PNG olarak indirin.",
+      },
+      vi: {
+        name: "Công cụ ghép ảnh",
+        description:
+          "Ghép ảnh theo hàng ngang, xếp dọc hoặc theo lưới. Điều chỉnh khoảng cách, nền và kích thước ảnh, rồi tải PNG xuống mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "图片拼接器",
+        description:
+          "横向、纵向或按网格拼接多张图片。调整间距、背景和图片尺寸，直接在浏览器中生成并下载 PNG，无需上传图片。",
+      },
+      "zh-TW": {
+        name: "圖片拼接器",
+        description:
+          "將多張圖片橫向並排、縱向堆疊或排成格狀。調整間距、背景及圖片尺寸，再下載為 PNG，無須上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "image-cropper",
     category: "image",
     icon: "image",
