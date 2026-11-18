@@ -1,0 +1,4 @@
+{
+  "name": "Image Comparator",
+  "description": "Compare two images with a draggable divider, an opacity overlay, or a pixel difference map. Your images stay in your browser."
+}

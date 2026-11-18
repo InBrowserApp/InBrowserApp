@@ -534,6 +534,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "이미지 비교",
+    slug: "image-comparator",
+  },
+  {
+    category: "image",
     name: "이미지 자르기",
     slug: "image-cropper",
   },
