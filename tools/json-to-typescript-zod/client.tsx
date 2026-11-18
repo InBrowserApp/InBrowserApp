@@ -28,17 +28,13 @@ hljs.registerLanguage("typescript", typescript)
 
 export type Messages = { readonly [Key in keyof typeof english]: string }
 
-const sample = JSON.stringify(
-  {
-    users: [
-      { id: 1, name: "Ava", email: "ava@example.com", roles: ["editor"] },
-      { id: 2, name: "Sam", email: null, roles: [], active: true },
-    ],
-    nextCursor: null,
-  },
-  null,
-  2
-)
+const sample = `{
+  "users": [
+    { "id": 1, "name": "Ava", "email": "ava@example.com", "roles": ["editor"] },
+    { "id": 2, "name": "Sam", "email": null, "roles": [], "active": true }
+  ],
+  "nextCursor": null
+}`
 
 const formats = [
   { id: "typescript", label: "TypeScript", filename: "api-response.ts" },
@@ -72,21 +68,23 @@ function CodePanel({
             // oxlint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- Allow keyboard scrolling for long code.
             tabIndex={0}
             aria-label={`${format.label} · ${messages.outputLabel}`}
-            className="json-typescript-code h-80 overflow-auto rounded-lg border border-input bg-background p-3 text-left font-mono text-sm focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+            className="json-typescript-code h-64 overflow-auto rounded-lg border border-input bg-background p-3 text-left font-mono text-sm wrap-anywhere whitespace-pre-wrap focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none lg:h-80 lg:whitespace-pre"
           >
             <code dangerouslySetInnerHTML={{ __html: highlighted }} />
           </pre>
         ) : (
-          <div className="grid h-80 place-items-center rounded-lg border border-dashed px-4 text-center text-sm text-muted-foreground">
+          <div className="grid h-64 place-items-center rounded-lg border border-dashed px-4 text-center text-sm text-muted-foreground lg:h-80">
             {messages.emptyOutput}
           </div>
         )}
       </ToolPanelCardContent>
       <ToolPanelCardFooter className="flex-wrap justify-end gap-2 border-t">
         <ToolCopyButton
+          key={code ? "ready" : "empty"}
           value={code}
           copyLabel={messages.copyLabel}
           copiedLabel={messages.copiedLabel}
+          size="default"
         />
         {code ? (
           <DocumentDownload
@@ -101,11 +99,6 @@ function CodePanel({
           </Button>
         )}
       </ToolPanelCardFooter>
-      {format.id === "zod" && (
-        <p className="border-t px-4 py-3 text-sm text-muted-foreground">
-          {messages.zodHelp}
-        </p>
-      )}
     </>
   )
 }
@@ -122,6 +115,7 @@ export default function JsonToTypescriptZodClient({
   const inputRevision = useRef(0)
   const [input, setInput] = useState("")
   const [fileFailed, setFileFailed] = useState(false)
+  const [formatId, setFormatId] = useState("typescript")
   const result = useMemo(() => generateCode(input), [input])
   const error = fileFailed
     ? messages.fileReadError
@@ -154,7 +148,7 @@ export default function JsonToTypescriptZodClient({
     <div className="grid gap-4">
       <div className="grid items-start gap-4 lg:grid-cols-2">
         <ToolPanelCard className="min-w-0">
-          <CardHeader className="flex min-h-14 items-center border-b">
+          <CardHeader className="flex min-h-16 items-center border-b">
             <CardTitle>
               <label htmlFor={inputId}>{messages.inputLabel}</label>
             </CardTitle>
@@ -172,7 +166,7 @@ export default function JsonToTypescriptZodClient({
               placeholder={messages.inputPlaceholder}
               value={input}
               onChange={(event) => updateInput(event.target.value)}
-              className="h-80 resize-y font-mono text-sm"
+              className="h-64 resize-y font-mono text-sm lg:h-80"
             />
             <div
               aria-live="polite"
@@ -186,7 +180,6 @@ export default function JsonToTypescriptZodClient({
             <Button
               type="button"
               variant="outline"
-              size="sm"
               onClick={() => updateInput(sample)}
             >
               <FileJson2 data-icon="inline-start" aria-hidden="true" />
@@ -195,7 +188,6 @@ export default function JsonToTypescriptZodClient({
             <Button
               type="button"
               variant="outline"
-              size="sm"
               onClick={() => fileInput.current?.click()}
             >
               <FileText data-icon="inline-start" aria-hidden="true" />
@@ -212,8 +204,13 @@ export default function JsonToTypescriptZodClient({
         </ToolPanelCard>
 
         <ToolPanelCard className="min-w-0">
-          <Tabs defaultValue="typescript" dir={dir} className="gap-0">
-            <CardHeader className="flex min-h-14 flex-wrap items-center justify-between gap-x-3 gap-y-2 border-b">
+          <Tabs
+            value={formatId}
+            onValueChange={setFormatId}
+            dir={dir}
+            className="gap-0"
+          >
+            <CardHeader className="flex min-h-16 flex-wrap items-center justify-between gap-x-3 gap-y-2 border-b pt-4">
               <CardTitle>{messages.outputLabel}</CardTitle>
               <TabsList aria-label={messages.outputLabel}>
                 {formats.map(({ id, label }) => (
@@ -227,6 +224,9 @@ export default function JsonToTypescriptZodClient({
               <TabsContent
                 key={format.id}
                 value={format.id}
+                aria-describedby={
+                  format.id === "zod" ? `${inputId}-zod-help` : undefined
+                }
                 className="min-w-0 focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset"
               >
                 <CodePanel
@@ -239,7 +239,12 @@ export default function JsonToTypescriptZodClient({
           </Tabs>
         </ToolPanelCard>
       </div>
-      <p className="text-sm text-muted-foreground">{messages.inferenceHelp}</p>
+      <div className="space-y-1 text-sm text-muted-foreground">
+        <p>{messages.inferenceHelp}</p>
+        {formatId === "zod" && (
+          <p id={`${inputId}-zod-help`}>{messages.zodHelp}</p>
+        )}
+      </div>
     </div>
   )
 }

@@ -35,6 +35,14 @@ describe("JSON to TypeScript / Zod", () => {
     })
     expect(types.getAttribute("download")).toBe("api-response.ts")
 
+    const copy = vi.spyOn(navigator.clipboard, "writeText").mockResolvedValue()
+    fireEvent.click(screen.getByRole("button", { name: messages.copyLabel }))
+    await screen.findByRole("button", { name: messages.copiedLabel })
+    expect(copy).toHaveBeenCalledWith(
+      container.querySelector("pre")?.textContent
+    )
+    copy.mockRestore()
+
     fireEvent.change(input, { target: { value: '{"count":' } })
     expect(input.getAttribute("aria-invalid")).toBe("true")
     expect(input.value).toBe('{"count":')
@@ -43,6 +51,11 @@ describe("JSON to TypeScript / Zod", () => {
     expect(
       screen.queryByRole("link", { name: messages.downloadLabel })
     ).toBeNull()
+    expect(
+      screen.getByRole<HTMLButtonElement>("button", {
+        name: messages.copyLabel,
+      }).disabled
+    ).toBe(true)
 
     fireEvent.change(input, { target: { value: '{"count":0}' } })
     fireEvent.mouseDown(screen.getByRole("tab", { name: "Zod" }), {
