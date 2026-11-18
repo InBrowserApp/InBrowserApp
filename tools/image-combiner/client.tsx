@@ -91,12 +91,9 @@ export default function ImageCombiner({
           const image = new Image()
           image.src = url
           await image.decode()
-          return {
-            name: file.name,
-            image,
-            width: image.naturalWidth,
-            height: image.naturalHeight,
-          }
+          const { naturalWidth: width, naturalHeight: height } = image
+          if (!width || !height) throw new Error("Image has no pixels")
+          return { name: file.name, image, width, height }
         } catch {
           release(url)
           return { name: file.name }

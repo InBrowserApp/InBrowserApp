@@ -14,6 +14,7 @@ import messages from "./messages/en.json"
 const wide = new File(["image"], "wide.png", { type: "image/png" })
 const tall = new File(["image"], "tall.png", { type: "image/png" })
 const broken = new File(["bad"], "broken.png", { type: "image/png" })
+const empty = new File(["svg"], "empty.svg", { type: "image/svg+xml" })
 const text = new File(["text"], "notes.txt", { type: "text/plain" })
 const fileInput = () => screen.getByLabelText(messages.addImages)
 const upload = (...files: File[]) =>
@@ -46,9 +47,10 @@ beforeEach(() => {
     async function (this: HTMLImageElement) {
       if (this.src.includes(broken.name)) throw new Error("Invalid image data")
       const landscape = this.src.includes(wide.name)
+      const noPixels = this.src.includes(empty.name)
       Object.defineProperties(this, {
-        naturalWidth: { value: landscape ? 200 : 60 },
-        naturalHeight: { value: landscape ? 100 : 120 },
+        naturalWidth: { value: noPixels ? 0 : landscape ? 200 : 60 },
+        naturalHeight: { value: noPixels ? 0 : landscape ? 100 : 120 },
       })
     }
   )
@@ -74,7 +76,7 @@ it("reads multiple images in order, reports a bad file, and releases removed sou
   const view = render(<ImageCombiner lang="en" messages={messages} />)
   expect(screen.getByText(messages.emptyPreview)).toBeTruthy()
   upload()
-  upload(wide, broken, tall)
+  upload(wide, broken, tall, empty)
 
   expect(await screen.findByText("wide.png")).toBeTruthy()
   expect(
@@ -88,6 +90,7 @@ it("reads multiple images in order, reports a bad file, and releases removed sou
   ).toEqual([wide.name, tall.name])
   expect([composite().width, composite().height]).toEqual([268, 120])
   expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:local/broken.png/1")
+  expect(URL.revokeObjectURL).toHaveBeenCalledWith("blob:local/empty.svg/3")
 
   fireEvent.click(screen.getByRole("button", { name: "Move tall.png earlier" }))
   expect(context.drawImage.mock.lastCall?.slice(1)).toEqual([68, 10, 200, 100])
