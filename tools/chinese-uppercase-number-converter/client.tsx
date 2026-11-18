@@ -80,9 +80,7 @@ function ChineseUppercaseNumberConverterClient({
     const storedNumber = window.localStorage.getItem(STORAGE_KEYS.number)
 
     setVariant(
-      storedVariant === "simplified" || storedVariant === "traditional"
-        ? storedVariant
-        : defaultVariant
+      isUppercaseVariant(storedVariant) ? storedVariant : defaultVariant
     )
     setInput({ field: "number", value: storedNumber ?? DEFAULT_INPUT.value })
   }, [defaultVariant])
@@ -95,7 +93,7 @@ function ChineseUppercaseNumberConverterClient({
   }
 
   function handleVariantChange(nextVariant: string) {
-    if (nextVariant !== "simplified" && nextVariant !== "traditional") return
+    if (!isUppercaseVariant(nextVariant)) return
 
     setVariant(nextVariant)
     window.localStorage.setItem(STORAGE_KEYS.variant, nextVariant)
@@ -201,6 +199,10 @@ function ChineseUppercaseNumberConverterClient({
       </ToolPanelCard>
     </div>
   )
+}
+
+function isUppercaseVariant(value: string | null): value is UppercaseVariant {
+  return value === "simplified" || value === "traditional"
 }
 
 export default ChineseUppercaseNumberConverterClient

@@ -149,19 +149,9 @@ export function convertNumberToUppercase(
 ): ConversionResult {
   const parsed = parseNumberInput(input)
 
-  if (parsed.isEmpty) {
-    return {
-      isEmpty: true,
-      isValid: false,
-      normalized: "",
-      value: "",
-      error: null,
-    }
-  }
-
   if (!parsed.isValid) {
     return {
-      isEmpty: false,
+      isEmpty: parsed.isEmpty,
       isValid: false,
       normalized: parsed.normalized,
       value: "",
@@ -329,33 +319,7 @@ export function parseUppercaseInput(input: string): UppercaseParseResult {
 }
 
 export function convertUppercaseToNumber(input: string): ConversionResult {
-  const parsed = parseUppercaseInput(input)
-
-  if (parsed.isEmpty) {
-    return {
-      isEmpty: true,
-      isValid: false,
-      normalized: "",
-      value: "",
-      error: null,
-    }
-  }
-
-  if (!parsed.isValid) {
-    return {
-      isEmpty: false,
-      isValid: false,
-      normalized: parsed.normalized,
-      value: "",
-      error: parsed.error,
-    }
-  }
-
-  return {
-    isEmpty: false,
-    isValid: true,
-    normalized: parsed.normalized,
-    value: parsed.value,
-    error: null,
-  }
+  const { isEmpty, isValid, normalized, value, error } =
+    parseUppercaseInput(input)
+  return { isEmpty, isValid, normalized, value, error }
 }
