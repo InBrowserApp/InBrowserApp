@@ -26,7 +26,7 @@ const Intro = resolveLocale<AstroComponentFactory>(
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <Client client:load messages={messages} lang={lang} />
-  <ToolArticle className="border-t border-border pt-8 [&>*]:max-w-3xl [&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate] rtl:[&_ul]:mr-6 rtl:[&_ul]:ml-0">
+  <ToolArticle className="border-t border-border pt-8 [&_code]:[direction:ltr] [&_code]:[unicode-bidi:isolate] rtl:[&_ul]:mr-6 rtl:[&_ul]:ml-0">
     <Intro />
   </ToolArticle>
 </ToolPageShell>
