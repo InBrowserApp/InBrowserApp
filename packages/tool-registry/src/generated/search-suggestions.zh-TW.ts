@@ -209,7 +209,7 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "misc",
-    name: "數字 ↔ 中文大寫數字轉換器",
+    name: "國字大寫轉換器",
     slug: "chinese-uppercase-number-converter",
   },
   {
