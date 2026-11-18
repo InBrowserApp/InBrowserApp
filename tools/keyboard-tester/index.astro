@@ -1,8 +1,10 @@
 ---
 import { resolveLocale } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import KeyboardTester from "./client"
 
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { ToolMeta } from "@workspace/tool-sdk"
 import type EnglishMessages from "./messages/en.json"
 
@@ -19,8 +21,13 @@ const messages = resolveLocale<typeof EnglishMessages>(
   import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
   lang
 )!
+const Intro = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.md", { eager: true, import: "default" }),
+  lang
+)!
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <KeyboardTester client:load language={lang} messages={messages} />
+  <ToolArticle className="max-w-3xl"><Intro /></ToolArticle>
 </ToolPageShell>
