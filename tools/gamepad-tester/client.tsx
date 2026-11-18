@@ -69,8 +69,8 @@ export default function GamepadTester({
       <Card>
         <Empty className="min-h-60" role="status">
           <EmptyHeader>
-            <EmptyMedia variant="icon" className="size-12 [&_svg]:size-6">
-              <Gamepad2 aria-hidden="true" />
+            <EmptyMedia variant="icon" className="size-12">
+              <Gamepad2 aria-hidden="true" className="size-6" />
             </EmptyMedia>
             <EmptyTitle>
               {unavailable ? messages.unavailable : messages.waiting}
@@ -150,7 +150,7 @@ export default function GamepadTester({
               </h2>
             </CardHeader>
             <CardContent className="grid gap-3">
-              <div className="grid grid-cols-2 gap-2 sm:gap-3">
+              <div dir="ltr" className="grid grid-cols-2 gap-2 sm:gap-3">
                 {readSticks(gamepad.axes).map((stick, index) => {
                   const result =
                     check?.status === "complete" ? check.result[index] : null
