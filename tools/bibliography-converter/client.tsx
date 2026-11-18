@@ -31,7 +31,8 @@ type View =
 const selectClass =
   "h-9 w-full rounded-md border border-input bg-background px-3 text-sm focus-visible:outline-2 focus-visible:outline-ring"
 
-const editorClass = "min-h-64 resize-y font-mono text-sm leading-relaxed"
+const editorClass =
+  "field-sizing-fixed h-52 resize-y font-mono text-sm leading-relaxed sm:h-64 lg:h-72"
 
 export default function Client({
   messages: m,
@@ -55,7 +56,7 @@ export default function Client({
       ? m[view.state]
       : null
   const number = new Intl.NumberFormat(lang)
-  const list = new Intl.ListFormat(lang, { type: "unit" })
+  const list = new Intl.ListFormat(lang)
 
   function invalidate() {
     setView(null)
@@ -127,7 +128,7 @@ export default function Client({
               aria-label={m.paste}
               aria-invalid={view?.state === "inputError"}
               aria-describedby={error ? `${id}-error` : undefined}
-              className={`${editorClass} placeholder:[text-align:match-parent]`}
+              className={editorClass}
               dir="ltr"
               spellCheck={false}
               value={input}
@@ -155,28 +156,30 @@ export default function Client({
               hidden
               onChange={(event) => void openFile(event)}
             />
+            <div className="flex flex-wrap gap-2">
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => picker.current?.click()}
+              >
+                <FolderInput data-icon="inline-start" aria-hidden="true" />
+                {m.open}
+              </Button>
+              <Button
+                type="button"
+                variant="ghost"
+                onClick={() => {
+                  setInput(example)
+                  setSource("auto")
+                  invalidate()
+                }}
+              >
+                {m.example}
+              </Button>
+            </div>
             <Button
               type="button"
-              variant="outline"
-              onClick={() => picker.current?.click()}
-            >
-              <FolderInput data-icon="inline-start" aria-hidden="true" />
-              {m.open}
-            </Button>
-            <Button
-              type="button"
-              variant="ghost"
-              onClick={() => {
-                setInput(example)
-                setSource("auto")
-                invalidate()
-              }}
-            >
-              {m.example}
-            </Button>
-            <Button
-              type="button"
-              className="ms-auto"
+              className="ms-auto max-sm:w-full"
               disabled={busy || !input.trim()}
               onClick={() => void convert()}
             >
@@ -226,24 +229,26 @@ export default function Client({
               {result &&
                 m.entries.replace("{count}", number.format(result.count))}
             </span>
-            <ToolCopyButton
-              size="default"
-              value={result?.output ?? ""}
-              copyLabel={m.copy}
-              copiedLabel={m.copied}
-            />
-            {result ? (
-              <DocumentDownload
-                file={result.file}
-                filename={`references.${formats[target].extension}`}
-                label={m.download}
+            <div className="flex flex-wrap justify-end gap-2">
+              <ToolCopyButton
+                size="default"
+                value={result?.output ?? ""}
+                copyLabel={m.copy}
+                copiedLabel={m.copied}
               />
-            ) : (
-              <Button type="button" disabled>
-                <Download data-icon="inline-start" aria-hidden="true" />
-                {m.download}
-              </Button>
-            )}
+              {result ? (
+                <DocumentDownload
+                  file={result.file}
+                  filename={`references.${formats[target].extension}`}
+                  label={m.download}
+                />
+              ) : (
+                <Button type="button" disabled>
+                  <Download data-icon="inline-start" aria-hidden="true" />
+                  {m.download}
+                </Button>
+              )}
+            </div>
           </CardFooter>
         </Card>
       </div>
@@ -264,8 +269,8 @@ export default function Client({
                     className="grid gap-1 py-3 first:pt-0 last:pb-0"
                   >
                     {title && (
-                      <p dir="auto" className="font-medium break-words">
-                        {title}
+                      <p className="font-medium wrap-anywhere">
+                        <bdi>{title}</bdi>
                       </p>
                     )}
                     <p className="text-muted-foreground">

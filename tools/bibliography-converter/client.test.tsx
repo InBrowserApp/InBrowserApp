@@ -8,6 +8,7 @@ import {
 import { afterEach, describe, expect, it, vi } from "vitest"
 import Client from "./client"
 import messages from "./messages/en.json"
+import chineseMessages from "./messages/zh-CN.json"
 
 afterEach(() => {
   cleanup()
@@ -50,7 +51,7 @@ describe("Bibliography Converter", () => {
 
     expect(await screen.findByText("Entries: 3")).toBeTruthy()
     expect(
-      screen.getByText("Entries 1, 2 · " + messages.byMetadata)
+      screen.getByText("Entries 1 and 2 · " + messages.byMetadata)
     ).toBeTruthy()
     expect(output.value.match(/TY  -/g)).toHaveLength(3)
     expect(
@@ -68,6 +69,17 @@ describe("Bibliography Converter", () => {
     fireEvent.click(convert)
     await screen.findByText("Entries: 3")
     expect(JSON.parse(output.value)).toHaveLength(3)
+  })
+
+  it("separates adjacent entry numbers in Chinese", async () => {
+    render(<Client messages={chineseMessages} lang="zh-CN" />)
+    fireEvent.click(
+      screen.getByRole("button", { name: chineseMessages.example })
+    )
+    fireEvent.click(
+      screen.getByRole("button", { name: chineseMessages.convert })
+    )
+    expect(await screen.findByText(/条目 1和2/)).toBeTruthy()
   })
 
   it("retains invalid input and recovers after editing", async () => {
