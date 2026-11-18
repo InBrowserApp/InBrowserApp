@@ -276,8 +276,8 @@ catalogs:
       specifier: 0.9.0
       version: 0.9.0
     '@silurus/ooxml':
-      specifier: 0.89.12
-      version: 0.89.12
+      specifier: 0.90.1
+      version: 0.90.1
     '@tailwindcss/vite':
       specifier: ^4.3.5
       version: 4.3.5
@@ -450,8 +450,8 @@ catalogs:
       specifier: ^9.1.7
       version: 9.1.7
     hyparquet:
-      specifier: 1.33.0
-      version: 1.33.0
+      specifier: 1.33.1
+      version: 1.33.1
     hyparquet-compressors:
       specifier: 1.1.3
       version: 1.1.3
@@ -663,11 +663,11 @@ patchedDependencies:
   '@file-viewer/doc@3.3.4': 11f9feb663d021e371fd235095277e21e321dac4509c3b5a3b929d3feaf7b649
   '@matbee/libreoffice-converter@2.7.2': 952404a2b37db15a156290b4fe621c0fbc76f77277d91ab2d9f09a2145385dde
   '@rhwp/core@0.9.0': 38b71bed4e51265724c430febc998985144ef5ebd2979404eba8d1172d3be5f6
-  '@silurus/ooxml@0.89.12': b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05
+  '@silurus/ooxml@0.90.1': 400c1f4334834b8853bf7809a43a2542e9928923263fee700a90bb6a35a35226
   caj2pdf-rust@0.8.1: a763528bb50bc314154c0378eacd51e5882b88d2f932edd4207a40adb45f9f80
   curlconverter@4.12.0: c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484
   foliate-js@1.0.1: d0bc6b9699dd4d50d9a64bc548f0687f1f0b92f3b2faa0141c75cb96ddb03236
-  hyparquet@1.33.0: 9663de269690a8af3235e71a697729f19da2f2c8dd5a7d877a6a31366df7223a
+  hyparquet@1.33.1: f8440c629287acafd8c426b011ccffd5bf88e0cb818750dcc80629f628594830
   rtf-viewer@1.3.1: 734830adc8d033bcf48cd7b360822e1850f1818ebbd2c2582a7a52637a3d7f3d
   xlsx@0.20.3: 2b86e7c3441efebe33d4027b54af32eccbad63430ea6936768429e1662f65c45
 
@@ -829,7 +829,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)
+        version: 0.90.1(patch_hash=400c1f4334834b8853bf7809a43a2542e9928923263fee700a90bb6a35a35226)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -4058,7 +4058,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)
+        version: 0.90.1(patch_hash=400c1f4334834b8853bf7809a43a2542e9928923263fee700a90bb6a35a35226)
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -4098,7 +4098,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)
+        version: 0.90.1(patch_hash=400c1f4334834b8853bf7809a43a2542e9928923263fee700a90bb6a35a35226)
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -7379,7 +7379,7 @@ importers:
         version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       hyparquet:
         specifier: 'catalog:'
-        version: 1.33.0(patch_hash=9663de269690a8af3235e71a697729f19da2f2c8dd5a7d877a6a31366df7223a)
+        version: 1.33.1(patch_hash=f8440c629287acafd8c426b011ccffd5bf88e0cb818750dcc80629f628594830)
       hyparquet-compressors:
         specifier: 'catalog:'
         version: 1.1.3
@@ -7917,7 +7917,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)
+        version: 0.90.1(patch_hash=400c1f4334834b8853bf7809a43a2542e9928923263fee700a90bb6a35a35226)
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -7957,7 +7957,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)
+        version: 0.90.1(patch_hash=400c1f4334834b8853bf7809a43a2542e9928923263fee700a90bb6a35a35226)
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -10429,7 +10429,7 @@ importers:
     dependencies:
       '@silurus/ooxml':
         specifier: 'catalog:'
-        version: 0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)
+        version: 0.90.1(patch_hash=400c1f4334834b8853bf7809a43a2542e9928923263fee700a90bb6a35a35226)
       '@workspace/document-reader':
         specifier: workspace:*
         version: link:../../packages/lib/document-reader
@@ -13543,8 +13543,8 @@ packages:
   '@shikijs/vscode-textmate@10.1.0':
     resolution: {integrity: sha512-cVBuhDQjBZaNMTwBquYfPydrUP+E3hE6oYGasx8h6ZrODIM7/r+gxLDXdd66oszbrggZHEntdE6j+5gYIVyMWQ==}
 
-  '@silurus/ooxml@0.89.12':
-    resolution: {integrity: sha512-LLYPVh4BPeTNT/le2KDjjtOXw36h3d8WarskxPthSxV1IwooytEDWhDODFBduu+G0IlB6YNfTDOGr9v+K98R2Q==}
+  '@silurus/ooxml@0.90.1':
+    resolution: {integrity: sha512-PXcySCSlW81X0omQMs8rsxScegEj8Ml1VA6raFkXEIbIHxlRXj3yRbCz5l+WXpjW2nWmXVUbZJTp+wapEssPaw==}
 
   '@simple-libs/child-process-utils@2.0.0':
     resolution: {integrity: sha512-dvNoRKLijXnD0XoJAz94pbNuB5GQgDr55UhpSPhffDkTT0Cmcqh9jSCOtwfT2d4H6MI9E7c4SgtMuJXZ6F3c6A==}
@@ -15143,8 +15143,8 @@ packages:
   hyparquet-compressors@1.1.3:
     resolution: {integrity: sha512-QqObpH8Vu1NKF5qzv7yWwgVso8sQE6irx0L5+WZ5QQ+xXnCQE5/X9K8hzYD6Z4wVjTmsMnZUO1vbutXLhU9AFQ==}
 
-  hyparquet@1.33.0:
-    resolution: {integrity: sha512-8EKLe73vRIMEKVEOe5y+kIzFxo6AvbLvd5ukd7P+yv3RvG0+TZM4qO8imbqxU6zds5pV+OeWRTMwy95mhHUheg==}
+  hyparquet@1.33.1:
+    resolution: {integrity: sha512-D623q+KpogNTsmb0sdWXKsi1zrgQTFf2A6MX0vKZChuG7kjA/O+ps7DDfSgGf0rs8SfFP7UqrsDYypxVmmgqZA==}
 
   hysnappy@1.1.1:
     resolution: {integrity: sha512-/V9XcN2NtRyWjR4LYMfvnvasVVF8jbT/ej0eofBQjZel91E3D813FQ3mQC6gDSMMTCq/FJh28XHeyqr3I/oBRw==}
@@ -20127,7 +20127,7 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.1.0': {}
 
-  '@silurus/ooxml@0.89.12(patch_hash=b0f1c9f3279e0d605444216d23397195ac03407b528a59f9e36eb3e6cf872c05)': {}
+  '@silurus/ooxml@0.90.1(patch_hash=400c1f4334834b8853bf7809a43a2542e9928923263fee700a90bb6a35a35226)': {}
 
   '@simple-libs/child-process-utils@2.0.0':
     dependencies:
@@ -21922,7 +21922,7 @@ snapshots:
       fzstd: 0.1.1
       hysnappy: 1.1.1
 
-  hyparquet@1.33.0(patch_hash=9663de269690a8af3235e71a697729f19da2f2c8dd5a7d877a6a31366df7223a): {}
+  hyparquet@1.33.1(patch_hash=f8440c629287acafd8c426b011ccffd5bf88e0cb818750dcc80629f628594830): {}
 
   hysnappy@1.1.1: {}
 

@@ -1,5 +1,5 @@
 diff --git a/src/assemble.js b/src/assemble.js
-index 5520198e9e3cf60621ffb1ba9c52a932a2baa813..dbaeb7f3a35a2c9b548cf580cb65beeac59adbb3 100644
+index 5520198..dbaeb7f 100644
 --- a/src/assemble.js
 +++ b/src/assemble.js
 @@ -113,7 +113,7 @@ export function assembleLists(output, definitionLevels, repetitionLevels, values
@@ -87,10 +87,10 @@ index 5520198e9e3cf60621ffb1ba9c52a932a2baa813..dbaeb7f3a35a2c9b548cf580cb65beea
        if (struct[key].length !== length) throw new Error('parquet struct parsing error')
        obj[key] = struct[key][i]
 diff --git a/src/rowgroup.js b/src/rowgroup.js
-index 61838e18a4cdb998462d4b5805c3b60524fbf214..c0fccc75da4c0f369245c29530e8df4a2fef1a5c 100644
+index e38c061..954496d 100644
 --- a/src/rowgroup.js
 +++ b/src/rowgroup.js
-@@ -187,7 +187,7 @@ export async function asyncGroupToRows({ asyncColumns }, selectStart, selectEnd,
+@@ -210,7 +210,7 @@ export async function asyncGroupToRows({ asyncColumns }, selectStart, selectEnd,
      for (let selectRow = 0; selectRow < selectCount; selectRow++) {
        // return each row as an object
        /** @type {Record<string, any>} */
@@ -99,7 +99,7 @@ index 61838e18a4cdb998462d4b5805c3b60524fbf214..c0fccc75da4c0f369245c29530e8df4a
        for (let i = 0; i < asyncColumns.length; i++) {
          const { data, skipped } = asyncPages[i]
          rowData[asyncColumns[i].pathInSchema[0]] = data[selectStart + selectRow - skipped]
-@@ -258,13 +258,13 @@ export function assembleAsync(asyncRowGroup, schemaTree, parsers) {
+@@ -281,13 +281,13 @@ export function assembleAsync(asyncRowGroup, schemaTree, parsers) {
              const start = skipped - resolved[i].skipped
              const length = Math.max(0, end - skipped)
              subcolumnData.set(
@@ -116,7 +116,7 @@ index 61838e18a4cdb998462d4b5805c3b60524fbf214..c0fccc75da4c0f369245c29530e8df4a
            return { data: [assembled], skipped }
          })(),
 diff --git a/src/variant.js b/src/variant.js
-index 7a127b561d4326c1c353f09b79a4ea9a0b0c1e3d..1fe0fc603220df109e3a71cc3c1abe6a7794b140 100644
+index 3c7212f..19b89b3 100644
 --- a/src/variant.js
 +++ b/src/variant.js
 @@ -65,7 +65,7 @@ function decodeTypedValue(typedValue, metadata, parsers) {

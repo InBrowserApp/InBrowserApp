@@ -1,0 +1,179 @@
+diff --git a/dist/presentation-Cti32_db.js b/dist/presentation-Cti32_db.js
+index 017e0ab..97abd79 100644
+--- a/dist/presentation-Cti32_db.js
++++ b/dist/presentation-Cti32_db.js
+@@ -1162,6 +1162,7 @@ var ht = class n {
+ 					fetchMedia: this._fetchMedia,
+ 					fetchImage: this._fetchImage,
+ 					skipMediaControls: r.skipMediaControls,
++					failOnError: r.failOnError,
+ 					dim: r.dim,
+ 					math: this._math,
+ 					threeD: this._threeD,
+diff --git a/dist/slide-pull-client-D2ZoyzhO.js b/dist/slide-pull-client-D2ZoyzhO.js
+index 05546f0..b240964 100644
+--- a/dist/slide-pull-client-D2ZoyzhO.js
++++ b/dist/slide-pull-client-D2ZoyzhO.js
+@@ -3246,13 +3246,15 @@ function Ta(e, t, n, r, i, a, o, s = !1, c = !1, l = 1, u, d = {
+ 	});
+ }
+ var Ea = { paint: () => {} };
+-async function Da(e, t, n, r, i, a, o, s) {
++async function Da(e, t, n, r, i, a, o, s, failOnError = false) {
+ 	if (e && e.fillType === "image") {
+ 		let c = (e) => {
+ 			e.fillStyle = "#FFFFFF", e.fillRect(0, 0, t, n);
+ 		};
+ 		if (!e.imagePath || !e.mimeType || !i) return { paint: c };
+-		let l = (e) => ft(e, "tiff") ? { paint: (e) => {
++		let l = (e) => {
++			if (failOnError) throw e;
++			return ft(e, "tiff") ? { paint: (e) => {
+ 			c(e), ct(e, "tiff", {
+ 				x: 0,
+ 				y: 0,
+@@ -3262,7 +3264,8 @@ async function Da(e, t, n, r, i, a, o, s) {
+ 		} } : e instanceof g || Ci(e) || Ye(e) || gt(e) ? {
+ 			paint: c,
+ 			failure: { error: e }
+-		} : { paint: c }, u, d;
++		} : { paint: c };
++		}, u, d;
+ 		try {
+ 			let c = s && !Z(e) ? Ei(s, Ti(e.imagePath, Z(e))) : void 0;
+ 			d = e.tile ? await Si(e, Tt(e.imagePath, e.mimeType, i)) : void 0, u = await Dt(e.imagePath, e.mimeType, Z(e.tile ? {
+@@ -3280,6 +3283,7 @@ async function Da(e, t, n, r, i, a, o, s) {
+ 		} catch (e) {
+ 			return l(e);
+ 		}
++		if (!u && failOnError) throw Error("Slide background could not be decoded");
+ 		if (!u) return { paint: c };
+ 		let f = u;
+ 		return { paint: (i) => {
+@@ -3293,6 +3297,7 @@ async function Da(e, t, n, r, i, a, o, s) {
+ 					i.restore();
+ 				}
+ 			} catch (r) {
++				if (failOnError) throw r;
+ 				if (ft(r, "tiff")) {
+ 					ct(i, "tiff", {
+ 						x: 0,
+@@ -4777,7 +4782,7 @@ function Co(e, t, n, r = "tiff") {
+ 		e.restore();
+ 	}
+ }
+-async function wo(e, t, n, r, i = 1, a, o) {
++async function wo(e, t, n, r, i = 1, a, o, failOnError = false) {
+ 	if (e.mimeType === "image/x-pict") return { paint: (n) => Co(n, e, t, "pict") };
+ 	if (!n) return Ea;
+ 	try {
+@@ -4813,10 +4818,12 @@ async function wo(e, t, n, r, i = 1, a, o) {
+ 				svgDecoder: a
+ 			});
+ 		}
++		if (!_ && failOnError) throw Error("Slide image could not be decoded");
+ 		if (!_) return Ea;
+ 		let v = _;
+-		return { paint: (n) => Eo(n, e, v, t) };
++		return { paint: (n) => Eo(n, e, v, t, failOnError) };
+ 	} catch (n) {
++		if (failOnError) throw n;
+ 		return To(e, t, n);
+ 	}
+ }
+@@ -4826,7 +4833,7 @@ function To(e, t, n) {
+ 		failure: { error: n }
+ 	} : Ea;
+ }
+-function Eo(e, t, n, r) {
++function Eo(e, t, n, r, failOnError = false) {
+ 	try {
+ 		e.save(), t.alpha != null && (e.globalAlpha *= t.alpha);
+ 		let i = X(t.x, r), a = X(t.y, r), o = X(t.width, r), s = X(t.height, r);
+@@ -4893,15 +4900,17 @@ function Eo(e, t, n, r) {
+ 		}) : O, te = !!m || x.length > 0;
+ 		io(e, t, V, te ? V : B, R.bbox, R.anchor, r, ee, A, !0, te), e.restore();
+ 	} catch (n) {
++		if (failOnError) throw n;
+ 		let i = To(t, r, n);
+ 		if (i.paint(e), i.failure) throw i.failure.error;
+ 	}
+ }
+-async function Do(e, t, n, r, i, a, o = 1, s, c) {
++async function Do(e, t, n, r, i, a, o = 1, s, c, failOnError = false) {
+ 	let l = X(e.x, t), u = X(e.y, t), d = X(e.width, t), f = X(e.height, t), p, m = !1;
+ 	if (e.posterPath && n) try {
+ 		p = await So(e, n, i, a, e.posterMimeType === "image/svg+xml" ? xi(d, f, o) : c ? Ei(c, Ti(e.posterPath)) : void 0, s);
+ 	} catch (e) {
++		if (failOnError) throw e;
+ 		if (ft(e, "tiff")) m = !0;
+ 		else if (e instanceof g || Ci(e) || Ye(e) || gt(e)) return {
+ 			...Ea,
+@@ -5254,6 +5263,7 @@ async function Ro(e, t, n, r, i = {}, a, o, s = () => !1) {
+ 		if (!t) throw Error("Could not get 2D context");
+ 		return t.scale(h, h), t;
+ 	};
++	if (t.parseError && i.failOnError) throw Error("Slide could not be parsed");
+ 	if (t.parseError) {
+ 		let n = Fo.loaded;
+ 		return !n && (n = await Fo.load(), s()) || n(b(), d, f, t.slideNumber, t.parseError, i.errorPlaceholderText), e;
+@@ -5275,8 +5285,8 @@ async function Ro(e, t, n, r, i = {}, a, o, s = () => !1) {
+ 		pictureBulletImages: w,
+ 		shapeFillImages: T
+ 	}, D = [], O = () => D.some((e) => e.failure);
+-	if (D.push(await Da(t.background, d, f, u, i.fetchImage, i.tiff, c, y)), s()) return e;
+-	let k = t.slideNumber, A = O() ? [] : t.elements.map((e) => e.type === "picture" ? wo(e, u, i.fetchImage, i.tiff, h, c, y) : e.type === "media" ? Do(e, u, i.fetchMedia, i.skipMediaControls, o, i.tiff, h, c, y) : Promise.resolve(null)).map((e) => e.catch((e) => ({
++	if (D.push(await Da(t.background, d, f, u, i.fetchImage, i.tiff, c, y, i.failOnError)), s()) return e;
++	let k = t.slideNumber, A = O() ? [] : t.elements.map((e) => e.type === "picture" ? wo(e, u, i.fetchImage, i.tiff, h, c, y, i.failOnError) : e.type === "media" ? Do(e, u, i.fetchMedia, i.skipMediaControls, o, i.tiff, h, c, y, i.failOnError) : Promise.resolve(null)).map((e) => e.catch((e) => ({
+ 		...Ea,
+ 		failure: { error: e }
+ 	}))), j = /* @__PURE__ */ new Map();
+@@ -5421,8 +5431,10 @@ async function Ro(e, t, n, r, i = {}, a, o, s = () => !1) {
+ 						tiff: i.tiff,
+ 						...a
+ 					});
++					if (!o && i.failOnError) throw Error("Picture bullet could not be decoded");
+ 					w.set(e, o);
+ 				} catch (t) {
++					if (i.failOnError) throw t;
+ 					if (ft(t, "tiff")) {
+ 						w.set(e, null);
+ 						return;
+@@ -5461,8 +5473,10 @@ async function Ro(e, t, n, r, i = {}, a, o, s = () => !1) {
+ 						s = await t();
+ 					}
+ 					else s = await t();
++					if (!s && i.failOnError) throw Error("Chart image could not be decoded");
+ 					j.set(e, s);
+ 				} catch (t) {
++					if (i.failOnError) throw t;
+ 					if (ft(t, "tiff")) {
+ 						j.set(e, null);
+ 						return;
+@@ -5508,11 +5522,13 @@ async function Ro(e, t, n, r, i = {}, a, o, s = () => !1) {
+ 						f = await l();
+ 					}
+ 					else f = await l();
++					if (!f && i.failOnError) throw Error("Shape fill could not be decoded");
+ 					T.set(e, f ? {
+ 						image: f,
+ 						intrinsicSize: s
+ 					} : null);
+ 				} catch (t) {
++					if (i.failOnError) throw t;
+ 					if (ft(t, "tiff")) {
+ 						T.set(e, null);
+ 						return;
+diff --git a/dist/types/pptx.d.ts b/dist/types/pptx.d.ts
+index 4647b07..257122a 100644
+--- a/dist/types/pptx.d.ts
++++ b/dist/types/pptx.d.ts
+@@ -2362,6 +2362,8 @@ interface RenderSlideToBitmapOptions {
+   errorPlaceholder?: ErrorPlaceholderOption<PptxPartFailure>;
+ }
+ interface RenderSlideOptions {
++  /** Reject parser errors and undecodable images instead of drawing placeholders. Main-thread renderSlide only. */
++  failOnError?: boolean;
+   width?: number;
+   dpr?: number;
+   imageResources?: ImageResourceOptions;
