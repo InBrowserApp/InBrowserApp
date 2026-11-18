@@ -1,7 +1,9 @@
 ---
 import { resolveLocale, type ToolMeta } from "@workspace/tool-sdk"
+import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
 import ImageCombiner from "./client"
+import type { AstroComponentFactory } from "astro/runtime/server/index.js"
 import type { Messages } from "./types"
 
 interface Props {
@@ -17,8 +19,17 @@ const messages = resolveLocale<Messages>(
   import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
   lang
 )!
+const Intro = resolveLocale<AstroComponentFactory>(
+  import.meta.glob("./sections/intro/*.md", { eager: true, import: "default" }),
+  lang
+)!
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <ImageCombiner client:load lang={lang} messages={messages} />
+  <ToolArticle
+    className="max-w-3xl rtl:[&_ul]:mr-6 rtl:[&_ul]:ml-0 rtl:[&_ol]:mr-6 rtl:[&_ol]:ml-0"
+  >
+    <Intro />
+  </ToolArticle>
 </ToolPageShell>
