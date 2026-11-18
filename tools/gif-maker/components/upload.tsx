@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useRef, useState, type Ref } from "react"
 import { Button } from "@workspace/ui/components/ui/button"
 import { ImageUp, LoaderCircle } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
@@ -11,6 +11,7 @@ type UploadProps = {
   compact: boolean
   disabled: boolean
   reading: boolean
+  buttonRef: Ref<HTMLButtonElement>
   onFiles: (files: File[]) => void
 }
 
@@ -19,6 +20,7 @@ export function Upload({
   compact,
   disabled,
   reading,
+  buttonRef,
   onFiles,
 }: UploadProps) {
   const input = useRef<HTMLInputElement>(null)
@@ -79,6 +81,7 @@ export function Upload({
         <p className="text-sm text-muted-foreground">{messages.fileHint}</p>
       </div>
       <Button
+        ref={buttonRef}
         type="button"
         disabled={disabled}
         variant={compact ? "outline" : "default"}

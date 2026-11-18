@@ -37,6 +37,7 @@ export default function GifMaker({
   const [errors, setErrors] = useState<string[]>([])
   const [result, setResult] = useState<GifResult | null>(null)
   const workerRef = useRef<Worker | null>(null)
+  const uploadButton = useRef<HTMLButtonElement>(null)
   const formId = useId()
   const loopId = useId()
   const size = animationSize(frames)
@@ -107,6 +108,7 @@ export default function GifMaker({
   return (
     <div className="flex flex-col gap-4">
       <Upload
+        buttonRef={uploadButton}
         compact={frames.length > 0}
         disabled={busy !== null}
         reading={busy === "reading"}
@@ -156,11 +158,12 @@ export default function GifMaker({
                 return ordered
               })
             }
-            onRemove={(frame) =>
+            onRemove={(frame) => {
+              if (frames.length === 1) uploadButton.current?.focus()
               editFrames((current) =>
                 current.filter((item) => item.id !== frame.id)
               )
-            }
+            }}
           />
           <div className="flex min-w-0 flex-col gap-4">
             <form

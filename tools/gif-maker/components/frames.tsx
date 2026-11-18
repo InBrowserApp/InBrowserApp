@@ -79,7 +79,7 @@ export function Frames({
               name="duration"
               dir="ltr"
               type="number"
-              className="w-28 tabular-nums"
+              className="w-24 tabular-nums"
               defaultValue={defaultDuration}
               disabled={disabled}
               required
@@ -98,7 +98,7 @@ export function Frames({
         <span role="status" className="sr-only">
           {announcement}
         </span>
-        <ol className="flex flex-col gap-2">
+        <ol className="-m-1 flex max-h-[min(56dvh,34rem)] flex-col gap-2 overflow-y-auto p-1">
           {images.map((frame, index) => {
             const { file, thumbnail } = frame
             const name = file.name
@@ -232,7 +232,18 @@ export function Frames({
                       size="icon"
                       type="button"
                       variant="ghost"
-                      onClick={() => onRemove(frame)}
+                      data-remove-frame
+                      onClick={(event) => {
+                        const row = event.currentTarget.closest("li")
+                        const neighbor =
+                          row?.nextElementSibling ?? row?.previousElementSibling
+                        neighbor
+                          ?.querySelector<HTMLButtonElement>(
+                            "[data-remove-frame]"
+                          )
+                          ?.focus()
+                        onRemove(frame)
+                      }}
                     >
                       <Trash2 aria-hidden="true" />
                     </Button>

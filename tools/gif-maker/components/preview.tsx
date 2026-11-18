@@ -93,12 +93,14 @@ export function Preview({
           )}
           {playing ? messages.stop : messages.play}
         </Button>
-        <Button asChild className="h-auto min-h-9 whitespace-normal">
-          <a href={downloadUrl} download="animation.gif">
-            <Download aria-hidden="true" data-icon="inline-start" />
-            {messages.download}
-          </a>
-        </Button>
+        {downloadUrl && (
+          <Button asChild className="h-auto min-h-9 whitespace-normal">
+            <a href={downloadUrl} download="animation.gif">
+              <Download aria-hidden="true" data-icon="inline-start" />
+              {messages.download}
+            </a>
+          </Button>
+        )}
       </CardFooter>
     </Card>
   )
