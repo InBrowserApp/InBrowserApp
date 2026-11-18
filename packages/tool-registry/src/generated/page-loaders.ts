@@ -179,6 +179,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "jwt-signer": () => import("@tool/jwt-signer/page"),
   "keccak-hash-text-or-file": () =>
     import("@tool/keccak-hash-text-or-file/page"),
+  "keyboard-tester": () => import("@tool/keyboard-tester/page"),
   "ksuid-generator": () => import("@tool/ksuid-generator/page"),
   "latex-previewer": () => import("@tool/latex-previewer/page"),
   "legacy-motorola-system-key-generator": () =>

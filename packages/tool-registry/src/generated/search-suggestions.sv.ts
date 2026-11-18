@@ -728,6 +728,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "keccak-hash-text-or-file",
   },
   {
+    category: "misc",
+    name: "Tangentbordstest",
+    slug: "keyboard-tester",
+  },
+  {
     category: "developer",
     name: "KSUID-generator",
     slug: "ksuid-generator",

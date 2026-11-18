@@ -13342,6 +13342,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "keyboard-tester",
+    language: "ar",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "de",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "en",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "es",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "fr",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "he",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "hi",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "id",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "it",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "ja",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "ko",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "ms",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "nl",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "no",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "pl",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "pt",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "ru",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "sv",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "th",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "tr",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "vi",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "zh-CN",
+  },
+  {
+    slug: "keyboard-tester",
+    language: "zh-TW",
+  },
+  {
     slug: "ksuid-generator",
     language: "ar",
   },

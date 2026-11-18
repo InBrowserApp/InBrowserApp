@@ -1,0 +1,15 @@
+{
+  "start": "Rozpocznij test",
+  "reset": "Zresetuj",
+  "layout": "Pełnowymiarowa klawiatura ANSI",
+  "ready": "Rozpocznij test, a następnie naciśnij jeden klawisz lub przytrzymaj kilka naraz, na przykład Shift + A.",
+  "capturing": "Naciskaj klawisze, aby je sprawdzić. Tab przenosi fokus, a Esc kończy rejestrowanie naciśnięć.",
+  "held": "Wciśnięte",
+  "tested": "Sprawdzone",
+  "peak": "Maks. jednocześnie",
+  "combination": "Bieżąca kombinacja",
+  "lastKey": "Ostatni klawisz",
+  "noneHeld": "Żaden klawisz nie jest wciśnięty",
+  "scroll": "Przewiń w bok, aby zobaczyć całą klawiaturę.",
+  "note": "Schemat pokazuje fizyczne położenie klawiszy. Przy ostatnim klawiszu widać jego wartość w Twoim układzie i kod zgłoszony przez przeglądarkę. Niektóre skróty systemowe i klawisze sprzętowe, takie jak Fn, mogą nie docierać do przeglądarki."
+}

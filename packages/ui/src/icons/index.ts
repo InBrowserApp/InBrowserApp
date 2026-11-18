@@ -58,6 +58,7 @@ export {
   Image as ImageIcon,
   ImageUp,
   Languages,
+  Keyboard,
   Layers2,
   LayoutGrid,
   LoaderCircle,

@@ -1,0 +1,15 @@
+{
+  "start": "Bắt đầu kiểm tra",
+  "reset": "Đặt lại",
+  "layout": "Bàn phím ANSI cỡ đầy đủ",
+  "ready": "Bắt đầu kiểm tra rồi nhấn một phím hoặc giữ nhiều phím cùng lúc, chẳng hạn Shift + A.",
+  "capturing": "Nhấn phím để kiểm tra. Dùng Tab để chuyển tiêu điểm hoặc Esc để dừng nhận phím.",
+  "held": "Đang giữ",
+  "tested": "Đã kiểm tra",
+  "peak": "Nhiều nhất cùng lúc",
+  "combination": "Tổ hợp hiện tại",
+  "lastKey": "Phím vừa nhấn",
+  "noneHeld": "Không có phím nào đang được giữ",
+  "scroll": "Cuộn ngang để xem toàn bộ bàn phím.",
+  "note": "Sơ đồ hiển thị vị trí vật lý của các phím. Mục Phím vừa nhấn cho biết ký tự hoặc chức năng theo bố cục đang dùng, kèm mã phím từ trình duyệt. Trình duyệt có thể không nhận được một số phím tắt hệ thống và phím phần cứng như Fn."
+}
