@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.10.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.9.0...v2.10.0) (2026-11-18)
+
+
+### Features
+
+* add a bibliography format converter ([#1350](https://github.com/InBrowserApp/InBrowserApp/issues/1350)) ([8095886](https://github.com/InBrowserApp/InBrowserApp/commit/80958864042b62aa76da349852d17cfe36dc5ebc))
+* add a browser-only gamepad tester ([#1356](https://github.com/InBrowserApp/InBrowserApp/issues/1356)) ([5bf575d](https://github.com/InBrowserApp/InBrowserApp/commit/5bf575db68bbdf1cac3f83335c8440f0e311707c))
+* add a browser-only GIF maker ([#1349](https://github.com/InBrowserApp/InBrowserApp/issues/1349)) ([c66282b](https://github.com/InBrowserApp/InBrowserApp/commit/c66282b46de4e1ed3dd909c83afd02b749966008))
+* add a browser-only image combiner ([#1353](https://github.com/InBrowserApp/InBrowserApp/issues/1353)) ([7953281](https://github.com/InBrowserApp/InBrowserApp/commit/79532810b7b12c4f602d7ff6051cfc947d9047bb))
+* add a browser-only keyboard tester ([#1355](https://github.com/InBrowserApp/InBrowserApp/issues/1355)) ([01a04be](https://github.com/InBrowserApp/InBrowserApp/commit/01a04be0fb50f686a2c3af502844e2f99edd7000))
+* add a JSON to TypeScript and Zod converter ([#1346](https://github.com/InBrowserApp/InBrowserApp/issues/1346)) ([0719d01](https://github.com/InBrowserApp/InBrowserApp/commit/0719d01d7579c8d006ef45151f6c5de1fd90c7eb)), closes [#1341](https://github.com/InBrowserApp/InBrowserApp/issues/1341)
+* add a video frame extractor ([#1351](https://github.com/InBrowserApp/InBrowserApp/issues/1351)) ([640ea33](https://github.com/InBrowserApp/InBrowserApp/commit/640ea33f578618b51292798b7828f6e4b529a7bd))
+* add an image comparator ([#1348](https://github.com/InBrowserApp/InBrowserApp/issues/1348)) ([f111b57](https://github.com/InBrowserApp/InBrowserApp/commit/f111b57c8969086310a41c5f657eb2c5efd9fa85))
+
+
+### Bug Fixes
+
+* complete localized tool guides ([#1358](https://github.com/InBrowserApp/InBrowserApp/issues/1358)) ([6550001](https://github.com/InBrowserApp/InBrowserApp/commit/6550001dd48eb0ca9c6469c30c281ad31940ef53))
+* default to traditional uppercase numbers on zh-TW ([#1337](https://github.com/InBrowserApp/InBrowserApp/issues/1337)) ([b55f16b](https://github.com/InBrowserApp/InBrowserApp/commit/b55f16bbeb0aca204931194d38e448fe9099de0f))
+* preserve amounts in the Chinese uppercase converter ([#1340](https://github.com/InBrowserApp/InBrowserApp/issues/1340)) ([9c491bf](https://github.com/InBrowserApp/InBrowserApp/commit/9c491bf8dc3c4e044b83ce74568535dab9c9efea))
+
 ## [2.9.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.8.0...v2.9.0) (2026-11-17)
 
 
