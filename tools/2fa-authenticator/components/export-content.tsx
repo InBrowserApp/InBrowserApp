@@ -29,7 +29,7 @@ function QrPreview({
       try {
         const { toDataURL } = await import("qrcode")
         const qr = await toDataURL(link, {
-          width: 512,
+          scale: 6,
           margin: 4,
           errorCorrectionLevel,
         })
@@ -59,7 +59,7 @@ function QrPreview({
         alt={description}
         width={256}
         height={256}
-        className="max-w-full rounded-md"
+        className="max-w-full rounded-md [image-rendering:pixelated]"
       />
       <Button variant="outline" asChild>
         <a href={result} download={filename}>
