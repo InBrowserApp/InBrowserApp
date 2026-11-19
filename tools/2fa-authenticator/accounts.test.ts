@@ -99,6 +99,18 @@ describe("authenticator accounts", () => {
     )
   })
 
+  test("restores a newer HOTP counter onto the matching account without rewinding it", () => {
+    const current = mergeAccounts([], [{ ...hotp, counter: 12 }])
+    const newer = { ...hotp, counter: 13 }
+    expect(mergeAccounts(current, [newer])).toBe(current)
+
+    const restored = mergeAccounts(current, [newer], { restoreCounters: true })
+    expect(restored).toEqual([{ ...current[0], counter: 13 }])
+    expect(mergeAccounts(restored, [hotp], { restoreCounters: true })).toBe(
+      restored
+    )
+  })
+
   test("round trips a backup and validates stored accounts at the boundary", () => {
     const saved = mergeAccounts([], [hotp])
     expect(readBackup(createBackup(saved))).toEqual([hotp])

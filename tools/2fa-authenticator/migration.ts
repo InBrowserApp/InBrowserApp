@@ -94,48 +94,72 @@ function canExportMigration(accounts: readonly Setup[]) {
   )
 }
 
-function createMigrationLinks(accounts: readonly Setup[]) {
-  const batchSize = 10
-  const total = Math.ceil(accounts.length / batchSize)
-  const batchId = crypto.getRandomValues(new Int32Array(1))[0]! & 0x7fffffff
-
-  return Array.from({ length: total }, (_, index) => {
-    const writer = new Writer()
-    for (const account of accounts.slice(
-      index * batchSize,
-      (index + 1) * batchSize
-    )) {
-      writer
-        .uint32(10)
-        .fork()
-        .uint32(10)
-        .bytes(new Uint8Array(Secret.fromBase32(account.secret).buffer))
-        .uint32(18)
-        .string(account.label)
-        .uint32(26)
-        .string(account.issuer)
-        .uint32(32)
-        .uint32(algorithms.indexOf(account.algorithm) + 1)
-        .uint32(40)
-        .uint32(account.digits === 6 ? 1 : 2)
-        .uint32(48)
-        .uint32(account.type === "hotp" ? 1 : 2)
-      if (account.type === "hotp") writer.uint32(56).int64(account.counter)
-      writer.ldelim()
-    }
-    // Version, batch size, batch index, batch ID.
+function encodeMigrationLink(
+  accounts: readonly Setup[],
+  batchId: number,
+  index: number,
+  total: number
+) {
+  const writer = new Writer()
+  for (const account of accounts) {
     writer
-      .uint32(16)
-      .int32(1)
-      .uint32(24)
-      .int32(total)
+      .uint32(10)
+      .fork()
+      .uint32(10)
+      .bytes(new Uint8Array(Secret.fromBase32(account.secret).buffer))
+      .uint32(18)
+      .string(account.label)
+      .uint32(26)
+      .string(account.issuer)
       .uint32(32)
-      .int32(index)
+      .uint32(algorithms.indexOf(account.algorithm) + 1)
       .uint32(40)
-      .int32(batchId)
-    const data = btoa(String.fromCharCode(...writer.finish()))
-    return `otpauth-migration://offline?data=${encodeURIComponent(data)}`
-  })
+      .uint32(account.digits === 6 ? 1 : 2)
+      .uint32(48)
+      .uint32(account.type === "hotp" ? 1 : 2)
+    if (account.type === "hotp") writer.uint32(56).int64(account.counter)
+    writer.ldelim()
+  }
+
+  // Version, batch size, batch index, batch ID.
+  writer
+    .uint32(16)
+    .int32(1)
+    .uint32(24)
+    .int32(total)
+    .uint32(32)
+    .int32(index)
+    .uint32(40)
+    .int32(batchId)
+  const data = btoa(String.fromCharCode(...writer.finish()))
+  return `otpauth-migration://offline?data=${encodeURIComponent(data)}`
+}
+
+function createMigrationLinks(
+  accounts: readonly Setup[],
+  fitsQr: (link: string) => boolean = () => true
+) {
+  const batchSize = 10
+  const batchId = crypto.getRandomValues(new Int32Array(1))[0]! & 0x7fffffff
+  let batches = Array.from(
+    { length: Math.ceil(accounts.length / batchSize) },
+    (_, index) => accounts.slice(index * batchSize, (index + 1) * batchSize)
+  )
+
+  while (true) {
+    const links = batches.map((batch, index) =>
+      encodeMigrationLink(batch, batchId, index, batches.length)
+    )
+    const next = batches.flatMap((batch, index) => {
+      if (fitsQr(links[index]!)) return [batch]
+      if (batch.length === 1)
+        throw new Error("Account exceeds QR code capacity")
+      const split = Math.ceil(batch.length / 2)
+      return [batch.slice(0, split), batch.slice(split)]
+    })
+    if (next.length === batches.length) return links
+    batches = next
+  }
 }
 
 export { canExportMigration, createMigrationLinks, parseMigrationLink }

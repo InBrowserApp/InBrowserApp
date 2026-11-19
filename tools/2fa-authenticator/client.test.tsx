@@ -17,6 +17,7 @@ const rfcKey = "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ"
 const hotpLink = `otpauth://hotp/Example%20Lab:lab%40example.com?secret=${rfcKey}&issuer=Example%20Lab&counter=0`
 
 vi.mock("qrcode", () => ({
+  create: vi.fn(),
   toDataURL: vi.fn().mockResolvedValue("data:image/png;base64,sample"),
 }))
 

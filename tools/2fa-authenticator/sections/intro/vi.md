@@ -8,7 +8,7 @@ Trong Google Authenticator, chọn **Chuyển tài khoản** rồi xuất các t
 
 Tài khoản TOTP từ mã QR chuyển tài khoản của Google được nhập với chu kỳ 30 giây. Để giữ chu kỳ tùy chỉnh từ công cụ cũ, hãy chuyển từng tài khoản. Nhấn biểu tượng bánh răng của mỗi tài khoản, mở **Key URI** trong **Config** rồi dán liên kết vào đây.
 
-Tài khoản được lưu trong trình duyệt này. Hãy tải bản sao lưu bằng nút **Xuất tài khoản** trước khi xóa dữ liệu trang web hoặc chuyển sang trình duyệt khác. Giữ bản sao lưu ở nơi an toàn vì tệp chứa khóa thiết lập của bạn.
+Tài khoản được lưu trong trình duyệt này. Hãy tải bản sao lưu bằng nút **Xuất tài khoản** trước khi xóa dữ liệu trang web hoặc chuyển sang trình duyệt khác. Giữ bản sao lưu ở nơi an toàn vì tệp chứa khóa thiết lập của bạn. Để khôi phục từ tệp, chọn **Nhập bản sao lưu** trong phần thêm tài khoản.
 
 ## Vì sao mã xác minh bị từ chối?
 

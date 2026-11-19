@@ -7,6 +7,8 @@ import { createBackup } from "../backups"
 import type { Setup } from "../accounts"
 import type { Messages } from "../types"
 
+const errorCorrectionLevel = "L"
+
 function QrPreview({
   link,
   messages,
@@ -29,7 +31,7 @@ function QrPreview({
         const qr = await toDataURL(link, {
           width: 512,
           margin: 4,
-          errorCorrectionLevel: "L",
+          errorCorrectionLevel,
         })
         if (active) setResult(qr)
       } catch {
@@ -99,11 +101,22 @@ function ExportContent({
     try {
       const { canExportMigration, createMigrationLinks } =
         await import("../migration")
-      if (canExportMigration(accounts)) {
-        setLinks(createMigrationLinks(accounts))
-      } else {
+      if (!canExportMigration(accounts)) {
         setError(messages.googleSettings)
+        return
       }
+
+      const { create } = await import("qrcode")
+      setLinks(
+        createMigrationLinks(accounts, (link) => {
+          try {
+            create(link, { errorCorrectionLevel })
+            return true
+          } catch {
+            return false
+          }
+        })
+      )
     } catch {
       setError(messages.qrError)
     } finally {

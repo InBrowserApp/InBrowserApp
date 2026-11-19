@@ -8,7 +8,7 @@ No Google Authenticator, escolha **Transferir contas** e exporte as contas que v
 
 As contas TOTP importadas de códigos QR de transferência do Google usam um intervalo de 30 segundos. Para manter os intervalos personalizados do autenticador original, transfira as contas individualmente. Clique na engrenagem de cada conta, expanda **Key URI** em **Config** e cole o link aqui.
 
-As contas são salvas neste navegador. Baixe um backup em **Exportar contas** antes de limpar os dados do site ou mudar de navegador. Guarde o backup em um local privado, pois ele contém suas chaves de configuração.
+As contas são salvas neste navegador. Baixe um backup em **Exportar contas** antes de limpar os dados do site ou mudar de navegador. Guarde o backup em um local privado, pois ele contém suas chaves de configuração. Para restaurar pelo arquivo, selecione **Importar backup** no painel de adição de contas.
 
 ## Por que meu código de verificação foi recusado?
 

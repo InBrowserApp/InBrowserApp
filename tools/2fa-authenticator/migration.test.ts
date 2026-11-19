@@ -1,3 +1,4 @@
+import { create } from "qrcode"
 import { expect, test } from "vitest"
 
 import { getCode } from "./accounts"
@@ -75,4 +76,30 @@ test("rejects empty or invalid migration links and detects non-portable settings
     false
   )
   expect(canExportMigration([{ ...totp, digits: 7 }])).toBe(false)
+})
+
+test("splits a batch that is too large for the QR encoder", () => {
+  const accounts = Array.from({ length: 10 }, (_, index) => ({
+    ...totp,
+    issuer: "Example provider ".repeat(6),
+    label: `Account ${index} ${"long account name ".repeat(6)}`,
+    secret:
+      "GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQGEZDGNA",
+    algorithm: "SHA512" as const,
+    digits: 8,
+  }))
+  function fitsQr(link: string) {
+    try {
+      create(link, { errorCorrectionLevel: "L" })
+      return true
+    } catch {
+      return false
+    }
+  }
+
+  expect(fitsQr(createMigrationLinks(accounts)[0]!)).toBe(false)
+  const links = createMigrationLinks(accounts, fitsQr)
+  expect(links).toHaveLength(2)
+  expect(links.every(fitsQr)).toBe(true)
+  expect(links.flatMap(parseMigrationLink)).toEqual(accounts)
 })

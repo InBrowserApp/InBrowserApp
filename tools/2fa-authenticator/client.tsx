@@ -38,10 +38,12 @@ function Authenticator({ messages }: { messages: Messages }) {
       ? accounts.find(({ id }) => id === modal.account.id)
       : undefined
 
-  function onAdd(setups: Setup[]) {
+  function onAdd(setups: Setup[], restoreCounters = false) {
     try {
-      if (!updateAccounts((current) => mergeAccounts(current, setups)))
-        return messages.duplicate
+      const updated = updateAccounts((current) =>
+        mergeAccounts(current, setups, { restoreCounters })
+      )
+      if (!updated) return messages.duplicate
       setAdd(false)
       setStatus(messages.saved)
       window.requestAnimationFrame(() => heading.current?.focus())
@@ -210,7 +212,7 @@ function Authenticator({ messages }: { messages: Messages }) {
             <>
               <DialogHeader className="pe-6 text-start">
                 <DialogTitle>{messages.export}</DialogTitle>
-                <DialogDescription>{messages.exportHint}</DialogDescription>
+                <DialogDescription>{messages.backupHint}</DialogDescription>
               </DialogHeader>
               <ExportContent accounts={accounts} messages={messages} />
             </>

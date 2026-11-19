@@ -8,7 +8,7 @@ Kies in Google Authenticator **Accounts overzetten** en exporteer de accounts di
 
 TOTP-accounts uit Google-overdrachtscodes worden geïmporteerd met een interval van 30 seconden. Zet accounts één voor één over om de aangepaste intervallen uit de oorspronkelijke app te behouden. Klik bij elk account op het tandwiel, klap **Key URI** uit in **Config** en plak de link hier.
 
-Je accounts worden in deze browser opgeslagen. Download via **Accounts exporteren** een back-up voordat je sitegegevens wist of van browser wisselt. Bewaar de back-up op een veilige plek, want die bevat je instelsleutels.
+Je accounts worden in deze browser opgeslagen. Download via **Accounts exporteren** een back-up voordat je sitegegevens wist of van browser wisselt. Bewaar de back-up op een veilige plek, want die bevat je instelsleutels. Kies **Back-up importeren** in het paneel om accounts toe te voegen als je het bestand wilt herstellen.
 
 ## Waarom wordt mijn verificatiecode geweigerd?
 

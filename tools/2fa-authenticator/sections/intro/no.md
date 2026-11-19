@@ -8,7 +8,7 @@ Velg **Overfør kontoer** i Google Authenticator, og eksporter kontoene du vil f
 
 TOTP-kontoer fra Googles QR-koder for overføring importeres med et intervall på 30 sekunder. Overfør kontoene enkeltvis for å beholde egendefinerte intervaller fra den opprinnelige appen. Klikk på tannhjulet ved hver konto, åpne **Key URI** i **Config** og lim inn lenken her.
 
-Kontoene dine lagres i denne nettleseren. Last ned en sikkerhetskopi via **Eksporter kontoer** før du sletter nettstedsdata eller bytter nettleser. Oppbevar sikkerhetskopien på et trygt sted, fordi den inneholder oppsettsnøklene dine.
+Kontoene dine lagres i denne nettleseren. Last ned en sikkerhetskopi via **Eksporter kontoer** før du sletter nettstedsdata eller bytter nettleser. Oppbevar sikkerhetskopien på et trygt sted, fordi den inneholder oppsettsnøklene dine. Velg **Importer sikkerhetskopi** i panelet for å legge til kontoer når du vil gjenopprette fra filen.
 
 ## Hvorfor blir bekreftelseskoden min avvist?
 

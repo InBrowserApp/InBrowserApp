@@ -105,7 +105,7 @@ test("imports a QR image after showing feedback for an unrelated code", async ()
 
   scanImage.mockResolvedValueOnce({ data: setupLink })
   upload(messages.chooseImage, [file])
-  await waitFor(() => expect(onAdd).toHaveBeenCalledWith([setup]))
+  await waitFor(() => expect(onAdd).toHaveBeenCalledWith([setup], false))
   expect(screen.queryByText(messages.invalidQr)).toBeNull()
 })
 
@@ -124,7 +124,7 @@ test("imports all selected images from a multipart Google transfer", async () =>
   expect(input.multiple).toBe(true)
   upload(messages.chooseImage, [makeImage(), makeImage()])
 
-  await waitFor(() => expect(onAdd).toHaveBeenCalledWith(accounts))
+  await waitFor(() => expect(onAdd).toHaveBeenCalledWith(accounts, false))
   expect(onAdd).toHaveBeenCalledTimes(1)
 })
 
@@ -147,7 +147,7 @@ test("names the unreadable image so a batch can be selected again", async () => 
   expect(onAdd).not.toHaveBeenCalled()
   scanImage.mockResolvedValueOnce({ data: setupLink })
   upload(messages.chooseImage, [valid])
-  await waitFor(() => expect(onAdd).toHaveBeenCalledWith([setup]))
+  await waitFor(() => expect(onAdd).toHaveBeenCalledWith([setup], false))
 })
 
 test("restores a local backup and shows the result of an unchanged import", async () => {
@@ -163,7 +163,7 @@ test("restores a local backup and shows the result of an unchanged import", asyn
 
   upload(messages.restore, [new File([createBackup([setup])], "backup.json")])
   await screen.findByText(messages.duplicate)
-  expect(onAdd).toHaveBeenCalledWith([setup])
+  expect(onAdd).toHaveBeenCalledWith([setup], true)
 })
 
 test("discards a file read that finishes after leaving the add form", async () => {

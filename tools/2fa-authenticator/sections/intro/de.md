@@ -8,7 +8,7 @@ Wähle in Google Authenticator **Konten übertragen** und exportiere die gewüns
 
 TOTP-Konten aus Google-Transfer-QR-Codes werden mit einem Intervall von 30 Sekunden importiert. Um eigene Intervalle aus der ursprünglichen App zu behalten, übertrage die Konten einzeln. Öffne über das Zahnrad beim jeweiligen Konto **Config**, klappe **Key URI** auf und füge den Link hier ein.
 
-Deine Konten werden in diesem Browser gespeichert. Lade über **Konten exportieren** eine Sicherung herunter, bevor du die Website-Daten löschst oder den Browser wechselst. Bewahre die Sicherung sicher auf, da sie deine Einrichtungsschlüssel enthält.
+Deine Konten werden in diesem Browser gespeichert. Lade über **Konten exportieren** eine Sicherung herunter, bevor du die Website-Daten löschst oder den Browser wechselst. Bewahre die Sicherung sicher auf, da sie deine Einrichtungsschlüssel enthält. Wähle zum Wiederherstellen im Bereich zum Hinzufügen von Konten **Sicherung importieren**.
 
 ## Warum wird mein Bestätigungscode abgelehnt?
 

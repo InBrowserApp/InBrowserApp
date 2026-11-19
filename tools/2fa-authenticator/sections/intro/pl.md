@@ -8,7 +8,7 @@ W Google Authenticator wybierz **Przenieś konta** i wyeksportuj konta, które c
 
 Konta TOTP z kodów QR do przenoszenia kont z Google są importowane z 30-sekundowym interwałem. Aby zachować własne interwały ze starszej aplikacji, przenieś konta osobno. Przy każdym koncie kliknij ikonę koła zębatego, rozwiń **Key URI** w oknie **Config** i wklej tutaj link.
 
-Konta są zapisywane w tej przeglądarce. Przed wyczyszczeniem danych witryny lub zmianą przeglądarki wybierz **Eksportuj konta** i pobierz kopię zapasową. Przechowuj ją w bezpiecznym miejscu, ponieważ zawiera klucze konfiguracji.
+Konta są zapisywane w tej przeglądarce. Przed wyczyszczeniem danych witryny lub zmianą przeglądarki wybierz **Eksportuj konta** i pobierz kopię zapasową. Przechowuj ją w bezpiecznym miejscu, ponieważ zawiera klucze konfiguracji. Aby przywrócić konta z pliku, wybierz **Importuj kopię zapasową** w panelu dodawania kont.
 
 ## Dlaczego witryna odrzuca mój kod weryfikacyjny?
 

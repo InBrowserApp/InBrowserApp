@@ -8,7 +8,7 @@ Di Google Authenticator, pilih **Transfer akun**, lalu ekspor akun yang ingin An
 
 Akun TOTP dari kode QR transfer Google diimpor dengan interval 30 detik. Untuk mempertahankan interval khusus dari autentikator lama, pindahkan akun satu per satu. Klik ikon roda gigi pada setiap akun, buka **Key URI** di **Config**, lalu tempel tautannya di sini.
 
-Akun disimpan di browser ini. Pilih **Ekspor akun** untuk mengunduh cadangan sebelum menghapus data situs atau pindah ke browser lain. Simpan cadangan di tempat yang aman karena file tersebut berisi kunci penyiapan Anda.
+Akun disimpan di browser ini. Pilih **Ekspor akun** untuk mengunduh cadangan sebelum menghapus data situs atau pindah ke browser lain. Simpan cadangan di tempat yang aman karena file tersebut berisi kunci penyiapan Anda. Untuk memulihkan dari file, pilih **Impor cadangan** di panel tambah akun.
 
 ## Mengapa kode verifikasi saya ditolak?
 

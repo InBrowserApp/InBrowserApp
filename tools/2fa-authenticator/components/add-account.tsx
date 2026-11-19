@@ -23,7 +23,7 @@ function AddAccount({
   onAdd,
 }: {
   messages: Messages
-  onAdd: (setups: Setup[]) => string | undefined
+  onAdd: (setups: Setup[], restoreCounters?: boolean) => string | undefined
 }) {
   const [media, setMedia] = useState<MediaDevices | undefined>()
   const imageInput = useRef<HTMLInputElement>(null)
@@ -94,7 +94,7 @@ function AddAccount({
     }
     if (controller.signal.aborted) return
     setBusy(false)
-    setError(setups ? (onAdd(setups) ?? "") : failure)
+    setError(setups ? (onAdd(setups, kind === "backup") ?? "") : failure)
   }
 
   return (

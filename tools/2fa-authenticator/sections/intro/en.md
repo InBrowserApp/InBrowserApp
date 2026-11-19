@@ -8,7 +8,7 @@ In Google Authenticator, choose **Transfer accounts** and export the accounts yo
 
 TOTP accounts imported from Google transfer QR codes use a 30-second interval. To keep custom intervals from the original authenticator, transfer accounts individually. Click each account’s gear, expand **Key URI** in **Config**, and paste the link here.
 
-Accounts are saved in this browser. Download a backup from **Export accounts** before clearing site data or moving to another browser. Keep the backup private, since it contains your setup keys.
+Accounts are saved in this browser. Download a backup from **Export accounts** before clearing site data or moving to another browser. Keep the backup private, since it contains your setup keys. To restore the file, choose **Import backup** in the add-account panel.
 
 ## Why is my verification code rejected?
 

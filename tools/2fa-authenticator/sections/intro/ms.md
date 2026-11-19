@@ -8,7 +8,7 @@ Dalam Google Authenticator, pilih **Pindahkan akaun** dan eksport akaun yang ing
 
 Akaun TOTP daripada kod QR pemindahan Google diimport dengan selang 30 saat. Untuk mengekalkan selang tersuai daripada pengesah asal, pindahkan akaun satu demi satu. Klik ikon gear bagi setiap akaun, kembangkan **Key URI** dalam **Config**, kemudian tampalkan pautan di sini.
 
-Akaun disimpan dalam pelayar ini. Pilih **Eksport akaun** untuk memuat turun sandaran sebelum memadamkan data laman atau berpindah ke pelayar lain. Simpan sandaran di tempat yang selamat kerana fail tersebut mengandungi kunci persediaan anda.
+Akaun disimpan dalam pelayar ini. Pilih **Eksport akaun** untuk memuat turun sandaran sebelum memadamkan data laman atau berpindah ke pelayar lain. Simpan sandaran di tempat yang selamat kerana fail tersebut mengandungi kunci persediaan anda. Untuk memulihkan fail, pilih **Import sandaran** dalam panel tambah akaun.
 
 ## Mengapa kod pengesahan saya ditolak?
 

@@ -74,11 +74,13 @@ function getCode(account: Setup, counter: number) {
 
 function mergeAccounts(
   accounts: readonly Account[],
-  incoming: readonly Setup[]
+  incoming: readonly Setup[],
+  { restoreCounters = false }: { restoreCounters?: boolean } = {}
 ) {
   const next = [...accounts]
+  let changed = false
   for (const setup of incoming) {
-    const exists = next.some(
+    const index = next.findIndex(
       (account) =>
         account.secret === setup.secret &&
         account.label === setup.label &&
@@ -89,12 +91,22 @@ function mergeAccounts(
         (account.type === "hotp" ||
           (setup.type === "totp" && account.period === setup.period))
     )
-    if (!exists) {
+    const saved = next[index]
+    if (!saved) {
       next.push({ ...setup, id: crypto.randomUUID() })
+      changed = true
+    } else if (
+      restoreCounters &&
+      saved.type === "hotp" &&
+      setup.type === "hotp" &&
+      setup.counter > saved.counter
+    ) {
+      next[index] = { ...saved, counter: setup.counter }
+      changed = true
     }
   }
 
-  return next.length === accounts.length ? accounts : next
+  return changed ? next : accounts
 }
 
 export {
