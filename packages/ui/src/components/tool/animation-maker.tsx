@@ -55,12 +55,14 @@ export function AnimationMaker({
   const formId = useId()
   const loopId = useId()
   const size = animationSize(frames)
+  const isBusy = busy !== null
+  const canCreate = frames.length >= 2 && !isBusy
   const number = new Intl.NumberFormat(language, { useGrouping: false })
 
   useEffect(() => () => workerRef.current?.terminate(), [])
 
   async function addFiles(files: File[]) {
-    if (!files.length || busy !== null) return
+    if (!files.length || isBusy) return
     setBusy("reading")
     const accepted: Frame[] = []
     const failed: string[] = []
@@ -78,8 +80,7 @@ export function AnimationMaker({
       }
     }
     if (accepted.length) {
-      setFrames((current) => [...current, ...accepted])
-      setResult(null)
+      editFrames((current) => [...current, ...accepted])
     }
     setErrors(failed)
     setBusy(null)
@@ -91,7 +92,7 @@ export function AnimationMaker({
   }
 
   async function createAnimation() {
-    if (frames.length < 2 || busy !== null) return
+    if (!canCreate) return
     setErrors([])
     setResult(null)
     setBusy("creating")
@@ -122,7 +123,7 @@ export function AnimationMaker({
       <Upload
         buttonRef={uploadButton}
         compact={frames.length > 0}
-        disabled={busy !== null}
+        disabled={isBusy}
         reading={busy === "reading"}
         messages={messages}
         onFiles={(files) => void addFiles(files)}
@@ -147,7 +148,7 @@ export function AnimationMaker({
             images={frames}
             messages={messages}
             language={language}
-            disabled={busy !== null}
+            disabled={isBusy}
             formId={formId}
             defaultDuration={duration}
             onDuration={(frame, value) =>
@@ -206,7 +207,7 @@ export function AnimationMaker({
                       min={0}
                       max={maxPlays}
                       required
-                      disabled={busy !== null}
+                      disabled={isBusy}
                       value={plays}
                       onChange={(event) => {
                         setPlays(event.target.value)
@@ -229,7 +230,7 @@ export function AnimationMaker({
                 <CardFooter className="flex-col items-start gap-2">
                   <Button
                     type="submit"
-                    disabled={frames.length < 2 || busy !== null}
+                    disabled={!canCreate}
                     className="h-auto min-h-9 whitespace-normal"
                   >
                     {busy === "creating" ? (

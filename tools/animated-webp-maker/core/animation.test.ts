@@ -43,9 +43,18 @@ test.each([false, true])(
   }
 )
 
-test("retains an existing animation from the encoder", async () => {
-  const animation = stillWebp.slice()
-  animation.set(new TextEncoder().encode("VP8X"), 12)
-  const blob = webpAnimationBlob(animation, 2, 1, [120, 200], 3)
-  expect(new Uint8Array(await blob.arrayBuffer())).toEqual(animation)
+test("clears the background color while retaining the encoder's animation", async () => {
+  const animation = webpAnimationBlob(stillWebp, 2, 1, [120, 200], 3)
+  const expected = new Uint8Array(await animation.arrayBuffer())
+  const input = expected.slice()
+  input.fill(255, 38, 42)
+  const blob = webpAnimationBlob(input, 2, 1, [120, 200], 3)
+  expect(new Uint8Array(await blob.arrayBuffer())).toEqual(expected)
+})
+
+test("leaves a non-animated extended WebP without an ANIM chunk intact", async () => {
+  const image = stillWebp.slice()
+  image.set(new TextEncoder().encode("VP8X"), 12)
+  const blob = webpAnimationBlob(image, 2, 1, [120, 200], 3)
+  expect(new Uint8Array(await blob.arrayBuffer())).toEqual(image)
 })

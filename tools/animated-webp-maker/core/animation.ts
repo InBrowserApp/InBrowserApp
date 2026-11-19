@@ -13,6 +13,21 @@ function setUint24(bytes: Uint8Array, offset: number, value: number) {
   bytes[offset + 2] = (value >>> 16) & 0xff
 }
 
+function transparentAnimationBackground(bytes: Uint8Array<ArrayBuffer>) {
+  const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength)
+  // A decoder may fill uncovered or disposed regions with this color.
+  // Treat those regions as transparent, as in the rendered input frames.
+  for (let offset = 12; offset + 14 <= bytes.length;) {
+    const size = view.getUint32(offset + 4, true)
+    if (view.getUint32(offset) === 0x414e494d) {
+      // ANIM
+      view.setUint32(offset + 8, 0)
+      return
+    }
+    offset += 8 + size + (size % 2)
+  }
+}
+
 export function webpAnimationBlob(
   bytes: Uint8Array<ArrayBuffer>,
   width: number,
@@ -23,6 +38,7 @@ export function webpAnimationBlob(
   // libwebp emits a still VP8L image when every rendered frame is identical.
   // Wrap it in an animation so the requested loop count and timing survive.
   if (String.fromCharCode(...bytes.subarray(12, 16)) !== "VP8L") {
+    transparentAnimationBackground(bytes)
     return new Blob([bytes], { type: "image/webp" })
   }
 
