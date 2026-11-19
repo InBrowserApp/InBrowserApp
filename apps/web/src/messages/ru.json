@@ -49,6 +49,7 @@
     "categoryAll": "Все инструменты",
     "suggestionsLabel": "Подсказки",
     "suggestionsHint": "↑↓ навигация · ↵ открыть · esc закрыть",
+    "viewAllResults": "Показать все результаты",
     "suggestionMatchCountOne": "{count} совпадение",
     "suggestionMatchCount": "Совпадений: {count}",
     "emptyRegistryTitle": "Инструменты пока недоступны.",

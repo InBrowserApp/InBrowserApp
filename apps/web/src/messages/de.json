@@ -49,6 +49,7 @@
     "categoryAll": "Alle Tools",
     "suggestionsLabel": "Vorschläge",
     "suggestionsHint": "↑↓ navigieren · ↵ öffnen · esc schließen",
+    "viewAllResults": "Alle Ergebnisse anzeigen",
     "suggestionMatchCountOne": "{count} Treffer",
     "suggestionMatchCount": "{count} Treffer",
     "emptyRegistryTitle": "Noch keine Tools verfügbar.",

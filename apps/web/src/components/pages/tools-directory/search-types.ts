@@ -4,6 +4,7 @@ type SearchMessages = Readonly<{
   clearSearchLabel: string
   suggestionsLabel: string
   suggestionsHint: string
+  viewAllResults?: string
   suggestionMatchCountOne: string
   suggestionMatchCount: string
   emptySearchTitle: string

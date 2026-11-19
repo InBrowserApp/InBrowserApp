@@ -334,7 +334,8 @@ describe("Astro directory search", () => {
     expect(option.getAttribute("aria-selected")).toBe("true")
     expect(
       fireEvent.pointerDown(option, { button: 0, pointerType: "touch" })
-    ).toBe(false)
+    ).toBe(true)
+    expect(fireEvent.mouseDown(option, { button: 0 })).toBe(false)
     expect(document.activeElement).toBe(input)
     expect(option.getAttribute("href")).toContain("/tools/pdf-splitter/")
   })

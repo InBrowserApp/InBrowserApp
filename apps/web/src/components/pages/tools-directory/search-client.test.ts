@@ -19,6 +19,7 @@ const messages = {
   suggestionMatchCount: "{count} matches",
   suggestionMatchCountOne: "{count} match",
   suggestionsHint: "Enter to open",
+  viewAllResults: "View all results",
   suggestionsLabel: "Suggestions",
 }
 
@@ -34,6 +35,7 @@ async function renderSearch() {
       language: "de",
       categoryLabels: { json: "JSON" },
       messages,
+      variant: "hero",
     },
   })
   const root = document.createElement("div")
@@ -67,6 +69,7 @@ describe("Astro search", () => {
     expect(form.getAttribute("action")).toBe("/de/tools/")
     expect(form.method).toBe("get")
     expect(input.name).toBe("query")
+    expect(input.getAttribute("enterkeyhint")).toBe("search")
     expect(screen.getByLabelText("Search tools")).toBe(input)
     expect(root.querySelector("astro-island")).toBeNull()
     expect(root.textContent).not.toContain("JSON Formatter")
@@ -84,10 +87,10 @@ describe("Astro search", () => {
     )
     fireEvent.keyDown(input, { key: "ArrowDown" })
     expect(input.getAttribute("aria-activedescendant")).toBe(
-      "home-suggestions-option-1"
+      "home-suggestions-option-0"
     )
     fireEvent.keyDown(input, { key: "Enter" })
-    expect(navigate.mock.calls[0][0]).toContain("/de/tools/json-viewer/")
+    expect(navigate.mock.calls[0][0]).toContain("/de/tools/json-formatter/")
     fireEvent.keyDown(input, { key: "Escape" })
     expect(panel.hidden).toBe(true)
     expect(input.hasAttribute("aria-activedescendant")).toBe(false)
@@ -116,6 +119,27 @@ describe("Astro search", () => {
     expect(input.value).toBe("json")
     resolve(entries)
     await waitFor(() => expect(screen.getAllByRole("option")).toHaveLength(2))
+    expect(input.hasAttribute("aria-activedescendant")).toBe(false)
+    fireEvent.pointerOver(screen.getAllByRole("option")[0])
+    expect(fireEvent.keyDown(input, { key: "Enter" })).toBe(true)
+    expect(navigate).not.toHaveBeenCalled()
+  })
+
+  it("keeps the results submit button available when reached by keyboard", async () => {
+    load.mockResolvedValue(entries)
+    const { input, form, panel } = await renderSearch()
+    input.focus()
+    fireEvent.input(input, { target: { value: "missing" } })
+    const button = await screen.findByRole("button", {
+      name: "View all results",
+    })
+    button.focus()
+    expect(document.activeElement).toBe(button)
+    expect(panel.hidden).toBe(false)
+    expect(button.closest("form")).toBe(form)
+    expect(button).toHaveProperty("type", "submit")
+    button.blur()
+    expect(panel.hidden).toBe(true)
   })
 
   it("preserves input after load failure and retries on refocus", async () => {
@@ -189,6 +213,7 @@ describe("Astro search", () => {
     expect(navigate).not.toHaveBeenCalled()
     fireEvent.compositionEnd(input)
     await waitFor(() => expect(screen.getAllByRole("option")).toHaveLength(2))
+    fireEvent.keyDown(input, { key: "ArrowDown" })
     fireEvent.keyDown(input, { key: "Enter" })
     expect(navigate).toHaveBeenCalledTimes(1)
     const editor = document.createElement("textarea")

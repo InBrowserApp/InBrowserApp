@@ -49,6 +49,7 @@
     "categoryAll": "Alle tools",
     "suggestionsLabel": "Suggesties",
     "suggestionsHint": "↑↓ navigeren · ↵ openen · esc sluiten",
+    "viewAllResults": "Alle resultaten bekijken",
     "suggestionMatchCountOne": "{count} overeenkomst",
     "suggestionMatchCount": "{count} overeenkomsten",
     "emptyRegistryTitle": "Nog geen tools beschikbaar.",

@@ -49,6 +49,7 @@
     "categoryAll": "Tüm araçlar",
     "suggestionsLabel": "Öneriler",
     "suggestionsHint": "↑↓ gezinin · ↵ açın · esc kapatın",
+    "viewAllResults": "Tüm sonuçları gör",
     "suggestionMatchCountOne": "{count} eşleşme",
     "suggestionMatchCount": "{count} eşleşme",
     "emptyRegistryTitle": "Henüz mevcut araç yok.",

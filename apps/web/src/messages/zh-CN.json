@@ -49,6 +49,7 @@
     "categoryAll": "所有工具",
     "suggestionsLabel": "搜索建议",
     "suggestionsHint": "↑↓ 选择 · ↵ 打开 · esc 关闭",
+    "viewAllResults": "查看全部结果",
     "suggestionMatchCountOne": "{count} 个匹配结果",
     "suggestionMatchCount": "{count} 个匹配结果",
     "emptyRegistryTitle": "暂无可用工具。",

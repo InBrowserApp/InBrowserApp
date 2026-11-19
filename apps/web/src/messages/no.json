@@ -49,6 +49,7 @@
     "categoryAll": "Alle verktøy",
     "suggestionsLabel": "Forslag",
     "suggestionsHint": "↑↓ naviger · ↵ åpne · esc lukk",
+    "viewAllResults": "Vis alle resultater",
     "suggestionMatchCountOne": "{count} treff",
     "suggestionMatchCount": "{count} treff",
     "emptyRegistryTitle": "Ingen verktøy tilgjengelig ennå.",

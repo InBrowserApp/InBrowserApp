@@ -49,6 +49,7 @@
     "categoryAll": "모든 도구",
     "suggestionsLabel": "제안",
     "suggestionsHint": "↑↓ 이동 · ↵ 열기 · esc 닫기",
+    "viewAllResults": "모든 결과 보기",
     "suggestionMatchCountOne": "{count}개 일치",
     "suggestionMatchCount": "{count}개 일치",
     "emptyRegistryTitle": "아직 사용할 수 있는 도구가 없습니다.",

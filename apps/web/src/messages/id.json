@@ -49,6 +49,7 @@
     "categoryAll": "Semua alat",
     "suggestionsLabel": "Saran",
     "suggestionsHint": "↑↓ navigasi · ↵ buka · esc tutup",
+    "viewAllResults": "Lihat semua hasil",
     "suggestionMatchCountOne": "{count} hasil cocok",
     "suggestionMatchCount": "{count} hasil cocok",
     "emptyRegistryTitle": "Belum ada alat yang tersedia.",
