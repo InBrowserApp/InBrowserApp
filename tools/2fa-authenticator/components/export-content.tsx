@@ -8,6 +8,8 @@ import type { Setup } from "../accounts"
 import type { Messages } from "../types"
 
 const errorCorrectionLevel = "L"
+const exportButtonClassName =
+  "h-auto min-h-8 max-w-full py-1 whitespace-normal text-start"
 
 function QrPreview({
   link,
@@ -131,14 +133,19 @@ function ExportContent({
 
   return (
     <>
-      <div className="flex flex-wrap gap-2">
-        <Button type="button" onClick={downloadBackup}>
+      <div className="flex min-w-0 flex-wrap gap-2">
+        <Button
+          type="button"
+          className={exportButtonClassName}
+          onClick={downloadBackup}
+        >
           <Download data-icon="inline-start" aria-hidden="true" />
           {messages.downloadBackup}
         </Button>
         <Button
           type="button"
           variant="outline"
+          className={exportButtonClassName}
           aria-expanded={links.length > 0}
           aria-disabled={busy}
           onClick={() => {
