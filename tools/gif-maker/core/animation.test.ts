@@ -2,7 +2,10 @@ import { decompressFrames, parseGIF } from "gifuct-js"
 import { expect, test } from "vitest"
 
 import { createGifEncoder } from "./animation"
-import { animationSize, frameRect } from "./size"
+import {
+  animationSize,
+  frameRect,
+} from "@workspace/raster-image/animation-size"
 
 const red = [240, 0, 0, 255]
 const blue = [0, 0, 240, 255]

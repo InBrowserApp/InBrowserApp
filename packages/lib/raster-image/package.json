@@ -8,10 +8,15 @@
     "./types": "./src/types.ts",
     "./failure": "./src/core/failure.ts",
     "./png": "./src/png.ts",
-    "./filename": "./src/filename.ts"
+    "./filename": "./src/filename.ts",
+    "./animation-size": "./src/animation-size.ts",
+    "./animation-worker": "./src/animation-worker.ts",
+    "./png-chunks": "./src/png-chunks.ts",
+    "./img2webp-encoder": "./src/img2webp-encoder.ts"
   },
   "dependencies": {
-    "@imagemagick/magick-wasm": "catalog:"
+    "@imagemagick/magick-wasm": "catalog:",
+    "@libwebp-wasm/img2webp": "catalog:"
   },
   "devDependencies": {
     "vitest": "catalog:"

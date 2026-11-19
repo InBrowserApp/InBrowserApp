@@ -11,7 +11,8 @@
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
     "gifuct-js": "catalog:",
-    "upng-js": "catalog:"
+    "upng-js": "catalog:",
+    "@workspace/raster-image": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

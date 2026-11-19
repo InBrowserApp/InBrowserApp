@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "@libwebp-wasm/gif2webp": "catalog:",
-    "@libwebp-wasm/img2webp": "catalog:",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "gifuct-js": "catalog:"
+    "gifuct-js": "catalog:",
+    "@workspace/raster-image": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

@@ -23,6 +23,16 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "aes-encryptor",
   },
   {
+    category: "image",
+    name: "Creatore di WebP animato",
+    slug: "animated-webp-maker",
+  },
+  {
+    category: "image",
+    name: "Creatore di APNG",
+    slug: "apng-maker",
+  },
+  {
     category: "developer",
     name: "Visualizzatore di archivi",
     slug: "archive-viewer",

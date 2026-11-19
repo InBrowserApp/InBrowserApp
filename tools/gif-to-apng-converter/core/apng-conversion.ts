@@ -8,7 +8,7 @@ import {
   resolveGifBackgroundColor,
 } from "./gif-frame-rendering"
 import { scaleFramesIfNeeded } from "./frame-scaling"
-import { setApngLoop } from "./png-chunks"
+import { setApngLoop } from "@workspace/raster-image/png-chunks"
 
 import type { GifFrame } from "./gif-frame-rendering"
 

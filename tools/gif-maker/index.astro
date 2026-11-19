@@ -2,9 +2,9 @@
 import { resolveLocale, type ToolMeta } from "@workspace/tool-sdk"
 import { ToolArticle } from "@workspace/ui/components/tool/tool-article"
 import { ToolPageShell } from "@workspace/ui/components/tool/tool-page-shell"
-import GifMaker from "./client"
+import { animationMakerMessages } from "@workspace/ui/lib/animation-maker-messages"
+import Maker from "./client"
 import type { AstroComponentFactory } from "astro/runtime/server/index.js"
-import type { Messages } from "./types"
 
 interface Props {
   lang: string
@@ -15,10 +15,7 @@ const meta = resolveLocale<ToolMeta>(
   import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
   lang
 )!
-const messages = resolveLocale<Messages>(
-  import.meta.glob("./messages/*.json", { eager: true, import: "default" }),
-  lang
-)!
+const messages = animationMakerMessages(lang, "GIF")
 const Intro = resolveLocale<AstroComponentFactory>(
   import.meta.glob("./sections/intro/*.md", {
     eager: true,
@@ -29,7 +26,7 @@ const Intro = resolveLocale<AstroComponentFactory>(
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <GifMaker client:load language={lang} messages={messages} />
+  <Maker client:load language={lang} messages={messages} />
   <ToolArticle className="rtl:[&_ol]:mr-6 rtl:[&_ol]:ml-0">
     <Intro />
   </ToolArticle>
