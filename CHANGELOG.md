@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.11.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.10.0...v2.11.0) (2026-11-19)
+
+
+### Features
+
+* add a browser-only 2FA authenticator ([#1363](https://github.com/InBrowserApp/InBrowserApp/issues/1363)) ([0c68a68](https://github.com/InBrowserApp/InBrowserApp/commit/0c68a6892768048b68ac51dd8bb203d77d0d1d27))
+
+
+### Bug Fixes
+
+* **web:** make home search predictable on touch and keyboard ([#1366](https://github.com/InBrowserApp/InBrowserApp/issues/1366)) ([4288fe4](https://github.com/InBrowserApp/InBrowserApp/commit/4288fe40abfcb20c959e1f96aa27bca9af3be297))
+
 ## [2.10.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.9.0...v2.10.0) (2026-11-18)
 
 
