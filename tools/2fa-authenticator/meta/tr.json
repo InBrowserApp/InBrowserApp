@@ -1,0 +1,4 @@
+{
+  "name": "2FA Kimlik Doğrulayıcı (TOTP/HOTP)",
+  "description": "Kurulum anahtarından, QR kodundan veya Google Authenticator dışa aktarımından tarayıcınızda iki faktörlü doğrulama kodları oluşturun."
+}

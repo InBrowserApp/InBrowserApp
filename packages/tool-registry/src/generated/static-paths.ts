@@ -2,6 +2,98 @@ import type { ToolStaticPathEntry } from "../types"
 
 export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   {
+    slug: "2fa-authenticator",
+    language: "ar",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "de",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "en",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "es",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "fr",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "he",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "hi",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "id",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "it",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "ja",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "ko",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "ms",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "nl",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "no",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "pl",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "pt",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "ru",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "sv",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "th",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "tr",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "vi",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "zh-CN",
+  },
+  {
+    slug: "2fa-authenticator",
+    language: "zh-TW",
+  },
+  {
     slug: "adler32-hash-text-or-file",
     language: "ar",
   },
@@ -1103,98 +1195,6 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "audio-trimmer-merger",
-    language: "zh-TW",
-  },
-  {
-    slug: "authenticator",
-    language: "ar",
-  },
-  {
-    slug: "authenticator",
-    language: "de",
-  },
-  {
-    slug: "authenticator",
-    language: "en",
-  },
-  {
-    slug: "authenticator",
-    language: "es",
-  },
-  {
-    slug: "authenticator",
-    language: "fr",
-  },
-  {
-    slug: "authenticator",
-    language: "he",
-  },
-  {
-    slug: "authenticator",
-    language: "hi",
-  },
-  {
-    slug: "authenticator",
-    language: "id",
-  },
-  {
-    slug: "authenticator",
-    language: "it",
-  },
-  {
-    slug: "authenticator",
-    language: "ja",
-  },
-  {
-    slug: "authenticator",
-    language: "ko",
-  },
-  {
-    slug: "authenticator",
-    language: "ms",
-  },
-  {
-    slug: "authenticator",
-    language: "nl",
-  },
-  {
-    slug: "authenticator",
-    language: "no",
-  },
-  {
-    slug: "authenticator",
-    language: "pl",
-  },
-  {
-    slug: "authenticator",
-    language: "pt",
-  },
-  {
-    slug: "authenticator",
-    language: "ru",
-  },
-  {
-    slug: "authenticator",
-    language: "sv",
-  },
-  {
-    slug: "authenticator",
-    language: "th",
-  },
-  {
-    slug: "authenticator",
-    language: "tr",
-  },
-  {
-    slug: "authenticator",
-    language: "vi",
-  },
-  {
-    slug: "authenticator",
-    language: "zh-CN",
-  },
-  {
-    slug: "authenticator",
     language: "zh-TW",
   },
   {

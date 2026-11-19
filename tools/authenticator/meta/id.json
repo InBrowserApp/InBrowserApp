@@ -1,4 +1,0 @@
-{
-  "name": "Autentikator 2FA",
-  "description": "Buat kode autentikasi dua faktor (TOTP/HOTP) di browser dari kunci penyiapan, kode QR, atau hasil ekspor Google Authenticator."
-}

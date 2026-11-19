@@ -1,4 +1,0 @@
-{
-  "name": "Autenticador 2FA",
-  "description": "Gere códigos de autenticação de dois fatores (TOTP/HOTP) no navegador a partir de uma chave de configuração, um código QR ou uma exportação do Google Authenticator."
-}

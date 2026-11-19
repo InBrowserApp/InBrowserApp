@@ -4,6 +4,11 @@ import type { ToolSearchSuggestionEntry } from "../types"
 const entries: readonly ToolSearchSuggestionEntry[] = [
   {
     category: "crypto",
+    name: "أداة المصادقة الثنائية 2FA (TOTP/HOTP)",
+    slug: "2fa-authenticator",
+  },
+  {
+    category: "crypto",
     name: "تجزئة Adler-32 للنص أو الملف",
     slug: "adler32-hash-text-or-file",
   },
@@ -61,11 +66,6 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     category: "misc",
     name: "أداة قص الصوت ودمجه",
     slug: "audio-trimmer-merger",
-  },
-  {
-    category: "crypto",
-    name: "أداة المصادقة الثنائية (2FA)",
-    slug: "authenticator",
   },
   {
     category: "image",

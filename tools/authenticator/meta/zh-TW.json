@@ -1,4 +1,0 @@
-{
-  "name": "2FA 驗證器",
-  "description": "在瀏覽器中使用設定金鑰、QR 碼或 Google Authenticator 匯出資料，產生雙重驗證碼（TOTP 和 HOTP）。"
-}

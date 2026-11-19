@@ -1,0 +1,4 @@
+{
+  "name": "Autentiseringsapp för 2FA (TOTP/HOTP)",
+  "description": "Skapa koder för tvåfaktorsautentisering i webbläsaren med en konfigurationsnyckel, en QR-kod eller en export från Google Authenticator."
+}

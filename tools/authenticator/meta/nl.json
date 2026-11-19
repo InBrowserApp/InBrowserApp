@@ -1,4 +1,0 @@
-{
-  "name": "2FA-authenticator",
-  "description": "Genereer codes voor tweestapsverificatie (TOTP/HOTP) in je browser met een instelsleutel, een QR-code of een export uit Google Authenticator."
-}

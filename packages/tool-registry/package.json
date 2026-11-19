@@ -7,6 +7,7 @@
     "generate": "tsx src/generate.ts && pnpm exec oxfmt src/generated/*.ts"
   },
   "dependencies": {
+    "@tool/2fa-authenticator": "workspace:*",
     "@tool/adler32-hash-text-or-file": "workspace:*",
     "@tool/aes-decryptor": "workspace:*",
     "@tool/aes-encryptor": "workspace:*",
@@ -19,7 +20,6 @@
     "@tool/asciidoc-viewer": "workspace:*",
     "@tool/audio-recorder": "workspace:*",
     "@tool/audio-trimmer-merger": "workspace:*",
-    "@tool/authenticator": "workspace:*",
     "@tool/barcode-generator": "workspace:*",
     "@tool/barcode-reader": "workspace:*",
     "@tool/base16-decoder": "workspace:*",

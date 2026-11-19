@@ -1,0 +1,4 @@
+{
+  "name": "2FA 驗證器（TOTP/HOTP）",
+  "description": "使用設定金鑰、QR 碼或 Google Authenticator 匯出資料，在瀏覽器中產生兩步驟驗證的一次性驗證碼。"
+}
