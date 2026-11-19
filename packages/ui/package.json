@@ -13,7 +13,8 @@
     "tailwind-merge": "catalog:",
     "tw-animate-css": "catalog:",
     "dompurify": "catalog:",
-    "@workspace/spreadsheet-conversion": "workspace:*"
+    "@workspace/spreadsheet-conversion": "workspace:*",
+    "@workspace/raster-image": "workspace:*"
   },
   "peerDependencies": {
     "react": "catalog:",

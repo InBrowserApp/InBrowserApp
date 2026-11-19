@@ -535,6 +535,261 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "animated-webp-maker",
+    category: "image",
+    icon: "film",
+    tags: [
+      "image",
+      "animation",
+      "frames",
+      "maker",
+      "offline",
+      "webp",
+      "animated-webp",
+      "awebp",
+    ],
+    locales: {
+      ar: {
+        name: "أداة إنشاء WebP متحرك",
+        description:
+          "حوّل صورك إلى ملف WebP متحرك. أعد ترتيب الإطارات واضبط مدة عرض كل إطار وعدد مرات التشغيل، ثم صدّر الملف مع الحفاظ على الشفافية من متصفحك.",
+      },
+      de: {
+        name: "Ersteller für animiertes WebP",
+        description:
+          "Erstelle animierte WebP-Dateien aus Bildern. Ändere die Reihenfolge und Anzeigedauer der Einzelbilder, lege die Anzahl der Wiedergaben fest und exportiere die Animation mit Transparenz im Browser.",
+      },
+      en: {
+        name: "Animated WebP Maker",
+        description:
+          "Turn images into an animated WebP. Reorder frames, set frame durations and loop count, and export with transparency in your browser.",
+      },
+      es: {
+        name: "Creador de WebP animado",
+        description:
+          "Convierte imágenes en un WebP animado desde tu navegador. Ordena los fotogramas, ajusta su duración y el número de reproducciones, y exporta con transparencia.",
+      },
+      fr: {
+        name: "Créateur de WebP animé",
+        description:
+          "Créez un WebP animé à partir d’images dans votre navigateur. Réorganisez les images, réglez leur durée et le nombre de boucles, puis exportez l’animation avec sa transparence.",
+      },
+      he: {
+        name: "יוצר WebP מונפש",
+        description:
+          "יצירת WebP מונפש מתמונות ישירות בדפדפן. אפשר לשנות את סדר הפריימים, לקבוע את משך התצוגה של כל פריים ואת מספר הלולאות, ולייצא את האנימציה עם שקיפות.",
+      },
+      hi: {
+        name: "एनिमेटेड WebP मेकर",
+        description:
+          "इमेज से एनिमेटेड WebP बनाएँ। अपने ब्राउज़र में फ़्रेम का क्रम, हर फ़्रेम की अवधि और लूप की संख्या तय करें और पारदर्शिता बनाए रखते हुए एक्सपोर्ट करें।",
+      },
+      id: {
+        name: "Pembuat WebP Animasi",
+        description:
+          "Buat WebP animasi dari rangkaian gambar. Atur urutan dan durasi tiap frame serta jumlah putaran, lalu ekspor dengan transparansi langsung di browser.",
+      },
+      it: {
+        name: "Creatore di WebP animato",
+        description:
+          "Crea un WebP animato a partire da immagini nel browser. Riordina i fotogrammi, imposta la durata e il numero di riproduzioni ed esporta mantenendo la trasparenza.",
+      },
+      ja: {
+        name: "アニメーション WebP 作成ツール",
+        description:
+          "画像からアニメーション WebP を作成します。ブラウザーでフレームの順序や表示時間、ループ回数を調整し、透明度を保ったまま書き出せます。",
+      },
+      ko: {
+        name: "움직이는 WebP 만들기",
+        description:
+          "이미지를 모아 움직이는 WebP 파일을 만드세요. 브라우저에서 프레임 순서, 프레임별 표시 시간, 반복 횟수를 설정하고 투명도를 유지한 채 내보낼 수 있습니다.",
+      },
+      ms: {
+        name: "Pembuat WebP Beranimasi",
+        description:
+          "Cipta WebP beranimasi daripada beberapa imej. Susun bingkai, laraskan tempoh setiap bingkai dan tetapkan bilangan kali dimainkan, kemudian eksport dengan ketelusan terus dalam pelayar.",
+      },
+      nl: {
+        name: "Maker voor geanimeerde WebP",
+        description:
+          "Maak van afbeeldingen geanimeerde WebP-bestanden. Verander de volgorde van de frames, stel de weergaveduur en het aantal afspeelbeurten in en exporteer met behoud van transparantie in je browser.",
+      },
+      no: {
+        name: "Lag animert WebP",
+        description:
+          "Lag animerte WebP-filer av bilder i nettleseren. Endre rekkefølgen på bilderutene, angi visningstid og antall avspillinger, og eksporter med gjennomsiktighet.",
+      },
+      pl: {
+        name: "Kreator animowanego WebP",
+        description:
+          "Twórz animacje WebP z obrazów w przeglądarce. Zmieniaj kolejność klatek, ustawiaj ich czas wyświetlania i liczbę odtworzeń, a następnie eksportuj animację z zachowaniem przezroczystości.",
+      },
+      pt: {
+        name: "Criador de WebP animado",
+        description:
+          "Transforme imagens em um WebP animado no navegador. Reordene os quadros, ajuste a duração de cada um e o número de reproduções e exporte com transparência.",
+      },
+      ru: {
+        name: "Создание анимированного WebP",
+        description:
+          "Создавайте анимации WebP из изображений в браузере. Меняйте порядок и длительность кадров, задавайте число воспроизведений и экспортируйте с сохранением прозрачности.",
+      },
+      sv: {
+        name: "Skapa animerad WebP",
+        description:
+          "Skapa animerade WebP-filer av bilder i webbläsaren. Ändra ordningen på bildrutorna, ställ in visningstid och antal uppspelningar och exportera med bibehållen genomskinlighet.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง WebP แบบเคลื่อนไหว",
+        description:
+          "สร้างภาพเคลื่อนไหว WebP จากรูปภาพในเบราว์เซอร์ จัดลำดับเฟรม ปรับเวลาแสดงแต่ละเฟรม กำหนดจำนวนรอบที่เล่น และส่งออกโดยคงความโปร่งใสไว้",
+      },
+      tr: {
+        name: "Animasyonlu WebP Oluşturucu",
+        description:
+          "Görsellerden animasyonlu WebP oluşturun. Kareleri sıralayın, kare sürelerini ve döngü sayısını ayarlayın, ardından şeffaflığı koruyarak tarayıcınızda dışa aktarın.",
+      },
+      vi: {
+        name: "Trình tạo WebP động",
+        description:
+          "Tạo ảnh WebP động từ một chuỗi ảnh ngay trong trình duyệt. Sắp xếp các khung hình, đặt thời lượng và số lượt phát rồi xuất ảnh với độ trong suốt được giữ nguyên.",
+      },
+      "zh-CN": {
+        name: "动态 WebP 制作器",
+        description:
+          "在浏览器中将图片合成动态 WebP。可调整帧顺序、每帧时长和循环次数，导出时保留透明度。",
+      },
+      "zh-TW": {
+        name: "動態 WebP 製作器",
+        description:
+          "在瀏覽器中將圖片合成動態 WebP。可調整影格順序、每個影格的顯示時間和循環次數，匯出時保留透明度。",
+      },
+    },
+  },
+  {
+    slug: "apng-maker",
+    category: "image",
+    icon: "film",
+    tags: ["image", "animation", "frames", "maker", "offline", "apng", "png"],
+    locales: {
+      ar: {
+        name: "أداة إنشاء APNG",
+        description:
+          "حوّل صورك إلى ملف APNG متحرك. أعد ترتيب الإطارات واضبط مدة عرض كل إطار وعدد مرات التشغيل، ثم صدّر الملف مع الحفاظ على الشفافية من متصفحك.",
+      },
+      de: {
+        name: "APNG-Ersteller",
+        description:
+          "Erstelle APNG-Animationen aus Bildern. Ändere die Reihenfolge und Anzeigedauer der Einzelbilder, lege die Anzahl der Wiedergaben fest und exportiere die Animation mit Transparenz im Browser.",
+      },
+      en: {
+        name: "APNG Maker",
+        description:
+          "Turn images into APNG animations. Reorder frames, set frame durations and loop count, and export with transparency in your browser.",
+      },
+      es: {
+        name: "Creador de APNG",
+        description:
+          "Convierte imágenes en un APNG animado desde tu navegador. Ordena los fotogramas, ajusta su duración y el número de reproducciones, y exporta con transparencia.",
+      },
+      fr: {
+        name: "Créateur d’APNG",
+        description:
+          "Créez une animation APNG à partir d’images dans votre navigateur. Réorganisez les images, réglez leur durée et le nombre de boucles, puis exportez l’animation avec sa transparence.",
+      },
+      he: {
+        name: "יוצר APNG",
+        description:
+          "יצירת אנימציות APNG מתמונות ישירות בדפדפן. אפשר לשנות את סדר הפריימים, לקבוע את משך התצוגה של כל פריים ואת מספר הלולאות, ולייצא את האנימציה עם שקיפות.",
+      },
+      hi: {
+        name: "APNG मेकर",
+        description:
+          "इमेज से APNG एनिमेशन बनाएँ। अपने ब्राउज़र में फ़्रेम का क्रम, हर फ़्रेम की अवधि और लूप की संख्या तय करें और पारदर्शिता बनाए रखते हुए एक्सपोर्ट करें।",
+      },
+      id: {
+        name: "Pembuat APNG",
+        description:
+          "Buat APNG dari rangkaian gambar. Atur urutan dan durasi tiap frame serta jumlah putaran, lalu ekspor dengan transparansi langsung di browser.",
+      },
+      it: {
+        name: "Creatore di APNG",
+        description:
+          "Crea un’animazione APNG a partire da immagini nel browser. Riordina i fotogrammi, imposta la durata e il numero di riproduzioni ed esporta mantenendo la trasparenza.",
+      },
+      ja: {
+        name: "APNG 作成ツール",
+        description:
+          "画像から APNG を作成します。ブラウザーでフレームの順序や表示時間、ループ回数を調整し、透明度を保ったまま書き出せます。",
+      },
+      ko: {
+        name: "APNG 만들기",
+        description:
+          "이미지를 모아 APNG 파일을 만드세요. 브라우저에서 프레임 순서, 프레임별 표시 시간, 반복 횟수를 설정하고 투명도를 유지한 채 내보낼 수 있습니다.",
+      },
+      ms: {
+        name: "Pembuat APNG",
+        description:
+          "Cipta APNG daripada beberapa imej. Susun bingkai, laraskan tempoh setiap bingkai dan tetapkan bilangan kali dimainkan, kemudian eksport dengan ketelusan terus dalam pelayar.",
+      },
+      nl: {
+        name: "APNG-maker",
+        description:
+          "Maak van afbeeldingen APNG-animaties. Verander de volgorde van de frames, stel de weergaveduur en het aantal afspeelbeurten in en exporteer met behoud van transparantie in je browser.",
+      },
+      no: {
+        name: "Lag APNG",
+        description:
+          "Lag APNG-animasjoner av bilder i nettleseren. Endre rekkefølgen på bilderutene, angi visningstid og antall avspillinger, og eksporter med gjennomsiktighet.",
+      },
+      pl: {
+        name: "Kreator APNG",
+        description:
+          "Twórz animacje APNG z obrazów w przeglądarce. Zmieniaj kolejność klatek, ustawiaj ich czas wyświetlania i liczbę odtworzeń, a następnie eksportuj animację z zachowaniem przezroczystości.",
+      },
+      pt: {
+        name: "Criador de APNG",
+        description:
+          "Transforme imagens em uma animação APNG no navegador. Reordene os quadros, ajuste a duração de cada um e o número de reproduções e exporte com transparência.",
+      },
+      ru: {
+        name: "Создание APNG",
+        description:
+          "Создавайте анимации APNG из изображений в браузере. Меняйте порядок и длительность кадров, задавайте число воспроизведений и экспортируйте с сохранением прозрачности.",
+      },
+      sv: {
+        name: "APNG-skapare",
+        description:
+          "Skapa APNG-animationer av bilder i webbläsaren. Ändra ordningen på bildrutorna, ställ in visningstid och antal uppspelningar och exportera med bibehållen genomskinlighet.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง APNG",
+        description:
+          "สร้างภาพเคลื่อนไหว APNG จากรูปภาพในเบราว์เซอร์ จัดลำดับเฟรม ปรับเวลาแสดงแต่ละเฟรม กำหนดจำนวนรอบที่เล่น และส่งออกโดยคงความโปร่งใสไว้",
+      },
+      tr: {
+        name: "APNG Oluşturucu",
+        description:
+          "Görsellerden APNG oluşturun. Kareleri sıralayın, kare sürelerini ve döngü sayısını ayarlayın, ardından şeffaflığı koruyarak tarayıcınızda dışa aktarın.",
+      },
+      vi: {
+        name: "Trình tạo APNG",
+        description:
+          "Tạo ảnh động APNG từ một chuỗi ảnh ngay trong trình duyệt. Sắp xếp các khung hình, đặt thời lượng và số lượt phát rồi xuất ảnh với độ trong suốt được giữ nguyên.",
+      },
+      "zh-CN": {
+        name: "APNG 制作器",
+        description:
+          "在浏览器中将图片合成 APNG 动画。可调整帧顺序、每帧时长和循环次数，导出时保留透明度。",
+      },
+      "zh-TW": {
+        name: "APNG 製作器",
+        description:
+          "在瀏覽器中將圖片合成 APNG 動畫。可調整影格順序、每個影格的顯示時間和循環次數，匯出時保留透明度。",
+      },
+    },
+  },
+  {
     slug: "archive-viewer",
     category: "developer",
     icon: "archive",
@@ -39103,6 +39358,261 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "AES 加密器",
         description:
           "使用由密碼衍生的金鑰或原始十六進位金鑰，在瀏覽器中以 AES-GCM、AES-CBC 或 AES-CTR 加密文字或檔案。",
+      },
+    },
+  },
+  "animated-webp-maker": {
+    slug: "animated-webp-maker",
+    category: "image",
+    icon: "film",
+    tags: [
+      "image",
+      "animation",
+      "frames",
+      "maker",
+      "offline",
+      "webp",
+      "animated-webp",
+      "awebp",
+    ],
+    locales: {
+      ar: {
+        name: "أداة إنشاء WebP متحرك",
+        description:
+          "حوّل صورك إلى ملف WebP متحرك. أعد ترتيب الإطارات واضبط مدة عرض كل إطار وعدد مرات التشغيل، ثم صدّر الملف مع الحفاظ على الشفافية من متصفحك.",
+      },
+      de: {
+        name: "Ersteller für animiertes WebP",
+        description:
+          "Erstelle animierte WebP-Dateien aus Bildern. Ändere die Reihenfolge und Anzeigedauer der Einzelbilder, lege die Anzahl der Wiedergaben fest und exportiere die Animation mit Transparenz im Browser.",
+      },
+      en: {
+        name: "Animated WebP Maker",
+        description:
+          "Turn images into an animated WebP. Reorder frames, set frame durations and loop count, and export with transparency in your browser.",
+      },
+      es: {
+        name: "Creador de WebP animado",
+        description:
+          "Convierte imágenes en un WebP animado desde tu navegador. Ordena los fotogramas, ajusta su duración y el número de reproducciones, y exporta con transparencia.",
+      },
+      fr: {
+        name: "Créateur de WebP animé",
+        description:
+          "Créez un WebP animé à partir d’images dans votre navigateur. Réorganisez les images, réglez leur durée et le nombre de boucles, puis exportez l’animation avec sa transparence.",
+      },
+      he: {
+        name: "יוצר WebP מונפש",
+        description:
+          "יצירת WebP מונפש מתמונות ישירות בדפדפן. אפשר לשנות את סדר הפריימים, לקבוע את משך התצוגה של כל פריים ואת מספר הלולאות, ולייצא את האנימציה עם שקיפות.",
+      },
+      hi: {
+        name: "एनिमेटेड WebP मेकर",
+        description:
+          "इमेज से एनिमेटेड WebP बनाएँ। अपने ब्राउज़र में फ़्रेम का क्रम, हर फ़्रेम की अवधि और लूप की संख्या तय करें और पारदर्शिता बनाए रखते हुए एक्सपोर्ट करें।",
+      },
+      id: {
+        name: "Pembuat WebP Animasi",
+        description:
+          "Buat WebP animasi dari rangkaian gambar. Atur urutan dan durasi tiap frame serta jumlah putaran, lalu ekspor dengan transparansi langsung di browser.",
+      },
+      it: {
+        name: "Creatore di WebP animato",
+        description:
+          "Crea un WebP animato a partire da immagini nel browser. Riordina i fotogrammi, imposta la durata e il numero di riproduzioni ed esporta mantenendo la trasparenza.",
+      },
+      ja: {
+        name: "アニメーション WebP 作成ツール",
+        description:
+          "画像からアニメーション WebP を作成します。ブラウザーでフレームの順序や表示時間、ループ回数を調整し、透明度を保ったまま書き出せます。",
+      },
+      ko: {
+        name: "움직이는 WebP 만들기",
+        description:
+          "이미지를 모아 움직이는 WebP 파일을 만드세요. 브라우저에서 프레임 순서, 프레임별 표시 시간, 반복 횟수를 설정하고 투명도를 유지한 채 내보낼 수 있습니다.",
+      },
+      ms: {
+        name: "Pembuat WebP Beranimasi",
+        description:
+          "Cipta WebP beranimasi daripada beberapa imej. Susun bingkai, laraskan tempoh setiap bingkai dan tetapkan bilangan kali dimainkan, kemudian eksport dengan ketelusan terus dalam pelayar.",
+      },
+      nl: {
+        name: "Maker voor geanimeerde WebP",
+        description:
+          "Maak van afbeeldingen geanimeerde WebP-bestanden. Verander de volgorde van de frames, stel de weergaveduur en het aantal afspeelbeurten in en exporteer met behoud van transparantie in je browser.",
+      },
+      no: {
+        name: "Lag animert WebP",
+        description:
+          "Lag animerte WebP-filer av bilder i nettleseren. Endre rekkefølgen på bilderutene, angi visningstid og antall avspillinger, og eksporter med gjennomsiktighet.",
+      },
+      pl: {
+        name: "Kreator animowanego WebP",
+        description:
+          "Twórz animacje WebP z obrazów w przeglądarce. Zmieniaj kolejność klatek, ustawiaj ich czas wyświetlania i liczbę odtworzeń, a następnie eksportuj animację z zachowaniem przezroczystości.",
+      },
+      pt: {
+        name: "Criador de WebP animado",
+        description:
+          "Transforme imagens em um WebP animado no navegador. Reordene os quadros, ajuste a duração de cada um e o número de reproduções e exporte com transparência.",
+      },
+      ru: {
+        name: "Создание анимированного WebP",
+        description:
+          "Создавайте анимации WebP из изображений в браузере. Меняйте порядок и длительность кадров, задавайте число воспроизведений и экспортируйте с сохранением прозрачности.",
+      },
+      sv: {
+        name: "Skapa animerad WebP",
+        description:
+          "Skapa animerade WebP-filer av bilder i webbläsaren. Ändra ordningen på bildrutorna, ställ in visningstid och antal uppspelningar och exportera med bibehållen genomskinlighet.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง WebP แบบเคลื่อนไหว",
+        description:
+          "สร้างภาพเคลื่อนไหว WebP จากรูปภาพในเบราว์เซอร์ จัดลำดับเฟรม ปรับเวลาแสดงแต่ละเฟรม กำหนดจำนวนรอบที่เล่น และส่งออกโดยคงความโปร่งใสไว้",
+      },
+      tr: {
+        name: "Animasyonlu WebP Oluşturucu",
+        description:
+          "Görsellerden animasyonlu WebP oluşturun. Kareleri sıralayın, kare sürelerini ve döngü sayısını ayarlayın, ardından şeffaflığı koruyarak tarayıcınızda dışa aktarın.",
+      },
+      vi: {
+        name: "Trình tạo WebP động",
+        description:
+          "Tạo ảnh WebP động từ một chuỗi ảnh ngay trong trình duyệt. Sắp xếp các khung hình, đặt thời lượng và số lượt phát rồi xuất ảnh với độ trong suốt được giữ nguyên.",
+      },
+      "zh-CN": {
+        name: "动态 WebP 制作器",
+        description:
+          "在浏览器中将图片合成动态 WebP。可调整帧顺序、每帧时长和循环次数，导出时保留透明度。",
+      },
+      "zh-TW": {
+        name: "動態 WebP 製作器",
+        description:
+          "在瀏覽器中將圖片合成動態 WebP。可調整影格順序、每個影格的顯示時間和循環次數，匯出時保留透明度。",
+      },
+    },
+  },
+  "apng-maker": {
+    slug: "apng-maker",
+    category: "image",
+    icon: "film",
+    tags: ["image", "animation", "frames", "maker", "offline", "apng", "png"],
+    locales: {
+      ar: {
+        name: "أداة إنشاء APNG",
+        description:
+          "حوّل صورك إلى ملف APNG متحرك. أعد ترتيب الإطارات واضبط مدة عرض كل إطار وعدد مرات التشغيل، ثم صدّر الملف مع الحفاظ على الشفافية من متصفحك.",
+      },
+      de: {
+        name: "APNG-Ersteller",
+        description:
+          "Erstelle APNG-Animationen aus Bildern. Ändere die Reihenfolge und Anzeigedauer der Einzelbilder, lege die Anzahl der Wiedergaben fest und exportiere die Animation mit Transparenz im Browser.",
+      },
+      en: {
+        name: "APNG Maker",
+        description:
+          "Turn images into APNG animations. Reorder frames, set frame durations and loop count, and export with transparency in your browser.",
+      },
+      es: {
+        name: "Creador de APNG",
+        description:
+          "Convierte imágenes en un APNG animado desde tu navegador. Ordena los fotogramas, ajusta su duración y el número de reproducciones, y exporta con transparencia.",
+      },
+      fr: {
+        name: "Créateur d’APNG",
+        description:
+          "Créez une animation APNG à partir d’images dans votre navigateur. Réorganisez les images, réglez leur durée et le nombre de boucles, puis exportez l’animation avec sa transparence.",
+      },
+      he: {
+        name: "יוצר APNG",
+        description:
+          "יצירת אנימציות APNG מתמונות ישירות בדפדפן. אפשר לשנות את סדר הפריימים, לקבוע את משך התצוגה של כל פריים ואת מספר הלולאות, ולייצא את האנימציה עם שקיפות.",
+      },
+      hi: {
+        name: "APNG मेकर",
+        description:
+          "इमेज से APNG एनिमेशन बनाएँ। अपने ब्राउज़र में फ़्रेम का क्रम, हर फ़्रेम की अवधि और लूप की संख्या तय करें और पारदर्शिता बनाए रखते हुए एक्सपोर्ट करें।",
+      },
+      id: {
+        name: "Pembuat APNG",
+        description:
+          "Buat APNG dari rangkaian gambar. Atur urutan dan durasi tiap frame serta jumlah putaran, lalu ekspor dengan transparansi langsung di browser.",
+      },
+      it: {
+        name: "Creatore di APNG",
+        description:
+          "Crea un’animazione APNG a partire da immagini nel browser. Riordina i fotogrammi, imposta la durata e il numero di riproduzioni ed esporta mantenendo la trasparenza.",
+      },
+      ja: {
+        name: "APNG 作成ツール",
+        description:
+          "画像から APNG を作成します。ブラウザーでフレームの順序や表示時間、ループ回数を調整し、透明度を保ったまま書き出せます。",
+      },
+      ko: {
+        name: "APNG 만들기",
+        description:
+          "이미지를 모아 APNG 파일을 만드세요. 브라우저에서 프레임 순서, 프레임별 표시 시간, 반복 횟수를 설정하고 투명도를 유지한 채 내보낼 수 있습니다.",
+      },
+      ms: {
+        name: "Pembuat APNG",
+        description:
+          "Cipta APNG daripada beberapa imej. Susun bingkai, laraskan tempoh setiap bingkai dan tetapkan bilangan kali dimainkan, kemudian eksport dengan ketelusan terus dalam pelayar.",
+      },
+      nl: {
+        name: "APNG-maker",
+        description:
+          "Maak van afbeeldingen APNG-animaties. Verander de volgorde van de frames, stel de weergaveduur en het aantal afspeelbeurten in en exporteer met behoud van transparantie in je browser.",
+      },
+      no: {
+        name: "Lag APNG",
+        description:
+          "Lag APNG-animasjoner av bilder i nettleseren. Endre rekkefølgen på bilderutene, angi visningstid og antall avspillinger, og eksporter med gjennomsiktighet.",
+      },
+      pl: {
+        name: "Kreator APNG",
+        description:
+          "Twórz animacje APNG z obrazów w przeglądarce. Zmieniaj kolejność klatek, ustawiaj ich czas wyświetlania i liczbę odtworzeń, a następnie eksportuj animację z zachowaniem przezroczystości.",
+      },
+      pt: {
+        name: "Criador de APNG",
+        description:
+          "Transforme imagens em uma animação APNG no navegador. Reordene os quadros, ajuste a duração de cada um e o número de reproduções e exporte com transparência.",
+      },
+      ru: {
+        name: "Создание APNG",
+        description:
+          "Создавайте анимации APNG из изображений в браузере. Меняйте порядок и длительность кадров, задавайте число воспроизведений и экспортируйте с сохранением прозрачности.",
+      },
+      sv: {
+        name: "APNG-skapare",
+        description:
+          "Skapa APNG-animationer av bilder i webbläsaren. Ändra ordningen på bildrutorna, ställ in visningstid och antal uppspelningar och exportera med bibehållen genomskinlighet.",
+      },
+      th: {
+        name: "เครื่องมือสร้าง APNG",
+        description:
+          "สร้างภาพเคลื่อนไหว APNG จากรูปภาพในเบราว์เซอร์ จัดลำดับเฟรม ปรับเวลาแสดงแต่ละเฟรม กำหนดจำนวนรอบที่เล่น และส่งออกโดยคงความโปร่งใสไว้",
+      },
+      tr: {
+        name: "APNG Oluşturucu",
+        description:
+          "Görsellerden APNG oluşturun. Kareleri sıralayın, kare sürelerini ve döngü sayısını ayarlayın, ardından şeffaflığı koruyarak tarayıcınızda dışa aktarın.",
+      },
+      vi: {
+        name: "Trình tạo APNG",
+        description:
+          "Tạo ảnh động APNG từ một chuỗi ảnh ngay trong trình duyệt. Sắp xếp các khung hình, đặt thời lượng và số lượt phát rồi xuất ảnh với độ trong suốt được giữ nguyên.",
+      },
+      "zh-CN": {
+        name: "APNG 制作器",
+        description:
+          "在浏览器中将图片合成 APNG 动画。可调整帧顺序、每帧时长和循环次数，导出时保留透明度。",
+      },
+      "zh-TW": {
+        name: "APNG 製作器",
+        description:
+          "在瀏覽器中將圖片合成 APNG 動畫。可調整影格順序、每個影格的顯示時間和循環次數，匯出時保留透明度。",
       },
     },
   },

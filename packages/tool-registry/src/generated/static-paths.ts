@@ -370,6 +370,190 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "animated-webp-maker",
+    language: "ar",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "de",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "en",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "es",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "fr",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "he",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "hi",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "id",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "it",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "ja",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "ko",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "ms",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "nl",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "no",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "pl",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "pt",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "ru",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "sv",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "th",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "tr",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "vi",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "zh-CN",
+  },
+  {
+    slug: "animated-webp-maker",
+    language: "zh-TW",
+  },
+  {
+    slug: "apng-maker",
+    language: "ar",
+  },
+  {
+    slug: "apng-maker",
+    language: "de",
+  },
+  {
+    slug: "apng-maker",
+    language: "en",
+  },
+  {
+    slug: "apng-maker",
+    language: "es",
+  },
+  {
+    slug: "apng-maker",
+    language: "fr",
+  },
+  {
+    slug: "apng-maker",
+    language: "he",
+  },
+  {
+    slug: "apng-maker",
+    language: "hi",
+  },
+  {
+    slug: "apng-maker",
+    language: "id",
+  },
+  {
+    slug: "apng-maker",
+    language: "it",
+  },
+  {
+    slug: "apng-maker",
+    language: "ja",
+  },
+  {
+    slug: "apng-maker",
+    language: "ko",
+  },
+  {
+    slug: "apng-maker",
+    language: "ms",
+  },
+  {
+    slug: "apng-maker",
+    language: "nl",
+  },
+  {
+    slug: "apng-maker",
+    language: "no",
+  },
+  {
+    slug: "apng-maker",
+    language: "pl",
+  },
+  {
+    slug: "apng-maker",
+    language: "pt",
+  },
+  {
+    slug: "apng-maker",
+    language: "ru",
+  },
+  {
+    slug: "apng-maker",
+    language: "sv",
+  },
+  {
+    slug: "apng-maker",
+    language: "th",
+  },
+  {
+    slug: "apng-maker",
+    language: "tr",
+  },
+  {
+    slug: "apng-maker",
+    language: "vi",
+  },
+  {
+    slug: "apng-maker",
+    language: "zh-CN",
+  },
+  {
+    slug: "apng-maker",
+    language: "zh-TW",
+  },
+  {
     slug: "archive-viewer",
     language: "ar",
   },

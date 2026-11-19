@@ -11,13 +11,13 @@ import {
   resolveGifBackgroundColor,
 } from "./gif-frame-rendering"
 import { resolveLoopCount } from "./gif-loop"
-import { encodePngFramesWithImg2Webp } from "./img2webp-encoder"
+import { encodePngFramesWithImg2Webp } from "@workspace/raster-image/img2webp-encoder"
 
 import type {
   DecodedGifFrame,
   GifToAnimatedWebpOptions,
 } from "./gif-frame-rendering"
-import type { PngAnimationFrame } from "./img2webp-encoder"
+import type { PngAnimationFrame } from "@workspace/raster-image/img2webp-encoder"
 
 type GifToAnimatedWebpResult = Readonly<{
   blob: Blob
