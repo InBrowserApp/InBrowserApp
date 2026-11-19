@@ -8,15 +8,15 @@ import {
   parseMigrationLink,
 } from "./migration"
 
-const totp = {
-  type: "totp",
+const common = {
   issuer: "Example Mail",
   label: "demo@example.com",
   secret: "MZXW6",
   algorithm: "SHA1",
-  period: 30,
   digits: 6,
 } as const
+
+const totp = { ...common, type: "totp", period: 30 } as const
 
 test("reads a migration QR with Google's unspecified enum defaults", async () => {
   // Payload contains a single account with a three-byte key, name, and issuer.
@@ -45,7 +45,7 @@ test("reads a migration QR with Google's unspecified enum defaults", async () =>
 
 test("exports a batch of QR codes without changing the secret bytes or HOTP counter", () => {
   const hotp = {
-    ...totp,
+    ...common,
     type: "hotp",
     counter: 2 ** 36,
     algorithm: "SHA512",
