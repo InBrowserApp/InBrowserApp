@@ -135,7 +135,7 @@ function AccountRow({
               className="size-9"
               aria-label={messages.accountMenu.replace(
                 "{account}",
-                detail || name
+                () => detail || name
               )}
             >
               <MoreHorizontal aria-hidden="true" />

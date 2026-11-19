@@ -6,7 +6,7 @@
 
 Välj **Överför konton** i Google Authenticator och exportera de konton du vill flytta. Skanna de exporterade QR-koderna här med **Använd kameran**, eller ladda upp de sparade QR-bilderna tillsammans. Öppna **Export** i den [ursprungliga autentiseringsappen från InBrowser.App](https://authenticator.inbrowser.app/), välj **Google Authenticator**, ladda ned QR-bilden och ladda upp den här.
 
-QR-koder för överföring från Google importeras med 30 sekunders intervall. Överför kontona ett i taget för att behålla anpassade intervall från den ursprungliga appen. Klicka på kugghjulet vid varje konto, öppna **Key URI** i **Config** och klistra in länken här.
+TOTP-konton från Googles QR-koder för överföring importeras med 30 sekunders intervall. Överför kontona ett i taget för att behålla anpassade intervall från den ursprungliga appen. Klicka på kugghjulet vid varje konto, öppna **Key URI** i **Config** och klistra in länken här.
 
 Dina konton sparas i den här webbläsaren. Ladda ned en säkerhetskopia via **Exportera konton** innan du rensar webbplatsdata eller byter webbläsare. Förvara säkerhetskopian på ett säkert ställe. Den innehåller dina konfigurationsnycklar.
 

@@ -6,7 +6,7 @@ Abra as configurações de autenticação de dois fatores do site que você quer
 
 No Google Authenticator, escolha **Transferir contas** e exporte as contas que você quer mover. Aqui, escaneie os códigos QR de exportação com **Usar câmera** ou carregue as imagens salvas de uma só vez. No [autenticador original da InBrowser.App](https://authenticator.inbrowser.app/), abra **Export**, escolha **Google Authenticator**, baixe a imagem do código QR e carregue-a aqui.
 
-Os códigos QR de transferência do Google são importados com um intervalo de 30 segundos. Para manter os intervalos personalizados do autenticador original, transfira as contas individualmente. Clique na engrenagem de cada conta, expanda **Key URI** em **Config** e cole o link aqui.
+As contas TOTP importadas de códigos QR de transferência do Google usam um intervalo de 30 segundos. Para manter os intervalos personalizados do autenticador original, transfira as contas individualmente. Clique na engrenagem de cada conta, expanda **Key URI** em **Config** e cole o link aqui.
 
 As contas são salvas neste navegador. Baixe um backup em **Exportar contas** antes de limpar os dados do site ou mudar de navegador. Guarde o backup em um local privado, pois ele contém suas chaves de configuração.
 

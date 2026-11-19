@@ -6,7 +6,7 @@
 
 在 Google Authenticator 中選擇 **轉移帳戶**，匯出要移轉的帳戶。在本工具中選擇 **使用相機** 掃描匯出的 QR Code，也可以一次選取並上傳多張已儲存的 QR Code 圖片。如果你使用的是[舊版 InBrowser.App 驗證器](https://authenticator.inbrowser.app/)，請開啟 **Export**，選擇 **Google Authenticator**，再下載 QR Code 圖片並上傳至這裡。
 
-匯入 Google 的移轉 QR Code 後，驗證碼會每 30 秒更新。若要保留舊版設定的自訂間隔，請逐一移轉帳戶。按一下各帳戶的齒輪圖示，在 **Config** 中展開 **Key URI**，再將連結貼到新版。
+匯入 Google 的移轉 QR Code 後，TOTP 驗證碼會每 30 秒更新。若要保留舊版設定的自訂間隔，請逐一移轉帳戶。按一下各帳戶的齒輪圖示，在 **Config** 中展開 **Key URI**，再將連結貼到新版。
 
 帳戶儲存在此瀏覽器中。清除網站資料或更換瀏覽器前，請透過 **匯出帳戶** 下載備份。備份含有設定金鑰，請妥善保管。
 

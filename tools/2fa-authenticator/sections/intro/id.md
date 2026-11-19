@@ -6,7 +6,7 @@ Buka setelan autentikasi dua faktor di situs yang ingin Anda lindungi, lalu pili
 
 Di Google Authenticator, pilih **Transfer akun**, lalu ekspor akun yang ingin Anda pindahkan. Pilih **Gunakan kamera** di sini untuk memindai kode QR hasil ekspor, atau unggah gambar kode QR yang sudah disimpan sekaligus. Di [Autentikator InBrowser.App versi lama](https://authenticator.inbrowser.app/), buka **Export**, pilih **Google Authenticator**, lalu unduh gambar kode QR dan unggah ke sini.
 
-Kode QR transfer Google diimpor dengan interval 30 detik. Untuk mempertahankan interval khusus dari autentikator lama, pindahkan akun satu per satu. Klik ikon roda gigi pada setiap akun, buka **Key URI** di **Config**, lalu tempel tautannya di sini.
+Akun TOTP dari kode QR transfer Google diimpor dengan interval 30 detik. Untuk mempertahankan interval khusus dari autentikator lama, pindahkan akun satu per satu. Klik ikon roda gigi pada setiap akun, buka **Key URI** di **Config**, lalu tempel tautannya di sini.
 
 Akun disimpan di browser ini. Pilih **Ekspor akun** untuk mengunduh cadangan sebelum menghapus data situs atau pindah ke browser lain. Simpan cadangan di tempat yang aman karena file tersebut berisi kunci penyiapan Anda.
 

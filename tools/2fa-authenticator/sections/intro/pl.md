@@ -6,7 +6,7 @@ Otwórz ustawienia uwierzytelniania dwuskładnikowego w witrynie, którą chcesz
 
 W Google Authenticator wybierz **Przenieś konta** i wyeksportuj konta, które chcesz przenieść. Tutaj wybierz **Użyj kamery**, aby zeskanować kody QR z eksportu, lub wczytaj zapisane obrazy z kodami QR razem. W [pierwotnej aplikacji uwierzytelniającej InBrowser.App](https://authenticator.inbrowser.app/) wybierz **Export**, a następnie **Google Authenticator**. Pobierz obraz z kodem QR i wczytaj go tutaj.
 
-Kody QR do przenoszenia kont z Google są importowane z 30-sekundowym interwałem. Aby zachować własne interwały ze starszej aplikacji, przenieś konta osobno. Przy każdym koncie kliknij ikonę koła zębatego, rozwiń **Key URI** w oknie **Config** i wklej tutaj link.
+Konta TOTP z kodów QR do przenoszenia kont z Google są importowane z 30-sekundowym interwałem. Aby zachować własne interwały ze starszej aplikacji, przenieś konta osobno. Przy każdym koncie kliknij ikonę koła zębatego, rozwiń **Key URI** w oknie **Config** i wklej tutaj link.
 
 Konta są zapisywane w tej przeglądarce. Przed wyczyszczeniem danych witryny lub zmianą przeglądarki wybierz **Eksportuj konta** i pobierz kopię zapasową. Przechowuj ją w bezpiecznym miejscu, ponieważ zawiera klucze konfiguracji.
 

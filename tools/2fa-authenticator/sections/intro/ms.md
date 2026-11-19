@@ -6,7 +6,7 @@ Buka tetapan pengesahan dua faktor pada laman yang ingin anda lindungi dan pilih
 
 Dalam Google Authenticator, pilih **Pindahkan akaun** dan eksport akaun yang ingin dipindahkan. Pilih **Guna kamera** di sini untuk mengimbas kod QR yang dieksport, atau muat naik sekali gus imej kod QR yang telah disimpan. Dalam [pengesah InBrowser.App versi asal](https://authenticator.inbrowser.app/), buka **Export**, pilih **Google Authenticator**, kemudian muat turun imej kod QR dan muat naik di sini.
 
-Kod QR pemindahan Google diimport dengan selang 30 saat. Untuk mengekalkan selang tersuai daripada pengesah asal, pindahkan akaun satu demi satu. Klik ikon gear bagi setiap akaun, kembangkan **Key URI** dalam **Config**, kemudian tampalkan pautan di sini.
+Akaun TOTP daripada kod QR pemindahan Google diimport dengan selang 30 saat. Untuk mengekalkan selang tersuai daripada pengesah asal, pindahkan akaun satu demi satu. Klik ikon gear bagi setiap akaun, kembangkan **Key URI** dalam **Config**, kemudian tampalkan pautan di sini.
 
 Akaun disimpan dalam pelayar ini. Pilih **Eksport akaun** untuk memuat turun sandaran sebelum memadamkan data laman atau berpindah ke pelayar lain. Simpan sandaran di tempat yang selamat kerana fail tersebut mengandungi kunci persediaan anda.
 

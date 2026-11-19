@@ -6,7 +6,7 @@ Open de instellingen voor tweestapsverificatie op de site die je wilt beveiligen
 
 Kies in Google Authenticator **Accounts overzetten** en exporteer de accounts die je wilt overzetten. Scan de geëxporteerde QR-codes hier met **Camera gebruiken** of upload de opgeslagen QR-afbeeldingen samen. Open in de [oorspronkelijke InBrowser.App Authenticator](https://authenticator.inbrowser.app/) **Export**, kies **Google Authenticator**, download de QR-afbeelding en upload die hier.
 
-De QR-codes van Google worden hier geïmporteerd met een interval van 30 seconden. Zet accounts één voor één over om de aangepaste intervallen uit de oorspronkelijke app te behouden. Klik bij elk account op het tandwiel, klap **Key URI** uit in **Config** en plak de link hier.
+TOTP-accounts uit Google-overdrachtscodes worden geïmporteerd met een interval van 30 seconden. Zet accounts één voor één over om de aangepaste intervallen uit de oorspronkelijke app te behouden. Klik bij elk account op het tandwiel, klap **Key URI** uit in **Config** en plak de link hier.
 
 Je accounts worden in deze browser opgeslagen. Download via **Accounts exporteren** een back-up voordat je sitegegevens wist of van browser wisselt. Bewaar de back-up op een veilige plek, want die bevat je instelsleutels.
 
