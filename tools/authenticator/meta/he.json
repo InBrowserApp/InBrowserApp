@@ -1,0 +1,4 @@
+{
+  "name": "מאמת דו־שלבי (2FA)",
+  "description": "הפקת קודי אימות דו־שלבי (TOTP/HOTP) בדפדפן באמצעות מפתח הגדרה, קוד QR או ייצוא מ־Google Authenticator."
+}

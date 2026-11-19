@@ -63,6 +63,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "audio-trimmer-merger",
   },
   {
+    category: "crypto",
+    name: "2FA 验证器",
+    slug: "authenticator",
+  },
+  {
     category: "image",
     name: "条形码生成器",
     slug: "barcode-generator",

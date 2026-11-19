@@ -1,0 +1,4 @@
+{
+  "name": "Aplikacja uwierzytelniająca 2FA",
+  "description": "Generuj kody uwierzytelniania dwuskładnikowego (TOTP/HOTP) w przeglądarce za pomocą klucza konfiguracji, kodu QR lub eksportu z Google Authenticator."
+}

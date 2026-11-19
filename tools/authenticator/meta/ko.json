@@ -1,0 +1,4 @@
+{
+  "name": "2단계 인증 도구 (2FA)",
+  "description": "설정 키, QR 코드 또는 Google OTP에서 내보낸 정보로 브라우저에서 2단계 인증 코드 (TOTP/HOTP)를 생성합니다."
+}

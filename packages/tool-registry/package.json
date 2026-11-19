@@ -19,6 +19,7 @@
     "@tool/asciidoc-viewer": "workspace:*",
     "@tool/audio-recorder": "workspace:*",
     "@tool/audio-trimmer-merger": "workspace:*",
+    "@tool/authenticator": "workspace:*",
     "@tool/barcode-generator": "workspace:*",
     "@tool/barcode-reader": "workspace:*",
     "@tool/base16-decoder": "workspace:*",

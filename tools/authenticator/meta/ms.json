@@ -1,0 +1,4 @@
+{
+  "name": "Pengesah 2FA",
+  "description": "Jana kod pengesahan dua faktor (TOTP/HOTP) dalam pelayar daripada kunci persediaan, kod QR atau hasil eksport daripada Google Authenticator."
+}
