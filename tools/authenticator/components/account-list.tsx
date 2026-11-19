@@ -56,7 +56,7 @@ function AccountRow({
 
   return (
     <li
-      className="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-2.5 px-4 py-4 sm:grid-cols-[minmax(0,1fr)_minmax(8rem,1fr)_auto_auto] sm:px-6"
+      className="grid min-w-0 grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-2.5 px-4 py-4 sm:grid-cols-[minmax(0,1fr)_minmax(8rem,1fr)_minmax(0,0.9fr)_2.25rem] sm:px-6"
       aria-label={detail ? `${name}, ${detail}` : name}
     >
       <div className="min-w-0">
