@@ -4,6 +4,11 @@ import type { ToolSearchSuggestionEntry } from "../types"
 const entries: readonly ToolSearchSuggestionEntry[] = [
   {
     category: "crypto",
+    name: "2FA Kimlik Doğrulayıcı (TOTP/HOTP)",
+    slug: "2fa-authenticator",
+  },
+  {
+    category: "crypto",
     name: "Adler-32 Hash Metin veya Dosya",
     slug: "adler32-hash-text-or-file",
   },

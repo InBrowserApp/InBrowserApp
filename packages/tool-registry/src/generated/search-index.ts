@@ -2,6 +2,140 @@ import type { ToolSearchIndexEntry } from "../types"
 
 export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
   {
+    slug: "2fa-authenticator",
+    category: "crypto",
+    icon: "lock",
+    tags: [
+      "2fa",
+      "mfa",
+      "otp",
+      "totp",
+      "hotp",
+      "authenticator",
+      "verification-code",
+      "google-authenticator",
+      "otpauth",
+      "qr",
+    ],
+    locales: {
+      ar: {
+        name: "أداة المصادقة الثنائية 2FA (TOTP/HOTP)",
+        description:
+          "أنشئ رموز المصادقة الثنائية في متصفحك باستخدام مفتاح إعداد أو رمز QR أو بيانات مُصدّرة من Google Authenticator.",
+      },
+      de: {
+        name: "2FA-Authenticator (TOTP/HOTP)",
+        description:
+          "Erzeuge im Browser 2FA-Codes aus einem Einrichtungsschlüssel, einem QR-Code oder einem Google-Authenticator-Export.",
+      },
+      en: {
+        name: "2FA Authenticator (TOTP & HOTP)",
+        description:
+          "Generate two-factor authentication codes in your browser from a setup key, a QR code, or a Google Authenticator export.",
+      },
+      es: {
+        name: "Autenticador 2FA (TOTP/HOTP)",
+        description:
+          "Genera códigos de autenticación de dos factores en el navegador a partir de una clave de configuración, un código QR o una exportación de Google Authenticator.",
+      },
+      fr: {
+        name: "Authentificateur 2FA (TOTP/HOTP)",
+        description:
+          "Générez des codes d’authentification à deux facteurs dans votre navigateur à partir d’une clé de configuration, d’un code QR ou d’un export Google Authenticator.",
+      },
+      he: {
+        name: "מאמת דו־שלבי 2FA (TOTP/HOTP)",
+        description:
+          "הפקת קודי אימות דו־שלבי בדפדפן באמצעות מפתח הגדרה, קוד QR או ייצוא מ־Google Authenticator.",
+      },
+      hi: {
+        name: "2FA ऑथेंटिकेटर (TOTP/HOTP)",
+        description:
+          "सेटअप कुंजी, QR कोड या Google Authenticator से एक्सपोर्ट किए गए डेटा से अपने ब्राउज़र में दो-चरणीय पुष्टि के कोड बनाएँ।",
+      },
+      id: {
+        name: "Autentikator 2FA (TOTP/HOTP)",
+        description:
+          "Buat kode autentikasi dua faktor di browser dari kunci penyiapan, kode QR, atau hasil ekspor Google Authenticator.",
+      },
+      it: {
+        name: "Autenticatore 2FA (TOTP/HOTP)",
+        description:
+          "Genera codici di autenticazione a due fattori nel browser da una chiave di configurazione, un codice QR o un’esportazione di Google Authenticator.",
+      },
+      ja: {
+        name: "2段階認証ツール（2FA・TOTP・HOTP）",
+        description:
+          "セットアップキーや QR コード、Google 認証システムからのエクスポートを使って、ブラウザで2段階認証コードを生成します。",
+      },
+      ko: {
+        name: "2단계 인증 도구 (2FA, TOTP, HOTP)",
+        description:
+          "설정 키, QR 코드 또는 Google OTP에서 내보낸 정보로 브라우저에서 2단계 인증 코드를 생성합니다.",
+      },
+      ms: {
+        name: "Pengesah 2FA (TOTP/HOTP)",
+        description:
+          "Jana kod pengesahan dua faktor dalam pelayar daripada kunci persediaan, kod QR atau hasil eksport daripada Google Authenticator.",
+      },
+      nl: {
+        name: "2FA-authenticator (TOTP/HOTP)",
+        description:
+          "Genereer codes voor tweestapsverificatie in je browser met een instelsleutel, een QR-code of een export uit Google Authenticator.",
+      },
+      no: {
+        name: "Autentiseringsapp for 2FA (TOTP/HOTP)",
+        description:
+          "Lag koder for tofaktorautentisering i nettleseren med en oppsettsnøkkel, en QR-kode eller en eksport fra Google Authenticator.",
+      },
+      pl: {
+        name: "Aplikacja uwierzytelniająca 2FA (TOTP/HOTP)",
+        description:
+          "Generuj kody uwierzytelniania dwuskładnikowego w przeglądarce za pomocą klucza konfiguracji, kodu QR lub eksportu z Google Authenticator.",
+      },
+      pt: {
+        name: "Autenticador 2FA (TOTP/HOTP)",
+        description:
+          "Gere códigos de autenticação de dois fatores no navegador a partir de uma chave de configuração, um código QR ou uma exportação do Google Authenticator.",
+      },
+      ru: {
+        name: "Аутентификатор 2FA (TOTP/HOTP)",
+        description:
+          "Создавайте коды двухфакторной аутентификации в браузере по ключу настройки, QR-коду или экспорту из Google Authenticator.",
+      },
+      sv: {
+        name: "Autentiseringsapp för 2FA (TOTP/HOTP)",
+        description:
+          "Skapa koder för tvåfaktorsautentisering i webbläsaren med en konfigurationsnyckel, en QR-kod eller en export från Google Authenticator.",
+      },
+      th: {
+        name: "แอปยืนยันตัวตน 2FA (TOTP/HOTP)",
+        description:
+          "สร้างรหัสยืนยันตัวตนแบบสองปัจจัยในเบราว์เซอร์จากคีย์ตั้งค่า QR Code หรือข้อมูลส่งออกจาก Google Authenticator",
+      },
+      tr: {
+        name: "2FA Kimlik Doğrulayıcı (TOTP/HOTP)",
+        description:
+          "Kurulum anahtarından, QR kodundan veya Google Authenticator dışa aktarımından tarayıcınızda iki faktörlü doğrulama kodları oluşturun.",
+      },
+      vi: {
+        name: "Trình xác thực 2FA (TOTP/HOTP)",
+        description:
+          "Tạo mã xác thực hai yếu tố ngay trong trình duyệt bằng khóa thiết lập, mã QR hoặc dữ liệu xuất từ Google Authenticator.",
+      },
+      "zh-CN": {
+        name: "2FA 验证器（TOTP/HOTP）",
+        description:
+          "用设置密钥、二维码或 Google 身份验证器的导出内容，在浏览器中生成两步验证的一次性验证码。",
+      },
+      "zh-TW": {
+        name: "2FA 驗證器（TOTP/HOTP）",
+        description:
+          "使用設定金鑰、QR 碼或 Google Authenticator 匯出資料，在瀏覽器中產生兩步驟驗證的一次性驗證碼。",
+      },
+    },
+  },
+  {
     slug: "adler32-hash-text-or-file",
     category: "crypto",
     icon: "lock",

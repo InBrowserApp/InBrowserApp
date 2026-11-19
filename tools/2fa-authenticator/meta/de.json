@@ -1,0 +1,4 @@
+{
+  "name": "2FA-Authenticator (TOTP/HOTP)",
+  "description": "Erzeuge im Browser 2FA-Codes aus einem Einrichtungsschlüssel, einem QR-Code oder einem Google-Authenticator-Export."
+}

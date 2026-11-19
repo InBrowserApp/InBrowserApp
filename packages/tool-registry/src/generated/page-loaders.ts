@@ -4,6 +4,7 @@ type ToolPageModule = { default: AstroComponentFactory }
 type ToolPageLoader = () => Promise<ToolPageModule>
 
 export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
+  "2fa-authenticator": () => import("@tool/2fa-authenticator/page"),
   "adler32-hash-text-or-file": () =>
     import("@tool/adler32-hash-text-or-file/page"),
   "aes-decryptor": () => import("@tool/aes-decryptor/page"),

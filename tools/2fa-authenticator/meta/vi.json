@@ -1,0 +1,4 @@
+{
+  "name": "Trình xác thực 2FA (TOTP/HOTP)",
+  "description": "Tạo mã xác thực hai yếu tố ngay trong trình duyệt bằng khóa thiết lập, mã QR hoặc dữ liệu xuất từ Google Authenticator."
+}
