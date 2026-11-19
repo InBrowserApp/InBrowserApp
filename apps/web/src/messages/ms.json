@@ -49,6 +49,7 @@
     "categoryAll": "Semua alat",
     "suggestionsLabel": "Cadangan",
     "suggestionsHint": "↑↓ navigasi · ↵ buka · esc tutup",
+    "viewAllResults": "Lihat semua hasil carian",
     "suggestionMatchCountOne": "{count} padanan",
     "suggestionMatchCount": "{count} padanan",
     "emptyRegistryTitle": "Tiada alat tersedia lagi.",

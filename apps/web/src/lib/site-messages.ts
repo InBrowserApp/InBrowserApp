@@ -53,6 +53,7 @@ type SiteMessageCatalog = Readonly<{
     categoryAll: string
     suggestionsLabel: string
     suggestionsHint: string
+    viewAllResults: string
     suggestionMatchCountOne: string
     suggestionMatchCount: string
     emptyRegistryTitle: string

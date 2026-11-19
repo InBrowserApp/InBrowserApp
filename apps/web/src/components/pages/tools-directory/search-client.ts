@@ -25,16 +25,18 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
   const shortcut = form.querySelector<HTMLElement>("[data-search-shortcut]")!
   const panel = form.querySelector<HTMLElement>("[data-search-panel]")!
   const language = root.lang as SiteLanguage
+  // The directory is already showing full results as the user types.
+  const initialActive = options.onQueryChange ? 0 : -1
   let query = input.value
   let entries = options.entries
   let loading = false
   let composing = false
   let dismissed = false
-  let active = 0
+  let active = initialActive
 
   function isOpen() {
     return (
-      document.activeElement === input &&
+      form.contains(document.activeElement) &&
       entries !== null &&
       normalizeQuery(query) !== "" &&
       !dismissed
@@ -57,14 +59,14 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
     query = value
     input.value = value
     dismissed = false
-    active = 0
+    active = initialActive
     refresh()
   }
 
   function changed() {
     query = input.value
     dismissed = false
-    active = 0
+    active = initialActive
     options.onQueryChange?.(query)
     refresh()
   }
@@ -86,7 +88,19 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
   }
 
   input.addEventListener("focus", () => void focus(), { signal })
-  input.addEventListener("blur", refresh, { signal })
+  form.addEventListener(
+    "focusout",
+    (event) => {
+      if (
+        event.relatedTarget instanceof Node &&
+        form.contains(event.relatedTarget)
+      )
+        return
+      active = initialActive
+      refresh()
+    },
+    { signal }
+  )
   input.addEventListener(
     "input",
     () => {
@@ -127,14 +141,14 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
         ["ArrowDown", "ArrowUp"].includes(event.key)
       ) {
         event.preventDefault()
-        active = Math.max(
-          0,
-          Math.min(
-            items.length - 1,
-            active + (event.key === "ArrowDown" ? 1 : -1)
-          )
-        )
+        const last = items.length - 1
+        if (event.key === "ArrowDown") {
+          active = Math.min(active + 1, last)
+        } else {
+          active = active < 0 ? last : Math.max(active - 1, 0)
+        }
         highlightSuggestion(root, active, true)
+        items[active].scrollIntoView({ block: "nearest" })
       }
     },
     { signal }
@@ -150,7 +164,8 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
     },
     { signal }
   )
-  clear.addEventListener("pointerdown", (event) => event.preventDefault(), {
+  // Keep the input focused without suppressing WebKit's click after a tap.
+  clear.addEventListener("mousedown", (event) => event.preventDefault(), {
     signal,
   })
   clear.addEventListener(
@@ -163,7 +178,7 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
     { signal }
   )
   panel.addEventListener(
-    "pointerdown",
+    "mousedown",
     (event) => {
       if (event.button === 0) event.preventDefault()
     },
@@ -172,7 +187,7 @@ function setupSearch(root: HTMLElement, options: SearchOptions) {
   panel.addEventListener(
     "pointerover",
     (event) => {
-      if (!(event.target instanceof Element)) return
+      if (!options.onQueryChange || !(event.target instanceof Element)) return
       const option = event.target.closest<HTMLElement>("[role=option]")
       if (!option) return
       active = Number(option.dataset.index)

@@ -49,6 +49,7 @@
     "categoryAll": "所有工具",
     "suggestionsLabel": "建議",
     "suggestionsHint": "↑↓ 導覽 · ↵ 開啟 · esc 關閉",
+    "viewAllResults": "查看所有結果",
     "suggestionMatchCountOne": "{count} 個符合項目",
     "suggestionMatchCount": "{count} 個符合項目",
     "emptyRegistryTitle": "尚無可用的工具。",

@@ -49,6 +49,7 @@
     "categoryAll": "Alla verktyg",
     "suggestionsLabel": "Förslag",
     "suggestionsHint": "↑↓ navigera · ↵ öppna · esc stäng",
+    "viewAllResults": "Visa alla resultat",
     "suggestionMatchCountOne": "{count} träff",
     "suggestionMatchCount": "{count} träffar",
     "emptyRegistryTitle": "Inga verktyg tillgängliga ännu.",

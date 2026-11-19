@@ -49,6 +49,7 @@
     "categoryAll": "เครื่องมือทั้งหมด",
     "suggestionsLabel": "คำแนะนำ",
     "suggestionsHint": "↑↓ เลื่อนดู · ↵ เปิด · esc ปิด",
+    "viewAllResults": "ดูผลการค้นหาทั้งหมด",
     "suggestionMatchCountOne": "{count} รายการที่ตรงกัน",
     "suggestionMatchCount": "{count} รายการที่ตรงกัน",
     "emptyRegistryTitle": "ยังไม่มีเครื่องมือ",

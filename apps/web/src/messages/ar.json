@@ -49,6 +49,7 @@
     "categoryAll": "جميع الأدوات",
     "suggestionsLabel": "الاقتراحات",
     "suggestionsHint": "↑↓ تنقّل · ↵ فتح · esc إغلاق",
+    "viewAllResults": "عرض جميع النتائج",
     "suggestionMatchCountOne": "{count} نتيجة مطابقة",
     "suggestionMatchCount": "{count} نتائج مطابقة",
     "emptyRegistryTitle": "لا توجد أدوات متاحة بعد.",

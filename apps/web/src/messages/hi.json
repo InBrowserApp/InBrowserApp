@@ -49,6 +49,7 @@
     "categoryAll": "सभी उपकरण",
     "suggestionsLabel": "सुझाव",
     "suggestionsHint": "↑↓ नेविगेट · ↵ खोलें · esc बंद करें",
+    "viewAllResults": "सभी नतीजे देखें",
     "suggestionMatchCountOne": "{count} मिलान",
     "suggestionMatchCount": "{count} मिलान",
     "emptyRegistryTitle": "अभी तक कोई उपकरण उपलब्ध नहीं है।",

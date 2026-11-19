@@ -49,6 +49,7 @@
     "categoryAll": "すべてのツール",
     "suggestionsLabel": "検索候補",
     "suggestionsHint": "↑↓ 移動 · ↵ 開く · esc 閉じる",
+    "viewAllResults": "すべての検索結果を表示",
     "suggestionMatchCountOne": "{count}件",
     "suggestionMatchCount": "{count}件",
     "emptyRegistryTitle": "利用可能なツールはまだありません。",

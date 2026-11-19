@@ -49,6 +49,7 @@
     "categoryAll": "Tất cả công cụ",
     "suggestionsLabel": "Gợi ý",
     "suggestionsHint": "↑↓ di chuyển · ↵ mở · esc đóng",
+    "viewAllResults": "Xem tất cả kết quả",
     "suggestionMatchCountOne": "{count} kết quả",
     "suggestionMatchCount": "{count} kết quả",
     "emptyRegistryTitle": "Chưa có công cụ nào.",

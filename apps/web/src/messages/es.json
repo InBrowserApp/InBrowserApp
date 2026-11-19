@@ -49,6 +49,7 @@
     "categoryAll": "Todas las herramientas",
     "suggestionsLabel": "Sugerencias",
     "suggestionsHint": "↑↓ navegar · ↵ abrir · esc cerrar",
+    "viewAllResults": "Ver todos los resultados",
     "suggestionMatchCountOne": "{count} coincidencia",
     "suggestionMatchCount": "{count} coincidencias",
     "emptyRegistryTitle": "Aún no hay herramientas disponibles.",
