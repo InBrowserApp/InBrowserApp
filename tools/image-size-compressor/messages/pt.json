@@ -37,5 +37,7 @@
   "contain": "Mostrar a imagem inteira (com margens)",
   "cover": "Preencher e cortar as bordas",
   "readyCountWithoutLimit": "{ready} de {total} prontas para baixar",
-  "tryExactLimit": "As dimensões solicitadas são mantidas. Tente usar WebP se o formulário aceitar esse formato ou aumente o limite de tamanho."
+  "tryExactLimit": "As dimensões solicitadas são mantidas. Tente usar WebP se o formulário aceitar esse formato ou aumente o limite de tamanho.",
+  "lockAspectRatio": "Bloquear proporção",
+  "aspectRatioHint": "Fixa a proporção informada ou usa a da primeira imagem se uma dimensão estiver em branco."
 }

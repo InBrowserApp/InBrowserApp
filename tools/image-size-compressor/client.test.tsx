@@ -1,5 +1,12 @@
-import { cleanup, fireEvent, render, screen } from "@testing-library/react"
-import { afterEach, expect, it, vi } from "vitest"
+import {
+  cleanup,
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+} from "@testing-library/react"
+import { afterEach, beforeEach, expect, it, vi } from "vitest"
+import { loadImageSource } from "@workspace/raster-image/browser-canvas"
 
 import ImageSizeCompressor from "./client"
 import { compressImage, readyImagesZip } from "./compress"
@@ -9,6 +16,10 @@ vi.mock("./compress", async (importOriginal) => ({
   ...(await importOriginal<typeof import("./compress")>()),
   compressImage: vi.fn(),
   readyImagesZip: vi.fn(),
+}))
+
+vi.mock("@workspace/raster-image/browser-canvas", () => ({
+  loadImageSource: vi.fn(),
 }))
 
 const photos = ["first.png", "second.jpg", "too-large.png", "broken.png"].map(
@@ -24,6 +35,10 @@ function mockResult(bytes: number, originalKept = false) {
     originalKept,
   }
 }
+
+beforeEach(() => {
+  vi.mocked(loadImageSource).mockRejectedValue(new Error("INVALID_IMAGE"))
+})
 
 afterEach(() => {
   cleanup()
@@ -159,3 +174,114 @@ it("requires both exact dimensions and can retry without a file size limit", asy
     fit: "cover",
   })
 })
+
+it("links either dimension to a manually entered ratio and edits independently when unlocked", () => {
+  render(<ImageSizeCompressor lang="en" messages={messages} />)
+  fireEvent.change(
+    screen.getByRole("combobox", { name: messages.dimensionMode }),
+    {
+      target: { value: "exact" },
+    }
+  )
+  const width = screen.getByRole<HTMLInputElement>("textbox", {
+    name: messages.width,
+  })
+  const height = screen.getByRole<HTMLInputElement>("textbox", {
+    name: messages.height,
+  })
+  const lock = screen.getByRole<HTMLButtonElement>("button", {
+    name: messages.lockAspectRatio,
+  })
+  expect(lock.disabled).toBe(true)
+
+  fireEvent.change(width, { target: { value: "400" } })
+  fireEvent.change(height, { target: { value: "300" } })
+  fireEvent.click(lock)
+  expect(lock.getAttribute("aria-pressed")).toBe("true")
+  fireEvent.change(width, { target: { value: "500" } })
+  expect(height.value).toBe("375")
+  fireEvent.change(height, { target: { value: "200" } })
+  expect(width.value).toBe("267")
+  fireEvent.change(width, { target: { value: "" } })
+  expect(height.value).toBe("200")
+  fireEvent.change(width, { target: { value: "400" } })
+  expect(height.value).toBe("300")
+
+  const dimensionMode = screen.getByRole("combobox", {
+    name: messages.dimensionMode,
+  })
+  fireEvent.change(dimensionMode, { target: { value: "original" } })
+  fireEvent.change(dimensionMode, { target: { value: "exact" } })
+  const returnedLock = screen.getByRole<HTMLButtonElement>("button", {
+    name: messages.lockAspectRatio,
+  })
+  expect(returnedLock.getAttribute("aria-pressed")).toBe("true")
+  const returnedWidth = screen.getByRole<HTMLInputElement>("textbox", {
+    name: messages.width,
+  })
+  const returnedHeight = screen.getByRole<HTMLInputElement>("textbox", {
+    name: messages.height,
+  })
+
+  fireEvent.click(returnedLock)
+  expect(returnedLock.getAttribute("aria-pressed")).toBe("false")
+  fireEvent.change(returnedWidth, { target: { value: "600" } })
+  expect(returnedHeight.value).toBe("300")
+})
+
+it.each([
+  ["", "", "1200", "800"],
+  ["600", "", "600", "400"],
+  ["", "500", "750", "500"],
+])(
+  "can lock the first image ratio with width %s and height %s",
+  async (widthInput, heightInput, expectedWidth, expectedHeight) => {
+    const release = vi.fn()
+    vi.mocked(loadImageSource).mockResolvedValue({
+      height: 800,
+      width: 1200,
+      image: document.createElement("img"),
+      cleanup: release,
+    })
+    vi.mocked(compressImage).mockResolvedValue(mockResult(1000))
+    render(<ImageSizeCompressor lang="en" messages={messages} />)
+    fireEvent.change(screen.getByLabelText(messages.addImages), {
+      target: { files: [photos[0], photos[1]] },
+    })
+    fireEvent.change(
+      screen.getByRole("combobox", { name: messages.dimensionMode }),
+      {
+        target: { value: "exact" },
+      }
+    )
+    const width = screen.getByRole<HTMLInputElement>("textbox", {
+      name: messages.width,
+    })
+    const height = screen.getByRole<HTMLInputElement>("textbox", {
+      name: messages.height,
+    })
+    fireEvent.change(width, { target: { value: widthInput } })
+    fireEvent.change(height, { target: { value: heightInput } })
+    const lock = screen.getByRole<HTMLButtonElement>("button", {
+      name: messages.lockAspectRatio,
+    })
+    await waitFor(() => expect(lock.disabled).toBe(false))
+    expect(loadImageSource).toHaveBeenCalledExactlyOnceWith(photos[0])
+    expect(release).toHaveBeenCalledOnce()
+    fireEvent.change(width, { target: { value: "600 px" } })
+    expect(lock.disabled).toBe(true)
+    fireEvent.change(width, { target: { value: widthInput } })
+    fireEvent.click(lock)
+    expect([width.value, height.value]).toEqual([expectedWidth, expectedHeight])
+    fireEvent.click(screen.getByRole("button", { name: messages.compress }))
+    await screen.findByText("2 of 2 within 200 KB")
+    for (const file of photos.slice(0, 2)) {
+      expect(compressImage).toHaveBeenCalledWith(file, "jpg", 200_000, {
+        mode: "exact",
+        width: Number(expectedWidth),
+        height: Number(expectedHeight),
+        fit: "contain",
+      })
+    }
+  }
+)

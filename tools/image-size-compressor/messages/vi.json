@@ -37,5 +37,7 @@
   "contain": "Giữ toàn bộ ảnh (thêm viền)",
   "cover": "Lấp đầy khung và cắt viền",
   "readyCountWithoutLimit": "{ready}/{total} ảnh sẵn sàng tải xuống",
-  "tryExactLimit": "Kích thước đã chọn vẫn được giữ nguyên. Hãy thử WebP nếu biểu mẫu chấp nhận định dạng này hoặc tăng giới hạn dung lượng."
+  "tryExactLimit": "Kích thước đã chọn vẫn được giữ nguyên. Hãy thử WebP nếu biểu mẫu chấp nhận định dạng này hoặc tăng giới hạn dung lượng.",
+  "lockAspectRatio": "Khóa tỷ lệ khung hình",
+  "aspectRatioHint": "Khóa theo tỷ lệ đã nhập hoặc dùng tỷ lệ của ảnh đầu tiên nếu một ô còn trống."
 }

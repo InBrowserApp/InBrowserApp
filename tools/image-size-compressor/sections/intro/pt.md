@@ -6,6 +6,8 @@ Se o formulário aceitar imagens de até 200 KB cada, digite **200** em **Tamanh
 
 Se o formulário exigir um **JPG de 600 × 600 pixels de até 200 KB**, escolha **JPG**, defina o limite como **200 KB** e selecione **Largura e altura exatas**. Digite **600** nos dois campos. A ferramenta mantém a saída em 600 × 600 pixels enquanto ajusta a qualidade. Se o formulário exigir apenas as dimensões em pixels, deixe o campo de limite de tamanho em branco.
 
+Selecione o ícone de corrente entre a largura e a altura para vincular os dois valores. O bloqueio usa a proporção informada ou, se uma dimensão estiver em branco, a da primeira imagem.
+
 Escolha **Mostrar a imagem inteira (com margens)** para preservar toda a foto. O espaço que sobrar fica branco em JPG e transparente em WebP. Escolha **Preencher e cortar as bordas** para preencher o quadro sem esticar a imagem. Confira o enquadramento na miniatura do resultado.
 
 ## O que fazer se a imagem ainda ultrapassar o limite

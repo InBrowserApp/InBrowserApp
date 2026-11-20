@@ -37,5 +37,7 @@
   "contain": "Mostra tutta l’immagine (con bordi)",
   "cover": "Riempi e ritaglia i bordi",
   "readyCountWithoutLimit": "{ready} di {total} pronte da scaricare",
-  "tryExactLimit": "Le dimensioni richieste vengono mantenute. Prova con WebP se il modulo lo accetta oppure aumenta il limite di peso."
+  "tryExactLimit": "Le dimensioni richieste vengono mantenute. Prova con WebP se il modulo lo accetta oppure aumenta il limite di peso.",
+  "lockAspectRatio": "Blocca le proporzioni",
+  "aspectRatioHint": "Fissa le proporzioni impostate o usa quelle della prima immagine se manca una dimensione."
 }

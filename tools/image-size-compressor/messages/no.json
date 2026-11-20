@@ -37,5 +37,7 @@
   "contain": "Vis hele bildet (med marger)",
   "cover": "Fyll og beskjær kantene",
   "readyCountWithoutLimit": "{ready} av {total} klare",
-  "tryExactLimit": "De angitte bildemålene beholdes. Prøv WebP hvis skjemaet godtar det, eller øk størrelsesgrensen."
+  "tryExactLimit": "De angitte bildemålene beholdes. Prøv WebP hvis skjemaet godtar det, eller øk størrelsesgrensen.",
+  "lockAspectRatio": "Lås sideforholdet",
+  "aspectRatioHint": "Bruker sideforholdet du har angitt, eller sideforholdet til det første bildet hvis et felt er tomt."
 }

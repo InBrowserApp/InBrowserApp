@@ -1,4 +1,4 @@
-import { useId } from "react"
+import { useId, useState } from "react"
 
 import { Button } from "@workspace/ui/components/ui/button"
 import { Input } from "@workspace/ui/components/ui/input"
@@ -6,6 +6,7 @@ import { LoaderCircle } from "@workspace/ui/icons"
 
 import type { DimensionConstraint, Format } from "./compress"
 import type { Messages } from "./messages"
+import { ExactDimensions } from "./exact-dimensions"
 
 export type Settings = {
   limitInput: string
@@ -20,8 +21,7 @@ type Props = {
   settings: Settings
   onChange: (settings: Settings) => void
   validLimit: boolean
-  validWidth: boolean
-  validHeight: boolean
+  firstFile: File | undefined
   canCompress: boolean
   progressLabel: string
   messages: Messages
@@ -36,13 +36,13 @@ export function CompressionSettings({
   settings,
   onChange,
   validLimit,
-  validWidth,
-  validHeight,
+  firstFile,
   canCompress,
   progressLabel,
   messages,
 }: Props) {
   const id = useId()
+  const [ratio, setRatio] = useState<number | null>(null)
   const { limitInput, format, dimensionMode, widthInput, heightInput, fit } =
     settings
   return (
@@ -127,40 +127,17 @@ export function CompressionSettings({
         </div>
         {dimensionMode === "exact" && (
           <>
-            <div className="grid grid-cols-2 gap-2">
-              <div className="grid gap-1.5">
-                <label htmlFor={`${id}-width`} className="text-sm font-medium">
-                  {messages.width}
-                </label>
-                <Input
-                  id={`${id}-width`}
-                  inputMode="numeric"
-                  className="h-10 tabular-nums"
-                  aria-invalid={widthInput !== "" && !validWidth}
-                  required
-                  value={widthInput}
-                  onChange={(event) =>
-                    onChange({ ...settings, widthInput: event.target.value })
-                  }
-                />
-              </div>
-              <div className="grid gap-1.5">
-                <label htmlFor={`${id}-height`} className="text-sm font-medium">
-                  {messages.height}
-                </label>
-                <Input
-                  id={`${id}-height`}
-                  inputMode="numeric"
-                  className="h-10 tabular-nums"
-                  aria-invalid={heightInput !== "" && !validHeight}
-                  required
-                  value={heightInput}
-                  onChange={(event) =>
-                    onChange({ ...settings, heightInput: event.target.value })
-                  }
-                />
-              </div>
-            </div>
+            <ExactDimensions
+              widthInput={widthInput}
+              heightInput={heightInput}
+              firstFile={firstFile}
+              ratio={ratio}
+              onRatioChange={setRatio}
+              onChange={(widthInput, heightInput) =>
+                onChange({ ...settings, widthInput, heightInput })
+              }
+              messages={messages}
+            />
             <div className="grid gap-1.5">
               <label htmlFor={`${id}-fit`} className="text-sm font-medium">
                 {messages.fit}

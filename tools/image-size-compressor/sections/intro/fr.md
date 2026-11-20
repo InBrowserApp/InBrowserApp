@@ -6,6 +6,8 @@ Si votre formulaire accepte des images de 200 Ko maximum, saisissez **200** dans
 
 Si un formulaire demande un **JPG de 600 × 600 pixels de 200 Ko maximum**, choisissez **JPG**, fixez la taille maximale à **200 KB** et sélectionnez **Largeur et hauteur exactes**. Saisissez **600** dans les deux champs. L’outil conserve les dimensions de 600 × 600 pixels pendant le réglage de la qualité. Si le formulaire impose seulement les dimensions en pixels, effacez la taille maximale.
 
+Sélectionnez l’icône de chaîne entre la largeur et la hauteur pour lier les deux valeurs. Le verrouillage conserve les proportions saisies ou celles de la première image si un champ est vide.
+
 Sélectionnez **Garder l’image entière (avec marges)** pour conserver toute la photo. Les marges sont blanches en JPG et transparentes en WebP. Sélectionnez **Remplir et rogner les bords** pour remplir le cadre sans déformer l’image. Vérifiez le cadrage dans la vignette du résultat.
 
 ## Que faire si une image dépasse toujours la limite

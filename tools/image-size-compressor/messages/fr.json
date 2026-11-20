@@ -37,5 +37,7 @@
   "contain": "Garder l’image entière (avec marges)",
   "cover": "Remplir et rogner les bords",
   "readyCountWithoutLimit": "{ready} sur {total} à télécharger",
-  "tryExactLimit": "Les dimensions demandées sont conservées. Essayez le WebP si le formulaire l’accepte, ou augmentez la taille maximale."
+  "tryExactLimit": "Les dimensions demandées sont conservées. Essayez le WebP si le formulaire l’accepte, ou augmentez la taille maximale.",
+  "lockAspectRatio": "Verrouiller les proportions",
+  "aspectRatioHint": "Conserve les proportions saisies ou celles de la première image si un champ est vide."
 }

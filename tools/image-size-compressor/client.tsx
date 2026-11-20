@@ -13,31 +13,10 @@ import { message } from "./messages"
 import type { Messages } from "./messages"
 import { CompressionSettings } from "./settings"
 import type { Settings } from "./settings"
+import { limitInBytes, pixels } from "./numeric-input"
 
 function key(file: File) {
   return JSON.stringify([file.name, file.size, file.lastModified, file.type])
-}
-
-function normalizeDigits(input: string) {
-  return input
-    .trim()
-    .normalize("NFKC")
-    .replace(/[\u0660-\u0669\u06f0-\u06f9]/g, (digit) =>
-      String(digit.charCodeAt(0) & 15)
-    )
-}
-
-function limitInBytes(input: string) {
-  const value = normalizeDigits(input)
-  if (!/^\d+([.,\u066b]\d{1,3})?$/.test(value)) return 0
-  const [whole, fraction = ""] = value.split(/[.,\u066b]/)
-  return Number(whole) * 1000 + Number(fraction.padEnd(3, "0"))
-}
-
-function pixels(input: string) {
-  const value = normalizeDigits(input)
-  const number = /^\d+$/.test(value) ? Number(value) : 0
-  return Number.isSafeInteger(number) && number > 0 ? number : 0
 }
 
 type Props = { lang: string; messages: Messages }
@@ -243,8 +222,7 @@ export default function ImageSizeCompressor({ lang, messages }: Props) {
           }}
           validLimit={validLimit}
           canCompress={canCompress}
-          validWidth={width > 0}
-          validHeight={height > 0}
+          firstFile={files[0]}
           progressLabel={progressLabel}
           messages={messages}
         />

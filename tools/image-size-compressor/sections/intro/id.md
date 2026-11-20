@@ -6,6 +6,8 @@ Jika formulir pendaftaran menerima file gambar hingga 200 KB per gambar, masukka
 
 Jika formulir meminta **gambar JPG 600 × 600 piksel hingga 200 KB**, pilih **JPG**, atur batas ke **200 KB**, lalu pilih **Lebar dan tinggi yang ditentukan**. Masukkan **600** di kedua kolom. Alat ini menjaga dimensi keluaran tetap 600 × 600 piksel sembari menyesuaikan kualitas. Jika formulir hanya menentukan dimensi piksel, kosongkan kolom batas ukuran file.
 
+Pilih ikon rantai di antara kolom lebar dan tinggi untuk menautkan kedua nilai. Rasio dikunci berdasarkan nilai yang diisi. Jika salah satu kolom kosong, rasio gambar pertama akan digunakan.
+
 Pilih **Tampilkan seluruh gambar (dengan ruang tepi)** agar foto tetap utuh. Ruang yang tersisa berwarna putih di JPG dan transparan di WebP. Pilih **Isi bingkai dan potong tepi** agar bingkai terisi penuh tanpa meregangkan gambar. Lihat gambar mini di hasil untuk memeriksa penempatannya dalam bingkai.
 
 ## Apa yang bisa dilakukan jika ukuran file masih melebihi batas?

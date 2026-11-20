@@ -37,5 +37,7 @@
   "contain": "Hele afbeelding laten passen (met opvulranden)",
   "cover": "Kader vullen en randen bijsnijden",
   "readyCountWithoutLimit": "{ready} van {total} klaar",
-  "tryExactLimit": "De opgegeven afmetingen blijven behouden. Probeer WebP als het formulier dit accepteert, of verhoog de maximale bestandsgrootte."
+  "tryExactLimit": "De opgegeven afmetingen blijven behouden. Probeer WebP als het formulier dit accepteert, of verhoog de maximale bestandsgrootte.",
+  "lockAspectRatio": "Beeldverhouding vergrendelen",
+  "aspectRatioHint": "Vergrendel de ingevoerde verhouding of gebruik die van de eerste afbeelding als een afmeting leeg is."
 }

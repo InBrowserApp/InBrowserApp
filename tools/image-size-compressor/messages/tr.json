@@ -37,5 +37,7 @@
   "contain": "Görselin tamamını sığdır (kenar boşluklarıyla)",
   "cover": "Çerçeveyi doldur ve kenarları kırp",
   "readyCountWithoutLimit": "{ready} / {total} görsel hazır",
-  "tryExactLimit": "İstenen piksel boyutları korunur. Form kabul ediyorsa WebP biçimini deneyin veya dosya boyutu sınırını artırın."
+  "tryExactLimit": "İstenen piksel boyutları korunur. Form kabul ediyorsa WebP biçimini deneyin veya dosya boyutu sınırını artırın.",
+  "lockAspectRatio": "En boy oranını kilitle",
+  "aspectRatioHint": "Girilen boyutların oranını kilitler. Alanlardan biri boşsa ilk görselin oranını kullanır."
 }

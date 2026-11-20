@@ -37,5 +37,7 @@
   "contain": "Muatkan seluruh imej (dengan ruang tepi)",
   "cover": "Penuhi bingkai dan pangkas tepi",
   "readyCountWithoutLimit": "{ready} daripada {total} imej sedia dimuat turun",
-  "tryExactLimit": "Dimensi yang diminta dikekalkan. Cuba WebP jika borang menerimanya, atau naikkan had saiz fail."
+  "tryExactLimit": "Dimensi yang diminta dikekalkan. Cuba WebP jika borang menerimanya, atau naikkan had saiz fail.",
+  "lockAspectRatio": "Kunci nisbah aspek",
+  "aspectRatioHint": "Kunci nisbah yang dimasukkan atau gunakan nisbah imej pertama jika satu dimensi belum diisi."
 }

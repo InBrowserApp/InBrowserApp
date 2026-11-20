@@ -37,5 +37,7 @@
   "contain": "전체 이미지 유지 (여백 추가)",
   "cover": "채우고 가장자리 자르기",
   "readyCountWithoutLimit": "{total}장 중 {ready}장 다운로드 가능",
-  "tryExactLimit": "지정한 픽셀 크기는 그대로 유지됩니다. 파일 크기 한도를 높이거나, 양식이 지원하는 경우 WebP를 사용해 보세요."
+  "tryExactLimit": "지정한 픽셀 크기는 그대로 유지됩니다. 파일 크기 한도를 높이거나, 양식이 지원하는 경우 WebP를 사용해 보세요.",
+  "lockAspectRatio": "가로세로 비율 고정",
+  "aspectRatioHint": "입력한 너비와 높이의 비율을 고정합니다. 한쪽을 비워 두면 첫 번째 이미지의 비율을 사용합니다."
 }

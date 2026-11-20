@@ -37,5 +37,7 @@
   "contain": "Fit whole image (pad edges)",
   "cover": "Fill and crop edges",
   "readyCountWithoutLimit": "{ready} of {total} ready",
-  "tryExactLimit": "The requested dimensions are preserved. Try WebP if the form accepts it, or increase the size limit."
+  "tryExactLimit": "The requested dimensions are preserved. Try WebP if the form accepts it, or increase the size limit.",
+  "lockAspectRatio": "Lock aspect ratio",
+  "aspectRatioHint": "Lock the entered ratio, or use the first image if a dimension is empty."
 }

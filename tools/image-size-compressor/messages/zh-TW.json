@@ -37,5 +37,7 @@
   "contain": "保留整張圖片（補邊）",
   "cover": "填滿並裁切邊緣",
   "readyCountWithoutLimit": "共 {total} 張，{ready} 張可下載",
-  "tryExactLimit": "已保留指定的尺寸。可以提高檔案大小上限，或在表單接受的情況下改用 WebP。"
+  "tryExactLimit": "已保留指定的尺寸。可以提高檔案大小上限，或在表單接受的情況下改用 WebP。",
+  "lockAspectRatio": "鎖定長寬比",
+  "aspectRatioHint": "依輸入的寬度和高度鎖定比例。任一欄位留空時，採用第一張圖片的長寬比。"
 }

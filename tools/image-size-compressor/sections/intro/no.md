@@ -6,6 +6,8 @@ Hvis et skjema godtar bilder på opptil 200 KB hver, skriver du **200** i **Maks
 
 Hvis skjemaet krever et **JPG-bilde på 600 × 600 piksler på opptil 200 KB**, velger du **JPG**, setter maksimal filstørrelse til **200 KB** og velger **Nøyaktig bredde og høyde**. Skriv **600** i begge feltene. Verktøyet beholder 600 × 600 piksler mens det justerer kvaliteten. Hvis skjemaet bare krever bestemte pikselmål, lar du feltet for maksimal filstørrelse stå tomt.
 
+Velg kjedeikonet mellom bredde og høyde for å koble sammen verdiene. Låsen bruker sideforholdet du har angitt, eller sideforholdet til det første bildet hvis et felt er tomt.
+
 Velg **Vis hele bildet (med marger)** for å beholde hele motivet. Plassen som blir til overs, er hvit i JPG og gjennomsiktig i WebP. Velg **Fyll og beskjær kantene** for å fylle rammen uten å strekke bildet. Se på miniatyrbildet for å kontrollere utsnittet.
 
 ## Hvis bildet fortsatt er over grensen

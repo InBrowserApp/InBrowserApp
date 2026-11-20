@@ -37,5 +37,7 @@
   "contain": "Tampilkan seluruh gambar (dengan ruang tepi)",
   "cover": "Isi bingkai dan potong tepi",
   "readyCountWithoutLimit": "{ready} dari {total} gambar siap",
-  "tryExactLimit": "Dimensi gambar tetap sesuai pengaturan. Coba WebP jika formulir menerimanya, atau naikkan batas ukuran file."
+  "tryExactLimit": "Dimensi gambar tetap sesuai pengaturan. Coba WebP jika formulir menerimanya, atau naikkan batas ukuran file.",
+  "lockAspectRatio": "Kunci rasio aspek",
+  "aspectRatioHint": "Kunci rasio dari lebar dan tinggi yang diisi. Jika salah satu kolom kosong, rasio gambar pertama akan digunakan."
 }

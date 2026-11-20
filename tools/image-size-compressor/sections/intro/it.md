@@ -6,6 +6,8 @@ Se un modulo accetta immagini fino a 200 KB ciascuna, inserisci **200** in **Pes
 
 Se un modulo richiede un **JPG di 600 × 600 pixel da massimo 200 KB**, scegli **JPG**, imposta il limite a **200 KB** e seleziona **Larghezza e altezza esatte**. Inserisci **600** in entrambi i campi. Lo strumento regola la qualità mantenendo le dimensioni di 600 × 600 pixel. Se il modulo richiede solo le dimensioni in pixel, cancella il limite di peso.
 
+Seleziona l’icona della catena tra larghezza e altezza per collegare i due valori. Il blocco usa le proporzioni impostate o, se manca una dimensione, quelle della prima immagine.
+
 Scegli **Mostra tutta l’immagine (con bordi)** per conservare l’intera foto. Lo spazio rimanente è bianco in JPG e trasparente in WebP. Scegli **Riempi e ritaglia i bordi** per riempire il riquadro senza deformare l’immagine. Controlla l’inquadratura nella miniatura del risultato.
 
 ## Cosa fare se un’immagine supera ancora il limite

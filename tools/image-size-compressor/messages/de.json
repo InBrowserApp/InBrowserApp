@@ -37,5 +37,7 @@
   "contain": "Ganzes Bild einpassen (mit Rand)",
   "cover": "Rahmen füllen und Ränder abschneiden",
   "readyCountWithoutLimit": "{ready} von {total} fertig",
-  "tryExactLimit": "Die gewünschten Pixelmaße bleiben erhalten. Verwende WebP, falls das Formular dieses Format akzeptiert, oder erhöhe die maximale Dateigröße."
+  "tryExactLimit": "Die gewünschten Pixelmaße bleiben erhalten. Verwende WebP, falls das Formular dieses Format akzeptiert, oder erhöhe die maximale Dateigröße.",
+  "lockAspectRatio": "Seitenverhältnis sperren",
+  "aspectRatioHint": "Verwendet das eingegebene Seitenverhältnis. Fehlt ein Maß, gilt das Seitenverhältnis des ersten Bildes."
 }

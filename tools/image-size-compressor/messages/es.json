@@ -37,5 +37,7 @@
   "contain": "Mostrar toda la imagen (con márgenes)",
   "cover": "Rellenar y recortar los bordes",
   "readyCountWithoutLimit": "{ready} de {total} listas para descargar",
-  "tryExactLimit": "Se mantienen las dimensiones solicitadas. Prueba con WebP si el formulario lo acepta o aumenta el límite de tamaño."
+  "tryExactLimit": "Se mantienen las dimensiones solicitadas. Prueba con WebP si el formulario lo acepta o aumenta el límite de tamaño.",
+  "lockAspectRatio": "Bloquear las proporciones",
+  "aspectRatioHint": "Fija las proporciones indicadas o usa las de la primera imagen si falta una dimensión."
 }

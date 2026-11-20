@@ -6,6 +6,8 @@ Om ett formulär godtar bilder på högst 200 kB vardera, skriver du **200** i *
 
 Om formuläret kräver en **JPG-bild på 600 × 600 pixlar på högst 200 kB**, väljer du **JPG**, sätter gränsen till **200 KB** och väljer **Exakt bredd och höjd**. Skriv **600** i båda fälten. Verktyget behåller måtten 600 × 600 pixlar när det justerar kvaliteten. Om formuläret bara kräver vissa pixelmått, lämnar du filstorleksgränsen tom.
 
+Välj kedjeikonen mellan bredd och höjd för att länka värdena. Låset använder de angivna proportionerna eller den första bildens proportioner om ett fält är tomt.
+
 Välj **Visa hela bilden (med marginaler)** för att behålla hela motivet. Ytan som blir över är vit i JPG och genomskinlig i WebP. Välj **Fyll och beskär kanterna** för att fylla ramen utan att töja bilden. Kontrollera utsnittet i resultatets miniatyrbild.
 
 ## Om en bild fortfarande överskrider gränsen

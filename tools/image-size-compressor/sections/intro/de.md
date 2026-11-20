@@ -6,6 +6,8 @@ Wenn ein Antragsformular Bilder bis zu 200 KB pro Datei akzeptiert, gib unter **
 
 Wenn ein Formular ein **JPG mit 600 × 600 Pixeln und höchstens 200 KB** verlangt, wähle **JPG**, setze das Limit auf **200 KB** und wähle **Genaue Breite und Höhe**. Gib für beide Maße **600** ein. Das Tool passt die Bildqualität an und behält dabei die Ausgabegröße von 600 × 600 Pixeln bei. Sind nur die Pixelmaße vorgegeben, lass das Feld für die maximale Dateigröße leer.
 
+Wähle das Kettensymbol zwischen Breite und Höhe, um die beiden Werte zu verknüpfen. Die Sperre verwendet das eingegebene Seitenverhältnis. Fehlt ein Maß, gilt das Seitenverhältnis des ersten Bildes.
+
 Wähle **Ganzes Bild einpassen (mit Rand)**, wenn das komplette Foto sichtbar bleiben soll. Freie Flächen sind bei JPG weiß und bei WebP transparent. Wähle **Rahmen füllen und Ränder abschneiden**, wenn das Foto den Rahmen ohne Verzerrung ausfüllen soll. Das Vorschaubild zeigt, wie das Foto im Rahmen sitzt.
 
 ## Was tun, wenn ein Bild das Limit weiterhin überschreitet?

@@ -37,5 +37,7 @@
   "contain": "Visa hela bilden (med marginaler)",
   "cover": "Fyll och beskär kanterna",
   "readyCountWithoutLimit": "{ready} av {total} klara",
-  "tryExactLimit": "De angivna bildmåtten behålls. Prova WebP om formuläret accepterar det, eller höj storleksgränsen."
+  "tryExactLimit": "De angivna bildmåtten behålls. Prova WebP om formuläret accepterar det, eller höj storleksgränsen.",
+  "lockAspectRatio": "Lås bildförhållandet",
+  "aspectRatioHint": "Använder de angivna proportionerna eller den första bildens proportioner om ett fält är tomt."
 }

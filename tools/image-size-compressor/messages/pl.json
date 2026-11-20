@@ -37,5 +37,7 @@
   "contain": "Zachowaj cały obraz (z marginesami)",
   "cover": "Wypełnij i przytnij krawędzie",
   "readyCountWithoutLimit": "Do pobrania: {ready} z {total}",
-  "tryExactLimit": "Ustawione wymiary zostaną zachowane. Wypróbuj WebP, jeśli formularz go obsługuje, lub zwiększ limit rozmiaru pliku."
+  "tryExactLimit": "Ustawione wymiary zostaną zachowane. Wypróbuj WebP, jeśli formularz go obsługuje, lub zwiększ limit rozmiaru pliku.",
+  "lockAspectRatio": "Zablokuj proporcje",
+  "aspectRatioHint": "Zachowuje proporcje podanych wymiarów lub pierwszego obrazu, jeśli jedno pole jest puste."
 }

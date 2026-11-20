@@ -37,5 +37,7 @@
   "contain": "保留完整图片（补边）",
   "cover": "填满并裁剪边缘",
   "readyCountWithoutLimit": "共 {total} 张，{ready} 张可下载",
-  "tryExactLimit": "已保留指定尺寸。可以提高文件大小上限，或在表单接受的情况下改用 WebP。"
+  "tryExactLimit": "已保留指定尺寸。可以提高文件大小上限，或在表单接受的情况下改用 WebP。",
+  "lockAspectRatio": "锁定宽高比",
+  "aspectRatioHint": "按输入的宽高锁定比例。宽度或高度留空时，使用第一张图片的宽高比。"
 }

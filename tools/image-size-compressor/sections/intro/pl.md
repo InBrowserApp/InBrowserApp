@@ -6,6 +6,8 @@ Jeśli formularz przyjmuje obrazy o rozmiarze do 200 KB, wpisz **200** w polu **
 
 Jeśli formularz wymaga **obrazu JPG o wymiarach 600 × 600 pikseli i rozmiarze do 200 KB**, wybierz **JPG**, ustaw limit na **200 KB** i wybierz **Dokładna szerokość i wysokość**. Wpisz **600** w obu polach. Narzędzie zachowa wymiary 600 × 600 pikseli podczas dobierania jakości. Jeśli formularz określa tylko wymiary w pikselach, pozostaw pole limitu puste.
 
+Wybierz ikonę łańcucha między polami szerokości i wysokości, aby powiązać obie wartości. Blokada zachowuje proporcje podanych wymiarów lub pierwszego obrazu, jeśli jedno pole jest puste.
+
 Wybierz **Zachowaj cały obraz (z marginesami)**, aby zmieścić całe zdjęcie w kadrze. Wolne miejsce będzie białe w JPG i przezroczyste w WebP. Wybierz **Wypełnij i przytnij krawędzie**, aby wypełnić kadr bez rozciągania obrazu. Sprawdź wykadrowanie na miniaturze wyniku.
 
 ## Co zrobić, gdy obraz nadal przekracza limit

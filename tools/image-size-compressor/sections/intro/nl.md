@@ -6,6 +6,8 @@ Accepteert een aanvraagformulier afbeeldingen van maximaal 200 KB per bestand? V
 
 Vraagt een formulier om een **JPG van 600 × 600 pixels en maximaal 200 KB**? Kies **JPG**, stel de limiet in op **200 KB** en kies **Exacte breedte en hoogte**. Vul voor beide afmetingen **600** in. De tool houdt het resultaat op 600 × 600 pixels terwijl de kwaliteit wordt aangepast. Als het formulier alleen pixelafmetingen opgeeft, laat je de bestandsgroottelimiet leeg.
 
+Selecteer het kettingicoon tussen breedte en hoogte om de twee waarden te koppelen. De vergrendeling gebruikt de ingevoerde verhouding of die van de eerste afbeelding als een afmeting leeg is.
+
 Kies **Hele afbeelding laten passen (met opvulranden)** als je de volledige foto wilt behouden. De vrije ruimte is wit in JPG en transparant in WebP. Kies **Kader vullen en randen bijsnijden** om het kader zonder vervorming te vullen. Controleer op de miniatuur hoe de foto in het kader valt.
 
 ## Als een afbeelding nog boven de limiet zit
