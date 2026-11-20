@@ -12,11 +12,14 @@
     "./animation-size": "./src/animation-size.ts",
     "./animation-worker": "./src/animation-worker.ts",
     "./png-chunks": "./src/png-chunks.ts",
-    "./img2webp-encoder": "./src/img2webp-encoder.ts"
+    "./img2webp-encoder": "./src/img2webp-encoder.ts",
+    "./gif-encoder": "./src/gif-encoder.ts",
+    "./video": "./src/video.ts"
   },
   "dependencies": {
     "@imagemagick/magick-wasm": "catalog:",
-    "@libwebp-wasm/img2webp": "catalog:"
+    "@libwebp-wasm/img2webp": "catalog:",
+    "gifenc": "catalog:"
   },
   "devDependencies": {
     "vitest": "catalog:"

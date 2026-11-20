@@ -1473,6 +1473,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "video-frame-extractor",
   },
   {
+    category: "image",
+    name: "המרת וידאו ל-GIF",
+    slug: "video-to-gif",
+  },
+  {
     category: "text",
     name: "מאמת VIN",
     slug: "vin-validator",

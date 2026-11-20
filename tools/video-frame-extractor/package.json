@@ -10,7 +10,8 @@
   "dependencies": {
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*",
-    "@zip.js/zip.js": "catalog:"
+    "@zip.js/zip.js": "catalog:",
+    "@workspace/raster-image": "workspace:*"
   },
   "peerDependencies": {
     "astro": "catalog:",

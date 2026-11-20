@@ -27050,6 +27050,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "video-to-gif",
+    language: "ar",
+  },
+  {
+    slug: "video-to-gif",
+    language: "de",
+  },
+  {
+    slug: "video-to-gif",
+    language: "en",
+  },
+  {
+    slug: "video-to-gif",
+    language: "es",
+  },
+  {
+    slug: "video-to-gif",
+    language: "fr",
+  },
+  {
+    slug: "video-to-gif",
+    language: "he",
+  },
+  {
+    slug: "video-to-gif",
+    language: "hi",
+  },
+  {
+    slug: "video-to-gif",
+    language: "id",
+  },
+  {
+    slug: "video-to-gif",
+    language: "it",
+  },
+  {
+    slug: "video-to-gif",
+    language: "ja",
+  },
+  {
+    slug: "video-to-gif",
+    language: "ko",
+  },
+  {
+    slug: "video-to-gif",
+    language: "ms",
+  },
+  {
+    slug: "video-to-gif",
+    language: "nl",
+  },
+  {
+    slug: "video-to-gif",
+    language: "no",
+  },
+  {
+    slug: "video-to-gif",
+    language: "pl",
+  },
+  {
+    slug: "video-to-gif",
+    language: "pt",
+  },
+  {
+    slug: "video-to-gif",
+    language: "ru",
+  },
+  {
+    slug: "video-to-gif",
+    language: "sv",
+  },
+  {
+    slug: "video-to-gif",
+    language: "th",
+  },
+  {
+    slug: "video-to-gif",
+    language: "tr",
+  },
+  {
+    slug: "video-to-gif",
+    language: "vi",
+  },
+  {
+    slug: "video-to-gif",
+    language: "zh-CN",
+  },
+  {
+    slug: "video-to-gif",
+    language: "zh-TW",
+  },
+  {
     slug: "vin-validator",
     language: "ar",
   },
