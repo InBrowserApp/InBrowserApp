@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.12.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.11.0...v2.12.0) (2026-11-19)
+
+
+### Features
+
+* add APNG and animated WebP makers ([#1368](https://github.com/InBrowserApp/InBrowserApp/issues/1368)) ([195974b](https://github.com/InBrowserApp/InBrowserApp/commit/195974b6b4beecf8fbd7b05388700b7909c0f897))
+
 ## [2.11.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.10.0...v2.11.0) (2026-11-19)
 
 
