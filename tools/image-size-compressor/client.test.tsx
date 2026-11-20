@@ -75,7 +75,9 @@ it("enforces an exact per-file limit and exports only the ready files", async ()
   expect(screen.getByText(messages.overLimit)).toBeTruthy()
   expect(screen.getByText(messages.alreadyFits)).toBeTruthy()
   expect(screen.getByText(messages.readError)).toBeTruthy()
-  expect(screen.getByText(messages.tryResize)).toBeTruthy()
+  expect(
+    screen.getByRole("button", { name: messages.shrinkAndRetry })
+  ).toBeTruthy()
   expect(
     await screen.findAllByRole("link", { name: messages.download })
   ).toHaveLength(2)
@@ -96,12 +98,7 @@ it("retries with new settings, reports unsupported WebP, and updates its queue",
   fireEvent.click(screen.getByRole("button", { name: "Remove first.png" }))
   expect(screen.queryByText("first.png")).toBeNull()
   fireEvent.click(screen.getByRole("radio", { name: "WebP" }))
-  fireEvent.change(
-    screen.getByRole("combobox", { name: messages.dimensionMode }),
-    {
-      target: { value: "shrink" },
-    }
-  )
+  fireEvent.click(screen.getByRole("radio", { name: messages.allowResize }))
   fireEvent.change(screen.getByRole("textbox", { name: messages.sizeLimit }), {
     target: { value: "10,001" },
   })
@@ -129,12 +126,7 @@ it("requires both exact dimensions and can retry without a file size limit", asy
   fireEvent.change(sizeLimit, { target: { value: "200.0005" } })
   expect(submit.disabled).toBe(true)
   fireEvent.change(sizeLimit, { target: { value: "200" } })
-  fireEvent.change(
-    screen.getByRole("combobox", { name: messages.dimensionMode }),
-    {
-      target: { value: "exact" },
-    }
-  )
+  fireEvent.click(screen.getByRole("radio", { name: messages.exactDimensions }))
   expect(submit.disabled).toBe(true)
   const width = screen.getByRole("textbox", { name: messages.width })
   const height = screen.getByRole("textbox", { name: messages.height })
@@ -177,12 +169,7 @@ it("requires both exact dimensions and can retry without a file size limit", asy
 
 it("links either dimension to a manually entered ratio and edits independently when unlocked", () => {
   render(<ImageSizeCompressor lang="en" messages={messages} />)
-  fireEvent.change(
-    screen.getByRole("combobox", { name: messages.dimensionMode }),
-    {
-      target: { value: "exact" },
-    }
-  )
+  fireEvent.click(screen.getByRole("radio", { name: messages.exactDimensions }))
   const width = screen.getByRole<HTMLInputElement>("textbox", {
     name: messages.width,
   })
@@ -207,11 +194,8 @@ it("links either dimension to a manually entered ratio and edits independently w
   fireEvent.change(width, { target: { value: "400" } })
   expect(height.value).toBe("300")
 
-  const dimensionMode = screen.getByRole("combobox", {
-    name: messages.dimensionMode,
-  })
-  fireEvent.change(dimensionMode, { target: { value: "original" } })
-  fireEvent.change(dimensionMode, { target: { value: "exact" } })
+  fireEvent.click(screen.getByRole("radio", { name: messages.keepDimensions }))
+  fireEvent.click(screen.getByRole("radio", { name: messages.exactDimensions }))
   const returnedLock = screen.getByRole<HTMLButtonElement>("button", {
     name: messages.lockAspectRatio,
   })
@@ -248,11 +232,8 @@ it.each([
     fireEvent.change(screen.getByLabelText(messages.addImages), {
       target: { files: [photos[0], photos[1]] },
     })
-    fireEvent.change(
-      screen.getByRole("combobox", { name: messages.dimensionMode }),
-      {
-        target: { value: "exact" },
-      }
+    fireEvent.click(
+      screen.getByRole("radio", { name: messages.exactDimensions })
     )
     const width = screen.getByRole<HTMLInputElement>("textbox", {
       name: messages.width,
@@ -268,7 +249,7 @@ it.each([
     await waitFor(() => expect(lock.disabled).toBe(false))
     expect(loadImageSource).toHaveBeenCalledExactlyOnceWith(photos[0])
     expect(release).toHaveBeenCalledOnce()
-    fireEvent.change(width, { target: { value: "600 px" } })
+    fireEvent.change(width, { target: { value: "600 pixels" } })
     expect(lock.disabled).toBe(true)
     fireEvent.change(width, { target: { value: widthInput } })
     fireEvent.click(lock)
@@ -285,3 +266,80 @@ it.each([
     }
   }
 )
+
+it("accepts pasted upload constraints and previews the output", async () => {
+  vi.mocked(compressImage).mockResolvedValue({
+    ...mockResult(199_999),
+    width: 600,
+    height: 400,
+  })
+  render(<ImageSizeCompressor lang="en" messages={messages} />)
+  fireEvent.change(screen.getByLabelText(messages.addImages), {
+    target: { files: [photos[0]] },
+  })
+  fireEvent.change(screen.getByRole("textbox", { name: messages.sizeLimit }), {
+    target: { value: "≤ 200 KB" },
+  })
+  fireEvent.click(screen.getByRole("radio", { name: messages.exactDimensions }))
+  const width = screen.getByRole<HTMLInputElement>("textbox", {
+    name: messages.width,
+  })
+  const height = screen.getByRole<HTMLInputElement>("textbox", {
+    name: messages.height,
+  })
+  fireEvent.change(width, { target: { value: "six hundred" } })
+  expect(screen.getByText(messages.invalidDimensions)).toBeTruthy()
+  fireEvent.paste(width, { clipboardData: { getData: () => "600 × 400 px" } })
+  expect([width.value, height.value]).toEqual(["600", "400"])
+
+  fireEvent.click(screen.getByRole("button", { name: messages.compress }))
+  expect(
+    await screen.findByRole("link", { name: messages.viewResults })
+  ).toBeTruthy()
+  expect(screen.getByRole("status").textContent).toBe("1 of 1 ready")
+  expect(compressImage).toHaveBeenCalledWith(photos[0], "jpg", 200_000, {
+    mode: "exact",
+    width: 600,
+    height: 400,
+    fit: "contain",
+  })
+  fireEvent.click(
+    await screen.findByRole("button", { name: "Preview first.jpg" })
+  )
+  expect(await screen.findByRole("dialog", { name: "first.jpg" })).toBeTruthy()
+  expect(
+    screen.getByRole("img", { name: "Preview first.jpg" }).getAttribute("src")
+  ).toMatch(/^blob:/)
+  fireEvent.click(screen.getByRole("button", { name: messages.closePreview }))
+  expect(screen.queryByRole("dialog")).toBeNull()
+})
+
+it("retries with smaller dimensions while retaining ready images", async () => {
+  vi.mocked(compressImage)
+    .mockResolvedValueOnce(mockResult(150_000))
+    .mockResolvedValueOnce(mockResult(238_000))
+    .mockResolvedValueOnce({ ...mockResult(199_000), width: 90, height: 60 })
+  render(<ImageSizeCompressor lang="en" messages={messages} />)
+  fireEvent.change(screen.getByLabelText(messages.addImages), {
+    target: { files: photos.slice(0, 2) },
+  })
+  fireEvent.click(screen.getByRole("button", { name: messages.compress }))
+  await screen.findByText("Limit 200 KB · Output 238 KB")
+  const accepted = await screen.findByRole("link", { name: messages.download })
+  const acceptedHref = accepted.getAttribute("href")
+  fireEvent.click(screen.getByRole("button", { name: messages.shrinkAndRetry }))
+  await screen.findByText("2 of 2 within 200 KB")
+  expect(compressImage).toHaveBeenCalledTimes(3)
+  expect(compressImage).toHaveBeenLastCalledWith(photos[1], "jpg", 200_000, {
+    mode: "shrink",
+  })
+  expect(
+    (
+      await screen.findAllByRole("link", { name: messages.download })
+    )[0]?.getAttribute("href")
+  ).toBe(acceptedHref)
+  expect(
+    screen.getByRole<HTMLInputElement>("radio", { name: messages.allowResize })
+      .checked
+  ).toBe(true)
+})

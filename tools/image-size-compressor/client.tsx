@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useId, useRef, useState } from "react"
 import type { FormEvent } from "react"
 
 import { Button } from "@workspace/ui/components/ui/button"
@@ -22,6 +22,7 @@ function key(file: File) {
 type Props = { lang: string; messages: Messages }
 
 export default function ImageSizeCompressor({ lang, messages }: Props) {
+  const resultsId = useId()
   const picker = useRef<HTMLInputElement>(null)
   const [files, setFiles] = useState<File[]>([])
   const [settings, setSettings] = useState<Settings>({
@@ -57,6 +58,17 @@ export default function ImageSizeCompressor({ lang, messages }: Props) {
       })
     : ""
 
+  const resultSummary =
+    !busy && outcomes.length > 0
+      ? message(messages.readyCountWithoutLimit, {
+          ready: number.format(
+            outcomes.filter(({ image }) => image && image.blob.size <= limit)
+              .length
+          ),
+          total: number.format(outcomes.length),
+        })
+      : ""
+
   function updateFiles(nextFiles: File[]) {
     setFiles(nextFiles)
     setOutcomes([])
@@ -69,20 +81,42 @@ export default function ImageSizeCompressor({ lang, messages }: Props) {
     updateFiles([...nextFiles.values()])
   }
 
-  async function compress(event: FormEvent<HTMLFormElement>) {
+  function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (!canCompress) return
     const dimensions: DimensionConstraint =
       dimensionMode === "exact"
         ? { mode: dimensionMode, width, height, fit }
         : { mode: dimensionMode }
+    void compress(dimensions)
+  }
+
+  async function retryWithSmallerImages() {
+    if (!canCompress) return
+    const activeElement = document.activeElement
+    await compress({ mode: "shrink" }, outcomes)
+    setSettings((current) => ({ ...current, dimensionMode: "shrink" }))
+    if (document.activeElement === activeElement) {
+      document.getElementById(resultsId)?.focus({ preventScroll: true })
+    }
+  }
+
+  async function compress(
+    dimensions: DimensionConstraint,
+    previous?: readonly ImageOutcome[]
+  ) {
+    if (!canCompress) return
     setProgress(1)
-    setOutcomes([])
+    if (!previous) setOutcomes([])
     const names = new Set<string>()
     const results: ImageOutcome[] = []
     for (const [index, file] of files.entries()) {
       setProgress(index + 1)
       const name = outputName(file, format, names)
+      const existing = previous?.[index]
+      if (existing?.image && existing.image.blob.size <= limit) {
+        results.push(existing)
+        continue
+      }
       try {
         results.push({
           file,
@@ -108,7 +142,7 @@ export default function ImageSizeCompressor({ lang, messages }: Props) {
   return (
     <div className="flex flex-col gap-6">
       <form
-        onSubmit={compress}
+        onSubmit={submit}
         className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_22rem]"
       >
         <div className="flex min-w-0 flex-col gap-3">
@@ -225,12 +259,11 @@ export default function ImageSizeCompressor({ lang, messages }: Props) {
           firstFile={files[0]}
           progressLabel={progressLabel}
           messages={messages}
+          resultSummary={resultSummary}
+          resultsId={resultsId}
         />
       </form>
 
-      <div role="status" className="sr-only">
-        {progressLabel}
-      </div>
       {outcomes.length > 0 && (
         <CompressionResults
           outcomes={outcomes}
@@ -239,6 +272,9 @@ export default function ImageSizeCompressor({ lang, messages }: Props) {
           number={number}
           dimensionMode={dimensionMode}
           messages={messages}
+          id={resultsId}
+          retrying={busy}
+          onShrinkAndRetry={() => void retryWithSmallerImages()}
         />
       )}
     </div>

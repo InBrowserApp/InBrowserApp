@@ -1,4 +1,5 @@
 import { useEffect, useId, useState } from "react"
+import type { ClipboardEvent } from "react"
 
 import { loadImageSource } from "@workspace/raster-image/browser-canvas"
 import { Button } from "@workspace/ui/components/ui/button"
@@ -6,7 +7,7 @@ import { Input } from "@workspace/ui/components/ui/input"
 import { Link2, Unlink2 } from "@workspace/ui/icons"
 
 import type { Messages } from "./messages"
-import { pixels } from "./numeric-input"
+import { pastedDimensions, pixels } from "./numeric-input"
 
 type Props = {
   widthInput: string
@@ -112,6 +113,15 @@ export function ExactDimensions({
     onChange(nextWidth, value)
   }
 
+  function pasteDimensions(event: ClipboardEvent<HTMLInputElement>) {
+    const pair = pastedDimensions(event.clipboardData.getData("text"))
+    if (!pair) return
+    event.preventDefault()
+    if (ratio !== null) onRatioChange(pair.width / pair.height)
+    onChange(String(pair.width), String(pair.height))
+  }
+
+  const invalid = !validWidth || !validHeight
   const RatioIcon = ratio === null ? Unlink2 : Link2
 
   return (
@@ -126,6 +136,8 @@ export function ExactDimensions({
             inputMode="numeric"
             className="h-10 tabular-nums"
             aria-invalid={!validWidth}
+            aria-describedby={!validWidth ? `${id}-hint` : undefined}
+            onPaste={pasteDimensions}
             required
             value={widthInput}
             onChange={(event) => changeWidth(event.target.value)}
@@ -154,14 +166,21 @@ export function ExactDimensions({
             inputMode="numeric"
             className="h-10 tabular-nums"
             aria-invalid={!validHeight}
+            aria-describedby={!validHeight ? `${id}-hint` : undefined}
+            onPaste={pasteDimensions}
             required
             value={heightInput}
             onChange={(event) => changeHeight(event.target.value)}
           />
         </div>
       </div>
-      <p id={`${id}-hint`} className="text-xs text-muted-foreground">
-        {messages.aspectRatioHint}
+      <p
+        id={`${id}-hint`}
+        className={
+          invalid ? "text-xs text-destructive" : "text-xs text-muted-foreground"
+        }
+      >
+        {invalid ? messages.invalidDimensions : messages.aspectRatioHint}
       </p>
     </div>
   )
