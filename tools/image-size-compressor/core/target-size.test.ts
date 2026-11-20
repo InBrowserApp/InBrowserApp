@@ -75,14 +75,18 @@ describe("encodeToLimit", () => {
     )
   })
 
-  it.each([0, 50])(
-    "reports an encoder failure at quality %i",
-    async (failureQuality) => {
-      const encode = async (_: typeof dimensions, quality: number) =>
-        quality === failureQuality ? null : blob(100 + quality)
-      await expect(
-        encodeToLimit(dimensions, 150, false, encode)
-      ).rejects.toThrow("IMAGE_ENCODING_FAILED")
-    }
-  )
+  it("reports a failure when there is no verified result", async () => {
+    const encode = async (_: typeof dimensions, quality: number) =>
+      quality === 0 ? null : blob(100 + quality)
+    await expect(encodeToLimit(dimensions, 150, false, encode)).rejects.toThrow(
+      "IMAGE_ENCODING_FAILED"
+    )
+  })
+
+  it("keeps the already verified result when another quality cannot be encoded", async () => {
+    const encode = async (_: typeof dimensions, quality: number) =>
+      quality === 50 ? null : blob(100 + quality)
+    const result = await encodeToLimit(dimensions, 150, false, encode)
+    expect(result.blob.size).toBe(100)
+  })
 })

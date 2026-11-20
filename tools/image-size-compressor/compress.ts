@@ -6,8 +6,9 @@ import { encodeToLimit } from "./core/target-size"
 
 export type Format = "jpg" | "webp"
 
-export type Result = Awaited<ReturnType<typeof compressImage>>
-export type ReadyImage = Result & { name: string }
+export type ReadyImage = Awaited<ReturnType<typeof compressImage>> & {
+  name: string
+}
 
 async function isMatchingStillImage(file: File, format: Format) {
   const header = new Uint8Array(await file.slice(0, 21).arrayBuffer())
@@ -45,6 +46,7 @@ export async function compressImage(
     }
 
     const canvas = document.createElement("canvas")
+    let drawn = false
     try {
       const result = await encodeToLimit(
         original,
@@ -52,9 +54,9 @@ export async function compressImage(
         allowResize,
         async (size, quality) => {
           if (
+            !drawn ||
             canvas.width !== size.width ||
-            canvas.height !== size.height ||
-            quality === 100
+            canvas.height !== size.height
           ) {
             canvas.width = size.width
             canvas.height = size.height
@@ -69,6 +71,7 @@ export async function compressImage(
               context.fillRect(0, 0, size.width, size.height)
             }
             context.drawImage(source.image, 0, 0, size.width, size.height)
+            drawn = true
           }
 
           const blob = await canvasBlob(canvas, mime, quality / 100)

@@ -37,7 +37,7 @@ export async function encodeToLimit(
       while (low <= high) {
         const quality = Math.floor((low + high) / 2)
         const candidate = await encode(size, quality)
-        if (!candidate) throw new Error("IMAGE_ENCODING_FAILED")
+        if (!candidate) break
         if (candidate.size <= limit) {
           best = candidate
           low = quality + 1
