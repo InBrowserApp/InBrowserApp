@@ -4,23 +4,31 @@ import { Button } from "@workspace/ui/components/ui/button"
 import { Input } from "@workspace/ui/components/ui/input"
 import { LoaderCircle } from "@workspace/ui/icons"
 
-import type { Format } from "./compress"
+import type { DimensionConstraint, Format } from "./compress"
 import type { Messages } from "./messages"
 
-type Settings = {
+export type Settings = {
   limitInput: string
   format: Format
-  allowResize: boolean
+  dimensionMode: DimensionConstraint["mode"]
+  widthInput: string
+  heightInput: string
+  fit: "contain" | "cover"
 }
 
 type Props = {
   settings: Settings
   onChange: (settings: Settings) => void
   validLimit: boolean
+  validWidth: boolean
+  validHeight: boolean
   canCompress: boolean
   progressLabel: string
   messages: Messages
 }
+
+const selectClass =
+  "h-10 min-w-0 rounded-lg border border-input bg-background px-2.5 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
 
 const formats = ["jpg", "webp"] as const
 
@@ -28,12 +36,15 @@ export function CompressionSettings({
   settings,
   onChange,
   validLimit,
+  validWidth,
+  validHeight,
   canCompress,
   progressLabel,
   messages,
 }: Props) {
   const id = useId()
-  const { limitInput, format, allowResize } = settings
+  const { limitInput, format, dimensionMode, widthInput, heightInput, fit } =
+    settings
   return (
     <fieldset
       disabled={Boolean(progressLabel)}
@@ -52,7 +63,6 @@ export function CompressionSettings({
             type="text"
             inputMode="decimal"
             aria-invalid={limitInput !== "" && !validLimit}
-            required
             value={limitInput}
             onChange={(event) =>
               onChange({ ...settings, limitInput: event.target.value })
@@ -94,33 +104,85 @@ export function CompressionSettings({
           {format === "jpg" ? messages.jpgHint : messages.webpHint}
         </p>
       </fieldset>
-      <label
-        htmlFor={`${id}-resize`}
-        aria-labelledby={`${id}-resize-label`}
-        className="flex cursor-pointer items-start gap-2.5 border-t pt-4"
-      >
-        <input
-          type="checkbox"
-          id={`${id}-resize`}
-          aria-describedby={`${id}-resize-hint`}
-          className="mt-0.5 size-4 shrink-0 accent-primary"
-          checked={allowResize}
-          onChange={(event) =>
-            onChange({ ...settings, allowResize: event.target.checked })
-          }
-        />
-        <span className="flex flex-col gap-1">
-          <span id={`${id}-resize-label`} className="text-sm font-medium">
-            {messages.allowResize}
-          </span>
-          <span
-            id={`${id}-resize-hint`}
-            className="text-xs text-muted-foreground"
+      <div className="grid gap-3 border-t pt-4">
+        <div className="grid gap-1.5">
+          <label htmlFor={`${id}-dimensions`} className="text-sm font-medium">
+            {messages.dimensionMode}
+          </label>
+          <select
+            id={`${id}-dimensions`}
+            className={selectClass}
+            value={dimensionMode}
+            onChange={(event) =>
+              onChange({
+                ...settings,
+                dimensionMode: event.target.value as Settings["dimensionMode"],
+              })
+            }
           >
-            {messages.resizeHint}
-          </span>
-        </span>
-      </label>
+            <option value="original">{messages.keepDimensions}</option>
+            <option value="shrink">{messages.allowResize}</option>
+            <option value="exact">{messages.exactDimensions}</option>
+          </select>
+        </div>
+        {dimensionMode === "exact" && (
+          <>
+            <div className="grid grid-cols-2 gap-2">
+              <div className="grid gap-1.5">
+                <label htmlFor={`${id}-width`} className="text-sm font-medium">
+                  {messages.width}
+                </label>
+                <Input
+                  id={`${id}-width`}
+                  inputMode="numeric"
+                  className="h-10 tabular-nums"
+                  aria-invalid={widthInput !== "" && !validWidth}
+                  required
+                  value={widthInput}
+                  onChange={(event) =>
+                    onChange({ ...settings, widthInput: event.target.value })
+                  }
+                />
+              </div>
+              <div className="grid gap-1.5">
+                <label htmlFor={`${id}-height`} className="text-sm font-medium">
+                  {messages.height}
+                </label>
+                <Input
+                  id={`${id}-height`}
+                  inputMode="numeric"
+                  className="h-10 tabular-nums"
+                  aria-invalid={heightInput !== "" && !validHeight}
+                  required
+                  value={heightInput}
+                  onChange={(event) =>
+                    onChange({ ...settings, heightInput: event.target.value })
+                  }
+                />
+              </div>
+            </div>
+            <div className="grid gap-1.5">
+              <label htmlFor={`${id}-fit`} className="text-sm font-medium">
+                {messages.fit}
+              </label>
+              <select
+                id={`${id}-fit`}
+                className={selectClass}
+                value={fit}
+                onChange={(event) =>
+                  onChange({
+                    ...settings,
+                    fit: event.target.value as Settings["fit"],
+                  })
+                }
+              >
+                <option value="contain">{messages.contain}</option>
+                <option value="cover">{messages.cover}</option>
+              </select>
+            </div>
+          </>
+        )}
+      </div>
       <Button
         className="h-auto min-h-10 py-2 whitespace-normal"
         type="submit"

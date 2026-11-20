@@ -1,4 +1,4 @@
 {
   "name": "Hedef Boyuta Görsel Sıkıştırma",
-  "description": "Görselleri 200 KB gibi bir dosya boyutu sınırına göre sıkıştırın. Otomatik kalite ayarıyla doğrudan tarayıcınızda JPG veya WebP olarak dışa aktarın."
+  "description": "Görselleri 200 KB veya belirlediğiniz bir dosya boyutuna kadar sıkıştırın. Kesin piksel boyutlarını ayarlayın ve otomatik kalite ayarıyla JPG veya WebP dosyaları indirin."
 }

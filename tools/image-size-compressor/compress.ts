@@ -6,6 +6,10 @@ import { encodeToLimit } from "./core/target-size"
 
 export type Format = "jpg" | "webp"
 
+export type DimensionConstraint =
+  | { mode: "original" | "shrink" }
+  | { mode: "exact"; width: number; height: number; fit: "contain" | "cover" }
+
 export type ReadyImage = Awaited<ReturnType<typeof compressImage>> & {
   name: string
 }
@@ -29,14 +33,20 @@ export async function compressImage(
   file: File,
   format: Format,
   limit: number,
-  allowResize: boolean
+  dimensions: DimensionConstraint
 ) {
   const source = await loadImageSource(file)
   const original = { width: source.width, height: source.height }
+  const target = dimensions.mode === "exact" ? dimensions : original
   const mime = format === "jpg" ? "image/jpeg" : "image/webp"
 
   try {
-    if (file.size <= limit && (await isMatchingStillImage(file, format))) {
+    // Export fresh pixels for exact dimensions, including EXIF-rotated sources.
+    if (
+      dimensions.mode !== "exact" &&
+      file.size <= limit &&
+      (await isMatchingStillImage(file, format))
+    ) {
       return {
         blob: file.slice(0, file.size, mime),
         original,
@@ -49,9 +59,9 @@ export async function compressImage(
     let drawn = false
     try {
       const result = await encodeToLimit(
-        original,
+        target,
         limit,
-        allowResize,
+        dimensions.mode === "shrink",
         async (size, quality) => {
           if (
             !drawn ||
@@ -60,6 +70,9 @@ export async function compressImage(
           ) {
             canvas.width = size.width
             canvas.height = size.height
+            if (canvas.width !== size.width || canvas.height !== size.height)
+              return null
+
             const context = canvas.getContext("2d", {
               alpha: format === "webp",
             })
@@ -70,7 +83,24 @@ export async function compressImage(
               context.fillStyle = "#fff"
               context.fillRect(0, 0, size.width, size.height)
             }
-            context.drawImage(source.image, 0, 0, size.width, size.height)
+            if (dimensions.mode === "exact") {
+              const fit = dimensions.fit === "contain" ? Math.min : Math.max
+              const scale = fit(
+                size.width / original.width,
+                size.height / original.height
+              )
+              const width = original.width * scale
+              const height = original.height * scale
+              context.drawImage(
+                source.image,
+                (size.width - width) / 2,
+                (size.height - height) / 2,
+                width,
+                height
+              )
+            } else {
+              context.drawImage(source.image, 0, 0, size.width, size.height)
+            }
             drawn = true
           }
 

@@ -6,27 +6,38 @@ import { ImageUp, X } from "@workspace/ui/icons"
 import { cn } from "@workspace/ui/lib/utils"
 
 import { compressImage, outputName } from "./compress"
-import type { Format } from "./compress"
+import type { DimensionConstraint } from "./compress"
 import { CompressionResults } from "./results"
 import type { ImageOutcome } from "./results"
 import { message } from "./messages"
 import type { Messages } from "./messages"
 import { CompressionSettings } from "./settings"
+import type { Settings } from "./settings"
 
 function key(file: File) {
   return JSON.stringify([file.name, file.size, file.lastModified, file.type])
 }
 
-function limitInBytes(input: string) {
-  const value = input
+function normalizeDigits(input: string) {
+  return input
     .trim()
     .normalize("NFKC")
     .replace(/[\u0660-\u0669\u06f0-\u06f9]/g, (digit) =>
       String(digit.charCodeAt(0) & 15)
     )
+}
+
+function limitInBytes(input: string) {
+  const value = normalizeDigits(input)
   if (!/^\d+([.,\u066b]\d{1,3})?$/.test(value)) return 0
   const [whole, fraction = ""] = value.split(/[.,\u066b]/)
   return Number(whole) * 1000 + Number(fraction.padEnd(3, "0"))
+}
+
+function pixels(input: string) {
+  const value = normalizeDigits(input)
+  const number = /^\d+$/.test(value) ? Number(value) : 0
+  return Number.isSafeInteger(number) && number > 0 ? number : 0
 }
 
 type Props = { lang: string; messages: Messages }
@@ -34,18 +45,30 @@ type Props = { lang: string; messages: Messages }
 export default function ImageSizeCompressor({ lang, messages }: Props) {
   const picker = useRef<HTMLInputElement>(null)
   const [files, setFiles] = useState<File[]>([])
-  const [settings, setSettings] = useState({
+  const [settings, setSettings] = useState<Settings>({
     limitInput: "200",
-    format: "jpg" as Format,
-    allowResize: false,
+    format: "jpg",
+    dimensionMode: "original",
+    widthInput: "",
+    heightInput: "",
+    fit: "contain",
   })
-  const { limitInput, format, allowResize } = settings
+  const { limitInput, format, dimensionMode, widthInput, heightInput, fit } =
+    settings
   const [dragging, setDragging] = useState(false)
   const [progress, setProgress] = useState<number | null>(null)
   const [outcomes, setOutcomes] = useState<ImageOutcome[]>([])
   const busy = progress !== null
-  const limit = limitInBytes(limitInput)
-  const validLimit = Number.isSafeInteger(limit) && limit > 0
+  const noLimit = limitInput.trim() === ""
+  const limit = noLimit ? Infinity : limitInBytes(limitInput)
+  const validLimit = noLimit || (Number.isSafeInteger(limit) && limit > 0)
+  const width = pixels(widthInput)
+  const height = pixels(heightInput)
+  const canCompress =
+    files.length > 0 &&
+    validLimit &&
+    !busy &&
+    (dimensionMode !== "exact" || (width > 0 && height > 0))
   const number = new Intl.NumberFormat(lang, { maximumFractionDigits: 3 })
   const formatSize = (bytes: number) => `${number.format(bytes / 1000)} KB`
   const progressLabel = busy
@@ -69,7 +92,11 @@ export default function ImageSizeCompressor({ lang, messages }: Props) {
 
   async function compress(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (busy || !files.length || !validLimit) return
+    if (!canCompress) return
+    const dimensions: DimensionConstraint =
+      dimensionMode === "exact"
+        ? { mode: dimensionMode, width, height, fit }
+        : { mode: dimensionMode }
     setProgress(1)
     setOutcomes([])
     const names = new Set<string>()
@@ -81,7 +108,7 @@ export default function ImageSizeCompressor({ lang, messages }: Props) {
         results.push({
           file,
           image: {
-            ...(await compressImage(file, format, limit, allowResize)),
+            ...(await compressImage(file, format, limit, dimensions)),
             name,
           },
         })
@@ -215,7 +242,9 @@ export default function ImageSizeCompressor({ lang, messages }: Props) {
             setOutcomes([])
           }}
           validLimit={validLimit}
-          canCompress={files.length > 0 && validLimit && !busy}
+          canCompress={canCompress}
+          validWidth={width > 0}
+          validHeight={height > 0}
           progressLabel={progressLabel}
           messages={messages}
         />
@@ -230,7 +259,7 @@ export default function ImageSizeCompressor({ lang, messages }: Props) {
           limit={limit}
           formatSize={formatSize}
           number={number}
-          allowResize={allowResize}
+          dimensionMode={dimensionMode}
           messages={messages}
         />
       )}

@@ -15075,6 +15075,9 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       "maximum",
       "file size",
       "kb",
+      "resize",
+      "pixels",
+      "dimensions",
       "upload",
       "jpg",
       "webp",
@@ -15083,117 +15086,117 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
       ar: {
         name: "ضاغط الصور حسب حجم الملف",
         description:
-          "اضغط الصور لتلائم حدًا معينًا لحجم الملف، مثل 200 كيلوبايت. صدّرها بصيغة JPG أو WebP مع ضبط الجودة تلقائيًا داخل متصفحك.",
+          "اضغط الصور إلى 200 كيلوبايت أو إلى حجم ملف تختاره. حدّد الأبعاد بالبكسل ونزّل ملفات JPG أو WebP مع ضبط الجودة تلقائيًا.",
       },
       de: {
         name: "Bilder auf Dateigröße komprimieren",
         description:
-          "Komprimiere Bilder auf eine maximale Dateigröße, etwa 200 KB. Speichere sie als JPG oder WebP mit automatischer Qualitätsanpassung direkt im Browser.",
+          "Komprimiere Bilder auf 200 KB oder eine andere Dateigröße. Lege die Pixelmaße fest und lade JPG- oder WebP-Dateien mit automatisch angepasster Qualität herunter.",
       },
       en: {
         name: "Image Size Compressor",
         description:
-          "Compress images to a file size limit such as 200 KB. Export JPG or WebP with automatic quality adjustment, right in your browser.",
+          "Compress images to 200 KB or a custom file size. Set exact pixel dimensions and download JPG or WebP files with automatic quality adjustment.",
       },
       es: {
         name: "Compresor de imágenes por tamaño",
         description:
-          "Comprime imágenes para que no superen un límite como 200 KB por archivo. Exporta a JPG o WebP con ajuste automático de la calidad en tu navegador.",
+          "Comprime imágenes a 200 KB o al tamaño de archivo que elijas. Define las dimensiones exactas en píxeles y descarga archivos JPG o WebP con ajuste automático de la calidad.",
       },
       fr: {
         name: "Compresseur d’images",
         description:
-          "Compressez vos images pour respecter une taille maximale de fichier, par exemple 200 Ko. Exportez-les en JPG ou en WebP avec un réglage automatique de la qualité, directement dans votre navigateur.",
+          "Compressez vos images à 200 Ko ou selon la limite de votre choix. Fixez les dimensions exactes en pixels et téléchargez vos fichiers JPG ou WebP avec un réglage automatique de la qualité.",
       },
       he: {
         name: "דחיסת תמונות לפי גודל קובץ",
         description:
-          "דחסו תמונות למגבלת גודל קובץ, למשל 200 KB. ייצאו ל-JPG או ל-WebP עם התאמת איכות אוטומטית, ישירות בדפדפן.",
+          "דחסו תמונות ל-200 KB או לגודל קובץ לבחירתכם. הגדירו ממדים מדויקים בפיקסלים והורידו קובצי JPG או WebP עם התאמת איכות אוטומטית.",
       },
       hi: {
         name: "इमेज फ़ाइल साइज़ कंप्रेसर",
         description:
-          "इमेज को 200 KB जैसी तय फ़ाइल साइज़ सीमा में लाएँ। ब्राउज़र में ही क्वालिटी अपने आप एडजस्ट करके JPG या WebP में सेव करें।",
+          "इमेज को 200 KB या अपनी चुनी हुई फ़ाइल साइज़ तक कंप्रेस करें। पिक्सेल में चौड़ाई और ऊँचाई तय करें और अपने आप एडजस्ट हुई क्वालिटी के साथ JPG या WebP डाउनलोड करें।",
       },
       id: {
         name: "Kompres Gambar ke Ukuran File Tertentu",
         description:
-          "Kompres gambar hingga batas ukuran file, misalnya 200 KB. Ekspor sebagai JPG atau WebP dengan penyesuaian kualitas otomatis, langsung di browser.",
+          "Kompres gambar ke 200 KB atau batas ukuran file yang Anda tentukan. Atur dimensi piksel secara tepat dan unduh JPG atau WebP dengan penyesuaian kualitas otomatis.",
       },
       it: {
         name: "Compressione immagini con limite di peso",
         description:
-          "Comprimi le immagini entro un limite per file, ad esempio 200 KB. Esporta in JPG o WebP con regolazione automatica della qualità direttamente nel browser.",
+          "Comprimi le immagini a 200 KB o entro un limite di peso a tua scelta. Imposta le dimensioni esatte in pixel e scarica file JPG o WebP con regolazione automatica della qualità.",
       },
       ja: {
         name: "画像を指定のファイルサイズ以下に圧縮",
         description:
-          "画像を 200 KB など、指定したファイルサイズの上限以下に圧縮できます。ブラウザで画質を自動調整し、JPG または WebP で書き出します。",
+          "画像を 200 KB 以下、または指定したファイルサイズ以下に圧縮できます。幅と高さをピクセル単位で指定し、画質を自動調整して JPG または WebP でダウンロードできます。",
       },
       ko: {
         name: "이미지 용량 줄이기",
         description:
-          "이미지를 200 KB 등 지정한 파일 크기 한도 이하로 압축하세요. 브라우저에서 화질을 자동으로 조정해 JPG 또는 WebP로 내보냅니다.",
+          "이미지를 200 KB 이하 또는 원하는 파일 크기 한도 이하로 압축하세요. 픽셀 단위로 너비와 높이를 지정하고 화질을 자동으로 조정해 JPG 또는 WebP로 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Mampatkan Imej Mengikut Had Saiz Fail",
         description:
-          "Mampatkan imej mengikut had saiz fail seperti 200 KB. Eksport sebagai JPG atau WebP dengan pelarasan kualiti automatik terus dalam pelayar.",
+          "Mampatkan imej kepada 200 KB atau saiz fail pilihan anda. Tetapkan dimensi piksel yang tepat dan muat turun fail JPG atau WebP dengan pelarasan kualiti automatik.",
       },
       nl: {
         name: "Afbeeldingen comprimeren tot een maximale bestandsgrootte",
         description:
-          "Comprimeer afbeeldingen tot een maximale bestandsgrootte, bijvoorbeeld 200 KB. Exporteer naar JPG of WebP met automatische kwaliteitsaanpassing, direct in je browser.",
+          "Comprimeer afbeeldingen tot 200 KB of een zelfgekozen bestandsgrootte. Stel exacte pixelafmetingen in en download JPG- of WebP-bestanden met automatische kwaliteitsaanpassing.",
       },
       no: {
         name: "Bildekomprimering",
         description:
-          "Komprimer bilder til en maksimal filstørrelse, for eksempel 200 KB. Eksporter som JPG eller WebP med automatisk kvalitetsjustering rett i nettleseren.",
+          "Komprimer bilder til 200 KB eller en valgfri filstørrelse. Angi nøyaktige pikselmål og last ned JPG- eller WebP-filer med automatisk kvalitetsjustering.",
       },
       pl: {
         name: "Kompresor obrazów",
         description:
-          "Kompresuj obrazy do wybranego limitu rozmiaru pliku, np. 200 KB. Zapisuj je jako JPG lub WebP z automatycznym doborem jakości, bezpośrednio w przeglądarce.",
+          "Kompresuj obrazy do 200 KB lub własnego limitu. Ustaw dokładne wymiary w pikselach i pobieraj pliki JPG lub WebP z automatycznie dobraną jakością.",
       },
       pt: {
         name: "Compressor de imagens por tamanho",
         description:
-          "Comprima imagens até um limite por arquivo, como 200 KB. Exporte em JPG ou WebP com ajuste automático de qualidade no navegador.",
+          "Comprima imagens para 200 KB ou para um tamanho de arquivo personalizado. Defina as dimensões exatas em pixels e baixe arquivos JPG ou WebP com ajuste automático de qualidade.",
       },
       ru: {
         name: "Сжатие изображений до нужного размера файла",
         description:
-          "Сжимайте изображения до заданного размера файла, например до 200 КБ. Сохраняйте в JPG или WebP с автоматическим подбором качества прямо в браузере.",
+          "Сжимайте изображения до 200 КБ или другого заданного размера файла. Указывайте точные размеры в пикселях и скачивайте JPG или WebP с автоматическим подбором качества.",
       },
       sv: {
         name: "Bildkomprimering",
         description:
-          "Komprimera bilder till en maximal filstorlek, till exempel 200 kB. Exportera som JPG eller WebP med automatisk kvalitetsjustering direkt i webbläsaren.",
+          "Komprimera bilder till 200 kB eller en valfri filstorlek. Ange exakta pixelmått och ladda ned JPG- eller WebP-filer med automatisk kvalitetsjustering.",
       },
       th: {
         name: "บีบอัดรูปภาพตามขนาดไฟล์",
         description:
-          "บีบอัดรูปภาพให้มีขนาดไฟล์ไม่เกินที่กำหนด เช่น 200 KB ส่งออกเป็น JPG หรือ WebP พร้อมปรับคุณภาพอัตโนมัติในเบราว์เซอร์",
+          "บีบอัดรูปภาพให้ไม่เกิน 200 KB หรือขนาดไฟล์ที่กำหนดเอง ระบุความกว้างและความสูงเป็นพิกเซล แล้วดาวน์โหลดเป็น JPG หรือ WebP พร้อมปรับคุณภาพอัตโนมัติ",
       },
       tr: {
         name: "Hedef Boyuta Görsel Sıkıştırma",
         description:
-          "Görselleri 200 KB gibi bir dosya boyutu sınırına göre sıkıştırın. Otomatik kalite ayarıyla doğrudan tarayıcınızda JPG veya WebP olarak dışa aktarın.",
+          "Görselleri 200 KB veya belirlediğiniz bir dosya boyutuna kadar sıkıştırın. Kesin piksel boyutlarını ayarlayın ve otomatik kalite ayarıyla JPG veya WebP dosyaları indirin.",
       },
       vi: {
         name: "Công cụ nén ảnh theo dung lượng",
         description:
-          "Nén ảnh theo giới hạn dung lượng, chẳng hạn 200 KB mỗi tệp. Xuất ảnh JPG hoặc WebP với chất lượng được điều chỉnh tự động ngay trong trình duyệt.",
+          "Nén ảnh xuống 200 KB hoặc theo dung lượng tùy chọn. Đặt kích thước chính xác theo pixel và tải tệp JPG hoặc WebP với chất lượng được điều chỉnh tự động.",
       },
       "zh-CN": {
         name: "图片压缩到指定大小",
         description:
-          "按指定的文件大小上限（例如 200 KB）压缩图片。在浏览器中自动调整画质，导出 JPG 或 WebP。",
+          "将图片压缩到 200 KB 或自定义大小上限。可指定像素宽高，自动调整画质并下载 JPG 或 WebP。",
       },
       "zh-TW": {
         name: "圖片壓縮到指定大小",
         description:
-          "依照指定的檔案大小上限（例如 200 KB）壓縮圖片。直接在瀏覽器中自動調整畫質，匯出 JPG 或 WebP。",
+          "將圖片壓縮到 200 KB 或自訂的檔案大小上限。可指定像素寬高，自動調整畫質後下載 JPG 或 WebP。",
       },
     },
   },

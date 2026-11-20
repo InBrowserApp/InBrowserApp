@@ -1,4 +1,4 @@
 {
   "name": "Kompres Gambar ke Ukuran File Tertentu",
-  "description": "Kompres gambar hingga batas ukuran file, misalnya 200 KB. Ekspor sebagai JPG atau WebP dengan penyesuaian kualitas otomatis, langsung di browser."
+  "description": "Kompres gambar ke 200 KB atau batas ukuran file yang Anda tentukan. Atur dimensi piksel secara tepat dan unduh JPG atau WebP dengan penyesuaian kualitas otomatis."
 }

@@ -1,4 +1,4 @@
 {
   "name": "Compresseur d’images",
-  "description": "Compressez vos images pour respecter une taille maximale de fichier, par exemple 200 Ko. Exportez-les en JPG ou en WebP avec un réglage automatique de la qualité, directement dans votre navigateur."
+  "description": "Compressez vos images à 200 Ko ou selon la limite de votre choix. Fixez les dimensions exactes en pixels et téléchargez vos fichiers JPG ou WebP avec un réglage automatique de la qualité."
 }

@@ -3,7 +3,7 @@ import { Button } from "@workspace/ui/components/ui/button"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Download, ImageIcon } from "@workspace/ui/icons"
 import { readyImagesZip } from "./compress"
-import type { ReadyImage } from "./compress"
+import type { DimensionConstraint, ReadyImage } from "./compress"
 import { message } from "./messages"
 import type { Messages } from "./messages"
 
@@ -16,7 +16,7 @@ type Props = {
   limit: number
   formatSize: (bytes: number) => string
   number: Intl.NumberFormat
-  allowResize: boolean
+  dimensionMode: DimensionConstraint["mode"]
   messages: Messages
 }
 
@@ -77,34 +77,37 @@ function ResultRow({
               !image.originalKept &&
               ` → ${formatSize(image.blob.size)}`}
           </bdi>
-          {resized && (
+          {image && (
             <bdi dir="ltr" className="tabular-nums">
-              {image.original.width} × {image.original.height} → {image.width} ×{" "}
-              {image.height} px
+              {resized &&
+                `${image.original.width} × ${image.original.height} → `}
+              {image.width} × {image.height} px
             </bdi>
           )}
         </div>
         {error && <p className="mt-1 text-xs text-muted-foreground">{error}</p>}
       </div>
       <div className="col-start-2 flex flex-wrap items-center gap-2 sm:col-start-auto sm:justify-end">
-        <Badge
-          variant={ready ? "secondary" : "outline"}
-          className={
-            ready
-              ? "bg-emerald-500/10 text-emerald-800 dark:text-emerald-300"
-              : error
-                ? "text-destructive"
-                : "border-amber-500/40 text-amber-800 dark:text-amber-300"
-          }
-        >
-          {error
-            ? messages.couldNotCompress
-            : ready
-              ? image.originalKept
-                ? messages.alreadyFits
-                : messages.withinLimit
-              : messages.overLimit}
-        </Badge>
+        {(!ready || Number.isFinite(limit)) && (
+          <Badge
+            variant={ready ? "secondary" : "outline"}
+            className={
+              ready
+                ? "bg-emerald-500/10 text-emerald-800 dark:text-emerald-300"
+                : error
+                  ? "text-destructive"
+                  : "border-amber-500/40 text-amber-800 dark:text-amber-300"
+            }
+          >
+            {error
+              ? messages.couldNotCompress
+              : ready
+                ? image.originalKept
+                  ? messages.alreadyFits
+                  : messages.withinLimit
+                : messages.overLimit}
+          </Badge>
+        )}
         {ready && url && (
           <Button asChild variant="outline" size="sm">
             <a href={url} download={image.name}>
@@ -123,7 +126,7 @@ export function CompressionResults({
   limit,
   formatSize,
   number,
-  allowResize,
+  dimensionMode,
   messages,
 }: Props) {
   const ready = outcomes.flatMap(({ image }) =>
@@ -159,11 +162,16 @@ export function CompressionResults({
         <div>
           <h2 className="font-heading text-lg">{messages.results}</h2>
           <p role="status" className="mt-0.5 text-sm text-muted-foreground">
-            {message(messages.readyCount, {
-              ready: number.format(ready.length),
-              total: number.format(outcomes.length),
-              limit: formatSize(limit),
-            })}
+            {message(
+              Number.isFinite(limit)
+                ? messages.readyCount
+                : messages.readyCountWithoutLimit,
+              {
+                ready: number.format(ready.length),
+                total: number.format(outcomes.length),
+                limit: formatSize(limit),
+              }
+            )}
           </p>
         </div>
         {ready.length > 1 && (
@@ -189,7 +197,13 @@ export function CompressionResults({
       {(tooLarge || zipError) && (
         <div className="space-y-1 border-t bg-muted/30 px-4 py-3 text-sm text-muted-foreground sm:px-5">
           {tooLarge && (
-            <p>{allowResize ? messages.tryLargerLimit : messages.tryResize}</p>
+            <p>
+              {dimensionMode === "exact"
+                ? messages.tryExactLimit
+                : dimensionMode === "shrink"
+                  ? messages.tryLargerLimit
+                  : messages.tryResize}
+            </p>
           )}
           {zipError && <p role="alert">{messages.zipError}</p>}
         </div>
