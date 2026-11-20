@@ -599,6 +599,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "圖片壓縮到指定大小",
+    slug: "image-size-compressor",
+  },
+  {
+    category: "image",
     name: "圖片轉 AVIF 轉換器",
     slug: "image-to-avif-converter",
   },

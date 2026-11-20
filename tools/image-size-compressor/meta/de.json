@@ -1,0 +1,4 @@
+{
+  "name": "Bilder auf Dateigröße komprimieren",
+  "description": "Komprimiere Bilder auf eine maximale Dateigröße, etwa 200 KB. Speichere sie als JPG oder WebP mit automatischer Qualitätsanpassung direkt im Browser."
+}

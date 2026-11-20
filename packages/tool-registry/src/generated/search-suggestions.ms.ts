@@ -599,6 +599,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Mampatkan Imej Mengikut Had Saiz Fail",
+    slug: "image-size-compressor",
+  },
+  {
+    category: "image",
     name: "Penukar Imej kepada AVIF",
     slug: "image-to-avif-converter",
   },

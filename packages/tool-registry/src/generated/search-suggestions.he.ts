@@ -599,6 +599,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "דחיסת תמונות לפי גודל קובץ",
+    slug: "image-size-compressor",
+  },
+  {
+    category: "image",
     name: "ממיר תמונות ל-AVIF",
     slug: "image-to-avif-converter",
   },

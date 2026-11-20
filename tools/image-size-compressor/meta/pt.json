@@ -1,0 +1,4 @@
+{
+  "name": "Compressor de imagens por tamanho",
+  "description": "Comprima imagens até um limite por arquivo, como 200 KB. Exporte em JPG ou WebP com ajuste automático de qualidade no navegador."
+}

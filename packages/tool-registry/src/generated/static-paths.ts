@@ -10950,6 +10950,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-size-compressor",
+    language: "ar",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "de",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "en",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "es",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "fr",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "he",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "hi",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "id",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "it",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "ja",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "ko",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "ms",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "nl",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "no",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "pl",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "pt",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "ru",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "sv",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "th",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "tr",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "vi",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-size-compressor",
+    language: "zh-TW",
+  },
+  {
     slug: "image-to-avif-converter",
     language: "ar",
   },

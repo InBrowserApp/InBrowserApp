@@ -1,0 +1,4 @@
+{
+  "name": "Bildekomprimering",
+  "description": "Komprimer bilder til en maksimal filstørrelse, for eksempel 200 KB. Eksporter som JPG eller WebP med automatisk kvalitetsjustering rett i nettleseren."
+}

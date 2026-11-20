@@ -1,0 +1,4 @@
+{
+  "name": "Compressione immagini con limite di peso",
+  "description": "Comprimi le immagini entro un limite per file, ad esempio 200 KB. Esporta in JPG o WebP con regolazione automatica della qualità direttamente nel browser."
+}

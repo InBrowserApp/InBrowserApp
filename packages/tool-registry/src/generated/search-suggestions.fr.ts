@@ -599,6 +599,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Compresseur d’images",
+    slug: "image-size-compressor",
+  },
+  {
+    category: "image",
     name: "Convertisseur d’images en AVIF",
     slug: "image-to-avif-converter",
   },

@@ -599,6 +599,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Kompres Gambar ke Ukuran File Tertentu",
+    slug: "image-size-compressor",
+  },
+  {
+    category: "image",
     name: "Konverter Gambar ke AVIF",
     slug: "image-to-avif-converter",
   },

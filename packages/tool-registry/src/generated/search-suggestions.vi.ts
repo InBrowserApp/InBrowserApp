@@ -599,6 +599,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Công cụ nén ảnh theo dung lượng",
+    slug: "image-size-compressor",
+  },
+  {
+    category: "image",
     name: "Bộ chuyển đổi ảnh sang AVIF",
     slug: "image-to-avif-converter",
   },

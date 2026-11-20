@@ -599,6 +599,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Hedef Boyuta Görsel Sıkıştırma",
+    slug: "image-size-compressor",
+  },
+  {
+    category: "image",
     name: "Görselden AVIF'ye Dönüştürücü",
     slug: "image-to-avif-converter",
   },

@@ -599,6 +599,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "이미지 용량 줄이기",
+    slug: "image-size-compressor",
+  },
+  {
+    category: "image",
     name: "이미지 AVIF 변환기",
     slug: "image-to-avif-converter",
   },

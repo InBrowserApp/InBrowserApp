@@ -1,0 +1,4 @@
+{
+  "name": "Kompresor obrazów",
+  "description": "Kompresuj obrazy do wybranego limitu rozmiaru pliku, np. 200 KB. Zapisuj je jako JPG lub WebP z automatycznym doborem jakości, bezpośrednio w przeglądarce."
+}

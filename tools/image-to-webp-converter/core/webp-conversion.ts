@@ -1,3 +1,10 @@
+import {
+  canvasBlob,
+  loadImageSource,
+} from "@workspace/raster-image/browser-canvas"
+
+import type { LoadedImageSource } from "@workspace/raster-image/browser-canvas"
+
 type ImageToWebpOptions = Readonly<{
   quality: number
   scale: number
@@ -16,13 +23,6 @@ type ImageToWebpResult = Readonly<{
 type SupportedImageLike = Readonly<{
   name: string
   type: string
-}>
-
-type LoadedImageSource = Readonly<{
-  cleanup?: () => void
-  height: number
-  image: CanvasImageSource
-  width: number
 }>
 
 const DEFAULT_WEBP_OPTIONS = {
@@ -153,63 +153,6 @@ function calculateResizeDimensions(
 }
 
 /* v8 ignore start -- browser-only image decoding and canvas rendering */
-async function loadImageSource(file: File): Promise<LoadedImageSource> {
-  if ("createImageBitmap" in globalThis) {
-    try {
-      const bitmap = await createImageBitmap(file)
-
-      if (!bitmap.width || !bitmap.height) {
-        bitmap.close()
-        throw new Error("INVALID_IMAGE")
-      }
-
-      return {
-        cleanup: () => {
-          bitmap.close()
-        },
-        height: bitmap.height,
-        image: bitmap,
-        width: bitmap.width,
-      }
-    } catch {
-      // Fall back to HTMLImageElement for formats not handled by ImageBitmap.
-    }
-  }
-
-  const objectUrl = URL.createObjectURL(file)
-
-  try {
-    const image = await new Promise<HTMLImageElement>((resolve, reject) => {
-      const element = new Image()
-
-      element.onload = () => {
-        if (!element.naturalWidth || !element.naturalHeight) {
-          reject(new Error("INVALID_IMAGE"))
-          return
-        }
-
-        resolve(element)
-      }
-      element.onerror = () => {
-        reject(new Error("INVALID_IMAGE"))
-      }
-      element.src = objectUrl
-    })
-
-    return {
-      cleanup: () => {
-        URL.revokeObjectURL(objectUrl)
-      },
-      height: image.naturalHeight || image.height,
-      image,
-      width: image.naturalWidth || image.width,
-    }
-  } catch (error) {
-    URL.revokeObjectURL(objectUrl)
-    throw error
-  }
-}
-
 async function renderWebpBlob(
   source: LoadedImageSource,
   options: ImageToWebpOptions
@@ -233,9 +176,7 @@ async function renderWebpBlob(
   context.imageSmoothingQuality = "high"
   context.drawImage(source.image, 0, 0, dimensions.width, dimensions.height)
 
-  const blob = await new Promise<Blob | null>((resolve) => {
-    canvas.toBlob(resolve, "image/webp", options.quality / 100)
-  })
+  const blob = await canvasBlob(canvas, "image/webp", options.quality / 100)
 
   if (!blob || blob.type !== "image/webp") {
     throw new Error("WEBP_UNSUPPORTED")
