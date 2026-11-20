@@ -2,7 +2,7 @@ import {
   renderAnimationFrames,
   serveAnimationEncoder,
 } from "@workspace/raster-image/animation-worker"
-import { createGifEncoder } from "./core/animation"
+import { createGifEncoder } from "@workspace/raster-image/gif-encoder"
 
 serveAnimationEncoder(async (request) => {
   const { width, height, plays } = request

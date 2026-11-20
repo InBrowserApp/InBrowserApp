@@ -1,7 +1,7 @@
 import { decompressFrames, parseGIF } from "gifuct-js"
 import { expect, test } from "vitest"
 
-import { createGifEncoder } from "./animation"
+import { createGifEncoder } from "@workspace/raster-image/gif-encoder"
 import {
   animationSize,
   frameRect,

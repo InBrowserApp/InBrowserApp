@@ -37173,6 +37173,138 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "video-to-gif",
+    category: "image",
+    icon: "film",
+    tags: [
+      "video",
+      "gif",
+      "animation",
+      "convert",
+      "mp4",
+      "webm",
+      "clip",
+      "trim",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل فيديو إلى GIF",
+        description:
+          "حوّل مقطعًا من فيديو إلى ملف GIF يُعاد تشغيله تلقائيًا. حدّد وقتي البداية والنهاية واضبط معدل الإطارات والعرض، ثم عاين النتيجة ونزّلها من متصفحك.",
+      },
+      de: {
+        name: "Video in GIF umwandeln",
+        description:
+          "Wandle einen Videoausschnitt in ein GIF mit Endlosschleife um. Lege Start, Ende, Bildrate und Breite fest, sieh dir die Vorschau an und lade das GIF im Browser herunter.",
+      },
+      en: {
+        name: "Video to GIF",
+        description:
+          "Turn a clip from a video into a looping GIF. Select the start and end, set the frame rate and width, then preview and download it in your browser.",
+      },
+      es: {
+        name: "Convertir video a GIF",
+        description:
+          "Convierte un fragmento de video en un GIF en bucle. Elige el inicio y el fin, ajusta la velocidad de fotogramas y el ancho, y previsualiza y descarga el GIF en tu navegador.",
+      },
+      fr: {
+        name: "Convertir une vidéo en GIF",
+        description:
+          "Transformez un extrait vidéo en GIF qui tourne en boucle. Choisissez le début et la fin, réglez la cadence et la largeur, puis prévisualisez et téléchargez le GIF dans votre navigateur.",
+      },
+      he: {
+        name: "המרת וידאו ל-GIF",
+        description:
+          "הפכו קטע מסרטון ל-GIF שמתנגן בלולאה. בחרו את זמני ההתחלה והסיום, הגדירו קצב פריימים ורוחב, הציגו תצוגה מקדימה והורידו את התוצאה בדפדפן.",
+      },
+      hi: {
+        name: "वीडियो से GIF",
+        description:
+          "वीडियो के किसी हिस्से को बार-बार चलने वाली GIF में बदलें। शुरुआत और अंत चुनें, फ़्रेम दर और चौड़ाई तय करें, फिर ब्राउज़र में नतीजा देखें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Video ke GIF",
+        description:
+          "Ubah cuplikan video menjadi GIF yang berulang. Pilih waktu mulai dan akhir, atur laju bingkai dan lebar, lalu lihat pratinjau dan unduh hasilnya di browser.",
+      },
+      it: {
+        name: "Converti video in GIF",
+        description:
+          "Trasforma un estratto di un video in una GIF che si ripete in loop. Scegli l’inizio e la fine, imposta la frequenza dei fotogrammi e la larghezza, poi guarda l’anteprima e scarica la GIF nel browser.",
+      },
+      ja: {
+        name: "動画を GIF に変換",
+        description:
+          "動画の一部をループ再生する GIF に変換します。開始・終了時刻、フレームレート、幅を指定し、ブラウザーでプレビューしてダウンロードできます。",
+      },
+      ko: {
+        name: "동영상을 GIF로 변환",
+        description:
+          "동영상의 일부를 반복 재생되는 GIF로 변환하세요. 시작과 끝, 프레임 속도, 너비를 설정하고 브라우저에서 미리 본 뒤 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Video ke GIF",
+        description:
+          "Tukar klip video kepada GIF yang dimainkan berulang kali. Pilih masa mula dan akhir, tetapkan kadar bingkai dan lebar, kemudian pratonton dan muat turun hasilnya dalam pelayar.",
+      },
+      nl: {
+        name: "Video naar GIF",
+        description:
+          "Maak van een videofragment een GIF die zich blijft herhalen. Kies het begin en einde, stel de framesnelheid en breedte in, bekijk het voorbeeld en download de GIF in je browser.",
+      },
+      no: {
+        name: "Video til GIF",
+        description:
+          "Gjør et videoklipp om til en GIF som går i løkke. Velg start og slutt, angi bildefrekvens og bredde, og forhåndsvis og last ned GIF-en i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter wideo na GIF",
+        description:
+          "Zamień fragment wideo w zapętlony GIF. Wybierz początek i koniec, ustaw liczbę klatek na sekundę i szerokość, a następnie obejrzyj podgląd i pobierz plik w przeglądarce.",
+      },
+      pt: {
+        name: "Converter vídeo em GIF",
+        description:
+          "Transforme um trecho de vídeo em um GIF que se repete. Escolha o início e o fim, ajuste a taxa de quadros e a largura, pré-visualize e baixe o GIF no navegador.",
+      },
+      ru: {
+        name: "Конвертер видео в GIF",
+        description:
+          "Превратите фрагмент видео в зацикленный GIF. Укажите начало и конец, настройте частоту кадров и ширину, затем просмотрите и скачайте GIF в браузере.",
+      },
+      sv: {
+        name: "Video till GIF",
+        description:
+          "Gör ett videoklipp till en loopande GIF. Välj start och slut, ställ in bildfrekvens och bredd och förhandsgranska och ladda sedan ner GIF-filen i webbläsaren.",
+      },
+      th: {
+        name: "แปลงวิดีโอเป็น GIF",
+        description:
+          "แปลงช่วงหนึ่งของวิดีโอเป็น GIF ที่เล่นวน เลือกเวลาเริ่มต้นและสิ้นสุด ตั้งอัตราเฟรมและความกว้าง แล้วดูตัวอย่างและดาวน์โหลดในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Videodan GIF'e Dönüştürücü",
+        description:
+          "Bir video kesitini döngüde oynayan GIF'e dönüştürün. Başlangıç ve bitişi seçin, kare hızını ve genişliği ayarlayın, ardından GIF'i tarayıcınızda önizleyip indirin.",
+      },
+      vi: {
+        name: "Chuyển video thành GIF",
+        description:
+          "Chuyển một đoạn video thành GIF phát lặp. Chọn thời gian bắt đầu và kết thúc, tốc độ khung hình và chiều rộng, rồi xem trước và tải xuống ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "视频转 GIF",
+        description:
+          "将视频片段做成循环播放的 GIF。选好起止时间、帧率和宽度，即可在浏览器中预览并下载。",
+      },
+      "zh-TW": {
+        name: "影片轉 GIF",
+        description:
+          "將影片片段轉為循環播放的 GIF。選擇起訖時間、影格率和寬度，即可在瀏覽器中預覽並下載。",
+      },
+    },
+  },
+  {
     slug: "vin-validator",
     category: "text",
     icon: "car",
@@ -75996,6 +76128,138 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "影片影格擷取器",
         description:
           "依指定時間點或固定間隔從影片擷取靜態圖片。可預覽 JPG 或 PNG 影格，並逐張下載或打包成 ZIP。",
+      },
+    },
+  },
+  "video-to-gif": {
+    slug: "video-to-gif",
+    category: "image",
+    icon: "film",
+    tags: [
+      "video",
+      "gif",
+      "animation",
+      "convert",
+      "mp4",
+      "webm",
+      "clip",
+      "trim",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل فيديو إلى GIF",
+        description:
+          "حوّل مقطعًا من فيديو إلى ملف GIF يُعاد تشغيله تلقائيًا. حدّد وقتي البداية والنهاية واضبط معدل الإطارات والعرض، ثم عاين النتيجة ونزّلها من متصفحك.",
+      },
+      de: {
+        name: "Video in GIF umwandeln",
+        description:
+          "Wandle einen Videoausschnitt in ein GIF mit Endlosschleife um. Lege Start, Ende, Bildrate und Breite fest, sieh dir die Vorschau an und lade das GIF im Browser herunter.",
+      },
+      en: {
+        name: "Video to GIF",
+        description:
+          "Turn a clip from a video into a looping GIF. Select the start and end, set the frame rate and width, then preview and download it in your browser.",
+      },
+      es: {
+        name: "Convertir video a GIF",
+        description:
+          "Convierte un fragmento de video en un GIF en bucle. Elige el inicio y el fin, ajusta la velocidad de fotogramas y el ancho, y previsualiza y descarga el GIF en tu navegador.",
+      },
+      fr: {
+        name: "Convertir une vidéo en GIF",
+        description:
+          "Transformez un extrait vidéo en GIF qui tourne en boucle. Choisissez le début et la fin, réglez la cadence et la largeur, puis prévisualisez et téléchargez le GIF dans votre navigateur.",
+      },
+      he: {
+        name: "המרת וידאו ל-GIF",
+        description:
+          "הפכו קטע מסרטון ל-GIF שמתנגן בלולאה. בחרו את זמני ההתחלה והסיום, הגדירו קצב פריימים ורוחב, הציגו תצוגה מקדימה והורידו את התוצאה בדפדפן.",
+      },
+      hi: {
+        name: "वीडियो से GIF",
+        description:
+          "वीडियो के किसी हिस्से को बार-बार चलने वाली GIF में बदलें। शुरुआत और अंत चुनें, फ़्रेम दर और चौड़ाई तय करें, फिर ब्राउज़र में नतीजा देखें और डाउनलोड करें।",
+      },
+      id: {
+        name: "Video ke GIF",
+        description:
+          "Ubah cuplikan video menjadi GIF yang berulang. Pilih waktu mulai dan akhir, atur laju bingkai dan lebar, lalu lihat pratinjau dan unduh hasilnya di browser.",
+      },
+      it: {
+        name: "Converti video in GIF",
+        description:
+          "Trasforma un estratto di un video in una GIF che si ripete in loop. Scegli l’inizio e la fine, imposta la frequenza dei fotogrammi e la larghezza, poi guarda l’anteprima e scarica la GIF nel browser.",
+      },
+      ja: {
+        name: "動画を GIF に変換",
+        description:
+          "動画の一部をループ再生する GIF に変換します。開始・終了時刻、フレームレート、幅を指定し、ブラウザーでプレビューしてダウンロードできます。",
+      },
+      ko: {
+        name: "동영상을 GIF로 변환",
+        description:
+          "동영상의 일부를 반복 재생되는 GIF로 변환하세요. 시작과 끝, 프레임 속도, 너비를 설정하고 브라우저에서 미리 본 뒤 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Video ke GIF",
+        description:
+          "Tukar klip video kepada GIF yang dimainkan berulang kali. Pilih masa mula dan akhir, tetapkan kadar bingkai dan lebar, kemudian pratonton dan muat turun hasilnya dalam pelayar.",
+      },
+      nl: {
+        name: "Video naar GIF",
+        description:
+          "Maak van een videofragment een GIF die zich blijft herhalen. Kies het begin en einde, stel de framesnelheid en breedte in, bekijk het voorbeeld en download de GIF in je browser.",
+      },
+      no: {
+        name: "Video til GIF",
+        description:
+          "Gjør et videoklipp om til en GIF som går i løkke. Velg start og slutt, angi bildefrekvens og bredde, og forhåndsvis og last ned GIF-en i nettleseren.",
+      },
+      pl: {
+        name: "Konwerter wideo na GIF",
+        description:
+          "Zamień fragment wideo w zapętlony GIF. Wybierz początek i koniec, ustaw liczbę klatek na sekundę i szerokość, a następnie obejrzyj podgląd i pobierz plik w przeglądarce.",
+      },
+      pt: {
+        name: "Converter vídeo em GIF",
+        description:
+          "Transforme um trecho de vídeo em um GIF que se repete. Escolha o início e o fim, ajuste a taxa de quadros e a largura, pré-visualize e baixe o GIF no navegador.",
+      },
+      ru: {
+        name: "Конвертер видео в GIF",
+        description:
+          "Превратите фрагмент видео в зацикленный GIF. Укажите начало и конец, настройте частоту кадров и ширину, затем просмотрите и скачайте GIF в браузере.",
+      },
+      sv: {
+        name: "Video till GIF",
+        description:
+          "Gör ett videoklipp till en loopande GIF. Välj start och slut, ställ in bildfrekvens och bredd och förhandsgranska och ladda sedan ner GIF-filen i webbläsaren.",
+      },
+      th: {
+        name: "แปลงวิดีโอเป็น GIF",
+        description:
+          "แปลงช่วงหนึ่งของวิดีโอเป็น GIF ที่เล่นวน เลือกเวลาเริ่มต้นและสิ้นสุด ตั้งอัตราเฟรมและความกว้าง แล้วดูตัวอย่างและดาวน์โหลดในเบราว์เซอร์",
+      },
+      tr: {
+        name: "Videodan GIF'e Dönüştürücü",
+        description:
+          "Bir video kesitini döngüde oynayan GIF'e dönüştürün. Başlangıç ve bitişi seçin, kare hızını ve genişliği ayarlayın, ardından GIF'i tarayıcınızda önizleyip indirin.",
+      },
+      vi: {
+        name: "Chuyển video thành GIF",
+        description:
+          "Chuyển một đoạn video thành GIF phát lặp. Chọn thời gian bắt đầu và kết thúc, tốc độ khung hình và chiều rộng, rồi xem trước và tải xuống ngay trong trình duyệt.",
+      },
+      "zh-CN": {
+        name: "视频转 GIF",
+        description:
+          "将视频片段做成循环播放的 GIF。选好起止时间、帧率和宽度，即可在浏览器中预览并下载。",
+      },
+      "zh-TW": {
+        name: "影片轉 GIF",
+        description:
+          "將影片片段轉為循環播放的 GIF。選擇起訖時間、影格率和寬度，即可在瀏覽器中預覽並下載。",
       },
     },
   },

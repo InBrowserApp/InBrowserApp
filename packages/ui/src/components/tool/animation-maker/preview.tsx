@@ -33,7 +33,7 @@ type PreviewProps = {
   width: number
   height: number
   language: string
-  messages: Messages
+  messages: Pick<Messages, "preview" | "play" | "stop" | "download">
 }
 
 export function Preview({

@@ -1,3 +1,4 @@
+import { seekVideo } from "@workspace/raster-image/video"
 import { formatTime } from "./core/timeline"
 import type { Frame, ImageFormat } from "./types"
 
@@ -13,39 +14,6 @@ function encode(
       format,
       quality
     )
-  })
-}
-
-function seek(video: HTMLVideoElement, time: number, signal: AbortSignal) {
-  if (video.currentTime === time && !video.seeking) return
-  return new Promise<void>((resolve, reject) => {
-    const listeners = new AbortController()
-    const options = { signal: listeners.signal }
-    video.addEventListener(
-      "seeked",
-      () => {
-        listeners.abort()
-        resolve()
-      },
-      options
-    )
-    video.addEventListener(
-      "error",
-      () => {
-        listeners.abort()
-        reject(video.error)
-      },
-      options
-    )
-    signal.addEventListener(
-      "abort",
-      () => {
-        listeners.abort()
-        reject(signal.reason)
-      },
-      options
-    )
-    video.currentTime = time
   })
 }
 
@@ -75,7 +43,7 @@ export async function extractFrames(
       signal.throwIfAborted()
       // A timestamp at the exact end refers to the last displayed frame.
       const seconds = time / 1000
-      await seek(
+      await seekVideo(
         video,
         seconds === video.duration ? Math.max(0, seconds - 0.001) : seconds,
         signal
