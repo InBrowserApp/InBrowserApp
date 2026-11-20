@@ -29,7 +29,7 @@ const { preview, play, stop, download } = animationMakerMessages(lang, "GIF")
 
 <ToolPageShell title={meta.name} description={meta.description}>
   <VideoToGif client:load language={lang} messages={messages} previewMessages={{ preview, play, stop, download }} />
-  <ToolArticle>
+  <ToolArticle className="rtl:[&_ol]:mr-6 rtl:[&_ol]:ml-0">
     <Intro />
   </ToolArticle>
 </ToolPageShell>
