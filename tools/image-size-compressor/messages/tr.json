@@ -1,13 +1,13 @@
 {
   "addImages": "Görsel ekle",
-  "dropImages": "Görselleri buraya bırakın",
+  "dropImages": "Görselleri bırakın veya ekran görüntüsü yapıştırın",
   "inputFormats": "JPG, PNG, WebP, AVIF, GIF ve BMP",
   "privacy": "Görselleriniz cihazınızda kalır.",
   "clearAll": "Tümünü temizle",
   "removeImage": "{name} dosyasını kaldır",
   "settings": "Sıkıştırma ayarları",
   "sizeLimit": "Görsel başına en büyük dosya boyutu",
-  "sizeHint": "Kalite otomatik ayarlanır. Sınır koymak istemiyorsanız boş bırakın. 1 KB = 1.000 bayt.",
+  "sizeHint": "Kalite otomatik ayarlanır. KB veya MB kullanın. Sınır koymak istemiyorsanız alanı boş bırakın.",
   "format": "Çıktı biçimi",
   "jpgHint": "Çoğu yükleme formu kabul eder. Saydam alanlar beyaza dönüşür.",
   "webpHint": "Genellikle JPG'den daha küçük dosyalar oluşturur ve saydamlığı korur.",
@@ -39,11 +39,13 @@
   "tryExactLimit": "Belirtilen piksel boyutları sabittir. Form izin veriyorsa başka bir biçim veya daha yüksek bir sınır deneyin.",
   "lockAspectRatio": "En boy oranını kilitle",
   "aspectRatioHint": "Girilen boyutların oranını kilitler. Alanlardan biri boşsa ilk görselin oranını kullanır.",
-  "invalidSize": "200 KB gibi pozitif bir boyut girin.",
+  "invalidSize": "200 KB veya 2 MB gibi pozitif bir boyut girin.",
   "invalidDimensions": "Piksel boyutlarını tam sayı olarak girin veya 600 × 400 gibi boyutlar yapıştırın.",
   "viewResults": "Sonuçları göster",
   "previewImage": "{name} önizlemesini aç",
   "closePreview": "Önizlemeyi kapat",
   "overLimitDetail": "Sınır {limit} · Çıktı boyutu {actual}",
-  "shrinkAndRetry": "Küçült ve tekrar dene"
+  "shrinkAndRetry": "Küçült ve tekrar dene",
+  "effectiveLimit": "Geçerli sınır {size} ({bytes} bayt)",
+  "previousResults": "Önceki sonuçlar"
 }

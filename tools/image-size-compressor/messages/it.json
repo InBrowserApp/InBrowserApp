@@ -1,13 +1,13 @@
 {
   "addImages": "Aggiungi immagini",
-  "dropImages": "Trascina qui le immagini",
+  "dropImages": "Trascina immagini o incolla uno screenshot",
   "inputFormats": "JPG, PNG, WebP, AVIF, GIF e BMP",
   "privacy": "Le immagini restano sul tuo dispositivo.",
   "clearAll": "Rimuovi tutto",
   "removeImage": "Rimuovi {name}",
   "settings": "Impostazioni di compressione",
   "sizeLimit": "Peso massimo per immagine",
-  "sizeHint": "La qualità si regola automaticamente. Lascia il campo vuoto per rimuovere il limite. 1 KB = 1.000 byte.",
+  "sizeHint": "La qualità si regola automaticamente. Usa KB o MB oppure lascia il campo vuoto per rimuovere il limite.",
   "format": "Formato di esportazione",
   "jpgHint": "Accettato dalla maggior parte dei moduli. Le aree trasparenti diventano bianche.",
   "webpHint": "Spesso occupa meno spazio di JPG e mantiene la trasparenza.",
@@ -39,11 +39,13 @@
   "tryExactLimit": "Le dimensioni impostate restano fisse. Prova un altro formato o un limite più alto, se il modulo lo consente.",
   "lockAspectRatio": "Blocca le proporzioni",
   "aspectRatioHint": "Fissa le proporzioni impostate o usa quelle della prima immagine se manca una dimensione.",
-  "invalidSize": "Inserisci un peso maggiore di zero, ad esempio 200 KB.",
+  "invalidSize": "Inserisci un peso maggiore di zero, ad esempio 200 KB o 2 MB.",
   "invalidDimensions": "Inserisci valori interi in pixel o incolla dimensioni come 600 × 400.",
   "viewResults": "Mostra i risultati",
   "previewImage": "Mostra l’anteprima di {name}",
   "closePreview": "Chiudi l’anteprima",
   "overLimitDetail": "Limite {limit} · Peso ottenuto {actual}",
-  "shrinkAndRetry": "Riduci le dimensioni e riprova"
+  "shrinkAndRetry": "Riduci le dimensioni e riprova",
+  "effectiveLimit": "Limite attivo di {size} ({bytes} byte)",
+  "previousResults": "Risultati precedenti"
 }

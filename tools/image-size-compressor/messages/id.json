@@ -1,13 +1,13 @@
 {
   "addImages": "Tambah gambar",
-  "dropImages": "Lepaskan gambar di sini",
+  "dropImages": "Lepaskan gambar atau tempel tangkapan layar",
   "inputFormats": "JPG, PNG, WebP, AVIF, GIF, dan BMP",
   "privacy": "Gambar Anda tetap berada di perangkat ini.",
   "clearAll": "Hapus semua",
   "removeImage": "Hapus {name}",
   "settings": "Pengaturan kompresi",
   "sizeLimit": "Ukuran file maksimum per gambar",
-  "sizeHint": "Kualitas disesuaikan secara otomatis. Kosongkan jika tidak ada batas. 1 KB = 1.000 byte.",
+  "sizeHint": "Kualitas disesuaikan secara otomatis. Gunakan KB atau MB, atau kosongkan jika tidak ada batas.",
   "format": "Format keluaran",
   "jpgHint": "Didukung oleh banyak formulir unggah. Bagian transparan menjadi putih.",
   "webpHint": "File sering kali lebih kecil daripada JPG dan tetap mendukung transparansi.",
@@ -39,11 +39,13 @@
   "tryExactLimit": "Dimensi yang ditentukan tetap sama. Coba format lain atau naikkan batas ukuran file jika formulir mengizinkannya.",
   "lockAspectRatio": "Kunci rasio aspek",
   "aspectRatioHint": "Kunci rasio dari lebar dan tinggi yang diisi. Jika salah satu kolom kosong, rasio gambar pertama akan digunakan.",
-  "invalidSize": "Masukkan ukuran yang lebih besar dari nol, misalnya 200 KB.",
+  "invalidSize": "Masukkan ukuran yang lebih besar dari nol, misalnya 200 KB atau 2 MB.",
   "invalidDimensions": "Masukkan jumlah piksel dalam bilangan bulat atau tempel dimensi seperti 600 × 400.",
   "viewResults": "Lihat hasil",
   "previewImage": "Pratinjau {name}",
   "closePreview": "Tutup pratinjau",
   "overLimitDetail": "Batas {limit} · Ukuran hasil {actual}",
-  "shrinkAndRetry": "Perkecil dimensi dan coba lagi"
+  "shrinkAndRetry": "Perkecil dimensi dan coba lagi",
+  "effectiveLimit": "Batas saat ini {size} ({bytes} byte)",
+  "previousResults": "Hasil sebelumnya"
 }

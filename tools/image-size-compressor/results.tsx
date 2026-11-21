@@ -3,14 +3,12 @@ import { Button } from "@workspace/ui/components/ui/button"
 import { Badge } from "@workspace/ui/components/ui/badge"
 import { Download, ImageIcon } from "@workspace/ui/icons"
 import { readyImagesZip } from "./compress"
-import type { DimensionConstraint, ReadyImage } from "./compress"
+import type { DimensionConstraint } from "./compress"
+import { fileKey } from "./batch"
+import type { ImageOutcome } from "./batch"
 import { message } from "./messages"
 import type { Messages } from "./messages"
 import { ResultPreview } from "./result-preview"
-
-export type ImageOutcome =
-  | { file: File; image: ReadyImage; error?: never }
-  | { file: File; image?: never; error: string }
 
 type Props = {
   outcomes: ImageOutcome[]
@@ -19,6 +17,7 @@ type Props = {
   number: Intl.NumberFormat
   dimensionMode: DimensionConstraint["mode"]
   messages: Messages
+  previousResults: boolean
   id: string
   retrying: boolean
   onShrinkAndRetry: () => void
@@ -142,6 +141,7 @@ export function CompressionResults({
   dimensionMode,
   messages,
   id,
+  previousResults,
   retrying,
   onShrinkAndRetry,
 }: Props) {
@@ -151,6 +151,7 @@ export function CompressionResults({
   const tooLarge = outcomes.some(
     ({ image }) => image && image.blob.size > limit
   )
+  const canRetry = tooLarge && !previousResults && dimensionMode === "original"
   const [zipError, setZipError] = useState(false)
   const [zipping, setZipping] = useState(false)
 
@@ -184,6 +185,11 @@ export function CompressionResults({
           <h2 id={`${id}-heading`} className="font-heading text-lg">
             {messages.results}
           </h2>
+          {previousResults && (
+            <p className="mt-1 text-sm font-medium text-muted-foreground">
+              {messages.previousResults}
+            </p>
+          )}
           {Number.isFinite(limit) && (
             <p className="mt-0.5 text-sm text-muted-foreground">
               {message(messages.readyCount, {
@@ -194,47 +200,49 @@ export function CompressionResults({
             </p>
           )}
         </div>
-        {ready.length > 1 && (
-          <Button
-            className="h-auto py-2 whitespace-normal"
-            type="button"
-            onClick={downloadZip}
-            disabled={zipping}
-          >
-            <Download aria-hidden="true" />
-            {messages.downloadZip}
-          </Button>
-        )}
+        <div className="flex flex-wrap gap-2">
+          {canRetry && (
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              className="h-auto whitespace-normal"
+              onClick={onShrinkAndRetry}
+              aria-disabled={retrying}
+            >
+              {messages.shrinkAndRetry}
+            </Button>
+          )}
+          {ready.length > 1 && (
+            <Button
+              className="h-auto py-2 whitespace-normal"
+              type="button"
+              onClick={downloadZip}
+              disabled={zipping}
+            >
+              <Download aria-hidden="true" />
+              {messages.downloadZip}
+            </Button>
+          )}
+        </div>
       </div>
       <ul className="divide-y">
-        {outcomes.map((outcome, index) => (
+        {outcomes.map((outcome) => (
           <ResultRow
-            key={index}
+            key={fileKey(outcome.file)}
             {...{ outcome, limit, formatSize, messages }}
           />
         ))}
       </ul>
-      {(tooLarge || zipError) && (
+      {((tooLarge && !previousResults && !canRetry) || zipError) && (
         <div className="space-y-1 border-t bg-muted/30 px-4 py-3 text-sm text-muted-foreground sm:px-5">
-          {tooLarge &&
-            (dimensionMode === "original" ? (
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                className="h-auto whitespace-normal"
-                onClick={onShrinkAndRetry}
-                aria-disabled={retrying}
-              >
-                {messages.shrinkAndRetry}
-              </Button>
-            ) : (
-              <p>
-                {dimensionMode === "exact"
-                  ? messages.tryExactLimit
-                  : messages.tryLargerLimit}
-              </p>
-            ))}
+          {tooLarge && !previousResults && !canRetry && (
+            <p>
+              {dimensionMode === "exact"
+                ? messages.tryExactLimit
+                : messages.tryLargerLimit}
+            </p>
+          )}
           {zipError && <p role="alert">{messages.zipError}</p>}
         </div>
       )}

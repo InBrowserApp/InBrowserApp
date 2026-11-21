@@ -1,13 +1,13 @@
 {
   "addImages": "新增圖片",
-  "dropImages": "將圖片拖曳到這裡",
+  "dropImages": "拖曳圖片或貼上螢幕截圖",
   "inputFormats": "JPG、PNG、WebP、AVIF、GIF 和 BMP",
   "privacy": "圖片只會在你的裝置上處理。",
   "clearAll": "全部清除",
   "removeImage": "移除 {name}",
   "settings": "壓縮設定",
   "sizeLimit": "每張圖片的檔案大小上限",
-  "sizeHint": "畫質會自動調整。留空即不限制檔案大小。1 KB = 1,000 位元組。",
+  "sizeHint": "畫質會自動調整。以 KB 或 MB 為單位，留空即不限制檔案大小。",
   "format": "輸出格式",
   "jpgHint": "大多數上傳表單都接受 JPG。透明區域會變成白色。",
   "webpHint": "檔案通常比 JPG 小，且可保留透明區域。",
@@ -39,11 +39,13 @@
   "tryExactLimit": "指定的像素尺寸會維持不變。若表單允許，可改用其他輸出格式或提高檔案大小上限。",
   "lockAspectRatio": "鎖定長寬比",
   "aspectRatioHint": "依輸入的寬度和高度鎖定比例。任一欄位留空時，採用第一張圖片的長寬比。",
-  "invalidSize": "請輸入大於 0 的大小，例如 200 KB。",
+  "invalidSize": "請輸入大於 0 的大小，例如 200 KB 或 2 MB。",
   "invalidDimensions": "請輸入整數像素值，或貼上如 600 × 400 的尺寸。",
   "viewResults": "查看結果",
   "previewImage": "預覽 {name}",
   "closePreview": "關閉預覽",
   "overLimitDetail": "上限 {limit} · 輸出 {actual}",
-  "shrinkAndRetry": "縮小尺寸並重試"
+  "shrinkAndRetry": "縮小尺寸並重試",
+  "effectiveLimit": "目前上限 {size}（{bytes} 位元組）",
+  "previousResults": "上次壓縮結果"
 }

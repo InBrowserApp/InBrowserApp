@@ -1,13 +1,13 @@
 {
   "addImages": "添加图片",
-  "dropImages": "将图片拖到这里",
+  "dropImages": "拖入图片或粘贴截图",
   "inputFormats": "JPG、PNG、WebP、AVIF、GIF 和 BMP",
   "privacy": "图片只在你的设备上处理。",
   "clearAll": "全部清除",
   "removeImage": "移除 {name}",
   "settings": "压缩设置",
   "sizeLimit": "每张图片的文件大小上限",
-  "sizeHint": "画质会自动调整。留空则不限制文件大小。1 KB = 1,000 字节。",
+  "sizeHint": "画质会自动调整。以 KB 或 MB 为单位，留空则不限制文件大小。",
   "format": "输出格式",
   "jpgHint": "大多数上传表单都接受 JPG。透明区域会变成白色。",
   "webpHint": "文件通常比 JPG 更小，并可保留透明区域。",
@@ -39,11 +39,13 @@
   "tryExactLimit": "指定的像素尺寸已固定。如果表单允许，可以换一种输出格式或提高文件大小上限。",
   "lockAspectRatio": "锁定宽高比",
   "aspectRatioHint": "按输入的宽高锁定比例。宽度或高度留空时，使用第一张图片的宽高比。",
-  "invalidSize": "请输入大于 0 的大小，例如 200 KB。",
+  "invalidSize": "请输入大于 0 的大小，例如 200 KB 或 2 MB。",
   "invalidDimensions": "请输入整数像素值，或粘贴 600 × 400 这类尺寸。",
   "viewResults": "查看结果",
   "previewImage": "预览 {name}",
   "closePreview": "关闭预览",
   "overLimitDetail": "上限 {limit} · 输出 {actual}",
-  "shrinkAndRetry": "缩小尺寸并重试"
+  "shrinkAndRetry": "缩小尺寸并重试",
+  "effectiveLimit": "当前上限 {size}（{bytes} 字节）",
+  "previousResults": "上次压缩结果"
 }

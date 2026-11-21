@@ -1,13 +1,13 @@
 {
   "addImages": "Tambah imej",
-  "dropImages": "Lepaskan imej di sini",
+  "dropImages": "Lepaskan imej di sini atau tampal tangkapan skrin",
   "inputFormats": "JPG, PNG, WebP, AVIF, GIF dan BMP",
   "privacy": "Imej anda kekal pada peranti ini.",
   "clearAll": "Kosongkan semua",
   "removeImage": "Buang {name}",
   "settings": "Tetapan pemampatan",
   "sizeLimit": "Saiz fail maksimum bagi setiap imej",
-  "sizeHint": "Kualiti dilaraskan secara automatik. Biarkan kosong jika tiada had. 1 KB = 1,000 bait.",
+  "sizeHint": "Kualiti dilaraskan secara automatik. Gunakan KB atau MB, atau biarkan kosong jika tiada had.",
   "format": "Format output",
   "jpgHint": "Diterima oleh banyak borang muat naik. Bahagian lutsinar menjadi putih.",
   "webpHint": "Saiz fail biasanya lebih kecil daripada JPG dan mengekalkan bahagian lutsinar.",
@@ -39,11 +39,13 @@
   "tryExactLimit": "Dimensi yang ditetapkan akan dikekalkan. Cuba format lain atau naikkan had jika dibenarkan oleh borang.",
   "lockAspectRatio": "Kunci nisbah aspek",
   "aspectRatioHint": "Kunci nisbah yang dimasukkan atau gunakan nisbah imej pertama jika satu dimensi belum diisi.",
-  "invalidSize": "Masukkan saiz fail melebihi sifar, seperti 200 KB.",
+  "invalidSize": "Masukkan saiz fail melebihi sifar, seperti 200 KB atau 2 MB.",
   "invalidDimensions": "Masukkan bilangan piksel dalam nombor bulat atau tampal dimensi seperti 600 × 400.",
   "viewResults": "Lihat hasil",
   "previewImage": "Pratonton {name}",
   "closePreview": "Tutup pratonton",
   "overLimitDetail": "Had {limit} · Saiz output {actual}",
-  "shrinkAndRetry": "Kecilkan dan cuba lagi"
+  "shrinkAndRetry": "Kecilkan dan cuba lagi",
+  "effectiveLimit": "Had semasa {size} ({bytes} bait)",
+  "previousResults": "Hasil sebelumnya"
 }

@@ -1,13 +1,13 @@
 {
   "addImages": "Ajouter des images",
-  "dropImages": "Déposez vos images ici",
+  "dropImages": "Déposez des images ou collez une capture d’écran",
   "inputFormats": "JPG, PNG, WebP, AVIF, GIF et BMP",
   "privacy": "Vos images restent sur votre appareil.",
   "clearAll": "Tout effacer",
   "removeImage": "Retirer {name}",
   "settings": "Paramètres de compression",
   "sizeLimit": "Taille maximale par image",
-  "sizeHint": "La qualité s’ajuste automatiquement. Laissez le champ vide pour retirer la limite. 1 KB = 1 000 octets.",
+  "sizeHint": "La qualité s’ajuste automatiquement. Utilisez KB ou MB, ou laissez le champ vide pour retirer la limite.",
   "format": "Format de sortie",
   "jpgHint": "Accepté par la plupart des formulaires. Les zones transparentes deviennent blanches.",
   "webpHint": "Souvent plus léger que le JPG et conserve la transparence.",
@@ -39,11 +39,13 @@
   "tryExactLimit": "Les dimensions indiquées restent fixes. Essayez un autre format ou une limite plus élevée si le formulaire le permet.",
   "lockAspectRatio": "Verrouiller les proportions",
   "aspectRatioHint": "Conserve les proportions saisies ou celles de la première image si un champ est vide.",
-  "invalidSize": "Saisissez une taille supérieure à zéro, par exemple 200 KB.",
+  "invalidSize": "Saisissez une taille supérieure à zéro, par exemple 200 KB ou 2 MB.",
   "invalidDimensions": "Saisissez des valeurs entières en pixels ou collez des dimensions comme 600 × 400.",
   "viewResults": "Voir les résultats",
   "previewImage": "Prévisualiser {name}",
   "closePreview": "Fermer l’aperçu",
   "overLimitDetail": "Limite {limit} · Résultat {actual}",
-  "shrinkAndRetry": "Réduire les dimensions et réessayer"
+  "shrinkAndRetry": "Réduire les dimensions et réessayer",
+  "effectiveLimit": "Limite appliquée {size} ({bytes} octets)",
+  "previousResults": "Résultats précédents"
 }

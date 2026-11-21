@@ -1,13 +1,13 @@
 {
   "addImages": "Bilder hinzufügen",
-  "dropImages": "Bilder hierher ziehen",
+  "dropImages": "Bilder hierher ziehen oder einen Screenshot einfügen",
   "inputFormats": "JPG, PNG, WebP, AVIF, GIF und BMP",
   "privacy": "Deine Bilder bleiben auf deinem Gerät.",
   "clearAll": "Alle entfernen",
   "removeImage": "{name} entfernen",
   "settings": "Komprimierungseinstellungen",
   "sizeLimit": "Maximale Dateigröße pro Bild",
-  "sizeHint": "Die Qualität wird automatisch angepasst. Ohne Limit leer lassen. 1 KB = 1.000 Byte.",
+  "sizeHint": "Die Qualität wird automatisch angepasst. Gib das Limit in KB oder MB ein oder lass das Feld leer.",
   "format": "Ausgabeformat",
   "jpgHint": "Viele Upload-Formulare akzeptieren JPG. Transparente Bereiche werden weiß.",
   "webpHint": "Oft kleiner als JPG und erhält transparente Bereiche.",
@@ -39,11 +39,13 @@
   "tryExactLimit": "Die vorgegebenen Pixelmaße bleiben erhalten. Versuche ein anderes Format oder ein höheres Limit, sofern das Formular es zulässt.",
   "lockAspectRatio": "Seitenverhältnis sperren",
   "aspectRatioHint": "Verwendet das eingegebene Seitenverhältnis. Fehlt ein Maß, gilt das Seitenverhältnis des ersten Bildes.",
-  "invalidSize": "Gib eine Dateigröße über null ein, zum Beispiel 200 KB.",
+  "invalidSize": "Gib eine Dateigröße über null ein, zum Beispiel 200 KB oder 2 MB.",
   "invalidDimensions": "Gib ganze Pixelwerte ein oder füge Maße wie 600 × 400 ein.",
   "viewResults": "Ergebnisse ansehen",
   "previewImage": "Vorschau für {name}",
   "closePreview": "Vorschau schließen",
   "overLimitDetail": "Limit {limit} · Ausgabe {actual}",
-  "shrinkAndRetry": "Verkleinern und erneut versuchen"
+  "shrinkAndRetry": "Verkleinern und erneut versuchen",
+  "effectiveLimit": "Aktuelles Limit {size} ({bytes} Byte)",
+  "previousResults": "Vorherige Ergebnisse"
 }

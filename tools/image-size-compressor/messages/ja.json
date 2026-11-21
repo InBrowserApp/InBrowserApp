@@ -1,13 +1,13 @@
 {
   "addImages": "画像を追加",
-  "dropImages": "ここに画像をドロップ",
+  "dropImages": "画像をドロップするか、スクリーンショットを貼り付け",
   "inputFormats": "JPG、PNG、WebP、AVIF、GIF、BMP",
   "privacy": "画像はお使いの端末内で処理されます。",
   "clearAll": "すべてクリア",
   "removeImage": "{name} を削除",
   "settings": "圧縮設定",
   "sizeLimit": "画像 1 枚あたりのファイルサイズ上限",
-  "sizeHint": "画質は自動で調整されます。空欄にするとファイルサイズの上限はありません。1 KB = 1,000 バイト。",
+  "sizeHint": "画質は自動で調整されます。KB または MB で入力し、上限が不要なら空欄にしてください。",
   "format": "出力形式",
   "jpgHint": "多くのアップロードフォームに対応しています。透明な部分は白になります。",
   "webpHint": "JPG よりファイルサイズが小さくなることが多く、透明な部分も保持できます。",
@@ -39,11 +39,13 @@
   "tryExactLimit": "指定した幅と高さは固定されています。フォームの条件に合わせて、別の出力形式に変更するか、ファイルサイズの上限を引き上げてお試しください。",
   "lockAspectRatio": "縦横比を固定",
   "aspectRatioHint": "入力した幅と高さの比率で固定します。どちらかが空欄なら、最初の画像の縦横比を使います。",
-  "invalidSize": "200 KB のように、0 より大きい値を入力してください。",
+  "invalidSize": "200 KB や 2 MB のように、0 より大きい値を入力してください。",
   "invalidDimensions": "ピクセル数を整数で入力するか、600 × 400 のような寸法を貼り付けてください。",
   "viewResults": "結果を表示",
   "previewImage": "{name} をプレビュー",
   "closePreview": "プレビューを閉じる",
   "overLimitDetail": "上限 {limit} · 出力 {actual}",
-  "shrinkAndRetry": "縮小して再試行"
+  "shrinkAndRetry": "縮小して再試行",
+  "effectiveLimit": "現在の上限 {size}（{bytes} バイト）",
+  "previousResults": "前回の圧縮結果"
 }

@@ -1,13 +1,13 @@
 {
   "addImages": "Thêm ảnh",
-  "dropImages": "Thả ảnh vào đây",
+  "dropImages": "Thả ảnh hoặc dán ảnh chụp màn hình",
   "inputFormats": "JPG, PNG, WebP, AVIF, GIF và BMP",
   "privacy": "Ảnh của bạn được giữ trên thiết bị.",
   "clearAll": "Xóa tất cả",
   "removeImage": "Xóa {name}",
   "settings": "Cài đặt nén",
   "sizeLimit": "Dung lượng tối đa mỗi ảnh",
-  "sizeHint": "Chất lượng được điều chỉnh tự động. Để trống nếu không cần giới hạn. 1 KB = 1.000 byte.",
+  "sizeHint": "Chất lượng được điều chỉnh tự động. Dùng KB hoặc MB, hoặc để trống nếu không cần giới hạn.",
   "format": "Định dạng đầu ra",
   "jpgHint": "Hầu hết biểu mẫu đều chấp nhận JPG. Vùng trong suốt sẽ chuyển thành màu trắng.",
   "webpHint": "Thường nhẹ hơn JPG và giữ được vùng trong suốt.",
@@ -39,11 +39,13 @@
   "tryExactLimit": "Kích thước đã nhập được giữ cố định. Thử định dạng khác hoặc tăng giới hạn nếu biểu mẫu cho phép.",
   "lockAspectRatio": "Khóa tỷ lệ khung hình",
   "aspectRatioHint": "Khóa theo tỷ lệ đã nhập hoặc dùng tỷ lệ của ảnh đầu tiên nếu một ô còn trống.",
-  "invalidSize": "Nhập dung lượng lớn hơn 0, chẳng hạn 200 KB.",
+  "invalidSize": "Nhập dung lượng lớn hơn 0, chẳng hạn 200 KB hoặc 2 MB.",
   "invalidDimensions": "Nhập số pixel nguyên hoặc dán kích thước như 600 × 400.",
   "viewResults": "Xem kết quả",
   "previewImage": "Xem trước {name}",
   "closePreview": "Đóng bản xem trước",
   "overLimitDetail": "Giới hạn {limit} · Dung lượng đầu ra {actual}",
-  "shrinkAndRetry": "Giảm kích thước và thử lại"
+  "shrinkAndRetry": "Giảm kích thước và thử lại",
+  "effectiveLimit": "Giới hạn hiện tại {size} ({bytes} byte)",
+  "previousResults": "Kết quả trước đó"
 }

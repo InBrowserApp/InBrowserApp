@@ -1,13 +1,13 @@
 {
   "addImages": "Add images",
-  "dropImages": "Drop your images here",
+  "dropImages": "Drop images or paste a screenshot",
   "inputFormats": "JPG, PNG, WebP, AVIF, GIF and BMP",
   "privacy": "Your images stay on your device.",
   "clearAll": "Clear all",
   "removeImage": "Remove {name}",
   "settings": "Compression settings",
   "sizeLimit": "Maximum size per image",
-  "sizeHint": "Quality adjusts automatically. Leave blank for no limit. 1 KB = 1,000 bytes.",
+  "sizeHint": "Quality adjusts automatically. Use KB or MB, or leave blank for no limit.",
   "format": "Output format",
   "jpgHint": "Widely accepted by upload forms. Transparent areas turn white.",
   "webpHint": "Often smaller than JPG and keeps transparency.",
@@ -39,11 +39,13 @@
   "tryExactLimit": "The specified dimensions are fixed. Try another format or a higher limit if your form allows it.",
   "lockAspectRatio": "Lock aspect ratio",
   "aspectRatioHint": "Lock the entered ratio, or use the first image if a dimension is empty.",
-  "invalidSize": "Enter a positive size such as 200 KB.",
+  "invalidSize": "Enter a positive size such as 200 KB or 2 MB.",
   "invalidDimensions": "Enter whole pixels or paste dimensions such as 600 × 400.",
   "viewResults": "View results",
   "previewImage": "Preview {name}",
   "closePreview": "Close preview",
   "overLimitDetail": "Limit {limit} · Output {actual}",
-  "shrinkAndRetry": "Shrink and retry"
+  "shrinkAndRetry": "Shrink and retry",
+  "effectiveLimit": "Active limit {size} ({bytes} bytes)",
+  "previousResults": "Previous results"
 }

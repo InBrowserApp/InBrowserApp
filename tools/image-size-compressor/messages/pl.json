@@ -1,13 +1,13 @@
 {
   "addImages": "Dodaj obrazy",
-  "dropImages": "Upuść obrazy tutaj",
+  "dropImages": "Upuść obrazy lub wklej zrzut ekranu",
   "inputFormats": "JPG, PNG, WebP, AVIF, GIF i BMP",
   "privacy": "Obrazy pozostają na Twoim urządzeniu.",
   "clearAll": "Usuń wszystkie",
   "removeImage": "Usuń {name}",
   "settings": "Ustawienia kompresji",
   "sizeLimit": "Maksymalny rozmiar pliku obrazu",
-  "sizeHint": "Jakość jest dobierana automatycznie. Pozostaw pole puste, aby usunąć limit. 1 KB = 1000 bajtów.",
+  "sizeHint": "Jakość jest dobierana automatycznie. Użyj KB lub MB albo pozostaw pole puste, aby usunąć limit.",
   "format": "Format wyjściowy",
   "jpgHint": "Akceptowany przez większość formularzy. Przezroczyste obszary stają się białe.",
   "webpHint": "Pliki są często mniejsze niż JPG i zachowują przezroczystość.",
@@ -39,11 +39,13 @@
   "tryExactLimit": "Podane wymiary pozostają stałe. Wypróbuj inny format lub zwiększ limit, jeśli formularz na to pozwala.",
   "lockAspectRatio": "Zablokuj proporcje",
   "aspectRatioHint": "Zachowuje proporcje podanych wymiarów lub pierwszego obrazu, jeśli jedno pole jest puste.",
-  "invalidSize": "Wpisz rozmiar większy od zera, na przykład 200 KB.",
+  "invalidSize": "Wpisz rozmiar większy od zera, na przykład 200 KB lub 2 MB.",
   "invalidDimensions": "Wpisz wymiary w pełnych pikselach lub wklej zapis taki jak 600 × 400.",
   "viewResults": "Zobacz wyniki",
   "previewImage": "Wyświetl podgląd {name}",
   "closePreview": "Zamknij podgląd",
   "overLimitDetail": "Limit {limit} · Wynik {actual}",
-  "shrinkAndRetry": "Zmniejsz wymiary i spróbuj ponownie"
+  "shrinkAndRetry": "Zmniejsz wymiary i spróbuj ponownie",
+  "effectiveLimit": "Obowiązujący limit {size} (w bajtach: {bytes})",
+  "previousResults": "Poprzednie wyniki"
 }

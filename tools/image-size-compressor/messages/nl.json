@@ -1,13 +1,13 @@
 {
   "addImages": "Afbeeldingen toevoegen",
-  "dropImages": "Sleep je afbeeldingen hierheen",
+  "dropImages": "Sleep afbeeldingen hierheen of plak een schermafbeelding",
   "inputFormats": "JPG, PNG, WebP, AVIF, GIF en BMP",
   "privacy": "Je afbeeldingen blijven op je apparaat.",
   "clearAll": "Alles wissen",
   "removeImage": "{name} verwijderen",
   "settings": "Compressie-instellingen",
   "sizeLimit": "Maximale bestandsgrootte per afbeelding",
-  "sizeHint": "De kwaliteit wordt automatisch aangepast. Laat leeg als er geen limiet geldt. 1 KB = 1.000 bytes.",
+  "sizeHint": "De kwaliteit wordt automatisch aangepast. Geef de limiet op in KB of MB, of laat het veld leeg.",
   "format": "Uitvoerformaat",
   "jpgHint": "Veel uploadformulieren accepteren JPG. Transparante delen worden wit.",
   "webpHint": "Vaak kleiner dan JPG, met behoud van transparantie.",
@@ -39,11 +39,13 @@
   "tryExactLimit": "De opgegeven afmetingen blijven behouden. Probeer een ander formaat of een hogere limiet als het formulier dat toestaat.",
   "lockAspectRatio": "Beeldverhouding vergrendelen",
   "aspectRatioHint": "Vergrendel de ingevoerde verhouding of gebruik die van de eerste afbeelding als een afmeting leeg is.",
-  "invalidSize": "Voer een bestandsgrootte groter dan nul in, bijvoorbeeld 200 KB.",
+  "invalidSize": "Voer een bestandsgrootte groter dan nul in, bijvoorbeeld 200 KB of 2 MB.",
   "invalidDimensions": "Voer hele pixelwaarden in of plak afmetingen zoals 600 × 400.",
   "viewResults": "Resultaten bekijken",
   "previewImage": "Voorbeeld van {name}",
   "closePreview": "Voorbeeld sluiten",
   "overLimitDetail": "Limiet {limit} · Uitvoer {actual}",
-  "shrinkAndRetry": "Verkleinen en opnieuw proberen"
+  "shrinkAndRetry": "Verkleinen en opnieuw proberen",
+  "effectiveLimit": "Huidige limiet {size} ({bytes} bytes)",
+  "previousResults": "Vorige resultaten"
 }

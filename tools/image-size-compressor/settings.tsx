@@ -21,6 +21,7 @@ type Props = {
   settings: Settings
   onChange: (settings: Settings) => void
   validLimit: boolean
+  limitLabel: string
   firstFile: File | undefined
   canCompress: boolean
   progressLabel: string
@@ -38,6 +39,7 @@ export function CompressionSettings({
   settings,
   onChange,
   validLimit,
+  limitLabel,
   firstFile,
   canCompress,
   progressLabel,
@@ -73,7 +75,7 @@ export function CompressionSettings({
                 onChange({ ...settings, limitInput: event.target.value })
               }
             />
-            {!/kb\s*$/i.test(limitInput) && (
+            {!/(?:kb|mb)\s*$/i.test(limitInput.normalize("NFKC")) && (
               <span
                 className="pointer-events-none absolute inset-y-0 end-3 flex items-center text-sm text-muted-foreground"
                 aria-hidden="true"
@@ -91,6 +93,9 @@ export function CompressionSettings({
             }
           >
             {validLimit ? messages.sizeHint : messages.invalidSize}
+            {limitLabel && (
+              <span className="mt-1 block text-foreground">{limitLabel}</span>
+            )}
           </p>
         </div>
         <fieldset className="grid gap-1.5">
@@ -184,17 +189,6 @@ export function CompressionSettings({
           )}
         </div>
       </fieldset>
-      <Button
-        className="h-auto min-h-10 py-2 whitespace-normal aria-disabled:cursor-wait"
-        type="submit"
-        disabled={!progressLabel && !canCompress}
-        aria-disabled={Boolean(progressLabel)}
-      >
-        {progressLabel && (
-          <LoaderCircle aria-hidden="true" className="animate-spin" />
-        )}
-        {progressLabel || messages.compress}
-      </Button>
       <div
         className={
           resultSummary
@@ -212,6 +206,17 @@ export function CompressionSettings({
           </a>
         )}
       </div>
+      <Button
+        className="h-auto min-h-10 py-2 whitespace-normal aria-disabled:cursor-wait"
+        type="submit"
+        disabled={!progressLabel && !canCompress}
+        aria-disabled={Boolean(progressLabel)}
+      >
+        {progressLabel && (
+          <LoaderCircle aria-hidden="true" className="animate-spin" />
+        )}
+        {progressLabel || messages.compress}
+      </Button>
     </div>
   )
 }

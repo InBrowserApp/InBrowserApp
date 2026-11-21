@@ -87,7 +87,11 @@ it("enforces an exact per-file limit and exports only the ready files", async ()
   ).toEqual(["first.jpg", "second.jpg"])
 
   fireEvent.click(screen.getByRole("radio", { name: "WebP" }))
-  expect(screen.queryByText(messages.results)).toBeNull()
+  expect(screen.getByText(messages.results)).toBeTruthy()
+  expect(screen.getByRole("status").textContent).toBe(messages.previousResults)
+  expect(screen.getAllByRole("link", { name: messages.download })).toHaveLength(
+    2
+  )
 })
 
 it("retries with new settings, reports unsupported WebP, and updates its queue", async () => {
@@ -100,7 +104,7 @@ it("retries with new settings, reports unsupported WebP, and updates its queue",
   fireEvent.click(screen.getByRole("radio", { name: "WebP" }))
   fireEvent.click(screen.getByRole("radio", { name: messages.allowResize }))
   fireEvent.change(screen.getByRole("textbox", { name: messages.sizeLimit }), {
-    target: { value: "10,001" },
+    target: { value: "10.001" },
   })
   fireEvent.click(screen.getByRole("button", { name: messages.compress }))
   await screen.findByText(messages.unsupportedFormat)
@@ -342,4 +346,83 @@ it("retries with smaller dimensions while retaining ready images", async () => {
     screen.getByRole<HTMLInputElement>("radio", { name: messages.allowResize })
       .checked
   ).toBe(true)
+})
+
+it("removes only the matching result and keeps the previous batch's limits and downloads", async () => {
+  vi.mocked(compressImage)
+    .mockResolvedValueOnce(mockResult(197_000))
+    .mockResolvedValueOnce(mockResult(238_000))
+    .mockResolvedValueOnce(mockResult(140_000))
+  render(<ImageSizeCompressor lang="en" messages={messages} />)
+  fireEvent.change(screen.getByLabelText(messages.addImages), {
+    target: { files: [photos[0], photos[1]] },
+  })
+  const submit = screen.getByRole("button", { name: messages.compress })
+  const limit = screen.getByRole("textbox", { name: messages.sizeLimit })
+  fireEvent.click(submit)
+  await screen.findByText("1 of 2 within 200 KB")
+  const initialHref = (
+    await screen.findByRole("link", { name: messages.download })
+  ).getAttribute("href")
+  fireEvent.click(screen.getByRole("button", { name: "Remove second.jpg" }))
+  await screen.findByText("1 of 1 within 200 KB")
+  expect(
+    screen.getByRole("link", { name: messages.download }).getAttribute("href")
+  ).toBe(initialHref)
+  expect(
+    screen.queryByRole("button", { name: messages.shrinkAndRetry })
+  ).toBeNull()
+
+  fireEvent.change(limit, { target: { value: "150 KB" } })
+  expect(screen.getByRole("status").textContent).toBe(messages.previousResults)
+  expect(screen.getByText("1 of 1 within 200 KB")).toBeTruthy()
+  expect(
+    screen.getByRole("link", { name: messages.download }).getAttribute("href")
+  ).toBe(initialHref)
+  fireEvent.change(limit, { target: { value: "200 KB" } })
+  expect(screen.getByRole("status").textContent).toBe("1 of 1 ready")
+  expect(compressImage).toHaveBeenCalledTimes(2)
+
+  fireEvent.change(limit, { target: { value: "150 KB" } })
+  fireEvent.click(submit)
+  await screen.findByText("1 of 1 within 150 KB")
+  const latest = await screen.findByRole("link", { name: messages.download })
+  expect(latest.getAttribute("href")).not.toBe(initialHref)
+})
+
+it("pastes image files outside inputs and only compresses new files with the same settings", async () => {
+  vi.mocked(compressImage).mockResolvedValue(mockResult(190_000))
+  render(<ImageSizeCompressor lang="en" messages={messages} />)
+  const limit = screen.getByRole("textbox", { name: messages.sizeLimit })
+  fireEvent.change(limit, { target: { value: "2 MB" } })
+  expect(
+    screen.getByText("Active limit 2,000 KB (2,000,000 bytes)")
+  ).toBeTruthy()
+
+  const image = new File(["clip"], "screenshot.png", { type: "image/png" })
+  const pdf = new File(["text"], "form.pdf", { type: "application/pdf" })
+  const clipboardData = { files: [image, pdf] }
+  fireEvent.paste(limit, { clipboardData })
+  expect(
+    screen.queryByRole("button", { name: "Remove screenshot.png" })
+  ).toBeNull()
+  fireEvent.paste(document.body, { clipboardData })
+  expect(
+    screen.getByRole("button", { name: "Remove screenshot.png" })
+  ).toBeTruthy()
+  expect(screen.queryByRole("button", { name: "Remove form.pdf" })).toBeNull()
+  const submit = screen.getByRole("button", { name: messages.compress })
+  fireEvent.click(submit)
+  await screen.findByText("1 of 1 within 2,000 KB")
+
+  fireEvent.change(screen.getByLabelText(messages.addImages), {
+    target: { files: [photos[0]] },
+  })
+  expect(screen.getByRole("status").textContent).toBe(messages.previousResults)
+  fireEvent.click(submit)
+  await screen.findByText("2 of 2 within 2,000 KB")
+  expect(compressImage).toHaveBeenCalledTimes(2)
+  expect(compressImage).toHaveBeenLastCalledWith(photos[0], "jpg", 2_000_000, {
+    mode: "original",
+  })
 })
