@@ -1,0 +1,4 @@
+{
+  "name": "Compressione immagini con limite di peso",
+  "description": "Comprimi le immagini a 200 KB o entro un limite di peso a tua scelta. Imposta le dimensioni esatte in pixel e scarica file JPG o WebP con regolazione automatica della qualità."
+}

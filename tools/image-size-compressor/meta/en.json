@@ -1,0 +1,4 @@
+{
+  "name": "Image Size Compressor",
+  "description": "Compress images to 200 KB or a custom file size. Set exact pixel dimensions and download JPG or WebP files with automatic quality adjustment."
+}

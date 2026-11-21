@@ -1,0 +1,4 @@
+{
+  "name": "Compressor de imagens por tamanho",
+  "description": "Comprima imagens para 200 KB ou para um tamanho de arquivo personalizado. Defina as dimensões exatas em pixels e baixe arquivos JPG ou WebP com ajuste automático de qualidade."
+}

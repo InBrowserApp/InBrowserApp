@@ -599,6 +599,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Afbeeldingen comprimeren tot een maximale bestandsgrootte",
+    slug: "image-size-compressor",
+  },
+  {
+    category: "image",
     name: "Afbeelding naar AVIF-converter",
     slug: "image-to-avif-converter",
   },

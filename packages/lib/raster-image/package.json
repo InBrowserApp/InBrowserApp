@@ -8,6 +8,7 @@
     "./types": "./src/types.ts",
     "./failure": "./src/core/failure.ts",
     "./png": "./src/png.ts",
+    "./browser-canvas": "./src/browser-canvas.ts",
     "./filename": "./src/filename.ts",
     "./animation-size": "./src/animation-size.ts",
     "./animation-worker": "./src/animation-worker.ts",

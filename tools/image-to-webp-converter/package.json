@@ -8,6 +8,7 @@
     "./page": "./index.astro"
   },
   "dependencies": {
+    "@workspace/raster-image": "workspace:*",
     "@workspace/tool-sdk": "workspace:*",
     "@workspace/ui": "workspace:*"
   },

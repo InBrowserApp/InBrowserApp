@@ -599,6 +599,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "บีบอัดรูปภาพตามขนาดไฟล์",
+    slug: "image-size-compressor",
+  },
+  {
+    category: "image",
     name: "ตัวแปลงรูปภาพเป็น AVIF",
     slug: "image-to-avif-converter",
   },

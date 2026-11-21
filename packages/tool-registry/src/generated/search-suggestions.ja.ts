@@ -599,6 +599,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "画像を指定のファイルサイズ以下に圧縮",
+    slug: "image-size-compressor",
+  },
+  {
+    category: "image",
     name: "画像から AVIF へのコンバーター",
     slug: "image-to-avif-converter",
   },

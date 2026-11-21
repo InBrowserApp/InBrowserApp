@@ -1,0 +1,4 @@
+{
+  "name": "Bildkomprimering",
+  "description": "Komprimera bilder till 200 kB eller en valfri filstorlek. Ange exakta pixelmått och ladda ned JPG- eller WebP-filer med automatisk kvalitetsjustering."
+}

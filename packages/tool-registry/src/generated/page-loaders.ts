@@ -150,6 +150,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-palette-extractor": () => import("@tool/image-palette-extractor/page"),
   "image-redactor": () => import("@tool/image-redactor/page"),
   "image-resizer": () => import("@tool/image-resizer/page"),
+  "image-size-compressor": () => import("@tool/image-size-compressor/page"),
   "image-to-avif-converter": () => import("@tool/image-to-avif-converter/page"),
   "image-to-ico": () => import("@tool/image-to-ico/page"),
   "image-to-jpg-converter": () => import("@tool/image-to-jpg-converter/page"),
