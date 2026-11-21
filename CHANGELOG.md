@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.13.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.12.0...v2.13.0) (2026-11-21)
+
+
+### Features
+
+* add a browser-only video to GIF converter ([#1372](https://github.com/InBrowserApp/InBrowserApp/issues/1372)) ([c0eaa20](https://github.com/InBrowserApp/InBrowserApp/commit/c0eaa205c73a542aa389ff8d391587e030fc52c5))
+* compress images to a file size limit ([#1373](https://github.com/InBrowserApp/InBrowserApp/issues/1373)) ([08d5fc1](https://github.com/InBrowserApp/InBrowserApp/commit/08d5fc1aac4a5bc0b4d770191738d424d31fb1a6))
+
 ## [2.12.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.11.0...v2.12.0) (2026-11-19)
 
 
