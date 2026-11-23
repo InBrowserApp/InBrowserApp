@@ -154,7 +154,7 @@ function BillSplitter({
                   checked={method === option}
                   onChange={() => setMethod(option)}
                 />
-                <span className="flex min-h-11 cursor-pointer items-center justify-center rounded-lg px-1.5 py-1.5 text-center text-sm leading-tight font-medium break-words text-muted-foreground peer-checked:bg-background peer-checked:text-foreground peer-checked:shadow-xs peer-focus-visible:ring-2 peer-focus-visible:ring-ring sm:px-2">
+                <span className="flex min-h-11 cursor-pointer items-center justify-center rounded-lg border border-transparent px-1.5 py-1.5 text-center text-sm leading-tight font-medium break-words text-foreground peer-checked:border-foreground/50 peer-checked:bg-background peer-focus-visible:ring-2 peer-focus-visible:ring-ring sm:px-2">
                   {messages[option]}
                 </span>
               </label>
