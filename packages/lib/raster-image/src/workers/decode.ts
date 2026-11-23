@@ -24,6 +24,12 @@ import type {
   ImageTransform,
 } from "../types"
 
+const outputFormats = {
+  "image/png": MagickFormat.Png,
+  "image/jpeg": MagickFormat.Jpeg,
+  "image/webp": MagickFormat.WebP,
+}
+
 let source: Uint8Array
 let kind: SourceKind
 let info: ImageInfo
@@ -97,7 +103,7 @@ export function renderImage(
   transform?: ImageTransform
 ): Preview {
   const jpeg = output && "background" in output ? output : undefined
-  const webp = output && "format" in output
+  const mime = jpeg ? "image/jpeg" : output ? "image/webp" : "image/png"
   const rotation = transform?.rotation ?? 0
   const size = transform?.maxDimension
   if (
@@ -153,21 +159,18 @@ export function renderImage(
     if (output) image.quality = output.quality
     // Q8 decoding already reduces source precision; encode the same 8-bit pixels.
     image.depth = 8
-    return image.write(
-      jpeg ? MagickFormat.Jpeg : webp ? MagickFormat.WebP : MagickFormat.Png,
-      (bytes) => ({
-        mime: jpeg ? "image/jpeg" : webp ? "image/webp" : "image/png",
-        bytes: new Uint8Array(bytes),
-        width: image.width,
-        height: image.height,
-        fullWidth,
-        fullHeight,
-        delay: image.animationTicksPerSecond
-          ? (image.animationDelay * 1000) / image.animationTicksPerSecond
-          : 0,
-        depth,
-        profile,
-      })
-    )
+    return image.write(outputFormats[mime], (bytes) => ({
+      mime,
+      bytes: new Uint8Array(bytes),
+      width: image.width,
+      height: image.height,
+      fullWidth,
+      fullHeight,
+      delay: image.animationTicksPerSecond
+        ? (image.animationDelay * 1000) / image.animationTicksPerSecond
+        : 0,
+      depth,
+      profile,
+    }))
   })
 }

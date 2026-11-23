@@ -15,7 +15,7 @@ import { Results } from "./results"
 import { ImageQueue, type Entry } from "./image-queue"
 
 const accept =
-  ".jpg,.jpeg,.png,.apng,.gif,.bmp,.webp,.avif,.tif,.tiff,.ico,.heic,.heif,.jxl,.jp2,.j2k,.j2c,.jpc"
+  ".jpg,.jpeg,.jpe,.jfif,.png,.apng,.gif,.bmp,.dib,.webp,.avif,.tif,.tiff,.btf,.tf8,.bigtiff,.ico,.heic,.heif,.jxl,.jp2,.j2k,.j2c,.jpc"
 
 type Progress = { file: number; image?: { current: number; total: number } }
 
