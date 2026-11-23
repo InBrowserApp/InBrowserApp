@@ -178,6 +178,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "bic-swift-validator",
   },
   {
+    category: "misc",
+    name: "Калькулятор разделения счёта",
+    slug: "bill-splitter",
+  },
+  {
     category: "random",
     name: "Генератор мнемонических фраз BIP39",
     slug: "bip39-mnemonic-generator",

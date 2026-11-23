@@ -178,6 +178,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "bic-swift-validator",
   },
   {
+    category: "misc",
+    name: "Công cụ chia hóa đơn",
+    slug: "bill-splitter",
+  },
+  {
     category: "random",
     name: "Trình tạo cụm từ ghi nhớ BIP39",
     slug: "bip39-mnemonic-generator",
