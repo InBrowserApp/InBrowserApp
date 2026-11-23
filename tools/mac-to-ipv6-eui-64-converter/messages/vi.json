@@ -5,6 +5,8 @@
   "invalidPrefix": "Nhập tiền tố mạng /64 có các bit phần máy chủ đều bằng 0, chẳng hạn như 2001:db8:1:2::/64.",
   "resultLabel": "Địa chỉ IPv6",
   "exampleLabel": "Thử ví dụ",
+  "linkLocalPrefixLabel": "Dùng tiền tố link-local",
+  "ulaPrefixLabel": "Dùng ví dụ ULA",
   "copyLabel": "Sao chép",
   "copiedLabel": "Đã sao chép",
   "copyFailedLabel": "Sao chép thất bại"

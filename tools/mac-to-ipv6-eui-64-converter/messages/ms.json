@@ -5,6 +5,8 @@
   "invalidPrefix": "Masukkan awalan rangkaian /64 dengan semua bit hos bernilai sifar, seperti 2001:db8:1:2::/64.",
   "resultLabel": "Alamat IPv6",
   "exampleLabel": "Cuba contoh",
+  "linkLocalPrefixLabel": "Guna awalan link-local",
+  "ulaPrefixLabel": "Guna contoh ULA",
   "copyLabel": "Salin",
   "copiedLabel": "Disalin",
   "copyFailedLabel": "Gagal menyalin"

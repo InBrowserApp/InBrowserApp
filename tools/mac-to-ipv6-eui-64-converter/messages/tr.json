@@ -5,6 +5,8 @@
   "invalidPrefix": "2001:db8:1:2::/64 gibi, ana bilgisayar bitleri sıfır olan bir /64 ağ öneki girin.",
   "resultLabel": "IPv6 adresi",
   "exampleLabel": "Örneği dene",
+  "linkLocalPrefixLabel": "Link-local önekini kullan",
+  "ulaPrefixLabel": "ULA örneğini kullan",
   "copyLabel": "Kopyala",
   "copiedLabel": "Kopyalandı",
   "copyFailedLabel": "Kopyalanamadı"

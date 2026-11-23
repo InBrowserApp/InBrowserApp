@@ -5,6 +5,8 @@
   "invalidPrefix": "Geben Sie ein /64-Netzpräfix ein, bei dem alle Hostbits null sind, zum Beispiel 2001:db8:1:2::/64.",
   "resultLabel": "IPv6-Adresse",
   "exampleLabel": "Beispiel ausprobieren",
+  "linkLocalPrefixLabel": "Link-Local-Präfix verwenden",
+  "ulaPrefixLabel": "ULA-Beispiel verwenden",
   "copyLabel": "Kopieren",
   "copiedLabel": "Kopiert",
   "copyFailedLabel": "Kopieren fehlgeschlagen"

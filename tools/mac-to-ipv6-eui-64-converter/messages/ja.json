@@ -5,6 +5,8 @@
   "invalidPrefix": "ホスト部がすべて 0 の /64 ネットワークプレフィックスを入力してください（例：2001:db8:1:2::/64）。",
   "resultLabel": "IPv6 アドレス",
   "exampleLabel": "入力例を試す",
+  "linkLocalPrefixLabel": "リンクローカルを使う",
+  "ulaPrefixLabel": "ULA の例を使う",
   "copyLabel": "コピー",
   "copiedLabel": "コピーしました",
   "copyFailedLabel": "コピーできませんでした"

@@ -5,6 +5,8 @@
   "invalidPrefix": "Enter a /64 network prefix with zero host bits, such as 2001:db8:1:2::/64.",
   "resultLabel": "IPv6 address",
   "exampleLabel": "Try example",
+  "linkLocalPrefixLabel": "Use link-local prefix",
+  "ulaPrefixLabel": "Use ULA example",
   "copyLabel": "Copy",
   "copiedLabel": "Copied",
   "copyFailedLabel": "Copy failed"

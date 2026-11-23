@@ -5,6 +5,8 @@
   "invalidPrefix": "Introduce un prefijo de red /64 con los bits de host a cero, como 2001:db8:1:2::/64.",
   "resultLabel": "Dirección IPv6",
   "exampleLabel": "Probar un ejemplo",
+  "linkLocalPrefixLabel": "Usar prefijo de enlace local",
+  "ulaPrefixLabel": "Usar ejemplo ULA",
   "copyLabel": "Copiar",
   "copiedLabel": "Copiado",
   "copyFailedLabel": "No se pudo copiar"

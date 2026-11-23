@@ -5,6 +5,8 @@
   "invalidPrefix": "ป้อนพรีฟิกซ์เครือข่าย /64 ที่บิตส่วนโฮสต์เป็นศูนย์ทั้งหมด เช่น 2001:db8:1:2::/64",
   "resultLabel": "ที่อยู่ IPv6",
   "exampleLabel": "ลองใช้ตัวอย่าง",
+  "linkLocalPrefixLabel": "ใช้พรีฟิกซ์ Link-Local",
+  "ulaPrefixLabel": "ใช้ตัวอย่าง ULA",
   "copyLabel": "คัดลอก",
   "copiedLabel": "คัดลอกแล้ว",
   "copyFailedLabel": "คัดลอกไม่สำเร็จ"

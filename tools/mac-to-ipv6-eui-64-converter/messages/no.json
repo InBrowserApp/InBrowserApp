@@ -5,6 +5,8 @@
   "invalidPrefix": "Skriv inn et /64-nettverksprefiks der alle vertsbitene er null, for eksempel 2001:db8:1:2::/64.",
   "resultLabel": "IPv6-adresse",
   "exampleLabel": "Prøv et eksempel",
+  "linkLocalPrefixLabel": "Bruk link-local-prefiks",
+  "ulaPrefixLabel": "Bruk ULA-eksempel",
   "copyLabel": "Kopier",
   "copiedLabel": "Kopiert",
   "copyFailedLabel": "Kunne ikke kopiere"

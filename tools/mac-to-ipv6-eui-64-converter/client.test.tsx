@@ -15,6 +15,32 @@ afterEach(() => {
   vi.restoreAllMocks()
 })
 
+test.each([
+  [messages.linkLocalPrefixLabel, "fe80::/64", "fe80::ff:fe00:1"],
+  [
+    messages.ulaPrefixLabel,
+    "fd12:3456:789a:1::/64",
+    "fd12:3456:789a:1:0:ff:fe00:1",
+  ],
+])(
+  "applies %s while keeping the entered MAC address",
+  (label, prefix, ipv6) => {
+    render(<MacToIpv6Client messages={messages} />)
+    const mac = screen.getByLabelText<HTMLInputElement>(messages.macLabel)
+    fireEvent.change(mac, { target: { value: "0200.0000.0001" } })
+
+    fireEvent.click(screen.getByRole("button", { name: label }))
+
+    expect(mac.value).toBe("0200.0000.0001")
+    expect(
+      screen.getByLabelText<HTMLInputElement>(messages.prefixLabel).value
+    ).toBe(prefix)
+    expect(
+      screen.getByRole("status", { name: messages.resultLabel }).textContent
+    ).toBe(ipv6)
+  }
+)
+
 test("fills the example, updates the address, and copies the latest result", async () => {
   const writeText = vi
     .spyOn(navigator.clipboard, "writeText")

@@ -17,6 +17,8 @@ type Messages = typeof import("./messages/en.json")
 
 const EXAMPLE_MAC = "00:11:22:33:44:55"
 const EXAMPLE_PREFIX = "2001:db8:1:2::/64"
+const LINK_LOCAL_PREFIX = "fe80::/64"
+const ULA_EXAMPLE_PREFIX = "fd12:3456:789a:1::/64"
 
 function MacToIpv6Client({ messages }: Readonly<{ messages: Messages }>) {
   const id = useId()
@@ -86,18 +88,37 @@ function MacToIpv6Client({ messages }: Readonly<{ messages: Messages }>) {
             )}
           </Field>
         </div>
-        <Button
-          type="button"
-          variant="outline"
-          size="sm"
-          className="w-fit"
-          onClick={() => {
-            setMac(EXAMPLE_MAC)
-            setPrefix(EXAMPLE_PREFIX)
-          }}
-        >
-          {messages.exampleLabel}
-        </Button>
+        <div className="flex flex-wrap gap-2">
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            onClick={() => {
+              setMac(EXAMPLE_MAC)
+              setPrefix(EXAMPLE_PREFIX)
+            }}
+          >
+            {messages.exampleLabel}
+          </Button>
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            aria-controls={prefixId}
+            onClick={() => setPrefix(LINK_LOCAL_PREFIX)}
+          >
+            {messages.linkLocalPrefixLabel}
+          </Button>
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            aria-controls={prefixId}
+            onClick={() => setPrefix(ULA_EXAMPLE_PREFIX)}
+          >
+            {messages.ulaPrefixLabel}
+          </Button>
+        </div>
         <div className="grid min-w-0 gap-2 rounded-lg border bg-muted/40 p-4">
           <p id={resultId} className="text-sm font-medium">
             {messages.resultLabel}

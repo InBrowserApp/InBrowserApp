@@ -5,6 +5,8 @@
   "invalidPrefix": "Ange ett /64-nätverksprefix där alla värdbitar är noll, till exempel 2001:db8:1:2::/64.",
   "resultLabel": "IPv6-adress",
   "exampleLabel": "Testa exemplet",
+  "linkLocalPrefixLabel": "Använd link-local-prefix",
+  "ulaPrefixLabel": "Använd ULA-exempel",
   "copyLabel": "Kopiera",
   "copiedLabel": "Kopierat",
   "copyFailedLabel": "Det gick inte att kopiera"

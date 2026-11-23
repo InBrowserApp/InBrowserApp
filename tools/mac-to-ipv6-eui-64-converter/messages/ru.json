@@ -5,6 +5,8 @@
   "invalidPrefix": "Введите сетевой префикс /64 с нулевыми битами узла, например 2001:db8:1:2::/64.",
   "resultLabel": "IPv6-адрес",
   "exampleLabel": "Попробовать пример",
+  "linkLocalPrefixLabel": "Подставить префикс link-local",
+  "ulaPrefixLabel": "Подставить пример ULA",
   "copyLabel": "Скопировать",
   "copiedLabel": "Скопировано",
   "copyFailedLabel": "Не удалось скопировать"

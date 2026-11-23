@@ -5,6 +5,8 @@
   "invalidPrefix": "Inserisci un prefisso di rete /64 con tutti i bit dell’host a zero, ad esempio 2001:db8:1:2::/64.",
   "resultLabel": "Indirizzo IPv6",
   "exampleLabel": "Prova un esempio",
+  "linkLocalPrefixLabel": "Usa prefisso link-local",
+  "ulaPrefixLabel": "Usa esempio ULA",
   "copyLabel": "Copia",
   "copiedLabel": "Copiato",
   "copyFailedLabel": "Copia non riuscita"

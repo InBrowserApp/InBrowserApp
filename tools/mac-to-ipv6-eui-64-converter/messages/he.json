@@ -5,6 +5,8 @@
   "invalidPrefix": "הזינו קידומת רשת באורך ⁦/64⁩ שבה כל סיביות המארח הן אפס, למשל ⁦2001:db8:1:2::/64⁩.",
   "resultLabel": "כתובת IPv6",
   "exampleLabel": "נסו דוגמה",
+  "linkLocalPrefixLabel": "השתמשו בקידומת מקומית לקישור",
+  "ulaPrefixLabel": "השתמשו בדוגמת ULA",
   "copyLabel": "העתקה",
   "copiedLabel": "הועתק",
   "copyFailedLabel": "ההעתקה נכשלה"
