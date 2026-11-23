@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "screen-recording",
     "downloadLabel": "रिकॉर्डिंग डाउनलोड करें",
     "clearLabel": "साफ़ करें",
-    "formatUnknown": "अज्ञात"
+    "formatUnknown": "अज्ञात",
+    "trimLabel": "रिकॉर्डिंग काटें"
   },
   "alerts": {
     "unsupportedTitle": "स्क्रीन रिकॉर्डिंग समर्थित नहीं है",

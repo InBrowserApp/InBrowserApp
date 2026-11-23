@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "skjermopptak",
     "downloadLabel": "Last ned opptak",
     "clearLabel": "Tom",
-    "formatUnknown": "Ukjent"
+    "formatUnknown": "Ukjent",
+    "trimLabel": "Trim opptaket"
   },
   "alerts": {
     "unsupportedTitle": "Skjermopptak støttes ikke",

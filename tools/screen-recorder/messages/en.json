@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "screen-recording",
     "downloadLabel": "Download recording",
     "clearLabel": "Clear",
-    "formatUnknown": "Unknown"
+    "formatUnknown": "Unknown",
+    "trimLabel": "Trim recording"
   },
   "alerts": {
     "unsupportedTitle": "Screen recording is not supported",

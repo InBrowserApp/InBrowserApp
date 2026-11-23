@@ -7,9 +7,13 @@ import type { ScreenRecorderMessages } from "./types"
 
 type ScreenRecorderClientProps = Readonly<{
   messages: ScreenRecorderMessages
+  trimmerHref?: string
 }>
 
-function ScreenRecorderClient({ messages }: ScreenRecorderClientProps) {
+function ScreenRecorderClient({
+  messages,
+  trimmerHref,
+}: ScreenRecorderClientProps) {
   const { actions, state } = useScreenRecorder(messages)
 
   return (
@@ -50,6 +54,7 @@ function ScreenRecorderClient({ messages }: ScreenRecorderClientProps) {
         fileName={state.fileName}
         fileSizeLabel={state.fileSizeLabel}
         downloadName={state.downloadName}
+        trimmerHref={trimmerHref}
         onFileNameChange={actions.setFileName}
         onClear={actions.clearRecording}
       />

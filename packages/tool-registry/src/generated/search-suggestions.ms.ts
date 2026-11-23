@@ -1533,6 +1533,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "video-to-gif",
   },
   {
+    category: "misc",
+    name: "Pemangkas Video",
+    slug: "video-trimmer",
+  },
+  {
     category: "text",
     name: "Pengesah VIN",
     slug: "vin-validator",

@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "screen-recording",
     "downloadLabel": "ดาวน์โหลดการบันทึก",
     "clearLabel": "ล้าง",
-    "formatUnknown": "ไม่ทราบ"
+    "formatUnknown": "ไม่ทราบ",
+    "trimLabel": "ตัดวิดีโอที่บันทึก"
   },
   "alerts": {
     "unsupportedTitle": "ไม่รองรับการบันทึกหน้าจอ",

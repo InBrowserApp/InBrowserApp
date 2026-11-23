@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "동영상 선택",
+  "replaceVideo": "동영상 바꾸기",
+  "dropVideo": "또는 MP4나 WebM 파일을 여기에 놓으세요",
+  "loading": "동영상 여는 중…",
+  "videoError": "동영상을 열 수 없습니다. 다른 MP4 또는 WebM 파일을 사용해 보세요.",
+  "recordingError": "녹화 영상을 열 수 없습니다. 화면 녹화기에서 다시 시도하거나 동영상 파일을 선택하세요.",
+  "videoPreview": "동영상 미리보기",
+  "start": "시작 시간 (초)",
+  "end": "끝 시간 (초)",
+  "rangeError": "동영상 길이 안에서 끝 시간보다 이른 시작 시간을 입력하세요.",
+  "clipDuration": "클립 길이",
+  "previewClip": "클립 미리보기",
+  "format": "출력 형식",
+  "exportClip": "클립 내보내기",
+  "exporting": "클립 내보내는 중…",
+  "cancel": "취소",
+  "exportError": "클립을 내보낼 수 없습니다. 다른 출력 형식을 선택하거나 해당 동영상 및 오디오 코덱을 지원하는 브라우저를 사용해 보세요.",
+  "ready": "클립이 준비되었습니다",
+  "downloadClip": "클립 다운로드"
+}

@@ -51,6 +51,7 @@ const messages: ScreenRecorderMessages = {
     fileNameLabel: "File name",
     fileNamePlaceholder: "screen-recording",
     downloadLabel: "Download recording",
+    trimLabel: "Trim recording",
     clearLabel: "Clear",
     formatUnknown: "Unknown",
   },
@@ -130,7 +131,12 @@ describe("ScreenRecorderClient", () => {
       .mockResolvedValue(createStream([createTrack("audio")]))
     setMediaDevices({ getDisplayMedia, getUserMedia })
 
-    render(<ScreenRecorderClient messages={messages} />)
+    render(
+      <ScreenRecorderClient
+        messages={messages}
+        trimmerHref="/de/tools/video-trimmer/"
+      />
+    )
 
     fireEvent.click(await screen.findByRole("switch", { name: "Microphone" }))
     fireEvent.click(screen.getByRole("button", { name: "Start recording" }))
@@ -166,6 +172,14 @@ describe("ScreenRecorderClient", () => {
     await waitFor(() => {
       expect(link.getAttribute("download")).toBe("demo recording.webm")
     })
+
+    const trim = screen.getByRole("link", { name: "Trim recording" })
+    const trimmer = new URL(trim.getAttribute("href")!, "https://inbrowser.app")
+    const handoff = new URLSearchParams(trimmer.hash.slice(1))
+    expect(trimmer.pathname).toBe("/de/tools/video-trimmer/")
+    expect(handoff.get("recording")).toBe("blob:screen-recording")
+    expect(handoff.get("name")).toBe("demo recording.webm")
+    expect(trim.getAttribute("target")).toBe("_blank")
 
     fireEvent.click(screen.getByRole("button", { name: "Clear" }))
     await waitFor(() => {

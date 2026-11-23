@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "screen-recording",
     "downloadLabel": "Tải bản ghi xuống",
     "clearLabel": "Xóa",
-    "formatUnknown": "Không xác định"
+    "formatUnknown": "Không xác định",
+    "trimLabel": "Cắt bản ghi"
   },
   "alerts": {
     "unsupportedTitle": "Không hỗ trợ ghi màn hình",

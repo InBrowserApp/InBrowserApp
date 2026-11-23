@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "grabacion-pantalla",
     "downloadLabel": "Descargar grabación",
     "clearLabel": "Borrar",
-    "formatUnknown": "Desconocido"
+    "formatUnknown": "Desconocido",
+    "trimLabel": "Recortar grabación"
   },
   "alerts": {
     "unsupportedTitle": "La grabación de pantalla no es compatible",

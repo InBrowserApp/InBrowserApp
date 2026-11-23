@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "選擇影片",
+  "replaceVideo": "更換影片",
+  "dropVideo": "或將 MP4 或 WebM 檔案拖放至此",
+  "loading": "正在開啟影片…",
+  "videoError": "無法開啟這部影片。請試試其他 MP4 或 WebM 檔案。",
+  "recordingError": "無法開啟錄影。請從螢幕錄影器重試，或選擇影片檔案。",
+  "videoPreview": "影片預覽",
+  "start": "開始時間（秒）",
+  "end": "結束時間（秒）",
+  "rangeError": "輸入影片長度範圍內的起訖時間，開始時間須早於結束時間。",
+  "clipDuration": "片段長度",
+  "previewClip": "預覽片段",
+  "format": "輸出格式",
+  "exportClip": "匯出片段",
+  "exporting": "正在匯出片段…",
+  "cancel": "取消",
+  "exportError": "無法匯出這個片段。請試試另一種輸出格式，或換用支援這些影像和音訊編解碼器的瀏覽器。",
+  "ready": "片段已就緒",
+  "downloadClip": "下載片段"
+}

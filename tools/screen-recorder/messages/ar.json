@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "screen-recording",
     "downloadLabel": "تنزيل التسجيل",
     "clearLabel": "مسح",
-    "formatUnknown": "غير معروف"
+    "formatUnknown": "غير معروف",
+    "trimLabel": "قص التسجيل"
   },
   "alerts": {
     "unsupportedTitle": "تسجيل الشاشة غير مدعوم",

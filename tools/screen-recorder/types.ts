@@ -37,6 +37,7 @@ type OutputMessages = Readonly<{
   fileNameLabel: string
   fileNamePlaceholder: string
   downloadLabel: string
+  trimLabel: string
   clearLabel: string
   formatUnknown: string
 }>

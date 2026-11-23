@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "screen-recording",
     "downloadLabel": "Скачать запись",
     "clearLabel": "Очистить",
-    "formatUnknown": "Неизвестно"
+    "formatUnknown": "Неизвестно",
+    "trimLabel": "Обрезать запись"
   },
   "alerts": {
     "unsupportedTitle": "Запись экрана не поддерживается",

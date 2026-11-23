@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Wybierz plik wideo",
+  "replaceVideo": "Zmień plik wideo",
+  "dropVideo": "lub przeciągnij tutaj plik MP4 lub WebM",
+  "loading": "Otwieranie wideo…",
+  "videoError": "Nie udało się otworzyć filmu. Wypróbuj inny plik MP4 lub WebM.",
+  "recordingError": "Nie udało się otworzyć nagrania. Spróbuj ponownie z poziomu Rejestratora ekranu lub wybierz plik wideo.",
+  "videoPreview": "Podgląd wideo",
+  "start": "Początek (sekundy)",
+  "end": "Koniec (sekundy)",
+  "rangeError": "Ustaw początek przed końcem. Oba czasy muszą mieścić się w czasie trwania filmu.",
+  "clipDuration": "Czas trwania fragmentu",
+  "previewClip": "Obejrzyj fragment",
+  "format": "Format wyjściowy",
+  "exportClip": "Eksportuj fragment",
+  "exporting": "Eksportowanie fragmentu…",
+  "cancel": "Anuluj",
+  "exportError": "Nie udało się wyeksportować fragmentu. Wybierz drugi format wyjściowy lub użyj przeglądarki obsługującej te kodeki wideo i audio.",
+  "ready": "Fragment jest gotowy",
+  "downloadClip": "Pobierz fragment"
+}

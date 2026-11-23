@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Chọn video",
+  "replaceVideo": "Đổi video",
+  "dropVideo": "hoặc thả tệp MP4 hay WebM vào đây",
+  "loading": "Đang mở video…",
+  "videoError": "Không thể mở video này. Hãy thử một tệp MP4 hoặc WebM khác.",
+  "recordingError": "Không thể mở bản ghi. Hãy thử lại từ Trình ghi màn hình hoặc chọn một tệp video.",
+  "videoPreview": "Xem trước video",
+  "start": "Bắt đầu (giây)",
+  "end": "Kết thúc (giây)",
+  "rangeError": "Nhập thời điểm bắt đầu trước thời điểm kết thúc, cả hai đều trong thời lượng video.",
+  "clipDuration": "Thời lượng đoạn cắt",
+  "previewClip": "Xem trước đoạn cắt",
+  "format": "Định dạng đầu ra",
+  "exportClip": "Xuất đoạn cắt",
+  "exporting": "Đang xuất đoạn cắt…",
+  "cancel": "Hủy",
+  "exportError": "Không thể xuất đoạn cắt này. Hãy thử định dạng đầu ra khác hoặc dùng trình duyệt hỗ trợ codec video và âm thanh tương ứng.",
+  "ready": "Đoạn cắt đã sẵn sàng",
+  "downloadClip": "Tải đoạn cắt xuống"
+}
