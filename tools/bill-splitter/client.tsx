@@ -185,7 +185,7 @@ function BillSplitter({
                 <Input
                   className="h-10"
                   aria-label={`${messages.names} · ${placeholder}`}
-                  dir="auto"
+                  dir={name ? "auto" : undefined}
                   value={name}
                   placeholder={placeholder}
                   onChange={(event) =>
