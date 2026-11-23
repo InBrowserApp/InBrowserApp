@@ -1,6 +1,6 @@
 // @vitest-environment node
-import { BlobReader, TextWriter, ZipReader } from "@zip.js/zip.js"
-import { expect, test } from "vitest"
+import { BlobReader, TextWriter, ZipReader, ZipWriter } from "@zip.js/zip.js"
+import { expect, test, vi } from "vitest"
 import { archiveImages } from "./zip"
 
 const image = {
@@ -33,8 +33,16 @@ test("propagates cancellation before opening the ZIP writer", async () => {
   )
 })
 
-test("discards a failed archive and exposes the original error", async () => {
-  await expect(
-    archiveImages([image, image], new AbortController().signal)
-  ).rejects.toThrow(/already exists/i)
+test("preserves the original ZIP error when finalization also fails", async () => {
+  const close = vi
+    .spyOn(ZipWriter.prototype, "close")
+    .mockRejectedValueOnce(new Error("close failed"))
+  try {
+    await expect(
+      archiveImages([image, image], new AbortController().signal)
+    ).rejects.toThrow(/already exists/i)
+    expect(close).toHaveBeenCalledOnce()
+  } finally {
+    close.mockRestore()
+  }
 })
