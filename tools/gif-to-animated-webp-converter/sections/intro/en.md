@@ -11,3 +11,5 @@ Scale changes every frame before encoding, which is useful when a GIF is larger 
 ## Privacy and limitations
 
 The conversion runs in your browser. Lossless WebP usually compresses GIF-style animation better, but it cannot guarantee every output will be smaller; tiny or already optimized GIFs can grow because the WebP container still has overhead. Changing scale, speed, or loop behavior requires frame decoding and can use significant memory for very large GIFs. If the source GIF does not contain loop metadata, the default export plays once unless you choose infinite or custom looping.
+
+Have an animated WebP? Use [Animated WebP to GIF](/tools/animated-webp-to-gif-converter/) to convert it in the other direction.

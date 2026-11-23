@@ -10,7 +10,10 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "aes-decryptor": () => import("@tool/aes-decryptor/page"),
   "aes-encryptor": () => import("@tool/aes-encryptor/page"),
   "animated-webp-maker": () => import("@tool/animated-webp-maker/page"),
+  "animated-webp-to-gif-converter": () =>
+    import("@tool/animated-webp-to-gif-converter/page"),
   "apng-maker": () => import("@tool/apng-maker/page"),
+  "apng-to-gif-converter": () => import("@tool/apng-to-gif-converter/page"),
   "archive-viewer": () => import("@tool/archive-viewer/page"),
   "argon2-hash-password": () => import("@tool/argon2-hash-password/page"),
   "argon2-hash-password-verifier": () =>

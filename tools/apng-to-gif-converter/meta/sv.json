@@ -1,0 +1,4 @@
+{
+  "name": "APNG till GIF-konverterare",
+  "description": "Konvertera animerad PNG (.apng eller .png) till GIF i webbläsaren. Behåll bildrutornas visningstid och antalet uppspelningar. Förhandsvisa och hämta GIF-filen utan att ladda upp originalet."
+}

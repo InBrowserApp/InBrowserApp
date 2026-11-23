@@ -13,3 +13,5 @@ This tool turns animated GIF files into APNG files, which are PNG files that can
 - APNG outputs use the `.png` extension even though they remain animated.
 - Large or high-frame-count GIFs can take time and may produce larger files than the source.
 - Some older apps and platforms still show only the first frame of an APNG.
+
+Have an animated PNG? Use [APNG to GIF](/tools/apng-to-gif-converter/) to convert it in the other direction.

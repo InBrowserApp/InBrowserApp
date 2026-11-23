@@ -1,0 +1,12 @@
+{
+  "choose": "Chọn tệp",
+  "replace": "Đổi tệp",
+  "drop": "Hoặc thả ảnh động vào đây",
+  "privacy": "Tệp của bạn vẫn ở trên thiết bị này.",
+  "cancel": "Hủy",
+  "invalidApng": "Hãy chọn một tệp PNG động hợp lệ (.apng hoặc .png). Ảnh PNG tĩnh không có dữ liệu hoạt ảnh để chuyển đổi.",
+  "invalidWebp": "Hãy chọn một tệp WebP động hợp lệ (.webp). Ảnh WebP tĩnh không có dữ liệu hoạt ảnh để chuyển đổi.",
+  "limit": "Ảnh động này vượt quá giới hạn kích thước hoặc số lượt phát của GIF.",
+  "failed": "Không tạo được GIF. Hãy thử dùng ảnh động nhỏ hơn hoặc xuất lại tệp nguồn.",
+  "ready": "GIF đã sẵn sàng."
+}

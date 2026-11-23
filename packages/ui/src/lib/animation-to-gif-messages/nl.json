@@ -1,0 +1,12 @@
+{
+  "choose": "Bestand kiezen",
+  "replace": "Ander bestand kiezen",
+  "drop": "Of sleep hier een animatie naartoe",
+  "privacy": "Je bestand blijft op dit apparaat.",
+  "cancel": "Annuleren",
+  "invalidApng": "Kies een geldig geanimeerd PNG-bestand (.apng of .png). Een stilstaande PNG bevat geen animatie.",
+  "invalidWebp": "Kies een geldig geanimeerd WebP-bestand (.webp). Een stilstaande WebP bevat geen animatie.",
+  "limit": "De afmetingen of het aantal afspeelbeurten overschrijden de limieten van GIF.",
+  "failed": "Kan de GIF niet maken. Probeer een kleinere animatie of exporteer het bronbestand opnieuw.",
+  "ready": "Je GIF is klaar."
+}

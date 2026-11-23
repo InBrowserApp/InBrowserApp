@@ -29,8 +29,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "動態 WebP 轉 GIF 轉換器",
+    slug: "animated-webp-to-gif-converter",
+  },
+  {
+    category: "image",
     name: "APNG 製作器",
     slug: "apng-maker",
+  },
+  {
+    category: "image",
+    name: "APNG 轉 GIF 轉換器",
+    slug: "apng-to-gif-converter",
   },
   {
     category: "developer",

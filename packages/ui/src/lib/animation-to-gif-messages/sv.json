@@ -1,0 +1,12 @@
+{
+  "choose": "Välj fil",
+  "replace": "Byt fil",
+  "drop": "Eller släpp en animation här",
+  "privacy": "Filen stannar på den här enheten.",
+  "cancel": "Avbryt",
+  "invalidApng": "Välj en giltig animerad PNG-fil (.apng eller .png). En stillbild i PNG-format innehåller ingen animation.",
+  "invalidWebp": "Välj en giltig animerad WebP-fil (.webp). En stillbild i WebP-format innehåller ingen animation.",
+  "limit": "Animationens mått eller antal uppspelningar överskrider gränserna för GIF.",
+  "failed": "Det gick inte att skapa GIF-filen. Prova en mindre animation eller exportera källfilen igen.",
+  "ready": "Din GIF är klar."
+}

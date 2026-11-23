@@ -29,8 +29,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "ממיר WebP מונפש ל־GIF",
+    slug: "animated-webp-to-gif-converter",
+  },
+  {
+    category: "image",
     name: "יוצר APNG",
     slug: "apng-maker",
+  },
+  {
+    category: "image",
+    name: "ממיר APNG ל־GIF",
+    slug: "apng-to-gif-converter",
   },
   {
     category: "developer",

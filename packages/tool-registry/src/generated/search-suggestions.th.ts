@@ -29,8 +29,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "ตัวแปลง WebP แบบเคลื่อนไหวเป็น GIF",
+    slug: "animated-webp-to-gif-converter",
+  },
+  {
+    category: "image",
     name: "เครื่องมือสร้าง APNG",
     slug: "apng-maker",
+  },
+  {
+    category: "image",
+    name: "ตัวแปลง APNG เป็น GIF",
+    slug: "apng-to-gif-converter",
   },
   {
     category: "developer",

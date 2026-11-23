@@ -29,8 +29,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "アニメーション WebP から GIF への変換ツール",
+    slug: "animated-webp-to-gif-converter",
+  },
+  {
+    category: "image",
     name: "APNG 作成ツール",
     slug: "apng-maker",
+  },
+  {
+    category: "image",
+    name: "APNG から GIF への変換ツール",
+    slug: "apng-to-gif-converter",
   },
   {
     category: "developer",

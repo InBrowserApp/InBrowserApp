@@ -1,0 +1,12 @@
+{
+  "choose": "选择文件",
+  "replace": "更换文件",
+  "drop": "也可将动画拖到此处",
+  "privacy": "文件保留在此设备上。",
+  "cancel": "取消",
+  "invalidApng": "请选择有效的动态 PNG（.apng 或 .png）。静态 PNG 没有可转换的动画。",
+  "invalidWebp": "请选择有效的动态 WebP（.webp）。静态 WebP 没有可转换的动画。",
+  "limit": "此动画的尺寸或播放次数超过 GIF 的格式上限。",
+  "failed": "无法生成 GIF。请尝试较小的动画，或重新导出源文件。",
+  "ready": "GIF 已生成。"
+}

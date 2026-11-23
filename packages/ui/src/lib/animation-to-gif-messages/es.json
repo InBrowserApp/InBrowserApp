@@ -1,0 +1,12 @@
+{
+  "choose": "Elegir archivo",
+  "replace": "Cambiar archivo",
+  "drop": "O arrastra una animación aquí",
+  "privacy": "Tu archivo se queda en este dispositivo.",
+  "cancel": "Cancelar",
+  "invalidApng": "Elige un PNG animado válido (.apng o .png). Un PNG estático no contiene animación para convertir.",
+  "invalidWebp": "Elige un WebP animado válido (.webp). Un WebP estático no contiene animación para convertir.",
+  "limit": "La animación supera el límite de dimensiones o de bucles de GIF.",
+  "failed": "No se ha podido crear el GIF. Prueba con una animación más pequeña o vuelve a exportar el archivo original.",
+  "ready": "Tu GIF está listo."
+}

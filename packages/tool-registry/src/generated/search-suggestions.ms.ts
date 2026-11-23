@@ -29,8 +29,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Penukar WebP Beranimasi kepada GIF",
+    slug: "animated-webp-to-gif-converter",
+  },
+  {
+    category: "image",
     name: "Pembuat APNG",
     slug: "apng-maker",
+  },
+  {
+    category: "image",
+    name: "Penukar APNG kepada GIF",
+    slug: "apng-to-gif-converter",
   },
   {
     category: "developer",

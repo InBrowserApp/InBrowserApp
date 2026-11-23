@@ -15,6 +15,7 @@
     "./png-chunks": "./src/png-chunks.ts",
     "./img2webp-encoder": "./src/img2webp-encoder.ts",
     "./gif-encoder": "./src/gif-encoder.ts",
+    "./animation-to-gif": "./src/animation-to-gif/convert.ts",
     "./video": "./src/video.ts"
   },
   "dependencies": {

@@ -1,0 +1,4 @@
+{
+  "name": "APNG 轉 GIF 轉換器",
+  "description": "在瀏覽器中將動態 PNG（.apng 或 .png）轉為 GIF。保留影格時間和循環設定，預覽後即可下載，無需上傳檔案。"
+}

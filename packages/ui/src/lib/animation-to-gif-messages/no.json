@@ -1,0 +1,12 @@
+{
+  "choose": "Velg fil",
+  "replace": "Bytt fil",
+  "drop": "Eller slipp en animasjon her",
+  "privacy": "Filen blir værende på denne enheten.",
+  "cancel": "Avbryt",
+  "invalidApng": "Velg en gyldig animert PNG-fil (.apng eller .png). Et stillbilde i PNG-format inneholder ingen animasjon.",
+  "invalidWebp": "Velg en gyldig animert WebP-fil (.webp). Et stillbilde i WebP-format inneholder ingen animasjon.",
+  "limit": "Animasjonens mål eller antall avspillinger overskrider grensene for GIF.",
+  "failed": "Kunne ikke lage GIF-filen. Prøv en mindre animasjon eller eksporter kildefilen på nytt.",
+  "ready": "GIF-filen er klar."
+}

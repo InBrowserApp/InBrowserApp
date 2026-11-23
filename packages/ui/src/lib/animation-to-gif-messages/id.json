@@ -1,0 +1,12 @@
+{
+  "choose": "Pilih file",
+  "replace": "Ganti file",
+  "drop": "Atau letakkan animasi di sini",
+  "privacy": "File tetap di perangkat ini.",
+  "cancel": "Batal",
+  "invalidApng": "Pilih PNG animasi yang valid (.apng atau .png). PNG statis tidak memiliki animasi untuk dikonversi.",
+  "invalidWebp": "Pilih WebP animasi yang valid (.webp). WebP statis tidak memiliki animasi untuk dikonversi.",
+  "limit": "Animasi ini melampaui batas dimensi atau jumlah putaran GIF.",
+  "failed": "GIF tidak dapat dibuat. Coba gunakan animasi yang lebih kecil atau ekspor ulang file sumber.",
+  "ready": "GIF Anda sudah siap."
+}

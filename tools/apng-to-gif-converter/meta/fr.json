@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur APNG en GIF",
+  "description": "Convertissez un PNG animé (.apng ou .png) en GIF dans votre navigateur. Gardez la durée des images et les boucles, puis prévisualisez et téléchargez le GIF sans envoyer le fichier."
+}

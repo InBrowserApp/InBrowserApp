@@ -29,8 +29,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "애니메이션 WebP GIF 변환기",
+    slug: "animated-webp-to-gif-converter",
+  },
+  {
+    category: "image",
     name: "APNG 만들기",
     slug: "apng-maker",
+  },
+  {
+    category: "image",
+    name: "APNG GIF 변환기",
+    slug: "apng-to-gif-converter",
   },
   {
     category: "developer",

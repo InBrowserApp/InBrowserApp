@@ -667,6 +667,137 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "animated-webp-to-gif-converter",
+    category: "image",
+    icon: "film",
+    tags: [
+      "image",
+      "animation",
+      "gif",
+      "converter",
+      "offline",
+      "webp",
+      "animated-webp",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل WebP متحرك إلى GIF",
+        description:
+          "حوّل WebP المتحرك إلى GIF في متصفحك مع الحفاظ على مدة عرض كل إطار وإعداد التكرار. شغّل معاينة GIF ونزّله دون رفع ملف WebP.",
+      },
+      de: {
+        name: "Konverter für animiertes WebP zu GIF",
+        description:
+          "Wandle animierte WebP-Dateien direkt im Browser in GIFs um. Behalte die Einzelbilddauer und die Anzahl der Wiedergaben bei, spiele die Vorschau ab und lade das GIF ohne Upload herunter.",
+      },
+      en: {
+        name: "Animated WebP to GIF Converter",
+        description:
+          "Convert animated WebP to GIF in your browser. Keep the frame timing and loops, then play the GIF preview and download it without uploading your WebP file.",
+      },
+      es: {
+        name: "Convertidor de WebP animado a GIF",
+        description:
+          "Convierte WebP animados a GIF en tu navegador. Conserva la duración de los fotogramas y los bucles, reproduce la vista previa y descarga el GIF sin subir el archivo.",
+      },
+      fr: {
+        name: "Convertisseur WebP animé en GIF",
+        description:
+          "Convertissez un WebP animé en GIF dans votre navigateur. Gardez la durée des images et les boucles, puis prévisualisez et téléchargez le GIF sans envoyer le fichier.",
+      },
+      he: {
+        name: "ממיר WebP מונפש ל־GIF",
+        description:
+          "המרת WebP מונפש ל־GIF בדפדפן תוך שמירה על זמני הפריימים והגדרת הלולאה. אפשר להפעיל תצוגה מקדימה ולהוריד את ה־GIF בלי להעלות את קובץ ה־WebP.",
+      },
+      hi: {
+        name: "ऐनिमेटेड WebP से GIF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में ऐनिमेटेड WebP को GIF में बदलें। फ़्रेम की अवधि और लूप की संख्या बनाए रखें, फिर प्रीव्यू चलाएँ और WebP फ़ाइल अपलोड किए बिना GIF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter WebP Animasi ke GIF",
+        description:
+          "Konversi WebP animasi ke GIF langsung di browser. Pertahankan durasi tiap frame dan pengulangan, lalu putar pratinjau dan unduh GIF tanpa mengunggah file WebP.",
+      },
+      it: {
+        name: "Convertitore da WebP animato a GIF",
+        description:
+          "Converti un WebP animato in GIF nel browser. Mantieni i tempi dei fotogrammi e le ripetizioni, guarda l’anteprima e scarica la GIF senza caricare il file.",
+      },
+      ja: {
+        name: "アニメーション WebP から GIF への変換ツール",
+        description:
+          "アニメーション WebP をブラウザーで GIF に変換。フレームの表示時間と再生回数を引き継ぎ、WebP をアップロードせずに GIF を再生してダウンロードできます。",
+      },
+      ko: {
+        name: "애니메이션 WebP GIF 변환기",
+        description:
+          "애니메이션 WebP를 브라우저에서 GIF로 변환하세요. 프레임별 표시 시간과 반복 설정을 유지하며, WebP 파일을 업로드하지 않고 GIF를 재생하고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar WebP Beranimasi kepada GIF",
+        description:
+          "Tukar WebP beranimasi kepada GIF dalam pelayar. Kekalkan tempoh setiap bingkai dan ulangan, kemudian mainkan pratonton dan muat turun GIF tanpa memuat naik fail WebP.",
+      },
+      nl: {
+        name: "Converter van geanimeerde WebP naar GIF",
+        description:
+          "Zet geanimeerde WebP om naar GIF in je browser. Behoud de weergaveduur per frame en het aantal afspeelbeurten. Speel de GIF-voorvertoning af en download de GIF zonder je WebP-bestand te uploaden.",
+      },
+      no: {
+        name: "Konverterer fra animert WebP til GIF",
+        description:
+          "Konverter animert WebP til GIF i nettleseren. Behold visningstiden for hver bilderute og antallet avspillinger. Spill av forhåndsvisningen og last ned GIF-filen uten å laste opp WebP-filen.",
+      },
+      pl: {
+        name: "Konwerter animowanego WebP na GIF",
+        description:
+          "Konwertuj animowane pliki WebP na GIF w przeglądarce. Zachowaj czas wyświetlania klatek i liczbę odtworzeń, a następnie odtwórz podgląd i pobierz GIF bez wysyłania pliku WebP na serwer.",
+      },
+      pt: {
+        name: "Conversor de WebP animado para GIF",
+        description:
+          "Converta WebP animado para GIF no navegador. Mantenha a duração dos quadros e as repetições, reproduza a prévia e baixe o GIF sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Конвертер анимированного WebP в GIF",
+        description:
+          "Преобразуйте анимированный WebP в GIF в браузере. Сохраните длительность кадров и число воспроизведений, просмотрите и скачайте GIF без отправки исходного файла на сервер.",
+      },
+      sv: {
+        name: "Konverterare från animerad WebP till GIF",
+        description:
+          "Konvertera animerad WebP till GIF i webbläsaren. Behåll bildrutornas visningstid och antalet uppspelningar. Spela upp förhandsvisningen och hämta GIF-filen utan att ladda upp din WebP-fil.",
+      },
+      th: {
+        name: "ตัวแปลง WebP แบบเคลื่อนไหวเป็น GIF",
+        description:
+          "แปลง WebP แบบเคลื่อนไหวเป็น GIF ในเบราว์เซอร์ คงระยะเวลาของแต่ละเฟรมและการเล่นวน แล้วเล่นตัวอย่างและดาวน์โหลดได้โดยไม่ต้องอัปโหลดไฟล์ WebP",
+      },
+      tr: {
+        name: "Animasyonlu WebP'den GIF'e Dönüştürücü",
+        description:
+          "Animasyonlu WebP dosyalarını tarayıcınızda GIF’e dönüştürün. Kare sürelerini ve döngü sayısını koruyun, ardından önizlemeyi oynatın ve WebP dosyanızı sunucuya yüklemeden GIF’i indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi WebP động sang GIF",
+        description:
+          "Chuyển ảnh WebP động sang GIF ngay trong trình duyệt. Giữ thời lượng từng khung hình và chế độ lặp, rồi phát bản xem trước và tải GIF xuống mà không cần tải tệp WebP lên.",
+      },
+      "zh-CN": {
+        name: "动态 WebP 转 GIF 转换器",
+        description:
+          "在浏览器中将动态 WebP 转换为 GIF。保留帧时长和循环设置，播放预览后即可下载，文件无需上传。",
+      },
+      "zh-TW": {
+        name: "動態 WebP 轉 GIF 轉換器",
+        description:
+          "在瀏覽器中將動態 WebP 轉為 GIF。保留影格時間和循環設定，播放預覽後即可下載，無需上傳檔案。",
+      },
+    },
+  },
+  {
     slug: "apng-maker",
     category: "image",
     icon: "film",
@@ -786,6 +917,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
         name: "APNG 製作器",
         description:
           "在瀏覽器中將圖片合成 APNG 動畫。可調整影格順序、每個影格的顯示時間和循環次數，匯出時保留透明度。",
+      },
+    },
+  },
+  {
+    slug: "apng-to-gif-converter",
+    category: "image",
+    icon: "film",
+    tags: ["image", "animation", "gif", "converter", "offline", "apng", "png"],
+    locales: {
+      ar: {
+        name: "محوّل APNG إلى GIF",
+        description:
+          "حوّل صور PNG المتحركة (.apng أو .png) إلى GIF في متصفحك. احتفظ بمدة عرض كل إطار وعدد مرات التشغيل، ثم عاين النتيجة ونزّلها دون رفع ملفك.",
+      },
+      de: {
+        name: "APNG-zu-GIF-Konverter",
+        description:
+          "Wandle animierte PNG-Dateien (.apng oder .png) direkt im Browser in GIFs um. Die Einzelbilddauer und die Anzahl der Wiedergaben bleiben erhalten. Spiele die GIF-Vorschau ab und lade die Datei ohne Upload herunter.",
+      },
+      en: {
+        name: "APNG to GIF Converter",
+        description:
+          "Convert animated PNG (.apng or .png) to GIF in your browser. Keep the frame timing and loop count, preview the result, and download it without uploading your file.",
+      },
+      es: {
+        name: "Convertidor de APNG a GIF",
+        description:
+          "Convierte PNG animados (.apng o .png) a GIF en tu navegador. Conserva la duración de los fotogramas y los bucles, previsualiza y descarga el GIF sin subir el archivo.",
+      },
+      fr: {
+        name: "Convertisseur APNG en GIF",
+        description:
+          "Convertissez un PNG animé (.apng ou .png) en GIF dans votre navigateur. Gardez la durée des images et les boucles, puis prévisualisez et téléchargez le GIF sans envoyer le fichier.",
+      },
+      he: {
+        name: "ממיר APNG ל־GIF",
+        description:
+          "המרת PNG מונפש (.apng או .png) ל־GIF בדפדפן. זמני התצוגה של הפריימים ומספר ההפעלות נשמרים, ואפשר לצפות בתוצאה ולהוריד אותה בלי להעלות את הקובץ.",
+      },
+      hi: {
+        name: "APNG से GIF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में ऐनिमेटेड PNG (.apng या .png) को GIF में बदलें। फ़्रेम की अवधि और लूप की संख्या बनाए रखें, प्रीव्यू देखें और फ़ाइल अपलोड किए बिना GIF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter APNG ke GIF",
+        description:
+          "Konversi PNG animasi (.apng atau .png) ke GIF langsung di browser. Pertahankan durasi tiap frame dan jumlah putaran, lalu lihat pratinjau dan unduh GIF tanpa mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da APNG a GIF",
+        description:
+          "Converti un PNG animato (.apng o .png) in GIF nel browser. Mantieni i tempi dei fotogrammi e le ripetizioni, guarda l’anteprima e scarica la GIF senza caricare il file.",
+      },
+      ja: {
+        name: "APNG から GIF への変換ツール",
+        description:
+          "アニメーション PNG（.apng または .png）をブラウザーで GIF に変換。フレームの表示時間と再生回数を引き継ぎ、ファイルをアップロードせずにプレビューとダウンロードができます。",
+      },
+      ko: {
+        name: "APNG GIF 변환기",
+        description:
+          "애니메이션 PNG(.apng 또는 .png)를 브라우저에서 GIF로 변환하세요. 프레임별 표시 시간과 재생 횟수를 유지하고, 파일을 업로드하지 않고 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar APNG kepada GIF",
+        description:
+          "Tukar PNG beranimasi (.apng atau .png) kepada GIF dalam pelayar. Kekalkan tempoh setiap bingkai dan bilangan kali dimainkan, kemudian pratonton dan muat turun GIF tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "APNG-naar-GIF-converter",
+        description:
+          "Zet geanimeerde PNG-bestanden (.apng of .png) om naar GIF in je browser. Behoud de weergaveduur per frame en het aantal afspeelbeurten. Bekijk het resultaat en download de GIF zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "APNG til GIF-konverterer",
+        description:
+          "Konverter animert PNG (.apng eller .png) til GIF i nettleseren. Behold visningstiden for hver bilderute og antallet avspillinger. Forhåndsvis og last ned GIF-filen uten å laste opp originalen.",
+      },
+      pl: {
+        name: "Konwerter APNG na GIF",
+        description:
+          "Konwertuj animowane pliki PNG (.apng lub .png) na GIF w przeglądarce. Zachowaj czas wyświetlania klatek i liczbę odtworzeń, a następnie obejrzyj i pobierz GIF bez wysyłania pliku na serwer.",
+      },
+      pt: {
+        name: "Conversor de APNG para GIF",
+        description:
+          "Converta PNG animado (.apng ou .png) para GIF no navegador. Mantenha a duração dos quadros e as repetições, veja a prévia e baixe o GIF sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Конвертер APNG в GIF",
+        description:
+          "Преобразуйте анимированный PNG (.apng или .png) в GIF в браузере. Сохраните длительность кадров и число воспроизведений, проверьте результат и скачайте его без отправки файла на сервер.",
+      },
+      sv: {
+        name: "APNG till GIF-konverterare",
+        description:
+          "Konvertera animerad PNG (.apng eller .png) till GIF i webbläsaren. Behåll bildrutornas visningstid och antalet uppspelningar. Förhandsvisa och hämta GIF-filen utan att ladda upp originalet.",
+      },
+      th: {
+        name: "ตัวแปลง APNG เป็น GIF",
+        description:
+          "แปลงไฟล์ PNG แบบเคลื่อนไหว (.apng หรือ .png) เป็น GIF ในเบราว์เซอร์ คงระยะเวลาของแต่ละเฟรมและจำนวนรอบที่เล่น แล้วดูตัวอย่างและดาวน์โหลดได้โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "APNG'den GIF'e Dönüştürücü",
+        description:
+          "Animasyonlu PNG (.apng veya .png) dosyalarını tarayıcınızda GIF’e dönüştürün. Kare sürelerini ve döngü sayısını koruyun, sonucu önizleyin ve dosyanızı sunucuya yüklemeden indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi APNG sang GIF",
+        description:
+          "Chuyển ảnh PNG động (.apng hoặc .png) sang GIF ngay trong trình duyệt. Giữ thời lượng từng khung hình và số lượt phát, rồi xem trước và tải GIF xuống mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "APNG 转 GIF 转换器",
+        description:
+          "在浏览器中将动态 PNG（.apng 或 .png）转换为 GIF。保留帧时长和循环设置，预览后即可下载，文件无需上传。",
+      },
+      "zh-TW": {
+        name: "APNG 轉 GIF 轉換器",
+        description:
+          "在瀏覽器中將動態 PNG（.apng 或 .png）轉為 GIF。保留影格時間和循環設定，預覽後即可下載，無需上傳檔案。",
       },
     },
   },
@@ -39760,6 +40014,137 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       },
     },
   },
+  "animated-webp-to-gif-converter": {
+    slug: "animated-webp-to-gif-converter",
+    category: "image",
+    icon: "film",
+    tags: [
+      "image",
+      "animation",
+      "gif",
+      "converter",
+      "offline",
+      "webp",
+      "animated-webp",
+    ],
+    locales: {
+      ar: {
+        name: "محوّل WebP متحرك إلى GIF",
+        description:
+          "حوّل WebP المتحرك إلى GIF في متصفحك مع الحفاظ على مدة عرض كل إطار وإعداد التكرار. شغّل معاينة GIF ونزّله دون رفع ملف WebP.",
+      },
+      de: {
+        name: "Konverter für animiertes WebP zu GIF",
+        description:
+          "Wandle animierte WebP-Dateien direkt im Browser in GIFs um. Behalte die Einzelbilddauer und die Anzahl der Wiedergaben bei, spiele die Vorschau ab und lade das GIF ohne Upload herunter.",
+      },
+      en: {
+        name: "Animated WebP to GIF Converter",
+        description:
+          "Convert animated WebP to GIF in your browser. Keep the frame timing and loops, then play the GIF preview and download it without uploading your WebP file.",
+      },
+      es: {
+        name: "Convertidor de WebP animado a GIF",
+        description:
+          "Convierte WebP animados a GIF en tu navegador. Conserva la duración de los fotogramas y los bucles, reproduce la vista previa y descarga el GIF sin subir el archivo.",
+      },
+      fr: {
+        name: "Convertisseur WebP animé en GIF",
+        description:
+          "Convertissez un WebP animé en GIF dans votre navigateur. Gardez la durée des images et les boucles, puis prévisualisez et téléchargez le GIF sans envoyer le fichier.",
+      },
+      he: {
+        name: "ממיר WebP מונפש ל־GIF",
+        description:
+          "המרת WebP מונפש ל־GIF בדפדפן תוך שמירה על זמני הפריימים והגדרת הלולאה. אפשר להפעיל תצוגה מקדימה ולהוריד את ה־GIF בלי להעלות את קובץ ה־WebP.",
+      },
+      hi: {
+        name: "ऐनिमेटेड WebP से GIF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में ऐनिमेटेड WebP को GIF में बदलें। फ़्रेम की अवधि और लूप की संख्या बनाए रखें, फिर प्रीव्यू चलाएँ और WebP फ़ाइल अपलोड किए बिना GIF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter WebP Animasi ke GIF",
+        description:
+          "Konversi WebP animasi ke GIF langsung di browser. Pertahankan durasi tiap frame dan pengulangan, lalu putar pratinjau dan unduh GIF tanpa mengunggah file WebP.",
+      },
+      it: {
+        name: "Convertitore da WebP animato a GIF",
+        description:
+          "Converti un WebP animato in GIF nel browser. Mantieni i tempi dei fotogrammi e le ripetizioni, guarda l’anteprima e scarica la GIF senza caricare il file.",
+      },
+      ja: {
+        name: "アニメーション WebP から GIF への変換ツール",
+        description:
+          "アニメーション WebP をブラウザーで GIF に変換。フレームの表示時間と再生回数を引き継ぎ、WebP をアップロードせずに GIF を再生してダウンロードできます。",
+      },
+      ko: {
+        name: "애니메이션 WebP GIF 변환기",
+        description:
+          "애니메이션 WebP를 브라우저에서 GIF로 변환하세요. 프레임별 표시 시간과 반복 설정을 유지하며, WebP 파일을 업로드하지 않고 GIF를 재생하고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar WebP Beranimasi kepada GIF",
+        description:
+          "Tukar WebP beranimasi kepada GIF dalam pelayar. Kekalkan tempoh setiap bingkai dan ulangan, kemudian mainkan pratonton dan muat turun GIF tanpa memuat naik fail WebP.",
+      },
+      nl: {
+        name: "Converter van geanimeerde WebP naar GIF",
+        description:
+          "Zet geanimeerde WebP om naar GIF in je browser. Behoud de weergaveduur per frame en het aantal afspeelbeurten. Speel de GIF-voorvertoning af en download de GIF zonder je WebP-bestand te uploaden.",
+      },
+      no: {
+        name: "Konverterer fra animert WebP til GIF",
+        description:
+          "Konverter animert WebP til GIF i nettleseren. Behold visningstiden for hver bilderute og antallet avspillinger. Spill av forhåndsvisningen og last ned GIF-filen uten å laste opp WebP-filen.",
+      },
+      pl: {
+        name: "Konwerter animowanego WebP na GIF",
+        description:
+          "Konwertuj animowane pliki WebP na GIF w przeglądarce. Zachowaj czas wyświetlania klatek i liczbę odtworzeń, a następnie odtwórz podgląd i pobierz GIF bez wysyłania pliku WebP na serwer.",
+      },
+      pt: {
+        name: "Conversor de WebP animado para GIF",
+        description:
+          "Converta WebP animado para GIF no navegador. Mantenha a duração dos quadros e as repetições, reproduza a prévia e baixe o GIF sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Конвертер анимированного WebP в GIF",
+        description:
+          "Преобразуйте анимированный WebP в GIF в браузере. Сохраните длительность кадров и число воспроизведений, просмотрите и скачайте GIF без отправки исходного файла на сервер.",
+      },
+      sv: {
+        name: "Konverterare från animerad WebP till GIF",
+        description:
+          "Konvertera animerad WebP till GIF i webbläsaren. Behåll bildrutornas visningstid och antalet uppspelningar. Spela upp förhandsvisningen och hämta GIF-filen utan att ladda upp din WebP-fil.",
+      },
+      th: {
+        name: "ตัวแปลง WebP แบบเคลื่อนไหวเป็น GIF",
+        description:
+          "แปลง WebP แบบเคลื่อนไหวเป็น GIF ในเบราว์เซอร์ คงระยะเวลาของแต่ละเฟรมและการเล่นวน แล้วเล่นตัวอย่างและดาวน์โหลดได้โดยไม่ต้องอัปโหลดไฟล์ WebP",
+      },
+      tr: {
+        name: "Animasyonlu WebP'den GIF'e Dönüştürücü",
+        description:
+          "Animasyonlu WebP dosyalarını tarayıcınızda GIF’e dönüştürün. Kare sürelerini ve döngü sayısını koruyun, ardından önizlemeyi oynatın ve WebP dosyanızı sunucuya yüklemeden GIF’i indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi WebP động sang GIF",
+        description:
+          "Chuyển ảnh WebP động sang GIF ngay trong trình duyệt. Giữ thời lượng từng khung hình và chế độ lặp, rồi phát bản xem trước và tải GIF xuống mà không cần tải tệp WebP lên.",
+      },
+      "zh-CN": {
+        name: "动态 WebP 转 GIF 转换器",
+        description:
+          "在浏览器中将动态 WebP 转换为 GIF。保留帧时长和循环设置，播放预览后即可下载，文件无需上传。",
+      },
+      "zh-TW": {
+        name: "動態 WebP 轉 GIF 轉換器",
+        description:
+          "在瀏覽器中將動態 WebP 轉為 GIF。保留影格時間和循環設定，播放預覽後即可下載，無需上傳檔案。",
+      },
+    },
+  },
   "apng-maker": {
     slug: "apng-maker",
     category: "image",
@@ -39880,6 +40265,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "APNG 製作器",
         description:
           "在瀏覽器中將圖片合成 APNG 動畫。可調整影格順序、每個影格的顯示時間和循環次數，匯出時保留透明度。",
+      },
+    },
+  },
+  "apng-to-gif-converter": {
+    slug: "apng-to-gif-converter",
+    category: "image",
+    icon: "film",
+    tags: ["image", "animation", "gif", "converter", "offline", "apng", "png"],
+    locales: {
+      ar: {
+        name: "محوّل APNG إلى GIF",
+        description:
+          "حوّل صور PNG المتحركة (.apng أو .png) إلى GIF في متصفحك. احتفظ بمدة عرض كل إطار وعدد مرات التشغيل، ثم عاين النتيجة ونزّلها دون رفع ملفك.",
+      },
+      de: {
+        name: "APNG-zu-GIF-Konverter",
+        description:
+          "Wandle animierte PNG-Dateien (.apng oder .png) direkt im Browser in GIFs um. Die Einzelbilddauer und die Anzahl der Wiedergaben bleiben erhalten. Spiele die GIF-Vorschau ab und lade die Datei ohne Upload herunter.",
+      },
+      en: {
+        name: "APNG to GIF Converter",
+        description:
+          "Convert animated PNG (.apng or .png) to GIF in your browser. Keep the frame timing and loop count, preview the result, and download it without uploading your file.",
+      },
+      es: {
+        name: "Convertidor de APNG a GIF",
+        description:
+          "Convierte PNG animados (.apng o .png) a GIF en tu navegador. Conserva la duración de los fotogramas y los bucles, previsualiza y descarga el GIF sin subir el archivo.",
+      },
+      fr: {
+        name: "Convertisseur APNG en GIF",
+        description:
+          "Convertissez un PNG animé (.apng ou .png) en GIF dans votre navigateur. Gardez la durée des images et les boucles, puis prévisualisez et téléchargez le GIF sans envoyer le fichier.",
+      },
+      he: {
+        name: "ממיר APNG ל־GIF",
+        description:
+          "המרת PNG מונפש (.apng או .png) ל־GIF בדפדפן. זמני התצוגה של הפריימים ומספר ההפעלות נשמרים, ואפשר לצפות בתוצאה ולהוריד אותה בלי להעלות את הקובץ.",
+      },
+      hi: {
+        name: "APNG से GIF कन्वर्टर",
+        description:
+          "अपने ब्राउज़र में ऐनिमेटेड PNG (.apng या .png) को GIF में बदलें। फ़्रेम की अवधि और लूप की संख्या बनाए रखें, प्रीव्यू देखें और फ़ाइल अपलोड किए बिना GIF डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter APNG ke GIF",
+        description:
+          "Konversi PNG animasi (.apng atau .png) ke GIF langsung di browser. Pertahankan durasi tiap frame dan jumlah putaran, lalu lihat pratinjau dan unduh GIF tanpa mengunggah file.",
+      },
+      it: {
+        name: "Convertitore da APNG a GIF",
+        description:
+          "Converti un PNG animato (.apng o .png) in GIF nel browser. Mantieni i tempi dei fotogrammi e le ripetizioni, guarda l’anteprima e scarica la GIF senza caricare il file.",
+      },
+      ja: {
+        name: "APNG から GIF への変換ツール",
+        description:
+          "アニメーション PNG（.apng または .png）をブラウザーで GIF に変換。フレームの表示時間と再生回数を引き継ぎ、ファイルをアップロードせずにプレビューとダウンロードができます。",
+      },
+      ko: {
+        name: "APNG GIF 변환기",
+        description:
+          "애니메이션 PNG(.apng 또는 .png)를 브라우저에서 GIF로 변환하세요. 프레임별 표시 시간과 재생 횟수를 유지하고, 파일을 업로드하지 않고 미리 보고 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar APNG kepada GIF",
+        description:
+          "Tukar PNG beranimasi (.apng atau .png) kepada GIF dalam pelayar. Kekalkan tempoh setiap bingkai dan bilangan kali dimainkan, kemudian pratonton dan muat turun GIF tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "APNG-naar-GIF-converter",
+        description:
+          "Zet geanimeerde PNG-bestanden (.apng of .png) om naar GIF in je browser. Behoud de weergaveduur per frame en het aantal afspeelbeurten. Bekijk het resultaat en download de GIF zonder je bestand te uploaden.",
+      },
+      no: {
+        name: "APNG til GIF-konverterer",
+        description:
+          "Konverter animert PNG (.apng eller .png) til GIF i nettleseren. Behold visningstiden for hver bilderute og antallet avspillinger. Forhåndsvis og last ned GIF-filen uten å laste opp originalen.",
+      },
+      pl: {
+        name: "Konwerter APNG na GIF",
+        description:
+          "Konwertuj animowane pliki PNG (.apng lub .png) na GIF w przeglądarce. Zachowaj czas wyświetlania klatek i liczbę odtworzeń, a następnie obejrzyj i pobierz GIF bez wysyłania pliku na serwer.",
+      },
+      pt: {
+        name: "Conversor de APNG para GIF",
+        description:
+          "Converta PNG animado (.apng ou .png) para GIF no navegador. Mantenha a duração dos quadros e as repetições, veja a prévia e baixe o GIF sem enviar o arquivo.",
+      },
+      ru: {
+        name: "Конвертер APNG в GIF",
+        description:
+          "Преобразуйте анимированный PNG (.apng или .png) в GIF в браузере. Сохраните длительность кадров и число воспроизведений, проверьте результат и скачайте его без отправки файла на сервер.",
+      },
+      sv: {
+        name: "APNG till GIF-konverterare",
+        description:
+          "Konvertera animerad PNG (.apng eller .png) till GIF i webbläsaren. Behåll bildrutornas visningstid och antalet uppspelningar. Förhandsvisa och hämta GIF-filen utan att ladda upp originalet.",
+      },
+      th: {
+        name: "ตัวแปลง APNG เป็น GIF",
+        description:
+          "แปลงไฟล์ PNG แบบเคลื่อนไหว (.apng หรือ .png) เป็น GIF ในเบราว์เซอร์ คงระยะเวลาของแต่ละเฟรมและจำนวนรอบที่เล่น แล้วดูตัวอย่างและดาวน์โหลดได้โดยไม่ต้องอัปโหลดไฟล์",
+      },
+      tr: {
+        name: "APNG'den GIF'e Dönüştürücü",
+        description:
+          "Animasyonlu PNG (.apng veya .png) dosyalarını tarayıcınızda GIF’e dönüştürün. Kare sürelerini ve döngü sayısını koruyun, sonucu önizleyin ve dosyanızı sunucuya yüklemeden indirin.",
+      },
+      vi: {
+        name: "Trình chuyển đổi APNG sang GIF",
+        description:
+          "Chuyển ảnh PNG động (.apng hoặc .png) sang GIF ngay trong trình duyệt. Giữ thời lượng từng khung hình và số lượt phát, rồi xem trước và tải GIF xuống mà không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "APNG 转 GIF 转换器",
+        description:
+          "在浏览器中将动态 PNG（.apng 或 .png）转换为 GIF。保留帧时长和循环设置，预览后即可下载，文件无需上传。",
+      },
+      "zh-TW": {
+        name: "APNG 轉 GIF 轉換器",
+        description:
+          "在瀏覽器中將動態 PNG（.apng 或 .png）轉為 GIF。保留影格時間和循環設定，預覽後即可下載，無需上傳檔案。",
       },
     },
   },
