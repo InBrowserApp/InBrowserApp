@@ -27,6 +27,8 @@ import type { Messages } from "./messages"
 const initial = { q: "", os: "", lang: "" }
 const starterCommands = ["git-commit", "tar", "curl"]
 
+type PageState = Readonly<{ key: string; markdown: string | null }>
+
 function Match({ name, query }: { name: string; query: string }) {
   const start = name.indexOf(query)
   const end = start + query.length
@@ -52,7 +54,7 @@ export default function TldrClient({
   const [query, setQuery] = useState("")
   const [catalog, setCatalog] = useState<Catalog | null>()
   const [catalogRetry, retryCatalog] = useState(0)
-  const [markdown, setMarkdown] = useState<string | null>()
+  const [page, setPage] = useState<PageState>()
   const [pageRetry, retryPage] = useState(0)
 
   useEffect(() => {
@@ -98,9 +100,11 @@ export default function TldrClient({
   const results = search(catalog?.commands ?? [], normalized)
   const selected = catalog?.commands.find(([name]) => name === submitted)
   const command = normalized === submitted ? selected : undefined
-  const variant = selected && selectVariant(selected, os, language)
+  const variant = command && selectVariant(command, os, language)
   const { q: name, os: platform, locale } = variant ?? {}
   const revision = catalog?.revision
+  const key = [revision, platform, locale, name].join("/")
+  const markdown = page?.key === key ? page.markdown : undefined
 
   useEffect(() => {
     if (!name || !platform || !locale || !revision) return
@@ -111,14 +115,14 @@ export default function TldrClient({
       controller.signal
     ).then(
       (value) => {
-        if (!controller.signal.aborted) setMarkdown(value)
+        if (!controller.signal.aborted) setPage({ key, markdown: value })
       },
       () => {
-        if (!controller.signal.aborted) setMarkdown(null)
+        if (!controller.signal.aborted) setPage({ key, markdown: null })
       }
     )
     return () => controller.abort()
-  }, [name, platform, locale, revision, pageRetry])
+  }, [key, name, platform, locale, revision, pageRetry])
 
   function navigate(next: Lookup) {
     window.location.assign(lookupHref(window.location.pathname, next))
@@ -244,7 +248,7 @@ export default function TldrClient({
         </div>
       )}
 
-      {command && variant && revision && (
+      {variant && revision && (
         <>
           {markdown === undefined && (
             <Loading label={messages.loadingPage} query={query} />
@@ -260,7 +264,7 @@ export default function TldrClient({
                 />
               }
               onRetry={() => {
-                setMarkdown(undefined)
+                setPage(undefined)
                 retryPage((attempt) => attempt + 1)
               }}
             />

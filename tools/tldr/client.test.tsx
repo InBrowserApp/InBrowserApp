@@ -135,3 +135,31 @@ it("keeps the query editable while the index loads and names the pending result"
     expect.any(AbortSignal)
   )
 })
+
+it("keeps the old page hidden while a changed example language loads", async () => {
+  window.history.replaceState(null, "", "/zh-CN/tools/tldr/?q=git-commit")
+  let resolvePage!: (value: string) => void
+  const pending = new Promise<string>((resolve) => {
+    resolvePage = resolve
+  })
+  vi.mocked(fetchCatalog).mockResolvedValue(catalog)
+  vi.mocked(fetchPage)
+    .mockResolvedValueOnce("# git commit\n\nChinese example")
+    .mockReturnValueOnce(pending)
+  render(<TldrClient lang="zh-CN" messages={messages} />)
+
+  expect(await screen.findByText("Chinese example")).toBeTruthy()
+  const input = screen.getByRole("searchbox")
+  fireEvent.change(input, { target: { value: "git co" } })
+  fireEvent.change(screen.getByLabelText(messages.pageLanguage), {
+    target: { value: "en" },
+  })
+  expect(fetchPage).toHaveBeenCalledTimes(1)
+  fireEvent.change(input, { target: { value: "git-commit" } })
+  expect(screen.getByRole("status").textContent).toBe(messages.loadingPage)
+  expect(screen.queryByText("Chinese example")).toBeNull()
+  await act(() => resolvePage("# git commit\n\nEnglish example"))
+  expect(screen.getByText("English example").closest("article")?.lang).toBe(
+    "en"
+  )
+})
