@@ -1,4 +1,4 @@
 {
   "name": "壓縮檔檢視器",
-  "description": "在瀏覽器中本機開啟 ZIP、TAR、GZ 和 TGZ 檔案，瀏覽資料夾樹狀結構、預覽可讀項目，並下載個別檔案。"
+  "description": "在瀏覽器中開啟 7z、RAR、ZIP、TAR、GZIP、Zstandard 等格式。瀏覽資料夾、預覽項目，並下載個別檔案。"
 }

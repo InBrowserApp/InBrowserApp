@@ -1,4 +1,4 @@
 {
   "name": "Penampil Arsip",
-  "description": "Buka file ZIP, TAR, GZ, dan TGZ secara lokal di browser Anda, jelajahi struktur foldernya, pratinjau entri yang dapat dibaca, dan unduh file tertentu."
+  "description": "Buka 7z, RAR, ZIP, TAR, GZIP, Zstandard, dan format lainnya di browser. Jelajahi folder, lihat pratinjau entri, dan unduh file satu per satu."
 }

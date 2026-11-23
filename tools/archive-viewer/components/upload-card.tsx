@@ -7,7 +7,6 @@ import {
   CardTitle,
 } from "@workspace/ui/components/ui/card"
 import { Button } from "@workspace/ui/components/ui/button"
-import { Badge } from "@workspace/ui/components/ui/badge"
 import {
   Empty,
   EmptyDescription,
@@ -26,7 +25,6 @@ type UploadCardProps = Readonly<{
   archiveName: string | null
   archiveSize: string | null
   isDragging: boolean
-  isParsing: boolean
   messages: ArchiveViewerMessages
   onClear: () => void
   onDragEnter: DragEventHandler<HTMLButtonElement>
@@ -43,7 +41,6 @@ function UploadCard({
   archiveName,
   archiveSize,
   isDragging,
-  isParsing,
   messages,
   onClear,
   onDragEnter,
@@ -57,11 +54,8 @@ function UploadCard({
   return (
     <Card>
       <CardHeader className="border-b">
-        <div className="flex flex-wrap items-center gap-3">
-          <CardTitle>{messages.uploadTitle}</CardTitle>
-          <Badge variant="secondary">{messages.supportedFormats}</Badge>
-        </div>
-        <CardDescription>{messages.uploadDescription}</CardDescription>
+        <CardTitle>{messages.uploadTitle}</CardTitle>
+        <CardDescription>{messages.supportedFormats}</CardDescription>
       </CardHeader>
       <CardContent>
         {archiveName ? (
@@ -81,18 +75,11 @@ function UploadCard({
                 variant="outline"
                 size="sm"
                 onClick={onPickFile}
-                disabled={isParsing}
               >
                 <Upload data-icon="inline-start" />
                 {messages.chooseAnother}
               </Button>
-              <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                onClick={onClear}
-                disabled={isParsing}
-              >
+              <Button type="button" variant="ghost" size="sm" onClick={onClear}>
                 <Trash2 data-icon="inline-start" />
                 {messages.clearArchive}
               </Button>
@@ -138,7 +125,6 @@ function UploadCard({
           variant={archiveName ? "ghost" : "default"}
           size="sm"
           onClick={onPickFile}
-          disabled={isParsing}
         >
           <Upload data-icon="inline-start" />
           {messages.uploadAction}

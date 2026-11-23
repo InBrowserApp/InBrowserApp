@@ -1,3 +1,4 @@
+import { formatEntries } from "./formats"
 import { ArchiveError } from "./types"
 
 import type { ArchiveFormat } from "./types"
@@ -14,21 +15,24 @@ function detectArchiveFormat(
 ): ArchiveFormat {
   const normalizedName = fileName.trim().toLowerCase()
 
-  if (normalizedName.endsWith(".tar.gz") || normalizedName.endsWith(".tgz")) {
-    return "tgz"
-  }
-  if (normalizedName.endsWith(".tar")) return "tar"
-  if (normalizedName.endsWith(".zip")) return "zip"
-  if (normalizedName.endsWith(".gz")) return "gz"
+  const namedFormat = formatEntries.find(
+    ([, { suffixes, tarSuffixes }]) =>
+      suffixes.some((suffix) => normalizedName.endsWith(suffix)) ||
+      tarSuffixes?.some((suffix) => normalizedName.endsWith(suffix))
+  )?.[0]
 
+  if (namedFormat) return namedFormat
   if (isZipSignature(sniffBytes)) return "zip"
   if (isGzipSignature(sniffBytes)) return "gz"
   if (isLikelyTar(sniffBytes)) return "tar"
+  const detectedFormat = formatEntries.find(([, { signatures }]) =>
+    signatures?.some((signature) =>
+      signature.every((byte, index) => sniffBytes[index] === byte)
+    )
+  )?.[0]
+  if (detectedFormat) return detectedFormat
 
-  throw new ArchiveError(
-    "unsupported-format",
-    "Unsupported archive format. Please use ZIP, TAR, GZ, or TGZ."
-  )
+  throw new ArchiveError("unsupported-format", "Unsupported archive format.")
 }
 
 function isZipSignature(sniffBytes: Uint8Array): boolean {

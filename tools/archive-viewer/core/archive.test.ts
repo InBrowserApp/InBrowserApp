@@ -68,6 +68,19 @@ describe("archive format detection", () => {
       detectArchiveFormat("notes.txt", new Uint8Array([1, 2]))
     ).toThrow(ArchiveError)
   })
+
+  test("detects new formats by extension or signature without confusing TAR entry names", () => {
+    expect(detectArchiveFormat("archive.TLZ", new Uint8Array())).toBe("lzip")
+    expect(detectArchiveFormat(" archive.TAR.ZSTD ", new Uint8Array())).toBe(
+      "zstd"
+    )
+    expect(
+      detectArchiveFormat("archive", Uint8Array.of(0x28, 0xb5, 0x2f, 0xfd))
+    ).toBe("zstd")
+    const tar = createTar([{ path: "LZIP.txt", content: "file" }])
+    expect(detectArchiveFormat("archive.tar", tar)).toBe("tar")
+    expect(detectArchiveFormat("archive", tar)).toBe("tar")
+  })
 })
 
 describe("openArchive", () => {

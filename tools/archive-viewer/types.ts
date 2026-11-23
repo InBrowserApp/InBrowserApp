@@ -4,7 +4,6 @@ import type { ToolMeta } from "@workspace/tool-sdk"
 
 type ArchiveViewerMessagesCatalog = Readonly<{
   uploadTitle: string
-  uploadDescription: string
   uploadAction: string
   uploadHint: string
   supportedFormats: string
@@ -15,6 +14,7 @@ type ArchiveViewerMessagesCatalog = Readonly<{
   errorTitle: string
   unsupportedFormat: string
   parseFailed: string
+  entryTooLarge: string
   gzipUnsupported: string
   previewTooLarge: string
   noPreview: string

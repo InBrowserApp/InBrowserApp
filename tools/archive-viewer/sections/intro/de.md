@@ -1,4 +1,4 @@
-Mit einem Archivbetrachter kannst du eine komprimierte Datei prüfen, bevor du sie entpackst. Dieses Tool öffnet ZIP-, TAR-, GZ-, TGZ- und TAR.GZ-Dateien direkt im Browser, damit du den Inhalt bestätigen, Ordner durchsuchen, lesbare Dateien in der Vorschau anzeigen und nur den benötigten Eintrag herunterladen kannst.
+Öffne ein 7z-, RAR-, ZIP- oder TAR-Archiv, um seine Ordner vor dem Entpacken zu durchsuchen. Wähle eine Datei aus, um sie in der Vorschau anzusehen oder einzeln herunterzuladen.
 
 ## Wann du ihn verwenden solltest
 
@@ -10,7 +10,9 @@ Archivinhalte werden lokal in deiner Browsersitzung gelesen. Die Datei wird nich
 
 ## Unterstützte Archivformate
 
-Der Betrachter unterstützt standardmäßige ZIP-Archive, unkomprimierte TAR-Dateien, GZIP-komprimierte Einzeldateien und in GZIP verpackte TAR-Archive (`.tgz` oder `.tar.gz`). Passwortgeschützte oder verschlüsselte Archive werden in diesem ersten Überarbeitungsschritt nicht unterstützt.
+Der Archivbetrachter öffnet ZIP, 7z, RAR4 und RAR5, TAR, CPIO, AR (einschließlich `.deb`-Paketen), CAB, ISO 9660 und LHA. Er öffnet auch Einzeldateien und TAR-Archive, die mit GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA oder UNIX compress (`.Z`) komprimiert wurden. Öffne zum Beispiel ein `.tar.zst`-Release-Paket, um seine Ordner zu durchsuchen, oder ein `.zst`-Protokoll, um die entpackte Datei herunterzuladen.
+
+Verwende ein Archivprogramm auf deinem Computer für verschlüsselte Dateien, mehrteilige Archive, solide RAR4-Archive oder Einträge über 512 MiB in den neu unterstützten Formaten. Bei großen soliden Archiven kann das Öffnen oder Entpacken länger dauern, da der Decoder möglicherweise zuerst die vorherigen Einträge verarbeiten muss.
 
 ## Vorschauverhalten
 

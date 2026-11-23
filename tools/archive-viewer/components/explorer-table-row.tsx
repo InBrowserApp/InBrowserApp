@@ -40,8 +40,9 @@ function ExplorerTableRow({
       <ExplorerRowShell
         selected={selectedPath === row.path}
         onClick={(event) => {
-          if (isInteractiveClick(event.target)) return
-          onDirectoryChange(row.path)
+          if (row.kind === "directory" && !isInteractiveClick(event.target)) {
+            onDirectoryChange(row.path)
+          }
         }}
       >
         <div role="cell" className="min-w-0 px-2 py-2">
@@ -193,6 +194,15 @@ function EntryButton({
   onDirectoryChange: (path: string) => void
   onFileSelect: (path: string) => void
 }>) {
+  if (row.kind !== "directory" && row.kind !== "file") {
+    return (
+      <span className="flex max-w-full items-center gap-2">
+        <File aria-hidden="true" className="size-4 shrink-0" />
+        <span className="truncate">{row.name}</span>
+      </span>
+    )
+  }
+
   return (
     <button
       type="button"

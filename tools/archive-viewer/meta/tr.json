@@ -1,4 +1,4 @@
 {
   "name": "Arşiv Görüntüleyici",
-  "description": "ZIP, TAR, GZ ve TGZ dosyalarını tarayıcınızda yerel olarak açın, klasör ağacında gezinin, okunabilir girdileri önizleyin ve tek tek dosyaları indirin."
+  "description": "7z, RAR, ZIP, TAR, GZIP, Zstandard ve diğer arşiv formatlarını tarayıcınızda açın. Klasörlere göz atın, içeriği önizleyin ve dosyaları tek tek indirin."
 }

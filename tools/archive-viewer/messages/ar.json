@@ -1,15 +1,14 @@
 {
   "uploadTitle": "فتح أرشيف",
-  "uploadDescription": "اختر ملف ZIP أو TAR أو GZ أو TGZ لفحصه من دون رفعه إلى أي مكان.",
   "uploadAction": "اختر أرشيفًا",
   "uploadHint": "انقر أو اسحب ملف أرشيف هنا",
-  "supportedFormats": "الصيغ المدعومة: ZIP، TAR، GZ، TGZ",
+  "supportedFormats": "ZIP، TAR، GZIP، 7z، RAR، Zstandard، XZ، BZIP2، LZ4، LZIP، LZMA، .Z، CPIO، AR، CAB، ISO، LHA",
   "localOnlyNote": "تبقى الملفات داخل جلسة المتصفح هذه. لا يُرسل الأرشيف إلى خادم.",
   "chooseAnother": "اختر آخر",
   "clearArchive": "مسح",
   "parsingArchive": "جارٍ قراءة عناصر الأرشيف...",
   "errorTitle": "تعذر فتح الأرشيف",
-  "unsupportedFormat": "صيغة الأرشيف غير مدعومة. استخدم ملف ZIP أو TAR أو GZ أو TGZ أو TAR.GZ.",
+  "unsupportedFormat": "صيغة الملف غير مدعومة. اختر ملفًا بإحدى صيغ الأرشيف المذكورة أعلاه.",
   "parseFailed": "تعذر تحليل هذا الأرشيف. قد يكون تالفًا أو مشفرًا أو يستخدم ميزة غير مدعومة.",
   "gzipUnsupported": "لا يدعم هذا المتصفح فك ضغط GZIP.",
   "previewTooLarge": "تقتصر المعاينة على 1 MB. نزّل العنصر لفحص الملف الكامل.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "معاينة الصورة",
   "pdfPreviewLabel": "معاينة PDF",
   "openFolder": "فتح المجلد",
-  "previewFile": "معاينة الملف"
+  "previewFile": "معاينة الملف",
+  "entryTooLarge": "يتجاوز حجم هذا الملف حد الاستخراج في المتصفح البالغ 512 MiB. استخدم أداة أرشفة على سطح المكتب لاستخراجه."
 }

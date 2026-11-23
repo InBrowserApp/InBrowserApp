@@ -1,4 +1,4 @@
-Une visionneuse d'archives vous permet d'inspecter un fichier compressé avant de l'extraire. Cet outil ouvre les fichiers ZIP, TAR, GZ, TGZ et TAR.GZ directement dans le navigateur afin que vous puissiez vérifier ce qu'ils contiennent, parcourir les dossiers, afficher un aperçu des fichiers lisibles et télécharger uniquement l'entrée dont vous avez besoin.
+Ouvrez une archive 7z, RAR, ZIP ou TAR pour parcourir ses dossiers avant toute extraction. Sélectionnez un fichier pour en afficher un aperçu ou le télécharger séparément.
 
 ## Quand l'utiliser
 
@@ -10,7 +10,9 @@ Le contenu des archives est lu localement dans votre session du navigateur. Le f
 
 ## Formats d'archive pris en charge
 
-La visionneuse prend en charge les archives ZIP standard, les fichiers TAR non compressés, les fichiers uniques compressés avec GZIP et les archives TAR encapsulées dans GZIP (`.tgz` ou `.tar.gz`). Les archives protégées par mot de passe ou chiffrées ne sont pas prises en charge dans cette première phase de réécriture.
+La visionneuse ouvre les formats ZIP, 7z, RAR4, RAR5, TAR, CPIO, AR (dont les paquets `.deb`), CAB, ISO 9660 et LHA. Elle ouvre aussi les fichiers seuls et les archives TAR compressés avec GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA ou l'utilitaire UNIX compress (`.Z`). Ouvrez par exemple un paquet de distribution `.tar.zst` pour parcourir ses dossiers, ou un journal `.zst` pour télécharger le fichier décompressé.
+
+Utilisez un logiciel d'archivage installé sur votre ordinateur pour les fichiers chiffrés, les archives fractionnées, les archives solides RAR4 ou les entrées de plus de 512 Mio dans les formats récemment ajoutés. L'ouverture d'une archive solide volumineuse ou l'extraction de ses fichiers peut prendre plus de temps, car le décodeur peut avoir à traiter les entrées précédentes.
 
 ## Comportement de la prévisualisation
 

@@ -1,15 +1,14 @@
 {
   "uploadTitle": "아카이브 열기",
-  "uploadDescription": "어디에도 업로드하지 않고 확인할 ZIP, TAR, GZ 또는 TGZ 파일을 선택하세요.",
   "uploadAction": "아카이브 선택",
   "uploadHint": "아카이브 파일을 클릭하거나 여기로 끌어오세요",
-  "supportedFormats": "지원 형식: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP, TAR, GZIP, 7z, RAR, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, .Z, CPIO, AR, CAB, ISO, LHA",
   "localOnlyNote": "파일은 이 브라우저 세션에만 남습니다. 아카이브는 서버로 전송되지 않습니다.",
   "chooseAnother": "다른 아카이브 선택",
   "clearArchive": "지우기",
   "parsingArchive": "아카이브 항목을 읽는 중...",
   "errorTitle": "아카이브를 열 수 없습니다",
-  "unsupportedFormat": "지원하지 않는 아카이브 형식입니다. ZIP, TAR, GZ, TGZ 또는 TAR.GZ 파일을 사용하세요.",
+  "unsupportedFormat": "지원하지 않는 파일 형식입니다. 위에 나열된 형식의 파일을 선택하세요.",
   "parseFailed": "이 아카이브를 파싱할 수 없습니다. 손상되었거나, 암호화되었거나, 지원하지 않는 기능을 사용할 수 있습니다.",
   "gzipUnsupported": "이 브라우저는 GZIP 압축 해제를 지원하지 않습니다.",
   "previewTooLarge": "미리보기는 1 MB로 제한됩니다. 전체 파일을 확인하려면 항목을 다운로드하세요.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "이미지 미리보기",
   "pdfPreviewLabel": "PDF 미리보기",
   "openFolder": "폴더 열기",
-  "previewFile": "파일 미리보기"
+  "previewFile": "파일 미리보기",
+  "entryTooLarge": "이 항목은 브라우저에서 추출할 수 있는 최대 크기인 512 MiB를 초과합니다. 데스크톱 압축 도구로 추출하세요."
 }

@@ -1,15 +1,14 @@
 {
   "uploadTitle": "Öppna arkiv",
-  "uploadDescription": "Välj en ZIP-, TAR-, GZ- eller TGZ-fil att granska utan att ladda upp den någonstans.",
   "uploadAction": "Välj arkiv",
   "uploadHint": "Klicka eller dra en arkivfil hit",
-  "supportedFormats": "Format som stöds: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP, TAR, GZIP, 7z, RAR, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, .Z, CPIO, AR, CAB, ISO, LHA",
   "localOnlyNote": "Filerna stannar i den här webbläsarsessionen. Arkivet skickas inte till någon server.",
   "chooseAnother": "Välj en annan",
   "clearArchive": "Rensa",
   "parsingArchive": "Läser arkivposter...",
   "errorTitle": "Arkivet kunde inte öppnas",
-  "unsupportedFormat": "Arkivformatet stöds inte. Använd en ZIP-, TAR-, GZ-, TGZ- eller TAR.GZ-fil.",
+  "unsupportedFormat": "Filformatet stöds inte. Välj en fil i något av arkivformaten ovan.",
   "parseFailed": "Det går inte att tolka det här arkivet. Det kan vara skadat, krypterat eller använda en funktion som inte stöds.",
   "gzipUnsupported": "Den här webbläsaren stöder inte GZIP-dekomprimering.",
   "previewTooLarge": "Förhandsvisningen är begränsad till 1 MB. Ladda ner posten för att granska hela filen.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "Bildförhandsvisning",
   "pdfPreviewLabel": "PDF-förhandsvisning",
   "openFolder": "Öppna mapp",
-  "previewFile": "Förhandsgranska fil"
+  "previewFile": "Förhandsgranska fil",
+  "entryTooLarge": "Filen överskrider gränsen på 512 MiB för uppackning i webbläsaren. Packa upp den med ett arkivprogram på datorn."
 }

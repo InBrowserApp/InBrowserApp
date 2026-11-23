@@ -1,15 +1,14 @@
 {
   "uploadTitle": "Arşiv aç",
-  "uploadDescription": "Herhangi bir yere yüklemeden incelemek için bir ZIP, TAR, GZ veya TGZ dosyası seçin.",
   "uploadAction": "Arşiv seç",
   "uploadHint": "Tıklayın veya bir arşiv dosyasını buraya sürükleyin",
-  "supportedFormats": "Desteklenen formatlar: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP, TAR, GZIP, 7z, RAR, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, .Z, CPIO, AR, CAB, ISO, LHA",
   "localOnlyNote": "Dosyalar bu tarayıcı oturumunda kalır. Arşiv bir sunucuya gönderilmez.",
   "chooseAnother": "Başka seç",
   "clearArchive": "Temizle",
   "parsingArchive": "Arşiv girdileri okunuyor...",
   "errorTitle": "Arşiv açılamadı",
-  "unsupportedFormat": "Desteklenmeyen arşiv formatı. Bir ZIP, TAR, GZ, TGZ veya TAR.GZ dosyası kullanın.",
+  "unsupportedFormat": "Bu dosya formatı desteklenmiyor. Yukarıda listelenen formatlardan birinde arşiv seçin.",
   "parseFailed": "Bu arşiv ayrıştırılamadı. Bozuk, şifrelenmiş olabilir veya desteklenmeyen bir özellik kullanıyor olabilir.",
   "gzipUnsupported": "Bu tarayıcı GZIP sıkıştırmasını açmayı desteklemiyor.",
   "previewTooLarge": "Önizleme 1 MB ile sınırlıdır. Dosyanın tamamını incelemek için girdiyi indirin.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "Görüntü önizlemesi",
   "pdfPreviewLabel": "PDF önizlemesi",
   "openFolder": "Klasörü aç",
-  "previewFile": "Dosyayı önizle"
+  "previewFile": "Dosyayı önizle",
+  "entryTooLarge": "Bu girdi, tarayıcıdaki 512 MiB çıkarma sınırını aşıyor. Girdiyi çıkarmak için bir masaüstü arşiv programı kullanın."
 }

@@ -1,15 +1,14 @@
 {
   "uploadTitle": "פתיחת ארכיון",
-  "uploadDescription": "בחרו קובץ ZIP, TAR, GZ או TGZ לבדיקה בלי להעלות אותו לשום מקום.",
   "uploadAction": "בחירת ארכיון",
   "uploadHint": "לחצו או גררו לכאן קובץ ארכיון",
-  "supportedFormats": "פורמטים נתמכים: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP, TAR, GZIP, 7z, RAR, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, .Z, CPIO, AR, CAB, ISO, LHA",
   "localOnlyNote": "הקבצים נשארים בסשן הדפדפן הזה. הארכיון לא נשלח לשרת.",
   "chooseAnother": "בחרו ארכיון אחר",
   "clearArchive": "ניקוי",
   "parsingArchive": "קורא את פריטי הארכיון...",
   "errorTitle": "לא ניתן לפתוח את הארכיון",
-  "unsupportedFormat": "פורמט ארכיון לא נתמך. השתמשו בקובץ ZIP, TAR, GZ, TGZ או TAR.GZ.",
+  "unsupportedFormat": "פורמט הקובץ אינו נתמך. בחרו קובץ באחד מפורמטי הארכיון המפורטים למעלה.",
   "parseFailed": "לא ניתן לנתח את הארכיון הזה. ייתכן שהוא פגום, מוצפן או משתמש בתכונה לא נתמכת.",
   "gzipUnsupported": "הדפדפן הזה לא תומך בפריסת GZIP.",
   "previewTooLarge": "התצוגה המקדימה מוגבלת ל-1 MB. הורידו את הפריט כדי לבדוק את הקובץ המלא.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "תצוגה מקדימה של תמונה",
   "pdfPreviewLabel": "תצוגה מקדימה של PDF",
   "openFolder": "פתיחת תיקייה",
-  "previewFile": "תצוגה מקדימה של קובץ"
+  "previewFile": "תצוגה מקדימה של קובץ",
+  "entryTooLarge": "גודל הפריט חורג ממגבלת החילוץ בדפדפן, 512 MiB. חלצו אותו בעזרת תוכנת ארכיון במחשב."
 }

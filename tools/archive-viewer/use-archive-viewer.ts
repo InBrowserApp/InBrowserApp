@@ -9,6 +9,7 @@ import {
 } from "react"
 
 import { openArchive } from "./core/archive"
+import { acceptedArchiveTypes } from "./core/formats"
 import { buildRowIndex, getRowsForDirectory } from "./core/explorer"
 import { formatBytes, summarizeEntries } from "./core/format"
 import { normalizeDirectoryPath } from "./core/path"
@@ -24,7 +25,7 @@ import {
 import type { PreviewState } from "./components/preview-dialog"
 import type { ArchiveViewerMessages } from "./types"
 
-const ACCEPTED_ARCHIVE_TYPES = ".zip,.tar,.gz,.tgz,.tar.gz"
+const EMPTY_ENTRIES: readonly ArchiveEntry[] = []
 
 function useArchiveViewer(messages: ArchiveViewerMessages) {
   const fileInputRef = useRef<HTMLInputElement | null>(null)
@@ -32,12 +33,12 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
   const requestIdRef = useRef(0)
   const previewRequestIdRef = useRef(0)
   const archiveHandleRef = useRef<ArchiveHandle | null>(null)
+  const archiveControllerRef = useRef<AbortController | null>(null)
   const previewRef = useRef<PreviewState>({ status: "idle" })
   const textDownloadUrlRef = useRef<string | null>(null)
 
   const [archiveFile, setArchiveFile] = useState<File | null>(null)
   const [archiveHandle, setArchiveHandle] = useState<ArchiveHandle | null>(null)
-  const [entries, setEntries] = useState<readonly ArchiveEntry[]>([])
   const [currentDirectory, setCurrentDirectory] = useState("")
   const [search, setSearch] = useState("")
   const [selectedPath, setSelectedPath] = useState("")
@@ -48,6 +49,7 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
   const [isParsing, setIsParsing] = useState(false)
   const [errorMessage, setErrorMessage] = useState("")
 
+  const entries = archiveHandle?.entries ?? EMPTY_ENTRIES
   const rowIndex = useMemo(() => buildRowIndex(entries), [entries])
   const visibleRows = useMemo(() => {
     const rows = getRowsForDirectory(rowIndex, currentDirectory)
@@ -62,15 +64,13 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
   const summary = useMemo(() => summarizeEntries(entries), [entries])
 
   useEffect(() => {
-    archiveHandleRef.current = archiveHandle
-  }, [archiveHandle])
-
-  useEffect(() => {
     previewRef.current = preview
   }, [preview])
 
   useEffect(() => {
     return () => {
+      requestIdRef.current += 1
+      archiveControllerRef.current?.abort()
       void archiveHandleRef.current?.dispose()
       cleanupPreview(previewRef.current)
       if (textDownloadUrlRef.current) {
@@ -87,18 +87,24 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
     previewRequestIdRef.current += 1
     cleanupTextDownloadUrl()
     cleanupPreview(previewRef.current)
+    const previousHandle = archiveHandleRef.current
+    archiveHandleRef.current = null
+    archiveControllerRef.current?.abort()
+    const controller = new AbortController()
+    archiveControllerRef.current = controller
     resetArchiveFor(file)
+    setIsParsing(true)
 
     try {
-      if (archiveHandleRef.current) await archiveHandleRef.current.dispose()
-      const nextHandle = await openArchive(file)
+      await previousHandle?.dispose()
+      const nextHandle = await openArchive(file, controller.signal)
       if (requestIdRef.current !== requestId) {
         await nextHandle.dispose()
         return
       }
 
+      archiveHandleRef.current = nextHandle
       setArchiveHandle(nextHandle)
-      setEntries(nextHandle.entries)
     } catch (error) {
       if (requestIdRef.current === requestId) {
         setErrorMessage(resolveArchiveError(error, messages))
@@ -203,7 +209,9 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
     try {
       await downloadArchiveEntry(handle, entry)
     } catch (error) {
-      setErrorMessage(resolveArchiveError(error, messages))
+      if (archiveHandleRef.current === handle) {
+        setErrorMessage(resolveArchiveError(error, messages))
+      }
     }
   }
 
@@ -212,30 +220,24 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
     previewRequestIdRef.current += 1
     cleanupTextDownloadUrl()
     cleanupPreview(previewRef.current)
-    await archiveHandleRef.current?.dispose()
-    setArchiveFile(null)
-    setArchiveHandle(null)
-    setEntries([])
-    setCurrentDirectory("")
-    setSearch("")
-    setSelectedPath("")
-    setPreview({ status: "idle" })
-    setIsPreviewOpen(false)
-    setErrorMessage("")
+    const handle = archiveHandleRef.current
+    archiveHandleRef.current = null
+    archiveControllerRef.current?.abort()
+    archiveControllerRef.current = null
+    resetArchiveFor(null)
     setIsParsing(false)
+    await handle?.dispose()
   }
 
-  function resetArchiveFor(file: File) {
+  function resetArchiveFor(file: File | null) {
     setArchiveFile(file)
     setArchiveHandle(null)
-    setEntries([])
     setCurrentDirectory("")
     setSearch("")
     setSelectedPath("")
     setPreview({ status: "idle" })
     setIsPreviewOpen(false)
     setErrorMessage("")
-    setIsParsing(true)
   }
 
   function resetPreviewSelection() {
@@ -262,7 +264,7 @@ function useArchiveViewer(messages: ArchiveViewerMessages) {
   }
 
   return {
-    accept: ACCEPTED_ARCHIVE_TYPES,
+    accept: acceptedArchiveTypes,
     archiveFile,
     archiveHandle,
     archiveSize: archiveFile ? formatBytes(archiveFile.size) : null,

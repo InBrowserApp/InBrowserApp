@@ -1,15 +1,14 @@
 {
   "uploadTitle": "Apri archivio",
-  "uploadDescription": "Scegli un file ZIP, TAR, GZ o TGZ da ispezionare senza caricarlo da nessuna parte.",
   "uploadAction": "Scegli archivio",
   "uploadHint": "Fai clic o trascina qui un archivio",
-  "supportedFormats": "Formati supportati: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP, TAR, GZIP, 7z, RAR, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, .Z, CPIO, AR, CAB, ISO, LHA",
   "localOnlyNote": "I file restano in questa sessione del browser. L'archivio non viene inviato a un server.",
   "chooseAnother": "Scegli un altro",
   "clearArchive": "Cancella",
   "parsingArchive": "Lettura degli elementi dell'archivio...",
   "errorTitle": "Impossibile aprire l'archivio",
-  "unsupportedFormat": "Formato archivio non supportato. Usa un file ZIP, TAR, GZ, TGZ o TAR.GZ.",
+  "unsupportedFormat": "Formato di file non supportato. Scegli uno dei formati di archivio indicati sopra.",
   "parseFailed": "Impossibile analizzare questo archivio. Potrebbe essere danneggiato, crittografato o usare una funzionalità non supportata.",
   "gzipUnsupported": "Questo browser non supporta la decompressione GZIP.",
   "previewTooLarge": "L'anteprima è limitata a 1 MB. Scarica l'elemento per ispezionare il file completo.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "Anteprima immagine",
   "pdfPreviewLabel": "Anteprima PDF",
   "openFolder": "Apri cartella",
-  "previewFile": "Anteprima file"
+  "previewFile": "Anteprima file",
+  "entryTooLarge": "Questo elemento supera il limite di 512 MiB per l'estrazione nel browser. Estrailo con un programma per archivi installato sul computer."
 }

@@ -1,15 +1,14 @@
 {
   "uploadTitle": "Buka arsip",
-  "uploadDescription": "Pilih file ZIP, TAR, GZ, atau TGZ untuk diperiksa tanpa mengunggahnya ke mana pun.",
   "uploadAction": "Pilih arsip",
   "uploadHint": "Klik atau seret file arsip ke sini",
-  "supportedFormats": "Format yang didukung: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP, TAR, GZIP, 7z, RAR, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, .Z, CPIO, AR, CAB, ISO, LHA",
   "localOnlyNote": "File tetap berada di sesi browser ini. Arsip tidak dikirim ke server.",
   "chooseAnother": "Pilih yang lain",
   "clearArchive": "Hapus",
   "parsingArchive": "Membaca entri arsip...",
   "errorTitle": "Arsip tidak dapat dibuka",
-  "unsupportedFormat": "Format arsip tidak didukung. Gunakan file ZIP, TAR, GZ, TGZ, atau TAR.GZ.",
+  "unsupportedFormat": "Format file tidak didukung. Gunakan salah satu format arsip yang tercantum di atas.",
   "parseFailed": "Tidak dapat mengurai arsip ini. Arsip mungkin rusak, terenkripsi, atau menggunakan fitur yang tidak didukung.",
   "gzipUnsupported": "Browser ini tidak mendukung dekompresi GZIP.",
   "previewTooLarge": "Pratinjau dibatasi hingga 1 MB. Unduh entri tersebut untuk memeriksa file lengkap.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "Pratinjau gambar",
   "pdfPreviewLabel": "Pratinjau PDF",
   "openFolder": "Buka folder",
-  "previewFile": "Pratinjau file"
+  "previewFile": "Pratinjau file",
+  "entryTooLarge": "Entri ini melebihi batas ekstraksi browser sebesar 512 MiB. Gunakan aplikasi arsip desktop untuk mengekstraknya."
 }

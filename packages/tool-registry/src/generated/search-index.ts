@@ -793,122 +793,134 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     slug: "archive-viewer",
     category: "developer",
     icon: "archive",
-    tags: ["archive", "zip", "tar", "gzip", "viewer", "offline"],
+    tags: [
+      "archive",
+      "zip",
+      "tar",
+      "gzip",
+      "7z",
+      "rar",
+      "zstd",
+      "xz",
+      "bzip2",
+      "viewer",
+      "offline",
+    ],
     locales: {
       ar: {
         name: "عارض الأرشيفات",
         description:
-          "افتح ملفات ZIP وTAR وGZ وTGZ محليًا في متصفحك، وتصفّح شجرة المجلدات، وعاين العناصر القابلة للقراءة، ونزّل الملفات الفردية.",
+          "افتح ملفات 7z وRAR وZIP وTAR وGZIP وZstandard وغيرها في متصفحك. تصفّح المجلدات وعاين الملفات ونزّل كل ملف على حدة.",
       },
       de: {
         name: "Archivbetrachter",
         description:
-          "Öffne ZIP-, TAR-, GZ- und TGZ-Dateien lokal in deinem Browser, durchsuche ihren Ordnerbaum, zeige lesbare Einträge in der Vorschau an und lade einzelne Dateien herunter.",
+          "Öffne 7z, RAR, ZIP, TAR, GZIP, Zstandard und weitere Formate im Browser. Durchsuche Ordner, zeige Dateien in der Vorschau an und lade sie einzeln herunter.",
       },
       en: {
         name: "Archive Viewer",
         description:
-          "Open ZIP, TAR, GZ, and TGZ files locally in your browser, browse their folder tree, preview readable entries, and download individual files.",
+          "Open 7z, RAR, ZIP, TAR, GZIP, Zstandard, and more in your browser. Browse folders, preview entries, and download individual files.",
       },
       es: {
         name: "Visor de archivos comprimidos",
         description:
-          "Abre archivos ZIP, TAR, GZ y TGZ localmente en tu navegador, explora su árbol de carpetas, previsualiza entradas legibles y descarga archivos individuales.",
+          "Abre archivos 7z, RAR, ZIP, TAR, GZIP, Zstandard y otros formatos en tu navegador. Explora carpetas, previsualiza su contenido y descarga archivos individuales.",
       },
       fr: {
         name: "Visionneuse d'archives",
         description:
-          "Ouvrez des fichiers ZIP, TAR, GZ et TGZ localement dans votre navigateur, parcourez leur arborescence, prévisualisez les entrées lisibles et téléchargez des fichiers individuels.",
+          "Ouvrez des fichiers 7z, RAR, ZIP, TAR, GZIP, Zstandard et d'autres formats dans votre navigateur. Parcourez les dossiers, affichez un aperçu des entrées et téléchargez les fichiers un par un.",
       },
       he: {
         name: "מציג ארכיונים",
         description:
-          "פתחו קובצי ZIP, TAR, GZ ו-TGZ באופן מקומי בדפדפן, עיינו בעץ התיקיות שלהם, צפו בתצוגה מקדימה של פריטים קריאים והורידו קבצים בודדים.",
+          "פתחו קובצי 7z, RAR, ZIP, TAR, GZIP, Zstandard ועוד בדפדפן. עיינו בתיקיות, הציגו תצוגה מקדימה והורידו קבצים בודדים.",
       },
       hi: {
         name: "आर्काइव व्यूअर",
         description:
-          "अपने ब्राउज़र में ZIP, TAR, GZ और TGZ फ़ाइलें स्थानीय रूप से खोलें, उनका फ़ोल्डर ट्री ब्राउज़ करें, पढ़ी जा सकने वाली प्रविष्टियों का पूर्वावलोकन करें और अलग-अलग फ़ाइलें डाउनलोड करें।",
+          "अपने ब्राउज़र में 7z, RAR, ZIP, TAR, GZIP, Zstandard और अन्य फ़ॉर्मैट की फ़ाइलें खोलें। फ़ोल्डर ब्राउज़ करें, फ़ाइलों का पूर्वावलोकन देखें और ज़रूरत की फ़ाइल अलग से डाउनलोड करें।",
       },
       id: {
         name: "Penampil Arsip",
         description:
-          "Buka file ZIP, TAR, GZ, dan TGZ secara lokal di browser Anda, jelajahi struktur foldernya, pratinjau entri yang dapat dibaca, dan unduh file tertentu.",
+          "Buka 7z, RAR, ZIP, TAR, GZIP, Zstandard, dan format lainnya di browser. Jelajahi folder, lihat pratinjau entri, dan unduh file satu per satu.",
       },
       it: {
         name: "Visualizzatore di archivi",
         description:
-          "Apri file ZIP, TAR, GZ e TGZ localmente nel browser, esplora l'albero delle cartelle, visualizza in anteprima gli elementi leggibili e scarica singoli file.",
+          "Apri file 7z, RAR, ZIP, TAR, GZIP, Zstandard e altri formati nel browser. Esplora le cartelle, visualizza le anteprime e scarica singoli file.",
       },
       ja: {
         name: "アーカイブビューアー",
         description:
-          "ZIP、TAR、GZ、TGZ ファイルをブラウザー内でローカルに開き、フォルダーツリーを確認し、読める項目をプレビューして、個別のファイルをダウンロードできます。",
+          "7z、RAR、ZIP、TAR、GZIP、Zstandard などをブラウザーで開けます。フォルダーの閲覧、ファイルのプレビュー、個別ダウンロードに対応しています。",
       },
       ko: {
         name: "아카이브 뷰어",
         description:
-          "브라우저에서 ZIP, TAR, GZ, TGZ 파일을 로컬로 열어 폴더 트리를 탐색하고, 읽을 수 있는 항목을 미리 보며, 개별 파일을 다운로드하세요.",
+          "브라우저에서 7z, RAR, ZIP, TAR, GZIP, Zstandard 등 다양한 파일을 여세요. 폴더를 탐색하고 항목을 미리 보거나 개별 파일을 다운로드할 수 있습니다.",
       },
       ms: {
         name: "Pemapar Arkib",
         description:
-          "Buka fail ZIP, TAR, GZ dan TGZ secara setempat dalam penyemak imbas anda, semak imbas pepohon foldernya, pratonton entri yang boleh dibaca dan muat turun fail individu.",
+          "Buka fail 7z, RAR, ZIP, TAR, GZIP, Zstandard dan format lain dalam penyemak imbas. Semak imbas folder, pratonton entri dan muat turun fail satu demi satu.",
       },
       nl: {
         name: "Archiefviewer",
         description:
-          "Open ZIP-, TAR-, GZ- en TGZ-bestanden lokaal in je browser, blader door hun mappenstructuur, bekijk leesbare items vooraf en download afzonderlijke bestanden.",
+          "Open 7z, RAR, ZIP, TAR, GZIP, Zstandard en andere formaten in je browser. Blader door mappen, bekijk bestanden vooraf en download ze afzonderlijk.",
       },
       no: {
         name: "Arkivviser",
         description:
-          "Åpne ZIP-, TAR-, GZ- og TGZ-filer lokalt i nettleseren, bla gjennom mappetreet, forhåndsvis lesbare oppføringer og last ned enkeltfiler.",
+          "Åpne 7z, RAR, ZIP, TAR, GZIP, Zstandard og flere formater i nettleseren. Bla gjennom mapper, forhåndsvis filer og last dem ned enkeltvis.",
       },
       pl: {
         name: "Przeglądarka archiwów",
         description:
-          "Otwieraj pliki ZIP, TAR, GZ i TGZ lokalnie w przeglądarce, przeglądaj drzewo folderów, podglądaj czytelne wpisy i pobieraj pojedyncze pliki.",
+          "Otwieraj pliki w formatach 7z, RAR, ZIP, TAR, GZIP, Zstandard i innych w przeglądarce. Przeglądaj foldery, podglądaj zawartość i pobieraj pojedyncze pliki.",
       },
       pt: {
         name: "Visualizador de arquivos compactados",
         description:
-          "Abra arquivos ZIP, TAR, GZ e TGZ localmente no navegador, navegue pela árvore de pastas, pré-visualize entradas legíveis e baixe arquivos individuais.",
+          "Abra arquivos 7z, RAR, ZIP, TAR, GZIP, Zstandard e outros formatos no navegador. Navegue pelas pastas, pré-visualize o conteúdo e baixe arquivos individuais.",
       },
       ru: {
         name: "Просмотр архивов",
         description:
-          "Открывайте файлы ZIP, TAR, GZ и TGZ локально в браузере, просматривайте дерево папок, проверяйте читаемые элементы и скачивайте отдельные файлы.",
+          "Открывайте файлы 7z, RAR, ZIP, TAR, GZIP, Zstandard и других форматов в браузере. Просматривайте папки и содержимое, скачивайте отдельные файлы.",
       },
       sv: {
         name: "Arkivvisare",
         description:
-          "Öppna ZIP, TAR, GZ och TGZ-filer lokalt i webbläsaren, bläddra i deras mappträd, förhandsgranska läsbara poster och ladda ner enskilda filer.",
+          "Öppna filer i 7z, RAR, ZIP, TAR, GZIP, Zstandard och andra format i webbläsaren. Bläddra bland mappar, förhandsgranska innehållet och ladda ner enskilda filer.",
       },
       th: {
         name: "โปรแกรมดูไฟล์อาร์ไคฟ์",
         description:
-          "เปิดไฟล์ ZIP, TAR, GZ และ TGZ ภายในเบราว์เซอร์ของคุณ เลือกดูโครงสร้างโฟลเดอร์ แสดงตัวอย่างรายการที่อ่านได้ และดาวน์โหลดไฟล์แต่ละรายการได้โดยตรง",
+          "เปิดไฟล์ 7z, RAR, ZIP, TAR, GZIP, Zstandard และรูปแบบอื่น ๆ ในเบราว์เซอร์ เลือกดูโฟลเดอร์ ดูตัวอย่าง และดาวน์โหลดทีละไฟล์",
       },
       tr: {
         name: "Arşiv Görüntüleyici",
         description:
-          "ZIP, TAR, GZ ve TGZ dosyalarını tarayıcınızda yerel olarak açın, klasör ağacında gezinin, okunabilir girdileri önizleyin ve tek tek dosyaları indirin.",
+          "7z, RAR, ZIP, TAR, GZIP, Zstandard ve diğer arşiv formatlarını tarayıcınızda açın. Klasörlere göz atın, içeriği önizleyin ve dosyaları tek tek indirin.",
       },
       vi: {
         name: "Trình xem tệp nén",
         description:
-          "Mở các tệp ZIP, TAR, GZ và TGZ cục bộ trong trình duyệt của bạn, duyệt cây thư mục, xem trước các mục có thể đọc được và tải xuống từng tệp riêng lẻ.",
+          "Mở tệp 7z, RAR, ZIP, TAR, GZIP, Zstandard và các định dạng khác trong trình duyệt. Duyệt thư mục, xem trước nội dung và tải xuống từng tệp.",
       },
       "zh-CN": {
         name: "压缩包查看器",
         description:
-          "在浏览器中本地打开 ZIP、TAR、GZ 和 TGZ 文件，浏览文件夹树，预览可读条目，并下载单个文件。",
+          "在浏览器中本地打开 7z、RAR、ZIP、TAR、GZIP、Zstandard 等文件，浏览文件夹、预览条目或下载单个文件。",
       },
       "zh-TW": {
         name: "壓縮檔檢視器",
         description:
-          "在瀏覽器中本機開啟 ZIP、TAR、GZ 和 TGZ 檔案，瀏覽資料夾樹狀結構、預覽可讀項目，並下載個別檔案。",
+          "在瀏覽器中開啟 7z、RAR、ZIP、TAR、GZIP、Zstandard 等格式。瀏覽資料夾、預覽項目，並下載個別檔案。",
       },
     },
   },

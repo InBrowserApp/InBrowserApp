@@ -1,5 +1,5 @@
 import type { ArchiveHandle } from "../core/types"
-import type { ArchiveSummary } from "../core/format"
+import { getFormatLabel, type ArchiveSummary } from "../core/format"
 import type { ArchiveViewerMessages } from "../types"
 
 type SummaryStripProps = Readonly<{
@@ -20,7 +20,7 @@ function SummaryStrip({
   if (!handle) return null
 
   const items = [
-    [messages.summaryFormat, handle.format.toUpperCase()],
+    [messages.summaryFormat, getFormatLabel(handle.format, handle.tarWrapped)],
     [messages.summaryCompressed, archiveSize],
     [messages.summaryUncompressed, uncompressedSize],
     [messages.summaryEntries, String(summary.entries)],

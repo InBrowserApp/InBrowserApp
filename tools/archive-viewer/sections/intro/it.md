@@ -1,4 +1,4 @@
-Un visualizzatore di archivi ti permette di ispezionare un file compresso prima di estrarlo. Questo strumento apre file ZIP, TAR, GZ, TGZ e TAR.GZ direttamente nel browser, così puoi confermare cosa contiene, esplorare le cartelle, vedere l'anteprima dei file leggibili e scaricare solo l'elemento che ti serve.
+Apri un archivio 7z, RAR, ZIP o TAR per esplorarne le cartelle prima dell'estrazione. Seleziona un file per visualizzarne l'anteprima o scaricarlo singolarmente.
 
 ## Quando usarlo
 
@@ -10,7 +10,9 @@ I contenuti dell'archivio vengono letti localmente nella sessione del browser. I
 
 ## Formati archivio supportati
 
-Il visualizzatore supporta archivi ZIP standard, file TAR non compressi, singoli file compressi con GZIP e archivi TAR racchiusi in GZIP (`.tgz` o `.tar.gz`). Gli archivi protetti da password o crittografati non sono supportati in questo primo passaggio della riscrittura.
+Il visualizzatore apre i formati ZIP, 7z, RAR4, RAR5, TAR, CPIO, AR (compresi i pacchetti `.deb`), CAB, ISO 9660 e LHA. Apre anche singoli file e archivi TAR compressi con GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA o l'utilità UNIX compress (`.Z`). Ad esempio, apri un pacchetto di rilascio `.tar.zst` per esplorarne le cartelle oppure un log `.zst` per scaricare il file decompresso.
+
+Usa un programma per archivi installato sul computer per i file crittografati, gli archivi suddivisi in volumi, gli archivi solidi RAR4 o gli elementi oltre 512 MiB nei formati aggiunti di recente. L'apertura di un archivio solido di grandi dimensioni o l'estrazione dei relativi file può richiedere più tempo, perché il decodificatore potrebbe dover elaborare anche gli elementi precedenti.
 
 ## Comportamento dell'anteprima
 

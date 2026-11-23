@@ -1,15 +1,14 @@
 {
   "uploadTitle": "Abrir archivo comprimido",
-  "uploadDescription": "Elige un archivo ZIP, TAR, GZ o TGZ para inspeccionarlo sin subirlo a ningún lugar.",
   "uploadAction": "Elegir archivo",
   "uploadHint": "Haz clic o arrastra aquí un archivo comprimido",
-  "supportedFormats": "Formatos compatibles: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP, TAR, GZIP, 7z, RAR, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, .Z, CPIO, AR, CAB, ISO, LHA",
   "localOnlyNote": "Los archivos permanecen en esta sesión del navegador. El archivo comprimido no se envía a un servidor.",
   "chooseAnother": "Elegir otro",
   "clearArchive": "Borrar",
   "parsingArchive": "Leyendo entradas del archivo...",
   "errorTitle": "No se pudo abrir el archivo comprimido",
-  "unsupportedFormat": "Formato de archivo comprimido no compatible. Usa un archivo ZIP, TAR, GZ, TGZ o TAR.GZ.",
+  "unsupportedFormat": "Formato de archivo incompatible. Elige uno de los formatos indicados arriba.",
   "parseFailed": "No se pudo analizar este archivo. Puede estar dañado, cifrado o usar una función no compatible.",
   "gzipUnsupported": "Este navegador no admite la descompresión GZIP.",
   "previewTooLarge": "La vista previa está limitada a 1 MB. Descarga la entrada para inspeccionar el archivo completo.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "Vista previa de imagen",
   "pdfPreviewLabel": "Vista previa de PDF",
   "openFolder": "Abrir carpeta",
-  "previewFile": "Previsualizar archivo"
+  "previewFile": "Previsualizar archivo",
+  "entryTooLarge": "Esta entrada supera el límite de extracción de 512 MiB del navegador. Usa una aplicación de escritorio para extraerla."
 }

@@ -1,4 +1,4 @@
-Een archiefviewer laat je een gecomprimeerd bestand inspecteren voordat je het uitpakt. Deze tool opent ZIP-, TAR-, GZ-, TGZ- en TAR.GZ-bestanden rechtstreeks in de browser, zodat je kunt controleren wat erin zit, door mappen kunt bladeren, leesbare bestanden vooraf kunt bekijken en alleen het item kunt downloaden dat je nodig hebt.
+Open een 7z-, RAR-, ZIP- of TAR-archief om door de mappen te bladeren voordat je het uitpakt. Selecteer een bestand om het vooraf te bekijken of afzonderlijk te downloaden.
 
 ## Wanneer gebruik je het
 
@@ -10,7 +10,9 @@ De inhoud van het archief wordt lokaal gelezen in je browsersessie. Het bestand 
 
 ## Ondersteunde archiefformaten
 
-De viewer ondersteunt standaard ZIP-archieven, niet-gecomprimeerde TAR-bestanden, met GZIP gecomprimeerde losse bestanden en TAR-archieven verpakt in GZIP (`.tgz` of `.tar.gz`). Met wachtwoord beveiligde of versleutelde archieven worden in deze eerste herschrijffase niet ondersteund.
+De archiefviewer opent ZIP, 7z, RAR4 en RAR5, TAR, CPIO, AR (inclusief `.deb`-pakketten), CAB, ISO 9660 en LHA. Je kunt ook losse bestanden en TAR-archieven openen die zijn gecomprimeerd met GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA of UNIX compress (`.Z`). Open bijvoorbeeld een releasebundel in `.tar.zst` om door de mappen te bladeren, of een logbestand in `.zst` om de uitgepakte versie te downloaden.
+
+Gebruik een archiefprogramma op je computer voor versleutelde bestanden, meerdelige archieven, solid-archieven in RAR4-formaat of bestanden groter dan 512 MiB in de nieuw ondersteunde formaten. Het openen of uitpakken van grote solid-archieven kan langer duren, omdat de decoder mogelijk eerst eerdere bestanden moet verwerken.
 
 ## Voorbeeldgedrag
 

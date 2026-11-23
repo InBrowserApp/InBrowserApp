@@ -1,4 +1,4 @@
-An archive viewer lets you inspect a compressed file before extracting it. This tool opens ZIP, TAR, GZ, TGZ, and TAR.GZ files directly in the browser so you can confirm what is inside, browse folders, preview readable files, and download only the entry you need.
+Open a 7z, RAR, ZIP, or TAR archive to browse its folders before extracting anything. Select a file to preview it or download it on its own.
 
 ## When to use it
 
@@ -10,7 +10,9 @@ Archive contents are read locally in your browser session. The file is not uploa
 
 ## Supported archive formats
 
-The viewer supports standard ZIP archives, uncompressed TAR files, GZIP-compressed single files, and TAR archives wrapped in GZIP (`.tgz` or `.tar.gz`). Password-protected or encrypted archives are not supported in this first rewrite pass.
+The viewer opens ZIP, 7z, RAR4 and RAR5, TAR, CPIO, AR (including .deb packages), CAB, ISO 9660, and LHA. It also opens standalone files and TAR archives compressed with GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, or UNIX compress (.Z). For example, open a .tar.zst release bundle to browse its folders, or a .zst log to download the decompressed file.
+
+Use a desktop archive tool for encrypted files, split archives, solid RAR4 archives, or entries over 512 MiB in the newly supported formats. Large solid archives can take longer to open or extract because the decoder may need to process earlier entries.
 
 ## Preview behavior
 

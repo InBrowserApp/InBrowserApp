@@ -1,4 +1,4 @@
 {
   "name": "Pemapar Arkib",
-  "description": "Buka fail ZIP, TAR, GZ dan TGZ secara setempat dalam penyemak imbas anda, semak imbas pepohon foldernya, pratonton entri yang boleh dibaca dan muat turun fail individu."
+  "description": "Buka fail 7z, RAR, ZIP, TAR, GZIP, Zstandard dan format lain dalam penyemak imbas. Semak imbas folder, pratonton entri dan muat turun fail satu demi satu."
 }

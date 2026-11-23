@@ -1,15 +1,14 @@
 {
   "uploadTitle": "Otwórz archiwum",
-  "uploadDescription": "Wybierz plik ZIP, TAR, GZ lub TGZ, aby sprawdzić go bez wysyłania gdziekolwiek.",
   "uploadAction": "Wybierz archiwum",
   "uploadHint": "Kliknij lub przeciągnij tutaj plik archiwum",
-  "supportedFormats": "Obsługiwane formaty: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP, TAR, GZIP, 7z, RAR, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, .Z, CPIO, AR, CAB, ISO, LHA",
   "localOnlyNote": "Pliki pozostają w tej sesji przeglądarki. Archiwum nie jest wysyłane na serwer.",
   "chooseAnother": "Wybierz inne",
   "clearArchive": "Wyczyść",
   "parsingArchive": "Odczytywanie wpisów archiwum...",
   "errorTitle": "Nie można otworzyć archiwum",
-  "unsupportedFormat": "Nieobsługiwany format archiwum. Użyj pliku ZIP, TAR, GZ, TGZ lub TAR.GZ.",
+  "unsupportedFormat": "Ten format pliku nie jest obsługiwany. Wybierz plik w jednym z wymienionych powyżej formatów archiwów.",
   "parseFailed": "Nie można przetworzyć tego archiwum. Może być uszkodzone, zaszyfrowane albo korzystać z nieobsługiwanej funkcji.",
   "gzipUnsupported": "Ta przeglądarka nie obsługuje dekompresji GZIP.",
   "previewTooLarge": "Podgląd jest ograniczony do 1 MB. Pobierz wpis, aby sprawdzić pełny plik.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "Podgląd obrazu",
   "pdfPreviewLabel": "Podgląd PDF",
   "openFolder": "Otwórz folder",
-  "previewFile": "Podejrzyj plik"
+  "previewFile": "Podejrzyj plik",
+  "entryTooLarge": "Ten plik przekracza limit rozpakowywania w przeglądarce wynoszący 512 MiB. Użyj programu do obsługi archiwów na komputerze."
 }

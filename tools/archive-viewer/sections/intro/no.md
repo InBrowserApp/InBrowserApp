@@ -1,4 +1,4 @@
-En arkivviser lar deg inspisere en komprimert fil før du pakker den ut. Dette verktøyet åpner ZIP-, TAR-, GZ-, TGZ- og TAR.GZ-filer direkte i nettleseren, slik at du kan bekrefte hva som er inni, bla gjennom mapper, forhåndsvise lesbare filer og bare laste ned oppføringen du trenger.
+Åpne et 7z-, RAR-, ZIP- eller TAR-arkiv for å bla gjennom mappene før du pakker ut noe. Velg en fil for å forhåndsvise den eller laste den ned enkeltvis.
 
 ## Når du bør bruke den
 
@@ -10,7 +10,9 @@ Arkivinnholdet leses lokalt i nettleserøkten din. Filen lastes ikke opp til InB
 
 ## Støttede arkivformater
 
-Viseren støtter standard ZIP-arkiver, ukomprimerte TAR-filer, GZIP-komprimerte enkeltfiler og TAR-arkiver pakket inn i GZIP (`.tgz` eller `.tar.gz`). Passordbeskyttede eller krypterte arkiver støttes ikke i denne første omskrivingsrunden.
+Arkivviseren åpner ZIP, 7z, RAR4 og RAR5, TAR, CPIO, AR (inkludert `.deb`-pakker), CAB, ISO 9660 og LHA. Den åpner også enkeltfiler og TAR-arkiver komprimert med GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA eller UNIX compress (`.Z`). Åpne for eksempel en utgivelsespakke med endelsen `.tar.zst` for å bla gjennom mappene, eller en `.zst`-loggfil for å laste ned den utpakkede filen.
+
+Bruk et arkivprogram på datamaskinen for krypterte filer, arkiver som er delt i flere deler, RAR4-arkiver med solid komprimering eller oppføringer over 512 MiB i de nye formatene. Store arkiver med solid komprimering kan ta lengre tid å åpne eller pakke ut fordi dekoderen kan måtte behandle tidligere oppføringer først.
 
 ## Forhåndsvisningsatferd
 
