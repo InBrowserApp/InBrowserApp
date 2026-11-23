@@ -121,7 +121,12 @@ function mustKeepOriginal(pdf: PDFDocument) {
   const xml = new TextDecoder()
     .decode(metadata.getContents())
     .replaceAll("\0", "")
-  return xml.includes("http://www.aiim.org/pdfa/ns/id/")
+  const namespaces = xml.matchAll(
+    /\bxmlns(?::[\w.-]+)?\s*=\s*(["'])([^"']+)\1/g
+  )
+  return Array.from(namespaces, ([, , value]) => value).includes(
+    "http://www.aiim.org/pdfa/ns/id/"
+  )
 }
 
 function inspectDocument(objects: PDFObject[]) {

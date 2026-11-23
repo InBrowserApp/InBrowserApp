@@ -217,6 +217,20 @@ test("keeps PDF/A and PDF 2.0 files in their original versions", async () => {
   expect(reencodeImage).not.toHaveBeenCalled()
 })
 
+test("only treats the PDF/A identifier as an archive marker when declared as a namespace", async () => {
+  const pdf = await PDFDocument.create()
+  pdf.addPage()
+  embedImage(pdf)
+  const xmp = pdf.context.stream(
+    "<xmp:Label>http://www.aiim.org/pdfa/ns/id/</xmp:Label>"
+  )
+  pdf.catalog.set(name("Metadata"), pdf.context.register(xmp))
+  expect(await compressPdf(await asFile(pdf), "balanced")).toEqual({
+    status: "noSavings",
+  })
+  expect(reencodeImage).toHaveBeenCalledOnce()
+})
+
 test("keeps gray images that rely on a default PDF color space", async () => {
   const pdf = await PDFDocument.create()
   const page = pdf.addPage()
