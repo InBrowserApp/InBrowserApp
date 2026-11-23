@@ -21,7 +21,7 @@ const otherClip = new File(["sample"], "other.webm")
 const dispose = vi.fn()
 const blob = new Blob(["audio"], { type: "audio/mp4" })
 const tracks: Track[] = [
-  { number: 1, codec: "ac3", language: "und", name: null },
+  { number: 1, codec: "ac3", language: "i", name: null },
   {
     number: 2,
     codec: "aac",
@@ -32,7 +32,7 @@ const tracks: Track[] = [
   {
     number: 3,
     codec: "aac",
-    language: "eng",
+    language: "en",
     name: null,
     output: { extension: "m4a", extract: async () => blob },
   },
@@ -72,6 +72,7 @@ describe("video audio extractor", () => {
     expect(
       screen.getByRole("option", { name: /Spanish.*Commentary.*AAC/ })
     ).toBeTruthy()
+    expect(screen.getByRole("option", { name: /English.*AAC/ })).toBeTruthy()
 
     const select = screen.getByRole("combobox", { name: messages.audioTrack })
     fireEvent.change(select, { target: { value: "1" } })

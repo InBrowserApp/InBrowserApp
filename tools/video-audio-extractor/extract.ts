@@ -31,7 +31,7 @@ export async function readAudioTracks(input: Input): Promise<Track[]> {
   const format = await input.getFormat()
   return Promise.all(
     (await input.getAudioTracks()).map(async (track) => {
-      const [codec, language, name] = await Promise.all([
+      const [codec, languageCode, name] = await Promise.all([
         track.getCodec(),
         track.getLanguageCode(),
         track.getName(),
@@ -39,28 +39,25 @@ export async function readAudioTracks(input: Input): Promise<Track[]> {
       const details = {
         number: track.number,
         codec: codec ?? String((await track.getInternalCodecId()) ?? ""),
-        language,
+        language: languageCode.toLowerCase(),
         name,
       }
-      if (format === MP4 && codec === "aac") {
-        return {
-          ...details,
-          output: {
-            extension: "m4a",
-            extract: (signal) => remux(track, codec, "m4a", details, signal),
-          },
-        }
+      if (
+        !(
+          (format === MP4 && codec === "aac") ||
+          (format === WEBM && (codec === "opus" || codec === "vorbis"))
+        )
+      ) {
+        return details
       }
-      if (format === WEBM && (codec === "opus" || codec === "vorbis")) {
-        return {
-          ...details,
-          output: {
-            extension: "webm",
-            extract: (signal) => remux(track, codec, "webm", details, signal),
-          },
-        }
+      const extension = codec === "aac" ? "m4a" : "webm"
+      return {
+        ...details,
+        output: {
+          extension,
+          extract: (signal) => remux(track, codec, extension, details, signal),
+        },
       }
-      return details
     })
   )
 }
@@ -88,8 +85,10 @@ async function remux(
   })
   const source = new EncodedAudioPacketSource(codec)
   output.addAudioTrack(source, {
-    languageCode: language,
+    // WebM may return a BCP 47 subtag. The muxer accepts ISO 639-2 only.
+    languageCode: /^[a-z]{3}$/.test(language) ? language : undefined,
     name: name || undefined,
+    decoderConfig,
   })
   // Start delayed tracks at zero and retain negative timestamps for codec priming.
   const offset = Math.max(0, first.timestamp)
@@ -98,10 +97,7 @@ async function remux(
     for await (const packet of sink.packets(first)) {
       signal.throwIfAborted()
       await source.add(
-        offset
-          ? packet.clone({ timestamp: packet.timestamp - offset })
-          : packet,
-        { decoderConfig }
+        offset ? packet.clone({ timestamp: packet.timestamp - offset }) : packet
       )
     }
     await output.finalize()

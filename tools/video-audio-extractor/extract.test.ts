@@ -80,4 +80,35 @@ describe("extracting selected audio packets", () => {
     const signal = AbortSignal.abort()
     await expect(track!.output!.extract(signal)).rejects.toBe(signal.reason)
   })
+
+  it("exports a WebM track tagged with a two-letter BCP 47 language", async () => {
+    const bytes = Buffer.from(await (await fixture("webm")).arrayBuffer())
+    const legacyLanguage = Buffer.from([
+      0x22,
+      0xb5,
+      0x9c,
+      0x83,
+      ...Buffer.from("eng"),
+    ])
+    const bcp47Language = Buffer.from([
+      0x22,
+      0xb5,
+      0x9d,
+      0x83,
+      ...Buffer.from("en\0"),
+    ])
+    const offset = bytes.indexOf(legacyLanguage)
+    expect(offset).toBeGreaterThanOrEqual(0)
+    bcp47Language.copy(bytes, offset)
+
+    using input = openVideo(new File([bytes], "bcp47.webm"))
+    const [track] = await readAudioTracks(input)
+    expect(track!.language).toBe("en")
+    const blob = await track!.output!.extract(new AbortController().signal)
+    using result = new Input({ formats: [WEBM], source: new BlobSource(blob) })
+    const [audio] = await result.getAudioTracks()
+    const [original] = await input.getAudioTracks()
+    expect(await audio!.getCodec()).toBe("opus")
+    expect(await payloads(audio!)).toEqual(await payloads(original!))
+  })
 })

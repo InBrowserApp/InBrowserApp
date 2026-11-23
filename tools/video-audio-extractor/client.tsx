@@ -10,6 +10,11 @@ import type { Track } from "./extract"
 import type messages from "./messages/en.json"
 
 export type Messages = typeof messages
+const codecLabels = new Map([
+  ["aac", "AAC"],
+  ["opus", "Opus"],
+  ["vorbis", "Vorbis"],
+])
 
 export default function VideoAudioExtractor({
   messages: m,
@@ -184,9 +189,11 @@ function TrackPicker({
               <option key={number} value={number}>
                 {[
                   m.trackNumber.replace("{number}", numbers.format(number)),
-                  code === "und" ? null : languageNames.of(code),
+                  code !== "und" && /^(?:[a-z]{2,3}|[a-z]{5,8})$/.test(code)
+                    ? languageNames.of(code)
+                    : null,
                   name,
-                  codec === "aac" ? "AAC" : codec,
+                  codecLabels.get(codec) ?? codec,
                 ]
                   .filter(Boolean)
                   .join(" · ")}
@@ -266,6 +273,7 @@ function TrackPreview({
             aria-label={m.preview}
             className="w-full"
             controls
+            controlsList="nodownload"
             preload="metadata"
             src={url}
             onError={() => setPreviewError(true)}
@@ -275,7 +283,10 @@ function TrackPreview({
       <Button asChild className="min-h-11 self-start sm:min-h-0">
         <a href={url} download={filename}>
           <Download data-icon="inline-start" aria-hidden="true" />
-          {m.download.replace("{format}", extension.toUpperCase())}
+          {m.download.replace(
+            "{format}",
+            extension === "webm" ? "WebM" : "M4A"
+          )}
         </a>
       </Button>
     </div>
