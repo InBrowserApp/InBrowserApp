@@ -78,9 +78,9 @@ function BillSplitter({
             amount: formatAmount(value),
           }
         })
-      : []
-  const formattedTotal = breakdown.length ? formatAmount(amount!) : ""
-  const copyText = breakdown.length
+      : null
+  const formattedTotal = formatAmount(amount ?? 0n)
+  const copyText = breakdown
     ? [
         ...breakdown.map(({ name, amount }) => `${name}\t${amount}`),
         `${messages.total}\t${formattedTotal}`,
@@ -236,7 +236,7 @@ function BillSplitter({
             className="h-auto min-h-9 max-w-full min-w-0 whitespace-normal"
           />
         </div>
-        {breakdown.length ? (
+        {breakdown ? (
           <div className="overflow-hidden rounded-lg border bg-background">
             <ul className="divide-y">
               {breakdown.map(({ name, amount }, index) => (

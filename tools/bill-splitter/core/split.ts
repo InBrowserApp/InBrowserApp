@@ -10,7 +10,7 @@ function normalizeNumber(value: string) {
 }
 
 export function parseDecimal(value: string, precision: 2 | 3) {
-  const match = /^(\d{0,12})(?:[.,٫](\d*))?$/.exec(normalizeNumber(value))
+  const match = /^(\d{0,12})(?:[.,٫](\d{0,3}))?$/.exec(normalizeNumber(value))
   if (!match) return null
   const [, whole = "", fraction = ""] = match
   if ((!whole && !fraction) || fraction.length > precision) return null
@@ -85,17 +85,19 @@ export function splitBill(
   }
 
   const fixed: (bigint | null)[] = []
+  let remaining = total
   for (const [index, value] of entries.entries()) {
     if (!value.trim()) {
       fixed.push(null)
-    } else {
-      const amount = parseDecimal(value, 2)
-      if (amount === null) return { error: "fixedError", index }
-      fixed.push(amount)
+      continue
     }
+
+    const amount = parseDecimal(value, 2)
+    if (amount === null) return { error: "fixedError", index }
+    fixed.push(amount)
+    remaining -= amount
   }
 
-  const remaining = total - sum(fixed.map((amount) => amount ?? 0n))
   if (remaining < 0n) return { error: "fixedOver" }
   if (fixed.every((amount) => amount !== null)) {
     return remaining === 0n ? { amounts: fixed } : { error: "fixedShort" }
