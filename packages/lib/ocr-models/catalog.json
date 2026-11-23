@@ -1,517 +1,390 @@
 {
-  "revision": "87416418657359cb625c412a48b6e1d6d41c29bd",
   "models": {
     "afr": {
-      "name": "Afrikaans",
-      "blob": "09e69cf5478cd6a0fb3ec5e7e7fa95a04f5cafb3"
+      "name": "Afrikaans"
     },
     "amh": {
-      "name": "Amharic",
-      "blob": "7a302b2bf6306c34177f594e0824eafc48906965"
+      "name": "Amharic"
     },
     "ara": {
-      "name": "Arabic",
-      "blob": "c8d129c67821c1592cac46836686b057ecc203dc"
+      "name": "Arabic"
     },
     "asm": {
-      "name": "Assamese",
-      "blob": "086035c6eacd5788c1f06d58c250023cee2aeb28"
+      "name": "Assamese"
     },
     "aze": {
       "name": "Azerbaijani (Latin)",
-      "blob": "27bc73edf08e5e5f0c3e43c315c5c6d965c2f075",
       "locale": "az-Latn"
     },
     "aze_cyrl": {
       "name": "Azerbaijani (Cyrillic)",
-      "blob": "e2b1b953a5b8db9247c6ddfcb58f062dc0b3b574",
       "locale": "az-Cyrl"
     },
     "bel": {
-      "name": "Belarusian",
-      "blob": "65d83dad535f876de31847f5fa2ff1bdd57c7bab"
+      "name": "Belarusian"
     },
     "ben": {
-      "name": "Bengali",
-      "blob": "7e9054d1de309714009a85555f5276168d41af9c"
+      "name": "Bengali"
     },
     "bod": {
-      "name": "Tibetan",
-      "blob": "7bb5029466eaef46aad59fc23b96648df0e4f176"
+      "name": "Tibetan"
     },
     "bos": {
-      "name": "Bosnian",
-      "blob": "95bed5c32e3759347db0471569303f06e3485f42"
+      "name": "Bosnian"
     },
     "bre": {
-      "name": "Breton",
-      "blob": "c01691329561938fb7d491ea7611c591202952dd"
+      "name": "Breton"
     },
     "bul": {
-      "name": "Bulgarian",
-      "blob": "1e65588d127d918ef3ba95b785b446f15827d60f"
+      "name": "Bulgarian"
     },
     "cat": {
-      "name": "Catalan (Valencian)",
-      "blob": "3fcd350dd2bb76503de90249111fff4e3c6aa0f0"
+      "name": "Catalan (Valencian)"
     },
     "ceb": {
-      "name": "Cebuano",
-      "blob": "5a1b96928e54b175db96f00d2aa84b5878d301b9"
+      "name": "Cebuano"
     },
     "ces": {
-      "name": "Czech",
-      "blob": "dd6fc79a62f9fcd1c7c6da06b31bb4fdb10dc173"
+      "name": "Czech"
     },
     "chi_sim": {
       "name": "Chinese (Simplified)",
-      "blob": "388bac276d033d06e5ed5ba7a7ad14ae58f97dab",
-      "locale": "zh-Hans",
-      "preferred": true
+      "locale": "zh-Hans"
     },
     "chi_sim_vert": {
       "name": "Chinese (Simplified, Vertical)",
-      "blob": "f9898e91068a9d04bcacf6d2a244da40e9f30c0c",
       "locale": "zh-Hans"
     },
     "chi_tra": {
       "name": "Chinese (Traditional)",
-      "blob": "1955cd8b8d076b898616e9c2c1ace65b43105356",
-      "locale": "zh-Hant",
-      "preferred": true
+      "locale": "zh-Hant"
     },
     "chi_tra_vert": {
       "name": "Chinese (Traditional, Vertical)",
-      "blob": "94bc5dbd7fa25dd89ac9c5bd18f3fc6d8409aa0e",
       "locale": "zh-Hant"
     },
     "chr": {
-      "name": "Cherokee",
-      "blob": "e0799a2b888466e5bc2ca60f1f2fb4a7ff4c6990"
+      "name": "Cherokee"
     },
     "cos": {
-      "name": "Corsican",
-      "blob": "3105b7fb0cd6c26f4fb144ec5d594430e88927cb"
+      "name": "Corsican"
     },
     "cym": {
-      "name": "Welsh",
-      "blob": "900cf17f74514934f87e9a8df3b29cb16b5606fe"
+      "name": "Welsh"
     },
     "dan": {
-      "name": "Danish",
-      "blob": "85501b582937493f9ae6a64ccd0a6bb0a2ea33d5"
+      "name": "Danish"
     },
     "deu": {
-      "name": "German",
-      "blob": "97ed7b2b60f2771c07040660ef0f6daf596dc7bf"
+      "name": "German"
     },
     "deu_latf": {
       "name": "German (Fraktur)",
-      "blob": "11a641044a93413454f75fbb8e05b085bd0b9d8d",
       "locale": "de-Latf"
     },
     "div": {
-      "name": "Dhivehi",
-      "blob": "53b46df7d6ae94f75913d6377182867ea09d950b"
+      "name": "Dhivehi"
     },
     "dzo": {
-      "name": "Dzongkha",
-      "blob": "3c31175be56ab4db42af614f384ea52ce949082c"
+      "name": "Dzongkha"
     },
     "ell": {
-      "name": "Greek",
-      "blob": "ed98ae1a88d84414da316e6eeab3232f2c68639b"
+      "name": "Greek"
     },
     "eng": {
-      "name": "English",
-      "blob": "bbef4675053b5b468cdb477053e28b1c698ba08e",
-      "preferred": true
+      "name": "English"
     },
     "enm": {
-      "name": "Middle English",
-      "blob": "e49b5b86da60f2e728ff2b7f4357692ac32b6a6d"
+      "name": "Middle English"
     },
     "epo": {
-      "name": "Esperanto",
-      "blob": "235fc67adf52f43d34b409d44d426d560aefc8e3"
+      "name": "Esperanto"
     },
     "est": {
-      "name": "Estonian",
-      "blob": "a2b52c3388358e6dfc4eb8d64d8fc6afbb3630ea"
+      "name": "Estonian"
     },
     "eus": {
-      "name": "Basque",
-      "blob": "6247f975443ec82c219c39e0b5ea76b4833c82fe"
+      "name": "Basque"
     },
     "fao": {
-      "name": "Faroese",
-      "blob": "1b845e73759785908aef57161ae4c86a70cce622"
+      "name": "Faroese"
     },
     "fas": {
-      "name": "Persian",
-      "blob": "1a17ee02076107e73abd15d2038389150c8f824f"
+      "name": "Persian"
     },
     "fil": {
       "name": "Filipino (Tagalog)",
-      "blob": "785f80decce6ddb6b50bd99f4840414359c806ff",
       "locale": "fil"
     },
     "fin": {
-      "name": "Finnish",
-      "blob": "73f92402f1891b9066e0e145f245145a2402105c"
+      "name": "Finnish"
     },
     "fra": {
-      "name": "French",
-      "blob": "d9e2b2160be0d1ca3b8f1bf2730fae476ef3b4a6"
+      "name": "French"
     },
     "frm": {
-      "name": "Middle French",
-      "blob": "ed06039efef821b78f22c86abb6c5aea7f02461e"
+      "name": "Middle French"
     },
     "fry": {
-      "name": "Western Frisian",
-      "blob": "17199d2c33e201d6ad4003a6c86db5f8f273ddc1"
+      "name": "Western Frisian"
     },
     "gla": {
-      "name": "Scottish Gaelic",
-      "blob": "e8bae7f1863dd1872ab7d2b2e7f319874c480e60"
+      "name": "Scottish Gaelic"
     },
     "gle": {
-      "name": "Irish",
-      "blob": "a7abc7be9aadc862b31ab7c7bc672051cd0245fb"
+      "name": "Irish"
     },
     "glg": {
-      "name": "Galician",
-      "blob": "7bc00b38f40f8de1575397f7d05387e5fbbacca4"
+      "name": "Galician"
     },
     "grc": {
-      "name": "Ancient Greek",
-      "blob": "e94990006fc18e88ab120e7ca6681cc3b290269b"
+      "name": "Ancient Greek"
     },
     "guj": {
-      "name": "Gujarati",
-      "blob": "151b9aad2945e3103118e5d36eee288f631d985a"
+      "name": "Gujarati"
     },
     "hat": {
-      "name": "Haitian; Haitian Creole",
-      "blob": "30d3baeaeef791781d782e58feb415b25921df3f"
+      "name": "Haitian; Haitian Creole"
     },
     "heb": {
-      "name": "Hebrew",
-      "blob": "7356caf3cddc9c867fe6727e17726727b8284608"
+      "name": "Hebrew"
     },
     "hin": {
-      "name": "Hindi",
-      "blob": "a8f0aaec09378115b12a2c6287c57695d082aea2"
+      "name": "Hindi"
     },
     "hrv": {
-      "name": "Croatian",
-      "blob": "6dd4f8638a58eb0663e8f9a80a355c505dcf01a6"
+      "name": "Croatian"
     },
     "hun": {
-      "name": "Hungarian",
-      "blob": "5d24fa8e922d6b57853dcb0cc490060c76643cab"
+      "name": "Hungarian"
     },
     "hye": {
-      "name": "Armenian",
-      "blob": "ec2e2f3adea785e8964b9771871c44349a6e1b40"
+      "name": "Armenian"
     },
     "iku": {
-      "name": "Inuktitut",
-      "blob": "6eab87ffe818b5f89baa869c458cb0a6dbed6b2d"
+      "name": "Inuktitut"
     },
     "ind": {
-      "name": "Indonesian",
-      "blob": "3013f50cd2af9aceca00e865ed889144865f0848"
+      "name": "Indonesian"
     },
     "isl": {
-      "name": "Icelandic",
-      "blob": "20d3bdf8cb8f2289a1f45aa9cdf4ddf2a22e7462"
+      "name": "Icelandic"
     },
     "ita": {
-      "name": "Italian",
-      "blob": "edbffbe0e51892b240630b5eeabededa7e7c9c4f"
+      "name": "Italian"
     },
     "ita_old": {
       "name": "Italian (Historical)",
-      "blob": "c8a2c3c3d8c82a2d953b0fc64b949c1aa0918c09",
       "locale": "it"
     },
     "jav": {
-      "name": "Javanese",
-      "blob": "3155b8184d50af28dbf8dcbd972e26b388ab1581"
+      "name": "Javanese"
     },
     "jpn": {
-      "name": "Japanese",
-      "blob": "c4178f89991bde90b7fdc647e3e1901868423bd0"
+      "name": "Japanese"
     },
     "jpn_vert": {
       "name": "Japanese (Vertical)",
-      "blob": "43f38defe4b83588876d0d7a6dee928be1b73af0",
       "locale": "ja"
     },
     "kan": {
-      "name": "Kannada",
-      "blob": "78252baeed24bcf327e62226c321c60242108a24"
+      "name": "Kannada"
     },
     "kat": {
-      "name": "Georgian",
-      "blob": "1a3ae11fdd248891dd3fc74f156a0ce246ec1a15"
+      "name": "Georgian"
     },
     "kat_old": {
       "name": "Georgian (Historical)",
-      "blob": "f4ae5ab4b3fe4bb3226639d9b23fa71513a40ec8",
       "locale": "ka"
     },
     "kaz": {
-      "name": "Kazakh",
-      "blob": "f889e2b8ffd093d4f2dff8ffca2fa0b73296c028"
+      "name": "Kazakh"
     },
     "khm": {
-      "name": "Central Khmer",
-      "blob": "d466dc2a7e35bf90cb7b54364985703728398687"
+      "name": "Central Khmer"
     },
     "kir": {
-      "name": "Kyrgyz",
-      "blob": "3e04f2954f33dd021b95de4befffb68904d9e142"
+      "name": "Kyrgyz"
     },
     "kmr": {
-      "name": "Northern Kurdish (Kurmanji)",
-      "blob": "d1afefb7c5a67e273c6612aba77753021506b557"
+      "name": "Northern Kurdish (Kurmanji)"
     },
     "kor": {
-      "name": "Korean",
-      "blob": "60986d44497689f3abace0b148199476d93292e1"
+      "name": "Korean"
     },
     "kor_vert": {
       "name": "Korean (Vertical)",
-      "blob": "ea0a4963591f153a21c8f237de2a1c644b57f2b9",
       "locale": "ko"
     },
     "lao": {
-      "name": "Lao",
-      "blob": "10bd41ae9352889f85a489eb3183eb0cbebc2516"
+      "name": "Lao"
     },
     "lat": {
-      "name": "Latin",
-      "blob": "30dab6a24339f262d1eb21a3ee272d16c46aeba3"
+      "name": "Latin"
     },
     "lav": {
-      "name": "Latvian",
-      "blob": "71d925c8b6c73980157fd0128412b46e6e8396b5"
+      "name": "Latvian"
     },
     "lit": {
-      "name": "Lithuanian",
-      "blob": "af9e2b3cd6a65650206b7d89f1b93b51683b9692"
+      "name": "Lithuanian"
     },
     "ltz": {
-      "name": "Luxembourgish",
-      "blob": "c1ac5b922bbcad34b2654ba471c0a752c0397404"
+      "name": "Luxembourgish"
     },
     "mal": {
-      "name": "Malayalam",
-      "blob": "70e96f02cbc2f26630225112cd323a7f0b6ccdf3"
+      "name": "Malayalam"
     },
     "mar": {
-      "name": "Marathi",
-      "blob": "79138fadcdb256ec7b59e3bf9df18bd5fb492bee"
+      "name": "Marathi"
     },
     "mkd": {
-      "name": "Macedonian",
-      "blob": "fb0b245fb9ec61696e818887a70d8413b2914905"
+      "name": "Macedonian"
     },
     "mlt": {
-      "name": "Maltese",
-      "blob": "4242f9cd016987f16feb06973e988eced9604787"
+      "name": "Maltese"
     },
     "mon": {
-      "name": "Mongolian",
-      "blob": "2ef212c519edc66ff2508f48dbe1bb836a4ea274"
+      "name": "Mongolian"
     },
     "mri": {
-      "name": "Maori",
-      "blob": "eab6b1a98e4b6ed510d6443a5e3d14519da3b338"
+      "name": "Maori"
     },
     "msa": {
-      "name": "Malay",
-      "blob": "f0e2b8bef0a681f09baac99a418529205ee80201"
+      "name": "Malay"
     },
     "mya": {
-      "name": "Burmese",
-      "blob": "cf28ddca604dc7f46bc34f2f4c6a193a0706c03b"
+      "name": "Burmese"
     },
     "nep": {
-      "name": "Nepali",
-      "blob": "948e365b55f9fe8179dde2ff0134feffb210496e"
+      "name": "Nepali"
     },
     "nld": {
-      "name": "Dutch; Flemish",
-      "blob": "53ce95a9c2488a9a0228939944a184157373d0ae"
+      "name": "Dutch; Flemish"
     },
     "nor": {
-      "name": "Norwegian",
-      "blob": "9209df2c9904c127437c07e16c287cdefd024e7c"
+      "name": "Norwegian"
     },
     "oci": {
-      "name": "Occitan (post 1500)",
-      "blob": "4017d4405b09333f22a3de2a4d30cf009bdb4a9b"
+      "name": "Occitan (post 1500)"
     },
     "ori": {
-      "name": "Odia",
-      "blob": "ae0f9ed13d5c9ad4a4de57c7266c434b83a9f583"
+      "name": "Odia"
     },
     "pan": {
-      "name": "Panjabi; Punjabi",
-      "blob": "d4f00533a6c76ce4045aa6ad40b39f47eeaa333f"
+      "name": "Panjabi; Punjabi"
     },
     "pol": {
-      "name": "Polish",
-      "blob": "2382f568f0ce0c4c0a7f4380a291255514e5e97f"
+      "name": "Polish"
     },
     "por": {
-      "name": "Portuguese",
-      "blob": "e9f373e95c66b4bf557c263721ef31f78e5bc301"
+      "name": "Portuguese"
     },
     "pus": {
-      "name": "Pushto; Pashto",
-      "blob": "220cdf92efdc76a227439c0b8734196af9743b98"
+      "name": "Pushto; Pashto"
     },
     "que": {
-      "name": "Quechua",
-      "blob": "d80c1f308973b3129183843759f23fdcb1c5c2be"
+      "name": "Quechua"
     },
     "ron": {
-      "name": "Romanian; Moldavian; Moldovan",
-      "blob": "04cd2bc7b471431354e9446e973f3472f442e189"
+      "name": "Romanian; Moldavian; Moldovan"
     },
     "rus": {
-      "name": "Russian",
-      "blob": "b146cb2263acbc6383f8e92ea0ce759537687bb8"
+      "name": "Russian"
     },
     "san": {
-      "name": "Sanskrit",
-      "blob": "3df043f3247fd41a21ac47c3b199bc87643e984b"
+      "name": "Sanskrit"
     },
     "sin": {
-      "name": "Sinhala; Sinhalese",
-      "blob": "d0c8584e78c44666efcd7fbd47940a8a1121550d"
+      "name": "Sinhala; Sinhalese"
     },
     "slk": {
-      "name": "Slovak",
-      "blob": "ca99e3e82f69a0e16b48cdfec3c4e706758269f2"
+      "name": "Slovak"
     },
     "slv": {
-      "name": "Slovenian",
-      "blob": "835954e891897d3c8b63db48cb5c2712ef2e6b11"
+      "name": "Slovenian"
     },
     "snd": {
-      "name": "Sindhi",
-      "blob": "1ef6548d22977dc1f236be879dce3a62ac6a47ed"
+      "name": "Sindhi"
     },
     "spa": {
-      "name": "Spanish; Castilian",
-      "blob": "72e901f13ca52cfe34cf239a368b9ed3c0ddaf26"
+      "name": "Spanish; Castilian"
     },
     "spa_old": {
       "name": "Spanish (Historical)",
-      "blob": "42b281f55736b2f714598accfc2a78f409db1f0c",
       "locale": "es"
     },
     "sqi": {
-      "name": "Albanian",
-      "blob": "9624fbf33452a95dd5a0a3a93fe9876108104895"
+      "name": "Albanian"
     },
     "srp": {
       "name": "Serbian (Cyrillic)",
-      "blob": "530fb4b1cb27f369bbee7eb0add89bfd73d6f15c",
       "locale": "sr-Cyrl"
     },
     "srp_latn": {
       "name": "Serbian (Latin)",
-      "blob": "5f81e591adad58a179a2d371aacccaf0801f93a2",
       "locale": "sr-Latn"
     },
     "sun": {
-      "name": "Sundanese",
-      "blob": "894891425c1fe302ce1d8f115a3c00967c6c2832"
+      "name": "Sundanese"
     },
     "swa": {
-      "name": "Swahili",
-      "blob": "633d73b35869600452eec58dcd9036cc702c3e48"
+      "name": "Swahili"
     },
     "swe": {
-      "name": "Swedish",
-      "blob": "684e1fa66e4a55b983febf5f9ed04f26ad946e59"
+      "name": "Swedish"
     },
     "syr": {
-      "name": "Syriac",
-      "blob": "462aefc8a1485ae4c38db82f7f50fd105bf30195"
+      "name": "Syriac"
     },
     "tam": {
-      "name": "Tamil",
-      "blob": "fa1793d68f9aba8bf191e8ff1036e2271d288e44"
+      "name": "Tamil"
     },
     "tat": {
-      "name": "Tatar",
-      "blob": "9485ca27d48bb161a47584f8381420462ef6fa27"
+      "name": "Tatar"
     },
     "tel": {
-      "name": "Telugu",
-      "blob": "ee8a33b0f658fc75b8cbfe8c10413eac4f41e6ad"
+      "name": "Telugu"
     },
     "tgk": {
-      "name": "Tajik",
-      "blob": "044766728ce9cb2cc73976175b970a4cea9a870a"
+      "name": "Tajik"
     },
     "tha": {
-      "name": "Thai",
-      "blob": "ea28de3985668cac00d261c5b91f023ea66e19cd"
+      "name": "Thai"
     },
     "tir": {
-      "name": "Tigrinya",
-      "blob": "55e62eb0297e07360db5e9dc5dd86aab8e0a1e9c"
+      "name": "Tigrinya"
     },
     "ton": {
-      "name": "Tonga",
-      "blob": "9eff0fd002798089f5f7d8307be968a36f1ce433"
+      "name": "Tonga"
     },
     "tur": {
-      "name": "Turkish",
-      "blob": "1f0b331ef29f50ceb7c44da58e38c7ec42314d0a"
+      "name": "Turkish"
     },
     "uig": {
-      "name": "Uighur; Uyghur",
-      "blob": "36124d6b0ed1c2654a13551203c25b44b4013978"
+      "name": "Uighur; Uyghur"
     },
     "ukr": {
-      "name": "Ukrainian",
-      "blob": "d02cf90b2911a3da66dac6ae380bcefb18dd7663"
+      "name": "Ukrainian"
     },
     "urd": {
-      "name": "Urdu",
-      "blob": "715a159d4abea25294c82971be28be215b3d1c4a"
+      "name": "Urdu"
     },
     "uzb": {
       "name": "Uzbek (Latin)",
-      "blob": "109abc765273b2c9eabd55781f0a619320c80007",
       "locale": "uz-Latn"
     },
     "uzb_cyrl": {
       "name": "Uzbek (Cyrillic)",
-      "blob": "c2ff8b9c282a9712b5f24970927377bc18dea7cf",
       "locale": "uz-Cyrl"
     },
     "vie": {
-      "name": "Vietnamese",
-      "blob": "e54a5912fb634c581c4a45ae9f37cbc021ec7140"
+      "name": "Vietnamese"
     },
     "yid": {
-      "name": "Yiddish",
-      "blob": "6349588bbabf99f8a812e8231c98c015ea7b60c6"
+      "name": "Yiddish"
     },
     "yor": {
-      "name": "Yoruba",
-      "blob": "3e0cd582f65f17844039173057dfc015bf19f61d"
+      "name": "Yoruba"
     }
   }
 }

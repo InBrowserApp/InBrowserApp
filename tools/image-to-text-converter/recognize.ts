@@ -1,6 +1,6 @@
 import { createWorker, OEM, PSM } from "tesseract.js"
 import type { LoggerMessage, Worker } from "tesseract.js"
-import modelUrls from "virtual:tesseract-model-urls"
+import * as npmModelUrls from "@workspace/ocr-models/urls"
 
 import upstreamWorker from "tesseract.js/dist/worker.min.js?url"
 import corePath from "tesseract.js-core/tesseract-core-lstm.wasm.js?url"
@@ -8,6 +8,7 @@ import corePath from "tesseract.js-core/tesseract-core-lstm.wasm.js?url"
 import { isChinese, type Language } from "./languages"
 
 const langPath = "/_astro/ocr"
+const modelUrls: Readonly<Record<Language, string>> = npmModelUrls
 
 function createWorkerUrl(languages: readonly Language[]) {
   const routes = Object.fromEntries(

@@ -132,12 +132,6 @@ jobs:
           cache: true
           run_install: true
 
-      - name: Cache OCR language models
-        uses: actions/cache@v6
-        with:
-          path: apps/web/node_modules/.cache/tesseract-models
-          key: tesseract-models-${{ hashFiles('packages/lib/ocr-models/catalog.json') }}
-
       - name: Build
         env:
           # Document-worker bundling needs more than a 6 GiB JavaScript heap.

@@ -16,7 +16,6 @@
         "couldNotResolve": true,
         "pathNot": [
           "^astro:",
-          "^virtual:tesseract-model-urls$",
           "^mediainfo[.]js/MediaInfoModule[.]wasm[?]url$",
           "^hb-subset-wasm/hb-subset[.]wasm[?]url$",
           "^@imagemagick/magick-wasm/magick[.]wasm[?]url$",
