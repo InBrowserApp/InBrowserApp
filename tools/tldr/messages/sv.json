@@ -16,7 +16,7 @@
   "choosePlatform": "Välj ett tillgängligt operativsystem för att visa exemplen.",
   "copy": "Kopiera kommandot",
   "copied": "Kopierat",
-  "copyLink": "Kopiera länken till den här versionen",
+  "copyLink": "Kopiera länk",
   "source": "Visa källan på GitHub",
   "tryCommands": "Prova ett kommando",
   "fallback": "Visar den tillgängliga version som bäst motsvarar ditt val."

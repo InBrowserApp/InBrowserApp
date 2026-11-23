@@ -16,7 +16,7 @@
   "choosePlatform": "使用例を見るには、OS を選んでください。",
   "copy": "コマンドをコピー",
   "copied": "コピーしました",
-  "copyLink": "このバージョンへのリンクをコピー",
+  "copyLink": "リンクをコピー",
   "source": "GitHub でソースを表示",
   "tryCommands": "試しに検索",
   "fallback": "指定に最も近い使用例を表示しています。"

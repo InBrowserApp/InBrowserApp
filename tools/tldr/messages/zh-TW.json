@@ -16,7 +16,7 @@
   "choosePlatform": "請選擇有範例的作業系統。",
   "copy": "複製指令",
   "copied": "已複製",
-  "copyLink": "複製此版本的連結",
+  "copyLink": "複製連結",
   "source": "在 GitHub 上檢視原始內容",
   "tryCommands": "試著搜尋以下指令",
   "fallback": "目前顯示最接近所選條件的可用版本。"

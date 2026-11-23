@@ -16,7 +16,7 @@
   "choosePlatform": "예제가 있는 운영체제를 선택하세요.",
   "copy": "명령어 복사",
   "copied": "복사됨",
-  "copyLink": "이 버전의 링크 복사",
+  "copyLink": "링크 복사",
   "source": "GitHub에서 원본 보기",
   "tryCommands": "이 명령어를 검색해 보세요",
   "fallback": "선택한 조건에 가장 가까운 버전을 표시합니다."
