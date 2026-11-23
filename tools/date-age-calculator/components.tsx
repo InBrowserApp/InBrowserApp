@@ -33,7 +33,7 @@ export function CalendarField({
       <Label htmlFor={id}>{label}</Label>
       <Input
         id={id}
-        className="h-11"
+        className="h-11 scheme-light dark:scheme-dark"
         dir="ltr"
         type={isDate ? "date" : "text"}
         inputMode={isDate ? undefined : "numeric"}
@@ -57,8 +57,8 @@ export function CalendarField({
 
 type ResultProps = Readonly<{
   label: string
-  value: string
-  displayValue?: string
+  value: string | number | null
+  lang: string
   unavailable?: string
   messages: DateAgeMessages
 }>
@@ -66,18 +66,25 @@ type ResultProps = Readonly<{
 export function CalendarResult({
   label,
   value,
-  displayValue = value,
+  lang,
   unavailable,
   messages,
 }: ResultProps) {
+  const displayValue =
+    typeof value === "number" ? value.toLocaleString(lang) : value
+
   return (
-    <div className="flex min-w-0 flex-wrap items-center justify-between gap-3 rounded-xl border border-border bg-muted/40 p-4">
+    <div
+      role="group"
+      aria-label={label}
+      className="flex min-w-0 flex-wrap items-center justify-between gap-3 rounded-xl border border-border bg-muted/40 p-4"
+    >
       <div className="min-w-0">
         <p className="text-sm font-medium text-muted-foreground">{label}</p>
         <output aria-label={label} className="mt-1 block">
           {unavailable || (
             <bdi dir="ltr" className="text-2xl font-semibold tabular-nums">
-              {displayValue || "—"}
+              {displayValue ?? "—"}
             </bdi>
           )}
         </output>
@@ -85,7 +92,7 @@ export function CalendarResult({
       <ToolCopyButton
         size="sm"
         variant="ghost"
-        value={value}
+        value={value === null ? "" : String(value)}
         copyLabel={messages.copyLabel}
         copiedLabel={messages.copiedLabel}
       />

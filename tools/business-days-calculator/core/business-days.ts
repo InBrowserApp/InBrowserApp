@@ -4,7 +4,7 @@ import {
   toLocalISODate as toISODate,
 } from "@workspace/calendar-date"
 
-export { toLocalISODate as toISODate } from "@workspace/calendar-date"
+export { toISODate }
 
 export type WeekdayIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6
 

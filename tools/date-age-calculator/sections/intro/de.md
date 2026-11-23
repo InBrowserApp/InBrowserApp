@@ -1,10 +1,10 @@
 ## So berechnest du die Tage zwischen zwei Daten
 
-Wähle unter **Tage zwischen zwei Daten** ein Start- und ein Enddatum. Das Ergebnis gibt an, wie viele Kalendertage zwischen den beiden Daten liegen. Die Reihenfolge spielt keine Rolle. Zwei aufeinanderfolgende Daten liegen 1 Tag auseinander, zwei gleiche Daten 0 Tage. Vom 28. Februar bis zum 1. März sind es 2024 beispielsweise 2 Tage und 2025 nur 1 Tag, weil es nur 2024 einen 29. Februar gab. So findest du heraus, wie viele Tage bis zu einem Ereignis bleiben oder wie lange ein Datum zurückliegt.
+Wähle unter **Tage zählen** ein Start- und ein Enddatum. Das Ergebnis gibt an, wie viele Kalendertage zwischen den beiden Daten liegen. Die Reihenfolge spielt keine Rolle. Zwei aufeinanderfolgende Daten liegen 1 Tag auseinander, zwei gleiche Daten 0 Tage. Vom 28. Februar bis zum 1. März sind es 2024 beispielsweise 2 Tage und 2025 nur 1 Tag, weil es nur 2024 einen 29. Februar gab. So findest du heraus, wie viele Tage bis zu einem Ereignis bleiben oder wie lange ein Datum zurückliegt.
 
 ## So addierst du Tage zu einem Datum oder ziehst sie ab
 
-Wähle **Tage addieren oder abziehen** und gib ein Ausgangsdatum und eine ganze Anzahl von Tagen ein. Der Rechner zeigt das Datum an, das entsprechend viele Tage danach beziehungsweise davor liegt. Das Ausgangsdatum ist Tag 0. Ein Tag nach dem 31. Januar ist also der 1. Februar. Ein Tag vor dem 1. März 2024 ist der 29. Februar 2024. So kannst du Fristen und Erinnerungen planen oder herausfinden, welches Datum in 30 Tagen ist.
+Wähle **Datum verschieben** und gib ein Ausgangsdatum und eine ganze Anzahl von Tagen ein. Der Rechner zeigt das Datum an, das entsprechend viele Tage danach beziehungsweise davor liegt. Das Ausgangsdatum ist Tag 0. Ein Tag nach dem 31. Januar ist also der 1. Februar. Ein Tag vor dem 1. März 2024 ist der 29. Februar 2024. So kannst du Fristen und Erinnerungen planen oder herausfinden, welches Datum in 30 Tagen ist.
 
 ## So berechnest du dein Alter anhand deines Geburtsdatums
 

@@ -108,8 +108,6 @@ function DateAgeCalculator({ lang, messages }: CalculatorProps) {
       : birth && todayDate && age === null
         ? messages.futureBirthDate
         : undefined
-  const formatNumber = new Intl.NumberFormat(lang)
-
   return (
     <Tabs
       defaultValue="difference"
@@ -137,10 +135,8 @@ function DateAgeCalculator({ lang, messages }: CalculatorProps) {
         results={
           <CalendarResult
             label={messages.differenceResult}
-            value={difference === null ? "" : String(difference)}
-            displayValue={
-              difference === null ? "" : formatNumber.format(difference)
-            }
+            value={difference}
+            lang={lang}
             messages={messages}
           />
         }
@@ -166,7 +162,8 @@ function DateAgeCalculator({ lang, messages }: CalculatorProps) {
           <>
             <CalendarResult
               label={messages.afterResult}
-              value={offsets?.after ? toISODate(offsets.after) : ""}
+              value={offsets?.after ? toISODate(offsets.after) : null}
+              lang={lang}
               unavailable={
                 offsets && !offsets.after ? messages.outOfRange : undefined
               }
@@ -174,7 +171,8 @@ function DateAgeCalculator({ lang, messages }: CalculatorProps) {
             />
             <CalendarResult
               label={messages.beforeResult}
-              value={offsets?.before ? toISODate(offsets.before) : ""}
+              value={offsets?.before ? toISODate(offsets.before) : null}
+              lang={lang}
               unavailable={
                 offsets && !offsets.before ? messages.outOfRange : undefined
               }
@@ -206,8 +204,8 @@ function DateAgeCalculator({ lang, messages }: CalculatorProps) {
         results={
           <CalendarResult
             label={messages.ageResult}
-            value={age === null ? "" : String(age)}
-            displayValue={age === null ? "" : formatNumber.format(age)}
+            value={age}
+            lang={lang}
             messages={messages}
           />
         }
