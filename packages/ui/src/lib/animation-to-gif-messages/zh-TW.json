@@ -1,0 +1,12 @@
+{
+  "choose": "選擇檔案",
+  "replace": "更換檔案",
+  "drop": "也可以將動畫拖曳到這裡",
+  "privacy": "檔案會留在這部裝置上。",
+  "cancel": "取消",
+  "invalidApng": "請選擇有效的動態 PNG（.apng 或 .png）。靜態 PNG 沒有可轉換的動畫。",
+  "invalidWebp": "請選擇有效的動態 WebP（.webp）。靜態 WebP 沒有可轉換的動畫。",
+  "limit": "此動畫的尺寸或播放次數超過 GIF 的格式上限。",
+  "failed": "無法建立 GIF。請試用較小的動畫，或重新匯出來源檔案。",
+  "ready": "GIF 已建立。"
+}

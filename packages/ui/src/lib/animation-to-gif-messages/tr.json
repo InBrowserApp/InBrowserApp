@@ -1,0 +1,12 @@
+{
+  "choose": "Dosya seç",
+  "replace": "Dosyayı değiştir",
+  "drop": "Veya animasyonu buraya bırakın",
+  "privacy": "Dosyanız bu cihazda kalır.",
+  "cancel": "İptal et",
+  "invalidApng": "Geçerli bir animasyonlu PNG (.apng veya .png) seçin. Durağan PNG dosyalarında dönüştürülecek animasyon yoktur.",
+  "invalidWebp": "Geçerli bir animasyonlu WebP (.webp) seçin. Durağan WebP dosyalarında dönüştürülecek animasyon yoktur.",
+  "limit": "Animasyonun boyutları veya döngü sayısı GIF biçiminin sınırlarını aşıyor.",
+  "failed": "GIF oluşturulamadı. Daha küçük bir animasyon deneyin veya kaynak dosyayı yeniden dışa aktarın.",
+  "ready": "GIF’iniz hazır."
+}

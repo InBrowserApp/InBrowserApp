@@ -1,0 +1,12 @@
+{
+  "choose": "Choose file",
+  "replace": "Change file",
+  "drop": "Or drop an animation here",
+  "privacy": "Your file stays on this device.",
+  "cancel": "Cancel",
+  "invalidApng": "Choose a valid animated PNG (.apng or .png). A still PNG has no animation to convert.",
+  "invalidWebp": "Choose a valid animated WebP (.webp). A still WebP has no animation to convert.",
+  "limit": "This animation exceeds GIF’s dimension or loop count limits.",
+  "failed": "Could not create the GIF. Try a smaller animation or re-export the source file.",
+  "ready": "Your GIF is ready."
+}

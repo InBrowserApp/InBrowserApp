@@ -29,8 +29,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Konverterare från animerad WebP till GIF",
+    slug: "animated-webp-to-gif-converter",
+  },
+  {
+    category: "image",
     name: "APNG-skapare",
     slug: "apng-maker",
+  },
+  {
+    category: "image",
+    name: "APNG till GIF-konverterare",
+    slug: "apng-to-gif-converter",
   },
   {
     category: "developer",

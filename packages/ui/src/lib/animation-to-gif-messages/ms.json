@@ -1,0 +1,12 @@
+{
+  "choose": "Pilih fail",
+  "replace": "Tukar fail",
+  "drop": "Atau lepaskan animasi di sini",
+  "privacy": "Fail anda kekal pada peranti ini.",
+  "cancel": "Batal",
+  "invalidApng": "Pilih fail PNG beranimasi yang sah (.apng atau .png). PNG pegun tiada animasi untuk ditukar.",
+  "invalidWebp": "Pilih fail WebP beranimasi yang sah (.webp). WebP pegun tiada animasi untuk ditukar.",
+  "limit": "Animasi ini melebihi had dimensi atau bilangan main balik GIF.",
+  "failed": "GIF tidak dapat dicipta. Cuba gunakan animasi yang lebih kecil atau eksport semula fail sumber.",
+  "ready": "GIF anda sudah sedia."
+}

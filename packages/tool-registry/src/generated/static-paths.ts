@@ -462,6 +462,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "animated-webp-to-gif-converter",
+    language: "ar",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "de",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "en",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "es",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "fr",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "he",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "hi",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "id",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "it",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "ja",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "ko",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "ms",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "nl",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "no",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "pl",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "pt",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "ru",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "sv",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "th",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "tr",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "vi",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "animated-webp-to-gif-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "apng-maker",
     language: "ar",
   },
@@ -551,6 +643,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
   },
   {
     slug: "apng-maker",
+    language: "zh-TW",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "ar",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "de",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "en",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "es",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "fr",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "he",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "hi",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "id",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "it",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "ja",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "ko",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "ms",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "nl",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "no",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "pl",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "pt",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "ru",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "sv",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "th",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "tr",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "vi",
+  },
+  {
+    slug: "apng-to-gif-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "apng-to-gif-converter",
     language: "zh-TW",
   },
   {

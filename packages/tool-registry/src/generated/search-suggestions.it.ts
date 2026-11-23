@@ -29,8 +29,18 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Convertitore da WebP animato a GIF",
+    slug: "animated-webp-to-gif-converter",
+  },
+  {
+    category: "image",
     name: "Creatore di APNG",
     slug: "apng-maker",
+  },
+  {
+    category: "image",
+    name: "Convertitore da APNG a GIF",
+    slug: "apng-to-gif-converter",
   },
   {
     category: "developer",

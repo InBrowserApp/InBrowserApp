@@ -1,0 +1,4 @@
+{
+  "name": "APNG to GIF Converter",
+  "description": "Convert animated PNG (.apng or .png) to GIF in your browser. Keep the frame timing and loop count, preview the result, and download it without uploading your file."
+}
