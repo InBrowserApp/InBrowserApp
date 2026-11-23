@@ -1,0 +1,23 @@
+{
+  "search": "Cari perintah",
+  "placeholder": "Nama perintah",
+  "results": "Perintah yang sepadan",
+  "noResults": "Tiada perintah yang sepadan. Cuba nama perintah yang lebih pendek.",
+  "loadingIndex": "Memuatkan indeks perintah…",
+  "indexError": "Indeks perintah tidak dapat dimuatkan.",
+  "loadingPage": "Memuatkan contoh perintah…",
+  "pageError": "Contoh perintah tidak dapat dimuatkan.",
+  "retry": "Cuba lagi",
+  "platform": "Sistem pengendalian",
+  "common": "Umum",
+  "automatic": "Automatik",
+  "pageLanguage": "Bahasa contoh",
+  "siteLanguage": "Gunakan bahasa laman",
+  "choosePlatform": "Pilih sistem pengendalian yang tersedia untuk melihat contoh.",
+  "copy": "Salin perintah",
+  "copied": "Disalin",
+  "copyLink": "Salin pautan",
+  "source": "Lihat sumber di GitHub",
+  "tryCommands": "Cuba satu perintah",
+  "fallback": "Versi tersedia yang paling hampir dipaparkan."
+}

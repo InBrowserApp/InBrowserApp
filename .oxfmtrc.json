@@ -23,6 +23,7 @@
     "pnpm-lock.yaml",
     "packages/lib/mac-address/data/registry.json",
     ".pnpm-store/",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "tools/tldr/commands.json"
   ]
 }

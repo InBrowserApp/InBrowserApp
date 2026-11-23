@@ -1383,6 +1383,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "timer",
   },
   {
+    category: "developer",
+    name: "Pencarian Perintah tldr",
+    slug: "tldr",
+  },
+  {
     category: "json",
     name: "Pengonversi TOML → JSON",
     slug: "toml-to-json-converter",

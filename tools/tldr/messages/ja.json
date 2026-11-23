@@ -1,0 +1,23 @@
+{
+  "search": "コマンドを検索",
+  "placeholder": "コマンド名",
+  "results": "一致するコマンド",
+  "noResults": "一致するコマンドが見つかりませんでした。コマンド名を短くして検索してください。",
+  "loadingIndex": "コマンド一覧を読み込み中…",
+  "indexError": "コマンド一覧を読み込めませんでした。",
+  "loadingPage": "コマンドの使用例を読み込み中…",
+  "pageError": "コマンドの使用例を読み込めませんでした。",
+  "retry": "再試行",
+  "platform": "OS",
+  "common": "共通",
+  "automatic": "自動選択",
+  "pageLanguage": "使用例の言語",
+  "siteLanguage": "サイトの言語を使用",
+  "choosePlatform": "使用例を見るには、OS を選んでください。",
+  "copy": "コマンドをコピー",
+  "copied": "コピーしました",
+  "copyLink": "リンクをコピー",
+  "source": "GitHub でソースを表示",
+  "tryCommands": "試しに検索",
+  "fallback": "指定に最も近い使用例を表示しています。"
+}

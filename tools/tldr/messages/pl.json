@@ -1,0 +1,23 @@
+{
+  "search": "Szukaj poleceń",
+  "placeholder": "Nazwa polecenia",
+  "results": "Pasujące polecenia",
+  "noResults": "Nie znaleziono pasujących poleceń. Wpisz krótszą nazwę polecenia.",
+  "loadingIndex": "Wczytywanie indeksu poleceń…",
+  "indexError": "Nie udało się wczytać indeksu poleceń.",
+  "loadingPage": "Wczytywanie przykładów poleceń…",
+  "pageError": "Nie udało się wczytać przykładów poleceń.",
+  "retry": "Spróbuj ponownie",
+  "platform": "System operacyjny",
+  "common": "Wspólne",
+  "automatic": "Automatycznie",
+  "pageLanguage": "Język przykładów",
+  "siteLanguage": "Użyj języka witryny",
+  "choosePlatform": "Wybierz dostępny system operacyjny, aby zobaczyć przykłady.",
+  "copy": "Kopiuj polecenie",
+  "copied": "Skopiowano",
+  "copyLink": "Kopiuj link",
+  "source": "Zobacz źródło na GitHubie",
+  "tryCommands": "Wypróbuj jedno z tych poleceń",
+  "fallback": "Wyświetlamy dostępną wersję najlepiej dopasowaną do ustawień."
+}

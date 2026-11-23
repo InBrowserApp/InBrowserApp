@@ -1,0 +1,23 @@
+{
+  "search": "Opdrachten zoeken",
+  "placeholder": "Naam van de opdracht",
+  "results": "Gevonden opdrachten",
+  "noResults": "Geen passende opdrachten gevonden. Probeer een kortere opdrachtnaam.",
+  "loadingIndex": "Opdrachtenindex laden…",
+  "indexError": "De opdrachtenindex kon niet worden geladen.",
+  "loadingPage": "Opdrachtvoorbeelden laden…",
+  "pageError": "De opdrachtvoorbeelden konden niet worden geladen.",
+  "retry": "Opnieuw proberen",
+  "platform": "Besturingssysteem",
+  "common": "Algemeen",
+  "automatic": "Automatisch",
+  "pageLanguage": "Taal van de voorbeelden",
+  "siteLanguage": "Taal van de site gebruiken",
+  "choosePlatform": "Kies een beschikbaar besturingssysteem om voorbeelden te bekijken.",
+  "copy": "Opdracht kopiëren",
+  "copied": "Gekopieerd",
+  "copyLink": "Link kopiëren",
+  "source": "Bron bekijken op GitHub",
+  "tryCommands": "Probeer een van deze opdrachten",
+  "fallback": "Je ziet de beschikbare versie die het best bij je instellingen past."
+}

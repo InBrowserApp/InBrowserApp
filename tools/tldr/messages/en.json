@@ -1,0 +1,23 @@
+{
+  "search": "Search commands",
+  "placeholder": "Command name",
+  "results": "Matching commands",
+  "noResults": "No matching commands. Try a shorter command name.",
+  "loadingIndex": "Loading command index…",
+  "indexError": "The command index could not be loaded.",
+  "loadingPage": "Loading command examples…",
+  "pageError": "The command examples could not be loaded.",
+  "retry": "Try again",
+  "platform": "Operating system",
+  "common": "Common",
+  "automatic": "Automatic",
+  "pageLanguage": "Example language",
+  "siteLanguage": "Use site language",
+  "choosePlatform": "Choose an available platform to view examples.",
+  "copy": "Copy command",
+  "copied": "Copied",
+  "copyLink": "Copy link",
+  "source": "View source on GitHub",
+  "tryCommands": "Try a command",
+  "fallback": "Showing the closest available version."
+}

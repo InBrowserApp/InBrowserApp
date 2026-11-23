@@ -17,7 +17,8 @@
     "tool-registry:generate": "pnpm --filter @workspace/tool-registry generate",
     "test": "vitest run --silent",
     "test:coverage": "vitest run --silent --coverage",
-    "typecheck": "pnpm tool-registry:generate && tsc --noEmit && pnpm --filter web typecheck"
+    "typecheck": "pnpm tool-registry:generate && tsc --noEmit && pnpm --filter web typecheck",
+    "tldr:refresh": "node tools/tldr/refresh-index.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "catalog:",

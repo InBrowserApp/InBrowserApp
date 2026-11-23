@@ -1,0 +1,23 @@
+{
+  "search": "Cerca comandi",
+  "placeholder": "Nome del comando",
+  "results": "Comandi corrispondenti",
+  "noResults": "Nessun comando corrispondente. Prova con un nome di comando più breve.",
+  "loadingIndex": "Caricamento dell’indice dei comandi…",
+  "indexError": "Impossibile caricare l’indice dei comandi.",
+  "loadingPage": "Caricamento degli esempi…",
+  "pageError": "Impossibile caricare gli esempi.",
+  "retry": "Riprova",
+  "platform": "Sistema operativo",
+  "common": "Generico",
+  "automatic": "Automatico",
+  "pageLanguage": "Lingua degli esempi",
+  "siteLanguage": "Usa la lingua del sito",
+  "choosePlatform": "Scegli una piattaforma disponibile per vedere gli esempi.",
+  "copy": "Copia comando",
+  "copied": "Copiato",
+  "copyLink": "Copia link",
+  "source": "Vedi il sorgente su GitHub",
+  "tryCommands": "Prova un comando",
+  "fallback": "Mostriamo la versione disponibile più vicina alla tua scelta."
+}

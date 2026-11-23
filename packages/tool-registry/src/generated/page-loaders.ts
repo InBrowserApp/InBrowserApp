@@ -348,6 +348,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "time-diff-calculator": () => import("@tool/time-diff-calculator/page"),
   "time-zone-converter": () => import("@tool/time-zone-converter/page"),
   timer: () => import("@tool/timer/page"),
+  tldr: () => import("@tool/tldr/page"),
   "toml-to-json-converter": () => import("@tool/toml-to-json-converter/page"),
   "toml-to-yaml-converter": () => import("@tool/toml-to-yaml-converter/page"),
   "typst-to-pdf-converter": () => import("@tool/typst-to-pdf-converter/page"),

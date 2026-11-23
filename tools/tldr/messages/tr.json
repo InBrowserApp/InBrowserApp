@@ -1,0 +1,23 @@
+{
+  "search": "Komut ara",
+  "placeholder": "Komut adı",
+  "results": "Eşleşen komutlar",
+  "noResults": "Eşleşen komut bulunamadı. Daha kısa bir komut adı deneyin.",
+  "loadingIndex": "Komut dizini yükleniyor…",
+  "indexError": "Komut dizini yüklenemedi.",
+  "loadingPage": "Komut örnekleri yükleniyor…",
+  "pageError": "Komut örnekleri yüklenemedi.",
+  "retry": "Yeniden dene",
+  "platform": "İşletim sistemi",
+  "common": "Ortak",
+  "automatic": "Otomatik",
+  "pageLanguage": "Örneklerin dili",
+  "siteLanguage": "Site dilini kullan",
+  "choosePlatform": "Örnekleri görmek için mevcut platformlardan birini seçin.",
+  "copy": "Komutu kopyala",
+  "copied": "Kopyalandı",
+  "copyLink": "Bağlantıyı kopyala",
+  "source": "Kaynağı GitHub’da görüntüle",
+  "tryCommands": "Bir komut deneyin",
+  "fallback": "Seçiminize en yakın sürüm gösteriliyor."
+}

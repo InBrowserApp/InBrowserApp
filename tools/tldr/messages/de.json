@@ -1,0 +1,23 @@
+{
+  "search": "Befehle suchen",
+  "placeholder": "Befehlsname",
+  "results": "Passende Befehle",
+  "noResults": "Keine passenden Befehle gefunden. Versuche es mit einem kürzeren Befehlsnamen.",
+  "loadingIndex": "Befehlsindex wird geladen…",
+  "indexError": "Der Befehlsindex konnte nicht geladen werden.",
+  "loadingPage": "Befehlsbeispiele werden geladen…",
+  "pageError": "Die Befehlsbeispiele konnten nicht geladen werden.",
+  "retry": "Erneut versuchen",
+  "platform": "Betriebssystem",
+  "common": "Allgemein",
+  "automatic": "Automatisch",
+  "pageLanguage": "Sprache der Beispiele",
+  "siteLanguage": "Sprache der Website verwenden",
+  "choosePlatform": "Wähle ein verfügbares Betriebssystem, um Beispiele anzuzeigen.",
+  "copy": "Befehl kopieren",
+  "copied": "Kopiert",
+  "copyLink": "Link kopieren",
+  "source": "Quelle auf GitHub ansehen",
+  "tryCommands": "Einen Befehl ausprobieren",
+  "fallback": "Die am besten passende verfügbare Version wird angezeigt."
+}

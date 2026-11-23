@@ -1,0 +1,23 @@
+{
+  "search": "Rechercher des commandes",
+  "placeholder": "Nom de la commande",
+  "results": "Commandes correspondantes",
+  "noResults": "Aucune commande correspondante. Essayez un nom de commande plus court.",
+  "loadingIndex": "Chargement de l’index des commandes…",
+  "indexError": "Impossible de charger l’index des commandes.",
+  "loadingPage": "Chargement des exemples de commandes…",
+  "pageError": "Impossible de charger les exemples de commandes.",
+  "retry": "Réessayer",
+  "platform": "Système d’exploitation",
+  "common": "Générique",
+  "automatic": "Automatique",
+  "pageLanguage": "Langue des exemples",
+  "siteLanguage": "Utiliser la langue du site",
+  "choosePlatform": "Choisissez un système disponible pour afficher les exemples.",
+  "copy": "Copier la commande",
+  "copied": "Copié",
+  "copyLink": "Copier le lien",
+  "source": "Voir la source sur GitHub",
+  "tryCommands": "Essayer une commande",
+  "fallback": "La version disponible la plus proche est affichée."
+}

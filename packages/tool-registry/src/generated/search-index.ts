@@ -34877,6 +34877,126 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "tldr",
+    category: "developer",
+    icon: "book-open",
+    tags: ["tldr", "command", "cli", "shell", "terminal", "man page"],
+    locales: {
+      ar: {
+        name: "البحث عن الأوامر في tldr",
+        description:
+          "اعثر على أمثلة عملية لسطر الأوامر حسب نظام التشغيل واللغة وانسخها",
+      },
+      de: {
+        name: "tldr-Befehlssuche",
+        description:
+          "Praxisbeispiele für die Kommandozeile nach Betriebssystem und Sprache finden und kopieren",
+      },
+      en: {
+        name: "tldr Command Lookup",
+        description:
+          "Find and copy practical command-line examples by platform and language",
+      },
+      es: {
+        name: "Consulta de comandos tldr",
+        description:
+          "Busca y copia ejemplos prácticos de comandos por sistema operativo e idioma",
+      },
+      fr: {
+        name: "Recherche de commandes tldr",
+        description:
+          "Trouvez et copiez des exemples de commandes selon le système d’exploitation et la langue",
+      },
+      he: {
+        name: "חיפוש פקודות tldr",
+        description:
+          "חיפוש והעתקה של דוגמאות שימושיות לשורת הפקודה לפי פלטפורמה ושפה",
+      },
+      hi: {
+        name: "tldr कमांड खोज",
+        description:
+          "प्लेटफ़ॉर्म और भाषा के अनुसार कमांड लाइन के व्यावहारिक उदाहरण खोजें और कॉपी करें",
+      },
+      id: {
+        name: "Pencarian Perintah tldr",
+        description:
+          "Cari dan salin contoh penggunaan baris perintah berdasarkan sistem operasi dan bahasa",
+      },
+      it: {
+        name: "Ricerca di comandi tldr",
+        description:
+          "Trova e copia esempi pratici per la riga di comando in base alla piattaforma e alla lingua",
+      },
+      ja: {
+        name: "tldr コマンド検索",
+        description:
+          "OS や言語を選んでコマンドラインの実用例を探し、コピーできます",
+      },
+      ko: {
+        name: "tldr 명령어 조회",
+        description:
+          "운영체제와 언어에 맞는 실용적인 명령줄 예제를 찾아 복사하세요",
+      },
+      ms: {
+        name: "Carian Perintah tldr",
+        description:
+          "Cari dan salin contoh penggunaan baris perintah mengikut sistem pengendalian dan bahasa",
+      },
+      nl: {
+        name: "Opdrachten opzoeken met tldr",
+        description:
+          "Vind en kopieer praktische opdrachtregelvoorbeelden per besturingssysteem en taal",
+      },
+      no: {
+        name: "tldr-kommandosøk",
+        description:
+          "Finn og kopier praktiske kommandolinjeeksempler etter operativsystem og språk",
+      },
+      pl: {
+        name: "Wyszukiwanie poleceń w tldr",
+        description:
+          "Wyszukuj i kopiuj praktyczne przykłady poleceń dla wybranego systemu operacyjnego i języka",
+      },
+      pt: {
+        name: "Consulta de comandos tldr",
+        description:
+          "Encontre e copie exemplos práticos de linha de comando por sistema operacional e idioma",
+      },
+      ru: {
+        name: "Поиск команд tldr",
+        description:
+          "Ищите и копируйте практические примеры команд с учётом операционной системы и языка",
+      },
+      sv: {
+        name: "tldr-kommandosökning",
+        description:
+          "Hitta och kopiera praktiska kommandoradsexempel för olika plattformar och språk",
+      },
+      th: {
+        name: "ค้นหาคำสั่ง tldr",
+        description: "ค้นหาและคัดลอกตัวอย่างการใช้บรรทัดคำสั่งตามระบบปฏิบัติการและภาษา",
+      },
+      tr: {
+        name: "tldr Komut Arama",
+        description:
+          "Platforma ve dile göre pratik komut satırı örneklerini bulun ve kopyalayın",
+      },
+      vi: {
+        name: "Tra cứu lệnh tldr",
+        description:
+          "Tìm và sao chép ví dụ thực tế về lệnh theo hệ điều hành và ngôn ngữ",
+      },
+      "zh-CN": {
+        name: "tldr 命令查询",
+        description: "按操作系统和语言查找并复制实用的命令行示例",
+      },
+      "zh-TW": {
+        name: "tldr 指令查詢",
+        description: "依作業系統與語言搜尋及複製實用的命令列範例",
+      },
+    },
+  },
+  {
     slug: "toml-to-json-converter",
     category: "json",
     icon: "file-json-2",
