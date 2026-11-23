@@ -14,8 +14,9 @@ import { SourceButton } from "./source-button"
 const highlight = {
   text: undefined,
   value:
-    "rounded-sm bg-blue-100/80 font-medium text-blue-900 dark:bg-blue-500/20 dark:text-blue-200",
-  options: "font-semibold text-violet-800 dark:text-violet-300",
+    "inline-block max-w-full rounded-sm bg-blue-100/80 font-medium text-blue-900 dark:bg-blue-500/20 dark:text-blue-200",
+  options:
+    "inline-block max-w-full font-semibold text-violet-800 dark:text-violet-300",
 }
 
 export function Result({
@@ -57,7 +58,7 @@ export function Result({
             {languageName(names, lang)}
           </Badge>
         </div>
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2 max-sm:basis-full">
           <ToolCopyButton
             value={link}
             copyLabel={messages.copyLink}

@@ -30,7 +30,7 @@ export function Loading({ label, query }: { label: string; query?: string }) {
             <div className="h-6 w-20 rounded-full bg-muted" />
             <div className="h-6 w-24 rounded-full bg-muted" />
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 max-sm:basis-full">
             <div className="h-7 w-24 rounded-md bg-muted" />
             <div className="size-7 rounded-md bg-muted" />
           </div>
