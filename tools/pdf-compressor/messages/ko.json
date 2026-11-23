@@ -1,0 +1,38 @@
+{
+  "choosePdf": "PDF 선택",
+  "dropPdf": "여기에 PDF 한 개를 놓거나 기기에서 파일을 선택하세요.",
+  "changePdf": "PDF 변경",
+  "privacy": "PDF는 이 기기에서만 처리됩니다.",
+  "compressionLevel": "압축 수준",
+  "presets": {
+    "quality": {
+      "label": "고화질",
+      "description": "읽거나 인쇄할 때 스캔 이미지의 세부 내용이 더 잘 보이도록 합니다."
+    },
+    "balanced": {
+      "label": "균형",
+      "description": "읽기 쉬운 화질을 유지하면서 스캔 파일의 크기를 줄입니다."
+    },
+    "small": {
+      "label": "최소 용량",
+      "description": "이메일 첨부나 업로드를 위해 이미지 크기를 더 줄입니다."
+    }
+  },
+  "keepText": "선택 가능한 텍스트와 기존 OCR 레이어가 유지됩니다.",
+  "compress": "PDF 압축",
+  "compressing": "PDF 압축 중…",
+  "cancel": "취소",
+  "cancelled": "압축을 취소했습니다. 다시 시도할 수 있습니다.",
+  "sizeComparison": "파일 크기 비교",
+  "originalSize": "원본 크기",
+  "outputSize": "다운로드 크기",
+  "saved": "감소율",
+  "noSavings": "이 설정으로는 PDF 크기가 줄지 않았습니다. 원본 파일을 다운로드할 수 있습니다.",
+  "signed": "이 PDF에는 디지털 서명이 있습니다. 서명이 유지된 원본 파일을 다운로드할 수 있습니다.",
+  "download": "압축된 PDF 다운로드",
+  "downloadOriginal": "원본 PDF 다운로드",
+  "oneFile": "한 번에 PDF 한 개를 선택하세요.",
+  "invalidPdf": "이 파일을 PDF로 열 수 없습니다. 다른 사본으로 시도하세요.",
+  "encryptedPdf": "이 PDF가 비밀번호로 보호되어 있습니다. 잠금을 해제한 후 압축하세요.",
+  "compressionFailed": "PDF를 압축하지 못했습니다. 다시 시도하거나 다른 브라우저를 사용하세요."
+}

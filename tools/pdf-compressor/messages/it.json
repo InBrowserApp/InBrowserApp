@@ -1,0 +1,38 @@
+{
+  "choosePdf": "Scegli un PDF",
+  "dropPdf": "Trascina qui un PDF o sceglilo dal dispositivo.",
+  "changePdf": "Cambia PDF",
+  "privacy": "Il PDF rimane sul tuo dispositivo.",
+  "compressionLevel": "Livello di compressione",
+  "presets": {
+    "quality": {
+      "label": "Qualità più alta",
+      "description": "Conserva più dettagli delle scansioni per la lettura o la stampa."
+    },
+    "balanced": {
+      "label": "Bilanciata",
+      "description": "Riduce il peso delle scansioni mantenendole leggibili."
+    },
+    "small": {
+      "label": "Dimensioni minime",
+      "description": "Riduce ulteriormente il peso delle immagini per allegati e caricamenti."
+    }
+  },
+  "keepText": "Il testo selezionabile e il livello OCR già presenti rimangono intatti.",
+  "compress": "Comprimi PDF",
+  "compressing": "Compressione del PDF in corso…",
+  "cancel": "Annulla",
+  "cancelled": "Compressione annullata. Puoi riprovare.",
+  "sizeComparison": "Confronto delle dimensioni",
+  "originalSize": "Dimensioni originali",
+  "outputSize": "Dimensioni del download",
+  "saved": "Riduzione delle dimensioni",
+  "noSavings": "Con questo livello di compressione il PDF non si è ridotto. Puoi scaricare l’originale.",
+  "signed": "Il PDF contiene una firma digitale. Puoi scaricare l’originale con la firma intatta.",
+  "download": "Scarica il PDF compresso",
+  "downloadOriginal": "Scarica il PDF originale",
+  "oneFile": "Scegli un solo PDF alla volta.",
+  "invalidPdf": "Impossibile aprire il file come PDF. Prova con un’altra copia.",
+  "encryptedPdf": "Sblocca il PDF protetto da password prima di comprimerlo.",
+  "compressionFailed": "Compressione non riuscita. Riprova o usa un altro browser."
+}

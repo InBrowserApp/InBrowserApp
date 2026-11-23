@@ -1,0 +1,38 @@
+{
+  "choosePdf": "Choose a PDF",
+  "dropPdf": "Drop one PDF here or browse your device.",
+  "changePdf": "Change PDF",
+  "privacy": "Your PDF stays on your device.",
+  "compressionLevel": "Compression level",
+  "presets": {
+    "quality": {
+      "label": "Higher quality",
+      "description": "Keeps more scan detail for reading or printing."
+    },
+    "balanced": {
+      "label": "Balanced",
+      "description": "Reduces scan size while keeping a readable image."
+    },
+    "small": {
+      "label": "Smallest file",
+      "description": "Cuts image size further for email or uploads."
+    }
+  },
+  "keepText": "Existing selectable text and OCR stay intact.",
+  "compress": "Compress PDF",
+  "compressing": "Compressing PDF…",
+  "cancel": "Cancel",
+  "cancelled": "Compression cancelled. You can try again.",
+  "sizeComparison": "File size comparison",
+  "originalSize": "Original size",
+  "outputSize": "Download size",
+  "saved": "Size reduction",
+  "noSavings": "This setting produced no smaller PDF. The original is available to download.",
+  "signed": "This PDF has a digital signature. The original is available to download with the signature intact.",
+  "download": "Download compressed PDF",
+  "downloadOriginal": "Download original PDF",
+  "oneFile": "Choose one PDF at a time.",
+  "invalidPdf": "This file could not be opened as a PDF. Try another copy.",
+  "encryptedPdf": "Unlock this password-protected PDF before compressing it.",
+  "compressionFailed": "Compression failed. Try again or use a different browser."
+}

@@ -1,0 +1,38 @@
+{
+  "choosePdf": "PDF kiezen",
+  "dropPdf": "Sleep één PDF hierheen of kies een bestand op je apparaat.",
+  "changePdf": "Andere PDF kiezen",
+  "privacy": "Je PDF blijft op je apparaat.",
+  "compressionLevel": "Compressieniveau",
+  "presets": {
+    "quality": {
+      "label": "Hogere kwaliteit",
+      "description": "Behoudt meer details in scans om te lezen of af te drukken."
+    },
+    "balanced": {
+      "label": "Gebalanceerd",
+      "description": "Maakt scans kleiner en houdt de afbeeldingen leesbaar."
+    },
+    "small": {
+      "label": "Kleinste bestand",
+      "description": "Verkleint afbeeldingen verder voor e-mail of uploads."
+    }
+  },
+  "keepText": "Bestaande selecteerbare tekst en de OCR-laag blijven behouden.",
+  "compress": "PDF comprimeren",
+  "compressing": "PDF wordt gecomprimeerd…",
+  "cancel": "Annuleren",
+  "cancelled": "Compressie geannuleerd. Je kunt het opnieuw proberen.",
+  "sizeComparison": "Bestandsgrootte vergelijken",
+  "originalSize": "Oorspronkelijke grootte",
+  "outputSize": "Downloadgrootte",
+  "saved": "Bespaarde ruimte",
+  "noSavings": "Met deze instelling wordt de PDF niet kleiner. Je kunt het origineel downloaden.",
+  "signed": "Deze PDF heeft een digitale handtekening. Je kunt het origineel met de ongewijzigde handtekening downloaden.",
+  "download": "Gecomprimeerde PDF downloaden",
+  "downloadOriginal": "Originele PDF downloaden",
+  "oneFile": "Kies één PDF tegelijk.",
+  "invalidPdf": "Dit bestand kan niet als PDF worden geopend. Probeer een andere kopie.",
+  "encryptedPdf": "Ontgrendel deze met een wachtwoord beveiligde PDF voordat je hem comprimeert.",
+  "compressionFailed": "Comprimeren is mislukt. Probeer het opnieuw of gebruik een andere browser."
+}

@@ -1,0 +1,38 @@
+{
+  "choosePdf": "Pilih PDF",
+  "dropPdf": "Lepas satu PDF di sini atau pilih file dari perangkat Anda.",
+  "changePdf": "Ganti PDF",
+  "privacy": "PDF tetap ada di perangkat Anda.",
+  "compressionLevel": "Tingkat kompresi",
+  "presets": {
+    "quality": {
+      "label": "Kualitas lebih tinggi",
+      "description": "Mempertahankan lebih banyak detail untuk dibaca atau dicetak."
+    },
+    "balanced": {
+      "label": "Seimbang",
+      "description": "Memperkecil file hasil pindai sambil menjaga agar gambar tetap terbaca."
+    },
+    "small": {
+      "label": "File terkecil",
+      "description": "Memperkecil gambar lebih lanjut untuk lampiran email atau unggahan."
+    }
+  },
+  "keepText": "Teks yang dapat dipilih dan lapisan OCR yang sudah ada tetap utuh.",
+  "compress": "Kompres PDF",
+  "compressing": "Mengompres PDF…",
+  "cancel": "Batalkan",
+  "cancelled": "Kompresi dibatalkan. Anda dapat mencoba lagi.",
+  "sizeComparison": "Perbandingan ukuran file",
+  "originalSize": "Ukuran asli",
+  "outputSize": "Ukuran unduhan",
+  "saved": "Pengurangan ukuran",
+  "noSavings": "Pengaturan ini tidak memperkecil PDF. Anda dapat mengunduh file asli.",
+  "signed": "PDF ini memiliki tanda tangan digital. Anda dapat mengunduh file asli dengan tanda tangan yang tetap utuh.",
+  "download": "Unduh PDF terkompresi",
+  "downloadOriginal": "Unduh PDF asli",
+  "oneFile": "Pilih satu PDF saja setiap kali.",
+  "invalidPdf": "File ini tidak dapat dibuka sebagai PDF. Coba salinan lain.",
+  "encryptedPdf": "Buka kunci PDF berpelindung kata sandi ini sebelum mengompresnya.",
+  "compressionFailed": "PDF gagal dikompres. Coba lagi atau gunakan browser lain."
+}

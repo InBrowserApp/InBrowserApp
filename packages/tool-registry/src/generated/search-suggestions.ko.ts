@@ -984,6 +984,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "PDF 압축 도구",
+    slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
     name: "PDF 정보 뷰어",
     slug: "pdf-info-viewer",
   },

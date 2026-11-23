@@ -1,0 +1,38 @@
+{
+  "choosePdf": "PDF seçin",
+  "dropPdf": "Bir PDF'yi buraya bırakın veya cihazınızdan seçin.",
+  "changePdf": "PDF'yi değiştir",
+  "privacy": "PDF'niz cihazınızda kalır.",
+  "compressionLevel": "Sıkıştırma düzeyi",
+  "presets": {
+    "quality": {
+      "label": "Daha yüksek kalite",
+      "description": "Taramalardaki ayrıntıları okuma ve yazdırma için daha iyi korur."
+    },
+    "balanced": {
+      "label": "Dengeli",
+      "description": "Taranmış belgenin okunabilirliğini korurken dosyayı küçültür."
+    },
+    "small": {
+      "label": "En küçük dosya",
+      "description": "E-posta eki veya yükleme için görselleri daha da küçültür."
+    }
+  },
+  "keepText": "Mevcut seçilebilir metin ve OCR katmanı korunur.",
+  "compress": "PDF'yi sıkıştır",
+  "compressing": "PDF sıkıştırılıyor…",
+  "cancel": "İptal",
+  "cancelled": "Sıkıştırma iptal edildi. Yeniden deneyebilirsiniz.",
+  "sizeComparison": "Dosya boyutu karşılaştırması",
+  "originalSize": "Özgün boyut",
+  "outputSize": "İndirme boyutu",
+  "saved": "Boyuttaki azalma",
+  "noSavings": "Bu ayar PDF'yi küçültmedi. Özgün dosyayı indirebilirsiniz.",
+  "signed": "Bu PDF dijital imzalı. İmzanın korunduğu özgün dosyayı indirebilirsiniz.",
+  "download": "Sıkıştırılmış PDF'yi indir",
+  "downloadOriginal": "Özgün PDF'yi indir",
+  "oneFile": "Her seferinde tek bir PDF seçin.",
+  "invalidPdf": "Dosya PDF olarak açılamadı. Başka bir kopyayla deneyin.",
+  "encryptedPdf": "Sıkıştırmadan önce parola korumalı PDF'nin kilidini açın.",
+  "compressionFailed": "PDF sıkıştırılamadı. Yeniden deneyin veya başka bir tarayıcı kullanın."
+}

@@ -1,0 +1,38 @@
+{
+  "choosePdf": "Pilih fail PDF",
+  "dropPdf": "Lepaskan satu fail PDF di sini atau pilihnya daripada peranti anda.",
+  "changePdf": "Tukar fail PDF",
+  "privacy": "Fail PDF kekal pada peranti anda.",
+  "compressionLevel": "Tahap pemampatan",
+  "presets": {
+    "quality": {
+      "label": "Kualiti lebih tinggi",
+      "description": "Mengekalkan lebih banyak butiran untuk dibaca atau dicetak."
+    },
+    "balanced": {
+      "label": "Seimbang",
+      "description": "Mengurangkan saiz fail sambil memastikan imbasan masih boleh dibaca."
+    },
+    "small": {
+      "label": "Saiz fail terkecil",
+      "description": "Mengecilkan imej lagi untuk lampiran e-mel atau muat naik."
+    }
+  },
+  "keepText": "Teks yang boleh dipilih dan lapisan teks OCR sedia ada dikekalkan.",
+  "compress": "Mampatkan PDF",
+  "compressing": "Sedang memampatkan PDF…",
+  "cancel": "Batal",
+  "cancelled": "Pemampatan dibatalkan. Anda boleh cuba lagi.",
+  "sizeComparison": "Perbandingan saiz fail",
+  "originalSize": "Saiz asal",
+  "outputSize": "Saiz muat turun",
+  "saved": "Pengurangan saiz",
+  "noSavings": "Tetapan ini tidak menghasilkan PDF yang lebih kecil. Anda boleh memuat turun fail asal.",
+  "signed": "PDF ini mempunyai tandatangan digital. Anda boleh memuat turun fail asal tanpa mengubah tandatangan.",
+  "download": "Muat turun PDF termampat",
+  "downloadOriginal": "Muat turun PDF asal",
+  "oneFile": "Pilih satu fail PDF pada satu masa.",
+  "invalidPdf": "Fail ini tidak dapat dibuka sebagai PDF. Cuba salinan lain.",
+  "encryptedPdf": "Nyahkunci PDF yang dilindungi kata laluan ini sebelum memampatkannya.",
+  "compressionFailed": "Pemampatan gagal. Cuba lagi atau gunakan pelayar lain."
+}

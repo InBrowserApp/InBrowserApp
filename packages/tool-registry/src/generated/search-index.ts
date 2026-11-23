@@ -24720,6 +24720,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "pdf-compressor",
+    category: "pdf",
+    icon: "archive",
+    tags: [
+      "pdf",
+      "compress",
+      "reduce file size",
+      "scanned pdf",
+      "ocr",
+      "offline",
+    ],
+    locales: {
+      ar: {
+        name: "ضاغط ملفات PDF",
+        description:
+          "اضغط ملفات PDF الممسوحة ضوئيًا والغنية بالصور في متصفحك. احتفظ بإمكانية تحديد النص الموجود وقارن أحجام الملفات قبل التنزيل.",
+      },
+      de: {
+        name: "PDF-Kompressor",
+        description:
+          "Komprimiere gescannte PDFs und PDFs mit vielen Bildern direkt im Browser. Text bleibt auswählbar. Vergleiche die Dateigrößen vor dem Download.",
+      },
+      en: {
+        name: "PDF Compressor",
+        description:
+          "Compress scanned and image-heavy PDFs in your browser. Keep existing text selectable and compare file sizes before downloading.",
+      },
+      es: {
+        name: "Compresor de PDF",
+        description:
+          "Comprime PDF escaneados o con muchas imágenes en tu navegador. Conserva el texto seleccionable y compara el tamaño de los archivos antes de descargar.",
+      },
+      fr: {
+        name: "Compresseur de PDF",
+        description:
+          "Compressez vos PDF numérisés ou riches en images dans votre navigateur. Le texte reste sélectionnable et vous pouvez comparer la taille des fichiers avant le téléchargement.",
+      },
+      he: {
+        name: "דחיסת PDF",
+        description:
+          "דחסו קובצי PDF סרוקים וקבצים עם הרבה תמונות ישירות בדפדפן, תוך שמירה על האפשרות לבחור טקסט קיים. השוו את גודל הקבצים לפני ההורדה.",
+      },
+      hi: {
+        name: "PDF कंप्रेसर",
+        description:
+          "स्कैन की गई या कई इमेज वाली PDF को ब्राउज़र में छोटा करें। मौजूदा टेक्स्ट चुनने योग्य रहता है और डाउनलोड से पहले फ़ाइल साइज़ की तुलना कर सकते हैं।",
+      },
+      id: {
+        name: "Kompresor PDF",
+        description:
+          "Kompres PDF hasil pindai dan PDF yang banyak berisi gambar di browser. Teks tetap dapat dipilih, dan ukuran file dapat dibandingkan sebelum diunduh.",
+      },
+      it: {
+        name: "Comprimi PDF",
+        description:
+          "Comprimi nel browser i PDF ottenuti da scansioni o ricchi di immagini. Mantieni il testo selezionabile e confronta le dimensioni prima del download.",
+      },
+      ja: {
+        name: "PDF 圧縮ツール",
+        description:
+          "スキャンした PDF や画像の多い PDF をブラウザ内で圧縮します。既存のテキストを選択できる状態で保ち、ダウンロード前にファイルサイズを比較できます。",
+      },
+      ko: {
+        name: "PDF 압축 도구",
+        description:
+          "스캔한 PDF나 이미지가 많은 PDF를 브라우저에서 압축하세요. 기존 텍스트는 계속 선택할 수 있으며, 다운로드 전에 파일 크기를 비교할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemampat PDF",
+        description:
+          "Mampatkan PDF imbasan dan PDF yang mengandungi banyak imej dalam pelayar. Teks sedia ada masih boleh dipilih. Bandingkan saiz fail sebelum memuat turun.",
+      },
+      nl: {
+        name: "PDF comprimeren",
+        description:
+          "Verklein gescande PDF’s en PDF’s met veel afbeeldingen in je browser. Bestaande tekst blijft selecteerbaar. Vergelijk de bestandsgrootte vóór het downloaden.",
+      },
+      no: {
+        name: "PDF-komprimering",
+        description:
+          "Komprimer skannede PDF-filer og PDF-er med mange bilder i nettleseren. Teksten kan fortsatt markeres, og du kan sammenligne filstørrelsene før nedlasting.",
+      },
+      pl: {
+        name: "Kompresor PDF",
+        description:
+          "Kompresuj zeskanowane pliki PDF i dokumenty z wieloma obrazami w przeglądarce. Zachowaj możliwość zaznaczania tekstu i porównaj rozmiary przed pobraniem.",
+      },
+      pt: {
+        name: "Compressor de PDF",
+        description:
+          "Comprima PDFs digitalizados ou com muitas imagens no navegador. Mantenha o texto selecionável e compare o tamanho dos arquivos antes de baixar.",
+      },
+      ru: {
+        name: "Сжатие PDF",
+        description:
+          "Сжимайте сканы и PDF с большим количеством изображений в браузере. Текст по-прежнему можно выделять. Сравните размеры файлов перед скачиванием.",
+      },
+      sv: {
+        name: "PDF-komprimering",
+        description:
+          "Komprimera skannade och bildtunga PDF-filer i webbläsaren. Befintlig text går fortfarande att markera. Jämför filstorlekarna före nedladdning.",
+      },
+      th: {
+        name: "บีบอัด PDF",
+        description:
+          "ลดขนาด PDF ที่สแกนหรือมีรูปภาพจำนวนมากในเบราว์เซอร์ ข้อความเดิมยังเลือกได้ และเปรียบเทียบขนาดไฟล์ก่อนดาวน์โหลดได้",
+      },
+      tr: {
+        name: "PDF Sıkıştırıcı",
+        description:
+          "Taranmış ve bol görselli PDF'leri tarayıcınızda sıkıştırın. Mevcut metin seçilebilir kalır. İndirmeden önce dosya boyutlarını karşılaştırın.",
+      },
+      vi: {
+        name: "Nén PDF",
+        description:
+          "Nén bản quét và PDF có nhiều hình ảnh ngay trong trình duyệt. Giữ văn bản có thể chọn và so sánh dung lượng trước khi tải xuống.",
+      },
+      "zh-CN": {
+        name: "PDF 压缩",
+        description:
+          "在浏览器中压缩扫描件和图片较多的 PDF，保留可选文字，并在下载前查看体积变化。",
+      },
+      "zh-TW": {
+        name: "PDF 壓縮器",
+        description:
+          "在瀏覽器中壓縮掃描版和含大量圖片的 PDF。保留原本可選取的文字，下載前可比較檔案大小。",
+      },
+    },
+  },
+  {
     slug: "pdf-info-viewer",
     category: "pdf",
     icon: "file-text",

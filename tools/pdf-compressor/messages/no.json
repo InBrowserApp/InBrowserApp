@@ -1,0 +1,38 @@
+{
+  "choosePdf": "Velg PDF",
+  "dropPdf": "Slipp én PDF-fil her, eller velg en fil fra enheten din.",
+  "changePdf": "Bytt PDF",
+  "privacy": "PDF-filen blir på enheten din.",
+  "compressionLevel": "Komprimeringsnivå",
+  "presets": {
+    "quality": {
+      "label": "Høyere kvalitet",
+      "description": "Bevarer flere detaljer for lesing eller utskrift."
+    },
+    "balanced": {
+      "label": "Balansert",
+      "description": "Reduserer filstørrelsen og holder skanningen lesbar."
+    },
+    "small": {
+      "label": "Minste fil",
+      "description": "Gjør bildene enda mindre for e-post eller opplasting."
+    }
+  },
+  "keepText": "Du kan fortsatt markere tekst, og eventuelle OCR-tekstlag beholdes.",
+  "compress": "Komprimer PDF",
+  "compressing": "Komprimerer PDF …",
+  "cancel": "Avbryt",
+  "cancelled": "Komprimeringen ble avbrutt. Du kan prøve på nytt.",
+  "sizeComparison": "Sammenligning av filstørrelser",
+  "originalSize": "Opprinnelig størrelse",
+  "outputSize": "Nedlastingsstørrelse",
+  "saved": "Størrelsesreduksjon",
+  "noSavings": "Denne innstillingen ga ingen mindre PDF. Du kan laste ned originalfilen.",
+  "signed": "Denne PDF-filen har en digital signatur. Last ned originalfilen for å beholde signaturen.",
+  "download": "Last ned komprimert PDF",
+  "downloadOriginal": "Last ned original PDF",
+  "oneFile": "Velg én PDF-fil om gangen.",
+  "invalidPdf": "Filen kunne ikke åpnes som PDF. Prøv en annen kopi.",
+  "encryptedPdf": "Lås opp den passordbeskyttede PDF-filen før komprimering.",
+  "compressionFailed": "PDF-filen kunne ikke komprimeres. Prøv på nytt eller bruk en annen nettleser."
+}

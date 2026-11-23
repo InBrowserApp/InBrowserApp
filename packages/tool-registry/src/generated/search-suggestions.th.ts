@@ -984,6 +984,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "บีบอัด PDF",
+    slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
     name: "โปรแกรมดูข้อมูล PDF",
     slug: "pdf-info-viewer",
   },
