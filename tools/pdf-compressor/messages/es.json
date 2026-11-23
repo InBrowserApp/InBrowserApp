@@ -1,0 +1,38 @@
+{
+  "choosePdf": "Elegir un PDF",
+  "dropPdf": "Suelta un PDF aquí o selecciónalo en tu dispositivo.",
+  "changePdf": "Cambiar PDF",
+  "privacy": "Tu PDF se queda en tu dispositivo.",
+  "compressionLevel": "Nivel de compresión",
+  "presets": {
+    "quality": {
+      "label": "Mayor calidad",
+      "description": "Conserva más detalles para leer o imprimir."
+    },
+    "balanced": {
+      "label": "Equilibrado",
+      "description": "Reduce el tamaño sin perder legibilidad."
+    },
+    "small": {
+      "label": "Menor tamaño",
+      "description": "Reduce aún más las imágenes para adjuntar o subir el PDF."
+    }
+  },
+  "keepText": "Se conservan el texto seleccionable y la capa OCR existentes.",
+  "compress": "Comprimir PDF",
+  "compressing": "Comprimiendo PDF…",
+  "cancel": "Cancelar",
+  "cancelled": "Se canceló la compresión. Puedes volver a intentarlo.",
+  "sizeComparison": "Comparación de tamaños",
+  "originalSize": "Tamaño original",
+  "outputSize": "Tamaño de descarga",
+  "saved": "Reducción de tamaño",
+  "noSavings": "Este nivel no redujo el tamaño del PDF. Puedes descargar el original.",
+  "signed": "Este PDF tiene una firma digital. Puedes descargar el original con la firma intacta.",
+  "download": "Descargar PDF comprimido",
+  "downloadOriginal": "Descargar PDF original",
+  "oneFile": "Elige un solo PDF a la vez.",
+  "invalidPdf": "No se pudo abrir el archivo como PDF. Prueba con otra copia.",
+  "encryptedPdf": "Desbloquea este PDF protegido con contraseña para poder comprimirlo.",
+  "compressionFailed": "No se pudo comprimir el PDF. Vuelve a intentarlo o usa otro navegador."
+}

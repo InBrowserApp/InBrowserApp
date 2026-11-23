@@ -964,6 +964,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "pdf",
+    name: "Compresor de PDF",
+    slug: "pdf-compressor",
+  },
+  {
+    category: "pdf",
     name: "Visor de información de PDF",
     slug: "pdf-info-viewer",
   },

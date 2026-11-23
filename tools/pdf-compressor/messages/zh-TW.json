@@ -1,0 +1,38 @@
+{
+  "choosePdf": "選擇 PDF",
+  "dropPdf": "將一個 PDF 拖曳到這裡，或從裝置選擇檔案。",
+  "changePdf": "更換 PDF",
+  "privacy": "PDF 檔案全程留在你的裝置上。",
+  "compressionLevel": "壓縮等級",
+  "presets": {
+    "quality": {
+      "label": "較高畫質",
+      "description": "保留較多掃描細節，適合閱讀或列印。"
+    },
+    "balanced": {
+      "label": "均衡",
+      "description": "在維持掃描影像清晰可讀的同時縮小檔案。"
+    },
+    "small": {
+      "label": "最小檔案",
+      "description": "進一步縮小影像，方便寄信或上傳。"
+    }
+  },
+  "keepText": "保留原本可選取的文字和 OCR 文字圖層。",
+  "compress": "壓縮 PDF",
+  "compressing": "正在壓縮 PDF…",
+  "cancel": "取消",
+  "cancelled": "壓縮已取消。你可以再試一次。",
+  "sizeComparison": "檔案大小比較",
+  "originalSize": "原始大小",
+  "outputSize": "下載大小",
+  "saved": "縮小比例",
+  "noSavings": "這個設定未能縮小 PDF。你可以下載原始檔案。",
+  "signed": "這份 PDF 含有數位簽章。你可以下載保留完整簽章的原始檔案。",
+  "download": "下載壓縮後的 PDF",
+  "downloadOriginal": "下載原始 PDF",
+  "oneFile": "請一次選擇一個 PDF。",
+  "invalidPdf": "無法將此檔案開啟為 PDF。請試用另一份檔案。",
+  "encryptedPdf": "這份 PDF 受密碼保護，請先解鎖再壓縮。",
+  "compressionFailed": "壓縮失敗。請再試一次，或使用其他瀏覽器。"
+}

@@ -1,0 +1,38 @@
+{
+  "choosePdf": "Chọn PDF",
+  "dropPdf": "Thả một tệp PDF vào đây hoặc chọn tệp trên thiết bị.",
+  "changePdf": "Đổi tệp PDF",
+  "privacy": "Tệp PDF luôn ở trên thiết bị của bạn.",
+  "compressionLevel": "Mức nén",
+  "presets": {
+    "quality": {
+      "label": "Chất lượng cao hơn",
+      "description": "Giữ nhiều chi tiết hơn để đọc hoặc in bản quét."
+    },
+    "balanced": {
+      "label": "Cân bằng",
+      "description": "Giảm dung lượng mà bản quét vẫn dễ đọc."
+    },
+    "small": {
+      "label": "Dung lượng nhỏ nhất",
+      "description": "Giảm thêm dung lượng ảnh để gửi email hoặc tải lên."
+    }
+  },
+  "keepText": "Văn bản có thể chọn và lớp văn bản OCR hiện có được giữ nguyên.",
+  "compress": "Nén PDF",
+  "compressing": "Đang nén PDF…",
+  "cancel": "Hủy",
+  "cancelled": "Đã hủy nén. Bạn có thể thử lại.",
+  "sizeComparison": "So sánh dung lượng tệp",
+  "originalSize": "Dung lượng ban đầu",
+  "outputSize": "Dung lượng tệp tải xuống",
+  "saved": "Mức giảm dung lượng",
+  "noSavings": "Mức nén này chưa giảm được dung lượng PDF. Bạn có thể tải xuống tệp gốc.",
+  "signed": "Tệp PDF này có chữ ký số. Bạn có thể tải xuống tệp gốc để giữ nguyên chữ ký.",
+  "download": "Tải PDF đã nén xuống",
+  "downloadOriginal": "Tải PDF gốc xuống",
+  "oneFile": "Chỉ chọn một tệp PDF mỗi lần.",
+  "invalidPdf": "Không thể mở tệp này dưới dạng PDF. Hãy thử một bản sao khác.",
+  "encryptedPdf": "Hãy mở khóa tệp PDF được bảo vệ bằng mật khẩu này trước khi nén.",
+  "compressionFailed": "Không thể nén PDF. Hãy thử lại hoặc dùng trình duyệt khác."
+}

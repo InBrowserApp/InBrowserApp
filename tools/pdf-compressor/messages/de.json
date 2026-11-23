@@ -1,0 +1,38 @@
+{
+  "choosePdf": "PDF auswählen",
+  "dropPdf": "Ziehe eine PDF-Datei hierher oder wähle sie auf deinem Gerät aus.",
+  "changePdf": "Andere PDF wählen",
+  "privacy": "Deine PDF bleibt auf deinem Gerät.",
+  "compressionLevel": "Komprimierungsstufe",
+  "presets": {
+    "quality": {
+      "label": "Höhere Qualität",
+      "description": "Erhält mehr Details zum Lesen und Drucken."
+    },
+    "balanced": {
+      "label": "Ausgewogen",
+      "description": "Verkleinert die Datei und hält die Scans gut lesbar."
+    },
+    "small": {
+      "label": "Kleinste Datei",
+      "description": "Komprimiert Bilder stärker für E-Mail-Anhänge und Uploads."
+    }
+  },
+  "keepText": "Auswählbarer Text und vorhandene OCR-Textebenen bleiben erhalten.",
+  "compress": "PDF komprimieren",
+  "compressing": "PDF wird komprimiert…",
+  "cancel": "Abbrechen",
+  "cancelled": "Komprimierung abgebrochen. Du kannst es erneut versuchen.",
+  "sizeComparison": "Dateigrößen im Vergleich",
+  "originalSize": "Originalgröße",
+  "outputSize": "Downloadgröße",
+  "saved": "Größenersparnis",
+  "noSavings": "Mit dieser Einstellung wurde die PDF nicht kleiner. Du kannst die Originaldatei herunterladen.",
+  "signed": "Diese PDF ist digital signiert. Du kannst das Original mit unveränderter Signatur herunterladen.",
+  "download": "Komprimierte PDF herunterladen",
+  "downloadOriginal": "Original-PDF herunterladen",
+  "oneFile": "Wähle jeweils eine PDF-Datei aus.",
+  "invalidPdf": "Die Datei ließ sich nicht als PDF öffnen. Versuche es mit einer anderen Kopie.",
+  "encryptedPdf": "Entferne den Passwortschutz, bevor du diese PDF komprimierst.",
+  "compressionFailed": "Die Komprimierung ist fehlgeschlagen. Versuche es erneut oder verwende einen anderen Browser."
+}

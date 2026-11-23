@@ -1,0 +1,38 @@
+{
+  "choosePdf": "Wybierz plik PDF",
+  "dropPdf": "Przeciągnij tutaj jeden PDF lub wybierz go z urządzenia.",
+  "changePdf": "Zmień plik PDF",
+  "privacy": "Plik PDF pozostaje na Twoim urządzeniu.",
+  "compressionLevel": "Poziom kompresji",
+  "presets": {
+    "quality": {
+      "label": "Wyższa jakość",
+      "description": "Zachowuje więcej szczegółów skanu do czytania lub drukowania."
+    },
+    "balanced": {
+      "label": "Zrównoważony",
+      "description": "Zmniejsza rozmiar skanu, zachowując jego czytelność."
+    },
+    "small": {
+      "label": "Najmniejszy plik",
+      "description": "Mocniej zmniejsza obrazy przed wysłaniem pliku e-mailem lub wgraniem go na stronę."
+    }
+  },
+  "keepText": "Tekst, który można zaznaczyć, i istniejąca warstwa OCR pozostają bez zmian.",
+  "compress": "Kompresuj PDF",
+  "compressing": "Kompresowanie PDF…",
+  "cancel": "Anuluj",
+  "cancelled": "Anulowano kompresję. Możesz spróbować ponownie.",
+  "sizeComparison": "Porównanie rozmiarów pliku",
+  "originalSize": "Rozmiar oryginału",
+  "outputSize": "Rozmiar pliku do pobrania",
+  "saved": "Zmniejszenie rozmiaru",
+  "noSavings": "Przy tym ustawieniu plik PDF nie jest mniejszy. Możesz pobrać oryginał.",
+  "signed": "Ten PDF zawiera podpis cyfrowy. Możesz pobrać oryginał z zachowanym podpisem.",
+  "download": "Pobierz skompresowany PDF",
+  "downloadOriginal": "Pobierz oryginalny PDF",
+  "oneFile": "Wybierz tylko jeden plik PDF naraz.",
+  "invalidPdf": "Nie udało się otworzyć tego pliku jako PDF. Spróbuj użyć innej kopii.",
+  "encryptedPdf": "Odblokuj PDF zabezpieczony hasłem przed kompresją.",
+  "compressionFailed": "Kompresja się nie powiodła. Spróbuj ponownie lub użyj innej przeglądarki."
+}

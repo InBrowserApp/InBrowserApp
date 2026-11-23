@@ -1,0 +1,38 @@
+{
+  "choosePdf": "选择 PDF",
+  "dropPdf": "将一个 PDF 拖到这里，或从设备中选择。",
+  "changePdf": "更换 PDF",
+  "privacy": "PDF 始终保留在你的设备上。",
+  "compressionLevel": "压缩级别",
+  "presets": {
+    "quality": {
+      "label": "较高画质",
+      "description": "保留更多扫描细节，适合阅读或打印。"
+    },
+    "balanced": {
+      "label": "均衡",
+      "description": "减小扫描件体积，同时保持图片清晰可读。"
+    },
+    "small": {
+      "label": "最小体积",
+      "description": "进一步减小图片体积，便于发送邮件或上传。"
+    }
+  },
+  "keepText": "保留原有可选文字和 OCR 文字层。",
+  "compress": "压缩 PDF",
+  "compressing": "正在压缩 PDF…",
+  "cancel": "取消",
+  "cancelled": "已取消压缩，可重新尝试。",
+  "sizeComparison": "文件大小对比",
+  "originalSize": "原文件大小",
+  "outputSize": "下载文件大小",
+  "saved": "体积减小比例",
+  "noSavings": "当前设置未能减小 PDF 体积，可下载原文件。",
+  "signed": "此 PDF 含有数字签名，可下载原文件以保留原有签名。",
+  "download": "下载压缩后的 PDF",
+  "downloadOriginal": "下载原始 PDF",
+  "oneFile": "请一次选择一个 PDF。",
+  "invalidPdf": "无法将此文件作为 PDF 打开。请尝试使用另一份文件。",
+  "encryptedPdf": "请先解锁受密码保护的 PDF，再进行压缩。",
+  "compressionFailed": "压缩失败，请重试或换一个浏览器。"
+}

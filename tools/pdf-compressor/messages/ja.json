@@ -1,0 +1,38 @@
+{
+  "choosePdf": "PDF を選択",
+  "dropPdf": "PDF を 1 つここにドロップするか、端末から選択してください。",
+  "changePdf": "PDF を変更",
+  "privacy": "PDF はお使いの端末内で処理されます。",
+  "compressionLevel": "圧縮レベル",
+  "presets": {
+    "quality": {
+      "label": "画質優先",
+      "description": "閲覧や印刷用に、スキャン画像の細部を多く残します。"
+    },
+    "balanced": {
+      "label": "バランス",
+      "description": "読みやすさを保ちながら、スキャンした PDF を軽くします。"
+    },
+    "small": {
+      "label": "サイズ優先",
+      "description": "メール添付やアップロード向けに、画像の容量をさらに減らします。"
+    }
+  },
+  "keepText": "既存の選択可能なテキストと OCR のテキストレイヤーを保持します。",
+  "compress": "PDF を圧縮",
+  "compressing": "PDF を圧縮しています…",
+  "cancel": "キャンセル",
+  "cancelled": "圧縮をキャンセルしました。再試行できます。",
+  "sizeComparison": "ファイルサイズの比較",
+  "originalSize": "元のサイズ",
+  "outputSize": "ダウンロードサイズ",
+  "saved": "削減率",
+  "noSavings": "この設定では PDF が小さくなりませんでした。元のファイルをダウンロードできます。",
+  "signed": "この PDF にはデジタル署名が含まれています。署名が保持された元のファイルをダウンロードできます。",
+  "download": "圧縮した PDF をダウンロード",
+  "downloadOriginal": "元の PDF をダウンロード",
+  "oneFile": "PDF は一度に 1 つ選んでください。",
+  "invalidPdf": "このファイルを PDF として開けませんでした。別のコピーをお試しください。",
+  "encryptedPdf": "パスワード保護を解除してから PDF を圧縮してください。",
+  "compressionFailed": "圧縮できませんでした。再試行するか、別のブラウザをお試しください。"
+}

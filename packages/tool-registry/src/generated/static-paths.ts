@@ -17666,6 +17666,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "pdf-compressor",
+    language: "ar",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "de",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "en",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "es",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "fr",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "he",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "hi",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "id",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "it",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "ja",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "ko",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "ms",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "nl",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "no",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "pl",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "pt",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "ru",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "sv",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "th",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "tr",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "vi",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "zh-CN",
+  },
+  {
+    slug: "pdf-compressor",
+    language: "zh-TW",
+  },
+  {
     slug: "pdf-info-viewer",
     language: "ar",
   },

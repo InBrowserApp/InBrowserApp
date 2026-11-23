@@ -1,0 +1,38 @@
+{
+  "choosePdf": "Choisir un PDF",
+  "dropPdf": "Déposez un PDF ici ou choisissez un fichier sur votre appareil.",
+  "changePdf": "Changer de PDF",
+  "privacy": "Votre PDF reste sur votre appareil.",
+  "compressionLevel": "Niveau de compression",
+  "presets": {
+    "quality": {
+      "label": "Qualité supérieure",
+      "description": "Préserve davantage de détails pour la lecture ou l’impression."
+    },
+    "balanced": {
+      "label": "Équilibré",
+      "description": "Réduit la taille du PDF tout en préservant la lisibilité des images."
+    },
+    "small": {
+      "label": "Taille minimale",
+      "description": "Réduit davantage la taille des images pour l’envoi ou le transfert."
+    }
+  },
+  "keepText": "Le texte sélectionnable et la couche OCR du PDF sont conservés.",
+  "compress": "Compresser le PDF",
+  "compressing": "Compression du PDF…",
+  "cancel": "Annuler",
+  "cancelled": "Compression annulée. Vous pouvez réessayer.",
+  "sizeComparison": "Comparaison des tailles",
+  "originalSize": "Taille d’origine",
+  "outputSize": "Taille du fichier à télécharger",
+  "saved": "Réduction de taille",
+  "noSavings": "Ce réglage n’a pas réduit la taille du PDF. Vous pouvez télécharger le fichier d’origine.",
+  "signed": "Ce PDF comporte une signature numérique. Vous pouvez télécharger le fichier d’origine avec sa signature intacte.",
+  "download": "Télécharger le PDF compressé",
+  "downloadOriginal": "Télécharger le PDF d’origine",
+  "oneFile": "Choisissez un seul PDF à la fois.",
+  "invalidPdf": "Impossible d’ouvrir ce fichier comme PDF. Essayez avec une autre copie.",
+  "encryptedPdf": "Déverrouillez ce PDF protégé par mot de passe avant de le compresser.",
+  "compressionFailed": "La compression a échoué. Réessayez ou utilisez un autre navigateur."
+}
