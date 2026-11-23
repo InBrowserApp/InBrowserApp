@@ -1,6 +1,7 @@
 import { failureOf } from "./core/failure"
 import type {
   JpegOptions,
+  ImageOutputOptions,
   ImageTransform,
   ImageInfo,
   OpenedImage,
@@ -75,14 +76,14 @@ export function imageSession(file: File, signal: AbortSignal) {
     },
     render: async (
       index: number,
-      jpeg?: JpegOptions,
+      output?: ImageOutputOptions,
       transform?: ImageTransform
     ): Promise<Preview> => {
       const reply = await request({
         id: ++sequence,
         type: "render",
         index,
-        jpeg,
+        output,
         transform,
       })
       if (reply.type !== "rendered") throw new Error("invalid")

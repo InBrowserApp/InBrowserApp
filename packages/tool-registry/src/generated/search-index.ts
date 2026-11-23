@@ -3600,6 +3600,149 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "batch-image-converter",
+    category: "image",
+    icon: "image",
+    tags: [
+      "batch",
+      "bulk",
+      "image",
+      "converter",
+      "heic",
+      "heif",
+      "tiff",
+      "jpg",
+      "jpeg",
+      "png",
+      "webp",
+      "avif",
+      "gif",
+      "bmp",
+      "ico",
+      "jxl",
+      "jp2",
+      "jpeg 2000",
+      "zip",
+    ],
+    locales: {
+      ar: {
+        name: "محول الصور دفعة واحدة – JPG وPNG وWebP",
+        description:
+          "حوّل عدة صور بصيغ HEIC وPNG وTIFF وAVIF وغيرها إلى JPG أو PNG أو WebP، ونزّل النتائج في ملف ZIP. مجانًا ودون رفع الملفات.",
+      },
+      de: {
+        name: "Bilder stapelweise konvertieren – JPG, PNG & WebP",
+        description:
+          "Mehrere Bilder in HEIC, PNG, TIFF, AVIF und anderen Formaten in JPG, PNG oder WebP umwandeln und als ZIP herunterladen. Kostenlos und ohne Upload.",
+      },
+      en: {
+        name: "Batch Image Converter – JPG, PNG & WebP",
+        description:
+          "Convert multiple HEIC, PNG, TIFF, AVIF and other images to JPG, PNG or WebP. Download a ZIP of your converted images. Free, with no uploads.",
+      },
+      es: {
+        name: "Convertidor de imágenes por lotes – JPG, PNG y WebP",
+        description:
+          "Convierte varias imágenes HEIC, PNG, TIFF, AVIF y otros formatos a JPG, PNG o WebP. Descarga el resultado en un ZIP. Gratis y sin subir archivos.",
+      },
+      fr: {
+        name: "Convertisseur d’images par lots – JPG, PNG et WebP",
+        description:
+          "Convertissez plusieurs images HEIC, PNG, TIFF, AVIF et plus encore en JPG, PNG ou WebP. Téléchargez-les en ZIP. Gratuit, sans envoi de fichiers.",
+      },
+      he: {
+        name: "ממיר תמונות באצווה – JPG, PNG ו-WebP",
+        description:
+          "המירו כמה תמונות בפורמטים כמו HEIC, PNG, TIFF ו-AVIF ל-JPG, PNG או WebP. הורידו את התמונות שהומרו בקובץ ZIP. בחינם וללא העלאת קבצים.",
+      },
+      hi: {
+        name: "बैच इमेज कनवर्टर – JPG, PNG और WebP",
+        description:
+          "HEIC, PNG, TIFF, AVIF और दूसरे फ़ॉर्मैट की कई इमेज एक साथ JPG, PNG या WebP में बदलें। नतीजे ZIP में डाउनलोड करें। मुफ़्त, बिना फ़ाइलें अपलोड किए।",
+      },
+      id: {
+        name: "Konverter Gambar Massal – JPG, PNG dan WebP",
+        description:
+          "Konversikan banyak gambar HEIC, PNG, TIFF, AVIF, dan format lain ke JPG, PNG, atau WebP sekaligus. Unduh hasilnya sebagai ZIP, gratis dan tanpa mengunggah file.",
+      },
+      it: {
+        name: "Convertitore di immagini in blocco – JPG, PNG e WebP",
+        description:
+          "Converti più immagini HEIC, PNG, TIFF, AVIF e di altri formati in JPG, PNG o WebP. Scarica le immagini in un archivio ZIP. Gratis e senza caricamenti.",
+      },
+      ja: {
+        name: "画像一括変換 – JPG・PNG・WebP",
+        description:
+          "HEIC、PNG、TIFF、AVIF などの画像をまとめて JPG、PNG、WebP に変換できます。アップロード不要で、変換した画像を無料で ZIP にまとめてダウンロードできます。",
+      },
+      ko: {
+        name: "이미지 일괄 변환기 – JPG, PNG 및 WebP",
+        description:
+          "여러 HEIC, PNG, TIFF, AVIF 등의 이미지를 JPG, PNG 또는 WebP로 변환하고 결과를 ZIP으로 다운로드하세요. 업로드 없이 무료로 사용할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Imej Pukal – JPG, PNG dan WebP",
+        description:
+          "Tukar berbilang imej HEIC, PNG, TIFF, AVIF dan format lain kepada JPG, PNG atau WebP serentak. Muat turun hasil sebagai ZIP secara percuma tanpa memuat naik fail.",
+      },
+      nl: {
+        name: "Afbeeldingen in bulk converteren – JPG, PNG en WebP",
+        description:
+          "Converteer meerdere afbeeldingen in HEIC, PNG, TIFF, AVIF en andere formaten naar JPG, PNG of WebP. Download de resultaten als ZIP. Gratis en zonder uploads.",
+      },
+      no: {
+        name: "Konverter flere bilder – JPG, PNG og WebP",
+        description:
+          "Konverter flere bilder i HEIC, PNG, TIFF, AVIF og andre formater til JPG, PNG eller WebP. Last ned resultatet som en ZIP-fil. Gratis, uten opplasting.",
+      },
+      pl: {
+        name: "Wsadowy konwerter obrazów – JPG, PNG i WebP",
+        description:
+          "Konwertuj wiele obrazów HEIC, PNG, TIFF, AVIF i innych na JPG, PNG lub WebP. Pobierz gotowe pliki w archiwum ZIP. Za darmo i bez przesyłania plików.",
+      },
+      pt: {
+        name: "Conversor de imagens em lote – JPG, PNG e WebP",
+        description:
+          "Converta várias imagens HEIC, PNG, TIFF, AVIF e de outros formatos para JPG, PNG ou WebP. Baixe o resultado em ZIP. Grátis, sem enviar arquivos.",
+      },
+      ru: {
+        name: "Пакетный конвертер изображений – JPG, PNG и WebP",
+        description:
+          "Конвертируйте сразу несколько файлов HEIC, PNG, TIFF, AVIF и других форматов в JPG, PNG или WebP. Скачайте результат в ZIP. Бесплатно, без отправки файлов.",
+      },
+      sv: {
+        name: "Konvertera bilder i grupp – JPG, PNG och WebP",
+        description:
+          "Konvertera flera bilder i HEIC, PNG, TIFF, AVIF och andra format till JPG, PNG eller WebP. Ladda ned resultatet som en ZIP-fil. Gratis, utan uppladdning.",
+      },
+      th: {
+        name: "แปลงรูปภาพหลายไฟล์ – JPG, PNG และ WebP",
+        description:
+          "แปลงรูปภาพ HEIC, PNG, TIFF, AVIF และรูปแบบอื่นหลายไฟล์เป็น JPG, PNG หรือ WebP แล้วดาวน์โหลดรวมเป็นไฟล์ ZIP ใช้งานฟรีโดยไม่ต้องอัปโหลด",
+      },
+      tr: {
+        name: "Toplu görsel dönüştürücü – JPG, PNG ve WebP",
+        description:
+          "HEIC, PNG, TIFF, AVIF ve diğer biçimlerdeki görselleri topluca JPG, PNG veya WebP'ye dönüştürün. Dosya yüklemeden ücretsiz dönüştürün ve çıktıları ZIP olarak indirin.",
+      },
+      vi: {
+        name: "Chuyển đổi ảnh hàng loạt – JPG, PNG và WebP",
+        description:
+          "Chuyển nhiều ảnh HEIC, PNG, TIFF, AVIF và các định dạng khác sang JPG, PNG hoặc WebP. Tải ảnh đã chuyển đổi dưới dạng ZIP. Miễn phí, không cần tải tệp lên.",
+      },
+      "zh-CN": {
+        name: "批量图片转换 – JPG、PNG 和 WebP",
+        description:
+          "批量将 HEIC、PNG、TIFF、AVIF 等图片转换为 JPG、PNG 或 WebP，并打包成 ZIP 下载。免费使用，无需上传。",
+      },
+      "zh-TW": {
+        name: "批次圖片轉換器 – JPG、PNG、WebP",
+        description:
+          "將多張 HEIC、PNG、TIFF、AVIF 等圖片一次轉為 JPG、PNG 或 WebP，並打包成 ZIP 下載。免費使用，無須上傳圖片。",
+      },
+    },
+  },
+  {
     slug: "bcrypt-hash-password",
     category: "crypto",
     icon: "lock",

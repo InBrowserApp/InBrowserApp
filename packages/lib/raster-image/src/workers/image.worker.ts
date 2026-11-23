@@ -21,7 +21,7 @@ self.onmessage = async ({ data }: MessageEvent<Request>) => {
           : {
               id: data.id,
               type: "rendered",
-              preview: renderImage(data.index, data.jpeg, data.transform),
+              preview: renderImage(data.index, data.output, data.transform),
             }
   } catch (reason) {
     reply = { id: data.id, type: "error", failure: failureOf(reason) }

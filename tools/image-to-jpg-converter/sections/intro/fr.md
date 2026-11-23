@@ -2,6 +2,8 @@
 
 Ouvrez une image locale, choisissez la qualité JPG et une couleur d’arrière-plan, examinez l’aperçu du résultat réellement compressé et téléchargez l’image sélectionnée. Le résultat conserve ses dimensions complètes en pixels et l’orientation appliquée. Le zoom et les arrière-plans de l’aperçu ne modifient ni la taille ni les couleurs de l’image enregistrée.
 
+Pour convertir plusieurs images en une seule fois et les télécharger dans une archive ZIP, utilisez le [Convertisseur d’images par lots](/fr/tools/batch-image-converter/).
+
 ## Formats et sélection des images
 
 Lisez les fichiers JPEG, PNG, GIF, BMP, WebP, les images fixes AVIF, les fichiers TIFF, ICO, les images fixes et collections HEIC/HEIF, les fichiers JPEG XL, JP2 et les flux codés JPEG 2000 (J2K). Le contenu du fichier est vérifié sans se fier à son extension. La prise en charge dépend de l’encodage du fichier. Pour les images vectorielles SVG, utilisez les convertisseurs SVG distincts.

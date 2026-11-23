@@ -29,7 +29,7 @@ export type ImageInfo = {
 }
 export type Preview = {
   bytes: Uint8Array<ArrayBuffer>
-  mime: "image/png" | "image/jpeg"
+  mime: "image/png" | "image/jpeg" | "image/webp"
   width: number
   height: number
   fullWidth: number
@@ -43,15 +43,19 @@ export type ImageTransform = {
   maxDimension?: number
 }
 export type JpegOptions = { quality: number; background: string }
+export type ImageOutputOptions =
+  | JpegOptions
+  | { format: "webp"; quality: number }
 export type OpenedImage = { info: ImageInfo; preview: Preview }
-export type Request = {
-  id: number
-  jpeg?: JpegOptions
-  transform?: ImageTransform
-} & (
+export type Request = { id: number } & (
   | { type: "inspect"; file: File }
-  | { type: "open"; file: File }
-  | { type: "render"; index: number }
+  | { type: "open"; file: File; jpeg?: JpegOptions }
+  | {
+      type: "render"
+      index: number
+      output?: ImageOutputOptions
+      transform?: ImageTransform
+    }
 )
 export type Reply = { id: number } & (
   | { type: "inspected"; info: ImageInfo }

@@ -143,6 +143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "basic-auth-generator",
   },
   {
+    category: "image",
+    name: "แปลงรูปภาพหลายไฟล์ – JPG, PNG และ WebP",
+    slug: "batch-image-converter",
+  },
+  {
     category: "crypto",
     name: "ตัวสร้าง bcrypt hash สำหรับรหัสผ่าน",
     slug: "bcrypt-hash-password",

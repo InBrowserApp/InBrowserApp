@@ -2,6 +2,8 @@
 
 Abre una imagen local, elige la calidad JPG y un color de fondo, inspecciona la vista previa del resultado comprimido y descarga la imagen seleccionada. La salida conserva sus dimensiones completas en píxeles y la orientación aplicada. El zoom y los fondos de la vista previa no cambian el tamaño ni los colores de la imagen guardada.
 
+Para convertir varias imágenes a la vez y descargarlas en un ZIP, usa el [Convertidor de imágenes por lotes](/es/tools/batch-image-converter/).
+
 ## Formatos y selección de imágenes
 
 Lee JPEG, PNG, GIF, BMP, WebP, imágenes estáticas AVIF, TIFF, ICO, imágenes estáticas y colecciones HEIC/HEIF, JPEG XL, JP2 y flujos de código JPEG 2000 (J2K). Se comprueba el contenido del archivo en lugar de confiar en su extensión. La compatibilidad depende de la codificación interna del archivo. Usa los convertidores específicos de SVG para las imágenes vectoriales SVG.

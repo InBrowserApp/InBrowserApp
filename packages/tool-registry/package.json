@@ -35,6 +35,7 @@
     "@tool/base85-encoder": "workspace:*",
     "@tool/basic-auth-decoder": "workspace:*",
     "@tool/basic-auth-generator": "workspace:*",
+    "@tool/batch-image-converter": "workspace:*",
     "@tool/bcrypt-hash-password": "workspace:*",
     "@tool/bcrypt-hash-password-verifier": "workspace:*",
     "@tool/bibliography-converter": "workspace:*",

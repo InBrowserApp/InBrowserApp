@@ -2,6 +2,8 @@
 
 Buka gambar lokal, pilih kualitas JPG dan warna latar belakang, periksa pratinjau hasil kompresi yang sebenarnya, lalu unduh gambar yang dipilih. Hasil mempertahankan dimensi piksel penuh dan orientasi yang diterapkan. Perbesaran dan latar belakang pratinjau tidak mengubah ukuran atau warna gambar yang disimpan.
 
+Untuk mengonversi beberapa gambar sekaligus dan mengunduh hasilnya sebagai ZIP, gunakan [Konverter Gambar Massal](/id/tools/batch-image-converter/).
+
 ## Format dan pemilihan gambar
 
 Baca JPEG, PNG, GIF, BMP, WebP, gambar diam AVIF, TIFF, ICO, gambar diam dan koleksi HEIC/HEIF, JPEG XL, JP2, serta aliran kode JPEG 2000 (J2K). Isi file diperiksa alih-alih mengandalkan ekstensinya. Dukungan bergantung pada pengodean di dalam file. Gunakan konverter SVG terpisah untuk gambar vektor SVG.

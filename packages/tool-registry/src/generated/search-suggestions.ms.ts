@@ -143,6 +143,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "basic-auth-generator",
   },
   {
+    category: "image",
+    name: "Penukar Imej Pukal – JPG, PNG dan WebP",
+    slug: "batch-image-converter",
+  },
+  {
     category: "crypto",
     name: "Penjana Hash Kata Laluan bcrypt",
     slug: "bcrypt-hash-password",

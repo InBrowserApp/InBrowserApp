@@ -2,6 +2,8 @@
 
 Buka imej setempat, pilih kualiti JPG dan warna latar belakang, periksa pratonton hasil mampatan sebenar dan muat turun imej yang dipilih. Hasil mengekalkan dimensi piksel penuh dan orientasi yang digunakan. Zum dan latar belakang pratonton tidak mengubah saiz atau warna imej yang disimpan.
 
+Gunakan [Penukar Imej Pukal](/ms/tools/batch-image-converter/) untuk menukar beberapa imej serentak dan memuat turun hasilnya sebagai ZIP.
+
 ## Format dan pemilihan imej
 
 Baca JPEG, PNG, GIF, BMP, WebP, imej pegun AVIF, TIFF, ICO, imej pegun dan koleksi HEIC/HEIF, JPEG XL, JP2 dan aliran kod JPEG 2000 (J2K). Kandungan fail diperiksa tanpa bergantung pada sambungannya. Sokongan bergantung pada pengekodan dalam fail. Untuk imej vektor SVG, gunakan penukar SVG yang berasingan.

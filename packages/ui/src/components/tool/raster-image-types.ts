@@ -6,7 +6,7 @@ export type RasterInfo = {
 }
 export type RasterPreview = {
   bytes: Uint8Array<ArrayBuffer>
-  mime: "image/png" | "image/jpeg"
+  mime: "image/png" | "image/jpeg" | "image/webp"
   width: number
   height: number
   delay: number

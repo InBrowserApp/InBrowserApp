@@ -2,6 +2,8 @@
 
 Abra uma imagem local, escolha a qualidade do JPG e uma cor de fundo, inspecione a visualização do resultado realmente comprimido e baixe a imagem selecionada. A saída mantém suas dimensões completas em pixels e a orientação aplicada. O zoom e os fundos da visualização não alteram o tamanho nem as cores da imagem salva.
 
+Para converter várias imagens de uma vez e baixá-las em um ZIP, use o [Conversor de imagens em lote](/pt/tools/batch-image-converter/).
+
 ## Formatos e seleção de imagens
 
 Leia JPEG, PNG, GIF, BMP, WebP, imagens estáticas AVIF, TIFF, ICO, imagens estáticas e coleções HEIC/HEIF, JPEG XL, JP2 e fluxos de código JPEG 2000 (J2K). A ferramenta verifica o conteúdo do arquivo em vez de confiar na extensão. A compatibilidade depende da codificação dentro do arquivo. Para imagens vetoriais SVG, use os conversores de SVG separados.
