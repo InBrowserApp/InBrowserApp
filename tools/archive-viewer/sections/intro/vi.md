@@ -1,4 +1,4 @@
-Trình xem tệp nén cho phép bạn kiểm tra một tệp nén trước khi giải nén. Công cụ này mở các tệp ZIP, TAR, GZ, TGZ và TAR.GZ trực tiếp trong trình duyệt, để bạn có thể xác nhận nội dung bên trong, duyệt thư mục, xem trước các tệp có thể đọc được và chỉ tải xuống mục bạn cần.
+Mở tệp 7z, RAR, ZIP hoặc TAR để duyệt các thư mục bên trong trước khi giải nén. Chọn một tệp để xem trước hoặc tải riêng tệp đó xuống.
 
 ## Khi nào nên dùng
 
@@ -10,7 +10,9 @@ Nội dung tệp nén được đọc cục bộ trong phiên trình duyệt c�
 
 ## Định dạng tệp nén được hỗ trợ
 
-Trình xem hỗ trợ các tệp ZIP tiêu chuẩn, tệp TAR chưa nén, tệp đơn lẻ được nén bằng GZIP và tệp TAR được bọc trong GZIP (`.tgz` hoặc `.tar.gz`). Các tệp nén được bảo vệ bằng mật khẩu hoặc mã hóa chưa được hỗ trợ trong lượt viết lại đầu tiên này.
+Trình xem mở được các định dạng ZIP, 7z, RAR4, RAR5, TAR, CPIO, AR (bao gồm gói `.deb`), CAB, ISO 9660 và LHA. Bạn cũng có thể mở tệp đơn lẻ và tệp TAR được nén bằng GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA hoặc UNIX compress (`.Z`). Ví dụ, mở gói phát hành `.tar.zst` để duyệt các thư mục hoặc mở tệp nhật ký `.zst` để tải xuống bản đã giải nén.
+
+Hãy dùng công cụ giải nén trên máy tính cho tệp đã mã hóa, tệp nén chia thành nhiều phần, tệp RAR4 nén liền khối (solid) hoặc mục vượt quá 512 MiB trong các định dạng mới được hỗ trợ. Tệp nén liền khối dung lượng lớn có thể mất nhiều thời gian hơn để mở hoặc giải nén vì bộ giải mã có thể phải xử lý các mục đứng trước.
 
 ## Cách hoạt động của bản xem trước
 

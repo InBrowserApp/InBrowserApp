@@ -1,15 +1,14 @@
 {
   "uploadTitle": "打开压缩包",
-  "uploadDescription": "选择 ZIP、TAR、GZ 或 TGZ 文件，无需上传即可检查内容。",
   "uploadAction": "选择压缩包",
   "uploadHint": "点击或将压缩包拖到这里",
-  "supportedFormats": "支持格式：ZIP、TAR、GZ、TGZ",
+  "supportedFormats": "ZIP、TAR、GZIP、7z、RAR、Zstandard、XZ、BZIP2、LZ4、LZIP、LZMA、.Z、CPIO、AR、CAB、ISO、LHA",
   "localOnlyNote": "文件会留在此浏览器会话中。压缩包不会发送到服务器。",
   "chooseAnother": "选择其他文件",
   "clearArchive": "清除",
   "parsingArchive": "正在读取压缩包条目...",
   "errorTitle": "无法打开压缩包",
-  "unsupportedFormat": "不支持的压缩包格式。请使用 ZIP、TAR、GZ、TGZ 或 TAR.GZ 文件。",
+  "unsupportedFormat": "不支持此文件格式。请选择上方列出的格式之一。",
   "parseFailed": "无法解析此压缩包。它可能已损坏、已加密，或使用了不受支持的特性。",
   "gzipUnsupported": "此浏览器不支持 GZIP 解压。",
   "previewTooLarge": "预览限制为 1 MB。请下载该条目以检查完整文件。",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "图片预览",
   "pdfPreviewLabel": "PDF 预览",
   "openFolder": "打开文件夹",
-  "previewFile": "预览文件"
+  "previewFile": "预览文件",
+  "entryTooLarge": "此条目解压后超过浏览器的 512 MiB 限制。请使用桌面解压工具。"
 }

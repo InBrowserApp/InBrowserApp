@@ -1,4 +1,4 @@
-Pemapar arkib membolehkan anda memeriksa fail termampat sebelum mengekstraknya. Alat ini membuka fail ZIP, TAR, GZ, TGZ dan TAR.GZ terus dalam penyemak imbas supaya anda boleh mengesahkan kandungannya, menyemak imbas folder, pratonton fail yang boleh dibaca dan memuat turun hanya entri yang anda perlukan.
+Buka arkib 7z, RAR, ZIP atau TAR untuk menyemak imbas foldernya sebelum mengekstrak kandungan. Pilih satu fail untuk melihat pratonton atau memuat turun fail itu sahaja.
 
 ## Bila menggunakannya
 
@@ -10,7 +10,9 @@ Kandungan arkib dibaca secara setempat dalam sesi penyemak imbas anda. Fail tida
 
 ## Format arkib yang disokong
 
-Pemapar ini menyokong arkib ZIP standard, fail TAR tidak dimampatkan, fail tunggal yang dimampatkan GZIP dan arkib TAR yang dibalut dalam GZIP (`.tgz` atau `.tar.gz`). Arkib yang dilindungi kata laluan atau disulitkan tidak disokong dalam pusingan penulisan semula pertama ini.
+Pemapar ini boleh membuka ZIP, 7z, RAR4, RAR5, TAR, CPIO, AR (termasuk pakej `.deb`), CAB, ISO 9660 dan LHA. Ia juga boleh membuka fail tunggal atau arkib TAR yang dimampatkan dengan GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA atau UNIX compress (`.Z`). Contohnya, buka berkas keluaran `.tar.zst` untuk menyemak imbas foldernya, atau buka log `.zst` untuk memuat turun fail yang telah dinyahmampatkan.
+
+Gunakan alat arkib desktop untuk mengekstrak fail yang disulitkan, arkib berbilang bahagian, arkib RAR4 dengan pemampatan solid atau entri yang melebihi 512 MiB dalam format baharu yang disokong. Arkib besar dengan pemampatan solid mungkin mengambil masa lebih lama untuk dibuka atau diekstrak kerana penyahkod mungkin perlu memproses entri terdahulu.
 
 ## Tingkah laku pratonton
 

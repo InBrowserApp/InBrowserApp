@@ -49,6 +49,7 @@ describe("archive formatting helpers", () => {
     expect(getFormatLabel("tar")).toBe("TAR")
     expect(getFormatLabel("gz")).toBe("GZ")
     expect(getFormatLabel("tgz")).toBe("TGZ")
+    expect(getFormatLabel("zstd", true)).toBe("TAR + Zstandard")
     expect(
       getKindLabel("symlink", {
         file: "File",

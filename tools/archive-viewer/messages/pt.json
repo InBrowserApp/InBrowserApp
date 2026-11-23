@@ -1,15 +1,14 @@
 {
   "uploadTitle": "Abrir arquivo compactado",
-  "uploadDescription": "Escolha um arquivo ZIP, TAR, GZ ou TGZ para inspecionar sem enviá-lo a lugar nenhum.",
   "uploadAction": "Escolher arquivo",
   "uploadHint": "Clique ou arraste um arquivo compactado aqui",
-  "supportedFormats": "Formatos suportados: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP, TAR, GZIP, 7z, RAR, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, .Z, CPIO, AR, CAB, ISO, LHA",
   "localOnlyNote": "Os arquivos ficam nesta sessão do navegador. O arquivo compactado não é enviado a um servidor.",
   "chooseAnother": "Escolher outro",
   "clearArchive": "Limpar",
   "parsingArchive": "Lendo entradas do arquivo...",
   "errorTitle": "Não foi possível abrir o arquivo compactado",
-  "unsupportedFormat": "Formato de arquivo compactado não suportado. Use um arquivo ZIP, TAR, GZ, TGZ ou TAR.GZ.",
+  "unsupportedFormat": "Formato de arquivo incompatível. Escolha um dos formatos listados acima.",
   "parseFailed": "Não foi possível analisar este arquivo compactado. Ele pode estar corrompido, criptografado ou usar um recurso não suportado.",
   "gzipUnsupported": "Este navegador não oferece suporte à descompactação GZIP.",
   "previewTooLarge": "A pré-visualização é limitada a 1 MB. Baixe a entrada para inspecionar o arquivo completo.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "Pré-visualização de imagem",
   "pdfPreviewLabel": "Pré-visualização de PDF",
   "openFolder": "Abrir pasta",
-  "previewFile": "Pré-visualizar arquivo"
+  "previewFile": "Pré-visualizar arquivo",
+  "entryTooLarge": "Esta entrada excede o limite de extração de 512 MiB do navegador. Use um aplicativo de desktop para extraí-la."
 }

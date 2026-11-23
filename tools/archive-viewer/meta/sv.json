@@ -1,4 +1,4 @@
 {
   "name": "Arkivvisare",
-  "description": "Öppna ZIP, TAR, GZ och TGZ-filer lokalt i webbläsaren, bläddra i deras mappträd, förhandsgranska läsbara poster och ladda ner enskilda filer."
+  "description": "Öppna filer i 7z, RAR, ZIP, TAR, GZIP, Zstandard och andra format i webbläsaren. Bläddra bland mappar, förhandsgranska innehållet och ladda ner enskilda filer."
 }

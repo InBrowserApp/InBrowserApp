@@ -1,15 +1,14 @@
 {
   "uploadTitle": "アーカイブを開く",
-  "uploadDescription": "ZIP、TAR、GZ、TGZ ファイルを選択して、どこにもアップロードせずに内容を確認します。",
   "uploadAction": "アーカイブを選択",
   "uploadHint": "クリックするか、アーカイブファイルをここにドラッグ",
-  "supportedFormats": "対応形式: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP、TAR、GZIP、7z、RAR、Zstandard、XZ、BZIP2、LZ4、LZIP、LZMA、.Z、CPIO、AR、CAB、ISO、LHA",
   "localOnlyNote": "ファイルはこのブラウザーセッション内に留まります。アーカイブはサーバーに送信されません。",
   "chooseAnother": "別のファイルを選択",
   "clearArchive": "クリア",
   "parsingArchive": "アーカイブ項目を読み込み中...",
   "errorTitle": "アーカイブを開けませんでした",
-  "unsupportedFormat": "対応していないアーカイブ形式です。ZIP、TAR、GZ、TGZ、または TAR.GZ ファイルを使用してください。",
+  "unsupportedFormat": "このファイル形式には対応していません。上に表示されている形式のアーカイブを選択してください。",
   "parseFailed": "このアーカイブを解析できません。破損、暗号化、または未対応の機能が使われている可能性があります。",
   "gzipUnsupported": "このブラウザーは GZIP 展開に対応していません。",
   "previewTooLarge": "プレビューは 1 MB までです。全文を確認するには項目をダウンロードしてください。",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "画像プレビュー",
   "pdfPreviewLabel": "PDF プレビュー",
   "openFolder": "フォルダーを開く",
-  "previewFile": "ファイルをプレビュー"
+  "previewFile": "ファイルをプレビュー",
+  "entryTooLarge": "このファイルはブラウザーで展開できる上限の 512 MiB を超えています。デスクトップのアーカイブツールで展開してください。"
 }

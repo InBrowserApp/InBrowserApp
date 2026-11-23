@@ -1,15 +1,14 @@
 {
   "uploadTitle": "Archief openen",
-  "uploadDescription": "Kies een ZIP-, TAR-, GZ- of TGZ-bestand om te inspecteren zonder het ergens te uploaden.",
   "uploadAction": "Archief kiezen",
   "uploadHint": "Klik of sleep hier een archiefbestand",
-  "supportedFormats": "Ondersteunde formaten: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP, TAR, GZIP, 7z, RAR, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, .Z, CPIO, AR, CAB, ISO, LHA",
   "localOnlyNote": "Bestanden blijven in deze browsersessie. Het archief wordt niet naar een server verzonden.",
   "chooseAnother": "Andere kiezen",
   "clearArchive": "Wissen",
   "parsingArchive": "Archiefitems lezen...",
   "errorTitle": "Archief kon niet worden geopend",
-  "unsupportedFormat": "Niet-ondersteund archiefformaat. Gebruik een ZIP-, TAR-, GZ-, TGZ- of TAR.GZ-bestand.",
+  "unsupportedFormat": "Dit bestandsformaat wordt niet ondersteund. Kies een bestand in een van de bovenstaande archiefformaten.",
   "parseFailed": "Kan dit archief niet verwerken. Het is mogelijk beschadigd of versleuteld, of gebruikt een niet-ondersteunde functie.",
   "gzipUnsupported": "Deze browser ondersteunt geen GZIP-decompressie.",
   "previewTooLarge": "Voorbeeld is beperkt tot 1 MB. Download het item om het volledige bestand te inspecteren.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "Afbeeldingsvoorbeeld",
   "pdfPreviewLabel": "PDF-voorbeeld",
   "openFolder": "Map openen",
-  "previewFile": "Bestand bekijken"
+  "previewFile": "Bestand bekijken",
+  "entryTooLarge": "Dit bestand is groter dan 512 MiB en kan daarom niet in de browser worden uitgepakt. Gebruik een archiefprogramma op je computer."
 }

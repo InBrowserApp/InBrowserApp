@@ -1,4 +1,4 @@
 {
   "name": "Przeglądarka archiwów",
-  "description": "Otwieraj pliki ZIP, TAR, GZ i TGZ lokalnie w przeglądarce, przeglądaj drzewo folderów, podglądaj czytelne wpisy i pobieraj pojedyncze pliki."
+  "description": "Otwieraj pliki w formatach 7z, RAR, ZIP, TAR, GZIP, Zstandard i innych w przeglądarce. Przeglądaj foldery, podglądaj zawartość i pobieraj pojedyncze pliki."
 }

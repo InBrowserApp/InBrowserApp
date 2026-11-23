@@ -1,7 +1,5 @@
-Przeglądarka archiwów pozwala sprawdzić skompresowany plik przed jego
-rozpakowaniem. To narzędzie otwiera pliki ZIP, TAR, GZ, TGZ i TAR.GZ
-bezpośrednio w przeglądarce, dzięki czemu możesz potwierdzić, co jest w środku,
-przeglądać foldery, podglądać czytelne pliki i pobrać tylko potrzebny wpis.
+Otwórz archiwum 7z, RAR, ZIP lub TAR, aby przejrzeć foldery przed rozpakowaniem.
+Wybierz plik, aby zobaczyć jego podgląd lub pobrać go osobno.
 
 ## Kiedy używać
 
@@ -18,10 +16,17 @@ strona działała płynnie; pobierz wpis, gdy musisz sprawdzić kompletny plik.
 
 ## Obsługiwane formaty archiwów
 
-Przeglądarka obsługuje standardowe archiwa ZIP, nieskompresowane pliki TAR,
-pojedyncze pliki skompresowane GZIP oraz archiwa TAR spakowane GZIP (`.tgz` lub
-`.tar.gz`). Archiwa chronione hasłem lub szyfrowane nie są obsługiwane w tym
-pierwszym etapie przepisywania.
+Przeglądarka otwiera archiwa ZIP, 7z, RAR4 i RAR5, TAR, CPIO, AR (w tym pakiety
+`.deb`), CAB, ISO 9660 i LHA. Obsługuje też pojedyncze pliki i archiwa TAR
+skompresowane za pomocą GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA lub UNIX
+compress (`.Z`). Otwórz na przykład pakiet wydania `.tar.zst`, aby przejrzeć
+foldery, lub dziennik w formacie `.zst`, aby pobrać rozpakowany plik.
+
+Użyj programu do obsługi archiwów na komputerze, aby otworzyć zaszyfrowane
+pliki, archiwa wieloczęściowe lub ciągłe archiwa RAR4, a także rozpakować wpisy
+większe niż 512 MiB w nowo obsługiwanych formatach. Otwieranie lub rozpakowywanie
+dużych archiwów ciągłych może potrwać dłużej, ponieważ dekoder czasem musi
+najpierw przetworzyć wcześniejsze wpisy.
 
 ## Działanie podglądu
 

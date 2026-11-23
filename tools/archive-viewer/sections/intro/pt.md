@@ -1,4 +1,4 @@
-Um visualizador de arquivos compactados permite inspecionar um arquivo compactado antes de extraí-lo. Esta ferramenta abre arquivos ZIP, TAR, GZ, TGZ e TAR.GZ diretamente no navegador para que você possa confirmar o que há dentro, navegar por pastas, pré-visualizar arquivos legíveis e baixar apenas a entrada de que precisa.
+Abra um arquivo 7z, RAR, ZIP ou TAR para navegar pelas pastas antes de extrair o conteúdo. Selecione um arquivo para pré-visualizá-lo ou baixá-lo separadamente.
 
 ## Quando usar
 
@@ -10,7 +10,9 @@ O conteúdo do arquivo compactado é lido localmente na sessão do navegador. O 
 
 ## Formatos de arquivo suportados
 
-O visualizador oferece suporte a arquivos ZIP padrão, arquivos TAR não compactados, arquivos únicos compactados com GZIP e arquivos TAR encapsulados em GZIP (`.tgz` ou `.tar.gz`). Arquivos protegidos por senha ou criptografados não são suportados nesta primeira passagem da reescrita.
+O visualizador abre arquivos ZIP, 7z, RAR4 e RAR5, TAR, CPIO, AR (incluindo pacotes `.deb`), CAB, ISO 9660 e LHA. Ele também abre arquivos individuais e pacotes TAR compactados com GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA ou UNIX compress (`.Z`). Por exemplo, abra um pacote de distribuição `.tar.zst` para navegar pelas pastas ou um log `.zst` para baixar o arquivo descompactado.
+
+Use um aplicativo de desktop para extrair arquivos criptografados, arquivos divididos em partes, arquivos RAR4 sólidos ou entradas com mais de 512 MiB nos formatos recém-adicionados. Arquivos sólidos grandes podem demorar mais para abrir ou extrair porque o visualizador pode precisar processar as entradas anteriores.
 
 ## Comportamento da pré-visualização
 

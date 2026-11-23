@@ -1,4 +1,4 @@
-Bir arşiv görüntüleyici, sıkıştırılmış bir dosyayı çıkarmadan önce incelemenizi sağlar. Bu araç ZIP, TAR, GZ, TGZ ve TAR.GZ dosyalarını doğrudan tarayıcıda açar; böylece içinde ne olduğunu doğrulayabilir, klasörlere göz atabilir, okunabilir dosyaları önizleyebilir ve yalnızca ihtiyacınız olan girdiyi indirebilirsiniz.
+İçeriği çıkarmadan klasörlere göz atmak için bir 7z, RAR, ZIP veya TAR arşivi açın. Önizlemek veya tek başına indirmek istediğiniz dosyayı seçin.
 
 ## Ne zaman kullanılır
 
@@ -10,7 +10,9 @@ Arşiv içerikleri tarayıcı oturumunuzda yerel olarak okunur. Dosya InBrowser.
 
 ## Desteklenen arşiv formatları
 
-Görüntüleyici standart ZIP arşivlerini, sıkıştırılmamış TAR dosyalarını, GZIP ile sıkıştırılmış tek dosyaları ve GZIP içinde paketlenmiş TAR arşivlerini (`.tgz` veya `.tar.gz`) destekler. Parola korumalı veya şifrelenmiş arşivler bu ilk yeniden yazım aşamasında desteklenmez.
+Görüntüleyici ZIP, 7z, RAR4 ve RAR5, TAR, CPIO, AR (`.deb` paketleri dahil), CAB, ISO 9660 ve LHA arşivlerini açar. Ayrıca GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA veya UNIX compress (`.Z`) ile sıkıştırılmış tek dosyaları ve TAR arşivlerini açar. Örneğin, bir `.tar.zst` sürüm paketini açıp klasörlerine göz atabilir veya bir `.zst` günlük dosyasını açıp sıkıştırması çözülmüş halini indirebilirsiniz.
+
+Şifreli dosyaları, çok parçalı arşivleri, katı RAR4 arşivlerini veya yeni desteklenen formatlarda 512 MiB'ı aşan girdileri çıkarmak için bir masaüstü arşiv programı kullanın. Büyük katı arşivleri açmak veya bu arşivlerden dosya çıkarmak daha uzun sürebilir, çünkü önceki girdilerin de işlenmesi gerekebilir.
 
 ## Önizleme davranışı
 

@@ -31,7 +31,6 @@ function ArchiveViewerClient({ messages }: ArchiveViewerClientProps) {
         archiveSize={viewer.archiveSize}
         inputRef={viewer.fileInputRef}
         isDragging={viewer.isDragging}
-        isParsing={viewer.isParsing}
         messages={messages}
         onClear={() => {
           void viewer.clearArchive()

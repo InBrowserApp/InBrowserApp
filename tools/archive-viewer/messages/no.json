@@ -1,15 +1,14 @@
 {
   "uploadTitle": "Åpne arkiv",
-  "uploadDescription": "Velg en ZIP-, TAR-, GZ- eller TGZ-fil for å inspisere den uten å laste den opp noe sted.",
   "uploadAction": "Velg arkiv",
   "uploadHint": "Klikk eller dra en arkivfil hit",
-  "supportedFormats": "Støttede formater: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP, TAR, GZIP, 7z, RAR, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, .Z, CPIO, AR, CAB, ISO, LHA",
   "localOnlyNote": "Filer blir værende i denne nettleserøkten. Arkivet sendes ikke til en server.",
   "chooseAnother": "Velg en annen",
   "clearArchive": "Tøm",
   "parsingArchive": "Leser arkivoppføringer...",
   "errorTitle": "Arkivet kunne ikke åpnes",
-  "unsupportedFormat": "Arkivformatet støttes ikke. Bruk en ZIP-, TAR-, GZ-, TGZ- eller TAR.GZ-fil.",
+  "unsupportedFormat": "Filformatet støttes ikke. Velg en fil i et av arkivformatene ovenfor.",
   "parseFailed": "Kan ikke lese dette arkivet. Det kan være skadet, kryptert eller bruke en funksjon som ikke støttes.",
   "gzipUnsupported": "Denne nettleseren støtter ikke GZIP-dekomprimering.",
   "previewTooLarge": "Forhåndsvisningen er begrenset til 1 MB. Last ned oppføringen for å inspisere hele filen.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "Bildeforhåndsvisning",
   "pdfPreviewLabel": "PDF-forhåndsvisning",
   "openFolder": "Åpne mappe",
-  "previewFile": "Forhåndsvis fil"
+  "previewFile": "Forhåndsvis fil",
+  "entryTooLarge": "Nettleseren kan pakke ut oppføringer på opptil 512 MiB. Bruk et arkivprogram på datamaskinen for å pakke ut denne filen."
 }

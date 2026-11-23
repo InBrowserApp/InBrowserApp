@@ -1,4 +1,4 @@
-Un visor de archivos comprimidos te permite inspeccionar un archivo comprimido antes de extraerlo. Esta herramienta abre archivos ZIP, TAR, GZ, TGZ y TAR.GZ directamente en el navegador para que puedas confirmar qué hay dentro, explorar carpetas, previsualizar archivos legibles y descargar solo la entrada que necesitas.
+Abre un archivo 7z, RAR, ZIP o TAR para explorar sus carpetas antes de extraerlo. Selecciona un archivo para ver su vista previa o descargarlo por separado.
 
 ## Cuándo usarlo
 
@@ -10,7 +10,9 @@ El contenido del archivo comprimido se lee localmente en tu sesión del navegado
 
 ## Formatos de archivo compatibles
 
-El visor admite archivos ZIP estándar, archivos TAR sin comprimir, archivos únicos comprimidos con GZIP y archivos TAR envueltos en GZIP (`.tgz` o `.tar.gz`). Los archivos protegidos con contraseña o cifrados no son compatibles en esta primera pasada de la reescritura.
+El visor abre archivos ZIP, 7z, RAR4 y RAR5, TAR, CPIO, AR (incluidos los paquetes `.deb`), CAB, ISO 9660 y LHA. También abre archivos individuales y paquetes TAR comprimidos con GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA o UNIX compress (`.Z`). Por ejemplo, puedes abrir un paquete de distribución `.tar.zst` para explorar sus carpetas o un registro `.zst` para descargar el archivo descomprimido.
+
+Usa una aplicación de escritorio para extraer archivos cifrados, archivos divididos en varias partes, archivos RAR4 sólidos o entradas de más de 512 MiB en los formatos nuevos. Los archivos sólidos grandes pueden tardar más en abrirse o extraerse porque el visor quizá tenga que procesar las entradas anteriores.
 
 ## Comportamiento de la vista previa
 

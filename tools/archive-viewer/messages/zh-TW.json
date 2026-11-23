@@ -1,15 +1,14 @@
 {
   "uploadTitle": "開啟壓縮檔",
-  "uploadDescription": "選擇 ZIP、TAR、GZ 或 TGZ 檔案，無需上傳到任何地方即可檢查內容。",
   "uploadAction": "選擇壓縮檔",
   "uploadHint": "按一下或將壓縮檔拖放到這裡",
-  "supportedFormats": "支援格式：ZIP、TAR、GZ、TGZ",
+  "supportedFormats": "ZIP、TAR、GZIP、7z、RAR、Zstandard、XZ、BZIP2、LZ4、LZIP、LZMA、.Z、CPIO、AR、CAB、ISO、LHA",
   "localOnlyNote": "檔案會留在此瀏覽器工作階段中。壓縮檔不會傳送到伺服器。",
   "chooseAnother": "選擇其他檔案",
   "clearArchive": "清除",
   "parsingArchive": "正在讀取壓縮檔項目...",
   "errorTitle": "無法開啟壓縮檔",
-  "unsupportedFormat": "不支援的壓縮檔格式。請使用 ZIP、TAR、GZ、TGZ 或 TAR.GZ 檔案。",
+  "unsupportedFormat": "不支援此檔案格式。請選擇上方列出的壓縮檔格式。",
   "parseFailed": "無法解析此壓縮檔。它可能已損毀、已加密，或使用不支援的功能。",
   "gzipUnsupported": "此瀏覽器不支援 GZIP 解壓縮。",
   "previewTooLarge": "預覽限制為 1 MB。請下載該項目以檢查完整檔案。",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "圖片預覽",
   "pdfPreviewLabel": "PDF 預覽",
   "openFolder": "開啟資料夾",
-  "previewFile": "預覽檔案"
+  "previewFile": "預覽檔案",
+  "entryTooLarge": "此項目超過瀏覽器的 512 MiB 解壓縮上限。請使用桌面解壓縮工具。"
 }

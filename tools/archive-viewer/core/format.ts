@@ -1,3 +1,5 @@
+import { archiveFormats } from "./formats"
+
 import type { ArchiveEntry, ArchiveEntryKind, ArchiveFormat } from "./types"
 
 type ArchiveSummary = Readonly<{
@@ -32,15 +34,9 @@ function formatDate(value: Date | null): string {
   return value.toLocaleString()
 }
 
-function getFormatLabel(format: ArchiveFormat): string {
-  const labels: Record<ArchiveFormat, string> = {
-    zip: "ZIP",
-    tar: "TAR",
-    gz: "GZ",
-    tgz: "TGZ",
-  }
-
-  return labels[format]
+function getFormatLabel(format: ArchiveFormat, tarWrapped?: boolean): string {
+  const label = archiveFormats[format].label
+  return tarWrapped ? `TAR + ${label}` : label
 }
 
 function getKindLabel(

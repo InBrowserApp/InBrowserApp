@@ -28,6 +28,18 @@ describe("archive error messages", () => {
         messages
       )
     ).toBe(messages.gzipUnsupported)
+    expect(
+      resolveArchiveError(
+        new ArchiveError("archive-read-failed", "Read failed"),
+        messages
+      )
+    ).toBe(messages.parseFailed)
+    expect(
+      resolveArchiveError(
+        new ArchiveError("entry-too-large", "Large file"),
+        messages
+      )
+    ).toBe(messages.entryTooLarge)
   })
 
   test("preserves unexpected messages and falls back for unknown errors", () => {

@@ -1,4 +1,4 @@
 {
   "name": "Archivbetrachter",
-  "description": "Öffne ZIP-, TAR-, GZ- und TGZ-Dateien lokal in deinem Browser, durchsuche ihren Ordnerbaum, zeige lesbare Einträge in der Vorschau an und lade einzelne Dateien herunter."
+  "description": "Öffne 7z, RAR, ZIP, TAR, GZIP, Zstandard und weitere Formate im Browser. Durchsuche Ordner, zeige Dateien in der Vorschau an und lade sie einzeln herunter."
 }

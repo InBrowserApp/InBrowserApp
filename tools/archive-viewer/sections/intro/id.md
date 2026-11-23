@@ -1,4 +1,4 @@
-Penampil arsip memungkinkan Anda memeriksa file terkompresi sebelum mengekstraknya. Alat ini membuka file ZIP, TAR, GZ, TGZ, dan TAR.GZ langsung di browser sehingga Anda dapat memastikan isi di dalamnya, menjelajahi folder, melihat pratinjau file yang dapat dibaca, dan mengunduh hanya entri yang Anda perlukan.
+Buka arsip 7z, RAR, ZIP, atau TAR untuk menjelajahi folder sebelum mengekstrak isinya. Pilih file untuk melihat pratinjaunya atau mengunduhnya secara terpisah.
 
 ## Kapan menggunakannya
 
@@ -10,7 +10,9 @@ Isi arsip dibaca secara lokal dalam sesi browser Anda. File tidak diunggah ke In
 
 ## Format arsip yang didukung
 
-Penampil ini mendukung arsip ZIP standar, file TAR tidak terkompresi, file tunggal yang dikompresi GZIP, dan arsip TAR yang dibungkus dalam GZIP (`.tgz` atau `.tar.gz`). Arsip yang dilindungi kata sandi atau terenkripsi tidak didukung pada tahap penulisan ulang pertama ini.
+Penampil ini membuka ZIP, 7z, RAR4 dan RAR5, TAR, CPIO, AR (termasuk paket `.deb`), CAB, ISO 9660, dan LHA. Penampil ini juga membuka file tunggal dan arsip TAR yang dikompresi dengan GZIP, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, atau UNIX compress (`.Z`). Misalnya, buka bundel rilis `.tar.zst` untuk menjelajahi foldernya atau buka log `.zst` untuk mengunduh file hasil dekompresi.
+
+Gunakan aplikasi arsip desktop untuk file terenkripsi, arsip yang terbagi menjadi beberapa bagian, arsip RAR4 dengan kompresi solid, atau entri berukuran lebih dari 512 MiB dalam format yang baru didukung. Arsip solid berukuran besar mungkin perlu waktu lebih lama untuk dibuka atau diekstrak karena dekoder mungkin perlu memproses entri sebelumnya terlebih dahulu.
 
 ## Perilaku pratinjau
 

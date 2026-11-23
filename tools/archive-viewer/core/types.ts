@@ -1,4 +1,4 @@
-type ArchiveFormat = "zip" | "tar" | "gz" | "tgz"
+import type { ArchiveFormat } from "./formats"
 
 type ArchiveEntryKind = "file" | "directory" | "symlink" | "other"
 
@@ -13,13 +13,16 @@ type ArchiveEntry = Readonly<{
 
 type ArchiveHandle = Readonly<{
   format: ArchiveFormat
+  tarWrapped?: boolean
   entries: readonly ArchiveEntry[]
   readEntry: (path: string) => Promise<Blob>
   dispose: () => Promise<void>
 }>
 
 type ArchiveErrorCode =
+  | "archive-read-failed"
   | "entry-not-found"
+  | "entry-too-large"
   | "file-only"
   | "gzip-unsupported"
   | "tar-truncated"
@@ -36,4 +39,10 @@ class ArchiveError extends Error {
 }
 
 export { ArchiveError }
-export type { ArchiveEntry, ArchiveEntryKind, ArchiveFormat, ArchiveHandle }
+export type {
+  ArchiveEntry,
+  ArchiveEntryKind,
+  ArchiveErrorCode,
+  ArchiveFormat,
+  ArchiveHandle,
+}

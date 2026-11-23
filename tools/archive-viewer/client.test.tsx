@@ -406,4 +406,31 @@ describe("ArchiveViewerClient", () => {
       expect(screen.getByText(messages.unsupportedFormat)).toBeTruthy()
     })
   })
+
+  test("can clear an archive while it is being read", async () => {
+    let signal: AbortSignal | undefined
+    openArchiveMock.mockImplementation(
+      (_file: File, nextSignal: AbortSignal) => {
+        signal = nextSignal
+        return new Promise<ArchiveHandle>((_resolve, reject) => {
+          nextSignal.addEventListener(
+            "abort",
+            () => reject(nextSignal.reason),
+            { once: true }
+          )
+        })
+      }
+    )
+
+    render(<ArchiveViewerClient messages={messages} />)
+    fireEvent.change(screen.getByLabelText(messages.uploadAction), {
+      target: { files: [new File([], "pending.7z")] },
+    })
+    await waitFor(() => expect(openArchiveMock).toHaveBeenCalledTimes(1))
+    expect(screen.getByText(messages.parsingArchive)).toBeTruthy()
+    fireEvent.click(screen.getByRole("button", { name: messages.clearArchive }))
+    expect(signal?.aborted).toBe(true)
+    expect(screen.getByText(messages.noArchiveTitle)).toBeTruthy()
+    expect(screen.queryByText(messages.errorTitle)).toBeNull()
+  })
 })

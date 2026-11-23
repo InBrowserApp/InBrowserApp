@@ -1,15 +1,14 @@
 {
   "uploadTitle": "Buka arkib",
-  "uploadDescription": "Pilih fail ZIP, TAR, GZ atau TGZ untuk diperiksa tanpa memuat naiknya ke mana-mana.",
   "uploadAction": "Pilih arkib",
   "uploadHint": "Klik atau seret fail arkib ke sini",
-  "supportedFormats": "Format disokong: ZIP, TAR, GZ, TGZ",
+  "supportedFormats": "ZIP, TAR, GZIP, 7z, RAR, Zstandard, XZ, BZIP2, LZ4, LZIP, LZMA, .Z, CPIO, AR, CAB, ISO, LHA",
   "localOnlyNote": "Fail kekal dalam sesi penyemak imbas ini. Arkib tidak dihantar ke pelayan.",
   "chooseAnother": "Pilih yang lain",
   "clearArchive": "Kosongkan",
   "parsingArchive": "Membaca entri arkib...",
   "errorTitle": "Arkib tidak dapat dibuka",
-  "unsupportedFormat": "Format arkib tidak disokong. Gunakan fail ZIP, TAR, GZ, TGZ atau TAR.GZ.",
+  "unsupportedFormat": "Format fail ini tidak disokong. Pilih salah satu format arkib yang disenaraikan di atas.",
   "parseFailed": "Tidak dapat menghuraikan arkib ini. Ia mungkin rosak, disulitkan atau menggunakan ciri yang tidak disokong.",
   "gzipUnsupported": "Penyemak imbas ini tidak menyokong penyahmampatan GZIP.",
   "previewTooLarge": "Pratonton dihadkan kepada 1 MB. Muat turun entri untuk memeriksa fail penuh.",
@@ -53,5 +52,6 @@
   "imagePreviewLabel": "Pratonton imej",
   "pdfPreviewLabel": "Pratonton PDF",
   "openFolder": "Buka folder",
-  "previewFile": "Pratonton fail"
+  "previewFile": "Pratonton fail",
+  "entryTooLarge": "Entri ini melebihi had pengekstrakan 512 MiB dalam penyemak imbas. Gunakan alat arkib desktop untuk mengekstraknya."
 }
