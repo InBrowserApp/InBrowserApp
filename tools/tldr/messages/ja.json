@@ -1,0 +1,21 @@
+{
+  "search": "コマンドを検索",
+  "placeholder": "例: git commit、tar、curl",
+  "results": "一致するコマンド",
+  "noResults": "一致するコマンドが見つかりませんでした。",
+  "loadingIndex": "コマンド一覧を読み込み中…",
+  "indexError": "コマンド一覧を読み込めませんでした。",
+  "loadingPage": "コマンドの使用例を読み込み中…",
+  "pageError": "コマンドの使用例を読み込めませんでした。",
+  "retry": "再試行",
+  "platform": "OS",
+  "common": "共通",
+  "automatic": "自動選択",
+  "pageLanguage": "使用例の言語",
+  "siteLanguage": "サイトの言語を使用",
+  "choosePlatform": "使用例を表示するには、選択肢から OS を選んでください。",
+  "copy": "コマンドをコピー",
+  "copied": "コピーしました",
+  "copyLink": "このバージョンへのリンクをコピー",
+  "source": "GitHub でソースを表示"
+}

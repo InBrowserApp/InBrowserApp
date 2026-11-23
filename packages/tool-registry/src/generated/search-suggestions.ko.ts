@@ -1383,6 +1383,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "timer",
   },
   {
+    category: "developer",
+    name: "tldr 명령어 조회",
+    slug: "tldr",
+  },
+  {
     category: "json",
     name: "TOML → JSON 변환기",
     slug: "toml-to-json-converter",

@@ -25394,6 +25394,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "tldr",
+    language: "ar",
+  },
+  {
+    slug: "tldr",
+    language: "de",
+  },
+  {
+    slug: "tldr",
+    language: "en",
+  },
+  {
+    slug: "tldr",
+    language: "es",
+  },
+  {
+    slug: "tldr",
+    language: "fr",
+  },
+  {
+    slug: "tldr",
+    language: "he",
+  },
+  {
+    slug: "tldr",
+    language: "hi",
+  },
+  {
+    slug: "tldr",
+    language: "id",
+  },
+  {
+    slug: "tldr",
+    language: "it",
+  },
+  {
+    slug: "tldr",
+    language: "ja",
+  },
+  {
+    slug: "tldr",
+    language: "ko",
+  },
+  {
+    slug: "tldr",
+    language: "ms",
+  },
+  {
+    slug: "tldr",
+    language: "nl",
+  },
+  {
+    slug: "tldr",
+    language: "no",
+  },
+  {
+    slug: "tldr",
+    language: "pl",
+  },
+  {
+    slug: "tldr",
+    language: "pt",
+  },
+  {
+    slug: "tldr",
+    language: "ru",
+  },
+  {
+    slug: "tldr",
+    language: "sv",
+  },
+  {
+    slug: "tldr",
+    language: "th",
+  },
+  {
+    slug: "tldr",
+    language: "tr",
+  },
+  {
+    slug: "tldr",
+    language: "vi",
+  },
+  {
+    slug: "tldr",
+    language: "zh-CN",
+  },
+  {
+    slug: "tldr",
+    language: "zh-TW",
+  },
+  {
     slug: "toml-to-json-converter",
     language: "ar",
   },

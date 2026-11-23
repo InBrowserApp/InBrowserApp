@@ -1,0 +1,21 @@
+{
+  "search": "Sök kommandon",
+  "placeholder": "Prova git commit, tar eller curl",
+  "results": "Matchande kommandon",
+  "noResults": "Inga matchande kommandon.",
+  "loadingIndex": "Laddar kommandoindex…",
+  "indexError": "Det gick inte att ladda kommandoindex.",
+  "loadingPage": "Laddar kommandoexempel…",
+  "pageError": "Det gick inte att ladda kommandoexemplen.",
+  "retry": "Försök igen",
+  "platform": "Operativsystem",
+  "common": "Gemensamt",
+  "automatic": "Automatiskt",
+  "pageLanguage": "Exemplens språk",
+  "siteLanguage": "Använd webbplatsens språk",
+  "choosePlatform": "Välj ett tillgängligt operativsystem för att visa exemplen.",
+  "copy": "Kopiera kommandot",
+  "copied": "Kopierat",
+  "copyLink": "Kopiera länken till den här versionen",
+  "source": "Visa källan på GitHub"
+}

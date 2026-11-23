@@ -1,0 +1,21 @@
+{
+  "search": "Søk etter kommandoer",
+  "placeholder": "Prøv git commit, tar eller curl",
+  "results": "Søketreff",
+  "noResults": "Ingen kommandoer samsvarer med søket.",
+  "loadingIndex": "Laster inn kommandoindeksen…",
+  "indexError": "Kommandoindeksen kunne ikke lastes inn.",
+  "loadingPage": "Laster inn kommandoeksemplene…",
+  "pageError": "Kommandoeksemplene kunne ikke lastes inn.",
+  "retry": "Prøv igjen",
+  "platform": "Operativsystem",
+  "common": "Generelt",
+  "automatic": "Automatisk",
+  "pageLanguage": "Språk for eksemplene",
+  "siteLanguage": "Bruk nettstedets språk",
+  "choosePlatform": "Velg et tilgjengelig operativsystem for å se eksemplene.",
+  "copy": "Kopier kommandoen",
+  "copied": "Kopiert",
+  "copyLink": "Kopier lenken til denne versjonen",
+  "source": "Vis kilden på GitHub"
+}

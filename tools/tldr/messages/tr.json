@@ -1,0 +1,21 @@
+{
+  "search": "Komut ara",
+  "placeholder": "git commit, tar veya curl komutunu deneyin",
+  "results": "Eşleşen komutlar",
+  "noResults": "Eşleşen komut bulunamadı.",
+  "loadingIndex": "Komut dizini yükleniyor…",
+  "indexError": "Komut dizini yüklenemedi.",
+  "loadingPage": "Komut örnekleri yükleniyor…",
+  "pageError": "Komut örnekleri yüklenemedi.",
+  "retry": "Yeniden dene",
+  "platform": "İşletim sistemi",
+  "common": "Ortak",
+  "automatic": "Otomatik",
+  "pageLanguage": "Örneklerin dili",
+  "siteLanguage": "Site dilini kullan",
+  "choosePlatform": "Örnekleri görmek için mevcut platformlardan birini seçin.",
+  "copy": "Komutu kopyala",
+  "copied": "Kopyalandı",
+  "copyLink": "Bu sürümün bağlantısını kopyala",
+  "source": "Kaynağı GitHub’da görüntüle"
+}

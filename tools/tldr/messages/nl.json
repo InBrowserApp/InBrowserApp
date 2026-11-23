@@ -1,0 +1,21 @@
+{
+  "search": "Opdrachten zoeken",
+  "placeholder": "Probeer git commit, tar of curl",
+  "results": "Gevonden opdrachten",
+  "noResults": "Geen overeenkomende opdrachten gevonden.",
+  "loadingIndex": "Opdrachtenindex laden…",
+  "indexError": "De opdrachtenindex kon niet worden geladen.",
+  "loadingPage": "Opdrachtvoorbeelden laden…",
+  "pageError": "De opdrachtvoorbeelden konden niet worden geladen.",
+  "retry": "Opnieuw proberen",
+  "platform": "Besturingssysteem",
+  "common": "Algemeen",
+  "automatic": "Automatisch",
+  "pageLanguage": "Taal van de voorbeelden",
+  "siteLanguage": "Taal van de site gebruiken",
+  "choosePlatform": "Kies een beschikbaar besturingssysteem om voorbeelden te bekijken.",
+  "copy": "Opdracht kopiëren",
+  "copied": "Gekopieerd",
+  "copyLink": "Link naar deze versie kopiëren",
+  "source": "Bron bekijken op GitHub"
+}

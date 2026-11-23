@@ -1,0 +1,21 @@
+{
+  "search": "Tìm lệnh",
+  "placeholder": "Thử git commit, tar hoặc curl",
+  "results": "Lệnh phù hợp",
+  "noResults": "Không tìm thấy lệnh phù hợp.",
+  "loadingIndex": "Đang tải chỉ mục lệnh…",
+  "indexError": "Không tải được chỉ mục lệnh.",
+  "loadingPage": "Đang tải ví dụ về lệnh…",
+  "pageError": "Không tải được ví dụ về lệnh.",
+  "retry": "Thử lại",
+  "platform": "Hệ điều hành",
+  "common": "Dùng chung",
+  "automatic": "Tự động",
+  "pageLanguage": "Ngôn ngữ ví dụ",
+  "siteLanguage": "Dùng ngôn ngữ của trang web",
+  "choosePlatform": "Chọn một nền tảng có sẵn để xem ví dụ.",
+  "copy": "Sao chép lệnh",
+  "copied": "Đã sao chép",
+  "copyLink": "Sao chép liên kết đến phiên bản này",
+  "source": "Xem nguồn trên GitHub"
+}

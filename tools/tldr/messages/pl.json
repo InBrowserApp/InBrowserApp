@@ -1,0 +1,21 @@
+{
+  "search": "Szukaj poleceń",
+  "placeholder": "Wypróbuj git commit, tar lub curl",
+  "results": "Pasujące polecenia",
+  "noResults": "Nie znaleziono pasujących poleceń.",
+  "loadingIndex": "Wczytywanie indeksu poleceń…",
+  "indexError": "Nie udało się wczytać indeksu poleceń.",
+  "loadingPage": "Wczytywanie przykładów poleceń…",
+  "pageError": "Nie udało się wczytać przykładów poleceń.",
+  "retry": "Spróbuj ponownie",
+  "platform": "System operacyjny",
+  "common": "Wspólne",
+  "automatic": "Automatycznie",
+  "pageLanguage": "Język przykładów",
+  "siteLanguage": "Użyj języka witryny",
+  "choosePlatform": "Wybierz dostępny system operacyjny, aby zobaczyć przykłady.",
+  "copy": "Kopiuj polecenie",
+  "copied": "Skopiowano",
+  "copyLink": "Kopiuj link do tej wersji",
+  "source": "Zobacz źródło na GitHubie"
+}
