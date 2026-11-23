@@ -1,0 +1,13 @@
+{
+  "macLabel": "כתובת MAC",
+  "prefixLabel": "קידומת IPv6 באורך ⁦/64⁩",
+  "invalidMac": "הזינו כתובת MAC באורך 48 סיביות, למשל ⁦00:11:22:33:44:55⁩.",
+  "invalidPrefix": "הזינו קידומת רשת באורך ⁦/64⁩ שבה כל סיביות המארח הן אפס, למשל ⁦2001:db8:1:2::/64⁩.",
+  "resultLabel": "כתובת IPv6",
+  "exampleLabel": "נסו דוגמה",
+  "linkLocalPrefixLabel": "השתמשו בקידומת מקומית לקישור",
+  "ulaPrefixLabel": "השתמשו בדוגמת ULA",
+  "copyLabel": "העתקה",
+  "copiedLabel": "הועתק",
+  "copyFailedLabel": "ההעתקה נכשלה"
+}

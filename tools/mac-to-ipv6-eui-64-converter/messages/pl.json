@@ -1,0 +1,13 @@
+{
+  "macLabel": "Adres MAC",
+  "prefixLabel": "Prefiks IPv6 /64",
+  "invalidMac": "Wpisz 48-bitowy adres MAC, np. 00:11:22:33:44:55.",
+  "invalidPrefix": "Wpisz prefiks sieci /64 z wyzerowanymi bitami hosta, np. 2001:db8:1:2::/64.",
+  "resultLabel": "Adres IPv6",
+  "exampleLabel": "Wypróbuj przykład",
+  "linkLocalPrefixLabel": "Wstaw prefiks link-local",
+  "ulaPrefixLabel": "Wstaw przykład ULA",
+  "copyLabel": "Kopiuj",
+  "copiedLabel": "Skopiowano",
+  "copyFailedLabel": "Nie udało się skopiować"
+}

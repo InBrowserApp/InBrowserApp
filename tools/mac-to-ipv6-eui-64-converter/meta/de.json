@@ -1,0 +1,4 @@
+{
+  "name": "MAC-zu-IPv6-Konverter (EUI-64)",
+  "description": "Aus einer MAC-Adresse und einem beliebigen IPv6-/64-Präfix per Modified EUI-64 eine IPv6-Adresse erzeugen. Unterstützt globale Unicast-Präfixe, Unique-Local-Präfixe, Link-Local-Präfixe und Dokumentationspräfixe."
+}

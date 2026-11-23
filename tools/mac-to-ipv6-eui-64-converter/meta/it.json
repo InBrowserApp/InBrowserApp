@@ -1,0 +1,4 @@
+{
+  "name": "Convertitore da MAC a IPv6 (EUI-64)",
+  "description": "Combina un indirizzo MAC con qualsiasi prefisso IPv6 /64 usando EUI-64 modificato. Supporta i prefissi unicast globali, locali univoci (ULA), link-local e riservati alla documentazione."
+}

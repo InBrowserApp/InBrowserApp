@@ -813,6 +813,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mac-address-vendor-lookup",
   },
   {
+    category: "network",
+    name: "MAC 位址轉 IPv6（EUI-64）",
+    slug: "mac-to-ipv6-eui-64-converter",
+  },
+  {
     category: "text",
     name: "Markdown 預覽器",
     slug: "markdown-previewer",

@@ -1,0 +1,13 @@
+{
+  "macLabel": "MAC 位址",
+  "prefixLabel": "IPv6 /64 前綴",
+  "invalidMac": "請輸入 48 位元的 MAC 位址，例如 00:11:22:33:44:55。",
+  "invalidPrefix": "請輸入主機位元皆為 0 的 /64 網路前綴，例如 2001:db8:1:2::/64。",
+  "resultLabel": "IPv6 位址",
+  "exampleLabel": "試用範例",
+  "linkLocalPrefixLabel": "使用鏈路本地前綴",
+  "ulaPrefixLabel": "使用 ULA 範例",
+  "copyLabel": "複製",
+  "copiedLabel": "已複製",
+  "copyFailedLabel": "複製失敗"
+}

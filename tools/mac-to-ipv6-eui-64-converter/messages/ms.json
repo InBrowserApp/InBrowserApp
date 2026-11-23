@@ -1,0 +1,13 @@
+{
+  "macLabel": "Alamat MAC",
+  "prefixLabel": "Awalan IPv6 /64",
+  "invalidMac": "Masukkan alamat MAC 48 bit, seperti 00:11:22:33:44:55.",
+  "invalidPrefix": "Masukkan awalan rangkaian /64 dengan semua bit hos bernilai sifar, seperti 2001:db8:1:2::/64.",
+  "resultLabel": "Alamat IPv6",
+  "exampleLabel": "Cuba contoh",
+  "linkLocalPrefixLabel": "Guna awalan link-local",
+  "ulaPrefixLabel": "Guna contoh ULA",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin",
+  "copyFailedLabel": "Gagal menyalin"
+}

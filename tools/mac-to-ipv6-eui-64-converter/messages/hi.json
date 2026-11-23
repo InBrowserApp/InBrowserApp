@@ -1,0 +1,13 @@
+{
+  "macLabel": "MAC पता",
+  "prefixLabel": "IPv6 /64 प्रीफ़िक्स",
+  "invalidMac": "48-बिट MAC पता दर्ज करें, जैसे 00:11:22:33:44:55।",
+  "invalidPrefix": "/64 नेटवर्क प्रीफ़िक्स दर्ज करें जिसके होस्ट बिट शून्य हों, जैसे 2001:db8:1:2::/64।",
+  "resultLabel": "IPv6 पता",
+  "exampleLabel": "उदाहरण आज़माएँ",
+  "linkLocalPrefixLabel": "लिंक-लोकल प्रीफ़िक्स लगाएँ",
+  "ulaPrefixLabel": "ULA उदाहरण लगाएँ",
+  "copyLabel": "कॉपी करें",
+  "copiedLabel": "कॉपी हो गया",
+  "copyFailedLabel": "कॉपी नहीं हो सका"
+}

@@ -1,0 +1,13 @@
+{
+  "macLabel": "ที่อยู่ MAC",
+  "prefixLabel": "พรีฟิกซ์ IPv6 /64",
+  "invalidMac": "ป้อนที่อยู่ MAC ขนาด 48 บิต เช่น 00:11:22:33:44:55",
+  "invalidPrefix": "ป้อนพรีฟิกซ์เครือข่าย /64 ที่บิตส่วนโฮสต์เป็นศูนย์ทั้งหมด เช่น 2001:db8:1:2::/64",
+  "resultLabel": "ที่อยู่ IPv6",
+  "exampleLabel": "ลองใช้ตัวอย่าง",
+  "linkLocalPrefixLabel": "ใช้พรีฟิกซ์ Link-Local",
+  "ulaPrefixLabel": "ใช้ตัวอย่าง ULA",
+  "copyLabel": "คัดลอก",
+  "copiedLabel": "คัดลอกแล้ว",
+  "copyFailedLabel": "คัดลอกไม่สำเร็จ"
+}

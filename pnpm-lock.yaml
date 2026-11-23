@@ -1567,6 +1567,9 @@ importers:
       '@tool/mac-address-vendor-lookup':
         specifier: workspace:*
         version: link:../../tools/mac-address-vendor-lookup
+      '@tool/mac-to-ipv6-eui-64-converter':
+        specifier: workspace:*
+        version: link:../../tools/mac-to-ipv6-eui-64-converter
       '@tool/markdown-previewer':
         specifier: workspace:*
         version: link:../../tools/markdown-previewer
@@ -6638,6 +6641,9 @@ importers:
 
   tools/mac-address-to-ipv6-link-local-address-converter:
     dependencies:
+      '@workspace/mac-address':
+        specifier: workspace:*
+        version: link:../../packages/lib/mac-address
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk
@@ -6662,6 +6668,34 @@ importers:
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
 
   tools/mac-address-vendor-lookup:
+    dependencies:
+      '@workspace/mac-address':
+        specifier: workspace:*
+        version: link:../../packages/lib/mac-address
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/mac-to-ipv6-eui-64-converter:
     dependencies:
       '@workspace/mac-address':
         specifier: workspace:*

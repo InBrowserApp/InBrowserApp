@@ -1,0 +1,4 @@
+{
+  "name": "MAC to IPv6 (EUI-64) Converter",
+  "description": "Combine a MAC address with any IPv6 /64 prefix using Modified EUI-64. Supports global unicast, unique local, link-local, and documentation prefixes."
+}

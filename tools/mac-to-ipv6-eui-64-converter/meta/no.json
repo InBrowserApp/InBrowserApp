@@ -1,0 +1,4 @@
+{
+  "name": "Konverter MAC-adresse til IPv6 (EUI-64)",
+  "description": "Kombiner en MAC-adresse med et valgfritt IPv6-prefiks på /64 ved hjelp av modifisert EUI-64. Støtter prefikser for global unicast, unike lokale adresser (ULA), link-local-adresser og dokumentasjon."
+}

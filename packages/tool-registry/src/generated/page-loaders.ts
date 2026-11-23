@@ -200,6 +200,8 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
     import("@tool/mac-address-to-ipv6-link-local-address-converter/page"),
   "mac-address-vendor-lookup": () =>
     import("@tool/mac-address-vendor-lookup/page"),
+  "mac-to-ipv6-eui-64-converter": () =>
+    import("@tool/mac-to-ipv6-eui-64-converter/page"),
   "markdown-previewer": () => import("@tool/markdown-previewer/page"),
   "markdown-to-html-converter": () =>
     import("@tool/markdown-to-html-converter/page"),

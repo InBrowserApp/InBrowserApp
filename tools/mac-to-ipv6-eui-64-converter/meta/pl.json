@@ -1,0 +1,4 @@
+{
+  "name": "Konwerter adresu MAC na IPv6 (EUI-64)",
+  "description": "Połącz adres MAC z dowolnym prefiksem IPv6 /64 za pomocą zmodyfikowanego EUI-64. Konwerter obsługuje prefiksy globalne unicast, unikalne lokalne (ULA), link-local i dokumentacyjne."
+}

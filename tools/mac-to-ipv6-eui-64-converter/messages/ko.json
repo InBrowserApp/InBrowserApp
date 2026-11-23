@@ -1,0 +1,13 @@
+{
+  "macLabel": "MAC 주소",
+  "prefixLabel": "IPv6 /64 프리픽스",
+  "invalidMac": "00:11:22:33:44:55와 같은 48비트 MAC 주소를 입력하세요.",
+  "invalidPrefix": "2001:db8:1:2::/64처럼 호스트 비트가 모두 0인 /64 네트워크 프리픽스를 입력하세요.",
+  "resultLabel": "IPv6 주소",
+  "exampleLabel": "예제 사용",
+  "linkLocalPrefixLabel": "링크 로컬 프리픽스 사용",
+  "ulaPrefixLabel": "ULA 예제 사용",
+  "copyLabel": "복사",
+  "copiedLabel": "복사됨",
+  "copyFailedLabel": "복사 실패"
+}

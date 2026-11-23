@@ -1,0 +1,13 @@
+{
+  "macLabel": "MAC-adress",
+  "prefixLabel": "IPv6-prefix (/64)",
+  "invalidMac": "Ange en 48-bitars MAC-adress, till exempel 00:11:22:33:44:55.",
+  "invalidPrefix": "Ange ett /64-nätverksprefix där alla värdbitar är noll, till exempel 2001:db8:1:2::/64.",
+  "resultLabel": "IPv6-adress",
+  "exampleLabel": "Testa exemplet",
+  "linkLocalPrefixLabel": "Använd link-local-prefix",
+  "ulaPrefixLabel": "Använd ULA-exempel",
+  "copyLabel": "Kopiera",
+  "copiedLabel": "Kopierat",
+  "copyFailedLabel": "Det gick inte att kopiera"
+}

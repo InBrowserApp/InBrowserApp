@@ -20455,6 +20455,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "mac-to-ipv6-eui-64-converter",
+    category: "network",
+    icon: "network",
+    tags: ["mac", "ipv6", "eui-64", "prefix", "subnet", "ula", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل عناوين MAC إلى IPv6 ⁦(EUI-64)⁩",
+        description:
+          "ادمج عنوان MAC مع أي بادئة IPv6 بطول ⁦/64⁩ باستخدام EUI-64 المعدّل. يدعم المحوّل بادئات البث الأحادي العالمية، والبادئات المحلية الفريدة، والبادئات المحلية للرابط، وبادئات التوثيق.",
+      },
+      de: {
+        name: "MAC-zu-IPv6-Konverter (EUI-64)",
+        description:
+          "Aus einer MAC-Adresse und einem beliebigen IPv6-/64-Präfix per Modified EUI-64 eine IPv6-Adresse erzeugen. Unterstützt globale Unicast-Präfixe, Unique-Local-Präfixe, Link-Local-Präfixe und Dokumentationspräfixe.",
+      },
+      en: {
+        name: "MAC to IPv6 (EUI-64) Converter",
+        description:
+          "Combine a MAC address with any IPv6 /64 prefix using Modified EUI-64. Supports global unicast, unique local, link-local, and documentation prefixes.",
+      },
+      es: {
+        name: "Convertidor de MAC a IPv6 (EUI-64)",
+        description:
+          "Combina una dirección MAC con cualquier prefijo IPv6 /64 mediante EUI-64 modificado. Admite prefijos de unidifusión global, de dirección local única (ULA), de enlace local y de documentación.",
+      },
+      fr: {
+        name: "Convertisseur d’adresse MAC en adresse IPv6 (EUI-64)",
+        description:
+          "Associez une adresse MAC à n’importe quel préfixe IPv6 /64 avec EUI-64 modifié. Les préfixes de monodiffusion globale, locaux uniques, de lien local et réservés à la documentation sont pris en charge.",
+      },
+      he: {
+        name: "ממיר כתובת MAC לכתובת IPv6 (EUI-64)",
+        description:
+          "שלבו כתובת MAC עם כל קידומת IPv6 באורך ⁦/64⁩ באמצעות ⁦Modified EUI-64⁩. הכלי תומך בקידומות לכתובות גלובליות ליעד יחיד, לכתובות מקומיות ייחודיות ולכתובות מקומיות לקישור, וכן בקידומות לתיעוד.",
+      },
+      hi: {
+        name: "MAC से IPv6 (EUI-64) कनवर्टर",
+        description:
+          "संशोधित EUI-64 से MAC पते को किसी भी IPv6 /64 प्रीफ़िक्स के साथ मिलाएँ। ग्लोबल यूनिकास्ट, अद्वितीय स्थानीय, लिंक-लोकल और दस्तावेज़ीकरण के प्रीफ़िक्स समर्थित हैं।",
+      },
+      id: {
+        name: "Konverter MAC ke IPv6 (EUI-64)",
+        description:
+          "Gabungkan alamat MAC dengan prefiks IPv6 /64 apa pun menggunakan Modified EUI-64. Mendukung prefiks unicast global, lokal unik (ULA), link-local, dan dokumentasi.",
+      },
+      it: {
+        name: "Convertitore da MAC a IPv6 (EUI-64)",
+        description:
+          "Combina un indirizzo MAC con qualsiasi prefisso IPv6 /64 usando EUI-64 modificato. Supporta i prefissi unicast globali, locali univoci (ULA), link-local e riservati alla documentazione.",
+      },
+      ja: {
+        name: "MAC アドレスから IPv6 への変換ツール（EUI-64）",
+        description:
+          "MAC アドレスと任意の IPv6 /64 プレフィックスを組み合わせ、修正 EUI-64 方式でアドレスを生成します。グローバルユニキャスト、ユニークローカル、リンクローカル、文書用のプレフィックスに対応します。",
+      },
+      ko: {
+        name: "MAC 주소를 IPv6 주소로 변환 (EUI-64)",
+        description:
+          "수정된 EUI-64 방식으로 MAC 주소와 원하는 IPv6 /64 프리픽스를 결합합니다. 전역 유니캐스트, 고유 로컬(ULA), 링크 로컬, 문서용 프리픽스를 지원합니다.",
+      },
+      ms: {
+        name: "Penukar MAC kepada IPv6 (EUI-64)",
+        description:
+          "Gabungkan alamat MAC dengan sebarang awalan IPv6 /64 menggunakan Modified EUI-64. Menyokong awalan unicast global, setempat unik, link-local dan dokumentasi.",
+      },
+      nl: {
+        name: "MAC-naar-IPv6-converter (EUI-64)",
+        description:
+          "Combineer een MAC-adres met elk IPv6-prefix van /64 via Modified EUI-64. Dit werkt met globale unicastprefixen, unieke lokale prefixen (ULA), link-local-prefixen en documentatieprefixen.",
+      },
+      no: {
+        name: "Konverter MAC-adresse til IPv6 (EUI-64)",
+        description:
+          "Kombiner en MAC-adresse med et valgfritt IPv6-prefiks på /64 ved hjelp av modifisert EUI-64. Støtter prefikser for global unicast, unike lokale adresser (ULA), link-local-adresser og dokumentasjon.",
+      },
+      pl: {
+        name: "Konwerter adresu MAC na IPv6 (EUI-64)",
+        description:
+          "Połącz adres MAC z dowolnym prefiksem IPv6 /64 za pomocą zmodyfikowanego EUI-64. Konwerter obsługuje prefiksy globalne unicast, unikalne lokalne (ULA), link-local i dokumentacyjne.",
+      },
+      pt: {
+        name: "Conversor de MAC para IPv6 (EUI-64)",
+        description:
+          "Combine um endereço MAC com qualquer prefixo IPv6 /64 usando EUI-64 modificado. Aceita prefixos unicast globais, locais únicos (ULA), link-local e de documentação.",
+      },
+      ru: {
+        name: "Конвертер MAC-адреса в IPv6 (EUI-64)",
+        description:
+          "Укажите MAC-адрес и любой префикс IPv6 /64, чтобы получить адрес по модифицированной схеме EUI-64. Поддерживаются глобальные одноадресные, уникальные локальные, локальные для канала и выделенные для документации префиксы.",
+      },
+      sv: {
+        name: "Konvertera MAC-adress till IPv6 (EUI-64)",
+        description:
+          "Använd modifierad EUI-64 för att kombinera en MAC-adress med ett valfritt IPv6-prefix på /64. Stöder globala unicast-prefix, unika lokala prefix (ULA), link-local-prefix och dokumentationsprefix.",
+      },
+      th: {
+        name: "เครื่องมือแปลงที่อยู่ MAC เป็น IPv6 (EUI-64)",
+        description:
+          "รวมที่อยู่ MAC กับพรีฟิกซ์ IPv6 /64 ใดก็ได้ด้วย Modified EUI-64 รองรับพรีฟิกซ์ Global Unicast, Unique Local, Link-Local และพรีฟิกซ์สำหรับใช้ในเอกสาร",
+      },
+      tr: {
+        name: "MAC'ten IPv6'ya (EUI-64) Dönüştürme",
+        description:
+          "Değiştirilmiş EUI-64 ile bir MAC adresini herhangi bir IPv6 /64 önekiyle birleştirin. Küresel tekil yayın, benzersiz yerel (ULA), link-local ve dokümantasyon önekleri desteklenir.",
+      },
+      vi: {
+        name: "Trình chuyển đổi MAC sang IPv6 (EUI-64)",
+        description:
+          "Kết hợp địa chỉ MAC với bất kỳ tiền tố IPv6 /64 nào bằng EUI-64 sửa đổi. Hỗ trợ tiền tố unicast toàn cầu, cục bộ duy nhất (ULA), link-local và tiền tố dành cho tài liệu.",
+      },
+      "zh-CN": {
+        name: "MAC 地址转 IPv6（EUI-64）",
+        description:
+          "使用修订版 EUI-64，将 MAC 地址与任意 IPv6 /64 前缀组合成 IPv6 地址。支持全球单播、唯一本地、链路本地和文档专用前缀。",
+      },
+      "zh-TW": {
+        name: "MAC 位址轉 IPv6（EUI-64）",
+        description:
+          "透過修正版 EUI-64 將 MAC 位址與任意 IPv6 /64 前綴結合。支援全球單播、唯一本地、鏈路本地及文件專用前綴。",
+      },
+    },
+  },
+  {
     slug: "markdown-previewer",
     category: "text",
     icon: "file-text",
@@ -59700,6 +59823,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
       "zh-TW": {
         name: "MAC 位址廠商查詢",
         description: "查詢組織的 IEEE 登記紀錄，並探索其 MAC 位址區塊。",
+      },
+    },
+  },
+  "mac-to-ipv6-eui-64-converter": {
+    slug: "mac-to-ipv6-eui-64-converter",
+    category: "network",
+    icon: "network",
+    tags: ["mac", "ipv6", "eui-64", "prefix", "subnet", "ula", "converter"],
+    locales: {
+      ar: {
+        name: "محوّل عناوين MAC إلى IPv6 ⁦(EUI-64)⁩",
+        description:
+          "ادمج عنوان MAC مع أي بادئة IPv6 بطول ⁦/64⁩ باستخدام EUI-64 المعدّل. يدعم المحوّل بادئات البث الأحادي العالمية، والبادئات المحلية الفريدة، والبادئات المحلية للرابط، وبادئات التوثيق.",
+      },
+      de: {
+        name: "MAC-zu-IPv6-Konverter (EUI-64)",
+        description:
+          "Aus einer MAC-Adresse und einem beliebigen IPv6-/64-Präfix per Modified EUI-64 eine IPv6-Adresse erzeugen. Unterstützt globale Unicast-Präfixe, Unique-Local-Präfixe, Link-Local-Präfixe und Dokumentationspräfixe.",
+      },
+      en: {
+        name: "MAC to IPv6 (EUI-64) Converter",
+        description:
+          "Combine a MAC address with any IPv6 /64 prefix using Modified EUI-64. Supports global unicast, unique local, link-local, and documentation prefixes.",
+      },
+      es: {
+        name: "Convertidor de MAC a IPv6 (EUI-64)",
+        description:
+          "Combina una dirección MAC con cualquier prefijo IPv6 /64 mediante EUI-64 modificado. Admite prefijos de unidifusión global, de dirección local única (ULA), de enlace local y de documentación.",
+      },
+      fr: {
+        name: "Convertisseur d’adresse MAC en adresse IPv6 (EUI-64)",
+        description:
+          "Associez une adresse MAC à n’importe quel préfixe IPv6 /64 avec EUI-64 modifié. Les préfixes de monodiffusion globale, locaux uniques, de lien local et réservés à la documentation sont pris en charge.",
+      },
+      he: {
+        name: "ממיר כתובת MAC לכתובת IPv6 (EUI-64)",
+        description:
+          "שלבו כתובת MAC עם כל קידומת IPv6 באורך ⁦/64⁩ באמצעות ⁦Modified EUI-64⁩. הכלי תומך בקידומות לכתובות גלובליות ליעד יחיד, לכתובות מקומיות ייחודיות ולכתובות מקומיות לקישור, וכן בקידומות לתיעוד.",
+      },
+      hi: {
+        name: "MAC से IPv6 (EUI-64) कनवर्टर",
+        description:
+          "संशोधित EUI-64 से MAC पते को किसी भी IPv6 /64 प्रीफ़िक्स के साथ मिलाएँ। ग्लोबल यूनिकास्ट, अद्वितीय स्थानीय, लिंक-लोकल और दस्तावेज़ीकरण के प्रीफ़िक्स समर्थित हैं।",
+      },
+      id: {
+        name: "Konverter MAC ke IPv6 (EUI-64)",
+        description:
+          "Gabungkan alamat MAC dengan prefiks IPv6 /64 apa pun menggunakan Modified EUI-64. Mendukung prefiks unicast global, lokal unik (ULA), link-local, dan dokumentasi.",
+      },
+      it: {
+        name: "Convertitore da MAC a IPv6 (EUI-64)",
+        description:
+          "Combina un indirizzo MAC con qualsiasi prefisso IPv6 /64 usando EUI-64 modificato. Supporta i prefissi unicast globali, locali univoci (ULA), link-local e riservati alla documentazione.",
+      },
+      ja: {
+        name: "MAC アドレスから IPv6 への変換ツール（EUI-64）",
+        description:
+          "MAC アドレスと任意の IPv6 /64 プレフィックスを組み合わせ、修正 EUI-64 方式でアドレスを生成します。グローバルユニキャスト、ユニークローカル、リンクローカル、文書用のプレフィックスに対応します。",
+      },
+      ko: {
+        name: "MAC 주소를 IPv6 주소로 변환 (EUI-64)",
+        description:
+          "수정된 EUI-64 방식으로 MAC 주소와 원하는 IPv6 /64 프리픽스를 결합합니다. 전역 유니캐스트, 고유 로컬(ULA), 링크 로컬, 문서용 프리픽스를 지원합니다.",
+      },
+      ms: {
+        name: "Penukar MAC kepada IPv6 (EUI-64)",
+        description:
+          "Gabungkan alamat MAC dengan sebarang awalan IPv6 /64 menggunakan Modified EUI-64. Menyokong awalan unicast global, setempat unik, link-local dan dokumentasi.",
+      },
+      nl: {
+        name: "MAC-naar-IPv6-converter (EUI-64)",
+        description:
+          "Combineer een MAC-adres met elk IPv6-prefix van /64 via Modified EUI-64. Dit werkt met globale unicastprefixen, unieke lokale prefixen (ULA), link-local-prefixen en documentatieprefixen.",
+      },
+      no: {
+        name: "Konverter MAC-adresse til IPv6 (EUI-64)",
+        description:
+          "Kombiner en MAC-adresse med et valgfritt IPv6-prefiks på /64 ved hjelp av modifisert EUI-64. Støtter prefikser for global unicast, unike lokale adresser (ULA), link-local-adresser og dokumentasjon.",
+      },
+      pl: {
+        name: "Konwerter adresu MAC na IPv6 (EUI-64)",
+        description:
+          "Połącz adres MAC z dowolnym prefiksem IPv6 /64 za pomocą zmodyfikowanego EUI-64. Konwerter obsługuje prefiksy globalne unicast, unikalne lokalne (ULA), link-local i dokumentacyjne.",
+      },
+      pt: {
+        name: "Conversor de MAC para IPv6 (EUI-64)",
+        description:
+          "Combine um endereço MAC com qualquer prefixo IPv6 /64 usando EUI-64 modificado. Aceita prefixos unicast globais, locais únicos (ULA), link-local e de documentação.",
+      },
+      ru: {
+        name: "Конвертер MAC-адреса в IPv6 (EUI-64)",
+        description:
+          "Укажите MAC-адрес и любой префикс IPv6 /64, чтобы получить адрес по модифицированной схеме EUI-64. Поддерживаются глобальные одноадресные, уникальные локальные, локальные для канала и выделенные для документации префиксы.",
+      },
+      sv: {
+        name: "Konvertera MAC-adress till IPv6 (EUI-64)",
+        description:
+          "Använd modifierad EUI-64 för att kombinera en MAC-adress med ett valfritt IPv6-prefix på /64. Stöder globala unicast-prefix, unika lokala prefix (ULA), link-local-prefix och dokumentationsprefix.",
+      },
+      th: {
+        name: "เครื่องมือแปลงที่อยู่ MAC เป็น IPv6 (EUI-64)",
+        description:
+          "รวมที่อยู่ MAC กับพรีฟิกซ์ IPv6 /64 ใดก็ได้ด้วย Modified EUI-64 รองรับพรีฟิกซ์ Global Unicast, Unique Local, Link-Local และพรีฟิกซ์สำหรับใช้ในเอกสาร",
+      },
+      tr: {
+        name: "MAC'ten IPv6'ya (EUI-64) Dönüştürme",
+        description:
+          "Değiştirilmiş EUI-64 ile bir MAC adresini herhangi bir IPv6 /64 önekiyle birleştirin. Küresel tekil yayın, benzersiz yerel (ULA), link-local ve dokümantasyon önekleri desteklenir.",
+      },
+      vi: {
+        name: "Trình chuyển đổi MAC sang IPv6 (EUI-64)",
+        description:
+          "Kết hợp địa chỉ MAC với bất kỳ tiền tố IPv6 /64 nào bằng EUI-64 sửa đổi. Hỗ trợ tiền tố unicast toàn cầu, cục bộ duy nhất (ULA), link-local và tiền tố dành cho tài liệu.",
+      },
+      "zh-CN": {
+        name: "MAC 地址转 IPv6（EUI-64）",
+        description:
+          "使用修订版 EUI-64，将 MAC 地址与任意 IPv6 /64 前缀组合成 IPv6 地址。支持全球单播、唯一本地、链路本地和文档专用前缀。",
+      },
+      "zh-TW": {
+        name: "MAC 位址轉 IPv6（EUI-64）",
+        description:
+          "透過修正版 EUI-64 將 MAC 位址與任意 IPv6 /64 前綴結合。支援全球單播、唯一本地、鏈路本地及文件專用前綴。",
       },
     },
   },
