@@ -16505,6 +16505,136 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "image-to-text-converter",
+    category: "image",
+    icon: "scan-text",
+    tags: [
+      "ocr",
+      "image to text",
+      "screenshot",
+      "photo",
+      "multilingual",
+      "txt",
+    ],
+    locales: {
+      ar: {
+        name: "تحويل الصور إلى نص (OCR)",
+        description:
+          "استخرج النص من لقطات الشاشة والصور بأكثر من 100 لغة مع أداة OCR مجانية عبر الإنترنت. تعرّف على النص في متصفحك، ثم انسخه أو نزّله بصيغة TXT.",
+      },
+      de: {
+        name: "Bild in Text umwandeln (OCR)",
+        description:
+          "Extrahiere im Browser Text aus Screenshots und Fotos mit kostenloser OCR in über 100 Sprachen. Kopiere den Text oder lade ihn als TXT herunter.",
+      },
+      en: {
+        name: "Image to Text Converter (OCR)",
+        description:
+          "Extract text from screenshots and photos with free online OCR in 100+ languages. Recognize text in your browser, then copy it or download it as TXT.",
+      },
+      es: {
+        name: "Convertidor de imagen a texto (OCR)",
+        description:
+          "Extrae texto de capturas de pantalla y fotos en más de 100 idiomas con OCR gratis en tu navegador. Copia el resultado o descárgalo como TXT.",
+      },
+      fr: {
+        name: "Convertisseur d’image en texte (OCR)",
+        description:
+          "Extrayez le texte de photos et de captures d’écran dans plus de 100 langues avec l’OCR gratuit dans votre navigateur. Copiez le résultat ou téléchargez-le en TXT.",
+      },
+      he: {
+        name: "המרת תמונה לטקסט (OCR)",
+        description:
+          "חלצו טקסט מצילומי מסך ומתמונות ביותר מ־100 שפות בעזרת כלי OCR מקוון בחינם. זהו את הטקסט בדפדפן, ואז העתיקו אותו או הורידו קובץ TXT.",
+      },
+      hi: {
+        name: "इमेज से टेक्स्ट कन्वर्टर (OCR)",
+        description:
+          "मुफ़्त ऑनलाइन OCR से स्क्रीनशॉट और फ़ोटो का टेक्स्ट निकालें। ब्राउज़र में 100 से ज़्यादा भाषाओं का टेक्स्ट पहचानें, फिर उसे कॉपी करें या TXT में डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Gambar ke Teks (OCR)",
+        description:
+          "Ekstrak teks dari tangkapan layar dan foto dalam lebih dari 100 bahasa dengan OCR online gratis. Kenali teks di browser, lalu salin atau unduh sebagai TXT.",
+      },
+      it: {
+        name: "Convertitore da immagine a testo (OCR)",
+        description:
+          "Estrai testo da screenshot e foto in più di 100 lingue con l’OCR online gratuito. Riconosci il testo nel browser, poi copialo o scaricalo come TXT.",
+      },
+      ja: {
+        name: "画像から文字を抽出（OCR）",
+        description:
+          "100 以上の言語に対応する無料のオンライン OCR で、スクリーンショットや写真から文字を抽出。ブラウザー内で認識し、結果をコピーまたは TXT でダウンロードできます。",
+      },
+      ko: {
+        name: "이미지 텍스트 추출 (OCR)",
+        description:
+          "100개가 넘는 언어를 지원하는 무료 온라인 OCR로 스크린샷이나 사진에서 글자를 추출하세요. 브라우저에서 인식한 결과를 복사하거나 TXT로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Imej kepada Teks (OCR)",
+        description:
+          "Ekstrak teks dalam lebih daripada 100 bahasa daripada tangkapan skrin dan foto dengan OCR dalam talian percuma. Kenal pasti teks dalam pelayar, kemudian salin atau muat turun sebagai TXT.",
+      },
+      nl: {
+        name: "Afbeelding naar tekst (OCR)",
+        description:
+          "Haal in je browser tekst uit screenshots en foto’s met gratis OCR voor meer dan 100 talen. Kopieer de tekst of download die als TXT.",
+      },
+      no: {
+        name: "Bilde til tekst (OCR)",
+        description:
+          "Hent tekst fra skjermbilder og foto med gratis OCR på over 100 språk. Gjenkjenn teksten i nettleseren, og kopier den eller last den ned som TXT.",
+      },
+      pl: {
+        name: "Konwerter obrazu na tekst (OCR)",
+        description:
+          "Odczytuj tekst ze zrzutów ekranu i zdjęć w ponad 100 językach dzięki darmowemu OCR w przeglądarce. Skopiuj wynik lub pobierz go jako plik TXT.",
+      },
+      pt: {
+        name: "Conversor de imagem em texto (OCR)",
+        description:
+          "Extraia texto de capturas de tela e fotos em mais de 100 idiomas com OCR online grátis. Reconheça o texto no navegador, copie ou baixe em TXT.",
+      },
+      ru: {
+        name: "Конвертер изображений в текст (OCR)",
+        description:
+          "Извлекайте текст со скриншотов и фото с помощью бесплатного онлайн-OCR на 100 с лишним языках. Распознавайте текст в браузере, копируйте его или скачивайте в TXT.",
+      },
+      sv: {
+        name: "Bild till text (OCR)",
+        description:
+          "Hämta text från skärmbilder och foton med gratis OCR för över 100 språk. Läs av texten i webbläsaren och kopiera den eller ladda ned den som TXT.",
+      },
+      th: {
+        name: "แปลงรูปภาพเป็นข้อความ (OCR)",
+        description:
+          "ดึงข้อความจากภาพหน้าจอและภาพถ่ายด้วย OCR ออนไลน์ฟรีที่รองรับมากกว่า 100 ภาษา อ่านข้อความในเบราว์เซอร์ แล้วคัดลอกหรือดาวน์โหลดเป็นไฟล์ TXT",
+      },
+      tr: {
+        name: "Görselden Metne Dönüştürücü (OCR)",
+        description:
+          "Ücretsiz çevrimiçi OCR ile ekran görüntülerinden ve fotoğraflardan 100'den fazla dilde metin çıkarın. Metni tarayıcınızda tanıyın, ardından kopyalayın veya TXT olarak indirin.",
+      },
+      vi: {
+        name: "Chuyển ảnh thành văn bản (OCR)",
+        description:
+          "Trích xuất văn bản từ ảnh chụp màn hình hoặc ảnh chụp bằng OCR trực tuyến miễn phí hỗ trợ hơn 100 ngôn ngữ. Nhận dạng ngay trong trình duyệt, sau đó sao chép văn bản hoặc tải tệp TXT.",
+      },
+      "zh-CN": {
+        name: "图片转文字（OCR）",
+        description:
+          "免费在线 OCR，支持 100 多种语言。在浏览器中提取截图和照片里的文字，复制结果或下载为 TXT。",
+      },
+      "zh-TW": {
+        name: "圖片轉文字（OCR）",
+        description:
+          "支援 100 多種語言的免費線上 OCR。在瀏覽器內擷取螢幕截圖或照片中的文字，再複製結果或下載為 TXT 檔。",
+      },
+    },
+  },
+  {
     slug: "image-to-webp-converter",
     category: "image",
     icon: "image",

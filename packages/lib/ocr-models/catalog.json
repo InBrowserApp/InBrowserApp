@@ -1,0 +1,390 @@
+{
+  "models": {
+    "afr": {
+      "name": "Afrikaans"
+    },
+    "amh": {
+      "name": "Amharic"
+    },
+    "ara": {
+      "name": "Arabic"
+    },
+    "asm": {
+      "name": "Assamese"
+    },
+    "aze": {
+      "name": "Azerbaijani (Latin)",
+      "locale": "az-Latn"
+    },
+    "aze_cyrl": {
+      "name": "Azerbaijani (Cyrillic)",
+      "locale": "az-Cyrl"
+    },
+    "bel": {
+      "name": "Belarusian"
+    },
+    "ben": {
+      "name": "Bengali"
+    },
+    "bod": {
+      "name": "Tibetan"
+    },
+    "bos": {
+      "name": "Bosnian"
+    },
+    "bre": {
+      "name": "Breton"
+    },
+    "bul": {
+      "name": "Bulgarian"
+    },
+    "cat": {
+      "name": "Catalan (Valencian)"
+    },
+    "ceb": {
+      "name": "Cebuano"
+    },
+    "ces": {
+      "name": "Czech"
+    },
+    "chi_sim": {
+      "name": "Chinese (Simplified)",
+      "locale": "zh-Hans"
+    },
+    "chi_sim_vert": {
+      "name": "Chinese (Simplified, Vertical)",
+      "locale": "zh-Hans"
+    },
+    "chi_tra": {
+      "name": "Chinese (Traditional)",
+      "locale": "zh-Hant"
+    },
+    "chi_tra_vert": {
+      "name": "Chinese (Traditional, Vertical)",
+      "locale": "zh-Hant"
+    },
+    "chr": {
+      "name": "Cherokee"
+    },
+    "cos": {
+      "name": "Corsican"
+    },
+    "cym": {
+      "name": "Welsh"
+    },
+    "dan": {
+      "name": "Danish"
+    },
+    "deu": {
+      "name": "German"
+    },
+    "deu_latf": {
+      "name": "German (Fraktur)",
+      "locale": "de-Latf"
+    },
+    "div": {
+      "name": "Dhivehi"
+    },
+    "dzo": {
+      "name": "Dzongkha"
+    },
+    "ell": {
+      "name": "Greek"
+    },
+    "eng": {
+      "name": "English"
+    },
+    "enm": {
+      "name": "Middle English"
+    },
+    "epo": {
+      "name": "Esperanto"
+    },
+    "est": {
+      "name": "Estonian"
+    },
+    "eus": {
+      "name": "Basque"
+    },
+    "fao": {
+      "name": "Faroese"
+    },
+    "fas": {
+      "name": "Persian"
+    },
+    "fil": {
+      "name": "Filipino (Tagalog)",
+      "locale": "fil"
+    },
+    "fin": {
+      "name": "Finnish"
+    },
+    "fra": {
+      "name": "French"
+    },
+    "frm": {
+      "name": "Middle French"
+    },
+    "fry": {
+      "name": "Western Frisian"
+    },
+    "gla": {
+      "name": "Scottish Gaelic"
+    },
+    "gle": {
+      "name": "Irish"
+    },
+    "glg": {
+      "name": "Galician"
+    },
+    "grc": {
+      "name": "Ancient Greek"
+    },
+    "guj": {
+      "name": "Gujarati"
+    },
+    "hat": {
+      "name": "Haitian; Haitian Creole"
+    },
+    "heb": {
+      "name": "Hebrew"
+    },
+    "hin": {
+      "name": "Hindi"
+    },
+    "hrv": {
+      "name": "Croatian"
+    },
+    "hun": {
+      "name": "Hungarian"
+    },
+    "hye": {
+      "name": "Armenian"
+    },
+    "iku": {
+      "name": "Inuktitut"
+    },
+    "ind": {
+      "name": "Indonesian"
+    },
+    "isl": {
+      "name": "Icelandic"
+    },
+    "ita": {
+      "name": "Italian"
+    },
+    "ita_old": {
+      "name": "Italian (Historical)",
+      "locale": "it"
+    },
+    "jav": {
+      "name": "Javanese"
+    },
+    "jpn": {
+      "name": "Japanese"
+    },
+    "jpn_vert": {
+      "name": "Japanese (Vertical)",
+      "locale": "ja"
+    },
+    "kan": {
+      "name": "Kannada"
+    },
+    "kat": {
+      "name": "Georgian"
+    },
+    "kat_old": {
+      "name": "Georgian (Historical)",
+      "locale": "ka"
+    },
+    "kaz": {
+      "name": "Kazakh"
+    },
+    "khm": {
+      "name": "Central Khmer"
+    },
+    "kir": {
+      "name": "Kyrgyz"
+    },
+    "kmr": {
+      "name": "Northern Kurdish (Kurmanji)"
+    },
+    "kor": {
+      "name": "Korean"
+    },
+    "kor_vert": {
+      "name": "Korean (Vertical)",
+      "locale": "ko"
+    },
+    "lao": {
+      "name": "Lao"
+    },
+    "lat": {
+      "name": "Latin"
+    },
+    "lav": {
+      "name": "Latvian"
+    },
+    "lit": {
+      "name": "Lithuanian"
+    },
+    "ltz": {
+      "name": "Luxembourgish"
+    },
+    "mal": {
+      "name": "Malayalam"
+    },
+    "mar": {
+      "name": "Marathi"
+    },
+    "mkd": {
+      "name": "Macedonian"
+    },
+    "mlt": {
+      "name": "Maltese"
+    },
+    "mon": {
+      "name": "Mongolian"
+    },
+    "mri": {
+      "name": "Maori"
+    },
+    "msa": {
+      "name": "Malay"
+    },
+    "mya": {
+      "name": "Burmese"
+    },
+    "nep": {
+      "name": "Nepali"
+    },
+    "nld": {
+      "name": "Dutch; Flemish"
+    },
+    "nor": {
+      "name": "Norwegian"
+    },
+    "oci": {
+      "name": "Occitan (post 1500)"
+    },
+    "ori": {
+      "name": "Odia"
+    },
+    "pan": {
+      "name": "Panjabi; Punjabi"
+    },
+    "pol": {
+      "name": "Polish"
+    },
+    "por": {
+      "name": "Portuguese"
+    },
+    "pus": {
+      "name": "Pushto; Pashto"
+    },
+    "que": {
+      "name": "Quechua"
+    },
+    "ron": {
+      "name": "Romanian; Moldavian; Moldovan"
+    },
+    "rus": {
+      "name": "Russian"
+    },
+    "san": {
+      "name": "Sanskrit"
+    },
+    "sin": {
+      "name": "Sinhala; Sinhalese"
+    },
+    "slk": {
+      "name": "Slovak"
+    },
+    "slv": {
+      "name": "Slovenian"
+    },
+    "snd": {
+      "name": "Sindhi"
+    },
+    "spa": {
+      "name": "Spanish; Castilian"
+    },
+    "spa_old": {
+      "name": "Spanish (Historical)",
+      "locale": "es"
+    },
+    "sqi": {
+      "name": "Albanian"
+    },
+    "srp": {
+      "name": "Serbian (Cyrillic)",
+      "locale": "sr-Cyrl"
+    },
+    "srp_latn": {
+      "name": "Serbian (Latin)",
+      "locale": "sr-Latn"
+    },
+    "sun": {
+      "name": "Sundanese"
+    },
+    "swa": {
+      "name": "Swahili"
+    },
+    "swe": {
+      "name": "Swedish"
+    },
+    "syr": {
+      "name": "Syriac"
+    },
+    "tam": {
+      "name": "Tamil"
+    },
+    "tat": {
+      "name": "Tatar"
+    },
+    "tel": {
+      "name": "Telugu"
+    },
+    "tgk": {
+      "name": "Tajik"
+    },
+    "tha": {
+      "name": "Thai"
+    },
+    "tir": {
+      "name": "Tigrinya"
+    },
+    "ton": {
+      "name": "Tonga"
+    },
+    "tur": {
+      "name": "Turkish"
+    },
+    "uig": {
+      "name": "Uighur; Uyghur"
+    },
+    "ukr": {
+      "name": "Ukrainian"
+    },
+    "urd": {
+      "name": "Urdu"
+    },
+    "uzb": {
+      "name": "Uzbek (Latin)",
+      "locale": "uz-Latn"
+    },
+    "uzb_cyrl": {
+      "name": "Uzbek (Cyrillic)",
+      "locale": "uz-Cyrl"
+    },
+    "vie": {
+      "name": "Vietnamese"
+    },
+    "yid": {
+      "name": "Yiddish"
+    },
+    "yor": {
+      "name": "Yoruba"
+    }
+  }
+}

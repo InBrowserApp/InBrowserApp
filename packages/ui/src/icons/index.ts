@@ -86,6 +86,7 @@ export {
   Ruler,
   Rows2,
   ScanLine,
+  ScanText,
   Search,
   Scissors,
   Shield,

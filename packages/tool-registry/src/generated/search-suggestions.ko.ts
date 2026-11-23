@@ -654,6 +654,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "이미지 텍스트 추출 (OCR)",
+    slug: "image-to-text-converter",
+  },
+  {
+    category: "image",
     name: "이미지 WebP 변환기",
     slug: "image-to-webp-converter",
   },

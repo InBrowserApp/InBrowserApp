@@ -654,6 +654,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Görselden Metne Dönüştürücü (OCR)",
+    slug: "image-to-text-converter",
+  },
+  {
+    category: "image",
     name: "Görselden WebP'ye Dönüştürücü",
     slug: "image-to-webp-converter",
   },

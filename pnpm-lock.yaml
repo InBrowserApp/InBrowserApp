@@ -281,6 +281,375 @@ catalogs:
     '@tailwindcss/vite':
       specifier: ^4.3.5
       version: 4.3.5
+    '@tesseract.js-data/afr':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/amh':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ara':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/asm':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/aze':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/aze_cyrl':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/bel':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ben':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/bod':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/bos':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/bre':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/bul':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/cat':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ceb':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ces':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/chi_sim':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/chi_sim_vert':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/chi_tra':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/chi_tra_vert':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/chr':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/cos':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/cym':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/dan':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/deu':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/div':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/dzo':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ell':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/eng':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/enm':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/epo':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/est':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/eus':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/fao':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/fas':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/fil':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/fin':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/fra':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/frk':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/frm':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/fry':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/gla':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/gle':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/glg':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/grc':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/guj':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/hat':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/heb':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/hin':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/hrv':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/hun':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/hye':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/iku':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ind':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/isl':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ita':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ita_old':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/jav':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/jpn':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/jpn_vert':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/kan':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/kat':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/kat_old':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/kaz':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/khm':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/kir':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/kmr':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/kor':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/kor_vert':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/lao':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/lat':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/lav':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/lit':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ltz':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/mal':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/mar':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/mkd':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/mlt':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/mon':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/mri':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/msa':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/mya':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/nep':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/nld':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/nor':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/oci':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ori':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/pan':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/pol':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/por':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/pus':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/que':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ron':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/rus':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/san':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/sin':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/slk':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/slv':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/snd':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/spa':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/spa_old':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/sqi':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/srp':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/srp_latn':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/sun':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/swa':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/swe':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/syr':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/tam':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/tat':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/tel':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/tgk':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/tha':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/tir':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ton':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/tur':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/uig':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/ukr':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/urd':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/uzb':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/uzb_cyrl':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/vie':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/yid':
+      specifier: 1.0.0
+      version: 1.0.0
+    '@tesseract.js-data/yor':
+      specifier: 1.0.0
+      version: 1.0.0
     '@testing-library/react':
       specifier: ^16.3.3
       version: 16.3.3
@@ -614,6 +983,12 @@ catalogs:
     tailwindcss:
       specifier: ^4.3.5
       version: 4.3.5
+    tesseract.js:
+      specifier: 7.0.0
+      version: 7.0.0
+    tesseract.js-core:
+      specifier: 7.0.0
+      version: 7.0.0
     transliteration:
       specifier: ^2.7.0
       version: 2.7.0
@@ -698,7 +1073,7 @@ importers:
         version: 5.1.0(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))(vitest@5.1.0)
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       dependency-cruiser:
         specifier: 'catalog:'
         version: 18.8.0
@@ -734,7 +1109,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: 'catalog:'
-        version: 8.1.6(@astrojs/markdown-satteri@0.4.10)(astro@7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+        version: 8.1.6(@astrojs/markdown-satteri@0.4.10)(astro@7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
       '@astrojs/react':
         specifier: 'catalog:'
         version: 7.1.9(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
@@ -758,7 +1133,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       buffer:
         specifier: 'catalog:'
         version: 6.0.3
@@ -979,6 +1354,378 @@ importers:
       vitest:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  packages/lib/ocr-models:
+    dependencies:
+      '@tesseract.js-data/afr':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/amh':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ara':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/asm':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/aze':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/aze_cyrl':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/bel':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ben':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/bod':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/bos':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/bre':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/bul':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/cat':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ceb':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ces':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/chi_sim':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/chi_sim_vert':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/chi_tra':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/chi_tra_vert':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/chr':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/cos':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/cym':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/dan':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/deu':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/div':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/dzo':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ell':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/eng':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/enm':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/epo':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/est':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/eus':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/fao':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/fas':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/fil':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/fin':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/fra':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/frk':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/frm':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/fry':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/gla':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/gle':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/glg':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/grc':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/guj':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/hat':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/heb':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/hin':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/hrv':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/hun':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/hye':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/iku':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ind':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/isl':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ita':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ita_old':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/jav':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/jpn':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/jpn_vert':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/kan':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/kat':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/kat_old':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/kaz':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/khm':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/kir':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/kmr':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/kor':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/kor_vert':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/lao':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/lat':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/lav':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/lit':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ltz':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/mal':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/mar':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/mkd':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/mlt':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/mon':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/mri':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/msa':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/mya':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/nep':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/nld':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/nor':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/oci':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ori':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/pan':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/pol':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/por':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/pus':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/que':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ron':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/rus':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/san':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/sin':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/slk':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/slv':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/snd':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/spa':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/spa_old':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/sqi':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/srp':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/srp_latn':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/sun':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/swa':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/swe':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/syr':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/tam':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/tat':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/tel':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/tgk':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/tha':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/tir':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ton':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/tur':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/uig':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/ukr':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/urd':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/uzb':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/uzb_cyrl':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/vie':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/yid':
+        specifier: 'catalog:'
+        version: 1.0.0
+      '@tesseract.js-data/yor':
+        specifier: 'catalog:'
+        version: 1.0.0
 
   packages/lib/pdf-reader:
     dependencies:
@@ -1477,6 +2224,9 @@ importers:
       '@tool/image-to-png-converter':
         specifier: workspace:*
         version: link:../../tools/image-to-png-converter
+      '@tool/image-to-text-converter':
+        specifier: workspace:*
+        version: link:../../tools/image-to-text-converter
       '@tool/image-to-webp-converter':
         specifier: workspace:*
         version: link:../../tools/image-to-webp-converter
@@ -2052,7 +2802,7 @@ importers:
         version: link:../tool-sdk
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
@@ -2142,7 +2892,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       otpauth:
         specifier: 'catalog:'
         version: 9.6.0
@@ -2185,7 +2935,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2210,7 +2960,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2232,7 +2982,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2257,7 +3007,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2279,7 +3029,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2300,7 +3050,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -2325,7 +3075,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2346,7 +3096,7 @@ importers:
         version: 2.25.0
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -2374,7 +3124,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.13.0
@@ -2402,7 +3152,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.13.0
@@ -2430,7 +3180,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       figlet:
         specifier: 'catalog:'
         version: 1.12.0
@@ -2464,7 +3214,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2501,7 +3251,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2532,7 +3282,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2557,7 +3307,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2582,7 +3332,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       mediabunny:
         specifier: 'catalog:'
         version: 1.66.0
@@ -2613,7 +3363,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       jsbarcode:
         specifier: 'catalog:'
         version: 3.12.3
@@ -2647,7 +3397,7 @@ importers:
         version: 0.23.0
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2672,7 +3422,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2697,7 +3447,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2722,7 +3472,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2747,7 +3497,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2772,7 +3522,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2797,7 +3547,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2822,7 +3572,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2847,7 +3597,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2872,7 +3622,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2897,7 +3647,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2922,7 +3672,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2953,7 +3703,7 @@ importers:
         version: 2.25.0
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -2978,7 +3728,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       bcrypt-ts:
         specifier: 'catalog:'
         version: 9.0.3
@@ -3006,7 +3756,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       bcrypt-ts:
         specifier: 'catalog:'
         version: 9.0.3
@@ -3043,7 +3793,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3068,7 +3818,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3093,7 +3843,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3118,7 +3868,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       bip39:
         specifier: 'catalog:'
         version: 3.1.2
@@ -3149,7 +3899,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       blakejs:
         specifier: 'catalog:'
         version: 1.2.1
@@ -3177,7 +3927,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       blakejs:
         specifier: 'catalog:'
         version: 1.2.1
@@ -3205,7 +3955,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       blake3-wasm:
         specifier: 'catalog:'
         version: 2.1.5
@@ -3236,7 +3986,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3267,7 +4017,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3298,7 +4048,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3323,7 +4073,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3348,7 +4098,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3373,7 +4123,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       cborg:
         specifier: 'catalog:'
         version: 7.0.0
@@ -3407,7 +4157,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3441,7 +4191,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3469,7 +4219,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3497,7 +4247,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3522,7 +4272,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3547,7 +4297,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3572,7 +4322,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3600,7 +4350,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3625,7 +4375,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -3650,7 +4400,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       color-convert:
         specifier: 'catalog:'
         version: 3.1.3
@@ -3681,7 +4431,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       color-convert:
         specifier: 'catalog:'
         version: 3.1.3
@@ -3712,7 +4462,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       color-convert:
         specifier: 'catalog:'
         version: 3.1.3
@@ -3740,7 +4490,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -3768,7 +4518,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3793,7 +4543,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3818,7 +4568,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3843,7 +4593,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       cron-parser:
         specifier: 'catalog:'
         version: 5.10.6
@@ -3877,7 +4627,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       is-ip:
         specifier: 'catalog:'
         version: 5.0.1
@@ -3908,7 +4658,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3933,7 +4683,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -3958,7 +4708,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -3995,7 +4745,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       papaparse:
         specifier: 'catalog:'
         version: 5.7.1
@@ -4035,7 +4785,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4060,7 +4810,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       curlconverter:
         specifier: 'catalog:'
         version: 4.12.0(patch_hash=c435ac573c61e25fa904a8cd451555fb9f8d62d3d3a0b138ff86c88f8cc1d484)
@@ -4091,7 +4841,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4116,7 +4866,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4144,7 +4894,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4169,7 +4919,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4194,7 +4944,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4231,7 +4981,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4265,7 +5015,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       dompurify:
         specifier: 'catalog:'
         version: 3.4.18
@@ -4296,7 +5046,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -4330,7 +5080,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4364,7 +5114,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -4404,7 +5154,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4429,7 +5179,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4460,7 +5210,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4491,7 +5241,7 @@ importers:
         version: 2.25.0
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4522,7 +5272,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4559,7 +5309,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4584,7 +5334,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4612,7 +5362,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       dompurify:
         specifier: 'catalog:'
         version: 3.4.18
@@ -4640,7 +5390,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       js-yaml:
         specifier: 'catalog:'
         version: 5.5.0
@@ -4671,7 +5421,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4696,7 +5446,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4721,7 +5471,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       exifr:
         specifier: 'catalog:'
         version: 7.1.3
@@ -4755,7 +5505,7 @@ importers:
         version: 2.25.0
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4783,7 +5533,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4811,7 +5561,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4836,7 +5586,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4861,7 +5611,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       file-type:
         specifier: 'catalog:'
         version: 22.3.0(supports-color@10.2.2)
@@ -4892,7 +5642,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -4926,7 +5676,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4954,7 +5704,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -4985,7 +5735,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       gifuct-js:
         specifier: 'catalog:'
         version: 2.1.2
@@ -5016,7 +5766,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       gifuct-js:
         specifier: 'catalog:'
         version: 2.1.2
@@ -5047,7 +5797,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -5075,7 +5825,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.8.3)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5100,7 +5850,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5125,7 +5875,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highwayhasher:
         specifier: 'catalog:'
         version: 0.4.4
@@ -5153,7 +5903,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5178,7 +5928,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       color-name:
         specifier: 'catalog:'
         version: 2.1.1
@@ -5206,7 +5956,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5231,7 +5981,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -5274,7 +6024,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5302,7 +6052,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5327,7 +6077,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5364,7 +6114,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       cfb:
         specifier: 'catalog:'
         version: 1.2.2
@@ -5407,7 +6157,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5435,7 +6185,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5460,7 +6210,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5485,7 +6235,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5510,7 +6260,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5535,7 +6285,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5560,7 +6310,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5585,7 +6335,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5610,7 +6360,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5635,7 +6385,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5663,7 +6413,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -5694,7 +6444,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5719,7 +6469,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5747,7 +6497,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5775,7 +6525,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -5806,13 +6556,47 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
       react-dom:
         specifier: 'catalog:'
         version: 19.3.1(react@19.3.1)
+    devDependencies:
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      vitest:
+        specifier: 'catalog:'
+        version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  tools/image-to-text-converter:
+    dependencies:
+      '@workspace/ocr-models':
+        specifier: workspace:*
+        version: link:../../packages/lib/ocr-models
+      '@workspace/tool-sdk':
+        specifier: workspace:*
+        version: link:../../packages/tool-sdk
+      '@workspace/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      astro:
+        specifier: 'catalog:'
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      react:
+        specifier: 'catalog:'
+        version: 19.3.1
+      react-dom:
+        specifier: 'catalog:'
+        version: 19.3.1(react@19.3.1)
+      tesseract.js:
+        specifier: 'catalog:'
+        version: 7.0.0
+      tesseract.js-core:
+        specifier: 'catalog:'
+        version: 7.0.0
     devDependencies:
       '@testing-library/react':
         specifier: 'catalog:'
@@ -5834,7 +6618,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5862,7 +6646,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5887,7 +6671,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -5915,7 +6699,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5940,7 +6724,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -5965,7 +6749,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       is-ip:
         specifier: 'catalog:'
         version: 5.0.1
@@ -5993,7 +6777,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6018,7 +6802,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6043,7 +6827,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6068,7 +6852,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6093,7 +6877,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -6127,7 +6911,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -6155,7 +6939,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -6183,7 +6967,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       lossless-json:
         specifier: 'catalog:'
         version: 4.3.3
@@ -6211,7 +6995,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -6245,7 +7029,7 @@ importers:
         version: 3.0.1(ajv@8.20.0)
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6270,7 +7054,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       papaparse:
         specifier: 'catalog:'
         version: 5.7.1
@@ -6301,7 +7085,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -6332,7 +7116,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -6363,7 +7147,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -6391,7 +7175,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -6422,7 +7206,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -6456,7 +7240,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6481,7 +7265,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6506,7 +7290,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6531,7 +7315,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       crypto-js:
         specifier: 'catalog:'
         version: 4.2.0
@@ -6562,7 +7346,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6587,7 +7371,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6612,7 +7396,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       dompurify:
         specifier: 'catalog:'
         version: 3.4.18
@@ -6643,7 +7427,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6668,7 +7452,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6693,7 +7477,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6721,7 +7505,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6749,7 +7533,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6777,7 +7561,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6805,7 +7589,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6833,7 +7617,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6861,7 +7645,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6889,7 +7673,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6914,7 +7698,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       dompurify:
         specifier: 'catalog:'
         version: 3.4.18
@@ -6960,7 +7744,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -6985,7 +7769,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.13.0
@@ -7013,7 +7797,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       crypto-js:
         specifier: 'catalog:'
         version: 4.2.0
@@ -7044,7 +7828,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       mediainfo.js:
         specifier: 'catalog:'
         version: 0.3.9
@@ -7075,7 +7859,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7109,7 +7893,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7137,7 +7921,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7162,7 +7946,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       mime-db:
         specifier: 'catalog:'
         version: 1.54.0
@@ -7196,7 +7980,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7224,7 +8008,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7249,7 +8033,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7274,7 +8058,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       murmurhash3js-revisited:
         specifier: 'catalog:'
         version: 3.0.0
@@ -7305,7 +8089,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       murmurhash3js-revisited:
         specifier: 'catalog:'
         version: 3.0.0
@@ -7336,7 +8120,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       murmurhash3js-revisited:
         specifier: 'catalog:'
         version: 3.0.0
@@ -7367,7 +8151,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       is-ip:
         specifier: 'catalog:'
         version: 5.0.1
@@ -7398,7 +8182,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7429,7 +8213,7 @@ importers:
         version: link:../../packages/lib/web-document
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7463,7 +8247,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7488,7 +8272,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7516,7 +8300,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7550,7 +8334,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -7590,7 +8374,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -7624,7 +8408,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       dompurify:
         specifier: 'catalog:'
         version: 3.4.18
@@ -7667,7 +8451,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -7701,7 +8485,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7729,7 +8513,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -7763,7 +8547,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       hyparquet:
         specifier: 'catalog:'
         version: 1.33.1(patch_hash=f8440c629287acafd8c426b011ccffd5bf88e0cb818750dcc80629f628594830)
@@ -7794,7 +8578,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7819,7 +8603,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -7844,7 +8628,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -7872,7 +8656,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -7900,7 +8684,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -7928,7 +8712,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -7959,7 +8743,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -7990,7 +8774,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -8021,7 +8805,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 6.5.438
@@ -8049,7 +8833,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       pdfjs-dist:
         specifier: 'catalog:'
         version: 6.5.438
@@ -8080,7 +8864,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8105,7 +8889,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.8.3)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.8.3)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -8136,7 +8920,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       openpgp:
         specifier: 'catalog:'
         version: 6.3.2
@@ -8164,7 +8948,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8192,7 +8976,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8217,7 +9001,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8248,7 +9032,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       cfb:
         specifier: 'catalog:'
         version: 1.2.2
@@ -8285,7 +9069,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8313,7 +9097,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8347,7 +9131,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -8387,7 +9171,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8412,7 +9196,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8440,7 +9224,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -8477,7 +9261,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       qrcode:
         specifier: 'catalog:'
         version: 1.5.4
@@ -8508,7 +9292,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       jsqr:
         specifier: 'catalog:'
         version: 1.4.0
@@ -8536,7 +9320,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8561,7 +9345,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8586,7 +9370,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       bip39:
         specifier: 'catalog:'
         version: 3.1.2
@@ -8614,7 +9398,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8642,7 +9426,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8667,7 +9451,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       is-ip:
         specifier: 'catalog:'
         version: 5.0.1
@@ -8695,7 +9479,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8720,7 +9504,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       crypto-js:
         specifier: 'catalog:'
         version: 4.2.0
@@ -8751,7 +9535,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8776,7 +9560,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8801,7 +9585,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8826,7 +9610,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8851,7 +9635,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8882,7 +9666,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       pdf-lib:
         specifier: 'catalog:'
         version: 1.17.1
@@ -8910,7 +9694,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8938,7 +9722,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -8963,7 +9747,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.13.0
@@ -8991,7 +9775,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9016,7 +9800,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       crypto-js:
         specifier: 'catalog:'
         version: 4.2.0
@@ -9047,7 +9831,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9075,7 +9859,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9103,7 +9887,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9131,7 +9915,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9159,7 +9943,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9184,7 +9968,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9212,7 +9996,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9240,7 +10024,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9265,7 +10049,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9293,7 +10077,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9321,7 +10105,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9346,7 +10130,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9371,7 +10155,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9396,7 +10180,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -9424,7 +10208,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9449,7 +10233,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9480,7 +10264,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9505,7 +10289,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -9536,7 +10320,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9567,7 +10351,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9595,7 +10379,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9620,7 +10404,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       crypto-js:
         specifier: 'catalog:'
         version: 4.2.0
@@ -9651,7 +10435,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9676,7 +10460,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -9710,7 +10494,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9738,7 +10522,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9763,7 +10547,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       css-tree:
         specifier: 'catalog:'
         version: 3.2.1
@@ -9797,7 +10581,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       diff:
         specifier: 'catalog:'
         version: 9.0.0
@@ -9825,7 +10609,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       iconv-lite:
         specifier: 'catalog:'
         version: 0.7.3
@@ -9853,7 +10637,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9878,7 +10662,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9903,7 +10687,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9928,7 +10712,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9953,7 +10737,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -9978,7 +10762,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10006,7 +10790,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       marked:
         specifier: 'catalog:'
         version: 18.2.1
@@ -10034,7 +10818,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -10065,7 +10849,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -10105,7 +10889,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10136,7 +10920,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10161,7 +10945,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10186,7 +10970,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10211,7 +10995,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10236,7 +11020,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       punycode:
         specifier: 'catalog:'
         version: 2.3.1
@@ -10267,7 +11051,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10292,7 +11076,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10317,7 +11101,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10342,7 +11126,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10367,7 +11151,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -10398,7 +11182,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10423,7 +11207,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10448,7 +11232,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10473,7 +11257,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10498,7 +11282,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10523,7 +11307,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10548,7 +11332,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       crypto-js:
         specifier: 'catalog:'
         version: 4.2.0
@@ -10579,7 +11363,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10604,7 +11388,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10629,7 +11413,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10654,7 +11438,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10679,7 +11463,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10704,7 +11488,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10729,7 +11513,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       mediabunny:
         specifier: 'catalog:'
         version: 1.66.0
@@ -10763,7 +11547,7 @@ importers:
         version: 2.25.0
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10791,7 +11575,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10813,7 +11597,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       mediabunny:
         specifier: 'catalog:'
         version: 1.66.0
@@ -10841,7 +11625,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10866,7 +11650,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.13.0
@@ -10897,7 +11681,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -10931,7 +11715,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -10974,7 +11758,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       fflate:
         specifier: 'catalog:'
         version: 0.8.3
@@ -11014,7 +11798,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -11045,7 +11829,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.13.0
@@ -11073,7 +11857,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       hash-wasm:
         specifier: 'catalog:'
         version: 4.13.0
@@ -11101,7 +11885,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -11129,7 +11913,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -11157,7 +11941,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -11188,7 +11972,7 @@ importers:
         version: link:../../packages/ui
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       highlight.js:
         specifier: 'catalog:'
         version: 11.12.0
@@ -11225,7 +12009,7 @@ importers:
         version: 2.25.0
       astro:
         specifier: 'catalog:'
-        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.8.3)
+        version: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.8.3)
       react:
         specifier: 'catalog:'
         version: 19.3.1
@@ -14196,6 +14980,375 @@ packages:
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7 || ^8
 
+  '@tesseract.js-data/afr@1.0.0':
+    resolution: {integrity: sha512-daQsYkTgbIW44KKZKyi7QV2ZeYPnzEiWyupnnaMLP1AiLNavhO/BDF27I8Gj8A5x7AtPAen3uHBlJs6m4AXoVA==}
+
+  '@tesseract.js-data/amh@1.0.0':
+    resolution: {integrity: sha512-buKCJA8g4FwpJ4eCO9L9W2j+I07DZJ7HR9/dFMtLL8rSQDZkUJ1ZJRQUdfKw7YKCjUt/nPNWkkPaNzRhNYEUuw==}
+
+  '@tesseract.js-data/ara@1.0.0':
+    resolution: {integrity: sha512-bB60Av6dsv9LRUrlaM6SgnAwjUpdbanw9Jf3mbhDCZAhX7Cp8u7YjI8EWfCvMhH3R2QJT/2EA8cijqPANOhwaA==}
+
+  '@tesseract.js-data/asm@1.0.0':
+    resolution: {integrity: sha512-t0bsjsWr8cIHDNyAc86x/3NjZe2c/wdXeVz27qwymtDn11lAzSxsFxXu4weDfe/xu9ndG5ry0WhT0luTTx/2og==}
+
+  '@tesseract.js-data/aze@1.0.0':
+    resolution: {integrity: sha512-aCkOUThQGV46GW91lDQOZvZePo1c0nrl0ojWW0eXR/nDUm9v9xuDS2/BpObCc01C28SCeG/MDAXB5BWrLUKQfw==}
+
+  '@tesseract.js-data/aze_cyrl@1.0.0':
+    resolution: {integrity: sha512-3r7GyesSFCHn5X4xadyNq2oeAxhX1WEWAJqZZpe+xDPNV+eqhv3x7zmf446AhpJPZqLpyyMoigPWwcQqWAzFjw==}
+
+  '@tesseract.js-data/bel@1.0.0':
+    resolution: {integrity: sha512-BML4Sey803N7IIjVAa9W3oOMriy6YZYOAe4VXj4Mg/gz0qr+MVxZGTwx8m14H+iDB6MKUm2IGRyIdOHe0dIGTw==}
+
+  '@tesseract.js-data/ben@1.0.0':
+    resolution: {integrity: sha512-KFbl8YlVGZnhlJmlM45j1Cndek8QCGMwXu8JNtE8c4oDgKCy8c1PviIWC5ih5hBGjMPHi6yBaR+Gr0FRda/pIg==}
+
+  '@tesseract.js-data/bod@1.0.0':
+    resolution: {integrity: sha512-udqSQm2Z0AfY/Fo6YMzshcstD2mNyJBF00oLFX5psWH1VqKiexA0U9Lf0GJwO+fzEwe1WNCvArzW4Dqm2HnJBg==}
+
+  '@tesseract.js-data/bos@1.0.0':
+    resolution: {integrity: sha512-DPfTh+tv4yk9rVLS5llhGfOu9k3GUQxnti8s8PkUMJoc3KDvQAy9HYi7PEiopkFEV3N9kdMd+nYteRKx4T2MbQ==}
+
+  '@tesseract.js-data/bre@1.0.0':
+    resolution: {integrity: sha512-TdjrsoG5NCQSnwQkLFKre6o2klmumCQK6WCjc46F4V5AKI8nkG565NbQo807FssK/1IgbDFAZi1c6zyEN3iHYA==}
+
+  '@tesseract.js-data/bul@1.0.0':
+    resolution: {integrity: sha512-Xo/BjUvXUSkZYP4jSfk09zvQOd9IJc1F79JtMWeCgdFOvegpdZ4r93urjHvCO/wgU9xrBXoToMa6qknhv7plQg==}
+
+  '@tesseract.js-data/cat@1.0.0':
+    resolution: {integrity: sha512-5tp/K5e7KKhJtWFJmJz01BydHth2blUVjsjVtsda2F5R4Zl0OElr5/jDvoDeZ9uoV2zHI7eQ4S2ClS0obZmqVQ==}
+
+  '@tesseract.js-data/ceb@1.0.0':
+    resolution: {integrity: sha512-q6xOnxUYCT1mNRqJrm+dikJE/MTL6mnUygJYO/X1rUMbITSnqO4CUTs08sLIJas67nuDDCUZFuTyg2M06aIFdA==}
+
+  '@tesseract.js-data/ces@1.0.0':
+    resolution: {integrity: sha512-mXnVy8WoG/ImbrpN5oggaBBMSrHQH+hKbgkbPQeVY6MChIDDZT1H+e2I4eiAvl+fypfIbiqpIcodGex03PXvfw==}
+
+  '@tesseract.js-data/chi_sim@1.0.0':
+    resolution: {integrity: sha512-iuErURkPbECDUazgsLn/r3c+tU2y5o5S/w14d0A/YiagfsjYyZKgTo75RUpsGJ311qtu0dIX4hqnXAAjmqf2CA==}
+
+  '@tesseract.js-data/chi_sim_vert@1.0.0':
+    resolution: {integrity: sha512-tUNalCiAnjuJ/BZO8vHE4zZj1J9IBG5Fzg1c512RnCp97EXdV+1MoP0ulQy8PBwnjIcK5RiP/zOzSDsei0HrzA==}
+
+  '@tesseract.js-data/chi_tra@1.0.0':
+    resolution: {integrity: sha512-uz0gqF7ncrJS4UTHGCkPntZXpoyo+mIg0Zs8QhF0TH3uzj2HkJpYmi8u1Pdwt2NW65UWJ51hzILWWy838da5dw==}
+
+  '@tesseract.js-data/chi_tra_vert@1.0.0':
+    resolution: {integrity: sha512-tefJ7U70w8HJ6oioxOup2a+Ijfc2KgwIv/M7ttSP5uplbD0+vDwFPBCwsEZbESOXMY3KpuAJhXchp3aBjmfm2w==}
+
+  '@tesseract.js-data/chr@1.0.0':
+    resolution: {integrity: sha512-HZZtgNPKg3lNg/nt/6VBR1mvTd3Qff1A+NnlTsWTvd7m0Wc8UrB+/j+eyh+OeXTpxi3Yyoukg28FG1VNYLwFuQ==}
+
+  '@tesseract.js-data/cos@1.0.0':
+    resolution: {integrity: sha512-shed/nTDEFYnDYKN0VGu3FmNljwOYX8MbgVLyuOZty+mzpYcHu/JBiMUush/sCnL+1a+t35wfswVHlUIWXON5Q==}
+
+  '@tesseract.js-data/cym@1.0.0':
+    resolution: {integrity: sha512-AvzR4WjteRKXc/ffSMvKE7rOyQVSC4i9MzKPmUURKph20voGwml9ha3HmTvgnzVE7bmdat2Vk7F8ePCKuYRVBg==}
+
+  '@tesseract.js-data/dan@1.0.0':
+    resolution: {integrity: sha512-nlR/VS/YKJs8u0SSa3C+wUTIopPIKwVG016T4/Lk2BsUOME3EkXgHWyGbzfobd5+6dwA+FYaUB17GVgIo7Zphg==}
+
+  '@tesseract.js-data/deu@1.0.0':
+    resolution: {integrity: sha512-3ter1p2gFAiCd5CMC+PodZ9YY2UDomkKj+ytlKeeZqOUmhLx1SDnYPf5zog0g5MBbxYveW+8omI3PUflqHfZ4Q==}
+
+  '@tesseract.js-data/div@1.0.0':
+    resolution: {integrity: sha512-iL+2FmhB0/UKl6pGpgQ7bX5QVS3be/oEyCtZ8POFMe9pXpCwLstVUT58SrziUcuE6Rf+LM044oh2jDPRZATS+w==}
+
+  '@tesseract.js-data/dzo@1.0.0':
+    resolution: {integrity: sha512-OHCsiGGhCZHkJBRD7a753Zr/rLbO5GThJBmiORz1+HvT7K0rV3lXQYrJlR1MR12oKO07xJB2YkW5YKt73y5pPA==}
+
+  '@tesseract.js-data/ell@1.0.0':
+    resolution: {integrity: sha512-cCdWHcxHupC9YltWAoscqnw1QAIo4ENgaXNNVXfN+FBvSncnx3lgnNcyRdCvGSi31buwr7vPY156WHu2Yubg4A==}
+
+  '@tesseract.js-data/eng@1.0.0':
+    resolution: {integrity: sha512-mbTumm6KQPUHyzTPQaF3ObXYnx0SqqfV2nabqFVQBwD6Kl7PhGSLSzOlfFTWy0P3BjghaSKA2W9GB19Jk+ZcTg==}
+
+  '@tesseract.js-data/enm@1.0.0':
+    resolution: {integrity: sha512-HoptTPPTVM52Q/1NHjwnxN5L+vMO8BRdHfexk9/S4+T2orXPUfqH6UedWezaaaMz+izkhdLgR69XAEhVmgeKUg==}
+
+  '@tesseract.js-data/epo@1.0.0':
+    resolution: {integrity: sha512-c6OEXOOzQSov8c0L32k5l3T+PIywgBh/Rfn3ChJT5Ews+S8HUKOPnOat+9S8gHmj5TYuSwUBEhLkTSVqURS2OA==}
+
+  '@tesseract.js-data/est@1.0.0':
+    resolution: {integrity: sha512-oakddRcxZK0OB9mnFl8q1xLif1Pi8e6/iaXTB+PMkt96PbKqoiqw2WU0Ogkv+c5AOW7JWcFcZZY8Iwmh5yX8zw==}
+
+  '@tesseract.js-data/eus@1.0.0':
+    resolution: {integrity: sha512-oh99DNPmIHA5EOZoPHwooFqOAkMeeTt0gL/A/6H3vx+zl+Oo0Jg7emPI+mB63S+Ce7jJag3OKJW31DU5rMc+uQ==}
+
+  '@tesseract.js-data/fao@1.0.0':
+    resolution: {integrity: sha512-mj0Pz2oxa5MjpHkaxd1yWU5SvfyDSfvzEdf+Mg01A5otq4VNiAe1XXrn3EX0nr4C+kU8QbDsBDjPBaQ0SUA+Rw==}
+
+  '@tesseract.js-data/fas@1.0.0':
+    resolution: {integrity: sha512-TA2y9dabKPx5Uy9LHvsrkwljJfbyGhtHlfyLyNob6oYz2rTnj02cygUwFrGqlog5MRNSZOebJ9fzzrMuNHJSDQ==}
+
+  '@tesseract.js-data/fil@1.0.0':
+    resolution: {integrity: sha512-2hjm2BXpFtJCda9voqsNFDW7GcO/F4jJxuDJMln40/afMDfb2mok3kAoBNXk/Mnf0vlcp67rrAP3gGt5nrT98g==}
+
+  '@tesseract.js-data/fin@1.0.0':
+    resolution: {integrity: sha512-JLD9iF4Q3gqspuB5dphSZw7HT+EGZ6pKqoTUfDrUU9kYxGa2xkISa/3X/JpFZ6Lw8Lh6Ved0uVxUZhMuzoK9Dw==}
+
+  '@tesseract.js-data/fra@1.0.0':
+    resolution: {integrity: sha512-pp58gMaoyidoBBLd5y5rnf0WW0Y1994QrGqZrYatITqIU/AReUJMykD+YY3JDgvnmgz7uAx1UmhjjuyEmV8JEA==}
+
+  '@tesseract.js-data/frk@1.0.0':
+    resolution: {integrity: sha512-kHMpCXwuRzbMRZjFA4JvseKTDEpjufoMSs+TYJwRTdCgqvskW6+w9/TM75n7wvr22VGJesX/YkMkUc18KXVBmQ==}
+
+  '@tesseract.js-data/frm@1.0.0':
+    resolution: {integrity: sha512-HmSz36R4SvrVztsSuYEA7BMeZLisu2c8OQNt9W9QuXTwd2He2NKE+eJlBDiDst4gOpE1hS0TBtGe7UiDryZldg==}
+
+  '@tesseract.js-data/fry@1.0.0':
+    resolution: {integrity: sha512-zLq4x2icKksTob1pMmrWcZb/zVjjPkHo8pBYFhd3yQwRpPMFhd2kpLjYIIJm/7xYKMfh337s/yPIYrQ2hRt8iQ==}
+
+  '@tesseract.js-data/gla@1.0.0':
+    resolution: {integrity: sha512-R9umhRq6IaYVNtHbervG+VsHRhO4okMnPkxf+7PVpWPYdnBFA5bcaBaU8k/9TuSPbmJe7HMb58rBn9lMZtLUag==}
+
+  '@tesseract.js-data/gle@1.0.0':
+    resolution: {integrity: sha512-Zh+iFrxuxWUXjE8bKv0s9fRf/Z6QOLiAo9U3J00SQkmuXuCp0RyqklUmeWLQlpgyVIuZH6+6OFvWFbrJYhOCRw==}
+
+  '@tesseract.js-data/glg@1.0.0':
+    resolution: {integrity: sha512-xCMRkIrwGgTiUoDsv7I15KzCTFXH7MfFmeKrYbwzPfwO59Fczp8Szl7AhWl1bvit1cOzrfvhL/Ksr8G1pmnVZg==}
+
+  '@tesseract.js-data/grc@1.0.0':
+    resolution: {integrity: sha512-gtPjI20unjUAmIIDgYvmIc/cR8H9kMfmMYapa9VbDKyADOS9GAGH2Wl0abAMa/zMj8UIHerbuVOOINjNPMtg2g==}
+
+  '@tesseract.js-data/guj@1.0.0':
+    resolution: {integrity: sha512-/Ldf24kEMKeZ1h/W+F8HinqujdWMfNS8yORPm4E/zCMwkyEsod1D9ywCeaNLm/m8voDob1tdgjGuRnCiJPq3Nw==}
+
+  '@tesseract.js-data/hat@1.0.0':
+    resolution: {integrity: sha512-oDr2On6Gg+utp+ozDZ5f8QvjaUEfmiJyTaCEo1nLuIOcmxuZn0byKhkZtyf8sLtfqgvIbKvl7i1/p4DPKTAosA==}
+
+  '@tesseract.js-data/heb@1.0.0':
+    resolution: {integrity: sha512-t70MeqlBqOsf+pINWgG32gaVsXG2LUiOFMMzeJLl+bDEjRK9nXUqF/xzl37xP2IdwZcOsd6BnQRbZDN/8AAWlA==}
+
+  '@tesseract.js-data/hin@1.0.0':
+    resolution: {integrity: sha512-MB6WY6g4SAtrs+Xuyz5JDDsLFCykCwIESV7M9KkyxF71bxBqhLa8e7GJi5yGa/Wl6V4nuC7LWX/EMdSyTINTvg==}
+
+  '@tesseract.js-data/hrv@1.0.0':
+    resolution: {integrity: sha512-0qwO8Yjc1NfwjoQ7WEdBPDbKWnAitQSRALfqUQ4PuQkGG/hPmRJdO/QRR9s/OmPm2Pwo/NKdjgg41cG8HqoCxg==}
+
+  '@tesseract.js-data/hun@1.0.0':
+    resolution: {integrity: sha512-HoMZ/9ULBzp6WBFLz8H3dBfeO9OK5E5kUL17oQp9wRbslXqpYdxeXMX2WLHrdZzeuGCGu+CByoMWKkDbX+BvqQ==}
+
+  '@tesseract.js-data/hye@1.0.0':
+    resolution: {integrity: sha512-TbXSmfubE+/jWTRuJz37wNvKgIRIG/Tg/2/wyRAmKDqsTO/TFx6ifwiCcYFPwSkAsyeTKTIj7Ia58x1ywaFHEg==}
+
+  '@tesseract.js-data/iku@1.0.0':
+    resolution: {integrity: sha512-HU3w1y6Wwkz0fmLL82OUyMiODL6WSEj4RgJ1hbgdKpMqBL6IV1kNOxlyufAfkTCoP0iPvzwvPNg8KEDiB7ed3Q==}
+
+  '@tesseract.js-data/ind@1.0.0':
+    resolution: {integrity: sha512-bykwjIpoIR9jqHm+juv2FSMR8Xg3gNnAqYzu6nI01wMiTTMamyZE6r27Kvp39Mi34j9XHsvNAuKdZKzqV+YcgA==}
+
+  '@tesseract.js-data/isl@1.0.0':
+    resolution: {integrity: sha512-YbsNxZVoLseKfzHBx+wsf8EIvOaxv0FNMbIM0NP86td6+HpOoghzNgIwrg0N4GUfvuIZT5/OUdVQdqnD7TxWuA==}
+
+  '@tesseract.js-data/ita@1.0.0':
+    resolution: {integrity: sha512-Sx19NVYve5VAxEBDL6CWTX+evlvzV+iAS5ejJywcHVsmir/C9Tzw2fExoh97QFc06t48tYZA8VrMobsBzMAEhA==}
+
+  '@tesseract.js-data/ita_old@1.0.0':
+    resolution: {integrity: sha512-YJS4IGywbQ+BWkcwgpVh1dlMIuchTw7Q+gWD8TVc3R1W/2FCa8C51X5lopTCSd/OGQafIC+z03s6zn+0iTG4sA==}
+
+  '@tesseract.js-data/jav@1.0.0':
+    resolution: {integrity: sha512-JVw5JeXBIkSeMGN9Fvb8Sh9YWylAJGdKUpTF0zQUKkoLQS9paoZIG319+5UhId7uHfyvbZ2T0SBrkzOoJ3gp3A==}
+
+  '@tesseract.js-data/jpn@1.0.0':
+    resolution: {integrity: sha512-nUq2xHUjiWE6FRqkvLIIbByLZ39B8qNaBSOnVP4XIKGPKtZ1e0hiRnK7WhPfl8A+Fe7aNE1u/QoXXUym3TbSCA==}
+
+  '@tesseract.js-data/jpn_vert@1.0.0':
+    resolution: {integrity: sha512-xk3ZHTCFODXUH/QVVlOt9lAkis95muL+Fhqe4i6qWxySXuvUp3nDnG8TpzA63YI+RP//lXqbSCBizqvC2fJqoA==}
+
+  '@tesseract.js-data/kan@1.0.0':
+    resolution: {integrity: sha512-Bwr6ViJ2lhRPdJGgGQ/QeRwlyNnzo1jEAl88vm5A2lOwV3QGfJ5t2pqUBOWbnn/BnpFqkfIhxCrJ24kqoTIDQA==}
+
+  '@tesseract.js-data/kat@1.0.0':
+    resolution: {integrity: sha512-prN4hfMVr4ei226LgW+1GCfcFthPJYnGY8Uwk2uq/XdW55p233KTq4MYI+QMqloTAEWwLE1k92ro/ntM9nXO6w==}
+
+  '@tesseract.js-data/kat_old@1.0.0':
+    resolution: {integrity: sha512-cqk7zyYgjgCoywapvohFGf9qd/eA0oi3CMAL/5MXJv5Hs2W3eQIX24O0QsgEbHPEZBBQ8KNKnkymX9D6TjHpww==}
+
+  '@tesseract.js-data/kaz@1.0.0':
+    resolution: {integrity: sha512-9p8k1UV/CyoDN2XQ34JCmW9o/sYqlITJwlmDtoiu3SJv/PycXBuuqrRVFFvd1TDFPwjEMKb+Pu0lFeaT5bt/lQ==}
+
+  '@tesseract.js-data/khm@1.0.0':
+    resolution: {integrity: sha512-6en+NOFRttHFfMppP25XiSFltuClfVR1oRkj2Cq4gKaz9SvZ39GwHfEJmV245Abai55jqvszpnJxobapS1/esg==}
+
+  '@tesseract.js-data/kir@1.0.0':
+    resolution: {integrity: sha512-XlZQuMRyS3rvpws2SejMSIwOv045ZwSl9syrrDg3ti9jU3tjl9zYegripXMvBE9cId4WQcGuwJ1i0pTEzdIuNg==}
+
+  '@tesseract.js-data/kmr@1.0.0':
+    resolution: {integrity: sha512-O6WBL7vwo5qwlHAfPjJeDhUIePFJYi+ESNz2fpT2mPLCpoftWwYzia2fViWFve922jZXJ7aPoRTr/vOl2akiAg==}
+
+  '@tesseract.js-data/kor@1.0.0':
+    resolution: {integrity: sha512-tepYhsYiRJ8E44R27MHxVteEDDLfYQxuvM6u4JlEHcCYqwpefvI5TGzoMgB67kunOvtyEJYtT5zfJ/6R6FVU9w==}
+
+  '@tesseract.js-data/kor_vert@1.0.0':
+    resolution: {integrity: sha512-cc5jq+vMsygzwvlDZ+3GzbBK4Rs+3lCM9F6VnlMMI/adFxK2XcqdB5A0VNj+5sgB/iBc0FGOifGFmGvQ9zFkng==}
+
+  '@tesseract.js-data/lao@1.0.0':
+    resolution: {integrity: sha512-tTz81FmCZHSCSBFa6IGX8P1KiLcEztZWazU++7otqRR3utcD+RHWBM30xPi1QZLB8NEZ/kDDgz9Zgqcc/8uB6A==}
+
+  '@tesseract.js-data/lat@1.0.0':
+    resolution: {integrity: sha512-/X5s/z5CZqonFTbIExfzqVXOR+GB+Iw1BQb0R0ieMsb3S9UicwFYYyL1W54/yhdka8+3NXoSjIAxEFzeSLSI7w==}
+
+  '@tesseract.js-data/lav@1.0.0':
+    resolution: {integrity: sha512-HhbIyKG3BcKNBGKMNjN+fHlG1n1hWV+qCyuq9lp4vjVq50yxzX6cYyBva4jWawyAGcJNn63gGPp+snrtY5cfNQ==}
+
+  '@tesseract.js-data/lit@1.0.0':
+    resolution: {integrity: sha512-HJBugoUf+R4EBIoLlIVn0Tihh5TSR7z+mQIQEV204RGjzTtgEQqgoP1jhnvYKagfuGOBRnTe1dsT2ZUnClF6nQ==}
+
+  '@tesseract.js-data/ltz@1.0.0':
+    resolution: {integrity: sha512-oNHY+YfJp3g67DPKZQzTE+MDZqzeZT0Z7bkOtjwek1V2VYsBZSoKaTh857O0bH6NDDMbV/X+713evy4rdjaEPQ==}
+
+  '@tesseract.js-data/mal@1.0.0':
+    resolution: {integrity: sha512-2Eexiato+FPzJDNYVctwzXv51nl0EmJtNqe979RuXxsepz75sksng1xjNER0qgIFxvV/xaV5c7KMMpStj4K+AQ==}
+
+  '@tesseract.js-data/mar@1.0.0':
+    resolution: {integrity: sha512-3B83EhpgASO72vWSCqVUWDscEeN5e1vGEEeVrm2HNvu7k7yG/zNK6LRy8T9XlBd5aT7S69vOoHPz7dBcEzXmyQ==}
+
+  '@tesseract.js-data/mkd@1.0.0':
+    resolution: {integrity: sha512-TbtdFVhCT1UBc4k6XU6WbFopvluIoNR0TdGvMwPrHlYvNfpcPWvpY3dNzKkJaDixZk0FW+zsKbKh+KBQhPLxvA==}
+
+  '@tesseract.js-data/mlt@1.0.0':
+    resolution: {integrity: sha512-WHzmVXqTuDXjITxpCV5SLzXzNkyuAhtzk+V59n4CwQ7FDbs3izqk9kvvRQq39De01is4Aw0jFhY5cZjyOj2YvQ==}
+
+  '@tesseract.js-data/mon@1.0.0':
+    resolution: {integrity: sha512-kleQBwhxH7FDpoqO+kZVmTFCOS+/Ml36aEcOH2WETqAiAsyUc0y08IXSFbKgJVGdxE2JrhI+jDiEH9t/4VYubA==}
+
+  '@tesseract.js-data/mri@1.0.0':
+    resolution: {integrity: sha512-ktv+fLYBVTsWQDX8R5OcgYXG1CEB32OqAjzJbzKg8zFZik+luPlaOuHYJm1a83ZOwiwD3ThuNs1u056TEzSNlQ==}
+
+  '@tesseract.js-data/msa@1.0.0':
+    resolution: {integrity: sha512-cbsAdIO+rkDcqFE2lOm22v9i9fuYAaVWq3MfMNpTpP5Nt8Exd9AMkl0uCMc1MJXN7dYSxAB8hP7XwH6cE7vucg==}
+
+  '@tesseract.js-data/mya@1.0.0':
+    resolution: {integrity: sha512-UXa1/jp34X2OQQWlexWUTCo6T0CpKCIm0TGA3td54InqEmPDVFgCwZfyZ7iKRxbXQKX5uPhnVbv62iUOOSG9+w==}
+
+  '@tesseract.js-data/nep@1.0.0':
+    resolution: {integrity: sha512-lALdgtijuk+vi0youLJAP/xQAEbrI8vPGVZ/+em//VoAccwM3ANzuReDK2b8ifL1NltXdmQgI5jkzH0vrA+glQ==}
+
+  '@tesseract.js-data/nld@1.0.0':
+    resolution: {integrity: sha512-Fq9TDxewYAw3YBLqLYEu3rziNUHq0F1NnnM49vI0E5o6S2oKcirhTumGvv8ws088+li1llyKXT9nfrHuxxetHQ==}
+
+  '@tesseract.js-data/nor@1.0.0':
+    resolution: {integrity: sha512-UYIAl2T2g9Nha+uKQie4uE4zGN1a/sbs4sddsH3Ao54BguKyGbSBz4pBG/+zZY2Lnre3/z/z3d9RiVL6DVKvPw==}
+
+  '@tesseract.js-data/oci@1.0.0':
+    resolution: {integrity: sha512-DWCfhu0FffQKUmPawp8Mv6a1eXaQ/cnSOXhSL/CHnar8O4V/Om01ZTeVCKPwplh4rxVp5YqGHtkDPv+Fa6nV0A==}
+
+  '@tesseract.js-data/ori@1.0.0':
+    resolution: {integrity: sha512-tOcw3LLlxPpKqtGrsqDnXrz2kuVm5gXNbGX7NeycVzid/5VjIm08e9SJrZUJ6el0+f+OzOGu/ViVDEzZc58/sg==}
+
+  '@tesseract.js-data/pan@1.0.0':
+    resolution: {integrity: sha512-Ta6T8XrXldXxxDq+xQpUKMKsaY9Z14WSbrD1JMoHjQu3ys7+2xJYXtDUWwxe3y3RoifJ+dWXp30q+k6C97pCkw==}
+
+  '@tesseract.js-data/pol@1.0.0':
+    resolution: {integrity: sha512-e9naSi/5kIXIMsymriFMUXJ2XWxRY/09qU9pkmEN28nAeMyF70EYkn4G3iHoB2oF/HNhZpy8lCIe1/I2L/BqKA==}
+
+  '@tesseract.js-data/por@1.0.0':
+    resolution: {integrity: sha512-sQ7GqYUgKaMmV0vNujYoXLlXUp2e5RGGkJxQ3L59kUOaupIugLJeb1dqhrfgyb71XQw7ltdSuXdQIoaoS/rpsQ==}
+
+  '@tesseract.js-data/pus@1.0.0':
+    resolution: {integrity: sha512-Kx3IOHB6rx6+N4DgOtOmQprysi4Ogkqp9H4/Lm3ZMK4G+L+tNYceMbTX883p5hl+IJlb2bYBXwFGgSdGVUurKA==}
+
+  '@tesseract.js-data/que@1.0.0':
+    resolution: {integrity: sha512-Kpz9IlajYO5Eawdc6++YoMY5eWPjOD/FsLrcD9pmIDXeGUFsUwO/NqXZGz8lOE47BtRtE+cIv9ruq4Obvs8Ldw==}
+
+  '@tesseract.js-data/ron@1.0.0':
+    resolution: {integrity: sha512-UdjCzTs3prY8J5CrCV3tPteGx8aE3TNMypYCtAy5vv4Yc4NlwYQaoDHY87Mo8ORcbAFec6ipRjN63usyuQIH6g==}
+
+  '@tesseract.js-data/rus@1.0.0':
+    resolution: {integrity: sha512-GVOaLultru90gsuVGjXyPCKsg4SMeExnqSnzb8Gb+9zZ0F4wbA6bgWu/metQlcmU7OwTnYVd4UdSH9D4yBMZEA==}
+
+  '@tesseract.js-data/san@1.0.0':
+    resolution: {integrity: sha512-SXbB1QEy3SyBJT3gKI976GCHZwkU8d6cHFcZqdd1ejg1yHEJmC2PwdZDAs+MjK17XNPfttRPGUwXgPpXXCyHqA==}
+
+  '@tesseract.js-data/sin@1.0.0':
+    resolution: {integrity: sha512-EtduTjzJzg/bKyoiRamh+QMsgYyiyYWYQadnrUJaWiN8UmTypS6qaI3H0uza1Jyq96PZTqEaam8dcpXHBq/S1Q==}
+
+  '@tesseract.js-data/slk@1.0.0':
+    resolution: {integrity: sha512-F6iaXlIUkqW+FRV6O/HUOPw5jMAs/Z73zq4XqgHls+6V/f6E/8QgzRu9dn+hlEm4VuxNdiL0qSuJLtqQVBkGzA==}
+
+  '@tesseract.js-data/slv@1.0.0':
+    resolution: {integrity: sha512-g/luF3uJ8RbSiJTJDkKMCSUDvsDMXXd1MPLx4bC28wTVXN2pQqA9TI+Xajas1mytrDZ5J2ceCt5ihMFP7RStIA==}
+
+  '@tesseract.js-data/snd@1.0.0':
+    resolution: {integrity: sha512-NpSM/xJOYNVKcI2Ly75UzvHK3LVIAIebwWtWJw9AdSv1MWt3rnbNU1MzavFIbq15CX+aTwHms4IXTTmBMTonZw==}
+
+  '@tesseract.js-data/spa@1.0.0':
+    resolution: {integrity: sha512-9Ln+QKq/TNu4Hy4aOp5b4nXo9U0C6IqJMzNDpAJZe/fNtz6jXG9G/hQgR/Irxj+RGf0M7Xy1MNx1yl4wQUIfeg==}
+
+  '@tesseract.js-data/spa_old@1.0.0':
+    resolution: {integrity: sha512-/LJcSjyL8uqesg2DA8zhpLOH7SsAK2U3qDoqD+5lGqfWXcAaoDxoKUpXkLQB5zxO1q9FoFsb/jxv2NY8+SLibA==}
+
+  '@tesseract.js-data/sqi@1.0.0':
+    resolution: {integrity: sha512-PVRpyAn6043x4mmc057cRib7iyzJ0gkCei38IZgwudQJDTlKfm3v0bQSuDsI3H2mgD0mYsm3L9AEUXXfC/UnpQ==}
+
+  '@tesseract.js-data/srp@1.0.0':
+    resolution: {integrity: sha512-C2gHOvXDTJ+Dy/q8w9VCUkg+KBc50hCbjv/1ksssoVjd7sdy56vviTzEqc5YZKPvYD81x/SeGP87xmIUtDpNyg==}
+
+  '@tesseract.js-data/srp_latn@1.0.0':
+    resolution: {integrity: sha512-wlx5KEuIFRpz2MM+gcMZl9IZa3RYzVbZgcZc01XW+gNcjO06UKA+M8y6EN7fhuosSoO4eQDsTTvTtTAot6j+sw==}
+
+  '@tesseract.js-data/sun@1.0.0':
+    resolution: {integrity: sha512-2uvpBcKKCdGr0hj3DnHRFFKBFLZmJw+cA1eoF7u/gINuS187jxTgfZ19k15IArsQnHC8Qbp/+BkIBPTvaXCVsw==}
+
+  '@tesseract.js-data/swa@1.0.0':
+    resolution: {integrity: sha512-fjBWuw3eSgJxU44j8gx89DGAYd9iifUbRNVcd1uCduGm/fZMXcOatBieI5OKF8kxUEkWuQ8707bQXdT2yTE96g==}
+
+  '@tesseract.js-data/swe@1.0.0':
+    resolution: {integrity: sha512-9BRWhTs8THTaBtFNvaTSZbL8gb14CH86TsdNjpDVBgm4kOS5RW8V6xfM91SEho4rlxyzAJPA909GRD1xsJbyJg==}
+
+  '@tesseract.js-data/syr@1.0.0':
+    resolution: {integrity: sha512-imNSUNy2+lXxgrc3AFckNNMipjyzJBNDtx1PLHPqk8O0SPbROxB3gbbFIu4wnNml8Cm6OTke6qTJc7WFJa0a+Q==}
+
+  '@tesseract.js-data/tam@1.0.0':
+    resolution: {integrity: sha512-WzseHnA88dfhrGZJ8DWHc2+o3l3L+yA/LTAGHPrpgIUD1I24kfd9dhQ+s8CvxLxa1awr7fdncUsQIqo0p+HRnQ==}
+
+  '@tesseract.js-data/tat@1.0.0':
+    resolution: {integrity: sha512-HYUOfxiOg92CYT8DY4lE9Xatm3YkBe/VXvf81Gsl8lQRhp2P8tM7+GcuHDWqAYoPOlUzhXbU/FTYbBQfBxH/+g==}
+
+  '@tesseract.js-data/tel@1.0.0':
+    resolution: {integrity: sha512-mAVHC7M5ZSK+NxC3dvdB6hFf6tAZBU/EU+QOcse1lDm4ca19Sro7flYpXpSNIXujow/jwPUWY4xpbH2Fm3rIUg==}
+
+  '@tesseract.js-data/tgk@1.0.0':
+    resolution: {integrity: sha512-qtvQLu/pVq7FNCyx0f+UnwaTEQD3Kpnvy+ldYMPqh0vJOOQhn9Y0y/zqSVIkH+QH49pcYkcSueKtHiyc7Yp7Iw==}
+
+  '@tesseract.js-data/tha@1.0.0':
+    resolution: {integrity: sha512-0OzEL5P9b0PLukjrUbQUJFWC41V6Ti/Cxgm7pFJ6btk3IPS3EZc2PPjji7eFzbc/Zf7LDKxkzvlW1nd0NmrEug==}
+
+  '@tesseract.js-data/tir@1.0.0':
+    resolution: {integrity: sha512-7qOdoCQCHI0G2m+5Oa58OALfH2KJ8NGO/i1Vo36ju62orLp+CiKVNGdDdxceBwr6NOox6xhXFoI7br7tqTqe3g==}
+
+  '@tesseract.js-data/ton@1.0.0':
+    resolution: {integrity: sha512-0l9H1L5RULIMZ05J2KRtYg4YB4mevQyNFxvcPzjg3GPArypllRUSNsuqCnG7/IlT6bIF82j3E7UeWfVsFR+DBA==}
+
+  '@tesseract.js-data/tur@1.0.0':
+    resolution: {integrity: sha512-510AUJda8BsgrTchfIIH1uV1wfYp28+PLy74sxSQiHM0sLv9kjbNyooxUCo/R4TOjLQY0fXQ2QWwozWlSlXrkw==}
+
+  '@tesseract.js-data/uig@1.0.0':
+    resolution: {integrity: sha512-CWb7VzJ7fYMddbYn72DTWS/iXAG0V1qLeYe8OQ+Rk3I6tm4z9BOe52wDEYN8idFRwpoxQOBDOSpBmwTUtHZpmg==}
+
+  '@tesseract.js-data/ukr@1.0.0':
+    resolution: {integrity: sha512-W/i5g9xbyBHJxklEb0mU2iLENBzU9CgXk1LVg82aQ95IaRwNFjY1z5y0vMcydEHQLx/TeawGrHiqlWoyXWCDzA==}
+
+  '@tesseract.js-data/urd@1.0.0':
+    resolution: {integrity: sha512-+a8CpG65EGXRGAu4+JXCF4jQPw40a2y9D9uiPebV8ZA8ViuHg0QVt5wETfVqLAgqqpyL/kQxjRTJwx3sJolEkg==}
+
+  '@tesseract.js-data/uzb@1.0.0':
+    resolution: {integrity: sha512-+o3iHI8avPqcu3I6CrPMulycnqGEckeTvKvycs1Ps90QFoyUqqzFjvaDSmWRBpfbEDSOACb1ToigkDDQHfM5iw==}
+
+  '@tesseract.js-data/uzb_cyrl@1.0.0':
+    resolution: {integrity: sha512-HSkZZLIDWY9X6K3czlkwZbJdfExoZgucWciCaPiDCDivDwHYgslyhZkJwzqPePpTUaWVgJg/SlwFtCn8JTkfaw==}
+
+  '@tesseract.js-data/vie@1.0.0':
+    resolution: {integrity: sha512-hFxBtxSiCw6+64uxf0psrlLvcYA5kQimYhTSx1RwjbD5jSxe1bWg3EmipAozkzELQIFAMkJC5vu+ONGRem7YLA==}
+
+  '@tesseract.js-data/yid@1.0.0':
+    resolution: {integrity: sha512-1Ep6evcYexO0SYdoC6jMsvTfQeILPComAPvPrXvAP8iNvY8t80UXWnY/KBxM6JGLhcnwglPqTZkduQFv9a/SGA==}
+
+  '@tesseract.js-data/yor@1.0.0':
+    resolution: {integrity: sha512-5Ob7XZzWpuvaRRX/rGdorl1CuSvEF+ZL68CKUxV2TU0dwwnlsxpJd9WdHpnJ69HFWwMamMWmFwvU4SLIIGv8Cw==}
+
   '@testing-library/dom@10.4.2':
     resolution: {integrity: sha512-yzr2S9HyAIdhz2/6qHgbs665Q7PKVcDF05vsOlHPxG1mo36gKVesdYVeDLnXgfjJ03CrKRk08knc6+E/9m8v2Q==}
     engines: {node: '>=18'}
@@ -14663,6 +15816,9 @@ packages:
 
   blakejs@1.2.1:
     resolution: {integrity: sha512-QXUSXI3QVc/gJME0dBpXrag1kbzOqCjCX8/b54ntNyW6sjtoqxqRk3LTmXzaJoh71zMsDCjM+47jS7XiwN/+fQ==}
+
+  bmp-js@0.1.0:
+    resolution: {integrity: sha512-vHdS19CnY3hwiNdkaqk93DvjVLfbEcI8mys4UjuWrlX1haDmroo8o4xCzh4wD6DGV6HxRCyauwhHRqMTfERtjw==}
 
   body-parser@1.20.9:
     resolution: {integrity: sha512-FISIQxV5u91Y9gvuFq3q/tA/qTqLJn3AhRcEvyozyhJTh5OBFFtv827AdHU7Rbyct4r+Ba1/99oFa1Y3yuFsdw==}
@@ -15694,6 +16850,9 @@ packages:
     resolution: {integrity: sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==}
     engines: {node: '>=0.10.0'}
 
+  idb-keyval@6.3.0:
+    resolution: {integrity: sha512-um+2dgAWmYsu615EXpWVwSmapJhON0G43t3Ka/EVaohzPQXSMqKEqeDK/oIW3Ow+BXaF2PvSc+oBTFp793A5Ow==}
+
   idb@7.1.1:
     resolution: {integrity: sha512-gchesWBzyvGHRO9W8tzUWFDycow5gwjvFKfyV9FF32Y7F50yZMp7mP+T2mJIWFx49zicqyC4uefHM17o6xKIVQ==}
 
@@ -15884,6 +17043,9 @@ packages:
   is-unicode-supported@2.1.0:
     resolution: {integrity: sha512-mE00Gnza5EEB3Ds0HfMyllZzbBrmLOX3vfWoj9A9PEnTfratQ/BcaJOuMhnkhjXvb2+FkY3VuHqtAGpTPmglFQ==}
     engines: {node: '>=18'}
+
+  is-url@1.2.4:
+    resolution: {integrity: sha512-ITvGim8FhRiYe4IQ5uHSkj7pVaPDrCTkNd3yq3cV7iZAcJdHTUMPMEHcqSOy9xZ9qFenQCvi+2wjH9a1nXqHww==}
 
   is-wsl@2.2.0:
     resolution: {integrity: sha512-fKzAra0rGJUUBwGBgNkHZuToZcn+TtXHpeCgmkMJMMYx1sQDYaCSyjJBSCa2nH1DGm7s3n1oBnohoVTBaN7Lww==}
@@ -16465,6 +17627,10 @@ packages:
     hasBin: true
     peerDependencies:
       typescript: ^5.x
+
+  opencollective-postinstall@2.0.3:
+    resolution: {integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==}
+    hasBin: true
 
   openpgp@6.3.2:
     resolution: {integrity: sha512-wcZTzHz41LV8Y48zH/JlD1JT8YdNmpWOuMAjQ/podvvCwsjBEU37K3znJh4UQcj3hksE5z9TzvhbUbwzsGvlLQ==}
@@ -17250,6 +18416,12 @@ packages:
   tapable@2.3.4:
     resolution: {integrity: sha512-NHFiWnAbMJxNNpBwiO7jJVGDuqMxT9/oV8v57RR+fgBQShkJil5inGD8/xWy0hjLyHQyX1tu27QANhlz3KBqCg==}
     engines: {node: '>=6'}
+
+  tesseract.js-core@7.0.0:
+    resolution: {integrity: sha512-WnNH518NzmbSq9zgTPeoF8c+xmilS8rFIl1YKbk/ptuuc7p6cLNELNuPAzcmsYw450ca6bLa8j3t0VAtq435Vw==}
+
+  tesseract.js@7.0.0:
+    resolution: {integrity: sha512-exPBkd+z+wM1BuMkx/Bjv43OeLBxhL5kKWsz/9JY+DXcXdiBjiAch0V49QR3oAJqCaL5qURE0vx9Eo+G5YE7mA==}
 
   text-segmentation@1.0.3:
     resolution: {integrity: sha512-iOiPUo/BGnZ6+54OsWxZidGCsdU8YbE4PSpdPinp7DeMtUJNJBoJ/ouUSTJjHkh1KntHaltHl/gDs2FC4i5+Nw==}
@@ -18062,6 +19234,9 @@ packages:
   zimmerframe@1.1.5:
     resolution: {integrity: sha512-msJxIvYDYcoNL+PJsu+7qmpDWsYmAxTY+2TNYXXF0hzBzBk0BMecOqDOG/EckUoKCuKwObfbugIl8QpqHDXeFA==}
 
+  zlibjs@0.3.1:
+    resolution: {integrity: sha512-+J9RrgTKOmlxFSDHo0pI1xM6BLVUv+o0ZT9ANtCxGkjIVCCUdx9alUF8Gm+dGLKbkkkidWIHFDZHDMpfITt4+w==}
+
   zod@4.6.7:
     resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
 
@@ -18186,11 +19361,11 @@ snapshots:
       github-slugger: 2.0.0
       satteri: 0.11.7
 
-  '@astrojs/mdx@8.1.6(@astrojs/markdown-satteri@0.4.10)(astro@7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))':
+  '@astrojs/mdx@8.1.6(@astrojs/markdown-satteri@0.4.10)(astro@7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))':
     dependencies:
       '@astrojs/internal-helpers': 0.13.2
       '@astrojs/markdown-satteri': 0.4.10
-      astro: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
+      astro: 7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       es-module-lexer: 3.0.4
 
   '@astrojs/prism@4.1.2':
@@ -20761,6 +21936,252 @@ snapshots:
       tailwindcss: 4.3.5
       vite: 8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
 
+  '@tesseract.js-data/afr@1.0.0': {}
+
+  '@tesseract.js-data/amh@1.0.0': {}
+
+  '@tesseract.js-data/ara@1.0.0': {}
+
+  '@tesseract.js-data/asm@1.0.0': {}
+
+  '@tesseract.js-data/aze@1.0.0': {}
+
+  '@tesseract.js-data/aze_cyrl@1.0.0': {}
+
+  '@tesseract.js-data/bel@1.0.0': {}
+
+  '@tesseract.js-data/ben@1.0.0': {}
+
+  '@tesseract.js-data/bod@1.0.0': {}
+
+  '@tesseract.js-data/bos@1.0.0': {}
+
+  '@tesseract.js-data/bre@1.0.0': {}
+
+  '@tesseract.js-data/bul@1.0.0': {}
+
+  '@tesseract.js-data/cat@1.0.0': {}
+
+  '@tesseract.js-data/ceb@1.0.0': {}
+
+  '@tesseract.js-data/ces@1.0.0': {}
+
+  '@tesseract.js-data/chi_sim@1.0.0': {}
+
+  '@tesseract.js-data/chi_sim_vert@1.0.0': {}
+
+  '@tesseract.js-data/chi_tra@1.0.0': {}
+
+  '@tesseract.js-data/chi_tra_vert@1.0.0': {}
+
+  '@tesseract.js-data/chr@1.0.0': {}
+
+  '@tesseract.js-data/cos@1.0.0': {}
+
+  '@tesseract.js-data/cym@1.0.0': {}
+
+  '@tesseract.js-data/dan@1.0.0': {}
+
+  '@tesseract.js-data/deu@1.0.0': {}
+
+  '@tesseract.js-data/div@1.0.0': {}
+
+  '@tesseract.js-data/dzo@1.0.0': {}
+
+  '@tesseract.js-data/ell@1.0.0': {}
+
+  '@tesseract.js-data/eng@1.0.0': {}
+
+  '@tesseract.js-data/enm@1.0.0': {}
+
+  '@tesseract.js-data/epo@1.0.0': {}
+
+  '@tesseract.js-data/est@1.0.0': {}
+
+  '@tesseract.js-data/eus@1.0.0': {}
+
+  '@tesseract.js-data/fao@1.0.0': {}
+
+  '@tesseract.js-data/fas@1.0.0': {}
+
+  '@tesseract.js-data/fil@1.0.0': {}
+
+  '@tesseract.js-data/fin@1.0.0': {}
+
+  '@tesseract.js-data/fra@1.0.0': {}
+
+  '@tesseract.js-data/frk@1.0.0': {}
+
+  '@tesseract.js-data/frm@1.0.0': {}
+
+  '@tesseract.js-data/fry@1.0.0': {}
+
+  '@tesseract.js-data/gla@1.0.0': {}
+
+  '@tesseract.js-data/gle@1.0.0': {}
+
+  '@tesseract.js-data/glg@1.0.0': {}
+
+  '@tesseract.js-data/grc@1.0.0': {}
+
+  '@tesseract.js-data/guj@1.0.0': {}
+
+  '@tesseract.js-data/hat@1.0.0': {}
+
+  '@tesseract.js-data/heb@1.0.0': {}
+
+  '@tesseract.js-data/hin@1.0.0': {}
+
+  '@tesseract.js-data/hrv@1.0.0': {}
+
+  '@tesseract.js-data/hun@1.0.0': {}
+
+  '@tesseract.js-data/hye@1.0.0': {}
+
+  '@tesseract.js-data/iku@1.0.0': {}
+
+  '@tesseract.js-data/ind@1.0.0': {}
+
+  '@tesseract.js-data/isl@1.0.0': {}
+
+  '@tesseract.js-data/ita@1.0.0': {}
+
+  '@tesseract.js-data/ita_old@1.0.0': {}
+
+  '@tesseract.js-data/jav@1.0.0': {}
+
+  '@tesseract.js-data/jpn@1.0.0': {}
+
+  '@tesseract.js-data/jpn_vert@1.0.0': {}
+
+  '@tesseract.js-data/kan@1.0.0': {}
+
+  '@tesseract.js-data/kat@1.0.0': {}
+
+  '@tesseract.js-data/kat_old@1.0.0': {}
+
+  '@tesseract.js-data/kaz@1.0.0': {}
+
+  '@tesseract.js-data/khm@1.0.0': {}
+
+  '@tesseract.js-data/kir@1.0.0': {}
+
+  '@tesseract.js-data/kmr@1.0.0': {}
+
+  '@tesseract.js-data/kor@1.0.0': {}
+
+  '@tesseract.js-data/kor_vert@1.0.0': {}
+
+  '@tesseract.js-data/lao@1.0.0': {}
+
+  '@tesseract.js-data/lat@1.0.0': {}
+
+  '@tesseract.js-data/lav@1.0.0': {}
+
+  '@tesseract.js-data/lit@1.0.0': {}
+
+  '@tesseract.js-data/ltz@1.0.0': {}
+
+  '@tesseract.js-data/mal@1.0.0': {}
+
+  '@tesseract.js-data/mar@1.0.0': {}
+
+  '@tesseract.js-data/mkd@1.0.0': {}
+
+  '@tesseract.js-data/mlt@1.0.0': {}
+
+  '@tesseract.js-data/mon@1.0.0': {}
+
+  '@tesseract.js-data/mri@1.0.0': {}
+
+  '@tesseract.js-data/msa@1.0.0': {}
+
+  '@tesseract.js-data/mya@1.0.0': {}
+
+  '@tesseract.js-data/nep@1.0.0': {}
+
+  '@tesseract.js-data/nld@1.0.0': {}
+
+  '@tesseract.js-data/nor@1.0.0': {}
+
+  '@tesseract.js-data/oci@1.0.0': {}
+
+  '@tesseract.js-data/ori@1.0.0': {}
+
+  '@tesseract.js-data/pan@1.0.0': {}
+
+  '@tesseract.js-data/pol@1.0.0': {}
+
+  '@tesseract.js-data/por@1.0.0': {}
+
+  '@tesseract.js-data/pus@1.0.0': {}
+
+  '@tesseract.js-data/que@1.0.0': {}
+
+  '@tesseract.js-data/ron@1.0.0': {}
+
+  '@tesseract.js-data/rus@1.0.0': {}
+
+  '@tesseract.js-data/san@1.0.0': {}
+
+  '@tesseract.js-data/sin@1.0.0': {}
+
+  '@tesseract.js-data/slk@1.0.0': {}
+
+  '@tesseract.js-data/slv@1.0.0': {}
+
+  '@tesseract.js-data/snd@1.0.0': {}
+
+  '@tesseract.js-data/spa@1.0.0': {}
+
+  '@tesseract.js-data/spa_old@1.0.0': {}
+
+  '@tesseract.js-data/sqi@1.0.0': {}
+
+  '@tesseract.js-data/srp@1.0.0': {}
+
+  '@tesseract.js-data/srp_latn@1.0.0': {}
+
+  '@tesseract.js-data/sun@1.0.0': {}
+
+  '@tesseract.js-data/swa@1.0.0': {}
+
+  '@tesseract.js-data/swe@1.0.0': {}
+
+  '@tesseract.js-data/syr@1.0.0': {}
+
+  '@tesseract.js-data/tam@1.0.0': {}
+
+  '@tesseract.js-data/tat@1.0.0': {}
+
+  '@tesseract.js-data/tel@1.0.0': {}
+
+  '@tesseract.js-data/tgk@1.0.0': {}
+
+  '@tesseract.js-data/tha@1.0.0': {}
+
+  '@tesseract.js-data/tir@1.0.0': {}
+
+  '@tesseract.js-data/ton@1.0.0': {}
+
+  '@tesseract.js-data/tur@1.0.0': {}
+
+  '@tesseract.js-data/uig@1.0.0': {}
+
+  '@tesseract.js-data/ukr@1.0.0': {}
+
+  '@tesseract.js-data/urd@1.0.0': {}
+
+  '@tesseract.js-data/uzb@1.0.0': {}
+
+  '@tesseract.js-data/uzb_cyrl@1.0.0': {}
+
+  '@tesseract.js-data/vie@1.0.0': {}
+
+  '@tesseract.js-data/yid@1.0.0': {}
+
+  '@tesseract.js-data/yor@1.0.0': {}
+
   '@testing-library/dom@10.4.2':
     dependencies:
       '@babel/code-frame': 7.29.7
@@ -21156,7 +22577,7 @@ snapshots:
       estree-walker: 3.0.3
       js-tokens: 10.0.0
 
-  astro@7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.8.3):
+  astro@7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.8.3):
     dependencies:
       '@astrojs/compiler-rs': 0.5.3
       '@astrojs/internal-helpers': 0.13.2
@@ -21204,7 +22625,7 @@ snapshots:
       tinyps: 0.5.2
       ultrahtml: 1.7.0
       unifont: 1.0.3
-      unstorage: 1.17.6
+      unstorage: 1.17.6(idb-keyval@6.3.0)
       verkit: 0.5.0
       vite: 8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.8.3)
       vitefu: 1.1.3(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.8.3))
@@ -21245,7 +22666,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1):
+  astro@7.4.12(@types/node@26.6.6)(esbuild@0.28.2)(idb-keyval@6.3.0)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1):
     dependencies:
       '@astrojs/compiler-rs': 0.5.3
       '@astrojs/internal-helpers': 0.13.2
@@ -21293,7 +22714,7 @@ snapshots:
       tinyps: 0.5.2
       ultrahtml: 1.7.0
       unifont: 1.0.3
-      unstorage: 1.17.6
+      unstorage: 1.17.6(idb-keyval@6.3.0)
       verkit: 0.5.0
       vite: 8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1)
       vitefu: 1.1.3(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
@@ -21384,6 +22805,8 @@ snapshots:
   blake3-wasm@2.1.5: {}
 
   blakejs@1.2.1: {}
+
+  bmp-js@0.1.0: {}
 
   body-parser@1.20.9(supports-color@10.2.2):
     dependencies:
@@ -22486,6 +23909,8 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
+  idb-keyval@6.3.0: {}
+
   idb@7.1.1: {}
 
   ieee754@1.2.1: {}
@@ -22631,6 +24056,8 @@ snapshots:
   is-unicode-supported@1.3.0: {}
 
   is-unicode-supported@2.1.0: {}
+
+  is-url@1.2.4: {}
 
   is-wsl@2.2.0:
     dependencies:
@@ -23179,6 +24606,8 @@ snapshots:
       supports-color: 10.2.2
       typescript: 5.9.3
       yargs-parser: 21.1.1
+
+  opencollective-postinstall@2.0.3: {}
 
   openpgp@6.3.2: {}
 
@@ -24181,6 +25610,22 @@ snapshots:
 
   tapable@2.3.4: {}
 
+  tesseract.js-core@7.0.0: {}
+
+  tesseract.js@7.0.0:
+    dependencies:
+      bmp-js: 0.1.0
+      idb-keyval: 6.3.0
+      is-url: 1.2.4
+      node-fetch: 2.7.0
+      opencollective-postinstall: 2.0.3
+      regenerator-runtime: 0.13.11
+      tesseract.js-core: 7.0.0
+      wasm-feature-detect: 1.10.1
+      zlibjs: 0.3.1
+    transitivePeerDependencies:
+      - encoding
+
   text-segmentation@1.0.3:
     dependencies:
       utrie: 1.0.2
@@ -24407,7 +25852,7 @@ snapshots:
 
   unpipe@1.0.0: {}
 
-  unstorage@1.17.6:
+  unstorage@1.17.6(idb-keyval@6.3.0):
     dependencies:
       anymatch: 3.1.3
       chokidar: 5.0.0
@@ -24417,6 +25862,8 @@ snapshots:
       node-fetch-native: 1.6.7
       ofetch: 1.5.1
       ufo: 1.6.4
+    optionalDependencies:
+      idb-keyval: 6.3.0
 
   update-browserslist-db@1.3.4(browserslist@4.29.5):
     dependencies:
@@ -24887,6 +26334,8 @@ snapshots:
       youch-core: 0.3.3
 
   zimmerframe@1.1.5: {}
+
+  zlibjs@0.3.1: {}
 
   zod@4.6.7: {}
 

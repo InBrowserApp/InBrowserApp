@@ -654,6 +654,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Chuyển ảnh thành văn bản (OCR)",
+    slug: "image-to-text-converter",
+  },
+  {
+    category: "image",
     name: "Bộ chuyển đổi ảnh sang WebP",
     slug: "image-to-webp-converter",
   },

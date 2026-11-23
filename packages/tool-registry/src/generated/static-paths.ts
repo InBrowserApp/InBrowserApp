@@ -11962,6 +11962,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "image-to-text-converter",
+    language: "ar",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "de",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "en",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "es",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "fr",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "he",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "hi",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "id",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "it",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "ja",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "ko",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "ms",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "nl",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "no",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "pl",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "pt",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "ru",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "sv",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "th",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "tr",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "vi",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "image-to-text-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "image-to-webp-converter",
     language: "ar",
   },

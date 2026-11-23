@@ -13,6 +13,131 @@ catalog:
   "@citation-js/plugin-bibtex": 0.9.0
   "@citation-js/plugin-ris": 0.9.0
   mediabunny: 1.66.0
+  tesseract.js: 7.0.0
+  tesseract.js-core: 7.0.0
+  "@tesseract.js-data/afr": 1.0.0
+  "@tesseract.js-data/amh": 1.0.0
+  "@tesseract.js-data/ara": 1.0.0
+  "@tesseract.js-data/asm": 1.0.0
+  "@tesseract.js-data/aze": 1.0.0
+  "@tesseract.js-data/aze_cyrl": 1.0.0
+  "@tesseract.js-data/bel": 1.0.0
+  "@tesseract.js-data/ben": 1.0.0
+  "@tesseract.js-data/bod": 1.0.0
+  "@tesseract.js-data/bos": 1.0.0
+  "@tesseract.js-data/bre": 1.0.0
+  "@tesseract.js-data/bul": 1.0.0
+  "@tesseract.js-data/cat": 1.0.0
+  "@tesseract.js-data/ceb": 1.0.0
+  "@tesseract.js-data/ces": 1.0.0
+  "@tesseract.js-data/chi_sim": 1.0.0
+  "@tesseract.js-data/chi_sim_vert": 1.0.0
+  "@tesseract.js-data/chi_tra": 1.0.0
+  "@tesseract.js-data/chi_tra_vert": 1.0.0
+  "@tesseract.js-data/chr": 1.0.0
+  "@tesseract.js-data/cos": 1.0.0
+  "@tesseract.js-data/cym": 1.0.0
+  "@tesseract.js-data/dan": 1.0.0
+  "@tesseract.js-data/deu": 1.0.0
+  "@tesseract.js-data/div": 1.0.0
+  "@tesseract.js-data/dzo": 1.0.0
+  "@tesseract.js-data/ell": 1.0.0
+  "@tesseract.js-data/eng": 1.0.0
+  "@tesseract.js-data/enm": 1.0.0
+  "@tesseract.js-data/epo": 1.0.0
+  "@tesseract.js-data/est": 1.0.0
+  "@tesseract.js-data/eus": 1.0.0
+  "@tesseract.js-data/fao": 1.0.0
+  "@tesseract.js-data/fas": 1.0.0
+  "@tesseract.js-data/fil": 1.0.0
+  "@tesseract.js-data/fin": 1.0.0
+  "@tesseract.js-data/fra": 1.0.0
+  "@tesseract.js-data/frk": 1.0.0
+  "@tesseract.js-data/frm": 1.0.0
+  "@tesseract.js-data/fry": 1.0.0
+  "@tesseract.js-data/gla": 1.0.0
+  "@tesseract.js-data/gle": 1.0.0
+  "@tesseract.js-data/glg": 1.0.0
+  "@tesseract.js-data/grc": 1.0.0
+  "@tesseract.js-data/guj": 1.0.0
+  "@tesseract.js-data/hat": 1.0.0
+  "@tesseract.js-data/heb": 1.0.0
+  "@tesseract.js-data/hin": 1.0.0
+  "@tesseract.js-data/hrv": 1.0.0
+  "@tesseract.js-data/hun": 1.0.0
+  "@tesseract.js-data/hye": 1.0.0
+  "@tesseract.js-data/iku": 1.0.0
+  "@tesseract.js-data/ind": 1.0.0
+  "@tesseract.js-data/isl": 1.0.0
+  "@tesseract.js-data/ita": 1.0.0
+  "@tesseract.js-data/ita_old": 1.0.0
+  "@tesseract.js-data/jav": 1.0.0
+  "@tesseract.js-data/jpn": 1.0.0
+  "@tesseract.js-data/jpn_vert": 1.0.0
+  "@tesseract.js-data/kan": 1.0.0
+  "@tesseract.js-data/kat": 1.0.0
+  "@tesseract.js-data/kat_old": 1.0.0
+  "@tesseract.js-data/kaz": 1.0.0
+  "@tesseract.js-data/khm": 1.0.0
+  "@tesseract.js-data/kir": 1.0.0
+  "@tesseract.js-data/kmr": 1.0.0
+  "@tesseract.js-data/kor": 1.0.0
+  "@tesseract.js-data/kor_vert": 1.0.0
+  "@tesseract.js-data/lao": 1.0.0
+  "@tesseract.js-data/lat": 1.0.0
+  "@tesseract.js-data/lav": 1.0.0
+  "@tesseract.js-data/lit": 1.0.0
+  "@tesseract.js-data/ltz": 1.0.0
+  "@tesseract.js-data/mal": 1.0.0
+  "@tesseract.js-data/mar": 1.0.0
+  "@tesseract.js-data/mkd": 1.0.0
+  "@tesseract.js-data/mlt": 1.0.0
+  "@tesseract.js-data/mon": 1.0.0
+  "@tesseract.js-data/mri": 1.0.0
+  "@tesseract.js-data/msa": 1.0.0
+  "@tesseract.js-data/mya": 1.0.0
+  "@tesseract.js-data/nep": 1.0.0
+  "@tesseract.js-data/nld": 1.0.0
+  "@tesseract.js-data/nor": 1.0.0
+  "@tesseract.js-data/oci": 1.0.0
+  "@tesseract.js-data/ori": 1.0.0
+  "@tesseract.js-data/pan": 1.0.0
+  "@tesseract.js-data/pol": 1.0.0
+  "@tesseract.js-data/por": 1.0.0
+  "@tesseract.js-data/pus": 1.0.0
+  "@tesseract.js-data/que": 1.0.0
+  "@tesseract.js-data/ron": 1.0.0
+  "@tesseract.js-data/rus": 1.0.0
+  "@tesseract.js-data/san": 1.0.0
+  "@tesseract.js-data/sin": 1.0.0
+  "@tesseract.js-data/slk": 1.0.0
+  "@tesseract.js-data/slv": 1.0.0
+  "@tesseract.js-data/snd": 1.0.0
+  "@tesseract.js-data/spa": 1.0.0
+  "@tesseract.js-data/spa_old": 1.0.0
+  "@tesseract.js-data/sqi": 1.0.0
+  "@tesseract.js-data/srp": 1.0.0
+  "@tesseract.js-data/srp_latn": 1.0.0
+  "@tesseract.js-data/sun": 1.0.0
+  "@tesseract.js-data/swa": 1.0.0
+  "@tesseract.js-data/swe": 1.0.0
+  "@tesseract.js-data/syr": 1.0.0
+  "@tesseract.js-data/tam": 1.0.0
+  "@tesseract.js-data/tat": 1.0.0
+  "@tesseract.js-data/tel": 1.0.0
+  "@tesseract.js-data/tgk": 1.0.0
+  "@tesseract.js-data/tha": 1.0.0
+  "@tesseract.js-data/tir": 1.0.0
+  "@tesseract.js-data/ton": 1.0.0
+  "@tesseract.js-data/tur": 1.0.0
+  "@tesseract.js-data/uig": 1.0.0
+  "@tesseract.js-data/ukr": 1.0.0
+  "@tesseract.js-data/urd": 1.0.0
+  "@tesseract.js-data/uzb": 1.0.0
+  "@tesseract.js-data/uzb_cyrl": 1.0.0
+  "@tesseract.js-data/vie": 1.0.0
+  "@tesseract.js-data/yid": 1.0.0
+  "@tesseract.js-data/yor": 1.0.0
   wasm-media-encoders: 0.7.0
   mediainfo.js: 0.3.9
   hb-subset-wasm: 0.5.0
@@ -195,6 +320,7 @@ allowBuilds:
   esbuild: true
   msw: true
   sharp: true
+  tesseract.js: false
   tree-sitter: false
   tree-sitter-bash: false
   workerd: false
