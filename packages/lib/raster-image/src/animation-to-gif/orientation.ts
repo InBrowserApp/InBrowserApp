@@ -38,8 +38,8 @@ export function orientationTransform(
   orientation: Exclude<Orientation, 1>,
   width: number,
   height: number
-) {
-  return {
+): readonly [number, number, number, number, number, number] {
+  const transforms = {
     2: [-1, 0, 0, 1, width, 0],
     3: [-1, 0, 0, -1, width, height],
     4: [1, 0, 0, -1, 0, height],
@@ -47,5 +47,6 @@ export function orientationTransform(
     6: [0, 1, -1, 0, height, 0],
     7: [0, -1, -1, 0, height, width],
     8: [0, -1, 1, 0, 0, width],
-  }[orientation] as readonly [number, number, number, number, number, number]
+  } as const
+  return transforms[orientation]
 }

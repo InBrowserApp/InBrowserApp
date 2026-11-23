@@ -20,8 +20,11 @@ afterEach(() => {
 })
 
 function startConversion() {
-  const work = Promise.withResolvers<ConversionReply>()
-  convert.mockReturnValueOnce(work.promise)
+  let resolve!: (reply: ConversionReply) => void
+  const work = new Promise<ConversionReply>((settle) => {
+    resolve = settle
+  })
+  convert.mockReturnValueOnce(work)
   const { container } = render(
     <AnimationToGif format="apng" language="en" messages={messages} />
   )
@@ -32,16 +35,16 @@ function startConversion() {
   create.focus()
   fireEvent.click(create)
   const cancel = screen.getByRole("button", { name: messages.cancel })
-  return { cancel, create, work }
+  return { cancel, create, resolve }
 }
 
 test("the focused Create button stays in place through a conversion error", async () => {
-  const { create, work } = startConversion()
+  const { create, resolve } = startConversion()
   expect(create.getAttribute("aria-disabled")).toBe("true")
   expect(document.activeElement).toBe(create)
   fireEvent.click(create)
   expect(convert).toHaveBeenCalledTimes(1)
-  await act(async () => work.resolve({ error: "invalid" }))
+  await act(async () => resolve({ error: "invalid" }))
   expect(screen.getByRole("alert").textContent).toBe(messages.invalidApng)
   expect(create.getAttribute("aria-disabled")).toBe("false")
   expect(document.activeElement).toBe(create)
@@ -50,13 +53,13 @@ test("the focused Create button stays in place through a conversion error", asyn
 test.each(["cancellation", "completion"])(
   "focus returns to Create when Cancel disappears after %s",
   async (outcome) => {
-    const { cancel, create, work } = startConversion()
+    const { cancel, create, resolve } = startConversion()
     cancel.focus()
     if (outcome === "cancellation") {
       fireEvent.click(cancel)
       expect(convert.mock.calls[0]?.[2].aborted).toBe(true)
     } else {
-      await act(async () => work.resolve({ error: "invalid" }))
+      await act(async () => resolve({ error: "invalid" }))
     }
     expect(screen.queryByRole("button", { name: messages.cancel })).toBeNull()
     expect(document.activeElement).toBe(create)
