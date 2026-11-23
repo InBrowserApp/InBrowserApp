@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "data-uri-to-file-converter",
   },
   {
+    category: "time",
+    name: "날짜 및 만 나이 계산기",
+    slug: "date-age-calculator",
+  },
+  {
     category: "misc",
     name: "기기 정보",
     slug: "device-information",

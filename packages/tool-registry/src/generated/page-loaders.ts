@@ -91,6 +91,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "current-network-time": () => import("@tool/current-network-time/page"),
   "data-uri-to-file-converter": () =>
     import("@tool/data-uri-to-file-converter/page"),
+  "date-age-calculator": () => import("@tool/date-age-calculator/page"),
   "device-information": () => import("@tool/device-information/page"),
   "dns-lookup": () => import("@tool/dns-lookup/page"),
   "doc-to-pdf-converter": () => import("@tool/doc-to-pdf-converter/page"),

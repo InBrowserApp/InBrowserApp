@@ -348,6 +348,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "data-uri-to-file-converter",
   },
   {
+    category: "time",
+    name: "Datum- en leeftijdscalculator",
+    slug: "date-age-calculator",
+  },
+  {
     category: "misc",
     name: "Apparaatinformatie",
     slug: "device-information",
