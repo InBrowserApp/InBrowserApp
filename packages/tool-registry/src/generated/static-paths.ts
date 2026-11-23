@@ -3038,6 +3038,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "bill-splitter",
+    language: "ar",
+  },
+  {
+    slug: "bill-splitter",
+    language: "de",
+  },
+  {
+    slug: "bill-splitter",
+    language: "en",
+  },
+  {
+    slug: "bill-splitter",
+    language: "es",
+  },
+  {
+    slug: "bill-splitter",
+    language: "fr",
+  },
+  {
+    slug: "bill-splitter",
+    language: "he",
+  },
+  {
+    slug: "bill-splitter",
+    language: "hi",
+  },
+  {
+    slug: "bill-splitter",
+    language: "id",
+  },
+  {
+    slug: "bill-splitter",
+    language: "it",
+  },
+  {
+    slug: "bill-splitter",
+    language: "ja",
+  },
+  {
+    slug: "bill-splitter",
+    language: "ko",
+  },
+  {
+    slug: "bill-splitter",
+    language: "ms",
+  },
+  {
+    slug: "bill-splitter",
+    language: "nl",
+  },
+  {
+    slug: "bill-splitter",
+    language: "no",
+  },
+  {
+    slug: "bill-splitter",
+    language: "pl",
+  },
+  {
+    slug: "bill-splitter",
+    language: "pt",
+  },
+  {
+    slug: "bill-splitter",
+    language: "ru",
+  },
+  {
+    slug: "bill-splitter",
+    language: "sv",
+  },
+  {
+    slug: "bill-splitter",
+    language: "th",
+  },
+  {
+    slug: "bill-splitter",
+    language: "tr",
+  },
+  {
+    slug: "bill-splitter",
+    language: "vi",
+  },
+  {
+    slug: "bill-splitter",
+    language: "zh-CN",
+  },
+  {
+    slug: "bill-splitter",
+    language: "zh-TW",
+  },
+  {
     slug: "bip39-mnemonic-generator",
     language: "ar",
   },

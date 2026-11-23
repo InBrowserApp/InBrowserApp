@@ -168,6 +168,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "bic-swift-validator",
   },
   {
+    category: "misc",
+    name: "Kalkulator Bahagi Bil",
+    slug: "bill-splitter",
+  },
+  {
     category: "random",
     name: "Penjana Mnemonik BIP39",
     slug: "bip39-mnemonic-generator",

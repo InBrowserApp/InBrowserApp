@@ -4269,6 +4269,139 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "bill-splitter",
+    category: "misc",
+    icon: "credit-card",
+    tags: [
+      "bill splitter",
+      "split bill",
+      "split expenses",
+      "group expenses",
+      "equal split",
+      "fixed amounts",
+      "proportional split",
+      "calculator",
+      "AA",
+    ],
+    locales: {
+      ar: {
+        name: "حاسبة تقسيم الفاتورة",
+        description:
+          "قسّم الفاتورة أو المصروف المشترك بالتساوي أو بمبالغ ثابتة أو حسب النسبة. اعرف نصيب كل شخص وانسخ تفاصيل التقسيم من متصفحك دون رفع أي بيانات.",
+      },
+      de: {
+        name: "Rechnung aufteilen – Kostenrechner",
+        description:
+          "Teile eine Rechnung gleichmäßig, nach Festbeträgen oder im Verhältnis auf. Sieh, wie viel jede Person zahlt, und kopiere die Aufteilung. Kein Upload.",
+      },
+      en: {
+        name: "Bill Splitter Calculator",
+        description:
+          "Split a bill or group expense equally, assign fixed amounts, or divide it by ratio. See what each person owes and copy the breakdown. No uploads.",
+      },
+      es: {
+        name: "Calculadora para dividir la cuenta",
+        description:
+          "Divide una cuenta o un gasto de grupo en partes iguales, con importes fijos o en proporción. Consulta cuánto debe cada persona y copia el desglose.",
+      },
+      fr: {
+        name: "Calculateur de partage d’addition",
+        description:
+          "Partagez une addition ou une dépense de groupe à parts égales, par montants fixes ou au prorata. Consultez la part de chacun et copiez le détail.",
+      },
+      he: {
+        name: "מחשבון חלוקת חשבון",
+        description:
+          "חלקו חשבון או הוצאה משותפת שווה בשווה, בסכומים קבועים או לפי יחס. בדקו כמה כל אחד צריך לשלם והעתיקו את הפירוט. הכול מתבצע בדפדפן.",
+      },
+      hi: {
+        name: "बिल बाँटने का कैलकुलेटर",
+        description:
+          "बिल या समूह का खर्च बराबर बाँटें, तय रकम रखें या अनुपात में हिस्सा निकालें। देखें कि किसे कितना देना है और बिना डेटा अपलोड किए हिसाब कॉपी करें।",
+      },
+      id: {
+        name: "Kalkulator Patungan Tagihan",
+        description:
+          "Bagi tagihan atau pengeluaran bersama secara merata, tetapkan nominal tertentu, atau bagi menurut rasio. Lihat dan salin bagian tiap orang tanpa mengunggah data.",
+      },
+      it: {
+        name: "Calcolatore per dividere il conto",
+        description:
+          "Dividi un conto o una spesa di gruppo in parti uguali, con importi fissi o in proporzione. Scopri quanto deve pagare ciascuno e copia il riepilogo.",
+      },
+      ja: {
+        name: "割り勘計算ツール",
+        description:
+          "食事やタクシーなどの会計を均等に、定額指定で、または比率に応じて割り勘できます。一人ひとりの支払額を計算して明細をコピー。入力データのアップロードは不要です。",
+      },
+      ko: {
+        name: "더치페이 계산기",
+        description:
+          "식사비나 택시비를 똑같이 나누거나, 일부 금액을 지정하거나, 비율에 따라 나누세요. 각자 낼 금액을 확인하고 내역을 복사할 수 있습니다. 업로드 없이 계산합니다.",
+      },
+      ms: {
+        name: "Kalkulator Bahagi Bil",
+        description:
+          "Kongsi bil atau perbelanjaan kumpulan secara sama rata, dengan amaun tetap atau mengikut nisbah. Semak dan salin bahagian setiap orang tanpa memuat naik data.",
+      },
+      nl: {
+        name: "Rekening splitsen",
+        description:
+          "Verdeel een rekening of groepsuitgave gelijk, met vaste bedragen of naar verhouding. Bekijk wat iedereen betaalt en kopieer de verdeling. Zonder upload.",
+      },
+      no: {
+        name: "Del regningen – kostnadskalkulator",
+        description:
+          "Del en regning eller fellesutgift likt, med faste beløp eller etter forholdstall. Se hva hver person skal betale, og kopier fordelingen. Ingen opplasting.",
+      },
+      pl: {
+        name: "Kalkulator podziału rachunku",
+        description:
+          "Podziel rachunek lub wspólny wydatek po równo, według stałych kwot albo proporcji. Sprawdź, ile płaci każda osoba, i skopiuj zestawienie. Bez przesyłania danych.",
+      },
+      pt: {
+        name: "Calculadora para dividir a conta",
+        description:
+          "Divida uma conta ou despesa de grupo em partes iguais, com valores fixos ou proporcionalmente. Veja quanto cada pessoa deve e copie o resumo.",
+      },
+      ru: {
+        name: "Калькулятор разделения счёта",
+        description:
+          "Разделите счёт или общий расход поровну, фиксированными суммами или пропорционально. Узнайте, сколько платит каждый, и скопируйте расчёт. Данные остаются в браузере.",
+      },
+      sv: {
+        name: "Dela notan – kostnadskalkylator",
+        description:
+          "Dela en nota eller grupputgift lika, med fasta belopp eller efter fördelningstal. Se vad var och en ska betala och kopiera fördelningen. Ingen uppladdning.",
+      },
+      th: {
+        name: "เครื่องคำนวณหารบิล",
+        description:
+          "หารบิลหรือค่าใช้จ่ายกลุ่มแบบเท่ากัน กำหนดยอดคงที่ หรือหารตามสัดส่วน ดูยอดที่แต่ละคนต้องจ่ายและคัดลอกรายละเอียดได้โดยไม่ต้องอัปโหลดข้อมูล",
+      },
+      tr: {
+        name: "Hesap Bölüştürme Aracı",
+        description:
+          "Hesabı veya ortak harcamayı eşit, sabit tutarlarla ya da orana göre bölüştürün. Kişi başına düşen tutarı görün ve dökümü kopyalayın. Veriler tarayıcıda kalır.",
+      },
+      vi: {
+        name: "Công cụ chia hóa đơn",
+        description:
+          "Chia đều hóa đơn, ấn định số tiền hoặc chia chi phí nhóm theo tỷ lệ. Xem và sao chép phần mỗi người cần trả mà không cần tải dữ liệu lên.",
+      },
+      "zh-CN": {
+        name: "AA 分账计算器",
+        description:
+          "聚餐、打车和团购都能用。支持均摊账单、指定固定金额或按比例分摊，一键复制每人的应付明细，账单无需上传。",
+      },
+      "zh-TW": {
+        name: "AA 分帳計算機",
+        description:
+          "聚餐、搭車或團購都能用。支援平分帳單、指定金額或按比例分攤，還能複製每人應付明細。帳單無須上傳。",
+      },
+    },
+  },
+  {
     slug: "bip39-mnemonic-generator",
     category: "random",
     icon: "lock",

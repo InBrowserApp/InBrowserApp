@@ -168,6 +168,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "bic-swift-validator",
   },
   {
+    category: "misc",
+    name: "AA 分帳計算機",
+    slug: "bill-splitter",
+  },
+  {
     category: "random",
     name: "BIP39 助記詞產生器",
     slug: "bip39-mnemonic-generator",

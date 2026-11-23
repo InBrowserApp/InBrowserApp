@@ -168,6 +168,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "bic-swift-validator",
   },
   {
+    category: "misc",
+    name: "Dela notan – kostnadskalkylator",
+    slug: "bill-splitter",
+  },
+  {
     category: "random",
     name: "BIP39-mnemonicgenerator",
     slug: "bip39-mnemonic-generator",

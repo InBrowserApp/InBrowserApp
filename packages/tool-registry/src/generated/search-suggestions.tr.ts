@@ -168,6 +168,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "bic-swift-validator",
   },
   {
+    category: "misc",
+    name: "Hesap Bölüştürme Aracı",
+    slug: "bill-splitter",
+  },
+  {
     category: "random",
     name: "BIP39 anımsatıcı üreticisi",
     slug: "bip39-mnemonic-generator",
