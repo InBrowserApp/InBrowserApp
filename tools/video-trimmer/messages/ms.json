@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Pilih video",
+  "replaceVideo": "Gantikan video",
+  "dropVideo": "atau lepaskan fail MP4 atau WebM di sini",
+  "loading": "Membuka video…",
+  "videoError": "Video ini tidak dapat dibuka. Cuba fail MP4 atau WebM lain.",
+  "recordingError": "Rakaman tidak dapat dibuka. Cuba lagi daripada Perakam Skrin atau pilih fail video.",
+  "videoPreview": "Pratonton video",
+  "start": "Mula (saat)",
+  "end": "Tamat (saat)",
+  "rangeError": "Masukkan masa mula sebelum masa tamat. Kedua-duanya mesti dalam tempoh video.",
+  "clipDuration": "Tempoh klip",
+  "previewClip": "Pratonton klip",
+  "format": "Format output",
+  "exportClip": "Eksport klip",
+  "exporting": "Mengeksport klip…",
+  "cancel": "Batal",
+  "exportError": "Klip tidak dapat dieksport. Cuba format output yang satu lagi atau pelayar yang menyokong kodek video dan audio ini.",
+  "ready": "Klip sudah sedia",
+  "downloadClip": "Muat turun klip"
+}

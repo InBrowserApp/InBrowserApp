@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Choisir une vidéo",
+  "replaceVideo": "Changer de vidéo",
+  "dropVideo": "ou déposez ici un fichier MP4 ou WebM",
+  "loading": "Ouverture de la vidéo…",
+  "videoError": "Impossible d’ouvrir cette vidéo. Essayez un autre fichier MP4 ou WebM.",
+  "recordingError": "Impossible d’ouvrir l’enregistrement. Réessayez depuis l’Enregistreur d’écran ou choisissez un fichier vidéo.",
+  "videoPreview": "Aperçu de la vidéo",
+  "start": "Début (secondes)",
+  "end": "Fin (secondes)",
+  "rangeError": "Saisissez les points de début et de fin dans les limites de la vidéo. Le début doit précéder la fin.",
+  "clipDuration": "Durée de l’extrait",
+  "previewClip": "Prévisualiser l’extrait",
+  "format": "Format de sortie",
+  "exportClip": "Exporter l’extrait",
+  "exporting": "Exportation de l’extrait…",
+  "cancel": "Annuler",
+  "exportError": "Impossible d’exporter l’extrait. Essayez l’autre format de sortie ou un navigateur compatible avec ces codecs vidéo et audio.",
+  "ready": "Extrait prêt",
+  "downloadClip": "Télécharger l’extrait"
+}

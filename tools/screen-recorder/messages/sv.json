@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "skärminspelning",
     "downloadLabel": "Ladda ner inspelning",
     "clearLabel": "Rensa",
-    "formatUnknown": "Okänt"
+    "formatUnknown": "Okänt",
+    "trimLabel": "Trimma inspelningen"
   },
   "alerts": {
     "unsupportedTitle": "Skärminspelning stöds inte",

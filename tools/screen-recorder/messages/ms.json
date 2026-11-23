@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "rakaman-skrin",
     "downloadLabel": "Muat turun rakaman",
     "clearLabel": "Kosongkan",
-    "formatUnknown": "Tidak diketahui"
+    "formatUnknown": "Tidak diketahui",
+    "trimLabel": "Pangkas rakaman"
   },
   "alerts": {
     "unsupportedTitle": "Rakaman skrin tidak disokong",

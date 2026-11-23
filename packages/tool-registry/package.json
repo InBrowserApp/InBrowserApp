@@ -313,6 +313,7 @@
     "@tool/video-audio-extractor": "workspace:*",
     "@tool/video-frame-extractor": "workspace:*",
     "@tool/video-to-gif": "workspace:*",
+    "@tool/video-trimmer": "workspace:*",
     "@tool/vin-validator": "workspace:*",
     "@tool/whirlpool-hash-text-or-file": "workspace:*",
     "@tool/xls-to-xlsx-converter": "workspace:*",

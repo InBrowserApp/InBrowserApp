@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Video seç",
+  "replaceVideo": "Videoyu değiştir",
+  "dropVideo": "veya bir MP4 ya da WebM dosyasını buraya bırakın",
+  "loading": "Video açılıyor…",
+  "videoError": "Video açılamadı. Başka bir MP4 veya WebM dosyası deneyin.",
+  "recordingError": "Kayıt açılamadı. Ekran Kaydedici'den tekrar deneyin veya bir video dosyası seçin.",
+  "videoPreview": "Video önizlemesi",
+  "start": "Başlangıç (saniye)",
+  "end": "Bitiş (saniye)",
+  "rangeError": "Başlangıç bitişten önce olmalı. Her iki zaman da video süresi içinde kalmalı.",
+  "clipDuration": "Kesit süresi",
+  "previewClip": "Kesiti önizle",
+  "format": "Çıktı biçimi",
+  "exportClip": "Kesiti dışa aktar",
+  "exporting": "Kesit dışa aktarılıyor…",
+  "cancel": "İptal",
+  "exportError": "Kesit dışa aktarılamadı. Diğer çıktı biçimini veya bu video ve ses kodeklerini destekleyen bir tarayıcıyı deneyin.",
+  "ready": "Kesit hazır",
+  "downloadClip": "Kesiti indir"
+}

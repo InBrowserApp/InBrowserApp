@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "schermopname",
     "downloadLabel": "Opname downloaden",
     "clearLabel": "Wissen",
-    "formatUnknown": "Onbekend"
+    "formatUnknown": "Onbekend",
+    "trimLabel": "Opname inkorten"
   },
   "alerts": {
     "unsupportedTitle": "Schermopname wordt niet ondersteund",

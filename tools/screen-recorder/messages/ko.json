@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "screen-recording",
     "downloadLabel": "녹화 다운로드",
     "clearLabel": "지우기",
-    "formatUnknown": "알 수 없음"
+    "formatUnknown": "알 수 없음",
+    "trimLabel": "녹화 영상 자르기"
   },
   "alerts": {
     "unsupportedTitle": "화면 녹화가 지원되지 않습니다",

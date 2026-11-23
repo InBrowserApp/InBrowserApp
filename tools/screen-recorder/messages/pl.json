@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "nagranie-ekranu",
     "downloadLabel": "Pobierz nagranie",
     "clearLabel": "Wyczyść",
-    "formatUnknown": "Nieznany"
+    "formatUnknown": "Nieznany",
+    "trimLabel": "Przytnij nagranie"
   },
   "alerts": {
     "unsupportedTitle": "Nagrywanie ekranu nie jest obsługiwane",

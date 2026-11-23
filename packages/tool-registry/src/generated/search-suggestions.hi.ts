@@ -1533,6 +1533,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "video-to-gif",
   },
   {
+    category: "misc",
+    name: "वीडियो ट्रिमर",
+    slug: "video-trimmer",
+  },
+  {
     category: "text",
     name: "VIN वैलिडेटर",
     slug: "vin-validator",

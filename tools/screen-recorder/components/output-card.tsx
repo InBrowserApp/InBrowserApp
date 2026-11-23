@@ -23,7 +23,7 @@ import {
   InputGroupAddon,
   InputGroupInput,
 } from "@workspace/ui/components/ui/input-group"
-import { Download, Trash2, Video } from "@workspace/ui/icons"
+import { Download, Scissors, Trash2, Video } from "@workspace/ui/icons"
 
 import { getExtensionForMimeType } from "../core/recorder"
 
@@ -39,6 +39,7 @@ type OutputCardProps = Readonly<{
   fileName: string
   fileSizeLabel: string
   downloadName: string
+  trimmerHref?: string
   onFileNameChange: (value: string) => void
   onClear: () => void
 }>
@@ -51,6 +52,7 @@ function OutputCard({
   fileName,
   fileSizeLabel,
   downloadName,
+  trimmerHref,
   onFileNameChange,
   onClear,
 }: OutputCardProps) {
@@ -114,6 +116,18 @@ function OutputCard({
                   {messages.downloadLabel}
                 </a>
               </Button>
+              {trimmerHref && (
+                <Button asChild variant="outline">
+                  <a
+                    href={`${trimmerHref}#${new URLSearchParams({ recording: outputUrl, name: downloadName })}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Scissors aria-hidden="true" />
+                    {messages.trimLabel}
+                  </a>
+                </Button>
+              )}
               <Button type="button" variant="outline" onClick={onClear}>
                 <Trash2 data-icon="inline-start" />
                 {messages.clearLabel}

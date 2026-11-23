@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Välj video",
+  "replaceVideo": "Byt video",
+  "dropVideo": "eller släpp en MP4- eller WebM-fil här",
+  "loading": "Öppnar videon…",
+  "videoError": "Det gick inte att öppna videon. Prova en annan MP4- eller WebM-fil.",
+  "recordingError": "Det gick inte att öppna inspelningen. Försök igen från Skärminspelaren eller välj en videofil.",
+  "videoPreview": "Förhandsvisning av videon",
+  "start": "Start (sekunder)",
+  "end": "Slut (sekunder)",
+  "rangeError": "Ange en starttid före sluttiden. Båda tiderna måste ligga inom videons längd.",
+  "clipDuration": "Klippets längd",
+  "previewClip": "Förhandsvisa klippet",
+  "format": "Exportformat",
+  "exportClip": "Exportera klippet",
+  "exporting": "Exporterar klippet…",
+  "cancel": "Avbryt",
+  "exportError": "Det gick inte att exportera klippet. Prova det andra exportformatet eller en webbläsare som stöder de här video- och ljudkodekarna.",
+  "ready": "Klippet är klart",
+  "downloadClip": "Ladda ned klippet"
+}

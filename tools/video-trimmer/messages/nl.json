@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Video kiezen",
+  "replaceVideo": "Andere video kiezen",
+  "dropVideo": "of sleep een MP4- of WebM-bestand hierheen",
+  "loading": "Video wordt geopend…",
+  "videoError": "De video kan niet worden geopend. Probeer een ander MP4- of WebM-bestand.",
+  "recordingError": "De opname kan niet worden geopend. Probeer het opnieuw vanuit de Schermrecorder of kies een videobestand.",
+  "videoPreview": "Videovoorbeeld",
+  "start": "Begin (seconden)",
+  "end": "Einde (seconden)",
+  "rangeError": "Vul twee tijden in binnen de duur van de video. Het begin moet vóór het einde liggen.",
+  "clipDuration": "Duur van het fragment",
+  "previewClip": "Fragment bekijken",
+  "format": "Uitvoerindeling",
+  "exportClip": "Fragment exporteren",
+  "exporting": "Fragment wordt geëxporteerd…",
+  "cancel": "Annuleren",
+  "exportError": "Het fragment kan niet worden geëxporteerd. Probeer de andere uitvoerindeling of een browser die deze video- en audiocodecs ondersteunt.",
+  "ready": "Fragment klaar",
+  "downloadClip": "Fragment downloaden"
+}

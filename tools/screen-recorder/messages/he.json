@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "screen-recording",
     "downloadLabel": "הורדת ההקלטה",
     "clearLabel": "ניקוי",
-    "formatUnknown": "לא ידוע"
+    "formatUnknown": "לא ידוע",
+    "trimLabel": "חיתוך ההקלטה"
   },
   "alerts": {
     "unsupportedTitle": "הקלטת מסך אינה נתמכת",

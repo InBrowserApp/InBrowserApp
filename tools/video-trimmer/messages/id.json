@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Pilih video",
+  "replaceVideo": "Ganti video",
+  "dropVideo": "atau jatuhkan file MP4 atau WebM di sini",
+  "loading": "Membuka video…",
+  "videoError": "Video ini tidak dapat dibuka. Coba file MP4 atau WebM lain.",
+  "recordingError": "Rekaman tidak dapat dibuka. Coba lagi dari Perekam Layar atau pilih file video.",
+  "videoPreview": "Pratinjau video",
+  "start": "Mulai (detik)",
+  "end": "Akhir (detik)",
+  "rangeError": "Masukkan waktu mulai sebelum waktu akhir. Keduanya harus berada dalam durasi video.",
+  "clipDuration": "Durasi klip",
+  "previewClip": "Pratinjau klip",
+  "format": "Format keluaran",
+  "exportClip": "Ekspor klip",
+  "exporting": "Mengekspor klip…",
+  "cancel": "Batal",
+  "exportError": "Klip tidak dapat diekspor. Coba format keluaran lain atau browser yang mendukung kodek video dan audio ini.",
+  "ready": "Klip siap",
+  "downloadClip": "Unduh klip"
+}

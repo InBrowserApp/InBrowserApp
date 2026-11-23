@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Elegir video",
+  "replaceVideo": "Cambiar video",
+  "dropVideo": "o arrastra aquí un archivo MP4 o WebM",
+  "loading": "Abriendo video…",
+  "videoError": "No se pudo abrir el video. Prueba con otro archivo MP4 o WebM.",
+  "recordingError": "No se pudo abrir la grabación. Inténtalo de nuevo desde el Grabador de pantalla o elige un archivo de video.",
+  "videoPreview": "Vista previa del video",
+  "start": "Inicio (segundos)",
+  "end": "Fin (segundos)",
+  "rangeError": "Introduce dos tiempos dentro de la duración del video. El inicio debe ser anterior al fin.",
+  "clipDuration": "Duración del fragmento",
+  "previewClip": "Previsualizar fragmento",
+  "format": "Formato de salida",
+  "exportClip": "Exportar fragmento",
+  "exporting": "Exportando fragmento…",
+  "cancel": "Cancelar",
+  "exportError": "No se pudo exportar el fragmento. Prueba el otro formato de salida o un navegador compatible con estos códecs de video y audio.",
+  "ready": "Fragmento listo",
+  "downloadClip": "Descargar fragmento"
+}

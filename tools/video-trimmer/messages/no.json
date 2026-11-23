@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Velg video",
+  "replaceVideo": "Bytt video",
+  "dropVideo": "eller slipp en MP4- eller WebM-fil her",
+  "loading": "Åpner video…",
+  "videoError": "Kunne ikke åpne videoen. Prøv en annen MP4- eller WebM-fil.",
+  "recordingError": "Kunne ikke åpne opptaket. Prøv igjen fra Skjermopptaker eller velg en videofil.",
+  "videoPreview": "Videoforhåndsvisning",
+  "start": "Start (sekunder)",
+  "end": "Slutt (sekunder)",
+  "rangeError": "Angi en start før slutten. Begge tidene må ligge innenfor videoens varighet.",
+  "clipDuration": "Klippets varighet",
+  "previewClip": "Forhåndsvis klippet",
+  "format": "Eksportformat",
+  "exportClip": "Eksporter klippet",
+  "exporting": "Eksporterer klippet…",
+  "cancel": "Avbryt",
+  "exportError": "Kunne ikke eksportere klippet. Prøv det andre eksportformatet eller en nettleser som støtter disse video- og lydkodekene.",
+  "ready": "Klippet er klart",
+  "downloadClip": "Last ned klippet"
+}

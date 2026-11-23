@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Choose video",
+  "replaceVideo": "Replace video",
+  "dropVideo": "or drop an MP4 or WebM file here",
+  "loading": "Opening video…",
+  "videoError": "Could not open this video. Try another MP4 or WebM file.",
+  "recordingError": "Could not open the recording. Try again from the Screen Recorder or choose a video file.",
+  "videoPreview": "Video preview",
+  "start": "Start (seconds)",
+  "end": "End (seconds)",
+  "rangeError": "Enter a start before the end, within the video duration.",
+  "clipDuration": "Clip duration",
+  "previewClip": "Preview clip",
+  "format": "Output format",
+  "exportClip": "Export clip",
+  "exporting": "Exporting clip…",
+  "cancel": "Cancel",
+  "exportError": "Could not export this clip. Try the other output format or a browser with support for these video and audio codecs.",
+  "ready": "Clip ready",
+  "downloadClip": "Download clip"
+}

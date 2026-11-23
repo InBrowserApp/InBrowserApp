@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "screen-recording",
     "downloadLabel": "下載錄影",
     "clearLabel": "清除",
-    "formatUnknown": "未知"
+    "formatUnknown": "未知",
+    "trimLabel": "裁剪錄影"
   },
   "alerts": {
     "unsupportedTitle": "不支援螢幕錄影",

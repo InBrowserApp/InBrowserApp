@@ -15,6 +15,7 @@ interface Props {
 }
 
 const { lang } = Astro.props
+const trimmerHref = (lang === "en" ? "" : `/${lang}`) + "/tools/video-trimmer/"
 
 const meta = resolveLocale<ToolMeta>(
   import.meta.glob("./meta/*.json", { eager: true, import: "default" }),
@@ -35,7 +36,7 @@ const messages: ScreenRecorderMessages = { meta, ...localizedMessages }
 ---
 
 <ToolPageShell title={meta.name} description={meta.description}>
-  <ScreenRecorderClient client:load messages={messages} />
+  <ScreenRecorderClient client:load messages={messages} trimmerHref={trimmerHref} />
 
   {
     IntroSection ? (
