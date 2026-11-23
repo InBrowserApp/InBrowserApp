@@ -1,0 +1,4 @@
+{
+  "name": "Bruk JSON Patch",
+  "description": "Bruk en RFC 6902 JSON Patch på nett. Forhåndsvis oppdatert JSON og se hvilken operasjon som mislyktes og hvorfor. Dataene dine blir i nettleseren."
+}

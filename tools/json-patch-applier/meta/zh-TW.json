@@ -1,0 +1,4 @@
+{
+  "name": "JSON Patch 套用工具",
+  "description": "線上套用 RFC 6902 JSON Patch，預覽修改後的 JSON，並查看失敗的操作及原因。資料全程留在你的瀏覽器中。"
+}

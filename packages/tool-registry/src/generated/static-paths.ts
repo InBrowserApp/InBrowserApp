@@ -12698,6 +12698,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "json-patch-applier",
+    language: "ar",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "de",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "en",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "es",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "fr",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "he",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "hi",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "id",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "it",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "ja",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "ko",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "ms",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "nl",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "no",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "pl",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "pt",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "ru",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "sv",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "th",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "tr",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "vi",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "zh-CN",
+  },
+  {
+    slug: "json-patch-applier",
+    language: "zh-TW",
+  },
+  {
     slug: "json-schema-generator",
     language: "ar",
   },

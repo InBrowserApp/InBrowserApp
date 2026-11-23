@@ -17440,6 +17440,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "json-patch-applier",
+    category: "json",
+    icon: "file-json-2",
+    tags: ["json", "json patch", "RFC 6902", "JSON Pointer", "patch", "diff"],
+    locales: {
+      ar: {
+        name: "أداة تطبيق JSON Patch",
+        description:
+          "طبّق JSON Patch وفق RFC 6902 عبر الإنترنت. عاين JSON بعد التعديل واعرف أي عملية فشلت ولماذا. تبقى بياناتك في متصفحك.",
+      },
+      de: {
+        name: "JSON Patch anwenden",
+        description:
+          "Wenden Sie einen JSON Patch nach RFC 6902 online an. Sehen Sie das aktualisierte JSON und erfahren Sie, welche Operation aus welchem Grund fehlgeschlagen ist. Ihre Daten bleiben im Browser.",
+      },
+      en: {
+        name: "JSON Patch Applier",
+        description:
+          "Apply an RFC 6902 JSON Patch online. Preview the updated JSON and see which operation failed and why. Your data stays in your browser.",
+      },
+      es: {
+        name: "Aplicador de JSON Patch",
+        description:
+          "Aplica un JSON Patch RFC 6902 en línea. Previsualiza el JSON actualizado y descubre qué operación falló y por qué. Tus datos se quedan en el navegador.",
+      },
+      fr: {
+        name: "Application de patch JSON",
+        description:
+          "Appliquez un JSON Patch RFC 6902 en ligne. Prévisualisez le JSON modifié et identifiez l’opération qui a échoué et sa cause. Vos données restent dans votre navigateur.",
+      },
+      he: {
+        name: "כלי להחלת JSON Patch",
+        description:
+          "החילו JSON Patch לפי RFC 6902 באופן מקוון. הציגו תצוגה מקדימה של ה-JSON המעודכן וראו איזו פעולה נכשלה ומדוע. הנתונים נשארים בדפדפן.",
+      },
+      hi: {
+        name: "JSON Patch लागू करने का टूल",
+        description:
+          "RFC 6902 JSON Patch ऑनलाइन लागू करें। अपडेट किए गए JSON का पूर्वावलोकन करें और देखें कि कौन-सा ऑपरेशन क्यों विफल हुआ। आपका डेटा आपके ब्राउज़र में रहता है।",
+      },
+      id: {
+        name: "Terapkan JSON Patch",
+        description:
+          "Terapkan JSON Patch RFC 6902 secara online. Pratinjau JSON yang diperbarui dan lihat operasi mana yang gagal serta penyebabnya. Data tetap di browser Anda.",
+      },
+      it: {
+        name: "Applicatore di JSON Patch",
+        description:
+          "Applica online una JSON Patch RFC 6902, visualizza il JSON aggiornato e scopri quale operazione non è riuscita e perché. I dati restano nel browser.",
+      },
+      ja: {
+        name: "JSON Patch 適用ツール",
+        description:
+          "RFC 6902 準拠の JSON Patch をオンラインで適用し、更新後の JSON や、失敗した操作とその原因を確認できます。データはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "JSON Patch 적용 도구",
+        description:
+          "RFC 6902 JSON Patch를 온라인에서 적용하세요. 업데이트된 JSON을 미리 보고 어떤 작업이 왜 실패했는지 확인할 수 있습니다. 데이터는 브라우저 안에서 처리됩니다.",
+      },
+      ms: {
+        name: "Gunakan JSON Patch",
+        description:
+          "Gunakan JSON Patch RFC 6902 dalam talian. Pratonton JSON yang dikemas kini dan lihat operasi yang gagal serta puncanya. Data kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "JSON Patch toepassen",
+        description:
+          "Pas online een RFC 6902 JSON Patch toe. Bekijk de bijgewerkte JSON en zie welke bewerking is mislukt en waarom. Je gegevens blijven in je browser.",
+      },
+      no: {
+        name: "Bruk JSON Patch",
+        description:
+          "Bruk en RFC 6902 JSON Patch på nett. Forhåndsvis oppdatert JSON og se hvilken operasjon som mislyktes og hvorfor. Dataene dine blir i nettleseren.",
+      },
+      pl: {
+        name: "Stosowanie JSON Patch",
+        description:
+          "Zastosuj JSON Patch zgodny z RFC 6902 online. Zobacz zmieniony JSON i sprawdź, która operacja się nie powiodła i dlaczego. Twoje dane pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Aplicador de JSON Patch",
+        description:
+          "Aplique um JSON Patch RFC 6902 online. Visualize o JSON atualizado e descubra qual operação falhou e por quê. Seus dados ficam no navegador.",
+      },
+      ru: {
+        name: "Применение JSON Patch",
+        description:
+          "Примените JSON Patch по RFC 6902 онлайн. Просмотрите обновлённый JSON и узнайте, на какой операции возникла ошибка и почему. Данные остаются в браузере.",
+      },
+      sv: {
+        name: "Tillämpa JSON Patch",
+        description:
+          "Tillämpa en RFC 6902 JSON Patch online. Förhandsgranska uppdaterad JSON och se vilken operation som misslyckades och varför. Dina data stannar i webbläsaren.",
+      },
+      th: {
+        name: "ใช้ JSON Patch",
+        description:
+          "ใช้ JSON Patch ตาม RFC 6902 ออนไลน์ ดูตัวอย่าง JSON ที่อัปเดตแล้วและตรวจสอบว่าการดำเนินการใดล้มเหลวเพราะอะไร ข้อมูลจะอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "JSON Patch Uygulama Aracı",
+        description:
+          "RFC 6902 biçimindeki JSON Patch’i çevrimiçi uygulayın. Güncellenen JSON’u önizleyin ve hangi işlemin neden başarısız olduğunu görün. Verileriniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Công cụ áp dụng JSON Patch",
+        description:
+          "Áp dụng JSON Patch theo RFC 6902 trực tuyến. Xem trước JSON đã cập nhật và biết thao tác nào thất bại, vì sao. Dữ liệu luôn nằm trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "JSON Patch 应用器",
+        description:
+          "在线应用符合 RFC 6902 的 JSON Patch，预览更新后的 JSON，并查看失败的操作及原因。数据始终留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "JSON Patch 套用工具",
+        description:
+          "線上套用 RFC 6902 JSON Patch，預覽修改後的 JSON，並查看失敗的操作及原因。資料全程留在你的瀏覽器中。",
+      },
+    },
+  },
+  {
     slug: "json-schema-generator",
     category: "json",
     icon: "braces",
@@ -56542,6 +56665,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "JSON 格式化器",
         description:
           "格式化和美化JSON，並提供正確的縮進。貼上JSON或匯入檔案；預覽、複製並下載。",
+      },
+    },
+  },
+  "json-patch-applier": {
+    slug: "json-patch-applier",
+    category: "json",
+    icon: "file-json-2",
+    tags: ["json", "json patch", "RFC 6902", "JSON Pointer", "patch", "diff"],
+    locales: {
+      ar: {
+        name: "أداة تطبيق JSON Patch",
+        description:
+          "طبّق JSON Patch وفق RFC 6902 عبر الإنترنت. عاين JSON بعد التعديل واعرف أي عملية فشلت ولماذا. تبقى بياناتك في متصفحك.",
+      },
+      de: {
+        name: "JSON Patch anwenden",
+        description:
+          "Wenden Sie einen JSON Patch nach RFC 6902 online an. Sehen Sie das aktualisierte JSON und erfahren Sie, welche Operation aus welchem Grund fehlgeschlagen ist. Ihre Daten bleiben im Browser.",
+      },
+      en: {
+        name: "JSON Patch Applier",
+        description:
+          "Apply an RFC 6902 JSON Patch online. Preview the updated JSON and see which operation failed and why. Your data stays in your browser.",
+      },
+      es: {
+        name: "Aplicador de JSON Patch",
+        description:
+          "Aplica un JSON Patch RFC 6902 en línea. Previsualiza el JSON actualizado y descubre qué operación falló y por qué. Tus datos se quedan en el navegador.",
+      },
+      fr: {
+        name: "Application de patch JSON",
+        description:
+          "Appliquez un JSON Patch RFC 6902 en ligne. Prévisualisez le JSON modifié et identifiez l’opération qui a échoué et sa cause. Vos données restent dans votre navigateur.",
+      },
+      he: {
+        name: "כלי להחלת JSON Patch",
+        description:
+          "החילו JSON Patch לפי RFC 6902 באופן מקוון. הציגו תצוגה מקדימה של ה-JSON המעודכן וראו איזו פעולה נכשלה ומדוע. הנתונים נשארים בדפדפן.",
+      },
+      hi: {
+        name: "JSON Patch लागू करने का टूल",
+        description:
+          "RFC 6902 JSON Patch ऑनलाइन लागू करें। अपडेट किए गए JSON का पूर्वावलोकन करें और देखें कि कौन-सा ऑपरेशन क्यों विफल हुआ। आपका डेटा आपके ब्राउज़र में रहता है।",
+      },
+      id: {
+        name: "Terapkan JSON Patch",
+        description:
+          "Terapkan JSON Patch RFC 6902 secara online. Pratinjau JSON yang diperbarui dan lihat operasi mana yang gagal serta penyebabnya. Data tetap di browser Anda.",
+      },
+      it: {
+        name: "Applicatore di JSON Patch",
+        description:
+          "Applica online una JSON Patch RFC 6902, visualizza il JSON aggiornato e scopri quale operazione non è riuscita e perché. I dati restano nel browser.",
+      },
+      ja: {
+        name: "JSON Patch 適用ツール",
+        description:
+          "RFC 6902 準拠の JSON Patch をオンラインで適用し、更新後の JSON や、失敗した操作とその原因を確認できます。データはブラウザー内で処理されます。",
+      },
+      ko: {
+        name: "JSON Patch 적용 도구",
+        description:
+          "RFC 6902 JSON Patch를 온라인에서 적용하세요. 업데이트된 JSON을 미리 보고 어떤 작업이 왜 실패했는지 확인할 수 있습니다. 데이터는 브라우저 안에서 처리됩니다.",
+      },
+      ms: {
+        name: "Gunakan JSON Patch",
+        description:
+          "Gunakan JSON Patch RFC 6902 dalam talian. Pratonton JSON yang dikemas kini dan lihat operasi yang gagal serta puncanya. Data kekal dalam pelayar anda.",
+      },
+      nl: {
+        name: "JSON Patch toepassen",
+        description:
+          "Pas online een RFC 6902 JSON Patch toe. Bekijk de bijgewerkte JSON en zie welke bewerking is mislukt en waarom. Je gegevens blijven in je browser.",
+      },
+      no: {
+        name: "Bruk JSON Patch",
+        description:
+          "Bruk en RFC 6902 JSON Patch på nett. Forhåndsvis oppdatert JSON og se hvilken operasjon som mislyktes og hvorfor. Dataene dine blir i nettleseren.",
+      },
+      pl: {
+        name: "Stosowanie JSON Patch",
+        description:
+          "Zastosuj JSON Patch zgodny z RFC 6902 online. Zobacz zmieniony JSON i sprawdź, która operacja się nie powiodła i dlaczego. Twoje dane pozostają w przeglądarce.",
+      },
+      pt: {
+        name: "Aplicador de JSON Patch",
+        description:
+          "Aplique um JSON Patch RFC 6902 online. Visualize o JSON atualizado e descubra qual operação falhou e por quê. Seus dados ficam no navegador.",
+      },
+      ru: {
+        name: "Применение JSON Patch",
+        description:
+          "Примените JSON Patch по RFC 6902 онлайн. Просмотрите обновлённый JSON и узнайте, на какой операции возникла ошибка и почему. Данные остаются в браузере.",
+      },
+      sv: {
+        name: "Tillämpa JSON Patch",
+        description:
+          "Tillämpa en RFC 6902 JSON Patch online. Förhandsgranska uppdaterad JSON och se vilken operation som misslyckades och varför. Dina data stannar i webbläsaren.",
+      },
+      th: {
+        name: "ใช้ JSON Patch",
+        description:
+          "ใช้ JSON Patch ตาม RFC 6902 ออนไลน์ ดูตัวอย่าง JSON ที่อัปเดตแล้วและตรวจสอบว่าการดำเนินการใดล้มเหลวเพราะอะไร ข้อมูลจะอยู่ในเบราว์เซอร์ของคุณ",
+      },
+      tr: {
+        name: "JSON Patch Uygulama Aracı",
+        description:
+          "RFC 6902 biçimindeki JSON Patch’i çevrimiçi uygulayın. Güncellenen JSON’u önizleyin ve hangi işlemin neden başarısız olduğunu görün. Verileriniz tarayıcınızda kalır.",
+      },
+      vi: {
+        name: "Công cụ áp dụng JSON Patch",
+        description:
+          "Áp dụng JSON Patch theo RFC 6902 trực tuyến. Xem trước JSON đã cập nhật và biết thao tác nào thất bại, vì sao. Dữ liệu luôn nằm trong trình duyệt của bạn.",
+      },
+      "zh-CN": {
+        name: "JSON Patch 应用器",
+        description:
+          "在线应用符合 RFC 6902 的 JSON Patch，预览更新后的 JSON，并查看失败的操作及原因。数据始终留在浏览器中。",
+      },
+      "zh-TW": {
+        name: "JSON Patch 套用工具",
+        description:
+          "線上套用 RFC 6902 JSON Patch，預覽修改後的 JSON，並查看失敗的操作及原因。資料全程留在你的瀏覽器中。",
       },
     },
   },

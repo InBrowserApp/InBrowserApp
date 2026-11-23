@@ -1,0 +1,4 @@
+{
+  "name": "JSON Patch 应用器",
+  "description": "在线应用符合 RFC 6902 的 JSON Patch，预览更新后的 JSON，并查看失败的操作及原因。数据始终留在浏览器中。"
+}

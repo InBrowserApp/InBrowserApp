@@ -694,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "Gunakan JSON Patch",
+    slug: "json-patch-applier",
+  },
+  {
+    category: "json",
     name: "Penjana JSON Schema",
     slug: "json-schema-generator",
   },

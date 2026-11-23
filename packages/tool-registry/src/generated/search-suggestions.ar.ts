@@ -694,6 +694,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "json",
+    name: "أداة تطبيق JSON Patch",
+    slug: "json-patch-applier",
+  },
+  {
+    category: "json",
     name: "مولد مخطط JSON",
     slug: "json-schema-generator",
   },
