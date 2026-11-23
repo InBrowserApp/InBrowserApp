@@ -19,6 +19,7 @@
   "fromLabel": "來源路徑",
   "stoppedHint": "處理已在此處停止，後續操作均已略過。",
   "invalidOperation": "每項操作都必須是物件，且 op 必須是 add、remove、replace、move、copy 或 test。",
+  "duplicateOperationField": "每項操作都必須恰好包含一個 op 欄位和一個 path 欄位。",
   "invalidPath": "path 欄位必須是有效的 JSON Pointer。",
   "invalidFrom": "from 欄位必須是有效的 JSON Pointer。",
   "missingValue": "這項操作需要 value 欄位。",

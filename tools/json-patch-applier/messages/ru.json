@@ -19,6 +19,7 @@
   "fromLabel": "Источник",
   "stoppedHint": "Обработка остановлена. Последующие операции пропущены.",
   "invalidOperation": "Каждая операция должна быть объектом, в котором поле op имеет значение add, remove, replace, move, copy или test.",
+  "duplicateOperationField": "Каждая операция должна содержать ровно одно поле op и ровно одно поле path.",
   "invalidPath": "Поле path должно содержать корректный путь JSON Pointer.",
   "invalidFrom": "Поле from должно содержать корректный путь JSON Pointer.",
   "missingValue": "Для этой операции требуется поле value.",

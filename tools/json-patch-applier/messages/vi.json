@@ -19,6 +19,7 @@
   "fromLabel": "Đường dẫn nguồn",
   "stoppedHint": "Quá trình xử lý dừng tại đây. Các thao tác sau đó đã bị bỏ qua.",
   "invalidOperation": "Mỗi thao tác phải là một đối tượng có op là add, remove, replace, move, copy hoặc test.",
+  "duplicateOperationField": "Mỗi thao tác phải chứa đúng một trường op và một trường path.",
   "invalidPath": "Trường path phải là một JSON Pointer hợp lệ.",
   "invalidFrom": "Trường from phải là một JSON Pointer hợp lệ.",
   "missingValue": "Thao tác này cần trường value.",

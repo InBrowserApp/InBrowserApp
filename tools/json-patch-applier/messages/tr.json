@@ -19,6 +19,7 @@
   "fromLabel": "Kaynak",
   "stoppedHint": "İşleme burada durdu. Sonraki işlemler atlandı.",
   "invalidOperation": "Her işlem, op alanında add, remove, replace, move, copy veya test değerlerinden birini içeren bir nesne olmalıdır.",
+  "duplicateOperationField": "Her işlemde tam olarak bir op alanı ve bir path alanı bulunmalıdır.",
   "invalidPath": "path alanı geçerli bir JSON Pointer olmalıdır.",
   "invalidFrom": "from alanı geçerli bir JSON Pointer olmalıdır.",
   "missingValue": "Bu işlem bir value alanı gerektirir.",

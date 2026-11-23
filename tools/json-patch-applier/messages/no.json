@@ -19,6 +19,7 @@
   "fromLabel": "Kilde",
   "stoppedHint": "Behandlingen stoppet her. Eventuelle senere operasjoner ble hoppet over.",
   "invalidOperation": "Hver operasjon må være et objekt med et op-felt som har verdien add, remove, replace, move, copy eller test.",
+  "duplicateOperationField": "Hver operasjon må inneholde nøyaktig ett op-felt og ett path-felt.",
   "invalidPath": "Feltet path må inneholde en gyldig JSON Pointer.",
   "invalidFrom": "Feltet from må inneholde en gyldig JSON Pointer.",
   "missingValue": "Denne operasjonen krever feltet value.",

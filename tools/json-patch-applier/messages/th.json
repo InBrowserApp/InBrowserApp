@@ -19,6 +19,7 @@
   "fromLabel": "เส้นทางต้นทาง",
   "stoppedHint": "หยุดประมวลผลที่จุดนี้และข้ามการดำเนินการที่เหลือ",
   "invalidOperation": "แต่ละการดำเนินการต้องเป็นออบเจ็กต์ที่มีค่า op เป็น add, remove, replace, move, copy หรือ test",
+  "duplicateOperationField": "แต่ละการดำเนินการต้องมีฟิลด์ op และฟิลด์ path อย่างละหนึ่งฟิลด์พอดี",
   "invalidPath": "ฟิลด์ path ต้องเป็น JSON Pointer ที่ถูกต้อง",
   "invalidFrom": "ฟิลด์ from ต้องเป็น JSON Pointer ที่ถูกต้อง",
   "missingValue": "การดำเนินการนี้ต้องมีฟิลด์ value",

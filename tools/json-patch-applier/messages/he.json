@@ -19,6 +19,7 @@
   "fromLabel": "נתיב מקור",
   "stoppedHint": "העיבוד נעצר כאן. המערכת דילגה על כל הפעולות הבאות.",
   "invalidOperation": "כל פעולה חייבת להיות אובייקט עם אחד הערכים add, remove, replace, move, copy או test בשדה op.",
+  "duplicateOperationField": "כל פעולה חייבת לכלול שדה op אחד ושדה path אחד בדיוק.",
   "invalidPath": "השדה path חייב להכיל JSON Pointer תקין.",
   "invalidFrom": "השדה from חייב להכיל JSON Pointer תקין.",
   "missingValue": "פעולה זו דורשת את השדה value.",

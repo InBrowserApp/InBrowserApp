@@ -19,6 +19,7 @@
   "fromLabel": "From",
   "stoppedHint": "Processing stopped here. Any later operations were skipped.",
   "invalidOperation": "Each operation must be an object with an op of add, remove, replace, move, copy, or test.",
+  "duplicateOperationField": "Each operation must contain exactly one op field and one path field.",
   "invalidPath": "The path field must be a valid JSON Pointer.",
   "invalidFrom": "The from field must be a valid JSON Pointer.",
   "missingValue": "This operation requires a value field.",

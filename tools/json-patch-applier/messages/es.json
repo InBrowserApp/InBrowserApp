@@ -19,6 +19,7 @@
   "fromLabel": "Origen",
   "stoppedHint": "El procesamiento se detuvo aquí. Se omitieron las operaciones posteriores.",
   "invalidOperation": "Cada operación debe ser un objeto cuyo campo op sea add, remove, replace, move, copy o test.",
+  "duplicateOperationField": "Cada operación debe contener exactamente un campo op y un campo path.",
   "invalidPath": "El campo path debe contener un JSON Pointer válido.",
   "invalidFrom": "El campo from debe contener un JSON Pointer válido.",
   "missingValue": "Esta operación requiere un campo value.",

@@ -19,6 +19,7 @@
   "fromLabel": "स्रोत पाथ",
   "stoppedHint": "प्रोसेसिंग यहीं रुक गई। इसके बाद के सभी ऑपरेशन छोड़ दिए गए।",
   "invalidOperation": "हर ऑपरेशन एक ऑब्जेक्ट होना चाहिए और उसके op फ़ील्ड का मान add, remove, replace, move, copy या test होना चाहिए।",
+  "duplicateOperationField": "हर ऑपरेशन में ठीक एक op फ़ील्ड और एक path फ़ील्ड होना चाहिए।",
   "invalidPath": "path फ़ील्ड में मान्य JSON Pointer होना चाहिए।",
   "invalidFrom": "from फ़ील्ड में मान्य JSON Pointer होना चाहिए।",
   "missingValue": "इस ऑपरेशन के लिए value फ़ील्ड ज़रूरी है।",

@@ -19,6 +19,7 @@
   "fromLabel": "移動元・コピー元",
   "stoppedHint": "ここで処理を停止しました。以降の操作はスキップされました。",
   "invalidOperation": "各操作はオブジェクトで、op は add、remove、replace、move、copy、test のいずれかである必要があります。",
+  "duplicateOperationField": "各操作には op フィールドと path フィールドが 1 つずつ必要です。",
   "invalidPath": "path フィールドには有効な JSON Pointer を指定してください。",
   "invalidFrom": "from フィールドには有効な JSON Pointer を指定してください。",
   "missingValue": "この操作には value フィールドが必要です。",

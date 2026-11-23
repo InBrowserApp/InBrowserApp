@@ -19,6 +19,7 @@
   "fromLabel": "Quellpfad",
   "stoppedHint": "Die Verarbeitung wurde hier abgebrochen. Nachfolgende Operationen wurden übersprungen.",
   "invalidOperation": "Jede Operation muss ein Objekt sein, dessen Feld op einen der Werte add, remove, replace, move, copy oder test enthält.",
+  "duplicateOperationField": "Jede Operation muss genau ein Feld op und ein Feld path enthalten.",
   "invalidPath": "Das Feld path muss einen gültigen JSON Pointer enthalten.",
   "invalidFrom": "Das Feld from muss einen gültigen JSON Pointer enthalten.",
   "missingValue": "Diese Operation benötigt ein Feld value.",

@@ -1,4 +1,5 @@
 import { LosslessNumber, parse, stringify } from "lossless-json"
+import { findDuplicateOperationFields } from "./duplicate-operation-fields"
 
 type JsonValue =
   | null
@@ -12,6 +13,7 @@ type JsonDocument = JsonValue | undefined
 
 type OperationError =
   | "invalidOperation"
+  | "duplicateOperationField"
   | "invalidPath"
   | "invalidFrom"
   | "missingValue"
@@ -249,7 +251,12 @@ function parseInput(
   reason: InputError
 ): { kind: "parsed"; value: JsonValue } | ApplicationError {
   try {
-    return { kind: "parsed", value: parse(text) as JsonValue }
+    return {
+      kind: "parsed",
+      value: parse(text, null, {
+        onDuplicateKey: ({ newValue }) => newValue,
+      }) as JsonValue,
+    }
   } catch (error) {
     return {
       kind: "error",
@@ -258,9 +265,14 @@ function parseInput(
   }
 }
 
-function applyOperations(document: JsonDocument, patch: JsonValue[]): Result {
+function applyOperations(
+  document: JsonDocument,
+  patch: JsonValue[],
+  duplicates: ReadonlySet<number>
+): Result {
   for (const [index, operation] of patch.entries()) {
     try {
+      if (duplicates.has(index)) throw new PatchError("duplicateOperationField")
       document = applyOperation(document, operation)
     } catch (error) {
       /* v8 ignore next -- Unexpected runtime errors are handled at the application boundary. */
@@ -296,7 +308,11 @@ export function applyJsonPatch(
     return { kind: "error", reason: "patchNotArray" }
 
   try {
-    return applyOperations(original.value, patch.value)
+    return applyOperations(
+      original.value,
+      patch.value,
+      findDuplicateOperationFields(patchText)
+    )
   } catch (error) {
     if (!(error instanceof RangeError)) throw error
     return { kind: "error", reason: "documentTooComplex" }

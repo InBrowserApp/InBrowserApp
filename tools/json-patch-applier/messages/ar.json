@@ -19,6 +19,7 @@
   "fromLabel": "مسار المصدر",
   "stoppedHint": "توقفت المعالجة هنا. تم تخطّي العمليات اللاحقة.",
   "invalidOperation": "يجب أن تكون كل عملية كائنًا يحدّد أحد الأنواع add أو remove أو replace أو move أو copy أو test في الحقل op.",
+  "duplicateOperationField": "يجب أن تحتوي كل عملية على حقل op واحد وحقل path واحد بالضبط.",
   "invalidPath": "يجب أن يحتوي الحقل path على مسار JSON Pointer صالح.",
   "invalidFrom": "يجب أن يحتوي الحقل from على مسار JSON Pointer صالح.",
   "missingValue": "تتطلب هذه العملية الحقل value.",

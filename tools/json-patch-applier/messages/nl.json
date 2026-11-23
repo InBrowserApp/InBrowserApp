@@ -19,6 +19,7 @@
   "fromLabel": "Bron",
   "stoppedHint": "De verwerking is hier gestopt. Eventuele volgende bewerkingen zijn overgeslagen.",
   "invalidOperation": "Elke bewerking moet een object zijn met een op-veld met de waarde add, remove, replace, move, copy of test.",
+  "duplicateOperationField": "Elke bewerking moet precies één veld op en één veld path bevatten.",
   "invalidPath": "Het veld path moet een geldige JSON Pointer bevatten.",
   "invalidFrom": "Het veld from moet een geldige JSON Pointer bevatten.",
   "missingValue": "Voor deze bewerking is een value-veld vereist.",

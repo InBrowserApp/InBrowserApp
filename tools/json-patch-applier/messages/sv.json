@@ -19,6 +19,7 @@
   "fromLabel": "Källa",
   "stoppedHint": "Bearbetningen stoppades här. Eventuella senare operationer hoppades över.",
   "invalidOperation": "Varje operation måste vara ett objekt med ett op-fält vars värde är add, remove, replace, move, copy eller test.",
+  "duplicateOperationField": "Varje åtgärd måste innehålla exakt ett op-fält och ett path-fält.",
   "invalidPath": "Fältet path måste innehålla en giltig JSON Pointer.",
   "invalidFrom": "Fältet from måste innehålla en giltig JSON Pointer.",
   "missingValue": "Den här operationen kräver fältet value.",

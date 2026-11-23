@@ -19,6 +19,7 @@
   "fromLabel": "출발 경로",
   "stoppedHint": "여기서 처리가 중단되어 이후 작업은 건너뛰었습니다.",
   "invalidOperation": "각 작업은 객체여야 하며 op는 add, remove, replace, move, copy, test 중 하나여야 합니다.",
+  "duplicateOperationField": "각 작업에는 op 필드와 path 필드가 정확히 하나씩 있어야 합니다.",
   "invalidPath": "path 필드에 유효한 JSON Pointer를 지정하세요.",
   "invalidFrom": "from 필드에 유효한 JSON Pointer를 지정하세요.",
   "missingValue": "이 작업에는 value 필드가 필요합니다.",

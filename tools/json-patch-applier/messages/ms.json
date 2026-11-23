@@ -19,6 +19,7 @@
   "fromLabel": "Laluan sumber",
   "stoppedHint": "Pemprosesan berhenti di sini. Operasi seterusnya dilangkau.",
   "invalidOperation": "Setiap operasi mestilah objek dengan medan op bernilai add, remove, replace, move, copy atau test.",
+  "duplicateOperationField": "Setiap operasi mesti mengandungi tepat satu medan op dan satu medan path.",
   "invalidPath": "Medan path mestilah JSON Pointer yang sah.",
   "invalidFrom": "Medan from mestilah JSON Pointer yang sah.",
   "missingValue": "Operasi ini memerlukan medan value.",

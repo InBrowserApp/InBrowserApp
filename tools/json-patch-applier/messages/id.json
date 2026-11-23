@@ -19,6 +19,7 @@
   "fromLabel": "Jalur sumber",
   "stoppedHint": "Pemrosesan berhenti di sini. Operasi berikutnya dilewati.",
   "invalidOperation": "Setiap operasi harus berupa objek dengan kolom op bernilai add, remove, replace, move, copy, atau test.",
+  "duplicateOperationField": "Setiap operasi harus memiliki tepat satu bidang op dan satu bidang path.",
   "invalidPath": "Kolom path harus berisi JSON Pointer yang valid.",
   "invalidFrom": "Kolom from harus berisi JSON Pointer yang valid.",
   "missingValue": "Operasi ini memerlukan kolom value.",

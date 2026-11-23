@@ -130,6 +130,43 @@ describe("applyJsonPatch", () => {
     }
   })
 
+  test("reports repeated op or path fields at the affected operation", () => {
+    const original = '{"status":"draft"}'
+    const duplicateOp =
+      '[{"op":"test","path":"/status","value":"draft"},{"op":"add","op":"add","path":"/tag","value":"api"}]'
+    const duplicatePath = String.raw`[{"op":"add","path":"/tag","p\u0061th":"/status","value":"api"}]`
+    expect(applyJsonPatch(original, duplicateOp)).toMatchObject({
+      kind: "operationError",
+      number: 2,
+      reason: "duplicateOperationField",
+    })
+    expect(applyJsonPatch(original, duplicatePath)).toMatchObject({
+      kind: "operationError",
+      number: 1,
+      reason: "duplicateOperationField",
+    })
+    expect(
+      applyJsonPatch(
+        original,
+        '[{"op":"test","path":"/missing","value":0},' + duplicatePath.slice(1)
+      )
+    ).toMatchObject({
+      kind: "operationError",
+      number: 1,
+      reason: "missingPath",
+    })
+  })
+
+  test("allows op and path properties inside operation values", () => {
+    const value = {
+      op: 'text with } ] , and "',
+      path: [{ op: 1 }, { path: 2 }],
+    }
+    expect(preview({}, [{ op: "add", path: "/test", value }])).toEqual({
+      test: value,
+    })
+  })
+
   test("reports only the first failure and omits partial results", () => {
     expect(
       apply({ status: "draft" }, [

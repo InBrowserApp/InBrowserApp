@@ -19,6 +19,7 @@
   "fromLabel": "Źródło",
   "stoppedHint": "Przetwarzanie zatrzymano w tym miejscu. Pominięto wszystkie kolejne operacje.",
   "invalidOperation": "Każda operacja musi być obiektem z polem op o wartości add, remove, replace, move, copy lub test.",
+  "duplicateOperationField": "Każda operacja musi zawierać dokładnie jedno pole op i jedno pole path.",
   "invalidPath": "Pole path musi zawierać prawidłowy wskaźnik JSON Pointer.",
   "invalidFrom": "Pole from musi zawierać prawidłowy wskaźnik JSON Pointer.",
   "missingValue": "Ta operacja wymaga pola value.",
