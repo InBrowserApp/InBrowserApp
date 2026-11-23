@@ -124,9 +124,10 @@ function mustKeepOriginal(pdf: PDFDocument) {
   const namespaces = xml.matchAll(
     /\bxmlns(?::[\w.-]+)?\s*=\s*(["'])([^"']+)\1/g
   )
-  return Array.from(namespaces, ([, , value]) => value).includes(
-    "http://www.aiim.org/pdfa/ns/id/"
-  )
+  for (const [, , namespace] of namespaces) {
+    if (namespace === "http://www.aiim.org/pdfa/ns/id/") return true
+  }
+  return false
 }
 
 function inspectDocument(objects: PDFObject[]) {
