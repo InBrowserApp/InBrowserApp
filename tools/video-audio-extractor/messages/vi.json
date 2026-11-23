@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "Chọn MP4 hoặc WebM",
+  "changeVideo": "Đổi video",
+  "dropHint": "Hoặc thả video vào đây",
+  "privacy": "Video luôn ở trên thiết bị của bạn.",
+  "reading": "Đang đọc các luồng âm thanh…",
+  "audioTrack": "Luồng âm thanh",
+  "trackNumber": "Luồng {number}",
+  "preview": "Nghe thử",
+  "preparing": "Đang chuẩn bị luồng đã chọn…",
+  "download": "Tải {format}",
+  "unsupportedTrack": "Không thể xuất âm thanh dùng bộ mã hóa/giải mã này. Hãy thử luồng khác.",
+  "noAudio": "Video này không có luồng âm thanh.",
+  "readError": "Không thể mở video. Hãy chọn tệp MP4 hoặc WebM hợp lệ.",
+  "exportError": "Không thể trích xuất luồng âm thanh này.",
+  "previewError": "Trình duyệt không phát được bản nghe thử. Bạn vẫn có thể tải âm thanh."
+}

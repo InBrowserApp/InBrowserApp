@@ -1473,6 +1473,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "misc",
+    name: "Pengekstrak Audio dari Video",
+    slug: "video-audio-extractor",
+  },
+  {
     category: "image",
     name: "Pengekstrak Bingkai Video",
     slug: "video-frame-extractor",

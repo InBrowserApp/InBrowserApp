@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "MP4 veya WebM seçin",
+  "changeVideo": "Videoyu değiştirin",
+  "dropHint": "Ya da videoyu buraya bırakın",
+  "privacy": "Videonuz cihazınızda kalır.",
+  "reading": "Ses izleri okunuyor…",
+  "audioTrack": "Ses izi",
+  "trackNumber": "{number}. ses izi",
+  "preview": "Ses önizlemesi",
+  "preparing": "Seçilen ses izi hazırlanıyor…",
+  "download": "{format} indirin",
+  "unsupportedTrack": "Bu kodekle kodlanmış ses dışa aktarılamıyor. Başka bir ses izi deneyin.",
+  "noAudio": "Bu videoda ses izi yok.",
+  "readError": "Video açılamadı. Geçerli bir MP4 veya WebM dosyası seçin.",
+  "exportError": "Bu ses izi çıkarılamadı.",
+  "previewError": "Tarayıcınız ses önizlemesini oynatamıyor. Sesi yine de indirebilirsiniz."
+}

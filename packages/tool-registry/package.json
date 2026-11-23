@@ -301,6 +301,7 @@
     "@tool/uuid-v6-generator": "workspace:*",
     "@tool/uuid-v7-generator": "workspace:*",
     "@tool/uuid-validator": "workspace:*",
+    "@tool/video-audio-extractor": "workspace:*",
     "@tool/video-frame-extractor": "workspace:*",
     "@tool/video-to-gif": "workspace:*",
     "@tool/vin-validator": "workspace:*",

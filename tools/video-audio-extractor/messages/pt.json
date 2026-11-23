@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "Escolher MP4 ou WebM",
+  "changeVideo": "Trocar vídeo",
+  "dropHint": "Ou solte um vídeo aqui",
+  "privacy": "Seu vídeo permanece neste dispositivo.",
+  "reading": "Lendo as faixas de áudio…",
+  "audioTrack": "Faixa de áudio",
+  "trackNumber": "Faixa {number}",
+  "preview": "Prévia de áudio",
+  "preparing": "Preparando a faixa selecionada…",
+  "download": "Baixar {format}",
+  "unsupportedTrack": "Não é possível exportar este codec de áudio. Tente outra faixa.",
+  "noAudio": "Este vídeo não tem faixas de áudio.",
+  "readError": "Não foi possível abrir o vídeo. Escolha um arquivo MP4 ou WebM válido.",
+  "exportError": "Não foi possível extrair esta faixa de áudio.",
+  "previewError": "Seu navegador não consegue reproduzir esta prévia. Você ainda pode baixar o áudio."
+}

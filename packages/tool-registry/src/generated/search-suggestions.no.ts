@@ -1473,6 +1473,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "misc",
+    name: "Hent ut lyd fra video",
+    slug: "video-audio-extractor",
+  },
+  {
     category: "image",
     name: "Stillbilder fra video",
     slug: "video-frame-extractor",

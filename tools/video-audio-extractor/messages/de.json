@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "MP4 oder WebM auswählen",
+  "changeVideo": "Anderes Video wählen",
+  "dropHint": "Oder ziehe ein Video hierher",
+  "privacy": "Dein Video bleibt auf deinem Gerät.",
+  "reading": "Audiospuren werden gelesen…",
+  "audioTrack": "Audiospur",
+  "trackNumber": "Spur {number}",
+  "preview": "Audiovorschau",
+  "preparing": "Die ausgewählte Audiospur wird vorbereitet…",
+  "download": "{format} herunterladen",
+  "unsupportedTrack": "Dieser Audiocodec lässt sich nicht exportieren. Wähle eine andere Spur.",
+  "noAudio": "Dieses Video enthält keine Audiospuren.",
+  "readError": "Das Video konnte nicht geöffnet werden. Wähle eine gültige MP4- oder WebM-Datei.",
+  "exportError": "Diese Audiospur konnte nicht extrahiert werden.",
+  "previewError": "Dein Browser kann die Vorschau nicht abspielen. Du kannst die Audiodatei trotzdem herunterladen."
+}

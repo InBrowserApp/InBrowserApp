@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "Elige un MP4 o WebM",
+  "changeVideo": "Cambiar video",
+  "dropHint": "O arrastra un video aquí",
+  "privacy": "Tu video permanece en tu dispositivo.",
+  "reading": "Leyendo pistas de audio…",
+  "audioTrack": "Pista de audio",
+  "trackNumber": "Pista {number}",
+  "preview": "Vista previa del audio",
+  "preparing": "Preparando la pista seleccionada…",
+  "download": "Descargar {format}",
+  "unsupportedTrack": "No se puede exportar este códec de audio. Prueba con otra pista.",
+  "noAudio": "Este video no tiene pistas de audio.",
+  "readError": "No se pudo abrir el video. Elige un archivo MP4 o WebM válido.",
+  "exportError": "No se pudo extraer esta pista de audio.",
+  "previewError": "Tu navegador no puede reproducir la vista previa. Aun así, puedes descargar el audio."
+}

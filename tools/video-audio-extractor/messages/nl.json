@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "Kies MP4 of WebM",
+  "changeVideo": "Andere video kiezen",
+  "dropHint": "Of sleep een video hierheen",
+  "privacy": "Je video blijft op je apparaat.",
+  "reading": "Audiosporen worden gelezen…",
+  "audioTrack": "Audiospoor",
+  "trackNumber": "Spoor {number}",
+  "preview": "Audio beluisteren",
+  "preparing": "Geselecteerd spoor wordt voorbereid…",
+  "download": "{format} downloaden",
+  "unsupportedTrack": "Exporteren met deze audiocodec is niet mogelijk. Probeer een ander spoor.",
+  "noAudio": "Deze video bevat geen audiosporen.",
+  "readError": "De video kan niet worden geopend. Kies een geldig MP4- of WebM-bestand.",
+  "exportError": "Dit audiospoor kan niet worden geëxtraheerd.",
+  "previewError": "Je browser kan deze audio niet afspelen. Je kunt het bestand wel downloaden."
+}

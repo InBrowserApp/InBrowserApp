@@ -1473,6 +1473,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "uuid-validator",
   },
   {
+    category: "misc",
+    name: "Trình trích xuất âm thanh từ video",
+    slug: "video-audio-extractor",
+  },
+  {
     category: "image",
     name: "Trình trích xuất khung hình từ video",
     slug: "video-frame-extractor",

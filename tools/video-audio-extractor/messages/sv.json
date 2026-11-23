@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "Välj MP4 eller WebM",
+  "changeVideo": "Byt video",
+  "dropHint": "Eller dra en video hit",
+  "privacy": "Videon stannar på din enhet.",
+  "reading": "Läser ljudspår…",
+  "audioTrack": "Ljudspår",
+  "trackNumber": "Spår {number}",
+  "preview": "Förhandslyssning",
+  "preparing": "Förbereder det valda spåret…",
+  "download": "Ladda ner {format}",
+  "unsupportedTrack": "Den här ljudkodeken kan inte exporteras. Prova ett annat spår.",
+  "noAudio": "Videon har inga ljudspår.",
+  "readError": "Kunde inte öppna videon. Välj en giltig MP4- eller WebM-fil.",
+  "exportError": "Kunde inte extrahera det här ljudspåret.",
+  "previewError": "Webbläsaren kan inte spela upp ljudet här. Du kan fortfarande ladda ner filen."
+}

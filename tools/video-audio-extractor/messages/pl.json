@@ -1,0 +1,17 @@
+{
+  "chooseVideo": "Wybierz MP4 lub WebM",
+  "changeVideo": "Zmień film",
+  "dropHint": "Lub przeciągnij tutaj plik wideo",
+  "privacy": "Film pozostaje na Twoim urządzeniu.",
+  "reading": "Odczytywanie ścieżek audio…",
+  "audioTrack": "Ścieżka audio",
+  "trackNumber": "Ścieżka {number}",
+  "preview": "Odsłuch audio",
+  "preparing": "Przygotowywanie wybranej ścieżki…",
+  "download": "Pobierz {format}",
+  "unsupportedTrack": "Nie można wyeksportować audio z tym kodekiem. Spróbuj wybrać inną ścieżkę.",
+  "noAudio": "Ten film nie zawiera ścieżek audio.",
+  "readError": "Nie udało się otworzyć filmu. Wybierz prawidłowy plik MP4 lub WebM.",
+  "exportError": "Nie udało się wyodrębnić tej ścieżki audio.",
+  "previewError": "Przeglądarka nie może odtworzyć tego podglądu. Nadal możesz pobrać plik audio."
+}
