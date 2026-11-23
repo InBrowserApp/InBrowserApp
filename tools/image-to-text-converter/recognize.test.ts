@@ -7,7 +7,7 @@ import { recognizeImage } from "./recognize"
 vi.mock("tesseract.js", () => ({
   createWorker: vi.fn(),
   OEM: { LSTM_ONLY: 1 },
-  PSM: { AUTO: "3" },
+  PSM: { AUTO: "3", SINGLE_BLOCK_VERT_TEXT: "5" },
 }))
 
 const startWorker = vi.mocked(createWorker)
@@ -30,13 +30,20 @@ describe("OCR worker", () => {
   it("initializes the standard bilingual models from same-origin assets", async () => {
     const progress = vi.fn()
     await expect(
-      recognizeImage(image, "chi_tra", new AbortController().signal, progress)
+      recognizeImage(
+        image,
+        "chi_tra",
+        true,
+        new AbortController().signal,
+        progress
+      )
     ).resolves.toBe("訂單 OCR 2026\n品項  數量")
     expect(startWorker).toHaveBeenCalledWith(
       "chi_tra+eng",
       OEM.LSTM_ONLY,
       expect.objectContaining({
-        langPath: "/ocr-data/4.0.0_best_int",
+        langPath: "/_astro/ocr",
+        workerPath: expect.stringMatching(/^blob:/),
         workerBlobURL: false,
       })
     )
@@ -64,17 +71,34 @@ describe("OCR worker", () => {
       return new Promise(() => {})
     })
     await expect(
-      recognizeImage(image, "eng", new AbortController().signal, vi.fn())
+      recognizeImage(image, "eng", false, new AbortController().signal, vi.fn())
     ).rejects.toThrow("Model unavailable")
   })
 
   it("releases the worker when the input is replaced during recognition", async () => {
     const run = new AbortController()
     worker.recognize.mockReturnValueOnce(new Promise(() => {}))
-    const result = recognizeImage(image, "eng", run.signal, vi.fn())
+    const result = recognizeImage(image, "eng", false, run.signal, vi.fn())
     await vi.waitFor(() => expect(worker.recognize).toHaveBeenCalledOnce())
     run.abort()
     await expect(result).rejects.toMatchObject({ name: "AbortError" })
     expect(worker.terminate).toHaveBeenCalledOnce()
+  })
+
+  it("uses only the selected vertical model for single-language OCR", async () => {
+    worker.recognize.mockResolvedValueOnce({ data: { text: "日 本 語\n" } })
+    await expect(
+      recognizeImage(
+        image,
+        "jpn_vert",
+        false,
+        new AbortController().signal,
+        vi.fn()
+      )
+    ).resolves.toBe("日 本 語")
+    expect(startWorker.mock.lastCall?.[0]).toBe("jpn_vert")
+    expect(worker.setParameters).toHaveBeenCalledWith({
+      tessedit_pageseg_mode: PSM.SINGLE_BLOCK_VERT_TEXT,
+    })
   })
 })

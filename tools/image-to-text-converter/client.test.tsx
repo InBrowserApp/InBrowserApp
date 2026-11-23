@@ -27,7 +27,9 @@ function open(lang = "en") {
   const { container } = render(<Client lang={lang} messages={messages} />)
   const picker =
     container.querySelector<HTMLInputElement>('input[type="file"]')!
-  const language = screen.getByLabelText<HTMLSelectElement>(messages.language)
+  const language = screen.getByRole<HTMLButtonElement>("button", {
+    name: new RegExp(`^${messages.language}`),
+  })
   const result = screen.getByRole<HTMLTextAreaElement>("textbox", {
     name: messages.result,
   })
@@ -40,6 +42,15 @@ function open(lang = "en") {
     button,
     choose: (image: File) =>
       fireEvent.change(picker, { target: { files: [image] } }),
+    chooseLanguage: (code: string) => {
+      fireEvent.click(language)
+      fireEvent.change(screen.getByRole("searchbox"), {
+        target: { value: code },
+      })
+      fireEvent.click(
+        screen.getByRole("button", { name: new RegExp(` ${code}$`) })
+      )
+    },
     run: () => fireEvent.click(button),
   }
 }
@@ -80,6 +91,7 @@ describe("image OCR", () => {
     expect(runOcr).toHaveBeenCalledWith(
       image,
       "eng",
+      false,
       expect.any(AbortSignal),
       expect.any(Function)
     )
@@ -102,16 +114,21 @@ describe("image OCR", () => {
 
   it("accepts a screenshot pasted anywhere and defaults to the locale's Chinese model", async () => {
     runOcr.mockResolvedValue("出貨 OK")
-    const { language, result, run } = open("zh-TW")
+    const { result, run } = open("zh-TW")
     const screenshot = file()
     fireEvent.paste(window, { clipboardData: { files: [screenshot] } })
-    expect(language.value).toBe("chi_tra")
+    expect(
+      screen
+        .getByRole("checkbox", { name: messages.includeEnglish })
+        .getAttribute("aria-checked")
+    ).toBe("true")
     expect(screen.getByText(screenshot.name)).toBeTruthy()
     run()
     await waitFor(() => expect(result.value).toBe("出貨 OK"))
     expect(runOcr).toHaveBeenCalledWith(
       screenshot,
       "chi_tra",
+      true,
       expect.any(AbortSignal),
       expect.any(Function)
     )
@@ -140,8 +157,7 @@ describe("image OCR", () => {
       .mockResolvedValueOnce("")
       .mockRejectedValueOnce(new Error("failed"))
       .mockResolvedValueOnce("Hello")
-    const { choose, run, language, result } = open("zh-CN")
-    expect(language.value).toBe("chi_sim")
+    const { choose, run, chooseLanguage, result } = open("zh-CN")
     const image = file()
     choose(image)
     choose(file("invalid.txt", "text/plain"))
@@ -151,7 +167,7 @@ describe("image OCR", () => {
     run()
     await screen.findByText(messages.emptyResult)
     expect(result.value).toBe("")
-    fireEvent.change(language, { target: { value: "eng" } })
+    chooseLanguage("eng")
     run()
     await screen.findByText(messages.recognitionFailed)
     run()
@@ -163,7 +179,7 @@ describe("image OCR", () => {
     let finish: (text: string) => void = () => undefined
     runOcr
       .mockImplementationOnce(
-        (_image, _language, _signal, progress) =>
+        (_image, _language, _english, _signal, progress) =>
           new Promise((resolve) => {
             progress(0.5)
             finish = resolve
@@ -176,12 +192,39 @@ describe("image OCR", () => {
     const indicator =
       await screen.findByRole<HTMLProgressElement>("progressbar")
     expect(indicator.value).toBe(0.5)
-    const firstSignal = runOcr.mock.calls[0]?.[2]
+    const firstSignal = runOcr.mock.calls[0]?.[3]
     choose(file("new.png"))
     expect(firstSignal?.aborted).toBe(true)
     run()
     await waitFor(() => expect(result.value).toBe("New text"))
     await act(async () => finish("Old text"))
     expect(result.value).toBe("New text")
+  })
+
+  it("searches official model names and lets the user add English to a non-Chinese model", async () => {
+    runOcr.mockResolvedValue("Bonjour")
+    const { language, choose, run, result } = open("fr")
+    expect(language.textContent).toMatch(/français/i)
+    const image = file()
+    choose(image)
+    fireEvent.click(language)
+    const dialog = screen.getByRole("dialog")
+    expect(dialog.querySelectorAll("li")).toHaveLength(123)
+    const search = screen.getByRole("searchbox", {
+      name: messages.searchLanguages,
+    })
+    fireEvent.change(search, { target: { value: "japanese vertical" } })
+    const option = screen.getByRole("button", { name: /jpn_vert/ })
+    expect(option).toBeTruthy()
+    fireEvent.keyDown(search, { key: "Enter" })
+    expect(screen.queryByRole("dialog")).toBeNull()
+    const english = screen.getByRole("checkbox", {
+      name: messages.includeEnglish,
+    })
+    expect(english.getAttribute("aria-checked")).toBe("false")
+    fireEvent.click(english)
+    run()
+    await waitFor(() => expect(result.value).toBe("Bonjour"))
+    expect(runOcr.mock.lastCall?.slice(0, 3)).toEqual([image, "jpn_vert", true])
   })
 })

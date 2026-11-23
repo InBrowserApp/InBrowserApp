@@ -7,13 +7,15 @@ import {
 } from "@workspace/ui/components/tool/tool-panel-card"
 import { Button } from "@workspace/ui/components/ui/button"
 import { CardHeader, CardTitle } from "@workspace/ui/components/ui/card"
+import { Checkbox } from "@workspace/ui/components/ui/checkbox"
 import { Label } from "@workspace/ui/components/ui/label"
 import { Textarea } from "@workspace/ui/components/ui/textarea"
 import { Download, ScanText } from "@workspace/ui/icons"
 
 import { SourcePanel } from "./source-panel"
+import { LanguagePicker } from "./language-picker"
+import { defaultLanguage, isChinese, type Language } from "./languages"
 import type { Messages } from "./messages"
-import type { Language } from "./recognize"
 
 type Status =
   | "loading"
@@ -40,14 +42,17 @@ export default function Client({
   messages: Messages
 }) {
   const [image, setImage] = useState<File | null>(null)
-  const [language, setLanguage] = useState<Language>(
-    lang === "zh-CN" ? "chi_sim" : lang === "zh-TW" ? "chi_tra" : "eng"
+  const [language, setLanguage] = useState<Language>(() =>
+    defaultLanguage(lang)
+  )
+  const [includeEnglish, setIncludeEnglish] = useState(() =>
+    isChinese(defaultLanguage(lang))
   )
   const [text, setText] = useState("")
   const [status, setStatus] = useState<Status | null>(null)
   const [progress, setProgress] = useState(0)
   const job = useRef<AbortController | null>(null)
-  const languageId = useId()
+  const englishId = useId()
   const resultId = useId()
   const busy = status === "loading" || status === "recognizing"
 
@@ -71,6 +76,7 @@ export default function Client({
       const result = await recognizeImage(
         image,
         language,
+        includeEnglish,
         run.signal,
         (value) => {
           if (run.signal.aborted) return
@@ -92,28 +98,18 @@ export default function Client({
     <div className="grid items-stretch gap-4 lg:grid-cols-2">
       <SourcePanel image={image} messages={m} onImage={changeImage}>
         <div className="flex flex-wrap items-end gap-3">
-          <div className="grid min-w-40 flex-1 gap-1.5">
-            <Label htmlFor={languageId}>{m.language}</Label>
-            <select
-              id={languageId}
-              value={language}
-              onChange={(event) =>
-                setLanguage(event.currentTarget.value as Language)
+          <LanguagePicker
+            lang={lang}
+            language={language}
+            disabled={busy}
+            messages={m}
+            onChange={(next) => {
+              if (next !== language) {
+                setLanguage(next)
+                setIncludeEnglish(isChinese(next))
               }
-              disabled={busy}
-              className="h-8 min-w-0 rounded-lg border border-input bg-background px-2 text-sm focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none disabled:opacity-50"
-            >
-              <option value="eng" lang="en">
-                English
-              </option>
-              <option value="chi_sim" lang="zh-CN">
-                简体中文 + English
-              </option>
-              <option value="chi_tra" lang="zh-TW">
-                繁體中文 + English
-              </option>
-            </select>
-          </div>
+            }}
+          />
           <Button
             type="button"
             disabled={!image || busy}
@@ -123,6 +119,19 @@ export default function Client({
             {m.recognize}
           </Button>
         </div>
+        {language !== "eng" ? (
+          <div className="flex items-center gap-2">
+            <Checkbox
+              id={englishId}
+              checked={includeEnglish}
+              disabled={busy}
+              onCheckedChange={(checked) => setIncludeEnglish(checked === true)}
+            />
+            <Label htmlFor={englishId} className="font-normal">
+              {m.includeEnglish}
+            </Label>
+          </div>
+        ) : null}
         <div role="status" className="text-sm text-muted-foreground">
           {status && m[status]}
         </div>

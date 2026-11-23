@@ -1,11 +1,13 @@
 import { getViteConfig } from "astro/config"
 import { configDefaults } from "vitest/config"
+import { tesseractModels } from "./apps/web/build/tesseract-models.mjs"
 
 const astroDomTests = [
   "apps/web/src/components/pages/tools-directory/*-client.test.ts",
 ]
 
 export default getViteConfig({
+  plugins: [tesseractModels()],
   test: {
     environment: "happy-dom",
     // Define includes per project: Vite merges inherited include arrays.

@@ -790,6 +790,9 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 26.6.6
+      '@workspace/ocr-models':
+        specifier: workspace:*
+        version: link:../../packages/lib/ocr-models
       vitest:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
@@ -985,6 +988,8 @@ importers:
       vitest:
         specifier: 'catalog:'
         version: 5.1.0(@opentelemetry/api@1.10.0)(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(happy-dom@21.0.4)(jsdom@31.0.1(@napi-rs/canvas@1.1.1)(@noble/hashes@2.4.0))(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
+
+  packages/lib/ocr-models: {}
 
   packages/lib/pdf-reader:
     dependencies:
@@ -5829,6 +5834,9 @@ importers:
 
   tools/image-to-text-converter:
     dependencies:
+      '@workspace/ocr-models':
+        specifier: workspace:*
+        version: link:../../packages/lib/ocr-models
       '@workspace/tool-sdk':
         specifier: workspace:*
         version: link:../../packages/tool-sdk

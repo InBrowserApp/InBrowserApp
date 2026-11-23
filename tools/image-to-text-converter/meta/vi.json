@@ -1,4 +1,4 @@
 {
   "name": "Chuyển ảnh thành văn bản (OCR)",
-  "description": "Dùng OCR trực tuyến miễn phí để trích xuất văn bản từ ảnh chụp màn hình và ảnh chụp. Nhận dạng tiếng Anh và tiếng Trung ngay trong trình duyệt, sau đó sao chép văn bản hoặc tải tệp TXT."
+  "description": "Trích xuất văn bản từ ảnh chụp màn hình hoặc ảnh chụp bằng OCR trực tuyến miễn phí hỗ trợ hơn 100 ngôn ngữ. Nhận dạng ngay trong trình duyệt, sau đó sao chép văn bản hoặc tải tệp TXT."
 }

@@ -31,6 +31,7 @@
     "@tailwindcss/vite": "catalog:",
     "@testing-library/react": "catalog:",
     "@types/node": "catalog:",
+    "@workspace/ocr-models": "workspace:*",
     "vitest": "catalog:",
     "wrangler": "catalog:"
   }

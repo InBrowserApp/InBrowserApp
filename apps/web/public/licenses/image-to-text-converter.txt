@@ -9,7 +9,12 @@ The English, Simplified Chinese, and Traditional Chinese OCR models are the
 packages at version 1.0.0. The upstream Tesseract models use Apache-2.0.
 https://github.com/tesseract-ocr/tessdata_best
 
-SHA-256 checksums of the packaged model files:
+The remaining OCR language models are unmodified Tesseract fast integer LSTM
+models, compressed for delivery. The build locks each model to its Git object
+in this revision:
+https://github.com/tesseract-ocr/tessdata_fast/tree/87416418657359cb625c412a48b6e1d6d41c29bd
+
+SHA-256 checksums of the three packaged models:
 eng.traineddata.gz      45b4cb346724ac1774f1c36f42f182b887bcdb28ebe63e6fff90ac41f3fcff91
 chi_sim.traineddata.gz  b8a23f10c7de500891eb458a8adc9cc58ab7f242f08b7d149f5e9aea4ad5db7c
 chi_tra.traineddata.gz  11fe2610dab05d8a880d02f193ce70203f4c4bbe061b987d5529a2c038a22743

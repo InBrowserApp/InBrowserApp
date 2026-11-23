@@ -1,0 +1,9 @@
+{
+  "name": "@workspace/ocr-models",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./catalog.json"
+  }
+}

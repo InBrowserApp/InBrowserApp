@@ -9,6 +9,7 @@ import { fileURLToPath } from "node:url"
 import { createRequire } from "node:module"
 
 import { isolatedConverter } from "./build/isolated-converter.mjs"
+import { tesseractModels } from "./build/tesseract-models.mjs"
 
 import { gzipAssets } from "./build/gzip-assets.mjs"
 
@@ -57,7 +58,12 @@ export default defineConfig({
       format: "es",
       plugins: () => [gzipAssets()],
     },
-    plugins: [tailwindcss(), gzipAssets(), isolatedConverter()],
+    plugins: [
+      tailwindcss(),
+      gzipAssets(),
+      isolatedConverter(),
+      tesseractModels(),
+    ],
   },
   integrations: [
     mdx(),
