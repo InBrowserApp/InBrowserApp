@@ -44,4 +44,5 @@ export function jpegForPdf(
       partStart = cursor
     }
   }
+  return undefined
 }
