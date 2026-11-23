@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.13.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.12.0...v2.13.0) (2026-11-23)
+
+
+### Features
+
+* add 7z, RAR, and Zstandard to Archive Viewer ([#1382](https://github.com/InBrowserApp/InBrowserApp/issues/1382)) ([bbef99b](https://github.com/InBrowserApp/InBrowserApp/commit/bbef99b2d57a8fb49db4ce9269023b7ffad22b7c))
+* add a batch image converter ([#1383](https://github.com/InBrowserApp/InBrowserApp/issues/1383)) ([2111bf8](https://github.com/InBrowserApp/InBrowserApp/commit/2111bf839ff83600db1a52647224b0d7397166fe))
+* add a browser-only bill splitter ([#1391](https://github.com/InBrowserApp/InBrowserApp/issues/1391)) ([ff04358](https://github.com/InBrowserApp/InBrowserApp/commit/ff04358059a43ce3b86a25686d8a6e35a7165aea))
+* add a browser-only PDF compressor ([#1384](https://github.com/InBrowserApp/InBrowserApp/issues/1384)) ([9a689b8](https://github.com/InBrowserApp/InBrowserApp/commit/9a689b849dac95bf00de153e3fe1d3d846e2e551))
+* add a browser-only video to GIF converter ([#1372](https://github.com/InBrowserApp/InBrowserApp/issues/1372)) ([c0eaa20](https://github.com/InBrowserApp/InBrowserApp/commit/c0eaa205c73a542aa389ff8d391587e030fc52c5))
+* add a date and age calculator ([#1392](https://github.com/InBrowserApp/InBrowserApp/issues/1392)) ([77bd62a](https://github.com/InBrowserApp/InBrowserApp/commit/77bd62a21d36dc00152aad603a854c7385c20e12))
+* add a JSON Patch applier ([#1390](https://github.com/InBrowserApp/InBrowserApp/issues/1390)) ([100eb49](https://github.com/InBrowserApp/InBrowserApp/commit/100eb496f06d16410cc7b80e3475325548fd33f2))
+* add a MAC to IPv6 (EUI-64) converter ([#1381](https://github.com/InBrowserApp/InBrowserApp/issues/1381)) ([7cd8707](https://github.com/InBrowserApp/InBrowserApp/commit/7cd8707308de598afd0d1e51b965157bf41810df))
+* add a static tldr command lookup ([#1394](https://github.com/InBrowserApp/InBrowserApp/issues/1394)) ([4b1a435](https://github.com/InBrowserApp/InBrowserApp/commit/4b1a4356ced4544be442cc9c824731c8711cb77a))
+* add a video audio extractor ([#1389](https://github.com/InBrowserApp/InBrowserApp/issues/1389)) ([445a7c6](https://github.com/InBrowserApp/InBrowserApp/commit/445a7c62ef12b96b6aacedb55a3d2aab06f996ca))
+* add APNG and animated WebP to GIF converters ([#1378](https://github.com/InBrowserApp/InBrowserApp/issues/1378)) ([a0dce81](https://github.com/InBrowserApp/InBrowserApp/commit/a0dce811034ecefebd2b47a810edc30a366bf264))
+* compress images to a file size limit ([#1373](https://github.com/InBrowserApp/InBrowserApp/issues/1373)) ([08d5fc1](https://github.com/InBrowserApp/InBrowserApp/commit/08d5fc1aac4a5bc0b4d770191738d424d31fb1a6))
+
 ## [2.12.0](https://github.com/InBrowserApp/InBrowserApp/compare/v2.11.0...v2.12.0) (2026-11-19)
 
 
