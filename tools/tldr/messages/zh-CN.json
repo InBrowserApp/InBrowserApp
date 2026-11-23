@@ -1,8 +1,8 @@
 {
   "search": "搜索命令",
-  "placeholder": "试试 git commit、tar 或 curl",
+  "placeholder": "命令名",
   "results": "匹配的命令",
-  "noResults": "没有找到匹配的命令。",
+  "noResults": "没有找到匹配的命令。试试输入较短的命令名。",
   "loadingIndex": "正在加载命令索引…",
   "indexError": "无法加载命令索引。",
   "loadingPage": "正在加载命令示例…",
@@ -13,9 +13,11 @@
   "automatic": "自动选择",
   "pageLanguage": "示例语言",
   "siteLanguage": "使用网站语言",
-  "choosePlatform": "请选择一个可用的平台以查看示例。",
+  "choosePlatform": "选择一个可用的平台查看示例。",
   "copy": "复制命令",
   "copied": "已复制",
   "copyLink": "复制此版本的链接",
-  "source": "在 GitHub 上查看源文件"
+  "source": "在 GitHub 上查看源文件",
+  "tryCommands": "试试这些命令",
+  "fallback": "当前显示最接近的可用版本。"
 }

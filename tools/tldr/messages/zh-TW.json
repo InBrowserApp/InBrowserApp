@@ -1,8 +1,8 @@
 {
   "search": "搜尋指令",
-  "placeholder": "試試 git commit、tar 或 curl",
+  "placeholder": "指令名稱",
   "results": "符合的指令",
-  "noResults": "找不到符合的指令。",
+  "noResults": "找不到符合的指令。請試著輸入較短的指令名稱。",
   "loadingIndex": "正在載入指令索引…",
   "indexError": "無法載入指令索引。",
   "loadingPage": "正在載入指令範例…",
@@ -17,5 +17,7 @@
   "copy": "複製指令",
   "copied": "已複製",
   "copyLink": "複製此版本的連結",
-  "source": "在 GitHub 上檢視原始內容"
+  "source": "在 GitHub 上檢視原始內容",
+  "tryCommands": "試著搜尋以下指令",
+  "fallback": "目前顯示最接近所選條件的可用版本。"
 }

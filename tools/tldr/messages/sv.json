@@ -1,8 +1,8 @@
 {
   "search": "Sök kommandon",
-  "placeholder": "Prova git commit, tar eller curl",
+  "placeholder": "Kommandonamn",
   "results": "Matchande kommandon",
-  "noResults": "Inga matchande kommandon.",
+  "noResults": "Inga matchande kommandon. Prova ett kortare kommandonamn.",
   "loadingIndex": "Laddar kommandoindex…",
   "indexError": "Det gick inte att ladda kommandoindex.",
   "loadingPage": "Laddar kommandoexempel…",
@@ -17,5 +17,7 @@
   "copy": "Kopiera kommandot",
   "copied": "Kopierat",
   "copyLink": "Kopiera länken till den här versionen",
-  "source": "Visa källan på GitHub"
+  "source": "Visa källan på GitHub",
+  "tryCommands": "Prova ett kommando",
+  "fallback": "Visar den tillgängliga version som bäst motsvarar ditt val."
 }

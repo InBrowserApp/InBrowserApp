@@ -1,8 +1,8 @@
 {
   "search": "Cari perintah",
-  "placeholder": "Coba git commit, tar, atau curl",
+  "placeholder": "Nama perintah",
   "results": "Perintah yang cocok",
-  "noResults": "Tidak ada perintah yang cocok.",
+  "noResults": "Tidak ada perintah yang cocok. Coba nama perintah yang lebih pendek.",
   "loadingIndex": "Memuat indeks perintah…",
   "indexError": "Indeks perintah tidak dapat dimuat.",
   "loadingPage": "Memuat contoh perintah…",
@@ -17,5 +17,7 @@
   "copy": "Salin perintah",
   "copied": "Disalin",
   "copyLink": "Salin tautan ke versi ini",
-  "source": "Lihat sumber di GitHub"
+  "source": "Lihat halaman asli di GitHub",
+  "tryCommands": "Coba sebuah perintah",
+  "fallback": "Menampilkan versi tersedia yang paling sesuai."
 }

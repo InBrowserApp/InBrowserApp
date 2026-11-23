@@ -1,14 +1,48 @@
 import { marked, type Token, type Tokens } from "marked"
 import { preparePreview } from "@workspace/markdown/sanitize"
 
+type ExamplePart = Readonly<{
+  text: string
+  kind: "text" | "value" | "options"
+}>
+
 type Section =
   | { type: "markdown"; html: string }
-  | { type: "example"; command: string }
+  | { type: "example"; command: string; parts: readonly ExamplePart[] }
 
-function unwrap(text: string) {
-  return text
-    .replace(/\{\{(.+?)\}\}(?!\})/g, "$1")
-    .replace(/\\([{}])\\\1/g, "$1$1")
+function unescapeBraces(text: string) {
+  return text.replace(/\\([{}])\\\1/g, "$1$1")
+}
+
+function exampleParts(source: string): ExamplePart[] {
+  const parts: ExamplePart[] = []
+  let offset = 0
+
+  function appendText(end: number) {
+    if (end > offset) {
+      parts.push({
+        text: unescapeBraces(source.slice(offset, end)),
+        kind: "text",
+      })
+    }
+  }
+
+  for (const match of source.matchAll(/\{\{(.+?)\}\}(?!\})/g)) {
+    const start = match.index
+    appendText(start)
+    const text = unescapeBraces(match[1]!)
+    parts.push({
+      text,
+      kind: /^\[.+\|.+\]$/.test(text) ? "options" : "value",
+    })
+    offset = start + match[0].length
+  }
+  appendText(source.length)
+  return parts
+}
+
+function plainCommand(parts: readonly ExamplePart[]) {
+  return parts.map(({ text }) => text).join("")
 }
 
 function example(token: Token) {
@@ -28,7 +62,7 @@ export function renderPage(markdown: string): Section[] {
     heading({ ...token, depth: Math.min(6, token.depth + 1) })
   const codespan = renderer.codespan.bind(renderer)
   renderer.codespan = (token) =>
-    codespan({ ...token, text: unwrap(token.text) })
+    codespan({ ...token, text: plainCommand(exampleParts(token.text)) })
 
   const sections: Section[] = []
   let prose: Token[] = []
@@ -44,7 +78,8 @@ export function renderPage(markdown: string): Section[] {
     if (command === undefined) prose.push(token)
     else {
       flush()
-      sections.push({ type: "example", command: unwrap(command) })
+      const parts = exampleParts(command)
+      sections.push({ type: "example", command: plainCommand(parts), parts })
     }
   }
   flush()

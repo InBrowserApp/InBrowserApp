@@ -1,8 +1,8 @@
 {
   "search": "Befehle suchen",
-  "placeholder": "Zum Beispiel git commit, tar oder curl",
+  "placeholder": "Befehlsname",
   "results": "Passende Befehle",
-  "noResults": "Keine passenden Befehle gefunden.",
+  "noResults": "Keine passenden Befehle gefunden. Versuche es mit einem kürzeren Befehlsnamen.",
   "loadingIndex": "Befehlsindex wird geladen…",
   "indexError": "Der Befehlsindex konnte nicht geladen werden.",
   "loadingPage": "Befehlsbeispiele werden geladen…",
@@ -17,5 +17,7 @@
   "copy": "Befehl kopieren",
   "copied": "Kopiert",
   "copyLink": "Link zu dieser Version kopieren",
-  "source": "Quelle auf GitHub ansehen"
+  "source": "Quelle auf GitHub ansehen",
+  "tryCommands": "Einen Befehl ausprobieren",
+  "fallback": "Die am besten passende verfügbare Version wird angezeigt."
 }

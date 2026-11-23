@@ -1,15 +1,15 @@
 {
   "search": "Buscar comandos",
-  "placeholder": "Experimente git commit, tar ou curl",
+  "placeholder": "Nome do comando",
   "results": "Comandos encontrados",
-  "noResults": "Nenhum comando encontrado.",
+  "noResults": "Nenhum comando encontrado. Tente um nome de comando mais curto.",
   "loadingIndex": "Carregando índice de comandos…",
   "indexError": "Não foi possível carregar o índice de comandos.",
   "loadingPage": "Carregando exemplos de comandos…",
   "pageError": "Não foi possível carregar os exemplos de comandos.",
   "retry": "Tentar novamente",
   "platform": "Sistema operacional",
-  "common": "Todas as plataformas",
+  "common": "Genérico",
   "automatic": "Automático",
   "pageLanguage": "Idioma dos exemplos",
   "siteLanguage": "Usar o idioma do site",
@@ -17,5 +17,7 @@
   "copy": "Copiar comando",
   "copied": "Copiado",
   "copyLink": "Copiar link desta versão",
-  "source": "Ver código-fonte no GitHub"
+  "source": "Ver código-fonte no GitHub",
+  "tryCommands": "Experimente um comando",
+  "fallback": "Exibindo a versão disponível mais próxima."
 }

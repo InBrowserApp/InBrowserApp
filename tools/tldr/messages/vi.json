@@ -1,8 +1,8 @@
 {
   "search": "Tìm lệnh",
-  "placeholder": "Thử git commit, tar hoặc curl",
+  "placeholder": "Tên lệnh",
   "results": "Lệnh phù hợp",
-  "noResults": "Không tìm thấy lệnh phù hợp.",
+  "noResults": "Không tìm thấy lệnh phù hợp. Hãy thử tên lệnh ngắn hơn.",
   "loadingIndex": "Đang tải chỉ mục lệnh…",
   "indexError": "Không tải được chỉ mục lệnh.",
   "loadingPage": "Đang tải ví dụ về lệnh…",
@@ -17,5 +17,7 @@
   "copy": "Sao chép lệnh",
   "copied": "Đã sao chép",
   "copyLink": "Sao chép liên kết đến phiên bản này",
-  "source": "Xem nguồn trên GitHub"
+  "source": "Xem trang gốc trên GitHub",
+  "tryCommands": "Thử một lệnh",
+  "fallback": "Đang hiển thị phiên bản phù hợp nhất hiện có."
 }

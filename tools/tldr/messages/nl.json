@@ -1,8 +1,8 @@
 {
   "search": "Opdrachten zoeken",
-  "placeholder": "Probeer git commit, tar of curl",
+  "placeholder": "Naam van de opdracht",
   "results": "Gevonden opdrachten",
-  "noResults": "Geen overeenkomende opdrachten gevonden.",
+  "noResults": "Geen passende opdrachten gevonden. Probeer een kortere opdrachtnaam.",
   "loadingIndex": "Opdrachtenindex laden…",
   "indexError": "De opdrachtenindex kon niet worden geladen.",
   "loadingPage": "Opdrachtvoorbeelden laden…",
@@ -17,5 +17,7 @@
   "copy": "Opdracht kopiëren",
   "copied": "Gekopieerd",
   "copyLink": "Link naar deze versie kopiëren",
-  "source": "Bron bekijken op GitHub"
+  "source": "Bron bekijken op GitHub",
+  "tryCommands": "Probeer een van deze opdrachten",
+  "fallback": "Je ziet de beschikbare versie die het best bij je instellingen past."
 }

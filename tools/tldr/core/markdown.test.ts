@@ -22,10 +22,21 @@ it("extracts command examples, unwraps placeholders and preserves literal braces
     ].join("\n")
   )
 
-  expect(result.filter((section) => section.type === "example")).toEqual([
+  const examples = result.filter((section) => section.type === "example")
+  expect(examples).toMatchObject([
     { type: "example", command: "git commit [-m|--message] message" },
     { type: "example", command: "git stash show stash@{0}" },
     { type: "example", command: "docker inspect '{{range}}' container" },
+  ])
+  expect(examples[0]?.parts).toEqual([
+    { text: "git commit ", kind: "text" },
+    { text: "[-m|--message]", kind: "options" },
+    { text: " ", kind: "text" },
+    { text: "message", kind: "value" },
+  ])
+  expect(examples[2]?.parts).toEqual([
+    { text: "docker inspect '{{range}}' ", kind: "text" },
+    { text: "container", kind: "value" },
   ])
   expect(result[0]).toMatchObject({
     html: expect.stringContaining("<h2>git</h2>"),

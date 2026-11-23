@@ -1,8 +1,8 @@
 {
   "search": "Søk etter kommandoer",
-  "placeholder": "Prøv git commit, tar eller curl",
+  "placeholder": "Kommandonavn",
   "results": "Søketreff",
-  "noResults": "Ingen kommandoer samsvarer med søket.",
+  "noResults": "Ingen kommandoer samsvarer med søket. Prøv et kortere kommandonavn.",
   "loadingIndex": "Laster inn kommandoindeksen…",
   "indexError": "Kommandoindeksen kunne ikke lastes inn.",
   "loadingPage": "Laster inn kommandoeksemplene…",
@@ -17,5 +17,7 @@
   "copy": "Kopier kommandoen",
   "copied": "Kopiert",
   "copyLink": "Kopier lenken til denne versjonen",
-  "source": "Vis kilden på GitHub"
+  "source": "Vis kilden på GitHub",
+  "tryCommands": "Prøv en kommando",
+  "fallback": "Viser den tilgjengelige versjonen som passer best."
 }

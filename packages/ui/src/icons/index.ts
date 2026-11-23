@@ -72,6 +72,7 @@ export {
   Moon,
   MousePointer2,
   MoreHorizontal,
+  Monitor,
   MonitorDown,
   Network,
   Pause,
@@ -91,6 +92,7 @@ export {
   Sparkles,
   Square,
   Table2,
+  Terminal,
   Sun,
   SunMoon,
   Text,
@@ -106,3 +108,5 @@ export {
   ZoomIn,
   ZoomOut,
 } from "lucide-react"
+
+export { GitHub } from "./github"

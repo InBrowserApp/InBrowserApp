@@ -1,8 +1,8 @@
 {
   "search": "Search commands",
-  "placeholder": "Try git commit, tar, or curl",
+  "placeholder": "Command name",
   "results": "Matching commands",
-  "noResults": "No matching commands.",
+  "noResults": "No matching commands. Try a shorter command name.",
   "loadingIndex": "Loading command index…",
   "indexError": "The command index could not be loaded.",
   "loadingPage": "Loading command examples…",
@@ -17,5 +17,7 @@
   "copy": "Copy command",
   "copied": "Copied",
   "copyLink": "Copy link to this version",
-  "source": "View source on GitHub"
+  "source": "View source on GitHub",
+  "tryCommands": "Try a command",
+  "fallback": "Showing the closest available version."
 }

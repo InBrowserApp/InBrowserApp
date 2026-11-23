@@ -38,9 +38,19 @@ export function publicPlatform(os: string) {
   return os === "osx" ? "macos" : os
 }
 
-function preferredLocale(language: string) {
+export function preferredLocale(language: string) {
   const locale = language.toLowerCase()
-  return locale === "pt" ? "pt-br" : locale
+  switch (locale) {
+    case "pt":
+      return "pt-br"
+    case "zh":
+    case "zh-hans":
+      return "zh-cn"
+    case "zh-hant":
+      return "zh-tw"
+    default:
+      return locale
+  }
 }
 
 export function selectVariant(

@@ -1,8 +1,8 @@
 {
   "search": "Komut ara",
-  "placeholder": "git commit, tar veya curl komutunu deneyin",
+  "placeholder": "Komut adı",
   "results": "Eşleşen komutlar",
-  "noResults": "Eşleşen komut bulunamadı.",
+  "noResults": "Eşleşen komut bulunamadı. Daha kısa bir komut adı deneyin.",
   "loadingIndex": "Komut dizini yükleniyor…",
   "indexError": "Komut dizini yüklenemedi.",
   "loadingPage": "Komut örnekleri yükleniyor…",
@@ -17,5 +17,7 @@
   "copy": "Komutu kopyala",
   "copied": "Kopyalandı",
   "copyLink": "Bu sürümün bağlantısını kopyala",
-  "source": "Kaynağı GitHub’da görüntüle"
+  "source": "Kaynağı GitHub’da görüntüle",
+  "tryCommands": "Bir komut deneyin",
+  "fallback": "Seçiminize en yakın sürüm gösteriliyor."
 }

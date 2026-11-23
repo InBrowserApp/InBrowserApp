@@ -4,6 +4,7 @@ import {
   lookupHref,
   normalizeQuery,
   platformName,
+  preferredLocale,
   publicLanguage,
   readLookup,
   search,
@@ -83,4 +84,11 @@ it("normalizes catalog options and encodes shareable URLs", () => {
     `${path}?q=git-commit`
   )
   expect(lookupHref(path, { q: "", os: "", lang: "" })).toBe(path)
+})
+
+it("resolves script tags to the catalog's Chinese locale identifiers", () => {
+  expect(preferredLocale("zh")).toBe("zh-cn")
+  expect(preferredLocale("zh-Hans")).toBe("zh-cn")
+  expect(preferredLocale("zh-Hant")).toBe("zh-tw")
+  expect(selectVariant(commands[2]!, "linux", "zh-Hant")?.locale).toBe("zh_TW")
 })

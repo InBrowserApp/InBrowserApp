@@ -1,15 +1,15 @@
 {
   "search": "Rechercher des commandes",
-  "placeholder": "Essayez git commit, tar ou curl",
+  "placeholder": "Nom de la commande",
   "results": "Commandes correspondantes",
-  "noResults": "Aucune commande correspondante.",
+  "noResults": "Aucune commande correspondante. Essayez un nom de commande plus court.",
   "loadingIndex": "Chargement de l’index des commandes…",
   "indexError": "Impossible de charger l’index des commandes.",
   "loadingPage": "Chargement des exemples de commandes…",
   "pageError": "Impossible de charger les exemples de commandes.",
   "retry": "Réessayer",
   "platform": "Système d’exploitation",
-  "common": "Toutes les plateformes",
+  "common": "Générique",
   "automatic": "Automatique",
   "pageLanguage": "Langue des exemples",
   "siteLanguage": "Utiliser la langue du site",
@@ -17,5 +17,7 @@
   "copy": "Copier la commande",
   "copied": "Copié",
   "copyLink": "Copier le lien vers cette version",
-  "source": "Voir la source sur GitHub"
+  "source": "Voir la source sur GitHub",
+  "tryCommands": "Essayer une commande",
+  "fallback": "La version disponible la plus proche est affichée."
 }
