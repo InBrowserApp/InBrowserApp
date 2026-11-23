@@ -1,4 +1,5 @@
 import { crc32, readChunkType } from "../png-chunks"
+import { readExifOrientation, type Orientation } from "./orientation"
 import type { Animation, Frame } from "./types"
 
 const signature = Uint8Array.of(137, 80, 78, 71, 13, 10, 26, 10)
@@ -65,6 +66,7 @@ export function readApng(buffer: ArrayBuffer): Animation {
   let plays = 0
   let sequence = 0
   let sawImageData = false
+  let orientation: Orientation = 1
 
   function finishFrame() {
     if (!frame) return
@@ -150,13 +152,18 @@ export function readApng(buffer: ArrayBuffer): Animation {
         }
         frameData.push(bytes.subarray(start + 4, end - 4))
         break
+      case "eXIf":
+        if (crc32(chunkBytes.subarray(4, -4)) === view.getUint32(end - 4)) {
+          orientation = readExifOrientation(data)
+        }
+        break
       case "IEND":
         if (size !== 0) throw new Error("invalid")
         finishFrame()
         if (!frameCount || frames.length !== frameCount || !sawImageData) {
           throw new Error("invalid")
         }
-        return { width, height, plays, frames }
+        return { width, height, plays, frames, orientation }
       default:
         if (!sawImageData && sharedChunks.has(type)) globals.push(chunkBytes)
     }

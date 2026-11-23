@@ -25,6 +25,20 @@ function fixCrc(bytes: Uint8Array, offset: number, end: number) {
   view.setUint32(end - 4, crc32(bytes.subarray(offset + 4, end - 4)))
 }
 
+function tiffOrientation(value: number, littleEndian: boolean) {
+  const tiff = new Uint8Array(26)
+  const view = new DataView(tiff.buffer)
+  view.setUint16(0, littleEndian ? 0x4949 : 0x4d4d)
+  view.setUint16(2, 42, littleEndian)
+  view.setUint32(4, 8, littleEndian)
+  view.setUint16(8, 1, littleEndian)
+  view.setUint16(10, 0x0112, littleEndian)
+  view.setUint16(12, 3, littleEndian)
+  view.setUint32(14, 1, littleEndian)
+  view.setUint16(18, value, littleEndian)
+  return tiff
+}
+
 test("APNG retains frame bounds, independent delays, and finite play count", async () => {
   const bytes = fixture("animation.apng")
   const view = new DataView(bytes.buffer)
@@ -93,6 +107,54 @@ test("animated WebP keeps frame bounds, durations, and loop metadata", async () 
   expect(view.getUint32(4, true) + 8).toBe(payload.byteLength)
   expect(readChunkType(view, 8)).toBe("WEBP")
   expect(readChunkType(view, 12)).toBe("VP8 ")
+})
+
+test("APNG reads orientation from valid eXIf metadata", () => {
+  const source = fixture("animation.apng")
+  const tiff = tiffOrientation(6, false)
+  const exif = new Uint8Array(tiff.length + 12)
+  new DataView(exif.buffer).setUint32(0, tiff.length)
+  exif.set(new TextEncoder().encode("eXIf"), 4)
+  exif.set(tiff, 8)
+  fixCrc(exif, 0, exif.length)
+  const ihdrEnd = pngChunks(source)[0]!.end
+  const bytes = new Uint8Array(source.length + exif.length)
+  bytes.set(source.subarray(0, ihdrEnd))
+  bytes.set(exif, ihdrEnd)
+  bytes.set(source.subarray(ihdrEnd), ihdrEnd + exif.length)
+  expect(readApng(bytes.buffer).orientation).toBe(6)
+
+  bytes[ihdrEnd + exif.length - 1]! ^= 1
+  expect(readApng(bytes.buffer).orientation).toBe(1)
+})
+
+test("WebP reads prefixed EXIF and ignores reserved frame flags", () => {
+  const source = fixture("animation.animated.webp")
+  const tiff = tiffOrientation(8, true)
+  const prefix = new TextEncoder().encode("Exif\0\0")
+  const bytes = new Uint8Array(source.length + 8 + prefix.length + tiff.length)
+  bytes.set(source)
+  bytes.set(new TextEncoder().encode("EXIF"), source.length)
+  const view = new DataView(bytes.buffer)
+  view.setUint32(4, bytes.length - 8, true)
+  view.setUint32(source.length + 4, prefix.length + tiff.length, true)
+  bytes.set(prefix, source.length + 8)
+  bytes.set(tiff, source.length + 8 + prefix.length)
+  bytes[20]! |= 8
+  for (let offset = 30; offset < source.length;) {
+    if (readChunkType(view, offset) === "ANMF") bytes[offset + 23]! |= 0xfc
+    const size = view.getUint32(offset + 4, true)
+    offset += 8 + size + (size % 2)
+  }
+
+  const { orientation, frames } = readAnimatedWebp(bytes.buffer)
+  expect(orientation).toBe(8)
+  expect(frames.map(({ blend, dispose }) => [blend, dispose])).toEqual(
+    readAnimatedWebp(source.buffer).frames.map(({ blend, dispose }) => [
+      blend,
+      dispose,
+    ])
+  )
 })
 
 test("the decoders reject still, wrong-format, and truncated inputs", () => {

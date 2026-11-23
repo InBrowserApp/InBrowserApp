@@ -35,15 +35,25 @@ export function AnimationToGif({
   const [busy, setBusy] = useState(false)
   const [dragOver, setDragOver] = useState(false)
   const picker = useRef<HTMLInputElement>(null)
+  const createButton = useRef<HTMLButtonElement>(null)
+  const cancelButton = useRef<HTMLButtonElement>(null)
   const active = useRef<AbortController | null>(null)
   const { accept, extensions } = formats[format]
 
   useEffect(() => () => active.current?.abort(), [])
 
-  function stopConversion() {
-    active.current?.abort()
+  function finishConversion() {
+    // Cancel disappears when work ends. Keep keyboard focus in the tool.
+    if (cancelButton.current === document.activeElement) {
+      createButton.current?.focus()
+    }
     active.current = null
     setBusy(false)
+  }
+
+  function stopConversion() {
+    active.current?.abort()
+    finishConversion()
   }
 
   function select(next: File | undefined) {
@@ -65,8 +75,7 @@ export function AnimationToGif({
       operation.signal
     ).catch(() => ({ error: "failed" }) as const)
     if (operation.signal.aborted) return
-    active.current = null
-    setBusy(false)
+    finishConversion()
     setReply(result)
   }
 
@@ -131,9 +140,10 @@ export function AnimationToGif({
       {file && (
         <div className="flex flex-wrap items-center gap-2">
           <Button
+            ref={createButton}
             type="button"
-            className="h-auto min-h-11 whitespace-normal sm:min-h-9"
-            disabled={busy}
+            className="h-auto min-h-11 whitespace-normal aria-disabled:cursor-wait sm:min-h-9"
+            aria-disabled={busy}
             onClick={() => void convert()}
           >
             {busy ? (
@@ -145,6 +155,7 @@ export function AnimationToGif({
           </Button>
           {busy && (
             <Button
+              ref={cancelButton}
               type="button"
               variant="outline"
               className="h-auto min-h-11 whitespace-normal sm:min-h-9"

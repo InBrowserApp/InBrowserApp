@@ -1,4 +1,5 @@
 import { readChunkType } from "../png-chunks"
+import { readExifOrientation, type Orientation } from "./orientation"
 import type { Animation, Frame } from "./types"
 
 function uint24(view: DataView, offset: number) {
@@ -68,6 +69,7 @@ export function readAnimatedWebp(buffer: ArrayBuffer): Animation {
   const frames: Frame[] = []
   let plays: number | undefined
   let profile: Uint8Array<ArrayBuffer> | undefined
+  let orientation: Orientation = 1
   let offset = 30
 
   while (offset + 8 <= end) {
@@ -77,6 +79,9 @@ export function readAnimatedWebp(buffer: ArrayBuffer): Animation {
     const next = start + size + (size % 2)
     if (next > end) throw new Error("invalid")
     if (type === "ICCP") profile = bytes.subarray(offset, next)
+    if (type === "EXIF") {
+      orientation = readExifOrientation(new DataView(buffer, start, size))
+    }
     if (type === "ANIM") {
       if (size !== 6 || plays !== undefined) throw new Error("invalid")
       plays = view.getUint16(start + 4, true)
@@ -88,7 +93,7 @@ export function readAnimatedWebp(buffer: ArrayBuffer): Animation {
       const frameWidth = uint24(view, start + 6) + 1
       const frameHeight = uint24(view, start + 9) + 1
       const flags = view.getUint8(start + 15)
-      if (x + frameWidth > width || y + frameHeight > height || flags > 3) {
+      if (x + frameWidth > width || y + frameHeight > height) {
         throw new Error("invalid")
       }
       const frameBytes = bytes.subarray(start + 16, start + size)
@@ -109,5 +114,5 @@ export function readAnimatedWebp(buffer: ArrayBuffer): Animation {
   if (!frames.length || plays === undefined || offset !== end) {
     throw new Error("invalid")
   }
-  return { width, height, plays, frames }
+  return { width, height, plays, frames, orientation }
 }

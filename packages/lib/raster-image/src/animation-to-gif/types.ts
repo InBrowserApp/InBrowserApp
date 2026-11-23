@@ -1,4 +1,5 @@
 import type { AnimationResult } from "../animation-worker"
+import type { Orientation } from "./orientation"
 
 export type AnimationFormat = "apng" | "webp"
 
@@ -18,6 +19,7 @@ export type Animation = {
   height: number
   plays: number
   frames: Frame[]
+  orientation: Orientation
 }
 
 export type GifResult = AnimationResult & {
