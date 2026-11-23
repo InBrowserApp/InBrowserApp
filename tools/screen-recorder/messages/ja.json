@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "screen-recording",
     "downloadLabel": "録画をダウンロード",
     "clearLabel": "クリア",
-    "formatUnknown": "不明"
+    "formatUnknown": "不明",
+    "trimLabel": "録画をトリミング"
   },
   "alerts": {
     "unsupportedTitle": "画面録画はサポートされていません",

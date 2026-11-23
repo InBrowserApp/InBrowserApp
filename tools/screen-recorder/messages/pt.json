@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "gravacao-de-tela",
     "downloadLabel": "Baixar gravação",
     "clearLabel": "Limpar",
-    "formatUnknown": "Desconhecido"
+    "formatUnknown": "Desconhecido",
+    "trimLabel": "Cortar gravação"
   },
   "alerts": {
     "unsupportedTitle": "A gravação de tela não é compatível",

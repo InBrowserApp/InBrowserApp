@@ -38867,6 +38867,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "video-trimmer",
+    category: "misc",
+    icon: "scissors",
+    tags: ["video", "trim", "cut", "clip", "mp4", "webm", "screen recording"],
+    locales: {
+      ar: {
+        name: "أداة قص الفيديو",
+        description:
+          "قص مقاطع فيديو MP4 وWebM في متصفحك. حدّد وقتي البداية والنهاية، وعاين المقطع الذي تريد الاحتفاظ به، ثم نزّله بصيغة MP4 أو WebM مع الصوت.",
+      },
+      de: {
+        name: "Video schneiden",
+        description:
+          "Schneide MP4- und WebM-Videos im Browser. Lege Start und Ende fest, sieh dir den Ausschnitt an und lade ihn mit Ton als MP4 oder WebM herunter.",
+      },
+      en: {
+        name: "Video Trimmer",
+        description:
+          "Trim MP4 and WebM videos in your browser. Set the start and end, preview the clip you want to keep, then download it as MP4 or WebM with audio.",
+      },
+      es: {
+        name: "Recortar video",
+        description:
+          "Recorta videos MP4 y WebM en tu navegador. Marca el inicio y el fin, previsualiza el fragmento que quieres conservar y descárgalo como MP4 o WebM con audio.",
+      },
+      fr: {
+        name: "Découper une vidéo",
+        description:
+          "Découpez vos vidéos MP4 et WebM dans votre navigateur. Définissez le début et la fin, prévisualisez l’extrait à garder, puis téléchargez-le en MP4 ou WebM avec le son.",
+      },
+      he: {
+        name: "חיתוך וידאו",
+        description:
+          "חתכו סרטוני MP4 ו-WebM בדפדפן. קבעו זמני התחלה וסיום, צפו בקטע שתרצו לשמור והורידו אותו עם השמע כקובץ MP4 או WebM.",
+      },
+      hi: {
+        name: "वीडियो ट्रिमर",
+        description:
+          "अपने ब्राउज़र में MP4 और WebM वीडियो काटें। शुरुआत और अंत का समय तय करें, जिस हिस्से को रखना है उसे देखें और फिर उसे ऑडियो के साथ MP4 या WebM में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pemotong Video",
+        description:
+          "Potong video MP4 dan WebM di browser. Tentukan waktu mulai dan akhir, lihat pratinjau klip yang ingin disimpan, lalu unduh sebagai MP4 atau WebM dengan audio.",
+      },
+      it: {
+        name: "Taglia video",
+        description:
+          "Taglia video MP4 e WebM nel browser. Imposta l’inizio e la fine, guarda l’anteprima del tratto da conservare e scaricalo come MP4 o WebM con l’audio.",
+      },
+      ja: {
+        name: "動画トリミング",
+        description:
+          "ブラウザーでMP4やWebMの動画をトリミングできます。開始と終了の時間を指定し、残したい範囲をプレビューして、音声付きのMP4またはWebMとしてダウンロードできます。",
+      },
+      ko: {
+        name: "동영상 자르기",
+        description:
+          "브라우저에서 MP4와 WebM 동영상을 자르세요. 시작과 끝 시간을 정하고 남길 구간을 미리 본 뒤, 오디오가 포함된 MP4 또는 WebM 파일로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemangkas Video",
+        description:
+          "Pangkas video MP4 dan WebM dalam pelayar. Tetapkan masa mula dan tamat, pratonton klip yang ingin disimpan, kemudian muat turun sebagai MP4 atau WebM dengan audio.",
+      },
+      nl: {
+        name: "Video inkorten",
+        description:
+          "Kort MP4- en WebM-video’s in je browser in. Stel het begin en einde in, bekijk het fragment dat je wilt bewaren en download het als MP4 of WebM met geluid.",
+      },
+      no: {
+        name: "Trim video",
+        description:
+          "Trim MP4- og WebM-videoer i nettleseren. Angi start og slutt, forhåndsvis klippet du vil beholde, og last det ned som MP4 eller WebM med lyd.",
+      },
+      pl: {
+        name: "Przycinanie wideo",
+        description:
+          "Przycinaj filmy MP4 i WebM w przeglądarce. Ustaw początek i koniec, obejrzyj wybrany fragment, a następnie pobierz go z dźwiękiem jako MP4 lub WebM.",
+      },
+      pt: {
+        name: "Cortar vídeo",
+        description:
+          "Corte vídeos MP4 e WebM no navegador. Defina o início e o fim, pré-visualize o trecho que quer manter e baixe-o em MP4 ou WebM com áudio.",
+      },
+      ru: {
+        name: "Обрезка видео",
+        description:
+          "Обрезайте видео MP4 и WebM в браузере. Укажите начало и конец, просмотрите нужный фрагмент и скачайте его со звуком в формате MP4 или WebM.",
+      },
+      sv: {
+        name: "Videotrimning",
+        description:
+          "Trimma MP4- och WebM-videor i webbläsaren. Ange start och slut, förhandsvisa klippet du vill behålla och ladda ned det som MP4 eller WebM med ljud.",
+      },
+      th: {
+        name: "เครื่องมือตัดวิดีโอ",
+        description:
+          "ตัดวิดีโอ MP4 และ WebM ในเบราว์เซอร์ เลือกจุดเริ่มต้นและจุดสิ้นสุด ดูตัวอย่างคลิปที่ต้องการเก็บ แล้วดาวน์โหลดเป็น MP4 หรือ WebM พร้อมเสียง",
+      },
+      tr: {
+        name: "Video Kırpıcı",
+        description:
+          "MP4 ve WebM videolarını tarayıcınızda kırpın. Başlangıç ve bitişi ayarlayın, saklamak istediğiniz kesiti önizleyin ve sesli olarak MP4 veya WebM biçiminde indirin.",
+      },
+      vi: {
+        name: "Cắt video",
+        description:
+          "Cắt video MP4 và WebM ngay trong trình duyệt. Chọn thời điểm bắt đầu và kết thúc, xem trước đoạn muốn giữ rồi tải xuống dưới dạng MP4 hoặc WebM có âm thanh.",
+      },
+      "zh-CN": {
+        name: "视频裁剪",
+        description:
+          "在浏览器中裁剪 MP4 或 WebM 视频。设置起止时间，预览要保留的片段，然后下载为带音频的 MP4 或 WebM 文件。",
+      },
+      "zh-TW": {
+        name: "影片裁剪",
+        description:
+          "在瀏覽器中裁剪 MP4 或 WebM 影片。設定起訖時間，預覽想保留的片段，再下載為含音訊的 MP4 或 WebM 檔。",
+      },
+    },
+  },
+  {
     slug: "vin-validator",
     category: "text",
     icon: "car",
@@ -79384,6 +79507,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "影片轉 GIF",
         description:
           "將影片片段轉為循環播放的 GIF。選擇起訖時間、影格率和寬度，即可在瀏覽器中預覽並下載。",
+      },
+    },
+  },
+  "video-trimmer": {
+    slug: "video-trimmer",
+    category: "misc",
+    icon: "scissors",
+    tags: ["video", "trim", "cut", "clip", "mp4", "webm", "screen recording"],
+    locales: {
+      ar: {
+        name: "أداة قص الفيديو",
+        description:
+          "قص مقاطع فيديو MP4 وWebM في متصفحك. حدّد وقتي البداية والنهاية، وعاين المقطع الذي تريد الاحتفاظ به، ثم نزّله بصيغة MP4 أو WebM مع الصوت.",
+      },
+      de: {
+        name: "Video schneiden",
+        description:
+          "Schneide MP4- und WebM-Videos im Browser. Lege Start und Ende fest, sieh dir den Ausschnitt an und lade ihn mit Ton als MP4 oder WebM herunter.",
+      },
+      en: {
+        name: "Video Trimmer",
+        description:
+          "Trim MP4 and WebM videos in your browser. Set the start and end, preview the clip you want to keep, then download it as MP4 or WebM with audio.",
+      },
+      es: {
+        name: "Recortar video",
+        description:
+          "Recorta videos MP4 y WebM en tu navegador. Marca el inicio y el fin, previsualiza el fragmento que quieres conservar y descárgalo como MP4 o WebM con audio.",
+      },
+      fr: {
+        name: "Découper une vidéo",
+        description:
+          "Découpez vos vidéos MP4 et WebM dans votre navigateur. Définissez le début et la fin, prévisualisez l’extrait à garder, puis téléchargez-le en MP4 ou WebM avec le son.",
+      },
+      he: {
+        name: "חיתוך וידאו",
+        description:
+          "חתכו סרטוני MP4 ו-WebM בדפדפן. קבעו זמני התחלה וסיום, צפו בקטע שתרצו לשמור והורידו אותו עם השמע כקובץ MP4 או WebM.",
+      },
+      hi: {
+        name: "वीडियो ट्रिमर",
+        description:
+          "अपने ब्राउज़र में MP4 और WebM वीडियो काटें। शुरुआत और अंत का समय तय करें, जिस हिस्से को रखना है उसे देखें और फिर उसे ऑडियो के साथ MP4 या WebM में डाउनलोड करें।",
+      },
+      id: {
+        name: "Pemotong Video",
+        description:
+          "Potong video MP4 dan WebM di browser. Tentukan waktu mulai dan akhir, lihat pratinjau klip yang ingin disimpan, lalu unduh sebagai MP4 atau WebM dengan audio.",
+      },
+      it: {
+        name: "Taglia video",
+        description:
+          "Taglia video MP4 e WebM nel browser. Imposta l’inizio e la fine, guarda l’anteprima del tratto da conservare e scaricalo come MP4 o WebM con l’audio.",
+      },
+      ja: {
+        name: "動画トリミング",
+        description:
+          "ブラウザーでMP4やWebMの動画をトリミングできます。開始と終了の時間を指定し、残したい範囲をプレビューして、音声付きのMP4またはWebMとしてダウンロードできます。",
+      },
+      ko: {
+        name: "동영상 자르기",
+        description:
+          "브라우저에서 MP4와 WebM 동영상을 자르세요. 시작과 끝 시간을 정하고 남길 구간을 미리 본 뒤, 오디오가 포함된 MP4 또는 WebM 파일로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Pemangkas Video",
+        description:
+          "Pangkas video MP4 dan WebM dalam pelayar. Tetapkan masa mula dan tamat, pratonton klip yang ingin disimpan, kemudian muat turun sebagai MP4 atau WebM dengan audio.",
+      },
+      nl: {
+        name: "Video inkorten",
+        description:
+          "Kort MP4- en WebM-video’s in je browser in. Stel het begin en einde in, bekijk het fragment dat je wilt bewaren en download het als MP4 of WebM met geluid.",
+      },
+      no: {
+        name: "Trim video",
+        description:
+          "Trim MP4- og WebM-videoer i nettleseren. Angi start og slutt, forhåndsvis klippet du vil beholde, og last det ned som MP4 eller WebM med lyd.",
+      },
+      pl: {
+        name: "Przycinanie wideo",
+        description:
+          "Przycinaj filmy MP4 i WebM w przeglądarce. Ustaw początek i koniec, obejrzyj wybrany fragment, a następnie pobierz go z dźwiękiem jako MP4 lub WebM.",
+      },
+      pt: {
+        name: "Cortar vídeo",
+        description:
+          "Corte vídeos MP4 e WebM no navegador. Defina o início e o fim, pré-visualize o trecho que quer manter e baixe-o em MP4 ou WebM com áudio.",
+      },
+      ru: {
+        name: "Обрезка видео",
+        description:
+          "Обрезайте видео MP4 и WebM в браузере. Укажите начало и конец, просмотрите нужный фрагмент и скачайте его со звуком в формате MP4 или WebM.",
+      },
+      sv: {
+        name: "Videotrimning",
+        description:
+          "Trimma MP4- och WebM-videor i webbläsaren. Ange start och slut, förhandsvisa klippet du vill behålla och ladda ned det som MP4 eller WebM med ljud.",
+      },
+      th: {
+        name: "เครื่องมือตัดวิดีโอ",
+        description:
+          "ตัดวิดีโอ MP4 และ WebM ในเบราว์เซอร์ เลือกจุดเริ่มต้นและจุดสิ้นสุด ดูตัวอย่างคลิปที่ต้องการเก็บ แล้วดาวน์โหลดเป็น MP4 หรือ WebM พร้อมเสียง",
+      },
+      tr: {
+        name: "Video Kırpıcı",
+        description:
+          "MP4 ve WebM videolarını tarayıcınızda kırpın. Başlangıç ve bitişi ayarlayın, saklamak istediğiniz kesiti önizleyin ve sesli olarak MP4 veya WebM biçiminde indirin.",
+      },
+      vi: {
+        name: "Cắt video",
+        description:
+          "Cắt video MP4 và WebM ngay trong trình duyệt. Chọn thời điểm bắt đầu và kết thúc, xem trước đoạn muốn giữ rồi tải xuống dưới dạng MP4 hoặc WebM có âm thanh.",
+      },
+      "zh-CN": {
+        name: "视频裁剪",
+        description:
+          "在浏览器中裁剪 MP4 或 WebM 视频。设置起止时间，预览要保留的片段，然后下载为带音频的 MP4 或 WebM 文件。",
+      },
+      "zh-TW": {
+        name: "影片裁剪",
+        description:
+          "在瀏覽器中裁剪 MP4 或 WebM 影片。設定起訖時間，預覽想保留的片段，再下載為含音訊的 MP4 或 WebM 檔。",
       },
     },
   },

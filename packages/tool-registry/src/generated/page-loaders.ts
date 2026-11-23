@@ -384,6 +384,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "video-audio-extractor": () => import("@tool/video-audio-extractor/page"),
   "video-frame-extractor": () => import("@tool/video-frame-extractor/page"),
   "video-to-gif": () => import("@tool/video-to-gif/page"),
+  "video-trimmer": () => import("@tool/video-trimmer/page"),
   "vin-validator": () => import("@tool/vin-validator/page"),
   "whirlpool-hash-text-or-file": () =>
     import("@tool/whirlpool-hash-text-or-file/page"),

@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Scegli video",
+  "replaceVideo": "Sostituisci video",
+  "dropVideo": "oppure trascina qui un file MP4 o WebM",
+  "loading": "Apertura del video…",
+  "videoError": "Impossibile aprire il video. Prova un altro file MP4 o WebM.",
+  "recordingError": "Impossibile aprire la registrazione. Riprova dal Registratore schermo o scegli un file video.",
+  "videoPreview": "Anteprima video",
+  "start": "Inizio (secondi)",
+  "end": "Fine (secondi)",
+  "rangeError": "Inserisci due tempi entro la durata del video. L’inizio deve precedere la fine.",
+  "clipDuration": "Durata dell’estratto",
+  "previewClip": "Guarda l’anteprima",
+  "format": "Formato di uscita",
+  "exportClip": "Esporta estratto",
+  "exporting": "Esportazione dell’estratto…",
+  "cancel": "Annulla",
+  "exportError": "Impossibile esportare l’estratto. Prova l’altro formato di uscita o un browser compatibile con questi codec video e audio.",
+  "ready": "Estratto pronto",
+  "downloadClip": "Scarica estratto"
+}

@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "bildschirmaufnahme",
     "downloadLabel": "Aufnahme herunterladen",
     "clearLabel": "Löschen",
-    "formatUnknown": "Unbekannt"
+    "formatUnknown": "Unbekannt",
+    "trimLabel": "Aufnahme kürzen"
   },
   "alerts": {
     "unsupportedTitle": "Bildschirmaufnahme wird nicht unterstützt",

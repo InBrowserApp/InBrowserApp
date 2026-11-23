@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "enregistrement-ecran",
     "downloadLabel": "Télécharger l'enregistrement",
     "clearLabel": "Effacer",
-    "formatUnknown": "Inconnu"
+    "formatUnknown": "Inconnu",
+    "trimLabel": "Découper l’enregistrement"
   },
   "alerts": {
     "unsupportedTitle": "L'enregistrement d'écran n'est pas pris en charge",

@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "ekran-kaydi",
     "downloadLabel": "Kaydı indir",
     "clearLabel": "Temizle",
-    "formatUnknown": "Bilinmiyor"
+    "formatUnknown": "Bilinmiyor",
+    "trimLabel": "Kaydı kırp"
   },
   "alerts": {
     "unsupportedTitle": "Ekran kaydı desteklenmiyor",

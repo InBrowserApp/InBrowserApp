@@ -35,7 +35,8 @@
     "fileNamePlaceholder": "registrazione-schermo",
     "downloadLabel": "Scarica registrazione",
     "clearLabel": "Cancella",
-    "formatUnknown": "Sconosciuto"
+    "formatUnknown": "Sconosciuto",
+    "trimLabel": "Taglia registrazione"
   },
   "alerts": {
     "unsupportedTitle": "La registrazione dello schermo non è supportata",

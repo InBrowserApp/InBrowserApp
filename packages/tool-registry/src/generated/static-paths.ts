@@ -28246,6 +28246,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "video-trimmer",
+    language: "ar",
+  },
+  {
+    slug: "video-trimmer",
+    language: "de",
+  },
+  {
+    slug: "video-trimmer",
+    language: "en",
+  },
+  {
+    slug: "video-trimmer",
+    language: "es",
+  },
+  {
+    slug: "video-trimmer",
+    language: "fr",
+  },
+  {
+    slug: "video-trimmer",
+    language: "he",
+  },
+  {
+    slug: "video-trimmer",
+    language: "hi",
+  },
+  {
+    slug: "video-trimmer",
+    language: "id",
+  },
+  {
+    slug: "video-trimmer",
+    language: "it",
+  },
+  {
+    slug: "video-trimmer",
+    language: "ja",
+  },
+  {
+    slug: "video-trimmer",
+    language: "ko",
+  },
+  {
+    slug: "video-trimmer",
+    language: "ms",
+  },
+  {
+    slug: "video-trimmer",
+    language: "nl",
+  },
+  {
+    slug: "video-trimmer",
+    language: "no",
+  },
+  {
+    slug: "video-trimmer",
+    language: "pl",
+  },
+  {
+    slug: "video-trimmer",
+    language: "pt",
+  },
+  {
+    slug: "video-trimmer",
+    language: "ru",
+  },
+  {
+    slug: "video-trimmer",
+    language: "sv",
+  },
+  {
+    slug: "video-trimmer",
+    language: "th",
+  },
+  {
+    slug: "video-trimmer",
+    language: "tr",
+  },
+  {
+    slug: "video-trimmer",
+    language: "vi",
+  },
+  {
+    slug: "video-trimmer",
+    language: "zh-CN",
+  },
+  {
+    slug: "video-trimmer",
+    language: "zh-TW",
+  },
+  {
     slug: "vin-validator",
     language: "ar",
   },

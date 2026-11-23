@@ -1,0 +1,21 @@
+{
+  "chooseVideo": "Video auswählen",
+  "replaceVideo": "Video wechseln",
+  "dropVideo": "oder eine MP4- oder WebM-Datei hierher ziehen",
+  "loading": "Video wird geöffnet …",
+  "videoError": "Das Video konnte nicht geöffnet werden. Wähle eine andere MP4- oder WebM-Datei.",
+  "recordingError": "Die Aufnahme konnte nicht geöffnet werden. Versuche es erneut im Bildschirmrekorder oder wähle eine Videodatei.",
+  "videoPreview": "Videovorschau",
+  "start": "Start (Sekunden)",
+  "end": "Ende (Sekunden)",
+  "rangeError": "Gib Zeiten innerhalb der Videodauer ein. Der Start muss vor dem Ende liegen.",
+  "clipDuration": "Dauer des Ausschnitts",
+  "previewClip": "Ausschnitt ansehen",
+  "format": "Ausgabeformat",
+  "exportClip": "Ausschnitt exportieren",
+  "exporting": "Ausschnitt wird exportiert …",
+  "cancel": "Abbrechen",
+  "exportError": "Der Ausschnitt konnte nicht exportiert werden. Probiere das andere Ausgabeformat oder einen Browser, der diese Video- und Audiocodecs unterstützt.",
+  "ready": "Ausschnitt fertig",
+  "downloadClip": "Ausschnitt herunterladen"
+}
