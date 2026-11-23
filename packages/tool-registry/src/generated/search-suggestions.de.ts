@@ -654,6 +654,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "Bild in Text umwandeln (OCR)",
+    slug: "image-to-text-converter",
+  },
+  {
+    category: "image",
     name: "Bild-zu-WebP-Konverter",
     slug: "image-to-webp-converter",
   },

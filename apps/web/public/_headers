@@ -2,6 +2,10 @@
   Cache-Control: public, max-age=31536000, immutable
   Cross-Origin-Embedder-Policy: require-corp
 
+# Versioned Tesseract language models.
+/ocr-data/4.0.0_best_int/*
+  Cache-Control: public, max-age=31536000, immutable
+
 # Shared WebAssembly memory is isolated only on native office PDF converters.
 /tools/ppt-to-pdf-converter/
   Cross-Origin-Opener-Policy: same-origin

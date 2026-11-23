@@ -1,0 +1,22 @@
+{
+  "image": "Imej",
+  "chooseImage": "Pilih imej",
+  "changeImage": "Tukar imej",
+  "pasteImage": "Tampal imej",
+  "dropHint": "Lepaskan imej PNG, JPG atau WebP di sini, atau tampal tangkapan skrin dengan Ctrl+V atau ⌘V.",
+  "preview": "Pratonton imej yang dipilih",
+  "language": "Bahasa teks dalam imej",
+  "recognize": "Kenal pasti teks",
+  "loading": "Memuatkan enjin OCR dan data bahasa…",
+  "recognizing": "Mengenal pasti teks…",
+  "result": "Teks yang dikenal pasti",
+  "ready": "Teks sedia untuk disunting, disalin atau dimuat turun.",
+  "emptyResult": "Tiada teks ditemui. Cuba imej yang lebih jelas atau pilih bahasa yang digunakan dalam imej.",
+  "invalidImage": "Pilih atau tampal imej PNG, JPG atau WebP.",
+  "pasteFallback": "Gunakan Ctrl+V atau ⌘V untuk menampal tangkapan skrin, atau pilih fail imej.",
+  "recognitionFailed": "Imej ini tidak dapat dibaca. Cuba lagi atau pilih imej lain.",
+  "copy": "Salin teks",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Muat turun TXT"
+}

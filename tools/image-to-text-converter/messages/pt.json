@@ -1,0 +1,22 @@
+{
+  "image": "Imagem",
+  "chooseImage": "Escolher imagem",
+  "changeImage": "Trocar imagem",
+  "pasteImage": "Colar imagem",
+  "dropHint": "Solte uma imagem PNG, JPG ou WebP aqui ou cole uma captura com Ctrl+V ou ⌘V.",
+  "preview": "Prévia da imagem selecionada",
+  "language": "Idioma do texto",
+  "recognize": "Reconhecer texto",
+  "loading": "Carregando o mecanismo de OCR e os dados do idioma…",
+  "recognizing": "Reconhecendo o texto…",
+  "result": "Texto reconhecido",
+  "ready": "Agora você pode editar, copiar ou baixar o texto.",
+  "emptyResult": "Nenhum texto encontrado. Tente uma imagem mais nítida ou escolha o idioma do texto que ela contém.",
+  "invalidImage": "Escolha ou cole uma imagem PNG, JPG ou WebP.",
+  "pasteFallback": "Cole uma captura com Ctrl+V ou ⌘V ou escolha um arquivo de imagem.",
+  "recognitionFailed": "Não foi possível ler a imagem. Tente novamente ou escolha outra.",
+  "copy": "Copiar texto",
+  "copied": "Copiado",
+  "copyFailed": "Não foi possível copiar",
+  "download": "Baixar TXT"
+}

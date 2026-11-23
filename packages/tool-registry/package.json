@@ -137,6 +137,7 @@
     "@tool/image-to-jpg-converter": "workspace:*",
     "@tool/image-to-pdf-converter": "workspace:*",
     "@tool/image-to-png-converter": "workspace:*",
+    "@tool/image-to-text-converter": "workspace:*",
     "@tool/image-to-webp-converter": "workspace:*",
     "@tool/image-viewer": "workspace:*",
     "@tool/image-watermark": "workspace:*",

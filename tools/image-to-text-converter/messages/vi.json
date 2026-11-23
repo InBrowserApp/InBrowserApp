@@ -1,0 +1,22 @@
+{
+  "image": "Hình ảnh",
+  "chooseImage": "Chọn ảnh",
+  "changeImage": "Đổi ảnh",
+  "pasteImage": "Dán ảnh",
+  "dropHint": "Thả ảnh PNG, JPG hoặc WebP vào đây, hoặc nhấn Ctrl+V hay ⌘V để dán ảnh chụp màn hình.",
+  "preview": "Xem trước ảnh đã chọn",
+  "language": "Ngôn ngữ trong ảnh",
+  "recognize": "Nhận dạng văn bản",
+  "loading": "Đang tải bộ nhận dạng OCR và dữ liệu ngôn ngữ…",
+  "recognizing": "Đang nhận dạng văn bản…",
+  "result": "Văn bản nhận dạng được",
+  "ready": "Bạn có thể sửa, sao chép hoặc tải xuống văn bản.",
+  "emptyResult": "Không tìm thấy văn bản. Hãy thử ảnh rõ hơn hoặc chọn đúng ngôn ngữ trong ảnh.",
+  "invalidImage": "Hãy chọn hoặc dán ảnh PNG, JPG hoặc WebP.",
+  "pasteFallback": "Dùng Ctrl+V hoặc ⌘V để dán ảnh chụp màn hình, hoặc chọn tệp ảnh.",
+  "recognitionFailed": "Không đọc được ảnh này. Hãy thử lại hoặc chọn ảnh khác.",
+  "copy": "Sao chép văn bản",
+  "copied": "Đã sao chép",
+  "copyFailed": "Không sao chép được",
+  "download": "Tải tệp TXT"
+}

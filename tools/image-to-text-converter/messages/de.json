@@ -1,0 +1,22 @@
+{
+  "image": "Bild",
+  "chooseImage": "Bild auswählen",
+  "changeImage": "Bild wechseln",
+  "pasteImage": "Bild einfügen",
+  "dropHint": "Ziehe eine PNG-, JPG- oder WebP-Datei hierher oder füge einen Screenshot mit Strg+V oder ⌘V ein.",
+  "preview": "Vorschau des ausgewählten Bildes",
+  "language": "Sprache des Textes im Bild",
+  "recognize": "Text erkennen",
+  "loading": "OCR und Sprachdaten werden geladen …",
+  "recognizing": "Text wird erkannt …",
+  "result": "Erkannter Text",
+  "ready": "Du kannst den Text jetzt bearbeiten, kopieren oder herunterladen.",
+  "emptyResult": "Kein Text gefunden. Versuche es mit einem schärferen Bild oder wähle die Sprache des Textes im Bild.",
+  "invalidImage": "Wähle ein PNG-, JPG- oder WebP-Bild aus oder füge es ein.",
+  "pasteFallback": "Füge einen Screenshot mit Strg+V oder ⌘V ein oder wähle eine Bilddatei aus.",
+  "recognitionFailed": "Dieses Bild konnte nicht gelesen werden. Versuche es erneut oder wähle ein anderes Bild.",
+  "copy": "Text kopieren",
+  "copied": "Kopiert",
+  "copyFailed": "Kopieren fehlgeschlagen",
+  "download": "TXT herunterladen"
+}

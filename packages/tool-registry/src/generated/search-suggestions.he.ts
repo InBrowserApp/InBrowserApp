@@ -654,6 +654,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "המרת תמונה לטקסט (OCR)",
+    slug: "image-to-text-converter",
+  },
+  {
+    category: "image",
     name: "ממיר תמונות ל-WebP",
     slug: "image-to-webp-converter",
   },

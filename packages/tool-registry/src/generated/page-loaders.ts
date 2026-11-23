@@ -162,6 +162,7 @@ export const toolPageLoaders: Readonly<Record<string, ToolPageLoader>> = {
   "image-to-jpg-converter": () => import("@tool/image-to-jpg-converter/page"),
   "image-to-pdf-converter": () => import("@tool/image-to-pdf-converter/page"),
   "image-to-png-converter": () => import("@tool/image-to-png-converter/page"),
+  "image-to-text-converter": () => import("@tool/image-to-text-converter/page"),
   "image-to-webp-converter": () => import("@tool/image-to-webp-converter/page"),
   "image-viewer": () => import("@tool/image-viewer/page"),
   "image-watermark": () => import("@tool/image-watermark/page"),

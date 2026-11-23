@@ -654,6 +654,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "图片转文字（OCR）",
+    slug: "image-to-text-converter",
+  },
+  {
+    category: "image",
     name: "图片转 WebP 转换器",
     slug: "image-to-webp-converter",
   },

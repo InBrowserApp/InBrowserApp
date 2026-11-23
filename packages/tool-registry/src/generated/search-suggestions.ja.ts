@@ -654,6 +654,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
   },
   {
     category: "image",
+    name: "画像から文字を抽出（OCR）",
+    slug: "image-to-text-converter",
+  },
+  {
+    category: "image",
     name: "画像から WebP へのコンバーター",
     slug: "image-to-webp-converter",
   },

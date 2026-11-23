@@ -16505,6 +16505,129 @@ export const toolRegistry: readonly ToolRegistryEntry[] = [
     },
   },
   {
+    slug: "image-to-text-converter",
+    category: "image",
+    icon: "scan-text",
+    tags: ["ocr", "image to text", "screenshot", "photo", "chinese", "txt"],
+    locales: {
+      ar: {
+        name: "تحويل الصور إلى نص (OCR)",
+        description:
+          "استخرج النص من لقطات الشاشة والصور باستخدام OCR مجانًا عبر الإنترنت. تعرّف على النصوص الإنجليزية والصينية في متصفحك، ثم انسخها أو نزّلها بصيغة TXT.",
+      },
+      de: {
+        name: "Bild in Text umwandeln (OCR)",
+        description:
+          "Extrahiere mit kostenloser Online-OCR Text aus Screenshots und Fotos. Erkenne englischen und chinesischen Text im Browser und kopiere ihn oder lade ihn als TXT herunter.",
+      },
+      en: {
+        name: "Image to Text Converter (OCR)",
+        description:
+          "Extract text from screenshots and photos with free online OCR. Recognize English and Chinese in your browser, then copy the text or download it as TXT.",
+      },
+      es: {
+        name: "Convertidor de imagen a texto (OCR)",
+        description:
+          "Extrae texto de capturas de pantalla y fotos con OCR gratis en línea. Reconoce inglés y chino en tu navegador y copia el texto o descárgalo como TXT.",
+      },
+      fr: {
+        name: "Convertisseur d’image en texte (OCR)",
+        description:
+          "Extrayez le texte anglais et chinois de vos photos et captures d’écran avec l’OCR gratuit dans votre navigateur. Copiez le résultat ou téléchargez-le en TXT.",
+      },
+      he: {
+        name: "המרת תמונה לטקסט (OCR)",
+        description:
+          "חלצו טקסט מצילומי מסך ומתמונות בעזרת OCR מקוון בחינם. הכלי מזהה אנגלית וסינית בדפדפן ומאפשר להעתיק את הטקסט או להוריד קובץ TXT.",
+      },
+      hi: {
+        name: "इमेज से टेक्स्ट कन्वर्टर (OCR)",
+        description:
+          "मुफ़्त ऑनलाइन OCR से स्क्रीनशॉट और फ़ोटो का टेक्स्ट निकालें। ब्राउज़र में अंग्रेज़ी और चीनी टेक्स्ट पहचानें, फिर उसे कॉपी करें या TXT में डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Gambar ke Teks (OCR)",
+        description:
+          "Ekstrak teks dari tangkapan layar dan foto dengan OCR online gratis. Kenali teks berbahasa Inggris dan teks beraksara Tionghoa di browser, lalu salin atau unduh sebagai TXT.",
+      },
+      it: {
+        name: "Convertitore da immagine a testo (OCR)",
+        description:
+          "Estrai testo da screenshot e foto con l’OCR online gratuito. Riconosci inglese e cinese nel browser, poi copia il testo o scaricalo come TXT.",
+      },
+      ja: {
+        name: "画像から文字を抽出（OCR）",
+        description:
+          "無料のオンライン OCR でスクリーンショットや写真から文字を抽出できます。ブラウザー内で英語と中国語を認識し、結果をコピーしたり TXT でダウンロードしたりできます。",
+      },
+      ko: {
+        name: "이미지 텍스트 추출 (OCR)",
+        description:
+          "무료 온라인 OCR로 스크린샷이나 사진에서 글자를 추출하세요. 브라우저에서 영어와 중국어를 인식하고 결과를 복사하거나 TXT로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Imej kepada Teks (OCR)",
+        description:
+          "Ekstrak teks daripada tangkapan skrin dan foto dengan OCR dalam talian percuma. Kenal pasti teks bahasa Inggeris dan Cina dalam pelayar, kemudian salin atau muat turun sebagai TXT.",
+      },
+      nl: {
+        name: "Afbeelding naar tekst (OCR)",
+        description:
+          "Haal tekst uit screenshots en foto’s met gratis online OCR. Herken Engels en Chinees in je browser en kopieer de tekst of download deze als TXT.",
+      },
+      no: {
+        name: "Bilde til tekst (OCR)",
+        description:
+          "Hent tekst fra skjermbilder og bilder med gratis OCR på nett. Gjenkjenn engelsk og kinesisk i nettleseren, og kopier teksten eller last den ned som TXT.",
+      },
+      pl: {
+        name: "Konwerter obrazu na tekst (OCR)",
+        description:
+          "Odczytuj tekst ze zrzutów ekranu i zdjęć za pomocą darmowego OCR online. Rozpoznawaj angielski i chiński w przeglądarce, a następnie kopiuj tekst lub pobieraj go w formacie TXT.",
+      },
+      pt: {
+        name: "Conversor de imagem em texto (OCR)",
+        description:
+          "Extraia texto de capturas de tela e fotos com OCR online grátis. Reconheça inglês e chinês no navegador, copie o texto ou baixe um arquivo TXT.",
+      },
+      ru: {
+        name: "Конвертер изображений в текст (OCR)",
+        description:
+          "Бесплатный OCR извлекает текст со скриншотов и фото прямо в браузере. Распознавайте английский и китайский текст, копируйте результат или скачивайте TXT.",
+      },
+      sv: {
+        name: "Bild till text (OCR)",
+        description:
+          "Hämta text från skärmbilder och foton med gratis OCR på nätet. Läs av engelska och kinesiska i webbläsaren och kopiera texten eller ladda ned den som TXT.",
+      },
+      th: {
+        name: "แปลงรูปภาพเป็นข้อความ (OCR)",
+        description:
+          "ดึงข้อความจากภาพหน้าจอและภาพถ่ายด้วย OCR ออนไลน์ฟรี อ่านข้อความภาษาอังกฤษและภาษาจีนในเบราว์เซอร์ แล้วคัดลอกหรือดาวน์โหลดเป็นไฟล์ TXT",
+      },
+      tr: {
+        name: "Görselden Metne Dönüştürücü (OCR)",
+        description:
+          "Ücretsiz çevrimiçi OCR ile ekran görüntülerinden ve fotoğraflardan metin çıkarın. Tarayıcınızda İngilizce ve Çince metni tanıyın, ardından kopyalayın veya TXT olarak indirin.",
+      },
+      vi: {
+        name: "Chuyển ảnh thành văn bản (OCR)",
+        description:
+          "Dùng OCR trực tuyến miễn phí để trích xuất văn bản từ ảnh chụp màn hình và ảnh chụp. Nhận dạng tiếng Anh và tiếng Trung ngay trong trình duyệt, sau đó sao chép văn bản hoặc tải tệp TXT.",
+      },
+      "zh-CN": {
+        name: "图片转文字（OCR）",
+        description:
+          "免费在线 OCR，从截图或照片中提取文字。在浏览器中识别中文和英文，复制识别结果或下载 TXT 文件。",
+      },
+      "zh-TW": {
+        name: "圖片轉文字（OCR）",
+        description:
+          "免費線上 OCR，擷取螢幕截圖或照片中的文字。直接在瀏覽器辨識中文與英文，並可複製結果或下載為 TXT 檔。",
+      },
+    },
+  },
+  {
     slug: "image-to-webp-converter",
     category: "image",
     icon: "image",
@@ -56892,6 +57015,129 @@ export const toolRegistryBySlug: Record<string, ToolRegistryEntry> = {
         name: "圖片轉 PNG 轉換器",
         description:
           "將本機圖片、TIFF 頁面、圖示版本與動畫畫格轉換為 PNG。無須上傳即可開啟 HEIC、JPEG XL 及支援的 JPEG 2000 圖片。",
+      },
+    },
+  },
+  "image-to-text-converter": {
+    slug: "image-to-text-converter",
+    category: "image",
+    icon: "scan-text",
+    tags: ["ocr", "image to text", "screenshot", "photo", "chinese", "txt"],
+    locales: {
+      ar: {
+        name: "تحويل الصور إلى نص (OCR)",
+        description:
+          "استخرج النص من لقطات الشاشة والصور باستخدام OCR مجانًا عبر الإنترنت. تعرّف على النصوص الإنجليزية والصينية في متصفحك، ثم انسخها أو نزّلها بصيغة TXT.",
+      },
+      de: {
+        name: "Bild in Text umwandeln (OCR)",
+        description:
+          "Extrahiere mit kostenloser Online-OCR Text aus Screenshots und Fotos. Erkenne englischen und chinesischen Text im Browser und kopiere ihn oder lade ihn als TXT herunter.",
+      },
+      en: {
+        name: "Image to Text Converter (OCR)",
+        description:
+          "Extract text from screenshots and photos with free online OCR. Recognize English and Chinese in your browser, then copy the text or download it as TXT.",
+      },
+      es: {
+        name: "Convertidor de imagen a texto (OCR)",
+        description:
+          "Extrae texto de capturas de pantalla y fotos con OCR gratis en línea. Reconoce inglés y chino en tu navegador y copia el texto o descárgalo como TXT.",
+      },
+      fr: {
+        name: "Convertisseur d’image en texte (OCR)",
+        description:
+          "Extrayez le texte anglais et chinois de vos photos et captures d’écran avec l’OCR gratuit dans votre navigateur. Copiez le résultat ou téléchargez-le en TXT.",
+      },
+      he: {
+        name: "המרת תמונה לטקסט (OCR)",
+        description:
+          "חלצו טקסט מצילומי מסך ומתמונות בעזרת OCR מקוון בחינם. הכלי מזהה אנגלית וסינית בדפדפן ומאפשר להעתיק את הטקסט או להוריד קובץ TXT.",
+      },
+      hi: {
+        name: "इमेज से टेक्स्ट कन्वर्टर (OCR)",
+        description:
+          "मुफ़्त ऑनलाइन OCR से स्क्रीनशॉट और फ़ोटो का टेक्स्ट निकालें। ब्राउज़र में अंग्रेज़ी और चीनी टेक्स्ट पहचानें, फिर उसे कॉपी करें या TXT में डाउनलोड करें।",
+      },
+      id: {
+        name: "Konverter Gambar ke Teks (OCR)",
+        description:
+          "Ekstrak teks dari tangkapan layar dan foto dengan OCR online gratis. Kenali teks berbahasa Inggris dan teks beraksara Tionghoa di browser, lalu salin atau unduh sebagai TXT.",
+      },
+      it: {
+        name: "Convertitore da immagine a testo (OCR)",
+        description:
+          "Estrai testo da screenshot e foto con l’OCR online gratuito. Riconosci inglese e cinese nel browser, poi copia il testo o scaricalo come TXT.",
+      },
+      ja: {
+        name: "画像から文字を抽出（OCR）",
+        description:
+          "無料のオンライン OCR でスクリーンショットや写真から文字を抽出できます。ブラウザー内で英語と中国語を認識し、結果をコピーしたり TXT でダウンロードしたりできます。",
+      },
+      ko: {
+        name: "이미지 텍스트 추출 (OCR)",
+        description:
+          "무료 온라인 OCR로 스크린샷이나 사진에서 글자를 추출하세요. 브라우저에서 영어와 중국어를 인식하고 결과를 복사하거나 TXT로 다운로드할 수 있습니다.",
+      },
+      ms: {
+        name: "Penukar Imej kepada Teks (OCR)",
+        description:
+          "Ekstrak teks daripada tangkapan skrin dan foto dengan OCR dalam talian percuma. Kenal pasti teks bahasa Inggeris dan Cina dalam pelayar, kemudian salin atau muat turun sebagai TXT.",
+      },
+      nl: {
+        name: "Afbeelding naar tekst (OCR)",
+        description:
+          "Haal tekst uit screenshots en foto’s met gratis online OCR. Herken Engels en Chinees in je browser en kopieer de tekst of download deze als TXT.",
+      },
+      no: {
+        name: "Bilde til tekst (OCR)",
+        description:
+          "Hent tekst fra skjermbilder og bilder med gratis OCR på nett. Gjenkjenn engelsk og kinesisk i nettleseren, og kopier teksten eller last den ned som TXT.",
+      },
+      pl: {
+        name: "Konwerter obrazu na tekst (OCR)",
+        description:
+          "Odczytuj tekst ze zrzutów ekranu i zdjęć za pomocą darmowego OCR online. Rozpoznawaj angielski i chiński w przeglądarce, a następnie kopiuj tekst lub pobieraj go w formacie TXT.",
+      },
+      pt: {
+        name: "Conversor de imagem em texto (OCR)",
+        description:
+          "Extraia texto de capturas de tela e fotos com OCR online grátis. Reconheça inglês e chinês no navegador, copie o texto ou baixe um arquivo TXT.",
+      },
+      ru: {
+        name: "Конвертер изображений в текст (OCR)",
+        description:
+          "Бесплатный OCR извлекает текст со скриншотов и фото прямо в браузере. Распознавайте английский и китайский текст, копируйте результат или скачивайте TXT.",
+      },
+      sv: {
+        name: "Bild till text (OCR)",
+        description:
+          "Hämta text från skärmbilder och foton med gratis OCR på nätet. Läs av engelska och kinesiska i webbläsaren och kopiera texten eller ladda ned den som TXT.",
+      },
+      th: {
+        name: "แปลงรูปภาพเป็นข้อความ (OCR)",
+        description:
+          "ดึงข้อความจากภาพหน้าจอและภาพถ่ายด้วย OCR ออนไลน์ฟรี อ่านข้อความภาษาอังกฤษและภาษาจีนในเบราว์เซอร์ แล้วคัดลอกหรือดาวน์โหลดเป็นไฟล์ TXT",
+      },
+      tr: {
+        name: "Görselden Metne Dönüştürücü (OCR)",
+        description:
+          "Ücretsiz çevrimiçi OCR ile ekran görüntülerinden ve fotoğraflardan metin çıkarın. Tarayıcınızda İngilizce ve Çince metni tanıyın, ardından kopyalayın veya TXT olarak indirin.",
+      },
+      vi: {
+        name: "Chuyển ảnh thành văn bản (OCR)",
+        description:
+          "Dùng OCR trực tuyến miễn phí để trích xuất văn bản từ ảnh chụp màn hình và ảnh chụp. Nhận dạng tiếng Anh và tiếng Trung ngay trong trình duyệt, sau đó sao chép văn bản hoặc tải tệp TXT.",
+      },
+      "zh-CN": {
+        name: "图片转文字（OCR）",
+        description:
+          "免费在线 OCR，从截图或照片中提取文字。在浏览器中识别中文和英文，复制识别结果或下载 TXT 文件。",
+      },
+      "zh-TW": {
+        name: "圖片轉文字（OCR）",
+        description:
+          "免費線上 OCR，擷取螢幕截圖或照片中的文字。直接在瀏覽器辨識中文與英文，並可複製結果或下載為 TXT 檔。",
       },
     },
   },

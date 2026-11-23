@@ -1,0 +1,22 @@
+{
+  "image": "Gambar",
+  "chooseImage": "Pilih gambar",
+  "changeImage": "Ganti gambar",
+  "pasteImage": "Tempel gambar",
+  "dropHint": "Jatuhkan gambar PNG, JPG, atau WebP di sini, atau tempel tangkapan layar dengan Ctrl+V atau ⌘V.",
+  "preview": "Pratinjau gambar yang dipilih",
+  "language": "Bahasa teks pada gambar",
+  "recognize": "Kenali teks",
+  "loading": "Memuat mesin OCR dan data bahasa…",
+  "recognizing": "Mengenali teks…",
+  "result": "Teks yang dikenali",
+  "ready": "Teks siap diedit, disalin, atau diunduh.",
+  "emptyResult": "Tidak ada teks yang ditemukan. Coba gambar yang lebih tajam atau pilih bahasa yang digunakan pada gambar.",
+  "invalidImage": "Pilih atau tempel gambar PNG, JPG, atau WebP.",
+  "pasteFallback": "Tempel tangkapan layar dengan Ctrl+V atau ⌘V, atau pilih file gambar.",
+  "recognitionFailed": "Gambar ini tidak dapat dibaca. Coba lagi atau pilih gambar lain.",
+  "copy": "Salin teks",
+  "copied": "Disalin",
+  "copyFailed": "Gagal menyalin",
+  "download": "Unduh TXT"
+}
