@@ -808,6 +808,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "mac-address-vendor-lookup",
   },
   {
+    category: "network",
+    name: "Trình chuyển đổi MAC sang IPv6 (EUI-64)",
+    slug: "mac-to-ipv6-eui-64-converter",
+  },
+  {
     category: "text",
     name: "Trình xem trước Markdown",
     slug: "markdown-previewer",

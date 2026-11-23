@@ -168,6 +168,7 @@
     "@tool/mac-address-lookup": "workspace:*",
     "@tool/mac-address-to-ipv6-link-local-address-converter": "workspace:*",
     "@tool/mac-address-vendor-lookup": "workspace:*",
+    "@tool/mac-to-ipv6-eui-64-converter": "workspace:*",
     "@tool/markdown-previewer": "workspace:*",
     "@tool/markdown-to-html-converter": "workspace:*",
     "@tool/markdown-to-pdf-converter": "workspace:*",

@@ -1,0 +1,11 @@
+{
+  "macLabel": "عنوان MAC",
+  "prefixLabel": "بادئة IPv6 بطول ⁦/64⁩",
+  "invalidMac": "أدخل عنوان MAC بطول 48 بتًا، مثل ⁦00:11:22:33:44:55⁩.",
+  "invalidPrefix": "أدخل بادئة شبكة بطول ⁦/64⁩ تكون فيها كل بتات المضيف أصفارًا، مثل ⁦2001:db8:1:2::/64⁩.",
+  "resultLabel": "عنوان IPv6",
+  "exampleLabel": "جرّب مثالًا",
+  "copyLabel": "نسخ",
+  "copiedLabel": "تم النسخ",
+  "copyFailedLabel": "تعذّر النسخ"
+}

@@ -1,0 +1,4 @@
+{
+  "name": "Konverter MAC ke IPv6 (EUI-64)",
+  "description": "Gabungkan alamat MAC dengan prefiks IPv6 /64 apa pun menggunakan Modified EUI-64. Mendukung prefiks unicast global, lokal unik (ULA), link-local, dan dokumentasi."
+}

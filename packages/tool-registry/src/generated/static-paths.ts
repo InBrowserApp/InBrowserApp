@@ -14814,6 +14814,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "ar",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "de",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "en",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "es",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "fr",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "he",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "hi",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "id",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "it",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "ja",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "ko",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "ms",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "nl",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "no",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "pl",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "pt",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "ru",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "sv",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "th",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "tr",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "vi",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "zh-CN",
+  },
+  {
+    slug: "mac-to-ipv6-eui-64-converter",
+    language: "zh-TW",
+  },
+  {
     slug: "markdown-previewer",
     language: "ar",
   },

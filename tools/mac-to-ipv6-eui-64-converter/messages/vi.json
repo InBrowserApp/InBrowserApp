@@ -1,0 +1,11 @@
+{
+  "macLabel": "Địa chỉ MAC",
+  "prefixLabel": "Tiền tố IPv6 /64",
+  "invalidMac": "Nhập địa chỉ MAC 48 bit, chẳng hạn như 00:11:22:33:44:55.",
+  "invalidPrefix": "Nhập tiền tố mạng /64 có các bit phần máy chủ đều bằng 0, chẳng hạn như 2001:db8:1:2::/64.",
+  "resultLabel": "Địa chỉ IPv6",
+  "exampleLabel": "Thử ví dụ",
+  "copyLabel": "Sao chép",
+  "copiedLabel": "Đã sao chép",
+  "copyFailedLabel": "Sao chép thất bại"
+}

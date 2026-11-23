@@ -1,0 +1,11 @@
+{
+  "macLabel": "MAC-adres",
+  "prefixLabel": "IPv6-prefix (/64)",
+  "invalidMac": "Voer een 48-bits MAC-adres in, bijvoorbeeld 00:11:22:33:44:55.",
+  "invalidPrefix": "Voer een /64-netwerkprefix in waarvan alle hostbits nul zijn, bijvoorbeeld 2001:db8:1:2::/64.",
+  "resultLabel": "IPv6-adres",
+  "exampleLabel": "Probeer een voorbeeld",
+  "copyLabel": "Kopiëren",
+  "copiedLabel": "Gekopieerd",
+  "copyFailedLabel": "Kopiëren mislukt"
+}

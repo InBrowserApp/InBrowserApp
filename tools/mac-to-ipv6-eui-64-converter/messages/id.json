@@ -1,0 +1,11 @@
+{
+  "macLabel": "Alamat MAC",
+  "prefixLabel": "Prefiks IPv6 /64",
+  "invalidMac": "Masukkan alamat MAC 48 bit, misalnya 00:11:22:33:44:55.",
+  "invalidPrefix": "Masukkan prefiks jaringan /64 dengan semua bit host bernilai nol, misalnya 2001:db8:1:2::/64.",
+  "resultLabel": "Alamat IPv6",
+  "exampleLabel": "Coba contoh",
+  "copyLabel": "Salin",
+  "copiedLabel": "Disalin",
+  "copyFailedLabel": "Gagal menyalin"
+}

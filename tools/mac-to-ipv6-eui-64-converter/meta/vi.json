@@ -1,0 +1,4 @@
+{
+  "name": "Trình chuyển đổi MAC sang IPv6 (EUI-64)",
+  "description": "Kết hợp địa chỉ MAC với bất kỳ tiền tố IPv6 /64 nào bằng EUI-64 sửa đổi. Hỗ trợ tiền tố unicast toàn cầu, cục bộ duy nhất (ULA), link-local và tiền tố dành cho tài liệu."
+}

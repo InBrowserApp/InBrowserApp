@@ -1,0 +1,11 @@
+{
+  "macLabel": "Indirizzo MAC",
+  "prefixLabel": "Prefisso IPv6 /64",
+  "invalidMac": "Inserisci un indirizzo MAC a 48 bit, ad esempio 00:11:22:33:44:55.",
+  "invalidPrefix": "Inserisci un prefisso di rete /64 con tutti i bit dell’host a zero, ad esempio 2001:db8:1:2::/64.",
+  "resultLabel": "Indirizzo IPv6",
+  "exampleLabel": "Prova un esempio",
+  "copyLabel": "Copia",
+  "copiedLabel": "Copiato",
+  "copyFailedLabel": "Copia non riuscita"
+}

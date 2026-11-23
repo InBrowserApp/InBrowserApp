@@ -1,0 +1,4 @@
+{
+  "name": "Convertisseur d’adresse MAC en adresse IPv6 (EUI-64)",
+  "description": "Associez une adresse MAC à n’importe quel préfixe IPv6 /64 avec EUI-64 modifié. Les préfixes de monodiffusion globale, locaux uniques, de lien local et réservés à la documentation sont pris en charge."
+}

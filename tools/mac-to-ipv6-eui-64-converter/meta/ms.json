@@ -1,0 +1,4 @@
+{
+  "name": "Penukar MAC kepada IPv6 (EUI-64)",
+  "description": "Gabungkan alamat MAC dengan sebarang awalan IPv6 /64 menggunakan Modified EUI-64. Menyokong awalan unicast global, setempat unik, link-local dan dokumentasi."
+}

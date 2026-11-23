@@ -1,0 +1,11 @@
+{
+  "macLabel": "MAC adresi",
+  "prefixLabel": "IPv6 /64 öneki",
+  "invalidMac": "00:11:22:33:44:55 gibi 48 bitlik bir MAC adresi girin.",
+  "invalidPrefix": "2001:db8:1:2::/64 gibi, ana bilgisayar bitleri sıfır olan bir /64 ağ öneki girin.",
+  "resultLabel": "IPv6 adresi",
+  "exampleLabel": "Örneği dene",
+  "copyLabel": "Kopyala",
+  "copiedLabel": "Kopyalandı",
+  "copyFailedLabel": "Kopyalanamadı"
+}

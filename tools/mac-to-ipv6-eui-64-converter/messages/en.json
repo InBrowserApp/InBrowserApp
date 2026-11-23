@@ -1,0 +1,11 @@
+{
+  "macLabel": "MAC address",
+  "prefixLabel": "IPv6 /64 prefix",
+  "invalidMac": "Enter a 48-bit MAC address, such as 00:11:22:33:44:55.",
+  "invalidPrefix": "Enter a /64 network prefix with zero host bits, such as 2001:db8:1:2::/64.",
+  "resultLabel": "IPv6 address",
+  "exampleLabel": "Try example",
+  "copyLabel": "Copy",
+  "copiedLabel": "Copied",
+  "copyFailedLabel": "Copy failed"
+}

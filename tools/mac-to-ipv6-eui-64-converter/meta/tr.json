@@ -1,0 +1,4 @@
+{
+  "name": "MAC'ten IPv6'ya (EUI-64) Dönüştürme",
+  "description": "Değiştirilmiş EUI-64 ile bir MAC adresini herhangi bir IPv6 /64 önekiyle birleştirin. Küresel tekil yayın, benzersiz yerel (ULA), link-local ve dokümantasyon önekleri desteklenir."
+}
