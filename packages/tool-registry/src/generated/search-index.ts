@@ -9082,6 +9082,129 @@ export const toolSearchIndex: readonly ToolSearchIndexEntry[] = [
     },
   },
   {
+    slug: "date-age-calculator",
+    category: "time",
+    icon: "clock3",
+    tags: ["date", "age", "calculator", "calendar", "birthday", "time"],
+    locales: {
+      ar: {
+        name: "حاسبة التواريخ والعمر",
+        description:
+          "احسب عدد الأيام بين تاريخين، وأضف أيامًا إلى تاريخ أو اطرحها منه، واعرف عمرك بالسنوات الكاملة حتى اليوم.",
+      },
+      de: {
+        name: "Datums- und Altersrechner",
+        description:
+          "Berechne Kalendertage zwischen zwei Daten, addiere Tage zu einem Datum oder ziehe sie ab und ermittle dein heutiges Alter in vollen Jahren.",
+      },
+      en: {
+        name: "Date & Age Calculator",
+        description:
+          "Count calendar days between two dates, add or subtract days from a date, and calculate your age in full years as of today.",
+      },
+      es: {
+        name: "Calculadora de fechas y edad",
+        description:
+          "Calcula cuántos días hay entre dos fechas, suma o resta días a una fecha y averigua tu edad en años cumplidos a día de hoy.",
+      },
+      fr: {
+        name: "Calculateur de dates et d’âge",
+        description:
+          "Calculez le nombre de jours entre deux dates, ajoutez ou retranchez des jours à une date et obtenez votre âge en années révolues.",
+      },
+      he: {
+        name: "מחשבון תאריכים וגיל",
+        description:
+          "חשבו כמה ימים יש בין שני תאריכים, הוסיפו ימים לתאריך או החסירו ממנו ימים, וחשבו את גילכם בשנים מלאות נכון להיום.",
+      },
+      hi: {
+        name: "तारीख और उम्र कैलकुलेटर",
+        description:
+          "दो तारीखों के बीच के दिन गिनें, किसी तारीख में दिन जोड़ें या घटाएँ और जन्मतिथि से आज तक की उम्र पूरे सालों में जानें।",
+      },
+      id: {
+        name: "Kalkulator tanggal dan usia",
+        description:
+          "Hitung selisih hari antara dua tanggal, tambah atau kurangi hari dari suatu tanggal, dan hitung usia dari tanggal lahir hingga hari ini.",
+      },
+      it: {
+        name: "Calcolatore di date ed età",
+        description:
+          "Calcola i giorni tra due date, aggiungi o sottrai giorni a una data e scopri la tua età in anni compiuti a oggi.",
+      },
+      ja: {
+        name: "日付・年齢計算ツール",
+        description:
+          "2つの日付の間の日数を調べたり、指定した日付に日数を足したり引いたりできます。生年月日を入力すると、今日時点の満年齢が分かります。",
+      },
+      ko: {
+        name: "날짜 및 만 나이 계산기",
+        description:
+          "두 날짜 사이의 일수와 기준일에서 며칠 전후의 날짜를 구하고, 생년월일로 오늘 기준 만 나이를 계산합니다.",
+      },
+      ms: {
+        name: "Kalkulator tarikh dan umur",
+        description:
+          "Kira hari kalendar antara dua tarikh, tambah atau tolak hari daripada sesuatu tarikh, dan ketahui umur anda dalam tahun penuh setakat hari ini.",
+      },
+      nl: {
+        name: "Datum- en leeftijdscalculator",
+        description:
+          "Bereken het aantal kalenderdagen tussen twee datums, tel dagen bij een datum op of trek ze af en bereken je leeftijd in hele jaren tot vandaag.",
+      },
+      no: {
+        name: "Dato- og alderskalkulator",
+        description:
+          "Tell kalenderdager mellom to datoer, finn datoen et gitt antall dager frem eller tilbake i tid, og beregn alderen din i fylte år.",
+      },
+      pl: {
+        name: "Kalkulator dat i wieku",
+        description:
+          "Policz dni kalendarzowe między dwiema datami, dodaj lub odejmij dni od daty i oblicz swój wiek w ukończonych latach na dziś.",
+      },
+      pt: {
+        name: "Calculadora de datas e idade",
+        description:
+          "Calcule quantos dias corridos há entre duas datas, some ou subtraia dias de uma data e descubra sua idade em anos completos até hoje.",
+      },
+      ru: {
+        name: "Калькулятор дат и возраста",
+        description:
+          "Узнайте, сколько календарных дней между двумя датами. Прибавьте или вычтите дни и рассчитайте возраст в полных годах на сегодня.",
+      },
+      sv: {
+        name: "Datum- och ålderskalkylator",
+        description:
+          "Räkna kalenderdagar mellan två datum, flytta ett datum framåt eller bakåt och räkna ut din ålder i hela år i dag.",
+      },
+      th: {
+        name: "เครื่องคำนวณวันที่และอายุ",
+        description:
+          "นับจำนวนวันระหว่างสองวันที่ บวกหรือลบจำนวนวันจากวันที่ที่เลือก และคำนวณอายุเป็นปีเต็มจากวันเกิดถึงวันนี้",
+      },
+      tr: {
+        name: "Tarih ve Yaş Hesaplayıcı",
+        description:
+          "İki tarih arasındaki takvim günü sayısını bulun. Bir tarihe gün ekleyin, tarihten gün çıkarın veya doğum tarihinize göre bugünkü yaşınızı hesaplayın.",
+      },
+      vi: {
+        name: "Công cụ tính ngày và tuổi",
+        description:
+          "Đếm số ngày giữa hai ngày, cộng hoặc trừ ngày từ một mốc đã chọn và tính tuổi theo số năm tròn đến hôm nay.",
+      },
+      "zh-CN": {
+        name: "日期与年龄计算器",
+        description:
+          "在线计算两个日期相差多少天、指定日期加减后的日期，以及从出生到今天的周岁。",
+      },
+      "zh-TW": {
+        name: "日期與年齡計算器",
+        description:
+          "計算兩個日期相差幾天、推算某日加減指定天數後的日期，並依出生日期算出截至今天的實足年齡。",
+      },
+    },
+  },
+  {
     slug: "device-information",
     category: "misc",
     icon: "wrench",

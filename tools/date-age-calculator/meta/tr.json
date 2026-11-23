@@ -1,0 +1,4 @@
+{
+  "name": "Tarih ve Yaş Hesaplayıcı",
+  "description": "İki tarih arasındaki takvim günü sayısını bulun. Bir tarihe gün ekleyin, tarihten gün çıkarın veya doğum tarihinize göre bugünkü yaşınızı hesaplayın."
+}

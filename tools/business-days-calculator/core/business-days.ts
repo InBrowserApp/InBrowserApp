@@ -1,3 +1,11 @@
+import {
+  parseISODateInput as parseCalendarDate,
+  toISODate as toCalendarISODate,
+  toLocalISODate as toISODate,
+} from "@workspace/calendar-date"
+
+export { toISODate }
+
 export type WeekdayIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6
 
 export type BusinessDayCountResult = Readonly<{
@@ -9,16 +17,6 @@ export type BusinessDayCountResult = Readonly<{
 }>
 
 export const weekdayOrder: WeekdayIndex[] = [0, 1, 2, 3, 4, 5, 6]
-
-const isoDatePattern = /^(\d{4})-(\d{2})-(\d{2})$/
-
-function isValidDateParts(year: number, month: number, day: number) {
-  if (month < 1 || month > 12 || day < 1) {
-    return false
-  }
-
-  return day <= new Date(year, month, 0).getDate()
-}
 
 export function normalizeWeekdayList(values: ReadonlyArray<number>) {
   const unique = new Set<WeekdayIndex>()
@@ -35,7 +33,9 @@ export function normalizeWeekdayList(values: ReadonlyArray<number>) {
 }
 
 export function startOfLocalDay(date: Date) {
-  return new Date(date.getFullYear(), date.getMonth(), date.getDate())
+  const next = new Date(date.getTime())
+  next.setHours(0, 0, 0, 0)
+  return next
 }
 
 export function addDays(date: Date, days: number) {
@@ -46,30 +46,9 @@ export function addDays(date: Date, days: number) {
   return next
 }
 
-export function toISODate(date: Date) {
-  return [
-    String(date.getFullYear()).padStart(4, "0"),
-    String(date.getMonth() + 1).padStart(2, "0"),
-    String(date.getDate()).padStart(2, "0"),
-  ].join("-")
-}
-
 export function parseISODateInput(value: string) {
-  const match = isoDatePattern.exec(value.trim())
-
-  if (!match) {
-    return null
-  }
-
-  const year = Number(match[1])
-  const month = Number(match[2])
-  const day = Number(match[3])
-
-  if (!isValidDateParts(year, month, day)) {
-    return null
-  }
-
-  return new Date(year, month - 1, day)
+  const date = parseCalendarDate(value)
+  return date ? new Date(`${toCalendarISODate(date)}T00:00:00`) : null
 }
 
 export function parseHolidayList(input: string) {

@@ -42,6 +42,17 @@ describe("business-days core", () => {
     expect(result.invalid).toEqual(["invalid", "2026-02-30"])
   })
 
+  test("preserves the local calendar date for leap days and early Gregorian years", () => {
+    const leapDay = parseISODateInput("0004-02-29")!
+
+    expect(leapDay.getFullYear()).toBe(4)
+    expect(toISODate(startOfLocalDay(leapDay))).toBe("0004-02-29")
+    expect(parseHolidayList("2024-02-29\n2025-02-29")).toEqual({
+      dates: new Set(["2024-02-29"]),
+      invalid: ["2025-02-29"],
+    })
+  })
+
   test("detects business days from weekend and holiday rules", () => {
     expect(
       isBusinessDay(

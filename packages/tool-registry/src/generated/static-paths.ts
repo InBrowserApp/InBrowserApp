@@ -6534,6 +6534,98 @@ export const toolStaticPaths: readonly ToolStaticPathEntry[] = [
     language: "zh-TW",
   },
   {
+    slug: "date-age-calculator",
+    language: "ar",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "de",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "en",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "es",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "fr",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "he",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "hi",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "id",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "it",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "ja",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "ko",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "ms",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "nl",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "no",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "pl",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "pt",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "ru",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "sv",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "th",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "tr",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "vi",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "zh-CN",
+  },
+  {
+    slug: "date-age-calculator",
+    language: "zh-TW",
+  },
+  {
     slug: "device-information",
     language: "ar",
   },

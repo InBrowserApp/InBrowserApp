@@ -358,6 +358,11 @@ const entries: readonly ToolSearchSuggestionEntry[] = [
     slug: "data-uri-to-file-converter",
   },
   {
+    category: "time",
+    name: "तारीख और उम्र कैलकुलेटर",
+    slug: "date-age-calculator",
+  },
+  {
     category: "misc",
     name: "डिवाइस की जानकारी",
     slug: "device-information",
